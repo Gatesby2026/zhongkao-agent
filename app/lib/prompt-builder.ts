@@ -73,6 +73,23 @@ function findScoreGapStrategy(kb: KnowledgeBase, currentMath: number, targetMath
   return null;
 }
 
+// 从模拟题库中找出匹配该模块+水平段的题目
+function findMockQuestionsForModule(kb: KnowledgeBase, moduleId: string, level: string): any[] {
+  const results: any[] = [];
+  for (const exam of kb.mockExams) {
+    const source = `${exam.year || ""}${exam.district || ""}${exam.exam_type || ""}`;
+    for (const q of exam.questions || []) {
+      if (q.module !== moduleId) continue;
+      if (!q.recommended_for?.includes(level)) continue;
+      results.push({ ...q, source });
+    }
+  }
+  // 每个模块最多推荐 5 道，按难度从易到难
+  const diffOrder: Record<string, number> = { "基础": 0, "中档": 1, "较难": 2, "压轴": 3 };
+  results.sort((a, b) => (diffOrder[a.difficulty] ?? 1) - (diffOrder[b.difficulty] ?? 1));
+  return results.slice(0, 5);
+}
+
 export function buildPrompt(
   diagnosis: DiagnosisResult,
   kb: KnowledgeBase,
@@ -168,10 +185,20 @@ export function buildPrompt(
       }
     }
 
+    // 模拟题推荐
+    let mockStr = "";
+    const mockQuestions = findMockQuestionsForModule(kb, m.id, m.level);
+    if (mockQuestions.length > 0) {
+      mockStr = `\n📝 推荐模拟题练习：\n` +
+        mockQuestions.map((q: any) =>
+          `  - ${q.source} 第${q.id}题（${q.type}，${q.score}分，${q.difficulty}）：${(q.question || "").split("\n")[0].slice(0, 60)}`
+        ).join("\n");
+    }
+
     return `
 ### ${m.name}（当前 ${m.level} - ${m.levelName}，目标 ${m.targetLevel}，优先级 #${m.priority}）
 预计提分：${m.potentialGain}分
-${levelDesc}${benchmarkStr}${pathStr}${timeStrategyStr}${mistakesStr}
+${levelDesc}${benchmarkStr}${pathStr}${timeStrategyStr}${mistakesStr}${mockStr}
 `;
   }).join("\n");
 
@@ -261,7 +288,11 @@ ${levelDesc}${benchmarkStr}${pathStr}${timeStrategyStr}${mistakesStr}
     trendsStr = `\n命题趋势：实际情境题${examSummary.trends.real_world_context}；函数每年占${examSummary.trends.function_emphasis}；${examSummary.trends.textbook_origin}`;
   }
 
-  const system = `你是一位经验丰富的北京中考数学辅导专家。你拥有完整的北京中考真题数据库（2021-2025年共140道题的逐题分析），以及朝阳/海淀/西城/东城四区高中的录取分数线。
+  // 模拟题统计
+  const mockExamCount = kb.mockExams.length;
+  const mockQuestionCount = kb.mockExams.reduce((sum, e) => sum + (e.questions?.length || 0), 0);
+
+  const system = `你是一位经验丰富的北京中考数学辅导专家。你拥有完整的北京中考真题数据库（2021-2025年共140道题的逐题分析）、朝阳/海淀/西城/东城四区高中的录取分数线，以及${mockExamCount}套各区一模试卷（共${mockQuestionCount}道题，含完整题目、答案和解析）。
 
 你的任务是根据学生的诊断数据、真题分析和知识库中的学习路径，生成一份针对性极强的学习规划。
 

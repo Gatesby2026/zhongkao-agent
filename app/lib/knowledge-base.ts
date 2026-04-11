@@ -34,6 +34,8 @@ export interface KnowledgeBase {
   };
   // 易错点
   commonMistakes: Record<string, any>;
+  // 模拟题（一模/二模）
+  mockExams: any[];
   // 真题分析和录取分数线
   examAnalysis: {
     summary: any;
@@ -44,6 +46,15 @@ export interface KnowledgeBase {
     districts: Record<string, any>;
     mathTargetMapping: any;
   };
+}
+
+function loadMockExams(): any[] {
+  const mockDir = path.join(KB_ROOT, "mock-exams", "math", "beijing");
+  if (!fs.existsSync(mockDir)) return [];
+  return fs
+    .readdirSync(mockDir)
+    .filter((f) => f.endsWith(".yaml"))
+    .map((f) => readYaml(path.join("mock-exams", "math", "beijing", f)));
 }
 
 export function loadKnowledgeBase(): KnowledgeBase {
@@ -86,6 +97,7 @@ export function loadKnowledgeBase(): KnowledgeBase {
       onlinePlatforms: readYaml("resources/online-platforms.yaml"),
       examPapers: readYaml("resources/exam-papers.yaml"),
     },
+    mockExams: loadMockExams(),
     commonMistakes: {
       "numbers-and-expressions": readYaml("common-mistakes/math/numbers-and-expressions.yaml"),
       "equations-and-inequalities": readYaml("common-mistakes/math/equations-and-inequalities.yaml"),
