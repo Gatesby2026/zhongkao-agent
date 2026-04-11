@@ -1,0 +1,218 @@
+# ============================================================
+# 北京中考数学 — 知识点权重分析
+# ============================================================
+# 数据来源：近5年(2021-2025)北京中考真题统计 + 菁优网/学科网标注
+# 最后更新：2026-04-11
+# 状态：基于公开分析数据整理，待用菁优网逐题验证细化
+
+subject: 数学
+region: 北京市
+
+# ------ 三大模块总体占比 ------
+modules_overview:
+  - module: 数与代数
+    score_ratio: 50%       # 约50分（100分制）
+    description: 占比最大，基础分和压轴分都有
+
+  - module: 图形与几何
+    score_ratio: 38%       # 约38分
+    description: 第二大板块，压轴题常考
+
+  - module: 统计与概率
+    score_ratio: 12%       # 约12分
+    description: 占比最小但必考，属于"必拿分"
+
+# ------ 细分知识点权重 ------
+knowledge_points:
+
+  # ====== 数与代数 ======
+  数与代数:
+    - name: 实数与运算
+      frequency: 高      # 近5年出现频次
+      typical_score: 4-6分
+      difficulty: 基础
+      typical_questions: 选择/填空
+      details:
+        - 科学记数法（近10年考了9次，几乎必考）
+        - 实数的运算（绝对值、平方根）
+        - 二次根式（定义域、化简）
+
+    - name: 整式与因式分解
+      frequency: 高
+      typical_score: 4-6分
+      difficulty: 基础
+      typical_questions: 选择/填空/解答第1题
+      details:
+        - 幂的运算（必考）
+        - 因式分解（近10年必考）
+        - 整式的化简求值
+
+    - name: 方程与不等式
+      frequency: 高
+      typical_score: 8-10分
+      difficulty: 基础-中档
+      typical_questions: 填空/解答
+      details:
+        - 一元二次方程（根的判别式、解法，高频必考）
+        - 分式方程（解法+验根，常考）
+        - 一元一次不等式（组）
+        - 方程的实际应用题
+
+    - name: 一次函数与反比例函数
+      frequency: 高
+      typical_score: 6-10分
+      difficulty: 基础-中档
+      typical_questions: 选择/填空/解答
+      details:
+        - 反比例函数（对称性，高频必考）
+        - 一次函数图像与性质
+        - 函数的实际应用
+
+    - name: 二次函数
+      frequency: 极高
+      typical_score: 10-14分
+      difficulty: 中档-压轴
+      typical_questions: 解答题后半段（含压轴）
+      details:
+        - 图像与性质（开口方向、顶点、对称轴）
+        - 二次函数与方程的关系
+        - 代数几何综合（压轴题常见载体）
+        - 实际问题中的二次函数建模
+      strategy_note: 函数板块是提分关键突破口，也是压轴题核心
+
+  # ====== 图形与几何 ======
+  图形与几何:
+    - name: 三角形（全等与相似）
+      frequency: 极高
+      typical_score: 8-12分
+      difficulty: 基础-中档
+      typical_questions: 解答题
+      details:
+        - 全等三角形的判定与性质（必考）
+        - 相似三角形（比例关系）
+        - 等腰三角形、直角三角形性质
+
+    - name: 四边形
+      frequency: 中
+      typical_score: 4-6分
+      difficulty: 基础-中档
+      typical_questions: 选择/填空/解答
+      details:
+        - 平行四边形、矩形、菱形、正方形的性质和判定
+        - 中点四边形
+
+    - name: 圆
+      frequency: 高
+      typical_score: 6-8分
+      difficulty: 中档
+      typical_questions: 解答题
+      details:
+        - 圆的基本性质（弦、弧、圆心角）
+        - 切线的判定与性质
+        - 圆与直线的位置关系
+
+    - name: 几何变换（轴对称/旋转/平移）
+      frequency: 高
+      typical_score: 4-8分
+      difficulty: 中档-压轴
+      typical_questions: 选择/解答
+      details:
+        - 轴对称与中心对称
+        - 旋转变换
+        - 变换在压轴题中的应用
+
+    - name: 动态几何 / 几何综合
+      frequency: 极高（压轴必出）
+      typical_score: 7-8分
+      difficulty: 压轴
+      typical_questions: 第27或28题
+      details:
+        - 动点问题（点在线段/函数图像上运动）
+        - 几何最值问题（最短路径等）
+        - 面积最值问题
+      strategy_note: 通常分3小问，前1-2问中档可做，第3问性价比低
+
+    - name: 角度与平行线
+      frequency: 中
+      typical_score: 2-4分
+      difficulty: 基础
+      typical_questions: 选择/填空
+      details:
+        - 平行线性质（同位角、内错角、同旁内角）
+        - 角度计算
+
+    - name: 视图与投影
+      frequency: 低-中
+      typical_score: 2分
+      difficulty: 基础
+      typical_questions: 选择
+      details:
+        - 三视图
+        - 旋转体
+
+  # ====== 统计与概率 ======
+  统计与概率:
+    - name: 数据的收集与分析
+      frequency: 高
+      typical_score: 6-8分
+      difficulty: 基础
+      typical_questions: 选择/解答
+      details:
+        - 统计图表（条形图、折线图、扇形图、频率分布直方图）
+        - 平均数、中位数、众数
+        - 方差与数据波动
+
+    - name: 概率
+      frequency: 高
+      typical_score: 4-6分
+      difficulty: 基础-中档
+      typical_questions: 解答题
+      details:
+        - 等可能事件的概率计算
+        - 树状图/列表法
+        - 频率估计概率
+
+# ------ 提分优先级建议 ------
+# 按"投入产出比"排序
+score_improvement_priority:
+  - rank: 1
+    area: 方程与不等式 + 实数运算 + 因式分解
+    reason: 纯基础分，题型固定，短期见效最快
+    potential: 12-16分
+    effort: 低
+
+  - rank: 2
+    area: 统计与概率
+    reason: 题型简单固定，分值稳定，性价比极高
+    potential: 8-12分
+    effort: 低
+
+  - rank: 3
+    area: 一次函数与反比例函数
+    reason: 中档难度，掌握图像性质即可拿分
+    potential: 6-10分
+    effort: 中
+
+  - rank: 4
+    area: 三角形（全等与相似）
+    reason: 高频必考，证明方法有固定套路
+    potential: 8-12分
+    effort: 中
+
+  - rank: 5
+    area: 二次函数（基础+中档部分）
+    reason: 分值大，但只攻基础和中档题，不碰压轴第3问
+    potential: 6-10分
+    effort: 中-高
+
+  - rank: 6
+    area: 圆 + 四边形
+    reason: 中档题，需要一定的证明能力
+    potential: 6-10分
+    effort: 中
+
+  - rank: 7
+    area: 动态几何/压轴题第3问
+    reason: 难度最大，适合冲刺高分(95+)的学生
+    potential: 3-5分
+    effort: 极高

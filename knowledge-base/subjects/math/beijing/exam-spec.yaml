@@ -1,0 +1,122 @@
+# ============================================================
+# 北京中考数学 — 考试规格说明
+# ============================================================
+# 数据来源：北京教育考试院、历年真题分析、教育媒体
+# 最后更新：2026-04-11
+
+subject: 数学
+region: 北京市
+year: 2026
+
+# ------ 基本信息 ------
+basic_info:
+  full_score: 100
+  duration_min: 120
+  exam_type: 闭卷
+  exam_date: "2026年6月24日下午 14:30-16:30"
+
+# ------ 试卷结构 ------
+# 2025年结构（2026预计沿用或切换至25题模式）
+paper_structure:
+  total_questions: 28      # 2025年仍为28题，2026年可能改为25题
+
+  sections:
+    - type: 选择题
+      count: 8
+      score_per_question: 2
+      total_score: 16
+      description: 单项选择，覆盖基础概念和简单计算
+      difficulty_distribution:
+        easy: 6           # 前6题基础
+        medium: 1         # 第7题中档
+        hard: 1           # 第8题有一定难度
+
+    - type: 填空题
+      count: 8
+      score_per_question: 2
+      total_score: 16
+      description: 简答填空，覆盖计算和基本应用
+      difficulty_distribution:
+        easy: 5
+        medium: 2
+        hard: 1           # 最后1题通常有难度
+
+    - type: 解答题
+      count: 12
+      total_score: 68
+      description: 需写出完整解题过程
+      sub_detail:
+        - range: "第17-22题"
+          score_each: "约5分"
+          difficulty: 基础
+          typical_topics:
+            - 计算题（整式/方程/不等式）
+            - 基础证明（全等三角形）
+            - 统计与概率
+            - 函数基础
+        - range: "第23-26题"
+          score_each: "约5-6分"
+          difficulty: 中档
+          typical_topics:
+            - 函数应用题
+            - 几何综合（中档）
+            - 实际问题建模
+        - range: "第27-28题"
+          score_each: "约7-8分"
+          difficulty: 压轴
+          typical_topics:
+            - 二次函数综合（代几综合）
+            - 动态几何 / 几何综合压轴
+          notes: 通常分3小问，前1-2问中档可做，第3问拔高
+
+# ------ 25题模式（2026年可能实施）------
+possible_new_structure:
+  status: 待确认（朝阳区2025一模已试行，正式实施时间未定）
+  total_questions: 25
+  notes:
+    - 题量减少但单题分值和综合性可能增加
+    - 关注2026年考试说明的官方发布
+
+# ------ 难度分布 ------
+difficulty_ratio:
+  # 2025年及之前的传统比例
+  traditional:
+    easy: 70       # 基础题占比%
+    medium: 20     # 中档题占比%
+    hard: 10       # 难题占比%
+
+  # 改革趋势（部分来源提及的新比例，待官方确认）
+  reform_trend:
+    easy: 50
+    medium: 30
+    hard: 20
+    status: 方向性信息，正式实施细节待确认
+    notes: 若实施，难题和中档题总占比从30%提升到50%，要求显著提高
+
+  # 2024年实际难度分布（真题分析）
+  actual_2024:
+    easy: 67.5
+    medium: 22.5
+    hard: 10
+    notes: 简单题比例已略有减少，中档题比例增加
+
+# ------ 命题趋势（2022新课标后）------
+trends:
+  - name: 情境化命题
+    description: 试题更多嵌入真实生活情境（蜂巢结构、新能源汽车销量等）
+  - name: 跨学科融合
+    description: 压轴题向跨学科方向转变，用数学知识解决实际问题
+  - name: 减少机械训练
+    description: 杜绝偏题怪题，减少纯技巧性和记忆性内容
+  - name: 应用能力强化
+    description: 增加应用型和探究型试题，强调建模能力
+  - name: 核心素养导向
+    description: 考查抽象能力和空间观念，引导"用数学的眼光观察现实世界"
+  - name: 严格依标命题
+    description: 依据2022版课程标准，不出超出教学要求的题目
+
+# ------ 评分说明 ------
+scoring_notes:
+  - 解答题需写出完整过程，只有答案不给分
+  - 过程分按步骤给分（step scoring），写出关键步骤即使答案错也可得部分分
+  - 选择题和填空题无过程分
