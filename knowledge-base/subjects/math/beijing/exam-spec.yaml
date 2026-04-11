@@ -78,27 +78,17 @@ possible_new_structure:
     - 关注2026年考试说明的官方发布
 
 # ------ 难度分布 ------
+# 基于 2021-2025 五年真题统计（见 exam-analysis/math/beijing/summary.yaml）
 difficulty_ratio:
-  # 2025年及之前的传统比例
-  traditional:
-    easy: 70       # 基础题占比%
-    medium: 20     # 中档题占比%
-    hard: 10       # 难题占比%
+  five_year_average:
+    easy: 50       # 基础题约50%（约50分）
+    medium: 35     # 中档题约35%（约35分）
+    hard: 15       # 压轴题约15%（约15分）
+    note: 五年保持稳定，2023年中档题偏多压轴占20%
 
-  # 改革趋势（部分来源提及的新比例，待官方确认）
+  # 2026年可能趋势（待官方考试说明确认）
   reform_trend:
-    easy: 50
-    medium: 30
-    hard: 20
-    status: 方向性信息，正式实施细节待确认
-    notes: 若实施，难题和中档题总占比从30%提升到50%，要求显著提高
-
-  # 2024年实际难度分布（真题分析）
-  actual_2024:
-    easy: 67.5
-    medium: 22.5
-    hard: 10
-    notes: 简单题比例已略有减少，中档题比例增加
+    note: 部分来源提及难度微调，但实际五年数据显示比例高度稳定
 
 # ------ 命题趋势（2022新课标后）------
 trends:

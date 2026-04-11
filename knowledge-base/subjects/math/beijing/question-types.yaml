@@ -1,11 +1,16 @@
 # ============================================================
 # 北京中考数学 — 题型分布与历年对比
 # ============================================================
-# 数据来源：2021-2025年北京中考数学真题分析
+# 数据来源：2021-2025年北京中考数学真题逐题分析
 # 最后更新：2026-04-11
+# 交叉验证：与 exam-analysis/math/beijing/summary.yaml 对齐
 
 subject: 数学
 region: 北京市
+full_score: 100
+total_questions: 28
+structure: "8选择(16分) + 8填空(16分) + 12解答(68分)"
+structure_note: 2021-2025连续5年结构完全一致
 
 # ------ 历年题型结构对比 ------
 yearly_comparison:
@@ -13,184 +18,264 @@ yearly_comparison:
     full_score: 100
     total_questions: 28
     structure: "8选择(16分) + 8填空(16分) + 12解答(68分)"
-    notable_changes: '取消了"新函数图象"题型'
+    score_distribution: "5+5+5+5+6+5+6+6+5+6+7+7"
+    notable_changes: 考了几何体展开图和尺规作图
 
   - year: 2022
     full_score: 100
     total_questions: 28
     structure: "8选择(16分) + 8填空(16分) + 12解答(68分)"
-    notable_changes: '"新函数图象/函数应用"类题目重新回归'
+    score_distribution: "5+5+5+5+6+5+6+6+5+6+7+7"
+    notable_changes: 双减后首次中考，约80%试题源自课本，函数应用类题目回归
 
   - year: 2023
     full_score: 100
     total_questions: 28
     structure: "8选择(16分) + 8填空(16分) + 12解答(68分)"
-    notable_changes: 结构稳定，强调核心素养考查
+    score_distribution: "5+5+5+6+6+5+5+6+5+6+7+7"
+    notable_changes: 难度明显高于2022，中档题创新性强
 
   - year: 2024
-    full_score: 120    # 该年满分为120
+    full_score: 100
     total_questions: 28
-    structure: "8选择 + 8填空 + 12解答"
-    notable_changes: 满分升至120分，难度分布微调，简单题比例略降
+    structure: "8选择(16分) + 8填空(16分) + 12解答(68分)"
+    score_distribution: "5+5+5+5+6+5+5+6+5+6+7+7"
+    notable_changes: 结构稳定
 
   - year: 2025
     full_score: 100
     total_questions: 28
     structure: "8选择(16分) + 8填空(16分) + 12解答(68分)"
-    notable_changes: 满分回到100分，整体结构与近几年保持一致
+    score_distribution: "5+5+5+6+6+5+5+6+5+6+7+7"
+    notable_changes: 第8题选择压轴为反比例函数多结论判断
 
-# ------ 题号与知识点的典型对应关系 ------
-# 基于近年真题总结，每年略有调整但大致稳定
+# ------ 题号与知识点的稳定对应关系 ------
+# 基于 2021-2025 五年真题统计，5/5 = 连续5年出现
+# 详细数据见 exam-analysis/math/beijing/summary.yaml
+
 typical_question_map:
+
   选择题:
     - question: 1
-      typical_topic: 实数/科学记数法
+      typical_topic: 几何体识别 / 轴对称与中心对称
+      frequency: 5/5
       difficulty: 基础
+      note: 2021-2022考几何体，2023-2025考对称图形
+
     - question: 2
-      typical_topic: 整式运算
+      typical_topic: 科学记数法 / 实数与数轴
+      frequency: 5/5
       difficulty: 基础
+      note: 常结合时事背景（脱贫攻坚、天问二号等）
+
     - question: 3
-      typical_topic: 统计图表
+      typical_topic: 角度计算 / 多边形内角和 / 三视图
+      frequency: 5/5
       difficulty: 基础
+
     - question: 4
-      typical_topic: 几何基础（角度/平行线）
+      typical_topic: 实数数轴 / 多边形 / 一次函数图象
+      frequency: 5/5
       difficulty: 基础
+
     - question: 5
-      typical_topic: 方程/不等式
+      typical_topic: 一元二次方程判别式 / 概率
+      frequency: 5/5
       difficulty: 基础
+      note: Δ=0求参数值连续5年出现
+
     - question: 6
-      typical_topic: 函数图像识别
+      typical_topic: 概率 / 科学记数法
+      frequency: 5/5
       difficulty: 基础
+
     - question: 7
-      typical_topic: 几何性质/变换
-      difficulty: 中档
+      typical_topic: 对称图形 / 尺规作图 / 估算
+      frequency: 5/5
+      difficulty: 基础~中档
+
     - question: 8
-      typical_topic: 综合（函数/几何/数论）
-      difficulty: 中档-难
+      typical_topic: 函数模型判断 / 综合结论判断
+      frequency: 5/5
+      difficulty: 中档~压轴
+      note: 选择题压轴
 
   填空题:
     - question: 9
-      typical_topic: 实数运算
+      typical_topic: 二次根式有意义的条件
+      frequency: 5/5
       difficulty: 基础
+      note: 连续5年必考送分题
+
     - question: 10
-      typical_topic: 因式分解/代数化简
+      typical_topic: 因式分解
+      frequency: 5/5
       difficulty: 基础
+      note: 提公因式+公式法
+
     - question: 11
-      typical_topic: 概率
+      typical_topic: 分式方程 / 一元二次方程
+      frequency: 5/5
       difficulty: 基础
+
     - question: 12
-      typical_topic: 圆/几何计算
-      difficulty: 基础
+      typical_topic: 反比例函数
+      frequency: 5/5
+      difficulty: 基础~中档
+
     - question: 13
-      typical_topic: 方程应用
-      difficulty: 基础-中档
+      typical_topic: 统计（频率估计/众数/角度计算）
+      frequency: 5/5
+      difficulty: 基础~中档
+
     - question: 14
-      typical_topic: 函数性质
+      typical_topic: 几何综合（角平分线/平行线比例/圆）
+      frequency: 5/5
       difficulty: 中档
+
     - question: 15
-      typical_topic: 几何综合
+      typical_topic: 几何计算（面积/长度）
+      frequency: 5/5
       difficulty: 中档
+
     - question: 16
-      typical_topic: 规律探究/新定义
-      difficulty: 中档-难
+      typical_topic: 综合实践 / 方案优化
+      frequency: 5/5
+      difficulty: 中档~压轴
+      note: 填空题压轴，每年都是实际方案优化
 
   解答题:
     - question: 17
-      typical_topic: 计算题（整式/方程）
+      typical_topic: 实数混合运算
       score: 5
+      frequency: 5/5
       difficulty: 基础
-    - question: 18
-      typical_topic: 统计/概率
-      score: 5
-      difficulty: 基础
-    - question: 19
-      typical_topic: 全等三角形证明
-      score: 5
-      difficulty: 基础
-    - question: 20
-      typical_topic: 一次函数/反比例函数
-      score: 5
-      difficulty: 基础-中档
-    - question: 21
-      typical_topic: 方程/不等式应用题
-      score: 5
-      difficulty: 中档
-    - question: 22
-      typical_topic: 四边形/几何证明
-      score: 5
-      difficulty: 中档
-    - question: 23
-      typical_topic: 圆的综合
-      score: 6
-      difficulty: 中档
-    - question: 24
-      typical_topic: 函数应用/建模
-      score: 6
-      difficulty: 中档
-    - question: 25
-      typical_topic: 相似三角形综合
-      score: 6
-      difficulty: 中档-难
-    - question: 26
-      typical_topic: 实际问题综合
-      score: 6
-      difficulty: 中档
-    - question: 27
-      typical_topic: 二次函数综合（代几综合）
-      score: 7
-      difficulty: 压轴
-      sub_questions: 3
-      notes: 前2问中档可做，第3问拔高
-    - question: 28
-      typical_topic: 动态几何/几何综合
-      score: 7
-      difficulty: 压轴
-      sub_questions: 3
-      notes: 前2问中档可做，第3问拔高
+      note: 送分题——绝对值+根式+幂+三角函数值
 
-# ------ 各分数段的得分策略 ------
+    - question: 18
+      typical_topic: 一元一次不等式组
+      score: 5
+      frequency: 5/5
+      difficulty: 基础
+      note: 送分题
+
+    - question: 19
+      typical_topic: 代数式化简求值
+      score: 5
+      frequency: 5/5
+      difficulty: 基础
+      note: 整式或分式化简后代入求值
+
+    - question: 20
+      typical_topic: 几何证明基础（三角形/平行四边形/中位线）
+      score: 5~6
+      frequency: 5/5
+      difficulty: 基础~中档
+
+    - question: 21
+      typical_topic: 方程建模应用题 / 平行四边形综合
+      score: 6
+      frequency: 5/5
+      difficulty: 中档
+      note: 常结合传统文化或时事
+
+    - question: 22
+      typical_topic: 一次函数（待定系数法+应用）
+      score: 5
+      frequency: 5/5
+      difficulty: 中档
+
+    - question: 23
+      typical_topic: 统计分析（平均数/中位数/方差/决策）
+      score: 5~6
+      frequency: 5/5
+      difficulty: 中档
+
+    - question: 24
+      typical_topic: 圆的综合（切线/圆周角/垂径定理/相似）
+      score: 6
+      frequency: 5/5
+      difficulty: 中档
+
+    - question: 25
+      typical_topic: 函数建模 / 实际应用
+      score: 5
+      frequency: 5/5
+      difficulty: 中档
+      note: 2022冬奥跳台、2023节水、2025AI培训
+
+    - question: 26
+      typical_topic: 二次函数综合（代数方向压轴）
+      score: 6
+      frequency: 5/5
+      difficulty: 压轴
+      sub_questions: 3
+      note: 图象性质+对称轴+取值范围+分类讨论
+
+    - question: 27
+      typical_topic: 几何综合（运动/变换/全等/相似）
+      score: 7
+      frequency: 5/5
+      difficulty: 压轴
+      sub_questions: 3
+      note: 前2问中档可做，第3问拔高
+
+    - question: 28
+      typical_topic: 新定义探究题（北京特色压轴）
+      score: 7
+      frequency: 5/5
+      difficulty: 压轴
+      sub_questions: 3
+      note: 定义新概念后多层探究，全市均分不到1分
+
+# ------ 各分数段得分策略 ------
+# 详细数据见 exam-analysis/math/beijing/summary.yaml
+
 score_targets:
 
   - target: 60分（及格）
-    strategy: 拿下所有基础题
-    focus:
-      - 选择题前6题（12分）
-      - 填空题前5题（10分）
-      - 解答题17-20题（20分）
-      - 统计概率题（5分）
-      - 零散中档题拿部分步骤分
-    total_available: 约55-65分
+    guaranteed:
+      - "选择1~6题（12分）"
+      - "填空9~11题（6分）"
+      - "解答17~18题（10分）"
+      - "解答19题（5分）"
+    subtotal: 33分确定
+    additional: "填空12~13 + 解答20部分步骤分 ≈ 27分"
+    total: 约60分
 
   - target: 80分（良好）
-    strategy: 基础题全对 + 中档题拿大部分
-    focus:
-      - 选择题全对或错1题（14-16分）
-      - 填空题对6-7题（12-14分）
-      - 解答题17-24题全做（约44分）
-      - 25-26题拿部分分（6-8分）
-    total_available: 约76-82分
+    additional_on_60:
+      - "选择7~8题（可能错1题，2~4分）"
+      - "填空12~15题（8分）"
+      - "解答20~22题（16分）"
+      - "解答23题（5~6分）"
+    total: 约78~82分
 
   - target: 90分（优秀）
-    strategy: 中档题全对 + 压轴题前2问
-    focus:
-      - 选择填空最多错1-2题（30-32分）
-      - 解答题17-26题全做（约54分）
-      - 27-28题前2问拿下（约8-10分）
-    total_available: 约92-96分
+    additional_on_80:
+      - "填空16题（2分）"
+      - "解答24~25题（11分）"
+      - "解答26题前2问（约4分）"
+      - "解答27题前2问（约4分）"
+    total: 约90~95分
 
   - target: 95+分（拔尖）
-    strategy: 压轴题第3问也要拿分
-    focus:
-      - 选择填空全对（32分）
-      - 所有解答题全做
-      - 压轴题3小问全部完成
-    notes: 需要极强的函数与几何综合能力，训练量大
+    additional: "26题第3问 + 27题第3问 + 28题前1~2问"
+    note: 第28题全市平均不到1分，性价比极低
 
-# ------ 核心趋势总结 ------
+# ------ 难度分布 ------
+difficulty_ratio:
+  基础: { ratio: "约50%", score: "约50分" }
+  中档: { ratio: "约35%", score: "约35分" }
+  压轴: { ratio: "约15%", score: "约15分" }
+  note: 连续5年保持稳定
+
+# ------ 核心趋势 ------
 key_insights:
-  - 题型结构高度稳定（8+8+12连续多年不变）
-  - 试卷设计遵循"入口易、层次多、空间大"的思路
-  - 基础题占大头，70%的分数来自基础和简单中档题
-  - 压轴题通常为二次函数综合 + 动态几何，分3小问递进
-  - 2022新课标后，情境化和跨学科题目增加
-  - 25题模式是未来趋势，但具体实施时间待确认
+  - 8+8+12结构连续5年未变，高度稳定
+  - 函数（一次+反比例+二次）每年占30~35分，是最大单一知识域
+  - 几何证明每年约25~30分，全等/相似/圆是核心
+  - 实际情境题比例逐年增加（2021约30%→2025约40%）
+  - 每年至少1题融入传统文化或时事
+  - 2022双减后约80%源自课本，之后保持70~80%
+  - 第28题新定义探究题是北京特色，连续5年最后一题
