@@ -1,0 +1,80 @@
+/**
+ * 知识库读取模块
+ * 从 YAML 文件中读取结构化知识数据
+ */
+import fs from "fs";
+import path from "path";
+import yaml from "js-yaml";
+
+const KB_ROOT = path.join(process.cwd(), "..", "knowledge-base");
+
+function readYaml(relativePath: string): any {
+  const filePath = path.join(KB_ROOT, relativePath);
+  const content = fs.readFileSync(filePath, "utf-8");
+  return yaml.load(content);
+}
+
+// 缓存已读取的知识库数据
+let cachedKB: KnowledgeBase | null = null;
+
+export interface KnowledgeBase {
+  policy: any;
+  districts: Record<string, any>;
+  examSpec: any;
+  questionTypes: any;
+  weightAnalysis: any;
+  curriculum: any;
+  diagnostics: Record<string, any>;
+  learningPaths: Record<string, any>;
+  resources: {
+    textbooks: any;
+    workbooks: any;
+    onlinePlatforms: any;
+    examPapers: any;
+  };
+}
+
+export function loadKnowledgeBase(): KnowledgeBase {
+  if (cachedKB) return cachedKB;
+
+  cachedKB = {
+    policy: readYaml("regions/beijing/policy.yaml"),
+    districts: {
+      haidian: readYaml("regions/beijing/districts/haidian.yaml"),
+      xicheng: readYaml("regions/beijing/districts/xicheng.yaml"),
+      dongcheng: readYaml("regions/beijing/districts/dongcheng.yaml"),
+      chaoyang: readYaml("regions/beijing/districts/chaoyang.yaml"),
+    },
+    examSpec: readYaml("subjects/math/beijing/exam-spec.yaml"),
+    questionTypes: readYaml("subjects/math/beijing/question-types.yaml"),
+    weightAnalysis: readYaml("subjects/math/beijing/weight-analysis.yaml"),
+    curriculum: readYaml("subjects/math/curriculum.yaml"),
+    diagnostics: {
+      "numbers-and-expressions": readYaml("diagnostics/math/numbers-and-expressions.yaml"),
+      "equations-and-inequalities": readYaml("diagnostics/math/equations-and-inequalities.yaml"),
+      functions: readYaml("diagnostics/math/functions.yaml"),
+      triangles: readYaml("diagnostics/math/triangles.yaml"),
+      quadrilaterals: readYaml("diagnostics/math/quadrilaterals.yaml"),
+      circles: readYaml("diagnostics/math/circles.yaml"),
+      "geometry-comprehensive": readYaml("diagnostics/math/geometry-comprehensive.yaml"),
+      "statistics-and-probability": readYaml("diagnostics/math/statistics-and-probability.yaml"),
+    },
+    learningPaths: {
+      "numbers-and-expressions": readYaml("learning-paths/math/beijing/numbers-and-expressions.yaml"),
+      "equations-and-inequalities": readYaml("learning-paths/math/beijing/equations-and-inequalities.yaml"),
+      functions: readYaml("learning-paths/math/beijing/functions.yaml"),
+      triangles: readYaml("learning-paths/math/beijing/triangles.yaml"),
+      "quadrilaterals-and-circles": readYaml("learning-paths/math/beijing/quadrilaterals-and-circles.yaml"),
+      "statistics-and-probability": readYaml("learning-paths/math/beijing/statistics-and-probability.yaml"),
+      "geometry-comprehensive": readYaml("learning-paths/math/beijing/geometry-comprehensive.yaml"),
+    },
+    resources: {
+      textbooks: readYaml("resources/textbooks.yaml"),
+      workbooks: readYaml("resources/workbooks.yaml"),
+      onlinePlatforms: readYaml("resources/online-platforms.yaml"),
+      examPapers: readYaml("resources/exam-papers.yaml"),
+    },
+  };
+
+  return cachedKB;
+}
