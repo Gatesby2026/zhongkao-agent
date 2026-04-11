@@ -1,0 +1,408 @@
+# ============================================================
+# 2025年北京朝阳区初三一模数学试卷 — 逐题分析
+# ============================================================
+# 数据来源：自主选拔在线、北京高考在线、21世纪教育网
+# 考试时间：2025年4月
+# 满分：100分  时长：120分钟
+
+year: 2025
+district: 朝阳区
+exam_type: 一模
+subject: 数学
+full_score: 100
+duration_minutes: 120
+total_questions: 28
+structure: "8选择(16分) + 8填空(16分) + 12解答(68分)"
+
+questions:
+
+  # ===== 选择题（每题2分）=====
+  - id: 1
+    type: 选择
+    score: 2
+    question: |
+      下列图形中，既是轴对称图形又是中心对称图形的是
+      (A) 平行四边形  (B) 等边三角形  (C) 正五边形  (D) 矩形
+    answer: D
+    knowledge_points: [轴对称图形, 中心对称图形]
+    module: geometryComprehensive
+    difficulty: 基础
+    recommended_for: [L0, L1, L2, L3]
+    similar_zhongkao: "2025中考Q1"
+
+  - id: 2
+    type: 选择
+    score: 2
+    question: |
+      实数a,b在数轴上的对应点的位置如图所示（a在-4与-3之间，b在1与2之间），下列结论中错误的是
+      (A) a>-3  (B) |a|>3  (C) b-a>4  (D) a+b<0
+    answer: A
+    knowledge_points: [数轴, 实数大小比较, 绝对值]
+    module: numbersAndExpressions
+    difficulty: 基础
+    recommended_for: [L0, L1, L2, L3]
+
+  - id: 3
+    type: 选择
+    score: 2
+    question: |
+      如图，AB∥EF，BC、DE相交于点G，若∠B=130°，∠E=100°，则∠BGE的大小为
+      (A) 30°  (B) 50°  (C) 80°  (D) 130°
+    answer: B
+    knowledge_points: [平行线, 角度计算, 三角形外角]
+    module: triangles
+    difficulty: 基础
+    recommended_for: [L0, L1, L2, L3]
+    similar_zhongkao: "2025中考Q3"
+
+  - id: 4
+    type: 选择
+    score: 2
+    question: |
+      在平面直角坐标系xOy中，若点A(2,y₁)，B(-1,y₂)在反比例函数y=k/x(k>0)的图象上，则y₁+y₂的值
+      (A) 一定是正数  (B) 一定是负数  (C) 一定等于0  (D) 与k的取值有关
+    answer: A
+    knowledge_points: [反比例函数, 图象性质]
+    module: functions
+    difficulty: 基础
+    recommended_for: [L0, L1, L2, L3]
+
+  - id: 5
+    type: 选择
+    score: 2
+    question: |
+      不透明的袋子中装有红、绿小球各一个。随机摸出一个小球后放回并搅匀，再随机摸出一个。第一次摸到红球第二次摸到绿球的概率是
+      (A) 1/4  (B) 1/3  (C) 1/2  (D) 3/4
+    answer: A
+    knowledge_points: [概率, 独立事件, 树状图]
+    module: statisticsAndProbability
+    difficulty: 基础
+    recommended_for: [L0, L1, L2, L3]
+    similar_zhongkao: "2025中考Q6"
+
+  - id: 6
+    type: 选择
+    score: 2
+    question: |
+      DeepSeek-V3总共有671B个参数，1B等于十亿。将671B用科学记数法表示应为
+      (A) 671×10⁸  (B) 671×10⁹  (C) 6.71×10¹⁰  (D) 6.71×10¹¹
+    answer: D
+    knowledge_points: [科学记数法]
+    module: numbersAndExpressions
+    difficulty: 基础
+    recommended_for: [L0, L1, L2, L3]
+    similar_zhongkao: "2024中考Q3"
+
+  - id: 7
+    type: 选择
+    score: 2
+    question: |
+      点P为⊙O外一点，作以OP为直径的⊙A，⊙A与⊙O交于两点Q和R，可以判定△OPQ≅△OPR的依据是
+      (A) SSS  (B) SAS  (C) AAS  (D) HL
+    answer: D
+    knowledge_points: [全等三角形判定, 圆的切线]
+    module: circles
+    difficulty: 中档
+    recommended_for: [L1, L2, L3]
+
+  - id: 8
+    type: 选择
+    score: 2
+    question: |
+      "藻井"几何结构问题。正方形ABCD中，A₁B₁C₁D₁分别是四条边的中点，旋转45°后给出四个结论：
+      ①E,F是线段AB的三等分点；②A₁是线段EL的中点；③EFGHIJKL是正八边形；④△AA₁D₁的面积是△AEL面积的2倍。
+      所有正确结论的序号是
+      (A) ①③  (B) ①④  (C) ②③  (D) ②④
+    answer: C
+    knowledge_points: [正方形, 中点, 旋转, 正多边形]
+    module: geometryComprehensive
+    difficulty: 压轴
+    recommended_for: [L2, L3]
+
+  # ===== 填空题（每题2分）=====
+  - id: 9
+    type: 填空
+    score: 2
+    question: "若√(x-2)在实数范围内有意义，则实数x的取值范围是____"
+    answer: "x≥2"
+    knowledge_points: [二次根式, 有意义条件]
+    module: numbersAndExpressions
+    difficulty: 基础
+    recommended_for: [L0, L1, L2, L3]
+    similar_zhongkao: "2025中考Q9"
+
+  - id: 10
+    type: 填空
+    score: 2
+    question: "分解因式：ab²-2ab+a = ____"
+    answer: "a(b-1)²"
+    knowledge_points: [因式分解, 提公因式, 完全平方公式]
+    module: numbersAndExpressions
+    difficulty: 基础
+    recommended_for: [L0, L1, L2, L3]
+    similar_zhongkao: "2025中考Q10"
+
+  - id: 11
+    type: 填空
+    score: 2
+    question: "方程 2/(x+3) + 1/x = 0 的解为 x = ____"
+    answer: "x=-1（需验根，增根舍去后的结果）"
+    knowledge_points: [分式方程, 验根]
+    module: equationsAndInequalities
+    difficulty: 基础
+    recommended_for: [L0, L1, L2, L3]
+
+  - id: 12
+    type: 填空
+    score: 2
+    question: "若关于x的一元二次方程x²+2x+c=0无实数根，则c的取值范围是____"
+    answer: "c>1"
+    knowledge_points: [一元二次方程, 判别式]
+    module: equationsAndInequalities
+    difficulty: 基础
+    recommended_for: [L0, L1, L2, L3]
+    similar_zhongkao: "2025中考Q5"
+
+  - id: 13
+    type: 填空
+    score: 2
+    question: |
+      体育委员从全年级1000名学生中随机抽取50名统计60秒跳绳次数：
+      80-100: 4人, 100-120: 21人, 120-140: 13人, 140-160: 8人, 160-180: 4人
+      估计1000名学生中跳绳次数在100≤x<140范围的学生有____人
+    answer: "680"
+    knowledge_points: [频数分布, 样本估计总体]
+    module: statisticsAndProbability
+    difficulty: 基础
+    recommended_for: [L0, L1, L2, L3]
+
+  - id: 14
+    type: 填空
+    score: 2
+    question: "AB是⊙O的直径，点C,D在⊙O上，OD⊥AC，若∠B=50°，则∠D=____°"
+    answer: "65"
+    knowledge_points: [圆周角, 直径, 垂直]
+    module: circles
+    difficulty: 中档
+    recommended_for: [L1, L2, L3]
+
+  - id: 15
+    type: 填空
+    score: 2
+    question: "在矩形ABCD中，CE⊥BD，垂足为点E。若AB=5，CE=3，则△BCE的面积为____"
+    answer: "27/4"
+    knowledge_points: [矩形, 面积, 相似三角形]
+    module: quadrilaterals
+    difficulty: 中档
+    recommended_for: [L1, L2, L3]
+
+  - id: 16
+    type: 填空
+    score: 2
+    question: |
+      某工厂4条流水线生产A、B两种零件，每条流水线一天只能生产一种零件：
+      流水线1: A-80个/B-100个  流水线2: A-90个/B-120个  流水线3: A-70个/B-110个  流水线4: A-70个/B-70个
+      (1) 只开一条流水线，7天最多生产____件产品
+      (2) 4条流水线都开通，7天最多生产____件产品
+    answer: "(1) 360  (2) 1250"
+    knowledge_points: [方案优化, 实际问题]
+    module: equationsAndInequalities
+    difficulty: 压轴
+    recommended_for: [L2, L3]
+
+  # ===== 解答题 =====
+  - id: 17
+    type: 解答
+    score: 5
+    question: "计算：(1/2)⁻¹ + 2cos45° - √8 - (π+√2)⁰"
+    answer: "2-√2"
+    solution: |
+      = 2 + 2×(√2/2) - 2√2 - 1
+      = 2 + √2 - 2√2 - 1
+      = 1 - √2
+    knowledge_points: [负整数指数幂, 三角函数值, 二次根式, 零指数幂]
+    module: numbersAndExpressions
+    difficulty: 基础
+    recommended_for: [L0, L1, L2, L3]
+    similar_zhongkao: "2025中考Q17"
+
+  - id: 18
+    type: 解答
+    score: 5
+    question: |
+      解不等式组：
+      3(x-2) ≤ 4+x
+      (1+2x)/3 < x
+    answer: "1 < x ≤ 5"
+    solution: |
+      解①：3x-6≤4+x → 2x≤10 → x≤5
+      解②：1+2x<3x → 1<x → x>1
+      解集：1<x≤5
+    knowledge_points: [一元一次不等式组]
+    module: equationsAndInequalities
+    difficulty: 基础
+    recommended_for: [L0, L1, L2, L3]
+
+  - id: 19
+    type: 解答
+    score: 5
+    question: "已知2x+y-3=0，求代数式 [2(x-2y)+3y]/(4x²-y²) 的值。"
+    answer: "1/3"
+    solution: |
+      原式 = (2x-4y+3y)/(4x²-y²) = (2x-y)/((2x+y)(2x-y)) = 1/(2x+y)
+      由2x+y-3=0得2x+y=3
+      原式 = 1/3
+    knowledge_points: [分式化简求值, 因式分解]
+    module: numbersAndExpressions
+    difficulty: 基础
+    recommended_for: [L0, L1, L2, L3]
+
+  - id: 20
+    type: 解答
+    score: 6
+    question: |
+      在△ABC中，D为BC中点，延长BA至点E使AE=AB，延长DA至点F使AF=AD，连接CE,EF。
+      (1) 求证：四边形CDFE是平行四边形。
+      (2) 若EB平分∠CEF，tanB=4/3，AB=1，求AC的长。
+    answer: "(1) 证明略  (2) AC=4/3"
+    knowledge_points: [平行四边形判定, 中点, 三角函数]
+    module: quadrilaterals
+    difficulty: 中档
+    recommended_for: [L1, L2, L3]
+    similar_zhongkao: "2025中考Q20"
+
+  - id: 21
+    type: 解答
+    score: 5
+    question: |
+      小明搭飞机产生碳排放530kg，决定从开私家车改为公交或骑车上下学来抵消。
+      私家车0.27kg/km，公交0.20kg/km，骑车0。每天往返20km，100天内最多几天可以乘公交？
+    answer: "最多2天"
+    solution: |
+      设x天乘公交，则(100-x)天骑车
+      减少的碳排放：20×0.27×100 - 20×0.20×x ≥ 530
+      540 - 4x ≥ 530 → x ≤ 2.5
+      最多2天
+    knowledge_points: [一元一次不等式, 实际问题]
+    module: equationsAndInequalities
+    difficulty: 中档
+    recommended_for: [L1, L2, L3]
+
+  - id: 22
+    type: 解答
+    score: 5
+    question: |
+      函数y=kx+b(k≠0)的图象经过点A(1,2)和B(0,-1)。
+      (1) 求该函数的表达式。
+      (2) 当x>1时，y=x+n的值小于y=kx+b的值且大于0，求n的取值范围。
+    answer: "(1) y=3x-1  (2) -1≤n<1"
+    knowledge_points: [一次函数, 待定系数法, 不等式]
+    module: functions
+    difficulty: 中档
+    recommended_for: [L1, L2, L3]
+
+  - id: 23
+    type: 解答
+    score: 5
+    question: |
+      两个团队20人的知识问答预赛成绩分析。一队频数分布直方图，二队原始数据。
+      (1) m的值；p与q的大小关系
+      (2) 去掉最高分和最低分后方差变化判断
+      (3) 种子选手排序，求k的值
+    answer: "(1) m=83, p<q  (2) D  (3) k=91或92"
+    knowledge_points: [频数分布直方图, 平均数, 方差, 数据分析]
+    module: statisticsAndProbability
+    difficulty: 中档
+    recommended_for: [L1, L2, L3]
+
+  - id: 24
+    type: 解答
+    score: 6
+    question: |
+      △ABC是⊙O的内接三角形，∠ACB=45°，点P在BC的延长线上，PA∥OB。
+      (1) 求证：PA是⊙O的切线。
+      (2) 若OB/AP=1/2，PB=√10，求⊙O半径的长。
+    answer: "(1) 证明略  (2) 半径=√10（待确认）"
+    solution: |
+      (1) 连接OA，∠AOB=2∠ACB=90°，PA∥OB → ∠PAO=∠AOB=90° → PA是切线
+      (2) 通过相似和勾股定理求解
+    knowledge_points: [圆的切线, 圆周角定理, 相似三角形]
+    module: circles
+    difficulty: 中档
+    recommended_for: [L2, L3]
+    similar_zhongkao: "2025中考Q24"
+
+  - id: 25
+    type: 解答
+    score: 6
+    question: |
+      摩天轮实际问题。给出旋转时间t(min)与座舱高度h(m)的数据：
+      t: 0,1,1.5,2,3,4,5,6,7,8,9
+      h: 30,15.36,10,15.36,30,50,70,84.64,90,84.64,70
+      (1) 画函数图象
+      (2) ①最高高度和转盘半径 ②转一圈时间 ③两座舱高度相同的最少时间
+    answer: "①90m, 40m  ②12min  ③1.5min或4.5min"
+    knowledge_points: [函数图象, 周期函数, 实际问题]
+    module: functions
+    difficulty: 中档
+    recommended_for: [L1, L2, L3]
+
+  - id: 26
+    type: 解答
+    score: 6
+    question: |
+      抛物线y=ax²-2a²x+a³+a+1(a≠0)。
+      (1) 求抛物线的顶点坐标（用含a的式子表示）。
+      (2) M(x₁,y₁)和N(x₂,y₂)是抛物线上两点，若对于-a-1≤x₁≤-a, 2≤x₂≤3都有y₁<y₂，求a的取值范围。
+    answer: "(1) 顶点(a, a+1)  (2) 0<a<1/3 或 a<-4"
+    solution: |
+      (1) y=a(x-a)²+a+1，顶点(a, a+1)
+      (2) 分类讨论a>0和a<0，得 0<a<1/3 或 a<-4
+    knowledge_points: [二次函数, 顶点坐标, 分类讨论, 单调性]
+    module: functions
+    difficulty: 压轴
+    recommended_for: [L2, L3]
+    similar_zhongkao: "2025中考Q26"
+
+  - id: 27
+    type: 解答
+    score: 7
+    question: |
+      在正方形ABCD中，E为AD边上一点，将线段CB沿直线CE翻折得到线段CF，连接FD并延长与CE延长线相交于点G，连接AG。
+      (1) 补全图形
+      (2) 求∠CGF的度数
+      (3) 用等式表示线段AG与DF的数量关系，并证明
+    answer: "(2) ∠CGF=45°  (3) DF=√2·AG"
+    knowledge_points: [正方形, 翻折, 全等三角形, 角度计算]
+    module: geometryComprehensive
+    difficulty: 压轴
+    recommended_for: [L2, L3]
+    similar_zhongkao: "2025中考Q27"
+
+  - id: 28
+    type: 解答
+    score: 7
+    question: |
+      新定义"h距离"问题。定义点P到图形N的距离，以及图形M到图形N的"h距离"h(M,N)。
+      (1) 图形M为线段AB：①图形N为线段OC，求h(M,N)和h(N,M)；②点D(0,t)E(0,t+1)，N为线段DE，求h(M,N)的最小值
+      (2) ⊙O半径为1，直线l:y=(√5/5)x+2√5，N为直线l上的线段PQ，求H(M,N)的最小值
+    answer: "(1)① h(M,N)=5, h(N,M)=5  ② 最小值及t的范围  (2) H(M,N)最小值=4"
+    knowledge_points: [新定义, 距离, 线段, 圆, 最值]
+    module: geometryComprehensive
+    difficulty: 压轴
+    recommended_for: [L3]
+
+difficulty_summary:
+  基础: { count: 14, score: 约44分 }
+  中档: { count: 10, score: 约36分 }
+  压轴: { count: 4, score: 约20分 }
+
+module_distribution:
+  numbersAndExpressions: { questions: [2,6,9,10,17,19], score: 约16分 }
+  equationsAndInequalities: { questions: [11,12,16,18,21], score: 约19分 }
+  functions: { questions: [4,22,25,26], score: 约18分 }
+  triangles: { questions: [3], score: 约2分 }
+  quadrilaterals: { questions: [15,20], score: 约8分 }
+  circles: { questions: [7,14,24], score: 约10分 }
+  statisticsAndProbability: { questions: [5,13,23], score: 约9分 }
+  geometryComprehensive: { questions: [1,8,27,28], score: 约18分 }

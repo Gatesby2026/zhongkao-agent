@@ -1,0 +1,443 @@
+# ============================================================
+# 2025年北京西城区初三一模数学试卷 — 逐题分析
+# ============================================================
+# 数据来源：北京高考在线、北京中考在线、自主选拔在线
+# 考试时间：2025年4月
+# 满分：100分  时长：120分钟
+# 结构：8选择(16分) + 8填空(16分) + 12解答(68分)
+
+year: 2025
+district: 西城区
+exam_type: 一模
+subject: 数学
+full_score: 100
+duration_minutes: 120
+total_questions: 28
+structure: "8选择(16分) + 8填空(16分) + 12解答(68分)"
+
+questions:
+
+  # ===== 选择题（每题2分）=====
+  - id: 1
+    type: 选择
+    score: 2
+    question: |
+      下列图形中，是轴对称图形但不是中心对称图形的是
+      (A) 正三角形  (B) 矩形  (C) 圆  (D) 菱形
+    answer: A
+    knowledge_points: [轴对称图形, 中心对称图形]
+    module: geometryComprehensive
+    difficulty: 基础
+    recommended_for: [L0, L1, L2, L3]
+    similar_zhongkao: "2025中考Q1"
+
+  - id: 2
+    type: 选择
+    score: 2
+    question: |
+      如图，直线AB与CD相交于点O，∠BOE=90°，若∠AOC=48°，则∠DOE的大小为
+      (A) 52°  (B) 48°  (C) 42°  (D) 32°
+    answer: C
+    knowledge_points: [相交线, 对顶角, 互补角]
+    module: triangles
+    difficulty: 基础
+    recommended_for: [L0, L1, L2, L3]
+    similar_zhongkao: "2025中考Q3"
+
+  - id: 3
+    type: 选择
+    score: 2
+    question: |
+      实数a、b在数轴上的对应点的位置如图所示（a在-1与0之间，b在1与2之间），下列结论中正确的是
+      (A) a>0  (B) a+b<0  (C) |a|>1  (D) ab<0
+    answer: D
+    knowledge_points: [数轴, 实数大小比较, 绝对值]
+    module: numbersAndExpressions
+    difficulty: 基础
+    recommended_for: [L0, L1, L2, L3]
+    similar_zhongkao: "2023中考Q2"
+
+  - id: 4
+    type: 选择
+    score: 2
+    question: |
+      若正多边形的一个外角是72°，则这个正多边形是
+      (A) 正三角形  (B) 正四边形  (C) 正五边形  (D) 正六边形
+    answer: C
+    knowledge_points: [正多边形, 外角和]
+    module: quadrilaterals
+    difficulty: 基础
+    recommended_for: [L0, L1, L2, L3]
+    similar_zhongkao: "2021中考Q3"
+
+  - id: 5
+    type: 选择
+    score: 2
+    question: |
+      某创新科技公司在遭遇大规模网络攻击时及时启动了防御体系。假设该公司被攻击的恶意流量为平均每秒约5.6×10⁴字节，若持续被攻击80秒的总流量为m字节，则m的值为
+      (A) 4.48×10⁵  (B) 4.48×10⁶  (C) 5.6×10⁴  (D) 5.6×10⁶
+    answer: B
+    knowledge_points: [科学记数法, 有理数运算]
+    module: numbersAndExpressions
+    difficulty: 基础
+    recommended_for: [L0, L1, L2, L3]
+    similar_zhongkao: "2024中考Q3"
+
+  - id: 6
+    type: 选择
+    score: 2
+    question: |
+      在一个不透明的袋子里装有两个红色小球和一个绿色小球，它们除颜色外无其他差别。从中随机摸出两个小球，那么摸到一个红球和一个绿球的概率为
+      (A) 2/3  (B) 1/2  (C) 1/3  (D) 1/4
+    answer: A
+    knowledge_points: [概率, 列举法]
+    module: statisticsAndProbability
+    difficulty: 基础
+    recommended_for: [L0, L1, L2, L3]
+    similar_zhongkao: "2025中考Q6"
+
+  - id: 7
+    type: 选择
+    score: 2
+    question: |
+      下面是"过直线l外一点P作直线l的垂线"的尺规作图方法：
+      (1)任取一点K，使得点K和点P在直线l的两侧；
+      (2)以点P为圆心，PK长为半径作弧，交直线l于点A和点B；
+      (3)分别以点A和点B为圆心，大于AB/2的长为半径作弧，两弧相交于点C；
+      (4)作直线PC。
+      其中判定点C在线段AB的垂直平分线上的依据可以是
+      (A) 点P与点C关于直线l对称
+      (B) 过直线外一点有且仅有一条直线与已知直线垂直
+      (C) 线段垂直平分线上的点与这条线段两个端点的距离相等
+      (D) 与线段两个端点距离相等的点在这条线段的垂直平分线上
+    answer: D
+    knowledge_points: [尺规作图, 线段垂直平分线]
+    module: triangles
+    difficulty: 中档
+    recommended_for: [L1, L2, L3]
+    similar_zhongkao: "2022中考Q7"
+
+  - id: 8
+    type: 选择
+    score: 2
+    question: |
+      等边△ABC的边长为1，将边AC、BA、CB分别绕点A、B、C逆时针旋转α(0°<α<180°)得到线段AC'、BA'、CB'，连接A'B'、A'C'、B'C'，对△A'B'C'给出下面三个结论：
+      ①对任意α都有△A'B'C'是等边三角形；
+      ②存在唯一一点到点A'、B'、C'的距离相等；
+      ③当α=120°时，△A'B'C'的周长是3√3。
+      上述结论中，所有正确结论的序号是
+      (A) ①②  (B) ①③  (C) ②③  (D) ①②③
+    answer: D
+    knowledge_points: [旋转变换, 等边三角形, 综合判断]
+    module: geometryComprehensive
+    difficulty: 压轴
+    recommended_for: [L2, L3]
+    similar_zhongkao: "2025中考Q8"
+
+  # ===== 填空题（每题2分）=====
+  - id: 9
+    type: 填空
+    score: 2
+    question: "（具体题目涉及零指数幂相关）"
+    answer: "-3"
+    knowledge_points: [零指数幂]
+    module: numbersAndExpressions
+    difficulty: 基础
+    recommended_for: [L0, L1, L2, L3]
+
+  - id: 10
+    type: 填空
+    score: 2
+    question: "分解因式：2mx²-18m = ____"
+    answer: "2m(x+3)(x-3)"
+    knowledge_points: [因式分解, 提公因式, 平方差公式]
+    module: numbersAndExpressions
+    difficulty: 基础
+    recommended_for: [L0, L1, L2, L3]
+    similar_zhongkao: "2025中考Q10"
+
+  - id: 11
+    type: 填空
+    score: 2
+    question: "（二次根式有意义的条件相关）"
+    answer: "x=1"
+    knowledge_points: [二次根式, 有意义条件]
+    module: numbersAndExpressions
+    difficulty: 基础
+    recommended_for: [L0, L1, L2, L3]
+
+  - id: 12
+    type: 填空
+    score: 2
+    question: "（代数式求值相关）"
+    answer: "0"
+    knowledge_points: [代数式求值]
+    module: numbersAndExpressions
+    difficulty: 基础
+    recommended_for: [L0, L1, L2, L3]
+
+  - id: 13
+    type: 填空
+    score: 2
+    question: |
+      某单位有A、B两条生产线生产同一种产品。五次抽取的样品中：
+      A: 89 91 92 93 95
+      B: 88 91 92 93 96
+      则五次抽取的样品中产品质量更为稳定的生产线是____
+    answer: "A"
+    knowledge_points: [方差, 数据稳定性]
+    module: statisticsAndProbability
+    difficulty: 基础
+    recommended_for: [L0, L1, L2, L3]
+    similar_zhongkao: "2024中考Q13"
+
+  - id: 14
+    type: 填空
+    score: 2
+    question: "用一组a、b的值证明命题"若√a²·√b²=√(a²b²)，则√a·√b"是错误的，这组值可以是 a=____，b=____"
+    answer: "答案不唯一，如a=-2，b=1"
+    knowledge_points: [反例, 二次根式]
+    module: numbersAndExpressions
+    difficulty: 中档
+    recommended_for: [L1, L2, L3]
+
+  - id: 15
+    type: 填空
+    score: 2
+    question: |
+      在矩形ABCD中，点E、F分别在边BC、DC上，且AE⊥EF。若AB=2，AD=4，BE=1，则EF的长为____
+    answer: "3√5/2"
+    knowledge_points: [矩形, 勾股定理, 相似三角形]
+    module: quadrilaterals
+    difficulty: 中档
+    recommended_for: [L1, L2, L3]
+    similar_zhongkao: "2024中考Q15"
+
+  - id: 16
+    type: 填空
+    score: 2
+    question: |
+      某公园有四处景点需要修复，修复每个景点所需的工人数和天数如下：
+      A: 4人3天  B: 3人4天  C: 2人5天  D: 5人2天
+      (1)若m=7人，则n天的最小值是____
+      (2)每名工人每天工资a元，支付工资总额最少为____
+    answer: "(1) 8  (2) 50a"
+    knowledge_points: [实际问题, 优化方案]
+    module: equationsAndInequalities
+    difficulty: 压轴
+    recommended_for: [L2, L3]
+    similar_zhongkao: "2025中考Q16"
+
+  # ===== 解答题 =====
+  - id: 17
+    type: 解答
+    score: 5
+    question: "计算：|−√3|−(3−π)⁰+4cos45°+(1/5)⁻¹"
+    answer: "4+√3+2√2"
+    solution: |
+      = √3 − 1 + 4×(√2/2) + 5
+      = √3 − 1 + 2√2 + 5
+      = 4 + √3 + 2√2
+    knowledge_points: [绝对值, 零指数幂, 三角函数值, 负整数指数幂]
+    module: numbersAndExpressions
+    difficulty: 基础
+    recommended_for: [L0, L1, L2, L3]
+    similar_zhongkao: "2025中考Q17"
+
+  - id: 18
+    type: 解答
+    score: 5
+    question: |
+      解不等式组：
+      5x+1 > 3(x-2)
+      (1/2)x-1 ≤ 7-(3/2)x
+    answer: "-7/2 < x ≤ 4"
+    solution: |
+      解不等式①：5x+1 > 3x-6，得 x > -7/2
+      解不等式②：(1/2)x-1 ≤ 7-(3/2)x，得 x ≤ 4
+      所以原不等式组的解集为 -7/2 < x ≤ 4
+    knowledge_points: [一元一次不等式组, 解集]
+    module: equationsAndInequalities
+    difficulty: 基础
+    recommended_for: [L0, L1, L2, L3]
+    similar_zhongkao: "2025中考Q18"
+
+  - id: 19
+    type: 解答
+    score: 5
+    question: "已知a+b-1=0，求代数式 (a+b)²/a · a/(2(a+b)) 的值。"
+    answer: "1/2"
+    solution: |
+      原式 = (a+b)²/a × a/(2(a+b)) = (a+b)/2
+      又 a+b-1=0，所以 a+b=1
+      所以原式 = 1/2
+    knowledge_points: [分式化简求值, 整体代入]
+    module: numbersAndExpressions
+    difficulty: 基础
+    recommended_for: [L0, L1, L2, L3]
+    similar_zhongkao: "2024中考Q19"
+
+  - id: 20
+    type: 解答
+    score: 6
+    question: |
+      在四边形ABCD中，AD∥BC，对角线BD⊥DC，过点A作AF⊥BD于点E，交BC于点F。
+      (1) 求证：四边形AFCD是平行四边形。
+      (2) 连接DF，若点F是BC的中点，DF=5，tan∠ADB=1/2，求AE的长。
+    answer: "(1)证明略  (2) AE=√5"
+    solution: |
+      (1) BD⊥CD，BD⊥AF于点E → CD∥AF，又AD∥BC → 四边形AFCD是平行四边形
+      (2) Rt△BDC中F是BC中点 → DF=BC/2=5 → BC=10
+         在□AFCD中AD=CF=5，设AE=k，则DE=2k
+         AD²=AE²+DE² → 25=k²+4k² → k=√5
+    knowledge_points: [平行四边形判定, 直角三角形中位线, 三角函数]
+    module: quadrilaterals
+    difficulty: 中档
+    recommended_for: [L1, L2, L3]
+    similar_zhongkao: "2025中考Q20"
+
+  - id: 21
+    type: 解答
+    score: 6
+    question: |
+      某公司计划投入2200万元购进A、B两种型号的芯片共1000片，其中A型芯片至少800片。
+      已知购进1片A型芯片和1片B型芯片共需6万元，购进1片A型芯片和3片B型芯片共需6.5万元。
+      判断该公司计划投入的资金是否够用。
+    answer: "够用。A型2.3万/片，B型1.4万/片，至少需2120万<2200万"
+    solution: |
+      设A型x万元/片，B型y万元/片
+      2x+y=6, x+3y=6.5 → x=2.3, y=1.4
+      至少费用：2.3×800+1.4×200=2120万 < 2200万，够用
+    knowledge_points: [二元一次方程组, 实际问题, 不等式]
+    module: equationsAndInequalities
+    difficulty: 中档
+    recommended_for: [L1, L2, L3]
+    similar_zhongkao: "2025中考Q21"
+
+  - id: 22
+    type: 解答
+    score: 5
+    question: |
+      统计题：30名报名者的面试成绩，频数分布直方图，65≤x<75组数据为65,66,66,67,69,71,72,73,73,73,73,74
+      (1) m的值；中位数；平均成绩
+      (2) 面试成绩前30%可以被录用，75分能否被录用
+    answer: "(1) m=6, 中位数70, 平均69  (2) 能被录用"
+    knowledge_points: [频数分布直方图, 中位数, 平均数, 数据分析]
+    module: statisticsAndProbability
+    difficulty: 中档
+    recommended_for: [L1, L2, L3]
+    similar_zhongkao: "2025中考Q23"
+
+  - id: 23
+    type: 解答
+    score: 5
+    question: |
+      函数y=kx+b(k≠0)的图象是由y=2x的图象平移得到，且经过点(1,3)。
+      (1) 求函数y=kx+b的解析式；
+      (2) 当x>1时，y=mx-1(m≠0)的值既小于y=kx+b的值也大于y=kx的值，求m的取值范围。
+    answer: "(1) y=2x+1  (2) -1≤m≤2且m≠0"
+    solution: |
+      (1) k=2，代入(1,3)：2+b=3 → b=1，y=2x+1
+      (2) 当x>1时要求 2x < mx-1 < 2x+1
+         即对所有x>1，2x<mx-1且mx-1<2x+1
+         → -1≤m≤2且m≠0
+    knowledge_points: [一次函数, 图象平移, 不等式]
+    module: functions
+    difficulty: 中档
+    recommended_for: [L1, L2, L3]
+    similar_zhongkao: "2025中考Q22"
+
+  - id: 24
+    type: 解答
+    score: 6
+    question: |
+      AB是⊙O的直径，点C在⊙O上，作直线CE∥OC，交直线AB于点E，∠BOC的角平分线于点D，连接BD。
+      (1) 求证：BD是⊙O的切线。
+      (2) 连接AD交OC于点F，若CF/OF=1/2，BD=7，求⊙O的半径。
+    answer: "(1) 证明略  (2) 半径=7√5/3"
+    solution: |
+      (1) OD平分∠BOC → △OCD≌△OBD → ∠OBD=∠OCD=90° → BD是切线
+      (2) 通过相似三角形和全等关系推导，半径=7√5/3
+    knowledge_points: [切线证明, 圆周角, 相似三角形]
+    module: circles
+    difficulty: 中档
+    recommended_for: [L2, L3]
+    similar_zhongkao: "2025中考Q24"
+
+  - id: 25
+    type: 解答
+    score: 5
+    question: |
+      帐篷设计实际问题。1号帐篷由线段旋转得到，2号帐篷由曲线旋转得到。底圆半径都是2.0m。
+      给出h₁和h₂随水平距离x变化的数据表。
+      (1) 补全表格；(2) 画函数图象；(3) 自由活动区半径差约为多少
+    answer: "(1) h₁=2.70(x=1.8时)  (3)① 0.7m  ② <"
+    knowledge_points: [一次函数, 实际问题建模, 函数图象]
+    module: functions
+    difficulty: 中档
+    recommended_for: [L1, L2, L3]
+
+  - id: 26
+    type: 解答
+    score: 6
+    question: |
+      抛物线y=ax²+2a(a-3)x(a≠0)，设对称轴为x=t。
+      (1) 当a=1时，求t的值；
+      (2) 当-1<x₁<2时，对于x₁的每一个值，总存在x₂使得-1<x₂<2，x₂>x₁，且y₂>y₁成立，求t的取值范围。
+    answer: "(1) t=2  (2) t≤1/2 或 t>3"
+    solution: |
+      (1) a=1时y=x²-4x=(x-2)²-4，t=2
+      (2) 分a>0和a<0讨论，综合得 t≤1/2 或 t>3
+    knowledge_points: [二次函数, 对称轴, 分类讨论, 单调性]
+    module: functions
+    difficulty: 压轴
+    recommended_for: [L2, L3]
+    similar_zhongkao: "2025中考Q26"
+
+  - id: 27
+    type: 解答
+    score: 7
+    question: |
+      在△ABC中，∠BAC=90°，AB=AC，P为边BC上一点，点B与点E关于直线AP对称，交线段CA的延长线于点D，连接DE交直线AP于H，连接BE、CE。设∠BAP=α。
+      (1) 当0°<α<45°时：①求∠ACE的大小；②请用等式表示EH、DE、CE的数量关系。
+      (2) 当45°<α<90°时，直接写出EH、DE、CE的数量关系。
+    answer: "(1)① ∠ACE=45°+α  ② DE=CE+2EH  (2) DE=2EH-CE"
+    knowledge_points: [等腰直角三角形, 轴对称, 全等三角形, 分类讨论]
+    module: geometryComprehensive
+    difficulty: 压轴
+    recommended_for: [L2, L3]
+    similar_zhongkao: "2025中考Q27"
+
+  - id: 28
+    type: 解答
+    score: 7
+    question: |
+      对于点P和⊙M，若点P在⊙M上或⊙M内，使得△PQK是顶角为∠Q=α的等腰三角形，则称点Q为点P关于⊙M的"α-关联点"。
+      (1) 已知A(-4,0)，⊙O半径为2：
+        ①在B₁(-2,-√2)、B₂(0,2)、B₃(-1,2)、B₄(-3,4)中，是点A关于⊙O的"90°-关联点"的是____
+        ②若直线y=√3x+b(b>0)上存在点A关于⊙O的"60°-关联点"，求b的取值范围。
+      (2) E是x轴上一动点，EF=4，⊙F半径为2，若点T既是E关于⊙F的"60°-关联点"也是"120°-关联点"，求t的取值范围。
+    answer: "(1)① B₁,B₃  ② 0<b≤4+4√3  (2) -2√3≤t≤2√3"
+    knowledge_points: [圆, 等腰三角形, 新定义问题, 动点]
+    module: geometryComprehensive
+    difficulty: 压轴
+    recommended_for: [L3]
+    similar_zhongkao: "2025中考Q28"
+
+# ================================================================
+#  难度分布统计
+# ================================================================
+difficulty_summary:
+  基础: { count: 14, score: 约46分 }
+  中档: { count: 10, score: 约34分 }
+  压轴: { count: 4, score: 约20分 }
+
+module_distribution:
+  numbersAndExpressions: { questions: [3,5,9,10,11,12,14,17,19], score: 约22分 }
+  equationsAndInequalities: { questions: [16,18,21], score: 约16分 }
+  functions: { questions: [23,25,26], score: 约16分 }
+  triangles: { questions: [2,7], score: 约4分 }
+  quadrilaterals: { questions: [4,15,20], score: 约10分 }
+  circles: { questions: [24], score: 约6分 }
+  statisticsAndProbability: { questions: [6,13,22], score: 约9分 }
+  geometryComprehensive: { questions: [1,8,27,28], score: 约18分 }

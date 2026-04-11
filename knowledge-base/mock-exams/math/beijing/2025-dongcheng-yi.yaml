@@ -1,0 +1,391 @@
+# ============================================================
+# 2025年北京东城区初三一模数学试卷 — 逐题分析
+# ============================================================
+# 数据来源：自主选拔在线、北京高考在线、北京小升初网
+# 考试时间：2025年5月
+# 满分：100分  时长：120分钟
+
+year: 2025
+district: 东城区
+exam_type: 一模
+subject: 数学
+full_score: 100
+duration_minutes: 120
+total_questions: 28
+structure: "8选择(16分) + 8填空(16分) + 12解答(68分)"
+
+questions:
+
+  # ===== 选择题（每题2分）=====
+  - id: 1
+    type: 选择
+    score: 2
+    question: |
+      某几何体的三视图如图所示，则这个几何体是
+      (A) 三棱柱  (B) 圆锥  (C) 圆柱  (D) 正方体
+    answer: D
+    knowledge_points: [三视图, 几何体]
+    module: geometryComprehensive
+    difficulty: 基础
+    recommended_for: [L0, L1, L2, L3]
+    similar_zhongkao: "2021中考Q1"
+
+  - id: 2
+    type: 选择
+    score: 2
+    question: |
+      若实数a、b在数轴上对应点的位置如图所示，则下列式子正确的是
+      (A) a+b>0  (B) a+b<0  (C) |a|<|b|  (D) a-b>0
+    answer: D
+    knowledge_points: [数轴, 实数大小比较]
+    module: numbersAndExpressions
+    difficulty: 基础
+    recommended_for: [L0, L1, L2, L3]
+
+  - id: 3
+    type: 选择
+    score: 2
+    question: |
+      我国AI应用发展迅速，截至2025年2月8日，我国大型AI应用程序的全球下载量已超过40000000次，数据40000000用科学记数法表示为
+      (A) 4×10⁶  (B) 4×10⁷  (C) 4×10⁸  (D) 0.4×10⁸
+    answer: B
+    knowledge_points: [科学记数法]
+    module: numbersAndExpressions
+    difficulty: 基础
+    recommended_for: [L0, L1, L2, L3]
+    similar_zhongkao: "2024中考Q3"
+
+  - id: 4
+    type: 选择
+    score: 2
+    question: |
+      在Rt△ABC的直角顶点C放在直线l上，已知∠A=40°，则∠1的度数为
+      (A) 20°  (B) 15°  (C) 50°  (D) 35°
+    answer: A
+    knowledge_points: [直角三角形, 角度计算]
+    module: triangles
+    difficulty: 基础
+    recommended_for: [L0, L1, L2, L3]
+
+  - id: 5
+    type: 选择
+    score: 2
+    question: |
+      不透明的袋子中只装有1个红球和2个白球，随机取出一个球后放回，再随机取出一个，则两次都是红色球的概率是
+      (A) 1/9  (B) 1/3  (C) 2/9  (D) 2/3
+    answer: A
+    knowledge_points: [概率, 独立事件]
+    module: statisticsAndProbability
+    difficulty: 基础
+    recommended_for: [L0, L1, L2, L3]
+    similar_zhongkao: "2025中考Q6"
+
+  - id: 6
+    type: 选择
+    score: 2
+    question: |
+      已知关于x的一元二次方程x²-2x+a=0有两个不相等的实数根，则a的取值范围是
+      (A) a>1  (B) a<1  (C) a<1且a≠0  (D) a>-1且a≠0
+    answer: C
+    knowledge_points: [一元二次方程, 判别式]
+    module: equationsAndInequalities
+    difficulty: 基础
+    recommended_for: [L0, L1, L2, L3]
+    similar_zhongkao: "2025中考Q5"
+
+  - id: 7
+    type: 选择
+    score: 2
+    question: |
+      在△ABC中，P是边AC的中点，按步骤作图后，下列结论不一定成立的是
+      (A) ∠APQ=∠B  (B) ∠BQP+∠C=180°  (C) △APQ∽△ABC的相似比为1:2  (D) △ABC∽△APQ
+    answer: C
+    knowledge_points: [尺规作图, 相似三角形]
+    module: triangles
+    difficulty: 中档
+    recommended_for: [L1, L2, L3]
+
+  - id: 8
+    type: 选择
+    score: 2
+    question: |
+      正方形ABCD中，E是BC上动点，连接AE，点B关于直线AE的对称点为B'，连接EB'延长交DC于点F，连接AF。设CE=x，CF=y，给出四个结论。
+      所有正确结论的序号为
+      (A) ①③  (B) ①④  (C) ②③  (D) ①②④
+    answer: D
+    knowledge_points: [正方形, 轴对称, 函数关系]
+    module: geometryComprehensive
+    difficulty: 压轴
+    recommended_for: [L2, L3]
+
+  # ===== 填空题（每题2分）=====
+  - id: 9
+    type: 填空
+    score: 2
+    question: "正八边形的外角和度数是____"
+    answer: "360°"
+    knowledge_points: [多边形外角和]
+    module: quadrilaterals
+    difficulty: 基础
+    recommended_for: [L0, L1, L2, L3]
+
+  - id: 10
+    type: 填空
+    score: 2
+    question: "分解因式（具体题目）"
+    answer: "2(x-1)³"
+    knowledge_points: [因式分解]
+    module: numbersAndExpressions
+    difficulty: 基础
+    recommended_for: [L0, L1, L2, L3]
+
+  - id: 11
+    type: 填空
+    score: 2
+    question: "（一元一次方程相关）"
+    answer: "-2"
+    knowledge_points: [一元一次方程]
+    module: equationsAndInequalities
+    difficulty: 基础
+    recommended_for: [L0, L1, L2, L3]
+
+  - id: 12
+    type: 填空
+    score: 2
+    question: "方程 3/(x-2) = 2/x 的解是____"
+    answer: "x=6"
+    knowledge_points: [分式方程, 验根]
+    module: equationsAndInequalities
+    difficulty: 基础
+    recommended_for: [L0, L1, L2, L3]
+
+  - id: 13
+    type: 填空
+    score: 2
+    question: "从600名学生中随机抽取100名体质健康测试数据，估计全校'优秀'的总人数为____"
+    answer: "192"
+    knowledge_points: [样本估计总体, 统计]
+    module: statisticsAndProbability
+    difficulty: 基础
+    recommended_for: [L0, L1, L2, L3]
+
+  - id: 14
+    type: 填空
+    score: 2
+    question: "在□ABCD中，点E在AB上，CE、BD交于点F，若AE:BE=2:1，且BF=2，则DF=____"
+    answer: "4"
+    knowledge_points: [平行四边形, 相似三角形]
+    module: quadrilaterals
+    difficulty: 中档
+    recommended_for: [L1, L2, L3]
+
+  - id: 15
+    type: 填空
+    score: 2
+    question: "反比例函数y=k/x(k≠0)的图象经过点(1,-2)，则k=____"
+    answer: "-2"
+    knowledge_points: [反比例函数, 待定系数法]
+    module: functions
+    difficulty: 基础
+    recommended_for: [L0, L1, L2, L3]
+
+  - id: 16
+    type: 填空
+    score: 2
+    question: "（新情境实际问题）"
+    answer: "（具体答案待确认）"
+    knowledge_points: [实际问题]
+    module: equationsAndInequalities
+    difficulty: 中档
+    recommended_for: [L1, L2, L3]
+
+  # ===== 解答题 =====
+  - id: 17
+    type: 解答
+    score: 5
+    question: "计算：∛27 − 2sin60° + (1/2)⁻¹ + (π−3)⁰"
+    answer: "6-√3"
+    solution: |
+      = 3 − 2×(√3/2) + 2 + 1
+      = 3 − √3 + 2 + 1
+      = 6 − √3
+    knowledge_points: [立方根, 三角函数值, 负整数指数幂, 零指数幂]
+    module: numbersAndExpressions
+    difficulty: 基础
+    recommended_for: [L0, L1, L2, L3]
+    similar_zhongkao: "2025中考Q17"
+
+  - id: 18
+    type: 解答
+    score: 5
+    question: |
+      解不等式组：
+      3(x-1) ≤ 5x+1
+      x - (x-4)/2 > 1
+    answer: "-2 ≤ x < 2"
+    solution: |
+      解①：3x-3≤5x+1 → -2x≤4 → x≥-2
+      解②：(2x-x+4)/2>1 → x+4>2 → x>-2（待核实）
+      解集：-2≤x<2
+    knowledge_points: [一元一次不等式组]
+    module: equationsAndInequalities
+    difficulty: 基础
+    recommended_for: [L0, L1, L2, L3]
+
+  - id: 19
+    type: 解答
+    score: 5
+    question: "已知x-y=2，求代数式 (x²-2xy+y²)/(x(x+2y)) · 3/(x+2y) 的值。"
+    answer: "3"
+    solution: |
+      (x²-2xy+y²) = (x-y)² = 4
+      需进一步化简分母后代入x-y=2求值
+    knowledge_points: [分式化简求值, 完全平方公式]
+    module: numbersAndExpressions
+    difficulty: 基础
+    recommended_for: [L0, L1, L2, L3]
+
+  - id: 20
+    type: 解答
+    score: 5
+    question: |
+      编织大、小两种中国结共12个，总计用绳40m。
+      大号4m/个，小号3m/个。求各编织了多少个。
+    answer: "大4个，小8个"
+    solution: |
+      设大x个，则小(12-x)个
+      4x+3(12-x)=40 → x=4
+    knowledge_points: [一元一次方程, 实际问题]
+    module: equationsAndInequalities
+    difficulty: 基础
+    recommended_for: [L0, L1, L2, L3]
+
+  - id: 21
+    type: 解答
+    score: 6
+    question: |
+      矩形ABCD的对角线交于点O，E为OB的中点，连接AE，过点O作OF∥CD交AE延长线于F，连接BF。
+      (1) 求证：四边形OABF是平行四边形。
+      (2) 若OA=AB=6，求FG的长。
+    answer: "(1) 证明略  (2) FG=2√5"
+    knowledge_points: [矩形, 平行四边形判定, 中点]
+    module: quadrilaterals
+    difficulty: 中档
+    recommended_for: [L1, L2, L3]
+
+  - id: 22
+    type: 解答
+    score: 5
+    question: |
+      一次函数y=kx+b(k≠0)的图象与反比例函数图象相关，经过点(2,1)。
+      (1) 求一次函数解析式。
+      (2) 两函数图象交点位于直线x=-1左侧，求m的取值范围。
+    answer: "(1) y=x-1  (2) m<1且m≠0 或 m>2"
+    knowledge_points: [一次函数, 反比例函数, 图象交点]
+    module: functions
+    difficulty: 中档
+    recommended_for: [L1, L2, L3]
+
+  - id: 23
+    type: 解答
+    score: 5
+    question: |
+      20名学生校外体育活动时长统计分析。
+      频数分布直方图+55≤x<60组原始数据：55,56,56,56,58,59
+      (1) 补全直方图，求中位数m和众数n。
+      (2) 甲乙丙三名学生5天训练数据，排序问题。
+    answer: "(1) m=56, n=56  (2) 排序最靠前的是甲（或需计算确认）"
+    knowledge_points: [频数分布直方图, 中位数, 众数, 方差]
+    module: statisticsAndProbability
+    difficulty: 中档
+    recommended_for: [L1, L2, L3]
+
+  - id: 24
+    type: 解答
+    score: 6
+    question: |
+      在⊙O中，AB为直径，BC为弦，OD⊥BC，过点A作⊙O的切线与DO延长线交于点E。
+      (1) 求证：∠B=∠E。
+      (2) 若⊙O半径为2，OE=6，求BC的长。
+    answer: "(1) 证明略  (2) BC=8√2/3"
+    solution: |
+      (1) AE是切线→OA⊥AE，OD⊥BC→∠OAE=∠ODB=90°→∠B=∠E
+      (2) cosE=OA/OE=2/6=1/3，cosB=cosE=1/3，BC=AB×cosB=4×(1/3)... BC=8√2/3
+    knowledge_points: [圆的切线, 垂径定理, 三角函数]
+    module: circles
+    difficulty: 中档
+    recommended_for: [L2, L3]
+    similar_zhongkao: "2025中考Q24"
+
+  - id: 25
+    type: 解答
+    score: 6
+    question: |
+      纯电动汽车实际剩余电量与仪表盘显示的差异分析。
+      给出已行驶里程x与仪表盘显示y₁、实际剩余y₂的数据。实际总里程280km。
+      (1) y₂与x的关系式
+      (2) 画图象
+      (3) 各种里程下的实际vs显示对比
+    answer: "(1) y₂=-x+280  (3)① 80km, 109km  ② 约160km"
+    knowledge_points: [一次函数, 实际问题, 函数图象]
+    module: functions
+    difficulty: 中档
+    recommended_for: [L1, L2, L3]
+
+  - id: 26
+    type: 解答
+    score: 6
+    question: |
+      抛物线y=mx²-m²x(m≠0)上两点M(x₁,y₁)、N(x₂,y₂)。
+      (1) 求抛物线的对称轴。
+      (2) 若对于-1<x₁<2m，2m<x₂<6都有y₁<y₂，求m的取值范围。
+    answer: "(1) 对称轴x=m/2  (2) 1<m<3"
+    knowledge_points: [二次函数, 对称轴, 分类讨论]
+    module: functions
+    difficulty: 压轴
+    recommended_for: [L2, L3]
+    similar_zhongkao: "2025中考Q26"
+
+  - id: 27
+    type: 解答
+    score: 7
+    question: |
+      Rt△ABC中，∠ACB=90°，AC=BC，点D在AB上(AD<BD)，过D作ED⊥AB交BC延长线于E，
+      以CD为底作等腰Rt△CDF（E、F在直线CD的异侧），连接BF。
+      (1) 补全图形
+      (2) 求证：ED=BD
+      (3) 用等式表示AE与BF的数量关系，并证明
+    answer: "(2) ED=BD  (3) AE=2BF"
+    knowledge_points: [等腰直角三角形, 全等三角形, 翻折]
+    module: geometryComprehensive
+    difficulty: 压轴
+    recommended_for: [L2, L3]
+    similar_zhongkao: "2025中考Q27"
+
+  - id: 28
+    type: 解答
+    score: 7
+    question: |
+      新定义"偏移中距"d(P,M,Q)：点P绕点M逆时针旋转90°得到P'，N为线段MQ的中点，d(P,M,Q)=P'N。
+      (1) A(-1,0), B(3,2)：①若C(0,2)，求d(A,C,B)；②C为y轴上动点，求d(A,C,B)最小值
+      (2) 若OA=2，OC=1，求d(A,C,O)的取值范围
+    answer: "(1)① √5/2  ② 待确认  (2) (4-√5)/2 ≤ d ≤ (4+√5)/2"
+    knowledge_points: [旋转, 新定义, 坐标系, 最值]
+    module: geometryComprehensive
+    difficulty: 压轴
+    recommended_for: [L3]
+
+difficulty_summary:
+  基础: { count: 15, score: 约48分 }
+  中档: { count: 9, score: 约32分 }
+  压轴: { count: 4, score: 约20分 }
+
+module_distribution:
+  numbersAndExpressions: { questions: [2,3,10,17,19], score: 约14分 }
+  equationsAndInequalities: { questions: [6,11,12,16,18,20], score: 约19分 }
+  functions: { questions: [15,22,25,26], score: 约18分 }
+  triangles: { questions: [4,7], score: 约4分 }
+  quadrilaterals: { questions: [9,14,21], score: 约10分 }
+  circles: { questions: [24], score: 约6分 }
+  statisticsAndProbability: { questions: [5,13,23], score: 约9分 }
+  geometryComprehensive: { questions: [1,8,27,28], score: 约18分 }
