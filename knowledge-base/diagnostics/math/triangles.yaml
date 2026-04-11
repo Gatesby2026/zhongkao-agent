@@ -86,6 +86,33 @@ levels:
       - 压轴几何题前两问必对
     pass_standard: 中考三角形相关题目得分率90%以上
 
+# ------ 真题锚点（2021-2025 北京中考）------
+exam_benchmarks:
+
+  L1:
+    must_solve:
+      - { year: 2022, qid: 20, topic: 三角形内角和证明, score: 5, note: 选辅助线方法证明 }
+      - { year: 2024, qid: 7, topic: 尺规作图依据, score: 2, note: 全等判定方法选择 }
+    should_struggle:
+      - { year: 2025, qid: 20, topic: 三角形中位线+矩形, note: 需综合运用 }
+
+  L2:
+    must_solve:
+      - { year: 2025, qid: 20, topic: 中位线+矩形判定, score: 6 }
+      - { year: 2024, qid: 20, topic: 平行四边形+勾股定理, score: 6 }
+      - { year: 2024, qid: 24, topic: 三角形相似, score: 6, note: 几何推理论证 }
+      - { year: 2023, qid: 8, topic: 勾股定理图形关系, score: 2 }
+    should_struggle:
+      - { year: 2025, qid: 27, topic: 旋转+全等+相似, sub: "第3问" }
+      - { year: 2024, qid: 27, topic: 全等+相似+旋转, sub: "第3问" }
+
+  L3:
+    must_solve:
+      - { year: 2025, qid: 27, topic: 几何综合压轴, score: 7, note: 前两问必对 }
+      - { year: 2024, qid: 27, topic: 几何综合压轴, score: 7, note: 前两问必对 }
+      - { year: 2021, qid: 27, topic: 全等+相似+运动, score: 7 }
+    pass_standard: Q20+Q24+Q27前两问 共约 17 分拿到 14 分以上
+
 # ------ 升级路径概要 ------
 upgrade_paths:
   L0_to_L1:

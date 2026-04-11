@@ -1,0 +1,191 @@
+# ============================================================
+# 目标学校 → 数学目标分 → 各模块最低级别要求
+# ============================================================
+# 数据来源：admission 分数线 × exam-analysis 真题分值 × diagnostics 分级
+# 最后更新：2026-04-11
+# 用途：用户选"我想上XX中"后，自动推算各模块需达到什么水平
+# 基准年份：2025（总分510，数学满分100）
+
+region: 北京市
+subject: 数学
+full_score: 100
+
+# ================================================================
+#  目标层级定义
+# ================================================================
+
+targets:
+
+  - tier: 顶尖校实验班
+    description: 八十中创新班、六小强实验班、四中、北师大实验科学班
+    example_schools:
+      chaoyang: [八十中创新班]
+      haidian: [十一学校科实班, 101人文实验班, 首师大附中创新班]
+      xicheng: [北师大实验科学班, 北师大附中钱学森班, 八中科技班]
+      dongcheng: [二中]
+    total_score_reference: 485-495
+    math_score: 95+
+    module_requirements:
+      数与式: { level: L3, reason: 选择填空零失误，Q17必须满分 }
+      方程与不等式: { level: L3, reason: Q18满分，Q21应用题满分 }
+      函数: { level: L3, reason: Q22/Q25满分，Q26至少拿5/6分 }
+      三角形: { level: L2+, reason: Q20满分 }
+      四边形: { level: L2+, reason: Q20/Q21中四边形部分满分 }
+      圆: { level: L2+, reason: Q24满分 }
+      几何综合: { level: L3, reason: Q27至少拿5/7分 }
+      统计与概率: { level: L3, reason: Q23满分，概率选择题秒解 }
+    exam_strategy: |
+      全卷失误不超过5分。
+      选择填空最多错1题（30/32分）。
+      Q17-Q25全部满分（约48分）。
+      Q26拿5分 + Q27拿5分 + Q28拿2-3分 ≈ 12-13分。
+      总计：90-95分。
+    time_advice: 选择填空控制在35分钟内，压轴题留足40分钟
+
+  - tier: 区顶尖校普通班
+    description: 八十中/北京中学普通班、人大附/清华附普通班、四中/师大实验普通班、二中
+    example_schools:
+      chaoyang: [八十中普通班, 北京中学, 人大附朝阳, 清华附朝阳]
+      haidian: [人大附中, 十一学校普通班, 清华附中, 101普通班, 首师大附中普通班]
+      xicheng: [北师大实验普通班, 八中普通班, 北师大二附中]
+      dongcheng: [171中学, 五中]
+    total_score_reference: 475-487
+    math_score: 85-94
+    module_requirements:
+      数与式: { level: L2+, reason: Q9/Q10/Q17必须满分 }
+      方程与不等式: { level: L2+, reason: Q11/Q18满分，Q21拿大部分分 }
+      函数: { level: L2, reason: Q12/Q22/Q25拿满，Q26前两问拿4分 }
+      三角形: { level: L2, reason: Q20满分 }
+      四边形: { level: L2, reason: 四边形相关题满分 }
+      圆: { level: L2, reason: Q24拿5/6分 }
+      几何综合: { level: L2, reason: Q27前两问拿4-5分 }
+      统计与概率: { level: L2+, reason: Q13/Q23满分 }
+    exam_strategy: |
+      基础题全对 + 中档题拿90%。
+      选择填空错1-2题（28-30分）。
+      Q17-Q25全做（约48分）。
+      Q26前两问（4分）+ Q27前两问（4-5分）。
+      总计：84-92分。
+    time_advice: 选择填空40分钟内完成，中档解答题每题8-10分钟
+
+  - tier: 区重点校
+    description: 陈经纶/朝外/望京、北大附/育英、161/三十五中、汇文/广渠门
+    example_schools:
+      chaoyang: [陈经纶中学, 朝阳外国语, 清华附中望京, 八十中睿德]
+      haidian: [北大附中, 育英学校, 北航实验]
+      xicheng: [161中学, 三十五中, 十三中]
+      dongcheng: [汇文中学, 广渠门中学, 东直门中学]
+    total_score_reference: 465-477
+    math_score: 78-87
+    module_requirements:
+      数与式: { level: L2, reason: 基础题全拿 }
+      方程与不等式: { level: L2, reason: Q11/Q18/Q21 }
+      函数: { level: L1+, reason: Q22能做，Q26第1问能做 }
+      三角形: { level: L2, reason: Q20 }
+      四边形: { level: L1+, reason: 基础四边形性质题能做 }
+      圆: { level: L1+, reason: Q24前两问 }
+      几何综合: { level: L1+, reason: Q27第1问能做 }
+      统计与概率: { level: L2, reason: Q23满分 }
+    exam_strategy: |
+      基础题全对 + 中档题拿70%。
+      选择填空错2-3题（26-28分）。
+      Q17-Q23全做（约37分）。
+      Q24拿4分 + Q25拿3分 + Q26第1问拿2分。
+      总计：72-82分。
+    time_advice: 不要在压轴题上死磕，省时间检查基础题
+
+  - tier: 普通高中
+    description: 工大附中/日坛/和平街一中/对外经贸附中等
+    example_schools:
+      chaoyang: [工大附中, 日坛中学, 和平街一中, 对外经贸附中]
+      haidian: [五十七中]
+      xicheng: [十五中]
+      dongcheng: [166中学, 十一中学]
+    total_score_reference: 450-467
+    math_score: 65-79
+    module_requirements:
+      数与式: { level: L2, reason: Q9/Q10/Q17是送分题 }
+      方程与不等式: { level: L1+, reason: Q11/Q18 }
+      函数: { level: L1, reason: Q12反比例函数，Q22一次函数 }
+      三角形: { level: L1, reason: Q20前半部分 }
+      四边形: { level: L1, reason: 基础性质 }
+      圆: { level: L1, reason: 选择填空中的圆的基础题 }
+      几何综合: { level: L0+, reason: 不作为重点 }
+      统计与概率: { level: L2, reason: Q23是性价比最高的中档题 }
+    exam_strategy: |
+      基础题为核心，中档题选做。
+      选择前6题（12分）+ 填空Q9-Q12（8分）= 20分。
+      Q17+Q18+Q19（15分）。
+      Q20拿3分 + Q22拿3分 + Q23拿4分 = 10分。
+      选择Q7-Q8和填空Q13-Q15零散拿分 ≈ 4-8分。
+      总计：60-72分。
+    time_advice: 基础题做两遍确保正确，放弃Q26-Q28
+
+  - tier: 保底普高
+    description: 确保有普高录取，对应区排名靠后的公办高中
+    example_schools:
+      chaoyang: [三里屯一中, 十七中, 东方德才, 二外附中]
+      dongcheng: [五十中]
+    total_score_reference: 430-452
+    math_score: 55-64
+    module_requirements:
+      数与式: { level: L1, reason: Q9/Q10/Q17三道送分题必拿 }
+      方程与不等式: { level: L1, reason: Q11/Q18两道送分题 }
+      函数: { level: L0+, reason: Q12如果会就做 }
+      统计与概率: { level: L1, reason: 选择中的概率题 }
+    skip_modules:
+      - { module: 几何综合, reason: 性价比太低 }
+      - { module: 圆, reason: 中考圆的题多在中档以上 }
+    exam_strategy: |
+      只攻6道送分题：Q9 + Q10 + Q11 + Q17 + Q18 + Q19 = 19分。
+      选择前6题（12分）。
+      填空Q12-Q13拿1-2题（2-4分）。
+      Q20/Q23写几步拿步骤分（3-5分）。
+      总计：36-40分确定 + 零散拿分 ≈ 55-64分。
+    time_advice: 把70%时间花在送分题上，宁可做慢做对
+
+# ================================================================
+#  数学分数 → 模块优先级速查
+# ================================================================
+
+priority_by_score_gap:
+
+  - current_math: 40-55
+    target_math: 60
+    gap: 5-20分
+    priority_modules:
+      - { module: 数与式, action: "L0→L1，练Q9/Q10/Q17", gain: "约9分" }
+      - { module: 方程与不等式, action: "L0→L1，练Q11/Q18", gain: "约7分" }
+      - { module: 统计与概率, action: "学会概率选择题", gain: "约2分" }
+    total_potential: 约18分
+    note: 这三个模块提分最快，1-2周可见效
+
+  - current_math: 55-70
+    target_math: 80
+    gap: 10-25分
+    priority_modules:
+      - { module: 函数, action: "L1→L2，攻Q22一次函数", gain: "约5分" }
+      - { module: 统计与概率, action: "L1→L2，攻Q23统计分析", gain: "约5分" }
+      - { module: 三角形/四边形, action: "L1→L2，攻Q20", gain: "约5分" }
+      - { module: 圆, action: "L1→L2，攻Q24前两问", gain: "约4分" }
+    total_potential: 约19分
+    note: 中档题突破期，需要2-4周系统训练
+
+  - current_math: 75-85
+    target_math: 90
+    gap: 5-15分
+    priority_modules:
+      - { module: 函数, action: "L2→L2+，攻Q25和Q26前两问", gain: "约6分" }
+      - { module: 几何综合, action: "L2→L2+，攻Q27前两问", gain: "约4分" }
+      - { module: 圆, action: "L2巩固，Q24满分", gain: "约2分" }
+    total_potential: 约12分
+    note: 进入精细化提分阶段，每多拿1分都需要更多努力
+
+  - current_math: 88-94
+    target_math: 95+
+    gap: 1-7分
+    priority_modules:
+      - { module: 函数, action: "L3，攻Q26第3问", gain: "约2分" }
+      - { module: 几何综合, action: "L3，攻Q27第3问", gain: "约2分" }
+    total_potential: 约4分
+    note: 边际收益递减，Q28性价比极低（全市均分不到1分）

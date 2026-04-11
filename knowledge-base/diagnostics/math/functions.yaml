@@ -100,6 +100,38 @@ levels:
       - 函数与几何的综合问题游刃有余
     pass_standard: 中考函数相关选择填空全对，解答题（含压轴）得分率85%以上
 
+# ------ 真题锚点（2021-2025 北京中考）------
+exam_benchmarks:
+
+  L1:
+    must_solve:
+      - { year: 2025, qid: 12, topic: 频率估计（实为统计题，此处考反比例函数时见下L2）, score: 2 }
+      - { year: 2024, qid: 12, topic: 反比例函数对称性, score: 2 }
+      - { year: 2022, qid: 8, topic: 函数模型判断, score: 2, note: 三个实际问题对应函数图象 }
+    should_struggle:
+      - { year: 2025, qid: 22, topic: 一次函数待定系数法 }
+      - { year: 2024, qid: 22, topic: 一次函数待定系数法 }
+
+  L2:
+    must_solve:
+      - { year: 2025, qid: 21, topic: 一次函数·待定系数法+不等式, score: 6 }
+      - { year: 2024, qid: 22, topic: 一次函数·待定系数法, score: 5 }
+      - { year: 2023, qid: 22, topic: 一次函数·数形结合, score: 5 }
+      - { year: 2025, qid: 25, topic: 函数建模·AI培训, score: 5 }
+      - { year: 2022, qid: 25, topic: 二次函数·冬奥跳台, score: 5 }
+      - { year: 2022, qid: 12, topic: 反比例函数大小比较, score: 2 }
+    should_struggle:
+      - { year: 2025, qid: 26, topic: 二次函数压轴, sub: "第3问" }
+      - { year: 2024, qid: 26, topic: 二次函数压轴, sub: "第3问" }
+
+  L3:
+    must_solve:
+      - { year: 2025, qid: 26, topic: 二次函数压轴, score: 6, note: 前两问必对，第3问拿步骤分 }
+      - { year: 2024, qid: 26, topic: 二次函数压轴, score: 6 }
+      - { year: 2023, qid: 26, topic: 二次函数压轴, score: 6 }
+      - { year: 2025, qid: 8, topic: 反比例函数多结论判断, score: 2 }
+    pass_standard: Q8+Q12+Q22+Q25+Q26 共约 20 分拿到 17 分以上
+
 # ------ 各子模块细分诊断 ------
 sub_modules:
 

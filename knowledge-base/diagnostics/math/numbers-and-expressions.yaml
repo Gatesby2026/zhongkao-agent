@@ -84,6 +84,37 @@ levels:
       - 运算速度快，为后面的大题节省时间
     pass_standard: 中考数与式相关题目（选择+填空+解答第17题）全对
 
+# ------ 真题锚点（2021-2025 北京中考）------
+# 用法：做对 must_solve 中的题 = 确认达到该级别
+# 详细题目信息见 exam-analysis/math/beijing/ 对应年份文件
+
+exam_benchmarks:
+
+  L1:
+    must_solve:
+      - { year: 2025, qid: 6, topic: 科学记数法, score: 2, note: 天问二号背景 }
+      - { year: 2024, qid: 9, topic: 二次根式有意义的条件, score: 2, note: "√(9-x)≥0" }
+      - { year: 2023, qid: 9, topic: 分式有意义的条件, score: 2 }
+    should_struggle:
+      - { year: 2025, qid: 19, topic: 代数式求值, note: 需识别(a+b)²结构 }
+
+  L2:
+    must_solve:
+      - { year: 2025, qid: 9, topic: 二次根式有意义, score: 2 }
+      - { year: 2025, qid: 10, topic: 因式分解, score: 2, note: "7m²-28=7(m+2)(m-2)" }
+      - { year: 2025, qid: 17, topic: 实数混合运算, score: 5 }
+      - { year: 2024, qid: 17, topic: 实数混合运算, score: 5 }
+      - { year: 2022, qid: 19, topic: 整式代入求值, score: 5, note: "已知x²+2x-2=0求(x+2)²+x(x+1)" }
+    should_struggle:
+      - { year: 2025, qid: 19, topic: 代数式求值, note: 整体代入技巧要求较高 }
+
+  L3:
+    must_solve:
+      - { year: 2025, qid: 19, topic: 代数式求值, score: 5 }
+      - { year: 2023, qid: 19, topic: 分式化简求值, score: 5 }
+      - { year: 2022, qid: 19, topic: 整式代入求值, score: 5 }
+    pass_standard: Q9+Q10+Q17+Q19 共 14 分全拿
+
 # ------ 升级路径概要 ------
 upgrade_paths:
   L0_to_L1:

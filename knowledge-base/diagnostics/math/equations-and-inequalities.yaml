@@ -85,6 +85,35 @@ levels:
       - 方程与函数的综合问题能正确处理
     pass_standard: 中考方程与不等式相关题目全对
 
+# ------ 真题锚点（2021-2025 北京中考）------
+exam_benchmarks:
+
+  L1:
+    must_solve:
+      - { year: 2025, qid: 5, topic: 一元二次方程判别式, score: 2, note: "Δ=0求a" }
+      - { year: 2025, qid: 11, topic: 分式方程, score: 2, note: "2/(x-6)+1/x=0" }
+      - { year: 2025, qid: 18, topic: 一元一次不等式组, score: 5 }
+    should_struggle:
+      - { year: 2025, qid: 22, topic: 方程组建模·北京风筝, note: 实际应用需建模能力 }
+
+  L2:
+    must_solve:
+      - { year: 2025, qid: 11, topic: 分式方程, score: 2 }
+      - { year: 2025, qid: 18, topic: 不等式组, score: 5 }
+      - { year: 2024, qid: 18, topic: 不等式组, score: 5 }
+      - { year: 2024, qid: 21, topic: 方程建模·汽车尾气, score: 6 }
+      - { year: 2023, qid: 21, topic: 方程建模·对联装裱, score: 6 }
+      - { year: 2022, qid: 6, topic: 判别式求参数, score: 2, note: "x²+x+m=0有两等根" }
+    should_struggle:
+      - { year: 2025, qid: 13, topic: 举反例说明假命题, note: 逻辑推理非纯计算 }
+
+  L3:
+    must_solve:
+      - { year: 2025, qid: 22, topic: 方程组建模, score: 5 }
+      - { year: 2024, qid: 21, topic: 方程建模, score: 6 }
+      - { year: 2023, qid: 21, topic: 方程建模, score: 6 }
+    pass_standard: Q5/Q11/Q18/Q21 共约 15 分全拿
+
 # ------ 升级路径概要 ------
 upgrade_paths:
   L0_to_L1:

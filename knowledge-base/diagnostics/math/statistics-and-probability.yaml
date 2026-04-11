@@ -76,6 +76,38 @@ levels:
       - 新课标新增内容（四分位数/箱线图）也已掌握
     pass_standard: 中考统计概率相关题目全对
 
+# ------ 真题锚点（2021-2025 北京中考）------
+exam_benchmarks:
+
+  L1:
+    must_solve:
+      - { year: 2025, qid: 4, topic: 古典概型·摸球, score: 2, note: "P(白)=1/6" }
+      - { year: 2023, qid: 7, topic: 抛硬币概率, score: 2 }
+      - { year: 2021, qid: 6, topic: 抛硬币一正一反, score: 2, note: 教材原题 }
+      - { year: 2025, qid: 12, topic: 频率估计总体, score: 2, note: BMI数据 }
+    should_struggle:
+      - { year: 2025, qid: 23, topic: 统计分析·选运动员, note: 需综合比较 }
+
+  L2:
+    must_solve:
+      - { year: 2025, qid: 4, topic: 概率, score: 2 }
+      - { year: 2025, qid: 12, topic: 频率估计, score: 2 }
+      - { year: 2025, qid: 23, topic: 统计分析, score: 5, note: 折线图+表格+排序 }
+      - { year: 2024, qid: 23, topic: 众数中位数·演讲赛, score: 5 }
+      - { year: 2023, qid: 23, topic: 方差·舞蹈队选人, score: 5 }
+      - { year: 2022, qid: 13, topic: 众数·滑冰鞋, score: 2 }
+      - { year: 2022, qid: 23, topic: 平均数方差·歌唱比赛, score: 6 }
+    should_struggle:
+      - { year: 2021, qid: 25, topic: 两城市邮政收入统计, note: 多图表信息综合 }
+
+  L3:
+    must_solve:
+      - { year: 2025, qid: 23, score: 5 }
+      - { year: 2024, qid: 23, score: 5 }
+      - { year: 2022, qid: 23, score: 6 }
+      - { year: 2021, qid: 25, topic: 统计应用, score: 5 }
+    pass_standard: 概率选择(2分) + 统计填空(2分) + Q23(5-6分) = 9-10分全拿
+
 # ------ 升级路径概要 ------
 upgrade_paths:
   L0_to_L1:

@@ -72,6 +72,38 @@ levels:
       - 即使第三问做不出来，也能拿到步骤分
     pass_standard: 压轴题得分率70%以上（3问中至少完整做对前2问+第3问拿步骤分）
 
+# ------ 真题锚点（2021-2025 北京中考）------
+exam_benchmarks:
+
+  L1:
+    must_solve:
+      - { year: 2025, qid: 27, topic: 旋转+全等+相似, score: 7, sub: "仅第1问", note: 基础计算 }
+      - { year: 2024, qid: 27, topic: 全等+相似+旋转, score: 7, sub: "仅第1问" }
+    should_struggle:
+      - { year: 2025, qid: 27, sub: "第2问", note: 需要角度追踪和辅助线 }
+      - { year: 2025, qid: 28, sub: "第1问", note: 新定义理解 }
+
+  L2:
+    must_solve:
+      - { year: 2025, qid: 27, topic: 几何压轴, score: 7, sub: "第1-2问" }
+      - { year: 2024, qid: 27, topic: 几何压轴, score: 7, sub: "第1-2问" }
+      - { year: 2023, qid: 27, topic: 运动与不变性, score: 7, sub: "第1-2问" }
+      - { year: 2025, qid: 28, topic: 新定义·关联点, score: 7, sub: "仅第1问" }
+    should_struggle:
+      - { year: 2025, qid: 27, sub: "第3问" }
+      - { year: 2025, qid: 28, sub: "第2-3问" }
+      - { year: 2024, qid: 28, topic: "α可及点", note: 全市均分0.9/7 }
+
+  L3:
+    must_solve:
+      - { year: 2025, qid: 27, score: 7, note: 前两问必对+第3问拿步骤分 }
+      - { year: 2024, qid: 27, score: 7, note: 同上 }
+      - { year: 2025, qid: 28, score: 7, sub: "第1-2问", note: 新定义题前两问 }
+    aspirational:
+      - { year: 2024, qid: 28, topic: "α可及点第3问", note: 全市仅215人满分 }
+      - { year: 2025, qid: 28, sub: "第3问", note: 最难题，量力而行 }
+    pass_standard: Q27拿5/7分 + Q28拿2-3/7分 = 7-8分
+
 # ------ 压轴题常见类型 ------
 common_types:
 

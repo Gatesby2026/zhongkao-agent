@@ -74,6 +74,33 @@ levels:
       - 圆与三角形的综合问题能独立完成
     pass_standard: 中考圆相关题目全对
 
+# ------ 真题锚点（2021-2025 北京中考）------
+exam_benchmarks:
+
+  L1:
+    must_solve:
+      - { year: 2021, qid: 24, topic: 圆的直径+弦+圆周角, score: 6, note: 前1问基础 }
+      - { year: 2024, qid: 14, topic: 垂径定理+圆周角, score: 2, note: 直径平分弦 }
+    should_struggle:
+      - { year: 2022, qid: 24, topic: 切线判定, note: CE⊥DB证切线 }
+
+  L2:
+    must_solve:
+      - { year: 2025, qid: 24, topic: 切线+角度+相似, score: 6 }
+      - { year: 2024, qid: 14, topic: 垂径定理填空, score: 2 }
+      - { year: 2022, qid: 24, topic: 圆心角=2圆周角+切线判定, score: 6 }
+      - { year: 2023, qid: 15, topic: 垂径定理·等腰直角三角形, score: 2 }
+      - { year: 2023, qid: 24, topic: 圆内接四边形+角平分线, score: 6 }
+    should_struggle:
+      - { year: 2025, qid: 28, topic: 新定义·关联点(圆), sub: "第2-3问" }
+
+  L3:
+    must_solve:
+      - { year: 2025, qid: 24, topic: 圆切线综合, score: 6 }
+      - { year: 2023, qid: 24, topic: 圆内接四边形, score: 6 }
+      - { year: 2025, qid: 14, topic: 地球模型·圆角度, score: 2 }
+    pass_standard: Q14+Q24 共 8 分全拿
+
 # ------ 升级路径概要 ------
 upgrade_paths:
   L0_to_L1:

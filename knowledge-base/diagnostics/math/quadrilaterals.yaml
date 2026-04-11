@@ -74,6 +74,34 @@ levels:
       - 四边形在动态几何和压轴题中的应用能处理
     pass_standard: 中考四边形相关题目全对
 
+# ------ 真题锚点（2021-2025 北京中考）------
+exam_benchmarks:
+
+  L1:
+    must_solve:
+      - { year: 2025, qid: 3, topic: 正六边形内角, score: 2, note: 多边形内角和公式 }
+      - { year: 2021, qid: 4, topic: 多边形内角和, score: 2 }
+      - { year: 2023, qid: 6, topic: 正十二边形外角和, score: 2 }
+    should_struggle:
+      - { year: 2022, qid: 21, topic: 平行四边形+菱形判定, note: 两步证明 }
+
+  L2:
+    must_solve:
+      - { year: 2022, qid: 21, topic: 平行四边形→菱形判定, score: 6 }
+      - { year: 2021, qid: 21, topic: 平行四边形判定与性质, score: 6 }
+      - { year: 2023, qid: 20, topic: 特殊平行四边形, score: 6 }
+      - { year: 2024, qid: 15, topic: 正方形面积计算, score: 2, note: 正方形中AF⊥DE }
+      - { year: 2025, qid: 15, topic: 正方形三角形面积, score: 2 }
+    should_struggle:
+      - { year: 2024, qid: 8, topic: 菱形旋转八边形, note: 综合判断题 }
+
+  L3:
+    must_solve:
+      - { year: 2024, qid: 8, topic: 菱形旋转综合, score: 2 }
+      - { year: 2024, qid: 20, topic: 平行四边形+勾股, score: 6 }
+      - { year: 2025, qid: 20, topic: 中位线+矩形, score: 6 }
+    pass_standard: 四边形相关选择填空+Q20/Q21 全对
+
 # ------ 升级路径概要 ------
 upgrade_paths:
   L0_to_L1:
