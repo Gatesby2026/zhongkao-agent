@@ -154,8 +154,9 @@ knowledge-base/
 
 | # | 问题 | 文件 | 状态 |
 |---|------|------|------|
-| 1 | question-types.yaml 总分写了 120，实际应为 100 | subjects/math/beijing/question-types.yaml | 🔴 待修 |
-| 2 | exam-spec.yaml 是否与 510 分制对齐 | subjects/math/beijing/exam-spec.yaml | 🔴 待查 |
+| 1 | ~~question-types.yaml 总分写了 120~~ | subjects/math/beijing/question-types.yaml | ✅ 实际已是 100 |
+| 2 | ~~exam-spec.yaml 与 510 分制对齐~~ | subjects/math/beijing/exam-spec.yaml | ✅ 已确认正确 |
+| 3 | exam-papers.yaml 2024年误写 full_score: 120 | resources/exam-papers.yaml | ✅ 已修正为 100 |
 
 ### P1 — 功能缺失
 
