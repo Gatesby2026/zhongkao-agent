@@ -1,0 +1,265 @@
+# ============================================================
+# 2022年北京中考数学真题 — 逐题分析
+# ============================================================
+# 数据来源：北京日报官方解析、菁优网、知乎逐题解析
+# 最后更新：2026-04-11
+# 备注：双减后首次中考，约80%试题源自课本
+
+year: 2022
+region: 北京市
+subject: 数学
+full_score: 100
+duration_minutes: 120
+total_questions: 28
+structure: "8选择(16分) + 8填空(16分) + 12解答(68分)"
+overall_note: 双减后首次中考，约80%试题源自课本，函数图象/函数应用类题目重新回归
+
+difficulty_distribution:
+  基础: { questions: 14, score: 约52分, ratio: "52%" }
+  中档: { questions: 11, score: 约34分, ratio: "34%" }
+  压轴: { questions: 3, score: 约14分, ratio: "14%" }
+
+domain_distribution:
+  数与代数: { ratio: "约45%", questions: [2,4,6,8,9,10,11,12,17,18,19,22,25,26] }
+  图形与几何: { ratio: "约35%", questions: [1,3,7,14,15,20,21,24,27,28] }
+  统计与概率: { ratio: "约10%", questions: [5,13,23] }
+  综合与实践: { ratio: "约10%", questions: [16] }
+
+questions:
+
+  # ===== 选择题 =====
+  - id: 1
+    type: 选择
+    score: 2
+    knowledge_points: [几何体识别]
+    module: 几何基础
+    difficulty: 基础
+    description: 从四个几何体图形中识别圆锥
+
+  - id: 2
+    type: 选择
+    score: 2
+    knowledge_points: [科学记数法]
+    module: 数与式
+    difficulty: 基础
+    description: 长江干流梯级水电站发电量用科学记数法表示（清洁能源背景）
+
+  - id: 3
+    type: 选择
+    score: 2
+    knowledge_points: [角的度量, 量角器]
+    module: 几何基础
+    difficulty: 基础
+    description: 利用量角器测量角的大小并读数
+
+  - id: 4
+    type: 选择
+    score: 2
+    knowledge_points: [实数, 数轴, 大小比较]
+    module: 数与式
+    difficulty: 基础
+    description: 数轴上a、b位置，判断a<-2、b<1、a>b、-a>b哪个正确
+
+  - id: 5
+    type: 选择
+    score: 2
+    knowledge_points: [概率, 放回抽样]
+    module: 统计与概率
+    difficulty: 基础
+    description: 袋中红绿球各一个，有放回摸两次，求第一次红球第二次绿球的概率（1/4）
+
+  - id: 6
+    type: 选择
+    score: 2
+    knowledge_points: [一元二次方程, 判别式]
+    module: 方程与不等式
+    difficulty: 基础
+    description: x²+x+m=0有两个相等实数根，求m的值（m=1/4）
+
+  - id: 7
+    type: 选择
+    score: 2
+    knowledge_points: [轴对称图形, 对称轴条数]
+    module: 几何基础
+    difficulty: 基础
+    description: 圆与正五角星组合图形的对称轴条数（5条）
+
+  - id: 8
+    type: 选择
+    score: 2
+    knowledge_points: [函数图象, 一次函数, 二次函数, 模型判断]
+    module: 函数
+    difficulty: 中档
+    description: 三个实际问题（匀速行驶剩余路程、匀速放水剩余水量、定周长矩形面积），判断可用哪种函数图象表示
+
+  # ===== 填空题 =====
+  - id: 9
+    type: 填空
+    score: 2
+    knowledge_points: [二次根式, 有意义的条件]
+    module: 数与式
+    difficulty: 基础
+    description: √(x-8)在实数范围内有意义，求x的取值范围（x≥8）
+
+  - id: 10
+    type: 填空
+    score: 2
+    knowledge_points: [因式分解, 提公因式法]
+    module: 数与式
+    difficulty: 基础
+    description: 分解因式xy-x²
+
+  - id: 11
+    type: 填空
+    score: 2
+    knowledge_points: [分式方程]
+    module: 方程与不等式
+    difficulty: 基础
+    description: 解分式方程 2/(x+1)=5/x
+
+  - id: 12
+    type: 填空
+    score: 2
+    knowledge_points: [反比例函数, 大小比较]
+    module: 函数
+    difficulty: 基础
+    description: A(2,y1)、B(5,y2)在y=k/x(k>0)上，比较y1与y2的大小
+
+  - id: 13
+    type: 填空
+    score: 2
+    knowledge_points: [众数, 样本估计总体]
+    module: 统计与概率
+    difficulty: 基础
+    description: 40双滑冰鞋销售数据，根据众数估计400双中需求最多的鞋号（39号120双）
+
+  - id: 14
+    type: 填空
+    score: 2
+    knowledge_points: [角平分线性质, 三角形面积]
+    module: 三角形
+    difficulty: 中档
+    description: AD平分∠BAC，DE⊥AB，已知AC=2、DE=1，求△ACD面积
+
+  - id: 15
+    type: 填空
+    score: 2
+    knowledge_points: [矩形, 相似三角形]
+    module: 四边形
+    difficulty: 中档
+    description: 矩形ABCD中AB=3、AC=5、AF=(1/4)FC，求AE的长
+
+  - id: 16
+    type: 填空
+    score: 2
+    knowledge_points: [逻辑推理, 方案设计, 不等式应用]
+    module: 综合与实践
+    difficulty: 中档
+    description: 5个包裹含I号II号产品，载重≤19.5吨约束下，使II号产品最多的装运方案
+
+  # ===== 解答题 =====
+  - id: 17
+    type: 解答
+    score: 5
+    knowledge_points: [零指数幂, 三角函数值, 立方根, 二次根式]
+    module: 数与式
+    difficulty: 基础
+    description: 计算(-1)⁰+4sin45°+³√(-8)-√3
+
+  - id: 18
+    type: 解答
+    score: 5
+    knowledge_points: [一元一次不等式组]
+    module: 方程与不等式
+    difficulty: 基础
+    description: 解不等式组{2x+7≥4x; x-4<(x+2)/2}
+
+  - id: 19
+    type: 解答
+    score: 5
+    knowledge_points: [整式运算, 代入求值]
+    module: 数与式
+    difficulty: 基础
+    description: 已知x²+2x-2=0，求(x+2)²+x(x+1)的值
+
+  - id: 20
+    type: 解答
+    score: 5
+    knowledge_points: [三角形内角和, 辅助线, 平行线性质]
+    module: 三角形
+    difficulty: 基础
+    description: 选择辅助线方法证明三角形内角和等于180°
+
+  - id: 21
+    type: 解答
+    score: 6
+    knowledge_points: [平行四边形判定, 菱形判定]
+    module: 四边形
+    difficulty: 中档
+    description: (1)证EBFD是平行四边形；(2)若∠BAC=∠DAC，证EBFD是菱形
+
+  - id: 22
+    type: 解答
+    score: 5
+    knowledge_points: [一次函数, 待定系数法, 函数比较]
+    module: 函数
+    difficulty: 中档
+    description: 一次函数过(4,3)和(-2,0)，求解析式和y轴交点；当x>0时y=x+n大于y=kx+b求n的范围
+
+  - id: 23
+    type: 解答
+    score: 6
+    knowledge_points: [平均数, 方差, 中位数, 数据分析]
+    module: 统计与概率
+    difficulty: 中档
+    description: '"歌唱祖国"比赛打分，求平均数，比较方差判断一致性，去掉极值后比较'
+
+  - id: 24
+    type: 解答
+    score: 6
+    knowledge_points: [圆心角, 圆周角, 切线判定, 垂径定理]
+    module: 圆
+    difficulty: 中档
+    description: AB为直径，CD为弦，AB⊥CD，(1)证∠BOD=2∠A；(2)CE⊥DB，F为AC中点，证CE是切线
+
+  - id: 25
+    type: 解答
+    score: 5
+    knowledge_points: [二次函数, 实际应用, 顶点式]
+    module: 函数
+    difficulty: 中档
+    description: 北京冬奥会单板滑雪大跳台背景，y=a(x-h)²+k，根据数据求最大值和解析式
+
+  - id: 26
+    type: 解答
+    score: 6
+    knowledge_points: [二次函数, 对称轴, 图象性质, 取值范围]
+    module: 函数
+    difficulty: 压轴
+    sub_questions: 3
+    description: 抛物线y=ax²+bx+c过(1,m)和(3,n)，求交点、对称轴；在m<n<c条件下求对称轴和x₀的取值范围
+
+  - id: 27
+    type: 解答
+    score: 7
+    knowledge_points: [直角三角形, 全等三角形, 辅助线, 勾股定理]
+    module: 几何综合
+    difficulty: 压轴
+    sub_questions: 3
+    description: 直角△ABC中∠ACB=90°，D为内部点，延长BC到F使CF=BC，若AF⊥EF证BD⊥AF；若AB²=AE²+BD²求CD与CH的关系
+
+  - id: 28
+    type: 解答
+    score: 7
+    knowledge_points: [新定义探究, 平移, 中心对称, 坐标, 圆]
+    module: 几何综合
+    difficulty: 压轴
+    sub_questions: 3
+    description: '定义"对应点"：点P先按M(a,b)平移再关于N中心对称得Q，画Q并证明NT=(1/2)OM；P在圆外M在圆上运动求PQ最大最小值之差'
+
+exam_features:
+  - 双减后首次中考，约80%试题直接源自课本
+  - 函数图象/函数应用类题目回归（2021年曾取消）
+  - 北京冬奥会背景题（第25题单板滑雪大跳台）
+  - 第28题"对应点"新定义融合平移与中心对称
+  - 解答题分值分布：5+5+5+5+6+5+6+6+5+6+7+7

@@ -1,0 +1,115 @@
+# ============================================================
+# 海淀区高中录取分数线（2023-2025）
+# ============================================================
+# 数据来源：北京教育考试院、家长帮、北京中考在线
+# 最后更新：2026-04-11
+
+district: 海淀区
+region: 北京市
+
+tiers:
+  tier1:
+    name: 第一梯队（六小强）
+    schools: [人大附中, 北大附中, 清华附中, 101中学, 十一学校, 首师大附中]
+    note: 海淀六小强，北京乃至全国顶尖
+  tier2:
+    name: 第二梯队
+    schools: [育英学校, 北航实验学校, 人大附中航天城学校, 清华附中实验学校, 工大附中(海淀)]
+  tier3:
+    name: 第三梯队
+    schools: [五十七中, 人大附中分校, 中关村中学, 交大附中, 理工附中]
+
+schools:
+
+  - name: 十一学校
+    level: 市级示范性高中
+    note: 海淀顶尖，科学实验班为全市最高录取线之一
+    scores:
+      2025: { total: 510, score_lab: 495, rank_lab: 234, score_normal: 491, rank_normal: 569 }
+      2024: { total: 670, score_lab: 656, rank_lab: 274, score_normal: 648, rank_normal: 1262 }
+      2023: { total: 660, score: 644, rank: 948 }
+
+  - name: 101中学
+    level: 市级示范性高中
+    note: 人文实验班录取线仅次于十一科实班
+    scores:
+      2025: { total: 510, score_lab: 493, rank_lab: 357, score_normal: 487, rank_normal: 1107 }
+      2024: { total: 670, score_lab: 651, rank_lab: 784, score_normal: 647, rank_normal: 1452 }
+      2023: { total: 660, score: 642, rank: 1364 }
+
+  - name: 首师大附中
+    level: 市级示范性高中
+    scores:
+      2025: { total: 510, score_lab: 490, rank_lab: 685, score_normal: 487, rank_normal: 1107 }
+      2024: { total: 670, score_lab: 650, rank_lab: 930, score_normal: 644, rank_normal: 2067 }
+      2023: { total: 660, score: 640, rank: 1896 }
+
+  - name: 人大附中
+    level: 市级示范性高中
+    note: 全国顶尖名校，早培/实验班通过提前招生，统招仅普通班
+    scores:
+      2025: { total: 510, score: 491, rank: 569 }
+      2024: { total: 670, score: 649, rank: 1096 }
+      2023: { total: 660, score: 644, rank: 948 }
+
+  - name: 清华大学附属中学
+    level: 市级示范性高中
+    scores:
+      2025: { total: 510, score: 487, rank: 1107 }
+      2024: { total: 670, score: 647, rank: 1452 }
+      2023: { total: 660, score: 640, rank: 1896 }
+
+  - name: 北大附中
+    level: 市级示范性高中
+    scores:
+      2025: { total: 510, score: 484, rank: 1601 }
+      2024: { total: 670, score: 642, rank: 2523 }
+      2023: { total: 660, score: 636, rank: 3047 }
+
+  - name: 清华附中实验学校
+    level: 民办（清华附中体系）
+    scores:
+      2025: { total: 510, score: 481, rank: 2234 }
+
+  - name: 育英学校
+    level: 市级示范性高中
+    scores:
+      2025: { total: 510, score: 478, rank: 2861 }
+      2023: { total: 660, score: 634, rank: 3659 }
+
+  - name: 人大附中航天城学校
+    level: 区级
+    scores:
+      2024: { total: 670, score: 638, rank: 3494 }
+
+  - name: 北航实验学校
+    level: 区级示范性高中
+    note: 原北航附中
+    scores:
+      2024: { total: 670, score_lab: 634, rank_lab: 4490 }
+      2023: { total: 660, score: 633, rank: 3953 }
+
+  - name: 五十七中
+    level: 市级示范性高中
+    scores:
+      2024: { total: 670, score: 633, rank: 4720 }
+      2023: { total: 660, score: 629, rank: 5140 }
+
+  - name: 人大附中分校
+    level: 民办
+    scores:
+      2023: { total: 660, score: 630, rank: 4867 }
+
+target_guide_2026:
+  - target: 六小强实验班
+    reference_score: 490-495
+    math_target: 95+
+  - target: 六小强普通班
+    reference_score: 484-491
+    math_target: 90+
+  - target: 第二梯队校
+    reference_score: 475-483
+    math_target: 85+
+  - target: 第三梯队校
+    reference_score: 465-474
+    math_target: 78+

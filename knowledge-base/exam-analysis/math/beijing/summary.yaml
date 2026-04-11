@@ -1,0 +1,368 @@
+# ============================================================
+# 北京中考数学 2021-2025 五年真题 — 跨年汇总分析
+# ============================================================
+# 数据来源：逐年真题分析汇总
+# 最后更新：2026-04-11
+# 用途：为诊断算法和学习规划提供精确的考频数据支撑
+
+years: [2021, 2022, 2023, 2024, 2025]
+region: 北京市
+subject: 数学
+
+# ================================================================
+#  一、题号-知识点对应规律（5年稳定性极高）
+# ================================================================
+# 以下为每个题号在5年中最常考的知识点
+
+question_pattern:
+
+  选择题:
+    Q1:
+      stable_topic: 几何体识别/轴对称与中心对称
+      frequency: 5/5
+      difficulty: 基础
+      note: 2021-2022考几何体，2023-2025考对称图形
+
+    Q2:
+      stable_topic: 科学记数法/实数与数轴
+      frequency: 5/5
+      difficulty: 基础
+      note: 几乎每年必考科学记数法或数轴，常结合时事背景
+
+    Q3:
+      stable_topic: 角度计算/多边形内角和/三视图
+      frequency: 5/5
+      difficulty: 基础
+
+    Q4:
+      stable_topic: 实数数轴/多边形/一次函数图象
+      frequency: 5/5
+      difficulty: 基础
+
+    Q5:
+      stable_topic: 一元二次方程判别式/概率
+      frequency: 5/5
+      difficulty: 基础
+      note: 判别式Δ=0求参数值连续5年出现（有时在选择有时在填空）
+
+    Q6:
+      stable_topic: 概率/科学记数法
+      frequency: 5/5
+      difficulty: 基础
+
+    Q7:
+      stable_topic: 对称图形/尺规作图/估算
+      frequency: 5/5
+      difficulty: 基础~中档
+
+    Q8:
+      stable_topic: 函数模型判断/综合结论判断
+      frequency: 5/5
+      difficulty: 中档~压轴
+      note: 选择题压轴，常考函数图象与实际问题的对应
+
+  填空题:
+    Q9:
+      stable_topic: 二次根式有意义的条件
+      frequency: 5/5
+      difficulty: 基础
+      note: 连续5年必考，送分题
+
+    Q10:
+      stable_topic: 因式分解
+      frequency: 5/5
+      difficulty: 基础
+      note: 连续5年必考，提公因式+公式法
+
+    Q11:
+      stable_topic: 分式方程/一元二次方程
+      frequency: 5/5
+      difficulty: 基础
+      note: 连续5年必考解方程
+
+    Q12:
+      stable_topic: 反比例函数
+      frequency: 5/5
+      difficulty: 基础~中档
+      note: 连续5年考反比例函数性质或计算
+
+    Q13:
+      stable_topic: 统计（频率估计/众数/平行线角度）
+      frequency: 5/5
+      difficulty: 基础~中档
+
+    Q14:
+      stable_topic: 几何综合（角平分线/平行线比例/圆）
+      frequency: 5/5
+      difficulty: 中档
+
+    Q15:
+      stable_topic: 几何计算（面积/长度，常涉及正方形或矩形）
+      frequency: 5/5
+      difficulty: 中档
+
+    Q16:
+      stable_topic: 综合实践/方案优化
+      frequency: 5/5
+      difficulty: 中档~压轴
+      note: 填空题压轴，每年都是实际方案优化问题
+
+  解答题:
+    Q17:
+      stable_topic: 实数混合运算
+      frequency: 5/5
+      score: 5
+      difficulty: 基础
+      note: 必考送分题——绝对值、根式、零指数幂、三角函数值
+
+    Q18:
+      stable_topic: 一元一次不等式组
+      frequency: 5/5
+      score: 5
+      difficulty: 基础
+      note: 必考送分题
+
+    Q19:
+      stable_topic: 代数式化简求值
+      frequency: 5/5
+      score: 5
+      difficulty: 基础
+      note: 必考——整式或分式化简后代入求值
+
+    Q20:
+      stable_topic: 几何证明基础（三角形/平行四边形/中位线）
+      frequency: 5/5
+      score: 5~6
+      difficulty: 基础~中档
+
+    Q21:
+      stable_topic: 方程建模应用题/平行四边形综合
+      frequency: 5/5
+      score: 6
+      difficulty: 中档
+      note: 常结合传统文化或时事背景
+
+    Q22:
+      stable_topic: 一次函数（待定系数法+应用）
+      frequency: 5/5
+      score: 5
+      difficulty: 中档
+
+    Q23:
+      stable_topic: 统计分析（平均数/中位数/方差/决策）
+      frequency: 5/5
+      score: 5~6
+      difficulty: 中档
+      note: 每年必考统计全过程
+
+    Q24:
+      stable_topic: 圆的综合（切线/圆周角/垂径定理/相似）
+      frequency: 5/5
+      score: 6
+      difficulty: 中档
+
+    Q25:
+      stable_topic: 函数建模/实际应用
+      frequency: 5/5
+      score: 5
+      difficulty: 中档
+      note: 2022冬奥会跳台、2023节水、2024水杯、2025AI培训
+
+    Q26:
+      stable_topic: 二次函数综合（代数）
+      frequency: 5/5
+      score: 6
+      difficulty: 压轴
+      sub_questions: 3
+      note: 代数方向压轴——图象性质、对称轴、取值范围、分类讨论
+
+    Q27:
+      stable_topic: 几何综合（运动/变换/全等/相似）
+      frequency: 5/5
+      score: 7
+      difficulty: 压轴
+      sub_questions: 3
+      note: 几何方向压轴——前2问中档可做，第3问拔高
+
+    Q28:
+      stable_topic: 新定义探究题
+      frequency: 5/5
+      score: 7
+      difficulty: 压轴
+      sub_questions: 3
+      note: |
+        北京特色压轴——定义新概念后多层探究
+        2021: "关联线段"（旋转+圆）
+        2022: "对应点"（平移+中心对称）
+        2023: "关联点"（圆+动态）
+        2024: "α可及点"（全市均分0.9/7）
+        2025: "关联点与关联角度"（圆+坐标）
+
+# ================================================================
+#  二、知识点出现频次矩阵（5年统计）
+# ================================================================
+
+knowledge_point_frequency:
+
+  # ----- 必考（5/5年出现）-----
+  every_year:
+    - point: 科学记数法
+      typical_position: 选择前3题
+      score: 2分
+      note: 近10年考了9次
+
+    - point: 二次根式有意义的条件
+      typical_position: 填空第9题
+      score: 2分
+
+    - point: 因式分解
+      typical_position: 填空第10题
+      score: 2分
+
+    - point: 分式方程/一元二次方程
+      typical_position: 填空第11题
+      score: 2分
+
+    - point: 反比例函数
+      typical_position: 填空第12题
+      score: 2分
+
+    - point: 一元二次方程判别式
+      typical_position: 选择第5~6题
+      score: 2分
+      note: Δ=0求参数值几乎年年考
+
+    - point: 概率（古典概型）
+      typical_position: 选择第5~7题
+      score: 2分
+
+    - point: 实数混合运算
+      typical_position: 解答第17题
+      score: 5分
+      note: 绝对值+根式+幂+三角函数值
+
+    - point: 一元一次不等式组
+      typical_position: 解答第18题
+      score: 5分
+
+    - point: 代数式化简求值
+      typical_position: 解答第19题
+      score: 5分
+
+    - point: 一次函数（待定系数法）
+      typical_position: 解答第22题
+      score: 5分
+
+    - point: 统计分析（均值/中位数/方差）
+      typical_position: 解答第23题
+      score: 5~6分
+
+    - point: 圆的综合
+      typical_position: 解答第24题
+      score: 6分
+
+    - point: 二次函数综合
+      typical_position: 解答第26题
+      score: 6分（压轴）
+
+    - point: 几何综合（全等/相似/旋转）
+      typical_position: 解答第27题
+      score: 7分（压轴）
+
+    - point: 新定义探究
+      typical_position: 解答第28题
+      score: 7分（压轴）
+
+  # ----- 高频（4/5年出现）-----
+  high_frequency:
+    - point: 轴对称与中心对称图形
+      times: 4
+      typical_position: 选择第1~2题
+
+    - point: 实数与数轴（大小比较）
+      times: 4
+      typical_position: 选择第2~4题
+
+    - point: 多边形内角和/外角和
+      times: 4
+      typical_position: 选择第3~4题
+
+    - point: 平行四边形判定与性质
+      times: 4
+      typical_position: 解答第20~21题
+
+    - point: 方程建模（实际应用）
+      times: 4
+      typical_position: 解答第21题
+
+    - point: 函数建模（实际应用）
+      times: 4
+      typical_position: 解答第25题
+
+  # ----- 中频（2~3/5年出现）-----
+  medium_frequency:
+    - point: 几何体识别/三视图
+      times: 3
+      typical_position: 选择第1~3题
+
+    - point: 尺规作图
+      times: 3
+      typical_position: 选择第7题或解答第20题
+
+    - point: 勾股定理
+      times: 2
+      typical_position: 解答第20题或第27题
+
+    - point: 三角形中位线
+      times: 2
+      typical_position: 填空第14题或解答第20题
+
+# ================================================================
+#  三、各分数段的稳定得分来源
+# ================================================================
+
+score_sources:
+
+  "60分（及格）":
+    guaranteed_questions:
+      - "选择1~6题（12分）——科学记数法/对称/角度/概率/判别式"
+      - "填空9~11题（6分）——根式定义域/因式分解/解方程"
+      - "解答17~18题（10分）——实数运算/解不等式组"
+      - "解答19题（5分）——化简求值"
+    subtotal: 33分（确定）
+    additional: 填空12~13题+解答20题部分步骤分 = 约27分
+    total: 约60分
+
+  "80分（良好）":
+    additional_on_top_of_60:
+      - "选择7~8题（4分，可能错1题）"
+      - "填空12~15题（8分）"
+      - "解答20~22题（16分）"
+      - "解答23题（5~6分）"
+    total: 约78~82分
+
+  "90分（优秀）":
+    additional_on_top_of_80:
+      - "填空16题（2分）"
+      - "解答24~25题（11分）"
+      - "解答26题前2问（约4分）"
+      - "解答27题前2问（约4分）"
+    total: 约90~95分
+
+  "95+分（拔尖）":
+    additional: "26题第3问 + 27题第3问 + 28题前1~2问"
+    note: 第28题全市平均不到1分，性价比极低
+
+# ================================================================
+#  四、命题趋势（5年演变）
+# ================================================================
+
+trends:
+  structure: 8+8+12结构连续5年未变，高度稳定
+  difficulty_ratio: 基础约50% + 中档约35% + 压轴约15%，稳定
+  real_world_context: 逐年增加——从2021年约30%到2025年约40%的题目有真实情境
+  traditional_culture: 每年至少1题融入传统文化或时事
+  textbook_origin: 2022年双减后提升至80%源自课本，之后保持约70%~80%
+  new_definition_Q28: 连续5年最后一题为新定义探究题，是北京特色，全市均分不到1分
+  function_emphasis: 函数（一次+反比例+二次）每年占30~35分，是单一知识域最大占比
+  geometry_proof: 几何证明每年约25~30分，全等/相似/圆是核心

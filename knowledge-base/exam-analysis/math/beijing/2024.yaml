@@ -1,0 +1,272 @@
+# ============================================================
+# 2024年北京中考数学真题 — 逐题分析
+# ============================================================
+# 数据来源：菁优网、北京中考在线、腾讯新闻专家点评
+# 最后更新：2026-04-11
+# 状态：基于多来源交叉验证
+
+year: 2024
+region: 北京市
+subject: 数学
+full_score: 100
+duration_minutes: 120
+total_questions: 28
+structure: "8选择(16分) + 8填空(16分) + 12解答(68分)"
+
+# 注：部分来源误传2024年满分为120分，经多方确认仍为100分
+
+difficulty_distribution:
+  基础: { questions: 13, score: 约42分, ratio: "42%" }
+  中档: { questions: 12, score: 约37分, ratio: "37%" }
+  压轴: { questions: 3, score: 约21分, ratio: "21%" }
+
+domain_distribution:
+  数与代数: { ratio: "约40%", questions: [3,4,6,9,10,11,12,17,18,19,21,22,26] }
+  图形与几何: { ratio: "约35%", questions: [1,2,7,8,14,15,20,24,27,28] }
+  统计与概率: { ratio: "约10%", questions: [5,13,23] }
+  综合与实践: { ratio: "约10%", questions: [16,25] }
+
+# ------ 逐题分析 ------
+questions:
+
+  # ===== 选择题（每题2分）=====
+  - id: 1
+    type: 选择
+    score: 2
+    knowledge_points: [轴对称图形, 中心对称图形]
+    module: 几何基础
+    difficulty: 基础
+    description: 判断哪个图形既是轴对称图形又是中心对称图形
+
+  - id: 2
+    type: 选择
+    score: 2
+    knowledge_points: [对顶角, 邻补角]
+    module: 几何基础
+    difficulty: 基础
+    description: 两条直线相交，已知某角度数，求相关角的度数
+
+  - id: 3
+    type: 选择
+    score: 2
+    knowledge_points: [实数, 数轴]
+    module: 数与式
+    difficulty: 基础
+    description: 判断实数在数轴上的位置关系
+
+  - id: 4
+    type: 选择
+    score: 2
+    knowledge_points: [一元二次方程, 判别式]
+    module: 方程与不等式
+    difficulty: 基础
+    description: 一元二次方程有两个相等实数根，用Δ=0求参数值
+
+  - id: 5
+    type: 选择
+    score: 2
+    knowledge_points: [概率, 古典概型, 放回抽样]
+    module: 统计与概率
+    difficulty: 基础
+    description: 袋中红黄小球各一个，放回摸球两次，求两次都摸到红球的概率
+
+  - id: 6
+    type: 选择
+    score: 2
+    knowledge_points: [科学记数法, 幂的运算]
+    module: 数与式
+    difficulty: 基础
+    description: 以北京数字经济算力中心为背景，考查科学记数法和幂的运算
+
+  - id: 7
+    type: 选择
+    score: 2
+    knowledge_points: [尺规作图, 三角形全等判定]
+    module: 三角形
+    difficulty: 中档
+    description: '考查"作一个角等于已知角"的尺规作图依据（SSS/SAS等）'
+
+  - id: 8
+    type: 选择
+    score: 2
+    knowledge_points: [菱形, 旋转, 几何性质]
+    module: 四边形
+    difficulty: 中档
+    description: 菱形ABCD旋转后形成八边形的性质判断
+
+  # ===== 填空题（每题2分）=====
+  - id: 9
+    type: 填空
+    score: 2
+    knowledge_points: [二次根式, 有意义的条件]
+    module: 数与式
+    difficulty: 基础
+    description: 若√(9-x)在实数范围内有意义，求x的取值范围
+
+  - id: 10
+    type: 填空
+    score: 2
+    knowledge_points: [因式分解]
+    module: 数与式
+    difficulty: 基础
+    description: 对代数式进行因式分解
+
+  - id: 11
+    type: 填空
+    score: 2
+    knowledge_points: [分式方程]
+    module: 方程与不等式
+    difficulty: 基础
+    description: 解分式方程
+
+  - id: 12
+    type: 填空
+    score: 2
+    knowledge_points: [反比例函数, 对称性]
+    module: 函数
+    difficulty: 中档
+    description: 利用反比例函数性质求y1+y2的值
+
+  - id: 13
+    type: 填空
+    score: 2
+    knowledge_points: [频率估计概率, 样本估计总体]
+    module: 统计与概率
+    difficulty: 基础
+    description: 根据工件质量数据，估计200个工件中一等品个数
+
+  - id: 14
+    type: 填空
+    score: 2
+    knowledge_points: [垂径定理, 圆周角]
+    module: 圆
+    difficulty: 中档
+    description: 圆O的直径AB平分弦CD，已知角D=35度，求角C
+
+  - id: 15
+    type: 填空
+    score: 2
+    knowledge_points: [正方形, 面积计算, 垂线段]
+    module: 四边形
+    difficulty: 中档
+    description: 正方形ABCD中，AF⊥DE于F，CG⊥DE于G，求三角形AEF的面积
+
+  - id: 16
+    type: 填空
+    score: 2
+    knowledge_points: [最优化问题, 应用意识]
+    module: 综合与实践
+    difficulty: 中档
+    description: 联欢会节目彩排先后顺序的优化问题（求候场时间最短的安排方案）
+
+  # ===== 解答题 =====
+  - id: 17
+    type: 解答
+    score: 5
+    knowledge_points: [零指数幂, 二次根式运算, 实数混合运算]
+    module: 数与式
+    difficulty: 基础
+    description: 实数混合运算计算题
+
+  - id: 18
+    type: 解答
+    score: 5
+    knowledge_points: [一元一次不等式组]
+    module: 方程与不等式
+    difficulty: 基础
+    description: 解不等式组，求解集
+
+  - id: 19
+    type: 解答
+    score: 5
+    knowledge_points: [分式化简求值, 因式分解]
+    module: 数与式
+    difficulty: 基础
+    description: 先化简再求值，运用因式分解和分式基本性质
+
+  - id: 20
+    type: 解答
+    score: 6
+    knowledge_points: [平行四边形判定, 勾股定理]
+    module: 四边形/三角形
+    difficulty: 中档
+    description: 几何证明题，涉及平行四边形的判定与勾股定理应用
+
+  - id: 21
+    type: 解答
+    score: 6
+    knowledge_points: [方程建模, 实际应用]
+    module: 方程与不等式
+    difficulty: 中档
+    description: 以汽车尾气排放标准为背景，建立方程模型求解
+
+  - id: 22
+    type: 解答
+    score: 5
+    knowledge_points: [一次函数, 待定系数法]
+    module: 函数
+    difficulty: 中档
+    description: 用待定系数法求一次函数解析式，比较函数值
+
+  - id: 23
+    type: 解答
+    score: 5
+    knowledge_points: [众数, 中位数, 数据分析]
+    module: 统计与概率
+    difficulty: 中档
+    description: 以演讲比赛为背景，求众数、中位数，进行选手排序比较
+
+  - id: 24
+    type: 解答
+    score: 6
+    knowledge_points: [三角形相似, 几何推理论证]
+    module: 三角形
+    difficulty: 中档
+    description: 几何综合证明题，运用三角形性质、相似等知识
+
+  - id: 25
+    type: 解答
+    score: 5
+    knowledge_points: [函数建模, 实际应用]
+    module: 函数
+    difficulty: 中档
+    description: 以"用数学和AI设计水杯"为背景，构建函数模型解决问题
+
+  - id: 26
+    type: 解答
+    score: 6
+    knowledge_points: [二次函数, 图象与性质, 分类讨论]
+    module: 函数
+    difficulty: 压轴
+    sub_questions: 3
+    description: 二次函数综合题，结合图象分析，应用函数性质完成证明
+
+  - id: 27
+    type: 解答
+    score: 7
+    knowledge_points: [全等三角形, 相似三角形, 旋转变换]
+    module: 几何综合
+    difficulty: 压轴
+    sub_questions: 3
+    description: 几何综合题，灵活运用全等、相似、旋转等知识，解法多样
+
+  - id: 28
+    type: 解答
+    score: 7
+    knowledge_points: [新定义探究, 动态几何, 分类讨论]
+    module: 几何综合
+    difficulty: 压轴
+    sub_questions: 3
+    description: '新定义"α可及点"探究题，从特殊到一般，考查知识迁移能力'
+    stats:
+      avg_score: 0.9
+      full_score_count: 215
+      zero_score_ratio: "39%"
+      one_point_ratio: "47%"
+
+# ------ 命题特点 ------
+exam_features:
+  - 保持稳中求进，注重四基（基础知识、基本技能、基本思想、基本活动经验）
+  - 真实情境：北京数字经济算力中心、国六排放标准、AI设计水杯
+  - 第28题新定义题全市平均仅0.9分，是标志性压轴题型
+  - 解答题分值分布：5+5+5+6+6+5+5+6+5+6+7+7

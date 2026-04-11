@@ -1,0 +1,266 @@
+# ============================================================
+# 2023年北京中考数学真题 — 逐题分析
+# ============================================================
+# 数据来源：菁优网、知乎逐题解析、北京中考在线
+# 最后更新：2026-04-11
+
+year: 2023
+region: 北京市
+subject: 数学
+full_score: 100
+duration_minutes: 120
+total_questions: 28
+structure: "8选择(16分) + 8填空(16分) + 12解答(68分)"
+overall_note: 2023年整体难度明显高于2022年，中档题创新性强，通过新颖设问制造难度
+
+difficulty_distribution:
+  基础: { questions: 13, score: 约50分, ratio: "50%" }
+  中档: { questions: 12, score: 约36分, ratio: "36%" }
+  压轴: { questions: 3, score: 约14分, ratio: "14%" }
+
+domain_distribution:
+  数与代数: { ratio: "约40%", questions: [1,4,5,9,10,11,12,17,18,19,21,22,26] }
+  图形与几何: { ratio: "约35%", questions: [2,3,6,8,14,15,20,24,27] }
+  统计与概率: { ratio: "约10%", questions: [7,13,23] }
+  综合与实践: { ratio: "约15%", questions: [16,25,28] }
+
+# ------ 逐题分析 ------
+questions:
+
+  # ===== 选择题（每题2分）=====
+  - id: 1
+    type: 选择
+    score: 2
+    knowledge_points: [科学记数法]
+    module: 数与式
+    difficulty: 基础
+    description: 将239000000用科学记数法表示（冬小麦产量背景）
+
+  - id: 2
+    type: 选择
+    score: 2
+    knowledge_points: [轴对称图形, 中心对称图形]
+    module: 几何基础
+    difficulty: 基础
+    description: 判断哪个图形既是轴对称图形又是中心对称图形
+
+  - id: 3
+    type: 选择
+    score: 2
+    knowledge_points: [三视图, 正方体展开图]
+    module: 几何基础
+    difficulty: 基础
+    description: 几何体视图或展开图识别
+
+  - id: 4
+    type: 选择
+    score: 2
+    knowledge_points: [一次函数, 图象与性质]
+    module: 函数
+    difficulty: 基础
+    description: 通过一次函数图象分析判断性质
+
+  - id: 5
+    type: 选择
+    score: 2
+    knowledge_points: [一元二次方程, 判别式]
+    module: 方程与不等式
+    difficulty: 基础
+    description: 一元二次方程有两个相等实数根时求参数值（Δ=0）
+
+  - id: 6
+    type: 选择
+    score: 2
+    knowledge_points: [多边形外角和]
+    module: 几何基础
+    difficulty: 基础
+    description: 求正十二边形的外角和（360°）
+
+  - id: 7
+    type: 选择
+    score: 2
+    knowledge_points: [概率, 古典概型]
+    module: 统计与概率
+    difficulty: 基础
+    description: 抛硬币两次，计算随机事件的概率
+
+  - id: 8
+    type: 选择
+    score: 2
+    knowledge_points: [勾股定理, 图形中的数量关系]
+    module: 三角形
+    difficulty: 中档
+    description: 分析与勾股定理证明相关的几何图形中的数量关系
+
+  # ===== 填空题（每题2分）=====
+  - id: 9
+    type: 填空
+    score: 2
+    knowledge_points: [分式有意义的条件]
+    module: 数与式
+    difficulty: 基础
+    description: 确定分式有意义的条件（分母≠0）
+
+  - id: 10
+    type: 填空
+    score: 2
+    knowledge_points: [一元一次不等式组]
+    module: 方程与不等式
+    difficulty: 基础
+    description: 解一元一次不等式组，求解集
+
+  - id: 11
+    type: 填空
+    score: 2
+    knowledge_points: [因式分解]
+    module: 数与式
+    difficulty: 基础
+    description: 用提公因式法、公式法进行因式分解
+
+  - id: 12
+    type: 填空
+    score: 2
+    knowledge_points: [反比例函数, 求参数]
+    module: 函数
+    difficulty: 基础
+    description: 已知点在反比例函数上，利用xy=k求另一点坐标
+
+  - id: 13
+    type: 填空
+    score: 2
+    knowledge_points: [频率估计概率, 样本估计总体]
+    module: 统计与概率
+    difficulty: 中档
+    description: 用样本频率估计总体，推算灯泡寿命≥2200小时的个数
+
+  - id: 14
+    type: 填空
+    score: 2
+    knowledge_points: [平行线分线段成比例]
+    module: 三角形
+    difficulty: 中档
+    description: 应用平行线分线段成比例定理求比值
+
+  - id: 15
+    type: 填空
+    score: 2
+    knowledge_points: [垂径定理, 圆的性质]
+    module: 圆
+    difficulty: 中档
+    description: 综合应用垂径定理，涉及等腰直角三角形，求线段长
+
+  - id: 16
+    type: 填空
+    score: 2
+    knowledge_points: [优化问题, 综合实践]
+    module: 综合与实践
+    difficulty: 压轴
+    description: '木艺加工时间优化问题，考查系统逻辑思维（劳动教育背景）'
+
+  # ===== 解答题 =====
+  - id: 17
+    type: 解答
+    score: 5
+    knowledge_points: [实数运算, 绝对值, 平方根]
+    module: 数与式
+    difficulty: 基础
+    description: 实数混合运算计算题
+
+  - id: 18
+    type: 解答
+    score: 5
+    knowledge_points: [解不等式组]
+    module: 方程与不等式
+    difficulty: 基础
+    description: 解不等式组并在数轴上表示解集
+
+  - id: 19
+    type: 解答
+    score: 5
+    knowledge_points: [分式化简求值]
+    module: 数与式
+    difficulty: 基础
+    description: 先化简再求值，考查高效计算策略的选择
+
+  - id: 20
+    type: 解答
+    score: 6
+    knowledge_points: [特殊平行四边形, 性质与判定]
+    module: 四边形
+    difficulty: 中档
+    description: 证明或应用特殊平行四边形（矩形/菱形/正方形）的性质
+
+  - id: 21
+    type: 解答
+    score: 6
+    knowledge_points: [方程建模, 实际应用]
+    module: 方程与不等式
+    difficulty: 中档
+    description: '以对联装裱为背景，建立方程模型求边框宽度和天头长度（传统文化）'
+
+  - id: 22
+    type: 解答
+    score: 5
+    knowledge_points: [一次函数, 待定系数法, 数形结合]
+    module: 函数
+    difficulty: 中档
+    description: 两点确定一次函数解析式，结合平行线求交点
+
+  - id: 23
+    type: 解答
+    score: 5
+    knowledge_points: [方差, 数据分析, 统计决策]
+    module: 统计与概率
+    difficulty: 中档
+    description: 舞蹈队选人，用均值和方差分析身高数据，进行统计决策
+
+  - id: 24
+    type: 解答
+    score: 6
+    knowledge_points: [圆内接四边形, 圆周角, 角平分线]
+    module: 圆
+    difficulty: 中档
+    description: 圆内接四边形ABCD，对角线交于E，BD平分角，综合证明
+
+  - id: 25
+    type: 解答
+    score: 5
+    knowledge_points: [函数建模, 实际应用]
+    module: 函数
+    difficulty: 中档
+    description: '以"节水"为背景，从数据中抽象数学问题，构建函数模型'
+
+  - id: 26
+    type: 解答
+    score: 6
+    knowledge_points: [二次函数, 图象与性质, 数形结合]
+    module: 函数
+    difficulty: 压轴
+    sub_questions: 3
+    description: 二次函数综合题，可用图象法或代数法推理
+
+  - id: 27
+    type: 解答
+    score: 7
+    knowledge_points: [几何综合, 运动与不变性, 旋转, 全等, 相似]
+    module: 几何综合
+    difficulty: 压轴
+    sub_questions: 3
+    description: 运动中的不变关系，多种解法（全等/相似/解直角三角形/旋转）
+
+  - id: 28
+    type: 解答
+    score: 7
+    knowledge_points: [新定义探究, 圆, 切线, 动态几何, 最值]
+    module: 几何综合
+    difficulty: 压轴
+    sub_questions: 3
+    description: '新定义"关联点"探究题，圆O上弦AB与外部点C，从静态到动态探究'
+
+# ------ 命题特点 ------
+exam_features:
+  - 整体难度高于2022年，中档题创新性是主要区分点
+  - 传统文化融入：冬小麦产量（第1题）、对联装裱（第21题）、木艺（第16题）
+  - 实际应用突出：节水（第25题）、劳动教育（第16题）
+  - 第28题"关联点"新定义题是全卷最难题
+  - 解答题分值分布：5+5+5+6+6+5+5+6+5+6+7+7

@@ -1,0 +1,114 @@
+# ============================================================
+# 东城区高中录取分数线（2023-2025）
+# ============================================================
+# 数据来源：北京教育考试院、家长帮、北京中考在线
+# 最后更新：2026-04-11
+
+district: 东城区
+region: 北京市
+
+tiers:
+  tier1:
+    name: 第一梯队
+    schools: [北京二中, 171中学, 北京五中]
+    note: 东城三强
+  tier2:
+    name: 第二梯队
+    schools: [汇文中学, 广渠门中学, 东直门中学, 景山学校]
+  tier3:
+    name: 第三梯队
+    schools: [166中学, 十一中学, 龙潭中学, 五十中]
+
+schools:
+
+  - name: 北京二中
+    level: 市级示范性高中
+    note: 东城区头牌，全市排名靠前
+    scores:
+      2025: { total: 510, score: 485, rank: 389 }
+      2024: { total: 670, score: 641, rank: 494 }
+      2023: { total: 660, score: 644, rank: 502 }
+
+  - name: 171中学
+    level: 市级示范性高中
+    scores:
+      2025: { total: 510, score: 480, rank: 748 }
+      2024: { total: 670, score: 634, rank: 1033 }
+      2023: { total: 660, score: 637, rank: 1248 }
+
+  - name: 北京五中
+    level: 市级示范性高中
+    scores:
+      2025: { total: 510, score: 475, rank: 1216 }
+      2024: { total: 670, score: 632, rank: 1210 }
+      2023: { total: 660, score: 636, rank: 1372 }
+
+  - name: 东直门中学
+    level: 市级示范性高中
+    note: 叶企孙实验班录取线高于普通班
+    scores:
+      2025: { total: 510, score_lab: 477, rank_lab: 1016, score_normal: 469, rank_normal: 1752 }
+      2024: { total: 670, score_lab: 632, rank_lab: 1210, score_normal: 623, rank_normal: 2030 }
+      2023: { total: 660, score: 629, rank: 2164 }
+
+  - name: 汇文中学
+    level: 市级示范性高中
+    scores:
+      2025: { total: 510, score: 476, rank: 1114 }
+      2024: { total: 670, score: 624, rank: 1943 }
+      2023: { total: 660, score: 635, rank: 1485 }
+
+  - name: 广渠门中学
+    level: 市级示范性高中
+    note: 宏志班有特殊招生
+    scores:
+      2025: { total: 510, score: 473, rank: 1391 }
+      2024: { total: 670, score: 626, rank: 1770 }
+      2023: { total: 660, score: 633, rank: 1725 }
+
+  - name: 景山学校
+    level: 市级示范性高中
+    scores:
+      2025: { total: 510, score: 470, rank: 1664 }
+      2024: { total: 670, score: 616, rank: 2626 }
+
+  - name: 龙潭中学
+    level: 区级
+    scores:
+      2025: { total: 510, score: 469, rank: 1752 }
+      2024: { total: 670, score: 619, rank: 2385 }
+
+  - name: 166中学
+    level: 区级示范性高中
+    scores:
+      2025: { total: 510, score: 464, rank: 2219 }
+      2024: { total: 670, score: 613, rank: 2858 }
+      2023: { total: 660, score: 623, rank: 2780 }
+
+  - name: 十一中学
+    level: 区级
+    scores:
+      2025: { total: 510, score: 459, rank: 2699 }
+      2024: { total: 670, score: 606, rank: 3340 }
+      2023: { total: 660, score: 617, rank: 3286 }
+
+  - name: 五十中
+    level: 区级
+    scores:
+      2025: { total: 510, note: 暂无数据 }
+      2024: { total: 670, score: 598, rank: 3877 }
+      2023: { total: 660, score: 614, rank: 3519 }
+
+target_guide_2026:
+  - target: 北京二中
+    reference_score: 485
+    math_target: 92+
+  - target: 171中学/五中
+    reference_score: 475-480
+    math_target: 88+
+  - target: 汇文/广渠门/东直门
+    reference_score: 469-476
+    math_target: 82+
+  - target: 景山/166中学
+    reference_score: 464-470
+    math_target: 75+

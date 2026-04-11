@@ -1,0 +1,263 @@
+# ============================================================
+# 2021年北京中考数学真题 — 逐题分析
+# ============================================================
+# 数据来源：北京教育考试院官方评析、新浪教育、知乎解析
+# 最后更新：2026-04-11
+
+year: 2021
+region: 北京市
+subject: 数学
+full_score: 100
+duration_minutes: 120
+total_questions: 28
+structure: "8选择(16分) + 8填空(16分) + 12解答(68分)"
+
+difficulty_distribution:
+  基础: { questions: 14, score: 约52分, ratio: "52%" }
+  中档: { questions: 11, score: 约34分, ratio: "34%" }
+  压轴: { questions: 3, score: 约14分, ratio: "14%" }
+
+domain_distribution:
+  数与代数: { ratio: "约42%", questions: [2,5,7,9,10,11,12,17,18,19,22,26] }
+  图形与几何: { ratio: "约38%", questions: [1,3,4,8,13,14,15,20,21,24,27,28] }
+  统计与概率: { ratio: "约10%", questions: [6,23,25] }
+  综合与实践: { ratio: "约10%", questions: [16] }
+
+questions:
+
+  # ===== 选择题 =====
+  - id: 1
+    type: 选择
+    score: 2
+    knowledge_points: [几何体展开图]
+    module: 几何基础
+    difficulty: 基础
+    description: 给出展开图，判断是长方体、圆柱、圆锥还是三棱柱
+
+  - id: 2
+    type: 选择
+    score: 2
+    knowledge_points: [科学记数法]
+    module: 数与式
+    difficulty: 基础
+    description: 脱贫攻坚教育扶贫背景，将169200000000用科学记数法表示
+
+  - id: 3
+    type: 选择
+    score: 2
+    knowledge_points: [角的计算, 互余互补]
+    module: 几何基础
+    difficulty: 基础
+    description: 点O在直线AB上，OC⊥OD，∠AOC=120°，求∠BOD（30°）
+
+  - id: 4
+    type: 选择
+    score: 2
+    knowledge_points: [多边形内角和]
+    module: 几何基础
+    difficulty: 基础
+    description: 四个多边形中内角和最大的是哪个
+
+  - id: 5
+    type: 选择
+    score: 2
+    knowledge_points: [实数, 数轴, 大小比较]
+    module: 数与式
+    difficulty: 基础
+    description: 数轴上a、b对应点位置，判断相关结论
+
+  - id: 6
+    type: 选择
+    score: 2
+    knowledge_points: [概率, 等可能事件]
+    module: 统计与概率
+    difficulty: 基础
+    description: 同时抛两枚硬币，求一正一反的概率（1/2），教材原题
+
+  - id: 7
+    type: 选择
+    score: 2
+    knowledge_points: [估算无理数, 平方根]
+    module: 数与式
+    difficulty: 基础
+    description: 已知连续整数的平方值，判断√2021介于哪两个整数之间
+
+  - id: 8
+    type: 选择
+    score: 2
+    knowledge_points: [函数模型判断, 一次函数, 二次函数]
+    module: 函数
+    difficulty: 中档
+    description: 周长10m的矩形，一边长x、邻边y、面积S，判断y与x、S与x分别满足什么函数关系
+
+  # ===== 填空题 =====
+  - id: 9
+    type: 填空
+    score: 2
+    knowledge_points: [二次根式, 有意义的条件]
+    module: 数与式
+    difficulty: 基础
+    description: √(1-x)在实数范围内有意义，求x的取值范围（x≤1）
+
+  - id: 10
+    type: 填空
+    score: 2
+    knowledge_points: [因式分解, 提公因式法, 平方差公式]
+    module: 数与式
+    difficulty: 基础
+    description: 分解因式5x²-5y²=5(x+y)(x-y)
+
+  - id: 11
+    type: 填空
+    score: 2
+    knowledge_points: [一元二次方程]
+    module: 方程与不等式
+    difficulty: 基础
+    description: 解一元二次方程
+
+  - id: 12
+    type: 填空
+    score: 2
+    knowledge_points: [反比例函数]
+    module: 函数
+    difficulty: 基础
+    description: 反比例函数相关计算
+
+  - id: 13
+    type: 填空
+    score: 2
+    knowledge_points: [平行线性质, 角度计算]
+    module: 几何基础
+    difficulty: 基础
+    description: 利用平行线性质求角度（130°），教材原题
+
+  - id: 14
+    type: 填空
+    score: 2
+    knowledge_points: [三角形中位线, 几何性质]
+    module: 三角形
+    difficulty: 中档
+    description: 几何图形中线段或角的计算
+
+  - id: 15
+    type: 填空
+    score: 2
+    knowledge_points: [函数图象, 不等式, 大小比较]
+    module: 函数
+    difficulty: 中档
+    description: 利用函数图象判断大小关系
+
+  - id: 16
+    type: 填空
+    score: 2
+    knowledge_points: [逻辑推理, 方案优化]
+    module: 综合与实践
+    difficulty: 中档
+    description: 两条生产线加工时间问题，确定最优分配方案（比例2:3）
+
+  # ===== 解答题 =====
+  - id: 17
+    type: 解答
+    score: 5
+    knowledge_points: [零指数幂, 绝对值, 算术平方根]
+    module: 数与式
+    difficulty: 基础
+    description: 实数综合运算
+
+  - id: 18
+    type: 解答
+    score: 5
+    knowledge_points: [一元一次不等式组]
+    module: 方程与不等式
+    difficulty: 基础
+    description: 解不等式组，求解集
+
+  - id: 19
+    type: 解答
+    score: 5
+    knowledge_points: [整式运算, 化简求值]
+    module: 数与式
+    difficulty: 基础
+    description: 代数式的化简与求值
+
+  - id: 20
+    type: 解答
+    score: 5
+    knowledge_points: [尺规作图, 证明]
+    module: 几何基础
+    difficulty: 中档
+    description: '以《淮南子·天文训》确定东西方向为背景，尺规作图并用数学原理证明'
+
+  - id: 21
+    type: 解答
+    score: 6
+    knowledge_points: [平行四边形判定, 性质]
+    module: 四边形
+    difficulty: 中档
+    description: 证明四边形为平行四边形及特殊平行四边形
+
+  - id: 22
+    type: 解答
+    score: 5
+    knowledge_points: [一次函数, 图象, 运动变化]
+    module: 函数
+    difficulty: 中档
+    description: 从运动变化角度，结合函数图象，考查从特殊到一般的思维
+
+  - id: 23
+    type: 解答
+    score: 6
+    knowledge_points: [平均数, 中位数, 方差, 数据分析]
+    module: 统计与概率
+    difficulty: 中档
+    description: 统计全过程：数据收集整理描述，分析统计意义，样本估计总体
+
+  - id: 24
+    type: 解答
+    score: 6
+    knowledge_points: [圆, 直径, 弦, 圆周角]
+    module: 圆
+    difficulty: 中档
+    description: 圆的有关性质考查
+
+  - id: 25
+    type: 解答
+    score: 5
+    knowledge_points: [统计应用, 平均数, 中位数, 样本估计总体]
+    module: 统计与概率
+    difficulty: 中档
+    description: 两个城市邮政企业收入问题，统计图表信息读取和数据解读
+
+  - id: 26
+    type: 解答
+    score: 6
+    knowledge_points: [二次函数, 对称轴, 图象性质, 取值范围]
+    module: 函数
+    difficulty: 压轴
+    sub_questions: 3
+    description: 结合二次函数图象的对称性，分析满足条件的图象特征，探究对称轴的取值范围
+
+  - id: 27
+    type: 解答
+    score: 7
+    knowledge_points: [几何综合, 全等, 相似, 辅助线, 运动变化]
+    module: 几何综合
+    difficulty: 压轴
+    sub_questions: 3
+    description: 从运动变化角度，通过操作、观察、猜想得到结论，再用演绎推理证明
+
+  - id: 28
+    type: 解答
+    score: 7
+    knowledge_points: [新定义探究, 旋转, 圆, 关联线段]
+    module: 几何综合
+    difficulty: 压轴
+    sub_questions: 3
+    description: '以圆和旋转为载体，定义"关联线段"，先研究特殊情况，再研究运动变化中的关联线段及相关参数'
+
+exam_features:
+  - 脱贫攻坚教育扶贫背景（第2题科学记数法）
+  - '《淮南子》传统文化融入尺规作图（第20题）'
+  - 约70%试题源自课本
+  - '第28题"关联线段"新定义题融合旋转与圆'
+  - 解答题分值分布：5+5+5+5+6+5+6+6+5+6+7+7

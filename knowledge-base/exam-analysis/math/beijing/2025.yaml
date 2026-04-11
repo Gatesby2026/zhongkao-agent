@@ -1,0 +1,266 @@
+# ============================================================
+# 2025年北京中考数学真题 — 逐题分析
+# ============================================================
+# 数据来源：kmath.cn真题原卷、北京高考在线官方评析、知乎解析
+# 最后更新：2026-04-11
+
+year: 2025
+region: 北京市
+subject: 数学
+full_score: 100
+duration_minutes: 120
+total_questions: 28
+structure: "8选择(16分) + 8填空(16分) + 12解答(68分)"
+
+difficulty_distribution:
+  基础: { questions: 13, score: 约50分, ratio: "50%" }
+  中档: { questions: 9, score: 约30分, ratio: "30%" }
+  压轴: { questions: 6, score: 约20分, ratio: "20%" }
+
+domain_distribution:
+  数与代数: { ratio: "约45%", questions: [2,5,6,9,10,11,17,18,19,21,22,26] }
+  图形与几何: { ratio: "约35%", questions: [1,3,7,8,14,15,20,24,27,28] }
+  统计与概率: { ratio: "约15%", questions: [4,12,23] }
+  综合与实践: { ratio: "约5%", questions: [16,25] }
+
+# ------ 逐题分析 ------
+questions:
+
+  # ===== 选择题（每题2分）=====
+  - id: 1
+    type: 选择
+    score: 2
+    knowledge_points: [轴对称图形, 中心对称图形]
+    module: 几何基础
+    difficulty: 基础
+    description: 判断哪个图形既是轴对称图形又是中心对称图形
+
+  - id: 2
+    type: 选择
+    score: 2
+    knowledge_points: [实数, 数轴, 绝对值]
+    module: 数与式
+    difficulty: 基础
+    description: 已知数轴上a、b的位置，判断正确结论（a>-1, a+b=0, a-b>0, |a|>|b|）
+
+  - id: 3
+    type: 选择
+    score: 2
+    knowledge_points: [多边形内角和]
+    module: 几何基础
+    difficulty: 基础
+    description: 正六边形每个内角的度数
+
+  - id: 4
+    type: 选择
+    score: 2
+    knowledge_points: [概率, 古典概型]
+    module: 统计与概率
+    difficulty: 基础
+    description: 袋中3红2黄1白球，求摸到白球的概率（1/6）
+
+  - id: 5
+    type: 选择
+    score: 2
+    knowledge_points: [一元二次方程, 判别式]
+    module: 方程与不等式
+    difficulty: 基础
+    description: ax²+2x+1=0有两个相等实数根，求a的值
+
+  - id: 6
+    type: 选择
+    score: 2
+    knowledge_points: [科学记数法]
+    module: 数与式
+    difficulty: 基础
+    description: 天问二号探测器背景，求近地小行星与地球最近距离（1.8×10⁷km）
+
+  - id: 7
+    type: 选择
+    score: 2
+    knowledge_points: [尺规作图, 角的性质]
+    module: 几何基础
+    difficulty: 中档
+    description: 已知∠MON=100°，用圆规作弧，求∠OAC（120°）
+
+  - id: 8
+    type: 选择
+    score: 2
+    knowledge_points: [反比例函数, 面积, 综合结论判断]
+    module: 函数
+    difficulty: 压轴
+    description: 矩形OACB中A、B在坐标轴正半轴，y=1/x交AC于M、BC于N，判断4个结论
+
+  # ===== 填空题（每题2分）=====
+  - id: 9
+    type: 填空
+    score: 2
+    knowledge_points: [二次根式, 有意义的条件]
+    module: 数与式
+    difficulty: 基础
+    description: √(3x-3)在实数范围内有意义，求x的取值范围（x≥1）
+
+  - id: 10
+    type: 填空
+    score: 2
+    knowledge_points: [因式分解, 提公因式法, 平方差公式]
+    module: 数与式
+    difficulty: 基础
+    description: 分解因式7m²-28 = 7(m+2)(m-2)
+
+  - id: 11
+    type: 填空
+    score: 2
+    knowledge_points: [分式方程]
+    module: 方程与不等式
+    difficulty: 基础
+    description: 解分式方程 2/(x-6)+1/x=0，求x=-12
+
+  - id: 12
+    type: 填空
+    score: 2
+    knowledge_points: [频率估计总体, 样本]
+    module: 统计与概率
+    difficulty: 基础
+    description: 2000名七年级男生，抽样100人BMI数据，估计体重正常人数
+
+  - id: 13
+    type: 填空
+    score: 2
+    knowledge_points: [命题真假, 反例]
+    module: 数与式
+    difficulty: 中档
+    description: '举反例说明"若a²>4b²则a>2b"为假命题'
+
+  - id: 14
+    type: 填空
+    score: 2
+    knowledge_points: [圆, 角度计算, 地球模型]
+    module: 圆
+    difficulty: 中档
+    description: 地球示意图，赤道AB、北回归线CD、南回归线EF，求夏至日F点太阳高度角（43°）
+
+  - id: 15
+    type: 填空
+    score: 2
+    knowledge_points: [正方形, 三角形面积, 三角函数]
+    module: 四边形
+    difficulty: 中档
+    description: 正方形ABCD中AB=1，E在CD上，CF⊥BE，∠EBC=30°，求△ABF面积
+
+  - id: 16
+    type: 填空
+    score: 2
+    knowledge_points: [函数与最优方案, 利润最大化]
+    module: 综合与实践
+    difficulty: 压轴
+    description: 企业分配n台设备给4个经销商，利润表已知，求利润最大的分配方案
+
+  # ===== 解答题 =====
+  - id: 17
+    type: 解答
+    score: 5
+    knowledge_points: [绝对值, 二次根式, 负指数幂, 三角函数值]
+    module: 数与式
+    difficulty: 基础
+    description: 计算|-3|+√27+(1/2)⁻¹-2sin30°
+
+  - id: 18
+    type: 解答
+    score: 5
+    knowledge_points: [一元一次不等式组]
+    module: 方程与不等式
+    difficulty: 基础
+    description: 解不等式组 {2(x+1)>x-1; (x+5)/2>3x}
+
+  - id: 19
+    type: 解答
+    score: 5
+    knowledge_points: [代数式求值, 整体代入, 完全平方公式]
+    module: 数与式
+    difficulty: 基础
+    description: 已知a+b-3=0，求4(a-b)+8b/(a²+2ab+b²)的值，需识别分母为(a+b)²
+
+  - id: 20
+    type: 解答
+    score: 6
+    knowledge_points: [三角形中位线, 矩形判定, 综合计算]
+    module: 三角形/四边形
+    difficulty: 中档
+    description: △ABC中D、E为AB、AC中点，DF⊥BC，证明DFCG为矩形并求BC和AC
+
+  - id: 21
+    type: 解答
+    score: 6
+    knowledge_points: [一次函数, 待定系数法, 不等式应用]
+    module: 函数
+    difficulty: 基础
+    description: 一次函数y=kx+b过(1,3)和(2,5)，求k、b，求函数值满足条件的x范围
+
+  - id: 22
+    type: 解答
+    score: 5
+    knowledge_points: [方程组建模, 实际应用, 比例关系]
+    module: 方程与不等式
+    difficulty: 中档
+    description: '北京风筝制作（非遗背景），已知头高:胸高:尾高=1:1:2等关系，求风筝骨架总高'
+
+  - id: 23
+    type: 解答
+    score: 5
+    knowledge_points: [平均数, 中位数, 方差, 数据分析]
+    module: 统计与概率
+    difficulty: 中档
+    description: 田径教练选4名100米运动员，折线图+表格，求m值、比较n与0.056、综合排序
+
+  - id: 24
+    type: 解答
+    score: 6
+    knowledge_points: [圆的切线, 角度, 相似三角形]
+    module: 圆
+    difficulty: 中档
+    description: 点P向圆O作两条切线，切点A、B，C为OP中点，AC延长交圆于D，证明角度关系并求DE
+
+  - id: 25
+    type: 解答
+    score: 5
+    knowledge_points: [函数模型, 分段函数, 最优化]
+    module: 函数
+    difficulty: 中档
+    description: 工厂AI辅助培训新员工，模拟训练T天后试生产，根据数据表和曲线优化培训方案
+
+  - id: 26
+    type: 解答
+    score: 6
+    knowledge_points: [二次函数, 抛物线与直线, 动点]
+    module: 函数
+    difficulty: 压轴
+    sub_questions: 3
+    description: 抛物线y=ax²+bx+c过O和A(3,3a)，过P(t,0)作垂线交抛物线于M、交y=ax于N，求MN及a的范围
+
+  - id: 27
+    type: 解答
+    score: 7
+    knowledge_points: [旋转变换, 全等三角形, 相似三角形, 角度追踪]
+    module: 几何综合
+    difficulty: 压轴
+    sub_questions: 3
+    description: △ABC中∠ACB=90°、∠ABC=α，D在射线BC上，AD逆时针旋转(180-2α)°得AE，EF∥AB交BC于F
+
+  - id: 28
+    type: 解答
+    score: 7
+    knowledge_points: [新定义探究, 圆, 关联点, 关联角度, 动态几何]
+    module: 几何综合
+    difficulty: 压轴
+    sub_questions: 3
+    description: '新定义"关联点"和"关联角度"，结合点与圆的位置关系、圆的对称性和坐标分析'
+
+# ------ 命题特点 ------
+exam_features:
+  - 天问二号探测器发射（2025年5月时事）融入科学记数法
+  - 北京风筝制作（国家级非遗）融入方程建模
+  - AI辅助制造业培训融入函数建模（体现"磨刀不误砍柴工"）
+  - 第28题新定义"关联点/关联角度"延续北京特色压轴题型
+  - 第8题反比例函数+矩形多结论判断是选择题中的压轴
+  - 解答题分值分布：5+5+5+6+6+5+5+6+5+6+7+7
