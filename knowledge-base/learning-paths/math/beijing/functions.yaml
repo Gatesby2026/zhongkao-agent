@@ -132,12 +132,12 @@ L1_to_L2:
 
   steps:
     - order: 1
-      topic: "看图判断a、b、c符号"专项
+      topic: '"看图判断a、b、c符号"专项'
       goal: 这是中考选择题高频题型，必须秒解
       estimated_hours: 2
       resources:
         - type: 练习
-          name: "由图象判断abc符号"专项题集（20题）
+          name: '"由图象判断abc符号"专项题集（20题）'
           how_to_use: |
             解题模板：
             - a的符号：看开口方向（上为正下为负）
@@ -183,7 +183,7 @@ L1_to_L2:
       estimated_hours: 2
       resources:
         - type: 教材
-          name: 课本"二次函数与一元二次方程"章节
+          name: '课本"二次函数与一元二次方程"章节'
           how_to_use: |
             核心关系（必须记住）：
             y=ax²+bx+c 的图象与x轴的交点

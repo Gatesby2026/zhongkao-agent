@@ -138,12 +138,12 @@ L1_to_L2:
 
   steps:
     - order: 1
-      topic: "找隐含条件"专题
+      topic: '"找隐含条件"专题'
       goal: 图中不直接写出但可以用的条件都能找到
       estimated_hours: 3
       resources:
         - type: 练习
-          name: "隐含条件识别"专题训练（15题）
+          name: '"隐含条件识别"专题训练（15题）'
           how_to_use: |
             常见隐含条件清单（做题时逐条检查）：
             1. 公共边（两个三角形共用一条边）
@@ -199,7 +199,7 @@ L1_to_L2:
       estimated_hours: 2.5
       resources:
         - type: 教材
-          name: 课本"解直角三角形"应用章节
+          name: '课本"解直角三角形"应用章节'
           how_to_use: |
             解题步骤固定：
             1. 画图（标注已知角和已知边）
@@ -247,7 +247,7 @@ L2_to_L3:
       estimated_hours: 4
       resources:
         - type: 练习
-          name: "辅助线专题训练"（15题）
+          name: '"辅助线专题训练"（15题）'
           how_to_use: |
             5种常用辅助线（各练3题）：
 

@@ -19,7 +19,7 @@ quadrilaterals_L0_to_L1:
   steps:
     - order: 1
       topic: 四边形家族关系梳理
-      goal: 画出关系图，搞清"谁是谁的特殊情况"
+      goal: '画出关系图，搞清"谁是谁的特殊情况"'
       estimated_hours: 2
       resources:
         - type: 教材
@@ -78,7 +78,7 @@ quadrilaterals_L0_to_L1:
 
     - order: 3
       topic: 基础证明训练
-      goal: 能写出"先证平行四边形，再升级"的两步证明
+      goal: '能写出"先证平行四边形，再升级"的两步证明'
       estimated_hours: 2
       resources:
         - type: 练习
@@ -142,7 +142,7 @@ circles_L0_to_L1:
             做课本例题5题
         - type: 练习
           name: 五三·垂径定理计算题
-          how_to_use: 练"弦长-半径-弦心距"互求（10题）
+          how_to_use: '练"弦长-半径-弦心距"互求（10题）'
       pass_criteria:
         - r²=(弦长/2)²+d² 的互求不出错
       common_pitfalls:
@@ -167,7 +167,7 @@ circles_L0_to_L1:
           name: 五三·圆周角定理计算题
           how_to_use: 做10题，含角度计算和推理
       pass_criteria:
-        - "直径→90°"能条件反射般使用
+        - '"直径→90°"能条件反射般使用'
 
     - order: 3
       topic: 切线的判定与性质
