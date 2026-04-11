@@ -386,3 +386,186 @@ ${admissionStr}
 
   return { system, user };
 }
+
+// ============================================================
+// 场景1：模块突破模式
+// ============================================================
+
+export interface ModuleDrillInput {
+  moduleId: string;       // 模块 ID（如 "functions"）
+  level: string;          // 当前水平 L0/L1/L2/L3
+  district: string;       // 所在区
+  hoursPerWeek: number;   // 每周可投入该模块的小时数
+  weeksUntilExam: number; // 距中考周数
+  problem?: string;       // 学生自述的具体问题（可选）
+}
+
+const MODULE_NAMES: Record<string, string> = {
+  numbersAndExpressions: "数与式",
+  equationsAndInequalities: "方程与不等式",
+  functions: "函数",
+  triangles: "三角形",
+  circles: "圆",
+  statisticsAndProbability: "统计与概率",
+  geometryComprehensive: "几何综合/压轴",
+};
+
+export function buildModuleDrillPrompt(
+  input: ModuleDrillInput,
+  kb: KnowledgeBase
+): { system: string; user: string } {
+  const { moduleId, level, district, hoursPerWeek, weeksUntilExam } = input;
+  const moduleName = MODULE_NAMES[moduleId] || moduleId;
+  const kbKey = MODULE_TO_KB_KEY[moduleId];
+  const lpKey = MODULE_TO_LP_KEY[moduleId];
+
+  // 诊断标准
+  const diag = kb.diagnostics[kbKey];
+  let diagStr = "";
+  if (diag?.levels) {
+    const lvl = diag.levels.find((l: any) => l.id === level);
+    if (lvl) {
+      diagStr = `当前水平（${level}）：${lvl.description}\n典型表现：${(lvl.signals || []).join("；")}`;
+    }
+  }
+
+  // 易错点（该模块全部，不限制数量）
+  let mistakesStr = "";
+  const cmData = kb.commonMistakes[kbKey];
+  if (cmData?.by_level?.[level]) {
+    const levelMistakes = cmData.by_level[level];
+    const focusIds: string[] = levelMistakes.focus || [];
+    const relevantMistakes = (cmData.mistakes || [])
+      .filter((mk: any) => focusIds.includes(mk.id));
+    if (relevantMistakes.length > 0) {
+      mistakesStr = relevantMistakes.map((mk: any) =>
+        `- **${mk.name}**（丢${mk.typical_score_loss}分，频率${mk.frequency}）\n  问题：${mk.description}\n  纠正：${mk.fix_method || "暂无"}`
+      ).join("\n");
+    }
+  }
+
+  // 学习路径
+  const lp = kb.learningPaths[lpKey];
+  const targetLevel = level === "L0" ? "L1" : level === "L1" ? "L2" : level === "L2" ? "L3" : "L3";
+  const upgradeKey = `${level}_to_${targetLevel}`;
+  let pathStr = "";
+  const pathData = lp?.[upgradeKey];
+  if (pathData) {
+    pathStr = yaml.dump({
+      target: pathData.target,
+      estimated_hours: pathData.estimated_hours,
+      steps: pathData.steps?.map((s: any) => ({
+        order: s.order,
+        topic: s.topic,
+        goal: s.goal,
+        resources: s.resources,
+        estimated_hours: s.estimated_hours,
+      })),
+    }, { lineWidth: 200 });
+  }
+
+  // 模拟题（该模块全部，不限 5 道）
+  const mockQuestions: any[] = [];
+  for (const exam of kb.mockExams) {
+    const source = `${exam.year || ""}${exam.district || ""}${exam.exam_type || ""}`;
+    for (const q of exam.questions || []) {
+      if (q.module !== moduleId) continue;
+      mockQuestions.push({ ...q, source });
+    }
+  }
+  const diffOrder: Record<string, number> = { "基础": 0, "中档": 1, "较难": 2, "压轴": 3 };
+  mockQuestions.sort((a, b) => (diffOrder[a.difficulty] ?? 1) - (diffOrder[b.difficulty] ?? 1));
+
+  let mockStr = "";
+  if (mockQuestions.length > 0) {
+    mockStr = mockQuestions.map((q) =>
+      `- ${q.source} 第${q.id}题（${q.type}，${q.score}分，${q.difficulty}）：${(q.question || "").split("\n")[0].slice(0, 80)}`
+    ).join("\n");
+  }
+
+  // 真题中该模块相关题号
+  let examStr = "";
+  const summary = kb.examAnalysis.summary;
+  if (summary?.module_frequency) {
+    const mf = summary.module_frequency[moduleId] || summary.module_frequency[kbKey];
+    if (mf) {
+      examStr = yaml.dump(mf, { lineWidth: 200 });
+    }
+  }
+
+  // 教辅推荐
+  let resourceStr = "";
+  const recMatrix = kb.resources.workbooks?.recommendation_matrix;
+  if (recMatrix) {
+    const levelKey = level === "L0" ? "L0_student" : level === "L1" ? "L1_student" : level === "L2" ? "L2_student" : "L3_student";
+    const rec = recMatrix[levelKey];
+    if (rec) {
+      resourceStr = `主力教辅：${rec.primary}\n辅助教辅：${rec.secondary}` +
+        (rec.optional ? `\n可选：${rec.optional}` : "") +
+        (rec.avoid ? `\n不推荐：${rec.avoid}` : "");
+    }
+  }
+
+  const timePhase = getTimePhase(weeksUntilExam);
+  const drillWeeks = Math.min(2, Math.max(1, Math.floor(weeksUntilExam / 5)));
+
+  const system = `你是一位经验丰富的北京中考数学辅导专家，专门帮助学生突破薄弱模块。你拥有完整的真题数据库和各区一模试卷题库。
+
+核心要求：
+1. 你现在只关注**${moduleName}**这一个模块，给出精准的专项突破方案
+2. 所有建议必须具体到题号、页码、时间——学生拿到就能直接执行
+3. 当前处于${getTimePhaseName(timePhase)}，策略要匹配时间紧迫程度
+4. 用分数说话：该模块从${level}提到${targetLevel}，能多拿几分，对应哪些真题题号
+5. 输出用 Markdown 格式`;
+
+  const user = `## 模块突破请求
+
+- 模块：**${moduleName}**
+- 当前水平：**${level}**（目标升到 ${targetLevel}）
+- 所在区：${district}
+- 每周可投入：${hoursPerWeek}小时
+- 距中考：${weeksUntilExam}周（${getTimePhaseName(timePhase)}）${input.problem ? `\n- 学生自述问题：${input.problem}` : ""}
+
+## 诊断数据
+
+${diagStr}
+
+## 该水平段易错点
+
+${mistakesStr || "暂无数据"}
+
+## 学习路径参考（${level} → ${targetLevel}）
+
+${pathStr || "暂无数据"}
+
+## 可用的模拟题（${mockQuestions.length}道）
+
+${mockStr || "暂无"}
+
+## 真题中该模块的考查规律
+
+${examStr || "暂无"}
+
+## 推荐教辅
+
+${resourceStr || "暂无"}
+
+---
+
+请生成一份 **${moduleName}** 模块的 **${drillWeeks}周专项突破计划**，包含：
+
+1. **问题诊断**（3-5行）：该模块在${level}水平的核心问题是什么，丢分点在哪，中考中对应哪些题号和分值
+
+2. **突破路线**（简要）：${drillWeeks}周分几个阶段，每阶段攻克什么
+
+3. **每日详细计划**（${drillWeeks}周，每天）：
+   - 时间段 + 任务 + 材料（教材节+页码 / 教辅+题号 / 模拟题+题号）
+   - 每天的 ✅ 完成标准
+   - 从上面的模拟题库中选题作为练习，直接引用题号
+   - 安排"诊断→学习→练习→检测"的循环
+   - 最后一天安排过关测试
+
+4. **过关标准**：怎样算突破成功（用真题/模拟题检验，具体到题号）`;
+
+  return { system, user };
+}
