@@ -1,0 +1,144 @@
+# ============================================================
+# 资源库：教材信息
+# ============================================================
+# 最后更新：2026-04-11
+# 说明：北京地区初中数学使用的教材版本
+
+category: 教材
+
+# ------ 北京地区使用教材 ------
+beijing:
+  primary_version: 北师大版
+  notes: |
+    北京市初中数学统一使用北京师范大学出版社教材。
+    部分学校的尖子班/实验班可能补充使用人教版内容，但考试以北师大版为准。
+
+  volumes:
+    - id: bsd-7a
+      name: 北师大版·数学·七年级上册
+      publisher: 北京师范大学出版社
+      isbn: "978-7-303-17298-2"
+      key_chapters:
+        - chapter: 第一章 丰富的图形世界
+          relevance: 低（几何入门，中考直接考查少）
+        - chapter: 第二章 有理数及其运算
+          relevance: 高（有理数运算是基础中的基础）
+          maps_to_module: 数与式
+        - chapter: 第三章 整式及其加减
+          relevance: 高（整式基础）
+          maps_to_module: 数与式
+        - chapter: 第四章 基本平面图形
+          relevance: 中（角、线段基础概念）
+        - chapter: 第五章 一元一次方程
+          relevance: 高
+          maps_to_module: 方程与不等式
+        - chapter: 第六章 数据的收集与整理
+          relevance: 中
+          maps_to_module: 统计与概率
+
+    - id: bsd-7b
+      name: 北师大版·数学·七年级下册
+      publisher: 北京师范大学出版社
+      key_chapters:
+        - chapter: 第一章 整式的乘除
+          relevance: 高（幂运算、乘法公式、因式分解）
+          maps_to_module: 数与式
+        - chapter: 第二章 相交线与平行线
+          relevance: 中
+          maps_to_module: 三角形
+        - chapter: 第三章 三角形
+          relevance: 高
+          maps_to_module: 三角形
+        - chapter: 第四章 变量之间的关系
+          relevance: 中（函数概念启蒙）
+          maps_to_module: 函数
+        - chapter: 第五章 生活中的轴对称
+          relevance: 中
+        - chapter: 第六章 概率初步
+          relevance: 高
+          maps_to_module: 统计与概率
+
+    - id: bsd-8a
+      name: 北师大版·数学·八年级上册
+      publisher: 北京师范大学出版社
+      key_chapters:
+        - chapter: 第一章 勾股定理
+          relevance: 极高
+          maps_to_module: 三角形
+        - chapter: 第二章 实数
+          relevance: 高
+          maps_to_module: 数与式
+        - chapter: 第三章 位置与坐标
+          relevance: 中（平面直角坐标系）
+        - chapter: 第四章 一次函数
+          relevance: 极高
+          maps_to_module: 函数
+        - chapter: 第五章 二元一次方程组
+          relevance: 高
+          maps_to_module: 方程与不等式
+        - chapter: 第六章 数据的分析
+          relevance: 高（平均数/中位数/众数/方差）
+          maps_to_module: 统计与概率
+
+    - id: bsd-8b
+      name: 北师大版·数学·八年级下册
+      publisher: 北京师范大学出版社
+      key_chapters:
+        - chapter: 第一章 三角形的证明
+          relevance: 极高（全等三角形判定）
+          maps_to_module: 三角形
+        - chapter: 第二章 一元一次不等式与一元一次不等式组
+          relevance: 高
+          maps_to_module: 方程与不等式
+        - chapter: 第三章 图形的平移与旋转
+          relevance: 中
+        - chapter: 第四章 因式分解
+          relevance: 极高
+          maps_to_module: 数与式
+        - chapter: 第五章 分式与分式方程
+          relevance: 高
+          maps_to_module: 数与式/方程与不等式
+        - chapter: 第六章 平行四边形
+          relevance: 高
+          maps_to_module: 四边形
+
+    - id: bsd-9a
+      name: 北师大版·数学·九年级上册
+      publisher: 北京师范大学出版社
+      key_chapters:
+        - chapter: 第一章 特殊平行四边形
+          relevance: 高（矩形/菱形/正方形）
+          maps_to_module: 四边形
+        - chapter: 第二章 一元二次方程
+          relevance: 极高
+          maps_to_module: 方程与不等式
+        - chapter: 第三章 概率的进一步认识
+          relevance: 高
+          maps_to_module: 统计与概率
+        - chapter: 第四章 图形的相似
+          relevance: 极高
+          maps_to_module: 三角形
+        - chapter: 第五章 投影与视图
+          relevance: 低
+        - chapter: 第六章 反比例函数
+          relevance: 高
+          maps_to_module: 函数
+
+    - id: bsd-9b
+      name: 北师大版·数学·九年级下册
+      publisher: 北京师范大学出版社
+      key_chapters:
+        - chapter: 第一章 直角三角形的边角关系
+          relevance: 高（锐角三角函数）
+          maps_to_module: 三角形
+        - chapter: 第二章 二次函数
+          relevance: 极高（中考重点+压轴题核心）
+          maps_to_module: 函数
+        - chapter: 第三章 圆
+          relevance: 高
+          maps_to_module: 圆
+
+# ------ 人教版参考（部分学校补充使用）------
+reference_version:
+  name: 人教版（人民教育出版社）
+  notes: 北京不作为主教材，但五三等教辅的目录体系多按人教版编排，需注意章节对应关系

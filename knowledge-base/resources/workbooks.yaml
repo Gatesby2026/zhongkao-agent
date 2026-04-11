@@ -1,0 +1,129 @@
+# ============================================================
+# 资源库：教辅/参考书
+# ============================================================
+# 最后更新：2026-04-11
+# 说明：经过验证的主流教辅，按使用场景分类
+
+category: 教辅
+
+# ------ 推荐等级说明 ------
+# A级：主流公认有效，放心推荐
+# B级：质量好但适用场景较窄，需匹配学生水平
+# C级：需确认后再推荐
+
+# ================================================================
+#  综合类教辅（覆盖全科/全知识点）
+# ================================================================
+comprehensive:
+
+  - id: wusanyear
+    name: 五年中考三年模拟（五三）
+    series: 曲一线科学备考
+    publisher: 教育科学出版社 / 首都师范大学出版社
+    official_site: http://www.quyixian.com/
+    recommend_level: A
+    price_range: 35-50元/本
+    versions:
+      - name: 五三·全练版
+        target: 全面复习，适合L0-L2各水平
+        structure: 知识清单 → 考点突破 → 真题训练 → 模拟演练
+        how_to_use_by_level:
+          L0: 只看知识清单+做★题
+          L1: 做★和★★题，跳过★★★
+          L2: 全做，重点做★★★和真题
+      - name: 五三·中考真题分类训练
+        target: 刷真题专用，适合L1-L3
+        structure: 按知识点分类的真题汇编
+        how_to_use: 按模块刷题，每个模块集中做完再换下一个
+    notes: |
+      五三是最通用的教辅，几乎适合所有学生。
+      注意区分"全练版"和"真题分类版"——功能不同。
+      购买时注意选对地区版本（北京版/全国版）。
+    purchase: 京东/当当/淘宝搜索"五三 中考数学 北京"
+
+  - id: wanwei
+    name: 万唯中考
+    series: 万唯教育
+    publisher: 陕西人民教育出版社
+    official_site: https://www.wanweiedu.com/
+    recommend_level: A
+    price_range: 30-45元/本
+    versions:
+      - name: 万唯·试题研究
+        target: 真题深度研究，适合L1-L3
+        structure: 按考点组织（非教材章节），真题+变式+预测
+        how_to_use: 适合按考点逐个突破，每个考点做完再换
+      - name: 万唯·逆袭卷
+        target: 模拟训练，适合L2-L3
+        structure: 套卷形式
+    notes: |
+      万唯按考点组织（不是按教材章节），更贴近实际考试。
+      适合已有一定基础、想要针对性提分的学生。
+      注意选购对应地区版本。
+
+  - id: tianli38
+    name: 天利38套
+    publisher: 西藏人民出版社
+    recommend_level: B
+    price_range: 25-35元/本
+    target: 刷套卷专用，适合L2-L3（冲刺阶段）
+    structure: 38套中考真题/模拟卷
+    how_to_use: 考前1-2个月做限时套卷训练
+    notes: 纯刷卷，没有知识梳理，不适合基础薄弱的学生
+
+# ================================================================
+#  专项类教辅
+# ================================================================
+specialized:
+
+  - id: jinkao
+    name: 金考卷
+    publisher: 新疆青少年出版社
+    recommend_level: B
+    target: 模拟训练（L2-L3）
+    structure: 模拟试卷集
+    notes: 质量稳定，适合考前模拟
+
+  - id: xueba
+    name: 学霸笔记
+    publisher: 湖南师范大学出版社
+    recommend_level: B
+    target: 知识梳理（L0-L1）
+    structure: 图文并茂的知识点梳理，类似"学长笔记"风格
+    notes: 适合不喜欢看教材的学生用来入门，但不能替代做题
+
+  - id: zhongkao_bang
+    name: 中考帮
+    publisher: 北京教育出版社
+    recommend_level: B
+    target: 全面复习（L1-L2）
+    structure: 按考点梳理+练习
+    notes: 北京本地出版，对北京中考的针对性较强
+
+# ================================================================
+#  使用建议矩阵
+# ================================================================
+recommendation_matrix:
+  L0_student:
+    primary: 教材（回归课本）
+    secondary: 五三全练版（只做★题）
+    optional: 学霸笔记（辅助理解）
+    avoid: 天利38套、万唯逆袭卷（太难了）
+
+  L1_student:
+    primary: 五三全练版（★和★★题）
+    secondary: 万唯试题研究（按考点突破）
+    optional: 中考帮
+    avoid: 天利38套（还不到刷卷的阶段）
+
+  L2_student:
+    primary: 五三真题分类训练
+    secondary: 万唯试题研究
+    optional: 金考卷（模拟训练）
+    avoid: 学霸笔记（太基础了）
+
+  L3_student:
+    primary: 天利38套（限时套卷训练）
+    secondary: 海淀/西城一模二模真题
+    optional: 万唯逆袭卷
+    note: 重点不是买更多书，而是做精做透已有的题目
