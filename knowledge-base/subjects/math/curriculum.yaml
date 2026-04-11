@@ -1,0 +1,670 @@
+# ============================================================
+# 初中数学课程标准知识点体系（2022年版）
+# ============================================================
+# 来源：《义务教育数学课程标准（2022年版）》第四学段（7-9年级）
+# 最后更新：2026-04-11
+#
+# 要求层级说明：
+#   了解 — 能从具体事例中知道或举例说明
+#   理解 — 能描述特征和由来，能阐明与相关对象的区别联系
+#   掌握 — 能在理解基础上用于新情境
+#   运用 — 能综合运用知识，灵活合理地选择方法解决问题
+#
+# 中考权重说明（以北京为例）：
+#   ★★★ = 高频必考（近5年几乎每年出现）
+#   ★★  = 常考（3-4年出现）
+#   ★   = 偶考（1-2年出现或仅作了解）
+# ============================================================
+
+subject: 数学
+standard_version: "2022年版"
+grade_range: "7-9年级（第四学段）"
+total_knowledge_points: 150+  # 具体知识点数量
+domains: 3    # 数与代数、图形与几何、统计与概率
+themes: 8
+modules: 29
+
+# ================================================================
+#                    领域一：数与代数
+# ================================================================
+# 北京中考占比：约50%（100分制约50分）
+
+数与代数:
+
+  # ------ 主题1：数与式 ------
+  数与式:
+
+    有理数:
+      exam_weight: ★★★
+      typical_score: 2-4分
+      knowledge_points:
+        - name: 有理数的概念（正数/负数/整数/分数）
+          level: 理解
+        - name: 数轴（原点、正方向、单位长度）
+          level: 理解
+        - name: 相反数
+          level: 理解
+        - name: 绝对值的意义
+          level: 理解
+          exam_note: 绝对值常与化简求值结合考查
+        - name: 有理数大小比较
+          level: 掌握
+        - name: 有理数加减乘除运算
+          level: 掌握
+        - name: 有理数的乘方
+          level: 掌握
+        - name: 有理数混合运算（运算顺序与运算律）
+          level: 掌握
+          exam_note: 计算题必考
+        - name: 科学记数法
+          level: 了解
+          exam_note: 近10年考了9次，几乎必考，选择题第1题常见
+        - name: 近似数与有效数字
+          level: 了解
+
+    实数:
+      exam_weight: ★★
+      typical_score: 2-4分
+      knowledge_points:
+        - name: 平方根与算术平方根
+          level: 掌握
+        - name: 立方根
+          level: 掌握
+        - name: 无理数的概念
+          level: 了解
+        - name: 实数的概念（有理数与无理数的统称）
+          level: 了解
+        - name: 实数与数轴的对应关系
+          level: 了解
+        - name: 二次根式的概念
+          level: 理解
+          exam_note: 二次根式有意义的条件（被开方数≥0）是常考点
+        - name: 二次根式的加减乘除运算
+          level: 了解
+          exam_note: 能进行简单运算即可
+
+    整式:
+      exam_weight: ★★★
+      typical_score: 4-6分
+      knowledge_points:
+        - name: 单项式、多项式的概念（系数、次数）
+          level: 了解
+        - name: 同类项、合并同类项
+          level: 掌握
+        - name: 去括号、添括号法则
+          level: 掌握
+        - name: 整式的加减运算
+          level: 掌握
+        - name: 同底数幂的乘法
+          level: 掌握
+          exam_note: 幂的运算必考
+        - name: 幂的乘方
+          level: 掌握
+        - name: 积的乘方
+          level: 掌握
+        - name: 单项式乘单项式/多项式
+          level: 掌握
+        - name: 多项式乘多项式
+          level: 掌握
+        - name: 乘法公式（平方差公式、完全平方公式）
+          level: 了解
+          exam_note: 能运用公式进行计算和因式分解
+        - name: 同底数幂的除法
+          level: 掌握
+        - name: 单项式/多项式除以单项式
+          level: 掌握
+        - name: 因式分解——提公因式法
+          level: 掌握
+          exam_note: 近10年必考
+        - name: 因式分解——公式法（平方差、完全平方）
+          level: 掌握
+          exam_note: 近10年必考
+
+    分式:
+      exam_weight: ★★
+      typical_score: 2-4分
+      knowledge_points:
+        - name: 分式的概念
+          level: 了解
+        - name: 分式有意义的条件（分母≠0）
+          level: 理解
+        - name: 分式的基本性质
+          level: 理解
+        - name: 分式的约分与通分
+          level: 掌握
+        - name: 分式的加减乘除运算
+          level: 掌握
+
+  # ------ 主题2：方程与不等式 ------
+  方程与不等式:
+
+    一元一次方程:
+      exam_weight: ★★
+      typical_score: 2-4分
+      knowledge_points:
+        - name: 方程与一元一次方程的概念
+          level: 了解
+        - name: 等式的基本性质
+          level: 掌握
+        - name: 解一元一次方程（去分母/去括号/移项/合并/系数化1）
+          level: 掌握
+        - name: 列一元一次方程解应用题
+          level: 掌握
+
+    二元一次方程组:
+      exam_weight: ★★
+      typical_score: 2-4分
+      knowledge_points:
+        - name: 二元一次方程与方程组的概念
+          level: 了解
+        - name: 方程组的解
+          level: 理解
+        - name: 消元法（代入法、加减法）解方程组
+          level: 掌握
+        - name: 列方程组解应用题
+          level: 掌握
+
+    一元二次方程:
+      exam_weight: ★★★
+      typical_score: 6-8分
+      knowledge_points:
+        - name: 一元二次方程的概念与一般形式 ax²+bx+c=0
+          level: 理解
+        - name: 直接开平方法
+          level: 掌握
+        - name: 配方法
+          level: 掌握
+        - name: 公式法（求根公式）
+          level: 掌握
+          exam_note: 最常用的解法，必须熟练
+        - name: 因式分解法
+          level: 掌握
+        - name: 判别式 b²-4ac 与根的情况
+          level: 理解
+          exam_note: 高频考点，常与函数结合
+        - name: 根与系数的关系（韦达定理）
+          level: 了解
+          exam_note: 2022新课标新增，关注考查趋势
+        - name: 列一元二次方程解应用题
+          level: 掌握
+
+    分式方程:
+      exam_weight: ★★
+      typical_score: 4-5分
+      knowledge_points:
+        - name: 分式方程的概念
+          level: 了解
+        - name: 分式方程的解法（去分母转化为整式方程）
+          level: 掌握
+        - name: 验根（检验增根）
+          level: 掌握
+          exam_note: 验根步骤必须写，不写扣分
+        - name: 列分式方程解应用题
+          level: 了解
+
+    一元一次不等式:
+      exam_weight: ★★
+      typical_score: 2-4分
+      knowledge_points:
+        - name: 不等式的概念
+          level: 了解
+        - name: 不等式的基本性质（三条）
+          level: 理解
+        - name: 一元一次不等式的解法
+          level: 掌握
+        - name: 在数轴上表示不等式的解集
+          level: 掌握
+        - name: 一元一次不等式组的解法
+          level: 掌握
+        - name: 用数轴确定不等式组的解集
+          level: 掌握
+
+  # ------ 主题3：函数 ------
+  函数:
+
+    函数概念:
+      exam_weight: ★★
+      typical_score: 2分
+      knowledge_points:
+        - name: 常量与变量的概念
+          level: 了解
+        - name: 函数的概念
+          level: 理解
+        - name: 函数的三种表示方法（解析式、列表、图象）
+          level: 了解
+        - name: 自变量取值范围、函数值
+          level: 理解
+
+    一次函数:
+      exam_weight: ★★★
+      typical_score: 6-8分
+      knowledge_points:
+        - name: 正比例函数 y=kx (k≠0)
+          level: 理解
+        - name: 一次函数 y=kx+b (k≠0)
+          level: 理解
+        - name: 一次函数的图象（直线）与性质
+          level: 掌握
+        - name: k、b 对图象位置的影响
+          level: 理解
+          exam_note: k决定增减性和倾斜方向，b决定与y轴交点
+        - name: 待定系数法求一次函数解析式
+          level: 掌握
+        - name: 一次函数与一元一次方程/不等式的关系
+          level: 理解
+
+    反比例函数:
+      exam_weight: ★★★
+      typical_score: 4-6分
+      knowledge_points:
+        - name: 反比例函数 y=k/x (k≠0) 的概念
+          level: 理解
+        - name: 反比例函数的图象（双曲线）与性质
+          level: 掌握
+          exam_note: 高频必考，双曲线的对称性
+        - name: k的正负对图象的影响（象限分布）
+          level: 理解
+        - name: |k|的几何意义
+          level: 了解
+        - name: 用反比例函数解决实际问题
+          level: 了解
+
+    二次函数:
+      exam_weight: ★★★
+      typical_score: 10-14分
+      knowledge_points:
+        - name: 二次函数 y=ax²+bx+c (a≠0) 的概念
+          level: 理解
+        - name: 二次函数的图象（抛物线）
+          level: 掌握
+        - name: 开口方向（a的正负）
+          level: 掌握
+        - name: 对称轴 x=-b/(2a)
+          level: 掌握
+        - name: 顶点坐标
+          level: 掌握
+        - name: 顶点式 y=a(x-h)²+k
+          level: 理解
+        - name: 图象的平移
+          level: 理解
+        - name: a, b, c 对图象的影响
+          level: 理解
+          exam_note: 由图象判断a,b,c的符号是选择题经典题型
+        - name: 二次函数的增减性与最值
+          level: 掌握
+        - name: 二次函数与一元二次方程的关系
+          level: 理解
+          exam_note: 图象与x轴交点↔方程的根↔判别式
+        - name: 用二次函数解决实际问题（最值问题等）
+          level: 掌握
+          exam_note: 压轴题核心载体，代几综合
+
+# ================================================================
+#                    领域二：图形与几何
+# ================================================================
+# 北京中考占比：约38%（100分制约38分）
+
+图形与几何:
+
+  # ------ 主题4：图形的性质 ------
+  图形的性质:
+
+    基本图形与位置关系:
+      exam_weight: ★
+      typical_score: 2分
+      knowledge_points:
+        - name: 点、线、面的基本概念
+          level: 了解
+        - name: 直线、射线、线段的概念与表示
+          level: 了解
+        - name: 两点确定一条直线
+          level: 掌握
+        - name: 两点之间线段最短
+          level: 掌握
+        - name: 角的概念、表示与度量
+          level: 了解
+        - name: 角平分线的概念
+          level: 了解
+        - name: 补角、余角及其性质
+          level: 了解
+
+    相交线与平行线:
+      exam_weight: ★★
+      typical_score: 2-4分
+      knowledge_points:
+        - name: 对顶角相等
+          level: 理解
+        - name: 邻补角
+          level: 了解
+        - name: 垂线的概念与性质
+          level: 理解
+        - name: 垂线段最短
+          level: 掌握
+        - name: 点到直线的距离
+          level: 理解
+        - name: 同位角、内错角、同旁内角
+          level: 了解
+          exam_note: 平行线相关角的关系是填空/选择常考
+        - name: 平行线的判定（3种方法）
+          level: 掌握
+        - name: 平行线的性质（3条）
+          level: 掌握
+        - name: 平行公理及其推论
+          level: 理解
+
+    三角形:
+      exam_weight: ★★★
+      typical_score: 8-12分
+      knowledge_points:
+        - name: 三角形的概念与分类
+          level: 了解
+        - name: 三边关系（两边之和大于第三边）
+          level: 理解
+        - name: 三角形的高、中线、角平分线
+          level: 了解
+        - name: 三角形内角和等于180度
+          level: 掌握
+        - name: 三角形外角的性质
+          level: 理解
+        - name: 全等三角形的概念与性质
+          level: 理解
+        - name: 全等三角形的判定（SSS/SAS/ASA/AAS/HL）
+          level: 掌握
+          exam_note: 中考必考，解答题常见，需熟练5种判定方法
+        - name: 等腰三角形的性质（等边对等角、三线合一）
+          level: 掌握
+        - name: 等腰三角形的判定（等角对等边）
+          level: 掌握
+        - name: 等边三角形的性质与判定
+          level: 掌握
+        - name: 直角三角形的性质（30°角对边=斜边一半）
+          level: 掌握
+        - name: 勾股定理
+          level: 掌握
+          exam_note: 必考，常与坐标系/实际问题结合
+        - name: 勾股定理的逆定理
+          level: 掌握
+        - name: 三角形中位线定理
+          level: 理解
+
+    四边形:
+      exam_weight: ★★
+      typical_score: 4-6分
+      knowledge_points:
+        - name: 多边形的概念
+          level: 了解
+        - name: 多边形内角和公式 (n-2)×180°
+          level: 掌握
+        - name: 多边形外角和等于360°
+          level: 了解
+        - name: 平行四边形的性质（对边相等/对角相等/对角线互相平分）
+          level: 掌握
+        - name: 平行四边形的判定（5种方法）
+          level: 掌握
+        - name: 矩形的性质与判定
+          level: 掌握
+        - name: 菱形的性质与判定
+          level: 掌握
+        - name: 正方形的性质与判定
+          level: 掌握
+        - name: 等腰梯形的性质与判定
+          level: 了解
+
+    圆:
+      exam_weight: ★★
+      typical_score: 6-8分
+      knowledge_points:
+        - name: 圆的定义与基本概念（圆心/半径/直径）
+          level: 理解
+        - name: 弧、弦、圆心角的概念
+          level: 了解
+        - name: 垂径定理
+          level: 掌握
+          exam_note: 垂直于弦的直径平分弦及其所对的弧
+        - name: 圆心角、弧、弦之间的关系
+          level: 理解
+        - name: 圆周角定理
+          level: 掌握
+          exam_note: 圆周角=所对圆心角的一半，常考
+        - name: 直径所对的圆周角是直角
+          level: 掌握
+        - name: 三角形的外接圆与外心
+          level: 了解
+        - name: 三角形的内切圆与内心
+          level: 了解
+        - name: 点与圆的位置关系
+          level: 了解
+        - name: 直线与圆的位置关系（相离/相切/相交）
+          level: 理解
+        - name: 切线的判定与性质
+          level: 掌握
+          exam_note: 切线证明是解答题常见题型
+        - name: 两圆的位置关系
+          level: 了解
+        - name: 弧长公式
+          level: 掌握
+        - name: 扇形面积公式
+          level: 掌握
+        - name: 圆锥的侧面展开图
+          level: 了解
+
+    命题与证明:
+      exam_weight: ★
+      typical_score: 不单独考，融入几何证明
+      knowledge_points:
+        - name: 定义、命题、定理的概念
+          level: 了解
+        - name: 逆命题与逆定理
+          level: 了解
+        - name: 反例的作用
+          level: 理解
+        - name: 证明的基本方法（演绎推理）
+          level: 掌握
+
+  # ------ 主题5：图形的变化 ------
+  图形的变化:
+
+    轴对称:
+      exam_weight: ★★
+      typical_score: 2-4分
+      knowledge_points:
+        - name: 轴对称与轴对称图形的概念
+          level: 理解
+        - name: 线段垂直平分线的性质与判定
+          level: 掌握
+        - name: 轴对称变换
+          level: 掌握
+          exam_note: 常与最短路径问题结合
+
+    平移:
+      exam_weight: ★
+      typical_score: 2分
+      knowledge_points:
+        - name: 平移的概念与基本性质
+          level: 理解
+        - name: 平移变换的作图
+          level: 掌握
+
+    旋转:
+      exam_weight: ★★
+      typical_score: 2-4分
+      knowledge_points:
+        - name: 旋转的概念（旋转中心、旋转角）
+          level: 理解
+        - name: 旋转变换的基本性质
+          level: 理解
+          exam_note: 旋转在压轴题中常作为辅助手段
+        - name: 中心对称与中心对称图形
+          level: 了解
+
+    相似:
+      exam_weight: ★★★
+      typical_score: 6-8分
+      knowledge_points:
+        - name: 比例的基本性质
+          level: 了解
+        - name: 线段的比与成比例线段
+          level: 了解
+        - name: 相似图形的概念
+          level: 了解
+        - name: 相似三角形的判定（AA/SAS/SSS）
+          level: 掌握
+          exam_note: 中考必考，常与全等结合出解答题
+        - name: 相似三角形的性质（对应线段比/面积比）
+          level: 掌握
+        - name: 平行线截比例线段
+          level: 理解
+        - name: 位似变换
+          level: 了解
+
+    锐角三角函数:
+      exam_weight: ★★
+      typical_score: 4-6分
+      knowledge_points:
+        - name: 正弦sinA、余弦cosA、正切tanA的定义
+          level: 理解
+        - name: 30°/45°/60°的三角函数值
+          level: 掌握
+          exam_note: 必须记熟，不给公式
+        - name: 解直角三角形
+          level: 掌握
+        - name: 用三角函数解决实际问题（仰角/俯角/坡度）
+          level: 掌握
+
+    投影与视图:
+      exam_weight: ★
+      typical_score: 2分
+      knowledge_points:
+        - name: 平行投影与中心投影
+          level: 了解
+        - name: 三视图（正视图/侧视图/俯视图）
+          level: 了解
+        - name: 由三视图想象立体图形
+          level: 了解
+
+  # ------ 主题6：图形与坐标 ------
+  图形与坐标:
+
+    平面直角坐标系:
+      exam_weight: ★★
+      typical_score: 2-4分（融入函数和几何题中）
+      knowledge_points:
+        - name: 有序数对
+          level: 了解
+        - name: 平面直角坐标系的概念
+          level: 理解
+        - name: 象限及坐标轴上点的坐标特征
+          level: 掌握
+        - name: 用坐标表示地理位置
+          level: 了解
+        - name: 用坐标表示平移
+          level: 掌握
+        - name: 图形变换与坐标的关系（关于坐标轴对称等）
+          level: 理解
+
+# ================================================================
+#                    领域三：统计与概率
+# ================================================================
+# 北京中考占比：约12%（100分制约12分）
+
+统计与概率:
+
+  # ------ 主题7：抽样与数据分析 ------
+  抽样与数据分析:
+
+    数据的收集与整理:
+      exam_weight: ★
+      typical_score: 融入统计题
+      knowledge_points:
+        - name: 全面调查与抽样调查
+          level: 了解
+        - name: 总体、个体、样本、样本容量的概念
+          level: 了解
+        - name: 简单随机抽样
+          level: 了解
+
+    数据的描述:
+      exam_weight: ★★
+      typical_score: 4-6分
+      knowledge_points:
+        - name: 频数与频率
+          level: 理解
+        - name: 频数分布表与频数分布直方图
+          level: 掌握
+          exam_note: 解答题常考，读图+计算
+        - name: 条形统计图、折线统计图、扇形统计图
+          level: 掌握
+
+    数据的分析:
+      exam_weight: ★★★
+      typical_score: 4-6分
+      knowledge_points:
+        - name: 平均数（算术平均数）
+          level: 理解
+        - name: 加权平均数
+          level: 掌握
+          exam_note: 加权平均数的实际应用是常考点
+        - name: 中位数
+          level: 理解
+        - name: 众数
+          level: 理解
+        - name: 极差
+          level: 了解
+        - name: 方差
+          level: 掌握
+          exam_note: 会计算方差，理解方差反映数据波动大小
+        - name: 四分位数
+          level: 了解
+          exam_note: 2022新课标新增
+        - name: 箱线图
+          level: 了解
+          exam_note: 2022新课标新增，关注考查趋势
+        - name: 用样本估计总体
+          level: 了解
+
+  # ------ 主题8：随机事件的概率 ------
+  随机事件的概率:
+
+    概率:
+      exam_weight: ★★★
+      typical_score: 4-6分
+      knowledge_points:
+        - name: 确定事件与随机事件
+          level: 了解
+        - name: 随机事件发生的可能性有大小
+          level: 了解
+        - name: 概率的意义（0到1之间的数）
+          level: 了解
+        - name: 等可能事件的概率计算
+          level: 掌握
+        - name: 列举法（列表法、树状图法）求概率
+          level: 掌握
+          exam_note: 解答题必考，树状图法更常用
+        - name: 用频率估计概率
+          level: 了解
+
+# ================================================================
+#                    2022新课标变化要点
+# ================================================================
+
+new_in_2022:
+  added:
+    - "根与系数的关系（韦达定理）— 从删除恢复为了解"
+    - "四分位数 — 新增"
+    - "箱线图 — 新增"
+    - "尺规作图要求加强（作三角形外接圆/内切圆）"
+    - "代数推理相关内容增加"
+    - "综合与实践改为项目式学习方式"
+    - "强调跨学科主题学习"
+  removed:
+    - "梯形部分深入内容简化"
+    - "部分选学星号标记删除（变为必学）"
+  level_changes:
+    - "几何证明的要求层级整体加强"
+    - "强调'增加代数推理，加强几何直观'"
+  exam_impact:
+    - "情境化命题增多（嵌入真实生活场景）"
+    - "跨学科题目成为趋势"
+    - "杜绝偏题怪题，减少纯技巧性考查"
+    - "韦达定理可能出现在新题型中"
+    - "箱线图/四分位数可能进入选择或填空"
