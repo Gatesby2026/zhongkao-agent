@@ -1,0 +1,147 @@
+# ============================================================
+# 易错点：三角形（全等、相似、勾股、三角函数）
+# ============================================================
+# 最后更新：2026-04-11
+
+module: 三角形
+module_id: triangles
+
+mistakes:
+
+  - id: TR-01
+    name: 全等判定条件选错/写错
+    frequency: 极高
+    affected_levels: [L0, L1]
+    typical_score_loss: 3-5分
+    description: |
+      5种判定（SSS/SAS/ASA/AAS/HL）混用或写错：
+      1. SSA不能判定全等，但学生当成SAS用（角的位置错了）
+      2. SAS中的角必须是"两边的夹角"，不是任意角
+      3. HL只适用于直角三角形，非直角三角形不能用
+      4. 证明书写不规范：对应顶点顺序写错
+    exam_examples:
+      - { year: 2021, qid: 20, description: "全等三角形证明" }
+      - { year: 2023, qid: 20, description: "全等三角形判定与性质" }
+      - { year: 2025, qid: 20, description: "全等证明" }
+    fix_method: |
+      判定方法卡片（每天看一遍）：
+      - SSS：三边对应相等
+      - SAS：两边及其夹角（⚠️必须是夹角）
+      - ASA：两角及其夹边
+      - AAS：两角及一角的对边
+      - HL：直角三角形的斜边+一直角边
+      ❌ SSA、AAA 都不能判定全等
+      标准：做5年真题Q20，每题写出完整的全等证明
+
+  - id: TR-02
+    name: 相似三角形对应边比例搞错
+    frequency: 高
+    affected_levels: [L1, L2]
+    typical_score_loss: 3-5分
+    description: |
+      1. 对应边找错：相似三角形中，等角所对的边才是对应边
+      2. 比例式写反：△ABC∽△DEF，应有 AB/DE=BC/EF=AC/DF
+         但学生写成 AB/EF（对应关系搞混）
+      3. 面积比=相似比的平方，容易忘记平方
+    exam_examples:
+      - { year: 2022, qid: 24, description: "相似三角形求线段长" }
+      - { year: 2024, qid: 24, description: "相似三角形综合" }
+    fix_method: |
+      找对应边三步法：
+      1. 先找相等的角（标记在图上）
+      2. 等角的对边就是对应边
+      3. 按顶点对应顺序写相似：△ABC∽△DEF
+      标准：做10道相似三角形求线段的题，比例式全部正确
+
+  - id: TR-03
+    name: 勾股定理斜边搞错
+    frequency: 高
+    affected_levels: [L0, L1]
+    typical_score_loss: 2-4分
+    description: |
+      a²+b²=c² 中 c 必须是斜边（最长边，直角的对边）。
+      常见错误：已知两边3和5，求第三边，直接算 √(3²+5²)=√34
+      但没考虑5可能是斜边→第三边=√(5²-3²)=4
+      ⚠️ 必须分两种情况讨论！
+    exam_examples:
+      - { year: 2021, qid: 14, description: "勾股定理求距离" }
+      - { year: 2023, qid: 15, description: "勾股定理" }
+      - { year: 2025, qid: 13, description: "直角三角形中的勾股定理" }
+    fix_method: |
+      做题时先标记哪条边是斜边：
+      - 如果已知哪个角是直角→直角的对边就是斜边
+      - 如果没明确→分情况讨论（已知边是斜边/不是斜边）
+      标准：做10道勾股定理题，每题先标出斜边
+
+  - id: TR-04
+    name: 三角函数值记错或三角形选错
+    frequency: 中
+    affected_levels: [L1, L2]
+    typical_score_loss: 2-4分
+    description: |
+      1. 30°/45°/60°的sin/cos/tan值记混
+      2. 解直角三角形时，把"对边"和"邻边"搞混
+         sinA=对边/斜边，cosA=邻边/斜边，tanA=对边/邻边
+      3. 实际问题中仰角/俯角画错图
+    exam_examples:
+      - { year: 2022, qid: 24, description: "解直角三角形应用题" }
+      - { year: 2024, qid: 20, description: "三角函数求高度" }
+    fix_method: |
+      必记表格：
+      | 角度 | sin  | cos  | tan  |
+      | 30°  | 1/2  | √3/2 | √3/3 |
+      | 45°  | √2/2 | √2/2 | 1    |
+      | 60°  | √3/2 | 1/2  | √3   |
+      口诀："对斜sin，邻斜cos，对邻tan"
+      标准：默写三角函数表，做5道解直角三角形题
+
+  - id: TR-05
+    name: 几何证明过程跳步
+    frequency: 高
+    affected_levels: [L1, L2]
+    typical_score_loss: 2-3分
+    description: |
+      心里知道但不写出来，导致扣分：
+      1. 用了"平行线内错角相等"但没写"因为AB∥CD"
+      2. 全等证明中直接说"对应边相等"但没写完整的全等推导
+      3. "显然"两个字在证明中是扣分词——考试不能写"显然"
+    exam_examples:
+      - { year: 2023, qid: 20, description: "几何证明" }
+      - { year: 2025, qid: 24, description: "几何证明综合" }
+    fix_method: |
+      证明书写规范：
+      1. 每一步都要有"理由"（性质/定理/条件）
+      2. 格式："∵ ……（条件），∴ ……（结论）"
+      3. 用了哪个定理就写出来，不能省略
+      标准：把一道证明题完整写在纸上，让别人检查是否每步有理由
+
+  - id: TR-06
+    name: 等腰三角形分类讨论遗漏
+    frequency: 中
+    affected_levels: [L1, L2]
+    typical_score_loss: 2-3分
+    description: |
+      等腰三角形中"哪两边相等"没有分类讨论。
+      例：等腰三角形两边长为3和7，求周长。
+      如果 3 是腰：3+3+7=13，但 3+3=6<7 不能构成三角形 ✗
+      如果 7 是腰：7+7+3=17 ✓
+      所以周长只能是 17。很多学生会写两个答案。
+    exam_examples:
+      - { year: 2022, qid: 13, description: "等腰三角形周长" }
+    fix_method: |
+      等腰三角形题目必做三步：
+      1. 分情况（谁是腰/谁是底）
+      2. 每种情况验证三角形是否成立（两边之和>第三边）
+      3. 排除不成立的情况
+      标准：做10道等腰三角形分类讨论题
+
+by_level:
+  L0:
+    focus: [TR-01, TR-03]
+    message: "全等判定5种方法必须记牢，勾股定理要先认准斜边"
+  L1:
+    focus: [TR-01, TR-02, TR-05]
+    message: "证明书写规范是拿分关键，相似的对应边别找错"
+  L2:
+    focus: [TR-02, TR-04, TR-06]
+    message: "分类讨论别遗漏，三角函数表必须秒出"

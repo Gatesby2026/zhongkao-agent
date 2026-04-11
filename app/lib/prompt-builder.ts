@@ -149,10 +149,29 @@ export function buildPrompt(
       pathStr = `\n学习路径：\n${pathDump}`;
     }
 
+    // 易错点
+    let mistakesStr = "";
+    const cmKey = MODULE_TO_KB_KEY[m.id];
+    const cmData = kb.commonMistakes[cmKey];
+    if (cmData?.by_level?.[m.level]) {
+      const levelMistakes = cmData.by_level[m.level];
+      const focusIds: string[] = levelMistakes.focus || [];
+      const relevantMistakes = (cmData.mistakes || [])
+        .filter((mk: any) => focusIds.includes(mk.id))
+        .slice(0, 3);
+      if (relevantMistakes.length > 0) {
+        mistakesStr = `\n⚠️ 该水平段易错点（${levelMistakes.message}）：\n` +
+          relevantMistakes.map((mk: any) =>
+            `  - ${mk.name}（丢${mk.typical_score_loss}分）：${mk.description.split("\n")[0]}` +
+            (mk.fix_method ? `\n    纠正方法：${mk.fix_method.split("\n")[0]}` : "")
+          ).join("\n");
+      }
+    }
+
     return `
 ### ${m.name}（当前 ${m.level} - ${m.levelName}，目标 ${m.targetLevel}，优先级 #${m.priority}）
 预计提分：${m.potentialGain}分
-${levelDesc}${benchmarkStr}${pathStr}${timeStrategyStr}
+${levelDesc}${benchmarkStr}${pathStr}${timeStrategyStr}${mistakesStr}
 `;
   }).join("\n");
 
@@ -216,6 +235,26 @@ ${levelDesc}${benchmarkStr}${pathStr}${timeStrategyStr}
     }
   }
 
+  // 教辅推荐矩阵
+  let resourceStr = "";
+  const recMatrix = kb.resources.workbooks?.recommendation_matrix;
+  if (recMatrix) {
+    // 根据学生整体水平选匹配的推荐
+    const levelKey = diagnosis.estimatedTotalLevel === "L0" ? "L0_student"
+      : diagnosis.estimatedTotalLevel === "L1" ? "L1_student"
+      : diagnosis.estimatedTotalLevel === "L2" ? "L2_student"
+      : "L3_student";
+    const rec = recMatrix[levelKey];
+    if (rec) {
+      resourceStr = `\n教辅推荐（${levelKey.replace("_", " ")}）：\n` +
+        `  主力教辅：${rec.primary}\n` +
+        `  辅助教辅：${rec.secondary}\n` +
+        (rec.optional ? `  可选：${rec.optional}\n` : "") +
+        (rec.avoid ? `  ⚠️ 不推荐：${rec.avoid}\n` : "") +
+        (rec.note ? `  备注：${rec.note}\n` : "");
+    }
+  }
+
   // 真题命题趋势
   let trendsStr = "";
   if (examSummary?.trends) {
@@ -260,6 +299,9 @@ ${timeAllocStr}
 ## 各模块详细数据（含真题锚点和时间策略）
 
 ${moduleContexts}
+
+## 教辅资源推荐
+${resourceStr}
 
 ## 真题命题趋势
 ${trendsStr}

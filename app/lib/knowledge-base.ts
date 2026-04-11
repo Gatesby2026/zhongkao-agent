@@ -32,7 +32,9 @@ export interface KnowledgeBase {
     onlinePlatforms: any;
     examPapers: any;
   };
-  // 新增：真题分析和录取分数线
+  // 易错点
+  commonMistakes: Record<string, any>;
+  // 真题分析和录取分数线
   examAnalysis: {
     summary: any;
     yearly: Record<string, any>;
@@ -83,6 +85,16 @@ export function loadKnowledgeBase(): KnowledgeBase {
       workbooks: readYaml("resources/workbooks.yaml"),
       onlinePlatforms: readYaml("resources/online-platforms.yaml"),
       examPapers: readYaml("resources/exam-papers.yaml"),
+    },
+    commonMistakes: {
+      "numbers-and-expressions": readYaml("common-mistakes/math/numbers-and-expressions.yaml"),
+      "equations-and-inequalities": readYaml("common-mistakes/math/equations-and-inequalities.yaml"),
+      functions: readYaml("common-mistakes/math/functions.yaml"),
+      triangles: readYaml("common-mistakes/math/triangles.yaml"),
+      quadrilaterals: readYaml("common-mistakes/math/quadrilaterals.yaml"),
+      circles: readYaml("common-mistakes/math/circles.yaml"),
+      "geometry-comprehensive": readYaml("common-mistakes/math/geometry-comprehensive.yaml"),
+      "statistics-and-probability": readYaml("common-mistakes/math/statistics-and-probability.yaml"),
     },
     examAnalysis: {
       summary: readYaml("exam-analysis/math/beijing/summary.yaml"),

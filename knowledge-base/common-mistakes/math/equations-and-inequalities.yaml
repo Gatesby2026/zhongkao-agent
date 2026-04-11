@@ -1,0 +1,137 @@
+# ============================================================
+# 易错点：方程与不等式
+# ============================================================
+# 最后更新：2026-04-11
+# 数据来源：北京中考真题阅卷反馈、菁优网错题统计
+
+module: 方程与不等式
+module_id: equationsAndInequalities
+
+mistakes:
+
+  - id: EI-01
+    name: 分式方程忘记验根
+    frequency: 极高
+    affected_levels: [L0, L1, L2]
+    typical_score_loss: 3-5分
+    description: |
+      分式方程去分母后解出来的根可能是增根（使原分母为0）。
+      不写验根步骤直接扣2-3分（即使答案恰好正确）。
+      这是北京中考阅卷的硬性扣分项。
+    exam_examples:
+      - { year: 2021, qid: 19, description: "解分式方程" }
+      - { year: 2023, qid: 19, description: "解分式方程" }
+      - { year: 2025, qid: 18, description: "解分式方程" }
+    fix_method: |
+      养成"三步走"习惯：
+      1. 去分母→解整式方程→得 x=?
+      2. 将 x 代回原方程的分母，检查是否为0
+      3. 写"经检验，x=? 是（不是）原方程的解"
+      ⚠️ 即使确定不是增根，验根步骤也必须写！
+      标准：做10道分式方程，验根步骤一个不漏
+
+  - id: EI-02
+    name: 一元二次方程判别式用错
+    frequency: 高
+    affected_levels: [L0, L1]
+    typical_score_loss: 2-4分
+    description: |
+      1. 公式记错：Δ=b²-4ac 写成 b²+4ac 或 b-4ac
+      2. 代入时符号出错：方程 x²-3x+2=0 中 b=-3，代入时写成 (-3)²-4×1×2=9-8=1 ✓
+         但常见错误是忘记 b 的负号：3²-4×1×2=1
+      3. Δ的含义搞混：Δ>0 两个不等实根，Δ=0 两个相等实根，Δ<0 无实根
+    exam_examples:
+      - { year: 2022, qid: 5, description: "判别式求参数范围" }
+      - { year: 2024, qid: 5, description: "判别式Δ=0求k值" }
+      - { year: 2025, qid: 5, description: "方程有两个不等实根" }
+    fix_method: |
+      强制步骤：
+      1. 先化成标准形式 ax²+bx+c=0
+      2. 明确写出 a=?, b=?, c=?（特别注意符号）
+      3. 代入 Δ=b²-4ac
+      标准：做5年真题中所有判别式题，每题都写出a,b,c的值
+
+  - id: EI-03
+    name: 不等式乘除负数忘记变号
+    frequency: 高
+    affected_levels: [L0, L1]
+    typical_score_loss: 2-4分
+    description: |
+      不等式两边同乘/除以负数时，不等号方向要反转。
+      典型错误：-2x > 6 → x > -3（正确应为 x < -3）
+    exam_examples:
+      - { year: 2022, qid: 12, description: "一元一次不等式组" }
+      - { year: 2024, qid: 12, description: "解不等式" }
+    fix_method: |
+      口诀："乘除负数，方向反"
+      做题时用红笔标记"÷负数"这一步，提醒自己变号
+      标准：做20道不等式，含至少10道需要变号的，全对
+
+  - id: EI-04
+    name: 不等式组取交集错误
+    frequency: 中
+    affected_levels: [L0, L1]
+    typical_score_loss: 2分
+    description: |
+      两个不等式分别解出后，取交集时搞错。
+      口诀容易记混："同大取大，同小取小，大小小大中间找，大大小小解不了"
+      常见错误：x>2 且 x>5 取了 x>2（应该是 x>5）
+    exam_examples:
+      - { year: 2023, qid: 12, description: "不等式组求解集" }
+    fix_method: |
+      画数轴法（最可靠）：
+      1. 在数轴上分别画出两个不等式的解集
+      2. 找重叠部分就是交集
+      ⚠️ 别背口诀，画数轴最不容易出错
+      标准：做10道不等式组，每题都画数轴
+
+  - id: EI-05
+    name: 方程应用题设错未知数或漏条件
+    frequency: 高
+    affected_levels: [L1, L2]
+    typical_score_loss: 3-5分
+    description: |
+      1. 设了x但没说清x代表什么（扣1分）
+      2. 列方程时遗漏等量关系
+      3. 解出来忘记检验实际意义（如人数不能是负数/小数）
+      4. 没有写完整的答语
+    exam_examples:
+      - { year: 2021, qid: 21, description: "一元二次方程应用题" }
+      - { year: 2024, qid: 21, description: "方程应用题" }
+      - { year: 2025, qid: 21, description: "实际问题列方程" }
+    fix_method: |
+      应用题答题模板：
+      1. "设___为x"（明确单位）
+      2. 找等量关系→列方程
+      3. 解方程
+      4. 检验：代回原题看是否合理
+      5. 答："所以___是___"
+      标准：做5年真题Q21，每题按模板写完整
+
+  - id: EI-06
+    name: 韦达定理符号搞反
+    frequency: 中（新课标后考频上升）
+    affected_levels: [L2]
+    typical_score_loss: 2-3分
+    description: |
+      x₁+x₂ = -b/a（注意负号！）
+      x₁·x₂ = c/a
+      常见错误：x₁+x₂ = b/a（丢了负号）
+    exam_examples:
+      - { year: 2025, qid: 15, description: "结合韦达定理的填空题" }
+    fix_method: |
+      记忆方法："和反积正"
+      - 两根之和 = -b/a（系数b的相反数除以a）
+      - 两根之积 = c/a（常数项c除以a）
+      标准：做10道韦达定理题，全部写出和与积的公式
+
+by_level:
+  L0:
+    focus: [EI-01, EI-03, EI-04]
+    message: "分式方程验根和不等式变号是送命题，必须养成习惯"
+  L1:
+    focus: [EI-01, EI-02, EI-05]
+    message: "判别式代入要写出a,b,c，应用题必须有完整答题步骤"
+  L2:
+    focus: [EI-05, EI-06]
+    message: "应用题答题规范是保分关键，韦达定理是新考点要重视"
