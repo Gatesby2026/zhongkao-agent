@@ -32,6 +32,16 @@ export interface KnowledgeBase {
     onlinePlatforms: any;
     examPapers: any;
   };
+  // 新增：真题分析和录取分数线
+  examAnalysis: {
+    summary: any;
+    yearly: Record<string, any>;
+  };
+  admission: {
+    scoringSystem: any;
+    districts: Record<string, any>;
+    mathTargetMapping: any;
+  };
 }
 
 export function loadKnowledgeBase(): KnowledgeBase {
@@ -73,6 +83,23 @@ export function loadKnowledgeBase(): KnowledgeBase {
       workbooks: readYaml("resources/workbooks.yaml"),
       onlinePlatforms: readYaml("resources/online-platforms.yaml"),
       examPapers: readYaml("resources/exam-papers.yaml"),
+    },
+    examAnalysis: {
+      summary: readYaml("exam-analysis/math/beijing/summary.yaml"),
+      yearly: {
+        "2025": readYaml("exam-analysis/math/beijing/2025.yaml"),
+        "2024": readYaml("exam-analysis/math/beijing/2024.yaml"),
+      },
+    },
+    admission: {
+      scoringSystem: readYaml("admission/beijing/scoring-system.yaml"),
+      districts: {
+        chaoyang: readYaml("admission/beijing/chaoyang.yaml"),
+        haidian: readYaml("admission/beijing/haidian.yaml"),
+        xicheng: readYaml("admission/beijing/xicheng.yaml"),
+        dongcheng: readYaml("admission/beijing/dongcheng.yaml"),
+      },
+      mathTargetMapping: readYaml("admission/beijing/math-target-mapping.yaml"),
     },
   };
 
