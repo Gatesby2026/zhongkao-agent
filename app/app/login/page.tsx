@@ -8,12 +8,14 @@ export default function LoginPage() {
   const { user, login } = useAuth();
   const [phone, setPhone] = useState("");
   const [code, setCode] = useState("");
-  const [step, setStep] = useState<"phone" | "code">("phone");
+  const [step, setStep] = useState<"phone" | "code" | "role">("phone");
   const [sending, setSending] = useState(false);
   const [verifying, setVerifying] = useState(false);
   const [countdown, setCountdown] = useState(0);
   const [error, setError] = useState("");
   const [devCode, setDevCode] = useState("");
+  const [pendingToken, setPendingToken] = useState("");
+  const [pendingUser, setPendingUser] = useState<any>(null);
   const codeInputRef = useRef<HTMLInputElement>(null);
 
   // 倒计时
@@ -100,9 +102,15 @@ export default function LoginPage() {
       const data = await res.json();
 
       if (data.success) {
-        login(data.token, data.user);
-        // 登录成功后跳转首页
-        window.location.href = "/";
+        if (data.isNewUser) {
+          // 新用户先选角色
+          setPendingToken(data.token);
+          setPendingUser(data.user);
+          setStep("role");
+        } else {
+          login(data.token, data.user);
+          window.location.href = "/";
+        }
       } else {
         setError(data.message);
       }
@@ -112,6 +120,56 @@ export default function LoginPage() {
       setVerifying(false);
     }
   };
+
+  // 角色选择
+  const handleSelectRole = async (role: "student" | "parent") => {
+    // 先完成登录
+    login(pendingToken, { ...pendingUser, role });
+    // 异步更新服务端
+    fetch("/api/auth/role", {
+      method: "PUT",
+      headers: { "Content-Type": "application/json", Authorization: `Bearer ${pendingToken}` },
+      body: JSON.stringify({ role }),
+    }).catch(() => {});
+    window.location.href = "/";
+  };
+
+  if (step === "role") {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
+        <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-8 w-full max-w-sm">
+          <div className="text-center mb-6">
+            <div className="text-4xl mb-3">👋</div>
+            <h2 className="text-xl font-bold text-gray-900 mb-1">欢迎！你是？</h2>
+            <p className="text-sm text-gray-500">选择角色后，我们会展示最适合你的内容</p>
+          </div>
+          <div className="space-y-3">
+            <button
+              onClick={() => handleSelectRole("student")}
+              className="w-full flex items-center gap-4 px-5 py-4 rounded-xl border-2 border-gray-200 hover:border-blue-400 hover:bg-blue-50 transition-all text-left"
+            >
+              <span className="text-3xl">🎒</span>
+              <div>
+                <div className="font-bold text-gray-900">我是学生</div>
+                <div className="text-xs text-gray-500">做测评、刷题、看学习计划</div>
+              </div>
+            </button>
+            <button
+              onClick={() => handleSelectRole("parent")}
+              className="w-full flex items-center gap-4 px-5 py-4 rounded-xl border-2 border-gray-200 hover:border-green-400 hover:bg-green-50 transition-all text-left"
+            >
+              <span className="text-3xl">👨‍👩‍👦</span>
+              <div>
+                <div className="font-bold text-gray-900">我是家长</div>
+                <div className="text-xs text-gray-500">查分数、看学校匹配、追踪孩子进度</div>
+              </div>
+            </button>
+          </div>
+          <p className="mt-4 text-center text-xs text-gray-400">之后可以在个人设置中修改</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
