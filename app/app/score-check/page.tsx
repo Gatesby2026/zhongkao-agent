@@ -304,12 +304,21 @@ export default function ScoreCheckPage() {
               >
                 📝 3 分钟快速测评
               </Link>
-              <Link
-                href={`/plan?district=${encodeURIComponent(district)}&score=${effectiveScore}${showDetail ? "&subjects=" + encodeURIComponent(JSON.stringify(subjects)) : ""}`}
-                className="flex-1 text-center px-4 py-3 bg-green-600 text-white rounded-xl font-medium hover:bg-green-700 transition-colors"
-              >
-                📊 直接做规划
-              </Link>
+              {showDetail ? (
+                <Link
+                  href={`/diagnosis?district=${encodeURIComponent(district)}&subjects=${encodeURIComponent(JSON.stringify(subjects))}${topTarget ? "&target=" + encodeURIComponent(topTarget.name) + "&targetScore=" + topTarget.refScore : ""}`}
+                  className="flex-1 text-center px-4 py-3 bg-green-600 text-white rounded-xl font-medium hover:bg-green-700 transition-colors"
+                >
+                  📊 全科诊断分析
+                </Link>
+              ) : (
+                <Link
+                  href={`/plan?district=${encodeURIComponent(district)}&score=${effectiveScore}`}
+                  className="flex-1 text-center px-4 py-3 bg-green-600 text-white rounded-xl font-medium hover:bg-green-700 transition-colors"
+                >
+                  📊 直接做规划
+                </Link>
+              )}
             </div>
           </div>
 

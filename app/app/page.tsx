@@ -102,17 +102,19 @@ export default function Home() {
         </Link>
       </div>
 
-      {/* 全科规划预告 */}
-      <div className="mt-5 relative">
-        <div className="bg-white rounded-xl border-2 border-dashed border-gray-200 p-4 opacity-60 flex items-center gap-4">
+      {/* 全科诊断 */}
+      <Link href="/diagnosis" className="block mt-5 group">
+        <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl border-2 border-green-200 p-4 transition-all hover:border-green-400 hover:shadow-md flex items-center gap-4">
           <div className="text-2xl">📋</div>
           <div className="flex-1">
-            <h2 className="text-base font-bold text-gray-900">全科规划</h2>
-            <p className="text-xs text-gray-500">6科统筹安排，跨科时间分配优化</p>
+            <h2 className="text-base font-bold text-gray-900">全科诊断分析</h2>
+            <p className="text-xs text-gray-500">输入 6 科成绩，看看从哪里提分最有效，生成全科时间分配方案</p>
           </div>
-          <div className="text-gray-400 text-xs px-2 py-1 bg-gray-100 rounded-full">Coming Soon</div>
+          <div className="text-green-600 font-medium text-sm group-hover:underline whitespace-nowrap">
+            开始 &rarr;
+          </div>
         </div>
-      </div>
+      </Link>
 
       {/* 底部说明 */}
       <div className="mt-10 text-center text-xs text-gray-400">
