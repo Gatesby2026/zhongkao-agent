@@ -1,12 +1,12 @@
 # ============================================================
 # 2025年北京石景山区中考数学二模试卷 — 逐题分析
 # ============================================================
-# 数据来源：knowledge-original/精品解析：2025年北京市石景山区中考二模数学试题（解析版）.docx
-# 自动生成，部分数学公式可能显示不全（docx公式对象无法完整提取）
+# 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
+# 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
 # 满分：100分  时长：120分钟
 
 year: 2025
-district: 石景山区
+district: 石景山
 exam_type: 二模
 subject: 数学
 full_score: 100
@@ -17,11 +17,27 @@ questions:
 - id: 1
   type: 选择
   score: 2
-  question: "如图所示的几何体，其主视图为（   ）\nA. \tB. \tC. \tD."
+  question: '如图所示的几何体，其主视图为（）
+
+    [图]
+
+    A.[图]B.[图]C.[图]D.$\begin{tabular}{|c|c|c|}
+
+    \hline
+
+    &  &  \\
+
+    \hline
+
+    &  &  \\
+
+    \hline
+
+    \end{tabular}$'
   answer: C
   solution: '解：这个几何体的主视图为：
 
-    ．
+    [图]．
 
     故选：C．'
   knowledge_points:
@@ -36,9 +52,13 @@ questions:
 - id: 2
   type: 选择
   score: 2
-  question: "根据公开资料，我国载人航天测控系统的时间同步精度为秒（微妙级时间同步），确保指令和数据的精确．请将用科学记数法表示应为（    ）\nA. \tB. \tC. \tD."
+  question: '根据公开资料，我国载人航天测控系统的时间同步精度为$0.000001$秒（微妙级时间同步），确保指令和数据的精确．请将$0.000001$用科学记数法表示应为（
+
+    ）
+
+    A.$1\times10^{-6}$B.$-1\times10^{6}$C.$0.1\times10^{-5}$D.$-0.1\times10^{5}$'
   answer: A
-  solution: '解：．
+  solution: '解：$0.000001=1\times0.000001=1\times10^{-6}$．
 
     故选：A．'
   knowledge_points:
@@ -54,21 +74,29 @@ questions:
 - id: 3
   type: 选择
   score: 2
-  question: "如图，直线，直线与交于点，过点作直线的垂线交直线于点．若，则的度数为（    ）\nA. \tB. \tC. \tD."
+  question: '如图，直线$a \parallel b$，直线c与a交于点E，过点E作直线c的垂线交直线b于点F．若$\angle1=130^\circ$，则$\angle 2$的度数为（
+
+    ）
+
+    [图]
+
+    A.$30^\circ$B.$40^\circ$C.$50^\circ$D.$60^\circ$'
   answer: B
   solution: '解：如图，
 
-    ∵，
+    [图]
 
-    ∴
+    ∵$EF \perp b$，
 
-    ∵，
+    ∴$\angle FED = 90^\circ$
 
-    ∴
+    ∵$\angle4ED=\angle1=130^\circ$，
 
-    ∵
+    ∴$\angle AEE = \angle AED - \angle FED = 130^\circ - 90^\circ = 40^\circ$
 
-    ∴
+    ∵$a \parallel b$
+
+    ∴$\angle 2=\angle AEF=40^{\circ}$
 
     故选：B'
   knowledge_points:
@@ -83,9 +111,11 @@ questions:
 - id: 4
   type: 选择
   score: 2
-  question: "正十边形的内角和度数为（　　）\nA. \tB. \tC. \tD."
+  question: '正十边形的内角和度数为（　　）
+
+    A.$360^\circ$B.$720^\circ$C.$1440^\circ$D.$1800^\circ$'
   answer: C
-  solution: '解：正十边形的内角和度数为：，
+  solution: '解：正十边形的内角和度数为：$(10-2)\times180^{\circ}=1440^{\circ}$，
 
     故选：C．'
   knowledge_points:
@@ -100,11 +130,13 @@ questions:
 - id: 5
   type: 选择
   score: 2
-  question: "圆心角为60°，且半径为3的扇形的弧长为\nA. \tB. \tC. \tD."
+  question: '圆心角为60°，且半径为3的扇形的弧长为
+
+    A.$\frac{\pi}{2}$B.$\pi$C.$\frac{3\pi}{2}$D.$3\pi$'
   answer: B
   solution: '解：∵圆心角为60°，且半径为3，
 
-    ∴弧长=
+    ∴弧长=$\frac{60 \cdot \pi \cdot 3}{180}$
 
     =π．
 
@@ -121,15 +153,19 @@ questions:
 - id: 6
   type: 选择
   score: 2
-  question: "关于的方程有两个不相等的实数根，则的取值范围是（    ）\nA. \tB. \tC. \tD."
+  question: '关于x的方程$x^{2}-2x-m=0$有两个不相等的实数根，则m的取值范围是（
+
+    ）
+
+    A.$m^{-1}$B.$m < 1$C.$m\ 1$D.$m > -1$'
   answer: D
-  solution: '∵方程有两个不相等实数根，
+  solution: '∵方程$x^{2}-2x-m=0$有两个不相等实数根，
 
-    ∴，
+    ∴$\Delta=(-2)^{2}-4\times1\times(-m)>0$，
 
-    ∴．
+    ∴$4+4m>0$．
 
-    解得：．
+    解得：$m > -1$．
 
     故选：D．'
   knowledge_points:
@@ -145,13 +181,19 @@ questions:
 - id: 7
   type: 选择
   score: 2
-  question: "不透明的袋子中有两个红球和一个黑球，三个球除颜色外无其他差别．从中随机摸出一个球，放回并摇匀，再从中随机摸出一个球，则两次摸到不同颜色球的概率是（    ）\nA. \tB. \tC. \tD."
+  question: '不透明的袋子中有两个红球和一个黑球，三个球除颜色外无其他差别．从中随机摸出一个球，放回并摇匀，再从中随机摸出一个球，则两次摸到不同颜色球的概率是（
+
+    ）
+
+    A.$\frac{2}{9}$B.$\frac{1}{3}$C.$\frac{4}{9}$D.$\frac{2}{3}$'
   answer: C
   solution: '解：树状图如下所示，
 
+    [图]
+
     由上可得，一共有9种等可能性，其中两次摸球摸到不同颜色球的可能性有4种，
 
-    ∴两次摸球摸到不同颜色球的概率是，
+    ∴两次摸球摸到不同颜色球的概率是$\frac{4}{9}$，
 
     故选：C．'
   knowledge_points:
@@ -167,59 +209,79 @@ questions:
 - id: 8
   type: 选择
   score: 2
-  question: "在正方形中，点，，，分别为边，，，上的动点（不与顶点重合），与相交于点．下面四个结论中，\n①如果，则；\n②如果，则；\n③如果为的垂直平分线，则；\n④如果与相互垂直且平分，则；\n所有正确结论的序号是（    ）\nA. ①③\tB. ②④\tC. ①④\tD. ②③"
+  question: '在正方形$ABCD$中，点E，F，G，H分别为边AD，AB，BC，CD上的动点（不与顶点重合），EG与FH相交于点O．下面四个结论中，
+
+    ①如果$EG = FH$，则$EG \perp FH$；
+
+    ②如果$EG \perp FH$，则$EG = FH$；
+
+    ③如果EG为FH的垂直平分线，则$S_{\text{阴影}} = \frac{1}{4} S_{\triangle ABC}$；
+
+    ④如果EG与FH相互垂直且平分，则$AE + AF = CD$；
+
+    所有正确结论的序号是（
+
+    ）
+
+    A.①③B.②④C.①④D.②③'
   answer: B
-  solution: '解：如图，①如果，显然不存在，①不正确；
+  solution: '解：如图，①如果$EG = FH$，显然不存在$EG \perp FH$，①不正确；
 
-    ②如果，
+    [图]
 
-    如图，作于点，作于点，
+    ②如果$EG \perp FH$，
 
-    ∵正方形，
+    如图，作$EM \perp BC$于点M，作$FN \perp CD$于点N，
 
-    ∴四边形和四边形都是矩形，
+    [图]
 
-    ∴，，
+    ∵正方形$ABCD$，
 
-    ∴，
+    ∴四边形$AFND$和四边形$ABME$都是矩形，
 
-    ∴四点共圆，
+    ∴$EM=AB=FN=AD$，$EM \perp FN$，
 
-    ∴，
+    ∴$\angle EOF = \angle ERF = 90^\circ$，
 
-    ∵，，
+    ∴$A, E, O, F$四点共圆，
 
-    ∴，
+    ∴$\angle MEG = \angle NFH$，
 
-    ∴，②正确；
+    ∵$\angle EMG=\angle FNH=90^{\circ}$，$EM = FN$，
 
-    ③如果为的垂直平分线，如图，
+    ∴$\triangle MEG \cong \triangle NFH$，
 
-    过正方形的中心作边的垂线，分成四个全等的小正方形，
+    ∴$EG = FH$，②正确；
 
-    显然，③不正确；
+    ③如果EG为FH的垂直平分线，如图，
 
-    ④如果与相互垂直且平分，如图，连接，，，，
+    [图]
 
-    ∴四边形是菱形，
+    过正方形$ABCD$的中心作边的垂线，分成四个全等的小正方形，
 
-    由②得，
+    显然$\frac{1}{4} \times 3.14 \times 2^{2} \times 3 + \frac{1}{3} \times 3.14 \times 2^{2} \times 5 = 37.68 (cm^{3})$，③不正确；
 
-    ∴四边形是正方形，
+    ④如果EG与FH相互垂直且平分，如图，连接EF，FG，GH，HA，
 
-    ∴，，
+    [图]
 
-    ∵，
+    ∴四边形$EFGH$是菱形，
 
-    ∴，
+    由②得$EG = FH$，
 
-    ∴，
+    ∴四边形$EFGH$是正方形，
 
-    ∴，
+    ∴$\angle FEH = 90^\circ$，$EF = EH$，
 
-    ∴，④正确，
+    ∵$\angle A=\angle D=90^{\circ}$，
 
-    故选：B．'
+    ∴$\angle AEF = 90^\circ - \angle DEH = \angle DHE$，
+
+    ∴$\triangle AEF \cong \triangle DHE$，
+
+    ∴$AF = DE$，
+
+    ∴$AE +'
   knowledge_points:
   - 全等三角形
   - 正方形
@@ -232,15 +294,15 @@ questions:
 - id: 9
   type: 填空
   score: 2
-  question: 若在实数范围内有意义，则实数的取值范围是_________．
-  answer: ''
-  solution: '解：∵在实数范围内有意义，
+  question: 若$\sqrt{x+3}$在实数范围内有意义，则实数x的取值范围是_________．
+  answer: $x^{-3}$
+  solution: '解：∵$\sqrt{x+3}$在实数范围内有意义，
 
-    ∴，
+    ∴$x+3\quad0$，
 
-    解得：，
+    解得：$x^{-3}$，
 
-    故答案为： ．'
+    故答案为：$x^{-3}$．'
   knowledge_points:
   - 不等式
   module: numbersAndExpressions
@@ -253,13 +315,15 @@ questions:
 - id: 10
   type: 填空
   score: 2
-  question: 分解因式：______．
-  answer: ''
-  solution: '解：
+  question: 分解因式：$x^{2}-4ax+4a$______．
+  answer: $a(x-2)^2$
+  solution: '解：$ax^{2}-4ax+4a$
 
-    ．
+    $=a\left(x^{2}-4x+4\right)$
 
-    故答案为：'
+    $= a(x - 2)^2$．
+
+    故答案为：$a(x-2)^2$'
   knowledge_points:
   - 因式分解
   module: numbersAndExpressions
@@ -272,17 +336,41 @@ questions:
 - id: 11
   type: 填空
   score: 2
-  question: 已知：，其中为正整数，则的值为_________．
-  answer: ''
-  solution: '解：，
+  question: 已知：$m<\sqrt{17}<m+1$，其中n为正整数，则n的值为_________．
+  answer: $4$
+  solution: '解：$\begin{array}{c}
 
-    ，
+    \bullet \\
 
-    ，为正整数，
+    \bullet \quad \bullet \\
 
-    ，
+    \bullet
 
-    故答案为：．'
+    \end{array}$$\sqrt{16}<\sqrt{17}<\sqrt{25}$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$4<\sqrt{17}<5$，
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$$n<\sqrt{17}<n+1$，n为正整数，
+
+    $\therefore n=4$，
+
+    故答案为：$4$．'
   knowledge_points:
   - 综合
   module: numbersAndExpressions
@@ -295,17 +383,19 @@ questions:
 - id: 12
   type: 填空
   score: 2
-  question: 如图，为的弦，，，半径于点，则的长为_________．
+  question: '如图，AB为$\odot\odot$的弦，$AB = 8$，$OA=5$，半径$OD \perp AB$于点C，则CD的长为_________．
+
+    [图]'
   answer: '2'
-  solution: '解：∵为的弦，，半径于点，
+  solution: '解：∵AB为$\odot\odot$的弦，$AB = 8$，半径$OD \perp AB$于点C，
 
-    ∴，
+    ∴$AC=\frac{1}{2}AB=4$，
 
-    ∴，
+    ∴$OC=\sqrt{AO^{2}-AC^{2}}=\sqrt{5^{2}-4^{2}}=3$，
 
-    ∴，
+    ∴$CD=OD-OC=5-3=2$，
 
-    故答案为： 2．'
+    故答案为：2．'
   knowledge_points:
   - 垂径定理
   - 弦
@@ -320,17 +410,17 @@ questions:
 - id: 13
   type: 填空
   score: 2
-  question: 在平面直角坐标系中，函数的图象经过点，当时，的取值范围是_________．
-  answer: ''
-  solution: '解：∵函数的图象经过点，
+  question: 在平面直角坐标系xOy中，函数$y=\frac{k}{x}(k\neq0)$的图象经过点$A(2,3)$，当$x>2$时，y的取值范围是_________．
+  answer: $0<y<3$
+  solution: '解：∵函数$y=\frac{k}{x}(k\neq0)$的图象经过点$A(2,3)$，
 
-    ∴，
+    ∴$k=6>0$，
 
-    ∴在第一象限内，随着的增大而减小，
+    ∴在第一象限内，y随着x的增大而减小，
 
-    ∴当，，
+    ∴当$x>2$，$0<y<3$，
 
-    故答案为：．'
+    故答案为：$0<y<3$．'
   knowledge_points:
   - 反比例函数
   - 坐标系
@@ -347,29 +437,27 @@ questions:
 
     甲组：10，11，12，13，14，15
 
-    乙组：12，13，14，16，15，
+    乙组：12，13，14，16，15，a
 
-    若甲、乙两组病人康复时间的方差相同，则符合条件的的值可以为_________．（写出一个即可）'
+    若甲、乙两组病人康复时间的方差相同，则符合条件的a的值可以为_________．（写出一个即可）'
   answer: 11或17（写出一个即可）
-  solution: '解：法一，∵甲组的每个数据之间相差，而乙组除了外，每个数据之间也是相差，
+  solution: '解：法一，∵甲组的每个数据之间相差$1$，而乙组除了a外，每个数据之间也是相差$1$，
 
     又∵甲、乙两组病人康复时间的方差相同，
 
-    ∴乙组按照顺序排列：a、12、13、14、15、16或者12、13、14、15、16、a，两组数据都是连续相差只有1，
+    ∴乙组按照顺序排列：a、12、13、14、15、16或者12、13、14、15、16、a，两组数据都是连续$[公式]$相差只有1，
 
-    ∴或者；
+    ∴$a = 11$或者$a = 17$；
 
-    法二，甲组：，
+    法二，甲组：$\bar{x}=\frac{1}{6}\times(10+11+12+13+14+15)=\frac{25}{2}$，
 
-    ∴，
+    ∴$s^{2}=\frac{1}{6}\left[\left(10-\frac{25}{2}\right)^{2}+\left(11-\frac{25}{2}\right)^{2}+\left(12-\frac{25}{2}\right)^{2}+\left(13-\frac{25}{2}\right)^{2}+\left(14-\frac{25}{2}\right)^{2}+\left(15-\frac{25}{2}\right)^{2}\right]=\frac{35}{12}$，
 
-    乙组：，
+    乙组：$\bar{x}=\frac{1}{6}(12+13+14+16+15+a)=\frac{70+a}{6}$，
 
-    ∴，
+    ∴$s^{2}=\frac{1}{6}\left[\left(12-\frac{70+a}{6}\right)^{2}+\left(13-\frac{70+a}{6}\right)^{2}+\left(14-\frac{70+a}{6}\right)^{2}+\left(16-\frac{70+a}{6}\right)^{2}+\left(15-\frac{70+a}{6}\right)^{2}+\left(a-\frac{70+a}{6}\right)^{2}\right]=\frac{35}{12}$，
 
-    解得或，
-
-    故答案为：或（写出一个即可））．'
+    解得$a = 11$或$a = 17$，'
   knowledge_points:
   - 方差
   module: statisticsAndProbability
@@ -381,33 +469,35 @@ questions:
 - id: 15
   type: 填空
   score: 2
-  question: 如图，在中，于点D，平分，于点E，于点F．若，则的长为_________．
+  question: '如图，在$V_{ABC}$中，$AD \perp BC$于点D，AD平分$\angle CAB$，$DE \perp AC$于点E，$CF \perp AB$于点F．若$DE = 3$，则CF的长为_________．
+
+    [图]'
   answer: '6'
-  solution: '解：∵于点D，平分，
+  solution: '解：∵$AD \perp BC$于点D，AD平分$\angle CAB$，
 
-    ∴，
+    ∴$\angle ADB = \angle ADC = 90^\circ, \angle BAD = \angle CAD$，
 
-    ∵，
+    ∵$AD = AD$，
 
-    ∴，
+    ∴$\triangle ABD \cong \triangle ACD$，
 
-    ∴，
+    ∴$AB = AC$，$DB = CD$
 
-    是的中线，
+    $\therefore AD$是$V_{ABC}$的中线，
 
-    ，
+    $S_{\triangle DHC}=2S_{\triangle AED}=2\times\frac{1}{2}\times DE\cdot AC=DE\cdot AC$，
 
-    ，
+    $S_{\triangle ABC}=\frac{1}{2}AB\cdot CF$，
 
-    ，
+    $\frac{1}{2}AB\cdot CF=DE\cdot AC$，
 
-    ，
+    $\because AC = AB$，
 
-    ，
+    $\frac{1}{2}CF=DE$，
 
-    ，
+    $\because DE = 3$，
 
-    ，
+    $\therefore CF = 6$，
 
     故答案为：6．'
   knowledge_points:
@@ -423,27 +513,67 @@ questions:
   score: 2
   question: '某工厂根据现有条件可选择A，B，C三种产品中的一种、两种或三种进行生产，每种产品生产一个分别需要的钢材（单位：吨）、工时（单位：小时）、获得利润（单位：万元）如下表所示：
 
+    项目
+
+    种类
+
+    所需钢材（吨）
+
+    工时（小时）
+
+    利润（万元）
+
+    A
+
+    2
+
+    3
+
+    3
+
+    B
+
+    3
+
+    5
+
+    4
+
+    C
+
+    5
+
+    7
+
+    5
+
     （1）现有钢材60吨，可安排工时100小时，工厂利润最大时，需生产A种产品_________个；
 
     （2）若生产一个产品B所需工时由5小时缩减到3小时，现有钢材60吨，可安排工时81小时，则工厂能获得的最大利润为_________万元．'
-  answer: ①. 30    ②.
-  solution: '解：（1）由表格可知，可知A种类产品钢材每吨的利润最大，
+  answer: ①.30②.$87$
+  solution: '解：（1）由表格可知$\frac{3}{2}>\frac{4}{3}>\frac{5}{5}$，可知A种类产品钢材每吨的利润最大，
 
     ∴A种类产品生产的越多，利润越大，
 
-    即当生产A种产品数量为个时，所需时间为小时小时，
+    即当生产A种产品数量为$\frac{60}{2}=30$个时，所需时间为$3\times30=90$小时$<100$小时，
 
-    故答案为：；
+    故答案为：$30$；
 
-    （2）解：设生产产品个，产品个，产品个，利润为元，
+    （2）解：设生产A产品a个，B产品b个，C产品c个，利润为W元，
 
-    则，即，
+    则$\begin{cases}
 
-    ∴，
+    2a+3b+4c\leq60 \\
 
-    即当时，W最大为，
+    3a+5b+3c\leq81
 
-    故答案为：．'
+    \end{cases}$，即$a + c = \frac{5}{3}b + 27$，
+
+    ∴$W = 3a + 4b + 5c - (2a + 3b + 4c) + a + b + c \leq 60 + b + \left( \frac{5}{3}b - 27 \right) - \frac{2}{3}b + 87$，
+
+    即当$b = 0$时，W最大为$87$，
+
+    故答案为：$87$．'
   knowledge_points:
   - 一次函数
   module: equationsAndInequalities
@@ -454,11 +584,13 @@ questions:
 - id: 17
   type: 解答
   score: 5
-  question: （第17题，详见原卷）
-  answer: ''
-  solution: '解：原式
+  question: 计算：$(x-2025)^{0}+2\cos45^{\circ}-\sqrt{8}+\mid-\sqrt{2}\mid$．
+  answer: $0$
+  solution: '解：原式$1+2\times\frac{\sqrt{2}}{2}-2\sqrt{2}+\sqrt{2}-1$
 
-    ．'
+    $1+\sqrt{2}-2\sqrt{2}+\sqrt{2}-1$
+
+    $=0$．'
   knowledge_points:
   - 弦
   - 三角函数
@@ -473,15 +605,22 @@ questions:
 - id: 18
   type: 解答
   score: 5
-  question: 解不等式组：．
-  answer: ''
-  solution: '解：原不等式组为
+  question: '解不等式组：$\frac{3x}{2} > \frac{x+5}{2} \\
 
-    解不等式①，得．
+    x-3 < 2(x-4)$．'
+  answer: $x>5$
+  solution: '解：原不等式组为$\begin{aligned}
 
-    解不等式②，得．
+    &\frac{3x > x+5}{x-3 < 2(x-4)} \quad (1) \\
 
-    ∴原不等式组的解集为．'
+    &\quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad
+    \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad$
+
+    解不等式①，得$x>1$．
+
+    解不等式②，得$x>5$．
+
+    ∴原不等式组的解集为$x>5$．'
   knowledge_points:
   - 不等式
   - 不等式组
@@ -495,15 +634,19 @@ questions:
 - id: 19
   type: 解答
   score: 5
-  question: 已知，求代数式的值．
-  answer: ；6
-  solution: '.解：
+  question: 已知$3y^{2}-5xy-2=0$，求代数式$(2x-3y)^{2}-x(3y+4x)$的值．
+  answer: $9y^{2}-15xy$；6
+  solution: '.解：$(2x-3y)^{2}-x(3y+4x)$
 
-    ∵，
+    $=4x^{2}-12xy+9y^{2}-3xy-4x^{2}$
 
-    ∴．
+    $=9y^{2}-15xy$
 
-    ∴原式．'
+    ∵$3y^{2}-5xy-2=0$，
+
+    ∴$3y^{2}-5xy=2$．
+
+    ∴原式$=9y^{2}-15xy$$=3\left(3v^{2}-5xv\right)$$=3\times2=6$．'
   knowledge_points:
   - 综合
   module: numbersAndExpressions
@@ -516,45 +659,47 @@ questions:
 - id: 20
   type: 解答
   score: 5
-  question: '如图，在中，，于点D，O为的中点，作点D关于点O的对称点E，连接，，．
+  question: '如图，在$V_{ABC}$中，$AB=AC$，$BD \perp AC$于点D，O为AB的中点，作点D关于点O的对称点E，连接DE，AE，BE．
 
-    （1）求证：四边形是矩形；
+    [图]
 
-    （2）若，，求的长．'
-  answer: （1）见解析    （2）
+    （1）求证：四边形$AEBD$是矩形；
+
+    （2）若$\tan\angle DEB=\frac{3}{4}$，$CD=2$，求BC的长．'
+  answer: （1）见解析（2）$2\sqrt{10}$
   solution: '【小问1详解】
 
-    证明：∵点关于点的对称点为点，
+    证明：∵点D关于点O的对称点为点E，
 
-    ∴必过点且．
+    ∴ED必过点O且$OE = OD$．
 
-    ∵为的中点，
+    ∵O为AB的中点，
 
-    ∴．
+    ∴$OA = OB$．
 
-    ∴四边形是平行四边形．
+    ∴四边形$AEBD$是平行四边形．
 
-    ∵于，
+    ∵$BD \perp AC$于D，
 
-    ∴．
+    ∴$\angle ADB=90^\circ$．
 
-    ∴四边形是矩形．
+    ∴四边形$AEBD$是矩形．
 
     【小问2详解】
 
-    ∵四边形是矩形，
+    ∵四边形$AEBD$是矩形，
 
-    ∴，，．
+    ∴$\angle EBD=90^\circ$，$AD = BE$，$AB = ED$．
 
-    在中，．
+    在$Rt\triangle DBE$中，$\tan \angle DEB = \frac{BD}{EB} = \frac{3}{4}$．
 
-    设，则，．
+    设$BD=3x$，则$EB = 4x$，$ED=5x$．
 
-    ∴，．
+    ∴$AD = 4x$，$AC = AB = ED = 5x$．
 
-    ∴．
+    ∴$CD = x - 2$．
 
-    ∴在中，．'
+    ∴在$Rt\triangle BDC$中，$BC = \sqrt{BD^{2} + CD^{2}} = \sqrt{10}x = 2\sqrt{10}$．'
   knowledge_points:
   - 勾股定理
   - 平行四边形
@@ -568,23 +713,23 @@ questions:
 - id: 21
   type: 解答
   score: 5
-  question: 某科技公司正在研发两款神经形态计算机，一款是基于传统半导体工艺的A型计算机，另一款是基于新兴材料的B型计算机．在一次图像识别测试任务中，A型计算机处理张图像需要的时间比B型计算机处理同样数量的图像多5分钟．已知两款计算机处理图像的速度恒定，B型计算机处理图像的速度是A型计算机的8倍．现有张图像要紧急处理，若使用B型计算机，判断能否在分钟内处理完，并说明理由．
-  answer: 使用型计算机，能在分钟内处理完张图像；见解析
-  solution: '解：使用型计算机，能在分钟内处理完，理由如下：
+  question: 某科技公司正在研发两款神经形态计算机，一款是基于传统半导体工艺的A型计算机，另一款是基于新兴材料的B型计算机．在一次图像识别测试任务中，A型计算机处理$1000$张图像需要的时间比B型计算机处理同样数量的图像多5分钟．已知两款计算机处理图像的速度恒定，B型计算机处理图像的速度是A型计算机的8倍．现有$20000$张图像要紧急处理，若使用B型计算机，判断能否在$15$分钟内处理完，并说明理由．
+  answer: 使用B型计算机，能在$15$分钟内处理完$20000$张图像；见解析
+  solution: '解：使用B型计算机，能在$15$分钟内处理完，理由如下：
 
-    设型计算机处理图像的速度是张/分钟，则型计算机处理图像的速度是张/分钟．
+    设A型计算机处理图像的速度是x张/分钟，则B型计算机处理图像的速度是$8x$张/分钟．
 
-    由题意可知，．
+    由题意可知，$\frac{1000}{x}=\frac{1000}{8x}+5$．
 
-    解得．
+    解得$x = 175$．
 
-    经检验：是原方程的解且符合实际意义．
+    经检验：$x = 175$是原方程的解且符合实际意义．
 
-    所以．
+    所以$8x=8\times175=1400$．
 
-    因为，，
+    因为$20000\div1400=14\frac{2}{7}$，$14\frac{2}{7}<15$，
 
-    所以使用型计算机，能在分钟内处理完张图像．'
+    所以使用B型计算机，能在$15$分钟内处理完$20000$张图像．'
   knowledge_points:
   - 分式方程
   module: numbersAndExpressions
@@ -596,41 +741,47 @@ questions:
 - id: 22
   type: 解答
   score: 5
-  question: '在平面直角坐标系中，函数的图象过点和点．
+  question: '在平面直角坐标系xOy中，函数$y=kx+b\,(k\neq0)$的图象过点$(-1,3)$和点$(1,-1)$．
 
     （1）求k，b的值；
 
-    （2）当时，对于x的每一个值，函数的值都小于的值且大于，求n的取值范围．'
-  answer: （1） （2）
+    （2）当$x \leq 2$时，对于x的每一个值，函数$y = -\frac{1}{2}x + n$的值都小于$y=kx+b$的值且大于$-4$，求n的取值范围．'
+  answer: （1）$\left\{ \begin{array}{l} k = -2 \\ b = 1 \end{array} \right.$ （2）$-3 < n < -2$
   solution: '【小问1详解】
 
-    解：把和代入到中得，
+    解：把$(-1,3)$和$(1,-1)$代入到$y=kx+b\,(k\neq0)$中得$\begin{cases}
 
-    解得；
+    -k + b = 3 \\
+
+    k + b = -1
+
+    \end{cases}$，
+
+    解得$\left\{ \begin{array}{l} k = -2 \\ b = 1 \end{array} \right.$；
 
     【小问2详解】
 
-    解：由（1）得函数的解析式为
+    解：由（1）得函数$y=kx+b$的解析式为$y = -2x + 1$
 
-    ∵在中，，
+    ∵在$y = -\frac{1}{2}x + n$中，$-\frac{1}{2}<0$，
 
-    ∴在中，y随x增大而减小，
+    ∴在$y = -\frac{1}{2}x + n$中，y随x增大而减小，
 
-    ∵当时，对于x的每一个值，函数的值都大于，
+    ∵当$x \leq 2$时，对于x的每一个值，函数$y = -\frac{1}{2}x + n$的值都大于$-4$，
 
-    ∴当时，，
+    ∴当$x=2$时，$y = -\frac{1}{2}x + n = -\frac{1}{2}x + n > -4$，
 
-    ∴；
+    ∴$n > -3$；
 
-    当时，解得，
+    当$\frac{1}{2}x+n<-2x+1$时，解得$x<\frac{2-2n}{3}$，
 
-    ∵当时，对于x的每一个值，函数的值都小于的值，
+    ∵当$x \leq 2$时，对于x的每一个值，函数$y = -\frac{1}{2}x + n$的值都小于$y=kx+b$的值，
 
-    ∴，
+    ∴$\frac{2-2n}{3}>2$，
 
-    ∴，
+    ∴$n<-2$，
 
-    综上所述，．'
+    综上所述，$-3 < n < -2$．'
   knowledge_points:
   - 一次函数
   - 不等式
@@ -649,11 +800,37 @@ questions:
 
     a．A课程成绩的频数分布直方图如下（数据分成5组：50≤x＜60，60≤x＜70，70≤x＜80，80≤x＜90，90≤x≤100）：
 
+    [图]
+
     b．A课程成绩在80≤x＜90这一组的是：
 
-    85   85   83   85   84   81   80
+    85858385848180
 
     c．A，B两门课程成绩的平均数、中位数、众数如下：
+
+    课程
+
+    平均数
+
+    中位数
+
+    众数
+
+    A
+
+    80
+
+    m
+
+    85
+
+    B
+
+    79.9
+
+    84
+
+    86
 
     根据以上信息，回答下列问题：
 
@@ -670,7 +847,7 @@ questions:
     其中所有正确推断的序号是__________；
 
     （4）假设该年级200名学生都参加此次测试，估计A课程成绩不低于80分的学生有__________人．'
-  answer: （1）82    （2）A （3）①②    （4）120
+  answer: （1）82（2）A （3）①② （4）120
   solution: '【小问1详解】
 
     解：∵A课程总人数为20，
@@ -679,9 +856,9 @@ questions:
 
     ∴中位数在80≤x＜90这一组，
 
-    ∵80≤x＜90这一组的是：80，81，83，84，85，85，85，前三组共个数据，
+    ∵80≤x＜90这一组的是：80，81，83，84，85，85，85，前三组共$1+3+4=8$个数据，
 
-    ∴A课程的中位数为 ，即；
+    ∴A课程的中位数为$\frac{81+83}{2}=82$，即$m = 82$；
 
     【小问2详解】
 
@@ -689,11 +866,11 @@ questions:
 
     ∴这名学生成绩排名更靠前的课程是A，
 
-    故答案为： A．
+    故答案为：A．
 
     【小问3详解】
 
-    ∵，
+    ∵$84+85=169,80+79.9=159.9$，$169>159.9$
 
     ∴学生乙这两门课程的总成绩一定高于这20名学生两门课程总成绩的平均数；故①正确；
 
@@ -705,9 +882,9 @@ questions:
 
     【小问4详解】
 
-    由题意可得，人，
+    由题意可得，$200\times\frac{7+5}{20}-120$人，
 
-    即估计A课程成绩不低于80分的学生有人．'
+    即估计A课程成绩不低于80分的学生有$120$人．'
   knowledge_points:
   - 平均数
   - 中位数
@@ -720,65 +897,63 @@ questions:
 - id: 24
   type: 解答
   score: 6
-  question: '如图，四边形内接于，．
+  question: '如图，四边形$ABCD$内接于$\odot\odot$，$\widehat{AC}=\widehat{BD}$．
 
-    （1）求证：；
+    [图]
 
-    （2）作直径，交于点，连接，交于点．若，，．求的长．'
-  answer: （1）见解析    （2）
+    （1）求证：$AB \parallel DC$；
+
+    （2）作直径AE，交CD于点F，连接BE，交CD于点G．若$AF = 2OF$，$AD=2$，$BE = 3\sqrt{3}$．求DF的长．'
+  answer: （1）见解析（2）$DF = \frac{8}{3}$
   solution: '【小问1详解】
 
-    证明：∵四边形内接于，，
+    证明：∵四边形$ABCD$内接于$\odot\odot$，$\widehat{AC}=\widehat{BD}$，
 
-    ∴，．
+    ∴$\angle D = \angle C$，$\angle C+\angle A=180^\circ$．
 
-    ∴．
+    ∴$\angle D+\angle A=180^{\circ}$．
 
-    ∴；
+    ∴$AB \parallel DC$；
 
     【小问2详解】
 
-    解：依题意，连接，，过点A作于点H．
+    解：依题意，连接OC，CE，过点A作$AH \perp CD$于点H．
 
-    ∵，
+    [图]
 
-    ∴．
+    ∵$\widehat{AC}=\widehat{BD}$，
 
-    ∴
+    ∴$BC = AD$．
 
-    ∵是直径，
+    ∴$BC = AD = 2$
 
-    ∴．
+    ∵AE是$\odot\odot$直径，
 
-    ∵，，
+    ∴$\angle ABE = 90^\circ$．
 
-    ∴，．
+    ∵$AB \parallel DC$，$AF = 2OF$，
 
-    ∵，，
+    ∴$\angle EGC = \angle CGB = \angle ABE = 90^\circ$，$\frac{BG}{GE}=\frac{AP}{EF}=\frac{1}{2}$．
 
-    ∴，．
+    ∵$BE = 3\sqrt{3}$，$BG + GE = BE$，
 
-    ∵中，，
+    ∴$BG = \sqrt{3}$，$GE = 2\sqrt{3}$．
 
-    ∴，，
+    ∵$[公式]$$Rt\triangle CGB$中，$\cos\angle CBG=\frac{BG}{BC}=\frac{\sqrt{3}}{2}$，
 
-    ∴，．
+    ∴$\angle CBE = 30^\circ$，$CG = 1$，
 
-    ∵，
+    ∴$CE=\sqrt{GE^{2}+CG^{2}}=\sqrt{13}$，$\angle COE=2\angle CBE=60^{\circ}$．
 
-    ∴是等边三角形．
+    ∵$OE = OC$，
 
-    ∴，
+    ∴$\triangle OEC$是等边三角形．
 
-    ∵
+    ∴$OA=OB=CE=\sqrt{13}$，
 
-    ∴，
+    ∵$AF = 2OF$
 
-    在中，，
-
-    ∴，．
-
-    ∴．'
+    ∴$AF = \frac{2\sqrt{13}}'
   knowledge_points:
   - 平行线
   - 圆周角
@@ -791,47 +966,81 @@ questions:
 - id: 25
   type: 解答
   score: 6
-  question: '乒乓球被誉为中国国球，不仅承载着民族自豪感，更成为展现中国体育精神的文化符号．发球机成为乒乓球爱好者的热门训练器．如图，是乒乓球台的示意图，乒乓球台长为，球网高．发球器采用“直发式”模式，球从发球机出口到第一次接触球台的运行轨迹近似为抛物线的一部分．
+  question: '乒乓球被誉为中国国球，不仅承载着民族自豪感，更成为展现中国体育精神的文化符号．发球机成为乒乓球爱好者的热门训练器．如图，是乒乓球台的示意图，乒乓球台长OB为$274cm$，球网CD高$15.25\mathrm{cm}$．发球器采用“直发式”模式，球从发球机出口到第一次接触球台的运行轨迹近似为抛物线的一部分．
 
-    某次训练，发球机从球台边缘点正上方的高度处发球（即的长为），乒乓球到球台的竖直高度记为（单位：），乒乓球运行的水平距离记为（单位：），测得几组数据如下：
+    [图]
+
+    某次训练，发球机从球台边缘O点正上方$28.75\mathrm{cm}$的高度A处发球（即OA的长为$28.75\mathrm{cm}$），乒乓球到球台的竖直高度记为y（单位：cm），乒乓球运行的水平距离记为x（单位：cm），测得几组数据如下：
+
+    水平距离$x / \mathrm{cm}$
+
+    0
+
+    10
+
+    50
+
+    90
+
+    130
+
+    170
+
+    230
+
+    竖直高度$y/\mathrm{cm}$
+
+    $28.75$
+
+    33
+
+    45
+
+    49
+
+    n
+
+    33
+
+    0
 
     根据以上数据，解决下列问题：
 
-    （1）当乒乓球第一次落在对面球台上时，球到起始点的水平距离是______，表格中的值为______；
+    （1）当乒乓球第一次落在对面球台上时，球到起始点的水平距离是______cm，表格中n的值为______；
 
     （2）求出满足条件的函数表达式；
 
-    （3）若发球机的发球高度增加，其他所有条件均不变，则乒乓球从发球机出口发出后______落到对面球台上（填“能”或“不能”）．'
-  answer: （1）230，45 （2） （3）能
+    （3）若发球机的发球高度增加$15\mathrm{cm}$，其他所有条件均不变，则乒乓球从发球机出口发出后______落到对面球台上（填“能”或“不能”）．'
+  answer: （1）230，45 （2）$y = -\frac{1}{400}(x - 90)^2 + 49$ （3）能
   solution: '【小问1详解】
 
-    解：∵当乒乓球的竖直高度为0时，水平距离为，
+    解：∵当乒乓球的竖直高度为0时，水平距离为$230\mathrm{cm}$，
 
-    ∴当乒乓球第一次落在对面球台上时，球到起始点的水平距离是；
+    ∴当乒乓球第一次落在对面球台上时，球到起始点的水平距离是$230\mathrm{cm}$；
 
-    ∵当和当时的函数值相同，
+    ∵当$x = 10$和当$x=170$时的函数值相同，
 
-    ∴对称轴为直线，
+    ∴对称轴为直线$x=\frac{10+170}{2}=90$，
 
-    ∴当时的函数值与当的函数值相同，
+    ∴当$x=130$时的函数值与当$x=\frac{90\times2-130}{2}=50$的函数值相同，
 
-    ∴；
+    ∴$n = 45$；
 
     【小问2详解】
 
-    解：设，
+    解：设$y = 4(x - 96)^2 + 49$，
 
-    把代入中得，解得，
+    把$(230,0)$代入$y = 4(x - 96)^2 + 49$中得$\theta = \alpha (230 - 90) \div 49$，解得$a = -\frac{1}{400}$，
 
-    ∴满足条件的函数表达式为；
+    ∴满足条件的函数表达式为$y = -\frac{1}{400}(x - 90)^2 + 49$；
 
     【小问3详解】
 
-    解：当发球机的发球高度增加时，则此时抛物线解析式为，
+    解：当发球机的发球高度增加$15\mathrm{cm}$时，则此时抛物线解析式为$y=-\frac{1}{400}(x-90)^{2}+49+15=-\frac{1}{400}(x-90)^{2}+64$，
 
-    在中，当时，解得或，
+    在$y = -\frac{1}{400}(x - 90)^2 + 64$中，当$y-\frac{1}{400}(x-90)^{2}+64=0$时，解得$x=250$或$x = -70$，
 
-    ∵，
+    ∵$250\mathrm{cm}<274\mathrm{cm}$，
 
     ∴乒乓球从发球机出口发出后能落到对面球台上．'
   knowledge_points:
@@ -844,60 +1053,59 @@ questions:
 - id: 26
   type: 解答
   score: 6
-  question: '在平面直角坐标系中，已知，，，是抛物线上的四个点，且任意两点都不重合．
+  question: '在平面直角坐标系中，已知$A(-2,y_{1})$，$B(1,y_{2})$，$C(4-t,y_{3})$，$D(2t-1,y_{4})$是抛物线$y = -x^2 + 2tx \ (t \neq 0)$上的四个点，且任意两点都不重合．
 
-    （1）直接写出抛物线与轴的交点坐标（可用含的代数式表示）；
+    （1）直接写出抛物线$y = -x^2 + 2tx \ (t \neq 0)$与x轴的交点坐标（可用含t的代数式表示）；
 
-    （2）将抛物线在点，之间的部分（含，）所有点的纵坐标的最小值记为，并将抛物线在，之间的部分（含，）所有点的纵坐标的最小值记为，若，求的取值范围．'
-  answer: （1）， （2）且且且
+    （2）将抛物线在点A，B之间的部分（含A，B）所有点的纵坐标的最小值记为m，并将抛物线在C，D之间的部分（含C，D）所有点的纵坐标的最小值记为n，若$m < n$，求t的取值范围．'
+  answer: （1）$(0,0)$，$(2t,0)$ （2）$\frac{2}{3}<t<6$且$t \neq 1$且$t \neq \frac{5}{3}$且$t \neq 3$
   solution: '【小问1详解】
 
-    解：令，即，
+    解：令$x^{2}+2\alpha=0$，即$x(x-2t)=0$，
 
-    解得：，
+    解得：$x_{1}=0, x_{2}=2t$，
 
-    ∴抛物线与轴的交点坐标为，；
+    ∴抛物线$y = -x^2 + 2tx \ (t \neq 0)$与x轴的交点坐标为$(0,0)$，$(2t,0)$；
 
     【小问2详解】
 
-    解：抛物线的对称轴为直线．
+    解：抛物线$y = -x^2 + 2tx$的对称轴为直线$x = t$．
 
-    由题意，点在点的左侧，点与关于对称轴对称，．
+    由题意，点$A(-2,y_{1})$在点$B(1,y_{2})$的左侧，点$B(1,y_{2})$与$D(2t-1,y_{4})$关于对称轴$x = t$对称，$y_{2}=y_{4}$．
 
-    ∵，，，四点中，任意两点不重合，
+    ∵A，B，$C(4-t,y_{3})$，$D(2t-1,y_{4})$四点中，任意两点不重合，
 
-    ∴且且且．
+    ∴$t \neq 1$且$t \neq \frac{5}{3}$且$t \neq 3$且$t \neq 6$．
 
-    ∵，
+    ∵$a = -1 < 0$，
 
-    ∴当时，随的增大而增大，当时，随的增大而减小．
+    ∴当$x \leq t$时，y随x的增大而增大，当$x\quad t$时，y随x的增大而减小．
 
-    ①当时，
+    ①当$t \leq -2$时，
 
-    ∵，
+    ∵$-2<1$，
 
-    ∴．
+    ∴$y_1 > y_2$．
 
-    ∴．
+    ∴$m = y_{2}$．
 
-    由知，不符合题意．
+    由$y_{2}=y_{4}$知，不符合题意．
 
-    ②当时，点在对称轴的左侧．
+    ②当$t > -2$时，点A在对称轴的左侧．
 
-    点关于直线的对称点为．
+    点$A(-2,y_{1})$关于直线$x = t$的对称点为$A''(2i+2,y)$．
 
-    ∵，
+    ∵$m < n$，
 
-    ∴．
+    ∴$m = y_{1}$．
 
-    ∴且．
+    ∴$-2<4-t<2t+2$且$2t-1>-2$．
 
-    ∴．
+    ∴$\frac{2}{3}<t<6$．
 
-    综上所述，的取值范围是且且且．'
+    综上所述，t的取值范围是$\frac{2}{3}<t<6$且$t \neq 1$且$t \neq \frac{5}{3}$且$t \neq 3$．'
   knowledge_points:
   - 二次函数
-  - 轴对称
   - 坐标系
   module: functions
   difficulty: 压轴
@@ -906,87 +1114,71 @@ questions:
 - id: 27
   type: 解答
   score: 7
-  question: '如图，在中，，，是边上一点（不与点，重合），线段绕点顺时针旋转得到线段，连接．
+  question: '如图$1$，在$Rt\triangle ABC$中，$AB = AC$，$\angle BAC = 90^\circ$，D是AB边上一点（不与点A，B重合），线段DC绕点D顺时针旋转$90^\circ$得到线段DE，连接BE．
 
-    （1）求的度数．
+    [图]
 
-    （2）如图，连接，是中点，是中点，连接，，用等式表示线段与的数量关系，并证明．'
-  answer: （1） （2），证明见解析
+    （1）求$\angle ABE$的度数．
+
+    （2）如图$2$，连接AE，F是AE中点，H是BC中点，连接FD，FH，用等式表示线段FD与FH的数量关系，并证明．'
+  answer: （1）$135^\circ$ （2）$FD = FH$，证明见解析
   solution: '【小问1详解】
 
-    解：在上取点，使得，
+    解：在AC上取点M，使得$CM = DB$，
 
-    ∵线段绕点顺时针旋转得到线段，
+    [图]
 
-    ∴，．
+    ∵线段DC绕点D顺时针旋转$90^\circ$得到线段DE，
 
-    ∵，
+    ∴$DC = DE$，$\angle CDE=90^\circ$．
 
-    ∴，
+    ∵$\angle BAC = 90^\circ$，
 
-    ∴，
+    ∴$\angle1+\angle CDA=\angle2+\angle CDA=90^\circ$，
 
-    ∴，
+    ∴$\angle1=\angle2$，
 
-    ∴，
+    ∴$\triangle CDM \cong \triangle DBE (SAS)$，
 
-    ∵，
+    ∴$\angle EBD = \angle DMC$，
 
-    ∴
+    ∵$AB = AC$，
 
-    ∴，
+    ∴$AM = AD$
 
-    ∴；
+    ∴$\angle AMD = 45^\circ$，
+
+    ∴$\angle ABE=\angle CMD=135^\circ$；
 
     【小问2详解】
 
-    解：．
+    解：$FD = FH$．
 
-    证明：延长与交于点，连接，，，
+    证明：延长HF与BE交于点N，连接AH，DH，DN，
 
-    ∵，，是中点，
+    [图]
 
-    ∴，，，
+    ∵$AB = AC$，$\angle CAB=90^\circ$，H是BC中点，
 
-    ∵，
+    ∴$AH=CH=HB=\frac{1}{2}CB$，$\angle AHB = 90^\circ$，$\angle ABC = 45^\circ$，
 
-    ∴,
+    ∵$\angle ABE = 135^\circ$，
 
-    ∴，
+    ∴$\angle CBE = \angle ABE - \angle ABC = 135^{\circ} - 45^{\circ} = 90^{\circ}$,
 
-    ∴，
+    ∴$\angle CBE = \angle AHB$，
 
-    ∴，，
+    ∴$AH \parallel NE$，
 
-    ∵是中点，
+    ∴$\angle HAF = \angle NEF$，$\angle AHF = \angle ENF$，
 
-    ∴，
+    ∵F是AE中点，
 
-    ∴，
+    ∴$AF = EF$，
 
-    ∴，，
+    ∴$\triangle AHF \cong \triangle ENF (AAS)$，
 
-    ∴，
-
-    ∵，，
-
-    ∴，
-
-    又∵，
-
-    ∴，
-
-    ∴，，
-
-    ∴，
-
-    ∴为等腰直角三角形，
-
-    ∵，
-
-    ∴，
-
-    即．'
+    ∴$A'
   knowledge_points:
   - 平行线
   - 全等三角形
@@ -998,77 +1190,58 @@ questions:
 - id: 28
   type: 解答
   score: 7
-  question: '在平面直角坐标系中，对于图形，点给出如下定义：图形向右或向左平移个单位长度，再向上或向下平移个单位长度，得到图形，若图形与图形有且只有一个公共点，称点为图形的“限定点”．
+  question: '在平面直角坐标系xOy中，对于图形M，点$P(a,b)$给出如下定义：图形M向右$\left(\begin{array}{cc} a & 0 \end{array}\right)$或向左$(a < 0)$平移$\left| a \right|$个单位长度，再向上$\left(\begin{array}{cc} b & 0 \end{array}\right)$或向下$(b <
+    0)$平移$\left| b \right|$个单位长度，得到图形N，若图形N与图形M有且只有一个公共点，称点P为图形M的“限定点”．
 
-    已知点，，
+    已知点$A(2,0)$，$B(0,2)$，
 
-    （1）在点，，中，的“限定点”是____．
+    [图]
 
-    （2）点在直线上，且点为的“限定点”，则点的坐标为____．
+    （1）在点$P_{1}(1,0)$，$P_{2}(2,2)$，$P_{3}(-2,2)$中，$\triangle OAB$的“限定点”是____．
 
-    （3）的圆心在轴上，半径为，若上存在点，使得点为的“限定点”，则点的横坐标的取值范围为____．'
-  answer: （1） （2）或 （3）或
+    （2）点P在直线$y = x + 3$上，且点P为$\triangle OAB$的“限定点”，则点P的坐标为____．
+
+    （3）$\mathrm{OC}$的圆心在x轴上，半径为$1$，若$\mathrm{OC}$上存在点P，使得点P为$\triangle OAB$的“限定点”，则点C的横坐标m的取值范围为____．'
+  answer: （1）$P_3$ （2）$(-2,1)$或$(-1,2)$ （3）$2-\sqrt{2}\leq m\leq 3$或$-3 \leq m \leq \sqrt{2} - 2$
   solution: '【小问1详解】
 
-    解：当是的“限定点”时，
+    解：当$P(a,b)$是$\angle AOB$的“限定点”时，
 
-    当时，则平移后点O的对应点坐标为，即，
+    当$a\quad 0,\quad b\quad 0$时，则平移后点O的对应点坐标为$(0+a,0+b)$，即$(a,b)$，
 
-    当时，则平移后点O的对应点坐标为，即，
+    当$a\ 0,\ b<0$时，则平移后点O的对应点坐标为$\left(0+a,0-(-b)\right)$，即$(a,b)$，
 
-    当时，则平移后点O的对应点坐标为，即，
+    当$a<0,\ b>0$时，则平移后点O的对应点坐标为$\left(0-(-a),0+b\right)$，即$(a,b)$，
 
-    当时，则平移后点O的对应点坐标为，即，
+    当$a < 0,\ b < 0$时，则平移后点O的对应点坐标为$\left(0-\left(-a\right),0-\left(-b\right)\right)$，即$(a,b)$，
 
     综上所述，平移后点O的对应点即为点P，
 
-    ∵，，
+    ∵$A(2,0)$，$B(0,2)$，
 
-    ∴，
+    ∴$OA = OB = 2$，
 
-    ∴是以O为直角顶点的等腰直角三角形，
+    ∴$\angle AOB$是以O为直角顶点的等腰直角三角形，
 
-    ∴由平移的性质可得平移后的对应图形是以点P为直角顶点的等腰直角三角形，
+    ∴由平移的性质可得$\angle AOB$平移后的对应图形$\triangle A''PB''$是以点P为直角顶点的等腰直角三角形，
 
-    ∵和有且只有一个交点，
+    ∵$\angle AOB$和$\triangle A''PB''$有且只有一个交点，
 
-    ∴的某一个顶点在的边上或的某一个顶点在的边上，
+    ∴$\angle AOB$的某一个顶点在$\triangle A''PB''$的边上或$\triangle A''PB''$的某一个顶点在$\angle AOB$的边上，
 
-    如图所示，当点在线段上时，则点P在线段上，；
+    如图所示，当点$A''$在线段OB上时，则点P在线段$C''D$上，$C''(2,2),\ D(-2,0)$；
 
-    当点在线段上时，则点P在线段上，；
+    当点$B''$在线段OB上时，则点P在线段EF上，$E(0,-2),\ F(2,-2)$；
 
-    当点在线段上时，则点P在线段上；
+    当点O在线段$A''B''$上时，则点P在线段DE上；
 
-    当点在线段上时，则点P在线段上；
+    当点A在线段$PB''$上时，则点P在线段AF上；
 
-    当点在线段上时，则点P在线段上；
+    当点B在线段$PA''$上时，则点P在线段$BC''$上；
 
-    点在线段上时，则点P在线段上；
+    点P在线段AB上时，则点P在线段AB上；
 
-    综上所述，点P在六边形的边上，
-
-    ∵在点，，中，只有在六边形的边上，
-
-    ∴在点，，中，的“限定点”是；
-
-    【小问2详解】
-
-    解：∵点在直线上，且点为的“限定点”，
-
-    ∴由（1）可得点P即为直线与六边形的交点，
-
-    在中，当时，，当时，，
-
-    ∴点P的坐标为或．
-
-    【小问3详解】
-
-    解：如图所示，当恰好经过点A时，则，
-
-    ∴；
-
-    如图所示，当与恰好相切时，设切点为N，连接'
+    综上所述'
   knowledge_points:
   - 一次函数
   - 切线

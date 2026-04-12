@@ -1,8 +1,8 @@
 # ============================================================
 # 2024年北京西城区中考数学二模试卷 — 逐题分析
 # ============================================================
-# 数据来源：knowledge-original/精品解析：2024年北京市西城区中考二模数学试题（解析版）.docx
-# 自动生成，部分数学公式可能显示不全（docx公式对象无法完整提取）
+# 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
+# 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
 # 满分：100分  时长：120分钟
 
 year: 2024
@@ -17,7 +17,13 @@ questions:
 - id: 1
   type: 选择
   score: 2
-  question: "如图是某几何体的三视图，该几何体是（   ）\nA. 圆柱\tB. 圆锥\tC. 三棱柱\tD. 长方体"
+  question: '如图是某几何体的三视图，该几何体是（
+
+    ）
+
+    [图]
+
+    A.圆柱B.圆锥C.三棱柱D.长方体'
   answer: B
   solution: '解：∵该几何体的主视图和左视图都是三角形，俯视图是圆形，
 
@@ -36,9 +42,11 @@ questions:
 - id: 2
   type: 选择
   score: 2
-  question: "新能源革命受到全球目的同时，也成为中国实现“碳达峰碳中和”目标的关键所在．年全球可再生能源新增装机千瓦，其中中国的贡献超过了，将用科学记数法表示应为（   ）\nA. \tB. \tC. \tD."
+  question: '新能源革命受到全球目的同时，也成为中国实现“碳达峰碳中和”目标的关键所在．$2023$年全球可再生能源新增装机$510000000$千瓦，其中中国的贡献超过了$50\%$，将$510000000$用科学记数法表示应为（）
+
+    A.$0.51\times10^{9}$B.$5.1\times10^{8}$C.$5.1\times10^{9}$D.$51\times10^{7}$'
   answer: B
-  solution: '解：，
+  solution: '解：$5100000000=5.1\times10^{9}$，
 
     故选：B．'
   knowledge_points:
@@ -53,11 +61,13 @@ questions:
 - id: 3
   type: 选择
   score: 2
-  question: "正十二边形的一个外角的度数为（　　）\nA. 30°\tB. 36°\tC. 144°\tD. 150°"
+  question: '正十二边形的一个外角的度数为（　　）
+
+    A.30°B.36°C.144°D.150°'
   answer: A
   solution: '解：∵正多边形的外角和等于360°，每个外角相等，
 
-    ∴正十二边形的一个外角的度数，
+    ∴正十二边形的一个外角的度数$=360^\circ\div12=30^\circ$，
 
     故选A．'
   knowledge_points:
@@ -72,33 +82,49 @@ questions:
 - id: 4
   type: 选择
   score: 2
-  question: "如图，直线于点，射线在内部，射线平分，若，则下列结论正确的是（   ）\nA. \tB.\nC. 与互余\tD. 与互补"
+  question: '如图，直线$AB \perp CD$于点C，射线CE在$\angle BCD$内部，射线CF平分$\angle ACE$，若$\angle BCE = 40^\circ$，则下列结论正确的是（
+
+    ）
+
+    [图]
+
+    A.$\angle ECF = 60^\circ$B.$\angle DCF=30^{\circ}$
+
+    C.$\angle ACF$与$\angle BCE$互余D.$\angle ECF$与$\angle BCF$互补'
   answer: D
-  solution: '解：，
+  solution: '解：$\because AB \perp CD$，
 
-    ，
+    $\angle BCD=90^\circ$，
 
-    ，
+    $\angle BCE = 40^\circ$，
 
-    ，，
+    $\angle ACL=180^\circ-\angle BCL=140^\circ$，$\angle DCE=\angle DCB-\angle BCE=50^{\circ}$，
 
-    射线平分，
+    $\begin{array}{c}
 
-    ，
+    \bullet \\
 
-    ，
+    \bullet \quad \bullet \\
 
-    ，
+    \bullet
 
-    ，
+    \end{array}$射线CF平分$\angle ACE$，
 
-    与不互余，
+    $\angle ACF = \angle ECF = \frac{1}{2} \angle ACE = 70^\circ$，
 
-    ，
+    $\angle DCH = \angle DCF - \angle DCH = 20^\circ$，
 
-    ，
+    $\angle ACF = 70^\circ$，
 
-    与互补，
+    $\angle ACF+\angle BCE=110^{\circ}$，
+
+    $\therefore \angle ACF$与$\angle BCE$不互余，
+
+    $\angle ACF+\angle BCF=180^\circ$，
+
+    $\angle ECF+\angle BCF=180^{\circ}$，
+
+    $\therefore \angle ECF$与$\angle BCF$互补，
 
     故A、B、C选项都不符合题意，D选项符合题意，
 
@@ -115,13 +141,39 @@ questions:
 - id: 5
   type: 选择
   score: 2
-  question: "不透明的袋子里装有3个完全相同的小球，上面分别标有数字4，5，6．随机从中摸出一个小球不放回，再随机摸出另一个小球．第一次摸出小球上的数字大于第二次摸出小球上的数字的概率是（   ）\nA. \tB. \tC. \tD."
+  question: '不透明的袋子里装有3个完全相同的小球，上面分别标有数字4，5，6．随机从中摸出一个小球不放回，再随机摸出另一个小球．第一次摸出小球上的数字大于第二次摸出小球上的数字的概率是（）
+
+    A.$\frac{1}{2}$B.$\frac{1}{3}$C.$\frac{2}{3}$D.$\frac{4}{9}$'
   answer: A
   solution: '解：列表如下：
 
+    4
+
+    5
+
+    6
+
+    4
+
+    （4，5）
+
+    （4，6）
+
+    5
+
+    （5，4）
+
+    （5，6）
+
+    6
+
+    （6，4）
+
+    （6，5）
+
     共有6种等可能的结果，其中第一次摸出小球上的数字大于第二次摸出小球上的数字的结果有：（5，4），（6，4），（6，5），共3种，
 
-    ∴第一次摸出小球上的数字大于第二次摸出小球上的数字的概率是．
+    ∴第一次摸出小球上的数字大于第二次摸出小球上的数字的概率是$\frac{3}{6}=\frac{1}{2}$．
 
     故选：A．'
   knowledge_points:
@@ -138,23 +190,49 @@ questions:
 - id: 6
   type: 选择
   score: 2
-  question: "如图，点为线段的中点，，点分别在射线上，与均为锐角，若添加一个条件一定可以证明，则这个条件不能是（   ）\nA. \tB.\nC. \tD."
+  question: '如图，点C为线段AB的中点，$\angle BAM = \angle ABN$，点$D,E$分别在射线$AM,BN$上，$\angle ACD$与$\angle BCE$均为锐角，若添加一个条件一定可以证明$\triangle ACD \cong \triangle BCE$，则这个条件不能是（
+
+    ）
+
+    [图]
+
+    A.$\angle ACD = \angle BCE$B.$CD = CE$
+
+    C.$\angle ADO=\angle BEC$D.$AD = BE$'
   answer: B
   solution: '解：如图：
 
-    点为线段的中点，
+    [图]
 
-    ，
+    $\begin{array}{c}
 
-    ，
+    \bullet \\
 
-    A、当添加时，，故本选项不符合题意；
+    \bullet \quad \bullet \\
 
-    B、当添加时，不能确定，故本选项符合题意；
+    \bullet
 
-    C、当添加时，，故本选项不符合题意；
+    \end{array}$点C为线段AB的中点，
 
-    D、当添加时，，故本选项不符合题意．
+    $\therefore AC = BC$，
+
+    $\because \angle A = \angle B$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$A、当添加$\angle ACD = \angle BCE$时，$\triangle ACD\cong\triangle BCE(ASA)$，故本选项不符合题意；
+
+    B、当添加$CD = CE$时，不能确定$\triangle ACD \cong \triangle BCE$，故本选项符合题意；
+
+    C、当添加$\angle ADC = \angle BEC$时，$\triangle ACD \cong \triangle BCE (AAS)$，故本选项不符合题意；
+
+    D、当添加$AD = BE$时，$\triangle ACD\cong\triangle BCE(SAS)$，故本选项不符合题意．
 
     故选：B．'
   knowledge_points:
@@ -168,11 +246,17 @@ questions:
 - id: 7
   type: 选择
   score: 2
-  question: "某农业合作社在春耕期间采购了，两种型号无人驾驶农耕机器，已知每台型机器的进价比每台型机器进价的2倍少万元；采购相同数量的，两种型号机器．分别花费了万元和万元．若设每台型机器的进价为万元，根据题食可列出关于的方程为（   ）\nA. \tB.\nC. \tD."
-  answer: C
-  solution: '解：设每台型机器的进价为万元，则每台型机器的进价为万元，
+  question: '某农业合作社在春耕期间采购了A，B两种型号无人驾驶农耕机器，已知每台A型机器的进价比每台B型机器进价的2倍少$0.7$万元；采购相同数量的A，B两种型号机器．分别花费了$21$万元和$12.6$万元．若设每台B型机器的进价为x万元，根据题食可列出关于x的方程为（
 
-    依题意得，，
+    ）
+
+    A.$12.6x=2\left(2x-0.7\right)$B.$\frac{21}{x}=\frac{12.6}{2x-0.7}$
+
+    C.$\frac{21}{2x-0.7}=\frac{12.6}{x}$D.$\frac{21}{x}-2\times\frac{12.6}{x}=0.7$'
+  answer: C
+  solution: '解：设每台B型机器的进价为x万元，则每台A型机器的进价为$(2x-0.7)$万元，
+
+    依题意得，$\frac{21}{2x-0.7}=\frac{12.6}{x}$，
 
     故选：C．'
   knowledge_points:
@@ -186,13 +270,23 @@ questions:
 - id: 8
   type: 选择
   score: 2
-  question: "下面问题中，与满足的函数关系是二次函数的是（   ）\n①面积为的矩形中，矩形的长与宽的关系；\n②底面圆的半径为的圆柱中，侧面积与医柱的高的关系；\n③某商品每件进价为80元，在某段时间内以每件元出售，可卖出件．利润（元）与每件进价（元）的关系．\nA. ①\tB. ②\tC. ③\tD. ①③"
+  question: '下面问题中，y与x满足的函数关系是二次函数的是（
+
+    ）
+
+    ①面积为$10\mathrm{cm}^2$的矩形中，矩形的长$y(\mathrm{cm})$与宽$x(\mathrm{cm})$的关系；
+
+    ②底面圆的半径为$5cm$的圆柱中，侧面积$y\left(\mathrm{cm}^{2}\right)$与医柱的高$x(\mathrm{cm})$的关系；
+
+    ③某商品每件进价为80元，在某段时间内以每件x元出售，可卖出$(100 - 2x)$件．利润y（元）与每件进价x（元）的关系．
+
+    A.①B.②C.③D.①③'
   answer: C
-  solution: '解：①是的反比例函数，故题不符合题意；
+  solution: '解：①$y=\frac{10}{x}$y是x的反比例函数，故题不符合题意；
 
-    是的正比例函数，故②不符合题意；
+    $2y-2\pi\times5=10\pi x$y是x的正比例函数，故②不符合题意；
 
-    ③，是的二次函数，故③符合题意；
+    ③$p=(x-80)(100-2x)=100x-2x^{2}-8000+160x-2x^{2}+260x-8000$，y是x的二次函数，故③符合题意；
 
     故选：C．'
   knowledge_points:
@@ -208,13 +302,13 @@ questions:
 - id: 9
   type: 填空
   score: 2
-  question: 若分式有意义，则取值范围是_________．
-  answer: ''
-  solution: '解：由题意得：，
+  question: 若分式$\frac{3}{x-4}$有意义，则x$[公式]$取值范围是_________．
+  answer: $x \neq 4$
+  solution: '解：由题意得：$x-4\neq0$，
 
-    解得：，
+    解得：$x \neq 4$，
 
-    故答案为：．'
+    故答案为：$x \neq 4$．'
   knowledge_points:
   - 不等式
   module: numbersAndExpressions
@@ -227,11 +321,11 @@ questions:
 - id: 10
   type: 填空
   score: 2
-  question: 分解因式：_________．
-  answer: ''
-  solution: '解：，
+  question: 分解因式：$2x^{2}y-18y$_________．
+  answer: $2x(x+3)(x-3)$
+  solution: '解：$2x^{2}y-18y=2y(x^{2}-9)=2y(x+3)(x-3)$，
 
-    故答案为：．'
+    故答案为：$2x(x+3)(x-3)$．'
   knowledge_points:
   - 方差
   module: statisticsAndProbability
@@ -244,23 +338,29 @@ questions:
 - id: 11
   type: 填空
   score: 2
-  question: 方程组的解为_________．
-  answer: ''
-  solution: '解：，
+  question: 方程组$\begin{cases} 2x + y = 5 \\ x + 2y = 4 \end{cases}$的解为_________．
+  answer: $\left\{\begin{array}{l}x=2\\y=1\end{array}\right.$
+  solution: '解：$\begin{cases}
 
-    得：，
+    2x + y = 5 \textcircled{1} \\
 
-    得：，
+    x + 2y = 4 \textcircled{2}
 
-    解得：，
+    \end{cases}$，
 
-    把代入①得：，
+    $①\times2$得：$4x + 2y = 10 \quad \text{③}$，
 
-    解得：，
+    $(3)-2$得：$3x=6$，
 
-    ∴方程组的解为，
+    解得：$x=2$，
 
-    故答案为：．'
+    把$x=2$代入①得：$4+y=5$，
+
+    解得：$y = 1$，
+
+    ∴方程组$\begin{cases} 2x + y = 5 \\ x + 2y = 4 \end{cases}$的解为$\left\{\begin{array}{l}x=2\\y=1\end{array}\right.$，
+
+    故答案为：$\left\{\begin{array}{l}x=2\\y=1\end{array}\right.$．'
   knowledge_points:
   - 二元一次方程组
   module: equationsAndInequalities
@@ -273,11 +373,11 @@ questions:
 - id: 12
   type: 填空
   score: 2
-  question: 在平面直角坐标系中，点关于原点的对称点的坐标为_________．
-  answer: ''
-  solution: '解：在平面直角坐标系中，点关于原点的对称点的坐标为．
+  question: 在平面直角坐标系xOy中，点$A(3,1)$关于原点O的对称点的坐标为_________．
+  answer: $(-3, -1)$
+  solution: '解：在平面直角坐标系xOy中，点$A(3,1)$关于原点O的对称点的坐标为$(-3, -1)$．
 
-    故答案为：．'
+    故答案为：$(-3, -1)$．'
   knowledge_points:
   - 坐标系
   module: geometryComprehensive
@@ -290,21 +390,25 @@ questions:
 - id: 13
   type: 填空
   score: 2
-  question: 如图，是的角平分线，于点．若，的面积为，则点到边的距离为_________．
+  question: '如图，BD是$\triangle ABC$的角平分线，$DE \perp BC$于点E．若$BE = 3$，$\triangle BDE$的面积为$1.5$，则点D到边AB的距离为_________．
+
+    [图]'
   answer: '1'
-  solution: '解：过D作交延长线于F，
+  solution: '解：过D作$DF \perp AB$交AB延长线于F，
 
-    ∵是的角平分线，于点．
+    ∵BD是$\triangle ABC$的角平分线，$DE \perp BC$于点E．
 
-    ∴，
+    ∴$DF = DE$，
 
-    ∵，的面积为，
+    ∵$BE = 3$，$\triangle BDE$的面积为$1.5$，
 
-    ∴，即，解得：，
+    ∴$\frac{1}{2}DE\cdot BE=1.5$，即$\frac{1}{2}\times3DE=1.5$，解得：$DE = 1$，
 
-    ∴，即点到边的距离为1．
+    ∴$DF = 1$，即点D到边AB的距离为1．
 
-    故答案为1．'
+    故答案为1．
+
+    [图]'
   knowledge_points:
   - 综合
   module: triangles
@@ -316,41 +420,53 @@ questions:
 - id: 14
   type: 填空
   score: 2
-  question: 如图，与相切于点．点分别在，上，四边形为正方形，若，则_________．
-  answer: ''
+  question: '如图，AB与$\odot\odot$相切于点C．点$D,E$分别在OA，OB上，四边形$ODCE$为正方形，若$OA = 2$，则$DE =$_________．
+
+    [图]'
+  answer: $\sqrt{2}$
   solution: '解：如图：
 
-    四边形为正方形，
+    [图]
 
-    ，，，，
+    $\begin{array}{c}
 
-    与相切于点，
+    \bullet \\
 
-    ∴，
+    \bullet \quad \bullet \\
 
-    ∴，
+    \bullet
 
-    ∴，
+    \end{array}$四边形$ODCE$为正方形，
 
-    ∵，，
+    $\angle AOC=\angle BOC=45^{\circ}$，$\angle AOB=90^\circ$，$OF = CF$，$OC \perp DE$，
 
-    ，
+    $\therefore AB$与$\odot\odot$相切于点C，
 
-    ∴，
+    ∴$OC \perp AB$，
 
-    ，，
+    ∴$\angle A=\angle B=90^{\circ}-45^{\circ}=45^{\circ}$，
 
-    是的中位线，
+    ∴$OA = OB$，
 
-    ，
+    ∵$OC \perp AB$，$OC \perp DE$，
 
-    在中，，
+    $\therefore DE \parallel AB$，
 
-    ，
+    ∴$\frac{OD}{AD}=\frac{OE}{EB}=\frac{OF}{FC}=1$，
 
-    ．
+    $\ldots AD = OD$，$BE = OE$，
 
-    故答案为：．'
+    $\therefore DE$是$\triangle OAB$的中位线，
+
+    $\therefore DE=\frac{1}{2}AB$，
+
+    在$Rt_{\triangle OAB}$中，$\overrightarrow{AB}^{2}-\overrightarrow{OA}\cdot\overrightarrow{OB}=8$，
+
+    $\therefore AB = 2\sqrt{2}$，
+
+    $\therefore DE = \sqrt{2}$．
+
+    故答案为：$\sqrt{2}$．'
   knowledge_points:
   - 平行线
   - 切线
@@ -365,45 +481,47 @@ questions:
 - id: 15
   type: 填空
   score: 2
-  question: 如图，，两点在反比例函数的图象上．若将横、纵坐标都是整数的点称为整点，则线段，及反比例函数图象上，两点之间的部分围成的区域（不含边界）中，整点的坐标为_________．
-  answer: 和
-  solution: '解：∵，两点在反比例函数的图象上，
+  question: '如图，$A(2,m)$，$B(3,2)$两点在反比例函数$y=\frac{k}{x}(x>0)$的图象上．若将横、纵坐标都是整数的点称为整点，则线段OA，OB及反比例函数图象上A，B两点之间的部分围成的区域（不含边界）中，整点的坐标为_________．
 
-    ∴，反比例函数解析式为，
+    [图]'
+  answer: $(1,1)$和$(2,2)$
+  solution: '解：∵$A(2,m)$，$B(3,2)$两点在反比例函数$y=\frac{k}{x}(x>0)$的图象上，
 
-    ∴，
+    ∴$k=3\times2=6$，反比例函数解析式为$y=\frac{6}{x}(x>0)$，
 
-    ∴，
+    ∴$m = \frac{6}{2} = 3$，
 
-    ∵，
+    ∴$A(2,3)$，
 
-    ∴设直线解析式为，
+    ∵$O(0,0)$，
 
-    把代入得：，
+    ∴设直线OA解析式为$y_{OA}=k_{1}x$，
 
-    解得：，
+    把$A(2,3)$代入$y_{OA}=k_{1}x$得：$2k_{1}=3$，
 
-    ∴直线解析式为，
+    解得：$k_{1}=\frac{3}{2}$，
 
-    设直线解析式为，
+    ∴直线OA解析式为$y_{OA} = \frac{3}{2}x$，
 
-    把代入得：，
+    设直线OB解析式为$y_{OB}=k_{2}x$，
 
-    解得：，
+    把$B(3,2)$代入$y_{OB}=k_{2}x$得：$3k_{2}=2$，
 
-    ∴直线解析式为，
+    解得：$k_{2}=\frac{2}{3}$，
 
-    ∵当时，，，，
+    ∴直线OB解析式为$y_{OB} = \frac{2}{3}x$，
 
-    ∴整点在线段，及反比例函数图象上，两点之间的部分围成的区域（不含边界）中，
+    ∵当$x = 1$时，$x_{\text{总}} = \frac{3}{2} \times 1 - \frac{3}{2}$，$y_{\text{OB}} = \frac{2}{3} \times 1 - \frac{2}{3}$，$\frac{2}{3}<1<\frac{3}{2}$，
 
-    ∵，当时，，，
+    ∴整点$(1,1)$在线段OA，OB及反比例函数图象上A，B两点之间的部分围成的区域（不含边界）中，
 
-    ∴整点在线段，及反比例函数图象上，两点之间的部分围成的区域（不含边界）中，
+    ∵$A(2,3)$，当$x=2$时，$y_{\text{on}} = \frac{2}{3} \sqrt{2} - \frac{4}{3}$，$\frac{4}{3}<2<3$，
 
-    综上所述，线段，及反比例函数图象上，两点之间的部分围成的区域（不含边界）中，整点的坐标为和，
+    ∴整点$(2,2)$在线段OA，OB及反比例函数图象上A，B两点之间的部分围成的区域（不含边界）中，
 
-    故答案为：和．'
+    综上所述，线段OA，OB及反比例函数图象上A，B两点之间的部分围成的区域（不含边界）中，整点的坐标为$(1,1)$和$(2,2)$，
+
+    '
   knowledge_points:
   - 一次函数
   - 反比例函数
@@ -416,11 +534,13 @@ questions:
 - id: 16
   type: 填空
   score: 2
-  question: 在某次比赛中，5位选手进入决赛环节，决赛赛制为单循环形式（每两位选手之间都赛一场）．每位选手胜一场得3分．负一场得0分，平局得1分．已知这次比赛最终结果没有并列第一名，获得第一名的选手的成绩记为（分），则的最小值为_________；当获得第一名的选手的成绩恰好为最小值时，决赛环节的平局总数至少为_________场．
-  answer: ''
-  solution: '解：
+  question: 在某次比赛中，5位选手进入决赛环节，决赛赛制为单循环形式（每两位选手之间都赛一场）．每位选手胜一场得3分．负一场得0分，平局得1分．已知这次比赛最终结果没有并列第一名，获得第一名的选手的成绩记为m（分），则m的最小值为_________；当获得第一名的选手的成绩恰好为最小值时，决赛环节的平局总数至少为_________场．
+  answer: $-1$
+  solution: '解：$4\cos45^{\circ}-\sqrt{8}+\sqrt{2}-(\pi+3)^{0}$
 
-    ．'
+    $4\times\frac{\sqrt{2}}{2}-3\sqrt{2}+\sqrt{2}-1$
+
+    $=-1$．'
   knowledge_points:
   - 弦
   - 绝对值
@@ -432,21 +552,35 @@ questions:
 - id: 18
   type: 解答
   score: 5
-  question: 解不等式组，写出它的所有整数解．
-  answer: ，，0，1，2
-  solution: '解：
+  question: 解不等式组$\left\{\begin{array}{l}3x-2< x+4\\ x<\dfrac{2x-3}{5}\end{array}\right.$，写出它的所有整数解．
+  answer: $-1 \leq x < 3$，$-1$，0，1，2
+  solution: '解：$\begin{cases}
+
+    3x-2=x+4\text{①} \\
+
+    x=\dfrac{2x-5}{5}\text{②}
+
+    \end{cases}$
 
     解不等式①，
 
-    得：，
+    $3x - x < 4 + 2$
+
+    $2x<6$
+
+    得：$x<3$，
 
     解不等式②，
 
-    得：，
+    $5x\quad 2x-3$
 
-    所以不等式组的解集是，
+    $3x-3$
 
-    所以不等式组的整数解是，0，1，2．'
+    得：$x^{-1}$，
+
+    所以不等式组的解集是$-1 \leq x < 3$，
+
+    所以不等式组的整数解是$-1$，0，1，2．'
   knowledge_points:
   - 不等式
   - 不等式组
@@ -460,17 +594,25 @@ questions:
 - id: 19
   type: 解答
   score: 5
-  question: 已知，求代数式的值．
-  answer: ''
-  solution: '解：
+  question: 已知$x^{2}+x-3=0$，求代数式$\left(1+\frac{3}{x-1}\right)\cdot\frac{3}{x^{2}+4x+4}$的值．
+  answer: $3$
+  solution: '解：$\left(1+\frac{3}{x-1}\right)\cdot\frac{3}{x^{2}+4x+4}$
 
-    ，
+    $\frac{36}{x-1}+\frac{3}{x-1}\cdot\frac{3}{(x+2)^{2}}$
 
-    ∵ ，
+    $=\frac{35}{x-1}+\frac{3}{(x+2)^{2}}$
 
-    ∴，
+    $=\frac{x+2}{x-1}\diamondsuit\frac{3}{(x+2)^{2}}$
 
-    ∴代数式的值．'
+    $\frac{3}{(x-1)(x+2)}$
+
+    $\frac{3}{x^{2}+x-2}$，
+
+    ∵$x^{2}+x-3=0$，
+
+    ∴$x^2 + x = 3$，
+
+    ∴代数式$\left(1+\frac{3}{x-1}\right)\cdot\frac{3}{x^{2}+4x+4}$的值$\frac{3}{x^{2}+x-2}-\frac{3}{x-1}=3$．'
   knowledge_points:
   - 综合
   module: numbersAndExpressions
@@ -483,61 +625,105 @@ questions:
 - id: 20
   type: 解答
   score: 5
-  question: '已知：如图，在中，，．
+  question: '已知：如图，在$\triangle ABC$中，$\angle ABC = 90^\circ$，$BA = BC$．
 
-    求作：点，使得点在内，且．
+    求作：点D，使得点D在$\triangle ABC$内，且$\angle ADB = \frac{1}{2} \angle BDC$．
+
+    [图]
 
     下面是小华的解答过程，请补充完整：
 
     （1）使用直尺和圆规，依作法补全图形（保留作图痕迹）;
 
-    ①作线段的垂直平分线交于点；
+    ①作线段BC的垂直平分线$\overline{PQ}$交BC于点E；
 
-    ②以点为圆心，长为半径作弧，与直线在内交于点．点就是所求作的点
+    ②以点A为圆心，AB长为半径作弧，与直线$\overline{PQ}$在$\triangle ABC$内交于点D．点D就是所求作的点
 
     （2）完成下面的证明
 
-    证明：连接．
+    证明：连接$D A, D B, D C$．
 
-    点在线段的垂直平分线上，
+    $\begin{array}{c}
 
-    （                     ）（填推理的依据），
+    \bullet \\
 
-    ．
+    \bullet \quad \bullet \\
 
-    ． ．
+    \bullet
 
-    ．
+    \end{array}$点D在线段BC的垂直平分线上，
 
-    ，
+    $\ldots DB = DC$（）（填推理的依据），
 
-    ．
+    $DE \perp BC$．
 
-    ．'
-  answer: （1）见详解；（2）线段垂直平分线上的点到线段的两个端点的距离相等，，
+    $\angle BDE = \angle CDE = \frac{1}{2} \angle BDC$．$\therefore AB \parallel DE$．
+
+    $\angle ABD = \angle BDE$．
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$，
+
+    $\angle ADB = \angle$．
+
+    $\angle ADB - \angle BDE = \frac{1}{2} \angle BDC$．'
+  answer: （1）见详解；（2）线段垂直平分线上的点到线段的两个端点的距离相等，$AB = AD$，ABD
   solution: '（1）解：图形如图所示：
 
-    （2）证明：连接，，．
+    [图]
 
-    点在线段的垂直平分线上，
+    （2）证明：连接DA，DB，DC．
 
-    （线段垂直平分线上的点到线段的两个端点的距离相等），
+    $\begin{array}{c}
 
-    ．
+    \bullet \\
 
-    ．
+    \bullet \quad \bullet \\
 
-    ．
+    \bullet
 
-    ．
+    \end{array}$点D在线段BC的垂直平分线上，
 
-    ，
+    $\ldots DB = DC$（线段垂直平分线上的点到线段的两个端点的距离相等），
 
-    ．
+    $DE \perp BC$．
 
-    ．
+    $\begin{tikzpicture}
 
-    故答案为：线段垂直平分线上的点到线段的两个端点的距离相等，，．'
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\angle BDE = \angle CDE = \frac{1}{2} \angle BDC$．
+
+    $\therefore AB \parallel DE$．
+
+    $\angle ABD = \angle BDE$．
+
+    $\because AB = AD$，
+
+    $\angle ADB = \angle ABD$．
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\angle ADB+\angle BDE=\angle BDC$．
+
+    故答案为：线段垂直平分线上的点到线段的两个端点的距离相等，$AB = AD$，ABD．'
   knowledge_points:
   - 平行线
   module: triangles
@@ -549,27 +735,35 @@ questions:
 - id: 21
   type: 解答
   score: 5
-  question: '已知关于的一元二次方程有两个不相等的实数根．
+  question: '已知关于x的一元二次方程$x^{2}-3x+k-2=0$有两个不相等的实数根．
 
-    （1）求实数的取值范围；
+    （1）求实数k的取值范围；
 
-    （2）若为满足条件的最大整数，求此时方程的根．'
-  answer: （1） （2），
+    （2）若k为满足条件的最大整数，求此时方程的根．'
+  answer: （1）$k<\frac{17}{4}$ （2）$x_{1}=-1$，$x_{2}=-2$
   solution: '【小问1详解】
 
-    解：由题意可知，
+    解：由题意可知$\triangle_{x}3^{2}-4(k-2)\cdot17=4k>0$，
 
-    ；
+    $\therefore k < \frac{17}{4}$；
 
     【小问2详解】
 
-    解：由（1）可知：，
+    解：由（1）可知：$k = 4$，
 
-    此时方程为：，
+    $\begin{tikzpicture}
 
-    ，
+    \fill (0,0) circle (2pt);
 
-    ，．'
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$此时方程为：$x^{2}+3x+2=0$，
+
+    $(x+1)(x+2)=0$，
+
+    $\therefore x_1 = -1$，$x_{2}=-2$．'
   knowledge_points:
   - 一元二次方程
   - 根的判别式
@@ -582,59 +776,77 @@ questions:
 - id: 22
   type: 解答
   score: 5
-  question: '如图，四边形是平行四边形，于点，于点，，连接．
+  question: '如图，四边形$ABCD$是平行四边形，$AE \perp BD$于点E，$CG \perp BD$于点F，$FG = CF$，连接AG．
 
-    （1）求证：四边形是矩形；
+    [图]
 
-    （2）若，，求的长．'
-  answer: （1）见详解    （2）
+    （1）求证：四边形$AEFG$是矩形；
+
+    （2）若$\angle ABD = 30^\circ$，$AG = 2AE = 6$，求BD的长．'
+  answer: （1）见详解（2）$6\sqrt{3}+6$
   solution: '【小问1详解】
 
-    证明：四边形是平行四边形，
+    证明：$\begin{array}{c}
 
-    ，，
+    \bullet \\
 
-    ，
+    \bullet \quad \bullet \\
 
-    ，，
+    \bullet
 
-    ，，
+    \end{array}$四边形$ABCD$是平行四边形，
 
-    ，
+    $\therefore AB = CD$，$AB \parallel CD$，
 
-    ，
+    $\angle ABE = \angle CDF$，
 
-    ，
+    $\because AE \perp BD$，$CG \perp BD$，
 
-    ，
+    $WAE // CG$，$\angle AEB=\angle AEF=\angle CCD=90^{\circ}$，
 
-    四边形是平行四边形，
+    $\triangle ABE \cong \triangle CDF (AAS)$，
 
-    又，
+    $\therefore AE=CF$，
 
-    平行四边形是矩形；
+    $\because FG = CF$，
+
+    $\therefore AE = GF$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$四边形$AEFG$是平行四边形，
+
+    又$\angle AEF = 90^\circ$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$平行四边形$AEFG$是矩形；
 
     【小问2详解】
 
-    解：，
+    解：$\because AG = 2AE = 6$，
 
-    ，
+    $\therefore AE = 3$，
 
-    由（1）可知，四边形是矩形，
+    由（1）可知，四边形$AEFG$是矩形，
 
-    ，
+    $\ldots EF = AC = 6$，
 
-    ，
+    $\angle ABD = 30^\circ$，
 
-    ，
-
-    ，
-
-    由（1）可知，，
-
-    ，
-
-    ．'
+    $AB = '
   knowledge_points:
   - 全等三角形
   - 勾股定理
@@ -649,73 +861,69 @@ questions:
 - id: 23
   type: 解答
   score: 6
-  question: '如图，是的直径，交于点，点是的中点，连接交于点，．
+  question: '如图，AB是$\odot\odot$的直径，BC交$\odot\odot$于点D，点E是$\widehat{BD}$的中点，连接AE交BC于点F，$\angle ACB=2\angle EAB$．
 
-    （1）求证：是的切线；
+    [图]
 
-    （2）若，，求的长．'
-  answer: （1）见详解    （2）12
+    （1）求证：AC是$\odot\odot$的切线；
+
+    （2）若$BF = 6$，$\cos C=\frac{3}{5}$，求AB的长．'
+  answer: （1）见详解（2）12
   solution: '【小问1详解】
 
-    证明：连接，如图，
+    证明：连接AD，如图，
 
-    是的中点，
+    [图]
 
-    ，
+    $\therefore E$是$\widehat{BD}$的中点，
 
-    ，
+    $\begin{tikzpicture}
 
-    ，
+    \fill (0,0) circle (2pt);
 
-    ，
+    \fill (-1,-1) circle (2pt);
 
-    是的直径，
+    \fill (1,-1) circle (2pt);
 
-    ，
+    \end{tikzpicture}$$\widehat{DE}=\widehat{BE}$，
 
-    ，
+    $\angle EAB = \angle EAD$，
 
-    ，即，
+    $\angle ACB = \angle EAB$，
 
-    ，
+    $\angle ACB = \angle DAB$，
 
-    为的半径，
+    $\therefore AB$是$\odot\odot$的直径，
 
-    是的切线；
+    $\angle ADB = 90^\circ$，
+
+    $\angle DAC + \angle ACB = 90^\circ$，
+
+    $\angle DAC + \angle DAB = 90^\circ$，即$\angle BAC = 90^\circ$，
+
+    $\therefore AC \perp AB$，
+
+    $\therefore OA$为$\odot\odot$的半径，
+
+    $\therefore AC$是$\odot\odot$的切线；
 
     【小问2详解】
 
-    解：过点作于，而，
+    解：过点F作$FH \perp AB$于H，而$AC \perp AB$，
 
-    ，
+    [图]
 
-    ，
+    $\triangle FH\parallel AC$，
 
-    ，
+    $\angle C = \angle BFH$，
 
-    ，
+    $\cos C=\cos \angle BPH=\frac{FH}{BP}=\frac{3}{5}$，
 
-    ，
+    $\therefore FB = 6$，
 
-    ，，，
+    $\therefore FH = \frac{18}{5}$，
 
-    ，
-
-    ，
-
-    ，
-
-    ，
-
-    ，
-
-    设，，
-
-    ，
-
-    ，
-
-    ．'
+    $\angle EAB = \angle EAP$，$\angle ADF=90^\circ$，$\ang'
   knowledge_points:
   - 圆周角
   - 切线
@@ -730,77 +938,97 @@ questions:
 - id: 24
   type: 解答
   score: 6
-  question: '我国快递市场繁荣活跃，某快递公司为提高服务质量，对公司的业务量、公众满意度等数据进行统计分析．公司随机抽取了某日发往相邻城市的快递中的1000件，称重并记录每件快递的重量（单位：，精确到），下面给出了部分信息，
+  question: '我国快递市场繁荣活跃，某快递公司为提高服务质量，对公司的业务量、公众满意度等数据进行统计分析．公司随机抽取了某日发往相邻城市的快递中的1000件，称重并记录每件快递的重量（单位：kg，精确到$0.1$），下面给出了部分信息，
 
-    ．每件快递重量的频数分布直方图（数据分成11组：，，，，，，，，，，）；
+    a．每件快递重量的频数分布直方图（数据分成11组：$0\leq x<1$，$1\leq x<2$，$2\leq x<3$，$3\leq x<4$，$4\leq x<5$，$5\leq x<6$，$6\leq x<7$，$7\leq x<8$，$8\leq x<9$，$9\leq x<10$，$10\leq x<11$）；
 
-    ．在这一组的数据如下：
+    [图]
 
-    ．这1000件快递重量的平均数、中位数、众数如下：
+    b．在$3\leq x<4$这一组的数据如下：
+
+    $3,03,13,13,23,23,23,43,43,43,4$
+
+    $1.53,53.52,53.63,63.77,73.83,9$
+
+    c．这1000件快递重量的平均数、中位数、众数如下：
+
+    平均数
+
+    中位数
+
+    众数
+
+    快递重量（单位：kg）
+
+    3．6
+
+    m
+
+    n
 
     根据以上信息，回答下列问题：
 
     （1）补全频数分布直方图；
 
-    （2）写出的值；
+    （2）写出m的值；
 
     （3）下面四个结论中，
 
-    ①的值一定在这一组；
+    ①n的值一定在$2\leq x<3$这一组；
 
-    ②的值可能在这一组；
+    ②n的值可能在$4\leq x<5$这一组；
 
-    ③的值不可能在这一组：
+    ③n的值不可能在$5\leq x<6$这一组：
 
-    ④的值不可能在这一组，
+    ④n的值不可能在$8\leq x<9$这一组，
 
-    所有正确结论的序号是             ；
+    所有正确结论的序号是；
 
     （4）该日此快递公司在全市揽收的快递包裹中有3800件发往相邻城市，估计这批快递的重量．'
-  answer: （1）见解析    （2） （3）②④    （4）估计这批快递的重量为．
+  answer: （1）见解析（2）$3.3kg$ （3）②④（4）估计这批快递的重量为$13680\mathrm{kg}$．
   solution: '【小问1详解】
 
-    解：（件），补全的频数分布直方图如图所示：
+    解：$1000-(87+57+20+336+76+35+2+15+5+17)=350$（件），补全的频数分布直方图如图所示：
 
-    【小问2详解】
+    [图]【小问2详解】
 
-    解:∵前三组，即中的快递件数为：，
+    解:∵前三组，即$0\leq x<1,1\leq x<2,2\leq x<3$中的快递件数为：$87+57+350=494$，
 
-    ∴中位数在中，
+    ∴中位数在$3\leq x<4$中，
 
-    根据这一组的数据如下：；
+    根据$3\leq x<4$这一组的数据如下：$3.0,3.1,3.13,2.3,2.3,2.4,3.4,3.4,3.5,3.5,3.5,3.6,3.6,3.7,3.7,3.8,3.9$；
 
-    可知：．
+    可知：$m=\frac{3.2+3.4}{2}=3.3\,\text{kg}$．
 
     【小问3详解】
 
-    解:结合频数分布直方图可知：在的频数是，的频数是336，
+    解:结合频数分布直方图可知：在$2\leq x<3$的频数是$350$，$4\leq x<5$的频数是336，
 
-    相对其他来说，都是远多于其他区间（的频数为15）的频数的，
+    相对其他来说，都是远多于其他区间（$8\leq x<9$的频数为15）的频数的，
 
     而众数是出现次数最多的一组数据，这是区间，不是具体数值，
 
-    ∴众数出现在这两个区间，的可能性都有的，且可能性较大，
+    ∴众数出现在这两个区间$2\leq x<3$，$4\leq x<5$的可能性都有的，且可能性较大，
 
-    出现在，可能性还是有的，但可能性不大，
+    出现在$0\leq x<1.1,x\leq 2.5,x<6$，可能性还是有的，但可能性不大，
 
-    自然众数不可能出现在，其频数都太小了，
+    自然众数不可能出现在$3\leq x<4,6\leq x<7,7\leq x<8,8\leq x<9,9\leq x<10,10\leq x<11$，其频数都太小了，
 
-    ∴①n一定在，说法太绝对，错误；
+    ∴①n一定在$2\leq x<3$，说法太绝对，错误；
 
-    ②n可能在，正确；
+    ②n可能在$4\leq x<5$，正确；
 
-    ③n不可能出现，说法太绝对，错误；
+    ③n不可能出现$5\leq x<6$，说法太绝对，错误；
 
-    ④n不可能出现，正确；
+    ④n不可能出现$8\leq x<9$，正确；
 
     故选：②④．
 
     【小问4详解】
 
-    解:从平均数的角度来看：．
+    解:从平均数的角度来看：$3800\times3.5=13680\mathrm{kg}$．
 
-    答：估计这批快递的重量为．'
+    答：估计这批快递的重量为$13680\math'
   knowledge_points:
   - 统计
   - 平均数
@@ -814,47 +1042,175 @@ questions:
 - id: 25
   type: 解答
   score: 6
-  question: '已知角，探究与角的关系．
+  question: '已知角$x\left(0^{\circ}\leq x\leq 90^{\circ}\right)$，探究$\sin x$与角x的关系．
 
     两个数学兴趣小组的同学在查阅资料后，分别设计了如下两个探究方案，
 
-    方案一：如图，点在以点为圆心，1为半径的上，，设的度数为．作于点，则线段①             的长度即为的值．
+    方案一：如图，点P在以点O为圆心，1为半径的$\overparen{MN}$上，$\angle MOM = 90^\circ$，设$\angle POM$的度数为x．作$PC \perp OM$于点C，则线段①的长度c即为$\sin x$的值．
 
-    方案二：用函数的值近似代替的值．计算函数的值，并在平面直角坐标系中描出坐标为的点．
+    方案二：用函数$F(x)=\frac{\pi x}{180}\cdot\frac{1}{6}\left(\frac{\pi x}{180}\right)^{3}+\frac{1}{120}\left(\frac{\pi x}{180}\right)^{5}$的值近似代替$\sin x$的值．计算函数$F(x)$的值，并在平面直角坐标系xOy中描出坐标为$\left(x,F\left(x\right)\right)$的点．
 
-    两个小组同学汇总、记录的部分探究数据如下表所示（确到）．
+    两个小组同学汇总、记录的部分探究数据如下表所示（确到$0.001$）．
 
-    若记为，否则记为．
+    若$|x - F(x)| \leq 0.001$记为$\sqrt{}$，否则记为x．
+
+    x
+
+    0
+
+    10
+
+    20
+
+    30
+
+    40
+
+    45
+
+    50
+
+    60
+
+    70
+
+    80
+
+    90
+
+    c
+
+    0
+
+    $0.174$
+
+    $0.342$
+
+    ②
+
+    $0.643$
+
+    $0.707$
+
+    $0.766$
+
+    $0.866$
+
+    $0.940$
+
+    $0.985$
+
+    1
+
+    $F(x)$
+
+    0
+
+    $0.174$
+
+    $0.342$
+
+    $0.500$
+
+    $0.643$
+
+    $0.707$
+
+    $0.766$
+
+    $0.866$
+
+    $0.941$
+
+    $0.937$
+
+    $1.005$
+
+    $\sqrt{}$或x
+
+    $\sqrt{}$
+
+    $\sqrt{}$
+
+    $\sqrt{}$
+
+    $\sqrt{}$
+
+    $\sqrt{}$
+
+    $\sqrt{}$
+
+    $\sqrt{}$
+
+    $\sqrt{}$
+
+    x
+
+    [图]
 
     根据以上信息，解决下列问题：
 
-    （1）①为         ，②为         ；
+    （1）①为，②为；
 
-    （2）补全表中的或；
+    （2）补全表中的$\sqrt{}$或x；
 
-    （3）画出关于的函数图象，并写出的近似值（精确到），'
-  answer: （1）； （2）； （3）图像见解析；
+    （3）画出$F(x)$关于x的函数图象，并写出$\sin 55^\circ$的近似值（精确到$0.01$），'
+  answer: （1）PC；$0.500$ （2）$\sqrt{}$；x （3）图像见解析；$0.82$
   solution: '【小问1详解】
 
-    在中，
+    在$Rt\triangle OPC$中，$\sin \angle POM = \frac{PC}{OP}$
 
-    ①处应填；
+    $\because OP = 1$
 
-    ②处应填
+    $\ldots\sin\angle POM=PC=c$
 
-    故答案为：；．
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$①处应填PC；
+
+    $\sin 30^{\circ}=0.5$
+
+    $\therefore c = 0.500$
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$②处应填$0.500$
+
+    故答案为：PC；$0.500$．
 
     【小问2详解】
 
-    根据题意若记为，否则记为，
+    根据题意若$|x - F(x)| \leq 0.001$记为$\sqrt{}$，否则记为x，
 
-    ，
+    $0.500-0.500=0\div0.001$，$|1.000-1.005|=0.005>0.001$
 
-    表格中空白的两处依次填和；
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$表格中空白的两处依次填$\sqrt{}$和x；
 
     【小问3详解】
 
-    把代入，得'
+    [图]
+
+    把$x = 55$代入$F(x)=\frac{\pi x}{180}\cdot\frac{1}{6}\left(\frac{\pi x}{180}\right)^{3}+\frac{1}{120}\left(\f'
   knowledge_points:
   - 弦
   - 三角函数
@@ -867,57 +1223,65 @@ questions:
 - id: 26
   type: 解答
   score: 6
-  question: '在平面直角坐标系中，，是抛物线上任意两点．设抛物线的对称轴是．
+  question: '在平面直角坐标系xOy中，$M(x_{1},y_{1})$，$N(x_{2},y_{2})$是抛物线$y=ax^{2}+bx+c$上任意两点．设抛物线的对称轴是$x = t$．
 
-    （1）若对于，，有，求的值；
+    （1）若对于$x_{1}=2$，$x_{2}=-1$，有$y_{1}=y_{2}$，求t的值；
 
-    （2）若对于，都有成立，并且对于，存在，求的取值范围．'
-  answer: （1） （2）
+    （2）若对于$x_{1}2$，都有$y_1 < c$成立，并且对于$x_{2}>1$，存在$y_{2}>c$，求t的取值范围．'
+  answer: （1）$t = \frac{1}{2}$ （2）$\frac{1}{2}<t<1$
   solution: '【小问1详解】
 
-    解：由题意得与 对称轴对称，
+    解：由题意得$(2,y_{1})$与$(-1,y_{2})$对称轴对称，
 
-    ∴；
+    ∴$t=\frac{2-1}{2}=\frac{1}{2}$；
 
     【小问2详解】
 
-    解：由题意可知，抛物线与轴的交点为，
+    解：由题意可知，抛物线$y=ax^{2}+bx+c$与y轴的交点为$(0,c)$，
 
-    ①当时，抛物线开口向上，
+    ①当$a > 0$时，抛物线开口向上，
 
-    当时，有最小值，没有最大值，
+    $\begin{tikzpicture}
 
-    与“对于，都有”不符，所以不合题意，
+    \fill (0,0) circle (2pt);
 
-    不成立．
+    \fill (-1,-1) circle (2pt);
 
-    ②当时，抛物线开口向下，且经过，，
+    \fill (1,-1) circle (2pt);
 
-    若抛物线经过点，则，
+    \end{tikzpicture}$当$x_{1}2$时，$y_{1}$有最小值，没有最大值，
 
-    若抛物线经过点，则，
+    $\begin{tikzpicture}
 
-    （i）当时，或，
+    \fill (0,0) circle (2pt);
 
-    对于，都有，
+    \fill (-1,-1) circle (2pt);
 
-    与“对于，存在”不符，所以不合题意，
+    \fill (1,-1) circle (2pt);
 
-    （ii）当时，，
+    \end{tikzpicture}$与“对于$x_{1}2$，都有$y_1 < c$”不符，所以不合题意，
 
-    ∴对于，存在，
+    $\therefore a > 0$不成立．
 
-    对于，都有，
+    ②当$a<0$时，抛物线开口向下，且经过$(0,c)$，$(2t,c)$，
 
-    成立；
+    若抛物线经过点$(1,c)$，则$t = \frac{1}{2}$，
 
-    （iii）当时，
+    若抛物线经过点$(2,c)$，则$t = 1$，
 
-    当时，，
+    （i）当$t \leqslant \frac{1}{2}$时，$t \leq 0 < 1$或$0 < t < 2t \leq 1$，
 
-    与“对于，都有”不符，所以不合题意，
+    $\begin{tikzpicture}
 
-    综上所述：．'
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$对于$x_{2}>1$，都有$y_{2}<c$，
+
+    与“对于$x_{2}>1$，'
   knowledge_points:
   - 二次函数
   - 不等式
@@ -929,75 +1293,71 @@ questions:
 - id: 27
   type: 解答
   score: 7
-  question: '如图，在中，，，将射线绕点顺时针旋转得到射线，射线与直线的交点为点．在直线上截取（点在点右侧），将直线绕点顺时针旋转所得直线交直线于点．
+  question: '如图，在$Rt\triangle ABC$中，$\angle ACB=90^\circ$，$\angle BAC=\alpha(0^{\circ}<\alpha<30^{\circ})$，将射线AB绕点A顺时针旋转$2\alpha$得到射线l，射线l与直线BC的交点为点M．在直线BC上截取$MD = AB$（点D在点M右侧），将直线DM绕点D顺时针旋转$2\alpha$所得直线交直线AM于点E．
 
-    （1）如图1，当点与点重合时，补全图形并求此时的度数；
+    [图]
 
-    （2）当点不与点重合时，依题意补全图2，用等式表示线段与的数量关系，并证明．'
-  answer: （1），图见解析； （2），理由见解析，图见解析．
+    （1）如图1，当点D与点B重合时，补全图形并求此时$\angle AED$的度数；
+
+    （2）当点D不与点B重合时，依题意补全图2，用等式表示线段ME与BC的数量关系，并证明．'
+  answer: （1）$\angle AED = 72^\circ$，图见解析； （2）$ME=2BC$，理由见解析，图见解析．
   solution: '【小问1详解】
 
     解：补全图形见图：
 
-    ∵点与点重合， ，
+    [图]
 
-    ∴，
+    ∵点D与点B重合，$MD = AB, \angle BAM = 2\alpha$，
 
-    在中， ，
+    ∴$\angle AMD=\angle BAM=x$，
 
-    ∴，
+    在$Rt\triangle ABC$中，$\angle ACB=90^\circ$，
 
-    ∵，
+    ∴$\angle AMD+\angle MAC=90^{\circ}$，
 
-    ∴，
+    ∵$\angle BAC = \alpha$，
 
-    ∴，
+    ∴$\angle AMD+\angle BAM+\angle BAC=90^\circ$，
 
-    ∴，
+    ∴$\alpha=18^\circ$，
 
-    ∴，
+    ∴$\angle MDE=2\alpha$，
+
+    ∴$\angle AED = \angle AMD + \angle MDE = 2\alpha + 3\alpha = 5\alpha = 72^\circ$，
 
     【小问2详解】
 
     解：补全图形如图：
 
-    ，理由如下：
+    [图]
 
-    如图， 在的延长线上截取， 连接，以点为圆心为半径作弧，交于点， 连接，
+    $ME=2BC$，理由如下：
 
-    ∵，
+    如图， 在BC的延长线上截取$CF = BC$，
 
-    ∴，
+    连接AF，以点B为圆心BF为半径作弧，交AF于点N，
 
-    ∴，
+    连接BN，
 
-    ∴，
+    ∵$CF = BC, \angle ACB = 90^\circ$，
 
-    ∴，
+    ∴$AB = AF$，
 
-    ∴在等腰中，，
+    ∴$\angle BAN = 2\angle BAC = \alpha$，
 
-    ∵，
+    ∴$\angle MDE=2\alpha$，
 
-    ∴，
+    ∴$\angle MDB=\angle BAN=3a$，
 
-    在中，，
+    ∴在等腰$\triangle ABF$中，$\angle F=90^{\circ}-\alpha$，
 
-    ∴，
+    ∵$BN = BF$，
 
-    ∴，
+    ∴$\angle BNF=\angle F=90^\circ-\alpha$，
 
-    ∴，
+    在$\mathrm{Rt}\triangle AMC$中，$\angle M=90^{\circ}-\angle MAC=90^{\circ}-\beta$，
 
-    ∵，
-
-    ∴，
-
-    ∴，
-
-    ∵，
-
-    ∴．'
+    ∴$\angle AED = \an'
   knowledge_points:
   - 全等三角形
   - 旋转
@@ -1008,107 +1368,101 @@ questions:
 - id: 28
   type: 解答
   score: 7
-  question: '如图1，对于外的线段（线段上的各点均在外）和直线上的点，给出如下定义：若线段绕点旋转某一角度得到的线段恰好是的弦，则称点为线段关于的“割圆点”，
+  question: '如图1，对于$\odot\odot$外的线段$\overline{PQ}$（线段$\overline{PQ}$上的各点均在$\odot\odot$外）和直线$\overline{PQ}$上的点R，给出如下定义：若线段$\overline{PQ}$绕点R旋转某一角度得到的线段$P''Q''$恰好是$\odot\odot$的弦，则称点R为线段$\overline{PQ}$关于$\odot\odot$的“割圆点”，
 
-    在平面直角坐标系中，的半径为1．
+    在平面直角坐标系xOy中，$\odot\odot$的半径为1．
 
-    （1）如图2，已知点，，，．在线段，，中，存在关于的“割圆点”的线段是             ，该“割圆点”的坐标是             ；
+    [图]
 
-    （2）直线经过点，与轴的交点为点．点，点都在线段上，且．若线段关于的“割圆点”为点，写出点的横坐标的取值范围；
+    （1）如图2，已知点$S(1,4)$，$T(-1,2)$，$U(1,2)$，$W(0,3)$．在线段ST，TU，UW中，存在关于$\odot\odot$的“割圆点”的线段是，该“割圆点”的坐标是；
 
-    （3）直线经过点，不重合的四个点都在直线上，且点既是线段关于的“割圆点”，又是线段关于的“割圆点”，线段，的中点分别为点，，记线段的长为．写出的取值范围．'
-  answer: （1），；（2）或；（3）或
-  solution: '（1）解：∵，，
+    [图]
 
-    ∴，
+    （2）直线$y=x+b$经过点$W(0,3)$，与x轴的交点为点V．点P，点Q都在线段$\mathbb{W}$上，且$PQ=\sqrt{2}$．若线段$\overline{PQ}$关于$\odot\odot$的“割圆点”为点R，写出点R的横坐标$x_{R}$的取值范围；
 
-    ∴不是关于的“割圆点”的线段，
+    （3）直线l经过点$H\left(1,\sqrt{3}\right)$，不重合的四个点$A,B,C,D$都在直线l上，且点H既是线段AB关于$\odot\odot$的“割圆点”，又是线段CD关于$\odot\odot$的“割圆点”，线段AB，CD的中点分别为点M，N，记线段MN的长为d．写出d的取值范围．'
+  answer: （1）UW，$(2,1)$；（2）$x_{R} \leq -2$或$x_{R}-1$；（3）$0 < d < 2 - \sqrt{3}$或$2\sqrt{3}<d\leq4$
+  solution: '（1）解：∵$S(1,4)$，$T(-1,2)$，
 
-    由题意得，若将绕着点R旋转后的的圆记作，则经过，
+    ∴$ST=\sqrt{2^{2}+2^{2}}=2\sqrt{2}>2R=2$，
 
-    则，
+    ∴ST不是关于$\odot\odot$的“割圆点”的线段，
 
-    ∴点R在的垂直平分线上，
+    由题意得，若将$\odot\odot$绕着点R旋转后的的圆记作$\odot O''$，则$\odot O''$经过$\overline{PQ}$，
 
-    ∵，，
+    则$RO = RO''$，
 
-    ∴，
+    ∴点R在$OO''$的垂直平分线上，
 
-    ∴点为中点，
+    ∵$T(-1,2)$，$U(1,2)$，
 
-    ∵的垂直平分线与平行，
+    ∴$TU=2=2R$，
 
-    ∴不是关于的“割圆点”的线段，
+    ∴点$O''$为TU中点，
 
-    由题意得圆心在弦的垂直平分线上，且根据旋转的性质，
+    [图]
 
-    得，
+    ∵$OO''$的垂直平分线与TU平行，
 
-    ∴点即为中点，
+    ∴TU不是关于$\odot\odot$的“割圆点”的线段，
 
-    由题意得“割圆点”一定是弦所在的直线与的垂直平分线的交点，如图：
+    由题意得圆心$O''$在弦UW的垂直平分线上，且根据旋转的性质，
 
-    ∵，，
+    得$\mathcal{O}W=R=1$，
 
-    ∴设直线表达式为： ，
+    ∴点$O''$即为TU中点，
 
-    代入得：，
+    由题意得“割圆点”一定是弦所在的直线与$OO''$的垂直平分线的交点，如图：
 
-    解得，
+    [图]
 
-    ∴直线表达式为：，
+    ∵$U(1,2)$，$W(0,3)$，
 
-    把代入得：，
+    ∴设直线UW表达式为：$y=kx+b$，
 
-    ∴，
+    代入得：$\begin{cases}
 
-    ∴，
+    k + b = 2 \\
 
-    ∴是关于的“割圆点”的线段，
+    b = 3
 
-    故答案为：，；
+    \end{cases}$，
 
-    （2）解：将代入得，
+    解得$\left\{
 
-    ∴直线表达式为，
+    \begin{array}{l}
 
-    当时，，
+    k = -1 \\
 
-    ∴，
+    b = 3
 
-    ∴，
+    \end{array}
 
-    由题意知点R为的垂直平分线与直线的交点，连接，则，
+    \right.$，
 
-    ∵，
+    ∴直线UW表达式为：$y=-x+3$，
 
-    ∴，
+    把$y_{R}=1$代入得：$-x + 3 = 1$，
 
-    ∴，
+    ∴$x=2$，
 
-    ∴为等腰直角三角形，
+    ∴$R(2,1)$，
 
-    ∴，
+    ∴UW是关于$\odot\odot$的“割圆点”的线段，
 
-    而，，
+    故答案为：UW，$(2,1)$；
 
-    ∴，
+    （2）解：将$W(0,3)$代入$y=x+b$得$b=3$，
 
-    当点Q与点V重合时，则点落在x轴上，此时，如图：
+    ∴直线$\mathbb{W}$表达式为$y = x + 3$，
 
-    当点Q向上运动时，点R也向上运动，此时，如图：
+    当$y = 0$时，$x+3=0$，
 
-    当点Q运动到时，即的垂直平分线与直线平行，此时正无穷大，如图：
+    ∴$x = -3$，
 
-    ∴，
+    ∴$V(-3,0)$，
 
-    当点Q继续向上运动一点时，的垂直平分线与直线交点在第三象限很远处，
-
-    此时负无穷大，如图：
-
-    当点Q运动到使得点P与W重合时，此时点落在y轴上，
-
-    ∴，代入直'
+    由题意知点R为$OO''$的垂直'
   knowledge_points:
   - 一次函数
   - 垂径定理

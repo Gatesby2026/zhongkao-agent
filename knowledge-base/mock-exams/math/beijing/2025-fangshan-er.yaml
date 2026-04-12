@@ -1,12 +1,12 @@
 # ============================================================
 # 2025年北京房山区中考数学二模试卷 — 逐题分析
 # ============================================================
-# 数据来源：knowledge-original/精品解析：2025年北京市房山区九年级中考二模数学试卷 （解析版）.docx
-# 自动生成，部分数学公式可能显示不全（docx公式对象无法完整提取）
+# 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
+# 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
 # 满分：100分  时长：120分钟
 
 year: 2025
-district: 房山区
+district: 房山
 exam_type: 二模
 subject: 数学
 full_score: 100
@@ -17,11 +17,13 @@ questions:
 - id: 1
   type: 选择
   score: 2
-  question: "年6月6日，嫦娥六号在距离地球约千米外上演“太空牵手”，完成月球轨道的交会对接．数据用科学记数法表示为（    ）\nA. \tB. \tC. \tD."
-  answer: B
-  solution: '解：大于1，用科学记数法表示为，其中，，
+  question: '$2024$年6月6日，嫦娥六号在距离地球约$384000$千米外上演“太空牵手”，完成月球轨道的交会对接．数据$384000$用科学记数法表示为（）
 
-    ∴用科学记数法表示为，
+    A.$3.84\times10^{4}$B.$3.84\times10^{5}$C.$3.84\times10^{6}$D.$38.4\times10^{5}$'
+  answer: B
+  solution: '解：$384000$大于1，用科学记数法表示为$a\times10^{n}$，其中$a = 3.84$，$n = 5$，
+
+    ∴$384000$用科学记数法表示为$3.84\times10^{5}$，
 
     故选：B．'
   knowledge_points:
@@ -37,7 +39,11 @@ questions:
 - id: 2
   type: 选择
   score: 2
-  question: "下列图形中，既是轴对称图形又是中心对称图形的是（   ）\nA. \tB.\nC. \tD."
+  question: '下列图形中，既是轴对称图形又是中心对称图形的是（）
+
+    A.[图]B.[图]
+
+    C.[图]D.[图]'
   answer: D
   solution: '解：A、是轴对称图形，不是中心对称图形，故A选项不合题意；
 
@@ -63,13 +69,19 @@ questions:
 - id: 3
   type: 选择
   score: 2
-  question: "将一个含角的三角尺和直尺如图放置，若，则的度数是（    ）\nA. \tB. \tC. \tD."
+  question: '将一个含$30^\circ$角的三角尺和直尺如图放置，若$\angle1=50^{\circ}$，则$\angle 2$的度数是（）
+
+    [图]
+
+    A.$30^\circ$B.$40^\circ$C.$50^\circ$D.$60^\circ$'
   answer: B
   solution: '解：如图所示，
 
-    由题意得，，，
+    [图]
 
-    ∴，
+    由题意得$\angle3=\angle1=50^{\circ}$，$\angle5=90^{\circ}$，$\angle 2=\angle 4$，
+
+    ∴$\angle2=\angle4=180^{\circ}-90^{\circ}-\angle3=90^{\circ}-50^{\circ}=40^{\circ}$，
 
     故选：B．'
   knowledge_points:
@@ -84,17 +96,19 @@ questions:
 - id: 4
   type: 选择
   score: 2
-  question: "已知，则下列论一定正确的是（   ）\nA. \tB. \tC. \tD."
+  question: '已知$a > b - 1$，则下列论一定正确的是（）
+
+    A.$a+1<b$B.$a-1<b$C.$a-1>b$D.$a+1>b$'
   answer: D
-  solution: '解：，
+  solution: '解：$a > b - 1$，
 
-    A、，故该选项错误，不合题意；
+    A、$a+1>b$，故该选项错误，不合题意；
 
-    B、，故该选项错误，不合题意；
+    B、$a-1>b-2$，故该选项错误，不合题意；
 
-    C、，故该选项错误，不合题意；
+    C、$a-1>b-2$，故该选项错误，不合题意；
 
-    D、，故该选项正确，符合题意．
+    D、$a+1>b$，故该选项正确，符合题意．
 
     故选：D．'
   knowledge_points:
@@ -109,11 +123,21 @@ questions:
 - id: 5
   type: 选择
   score: 2
-  question: "若关于的一元二次方程有两个不相等的实数根，则实数的取值范围是（   ）\nA. \tB. \tC. \tD."
-  answer: C
-  solution: '解：关于的一元二次方程有两个不相等的实数根，
+  question: '若关于x的一元二次方程$x^{2}+x-m=0$有两个不相等的实数根，则实数m的取值范围是（）
 
-    ，解得，
+    A.$m<-\frac{1}{4}$B.$m = -\frac{1}{4}$C.$m > -\frac{1}{4}$D.$m>\frac{1}{4}$'
+  answer: C
+  solution: '解：$\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$关于x的一元二次方程$x^{2}+x-m=0$有两个不相等的实数根，
+
+    $\Delta=1+4m>0$，解得$m > -\frac{1}{4}$，
 
     故选：C．'
   knowledge_points:
@@ -128,11 +152,13 @@ questions:
 - id: 6
   type: 选择
   score: 2
-  question: "已知一个正多边形的每一个外角等于60°，则这个正多边形的边数是（）\nA. 五\tB. 六\tC. 七\tD. 八"
-  answer: B
-  solution: '解：∵多边形的外角和为，每个外角等于
+  question: '已知一个正多边形的每一个外角等于60°，则这个正多边形的边数是（）
 
-    ∴这个正多边形的边数是．
+    A.五B.六C.七D.八'
+  answer: B
+  solution: '解：∵多边形的外角和为$360^\circ$，每个外角等于$60^\circ$
+
+    ∴这个正多边形的边数是$360^{\circ}+60^{\circ}=6$．
 
     故选：B'
   knowledge_points:
@@ -146,11 +172,17 @@ questions:
 - id: 7
   type: 选择
   score: 2
-  question: "同时抛掷两枚质地均匀的硬币，则一枚硬币正面向上､一枚硬币反面向上的概率是（    ）\nA. \tB. \tC. \tD."
+  question: '同时抛掷两枚质地均匀的硬币，则一枚硬币正面向上､一枚硬币反面向上的概率是（
+
+    ）
+
+    A.$\frac{1}{4}$B.$\frac{1}{3}$C.$\frac{1}{2}$D.$\frac{2}{3}$'
   answer: C
   solution: '解：由题意得：
 
-    ∴一枚硬币正面向上､一枚硬币反面向上的概率是；
+    [图]
+
+    ∴一枚硬币正面向上､一枚硬币反面向上的概率是$P = \frac{2}{4} = \frac{1}{2}$；
 
     故选C．'
   knowledge_points:
@@ -165,43 +197,53 @@ questions:
 - id: 8
   type: 选择
   score: 2
-  question: "在平面直角坐标系中，点的坐标分别为，点是线段上的动点，连接，过点作，交轴于点．则点纵坐标的取值范围是（   ）\nA. \tB.\nC. \tD."
+  question: '在平面直角坐标系xOy中，点$A,B,C$的坐标分别为$\left(\frac{2}{3}\right)\cdot(4,1),(3,9)$，点P是线段B上的动点，连接PC，过点P作$\overline{PQ} \perp \overline{PC}$，交y轴于点Q．则点Q纵坐标t的取值范围是（）
+
+    [图]
+
+    A.$-\frac{5}{4} \leq t \leq 5$B.$-1 \leq t \leq 5$
+
+    C.$-\frac{1}{4} \leq t \leq 5$D.$-\frac{1}{2} \leq t \leq 5$'
   answer: A
-  solution: '解：设，过点作轴，延长交轴于点，设交轴于点
+  solution: '解：设$P(a,1)$，过点P作$PF \perp x$轴，延长BA交y轴于点E，设$\overline{PQ}$交x轴于点D
 
-    当时，如图，
+    当$\frac{3}{2} \leq a < 3$时，如图，
 
-    ∵，
+    [图]
 
-    ∴
+    ∵$\overline{PQ} \perp \overline{PC}$，$PF \perp AB$
 
-    ∴
+    ∴$\angle CPF = \angle QPE$
 
-    ∴
+    ∴$\tan \angle CPF = \tan \angle QPE$
 
-    ∴
+    ∴$\frac{3-a}{1}=\frac{1-t}{a}$
 
-    当时，如图，同理可得
+    ∴$t=a^{2}-3a+1$
 
-    ∴
+    当$3<a\leq4$时，如图，同理可得$\angle CPF = \angle QPE$
 
-    ∴
+    [图]
 
-    ∴
+    ∴$\tan \angle CPF = \tan \angle QPE$
 
-    当时，，重合，则重合，此时，
+    ∴$\frac{a-3}{1}=\frac{t-1}{a}$
 
-    ∴当时，也成立
+    ∴$t=a^{2}-3a+1$
 
-    ∴，
+    当$a = 3$时，$P(3,1)$，$C,F$重合，则$E,Q$重合，此时$t = 1$，
 
-    ∵
+    ∴当$a = 3$时，$t=a^{2}-3a+1$也成立
 
-    当时，取得最小值为
+    ∴$\frac{3}{2}sas4$，$t=a^{2}-3a+1$
 
-    当时，取得最大值为
+    ∵$t=a^{2}-3a+1-\left(a-\frac{3}{2}\right)^{2}-\frac{5}{4}$
 
-    ∴
+    当$a = \frac{3}{2}$时，t取得最小值为$-\frac{5}{4}$
+
+    当$a = 4$时，t取得最大值为$\left(4-\frac{3}{2}\right)^{2}-\frac{5}{4}=5$
+
+    ∴$-\frac{5}{4} \leq t \leq 5$
 
     故选：A．'
   knowledge_points:
@@ -216,15 +258,15 @@ questions:
 - id: 9
   type: 填空
   score: 2
-  question: 若代数式有意义，则实数的取值范围是________．
-  answer: ''
-  solution: '解：∵代数式有意义，
+  question: 若代数式$\frac{2}{x-4}$有意义，则实数x的取值范围是________．
+  answer: $x \neq 4$
+  solution: '解：∵代数式$\frac{2}{x-4}$有意义，
 
-    ∴
+    ∴$x-4\neq0$
 
-    即
+    即$x \neq 4$
 
-    故答案为：．'
+    故答案为：$x \neq 4$．'
   knowledge_points:
   - 综合
   module: numbersAndExpressions
@@ -237,11 +279,11 @@ questions:
 - id: 10
   type: 填空
   score: 2
-  question: 分解因式：______．
-  answer: '##'
-  solution: '解：
+  question: 分解因式：$2a^{2}+4ab+2b^{2}$______．
+  answer: $2(a+b)^2$##$2(b+a)^{2}$
+  solution: '解：$2a^{2}+4ab+2b^{2}$$2(a^{2}+2ab+b^{2})-2(a+b)^{2}$
 
-    故答案为：．'
+    故答案为：$2(a+b)^2$．'
   knowledge_points:
   - 因式分解
   module: numbersAndExpressions
@@ -254,17 +296,17 @@ questions:
 - id: 11
   type: 填空
   score: 2
-  question: 写出一个比大且比小的整数________．
+  question: 写出一个比$\sqrt{3}$大且比$\sqrt{17}$小的整数________．
   answer: 2##3##4
-  solution: '解： ，
+  solution: '解：$\sqrt{1}<\sqrt{3}<\sqrt{4}$，
 
-    ，
+    $:1<\sqrt{3}<2$，
 
-    ，
+    $\sqrt{16}<\sqrt{17}<\sqrt{25}$，
 
-    ，
+    $4<\sqrt{17}<5$，
 
-    ∴比大且比小的整数为：2或3或4．
+    ∴比$\sqrt{3}$大且比$\sqrt{17}$小的整数为：2或3或4．
 
     故答案为：2或3或4（写其一即可）．'
   knowledge_points:
@@ -279,13 +321,13 @@ questions:
 - id: 12
   type: 填空
   score: 2
-  question: 在平面直角坐标系中，若函数的图象经过点和，则的值为_______．
-  answer: ''
-  solution: '解：∵函数的图象经过点和，
+  question: 在平面直角坐标系xOy中，若函数$y=\frac{k}{x}(k\neq0)$的图象经过点$A(-2,3)$和$B(2,n)$，则n的值为_______．
+  answer: $-3$
+  solution: '解：∵函数$y=\frac{k}{x}(k\neq0)$的图象经过点$A(-2,3)$和$B(2,n)$，
 
-    ∴，解得：．
+    ∴$k=-2\times3=2n$，解得：$n = -3$．
 
-    故答案为：．'
+    故答案为：$-3$．'
   knowledge_points:
   - 反比例函数
   - 坐标系
@@ -299,13 +341,33 @@ questions:
 - id: 13
   type: 填空
   score: 2
-  question: '某校为了解全校名学生的课外阅读情况，从中随机抽取了50名学生进行调查，获得了他们每周课外阅读时间的数据，数据整理如下：
+  question: '某校为了解全校$2000$名学生的课外阅读情况，从中随机抽取了50名学生进行调查，获得了他们每周课外阅读时间的数据，数据整理如下：
+
+    每周课外阅读时间x/小时
+
+    $0\leq x<1$
+
+    $1\leq x<2$
+
+    $2\leq x<3$
+
+    $3 \leq x$
+
+    人数
+
+    $7$
+
+    $10$
+
+    $14$
+
+    $19$
 
     若学校计划对阅读时间大于等于2小时的同学进行表彰，请你根据表中信息估计全校共需要表彰约_____人．'
-  answer: ''
-  solution: '解：
+  answer: $1320$
+  solution: '解：$2000\times\left|4-19\right|-1320$
 
-    故答案为：．'
+    故答案为：$1320$．'
   knowledge_points:
   - 综合
   module: statisticsAndProbability
@@ -317,21 +379,23 @@ questions:
 - id: 14
   type: 填空
   score: 2
-  question: 在中，为上一点，，交于点，若．则的长为______．
-  answer: '##'
-  solution: '解：∵，
+  question: '在$V_{ABC}$中，D为BC上一点，$DE \parallel AB$，交AC于点E，若$AB = 3.5, CD = 6, BD = 3$．则DE的长为______．
 
-    ∴，
+    [图]'
+  answer: $\frac{7}{3}$##$2\frac{1}{3}$
+  solution: '解：∵$DE \parallel AB$，
 
-    ∴
+    ∴$\triangle CED \sim \triangle CAB$，
 
-    ∵．
+    ∴$\frac{DE}{AB}=\frac{CD}{CB}$
 
-    ∴
+    ∵$AB = 3.5, CD = 6, BD = 3$．
 
-    解得：，
+    ∴$\frac{DE}{3.5}=\frac{6}{6+3}$
 
-    故答案为：．'
+    解得：$DE=\frac{7}{3}$，
+
+    故答案为：$\frac{7}{3}$．'
   knowledge_points:
   - 相似三角形
   module: triangles
@@ -343,35 +407,39 @@ questions:
 - id: 15
   type: 填空
   score: 2
-  question: 如图，为的直径，点在上，且，过点作的切线交的延长线于点．若，连接，则的长为__________．
-  answer: ''
-  solution: '解：连接，如图，
+  question: '如图，AB为$\odot\odot$的直径，点在$\odot\odot$上，且$\angle CAB=22.5^\circ$，过点作$\odot\odot$的切线DE交AB的延长线于点．若$DE=DA,\ CD=5$，连接OE，则OE的长为__________．
 
-    ∵为圆的切线，且点为切点，
+    [图]'
+  answer: $5\sqrt{3}$
+  solution: '解：连接OC，如图，
 
-    ∴，
+    [图]
 
-    即；
+    ∵DE为圆的切线，且点为切点，
 
-    ∵，，
+    ∴$OC \perp DE$，
 
-    ∴，
+    即$\angle OCE=\angle OCD=90^{\circ}$；
 
-    ∴，
+    ∵$\angle CAB=22.5^\circ$，$\widehat{BC}=\widehat{BC}$，
 
-    ∴，
+    ∴$\angle DOC=2\angle CAB=45^{\circ}$，
 
-    由勾股定理得，
+    ∴$\angle DOC=\angle D=45^{\circ}$，
 
-    ∵，，
+    ∴$OC = CD = 5$，
 
-    即，
+    由勾股定理得$OD=\sqrt{OC^{2}+OD^{2}}=5\sqrt{2}$，
 
-    ∴，
+    ∵$DE = DA$，$OA = OC = CD = 5$，
 
-    在中，由勾股定理得．
+    即$CD\cdot CE=OD+OA$，
 
-    故答案为：．'
+    ∴$CE = OD = 5\sqrt{2}$，
+
+    在$Rt_{\triangle}OCE$中，由勾股定理得$OE=\sqrt{OC^{2}+CE^{2}}=\sqrt{25+50}=5\sqrt{3}$．
+
+    故答案为：$5\sqrt{3}$．'
   knowledge_points:
   - 圆周角
   - 切线
@@ -387,27 +455,53 @@ questions:
   score: 2
   question: '某校九年级有370名师生要去参加社会实践活动，学校计划租用甲、乙、丙三种型号的客车前往．每种型号客车的载客量及租金如下表所示：
 
+    客车型号
+
+    甲
+
+    乙
+
+    丙
+
+    每辆客车载客量/人
+
+    $25$
+
+    $35$
+
+    $45$
+
+    每辆客车的租金/元
+
+    $800$
+
+    $1000$
+
+    $1200$
+
     如果甲、乙、丙三种型号的客车分别租用7辆，3辆，2辆，那么租车的总费用为______元；如果使租车的总费用最低，那么总费用最低为______元．'
-  answer: ①.     ②.
-  solution: '解：依题意得(元)；
+  answer: ①.$11000$②.$10200$
+  solution: '解：依题意得$800\times\pi+1000\times3.4+1200\times2=11000$(元)；
 
     设甲，乙，丙三种型号客车的租用数量分别是a，b，c，
 
-    则，即，
+    则$25a+35b+43=370$，即$5a+7b+9c\quad74$，
 
-    整理得
+    整理得$\frac{74-7b-5a}{9}$
 
-    ∴车人均价格最低，当取得最大整数解时，租车费用最低，
+    $\frac{800}{25}=32,\frac{1000}{35}=28.6,\frac{1200}{45}=26.7$
+
+    ∴c车人均价格最低，当c取得最大整数解时，租车费用最低，
 
     ∵a，b，c都是正整数，
 
-    ∴，
+    ∴$c = 7$，$7b+5a=12$
 
-    ∴，
+    ∴$a = 1$，$b = 1$
 
-    此时最低费用为（元）
+    此时最低费用为$1+800\times1+1000+7\times1200=10200$（元）
 
-    故答案为：，．'
+    故答案为：$11000$，$10200$．'
   knowledge_points:
   - 不等式
   module: numbersAndExpressions
@@ -418,9 +512,13 @@ questions:
 - id: 17
   type: 解答
   score: 5
-  question: （第17题，详见原卷）
-  answer: ''
-  solution: 解：
+  question: 计算：$(\pi-1)^{0}-\sqrt{12}+2\cos30^{\circ}+\left(\frac{1}{5}\right)^{-1}$．
+  answer: $6-\sqrt{3}$
+  solution: '解：$(\pi-1)^{0}-\sqrt{12}+2\cos30^{\circ}+\left(\frac{1}{5}\right)^{-1}$
+
+    $1+2\sqrt{3}+2\times\frac{\sqrt{3}}{2}=5+\sqrt{3}$
+
+    $=6-\sqrt{3}$'
   knowledge_points:
   - 三角函数
   module: numbersAndExpressions
@@ -433,15 +531,21 @@ questions:
 - id: 18
   type: 解答
   score: 5
-  question: 解不等式组：
-  answer: ''
-  solution: '解：
+  question: '解不等式组：$\left\{\begin{array}{l}
 
-    解不等式①得：
+    \frac{1}{2}+2x<-\frac{3}{2}x+4 \\
 
-    解不等式②得：
+    x-3<1+2x
 
-    ∴不等式组的解集为：'
+    \end{array}\right.$'
+  answer: $-4<x<1$
+  solution: '解：$[公式]$
+
+    解不等式①得：$x<1$
+
+    解不等式②得：$x > -4$
+
+    ∴不等式组的解集为：$-4<x<1$'
   knowledge_points:
   - 不等式
   - 不等式组
@@ -455,15 +559,15 @@ questions:
 - id: 19
   type: 解答
   score: 5
-  question: 已知，求代数式的值．
-  answer: ''
-  solution: '解：原式=
+  question: 已知$2m+n-3=0$，求代数式$\frac{4m^{2}+4mn+n^{2}}{4m+2n}$的值．
+  answer: $\frac{3}{2}$
+  solution: '解：原式=$\frac{(2m+n)^{2}}{2(2m+n)}$$=\frac{2m+n}{2}$
 
-    ∵，
+    ∵$2m+n-3=0$，
 
-    ∴，
+    ∴$2m+n=3$，
 
-    ∴原式'
+    ∴原式$=$$\frac{3}{2}$'
   knowledge_points:
   - 综合
   module: numbersAndExpressions
@@ -476,57 +580,83 @@ questions:
 - id: 20
   type: 解答
   score: 5
-  question: '如图，在平行四边形中，点是的中点，连接并延长交的延长线于点，连接，且．
+  question: '如图，在平行四边形$ABCD$中，点E是DC的中点，连接AE并延长交BC的延长线于点F，连接BE，且$BE = EF$．
 
-    （1）求证：四边形是矩形；
+    [图]
 
-    （2）若，求的长．'
-  answer: （1）证明见解析 （2）
+    （1）求证：四边形$ABCD$是矩形；
+
+    （2）若$AD = 6,\ \tan \angle AFB = \frac{1}{3}$，求AF的长．'
+  answer: （1）证明见解析 （2）$4\sqrt{10}$
   solution: '【小问1详解】
 
-    证明：∵四边形是平行四边形，
+    证明：∵四边形$ABCD$是平行四边形，
 
-    ，
+    [图]
 
-    ，
+    $\begin{tikzpicture}
 
-    点是的中点，
+    \fill (0,0) circle (2pt);
 
-    ，
+    \fill (-1,-1) circle (2pt);
 
-    ，
+    \fill (1,-1) circle (2pt);
 
-    ，
+    \end{tikzpicture}$$AD\parallel BC,AD=BC$，
 
-    ，
+    $\angle1=\angle2$，
 
-    ，
+    $\begin{array}{c}
 
-    ，
+    \bullet \\
 
-    ，
+    \bullet \quad \bullet \\
 
-    ，
+    \bullet
 
-    四边形是矩形．
+    \end{array}$点E是DC的中点，
+
+    $\therefore ED = EC$，
+
+    $\because \angle 3=\angle 4$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\triangle ADE \cong \triangle FCE\ (AAS)$，
+
+    $\therefore AD = CF$，
+
+    $\because AD = BC$，
+
+    $\therefore CF = BC$，
+
+    $\because BE = EF$，
+
+    $\angle ECB=90^\circ$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$四边形$ABCD$是矩形．
 
     【小问2详解】
 
-    解：，
+    解：$\therefore AD=6$，
 
-    ．
+    $\cdot CF = BC = 6$．
 
-    ．
-
-    四边形是矩形，
-
-    ．
-
-    ，
-
-    ．
-
-    在中，，'
+    $\therefore B'
   knowledge_points:
   - 全等三角形
   - 勾股定理
@@ -547,9 +677,15 @@ questions:
 
     依题意得：
 
-    ，解得，
+    $\begin{cases}
 
-    ∴．
+    3x + 2y = 27 \\
+
+    4x + y = 26
+
+    \end{cases}$，解得$\left\{ \begin{array} { l } { x = 5 } \\ { y = 6 } \end{array} \right.$，
+
+    ∴$x + y = 11$．
 
     答：种植1亩甲作物和1亩乙作物一共需要11名学生．'
   knowledge_points:
@@ -563,37 +699,37 @@ questions:
 - id: 22
   type: 解答
   score: 5
-  question: '在平面直角坐标系中，一次函数的图象由函数的图象平移得到，且经过点．
+  question: '在平面直角坐标系xOy中，一次函数$y=kx+b\,(k\neq0)$的图象由函数$y=\frac{1}{3}x$的图象平移得到，且经过点$(3,3)$．
 
     （1）求这个一次函数的解析式；
 
-    （2）当时，对于的每一个值，函数的值与一次函数的值之差的绝对值大于1，直接写出的取值范围．'
-  answer: （1） （2）或
+    （2）当$x>3$时，对于x的每一个值，函数$y=nx+2$的值与一次函数$y=kx+b\,(k\neq0)$的值之差的绝对值大于1，直接写出n的取值范围．'
+  answer: （1）$y=\frac{1}{3}x+2$ （2）$n\quad \frac{2}{3}$或$n \leq 0$
   solution: '【小问1详解】
 
-    .解：∵函数的图象由函数的图象平移得到，
+    .解：∵函数$y=kx+b\,(k\neq0)$的图象由函数$y=\frac{1}{3}x$的图象平移得到，
 
-    ∴，
+    ∴$k = \frac{1}{3}$，
 
-    ∵函数过点，
+    ∵函数$y=\frac{1}{3}x+b$过点$(3,3)$，
 
-    ∴，
+    ∴$1+b=3$，
 
-    解得：
+    解得：$b = 2$
 
-    ∴函数解析式为
+    ∴函数解析式为$y=\frac{1}{3}x+2$
 
     【小问2详解】
 
-    解：时，，
+    解：$x=3$时，$y=3n+2$，$y=kx+b$$\frac{1}{3}\times3+2=3$
 
-    ∵当时，对于的每一个值，函数的值与一次函数之差的绝对值差大于1，
+    ∵当$x>3$时，对于x的每一个值，函数$y=nx+2$的值与一次函数$y=kx+b\,(k\neq0)$之差的绝对值差大于1，
 
-    ∴
+    ∴$\left|3\pi+2-3\right|$
 
-    ∴或
+    ∴$3n+2-3\mid1$或$3n+2-3\leq-1$
 
-    解得：或'
+    解得：$n\quad \frac{2}{3}$或$n \leq 0$'
   knowledge_points:
   - 一次函数
   - 平移
@@ -611,33 +747,97 @@ questions:
   score: 6
   question: '4月23日是世界读书日，某校初一、初二两个年级的学生进行了“青春飞扬”读书演讲比赛．为了解比赛情况，现从两个年级各随机抽取了20名学生的比赛成绩，并对数据进行收集、整理、描述和分析．下面给出了部分信息：
 
-    ．初二年级20名学生的分数数据如下：
+    a．初二年级20名学生的分数数据如下：
 
-    ．初一年级20名学生分数的频数分布直方图如下（数据分5组：第1组，第2组，第3组，第4组，第5组）：
+    $77$
 
-    ．样本数据的平均数、众数、方差如下：
+    $82$
+
+    $85$
+
+    $88$
+
+    $76$
+
+    $87$
+
+    $69$
+
+    $93$
+
+    $66$
+
+    $84$
+
+    $90$
+
+    $88$
+
+    $67$
+
+    $88$
+
+    $91$
+
+    $96$
+
+    $68$
+
+    $97$
+
+    $59$
+
+    $88$
+
+    b．初一年级20名学生分数的频数分布直方图如下（数据分5组：第1组$50 \leq x < 60$，第2组$60 \leq x < 70$，第3组$70 \leq x < 80$，第4组$80 \leq x < 90$，第5组$90 \leq x < 100$）：
+
+    [图]
+
+    c．样本数据的平均数、众数、方差如下：
+
+    平均数
+
+    众数
+
+    方差
+
+    初一年级
+
+    $81.95$
+
+    $85$
+
+    $185.30$
+
+    初二年级
+
+    $81.95$
+
+    a
+
+    $115.25$
 
     根据以上信息，回答下列问题：
 
-    （1）表格中的值为______；
+    （1）表格中a的值为______；
 
     （2）抽取的初一年级20名学生的中位数位于第_____组；
 
     （3）可以推断出______（填“初一”或“初二”）年级学生在本次比赛中发挥比较稳定；
 
     （4）初二年级共有学生600人，如果前120名学生将被推荐参加区级比赛，请你估计，成绩至少达到____分才能参加区级比赛．'
-  answer: （1） （2） （3）初二    （4）
+  answer: （1）$88$ （2）$4$ （3）初二（4）$91$
   solution: '【小问1详解】
 
-    解：根据表格可得初二年级学生分数中，出现次数最多，则，
+    解：根据表格可得初二年级学生分数中，$88$出现次数最多，则$a = 88$，
 
-    故答案为：．
+    故答案为：$88$．
 
     【小问2详解】
 
-    解：根据初一年级20名学生分数的频数分布直方图可得第和第个数据在第4组，
+    解：根据初一年级20名学生分数的频数分布直方图可得第$10$和第$11$个数据在第4组$80 \leq x < 90$，
 
-    故答案：．
+    故答案$[公式]$：$4$．
 
     【小问3详解】
 
@@ -649,15 +849,15 @@ questions:
 
     【小问4详解】
 
-    解：，
+    解：$\frac{120}{600}=\frac{1}{5}=20\%$，$20\times20\%=4$
 
-    初二年级成绩从大到小排列为：，，，，，……
+    初二年级成绩从大到小排列为：$97$，$96$，$93$，$91$，$90$，……
 
-    第个数据为
+    第$4$个数据为$91$
 
-    ∴估计成绩至少达到分才能参加区级比赛
+    ∴估计成绩至少达到$91$分才能参加区级比赛
 
-    故答案为：．'
+    故答案为：$91$．'
   knowledge_points:
   - 统计
   - 平均数
@@ -672,59 +872,63 @@ questions:
 - id: 24
   type: 解答
   score: 6
-  question: '如图，已知为的外接圆，为的直径，是的中点，弦于点，是上一点，连接．
+  question: '如图，已知$\odot\odot$为$V_{ABC}$的外接圆，AB为$\odot\odot$的直径，D是$\widehat{BC}$的中点，弦$DE \perp AB$于点F，P是$\sqrt{2}AE$上一点，连接$CP,BP$．
 
-    （1）求证：；
+    [图]
 
-    （2）若，求．'
-  answer: （1）证明见解析 （2）
+    （1）求证：$BC = DE$；
+
+    （2）若$AC = 6, BF = 2$，求$\tan \angle BPC$．'
+  answer: （1）证明见解析 （2）$\frac{4}{3}$
   solution: '【小问1详解】
 
-    解：∵D是的中点，
+    解：∵D是$\widehat{BC}$的中点，
 
-    ∴，
+    ∴$\overline{CD}=\overline{BD}$，
 
-    ∵且为的直径，
+    ∵$DE \perp AB$且AB为$\odot\odot$的直径，
 
-    ∴，
+    ∴$\widehat{BE}=\widehat{BD}$，
 
-    ∴，
+    ∴$BC=DL$，
 
-    ∴；
+    ∴$BC = DE$；
 
     【小问2详解】
 
-    解：连接，
+    解：连接OD，
 
-    ∵，
+    [图]
 
-    ∴，
+    ∵$\overline{CD}=\overline{BD}$，
 
-    ∵为的直径，
+    ∴$\angle CAB = \angle DOB$，
 
-    ∴，
+    ∵AB为$\odot\odot$的直径，
 
-    ∵，
+    ∴$\angle ACB=90^\circ$，
 
-    ∴，
+    ∵$DE \perp AB$，
 
-    ∴，
+    ∴$\angle DFO = 90^\circ = \angle ACB$，
 
-    ∴，
+    ∴$\triangle ACB \sim \triangle OFD$，
 
-    设的半径为，则，
+    ∴$\frac{AC}{AB}=\frac{OF}{OD}$，
 
-    解得，
+    设$\odot\odot$的半径为r，则$\frac{6}{2r}=\frac{r-2}{r}$，
 
-    ∴，
+    解得$r = 5$，
 
-    ∴，
+    ∴$AB=2\pi=10$，
 
-    ∴，
+    ∴$BC=\sqrt{AB^{2}-AC^{2}}=8$，
 
-    ∵，
+    ∴$\tan\angle CAB=\frac{BC}{AC}=\frac{4}{6}=\frac{2}{3}$，
 
-    ∴．'
+    ∵$\angle BPC = \angle CAB$，
+
+    ∴$\tan\angle BPC=\frac{4}{3}$．'
   knowledge_points:
   - 圆周角
   - 垂径定理
@@ -740,41 +944,113 @@ questions:
   score: 6
   question: '小明观察到一个水龙头因损坏而不断地向外滴水，为探究其漏水造成的浪费情况，小明用一个带有刻度的量筒放在水龙头下面装水，每隔一分钟记录量筒中的总水量，但由于操作延误，开始计时的时候量筒中已经有少量水，因而得到如下表的一组数据：
 
-    （1）通过分析数据，发现可以用函数（为常数）刻画总水量与时间之间的关系，画出这个函数的图象；
+    时间t（单位：分钟）
+
+    $1$
+
+    $2$
+
+    $3$
+
+    $4$
+
+    $5$
+
+    $\cdots$
+
+    总水量y（单位：毫升）
+
+    $7$
+
+    $12$
+
+    $17$
+
+    $22$
+
+    $27$
+
+    $\cdots$
+
+    （1）通过分析数据，发现可以用函数$y = kt + b$（$k,b$为常数）刻画总水量y与时间t之间的关系，画出这个函数的图象；
 
     （2）根据以上数据与函数图象，解决下列问题：
 
-    ①请你估计小明在第分钟测量时量筒中的总水量；
+    ①请你估计小明在第$20$分钟测量时量筒中的总水量；
 
-    ②一个人一天大约饮用毫升水，请你估算这个水龙头一个月（按天计）漏水量可供一人饮用多少天．'
-  answer: （1）图象见解析 （2）①毫升；②天
+    ②一个人一天大约饮用$1500$毫升水，请你估算这个水龙头一个月（按$30$天计）$[公式]$漏水量可供一人饮用多少天．'
+  answer: （1）图象见解析 （2）①$102$毫升；②$144$天
   solution: '【小问1详解】
 
     描点，连线，如图，
 
-    【小问2详解】
+    [图]【小问2详解】
 
-    ①解：观察表格，可发现前一分钟比后一分钟少5毫升的水，故可得能正确反映总水量y与时间t的函数关系，
+    ①解：观察表格，可发现前一分钟比后一分钟少5毫升的水，故可得$y = kt + b$能正确反映总水量y与时间t的函数关系，
 
-    把，代入，
+    把$\left\{
 
-    可得，
+    \begin{array}{l}
 
-    解得，
+    t = 1 \\
 
-    y关于t的表达式；
+    y = 7
 
-    当时，，
+    \end{array}
+
+    \right.$，$\left\{
+
+    \begin{array}{l}
+
+    t = 2 \\
+
+    y = 12
+
+    \end{array}
+
+    \right.$代入$y = kt + b$，
+
+    可得$\begin{cases}
+
+    7 = k + b \\
+
+    12 = 2k + b
+
+    \end{cases}$，
+
+    解得$\left\{
+
+    \begin{array}{l}
+
+    k = 5 \\
+
+    b = 2
+
+    \end{array}
+
+    \right.$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$y关于t的表达式$y=5t+2$；
+
+    当$t = 20$时，$y=5\times20+2=102$，
 
     故小明在第20分钟测量时量筒的总水量是102毫升，
 
     答：小明在第20分钟测量时量筒的总水量是102毫升．
 
-    ②由解析式可知，每分钟的滴水量为毫升，
+    ②由解析式可知，每分钟的滴水量为$5$毫升，
 
-    30天分钟分钟，
+    30天$=(30\times24\times60)$分钟$=43200$分钟，
 
-    可供一人饮水天数天，
+    可供一人饮水天数$\frac{43200\times5}{1500}=144$天，
 
     答：这个水龙头一个月（按30天计）的漏水量可供一人饮用144天．'
   knowledge_points:
@@ -788,63 +1064,67 @@ questions:
 - id: 26
   type: 解答
   score: 6
-  question: '在平面直角坐标系中，已知抛物线．
+  question: '在平面直角坐标系xOy中，已知抛物线$y=ax^{2}-4ax+1(a\neq 0)$．
 
-    （1）求抛物线对称轴；
+    （1）求抛物线$[公式]$对称轴；
 
-    （2）当时，对于任意的正数，若是抛物线上的两点，则_____（填“”“”“”）；
+    （2）当$a < 0$时，对于任意的正数t，若$M(2-t,y),N(2+3t,y)$是抛物线上的两点，则$y_{1}$_____$y_{2}$（填“$\gt$”“$\gt$”“$=$”）；
 
-    （3）已知直线：上两点，其中点的横坐标为1，点的纵坐标为，若抛物线与线段恰有一个公共点，结合函数图象，求的取值范围．'
-  answer: （1）直线 （2） （3）或
+    （3）已知直线：$l:y=-\frac{1}{2}x+\frac{5}{2}$上两点$A, B$，其中点A的横坐标为1，点B的纵坐标为$\frac{1}{2}$，若抛物线与线段AB恰有一个公共点，结合函数图象，求a的取值范围．'
+  answer: （1）直线$x=2$ （2）$\gt$ （3）$a > 0$或$-\frac{1}{3} \leq a < 0$
   solution: '【小问1详解】
 
-    解：∵
+    解：∵$y=ax^{2}-4ax+1(a\neq 0)$
 
-    ∴抛物线对称轴为直线，
+    ∴抛物线对称轴为直线$x=\frac{-4a}{2a}=2$，
 
     【小问2详解】
 
-    解：∵抛物线的对称轴为直线，
+    解：∵抛物线的对称轴为直线$x=2$，$t > 0$
 
-    关于对称轴的对称点为
+    $M(2-t,y_{1})$关于对称轴的对称点为$(2+t,y_{1})$
 
-    ∵，抛物线开口向下，
+    ∵$a < 0$，抛物线开口向下，
 
-    当时，随的增大而减小，
+    当$x>2$时，y随x的增大而减小，
 
-    又∵
+    又∵$t < 2 + t < 2 + 3t$
 
-    ∴
+    ∴$y_1 > y_2$
 
-    故答案为：．
+    故答案为：$\gt$．
 
-    小问3详解】
+    $[公式]$小问3详解】
 
-    ①当时，抛物线过点，关于的对称点为
+    ①当$a > 0$时，抛物线过点$(0,1)$，$(0,1)$关于$x=2$的对称点为$(4,1)$
 
-    直线：上两点，其中点的横坐标为1，点的纵坐标为，
+    直线：$l:y=-\frac{1}{2}x+\frac{5}{2}$上两点$A, B$，其中点A的横坐标为1，点B的纵坐标为$\frac{1}{2}$，
 
     如图
 
-    ∵B，
+    [图]
 
-    ∴当时，由图象可知，抛物线与线段恒有一个公共点.
+    ∵B$\left(4,\frac{1}{2}\right)$，$1>\frac{1}{2}$
 
-    ∴当时，抛物线与线段恒有一个公共点.
+    ∴当$a > 0$时，由图象可知，抛物线与线段AB恒有一个公共点.
 
-    ②当时，
+    ∴当$a > 0$时，抛物线与线段AB恒有一个公共点.
 
-    ∵点的横坐标为1，则，即
+    ②当$a < 0$时，
 
-    把代入  得
+    ∵点A的横坐标为1，则$y=-\frac{1}{2}+\frac{5}{2}=2$，即$A(1,2)$
 
-    ∵抛物线与线段恰有一个公共点，
+    把$(1,2)$代入$y=ax^{2}-4ax+1(a\neq 0)$得$y = a - 4a + 1$
 
-    ∴
+    [图]
 
-    解得：
+    ∵抛物线与线段AB恰有一个公共点，
 
-    综上所述，或时，抛物线与线段恰有一个公共点，'
+    ∴$a-4a+1\leq2$
+
+    解得：$a-\frac{1}{3}$
+
+    综上所述，$a > 0$或$-\frac{1}{3} \leq a < 0$时，抛物线与线段AB恰有一个公共点，'
   knowledge_points:
   - 一次函数
   - 二次函数
@@ -857,81 +1137,73 @@ questions:
 - id: 27
   type: 解答
   score: 7
-  question: '在和中，，连接，点是的中点，连接．
+  question: '在$Rt\triangle ABC$和$Rt\triangle DBE$中，$\angle ABC=\angle EBD=90^{\circ},AB=BC,BE=BD$，连接$AE,CD$，点F是AE的中点，连接BF．
 
-    （1）如图1，当点在线段上时，线段与线段的数量关系是______；
+    [图]
 
-    （2）如图2，当点在内部时，（1）中的结论是否成立？如果成立，请证明；如果不成立，请说明理由．'
-  answer: （1） （2）成立；证明见解析
+    （1）如图1，当点E在线段AB上时，线段CD与线段BF的数量关系是______；
+
+    （2）如图2，当点E在$Rt\triangle ABC$内部时，（1）中的结论是否成立？如果成立，请证明；如果不成立，请说明理由．'
+  answer: （1）$CD = 2BF$ （2）成立；证明见解析
   solution: '【小问1详解】
 
-    ，理由如下
+    $CD = 2BF$，理由如下
 
-    如图，延长交于点，过点作，连接，则，
+    如图，延长DE交AC于点G，过点G作$GH \perp BC$，连接FG，则$\angle BII G = 90^\circ$，
 
-    ∵在和中，，
+    [图]
 
-    ∴
+    ∵在$Rt\triangle ABC$和$Rt\triangle DBE$中，$\angle ABC=\angle EBD=90^{\circ},AB=BC,BE=BD$，
 
-    ∴是等腰直角三角形，
+    ∴$\angle D=\angle C=\angle BED=\angle A=45^{\circ}$
 
-    ∴，
+    ∴$\triangle GCD$是等腰直角三角形，
 
-    ∵
+    ∴$\angle EGA = 90^\circ$，$2GH = CD$
 
-    ∴是等腰直角三角形，
+    ∵$\angle A=45^{\circ}$
 
-    又∵是的中点，
+    ∴$\triangle AEG$是等腰直角三角形，
 
-    ∴
+    又∵F是AE的中点，
 
-    ∴，
+    ∴$FG \perp AE$
 
-    ∴四边形是矩形，
+    ∴$\angle GFB = \angle ABC = \angle BHG = 90^\circ$，
 
-    ∴，
+    ∴四边形$FGHB$是矩形，
 
-    ∴，
+    ∴$GH = FB$，
 
-    故答案为：．
+    ∴$CD = 2BF$，
+
+    故答案为：$CD = 2BF$．
 
     【小问2详解】
 
-    证明：如图，延长到，使得．
+    证明：如图，延长BF到H，使得$FH = BF$．
 
-    是的中点，
+    [图]
 
-    ，
+    $\therefore F$是AE的中点，
 
-    又，
+    $\therefore AF = EF$，
 
-    ．
+    又$\because \angle 1 = \angle 2$，
 
-    ，．
+    $\triangle AFH\cong\triangle EFB(SAS)$．
 
-    ．
+    $\therefore AH = BE$，$\angle 3=\angle 4$．
 
-    ，
+    $\begin{tikzpicture}
 
-    ．
+    \fill (0,0) circle (2pt);
 
-    ，
+    \fill (-1,-1) circle (2pt);
 
-    ，
+    \fill (1,-1) circle (2pt);
 
-    ．
-
-    即．
-
-    又，
-
-    ．
-
-    ．
-
-    ，
-
-    ．'
+    \end{tikzpicture}$$AH \'
   knowledge_points:
   - 全等三角形
   - 矩形
@@ -942,61 +1214,59 @@ questions:
 - id: 28
   type: 解答
   score: 7
-  question: '在平面直角坐标系中，已知图形，点是上任意两点，我们把线段的长度的最大值称为平面图形的“宽距”，记作．
+  question: '在平面直角坐标系xOy中，已知图形S，点$P,Q$是S上任意两点，我们把线段$\overline{PQ}$的长度的最大值称为平面图形S的“宽距”，记作$d(S)$．
 
     （1）边长为1的正方形的宽距为______；
 
-    （2）已知点，连接所形成的图形为．
+    （2）已知点$A(-1,0), B(1,0), C(m,n)$，连接$AB, BC, CA$所形成的图形为W．
 
-    ①若，直接写出的取值范围；
+    ①若$d(W)=2$，直接写出n的取值范围；
 
-    ②已知点，以为圆心，1为半径作圆．若点为上任意一点时，都有，直接写出的取值范围．'
-  answer: （1） （2）① ②或
+    ②已知点$M(t,2)$，以M为圆心，1为半径作圆．若点C为$\odot M$上任意一点时，都有$5 \leq d(W) \leq 8$，直接写出t的取值范围．'
+  answer: （1）$\sqrt{2}$ （2）①$-\sqrt{3} \leq n \leq \sqrt{3}$②$4\sqrt{2}-1\leqslant 3\sqrt{5}-1$或$-3\sqrt{5}\leqslant s\leqslant 1-4\sqrt{2}$
   solution: '【小问1详解】
 
-    解：根据新定义可得，长为1的正方形的宽距为对角线的长度，即，
+    解：根据新定义可得，长为1的正方形的宽距为对角线的长度，即$\sqrt{2}$，
 
-    故答案为：．
+    故答案为：$\sqrt{2}$．
 
     【小问2详解】
 
-    解：①∵，
+    解：①∵$d(W)=2$，
 
-    ∴
+    ∴$\left\{\begin{array}{l} BC \leq 2 \\ AC \leq 2 \end{array}\right.$
 
-    如图，在以为圆心，为半径的圆内公共部分，
+    如图，C在以$A,B$为圆心，$2$为半径的圆内公共部分，
 
-    ∴当最大时，是等边三角形，
+    [图]
 
-    ∴
+    ∴当$\left| n \right|$最大时，$V_{ABC}$是等边三角形，
 
-    ∴
+    ∴$OC = BC \sin 60^\circ = 2 \times \frac{\sqrt{3}}{2} = \sqrt{3}$
 
-    ②∵，点，以为圆心，1为半径作圆．若点为上任意一点时，都有，
+    ∴$-\sqrt{3} \leq n \leq \sqrt{3}$
 
-    ∴当时，点或到上的点距离最大为，最小值为
+    ②∵$A(-1,0),B(1,0)$，点$M(t,2)$，以M为圆心，1为半径作圆．若点C为$\odot M$上任意一点时，都有$5 \leq d(W) \leq 8$，
 
-    当时，如图，
+    ∴当$d(W)$$=8$时，点A或B到$\odot M$上的点距离最大为$8$，最小值为$5$
 
-    以为圆心和为半径作，
+    当$t<0$时，如图，
 
-    当与为半径的圆内切时取得最大值，当和为半径的圆外切时，取得最小值，
+    以B为圆心$5$和$7$为半径作$\odot B$，
 
-    设与为半径圆内切于点，与为半径的圆内切于点，
+    当$\odot M$与$7$为半径的圆内切时取得最大值，当和$5$为半径的圆外切时，取得最小值，
 
-    ∴
+    设$\odot M_{1}$与$7$为半径$[公式]$圆内切于点$N_{1}$，$\mathcal{M}_{2}$与$5$为半径的圆内切于点$N_{2}$，
 
-    ∴，则此时
+    ∴$M_{1}B=8-1=7$
 
-    同理可得，，则
+    ∴$M_{T}=\sqrt{49-2^{2}}=3\sqrt{5}$，则此时$t=1-3\sqrt{5}$
 
-    ∴此时,
+    同理可得，$BM_{2}=5+1=6$，则$M_{1}T=\sqrt{6^{2}-2^{2}}=4\sqrt{2}$
 
-    ∴
+    ∴此时$t=1-4\sqrt{2}$,
 
-    当时，根据对称性，同理可得
-
-    综上所述，或'
+    ∴$-3\sqrt{5}\leqsl'
   knowledge_points:
   - 勾股定理
   - 正方形

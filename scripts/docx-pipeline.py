@@ -268,20 +268,39 @@ def get_image_hash(img_path):
 
 
 def load_ocr_cache():
-    """加载 OCR 缓存"""
+    """加载 OCR 缓存（容错：文件损坏时尝试修复）"""
     cache_file = CACHE_DIR / "ocr-results.json"
     if cache_file.exists():
-        with open(cache_file, "r") as f:
-            return json.load(f)
+        try:
+            with open(cache_file, "r") as f:
+                return json.load(f)
+        except json.JSONDecodeError:
+            # 文件被截断，尝试修复
+            print("  ⚠️ OCR 缓存文件损坏，尝试修复...")
+            with open(cache_file, "r") as f:
+                content = f.read()
+            last_comma = content.rfind(",")
+            if last_comma > 0:
+                try:
+                    data = json.loads(content[:last_comma] + "\n}")
+                    print(f"  ✅ 缓存修复成功，恢复 {len(data)} 条")
+                    with open(cache_file, "w") as f:
+                        json.dump(data, f, ensure_ascii=False, indent=2)
+                    return data
+                except json.JSONDecodeError:
+                    pass
+            print("  ❌ 缓存修复失败，重新开始")
+            return {}
     return {}
 
 
 def save_ocr_cache(cache):
-    """保存 OCR 缓存"""
+    """保存 OCR 缓存（线程安全：先拷贝再序列化）"""
     CACHE_DIR.mkdir(parents=True, exist_ok=True)
     cache_file = CACHE_DIR / "ocr-results.json"
+    snapshot = dict(cache)  # 浅拷贝，避免并发迭代时 dict 被修改
     with open(cache_file, "w") as f:
-        json.dump(cache, f, ensure_ascii=False, indent=2)
+        json.dump(snapshot, f, ensure_ascii=False, indent=2)
 
 
 def ocr_single_image(img_path, cache):

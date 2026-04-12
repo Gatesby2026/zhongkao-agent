@@ -1,0 +1,1517 @@
+# ============================================================
+# 2025年北京昌平区中考数学二模试卷 — 逐题分析
+# ============================================================
+# 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
+# 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
+# 满分：100分  时长：120分钟
+
+year: 2025
+district: 昌平区
+exam_type: 二模
+subject: 数学
+full_score: 100
+duration_minutes: 120
+total_questions: 28
+structure: 8选择(16分) + 8填空(16分) + 12解答(68分)
+questions:
+- id: 1
+  type: 选择
+  score: 2
+  question: '如图是某几何体的三视图，该几何体是（）
+
+    [图]
+
+    A.圆柱B.圆锥C.三棱柱D.三棱锥'
+  answer: C
+  solution: '解：∵该几何体的主视图和左视图都是矩形，俯视图是三角形，
+
+    ∴符合$[公式]$几何体是三棱柱，
+
+    故选：C．'
+  knowledge_points:
+  - 综合
+  module: circles
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 2
+  type: 选择
+  score: 2
+  question: '如图，$AB \parallel CD$，直线EF分别与AB，CD交于点E，F．若$\angle1=110^{\circ}$，则$\angle 2$的度数为（）
+
+    [图]
+
+    A.$30^\circ$B.$45^\circ$C.$70^\circ$D.$90^\circ$'
+  answer: C
+  solution: '解：∵$AB \parallel CD$，$\angle1=110^{\circ}$，
+
+    ∴$\triangle CFE \quad 110^\circ$，
+
+    ∴$\angle CFE=70^\circ$．
+
+    故选：C．'
+  knowledge_points:
+  - 平行线
+  module: triangles
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 3
+  type: 选择
+  score: 2
+  question: '实数$a,b,c,d$在数轴上的对应点位置如图所示，若其中一个数是$-\sqrt{2}$，则这个数可能是（）
+
+    [图]
+
+    A.aB.bC.cD.d'
+  answer: B
+  solution: '解：∵$1<\sqrt{2}<2$，
+
+    ∴$-2 < -\sqrt{2} < -1$，
+
+    观察数轴可知，$-2 < b < -1$，
+
+    ∴$-\sqrt{2}$可能是b，
+
+    故选：B．'
+  knowledge_points:
+  - 综合
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 4
+  type: 选择
+  score: 2
+  question: '下列运算正确的是（）
+
+    A.$7a + 2b = 9ab$B.$(a-b)^{2}=a^{2}-b^{2}$C.$(-3a)^{n}=-9a^{2}$D.$a^{6}+a^{2}=a^{4}$'
+  answer: D
+  solution: '解：A.$7a$与$2b$不是同类项，不能合并，原选项计算错误，不符合题意；
+
+    B.$(a-b)^{2}=a^{2}-2ab+b^{2}$，原选项计算错误，不符合题意；
+
+    C.$(-3a)^{3}=-27a^{3}$，原选项计算错误，不符合题意；
+
+    D.$a^{6}+a^{2}=a^{4}$，选项计算正确，符合题意；
+
+    故选：D．'
+  knowledge_points:
+  - 综合
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 5
+  type: 选择
+  score: 2
+  question: '昌平作为北京国际科创中心建设的重要承载区，已经汇集69个国家级、省部级重点实验室，210个工程技术中心，全国重点实验室数量占全市总量的三分之一以上，并通过有组织的科技成果转化，使得近三年的技术合同成交额达1319亿元．其中131900000000用科学记数法记作（）
+
+    A.$1319\times10^{8}$B.$1.319\times10^{8}$C.$1319\times10^{11}$D.$1.319\times10^{11}$'
+  answer: D
+  solution: '解：$1.31900000000=1.319\times10^{11}$．
+
+    故选：D．'
+  knowledge_points:
+  - 科学记数法
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 6
+  type: 选择
+  score: 2
+  question: '不透明的袋子中有2个红色小球和2个黄色小球，小球除颜色外无其他差别．从中随机摸取2个小球，则这2个小球颜色相同的概率是（）
+
+    A.$\frac{1}{2}$B.$\frac{1}{3}$C.$\frac{2}{3}$D.$\frac{1}{4}$'
+  answer: B
+  solution: '解：用列表法把所有等可能结果表示如下，
+
+    红1
+
+    红2
+
+    黄1
+
+    黄2
+
+    红1
+
+    （红1，红2）
+
+    （红1，黄1）
+
+    （红1，黄2）
+
+    红2
+
+    （红2，红1）
+
+    （红2，黄1）
+
+    （红2，黄2）
+
+    黄1
+
+    （黄1，红1）
+
+    （黄1，红2）
+
+    （黄1，黄2）
+
+    黄2
+
+    （黄2，红1）
+
+    （黄2，红2）
+
+    （黄2，黄1）
+
+    共有12种等可能结果，其中颜色相同的结果有4种，
+
+    ∴颜色相同的概率是$\frac{4}{12}=\frac{1}{3}$，
+
+    故选：B．'
+  knowledge_points:
+  - 概率
+  - 树状图
+  - 列表法
+  module: statisticsAndProbability
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 7
+  type: 选择
+  score: 2
+  question: '在平面直角坐标系xOy中，函数$y = -x + 1$的图象与x轴，y轴交于点$A, B$，则下列描述正确的是（）
+
+    A.$\triangle OAB$为等腰直角三角形B.点A坐标为$(-1,0)$
+
+    C.图象经过第一、三、四象限D.点O到$y = -x + 1$的图象距离为1'
+  answer: A
+  solution: '解：在平面直角坐标系xOy中，函数$y = -x + 1$的图象与x轴，y轴交于点$A, B$，
+
+    当$x = 0$时，$y = 1$，则$B(0,1)$；当$y = 0$时，$x = 1$，则$A(1,0)$；
+
+    A、$\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$$A(1,0)$、$B(0,1)$，
+
+    $\ldots OA = OB$，且$\angle AOB=90^\circ$，则$\triangle OAB$为等腰直角三角形，
+
+    故该选项正确，符合题意；
+
+    B、$\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$$A(1,0)$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$点A坐标为$(-1,0)$错误，不符合题意；
+
+    C、$\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$在平面直角坐标系xOy中，函数$y = -x + 1$的图象与x轴，y轴交于点$A, B$，
+
+    $\therefore k = -1 < 0$，且$A(1,0)$、$B(0,1)$，则图象经过第一、二、四象限，
+
+    故该选项错误，不符合题意；
+
+    D、过点O作$OC \perp AB$于点C，如图所示：
+
+    [图]
+
+    $\therefore \triangle AOB$是等腰直角三角形，$OA = OB = 1$，
+
+    $\begin{tikzp'
+  knowledge_points:
+  - 一次函数
+  - 勾股定理
+  - 坐标系
+  module: triangles
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 8
+  type: 选择
+  score: 2
+  question: '连接正五边形$ABCDE$的对角线，形成如图的图形，中心为点O．BD与CE交于点F，连接OA与BE交于点G，连接OB，OC，OD，OE．
+
+    [图]
+
+    观察后得出如下结论：
+
+    ①$\angle CAD=30^\circ$；
+
+    ②连接OF，则有$\overline{OG} + \overline{OF} = \overline{AG}$；
+
+    ③$\angle CFD=2\angle COD$；
+
+    ④连接BC，则有$BC = BF$．
+
+    上述结论中，所有正确结论的序号是（）
+
+    A.①②B.②④C.②③D.①④'
+  answer: B
+  solution: '如图：在GA上截取$GH = OG$，
+
+    [图]
+
+    正五边形内角和为$(5-2)\times180^{\circ}=540^{\circ}$，
+
+    ∴$\angle BAF=\angle ABC=\angle BCD=\angle CDE=\angle DEA=108^\circ$．
+
+    因为$ABCDE$是正五边形，
+
+    所以$CD = DE = EA = AB = BC$，$\angle CAD = \frac{1}{2} \angle COD$，
+
+    正五边形中心角$\angle CGD = \frac{360^{\circ}}{5} - 72^{\circ}$，$\angle CAD=\frac{1}{2}\angle COD=36^{\circ}=30^{\circ}$，故①错误．
+
+    因为五边形$ABCDE$$[公式]$正五边形，OA平分$\angle BAE$，OB平分$\angle ABC$，$\angle OAB=\angle OBA=54^\circ$，$OA = OB$．
+
+    $AB = AE$，在$\triangle ABE$中，根据三角形内角和定理，$\angle ABE = \angle AEB = \frac{180^{\circ} - \angle BAE}{2} = \frac{180 - 108}{2} = 36^{\circ}$．
+
+    $\angle AGB=180^{\circ}-\angle OAB-\angle ABE=180-54-36=90^{\circ}$，即$\angle OGB=90^\circ$．
+
+    在$VBGH$和$\triangle BGO$中：
+
+    $GH = OG \\
+
+    \angle BGH = \angle BGO = 90^\circ \\
+
+    BG = BG$
+
+    ∴$\triangle BGH \cong \triangle BGO (SAS)$，'
+  knowledge_points:
+  - 圆周角
+  - 全等三角形
+  - 轴对称
+  module: triangles
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 9
+  type: 填空
+  score: 2
+  question: 若$\sqrt{2x+3}$在实数范围内有意义，则实数x的取值范围是________．
+  answer: $x-\frac{3}{2}$##x≥-1.5
+  solution: '要使$\sqrt{2x+3}$在实数范围内有意义
+
+    则$2x+3$$\pi$0
+
+    解得：x$\pi$$-\frac{3}{2}$
+
+    故答案为：x$\pi$$-\frac{3}{2}$'
+  knowledge_points:
+  - 综合
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 10
+  type: 填空
+  score: 2
+  question: '如图，在平面直角坐标系xOy中，点A的坐标为$(1,3)$，点B的坐标为$(4,1)$．将线段AB沿某一方向平移后得到$A''B''$，若点A的对应点$A''$的坐标为$(-1,0)$．则点B的对应点$B''$的坐标为____________．
+
+    [图]'
+  answer: $(2,-2)$
+  solution: '解：由$A(1,3)$平移到$A(-1,0)$可知：
+
+    A点先向左平移2个单位，再向下平移3个单位，
+
+    ∴$4-2=2$，$1-3=-2$
+
+    ∴则点$B(4,1)$的对应点$B''$的坐标为$(2,-2)$，
+
+    故答案为：$(2,-2)$'
+  knowledge_points:
+  - 平移
+  - 坐标系
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 11
+  type: 填空
+  score: 2
+  question: 已知命题“若$a > b$，则$ac > bc$”是假命题，则c的值可以是____________．
+  answer: 0（答案不唯一）
+  solution: '解：∵命题“若$a > b$，则$ac > bc$”是假命题，
+
+    ∴当$a > b$时，$ac \leq bc$，
+
+    ∴$c \leq 0$，
+
+    ∴c的值可以为0，
+
+    故答案为：0（答案不唯一）．'
+  knowledge_points:
+  - 不等式
+  module: equationsAndInequalities
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 12
+  type: 填空
+  score: 2
+  question: 在平面直角坐标系xOy中，反比例函数$y=\frac{k}{x}(k\neq0)$的图象经过点$(1,2)$，$(x_1,y_1)$，$\left(x_{2},y_{2}\right)$．若$x_{1}<x_{2}<0$，则$y_{1}$____________$y_{2}($填“>”，“=”或“<”)．
+  answer: $\gt$
+  solution: '解：$\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$函数$y=\frac{k}{x}(k\neq0)$的图象经过点$(1,2)$，
+
+    $k=1\times2=2>0$
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$反比例函数图象在第一，三象限，y随x的增大而减小，
+
+    $\because x_{1}<x_{2}<0$，
+
+    $\therefore (x_1,y_1)$，$(x_{2},y_{2})$在第三象限，
+
+    $\therefore y_1 > y_2$．
+
+    故答案为：$\gt$．'
+  knowledge_points:
+  - 反比例函数
+  - 坐标系
+  module: functions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 13
+  type: 填空
+  score: 2
+  question: 某徒步团队由七人组成，每个人的负重为：21，17，16，20，19，13，17（单位：$\mathrm{kg})$，此时七人负重数据的方差为$s_{1}^{2}$．出发时又为每位成员补充了$2\mathrm{kg}$饮用水，补充饮用水后负重数据的方差为$S_{2}^{2}$，则$s_{1}^{2}$______$S_{2}^{2}$（填“>”，“=”或“<”）．
+  answer: ＝
+  solution: '∵每个人的负重为：21，17，16，20，19，13，17，出发时又为每位成员补充了$2\mathrm{kg}$饮用水，
+
+    ∴相当于每个数据都加上$2$．
+
+    设原数据$x_1,x_2,\cdots,x_7$，平均数为$\overline{x}$，方差为$S_{1}^{2}$；
+
+    ∴新数据$y_{i}=x_{i}+2$，新数据平均数$\bar{y}=x+2$．
+
+    新数据方差$s_{j}^{2}=\frac{1}{7}\left[\left(x_{1}-\bar{x}\right)^{2}+\left(x_{2}-\bar{x}\right)^{2}+\cdots+\left(x_{7}-\bar{x}\right)^{2}\right]$
+
+    $=\frac{1}{2}\left\{\left[x_{1}+2-(\bar{x}+2)\right]^{2}+\left[x_{2}+2-(\bar{x}+2)\right]^{2}+\cdots+\left[x_{n}+2-(\bar{x}+2)\right]^{2}\right\}$．
+
+    $=\frac{1}{k}\left[(x_{1}-\overline{x})^{2}+(x_{2}-\overline{x})^{2}+\cdots+(x_{k}-\overline{x})^{2}\right]$
+
+    $= s_{1}^{2}$；
+
+    ∴$S_{1}^{2}=S_{2}^{2}$．
+
+    故答案为：$=$．'
+  knowledge_points:
+  - 方差
+  module: statisticsAndProbability
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 14
+  type: 填空
+  score: 2
+  question: '如图，以AB为直径的$\odot\odot$上有两点C，D．若$\angle AOC = 40^\circ$，则$\angle BDC$的度数为____________$\bigcirc$．
+
+    [图]'
+  answer: '70'
+  solution: '解：∵$\angle AOC = 40^\circ$，
+
+    ∴$\angle COB = 180^\circ - \angle AOC = 140^\circ = 2\angle BDC$，
+
+    ∴$\angle BDC = 70^\circ$，
+
+    故答案为：70．'
+  knowledge_points:
+  - 邻补角
+  - 圆周角
+  module: circles
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 15
+  type: 填空
+  score: 2
+  question: '如图，一个三角形纸片$\triangle ABC, AD$为BC边上的高，折叠纸片使得点A与D重合，折痕为MN．若$V_{ABC}$的面积为8，则$\triangle AMN$的面积为____________．
+
+    [图]'
+  answer: '2'
+  solution: '解：设$AD,MN$交于点E，
+
+    [图]
+
+    ∵折叠，
+
+    ∴MN垂直平分AD，
+
+    ∴$AE = \frac{1}{2}AD$，
+
+    ∵AD为BC边上的高，
+
+    ∴$AD \perp BC$，
+
+    ∴$MN \parallel BC$，
+
+    ∴$\triangle AMN \sim \triangle ABC$，
+
+    ∴$\frac{S_{\triangle AMN}}{S_{\triangle ABN}} = \left( \frac{AE}{AD} \right)^2 = \frac{1}{4}$，
+
+    ∵$V_{ABC}$的面积为8，
+
+    ∴$\triangle AMN$的面积为2；
+
+    故答案为：2．'
+  knowledge_points:
+  - 相似三角形
+  module: triangles
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 16
+  type: 填空
+  score: 2
+  question: '某木材加工厂配备有M型和N型两款木材切割机，两款切割机每次可加工的木材尺寸和数量如下表所示：
+
+    木材尺寸
+
+    切割机型号
+
+    大尺寸
+
+    中尺寸
+
+    小尺寸
+
+    M
+
+    2块／次
+
+    4块／次
+
+    8块／次
+
+    N
+
+    不能加工
+
+    3块／次
+
+    6块／次
+
+    其中加工1块大尺寸木材的位置，可以替换为加工2块中尺寸木材或4块小尺寸木材，加工1块中尺寸木材的位置可以替换为加工2块小尺寸木材．例如：M型切割机可以一次加工2块大尺寸木材，也可以一次加工1块大尺寸、1块中尺寸和2块小尺寸木材．某批次木材共有3块大尺寸，7块中尺寸，12块小尺寸木材．
+
+    （1）加工这批木材，M款切割机至少要使用____________次；
+
+    （2）若M型切割机加工一次费用为50元，N型切割机加工一次费用为35元，则加工完这批木材所需费用最少____________元．'
+  answer: ①.2②.235
+  solution: '解：∵需要加工3块大尺寸木材，且只有M款切割机可加工大尺寸木材，
+
+    设加工这批木材，M款切割机使用x次，
+
+    则$2x\quad3$，解得：$x-\frac{3}{2}$，
+
+    ∵x为正整数，
+
+    ∴加工这批木材，M款切割机至少使用2次，
+
+    故答案为：2；
+
+    （2）∵某批次木材共有3块大尺寸，7块中尺寸，12块小尺寸木材．
+
+    全部转化为小尺寸木材，
+
+    则需要加工小尺寸木材$=3\times2\times2+7\times2+12=38$块，
+
+    设M款切割机需要用m次，N款切割机需要用n次，
+
+    则$8m + 6n = 38$，即$4m+3n=19$，
+
+    ∵$m \geqslant 2$，$m,n$均为正整数，
+
+    ∴有以下方案：$m=2,n=4$，此时加工成本为$2x \times 50 + 4x \times 35 = 240$元；
+
+    $m = 3, n = 3$，此时加工成本为$3\times50+3\times35=255$元；
+
+    $m=4,n=1$，此时加工成本为$4\times50+1\times35=235$元；
+
+    $m=5,n=0$，此时加工成本为$5\times50+0.35=250$元；
+
+    ∴加工这批木材成本最低为$235$元，
+
+    故答案为：235．'
+  knowledge_points:
+  - 不等式
+  module: equationsAndInequalities
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 17
+  type: 解答
+  score: 5
+  question: 计算：$\sqrt{12}+6\tan30^{\circ}+|1-\sqrt{3}|+(\pi-5)^{0}$．
+  answer: $5\sqrt{3}$
+  solution: '解：原式$2\sqrt{3}+6\times\frac{\sqrt{3}}{3}+(-1+\sqrt{3})+1$
+
+    $=5\sqrt{3}$'
+  knowledge_points:
+  - 三角函数
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 18
+  type: 解答
+  score: 5
+  question: '解不等式组$\begin{cases}
+
+    |3x-1|\leq8\\
+
+    2x+8<5x+11
+
+    \end{cases}$，并将解集在数轴上表示出来．
+
+    $\begin{tikzpicture}
+
+    \draw[->, thick] (-3.5,0) -- (4.5,0);
+
+    \foreach \x in {-3,-2,-1,0,1,2,3,4}
+
+    \draw (\x,-0.1) -- (\x,0.1) node[below] {\x};
+
+    \end{tikzpicture}$'
+  answer: $-1 < x \leq 3$，数轴见解析
+  solution: '解：原不等式组为$\begin{cases}
+
+    3x-1\leq8\textcircled{1}\\
+
+    2x+8<5x+1\textcircled{2}
+
+    \end{cases}$
+
+    解不等式①，得$x \leq 3$．
+
+    解不等式②，得$x > -1$．
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$原不等式组的解集为$-1 < x \leq 3$．
+
+    [图]'
+  knowledge_points:
+  - 不等式
+  - 不等式组
+  module: equationsAndInequalities
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 19
+  type: 解答
+  score: 5
+  question: '已知关于x的一元二次方程$x^{2}-2x+(k+1)=0$有实根．
+
+    （1）求k的取值范围；
+
+    （2）当k取最大整数时，求该方程的两个根．'
+  answer: （1）$k \leq 0$ （2）$x_{1}=x_{2}=1$
+  solution: '【小问1详解】
+
+    解：$\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$一元二次方程有实根，
+
+    $WD=b^{2}-4ac\otimes 6$，
+
+    即$(-2)^{2}-4\times1\times(k+1)\geq0$，
+
+    $\begin{pmatrix} -4k & 0 \end{pmatrix}$，
+
+    $k \leq 0$；
+
+    【小问2详解】
+
+    解：$\therefore k$取最大整数，
+
+    $\therefore k = 0$，
+
+    原方程为$x^{2}-2x+1=0$，
+
+    ∴$(x-1)^2=0$，
+
+    解得：$x_{1}=x_{2}=1$．'
+  knowledge_points:
+  - 一元二次方程
+  - 根的判别式
+  - 不等式
+  module: equationsAndInequalities
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 20
+  type: 解答
+  score: 5
+  question: '如图，在平行四边形$ABCD$中，$AC \perp BC$于点C，延长BC到点E，使得$CE = BC$，连接AE交CD于点F，连接DE．
+
+    [图]
+
+    （1）求证：四边形$ACED$是矩形；
+
+    （2）连接BF．若$BC = 2, \tan \angle AEC = 2$，求BF．'
+  answer: （1）见解析（2）$\sqrt{13}$
+  solution: '【小问1详解】
+
+    证明：$\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$四边形$ABCD$是平行四边形，
+
+    $\therefore AD=BC,AD\parallel BE$．
+
+    $\because BC = CE$，
+
+    $\therefore CE = AD$．
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$四边形$ACED$为平行四边形．
+
+    $\angle ACE = 90^\circ$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$平行四边形$ACED$为矩形．
+
+    【小问2详解】
+
+    解：过点F作$FG \perp CE$于点G．
+
+    [图]
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$四边形$ACED$是矩形，
+
+    $\therefore CF = EF$，
+
+    $CG = EG = \frac{1}{2} BC$．
+
+    $BG = CG + BC = 3$．
+
+    在Rt$\triangle FGE$中，$\angle FGE = 90^\circ$，
+
+    $\tan\angle AEC=2-\frac{FG}{EG}$，
+
+    $\therefore FG = 2$．
+
+    在Rt$\triangle BGF$中，
+
+    $\angle '
+  knowledge_points:
+  - 勾股定理
+  - 平行四边形
+  - 矩形
+  module: triangles
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 21
+  type: 解答
+  score: 5
+  question: 北京市中小学课间延长为15分钟后，某校为丰富学生的课间活动，准备购买一批课外读物．一班买4本《三国演义》与3本《红楼梦》共用190元，二班买3本《三国演义》与6本《红楼梦》共用255元．求《三国演义》和《红楼梦》每本多少元．
+  answer: 《三国演义》每本$25$元，《红楼梦》每本$30$元
+  solution: '解：设《三国演义》每本x元，《红楼梦》每本y元
+
+    根据题意列方程组，得：$\begin{aligned}
+
+    &4x + 3y = 190 \quad \text{(1)} \\
+
+    &3x + 6y = 255 \quad \text{(2)}
+
+    \end{aligned}$，
+
+    由$①\times2$得：$8x+6y=380$③，
+
+    由$③-②$得：$5x=125$，
+
+    解得：$x = 25$，
+
+    把$x = 25$代入①，得$4\times25+3y=190$
+
+    解得：$y = 30$．
+
+    答：《三国演义》每本$25$元，《红楼梦》每本$30$元．'
+  knowledge_points:
+  - 二元一次方程组
+  module: equationsAndInequalities
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 22
+  type: 解答
+  score: 5
+  question: '在平面直角坐标系xOy中，一次函数$x_{1}=kx+b(k\neq 0)$的图象是由$y=x$的图象平移得到，且经过点$(2,1)$．
+
+    （1）求一次函数的表达式；
+
+    （2）已知一次函数$y_{2}=-mx(m\neq0)$，当$x>2$时，对于x的每一个值都有$y_{2}<2y_{1}$，直接写出m的取值范围．'
+  answer: （1）$y_{1}=x-1$ （2）$m \leqslant 1$且$m \neq 0$
+  solution: '【小问1详解】
+
+    解：$\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$一次函数$x_{1}=kx+b(k\neq 0)$的图象是由$y=x$的图象平移得到，
+
+    $\therefore y_{1}=x+b$，
+
+    把点$(2,1)$代入可得$1=2+b$，
+
+    解得$b = -1$，
+
+    所以一次函数的表达式为$y_{1}=x-1$
+
+    【小问2详解】
+
+    解：设$y_{3}=2y_{1}=2x-2$，
+
+    当$x=2$时，$y_{3}=2$，
+
+    把$(2,2)$代入$y_{2}=mx$，可得$2 = 2m$，解得$m = 1$，
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$当$x>2$时，对于x的每一个值都有$y_{2}<2y_{1}$，
+
+    即当$x>2$时，对于x的每一个值都有$y_{2}<y_{3}$，
+
+    结合图象可得$m \leqslant 1$且$m \neq 0$．
+
+    [图]'
+  knowledge_points:
+  - 一次函数
+  - 平移
+  - 坐标系
+  module: functions
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 23
+  type: 解答
+  score: 6
+  question: '某班级为组建“篮球班班赛”的代表队，对报名学生进行选拔，其中一项是“五个位置定点投篮”．以下是对甲、乙、丙三位同学投篮数据进行的整理、描述和分析：
+
+    a．甲、乙、丙三位同学的投篮进球数条形图：
+
+    [图]
+
+    b．甲、乙、丙三位同学投篮数据的中位数和总进球数如下：
+
+    甲
+
+    乙
+
+    丙
+
+    中位数
+
+    6
+
+    m
+
+    5
+
+    总进球数
+
+    30
+
+    29
+
+    30
+
+    根据以上信息，回答下列问题：
+
+    （1）补全条形统计图，表中m的值为_____________；
+
+    （2）从甲、乙两位同学的进球数条形图中可得，_____________发挥的稳定性较好（填“甲”或“乙”）；
+
+    （3）若五个位置投篮命中一次对应的得分如下表所示：
+
+    位置
+
+    位置一
+
+    位置二
+
+    位置三
+
+    位置四
+
+    位置五
+
+    命中分值
+
+    1
+
+    2
+
+    2
+
+    2
+
+    3
+
+    则从甲、丙同学中选拔总分高的同学进入班队，应选_____________（填“甲”或“丙”）．'
+  answer: （1）见解析，$m=7$； （2）乙（3）丙
+  solution: '【小问1详解】
+
+    解：$\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$丙同学的总进球数为30，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$在位置三的进球数为$30-8-8-5-4=5$，
+
+    补全条形统计图如下：
+
+    [图]
+
+    由条形统计图可知，乙同学在五个位置的投篮进球数分别为7、7、7、4、4，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$乙同学投篮数据的中位数$m=7$；
+
+    【小问2详解】
+
+    解：$\frac{1}{2}x_{4}= \frac{1}{2}\times(9+7+6+5+3)=6$，$\bar{x}_{c}=\frac{1}{5}\times(7+7+7+4+4)=5.8$，
+
+    $S_{\triangle}=\frac{1}{5}\left[(9-6)^{2}+(7-6)^{2}+(6-6)^{2}+(5-6)^{2}+(3-6)^{2}\right]-4$，
+
+    $S_{\triangle}=\frac{1}{2}\left[(7-5.8)\times3+(4-5.8)\times2\right]=2.16$，
+
+    $\therefore S_{\triangle 1}^{2} > S_{\triangle 2}^{2}$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) c'
+  knowledge_points:
+  - 统计
+  - 中位数
+  - 方差
+  - 条形统计图
+  module: statisticsAndProbability
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 24
+  type: 解答
+  score: 6
+  question: '如图，在$Rt\triangle ABC$中，$\angle A = 90^{\circ}$，过BC中点O作$\odot\odot$与AB相切于点D，交BC于点E，F，交AC于点M，N．
+
+    [图]
+
+    （1）求证：$AD = BD$；
+
+    （2）若$AB = 6, CF = 1$，求MN的长．'
+  answer: （1）见解析（2）$MN = 2\sqrt{7}$
+  solution: '【小问2详解】
+
+    解：过点O作$OG \perp MN$于点G，连接ON．
+
+    [图]
+
+    设$\odot\odot$的半径为r，则$OE=OF=r,OB=OC=r+1$．
+
+    $\because AB = 6$，
+
+    $\therefore AD=BD=3$．
+
+    在$Rt\triangle OBD$中，
+
+    $\angle ODB = 90^\circ$，
+
+    $BD^{2}+CD^{2}=OB^{2}$．
+
+    $...r^{2}+r^{2}=(r+1)^{2}$．
+
+    解得：$r = 4$．
+
+    $\because MN$为$\odot\odot$的弦，
+
+    $\ldots MG = NG$．
+
+    $\angle A=\angle ADO=\angle AGO=90^{\circ}$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$四边形$ADOG$为矩形．
+
+    $OG = AD = 3$．
+
+    在$\mathrm{Rt}\triangle OGN$中，
+
+    $\angle OGN = 90^\circ$，
+
+    $\therefore GN=\sqrt{NO^{2}-OG^{2}}=\sqrt{7}$．
+
+    $\therefore MN = 2\sqrt{7}$．'
+  knowledge_points:
+  - 垂径定理
+  - 切线
+  - 勾股定理
+  - 矩形
+  module: triangles
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 25
+  type: 解答
+  score: 6
+  question: '某次物理实验中，探究弹簧所挂物体质量m（单位：kg）与弹簧伸长长度l（单位：cm）之间的关系．现取A，B两种型号的弹簧各一个进行实验，当弹簧所挂物体质量为m时，记录A型弹簧和B型弹簧的伸长长度$l_{A}$和$l_{\mathrm{B}}$，数据如下：
+
+    所挂物体质量m（kg）
+
+    0
+
+    1
+
+    2
+
+    3
+
+    4
+
+    5
+
+    6
+
+    7
+
+    8
+
+    9
+
+    10
+
+    A型弹簧伸长长度$l_{A}(\mathrm{cm})$
+
+    0
+
+    $2.5$
+
+    5
+
+    $7.5$
+
+    10
+
+    $12.5$
+
+    15
+
+    $17.5$
+
+    20
+
+    $22.5$
+
+    25
+
+    B型弹簧伸长长度$l_{B}(\mathrm{cm})$
+
+    0
+
+    1
+
+    2
+
+    3
+
+    4
+
+    5
+
+    6
+
+    $8.13$
+
+    $12.28$
+
+    $18.45$
+
+    $26.64$
+
+    通过分析数据发现，可以用函数刻画$l_{A}$与$m,l_{B}$与m之间的关系，回答下列问题：
+
+    （1）在给出的平面直角坐标系中，已有$l_{A}$的函数图象，请补全$l_{B}$的函数图象；
+
+    [图]
+
+    （2）$l_{A}$与m的关系式为____________$(0 \leq m \leq 10)$
+
+    （3）重新取$A、B$弹簧各一个，再次进行实验．在A型弹簧上挂一些物体时伸长长度为$10cm$，结合函数图象回答：
+
+    ①这些重物的质量为____________kg；
+
+    ②若将一部分物体从A型弹簧卸下，挂到B型弹簧上（B型弹簧上原始无重物），恰使得两个弹簧伸长长度一致，则需要挪动的物体质量约为____________kg．'
+  answer: （1）见详解（2）$l_{A}=2.5m$ （3）①4，②$\frac{20}{7}$
+  solution: '【小问1详解】
+
+    解：补全$l_{B}$的函数图象如图：
+
+    [图]【小问2详解】
+
+    解：根据图象可得$l_{A}$与m是正比例函数，
+
+    设$l_{A}$与m的关系式为$l_{A}=km$，
+
+    代入$(2,5)$可得$5 = 2k$，解得：$k=2.5$，
+
+    ∴$l_{A}=2.5m$；
+
+    【小问3详解】
+
+    解：①将$l_{1}=2.5m=10$时，$m = 4$，
+
+    即这些重物的质量为$4kg$；
+
+    ②根据图象可得当$0<x\leq6$，$l_{B}$与m是正比例函数，
+
+    设$l_{B}$与m的关系式为$l_{B}=k''m$，
+
+    代入$(5,5)$可得$5 = 5k''$，解得：$k''=1$，
+
+    ∴$l_{B}=m$；
+
+    设需要挪动的物体质量约为xkg，
+
+    则$2.5(4-x)=x$，
+
+    解得：$x = \frac{20}{7}$．'
+  knowledge_points:
+  - 正比例函数
+  - 坐标系
+  module: functions
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 26
+  type: 解答
+  score: 6
+  question: '在平面直角坐标系xOy中，已知抛物线$y = x^2 - 2mx$．
+
+    （1）写出抛物线的对称轴（用含m的式子表示）；
+
+    （2）若点$A(-1,0),B(4,0)$，抛物线$y = x^2 - 2mx$与线段AB只有一个交点，求m的取值范围；
+
+    （3）$M\left(1-m,y_{1}\right),N\left(m,y_{2}\right)$是抛物线$y = x^2 - 2mx$上两点，若$\left| x_{1}-y_{2}\right| \leq 2$，直接写出m取值范围．'
+  answer: （1）对称轴为$x = m$ （2）$m<-\frac{1}{2}$或$m = 0$或$m > 2$ （3）$1-\frac{\sqrt{2}}{2}\leqslant m\leqslant 1+\frac{\sqrt{2}}{2}$
+  solution: '【小问1详解】
+
+    解：对称轴为$x=-\frac{-m}{2\times1}=m$；
+
+    【小问2详解】
+
+    解：令$y = 0$，$0 = x^2 - 2mx$，
+
+    解得$x=0,x_{2}=2m$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$二次函数与x轴的交点为$(0,0)(2m,0)$，
+
+    当$(2m,0)$在点A左边时，抛物线$y = x^2 - 2mx$与线段AB只有一个交点，此时$2m<-1$，
+
+    解得$m<-\frac{1}{2}$；
+
+    当$(2m,0)$与$(0,0)$时，抛物线$y = x^2 - 2mx$与线段AB只有一个交点，此时$m = 0$；
+
+    当$(2m,0)$在点B右边时，抛物线$y = x^2 - 2mx$与线段AB只有一个交点，此时$2m > 4$，
+
+    解得$m > 2$；
+
+    综上所述，$m<-\frac{1}{2}$或$m = 0$或$m > 2$；
+
+    【小问3详解】
+
+    解：$\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$对称轴为$x = m$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$N(m,y_{2})$为顶点，
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$二次函数开'
+  knowledge_points:
+  - 二次函数
+  - 不等式
+  - 坐标系
+  module: functions
+  difficulty: 压轴
+  recommended_for:
+  - L3
+- id: 27
+  type: 解答
+  score: 7
+  question: '如图1，$V_{ABC}$中，$AB = AC$，点P为线段BC上一点，$\angle BAP$的平分线交BC于点$E,\angle PAC=\alpha$，将线段EC绕点E顺时针旋转$\alpha$，与射线AP交于点D．
+
+    [图]
+
+    （1）求证：$AD = AC$；
+
+    （2）若$\angle BAC = 60^\circ$，如图2，连接CD，连接BD交射线AE于点F．
+
+    ①补全图形；
+
+    ②判断$BD, CD$与AF之间的数量关系，并证明．'
+  answer: （1）见解析（2）①见解析；②$\sqrt{3}BD + CD = AF$，证明见解析
+  solution: '【小问1详解】
+
+    解：$\because AB = AC$，
+
+    $\angle B=\angle C$．
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$在$\triangle EPD$和$\triangle APC$中，$\angle PED-\angle PAC=\alpha,\angle EPD=\angle APC$，
+
+    $\angle D=\angle C=\angle B$．
+
+    $\because AE$平分$\angle BAP$，
+
+    $\angle BAE = \angle DAE$．
+
+    在$\triangle ABE$和$VADE$中，
+
+    $\angle B=\angle D \\
+
+    \angle BAE=\angle DAE \\
+
+    AE=AE$
+
+    $\triangle ABE \cong \triangle ADE (AAS)$．
+
+    $\therefore AB + AD = AC$；
+
+    【小问2详解】
+
+    解：①如图，
+
+    [图]
+
+    ②判断：$\sqrt{3}BD + CD = AF$．
+
+    证明：如图，在线段AF上取一点G，使得$\angle DBG = 60^\circ$，连接DG．
+
+    [图]
+
+    ∵$\angle BAC = 60^\circ, AB = AC$，
+
+    ∴$V_{ABC}$是等边三角形，
+
+    ∴$\angle ABC = 60^\circ$，$AB = BC$
+
+    $\because AB=AD,\angle BAE=\angle DAE$，
+
+    $\therefore AF \perp BD$．
+
+    $\therefore AF$是BD的垂直平分线．
+
+    $\therefore BG = DG$．
+
+    $\angle DBG = 60^\circ$，
+
+    $\therefore \triangle BD'
+  knowledge_points:
+  - 全等三角形
+  - 旋转
+  - 三角函数
+  - 锐角三角函数
+  module: triangles
+  difficulty: 压轴
+  recommended_for:
+  - L3
+- id: 28
+  type: 解答
+  score: 7
+  question: '在平面直角坐标系xOy中，已知点$A(3,4)$，线段$AB \perp x$轴于点$B,BD$为平面内一条线段，将点A绕点D旋转$180^\circ$后得到点C．若点C到点O的距离为1，则称线段BD为点A的“隐圆线段”．
+
+    [图][图]
+
+    （1）若点C在x轴上时，点A的“隐圆线段”长为_____________；
+
+    （2）求点A的“隐圆线段”长的最大值；
+
+    （3）若点A的“隐圆线段”所在直线为$y=kx+b$，直接写出k的取值范围．'
+  answer: （1）$\sqrt{5}$和$2\sqrt{2}$ （2）3（3）$-6-\sqrt{6}\leq x\leq -6+\sqrt{6}$
+  solution: '【小问1详解】
+
+    解：∵点C在x轴上，且点C到点O的距离为1，
+
+    ∴$C(1,0)$或$C(-1,0)$．
+
+    ①当点C为$(1,0)$时，
+
+    ∵点$A(3,4)$绕点D旋转$180^\circ$后得到点C，
+
+    ∴点D是线段AC的中点，
+
+    ∵$D(2,2)$，
+
+    ∵线段$AB \perp x$轴于点B，
+
+    ∴$B(3,0)$，
+
+    ∴$BD=\sqrt{(3-2)^{2}+(0-2)^{2}}=\sqrt{5}$．
+
+    ②当点C为$(-1,0)$时，
+
+    ∵点$A(3,4)$绕点D旋转$180^\circ$后得到点C，
+
+    ∴点D是线段AC的中点，
+
+    ∵$D(1,2)$，
+
+    ∵线段$AB \perp x$轴于点B，
+
+    ∴$B(3,0)$，
+
+    ∴$BD=\sqrt{(3-1)^{2}+(6-2)^{2}}=2\sqrt{2}$．
+
+    综上所述，点A的“隐圆线段”BD长为$\sqrt{5}$或$2\sqrt{2}$．
+
+    【小问2详解】
+
+    解：连接AO，取AO的中点$E\left(\frac{3}{2},2\right)$，连接DE，CO
+
+    [图]
+
+    ∵$CO = 1$，
+
+    ∴点C在以点O为圆心，半径为1的圆上运动，
+
+    ∵点D是AC的中点，点E是AO的中点，
+
+    ∴$DE=\frac{1}{2}CO=\frac{1}{2}$，
+
+    ∴点D在以点$E\left(\frac{3}{2},2\right)$为圆心，半径$r = \frac{1}{2}$的圆上运动，
+
+    ∴$BE=\sqrt{\left(3-\frac{3}{2}\right)^{2}+\left(0-2\right)^{2}}=\frac{5}{2}$，
+
+    ∴BD的最大值为$BE+r=\frac{5}{2}+\frac{3}{2}$，
+
+    即点A的“隐圆线段”长的最大值为3．
+
+    【小问3详解】
+
+    解：由（2）可知点D在$\odot E$上运动，
+
+    又点A的“隐圆线段”BD所在直线为$y=kx+b$，'
+  knowledge_points:
+  - 中心对称图形
+  - 切线
+  - 相似三角形
+  - 旋转
+  - 坐标系
+  module: geometryComprehensive
+  difficulty: 压轴
+  recommended_for:
+  - L3

@@ -1,8 +1,8 @@
 # ============================================================
 # 2025年北京门头沟区中考数学二模试卷 — 逐题分析
 # ============================================================
-# 数据来源：knowledge-original/精品解析：2025年北京市门头沟区九年级中考二模数学试卷（解析版）.docx
-# 自动生成，部分数学公式可能显示不全（docx公式对象无法完整提取）
+# 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
+# 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
 # 满分：100分  时长：120分钟
 
 year: 2025
@@ -11,73 +11,19 @@ exam_type: 二模
 subject: 数学
 full_score: 100
 duration_minutes: 120
-total_questions: 32
+total_questions: 28
 structure: 8选择(16分) + 8填空(16分) + 12解答(68分)
 questions:
-- id: 2
-  type: 选择
-  score: 2
-  question: 在试卷和答题卡上准确填写学校名称：姓名、班级和考场.
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 3
-  type: 选择
-  score: 2
-  question: 试题答案一律填涂或书写在答题卡上，在试卷上作答无效.
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 4
-  type: 选择
-  score: 2
-  question: 答题卡上，选择题、作图题用2B铅笔作答，其他试题用黑色字迹签字笔作答.
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 5
-  type: 选择
-  score: 2
-  question: 考试结束，将本试卷、答题卡和草稿纸一并交回．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
 - id: 1
   type: 选择
   score: 2
-  question: "如图是某一几何体的三视图，则这个几何体是（ ）\nA. 圆柱体\tB. 圆锥体\tC. 正方体\tD. 球体"
+  question: '如图是某一几何体的三视图，则这个几何体是（
+
+    ）
+
+    [图]
+
+    A.圆柱体B.圆锥体C.正方体D.球体'
   answer: A
   solution: '解：∵三视图中有两个视图为矩形，
 
@@ -100,11 +46,13 @@ questions:
 - id: 2
   type: 选择
   score: 2
-  question: "某种细胞的直径是毫米，这个数用科学记数法可表示为（　　）\nA. \tB. \tC. \tD."
-  answer: A
-  solution: '解：，
+  question: '某种细胞的直径是$0.00058$毫米，$0.00058$这个数用科学记数法可表示为（　　）
 
-    故选：A ．'
+    A.$5.8\times10^{-4}$B.$58\times10^{-5}$C.$5.8\times10^{-5}$D.$0.58\times10^{-5}$'
+  answer: A
+  solution: '解：$0.00058 = 5.8 \times 10^{-4}$，
+
+    故选：A．'
   knowledge_points:
   - 科学记数法
   - 绝对值
@@ -118,13 +66,19 @@ questions:
 - id: 3
   type: 选择
   score: 2
-  question: "如图，直线交于点O，于O，若，则的度数是（   ）\nA. \tB. \tC. \tD."
+  question: '如图，直线$AB,\ CD$交于点O，$OE \perp AB$于O，若$\angle1=35^{\circ}$，则$\angle 2$的度数是（
+
+    ）
+
+    [图]
+
+    A.$55^\circ$B.$45^\circ$C.$35^\circ$D.$30^\circ$'
   answer: A
-  solution: '解：∵，
+  solution: '解：∵$OE \perp AB, \angle 1 = 35^\circ$，
 
-    ，
+    $\angle AOC = 55^\circ$，
 
-    ，
+    $\angle C = \angle OCA = 55^{\circ}$，
 
     故选：A．'
   knowledge_points:
@@ -139,9 +93,13 @@ questions:
 - id: 4
   type: 选择
   score: 2
-  question: "先后两次抛掷同一枚质地均匀的硬币，则第一次正面向上、第二次反面向上的概率是（    ）\nA. \tB. \tC. \tD."
+  question: '先后两次抛掷同一枚质地均匀的硬币，则第一次正面向上、第二次反面向上的概率是（）
+
+    A.$\frac{1}{4}$B.$\frac{1}{3}$C.$\frac{1}{2}$D.$\frac{3}{4}$'
   answer: A
-  solution: '如图，所有结果有4种，满足要求的结果有1种，故概率为.
+  solution: '[图]
+
+    如图，所有结果有4种，满足要求的结果有1种，故概率为$\frac{1}{4}$.
 
     故选：A'
   knowledge_points:
@@ -158,17 +116,29 @@ questions:
 - id: 5
   type: 选择
   score: 2
-  question: "有理数在数轴上的对应点的位置如图所示，则下列结论正确的是（    ）\nA. \tB. \tC. \tD."
+  question: '有理数$a, b$在数轴上的对应点的位置如图所示，则下列结论正确的是（）
+
+    [图]
+
+    A.$a > b$B.$|b| < |a|$C.$ab > 0$D.$a+b<-3$'
   answer: B
-  solution: '解：由数轴图可知：，，，
+  solution: '解：由数轴图可知：$a < 0$，$b>0$，$|b| < |a|$，
 
-    ，A选项错误，不符合题意；
+    $\begin{tikzpicture}
 
-    ，B选项正确，符合题意；
+    \fill (0,0) circle (2pt);
 
-    ，C选项错误，不符合题意；
+    \fill (-1,-1) circle (2pt);
 
-    ，D选项错误，不符合题意；
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$a < b$，A选项错误，不符合题意；
+
+    $|b| < |a|$，B选项正确，符合题意；
+
+    $ab < 0$，C选项错误，不符合题意；
+
+    $a+b>-3$，D选项错误，不符合题意；
 
     故选：B．'
   knowledge_points:
@@ -183,9 +153,19 @@ questions:
 - id: 6
   type: 选择
   score: 2
-  question: "一个多边形的内角和与外角和相等，则这个多边形的边数为（   ）\nA. 8\tB. 6\tC. 5\tD. 4"
+  question: '一个多边形的内角和与外角和相等，则这个多边形的边数为（
+
+    ）
+
+    A.8B.6C.5D.4'
   answer: D
-  solution: 设多边形的边数为n，根据题意
+  solution: '设多边形的边数为n，根据题意
+
+    （n-2）•180°=360°，
+
+    解得n=4．
+
+    故选D．'
   knowledge_points:
   - 综合
   module: triangles
@@ -197,21 +177,53 @@ questions:
 - id: 7
   type: 选择
   score: 2
-  question: "下面是小明设计的“过直线外一点作这条直线平行线”的尺规作图过程：\n上述的方法是通过判定得到的，其中判定的依据是（　　）\nA. 同位角相等，两直线平行\tB. 两直线平行，同位角相等\nC. 内错角相等，两直线平行\tD. 两直线平行，内错角相等"
+  question: '下面是小明设计的“过直线外一点作这条直线平行线”的尺规作图过程：
+
+    已知：如图1，直线BC及直线BC外一点P．求作：直线PE，使得$PE \parallel BC$．
+
+    [图]
+
+    作法：如图2，
+
+    ①在直线BC上取一点A，连接PA．
+
+    ②作$\angle PAC$的平分线AD．
+
+    ③以点P$[公式]$圆心PA长为半径画弧，交射线AD于点E．
+
+    ④作直线PE．
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$直线PE就是所求作的直线．
+
+    [图]
+
+    上述的方法是通过判定$\angle PEA = \angle EAC$得到$PE \parallel BC$的，其中判定$PE \parallel BC$的依据是（　　）
+
+    A.同位角相等，两直线平行B.两直线平行，同位角相等
+
+    C.内错角相等，两直线平行D.两直线平行，内错角相等'
   answer: C
-  solution: '解：∵是的角平分线，
+  solution: '解：∵AD是$\angle PAC$的角平分线，
 
-    ∴，
+    ∴$\angle PAD = \angle DAC$，
 
-    ∵，
+    ∵$PA = PE$，
 
-    ∴，
+    ∴$\angle PAE = \angle PEA$，
 
-    ∴，
+    ∴$\angle PEA = \angle EAC$，
 
-    ∴（内错角相等，两直线平行），
+    ∴$PE \parallel BC$（内错角相等，两直线平行），
 
-    故选：C ．'
+    故选：C．'
   knowledge_points:
   - 平行线
   - 尺规作图
@@ -224,7 +236,13 @@ questions:
 - id: 8
   type: 选择
   score: 2
-  question: "如图，在中，，平分交于，于，点在上，点在上，，平分，下列结论中正确的个数（　　）\n；平分；；．\nA. 个\tB. 个\tC. 个\tD. 个"
+  question: '如图，在$V_{ABC}$中，$\angle C=90^{\circ}$，AD平分$\angle BAC$交BC于D，$DE \perp AB$于E，点F在AC上，点G在AB上，$BE = CF$，FD平分$\angle CFG$，下列结论中正确的个数（　　）
+
+    $1$$DC = DE$；$\textcircled{2}$GD平分$[公式]$；$3$$\angle CAB + 2\angle FDG = 180^{\circ}$；$4$$s_{\triangle PDC}=s_{\triangle CDP}+s_{\triangle DPC}$．
+
+    [图]
+
+    A.$1$个B.$2$个C.$3$个D.$4$个'
   answer: D
   solution: ''
   knowledge_points:
@@ -238,16 +256,16 @@ questions:
   type: 填空
   score: 2
   question: 写出一个比3大且比4小的无理数：_____．
-  answer: 答案不是唯一，
+  answer: 答案不是唯一，$\sqrt{15}$
   solution: '设无理数的被开方数为x，
 
     ∵无理数比3大且比4小，
 
     ∴9＜x＜16，
 
-    ∴其中的一个无理数为，
+    ∴其中的一个无理数为$\sqrt{15}$，
 
-    故答案：．'
+    故答案$[公式]$：$\sqrt{15}$．'
   knowledge_points:
   - 综合
   module: numbersAndExpressions
@@ -260,13 +278,15 @@ questions:
 - id: 10
   type: 填空
   score: 2
-  question: 分解因式：_______．
-  answer: ''
-  solution: '解：
+  question: 分解因式：$x^{3}y-xy=$_______．
+  answer: $x(x+1)(-1)$
+  solution: '解：$x^{3}y-xy$
 
-    ，
+    $=xy\left(x^{2}-1\right)$
 
-    故答案为： ．'
+    $=xy(x+1)(x-1)$，
+
+    故答案为：$x(x+1)(-1)$．'
   knowledge_points:
   - 因式分解
   - 方差
@@ -281,7 +301,7 @@ questions:
   type: 填空
   score: 2
   question: 用一组a，b的值说明命题“若a2＞b2，则a＞b”是错误的，这组值可以是a=____，b=____．
-  answer: ①. ，    ②.
+  answer: ①.$a = -3$，②.$b = -1$
   solution: '解：当a＝−3，b＝−1时，满足a2＞b2，但是a＜b，
 
     ∴命题“若a2＞b2，则a＞b”是错误的．
@@ -300,18 +320,18 @@ questions:
   type: 填空
   score: 2
   question: 用一个半径为1的半圆作一个圆锥的侧面，这个圆锥的底面圆的半径为_________．
-  answer: '##'
-  solution: '解：∵半径为1的半圆的弧长为：，
+  answer: $\frac{1}{2}$##$0.5$
+  solution: '解：∵半径为1的半圆的弧长为：$\frac{1}{2} \times 2\pi \times l = \pi$，
 
-    ∴围成的圆锥的底面圆的周长为，
+    ∴围成的圆锥的底面圆的周长为$\pi$，
 
     设圆锥的底面圆的半径为r，
 
-    则：，
+    则：$2\pi r = \pi$，
 
-    解得：，
+    解得：$r = \frac{1}{2}$，
 
-    故答案为：．'
+    故答案为：$\frac{1}{2}$．'
   knowledge_points:
   - 综合
   module: circles
@@ -324,13 +344,13 @@ questions:
 - id: 13
   type: 填空
   score: 2
-  question: 在平面直角坐标系中，若点，在函数的图象上，则m的值为______．
+  question: 在平面直角坐标系xOy中，若点$A(m,n)$，$B(n,3)$在函数$y = \frac{m}{x} \quad (m \ne 0)$的图象上，则m的值为______．
   answer: '3'
-  solution: '解：∵在平面直角坐标系中，点，在函数的图象上，
+  solution: '解：∵在平面直角坐标系xOy中，点$A(m,n)$，$B(n,3)$在函数$y = \frac{m}{x} \quad (m \ne 0)$的图象上，
 
-    ∴，
+    ∴$m = mn = 3n$，
 
-    ∴，
+    ∴$m = 3,\ n = 1$，
 
     故答案为：3．'
   knowledge_points:
@@ -345,25 +365,27 @@ questions:
 - id: 14
   type: 填空
   score: 2
-  question: 如图，是直径，于，连接、和，如果，那么_______度．
-  answer: ''
-  solution: '解：∵是直径，于，
+  question: '如图，AB是$\odot\odot$直径，$CD \perp AB$于E，连接BC、BD和OD，如果$\angle CBA=25^{\circ}$，那么$\angle ODC =$_______度．
 
-    ∴，，
+    [图]'
+  answer: $40$
+  solution: '解：∵AB是$\odot\odot$直径，$CD \perp AB$于E，
 
-    ∵，
+    ∴$CE = DE$，$\angle CEB=\angle DEB=90^\circ$，
 
-    ∴，
+    ∵$CE=DE,\angle CEB=\angle DEB,BE=BE$，
 
-    ∴，
+    ∴$\angle CEP \cong \angle DEB (SAS)$，
 
-    ∵所对的圆周角为，所对的圆心角为，
+    ∴$\angle ABD=\angle ABC=25^{\circ}$，
 
-    ∴，
+    ∵$\overset{\diamondsuit}{AD}$所对的圆周角为$\angle ABD$，所对的圆心角为$\angle AOD$，
 
-    在中，，
+    ∴$\angle AOD=2\angle ABD=50^{\circ}$，
 
-    故答案为： ．'
+    在$Rt\triangle ODE$中，$\angle ODC=90^{\circ}-\angle AOD=90^{\circ}-50^{\circ}=40^{\circ}$，
+
+    故答案为：$40$．'
   knowledge_points:
   - 圆周角
   - 垂径定理
@@ -376,33 +398,35 @@ questions:
 - id: 15
   type: 填空
   score: 2
-  question: 如图，在矩形中，，，若点E是边的中点，连接，过点B作于点F，则的长为____________________．
-  answer: ''
-  solution: '解：∵四边形是矩形，
+  question: '如图，在矩形$ABCD$中，$AB=4$，$BC=6$，若点E是边CD的中点，连接AE，过点B作$BF \perp AE$于点F，则BF的长为____________________．
 
-    ，，，
+    [图]'
+  answer: $\frac{6\sqrt{10}}{5}$
+  solution: '解：∵四边形$ABCD$是矩形，
 
-    ，
+    $\ldots CD-AB-4$，$AD=BC=6$，$AB\parallel CD$，
 
-    ∵E是边的中点，
+    $\angle BAF = \angle AED$，
 
-    ，
+    ∵E是边CD的中点，
 
-    ，
+    $\therefore DE=\frac{1}{2}CD=2$，
 
-    ，
+    $AE=\sqrt{AD^{2}+DE^{2}}=\sqrt{6^{2}+2^{2}}=2\sqrt{10}$，
 
-    ，
+    $\because BF \perp AE$，
 
-    ，
+    $\angle BFA=90^{\circ}=\angle D$，
 
-    ，
+    $\triangle ABF \sim \triangle EAD$，
 
-    即，
+    $\therefore \frac{AB}{AE} = \frac{BF}{AD}$，
 
-    解得： ，
+    即$\frac{4}{2\sqrt{10}}=\frac{BF}{6}$，
 
-    故答案为：．'
+    解得：$BF = \frac{6\sqrt{10}}{5}$，
+
+    故答案为：$\frac{6\sqrt{10}}{5}$．'
   knowledge_points:
   - 相似三角形
   - 勾股定理
@@ -418,15 +442,39 @@ questions:
   score: 2
   question: '某快递公司因天气原因需将五种货物进行延迟配送，每名配送员每次只能配送一种货物，从配送开始起进行计时，每延迟一分钟需赔付1元，忽略其它因素的影响，五种货物的配送时间如下表：
 
-    （1）如果由一名配送员进行配送，那么下列三个配送顺序：①；②；③中，赔付最少的是_______（填序号）；
+    货物
+
+    A
+
+    B
+
+    C
+
+    D
+
+    E
+
+    配送时间（分钟）
+
+    5
+
+    8
+
+    9
+
+    7
+
+    10
+
+    （1）如果由一名配送员进行配送，那么下列三个配送顺序：①$D \to B \to E \to A \to C$；②$D \to A \to C \to E \to B$；③$C \to A \to E \to B \to D$中，赔付最少的是_______（填序号）；
 
     （2）如果由两名配送员同时进行配送，最少需要赔付_______元．'
-  answer: ①. ②    ②. 64
-  solution: '解：（1）①总赔付：（元），
+  answer: ①.②②.64
+  solution: '解：（1）①总赔付：$5\times7+4\times8+3\times10+2\times5+9=116$（元），
 
-    ②总赔付：（元），
+    ②总赔付：$5\times7+4\times5+3\times9+2\times10+8=110$（元），
 
-    ③总赔付：（元），
+    ③总赔付：$5\times9+4\times5+3\times10+2\times8+7=118$（元），
 
     ∴赔付最少的是②，
 
@@ -434,13 +482,13 @@ questions:
 
     （2）解：因为赔付最少，就要使配送的时间尽量短，显然先配送时间短的，所以先配送A和D时间短的；然后再配送剩下的时间的短的，最后一名配送员配送时间最长的，
 
-    一名配送员按的顺序送，另一名配送员按的顺序送，配送最少，
+    一名配送员按$A, B, E$的顺序送，另一名配送员按$D, C$的顺序送，配送最少，
 
-    配送赔付：（元），
+    $A, B, E$配送赔付：$5\times3+8\times2+10\times1$（元），
 
-    配送赔付：（元），
+    $D, C$配送赔付：$7\times2+9$（元），
 
-    共需要最少赔付：（元），
+    共需要最少赔付：$5\times3+8\times2+10\times1+7\times2+9=64$（元），
 
     故答案为：64．'
   knowledge_points:
@@ -453,11 +501,13 @@ questions:
 - id: 17
   type: 解答
   score: 5
-  question: （第17题，详见原卷）
-  answer: ''
-  solution: '解：原式
+  question: 计算：$4\sin 60^{\circ}+\left(\frac{1}{3}\right)^{-1}+|-2|-\sqrt{12}$．
+  answer: $5$
+  solution: '解：原式$4\times\frac{\sqrt{3}}{2}+3+2-2\sqrt{3}$
 
-    ．'
+    $=2\sqrt{3}+3+2-2\sqrt{3}$
+
+    $= 5$．'
   knowledge_points:
   - 三角函数
   - 绝对值
@@ -471,17 +521,19 @@ questions:
 - id: 18
   type: 解答
   score: 5
-  question: 已知，求代数式的值．
-  answer: ''
-  solution: '解：
+  question: 已知$x + 2y - 1 = 10$，求代数式$\frac{2x+4y}{x^{2}+4xy+4y^{2}}$的值．
+  answer: $\frac{2}{x+2}y^{2}11$
+  solution: '解：$\frac{2x+4y}{x^{2}+4xy+4y^{2}}$
 
-    ，
+    $-\frac{2(x+2y)}{(x+2y)^{2}}$
 
-    ∵，
+    $=\frac{2}{x+2y}$，
 
-    ∴，
+    ∵$x + 2y - 1 = 10$，
 
-    ∴原式．'
+    ∴$x+2y=11$，
+
+    ∴原式$=\frac{2}{x+2y}=\frac{2}{11}$．'
   knowledge_points:
   - 综合
   module: numbersAndExpressions
@@ -494,25 +546,25 @@ questions:
 - id: 19
   type: 解答
   score: 5
-  question: '已知关于的一元二次方程有两个不相等的实数根．
+  question: '已知关于x的一元二次方程$x^{2}+2x+2k-4=0$有两个不相等的实数根．
 
-    （1）求的取值范围；
+    （1）求k的取值范围；
 
-    （2）若为正整数，且该方程的根都是整数，求的值．'
-  answer: （1）k＜；（2）2
-  solution: '解：（1）∵关于的一元二次方程有两个不相等的实数根，
+    （2）若k为正整数，且该方程的根都是整数，求k的值．'
+  answer: （1）k＜$\frac{5}{2}$；（2）2
+  solution: '解：（1）∵关于x的一元二次方程$x^{2}+2x+2k-4=0$有两个不相等的实数根，
 
-    ∴．
+    ∴$\Delta=2^{2}-4(2k-4)=20-8k>0$．
 
-    解得：k＜；
+    解得：k＜$\frac{5}{2}$；
 
     （2）∵k为正整数，
 
     ∴k=1或2．
 
-    当k=1时，方程为，两根为，非整数，不合题意；
+    当k=1时，方程为$x^{2}+2x-2=0$，两根为$\frac{-2+\sqrt{4+8}}{2}-1=\sqrt{3}$，非整数，不合题意；
 
-    当k=2时，方程为，两根为或，都是整数，符合题意．
+    当k=2时，方程为$x^{2}+2x=0$，两根为$x = 0$或$x = -2$，都是整数，符合题意．
 
     ∴k的值为2．'
   knowledge_points:
@@ -529,49 +581,87 @@ questions:
 - id: 20
   type: 解答
   score: 5
-  question: '在菱形 中，对角线 相交于点 为 的中点，连接 并延长到点，使 ，连接 ．
+  question: '在菱形$ABCD$中，对角线$AC,BD$相交于点$O,E$为AB的中点，连接OE并延长到点F，使$EF = OE$，连接$AF,BF$．
 
-    （1）求证：四边形是矩形；
+    [图]
 
-    （2）若，求 的长．'
-  answer: （1）见解析    （2）12
+    （1）求证：四边形$AOBF$是矩形；
+
+    （2）若$AD=10,\tan\angle AFO=\frac{3}{4}$，求AC的长．'
+  answer: （1）见解析（2）12
   solution: '【小问1详解】
 
-    证明：为 的中点，，
+    证明：$\therefore E$为AB的中点，$EF = OE$，
 
-    四边形是平行四边形，
+    $\begin{tikzpicture}
 
-    四边形是菱形，
+    \fill (0,0) circle (2pt);
 
-    ，
+    \fill (-1,-1) circle (2pt);
 
-    平行四边形是矩形；
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$四边形$AOBF$是平行四边形，
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$四边形$ABCD$是菱形，
+
+    $\angle AOB = 90^\circ$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$平行四边形$AOBF$是矩形；
 
     【小问2详解】
 
-    解：四边形是菱形，
+    解：$\begin{array}{c}
 
-    ，
+    \bullet \\
 
-    四边形是矩形，
+    \bullet \quad \bullet \\
 
-    ，
+    \bullet
 
-    设，
+    \end{array}$四边形$ABCD$是菱形，
 
-    ，
+    $AB = AD = 10$，
 
-    ，
+    $\begin{array}{c}
 
-    根据勾股定理可得，
+    \bullet \\
 
-    即，
+    \bullet \quad \bullet \\
 
-    解得，
+    \bullet
 
-    ，
+    \end{array}$四边形$AOBF$是矩形，
 
-    ．'
+    $FO = AB = 10$，$\angle FAO = 90^\circ$
+
+    设$AO=3x$，
+
+    $\tan\angle AFO=\frac{3}{4}$，
+
+    $\therefore AF = 4x$，
+
+    根据勾股定理可得$FO^{2}=AF^{2}+AO^{2}$，
+
+    即$100=9x^{2}+16x^{2}$，
+
+    解得$x = \pm 2$'
   knowledge_points:
   - 平行四边形
   - 矩形
@@ -590,22 +680,22 @@ questions:
     （1）用含x的代数式表示第二周旅游纪念品销售数量为______个，第三周旅游纪念品销售数量为______个；
 
     （2）如果这批旅游纪念品共获利1250元，问第二周每个旅游纪念品的销售价格为多少元？'
-  answer: （1）， （2）9元
+  answer: （1）$200 + 50x$，$200-50x$ （2）9元
   solution: '【小问1详解】
 
-    解：单价降低x元，由题意可得第二周的销售数量为个；
+    解：单价降低x元，由题意可得第二周的销售数量为$(200 + 50x)$个；
 
-    则第三周的销售量为：个．
+    则第三周的销售量为：$600-200-(200+50x)=300-50x$个．
 
-    故答案为：，．
+    故答案为：$200 + 50x$，$200-50x$．
 
     【小问2详解】
 
-    解：由题意可得：，
+    解：由题意可得：$200\times10+(200+50x)(10-x)+4(200-50x)-600\times6=1250$，
 
-    整理得：，解得：，
+    整理得：$x^{2}-2x+1=0$，解得：$x = 1$，
 
-    所以第二周每个旅游纪念品的销售价格为元．'
+    所以第二周每个旅游纪念品的销售价格为$10-x=10-1=9$元．'
   knowledge_points:
   - 一元二次方程
   module: equationsAndInequalities
@@ -617,35 +707,37 @@ questions:
 - id: 22
   type: 解答
   score: 5
-  question: '在平面直角坐标系中，一次函数的图象由函数的图象平移得到，且经过点．
+  question: '在平面直角坐标系xOy中，一次函数$y=kx+b\,(k\neq0)$的图象由函数$y = -x$的图象平移得到，且经过点$(2,1)$．
 
     （1）求这个一次函数的表达式；
 
-    （2）当时，对于x的每一个值，函数的值小于一次函数的值，直接写出m的取值范围．'
-  answer: （1）； （2）且．
+    （2）当$x<2$时，对于x的每一个值，函数$y = mx - 1 \, (m \neq 0)$的值小于一次函数$y=kx+b$的值，直接写出m的取值范围．'
+  answer: （1）$y=-x+3$； （2）$-1\leq m\leq 1$且$m \neq 0$．
   solution: '【小问1详解】
 
-    解：∵一次函数的图像由函数的图象平移得到的，
+    解：∵一次函数$y=kx+b(k\neq0)$的图像由函数$y = -x$的图象平移得到的，
 
-    ∴．
+    ∴$k = -1$．
 
-    将点代入，得，
+    将点$(2,1)$代入$y=kx+b$，得$b=3$，
 
-    ∴一次函数的表达式是；
+    ∴一次函数的表达式是$y=-x+3$；
 
     【小问2详解】
 
-    解：∵将代入函数，则，
+    解：∵将$x = 0$代入函数$y = mx - 1 \, (m \neq 0)$，则$y=-1$，
 
-    ∴函数的图象过定点，
+    ∴函数$y = mx - 1 \, (m \neq 0)$的图象过定点$(0,-1)$，
 
-    将代入中，解得，
+    将$(2,1)$代入$y = mx - 1$中，解得$m = 1$，
 
     如图，
 
-    ∵当时，对于x的每一个值，函数的值小于一次函数的值，
+    [图]
 
-    ∴且．'
+    ∵当$x<2$时，对于x的每一个值，函数$y = mx - 1 \, (m \neq 0)$的值小于一次函数$y=-x+3$的值，
+
+    ∴$-1\leq m\leq 1$且$m \neq 0$．'
   knowledge_points:
   - 一次函数
   - 平移
@@ -659,37 +751,107 @@ questions:
 - id: 23
   type: 解答
   score: 6
-  question: '“端午节”是中国的一个传统节日，某粽子厂为迎接端午的到来，组织了“浓情端午，长粽叶飘香”的包粽子比赛，规定粽子质量为克时都符合标准，其中质量为优秀产品．现从甲、乙两位员工所包粽子中各随机抽取10个进行评测，数据如下（单位：克）：
+  question: '“端午节”是中国的一个传统节日，某粽子厂为迎接端午的到来，组织了“浓情端午，长粽叶飘香”的包粽子比赛，规定粽子质量为$(160\pm3)$克时都符合标准，其中质量$(160\pm1)$为优秀产品．现从甲、乙两位员工所包粽子中各随机抽取10个进行评测，数据如下（单位：克）：
+
+    甲
+
+    157
+
+    157
+
+    159
+
+    159
+
+    160
+
+    161
+
+    161
+
+    161
+
+    162
+
+    163
+
+    乙
+
+    158
+
+    158
+
+    159
+
+    159
+
+    159
+
+    159
+
+    161
+
+    162
+
+    162
+
+    163
 
     甲、乙两名员工所包粽子质量的平均数、众数、中位数如下：
 
+    员工
+
+    平均数
+
+    中位数
+
+    众数
+
+    甲
+
+    160
+
+    160.5
+
+    a
+
+    乙
+
+    160
+
+    b
+
+    159
+
     根据以上信息，回答下列问题：
 
-    （1）上表中的_______，_______；
+    （1）上表中的$a =$_______，$b =$_______；
 
     （2）如果从甲、乙两名员工中，选取一位包粽子质量稳定的员工给奖，这名员工是______；
 
     （3）在此次比赛中，在相同时间内，甲员工共包了100个粽子，乙员工共包了104个粽子，估计两位员工各自所包粽子质量属于“优秀产品”的个数，并判断如果以优秀率作为评奖标准时，哪位员工能获奖？并说明理由．'
-  answer: （1）    （2）乙 （3）甲的优秀品的个数为个，乙的优秀品的个数为个，甲能获奖，理由见详解
+  answer: （1）$161,159$（2）乙 （3）甲的优秀品的个数为$60$个，乙的优秀品的个数为$52$个，甲能获奖，理由见详解
   solution: '【小问1详解】
 
     解：甲的数据中，161出现的次数最多，
 
-    ∴，
+    ∴$a=161$，
 
-    乙数据的中位数为，
+    乙数据的中位数为$b=\frac{159+159}{2}=159.$，
 
-    故答案为：；
+    故答案为：$161,159$；
 
     【小问2详解】
 
-    解：
+    解：$s_{n}^{2}=\frac{1}{10}\left[(157-160)^{2}\times 2+(159-160)^{2}\times 2+\cdots\right]$$(160-160)^2+(161-160)^2\times3+(162-160)^2+(163-160)^2$
 
-    ，
+    $=3.6$，
 
-    ，
+    $s_{2}^{2}=\frac{1}{10}[(158-160)^{2}\times 2+(159-160)^{2}\times 3+$$(161-160)^{2}+(162-160)^{2}\times 2+(163-160)^{2}$
 
-    ∵，
+    $=3$，
+
+    ∵$s_{甲}^{2}>s_{乙}^{2}$，
 
     ∴乙包粽子质量更稳定，
 
@@ -697,17 +859,17 @@ questions:
 
     【小问3详解】
 
-    解：甲的优秀品的个数为个，乙的优秀品的个数为个，甲能获奖，理由如下，
+    解：甲的优秀品的个数为$60$个，乙的优秀品的个数为$52$个，甲能获奖，理由如下，
 
-    ∵质量为优秀产品，
+    ∵质量$(160\pm1)$为优秀产品，
 
-    ∴优秀品的质量范围为：，
+    ∴优秀品的质量范围为：$159 \sim 161$，
 
-    ∴甲的优秀品的个数为：个，优秀率为：，
+    ∴甲的优秀品的个数为：$100\times\frac{6}{10}=60$个，优秀率为：$\frac{6}{10}\times100\%=60\%$，
 
-    乙的优秀品的个数为：个，优秀率为：，
+    乙的优秀品的个数为：$104\times\frac{5}{10}=52$个，优秀率为：$\frac{5}{10}\times100\%=50\%$，
 
-    ∵，
+    ∵$60\%>50\%$，
 
     ∴以优秀率作为评奖标准时，甲能获奖．'
   knowledge_points:
@@ -724,71 +886,77 @@ questions:
 - id: 24
   type: 解答
   score: 6
-  question: '如图，在中，，以为直径的与边、分别交于、两点，于点．
+  question: '如图，在$V_{ABC}$中，$AB = AC$，以AB为直径的$\odot\odot$与边BC、AC分别交于D、E两点，$DF \perp AC$于点F．
 
-    （1）求证：与的切线；
+    [图]
 
-    （2）若，，求和的长．'
-  answer: （1）详见解析 （2），，详见解析
+    （1）求证：DF与$\odot\odot$的切线；
+
+    （2）若$\sin C = \frac{4}{5}$，$CF = 9$，求BD和AE的长．'
+  answer: （1）详见解析 （2）$BD = 15$，$AE = 7$，详见解析
   solution: '【小问1详解】
 
-    连接，，
+    连接OD，AD，
 
-    ∵是的直径，
+    [图]
 
-    ∴，
+    ∵AB是$\odot\odot$的直径，
 
-    又∵，
+    ∴$\angle ADB=90^\circ$，
 
-    ∴，
+    又∵$AB = AC$，
 
-    又∵，
+    ∴$BD = CD$，
 
-    ∴，
+    又∵$OB = OA$，
 
-    ∵，
+    ∴$OD \parallel AC$，
 
-    ∴，
+    ∵$DF \perp AC$，
 
-    又∵为的半径，
+    ∴$OD \perp DF$，
 
-    ∴为的切线．
+    又∵OD为$\odot\odot$的半径，
+
+    ∴DF为$\odot\odot$的切线．
 
     【小问2详解】
 
-    连接，，
+    连接BE，DA，
 
-    ∵在中，，
+    [图]
 
-    ∴，，
+    ∵在$\mathrm{Rt}\triangle DFC$中，$\sin C = \frac{4}{5}$，
 
-    ∵，
+    ∴$DF=\frac{4}{5}DC$，$DF^{2}+CF^{2}=DC^{2}$，
 
-    ∴，
+    ∵$CF = 9$，
 
-    ∴，，
+    ∴$\left(\frac{4}{5}DC\right)^{2}+9^{2}=DC^{2}$，
 
-    ∴，
+    ∴$DC = 15$，$DF = 12$，
 
-    ∴，
+    ∴$BD = DC = 15$，
 
-    ∵为直径，，
+    ∴$BC = 2CD = 30$，
 
-    ∴，
+    ∵AB为直径，$DF \perp AC$，
 
-    ∴，
+    ∴$\angle BDA=\angle BEA=\angle DFC=90^{\circ}$，
 
-    ∴
+    ∴$DF \parallel BE$，
 
-    ∴，
+    ∴$\frac{CD}{BD}=\frac{CF}{EF}=1$
 
-    ∴，，
+    ∴$CF = EF = 9$，
 
-    在中，由勾股定理得：，
+    ∴$AB = AC = AE + EF + CE = AE + 9 + 9 = AE + 18$，$CE = 9 + 9 = 18$，
 
-    在中，由勾股定理得：，
+    在$Rt\triangle BEC$中，由勾股定理得：$BE=\sqrt{30^{2}-18^{2}}=24$，
 
-    解得：．'
+    在$Rt\triangle BAE$中，由勾股定理得：$AE^{2}+24^{2}=(AE+18)^{2}$，
+
+    解得：$AE = 7$．'
   knowledge_points:
   - 平行线
   - 垂径定理
@@ -802,49 +970,79 @@ questions:
 - id: 25
   type: 解答
   score: 6
-  question: '射门是足球比赛重要得分手段，运动员踢出的足球在空中的飞行路线可以看作是抛物线的一部分．如图所示建立平面直角坐标系，足球在空中的飞行过程中，足球距离地面的竖直高度（单位：米）与距离球门的水平距离（单位：米）近似满足函数关系．
+  question: '射门是足球比赛$[公式]$重要得分手段，运动员踢出的足球在空中的飞行路线可以看作是抛物线的一部分．如图所示建立平面直角坐标系xOy，足球在空中的飞行过程中，足球距离地面OA的竖直高度y（单位：米）与距离球门OB的水平距离x（单位：米）近似满足函数关系$y = a(x - h)^2 + k \, (a < 0)$．
 
-    （1）小明第一次射门时，记录了水平距离与竖直高度的几组数据如下：
+    [图]
+
+    （1）小明第一次射门时，记录了水平距离x与竖直高度y的几组数据如下：
+
+    水平距离x/米
+
+    1
+
+    2
+
+    3
+
+    4
+
+    5
+
+    6
+
+    竖直高度y/米
+
+    $\frac{35}{12}$
+
+    3
+
+    $\frac{35}{12}$
+
+    $\frac{8}{3}$
+
+    $\frac{9}{4}$
+
+    $\frac{5}{3}$
 
     根据上述数据，回答下列问题：
 
-    ①求函数关系式；
+    ①求函数关系式$y = a(x - h)^2 + k \, (a < 0)$；
 
-    ②如果球门高米，在没有守门员情况下，判断该球______（填“能”或“不能”）射进球门（忽略足球大小及其它因素影响）；
+    ②如果球门高$OB = 2.44$米，在没有守门员情况下，判断该球______（填“能”或“不能”）射进球门（忽略足球大小及其它因素影响）；
 
-    （2）点为上一点，米，现在小明从原有位置带球向正后方移动米再射门，如果足球在空中飞行路线的形状与最大高度均保持不变，当足球射进区域（含点和）时，忽略足球大小及其它因素的影响，直接写出的取值范围．'
-  answer: （1）①；②不能 （2）
+    （2）点C为OB上一点，$OC = 2.25$米，现在小明从原有位置带球向正后方移动n米再射门，如果足球在空中飞行路线的形状与最大高度均保持不变，当足球射进区域OC（含点O和C）时，忽略足球大小及其它因素的影响，直接写出n的取值范围．'
+  answer: （1）①$y = -\frac{1}{12}(x - 2)^2 + 3$；②不能 （2）$1 \leq n \leq 4$
   solution: '【小问1详解】
 
-    解：①由表格得：抛物线的顶点为，且过点，
+    解：①由表格得：抛物线的顶点为$(2,3)$，且过点$\left(4,\frac{8}{3}\right)$，
 
-    ∴，
+    ∴$y=a(x-2)^{2}+3$，
 
-    ∴，
+    ∴$\frac{8}{3}-a(4-2)^{2}+3$，
 
-    解得：，
+    解得：$a = -\frac{1}{12}$，
 
-    ∴y与x之间的函数关系式为；
+    ∴y与x之间的函数关系式为$y = -\frac{1}{12}(x - 2)^2 + 3$；
 
-    ②当时，，
+    ②当$x = 0$时，$y=-\frac{1}{12}(0-2)^{2}+3$，
 
-    解得：，
+    解得：$y=\frac{8}{3}+2.67>2.44$，
 
     ∴球不能射进球门；
 
     【小问2详解】
 
-    解：依题意，小明带球向正后方移动米，则移动后的抛物线为，
+    解：依题意，小明带球向正后方移动n米，则移动后的抛物线为$y = -\frac{1}{12}(x - 2 - n)^2 + 3$，
 
-    把点代入，得：，
+    把点$(0.25)$代入$y = -\frac{1}{12}(x - 2 - n)^2 + 3$，得：$2.25=-\frac{1}{12}(0-2-n)+3$，
 
-    解得（舍去）或，
+    解得$n = -5$（舍去）或$n = 1$，
 
-    把点代入，得：，
+    把点$(0,0)$代入$y = -\frac{1}{12}(x - 2 - n)^2 + 3$，得：$0 = -\frac{1}{12}(0 - 2 - \pi)^2 + 3$，
 
-    解得（舍去）或，
+    解得$n = -8$（舍去）或$n = 4$，
 
-    即．'
+    即$1 \leq n \leq 4$．'
   knowledge_points:
   - 二次函数
   - 坐标系
@@ -856,43 +1054,43 @@ questions:
 - id: 26
   type: 解答
   score: 6
-  question: '在平面直角坐标系中，点在抛物线上，且它的对称轴为直线．
+  question: '在平面直角坐标系xOy中，点$(2,n)$在抛物线$y = x^{2} + (k - 2)x + 4k$上，且它的对称轴为直线$x = t$．
 
-    （1）当时，求的值；
+    （1）当$n = 0$时，求t的值；
 
-    （2）如果点，在抛物线上，当时，比较和大小，并说明理由．'
-  answer: （1） （2）
+    （2）如果点$A(t+k,y_{1})$，$B(t-2k,y_{2})$在抛物线上，当$k<0$时，比较$y_{1}$和$y_{2}$$[公式]$大小，并说明理由．'
+  answer: （1）$t = 1$ （2）$y_{2}>y_{1}$
   solution: '【小问1详解】
 
-    解：当时，把代入，
+    解：当$n = 0$时，把$(2,0)$代入$y = x^{2} + (k - 2)x + 4k$，
 
-    则，
+    则$4+2(k-2)+4k=0$，
 
-    解得：，
+    解得：$k = 0$，
 
-    ∴抛物线为：，
+    ∴抛物线为：$y = x^2 - 2x$，
 
-    ∴；
+    ∴$t = \frac{-2}{2 \times 1} = 1$；
 
     【小问2详解】
 
-    解：∵，
+    解：∵$k<0$，
 
-    ∴，，
+    ∴$t+k<t$，$t - 2k > t$，
 
-    ∴点在对称轴左侧，点在对称轴右侧，
+    ∴点$A(t+k,y_{1})$在对称轴左侧，点$B(t-2k,y_{2})$在对称轴右侧，
 
-    ∴点关于对称轴直线的对称点为：，
+    ∴点$B(t-2k,y_{2})$关于对称轴直线$x = t$的对称点为：$B''(l+2k,y_{2})$，
 
-    ∵，
+    ∵$k<0$，
 
-    ∴，
+    ∴$t+2k<t+k$，
 
     ∵抛物线开口向上，
 
-    ∴在对称轴左侧随增大而减小，
+    ∴在对称轴左侧y随x增大而减小，
 
-    ∴．'
+    ∴$y_{2}>y_{1}$．'
   knowledge_points:
   - 二次函数
   - 坐标系
@@ -903,65 +1101,71 @@ questions:
 - id: 27
   type: 解答
   score: 7
-  question: '如图，在中，，，点D是内一点，且．
+  question: '如图，在$V_{ABC}$中，$AB = AC$，$\angle BAC = 90^\circ$，点D是$V_{ABC}$内一点，且$CD = CA$．
 
-    （1）求证：；
+    [图]
 
-    （2）将线段绕点D顺时针旋转得到线段，连接交于点F．
+    （1）求证：$\angle ACD=2\angle BAD$；
+
+    （2）将线段DA绕点D顺时针旋转$90^\circ$得到线段DE，连接AE交CD于点F．
 
     ①依题意补全图形；
 
-    ②若点F恰是的中点，用等式表示与之间的数量关系，并证明．'
-  answer: （1）见详解    （2）①见详解；②
+    ②若点F恰是CD的中点，用等式表示AE与BD之间的数量关系，并证明．'
+  answer: （1）见详解（2）①见详解；②$AE = 2BD$
   solution: '【小问1详解】
 
-    设，
+    设$\angle BAD = \alpha$，
 
-    ∵，，
+    ∵$AB = AC$，$\angle BAC = 90^\circ$，
 
-    ∴，
+    ∴$\angle DAC = \angle ADC = 90^\circ - \alpha$，
 
-    ∴．
+    ∴$\angle ACD = 2\alpha = 2\angle BAD$．
 
     【小问2详解】
 
     ①
 
-    ②，证明如下：
+    [图]
 
-    过点C作于点M，交于点N，
+    ②$AE = 2BD$，证明如下：
 
-    ∵，
+    过点C作$CM \perp AD$于点M，交AE于点N，
 
-    ∴，
+    [图]
 
-    ∴，
+    ∵$\angle AMC=\angle ADE=90^{\circ}$，
 
-    ∵F恰是的中点，
+    ∴$CM \parallel DE$，
 
-    ∴，
+    ∴$\angle EDF=\angle MCF$，
 
-    又，
+    ∵F恰是CD的中点，
 
-    ∴，
+    ∴$CF = DF$，
 
-    ∴，
+    又$\angle DFE = \angle CFN$，
 
-    ∵，
+    ∴$\triangle DFE\cong\triangle CFN$，
 
-    ∴，
+    ∴$CN = DE = AD$，
 
-    ∴，
+    ∵$\angle ACD = 2\angle ACN = 2\angle BAD$，
 
-    ∴，
+    ∴$\angle ACN = \angle BAD$，
 
-    ∵M为中点，，
+    ∴$\triangle ACN \cong \triangle BAD$，
 
-    ∴，
+    ∴$BD = AN$，
 
-    ∴N为中点，
+    ∵M为AD中点，$MN\parallel DE$，
 
-    ∴．'
+    ∴$\frac{AN}{EN}=\frac{AM}{DM}=1$，
+
+    ∴N为AE中点，
+
+    ∴$AE = 2AN = 2BD$．'
   knowledge_points:
   - 全等三角形
   - 旋转
@@ -972,85 +1176,69 @@ questions:
 - id: 28
   type: 解答
   score: 7
-  question: '在平面直角坐标系中，的半径为，点是上一点．对平面内的一点，先将点关于点作中心对称变换得到点，再将点沿射线的方向平移半径的长度得到点，称为一次关于半径的反射平移，点称为点关于半径的反射平移点．如图，已知点．
+  question: '在平面直角坐标系xOy中，$\odot\odot$的半径为r，点P是$\odot\odot$上一点．对平面内的一点Q，先将点Q关于点O作中心对称变换得到点$Q_1$，再将点$Q_1$沿射线OP的方向平移半径r的长度得到点$Q_{2}$，称为一次关于半径OP的反射平移，点$Q_{2}$称为点Q关于半径OP的反射平移点．如图，已知点$A(0,2)$．
 
-    （1）点是上的动点，当时，在，，，中，可能是点关于半径的反射平移点的是_______；
+    [图]
 
-    （2）设直线与轴交于点，与轴交于点，直线经过．
+    （1）点P是$\odot\odot$上的动点，当$OP = 1$时，在$A_{1}(0,-1)$，$A_{2}\left(1,-1\right)$，$A_{3}\left(0,-2\right)$，$A_{4}\left(-1,-2\right)$中，可能是点A关于半径OP的反射平移点的是_______；
 
-    在上述条件下，________；
+    （2）设直线$l_{1}: y = \frac{\sqrt{3}}{3}x + b (b > 0)$与x轴交于点M，与y轴交于点N，直线l经过A．
 
-    当的坐标为时，如果线段上一点关于半径的反射平移点在上或内部，直接写出点的横坐标的取值范围；
+    $1$在上述条件下，$b =$________；
 
-    当在轴的正半轴上时，如果线段上存在点，使点关于半径的反射平移点在上，直接写出的半径的取值范围．'
-  answer: （1），； （2）；；．
+    $\textcircled{2}$当P的坐标为$(0,1)$时，如果线段MN上一点B关于半径OP的反射平移点在$\odot\odot$上或内部，直接写出点B的横坐标的取值范围；
+
+    $3$当P在y轴的正半轴上时，如果线段MN上存在点C，使点C关于半径OP的反射平移点在$\odot\odot$上，直接写出$\odot\odot$的半径r的取值范围．'
+  answer: （1）$A_1$，$A_4$； （2）$1$$2$；$\textcircled{2}$$-\frac{\sqrt{3}}{2} \leq x_{0} \leq 0$；$3$$r=4\sqrt{3}-6$．
   solution: '【小问1详解】
 
-    解：由点关于的对称点，
+    解：由点$A(0,2)$关于O的对称点$A''(0,-2)$，
 
-    ∵，
+    ∵$A''A'''' = OP = 1$，
 
-    ∴在为圆心，为半径的圆上，如图所示，
+    ∴$A''''$在$A''$为圆心，$1$为半径的圆上，如图所示，
 
-    ∵，，， ，
+    [图]
 
-    ∴根据图形可知，在上，
+    ∵$A_{1}(0,-1)$，$A_{2}\left(1,-1\right)$，$A_{3}\left(0,-2\right)$，$A_{4}\left(-1,-2\right)$，
 
-    故答案为：，；
+    ∴根据图形可知$A_{1}(0,-1)$，$A_{4}\left(-1,-2\right)$在$\odot O''A''$上，
+
+    故答案为：$A_1$，$A_4$；
 
     【小问2详解】
 
-    解：∵经过点，
+    解：$1$∵$y=\frac{\sqrt{3}}{3}x+b(b>0)$经过点$A(0,2)$，
 
-    ∴当时，，
+    ∴当$x = 0$时，$b = 2$，
 
-    故答案为：；
+    故答案为：$2$；
 
-    ∵，
+    $\textcircled{2}$∵$b = 2$，
 
-    ∴，
+    ∴$y=\frac{\sqrt{3}}{3}x+2$，
 
-    如图所示，线段上一点关于半径的反射平移点在上或内部，即在的内部时，先中心对称再平移，
+    如图所示，线段MN上一点B关于半径OP的反射平移点在$\odot\odot$上或内部，即$N''''B''''$在$\odot\odot$的内部时，先中心对称再平移，
 
-    当时，，
+    [图]
 
-    则，
+    当$y = 0$时，$x = -2\sqrt{3}$，
 
-    ∴，
+    则$M\left(-2\sqrt{3},0\right)$，
 
-    ∴，
+    ∴$OM = 2\sqrt{3}$，
 
-    ∴，
+    ∴$\tan \angle MNO = \frac{OM}{ON} = \frac{2\sqrt{3}}{2} = \sqrt{3}$，
 
-    ∵线段经过反射平移后与轴的夹角不变，
+    ∴$\angle MNO=60^\circ$，
 
-    ∴，
+    ∵线段经过反射平移后与y轴的夹角不变，
 
-    ∴当在上且不与点重合时，连接，则即为等边三角形，
+    ∴$\angle ONB''=60^\circ$，
 
-    ∴
+    ∴当$B''''$在$\odot\odot$上且不与点N重合时，连接$OB''''$，则$\triangle OB''''N''$即为等边三角形，
 
-    ∴，，
-
-    结合图形，可得线段上一点关于半径的反射平移点在上或内部时， ；
-
-    如图所示，当与相切时，为临界值，延长交于点，作轴，则，，，
-
-    ∴，
-
-    ∴，
-
-    ∵轴，
-
-    ∴，
-
-    又∵，
-
-    ∴，
-
-    解得，
-
-    ∴线段上存在点，使点关于半径的反射平移点在上，的半径的取值范围为．'
+    ∴$B''\left(\frac{\sqrt{3}}{'
   knowledge_points:
   - 一次函数
   - 勾股定理

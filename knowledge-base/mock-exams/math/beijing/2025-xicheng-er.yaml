@@ -1,8 +1,8 @@
 # ============================================================
 # 2025年北京西城区中考数学二模试卷 — 逐题分析
 # ============================================================
-# 数据来源：knowledge-original/精品解析：2025年北京市西城区九年级中考二模数学试卷（解析版）.docx
-# 自动生成，部分数学公式可能显示不全（docx公式对象无法完整提取）
+# 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
+# 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
 # 满分：100分  时长：120分钟
 
 year: 2025
@@ -11,88 +11,17 @@ exam_type: 二模
 subject: 数学
 full_score: 100
 duration_minutes: 120
-total_questions: 33
+total_questions: 28
 structure: 8选择(16分) + 8填空(16分) + 12解答(68分)
 questions:
 - id: 1
   type: 选择
   score: 2
-  question: 本试卷共7页，共两部分，28道题．满分100分．考试时间120分钟．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 2
-  type: 选择
-  score: 2
-  question: 在试卷和草稿纸上准确填写姓名、准考证号、考场号和座位号．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 3
-  type: 选择
-  score: 2
-  question: 试题答案一律填涂或书写在答题卡上，在试卷上作答无效．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 4
-  type: 选择
-  score: 2
-  question: 在答题卡上，选择题、作图题用2B铅笔作答，其他试题用黑色字迹签字笔作答．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 5
-  type: 选择
-  score: 2
-  question: 考试结束，将本试卷、答题卡和草稿纸一并交回．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 1
-  type: 选择
-  score: 2
-  question: "如图是一个立体图形的三视图，则该立体图形是（   ）\nA. 圆锥\tB. 圆柱\tC. 长方体\tD. 球"
+  question: '如图是一个立体图形的三视图，则该立体图形是（）
+
+    [图]
+
+    A.圆锥B.圆柱C.长方体D.球'
   answer: A
   solution: '解：A：圆锥的三视图为三角形、三角形、圆，符合题意；
 
@@ -115,15 +44,19 @@ questions:
 - id: 2
   type: 选择
   score: 2
-  question: "如图，两个直角三角形的直角顶点重合，如果，那么的大小为（   ）\nA. \tB. \tC. \tD."
+  question: '如图，两个直角三角形的直角顶点O重合，如果$\angle AOD=128^\circ$，那么$\angle BOC$的大小为（）
+
+    [图]
+
+    A.$38^\circ$B.$52^\circ$C.$60^\circ$D.$62^\circ$'
   answer: B
-  solution: '解：由题意得：，
+  solution: '解：由题意得：$\angle AOC = \angle BOD = 90^\circ$，
 
-    ∵，
+    ∵$\angle AOD=128^\circ$，
 
-    ∴，
+    ∴$\angle AOB-\angle AOD-\angle BOD=38^\circ$，
 
-    ∴，
+    ∴$\angle BOC = \angle AOC - \angle AOB = 52^\circ$，
 
     故选：B．'
   knowledge_points:
@@ -138,9 +71,11 @@ questions:
 - id: 3
   type: 选择
   score: 2
-  question: "“双碳”目标战略为中国汽车工业带来了新的生命力，截至2023年底，全国新能源汽车保有量约为辆，根据新能源汽车产业规划目标，预计到2033年底，新能源汽车保有量将会是2023年底的5倍，达到约辆，则的值是（   ）\nA. \tB. \tC. \tD."
+  question: '“双碳”目标战略为中国汽车工业带来了新的生命力，截至2023年底，全国新能源汽车保有量约为$2.0\times10^{7}$辆，根据新能源汽车产业规划目标，预计到2033年底，新能源汽车保有量将会是2023年底的5倍，达到约m辆，则m的值是（）
+
+    A.$1.0\times10^{7}$B.$1.0\times10^{8}$C.$1.0\times10^{9}$D.$1.0\times10^{10}$'
   answer: B
-  solution: '解：；
+  solution: '解：$2.0\times10^{5}\times5=10\times10^{5}=1.0\times10^{6}$；
 
     故选B．'
   knowledge_points:
@@ -156,15 +91,15 @@ questions:
 - id: 4
   type: 选择
   score: 2
-  question: '为了解某校1500名学生每天在校参加体育锻炼的情况，下列抽样调查方式中最合适的是（   ）
+  question: '为了解某校1500名学生每天在校参加体育锻炼的情况，下列抽样调查方式中最合适的是（）
 
-    A. 随机抽取某个班的全体学生
+    A.随机抽取某个班的全体学生
 
-    B. 每个年级各推荐20名学生
+    B.每个年级各推荐20名学生
 
-    C. 上体育课时，在操场上随机抽取25名学生
+    C.上体育课时，在操场上随机抽取25名学生
 
-    D. 将全校的学生名字输入电脑程序，在电脑中随机抽取100名学生'
+    D.将全校的学生名字输入电脑程序，在电脑中随机抽取100名学生'
   answer: D
   solution: '解：随机抽样是最简单和最基本的抽样方法，抽样时要注意样本的代表性和广泛性，将全校的学生名字输入电脑程序，在电脑中随机抽取100名学生，这些对象具有代表性和广泛性．
 
@@ -181,13 +116,15 @@ questions:
 - id: 5
   type: 选择
   score: 2
-  question: "六边形的内角和为（　　）\nA. \tB. \tC. \tD."
+  question: '六边形的内角和为（　　）
+
+    A.$360^\circ$B.$540^\circ$C.$720^\circ$D.$1080^\circ$'
   answer: C
   solution: '解：根据多边形的内角和可得：
 
-    ．
+    $(6-2)\times180^{\circ}=720^{\circ}$．
 
-    故选：．'
+    故选：C．'
   knowledge_points:
   - 综合
   module: triangles
@@ -200,25 +137,29 @@ questions:
 - id: 6
   type: 选择
   score: 2
-  question: "如图，数轴上的点，表示的数分别是，．如果，那么下列结论中一定正确的是（   ）\nA. \tB. \tC. \tD."
+  question: '如图，数轴上的点A，B表示的数分别是a，b．如果$ab < 0$，那么下列结论中一定正确的是（）
+
+    [图]
+
+    A.$a+b=0$B.$\left| a \right| > \left| b \right|$C.$b-2a>0$D.$\frac{1}{a}>\frac{1}{b}$'
   answer: C
-  solution: '解：由数轴可得，，
+  solution: '解：由数轴可得，$a < b$，
 
-    ∵，
+    ∵$ab < 0$，
 
-    ∴，
+    ∴$a<0<b$，
 
-    ∴，故错误；
+    ∴$\frac{1}{a}<0<\frac{1}{b}$，故D错误；
 
-    令，，则，，故错误；
+    令$a = -1$，$b=5$，则$a + b = 4 > 0$，$\left|a<b\right|$，故$A、B$错误；
 
-    令；
+    令$a = -5$；
 
-    ∵，
+    ∵$a<0<b$，
 
-    ∴
+    ∴$b - a > 0, -a > 0$
 
-    ∴，故正确；
+    ∴$b-2a>0$，故C正确；
 
     故选：C．'
   knowledge_points:
@@ -232,9 +173,11 @@ questions:
 - id: 7
   type: 选择
   score: 2
-  question: "在反比例函数y＝的图象上横、纵点坐标都是整数的点有（　　）\nA. 2个\tB. 4个\tC. 6个\tD. 8个"
+  question: '在反比例函数y＝$\frac{6}{x}$的图象上横、纵点坐标都是整数的点有（　　）
+
+    A.2个B.4个C.6个D.8个'
   answer: D
-  solution: '解：将反比例函数y=变形，得xy=6
+  solution: '解：将反比例函数y=$\frac{6}{x}$变形，得xy=6
 
     乘积为6的整数可分为：
 
@@ -254,88 +197,75 @@ questions:
 - id: 8
   type: 选择
   score: 2
-  question: "一组对边平行且另一组对边不平行的四边形称为梯形．若梯形中不平行的两边相等，则称这样的梯形为等腰梯形．如图，点，，，分别是等腰梯形各边的中点，顺次连接，，，得到四边形．点，，，分别是四边形各边的中点，顺次连接，，，得到四边形．以下四个结论：\n①四边形是菱形；\n②连接，则；\n③四边形的面积等于四边形面积的倍；\n④四边形周长的平方不小于梯形面积的倍．\n上述结论中，所有正确结论的序号是（\
-    \   ）\nA. ①④\tB. ②③\tC. ①②④\tD. ①②③④"
+  question: '一组对边平行且另一组对边不平行的四边形称为梯形．若梯形中不平行的两边相等，则称这样的梯形为等腰梯形．如图，点E，F，G，H分别是等腰梯形$ABCD$各边的中点，顺次连接E，F，G，H得到四边形$EFGH$．点K，L，M，N分别是四边形$EFGH$各边的中点，顺次连接K，L，M，N得到四边形$KLMN$．以下四个结论：
+
+    ①四边形$EFGH$是菱形；
+
+    ②连接FH，则$2FH=AD+BC$；
+
+    ③四边形$EFGH$的面积等于四边形$KLMN$面积的$4$倍；
+
+    ④四边形$KLMN$周长的平方不小于梯形$ABCD$面积的$4$倍．
+
+    上述结论中，所有正确结论的序号是（）
+
+    [图]
+
+    A.①④B.②③C.①②④D.①②③④'
   answer: C
-  solution: '解：连接等腰梯形的对角线、．
+  solution: '解：连接等腰梯形$ABCD$的对角线AC、BD．
 
-    ∵点，，，分别是等腰梯形各边的中点，
+    [图]
 
-    ∴， ，
+    ∵点E，F，G，H分别是等腰梯形$ABCD$各边的中点，
+
+    ∴$EF=\frac{1}{2}BD$，$EH=\frac{1}{2}AC$，
 
     ∵等腰梯形的对角线相等，
 
-    ∴，
+    ∴$AC = BD$，
 
-    ∴．
+    ∴$EF = EH$．
 
-    同理，
+    同理$EF = EH = HG = GF$，
 
-    ∴四边形是菱形，结论①正确．
+    ∴四边形$EFGH$是菱形，结论①正确．
 
-    取的中点，连接，，
+    取BD的中点Q，连接FQ，QH，
 
-    ∵，分别是，的中点，
+    [图]
 
-    ∴
+    ∵F，H分别是AB，CD的中点，
 
-    ∵
+    ∴$FO/AD, FO = \frac{1}{2}AD$$\text{，}$$QH \parallel BC, QH = \frac{1}{2}BC$
 
-    ∴
+    ∵$AD \parallel BC$
 
-    ∴点，，三点共线，
+    ∴$FQ \parallel BC$
 
-    ∴即，结论②正确．
+    ∴点F，Q，H三点共线，
 
-    连接、，
+    ∴$FH=\frac{1}{2}AD+\frac{1}{2}BC$即$2FH=AD+BC$，结论②正确．
 
-    ∵四边形是菱形，
+    连接EG、FH，
 
-    ∴，
+    [图]
 
-    ∴
+    ∵四边形$EFGH$是菱形，
 
-    ∵点，，，分别是四边形各边的中点，
+    ∴$EG \perp FH$，
 
-    ∴，
+    ∴$\angle FOG=90^\circ$
 
-    ∴，，四边形是平行四边形，
+    ∵点K，L，M，N分别是四边形$EFGH$各边的中点，
 
-    ∴，四边形是矩形，
+    ∴$KL // EG, KL = \frac{1}{2}EG$，$FH \parallel LM$
 
-    同理可得，
+    ∴$\triangle FKL \cong \triangle FEG$，$\angle KLM=\angle OPM=\angle FOG=90^{\circ}$，四边形$KLMN$是平行四边形，
 
-    ∴
+    ∴$\frac{S_{\text{KEL}}}{S_{\text{PBG}}} = \left( \frac{KL}{EG} \right)^2 = \frac{1}{4}$，四边形$KLMN$是矩形，
 
-    ∴，即四边形的面积等于四边形面积的倍，不是倍，结论③错误．
-
-    同理可得四边形的面积等于四边形面积的倍，
-
-    ∴四边形的面积等于四边形面积的倍，
-
-    设梯形的高为，上底，下底，
-
-    ∴梯形面积 ．
-
-    ∵点，，，分别是四边形各边的中点，
-
-    ∴，
-
-    ∴
-
-    ∴四边形是平行四边形，设其相邻两边分别为、，周长 ， ．
-
-    ∵（当且仅当时取等号），四边形的面积 ，且，
-
-    ∴
-
-    ∴
-
-    ∵
-
-    ∴ ，即四边形周长的平方不小于梯形面积的倍，结论④正确，
-
-    故选：C．'
+    同理可得$\frac{S_{\triangle CEC''}}{S_{\triangle ABC}}=\frac{'
   knowledge_points:
   - 相似三角形
   - 平行四边形
@@ -349,15 +279,15 @@ questions:
 - id: 9
   type: 填空
   score: 2
-  question: 若 在实数范围内有意义，则实数x的取值范围是_______．
-  answer: ''
-  solution: '解：∵在实数范围内有意义，，
+  question: 若$\sqrt{x-2}$在实数范围内有意义，则实数x的取值范围是_______．
+  answer: $x^{2}$
+  solution: '解：∵$\sqrt{x-2}$在实数范围内有意义，，
 
-    ∴，
+    ∴$x-2\quad0$，
 
-    ∴，
+    ∴$x^{2}$，
 
-    故答案为：．'
+    故答案为：$x^{2}$．'
   knowledge_points:
   - 综合
   module: numbersAndExpressions
@@ -370,11 +300,11 @@ questions:
 - id: 10
   type: 填空
   score: 2
-  question: 分解因式：_____．
-  answer: ''
-  solution: '解：，
+  question: 分解因式：$2ax^{2}+4axy+2ay^{2}$_____．
+  answer: $2a(x+y)^{2}$
+  solution: '解：$2ax^{2}+4axy+2ay^{2}=2a(x^{2}+2xy+y^{2})=2a(x+y)^{2}$，
 
-    故答案为：．'
+    故答案为：$2a(x+y)^{2}$．'
   knowledge_points:
   - 综合
   module: numbersAndExpressions
@@ -387,11 +317,11 @@ questions:
 - id: 11
   type: 填空
   score: 2
-  question: 在平面直角坐标系中，点关于x轴对称的点的坐标是_____．
-  answer: ''
-  solution: '解：点关于x轴对称点的坐标是，
+  question: 在平面直角坐标系xOy中，点$(2,1)$关于x轴对称的点的坐标是_____．
+  answer: $(2,-1)$
+  solution: '解：点$(2,1)$关于x轴对称$[公式]$点的坐标是$(2,-1)$，
 
-    故答案为：．'
+    故答案为：$(2,-1)$．'
   knowledge_points:
   - 轴对称
   - 坐标系
@@ -405,11 +335,11 @@ questions:
 - id: 12
   type: 填空
   score: 2
-  question: 写出一个比大且比小的整数______．
+  question: 写出一个比$\sqrt{5}$大且比$\sqrt{17}$小的整数______．
   answer: 3（答案不唯一）
-  solution: '解：∵2＜＜3，4＜＜5，
+  solution: '解：∵2＜$\sqrt{5}$＜3，4＜$\sqrt{17}$＜5，
 
-    ∴所有比小且比大的整数有3，4，
+    ∴所有比$\sqrt{17}$小且比$\sqrt{5}$大的整数有3，4，
 
     ∴这个整数可以是3，
 
@@ -426,19 +356,19 @@ questions:
 - id: 13
   type: 填空
   score: 2
-  question: 方程的解为______．
-  answer: ''
-  solution: '解：，
+  question: 方程$\frac{3}{x+2}-\frac{2}{x-1}=0$的解为______．
+  answer: $x=7$
+  solution: '解：$\frac{3}{x+2}-\frac{2}{x-1}=0$，
 
-    方程两边都乘，得，
+    方程两边都乘$(x-1)(x+2)$，得$3(x-1)-2(x+2)=0$，
 
-    解得：，
+    解得：$x=7$，
 
-    检验：当时，，
+    检验：当$x=7$时，$(x-1)(x+2)\neq0$，
 
-    所以分式方程的解是．
+    所以分式方程的解是$x=7$．
 
-    故答案为：．'
+    故答案为：$x=7$．'
   knowledge_points:
   - 分式方程
   module: numbersAndExpressions
@@ -451,7 +381,7 @@ questions:
   type: 填空
   score: 2
   question: 2024年7月27日，联合国教科文组织第46届世界遗产大会通过决议，将“北京中轴线——中国理想都城秩序的杰作”列入《世界遗产名录》，其中天坛、正阳门、故宫、鼓楼都是中轴线上的著名景点．小明和小华分别随机选择这四个景点中的任意一个去参观，则他们选择参观同一个景点的概率是______．
-  answer: '##'
+  answer: $\frac{1}{4}$##$0.25$
   solution: ''
   knowledge_points:
   - 概率
@@ -466,35 +396,37 @@ questions:
 - id: 15
   type: 填空
   score: 2
-  question: 如图，在中，点是上一点，延长，交于点．若，的面积为6，则的面积为______．
+  question: '如图，在$\Box ABCD$中，点E是BC上一点，延长AE，DC交于点F．若$AD = 3CE$，$\triangle ECF$的面积为6，则$\triangle ABE$的面积为______．
+
+    [图]'
   answer: '24'
-  solution: '解：∵四边形是平行四边形，
+  solution: '解：∵四边形$ABCD$是平行四边形，
 
-    ∴ ，即．
+    ∴$AB \parallel DC$，即$AB \parallel CF$．
 
-    ∴，．
+    ∴$\angle BAE=\angle CFE$，$\angle ABE=\angle FCE$．
 
-    ∴．
+    ∴$\triangle ABE \sim \triangle FCE$．
 
-    ∵四边形是平行四边形，
+    ∵四边形$ABCD$是平行四边形，
 
-    ∴ ．
+    ∴$AD = BC$．
 
-    ∵，
+    ∵$AD = 3CE$，
 
-    ∴，
+    ∴$BC = 3CE$，
 
-    ∴ ．
+    ∴$BE = BC - CE = 3CE - CE = 2CE$．
 
-    ∵．
+    ∵$\triangle ABE \sim \triangle FCE$．
 
-    ∴ ．
+    ∴$\frac{BE}{CE}=\frac{2CE}{CE}=2$．
 
-    ∴ ． 即，
+    ∴$\frac{S_{\triangle ABC}}{S_{\triangle ECF}}=\left(\frac{BE}{CE}\right)^{2}=2^{2}=4$．即$\frac{S_{\triangle ABE}}{6}=4$，
 
-    ∴
+    ∴$S_{\triangle ABE}=4\times6=24$
 
-    故答案为：．'
+    故答案为：$24$．'
   knowledge_points:
   - 相似三角形
   - 平行四边形
@@ -509,15 +441,43 @@ questions:
   score: 2
   question: '小林驾车去某地办事，目的地附近有甲、乙两个停车场．已知小林停车时间不超过24小时．甲停车场收费标准是：
 
+    停车时长t（单位：小时）
+
+    $0<t\leq1$
+
+    $1<t\leq3$
+
+    $3<t\leq6$
+
+    $6<t\leq9$
+
+    $9<t\leq12$
+
+    $12 < r \leq 24$
+
+    收费标准（单位：元）
+
+    免费
+
+    5
+
+    10
+
+    15
+
+    18
+
+    24
+
     乙停车场收费标准是；每小时2元（不足1小时按1小时收费）．
 
     （1）若小林10点25分将车停入甲停车场，当天18点45分将车开出，则小林需交的停车费是______元；
 
     （2）若小林将车停到乙停车场，且停车费比停在甲停车场更优惠，则小林停车时间最长为______小时，'
-  answer: ①. 15    ②. 7
+  answer: ①.15②.7
   solution: '解：（1）∵小林10点25分将车停入甲停车场，当天18点45分将车开出，
 
-    ∴，
+    ∴$18-10=8,45-25=20$，
 
     ∴在甲停车场停了8小时20分钟，
 
@@ -525,17 +485,17 @@ questions:
 
     故答案为：15；
 
-    （2）若时，知甲免费，乙至少花费2元，不合题意；
+    （2）若$0<t\leq1$时，知甲免费，乙至少花费2元，不合题意；
 
-    若时，要使得乙停车费少，则乙最多2小时4元；
+    若$1<t\leq3$时，要使得乙停车费少，则乙最多2小时4元；
 
-    若时，要使得乙停车费少，则乙最多4小时8元；
+    若$3<t\leq6$时，要使得乙停车费少，则乙最多4小时8元；
 
-    若时，要使得乙停车费少，则乙最多7小时14元；
+    若$6<t\leq9$时，要使得乙停车费少，则乙最多7小时14元；
 
-    若时，乙至少花费20元，不合题意；
+    若$9<t\leq12$时，乙至少花费20元，不合题意；
 
-    若时，乙至少26元，不合题意，
+    若$12 < r \leq 24$时，乙至少26元，不合题意，
 
     ∴小林停车时间最长为7小时，
 
@@ -550,11 +510,13 @@ questions:
 - id: 17
   type: 解答
   score: 5
-  question: （第17题，详见原卷）
-  answer: ''
-  solution: '解：
+  question: 计算：$-1^{2}+\left(\frac{1}{2}\right)^{-1}+4\sin60^{\circ}-\sqrt{27}$．
+  answer: $1-\sqrt{3}$
+  solution: '解：$-1^{2}+\left(\frac{1}{2}\right)^{-1}+4\sin60^{\circ}-\sqrt{27}$
 
-    ．'
+    $m=-1+2+4\times\frac{\sqrt{3}}{2}-3\sqrt{3}$
+
+    $=1-\sqrt{3}$．'
   knowledge_points:
   - 三角函数
   module: numbersAndExpressions
@@ -567,15 +529,21 @@ questions:
 - id: 18
   type: 解答
   score: 5
-  question: 解不等式组：
-  answer: ''
-  solution: '解：原不等式组为，
+  question: '解不等式组：$\begin{cases}
 
-    解不等式①，得，
+    -3( x-2)>4-x \\
 
-    解不等式②，得，
+    \dfrac{1+2x}{3}>x-1
 
-    ∴原不等式组的解集为．'
+    \end{cases}$'
+  answer: $x<1$
+  solution: '解：原不等式组为$\left\{\begin{array}{l}-3(x-2)>4-x①\\ \frac{1+2x}{3}>x-1②\end{array}\right.$，
+
+    解不等式①，得$x<1$，
+
+    解不等式②，得$x<4$，
+
+    ∴原不等式组的解集为$x<1$．'
   knowledge_points:
   - 不等式
   - 不等式组
@@ -589,17 +557,23 @@ questions:
 - id: 19
   type: 解答
   score: 5
-  question: 已知，求代数式的值．
+  question: 已知$x-2y-3=0$，求代数式$x(x-2y)+y(2x-4y)++2y$的值．
   answer: '3'
-  solution: '解：
+  solution: '解：$x(x-2y)+y(2x-4y)++2y$
 
-    ．
+    $= x(x - 2) + y(2x - 4y) \\
 
-    ∵，
+    = x - 2y$
 
-    ∴．
+    $=(x+2y)(x-2y)$
 
-    ∴原式'
+    $=x-2y$．
+
+    ∵$x-2y-3=0$，
+
+    ∴$x - 2y = 3$．
+
+    ∴原式$=3$'
   knowledge_points:
   - 综合
   module: numbersAndExpressions
@@ -612,57 +586,61 @@ questions:
 - id: 20
   type: 解答
   score: 5
-  question: '如图，在中，，的平分线交于点，过点作，交于点，点是上一点，且，连接．
+  question: '如图，在$Rt\triangle ABC$中，$\angle ACB=90^\circ$，$\angle BAC$的平分线交BC于点D，过点D作$DE \parallel AC$，交AB于点E，点F是AC上一点，且$CF = AE$，连接EF．
 
-    （1）求证：四边形是矩形；
+    [图]
 
-    （2）连接，若，，求的长．'
-  answer: （1）详见解析 （2）
+    （1）求证：四边形$CDEF$是矩形；
+
+    （2）连接DF，若$AF = 3$，$\sin B=\frac{3}{5}$，求DF的长．'
+  answer: （1）详见解析 （2）$\sqrt{41}$
   solution: '【小问1详解】
 
-    证明：∵的平分线交于点，
+    证明：∵$\angle BAC$的平分线交BC于点D，
 
-    ∴．
+    ∴$\angle CAD = \angle BAD$．
 
-    ∵，
+    ∵$DE \parallel AC$，
 
-    ∴．
+    ∴$\angle CAD = \angle ADE$．
 
-    ∴．
+    ∴$\angle BAD = \angle ADE$．
 
-    ∴．
+    ∴$AE = DE$．
 
-    ∵，
+    ∵$CF = AE$，
 
-    ∴．
+    ∴$DE = CF$．
 
-    ∴四边形为平行四边形．
+    ∴四边形$CDEF$为平行四边形．
 
-    ∵，
+    ∵$\angle ACB=90^\circ$，
 
-    ∴四边形为矩形．
+    ∴四边形$CDEF$为矩形．
 
     【小问2详解】
 
     解：如图所示，
 
-    ∵在矩形中，，
+    [图]
 
-    ∴，．
+    ∵在矩形$CDEF$中，$EF \parallel CD$，
 
-    ∵，
+    ∴$\angle AEF = \angle B$，$\angle AFE = \angle ACB = 90^\circ$．
 
-    ∴．
+    ∵$\sin B=\frac{3}{5}$，
 
-    ∵在中，，
+    ∴$\sin\angle AEP=\frac{3}{5}$．
 
-    ∴，．
+    ∵在$Rt\triangle AFE$中，$AF = 3$，
 
-    ∴．
+    ∴$AE = 5$，$EF=\sqrt{5^{2}-3^{2}}=4$．
 
-    ∵在矩形中，，
+    ∴$DE = AE = 5$．
 
-    ∴在中，．'
+    ∵在矩形$CDEF$中，$\angle DEF = 90^\circ$，
+
+    ∴在$Rt\triangle DEF$中，$DF=\sqrt{DE^{2}+EF^{2}}=\sqrt{41}$．'
   knowledge_points:
   - 平行线
   - 弦
@@ -679,39 +657,39 @@ questions:
 - id: 21
   type: 解答
   score: 5
-  question: '关于的方程．
+  question: '关于x的方程$x^{2}+4x+2m-3=0$．
 
-    （1）若方程有实数根，求的取值范围；
+    （1）若方程有实数根，求m的取值范围；
 
-    （2）若方程的两个根都是整数，求正整数的值．'
-  answer: （1） （2）3
+    （2）若方程的两个根都是整数，求正整数m的值．'
+  answer: （1）$m \leq \frac{7}{2}$ （2）3
   solution: '【小问1详解】
 
     解：∵方程有实数根，
 
-    ∴．
+    ∴$\triangle 0$．
 
-    ∴．
+    ∴$4^{2}-4\times1\times(2m-3)=0$．
 
-    解得．
+    解得$m \leq \frac{7}{2}$．
 
-    即的取值范围是．
+    即m的取值范围是$m \leq \frac{7}{2}$．
 
     【小问2详解】
 
-    解：解方程，得．
+    解：解方程，得$x = -4 \pm 2\sqrt{7 - 2m} = -2 \pm \sqrt{7 - 2m}$．
 
-    ∵，
+    ∵$m \leq \frac{7}{2}$，
 
-    ∴正整数的值为1，2，3．
+    ∴正整数m的值为1，2，3．
 
-    当时，，不合题意，所以舍去；
+    当$m = 1$时，$\sqrt{7}-2m=\sqrt{5}$，不合题意，所以$m = 1$舍去；
 
-    当时，，不合题意，所以舍去；
+    当$m = 2$时，$\sqrt{7}-2m=\sqrt{3}$，不合题意，所以$m = 2$舍去；
 
-    当时，，得到方程的根为，，都是整数．
+    当$m = 3$时，$\sqrt{7-2m}=1$，得到方程的根为$x_{1}=-1$，$x_{2}=-3$，都是整数．
 
-    ∴正整数的值是3．'
+    ∴正整数m的值是3．'
   knowledge_points:
   - 一元二次方程
   - 根的判别式
@@ -725,41 +703,41 @@ questions:
 - id: 22
   type: 解答
   score: 5
-  question: '在平面直角坐标系中，函数和函数的图象相交于点．
+  question: '在平面直角坐标系xOy中，函数$y=2x+m$和函数$\hat{y}=mx(m\neq0)$的图象相交于点A．
 
-    （1）当时，求点的坐标；
+    （1）当$m = 4$时，求点A的坐标；
 
-    （2）当时，对于的每一个值，函数的值都大于函数的值，直接写出的取值范围．'
-  answer: （1） （2）
+    （2）当$x<2$时，对于x的每一个值，函数$y=2x+m$的值都大于函数$\hat{y}=mx(m\neq0)$的值，直接写出m的取值范围．'
+  answer: （1）$(2,8)$ （2）$2<m\leq4$
   solution: '【小问1详解】
 
-    解：当时，函数，．
+    解：当$m = 4$时，函数$y=2x+4$，$y=4x$．
 
-    联立方程组，
+    联立方程组$\left\{ \begin{array} { l } { y = 2 x + 4 } \\ { y = 4 x } \end{array} \right.$，
 
-    解得，
+    解得$\left\{ \begin{array} { l } { x = 2 } \\ { y = 8 } \end{array} \right.$，
 
-    ∴点的坐标为．
+    ∴点A的坐标为$(2,8)$．
 
     【小问2详解】
 
-    解：联立，
+    解：联立$\begin{cases} y = 2x + m \\ y = mx \end{cases}$，
 
-    ∴，
+    ∴$2x + m = mx$，
 
-    解得（ ）．
+    解得$x = \frac{m}{m - 2}$（$m \neq 2$）．
 
-    当时，的值都大于的值，且当时，若两函数值相等，则
+    当$x<2$时，$y=2x+m$的值都大于$y = mx$的值，且当$x=2$时，若两函数值相等，则
 
-    ，
+    $2\times2+m=2m$，
 
-    解得．
+    解得$m = 4$．
 
-    又∵当时，在的下方，
+    又∵当$x<2$时，$y = mx \, (m \neq 0)$在$y=2x+m$的下方，
 
-    ∴要大于，
+    ∴m要大于$2$，
 
-    ∴．'
+    ∴$2<m\leq4$．'
   knowledge_points:
   - 一次函数
   - 坐标系
@@ -778,43 +756,105 @@ questions:
 
     a．甲款软件评分：
 
-    60  60  70  70  72  75  80  80  80  80
+    60
 
-    80  80  81  81  81  82  82  85  90  91
+    60  70  70  72  75  80  80  80  80
 
-    b．乙款软件评分频数分布直方图如下：（数据分5组：第1组，第2组，第3组，第4组，第5组）
+    80
+
+    80  81  81  81  82  82  85  90  91
+
+    b．乙款软件评分频数分布直方图如下：（数据分5组：第1组$50 \leq x < 60$，第2组$60 \leq x < 70$，第3组$70 \leq x < 80$，第4组$80 \leq x < 90$，第5组$90 \leq x \leq 100$）
+
+    [图]
 
     c．甲、乙两款软件评分的平均数、中位数、众数如下：
 
+    软件
+
+    平均数
+
+    中位数
+
+    众数
+
+    甲
+
+    78
+
+    80
+
+    m
+
+    乙
+
+    78
+
+    n
+
+    72
+
     根据以上信息，解答下列问题：
 
-    ①值为______，的值位于乙款软件评分的第______组；
+    ①m$[公式]$值为______，n的值位于乙款软件评分的第______组；
 
-    ②估计这1200个普通用户中对乙款软件评分满足的约为______个；
+    ②估计这1200个普通用户中对乙款软件评分x满足$90 \leq x \leq 100$的约为______个；
 
     （2）邀请专业人士对甲、乙两款软件从四个维度体验、评分（百分制），评分结果由维度1和维度2各占30%，维度3和维度4各占20%组成，评分如下：
 
+    维度
+
+    软件
+
+    维度1
+
+    维度2
+
+    维度3
+
+    维度4
+
+    甲
+
+    94
+
+    k
+
+    92
+
+    93
+
+    乙
+
+    91
+
+    93
+
+    93
+
+    92
+
     ①乙款软件的评分为______；
 
-    ②若甲款软件的评分更高，则表中（为整数）的最小值为______．'
+    ②若甲款软件的评分更高，则表中k（k为整数）的最小值为______．'
   answer: （1）①80；3；②180； （2）①92.2；②91
   solution: '【小问1详解】
 
     解：①甲组20个数据中出现次数最多的是80，因此甲组数据的众数为80，
 
-    所以，；乙组数据的中位数在第3组中．
+    所以，$m = 80$；乙组数据的中位数在第3组中．
 
-    ②．
+    ②$1200\times\frac{3}{20}=180$．
 
     故答案为：①80；3；②180；
 
     【小问2详解】
 
-    解：①（分）；
+    解：①$91\times30\%+93\times30\%+93\times20\%+92\times20\%=92.2$（分）；
 
-    ②由题意得，
+    ②由题意得$94\times30\%+k\times30\%+92\times20\%+93\times20\%>92.2$，
 
-    解得
+    解得$k > 90$
 
     ∴k的最小整数值为91.
 
@@ -832,71 +872,69 @@ questions:
 - id: 24
   type: 解答
   score: 6
-  question: '如图，为的外接圆，点为的中点，的切线交的延长线于点，交于点．连接，，且．
+  question: '如图，$\odot\odot$为$V_{ABC}$的外接圆，点A为$\widehat{BAC}$的中点，$\odot\odot$的切线AD交BO的延长线于点D，BD交AC于点E．连接OA，OC，且$\angle AOC=2\angle AED$．
 
-    （1）求证：；
+    [图]
 
-    （2）若，求的长．'
-  answer: （1）详见解析 （2）
+    （1）求证：$\angle DAE = \angle AED$；
+
+    （2）若$AD = 1$，求BC的长．'
+  answer: （1）详见解析 （2）$\sqrt{2}$
   solution: '【小问1详解】
 
-    证明：设，则，
+    证明：设$\angle ABC = \alpha$，则$\angle AOC=2\alpha$，
 
-    ∵，
+    ∵$OA = OC$，
 
-    ∴，
+    ∴$\angle OAC = \angle OCA$，
 
-    ∴，
+    ∴$\angle OAC=90^\circ-\alpha$，
 
-    ∵是的切线，
+    ∵AD是$\odot\odot$的切线，
 
-    ∴半径，
+    ∴半径$OA \perp AD$，
 
-    ∴，
+    ∴$\angle OAD = 90^\circ$，
 
-    ∴，
+    ∴$\angle DAE = \alpha$，
 
-    ∵，
+    ∵$\angle AOC=2\angle AED$，
 
-    ∴，
+    ∴$\angle AED = \alpha$，
 
-    ∴．
+    ∴$\angle DAE = \angle AED$．
 
     【小问2详解】
 
-    解：延长交于，则，
+    解：延长AO交BC于F，则$\angle FAD = 90^\circ$，
 
-    ∵点为的中点，
+    [图]
 
-    ∴，
+    ∵点A为BAC的中点，
 
-    ∵，，
+    ∴$AB = AC$，
 
-    ∴，
+    ∵$OA=OA$，$OB = OC$，
 
-    ∴，
+    ∴$\triangle ABO \cong \triangle ACO$，
 
-    ∴，
+    ∴$\angle BAO = \angle CAO$，
 
-    ∴，
+    ∴$AF \perp BC$，
 
-    ∴，
+    ∴$\angle AFB = \angle FAD = 90^\circ$，
 
-    ∴，
+    ∴$AD \parallel BC$，
 
-    ∵，，
+    ∴$\angle ADO = \angle OBC$，
 
-    ∴，
+    ∵$\angle OEC=\angle AED=\angle DAE$，$\angle OCA-\angle OAC=90^\circ-\angle DAE$，
 
-    ∴，
+    ∴$\angle COE=\angle COB=90^{\circ}$，
 
-    ∴，
+    ∴$\angle OBC = \angle OCB = \angle ADO = \angle AOD = 45^\circ$，
 
-    ∴，
-
-    ∵，
-
-    ∴．'
+    ∴$\overline{OB}=\overline{OC}=\overline{OA}+\overline{AD}$'
   knowledge_points:
   - 圆周角
   - 垂径定理
@@ -910,9 +948,59 @@ questions:
 - id: 25
   type: 解答
   score: 6
-  question: '小明妈妈早晨骑电动车将小明送到幼儿园后再去单位上班．已知小明家到幼儿园的路程为，幼儿园到小明妈妈单位的路程为，小明妈妈骑电动车带小明行驶是载重行驶，下表记录了电池中剩余电量占电池容量的百分比（简称剩余电量占比）与小明妈妈独自行驶和载重行驶状态下可行驶的路程（单位：）和（单位：）的部分数据：
+  question: '小明妈妈早晨骑电动车将小明送到幼儿园后再去单位上班．已知小明家到幼儿园的路程为$8km$，幼儿园到小明妈妈单位的路程为$3km$，小明妈妈骑电动车带小明行驶是载重行驶，下表记录了电池中剩余电量占电池容量的百分比（简称剩余电量占比）P与小明妈妈独自行驶和载重行驶状态下可行驶的路程$S_1$（单位：km）和$S_{2}$（单位：km）的部分数据：
 
-    （1）通过分析数据，发现可以用函数刻画与，与之间的关系．在给出的平面直角坐标系中，补全这两个函数的图象；
+    P
+
+    0%
+
+    10%
+
+    20%
+
+    40%
+
+    60%
+
+    80%
+
+    100%
+
+    $S_1$
+
+    0
+
+    3
+
+    7
+
+    15
+
+    23
+
+    31
+
+    39
+
+    $S_{2}$
+
+    0
+
+    2
+
+    4
+
+    9
+
+    15
+
+    22
+
+    30
+
+    （1）通过分析数据，发现可以用函数刻画$S_1$与P，$S_{2}$与P之间的关系．在给出的平面直角坐标系中，补全这两个函数的图象；
+
+    [图]
 
     （2）根据上述数据和函数图象，解决下列问题：
 
@@ -921,28 +1009,28 @@ questions:
     ②假设一天早晨该电动车剩余电量占比为30%，在电量耗尽前，判断小明妈妈骑电动车______（填“能”“不能”）将小明送到幼儿园；
 
     ③若在电量耗尽前小明妈妈能到达单位，则当天早晨出门时该电动车剩余电量占比至少为______（精确到1%）．'
-  answer: （1）见解析    （2）①7.1（答案不唯一）；②不能；③
+  answer: （1）见解析（2）①7.1（答案不唯一）；②不能；③$44\%$
   solution: '【小问1详解】
 
     解：如图，
 
-    【小问2详解】
+    [图]【小问2详解】
 
-    解：①从表格数据或图象估算，当时，，，
+    解：①从表格数据或图象估算，当$P = 50\%$时，$S_{1} \approx 19.1$，$S_{2} \approx 12$，
 
-    ∴ ．
+    ∴$S_{1}-S_{2}\approx 19.1-12=7.1$km．
 
-    ②从表格数据或图象估算，当时，值约为 ，
+    ②从表格数据或图象估算，当$P = 30\%$时，$S_{2}$$[公式]$值约为$6.5$km，
 
-    ∵，
+    ∵$6.5<8$，
 
     ∴不能将小明送到幼儿园．
 
-    ③观察的数据，当时，，
+    ③观察$S_{2}$的数据，当$P = 34\%$时，$S_2 = 8$，
 
-    观察的数据，当时，
+    观察$S_1$的数据，当$P=10\%$时$, S_{1}=3$，
 
-    ∴当天早晨出门时该电动车剩余电量占比至少为．'
+    ∴当天早晨出门时该电动车剩余电量占比至少为$10\%+34\%=44\%$．'
   knowledge_points:
   - 坐标系
   module: functions
@@ -953,51 +1041,51 @@ questions:
 - id: 26
   type: 解答
   score: 6
-  question: '在平面直角坐标系中，抛物线经过点．
+  question: '在平面直角坐标系xOy中，抛物线$y = ax^2 - 2ax$经过点$A(3,3)$．
 
     （1）求抛物线的顶点坐标；
 
-    （2）已知和是抛物线上的两个点，且总成立，求的取值范围．'
-  answer: （1） （2）或
+    （2）已知$M\left(x_{n},m\right)\left(x_{n}>0\right)$和$N(m,n)$是抛物线上的两个点，且$n > m$总成立，求$x_0$的取值范围．'
+  answer: （1）$(1,-1)$ （2）$0<x_{0}<2$或$x_0 > 3$
   solution: '【小问1详解】
 
-    解：∵抛物线过点，
+    解：∵抛物线$y = ax^2 - 2ax$过点$A(3,3)$，
 
-    ∴，
+    ∴$9a-6a=3$，
 
-    ∴，
+    ∴$a = 1$，
 
-    ∴抛物线为，
+    ∴抛物线为$y = x^2 - 2x$，
 
-    ∵，
+    ∵$y=x^{2}-2x=(x-1)^{2}-1$，
 
-    ∴抛物线的顶点坐标为；
+    ∴抛物线的顶点坐标为$(1,-1)$；
 
     【小问2详解】
 
-    解：∵在抛物线上，
+    解：∵$M\left(x_{0},m\right)$在抛物线$y = x^2 - 2x$上，
 
-    ∴，
+    ∴$m=x_{0}^{2}+2x_{n}=(x_{n}-1)^{2}-1=-1$，
 
-    ∵在抛物线上，
+    ∵$N(m,n)$在抛物线$y = x^2 - 2x$上，
 
-    ∴，
+    ∴$n=m^{2}-2m$，
 
-    令，则，
+    令$m = n$，则$m^{2}-2m=m$，
 
-    ∴或，
+    ∴$m = 0$或$m = 3$，
 
-    ∴当时，结合函数的图象可得或，
+    ∴当$n > m$时，结合函数$y = x^2 - 2x$的图象可得$-1 \leq m < 0$或$m>3$，
 
-    当时，结合函数图象可得，
+    当$-1 \leq m < 0$时，结合函数$m = x_{\phi}^{2} - 2x_{n}$$[公式]$图象可得$0<x_{0}<2$，
 
-    当时，结合函数的图象可得或，
+    当$m>3$时，结合函数$m = x_{\phi}^{2} - 2x_{n}$的图象可得$x_0<-1$或$x_0 > 3$，
 
-    ∵，
+    ∵$x_0 > 0$，
 
-    ∴，
+    ∴$x_0 > 3$，
 
-    综上所述，的取值范围是或．'
+    综上所述，$x_0$的取值范围是$0<x_{0}<2$或$x_0 > 3$．'
   knowledge_points:
   - 二次函数
   - 坐标系
@@ -1008,81 +1096,85 @@ questions:
 - id: 27
   type: 解答
   score: 7
-  question: '如图，在中，，，点为边上一点（），连接，将线段绕点逆时针旋转得到线段，连接交于点，连接．
+  question: '如图，在$V_{ABC}$中，$AB = AC$，$\angle BAC=2\alpha(0^{\circ}<\alpha<90^{\circ})$，点D为边BC上一点（$BD > CD$），连接AD，将线段AD绕点A逆时针旋转$2\alpha$得到线段AE，连接ED交AC于点F，连接CE．
 
-    （1）求证：平分；
+    [图]
 
-    （2）若点，，分别为，，的中点，连接，补全图形，用等式表示线段与之间的数量关系，并证明．'
-  answer: （1）详见解析 （2），图见解析，证明见解析
+    （1）求证：CA平分$\angle BCE$；
+
+    （2）若点M，N，H分别为BC，DE，DF的中点，连接MH，补全图形，用等式表示线段MH与NH之间的数量关系，并证明．'
+  answer: （1）详见解析 （2）$MH = NH$，图见解析，证明见解析
   solution: '【小问1详解】
 
-    证明：∵线段绕点逆时针旋转得到线段，
+    证明：∵线段AD绕点A逆时针旋转$2\alpha$得到线段AE，
 
-    ∴，．
+    ∴$AE = AD$，$\angle DAE=2\alpha$．
 
-    ∵，
+    ∵$\angle BAC=2\alpha$，
 
-    ∴．
+    ∴$\angle BAC = \angle DAE$．
 
-    ∴．
+    ∴$\angle BAD = \angle CAE$．
 
-    ∵，
+    ∵$AB = AC$，
 
-    ∴．
+    ∴$\triangle ABD \cong \triangle ACE$．
 
-    ∴．
+    ∴$\angle ABD = \angle ACE$．
 
-    ∵，
+    ∵$AB = AC$，
 
-    ∴．
+    ∴$\angle ABC = \angle ACB$．
 
-    ∴．
+    ∴$\angle ACB = \angle ACE$．
 
-    ∴平分．
+    ∴CA平分$\angle BCE$．
 
     【小问2详解】
 
     解：补全图形如图所示．
 
-    线段与之间的数量关系：．
+    [图]
 
-    证明：在上取点，使得，连接．
+    线段MH与NH之间的数量关系：$MH = NH$．
 
-    ∵，
+    证明：在BC上取点K，使得$BK = CD$，连接FK．
 
-    ∴．
+    ∵$\triangle ABD \cong \triangle ACE$，
 
-    ∵点为的中点，
+    ∴$BD = CE$．
 
-    ∴．
+    ∵点M为BC的中点，
 
-    ∴，．
+    ∴$BM = CM$．
 
-    ∴．
+    ∴$KM = DM$，$BD = CK$．
 
-    ∵，，
+    ∴$CK = CE$．
 
-    ∴．
+    ∵$\angle ACB = \angle ACE$，$CF = CF$，
 
-    ∴．
+    ∴$\triangle CKF \cong \triangle CEF$．
 
-    ∵点为的中点，
+    ∴$KF=EF$．
 
-    ∴．
+    ∵点H为DF的中点，
 
-    ∴．
+    ∴$DH = FH$．
 
-    ∵点为的中点，
+    ∴$MH=\frac{1}{2}FK$．
 
-    ∴．
+    ∵点N为DE的中点，
 
-    设，，则，．
+    ∴$EN = DN$．
 
-    ∴．
+    设$HF = a$，$NF = b$，则$NH = a + b$，$DN=2a+b$．
 
-    ∴．
+    ∴$EF=EN+NF=2a+2b$．
 
-    ∴．'
+    ∴$NH = \frac{1}{2} EF$．
+
+    ∴$MH = NH$．'
   knowledge_points:
   - 全等三角形
   - 旋转
@@ -1093,121 +1185,59 @@ questions:
 - id: 28
   type: 解答
   score: 7
-  question: '给定线段和位于直线同一侧的两点，，若在线段上（不含端点，）存在点，使得且，则称点与关于线段等角等距．在平面直角坐标系中，已知点．
+  question: '给定线段MN和位于直线MN同一侧的两点P，Q，若在线段MN上（不含端点M，N）存在点K，使得$\angle PKM = \angle QKN$且$PK = QK$，则称点P与Q关于线段MN等角等距．在平面直角坐标系xOy中，已知点$S(2,0)$．
 
-    （1）点的坐标为，
+    [图]
 
-    ①在点，，，中，与点关于线段等角等距的点是______；
+    （1）点T的坐标为$(0,1)$，
 
-    ②点是直线上一点，若在以点为圆心，1为半径的圆上总能找到一点与点关于线段等角等距，则点的横坐标的取值范围是______；
+    ①在点$A(-2,1)$，$B(2,1)$，$C\left(2,\frac{3}{2}\right)$，$D(2,3)$中，与点S关于线段OT等角等距的点是______；
 
-    （2）已知点，在以为圆心，1为半径的圆上存在点，使得点与关于线段等角等距，直接写出的取值范围．'
-  answer: （1）①，； ②； （2）或
+    ②点E是直线$y=x$上一点，若在以点S为圆心，1为半径的圆上总能找到一点与点E关于线段OT等角等距，则点E的横坐标$x_{E}$的取值范围是______；
+
+    （2）已知点$F(0,m)(m>0)$，在以O为圆心，1为半径的圆上存在点H，使得点F与S关于线段OH等角等距，直接写出m的取值范围．'
+  answer: （1）①B，C； ②$1 \leq x_{k} < 2 + \frac{\sqrt{2}}{2}$； （2）$0 < m < 2$或$2 < m < 2\sqrt{3}$
   solution: '【小问1详解】
 
-    解：作的平分线交于点F，如图，
+    解：作$\angle PKQ$的平分线KF交$\overline{PQ}$于点F，如图，
 
-    ∴，
+    ∴$\angle PKF=\angle QKF=\frac{1}{2}\angle PKQ$，
 
-    ∵，
+    ∵$PK = QK$，
 
-    ∴，
+    ∴$KF \perp PQ$，
 
-    即为的垂直平分线，
+    即KF为$\overline{PQ}$的垂直平分线，$\angle PFQ=90^{\circ}$
 
-    ∵， ，
+    ∵$\angle PKM = \angle QKN$，$\angle PKM+\angle PKF+\angle QKF+\angle QKN=180^{\circ}$，
 
-    ∴，即，
+    ∴$2\angle PKF+2\angle PKJ=180^{\circ}$，即$\angle PKF+\angle PKM=90^{\circ}$，
 
-    ∴，，
+    ∴$\angle MKF = 90^\circ$，$\angle MKF+\angle PFA=180^{\circ}$，
 
-    ∴，
+    ∴$PQ \parallel MN$，
 
-    即点K为线段的垂直平分线与线段的交点，且．
+    即点K为线段$\overline{PQ}$的垂直平分线与线段MN的交点，且$PQ \parallel MN$．
 
-    ①由结论及图，可得与点关于线段等角等距的点是点B，C．
+    [图]
 
-    ②如图，当时，圆上不存在一点满足题意；
+    ①由结论及图，可得与点S关于线段OT等角等距的点是点B，C．
 
-    当时，由图可知，满足题意；
+    ②如图，当$x_{E}<1$时，圆上不存在一点满足题意；
 
-    当时，过点F作轴于点N，有
+    当$1\leq x_{E}\leq 2$时，由图可知，满足题意；
 
-    ，，
+    当$2<x_{L}<3$时，过点F作$FN\perp x$轴于点N，有
 
-    ∴，
+    $N(x_{E},0)$，$BF=1, BF=x_{F}-2$，
 
-    ∴，
+    ∴$NF=\sqrt{1-(x_{E}-2)^{2}}=\sqrt{-x_{E}^{2}+4x_{E}-3}$，
 
-    由题意，可知关于线段等角等距，即的垂直平分线与线段（不包括端点）有交点，有
+    ∴$P(x,\sqrt{-x^{2}+4x-3})$，
 
-    由成立，
+    由题意，可知$E,F$关于线段OT等角等距，即$E,F$的垂直平分线与线段OT（不包括端点）有交点，有
 
-    ∴
-
-    即，
-
-    ，
-
-    ∴，
-
-    即或（无解）
-
-    ∴，
-
-    综上所述，．
-
-    【小问2详解】
-
-    当时，的垂直平分线为直线；
-
-    当时，的垂直平分线为第一，三象限的角平分线；
-
-    如图，可知，当时，总有点与关于线段等角等距．
-
-    当时，过点O作垂直于的垂直平分线于点A，延长与圆的交点即为H，如图，有，，，
-
-    即，
-
-    ∵是的垂直平分线，
-
-    ∴，，
-
-    ∴，，
-
-    ∵，
-
-    ∴，
-
-    解得，
-
-    ∴，
-
-    ∵，
-
-    ∴，
-
-    ∴，
-
-    即
-
-    ，
-
-    ∴，
-
-    由，得，
-
-    由得
-
-    ，
-
-    ，
-
-    ∴，解得，
-
-    由得．
-
-    综上所述，或'
+    $0<\frac{-x_{c}^{2'
   knowledge_points:
   - 平行线
   - 相似三角形

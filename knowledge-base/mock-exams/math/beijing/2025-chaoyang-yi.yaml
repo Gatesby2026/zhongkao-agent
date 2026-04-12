@@ -1,8 +1,8 @@
 # ============================================================
-# 2025年北京朝阳区初三一模数学试卷 — 逐题分析
+# 2025年北京朝阳区中考数学一模试卷 — 逐题分析
 # ============================================================
-# 数据来源：自主选拔在线、北京高考在线、21世纪教育网
-# 考试时间：2025年4月
+# 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
+# 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
 # 满分：100分  时长：120分钟
 
 year: 2025
@@ -12,397 +12,1425 @@ subject: 数学
 full_score: 100
 duration_minutes: 120
 total_questions: 28
-structure: "8选择(16分) + 8填空(16分) + 12解答(68分)"
-
+structure: 8选择(16分) + 8填空(16分) + 12解答(68分)
 questions:
+- id: 1
+  type: 选择
+  score: 2
+  question: '下列图形中，既是轴对称图形又是中心对称图形的是（）
 
-  # ===== 选择题（每题2分）=====
-  - id: 1
-    type: 选择
-    score: 2
-    question: |
-      下列图形中，既是轴对称图形又是中心对称图形的是
-      (A) 平行四边形  (B) 等边三角形  (C) 正五边形  (D) 矩形
-    answer: D
-    knowledge_points: [轴对称图形, 中心对称图形]
-    module: geometryComprehensive
-    difficulty: 基础
-    recommended_for: [L0, L1, L2, L3]
-    similar_zhongkao: "2025中考Q1"
+    A.[图]B.[图]
 
-  - id: 2
-    type: 选择
-    score: 2
-    question: |
-      实数a,b在数轴上的对应点的位置如图所示（a在-4与-3之间，b在1与2之间），下列结论中错误的是
-      (A) a>-3  (B) |a|>3  (C) b-a>4  (D) a+b<0
-    answer: A
-    knowledge_points: [数轴, 实数大小比较, 绝对值]
-    module: numbersAndExpressions
-    difficulty: 基础
-    recommended_for: [L0, L1, L2, L3]
+    C.[图]D.[图]'
+  answer: B
+  solution: '解：A.不是轴对称图形，是中心对称图形，不符合题意；
 
-  - id: 3
-    type: 选择
-    score: 2
-    question: |
-      如图，AB∥EF，BC、DE相交于点G，若∠B=130°，∠E=100°，则∠BGE的大小为
-      (A) 30°  (B) 50°  (C) 80°  (D) 130°
-    answer: B
-    knowledge_points: [平行线, 角度计算, 三角形外角]
-    module: triangles
-    difficulty: 基础
-    recommended_for: [L0, L1, L2, L3]
-    similar_zhongkao: "2025中考Q3"
+    B.是轴对称图形，是中心对称图形，符合题意；
 
-  - id: 4
-    type: 选择
-    score: 2
-    question: |
-      在平面直角坐标系xOy中，若点A(2,y₁)，B(-1,y₂)在反比例函数y=k/x(k>0)的图象上，则y₁+y₂的值
-      (A) 一定是正数  (B) 一定是负数  (C) 一定等于0  (D) 与k的取值有关
-    answer: A
-    knowledge_points: [反比例函数, 图象性质]
-    module: functions
-    difficulty: 基础
-    recommended_for: [L0, L1, L2, L3]
+    C.不是轴对称图形，不是中心对称图形，不符合题意；
 
-  - id: 5
-    type: 选择
-    score: 2
-    question: |
-      不透明的袋子中装有红、绿小球各一个。随机摸出一个小球后放回并搅匀，再随机摸出一个。第一次摸到红球第二次摸到绿球的概率是
-      (A) 1/4  (B) 1/3  (C) 1/2  (D) 3/4
-    answer: A
-    knowledge_points: [概率, 独立事件, 树状图]
-    module: statisticsAndProbability
-    difficulty: 基础
-    recommended_for: [L0, L1, L2, L3]
-    similar_zhongkao: "2025中考Q6"
+    D.是轴对称图形，不是中心对称图形，不符合题意；
 
-  - id: 6
-    type: 选择
-    score: 2
-    question: |
-      DeepSeek-V3总共有671B个参数，1B等于十亿。将671B用科学记数法表示应为
-      (A) 671×10⁸  (B) 671×10⁹  (C) 6.71×10¹⁰  (D) 6.71×10¹¹
-    answer: D
-    knowledge_points: [科学记数法]
-    module: numbersAndExpressions
-    difficulty: 基础
-    recommended_for: [L0, L1, L2, L3]
-    similar_zhongkao: "2024中考Q3"
+    故选：B.'
+  knowledge_points:
+  - 中心对称图形
+  - 轴对称图形
+  - 轴对称
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 2
+  type: 选择
+  score: 2
+  question: '实数a，b在数轴上的对应点的位置如图所示，下列结论中错误的是（）
 
-  - id: 7
-    type: 选择
-    score: 2
-    question: |
-      点P为⊙O外一点，作以OP为直径的⊙A，⊙A与⊙O交于两点Q和R，可以判定△OPQ≅△OPR的依据是
-      (A) SSS  (B) SAS  (C) AAS  (D) HL
-    answer: D
-    knowledge_points: [全等三角形判定, 圆的切线]
-    module: circles
-    difficulty: 中档
-    recommended_for: [L1, L2, L3]
+    [图]
 
-  - id: 8
-    type: 选择
-    score: 2
-    question: |
-      "藻井"几何结构问题。正方形ABCD中，A₁B₁C₁D₁分别是四条边的中点，旋转45°后给出四个结论：
-      ①E,F是线段AB的三等分点；②A₁是线段EL的中点；③EFGHIJKL是正八边形；④△AA₁D₁的面积是△AEL面积的2倍。
-      所有正确结论的序号是
-      (A) ①③  (B) ①④  (C) ②③  (D) ②④
-    answer: C
-    knowledge_points: [正方形, 中点, 旋转, 正多边形]
-    module: geometryComprehensive
-    difficulty: 压轴
-    recommended_for: [L2, L3]
+    A.$a > -3$B.$|a| > 3$C.$b-a>4$D.$a+b<0$'
+  answer: A
+  solution: '解：由数轴可知$-4 < a < -3$，$1<b<2$，
 
-  # ===== 填空题（每题2分）=====
-  - id: 9
-    type: 填空
-    score: 2
-    question: "若√(x-2)在实数范围内有意义，则实数x的取值范围是____"
-    answer: "x≥2"
-    knowledge_points: [二次根式, 有意义条件]
-    module: numbersAndExpressions
-    difficulty: 基础
-    recommended_for: [L0, L1, L2, L3]
-    similar_zhongkao: "2025中考Q9"
+    A、从数轴上看，a在$-3$左侧，所以$a < -3$，而不是$a > -3$，原说法错误，故该选项符合题意；
 
-  - id: 10
-    type: 填空
-    score: 2
-    question: "分解因式：ab²-2ab+a = ____"
-    answer: "a(b-1)²"
-    knowledge_points: [因式分解, 提公因式, 完全平方公式]
-    module: numbersAndExpressions
-    difficulty: 基础
-    recommended_for: [L0, L1, L2, L3]
-    similar_zhongkao: "2025中考Q10"
+    B、因为$-4 < a < -3$，所以$3<|a|<4$，故原说法正确，该选项不符合题意；
 
-  - id: 11
-    type: 填空
-    score: 2
-    question: "方程 2/(x+3) + 1/x = 0 的解为 x = ____"
-    answer: "x=-1（需验根，增根舍去后的结果）"
-    knowledge_points: [分式方程, 验根]
-    module: equationsAndInequalities
-    difficulty: 基础
-    recommended_for: [L0, L1, L2, L3]
+    C、因为$-4 < a < -3$，$1<b<2$，那么$b-a=b+(-a)$，$-a > 3$，$b>1$，所以$b-a>1+3$故原说法正确，该选项不符合题意；
 
-  - id: 12
-    type: 填空
-    score: 2
-    question: "若关于x的一元二次方程x²+2x+c=0无实数根，则c的取值范围是____"
-    answer: "c>1"
-    knowledge_points: [一元二次方程, 判别式]
-    module: equationsAndInequalities
-    difficulty: 基础
-    recommended_for: [L0, L1, L2, L3]
-    similar_zhongkao: "2025中考Q5"
+    D、因为$-4 < a < -3$$a < -3$，$1<b<2$，所以$\left|b\right|>\left|a\right|$，故$a+b<0$，原说法正确，该选项不符合题意；
 
-  - id: 13
-    type: 填空
-    score: 2
-    question: |
-      体育委员从全年级1000名学生中随机抽取50名统计60秒跳绳次数：
-      80-100: 4人, 100-120: 21人, 120-140: 13人, 140-160: 8人, 160-180: 4人
-      估计1000名学生中跳绳次数在100≤x<140范围的学生有____人
-    answer: "680"
-    knowledge_points: [频数分布, 样本估计总体]
-    module: statisticsAndProbability
-    difficulty: 基础
-    recommended_for: [L0, L1, L2, L3]
+    故选：A．'
+  knowledge_points:
+  - 绝对值
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 3
+  type: 选择
+  score: 2
+  question: '如图，$AB \parallel EF$，BC，DE相交于点G，若$\angle B=130^{\circ}$，$\angle E=100^{\circ}$，则$\angle BGE$的大小为（）
 
-  - id: 14
-    type: 填空
-    score: 2
-    question: "AB是⊙O的直径，点C,D在⊙O上，OD⊥AC，若∠B=50°，则∠D=____°"
-    answer: "65"
-    knowledge_points: [圆周角, 直径, 垂直]
-    module: circles
-    difficulty: 中档
-    recommended_for: [L1, L2, L3]
+    [图]
 
-  - id: 15
-    type: 填空
-    score: 2
-    question: "在矩形ABCD中，CE⊥BD，垂足为点E。若AB=5，CE=3，则△BCE的面积为____"
-    answer: "27/4"
-    knowledge_points: [矩形, 面积, 相似三角形]
-    module: quadrilaterals
-    difficulty: 中档
-    recommended_for: [L1, L2, L3]
+    A.$30^\circ$B.$50^\circ$C.$80^\circ$D.$130^\circ$'
+  answer: B
+  solution: '解：如图，延长AB至点H，交DE于点P，
 
-  - id: 16
-    type: 填空
-    score: 2
-    question: |
-      某工厂4条流水线生产A、B两种零件，每条流水线一天只能生产一种零件：
-      流水线1: A-80个/B-100个  流水线2: A-90个/B-120个  流水线3: A-70个/B-110个  流水线4: A-70个/B-70个
-      (1) 只开一条流水线，7天最多生产____件产品
-      (2) 4条流水线都开通，7天最多生产____件产品
-    answer: "(1) 360  (2) 1250"
-    knowledge_points: [方案优化, 实际问题]
-    module: equationsAndInequalities
-    difficulty: 压轴
-    recommended_for: [L2, L3]
+    $\begin{array}{c}
 
-  # ===== 解答题 =====
-  - id: 17
-    type: 解答
-    score: 5
-    question: "计算：(1/2)⁻¹ + 2cos45° - √8 - (π+√2)⁰"
-    answer: "2-√2"
-    solution: |
-      = 2 + 2×(√2/2) - 2√2 - 1
-      = 2 + √2 - 2√2 - 1
-      = 1 - √2
-    knowledge_points: [负整数指数幂, 三角函数值, 二次根式, 零指数幂]
-    module: numbersAndExpressions
-    difficulty: 基础
-    recommended_for: [L0, L1, L2, L3]
-    similar_zhongkao: "2025中考Q17"
+    \bullet \\
 
-  - id: 18
-    type: 解答
-    score: 5
-    question: |
-      解不等式组：
-      3(x-2) ≤ 4+x
-      (1+2x)/3 < x
-    answer: "1 < x ≤ 5"
-    solution: |
-      解①：3x-6≤4+x → 2x≤10 → x≤5
-      解②：1+2x<3x → 1<x → x>1
-      解集：1<x≤5
-    knowledge_points: [一元一次不等式组]
-    module: equationsAndInequalities
-    difficulty: 基础
-    recommended_for: [L0, L1, L2, L3]
+    \bullet \quad \bullet \\
 
-  - id: 19
-    type: 解答
-    score: 5
-    question: "已知2x+y-3=0，求代数式 [2(x-2y)+3y]/(4x²-y²) 的值。"
-    answer: "1/3"
-    solution: |
-      原式 = (2x-4y+3y)/(4x²-y²) = (2x-y)/((2x+y)(2x-y)) = 1/(2x+y)
-      由2x+y-3=0得2x+y=3
-      原式 = 1/3
-    knowledge_points: [分式化简求值, 因式分解]
-    module: numbersAndExpressions
-    difficulty: 基础
-    recommended_for: [L0, L1, L2, L3]
+    \bullet
 
-  - id: 20
-    type: 解答
-    score: 6
-    question: |
-      在△ABC中，D为BC中点，延长BA至点E使AE=AB，延长DA至点F使AF=AD，连接CE,EF。
-      (1) 求证：四边形CDFE是平行四边形。
-      (2) 若EB平分∠CEF，tanB=4/3，AB=1，求AC的长。
-    answer: "(1) 证明略  (2) AC=4/3"
-    knowledge_points: [平行四边形判定, 中点, 三角函数]
-    module: quadrilaterals
-    difficulty: 中档
-    recommended_for: [L1, L2, L3]
-    similar_zhongkao: "2025中考Q20"
+    \end{array}$$AB \parallel EF$，$\angle E=100^{\circ}$，
 
-  - id: 21
-    type: 解答
-    score: 5
-    question: |
-      小明搭飞机产生碳排放530kg，决定从开私家车改为公交或骑车上下学来抵消。
-      私家车0.27kg/km，公交0.20kg/km，骑车0。每天往返20km，100天内最多几天可以乘公交？
-    answer: "最多2天"
-    solution: |
-      设x天乘公交，则(100-x)天骑车
-      减少的碳排放：20×0.27×100 - 20×0.20×x ≥ 530
-      540 - 4x ≥ 530 → x ≤ 2.5
-      最多2天
-    knowledge_points: [一元一次不等式, 实际问题]
-    module: equationsAndInequalities
-    difficulty: 中档
-    recommended_for: [L1, L2, L3]
+    $\begin{tikzpicture}
 
-  - id: 22
-    type: 解答
-    score: 5
-    question: |
-      函数y=kx+b(k≠0)的图象经过点A(1,2)和B(0,-1)。
-      (1) 求该函数的表达式。
-      (2) 当x>1时，y=x+n的值小于y=kx+b的值且大于0，求n的取值范围。
-    answer: "(1) y=3x-1  (2) -1≤n<1"
-    knowledge_points: [一次函数, 待定系数法, 不等式]
-    module: functions
-    difficulty: 中档
-    recommended_for: [L1, L2, L3]
+    \fill (0,0) circle (2pt);
 
-  - id: 23
-    type: 解答
-    score: 5
-    question: |
-      两个团队20人的知识问答预赛成绩分析。一队频数分布直方图，二队原始数据。
-      (1) m的值；p与q的大小关系
-      (2) 去掉最高分和最低分后方差变化判断
-      (3) 种子选手排序，求k的值
-    answer: "(1) m=83, p<q  (2) D  (3) k=91或92"
-    knowledge_points: [频数分布直方图, 平均数, 方差, 数据分析]
-    module: statisticsAndProbability
-    difficulty: 中档
-    recommended_for: [L1, L2, L3]
+    \fill (-1,-1) circle (2pt);
 
-  - id: 24
-    type: 解答
-    score: 6
-    question: |
-      △ABC是⊙O的内接三角形，∠ACB=45°，点P在BC的延长线上，PA∥OB。
-      (1) 求证：PA是⊙O的切线。
-      (2) 若OB/AP=1/2，PB=√10，求⊙O半径的长。
-    answer: "(1) 证明略  (2) 半径=√10（待确认）"
-    solution: |
-      (1) 连接OA，∠AOB=2∠ACB=90°，PA∥OB → ∠PAO=∠AOB=90° → PA是切线
-      (2) 通过相似和勾股定理求解
-    knowledge_points: [圆的切线, 圆周角定理, 相似三角形]
-    module: circles
-    difficulty: 中档
-    recommended_for: [L2, L3]
-    similar_zhongkao: "2025中考Q24"
+    \fill (1,-1) circle (2pt);
 
-  - id: 25
-    type: 解答
-    score: 6
-    question: |
-      摩天轮实际问题。给出旋转时间t(min)与座舱高度h(m)的数据：
-      t: 0,1,1.5,2,3,4,5,6,7,8,9
-      h: 30,15.36,10,15.36,30,50,70,84.64,90,84.64,70
-      (1) 画函数图象
-      (2) ①最高高度和转盘半径 ②转一圈时间 ③两座舱高度相同的最少时间
-    answer: "①90m, 40m  ②12min  ③1.5min或4.5min"
-    knowledge_points: [函数图象, 周期函数, 实际问题]
-    module: functions
-    difficulty: 中档
-    recommended_for: [L1, L2, L3]
+    \end{tikzpicture}$$\angle EPH \cong \angle 80^\circ \cong \angle F \quad 80$，
 
-  - id: 26
-    type: 解答
-    score: 6
-    question: |
-      抛物线y=ax²-2a²x+a³+a+1(a≠0)。
-      (1) 求抛物线的顶点坐标（用含a的式子表示）。
-      (2) M(x₁,y₁)和N(x₂,y₂)是抛物线上两点，若对于-a-1≤x₁≤-a, 2≤x₂≤3都有y₁<y₂，求a的取值范围。
-    answer: "(1) 顶点(a, a+1)  (2) 0<a<1/3 或 a<-4"
-    solution: |
-      (1) y=a(x-a)²+a+1，顶点(a, a+1)
-      (2) 分类讨论a>0和a<0，得 0<a<1/3 或 a<-4
-    knowledge_points: [二次函数, 顶点坐标, 分类讨论, 单调性]
-    module: functions
-    difficulty: 压轴
-    recommended_for: [L2, L3]
-    similar_zhongkao: "2025中考Q26"
+    $\begin{tikzpicture}
 
-  - id: 27
-    type: 解答
-    score: 7
-    question: |
-      在正方形ABCD中，E为AD边上一点，将线段CB沿直线CE翻折得到线段CF，连接FD并延长与CE延长线相交于点G，连接AG。
-      (1) 补全图形
-      (2) 求∠CGF的度数
-      (3) 用等式表示线段AG与DF的数量关系，并证明
-    answer: "(2) ∠CGF=45°  (3) DF=√2·AG"
-    knowledge_points: [正方形, 翻折, 全等三角形, 角度计算]
-    module: geometryComprehensive
-    difficulty: 压轴
-    recommended_for: [L2, L3]
-    similar_zhongkao: "2025中考Q27"
+    \fill (0,0) circle (2pt);
 
-  - id: 28
-    type: 解答
-    score: 7
-    question: |
-      新定义"h距离"问题。定义点P到图形N的距离，以及图形M到图形N的"h距离"h(M,N)。
-      (1) 图形M为线段AB：①图形N为线段OC，求h(M,N)和h(N,M)；②点D(0,t)E(0,t+1)，N为线段DE，求h(M,N)的最小值
-      (2) ⊙O半径为1，直线l:y=(√5/5)x+2√5，N为直线l上的线段PQ，求H(M,N)的最小值
-    answer: "(1)① h(M,N)=5, h(N,M)=5  ② 最小值及t的范围  (2) H(M,N)最小值=4"
-    knowledge_points: [新定义, 距离, 线段, 圆, 最值]
-    module: geometryComprehensive
-    difficulty: 压轴
-    recommended_for: [L3]
+    \fill (-1,-1) circle (2pt);
 
-difficulty_summary:
-  基础: { count: 14, score: 约44分 }
-  中档: { count: 10, score: 约36分 }
-  压轴: { count: 4, score: 约20分 }
+    \fill (1,-1) circle (2pt);
 
-module_distribution:
-  numbersAndExpressions: { questions: [2,6,9,10,17,19], score: 约16分 }
-  equationsAndInequalities: { questions: [11,12,16,18,21], score: 约19分 }
-  functions: { questions: [4,22,25,26], score: 约18分 }
-  triangles: { questions: [3], score: 约2分 }
-  quadrilaterals: { questions: [15,20], score: 约8分 }
-  circles: { questions: [7,14,24], score: 约10分 }
-  statisticsAndProbability: { questions: [5,13,23], score: 约9分 }
-  geometryComprehensive: { questions: [1,8,27,28], score: 约18分 }
+    \end{tikzpicture}$$\angle BPG=\angle CEPH=80^\circ$，
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$$\angle ABG=130^\circ$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\angle BGE = \angle ABG - \angle BPG = 130^{\circ} - 80^{\circ} = 50^{\circ}$，
+
+    故选：B．
+
+    [图]'
+  knowledge_points:
+  - 平行线
+  module: triangles
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 4
+  type: 选择
+  score: 2
+  question: '在平面直角坐标系xOy中，若点$A(2,y_{1}),B(-1,y_{2})$在反比例函数$y=\frac{k}{x}(k>0)$的图象上，则$y_{1}+y_{2}$的值（）
+
+    A.一定是正数
+
+    B.一定是负数
+
+    C.一定等于0
+
+    D.是正数、负数或0都有可能，与k的取值有关'
+  answer: B
+  solution: '解：∵点A、B在反比例函数图象上
+
+    ∴$y_{1}=\frac{k}{2}$，$y_{2}=-k$，
+
+    ∴$y_{1}+y_{2}=\frac{k}{x}+\left(-k\right)=-\frac{k}{x}$，
+
+    ∵$k > 0$，
+
+    ∴$y_{1}+y_{2}=-\frac{k}{2}<0$，
+
+    故选：B.'
+  knowledge_points:
+  - 反比例函数
+  - 坐标系
+  module: functions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 5
+  type: 选择
+  score: 2
+  question: '不透明的袋子中装有红、绿小球各一个，除颜色外两个小球无其他差别，从中随机摸出一个小球，放回并摇匀，再从中随机摸出一个小球，那么第一次摸到红球、第二次摸到绿球的概率是（）
+
+    A.$\frac{1}{4}$B.$\frac{1}{3}$C.$\frac{1}{2}$D.$\frac{3}{4}$'
+  answer: A
+  solution: ''
+  knowledge_points:
+  - 概率
+  - 树状图
+  - 列表法
+  module: statisticsAndProbability
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 6
+  type: 选择
+  score: 2
+  question: '$DeepSeek - V3$是由中国AI初创公司杭州深度求索人工智能基础技术研究有限公司发布的LLM模型，于2024年12月发布，它具有$Mixture-of-Experts$架构，总共有$671B$个参数．这里“B”的含义是$Billion$，即$1B$等于十亿．将$671B$用科学记数法表示应为（）
+
+    A.$671\times10^{8}$B.$671\times10^{10}$C.$6.71\times10^{10}$D.$6.71\times10^{11}$'
+  answer: D
+  solution: '解：将$671B$用科学记数法表示应为$6.71\times10^{11}$．
+
+    故选：D．'
+  knowledge_points:
+  - 科学记数法
+  - 绝对值
+  module: numbersAndExpressions
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 7
+  type: 选择
+  score: 2
+  question: '如图，点P为$\odot\odot$外一定点，连接OP，作以OP为直径的$\odot A$，与$\odot\odot$交于两点Q和R，根据切线的判断，直线$\overline{PQ}$和PR是$\odot\odot$的两条切线．由$\triangle OQP \cong \triangle ORP$得，$PQ = PR$，$\angle OPQ = \angle OPR$，即切线长定理．上述过程中，可以判定$\triangle
+    OQP \cong \triangle ORP$的依据是（）
+
+    [图]
+
+    A.三边分别相等的两个三角形全等
+
+    B.两边和它们的夹角分别相等的两个三角形全等
+
+    C.两角分别相等且其中一组等角的对边相等的两个三角形全等
+
+    D.斜边和一条直角边分别相等的两个直角三角形全等'
+  answer: D
+  solution: '解：∵题中判定出直线$\overline{PQ}$和PR是$\odot\odot$的两条切线，
+
+    ∴$\angle OQP-\angle ORP=90^\circ$，
+
+    在$\mathrm{Rt}\triangle POQ$与$Rt\triangle POR$，
+
+    $\left\{ \begin{array}{l} PO = PO \\ OQ = OR \end{array} \right.$，
+
+    ∴$\triangle P O Q \cong \triangle P O R$，
+
+    判定依据为：斜边和一条直角边分别相等的两个直角三角形全等，
+
+    故选：D．'
+  knowledge_points:
+  - 切线
+  - 全等三角形
+  module: triangles
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 8
+  type: 选择
+  score: 2
+  question: '“藻井”是中国古代建筑中位于室内上方的特色结构，被誉为“室内最灿烂的星空”．某校数学小组的同学在研究时发现智化寺藻（图1）、故宫太和殿藻井中都有类似图2的几何结构，他们通过测量得知$A_{1},B_{1},C_{1},D_{1}$分别是正方形$ABCD$的四条边的中点，将四边形$A_{1}B_{1}C_{1}D_{1}$绕正方形$ABCD$的中心顺时针旋转$45^\circ$，可以得到四边形$A,B,C,D_{1},EL,FG,HI,JK$分别经过点$A_{2},B_{2},C_{2},D_{2}$，且平行于$AD,
+    AB, BC, CD,$．给出下面四个结论：
+
+    ①E，F是线段AB的三等分点；
+
+    ②$A_2$是线段EL的中点；
+
+    ③$EFGHIJKL$是正八边形；
+
+    ④$\triangle AAD_{1}$的面积是$\triangle AEL$的面积的2倍．
+
+    上述结论中，所有正确结论$[公式]$序号是（）
+
+    [图]
+
+    A.①③B.①④C.②③D.②④'
+  answer: C
+  solution: '解：如图所示，连接$AC, BD$交于O，连接$A_{1}C_{1}$，设$AB = 2a$，
+
+    [图]
+
+    ∵四边形$ABCD$是正方形，$A_{1},B_{1},C_{1},D_{1}$分别是四边形$ABCD$的四条边的中点，
+
+    ∴$A_{1}C_{1}$经过点O，
+
+    在正方形$ABCD$中，$AC = \sqrt{2}AB = 2\sqrt{2}a$，$\angle AOB=90^\circ$，$\angle OAB=45^\circ$，则$OA=\frac{1}{2}AC=\sqrt{2}a$，
+
+    ∵$A_1$为AB的中点，
+
+    ∴$\mathcal{A}A + OA = \frac{1}{2}AB = a$，$\angle AO A=45^{\circ}$
+
+    由旋转的性质可得$OA_1=OA_2=a,\ \angle AOA_2=45^\circ$，
+
+    ∴$A_1\ A_2,\ O$三点共线，
+
+    ∵$D_1$是AD的中点，
+
+    ∴$AA_{1}=AD_{1}=\frac{1}{2}AD=a$，
+
+    ∴$\triangle AAD_{1}$是等腰直角三角形，
+
+    ∴$\angle AAD_{1}=45^{\circ}$，
+
+    ∵$EL\parallel AD_{1}$，
+
+    ∴$\angle AEL = \angle AAD - 45^\circ$，
+
+    ∴$\triangle AEL$是等腰直角三角形，
+
+    又∵$\angle EAC=\angle LAC=45^\circ$，
+
+    ∴$EL=2A_{2}-2(OA-OA_{1})=2(\sqrt{2}a-a)=2\sqrt{2}a-2a$，$A_2$是线段EL的中点，故②正确；
+
+    ∴$AE=\frac{\sqrt{2}}{2}EL=2a-\sqrt{2}a$，
+
+    ∴$AE = \frac{1}{3} AB$，
+
+    ∴E，F是线段AB的三等分点，故①错误；
+
+    同理可得$BF ='
+  knowledge_points:
+  - 相似三角形
+  - 勾股定理
+  - 正方形
+  - 旋转
+  module: triangles
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 9
+  type: 填空
+  score: 2
+  question: 若$\sqrt{x-2}$在实数范围内有意义，则实数x的取值范围是_______．
+  answer: $x^{2}$
+  solution: '解：∵$\sqrt{x-2}$在实数范围内有意义，，
+
+    ∴$x-2\quad0$，
+
+    ∴$x^{2}$，
+
+    故答案为：$x^{2}$．'
+  knowledge_points:
+  - 综合
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 10
+  type: 填空
+  score: 2
+  question: 分解因式：$ab^{2}-2ab+a$_____．
+  answer: $a(b-1)^2$
+  solution: '解：$ab^{2}-2ab+a$
+
+    $=a\left(b^{2}-2b+1\right)$
+
+    $=a(b-1)^{2}$，
+
+    故答案为：$a(b-1)^2$．'
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 11
+  type: 填空
+  score: 2
+  question: 方程$\frac{2}{x+3}+\frac{1}{x}=0$的解为___________．
+  answer: $x = -1$
+  solution: '解：$\frac{2}{x+3}+\frac{1}{x}=0$
+
+    去分母得：$2x+x+3=0$，
+
+    移项得：$x+2x=-3$，
+
+    合并同类项得：$3x = -3$，
+
+    系数化为1得：$x = -1$，
+
+    检验，当$x = -1$时，$x(x+3)\neq0$，
+
+    ∴$x = -1$是原方程的解，
+
+    故答案为：$x = -1$．'
+  knowledge_points:
+  - 分式方程
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 12
+  type: 填空
+  score: 2
+  question: 若关于x的一元二次方程x2+2x+k＝0无实数根，则k的取值范围是_．
+  answer: k＞$1.$
+  solution: '解：$\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$关于x的一元二次方程x2+2x+k＝0无实数根，
+
+    $\therefore \triangle$＜$0,$
+
+    $2^2-4\times1\times k$＜$0,$
+
+    $\therefore 4-4k$＜$0,$
+
+    $\therefore -4k$＜$-4,$
+
+    $\therefore k$＞$1.$
+
+    故答案为：k＞$1.$'
+  knowledge_points:
+  - 一元二次方程
+  - 根的判别式
+  - 不等式
+  module: equationsAndInequalities
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 13
+  type: 填空
+  score: 2
+  question: '体育委员从全年级$1000$名学生中随机抽取了$50$名同学，统计了他们$60$秒跳绳的次数，并列出下面的频数分布表：
+
+    次数
+
+    $80 \leq x < 100$
+
+    $100 \leq x < 120$
+
+    $120 < x < 140$
+
+    $140 < x < 160$
+
+    $160 \leq x \leq 180$
+
+    频数
+
+    $4$
+
+    $21$
+
+    $13$
+
+    $8$
+
+    $4$
+
+    根据以上数据，估计该年级的$1000$名学生中$60$秒跳绳次数在$100 < x < 140$范围的学生有___________人．'
+  answer: $680$
+  solution: '解：跳绳次数在$100 < x < 140$范围的学生有：$1000\div24+13\\
+
+    50\\
+
+    680$（人），
+
+    故答案为：$680$．'
+  knowledge_points:
+  - 统计
+  module: statisticsAndProbability
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 14
+  type: 填空
+  score: 2
+  question: '如图，AB是$\odot\odot$的直径，点C，D在$\odot\odot$上，$OD \perp AC$，若$\angle B=50^{\circ}$，则$\angle D =$___________°．
+
+    [图]'
+  answer: '65'
+  solution: '解：∵AB是$\odot\odot$的直径，
+
+    ∴$\angle ACB=90^\circ$，
+
+    ∴$BC \perp AC$；
+
+    又∵$OD \perp AC$，
+
+    ∴$OD \parallel AC$；
+
+    ∵$\angle B=50^{\circ}$，
+
+    ∴$\angle AOD=\angle B=50^{\circ}$，
+
+    ∵$OA = OD$，
+
+    ∴$\angle D=\frac{1}{2}(180^\circ-\angle AOD)=65^\circ$．
+
+    故答案为：65．'
+  knowledge_points:
+  - 圆周角
+  module: triangles
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 15
+  type: 填空
+  score: 2
+  question: '如图，在矩形$ABCD$中，$CE \perp BD$，垂足为点E．若$AB = 5$，$CE = 3$，则$\triangle BCE$的面积为___________．
+
+    [图]'
+  answer: $\frac{27}{8}$
+  solution: '解：在矩形$ABCD$中，$AB = 5$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$CD = AB = 5$，$\angle BCD = 90^\circ$，即$\angle BCE+\angle DCE=90^{\circ}$，
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$$CE \perp BD$，$CE = 3$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$DE = \sqrt{CD^{2} - CE^{2}} = \sqrt{5^{2} - 3^{2}} = 4$，$\angle EDC+\angle DCE=90^{\circ}$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\triangle BCE \cong \triangle EDC$，
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$$\angle BEC=\angle CED=90^{\circ}$，
+
+    $\be'
+  knowledge_points:
+  - 相似三角形
+  - 勾股定理
+  - 矩形
+  module: triangles
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 16
+  type: 填空
+  score: 2
+  question: '某工厂生产的一种产品由A，B两种零件各一个组装而成（组装时间忽略不计），该工厂有$4$条流水线生产这两种零件，一天的生产数量如下（单位：个）：
+
+    零件
+
+    流水线$1$
+
+    流水线$2$
+
+    流水线$3$
+
+    流水线$4$
+
+    A
+
+    $80$
+
+    $90$
+
+    $70$
+
+    $60$
+
+    B
+
+    $100$
+
+    $120$
+
+    $110$
+
+    $70$
+
+    程序需要提前设定，所以每条流水线一天只能生产同一种零件，第二天可以更换．
+
+    （1）如果只开通其中一条流水线，$7$天最多生产该产品______件；
+
+    （2）如果$4$条流水线都开通，$7$天最多生产该产品______件．'
+  answer: ①.$360$②.$1250$
+  solution: '解：（$1$）如果只开通一条流水线，比较可知，开通流水线$2$最合适，零件A生产$4$天共$360$个，零件B生产$3$天共$360$个，$7$天正好可以生产$360$个，
+
+    故答案为：$360$；
+
+    （$2$）整体比较各条流水线的产能，$\frac{100}{80}=1.25$$\frac{120}{90}=1.31$，$\frac{110}{70}\approx1.56$，$\frac{70}{60}=1.16$，
+
+    流水线$4$只生成A最合适，$7$天生成$420$个A；
+
+    流水线$3$只生成B最合适，$7$天生成$770$个A；
+
+    流水线$1$只生成A最合适，$7$天生成$560$个A；
+
+    产能最高的流水线B，负责调配差额，讨论可得，$3$天生产$270$个A，$4$天生成$480$个B，
+
+    综上可得，$7$天共生成$1250$个零件，
+
+    故答案为：$1250$．'
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 17
+  type: 解答
+  score: 5
+  question: 计算：$\left(\frac{1}{3}\right)^{-1}+2\cos45^{\circ}-\sqrt{8}-(\pi+\sqrt{2})^{0}$．
+  answer: $2-\sqrt{2}$
+  solution: '解：原式$3+2\sqrt{2}-2\sqrt{2}-1$
+
+    $= 2 - \sqrt{2}$$[公式]$'
+  knowledge_points:
+  - 三角函数
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 18
+  type: 解答
+  score: 5
+  question: 解不等式组：$\left\{\begin{array}{l}3(x-2)=4+x\\ \dfrac{1+2x}{3}<x\end{array}\right.$
+  answer: $1<x\leq5$
+  solution: '解：原不等式组为$\left\{\begin{array}{l}3(x-2)\leq4+x①\\ \dfrac{1+2x}{3}<x②\end{array}\right.$，
+
+    解不等式①，得$x \leq 5$，
+
+    解不等式②，得$x>1$，
+
+    ∴原不等式组的解集为$1<x\leq5$．'
+  knowledge_points:
+  - 不等式
+  - 不等式组
+  module: equationsAndInequalities
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 19
+  type: 解答
+  score: 5
+  question: 已知$2x + y - 3 = 0$，求代数式$\frac{2(x-2y)+3y}{4x^{2}-y^{2}}$的值．
+  answer: $\frac{1}{3}$
+  solution: '解：$2x + y - 3 = 0$
+
+    $\therefore 2x + y = 3$
+
+    ∴$\frac{2(x-2y)+3y}{4x^{2}-y^{2}}$
+
+    $\frac{2x-4y+3y}{(2x+y)(2x-y)}$
+
+    $\frac{2x-y}{(2x+y)(2x-y)}$
+
+    $=\frac{1}{2x+y}$
+
+    $=\frac{1}{3}$'
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 20
+  type: 解答
+  score: 5
+  question: '如图，在$V_{ABC}$中，D为BC中点，延长BA至点E，使$AE = AB$，延长DA至点F，使$AF = AD$，连接$CE,EF$．
+
+    [图]
+
+    （1）求证：四边形$CDFE$是平行四边形；
+
+    （2）若EB平分$\angle CEF,\tan B=\frac{4}{3},AB=1$，求AC的长．'
+  answer: （1）见解析（2）$AC = \frac{4}{3}$
+  solution: '【小问1详解】
+
+    证明：∵延长BA至点E，使$AE = AB$，
+
+    $\therefore A$为BE中点，
+
+    $\therefore D$为BC中点，
+
+    ∴AD是$\triangle BCE$的中位线，
+
+    $\cdot CE \parallel AD$，$CE = 2AD$，
+
+    ∵延长DA至点F，使$AF = AD$，
+
+    $\therefore DF = 2AD$，
+
+    $\therefore CE = DF$，
+
+    ∴四边形$CDFE$是平行四边形；
+
+    【小问2详解】
+
+    解：$\therefore EB$平分$\angle CEF$，
+
+    $\angle FEB = \angle CEB$，
+
+    ∵四边形$CDFE$是平行四边形，
+
+    $.. CD \parallel EF$，
+
+    $\angle FEB = \angle B$，
+
+    $\angle CEB = \angle B$，
+
+    $\ldots CB = CE$，
+
+    $\ldots CA \perp BE$，
+
+    $\angle BAC = 90^\circ$，
+
+    $\tan B = \frac{4}{3} \cdot AB = 1$，
+
+    ∴在$Rt\triangle ABC$中，$AC = AB \cdot \tan B = \frac{4}{3}$．'
+  knowledge_points:
+  - 平行四边形
+  module: triangles
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 21
+  type: 解答
+  score: 5
+  question: '小明假期外出短途旅游，搭乘飞机产生的碳排放量约为$530kg$，为了抵消这些碳排放量，他决定在开学后从家长开私家车接送改为只乘坐公交或骑自行车上下学，通过查阅资料得知几种交通方式的碳排放量如下表：
+
+    交通方式
+
+    碳排放量$\left(\mathrm{kg} / \mathrm{km}\right)$
+
+    开私家车
+
+    $0.27$
+
+    乘坐公交
+
+    $0.20$
+
+    骑自行车
+
+    0
+
+    小明每天上下学往返共约$20km$，往返需选择同一种交通工具，若他计划在上下学的100天内抵消这些碳排放量，则在这100天中，最多有几天可以乘坐公交？'
+  answer: 小明在这100天中，最多有2天可以乘坐公交
+  solution: '解：设小明在这100天中，有x天乘坐公交．
+
+    由题意可知，$20\times0.27\times100-20\times0.2x-0.20\times(100-x)=530$．
+
+    解得：$x \leq 2.5$．
+
+    答：小明在这100天中，最多有2天可以乘坐公交．'
+  knowledge_points:
+  - 不等式
+  module: equationsAndInequalities
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 22
+  type: 解答
+  score: 5
+  question: '在平面直角坐标系xOy中，函数$y=kx+b\,(k\neq0)$的图象经过点$A(1,2)$和$B(0,-1)$．
+
+    （1）求该函数的表达式；
+
+    （2）当$x>1$时，对于x的每一个值，函数$y = x + n$的值小于函数$y=kx+b\,(k\neq0)$的值且大于0，直接写出n的取值范围．'
+  answer: （1）$y=3x-1$ （2）$-1\leq n\leq 1$
+  solution: '【小问1详解】
+
+    解：由题意得：将点$A(1,2)$和$B(0,-1)$代入$y=kx+b\,(k\neq0)$中得：
+
+    $\left\{ \begin{array} { l } { k + b = 2 } \\ { b = - 1 } \end{array} \right.$，
+
+    解得：$\left\{\begin{array}{l}k=3\\b=-1\end{array}\right.$，
+
+    ∴该函数解析式为：$y=3x-1$；
+
+    【小问2详解】
+
+    解：当$x = 1$时，代入$y=3x-1$得：$y=2$，
+
+    在平面直角坐标系中画出直线$y=3x-1$和满足条件的直线$y = x + n$，如图：
+
+    [图]
+
+    ∵当$x>1$时，对于x的每一个值，函数$y = x + n$的值小于函数$y=kx+b\,(k\neq0)$的值，
+
+    ∴当$y = x + n$过$(1,2)$时满足题意，
+
+    ∴$1+n=2$，$n = 1$，
+
+    ∵当$x>1$时，对于x的每一个值，函数$y = x + n$的值大于0，
+
+    ∴当$y = x + n$过$(1,0)$时满足题意，
+
+    ∴$1+n=0$，$n = -1$，
+
+    综上：满足条件的n的取值范围为：$-1\leq n\leq 1$．'
+  knowledge_points:
+  - 一次函数
+  - 坐标系
+  module: functions
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 23
+  type: 解答
+  score: 6
+  question: '一项知识问答竞赛要求以团队方式参赛，每个团队20名选手．某校准备参加此项竞赛，前期组建了两个团队，经过一段时间的培训后，对两个团队进行了一次预赛，对成绩（百分制）进行了整理、描述和分析．下面给出了部分信息．
+
+    a．一队成绩的频数分布直方图如下（数据分成4组：$60\leq x<70,70\leq x<80,80\leq x<90,90\leq x\leq100$）：
+
+    [图]
+
+    b．二队成绩如下：
+
+    68
+
+    69    70    70    71    73    77    78    80    81
+
+    82
+
+    82    82    82    83    83    83    86    91    94
+
+    c．一、二两队成绩的平均数、众数、中位数如下：
+
+    平均数
+
+    众数
+
+    中位数
+
+    一队
+
+    79.6
+
+    77
+
+    P
+
+    二队
+
+    79.25
+
+    m
+
+    q
+
+    根据以上信息，回答下列问题：
+
+    （1）m的值为___________，p___________q（填“$\gt$”“$=$”或“$\gt$”）；
+
+    （2）若两队都各去掉一个最高分和一个最低分，则下列判断正确的是___________；
+
+    A．一队成绩的方差增大，二队成绩的方差减小B．两队成绩的方差都增大
+
+    C．一队成绩的方差减小，二队成绩的方差增大D．两队成绩的方差都减小
+
+    （3）为了选出冲击个人冠军的种子选手，学校对这次成绩90分以上的甲、乙、丙三位同学又单独进行了5次测试，平均数较大的选手排序靠前，若平均数相同，则方差较小的选手排序靠前．这5次测试的成绩如下：
+
+    测试1
+
+    测试2
+
+    测试3
+
+    测试4
+
+    测试5
+
+    甲
+
+    90
+
+    94
+
+    90
+
+    94
+
+    91
+
+    乙
+
+    91
+
+    92
+
+    92
+
+    92
+
+    93
+
+    丙
+
+    93
+
+    90
+
+    92
+
+    93
+
+    k
+
+    若丙的排序居中，则表中k（k为整数）的值为___________．'
+  answer: （1）82，$\gt$ （2）D（3）91或92
+  solution: '【小问1详解】
+
+    解：由题意得，二队成绩中82出现的次数最多，
+
+    故众数$m = 82$，
+
+    一队成绩的中位数位于$70 \leq x < 80$，
+
+    二队成绩的中位数为$\frac{81+82}{2}=81.5$，
+
+    ∴$p<q$，
+
+    故答案为：82，$\gt$；
+
+    【小问2详解】
+
+    解：若两队都各去掉一个最高分和一个最低分，两队的成绩波动都变小，则两队成绩的方差都减小；
+
+    故答案为：D；
+
+    【小问3详解】
+
+    解：甲选手的平均数为：$\frac{1}{5}\times(90+94+90+94+91)=91.8$，甲选手的方差为：$\frac{1}{5}\times\left[2\times(90-91.8)^{2}+(91-91.8)^{2}+2\times(94-91.8)^{2}\right]=3.36$，
+
+    乙选手的平均数为：$\frac{1}{5}\times(91+92+92+92+93)=92$，乙选手的方差为：$\frac{1}{5}\times\left[(91-92)^{2}+3\times(92-92)^{2}+(93-92)^{2}\right]=0.4$，
+
+    丙选手的平均数为：$\frac{1}{5}\times(93+90+92+93+k)=73.6+\frac{1}{5}k$，
+
+    ∵丙在甲、乙、丙三位选手中的排序居中，平均数较大的选手排序靠前，若平均数相同，则方差较小的选手排序靠前．
+
+    ∴$92.73+6+\frac{1}{5}k=91.8$，
+
+    解得$92\quad k\quad 91$，
+
+    ∵k为整数，
+
+    ∴当$k = 91$时，丙选手的平均数为：$73.6+\frac{1}{5}x=73.6+\frac{1}{5}\times91=91.8$，丙选手的方差为：$\frac{1}{5}\times\left[(90-91.8)^2+2\times(93-91.8)^2+(92'
+  knowledge_points:
+  - 平均数
+  - 中位数
+  - 众数
+  - 方差
+  module: statisticsAndProbability
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 24
+  type: 解答
+  score: 6
+  question: '如图，$V_{ABC}$是$\odot\odot$的内接三角形，$\angle ACB = 45^\circ$，点P在BC的延长线上，$PA\parallel OB$．
+
+    [图]
+
+    （1）求证：PA是$\odot\odot$的切线；
+
+    （2）若$\frac{OB}{AP} = \frac{1}{2}$，$PB = \sqrt{10}$，求$\odot\odot$半径的长．'
+  answer: （1）PA是$\odot\odot$的切线 （2）1
+  solution: '【小问1详解】
+
+    证明：如图，连接OA．
+
+    [图]
+
+    $\angle ACB = 45^\circ$，
+
+    $\angle AOB = 2\angle ACB = 90^\circ$．
+
+    $\because PA \parallel OB$，
+
+    $\angle PAO = \angle AOB = 90^\circ$．
+
+    ∵AO是半径，
+
+    $\therefore PA$是$\odot\odot$的切线．
+
+    【小问2详解】
+
+    设OA与BP相交于点D．
+
+    $\because PA \parallel OB$，
+
+    $\angle OBP = \angle P$．
+
+    ∵$\angle BDO = \angle ADP$，
+
+    $\triangle OBD \sim \triangle APD$．
+
+    $\frac{OD}{AD}=\frac{BD}{PD}=\frac{OB}{AP}$，
+
+    $\because \frac{OB}{AP} = \frac{1}{2}$，
+
+    $\frac{OD}{AD}=\frac{BD}{PD}=\frac{OB}{AP}=\frac{1}{2}$．
+
+    $\because OB = OA$，
+
+    $\therefore \frac{OD}{OB}=\frac{OD}{OA}=\frac{1}{3}$．
+
+    设$OD = k$，则$OB = 3k$．
+
+    ∴在$Rt\triangle OBD$中，$BD = \sqrt{OB^{2} + OD^{2}} = \sqrt{10}k$．
+
+    $\because \frac{BD}{PD} = \frac{1}{2}$．
+
+    $PD=2\sqrt{10}k$．
+
+    $\cdot PB = PD + BD = 3\sqrt{10}k$．
+
+    $\therefore PB = \sqrt{10}$，
+
+    $.3\sqrt{10}k=\sqrt{10}$，
+
+    $\therefore k ='
+  knowledge_points:
+  - 平行线
+  - 圆周角
+  - 切线
+  - 相似三角形
+  - 勾股定理
+  module: triangles
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 25
+  type: 解答
+  score: 6
+  question: '摩天轮是一种常见的游乐设施，在综合实践活动中，数学小组的同学们借助仪器准确测量并记录了某个摩天轮的旋转时间t（单位：$\min$）和一个座舱A距离地面的高度h（单位：m），部分数据如下：
+
+    [图]
+
+    $t / \min$
+
+    0
+
+    1
+
+    2
+
+    3
+
+    4
+
+    5
+
+    6
+
+    7
+
+    8
+
+    9
+
+    10
+
+    $h / m$
+
+    30.00
+
+    15.36
+
+    10.00
+
+    15.36
+
+    30.00
+
+    50.00
+
+    70.00
+
+    84.64
+
+    90.00
+
+    84.64
+
+    70.00
+
+    请解决以下问题：
+
+    [图]
+
+    （1）通过分析数据，发现可以用函数刻画h与t之间的关系，在给出的平面直角坐标系中，画出这个函数的图象；
+
+    （2）根据以上数据与函数图象，解决下列问题：
+
+    ①此摩天轮座舱距离地面的高度最高为___________m，转盘的半径约为___________m；
+
+    ②此摩天轮转一圈所用时间为___________$\min$；
+
+    ③若当座舱A距离地面的高度为$10m$时，座舱B距离地面的高度是$50m$，则至少经过___________$\min$（精确到0.1），这两个座舱的高度相同．'
+  answer: （1）见解析（2）①90，40；②12；③1.5或4.5
+  solution: '【小问1详解】
+
+    解：这个函数的图象如图所示：
+
+    [图]【小问2详解】
+
+    解：①根据以上数据与函数图象可知，此摩天轮座舱距离地面的高度最高为$90m$，最低高度为$10m$，
+
+    ∴转盘的直径约为$90-10=80(m)$，
+
+    ∴转盘的半径约为$40m$，
+
+    故答案为：90，40；
+
+    ②根据以上数据与函数图象可知，上升和下降的过程具有对称性，从最低点到最高点用时为$8-2=6(\min)$，
+
+    ∴从最高点到最低点用时也为$6\min$，
+
+    ∴此摩天轮转一圈所用时间为$6+6=12(\min)$，
+
+    故答案为：12；
+
+    ③根据函数图象可得，当$x=2$时，距离地面的高度为$10m$，当$x=5$时，距离地面的高度是$50m$，则两个座舱距离$3$分钟的路程，
+
+    ∵这两个座舱的高度相同，从最低点到最高点用时为$8-2=6(\min)$，
+
+    ∴若逆时针旋转摩天轮，最近$[公式]$是在最高点两边，则至少经过$6-3=4.5(\pi)$，这两个座舱的高度相同．
+
+    若顺时针旋转摩天轮，最近的是在最低点两边，则至少经过$\frac{3}{2}=1.5(\min)$，这两个座舱的高度相同．
+
+    故答案为：1.5或4.5．'
+  knowledge_points:
+  - 旋转
+  - 坐标系
+  module: geometryComprehensive
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 26
+  type: 解答
+  score: 6
+  question: '在平面直角坐标系xOy中，已知抛物线$y=ax^{2}-2a''x+a''+a\left(a\neq 0\right)$．
+
+    （1）求抛物线的顶点坐标（用含a的式子表示）；
+
+    （2）$M(x_{1},y_{1})$和$N(x_{2},y_{2})$是抛物线上的两点，若对于$-a\leq x_{1}\leq-a,2x_{2}\leq3$，都有$y_{1}<y_{2}$，求a的取值范围．'
+  answer: （1）$(a,a+1)$ （2）$0 < a < \frac{1}{3}$或$a < -4$
+  solution: '【小问2详解】
+
+    解：抛物线对称轴为$x = a$，
+
+    ①若$a > 0$，
+
+    则当$x\quad a$时，y随x的增大而增大；当$x \leq a$时，y随x的增大而减小，
+
+    $-\alpha -1 \leq x_{i} \leq -\alpha$，
+
+    $\therefore x_1 < a$，
+
+    设点M关于对称轴$x = a$的对称点为$M''(x_3,y_1)$，
+
+    则$x_{1}>a,x_{2}-a=a-x$，
+
+    $\therefore x_{3}=2a-x_{1}$，
+
+    $3a\leqslant x_{1}\leqslant 3a+1$，
+
+    （i）当$0 < a < \frac{1}{3}$时，有$0 < x_{3} < 2$，
+
+    $\ldots a < x_1 < x_2$，
+
+    $\therefore y_1 < y_2$，符合题意；
+
+    （ii）当$\frac{1}{3} \leq a \leq 2$时，令$x_{1}=3a+1,x_{2}=2$，
+
+    $\because 3a+1=22$，
+
+    $\ldots a \leq x_{2} \leq x_{3} \leq \ldots$，
+
+    $\therefore y_{1}\quad y_{2}$，不符合题意；
+
+    （iii）当$a > 2$时，令$x_{1}=-a,x_{2}=2$，
+
+    $\therefore x_{1}<x_{2}<a$，
+
+    $\therefore y_1 > y_2$，不符合题意；
+
+    ②若$a < 0$，
+
+    则当$x\quad a$时，y随x的增大而减小；当$x \leq a$时，y随x的增大而增大，
+
+    （i）当$-2<a<0$时，令$x_{1}=-a,x_{2}=2$，
+
+    $\because 0 < -a < 2$，
+
+    $\therefore a>1x_{2}>x_{1}$，
+
+    $\therefore y_1 > y_2$，不符合题意；
+
+    （ii）'
+  knowledge_points:
+  - 二次函数
+  - 不等式
+  - 坐标系
+  module: functions
+  difficulty: 压轴
+  recommended_for:
+  - L3
+- id: 27
+  type: 解答
+  score: 7
+  question: '在正方形$ABCD$中，E为AD边上一点（不与点A，D重合），将线段CB沿直线CE翻折，得到线段CF，连接FD并延长，与线段CE的延长线相交于点G，连接AG．
+
+    [图]
+
+    （1）依题意补全图形；
+
+    （2）求$\angle CGF$的度数；
+
+    （3）用等式表示线段AG与DF的数量关系，并证明．'
+  answer: （1）见解析（2）$45^\circ$ （3）$DF = \sqrt{2}AG$，证明见解析
+  solution: '【小问1详解】
+
+    解：补全图形如图1所示：
+
+    [图]【小问2详解】
+
+    解：设$\angle DCG = \alpha$．
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$四边形$ABCD$是正方形，
+
+    $\ldots CB = CD$，$\angle BCD = 90^\circ$，
+
+    $\angle BCG=90^\circ-\alpha$，
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$将线段CB沿直线CE翻折，得到线段CF，
+
+    $\therefore CF = CB$，$\angle FCG=\angle BCG=90^\circ-\alpha$，
+
+    $\therefore CF = CD$，$\angle FCD=\angle FCG-\angle DCG=90^\circ -2\alpha$
+
+    $\angle CDF = \angle F = \frac{180^\circ - \angle FCD}{2} = 45^\circ + \alpha$，
+
+    $\angle CGF=\angle CDF-\angle DCG=45^{\circ}$．
+
+    【小问3详解】
+
+    解：$DF = \sqrt{2}AG$，证明如下：
+
+    如图2，作$AH \perp AG$，交FG的延长线于点H，连接BG．
+
+    [图]
+
+    $\because AH \perp AG$，
+
+    $\angle HAG = 90^\circ$，
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$四边形$ABCD$是正方形，
+
+    $\therefore'
+  knowledge_points:
+  - 正方形
+  module: triangles
+  difficulty: 压轴
+  recommended_for:
+  - L3
+- id: 28
+  type: 解答
+  score: 7
+  question: '在平面直角坐标系xOy中，有两个图形M和N，P为图形M上一点，点P到图形N上任意一点的距离的最小值，称为点P到图形N的距离，若图形M上任意一点到图形N的距离中存在最大值，则称这个最大值为图形M到图形N的“h距离”，记为$h(M,N)$．例如：如图，点$A(1,5)$，$B(2,3)$，$C(6,0)$，若图形M为点A和B，图形N为点O和C，则$h(M,N)$为线段AO的长度，即$h(M,N)=\sqrt{26}$，$h(N,M)$为线段BC的长度，即$h(N,M)=5$．特殊地，若$h(M,N)=h(N,M)$，则称图形M和图形N之间存在“H距离”，记为$H(M,N)$．
+
+    [图]
+
+    （1）图形M为线段AB，
+
+    ①若图形N为线段OC，则$h(M,N)$___________，$h(N,M)$___________；
+
+    ②点$D(0,t)$，点$E(0,t+1)$，图形N为线段DE，直接写出$h(M,N)$的最小值，及当$h(M,N)$取得最小值时，t的取值范围；
+
+    （2）已知$\odot\odot$的半径为1，直线$l:y=\frac{\sqrt{3}}{3}x+2\sqrt{3}$，图形M为$\odot\odot$，图形N为直线l上的一条线段$\overline{PQ}$（点P在点Q左侧），记点P，Q的横坐标分别为p，q，若图形M和图形N之间存在“H距离”，直接写出$H(M,N)$的最小值，及当$H(M,N)$取得最小值时，p的最小值和对应的q的取值范围．'
+  answer: （1）①5，5；②2，$4-\sqrt{3}\leq x\leq 3$ （2）4，$-\frac{3}{2}-2\sqrt{3}$，$-\frac{3}{2}\leq x\leq 2\sqrt{3}-\frac{3}{2}$
+  solution: '【小问1详解】
+
+    解：①根据题意，在线段AB上任意取一点P，作$PQ \perp OC$，如图所示，
+
+    [图]
+
+    则$\overline{PQ}$的长度即为点P到线段OC的距离，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$当点P与点A重合时，$\overline{PQ}$取得最大值，此时即为图形M到图形N的“h距离”，
+
+    $\therefore A(1,5)$，$PQ \perp OC$，
+
+    $\therefore PQ = 5$，
+
+    $\therefore h(M,N)=5$；
+
+    在线段OC上任意取一点P，连接PB，如图所示，
+
+    [图]
+
+    则PB的长度即为点P到线段AB的距离，
+
+    $\therefore O(0,0)$，$B(2,3)$，$C(6,0)$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$当点P与点C重合时，PB取得最大值，此时即为图形N到图形M的“h距离”，
+
+    $\therefore BC=\sqrt{(2-6)^{2}+(3-0)^{2}}=5$，
+
+    $\ldots h(N,M)=5$；
+
+    故答案为：5，5；
+
+    ②当$t+1<3$时，连接AE，BE，作$BV \perp y$轴于点V，如图所示：
+
+    [图]
+
+    $\because B(2,3)$
+
+    $\therefore B$点到y轴距离为2，即$BV = 2$，
+
+    $AE > BE > BV = 2$，
+
+    $\ldots(\mathcal{M},N)=AE\'
+  knowledge_points:
+  - 一次函数
+  - 坐标系
+  module: triangles
+  difficulty: 压轴
+  recommended_for:
+  - L3

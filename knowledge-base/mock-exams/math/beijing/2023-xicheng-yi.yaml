@@ -1,8 +1,8 @@
 # ============================================================
 # 2023年北京西城区中考数学一模试卷 — 逐题分析
 # ============================================================
-# 数据来源：knowledge-original/精品解析：2023年北京市西城区中考一模数学试题（原卷版）.docx
-# 自动生成，部分数学公式可能显示不全（docx公式对象无法完整提取）
+# 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
+# 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
 # 满分：100分  时长：120分钟
 
 year: 2023
@@ -11,27 +11,27 @@ exam_type: 一模
 subject: 数学
 full_score: 100
 duration_minutes: 120
-total_questions: 29
+total_questions: 28
 structure: 8选择(16分) + 8填空(16分) + 12解答(68分)
 questions:
-- id: 2023
-  type: 解答
-  score: 5
-  question: （第2023题，详见原卷）
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 压轴
-  recommended_for:
-  - L3
 - id: 1
   type: 选择
   score: 2
-  question: "下面几何体中，是圆柱的是（      ）\nA.    \tB.   \tC.   \tD."
-  answer: ''
-  solution: ''
+  question: '下面几何体中，是圆柱的是（
+
+    ）
+
+    A.[图]B.[图]C.[图]D.[图]'
+  answer: B
+  solution: '解：A.是正方体，故不符合题意；
+
+    B.是圆柱，故符合题意；
+
+    C.是圆锥，故不符合题意；
+
+    D.是球体，故不符合题意，
+
+    故选：B．'
   knowledge_points:
   - 综合
   module: circles
@@ -44,11 +44,16 @@ questions:
 - id: 2
   type: 选择
   score: 2
-  question: "根据地区生产总值统一核算的结果，2022年北京市全年地区生产总值41610.9亿元，按不变价格计算，比2021年增长0.7%．将4161090000000用科学记数法表示应为（      ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '根据地区生产总值统一核算的结果，2022年北京市全年地区生产总值41610.9亿元，按不变价格计算，比2021年增长0.7%．将4161090000000用科学记数法表示应为（）
+
+    A.$41.6109\times10^{11}$B.$4.16109\times10^{11}$C.$4.16109\times10^{12}$D.$4.16109\times10^{13}$'
+  answer: C
+  solution: '解：4161090000000用科学记数法表示为$4.16109\times10^{12}$．
+
+    故选C．'
   knowledge_points:
   - 科学记数法
+  - 绝对值
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -59,11 +64,25 @@ questions:
 - id: 3
   type: 选择
   score: 2
-  question: "如图，点O在直线上，，若，则度数是（      ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '如图，点O在直线AB上，$OC \perp OD$，若$\angle AOC = 50^\circ$，则$\angle BOD$的度数是（）
+
+    [图]
+
+    A.$120^\circ$B.$130^\circ$C.$140^\circ$D.$150^\circ$'
+  answer: C
+  solution: '解：∵$OC \perp OD$，
+
+    ∴$\angle COD=90^\circ$，
+
+    ∴$\angle AOD = 90^{\circ} - \angle AOC = 90^{\circ} - 50^{\circ} = 40^{\circ}$，
+
+    再根据邻补角的定义，得
+
+    $\angle BOD=180^{\circ}-\angle AOD=180^{\circ}-40^{\circ}=140^{\circ}$．
+
+    故选C．'
   knowledge_points:
-  - 综合
+  - 邻补角
   module: geometryComprehensive
   difficulty: 基础
   recommended_for:
@@ -74,9 +93,19 @@ questions:
 - id: 4
   type: 选择
   score: 2
-  question: "下列图形都是轴对称图形，其中恰有4条对称轴的图形是（      ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '下列图形都是轴对称图形，其中恰有4条对称轴的图形是（）
+
+    A.[图]B.[图]C.[图]D.[图]'
+  answer: B
+  solution: 'A、是轴对称图形，对称轴是3条，不符合题意；
+
+    B、是轴对称图形，对称轴是4条，符合题意；
+
+    C、是轴对称图形，对称轴是2条，不符合题意；
+
+    D、$[公式]$轴对称图形，对称轴是5条，不符合题意；
+
+    故选B．'
   knowledge_points:
   - 轴对称图形
   - 轴对称
@@ -90,9 +119,21 @@ questions:
 - id: 5
   type: 选择
   score: 2
-  question: "a，b在数轴上的对应点的位置如图所示，则正确的结论是（      ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: 'a，b在数轴上的对应点的位置如图所示，则正确的结论是（）
+
+    [图]
+
+    A.$a > -2$B.$\left| a \right| < \left| b \right|$C.$ab > 0$D.$a < -b$'
+  answer: D
+  solution: '解：通过观察数轴可知：$-3 < a < -2$，故A错误，不符合题意；
+
+    $1<b<2$，$\left| a \right| > \left| b \right|$，故B错误，不符合题意；
+
+    $a<0,b>0$，$ab < 0$，故C错误，不符合题意；
+
+    $-2 < -b < -1$，$a < -b$，故D正确，符合题意．
+
+    故选D．'
   knowledge_points:
   - 综合
   module: numbersAndExpressions
@@ -105,8 +146,10 @@ questions:
 - id: 6
   type: 选择
   score: 2
-  question: "平面直角坐标系中，若点和在反比例函数图像上，则下列关系式正确的是（      ）\nA. \tB. \tC. \tD."
-  answer: ''
+  question: '平面直角坐标系xOy中，若点$A(x_{1},2)$和$B(x_2,4)$在反比例函数$y=\frac{k}{x}(k>0)$图像上，则下列关系式正确的是（）
+
+    A.$x_{1}>x_{2}>0$B.$x_{2}>x_{1}>0$C.$x_{1}<x_{2}<0$D.$x_{2}<x_{1}<0$'
+  answer: A
   solution: ''
   knowledge_points:
   - 反比例函数
@@ -120,12 +163,21 @@ questions:
 - id: 7
   type: 选择
   score: 2
-  question: "x的方程有两个不相等的实数根，则实数m的取值范围是（      ）\nA. \tB. \tC. 且\tD. 且"
-  answer: ''
-  solution: ''
+  question: 'x的方程$mx^{2}+3x-1=0$有两个不相等的实数根，则实数m的取值范围是（）
+
+    A.$m > -\frac{9}{4}$B.$m-\frac{9}{4}$C.$m > -\frac{9}{4}$且$m \neq 0$D.$m-\frac{9}{4}$且$m \neq 0$'
+  answer: C
+  solution: '∵方程$mx^{2}+3x-1=0$有两个不相等的实数根，
+
+    ∴$m=0,\Delta=9-4mx(-1)>0$．，
+
+    解得$m > -\frac{9}{4}$且$m \neq 0$，
+
+    故选C．'
   knowledge_points:
-  - 综合
-  module: numbersAndExpressions
+  - 一元二次方程
+  - 根的判别式
+  module: equationsAndInequalities
   difficulty: 中档
   recommended_for:
   - L1
@@ -134,20 +186,45 @@ questions:
 - id: 8
   type: 选择
   score: 2
-  question: '设备每年都需要检修，该设备使用年数n（单位：年，n为正整数且）与第1年至第n年该设备检修支出的费用总和y（单位：万元）满足关系式，下列结论正确的是（      ）
+  question: '设备每年都需要检修，该设备使用年数n（单位：年，n为正整数且$1 \leq n \leq 10$）与第1年至第n年该设备检修支出的费用总和y（单位：万元）满足关系式$y = 1.4n - 0.5$，下列结论正确的是（）
 
-    A. 从第2年起，每年的检修费用比上一年增加万元
+    A.从第2年起，每年的检修费用比上一年增加$1.4$万元
 
-    B. 从第2年起，每年的检修费用比上一年减少万元
+    B.从第2年起，每年的检修费用比上一年减少$0.5$万元
 
-    C. 第1年至第5年平均每年的检修费用为万元
+    C.第1年至第5年平均每年的检修费用为$3.7$万元
 
-    D. 第6年至第10年平均每年的检修费用为万元'
-  answer: ''
-  solution: ''
+    D.第6年至第10年平均每年的检修费用为$1.4$万元'
+  answer: D
+  solution: '由题意得，
+
+    前n年支出总费用为$y = 1.4n - 0.5$万元，
+
+    前$n+1$年支出总费用为：$y=1.4(n+1)-0.5=1.4n+0.9$万元；
+
+    前$n+2$年支出总费用为：$y=1.4(n+2)-0.5=1.4n+2.3$万元；
+
+    易知，前n年和前$n+1$年差值为$1.4$万元，前$n+1$年和$n+2$年差值为$1.4$万元，
+
+    故第二年起，每年检修费比上一年保持不变，故A
+
+    , B错误；
+
+    第一到第五年总支出费用为$y=1.4\times5-0.5=6.5$万元，
+
+    故平均每年检修费用为$6.5\div5=1.3$万元，故C错误．
+
+    $1-5$年总支出为$6.5$万元，
+
+    $1-10$年总支出为$y=1.4\times10-0.5=13.5$万元，
+
+    所以$6-10$年平均每年检测费用为$(13.5-6.3)\div5=1.4$万元，故D正确．
+
+    故选D．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 一次函数
+  - 不等式
+  module: equationsAndInequalities
   difficulty: 较难
   recommended_for:
   - L2
@@ -155,9 +232,13 @@ questions:
 - id: 9
   type: 填空
   score: 2
-  question: 若式子在实数范围内有意义，则的取值范围是______．
-  answer: ''
-  solution: ''
+  question: 若式子$\sqrt{x-1}$在实数范围内有意义，则x的取值范围是______．
+  answer: $x\ 1$
+  solution: '由题意得$x-1\quad 0$，
+
+    解得$x\ 1$，
+
+    故答案为：$x\ 1$．'
   knowledge_points:
   - 综合
   module: numbersAndExpressions
@@ -171,11 +252,15 @@ questions:
   type: 填空
   score: 2
   question: 分解因式：3a2﹣12=___．
-  answer: ''
-  solution: ''
+  answer: 3（a+2）（a﹣2）
+  solution: '3a2﹣12
+
+    =3（a2﹣4）
+
+    =3（a+2）（a﹣2）．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 方差
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -185,9 +270,11 @@ questions:
 - id: 11
   type: 填空
   score: 2
-  question: 已知一个边形的每一个外角都为，则等于________．
-  answer: ''
-  solution: ''
+  question: 已知一个n边形的每一个外角都为$40^\circ$，则n等于________．
+  answer: $9$
+  solution: '解：$360^{\circ}+40^{\circ}=9$．
+
+    故答案为$9$．'
   knowledge_points:
   - 综合
   module: triangles
@@ -200,12 +287,24 @@ questions:
 - id: 12
   type: 填空
   score: 2
-  question: 方程的解为__________．
-  answer: ''
-  solution: ''
+  question: 方程$\frac{1}{2x}=\frac{1}{x-1}$的解为__________．
+  answer: $x=-1$
+  solution: '解：$\frac{1}{2x}=\frac{1}{x-1}$
+
+    去分母得：$x-1=2x$
+
+    移项、合并同类项得：$-x=1$
+
+    系数化为1得：$x=-1$，
+
+    检验：把$x=-1$代入$2x(x-1)$得：$2x(-1)(-1-1)=-2x(-2)=4\neq0$，
+
+    ∴$x=-1$是原方程的解，
+
+    故答案为：$x=-1$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 分式方程
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -215,12 +314,31 @@ questions:
 - id: 13
   type: 填空
   score: 2
-  question: 如图，在中，E是边上的点，连接交于点F，若，则的值是__________．
-  answer: ''
-  solution: ''
+  question: '如图，在$Y_{ABCD}$中，E是BC边上的点，连接AE交BD于点F，若$EC = 2BE$，则$\frac{BF}{FD}$的值是__________．
+
+    [图]'
+  answer: $\frac{1}{3}$
+  solution: '∵$Y_{ABCD}$，
+
+    ∴$BC = AD,\ BC \parallel AD$，
+
+    ∴$\triangle BEF \cong \triangle DAF$，
+
+    ∴$\frac{BF}{FD} = \frac{BE}{AD}$，
+
+    ∵$EC = 2BE$，
+
+    ∴$\frac{BE}{BC} = \frac{1}{3}$，
+
+    ∴$\frac{BE}{AD}=\frac{1}{3}$，
+
+    ∴$\frac{BF}{FD}=\frac{1}{3}$，
+
+    故答案为：$\frac{1}{3}$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 相似三角形
+  - 平行四边形
+  module: triangles
   difficulty: 中档
   recommended_for:
   - L1
@@ -229,12 +347,25 @@ questions:
 - id: 14
   type: 填空
   score: 2
-  question: “圆”是中国文化的一个重要精神元素，在中式建筑中有着广泛的应用，例如古典园林中的门洞，如图，某地园林中的一个圆弧形门洞的高为，地面入口宽为,则该门洞的半径为__________m．
-  answer: ''
-  solution: ''
+  question: '“圆”是中国文化的一个重要精神元素，在中式建筑中有着广泛的应用，例如古典园林中的门洞，如图，某地园林中的一个圆弧形门洞的高为$2.5m$，地面入口宽为$1m$,则该门洞的半径为__________m．
+
+    [图]'
+  answer: '1.3'
+  solution: '如图，设圆心为点E，洞高为$DB=2.5m$，入口宽为$AC = 1\mathrm{m}$，门洞的半径为xm
+
+    根据题意，得$EB=(2.5-x)\,m,AB=\frac{1}{2}AC=0.5m$，
+
+    [图]
+
+    根据勾股定理，得$x^{2}-(2.5-x)\ast(0.5)^{2}$，
+
+    解得$x=1.3$，
+
+    故答案为：$1.3$．'
   knowledge_points:
-  - 综合
-  module: circles
+  - 垂径定理
+  - 勾股定理
+  module: triangles
   difficulty: 中档
   recommended_for:
   - L1
@@ -244,10 +375,20 @@ questions:
   type: 填空
   score: 2
   question: 有6张看上去无差别的卡片，上面分别写着1，2，3，4，5，6随机抽取1张后，放回并混合在一起，再随机抽取1张，则第二次取出的数字是第一次取出数字的整数倍的概率是__________．
-  answer: ''
-  solution: ''
+  answer: $\frac{7}{18}$
+  solution: '解：由题意得：画如下树状图，
+
+    [图]
+
+    共有$36$种等可能的结果，其中第二次取出的数字是第一次取出数字的整数倍的有$14$种，
+
+    ∴概率为$\frac{14}{36}=\frac{7}{18}$，
+
+    故答案为：$\frac{7}{18}$．'
   knowledge_points:
   - 概率
+  - 树状图
+  - 列表法
   module: statisticsAndProbability
   difficulty: 中档
   recommended_for:
@@ -257,12 +398,29 @@ questions:
 - id: 16
   type: 填空
   score: 2
-  question: A，B，C三种原料每袋的重量（单位：kg）依次是1，2，3，每袋的价格（单位：万元）依次是3，2，5．现生产某种产品需要A，B，C这三种原料的袋数依次为（均为正整数），则生产这种产品时需要的这三类原料的总重量W（单位：kg）=__________（用含的代数式表示）：为了提升产品的品质，要求，当的值依次是_______时，这种产品的成本最低．
-  answer: ''
-  solution: ''
+  question: A，B，C三种原料每袋的重量（单位：kg）依次是1，2，3，每袋的价格（单位：万元）依次是3，2，5．现生产某种产品需要A，B，C这三种原料的袋数依次为$x_1, x_2, x_3$（$x_1, x_2, x_3$均为正整数），则生产这种产品时需要的这三类原料的总重量W（单位：kg）=__________（用含$x_1, x_2, x_3$的代数式表示）：为了提升产品的品质，要求$W\
+    13$，当$x_1, x_2, x_3$的值依次是_______时，这种产品的成本最低．
+  answer: ①.$x_{1}+2x_{2}+3x_{3}$②.1，5，1
+  solution: '∵A，B，C三种原料每袋的重量（单位：kg）依次是1，2，3，需要A，B，C这三种原料的袋数依次为$x_1, x_2, x_3$（$x_1, x_2, x_3$均为正整数），
+
+    ∴$W = x_1 + 2x_2 + 3x_3$，
+
+    故答案为：$x_{1}+2x_{2}+3x_{3}$；
+
+    设总成本价为M元，根据题意，得$M=3x+2x_{1}+5x_{2}=(2x_{1}+2x_{2})+(x_{1}+2x_{2}+3x_{3})+3+2(x_{1}+x_{2})$，
+
+    ∵$x_1, x_2, x_3$均为正整数，$W=x_{1}+2x_{2}+3x_{3}13$，
+
+    ∴$M\quad13+2(x_{1}+x_{2})\quad13+2\times2=17$，
+
+    当且仅当，$x_{1}=x_{3}=1$时，成本最低，此时$x_{2}=\frac{9}{2}$，
+
+    故$x_2 = 5$，
+
+    故答案为：1,5,1．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 不等式
+  module: equationsAndInequalities
   difficulty: 较难
   recommended_for:
   - L2
@@ -270,12 +428,13 @@ questions:
 - id: 17
   type: 解答
   score: 5
-  question: （第17题，详见原卷）
-  answer: ''
+  question: 计算：$-\sqrt{3}-4\sin 60^{\circ}+\sqrt{27}-(\pi+1)^{0}$．
+  answer: $2\sqrt{3}-1$
   solution: ''
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 三角函数
+  - 绝对值
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -285,9 +444,21 @@ questions:
 - id: 18
   type: 解答
   score: 5
-  question: 解不等式组：
-  answer: ''
-  solution: ''
+  question: 解不等式组：$\frac{4x-3}{2x+6}<\frac{3(x-1)}{5}<x.$
+  answer: $x>2$
+  solution: '解：$\begin{cases}
+
+    4x+3<3(x-1) \quad \text{(1)} \\
+
+    \dfrac{2x+6}{5}<x \quad \text{(2)}
+
+    \end{cases}$
+
+    解不等式①，得$x\quad 0$．
+
+    解不等式②，得$x>2$．
+
+    所以原不等式组的解集为$x>2$．'
   knowledge_points:
   - 不等式
   - 不等式组
@@ -301,12 +472,24 @@ questions:
 - id: 19
   type: 解答
   score: 5
-  question: 已知a是方程的一个根，求代数式的值．
-  answer: ''
-  solution: ''
+  question: 已知a是方程$x^{2}+2x-1=0$的一个根，求代数式$(a+1)^{2}+a(a+2)$的值．
+  answer: $2a^{2}+4a+1$，3
+  solution: '解：$(a+1)^{2}+a(a+2)$
+
+    $a^{2}+2a+1+a^{2}+2a$
+
+    $=2a^{3}+4a+1$，
+
+    ∵a是方程$x^{2}+2x-1=0$的一个根，
+
+    ∴$a^{2}+2a-1=0$，
+
+    即$a^2 + 2a = 1$．
+
+    ∴原式$=2(a^{2}+2a)+1$$=2\times1+1=3$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 一元二次方程
+  module: equationsAndInequalities
   difficulty: 基础
   recommended_for:
   - L0
@@ -316,12 +499,56 @@ questions:
 - id: 20
   type: 解答
   score: 5
-  question: 下面是解答一道几何题时两种添加辅助线的方法，选择其中一种，完成证明．
-  answer: ''
-  solution: ''
+  question: '下面是解答一道几何题时两种添加辅助线的方法，选择其中一种，完成证明．
+
+    已知：如图，$AB \parallel CD$．
+
+    求证：$\angle ABC = \angle A + \angle C$
+
+    [图]
+
+    方法一
+
+    证明：如图，过点E作$MN \parallel AB$[图]
+
+    方法二
+
+    证明：如图，延长AE，交CD于点F．
+
+    [图]'
+  answer: 答案不唯一，见解析
+  solution: '方法一
+
+    证明：如图，过点E作$MN \parallel AB$，
+
+    ∴$\angle A=\angle AEM$．
+
+    ∵$AB \parallel CD$，
+
+    ∴$MN \parallel CD$，
+
+    ∴$\angle C=\angle CEM$．
+
+    ∵$\angle AC+\angle AEM+\angle CEM$，
+
+    ∴$\angle ABC = \angle A + \angle C$．
+
+    [图]
+
+    方法二证明：如图，延长AE，交CD于点F，
+
+    ∵$AB \parallel CD$，
+
+    ∴$\angle A=\angle AFC$．
+
+    ∵$\angle AEC = \angle AFC + \angle C$，
+
+    ∴$\angle ABC = \angle A + \angle C$．
+
+    [图]'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 平行线
+  module: triangles
   difficulty: 中档
   recommended_for:
   - L1
@@ -330,21 +557,59 @@ questions:
 - id: 21
   type: 解答
   score: 5
-  question: '在中，是边上的中线，点E在线段上，点F在线段的延长线上，，连接，．
+  question: '在$\triangle ABC$中，AD是BC边上的中线，点E在线段AD上，点F在线段AD的延长线上，$CE \parallel FB$，连接BE，CF．
 
-    （1）如图1，求证：四边形是平行四边形．
+    [图]
 
-    （2）若，
+    （1）如图1，求证：四边形$BFCE$是平行四边形．
+
+    （2）若$\angle ABC = \angle ACB$，
 
     ①依题意补全图2；
 
-    ②求证：四边形为菱形.'
-  answer: ''
-  solution: ''
+    ②求证：四边形$BFCE$为菱形.'
+  answer: （1）见解析（2）①见解析；②见解析
+  solution: '【小问1详解】
+
+    证明：∵$CE \parallel FB$，
+
+    ∴$\angle BFE = \angle CEF$，
+
+    ∵AD是BC边上的中线，
+
+    ∴$BD = DC$，
+
+    ∵$\angle BDF=\angle CDE$，
+
+    ∴$\triangle BDF\cong\triangle CDE$，
+
+    ∴$FB = CE$，
+
+    ∴四边形$BFCE$是平行四边形．
+
+    【小问2详解】
+
+    解：①依题意补全图2，如图；
+
+    [图]
+
+    ②证明：∵$\angle ABC = \angle ACB$，
+
+    ∴$AB = AC$，
+
+    ∵AD是BC边上的中线，
+
+    ∴$AD \perp BC$，
+
+    由（1）证明方法可得四边形$BFCE$是平行四边形，
+
+    ∴四边形$BFCE$为菱形．'
   knowledge_points:
+  - 平行线
+  - 全等三角形
   - 平行四边形
   - 菱形
-  module: quadrilaterals
+  module: triangles
   difficulty: 中档
   recommended_for:
   - L1
@@ -355,22 +620,77 @@ questions:
   score: 5
   question: '某地旅游部门为了促进本地生态特色城镇和新农村建设，将甲、乙、丙三家民宿的相关资料放到某网络平台上进行推广宣传，该平台邀请部分曾在这三家民宿体验过的游客参与调查，得到了这三家民宿的“综合满意度”评分，评分越高表明游客体验越好，现从这三家民宿“综合满意度”的评分中各随机抽取10个评分数据，并对所得数据进行整理、描述和分析，下面给出了部分信息．
 
-    a．甲、乙两家民宿“综合满意度”评分折线图：
+    a．甲、乙两家民宿“综合满意度”评分的折线图：
+
+    [图]
 
     b．丙家民宿“综合满意度”评分：
 
+    $2.6474550.454.84.53.64.53.1$
+
     c．甲、乙、丙三家民宿“综合满意度”评分的平均数、中位数：
+
+    甲
+
+    乙
+
+    丙
+
+    平均数
+
+    m
+
+    $4.5$
+
+    $4.2$
+
+    中位数
+
+    $4.5$
+
+    $4.7$
+
+    n
 
     根据以上信息，回答下列问题：
 
-    （1）表中的值是__________，的值是__________；
+    （1）表中m的值是__________，n的值是__________；
 
-    （2）设甲、乙、丙三家民宿“综合满意度”评分的方差分别是，直接写出之间的大小关系；
+    （2）设甲、乙、丙三家民宿“综合满意度”评分的方差分别是$S_{\|P}^{2},\ S_{\angle}^{2},\ S_{\|Q}^{2}$，直接写出$S_{\|P}^{2},\ S_{\angle}^{2},\ S_{\|Q}^{2}$之间的大小关系；
 
     （3）根据“综合满意度”的评分情况，该平台打算将甲、乙、丙三家民宿中的一家置顶推荐，你认为该平台会将这三家民宿中的哪家置顶推荐？说明理由（至少从两个方面说明）．'
-  answer: ''
-  solution: ''
+  answer: （1）$4.5$，$4.5$ （2）$S_{\mathrm{乙}}^{2}$$\gt$$S_{\text{甲}}^{2}$$\gt$$S_{\text{丙}}^{2}$ （3）推荐乙，理由见解析
+  solution: '【小问1详解】
+
+    解：甲家民宿“综合满意度”评分：$3.2425045504945425045$
+
+    ∴$m=\frac{1}{10}(3.2+4.2+5.0+4.5+5.0+4.9+4.5+4.2+5.0+4.5)=4.5$，
+
+    丙家民宿“综合满意度”评分：
+
+    $2.6474550.454.84.53.64.53.1$
+
+    从小到大排列为：$2,6,3,1,3,8,4,5,4,5,4,5,4,7,4,8,5$
+
+    ∴中位数$n-\frac{4.5+4.5}{2}=4.5$
+
+    故答案为：$4.5$，$4.5$．
+
+    【小问2详解】
+
+    根据折线统计图可知，乙的评分数据在$4$分与$5$分之间波动，甲的数据在$3.2$分和$5$分之间波动，
+
+    根据丙的数据可以在$2.6$至$5$分之间波动，
+
+    ∴$S_{\mathrm{乙}}^{2}$$\gt$$S_{\text{甲}}^{2}$$\gt$$S_{\text{丙}}^{2}$
+
+    【小问3详解】
+
+    推荐乙，理由：乙的方差最小，数据稳定，平均分比丙高，
+
+    答案不唯一，合理即可．'
   knowledge_points:
+  - 统计
   - 平均数
   - 中位数
   - 方差
@@ -383,16 +703,43 @@ questions:
 - id: 23
   type: 解答
   score: 6
-  question: '在平面直角坐标系中，一次函数的图象由函数的图象平移得到，且经过点．
+  question: '在平面直角坐标系xOy中，一次函数$y=ax+b(a\ne0)$的图象由函数$y=\frac{1}{2}x$的图象平移得到，且经过点$(-2,1)$．
 
     （1）求这个一次函数的解析式：
 
-    （2）当时，对于x的每一个值，一次函数的值小于函数的值，直接写出m的取值范围．'
-  answer: ''
-  solution: ''
+    （2）当$x>2$时，对于x的每一个值，一次函数$y=ax+b$的值小于函数$y = x + m$的值，直接写出m的取值范围．'
+  answer: （1）$y=\frac{1}{2}x+2$ （2）$m\ 1$
+  solution: '【小问1详解】
+
+    解：∵一次函数$y=ax+b$的图象由函数$y=\frac{1}{2}x$的图象平移得到，
+
+    ∴$a = \frac{1}{2}$，得到一次函数的解析式为$y=\frac{1}{2}x+b$．
+
+    ∵一次函数$y=\frac{1}{2}x+b$的图象过点$(-2,1)$，
+
+    ∴$\frac{1}{2} \times (-2) + b = 1$，得到$b = 2$．
+
+    ∴一次函数$y=ax+b$的解析式为$y=\frac{1}{2}x+2$．
+
+    【小问2详解】
+
+    解：当$x>2$时，对于x的每一个值，一次函数$y=ax+b$的值小于函数$y = x + m$的值，
+
+    ∴$\frac{1}{2}x+2<x+m$，
+
+    解得$x>4-2m$，
+
+    ∵当$x>2$时总是成立，
+
+    ∴$4-2m\leq2$，
+
+    ∴$m\ 1$，
+
+    即m的取值范围是$m\ 1$．'
   knowledge_points:
   - 一次函数
   - 平移
+  - 不等式
   - 坐标系
   module: functions
   difficulty: 较难
@@ -402,16 +749,82 @@ questions:
 - id: 24
   type: 解答
   score: 6
-  question: '如图，是的直径，C是上一点，的平分线交于点D，过点D作的切线交CB的延长线于点E．
+  question: '如图，AB是$\odot\odot$的直径，C是$\odot\odot$上一点，$\angle ACB$的平分线交$\odot\odot$于点D，过点D作$\odot\odot$的切线交CB的延长线于点E．
 
-    （1）求证：；
+    [图]
 
-    （2）若，，求线段的长．'
-  answer: ''
-  solution: ''
+    （1）求证：$DE \parallel AB$；
+
+    （2）若$OA=5$，$\sin A = \frac{3}{5}$，求线段DE的长．'
+  answer: （1）见解析（2）$\frac{35}{4}$
+  solution: '【小问1详解】
+
+    证明：连接OD，如图1．
+
+    ∵DE是$\odot\odot$的切线，切点是D，
+
+    ∴$OD \perp DE$．
+
+    ∴$\angle ODE=90^{\circ}$．
+
+    ∵AB是$\odot\odot$的直径，
+
+    ∴$\angle ACB=90^\circ$．
+
+    ∵$\angle ACB$的平分线交$\odot\odot$于点D，
+
+    ∴$\angle ACD=\angle BCD=45^{\circ}$．
+
+    ∴$\angle AOD=90^{\circ}$．
+
+    ∴$\angle AOD = \angle ODE$．
+
+    ∴$DE \parallel AB$．
+
+    [图]【小问2详解】
+
+    解：作$BH \perp DE$于H，如图2．
+
+    ∴$\angle BHD=\angle BHE=90^\circ$．
+
+    ∵$OD \perp DE$，$\angle AOD=90^{\circ}$，
+
+    ∴$\angle BOD=\angle ODH=90^{\circ}$．
+
+    ∴四边形$OBHD$是矩形．
+
+    ∵$OA=OB=OD=5$，
+
+    ∴四边形$OBHD$是正方形．
+
+    ∴$BH=OD=DH=5$．
+
+    ∵在$Rt\triangle ABC$中，$\sin A = \frac{3}{5}$，
+
+    ∴$\tan A = \frac{3}{4}$．
+
+    ∵$\angle ACB=90^\circ$，
+
+    ∴$\angle A-\angle ABC=90^{\circ}$．
+
+    ∵$\angle EBH+\angle ABC=90^{\circ}$，
+
+    ∴$\angle A=\angle EBH$．
+
+    ∴$\tan\angle EBH=\tan A=\frac{3}{4}$．
+
+    ∴$HE=BH\ \tan\angle EBH=5\times\frac{3}{4}=\frac{15}{4}$．
+
+    ∴$DE=HE+DH=\frac{35}{4}$．
+
+    '
   knowledge_points:
+  - 圆周角
   - 切线
-  module: circles
+  - 正方形
+  - 三角函数
+  - 锐角三角函数
+  module: triangles
   difficulty: 较难
   recommended_for:
   - L2
@@ -419,27 +832,93 @@ questions:
 - id: 25
   type: 解答
   score: 6
-  question: '如图1，利用喷水头喷出的水对小区草坪进行喷灌作业是养护草坪的一种方法，如图2，点O处由一个喷水头，距离喷水头8m的M处有一棵高度是2.3m的树，距离这棵树10m的N处有一面高2.2m的围墙，建立如图所示的平面直角坐标系，已知某次浇灌时，喷水头喷出的水柱的竖直高度y（单位：m）与水平距离x（单位：m）近似满足函数关系．
+  question: '如图1，利用喷水头喷出的水对小区草坪进行喷灌作业是养护草坪的一种方法，如图2，点O处由一个喷水头，距离喷水头8m的M处有一棵高度是2.3m的树，距离这棵树10m的N处有一面高2.2m的围墙，建立如图所示的平面直角坐标系，已知某次浇灌时，喷水头喷出的水柱的竖直高度y（单位：m）与水平距离x（单位：m）近似满足函数关系$y=ax^{2}+bx+c(a<0)$．
+
+    [图]
 
     （1）某次喷水浇灌时，测得x与y的几组数据如下：
+
+    x
+
+    0
+
+    2
+
+    6
+
+    10
+
+    12
+
+    14
+
+    16
+
+    y
+
+    0
+
+    0.88
+
+    2.16
+
+    2.80
+
+    2.88
+
+    2.80
+
+    2.56
 
     ①根据上述数据，求这些数据满足的函数关系；
 
     ②判断喷水头喷出的水柱能否越过这棵树，并说明理由．
 
-    （2）某次喷水浇灌时，已知喷水头喷出的水柱的竖直高度y与水平距离x近似满足函数关系，假设喷水头喷出的水柱能够越过这棵树，且不会浇到墙外，下面有四个关于b的不等式：
+    （2）某次喷水浇灌时，已知喷水头喷出的水柱的竖直高度y与水平距离x近似满足函数关系$y = -0.04x^2 + bx$，假设喷水头喷出的水柱能够越过这棵树，且不会浇到墙外，下面有四个关于b的不等式：
 
-    A；        B.；
+    A.$-0.04\times8^{2}+8h>2.3$；B.$-0.04\times18^{2}+18b\geq2.2$；
 
-    C.；        D.．
+    C.$-0.04\times18^{2}+18b<2.2$；D.$\frac{b}{2\times0.04}>13$．
 
-    其中正确不等式是__________．（填上所有正确的选项）'
-  answer: ''
-  solution: ''
+    其中正确的不等式是__________．（填上所有正确的选项）'
+  answer: （1）①$y=-0.02x^{2}+0.48x$；②喷水头喷出的水柱能够越过这棵树，理由见解析 （2）A，C
+  solution: '【小问1详解】
+
+    ①由题意可设所求的的函数关系式为$y=a(x-12)^{2}+2.88(a<0)$．
+
+    ∵点（0，0）在该函数的图像上，
+
+    ∴$144a+2.88=0$．
+
+    解得$a = -0.02$．
+
+    故求的的函数关系为$y=-0.02(x-12)^{2}+2.88$．
+
+    即$y=-0.02x^{2}+0.48x$．
+
+    ②喷水头喷出的水柱能够越过这棵树．理由如下：
+
+    ∵当$x=8$时的函数值与当$x = 16$时的函数值相等，
+
+    ∴当$x=8$时，$y = 2.56 > 2.3$．
+
+    ∴喷水头喷出的水柱能够越过这棵树．
+
+    【小问2详解】
+
+    根据题意，得到当$x=8$时，$y>2.3$，当$x = 18$，$y<2.2$，
+
+    ∵$y = -0.04x^2 + bx$
+
+    ∴$-0.04\times8^{2}+8h>2.3$，$-0.04\times18^{2}+18b<2.2$，
+
+    故选A，C，
+
+    故答案为：A，C．'
   knowledge_points:
   - 不等式
   - 坐标系
-  module: equationsAndInequalities
+  module: functions
   difficulty: 较难
   recommended_for:
   - L2
@@ -447,19 +926,74 @@ questions:
 - id: 26
   type: 解答
   score: 6
-  question: '已知抛物线的对称轴为直线．
+  question: '已知抛物线$y = ax^2 + bx + 4$的对称轴为直线$x = t$．
 
-    （1）若点在抛物线上，求t的值；
+    （1）若点$(2,4)$在抛物线上，求t的值；
 
-    （2）若点，在抛物线上，
+    （2）若点$(x_1,3)$，$(x_{2},6)$在抛物线上，
 
-    ①当时，求a的取值范围；
+    ①当$t = 1$时，求a的取值范围；
 
-    ②若，且，直接写出a的取值范围．'
-  answer: ''
-  solution: ''
+    ②若$1 \leq x_{1} < x_{2}$，且$x_{2}-x_{1} \quad 1$，直接写出a的取值范围．'
+  answer: （1）1（2）①$a \leq -2$或$a\ 1$；②$0<a\leq3$
+  solution: '【小问1详解】
+
+    ∵点$(2,4)$$[公式]$抛物线$y = ax^2 + bx + 4$上，
+
+    ∴$4a + 2b - 4 = 4$．
+
+    ∴$b = -2a$．
+
+    ∴$t = -\frac{b}{2a} = 1$．
+
+    【小问2详解】
+
+    ①当$t=1$时，$b = -2a$，所以$y=ax^{2}-2ax+4$．
+
+    ∵点$(x_1,3)$，$(x_{2},6)$在抛物线上，
+
+    ∴当$a > 0$时，有$a-2a+4\leq3$．
+
+    得$4-a\leq3$，得$a\ 1$．
+
+    当$a<0$时，有$a-2a+4=6$．
+
+    得$4-a\leq6$，得$a \leq -2$．
+
+    综上，a的取值范围是$a \leq -2$或$a\ 1$．
+
+    ②∵$1 < x_1 < x_2$且$3<6$，则$(x_1,3)$，$(x_{2},6)$在对称轴右侧，y随着x的增大而增大，
+
+    ∴$a > 0$．
+
+    又∵$6 = ax^{2} + bx + 4$，$3 = ax^{2} + bx + 4$
+
+    ∴$a(x_{2}-x_{1})(x_{2}+x_{1})+b(x_{2}-x_{1})=3$，
+
+    又∵$t = -\frac{b}{2a}$，
+
+    ∴$b = -2at$
+
+    ∴$a(x_3-x_1)(x_2-x_1)-2a(x_1-x_2)=3$，
+
+    ∴$ax_{2}-x_{1}\left[(x_{2}+x_{1})-2r\right]=3$，
+
+    ∵$x_{2}-x_{1} \quad 1$，
+
+    ∴$x_{2}\geqslant x_{1}+1$，
+
+    ∴$x_{3}+x_{1}-2t\geqslant 2x_{4}+1-2t$，
+
+    又∵$1 \leq x_{1} < x_{2}$，
+
+    ∴$2x_{1}+1\geqslant 2t+1$，
+
+    ∴$2x_{1}+1-2t\mid 1$
+
+    ∴$a(x_{2}-x_{1})(x_{2}+x_{1}-2)\geqs'
   knowledge_points:
-  - 综合
+  - 二次函数
+  - 不等式
   module: functions
   difficulty: 压轴
   recommended_for:
@@ -467,34 +1001,179 @@ questions:
 - id: 27
   type: 解答
   score: 7
-  question: '如图，直线，交于点O，点E是平分线一点，点M，N分别是射线，上的点，且．
+  question: '如图，直线AB，CD交于点O，点E是$\angle BOC$平分线的一点，点M，N分别是射线OA，OC上的点，且$ME = NE$．
 
-    （1）求证：；
+    [图]
 
-    （2）点F在线段上，点G在线段延长线上，连接，，若，依题意补全图形，用等式表示线段，，之间的数量关系，并证明．'
-  answer: ''
-  solution: ''
+    （1）求证：$\angle MEN = \angle AOC$；
+
+    （2）点F在线段NO上，点G在线段NO延长线上，连接EF，EG，若$EF = EG$，依题意补全图形，用等式表示线段$\mathrm{NF}$，OG，OM之间的数量关系，并证明．'
+  answer: （1）见解析（2）$OM=NF+OG$，理由见解析
+  solution: '【小问1详解】
+
+    （1）证明：作$EH \perp CD$，$EK \perp AB$，垂足分别是H，K，如图．
+
+    [图]
+
+    ∵OE是$\angle BOC$的平分线，
+
+    ∴$EH=EK$．
+
+    ∵$ME=NE$，
+
+    ∴$R_{1}EHN\cong R_{2}EKM$．
+
+    ∴$\angle ENH = \angle EMK$．
+
+    记ME与OC的交点为P，
+
+    ∴$\angle EPN=\angle OPM$．
+
+    ∴$\angle MEN = \angle AOC$．
+
+    【小问2详解】
+
+    （2）$OM=NF+OG$．
+
+    证明：在线段OM上截取$OG_{1}=OG$，连接EG1，如图．
+
+    [图]
+
+    ∵OE是$\angle BOC$的平分线，
+
+    ∴$\angle EON=\angle EOB$．
+
+    ∵$\angle MOF = \angle DOB$，
+
+    ∴$\angle EOM=\angle EOD$．
+
+    ∵$OE = OE$，
+
+    ∴$\triangle EOG\cong\triangle EOG$．
+
+    ∴$EG_{1}=EG$，$\angle EGQ = \angle EGF$．
+
+    ∵$EF=EG$，
+
+    ∴$EF = EG_{1}$，$\angle EFG = \angle EGF$．
+
+    ∴$\angle EFG=\angle EG_{1}O$．
+
+    ∴$\angle EPN = \angle EG_{1}M$．
+
+    ∵$\angle ENF = \angle EMG_1$．
+
+    ∴$\triangle ENF \cong \triangle EMG$．
+
+    ∴$NF=MG_{1}$．
+
+    ∵$OM=MG_{1}+OG_{1}$，
+
+    ∴$OM=NF+OG$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 全等三角形
+  module: triangles
   difficulty: 压轴
   recommended_for:
   - L3
 - id: 28
   type: 解答
   score: 7
-  question: '在平面直角坐标系中，给定图形和点，若图形上存在两个不同的点，满足．其中点为线段的中点，则称点是图形的相关点．
+  question: '在平面直角坐标系xOy中，给定图形W和点P，若图形W上存在两个不同的点S，T满足$ST=2PM$．其中点M为线段ST的中点，则称点P是图形W的相关点．
 
-    （1）已知点，
+    （1）已知点$A(2$，$0)$
 
-    ①在点中，线段的相关点是_______；
+    ①在点$P_{1}\left(-\frac{1}{2}, 0\right), P_{2}(1, \sqrt{3}), P_{3}\left(2,-\frac{\sqrt{3}}{2}\right), P_{4}(2,-1)$中，线段OA的相关点是_______；
 
-    ②若直线上存在线段的相关点，求的取值范围．
+    ②若直线$y=x+b$上存在线段OA的相关点，求b的取值范围．
 
-    （2）已知点，，线段的长度为，当线段在直线上运动时，如果总能在线段上找到一点，使得在轴上存在以为直径的圆的相关点，直接写出的取值范围．'
-  answer: ''
-  solution: ''
+    （2）已知点$Q(-3)$，$0)$，线段CD的长度为d，当线段CD在直线$x = -2$上运动时，如果总能在线段CD上找到一点K，使得在y轴上存在以QK为直径的圆的相关点，直接写出d的取值范围．'
+  answer: （1）①$P_{1}$，$P_3$；②$-\sqrt{2}-1$$\leq b \leq$$\sqrt{2}-1$ （2）d$\sqrt{46}$
+  solution: '【小问1详解】
+
+    解：①∵$A(2$，$0)$，
+
+    ∴$OA = 2$，
+
+    ∵P是线段OA的相关点，
+
+    ∵$ST=2PM$，
+
+    若点$S,T$分别与点$(0,0),A(2,0)$重合，
+
+    则中点为$(1,0)$，
+
+    ∴P在以OA为直径的圆上，
+
+    ∵$S,T$是线段OA上$[公式]$点，
+
+    ∴P点在以OA为直径的圆上及其内部，
+
+    [图]
+
+    故答案为：$P_{1}$，$P_3$．
+
+    ②由题意可得线段OA的所有相关点都在以OA为直径的圆上及其内部，
+
+    如图．设这个圆的圆心是H．
+
+    [图]
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$$A(2$，$0)$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$H(1)$，$0)$．
+
+    当直线$y=x+b$与$\odot H$相切，且$b>0$时，
+
+    将直线$y=x+b$与x轴的交点分别记为B，
+
+    则点B的坐标是$(-b)$，$0)$．
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$BH = 1 + b$．
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$$BH =$$\sqrt{2}$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fi'
   knowledge_points:
+  - 垂径定理
+  - 切线
+  - 勾股定理
   - 坐标系
   module: circles
   difficulty: 压轴

@@ -1,8 +1,8 @@
 # ============================================================
 # 2025年北京大兴区中考数学一模试卷 — 逐题分析
 # ============================================================
-# 数据来源：knowledge-original/精品解析：2025年北京市大兴区中考数学一模试卷（原卷版）.docx
-# 自动生成，部分数学公式可能显示不全（docx公式对象无法完整提取）
+# 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
+# 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
 # 满分：100分  时长：120分钟
 
 year: 2025
@@ -11,15 +11,25 @@ exam_type: 一模
 subject: 数学
 full_score: 100
 duration_minutes: 120
-total_questions: 37
+total_questions: 28
 structure: 8选择(16分) + 8填空(16分) + 12解答(68分)
 questions:
 - id: 1
   type: 选择
   score: 2
-  question: 本试卷共8页，共28道题．满分100分．考试时间120分钟．
-  answer: ''
-  solution: ''
+  question: '如图，直三棱柱的主视图是（）
+
+    [图]
+
+    A.[图]B.[图]
+
+    C.[图]D.$\triangle ABC$'
+  answer: C
+  solution: '解：图中直三棱柱的主视图为
+
+    [图]
+
+    故选：C．'
   knowledge_points:
   - 综合
   module: geometryComprehensive
@@ -32,86 +42,16 @@ questions:
 - id: 2
   type: 选择
   score: 2
-  question: 在试卷和答题卡上准确填写姓名、准考证号、考场号和座位号．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 3
-  type: 选择
-  score: 2
-  question: 试题答案一律填涂或书写在答题卡上，在试卷上作答无效．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 4
-  type: 选择
-  score: 2
-  question: 在答题卡上，选择题、作图题用2B铅笔作答，其他试题用黑色字迹签字笔作答．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 5
-  type: 选择
-  score: 2
-  question: 考试结束，将本试卷、答题卡和草稿纸一并交回．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 1
-  type: 选择
-  score: 2
-  question: "如图，直三棱柱的主视图是（   ）\nA. \tB.\nC. \tD."
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 2
-  type: 选择
-  score: 2
-  question: "2025年3月20日，中国首座自主设计建造的核电站——秦山核电站迎来了开工建设40周年．秦山核电站目前共有9台机组，累计安全发电超亿千瓦时，等效减排二氧化碳约8亿吨．将用科学记数法表示应为（   ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '2025年3月20日，中国首座自主设计建造的核电站——秦山核电站迎来了开工建设40周年．秦山核电站目前共有9台机组，累计安全发电超$8600$亿千瓦时，等效减排二氧化碳约8亿吨．将$8600$用科学记数法表示应为（）
+
+    A.$0.86\times10^{4}$B.$8.6\times10^{3}$C.$86\times10^{2}$D.$0.86\times10^{-3}$'
+  answer: B
+  solution: '解：将$8600$用科学记数法表示应为$8.6\times10^{3}$，
+
+    故选：B．'
   knowledge_points:
   - 科学记数法
+  - 绝对值
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -122,9 +62,27 @@ questions:
 - id: 3
   type: 选择
   score: 2
-  question: "如图，A，B两点在数轴上表示的实数分别是a，b，下列结论中正确的是（   ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '如图，A，B两点在数轴上表示的实数分别是a，b，下列结论中正确的是（）
+
+    [图]
+
+    A.$\left|b\right|>\left|a\right|$B.$ab > 0$C.$a+b<0$D.$a-b>0$'
+  answer: D
+  solution: '解：观察数轴可知：$-1 < b < 0$，$a>1$，$|b| < |a|$，
+
+    $\therefore ab < 0$，$a+b>0$，$a-b>0$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$A，B，C选项的结论错误，D选项的结论正确，
+
+    故选：D．'
   knowledge_points:
   - 综合
   module: numbersAndExpressions
@@ -137,12 +95,24 @@ questions:
 - id: 4
   type: 选择
   score: 2
-  question: "如图，将一副直角三角板平放在桌面上，点F在上，当时，的度数为（   ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '如图，将一副直角三角板平放在桌面上，点F在AC上，当$EF \parallel BC$时，$\angle AFD$的度数为（）
+
+    [图]
+
+    A.$105^\circ$B.$115^\circ$C.$125^\circ$D.$135^\circ$'
+  answer: A
+  solution: '解：∵$EF \parallel BC$，$\angle ACB=30^{\circ}$，
+
+    ∴$\angle EFC = \angle ACB = 30^\circ$，
+
+    ∵$\angle DFE=45^{\circ}$，
+
+    ∴$\angle AFP=180^{\circ}-\angle DFE-\angle EPC=105^{\circ}$，
+
+    故选：A'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 平行线
+  module: triangles
   difficulty: 基础
   recommended_for:
   - L0
@@ -152,11 +122,53 @@ questions:
 - id: 5
   type: 选择
   score: 2
-  question: "围棋起源于中国，有着悠久的历史和丰富的文化内涵．在一个不透明的袋子中放入除颜色外完全相同的3个围棋棋子，其中黑子2个，白子1个，从袋子中随机摸出2个棋子，则摸出1个黑子和1个白子的概率为（   ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '围棋起源于中国，有着悠久的历史和丰富的文化内涵．在一个不透明的袋子中放入除颜色外完全相同的3个围棋棋子，其中黑子2个，白子1个，从袋子中随机摸出2个棋子，则摸出1个黑子和1个白子的概率为（）
+
+    A.$\frac{1}{4}$B.$\frac{1}{3}$C.$\frac{1}{2}$D.$\frac{2}{3}$'
+  answer: D
+  solution: '解：列表如下：
+
+    黑子
+
+    黑子
+
+    白子
+
+    黑子
+
+    （黑子，黑子）
+
+    （黑子，白子）
+
+    黑子
+
+    （黑子，黑子）
+
+    （黑子，白子）
+
+    白子
+
+    （白子，黑子）
+
+    （白子，黑子）
+
+    共有6种等可能的结果，其中摸出1个黑子和1个白子的结果有4种，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$摸出1个黑子和1个白子的概率为$\frac{4}{6}=\frac{2}{3}$．
+
+    故选：D．'
   knowledge_points:
   - 概率
+  - 树状图
+  - 列表法
   module: statisticsAndProbability
   difficulty: 基础
   recommended_for:
@@ -167,12 +179,23 @@ questions:
 - id: 6
   type: 选择
   score: 2
-  question: "若关于x的一元二次方程有两个相等的实数根，则a的值为（  ）\nA. 2\tB. -2\tC. 4\tD. -4"
-  answer: ''
-  solution: ''
+  question: '若关于x的一元二次方程$x^{2}-4x+2a=0$有两个相等的实数根，则a的值为（
+
+    ）
+
+    A.2B.-2C.4D.-4'
+  answer: A
+  solution: '解：∵一元二次方程$x^{2}-4x+2a=0$有两个相等的实数根，
+
+    ∴$\Delta=(-4)^{2}-4\times1\times2a=0$，
+
+    解得：$a = 2$；
+
+    故选择：A.'
   knowledge_points:
   - 一元二次方程
-  module: numbersAndExpressions
+  - 根的判别式
+  module: equationsAndInequalities
   difficulty: 中档
   recommended_for:
   - L1
@@ -181,12 +204,32 @@ questions:
 - id: 7
   type: 选择
   score: 2
-  question: "如图，在中，，分别以点A，C为圆心，大于长为半径作弧，两弧相交于E，F两点，作直线交于点，连接，若，，则的长为（   ）\nA. 2\tB. \tC. 2.5\tD. 3"
-  answer: ''
-  solution: ''
+  question: '如图，在$Rt\triangle ABC$中，$\angle ABC = 90^\circ$，分别以点A，C为圆心，大于$\frac{1}{2}AC$长为半径作弧，两弧相交于E，F两点，作直线EF交AC于点O，连接BO，若$BC = 2$，$AB = 4$，则OB的长为（）
+
+    [图]
+
+    A.2B.$\sqrt{5}$C.2.5D.3'
+  answer: B
+  solution: '解：由题意可得EF是AC的垂直平分线，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$点O是AC中点，
+
+    根据勾股定理可得$AC = \sqrt{AB^{2} + BC^{2}} = 2\sqrt{5}$，
+
+    $\therefore OB=\frac{1}{2}AC=\sqrt{3}$，
+
+    故选：B．'
   knowledge_points:
-  - 综合
-  module: circles
+  - 勾股定理
+  module: triangles
   difficulty: 中档
   recommended_for:
   - L1
@@ -195,12 +238,62 @@ questions:
 - id: 8
   type: 选择
   score: 2
-  question: "已知边长为a的正方形，过点B的直线分别交的延长线于点D，E，设，，，，正方形的面积分别为，，．给出下面三个结论：\n①；②；③．\n上述结论中，所有正确结论的序号是（   ）\nA. ①②\tB. ①③\tC. ②③\tD. ①②③"
-  answer: ''
-  solution: ''
+  question: '已知边长为a的正方形$OABC$，过点B的直线分别交$OA, OC$的延长线于点D，E，设$AD = b$，$CE = c$，$\triangle ABD$，$\triangle BCE$，正方形$OABC$的面积分别为$S_1$，$S_{2}$，$S_3$．给出下面三个结论：
+
+    [图]
+
+    ①$a^{2}=bc$；②$b+c\quad 2a$；③$S_{1}+S_{2}\leq S_{3}$．
+
+    上述结论中，所有正确结论的序号是（）
+
+    A.①②B.①③C.②③D.①②③'
+  answer: A
+  solution: '解：$\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$四边形$OABC$为正方形，
+
+    $\angle DAB = \angle BCE = \angle O = 90^\circ$，
+
+    $\angle ODE+\angle OED=\angle ODE+\angle DBA$，即$\angle DBA = \angle BEC$，
+
+    $\triangle DBA \cong \triangle BEC$，
+
+    $\frac{DA}{BC}=\frac{AB}{CE}$，即$\frac{b}{a}=\frac{a}{c}$，
+
+    $\therefore a^{2}=bc$，故①正确；
+
+    $\left(b+c\right)^{2}-4bc=\left(b-c\right)^{2}0$，当且仅当$b = c$时，取等号，
+
+    $\ldots(b+c)^{2}-4a^{2} \quad 0$，
+
+    $\therefore(b+c)^{2}=4a^{2}$，
+
+    $\because a,b,c>0$，
+
+    $\ldots b + c \quad 2a$，故②正确；
+
+    $S_{1}+S_{2}=\frac{1}{2}ab+\frac{1}{2}ac=\frac{1}{2}a(b+c)$，
+
+    $\because b+c=2a$，
+
+    $\therefore S_{1}+S_{2}=a^{2}$，即$S_1 + S_2 \quad S_3$，
+
+    故③错误；
+
+    则正确结论为①②，
+
+    故选：A．'
   knowledge_points:
+  - 相似三角形
   - 正方形
-  module: quadrilaterals
+  - 不等式
+  module: triangles
   difficulty: 较难
   recommended_for:
   - L2
@@ -208,12 +301,19 @@ questions:
 - id: 9
   type: 填空
   score: 2
-  question: 分解因式：__________．
-  answer: ''
-  solution: ''
+  question: 分解因式：$ax^{2}-a=$__________．
+  answer: $a(x+1)(x-1)$
+  solution: '解：$ax^{2}-a$
+
+    $=a\left(x^{2}-1\right)$
+
+    $-4(x+1)(x-1)$
+
+    故答案为：$a(x+1)(x-1)$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 因式分解
+  - 方差
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -223,9 +323,13 @@ questions:
 - id: 10
   type: 填空
   score: 2
-  question: 若在实数范围内有意义，则实数的取值范围是__________．
-  answer: ''
-  solution: ''
+  question: 若$\sqrt{x-6}$在实数范围内有意义，则实数x的取值范围是__________．
+  answer: $x\ 6$
+  solution: '解：根据题意，得$x-6\quad0$，
+
+    解得：$x\ 6$．
+
+    故答案为：$x\ 6$．'
   knowledge_points:
   - 综合
   module: numbersAndExpressions
@@ -238,12 +342,22 @@ questions:
 - id: 11
   type: 填空
   score: 2
-  question: 方程的解为__________．
-  answer: ''
-  solution: ''
+  question: 方程$\frac{1}{x}-\frac{3}{x+2}=0$的解为__________．
+  answer: $x = 1$
+  solution: '解：$\frac{1}{x}-\frac{3}{x+2}=0$
+
+    去分母得：$x+2-3x=0$，
+
+    解得：$x = 1$，
+
+    检验：当$x = 1$时，$x(x+2)=0$，
+
+    故原分式方程的解为$x = 1$，
+
+    故答案为：$x = 1$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 分式方程
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -253,9 +367,15 @@ questions:
 - id: 12
   type: 填空
   score: 2
-  question: 在平面直角坐标系中，点和点都在反比例函数的图象上，则__________．
-  answer: ''
-  solution: ''
+  question: 在平面直角坐标系xOy中，点$A(m,3)$和点$B(2,n)$都在反比例函数$y=\frac{k}{x}(k\neq0)$的图象上，则$\frac{n}{m} =$__________．
+  answer: $\frac{3}{2}$##$1.5$
+  solution: '解：把点$A(m,3)$和点$B(2,n)$代入$y = \frac{k}{x}$得，
+
+    $m=\frac{k}{3},n=\frac{k}{2}$，
+
+    ∴$\frac{n}{m}=\frac{k}{k-2}-\frac{3}{2}-\frac{k}{3}$，
+
+    故答案$[公式]$：$\frac{3}{2}$．'
   knowledge_points:
   - 反比例函数
   - 坐标系
@@ -269,12 +389,38 @@ questions:
 - id: 13
   type: 填空
   score: 2
-  question: 将一个量角器与一把无刻度透明直尺如图所示摆放，直尺的边与量角器分别交于点A，B，C，D，点C，点D分别对应量角器的刻度为120，60，若量角器的直径的长为，则点O到的距离为__________ ．
-  answer: ''
-  solution: ''
+  question: '将一个量角器与一把无刻度透明直尺如图所示摆放，直尺的边与量角器分别交于点A，B，C，D，点C，点D分别对应量角器的刻度为120，60，若量角器的直径EF的长为$8cm$，则点O到CD的距离为__________cm．
+
+    [图]'
+  answer: $2\sqrt{3}$
+  solution: '解：如图：连接$OC,OD$，过点O作$OH \perp CD$于点H，
+
+    [图]
+
+    ∵点C，点D分别对应量角器的刻度为120，60，
+
+    ∴$\angle DOC = 60^\circ$，
+
+    ∵$OC = OD$，
+
+    ∴$\triangle OCD$为等边三角形，
+
+    ∵直径EF的长为$8cm$，
+
+    ∴$CD=OC=OD=4\mathrm{cm}$，
+
+    ∵$OH \perp CD$，
+
+    ∴$CH=HD=\frac{1}{2}CD=2\mathrm{cm}$，
+
+    ∴$OH = \sqrt{ON^{2} - DH^{2}} = \sqrt{4^{2} - 2^{2}} = 2\sqrt{3} (cm)$，
+
+    ∴点O到CD的距离为$2\sqrt{3}\mathrm{cm}$，
+
+    故答案为：$2\sqrt{3}$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 勾股定理
+  module: triangles
   difficulty: 中档
   recommended_for:
   - L1
@@ -283,9 +429,13 @@ questions:
 - id: 14
   type: 填空
   score: 2
-  question: 2025年六五环境日的主题为“美丽中国我先行”，旨在动员全社会做生态文明的积极传播者和模范践行者，投身美丽中国建设．为了解所在小区居民各类生活垃圾的投放情况，小丽同学随机调查了该小区30户家庭某一天各类生活垃圾的投放量，统计得出这30户家庭各类生活垃圾的投放总量是100千克，各类生活垃圾投放量分布情况的扇形统计图如图所示，估计该小区300户家庭这一天投放的可回收物共__________千克．
-  answer: ''
-  solution: ''
+  question: '2025年六五环境日的主题为“美丽中国我先行”，旨在动员全社会做生态文明的积极传播者和模范践行者，投身美丽中国建设．为了解所在小区居民各类生活垃圾的投放情况，小丽同学随机调查了该小区30户家庭某一天各类生活垃圾的投放量，统计得出这30户家庭各类生活垃圾的投放总量是100千克，各类生活垃圾投放量分布情况的扇形统计图如图所示，估计该小区300户家庭这一天投放的可回收物共__________千克．
+
+    [图]'
+  answer: '260'
+  solution: '解：估计该小区300户居民这一天投放的可回收垃圾共约$\frac{300}{30}\times100\times26\%=260$（千克），
+
+    故答案为：260．'
   knowledge_points:
   - 统计
   - 扇形统计图
@@ -298,12 +448,58 @@ questions:
 - id: 15
   type: 填空
   score: 2
-  question: 如图，在中，，．当时，正方形恰好有三个顶点落在的边上，则正方形的面积为__________．
-  answer: ''
-  solution: ''
+  question: '如图，在$Rt\triangle ABC$中，$\angle ACB=90^\circ$，$AC = BC = 5$．当$CD = 2CE$时，正方形$DEFG$恰好有三个顶点落在$Rt\triangle ABC$的边上，则正方形$DEFG$的面积为__________．
+
+    [图]'
+  answer: '5'
+  solution: '解：过点G作$GH \perp AC$，则：$\angle AHG = \angle GHD = 90^\circ$，
+
+    [图]
+
+    ∴$\angle DGH + \angle HDG = 90^\circ$，
+
+    ∵正方形$DEFG$，
+
+    ∴$DG = DE, \angle GDE = 90^\circ$，
+
+    ∴$\angle HDG + \angle CDE = 90^\circ$，
+
+    ∴$\angle HGD = \angle CDE$，
+
+    ∵$\angle C+\angle GHD=90^\circ$，
+
+    ∴$\triangle GHD \cong \triangle DCE$，
+
+    ∵$\angle ACB=90^\circ$，$AC = BC = 5$，
+
+    ∴$\angle A=\angle B=45^{\circ}$，
+
+    ∴$\angle AGH = 45^\circ = \angle A$，
+
+    ∴$AH = HG$，
+
+    设$CE = x$，则：$CD = 2CE = 2x$，
+
+    ∴$HD=CE=x$，$GH = CD = 2x$，
+
+    ∴$AH=5-x-2x=5-3x$，$GH = CD = 2x$，
+
+    ∴$5-3x=2x$，
+
+    解得：$x = 1$，
+
+    ∴$CE = 1, CD = 2$，
+
+    ∴$DE = \sqrt{1^{2} + 2^{2}} = \sqrt{5}$，
+
+    ∴正方形$DEFG$的面积为5，
+
+    故答案为：5．'
   knowledge_points:
+  - 全等三角形
+  - 勾股定理
   - 正方形
-  module: functions
+  module: triangles
   difficulty: 中档
   recommended_for:
   - L1
@@ -316,11 +512,37 @@ questions:
 
     （1）写出第二次操作后记录的有序数组_________；
 
-    （2）经过若干次这样的操作后，小瑞同学发现记录的有序数组不再发生变化，这时的牌有_________堆．
+    （2）经过若干次这样的操作后，小瑞同学发现记录的有序数组不再发生变化，这时的牌有_________堆．'
+  answer: ①.（4，4，6，7，9，11，14）②.10
+  solution: '解：由题知，
+
+    第一次操作后的有序数组为（5，5，8，10，12，15）；
+
+    第二次操作后的有序数组为（4，4，6，7，9，11，14）；
+
+    第三次操作后的有序数组为（3，3，5，6，7，8，10，13）；
+
+    第四次操作后的有序数组为（2，2，4，5，6，7，8，9，12）；
+
+    第五次操作后的有序数组为（1，1，3，4，5，6，7，8，9，11）；
+
+    第六次操作后的有序数组为（2，3，4，5，6，7，8，10，10）；
+
+    $\cdots$，
+
+    （2，3，4，5，6，7，8，9，11）；
+
+    （1，2，3，4，5，6，7，8，9，10）；
+
+    （1，2，3，4，5，6，7，8，9，10）；
+
+    $\cdots$，
+
+    所以当有序数组不再变化时，这时牌有10堆．
+
+    故答案为：（4，4，6，7，9，11，14）；10．
 
     解答应写出文字说明、演算步骤或证明过程．'
-  answer: ''
-  solution: ''
   knowledge_points:
   - 综合
   module: geometryComprehensive
@@ -331,12 +553,19 @@ questions:
 - id: 17
   type: 解答
   score: 5
-  question: （第17题，详见原卷）
-  answer: ''
-  solution: ''
+  question: 计算：$(\pi-3)^{0}+\sqrt{12}+4\sin60^{\circ}+|-\sqrt{3}|$．
+  answer: $1+5\sqrt{3}$
+  solution: '解：$(\pi-3)^{0}+\sqrt{12}+4\sin60^{\circ}+|-\sqrt{3}|$
+
+    $1+2\sqrt{3}+4\times\frac{\sqrt{3}}{2}+\sqrt{3}$
+
+    $1+2\sqrt{3}+2\sqrt{3}+\sqrt{3}$
+
+    $=1+5\sqrt{3}$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 三角函数
+  - 绝对值
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -346,9 +575,21 @@ questions:
 - id: 18
   type: 解答
   score: 5
-  question: 解不等式组：
-  answer: ''
-  solution: ''
+  question: '解不等式组：$\begin{cases}
+
+    3(x+1)<2x+6,\\
+
+    \dfrac{3x-4}{5}<x.
+
+    \end{cases}$'
+  answer: $-2 < x < 3$
+  solution: '解：$\left\{\begin{array}{l}3(x+1)<2x+6(1)\\ \dfrac{3x-4}{5}<x②\end{array}\right.$
+
+    解不等式①得：$x<3$，
+
+    解不等式②得：$x > -2$，
+
+    故不等式组的解集为：$-2 < x < 3$．'
   knowledge_points:
   - 不等式
   - 不等式组
@@ -362,12 +603,28 @@ questions:
 - id: 19
   type: 解答
   score: 5
-  question: 已知，求代数式的值．
-  answer: ''
-  solution: ''
+  question: 已知$a^{2}-2a-5=0$，求代数式$\frac{2}{a-1}+\frac{a+5}{a^{2}-2a+1}+\frac{1}{a+1}$的值．
+  answer: $\frac{3}{a^{2}-2a+1}$；$\frac{1}{2}$
+  solution: '解：∵$a^{2}-2a-5=0$，
+
+    ∴$a^2-2a=5$，
+
+    ∴$\frac{2}{a-1}+\frac{a+5}{a^{2}-2a+1}+\frac{1}{a+1}$
+
+    $=\left(\frac{2}{a-1}+\frac{a+5}{(a-1)^{2}}\right)\cdot\frac{1}{a+1}$
+
+    $=\frac{2(a-1)+a+5}{(a-1)^{2}}-\frac{1}{a+1}$
+
+    $\frac{3(a+1)}{(a-1)^2} \cdot \frac{1}{a+1}$
+
+    $\frac{3}{a^{2}-2a+1}$，
+
+    ∵$a^2-2a=5$，
+
+    ∴原式$\frac{3}{5+1}=\frac{1}{2}$．'
   knowledge_points:
   - 综合
-  module: geometryComprehensive
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -377,17 +634,76 @@ questions:
 - id: 20
   type: 解答
   score: 5
-  question: '如图，在菱形中，对角线相交于点O，延长至点E，使，连接交于点F，M是中点，连接．
+  question: '如图，在菱形$ABCD$中，对角线$AC, BD$相交于点O，延长BC至点E，使$CE=\frac{1}{2}BC$，连接OE交CD于点F，M是CD中点，连接$OM, EM$．
 
-    （1）求证：四边形是平行四边形；
+    [图]
 
-    （2）若，，求的面积．'
-  answer: ''
-  solution: ''
+    （1）求证：四边形OCM是平行四边形；
+
+    （2）若$AB = 5$，$\tan \angle OBC = \frac{1}{2}$，求$\triangle OCE$的面积．'
+  answer: （1）见解析（2）$\frac{5}{2}$
+  solution: '【小问1详解】
+
+    证明：∵四边形$ABCD$是菱形，
+
+    ∴$BC = CD$，$OD = OB$，$AC \perp BD$，
+
+    ∵$OD = OB$，
+
+    ∴O为BD$[公式]$中点，
+
+    又M是CD中点，
+
+    ∴OM为$\triangle DBC$中位线，
+
+    ∴$OM \parallel CE$；
+
+    在$Rt\triangle DOC$中，$OM = MC = DM = \frac{1}{2}CD$，
+
+    ∴$OM = \frac{1}{2}BC$,
+
+    ∵$CE=\frac{1}{2}BC$，
+
+    ∴$CE = OM$，
+
+    ∴四边形OCM是平行四边形；
+
+    【小问2详解】
+
+    解：∵四边形$ABCD$是菱形，
+
+    ∴$BC = AB = 5$，
+
+    ∴$CE = \frac{1}{2}BC = \frac{5}{2}$，
+
+    ∵$\tan \angle OBC = \frac{1}{2}$，
+
+    ∴$\frac{OC}{OB}=\frac{1}{2}$，
+
+    设$OC = x$，则$OB = 2x$，
+
+    在$Rt\triangle BOC$中，$OB^{2}+OC^{2}=BC^{2}$，
+
+    ∴$(2x)^{2}+x^{2}=5^{2}$，
+
+    解得，$x = \sqrt{5}$（负值舍去），
+
+    ∴$OC=\sqrt{5},OB=2\sqrt{5}$，
+
+    设$\triangle BOC$斜边上的高为h，则有：
+
+    $\frac{1}{2} \cdot OC \cdot h = BC \cdot h$，
+
+    ∴$\frac{1}{2} \times 3\sqrt{5} \times \sqrt{5} = \frac{1}{2} \times 5 \times h$，
+
+    ∴$h = 2$，
+
+    ∴$S_{\triangle KCE}=\frac{1}{2}CE\cdot h=\frac{1}{2}\times\frac{5}{2}\times 2=\frac{'
   knowledge_points:
+  - 勾股定理
   - 平行四边形
   - 菱形
-  module: quadrilaterals
+  module: triangles
   difficulty: 中档
   recommended_for:
   - L1
@@ -398,12 +714,18 @@ questions:
   score: 5
   question: '列方程解应用题
 
-    小华一家驾驶某款新能源汽车外出游玩，去时选择普通公路，返回时选择高速公路．走普通公路比高速公路的路程多60公里，这款新能源汽车在普通公路上行驶平均每百公里耗电20度，在高速公路上行驶比普通公路上行驶平均每百公里耗电增加，该车选择的充电站充电综合电费均为元/度．最终发现走普通公路的电费比高速公路的电费少15元，求返回时所走高速公路的路程．'
-  answer: ''
-  solution: ''
+    小华一家驾驶某款新能源汽车外出游玩，去时选择普通公路，返回时选择高速公路．走普通公路比高速公路的路程多60公里，这款新能源汽车在普通公路上行驶平均每百公里耗电20度，在高速公路上行驶比普通公路上行驶平均每百公里耗电增加$20\%$，该车选择的充电站充电综合电费均为$1.5$元/度．最终发现走普通公路的电费比高速公路的电费少15元，求返回时所走高速公路的路程．'
+  answer: 所走高速公路的路程为550公里
+  solution: '解：设所走高速公路的路程为x公里，则普通公路的路程为$(x+60)$公里，
+
+    根据题意得：$\frac{x}{100}\times20\times(1+20\%)\times1.5-\frac{x+60}{100}\times20\times1.5=15$，
+
+    解得$x=550$，
+
+    ∴所走高速公路的路程为550公里．'
   knowledge_points:
   - 综合
-  module: geometryComprehensive
+  module: equationsAndInequalities
   difficulty: 中档
   recommended_for:
   - L1
@@ -412,17 +734,38 @@ questions:
 - id: 22
   type: 解答
   score: 5
-  question: '在平面直角坐标系中，将函数的图象向上平移2个单位得到的直线经过点．
+  question: '在平面直角坐标系xOy中，将函数$y = kx (k \neq 0)$的图象向上平移2个单位得到的直线$y=kx+b(k\neq0)$经过点$A(1,3)$．
 
     （1）求k与b的值；
 
-    （2）当时，对于x的每一个值，函数的值大于函数的值，直接写出的取值范围．'
-  answer: ''
-  solution: ''
+    （2）当$x>1$时，对于x的每一个值，函数$y = kx + 1 (k \neq 0)$的值大于函数$y=kx+b(k\neq0)$的值，直接写出n的取值范围．'
+  answer: （1）$k = 1, b = 2$ （2）$n^{2}$
+  solution: '【小问1详解】
+
+    解：∵将函数$y = kx (k \neq 0)$的图象向上平移2个单位得到的直线$y=kx+b(k\neq0)$，
+
+    ∴$b = 2$，
+
+    ∵一次函数$y=kx+2$的图象经过点$A(1,3)$，
+
+    ∴$k+2=3$，
+
+    ∴$k = 1$．
+
+    【小问2详解】
+
+    解：把$x = 1$代入$y=x+2$，得$y=3$，
+
+    把点$(1,3)$代入$y=nx+1$，得$n=2$．
+
+    ∵当$x>1$时，对于x的每一个值，函数$y = kx + 1 (k \neq 0)$的值大于函数$y=x+2$的值，
+
+    ∴n的取值范围是$n^{2}$．'
   knowledge_points:
+  - 一次函数
   - 平移
   - 坐标系
-  module: geometryComprehensive
+  module: functions
   difficulty: 中档
   recommended_for:
   - L1
@@ -431,110 +774,193 @@ questions:
 - id: 23
   type: 解答
   score: 6
-  question: '为提高全民体重管理意识和技能，普及健康生活方式，建立体重管理支持性环境，国家卫生健康委、教育部、民政部等16个部门联合开展“体重管理年”活动．活动时间为2024—2026年．
-
-    体重指数（BMI）是衡量人体胖瘦程度的常用指标．计算方法为BMI＝体重÷身高（体重单位：千克身高单位：米）．我国规定18岁以上的成年人体重分类标准如图．
-
-    某工厂为了解员工的体重指数（BMI）情况，进行了抽样调查，过程如下：
-
-    a．收集数据
-
-    从该工厂男、女职工中各随机抽取30名职工，计算每名职工的BMI值后，按从小到大排序如下：
-
-    男职工  17.3  17.6  17.9  18.7  19.0  19.6  20.2  20.6  20.7  20.8'
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 较难
-  recommended_for:
-  - L2
-  - L3
-- id: 21
-  type: 解答
-  score: 5
-  question: 3  21.5  21.6  21.8  22.1  22.3  22.4  23.1  23.2  23.4
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 中档
-  recommended_for:
-  - L1
-  - L2
-  - L3
-- id: 23
-  type: 解答
-  score: 6
-  question: '5  23.5  23.6  23.7  24.0  24.1  25.1  27.7  29.3  30.6
-
-    女职工  15.4  16.6  16.8  17.4  17.6  18.5  18.6  18.7  19.0  19.1'
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 较难
-  recommended_for:
-  - L2
-  - L3
-- id: 20
-  type: 解答
-  score: 5
-  question: 1  20.2  20.3  20.5  20.6  20.8  21.5  21.5  21.6  21.8
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 中档
-  recommended_for:
-  - L1
-  - L2
-  - L3
-- id: 22
-  type: 解答
-  score: 5
-  question: '8  23.3  23.6  24.4  25.2  25.7  26.1  28.1  28.7  30.8
+  question: '3  23.6  24.4  25.2  25.7  26.1  28.1  28.7  30.8
 
     b．整理数据
 
+    BMI（m）
+
+    人数
+
+    组别
+
+    $m<18.5$
+
+    $18.5\,\text{cm}<24.0$
+
+    $24.0\,\mathrm{sm}<28.0$
+
+    $m\ 28.0$
+
+    男职工
+
+    3
+
+    21
+
+    4
+
+    2
+
+    女职工
+
+    5
+
+    k
+
+    4
+
+    3
+
     c．两组样本数据的平均数、中位数、众数如下表：
+
+    组别
+
+    平均数
+
+    中位数
+
+    众数
+
+    男职工
+
+    22.34
+
+    22.2
+
+    n
+
+    女职工
+
+    21.51
+
+    p
+
+    21.5
 
     根据以上信息，回答下列问题：
 
-    （1）_________，_________，_________；
+    （1）$k =$_________，$n =$_________，$p =$_________；
 
-    （2）估计该工厂工人体重正常的人数占总人数的百分比为_________；
+    （2）估计该工厂工人体重正常$[公式]$人数占总人数的百分比为_________；
 
     （3）请对该工厂工人提出一条合理的体重管理建议_________．'
-  answer: ''
-  solution: ''
+  answer: （1）$18$，$23.5$，$20.7$ （2）$65\%$ （3）见解析
+  solution: '【小问1详解】
+
+    解：由题意可得，$30-5-4-3=18$（名），即$k = 18$，
+
+    30名男职工的BMI值中出现次数最多的是23.5，共出现2次，故$n = 23.5$，
+
+    30名女职工的BMI值从小到大排列后第15个和16个分别是20.6，20.8，
+
+    ∴$p=\frac{20.6+20.8}{2}=20.7$，
+
+    故答案为：$18$，$23.5$，$20.7$
+
+    【小问2详解】
+
+    由题意可得，$\frac{21+18}{30+30}\times100\%=65\%$
+
+    即估计该工厂工人体重正常的人数占总人数的百分比为$65\%$；
+
+    【小问3详解】
+
+    建议：对工厂职工进行合理、健康的饮食习惯的培养，并加强体育锻炼．'
   knowledge_points:
   - 平均数
   - 中位数
   - 众数
   module: statisticsAndProbability
-  difficulty: 中档
+  difficulty: 较难
   recommended_for:
-  - L1
   - L2
   - L3
 - id: 24
   type: 解答
   score: 6
-  question: '如图，内接于，，过点作的切线交延长线于点，是的直径．
+  question: '如图，$V_{ABC}$内接于$\odot\odot$，$\angle ABC = 45^\circ$，过点A作$\odot\odot$的切线交BC延长线于点D，CE是$\odot\odot$的直径．
 
-    （1）求证：；
+    [图]
 
-    （2）若，，求的长．'
-  answer: ''
-  solution: ''
+    （1）求证：$CE\parallel AD$；
+
+    （2）若$BC = \frac{32}{5}$，$\cos D = \frac{4}{5}$，求AD的长．'
+  answer: （1）见解析（2）$\frac{28}{3}$
+  solution: '【小问1详解】
+
+    证明：连接AO并延长，交$\odot\odot$于点F，连接CF，如图，
+
+    [图]
+
+    则AF为$\odot\odot$的直径，
+
+    ∵AD为$\odot\odot$的切线，
+
+    ∴$OA \perp AD$，
+
+    ∴$\angle FAD = 90^\circ$，
+
+    ∵$\angle AFC = \angle ABC, \angle ABC = 45^\circ$，
+
+    ∴$\angle AFC = 45^\circ$．
+
+    ∵$OA = OF$，
+
+    ∴$\angle OFC=\angle OCF=45^{\circ}$，
+
+    ∴$\angle FOC=90^\circ$，
+
+    ∴$\angle FOC = \angle FAD$，
+
+    ∴$CE\parallel AD$；
+
+    【小问2详解】
+
+    解：连接$OA,\ EB$，过点C作$CF \perp AD$于点F，如图，
+
+    [图]
+
+    ∵$CE\parallel AD$，
+
+    ∴$\angle ECB=\angle D$，
+
+    ∴$\cos\angle ECB=\cos\angle D=\frac{4}{5}$．
+
+    ∵CE是$\odot\odot$的直径，
+
+    ∴$\angle EBC = 90^\circ$，
+
+    ∴$\cos\angle ECB=\frac{BC}{CE}=\frac{4}{5}$，
+
+    ∵$BC = \frac{32}{5}$，
+
+    ∴$\frac{32}{5CE}=\frac{4}{5}$，
+
+    ∴$CE = 8$，
+
+    ∴$OC = OA = OE = 4$，
+
+    ∵$\angle AOC=2\angle ABC=90^{\circ},OA\perp AD,CF\perp AD$，
+
+    ∴四边形$O AFC$为矩形，
+
+    ∵$OA = OC$，
+
+    ∴四边形$O AFC$为正方形，
+
+    ∴$AF = FC = OA = 4$，
+
+    ∵$\cos D = \frac{4}{5}$，$\cos'
   knowledge_points:
+  - 平行线
+  - 圆周角
   - 切线
-  module: circles
+  - 相似三角形
+  - 勾股定理
+  - 矩形
+  - 正方形
+  module: triangles
   difficulty: 较难
   recommended_for:
   - L2
@@ -544,27 +970,99 @@ questions:
   score: 6
   question: '【思维激活】
 
-    在一次综合实践活动中，数学兴趣小组提出一个问题：如果一个矩形面积为定值，周长是否存在最大值或最小值？
+    在一次综合实践活动中，数学兴趣小组提出一个问题：如果一个矩形的面积为定值，周长是否存在最大值或最小值？
 
     【思维引导】
 
-    由矩形面积为定值的条件联想到学过的反比例函数相关内容，为此先在平面直角坐标系中画出反比例函数的图象（如图1）．
+    由矩形面积为定值的条件联想到学过的反比例函数相关内容，为此先在平面直角坐标系中画出反比例函数$y=\frac{6}{x}(x>0)$的图象（如图1）．
 
-    如图1，在该反比例函数图象上任取一点A，作出矩形．为探究它的周长的最大值或最小值情况，点A取不同位置时，分别测量和的长，得到部分数据如下：
+    [图]
+
+    如图1，在该反比例函数图象上任取一点A，作出矩形$ABOC$．为探究它的周长的最大值或最小值情况，点A取不同位置时，分别测量AB和AC的长，得到部分数据如下：
+
+    AB
+
+    …
+
+    1.00
+
+    1.50
+
+    2.00
+
+    3.00
+
+    3.50
+
+    4.00
+
+    5.00
+
+    6.00
+
+    …
+
+    $AB + AC$
+
+    …
+
+    7.00
+
+    5.50
+
+    5.00
+
+    5.00
+
+    5.21
+
+    5.50
+
+    6.20
+
+    7.00
+
+    …
 
     【思维呈现】
 
-    （1）矩形的面积为__________；
+    （1）矩形$ABOC$的面积为__________；
 
-    （2）根据上面表格中的数据，以的长为横坐标，的和为纵坐标，在图2的平面直角坐标系中描出表中各组数值所对应的点，并用平滑的曲线连接；
+    （2）根据上面表格中$[公式]$数据，以AB的长为横坐标，$AB + AC$的和为纵坐标，在图2的平面直角坐标系中描出表中各组数值所对应的点$(AB,AB+AC)$，并用平滑的曲线连接；
 
-    （3）根据以上信息，判断存在最__________值（填“大”或“小”），此时矩形的周长约为__________（结果保留小数点后一位）；
+    （3）根据以上信息，判断$AB + AC$存在最__________值（填“大”或“小”），此时矩形$ABOC$的周长$C_1$约为__________（结果保留小数点后一位）；
 
     【思维拓展】
 
-    （4）若一个面积为6的圆的周长记为，则__________（填“”，“”，“”）'
-  answer: ''
-  solution: ''
+    （4）若一个面积为6的圆的周长记为$C_2$，则$C_1$__________$C_2$（填“$\gt$”，“$\gt$”，“$=$”）'
+  answer: （1）6（2）见详解（3）小，$10.0$．（4）$\gt$
+  solution: '解：（1）∵在该反比例函数$y=\frac{6}{x}(x>0)$图象上任取一点A，作出矩形$ABOC$，
+
+    ∴矩形$ABOC$的面积为∶$k = 6$．
+
+    故答案为：6．
+
+    （2）以AB的长为横坐标，$AB + AC$的和为纵坐标的函数图如下：
+
+    [图]
+
+    （3）图2中描出的点所形成的图象趋势可以发现随着AB长度的变化，$AB + AC$的值先减小后增大，所以$AB + AC$存在最小值．从表格数据中可以看出$AB + AC$的最小值约为$5.00$．因为矩形$ABOC$的周长$C - 2(AB + AC)$，
+
+    当$AB + AC$约为$5.00$时，矩形$ABOC$的周长C约为$2\times5.00=10.0$，
+
+    故答案为：小，$10.0$．
+
+    （4）面积为6的圆的半径为r，
+
+    则$\pi r^{2}=6$，则$r = \sqrt{\frac{6}{\pi}}$
+
+    则$C_{1}=2\pi r=2\pi \sqrt{\frac{6}{\pi }}=2\sqrt{6\pi }=2\times \sqrt{6}\times 3.14=2\times \sqrt{18.84}\approx 8.7$，
+
+    ∵$8.7<10.0$，
+
+    ∴$C_{1}>C_{2}$，
+
+    故答案为：$\gt$'
   knowledge_points:
   - 反比例函数
   - 矩形
@@ -577,14 +1075,37 @@ questions:
 - id: 26
   type: 解答
   score: 6
-  question: '平面直角坐标系中，已知抛物线．
+  question: '在平面直角坐标系xOy中，已知抛物线$y = x^2 - 2mx + m$．
 
-    （1）当时，求该抛物线与轴交点坐标；
+    （1）当$m = 1$时，求该抛物线与y轴交点坐标；
 
-    （2）已知，为该抛物线上的两点，若对于，，都有，求的取值范围．'
-  answer: ''
-  solution: ''
+    （2）已知$P(x_1,y_1)$，$Q(x_2,y_2)$为该抛物线上的两点，若对于$x_{1}=m+1$，$x_{2}=2-m$，都有$y_{1}<m<y_{2}$，求m的取值范围．'
+  answer: （1）$(0,1)$ （2）$m > 2$或$m<-1$
+  solution: '【小问1详解】
+
+    解：当$m = 1$时，则抛物线为$y=x^{2}-2x+1$．
+
+    令$x = 0$，则$\psi=x^{2}-2x+1=1$，
+
+    ∴该抛物线与y轴交点坐标为$(0,1)$；
+
+    【小问2详解】
+
+    解：∵抛物线$y = x^2 - 2mx + m$，对于$x_{1}=m+1$，$x_{2}=2-m$，都有$y_{1}<m<y_{2}$，
+
+    ∴$y_1 - m < 0$且$y_{2}-m>0$，
+
+    则$(m+1)^{2}-2m(m+1)+m-m<0$，即$(m+1)(m+1-2m)<0$，$(m+1)(m-1)>0$，
+
+    解得：$m > 1$或$m<-1$；
+
+    $(2-m)^{2}-2m(2-m)+m+m>0$，即$(m-2)(m-2+2m)>0$，$(m-2)(3m-2)>0$，
+
+    解得：$m > 2$或$m<\frac{2}{3}$；
+
+    综上，$m > 2$或$m<-1$．'
   knowledge_points:
+  - 二次函数
   - 坐标系
   module: functions
   difficulty: 压轴
@@ -593,36 +1114,146 @@ questions:
 - id: 27
   type: 解答
   score: 7
-  question: '已知正方形，点E是边上一点（不与点B，C重合），将线段绕点B顺时针旋转得到线段，作射线，将射线绕点A逆时针旋转得到射线，过点D作交于点M，连接．
+  question: '已知正方形$ABCD$，点E是BC边上一点（不与点B，C重合），将线段BE绕点B顺时针旋转$\alpha(45^\circ<\alpha<90^\circ)$得到线段BF，作射线AF，将射线AF绕点A逆时针旋转$45^\circ$得到射线AH，过点D作$DM \parallel BF$交AF于点M，连接MF．
 
-    （1）求的大小（用含的式子表示）；
+    [图]
 
-    （2）用等式表示线段的数量关系，并证明．'
-  answer: ''
-  solution: ''
+    （1）求$\angle MDC$的大小（用含$\alpha$的式子表示）；
+
+    （2）用等式表示线段$BF, MF, DM$的数量关系，并证明．'
+  answer: （1）$\angle MDC=90^\circ-\alpha$ （2）$FM^{2}=BF^{2}+DM^{2}$，见解析
+  solution: '【小问1详解】
+
+    解：延长MD交BA的延长线于点P，如图所示：
+
+    [图]
+
+    ∵$DM \parallel BF$，
+
+    ∴$\angle ABF+\angle MPA=180^\circ$，
+
+    根据题意得：$\angle EBF = \alpha$，
+
+    ∴$\angle ABF=90^{\circ}+\alpha$，
+
+    ∴$\angle MPA=90^\circ-\alpha$，
+
+    ∵正方形$ABCD$，
+
+    ∴$\angle ADC=\angle DAP+90^{\circ}$，
+
+    ∴$\angle MDC+\angle ADP=90^\circ,\angle ADP+\angle APD=90^\circ$，
+
+    ∴$\angle MDC=\angle DPA-90^{\circ}-\alpha$；
+
+    【小问2详解】
+
+    过点A作$AK \perp AF$且$AK = AF$，连接$KM,DK$，如图所示：
+
+    [图]
+
+    ∴$\angle FAK = \angle DAB = 90^\circ$，
+
+    ∴$\angle DAK+\angle DAF=\angle DAF+\angle FAB=90^\circ$，
+
+    ∴$\angle DAK = \angle FAB$，
+
+    ∵$DA = AB$，
+
+    ∴$\triangle ABC\cong\triangle A''DK(SAS)$，
+
+    ∴$BF = DK,$$\angle ABF=\angle ADK=90^{\circ}+\alpha$，
+
+    由（1）得$\angle MDC=90^\circ-\alpha$，
+
+    ∴$\angle KDM=360^{\circ}-\angle ADK-\angle MDC=90^{\circ}$，
+
+    ∵将射线AF绕点A逆时针旋转$45^\circ$得到射线AH，$AK \perp AF$，
+
+    ∴$\angle HAF=\angle HAK=45^{'
   knowledge_points:
+  - 平行线
+  - 全等三角形
+  - 勾股定理
   - 正方形
   - 旋转
-  module: quadrilaterals
+  module: triangles
   difficulty: 压轴
   recommended_for:
   - L3
 - id: 28
   type: 解答
   score: 7
-  question: '在平面直角坐标系中，过上一点P作切线l，在圆的外部过点P分别作射线，，当时，则称，为点P关于该圆的“关联等角射线”．如图1．
+  question: '在平面直角坐标系xOy中，过$\mathrm{OC}$上一点P作切线l，在圆的外部过点P分别作射线PA，PB，当$\angle1=\angle2=\alpha(0^\circ<\alpha<90^\circ)$时，则称PA，PB为点P关于该圆的“关联等角射线”．如图1．
 
-    （1）如图2，的半径为1，已知，，，，在射线，，中，的“关联等角射线”是__________；
+    [图]
 
-    （2）如图3，半径为1，点P在第三象限，，为点P关于“关联等角射线”，与x轴平行，与y轴平行，则此时的度数为__________°；
+    （1）如图2，$\odot\odot$的半径为1，已知$\angle APC = 60^\circ$，$\angle B_{1}PD=60^{\circ}$，$\angle B_{2}PD=30^{\circ}$，$\angle B_{3}PC=60^{\circ}$，在射线$PB_{1}$，$PB_{2}$，$PB_{3}$中，PA的“关联等角射线”是__________；
 
-    （3）如图4，点M的坐标为，的半径为1．点P在第一象限，，为点P关于“关联等角射线”，若过点O，与坐标轴无公共点，设切点P的纵坐标为，则的取值范围是__________．'
-  answer: ''
-  solution: ''
+    （2）如图3，$\odot\odot$的半径为1，点P在第三象限，PA，PB为点P关于$\odot\odot$“关联等角射线”，PA与x轴平行，PB与y轴平行，则此时$\alpha$的度数为__________°；
+
+    （3）如图4，点M的坐标为$(0,2)$，$\odot M$的半径为1．点P在第一象限，PA，PB为点P关于$\odot M$“关联等角射线”，若PA过点O，PB与坐标轴无公共点，设切点P的纵坐标为$y_p$，则$y_p$的取值范围是__________．'
+  answer: （1）$PB_{1}$ （2）45（3）$\frac{15-\sqrt{33}}{8} < y_1 < \frac{3}{2}$
+  solution: '【小问1详解】
+
+    解：由定义可知，$\angle APC-\angle BPD=60^{\circ}$，则PA的“关联等角射线”是$PB_{1}$；
+
+    故答案为：$PB_{1}$．
+
+    【小问2详解】
+
+    解：∵点P在第三象限，PA与x轴平行，PB与y轴平行，如图，
+
+    [图]
+
+    ∴$\angle APB=90^{\circ}$，
+
+    ∵PA，PB为点P关于$\odot\odot$“关联等角射线”，
+
+    $\alpha=(180^{\circ}-90^{\circ})\div2=45^{\circ}$．
+
+    故答案为：45．
+
+    【小问3详解】
+
+    解：点M的坐标为$(0,2)$，$\odot M$的半径为1，
+
+    [图]
+
+    先确定$y_p$最大值，要使得PA经过原点，先看左图可知此时PA不可能经过原点，要使得PA经过原点，先得找到临界位置（即过点P的切线l过点O），
+
+    此时$MP=1, MO=2, \angle OPM=90^\circ$，
+
+    ∴$\sin \angle 1 = \frac{1}{2}$,
+
+    ∴$\angle1=30^{\circ}$，
+
+    ∴$\angle2=60^{\circ}$，
+
+    过点P作$PC \perp OM$，
+
+    ∴$\angle3=30^{\circ}$，
+
+    ∴$MC=\frac{1}{2}MP=\frac{1}{2}$，
+
+    ∴$OC=2-\frac{1}{2}=\frac{3}{2}$，
+
+    ∴此时$y_{P}=\frac{3}{2}$；
+
+    那么将P往下移动，一定能有PA过点O，此时要确保PB与坐标轴无交点，即PB与x轴没有交点，找到临界状态即$PB \parallel x$轴时，如图．
+
+    [图]
+
+    设$\angle MOP = \alpha$，延长MP交x轴于点H，直线l与y轴交于点G，
+
+    则$\angle POH = 90^\circ - \alpha, \angle OPB = 180^\circ - ('
   knowledge_points:
+  - 一元二次方程
   - 切线
+  - 相似三角形
+  - 勾股定理
   - 坐标系
-  module: circles
+  module: triangles
   difficulty: 压轴
   recommended_for:
   - L3

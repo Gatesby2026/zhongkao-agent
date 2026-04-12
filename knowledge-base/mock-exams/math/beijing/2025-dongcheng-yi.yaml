@@ -1,8 +1,8 @@
 # ============================================================
-# 2025年北京东城区初三一模数学试卷 — 逐题分析
+# 2025年北京东城区中考数学一模试卷 — 逐题分析
 # ============================================================
-# 数据来源：自主选拔在线、北京高考在线、北京小升初网
-# 考试时间：2025年5月
+# 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
+# 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
 # 满分：100分  时长：120分钟
 
 year: 2025
@@ -12,380 +12,1312 @@ subject: 数学
 full_score: 100
 duration_minutes: 120
 total_questions: 28
-structure: "8选择(16分) + 8填空(16分) + 12解答(68分)"
-
+structure: 8选择(16分) + 8填空(16分) + 12解答(68分)
 questions:
+- id: 1
+  type: 选择
+  score: 2
+  question: '如图是某几何体的三视图，则这个几何体是（）
 
-  # ===== 选择题（每题2分）=====
-  - id: 1
-    type: 选择
-    score: 2
-    question: |
-      某几何体的三视图如图所示，则这个几何体是
-      (A) 三棱柱  (B) 圆锥  (C) 圆柱  (D) 正方体
-    answer: D
-    knowledge_points: [三视图, 几何体]
-    module: geometryComprehensive
-    difficulty: 基础
-    recommended_for: [L0, L1, L2, L3]
-    similar_zhongkao: "2021中考Q1"
+    [图]
 
-  - id: 2
-    type: 选择
-    score: 2
-    question: |
-      若实数a、b在数轴上对应点的位置如图所示，则下列式子正确的是
-      (A) a+b>0  (B) a+b<0  (C) |a|<|b|  (D) a-b>0
-    answer: D
-    knowledge_points: [数轴, 实数大小比较]
-    module: numbersAndExpressions
-    difficulty: 基础
-    recommended_for: [L0, L1, L2, L3]
+    A.球体B.圆锥C.棱柱D.圆柱'
+  answer: D
+  solution: '解：由于主视图和左视图为长方形可得此几何体为柱体，
 
-  - id: 3
-    type: 选择
-    score: 2
-    question: |
-      我国AI应用发展迅速，截至2025年2月8日，我国大型AI应用程序的全球下载量已超过40000000次，数据40000000用科学记数法表示为
-      (A) 4×10⁶  (B) 4×10⁷  (C) 4×10⁸  (D) 0.4×10⁸
-    answer: B
-    knowledge_points: [科学记数法]
-    module: numbersAndExpressions
-    difficulty: 基础
-    recommended_for: [L0, L1, L2, L3]
-    similar_zhongkao: "2024中考Q3"
+    由俯视图为圆可得为圆柱体．
 
-  - id: 4
-    type: 选择
-    score: 2
-    question: |
-      在Rt△ABC的直角顶点C放在直线l上，已知∠A=40°，则∠1的度数为
-      (A) 20°  (B) 15°  (C) 50°  (D) 35°
-    answer: A
-    knowledge_points: [直角三角形, 角度计算]
-    module: triangles
-    difficulty: 基础
-    recommended_for: [L0, L1, L2, L3]
+    故选：D．'
+  knowledge_points:
+  - 综合
+  module: circles
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 2
+  type: 选择
+  score: 2
+  question: '若实数a，b在数轴上对应点的位置如图所示，则下列式子正确的是（）
 
-  - id: 5
-    type: 选择
-    score: 2
-    question: |
-      不透明的袋子中只装有1个红球和2个白球，随机取出一个球后放回，再随机取出一个，则两次都是红色球的概率是
-      (A) 1/9  (B) 1/3  (C) 2/9  (D) 2/3
-    answer: A
-    knowledge_points: [概率, 独立事件]
-    module: statisticsAndProbability
-    difficulty: 基础
-    recommended_for: [L0, L1, L2, L3]
-    similar_zhongkao: "2025中考Q6"
+    [图]
 
-  - id: 6
-    type: 选择
-    score: 2
-    question: |
-      已知关于x的一元二次方程x²-2x+a=0有两个不相等的实数根，则a的取值范围是
-      (A) a>1  (B) a<1  (C) a<1且a≠0  (D) a>-1且a≠0
-    answer: C
-    knowledge_points: [一元二次方程, 判别式]
-    module: equationsAndInequalities
-    difficulty: 基础
-    recommended_for: [L0, L1, L2, L3]
-    similar_zhongkao: "2025中考Q5"
+    A.$ab > 0$B.$a+b<0$C.$|a|<|b|$D.$a-b>0$'
+  answer: D
+  solution: '解：由数轴得：$-2 < b < -1$，$2<a<3$，
 
-  - id: 7
-    type: 选择
-    score: 2
-    question: |
-      在△ABC中，P是边AC的中点，按步骤作图后，下列结论不一定成立的是
-      (A) ∠APQ=∠B  (B) ∠BQP+∠C=180°  (C) △APQ∽△ABC的相似比为1:2  (D) △ABC∽△APQ
-    answer: C
-    knowledge_points: [尺规作图, 相似三角形]
-    module: triangles
-    difficulty: 中档
-    recommended_for: [L1, L2, L3]
+    A、$ab < 0$，故A选项错误；
 
-  - id: 8
-    type: 选择
-    score: 2
-    question: |
-      正方形ABCD中，E是BC上动点，连接AE，点B关于直线AE的对称点为B'，连接EB'延长交DC于点F，连接AF。设CE=x，CF=y，给出四个结论。
-      所有正确结论的序号为
-      (A) ①③  (B) ①④  (C) ②③  (D) ①②④
-    answer: D
-    knowledge_points: [正方形, 轴对称, 函数关系]
-    module: geometryComprehensive
-    difficulty: 压轴
-    recommended_for: [L2, L3]
+    B、$a+b>0$，故B选项错误；
 
-  # ===== 填空题（每题2分）=====
-  - id: 9
-    type: 填空
-    score: 2
-    question: "正八边形的外角和度数是____"
-    answer: "360°"
-    knowledge_points: [多边形外角和]
-    module: quadrilaterals
-    difficulty: 基础
-    recommended_for: [L0, L1, L2, L3]
+    C、$\left|a>b\right|$，故C选项错误；
 
-  - id: 10
-    type: 填空
-    score: 2
-    question: "分解因式（具体题目）"
-    answer: "2(x-1)³"
-    knowledge_points: [因式分解]
-    module: numbersAndExpressions
-    difficulty: 基础
-    recommended_for: [L0, L1, L2, L3]
+    D、$a-b>0$，故D选项正确．
 
-  - id: 11
-    type: 填空
-    score: 2
-    question: "（一元一次方程相关）"
-    answer: "-2"
-    knowledge_points: [一元一次方程]
-    module: equationsAndInequalities
-    difficulty: 基础
-    recommended_for: [L0, L1, L2, L3]
+    故选：D．'
+  knowledge_points:
+  - 绝对值
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 3
+  type: 选择
+  score: 2
+  question: '在全球人工智能应用领域，我国AI技术以迅猛的势头崛起．截至2025年2月5日，我国某款AI应用软件的全球下载量已突破40
 
-  - id: 12
-    type: 填空
-    score: 2
-    question: "方程 3/(x-2) = 2/x 的解是____"
-    answer: "x=6"
-    knowledge_points: [分式方程, 验根]
-    module: equationsAndInequalities
-    difficulty: 基础
-    recommended_for: [L0, L1, L2, L3]
+    000 000次．数据40
 
-  - id: 13
-    type: 填空
-    score: 2
-    question: "从600名学生中随机抽取100名体质健康测试数据，估计全校'优秀'的总人数为____"
-    answer: "192"
-    knowledge_points: [样本估计总体, 统计]
-    module: statisticsAndProbability
-    difficulty: 基础
-    recommended_for: [L0, L1, L2, L3]
+    000 000用科学记数法表示为（）
 
-  - id: 14
-    type: 填空
-    score: 2
-    question: "在□ABCD中，点E在AB上，CE、BD交于点F，若AE:BE=2:1，且BF=2，则DF=____"
-    answer: "4"
-    knowledge_points: [平行四边形, 相似三角形]
-    module: quadrilaterals
-    difficulty: 中档
-    recommended_for: [L1, L2, L3]
+    A.$4\times10^{8}$B.$4\times10^{7}$C.$4\times10^{6}$D.$0.4\times10^{5}$'
+  answer: B
+  solution: '解：40000000$=4\times10^{7}$．
 
-  - id: 15
-    type: 填空
-    score: 2
-    question: "反比例函数y=k/x(k≠0)的图象经过点(1,-2)，则k=____"
-    answer: "-2"
-    knowledge_points: [反比例函数, 待定系数法]
-    module: functions
-    difficulty: 基础
-    recommended_for: [L0, L1, L2, L3]
+    故选：B．'
+  knowledge_points:
+  - 科学记数法
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 4
+  type: 选择
+  score: 2
+  question: '如图，直线l//m，将含有45°角的三角板ABC的直角顶点C放在直线m上，若∠1=25°，则∠2的度数为（）
 
-  - id: 16
-    type: 填空
-    score: 2
-    question: "（新情境实际问题）"
-    answer: "（具体答案待确认）"
-    knowledge_points: [实际问题]
-    module: equationsAndInequalities
-    difficulty: 中档
-    recommended_for: [L1, L2, L3]
+    [图]
 
-  # ===== 解答题 =====
-  - id: 17
-    type: 解答
-    score: 5
-    question: "计算：∛27 − 2sin60° + (1/2)⁻¹ + (π−3)⁰"
-    answer: "6-√3"
-    solution: |
-      = 3 − 2×(√3/2) + 2 + 1
-      = 3 − √3 + 2 + 1
-      = 6 − √3
-    knowledge_points: [立方根, 三角函数值, 负整数指数幂, 零指数幂]
-    module: numbersAndExpressions
-    difficulty: 基础
-    recommended_for: [L0, L1, L2, L3]
-    similar_zhongkao: "2025中考Q17"
+    A.20°B.25°C.30°D.35°'
+  answer: A
+  solution: '如图，过点B作BD//l，
 
-  - id: 18
-    type: 解答
-    score: 5
-    question: |
-      解不等式组：
-      3(x-1) ≤ 5x+1
-      x - (x-4)/2 > 1
-    answer: "-2 ≤ x < 2"
-    solution: |
-      解①：3x-3≤5x+1 → -2x≤4 → x≥-2
-      解②：(2x-x+4)/2>1 → x+4>2 → x>-2（待核实）
-      解集：-2≤x<2
-    knowledge_points: [一元一次不等式组]
-    module: equationsAndInequalities
-    difficulty: 基础
-    recommended_for: [L0, L1, L2, L3]
+    [图]
 
-  - id: 19
-    type: 解答
-    score: 5
-    question: "已知x-y=2，求代数式 (x²-2xy+y²)/(x(x+2y)) · 3/(x+2y) 的值。"
-    answer: "3"
-    solution: |
-      (x²-2xy+y²) = (x-y)² = 4
-      需进一步化简分母后代入x-y=2求值
-    knowledge_points: [分式化简求值, 完全平方公式]
-    module: numbersAndExpressions
-    difficulty: 基础
-    recommended_for: [L0, L1, L2, L3]
+    ∵直线l//m，
 
-  - id: 20
-    type: 解答
-    score: 5
-    question: |
-      编织大、小两种中国结共12个，总计用绳40m。
-      大号4m/个，小号3m/个。求各编织了多少个。
-    answer: "大4个，小8个"
-    solution: |
-      设大x个，则小(12-x)个
-      4x+3(12-x)=40 → x=4
-    knowledge_points: [一元一次方程, 实际问题]
-    module: equationsAndInequalities
-    difficulty: 基础
-    recommended_for: [L0, L1, L2, L3]
+    ∴BD//l//m．
 
-  - id: 21
-    type: 解答
-    score: 6
-    question: |
-      矩形ABCD的对角线交于点O，E为OB的中点，连接AE，过点O作OF∥CD交AE延长线于F，连接BF。
-      (1) 求证：四边形OABF是平行四边形。
-      (2) 若OA=AB=6，求FG的长。
-    answer: "(1) 证明略  (2) FG=2√5"
-    knowledge_points: [矩形, 平行四边形判定, 中点]
-    module: quadrilaterals
-    difficulty: 中档
-    recommended_for: [L1, L2, L3]
+    ∵∠1=25°，
 
-  - id: 22
-    type: 解答
-    score: 5
-    question: |
-      一次函数y=kx+b(k≠0)的图象与反比例函数图象相关，经过点(2,1)。
-      (1) 求一次函数解析式。
-      (2) 两函数图象交点位于直线x=-1左侧，求m的取值范围。
-    answer: "(1) y=x-1  (2) m<1且m≠0 或 m>2"
-    knowledge_points: [一次函数, 反比例函数, 图象交点]
-    module: functions
-    difficulty: 中档
-    recommended_for: [L1, L2, L3]
+    ∴∠4=∠1=25°．
 
-  - id: 23
-    type: 解答
-    score: 5
-    question: |
-      20名学生校外体育活动时长统计分析。
-      频数分布直方图+55≤x<60组原始数据：55,56,56,56,58,59
-      (1) 补全直方图，求中位数m和众数n。
-      (2) 甲乙丙三名学生5天训练数据，排序问题。
-    answer: "(1) m=56, n=56  (2) 排序最靠前的是甲（或需计算确认）"
-    knowledge_points: [频数分布直方图, 中位数, 众数, 方差]
-    module: statisticsAndProbability
-    difficulty: 中档
-    recommended_for: [L1, L2, L3]
+    ∵∠ABC=45°，
 
-  - id: 24
-    type: 解答
-    score: 6
-    question: |
-      在⊙O中，AB为直径，BC为弦，OD⊥BC，过点A作⊙O的切线与DO延长线交于点E。
-      (1) 求证：∠B=∠E。
-      (2) 若⊙O半径为2，OE=6，求BC的长。
-    answer: "(1) 证明略  (2) BC=8√2/3"
-    solution: |
-      (1) AE是切线→OA⊥AE，OD⊥BC→∠OAE=∠ODB=90°→∠B=∠E
-      (2) cosE=OA/OE=2/6=1/3，cosB=cosE=1/3，BC=AB×cosB=4×(1/3)... BC=8√2/3
-    knowledge_points: [圆的切线, 垂径定理, 三角函数]
-    module: circles
-    difficulty: 中档
-    recommended_for: [L2, L3]
-    similar_zhongkao: "2025中考Q24"
+    ∴∠3=∠ABC﹣∠4=45°﹣25°=20°．
 
-  - id: 25
-    type: 解答
-    score: 6
-    question: |
-      纯电动汽车实际剩余电量与仪表盘显示的差异分析。
-      给出已行驶里程x与仪表盘显示y₁、实际剩余y₂的数据。实际总里程280km。
-      (1) y₂与x的关系式
-      (2) 画图象
-      (3) 各种里程下的实际vs显示对比
-    answer: "(1) y₂=-x+280  (3)① 80km, 109km  ② 约160km"
-    knowledge_points: [一次函数, 实际问题, 函数图象]
-    module: functions
-    difficulty: 中档
-    recommended_for: [L1, L2, L3]
+    ∴∠2=∠3=20°．
 
-  - id: 26
-    type: 解答
-    score: 6
-    question: |
-      抛物线y=mx²-m²x(m≠0)上两点M(x₁,y₁)、N(x₂,y₂)。
-      (1) 求抛物线的对称轴。
-      (2) 若对于-1<x₁<2m，2m<x₂<6都有y₁<y₂，求m的取值范围。
-    answer: "(1) 对称轴x=m/2  (2) 1<m<3"
-    knowledge_points: [二次函数, 对称轴, 分类讨论]
-    module: functions
-    difficulty: 压轴
-    recommended_for: [L2, L3]
-    similar_zhongkao: "2025中考Q26"
+    故选A．'
+  knowledge_points:
+  - 综合
+  module: functions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 5
+  type: 选择
+  score: 2
+  question: '一个布袋内只装有1个黑球和2个白球，这些球除颜色不同外其余都相同，随机摸出一个球后放回搅匀，再随机摸出一个球，则两次摸出的球都是黑球的概率是(
 
-  - id: 27
-    type: 解答
-    score: 7
-    question: |
-      Rt△ABC中，∠ACB=90°，AC=BC，点D在AB上(AD<BD)，过D作ED⊥AB交BC延长线于E，
-      以CD为底作等腰Rt△CDF（E、F在直线CD的异侧），连接BF。
-      (1) 补全图形
-      (2) 求证：ED=BD
-      (3) 用等式表示AE与BF的数量关系，并证明
-    answer: "(2) ED=BD  (3) AE=2BF"
-    knowledge_points: [等腰直角三角形, 全等三角形, 翻折]
-    module: geometryComprehensive
-    difficulty: 压轴
-    recommended_for: [L2, L3]
-    similar_zhongkao: "2025中考Q27"
+    )
 
-  - id: 28
-    type: 解答
-    score: 7
-    question: |
-      新定义"偏移中距"d(P,M,Q)：点P绕点M逆时针旋转90°得到P'，N为线段MQ的中点，d(P,M,Q)=P'N。
-      (1) A(-1,0), B(3,2)：①若C(0,2)，求d(A,C,B)；②C为y轴上动点，求d(A,C,B)最小值
-      (2) 若OA=2，OC=1，求d(A,C,O)的取值范围
-    answer: "(1)① √5/2  ② 待确认  (2) (4-√5)/2 ≤ d ≤ (4+√5)/2"
-    knowledge_points: [旋转, 新定义, 坐标系, 最值]
-    module: geometryComprehensive
-    difficulty: 压轴
-    recommended_for: [L3]
+    A.$\frac{4}{9}$B.$\frac{1}{3}$C.$\frac{1}{6}$D.$\frac{1}{9}$'
+  answer: D
+  solution: '解：列表如下
 
-difficulty_summary:
-  基础: { count: 15, score: 约48分 }
-  中档: { count: 9, score: 约32分 }
-  压轴: { count: 4, score: 约20分 }
+    由表格可知，随机摸出一个球后放回搅匀，再随机摸出一个球所以的结果有9种，两次摸出的球都是黑球的结果有1种，所以两次摸出的球都是黑球的概率是$\frac{1}{9}$．
 
-module_distribution:
-  numbersAndExpressions: { questions: [2,3,10,17,19], score: 约14分 }
-  equationsAndInequalities: { questions: [6,11,12,16,18,20], score: 约19分 }
-  functions: { questions: [15,22,25,26], score: 约18分 }
-  triangles: { questions: [4,7], score: 约4分 }
-  quadrilaterals: { questions: [9,14,21], score: 约10分 }
-  circles: { questions: [24], score: 约6分 }
-  statisticsAndProbability: { questions: [5,13,23], score: 约9分 }
-  geometryComprehensive: { questions: [1,8,27,28], score: 约18分 }
+    故选：D．
+
+    黑
+
+    白1
+
+    白2
+
+    黑
+
+    （黑，黑）
+
+    （白1,黑）
+
+    （白2，黑）
+
+    白1
+
+    （黑，白1）
+
+    （白1，白1）
+
+    （白2，白1）
+
+    白2
+
+    （黑，白2）
+
+    （白1，白2）
+
+    （白2，白2）'
+  knowledge_points:
+  - 概率
+  module: statisticsAndProbability
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 6
+  type: 选择
+  score: 2
+  question: '已知关于x的一元二次方程$\log^{2}-2x+1=0$有两个不相等的实数根，则k的取值范围是（）
+
+    A.$k > -1$B.$k<1$C.$k<1$且$k \neq 0$D.$k > -1$且$k \neq 0$'
+  answer: C
+  solution: '解：∵关于x的一元二次方程$\log^{2}-2x+1=0$有两个不相等的实数根，
+
+    ∴$k \neq 0$且$\triangle > 0$，即$(-2)-4\times k\times1>0$，
+
+    解得：$k<1$且$k \neq 0$．
+
+    故选：C．'
+  knowledge_points:
+  - 一元二次方程
+  - 根的判别式
+  module: equationsAndInequalities
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 7
+  type: 选择
+  score: 2
+  question: '如图，在$V_{ABC}$中，P是边AC的中点．按下列步骤作图：
+
+    ①以点B为圆心，适当长为半径画弧，交线段AB于点D，交线段BC于点E；
+
+    ②以点P为圆心，BD长为半径画弧，交线段AP于点F；
+
+    ③以点F为圆心，DE长为半径画弧，交前一条弧于点G；
+
+    ④作直线PG，交线段AB于点Q．
+
+    以下结论不一定成立的是（）
+
+    [图]
+
+    A.$\angle APQ=\angle B$B.$\angle BOP+\angle C=180^\circ$
+
+    C.$\triangle APQ$与$V_{ABC}$的相似比为$1:2$D.$\triangle ABC \sim \triangle APQ$'
+  answer: C
+  solution: '解：由作图过程可得$\angle APQ=\angle B$，
+
+    故选项A正确；
+
+    $\because \angle A = \angle A$
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\triangle ABC \sim \triangle APQ$，
+
+    故选项D正确；
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\angle C=\angle AQP$，
+
+    $\angle BQP+\angle AQP=180^{\circ}$
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\angle BOP+\angle C=180^\circ$，
+
+    故选项B正确；
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\triangle APQ$与$V_{ABC}$的相似比为$\frac{AP}{AB}$，
+
+    不能确定$\frac{AP}{AB}=\frac{1}{2}$，
+
+    故选项C错误；
+
+    故选：C．'
+  knowledge_points:
+  - 相似三角形
+  module: triangles
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 8
+  type: 选择
+  score: 2
+  question: '如图，在边长为1的正方形$ABCD$中，E是边BC上的一动点（不与点B，C重合），连接AE，点B关于直线AE的对称点为$B''$，连接$EB''$并延长交DC于点F，连接AF．设$CE = x$，$CF = y$，给出下列三个结论：
+
+    [图]
+
+    ①$\angle EAF = 45^\circ$；②$S_{\triangle AEF} \leq \frac{1}{2}$；③$x+y>1$．
+
+    上述结论中，所有正确结论的序号是（）
+
+    A.①②B.②③C.①③D.①②③'
+  answer: D
+  solution: '解：①连接$AB''$，如图所示：
+
+    [图]
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$点B关于直线AE的对称点为$B''$，
+
+    $\therefore AB = AB''$，$BE = B''E$，
+
+    在$\triangle ABE$和$\triangle AB''E$中，
+
+    $\left\{\begin{array}{l} AB=AB'' \\ BE=B''E'' \\ AE=AE \end{array}\right.$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\triangle ABC\cong\triangle A''B''C''(SSS)$，
+
+    $\angle BAE = \angle B''AE''$，$\angle B=\angle AB''E=90^{\circ}$，
+
+    $\angle BAB'' = 2\angle B''AE$，
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$四边形$ABCD$是正方形，
+
+    $\therefore AB = AD$，$\angle D = \angle BAD = 90^\circ$，
+
+    $\angle D=90^{\circ}$，$AB''=AD$，
+
+    在$\mathrm{Rt}\triangle AB''F$和$Rt\triangle ADF$中，
+
+    $\left\{ \begin{array}{l} AB = AD \\ AF = AF \end{array} \ri'
+  knowledge_points:
+  - 全等三角形
+  - 正方形
+  - 轴对称
+  - 动点
+  module: geometryComprehensive
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 9
+  type: 填空
+  score: 2
+  question: 正八边形的外角和是______．
+  answer: $360^\circ$##360度
+  solution: '解：$\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$任意多边形的外角和都是$360^\circ$
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$正八边形的外角和是$360^\circ$．
+
+    故答案为：$360^\circ$．'
+  knowledge_points:
+  - 综合
+  module: triangles
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 10
+  type: 填空
+  score: 2
+  question: 分解因式：$2x^{2}-4x+2$________．
+  answer: $2(x-1)^2$
+  solution: '解：$2x^{2}-4x+2=2\left(x^{2}-2x+1\right)=2\left(x-1\right)^{2}$，
+
+    故答案为：$2(x-1)^2$．'
+  knowledge_points:
+  - 因式分解
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 11
+  type: 填空
+  score: 2
+  question: 在平面直角坐标系xOy中，若反比例函数$y=\frac{k}{x}(k\neq0)$的图象经过点$(1,-2)$，则k的值是________．
+  answer: $-2$
+  solution: '解：把点$(1,-2)$代入反比例函数$y=\frac{k}{x}(k\neq0)$得：$k = -2$，
+
+    故答案为：$-2$．'
+  knowledge_points:
+  - 反比例函数
+  - 坐标系
+  module: functions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 12
+  type: 填空
+  score: 2
+  question: 方程$\frac{3}{x}-\frac{2}{x-2}=0$的解是______．
+  answer: $x = 6$
+  solution: '解：去分母得：$3(x-2)-2x=0$，
+
+    解得：x=6，
+
+    检验：当x=6时，$x(x-2)\neq0$，
+
+    ∴分式方程的解为x=6．'
+  knowledge_points:
+  - 分式方程
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 13
+  type: 填空
+  score: 2
+  question: '某校为了解学生身体健康状况，从全校600名学生的体质健康测试结果登记表中，随机选取了100名学生的测试数据，并绘制成如图所示的条形统计图，估计该校学生体质健康测试结果为“优秀”的总人数为________．
+
+    [图]'
+  answer: '192'
+  solution: '解：根据题意得：
+
+    $600\div\frac{32}{100}=192$（人），
+
+    答：其中成绩为“优秀”的总人数估计为192人．
+
+    故答案为：192．'
+  knowledge_points:
+  - 统计
+  - 条形统计图
+  module: statisticsAndProbability
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 14
+  type: 填空
+  score: 2
+  question: '如图，在$\Box ABCD$中，点E在AB上，CE，BD交于点F，若$AE:BE=2:1$，且$BF = 2$，则$DF =$________．
+
+    [图]'
+  answer: '6'
+  solution: '解：$AE:BE=2:1$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$设$AE = 2a$，$BE = a$，则$AB = 3a$，
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$四边形$ABCD$是平行四边形，
+
+    $AB = CD = 3a$，$AB\parallel CD$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\triangle BEF \cong \triangle DCF$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\frac{BF}{DF} = \frac{BE}{DC}$，
+
+    $\because BE = a$，$CD = 3a$，$BF = 2$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\frac{2}{DF} = \frac{a}{3a}$，
+
+    解得：$DF = 6'
+  knowledge_points:
+  - 相似三角形
+  - 平行四边形
+  module: triangles
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 15
+  type: 填空
+  score: 2
+  question: '如图，在由边长为1的小正方形组成的网格中，点$A, B, C$都在格点上，以点A为圆心，AB长为半径画弧，交AC于点D，则扇形ABD的面积为________．
+
+    [图]'
+  answer: $\frac{5}{8}\pi$
+  solution: '解：如图，连接BC，
+
+    由题意得$AB = AD = \sqrt{1^{2} + 2^{2}} = \sqrt{5}$，$BC = \sqrt{1^{2} + 2^{2}} = \sqrt{5}$，$AC=\sqrt{3^{2}+1^{2}}=\sqrt{10}$，
+
+    $\therefore AB^{2}=BC^{2}=5$，$AC^{2}=10$，$AB = BC$，
+
+    $AB^{2}+BC^{2}=AC^{2}$，
+
+    $\therefore \triangle ABC$是直角三角形，$\angle ABC = 90^\circ$，
+
+    $\angle BAC = 45^\circ$，
+
+    $\therefore S_{\triangle O_1O_2AB}=\frac{45\pi\cdot AB^2}{360}=\frac{5}{8}\pi$，
+
+    故答案为：$\frac{5}{8}\pi$．
+
+    [图]'
+  knowledge_points:
+  - 勾股定理
+  - 正方形
+  module: triangles
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 16
+  type: 填空
+  score: 2
+  question: '快递员小明每天从快递点P骑电动三轮车到A，B，C三个小区投送快递．每个小区经过且只经过一次，最后返回快递点P．P，A，B，C之间的距离（单位：km）如图所示．
+
+    [图]
+
+    （1）若小明按照P→B→A→C→P的路线骑行，则小明骑行的距离为___________km；
+
+    （2）小明骑行的最短距离为___________km．'
+  answer: ①.6.2②.5.2
+  solution: '（1）根据图示计算P→B→A→C→P的路线距离为$2+1.6+1.5+1.1=6.2$km；
+
+    （2）找出所以可能路线计算：
+
+    P→B→A→C→P，距离为$2.0+1.6+1.5+1.1=6.2$km；
+
+    P→B→C→A→P，距离为$2.0+1.8+1.5+0.7=6$km
+
+    P→A→B→C→P，距离为$0.7+1.6+1.8+1.1=5.2$km；
+
+    P→A→C→B→P，距离为$0.7+1.5+1.8+2.0=6$km；
+
+    P→C→A→B→P，距离为$1.1+1.5+1.6+2.0=6.2$km；
+
+    P→C→B→A→P，距离为$1.1+1.8+1.6+0.7=5.2$km
+
+    通过比较这些路线的距离，5.2km是最短的．'
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 17
+  type: 解答
+  score: 5
+  question: 计算：$\sqrt{27}-2\sin 60^{\circ}+\left(\frac{1}{2}\right)^{-1}+(\pi-3)^{0}$．
+  answer: $2\sqrt{3}+3$
+  solution: '解：原式$x=3\sqrt{3}-2x-\frac{\sqrt{3}}{2}+2+1$
+
+    $3\sqrt{3}-\sqrt{3}+2+1$
+
+    $=2\sqrt{3}+3$．'
+  knowledge_points:
+  - 三角函数
+  - 绝对值
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 18
+  type: 解答
+  score: 5
+  question: 解不等式组$\left\{\begin{array}{l}3(x-1)<5x+1\\ \dfrac{x-1}{2}=2x-4\end{array}\right.$
+  answer: $-2 < x \leq \frac{7}{3}$
+  solution: '解：$\left\{\begin{array}{l}3(x-1)<5x+1\text{①}\\ \dfrac{x-1}{2}-2x<4\text{②}\end{array}\right.$，
+
+    由①得$x > -2$，
+
+    由②得$x \leq \frac{7}{3}$，
+
+    ∴原不等式组的解集是$-2 < x \leq \frac{7}{3}$．'
+  knowledge_points:
+  - 不等式
+  - 不等式组
+  module: equationsAndInequalities
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 19
+  type: 解答
+  score: 5
+  question: 已知$x-y-2=0$，求代数式$\frac{x^{2}-2xy+y^{2}}{3(x+2y)-9y}$的值．
+  answer: $\frac{2}{3}$
+  solution: '解：$\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$$x-y-2=0$，
+
+    $\therefore x - y = 2$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\frac{x^{2}-2xy+y^{2}}{3(x+2y)-9}=\frac{(x-y)^{2}}{3(x-y)}=\frac{x-y}{3}=\frac{2}{3}$．'
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 20
+  type: 解答
+  score: 5
+  question: '编织大、小两种中国结共12个，总计用绳$40m$．已知编织1个大号中国结需用绳$4m$，编织1个小号中国结需用绳$3m$．问这两种中国结各编织了多少个．
+
+    [图]'
+  answer: 编织大号中国结4个，编织小号中国结8个
+  solution: '解：设编织大号中国结x个，编织小号中国结y个．
+
+    依题意得$\begin{cases}
+
+    x + y = 12 \\
+
+    4x + 3y = 40
+
+    \end{cases}$
+
+    解得$\left\{\begin{array}{l}x=4\\y=8\end{array}\right.$
+
+    答：编织大号中国结4个，编织小号中国结8个．'
+  knowledge_points:
+  - 综合
+  module: equationsAndInequalities
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 21
+  type: 解答
+  score: 5
+  question: '如图，矩形$ABCD$的对角线AC与BD交于点O，E为OB的中点，连接AE，过点O作$OF \parallel CD$，交AE延长线于点F，AF交BC于点G，连接BF．
+
+    [图]
+
+    （1）求证：四边形$OABF$是平行四边形；
+
+    （2）若$OA=BA=6$，求FG的长．'
+  answer: （1）见解析（2）$FG=2\sqrt{3}$
+  solution: '【小问1详解】
+
+    解：（1）证明：∵四边形$ABCD$是矩形，
+
+    ∴$AB\parallel CD$．
+
+    ∵$OF \parallel CD$，
+
+    ∴$OF \parallel AB$．
+
+    ∴$\angle OFE = \angle BAE$．
+
+    ∵E为OB的中点，
+
+    ∴$OE = BE$．
+
+    又∵$\angle OEF = \angle BEA$，
+
+    ∴$\triangle OEF \cong \triangle BEA$．
+
+    ∴$AE = EF$．
+
+    ∴四边形$OABF$是平行四边形．
+
+    【小问2详解】
+
+    在矩形$ABCD$中，
+
+    $AC=BD,OA=OC,OB=OD$，
+
+    ∴$OA = OB$．
+
+    又∵$OA = AB$，四边形$OABF$是平行四边形，
+
+    ∴$\triangle OAB$是等边三角形．四边形$OABF$是菱形
+
+    ∴$\angle ABO=60^{\circ}$，$\angle BAE = 30^\circ$，$AF = 2AE$，
+
+    在$Rt\triangle ABE$和$Rt\triangle ABC$中，
+
+    ∵$AB = 6$，
+
+    ∴$AE = AB \cdot \cos 30^\circ = 3\sqrt{3}$，$AG=\frac{AB}{\cos30^\circ}=4\sqrt{3}$．
+
+    ∴$AF = 6\sqrt{3}$．
+
+    ∴$FG=AF-AG=2\sqrt{3}$．'
+  knowledge_points:
+  - 全等三角形
+  - 平行四边形
+  - 矩形
+  - 菱形
+  module: triangles
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 22
+  type: 解答
+  score: 5
+  question: '在平面直角坐标系xOy中，一次函数$y=kx+b\,(k\neq0)$的图象由函数$y=x$的图象平移得到，且经过点$(2,1)$．
+
+    （1）求这个一次函数的解析式；
+
+    （2）若函数$\hat{y}=mx(m\neq0)$与一次函数$y=kx+b\,(k\neq0)$的图象的交点位于直线$x = -1$的右侧，直接写出m的取值范围．'
+  answer: （1）$y=x-1$ （2）$m < 0$或$0<m<1$或$m > 2$
+  solution: '【小问1详解】
+
+    解：∵一次函数$y=kx+b\,(k\neq0)$的图象由函数$y=x$的图象平移得到，
+
+    ∴$k = 1$，
+
+    ∴$y=x+b$，
+
+    把$(2,1)$代入，得：$1=2+b$，解得：$b = -1$，
+
+    ∴$y=x-1$；
+
+    【小问2详解】
+
+    令$mx = x - 1$，
+
+    ∴$(1-m)x=1$，
+
+    ∵图象有交点，
+
+    ∴$1 - m \neq 0$，
+
+    ∴$x = \frac{1}{1 - m}$，
+
+    ∵函数$\hat{y}=mx(m\neq0)$与一次函数$y=kx+b\,(k\neq0)$的图象的交点位于直线$x = -1$的右侧，
+
+    ∴$\frac{1}{1-m} > -1$，
+
+    当$1 - m > 0$，即：$m < 1$时，不等式恒成立；
+
+    当$1-m<0$，即：$m > 1$时，$1 < m - 1$，解得：$m > 2$，
+
+    又∵$m \neq 0$，
+
+    ∴m的取值范围为：$m < 0$或$0<m<1$或$m > 2$．'
+  knowledge_points:
+  - 一次函数
+  - 平移
+  - 不等式
+  - 坐标系
+  module: functions
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 23
+  type: 解答
+  score: 6
+  question: '2025年2月，北京市教育委员会发布《关于进一步加强新时代中小学体育工作的若干措施》，明确要求中小学每天综合体育活动时间不低于2小时．某校从初二年级随机抽取20名学生，记录这20名学生某日校外体育活动时长（单位：分钟）．研究小组对数据进行整理分析，得到如下信息：
+
+    a．20名学生校外体育活动时长的频数分布直方图如下（数据分成5组：$45 \leq x < 50$，$50 \leq x < 55$，$55\leqslant x<60$，$60 \leq x < 65$，$65 \leq x < 70$）：
+
+    [图]
+
+    b．20名学生校外体育活动时长在$55\leqslant x<60$这一组的是：
+
+    55
+
+    56 56 56 56 56 58 59
+
+    c．20名学生校外体育活动时长的平均数、中位数、众数如下：
+
+    平均数
+
+    中位数
+
+    众数
+
+    56.2
+
+    m
+
+    n
+
+    （1）根据以上信息，回答下列问题：
+
+    ①补全频数分布直方图；
+
+    ②m的值为________，n的值为________．
+
+    （2）甲、乙、丙三名学生参加为期5天的专项训练，每日活动时长记录如下（单位：分钟）：
+
+    学生
+
+    第一天
+
+    第二天
+
+    第三天
+
+    第四天
+
+    第五天
+
+    甲
+
+    64
+
+    58
+
+    60
+
+    60
+
+    59
+
+    乙
+
+    60
+
+    63
+
+    60
+
+    60
+
+    57
+
+    丙
+
+    62
+
+    60
+
+    58
+
+    59
+
+    p
+
+    对每一名学生计算5天活动时长的平均数和方差．规定平均数较大的学生排序靠前；若平均数相同，则方差较小的学生排序靠前．若丙在甲、乙、丙三名学生中的排序居中，则这三名学生中排序最靠前的是________，表中p（p为整数）的值为________．'
+  answer: （1）①见解析，②$56,56$ （2）甲，$61$
+  solution: '【小问2详解】
+
+    解：$\frac{64+58+60+60+59}{5}=60.2$，
+
+    $S_{0}^{2}=\frac{(64-60.2)^{2}+(58-60.2)^{2}+(60-60.2)^{2}\times 2+(59-60.2)^{2}}{5}=4.16$，
+
+    $\frac{60+63+60+60+57}{5}=60$，
+
+    $S^{2}=\frac{(60-60)^{2}\times3+(63-60)^{2}+(57-60)^{2}}{5}=3.6$，
+
+    $\frac{1}{\lambda_{\mathrm{R}}}=\frac{62+60+58+59+p}{5}=\frac{239+p}{5}$，
+
+    ∵丙在甲、乙、丙三名学生中的排序居中，
+
+    若按平均数大小排序，即$\overline{x}_{n}>\overline{x}_{(i)}>\overline{x}_{i}$，
+
+    则$60<\frac{239}{5}+p<60.2$，解得，$61 < p < 62$，
+
+    ∵p为整数，
+
+    ∴不符合题意；
+
+    若按方差大小排序，
+
+    当$x_{\parallel} = x_{\text{丙}}$时，$S_{甲}^{2}<S_{丙}^{2}$，
+
+    则$\frac{239+p}{5}=60.2$，解得：$p = 62$，
+
+    此时$S_{\mathrm{B}}^{2}=\frac{(62-60.2)^{2} \times 2+(60-60.2)^{2}+(58-60.2)^{2}+(59-60.2)^{2}}{5}=2.59>S_{\mathrm{A}}^{2}$，不符合题意；
+
+    当$\overline{x}_{\text{内}} = \overline{x}_{\text{外}}$，$S_{\triangle}^{2}<S_{|A|}^{2}$，
+
+    则$\frac{239+p}{5}=60$，解得：$p ='
+  knowledge_points:
+  - 平均数
+  - 中位数
+  - 众数
+  - 方差
+  module: statisticsAndProbability
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 24
+  type: 解答
+  score: 6
+  question: '如图，在$\odot\odot$中，AB为直径，BC为弦，$OD \perp BC$，垂足为D，过点A作$\odot\odot$的切线，与DO的延长线交于点E．
+
+    [图]
+
+    （1）求证：$\angle B = \angle E$；
+
+    （2）若$\odot\odot$的半径为2，$OE = 6$，求BC的长．'
+  answer: （1）见解析（2）$BC = \frac{8\sqrt{2}}{3}$
+  solution: '【小问1详解】
+
+    证明：$\because OD \perp BC$，垂足为D，
+
+    $\angle ODB=90^\circ$，
+
+    $\because AE$与$\odot\odot$相切于点A，
+
+    $\therefore AE \perp OA$，
+
+    $\angle OAE = 90^\circ$，
+
+    $\therefore \angle B+\angle BOA=90^{\circ}$，$\angle E+\angle AOE=90^{\circ}$，且$\angle DOB = \angle AOE$，
+
+    $\angle B = \angle E$．
+
+    【小问2详解】
+
+    解：$\therefore \odot O$的半径为2，$OE = 6$，
+
+    $\cdot OA = OB = 2$，
+
+    $\angle ODB=\angle OAE=90^{\circ}$，$\angle B = \angle E$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\frac{BD}{OD}=\cos B=\cos E=\frac{AE}{OE}$，
+
+    $AE=\sqrt{OE^{2}-OA^{2}}=\sqrt{6}-2=4\sqrt{2}$，
+
+    $\therefore CD=BD=\frac{OB\cdot AE}{OE}=\frac{2\times4\sqrt{2}}{6}=\frac{4\sqrt{2}}{3}$，
+
+    $\therefore BC=2CD=\frac{8\sqrt{2}}{3}$，
+
+    $\therefore BC$的长是$\frac{8\sqrt{2}}{3}$．'
+  knowledge_points:
+  - 垂径定理
+  - 切线
+  - 弦
+  - 勾股定理
+  module: triangles
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 25
+  type: 解答
+  score: 6
+  question: '对于纯电动汽车而言，在行驶过程中，实际剩余里程和仪表盘显示的剩余里程之间往往会存在一些差异．某团队对一款纯电动汽车的实际剩余里程和仪表盘显示的剩余里程进行了一次测试，从充满电的状态出发，直到电量耗尽，实际总行驶里程为280km，在这个过程中，记录了已行驶里程x（单位：km）与仪表盘显示的剩余里程$y_{1}$（单位：km）之间的对应关系，部分数据如下表所示：
+
+    $x/\mathrm{km}$
+
+    0
+
+    40
+
+    80
+
+    120
+
+    160
+
+    200
+
+    240
+
+    $y_{1}/\mathrm{km}$
+
+    301
+
+    265
+
+    222
+
+    176
+
+    138
+
+    109
+
+    26
+
+    在这次测试中，记实际剩余里程为$y_{2}$（单位：km）．（注：实际剩余里程＝实际总行驶里程－已行驶里程）
+
+    根据以上信息，回答下列问题：
+
+    （1）写出实际剩余里程$y_{2}$与已行驶里程x之间的关系式：$y_{2}=$________．
+
+    （2）通过分析数据，发现可以用函数刻画$y_{1}$与x，$y_{2}$与x之间的关系．$y_{1}$与x的函数图象如下所示．在同一平面直角坐标系xOy中，画出$y_{2}$的图象．
+
+    [图]
+
+    （3）结合图象解决下列问题：
+
+    ①当已行驶里程为200km时，实际剩余里程是________km，仪表盘显示的剩余里程约为________km；
+
+    ②当已行驶里程约为________km时，仪表盘显示的剩余里程与实际剩余里程相等；
+
+    ③当仪表盘显示的剩余里程为120km时，实际剩余里程约为________km．'
+  answer: （1）$280-x$（2）见解析 （3）①80，109；②232；③100
+  solution: '【小问1详解】
+
+    解：剩余里程$y_{2}$与已行驶里程x之间的关系式为$y_{2}=280-x$．
+
+    故答案为：$280-x$；
+
+    【小问2详解】
+
+    当$x = 0$时，$y_{2}=280$，
+
+    当$x=280$时，$y_{2}=0$，
+
+    $\cdots y_2$的图象如图所示：
+
+    [图]【小问3详解】
+
+    ①当已行驶里程为$200km$时，实际剩余里程是$80\mathrm{km}$，仪表盘显示的剩余里程约为$109km$．
+
+    故答案为：80，109．
+
+    ②当已行驶里程约为$232km$时，仪表盘显示的剩余里程与实际剩余里程相等．
+
+    故答案为：232．
+
+    ③当仪表盘显示的剩余里程为$120km$时，实际剩余里程约为$100km$．
+
+    故答案为：100．'
+  knowledge_points:
+  - 一次函数
+  - 坐标系
+  module: functions
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 26
+  type: 解答
+  score: 6
+  question: '在平面直角坐标系xOy中，$M(x_{1},y_{1})$，$N(x_{2},y_{2})$是抛物线$y = mx^2 - m^2 \quad (m \ne 0)$上任意两点．
+
+    （1）求抛物线的对称轴（用含m的式子表示）；
+
+    （2）若对于$-1 < x_1 < 2m$，$2m < x_2 < 6$，都有$y_{1}<y_{2}$，求m的取值范围．'
+  answer: （1）$x = \frac{m}{2}$ （2）m的取值范围是$1 \leq m < 3$
+  solution: '【小问1详解】
+
+    解：∵$y = mx^2 - m^2 \quad (m \ne 0)$，
+
+    ∴抛物线的对称轴为直线$x = -\frac{m^3}{2m} = \frac{1}{2}m$；
+
+    【小问2详解】
+
+    解：当$m > 0$时，抛物线开口向上，在对称轴的右侧y随x的增大而增大，
+
+    ∵对于$-1 < x_1 < 2m$，$2m < x_2 < 6$，都有$y_{1}<y_{2}$，
+
+    ∴$\frac{1}{2}m\leq\frac{-1+2m}{2}$，
+
+    解得$m\ 1$，
+
+    ∵$-1 < x_1 < 2m$，$2m < x_2 < 6$，
+
+    ∴$-\frac{1}{2}<m<3$，
+
+    ∴$1 \leq m < 3$；
+
+    当$m < 0$时，抛物线开口向下，在对称轴$[公式]$左侧y随x的增大而增大，
+
+    ∵对于$-1 < x_1 < 2m$，$2m < x_2 < 6$，都有$y_{1}<y_{2}$，
+
+    ∴$\frac{1}{2}m-\frac{2m+6}{2}$，
+
+    解得$m \leq -6$，
+
+    ∵$-\frac{1}{2}<m<3$，
+
+    ∴这种情况不存在．
+
+    综上，m的取值范围是$1 \leq m < 3$．'
+  knowledge_points:
+  - 二次函数
+  - 不等式
+  - 坐标系
+  module: functions
+  difficulty: 压轴
+  recommended_for:
+  - L3
+- id: 27
+  type: 解答
+  score: 7
+  question: '如图，在$Rt\triangle ABC$中，$\angle ACB=90^{\circ},AC=BC$，点D在AB上（$AD < BD$），过点D作$ED \perp AB$，交BC的延长线于点E，连接$AE, CD$，以CD为底作等腰$\mathrm{Rt}\triangle CDF$（点E，F在直线CD的异侧），连接BF．
+
+    [图]
+
+    （1）依题意补全图形；
+
+    （2）求证：$ED = BD$；
+
+    （3）用等式表示线段AE与BF的数量关系，并证明，'
+  answer: （1）见解析（2）见解析 （3）$BF=\frac{1}{2}AE$．理由见解析
+  solution: '【小问1详解】
+
+    解：补全图形如图．
+
+    [图]【小问2详解】
+
+    证明：在$Rt\triangle ABC$中，$\angle ACB=90^{\circ},AC=BC$，
+
+    ∴$\angle ABC = \angle BAC = 45^\circ$．
+
+    ∵$DE \perp AB$，
+
+    ∴$\angle BDE = 90^\circ$．
+
+    ∴$\angle BED = 45^\circ$．
+
+    ∴$\angle BED=\angle DBE=45^{\circ}$．
+
+    ∴$DE = DB$．
+
+    【小问3详解】
+
+    $BF=\frac{1}{2}AE$．证明如下：
+
+    如图，延长DF到点G，使$FG = DF$，连接$CG, BG$．
+
+    [图]
+
+    ∵$\triangle DCF$是以CD为底的等腰直角三角形，
+
+    ∴$DF=CF,\ \angle DFC=90^\circ$．
+
+    ∴$\angle CDF = 45^\circ$．
+
+    ∵$DF = FG$，
+
+    ∴$CD = CG$．
+
+    ∴$\angle CGF=\angle CDF=45^{\circ}$．
+
+    ∴$\angle DCG = 90^\circ$．
+
+    ∴$\angle DCG = \angle ACB$
+
+    ∴$\angle ACD = \angle BCG$．
+
+    在$\triangle ACD$和$\triangle BCG$中，
+
+    $\begin{aligned}
+
+    &AC = BC \\
+
+    &\angle ACD = \angle BCG \\
+
+    &DC = GC
+
+    \end{aligned}$
+
+    ∴$\triangle ACD \cong \triangle BCG$．
+
+    ∴$AD = BG,\ \angle CBG = \angle CAD$．
+
+    ∴$\angle DBG=\angle DBC+\angle CBG=90^{\circ}$．
+
+    在$\triangle AED$和$'
+  knowledge_points:
+  - 全等三角形
+  module: triangles
+  difficulty: 压轴
+  recommended_for:
+  - L3
+- id: 28
+  type: 解答
+  score: 7
+  question: '在平面直角坐标系xOy中，对于点P、点M、点Q，给出如下定义：点P绕点M逆时针旋转$90^\circ$得到点$P''$，点N为线段MQ的中点（点N不与点$P''$重合），则称线段$P''N$的长为点P关于点M及点Q的“垂中距”，记为$d(P,M,Q)$．
+
+    [图]
+
+    （1）已知点$A(-1,0),B(2,0)$．
+
+    ①若点$C(0,2)$，则$d(A,C,B)$为______________；
+
+    ②若点C为y轴上一动点，则$d(A,C,B)$的最小值为______________．
+
+    （2）若$OA=2,OC=1$，直接写出$d(A,C,O)$的取值范围．'
+  answer: （1）①1．②$\frac{\sqrt{5}}{5}$ （2）$\frac{4-\sqrt{3}}{2}\leq d(A,C,O)\leq\frac{4+\sqrt{3}}{2}$
+  solution: '【小问2详解】
+
+    ∵$OA=2,OC=1$，
+
+    ∴点A在以点O为圆心，以2为半径的圆上运动，点C在以点O为圆心，以1为半径的圆上运动，
+
+    将点O绕点C逆时针旋转$90^\circ$至点$O''$，由新定义可知，点$A''$在以以点$O''$为圆心，以2为半径的圆上运动，
+
+    在1为半径的圆O上取点C，在2为半径的圆O上取点A，点A绕点C旋转90度至点$A''$，
+
+    [图]
+
+    ∵由旋转的性质得，$OC = OC, AC = AC, \angle OCO'' = \angle ACA'' = 90^\circ$，
+
+    ∴$\angle OCA + \angle ACO = 90^\circ$，$\angle OCA+\angle ACO''=90^{\circ}$，
+
+    ∴$\angle OCA = \angle OCA$，
+
+    ∴$\triangle CAD\cong\triangle ACD(SAS)$，
+
+    ∴$OC = O''C = 1$，$C''A''=OA=2$，
+
+    取OC的中点N，连接$O''N$，则$CN=\frac{1}{2}$，
+
+    ∴$O''N=\sqrt{CN^{2}+OC^{2}}=\frac{\sqrt{2}}{2}$，
+
+    在$\triangle A''NO''$中，
+
+    ∵$OA-ON\leq AN\leq OA+ON$，
+
+    ∴$\frac{4-\sqrt{3}}{2} \leq A''N \leq \frac{4+\sqrt{3}}{2}$，即$\frac{4-\sqrt{5}}{2}\leq d(A,C,O)\leq\frac{4+\sqrt{5}}{2}$．'
+  knowledge_points:
+  - 二次函数
+  - 全等三角形
+  - 勾股定理
+  - 旋转
+  - 坐标系
+  - 动点
+  module: geometryComprehensive
+  difficulty: 压轴
+  recommended_for:
+  - L3

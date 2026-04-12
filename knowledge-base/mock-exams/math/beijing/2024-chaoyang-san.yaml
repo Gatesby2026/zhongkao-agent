@@ -1,8 +1,8 @@
 # ============================================================
 # 2024年北京朝阳区中考数学三模试卷 — 逐题分析
 # ============================================================
-# 数据来源：knowledge-original/精品解析：2024年北京市人大附中朝阳学校中考三模数学试题（原卷版）.docx
-# 自动生成，部分数学公式可能显示不全（docx公式对象无法完整提取）
+# 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
+# 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
 # 满分：100分  时长：120分钟
 
 year: 2024
@@ -17,12 +17,22 @@ questions:
 - id: 1
   type: 选择
   score: 2
-  question: "下面几何体中，是三棱锥的是（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '下面几何体中，是三棱锥的是（）
+
+    A.[图]B.[图]C.[图]D.[图]'
+  answer: C
+  solution: '解：A．是圆柱体，故不符合题意；
+
+    B．是圆锥，故不符合题意；
+
+    C．是三棱锥，故符合题意；
+
+    D．是球，故不符合题意；
+
+    故选：C．'
   knowledge_points:
   - 综合
-  module: geometryComprehensive
+  module: functions
   difficulty: 基础
   recommended_for:
   - L0
@@ -32,9 +42,13 @@ questions:
 - id: 2
   type: 选择
   score: 2
-  question: "2024年5月 3日，我国嫦娥六号顺利发射飞向太空，随后历时五天抵达第四阶段，进行环月飞行任务．6月2号早上嫦娥六号在月球背面的南极-艾特肯盆地成功落月，月球距离地球约千米， 将用科学记数法表示为（   ）．\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '2024年5月3日，我国嫦娥六号顺利发射飞向太空，随后历时五天抵达第四阶段，进行环月飞行任务．6月2号早上嫦娥六号在月球背面的南极-艾特肯盆地成功落月，月球距离地球约$384000$千米，将$384000000$用科学记数法表示为（）．
+
+    A.$38.4\times10^{7}$B.$3.84\times10^{8}$C.$3.84\times10^{9}$D.$0.384\times10^{9}$'
+  answer: B
+  solution: '解：依题意，数据$384000000$用科学记数法表示为$3.84\times10^{8}$，
+
+    故选：B．'
   knowledge_points:
   - 科学记数法
   module: numbersAndExpressions
@@ -47,11 +61,27 @@ questions:
 - id: 3
   type: 选择
   score: 2
-  question: "如图，点在直线上，．若，则的大小为（ ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '如图，点O在直线AB上，$OC \perp OD$．若$\angle AOC=120^\circ$，则$\angle BOD$的大小为（
+
+    ）
+
+    [图]
+
+    A.$30^\circ$B.$40^\circ$C.$50^\circ$D.$60^\circ$'
+  answer: A
+  solution: '解：∵点O在直线AB上，$OC \perp OD$，
+
+    ∴$\angle AOC + \angle COB = 180^\circ$，$\angle COD=90^\circ$，
+
+    ∵$\angle AOC=120^\circ$，
+
+    ∴$\angle COB=60^\circ$，
+
+    ∴$\angle BOD = 90^{\circ} - \angle COB = 30^{\circ}$；
+
+    故选A．'
   knowledge_points:
-  - 综合
+  - 邻补角
   module: geometryComprehensive
   difficulty: 基础
   recommended_for:
@@ -62,12 +92,22 @@ questions:
 - id: 4
   type: 选择
   score: 2
-  question: "已知 ，则下列结论正确的是（   ）\nA.  \tB.  \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '已知$x-1>0$，则下列结论正确的是（）
+
+    A.$-x < -1 < 1 < x$B.$x < -1 < -x < 1$C.$-x < -1 < x < 1$D.$-1 < -x < 1 < x$'
+  answer: A
+  solution: '∵$x-1>0$，
+
+    ∴$x>1$，
+
+    ∴$-x<-1$，
+
+    ∴$-x < -1 < 1 < x$，
+
+    故选：A．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 不等式
+  module: equationsAndInequalities
   difficulty: 基础
   recommended_for:
   - L0
@@ -77,11 +117,23 @@ questions:
 - id: 5
   type: 选择
   score: 2
-  question: "不透明的袋子中装有红、绿小球各一个，除颜色外两个小球无其他差别，从中随机摸出一个小球，放回并摇匀，再从中随机摸出一个小球，那么两次摸球摸到一个红球一个绿球的概率是（   ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '不透明的袋子中装有红、绿小球各一个，除颜色外两个小球无其他差别，从中随机摸出一个小球，放回并摇匀，再从中随机摸出一个小球，那么两次摸球摸到一个红球一个绿球的概率是（）
+
+    A.$\frac{3}{4}$B.$\frac{1}{3}$C.$\frac{1}{2}$D.$\frac{1}{4}$'
+  answer: C
+  solution: '解：画树状图得：
+
+    [图]
+
+    ∵共有4种等可能的结果，两次摸球摸到一个红球一个绿球得情况有2种，
+
+    ∴两次摸球摸到一个红球一个绿球的概率为$2+4=\frac{1}{2}$，
+
+    故选：C．'
   knowledge_points:
   - 概率
+  - 树状图
+  - 列表法
   module: statisticsAndProbability
   difficulty: 基础
   recommended_for:
@@ -92,9 +144,19 @@ questions:
 - id: 6
   type: 选择
   score: 2
-  question: "若关于一元二次方程有两个相等的实数根，则实数的值为（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '若关于x的一元二次方程$x^{2}+x+m=0$有两个相等的实数根，则实数m的值为（）
+
+    A.$-4$B.$-\frac{1}{4}$C.$\frac{1}{4}$D.$4$'
+  answer: C
+  solution: '∵一元二次方程$x^{2}+x+m=0$有两个相等的实数根，
+
+    ∴$\triangle$=0，
+
+    ∴$1^{2}-4m=0$，
+
+    解得$m = \frac{1}{4}$，故C正确．
+
+    故选：C．'
   knowledge_points:
   - 一元二次方程
   module: numbersAndExpressions
@@ -106,12 +168,30 @@ questions:
 - id: 7
   type: 选择
   score: 2
-  question: "已知，若n为整数，且，则n的值为（    ）\nA. 43\tB. 44\tC. 45\tD. 46"
-  answer: ''
-  solution: ''
+  question: '已知$43^{2}=1849,44^{2}=1936,45^{2}=2025,46^{2}=2116$，若n为整数，且$n<\sqrt{2024}<n+1$，则n的值为（）
+
+    A.43B.44C.45D.46'
+  answer: B
+  solution: '解：$2024<2025$，
+
+    $44<\sqrt{2024}<45$，
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$整数n满足：$n<\sqrt{2024}<n+1$，
+
+    $\therefore n = 44,$
+
+    故选：B．'
   knowledge_points:
   - 综合
-  module: geometryComprehensive
+  module: numbersAndExpressions
   difficulty: 中档
   recommended_for:
   - L1
@@ -120,12 +200,34 @@ questions:
 - id: 8
   type: 选择
   score: 2
-  question: "下面的三个问题中都有两个变量：\n①汽车从A地匀速行驶到B地，汽车剩余路程y与行驶时间x；\n②将水箱中的水匀速放出，直至放完，水箱中的剩余水量y与放水时间x；\n③用长度一定绳子围成一个矩形，矩形的面积y与一边长x，其中，变量y与变量x之间的函数关系可以利用如图所示的图象表示的是（    ）\nA. ①②\tB. ①③\tC. ②③\tD. ①②③"
-  answer: ''
-  solution: ''
+  question: '下面的三个问题中都有两个变量：
+
+    ①汽车从A地匀速行驶到B地，汽车的剩余路程y与行驶时间x；
+
+    ②将水箱中的水匀速放出，直至放完，水箱中的剩余水量y与放水时间x；
+
+    ③用长度一定的绳子围成一个矩形，矩形的面积y与一边长x，其中，变量y与变量x之间的函数关系可以利用如图所示的图象表示的是（）
+
+    [图]
+
+    A.①②B.①③C.②③D.①②③'
+  answer: A
+  solution: '解：①汽车从A地匀速行驶到B地，汽车的剩余路程y随行驶时间x的增大而减小，故①可以利用该图象表示；
+
+    ②将水箱中的水匀速放出，直至放完，水箱中的剩余水量y随放水时间x的增大而减小，故②可以利用该图象表示；
+
+    ③设绳子的长为L，一边长x，则另一边长为$\frac{1}{2}L-x$，
+
+    则矩形的面积为：$y = \left(\frac{1}{2}L - x\right)x = -x^2 + \frac{1}{2}Lx$，
+
+    故③不可以利用该图象表示；
+
+    故可以利用该图象表示的有：①②，
+
+    故选：A．'
   knowledge_points:
   - 矩形
-  module: quadrilaterals
+  module: functions
   difficulty: 较难
   recommended_for:
   - L2
@@ -133,9 +235,15 @@ questions:
 - id: 9
   type: 填空
   score: 2
-  question: 若分式有意义，则实数的取值范围是_______.
-  answer: ''
-  solution: ''
+  question: 若分式$\frac{5}{x-3}$有意义，则实数x的取值范围是_______.
+  answer: $x \neq 3$
+  solution: '解：∵分式$\frac{5}{x-3}$有意义
+
+    ∴$x-3\neq0$
+
+    ∴$x \neq 3$
+
+    故答案为：$x \neq 3$.'
   knowledge_points:
   - 综合
   module: numbersAndExpressions
@@ -148,9 +256,13 @@ questions:
 - id: 10
   type: 填空
   score: 2
-  question: 分解因式：=__________________.
-  answer: ''
-  solution: ''
+  question: 分解因式：$x^{2}y-y^{3}$=__________________.
+  answer: $y(x+y)(x-y)$
+  solution: '试题分析：原式提公因式得：y（x2-y2）=$y(x+y)(x-y)$
+
+    考点：分解因式
+
+    点评：本题难度中等，主要考查学生对多项式提公因式分解因式等知识点的掌握．需要运用平方差公式．'
   knowledge_points:
   - 综合
   module: geometryComprehensive
@@ -163,12 +275,18 @@ questions:
 - id: 11
   type: 填空
   score: 2
-  question: 方程的解为______．
-  answer: ''
-  solution: ''
+  question: 方程$\frac{3}{5x+1}=\frac{1}{2x}$的解为______．
+  answer: $x = 1$
+  solution: '解：方程两边同时乘以$2x(5x+1)$，得$6x=5x+1$，
+
+    解得：$x = 1$，
+
+    经检验，$x = 1$是原方程的解，
+
+    故答案为：$x = 1$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 分式方程
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -178,9 +296,17 @@ questions:
 - id: 12
   type: 填空
   score: 2
-  question: 在平面直角坐标系中，若点在反比例函数的图象上，则______（填“>”“=”或“<”）.
-  answer: ''
-  solution: ''
+  question: 在平面直角坐标系xOy中，若点$A(2,\ y_{1}),B(5,\ y_{2})$在反比例函数$y=\frac{k}{x}(k>0)$的图象上，则$y_{1}$______$y_{2}$（填“>”“=”或“<”）.
+  answer: ＞
+  solution: '解：∵k>0，
+
+    ∴在每个象限内，y随x的增大而减小，
+
+    $\because 2<5$，
+
+    ∴$y_{1}$>$y_{2}$．
+
+    故答案为：>．'
   knowledge_points:
   - 反比例函数
   - 坐标系
@@ -194,10 +320,35 @@ questions:
 - id: 13
   type: 填空
   score: 2
-  question: 如图，是的半径，是的弦，于点D，是的切线，交的延长线于点E．若，，则线段的长为______．
-  answer: ''
-  solution: ''
+  question: '如图，OA是$\odot\odot$的半径，BC是$\odot\odot$的弦，$OA \perp BC$于点D，AE是$\odot\odot$的切线，AE交OC的延长线于点E．若$\angle AOC = 45^\circ$，$BC = 2$，则线段AE的长为______．
+
+    [图]'
+  answer: $\sqrt{2}$
+  solution: '解：∵$OA \perp BC$，
+
+    ∴$\angle ODC=90^{\circ}$，$DC = \frac{1}{2}BC = 1$．
+
+    ∵$\angle AOC = 45^\circ$，
+
+    ∴$\triangle ODC$为等腰直角三角形，
+
+    ∴$OC = \sqrt{2}DC = \sqrt{2}$，
+
+    ∴$OA = OC = \sqrt{2}$．
+
+    ∵AE是$\odot\odot$的切线，
+
+    ∴$\angle OAE=90^\circ$，
+
+    ∵$\angle AOC = 45^\circ$，
+
+    ∴$\triangle AOE$为等腰直角三角形，
+
+    ∴$AE = OA = \sqrt{2}$．
+
+    故答案为：$\sqrt{2}$．'
   knowledge_points:
+  - 垂径定理
   - 切线
   - 弦
   module: circles
@@ -209,12 +360,26 @@ questions:
 - id: 14
   type: 填空
   score: 2
-  question: 如图，在中，平分，．若，，则______．
-  answer: ''
-  solution: ''
+  question: '如图，在$\triangle ABC$中，AD平分$\angle BAC$，$DE \perp AB$．若$AC = 3$，$DE = 1.5$，则$S_{\triangle ACD} =$______．
+
+    [图]'
+  answer: $\frac{9}{4}$
+  solution: '过点D作$DF \perp AC$，交AC于点F，
+
+    [图]
+
+    ∵$DE \perp AB$，$DF \perp AC$，AD平分$\angle BAC$，
+
+    ∴$DE = DF$，
+
+    又∵$AC = 3$，$DE = 1.5$，
+
+    ∴$S_{\text{w}} = \frac{1}{2} \times AC \times DF = \frac{1}{2} \times 3 \times 1.5 = \frac{9}{4}$，
+
+    故答案为：$\frac{9}{4}$．'
   knowledge_points:
   - 综合
-  module: geometryComprehensive
+  module: triangles
   difficulty: 中档
   recommended_for:
   - L1
@@ -223,12 +388,26 @@ questions:
 - id: 15
   type: 填空
   score: 2
-  question: 如图，直线AD，BC交于点O，.若，，.则的值为______．
-  answer: ''
-  solution: ''
+  question: '如图，直线AD，BC交于点O，$AB \parallel EF \parallel CD$.若$AO = 2$，$OF = 1$，$FD=2$.则$\frac{BE}{EC}$的值为______．
+
+    [图]'
+  answer: $\frac{3}{2}$
+  solution: '$\because AB \parallel EF \parallel CD$，$AO = 2$，$OF = 1$，
+
+    $\therefore \frac{BO}{OE} = \frac{AO}{OF} = \frac{2}{1}$，
+
+    $\therefore BO = 2OE$，
+
+    $\because \frac{OE}{EC}=\frac{OF}{FD}=\frac{1}{2}$，
+
+    $EC = 2OE$，
+
+    $\frac{BE}{EC}=\frac{2OE+OE}{2OE}=\frac{3}{2}$；
+
+    故答案为：$\frac{3}{2}$.'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 平行线
+  module: triangles
   difficulty: 中档
   recommended_for:
   - L1
@@ -239,13 +418,95 @@ questions:
   score: 2
   question: '甲工厂将生产的I号、II号两种产品共打包成5个不同的包裹，编号分别为A，B，C，D，E，每个包裹的重量及包裹中I号、II号产品的重量如下：
 
+    包裹编号
+
+    I号产品重量/吨
+
+    II号产品重量/吨
+
+    包裹的重量/吨
+
+    A
+
+    5
+
+    1
+
+    6
+
+    B
+
+    3
+
+    2
+
+    5
+
+    C
+
+    2
+
+    3
+
+    5
+
+    D
+
+    4
+
+    3
+
+    7
+
+    E
+
+    3
+
+    5
+
+    8
+
     甲工厂准备用一辆载重不超过19.5吨的货车将部分包裹一次运送到乙工厂．
 
     （1）如果装运的I号产品不少于9吨，且不多于11吨，写出一种满足条件的装运方案________（写出要装运包裹的编号）；
 
     （2）如果装运的I号产品不少于9吨，且不多于11吨，同时装运的II号产品最多，写出满足条件的装运方案________（写出要装运包裹的编号）．'
-  answer: ''
-  solution: ''
+  answer: ①.ABC（或ABE或AD或ACE或ACD或BCD）②.ACE
+  solution: '解：（1）根据题意，
+
+    选择ABC时，装运的I号产品重量为：$5+3+2=10$（吨），总重$6+5+5=16<19.5$（吨），符合要求；
+
+    选择ABE时，装运的I号产品重量为：$5+3+3=11$（吨），总重$6.5+8<19.5$（吨），符合要求；
+
+    选择AD时，装运的I号产品重量为：$5+4=9$（吨），总重$6+7=13<19.5$（吨），符合要求；
+
+    选择ACD时，装运的I号产品重量为：$5+2+4=11$（吨），总重$6+5+7=18<19.5$（吨），符合要求；
+
+    选择BCD时，装运的I号产品重量为：$3+2+4=9$（吨），总重$5+5\cdot7<19.5$（吨），符合要求；
+
+    选择DCE时，装运的I号产品重量为：$4+2+3=9$（吨），总重$7+5+8=20>19.5$（吨），不符合要求；
+
+    选择BDE时，装运的I号产品重量为：$3 + 4 + 3 = 10$（吨），总重$5 + 7 + 8 = 20 > 19.5$（吨），不符合要求；
+
+    选择ACE时，装运的I号产品重量为：$5+2+3=10$（吨），总重$6.5+8<19.5$（吨），符合要求；
+
+    综上，满足条件的装运方案有ABC或ABE或ACE或AD或ACD或BCD．
+
+    故答案为：ABC（或ABE或ACE或AD或ACD或BCD）．
+
+    （2）选择ABC时，装运的II号产品重量为：$1+2+3=6$（吨）；
+
+    选择ABE时，装运的II号产品重量为：$1+2+5=8$（吨）；
+
+    选择AD时，装运的II号产品重量为：$1+3=4$（吨）；
+
+    选择ACD时，装运的II号产品重量为：$1+3+3=7$（吨）；
+
+    选择BCD时，装运的II号产品重量为：$2+3+3=8$（吨）；
+
+    选择ACE时，装运的II号产品重量为：$1+3+5=9$（吨）.
+
+    故答案为：ACE．'
   knowledge_points:
   - 综合
   module: geometryComprehensive
@@ -256,12 +517,16 @@ questions:
 - id: 17
   type: 解答
   score: 5
-  question: 计算：  ．
-  answer: ''
-  solution: ''
+  question: 计算：$2\sin 60^{\circ}+\left(\frac{1}{2}\right)^{-1}+|-2|-\sqrt{12}$．
+  answer: $4-\sqrt{3}$
+  solution: '$2\sin 60^{\circ}+\left(\frac{1}{2}\right)^{-1}+|-2|-\sqrt{12}$
+
+    $=2x\frac{\sqrt{3}}{2}+2+2-2\sqrt{3}$
+
+    $=4-\sqrt{3}$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 弦
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -271,9 +536,21 @@ questions:
 - id: 18
   type: 解答
   score: 5
-  question: 解不等式组：
-  answer: ''
-  solution: ''
+  question: 解不等式组：$\left\{ \begin{array} { l } { 2 + x > 7 - 4 x , } \\ { x < \frac { 4 + x } { 2 } } \end{array} \right.$
+  answer: $1<x<4$
+  solution: '解：$\begin{aligned}
+
+    &2+x>7-4x \quad (1)\\
+
+    &x<\frac{4+x}{2} \quad (2)
+
+    \end{aligned}$
+
+    解不等式①得$x>1$，
+
+    解不等式②得$x<4$，
+
+    故所给不等式组$[公式]$解集为：$1<x<4$．'
   knowledge_points:
   - 不等式
   - 不等式组
@@ -287,12 +564,30 @@ questions:
 - id: 19
   type: 解答
   score: 5
-  question: 已知 ， 求代数式 的值．
-  answer: ''
-  solution: ''
+  question: 已知$x-2y-2=0$，求代数式$\frac{2x+4y}{x^{2}+4xy+4y^{2}}$的值．
+  answer: '1'
+  solution: '解：$\frac{2x+4y}{x^{2}+4xy+4y^{2}}$
+
+    $-\frac{2(x-2y)}{(x-2y)^{2}}$
+
+    $=\frac{2}{x-2y}$．
+
+    $Qx-2y-2=0$，
+
+    $wx-2y=2$．
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$原式$\frac{2}{x-2}=\frac{2}{2}=1$．'
   knowledge_points:
   - 综合
-  module: geometryComprehensive
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -302,16 +597,35 @@ questions:
 - id: 20
   type: 解答
   score: 5
-  question: '已知关于x的一元二次方程．
+  question: '已知关于x的一元二次方程$\frac{1}{12}x^{2}-\pi x+\pi r-5=0$．
 
     （1）求证：此方程总有两个不相等的实数根；
 
     （2）若m为整数，且此方程的两个根都是整数，写出一个满足条件的m的值，并求此时方程的两个根．'
-  answer: ''
-  solution: ''
+  answer: （1）见解析； （2）当m=1时，$x=4$或$x=-2$满足题意（答案不唯一）．
+  solution: '【小问1详解】
+
+    解：∵二次函数为$\frac{1}{12}x^{2}-\pi x+\pi r-5=0$，
+
+    ∴$a = \frac{1}{2}$，$b = -m$，$c = m - 5$．
+
+    ∴$\Delta=b^{2}-4ac=m^{2}-4\times\frac{1}{2}(m-5)=m^{2}-2m+10=(m-1)^{2}+9>0$，
+
+    ∴此方程总有两个不相等的实数根．
+
+    【小问2详解】
+
+    ∵当m=1时，原方程为：$\frac{1}{2}x^{2}-x-4=0$，
+
+    ∴原式可化为$x^{2}-2x-8=0$，则$(x-1)^2=9$，
+
+    ∴$x=4$或$x=-2$，
+
+    ∴当m=1时，$x=4$或$x=-2$满足题意（答案不唯一）．'
   knowledge_points:
   - 一元二次方程
-  module: numbersAndExpressions
+  - 根的判别式
+  module: equationsAndInequalities
   difficulty: 中档
   recommended_for:
   - L1
@@ -322,14 +636,61 @@ questions:
   score: 5
   question: '如图，菱形ABCD的对角线AC，BD交于点O，点E，F分别在DA，BC的延长线上，且BE⊥ED，CF=AE．
 
+    [图]
+
     （1）求证：四边形EBFD是矩形；
 
-    （2）若，，求BF的长．'
-  answer: ''
-  solution: ''
+    （2）若$AB = 5$，$\cos\angle OBC=\frac{4}{5}$，求BF的长．'
+  answer: （1）见解析（2）BF的长为$\frac{32}{5}$．
+  solution: '【小问1详解】
+
+    证明：∵四边形ABCD是菱形，
+
+    ∴AB=CD，AB∥CD，AD∥BC，
+
+    ∴∠EAB=∠ADC，∠FCD=∠ADC，
+
+    ∴∠EAB=∠FCD，
+
+    ∵AE=CF，
+
+    ∴△ABE≌△CDF(SAS)，
+
+    ∴BE=DF，∠F=∠E=90°，
+
+    ∴BE∥DF，
+
+    ∴四边形EBFD是平行四边形，
+
+    ∵∠E=90°，
+
+    ∴四边形EBFD是矩形；
+
+    【小问2详解】
+
+    解：∵四边形ABCD是菱形，AB=5，
+
+    ∴OB=OD，AC⊥BD，AB=BC=5，
+
+    在Rt△BCO中，$\cos\angle OBC=\frac{4}{5}$，BC=5，
+
+    ∴$\frac{OB}{BC}=\frac{4}{5}$，
+
+    ∴OB=4，则BD=2OB=8，
+
+    在Rt△BDF中，$\cos\angle OBC=\frac{4}{5}$，BD=8，
+
+    ∴$\frac{BF}{BD} = \frac{4}{5}$，
+
+    ∴BF=$\frac{4}{5}$×8=$\frac{32}{5}$．'
   knowledge_points:
+  - 弦
+  - 勾股定理
+  - 平行四边形
   - 矩形
   - 菱形
+  - 三角函数
+  - 锐角三角函数
   module: quadrilaterals
   difficulty: 中档
   recommended_for:
@@ -339,15 +700,47 @@ questions:
 - id: 22
   type: 解答
   score: 5
-  question: '在平面直角坐标xOy中，函数 的图象经过点和， 与过点且平行于x轴的直线交于点 C．
+  question: '在平面直角坐标xOyxOy中，函数$y=kx+b\,(k\neq0)$的图象经过点$A(0,1)$和$B(1,2)$，与过点$(0,4)$且平行于x轴的直线交于点C．
 
-    （1）求该函数的解析式及点 C的坐标；
+    （1）求该函数的解析式及点C的坐标；
 
-    （2）当 时，对于x的每一个值，函数 的值大于函数 的值且小于5，直接写出n的取值范围．'
-  answer: ''
-  solution: ''
+    （2）当$x<3$时，对于x的每一个值，函数$y=\frac{2}{3}x+n$的值大于函数$y=kx+b\,(k\neq0)$的值且小于5，直接写出n的取值范围．'
+  answer: （1）$y=x+1$，$C(3,4)$ （2）$2\leq n\leq 3$
+  solution: '【小问1详解】
+
+    解：把点$A(0,1)$，$B(1,2)$代入$y=kx+b\,(k\neq0)$得：$\begin{cases}
+
+    b = 1 \\
+
+    k + b = 2
+
+    \end{cases}$，
+
+    解得：$\left\{\begin{array}{l}k=1\\b=1\end{array}\right.$，
+
+    ∴该函数的解析式为$y=x+1$，
+
+    由题意知：点C的纵坐标为4，
+
+    当$y = x + 1 = 4$时，
+
+    解得：$x=3$，
+
+    ∴$C(3,4)$；
+
+    $[公式]$小问2详解】
+
+    解：由（1）知：当$x=3$时，$y = x + 1 = 4$，
+
+    当$x=3$时，$y=2x+n=2+n$，
+
+    ∵当$x<3$时，函数$y=\frac{2}{3}x+n$的值大于函数$y=x+1$的值且小于5，
+
+    ∴$4\leq2+n\leq5$，
+
+    解得：$2\leq n\leq 3$．'
   knowledge_points:
-  - 综合
+  - 一次函数
   module: functions
   difficulty: 中档
   recommended_for:
@@ -367,13 +760,89 @@ questions:
 
     b.16名学生的身高的平均数、中位数、众数：
 
-    （1）写出表中m，n值；
+    平均数
+
+    中位数
+
+    众数
+
+    166.75
+
+    m
+
+    n
+
+    （1）写出表中m，n的值；
 
     （2）对于不同组的学生，如果一组学生的身高的方差越小，则认为该组舞台呈现效果越好．据此推断：在下列两组学生中，舞台呈现效果更好的是______（填“甲组”或“乙组”）；
 
-    （3）该舞蹈队要选五名学生参加比赛．已确定三名学生参赛，他们的身高分别为168，168，172，他们的身高的方差为．在选另外两名学生时，首先要求所选的两名学生与已确定的三名学生所组成的五名学生的身高的方差小于，其次要求所选的两名学生与已确定的三名学生所组成的五名学生的身高的平均数尽可能大，则选出的另外两名学生的身高分别为______和______．'
-  answer: ''
-  solution: ''
+    甲组学生的身高
+
+    162
+
+    165
+
+    165
+
+    166
+
+    166
+
+    乙组学生的身高
+
+    161
+
+    162
+
+    164
+
+    165
+
+    175
+
+    （3）该舞蹈队要选五名学生参加比赛．已确定三名学生参赛，他们的身高分别为168，168，172，他们的身高的方差为$\frac{32}{9}$．在选另外两名学生时，首先要求所选的两名学生与已确定的三名学生所组成的五名学生的身高的方差小于$\frac{32}{9}$，其次要求所选的两名学生与已确定的三名学生所组成的五名学生的身高的平均数尽可能大，则选出的另外两名学生的身高分别为______和______．'
+  answer: （1）$m = 166$，$n = 165$； （2）甲组（3）170，172
+  solution: '【小问1详解】
+
+    解：将这组数据按照从小到大的顺序排列为：161，162，162，164，165，165，165，166，166，167，168，168，170，172，172，175，
+
+    出现次数最多的数是165，出现了3次，即众数$n = 165$，
+
+    16个数据中的第8和第9个数据分别是166，166，
+
+    ∴中位数$m=\frac{166+166}{2}=166$，
+
+    ∴$m = 166$，$n = 165$；
+
+    【小问2详解】
+
+    解：甲组身高的平均数为$\frac{1}{5}(162+165+165+166+166)=164.8$，
+
+    甲组身高的方差为$\frac{1}{5}\left[(162-164.8)^{2}+(165-164.8)^{2}+(165-164.8)^{2}+(166-164.8)^{2}+(166-164.8)^{2}\right]=2.16$
+
+    乙组身高的平均数为$\frac{1}{5}(161+162+164+165+175)=165.4$，
+
+    乙组身高的方差为$\frac{1}{5}\left[(161-165.4)^2+(162-165.4)^2+(164-165.4)^2+(165-165.4)^2+(175-165.4)^2\right]=25.04$，
+
+    ∵$25.04 > 2.16$
+
+    ∴舞台呈现效果更好的是甲组，
+
+    故答案为：甲组；
+
+    【小问3详解】
+
+    解：168，168，172的平均数为$\frac{1}{3}(68+68+72)=\frac{169}{3}$
+
+    ∵所选的两名学生与已确定的三名学生所组成的五名学生的身高的方差小于$\frac{32}{9}$，
+
+    ∴数据的差别较小，数据才稳定，
+
+    可供选择的有：170，172，
+
+    且选择170，172时，平均数会增大，
+
+    故答案为：170，172．'
   knowledge_points:
   - 平均数
   - 中位数
@@ -387,16 +856,68 @@ questions:
 - id: 24
   type: 解答
   score: 6
-  question: '如图，圆内接四边形的对角线，交于点，平分，．
+  question: '如图，圆内接四边形$ABCD$的对角线AC，BD交于点E，BD平分$\angle ABC$，$\angle BAC = \angle ADB$．
 
-    （1）求证平分，并求的大小；
+    [图]
 
-    （2）过点作交的延长线于点．若，，求此圆半径的长．'
-  answer: ''
-  solution: ''
+    （1）求证DB平分$\angle ADC$，并求$\angle BAD$的大小；
+
+    （2）过点C作$CF \parallel AD$交AB的延长线于点F．若$AC = AD$，$BF = 2$，求此圆半径的长．'
+  answer: （1）见解析，$\angle BAD = 90^\circ$ （2）$4$
+  solution: '【小问1详解】
+
+    解：∵$\angle BAC = \angle ADB$
+
+    ∴$\widehat{AB}=\widehat{BC}$，
+
+    ∴$\angle ADB = \angle CDB$，即DB平分$\angle ADC$．
+
+    ∵BD平分$\angle ABC$，
+
+    ∴$\angle ABD = \angle CBD$，
+
+    ∴$\widehat{AD}=\widehat{CD}$，
+
+    ∴$\overrightarrow{AB}+\overrightarrow{AD}=\overrightarrow{BC}+\overrightarrow{CD}$，即$\widehat{BAD}=\widehat{BCD}$，
+
+    ∴BD是直径，
+
+    ∴$\angle BAD = 90^\circ$；
+
+    【小问2详解】
+
+    解：∵$\angle BAD = 90^\circ$，$CF \parallel AD$，
+
+    ∴$\angle F+\angle BAD=180^\circ$，则$\angle F = 90^\circ$．
+
+    ∵$\widehat{AD}=\widehat{CD}$，
+
+    ∴$AD = DC$．
+
+    ∵$AC = AD$，
+
+    ∴$AC = AD = CD$，
+
+    ∴$\triangle ADC$是等边三角形，则$\angle ADC = 60^\circ$．
+
+    ∵BD平分$\angle ADC$，
+
+    ∴$\angle CDB=\frac{1}{2}\angle ADC=30^\circ$．
+
+    ∵BD是直径，
+
+    ∴$\angle BCD = 90^\circ$，则$BC=\frac{1}{2}BD$．
+
+    ∵四边形$ABCD$是圆内接四边形，
+
+    ∴$\angle ADC + \angle ABC = 180^\circ$，则$\angle ABC = 120^\circ$，
+
+    ∴$\angle FBC = 60^\circ$，
+
+    '
   knowledge_points:
-  - 综合
-  module: quadrilaterals
+  - 圆周角
+  module: triangles
   difficulty: 较难
   recommended_for:
   - L2
@@ -404,18 +925,85 @@ questions:
 - id: 25
   type: 解答
   score: 6
-  question: '单板滑雪大跳台是北京冬奥会比赛项目之一，举办场地为首钢滑雪大跳台，运动员起跳后的飞行路线可以看作是抛物线的一部分，建立如图所示的平面直角坐标系，从起跳到着陆的过程中，运动员的竖直高度（单位：m）与水平距离（单位：m）近似满足函数关系．
+  question: '单板滑雪大跳台是北京冬奥会比赛项目之一，举办场地为首钢滑雪大跳台，运动员起跳后的飞行路线可以看作是抛物线的一部分，建立如图所示的平面直角坐标系，从起跳到着陆的过程中，运动员的竖直高度y（单位：m）与水平距离x（单位：m）近似满足函数关系$y = a(x - h)^2 + k (a < 0)$．
+
+    [图]
 
     某运动员进行了两次训练．
 
-    （1）第一次训练时，该运动员的水平距离与竖直高度的几组数据如下：
+    （1）第一次训练时，该运动员的水平距离x与竖直高度y的几组数据如下：
 
-    根据上述数据，直接写出该运动员竖直高度的最大值，并求出满足的函数关系；
+    水平距离x/m
 
-    （2）第二次训练时，该运动员的竖直高度y与水平距离x近似满足函数关系记该运动员第一次训练的着陆点的水平距离为d1，第二次训练的着陆点的水平距离为，则______（填“>”“=”或“<”）．'
-  answer: ''
-  solution: ''
+    0
+
+    2
+
+    5
+
+    8
+
+    11
+
+    14
+
+    竖直高度y/m
+
+    20.00
+
+    21.40
+
+    22.75
+
+    23.20
+
+    22.75
+
+    21.40
+
+    根据上述数据，直接写出该运动员竖直高度的最大值，并求出满足的函数关系$y = a(x - h)^2 + k (a < 0)$；
+
+    （2）第二次训练时，该运动员的竖直高度y与水平距离x近似满足函数关系$y = -0.04(x - 9)^2 + 23.24$记该运动员第一次训练的着陆点的水平距离为d1，第二次训练的着陆点的水平距离为$d_{2}$，则$d_{1}$______$d_{2}$（填“>”“=”或“<”）．'
+  answer: （1）23.20 m；$y = -0.05(x - 8)^2 + 23.20$ （2）$\lt$
+  solution: '【小问1详解】
+
+    解：根据表格中的数据可知，抛物线的顶点坐标为：$(8,23.20)$，
+
+    ∴$h=8$，$k = 23.20$，
+
+    即该运动员竖直高度的最大值为23.20
+
+    m，
+
+    根据表格中的数据可知，当$x = 0$时，$y = 20.00$，代入$y=a(x-8)^{2}+23.20$得：
+
+    $20.00=a(0-8)^{x}+23.20$，解得：$a = -0.05$，
+
+    ∴函数关系关系式为：$y = -0.05(x - 8)^2 + 23.20$．
+
+    【小问2详解】
+
+    设着陆点的纵坐标为t，则第一次训练时，$t = 0.051 \times (-8)^{2} + 23.20$，
+
+    解得：$x=8+\sqrt{20(23.20-t)}$或$x=8-\sqrt{20(23.20-\tau)}$，
+
+    ∴根据图象可知，第一次训练时着陆点的水平距离$d_{1}=8+\sqrt{26(23.20-\bar{c})}$，
+
+    第二次训练时，$t = -0.04(x - 9)^2 + 23.24$，
+
+    解得：$x=9+\sqrt{25(23.24-x)}$或$x=9-\sqrt{25(23.24-x)}$，
+
+    ∴根据图象可知，第二次训练时着陆点的水平距离$d_{2}=9+\sqrt{25(23.24-t)}$，
+
+    ∵$20(23.20-r)<25(23.24-r)$，
+
+    ∴$\sqrt{20(23.20-t)}<\sqrt{28(23.24-t)}$，
+
+    ∴$d_{1}<d_{2}$．
+
+    故答案为：$\lt$．'
   knowledge_points:
+  - 二次函数
   - 坐标系
   module: functions
   difficulty: 较难
@@ -425,14 +1013,74 @@ questions:
 - id: 26
   type: 解答
   score: 6
-  question: '在平面直角坐标系xOy中，抛物线 的对称轴为 点，， 在抛物线上．
+  question: '在平面直角坐标系xOy中，抛物线$y = ax^{2} + bx + c (a > 0)$的对称轴为$x = t,$点$A(-t,m)$，$B(2t,n)$，$C(x_0,y_0)$在抛物线上．
 
-    （1）当时，直接写出m与n的大小关系；
+    （1）当$t=2$时，直接写出m与n的大小关系；
 
-    （2）若对于  都有  求t的取值范围．'
-  answer: ''
-  solution: ''
+    （2）若对于$5<x_{0}<6$都有$m > y_0 > n$求t的取值范围．'
+  answer: （1）$m > n$ （2）$t \leq -6$或$2 \leq t \leq \frac{5}{2}$
+  solution: '【小问1详解】
+
+    解：∵$y=ax^{2}+bx+c(a>0)$，
+
+    ∴图象开口向上，则抛物线上的点离对称轴越远，函数值越大，
+
+    当$t=2$时，对称轴为$x=2$，$A(-2,m)$，$B(4,n)$，
+
+    ∵$2-1-2>4-2$，
+
+    ∴$m > n$；
+
+    【小问2详解】
+
+    解：当$t<0$时，如图1，
+
+    [图]
+
+    ∴$A(-t,m)$在抛物NQ线段上，$B(2t,n)$在MN段上，$C(x_0,y_0)$在$\overline{PQ}$上，
+
+    ∵对于$5<x_{0}<6$，都有$m > y_0 > n$，
+
+    ∴$-t\ 6$且$t > 2t - 5$，
+
+    且$t<0$，
+
+    解得：$t \leq -6$；
+
+    当$0\leq t<5$时，如图2，
+
+    [图]
+
+    ∵对于$5<x_{0}<6$，都有$m > y_0 > n$，
+
+    ∴$-t \leq 2t - 6$且$0 < 2t \leq 5$，
+
+    解得：$2 \leq t \leq \frac{5}{2}$；
+
+    当$5\leq t<6$时，如图3，
+
+    [图]
+
+    ∵对于$5<x_{0}<6$，都有$m > y_0 > n$，
+
+    又∵$y_0$在图象中已包含最小值，
+
+    ∴不存在$y_0 > n$的情况，即此种情况舍去；
+
+    当$t\ 6$时，如图4，
+
+    [图]
+
+    ∵对于$5<x_{0}<6$，都有$m > y_0 > n$，
+
+    又∵$2t > 2t - 5$，
+
+    ∴$n > y_0$，即此种情况与题意不符，舍去；
+
+    综上所述，t的取值范围为$t \leq -6$或$2 \leq t \leq \frac{5}{2}$．'
   knowledge_points:
+  - 二次函数
+  - 不等式
   - 坐标系
   module: functions
   difficulty: 压轴
@@ -441,40 +1089,155 @@ questions:
 - id: 27
   type: 解答
   score: 7
-  question: '在中，，过点C作射线，使（点与点B在直线的异侧）点D是射线上一动点（不与点C重合），点E在线段上，且．
+  question: '在$\triangle ABC$中，$AB = AC$，过点C作射线$CB''$，使$\angle ACB'' = \angle ACB$（点$B''$与点B在直线AC的异侧）点D是射线$CB''$上一动点（不与点C重合），点E在线段BC上，且$\angle DAE + \angle ACI = 90^\circ$．
 
-    （1）如图1，当点E与点C重合时，与的位置关系是          ，若，则的长为         ；（用含a的式子表示）
+    [图]
 
-    （2）如图2，当点E与点C不重合时，连接．
+    （1）如图1，当点E与点C重合时，AD与$CB''$的位置关系是，若$BC = a$，则CD的长为；（用含a的式子表示）
 
-    ①用等式表示与之间的数量关系，并证明；
+    （2）如图2，当点E与点C不重合时，连接DE．
 
-    ②用等式表示线段，，之间的数量关系，并证明．'
-  answer: ''
-  solution: ''
+    ①用等式表示$\angle BAC$与$\angle DAE$之间的数量关系，并证明；
+
+    ②用等式表示线段BE，CD，DE之间的数量关系，并证明．'
+  answer: （1）互相垂直；$\frac{1}{2}a$ （2）①$\angle BAC=2\angle DAE$，证明见解析；②$BE = CD \cdot DE$，证明见解析
+  solution: '【小问1详解】
+
+    解：当点E与点C重合时，$\angle DAE = \angle DAC$，
+
+    ∵$\angle DAE + \angle ACI = 90^\circ$，
+
+    ∴$\angle DAC+\angle ACD=90^{\circ}$，
+
+    ∴$\angle ADC = 90^\circ$，
+
+    ∴$AD \perp CB''$，
+
+    即AD与$CB''$的位置关系是互相垂直，
+
+    若$BC = a$，过点A作$AM \perp BC$于点M，如图：
+
+    [图]
+
+    则$\angle AMC=90^{\circ}=\angle ADC$，
+
+    ∵$AB = AC$，
+
+    ∴$CM = BM = \frac{1}{2}BC = \frac{1}{2}a$，
+
+    在$\triangle ACD$与$\triangle ACM$中，
+
+    $\angle ADC = \angle AMC \\
+
+    \angle ACB = \angle ACM \\
+
+    AC = AC$
+
+    ∴$\triangle ACD\cong\triangle ACM\text{(AAS)}$，
+
+    ∴$CD = CM = \frac{1}{2}a$，
+
+    即CD的长为$\frac{1}{2}a$，
+
+    故答案为：互相垂直；$\frac{1}{2}a$；
+
+    【小问2详解】
+
+    解：①当点E与点C不重合时，用等式表示$\angle BAC$与$\angle DAE$之间的数量关系是：$\angle BAC=2\angle DAE$，证明如下：
+
+    过点A作$AM \perp BC$于点M、$AN \perp CB''$于点N，如图：
+
+    [图]
+
+    则$\angle AMC = \angle ANC = 90^{\circ}$，
+
+    ∴$\angle CAN + \angle ACB = 90^\circ$，
+
+    ∵$\angle DAE + \angle ACI = 90^\circ$，
+
+    即$'
   knowledge_points:
+  - 全等三角形
   - 动点
-  module: geometryComprehensive
+  module: triangles
   difficulty: 压轴
   recommended_for:
   - L3
 - id: 28
   type: 解答
   score: 7
-  question: '在平面直角坐标系中，的半径为1，已知点，点不在上，给出如下定义：上存在一点，使点关于直线的对称点在上，则称点为点关于的反射点．
+  question: '在平面直角坐标系xOy中，$\odot\odot$的半径为1，已知点$A(2,0)$，点P不在$\odot\odot$上，给出如下定义：$\odot\odot$上存在一点T，使点A关于直线PT的对称点$A''$在$\odot\odot$上，则称点P为点A关于$\odot\odot$的反射点．
 
-    （1）在点中，点关于的反射点是___________；
+    （1）在点$P(0,0), P\left(\frac{1}{2}, 0\right), P(-1, \sqrt{3})$中，点A关于$\odot\odot$的反射点是___________；
 
-    （2）若点是点关于的反射点，直接写出的取值范围；
+    （2）若点$P(0,y)$是点A关于$\odot\odot$的反射点，直接写出y的取值范围；
 
-    （3）点是直线上的动点，，且点是点关于的反射点，当最小时，
+    （3）点$P(m,n)$是直线$y = -\sqrt{3}(x - 2)$上的动点，$0 < m < 2$，且点P是点A关于$\odot\odot$的反射点，当PA最小时，
 
-    ①直接用等式表示与数量关系；
+    ①直接用等式表示$AA''$与$TA''$的数量关系；
 
-    ②直接写出的长度．'
-  answer: ''
-  solution: ''
+    ②直接写出$AA''$的长度．'
+  answer: （1）$P_{2}$； （2）$y-\frac{3}{2}$或$y \leq -\frac{3}{2}$． （3）①$AA'=TA'$，②$AA = \sqrt{3}$；
+  solution: '【小问1详解】
+
+    解：如图，∵$P_{1}(0,0)$与原点重合，而$OA=2>1$，
+
+    [图]
+
+    ∴$P_{1}$不是点A关于$\odot\odot$的反射点；
+
+    如图，∵$P_{3}A=2-\frac{1}{2}=\frac{3}{2}$，
+
+    [图]
+
+    当$A''(-1,0)$时，$P_{3}^{\prime} A^{\prime}=\frac{1}{2} \times(-1)=\frac{3}{2}$，
+
+    ∴$P_{2}$是点A关于$\odot\odot$的反射点；
+
+    如图，当$P_{3}T$过圆心O时，$P_{3}T$最长，此时$\angle PTA=90^{\circ}$，
+
+    [图]
+
+    ∴$P_{T}<P_{A}-P_{A''}$，
+
+    ∴$A''$不可能在$\odot\odot$上，
+
+    ∴$P_3$不是点A关于$\odot\odot$的反射点；
+
+    【小问2详解】
+
+    设$A''(m,n)$，则$m^{2}+n^{2}=1$，
+
+    [图]
+
+    ∵$A(2,0)$，$P(0,y)$，
+
+    ∴$AP^{2}=4+y^{2}$，$A''P^{2}=m^{2}+\left(y-n\right)^{2}=m^{2}+n^{2}+y^{2}-2yn=1+y^{2}-2yn$，
+
+    由新定义可得：$AP = A''P$，
+
+    ∴$4 + y = 1 + y^2 - 2yn$，
+
+    整理得：$y = -\frac{3}{2n}$，
+
+    ∵$-1\leq n\leq 1$，
+
+    由反比例函数的性质可得：$y-\frac{3}{2}$或$y \leq -\frac{3}{2}$．经检验符合题意.
+
+    【小问3详解】
+
+    ①如图，点P是点A关于$\odot\odot$的反射点，当PA最小时，
+
+    ∴$AA''$与$\odot\odot$相切，切点为$A''$，记$AA''$的中点为Q，记$\odot Q$与x轴的交点为H，连接$OA''$，$A''H$，
+
+    则$OA'' \perp A'
   knowledge_points:
+  - 一元二次方程
+  - 切线
+  - 勾股定理
+  - 轴对称
+  - 三角函数
+  - 锐角三角函数
   - 坐标系
   - 动点
   module: geometryComprehensive

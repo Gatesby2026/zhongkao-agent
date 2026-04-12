@@ -1,8 +1,8 @@
 # ============================================================
 # 2023年北京西城区中考数学二模试卷 — 逐题分析
 # ============================================================
-# 数据来源：knowledge-original/精品解析：2023年北京市西城区中考二模数学试卷（原卷版）.docx
-# 自动生成，部分数学公式可能显示不全（docx公式对象无法完整提取）
+# 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
+# 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
 # 满分：100分  时长：120分钟
 
 year: 2023
@@ -11,92 +11,29 @@ exam_type: 二模
 subject: 数学
 full_score: 100
 duration_minutes: 120
-total_questions: 37
+total_questions: 28
 structure: 8选择(16分) + 8填空(16分) + 12解答(68分)
 questions:
 - id: 1
   type: 选择
   score: 2
-  question: 本试卷共7页，共两部分，28道题．满分100分．考试时间120分钟．
-  answer: ''
-  solution: ''
+  question: '如图是某几何体的视图，则该几何体是（　　）
+
+    [图]
+
+    A.长方体B.三棱柱C.圆锥D.正方体'
+  answer: B
+  solution: '由几何体的主视图和左视图都是长方形，
+
+    故该几何体是柱体，
+
+    又因为俯视图是三角形，
+
+    故该几何体是三棱柱．
+
+    故选：B．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 2
-  type: 选择
-  score: 2
-  question: 在试卷和草稿纸上准确填写姓名、准考证号、考场号和座位号．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 3
-  type: 选择
-  score: 2
-  question: 试题答案一律填涂或书写在答题卡上，在试卷上作答无效．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 4
-  type: 选择
-  score: 2
-  question: 在答题卡上，选择题、作图题用2B铅笔作答，其他试题用黑色字迹签字笔作答．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 5
-  type: 选择
-  score: 2
-  question: 考试结束，将本试卷、答题卡和草稿纸一并交回．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 1
-  type: 选择
-  score: 2
-  question: "如图是某几何体的视图，则该几何体是（　　）\nA. 长方体\tB. 三棱柱\tC. 圆锥\tD. 正方体"
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
+  - 矩形
   module: circles
   difficulty: 基础
   recommended_for:
@@ -107,11 +44,16 @@ questions:
 - id: 2
   type: 选择
   score: 2
-  question: "据报道，至2022年，我国已经建成世界上规模最大的教育体系、社会保障体系、医疗卫生体系，基本养老保险覆盖10.4亿人，将1040000000用科学记数法表示应为（　　）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '据报道，至2022年，我国已经建成世界上规模最大的教育体系、社会保障体系、医疗卫生体系，基本养老保险覆盖10.4亿人，将1040000000用科学记数法表示应为（　　）
+
+    A.$10.4\times10^{8}$B.$1.04\times10^{8}$C.$1.04\times10^{9}$D.$1.04\times10^{10}$'
+  answer: C
+  solution: '解：将1040000000用科学记数法表示为：$1.04\times10^{9}$．
+
+    故选：C．'
   knowledge_points:
   - 科学记数法
+  - 绝对值
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -122,11 +64,67 @@ questions:
 - id: 3
   type: 选择
   score: 2
-  question: "方程组的解是（　　）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '方程组$\begin{cases}
+
+    x + y = 3, \\
+
+    3x - y = 5
+
+    \end{cases}$的解是（　　）
+
+    A.$\left\{
+
+    \begin{array}{l}
+
+    x = \dfrac{1}{2} \\
+
+    y = \dfrac{5}{2}
+
+    \end{array}
+
+    \right.$B.$\left\{
+
+    \begin{array}{l}
+
+    x = \dfrac{5}{2} \\
+
+    y = -\dfrac{1}{2}
+
+    \end{array}
+
+    \right.$C.$\left\{\begin{array}{l}x=2,\\y=1\end{array}\right.$D.$\left\{
+
+    \begin{array}{l}
+
+    x=1,\\
+
+    y=2
+
+    \end{array}
+
+    \right.$'
+  answer: C
+  solution: '解：$\begin{aligned}
+
+    x + y &= 3 \quad (1) \\
+
+    3x - y &= 5 \quad (2)
+
+    \end{aligned}$，
+
+    $1+2$得，$4x=8,$
+
+    解得，$x = 2,$
+
+    把$x=2$代入①得，$2+y=3,$
+
+    解得，$y = 1,$
+
+    ∴方程组的解为：$\left\{\begin{array}{l}x=2,\\y=1\end{array}\right.$
+
+    故选：C'
   knowledge_points:
-  - 综合
+  - 二元一次方程组
   module: equationsAndInequalities
   difficulty: 基础
   recommended_for:
@@ -137,12 +135,26 @@ questions:
 - id: 4
   type: 选择
   score: 2
-  question: "比大且比小的整数可以是（　　）\nA. 1\tB. 3\tC. 5\tD. 7"
-  answer: ''
-  solution: ''
+  question: '比$\sqrt{3}$大且比$\sqrt{14}$小的整数可以是（　　）
+
+    A.1B.3C.5D.7'
+  answer: B
+  solution: '解：$\pi:1<\sqrt{3}<2.3<\sqrt{14}<4$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$比$\sqrt{3}$大且比$\sqrt{14}$小的整数有：2和3，
+
+    故选：B．'
   knowledge_points:
   - 综合
-  module: geometryComprehensive
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -152,12 +164,24 @@ questions:
 - id: 5
   type: 选择
   score: 2
-  question: "如图，直线，直线分别交，于点，，的平分线交点，若，则的大小是（　　）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '如图，直线$AB \parallel CD$，直线EF分别交AB，CD于点E，F，$\angle BEF$的平分线交CD点G，若$\angle BEF=116^{\circ}$，则$\angle EGC$的大小是（　　）
+
+    [图]
+
+    A.$116^\circ$B.$74^\circ$C.$64^\circ$D.$58^\circ$'
+  answer: D
+  solution: '解：$\angle BEF=116^{\circ}$，EG平分$\angle BEF$，
+
+    $\angle BEG = \angle FEG = \frac{1}{2} \angle BEF = \frac{1}{2} \times 116^\circ = 58^\circ$，
+
+    $\because AB \parallel CD$，
+
+    $\angle EGC = \angle BEG = 58^\circ$，
+
+    故选：D．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 平行线
+  module: triangles
   difficulty: 基础
   recommended_for:
   - L0
@@ -167,11 +191,23 @@ questions:
 - id: 6
   type: 选择
   score: 2
-  question: "一个不透明的口袋中有3个红球和1个白球，这四个球除颜色外完全相同．摇匀后，随机从中摸出一个小球不放回，再随机摸出一个小球，则两次摸出小球的颜色相同的概率是(　　)\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '一个不透明的口袋中有3个红球和1个白球，这四个球除颜色外完全相同．摇匀后，随机从中摸出一个小球不放回，再随机摸出一个小球，则两次摸出小球的颜色相同的概率是()
+
+    A.$\frac{3}{4}$B.$\frac{5}{8}$C.$\frac{1}{2}$D.$\frac{1}{4}$'
+  answer: C
+  solution: '画树状图得所有可能出现的结果数为∶
+
+    [图]
+
+    共有12种等可能的结果，两次摸出小球的颜色相同的有6种情况，
+
+    两次摸出小球$[公式]$颜色相同的概率是：$\frac{6}{12}=\frac{1}{2}$．
+
+    故选C．'
   knowledge_points:
   - 概率
+  - 树状图
+  - 列表法
   module: statisticsAndProbability
   difficulty: 中档
   recommended_for:
@@ -181,11 +217,51 @@ questions:
 - id: 7
   type: 选择
   score: 2
-  question: "实数a在数轴上的位置如图所示，则a，，，中最大的是(　　)\nA. a\tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '实数a在数轴上的位置如图所示，则a，$-a$，$a^2$，$\frac{1}{a}$中最大的是()
+
+    $\begin{tikzpicture}
+
+    \draw[->] (-3,0) -- (3,0);
+
+    \draw (-2,0) -- (-2,-0.1);
+
+    \draw (-1,0) -- (-1,-0.1);
+
+    \draw (0,0) -- (0,-0.1);
+
+    \draw (1,0) -- (1,-0.1);
+
+    \draw (2,0) -- (2,-0.1);
+
+    \node at (-2,-0.5) {$-1$};
+
+    \node at (0,-0.5) {$0$};
+
+    \node at (1,-0.5) {$1$};
+
+    \fill (0.5,0) circle (2pt);
+
+    \node at (0.5,0.4) {$a$};
+
+    \end{tikzpicture}$
+
+    A.aB.$-a$C.$a^2$D.$\frac{1}{a}$'
+  answer: D
+  solution: '解：由数轴可知：$0<a<1$，
+
+    ∴$-a < 0$，$\frac{1}{a}>1$．
+
+    又∵$0<a<1$，
+
+    ∴两边乘以a得：$0<a^{2}<a$，
+
+    ∴$-a<0<\alpha^{2}<a<1\leq\frac{1}{a}$，
+
+    ∴a，$-a$，$a^2$，$\frac{1}{a}$中，最大的是$\frac{1}{a}$．
+
+    故选：D'
   knowledge_points:
-  - 综合
+  - 不等式
   module: numbersAndExpressions
   difficulty: 中档
   recommended_for:
@@ -195,13 +271,32 @@ questions:
 - id: 8
   type: 选择
   score: 2
-  question: "下面的三个问题中都有两个变量：\n①京沪铁路全程为，某次列车的平均速度y(单位：km/h)与此次列车的全程运行时间x(单位：h)；\n②已知北京市的总面积为，人均占有面积y(单位：/人)与全市总人口x(单位：人)；\n③某油箱容量是的汽车，加满汽油后开了时，油箱中汽油大约消耗了．油箱中的剩油量与加满汽油后汽车行驶的路程．\n其中，变量y与变量x之间的函数关系可以用如图所示的图象表示的是(　　)\n\
-    A. ①②\tB. ①③\tC. ②③\tD. ①②③"
-  answer: ''
-  solution: ''
+  question: '下面的三个问题中都有两个变量：
+
+    ①京沪铁路全程为$1463km$，某次列车的平均速度y(单位：km/h)与此次列车的全程运行时间x(单位：h)；
+
+    ②已知北京市的总面积为$1.68\times10^{4}\mathrm{km}^{2}$，人均占有面积y(单位：$\mathrm{km}^{2}$/人)与全市总人口x(单位：人)；
+
+    ③某油箱容量是$50L$的汽车，加满汽油后开了$200km$时，油箱中汽油大约消耗了$\frac{1}{4}$．油箱中的剩油量yL与加满汽油后汽车行驶的路程xkm．
+
+    其中，变量y与变量x之间的函数关系可以用如图所示的图象表示的是()
+
+    [图]
+
+    A.①②B.①③C.②③D.①②③'
+  answer: A
+  solution: '解：①由平均速度等于路程除以时间得：$y=\frac{1463}{x}$，符合题意；
+
+    ②由人均面积等于总面积除以总人口得：$y=\frac{1.68\times10^{4}}{x}$，即$y=\frac{16800}{x}$，符合题意；
+
+    ③由加满汽油后开了$200km$时，油箱中汽油大约消耗了$\frac{1}{4}$，可知每公里油耗为：$\frac{1}{4} \times 50 + 200 = \frac{1}{16}(L)$，再由油箱中的剩油量等于油箱容量减去耗油量，耗油量等于每公里油耗乘以加满汽油后汽车行驶的路程得：$y=50-\frac{1}{16}x$，不符合题意；
+
+    综上分析可知，变量y与变量x之间的函数关系可以用该图象表示的是①②．
+
+    故选：A．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 反比例函数
+  module: functions
   difficulty: 较难
   recommended_for:
   - L2
@@ -209,9 +304,15 @@ questions:
 - id: 9
   type: 填空
   score: 2
-  question: 若代数式有意义，则实数x的取值范围是 ________．
-  answer: ''
-  solution: ''
+  question: 若代数式$\frac{1}{x-2}$有意义，则实数x的取值范围是________．
+  answer: $x \neq 2$
+  solution: '解：由题意可得：
+
+    $x-2\ne0$，
+
+    ∴$x \neq 2$，
+
+    故答案为：$x \neq 2$．'
   knowledge_points:
   - 综合
   module: numbersAndExpressions
@@ -224,9 +325,23 @@ questions:
 - id: 10
   type: 填空
   score: 2
-  question: 已知反比例函数的图象位于第二、四象限，则的取值范围为______．
-  answer: ''
-  solution: ''
+  question: 已知反比例函数$y=\frac{k-1}{x}$的图象位于第二、四象限，则k的取值范围为______．
+  answer: $k<1$
+  solution: '解：$\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$反比例函数$y=\frac{k-1}{x}$的图象位于第二、四象限，
+
+    $\therefore k-1<0$，
+
+    解得：$k<1$，
+
+    故答案为：$k<1$．'
   knowledge_points:
   - 反比例函数
   module: functions
@@ -239,9 +354,21 @@ questions:
 - id: 11
   type: 填空
   score: 2
-  question: 如图，在平面直角坐标系中，点A的坐标为，设线段与轴正方向的夹角为，则___________．
-  answer: ''
-  solution: ''
+  question: '如图，在平面直角坐标系xOy中，点A的坐标为$(3,4)$，设线段OA与x轴正方向的夹角为$\alpha$，则$\tan \alpha =$___________．
+
+    [图]'
+  answer: $\frac{4}{3}$##$1\frac{1}{3}$
+  solution: '取点$B(3,0)$，则$AB \perp x$轴于B，
+
+    [图]
+
+    ∵点A的坐标为(3，4)，
+
+    ∴$OB = 3,\ AB = 4$，
+
+    $\tan\alpha =$$\frac{AB}{OB}=\frac{4}{3}$．
+
+    故答案为：$\frac{4}{3}$．'
   knowledge_points:
   - 坐标系
   module: geometryComprehensive
@@ -254,9 +381,13 @@ questions:
 - id: 12
   type: 填空
   score: 2
-  question: 用一组a ,b 的值说明命题：“若a2=b2，则a=b”是错误的，这组值可以是a= _________.，b=______.
-  answer: ''
-  solution: ''
+  question: '用一组a
+
+    ,b的值说明命题：“若a2=b2，则a=b”是错误的，这组值可以是a=_________.，b=______.'
+  answer: ①.1②.$-1$
+  solution: '解：当a=1，b=-1时，满足a2=b2，但a≠b．故命题错误.
+
+    故答案为1，-1（答案不唯一）．'
   knowledge_points:
   - 综合
   module: geometryComprehensive
@@ -271,12 +402,39 @@ questions:
   score: 2
   question: '某射击队要从甲、乙、丙三名队员中选出一人代表射击队参加市里举行的射击比赛，下表是这三名队员在相同条件下10次射击成绩的数据：
 
+    甲
+
+    乙
+
+    丙
+
+    平均数
+
+    8.5
+
+    9
+
+    8.8
+
+    方差
+
+    0.25
+
+    0.23
+
+    0.27
+
     如果要选出一个成绩好且又稳定的队员去参加比赛，这名队员应是___________．'
-  answer: ''
-  solution: ''
+  answer: 乙
+  solution: '解：∵乙的平均数最大，方差最小，即乙的成绩好且状态稳定，
+
+    ∴这名队员应是乙．
+
+    故答案是：乙．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 平均数
+  - 方差
+  module: statisticsAndProbability
   difficulty: 中档
   recommended_for:
   - L1
@@ -285,12 +443,32 @@ questions:
 - id: 14
   type: 填空
   score: 2
-  question: 如图，则___________．
-  answer: ''
-  solution: ''
+  question: '如图，$\angle A=80^\circ,\angle B=70^\circ$则$\angle1+\angle2=$___________．
+
+    [图]'
+  answer: $150^\circ$
+  solution: '解：延长$AD,BC$相交于点$E,$如图，
+
+    [图]
+
+    ∴$\angle A+\angle B+\angle E=180^\circ,$
+
+    又$\angle A=80^\circ,\angle B=70^\circ$
+
+    ∴$\angle E=180^{\circ}-\angle A-\angle B=18^{\circ}-80^{\circ}-70^{\circ}=30^{\circ},$
+
+    又$\angle 2+\angle EDC+\angle E=180^\circ,$
+
+    ∴$\angle2+\angle EDC=180^{\circ}-\angle E=180^{\circ}-30^{\circ}=150^{\circ}$
+
+    又$\angle EDC=\angle 1,$
+
+    ∴$\angle1+\angle2=150^{\circ}$
+
+    故答案为：$150^\circ$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 对顶角
+  module: triangles
   difficulty: 中档
   recommended_for:
   - L1
@@ -299,12 +477,23 @@ questions:
 - id: 15
   type: 填空
   score: 2
-  question: 如图，在中，，，，则值是___________．
-  answer: ''
-  solution: ''
+  question: '如图，在$\triangle ABC$中，$DE \parallel BC$，$S_{\triangle ADE}=4$，$S_{\text{梯形}ABCD}=5$，则$\frac{DE}{BC}$的值是___________．
+
+    [图]'
+  answer: $\frac{2}{3}$
+  solution: '解：∵$DE \parallel BC$，
+
+    ∴$\triangle ADE \sim \triangle ABC$，
+
+    ∴$\frac{S_{\triangle ADE}}{S_{\triangle ABC}}=\left(\frac{AE}{BC}\right)^{2}=\frac{4}{4+5}$，
+
+    ∴$\frac{DE}{BC}=\frac{2}{3}$，
+
+    故答案为：$\frac{2}{3}$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 平行线
+  - 相似三角形
+  module: triangles
   difficulty: 中档
   recommended_for:
   - L1
@@ -313,9 +502,107 @@ questions:
 - id: 16
   type: 填空
   score: 2
-  question: 下表是某市本年度前十强区县排行榜，变化情况表示该区县相对于上一年度名次变化的情况，“↑”表示上升，“↓”表示下降，“一”则表示名次没有变化．已知每个区县的名次变化都不超过两位，上一年度排名第1的区县是___________，上一年度排在第6，7，8名的区县依次是___________．(写出一种符合条件的排序)
-  answer: ''
-  solution: ''
+  question: '下表是某市本年度GDP前十强的区县排行榜，变化情况表示该区县相对于上一年度名次变化的情况，“↑”表示上升，“↓”表示下降，“一”则表示名次没有变化．已知每个区县的名次变化都不超过两位，上一年度排名第1的区县是___________，上一年度排在第6，7，8名的区县依次是___________．(写出一种符合条件的排序)
+
+    名次
+
+    1
+
+    2
+
+    3
+
+    4
+
+    5
+
+    6
+
+    7
+
+    8
+
+    9
+
+    10
+
+    区县
+
+    A
+
+    B
+
+    C
+
+    D
+
+    E
+
+    F
+
+    G
+
+    H
+
+    I
+
+    J
+
+    变化情况
+
+    ↑
+
+    一
+
+    ↓
+
+    一
+
+    ↑
+
+    ↓
+
+    ↑
+
+    ↓
+
+    ↓
+
+    一'
+  answer: ①.C②.E、H、I或H、E、I．(二者之一即可)
+  solution: '解：①∵A地GDP名次上升，每个区县的名次变化都不超过两位，B地GDP名次无变化，
+
+    ∴只能是第三名上升而来的，即原来A地原来名次是第三名；
+
+    同理，C地GDP名次下降，只能是第一名下降而来的；
+
+    ∴上一年度排名第1的区县是C，上一年度排名前四名依次是$C, B, A, D$；
+
+    ②F地GDP名次下降，只能是从第五名下降，即上一年度F地排第五，
+
+    同理，G地GDP名次上升，只能是从第九名上升，即上一年度G地排第九，
+
+    ∵E地本年度GDP排第五，名次上升，每个区县的名次变化都不超过两位，
+
+    ∴E地上一年度可能是排第六或者第七
+
+    (i)若E地上一年度是排第六，即E地和F地的排名交换，
+
+    ∴H地上一年度是排第七，I地上一年度是排第八，
+
+    ∴上一年度排名从前往后依次$[公式]$：$C, B, A, D, F, E, H, I, G, J$；
+
+    (ii)若E地上一年度是排第七，
+
+    ∵H地本年度GDP排第八，GDP名次下降，现在上一年度未确定的只有第六和第八，
+
+    ∴H地上一年度是排第六，I地上一年度是排第八
+
+    ∴上一年度排名从前往后依次是：$C, B, A, D, F, H, E, I, G, J$；
+
+    ∴上一年度排在第6，7，8名的区县依次是$E, H, I$或$H, E, I$．
+
+    故答案为：C；$E, H, I$或$H, E, I$(二者之一即可)．'
   knowledge_points:
   - 综合
   module: geometryComprehensive
@@ -326,12 +613,19 @@ questions:
 - id: 17
   type: 解答
   score: 5
-  question: （第17题，详见原卷）
-  answer: ''
-  solution: ''
+  question: 计算：$\sqrt{8}-4\cos45^{\circ}+\left(\frac{1}{3}\right)^{-1}-|-2|$．
+  answer: '1'
+  solution: '解：$\sqrt{8}-4\cos45^{\circ}+\left(\frac{1}{3}\right)^{-1}-|-2|$
+
+    $=2\sqrt{2}-4\times\frac{\sqrt{2}}{2}+3-2$
+
+    $2\sqrt{2}-2\sqrt{2}+3-2$
+
+    $=1$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 三角函数
+  - 绝对值
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -341,9 +635,23 @@ questions:
 - id: 18
   type: 解答
   score: 5
-  question: 解不等式组，并写出它的所有正整数解．
-  answer: ''
-  solution: ''
+  question: 解不等式组$\left\{\begin{array}{l}2x+1>\dfrac{x-1}{2}\\3x-1\leq5\end{array}\right.$，并写出它的所有正整数解．
+  answer: $-1 < x \leq 2.12$
+  solution: '解：$\begin{cases}
+
+    2x+1 > \dfrac{x-1}{2} \quad \text{①} \\
+
+    3x-1 \leq 5 \quad \text{②}
+
+    \end{cases}$，
+
+    由①得：$x > -1$，
+
+    由②得：$x \leq 2$，
+
+    ∴原不等式的解集为$-1 < x \leq 2$；
+
+    ∴原不等式所有正整数解为：$1,2$；'
   knowledge_points:
   - 不等式
   - 不等式组
@@ -359,95 +667,17 @@ questions:
   score: 5
   question: '已知：如图1，线段a，b．
 
-    求作：矩形ABCD，使得，．
+    求作：矩形ABCD，使得$AB = a$，$BC = b$．
 
-    作法：如图2．'
+    [图]
+
+    作法：如图2．
+
+    [图]'
   answer: ''
   solution: ''
   knowledge_points:
   - 矩形
-  module: quadrilaterals
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 1
-  type: 解答
-  score: 5
-  question: 在直线上截取．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 2
-  type: 解答
-  score: 5
-  question: 过点B作直线，在直线m上截取．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 3
-  type: 解答
-  score: 5
-  question: '分别以点A和点C为圆心，b，a的长为半径画弧，两弧的交点为D．
-
-    (点D与点C在直线的同侧)'
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: circles
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 4
-  type: 解答
-  score: 5
-  question: '连接．
-
-    则四边形为所求的矩形．
-
-    根据上面设计的尺规作图过程，
-
-    （1）使用直尺和圆规，在图2中补全图形(保留作图痕迹)；
-
-    （2）完成下面的证明：
-
-    证明：∵，，
-
-    ∴四边形是平行四边形(___________)．(填推理的依据)
-
-    ∵直线，
-
-    ∴___________，
-
-    ∴四边形ABCD是矩形(___________)．(填推理依据)．'
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 平行四边形
-  - 矩形
-  - 尺规作图
   module: quadrilaterals
   difficulty: 基础
   recommended_for:
@@ -458,23 +688,21 @@ questions:
 - id: 20
   type: 解答
   score: 5
-  question: 已知，求代数式的值．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 中档
-  recommended_for:
-  - L1
-  - L2
-  - L3
-- id: 21
-  type: 解答
-  score: 5
-  question: 关于x的方程有实数根，且m为正整数，求m的值及此时方程的根．
-  answer: ''
-  solution: ''
+  question: 已知$a^{2}+a-5=0$，求代数式$\left(a-\frac{1}{a}\right)+\frac{a-1}{a^{2}}$的值．
+  answer: 化简为：$a^{2}+a$，结果值为：5
+  solution: '解：$\left(a-\frac{1}{a}\right)+\frac{a-1}{a^{2}}$
+
+    $= \frac{a^{2}-1}{a} \times \frac{a^{2}}{a-1}$
+
+    $\frac{(a+1)(a-1)}{a}\times\frac{a^{2}-1}{a}$
+
+    $= a^{2} + a$，
+
+    $x^{2}-a x+a-5=0$
+
+    $a^{2}+a=\pi$
+
+    $\left(a-\frac{1}{a}\right)+\frac{a-1}{a^{2}}=a^{2}+a=5$．'
   knowledge_points:
   - 综合
   module: numbersAndExpressions
@@ -483,18 +711,91 @@ questions:
   - L1
   - L2
   - L3
+- id: 21
+  type: 解答
+  score: 5
+  question: 关于x的方程$x^{2}-3x+m+1=0$有实数根，且m为正整数，求m的值及此时方程的根．
+  answer: $m = 1$，$x_{1}=2$，$x_{2}=1$
+  solution: '根据题意得$\Delta=(-3)^2-4(m+1)\quad0$
+
+    解得$m \leq \frac{5}{4}$
+
+    所以正整数m的值为1
+
+    代入原方程得$x^{2}-3x+2=0$
+
+    即$(x-2)(x-1)=0$
+
+    ∴$x_{1}=2$，$x_{2}=1$'
+  knowledge_points:
+  - 因式分解
+  - 一元二次方程
+  - 根的判别式
+  - 不等式
+  module: equationsAndInequalities
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
 - id: 22
   type: 解答
   score: 5
-  question: '如图，矩形的对角线相交于点O，过点D作的平行线交的延长线于点E．
+  question: '如图，矩形$ABCD$的对角线$AC, BD$相交于点O，过点D作AC的平行线交BC的延长线于点E．
 
-    （1）求证：；
+    [图]
 
-    （2）连接，若，，求的长．'
-  answer: ''
-  solution: ''
+    （1）求证：$BD = DE$；
+
+    （2）连接OE，若$AB=2$，$BC = 4$，求OE的长．'
+  answer: （1）见解析（2）$OE = \sqrt{37}$
+  solution: '【小问1详解】
+
+    ∵四边形$ABCD$是矩形，
+
+    ∴$AC=BD,\ AD\parallel BC$，
+
+    又∵$DE \parallel AC$，
+
+    ∴四边形$ADEC$是平行四边形，
+
+    ∴$AC = DE$，
+
+    ∴$BD = DE$；
+
+    【小问2详解】
+
+    如图，过点O作$OF \perp CD$于点F，
+
+    [图]
+
+    ∵四边形$ABCD$是矩形，
+
+    ∴$AC = BD,$点O是$AC,BD$$[公式]$中点，$AD = BC - 4,$
+
+    ∴$OC=\frac{1}{2}AC,OB=\frac{1}{2}BD,$
+
+    ∴$OC = OB,$
+
+    ∴$CF-BF=\frac{1}{2}BC=2$，
+
+    ∴F点是BC的中点，
+
+    ∴OF是$\triangle BCD$的中位线，
+
+    ∴$OF=\frac{1}{2}CD=1,$
+
+    又∵四边形$ADEC$是平行四边形，
+
+    ∴$CE = AD = 4,$．
+
+    ∴$EF+CF+CE=2+4=6$．
+
+    在$\mathrm{Rt}\triangle OEF$中，由勾股定理可得：$OE=\sqrt{OF^{2}+EF^{2}}=\sqrt{1^{2}+6^{2}}=\sqrt{37}$．'
   knowledge_points:
   - 平行线
+  - 勾股定理
+  - 平行四边形
   - 矩形
   module: triangles
   difficulty: 中档
@@ -507,13 +808,59 @@ questions:
   score: 6
   question: '为增强居民的反诈骗意识，A，B两个小区的居委会组织小区居民进行了有关反诈骗知识的有奖问答活动．现从A，B小区参加这次有奖问答活动居民的成绩中各随机抽取20个数据，分别对这20个数据进行整理、描述和分析，下面给出了部分信息．
 
-    a．A小区参加有奖问答活动20名居民成绩的数据的频数分布直方图如下（数据分成5组：，，，，）；
+    a．A小区参加有奖问答活动的20名居民成绩的数据的频数分布直方图如下（数据分成5组：$50 \leq x < 60$，$60 \leq x < 70$，$70 \leq x < 80$，$80 \leq x < 90$，$90 \leq x \leq 100$）；
 
-    b．A小区参加有奖问答活动的20名居民成绩的数据在这一组的是：
+    [图]
 
-    84　　85　　85　　86　　86　　88　　89
+    b．A小区参加有奖问答活动的20名居民成绩的数据在$80 \leq x < 90$这一组的是：
+
+    84858586868889
 
     c．B小区参加有奖问答活动的20名居民成绩的数据如下：
+
+    分数
+
+    73
+
+    81
+
+    82
+
+    85
+
+    88
+
+    91
+
+    92
+
+    94
+
+    96
+
+    100
+
+    人数
+
+    1
+
+    3
+
+    2
+
+    3
+
+    1
+
+    3
+
+    1
+
+    4
+
+    1
+
+    1
 
     根据以上信息，解答下列问题：
 
@@ -522,11 +869,35 @@ questions:
     （2）A小区参加有奖问答活动的20名居民成绩的数据的中位数是___________；B小区参加有奖问答活动的20名居民成绩的数据的众数是___________；
 
     （3）为鼓励居民继续关注反诈骗宣传，对在这次有奖问答活动中成绩大于或等于90分的居民颁发小奖品．已知A，B两个小区各有2000名居民参加这次活动，估计这两个小区的居委会一共需要准备多少份小奖品．'
-  answer: ''
-  solution: ''
+  answer: （1）见解析（2）88.5分；94分 （3）950份
+  solution: '【小问1详解】
+
+    第三组（$70 \leq x < 80$）的频数为：$20-1-1-7-9=2$，
+
+    补全图形如下：
+
+    [图]【小问2详解】
+
+    ∵20个数据按大小顺序排列，最中间的两个数据是第10和11个，
+
+    ∴A小区参加有奖问答活动的20名居民成绩的数据的中位数在$80 \leq x < 90$这一组内的第6和7个数据的平均数，即$\frac{88+89}{2}=88.5$；
+
+    B小区参加有奖问答活动的20名居民成绩中出现次数最多的是94分，出现4次，
+
+    故B小区参加有奖问答活动的20名居民成绩中众数是94分，
+
+    故答案为：88.5分；94分；
+
+    【小问3详解】
+
+    $2000\times\frac{9+3-1+4+1+1}{20-20}=950$（份）
+
+    答：估计这两个小区的居委会一共需要准备950份小奖品'
   knowledge_points:
+  - 统计
   - 中位数
   - 众数
+  - 条形统计图
   module: statisticsAndProbability
   difficulty: 较难
   recommended_for:
@@ -535,17 +906,79 @@ questions:
 - id: 24
   type: 解答
   score: 6
-  question: '如图，以菱形的边为直径作交于点，连接交于点是上的一点，且，连接．
+  question: '如图，以菱形$ABCD$的边AD为直径作$\odot\odot$交AB于点E，连接DB交$\odot\odot$于点$M, F$是BC上的一点，且$BF = BE$，连接DF．
 
-    （1）求证：；
+    [图]
 
-    （2）求证：是的切线．'
-  answer: ''
-  solution: ''
+    （1）求证：$DM = BM$；
+
+    （2）求证：DF是$\odot\odot$的切线．'
+  answer: （1）见解析； （2）见解析
+  solution: '【小问1详解】
+
+    解：连接AM，
+
+    ∵AD为$\odot\odot$的直径，
+
+    ∴$\angle AMD = 90^\circ$，
+
+    ∴$AM \perp BD$，
+
+    ∵四边形$ABCD$是菱形，
+
+    ∴$AD = AB$，
+
+    ∴点M是BD的中点，
+
+    ∴$DM = BM$；
+
+    [图]【小问2详解】
+
+    解：连接DE，
+
+    [图]
+
+    ∵四边形$ABCD$是菱形，
+
+    ∴$\angle DBE=\angle DBF$，$\angle DAB + \angle ABC = 180^\circ$，
+
+    ∴在$\triangle DBE$和$\triangle DBF$，
+
+    $\begin{aligned}
+
+    &BE=BF\\
+
+    &\angle DBE=\angle DBF\\
+
+    &BD=BD
+
+    \end{aligned}$，
+
+    ∴$\triangle D B E \cong \triangle D B F (S A S)$，
+
+    ∴$\angle DEB = \angle DFB$，
+
+    ∵AD是$\odot\odot$的直径，
+
+    ∴$\angle AED = \angle DEB = 90^\circ$，
+
+    ∴$\angle BFD=\angle DEB=90^{\circ}$，
+
+    ∵$\angle DAB + \angle ABC = 180^\circ$，
+
+    ∴在四边形$ABFD$中，$\angle ADP + \angle BPE = 180^\circ$，
+
+    ∴$\angle ADF = 90^\circ$，
+
+    ∴$AD \perp DF$，
+
+    ∴DF是$\odot\odot$的切线．'
   knowledge_points:
+  - 圆周角
   - 切线
+  - 全等三角形
   - 菱形
-  module: quadrilaterals
+  module: triangles
   difficulty: 较难
   recommended_for:
   - L2
@@ -553,21 +986,88 @@ questions:
 - id: 25
   type: 解答
   score: 6
-  question: '在平面直角坐标系中，函数的图像与一次函数的图像交于点．
+  question: '在平面直角坐标系xOy中，函数$y=\frac{k}{x}(x>0)$的图像与一次函数$y=2x$的图像交于点$A(a,2)$．
 
-    （1）求，的值；
+    （1）求a，k的值；
 
-    （2）横、纵坐标都是整数的点叫做整点．点是射线上一点，过点分别作轴，轴的垂线交函数的图像于点，．将线段，和函数的图像在点，之间的部分所围成的区域（不含边界）记为．
+    （2）横、纵坐标都是整数的点叫做整点．点P是射线OA上一点，过点P分别作x轴，y轴的垂线交函数$y=\frac{k}{x}(x>0)$的图像于点B，C．将线段PB，PC和函数$y=\frac{k}{x}(x>0)$的图像在点B，C之间的部分所围成的区域（不含边界）记为W．
 
     利用函数图像解决下列问题：
 
-    ①若点的横坐标是，直接写出区域内整点个数；
+    ①若点P的横坐标是$2$，直接写出区域W内整点个数；
 
-    ②若区域内恰有个整点，直接写出点的横坐标的取值范围．'
-  answer: ''
-  solution: ''
+    ②若区域W内恰有$5$个整点，直接写出点P的横坐标$x_{p}$的取值范围．'
+  answer: （1）$1$，$2$ （2）①$1$；②$2 < x_p \leq \frac{5}{2}$
+  solution: '【小问1详解】
+
+    解：$\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$函数$y=\frac{k}{x}(x>0)$的图像与一次函数$y=2x$的图像交于点$A(a,2)$，
+
+    $\therefore 2=2\times a$，即$a = 1$，
+
+    $\therefore A(1,2)$，
+
+    将$A(1,2)$代入反比例函数$y=\frac{k}{x}(x>0)$中，$2 = \frac{k}{1}$解得：$k=2$，
+
+    故答案为：$a = 1$，$k=2$；
+
+    【小问2详解】
+
+    ①由（1）可知反比例函数解析式为$y=\frac{2}{x}(x>0)$，
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$点P是射线OA上一点，P的横坐标是$2$，
+
+    $y=2\times2=4$
+
+    $\therefore P(2,4)$
+
+    将$x=2$代入$y=\frac{2}{x}(x>0)$，得$y = 1$
+
+    将$y = 4$代入$y=\frac{2}{x}(x>0)$，得$x=\frac{1}{2}$
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$点P与x轴，y轴的垂线交函数$y=\frac{k}{x}(x>0)$的图像于点B，C，
+
+    $\therefore B(2,1)$，$C\left(\frac{1}{2},4\right)$，
+
+    如图：
+
+    [图]
+
+    结合函数图像可知，区域W内有$1$个整数点；
+
+    ②区域W内恰有$5$个整点，由图可知点P只能位于A的上方如图：
+
+    [图]
+
+    如图，当P的纵坐标为$5$时，横坐标为$x=\f'
   knowledge_points:
   - 一次函数
+  - 反比例函数
+  - 不等式
+  - 不等式组
   - 坐标系
   module: functions
   difficulty: 较难
@@ -577,14 +1077,51 @@ questions:
 - id: 26
   type: 解答
   score: 6
-  question: '在平面直角坐标系中，点，都在抛物线上，且，．
+  question: '在平面直角坐标系xOy中，点$(x_{1},y_{1})$，$(x_{2},y_{2})$都在抛物线$y = ax^2 - 2ax + 8 \, (a < 0)$上，且$-1<x_{1}<2$，$1-m<x_{1}<m+7$．
 
-    （1）当时，比较，的大小关系，并说明理由；
+    （1）当$m = -2$时，比较$y_{1}$，$y_{2}$的大小关系，并说明理由；
 
-    （2）若存在，，满足，求的取值范围．'
-  answer: ''
-  solution: ''
+    （2）若存在$x_1$，$x_2$，满足$y_{1}=y_{2}$，求m的取值范围．'
+  answer: （1）$y_{1}>y_{2}$，理由见解析 （2）$m > -2$
+  solution: '【小问1详解】
+
+    解：$y_{1}>y_{2}$，理由如下，
+
+    ∵$y=ax^{2}-2ax+8=a(x-1)^{2}+8-a$，
+
+    ∴抛物线的对称轴是直线$x = 1$，二次函数图像的开口向下，在对称轴的左边y随x的增大而增大，在对称轴的右边y随x的增大而减小，
+
+    ∵当$-1<x_{1}<2$时，$x=-1$时，$y_{1}$的值最小，
+
+    ∴$x_{1}=a\times(-1)^{2}-2a\times(-1)+8$，即$y_{1}>3a+8$，
+
+    当$m = -2$时，$3 < x_{2} < 5$，
+
+    则当$3 < x_{2} < 5$时，$x=3$时，$y_{2}$有最大值，
+
+    ∴$y_{1}=ax^{3}-2ax+3-8$，即$y_{2}<3a+8$，
+
+    ∴当$-1<x_{1}<2$时的最小值大于$3 < x_{2} < 5$时的最大值，
+
+    ∴$y_{1}>y_{2}$．
+
+    【小问2详解】
+
+    解：∵$1-m<x_{1}<m+7$，
+
+    ∴$1 - m < m + 7$，
+
+    ∴$m > -3$，
+
+    ∵存在$x_1$，$x_2$，满足$y_{1}=y_{2}$，且$-1<x_{1}<2$，
+
+    ∴$1-m<3$，
+
+    ∴$m > -2$，
+
+    综上所述，m的取值范围$m > -2$．'
   knowledge_points:
+  - 二次函数
   - 坐标系
   module: functions
   difficulty: 压轴
@@ -593,37 +1130,162 @@ questions:
 - id: 27
   type: 解答
   score: 7
-  question: '如图，在中，边绕点B顺时针旋转（）得到线段，边绕点C逆时针旋转得到线段，连接，点F是的中点．
+  question: '如图，在$\triangle ABC$中，边AB绕点B顺时针旋转$\alpha$（$0^\circ<\alpha<180^\circ$）得到线段BD，边AC绕点C逆时针旋转$180^\circ-\alpha$得到线段CE，连接DE，点F是DE的中点．
 
-    （1）以点F为对称中心，作点C关于点F的对称点G，连接．
+    [图]
 
-    ①依题意补全图形，并证明；
+    （1）以点F为对称中心，作点C关于点F的对称点G，连接$BG, DG$．
 
-    ②求证：；
+    ①依题意补全图形，并证明$AC = DG$；
 
-    （2）若，且于H，直接写出用等式表示的与的数量关系．'
-  answer: ''
-  solution: ''
+    ②求证：$\angle DGB = \angle ACB$；
+
+    （2）若$\alpha=60^\circ$，且$FH \perp BC$于H，直接写出用等式表示的FH与BC的数量关系．'
+  answer: （1）①补全图形见解析，证明见解析；②见解析 （2）$FH=\frac{\sqrt{3}}{4}BC$
+  solution: '【小问1详解】
+
+    ①依题意补全图形如图所示：
+
+    证明：∵点F是DE的中点，
+
+    ∴$DF = EF$，
+
+    ∵点C关于点F的对称点为G，
+
+    ∴$CF = GF$，
+
+    又∵$\angle DFG = \angle EFC$，
+
+    ∴$\triangle DFG \cong \triangle EFC$，
+
+    ∴$DG = CE$，
+
+    由旋转的性质可得：$AC = CE$，
+
+    ∴$AC = DG$；
+
+    [图]
+
+    ②证明：∵点C关于点F的对称点为G，
+
+    ∴$BG = BC$，
+
+    ∵$BD - BA, DG = AC$，
+
+    ∴$\triangle BDG \cong \triangle BAC$，
+
+    ∴$\angle DGB = \angle ACB$；
+
+    【小问2详解】
+
+    解：连接$AD,BF$，如图，由题意得$\angle DBA = \alpha = 60^{\circ}$，
+
+    ∵$\triangle BDG \cong \triangle BAC$，
+
+    ∴$\angle DBG = \angle CBA$，
+
+    ∴$\angle GBC=\angle DBA=60^{\circ}$，
+
+    ∵$BG = BC$，
+
+    ∴$\triangle BGC$是等边三角形，
+
+    ∴$\angle BCF=\angle GBC=60^\circ$，
+
+    ∵点F是CG的中点，
+
+    ∴$BF \perp CG, \angle CBF = \frac{1}{2} \angle CBG = 30^\circ$，
+
+    ∴$CF=\frac{1}{2}BC$，
+
+    ∵$FH \perp BC$，$\angle BCF = 60^\circ$，
+
+    ∴$FH = CF \sin 60^\circ = \frac{\sqrt{3}}{2} CF = \frac{\sqrt{3}}{4} BC$；
+
+    ∴FH与BC的数量关系是$FH=\frac{\sqrt{3}}{4}BC$．
+
+    [图]【点睛'
   knowledge_points:
   - 旋转
-  module: geometryComprehensive
+  - 三角函数
+  module: triangles
   difficulty: 压轴
   recommended_for:
   - L3
 - id: 28
   type: 解答
   score: 7
-  question: '在平面直角坐标系中，给定圆C和点P，若过点P最多可以作出k条不同的直线，且这些直线被圆C所截得的线段长度为正整数，则称点P关于圆C的特征值为k．已知圆O的半径为2，
+  question: '在平面直角坐标系xOy中，给定圆C和点P，若过点P最多可以作出k条不同的直线，且这些直线被圆C所截得的线段长度为正整数，则称点P关于圆C的特征值为k．已知圆O的半径为2，
 
-    （1）若点M坐标为，则经过点M的直线被圆O截得的弦长的最小值为___________，点M关于圆O的特征值为___________；
+    （1）若点M的坐标为$(1,1)$，则经过点M的直线被圆O截得的弦长的最小值为___________，点M关于圆O的特征值为___________；
 
-    （2）直线分别与x，y轴交于点A，B，若线段上总存在关于圆O的特征值为4的点，求b的取值范围；
+    （2）直线$y=x+b$分别与x，y轴交于点A，B，若线段AB上总存在关于圆O的特征值为4的点，求b的取值范围；
 
-    （3）点T是x轴正半轴上一点，圆T的半径为1，点R，S分别在圆O与圆T上，点R关于圆T的特征值记为r，点S关于圆O的特征值记为s．当点T在x轴正轴上运动时，若存在点R，S，使得，直接写出点T的横坐标t的取值范围．'
-  answer: ''
-  solution: ''
+    （3）点T是x轴正半轴上一点，圆T的半径为1，点R，S分别在圆O与圆T上，点R关于圆T的特征值记为r，点S关于圆O的特征值记为s．当点T在x轴正轴上运动时，若存在点R，S，使得$r+s=3$，直接写出点T的横坐标t的取值范围．'
+  answer: （1）$2\sqrt{2}$，3 （2）b的取值范围是$\sqrt{3}\leq b\leq \sqrt{6}$或$-\sqrt{6} \leq b \leq -\sqrt{3}$； （3）$2-\frac{\sqrt{3}}{2}\sin\frac{\pi}{4}+\left|\frac{\sqrt{2}}{2}\right|$
+  solution: '【小问1详解】
+
+    解：设经过点M的直线与$\odot\odot$交于E、F两点，过点O作$OH \perp EF$于H，连接$OM, OE$，
+
+    ∴$EF = 2EH$，
+
+    在$Rt\triangle OEH$中，由勾股定理得$EH = \sqrt{OE^{2} - OH^{2}} = \sqrt{4 - OH^{2}}$，
+
+    ∴当OH最大时，EH最小，即此时EF最小，
+
+    ∵点M的坐标为$(1,1)$，
+
+    ∴$OM = \sqrt{1^{2} + 1^{2}} = \sqrt{2}$，
+
+    又∵$OH \leq OM$，
+
+    ∴当点H与点M重合时，OH有最大值$\sqrt{2}$，
+
+    ∴此时EH有最小值$\sqrt{4-\left(-\sqrt{2}\right)^{2}}-\sqrt{2}$，
+
+    ∴EF的最小值为$2\sqrt{2}$
+
+    ∵过点M的直线被圆O截得的弦长的最大值为4（直径），
+
+    ∴被圆O截得的弦长取值范围为$2\sqrt{2}\leq x\leq 4$，
+
+    ∴被圆O截得的弦长为正整数的只有是3或4，
+
+    ∵被圆O截得的弦长为3的弦有2条，被圆O截得的弦长为4的弦只有1条，
+
+    ∴点M关于圆O的特征值为3，
+
+    故答案为：$2\sqrt{2}$，3；
+
+    [图]【小问2详解】
+
+    解：设点G是圆O的特征值为4的点，
+
+    由（1）可知经过一点G且弦长为4（最长弦）的直线有1条，弦长为3的直线有2条，
+
+    ∵特征值要保证为4，
+
+    ∴经过点G且弦长为2的直线有且只有1条，
+
+    ∴经过点G的直线被圆O截得的弦长的最小值为2，
+
+    ∵$\sqrt{2^{2}-1^{2}}=\sqrt{3}$，
+
+    ∴由（1）可知，关于圆O的特征值为4的所有点都在以O为圆心，$\sqrt{3}$为半径的圆周上，
+
+    [图]
+
+    ∵直线$y=x+b$分别与x，y轴交于点A，B，
+
+    ∴$A(-b,0)$，$B(0,\ b)$，
+
+    ∴$OA = OB = b$，
+
+    ∴$\ang'
   knowledge_points:
+  - 垂径定理
   - 弦
+  - 勾股定理
   - 坐标系
   module: circles
   difficulty: 压轴

@@ -1,8 +1,8 @@
 # ============================================================
 # 2023年北京朝阳区中考数学一模试卷 — 逐题分析
 # ============================================================
-# 数据来源：knowledge-original/精品解析：2023年北京市朝阳区中考一模数学试卷（原卷版）.docx
-# 自动生成，部分数学公式可能显示不全（docx公式对象无法完整提取）
+# 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
+# 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
 # 满分：100分  时长：120分钟
 
 year: 2023
@@ -11,90 +11,21 @@ exam_type: 一模
 subject: 数学
 full_score: 100
 duration_minutes: 120
-total_questions: 32
+total_questions: 28
 structure: 8选择(16分) + 8填空(16分) + 12解答(68分)
 questions:
 - id: 1
   type: 选择
   score: 2
-  question: 本试卷共8页，共三道大题，28道小题，考试时间120分钟．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 2
-  type: 选择
-  score: 2
-  question: 在试卷和答题卡上认真填写学校名称、班级、姓名和考号．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 3
-  type: 选择
-  score: 2
-  question: 试题答案一律填涂或书写在答题卡上，在试卷上作答无效．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 4
-  type: 选择
-  score: 2
-  question: 在答题卡上，选择题、作图题用2B铅笔作答，其他试题用黑色字迹签字笔作答．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 5
-  type: 选择
-  score: 2
-  question: 考试结束，请将本试卷、答题卡和草稿纸一并交回．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 1
-  type: 选择
-  score: 2
-  question: "右图是某几何体的三视图，该几何体是（    ）\nA 长方体\tB. 三棱柱\tC. 圆锥\tD. 圆柱"
-  answer: ''
-  solution: ''
+  question: '右图是某几何体的三视图，该几何体是（）
+
+    [图]
+
+    A.长方体B.三棱柱C.圆锥D.圆柱'
+  answer: A
+  solution: '解：由几何体的主视图和左视图都是长方形，可知该几何体是柱体，又因为俯视图是长方形，故该几何体是长方体．
+
+    故选：A．'
   knowledge_points:
   - 综合
   module: circles
@@ -107,9 +38,17 @@ questions:
 - id: 2
   type: 选择
   score: 2
-  question: "我国已建成世界上规模最大的社会保障体系、医疗卫生体系，基本养老保险覆盖1040000000人左右，将1040000000用科学记数法表示应为（    ）\nA. 1.04×1010\tB. 1.04×109\tC. 10.4×109\tD. 0.104×1011"
-  answer: ''
-  solution: ''
+  question: '我国已建成世界上规模最大的社会保障体系、医疗卫生体系，基本养老保险覆盖1040000000人左右，将1040000000用科学记数法表示应为（）
+
+    A.1.04×1010B.1.04×109C.10.4×109D.0.104×1011'
+  answer: B
+  solution: '解：1040000000的绝对值大于$10$表示成$a\times10^{n}$的形式，
+
+    ∵$a = 1.04$，$n=10-1=9$，
+
+    ∴1040000000表示成$1.04\times10^{9}$，
+
+    故选B．'
   knowledge_points:
   - 科学记数法
   module: numbersAndExpressions
@@ -122,9 +61,23 @@ questions:
 - id: 3
   type: 选择
   score: 2
-  question: "如图，若数轴上的点A表示下列四个无理数中的一个，则这个无理数是（    ）\nA. \tB. \tC. \tD. π"
-  answer: ''
-  solution: ''
+  question: '如图，若数轴上的点A表示下列四个无理数中的一个，则这个无理数是（）
+
+    [图]
+
+    A.$-\sqrt{2}$B.$\sqrt{2}$C.$\sqrt{3}$D.π'
+  answer: D
+  solution: '解：由数轴可知，点A表示的无理数大于3且小于4．
+
+    A、$-\sqrt{2} < 0$，不符合题意；
+
+    B、$1<\sqrt{2}<2$，不符合题意；
+
+    C、$1<\sqrt{3}<2$，不符合题意；
+
+    D、$\pi \approx 3.14$，符合题意；
+
+    故选：D．'
   knowledge_points:
   - 综合
   module: numbersAndExpressions
@@ -137,12 +90,24 @@ questions:
 - id: 4
   type: 选择
   score: 2
-  question: "如图，直线，相交于点O，若，，则的度数为（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '如图，直线AB，CD相交于点O，若$\angle AOC = 60^\circ$，$\angle BOE=40^{\circ}$，则$\angle DOE$的度数为（）
+
+    [图]
+
+    A.$60^\circ$B.$40^\circ$C.$20^\circ$D.$10^\circ$'
+  answer: C
+  solution: '解：$\angle AOC = 60^\circ$，
+
+    $\angle BOD = 60^\circ$，
+
+    $\angle BOE = 40^\circ$，
+
+    ∴$\angle DOE=\angle BOD-\angle BOE=60^{\circ}-40^{\circ}=20^{\circ}$，
+
+    故选：C．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 对顶角
+  module: triangles
   difficulty: 基础
   recommended_for:
   - L0
@@ -152,9 +117,15 @@ questions:
 - id: 5
   type: 选择
   score: 2
-  question: "经过某路口的汽车，只能直行或右转．若这两种可能性大小相同，则经过该路口的两辆汽车都直行的概率为（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '经过某路口的汽车，只能直行或右转．若这两种可能性大小相同，则经过该路口的两辆汽车都直行的概率为（）
+
+    A.$\frac{1}{4}$B.$\frac{1}{3}$C.$\frac{1}{2}$D.$\frac{3}{4}$'
+  answer: A
+  solution: '解：由题意知，A，B两辆汽车经过该路口时共有4种等可能的情况，分别是：A直行B右转，A直行B直行，A右转B右转，A右转B直行，
+
+    因此经过该路口的两辆汽车都直行的概率为$\frac{1}{4}$．
+
+    故选A．'
   knowledge_points:
   - 概率
   module: statisticsAndProbability
@@ -167,9 +138,13 @@ questions:
 - id: 6
   type: 选择
   score: 2
-  question: "正六边形的外角和是（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '正六边形的外角和是（）
+
+    A.$180^\circ$B.$360^\circ$C.$540^\circ$D.$720^\circ$'
+  answer: B
+  solution: '解：正六边形的外角和是$360^\circ$．
+
+    故选：B．'
   knowledge_points:
   - 综合
   module: triangles
@@ -181,9 +156,17 @@ questions:
 - id: 7
   type: 选择
   score: 2
-  question: "某中学为了解学生对四类劳动课程的喜欢情况，从本校学生中随机抽取了名进行问卷调查，根据数据绘制了如图所示的统计图．若该校有名学生，估计喜欢木工的人数为（    ）\nA. 64\tB. 380\tC. 640\tD. 720"
-  answer: ''
-  solution: ''
+  question: '某中学为了解学生对四类劳动课程的喜欢情况，从本校学生中随机抽取了$200$名进行问卷调查，根据数据绘制了如图所示的统计图．若该校有$2000$名学生，估计喜欢木工的人数为（）
+
+    [图]
+
+    A.64B.380C.640D.720'
+  answer: C
+  solution: '解：$2000\times32\%=640$人，
+
+    ∴估计喜欢木工的人数为640人，
+
+    故选C．'
   knowledge_points:
   - 统计
   module: statisticsAndProbability
@@ -195,12 +178,35 @@ questions:
 - id: 8
   type: 选择
   score: 2
-  question: "下面的三个问题中都有两个变量：\n①矩形的面积一定，一边长与它的邻边；\n②某村的耕地面积一定，该村人均耕地面积与全村总人口；\n③汽车的行驶速度一定，行驶路程与行驶时间．\n其中，两个变量之间的函数关系可以用如图所示的图象表示的是（    ）\nA. ①②\tB. ①③\tC. ②③\tD. ①②③"
-  answer: ''
-  solution: ''
+  question: '下面的三个问题中都有两个变量：
+
+    ①矩形的面积一定，一边长y与它的邻边x；
+
+    ②某村的耕地面积一定，该村人均耕地面积S与全村总人口n；
+
+    ③汽车的行驶速度一定，行驶路程S与行驶时间t．
+
+    其中，两个变量之间的函数关系可以用如图所示的图象表示的是（）
+
+    [图]
+
+    A.①②B.①③C.②③D.①②③'
+  answer: A
+  solution: '解：由函数图象可知，这两个变量之间成反比例函数关系，
+
+    ①矩形的面积$=x\cdot y$，因此矩形的面积一定时，一边长y与它的邻边x可以用形如$y=\frac{k}{x}(k\neq0)$的式子表示，即满足所给的函数图象；
+
+    ②耕地面积$= S \cdot n$，因此耕地面积一定时，该村人均耕地面积S与全村总人口n可以用形如$y=\frac{k}{x}(k\neq0)$的式子表示，即满足所给的函数图象；
+
+    ③汽车的行驶速度$= \frac{S}{t}$，因此汽车的行驶速度一定，行驶路程s与行驶时间t不可以用形如$y=\frac{k}{x}(k\neq0)$的式子表示，即不满足所给的函数图象；
+
+    综上可知：①②符合要求，
+
+    故选A．'
   knowledge_points:
+  - 反比例函数
   - 矩形
-  module: quadrilaterals
+  module: functions
   difficulty: 较难
   recommended_for:
   - L2
@@ -208,11 +214,15 @@ questions:
 - id: 9
   type: 填空
   score: 2
-  question: 若式子在实数范围内有意义，则x的取值范围是_________．
-  answer: ''
-  solution: ''
+  question: 若式子$\sqrt{x-5}$在实数范围内有意义，则x的取值范围是_________．
+  answer: x≥5
+  solution: '∵$\sqrt{x-5}$在实数范围内有意义，
+
+    ∴x−5⩾0，解得x⩾5．
+
+    故答案为：x≥5'
   knowledge_points:
-  - 综合
+  - 不等式
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -224,8 +234,10 @@ questions:
   type: 填空
   score: 2
   question: 分解因式：3a2﹣6a+3=____．
-  answer: ''
-  solution: ''
+  answer: 3（a﹣1）2．
+  solution: '解：原式=3（a2﹣2a+1）=3（a﹣1）2．
+
+    故答案为：3（a﹣1）2．'
   knowledge_points:
   - 综合
   module: geometryComprehensive
@@ -238,12 +250,17 @@ questions:
 - id: 11
   type: 填空
   score: 2
-  question: 已知关于的一元二次方程有两个相等的实数根，则实数的值为_______．
-  answer: ''
-  solution: ''
+  question: 已知关于x的一元二次方程$x^{2}+6x+k=0$有两个相等的实数根，则实数k的值为_______．
+  answer: '9'
+  solution: '解：由题可知：“△=0”，即$6^2 - 4k = 0$；
+
+    ∴$k=9$；
+
+    故答案为：9．'
   knowledge_points:
   - 一元二次方程
-  module: numbersAndExpressions
+  - 根的判别式
+  module: equationsAndInequalities
   difficulty: 基础
   recommended_for:
   - L0
@@ -253,12 +270,20 @@ questions:
 - id: 12
   type: 填空
   score: 2
-  question: 方程的解为_______．
-  answer: ''
-  solution: ''
+  question: 方程$\frac{3}{x+2}=\frac{2}{x}$的解为_______．
+  answer: $x = 4$
+  solution: '解：去分母得：$3x=2(x+2)$，
+
+    解得：$x = 4$，
+
+    检验：当$x = 4$时，$x(x+2)=0$，
+
+    所以$x = 4$是分式方程的解，
+
+    故答案为：$x = 4$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 分式方程
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -268,9 +293,15 @@ questions:
 - id: 13
   type: 填空
   score: 2
-  question: 在平面直角坐标系中，若反比例函数的图象经过点和点，则______．
-  answer: ''
-  solution: ''
+  question: 在平面直角坐标系xOy中，若反比例函数$y=\frac{6}{x}$$[公式]$图象经过点$A(2,m)$和点$B(-2,n)$，则$m+n=$______．
+  answer: '0'
+  solution: '解：∵点A和B在反比例函数图象上，
+
+    ∴$m = \frac{6}{2} = 3$，$n = \frac{6}{-2} = -3$，
+
+    ∴$m+n=3-3=0$，
+
+    故答案为：0；'
   knowledge_points:
   - 反比例函数
   - 坐标系
@@ -283,9 +314,23 @@ questions:
 - id: 14
   type: 填空
   score: 2
-  question: 如图，在△ABC中，DE是AC的垂直平分线，AC=6cm，且△ABD的周长为13cm，则△ABC的周长为_____
-  answer: ''
-  solution: ''
+  question: '如图，在△ABC中，DE是AC的垂直平分线，AC=6cm，且△ABD的周长为13cm，则△ABC的周长为_____
+
+    [图]'
+  answer: 19cm##19厘米
+  solution: '解：∵DE是AC的垂直平分线，
+
+    ∴AD=CD，
+
+    ∵△ABD的周长为13cm，
+
+    ∴AB+BD+AD=AB+BD+CD=13cm，
+
+    ∵AC=6cm，
+
+    ∴△ABC的周长=AB+BD+CD+AC=13+6=19cm，
+
+    故答案为：19cm．'
   knowledge_points:
   - 综合
   module: geometryComprehensive
@@ -297,12 +342,34 @@ questions:
 - id: 15
   type: 填空
   score: 2
-  question: 如图，在矩形中，点E在边上，连接并延长，交的延长线于点F．若，，，则的长为______．
-  answer: ''
-  solution: ''
+  question: '如图，在矩形$ABCD$中，点E在AD边上，连接BE并延长，交CD的延长线于点F．若$AB=2$，$BC = 4$，$\frac{AE}{DE}=2$，则BF的长为______．
+
+    [图]'
+  answer: '5'
+  solution: '解：在矩形$ABCD$中，$AB \parallel CD$，$AB=CD=2$，$\angle C=90^{\circ}$，
+
+    ∵$AB \parallel CD$，
+
+    ∴$\triangle ABE \cong \triangle DFE$，
+
+    ∴$\frac{AB}{DF}=\frac{AE}{DE}$，
+
+    ∵$\frac{AE}{DE}=2$，
+
+    ∴$\frac{2}{DF}=2$，即$DF = 1$，
+
+    ∴$CF = 3$，
+
+    ∵$BC = 4$，
+
+    ∴在$Rt\triangle BCF$中，$BF = \sqrt{FC^{2} + BC^{2}} = 5$，
+
+    故答案为：5．'
   knowledge_points:
+  - 相似三角形
+  - 勾股定理
   - 矩形
-  module: quadrilaterals
+  module: triangles
   difficulty: 中档
   recommended_for:
   - L1
@@ -316,11 +383,42 @@ questions:
     （1）若该旅游团一晚的住宿房费为1530元，则他们租住了_______间一人间；
 
     （2）若该旅游团租住了3间一人间，且共有19名男士，则租住一晚的住宿房费最少为______元．'
-  answer: ''
-  solution: ''
+  answer: ①.1②.1600
+  solution: '解：（1）设它们租住了x间1人间，y间三人间，且x、y均为自然数，
+
+    根据题意有：$\begin{aligned}
+
+    &0 \leq x \leq 4 \\
+
+    &x + 3y = 33 \\
+
+    &100x + 130y = 1530
+
+    \end{aligned}$，解得：$x \leq \frac{30}{17}$，
+
+    ∵且x、y均为自然数，
+
+    ∴x可以取0和1，
+
+    当$x = 0$时，$y = \frac{153}{13}$，不为自然数，舍去，
+
+    当$x = 1$时，$y=11$，即他们租住了1间一人间．
+
+    故答案为：1．
+
+    （2）33人中共有19名男士，则女士有14名，
+
+    ∵$19\div3=6\cdots\cdots1$，$14\div3=4\cdots2$，该团已经租住了3间1人间，
+
+    ∴安排2名女士和1名男士住1人间，剩下的18名男士和12名女士住三人间，即可最节省，
+
+    即：$\left(\frac{18}{3}+\frac{12}{3}\right)\times130+100\times3=1600$（元）．
+
+    故答案为：1600．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 不等式
+  - 不等式组
+  module: equationsAndInequalities
   difficulty: 较难
   recommended_for:
   - L2
@@ -328,11 +426,53 @@ questions:
 - id: 17
   type: 解答
   score: 5
-  question: '计算：．
+  question: 计算：$\left(x-\sqrt{3}\right)^{2}-2\sin45^{\circ}+|-\sqrt{2}|+\sqrt{8}$．
+  answer: $1+2\sqrt{2}$
+  solution: '解：$\left(x-\sqrt{3}\right)^{2}-2\sin45^{\circ}+|-\sqrt{2}|+\sqrt{8}$
 
-    18 解不等式组：'
-  answer: ''
-  solution: ''
+    $-1-2\times\frac{\sqrt{2}}{2}+\sqrt{2}+2\sqrt{2}$
+
+    $1-\sqrt{2}+\sqrt{2}+2\sqrt{2}$
+
+    $=1+2\sqrt{2}$.'
+  knowledge_points:
+  - 三角函数
+  - 绝对值
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 18
+  type: 解答
+  score: 5
+  question: '解不等式组：$\begin{aligned}
+
+    &x+1 \geq 7-2x \\
+
+    &x \leq \frac{4+2x}{3}
+
+    \end{aligned}$'
+  answer: $2<x\leq4$
+  solution: '解：原不等式组为$\left\{
+
+    \begin{array}{l}
+
+    |x+1| \geq 7-2x \quad \text{①} \\
+
+    x \leq \dfrac{4+2x}{3} \quad \text{②}
+
+    \end{array}
+
+    \right.$
+
+    解不等式①，得$x>2$，
+
+    解不等式②，得$x \leq 4$，
+
+    ∴原不等式组的解集为$2<x\leq4$．'
   knowledge_points:
   - 不等式
   - 不等式组
@@ -346,12 +486,22 @@ questions:
 - id: 19
   type: 解答
   score: 5
-  question: 已知，求代数式的值．
-  answer: ''
-  solution: ''
+  question: 已知$x^2 - x - 3 = 0$，求代数式$(x+2)(x-2)-x(2-x)$的值．
+  answer: '2'
+  solution: '解：$(x+2)(x-2)-x(2-x)$，
+
+    $=x^{2}-4-2x+x^{2}$，
+
+    $=2x^{2}-2x-4$，
+
+    ∵$x^2 - x - 3 = 0$，
+
+    ∴$x^{2}-x=3$．0
+
+    ∴原式$=2(x^{2}-x)-4=2$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 方差
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -361,11 +511,63 @@ questions:
 - id: 20
   type: 解答
   score: 5
-  question: 下面是证明“等腰三角形的两个底角相等”的两种添加辅助线的方法，选择其中一种，完成证明．
-  answer: ''
-  solution: ''
+  question: '下面是证明“等腰三角形的两个底角相等”的两种添加辅助线的方法，选择其中一种，完成证明．
+
+    已知：如图，在$\triangle ABC$中，$AB = AC$．
+
+    求证：$\angle B = \angle C$．
+
+    [图]
+
+    方法一
+
+    证明：如图，作$\triangle ABC$的中线AD．
+
+    [图]
+
+    方法二
+
+    证明：如图，作$\triangle ABC$的角平分线AD．
+
+    [图]'
+  answer: 见解析
+  solution: '解：方法一，
+
+    证明：如图，取BC中点D，连接AD，
+
+    则$BD = CD$，
+
+    [图]
+
+    在$\triangle ABD$和$\triangle ACD$中，
+
+    $\left\{ \begin{array}{l} AB = AC \\ AD = AD \\ BD = CD \end{array} \right.$，
+
+    $\triangle ABD\cong\triangle ACD(SSS)$，
+
+    $\angle B=\angle C$；
+
+    方法二：
+
+    证明：如图，作$\angle BAC$的角平分线，交BC于点D．
+
+    [图]
+
+    $\angle BAD = \angle CAD$，
+
+    在$\triangle ABD$和$\triangle ACD$中，
+
+    $AB = AC \\
+
+    \angle BAD = \angle CAD \\
+
+    AD = AD$，
+
+    $\triangle ABD \cong \triangle ACD(SAS)$，
+
+    $\angle B=\angle C$．'
   knowledge_points:
-  - 综合
+  - 全等三角形
   module: triangles
   difficulty: 中档
   recommended_for:
@@ -375,14 +577,49 @@ questions:
 - id: 21
   type: 解答
   score: 5
-  question: '如图，在平行四边形中，对角线相交于点O，点E，F在上，，连接．
+  question: '如图，在平行四边形$ABCD$中，对角线$AC,BD$相交于点O，点E，F在BD上，$AE \parallel CF$，连接$AF,CE$．
 
-    （1）求证：四边形为平行四边形；
+    [图]
 
-    （2）若，求证：四边形是矩形．'
-  answer: ''
-  solution: ''
+    （1）求证：四边形$AECF$为平行四边形；
+
+    （2）若$\angle EAO+\angle CFD=180^{\circ}$，求证：四边形$AECF$是矩形．'
+  answer: （1）见解析（2）见解析
+  solution: '【小问1详解】
+
+    证明：∵四边形$ABCD$是平行四边形，
+
+    ∴$OA = OC$．
+
+    ∵$AE \parallel CF$，
+
+    ∴$\angle EAO = \angle FCO$．
+
+    ∵$\angle AOE = \angle COF$，
+
+    ∴$\triangle AEO\cong\triangle CFO(ASA)$．
+
+    ∴$OE = OF$．
+
+    ∴四边形$AECF$为平行四边形．
+
+    【小问2详解】
+
+    ∵$\angle EAO+\angle CFD=180^\circ,\angle CFO+\angle CFD=180^\circ$，
+
+    ∴$\angle EAO = \angle CFO$．
+
+    ∵$\angle EAO = \angle FCO$，
+
+    ∴$\angle FCO = \angle CFO$．
+
+    ∴$OC = OF$．
+
+    ∴$AC = EF$．
+
+    ∴四边形$AECF$是矩形．'
   knowledge_points:
+  - 全等三角形
   - 平行四边形
   - 矩形
   module: quadrilaterals
@@ -394,15 +631,42 @@ questions:
 - id: 22
   type: 解答
   score: 5
-  question: '在平面直角坐标系中，一次函数的图象经过点，，与x轴交于点A．
+  question: '在平面直角坐标系xOy中，一次函数$y=kx+b(k\neq0)$的图象经过点$(0,1)$，$(-2,2)$，与x轴交于点A．
 
     （1）求该一次函数的表达式及点A的坐标；
 
-    （2）当时，对于x的每一个值，函数的值大于一次函数的值，直接写出m的取值范围．'
-  answer: ''
-  solution: ''
+    （2）当$x^{2}$时，对于x的每一个值，函数$y=2x+m$的值大于一次函数$y=kx+b(k\neq0)$的值，直接写出m的取值范围．'
+  answer: （1）$y=-\frac{1}{2}x+1$，$A(2,0)$ （2）$m > -4$
+  solution: '【小问1详解】
+
+    解：∵一次函数$y=kx+b(k\neq0)$的图象经过点$(0,1)$，$(-2,2)$，
+
+    ∴$\left\{ \begin{array}{l} b = 1 \\ -2k + b = 2 \end{array} \right.$，
+
+    解得$\left\{ \begin{array}{l} k = -\dfrac{1}{2} \\ b = 1 \end{array} \right.$，
+
+    ∴该一次函数的表达式为$y=-\frac{1}{2}x+1$，
+
+    令$y = 0$，得$x=2$，
+
+    ∴$A(2,\ 0)$；
+
+    【小问2详解】
+
+    解：由题意得：当$x^{2}$时，$(2x+m)-\left(-\frac{1}{2}x+1\right)>0$，
+
+    化简得：$x > \frac{2}{5}(1 - m)$，
+
+    ∵$x^{2}$时，不等式$x > \frac{2}{5}(1 - m)$要一直成立，
+
+    ∴$\frac{2}{5}(1-m)$要小于x的最小值，
+
+    ∴$\frac{2}{5}(1-m)<2$，
+
+    ∴$m > -4$.'
   knowledge_points:
   - 一次函数
+  - 不等式
   - 坐标系
   module: functions
   difficulty: 中档
@@ -413,17 +677,73 @@ questions:
 - id: 23
   type: 解答
   score: 6
-  question: '如图，是的弦，过点O作，垂足为C，过点A作的切线，交的延长线于点D，连接．
+  question: '如图，AB是$\odot\odot$的弦，过点O作$OC \perp AB$，垂足为C，过点A作$\odot\odot$的切线，交OC的延长线于点D，连接OB．
 
-    （1）求证：；
+    [图]
 
-    （2）延长交于点E，连接，，若，，求的长．'
-  answer: ''
-  solution: ''
+    （1）求证：$\angle B = \angle D$；
+
+    （2）延长BO交$\odot\odot$于点E，连接AE，CE，若$AD = 2\sqrt{5}$，$\sin B = \frac{\sqrt{5}}{5}$，求CE的长．'
+  answer: （1）见解析（2）$2\sqrt{2}$
+  solution: '【小问1详解】
+
+    证明：如图，连接OA，
+
+    [图]
+
+    ∵AD为$\odot\odot$的切线，
+
+    ∴$\angle OAD = 90^\circ$
+
+    ∴$\angle CAD+\angle OAB=90^\circ$，
+
+    ∵$OC \perp AB$，
+
+    ∴$\angle ACD=90^\circ$，
+
+    ∴$\angle CAD+\angle D=90^{\circ}$，
+
+    ∴$\angle OAB = \angle D$，
+
+    ∵$OA = OB$，
+
+    ∴$\angle OAB = \angle B$，
+
+    ∴$\angle B = \angle D$；
+
+    【小问2详解】
+
+    解：延长BO交$\odot\odot$于点E，连接AE，CE，如图所示，
+
+    [图]
+
+    在$Rt\triangle ACD$中，$AD = 2\sqrt{5}$，$\sin D = \sin B = \frac{\sqrt{5}}{5}$，
+
+    可得$AC = AD \cdot \sin D = 2$，
+
+    ∵$OC \perp AB$，
+
+    ∴$AB = 2AC = 4$，
+
+    根据勾股定理，得$CD=\sqrt{AD^{2}+AC^{2}}=\sqrt{\left(2\sqrt{5}\right)^{2}-2^{2}}=4$，
+
+    ∴$\tan B = \tan D = \frac{1}{2}$，
+
+    ∵BE为$\odot\odot$的直径，
+
+    ∴$\angle EAB = 90^\circ$，
+
+    在$Rt\triangle ABE$中，$AE\cdot AB\cdot\tan B=2$，
+
+    在$Rt\triangle ACE$中，根据勾股定理，得$CE=\sqrt{AC^{2}+AE^{2}}=2\sqrt{2}$．'
   knowledge_points:
+  - 垂径定理
   - 切线
   - 弦
-  module: circles
+  - 勾股定理
+  - 三角函数
+  - 锐角三角函数
+  module: triangles
   difficulty: 较难
   recommended_for:
   - L2
@@ -435,19 +755,59 @@ questions:
 
     a．七、八年级学生平均每天阅读时间统计图：
 
-    b．九年级学生平均每天阅读时间： 21  22  25  33  36  36  37  37  39  39  41  42  46  48  50
+    [图][图]
+
+    b．九年级学生平均每天阅读时间：21
+
+    22  25  33  36  36  37  37  39  39  41  42  46  48  50
 
     c．七、八、九年级学生平均每天阅读时间的平均数：
 
+    年级
+
+    七
+
+    八
+
+    九
+
+    平均数
+
+    26.4
+
+    35.2
+
+    36.8
+
     根据以上信息，回答下列问题：
 
-    （1）抽取的15名九年级学生平均每天阅读时间的中位数是    ；
+    （1）抽取的15名九年级学生平均每天阅读时间的中位数是；
 
     （2）求三个年级抽取的45名学生平均每天阅读时间的平均数；
 
-    （3）若七、八、九年级抽取的学生平均每天阅读时间的方差分别为，则之间的大小关系为      ．'
-  answer: ''
-  solution: ''
+    （3）若七、八、九年级抽取的学生平均每天阅读时间的方差分别为$s_{1}^{2},s_{2}^{2},s_{3}^{2}$，则$s_{1}^{2},s_{2}^{2},s_{3}^{2}$之间的大小关系为．'
+  answer: （1）37（2）32.8 （3）$s_{2}^{2}<s_{1}^{2}<s_{3}^{2}$
+  solution: '【小问1详解】
+
+    解：由中位数是第8位上$[公式]$数可知，中位数为37，
+
+    故答案为：37；
+
+    【小问2详解】
+
+    解：由题意知，三个年级抽取的45名学生平均每天阅读时间的平均数为$15\times26.4+15\times35.2+15\times36.8=32.8$，
+
+    ∴三个年级抽取的45名学生平均每天阅读时间的平均数为32.8；
+
+    【小问3详解】
+
+    解：由方差越大，数据的波动程度越大，方差越小，数据的波动程度越小，
+
+    观察七、八年级的统计图以及九年级的数据可知，九年级的数据波动最大、八年级的数据波动最小，
+
+    ∴$s_{2}^{2}<s_{1}^{2}<s_{3}^{2}$，
+
+    故答案为：$s_{2}^{2}<s_{1}^{2}<s_{3}^{2}$．'
   knowledge_points:
   - 统计
   - 平均数
@@ -461,15 +821,71 @@ questions:
 - id: 25
   type: 解答
   score: 6
-  question: '一位滑雪者从某山坡滑下并滑完全程，滑行距离s（单位：m）与滑行时间t（单位：s）近似满足“一次函数”、“二次函数”或“反比例函数”关系中的一种． 测得一些数据如下：
+  question: '一位滑雪者从某山坡滑下并滑完全程，滑行距离s（单位：m）与滑行时间t（单位：s）近似满足“一次函数”、“二次函数”或“反比例函数”关系中的一种．测得一些数据如下：
 
-    （1）s是t的        函数（填“一次”、“二次”或“反比例”）；
+    滑行时间t/s
+
+    0
+
+    1
+
+    2
+
+    3
+
+    4
+
+    滑行距离s/m
+
+    0
+
+    2
+
+    6
+
+    12
+
+    20
+
+    （1）s是t$[公式]$函数（填“一次”、“二次”或“反比例”）；
 
     （2）求s关于t的函数表达式；
 
-    （3）已知第二位滑雪者也从坡顶滑下并滑完全程，且滑行距离与第一位滑雪者相同，滑行距离s（单位：m）与滑行时间t（单位：s）近似满足函数关系．记第一位滑雪者滑完全程所用时间为，第二位滑雪者滑完全程所用时间为，则___（填“<”，“=”或“>”）．'
-  answer: ''
-  solution: ''
+    （3）已知第二位滑雪者也从坡顶滑下并滑完全程，且滑行距离与第一位滑雪者相同，滑行距离s（单位：m）与滑行时间t（单位：s）近似满足函数关系$s=\frac{5}{2}t^{2}+2t$．记第一位滑雪者滑完全程所用时间为$t_{1}$，第二位滑雪者滑完全程所用时间为$t_{2}$，则$t_{1}$___$t_{2}$（填“<”，“=”或“>”）．'
+  answer: （1）二次（2）$s=t^{2}+t$ （3）>
+  solution: '【小问1详解】
+
+    解：根据自变量增加1时，函数值依次增加2，4，6，8，可判断为二次函数，
+
+    故答案为：二次．
+
+    【小问2详解】
+
+    解：设s关于t的函数表达式为$s = at^2 + bt$，
+
+    根据题意，得
+
+    $\begin{cases}
+
+    a + b = 2 \\
+
+    4a + 2b = 6
+
+    \end{cases}$
+
+    解得$\left\{\begin{array}{l}a=1\\b=1\end{array}\right.$
+
+    ∴s关于t的函数表达式为$s=t^{2}+t$．
+
+    【小问3详解】
+
+    解：根据题意，$\left\{ \begin{array} { l } { s = t _ { 1 } ^ { 2 } + t _ { 1 } } \\ { s _ { c } = \frac { 5 } { 2 } t _ { 2 } ^ { 2 } + 2 t _ { 2 } } \end{array} \right.$
+
+    当$s_{1}=s_{2}=20$时，$t_{1}=4$，$t_{2}=\frac{2\sqrt{51}-2}{5}\approx 2.457$
+
+    ∴$t_{1}>t_{2}$
+
+    故答案为＞．'
   knowledge_points:
   - 一次函数
   - 反比例函数
@@ -482,16 +898,55 @@ questions:
 - id: 26
   type: 解答
   score: 6
-  question: '在平面直角坐标系中，抛物线经过点．
+  question: '在平面直角坐标系xOy中，抛物线$y=ax^{2}+(2m-6)x+1$经过点$(1,2m-4)$．
 
     （1）求a的值；
 
-    （2）求抛物线对称轴（用含m的式子表示）；
+    （2）求抛物线的对称轴（用含m的式子表示）；
 
-    （3）点，，在抛物线上，若，求m的取值范围．'
-  answer: ''
-  solution: ''
+    （3）点$(-m, y_1)$，$\left(m,y_{2}\right)$，$(m+2,y_{3})$在抛物线上，若$y_{2}<y_{3}\leqslant y_{1}$，求m的取值范围．'
+  answer: （1）1（2）$x=3-m$ （3）$1 < m \leq 2$
+  solution: '【小问1详解】
+
+    解：∵抛物线$y=ax^{2}+(2m-6)x+1$经过点$(1,\ 2m-4)$，
+
+    ∴$2m-4=a+(2m-6)+1$，
+
+    ∴$a = 1$；
+
+    【小问2详解】
+
+    由（1）得抛物线的表达式为$y=x^{2}+(2m-6)x+1$，
+
+    即$y=\left[x+(m-3)\right]^{2}+1-(m-3)^{2}$，
+
+    ∴抛物线的对称轴为$x=3-m$；
+
+    【小问3详解】
+
+    ①当$m > 0$时，
+
+    可知点$(-m, y_1)$，$\left(m,\,y_{2}\right)$，$(m+2,\ y_{3})$从左至右分布，
+
+    根据$y_{2}<y_{3}$可得$3-m<\frac{m+n+2}{2}$，
+
+    ∴$m > 1$，
+
+    根据$y_{3} \leq y_{1}$可得$3. m^{2}-2m+n+2=2$，
+
+    ∴$m \leq 2$，
+
+    ∴$1 < m \leq 2$；
+
+    ②当$m \leq 0$时，即$\begin{bmatrix} -m & 0 \end{bmatrix}$，
+
+    ∵$m \leq -m < -m + 3$，
+
+    ∴$y_{2}\quad y_{1}$，不符合题意.
+
+    综上，m的取值范围为$1 < m \leq 2$．'
   knowledge_points:
+  - 二次函数
   - 坐标系
   module: functions
   difficulty: 压轴
@@ -500,15 +955,81 @@ questions:
 - id: 27
   type: 解答
   score: 7
-  question: '如图，，点A在上，过点A作的平行线，与的平分线交于点B，点C在上（不与点O，B重合），连接，将线段绕点A顺时针旋转，得到线段，连接．
+  question: '如图，$\angle MON = \alpha$，点A在ON上，过点A作OM的平行线，与$\angle MON$的平分线交于点B，点C在OB上（不与点O，B重合），连接AC，将线段AC绕点A顺时针旋转$180^\circ-\alpha$，得到线段AD，连接BD．
 
-    （1）直接写出线段与之间数量关系，并证明；
+    [图]
 
-    （2）连接并延长，分别交，于点E，F．若，用等式表示线段与之间的数量关系，并证明．'
-  answer: ''
-  solution: ''
+    （1）直接写出线段AO与AB之间的数量关系，并证明$\angle MOB = \angle DBA$；
+
+    （2）连接DC并延长，分别交AB，OM于点E，F．若$\alpha=60^\circ$，用等式表示线段EF与AC之间的数量关系，并证明．'
+  answer: （1）$AO = AB$，证明见解析 （2）$EF = \sqrt{3}AC$，证明见解析
+  solution: '【小问1详解】
+
+    解：线段AO与AB的数量关系为$AO = AB$，
+
+    ∵OB平分$\angle MON$，
+
+    ∴$\angle MOB = \angle NOB$，
+
+    ∵$OM \parallel AB$，
+
+    ∴$\angle MOB = \angle ABO$，
+
+    ∴$\angle NOB = \angle ABO$，
+
+    ∴$AO = AB$，
+
+    证明：由旋转的性质可得$AC = AD$，$\angle CAD=180^{\circ}-\alpha$，
+
+    ∵$OM \parallel AB$，
+
+    ∴$\angle OAB=180^\circ-\alpha$，
+
+    ∴$\angle OAB = \angle CAD$，即$\angle OAC+\angle CAB=\angle CAB+\angle BAD$，
+
+    ∴$\angle OAC = \angle BAD$，
+
+    在$\triangle OAC$和$\triangle BAD$中，
+
+    ∵$\begin{aligned}
+
+    &AO = AB \\
+
+    &\angle OAC = \angle BAD \\
+
+    &AC = AD
+
+    \end{aligned}$，
+
+    ∴$\triangle OAC\cong\triangle BAD(SAS)$，
+
+    ∴$\angle AOC = \angle DBA$，
+
+    ∵$\angle AOC = \angle MOB$，
+
+    ∴$\angle MOB = \angle DBA$；
+
+    $[公式]$小问2详解】
+
+    解：$EF = \sqrt{3}AC$，证明如下：
+
+    如图，在OM上截取OH使$OH = BE$，连接CH，
+
+    [图]
+
+    ∵$\triangle OAC\cong\triangle BAD(SAS)$，
+
+    ∴$OC = BD$，
+
+    在$\triangle COH$和$\triangle DBE$中，
+
+    ∵$\begin{aligned}
+
+    &O'
   knowledge_points:
   - 平行线
+  - 弦
+  - 全等三角形
   - 旋转
   module: triangles
   difficulty: 压轴
@@ -517,22 +1038,71 @@ questions:
 - id: 28
   type: 解答
   score: 7
-  question: '在平面直角坐标系中，对于点P，C，Q（点P与点C不重合），给出如下定义：若，且，则称点Q为点P关于点C的“k—关联点”．已知点 ，的半径为r．
+  question: '在平面直角坐标系xOy中，对于点P，C，Q（点P与点C不重合），给出如下定义：若$\angle PCQ=90^{\circ}$，且$\frac{CQ}{CP}=\frac{1}{k}$，则称点Q为点P关于点C的“k—关联点”．已知点$A(3,0),\ B(0,3\sqrt{3})$，$\odot\odot$的半径为r．
 
-    （1）①在点中，是点A关于点O的“1—关联点”的为        ；
+    （1）①在点$D(0,3),\ E(0,-1.5),\ F(3,3)$中，是点A关于点O的“1—关联点”的为；
 
-    ②点B关于点O的“—关联点”的坐标为        ；
+    ②点B关于点O$[公式]$“$\sqrt{3}$—关联点”的坐标为；
 
-    （2）点P为线段上的任意一点，点C为线段上任意一点（不与点B重合）．
+    （2）点P为线段AB上的任意一点，点C为线段OB上任意一点（不与点B重合）．
 
-    ①若上存在点P关于点O的“—关联点”，直接写出r的最大值及最小值；
+    ①若$\odot\odot$上存在点P关于点O的“$\sqrt{3}$—关联点”，直接写出r的最大值及最小值；
 
-    ②当时，上不存在点P关于点C的“k—关联点”，直接写出k的取值范围：       ．'
-  answer: ''
-  solution: ''
+    ②当$r=3\sqrt{21}$时，$\odot\odot$上不存在点P关于点C的“k—关联点”，直接写出k的取值范围：．'
+  answer: （1）①D；②$(3,0)$或$(-3,0)$； （2）①3，$\frac{3}{2}$；②$k \frac{\sqrt{3}}{3}$
+  solution: '【小问1详解】
+
+    解：①由题意得，如果一个点M是点A关于点O的“1—关联点”，则$\angle MOA = 90^\circ, \frac{OM}{OA} = 1$，
+
+    如下图坐标系中，只有点D和点E满足$\angle DOA=90^\circ,\ \angle EOA=90^\circ$，
+
+    又∵$OD=OA=3,\ OE=1.5\cdot OA$，$OF=3\sqrt{3}\times OA$，
+
+    ∴只有点D是点A关于点O的“1—关联点”，
+
+    故答案为：D；
+
+    [图]
+
+    ②解：设点B关于点O的“$\sqrt{3}$—关联点”为T，
+
+    由题意得，$\angle BOT=90^\circ,\frac{OT}{OB}=\frac{1}{\sqrt{3}}$，
+
+    ∴点T一定在x轴上，
+
+    ∵$B\left(0,3\sqrt{3}\right)$，
+
+    ∴$OB = 3\sqrt{3}$，
+
+    ∴$\frac{OT}{3\sqrt{3}}=\frac{1}{\sqrt{3}}$，
+
+    ∴$OT = 3$，
+
+    又∵点T在x轴上，
+
+    ∴点T的坐标为$(3,0)$或$(-3,0)$；
+
+    故答案为：$(3,0)$或$(-3,0)$；
+
+    【小问2详解】
+
+    解：①设$\odot\odot$上存在一点Q是点P关于点O的“$\sqrt{3}$—关联点”，过点O作$OH \perp AB$于H，
+
+    由题意得，$\angle POQ=90^\circ,\frac{OQ}{OP}=\frac{1}{\sqrt{3}}$，
+
+    ∴$OQ=\frac{\sqrt{3}}{3}\cdot OP$，
+
+    ∴当OP最大时，OQ最大，即$\odot\odot$的半径r最大，当OP最小时，OQ最小，即$\odot\odot$的半径r最小，
+
+    ∵点P在线段AB上运动，
+
+    ∴当点P与点B重合时，OP最大，点P与点H重合时，OP最小，
+
+    ∴$r_{\triangle AOB} ='
   knowledge_points:
+  - 勾股定理
   - 坐标系
-  module: functions
+  module: triangles
   difficulty: 压轴
   recommended_for:
   - L3
