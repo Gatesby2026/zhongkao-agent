@@ -1,8 +1,8 @@
 # ============================================================
 # 2023年北京顺义区中考数学一模试卷 — 逐题分析
 # ============================================================
-# 数据来源：knowledge-original/精品解析：2023年北京市顺义区中考一模数学试卷（原卷版）.docx
-# 自动生成，部分数学公式可能显示不全（docx公式对象无法完整提取）
+# 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
+# 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
 # 满分：100分  时长：120分钟
 
 year: 2023
@@ -17,11 +17,25 @@ questions:
 - id: 1
   type: 选择
   score: 2
-  question: "如图是某几何体的三视图，该几何体是（    ）\nA. 圆柱\tB. 三棱柱\tC. 长方体\tD. 圆锥"
-  answer: ''
-  solution: ''
+  question: '如图是某几何体的三视图，该几何体是（
+
+    ）
+
+    [图]
+
+    A.圆柱B.三棱柱C.长方体D.圆锥'
+  answer: A
+  solution: '解：∵几何体的主视图和左视图都是高度相等的长方形，
+
+    故该几何体是一个柱体，
+
+    又∵俯视图是一个圆形，
+
+    故该几何体是一个圆柱，
+
+    故选：A．'
   knowledge_points:
-  - 综合
+  - 矩形
   module: circles
   difficulty: 基础
   recommended_for:
@@ -29,15 +43,24 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-shunyi-yi-fig02.png
 - id: 2
   type: 选择
   score: 2
-  question: "据国家统计局官网发布的“中华人民共和国2022年国民经济和社会发展统计公报”显示，我国企业研发投入继续保持两位数增长，2022年全年研究与试验发展经费支出30870亿元，比上年增长，将30870用科学记数法表示应为（  ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '据国家统计局官网发布的“中华人民共和国2022年国民经济和社会发展统计公报”显示，我国企业研发投入继续保持两位数增长，2022年全年研究与试验发展$(R\delta D)$经费支出30870亿元，比上年增长$10.4\%$，将30870用科学记数法表示应为（
+
+    ）
+
+    A.$3.087\times10^{3}$B.$3.087\times10^{4}$C.$0.3087\times10^{5}$D.$30.87\times10^{3}$'
+  answer: B
+  solution: '$30870=3.087\times10^{4}$．
+
+    故选B．'
   knowledge_points:
   - 统计
   - 科学记数法
+  - 绝对值
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -48,9 +71,19 @@ questions:
 - id: 3
   type: 选择
   score: 2
-  question: "实数a，b在数轴上的对应点的位置如图所示，下列结论中正确的是（  ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '实数a，b在数轴上的对应点的位置如图所示，下列结论中正确的是（）
+
+    [图]
+
+    A.$a > -2$B.$a-b>0$C.$-a > b$D.$a > -b$'
+  answer: D
+  solution: '由题意得$-3<a<-2<3<b<4$，
+
+    ∴$a-b<0$，$-a < b$，$a > -b$
+
+    故D选项符合题意，A，B，C选项不符合题意；
+
+    故选：D．'
   knowledge_points:
   - 综合
   module: numbersAndExpressions
@@ -60,12 +93,26 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-shunyi-yi-fig03.png
 - id: 4
   type: 选择
   score: 2
-  question: "如图，直线，相交于点O，，若，则的度数为（  ）\nA. 36°\tB. 54°\tC. 64°\tD. 144°"
-  answer: ''
-  solution: ''
+  question: '如图，直线AB，CD相交于点O，$OE \perp AB$，若$\angle AOC=36^{\circ}$，则$\angle DOE$$[公式]$度数为（）
+
+    [图]
+
+    A.36°B.54°C.64°D.144°'
+  answer: B
+  solution: '∵$OE \perp AB$，
+
+    ∴$\angle BOE=90^\circ$．
+
+    ∵$\angle AOC = \angle BOD = 36^\circ$，
+
+    ∴$\angle DOE=\angle BOE-\angle DOB=90^\circ-36^\circ=54^\circ$．
+
+    故选：B．'
   knowledge_points:
   - 综合
   module: geometryComprehensive
@@ -75,14 +122,50 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-shunyi-yi-fig04.png
 - id: 5
   type: 选择
   score: 2
-  question: "不透明的袋子中有三枚除颜色外都相同的棋子，其中有两枚是白色的，一枚是黑色的，从中随机同时摸出两枚棋子，则摸出的两枚棋子颜色相同的概率是（  ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '不透明的袋子中有三枚除颜色外都相同的棋子，其中有两枚是白色的，一枚是黑色的，从中随机同时摸出两枚棋子，则摸出的两枚棋子颜色相同的概率是（）
+
+    A.$\frac{1}{3}$B.$\frac{1}{2}$C.$\frac{2}{3}$D.$\frac{4}{9}$'
+  answer: A
+  solution: '解：根据题意，列出表格如下：
+
+    白1
+
+    白2
+
+    黑
+
+    白1
+
+    白2、白1
+
+    黑、白1
+
+    白2
+
+    白1、白2
+
+    黑、白2
+
+    黑
+
+    白1、黑
+
+    白2、黑
+
+    一共有6种等可能结果，其中摸出的两枚棋子颜色相同的有2种，
+
+    所以摸出的两枚棋子颜色相同的概率是$\frac{2}{6}=\frac{1}{3}$．
+
+    故选：A'
   knowledge_points:
   - 概率
+  - 树状图
+  - 列表法
   module: statisticsAndProbability
   difficulty: 基础
   recommended_for:
@@ -93,9 +176,15 @@ questions:
 - id: 6
   type: 选择
   score: 2
-  question: "如图，要把角钢（1）变成夹角是的钢架（2），则在角钢（1）上截去的缺口的度数为（  ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '如图，要把角钢（1）变成夹角是$90^\circ$的钢架（2），则在角钢（1）上截去的缺口的度数为（）
+
+    [图]
+
+    A.$60^\circ$B.$90^\circ$C.$120^\circ$D.$150^\circ$'
+  answer: B
+  solution: '因为缺口角为$90^\circ$，在截取之前的角是平角$180^\circ$，所以缺口角等于$180^{\circ}-90^{\circ}=90^{\circ}$，
+
+    故选：B．'
   knowledge_points:
   - 综合
   module: geometryComprehensive
@@ -104,15 +193,26 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-shunyi-yi-fig05.png
 - id: 7
   type: 选择
   score: 2
-  question: "若关于x的一元二次方程有两个不相等的实数根，则实数m的取值范围是（  ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '若关于x的一元二次方程$x^{2}+4x+m=0$有两个不相等的实数根，则实数m的取值范围是（）
+
+    A.$m<4$B.$m > 4$C.$m<-4$D.$m > -4$'
+  answer: A
+  solution: '解：∵关于x的一元二次方程$x^{2}+4x+m=0$有两个不相等的实数根，
+
+    ∴$\triangle=4^{2}-4m>0$，
+
+    ∴$m<4$，
+
+    故选A．'
   knowledge_points:
   - 一元二次方程
-  module: numbersAndExpressions
+  - 根的判别式
+  module: equationsAndInequalities
   difficulty: 中档
   recommended_for:
   - L1
@@ -121,22 +221,49 @@ questions:
 - id: 8
   type: 选择
   score: 2
-  question: "如图1，小球从左侧的斜坡滚下，沿着水平面继续滚动一段距离后停止，在这个过程中，小球的运动速度v（单位：m/s）与运动时间t（单位：s）的函数图象如图2所示，则该小球的运动路程y（单位：m）与运动时间t（单位：s）之间的函数图象大致是（  ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '如图1，小球从左侧的斜坡滚下，沿着水平面继续滚动一段距离后停止，在这个过程中，小球的运动速度v（单位：m/s）与运动时间t（单位：s）的函数图象如图2所示，则该小球的运动路程y（单位：m）与运动时间t（单位：s）之间的函数图象大致是（）
+
+    [图]
+
+    A.[图]B.[图]C.[图]D.[图]'
+  answer: C
+  solution: '解：由题意可知当小球在斜坡上滚下时，设$V_{r}=k_{1}t\left(k_{1}>0\right)$，
+
+    则$y=V_{1}t=kt^{2}$，
+
+    ∴运动路程y是t的二次函数，图象开口向上，图象变化趋势是先缓后陡；
+
+    当小球在水平面滚动时，设$V_{i}=k_{i}I\left(k_{i}<0\right)$，
+
+    则$y = V_{\mathrm{f}} t = k_{\mathrm{f}} t^{2}$，
+
+    ∴运动路程y是t的二次函数，图象开口向下，图象变化趋势是先陡后缓；
+
+    故选C'
   knowledge_points:
-  - 综合
+  - 二次函数
+  - 动点
   module: functions
   difficulty: 较难
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2023-shunyi-yi-fig06.png
+  - figures/2023-shunyi-yi-fig07.png
+  - figures/2023-shunyi-yi-fig08.png
+  - figures/2023-shunyi-yi-fig09.png
+  - figures/2023-shunyi-yi-fig10.png
 - id: 9
   type: 填空
   score: 2
-  question: 若在实数范围内有意义，则实数的取值范围是_________．
-  answer: ''
-  solution: ''
+  question: 若$\sqrt{x-6}$在实数范围内有意义，则实数x的取值范围是_________．
+  answer: $x\ 6$
+  solution: '解：根据题意得：$x-6\quad0$，
+
+    解得：$x\ 6$．
+
+    故答案为：$x\ 6$'
   knowledge_points:
   - 综合
   module: numbersAndExpressions
@@ -149,12 +276,18 @@ questions:
 - id: 10
   type: 填空
   score: 2
-  question: 分解因式：________．
-  answer: ''
-  solution: ''
+  question: 分解因式：$a^{2}b-4ab+4b$________．
+  answer: $b(a-2)^2$
+  solution: '解：$a^{2}b-4ab+4b$
+
+    $=b\left(a^{2}-4a+4\right)$
+
+    $=b(a-2)^{2}$
+
+    故答案为：$b(a-2)^2$'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 因式分解
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -164,12 +297,22 @@ questions:
 - id: 11
   type: 填空
   score: 2
-  question: 方程的解为_______．
-  answer: ''
-  solution: ''
+  question: 方程$\frac{2x-1}{x-5}=\frac{1}{2}$的解为_______．
+  answer: $x=-1$
+  solution: '解：$\frac{2x-1}{x-5}=\frac{1}{2}$
+
+    去分母得：$4x-2=x-5$，
+
+    解得：$x=-1$，
+
+    当$x=-1$时，$x-5\neq0$，
+
+    ∴原方程的解为$x=-1$．
+
+    故答案为：$x=-1$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 分式方程
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -179,9 +322,21 @@ questions:
 - id: 12
   type: 填空
   score: 2
-  question: 在平面直角坐标系中，若点，在反比例函数图象上，则______（填“>”“=”或“<”）．
-  answer: ''
-  solution: ''
+  question: 在平面直角坐标系xOy中，若点$A(2,y_{1})$，$B(4,y_{2})$在反比例函数$y=\frac{m-1}{x}\ (m>1)$的图象上，则$y_{1}$______$y_{2}$（填“>”“=”或“<”）．
+  answer: $\gt$
+  solution: '解：∵$m > 1$，
+
+    ∴$m-1>0$，
+
+    ∴反比例函数$y=\frac{m-1}{x}\ (m>1)$的图象在一、三象限，
+
+    ∵$4>2>0$，
+
+    ∴点$A(2,y_{1})$，$B(4,y_{2})$在第一象限的图象上，y随x的增大而减小，
+
+    ∴$y_{1}>y_{2}$，
+
+    故答案是$\gt$'
   knowledge_points:
   - 反比例函数
   - 坐标系
@@ -195,56 +350,125 @@ questions:
 - id: 13
   type: 填空
   score: 2
-  question: 如图，在中，，是的垂直平分线，分别交，于点，，若，，则的周长是________．
-  answer: ''
-  solution: ''
+  question: '如图，在$\triangle ABC$中，$AB = AC$，DE是AC的垂直平分线，分别交BC，AC于点D，E，若$AC = 2$，$BC = 3$，则$\triangle ABD$的周长是________．
+
+    [图]'
+  answer: $5$
+  solution: '解：$\therefore DE$是AC的垂直平分线，分别交BC，AC于点D，E
+
+    $\ldots AD = DC$，
+
+    $\because AB = AC = 2$，
+
+    $\therefore\triangle ABD$的周长为$AB + AD + BD = AB + DC + BD = AB + BC = 2 + 3 = 5$，
+
+    故答案为：$5$．'
   knowledge_points:
   - 综合
-  module: geometryComprehensive
+  module: triangles
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-shunyi-yi-fig11.png
 - id: 14
   type: 填空
   score: 2
-  question: 如图，是的直径，C，D是上两点，若，则的度数为_______．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 中档
-  recommended_for:
-  - L1
-  - L2
-  - L3
-- id: 15
-  type: 填空
-  score: 2
-  question: '某调查机构对全国互联网行业进行调查统计，得到整个互联网行业从业者出生年份分布扇形图和1990年后出生的互联网行业从业者岗位分布条形图．
+  question: '如图，AB是$\odot\odot$的直径，C，D是$\odot\odot$上两点，若$\angle AOC = 140^\circ$，则$\angle D$的度数为_______．
 
-    根据该统计结果，估计1990年后出生的互联网行业从业者中，从事技术岗位的人数占行业总人数的百分比是___________．（精确到）'
-  answer: ''
-  solution: ''
+    [图]'
+  answer: $20^\circ$##20度
+  solution: '解：∵AB是$\odot\odot$的直径，$\angle AOC = 140^\circ$，
+
+    ∴$\angle BOC=180^{\circ}-\angle AOC=40^{\circ}$，
+
+    ∴$\angle D=\frac{1}{2}\angle BOC=20^{\circ}$，
+
+    故答案为$20^\circ$'
   knowledge_points:
-  - 统计
+  - 邻补角
+  - 圆周角
   module: circles
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-shunyi-yi-fig12.png
+- id: 15
+  type: 填空
+  score: 2
+  question: '某调查机构对全国互联网行业进行调查统计，得到整个互联网行业从业者出生年份分布扇形图和1990年后出生的互联网行业从业者岗位分布条形图．
+
+    [图]
+
+    根据该统计结果，估计1990年后出生的互联网行业从业者中，从事技术岗位的人数占行业总人数的百分比是___________．（精确到$1\%$）'
+  answer: $22\%$
+  solution: '解：由图得，整个互联网行业从业者中1990年后占$56\%$，1990年后出生的互联网行业从业者中从事技术岗位的人数占$39.6\%$，
+
+    ∵$56\%\times39.6\%\approx22\%$，
+
+    即从事技术岗位的人数占行业总人数的百分比是$22\%$．
+
+    故答案$[公式]$：$22\%$'
+  knowledge_points:
+  - 统计
+  - 扇形统计图
+  - 条形统计图
+  module: statisticsAndProbability
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  figures:
+  - figures/2023-shunyi-yi-fig13.png
 - id: 16
   type: 填空
   score: 2
   question: 某京郊民宿有二人间、三人间、四人间三种客房供游客住宿，某旅游团有25位女士游客准备同时住这三种客房共8间，如果每间客房都要住满，请写出一种住宿方案__________；如果二人间、三人间、四人间三种客房的收费标准分别为300元/间、360元/间、400元/间，则最优惠的住宿方案是_________．
-  answer: ''
-  solution: ''
+  answer: ①.二人间2间，三人间3间，四人间3间（答案不唯一）；②.二人间3间，三人间1间，四人间4间．
+  solution: '解：设二人间、三人间分别需要x间，y间，则四人间需要$(8-x-y)$间，则
+
+    $2x+3y+4(8-x-y)=25$，
+
+    整理得：$2x+y=7$，
+
+    ∵x，y，$8-x-y$都为非负整数，
+
+    ∴当$x=2$时，$y=3$，$8-x-y=3$，
+
+    ∴可行的住宿方案为：二人间2间，三人间3间，四人间3间；
+
+    设住宿总费用为：w元，而$y=7-2x$，则
+
+    $w=300x+360y+400(8-x-y)$
+
+    $=3200-100x-40y$
+
+    $=3200-100x-40(7-2x)$
+
+    $= 2920 - 20x$，
+
+    ∵$-20 < 0$，
+
+    ∴当x最大，w有最小值，
+
+    ∵$2x+y=7$，x，y，$8-x-y$都为非负整数，
+
+    ∴$x=3$时最大，
+
+    此时$y = 1$，$8-x-y=4$；
+
+    ∴最佳住宿方案为：二人间3间，三人间1间，四人间4间．
+
+    故答案为：二人间2间，三人间3间，四人间3间（答案不唯一）；二人间3间，三人间1间，四人间4间．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 一次函数
+  module: equationsAndInequalities
   difficulty: 较难
   recommended_for:
   - L2
@@ -252,12 +476,13 @@ questions:
 - id: 17
   type: 解答
   score: 5
-  question: （第17题，详见原卷）
-  answer: ''
-  solution: ''
+  question: 计算：$|-3|-6\tan30^{\circ}+\sqrt{12}-\left(\sqrt{3}-2\right)^{0}$．
+  answer: '2'
+  solution: 原式$x=3-6\sqrt{3}+2\sqrt{3}-1$$=3-2\sqrt{3}+2\sqrt{3}-1=2$
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 三角函数
+  - 绝对值
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -267,9 +492,19 @@ questions:
 - id: 18
   type: 解答
   score: 5
-  question: 解不等式：，并把它的解集在数轴上表示出来．
-  answer: ''
-  solution: ''
+  question: 解不等式：$\frac{x+1}{2}<1-\frac{x-3}{4}$，并把它$[公式]$解集在数轴上表示出来．
+  answer: $x<3$，数轴见解析．
+  solution: '解：去分母，得$4x-2(x+1)<4-(x-3)$
+
+    去括号，得$4x-2x-2<4-x+3$
+
+    移项，合并同类项，得$3x<9$
+
+    系数化1，得$x<3$
+
+    解集在数轴上表示为：
+
+    [图]'
   knowledge_points:
   - 不等式
   module: numbersAndExpressions
@@ -279,15 +514,55 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-shunyi-yi-fig14.png
 - id: 19
   type: 解答
   score: 5
-  question: 已知，求代数式的值．
-  answer: ''
-  solution: ''
+  question: 已知$x^{2}-2x-1=0$，求代数式$(x+2)(x-2)+x(x-4)$的值．
+  answer: $-2$
+  solution: '解：$(x+2)(x-2)+x(x-4)$
+
+    $y=x^{3}-4x^{2}-4x$
+
+    $=2x^{2}-4x-4$
+
+    =$2\left(x^{2}-2x\right)-4$
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$$x^{2}-2x-1=0$
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$x^2 - 2x = 1$
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$原式$=2\times1-4$
+
+    $=-2$'
   knowledge_points:
   - 综合
-  module: geometryComprehensive
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -297,27 +572,161 @@ questions:
 - id: 20
   type: 解答
   score: 5
-  question: 在证明“等腰三角形的两个底角相等”这个性质定理时，添加的辅助线有以下两种不同的叙述方法，请选择其中一种完成证明．
-  answer: ''
-  solution: ''
+  question: '在证明“等腰三角形的两个底角相等”这个性质定理时，添加的辅助线AD有以下两种不同的叙述方法，请选择其中一种完成证明．
+
+    等腰三角形的性质定理：等腰三角形的两个底角相等．
+
+    已知：如图，在$\triangle ABC$中，$AB = AC$，求证：$\angle B = \angle C$．
+
+    [图]
+
+    法一
+
+    证明：如图，做$\angle BAC$的平分线交BC于点D．
+
+    [图]
+
+    法二
+
+    证明：如图，取BC的中点D，连接AD．
+
+    [图]'
+  answer: 见解析
+  solution: '方法一：
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$AD平分$\angle BAC$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\angle BAD = \angle CAD$.
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$$AB = AC$，$AD = AD$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\triangle ABD \cong \triangle CAD$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\angle B = \angle C$.
+
+    方法二：
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$D为BC中点，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);'
   knowledge_points:
-  - 综合
+  - 全等三角形
   module: triangles
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-shunyi-yi-fig15.png
+  - figures/2023-shunyi-yi-fig16.png
+  - figures/2023-shunyi-yi-fig17.png
 - id: 21
   type: 解答
   score: 5
-  question: '如图，的对角线，相交于点O，将对角线向两个方向延长，分别至点E和点F，且使．
+  question: '如图，$Y_{ABCD}$的对角线AC，BD相交于点O，将对角线BD向两个方向延长，分别至点E和点F，且使$BE = DF$．
 
-    （1）求证：四边形是平行四边形；
+    [图]
 
-    （2）若，求证：四边形是矩形．'
-  answer: ''
-  solution: ''
+    （1）求证：四边形$AECF$$[公式]$平行四边形；
+
+    （2）若$OF=OA$，求证：四边形$AECF$是矩形．'
+  answer: （1）见解析； （2）见解析．
+  solution: '【小问1详解】
+
+    证明：连接AC，设AC与BD交于点O．如图所示：
+
+    [图]
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$四边形$ABCD$是平行四边形，
+
+    $\therefore OA = OC$，$OB = OD$，
+
+    又$\therefore BE = DF$，
+
+    $\therefore OE = OF$．
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$四边形$AECF$是平行四边形．
+
+    【小问2详解】
+
+    证明：由(1）知：四边形$AECF$是平行四边形，
+
+    $\therefore OA = \frac{1}{2}AC$，$OF = \frac{1}{2} EF$，
+
+    ∵$OF=OA$
+
+    ∴$AC = EF$
+
+    ∴四边形$AECF$是矩形．'
   knowledge_points:
   - 平行四边形
   - 矩形
@@ -327,19 +736,42 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-shunyi-yi-fig18.png
+  - figures/2023-shunyi-yi-fig19.png
 - id: 22
   type: 解答
   score: 5
-  question: '在平面直角坐标系中，函数的图象经过点，，且与x轴交于点A．
+  question: '在平面直角坐标系xOy中，函数$y=kx+b$$(k\neq0)$的图象经过点$(1,1)$，$(0,-1)$，且与x轴交于点A．
 
     （1）求该函数的解析式及点A的坐标；
 
-    （2）当时，对于x的每一个值，函数的值小于函数的值，直接写出n的取值范围．'
-  answer: ''
-  solution: ''
+    （2）当$x>\frac{1}{2}$时，对于x的每一个值，函数$y = -x + n$的值小于函数$y=kx+b$$(k\neq0)$的值，直接写出n的取值范围．'
+  answer: （1）$y=2x-1$，$A\left(\frac{1}{2},0\right)$； （2）$n \leq \frac{1}{2}$．
+  solution: '【小问1详解】
+
+    将点$(1,1)$，$(0,-1)$代入$y=kx+b$，得
+
+    $\left\{\begin{array}{l}k+b=1\\b=-1\end{array}\right.$，解得$\left\{\begin{array}{l}k=2\\b=-1\end{array}\right.$
+
+    所以该函数的解析式为：$y=2x-1$
+
+    令$y = 0$，$2x-1=0$，解得$x=\frac{1}{2}$，所以点$A\left(\frac{1}{2},0\right)$
+
+    $[公式]$小问2详解】
+
+    当$x=\frac{1}{2}$时$y=2x-1=0$，
+
+    把$x=\frac{1}{2}$，$y = 0$代入$y = -x + n$得$n=\frac{1}{2}$，
+
+    ∵当$x>\frac{1}{2}$时，对于x的每一个值，函数$y = -x + n$的值小于函数$y=kx+b$$(k\neq0)$的值，
+
+    ∴$n \leq \frac{1}{2}$．'
   knowledge_points:
+  - 一次函数
+  - 不等式
   - 坐标系
-  module: functions
+  module: equationsAndInequalities
   difficulty: 中档
   recommended_for:
   - L1
@@ -348,21 +780,55 @@ questions:
 - id: 23
   type: 解答
   score: 6
-  question: '北京市共青团团委为弘扬“奉献、友爱、互助、进步”的志愿精神，鼓励学生积极参加志愿活动，为了解九年级未入团学生参加志愿活动的情况，从A、B两所学校九年级未入团学生中，各随机抽取20名学生，在“志愿北京”上查到了他们参加志愿活动的时长，部分数据如下：
+  question: '北京市共青团团委为弘扬“奉献、友爱、互助、进步”的志愿精神，鼓励学生积极参加志愿活动，为了解九年级未入团学生参加志愿活动的情况，从A、B两所学校九年级未入团学生中，各随机抽取20名学生，在“志愿北京APP”上查到了他们参加志愿活动的时长，部分数据如下：
 
-    a两校志愿活动时长（小时）如下：
+    a.两校志愿活动时长（小时）如下：
 
-    A校：17  39  39  2  35  28  26  48  39  19
+    A校：17
 
-    46  7  17  13  48  27  32  33  32  44
+    39  39  2  35  28  26  48  39  19
 
-    B校：30  21  31  42  25  18  26  35  30  28
+    46
 
-    12  40  30  29  33  46  39  16  33  27
+    7  17  13  48  27  32  33  32  44
 
-    b.两校志愿活动时长频数分布直方图（数据分成5组：，，，，）：
+    B校：30
+
+    21  31  42  25  18  26  35  30  28
+
+    12
+
+    40  30  29  33  46  39  16  33  27
+
+    b.两校志愿活动时长频数分布直方图（数据分成5组：$0\leq x<10$，$10 \leq x < 20$，$20 \leq x < 30$，$30 \leq x < 40$，$40 \leq x < 50$）：
+
+    [图]
 
     c.两校志愿活动时长的平均数、众数、中位数如下：
+
+    学校
+
+    平均数
+
+    众数
+
+    中位数
+
+    A校
+
+    29.55
+
+    m
+
+    32
+
+    B校
+
+    29.55
+
+    30
+
+    n
 
     根据以上信息，回答下列问题：
 
@@ -371,8 +837,22 @@ questions:
     （2）直接写出表中m，n的值；
 
     （3）根据北京市共青团团委要求，“志愿北京APP”上参加志愿活动时长不够20小时不能提出入团申请，若B校九年级未入团学生有180人，从志愿活动时长的角度看，估计B校有资格提出入团申请的人数．'
-  answer: ''
-  solution: ''
+  answer: （1）见解析（2）$m = 39$，$n = 30$ （3）153人
+  solution: '【小问1详解】
+
+    解：A校中$10 \leq x < 20$的学生人数为4人，$30 \leq x < 40$的学生人数为7人，则补全A校志愿活动时长频数分布直方图如下：
+
+    [图]【小问2详解】
+
+    解：A校中活动时长出现次数最多的是39小时，因此$m = 39$；
+
+    将B校学生的活动时长从小到大进行排序，排在第10和第11的都是30小时，因此中位数$n = 30$．
+
+    【小问3详解】
+
+    解：$180x-\frac{20x-1}{20}=153$（人），
+
+    答：B校有资格提出入团申请的人数为153人．'
   knowledge_points:
   - 平均数
   - 中位数
@@ -382,55 +862,282 @@ questions:
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2023-shunyi-yi-fig20.png
+  - figures/2023-shunyi-yi-fig21.png
 - id: 24
   type: 解答
   score: 6
-  question: '如图，在中，是直径，是弦，点C在上，于点E，，交的延长线于点F，且．
+  question: '如图，在$\odot\odot$中，AB是直径，AD是弦，点C在$\odot\odot$上，$CE \perp AB$于点E，$CF \perp AD$，交AD的延长线于点F，且$CE = CF$．
 
-    （1）求证：是的切线；
+    [图]
 
-    （2）若，，求长．'
-  answer: ''
-  solution: ''
+    （1）求证：CF是$\odot\odot$的切线；
+
+    （2）若$CF = 1$，$\angle BAF = 60^\circ$，求BE的长．'
+  answer: （1）见解析； （2）$\frac{\sqrt{3}}{3}$．
+  solution: '【小问1详解】
+
+    连接AC、OC.
+
+    [图]
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$$CE \perp AB$，$CF \perp AD$，$CE = CF$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\angle1=\angle2$.
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$$OA = OC$
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\angle1=\angle3$，
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$$\angle1=\angle3$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$OC \parallel AF$.
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt'
   knowledge_points:
   - 切线
   - 弦
-  module: circles
+  - 三角函数
+  module: triangles
   difficulty: 较难
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2023-shunyi-yi-fig22.png
+  - figures/2023-shunyi-yi-fig23.png
+  - figures/2023-shunyi-yi-fig24.png
 - id: 25
   type: 解答
   score: 6
   question: '铅球运动员在比赛时，铅球被掷出后的运动路线可以看作是抛物线的一部分，在某次比赛的一次投掷过程中，铅球被掷出后，设铅球距运动员出手点的水平距离为x（单位：m），竖直高度为y（单位：m），由电子监测获得的部分数据如下：
 
-    （1）根据上述数据，直接写出铅球竖直高度的最大值，并求出满足的函数关系；
+    水平距离x/m
+
+    0
+
+    3
+
+    6
+
+    9
+
+    12
+
+    15
+
+    18
+
+    …
+
+    竖直高度y/m
+
+    2.00
+
+    4.25
+
+    5.60
+
+    6.05
+
+    5.60
+
+    4.25
+
+    2.00
+
+    …
+
+    （1）根据上述数据，直接写出铅球竖直高度的最大值，并求出满足的函数关系$y = a(x - h)^2 + k$$(a < 0)$；
 
     （2）请你建立平面直角坐标系，描出上表中各对对应值为坐标的点，画出y与x的函数图象；
 
     （3）请你结合所画图象或所求函数关系式，直接写出本次投掷后，铅球距运动员出手点的最远水平距离．'
-  answer: ''
-  solution: ''
+  answer: （1）6.05m；$y = -\frac{1}{20}(x - 9)^2 + 6.05$； （2）见解析；（3）20m．
+  solution: '【小问1详解】
+
+    铅球竖直高度的最大值为6.05m．
+
+    根据表中数据可知，二次函数图象的顶点是$(9,6.05)$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$函数关系式为$y = a(x - 9)^2 + 6.05$．
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$二次函数图象经过点$(0,2)$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$b=a(2-9)^{k}+6.05$，
+
+    解之得$a = -\frac{1}{20}$．
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$函数关系式为$y = -\frac{1}{20}(x - 9)^2 + 6.05$；
+
+    【小问2详解】
+
+    图象如图：
+
+    [图]【小问3详解】
+
+    观察图像可知当$x = 20$时，$y = 0$，
+
+    所以铅球运动员出手点的最远水平距离是20m．'
   knowledge_points:
+  - 二次函数
   - 坐标系
   module: functions
   difficulty: 较难
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2023-shunyi-yi-fig25.png
 - id: 26
   type: 解答
   score: 6
-  question: '已知：抛物线．
+  question: '已知：抛物线$y = ax^2 - 4ax - 3$$(a > 0)$．
 
     （1）求此抛物线与y轴的交点坐标及抛物线的对称轴；
 
-    （2）已知点，在该抛物线上，且位于对称轴的同侧.若，求a的取值范围．'
-  answer: ''
-  solution: ''
+    （2）已知点$A(n,y_{1})$，$B(n+1,y_{2})$在该抛物线上，且位于对称轴的同侧.若$\left|y_{2}-y_{1}\right|\leq4$，求a的取值范围．'
+  answer: （1）交点坐标：$(0,-3)$，对称轴：直线$x=2$； （2）$0<a\leq4$．
+  solution: '【小问1详解】
+
+    令$x = 0$可得$y=-3$
+
+    ∴与y轴交点坐标：$(0,-3)$，
+
+    对称轴为直线$x=\frac{-4a}{2a}=2$
+
+    【小问2详解】
+
+    把$A(n,y_{1})$，$B(n+1,y_{2})$，代入函数表达式得：$\left\{ \begin{array} { l } { y _ { 1 } = a n ^ { 2 } - 4 a n - 3 } \\ { y _ { 2 } = a ( n + 1 ) ^ { 2 } - 4 a ( n + 1 ) - 3 } \end{array} \right.$
+
+    ①当A、B两点在对称轴右侧，即$n^{2}$时，$y_{2}>y_{1}$
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$$\left|y_{2}-y_{1}\right|\leq4$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$a(n+1)^{2}-4a(n+1)-3-(an^{2}-4an-3)\leq4$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$n \leq \frac{4 + 3a}{2a}$.
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$$n^'
   knowledge_points:
-  - 综合
+  - 二次函数
   module: functions
   difficulty: 压轴
   recommended_for:
@@ -438,37 +1145,189 @@ questions:
 - id: 27
   type: 解答
   score: 7
-  question: '已知：如图，中，，，点D在边上，点A关于直线的对称点为E，射线交直线于点F，连接．
+  question: '已知：如图，$\triangle ABC$中，$AC = BC$，$\angle ACB=90^\circ$，点D在AB边上，点A关于直线CD的对称点为E，射线BE交直线CD于点F，连接AF．
 
-    （1）设，用含的代数式表示的大小，并求的度数；
+    [图]
 
-    （2）用等式表示线段，，之间的数量关系，并证明．'
-  answer: ''
-  solution: ''
+    （1）设$\angle ACD=\alpha$，用含$\alpha$的代数式表示$\angle CBF$的大小，并求$\angle CFB$的度数；
+
+    （2）用等式表示线段AF，CF，BF之间的数量关系，并证明．'
+  answer: （1）$\angle CBF=45^{\circ}+\alpha$，$45^\circ$ （2）$AF + BF = \sqrt{2}FC$，证明见解析．
+  solution: '【小问1详解】
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$A、E关于直线CD对称，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\angle ACF = \angle ECF = \alpha$，$AC = CE$．
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$$\angle ACB=90^\circ$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\angle BCE=90^\circ-2\alpha$．
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$$AC = CE$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$CB = CE$．
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    '
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 全等三角形
+  - 勾股定理
+  - 轴对称
+  module: triangles
   difficulty: 压轴
   recommended_for:
   - L3
+  figures:
+  - figures/2023-shunyi-yi-fig26.png
+  - figures/2023-shunyi-yi-fig27.png
 - id: 28
   type: 解答
   score: 7
-  question: '给出如下定义：对于线段，以点P为中心，把点逆时针旋转得到点R，点R叫做线段关于点P“完美点”，例如等边中，点C就是线段关于点A的“完美点”．
+  question: '给出如下定义：对于线段$\overline{PQ}$，以点P为中心，把点逆时针旋转$60^\circ$得到点R，点R叫做线段$\overline{PQ}$关于点P的“完美点”，例如等边$\triangle ABC$中，点C就是线段AB关于点A的“完美点”．
 
-    在平面直角坐标系中．
+    [图]
 
-    （1）已知点，在，，，中，_____是线段关于点O的“完美点”；
+    在平面直角坐标系xOy中．
 
-    （2）直线上存在线段，若点恰好是线段关于点B的“完美点”，求线段的长；
+    （1）已知点$A(0,2)$，在$A_{1}\left(\sqrt{3},1\right)$，$A_{2}\left(-\sqrt{3},1\right)$，$A_{3}\left(1,\sqrt{3}\right)$，$A_{4}\left(1,-\sqrt{3}\right)$中，_____是线段OA关于点O的“完美点”；
 
-    （3）若，，点D是线段关于点O的“完美点”，点F是线段关于点E的“完美点”，当线段分别取得最大值和最小值时，直接写出线段的长．'
-  answer: ''
-  solution: ''
+    （2）直线$y=x+4$上存在线段$BB''$，若点$B''$恰好是线段BO关于点B的“完美点”，求线段$BB''$的长；
+
+    （3）若$OC = 4$，$OE = 2$，点D是线段OC关于点O的“完美点”，点F是线段EO关于点E的“完美点”，当线段DF分别取得最大值和最小值时，直接写出线段CE的长．'
+  answer: （1）$A_2$ （2）$\frac{4\sqrt{6}}{3}$ （3）$2\sqrt{3}$，$2\sqrt{7}$
+  solution: '【小问1详解】
+
+    ∵点$A(0,2)$
+
+    ∴线段OA关于点O的“完美点”在第二象限，
+
+    ∴$A_{2}\left(-\sqrt{3},1\right)$是线段OA关于点O的“完美点”；其他点都不符合题意；
+
+    故答案为：$A_2$；
+
+    【小问2详解】
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$点$B''$恰好是线段BO关于点B的“完美点”，
+
+    [图]
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\triangle OBB''$是等边三角形.
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$过点O作$OM \perp BB''$于点M.
+
+    ∴$\angle BOM=30^\circ$，
+
+    ∴$OB=2BM,OM=\sqrt{3}BM$
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$$BB''$在直线$y=x+4$上，
+
+    ∴直线$y=x+4$与x轴交点为$(4,0)$，与y轴交点为$(0,4)$
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpi'
   knowledge_points:
+  - 一次函数
   - 旋转
+  - 三角函数
   - 坐标系
-  module: geometryComprehensive
+  module: triangles
   difficulty: 压轴
   recommended_for:
   - L3
+  figures:
+  - figures/2023-shunyi-yi-fig28.png
+  - figures/2023-shunyi-yi-fig29.png
+  - figures/2023-shunyi-yi-fig30.png
+  - figures/2023-shunyi-yi-fig31.png

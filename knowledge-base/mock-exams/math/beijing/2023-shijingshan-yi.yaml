@@ -1,43 +1,56 @@
 # ============================================================
 # 2023年北京石景山区中考数学一模试卷 — 逐题分析
 # ============================================================
-# 数据来源：knowledge-original/精品解析：2023年北京市石景山区京源学校中考数学练兵试卷（4月份） （原卷版）.docx
-# 自动生成，部分数学公式可能显示不全（docx公式对象无法完整提取）
+# 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
+# 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
 # 满分：100分  时长：120分钟
 
 year: 2023
-district: 石景山区
+district: 石景山
 exam_type: 一模
 subject: 数学
 full_score: 100
 duration_minutes: 120
-total_questions: 53
+total_questions: 28
 structure: 8选择(16分) + 8填空(16分) + 12解答(68分)
 questions:
 - id: 1
   type: 选择
   score: 2
-  question: "下列单项式中，xy2的同类项是（    ）\nA. x3y2\tB. x2y\tC. 2xy2\tD. 2x2y3"
-  answer: ''
-  solution: ''
+  question: '如图是某几何体的展开图，该几何体是（）
+
+    [图]
+
+    A.正方体B.圆柱C.正四棱锥D.直三棱柱'
+  answer: A
+  solution: '解：该平面展开图是正方体的平面展开图．
+
+    故选A．'
   knowledge_points:
   - 综合
-  module: numbersAndExpressions
+  module: circles
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-shijingshan-yi-fig02.png
 - id: 2
   type: 选择
   score: 2
-  question: "下列正确的是（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '$2022$年$10$月$31$日，起飞重量约$23000$千克的梦天实验舱搭乘长征五号B四运载火箭，在中国文昌航天发射场成功发射．将$23000$用科学记数法表示应为（）
+
+    A$[公式]$$23\times10^{3}$B.$2.3\times10^{4}$C.$2.3\times10^{5}$D.$0.23\times10^{5}$'
+  answer: B
+  solution: '解：$23000=2.3\times10^{4}$，
+
+    故选：B．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 科学记数法
+  - 绝对值
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -47,19 +60,53 @@ questions:
 - id: 3
   type: 选择
   score: 2
-  question: '下列检测中，适宜采用普查方式的是（    ）
+  question: '如图，在$\triangle ABC$中，$\angle ACB=90^\circ$，过点C作$EF \parallel AB$．若$\angle ECA=55^{\circ}$，则$\angle B$的度数为（）
 
-    A. 检测一批充电宝的使用寿命
+    [图]
 
-    B. 检测一批电灯的使用寿命
+    A.$55^\circ$B.$45^\circ$C.$35^\circ$D.$25^\circ$'
+  answer: C
+  solution: '解：∵$EF \parallel AB$，$\angle ECA=55^{\circ}$，
 
-    C. 检测一批家用汽车的抗撞击能力
+    ∴$\angle A=\angle ECA=55^{\circ}$，
 
-    D. 检测“神舟十六号”载人飞船零件的质量'
-  answer: ''
-  solution: ''
+    ∵在$\triangle ABC$中，$\angle A=55^{\circ}$，$\angle ACB=90^\circ$，
+
+    ∴$\angle B = 180^{\circ} - \angle A - \angle ACB = 180^{\circ} - 55^{\circ} - 90^{\circ} = 35^{\circ}$．
+
+    故选：C．'
   knowledge_points:
-  - 综合
+  - 平行线
+  module: triangles
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  figures:
+  - figures/2023-shijingshan-yi-fig03.png
+- id: 4
+  type: 选择
+  score: 2
+  question: '下列图形中，既是轴对称图形也是中心对称图形的是（）
+
+    A.[图]B.[图]C.[图]D.[图]'
+  answer: A
+  solution: '解：A、既是轴对称图形也是中心对称图形，符合题意；
+
+    B、是轴对称图形，不是中心对称图形，不符合题意；
+
+    C、是中心对称图形，不是轴对称图形，不符合题意；
+
+    D、是轴对称图形，不是中心对称图形，不符合题意；
+
+    故选A．'
+  knowledge_points:
+  - 中心对称图形
+  - 轴对称图形
+  - 旋转
+  - 轴对称
   module: geometryComprehensive
   difficulty: 基础
   recommended_for:
@@ -67,70 +114,140 @@ questions:
   - L1
   - L2
   - L3
-- id: 4
-  type: 选择
-  score: 2
-  question: "下列函数中，函数值随自变量的值增大而增大的是（  ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: functions
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
+  figures:
+  - figures/2023-shijingshan-yi-fig04.png
+  - figures/2023-shijingshan-yi-fig05.png
+  - figures/2023-shijingshan-yi-fig06.png
+  - figures/2023-shijingshan-yi-fig07.png
 - id: 5
   type: 选择
   score: 2
-  question: "已知两圆相交，它们的圆心距为3，一个圆的半径是2，那么另一个圆的半径长可以是（ ）\nA. 1\tB. 3\tC. 5\tD. 7"
-  answer: ''
-  solution: ''
+  question: '不透明的袋子中装有两个红球和一个绿球，除颜色外三个小球无其他差别．从中随机摸出一个小球，放回并摇匀，再从中随机摸出一个小球，那么两次都摸到红球的概率是（）
+
+    A.$\frac{2}{9}$B.$\frac{1}{3}$C.$\frac{4}{9}$D.$\frac{2}{3}$'
+  answer: C
+  solution: '解：画树状图如下：
+
+    [图]，
+
+    共有9种等可能的结果，其中两次都摸到红球的结果有4种，
+
+    ∴两次都摸到红球的概率为$\frac{4}{9}$．
+
+    故选：C．'
   knowledge_points:
-  - 综合
-  module: circles
+  - 概率
+  - 树状图
+  module: statisticsAndProbability
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-shijingshan-yi-fig08.png
 - id: 6
   type: 选择
   score: 2
-  question: '下列命题中，正确的是（    ）
+  question: '如图，在$\odot\odot$中，C是$\overline{AB}$的中点，点D是$\odot\odot$上一点．若$\angle ADC = 20^\circ$，则$\angle BOC$的度数为（）
 
-    A. 对角线相等的四边形是平行四边形
+    [图]
 
-    B. 对角线互相垂直的四边形是菱形
+    A.$10^\circ$B.$20^\circ$C.$40^\circ$D.$80^\circ$'
+  answer: C
+  solution: '解：如图所示，连接OA，
 
-    C. 对角线相等的平行四边形是矩形
+    [图]
 
-    D. 对角线互相垂直且相等的四边形是正方形'
-  answer: ''
-  solution: ''
+    ∵C是$\overline{AB}$的中点，
+
+    ∴$\widehat{BC}=\widehat{AC}$，
+
+    ∴$\angle BOC = \angle COA$，
+
+    ∵圆心角$\angle COA$与圆周角$\angle ADC$所对弧是同弧，
+
+    ∴$\angle COA=2\angle ADC=2\times20^{\circ}=40^{\circ}$，
+
+    ∴$\angle BOC=\angle COA=40^{\circ}$，
+
+    故选：C．'
   knowledge_points:
-  - 平行四边形
-  - 矩形
-  - 菱形
-  - 正方形
-  module: quadrilaterals
+  - 圆周角
+  module: circles
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-shijingshan-yi-fig09.png
+  - figures/2023-shijingshan-yi-fig10.png
 - id: 7
   type: 选择
   score: 2
-  question: "2021年2月24日6时29分，我国自主研制的首个火星探测器“天问一号”成功实施第三次近火制动，进入近火点280千米、远火点59000千米、周期2个火星日的火星停泊轨道．将59000用科学记数法表示应为（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '党的二十大报告提出“深化全民阅读活动”．某校开展了“书香浸润心灵
+
+    阅读点亮人生”读书系列活动．为了解学生的课外阅读情况，随机选取了某班甲、乙两组学生一周的课外阅读时间（单位：小时）进行统计，数据如下：
+
+    甲组
+
+    $6$
+
+    $7$
+
+    $8$
+
+    $8$
+
+    $8$
+
+    $9$
+
+    $10$
+
+    乙组
+
+    $4$
+
+    $7$
+
+    $8$
+
+    $8$
+
+    $8$
+
+    $9$
+
+    $12$
+
+    两组数据的众数分别为$M_{\text{甲}}$，$M_{\mathrm{乙}}$，方差分别为$S_{\text{甲}}^{2}$，$S_{\mathrm{乙}}^{2}$，则（）
+
+    A.$M_{\parallel}=M_{\angle}$，$s_{甲}^{2}<s_{乙}^{2}$B.$M_{\parallel}=M_{\angle}$，$S_{甲}^{2}=S_{乙}^{2}$
+
+    C.$M_{\parallel}=M_{\angle}$，$S_{甲}^{2}>S_{乙}^{2}$D.$M_{\parallel}>M_{\mathrm{乙}}$，$s_{甲}^{2}<s_{乙}^{2}$'
+  answer: A
+  solution: '解：由题意得，
+
+    甲组的平均数为$M_{\mu}=\frac{1}{7}(6+7+8+8+8+9+10)=8$，
+
+    ∴$s_{n}^{2}=\frac{1}{7}\left[(6-8)^{2}+(7-8)^{2}+3\times(8-8)^{2}+(9-8)^{2}+(10-8)^{2}\right]=\frac{10}{7}$；
+
+    乙组的平均数为$M_{Z}=\frac{1}{4}(4+7+8+8+8+9+12)=8$，
+
+    ∴$s_{c}^{2}=\frac{1}{7}\left[\left(4-8\right)^{2}+\left(7-8\right)^{2}+3\times\left(8-8\right)^{2}+\left(9-8\right)^{2}+\left(12-8\right)^{2}\right]=\frac{34}{7}$，
+
+    ∴$s_{甲}^{2}<s_{乙}^{2}$．
+
+    故选：A．'
   knowledge_points:
-  - 科学记数法
-  module: numbersAndExpressions
+  - 统计
+  - 平均数
+  - 众数
+  - 方差
+  module: statisticsAndProbability
   difficulty: 中档
   recommended_for:
   - L1
@@ -139,25 +256,53 @@ questions:
 - id: 8
   type: 选择
   score: 2
-  question: "实数a，b，c在数轴上的对应点的位置如图所示．下列式子正确的是（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '下面的三个问题中都有两个变量：
+
+    ①圆的面积y与它的半径x；
+
+    ②将游泳池中的水匀速放出，直至放完，游泳池中的剩余水量y与放水时间x；
+
+    ③某工程队匀速铺设一条地下管道，铺设剩余任务y与施工时间x．
+
+    其中，变量y与变量x之间的函数关系可以用如图所示的图象表示的是（）
+
+    [图]
+
+    A.①②③B.①②C.①③D.②③'
+  answer: D
+  solution: '解：由图象可知：图象为一次函数的图象，且y随x的增大而减小；
+
+    ①圆的面积y随着半径x的增大而增大，不符合题意；
+
+    ②将游泳池中的水匀速放出，直至放完，游泳池中的剩余水量y随着放水时间x的增大而减小，而且是匀速减小，符合题意；
+
+    ③某工程队匀速铺设一条地下管道，铺设剩余任务y随着施工时间x的增大而减小，且匀速减小，符合题意．
+
+    综上，符合题意的是②③；
+
+    故选D．'
   knowledge_points:
-  - 综合
-  module: numbersAndExpressions
+  - 一次函数
+  module: functions
   difficulty: 较难
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2023-shijingshan-yi-fig11.png
 - id: 9
   type: 填空
   score: 2
-  question: "下列运算正确的是（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: 若代数式$\frac{2}{x-5}$有意义，则实数x的取值范围是_______．
+  answer: $x \neq 5$
+  solution: '解：由题意，得：$x-5\neq0$，
+
+    解得：$x \neq 5$
+
+    故答案为：$x \neq 5$．'
   knowledge_points:
   - 综合
-  module: geometryComprehensive
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -167,12 +312,15 @@ questions:
 - id: 10
   type: 填空
   score: 2
-  question: "如图，的度数为（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: 分解因式：x2y-4y=____．
+  answer: y(x+2)(x-2)
+  solution: 'x2y-4y=y(x2-4)=y(x+2)(x-2)，
+
+    故答案为：y(x+2)(x-2)．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 因式分解
+  - 方差
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -182,12 +330,18 @@ questions:
 - id: 11
   type: 填空
   score: 2
-  question: "一个不透明口袋中有四张卡片，上面分别写有数字，除数字外四张卡片无其他区别．随机从这个口袋中同时取出两张卡片，卡片上的数字之和等于5的概率是（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: 如果命题“若$a < b$，则$ma > mb$”为真命题，那么m可以是______（写出一个即可）．
+  answer: $-1$（答案不唯一）
+  solution: '解：根据题意，“若$a < b$，则$ma > mb$”为真命题，
+
+    ∴$m < 0$，
+
+    ∴m可以是负数，答案不唯一，如：$-1$．
+
+    故答案为：$-1$（答案不唯一）'
   knowledge_points:
-  - 概率
-  module: statisticsAndProbability
+  - 不等式
+  module: equationsAndInequalities
   difficulty: 基础
   recommended_for:
   - L0
@@ -197,12 +351,40 @@ questions:
 - id: 12
   type: 填空
   score: 2
-  question: "反比例函数（k为正整数）在第一象限图象如图所示，已知图中点A的坐标为，则k的值是（    ）\nA. 1\tB. 2\tC. 3\tD. 4"
-  answer: ''
-  solution: ''
+  question: '方程组$\begin{cases}
+
+    x - y = 7 \\
+
+    2x + y = 5
+
+    \end{cases}$的解为_______．'
+  answer: $\left\{ \begin{array}{l} x = 4 \\ y = -3 \end{array} \right.$
+  solution: '解：$\begin{aligned}
+
+    &x - y = 7 \quad \text{(1)} \\
+
+    &2x + y = 5 \quad \text{(2)}
+
+    \end{aligned}$，
+
+    $① + ②$得，$3x=12$，解得，$x = 4$，
+
+    把$x = 4$代入$1$得，$4 - y = 7$，解得，$y=-3$，
+
+    ∴原方程组的解为$\left\{
+
+    \begin{array}{l}
+
+    x = 4 \\
+
+    y = -3
+
+    \end{array}
+
+    \right.$．'
   knowledge_points:
-  - 反比例函数
-  module: functions
+  - 二元一次方程组
+  module: equationsAndInequalities
   difficulty: 基础
   recommended_for:
   - L0
@@ -212,12 +394,49 @@ questions:
 - id: 13
   type: 填空
   score: 2
-  question: "如图，AB是的直径，PA与相切于点A，交于点C．若，则的度数为（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: 在平面直角坐标系xOy中，若反比例函数$y=\frac{k}{x}(k\neq0)$的图象经过点$A(2,3)$和点$B(m,-6)$，则m的值为_______．
+  answer: $-1$
+  solution: '解：$\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$反比例函数$y=\frac{k}{x}(k\neq0)$的图象经过点$A(2,3)$，
+
+    $\therefore 3 = \frac{k}{2}$，
+
+    解得：$k = 6$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$反比例函数解析式为$y=\frac{6}{x}$，
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$点$B(m,-6)$在反比例函数$y=\frac{6}{x}$的图象上，
+
+    $\therefore m=\frac{6}{-6}=-1$，
+
+    故答案为：$-1$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 反比例函数
+  - 坐标系
+  module: functions
   difficulty: 中档
   recommended_for:
   - L1
@@ -226,29 +445,53 @@ questions:
 - id: 14
   type: 填空
   score: 2
-  question: "如图，一架梯子AB靠墙而立，梯子顶端B到地面的距离BC为，梯子中点处有一个标记，在梯子顶端B竖直下滑的过程中，该标记到地面的距离y与顶端下滑的距离x满足的函数关系是（    ）\nA. 正比例函数关系\tB. 一次函数关系\nC. 二次函数关系\tD. 反比例函数关系"
-  answer: ''
-  solution: ''
+  question: '如图，在菱形$ABCD$中，点E，F分别在BC，AD上，$BE = DF$．只需添加一个条件即可证明四边形$AECF$是矩形，这个条件可以是_______（写出一个即可）．
+
+    [图]'
+  answer: $AE \perp BC$（答案不唯一）
+  solution: '解：菱形$ABCD$，$BE = DF$，
+
+    ∴$AD\cdot DF=BC\cdot BL$，即$CE = AF$，且$AF = CE$，
+
+    ∴四边形$AECF$是平行四边形，根据矩形的判定，
+
+    ①四边形$AECF$是平行四边形，$AE \perp BC$，
+
+    ∴$\angle AEC = 90^\circ$，平行四边形$AECF$是矩形；
+
+    ②四边形$AECF$是平行四边形，若$CF \perp AD$，
+
+    ∴$\angle AFC = 90^\circ$，平行四边形$AECF$是矩形；
+
+    故答案为：$AE \perp BC$（答案不唯一）．'
   knowledge_points:
-  - 一次函数
-  - 反比例函数
-  - 二次函数
-  - 正比例函数
-  module: functions
+  - 矩形
+  - 菱形
+  module: quadrilaterals
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-shijingshan-yi-fig12.png
 - id: 15
   type: 填空
   score: 2
-  question: ______．
-  answer: ''
-  solution: ''
+  question: 若关于x的一元二次方程$x^{2}+4x+m=0$有两个不相等的实数根，则实数m的取值范围是_______．
+  answer: $m<4$
+  solution: '解：∵关于x的一元二次方程$x^{2}+4x+m=0$有两个不相等的实数根，
+
+    ∴$\Delta = b^{2} - 4ac = 16 - 4m > 0$，
+
+    解得：$m<4$，
+
+    故答案为：$m<4$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 一元二次方程
+  - 根的判别式
+  - 不等式
+  module: equationsAndInequalities
   difficulty: 中档
   recommended_for:
   - L1
@@ -257,12 +500,76 @@ questions:
 - id: 16
   type: 填空
   score: 2
-  question: 分解因式： _______．
-  answer: ''
-  solution: ''
+  question: '为落实生态文明建设，推动绿色发展，促进人与自然和谐共生，某公司装修采用同质地的A型、B型环保板材，具体要求如下：
+
+    板材要求
+
+    板材型号
+
+    板材规格
+
+    需用量
+
+    A型板材
+
+    $60\mathrm{cm}\times30\mathrm{cm}$
+
+    $290$块
+
+    B型板材
+
+    $40\mathrm{cm}\times 30\mathrm{cm}$
+
+    $180$块
+
+    现只能购得规格为$150\mathrm{cm}\times30\mathrm{cm}$的符合质地要求的标准板材，一张标准板材尽可能多地裁出A型、B型板材，裁法如下（损耗忽略不计）：
+
+    裁法
+
+    板材型号
+
+    裁法一
+
+    裁法二
+
+    裁法三
+
+    A型板材
+
+    $2$
+
+    $1$
+
+    $0$
+
+    B型板材
+
+    $0$
+
+    a
+
+    $3$
+
+    上表中a的值为_______；公司需购入标准板材至少_______张．'
+  answer: ①.2②.190
+  solution: '解：∵$(150-60)\div40=2\cdots10(\mathrm{cm})$，
+
+    ∴$a = 2$；
+
+    ∵$150-60\times2=30\mathrm{cm}$，$150-40\times3=30\mathrm{cm}$，
+
+    又$10<30,290>180$，
+
+    ∴选择裁法一和裁法二，所需板材最少，
+
+    ∵$180 \div 2 = 90$，$(290-90)\div2=100$，
+
+    ∴公司需购入标准板材至少$90+100=190$张；
+
+    故答案为：2，190．'
   knowledge_points:
   - 综合
-  module: geometryComprehensive
+  module: numbersAndExpressions
   difficulty: 较难
   recommended_for:
   - L2
@@ -270,12 +577,16 @@ questions:
 - id: 17
   type: 解答
   score: 5
-  question: 方程解是______．
-  answer: ''
-  solution: ''
+  question: 计算：$6\cos45^{\circ}-\sqrt{18}+|-5|-(\pi-2)^{0}$．
+  answer: '4'
+  solution: '解：$6\cos45^{\circ}-\sqrt{18}+|-5|-(\pi-2)^{0}$
+
+    $=6x\frac{\sqrt{2}}{2}-3\sqrt{2}+5-1$
+
+    $= 4$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 三角函数
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -285,12 +596,35 @@ questions:
 - id: 18
   type: 解答
   score: 5
-  question: 掷一枚材质均匀的骰子，掷得的点数为素数的概率是______．
-  answer: ''
-  solution: ''
+  question: '解不等式组：$\begin{aligned}
+
+    &x-4=-3x,\\
+
+    &x-1<\frac{5x+4}{2}
+
+    \end{aligned}$'
+  answer: $-2<x<1$
+  solution: '解：原不等式组为$\left\{
+
+    \begin{array}{l}
+
+    x-4<-3x+4 \quad (1) \\
+
+    x-1<\dfrac{5x+4}{2} \quad (2)
+
+    \end{array}
+
+    \right.$
+
+    解不等式①，得$x<1$，
+
+    解不等式②，得$x > -2$，
+
+    ∴原不等式组的解集为$-2<x<1$．'
   knowledge_points:
-  - 概率
-  module: statisticsAndProbability
+  - 不等式
+  - 不等式组
+  module: equationsAndInequalities
   difficulty: 基础
   recommended_for:
   - L0
@@ -300,12 +634,24 @@ questions:
 - id: 19
   type: 解答
   score: 5
-  question: 如果抛物线的顶点是它的最高点，那么a的取值范围是______ ．
-  answer: ''
-  solution: ''
+  question: 已知$x^{2}-x-5=0$，求代数式$\frac{x^{2}+1}{x}-2-\frac{x-1}{x^{2}}$的值．
+  answer: $x^{2}-x$，5
+  solution: '解：原式=$\frac{x^{2}+1-2x}{x}\cdot\frac{x^{2}}{x-1}$
+
+    =$\frac{(x-1)^{2}}{x}\cdot\frac{x^{2}}{x-1}$
+
+    =$x(x-1)$
+
+    =$x^{2}-x$，
+
+    ∵$x^{2}-x-5=0$，
+
+    ∴$x^{2}-x=5$．
+
+    ∴原式$= 5$．'
   knowledge_points:
   - 综合
-  module: functions
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -315,54 +661,320 @@ questions:
 - id: 20
   type: 解答
   score: 5
-  question: 如果关于x的二次三项式在实数范围内不能因式分解，那么k的取值范围是________．
-  answer: ''
-  solution: ''
+  question: '在证明“等腰三角形的两个底角相等”这个性质定理时，添加的辅助线AD有以下两种不同的叙述方法，请选择其中一种完成证明．
+
+    等腰三角形的性质定理：等腰三角形的两个底角相等．
+
+    已知：如图，$[公式]$$\triangle ABC$中，$AB = AC$，求证：$\angle B = \angle C$．
+
+    [图]
+
+    法一
+
+    证明：如图，做$\angle BAC$的平分线交BC于点D．
+
+    [图]
+
+    法二
+
+    证明：如图，取BC的中点D，连接AD．
+
+    [图]'
+  answer: 见解析
+  solution: '方法一：
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$AD平分$\angle BAC$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\angle BAD = \angle CAD$.
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$$AB = AC$，$AD = AD$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\triangle ABD \cong \triangle CAD$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\angle B = \angle C$.
+
+    方法二：
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$D为BC中点，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);'
   knowledge_points:
-  - 因式分解
-  module: numbersAndExpressions
+  - 全等三角形
+  module: triangles
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-shijingshan-yi-fig13.png
+  - figures/2023-shijingshan-yi-fig14.png
+  - figures/2023-shijingshan-yi-fig15.png
 - id: 21
   type: 解答
   score: 5
-  question: 在中，点是的中点，，，那么____________________（用，表示）．
-  answer: ''
-  solution: ''
+  question: '如图，在$\triangle ABC$中，$BC = 2AB$，D，E分别为BC，AC的中点，过点A作$AF \parallel BC$交DE的延长线于点F．
+
+    [图]
+
+    （1）求证：四边形$ABDF$是菱形；
+
+    （2）若$AB=2$，$\angle B=60^{\circ}$，求AE的长．'
+  answer: （1）见解析（2）$\sqrt{3}$
+  solution: '【小问1详解】
+
+    证明：∵D，E分别为BC，AC的中点，
+
+    ∴$BD=\frac{1}{2}BC$，$ED \parallel AB$，$ED=\frac{1}{2}AB$．
+
+    又∵$AF \parallel BC$，
+
+    ∴四边形$ABDF$是平行四边形．
+
+    ∵$BC = 2AB$，
+
+    ∴$AB = \frac{1}{2}BC$．
+
+    ∴$AB = BD$．
+
+    ∴四边形$ABDF$是菱形．
+
+    【小问2详解】
+
+    解：连接AD，如图．
+
+    ∵四边形$ABDF$是菱形，
+
+    ∴$\angle F=\angle B=60^{\circ}$，$AF = DF - AB = 2$．
+
+    [图]
+
+    ∴$\triangle ADF$是等边三角形．
+
+    ∵$ED=\frac{1}{2}AB+\frac{1}{2}DF$，
+
+    ∴$EF = ED$．
+
+    ∴$AE \perp DF$．
+
+    在$Rt\triangle AEF$中，$\angle F=60^{\circ}$，$AF = 2$，
+
+    ∴$AE\cdot AF\cdot\sin F-2x\frac{\sqrt{3}}{2}=\sqrt{3}$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 平行四边形
+  - 菱形
+  module: triangles
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-shijingshan-yi-fig16.png
+  - figures/2023-shijingshan-yi-fig17.png
 - id: 22
   type: 解答
   score: 5
-  question: 某校初三（1）班40名同学的体育成绩如表所示，则这40名同学成绩的中位数是__．
-  answer: ''
-  solution: ''
+  question: '在平面直角坐标系xOy中，一次函数$y=kx+b(k\neq0)$的图像由函数$y=x$的图像平移得到，且经过点$A(1,3)$．
+
+    （1）求这个一次函数的解析式；
+
+    （2）当$x<1$时，对于x$[公式]$每一个值，函数$y = mx (m \ne 0)$的值小于函数$y=kx+b(k\neq0)$的值，直接写出m的取值范围．'
+  answer: （1）$y=x+2$ （2）$1 \leq m \leq 3$
+  solution: '【小问1详解】
+
+    解：∵一次函数$y=kx+b(k\neq0)$的图像由函数$y=x$的图像平移得到，
+
+    ∴$k = 1$．
+
+    ∵一次函数$y=x+b$的图像经过点$A(1,3)$，
+
+    ∴$1+b=3$．
+
+    ∴$b = 2$．
+
+    ∴这个一次函数的解析式为$y=x+2$．
+
+    【小问2详解】
+
+    解：由题意，得：$x<1$时直线$y = mx (m \ne 0)$在直线$y=x+2$的下方，
+
+    如图：当直线$y = mx (m \ne 0)$在$l_{1},l_{2}$之间时，满足题意：
+
+    [图]
+
+    当$y = mx (m \ne 0)$与$y=x+2$平行时，$m = 1$，
+
+    当$y = mx (m \ne 0)$过点$A(1,3)$时：$m = 3$，
+
+    ∴当$1 \leq m \leq 3$时，对于$x<1$的每一个值，函数$y = mx (m \ne 0)$的值小于函数$y=kx+b(k\neq0)$的值．'
   knowledge_points:
-  - 中位数
-  module: statisticsAndProbability
+  - 一次函数
+  - 平移
+  - 坐标系
+  module: functions
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-shijingshan-yi-fig18.png
 - id: 23
   type: 解答
   score: 6
-  question: 《孙子算经》中记载：“凡大数之法，万万曰亿，万万亿曰兆．”说明了大数之间的关系：1亿＝1万×1万，1兆＝1万×1万×1亿，那么2兆＝________．（用科学记数法表示）
-  answer: ''
-  solution: ''
+  question: '$2022$年$10$月$12$日，“天宫课堂”第三课在中国空间站的问天实验舱开讲，“太空教师”陈冬、刘洋、蔡旭哲为广大青少年带来一场精彩的太空科普课．为了激发学生的航天兴趣，弘扬科学精神，某校甲、乙两个校区的八年级所有学生（两个校区八年级各有$200$名学生）参加了“格物致知叩问苍穹”为主题的太空科普知识竞赛．为了解八年级学生的科普知识掌握情况，调查小组进行了抽样调查，过程如下，请补充完整．
+
+    收集数据：调查小组计划从两个校区的八年级共选取$40$名学生的竞赛成绩（百分制）作为样本，下面的抽样方法中，合理的是（填字母）．
+
+    A．从每个校区八年级的科技小组中分别选取$20$名学生的竞赛成绩组成样本；
+
+    B．从每个校区八年级分别选取$20$名男生的竞赛成绩组成样本；
+
+    C．从每个校区八年级分别随机选取$10$名男生、$10$名女生的竞赛成绩组成样本．
+
+    抽样方法确定后，调查小组抽取得到两个校区的样本数据，其中乙校区的样本数据如下：$66$$88$$84$$79$$92$$83$$95$$89$$100$$91$
+
+    $91$$97$$74$$77$$99$$98$$89$$94$$100$$100$
+
+    整理、描述数据：按如下分数段整理、描述两个校区的样本数据，其中乙校区的情况如下：
+
+    人数成绩x
+
+    校区
+
+    $65 \leq x < 80$
+
+    $80 \leq x < 85$
+
+    $85 \leq x < 90$
+
+    $90 \leq x < 95$
+
+    $95 \leq x \leq 100$
+
+    乙校区
+
+    $2$
+
+    $3$
+
+    $7$
+
+    分析数据：两个校区样本数据的平均数、中位数、方差如下表所示：
+
+    校区
+
+    平均数
+
+    中位数
+
+    方差
+
+    甲校区
+
+    $89.3$
+
+    $88.5$
+
+    $42.6$
+
+    乙校区
+
+    $89.3$
+
+    $87.2$
+
+    得出结论：
+
+    a．对于抽取的八年级学生竞赛成绩，高于本校区平均分的人数更多的是校区，成绩更稳定的是校区（填“甲”或“乙”）；
+
+    b．抽样调查中，两个校区共有$30\%$的学生竞赛成绩不低于$95$分．该校计划从两个校区选派成绩不低于$95$分的学生参加全区的竞赛，估计参赛的八年级学生中，甲校区有人．'
+  answer: 收集数据：C；整理、描述数据：4，$4$；分析数据：$91$；得出结论：a．乙，甲；b．$50$
+  solution: '解：收集数据：根据抽取样本要保证总体的每一个对象有同等的被抽取到的可能性，并要求它们之间都是独立的，即可选择C；
+
+    整理、描述数据：由题中所给数据可知，乙校区成绩在$65 \leq x < 80$的有4人，$90 \leq x < 95$的也有4人；
+
+    分析数据：将乙校区成绩按从小到大排列为：
+
+    $66$$74$$77$$79$$83$$84$$88$$89$$89$$91$$91$$92$$94$$95$$97$$98$$99$$100$$100$$100$
+
+    ∴中位数为$91$；
+
+    得出结论：a．由表格可知对于抽取的八年级学生竞赛成绩，高于本校区平均分的人数更多的是乙校区，成绩更稳定的是甲校区．
+
+    故答案为：乙，甲；
+
+    b．∵抽样调查中，两个校区共有$30\%$的学生竞赛成绩不低于$95$分，
+
+    ∴两个校区共有$30\%\times40=12$人．
+
+    ∵抽样中乙校区成绩不低于$95$分的人数为7人，
+
+    ∴抽样中甲校区成绩不低于$95$分的人数为$12-7=5$人，
+
+    ∴甲校区成绩不低于$95$分的人数所占百分比为$\frac{5}{20}=25\%$，
+
+    ∴该校计划从两个校区选派成绩不低于$95$分的学生参加全区的竞赛，估计参赛的八年级学生中，甲校区有$200\times25\%=50$人．
+
+    故答案为：50．'
   knowledge_points:
-  - 科学记数法
-  module: numbersAndExpressions
+  - 平均数
+  - 中位数
+  - 方差
+  module: statisticsAndProbability
   difficulty: 较难
   recommended_for:
   - L2
@@ -370,479 +982,390 @@ questions:
 - id: 24
   type: 解答
   score: 6
-  question: 如图，某地下停车库入口的设计示意图，已知，坡道的坡比，的长为7.2米，的长为0.4米．按规定，车库坡道口上方需张贴限高标志，以便告知停车人车辆是否能安全驶入，根据所给数据，确定该车库入口的限高，即点D到的距离的值为________米．
-  answer: ''
-  solution: ''
+  question: '如图，AB是$\odot\odot$的直径，点D是弦AC延长线上一点，过点D作$DE \perp AB$于点E，过点C作$\odot\odot$的切线，交DE于点F．
+
+    [图]
+
+    （1）求证：$FC = FD$；
+
+    （2）若E是OB的中点，$\sin D = \frac{3}{5}$，$OA = 2$，求FD的长．'
+  answer: （1）见解析（2）$\frac{13}{8}$
+  solution: '【小问1详解】
+
+    证明：连接OC，如图1．
+
+    [图]
+
+    ∵CF是⊙O的切线，OC是⊙O的半径，
+
+    ∴$OC \perp CF$，
+
+    ∴$\angle 1+\angle 2=90^{\circ}$，
+
+    ∵$DE \perp AB$，
+
+    ∴$\angle D+\angle 3=90^{\circ}$，
+
+    ∵$OA = OC$，
+
+    ∴$\angle2=\angle3$．
+
+    ∴$\angle 1=\angle D$，
+
+    ∴$FC = FD$；
+
+    【小问2详解】
+
+    解：连接OF，如图2．
+
+    [图]
+
+    ∵$OB = OA = 2$，E是OB的中点，
+
+    ∴$OE = 1$，$AE = 3$，
+
+    在$\mathrm{Rt}\triangle AED$中，$\sin D=\frac{AE}{AD}=\frac{3}{5}$，
+
+    ∴$AD = 5$，
+
+    ∴$DE = \sqrt{AD^{2} - AE^{2}} = 4$，
+
+    设$FD = FC = x$，则$EF=4-x$，
+
+    在$\mathrm{Rt}\triangle FCO$中，$OF^{2}=FC^{2}+OC^{2}=x^{2}+4+4$．
+
+    在$\mathrm{Rt}\triangle FEO$中，$OE^{2}=EF^{2}+OE^{2}=(4-x)^{2}+1^{2}$．
+
+    ∴$x^{2}+4=(4-x)+1$，解得$x=\frac{13}{8}$．
+
+    即FD的长为$\frac{13}{8}$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 切线
+  - 弦
+  - 勾股定理
+  module: triangles
   difficulty: 较难
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2023-shijingshan-yi-fig19.png
+  - figures/2023-shijingshan-yi-fig20.png
+  - figures/2023-shijingshan-yi-fig21.png
 - id: 25
   type: 解答
   score: 6
-  question: 如图，正五边形形ABCDE的边长为2，分别以点C、D为圆心，CD长为半径画弧，两弧交于点F，则的长为__．（结果保留）
-  answer: ''
-  solution: ''
+  question: '篮球是学生非常喜爱的运动项目之一．篮圈中心距离地面的竖直高度是$3.05m$，小石站在距篮圈中心水平距离$6.5m$处的点A练习定点投篮，篮球从小石正上方出手到接触篮球架的过程中，其运行路线可以看作是抛物线的一部分．当篮球运行的水平距离是x（单位：m）时，球心距离地面的竖直高度是y（单位：m）．在小石多次的定点投篮练习中，记录了如下两次训练：
+
+    [图]
+
+    （1）第一次训练时，篮球的水平距离x与竖直高度y的几组数据如下：
+
+    水平距离$x / m$
+
+    $0$
+
+    $1$
+
+    $2$
+
+    $3$
+
+    $4$
+
+    $5$
+
+    $6$
+
+    竖直高度$y/m$
+
+    $2.0$
+
+    $2.7$
+
+    $3.2$
+
+    $3.5$
+
+    $3.6$
+
+    $3.5$
+
+    $3.2$
+
+    ①在平面直角坐标系xOy中，描出以上表中各对对应值为坐标的点，并用平滑的曲线连接；
+
+    ②结合表中数据或所画图象，直接写出篮球运行的最高点距离地面的竖直高度，并求y与x满足的函数解析式；
+
+    ③小石第一次投篮练习没能投进，请说明理由；
+
+    （2）第二次训练时，小石通过调整出手高度的方式将球投进．篮球出手后运行路线的形状与第一次相同，达到最高点时，篮球的位置恰好在第一次的正上方，则小石的出手高度是m．'
+  answer: （1）①见解析；②$3.6m$，$y=-0.1(x-4)^{2}+3.6$；③见解析 （2）$2.075$
+  solution: '【小问1详解】
+
+    解：①如图所示，即为所求．
+
+    [图]
+
+    ②∵当$x=3$和$x=5$时，都有$y = 3.5$，
+
+    ∴抛物线对称轴为直线$x=\frac{3+5}{2}=4$，
+
+    又∵由函数图象可知，抛物线开口向下，
+
+    ∴当$x = 4$时，y有最大值，即篮球运行的最高点距离地面的竖直高度为$3.6m$．
+
+    依题意，设y与x的函数解析式为$y=a(x-4)^{2}+3.6(a\neq 0)$．
+
+    ∵当$x = 0$时，$y = 2.0$，
+
+    ∴$a(0-4)^2+3.6=2.0$．
+
+    解得$a = -0.1$．
+
+    ∴y与x的函数解析式为$y=-0.1(x-4)^{2}+3.6$．
+
+    ③∵当$x = 6.5$时，$y=-0.1\times(6.5-4)^{2}+3.6=2.975<3.05$．
+
+    ∴小石第一次投篮练习不可能投进；
+
+    【小问2详解】
+
+    解：由题意得第二次出手的抛物线可以看作第一次出手的抛物线向上平移得到的，设这个平移距离为t个单位长度，
+
+    ∴第二次出手的抛物线解析式为$y=-0.1(x-4)^{2}+3.6+t$，
+
+    ∵第二次出手能投进，
+
+    ∴在$y=-0.1(x-4)^{2}+3.6+t$中，当$x = 6.5$时，$y = 3.05$，
+
+    ∴$-0.1\times(6.5-4)^{2}+3.6+t=3.05$，
+
+    ∴$t = 0.075$，
+
+    ∴第二次出手的抛物线解析式为$y=-0.1(x-4)^{2}+3.6+0.075=-0.1(x-4)^{2}+3.675$，
+
+    在$y=-0.1(x-4)^{2}+3.675$中，当$x = 0$时，$y = 2.075$，
+
+    ∴小石的出手高度是$2.075m$，
+
+    故答案为：$2.075$．'
   knowledge_points:
-  - 综合
-  module: circles
+  - 二次函数
+  - 平移
+  - 坐标系
+  module: functions
   difficulty: 较难
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2023-shijingshan-yi-fig22.png
+  - figures/2023-shijingshan-yi-fig23.png
 - id: 26
   type: 解答
   score: 6
-  question: 如图，已知在扇形中，，半径，点在弧上，过点作于点，于点，那么线段的长为______．
-  answer: ''
-  solution: ''
+  question: '在平面直角坐标系xOy中，抛物线$y=ax^{2}+bx+c\left(a>0\right)$的对称轴为$x = t$，两个不同的点$(3,m)$，$(t+1,n)$在抛物线上．
+
+    （1）若$m = n$，求t的值；
+
+    （2）若$n<m<c$，求t的取值范围．'
+  answer: （1）4（2）$\frac{3}{2}<t<2$或$t>4$
+  solution: '【小问1详解】
+
+    解：∵点$(3,m)$，$(t+1,n)$在抛物线$y=ax^{2}+bx+c(a>0)$上，且$m = n$，
+
+    ∴$t=\frac{3+(t+1)}{2}$．
+
+    解得：$t = 4$；
+
+    【小问2详解】
+
+    解：由题意，点$(t+1,n)$在对称轴$x = t$的右侧，点$(0,c)$在对称轴的左侧，
+
+    点$(3,m)$不在对称轴上．
+
+    ①当点$(3,m)$在对称轴$x = t$$[公式]$左侧时，
+
+    点$(t+1,n)$关于对称轴$x = t$的对称点为$(t-1,n)$．
+
+    ∵$a > 0$且$n<m<c$，
+
+    ∴$t-1>3$．
+
+    ∴$t>4$．
+
+    ②当点$(3,m)$在对称轴$x = t$的右侧时，
+
+    点$(0,c)$关于对称轴$x = t$的对称点为$(2t,c)$．
+
+    ∵$a > 0$且$n<m<c$，
+
+    ∴$t+1<3<2t$．
+
+    ∴$\frac{3}{2}<t<2$．
+
+    综上所述，t$[公式]$取值范围是$\frac{3}{2}<t<2$或$t>4$．'
   knowledge_points:
-  - 综合
-  module: circles
+  - 二次函数
+  - 轴对称
+  - 坐标系
+  module: functions
   difficulty: 压轴
   recommended_for:
   - L3
 - id: 27
   type: 解答
   score: 7
-  question: 若在实数范围内有意义，则实数的取值范围是______．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: numbersAndExpressions
-  difficulty: 压轴
-  recommended_for:
-  - L3
-- id: 28
-  type: 解答
-  score: 7
-  question: 分解因式：ab2﹣4ab+4a=________．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 压轴
-  recommended_for:
-  - L3
-- id: 29
-  type: 解答
-  score: 5
-  question: 如图，点、、都在正方形网格的格点上，将绕点顺时针旋转后得到，点、的对应点、也在格点上，则旋转角（）的度数为__________．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 正方形
-  - 旋转
-  module: quadrilaterals
-  difficulty: 压轴
-  recommended_for:
-  - L3
-- id: 30
-  type: 解答
-  score: 5
-  question: 用一组的值说明命题“对于非零实数，若，则”是错误的，这组值可以是______，_____.
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: numbersAndExpressions
-  difficulty: 压轴
-  recommended_for:
-  - L3
-- id: 31
-  type: 解答
-  score: 5
-  question: 关于的一元二次方程有实数根，则的取值范围是______．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 一元二次方程
-  module: numbersAndExpressions
-  difficulty: 压轴
-  recommended_for:
-  - L3
-- id: 32
-  type: 解答
-  score: 5
-  question: 如图，直线与抛物线交于点，且点A在y轴上，点B在x轴上，则不等式的解集为_____．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 不等式
-  module: equationsAndInequalities
-  difficulty: 压轴
-  recommended_for:
-  - L3
-- id: 33
-  type: 解答
-  score: 5
-  question: 如图，在四边形中，于点．有如下四个结论：①；②；③；④．上述结论中，所有正确结论的序号是____．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: quadrilaterals
-  difficulty: 压轴
-  recommended_for:
-  - L3
-- id: 34
-  type: 解答
-  score: 5
-  question: '某公园划船项目收费标准如下：
+  question: '在$\triangle ABC$中，$\angle ACB=90^\circ$，$CA = CB$，点D为射线CA上一点，过点D作$DE\parallel CB$且$DE = CB$（点E在点D的右侧），射线ED交射线BA于点F，点H是AF的中点，连接HC，HE．
 
-    某班18名同学一起去该公园划船，若每人划船的时间均为1小时，则租船的总费用最低为________元．
+    [图]
 
-    三、计算题（本大题共1小题，共5.0分）'
-  answer: ''
-  solution: ''
+    （1）如图$1$，当点D在线段CA上时，判断线段HE与HC的数量关系及位置关系；
+
+    （2）当点D在线段CA的延长线上时，依题意补全图$2$．用等式表示线段CB，CD，CH之间的数量关系，并证明．'
+  answer: （1）$HE = HC$，$HE \perp HC$ （2）$CB^{2}+CD^{2}=2CH^{2}$，图及证明见解析
+  solution: '【小问1详解】
+
+    解：数量关系$HE = HC$，位置关系$HE \perp HC$，理由如下：
+
+    ∵$\angle ACB=90^\circ$，$CA = CB$，
+
+    ∴$\angle B=\angle CAB=45^\circ$，
+
+    ∵$DE\parallel CB$且$DE = CB$，
+
+    ∴$DE = AC, \angle ADE - \angle ACB = 90^\circ, \angle AFD = \angle B = \angle DAF = 45^\circ$，
+
+    ∴$AD = DF$，
+
+    连接DH，
+
+    [图]
+
+    ∵H为AF的中点，
+
+    ∴$DH = AH = FH, \angle ADH = \angle HDF = 45^\circ$，$\angle AHD = 90^\circ$
+
+    ∴$\angle BAC = \angle HDF$，
+
+    ∴$\triangle ACH \cong \triangle DEH (SAS)$，
+
+    ∴$HE = HC$，$\angle AHC = \angle DHE$，
+
+    ∴$\angle EHC = \angle AHD = 90^\circ$，
+
+    即：$HE \perp HC$；
+
+    【小问2详解】
+
+    依题意补全图形，如图1．
+
+    [图]
+
+    数量关系：$CB^{2}+CD^{2}=2CH^{2}$．
+
+    证明：连接DH，CE，如图2．
+
+    ∵$\triangle ABC$中，$\angle ACB=90^\circ$，$CA = CB$，
+
+    ∴$\angle1=\angle B=45^{\circ}$．
+
+    ∵$DE\parallel CB$，
+
+    ∴$\angle ADF=\angle 2=\angle ACB=90^{\circ}$，$\angle3=\angle B=45^{\circ}$．
+
+    又∵$\angle DAF = \angle 1 = 45^\circ$
+
+    ∴'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 压轴
-  recommended_for:
-  - L3
-- id: 35
-  type: 解答
-  score: 5
-  question: '解不等式组:
-
-    四、解答题（本大题共18小题，共141.0分．解答应写出文字说明，证明过程或演算步骤）'
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 不等式
-  - 不等式组
-  module: equationsAndInequalities
-  difficulty: 压轴
-  recommended_for:
-  - L3
-- id: 36
-  type: 解答
-  score: 5
-  question: 先化简再求值：，其中．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 压轴
-  recommended_for:
-  - L3
-- id: 37
-  type: 解答
-  score: 5
-  question: 解不等式组，并求出它的正整数解．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 不等式
-  - 不等式组
-  module: equationsAndInequalities
-  difficulty: 压轴
-  recommended_for:
-  - L3
-- id: 38
-  type: 解答
-  score: 5
-  question: '已知一次函数的图象与反比例函数的图象相交于点，．
-
-    （1）求一次函数的解析式；
-
-    （2）过点A作直线，交y轴于点D，交第三象限内的反比例函数图象于点C，连接，如果，求线段的长．'
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 一次函数
-  - 反比例函数
-  module: functions
-  difficulty: 压轴
-  recommended_for:
-  - L3
-- id: 39
-  type: 解答
-  score: 5
-  question: '如图，某水渠的横断面是以为直径的半圆O，其中水面截线，小明在A处测得点B处小树的顶端C的仰角为，已知小树的高为米．
-
-    （1）求直径的长；
-
-    （2）如果要使最大水深为2.8米，那么此时水面的宽度约为多少米．（结果精确到0.1米，参考数据：，）'
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: circles
-  difficulty: 压轴
-  recommended_for:
-  - L3
-- id: 40
-  type: 解答
-  score: 5
-  question: '已知：在直角梯形中，，，沿直线翻折，点A恰好落在腰上的点E处．
-
-    （1）如图，当点E是腰的中点时，求证：是等边三角形；
-
-    （2）延长交线段的延长线于点F，连接，如果，求证：四边形是矩形．'
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 矩形
-  module: quadrilaterals
-  difficulty: 压轴
-  recommended_for:
-  - L3
-- id: 41
-  type: 解答
-  score: 5
-  question: '已知抛物线：与x轴相交于点和点B，与y轴交于点．
-
-    （1）求抛物线的表达式；
-
-    （2）把抛物线沿射线方向平移得到抛物线，此时点A、C分别平移到点D、E处，且都在直线上，设点F在抛物线 上，如果是以为底的等腰直角三角形，求点F的坐标；
-
-    （3）在第（2）小题的条件下，设点M为线段上的一点，，交直线于点N，求的值．'
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 平移
+  - 全等三角形
+  - 勾股定理
   module: triangles
   difficulty: 压轴
   recommended_for:
   - L3
-- id: 42
+  figures:
+  - figures/2023-shijingshan-yi-fig24.png
+  - figures/2023-shijingshan-yi-fig25.png
+  - figures/2023-shijingshan-yi-fig26.png
+  - figures/2023-shijingshan-yi-fig27.png
+- id: 28
   type: 解答
-  score: 5
-  question: '已知是的直径，弦，垂足为点，点在直径上（与、不重合），，连接并延长与交于点．
+  score: 7
+  question: '对于平面直角坐标系xOy中的点P和图形W，给出如下定义：若图形W上存在点Q，使得点P绕着点Q旋转$90^\circ$得到的对应点$P''$在图形W上，则称点P为图形W的“关联点”．
 
-    （1）如图1，当点与点重合时，求的度数；
+    [图]
 
-    （2）连接交弦于点，如果，求的值；
+    （1）图形W是线段AB，其中点A的坐标为$(0,2)$，点B的坐标为$(3,2)$，
 
-    （3）当四边形是梯形时，且，求的长．'
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 弦
-  module: quadrilaterals
-  difficulty: 压轴
-  recommended_for:
-  - L3
-- id: 43
-  type: 解答
-  score: 5
-  question: （第43题，详见原卷）
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 压轴
-  recommended_for:
-  - L3
-- id: 44
-  type: 解答
-  score: 5
-  question: 已知，求代数式的值．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 压轴
-  recommended_for:
-  - L3
-- id: 45
-  type: 解答
-  score: 5
-  question: '已知：如图，中，．
+    ①如图1，在点$P_{1}(-1,2)$，$P_{2}(2,4)$，$P_{3}(3,-1)$，$P_{4}(4,0)$中，线段AB的“关联点”是；
 
-    求作：线段，使得点D在线段上，且．
+    ②如图2，若直线$y=\frac{1}{3}x+b$上存在点P，使点P为线段AB的“关联点”，求b的取值范围；
 
-    作法：①以点A为圆心，长为半径画圆；
+    （2）图形W是以$T(t,0)$为圆心，$1$为半径的$\bigcirc$T．已知点$M(6,0)$，$N(0,2\sqrt{3})$．若线段MN上存在点P，使点P为$\bigcirc$T的“关联点”，直接写出t的取值范围．'
+  answer: （1）①$P_{2}$，$P_3$②$-2 \leq b \leq 5$ （2）$4-2\sqrt{2}\leq x\leq 7+\sqrt{2}$
+  solution: '【小问1详解】
 
-    ②以点C为圆心，长为半径画弧，交于点P（不与点B重合）；
+    解：①依题意，线段AB的“关联点”P在如图所示的阴影部分（含外边缘线段，不含线段AB），其中点$C(0,5)$，$D(3,5)$，$E(3,-1)$，$F(0,-1)$，点G是线段AD与BC的交点，点H是线段AE与BF的交点．
 
-    ③连接交于点D．线段就是所求作的线段．
+    [图]
 
-    （1）使用直尺和圆规，依作法补全图形（保留作图痕迹）；
+    ∴$P_{2}(2,4)$，$P_{3}(3,-1)$是线段AB的“关联点”，$P_{1}(-1,2)$，$P_{4}(4,0)$不是线段AB的“关联点”；
 
-    （2）完成下面的证明．
+    ②若直线$y=\frac{1}{3}x+b$过点$E(3,-1)$，可得$b = -2$；
 
-    证明：连接．
+    若直线$y=\frac{1}{3}x+b$过点$C(0,5)$，可得$b=5$.
 
-    ，
+    结合函数图象，可得b的取值范围是$-2 \leq b \leq 5$．
 
-    ∴点C在上．
+    【小问2详解】
 
-    点P在上，
+    解：如图所示，图形W是以$T(t,0)$为圆心，$1$为半径的$\bigcirc$T，
 
-    （_________）（填推理的依据）．
+    在$\mathrm{e}T$上任意取一点Q，将点T绕Q点旋转$90^\circ$得到$T''$，在$\odot T''$上的点是$\mathrm{e}T$的关联点，
 
-    ，
+    [图]
 
-    _________．
+    ∵$TQ=TQ''-1,\angle TQT''=90^{\circ}$，
 
-    ．'
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: circles
-  difficulty: 压轴
-  recommended_for:
-  - L3
-- id: 46
-  type: 解答
-  score: 5
-  question: '如图，在△ABC中，AC=BC，点D， E， F分别是AB，AC， BC的中点，连接DE，DF.
+    ∴$TT'' = \sqrt{2}$，
 
-    (1)求证:四边形DFCE是菱形；
+    ∴PT$=1+\sqrt{2}$，
 
-    (2)若∠A=75°，AC=4，求菱形DFCE的面积.'
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 菱形
-  module: quadrilaterals
-  difficulty: 压轴
-  recommended_for:
-  - L3
-- id: 47
-  type: 解答
-  score: 5
-  question: '已知直线过点．点P为直线l上一点，其横坐标为m．过点P作y轴的垂线，与函数的图象交于点Q．
+    即$\mathrm{e}T$的关联点是以T为圆心，半径为$1+\sqrt{2}$和$\sqrt{2}-1$的两个圆组成的圆环部分，如图所示，阴影部分，
 
-    （1）求k的值；
+    [图]
 
-    （2）①求点Q的坐标（用含m的式子表示）；
+    当点P与M重合，则半径为$1+\sqrt{2}$的$\mathrm{e}T$经过点P时，t取得最大值，
 
-    ②若的面积大于3，直接写出点P的横坐标m的取值范围．'
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 压轴
-  recommended_for:
-  - L3
-- id: 48
-  type: 解答
-  score: 5
-  question: '运用语音识别输入软件可以提高文字输入的速度．为了解，两种语音识别输入软件的准确性，小秦同学随机选取了段话，其中每段话都含个文字（不计标点符号）．在保持相同语速的条件下，他用标准普通话朗读每段话来测试这两种语音识别输入软件的准确性．他的测试和分析过程如下，请补充完整．
+    ∵点$M(6,0)$，
 
-    收集数据两种软件每次识别正确的字数记录如下：
+    ∴$OM = 6$．
 
-    A、98，98，92，92，92，92，92，89，89，85，84，84，83，83，79，79，78，78，69，58
+    则$t=6+1+\sqrt{2}=7+\sqrt{2}$，如图所示，
 
-    B、99，96，96，96，96，96，96，94，92，89，88，85，80，78，72，72，71，65，58，55
+    [图]
 
-    （1）整理、描述数据根据上面得到的两组样本数据，绘制了频数分布直方图，补充直方图：
+    当半径为$1+\sqrt{2}$的$\mathrm{e}T$与MN相切时，如图所示，此时t取得最小值，
 
-    （2）分析数据两组样本数据的平均数、众数、中位数、方差如表所示，补全表格：
+    [图]
 
-    （3）得出结论根据以上信息，判断______种语音识别输入软件的准确性较好，理由如下：______（至少从两个不同的角度说明判断的合理性）．'
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 平均数
-  - 中位数
-  - 众数
-  - 方差
-  module: statisticsAndProbability
-  difficulty: 压轴
-  recommended_for:
-  - L3
-- id: 49
-  type: 解答
-  score: 5
-  question: '如图，AB是的直径，过上一点C作的切线CD，过点B作BE⊥CD于点E，延长EB交于点F，连接AC，AF．
-
-    （1）求证：；
-
-    （2）连接BC，若的半径为5，，求BC的长．'
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 切线
-  module: circles
-  difficulty: 压轴
-  recommended_for:
-  - L3
-- id: 50
-  type: 解答
-  score: 5
-  question: '小张在学校进行定点处投篮练习，篮球运行的路径是抛物线，篮球在小张头正上方出手，篮球架上篮圈中心的高度是3.05米，当球运行的水平距离为米时，球心距离地面的高度为米，现测量第一次投篮数据如下：
-
-    请你解决以下问题：
-
-    （1）根据已知数据描点，并用平滑曲线连接；
-
-    （2）若小吴在小张正前方1米处，沿正上方跳起想要阻止小张投篮（手的最大高度不小于球心高度算为成功阻止），他跳起时能摸到的最大高度为2.4米，请问小昊能否阻止此次投篮？并说明理由；
-
-    （3）第二次在定点处投篮，篮球出手后运行的轨迹也是抛物线，并且与第一次抛物线的形状相同，篮球出手时和达到最高点时，球的位置恰好都在第一次的正上方，当篮球运行的水平距离是6.5米时恰好进球（恰好进球时篮圈中心与球心重合），问小张第二次篮球刚出手比第一次篮球刚出手时的高度高多少米？'
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: functions
-  difficulty: 压轴
-  recommended_for:
-  - L3
-- id: 51
-  type: 解答
-  score: 5
-  question: '在平面直角坐标系xOy中，一次函数的图象与y轴交于点A，与抛物线的对称轴交于点B，将点A向右平移5个单位得到点C，连接AB，AC得到的折线段记为图形G．
-
-    （1）求出抛物线的对称轴和点C坐标；
-
-    （2）①当时，直接写出抛物线与图形G的公共点个数．
-
-    ②如果抛物线与图形G有且只有一个公共点，求出a的取值范围．'
-  answer: ''
-  solution: ''
+    ∵点$M(6,0)$，$'
   knowledge_points:
   - 一次函数
+  - 切线
+  - 旋转
   - 平移
   - 坐标系
-  module: functions
-  difficulty: 压轴
-  recommended_for:
-  - L3
-- id: 52
-  type: 解答
-  score: 5
-  question: '如图，在中，，于点D，于点E，连接.
-
-    （1）依题意补全图形，猜想与之间数量关系并证明；
-
-    （2）用等式表示线段，，的数量关系；并证明.'
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
   module: geometryComprehensive
   difficulty: 压轴
   recommended_for:
   - L3
-- id: 53
-  type: 解答
-  score: 5
-  question: '在平面直角坐标系中，的半径为()．给出如下定义：若平面上一点到圆心的距离，满足，则称点为的“近点”．
-
-    （1）当的半径时，，，，中，的“近点”______．
-
-    （2）若点是的“近点”，求的半径的取值范围；
-
-    （3）当半径时，直线与轴交于点，与轴交于点，若线段上存在的“近点”，则的取值范围是______．'
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 坐标系
-  module: circles
-  difficulty: 压轴
-  recommended_for:
-  - L3
+  figures:
+  - figures/2023-shijingshan-yi-fig28.png
+  - figures/2023-shijingshan-yi-fig29.png
+  - figures/2023-shijingshan-yi-fig30.png
+  - figures/2023-shijingshan-yi-fig31.png
+  - figures/2023-shijingshan-yi-fig32.png
+  - figures/2023-shijingshan-yi-fig33.png

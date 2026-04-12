@@ -1,8 +1,8 @@
 # ============================================================
 # 2023年北京丰台区中考数学一模试卷 — 逐题分析
 # ============================================================
-# 数据来源：knowledge-original/精品解析：2023年北京市丰台区中考一模数学试卷（原卷版）.docx
-# 自动生成，部分数学公式可能显示不全（docx公式对象无法完整提取）
+# 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
+# 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
 # 满分：100分  时长：120分钟
 
 year: 2023
@@ -17,9 +17,19 @@ questions:
 - id: 1
   type: 选择
   score: 2
-  question: "下面几何体中，主视图是圆的是（   ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '下面几何体中，主视图是圆的是（）
+
+    A.[图]B.[图]C.[图]D.[图]'
+  answer: D
+  solution: 'A、主视图是长方形，故本选项不符合题意；
+
+    B、主视图是等腰三角形，故本选项不符合题意；
+
+    C、主视图是等腰三角形，故本选项不符合题意；
+
+    D、主视图是圆，故本选项符合题意；
+
+    故选：D．'
   knowledge_points:
   - 综合
   module: circles
@@ -29,14 +39,24 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-fengtai-yi-fig02.png
+  - figures/2023-fengtai-yi-fig03.png
+  - figures/2023-fengtai-yi-fig04.png
+  - figures/2023-fengtai-yi-fig05.png
 - id: 2
   type: 选择
   score: 2
-  question: "习近平在中国共产党第二十次全国代表大会上的报告中指出：十年来，我国经济实力实现历史性跃升，国内生产总值从五十四万亿元增长到一百一十四万亿元，我国经济总产量占世界经济的比重达百分之十八点五，提高七点二个百分点，稳居世界第二.将一百一十四万亿，即114000000000000用科学记数法表示为（   ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '习近平在中国共产党第二十次全国代表大会上的报告中指出：十年来，我国经济实力实现历史性跃升，国内生产总值从五十四万亿元增长到一百一十四万亿元，我国经济总产量占世界经济的比重达百分之十八点五，提高七点二个百分点，稳居世界第二.将一百一十四万亿，即114000000000000用科学记数法表示为（）
+
+    A.$114\times10^{12}$B.$1.14 \times 10^{12}$C.$1.14\times10^{14}$D.$0.114\times10^{15}$'
+  answer: C
+  solution: '解：114000000000000用科学记数法表示为$1.14\times10^{14}$，故C正确．
+
+    故选：C．'
   knowledge_points:
   - 科学记数法
+  - 绝对值
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -47,12 +67,23 @@ questions:
 - id: 3
   type: 选择
   score: 2
-  question: "下列图形中，既是中心对称图形也是轴对称图形的是（   ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '下列图形中，既是中心对称图形也是轴对称图形的是（）
+
+    A.[图]B.[图]C.[图]D.[图]'
+  answer: C
+  solution: 'A、是轴对称图形，不是中心对称图形，故此选项不符合题意；
+
+    B、是轴对称图形，不是中心对称图形，故此选项不符合题意；
+
+    C、是中心对称图形，是轴对称图形，故此选项符合题意；
+
+    D、是轴对称图形，不是中心对称图形，故此选项不符合题意．
+
+    故选：C．'
   knowledge_points:
   - 中心对称图形
   - 轴对称图形
+  - 旋转
   - 轴对称
   module: geometryComprehensive
   difficulty: 基础
@@ -61,12 +92,27 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-fengtai-yi-fig06.png
+  - figures/2023-fengtai-yi-fig07.png
+  - figures/2023-fengtai-yi-fig08.png
+  - figures/2023-fengtai-yi-fig09.png
 - id: 4
   type: 选择
   score: 2
-  question: "下列度数的角，只借助一副三角尺不能拼出的是（   ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '下列度数的角，只借助一副三角尺不能拼出的是（）
+
+    A.$15^\circ$B.$75^\circ$C.$105^\circ$D.$115^\circ$'
+  answer: D
+  solution: '解：A、$45^{\circ}-30^{\circ}=15^{\circ}$，即能用三角尺画出$15^\circ$的角，故本选项不符合题意；
+
+    B、$45^{\circ}+30^{\circ}=75^{\circ}$，即能用三角尺画出$75^\circ$的角，故本选项不符合题意；
+
+    C、$45^{\circ}+60^{\circ}=105^{\circ}$，即能用三角尺画出$105^\circ$的角，故本选项不符合题意；
+
+    D、根据$90^{\circ},45^{\circ},30^{\circ},60^{\circ}$的组合不得出$115^\circ$的角，即不能用三角尺画出$115^\circ$的角，故本选项符合题意；
+
+    故选D．'
   knowledge_points:
   - 综合
   module: geometryComprehensive
@@ -79,9 +125,21 @@ questions:
 - id: 5
   type: 选择
   score: 2
-  question: "若关于的一元二次方程有两个相等的实数根，则实数的值为（    ）\nA. 4\tB. \tC. \tD. －4"
-  answer: ''
-  solution: ''
+  question: '若关于x的一元二次方程$x^{2}-x+\pi=0$有两个相等的实数根，则实数n的值为（
+
+    ）
+
+    A.4B.$\frac{1}{4}$C.$-\frac{1}{4}$D.－4'
+  answer: B
+  solution: '∵一元二次方程$x^{2}-x+\pi=0$有两个相等的实数根，
+
+    ∴$\triangle=0$，
+
+    ∴$(-1)^{2}-4n=0$，
+
+    解得$n=\frac{1}{4}$，
+
+    故选：B．'
   knowledge_points:
   - 一元二次方程
   module: numbersAndExpressions
@@ -94,23 +152,41 @@ questions:
 - id: 6
   type: 选择
   score: 2
-  question: "实数a，b在数轴上的对应点的位置如图所示，下列结论中正确的是（   ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '实数a，b在数轴上的对应点的位置如图所示，下列结论中正确的是（）
+
+    [图]
+
+    A.$-a < b$B.$\left| a \right| > \left| b \right|$C.$a+b>0$D.$ab > 0$'
+  answer: B
+  solution: '解：由数轴得$-3 < a < -2$，$0<b<1$，且$\left| a \right| > \left| b \right|$，
+
+    ∴$a+b<0$，$ab < 0$，$-a > b$，故B正确，A、C、D错误．
+
+    故选：B．'
   knowledge_points:
-  - 综合
+  - 绝对值
   module: numbersAndExpressions
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-fengtai-yi-fig10.png
 - id: 7
   type: 选择
   score: 2
-  question: "小文掷一枚质地均匀的骰子，前两次抛掷向上一面的点数都是6，那么第三次抛掷向上一面的点数是6的概率是（   ）\nA \tB. \tC. \tD. 1"
-  answer: ''
-  solution: ''
+  question: '小文掷一枚质地均匀的骰子，前两次抛掷向上一面的点数都是6，那么第三次抛掷向上一面的点数是6的概率是（）
+
+    [图]
+
+    A.$\frac{1}{6}$B.$\frac{1}{3}$C.$\frac{1}{2}$D.1'
+  answer: A
+  solution: '解：因为掷一枚质地均匀的骰子共有6种等可能的结果，
+
+    所以第三次抛掷向上一面的点数是6的概率是$P = \frac{1}{6}$，
+
+    故选：A．'
   knowledge_points:
   - 概率
   module: statisticsAndProbability
@@ -119,12 +195,60 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-fengtai-yi-fig11.png
 - id: 8
   type: 选择
   score: 2
-  question: "下列关于两个变量关系的四种表述中，正确的是（   ）\n①圆的周长C是半径r的函数；②表达式中，y是x的函数；\n③下表中，n是m的函数；\n④下图中，曲线表示y是x的函数\nA. ①③\tB. ②④\tC. ①②③\tD. ①②③④"
-  answer: ''
-  solution: ''
+  question: '下列关于两个变量关系的四种表述中，正确的是（）
+
+    ①圆的周长C是半径r的函数；②表达式$y = \sqrt{x}$中，y是x的函数；
+
+    ③下表中，n是m的函数；
+
+    m
+
+    $-3$
+
+    $-2$
+
+    $-1$
+
+    1
+
+    2
+
+    3
+
+    n
+
+    $-2$
+
+    $-3$
+
+    $-6$
+
+    6
+
+    3
+
+    2
+
+    ④下图中，曲线表示y是x的函数
+
+    [图]
+
+    A.①③B.②④C.①②③D.①②③④'
+  answer: C
+  solution: '解：①圆的周长C是半径r的函数；表述正确，故①符合题意；
+
+    ②表达式$y = \sqrt{x}$中，y是x的函数；表述正确，故②符合题意；
+
+    由表格信息可得：对应m的每一个值，n都有唯一的值与之对应，故③符合题意；
+
+    在④中的曲线，当$x>0$时的每一个值，y都有两个值与之对应，故④不符合题意；
+
+    故选C．'
   knowledge_points:
   - 综合
   module: circles
@@ -132,12 +256,16 @@ questions:
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2023-fengtai-yi-fig12.png
 - id: 9
   type: 填空
   score: 2
-  question: 若分式在实数范围内有意义，则 x的取值范围是_____________．
-  answer: ''
-  solution: ''
+  question: 若分式$\frac{1}{x-2}$在实数范围内有意义，则x的取值范围是_____________．
+  answer: x≠2
+  solution: '试题解析：根据分式有意义的条件得：x-2≠0
+
+    即：x≠2'
   knowledge_points:
   - 综合
   module: numbersAndExpressions
@@ -150,9 +278,15 @@ questions:
 - id: 10
   type: 填空
   score: 2
-  question: 分解因式：__________.
-  answer: ''
-  solution: ''
+  question: 分解因式：$xy^{2}-2xy+x-$__________.
+  answer: $x(y-1)^2$
+  solution: '解：$xy^{3}-2xy+x$
+
+    $=x(y^{2}-2y+1)$
+
+    $=x(y-1)^2$
+
+    故答案$[公式]$：$x(y-1)^2$．'
   knowledge_points:
   - 综合
   module: geometryComprehensive
@@ -165,12 +299,18 @@ questions:
 - id: 11
   type: 填空
   score: 2
-  question: 方程的解为x＝_____．
-  answer: ''
-  solution: ''
+  question: 方程$\frac{2}{x-1}=\frac{1}{x}$的解为x＝_____．
+  answer: ﹣1
+  solution: '解：去分母得：2x＝x−1，
+
+    解得：x＝−1，
+
+    经检验x＝−1是分式方程的解，
+
+    故答案为：-1．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 分式方程
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -180,10 +320,20 @@ questions:
 - id: 12
   type: 填空
   score: 2
-  question: 如图，在中，为弦，于点C，交于点D，E，连接，，则图中存在的相等关系有_________（写出两组即可）．
-  answer: ''
-  solution: ''
+  question: '如图，在$\odot\odot$中，AB为弦，$OC \perp AB$于点C，交$\odot\odot$于点D，E，连接EA，EB，则图中存在的相等关系有_________（写出两组即可）．
+
+    [图]'
+  answer: $AC = BC$；$\angle EAB = \angle EBA$（答案不唯一）
+  solution: '∵在$\odot\odot$中，AB为弦，$OC \perp AB$，
+
+    ∴$AC = BC, \overline{AD} = \overline{BD}, \overline{AE} = \overline{BE}$，
+
+    ∴$AE = BE, \angle EAB = \angle EBA, \angle AED = \angle BED$，
+
+    故答案为：$AC = BC$；$\angle EAB = \angle EBA$（答案不唯一）.'
   knowledge_points:
+  - 圆周角
+  - 垂径定理
   - 弦
   module: circles
   difficulty: 基础
@@ -192,12 +342,22 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-fengtai-yi-fig13.png
 - id: 13
   type: 填空
   score: 2
-  question: 在平面直角坐标系中，点，在反比例函数的图象上，若，则k_____0（填“>”或“<”）．
-  answer: ''
-  solution: ''
+  question: 在平面直角坐标系xOy中，点$A(-2,y_{1})$，$B(5,y_{2})$在反比例函数$y=\frac{k}{x}(k\neq0)$的图象上，若$y_{1}>y_{2}$，则k_____0（填“>”或“<”）．
+  answer: $\gt$
+  solution: '∵点$A(-2,y_{1})$，$B(5,y_{2})$在反比例函数$y=\frac{k}{x}(k\neq0)$的图象上，且$y_{1}>y_{2}$，
+
+    ∴点$A(-2,y_{1})$在第二象限，点$B(5,y_{2})$在第四象限，
+
+    ∴反比例函数$y=\frac{k}{x}(k\neq0)$的图象在第二、四象限，
+
+    ∴$k < 0$．
+
+    故答案为：$\gt$．'
   knowledge_points:
   - 反比例函数
   - 坐标系
@@ -210,23 +370,52 @@ questions:
 - id: 14
   type: 填空
   score: 2
-  question: 如图，中，，，以点B为圆心，适当长为半径画弧，分别交，于点M，N，再分别以点M，N为圆心，大于的长为半径画弧，两弧交于点F，作射线交于点D，若点D到的距离为1，则_______．
-  answer: ''
-  solution: ''
+  question: '如图，$\triangle ABC$中，$\angle A = 90^{\circ}$，$AB = AC$，以点B为圆心，适当长为半径画弧，分别交BA，BC于点M，N，再分别以点M，N为圆心，大于$\frac{1}{2}MN$的长为半径画弧，两弧交于点F，作射线BF交AC于点D，若点D到BC的距离为1，则$AC =$_______．
+
+    [图]'
+  answer: $\sqrt{2}+1$##$1+\sqrt{2}$
+  solution: '解：过点D作$DE \perp BC$于E，如图所示，
+
+    [图]
+
+    ∵点D到BC的距离为1，BD平分$\angle ABC$，
+
+    ∴$AD = DE = 1$，
+
+    ∵$\angle A = 90^{\circ}$，$AB = AC$，
+
+    ∴$\angle ABC = \angle C = 45^{\circ} = \angle EDC$，
+
+    ∴$CE=DE=1$，
+
+    ∴$CD = \sqrt{1^{2} + 1^{2}} = \sqrt{2}$，
+
+    ∴$AC=AD+CD=\sqrt{2}+1$，
+
+    故答案为：$\sqrt{2}+1$．'
   knowledge_points:
-  - 综合
-  module: circles
+  - 勾股定理
+  module: triangles
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-fengtai-yi-fig14.png
+  - figures/2023-fengtai-yi-fig15.png
 - id: 15
   type: 填空
   score: 2
-  question: 为了解北京市2023年3月气温的变化情况，小云收集了该月每日的最高气温，并绘制成右面的统计图，若记该月上旬（1日至10日）的最高气温的方差为，中旬（11日至20日）的最高气温的方差为，下旬（21日至31日）的最高气温的方差为，则，，的大小关系为______（用“<”号连接）．
-  answer: ''
-  solution: ''
+  question: '为了解北京市2023年3月气温的变化情况，小云收集了该月每日的最高气温，并绘制成右面的统计图，若记该月上旬（1日至10日）的最高气温的方差为$S_{1}^{2}$，中旬（11日至20日）的最高气温的方差为$s_{2}^{2}$，下旬（21日至31日）的最高气温的方差为$S_{3}^{2}$，则$S_{1}^{2}$，$s_{2}^{2}$，$S_{3}^{2}$的大小关系为______（用“<”号连接）．
+
+    [图]'
+  answer: $S_{2}^{2}<S_{3}^{2}<S_{1}^{2}$
+  solution: '由图知，该月上旬（1日至10日）的最高气温波动程度很大，中旬（11日至20日）的最高气温波动程度较小，下旬（21日至31日）的最高气温波动程度处于中间，
+
+    ∴$S_{2}^{2}<S_{3}^{2}<S_{1}^{2}$．
+
+    故答案$[公式]$：$S_{2}^{2}<S_{3}^{2}<S_{1}^{2}$．'
   knowledge_points:
   - 统计
   - 方差
@@ -236,19 +425,49 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-fengtai-yi-fig16.png
 - id: 16
   type: 填空
   score: 2
-  question: '临近端午，某超市准备购进小枣粽、豆沙粽、肉粽共200袋（每袋均为同一品种的粽子），其中小枣粽每袋6个，豆沙粽每袋4个，肉粽每袋2个，为了促销，超市计划将所购粽子组合包装，全部制成A，B两种套装销售，套装为每袋小枣粽4个，豆沙粽2个；B套装为每袋小枣粽2个，肉粽2个．
+  question: '临近端午，某超市准备购进小枣粽、豆沙粽、肉粽共200袋（每袋均为同一品种的粽子），其中小枣粽每袋6个，豆沙粽每袋4个，肉粽每袋2个，为了促销，超市计划将所购粽子组合包装，全部制成A，B两种套装销售，A套装为每袋小枣粽4个，豆沙粽2个；B套装为每袋小枣粽2个，肉粽2个．
 
     （1）设购进的小枣粽x袋，豆沙粽y袋，则购进的肉粽的个数为________（用含x，y的代数式表示）；
 
-    （2）若肉粽的进货袋数不少于三种粽子进货总袋数的，则豆沙粽最多购进_______袋．'
-  answer: ''
-  solution: ''
+    （2）若肉粽的进货袋数不少于三种粽子进货总袋数的$\frac{2}{5}$，则豆沙粽最多购进_______袋．'
+  answer: ①.$(400-2x-2y)$②.40
+  solution: '解：（1）设购进的小枣粽x袋，豆沙粽y袋，则购进的肉粽$(200-x-y)$袋，
+
+    ∴购进的肉粽的个数为$2(200-x-y)=(400-2x-2y)$个；
+
+    故答案为：$(400-2x-2y)$
+
+    （2）根据题意得：购进的小枣粽的个数为$6x$个，豆沙粽的个数为$4y$个，
+
+    ∵A套装豆沙粽2个；B套装肉粽2个．
+
+    ∴A套装为$\frac{4y}{2}=2y$套，B套装为$400-2x-2y=(200-x-y)^{2}$套，
+
+    ∵A套装每袋小枣粽4个，B套装每袋小枣粽2个，
+
+    ∴$2y + 4(200 - x - y) = 6x$，
+
+    解得：$x=50+\frac{3y}{4}$，
+
+    ∵肉粽的进货袋数不少于三种粽子进货总袋数的$\frac{2}{5}$，
+
+    ∴$200-x=y-200\times\frac{1}{2}$，
+
+    即$200-\left(50+\frac{3y}{4}\right)=y\cdot200\times\frac{12}{5}$，
+
+    解得：$y \leq 40$，
+
+    ∴豆沙粽最多购进40袋；
+
+    故答案为：40'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 不等式
+  module: equationsAndInequalities
   difficulty: 较难
   recommended_for:
   - L2
@@ -256,12 +475,17 @@ questions:
 - id: 17
   type: 解答
   score: 5
-  question: （第17题，详见原卷）
-  answer: ''
-  solution: ''
+  question: 计算：$|-3|+2\cos30^\circ-\sqrt{12}+(3-\pi)^0$．
+  answer: $4-\sqrt{3}$
+  solution: '解：原式$3+2x-\frac{\sqrt{5}}{2}-2\sqrt{3}+1$
+
+    $3+ \sqrt{3}-2 \sqrt{2}+1$
+
+    $=4-\sqrt{3}$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 三角函数
+  - 绝对值
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -271,9 +495,13 @@ questions:
 - id: 18
   type: 解答
   score: 5
-  question: 解不等式组：．
-  answer: ''
-  solution: ''
+  question: 解不等式组：$\left\{\begin{array}{l}3(2-x)<2+x \text{①} \\ \frac{x}{2}<\frac{2x-1}{3} \text{②}\end{array}\right.$．
+  answer: $1<x\leq2$
+  solution: '解：解不等式①，得$x>1$．
+
+    解不等式②，得$x \leq 2$．
+
+    ∴原不等式组的解集为$1<x\leq2$．'
   knowledge_points:
   - 不等式
   - 不等式组
@@ -287,12 +515,44 @@ questions:
 - id: 19
   type: 解答
   score: 5
-  question: 已知，求代数式的值．
-  answer: ''
-  solution: ''
+  question: 已知$x^{2}-2x-2=0$，求代数式$2(x-1)(x+1)-(x-1)^2$的值．
+  answer: $-1$
+  solution: '解：原式$=2(x^{3}-1)-(x^{2}+2x+1)$
+
+    $=x^{2}-2x-3$，
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$$x^{2}-2x-2=0$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$x^{2}-2x=2$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$原式$=2-3=-1$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 方差
+  module: statisticsAndProbability
   difficulty: 基础
   recommended_for:
   - L0
@@ -302,48 +562,240 @@ questions:
 - id: 20
   type: 解答
   score: 5
-  question: 在证明等腰三角形的判定定理时，甲、乙、丙三位同学各添加一条辅助线，方法如下图所示，你能用哪位同学添加辅助线的方法完成证明，请选择一种方法补全证明过程．
-  answer: ''
-  solution: ''
+  question: '在证明等腰三角形的判定定理时，甲、乙、丙三位同学各添加一条辅助线，方法如下图所示，你能用哪位同学添加辅助线的方法完成证明，请选择一种方法补全证明过程．
+
+    等腰三角形的判定定理：
+
+    如果一个三角形有两个角相等，那么这两个角所对的边也相等（简写成“等角对等边”）．
+
+    已知：如图，在$\triangle ABC$中，$\angle B = \angle C$．
+
+    求证：$AB = AC$．
+
+    [图]
+
+    甲的方法：
+
+    证明：作$\angle BAC$的平分线交BC于点D．
+
+    [图]
+
+    乙的方法：
+
+    证明：作$AE \perp BC$于点E．
+
+    [图]
+
+    丙的方法：
+
+    证明：取BC中点F，连接AF．
+
+    [图]'
+  answer: 选择甲的方法，证明见解析．
+  solution: '解：选择甲的方法：
+
+    证明：作$\angle BAC$的平分线交BC于点D．
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\angle BAD = \angle CAD$．
+
+    在$\triangle ABD$与$\triangle ACD$中，
+
+    $\angle B = \angle C \\
+
+    \angle BAD = \angle CAD \\
+
+    AD = AD$
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\triangle ABD \cong \triangle ACD$$(AAS)$
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$AB = AC$．'
   knowledge_points:
-  - 综合
+  - 全等三角形
   module: triangles
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-fengtai-yi-fig17.png
+  - figures/2023-fengtai-yi-fig18.png
+  - figures/2023-fengtai-yi-fig19.png
+  - figures/2023-fengtai-yi-fig20.png
 - id: 21
   type: 解答
   score: 5
-  question: '如图，在中，，过点D作交的延长线于点E，连接交于点F．
+  question: '如图，在$Y_{ABCD}$中，$\angle ACB=90^\circ$，过点D作$DE \perp BC$交BC的延长线于点E，连接AE交CD于点F．
 
-    （1）求证：四边形矩形；
+    [图]
 
-    （2）连接，若，，求的长．'
-  answer: ''
-  solution: ''
+    （1）求证：四边形$ACED$是矩形；
+
+    （2）连接BF，若$\angle ABC = 60^\circ$，$CE = 2$，求BF的长．'
+  answer: （1）见解析（2）BF的长是$2\sqrt{3}$
+  solution: '【小问1详解】
+
+    证明：$\angle ACB = 90^\circ$，
+
+    $\therefore AC \perp BC$，
+
+    $\because DE \perp BC$，
+
+    $\therefore AC \parallel DE$，
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$四边形$ABCD$是平行四边形，点E在BC的延长线上，
+
+    $\ldots AD \parallel CE$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$四边形$ACED$是平行四边形，
+
+    $\angle ACE = 90^\circ$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$四边形$ACED$是矩形；
+
+    【小问2详解】
+
+    解：$\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$四边形$ACED$是矩形，四边形$ABCD$是平行四边形，
+
+    $WA = CD = AB$，$AF = EF$，$AD=CE=CB=2$，
+
+    $\because \angle ABC = 60^\circ$，
+
+    $\therefore \triangle ABC$是等边三角形，
+
+    $\therefore BF \perp AE$，$AB = 4E = BE '
   knowledge_points:
+  - 勾股定理
+  - 平行四边形
   - 矩形
-  module: quadrilaterals
+  module: triangles
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-fengtai-yi-fig21.png
 - id: 22
   type: 解答
   score: 5
-  question: '在平面直角坐标系中，函数的图象经过点，．
+  question: '在平面直角坐标系xOy中，函数$y=kx+b\ (k\neq0)$的图象经过点$(2,0)$，$(0,-1)$．
 
     （1）求这个函数的表达式；
 
-    （2）当时，对于x的每一个值，函数的值大于0，直接写出n的取值范围．'
-  answer: ''
-  solution: ''
+    （2）当$x > -2$时，对于x的每一个值，函数$y=kx+b+n$$(k\neq0)$的值大于0，直接写出n的取值范围．'
+  answer: （1）$y=\frac{1}{2}x-1$； （2）$n^{2}$．
+  solution: '【小问1详解】
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$函数图象经过点$(2,0)$，$(0,-1)$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\begin{cases}
+
+    2k + b = 0 \\
+
+    b = -1
+
+    \end{cases}$，解得$\left\{\begin{array}{l}k=\frac{1}{2}\\b=-1\end{array}\right.$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$函数表达式为$y=\frac{1}{2}x-1$．
+
+    【小问2详解】
+
+    ∵函数$y=kx+b+n$$(k\neq0)$的值大于0，
+
+    ∴$\frac{1}{2}x-1+n>0$，
+
+    解得：$x > 2 - 2n$，
+
+    ∵$x > -2$，
+
+    ∴$2 - 2n \leq -2$，
+
+    解得：$n^{2}$．'
   knowledge_points:
+  - 不等式
   - 坐标系
-  module: geometryComprehensive
+  module: equationsAndInequalities
   difficulty: 中档
   recommended_for:
   - L1
@@ -354,13 +806,29 @@ questions:
   score: 6
   question: '“华罗庚数学奖”是中国三大顶尖数学奖项之一，为激励中国数学家在发展中国数学事业中做出突出贡献而设立，小华对截止到2023年第十六届“华罗庚数学奖”得主获奖时的年龄（单位：岁）数据进行了收集、整理和分析，下面是部分信息．
 
-    a.“华罗庚数学奖”得主获奖时的年龄统计图（数据分成5组：，，，，）：
+    a.“华罗庚数学奖”得主获奖时的年龄统计图（数据分成5组：$50 \leq x < 60$，$60 \leq x < 70$，$70 \leq x < 80$，$80 \leq x < 90$，$90 \leq x < 100$）：
 
-    b.“华罗庚数学奖”得主获奖时的年龄在这一组的是：
+    [图]
 
-    63   65   65   65   65   66   67   68   68   68   69   69   69   69
+    b.“华罗庚数学奖”得主获奖时的年龄在$60 \leq x < 70$这一组的是：
 
-    c.“华罗庚数学奖”得主获奖时年龄数据的平均数、中位数、众数如下：
+    63
+
+    65   65   65   65   66   67   68   68   68   69   69   69   69
+
+    c.“华罗庚数学奖”得主获奖时的年龄数据的平均数、中位数、众数如下：
+
+    平均数
+
+    中位数
+
+    众数
+
+    $71.2$
+
+    m
+
+    65，69
 
     根据以上信息，回答下列问题：
 
@@ -371,29 +839,128 @@ questions:
     （3）第十六届“华罗庚数学奖”得主徐宗本院士获奖时的年龄为68岁，他的获奖年龄比一半以上“华罗庚数学奖”得主获奖年龄_______（填“小”或“大”），理由是_____________________；
 
     （4）根据以上统计图表描述“华罗庚数学奖”得主获奖时的年龄分布情况．'
-  answer: ''
-  solution: ''
+  answer: （1）30；（2）见解析； （3）小；他的获奖年龄比中位数69岁小； （4）获奖年龄在$60 \leq x < 70$范围内的人数最多，在$90 \leq x < 100$范围内的人数最少．（答案不唯一）
+  solution: '【小问1详解】
+
+    解：∵年龄$50 \leq x < 60$范围内有3人，占比$10\%$
+
+    $3+10\%=30$（人）；
+
+    故答案为30；
+
+    【小问2详解】
+
+    ∵总人数30人，
+
+    ∴年龄在$70 \leq x < 80$范围内有$30-3-14-3-2=8$人，
+
+    补全频数分布直方图如下：
+
+    [图]【小问3详解】
+
+    ∵中位数等于69
+
+    $68 < 69$
+
+    故答案为：小；他的获奖年龄比中位数69岁小
+
+    【小问4详解】
+
+    获奖年龄在$60 \leq x < 70$范围内的人数最多，在$90 \leq x < 100$范围内的人数最少.（答案不唯一）'
   knowledge_points:
   - 统计
   - 平均数
   - 中位数
   - 众数
+  - 扇形统计图
   module: statisticsAndProbability
   difficulty: 较难
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2023-fengtai-yi-fig22.png
+  - figures/2023-fengtai-yi-fig23.png
 - id: 24
   type: 解答
   score: 6
-  question: '如图，是的直径，，是的两条弦，，过点D作的切线交的延长线于点E．
+  question: '如图，AB是$\odot\odot$的直径，AD，BC是$\odot\odot$的两条弦，$\angle ABC=2\angle A$，过点D作$\odot\odot$的切线交CB的延长线于点E．
 
-    （1）求证：；
+    [图]
 
-    （2）若，，求的长．'
-  answer: ''
-  solution: ''
+    （1）求证：$CE \perp DE$；
+
+    （2）若$\tan A = \frac{1}{3}$，$BE = 1$，求CB的长．'
+  answer: （1）见解析； （2）8．
+  solution: '【小问1详解】
+
+    证明：连接OD．
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$DE是$\odot\odot$的切线，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\angle ODE=90^{\circ}$
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$$AO = DO$．
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\angle ODA = \angle A$
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\angle DOB=2\angle A=\angle ABC$．
+
+    [图]
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$DO \parallel CE$．
+
+    $\begin{tikzpictur'
   knowledge_points:
+  - 圆周角
   - 切线
   - 弦
   module: circles
@@ -401,81 +968,332 @@ questions:
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2023-fengtai-yi-fig24.png
+  - figures/2023-fengtai-yi-fig25.png
 - id: 25
   type: 解答
   score: 6
-  question: '赛龙舟是中国端午节习俗之一，也是一项广受欢迎的民俗体育运动．某地计划进行一场划龙舟比赛，图1是比赛途中经过的一座拱桥，图2是该桥露出水面的主桥拱的示意图，可看作抛物线的一部分，建立如图所示的平面直角坐标系，桥拱上的点到水面的竖直高度y（单位：）与到点O的水平距离x（单位：）近似满足函数关系，据调查，龙舟最高处距离水面，为保障安全，通过拱桥时龙舟最高处到桥拱的竖直距离至少．
+  question: '赛龙舟是中国端午节的习俗之一，也是一项广受欢迎的民俗体育运动．某地计划进行一场划龙舟比赛，图1是比赛途中经过的一座拱桥，图2是该桥露出水面的主桥拱的示意图，可看作抛物线的一部分，建立如图所示的平面直角坐标系xOy，桥拱上的点到水面的竖直高度y（单位：m）与到点O的水平距离x（单位：m）近似满足函数关系$y=-0.01(x-30)^{2}+9$，据调查，龙舟最高处距离水面$2m$，为保障安全，通过拱桥时龙舟最高处到桥拱的竖直距离至少$3m$．
 
-    （1）水面的宽度_______；
+    [图]
 
-    （2）要设计通过拱桥的龙舟赛道方案，若每条龙舟赛道宽度为，求最多可设计龙舟赛道的数量．'
-  answer: ''
-  solution: ''
+    （1）水面$[公式]$宽度$OA =$_______m；
+
+    （2）要设计通过拱桥的龙舟赛道方案，若每条龙舟赛道宽度为$9m$，求最多可设计龙舟赛道的数量．'
+  answer: （1）$60$ （2）4条．
+  solution: '【小问1详解】
+
+    解：令$y = 0$，则$-0.01(x-30)^{2}+9=0$，
+
+    ∴$(x-30)^{2}=900$，
+
+    解得$x = 0$或$x = 60$，
+
+    ∴$A(60,0)$，
+
+    ∴$OA = 60m$，
+
+    故答案为：$60$；
+
+    【小问2详解】
+
+    解：令$y = 5$，得$-0.01(x-30)^{2}-9=5$，
+
+    ∴$(x-30)^{2}=400$
+
+    解得$x_{1}=10$，$x_{2}=50$．
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$可设计赛道的宽度为$50-10=40m$，
+
+    ∵每条龙舟赛道宽度为$9m$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$最多可设计赛道4条．'
   knowledge_points:
+  - 二次函数
   - 坐标系
   module: functions
   difficulty: 较难
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2023-fengtai-yi-fig26.png
 - id: 26
   type: 解答
   score: 6
-  question: '在平面直角坐标系中，点，在抛物线上．
+  question: '在平面直角坐标系xOy中，点$A(-3,y_{1})$，$B(a+1,y_{2})$在抛物线$y = x^2 - 2ax + 1$上．
 
-    （1）当时，求抛物线的顶点坐标，并直接写出和的大小关系；
+    （1）当$a = 2$时，求抛物线的顶点坐标，并直接写出$y_{1}$和$y_{2}$的大小关系；
 
-    （2）抛物线经过点．
+    （2）抛物线经过点$C(m,y_{3})$．
 
-    ①当时，若，则a的值为_______；
+    ①当$m = 4$时，若$y_{1}=y_{3}$，则a的值为_______；
 
-    ②若对于任意的都满足，求a的取值范围．'
-  answer: ''
-  solution: ''
+    ②若对于任意的$4\leq m\leq6$都满足$y_{1}>y_{3}>y_{2}$，求a的取值范围．'
+  answer: （1）$(2,-3)$，$y_{1}>y_{2}$； （2）①$\frac{1}{2}$；②$\frac{3}{2}<a<3$或$a>7$．
+  solution: '【小问1详解】
+
+    解：当$a = 2$时，
+
+    $y=x^{2}-2x+1=(x-1)^{2}$，$B(3,y_{2})$，
+
+    ∴顶点坐标为$(2,-3)$，且开口向上，
+
+    ∵$2-(-3)>3-2$，
+
+    ∴$y_{1}>y_{2}$；
+
+    【小问2详解】
+
+    解：①当$m = 4$时，点$C(4,y_{3})$，
+
+    ∵$y_{1}=y_{3}$，
+
+    ∴抛物线的对称轴为直线$x=\frac{-3+4}{2}=\frac{1}{2}$，
+
+    ∵抛物线的对称轴为直线$x=\frac{-2a}{2}=a$，
+
+    ∴$a = \frac{1}{2}$；
+
+    故答案为：$\frac{1}{2}$
+
+    ②$\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$对于任意的$4\leq m\leq6$都满足$y_{1}>y_{3}>y_{2}$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$点A、B、C存在如下情况：
+
+    情况1，如示意图，当$-3 < a + 1 < m$时，有$\frac{-3+m}{2}<a$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$-3 + m < a < -m - 1$．
+
+    解得：$\frac{3}{2}<a<3$．
+
+    [图]
+
+    情况2：如示意图；当$-3 < m < a + 1$时，可知$\frac{m+a+1}{2}<a$，
+
+    '
   knowledge_points:
+  - 二次函数
   - 坐标系
   module: functions
   difficulty: 压轴
   recommended_for:
   - L3
+  figures:
+  - figures/2023-fengtai-yi-fig27.png
+  - figures/2023-fengtai-yi-fig28.png
 - id: 27
   type: 解答
   score: 7
-  question: '在正方形中，点O为对角线的中点，点E在对角线上，连接，点F在直线上（点F与点D不重合），且．
+  question: '在正方形$ABCD$中，点O为对角线AC的中点，点E在对角线AC上，连接EB，点F在直线AD上（点F与点D不重合），且$EF = EB$．
 
-    （1）如图1，当点E在线段上（不与端点重合）时．
+    [图]
 
-    ①求证：；
+    （1）如图1，当点E在线段AO上（不与端点重合）时．
 
-    ②用等式表示线段，，的数量关系并证明；
+    ①求证：$\triangle APE \cong \triangle ABE$；
 
-    （2）如图2，当点E在线段上（不与端点重合）时，补全图形，并直接写出线段，，的数量关系．'
-  answer: ''
-  solution: ''
+    ②用等式表示线段AB，AE，AF的数量关系并证明；
+
+    （2）如图2，当点E在线段OC上（不与端点重合）时，补全图形，并直接写出线段AB，AE，AF的数量关系．'
+  answer: （1）①见解析；②$AB=AF+\sqrt{2}AE$，证明见解析； （2）图见解析，$AB\cdot AF=\sqrt{2}AE$．
+  solution: '【小问1详解】
+
+    ①证明：连接DE．
+
+    [图]
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$四边形$ABCD$是正方形
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$AB = AD$，$\angle BAD = 90^\circ$．
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$点E在对角线AC上
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\angle BAC=\angle DAC=45^{\circ}$
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$$[公式]$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\triangle ABE \cong \triangle ADE$．
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,'
   knowledge_points:
+  - 全等三角形
+  - 勾股定理
   - 正方形
-  module: quadrilaterals
+  module: triangles
   difficulty: 压轴
   recommended_for:
   - L3
+  figures:
+  - figures/2023-fengtai-yi-fig29.png
+  - figures/2023-fengtai-yi-fig30.png
+  - figures/2023-fengtai-yi-fig31.png
+  - figures/2023-fengtai-yi-fig32.png
 - id: 28
   type: 解答
   score: 7
-  question: '对于点P和图形G，若在图形G上存在不重合的点M和点N，使得点P关于线段中点的对称点在图形G上，则称点P是图形的G的“中称点”．在平面直角坐标系中，已知点，，．
+  question: '对于点P和图形G，若在图形G上存在不重合的点M和点N，使得点P关于线段MN中点的对称点在图形G上，则称点P是图形的G的“中称点”．在平面直角坐标系xOy中，已知点$A(1,0)$，$B(1,1)$，$C(0,1)$．
 
-    （1）在点，，，中，_____是正方形的“中称点”；
+    （1）在点$P_{1}\left(\frac{1}{2},0\right)$，$P_{2}\left(\frac{1}{2},\frac{1}{2}\right)$，$P_{3}(1,-2)$，$P_{4}(-1,2)$中，_____是正方形$OABC$的“中称点”；
 
-    （2）的圆心在x轴上，半径为1．
+    （2）eT的圆心在x轴上，半径为1．
 
-    ①当圆心T与原点O重合时，若直线上存在的“中称点”，求m的取值范围；
+    ①当圆心T与原点O重合时，若直线$y = x + m$上存在eT的“中称点”，求m的取值范围；
 
-    ②若正方形的“中称点”都是的“中称点”，直接写出圆心T的横坐标t的取值范围．'
-  answer: ''
-  solution: ''
+    ②若正方形$OABC$的“中称点”都是eT的“中称点”，直接写出圆心T的横坐标t的取值范围．'
+  answer: （1）$P_{1}$，$P_{2}$； （2）①$-3\sqrt{2}<m<3\sqrt{2}$；②$2-\sqrt{5}\leq1\leq\sqrt{5}-1$．
+  solution: '【小问1详解】
+
+    解：由题意可知，
+
+    正方形$OABC$的“中称点”是以$D(2,2)$，$E(-1,2)$，$F(-1,-1)$，$G(2,-2)$为顶点的正方形内部，如图：
+
+    $P_{1}\left(\frac{1}{2},0\right)$，$P_{2}\left(\frac{1}{2},\frac{1}{2}\right)$在正方形$DEFG$内部，符合题意；
+
+    $P_{3}(1,-2)$在正方形$DEFG$外，$P_{4}(-1,2)$在正方形$DEFG$上，不符合题意；
+
+    故答案为：$P_{1}$，$P_{2}$；
+
+    [图]【小问2详解】
+
+    ①由题意得：eT的“中称点”在以O为圆心，3为半径的圆内，
+
+    当直线$y = x + m$与此圆相切于点D时，设在$D(x,y)$$(x\langle0,y\rangle0)$，
+
+    则$\angle DAO=\angle DCA=45^{\circ}$，
+
+    $\therefore x = y$，
+
+    $\because x^{2}+y^{2}=3^{2}$，
+
+    $\therefore x = -\frac{3\sqrt{2}}{2}$，$y = \frac{3\sqrt{2}}{2}$，
+
+    $\frac{3\sqrt{2}}{2}-\frac{3\sqrt{2}}{2}+m$，
+
+    $\therefore m = 3\sqrt{2}$，
+
+    故直线与y轴交于点$E\left(0,3\sqrt{2}\right)$；
+
+    同理，相切于点F时，直线与y轴交于点$G(0,-3\sqrt{2})$，
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$直线$y = x + m$上存在eT的“中称点”，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circl'
   knowledge_points:
+  - 一次函数
+  - 勾股定理
   - 正方形
+  - 轴对称
   - 坐标系
   module: geometryComprehensive
   difficulty: 压轴
   recommended_for:
   - L3
+  figures:
+  - figures/2023-fengtai-yi-fig33.png
+  - figures/2023-fengtai-yi-fig34.png
+  - figures/2023-fengtai-yi-fig35.png
+  - figures/2023-fengtai-yi-fig36.png

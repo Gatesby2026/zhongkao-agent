@@ -1,42 +1,32 @@
 # ============================================================
 # 2023年北京房山区中考数学二模试卷 — 逐题分析
 # ============================================================
-# 数据来源：knowledge-original/精品解析：2023年北京市房山区中考二模数学试卷（原卷版）.docx
-# 自动生成，部分数学公式可能显示不全（docx公式对象无法完整提取）
+# 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
+# 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
 # 满分：100分  时长：120分钟
 
 year: 2023
-district: 房山区
+district: 房山
 exam_type: 二模
 subject: 数学
 full_score: 100
 duration_minutes: 120
-total_questions: 28
+total_questions: 27
 structure: 8选择(16分) + 8填空(16分) + 12解答(68分)
 questions:
 - id: 1
   type: 选择
   score: 2
-  question: "下列几何体的主视图和俯视图完全相同的是（   ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 2
-  type: 选择
-  score: 2
-  question: "2022年我国的进出口总额超过了6万亿美元，实际使用外资亿美元，规模再创历史新高．将用科学记数法表示应为（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '下列几何体的主视图和俯视图完全相同的是（）
+
+    A.[图]B.[图]C.[图]D.[图]'
+  answer: D
+  solution: '解：$189130000000=1.8913\times10^{11}$．
+
+    故选：D'
   knowledge_points:
   - 科学记数法
+  - 绝对值
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -44,12 +34,25 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-fangshan-er-fig01.png
+  - figures/2023-fangshan-er-fig02.png
+  - figures/2023-fangshan-er-fig03.png
+  - figures/2023-fangshan-er-fig04.png
 - id: 3
   type: 选择
   score: 2
-  question: "如图，用量角器测量，可读出的度数为（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '如图，用量角器测量$\angle AOB$，可读出$\angle AOB$的度数为（
+
+    ）
+
+    [图]
+
+    A.$65^\circ$B.$110^\circ$C.$115^\circ$D.$120^\circ$'
+  answer: C
+  solution: '解：看内圈的数字可得：$\angle AOB=115^{\circ}$，
+
+    故选：C．'
   knowledge_points:
   - 综合
   module: geometryComprehensive
@@ -59,12 +62,26 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-fangshan-er-fig05.png
 - id: 4
   type: 选择
   score: 2
-  question: "实数a，b在数轴上的对应点的位置如图所示，表示实数c的点在原点右侧，且，下列结论中正确的是（    ）\nA \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '实数a，b在数轴上的对应点的位置如图所示，表示实数c的点在原点右侧，且$\left| c \right| < \left| a \right|$，下列结论中正确的是（）
+
+    [图]
+
+    A.$a+b<0$B.$a+c<0$C.$a-c>0$D.$\frac{a}{b}>0$'
+  answer: B
+  solution: '解：由图可知$\left| a \right| < \left| b \right|$，
+
+    又∵$\left| c \right| < \left| a \right|$，
+
+    ∴$-b<a<-c<0<c<-a<b$，
+
+    ∴$a+c<0$，
+
+    故选B'
   knowledge_points:
   - 综合
   module: numbersAndExpressions
@@ -74,14 +91,27 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-fangshan-er-fig06.png
 - id: 5
   type: 选择
   score: 2
-  question: "下列图形中，点O是该图形的对称中心的是（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '下列图形中，点O是该图形的对称中心的是（）
+
+    A.[图]B.[图]C.[图]D.[图]'
+  answer: B
+  solution: '解：A、图形绕点O旋转72度与自身重合，点O$[公式]$旋转中心，故此选项不符合题意；
+
+    B、图形绕点O旋转181度与自身重合，是中心对称图形，点O是对称中心，故此选项符合题意；
+
+    C、图形绕点O旋转120度与自身重合，点O是旋转中心，故此选项不符合题意；
+
+    D、图形绕点O旋转72度与自身重合，点O是旋转中心，故此选项不符合题意；
+
+    故选：B．'
   knowledge_points:
-  - 综合
+  - 中心对称图形
+  - 旋转
   module: geometryComprehensive
   difficulty: 基础
   recommended_for:
@@ -89,29 +119,58 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-fangshan-er-fig07.png
+  - figures/2023-fangshan-er-fig08.png
+  - figures/2023-fangshan-er-fig09.png
+  - figures/2023-fangshan-er-fig10.png
 - id: 6
   type: 选择
   score: 2
-  question: "不透明的盒子中有三张卡片，上面分别写有数字“1，2，3”，除数字外三张卡片无其他差别． 从中随机取出一张卡片，记录其数字，放回并摇匀，再从中随机取出一张卡片，记录其数字，两次取出卡片上的数字的乘积是偶数的概率是（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '不透明的盒子中有三张卡片，上面分别写有数字“1，2，3”，除数字外三张卡片无其他差别．从中随机取出一张卡片，记录其数字，放回并摇匀，再从中随机取出一张卡片，记录其数字，两次取出卡片上的数字的乘积是偶数的概率是（）
+
+    A.$\frac{1}{2}$B.$\frac{2}{3}$C.$\frac{4}{9}$D.$\frac{5}{9}$'
+  answer: D
+  solution: '解：画树状图如下：
+
+    [图]
+
+    由树状图知，共有9种等可能结果，从中找到抽到的两张卡片上的数字乘积是偶数的有5种结果，
+
+    所以抽到的两张卡片上的数字乘积是偶数的概率为$\frac{5}{9}$，
+
+    故选：D．'
   knowledge_points:
   - 概率
+  - 树状图
+  - 列表法
   module: statisticsAndProbability
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-fangshan-er-fig11.png
 - id: 7
   type: 选择
   score: 2
-  question: "已知，若n为整数，且，则n的值是（    ）\nA. 26\tB. 27\tC. 28\tD. 29"
-  answer: ''
-  solution: ''
+  question: '已知$36 = 676.27^{\circ} - 729.28^{\circ} = 784.29 = 841$，若n为整数，且$x-1<\sqrt{795}<x$，则n的值是（）
+
+    A.26B.27C.28D.29'
+  answer: D
+  solution: '解：∵$784<795<841$，
+
+    ∴$28<\sqrt{795}<29$，
+
+    ∵无理数$\sqrt{795}$的值介于两个连续整数28和29之间，
+
+    ∴$n = 29$，
+
+    故选：D．'
   knowledge_points:
   - 综合
-  module: geometryComprehensive
+  module: numbersAndExpressions
   difficulty: 中档
   recommended_for:
   - L1
@@ -120,24 +179,43 @@ questions:
 - id: 8
   type: 选择
   score: 2
-  question: "如图1，在中，，D，E分别是边的中点，点F为线段上的一个动点，连接． 设，图1中某条线段长为y，若表示y与x的函数关系的图象大致如图2所示，则这条线段可能是（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '如图1，在$\triangle ABC$中，$AB = BC,\ \angle ABC = 120^\circ$，D，E分别是边$AB, BC$的中点，点F为线段AC上的一个动点，连接$FD, FB, FE$．设$AF = x$，图1中某条线段长为y，若表示y与x的函数关系的图象大致如图2所示，则这条线段可能是（）
+
+    [图]
+
+    A$[公式]$FDB.FBC.FED.FC'
+  answer: C
+  solution: '解：A.观察图2可知FD在$x = \frac{1}{4}AC$时取得最小值，故选项A不符合题意；
+
+    B．观察图2可知FB在$x = \frac{1}{2} AC$时取得最小值，故选项B不符合题意；
+
+    C．观察图2可知FE在$x = \frac{3}{4}AC$时取得最小值，故选项C符合题意；
+
+    D．观察图2可知FC在$x = AC$取得最小值为0，故选项D不符合题意．
+
+    故选：C．'
   knowledge_points:
   - 动点
+  - 最值
   module: geometryComprehensive
   difficulty: 较难
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2023-fangshan-er-fig12.png
 - id: 9
   type: 填空
   score: 2
-  question: 若代数式在实数范围内有意义，则实数的取值范围是___________．
-  answer: ''
-  solution: ''
+  question: 若代数式$\frac{3}{x-7}$在实数范围内有意义，则实数x的取值范围是___________．
+  answer: $x \neq 7$
+  solution: '解：由题意得$x-7\neq0$，
+
+    解得$x \neq 7$，
+
+    故答案为：$x \neq 7$．'
   knowledge_points:
-  - 综合
+  - 不等式
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -148,12 +226,14 @@ questions:
 - id: 10
   type: 填空
   score: 2
-  question: 分解因式：_______.
-  answer: ''
-  solution: ''
+  question: 分解因式：$ab^2 - 4a =$_______.
+  answer: $a(b+2)(b-2)$．
+  solution: '解：$ab^{2}-4a-a(b^{2}-4)=a(b+2)(b-2)$，
+
+    故答案为：$a(b+2)(b-2)$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 方差
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -163,12 +243,22 @@ questions:
 - id: 11
   type: 填空
   score: 2
-  question: 方程的解为___________．
-  answer: ''
-  solution: ''
+  question: 方程$\frac{5}{x}=\frac{7}{x+2}$的解为___________．
+  answer: $x=5$
+  solution: '解：方程两边同时乘以$x(x+2)$，得
+
+    $5(x+2)=7x$，
+
+    解得：$x=5$，
+
+    检验：把$x=5$代入$x(x+2)$，得$5(5+2)=35\neq0$，
+
+    ∴原分式方程的解为$x=5$，
+
+    故答案为：$x=5$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 分式方程
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -178,9 +268,19 @@ questions:
 - id: 12
   type: 填空
   score: 2
-  question: 在平面直角坐标系xOy中，若反比例函数的图象经过点和点，则m的值为___________．
-  answer: ''
-  solution: ''
+  question: 在平面直角坐标系xOy中，若反比例函数$y=\frac{k}{x}(k\neq0)$的图象经过点$A(3,-2)$和点$B(2,m)$，则m的值为___________．
+  answer: $-3$
+  solution: '解：∵反比例函数$y=\frac{k}{x}(k\neq0)$的图象经过点$A(3,-2)$，
+
+    ∴$k=(-2)\times3=-6$．
+
+    ∵点$B(2,m)$在反比例函数$y=\frac{k}{x}(k\neq0)$的图象上，
+
+    ∴$k = -6 = 2m$，
+
+    解得：$m = -3$．
+
+    故答案为：$-3$．'
   knowledge_points:
   - 反比例函数
   - 坐标系
@@ -194,12 +294,18 @@ questions:
 - id: 13
   type: 填空
   score: 2
-  question: 关于的一元二次方程有两个实数根，则的取值范围是_________．
-  answer: ''
-  solution: ''
+  question: 关于x的一元二次方程$x^{2}+6x+m=0$有两个实数根，则m的取值范围是_________．
+  answer: $m \leq 9$##$9\ m$
+  solution: '解：根据题意得$\Delta=6^{2}-4\times1\times m\quad 0$，
+
+    解得$m \leq 9$．
+
+    故答案为：$m \leq 9$．'
   knowledge_points:
   - 一元二次方程
-  module: numbersAndExpressions
+  - 根的判别式
+  - 不等式
+  module: equationsAndInequalities
   difficulty: 中档
   recommended_for:
   - L1
@@ -208,27 +314,108 @@ questions:
 - id: 14
   type: 填空
   score: 2
-  question: 如图，点A,B,C在⊙O上，BC=6,∠BAC=60°，则⊙O的半径为______．
-  answer: ''
-  solution: ''
+  question: '如图，点A,B,C在⊙O上，BC=6,∠BAC=60°，则⊙O的半径为______．
+
+    [图]'
+  answer: $2\sqrt{3}$
+  solution: '连接OB、OC并作OF$\perp$BC,如下图所示
+
+    [图]
+
+    ∵同弧$\widehat{BC}$
+
+    ∴∠BOC=2∠BAC=120°（同弧所对的圆心角是圆周角的二倍）
+
+    又∵OF$\perp$BC（垂径定理），BC=6
+
+    ∴FB=FC=3，∠FOC=60°
+
+    ∴OF=$\sqrt{3}$，OC=$2\sqrt{3}$(30°特殊直角三角形三边之比为$1:2:\sqrt{3}$)
+
+    ∴半径为$2\sqrt{3}$．
+
+    故答案为：$2\sqrt{3}$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 圆周角
+  - 垂径定理
+  module: circles
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-fangshan-er-fig13.png
+  - figures/2023-fangshan-er-fig14.png
 - id: 15
   type: 填空
   score: 2
   question: '某公司销售部在出售一批柑橘前需要先进行“柑橘损坏率”统计，去掉损坏的柑橘后，再确定柑橘的售价．下表是销售部随机取样得到的“柑橘损坏率”统计表的一部分：
 
-    估计这批柑橘完好的概率为___________（结果精确到）．'
-  answer: ''
-  solution: ''
+    柑橘总质量$n/kg$
+
+    $250$
+
+    $300$
+
+    $350$
+
+    $400$
+
+    $450$
+
+    $500$
+
+    $550$
+
+    $600$
+
+    损坏的柑橘质量$m/kg$
+
+    $24.75$
+
+    $30.93$
+
+    $35.12$
+
+    $39.97$
+
+    $44.54$
+
+    $51.07$
+
+    $55.13$
+
+    $61.98$
+
+    柑橘损坏的频率$\frac{m}{n}$
+
+    $0.099$
+
+    $0.103$
+
+    $0.100$
+
+    $0.099$
+
+    $0.099$
+
+    $0.102$
+
+    $0.100$
+
+    $0.103$
+
+    估计这批柑橘完好的概率为___________（结果精确到$0.1$）．'
+  answer: $0.9$
+  solution: '解：根据题目损坏的频率数据可知，损坏的频率再$0.1$左右范围内浮动，结合题目结果保留小数点后一位，得到柑橘损坏的概率为$0.1$；
+
+    ∴柑橘完好的概率为$1-0.1=0.9$，
+
+    故答案为：$0.9$．'
   knowledge_points:
   - 概率
+  - 频率
   - 统计
   module: statisticsAndProbability
   difficulty: 中档
@@ -239,12 +426,14 @@ questions:
 - id: 16
   type: 填空
   score: 2
-  question: 甲、乙、丙三位同学进行象棋比赛训练，两人先比，若分出胜负，则由第三个人与胜者比赛；若是和棋，则这两个人继续下一局比赛，直到分出胜负． 如此进行……比赛若干局后，甲胜4局，负2局；乙胜3局，负3局；若丙负3局，那么丙胜了___________局，三位同学至少进行了___________局比赛．
-  answer: ''
-  solution: ''
+  question: 甲、乙、丙三位同学进行象棋比赛训练，两人先比，若分出胜负，则由第三个人与胜者比赛；若是和棋，则这两个人继续下一局比赛，直到分出胜负．如此进行……比赛若干局后，甲胜4局，负2局；乙胜3局，负3局；若丙负3局，那么丙胜了___________局，三位同学至少进行了___________局比赛．
+  answer: ①.1②.8
+  solution: '解：总负局数为$2+3+3=8$，而甲、乙胜局数为$4+3=7$，故丙胜局数为$8-7=1$，
+
+    故答案为：1，8'
   knowledge_points:
   - 综合
-  module: geometryComprehensive
+  module: numbersAndExpressions
   difficulty: 较难
   recommended_for:
   - L2
@@ -252,12 +441,17 @@ questions:
 - id: 17
   type: 解答
   score: 5
-  question: （第17题，详见原卷）
-  answer: ''
-  solution: ''
+  question: 计算：$\left(\frac{1}{2}\right)^{-1}+\sqrt{18}-4-\sqrt{2}-4\cos45^{\circ}$．
+  answer: $3+2\sqrt{2}$
+  solution: '解：原式$3+3\sqrt{2}+\sqrt{2}-4\sqrt{\frac{\sqrt{2}}{2}}$
+
+    $=3+4\sqrt{2}-2\sqrt{2}$
+
+    $= 3 + 2\sqrt{2}$'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 三角函数
+  - 绝对值
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -267,9 +461,27 @@ questions:
 - id: 18
   type: 解答
   score: 5
-  question: 解不等式组：
-  answer: ''
-  solution: ''
+  question: '解不等式组：$\begin{cases}
+
+    2x-1 < 5-x \\
+
+    \frac{3+5x}{3} > 2x
+
+    \end{cases}$'
+  answer: $x<2$
+  solution: '解：$\begin{cases}
+
+    2x+1<5-x①\\
+
+    \dfrac{3+5x}{3}>2x②
+
+    \end{cases}$
+
+    解不等式①得；$x<2$
+
+    解不等式②得；$x<3$
+
+    ∴不等式组的解集为$x<2$．'
   knowledge_points:
   - 不等式
   - 不等式组
@@ -283,12 +495,20 @@ questions:
 - id: 19
   type: 解答
   score: 5
-  question: 已知，求代数式的值．
-  answer: ''
-  solution: ''
+  question: 已知$x^2 - x - 1 = 0$，求代数式$(x+3)(x-3)+x(x-2)$的值．
+  answer: $-7$
+  solution: '原式$x^{2}-9+x^{2}-2x$
+
+    $=2x^{2}-2x-9$，
+
+    ∵$x^2 - x - 1 = 0$，
+
+    ∴$2x^{2}-2x=2$，
+
+    ∴原式$=2-9=-7$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 方差
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -298,28 +518,170 @@ questions:
 - id: 20
   type: 解答
   score: 5
-  question: 下面是晓彤在证明“平行四边形的对角相等”这个性质定理时使用的三种添加辅助线的方法，请你选择其中一种，完成证明．
-  answer: ''
-  solution: ''
+  question: '下面是晓彤在证明“平行四边形的对角相等”这个性质定理时使用的三种添加辅助线的方法，请你选择其中一种，完成证明．
+
+    平行四边形性质定理：平行四边形的对角相等．
+
+    [图]
+
+    已知：如图，$Y_{ABCD}$．
+
+    求证：$\angle BAD = \angle BCD$，$\angle ABC = \angle ADC$．
+
+    方法一：
+
+    证明：如图，连接AC．
+
+    [图]
+
+    方法二：
+
+    证明：如图，延长BC至点E．
+
+    [图]
+
+    方法三：
+
+    证明：如图，连接AC、BD，AC与BD交于点O．
+
+    [图]'
+  answer: 见解析
+  solution: '方法一：
+
+    证明：∵$Y_{ABCD}$，
+
+    [图]
+
+    ∴$AD \parallel BC,\ AB \parallel CD$
+
+    ∴$\angle DAC = \angle ACB, \angle BAC = \angle ACD$
+
+    ∴$\angle DAC+\angle BAC=\angle ACB+\angle ACD$
+
+    即$\angle BAD = \angle BCD$
+
+    在△ACD与△CAB中
+
+    $\angle DAC = \angle ACB \\
+
+    \angle DCA = \angle BAC$
+
+    ∴$\triangle ACD \cong \triangle CAB$
+
+    ∴$\angle D = \angle B$
+
+    方法二：
+
+    证明：∵$Y_{ABCD}$，
+
+    ∴$AD \parallel BC,\ AB \parallel CD$
+
+    ∴$\angle D=\angle DCE,\ \angle B=\angle DCE$
+
+    [图]
+
+    ∴$\angle B = \angle D$
+
+    又∵$\angle D+\angle BCD=180^{\circ}$，$\angle A+\angle B=180^{\circ}$
+
+    ∴$\angle A=\angle BCD$
+
+    方法三：
+
+    证明：∵$Y_{ABCD}$，
+
+    [图]
+
+    ∴$AD \parallel BC,\ AB \parallel CD$
+
+    ∴$\angle DAC = \angle ACB, \angle ADB = \angle DBC$
+
+    $\angle BAC = \angle ACD, \angle ABD = \angle BDC$
+
+    ∴$\angle DAC+\angle BAC=\angle ACB+\angle ACD$，$\angle ADB + \angle BDC = \angle DBC + \angle ABD$
+
+    即$'
   knowledge_points:
+  - 平行线
   - 平行四边形
-  module: quadrilaterals
+  module: triangles
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-fangshan-er-fig15.png
+  - figures/2023-fangshan-er-fig16.png
+  - figures/2023-fangshan-er-fig17.png
+  - figures/2023-fangshan-er-fig18.png
+  - figures/2023-fangshan-er-fig19.png
+  - figures/2023-fangshan-er-fig20.png
+  - figures/2023-fangshan-er-fig21.png
 - id: 21
   type: 解答
   score: 5
-  question: '如图，点O为的对角线的中点，直线l绕点O旋转，当时，与边分别交于点E，F，连接．
+  question: '如图，点O为$Y_{ABCD}$的对角线AC的中点，直线l绕点O旋转，当$l \perp AC$时，与边$AB,\ CD$分别交于点E，F，连接$AF, CE$．
 
-    （1）求证：四边形是菱形；
+    [图]
 
-    （2）若，求面积．'
-  answer: ''
-  solution: ''
+    （1）求证：四边形$AECF$是菱形；
+
+    （2）若$\angle BAC=15^\circ,\ BE=1,\ EC=2$，求$Y_{ABCD}$的面积．'
+  answer: （1）见解析（2）3
+  solution: '【小问1详解】
+
+    ∵四边形$ABCD$是平行四边形，
+
+    ∴$AB \parallel DC$，
+
+    ∴$\angle EAO = \angle FCO, \angle AEO = \angle CFO.$
+
+    ∵O为AC的中点，
+
+    ∴$OA = OC,$
+
+    在$\triangle AEO$和$\triangle CFO$中，
+
+    $\angle EAO = \angle FCO \\
+
+    \angle AEO = \angle CFO \\
+
+    AO = CO$，
+
+    ∴$\triangle AOE \cong \triangle COF$
+
+    ∴$OE = OF$
+
+    ∴四边形$AECF$是平行四边形，
+
+    ∵$l \perp AC,$
+
+    ∴四边形$AECF$是菱形，
+
+    【小问2详解】
+
+    过点C作$CH \perp AB$交AB于点H，
+
+    [图]
+
+    ∴$\angle AHC = 90^\circ$°，
+
+    ∵四边形$AECF$是菱形，
+
+    ∵$AE = EC = 2,\ \angle BAC = \angle ACE = 15^\circ$，
+
+    ∴$\angle HEC = \angle EAC + \angle ACE = 30^\circ$，
+
+    ∴$CH = \frac{1}{2}EC = 1$，
+
+    ∵$BE = 1$，
+
+    ∴$AB=AE+EB=2+1=3$，
+
+    ∴$\boxed{\square}$$ABCD$的面积$S = AB \times CH = 3 \times 1 = 3$'
   knowledge_points:
+  - 平行四边形
   - 菱形
   - 旋转
   module: quadrilaterals
@@ -328,19 +690,48 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-fangshan-er-fig22.png
+  - figures/2023-fangshan-er-fig23.png
 - id: 22
   type: 解答
   score: 5
-  question: '在平面直角坐标系xOy中，函数的图象经过点，且与函数的图象交于点．
+  question: '在平面直角坐标系xOy中，函数$y=kx+b\ (k\neq0)$的图象经过点$A(2,-1)$，且与函数$y = x$的图象交于点$B(1,a)$．
 
-    （1）求a的值及函数的表达式；
+    （1）求a的值及函数$y=kx+b\ (k\neq0)$的表达式；
 
-    （2）当时，对于x的每一个值，函数的值小于函数的值，直接写出m的取值范围．'
-  answer: ''
-  solution: ''
+    （2）当$x \leq 0$时，对于x的每一个值，函数$y = x + m$的值小于函数$y=kx+b\ (k\neq0)$的值，直接写出m的取值范围．'
+  answer: （1）$a=1,y=-2x+3$ （2）$m<3$
+  solution: '【小问1详解】
+
+    解：把点$B(1,a)$代入$y=x$中，
+
+    ∴$a = 1$
+
+    ∴$B(1,1)$，
+
+    把点$A(2,-1)$，$B(1,1)$代入$y=kx+b\ (k\neq0)$中，
+
+    $\left\{\begin{array}{l}k+b=1\\2k+b=0\end{array}\right.$
+
+    解得$\left\{ \begin{array} { l } { k = - 2 } \\ { b = 3 } \end{array} \right.$
+
+    ∴一次函数的表达式为$y = -2x + 3$；
+
+    【小问2详解】
+
+    根据题意得：$x+m<-2x+3$，即$x<\frac{3-m}{3}$，
+
+    ∵当$x \leq 0$时，对于x的每一个值，函数$y = x + m$的值小于函数$y=kx+b\ (k\neq0)$的值，
+
+    ∴$\frac{3-m}{3}>0$，
+
+    ∴$m<3$．'
   knowledge_points:
+  - 一次函数
+  - 不等式
   - 坐标系
-  module: geometryComprehensive
+  module: functions
   difficulty: 中档
   recommended_for:
   - L1
@@ -349,27 +740,107 @@ questions:
 - id: 23
   type: 解答
   score: 6
-  question: '如图，A，B，C三点在上，直径平分，过点D作交弦于点E，在的延长线上取一点F，使得．
+  question: '如图，A，B，C三点在$\odot\odot$上，直径BD平分$\angle ABC$，过点D作$DE \parallel AB$交弦BC于点E，在BC的延长线上取一点F，使得$\angle BFD = \angle ADB$．
 
-    （1）求证：是的切线；
+    [图]
 
-    （2）若，，求的长．'
-  answer: ''
-  solution: ''
+    （1）求证：DF是$\odot\odot$的切线；
+
+    （2）若$AD = 4$，$DE = 5$，求DF的长．'
+  answer: （1）见解析（2）$2\sqrt{5}$
+  solution: '【小问1详解】
+
+    证明：如图，
+
+    [图]
+
+    ∵BD平分$\angle ABC$，
+
+    ∴$\angle1=\angle2$，
+
+    ∵BD是$\odot\odot$的直径，
+
+    ∴$\angle A=90^{\circ}$，
+
+    ∴$\angle 1+\angle ADB=90^\circ$，
+
+    ∵$\angle F=\angle ADB$，$\angle1=\angle2$，
+
+    ∴$\angle 2+\angle F=90$°，
+
+    ∴$\angle ADB=90^\circ$
+
+    ∴$OD \perp DF$，
+
+    ∵OD是$\odot\odot$的半径，
+
+    ∴DF是$\odot\odot$的切线．
+
+    【小问2详解】
+
+    解：连接DC，
+
+    [图]
+
+    ∵BD是$\odot\odot$的直径，
+
+    ∴$\angle DCB=90^{\circ}$，
+
+    ∵BD平分$\angle ABC$，$AD = 4$，
+
+    ∴$DC = DA = 4$，
+
+    ∵$DE = 5$，
+
+    ∴$CE = \sqrt{DE^{2} - DC^{2}} = 3$，
+
+    ∵$DE \parallel AB$
+
+    ∴$\angle1=\angle3$
+
+    ∵$\angle1=\angle2$，
+
+    ∴$\angle 3=\angle 2$，
+
+    ∴$EB = DE = 5$，
+
+    ∴$CB = 3 + 5 = 8.$
+
+    ∴$DB=\sqrt{DC^{2}+CB^{2}}=\sqrt{4^{2}+8^{2}}=4\sqrt{5}$，
+
+    又$\angle FDB=\angle DCB=90^\circ$，$\angle 2=\angle 2$，
+
+    ∴$\triangle FDB\sim\triangle DCB$
+
+    ∴$\frac{DF}{DC} = \frac{DB}{CB}$
+
+    即$\frac{DF}{4}=\frac{4\sqrt{5}}{8}$
+
+    ∴$DF=2\sqrt{5}$'
   knowledge_points:
+  - 平行线
+  - 圆周角
   - 切线
   - 弦
-  module: circles
+  - 相似三角形
+  - 勾股定理
+  module: triangles
   difficulty: 较难
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2023-fangshan-er-fig24.png
+  - figures/2023-fangshan-er-fig25.png
+  - figures/2023-fangshan-er-fig26.png
 - id: 24
   type: 解答
   score: 6
-  question: '青少年健康素质是全民族健康素质的基础． 某校为了解学生寒假参加体育锻炼的情况，从七、八、九年级学生中各随机抽取了该年级学生人数的，调查了他们平均每周参加体育锻炼的时长，并对这些数据进行整理、描述和分析，下面给出部分信息．
+  question: '青少年的健康素质是全民族健康素质的基础．某校为了解学生寒假参加体育锻炼的情况，从七、八、九年级学生中各随机抽取了该年级学生人数的$5\%$，调查了他们平均每周参加体育锻炼的时长，并对这些数据进行整理、描述和分析，下面给出部分信息．
 
     a．七、八年级学生平均每周参加体育锻炼时长数据的折线图如下：
+
+    [图]
 
     b．九年级学生平均每周参加体育锻炼的时长：
 
@@ -377,16 +848,75 @@ questions:
 
     c．七、八、九年级学生平均每周参加体育锻炼时长的平均数、中位数、众数：
 
+    年级
+
+    平均数
+
+    中位数
+
+    众数
+
+    七年级
+
+    7．1
+
+    7
+
+    6，10
+
+    八年级
+
+    7
+
+    m
+
+    n
+
+    九年级
+
+    p
+
+    8
+
+    8
+
     根据所给信息，回答下列问题：
 
     （1）表中m的值是___________，n的值是___________，p的值是___________；
 
-    （2）设七、八、九三个年级学生参加体育锻炼时长的方差分别是，，，直接写出，，之间的大小关系___________（用“<”连接）；
+    （2）设七、八、九三个年级学生参加体育锻炼时长的方差分别是$S_{1}^{2}$，$s_{2}^{2}$，$S_{3}^{2}$，直接写出$S_{1}^{2}$，$s_{2}^{2}$，$S_{3}^{2}$之间的大小关系___________（用“<”连接）；
 
     （3）估计全校九年级所有学生中，共有___________名学生参加体育锻炼的时长不少于9小时．'
-  answer: ''
-  solution: ''
+  answer: （1）$6.5$，9，8 （2）$S_{1}^{2}<S_{2}^{2}<S_{1}^{2}$ （3）40
+  solution: '【小问1详解】
+
+    解：八年级学生平均每周参加体育锻炼时长的数据为：4，5，5，6，6，7，9，9，9，10；
+
+    ∴中位数$m=\frac{6+7}{2}=6.5$，众数$n = 9$，
+
+    九年级学生平均每周参加体育锻炼时长的平均数$p=7\times2+6+8\times3+9+1=88$，
+
+    故答案为：$6.5$，9，8；
+
+    【小问2详解】
+
+    解：七年级学生平均每周参加体育锻炼时长的数据波动最大，
+
+    九年级学生平均每周参加体育锻炼时长的数据波动最小，
+
+    ∴$S_{1}^{2}<S_{2}^{2}<S_{1}^{2}$；
+
+    【小问3详解】
+
+    解：全校九年级的学生总人数为$8\div5\%=160$（人），
+
+    $160\times\frac{2}{8}=40$（人），
+
+    答：估计全校九年级所有学生中，共有40名学生参加体育锻炼的时长不少于9小时．
+
+    故答案为：40．'
   knowledge_points:
+  - 统计
   - 平均数
   - 中位数
   - 众数
@@ -396,20 +926,76 @@ questions:
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2023-fangshan-er-fig27.png
 - id: 25
   type: 解答
   score: 6
-  question: '排球场的长度为，球网在场地中央且高度为． 排球出手后的运动路线可以看作是抛物线的一部分，建立如图所示的平面直角坐标系，排球运动过程中的竖直高度y（单位：m）与水平距离x（单位：m）近似满足函数关系．
+  question: '排球场的长度为$18m$，球网在场地中央且高度为$2.24m$．排球出手后的运动路线可以看作是抛物线的一部分，建立如图所示的平面直角坐标系，排球运动过程中的竖直高度y（单位：m）与水平距离x（单位：m）近似满足函数关系$y = a(x - h)^2 + k (a < 0)$．
+
+    [图]
 
     （1）某运动员第一次发球时，测得水平距离x与竖直高度y的几组数据如下：
 
-    ①根据上述数据，求这些数据满足的函数关系；
+    水平距离$x / m$
+
+    0
+
+    2
+
+    4
+
+    6
+
+    11
+
+    12
+
+    竖直高度$y/m$
+
+    2.48
+
+    2.72
+
+    2.8
+
+    2.72
+
+    1.82
+
+    1.52
+
+    ①根据上述数据，求这些数据满足的函数关系$y = a(x - h)^2 + k (a < 0)$；
 
     ②判断该运动员第一次发球能否过网___________（填“能”或“不能”）．
 
-    （2）该运动员第二次发球时，排球运动过程中的竖直高度y（单位：m）与水平距离x（单位：m）近似满足函数关系，请问该运动员此次发球是否出界，并说明理由．'
-  answer: ''
-  solution: ''
+    （2）该运动员第二次发球时，排球运动过程中的竖直高度y（单位：m）与水平距离x（单位：m）近似满足函数关系$y=-0.02(x-4)^{2}+2.88$，请问该运动员此次发球是否出界，并说明理由．'
+  answer: （1）①$y = -0.02(x - 4)^2 + 2.8$；②能 （2）没有，理由见解析
+  solution: '【小问1详解】
+
+    解：①由表中数据可得抛物线顶点$(4,2.8)$
+
+    设$y=a(x-4)^{2}+2.8(a<0)$
+
+    把$(0.2,48)$代入得$a = -0.02$
+
+    ∴所求函数关系为$y = -0.02(x - 4)^2 + 2.8$
+
+    ②当$x=9$时，则$y=-0.02(9-4)^{2}+2.8>2.3>2.24$，
+
+    ∴能
+
+    【小问2详解】
+
+    解：判断：没有出界
+
+    令$y = 0$，则$[公式]$
+
+    解得$x_{1}=-8$（舍），$x_{2}=16$
+
+    ∵$x_{2}=16<18$
+
+    ∴没有出界．'
   knowledge_points:
   - 坐标系
   module: functions
@@ -417,21 +1003,70 @@ questions:
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2023-fangshan-er-fig28.png
 - id: 26
   type: 解答
   score: 6
-  question: '平面直角坐标系中，抛物线的对称轴为直线．
+  question: '平面直角坐标系xOy中，抛物线$y=ax^{2}-4x+3a$的对称轴为直线$x = n$．
 
-    （1）若抛物线经过点，求a和n的值；
+    （1）若抛物线经过点$(1,0)$，求a和n的值；
 
-    （2）若抛物线上存两点和，．
+    （2）若抛物线上存在两点$A(x_{1},m)$和$B(x_2,m+1)$，$x_1 = n$．
 
     ①判断抛物线的开口方向，并说明理由；
 
-    ②若，求a的取值范围 ．'
-  answer: ''
-  solution: ''
+    ②若$\left|x_{2}-x_{1}\right|\leq1$，求a的取值范围．'
+  answer: （1）$a = 1$，$n=2$ （2）①开口向上，理由见解析；②$a\ 1$
+  solution: '【小问1详解】
+
+    解：把$(1,0)$代入$y=ax^{2}-4x+3a$得
+
+    $0 = a - 4 + 3a$，
+
+    ∴$a = 1$，
+
+    ∴$y=x^{2}-4x+3=(x-2)^{2}-1$，
+
+    ∵抛物线的对称轴为直线$x = n$，
+
+    ∴$n=2$．
+
+    【小问2详解】
+
+    解：①开口向上．
+
+    ∵当$x_1 = n$，又对称轴为$x = n$，
+
+    ∴$A(n,m)$是抛物线的顶点，
+
+    ∵$B(x_2,m+1)$，且$m+1>m$，
+
+    ∴点B在顶点A的上方，
+
+    ∴抛物线开口向上，
+
+    ②设$\left|x_{2}-x_{1}\right|=1$，
+
+    ∵$x_1 = n,$
+
+    ∴$x_{2}=n+1$或$x_{2}=n-1$，
+
+    将抛物线平移，使其顶点$A(n,m)$落在坐标原点，
+
+    平移a的值不变，平移后抛物线表达式为$y = ax^2$，
+
+    此时$A(0,0)$，
+
+    ∴$B(1,1)$或$B(-1,1)$，
+
+    将$B(1,1)$或$B(-1,1)$代入$y = ax^2$得$a = 1$，
+
+    ∵$\left|x_{2}-x_{1}\right|\leq1$，结合图象，
+
+    ∴a的取值范围为$a\ 1$．'
   knowledge_points:
+  - 平移
   - 坐标系
   module: functions
   difficulty: 压轴
@@ -440,36 +1075,130 @@ questions:
 - id: 27
   type: 解答
   score: 7
-  question: '如图，，，点D是延长线上一点，连接，点E和点B关于直线对称，连接交于点F，连接．
+  question: '如图，$\angle BAC = 90^\circ$，$AB = AC$，点D是BA延长线上一点，连接DC，点E和点B关于直线DC对称，连接BE交AC于点F，连接$EC,ED,DF$．
 
-    （1）依题意补全图形，并求的度数；
+    [图]
 
-    （2）用等式表示线段和之间的数量关系，并证明．'
-  answer: ''
-  solution: ''
+    （1）依题意补全图形，并求$\angle DEC$的度数；
+
+    （2）用等式表示线段$EC,ED$和CF之间的数量关系，并证明．'
+  answer: （1）图见解析，$45^\circ$ （2）$ED+CF=\sqrt{2}EC$，证明见解析
+  solution: '【小问1详解】
+
+    解：补全图形，如图所示：
+
+    [图]
+
+    连接CB，
+
+    ∵$\angle BAC = 90^\circ$，$AB = AC$
+
+    ∴$\angle ABC = 45^\circ$
+
+    ∵点E和点B关于直线DC对称
+
+    ∴$EC = BC,\ ED = BD$
+
+    ∵$DC = DC$
+
+    ∴$\angle EDC = \angle BDC (\text{SSS})$，
+
+    ∴$\angle DEC = \angle DBC = 45^\circ$；
+
+    [图]【小问2详解】
+
+    $ED+CF=\sqrt{2}EC$，证明如下：
+
+    ∵点E、B关于直线CD对称
+
+    ∴$EB \perp CD$，设垂足为H
+
+    则$\angle CHF=90^{\circ}=\angle BAC$
+
+    ∵$\angle HFC=\angle AFB$
+
+    [图]
+
+    ∴$\angle1=\angle2$
+
+    ∵$AC = AB,\ \angle DAC = \angle FAB = 90^\circ$
+
+    ∴$\triangle DAC \cong \triangle FAB$
+
+    ∴$AD = AF$
+
+    ∴$ED=BD=AD+AB=AF+AC=AC-CF+AC=2AC-CF$
+
+    ∵$AC = \cos 45^\circ \cdot BC = \frac{\sqrt{2}}{2} \cdot BC = \frac{\sqrt{2}}{2} \cdot EC$
+
+    ∴$ED = 2 \times \frac{\sqrt{2}}{2} EC - CF = \sqrt{2} EC - CF$
+
+    即$ED+CF=\sqrt{2}EC$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 全等三角形
+  - 轴对称
+  module: triangles
   difficulty: 压轴
   recommended_for:
   - L3
+  figures:
+  - figures/2023-fangshan-er-fig29.png
+  - figures/2023-fangshan-er-fig30.png
+  - figures/2023-fangshan-er-fig31.png
+  - figures/2023-fangshan-er-fig32.png
 - id: 28
   type: 解答
   score: 7
-  question: '在平面直角坐标系中，有图形W和点P，我们规定：若图形W上存在点M、N（点M和N可以重合），满足，其中点是点P关于x轴的对称点，则称点P是图形W的“对称平衡点”．
+  question: '在平面直角坐标系xOy中，有图形W和点P，我们规定：若图形W上存在点M、N（点M和N可以重合），满足$PM = P''N$，其中点$P''$是点P关于x轴的对称点，则称点P是图形W的“对称平衡点”．
 
-    （1）如图1所示，已知，点，点．
+    [图]
 
-    ①在点中，是线段的“对称平衡点”的是___________；
+    （1）如图1所示，已知，点$A(0,2)$，点$B(3,2)$．
 
-    ②线段上是否存在线段的“对称平衡点”？若存在，请求出符合要求的 “对称平衡点”的横坐标的范围，若不存在，请说明理由；
+    ①在点$P_1(0,1),\ P_2(1,-1),\ P_3(4,1)$中，是线段AB的“对称平衡点”的是___________；
 
-    （2）如图2，以点为圆心，1为半径作．坐标系内的点C满足，再以点C为圆心，1为半径作，若上存在的“对称平衡点”，直接写出C点纵坐标的取值范围．'
-  answer: ''
-  solution: ''
+    ②线段AB上是否存在线段AB的“对称平衡点”？若存在，请求出符合要求的
+
+    “对称平衡点”的横坐标的范围，若不存在，请说明理由；
+
+    （2）如图2，以点$A(0,2)$为圆心，1为半径作$\odot A$．坐标系内的点C满足$AC = 2$，再以点C为圆心，1为半径作$\mathrm{OC}$，若$\mathrm{OC}$上存在$\odot A$的“对称平衡点”，直接写出C点纵坐标$y_{c}$的取值范围．'
+  answer: （1）①$P_{1}$，$P_3$；②不存在，理由见解析 （2）$0 \leq y_{c} \leq 2$
+  solution: '【小问1详解】
+
+    ①如图所示，点$Q(1,2)$，$P_{1}Q=\sqrt{16},P_{2}B=\sqrt{10}$，则$P_{1}Q=PB$；$P_{1}Q=\sqrt{10},P_{1}B=\sqrt{10}$，则$P_{3}Q=P_{3}''B$，
+
+    [图]
+
+    ∴线段AB的“对称平衡点”的是$P_{1}$，$P_3$；
+
+    故答案为：$P_{1}$，$P_3$；
+
+    ②不存在
+
+    设P为线段AB上任意一点，则它与线段AB上点的距离最小值为0，最大值为PA和PB中的较大值；显然$PA \leq 3,\ PB \leq 3$
+
+    点P关于x轴的对称点为$P''$，它到线段AB上任意一点的距离$4$
+
+    即若$M, N$是线段AB上的任意两点，$PM \leq 3,\ PN = 4$，不存在$PM = P''N$
+
+    ∴线段AB上不存在线段AB的“对称平衡点”；
+
+    【小问2详解】
+
+    如图，由②可知线段MN上不存在$\odot A$的“对称平衡点”，$\odot\odot$上存在$\odot A$的“对称平衡点”，
+
+    [图]
+
+    ∵$A(0,2),O(0,0)$
+
+    ∴$0 \leq y_{c} \leq 2$'
   knowledge_points:
   - 坐标系
   module: geometryComprehensive
   difficulty: 压轴
   recommended_for:
   - L3
+  figures:
+  - figures/2023-fangshan-er-fig33.png
+  - figures/2023-fangshan-er-fig34.png
+  - figures/2023-fangshan-er-fig35.png

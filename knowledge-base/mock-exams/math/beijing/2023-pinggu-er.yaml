@@ -1,8 +1,8 @@
 # ============================================================
 # 2023年北京平谷区中考数学二模试卷 — 逐题分析
 # ============================================================
-# 数据来源：knowledge-original/精品解析：2023年北京市平谷区中考二模数学试题（原卷版）.docx
-# 自动生成，部分数学公式可能显示不全（docx公式对象无法完整提取）
+# 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
+# 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
 # 满分：100分  时长：120分钟
 
 year: 2023
@@ -11,90 +11,21 @@ exam_type: 二模
 subject: 数学
 full_score: 100
 duration_minutes: 120
-total_questions: 35
+total_questions: 28
 structure: 8选择(16分) + 8填空(16分) + 12解答(68分)
 questions:
 - id: 1
   type: 选择
   score: 2
-  question: 本试卷共8页，包括三道大题，28道小题，满分100分．考试时间120分钟．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 2
-  type: 选择
-  score: 2
-  question: 在答题卡上准确填写学校名称、班级和姓名．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 3
-  type: 选择
-  score: 2
-  question: 试题答案一律填涂或书写在答题卡上，在试卷上作答无效．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 4
-  type: 选择
-  score: 2
-  question: 在答题卡上，选择题、作图题用2B铅笔作答，其他试题用黑色字迹签字笔作答．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 5
-  type: 选择
-  score: 2
-  question: 考试结束，请将试卷和答题卡一并交回．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 1
-  type: 选择
-  score: 2
-  question: "下列几何体中，是圆锥的为（　　）\nA. \tB.\nC. \tD."
-  answer: ''
-  solution: ''
+  question: '下列几何体中，是圆锥的为（　　）
+
+    A.[图]B.[图]
+
+    C.[图]D.[图]'
+  answer: B
+  solution: '解：下列几何体中，是圆锥的为B，
+
+    故选：B．'
   knowledge_points:
   - 综合
   module: circles
@@ -104,14 +35,24 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-pinggu-er-fig02.png
+  - figures/2023-pinggu-er-fig03.png
+  - figures/2023-pinggu-er-fig04.png
+  - figures/2023-pinggu-er-fig05.png
 - id: 2
   type: 选择
   score: 2
-  question: "党的二十大报告中指出，我国全社会研发经费支出达二万八千亿元，居世界第二位．“二万八千亿”用科学记数法表示为（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '党的二十大报告中指出，我国全社会研发经费支出达二万八千亿元，居世界第二位．“二万八千亿”用科学记数法表示为（）
+
+    A.$0.28\times10^{13}$B.$2.8\times10^{11}$C.$2.8\times10^{12}$D.$28\times10^{11}$'
+  answer: C
+  solution: '解：二万八千亿$=280000000000=2.8\times10^{11}$，
+
+    故选C．'
   knowledge_points:
   - 科学记数法
+  - 绝对值
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -122,9 +63,15 @@ questions:
 - id: 3
   type: 选择
   score: 2
-  question: "如图，直角三角板的直角顶点落在直线上的点处，，则的大小为（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '如图，直角三角板的直角顶点落在直线AB上的点C处，$\angle1=20^\circ$，则$\angle 2$的大小为（）
+
+    [图]
+
+    A.$50^\circ$B.$60^\circ$C.$70^\circ$D.$160^\circ$'
+  answer: C
+  solution: '解：$\angle2=180^\circ-\angle1-90^\circ=180^\circ-20^\circ-90^\circ=70^\circ$
+
+    故选：C．'
   knowledge_points:
   - 综合
   module: functions
@@ -134,12 +81,28 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-pinggu-er-fig06.png
 - id: 4
   type: 选择
   score: 2
-  question: "实数，在数轴上对应点的位置如图所示，下列结论中正确的是（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '实数a，b在数轴上$[公式]$对应点的位置如图所示，下列结论中正确的是（）
+
+    [图]
+
+    A$[公式]$$b<a$B.$a < -2$C.$a+b>0$D.$-a > b$'
+  answer: D
+  solution: '解：由图可知：$-2<a<-1<0<b<1$，
+
+    ∴$a < b$，故A选项错误，不符合题意；
+
+    $a > -2$，故B选项错误，不符合题意；
+
+    $a+b<0$，故C选项错误，不符合题意；
+
+    $-a > b$，故D选项正确，符合题意；
+
+    故选：D．'
   knowledge_points:
   - 综合
   module: numbersAndExpressions
@@ -149,14 +112,56 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-pinggu-er-fig07.png
 - id: 5
   type: 选择
   score: 2
-  question: "袋子里有2个红球1个白球，除颜色外无其他差别，随机摸取两个，恰好为一个红球一个白球的概率是（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '袋子里有2个红球1个白球，除颜色外无其他差别，随机摸取两个，恰好为一个红球一个白球的概率是（）
+
+    A.$\frac{1}{2}$B.$\frac{1}{3}$C.$\frac{2}{3}$D.$\frac{3}{4}$'
+  answer: C
+  solution: '解：列表如下：
+
+    红
+
+    红
+
+    白
+
+    红
+
+    ／
+
+    红红
+
+    红白
+
+    红
+
+    红红
+
+    ／
+
+    红白
+
+    白
+
+    白红
+
+    白红
+
+    ／
+
+    由表可知：有可能出现的结果有6种出现一红一白的可能结果有4种，
+
+    ∴恰好为一个红球一个白球的概率为$\frac{4}{6}=\frac{2}{3}$．
+
+    故选：C．'
   knowledge_points:
   - 概率
+  - 树状图
+  - 列表法
   module: statisticsAndProbability
   difficulty: 基础
   recommended_for:
@@ -167,12 +172,20 @@ questions:
 - id: 6
   type: 选择
   score: 2
-  question: "若关于的一元二次方程有两个实数根，则实数的取值范围为（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '若关于x的一元二次方程$x^{2}+2x+m=0$有两个实数根，则实数m的取值范围为（）
+
+    A.$m > 1$B.$m < 1$C.$m\ 1$D.$m\geq1$'
+  answer: D
+  solution: '解，由题意，得$\triangle=2^{2}-4m\ 0$，
+
+    解得：$m\geq1$．
+
+    故选：D．'
   knowledge_points:
   - 一元二次方程
-  module: numbersAndExpressions
+  - 根的判别式
+  - 不等式
+  module: equationsAndInequalities
   difficulty: 中档
   recommended_for:
   - L1
@@ -181,9 +194,17 @@ questions:
 - id: 7
   type: 选择
   score: 2
-  question: "如图所示的地面由正六边形和四边形两种地砖镶嵌而成，则的度数为（    ）\nA. 50°\tB. 60°\tC. 100°\tD. 120°"
-  answer: ''
-  solution: ''
+  question: '如图所示的地面由正六边形和四边形两种地砖镶嵌而成，则$\angle BAD$的度数为（）
+
+    [图]
+
+    A.50°B.60°C.100°D.120°'
+  answer: B
+  solution: '解：正六边形的一个内角度数为$180^{\circ}-360^{\circ}=120^{\circ}$，
+
+    ∴$\angle BAD$的度数为$\frac{360^{\circ}-120^{\circ}}{2}\times2=60^{\circ}$，
+
+    故选：B．'
   knowledge_points:
   - 综合
   module: quadrilaterals
@@ -192,27 +213,53 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-pinggu-er-fig08.png
 - id: 8
   type: 选择
   score: 2
-  question: "如图，一款旅行保温水壶，拧开瓶盖即为自带的小水杯，若满满一水壶水可以装满水杯．现在水壶中还有一半的水，拧开瓶盖向小水杯中匀速的倒水，设水壶中剩余的水量为（毫升），水杯中的水量为（毫升），倒水的时间为（秒），则从开始倒水到水杯注满水的过程中，，均是的函数，它们随着的变化而变化的过程可以描述为（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '如图，一款旅行保温水壶，拧开瓶盖即为自带的小水杯，若满满一水壶水可以装满$4$水杯．现在水壶中还有一半的水，拧开瓶盖向小水杯中匀速的倒水，设水壶中剩余的水量为$y_{1}$（毫升），水杯中的水量为$y_{2}$（毫升），倒水的时间为x（秒），则从开始倒水到水杯注满水的过程中，$y_{1}$，$y_{2}$均是x的函数，它们随着x的变化而变化的过程可以描述为（）
+
+    [图]
+
+    A.[图]B.[图]C.[图]D.[图]'
+  answer: A
+  solution: '解：∵满满一水壶水可以装满$4$水杯，现在水壶中还有一半的水，
+
+    ∴现在水壶中的水可以装满$2$个水杯，
+
+    ∵设水壶中剩余的水量为$y_{1}$（毫升），水杯中的水量为$y_{2}$（毫升），倒水的时间为x（秒），
+
+    ∴当$y_{1}$与$y_{2}$相等时就停止，
+
+    即$y_{1}$减小时，$y_{2}$增大，当水杯中装满水时水壶就停止倒水，
+
+    故选A．'
   knowledge_points:
   - 综合
-  module: geometryComprehensive
+  module: functions
   difficulty: 较难
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2023-pinggu-er-fig09.png
+  - figures/2023-pinggu-er-fig10.png
+  - figures/2023-pinggu-er-fig11.png
+  - figures/2023-pinggu-er-fig12.png
+  - figures/2023-pinggu-er-fig13.png
 - id: 9
   type: 填空
   score: 2
-  question: 式子在实数范围内有意义，则 x 的取值范围是_______ ．
-  answer: ''
-  solution: ''
+  question: 式子$\sqrt{x-3}$在实数范围内有意义，则x的取值范围是_______．
+  answer: x≥3
+  solution: '由题意可得：x—3≥0，
+
+    解得：x≥3，
+
+    故答案为：x≥3'
   knowledge_points:
-  - 综合
+  - 不等式
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -223,9 +270,11 @@ questions:
 - id: 10
   type: 填空
   score: 2
-  question: 分解因式：=_________________________．
-  answer: ''
-  solution: ''
+  question: 分解因式：$ma^{2}-mb^{2}$=_________________________．
+  answer: $m(a+b)(a-b)$．
+  solution: '试题分析：原式=$m(a^{2}-b^{2})$=$m(a+b)(a-b)$．
+
+    考点：提公因式法与公式法的综合运用．'
   knowledge_points:
   - 综合
   module: geometryComprehensive
@@ -238,12 +287,18 @@ questions:
 - id: 11
   type: 填空
   score: 2
-  question: 计算的值为______．
-  answer: ''
-  solution: ''
+  question: 计算$\left(1-\frac{3}{x}\right)\div\frac{x^{2}-9}{x^{2}}$的值为______．
+  answer: $\frac{x}{x+3}$##$\frac{x}{3+x}$
+  solution: '解：$\left(1-\frac{3}{x}\right)\div\frac{x^{2}-9}{x^{2}}$，
+
+    =$\frac{x-3}{x} \times \frac{x^{2}-9}{x^{2}}$，
+
+    =$\frac{x-3}{x}=\frac{x^{2}}{(x+3)(x-3)}$，
+
+    =$\frac{x}{x+3}$．'
   knowledge_points:
   - 综合
-  module: geometryComprehensive
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -253,11 +308,30 @@ questions:
 - id: 12
   type: 填空
   score: 2
-  question: 直径为10分米的圆柱形排水管，截面如图所示．若管内有积水（阴影部分），水面宽为8分米，则积水的最大深度为______分米．
-  answer: ''
-  solution: ''
+  question: '直径为10分米的圆柱形排水管，截面如图所示．若管内有积水（阴影部分），水面宽AB为8分米，则积水的最大深度CD为______分米．
+
+    [图]'
+  answer: '2'
+  solution: '解：连接OA，如图所示：
+
+    [图]
+
+    ∵$\odot\odot$的直径为$10$分米，
+
+    ∴$OA=5$分米，
+
+    由题意得：$OD \perp AB$，$AB = 8$分米，
+
+    ∴$AC = BC = \frac{1}{2}AB = 4$分米，
+
+    ∴$OC = \sqrt{OA^{2} - AC^{2}} = \sqrt{5^{2} - 4^{2}} = 3$（分米），
+
+    ∴积水的最大深度$CD=OD-OC=5-3=2$（分米），
+
+    故答案为：2．'
   knowledge_points:
-  - 综合
+  - 垂径定理
+  - 勾股定理
   module: circles
   difficulty: 基础
   recommended_for:
@@ -265,29 +339,70 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-pinggu-er-fig14.png
+  - figures/2023-pinggu-er-fig15.png
 - id: 13
   type: 填空
   score: 2
-  question: 如图，在平面直角坐标系中，，双曲线与线段有公共点，请写出一个满足条件的k的值________．
-  answer: ''
-  solution: ''
+  question: '如图，在平面直角坐标系xOy中，$A(1,1),B(2,2)$，双曲线$y = \frac{k}{x}$与线段AB有公共点，请写出一个满足条件的k的值________．
+
+    [图]'
+  answer: 1（答案不唯一）
+  solution: '解：当双曲线$y = \frac{k}{x}$过点$A(1,1)$时，有k=1×1=1；
+
+    当双曲线$y = \frac{k}{x}$过点$B(2,2)$时，有k=2×2=4；
+
+    数形结合可知，双曲线$y = \frac{k}{x}$与线段AB有公共点时k的取值范围为1≤k≤4．
+
+    故答案为：1（答案不唯一）．'
   knowledge_points:
+  - 反比例函数
   - 坐标系
-  module: geometryComprehensive
+  module: functions
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-pinggu-er-fig16.png
 - id: 14
   type: 填空
   score: 2
   question: '某中学开展“读书伴我成长”活动，为了解八年级200名学生四月份的读书册数，对从中随机抽取的20名学生的读书册数进行调查，结果如下表：
 
+    册数/册
+
+    1
+
+    2
+
+    3
+
+    4
+
+    5
+
+    人数/人
+
+    2
+
+    5
+
+    7
+
+    4
+
+    2
+
     根据统计表中的数据估计八年级四月份读书册数不少于3本的人数约有______人．'
-  answer: ''
-  solution: ''
+  answer: '130'
+  solution: '解：$200\times\frac{7+4+2}{20}-130$（人）
+
+    故答案为：130．'
   knowledge_points:
+  - 频率
   - 统计
   module: statisticsAndProbability
   difficulty: 中档
@@ -298,39 +413,102 @@ questions:
 - id: 15
   type: 填空
   score: 2
-  question: 已知：如图，的两条中线与相交于点，连结，则______．
-  answer: ''
-  solution: ''
+  question: '已知：如图，$\triangle ABC$的两条中线AF与CE相交于点G，连结EF，则$\frac{EG}{GC} =$______．
+
+    [图]'
+  answer: $\frac{1}{2}$
+  solution: '解：∵AF与CE是$\triangle ABC$的两条中线，
+
+    ∴E是AB的中点，F是BC的中点，
+
+    ∴EF是$\triangle ABC$的中位线，
+
+    ∴$EF \parallel AC$，$EF=\frac{1}{2}AC$，
+
+    ∴$VEFG\sim VCAG$，
+
+    ∴$\frac{EG}{GC}=\frac{EF}{AC}=\frac{1}{2}$，
+
+    故答案为：$\frac{1}{2}$．'
   knowledge_points:
-  - 综合
+  - 相似三角形
   module: triangles
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-pinggu-er-fig17.png
 - id: 16
   type: 填空
   score: 2
-  question: 如图所示，某工厂生产镂空的铝板雕花造型，造型由A（绣球花）、B（祥云）两种图案组合而成，因制作工艺不同，A、B两种图案成本不同，厂家提供了如下几种设计造型，造型1的成本64元，造型2的成本42元，则造型3的成本为______元；若王先生选定了一个造型1作为中心图形，6个造型2分别位于中心图形的四周，其余部分用个造型3填补空缺，若整个画面中，图案B个数不多于图案A数的2倍，且王先生的整体设计费用不超过500元，写出一个满足条件的值______．
-  answer: ''
-  solution: ''
+  question: '如图所示，某工厂生产镂空$[公式]$铝板雕花造型，造型由A（绣球花）、B（祥云）两种图案组合而成，因制作工艺不同，A、B两种图案成本不同，厂家提供了如下几种设计造型，造型1的成本64元，造型2的成本42元，则造型3的成本为______元；若王先生选定了一个造型1作为中心图形，6个造型2分别位于中心图形的四周，其余部分用n个造型3填补空缺，若整个画面中，图案B个数不多于图案A数的2倍，且王先生的整体设计费用不超过500元，写出一个满足条件的n值______．
+
+    [图]'
+  answer: ①.22②.6（答案不唯一，6，7，8均可）
+  solution: '解：设A种图案成本每个x元，B种图案成本每个y元，根据题意，得
+
+    $\begin{cases}
+
+    2x + 4y = 64 \\
+
+    x + 3y = 42
+
+    \end{cases}$，解得：$\begin{cases}
+
+    x = 12 \\
+
+    y = 10
+
+    \end{cases}$，
+
+    ∴$x + 12 + 10 = 22$(元)，
+
+    即造型3的成本为22元；
+
+    故答案为：22；
+
+    根据题意得：$\begin{cases}
+
+    4+6\times3+n\leq2(6+n)\\
+
+    64+42\times6+22n\leq500
+
+    \end{cases}$，
+
+    解得：$6 \leq n \leq \frac{4}{11}$，
+
+    ∵n为整数，
+
+    ∴$n = 6$，7，8，
+
+    故答案为：6（答案不唯一，6，7，8均可）．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 二元一次方程组
+  - 不等式
+  - 不等式组
+  module: equationsAndInequalities
   difficulty: 较难
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2023-pinggu-er-fig18.png
 - id: 17
   type: 解答
   score: 5
-  question: （第17题，详见原卷）
-  answer: ''
-  solution: ''
+  question: 计算：$\left(\frac{1}{2}\right)^{-1}+4\sin45^{\circ}-\sqrt{8}+\left|-3\right|$．
+  answer: $5$
+  solution: '解：$\left(\frac{1}{2}\right)^{-1}+4\sin45^{\circ}-\sqrt{8}+|-3|$
+
+    $2+4\times\frac{\sqrt{2}}{2}-2\sqrt{2}+3$
+
+    $=5$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 三角函数
+  - 绝对值
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -340,9 +518,21 @@ questions:
 - id: 18
   type: 解答
   score: 5
-  question: 解不等式组：
-  answer: ''
-  solution: ''
+  question: 解不等式组：$\left\{ \begin{array} { l } { 2 + x > 7 - 4 x , } \\ { x < \frac { 4 + x } { 2 } } \end{array} \right.$
+  answer: $1<x<4$
+  solution: '解：$\begin{aligned}
+
+    &2+x>7-4x \quad (1)\\
+
+    &x<\frac{4+x}{2} \quad (2)
+
+    \end{aligned}$
+
+    解不等式①得$x>1$，
+
+    解不等式②得$x<4$，
+
+    故所给不等式组的解集为：$1<x<4$．'
   knowledge_points:
   - 不等式
   - 不等式组
@@ -356,12 +546,30 @@ questions:
 - id: 19
   type: 解答
   score: 5
-  question: 已知，求代数式的值．
-  answer: ''
-  solution: ''
+  question: 已知$2x^{2}-x-7=0$，求代数式$x(x-3)+(x+1)^2$的值．
+  answer: $2x^{2}-x+1$，$8$
+  solution: '解：$x(x-3)+(x+1)^{2}$
+
+    $x^{2}-3x+x^{2}+2x+1$
+
+    $-2x^2-x+1$
+
+    $x^{2}-x-7=0$
+
+    ∴$2x^{2}-x=7$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$原式$=7+1=8$．'
   knowledge_points:
   - 综合
-  module: geometryComprehensive
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -371,49 +579,158 @@ questions:
 - id: 20
   type: 解答
   score: 5
-  question: 下面是证明三角形内角和定理推论1的方法，选择其中一种，完成证明．
-  answer: ''
-  solution: ''
+  question: '下面是证明三角形内角和定理推论1的方法，选择其中一种，完成证明．
+
+    三角形内角和定理推论1：三角形的一个外角等于与它不相邻的两个内角的和．
+
+    已知：如图，$\triangle ABC$，点D是BC延长线上一点．
+
+    求证：$\angle ACD=\angle A+\angle B$．
+
+    [图]
+
+    方法一：利用三角形的内角和定理的方法
+
+    [图]
+
+    证明：
+
+    二：构造平行线进行证明行证明
+
+    [图]
+
+    证明：'
+  answer: 见解析
+  solution: '证明：方法一：$\triangle ABC$中，$\angle A+\angle B+\angle ACB=180^{\circ}$，
+
+    ∵$\angle ACD+\angle ACB=180^{\circ}$，
+
+    ∴$\angle ACD=\angle A+\angle B$；
+
+    方法二：过点C作$CE \parallel AB$，如图，
+
+    [图]
+
+    ∵$CE \parallel AB$
+
+    ∴$\angle ACE = \angle A$，$\angle DCE = \angle B$，
+
+    ∴$\angle ACQ=\angle ACE+\angle DCE=\angle A+\angle B$．'
   knowledge_points:
-  - 综合
+  - 平行线
   module: triangles
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-pinggu-er-fig19.png
+  - figures/2023-pinggu-er-fig20.png
+  - figures/2023-pinggu-er-fig21.png
+  - figures/2023-pinggu-er-fig22.png
 - id: 21
   type: 解答
   score: 5
-  question: '如图，直线，是上一点，是上一点，连接，以为圆心长为半径画弧，在点的右侧交直线于点，再分别以点和点为圆心，大于长为半径画弧，两弧交于点，连接交于点，连接．
+  question: '如图，直线$AB \parallel CD$，E是AB上一点，F是CD上一点，连接EF，以F为圆心EF长为半径画弧，在点F的右侧交直线CD于点G，再分别以点E和点G为圆心，大于$\frac{1}{2}EG$长为半径画弧，两弧交于点H，连接FH交AB于点M，连接MG．
 
-    （1）使用直尺和圆规，依作法补全图形，判断四边形的形状；
+    [图]
 
-    （2）证明（1）中结论．'
-  answer: ''
-  solution: ''
+    （1）使用直尺和圆规，依作法补全图形，判断四边形$EFGM$的形状；
+
+    （2）证明（1）中的结论．'
+  answer: （1）四边形EFGM为菱形； （2）见解析．
+  solution: '（1）如图，
+
+    [图]
+
+    猜想：四边形$EFGM$为菱形．
+
+    （2）解：由作图可知：$EF = FG$，FH平分$\angle EFG$，
+
+    ∴$\angle FPM = \angle GPM$，
+
+    ∵$AB \parallel CD$，
+
+    ∴$\angle EMF = \angle MFG$，
+
+    ∴$\angle EMF = \angle EPM$，
+
+    ∴$EM = EF$，
+
+    ∵$EF = FG$，
+
+    ∴$EM = FG$，
+
+    ∵$EM \parallel FG$，
+
+    ∴四边形$EFGM$是平行四边形，
+
+    ∵$EM = EF$，
+
+    ∴四边形$EFGM$是菱形．'
   knowledge_points:
-  - 综合
+  - 平行线
+  - 平行四边形
+  - 菱形
+  - 尺规作图
   module: quadrilaterals
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-pinggu-er-fig23.png
+  - figures/2023-pinggu-er-fig24.png
 - id: 22
   type: 解答
   score: 5
-  question: '平面直角坐标系中，直线与轴交于，与轴交于．
+  question: '在平面直角坐标系xOy中，直线$y = -x + 1$与x轴交于A，与y轴交于B．
 
-    （1）求、点坐标；
+    （1）求A、B点坐标；
 
-    （2）点关于轴的对称点为点，将直线沿轴向上平移个单位，得到直线，当时都有直线的值大于直线的值，求的取值范围．'
-  answer: ''
-  solution: ''
+    （2）点A关于y轴的对称点为点C，将直线BC沿y轴向上平移$t(t>0)$个单位，得到直线l，当$x > -2$时都有直线l的值大于直线$y = -x + 1$的值，求t的取值范围．'
+  answer: （1）$A(1,0),\ B(0,1)$ （2）$t^{4}$
+  solution: '【小问1详解】
+
+    解：在$y = -x + 1$中，当$x = 0$时，$y = 1$，当$y = 0$时，$x = 1$，
+
+    ∴$A(1,0),\ B(0,1)$
+
+    【小问2详解】
+
+    解：∵点A关于y轴的对称点为点C，
+
+    ∴$C(-1,0)$，
+
+    设直线BC解析式为$y=kx+b$，
+
+    ∴$\left\{\begin{array}{l} -k + b = 0 \\ b = 1 \end{array}\right.$，
+
+    ∴$\left\{\begin{array}{l}k=1\\b=1\end{array}\right.$，
+
+    ∴直线BC的解析式为$y=x+1$
+
+    ∵将直线BC沿y轴向上平移t（t＞0）个单位，得到直线l，
+
+    ∴直线l的解析式为$y=x+1+t$；
+
+    解不等式$x+1+t>-x+1$得$x > -\frac{t}{2}$，
+
+    ∵当$x > -2$时，都有直线l的值大于直线$y = -x + 1$的值，
+
+    ∴$x > -2$是不等式$x+1+t>-x+1$的一个解集，
+
+    ∴$-2-\frac{t}{2}$，
+
+    ∴$t^{4}$．'
   knowledge_points:
+  - 一次函数
   - 平移
+  - 不等式
   - 坐标系
-  module: geometryComprehensive
+  module: functions
   difficulty: 中档
   recommended_for:
   - L1
@@ -424,36 +741,17 @@ questions:
   score: 6
   question: '快递使我们的生活更加便捷，可以说，快递改变了我们的生活．为了解我国的快递业务情况，我们收集了2022年11月全国31个省的快递业务数量（单位：亿件）的数据，并对数据进行了整理、描述和分析，给出如下信息．
 
-    a．2022年11月快递业务量排在前3位省的数据分别为：'
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 较难
-  recommended_for:
-  - L2
-  - L3
-- id: 275
-  type: 解答
-  score: 5
-  question: '2，225，74.8
+    a．2022年11月快递业务量排在前3位的省的数据分别为：
+
+    275.2，225，74.8
 
     b．其余28个省份2022年11月的快递业务数量的数据的频数分布图如下：
 
-    c．2022年11月的快递业务数量的数据在这一组的是：'
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 压轴
-  recommended_for:
-  - L3
-- id: 10
-  type: 解答
-  score: 5
-  question: '3，11，15.5，16.3，17.8
+    [图]
+
+    c．2022年11月的快递业务数量的数据在$10 \leq x < 20$这一组的是：
+
+    10.3，11，15.5，16.3，17.8
 
     根据以上信息，回答下列问题：
 
@@ -461,9 +759,31 @@ questions:
 
     （2）2022年11月的31个省的快递业务数量的中位数为______；
 
-    （3）若设图中28个省份平均数为，方差为；设31个省份的平均数为，方差为，则______，______．（填“”“”或“”）．'
-  answer: ''
-  solution: ''
+    （3）若设图中28个省份平均数为$\overline{x_{1}}$，方差为$S_{1}^{2}$；设31个省份的平均数为$\overline{x}$，方差为$s^{2}$，则$\overline{x_{1}}$______$\overline{x}$，$S_{1}^{2}$______$s^{2}$．（填“$\gt$”“$=$”或“$\gt$”）．'
+  answer: （1）见解析（2）11 （3）<，<
+  solution: '【小问1详解】
+
+    解：数据在$20 \leq x < 30$这一组的频数为：$28-14-5-2-2-1=4$，
+
+    补全频数分布图如下：
+
+    [图]【小问2详解】
+
+    解：把31个省的快递业务数量按从小到大排列，第16位数据在在$10 \leq x < 20$这一组的第2个数据，
+
+    所以31个省的快递业务数量的中位数为11．
+
+    【小问3详解】
+
+    解：∵$275.2>\overline{x_{1}}$，$225>\overline{x_{1}}$，$74.8>\overline{x_{1}}$，$\bar{x}=\frac{1}{21}(28\bar{x}_{1}+275.2+225+74.8)$
+
+    ∴$\overline{x_1} < \overline{x}$，
+
+    ∵$x_{1}^{2}+\cdots+\frac{1}{28}\sum_{i=1}^{28}\left(x_{i}-\overline{x}\right)^{2}$，$s^{2}=\frac{1}{31}\left[\sum_{i=1}^{8}\left(x_{i}-\bar{x}\right)^{2}+(275.2-\bar{x})^{2}+(225-\bar{x})^{2}+(74.8-\bar{x})^{2}\right]$，
+
+    又∵$\overline{x_1} < \overline{x}$，
+
+    ∴$S_{1}^{2}<S_{2}^{2}$．'
   knowledge_points:
   - 统计
   - 平均数
@@ -471,61 +791,234 @@ questions:
   - 方差
   - 条形统计图
   module: statisticsAndProbability
-  difficulty: 基础
+  difficulty: 较难
   recommended_for:
-  - L0
-  - L1
   - L2
   - L3
+  figures:
+  - figures/2023-pinggu-er-fig25.png
+  - figures/2023-pinggu-er-fig26.png
 - id: 24
   type: 解答
   score: 6
-  question: '如图，为的直径，为上一点，过点作的切线，交的延长线于点，为的中点，连结并延长交于点，连结．
+  question: '如图，AB为$\odot\odot$的直径，C为$\odot\odot$上一点，过点B作$\odot\odot$的切线，交AC的延长线于点E，F为AE的中点，连结BF并延长交$\odot\odot$于点D，连结CD．
 
-    （1）求证：；
+    [图]
 
-    （2）若，，求的长．'
-  answer: ''
-  solution: ''
+    （1）求证：$\angle D = \angle EBC$；
+
+    （2）若$\tan \angle D=\frac{1}{2}$，$BC = 2$，求BF的长．'
+  answer: （1）见解析（2）$BF = 2.5$
+  solution: '【小问1详解】
+
+    证明：∵BE为$\odot\odot$的切线，
+
+    ∴$\angle ABE = 90^\circ$，
+
+    ∴$\angle ABC+\angle EBC=90^{\circ}$，
+
+    ∵AB是直径，
+
+    ∴$\angle ACB=90^\circ$，
+
+    ∴$\angle A+\angle ABC=90^{\circ}$，
+
+    ∴$\angle A=\angle EBC$，
+
+    ∵$\overrightarrow{CB} = \overrightarrow{CB}$，
+
+    ∴$\angle D=\angle A$，
+
+    ∴$\angle D = \angle EBC$；
+
+    【小问2详解】
+
+    解：∵$\tan \angle D=\frac{1}{2}$，
+
+    ∴$\tan\angle EBC=\frac{1}{2}$，
+
+    ∵$\angle ACB=90^\circ$，$BC = 2$，
+
+    ∴$CE = 1$，
+
+    ∵$\angle D=\angle A$，
+
+    ∴$\tan \angle A = \frac{1}{2}$，
+
+    ∴$AC = 4$，
+
+    ∴$AE = 5$，
+
+    $Rt_{\triangle AEB}$中，∵F是AE的中点，$\angle ABE = 90^\circ$，
+
+    ∴$BV=\frac{1}{2}AK=2.5$．'
   knowledge_points:
+  - 圆周角
   - 切线
   module: circles
   difficulty: 较难
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2023-pinggu-er-fig27.png
 - id: 25
   type: 解答
   score: 6
-  question: '某公园有一座漂亮五孔桥，如图所示建立平面直角坐标系，主桥洞与两组副桥洞分别位于轴的两侧成轴对称摆放，每个桥洞的形状近似的可以看作抛物线，主桥洞上，与近似满足函数关系．经测量在主桥洞上得到与的几组数据：
+  question: '某公园有一座漂亮的五孔桥，如图所示建立平面直角坐标系，主桥洞$L_1$与两组副桥洞分别位于y轴的两侧成轴对称摆放，每个桥洞的形状近似的可以看作抛物线，主桥洞$L_1$上，y与x近似满足函数关系$y=ax^{2}+c(a\neq 0)$．经测量在主桥洞$L_1$上得到x与y的几组数据：
+
+    [图]
+
+    x(米)
+
+    $-1.4$
+
+    $-1$
+
+    $0$
+
+    $1$
+
+    $1.4$
+
+    y(米)
+
+    $1.02$
+
+    $1.5$
+
+    $2$
+
+    $1.5$
+
+    $1.02$
 
     根据以上数据回答下列问题：
 
-    （1）求主桥洞的函数表达式；
+    （1）求主桥洞$L_1$的函数表达式；
 
-    （2）若的表达式：，的表达式：，求五个桥洞的总跨度的长．'
-  answer: ''
-  solution: ''
+    （2）若$L_{2}$的表达式：$y_{2}=-0.5(x-h)^{2}+0.98$，$L_3$的表达式：$y_{3}=-0.5\left(x-h_{2}\right)^{2}+0.5$，求五个桥洞的总跨度AB的长．'
+  answer: （1）$y=-0.5x^{2}+2$ （2）五个桥洞的总跨度AB的长为$13.6$米
+  solution: '【小问1详解】
+
+    由表可知，抛物线$L_1$的顶点坐标为$(0,2)$
+
+    ∴抛物线$L_1$的解析式为$y=ax^{2}+2$
+
+    ∵抛物线过点$(1,1.5)$．解得$a = -0.5$
+
+    $y = -0.5x^2 + 2$
+
+    【小问2详解】
+
+    令$y = 0$，$-0.5x^{2}+2=0$
+
+    解得：$x_{1}=-2,\ x_{2}=2$，
+
+    $\therefore MN = 4$；
+
+    ∵$L_{2}$的表达式：$y_{2}=-0.5(x-h)^{2}+0.98$，$L_3$的表达式：$y_{3}=-0.5\left(x-h_{2}\right)^{2}+0.5$
+
+    由题意抛物线$L_{2}$与抛物线$L_1$上EF之间的部分重合，
+
+    即将$y=-0.5x^{2}+2$向下移动$2-0.98=1.02$
+
+    当$y=1.02$时，$-0.5x^{2}+2=1.02$
+
+    解得：$x_{1}=-1.4,\ x_{2}=1.4$，
+
+    $\therefore EF = 2.8$；
+
+    由题意抛物线$L_3$与抛物线$L_1$上CD之间的部分重合，
+
+    即将$y=-0.5x^{2}+2$向下移动$2-0.5=1.5$，
+
+    当$y=1.5$时，$-0.5x^{2}+2=1.5$
+
+    解得：$x_{1}=-1,\ x_{2}=1$，
+
+    ∴$CD = 2$
+
+    $4+2\times2.8+2\times2=13.6$
+
+    ∴五个桥洞的总跨度AB的长为$13.6$米．
+
+    [图]【点睛】本题考查的是二次函数的实际应用，画二次函数的图像，理解题意，灵活的运用抛物线的对称性解题是关键．'
   knowledge_points:
+  - 二次函数
+  - 平移
   - 轴对称
   - 坐标系
-  module: geometryComprehensive
+  module: functions
   difficulty: 较难
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2023-pinggu-er-fig28.png
+  - figures/2023-pinggu-er-fig29.png
 - id: 26
   type: 解答
   score: 6
-  question: '已知抛物线，若点，，在抛物线上．
+  question: '已知抛物线$y = -x^2 + 2tx$，若点$P(-1,y_{1})$，$Q\left(\frac{t}{2}, y_{2}\right)$，$M(m,y_{3})$在抛物线上．
 
-    （1）该抛物线的对称轴为______（用含的式子表示）；
+    （1）该抛物线的对称轴为______（用含t的式子表示）；
 
-    （2）若当时，，则的值为______；
+    （2）若当$m = 2$时，$y_{3}=0$，则t的值为______；
 
-    （3）若对于时，都有，求的取值范围．'
-  answer: ''
-  solution: ''
+    （3）若对于$2\leq m\leq 3$时，都有$y_{1}<y_{3}<y_{2}$，求t的取值范围．'
+  answer: （1）$x = t$ （2）$1$ （3）$1 < t < \frac{4}{3}$或$t > 6$
+  solution: '【小问1详解】
+
+    解：∵$y = -x^2 + 2tx = -(x^2 - 2tx) = -(x - t)^2 - t^2$，
+
+    ∴抛物线的对称轴为直线$x = t$．
+
+    【小问2详解】
+
+    解：当$m = 2$时，$y_{3}=0$，
+
+    ∴$M(2,0)$，
+
+    把$M(2,0)$代入$y = -x^2 + 2tx$，得
+
+    $0=-2^{2}+2\pi\times2$，解得：$t = 1$．
+
+    【小问3详解】
+
+    解：当$t<-1$时，∵$a = -1 < 0$，
+
+    ∴在对称轴右侧，y随x的增大而减小，
+
+    ∵$2\leq m\leq 3$，$P(-1,y_{1})$，$M(m,y_{3})$，
+
+    ∴$-1 < m$，即点P和点M在对称轴右侧，
+
+    ∴$y_1 > y_3$，不符合题意；
+
+    当$-1 \leq t \leq 0$时，∵$a = -1 < 0$，
+
+    又∵$2\leq m\leq 3$，$P(-1,y_{1})$，$M(m,y_{3})$，
+
+    ∴$x+1<m+x$，
+
+    ∴点P在对称轴左侧，点M在对称轴右侧，点P到对称轴的距离比点M到对称轴的距离近，
+
+    ∴$y_1 > y_3$，不符合题意；
+
+    当$0<t<2$时，∵$a = -1 < 0$，$P(-1,y_{1})$，$Q\left(\frac{t}{2}, y_{2}\right)$，$M(m,y_{3})$，
+
+    若$y_{1}<y_{3}<y_{2}$，则点M到对称轴的距离大于点Q到对称轴的距离，小于点P到对称轴的距离，
+
+    ∴$t-\frac{t}{m}<m-t<t+\frac{t}{m}$，
+
+    ∵$2\leq m\leq 3$，
+
+    ∴$1 < t < \frac{4}{3}$；
+
+    当$t^{2}$时，∵$a = -1 < 0$，$P(-1,y_{1})$，$Q\left(\frac{t}{2}, y_{2}\right)$，$M(m,y_{3})$，
+
+    若$y_{'
   knowledge_points:
   - 综合
   module: functions
@@ -535,33 +1028,156 @@ questions:
 - id: 27
   type: 解答
   score: 7
-  question: '在中，，点为边上一点，为延长线上的一点，，为边上一点，射线于点，过点作直线于，交于点，作的角平分线交于，过点作的平行线，交于点，交于点，交于点，．
+  question: '在$\triangle ABC$中，$\angle ACB=90^\circ$，点D为BC边上一点，E为AC延长线上的一点，$CE = CD$，F为CB边上一点，$EF \perp$射线AD于点K，过点D作直线$DG \perp AB$于G，交EF于点H，作$\angle AGD$的角平分线交AD于M，过点M作AB的平行线，交DG于点O，交BC于点Q，交EF于点N，$MO =
+    NO$．
 
-    （1）找出图中和相等的一个角，并证明；
+    [图]
 
-    （2）判断、、的数量关系，并证明．'
-  answer: ''
-  solution: ''
+    （1）找出图中和$\angle DHK$相等的一个角，并证明；
+
+    （2）判断EH、$[公式]$、MD的数量关系，并证明．'
+  answer: （1）$\angle DHK = \angle BAK$（答案不唯一），证明见解析 （2）$MD = EH + FN$，理由见解析
+  solution: '【小问1详解】
+
+    解：$\angle DHK = \angle BAK$（答案不唯一）
+
+    证明：如图，
+
+    [图]
+
+    $\because AK \perp EF$，
+
+    $\angle LAKE = 90^\circ$，
+
+    $\angle C+\angle DHK=90^{\circ}$，
+
+    $QHG\perp AB$，
+
+    $\angle C+\angle BAK=90^\circ$，
+
+    $\because \angle 2 = \angle 3$，
+
+    $\angle LDHK = \angle BAK$．
+
+    【小问2详解】
+
+    解：$MD = EH + FN$
+
+    证明：连结GN，
+
+    [图]
+
+    $\angle ACB = \angle AKF = 90^\circ$，
+
+    $\angle4+\angle5=90^\circ$，$\angle6+\angle7=90^\circ$，
+
+    $\because \angle 5 = \angle 6$，
+
+    $\therefore \angle 4 = \angle 7$，
+
+    $\angle ACB = \angle ECF + 90^\circ$，$CD = CE$，
+
+    $\triangle ACD\cong\triangle ECF(AAS)$，
+
+    $\therefore EF = AD$，
+
+    $\because MN \parallel AB$，
+
+    $\angle CMD = \angle AHD = 90^\circ$，
+
+    $\because OM = ON$，
+
+    $\therefore DG$垂直平分MN，
+
+    $\ldots MG = NG$，
+
+    $\angle AGH = 90^\circ$，MG平分$\angle AGH$，
+
+    $\angle AGM = \angle GMN = 45^\circ$，
+
+    $\angle AGM = \angle HGN = 45^\circ$，
+
+    $\a'
   knowledge_points:
   - 平行线
+  - 全等三角形
   module: triangles
   difficulty: 压轴
   recommended_for:
   - L3
+  figures:
+  - figures/2023-pinggu-er-fig30.png
+  - figures/2023-pinggu-er-fig31.png
+  - figures/2023-pinggu-er-fig32.png
 - id: 28
   type: 解答
   score: 7
-  question: '在平面直角坐标系中，对于，其中，，给出如下定义：将边绕点逆时针旋转得到线段，连接，与的过点A的高线交于点，将点关于直线对称得到点，我们称为的留缘点．
+  question: '在平面直角坐标系xOy中，对于$\triangle OAB$，其中$A\left(1,\sqrt{3}\right)$，$B(2,0)$，给出如下定义：将OA边绕点O逆时针旋转$60^\circ$得到线段OC，连接BC，BC与$\triangle OAB$的过点A的高线交于点P，将点P关于直线$y=kx+b\ (k\neq0)$对称得到点Q，我们称Q为$\triangle OAB$的留缘点．
 
-    （1）若，，请在图中画出的留缘点，并求出点的坐标；
+    [图]
 
-    （2）已知，，若线段上存在的留缘点，求的取值范围．'
-  answer: ''
-  solution: ''
+    （1）若$k = 1$，$b = 0$，请在图中画出$\triangle OAB$的留缘点Q，并求出点Q的坐标；
+
+    （2）已知$M(-3,0)$，$N(-3,5)$，若线段MN上存在$\triangle OAB$的留缘点，求b的取值范围．'
+  answer: （1）$Q\left(\frac{\sqrt{3}}{3},1\right)$ （2）$b\frac{49(15+\sqrt{3})}{222}$或$b \leq -\frac{23\sqrt{3}}{6}$
+  solution: '【小问1详解】
+
+    解：如图：当$k = 1$，$b = 0$时，点Q即为$\triangle OAB$的留缘点，连接AC，
+
+    [图]
+
+    ∵$B(2,0)$，$A\left(1,\sqrt{3}\right)$，
+
+    ∴$OB = 2$，$OA=\sqrt{1^{2}+\left(\sqrt{3}\right)^{2}}=2$，$AB=\sqrt{(2-1)^{2}+(0-\sqrt{3})^{2}}=2$，
+
+    ∴$\triangle OAB$是等边三角形，
+
+    ∴$[公式]$，
+
+    ∵将OA边绕点O逆时针旋转$60^\circ$得到线段OC，
+
+    ∴$OC=OA=2,\angle AOC=60^{\circ}$，
+
+    ∴$\triangle OAC$是等边三角形，
+
+    ∴$AC = OC = 2$，
+
+    ∴四边形$COBA$是菱形，
+
+    ∴$\angle PBA=\frac{1}{2}\angle ABO=30^{\circ}$，
+
+    ∵$HB = OB - OH = 1$，
+
+    ∴$PH = \tan \angle OBA \cdot HB = \frac{\sqrt{3}}{3}$，
+
+    ∴$P\left(1,\frac{\sqrt{3}}{3}\right)$，
+
+    ∵$k = 1$，$b = 0$，
+
+    ∴点P与点Q关于直线$y=x$对称，
+
+    ∴$Q(\frac{\sqrt{3}}{3},1)$．
+
+    【小问2详解】
+
+    解：如图所示，连接PN、PM，作PN、PM的中垂线DH、GE交y轴于点D、E，
+
+    设$D(0,d)$，$E(0,e)$，
+
+    ∵点D、E分别在PN、PM的中垂线上，
+
+    ∴$ND = PD$，$EM = EP$，
+
+    ∴$\sqrt{3^{2}+(5-d)^{2}}=\sqrt{1^{2}+\left(\frac{\sqrt{3}}{3}-d\right)^{2}}$，$\sqrt{3^{2}+e^{2}}=\sqrt{1^{2}'
   knowledge_points:
+  - 菱形
   - 旋转
   - 坐标系
-  module: geometryComprehensive
+  module: triangles
   difficulty: 压轴
   recommended_for:
   - L3
+  figures:
+  - figures/2023-pinggu-er-fig33.png
+  - figures/2023-pinggu-er-fig34.png
+  - figures/2023-pinggu-er-fig35.png

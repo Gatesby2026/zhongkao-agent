@@ -1,8 +1,8 @@
 # ============================================================
 # 2023年北京延庆区中考数学一模试卷 — 逐题分析
 # ============================================================
-# 数据来源：knowledge-original/精品解析：2023年北京市延庆区九年级中考一模数学试题 （原卷版）.docx
-# 自动生成，部分数学公式可能显示不全（docx公式对象无法完整提取）
+# 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
+# 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
 # 满分：100分  时长：120分钟
 
 year: 2023
@@ -17,9 +17,19 @@ questions:
 - id: 1
   type: 选择
   score: 2
-  question: "下列几何体的主视图和俯视图完全相同的是（   ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '下列几何体的主视图和俯视图完全相同的是（）
+
+    A.[图]B.[图]C.[图]D.[图]'
+  answer: D
+  solution: '解：A、主视图是矩形，俯视图是圆，故本选项不合题意；
+
+    B、主视图是等腰三角形，俯视图是带圆心的圆，故本选项不合题意；
+
+    C、主视图是矩形，俯视图是三角形，故本选项不合题意；
+
+    D、主视图和俯视图完全相同，是等圆，故本选项符合题意．
+
+    故选：D．'
   knowledge_points:
   - 综合
   module: geometryComprehensive
@@ -29,14 +39,24 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-yanqing-yi-fig02.png
+  - figures/2023-yanqing-yi-fig03.png
+  - figures/2023-yanqing-yi-fig04.png
+  - figures/2023-yanqing-yi-fig05.png
 - id: 2
   type: 选择
   score: 2
-  question: "2022年6月5日，中华民族再探苍穹，神舟十四号载人飞船通过长征二号F运载火箭成功升空，并与天和核心舱顺利进行接轨．据报道，长征二号F运载火箭的重量大约是500000kg．将数据500000用科学记数法表示，结果是（    ）\nA. 5×105\tB. 5×106\tC. 0.5×105\tD. 0.5×106"
-  answer: ''
-  solution: ''
+  question: '2022年6月5日，中华民族再探苍穹，神舟十四号载人飞船通过长征二号F运载火箭成功升空，并与天和核心舱顺利进行接轨．据报道，长征二号F运载火箭的重量大约是500000kg．将数据500000用科学记数法表示，结果是（）
+
+    A.5×105B.5×106C.0.5×105D.0.5×106'
+  answer: A
+  solution: '解：数据500000的5后面有5个0，故用科学记数法表示为5×105，
+
+    故选：A．'
   knowledge_points:
   - 科学记数法
+  - 绝对值
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -47,11 +67,22 @@ questions:
 - id: 3
   type: 选择
   score: 2
-  question: "下列图标中，是中心对称图形的为（   ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '下列图标中，是中心对称图形的为（）
+
+    A.[图]B.[图]C.[图]D.[图]'
+  answer: B
+  solution: 'A、不是中心对称图形，不符合题意，
+
+    B、是中心对称图形，符合题意，
+
+    C、不是中心对称图形，不符合题意，
+
+    D、不是中心对称图形，不符合题意，
+
+    故选B．'
   knowledge_points:
   - 中心对称图形
+  - 旋转
   module: geometryComprehensive
   difficulty: 基础
   recommended_for:
@@ -59,14 +90,32 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-yanqing-yi-fig06.png
+  - figures/2023-yanqing-yi-fig07.png
+  - figures/2023-yanqing-yi-fig08.png
+  - figures/2023-yanqing-yi-fig09.png
 - id: 4
   type: 选择
   score: 2
-  question: "不透明的袋子中装有黑、白小球各一个，除颜色之外两个小球无其他差别．从中随机摸出一个小球，放回并摇匀，再从中随机摸出一个小球，那么两次都摸到白球的概率是（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '不透明的袋子中装有黑、白小球各一个，除颜色之外两个小球无其他差别．从中随机摸出一个小球，放回并摇匀，再从中随机摸出一个小球，那么两次都摸到白球的概率是（
+
+    ）
+
+    A.$\frac{1}{2}$B.$\frac{1}{3}$C.$\frac{1}{4}$D.$\frac{3}{4}$'
+  answer: C
+  solution: '解：列树状图如下，
+
+    [图]
+
+    共有4种等可能的情况，其中两次都摸到白球的有1种，
+
+    ∴两次都摸到白球的概率为$\frac{1}{4}$，
+
+    故选：C．'
   knowledge_points:
   - 概率
+  - 树状图
   module: statisticsAndProbability
   difficulty: 基础
   recommended_for:
@@ -74,12 +123,24 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-yanqing-yi-fig10.png
 - id: 5
   type: 选择
   score: 2
-  question: "实数a，b在数轴上的对应点的位置如图所示，则下列结论中，正确的是（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '实数a，b在数轴上的对应点的位置如图所示，则下列结论中，正确的是（）
+
+    [图]
+
+    A.$a > b$B.$a = b$C.$a < b$D.$a = -b$'
+  answer: C
+  solution: 'ABC.根据数轴上点a、b的位置可知，$a<0$，$b>0$，
+
+    ∴$a<b$，故AB错误，C正确；
+
+    根据数轴上点a、b的位置可知，$a<-b$，故D错误．
+
+    故选：C．'
   knowledge_points:
   - 综合
   module: numbersAndExpressions
@@ -89,26 +150,54 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-yanqing-yi-fig11.png
 - id: 6
   type: 选择
   score: 2
-  question: "如图，是利用割补法求图形面积的示意图，下列公式中与之相对应的是（    ）\nA. \tB.\nC. \tD."
-  answer: ''
-  solution: ''
+  question: '如图，是利用割补法求图形面积的示意图，下列公式中与之相对应的是（
+
+    ）
+
+    [图]
+
+    A.$(a+b)^{2}=a^{2}+2ab+b^{2}$B.$(a-b)^{2}=a^{2}-2ab+b^{2}$
+
+    C.$(a+b)(a-b)=a^{2}-b^{2}$D.$(ab)^2=a^2b^2$'
+  answer: A
+  solution: '根据题意得：(a+b)2=a2+2ab+b2，
+
+    故选：A．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 正方形
+  module: quadrilaterals
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-yanqing-yi-fig12.png
 - id: 7
   type: 选择
   score: 2
-  question: "下图是作线段垂直平分线的作图痕迹，则下列结论不一定成立的是（   ）\nA.   \tB.   \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '下图是作线段AB垂直平分线的作图痕迹，则下列结论不一定成立的是（）
+
+    [图]
+
+    A.$AC = BC$B.$AE = EB$C.$\angle B=45^{\circ}$D.$AB \perp CD$'
+  answer: C
+  solution: '解：由作图痕迹得CD垂直平分AB，
+
+    ∴$AC = BC$，$AE = EB$，$AB \perp CD$．
+
+    而$\angle ACB$不一定等于90度，所以$\angle B=45^{\circ}$不一定成立，
+
+    所以A、B、D选项成立,
+
+    C选项不一定成立，
+
+    故选：C．'
   knowledge_points:
   - 综合
   module: geometryComprehensive
@@ -117,12 +206,30 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-yanqing-yi-fig13.png
 - id: 8
   type: 选择
   score: 2
-  question: "如图，用绳子围成周长为的矩形，记矩形的一边长为，它的邻边长为，当x在一定范围内变化时，y随x的变化而变化，则y与x满足的函数关系是（   ）\nA. 一次函数关系\tB. 二次函数关系\nC. 正比例函数关系\tD. 反比例函数关系"
-  answer: ''
-  solution: ''
+  question: '如图，用绳子围成周长为$10m$的矩形，记矩形的一边长为xt，它的邻边长为ym，当x在一定范围内变化时，y随x的变化而变化，则y与x满足的函数关系是（）
+
+    [图]
+
+    A.一次函数关系B.二次函数关系
+
+    C.正比例函数关系D.反比例函数关系'
+  answer: A
+  solution: '解：设另一边为y，
+
+    由题意得，$2(x+y)-10$，
+
+    ∴$x+y=5$，
+
+    ∴$y=5-x$，
+
+    即满足一次函数关系，
+
+    故选：A．'
   knowledge_points:
   - 一次函数
   - 反比例函数
@@ -134,12 +241,20 @@ questions:
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2023-yanqing-yi-fig14.png
 - id: 9
   type: 填空
   score: 2
-  question: 若式子在实数范围内有意义，则x的取值范围是_____．
-  answer: ''
-  solution: ''
+  question: 若式子$\sqrt{x-2}$在实数范围内有意义，则x的取值范围是_____．
+  answer: $x^{2}$
+  solution: '根据二次根式被开方数必须是非负数的条件，
+
+    要使$\sqrt{x-2}$在实数范围内有意义，必须$x-2\quad0$，
+
+    ∴$x^{2}$．
+
+    故答案为：$x^{2}$'
   knowledge_points:
   - 综合
   module: numbersAndExpressions
@@ -153,11 +268,14 @@ questions:
   type: 填空
   score: 2
   question: 分解因式：3m2﹣3n2＝_____．
-  answer: ''
-  solution: ''
+  answer: $3(m+n)(m-n)$
+  solution: '解：原式＝$3(m^{2}-n^{2})=3(m+n)(m-n)$．
+
+    故答案为：$3(m+n)(m-n)$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 因式分解
+  - 方差
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -167,11 +285,55 @@ questions:
 - id: 11
   type: 填空
   score: 2
-  question: 方程组的解为_________．
-  answer: ''
-  solution: ''
+  question: '方程组$\begin{cases}
+
+    x + y = -1 \\
+
+    2x - 3y = 8
+
+    \end{cases}$的解为_________．'
+  answer: $\left\{ \begin{array}{l} x = 1 \\ y = -2 \end{array} \right.$
+  solution: '$\begin{aligned}
+
+    x + y &= -1 \quad \text{(1)} \\
+
+    2x - 3y &= 8 \quad \text{(2)}
+
+    \end{aligned}$，
+
+    由①得，$y = -x - \sqrt{3}$，
+
+    ③代入②得，$2x-3(-x-1)=8$，
+
+    解得$x = 1$，
+
+    把$x = 1$代入③得，$y = -1 - 1 = -2$，
+
+    所以，方程组的解是$\left\{
+
+    \begin{array}{l}
+
+    x = 1 \\
+
+    y = -2
+
+    \end{array}
+
+    \right.$；
+
+    故答案为：$\left\{
+
+    \begin{array}{l}
+
+    x = 1 \\
+
+    y = -2
+
+    \end{array}
+
+    \right.$．'
   knowledge_points:
-  - 综合
+  - 二元一次方程组
   module: equationsAndInequalities
   difficulty: 基础
   recommended_for:
@@ -182,10 +344,21 @@ questions:
 - id: 12
   type: 填空
   score: 2
-  question: 如图，⊙O的弦，相交于点，若，，则=________°．
-  answer: ''
-  solution: ''
+  question: '如图，⊙O的弦AB，CD相交于点P，若$\angle A=48^\circ$，$\angle APD = 80^\circ$，则$\angle B$=________°．
+
+    [图]'
+  answer: '32'
+  solution: '解：∵$\angle A=48^\circ$，$\angle APD=80^{\circ}$，
+
+    ∴$\angle C=\angle APD-\angle A=80^{\circ}-48^{\circ}=32^{\circ}$，
+
+    又∵$\widehat{AD}=\widehat{AD}$，
+
+    ∴$\angle B=\angle C=32^{\circ}$，
+
+    故答案为：$32$．'
   knowledge_points:
+  - 圆周角
   - 弦
   module: circles
   difficulty: 基础
@@ -194,26 +367,50 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-yanqing-yi-fig15.png
 - id: 13
   type: 填空
   score: 2
-  question: 如图，在中，点D，E分别在边，上，且，若，，的面积是2，则的面积是_________．
-  answer: ''
-  solution: ''
+  question: '如图，在$\triangle ABC$中，点D，E分别在边AB，AC上，且$DE \parallel BC$，若$AD=2$，$DB = 3$，$VADE$的面积是2，则$\triangle ABC$的面积是_________．
+
+    [图]'
+  answer: '12.5'
+  solution: '解：$\because DE \parallel BC$，
+
+    $\triangle ADE \sim \triangle ABC$，
+
+    ∴$\frac{S_{\triangle ADE}}{S_{\triangle ABC}} = \left( \frac{AD}{AB} \right)^2$，即$\frac{2}{s_{\triangle ABC}}=\frac{45}{\pi d^{2}+5}$，
+
+    ∴$S_{\triangle ABC}=12.5$．
+
+    故答案为：12.5．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 相似三角形
+  module: triangles
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-yanqing-yi-fig16.png
 - id: 14
   type: 填空
   score: 2
-  question: 如图，在中，点，．将向左平移3个单位得到，再向下平移1个单位得到，则点B的对应点的坐标为________．
-  answer: ''
-  solution: ''
+  question: '如图，在$\triangle ABC$中，点$A(3,1)$，$B(1,2)$．将$\triangle ABC$向左平移3个单位得到$\triangle A''B''C''$，再向下平移1个单位得到$\triangle A''''B''''C''''$，则点B的对应点$B''''$的坐标为________．
+
+    [图]'
+  answer: $(-2,1)$
+  solution: '解：根据平移与图形变化的规律可知，
+
+    将$\triangle ABC$向左平移3个单位，再向下平移1个单位，其图形上的对应点$B''''$的横坐标减少3，纵坐标减少1，
+
+    由于点$B(1,2)$，
+
+    所以平移后的对应点$B''''$的坐标为$(-2,1)$，
+
+    故答案为：$(-2,1)$．'
   knowledge_points:
   - 平移
   module: geometryComprehensive
@@ -222,12 +419,24 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-yanqing-yi-fig17.png
 - id: 15
   type: 填空
   score: 2
-  question: 在平面直角坐标系中，点，在反比例函数的图象上，且，请你写出一个符合要求的k的值_______．
-  answer: ''
-  solution: ''
+  question: 在平面直角坐标系xOy中，点$A($$-1$$, y_{1})$，$B(2,\ y_{2})$在反比例函数$y=\frac{k}{x}(k\neq0)$的图象上，且$y_{1}>y_{2}$，请你写出一个符合要求的k的值_______．
+  answer: $-2$（答案不唯一）
+  solution: '由题可知A，B在两个象限，
+
+    ∵$y_{1}>y_{2}$，
+
+    ∴反比例函数$y=\frac{k}{x}(k\neq0)$的图象位于二、四象限，
+
+    ∴$k < 0$，
+
+    即$k = -2$，
+
+    故答案为：$-2$．'
   knowledge_points:
   - 反比例函数
   - 坐标系
@@ -240,27 +449,44 @@ questions:
 - id: 16
   type: 填空
   score: 2
-  question: '甲、乙两种物质的溶解度与温度之间的对应关系如图所示．
+  question: '甲、乙两种物质的溶解度$y(g)$与温度$t(\hat{C})$之间的对应关系如图所示．
 
-    下列说法中，①甲、乙两种物质溶解度均随着温度的升高而增大；②当温度升高至时，甲的溶解度比乙的溶解度小；③当温度为时，甲、乙的溶解度都小于；④当温度为时，甲、乙的溶解度相同．所有正确结论的序号是________．'
-  answer: ''
-  solution: ''
+    [图]
+
+    下列说法中，①甲、乙两种物质的溶解度均随着温度的升高而增大；②当温度升高至$t_{2}^{\circ}C$时，甲的溶解度比乙的溶解度小；③当温度为$0^\circ C$时，甲、乙的溶解度都小于$20g$；④当温度为$30^\circ C$时，甲、乙的溶解度相同．所有正确结论的序号是________．'
+  answer: ①③
+  solution: '解：根据函数图象得：
+
+    甲、乙两种物质$[公式]$溶解度均随着温度的升高而增大，故①正确；
+
+    当温度升高至$t_{2}^{\circ}C$时，甲的溶解度比乙的溶解度大，故②错误；
+
+    当温度为$0^\circ C$时，甲、乙的溶解度都小于$20$g，故③正确；
+
+    当温度为$t_{1}^{\circ}\mathrm{C}$时，甲、乙的溶解度相同，故④错误．
+
+    故答案为：①③．'
   knowledge_points:
   - 综合
-  module: geometryComprehensive
+  module: functions
   difficulty: 较难
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2023-yanqing-yi-fig18.png
 - id: 17
   type: 解答
   score: 5
-  question: （第17题，详见原卷）
-  answer: ''
-  solution: ''
+  question: 计算：$|-3|-2\tan 60^{\circ}+\left(\frac{1}{2}\right)^{-1}+\sqrt{12}$．
+  answer: '5'
+  solution: '原式$=3-2\sqrt{3}+2+2\sqrt{3}$
+
+    $= 5$'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 三角函数
+  - 绝对值
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -270,9 +496,21 @@ questions:
 - id: 18
   type: 解答
   score: 5
-  question: （第18题，详见原卷）
-  answer: ''
-  solution: ''
+  question: 解不等式组$\left\{\begin{array}{l}3x-1> x+1 \\ \dfrac{4x-5}{3}\leq x\end{array}\right.$
+  answer: $1<x\leq5$
+  solution: '$\begin{cases}
+
+    3x-1 > x+1 \\
+
+    \frac{4x-5}{3} \leq x \times 2
+
+    \end{cases}$
+
+    解①得$x>1$
+
+    解②得$x \leq 5$
+
+    所以，不等式组的解集为$1<x\leq5$．'
   knowledge_points:
   - 不等式
   - 不等式组
@@ -286,12 +524,26 @@ questions:
 - id: 19
   type: 解答
   score: 5
-  question: 已知，求代数式值．
-  answer: ''
-  solution: ''
+  question: 已知$x^{2}+x-3=0$，求代数式$(2x+3)(2x-3)\cdot x(x-3)$的值．
+  answer: '0'
+  solution: '解：$(2x+3)(2x-3)\cdot x(x-3)$
+
+    =$(2x)^{3}-3^{2}-(x^{2}-3x)$
+
+    =$4x^{2}-9-x^{2}+3x$
+
+    =$3x^2 + 3x - 9$
+
+    =$3(x^{2}+x-3)$
+
+    ∵$x^{2}+x-3=0$
+
+    ∴原式=0
+
+    即代数式$(2x+3)(2x-3)\cdot x(x-3)$的值为0．'
   knowledge_points:
   - 综合
-  module: geometryComprehensive
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -301,16 +553,44 @@ questions:
 - id: 20
   type: 解答
   score: 5
-  question: '已知关于一元二次方程．
+  question: '已知关于x的一元二次方程$x^{2}+mx+m-1=0$．
 
     （1）求证：方程总有两个实数根；
 
-    （2）如果方程有一个根为正数，求的取值范围．'
-  answer: ''
-  solution: ''
+    （2）如果方程有一个根为正数，求m的取值范围．'
+  answer: （1）见解析（2）$m < 1$
+  solution: '【小问1详解】
+
+    证明：$\Delta=m^{2}-4(m-1)=(m-2)^{2}$
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$无论m取何值，$(m-2)^{2}\quad0$，
+
+    ∴方程总有两个实数根．
+
+    【小问2详解】
+
+    解：由原方程得：$(x+1)(x+m-1)=0$，
+
+    解得$x_{1}=-1$，$x_{2}=1-m$，
+
+    ∵方程有一个根为正数，$-1<0$，
+
+    $\therefore 1-m>0$，
+
+    $\therefore m<1$．'
   knowledge_points:
   - 一元二次方程
-  module: numbersAndExpressions
+  - 根的判别式
+  - 不等式
+  module: equationsAndInequalities
   difficulty: 中档
   recommended_for:
   - L1
@@ -319,14 +599,61 @@ questions:
 - id: 21
   type: 解答
   score: 5
-  question: '如图，在平行四边形中，连接，，点M为边的中点，连接并延长，交的延长线于点E，连接．
+  question: '如图，在平行四边形$ABCD$中，连接AC，$\angle BAC = 90^\circ$，点M为边AD的中点，连接CM并延长，交BA的延长线于点E，连接DE．
 
-    （1）求证：四边形是矩形；
+    [图]
 
-    （2）若，，求四边形面积．'
-  answer: ''
-  solution: ''
+    （1）求证：四边形$ACDE$是矩形；
+
+    （2）若$BE = 10$，$DE = 12$，求四边形$BCDE$的面积．'
+  answer: （1）见解析； （2）90．
+  solution: '【小问1详解】
+
+    证明：∵四边形$ABCD$是平行四边形，
+
+    ∴$BA \parallel CD$，$BA = CD$．
+
+    ∴$\angle AEC = \angle DCE$，$\angle EAD = \angle CDA$．
+
+    ∵点M为边AD的中点，
+
+    ∴$AM = DM$．
+
+    ∴$\triangle EAM \cong \triangle CDM$．
+
+    ∴$ME = MC$．
+
+    ∴四边形$ACDE$是平行四边形．
+
+    ∵$\angle BAC = 90^\circ$，
+
+    ∴$\angle EAC = 90^\circ$．
+
+    ∴平行四边形$ACDE$是矩形．
+
+    【小问2详解】
+
+    解：∵四边形$ACDE$是矩形，
+
+    ∴$AE = CD$，$DE = AC$．
+
+    ∴$AE = AB$．
+
+    ∵$BE = 10$，
+
+    ∴$AE = AB = 5$．
+
+    ∵$DE = 12$，
+
+    ∴$AC = 12$．
+
+    ∴$S_{\text{四边形 } ACDE} = AE \cdot DE \cdot \sin 120^\circ = 60$，
+
+    $S_{\triangle \text{ABC}} = \frac{1}{2} AB \cdot AC \cdot \sin \angle BAC = \frac{5}{2} \times 1.2 = 3.0$．
+
+    ∴$S_{\text{四边形}ABCD}=S_{\triangle ABC}+S_{\triangle ADC}=60+30=90$．'
   knowledge_points:
+  - 全等三角形
   - 平行四边形
   - 矩形
   module: quadrilaterals
@@ -335,20 +662,49 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-yanqing-yi-fig19.png
 - id: 22
   type: 解答
   score: 5
-  question: '在平面直角坐标系中，一次函数的图象由正比例函数的图象平移得到，且经过点．
+  question: '在平面直角坐标系xOy中，一次函数$y=kx+b\ (k\neq0)$的图象由正比例函数$y=\frac{1}{2}x$的图象平移得到，且经过点$(2,3)$．
 
     （1）求k，b的值；
 
-    （2）当时，对于x的每一个值，函数的值小于一次函数的值，直接写出m的取值范围．'
-  answer: ''
-  solution: ''
+    （2）当$x<2$时，对于x的每一个值，函数$y = mx - 2 (m \neq 0)$的值小于一次函数$y=kx+b\ (k\neq0)$的值，直接写出m的取值范围．'
+  answer: （1）$k = \frac{1}{2}$，$b = 2$； （2）$0.5 \leq m \leq 2.5$．
+  solution: '【小问1详解】
+
+    解：∵一次函数$y=kx+b\ (k\neq0)$的图象由正比例函数$y=\frac{1}{2}x$的图象平移得到，
+
+    ∴$k = \frac{1}{2}$．
+
+    ∵一次函数$y=kx+b\ (k\neq0)$的图象经过点$(2,3)$，
+
+    ∴$3=\frac{1}{2}x_{2}+b$．
+
+    ∴$b = 2$；
+
+    【小问2详解】
+
+    解：由（1）一次函数$y=kx+b$的解析式为$y=\frac{1}{2}x+2$，
+
+    当$x=2$时，$y=\frac{1}{2}\times 2+2=3$，
+
+    把点$(2,3)$代入$y = mx - 2$，得$3=2m-2$，
+
+    解得$m = 2.5$，
+
+    ∵当$x<2$时，对于x的每一个值，函数$y = mx - 2 (m \neq 0)$的值小于一次函数$y=kx+b\ (k\neq0)$的值，
+
+    [图]
+
+    ∴$0.5 \leq m \leq 2.5$．'
   knowledge_points:
   - 一次函数
   - 正比例函数
   - 平移
+  - 不等式
   - 坐标系
   module: functions
   difficulty: 中档
@@ -356,64 +712,227 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-yanqing-yi-fig20.png
 - id: 23
   type: 解答
   score: 6
-  question: '如图，是的外接圆，AB是直径，，且．
+  question: '如图，$\odot\odot$是$\triangle ABC$的外接圆，AB是直径，$OD\perp OC$，且$\angle ADO = \angle BOC$．
 
-    （1）求证：是的切线；
+    [图]
 
-    （2）若，，求的半径．'
-  answer: ''
-  solution: ''
+    （1）求证：AD是$\odot\odot$的切线；
+
+    （2）若$\tan \angle BAC = \frac{1}{2}$，$AD = 3$，求$\odot\odot$的半径．'
+  answer: （1）见解析； （2）4．
+  solution: '【小问1详解】
+
+    证明：∵$OD\perp OC$，
+
+    ∴$\angle DOC = 90^\circ$．
+
+    ∴$\angle AOB+\angle BOC=90^{\circ}$．
+
+    ∵$\angle ADO=\angle BOC.$
+
+    ∴$\angle AOD+\angle ADO=90^{\circ}$．
+
+    ∴$\angle DAO = 90^\circ$．
+
+    ∵AB是$\odot\odot$的直径，
+
+    ∴AD是$\odot\odot$的切线．
+
+    【小问2详解】
+
+    解：∵AB是⊙O的直径，
+
+    ∴$\angle ACB=90^\circ$．
+
+    ∴$\angle BAC+\angle B=90^{\circ}$．
+
+    过点C作$CE \perp AB$于点E，
+
+    [图]
+
+    ∴$\angle ECB+\angle B=90^{\circ}$．
+
+    ∴$\angle BAC = \angle ECB$．
+
+    ∵$\tan \angle BAC = \frac{1}{2}$，
+
+    ∴$\tan \angle ECB = \frac{1}{2}$．
+
+    设$BE = a$（$a > 0$），则$CE = 2a$，$BC = \sqrt{5}a$．
+
+    ∴$AC = 2\sqrt{5}a$，$AB = 5a$．
+
+    ∴$OA=OB=\frac{5}{2}a$．
+
+    ∴$OE=\frac{3}{2}a$．
+
+    ∵$\angle DAO=\angle OEC=90^\circ$，$\angle ADO = \angle BOC$，
+
+    ∴$\triangle ADO \sim \triangle EOC$，
+
+    ∴$\frac{AD}{AO}=\frac{OE}{EC}$．
+
+    ∴$\frac{AD}{AO}=\frac{1.5a}{2a}=\frac{3}{4}$．
+
+    ∵$AD = 3$，
+
+    ∴$OA = 4$．
+
+    ∴$\odot\odot$的半径为4．'
   knowledge_points:
+  - 圆周角
   - 切线
-  module: circles
+  - 相似三角形
+  - 勾股定理
+  - 三角函数
+  module: triangles
   difficulty: 较难
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2023-yanqing-yi-fig21.png
+  - figures/2023-yanqing-yi-fig22.png
 - id: 24
   type: 解答
   score: 6
-  question: '原地正面掷实心球是北京市初中学业水平考试体育现场考试的选考项目之一，实心球被掷出后的运动路线可以看作是抛物线的一部分，如图所示，建立平面直角坐标系，实心球从出手到落地的过程中，它的竖直高度(单位：)与水平距离(单位：)近似满足函数关系．
+  question: '原地正面掷实心球是北京市初中学业水平考试体育现场考试的选考项目之一，实心球被掷出后的运动路线可以看作是抛物线的一部分，如图所示，建立平面直角坐标系xOy，实心球从出手到落地的过程中，它的竖直高度y(单位：m)与水平距离x(单位：m)近似满足函数关系$y = a(x - h)^2 + k \quad (a < 0)$．
 
-    小明训练时，实心球的水平距离与竖直高度的几组数据如下：
+    [图]
+
+    小明训练时，实心球的水平距离x与竖直高度y的几组数据如下：
+
+    水平距离x/m
+
+    $0$
+
+    $1$
+
+    $2$
+
+    $3$
+
+    $4$
+
+    $5$
+
+    竖直高度y/m
+
+    1.8
+
+    2.43
+
+    2.88
+
+    3.15
+
+    3.24
+
+    3.15
 
     根据上述数据，解决下列问题：
 
     （1）直接写出实心球竖直高度的最大值是______；
 
-    （2）求出满足的函数关系；
+    （2）求出满足的函数关系$y = a(x - h)^2 + k \quad (a < 0)$；
 
     （3）求实心球从出手到落地点的水平距离．'
-  answer: ''
-  solution: ''
+  answer: （1）$3.24$； （2）$y = -0.09(x - 4)^2 + 3.24$； （3）10米；
+  solution: '【小问1详解】
+
+    解：由表格数据可得当$x=3$和$x=5$时，其函数值y相同，
+
+    ∴二次函数的对称轴为$x=\frac{3+5}{2}=4$，
+
+    ∵函数$y=(ax-h)^{2}+k(a\lt 0)$的开口方向向下，
+
+    ∴函数顶点坐标为$(4,3.24)$，
+
+    ∴实心球竖直高度的最大值是$3.24$；
+
+    故答案为：$3.24$
+
+    【小问2详解】
+
+    解：∵抛物线的顶点坐标为$(4,3.24)$，
+
+    ∴设抛物线的表达式为$y=a(x-4)^{2}+3.24(a<0)$，
+
+    将点$(0,1.8)$代入，得$1.8=16a+3.24$，
+
+    解得$a = -0.09$，
+
+    ∴抛物线的表达式为$y = -0.09(x - 4)^2 + 3.24$；
+
+    【小问3详解】
+
+    解：令$y = 0$，
+
+    则$-0.09(x-4)^{2}+3.24=0$，
+
+    解得：$x_{1}=10$，$x_{2}=-2$（不符合题意舍去），
+
+    答：实心球从出手到落地点的水平距离为10米．'
   knowledge_points:
+  - 一元二次方程
+  - 二次函数
   - 坐标系
   module: functions
   difficulty: 较难
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2023-yanqing-yi-fig23.png
 - id: 25
   type: 解答
   score: 6
-  question: '为了增强同学们的消防安全意识，普及消防安全知识，提高自防自救能力，某中学开展了形式多样的培训活动，为了解培训效果，该校组织七、八年级全体学生参加了消防知识竞赛（百分制），并规定90分及以上为优秀，分为良好，分为及格，59分及以下为不及格，学校随机抽取了七、八年级各20名学生的成绩进行了整理与分析，下面给出了部分信息．
+  question: '为了增强同学们的消防安全意识，普及消防安全知识，提高自防自救能力，某中学开展了形式多样的培训活动，为了解培训效果，该校组织七、八年级全体学生参加了消防知识竞赛（百分制），并规定90分及以上为优秀，$80 \sim 89$分为良好，$60 \sim 79$分为及格，59分及以下为不及格，学校随机抽取了七、八年级各20名学生的成绩进行了整理与分析，下面给出了部分信息．
 
     a.抽取七年级20名学生的成绩如下：
 
-    66   87   57   96   79   67   89   97   77   100
+    66
 
-    80   69   89   95   58   98   69   78   80   89
+    87   57   96   79   67   89   97   77   100
+
+    80
+
+    69   89   95   58   98   69   78   80   89
 
     b.抽取七年级20名学生成绩的频数分布直方图如下：
 
-    （数据分成5组：，，，，）
+    （数据分成5组：$50 \leq x < 60$，$60 \leq x < 70$，$70 \leq x < 80$，$80 \leq x < 90$，$90 \leq x \leq 100$）
+
+    [图]
 
     c.抽取八年级20名学生成绩的扇形统计图：
 
+    [图]
+
     d.七年级、八年级各抽取的20名学生成绩的平均数、中位数如下表：
+
+    年级
+
+    平均数
+
+    中位数
+
+    七年级
+
+    81
+
+    a
+
+    八年级
+
+    82
+
+    81
 
     请根据以上信息，完成下列问题：
 
@@ -422,72 +941,264 @@ questions:
     （2）该校八年级有学生200人，估计八年级测试成绩达到优秀的学生有多少人？
 
     （3）在七年级抽取的学生成绩中，高于他们平均分的学生人数记为m；在八年级抽取的学生成绩中，高于他们平均分的学生人数记为n．比较m，n的大小，并说明理由．'
-  answer: ''
-  solution: ''
+  answer: （1）图见解析，80 （2）60人（3）$m < n$，理由见解析
+  solution: '【小问1详解】
+
+    解：七年级$60 \leq x < 70$的人数为4人，
+
+    补全频数分布直方图如下
+
+    [图]
+
+    将七年级20名学生的成绩按从高到低排序，第10名和第11名都是80分，因此中位数是80，
+
+    表中a的值为80．
+
+    【小问2详解】
+
+    解：抽取的八年级20名学生成绩的优秀率为$\frac{180-72}{360}\times100\%=30\%$，
+
+    此次八年级测试成绩达到优秀的学生为$200\times30\%=60$（人）．
+
+    【小问3详解】
+
+    解：由抽取的七年级20名学生成绩的数据可知，$m=9$．
+
+    由抽取的八年级20名学生成绩的扇形统计图可知，80分及以上的学生有10人．
+
+    把八年级20名学生的成绩由高到低排列，
+
+    设第十名的成绩为x，第十一名的成绩为$80-b$（b是正数）．
+
+    ∵抽取的八年级20名学生成绩的中位数是81，
+
+    ∴$x+60=81\times2$．
+
+    ∴$x=82+b$．
+
+    ∵抽取的八年级20名学生成绩的平均数是82，
+
+    ∴第十名$[公式]$成绩高于他们的平均分，第十一名的成绩低于他们的平均分．
+
+    ∴$n = 10$．
+
+    ∴$m < n$．'
   knowledge_points:
   - 统计
   - 平均数
   - 中位数
   - 扇形统计图
+  - 条形统计图
   module: statisticsAndProbability
   difficulty: 较难
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2023-yanqing-yi-fig24.png
+  - figures/2023-yanqing-yi-fig25.png
+  - figures/2023-yanqing-yi-fig26.png
 - id: 26
   type: 解答
   score: 6
-  question: '在平面直角坐标系中，点，在抛物线上．
+  question: '在平面直角坐标系xOy中，点$A(4,m)$，在抛物线$y=x^{2}-2bx+1$上．
 
-    （1）当时，求b的值；
+    [图]
 
-    （2）点在抛物线上，若存在，使得，直接写出b的取值范围．'
-  answer: ''
-  solution: ''
+    （1）当$m = 1$时，求b的值；
+
+    （2）点$(x_0,n)$在抛物线上，若存在$0 < x_0 < b$，使得$m = n$，直接写出b的取值范围．'
+  answer: （1）$b = 2$ （2）$2<b<4$
+  solution: '【小问1详解】
+
+    解：当$m = 1$时，则$A(4,1)$，
+
+    把$A(4,1)$代入$y=x^{2}-2bx+1$，得
+
+    $1=4^{2}-2b\cdot 4+1$，解得：$b = 2$；
+
+    【小问2详解】
+
+    解：∵抛物线$y=x^{2}-2bx+1$的对称轴为直线$x = \frac{-2b}{2 \times 1} = b$，
+
+    当$m = n$时，点$(x_0,n)$与点$A(4,1)$关于直线$x = b$对称，
+
+    ∴$b=\frac{x_{0}+4}{2}$，
+
+    ∴$x_{0}=2b-4$，
+
+    ∵$0 < x_0 < b$，
+
+    ∴$0 < 2b - 4 < b$，
+
+    ∴$2<b<4$．'
   knowledge_points:
   - 坐标系
   module: functions
   difficulty: 压轴
   recommended_for:
   - L3
+  figures:
+  - figures/2023-yanqing-yi-fig27.png
 - id: 27
   type: 解答
   score: 7
-  question: '如图，在中，，，是边上的高，点E是边上的一动点（不与点A，B重合），连接交于点F，将线段绕点C顺时针旋转得到线段，连接．
+  question: '如图，在$\triangle ABC$中，$\angle BAC = 90^\circ$，$AB = AC$，AD是BC边上的高，点E是边AB上的一动点（不与点A，B重合），连接CE交AD于点F，将线段CF绕点C顺时针旋转$90^\circ$得到线段CG，连接AG．
 
-    （1）如图1，当是的角平分线时，
+    [图]
 
-    ①求证：；
+    （1）如图1，当CE是$\angle ACB$的角平分线时，
 
-    ②直接写出_______°．
+    ①求证：$AE = AF$；
 
-    （2）依题意补全图2，用等式表示线段，，之间的数量关系，并证明．'
-  answer: ''
-  solution: ''
+    ②直接写出$\angle CAG =$_______°．
+
+    （2）依题意补全图2，用等式表示线段AF，AC，AG之间的数量关系，并证明．'
+  answer: （1）①见解析；②45； （2）图见解析，$\sqrt{2}AC = AF + AG$，证明见解析．
+  solution: '【小问1详解】
+
+    ①证明：∵$[公式]$$\triangle ABC$中，$\angle BAC = 90^\circ$，$AB = AC$，
+
+    ∴$\angle ACB=\angle B=45^{\circ}$，
+
+    ∵AD是BC边上的高，
+
+    ∴$\angle BAD = \angle CAD = 45^\circ$．
+
+    ∵CE是$\angle ACB$的角平分线，
+
+    ∴$\angle ACE = \angle BCE$．
+
+    ∵$\angle AFE=\angle CAD+\angle ACE$，$\triangle AEF \cong \triangle CQB \quad BCE$．
+
+    ∴$\angle AFE = \angle AEF$．
+
+    ∴$AE = AF$．
+
+    ②过点C作$CM \perp AC$于点C，交AD的延长线于点M．
+
+    [图]
+
+    ∵$\angle CAD = 45^\circ$
+
+    ∴$\angle M=45^{\circ}$．
+
+    ∴$CA = CM$．
+
+    ∴$AM = \sqrt{2}AC$．
+
+    ∵$\angle ACM = 90^\circ$，
+
+    ∴$\angle ACF+\angle MCF=90^\circ$．
+
+    ∵$\angle FCG = 90^\circ$，
+
+    ∴$\angle ACF + \angle ACG = 90^\circ$．
+
+    ∴$\triangle MCF \cong \triangle ACG$．
+
+    ∵$CF = CG$，
+
+    ∴$\triangle MCF\cong\triangle ACG$．
+
+    ∴$\angle CAG = \angle CAM = 45^\circ$．
+
+    【小问2详解】
+
+    解：依题意补全图形．
+
+    数量关系：$\sqrt{2}AC = AF + AG$．
+
+    证明：过点C作$CM \perp AC$于点C，交AD的延长线于点M．
+
+    [图]
+
+    ∵$\angle CA'
   knowledge_points:
+  - 全等三角形
+  - 勾股定理
   - 旋转
   - 动点
-  module: geometryComprehensive
+  module: triangles
   difficulty: 压轴
   recommended_for:
   - L3
+  figures:
+  - figures/2023-yanqing-yi-fig28.png
+  - figures/2023-yanqing-yi-fig29.png
+  - figures/2023-yanqing-yi-fig30.png
 - id: 28
   type: 解答
   score: 7
-  question: '在平面直角坐标系中，的半径为2．对于线段和点C（点C不在直线上），给出如下定义：过点C作直线的平行线l，如果线段关于直线l的对称线段是的弦，那么线段称为的点C对称弦．
+  question: '在平面直角坐标系xOy中，$\odot\odot$的半径为2．对于线段AB和点C（点C不在直线AB上），给出如下定义：过点C作直线AB的平行线l，如果线段AB关于直线l的对称线段$A''B''$是$\odot\odot$的弦，那么线段AB称为$\odot\odot$的点C对称弦．
 
-    （1）如图，，，，，，在线段，中，的点H对称弦是___________；
+    [图]
 
-    （2）等边的边长为1，点，若线段是的点C对称弦，求t的值；
+    （1）如图，$D(-2,6)$，$E(2,6)$，$F(-3,1)$，$G(-1,3)$，$H(0.3)$，在线段DE，FG中，$\odot\odot$的点H对称弦是___________；
 
-    （3）点M在直线上，半径为1，过点M作直线的垂线，交于点P，Q．若点N在上，且线段是的点N对称弦，直接写出点M的横坐标m的取值范围．'
-  answer: ''
-  solution: ''
+    （2）等边$\triangle ABC$的边长为1，点$C(0,t)$，若线段AB是$\odot\odot$的点C对称弦，求t的值；
+
+    （3）点M在直线$y=\sqrt{3}x$上，$\odot M$的半径为1，过点M作直线$y=\sqrt{3}x$的垂线，交$\odot M$于点P，Q．若点N在$\odot M$上，且线段$\overline{PQ}$是$\odot\odot$的点N对称弦，直接写出点M的横坐标m的取值范围．'
+  answer: （1）DE，FG； （2）$t_{1}=\frac{\sqrt{15}}{2}-\frac{\sqrt{3}}{2}$，$t_{2}=\frac{\sqrt{15}}{2}-\frac{\sqrt{3}}{2}$，$t_{1}=-\frac{\sqrt{15}}{2}+\frac{\sqrt{3}}{2}$，$t_{1}=-\frac{\sqrt{15}}{2}-\frac{\sqrt{3}}{2}$；
+    （3）$-\frac{\sqrt{3}+2}{2} \leq m \leq \frac{\sqrt{3}+2}{2}$，且$m = \pm \frac{\sqrt{3}}{2}$．
+  solution: '【小问1详解】
+
+    解：∵$D(-2,6)$，$E(2,6)$，$H(0.3)$，
+
+    ∴$D''(-2,0)$，$E(2,0)$，
+
+    ∵$\odot\odot$的半径为2．
+
+    ∴$D''(-2,0)$，$E(2,0)$在$\odot\odot$上，
+
+    ∴线段DE是$\odot\odot$的点H对称弦；
+
+    ∵$F(-3,1)$，$G(-1,3)$，$H(0.3)$，
+
+    ∴$F''(-2,0)$，$G''(0,2)$，
+
+    ∵$\odot\odot$的半径为2．
+
+    ∴$F''(-2,0)$，$G''(0,2)$在$\odot\odot$上，
+
+    ∴线段FG是$\odot\odot$的点H对称弦．
+
+    【小问2详解】
+
+    解：如图，当AB在x上方，点C在边AB下方时，线段AB是$\odot\odot$的点C对称弦，为弦$A''B''$，设AB与y轴交于点M，$A''B''$与y轴交于点G，连接$OB''$，
+
+    [图]
+
+    ∴点M是AB的中点．
+
+    ∵等边$\triangle ABC$的边长为1，
+
+    ∴$CM = CG = \frac{\sqrt{3}}{2}$，$B''G = \frac{1}{2}$．
+
+    ∵$\odot\odot$的半径为2，
+
+    ∴$OG=\sqrt{2^{2}+\left(-\frac{1}{2}\right)^{2}}=\frac{\sqrt{15}}{2}$．
+
+    ∴$OC=\frac{\sqrt{15}}{2}+\frac{\sqrt{3}}{2}$．
+
+    ∴$t_{1}=\frac{\sqrt{15}}{2}+\frac{\sqrt{3}}{2}$．
+
+    当点C在边AB上方时，可以得到$t_{2}=\frac{\sqrt{15}}{2}-\frac{\sqrt{3}}{2}$．
+
+    当AB在x下方时，利用圆的轴对称性，同理可以得到$t_{1}=-\frac{\sqrt{15}}{2}+\frac{\sqrt{3}}{2}$，$t_{1}=-'
   knowledge_points:
   - 平行线
+  - 一次函数
+  - 垂径定理
   - 弦
+  - 勾股定理
+  - 轴对称
   - 坐标系
-  module: geometryComprehensive
+  module: triangles
   difficulty: 压轴
   recommended_for:
   - L3
+  figures:
+  - figures/2023-yanqing-yi-fig31.png
+  - figures/2023-yanqing-yi-fig32.png
+  - figures/2023-yanqing-yi-fig33.png

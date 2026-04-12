@@ -1,8 +1,8 @@
 # ============================================================
 # 2023年北京门头沟区中考数学一模试卷 — 逐题分析
 # ============================================================
-# 数据来源：knowledge-original/精品解析：2023年北京市门头沟区中考一模数学试卷（原卷版）.docx
-# 自动生成，部分数学公式可能显示不全（docx公式对象无法完整提取）
+# 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
+# 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
 # 满分：100分  时长：120分钟
 
 year: 2023
@@ -11,15 +11,25 @@ exam_type: 一模
 subject: 数学
 full_score: 100
 duration_minutes: 120
-total_questions: 28
+total_questions: 27
 structure: 8选择(16分) + 8填空(16分) + 12解答(68分)
 questions:
 - id: 1
   type: 选择
   score: 2
-  question: "如图，下列水平放置几何体中，其侧面展开图是扇形的是（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '如图，下列水平放置的几何体中，其侧面展开图是扇形的是（）
+
+    A.[图]B.[图]C.[图]D.[图]'
+  answer: D
+  solution: '解：A选项侧面展开图是矩形；
+
+    B选项侧面展开图是矩形；
+
+    C选项侧面展开图是矩形；
+
+    D选项侧面展开图是扇形；
+
+    故选：D．'
   knowledge_points:
   - 综合
   module: circles
@@ -29,15 +39,25 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-mentougou-yi-fig02.png
+  - figures/2023-mentougou-yi-fig03.png
+  - figures/2023-mentougou-yi-fig04.png
+  - figures/2023-mentougou-yi-fig05.png
 - id: 2
   type: 选择
   score: 2
-  question: "据初步统计，截至2023年1月21日，《2023年春节联欢晚会》推出的竖屏看春晚累计观看规模约达179000000人，将数字179000000用科学记数法表示为（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '据初步统计，截至2023年1月21日，《2023年春节联欢晚会》推出的竖屏看春晚累计观看规模约达179000000人，将数字179000000用科学记数法表示为（）
+
+    A.$179\times10^{6}$B.$17.9\times10^{7}$C.$1.79\times10^{8}$D.$0.179\times10^{9}$'
+  answer: C
+  solution: '解：179000000用科学记数法表示为$1.79\times10^{8}$．
+
+    故选：C．'
   knowledge_points:
   - 统计
   - 科学记数法
+  - 绝对值
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -48,12 +68,23 @@ questions:
 - id: 3
   type: 选择
   score: 2
-  question: "下列图形中既是轴对称图形，又是中心对称图形的是（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '下列图形中既是轴对称图形，又是中心对称图形的是（）
+
+    A.[图]B.[图]C.[图]D.[图]'
+  answer: D
+  solution: '解：A、不是轴对称图形，是中心对称图形，则此项不符合题意；
+
+    B、既不是轴对称图形，也不是中心对称图形，则此项不符合题意；
+
+    C、是轴对称图形，不是中心对称图形，则此项不符合题意；
+
+    D、既是轴对称图形，又是中心对称图形，则此项符合题意；
+
+    故选：D．'
   knowledge_points:
   - 中心对称图形
   - 轴对称图形
+  - 旋转
   - 轴对称
   module: geometryComprehensive
   difficulty: 基础
@@ -62,14 +93,35 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-mentougou-yi-fig06.png
+  - figures/2023-mentougou-yi-fig07.png
+  - figures/2023-mentougou-yi-fig08.png
+  - figures/2023-mentougou-yi-fig09.png
 - id: 4
   type: 选择
   score: 2
-  question: "如图，，等边的顶点B，C分别在，上，当时，的大小为（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '如图，$l_1 \parallel l_2$，等边$\triangle ABC$$[公式]$顶点B，C分别在$\ell_{1}$，$l_2$上，当$\angle1=20^\circ$时，$\angle 2$的大小为（）
+
+    [图]
+
+    A.$35^\circ$B.$40^\circ$C.$45^\circ$D.$50^\circ$'
+  answer: B
+  solution: '解：如图，设$l_2$与BC的夹角为$\angle 3$
+
+    [图]
+
+    ∵$l_1 \parallel l_2$
+
+    ∴$\angle1=\angle3=20^\circ$
+
+    又∵$\angle ABC=\angle 2+\angle 3=60^\circ$
+
+    ∴$\angle 2=60^{\circ}-20^{\circ}=40^{\circ}$
+
+    故选B．'
   knowledge_points:
-  - 综合
+  - 平行线
   module: functions
   difficulty: 基础
   recommended_for:
@@ -77,15 +129,38 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-mentougou-yi-fig10.png
+  - figures/2023-mentougou-yi-fig11.png
 - id: 5
   type: 选择
   score: 2
-  question: "方程解为（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '方程$\frac{2}{x+3}+\frac{1}{x}=0$的解为（）
+
+    A.$x=-1$B.$x = 1$C.$x = -3$D.$x = -\frac{1}{3}$'
+  answer: A
+  solution: '解：方程两边同时乘以$x(x+3)$得：
+
+    $2x+x+3=0$，
+
+    解得：$x=-1$，
+
+    检验：当$x=-1$时，$x(x+3)-|x-2|-2=0$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$原方程的根为$x=-1$．
+
+    故选：A．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 分式方程
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -95,9 +170,31 @@ questions:
 - id: 6
   type: 选择
   score: 2
-  question: "实数a在数轴上的对应点的位置如图所示，实数b满足条件，下列结论中正确的是（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '实数a在数轴上的对应点的位置如图所示，实数b满足条件$a+b>0$，下列结论中正确的是（）
+
+    $\begin{tikzpicture}
+
+    \draw[->] (-4,0) -- (5,0);
+
+    \foreach \x in {-3,-2,-1,0,1,2,3,4}
+
+    \draw (\x,-0.1) -- (\x,0.1) node[below] {\x};
+
+    \fill (-1.5,0) circle (2pt) node[above] {$a$};
+
+    \end{tikzpicture}$
+
+    A.$b<1$B.$b > |a|$C.$ab > 0$D.$a-b>0$'
+  answer: B
+  solution: '解：由数轴可知，$a = -1.5$，
+
+    ∵$a+b>0$，
+
+    ∴$b>1.5$，
+
+    ∴选项A、C、D错，
+
+    故选：B．'
   knowledge_points:
   - 综合
   module: numbersAndExpressions
@@ -109,38 +206,94 @@ questions:
 - id: 7
   type: 选择
   score: 2
-  question: "如图，的半径为2，是的内接三角形，半径于E，当时，的长是（    ）\nA \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '如图，$\odot\odot$的半径为2，$\triangle ABC$是$\odot\odot$的内接三角形，半径$OD \perp BC$于E，当$\angle BAC = 45^\circ$时，BE的长是（）
+
+    [图]
+
+    A.$\sqrt{2}$B.$2\sqrt{2}$C.$\sqrt{3}$D.$2\sqrt{3}$'
+  answer: A
+  solution: '解：连接OC，
+
+    [图]
+
+    ∵$\angle BAC = 45^\circ$，
+
+    ∴$\angle BOC=2\angle BAC=90^{\circ}$，
+
+    ∵$OD \perp BC$，
+
+    ∴$CE = BE$，
+
+    ∴$OE=BE=CE=\frac{1}{2}BC$，
+
+    ∵$\odot\odot$的半径为2，
+
+    ∴$BC = \sqrt{2}OB = 2\sqrt{2}$，
+
+    ∴$BE=\frac{1}{2}BC=\sqrt{2}$，
+
+    故选：A．'
   knowledge_points:
-  - 综合
-  module: triangles
+  - 圆周角
+  - 垂径定理
+  module: circles
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-mentougou-yi-fig12.png
+  - figures/2023-mentougou-yi-fig13.png
 - id: 8
   type: 选择
   score: 2
-  question: "如图，正方形的边长为2，点E是上一动点（点E与点A，B不重合），点F在延长线上，，以，为边作矩形．设的长为x，矩形的面积为y，则y与x满足的函数关系的图像是（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '如图，正方形$ABCD$的边长为2，点E是AB上一动点（点E与点A，B不重合），点F在BC延长线上，$AE = CF$，以BE，BF为边作矩形$BEGF$．设AE的长为x，矩形$BEGF$的面积为y，则y与x满足的函数关系的图像是（）
+
+    [图]
+
+    A.[图]B.[图]C.[图]D.[图]'
+  answer: C
+  solution: '解：如图，延长AD、FG相交与点P，
+
+    [图]
+
+    则四边形$ABFP$为矩形，$BF = AP = 2 + x$，
+
+    $\gamma = S_{\triangle OCD + BCD} = S_{\text{四边形 } OBCD} - S_{\triangle AOC + ABC} = 2(2 + x) - x(2 + x) = -x^2 + 4$
+
+    所以$y = -x^2 + 4$$(0<x<2)$
+
+    这个函数的图像为抛物线，开口向下，只有C答案符合题意，
+
+    故选C．'
   knowledge_points:
+  - 二次函数
   - 矩形
   - 正方形
   - 动点
-  module: quadrilaterals
+  module: functions
   difficulty: 较难
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2023-mentougou-yi-fig14.png
+  - figures/2023-mentougou-yi-fig15.png
+  - figures/2023-mentougou-yi-fig16.png
+  - figures/2023-mentougou-yi-fig17.png
+  - figures/2023-mentougou-yi-fig18.png
+  - figures/2023-mentougou-yi-fig19.png
 - id: 9
   type: 填空
   score: 2
-  question: 若式子在实数范围内有意义，则的取值范围是______．
-  answer: ''
-  solution: ''
+  question: 若式子$\sqrt{x-1}$在实数范围内有意义，则x的取值范围是______．
+  answer: $x\ 1$
+  solution: '由题意得$x-1\quad 0$，
+
+    解得$x\ 1$，
+
+    故答案为：$x\ 1$．'
   knowledge_points:
   - 综合
   module: numbersAndExpressions
@@ -153,9 +306,13 @@ questions:
 - id: 10
   type: 填空
   score: 2
-  question: 分解因式：__________．
-  answer: ''
-  solution: ''
+  question: 分解因式：$3x^{2}-6xy+3y^{2}$__________．
+  answer: $3(x-y)^2$
+  solution: '原式$=3(x^{2}-2xy+y^{2})$
+
+    $= 3(x - y)^2$．
+
+    故答案为：$3(x-y)^2$．'
   knowledge_points:
   - 综合
   module: geometryComprehensive
@@ -169,8 +326,14 @@ questions:
   type: 填空
   score: 2
   question: 一个多边形的外角和等于它的内角和，则这个多边形的边数是______．
-  answer: ''
-  solution: ''
+  answer: 4##四
+  solution: '解：设这个多边形是n边形，
+
+    根据题意得，$(n-2)\times180^{\circ}=360^{\circ}$，
+
+    解得$n = 4$，
+
+    故答案为：4．'
   knowledge_points:
   - 综合
   module: triangles
@@ -183,9 +346,19 @@ questions:
 - id: 12
   type: 填空
   score: 2
-  question: 在平面直角坐标系中，反比例函数的图象经过点，且在各自象限内，y的值随x值的增大而减小，写出一个符合题意的n的值______．
-  answer: ''
-  solution: ''
+  question: 在平面直角坐标系xOy中，反比例函数$y=\frac{k}{x}(k\neq0)$的图象经过点$P(3,\ n)$，且在各自象限内，y的值随x值的增大而减小，写出一个符合题意的n的值______．
+  answer: 1（答案不唯一）
+  solution: '解：∵反比例函数$y=\frac{k}{x}(k\neq0)$的图象，在各自象限内，y的值随x值的增大而减小，
+
+    ∴$k > 0$，即反比例函数$y=\frac{k}{x}(k\neq0)$的图象经过一、三象限，
+
+    ∵反比例函数$y=\frac{k}{x}(k\neq0)$的图象经过点$P(3,\ n)$，
+
+    ∴点$P(3,\ n)$在第一象限，
+
+    ∴n的值可以是1，
+
+    故答案为：1(答案不唯一，n的值是正数)．'
   knowledge_points:
   - 反比例函数
   - 坐标系
@@ -199,12 +372,20 @@ questions:
 - id: 13
   type: 填空
   score: 2
-  question: 如果关于的方程有两个不相等的实数根，那么的取值范围是______．
-  answer: ''
-  solution: ''
+  question: 如果关于x的方程$x^{2}+4x+2m=0$有两个不相等的实数根，那么m的取值范围是______．
+  answer: $m<2$
+  solution: '解：∵关于x的方程有$x^{2}+4x+2m=0$有两个不相等的实数根，
+
+    ∴$\Delta =(-4)^{2}-4\times 2m=16-8m>0$，
+
+    解得：$m<2$．
+
+    故答案为：$m<2$．'
   knowledge_points:
-  - 综合
-  module: numbersAndExpressions
+  - 二次函数
+  - 根的判别式
+  - 不等式
+  module: equationsAndInequalities
   difficulty: 中档
   recommended_for:
   - L1
@@ -214,70 +395,127 @@ questions:
   type: 填空
   score: 2
   question: 在一个不透明的盒子中装有四张形状、大小、质地均相同的卡片，上面分别标有数字1，2，3，4．从中随机同时抽取两张卡片，那么抽取的两张卡片上的数字之和等于5的概率是______．
-  answer: ''
-  solution: ''
+  answer: $\frac{1}{3}$
+  solution: '解：由树状图
+
+    [图]
+
+    可知共有12种可能，两张卡片上的数字之和等于5的有4种，所以两张卡片上的数字之和等于5的概率是$\frac{4}{12}=\frac{1}{3}$．
+
+    故答案为：$\frac{1}{3}$'
   knowledge_points:
   - 概率
+  - 树状图
   module: statisticsAndProbability
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-mentougou-yi-fig20.png
 - id: 15
   type: 填空
   score: 2
-  question: 如图，在中，于E，且交的延长线于F，当，，时，的长是______．
-  answer: ''
-  solution: ''
+  question: '如图，在$Y_{ABCD}$中，$BE \perp AD$于E，且交CD的延长线于F，当$\angle A = 60^\circ$，$AB=2$，$\frac{BE}{EF}=\frac{1}{2}$时，ED的长是______．
+
+    [图]'
+  answer: '2'
+  solution: '解：∵四边形$ABCD$是平行四边形，
+
+    ∴$AD \parallel BC$，$CD = AB = 2$，
+
+    ∴$\frac{BE}{EF}=\frac{CD}{FD}=\frac{1}{2}$，
+
+    ∴$[公式]$，
+
+    ∵四边形$ABCD$是平行四边形，
+
+    ∴$\angle C=\angle A=60^{\circ}$，
+
+    ∵$BE \perp AD$，
+
+    ∴$\angle F=90^\circ-\angle C=30^\circ$，
+
+    ∴$ED=\frac{1}{2}DF=2$，
+
+    故答案为：2．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 平行线
+  - 平行四边形
+  module: triangles
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-mentougou-yi-fig21.png
 - id: 16
   type: 填空
   score: 2
   question: '某校计划租用甲，乙，丙三种型号客车送师生去综合实践基地开展活动．每种型号客车的载客量及租金如下表所示：
+
+    客车型号
+
+    甲
+
+    乙
+
+    丙
+
+    每辆客车载客量/人
+
+    20
+
+    30
+
+    40
+
+    每辆客车的租金/元
+
+    500
+
+    600
+
+    900
 
     其中租用甲型客车有优惠活动：租用三辆或三辆以上每辆客车的租金打8折．现有280名师生需要前往综合实践基地，要求每种型号的客车至少租1辆，且每辆车都坐满．
 
     （1）如果甲，乙，丙三种型号客车的租用数量分别是2，4，3，那么租车的总费用为______元；
 
     （2）如果租车的总费用最低，那么甲，乙，丙三种型号客车的租用数量可以分别是______．'
-  answer: ''
-  solution: ''
+  answer: '4'
+  solution: '解：$\sqrt{8}+|-2|-4\cos45^{\circ}+\left(\frac{1}{2}\right)^{-1}$
+
+    $2\sqrt{2}+2-4\times\frac{\sqrt{2}}{2}+2$
+
+    $=2\sqrt{2}+2-2\sqrt{2}+2$
+
+    $= 4$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 三角函数
+  module: numbersAndExpressions
   difficulty: 较难
   recommended_for:
-  - L2
-  - L3
-- id: 17
-  type: 解答
-  score: 5
-  question: （第17题，详见原卷）
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
   - L2
   - L3
 - id: 18
   type: 解答
   score: 5
-  question: 解不等式组：
-  answer: ''
-  solution: ''
+  question: '解不等式组：$\begin{cases}
+
+    4x-2<2(x+1)\\
+
+    \dfrac{5x+2}{3}>x
+
+    \end{cases}$'
+  answer: $-1 < x < 2$．
+  solution: '解：解不等式$4x-2<2(x+1)$，得$x<2$，
+
+    解不等式$\frac{5x+2}{3}>x$，得$x > -1$，
+
+    ∴原不等式组的解集为$-1 < x < 2$．'
   knowledge_points:
   - 不等式
   - 不等式组
@@ -291,12 +529,26 @@ questions:
 - id: 19
   type: 解答
   score: 5
-  question: 已知，求代数式的值．
-  answer: ''
-  solution: ''
+  question: 已知$m^{2}-m-1=0$，求代数式$(2m+1)(2m-1)+(m-2)^{2}=m^{2}$的值．
+  answer: '7'
+  solution: '解：∵$m^{2}-m-1=0$，
+
+    ∴$m^{2}-m=1$，
+
+    ∴$(2m+1)(2m-1)+(m-2)^{2}=m^{2}$
+
+    $=4m^{2}-1+m^{2}-4m+4-m^{2}$
+
+    $=4m^{2}-4m+3$
+
+    $=4(m^{2}-m)+3$
+
+    $=4\times1+3$
+
+    $=7$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 方差
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -306,28 +558,161 @@ questions:
 - id: 20
   type: 解答
   score: 5
-  question: 在证明“等腰三角形两个底角相等”这个性质定理时，添加的辅助线有以下两种不同的叙述方法，请选择其中一种完成证明．
-  answer: ''
-  solution: ''
+  question: '在证明“等腰三角形的两个底角相等”这个性质定理时，添加的辅助线AD有以下两种不同的叙述方法，请选择其中一种完成证明．
+
+    等腰三角形的性质定理：等腰三角形的两个底角相等．
+
+    已知：如图，在$\triangle ABC$中，$AB = AC$，求证：$\angle B = \angle C$．
+
+    [图]
+
+    法一
+
+    证明：如图，做$\angle BAC$的平分线交BC于点D．
+
+    [图]
+
+    法二
+
+    证明：如图，取BC的中点D，连接AD．
+
+    [图]'
+  answer: 见解析
+  solution: '方法一：
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$AD平分$\angle BAC$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\angle BAD = \angle CAD$.
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$$AB = AC$，$AD = AD$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\triangle ABD \cong \triangle CAD$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\angle B = \angle C$.
+
+    方法二：
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$D为BC中点，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);'
   knowledge_points:
-  - 综合
+  - 全等三角形
   module: triangles
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-mentougou-yi-fig22.png
+  - figures/2023-mentougou-yi-fig23.png
+  - figures/2023-mentougou-yi-fig24.png
 - id: 21
   type: 解答
   score: 5
-  question: '如图，在菱形中，于E，于F．
+  question: '如图，在菱形$ABCD$中，$BE \perp AD$于E，$DF \perp BC$于F．
 
-    （1）求证：四边形是矩形；
+    [图]
 
-    （2）连接，如果，，求的长．'
-  answer: ''
-  solution: ''
+    （1）求证：四边形$BEDF$是矩形；
+
+    （2）连接BD，如果$\tan \angle BDE = 2$，$BF = 1$，求AB的长．'
+  answer: （1）见解析（2）AB的长为$2.5$．
+  solution: '【小问1详解】
+
+    证明：∵四边形$ABCD$是菱形，
+
+    ∴$DA \parallel BC$，
+
+    ∵$BE \perp AD$，
+
+    ∴$\angle DEB=\angle EBF=90^{\circ}$，
+
+    ∵$DF \perp BC$，
+
+    ∴$\angle BFD = 90^\circ$，
+
+    ∴四边形$BEDF$是矩形；
+
+    【小问2详解】
+
+    解：设AB的长为x，
+
+    ∵四边形$ABCD$是菱形，
+
+    ∴$AB = AD = x$，
+
+    ∵四边形$BEDF$是矩形，
+
+    ∴$DE = BF = 1$，
+
+    ∵$\tan \angle BDE = 2$，
+
+    ∴$\frac{BE}{DE}=2$，
+
+    ∴$BE = 2$，
+
+    在$Rt\triangle ABE$中，$AB = x$，$AE = x - 1$，$BE = 2$，
+
+    由勾股定理得$x^{2}=(x-1)^{2}+2^{2}$，
+
+    解得$x=2.5$，
+
+    ∴AB的长为$2.5$．'
   knowledge_points:
+  - 勾股定理
   - 矩形
   - 菱形
   module: quadrilaterals
@@ -336,18 +721,65 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-mentougou-yi-fig25.png
 - id: 22
   type: 解答
   score: 5
-  question: '如图，在平面直角坐标系xOy中，一次函数的图象经过点，且与函数的图象交于点．
+  question: '如图，在平面直角坐标系xOy中，一次函数$y=kx+b\ (k\neq0)$的图象经过点$A(-1,0)$，且与函数$y=2x$的图象交于点$B(1,m)$．
 
-    （1）求m的值及一次函数的表达式；
+    [图]
 
-    （2）当时，对于x的每一个值，函数的值小于一次函数的值，直接写出的取值范围．'
-  answer: ''
-  solution: ''
+    （1）求m的值及一次函数$y=kx+b\ (k\neq0)$的表达式；
+
+    （2）当$x>1$时，对于x的每一个值，函数$y = -x + n$的值小于一次函数$y=kx+b\ (k\neq0)$的值，直接写出n的取值范围．'
+  answer: （1）$m=2;y=x+1$ （2）$n \leq 3$
+  solution: '【小问1详解】
+
+    ∵一次函数$y=kx+b\ (k\neq0)$与函数$y=2x$的图象交于点$B(1,m)$，
+
+    ∴把点$B(1,m)$代入$y=2x$得，
+
+    $\therefore m=2\times1$
+
+    $\therefore m = 2,$
+
+    $\therefore B(1,2)$
+
+    把$A(-1,0),B(1,2)$代入$y=kx+b\ (k\neq0)$得，
+
+    $\left\{\begin{array}{l} -k-b=0 \\ k+b=2 \end{array}\right.$
+
+    解之得$\left\{
+
+    \begin{array}{l}
+
+    k = 1 \\
+
+    b = 1
+
+    \end{array}
+
+    \right.$
+
+    ∴一次函数为$y=x+1.$
+
+    【小问2详解】
+
+    解不等式$-x+m<x+1$
+
+    $\therefore x > \frac{n-1}{2}$
+
+    ∵$x>1$时，对于x的每一个值，函数$y = -x + n$的值小于一次函数$y=kx+b\ (k\neq0)$的值，
+
+    $\therefore \frac{n-1}{2} \leq 1,$
+
+    $\therefore n \leq 3,$
+
+    ∴n的取值范围$n \leq 3.$'
   knowledge_points:
   - 一次函数
+  - 不等式
   - 坐标系
   module: functions
   difficulty: 中档
@@ -355,12 +787,48 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-mentougou-yi-fig26.png
 - id: 23
   type: 解答
   score: 6
-  question: '甲，乙两名同学进行羽毛球比赛，羽毛球发出后的飞行路线可以看作是抛物线的一部分．如图建立平面直角坐标系，羽毛球从O点的正上方发出，飞行过程中羽毛球的竖直高度y（单位：m）与水平距离x（单位：m）之间近似满足函数关系．比赛中，甲同学连续进行了两次发球．
+  question: '甲，乙两名同学进行羽毛球比赛，羽毛球发出后的飞行路线可以看作是抛物线的一部分．如图建立平面直角坐标系，羽毛球从O点的正上方发出，飞行过程中羽毛球的竖直高度y（单位：m）与水平距离x（单位：m）之间近似满足函数关系$y = a(x - h)^2 + k \, (a < 0)$．比赛中，甲同学连续进行了两次发球．
+
+    [图]
 
     （1）甲同学第一次发球时，羽毛球的水平距离x与竖直高度y的七组对应数据如下：
+
+    水平距离x/m
+
+    0
+
+    1
+
+    2
+
+    3
+
+    4
+
+    5
+
+    6
+
+    竖直高度y/m
+
+    1
+
+    2.4
+
+    3.4
+
+    4
+
+    4.2
+
+    4
+
+    3.4
 
     根据以上数据，回答下列问题：
 
@@ -368,126 +836,436 @@ questions:
 
     ②在水平距离5m处，放置一个高1.55m的球网，羽毛球______（填“是”或“否”）可以过网；
 
-    ③求出满足的函数关系；
+    ③求出满足的函数关系$y = a(x - h)^2 + k \, (a < 0)$；
 
-    （2）甲同学第二次发球时，羽毛球的竖直高度y与水平距离x之间近似满足函数关系．乙同学在两次接球中，都是原地起跳后使得球拍达到最大高度时刚好接到球，记乙同学第一次接球的起跳点的水平距离为，第二次接球的起跳点的水平距离为，则______0（填“”“”或“”）'
-  answer: ''
-  solution: ''
+    （2）甲同学第二次发球时，羽毛球的竖直高度y与水平距离x之间近似满足函数关系$y=0.1(x-5)^{2}+3.3$．乙同学在两次接球中，都是原地起跳后使得球拍达到最大高度$2.4m$时刚好接到球，记乙同学第一次接球的起跳点的水平距离为$d_{1}$，第二次接球的起跳点的水平距离为$d_{2}$，则$d_{1}-d_{2}$______0（填“$\gt$”“$\gt$”或“$=$”）'
+  answer: （1）①4；②是；③函数关系式为$y=-0.2(x-4)^{2}+4.2$； （2）$\gt$
+  solution: '【小问1详解】
+
+    解：①∵$(3,4),(5,4)$的纵坐标相同，
+
+    ∴函数$y = a(x - h)^2 + k \, (a < 0)$中，$h=\frac{3+5}{2}=4$，
+
+    ∴观察表格，顶点坐标为$(4,4.2)$，
+
+    当羽毛球飞行到最高点时，水平距离是$4m$；
+
+    故答案为：4；
+
+    ②当在水平距离$5m$时，竖直高度为$4m$，
+
+    $4 > 1.55$，
+
+    ∴羽毛球是可以过网的，
+
+    故答案为：是；
+
+    ③∵顶点坐标为$(4,4.2)$，∴$y = a(x - 4)^2 + 4.2$，
+
+    将点$(0,1)$代入得$1=a(0-4)^{2}+2$，
+
+    解得$a = -0.2$，
+
+    ∴函数关系式为$y=-0.2(x-4)^{2}+4.2$；
+
+    【小问2详解】
+
+    解：当$y = 2.4$时，$2.4=-0.2(x-4)^{2}+4.2$，解得$x_{1}=7$，$x_{2}=1$（舍去），
+
+    即乙同学第一次接球的起跳点的水平距离为$d_{1}=7$，
+
+    当$y = 2.4$时，$2.4=-0.1(x-5)^{2}+3.3$，解得$x_{1}=8$，$x_2 = 2$（舍去），
+
+    即乙同学第一次接球的起跳点的水平距离为$d_{2}=8$，
+
+    ∴$d_{1}-d_{2}=7-8=-1<0$，
+
+    故答案为：$\gt$．'
   knowledge_points:
+  - 二次函数
   - 坐标系
   module: functions
   difficulty: 较难
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2023-mentougou-yi-fig27.png
 - id: 24
   type: 解答
   score: 6
   question: '“双减”政策颁布后，某区为了解学生每天完成书面作业所需时长的情况，从甲，乙两所学校各随机抽取50名学生进行调查，获取他们每天完成书面作业所需时长（单位：分钟）的数据，并对数据进行了整理、描述和分析，下面给出了部分信息．
 
-    a．甲，乙两所学校学生每天完成书面作业所需时长的数据的频数分布直方图及扇形统计图如下（数据分成5组：，，，，）：
+    a．甲，乙两所学校学生每天完成书面作业所需时长的数据的频数分布直方图及扇形统计图如下（数据分成5组：$15\leq x<30$，$30 \leq x < 45$，$45\leq x<60$，$60 \leq x < 75$，$75 \leq x \leq 90$）：
 
-    b．甲校学生每天完成书面作业所需时长的数据在这一组的是；
+    [图]
+
+    b．甲校学生每天完成书面作业所需时长的数据在$45\leq x<60$这一组的是；
+
+    45
+
+    46
+
+    50
+
+    51
+
+    51
+
+    52
+
+    52
+
+    53
+
+    55
+
+    56
+
+    59
+
+    59
 
     c．甲，乙两所学校学生每天完成书面作业所需时长的数据的平均数、中位数如下：
 
+    平均数
+
+    中位数
+
+    甲校
+
+    49
+
+    m
+
+    乙校
+
+    50
+
+    54
+
     根据以上信息，回答下列问题：
 
-    （1）______；
+    （1）$m =$______；
 
-    （2）乙校学生每天完成书面作业所需时长的数据的扇形统计图中表示这组数据的扇形圆心角的度数是______°；
+    （2）乙校学生每天完成书面作业所需时长的数据的扇形统计图中表示$45\leq x<60$这组数据的扇形圆心角的度数是______°；
 
     （3）小明每天完成书面作业所需时长为53分钟，在与他同校被调查的学生中，有一半以上的学生每天完成书面作业所需时长都超过了小明，那么小明是______校学生（填“甲”或“乙”），理由是______．
 
     （4）如果甲，乙两所学校各有200人，估计这两所学校每天完成书面作业所需时长低于60分钟的学生共有______人．'
-  answer: ''
-  solution: ''
+  answer: （1）51（2）108 （3）乙，53分钟低于中位数54分钟 （4）272
+  solution: '【小问1详解】
+
+    解：甲校50名学生每天完成书面作业的中位数是第25、26个数，都是51，
+
+    ∴$m=\frac{51+51}{2}=51$，
+
+    故答案为：51；
+
+    【小问2详解】
+
+    解：乙校学生每天完成书面作业所需时长的数据的扇形统计图中表示$45\leq x<60$这组数据的扇形圆心角的度数是$360^{\circ}\times(1-14\%-26\%-26\%-4\%)=108^{\circ}$，
+
+    故答案为：108；
+
+    【小问3详解】
+
+    解：甲校中位数是51，乙校中位数是54，
+
+    而小明每天完成书面作业所需时长为53分钟，在与他同校被调查的学生中，有一半以上的学生每天完成书面作业所需时长都超过了小明，
+
+    ∴小明是乙校学生，因为53分钟低于中位数54分钟；
+
+    故答案为：乙，53分钟低于中位数54分钟；
+
+    【小问4详解】
+
+    解：样本中，甲校每天完成书面作业所需时长低于60分钟的学生有$9+12+12=33$人，
+
+    乙校每天完成书面作业所需时长低于60分钟的学生有$50\times(1-26\%-4\%)=35$人，
+
+    ∴甲校200名学生每天完成书面作业所需时长低于60分钟的学生有$200\times\frac{33}{50}=132$人，
+
+    乙校200名学生每天完成书面作业所需时长低于60分钟的学生有$200\times\frac{35}{50}=140$人，
+
+    ∴估计这两所学校每天完成书面作业所需时长低于60分钟的学生共有$132 + 140 = 272$人．
+
+    故答案为：272．'
   knowledge_points:
   - 统计
   - 平均数
   - 中位数
   - 扇形统计图
+  - 条形统计图
   module: statisticsAndProbability
   difficulty: 较难
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2023-mentougou-yi-fig28.png
 - id: 25
   type: 解答
   score: 6
-  question: '如图，AB是的直径，点D在上，连接AD并延长到C，使，连接BC交于E、过点B作的切线交OE的延长线于点F．
+  question: '如图，AB是$\odot\odot$的直径，点D在$\odot\odot$上，连接AD并延长到C，使$AC = AB$，连接BC交$\odot\odot$于E、过点B作$\odot\odot$的切线交OE的延长线于点F．
 
-    （1）求证：；
+    [图]
 
-    （2）如果，，求的长．'
-  answer: ''
-  solution: ''
+    （1）求证：$OE \parallel AC$；
+
+    （2）如果$AB = 10$，$AD = 6$，求EF的长．'
+  answer: （1）见解析（2）$\frac{10}{3}$
+  solution: '【小问1详解】
+
+    证明：∵$AB = AC$
+
+    ∴$\angle C = \angle ABC$
+
+    又∵$OB = OE$
+
+    ∴$\angle OBE = \angle OLB$
+
+    ∴$\angle OEB = \angle C$
+
+    ∴$OE \parallel AC$
+
+    【小问2详解】
+
+    解：连接BD，则$\triangle ABD$为直角三角形，
+
+    [图]
+
+    ∵$OE \parallel AC$
+
+    ∴$\angle BAD = \angle FOB$
+
+    又∵BF为切线，
+
+    ∴$\angle OBF = 90^\circ$
+
+    则有$\angle OBF = \angle ADB$
+
+    ∴$\triangle ADB$∽$\triangle OBF$
+
+    ∴$\frac{AD}{OB} = \frac{AB}{OF}$，即$\frac{6}{5} = \frac{10}{OF}$
+
+    ∴$OF = \frac{25}{3}$
+
+    ∴$EF = OF - OE = \frac{25}{3} - 5 = \frac{10}{3}$
+
+    故EF的长是$\frac{10}{3}$．'
   knowledge_points:
+  - 平行线
   - 切线
-  module: circles
+  - 相似三角形
+  module: triangles
   difficulty: 较难
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2023-mentougou-yi-fig29.png
+  - figures/2023-mentougou-yi-fig30.png
 - id: 26
   type: 解答
   score: 6
-  question: '在平面直角坐标系中，抛物线．
+  question: '在平面直角坐标系xOy中，抛物线$y=ax^{2}-2ax+a-4(a\neq 0)$．
+
+    [图]
 
     （1）求该抛物线的顶点坐标；
 
-    （2）当抛物线经过点时，
+    （2）当抛物线$y=ax^{2}-2ax+a-4(a\neq 0)$经过点$(3,0)$时，
 
     ①求此时抛物线的表达式；
 
-    ②点，在抛物线上，且位于对称轴的两侧，当时，求n的取值范围．'
-  answer: ''
-  solution: ''
+    ②点$M(n-2,\ y)$，$N(2a+3,\ y_{2})$在抛物线上，且位于对称轴的两侧，当$y_{1}>y_{2}$时，求n的取值范围．'
+  answer: （1）该抛物线的顶点坐标为$(1, -4)$； （2）①此时抛物线的表达式为$y=(x-1)^{2}-4$；②$-1 < n < \frac{1}{3}$
+  solution: '【小问1详解】
+
+    解：$y=ax^{2}+2ax+a-4=a(x-1)^{2}-4$，
+
+    ∴该抛物线的顶点坐标为$(1, -4)$；
+
+    【小问2详解】
+
+    解：①将点$(3,0)$代入$y=a(x-1)^{2}-4$，得$0=a(3-1)^{2}-4$，
+
+    解得$a = 1$，
+
+    此时抛物线$[公式]$表达式为$y=(x-1)^{2}-4$；
+
+    ②若点$M(n-2,\ y)$在对称轴直线$x = 1$的左侧，点$N(2a+3,\ y_{2})$在对称轴直线$x = 1$的右侧时，
+
+    由题意可得$\left\{\begin{array}{l}n-2<1\\2n+3>1\\1-(n-2)>2n+3-1\end{array}\right.$，
+
+    ∴$-1 < n < \frac{1}{3}$；
+
+    若点$N(2a+3,\ y_{2})$在对称轴直线$x = 1$的左侧，点$M(n-2,\ y)$在对称轴直线$x = 1$的右侧时，
+
+    由题意可得$\left\{\begin{array}{l} n-2>1 \\ 2n+3<1 \\ 1-(2n+3)>n-2-1 \end{array}\right.$，
+
+    ∴不等式组无解．
+
+    综上所述：$-1 < n < \frac{1}{3}$．'
   knowledge_points:
+  - 二次函数
+  - 不等式
+  - 不等式组
   - 坐标系
   module: functions
   difficulty: 压轴
   recommended_for:
   - L3
+  figures:
+  - figures/2023-mentougou-yi-fig31.png
 - id: 27
   type: 解答
   score: 7
-  question: '已知正方形和一动点E，连接，将线段绕点C顺时针旋转得到线段，连接，．
+  question: '已知正方形$ABCD$和一动点E，连接CE，将线段CE绕点C顺时针旋转$90^\circ$得到线段CF，连接BE，DF．
 
-    （1）如图1，当点E在正方形内部时，
+    [图]
+
+    （1）如图1，当点E在正方形$ABCD$内部时，
 
     ①依题意补全图1；
 
-    ②求证：；
+    ②求证：$BE = DF$；
 
-    （2）如图2，当点E在正方形外部时，连接，取中点M，连接，，用等式表示线段与的数量关系，并证明．'
-  answer: ''
-  solution: ''
+    （2）如图2，当点E在正方形$ABCD$外部时，连接AF，取AF中点M，连接AE，DM，用等式表示线段AE与DM的数量关系，并证明．'
+  answer: （1）①见解析；②见解析 （2）$AE = 2DM$；理由见解析
+  solution: '【小问1详解】
+
+    解：①依题意补全图1，如图所示：
+
+    [图]
+
+    ②∵四边形$ABCD$为正方形，
+
+    ∴$BC = CD$，$\angle BCD = 90^\circ$，
+
+    根据旋转可知，$CE = CF$，$\angle ECF = 90^\circ$，
+
+    ∴$\angle BCE + \angle ECD = \angle ECD + \angle DCF = 90^\circ$，
+
+    ∴$\angle BCE = \angle DCF$，
+
+    ∴$\triangle BCE\cong\triangle DCF(SAS)$，
+
+    ∴$BE = DF$；
+
+    【小问2详解】
+
+    解：$AE = 2DM$；理由如下：
+
+    连接BE、DF，延长DM，使$MN = DM$，连接AN，延长AD交CF于点G，如图所示：
+
+    [图]
+
+    ∵四边形$ABCD$为正方形，
+
+    ∴$AB = BC = CD = AD$，$\angle BCD=\angle ABC=\angle ADC=90^{\circ}$，
+
+    根据旋转可知，$CE = CF$，$\angle ECF = 90^\circ$，
+
+    ∴$\angle BCE + \angle ECD = \angle ECD + \angle DCF = 90^\circ$，
+
+    ∴$\angle BCE = \angle DCF$，
+
+    ∴$\triangle BCE\cong\triangle DCF(SAS)$，
+
+    ∴$BE = DF$，$\angle CBE = \angle CDF$，
+
+    ∵$\angle CBE = \angle ABC + \angle ABE = 90^\circ + \angle ABE$，
+
+    $\angle CBE=\angle CDG+\angle FDG=90^\circ+\angle FDG$，
+
+    ∴$\angle FDG = \angle ABE$，
+
+    ∵点M为AF'
   knowledge_points:
+  - 平行线
+  - 全等三角形
   - 正方形
   - 旋转
   - 动点
-  module: geometryComprehensive
+  module: triangles
   difficulty: 压轴
   recommended_for:
   - L3
+  figures:
+  - figures/2023-mentougou-yi-fig32.png
+  - figures/2023-mentougou-yi-fig33.png
+  - figures/2023-mentougou-yi-fig34.png
 - id: 28
   type: 解答
   score: 7
-  question: '在平面直角坐标系中，已知图形G上的两点M，N（点M，N不重合）和另一点P，给出如下定义：连接，如果，则称点P为点M，N的“条件拐点”．
+  question: '在平面直角坐标系xOy中，已知图形G上的两点M，N（点M，N不重合）和另一点P，给出如下定义：连接$PM, PN$，如果$PM \perp PN$，则称点P为点M，N的“条件拐点”．
 
-    （1）如图1，已知线段MN上的两点，；
+    [图]
 
-    ①点，，中，点M，N的“条件拐点”是______；
+    （1）如图1，已知线段MN上的两点$M(0,2)$，$N(4,0)$；
 
-    ②如果过点且平行于x轴的直线上存在点M，N的“条件拐点”，求a的取值范围；
+    ①点$P_{1}(1,3)$，$P_{2}(2,-1)$，$P_{3}(4,2)$中，点M，N的“条件拐点”是______；
 
-    （2）如图2，已知点，，过点F作直线轴，点M，N在直线l上，且．如果直线上存在点M，N的“条件拐点”，直接写出t的取值范围．'
-  answer: ''
-  solution: ''
+    ②如果过点$A(0,a)$且平行于x轴的直线上存在点M，N的“条件拐点”，求a的取值范围；
+
+    （2）如图2，已知点$F(0,1)$，$T(0,t)$，过点F作直线$l \perp y$轴，点M，N在直线l上，且$FM = FN = FT$．如果直线$y = x - t$上存在点M，N的“条件拐点”，直接写出t的取值范围．'
+  answer: （1）①$P_{1}$，$P_3$；②$-\sqrt{5}+1\leq s\leq \sqrt{5}+1$ （2）$t=3+2\sqrt{2}$或$t\leq3-2\sqrt{2}$
+  solution: '【小问1详解】
+
+    解：①由题意知，$MN^{2}=(4-0)^{2}+(0-2)^{2}=20$，
+
+    $P_{i}M^{2}=(1-0)^{2}+(3-2)^{2}=2$，$P_{N}^{2}=\left(1-4\right)^{2}+\left(3-0\right)^{2}=18$，
+
+    ∵$P_{1}M^{2}+P_{2}N^{2}=MN^{2}$，
+
+    ∴$\angle MPN=90^\circ$，$PM \perp PN$，故满足要求；
+
+    同理$P_{2}M^{2}=13$，$P_{2}N^{2}=5$，$p_{1}M^{2}+p_{2}N^{2}=18\neq 20=MN^{2}$，故不符合要求；
+
+    $P_{3}M^{2}=16$，$P_{3}N^{2}=4$，$P_{1}M^{2}+P_{2}N^{2}=20=MN^{2}$，
+
+    ∴$\angle MP_{y}N=90^{\circ}$，$P_{3}M \perp P_{3}N$，故满足要求；
+
+    故答案为：$P_{1}$，$P_3$；
+
+    ②解：如图1，$MN = 2\sqrt{5}$，
+
+    [图]
+
+    由题意知，MN在以B为圆心，$\sqrt{5}$为半径长的圆上，
+
+    ∵过点$A(0,a)$且平行于x轴的直线上存在点M，N的“条件拐点”，
+
+    ∴B到过点$A(0,a)$且平行于x轴的直线的距离$d \leq \sqrt{5}$，
+
+    ∵$B\left(\frac{0+4}{2},\frac{2+0}{2}\right)$，即$B(2,1)$，
+
+    ∴$|a-1|\leq\sqrt{5}$，
+
+    解得，$-\sqrt{5}+1\leq s\leq \sqrt{5}+1$，
+
+    ∴a的取值范围为$-\sqrt{5}+1\leq s\leq \sqrt{5}+1$；
+
+    【小问2详解】
+
+    解：当$x = 0$，$y = -t$，直线与y轴交点为$C(0,-t)$；
+
+    当$y ='
   knowledge_points:
+  - 弦
+  - 勾股定理
+  - 不等式
   - 坐标系
-  module: geometryComprehensive
+  module: circles
   difficulty: 压轴
   recommended_for:
   - L3
+  figures:
+  - figures/2023-mentougou-yi-fig35.png
+  - figures/2023-mentougou-yi-fig36.png
+  - figures/2023-mentougou-yi-fig37.png
+  - figures/2023-mentougou-yi-fig38.png
+  - figures/2023-mentougou-yi-fig39.png
+  - figures/2023-mentougou-yi-fig40.png

@@ -1,85 +1,29 @@
 # ============================================================
 # 2023年北京石景山区中考数学二模试卷 — 逐题分析
 # ============================================================
-# 数据来源：knowledge-original/精品解析：2023年北京市石景山区九年级中考二模数学试题（解析版）.docx
-# 自动生成，部分数学公式可能显示不全（docx公式对象无法完整提取）
+# 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
+# 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
 # 满分：100分  时长：120分钟
 
 year: 2023
-district: 石景山区
+district: 石景山
 exam_type: 二模
 subject: 数学
 full_score: 100
 duration_minutes: 120
-total_questions: 32
+total_questions: 28
 structure: 8选择(16分) + 8填空(16分) + 12解答(68分)
 questions:
 - id: 1
   type: 选择
   score: 2
-  question: 本试卷共8页，共两部分，28道题．满分100分．考试时间120分钟．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 2
-  type: 选择
-  score: 2
-  question: 在试卷和答题卡上准确填写学校名称、姓名和准考证号．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 3
-  type: 选择
-  score: 2
-  question: 试题答案一律填涂或书写在答题卡上，在试卷上作答无效．在答题卡上，选择题、作图题用2B铅笔作答，其他试题用黑色字迹签字笔作答．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 4
-  type: 选择
-  score: 2
-  question: '考试结束，将本试卷和答题卡一并交回．
+  question: '下图是某几何体的三视图，该几何体是（
 
-    第1−8题均有四个选项，符合题意的选项只有一个．'
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 1
-  type: 选择
-  score: 2
-  question: "下图是某几何体的三视图，该几何体是（    ）\nA. 圆柱\tB. 圆锥\tC. 长方体\tD. 三棱柱"
+    ）
+
+    [图]
+
+    A.圆柱B.圆锥C.长方体D.三棱柱'
   answer: A
   solution: '根据主视图和左视图为矩形，则几何体为柱体；
 
@@ -95,14 +39,20 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-shijingshan-er-fig02.png
 - id: 2
   type: 选择
   score: 2
-  question: "实数a，b在数轴上的对应点的位置如图所示，下列结论中正确的是（   ）\nA. \tB. \tC. \tD."
-  answer: B
-  solution: '解：由题意得，，
+  question: '实数a，b在数轴上的对应点的位置如图所示，下列结论中正确的是（）
 
-    ∴，
+    [图]
+
+    A.$a > b$B.$\left|a\right|>b$C.$a+b>0$D.$a < -3$'
+  answer: B
+  solution: '解：由题意得，$-3 < a < 0 < b, |a| > |b|$，
+
+    ∴$|a| > b,\ a + b < 0$，
 
     ∴四个选项中只有B选项符合题意，
 
@@ -116,10 +66,14 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-shijingshan-er-fig03.png
 - id: 3
   type: 选择
   score: 2
-  question: "如果一个多边形的内角和等于540°，则它的边数为（　　）\nA. 3\tB. 4\tC. 5\tD. 6"
+  question: '如果一个多边形的内角和等于540°，则它的边数为（　　）
+
+    A.3B.4C.5D.6'
   answer: C
   solution: '解：设这个多边形的边数为n，
 
@@ -140,21 +94,25 @@ questions:
 - id: 4
   type: 选择
   score: 2
-  question: "如图，在中，M，N分别是边上的点，，．若的面积为1，则的面积为（   ）\nA. 2\tB. 3\tC. 4\tD. 9"
+  question: '如图，在$\triangle ABC$中，M，N分别是边$AB, AC$上的点，$MN \parallel BC$，$BM=2AM$．若$\triangle AMN$的面积为1，则$\triangle ABC$的面积为（）
+
+    [图]
+
+    A.2B.3C.4D.9'
   answer: D
-  solution: '解：∵，
+  solution: '解：∵$BM=2AM$，
 
-    ∴，
+    ∴$AB = 3AM$，
 
-    ∵，
+    ∵$MN \parallel BC$，
 
-    ∴，
+    ∴$\triangle AMN \sim \triangle ABC$，
 
-    ∴，
+    ∴$\frac{S_{\triangle ABC}}{S_{\triangle AMN}}=\left(\frac{AB}{AM}\right)^{2}=9$，
 
-    ∵的面积为1，
+    ∵$\triangle AMN$的面积为1，
 
-    ∴的面积为9，
+    ∴$\triangle ABC$的面积为9，
 
     故选D．'
   knowledge_points:
@@ -166,10 +124,16 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-shijingshan-er-fig04.png
 - id: 5
   type: 选择
   score: 2
-  question: "如图，为的直径，C，D为上的点，．若，则的度数为（   ）\nA. \tB. \tC. \tD."
+  question: '如图，AB为$\odot\odot$的直径，C，D为$\odot\odot$上的点，$\overline{BC}=\overline{DC}$．若$\angle CBD=35^{\circ}$，则$\angle ABD$的度数为（）
+
+    [图]
+
+    A.$20^\circ$B.$35^\circ$C.$40^\circ$D.$70^\circ$'
   answer: A
   solution: ''
   knowledge_points:
@@ -181,18 +145,22 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-shijingshan-er-fig05.png
 - id: 6
   type: 选择
   score: 2
-  question: "一组数据：1，2，5，0，2，若添加一个数据2，则发生变化的统计量是（   ）\nA. 平均数\tB. 中位数\tC. 众数\tD. 方差"
-  answer: D
-  solution: '解：A、发生变化前的平均数：，发生变化后的平均数：，，没有变化，故该选项不符合题意；
+  question: '一组数据：1，2，5，0，2，若添加一个数据2，则发生变化的统计量是（）
 
-    B、发生变化前的中位数：，发生变化后的中位数：，没有变化，故该选项不符合题意；
+    A.平均数B.中位数C.众数D.方差'
+  answer: D
+  solution: '解：A、发生变化前的平均数：$x_{1}=\frac{1+2+5-0+2}{5}=2$，发生变化后的平均数：$x_{-}=\frac{1+2+5+0+2+2}{6}=2$，，没有变化，故该选项不符合题意；
+
+    B、发生变化前的中位数：$2$，发生变化后的中位数：$\frac{2+2}{2}=2$，没有变化，故该选项不符合题意；
 
     C、发生变化前的众数：2，发生变化前的众数：2，没有变化，故该选项不符合题意；
 
-    D、发生变化前的方差：，发生变化后的方差：，发生变化，故该选项符合题意；
+    D、发生变化前的方差：$v_{1}^{2}=\frac{2\times(2-2)^{2}+(0-2)^{2}+(1-2)^{2}+(5-2)^{2}}{5}=2.8$，发生变化后的方差：$y_{2}^{2}=\frac{3\times(2-2)\times(0-2)\times(-4-2)\times(5-2)}{6}\times\frac{7}{3}$，发生变化，故该选项符合题意；
 
     故选：D．'
   knowledge_points:
@@ -210,8 +178,23 @@ questions:
 - id: 7
   type: 选择
   score: 2
-  question: "下图显示了某林业部门统计某种树苗在本地区相同条件下的移植成活试验的结果．\n下面有四个推断：\n①当移植的棵树是800时，成活的棵树是688，所以“移植成活”的概率是0.860；\n②随着移植棵树的增加，“移植成活”的频率总在0.852附近摆动，显示出一定的稳定性，可以估计“移植成活”的概率是0.852；\n③与试验相同条件下，若移植10000棵这种树苗，可能成活8520棵；\n\
-    ④在用频率估计概率时，移植3000棵树时的频率0.852一定比移植2000棵树时的频率0.853更准确\n其中合理的是（   ）\nA. ①②\tB. ①③\tC. ②③\tD. ②④"
+  question: '下图显示了某林业部门统计某种树苗在本地区相同条件下的移植成活试验的结果．
+
+    [图]
+
+    下面有四个推断：
+
+    ①当移植的棵树是800时，成活的棵树是688，所以“移植成活”的概率是0.860；
+
+    ②随着移植棵树的增加，“移植成活”的频率总在0.852附近摆动，显示出一定的稳定性，可以估计“移植成活”的概率是0.852；
+
+    ③与试验相同条件下，若移植10000棵这种树苗，可能成活8520棵；
+
+    ④在用频率估计概率时，移植3000棵树时的频率0.852一定比移植2000棵树时的频率0.853更准确
+
+    其中合理的是（）
+
+    A.①②B.①③C.②③D.②④'
   answer: C
   solution: '解：当移植的棵树是800时，成活的棵树是688，所以“移植成活”的频率是0.860，但概率不一定是0.860，故①错误；
 
@@ -221,7 +204,7 @@ questions:
 
     在用频率估计概率时，移植3000棵树时的频率0.852不一定比移植2000棵树时的频率0.853更准确，故④错误；
 
-    其中合理是②③，
+    其中合理$[公式]$是②③，
 
     故选C．'
   knowledge_points:
@@ -234,28 +217,36 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-shijingshan-er-fig07.png
 - id: 8
   type: 选择
   score: 2
-  question: "如图，在中，，．点P是边上一动点（不与C，B重合），过点P作交于点．设，的长为，的面积为，则与x，S与满足的函数关系分别为（   ）\nA. 一次函数关系，二次函数关系\tB. 反比例函数关系，二次函数关系\nC. 一次函数关系，反比例函数关系\tD. 反比例函数关系，一次函数关系"
+  question: '如图，在$\mathrm{Rt}\triangle ACB$中，$\angle ACB=90^\circ$，$CA = CB = 10$．点P是CB边上一动点（不与C，B重合），过点P作$PQ \perp CB$交AB于点Q．设$CP = x$，BQ的长为y，$\angle BPQ$的面积为S，则y与x，S与x满足的函数关系分别为（）
+
+    [图]
+
+    A.一次函数关系，二次函数关系B.反比例函数关系，二次函数关系
+
+    C.一次函数关系，反比例函数关系D.反比例函数关系，一次函数关系'
   answer: A
-  solution: '解：∵在中，，，
+  solution: '解：∵在$\mathrm{Rt}\triangle ACB$中，$\angle ACB=90^\circ$，$CA = CB = 10$，
 
-    ∴，
+    ∴$\angle A=\angle B=45^{\circ}$，
 
-    ∵，
+    ∵$CP = x$，
 
-    ∴，
+    ∴$BP = BC - CP = 10 - x$，
 
-    ∵，
+    ∵$PQ \perp CB$，
 
-    ∴，
+    ∴$\angle QPB=90^{\circ}$，
 
-    在中，，，
+    在$Rt\triangle BPQ$中，$PQ = BP \cdot \tan \beta = 10 - x$，$BO=\frac{BP}{\cos B}=\sqrt{2}(10-x)$，
 
-    ∴，，
+    ∴$y=\sqrt{2}(10-x)-\sqrt{2}x+10\sqrt{2}$，$S = \frac{1}{2} BP \cdot PQ = \frac{1}{2}(10 - x)^2$，
 
-    ∴与x，S与满足的函数关系分别为一次函数关系，二次函数关系，
+    ∴y与x，S与x满足的函数关系分别为一次函数关系，二次函数关系，
 
     故选A．'
   knowledge_points:
@@ -268,10 +259,12 @@ questions:
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2023-shijingshan-er-fig08.png
 - id: 9
   type: 填空
   score: 2
-  question: 式子在实数范围内有意义，则 x 的取值范围是_______ ．
+  question: 式子$\sqrt{x-3}$在实数范围内有意义，则x的取值范围是_______．
   answer: x≥3
   solution: '由题意可得：x—3≥0，
 
@@ -290,17 +283,17 @@ questions:
 - id: 10
   type: 填空
   score: 2
-  question: 方程的解为_________．
-  answer: ''
-  solution: '解：方程两边同乘，得，
+  question: 方程$\frac{2}{x+3}=\frac{5}{x}$的解为_________．
+  answer: $x = -5$
+  solution: '解：方程两边同乘$x(x+1)$，得$2x=5(x+3)$，
 
-    即，
+    即$2x=5x+15$，
 
-    解得，
+    解得$x = -5$，
 
-    经检验，是原方程的解，
+    经检验，$x = -5$是原方程的解，
 
-    故答案为：．'
+    故答案为：$x = -5$．'
   knowledge_points:
   - 分式方程
   module: numbersAndExpressions
@@ -313,13 +306,13 @@ questions:
 - id: 11
   type: 填空
   score: 2
-  question: 写出一个比大且比小的整数是___________．
+  question: 写出一个比$\sqrt{3}$大且比$\sqrt{10}$小的整数是___________．
   answer: 2或3
-  solution: '∵ ，
+  solution: '∵$\sqrt{3}<2$，$3 < \sqrt{10}$
 
-    ∴
+    ∴$\sqrt{3}<2<3<\sqrt{10}$
 
-    即比大且比小的整数为2或3，
+    即比$\sqrt{3}$大且比$\sqrt{10}$小的整数为2或3，
 
     故答案为：2或3'
   knowledge_points:
@@ -334,17 +327,23 @@ questions:
 - id: 12
   type: 填空
   score: 2
-  question: 如果，那么代数式的值为_________．
-  answer: ''
-  solution: '解：∵，
+  question: 如果$3x^{2}-x-1=0$，那么代数式$(2x+3)(2x-3)-x(x+1)$的值为_________．
+  answer: $-8$
+  solution: '解：∵$3x^{2}-x-1=0$，
 
-    ∴
+    ∴$3x^2 - x = 1$
 
-    ∴
+    ∴$(2x+3)(2x-3)-x(x+1)$
 
-    ，
+    $=4x^{2}-9-x^{2}-x$
 
-    故答案为：．'
+    $=3x^{2}-x-9$
+
+    $=1-9$
+
+    $= -8$，
+
+    故答案为：$-8$．'
   knowledge_points:
   - 综合
   module: numbersAndExpressions
@@ -357,15 +356,15 @@ questions:
 - id: 13
   type: 填空
   score: 2
-  question: 在平面直角坐标系xOy中，若点，在反比例函数的图像上，则_________（填“”“”或“”）．
-  answer: ''
-  solution: '解：∵，在每个象限内，y随x的增大而增大，
+  question: 在平面直角坐标系xOy中，若点$(1, y_{1})$，$(4,y_{2})$在反比例函数$y=\frac{k}{x}(k<0)$的图像上，则$y_{1}$_________$y_{2}$（填“$\gt$”“$=$”或“$\gt$”）．
+  answer: $\gt$
+  solution: '解：∵$k < 0$，在每个象限内，y随x的增大而增大，
 
-    ∴，
+    ∴$0<1<4$，
 
-    ∴．
+    ∴$y_1 < y_2$．
 
-    故答案为：．'
+    故答案为：$\gt$．'
   knowledge_points:
   - 反比例函数
   - 坐标系
@@ -378,23 +377,27 @@ questions:
 - id: 14
   type: 填空
   score: 2
-  question: 如图，在矩形中，点M，N分别为的中点，若，则的长为__________．
+  question: '如图，在矩形$ABCD$中，点M，N分别为$BC, CD$的中点，若$MN = 5$，则AC的长为__________．
+
+    [图]'
   answer: '10'
-  solution: '解：如图所示，连接，
+  solution: '解：如图所示，连接BD，
 
-    ∵点M，N分别为的中点，
+    ∵点M，N分别为$BC, CD$的中点，
 
-    ∴是的中位线，
+    ∴MN是$\triangle BCD$的中位线，
 
-    ∵，
+    ∵$MN = 5$，
 
-    ∴，
+    ∴$BD = 2MN = 10$，
 
-    ∵四边形是矩形，
+    ∵四边形$ABCD$是矩形，
 
-    ∴，
+    ∴$AC=BD=10$，
 
-    故答案为：10．'
+    故答案为：10．
+
+    [图]【点睛】本题主要考查了矩形的性质，三角形中位线定理，熟知三角形中位线平行于第三边且等于第三边长的一半是解题的关键．'
   knowledge_points:
   - 矩形
   module: triangles
@@ -403,68 +406,112 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-shijingshan-er-fig09.png
+  - figures/2023-shijingshan-er-fig10.png
 - id: 15
   type: 填空
   score: 2
-  question: 如图，在中，，平分交于点．若，，则的面积为_________．
-  answer: ''
-  solution: '解：如图所示，过点D作于E，
+  question: '如图，在$\mathrm{Rt}\triangle ACB$中，$\angle ACB=90^\circ$，AD平分$\angle CAB$交BC于点D．若$\angle B=30^{\circ}$，$CD = 1$，则$\triangle DAB$的面积为_________．
 
-    ∵，，
+    [图]'
+  answer: $\sqrt{3}$
+  solution: '解：如图所示，过点D作$DE \perp AB$于E，
 
-    ∴，
+    ∵$\angle ACB=90^\circ$，$\angle B=30$，
 
-    ∵平分，
+    ∴$\angle BAC = 60^\circ$，
 
-    ∴，
+    ∵AD平分$\angle CAB$，
 
-    ∴，
+    ∴$\angle DAB = \angle CAD = 30^\circ, \quad DE = CD = 1$，
 
-    ∴，
+    ∴$AE = BE = \sqrt{3}DE - \sqrt{3}$，
 
-    ∴，
+    ∴$AB = AE + BE = 2\sqrt{3}$，
 
-    故答案为：．'
+    ∴$S_{\triangle OAB}=\frac{1}{2}AB\cdot DE=\sqrt{3}$，
+
+    故答案为：$\sqrt{3}$．
+
+    [图]【点睛】本题主要考查了角平分线的性质和定义，勾股定理，含30度角的直角三角形的性质，勾股定理等等，正确作出辅助线是解题的关键．'
   knowledge_points:
-  - 勾股定理
+  - 综合
   module: triangles
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-shijingshan-er-fig11.png
+  - figures/2023-shijingshan-er-fig12.png
 - id: 16
   type: 填空
   score: 2
   question: '有黑、白各6张卡片，分别写有数字1至6把它们像扑克牌那样洗过后，数字朝下，如图排成两行，排列规则如下：
+
+    [图]
 
     ①左至右，按数字从小到大的顺序排列；
 
     ②黑、白卡片数字相同时，黑卡片放在左边．
 
     将第一行卡片用大写英文字母按顺序标注，第二行卡片用小写英文字母按顺序标注，则白卡片数字1摆在了标注字母_______的位置，标注字母e的卡片写有数字_______．'
-  answer: ①. B    ②. 4
+  answer: ①.B②.4
   solution: '解：第一行中B与第二行中c肯定有一张为白1，若第二行中c为白1，则左边不可能有2张黑卡片，
 
-    白卡片数字1摆在了标注字母B的位置，
+    $\begin{tikzpicture}
 
-    黑卡片数字1摆在了标注字母A的位置，；
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$白卡片数字1摆在了标注字母B的位置，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$黑卡片数字1摆在了标注字母A的位置，；
 
     第一行中C与第二行中c肯定有一张为白2，若第二行中c为白2，则a，b只能是黑1，黑2，而A为黑1，矛盾，
 
-    第一行中C为白2；
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$第一行中C为白2；
 
     第一行中F与第二行中c肯定有一张为白3，若第一行中F为白3，则D，E只能是黑2，黑3，此时黑2在白2右边，与规则②矛盾，
 
-    第二行中c为白3，
+    $\begin{tikzpicture}
 
-    第二行中a为黑2，b为黑3；
+    \fill (0,0) circle (2pt);
 
-    第一行中F与第二行中e肯定有一张为白4，若第一行中F为白4，则D，E只能是黑3，黑4，与b为黑3矛盾，
+    \fill (-1,-1) circle (2pt);
 
-    第二行中e为白4．
+    \fill (1,-1) circle (2pt);
 
-    故答案为：①B，②4．'
+    \end{tikzpicture}$第二行中c为白3，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);'
   knowledge_points:
   - 综合
   module: geometryComprehensive
@@ -472,12 +519,20 @@ questions:
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2023-shijingshan-er-fig13.png
 - id: 17
   type: 解答
   score: 5
-  question: （第17题，详见原卷）
-  answer: ''
-  solution: 解：
+  question: 计算：$4\sin 60^{\circ}+\sqrt{27}-|-2|+\left(\frac{1}{2}\right)^{-1}$．
+  answer: $5\sqrt{3}$
+  solution: '解：$4\sin 60^{\circ}+\sqrt{27}-|-2|+\left(\frac{1}{2}\right)^{-1}$
+
+    $4\times\frac{\sqrt{3}}{2}+3\sqrt{3}-2+2$
+
+    $=2\sqrt{3}+3\sqrt{3}-2+2$
+
+    $=5\sqrt{3}$'
   knowledge_points:
   - 三角函数
   - 绝对值
@@ -491,15 +546,21 @@ questions:
 - id: 18
   type: 解答
   score: 5
-  question: 解不等式组：
-  answer: ''
-  solution: '解：
+  question: '解不等式组：$\begin{aligned}
 
-    解不等式①得：，
+    &x+1>4x+7\\
 
-    解不等式②得：，
+    &\frac{5x-4}{3}\leq x
 
-    ∴不等式组的解集为．'
+    \end{aligned}$'
+  answer: $x<-2$
+  solution: '解：$\left\{\begin{array}{l}x+1>4x+7\text{①}\\\dfrac{5x-4}{3}\leqslant x\text{②}\end{array}\right.$
+
+    解不等式①得：$x<-2$，
+
+    解不等式②得：$x \leq 2$，
+
+    ∴不等式组的解集为$x<-2$．'
   knowledge_points:
   - 不等式
   - 不等式组
@@ -513,47 +574,69 @@ questions:
 - id: 19
   type: 解答
   score: 5
-  question: '已知：如图1，直线AB及AB外一点．
+  question: '已知：如图1，直线AB及AB外一点P．
 
-    求作：直线，使得．
+    [图]
+
+    求作：直线$\overline{PQ}$，使得$PQ\parallel AB$．
 
     作法：如图2，
 
-    ①在直线上任取一点C，连接；
+    ①在直线AB上任取一点C，连接PC；
 
-    ②C为圆心，长为半径作弧，交直线于点D；
+    ②C为圆心，PC长为半径作弧，交直线AB于点D；
 
-    ③分别以点P，D为圆心，长为半径作弧，两弧在直线外交于一点Q；
+    ③分别以点P，D为圆心，PC长为半径作弧，两弧在直线AB外交于一点Q；
 
-    ④作直线．
+    ④作直线$\overline{PQ}$．
 
-    直线就是所求作的直线．
+    直线$\overline{PQ}$就是所求作的直线．
 
     （1）使用直尺和圆规，依作法补全图形（保留作图痕迹）；
 
     （2）完成下面的证明．
 
-    证明：连接．
+    证明：连接DQ．
 
-    __________，
+    $: CD = DQ = PQ =$__________，
 
-    四边形是__________形（__________）（填推理的依据）．'
-  answer: （1）见解析    （2），菱，四边相等的四边形是菱形
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$四边形$PCDQ$是__________形（__________）（填推理的依据）．
+
+    $\ldots PQ \parallel AB$'
+  answer: （1）见解析（2）PC，菱，四边相等的四边形是菱形
   solution: '【小问1详解】
 
-    解：直线如下图所示：
+    解：直线$\overline{PQ}$如下图所示：
 
-    【小问2详解】
+    [图]【小问2详解】
 
-    证明：连接．
+    证明：连接DQ．
 
-    ，
+    [图]
 
-    四边形是菱形（四边相等的四边形是菱形）．
+    $:CD=DQ-PQ-PC$，
 
-    ．
+    $\begin{tikzpicture}
 
-    故答案为：，菱，四边相等的四边形是菱形．'
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$四边形$PCDQ$是菱形（四边相等的四边形是菱形）．
+
+    $\ldots PQ \parallel AB$．
+
+    故答案为：PC，菱，四边相等的四边形是菱形．'
   knowledge_points:
   - 菱形
   - 尺规作图
@@ -564,40 +647,46 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-shijingshan-er-fig14.png
+  - figures/2023-shijingshan-er-fig15.png
+  - figures/2023-shijingshan-er-fig16.png
 - id: 20
   type: 解答
   score: 5
-  question: '已知关于的一元二次方程．
+  question: '已知关于x的一元二次方程$x^{2}-2mx+m^{2}-1=0$．
 
     （1）求证：该方程总有两个不相等的实数根；
 
-    （2）若，且该方程的一个根是另一个根的2倍，求的值．'
+    （2）若$m > 1$，且该方程的一个根是另一个根的2倍，求m的值．'
   answer: （1）证明见解析 （2）3
   solution: '【小问1详解】
 
-    证明：由题意得，
+    证明：由题意得，$\Delta =(-2m)^{2}-4\times1\times(m^{2}-1)$
 
-    ，
+    $=4m^{2}-4m^{2}+4$
 
-    ∴关于的一元二次方程总有两个不相等的实数根；
+    $=4>0$，
+
+    ∴关于x的一元二次方程$x^{2}-2mx+m^{2}-1=0$总有两个不相等的实数根；
 
     【小问2详解】
 
-    解：设方程的两个根分别为，
+    解：设方程的两个根分别为$s、2s$，
 
-    ∴，
+    ∴$\left\{ \begin{array} { l } { s + 2 s = 2 m } \\ { s ^ { 2 } \cdot 2 s = m ^ { 2 } - 1 } \end{array} \right.$，
 
-    ∴，
+    ∴$s = \frac{2}{3}m$，
 
-    ∴，
+    ∴$2\times\left(\frac{2}{3}m\right)^{2}=m^{2}-1$，
 
-    ∴，
+    ∴$\frac{8}{9}m^{2}=m^{2}-1$，
 
-    解得，
+    解得$m = \pm 3$，
 
-    又∵，
+    又∵$m > 1$，
 
-    ∴．'
+    ∴$m = 3$．'
   knowledge_points:
   - 一元二次方程
   - 根的判别式
@@ -610,92 +699,143 @@ questions:
 - id: 21
   type: 解答
   score: 5
-  question: '如图，菱形的对角线相交于点，过点作，过点C作交于点．
+  question: '如图，菱形$ABCD$的对角线$AC, BD$相交于点O，过点B作$BM \parallel AC$，过点C作$CN\parallel DB$交BM于点E．
 
-    （1）求证：四边形是矩形；
+    [图]
 
-    （2）连接，若，，求的长．'
-  answer: （1）证明见解析 （2）
+    （1）求证：四边形$BECO$是矩形；
+
+    （2）连接DE，若$AB=2$，$\angle BAC = 60^\circ$，求DE的长．'
+  answer: （1）证明见解析 （2）$\sqrt{13}$
   solution: '【小问1详解】
 
-    证明：四边形是菱形，
+    证明：$\begin{array}{c}
 
-    ，
+    \bullet \\
 
-    ，
+    \bullet \quad \bullet \\
 
-    四边形是平行四边形，
+    \bullet
 
-    ，
+    \end{array}$四边形$ABCD$是菱形，
 
-    平行四边形是矩形；
+    $AC \perp BD$，
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$$BE \parallel AC$，$CN\parallel DB$
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$四边形$BECO$是平行四边形，
+
+    $\because OC \perp BO$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$平行四边形$BECO$是矩形；
 
     【小问2详解】
 
-    解：四边形是菱形，
+    解：$\begin{array}{c}
 
-    ，
+    \bullet \\
 
-    ，
+    \bullet \quad \bullet \\
 
-    是等边三角形，
+    \bullet
 
-    ∴
+    \end{array}$四边形$ABCD$是菱形，
 
-    ，
+    $\therefore AB = BC$，
 
-    在中，，
+    $\angle BAC = 60^\circ$，
 
-    ∴
+    $\begin{tikzpicture}
 
-    ，
+    \fill (0,0) circle (2pt);
 
-    ，
+    \fill (-1,-1) circle (2pt);
 
-    四边形是矩形，
+    \fill (1,-1) circle (2pt);
 
-    ，，
-
-    在中，．'
+    \end{tikzpicture}$$\triangle ABC$'
   knowledge_points:
   - 勾股定理
   - 平行四边形
   - 矩形
   - 菱形
-  module: triangles
+  module: quadrilaterals
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-shijingshan-er-fig17.png
+  - figures/2023-shijingshan-er-fig18.png
 - id: 22
   type: 解答
   score: 5
-  question: '在平面直角坐标系中，函数的图像过点，．
+  question: '在平面直角坐标系xOy中，函数$y=kx+b\ (k\neq0)$的图像过点$A(3,-1)$，$B(0,-2)$．
 
     （1）求该函数的解析式；
 
-    （2）当时，对于的每一个值，函数的值大于函数的值，直接写出的取值范围．'
-  answer: （1） （2）
+    （2）当$x > -3$时，对于x的每一个值，函数$y=2x+m$的值大于函数$y=kx+b\ (k\neq0)$的值，直接写出m的取值范围．'
+  answer: （1）$y=\frac{1}{3}x-2$ （2）$m^{3}$
   solution: '【小问1详解】
 
-    解：把，代入中得：，
+    解：把$A(3,-1)$，$B(0,-2)$代入$y=kx+b\ (k\neq0)$中得：$\begin{cases}
 
-    ∴，
+    3k + b = -1 \\
 
-    ∴函数的结束为；
+    b = -2
+
+    \end{cases}$，
+
+    ∴$\left\{
+
+    \begin{array}{l}
+
+    k = \dfrac{1}{3} \\
+
+    b = -2
+
+    \end{array}
+
+    \right.$，
+
+    ∴函数$y=kx+b\ (k\neq0)$的结束为$y=\frac{1}{3}x-2$；
 
     【小问2详解】
 
-    解：当函数的值大于函数的值时，则，
+    解：当函数$y=2x+m$的值大于函数的$y=\frac{1}{3}x-2$值时，则$2x+m>\frac{1}{3}x-2$，
 
-    解得，
+    解得$x > \frac{-6 - 3m}{5}$，
 
-    ∵当时，对于的每一个值，函数的值大于函数的值，
+    ∵当$x > -3$时，对于x的每一个值，函数$y=2x+m$的值大于函数$y=kx+b\ (k\neq0)$的值，
 
-    ∴，
+    ∴$-3-\frac{-6-3m}{5}$，
 
-    ∴．'
+    ∴$m^{3}$．'
   knowledge_points:
   - 一次函数
   - 不等式
@@ -713,33 +853,59 @@ questions:
 
     a．这20名居民讲座前、讲座后成绩得分统计图如下：
 
+    [图]
+
     b．这20名居民讲座前、讲座后成绩的平均数、中位数、方差如下
 
-    c．结合讲座后成绩，被抽取的20名居民中有5人获得“参与奖”，有7人获得“优秀奖”，有8人获得“环保达人奖”，其中成绩在这一组的是：
+    平均数
 
-    80   82   83   85   87   88   88
+    中位数
+
+    方差
+
+    讲座前
+
+    72.0
+
+    71.5
+
+    99.7
+
+    讲座后
+
+    86.8
+
+    m
+
+    88.4
+
+    c．结合讲座后成绩x，被抽取的20名居民中有5人获得“参与奖”$(x < 80)$，有7人获得“优秀奖”$(80\leq x<90)$，有8人获得“环保达人奖”$(90\leq x\leq100)$，其中成绩在$80 \leq x < 90$这一组的是：
+
+    80
+
+    82   83   85   87   88   88
 
     根据以上信息，回答下列问题：
 
     （1）居民小张讲座前的成绩为80分，讲座后的成绩为95分，在图中用“○”圈出代表居民小张的点；
 
-    （2）写出表中的值；
+    （2）写出表中m的值；
 
     （3）参加公益讲座的居民有160人，估计能获得“环保达人奖”的有_____人．'
-  answer: （1）见解析    （2） （3）64
+  answer: （1）见解析（2）$87.5$ （3）64
   solution: '【小问1详解】
 
     解：代表居民小张的点如下图所示：
 
-    【小问2详解】
+    [图]【小问2详解】
 
     解：将讲座后20人的成绩从低到高排序，第10名和第11名的成绩分别为87，88，
 
-    因此中位数；
+    因此中位数$m=\frac{87+88}{2}=87.5$；
 
     【小问3详解】
 
-    解：（人），
+    解：$160\times\frac{8}{20}=64$（人），
 
     即估计能获得“环保达人奖”的有64人，
 
@@ -754,64 +920,102 @@ questions:
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2023-shijingshan-er-fig19.png
+  - figures/2023-shijingshan-er-fig20.png
 - id: 24
   type: 解答
   score: 6
-  question: '2023年4月16日，世界泳联跳水世界杯首站比赛在西安圆满落幕，中国队共收获9金2银，位列奖牌榜第一．赛场上运动员优美的翻腾、漂亮的入水令人赞叹不已．在10米跳台跳水训练时，运动员起跳后在空中的运动路线可以看作是抛物线的一部分．建立如图所示的平面直角坐标系，从起跳到入水的过程中，运动员的竖直高度（单位：）与水平距离（单位：）近似满足函数关系．
+  question: '2023年4月16日，世界泳联跳水世界杯首站比赛在西安圆满落幕，中国队共收获9金2银，位列奖牌榜第一．赛场上运动员优美的翻腾、漂亮的入水令人赞叹不已．在10米跳台跳水训练时，运动员起跳后在空中的运动路线可以看作是抛物线的一部分．建立如图所示的平面直角坐标系，从起跳到入水的过程中，运动员的竖直高度y（单位：m）与水平距离x（单位：m）近似满足函数关系$y = a(x - h)^2
+    + k \, (a < 0)$．
+
+    [图]
 
     某跳水运动员进行了两次训练．
 
-    （1）第一次训练时，该运动员的水平距离与竖直高度的几组数据如下：
+    （1）第一次训练时，该运动员的水平距离x与竖直高度y的几组数据如下：
 
-    ①根据上述数据，直接写出该运动员竖直高度的最大值，并求出满足的函数关系；
+    水平距离$x / m$
 
-    ②运动员必须在距水面前完成规定的翻腾动作并调整好入水姿势，否则就会出现失误．在这次训练中，测得运动员在空中调整好入水姿势时，水平距离为，判断此次跳水会不会出现失误，并说明理由；
+    0
 
-    （2）第二次训练时，该运动员的竖直高度与水平距离近似满足函数关系．如图，记该运动员第一次训练的入水点为A，若运动员在区域内（含A，B）入水能达到压水花的要求，则第二次训练__________达到要求（填“能”或“不能”）．'
-  answer: （1）①，；②此次跳水不会出现失误，理由见解析 （2）不能
+    $0.2$
+
+    $0.4$
+
+    $0.6$
+
+    $0.8$
+
+    $1.6$
+
+    $2.0$
+
+    竖直高度$y/m$
+
+    $10.00$
+
+    $10.45$
+
+    $10.60$
+
+    $10.45$
+
+    $10.00$
+
+    $5.20$
+
+    $1.00$
+
+    ①根据上述数据，直接写出该运动员竖直高度的最大值，并求出满足的函数关系$y = a(x - h)^2 + k \, (a < 0)$；
+
+    ②运动员必须在距水面$5m$前完成规定的翻腾动作并调整好入水姿势，否则就会出现失误．在这次训练中，测得运动员在空中调整好入水姿势时，水平距离为$1.6m$，判断此次跳水会不会出现失误，并说明理由；
+
+    （2）第二次训练时，该运动员的竖直高度y与水平距离x近似满足函数关系$y = -4.16(x - 0.38)^2 + 10.60$．如图，记该运动员第一次训练的入水点为A，若运动员在区域AB内（含A，B）入水能达到压水花的要求，则第二次训练__________达到要求（填“能”或“不能”）．'
+  answer: （1）①$10.60m$，$y=-3.75(x-0.4)^{2}+10.60$；②此次跳水不会出现失误，理由见解析 （2）不能
   solution: '【小问1详解】
 
-    解：①由表格中的数据可知当时，，当时，，
+    解：①由表格中的数据可知当$x = 0.2$时，$y=10.45$，当$x = 0.6$时，$y=10.45$，
 
-    ∴抛物线对称轴为直线，
+    ∴抛物线对称轴为直线$x=\frac{0.2+0.6}{2}=0.4$，
 
-    ∴抛物线顶点坐标为，
+    ∴抛物线顶点坐标为$(0.4,10.60)$，
 
-    ∴抛物线解析式为，
+    ∴抛物线解析式为$y = a(x - 0.4)^2 + 10.60$，
 
-    把，代入得：，
+    把$x = 0.2$，$y=10.45$代入得：$10.45 = a(0.2 - 0.4)^x + 16.60$，
 
-    解得，
+    解得$a = -3.75$，
 
-    ∴抛物线解析式为
+    ∴抛物线解析式为$y=-3.75(x-0.4)^{2}+10.60$
 
     ∵抛物线开口向下，
 
-    ∴该运动员竖直高度的最大值为；
+    ∴该运动员竖直高度的最大值为$10.60m$；
 
     ②此次跳水不会出现失误，理由如下：
 
-    当时，，
+    当$x = 1.6$时，$y = 3.75(1.6 - 0.4)^2 + 10.60 = 5.2$，
 
-    ∵，
+    ∵$5.2>5$，
 
     ∴此次跳水不会出现失误；
 
     【小问2详解】
 
-    解：在中，当时，则，
+    解：在$y=-3.75(x-0.4)^{2}+10.60$中，当$y = 0$时，则$-3.75(x-0.4)^2+10.60=0$，
 
-    解得或（舍去），
+    解得$x \approx 2.08$或$x = -1.28$（舍去），
 
-    ∴
+    ∴$A(2.08,0)$
 
-    在中，当时，则，
+    在$y = -4.16(x - 0.38)^2 + 10.60$中，当$y = 0$时，则$-4.16(x-0.38)^{2}+10.60=0$，
 
-    解得或（舍去），
+    解得$x \approx 1.98$或$x = -1.22$（舍去），
 
-    ∴第二次入水的位置的水平距离为米，
+    ∴第二次入水的位置的水平距离为$1.98$米，
 
-    ∵，即第二次入水的位置在店A的左侧，
+    ∵$1.98<2.08$，即第二次入水的位置在店A的左侧，
 
     ∴第二次训练不能达到要求，
 
@@ -824,66 +1028,72 @@ questions:
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2023-shijingshan-er-fig21.png
 - id: 25
   type: 解答
   score: 6
-  question: '如图，是的直径，弦于点，过点作交的延长线于点，点是延长线上一点，．
+  question: '如图，AB是$\odot\odot$的直径，弦$CD \perp AB$于点E，过点D作$DH \perp CB$交CB的延长线于点H，点F是DH延长线上一点，$CF = CD$．
 
-    （1）求证：是的切线；
+    [图]
 
-    （2）若，，求半径的长．'
-  answer: （1）见解析    （2）5
+    （1）求证：CF是$\odot\odot$的切线；
+
+    （2）若$\tan \angle DCB = \frac{1}{2}$，$CF = 8$，求$\odot\odot$半径的长．'
+  answer: （1）见解析 （2）5
   solution: '【小问1详解】
 
-    证明：连接，如图所示：
+    证明：连接OC，如图所示：
 
-    ∵，，
+    [图]
 
-    ∴平分，
+    ∵$CF = CD$，$CH \perp DF$，
 
-    ∴，
+    ∴CH平分$\angle DCF$，
 
-    ∵，
+    ∴$\angle DCH = \angle FCH$，
 
-    ∴，
+    ∵$CO = BO$，
 
-    ∵，
+    ∴$\angle OCB=\angle OBC$，
 
-    ∴，
+    ∵$CD \perp AB$，
 
-    ∴，即，
+    ∴$\angle BCE + \angle OBC = 90^\circ$，
 
-    ∴，
+    ∴$\angle OCB+\angle HCF=90^{\circ}$，即$\angle OCF = 90^\circ$，
 
-    ∵为的半径，
+    ∴$OC \perp CF$，
 
-    ∴是的切线；
+    ∵OC为$\odot\odot$的半径，
+
+    ∴CF是$\odot\odot$的切线；
 
     【小问2详解】
 
-    ∵，，
+    ∵$CF = 8$，$CF = CD$，
 
-    ∴，
+    ∴$CD = 8$，
 
-    ∵，
+    ∵$CD \perp AB$，
 
-    ∴，
+    ∴$CE = DE = 4$，
 
-    ∵，
+    ∵$\tan \angle DCB = \frac{1}{2}$，
 
-    ∴，
+    ∴$\frac{BE}{CE} = \frac{1}{2}$，
 
-    ∴，
+    ∴$BE = 2$，
 
-    设半径的长为r，则，
+    设$\odot\odot$半径的长为r，则$OE = r - 2$，
 
-    ∵，
+    ∵$OE^{2}+CE^{2}=OC^{2}$，
 
-    ∴，
+    ∴$(r-2)^{2}+4^{2}=r^{2}$，
 
-    解得：，
+    解得：$r=5$，
 
-    ∴半径的长为5．'
+    ∴$\odot\odot$半径的长为5．'
   knowledge_points:
   - 垂径定理
   - 切线
@@ -894,54 +1104,61 @@ questions:
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2023-shijingshan-er-fig22.png
+  - figures/2023-shijingshan-er-fig23.png
 - id: 26
   type: 解答
   score: 6
-  question: '在平面直角坐标系中，抛物线与轴交于点，将点向右平移4个单位长度，得到点．
+  question: '在平面直角坐标系xOy中，抛物线$y=ax^{2}-2x+c(a\neq 0)$与y轴交于点A，将点A向右平移4个单位长度，得到点B．
 
-    （1）若，点在抛物线上，求抛物线的解析式及对称轴；
+    （1）若$c = 4$，点$C(-2,4)$在抛物线上，求抛物线的解析式及对称轴；
 
-    （2）若抛物线与线段恰有一个公共点，结合函数图像，求的取值范围．'
-  answer: （1），对称轴为直线 （2）或
+    （2）若抛物线与线段AB恰有一个公共点，结合函数图像，求a的取值范围．'
+  answer: （1）$y = -x^2 - 2x + 4$，对称轴为直线$x=-1$ （2）$a<0$或$0 < a < \frac{1}{2}$
   solution: '【小问1详解】
 
-    解：∵，
+    解：∵$c = 4$，
 
-    ∴抛物线解析式为，
+    ∴抛物线解析式为$y=ax^{2}-2x+4$，
 
-    把代入得：，
+    把$C(-2,4)$代入$y=ax^{2}-2x+4$得：$4=4a+4+4$，
 
-    解得，
+    解得$a = -1$，
 
-    ∴抛物线解析式为，
+    ∴抛物线解析式为$y = -x^{2} - 2x + 4 = -(x + 1)^{2} + 5$，
 
-    ∴抛物线对称轴为直线；
+    ∴抛物线对称轴为直线$x=-1$；
 
     【小问2详解】
 
-    解：∵抛物线与轴交于点，
+    解：∵抛物线$y=ax^{2}-2x+c(a\neq 0)$与y轴交于点A，
 
-    ∴，
+    ∴$A(0,\ c)$，
 
-    ∵将点向右平移4个单位长度，得到点，
+    ∵将点A向右平移4个单位长度，得到点B，
 
-    ∴；
+    ∴$B(4,\ c)$；
 
-    当时，如图3-1所示，
+    当$a > 0$时，如图3-1所示，
 
-    ∵抛物线与线段恰有一个公共点，
+    ∵抛物线与线段AB恰有一个公共点，
 
-    ∴当时，，
+    ∴当$x = 4$时，$y=ax^{2}-2x+c<a$，
 
-    ∴，
+    ∴$16a-8+c<c$，
 
-    ∴；
+    ∴$0 < a < \frac{1}{2}$；
 
-    当时，如图3-2所示，
+    [图]
+
+    当$a < 0$时，如图3-2所示，
 
     由函数图象可知，对于任意的a都符合题意；
 
-    综上所述，或．'
+    综上所述，$a < 0$或$0 < a < \frac{1}{2}$．
+
+    [图]'
   knowledge_points:
   - 二次函数
   - 平移
@@ -950,160 +1167,156 @@ questions:
   difficulty: 压轴
   recommended_for:
   - L3
+  figures:
+  - figures/2023-shijingshan-er-fig24.png
+  - figures/2023-shijingshan-er-fig25.png
 - id: 27
   type: 解答
   score: 7
-  question: '如图，在中，，，平分交于点，点是上一点且．
+  question: '如图，在$\triangle ABC$中，$AB = AC$，$\angle ACB=2\alpha$，BD平分$\angle ABC$交AC于点E，点F是ED上一点且$\angle EAF = \alpha$．
 
-    （1）求的大小（用含的式子表示）；
+    [图]
 
-    （2）连接，用等式表示线段与的数量关系，并证明．'
-  answer: （1） （2），证明见解析
+    （1）求$\angle AFB$的大小（用含$\alpha$的式子表示）；
+
+    （2）连接FC，用等式表示线段FC与FA的数量关系，并证明．'
+  answer: （1）$2\alpha$ （2）$FA = FC$，证明见解析
   solution: '【小问1详解】
 
-    解：∵，，
+    解：∵$AB = AC$，$\angle ACB=2\alpha$，
 
-    ∴，
+    ∴$\angle ABC = \angle ACB = 2\alpha$，
 
-    ∵平分，
+    ∵BD平分$\angle ABC$，
 
-    ∴，
+    ∴$\angle CBE=\angle ABE=\frac{1}{2}\angle ABC=\alpha$，
 
-    ∴，
+    ∴$\angle AEB = \angle ACB + \angle CBE = 3a$，
 
-    ∵，
+    ∵$\angle EAF = \alpha$，
 
-    ∴；
+    ∴$\angle AFB = \angle AEB - \angle EAF = 2\alpha$；
 
     【小问2详解】
 
-    解：，证明如下：
+    解：$FA = FC$，证明如下：
 
-    如图所示，在上取一点G，使得，连接，
+    如图所示，在BD上取一点G，使得$AG = AF$，连接AG，
 
-    ∴，
+    ∴$\angle AGF = \angle AFG = 2\alpha$，
 
-    ∴，
+    ∴$\angle BAG = \angle AGF - \angle ABF = \alpha$，
 
-    ∴，
+    ∴$\angle BAG=\angle ABG=\alpha$，
 
-    ∴，
+    ∴$BG = AG$，
 
-    在和中，
+    在$\triangle ABG$和$\triangle ACF$中，
 
-    ，
+    $AB = AC \\
 
-    ∴，
+    \angle B = \angle CAF = \alpha \\
 
-    ∴，
+    AG = AF$，
 
-    又∵，
+    ∴$\triangle ABC \cong \triangle ACE (SAS)$，
 
-    ∴．'
+    ∴$CF = BG = AG$，
+
+    又∵$AG = AF$，
+
+    ∴$FA = FC$．
+
+    [图]'
   knowledge_points:
   - 全等三角形
   module: triangles
   difficulty: 压轴
   recommended_for:
   - L3
+  figures:
+  - figures/2023-shijingshan-er-fig26.png
+  - figures/2023-shijingshan-er-fig27.png
 - id: 28
   type: 解答
   score: 7
-  question: '在平面直角坐标系中，对于点（不与点重合）和线段，给出如下定义：连接，平移线段，使点与线段的中点重合，得到线段，则称点为线段的“中移点”．已知的半径为1．
+  question: '在平面直角坐标系xOy中，对于点M（不与点O重合）和线段$\overline{PQ}$，给出如下定义：连接OM，平移线段OM，使点M与线段$\overline{PQ}$的中点$M''$重合，得到线段$O''M''$，则称点$O''$为线段$\overline{PQ}$的“中移点”．已知$\odot\odot$的半径为1．
 
-    （1）如图，点，点，
+    [图]
 
-    点为与轴正半轴的交点，，求的值；
+    （1）如图，点$P(-1,0)$，点$Q(m,4)$，
 
-    点为上一点，若在直线上存在线段的“中移点”，求的取值范围；
+    $1$点M为$\odot\odot$与y轴正半轴的交点，$OO'' = \sqrt{5}$，求m的值；
 
-    （2）点是上一点，点在线段上，且．若是外一点，点为线段的“中移点”，连接．当点在上运动时，直接写出长的最大值与最小值的差（用含的式子表示）．'
-  answer: （1）①或；② （2）
+    $\textcircled{2}$点M为$\odot\odot$上一点，若在直线$y = x + 3$上存在线段$\overline{PQ}$的“中移点”$O''$，求m的取值范围；
+
+    （2）点Q是$\odot\odot$上一点，点M在线段OQ上，且$OM\perp\left(0<\alpha<\frac{\pi}{2}\right)$．若P是$\odot\odot$外一点，点$O''$为线段$\overline{PQ}$的“中移点”，连接$OO''$．当点Q在$\odot\odot$上运动时，直接写出$OO''$长的最大值与最小值的差（用含t的式子表示）．'
+  answer: （1）①$m = -3$或$m = 5$；②$-3 \leq m \leq 1$ （2）$2t-1$
   solution: '【小问1详解】
 
-    解：①如图：连接，
+    解：①如图：连接OP，
 
-    ，
+    [图]，
 
-    点，点，为线段的中点，
+    $\begin{array}{c}
 
-    ∴，
+    \bullet \\
 
-    ∵点为与轴正半轴的交点，
+    \bullet \quad \bullet \\
 
-    ，
+    \bullet
 
-    平移线段，使点与线段的中点重合，得到线段，
+    \end{array}$点$P(-1,0)$，点$Q(m,4)$，$M''$为线段$\overline{PQ}$的中点，
 
-    ∴，
+    ∴$M''\left(\frac{m-1}{2}, 2\right)$，
 
-    ∴，
+    ∵点M为$\odot\odot$与y轴正半轴的交点，
 
-    ∴，
+    $\therefore MO = 1$，
 
-    解得：或；
+    $\begin{array}{c}
 
-    ②由①可得：点为与轴正半轴的交点时，，
+    \bullet \\
 
-    ，
+    \bullet \quad \bullet \\
 
-    ∵在直线上存在线段的“中移点”，
+    \bullet
 
-    ∴，
+    \end{array}$平移线段OM，使点M与线段$\overline{PQ}$的中点$M''$重合，得到线段$O''M''$，
 
-    解得：，
+    ∴$M''O''=MO=1$，
 
-    即有最小值；
+    ∴$O\left(\frac{m-1}{2},1\right)$，
 
-    如图：当点为与轴负半轴的交点时，
+    ∴$OO''=\sqrt{\left(\frac{m-1}{2}\right)^{2}+1^{2}}=\sqrt{5}$，
 
-    ，
+    解得：$m = -3$或$m = 5$；
 
-    点，点，为线段中点，
+    ②由①可得：点M为$\odot\odot$与y轴正半轴的交点时，$O\left(\frac{m-1}{2},1\right)$，
 
-    ∴，
+    [图]，
 
-    ∵点为与轴正半轴的交点，
+    ∵在直线$y = x + 3$上存在线段$\overline{PQ}$的“中移点”$O''$，
 
-    ，
+    ∴$1=\frac{m-1}{2}+3$，
 
-    平移线段，使点与线段的中点重合，得到线段，
+    解得：$m = -3$，
 
-    ∴，
+    即m有最小值$-3$；
 
-    ∴，
+    如图：当点M为$\odot\odot$与y轴负半轴的交点时，
 
-    ∵在直线上存在线段的“中移点”，
+    [图]，
 
-    ∴，
+    $\begin{array}{c}
 
-    解得：，
+    \bullet \\
 
-    即有最大值1；
+    \bullet \quad \bullet \\
 
-    ∴的取值范围为；
+    \bullet
 
-    【小问2详解】
-
-    解：如图：经分析，当在同一象限内，存在最小值；当在相对象限内，存在最大值，
-
-    ，
-
-    ∵，
-
-    ∴当在同一条直线上且关于原点对称时，有最小值，
-
-    设，设，则，
-
-    ∴，，
-
-    ∴，
-
-    ∵，
-
-    ∴ ，，
-
-    ∴．'
+    \end{array}$点$P(-1,0)$，点$Q(m,4)$，$M''$为线段$\overline{PQ'
   knowledge_points:
   - 勾股定理
   - 平移
@@ -1112,3 +1325,9 @@ questions:
   difficulty: 压轴
   recommended_for:
   - L3
+  figures:
+  - figures/2023-shijingshan-er-fig28.jpg
+  - figures/2023-shijingshan-er-fig29.jpg
+  - figures/2023-shijingshan-er-fig30.jpg
+  - figures/2023-shijingshan-er-fig31.jpg
+  - figures/2023-shijingshan-er-fig32.jpg

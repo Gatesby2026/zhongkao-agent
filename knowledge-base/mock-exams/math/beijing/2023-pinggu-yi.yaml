@@ -1,8 +1,8 @@
 # ============================================================
 # 2023年北京平谷区中考数学一模试卷 — 逐题分析
 # ============================================================
-# 数据来源：knowledge-original/精品解析：2023年北京市平谷区中考一模数学试题 （原卷版）.docx
-# 自动生成，部分数学公式可能显示不全（docx公式对象无法完整提取）
+# 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
+# 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
 # 满分：100分  时长：120分钟
 
 year: 2023
@@ -17,9 +17,19 @@ questions:
 - id: 1
   type: 选择
   score: 2
-  question: "下面几何体中，是圆柱的为（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '下面几何体中，是圆柱$[公式]$为（）
+
+    A.[图]B.[图]C.[图]D.[图]'
+  answer: A
+  solution: '解：A、是圆柱，故此选项符合题意；
+
+    B、是圆锥，故此选项不符合题意；
+
+    C、是三棱锥，故此选项不符合题意；
+
+    D、是球体，故此选项不符合题意；
+
+    故选：A．'
   knowledge_points:
   - 综合
   module: circles
@@ -29,12 +39,21 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-pinggu-yi-fig02.png
+  - figures/2023-pinggu-yi-fig03.png
+  - figures/2023-pinggu-yi-fig04.png
+  - figures/2023-pinggu-yi-fig05.png
 - id: 2
   type: 选择
   score: 2
-  question: "为了确保我国粮食种植稳定性，国家提出了“严防死守18亿亩耕地的红线目标”，经过了多年的努力和坚守，我国耕地面积止住了下跌趋势，而且还实现了增长．到2020年，全国耕地保有量回升至18.65亿亩以上，1865000000用科学记数法表示为（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '为了确保我国粮食种植的稳定性，国家提出了“严防死守18亿亩耕地的红线目标”，经过了多年的努力和坚守，我国耕地面积止住了下跌趋势，而且还实现了增长．到2020年，全国耕地保有量回升至18.65亿亩以上，1865000000用科学记数法表示为（）
+
+    A.$1.865\times10^{7}$B.$18.65\times 10^{8}$C.$1.865\times10^{9}$D.$1.865\times10^{12}$'
+  answer: C
+  solution: '解：$1865000000=1.865\times10^{9}$，
+
+    故选C．'
   knowledge_points:
   - 科学记数法
   module: numbersAndExpressions
@@ -47,24 +66,58 @@ questions:
 - id: 3
   type: 选择
   score: 2
-  question: "把一根细线固定在半圆形盘角器的圆心处，细线的另一端系一个小重物，制成一个简单的测角仪，如图所示，细线与边重合，则∠A的度数为（    ）\nA. 30°\tB. 40°\tC. 50°\tD. 75°"
-  answer: ''
-  solution: ''
+  question: '把一根细线固定在半圆形盘角器的圆心处，细线的另一端系一个小重物，制成一个简单的测角仪，如图所示，细线与BC边重合，则∠A的度数为（）
+
+    [图]
+
+    A.30°B.40°C.50°D.75°'
+  answer: B
+  solution: '解：由量角器得$\angle ABC = 50^\circ$，
+
+    ∵$AC \perp BC$，
+
+    ∴$\angle ACB=90^\circ$，
+
+    ∴$\angle A=90^{\circ}-\angle ABC=40^{\circ}$．
+
+    故选：B'
   knowledge_points:
   - 综合
-  module: circles
+  module: triangles
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-pinggu-yi-fig06.png
 - id: 4
   type: 选择
   score: 2
-  question: "实数a在数轴上的对应点的位置如图所示．若实数b满足，则b的值可以是（    ）\nA. 1\tB. 0\tC. \tD."
-  answer: ''
-  solution: ''
+  question: '实数a在数轴上的对应点的位置如图所示．若实数b满足$b < -a$，则b的值可以是（）
+
+    [图]
+
+    A.1B.0C.$-1$D.$-2$'
+  answer: D
+  solution: '解：由数轴的得：$1<a<2$，
+
+    $-2 < -a < -1$，
+
+    $\therefore 1<|a|<2$，
+
+    又$\because b < -a < 0$，
+
+    $\therefore b$到原点的距离一定大于1，
+
+    $\because b<0$，
+
+    $\therefore b<-1$，
+
+    观察四个选项，只有选项D符合，
+
+    故选：D．'
   knowledge_points:
   - 综合
   module: numbersAndExpressions
@@ -74,14 +127,27 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-pinggu-yi-fig07.png
 - id: 5
   type: 选择
   score: 2
-  question: "不透明的袋子中有三个小球．上面分别写着数学“1”“2”“3”，除数字外三个小球无其他差别．从中随机摸出一个小球，记录其数字，不放回，再从中随机摸出一个小球．记录其数字，那么两次记录的数字之和为3的概率是（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '不透明的袋子中有三个小球．上面分别写着数学“1”“2”“3”，除数字外三个小球无其他差别．从中随机摸出一个小球，记录其数字，不放回，再从中随机摸出一个小球．记录其数字，那么两次记录的数字之和为3的概率是（）
+
+    A.$\frac{1}{4}$B.$\frac{1}{3}$C.$\frac{1}{2}$D.$\frac{2}{3}$'
+  answer: B
+  solution: '解：画树状图如下：
+
+    [图]
+
+    共有6种等可能的情况，其中两次记录的数字之和为3的有2种，
+
+    ∴两次记录的数字之和为3的概率为$\frac{2}{6}=\frac{1}{3}$，
+
+    故选B．'
   knowledge_points:
   - 概率
+  - 树状图
   module: statisticsAndProbability
   difficulty: 基础
   recommended_for:
@@ -89,15 +155,26 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-pinggu-yi-fig08.png
 - id: 6
   type: 选择
   score: 2
-  question: "若关于x的一元二次方程有两个不相等的实数解．则实数m的取值范围为（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '若关于x的一元二次方程$x^{2}+2x+m=0$有两个不相等的实数解．则实数m的取值范围为（）
+
+    A.$m\ 1$B.$m\geq1$C.$m > 1$D.$m < 1$'
+  answer: D
+  solution: '解：∵关于x的一元二次方程$x^{2}+2x+m=0$有两个不相等的实数解，
+
+    ∴$\Delta=b^{2}-4ac=2^{2}-4m=4-4m>0$，
+
+    ∴$m < 1$．
+
+    故选：D'
   knowledge_points:
   - 一元二次方程
-  module: numbersAndExpressions
+  - 根的判别式
+  module: equationsAndInequalities
   difficulty: 中档
   recommended_for:
   - L1
@@ -106,9 +183,17 @@ questions:
 - id: 7
   type: 选择
   score: 2
-  question: "瓷器上纹饰是中国古代传统文化的重要载体之一，如图所示的图形即为瓷器上的纹饰，该图形即为中心对称图形，又为轴对称图形，该图形对称轴的条数为（    ）\nA. 1\tB. 2\tC. 4\tD. 5"
-  answer: ''
-  solution: ''
+  question: '瓷器上的纹饰是中国古代传统文化的重要载体之一，如图所示的图形即为瓷器上的纹饰，该图形即为中心对称图形，又为轴对称图形，该图形对称轴的条数为（）
+
+    [图]
+
+    A.1B.2C.4D.5'
+  answer: C
+  solution: '解：如图所示：由4条对称轴，
+
+    故选：C．
+
+    [图]'
   knowledge_points:
   - 中心对称图形
   - 轴对称图形
@@ -119,12 +204,43 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-pinggu-yi-fig09.png
+  - figures/2023-pinggu-yi-fig10.png
 - id: 8
   type: 选择
   score: 2
-  question: "摄氏温度（）与华氏温度（）是表示温度的两种方法，它们的关系如下：\n若设摄氏温度（）为x，华氏温度（）为y，y与x之间满足如下我们学习过的一种函数关系，则y与x满足的函数关系为（    ）\nA. 正比例函数\tB. 一次函数\tC. 反比例函数\tD. 二次函数"
-  answer: ''
-  solution: ''
+  question: '摄氏温度（$^\circ C$）与华氏温度（$^\circ F$）是表示温度的两种方法，它们的关系如下：
+
+    摄氏温度（$^\circ C$）
+
+    0
+
+    10
+
+    20
+
+    华氏温度（$^\circ F$）
+
+    32
+
+    50
+
+    68
+
+    若设摄氏温度（$^\circ C$）为x，华氏温度（$^\circ F$）为y，y与x之间满足如下我们学习过的一种函数关系，则y与x满足的函数关系为（）
+
+    A.正比例函数B.一次函数C.反比例函数D.二次函数'
+  answer: B
+  solution: '解；由表格数据可得：$\frac{50-32}{10-6}=1.8$，$\frac{68-50}{20-10}=1.8$，
+
+    ∴$\frac{y-32}{x-0}=1.8$，
+
+    ∴$y = 1.8x + 32$，
+
+    ∴摄氏温度（$^\circ C$）与华氏温度（$^\circ F$）满足的函数关系是一次函数，
+
+    故选：B．'
   knowledge_points:
   - 一次函数
   - 反比例函数
@@ -138,9 +254,15 @@ questions:
 - id: 9
   type: 填空
   score: 2
-  question: 若在实数范围内有意义，则实数x的取值范围是______．
-  answer: ''
-  solution: ''
+  question: 若$\frac{6}{x-1}$在实数范围内有意义，则实数x的取值范围是______．
+  answer: $x \ne 1$
+  solution: '解：∵$\frac{6}{x-1}$在实数范围内有意义，
+
+    ∴$x-1\neq0$，
+
+    ∴$x \ne 1$．
+
+    故答案为：$x \ne 1$'
   knowledge_points:
   - 综合
   module: numbersAndExpressions
@@ -153,12 +275,18 @@ questions:
 - id: 10
   type: 填空
   score: 2
-  question: 分解因式：______．
-  answer: ''
-  solution: ''
+  question: 分解因式：$ax^{2}-2ax+a$______．
+  answer: $a(x-1)^2$
+  solution: '解：$ax^{2}-2ax+a$
+
+    $=a\left(x^{2}-2x+1\right)$
+
+    $=a(x-1)^2$，
+
+    故答案为：$a(x-1)^2$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 因式分解
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -168,12 +296,22 @@ questions:
 - id: 11
   type: 填空
   score: 2
-  question: 方程的解为______．
-  answer: ''
-  solution: ''
+  question: 方程$\frac{3}{2x+1}=\frac{1}{x-1}$的解为______．
+  answer: $x = 4$
+  solution: '$\frac{3}{2x+1}=\frac{1}{x-1}$
+
+    两边同乘$(2x+1)(x-1)$得$3(x-1)=2x+1$，
+
+    化简得$3x-3=2x+1$，
+
+    解得$x = 4$，
+
+    经检验，当$x = 4$时，$(2x+1)(x-1)=0$，所以$x = 4$是原分式方程的解，
+
+    故答案为：$x = 4$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 分式方程
+  module: equationsAndInequalities
   difficulty: 基础
   recommended_for:
   - L0
@@ -184,8 +322,16 @@ questions:
   type: 填空
   score: 2
   question: 写出一个比3大且比4小的无理数：_____．
-  answer: ''
-  solution: ''
+  answer: 答案不是唯一，$\sqrt{15}$
+  solution: '设无理数的被开方数为x，
+
+    ∵无理数比3大且比4小，
+
+    ∴9＜x＜16，
+
+    ∴其中的一个无理数为$\sqrt{15}$，
+
+    故答案为：$\sqrt{15}$．'
   knowledge_points:
   - 综合
   module: numbersAndExpressions
@@ -198,9 +344,27 @@ questions:
 - id: 13
   type: 填空
   score: 2
-  question: 在平面直角坐标系中，反比例函数的图象过点和，则______．
-  answer: ''
-  solution: ''
+  question: 在平面直角坐标系xOy中，反比例函数$y=\frac{k}{x}(k\neq0)$的图象过点$A(2,-1)$和$B(m,-2)$，则$m =$______．
+  answer: '1'
+  solution: '$\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$反比例函数$y=\frac{k}{x}(k\neq0)$的图象过点$A(2,-1)$，
+
+    $k=2\times(-1)-2$，
+
+    $\therefore B(m,-2)$在反比例函数$y=\frac{k}{x}(k\neq0)$的图象上，
+
+    $k = -2 = -2m$，
+
+    解得$m = 1$，
+
+    故答案为：1．'
   knowledge_points:
   - 反比例函数
   - 坐标系
@@ -215,9 +379,45 @@ questions:
   score: 2
   question: '为了提高大家的环境保护意识，某小区在假期开展了废旧电池回收的志愿者活动，该社区的10名中学生参与了该项活动，回收的旧电池数盘如下表：
 
+    电池数量（节）
+
+    2
+
+    5
+
+    6
+
+    8
+
+    10
+
+    人数
+
+    1
+
+    4
+
+    2
+
+    2
+
+    1
+
     根据以上数据，这10名中学生收集废旧电池的平均数为______．'
-  answer: ''
-  solution: ''
+  answer: '6'
+  solution: '解：$\left(2\times1+5\times4+6\times2+8\times2+10\times1\right)\div10=60\div10=6$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$10名中学生回收废电池的平均数是6．
+
+    故答案为：6．'
   knowledge_points:
   - 平均数
   module: statisticsAndProbability
@@ -229,26 +429,54 @@ questions:
 - id: 15
   type: 填空
   score: 2
-  question: 如图，在中，，，平分，若，则______．
-  answer: ''
-  solution: ''
+  question: '如图，在$\triangle ABC$中，$\angle C=90^{\circ}$，$\angle A = 30^\circ$，BD平分$\angle ABC$，若$S_{\triangle BCD}=1$，则$S_{\triangle ABD} =$______．
+
+    [图]'
+  answer: '2'
+  solution: '解：∵$\angle C=90^{\circ}$，$\angle A = 30^\circ$，
+
+    ∴$\angle ABC = 60^\circ$，
+
+    ∵BD平分$\angle ABC$，
+
+    ∴$\angle CBD = \angle ABD = \frac{1}{2} \angle ABC = 30^\circ$，
+
+    ∴$CD=\frac{1}{2}BD$，$BD = AD$，
+
+    ∴$CD=\frac{1}{2}AD$，
+
+    ∵$S_{\triangle ABC} = \frac{1}{2} CD \cdot BC = 1$，$S_{\triangle ABC}=\frac{1}{2}AD\cdot BC$，
+
+    ∴$S_{\triangle ABD}=2$，
+
+    故答案为：2．'
   knowledge_points:
   - 综合
-  module: geometryComprehensive
+  module: triangles
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-pinggu-yi-fig11.png
 - id: 16
   type: 填空
   score: 2
   question: 某货运公司临时接到一个任务，从工厂同时运送A、B两种货物各20箱到展馆，货运公司调派甲货车运送A种货物，乙货车运送B种货物，A种货物每箱80千克，B种货物每箱70千克，因为两种货物包装箱完全一样，装运工人一时疏忽两车虽然所装货物数量正确，但部分货物却装混了．运送途中安检时，两车过地秤，发现甲车比乙车的货物重160千克，则甲、乙两车各有______箱货物装错，到达展馆，为了尽快把货物区分开，乙车司机借来了一台最多可以称300千克的秤精选最优称重方案，根据被错装货物出现的所有可能情况，最多需要称______次就能把乙车上装错的货物区分出来．
-  answer: ''
-  solution: ''
+  answer: ①.2②.8
+  solution: '解：设甲、乙两车各有x箱货物装错，根据题意得：
+
+    $80x(20-x)+70x-[70x(20-x)+80x]=160$
+
+    解得：$x=2$，
+
+    将乙车上的货物平均分为5堆，每堆4箱，将5堆货物最多称4次，其中重量为280千克的堆里没有装错，可以判断出错误的堆数；装错的货物可以在1堆里，也可以在2堆里；如果装错的货物可以在1堆里，先称两箱，如果这个两箱质量和为140或160千克，则可判断哪两箱是装错的，若这个两箱质量和为150千克，再选择这两箱中其中一箱称重量，就可以哪一箱是装错的，另两箱也同操作即可，最多称3次可以将装错的2箱货物区分出来；如果装错的货物可以在2堆里，每一堆都先称两箱，判断装错的在哪两箱中，然后在这两箱中称其中一箱就可以判断了，最多称4次可以将装错的2箱货物区分出来，所以最多需要称8次就能把乙车上装错的货物区分出来，
+
+    故答案为：2，8．'
   knowledge_points:
   - 综合
-  module: geometryComprehensive
+  module: equationsAndInequalities
   difficulty: 较难
   recommended_for:
   - L2
@@ -256,12 +484,17 @@ questions:
 - id: 17
   type: 解答
   score: 5
-  question: （第17题，详见原卷）
-  answer: ''
-  solution: ''
+  question: 计算：$(\pi - 2023)^{0} + 2\sin 60^{\circ} - \sqrt{27} + |\pi - \sqrt{3}|$．
+  answer: $-\sqrt{3}$
+  solution: '解：$(\pi - 2023)^{0} + 2\sin 60^{\circ} - \sqrt{27} + |\pi - \sqrt{3}|$
+
+    $1+2\times\frac{\sqrt{3}}{2}-3\sqrt{3}\times\sqrt{3}-1$
+
+    $=-\sqrt{3}$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 三角函数
+  - 绝对值
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -271,9 +504,21 @@ questions:
 - id: 18
   type: 解答
   score: 5
-  question: 解不等式组：．
-  answer: ''
-  solution: ''
+  question: '解不等式组：$\begin{aligned}
+
+    &2x+4>1-x\\
+
+    &x<\frac{2x+3}{3}
+
+    \end{aligned}$．'
+  answer: $-1 \leq x < 3$
+  solution: '解：$\left\{\begin{array}{l}2x+4>1-x\text{①}\\x<\dfrac{2x+3}{3}\text{②}\end{array}\right.$，
+
+    由①得：$x^{-1}$，
+
+    由②得：$x<3$，
+
+    ∴$-1 \leq x < 3$．'
   knowledge_points:
   - 不等式
   - 不等式组
@@ -287,12 +532,18 @@ questions:
 - id: 19
   type: 解答
   score: 5
-  question: 已知，求代数式的值．
-  answer: ''
-  solution: ''
+  question: 已知$2x^{2}+x-1=0$，求代数式$(x+2)(x-2)+x(x+1)$的值．
+  answer: $-3$
+  solution: '解：$(x+2)(x-2)+x(x+1)=x^{2}-4+x^{2}+x=2x^{2}+x-4$
+
+    ∵$2x^{2}+x-1=0$，
+
+    ∴$2x^{2}+x=1$，
+
+    ∴原式$=1-4=-3$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 方差
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -302,70 +553,201 @@ questions:
 - id: 20
   type: 解答
   score: 5
-  question: '已知：如图，为锐角三角形．
+  question: '已知：如图，$\triangle ABC$为锐角三角形．
 
-    求作：以为一边作，使，．
+    [图]
 
-    作法：①作边的垂直平分线；②作边的垂直平分线，与直线交于点O；③以O为圆心，为半径作；④连接并延长，交于点M，连接；即为所求作的三角形．
+    求作：以BC为一边作$Rt\triangle MBC$，使$\angle MBC = 90^\circ$，$\angle M=\angle A$．
+
+    作法：①作AC边的垂直平分线DE；②作BC边的垂直平分线FG，与直线DE交于点O；③以O为圆心，OA为半径作$\odot\odot$；④连接CO并延长，交$\odot\odot$于点M，连接BM；$\triangle MBC$即为所求作的三角形．
 
     （1）使用直尺和圆规，依作法补全图形（保留作图痕迹）；
 
     （2）完成下面的证明．
 
-    证明：∵是的垂直平分线，是的垂直平分线，与交于点O
+    证明：∵DE是AC的垂直平分线，FG是BC的垂直平分线，DE与FG交于点O
 
-    ∴
+    ∴$OA = OB = OC$
 
-    ∴点A、B、C都在上
+    ∴点A、B、C都在$\odot\odot$上
 
-    ∵为的直径
+    ∵CM为$\odot\odot$的直径
 
-    ∴______°
+    ∴$\angle MBC =$______°
 
-    ∵
+    ∵$\widehat{BC}=\widehat{BC}$
 
-    ∴（_____________）（填推理依据）
+    ∴$\angle M=\angle A$（_____________）（填推理依据）
 
-    ∴即为所求作的三角形．'
-  answer: ''
-  solution: ''
+    ∴$\triangle MBC$即为所求作的三角形．'
+  answer: （1）见解析（2）90，同弧（或等弧）所对的圆周角相等
+  solution: '【小问1详解】
+
+    解：尺规作图，如下所示：
+
+    [图]【小问2详解】
+
+    证明：∵DE是AC的垂直平分线，FG是BC的垂直平分线，DE与FG交于点O
+
+    ∴$OA = OB = OC$
+
+    ∴点A、B、C都在$\odot\odot$上
+
+    ∵CM为$\odot\odot$的直径
+
+    ∴$\angle MBC = 90^\circ$
+
+    ∵$\widehat{BC}=\widehat{BC}$
+
+    ∴$\angle M=\angle A$（同弧（或等弧）所对的圆周角相等）
+
+    ∴$\triangle MBC$即为所求作的三角形．
+
+    故答案为：90，同弧（或等弧）所对的圆周角相等．'
   knowledge_points:
-  - 综合
+  - 圆周角
+  - 尺规作图
+  module: circles
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  figures:
+  - figures/2023-pinggu-yi-fig12.png
+  - figures/2023-pinggu-yi-fig13.png
+- id: 21
+  type: 解答
+  score: 5
+  question: '如图，在$Y_{ABCD}$中，点E是BC中点．点F是AD中点．连接$AE, CF, EF, EE$平分$\angle AEC$．
+
+    [图]
+
+    （1）求证：四边形$AECF$是菱形：
+
+    （2）连接AC，与EF交于点O，连接OD．若$AF = 5$，$\sin\angle FAC=\frac{3}{5}$，求OD的长．'
+  answer: （1）见解析（2）$2\sqrt{13}$
+  solution: '【小问1详解】
+
+    证明：∵四边形ABCD是平行四边形
+
+    ∴$AD \parallel BC$，$AD = BC$
+
+    ∵F是AD中点，E是BC中点
+
+    ∴$AF \parallel EC$，$AF = EC$
+
+    ∴四边形AECF是平行四边形
+
+    ∵EF平分∠AEC
+
+    ∴$\angle AEF = \angle FEC$
+
+    ∵$AF \parallel EC$
+
+    ∴$\angle AFE=\angle FEC=\angle AEF$
+
+    ∴$AE = AF$
+
+    ∴四边形AECF是菱形
+
+    【小问2详解】
+
+    解：∵四边形AECF是菱形
+
+    ∴$AO = OC$，$EO = FO$，$\angle AOF = 90^\circ$
+
+    ∵$AF = 5$，$\sin\angle FAC=\frac{3}{5}$，
+
+    ∴$OF = 3$
+
+    ∴$AO = CO = \sqrt{5^{2} - 3^{2}} = 4$，
+
+    过点O作$OG \perp AB$于点G，
+
+    ∵$\frac{1}{2}OA\cdot OF=\frac{1}{2}AF\cdot OG$，
+
+    即$\frac{1}{2}x+4=\frac{x}{2}\times5\ GG$
+
+    ∴$OG = \frac{12}{5}$，
+
+    ∵$GF=\sqrt{OF^{2}-OG^{2}}=\sqrt{3^{2}-\left(\frac{12}{5}\right)^{2}}=\frac{9}{5}$
+
+    ∴$GD=\frac{9}{5}+5=\frac{34}{5}$，
+
+    ∴$OD = \sqrt{GD^{2} + OG^{2}} = \sqrt{\left(\frac{34}{5}\right)^{2} + \left(\frac{12}{5}\right)^{2}} = 2\sqrt{13}$
+
+    [图]'
+  knowledge_points:
+  - 勾股定理
+  - 平行四边形
+  - 菱形
   module: triangles
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
-- id: 21
-  type: 解答
-  score: 5
-  question: '如图，在中，点E中点．点F是中点．连接平分．
-
-    （1）求证：四边形是菱形：
-
-    （2）连接，与交于点O，连接．若，，求的长．'
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 菱形
-  module: quadrilaterals
-  difficulty: 中档
-  recommended_for:
-  - L1
-  - L2
-  - L3
+  figures:
+  - figures/2023-pinggu-yi-fig14.png
+  - figures/2023-pinggu-yi-fig15.png
 - id: 22
   type: 解答
   score: 5
-  question: '在平面直角坐标系中，函数的图象经过点，
+  question: '在平面直角坐标系xOy中，函数$y=kx+b\ (k\neq0)$的图象经过点$(-1,0)$，$(0,1)$
 
     （1）求该函数的解析式；
 
-    （2）当时，对于x的每一个值，函数的值大于函数的值，求n的取值范围．'
-  answer: ''
-  solution: ''
+    （2）当$x > -2$时，对于x的每一个值，函数$y=2x+n$的值大于函数$y=kx+b\ (k\neq0)$的值，求n的取值范围．'
+  answer: （1）$y=x+1$ （2）$n\ 3$
+  solution: '【小问1详解】
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$一次函数$y=kx+b\ (k\neq0)$的图象经过点$(-1,0)$和$(0,1)$，将坐标代入得$\left\{\begin{array}{l} -k + b = 0 \\ b = 1 \end{array}\right.$，解得$\left\{\begin{array}{l}k=1\\b=1\end{array}\right.$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$y=x+1$．
+
+    【小问2详解】
+
+    由$y=x+1$可知$k=1>0$，由$y=2x+n$可知$k=2>0$，所以当$x > -2$时y随x增大而增大，
+
+    当$x = -2$时，$y=x+|-2+x|-|x|$，
+
+    当$x = -2$时，$y=2x+n=4+n$，
+
+    根据题意$x > -2$时对于x的每一个值，函数$y=2x+n$的值大于函数$y=x+1$的值，
+
+    可得$-4+n-1$，解得$n\ 3$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$n\ 3$时结论成立．
+
+    故n的取值范围为$n\ 3$．'
   knowledge_points:
+  - 一次函数
+  - 不等式
   - 坐标系
   module: functions
   difficulty: 中档
@@ -380,17 +762,93 @@ questions:
 
     a．A、B两个城市3月1号至10号的日最高气温数据的折线图：
 
+    [图]
+
     b．A、B两个城市3月1号至10号的日最高气温数据的平均数中位数众数、极差：
+
+    城市
+
+    平均数
+
+    中位数
+
+    众数
+
+    极差
+
+    A
+
+    17.5
+
+    17.5
+
+    19
+
+    z
+
+    B
+
+    12.4
+
+    m
+
+    n
+
+    8
 
     根据以上信息，回答下列问题：
 
     （1）求表中m、n、z的值；
 
-    （2）记A城市3月1号至10号的日最高气温的方差为，B城市3月1号至10号的日最高气温的方差为，则______（填“＞”“＜”或“=”）；
+    （2）记A城市3月1号至10号的日最高气温的方差为$S_{1}^{2}$，B城市3月1号至10号的日最高气温的方差为$s_{2}^{2}$，则$S_{1}^{2}$______$s_{2}^{2}$（填“＞”“＜”或“=”）；
 
     （3）如果你是明明，请根据以上统计数据，对A、B两个城市3月1号至10号的日最高气温情况做简单的分析．（至少从两个方面做出分析）'
-  answer: ''
-  solution: ''
+  answer: （1）$m = 12.5$，$n = 14$，$z = 15$ （2）＞（3）见解析
+  solution: '【小问1详解】
+
+    解：将B城市3月1号至10号的日最高气温（℃）从小到大排列：
+
+    9，9，11，11，12，13，14，14，14，17
+
+    $c.m=\frac{(12+13)}{2}=12.5$；
+
+    B城市3月1号至10号的日最高气温（℃）出现最多次数的温度是14℃，
+
+    $\therefore n = 14$；
+
+    A城市3月1号至10号的日最高气温（℃）中最高温度是26℃，最低温度是11℃，
+
+    $z = 26 - 11 = 15$，
+
+    故答案为：$m = 12.5$，$n = 14$，$z = 15$．
+
+    【小问2详解】
+
+    根据方差公式得：
+
+    $s_{1}^{2}=\frac{1}{10}\left[\left(11-17.5\right)^{2}+\left(13-17.5\right)^{2}+\cdots+\left(21-17.5\right)^{2}+\left(26-17.5\right)^{2}\right]$
+
+    $=\frac{1}{10}(42.25+20.25+\cdots+12.25+72.25)$
+
+    $\frac{1}{10}\times160.5$
+
+    $=16.05$
+
+    $s_{3}^{2}=\frac{1}{10}\left[\left(12-12.4\right)^{2}+\left(11-12.4\right)^{2}+\cdots+\left(14-12.4\right)^{2}+\left(17-12.4\right)^{2}\right]$
+
+    $\frac{1}{10}(0.16+1.96+\cdots+0.36+21.16)$
+
+    $\frac{1}{10}\times54.2$
+
+    $= 5.42$
+
+    $\therefore s_{1}^{2}>s_{2}^{2}$
+
+    故答案为：$\gt$．
+
+    【小问3详解】
+
+    A城市3月1日至10日日平均气温的平均值更高，极差较大，温度波动较'
   knowledge_points:
   - 统计
   - 平均数
@@ -402,55 +860,219 @@ questions:
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2023-pinggu-yi-fig16.png
 - id: 24
   type: 解答
   score: 6
-  question: '如图，是的直径，C、D是上的两点，且，过点D作的切线交的延长线于点E．
+  question: '如图，AB是$\odot\odot$的直径，C、D是$\odot\odot$上的两点，且$\overrightarrow{DB}=\overrightarrow{DC}$，过点D作$\odot\odot$的切线交AC的延长线于点E．
 
-    （1）求证：；
+    [图]
 
-    （2）连接．若，，求的长．'
-  answer: ''
-  solution: ''
+    （1）求证：$\angle E=90^{\circ}$；
+
+    （2）连接CD．若$\cos\angle ECD=\frac{2}{3}$，$AB = 9$，求CE的长．'
+  answer: （1）见解析（2）$CE = 4$
+  solution: '【小问1详解】
+
+    解：连接OD．
+
+    [图]
+
+    ∵DE为$\odot\odot$的切线，
+
+    ∴$\angle EDO = 90^\circ$，
+
+    ∵$\widehat{BD}=\widehat{DC}$，
+
+    ∴$\angle1=\angle2$，
+
+    ∵$OA = OD$，
+
+    ∴$\angle2=\angle3$，
+
+    ∴$\angle1=\angle3$，
+
+    ∴$OD \parallel AE$，
+
+    ∴$\angle E=\angle EDO=90^{\circ}$．
+
+    【小问2详解】
+
+    解：∵四边形$ABDC$内接于$\odot\odot$，
+
+    [图]
+
+    ∴$\angle B=\angle ECD$，
+
+    ∵$\cos\angle ECD=\frac{2}{3}$，
+
+    ∴$\cos\angle B=\frac{2}{3}$，
+
+    ∵AB是直径，
+
+    ∴$\angle ADB=90^\circ$，
+
+    ∵$AB = 9$，
+
+    ∴$BD = 6$，
+
+    ∵$\widehat{BD}=\widehat{DC}$，
+
+    ∴$CD=BD=6$，
+
+    ∵$\cos\angle ECD=\frac{2}{3}$，
+
+    ∴$CE = 4$．'
   knowledge_points:
+  - 圆周角
   - 切线
   module: circles
   difficulty: 较难
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2023-pinggu-yi-fig17.png
+  - figures/2023-pinggu-yi-fig18.png
+  - figures/2023-pinggu-yi-fig19.png
 - id: 25
   type: 解答
   score: 6
-  question: '如图所示，某农场的小麦收割机正在收割小麦，脱离后的谷粒沿着喷射管道飞出，飞行路线可以看作是抛物线的一部分，建立如图所示的平面直角坐标系，谷粒从喷射出到着陆的过程中，谷粒的竖直高度y（单位：m）与距离喷射口的水平距离x（单位：m）近似满足函数关系．
+  question: '如图所示，某农场的小麦收割机正在收割小麦，脱离后的谷粒沿着喷射管道飞出，飞行路线可以看作是抛物线的一部分，建立如图所示的平面直角坐标系，谷粒从喷射出到着陆的过程中，谷粒的竖直高度y（单位：m）与距离喷射口的水平距离x（单位：m）近似满足函数关系$y = a(x - h)^2 + k \, (a < 0)$．
+
+    [图]
 
     （1）谷粒距离喷射口的水平距离x（单位：m）与竖直高度y（单位：m）的几组数据如下：
 
+    水平距离$x/m$
+
+    0
+
+    2
+
+    3
+
+    4
+
+    5
+
+    竖直高度$y/m$
+
+    3.5
+
+    4$[公式]$3
+
+    4.4
+
+    4.3
+
+    4.0
+
     根据上述数据，若用货车接运谷粒，保证和喷射口在同一平面的情况下，谷粒落下过程中恰好落到车厢的中心点．若货车车厢的中心点距地面1.9米，则货车车厢的中心点应距离喷射口几米？
 
-    （2）谷粒喷出的同时石子等较重的杂质会跟随谷粒一起在重力作用下沿抛物线①被分离出来，谷皮和颗粒等较轻的杂质也会跟着谷粒一起沿抛物线②被分离出来，若已知两条抛物线的解析式分别为A：；B：，则A、B对应的抛物线分别为A：______；B：______（写①或②即可）．'
-  answer: ''
-  solution: ''
+    （2）谷粒喷出的同时石子等较重的杂质会跟随谷粒一起在重力作用下沿抛物线①被分离出来，谷皮和颗粒等较轻的杂质也会跟着谷粒一起沿抛物线②被分离出来，若已知两条抛物线的解析式分别为A：$y = -0.09(x - 3.2)^2 + 4.42$；B：$y = -0.12(x - 2.8)^2 + 4.44$，则A、B对应的抛物线分别为A：______；B：______（写①或②即可）．'
+  answer: （1）8米（2）②；①
+  solution: '【小问1详解】
+
+    解：由表可知，抛物线的顶点坐标为$(3,4.4)$，
+
+    ∴抛物线的解析式为$y = a(x - 3)^2 + 4.4$，
+
+    ∵抛物线过点$(0,3.5)$，
+
+    $9a+4.4=3.5$，
+
+    解得$a = -0.1$，
+
+    ∴$y=0.1(x-3)^{2}+4.4$，
+
+    当$y=1.9$时，$-0.1(x-3)+4.4=1.9$，
+
+    解得$x=8$或$x=-2<0$（不符合题意，舍去），
+
+    所以货车车厢的中心点应距离喷射口8米．
+
+    【小问2详解】
+
+    解：由函数图象可知，从抛物线的开口大小看，抛物线①的小于抛物线②的，
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$抛物线$A: y = -0.09(x - 3.2)^2 + 4.42$的开口大于抛物线$B:y=-0.12(x-2.8)^{2}+4.44$的开口，
+
+    所以A、B对应的抛物线分别为$A:$②；$B:$①，
+
+    故答案为：②；①．'
   knowledge_points:
+  - 二次函数
   - 坐标系
   module: functions
   difficulty: 较难
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2023-pinggu-yi-fig20.png
 - id: 26
   type: 解答
   score: 6
-  question: '在平面直角坐标系中，点，在抛物线上．
+  question: '在平面直角坐标系xOy中，点$(1, y_{1})$，$(3, y_2)$在抛物线$y = x^2 - 2mx + m^2$上．
 
     （1）求抛物线的对称轴（用含m的式子表示）；
 
-    （2）若，求m的取值范围；
+    （2）若$y_1 < y_2$，求m的取值范围；
 
-    （3）若点在抛物线上，若存在，使成立，求m的取值范围．'
-  answer: ''
-  solution: ''
+    （3）若点$\left(x_{0},y_{0}\right)$在抛物线上，若存在$-1 < x_0 < 0$，使$y_{1}<y_{0}<y_{2}$成立，求m的取值范围．'
+  answer: （1）$x = m$ （2）$m<2$ （3）$0 < m < \frac{3}{2}$；
+  solution: '【小问1详解】
+
+    解：$\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$$\frac{b}{2a}-\frac{-2m}{2}=m$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$抛物线的对称轴为$x = m$；
+
+    【小问2详解】
+
+    解：将点$(1, y_{1})$，$(3, y_2)$代入抛物线，可得：$y=1-2m+m^{2}$，$y_{2}=9-6m+m^{2}$，
+
+    $\therefore y_1 < y_2$，
+
+    $1-2m+m^{2}<9-6m+m^{2}$，
+
+    解得$m<2$；
+
+    【小问3详解】
+
+    解：若点$\left(x_{0},y_{0}\right)$在抛物线上，若存在$-1 < x_0 < 0$，使$y_{1}<y_{0}<y_{2}$成立，
+
+    $\left\{\begin{array}{l}1+2m+m^{2}>1-2m+m^{2}\\m^{2}<9-6m+m^{2}\end{array}\right.$，
+
+    解得$0 < m < \frac{3}{2}$．'
   knowledge_points:
+  - 二次函数
+  - 不等式
   - 坐标系
   module: functions
   difficulty: 压轴
@@ -459,38 +1081,155 @@ questions:
 - id: 27
   type: 解答
   score: 7
-  question: '在中，，为边中点，连接，与相交于点，过作，交于点，连接．
+  question: '在$\triangle ABC$中，$BD \perp AC$，E为AB边中点，连接CE，BD与CE相交于点F，过E作$EM \perp EF$，交BD于点M，连接CM．
+
+    [图]
 
     （1）依题意补全图形；
 
-    （2）求证：；
+    （2）求证：$\angle EMP = \angle ACF$；
 
-    （3）判断数量关系，并证明．'
-  answer: ''
-  solution: ''
+    （3）判断$BM、CM、AC$的数量关系，并证明．'
+  answer: （1）见解析（2）见解析 （3）$AC^{2}+BM^{2}=MC^{2}$，见解析
+  solution: '【小问1详解】
+
+    解：补全图形，如图所示：
+
+    [图]【小问2详解】
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$$BD \perp AC$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\angle DCF + \angle DFC = 90^\circ$，
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$$EM \perp EF$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\angle EMP+\angle EPM=90^{\circ}$，
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$$\angle FPM = \angle DPC$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\angle EMF = \angle DCF$；
+
+    【小问3详解】
+
+    结论：$AC^{2}+BM^{2}=MC'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 全等三角形
+  - 勾股定理
+  module: triangles
   difficulty: 压轴
   recommended_for:
   - L3
+  figures:
+  - figures/2023-pinggu-yi-fig21.png
+  - figures/2023-pinggu-yi-fig22.png
+  - figures/2023-pinggu-yi-fig23.png
 - id: 28
   type: 解答
   score: 7
-  question: '在平面直角坐标系中，已知点，我们将点M的横纵坐标交换位置得到点．给出如下定义：对于平面上的点C，若满足，则称点C为点M的“对炫点”．
+  question: '在平面直角坐标系xOy中，已知点$M(m,n)$，我们将点M的横纵坐标交换位置得到点$N(n,m)$．给出如下定义：对于平面上的点C，若满足$NC = 1$，则称点C为点M的“对炫点”．
 
-    （1）已知点，
+    [图][图]
 
-    ①下列各点：，，中为点A的“对炫点”的是______；
+    （1）已知点$A(2,0)$，
 
-    ②点P是直线上一点，若点A是点P对炫点，求出点P的坐标；
+    ①下列各点：$Q_{1}(0,1)$，$Q_2(1,1)$，$Q_3(-1,2)$中为点A的“对炫点”的是______；
 
-    （2）设点是第一象限内一点，点P是直线上一点，至少存在一个点P，使得点A的对炫点也是点P的对炫点，求a、b的取值范围．'
-  answer: ''
-  solution: ''
+    ②点P是直线$y=x+2$上一点，若点A是点P的对炫点，求出点P的坐标；
+
+    （2）设点$A(a,b)$是第一象限内一点，点P是直线$y=x+b$上一点，至少存在一个点P，使得点A的对炫点也是点P的对炫点，求a、b的取值范围．'
+  answer: （1）①$Q_1$，$Q_3$；②$P\left(\frac{\sqrt{2}}{2}, 2+\frac{\sqrt{2}}{2}\right)$或$P\left(-\frac{\sqrt{2}}{2}, 2-\frac{\sqrt{2}}{2}\right)$ （2）$0 < a \leq 2\sqrt{2}$，$b>0$
+  solution: '【小问1详解】
+
+    解：①已知点$A(2,0)$，将其横纵坐标对换得到$B(0,2)$，易得$Q_{1}B=1,Q_{2}B=1$
+
+    故A的“对炫点”的是$Q_1$，$Q_3$；
+
+    故答案为$Q_1$，$Q_3$；
+
+    ②设点P的坐标为$(m,m+2)$，则将其横纵坐标对换得到$P''(m+2,m)$，
+
+    由题意可得$AP'' = 1$，即$(m+2-2)^{2}+(m-0)^{2}=1$，解得：$m = \pm \frac{\sqrt{2}}{2}$．
+
+    所以点P的坐标为$\frac{\sqrt{2}}{2} \cdot 2 + \frac{\sqrt{2}}{2}$或$\left(-\frac{\sqrt{2}}{2}, 2, \frac{\sqrt{2}}{2}\right)$．
+
+    【小问2详解】
+
+    解：如图，点$A(a,b)$的所有对炫点在以$B(b,a)$为圆心半径为1的圆上，点$P(a,a+b)$的所有对炫点在与直线$y=x+b$距离为1且互相平行的$\ell_{1}$、$l_2$两条直线上，所以满足条件的时刻即为圆B与$\ell_{1}$、$l_2$两条直线有交点即可
+
+    如图1：$BC = CD = 1, \angle EBD = 45^\circ, BD \perp ED$
+
+    所以$BD=BE=2$
+
+    所以$BE=\sqrt{2^{2}+2^{2}}=2\sqrt{2}$，即$a \leq 2\sqrt{2}$；
+
+    [图]
+
+    如图2：当$a>2\sqrt{2}$时，圆与$\ell_{1}$、$l_2$两条直线无交点，即没有“对炫点”，
+
+    [图]
+
+    ∵点$A(a,b)$是第一象限内一点，
+
+    ∴$a>0,b>0$，
+
+    ∴$0 < a \leq 2\sqrt{2}$，$b>0$．'
   knowledge_points:
+  - 勾股定理
   - 坐标系
-  module: geometryComprehensive
+  module: triangles
   difficulty: 压轴
   recommended_for:
   - L3
+  figures:
+  - figures/2023-pinggu-yi-fig24.png
+  - figures/2023-pinggu-yi-fig25.png
+  - figures/2023-pinggu-yi-fig26.png
+  - figures/2023-pinggu-yi-fig27.png

@@ -1,8 +1,8 @@
 # ============================================================
 # 2023年北京丰台区中考数学二模试卷 — 逐题分析
 # ============================================================
-# 数据来源：knowledge-original/精品解析：2023年北京市丰台区中考二模数学试题（原卷版）.docx
-# 自动生成，部分数学公式可能显示不全（docx公式对象无法完整提取）
+# 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
+# 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
 # 满分：100分  时长：120分钟
 
 year: 2023
@@ -11,90 +11,23 @@ exam_type: 二模
 subject: 数学
 full_score: 100
 duration_minutes: 120
-total_questions: 33
+total_questions: 28
 structure: 8选择(16分) + 8填空(16分) + 12解答(68分)
 questions:
 - id: 1
   type: 选择
   score: 2
-  question: 本试卷共8页，共三道大题、28道小题，满分100分．考试时间120分钟．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 2
-  type: 选择
-  score: 2
-  question: 在试卷和答题卡上认真填写学校名称、班级、姓名和考号．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 3
-  type: 选择
-  score: 2
-  question: 试题答案一律填涂或书写在答题卡上，在试卷上作答无效．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 4
-  type: 选择
-  score: 2
-  question: 选择题和作图题用2B铅笔作答，其他试题用黑色字迹签字笔作答．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 5
-  type: 选择
-  score: 2
-  question: 考试结束，将本试卷和答题卡一并交回．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 1
-  type: 选择
-  score: 2
-  question: "下图是某几何体的展开图，该几何体是（    ）\nA. 圆柱\tB. 三棱柱\tC. 圆锥\tD. 球"
-  answer: ''
-  solution: ''
+  question: '下图是某几何体的展开图，该几何体是（）
+
+    [图]
+
+    A.圆柱B.三棱柱C.圆锥D.球'
+  answer: C
+  solution: '解：∵圆锥的展开图为一个扇形和一个圆形，
+
+    ∴这个几何体是圆锥．
+
+    故选：C．'
   knowledge_points:
   - 综合
   module: circles
@@ -104,29 +37,59 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-fengtai-er-fig01.png
 - id: 2
   type: 选择
   score: 2
-  question: "如图，，点E为上一点，，若，则的度数为（    ）\nA. 35°\tB. 45°\tC. 55°\tD. 65°"
-  answer: ''
-  solution: ''
+  question: '如图，$AB \parallel CD$，点E为CD上一点，$AE \perp BE$，若$\angle B=55^{\circ}$，则$\angle 1$的度数为（）
+
+    [图]
+
+    A.35°B.45°C.55°D.65°'
+  answer: A
+  solution: '解：∵$\angle A+\angle B+\angle AEB=180^{\circ}$，且$\angle AEB = 90^\circ$，$\angle B=55^{\circ}$，
+
+    ∴$\angle A=180^\circ-\angle AEB-\angle B=35^\circ$，
+
+    ∵$AB \parallel CD$，
+
+    ∴$\angle1=\angle4=35^\circ$，
+
+    故选：A．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 平行线
+  module: triangles
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-fengtai-er-fig02.png
 - id: 3
   type: 选择
   score: 2
-  question: "实数a，b，c在数轴上的对应点的位置如图所示，则正确的结论是（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '实数a，b，c在数轴上的对应点的位置如图所示，则正确的结论是（）
+
+    [图]
+
+    A.$a > c$B.$\left|b\right|>1$C.$-b < c$D.$ac > 0$'
+  answer: C
+  solution: '解：由数轴可知，$-4 < a < -3$，$-1 < b < 0$，$2<c<3$，
+
+    A、$a < c$，原结论错误，不符合题意，选项错误；
+
+    B、$\left|b\right|<1$，原结论错误，不符合题意，选项错误；
+
+    C、$-b < c$，原结论正确，符合题意，选项正确；
+
+    D、$ac < 0$，原结论错误，不符合题意，选项错误，
+
+    故选C．'
   knowledge_points:
-  - 综合
+  - 绝对值
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -134,12 +97,26 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-fengtai-er-fig03.png
 - id: 4
   type: 选择
   score: 2
-  question: "以下图形绕点O旋转一定角度后都能与原图形重合，其中旋转角最小的是（    ）\nA.   \tB.    \tC.   \tD."
-  answer: ''
-  solution: ''
+  question: '以下图形绕点O旋转一定角度后都能与原图形重合，其中旋转角最小的是（）
+
+    A.[图]B.[图]C.[图]D.[图]'
+  answer: D
+  solution: '解：A选项：最小旋转角度$=\frac{360^{\circ}}{3}=120^{\circ}$；
+
+    B选项：最小旋转角度$\frac{360^{\circ}}{4}=90^{\circ}$；
+
+    C选项：最小旋转角度$-\frac{360^\circ}{5}=72^\circ$；
+
+    D选项：最小旋转角度$\frac{360^{\circ}}{5}=60^{\circ}$；
+
+    综上可得：旋转的角度最小的是D．
+
+    故选：A．'
   knowledge_points:
   - 旋转
   module: geometryComprehensive
@@ -149,15 +126,30 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-fengtai-er-fig04.png
+  - figures/2023-fengtai-er-fig05.png
+  - figures/2023-fengtai-er-fig06.png
+  - figures/2023-fengtai-er-fig07.png
 - id: 5
   type: 选择
   score: 2
-  question: "已知，，，，那么精确到的近似值是（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '已知$3.5^{2}=12.25$，$3.6^{2}=12.96$，$3.7^{2}=13.69$，$3.8^{2}=14.44$，那么$\sqrt{13}$精确到$0.1$的近似值是（）
+
+    A.$3.5$B.$3.6$C.$3.7$D.$3.8$'
+  answer: B
+  solution: '解：$3.6^{2}=12.96<13<13.69=3.7^{2}$，
+
+    $3.6<\sqrt{13}<3.7$，
+
+    $\because 3.6^{2}=12.96\approx 13$，$3.7^{2}=13.69\approx14$，
+
+    $\therefore \sqrt{13}$精确到$0.1$的近似值是$3.6$，
+
+    故选B．'
   knowledge_points:
   - 综合
-  module: geometryComprehensive
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -167,12 +159,19 @@ questions:
 - id: 6
   type: 选择
   score: 2
-  question: "掷一枚质地均匀的硬币m次，正面向上n次，则的值（    ）\nA. 一定是\tB. 一定不是\nC. 随着m的增大，越来越接近\tD. 随着m的增大，在附近摆动，呈现一定的稳定性"
-  answer: ''
-  solution: ''
+  question: '掷一枚质地均匀的硬币m次，正面向上n次，则$\frac{n}{m}$的值（）
+
+    A.一定$[公式]$$\frac{1}{2}$B.一定不是$\frac{1}{2}$
+
+    C.随着m的增大，越来越接近$\frac{1}{2}$D.随着m的增大，在$\frac{1}{2}$附近摆动，呈现一定的稳定性'
+  answer: D
+  solution: '解：投掷一枚质地均匀的硬币正面向上的概率是$\frac{1}{2}$，而投掷一枚质地均匀的硬币正面向上是随机事件，$\frac{n}{m}$是它的频率，随着m的增加，$\frac{n}{m}$的值会在$\frac{1}{2}$附近摆动，呈现出一定的稳定性．
+
+    故选：D．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 概率
+  - 频率
+  module: statisticsAndProbability
   difficulty: 中档
   recommended_for:
   - L1
@@ -181,11 +180,20 @@ questions:
 - id: 7
   type: 选择
   score: 2
-  question: "我国明代数学读本《算法统宗》一书中有这样一道题：一支竿子一条索，索比竿子长一托，对折索子来量竿，却比竿子短一托，索和竿子各几何?（1托为5尺）其大意为：现有一根竿和一条绳索，如果用绳索去量竿，绳索比竿长5尺，如果将绳索对折后再去量竿，就比竿短5尺，那么绳索和竿各长几尺?设绳索长为x尺，竿长为y尺，根据题意列方程组，正确的是（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '我国明代数学读本《算法统宗》一书中有这样一道题：一支竿子一条索，索比竿子长一托，对折索子来量竿，却比竿子短一托，索和竿子各几何?（1托为5尺）其大意为：现有一根竿和一条绳索，如果用绳索去量竿，绳索比竿长5尺，如果将绳索对折后再去量竿，就比竿短5尺，那么绳索和竿各长几尺?设绳索长为x尺，竿长为y尺，根据题意列方程组，正确的是（）
+
+    A.$\left\{ \begin{array}{l} x - y = 5 \\ y - \dfrac{1}{2}x = 5 \end{array} \right.$B.$\left\{ \begin{array}{l} x - y = 5 \\ \frac{1}{2}x - y = 5 \end{array} \right.$C.$\left\{ \begin{array} { l } {
+    x - y = 5 } \\ { x - 2 y = 5 } \end{array} \right.$D.$\left\{ \begin{array} { l } { x - y = 5 } \\ { y - 2 x = 5 } \end{array} \right.$'
+  answer: A
+  solution: '设绳索长为x尺，竿长为y尺，
+
+    根据题意列方程组：
+
+    $\left\{ \begin{array}{l} x - y = 5 \\ y - \dfrac{1}{2}x = 5 \end{array} \right.$，
+
+    故选A．'
   knowledge_points:
-  - 综合
+  - 二元一次方程组
   module: equationsAndInequalities
   difficulty: 中档
   recommended_for:
@@ -195,23 +203,49 @@ questions:
 - id: 8
   type: 选择
   score: 2
-  question: "下面三个问题中都有两个变量：\n①如图1，货车匀速通过隧道（隧道长大于货车长），货车在隧道内的长度y与从车头进入隧道至车尾离开隧道的时间x；\n②如图2，实线是王大爷从家出发匀速散步行走的路线（圆心O表示王大爷家的位置），他离家的距离y与散步的时间x；\n③如图3，往空杯中匀速倒水，倒满后停止，一段时间后，再匀速倒出杯中的水，杯中水的体积y与所用时间x\n其中，变量y与x之间的函数关系大致符合下图的是（\
-    \    ）\nA. ①②\tB. ①③\tC. ②③\tD. ①②③"
-  answer: ''
-  solution: ''
+  question: '下面三个问题中都有两个变量：
+
+    ①如图1，货车匀速通过隧道（隧道长大于货车长），货车在隧道内的长度y与从车头进入隧道至车尾离开隧道的时间x；
+
+    ②如图2，实线是王大爷从家出发匀速散步行走的路线（圆心O表示王大爷家的位置），他离家的距离y与散步的时间x；
+
+    ③如图3，往空杯中匀速倒水，倒满后停止，一段时间后，再匀速倒出杯中的水，杯中水的体积y与所用时间x
+
+    [图]
+
+    其中，变量y与x之间的函数关系大致符合下图的是（）
+
+    [图]
+
+    A.①②B.①③C.②③D.①②③'
+  answer: D
+  solution: '解：①当货车开始进入隧道时y逐渐变大，当货车完全进入隧道，由于隧道长大于货车长，此时y不变且最大，当货车开始离开隧道时y逐渐变小．故①正确；
+
+    ②王大爷距离家先y逐渐变大，他走的是一段弧线时，此时y不变且最大，之后逐渐离家越来越近直至回家，即y逐渐变小，故②正确；
+
+    ③往空杯中匀速倒水，倒满后停止，水的体积逐渐增加，一段时间后，再匀速倒出杯中的水，这期间，水量先保持不变，然后逐渐减少，杯中水的体积y与所用时间x，变量y与x之间的函数关系符合图象，故③正确；
+
+    故选：D．'
   knowledge_points:
   - 综合
-  module: circles
+  module: functions
   difficulty: 较难
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2023-fengtai-er-fig08.png
+  - figures/2023-fengtai-er-fig09.png
 - id: 9
   type: 填空
   score: 2
-  question: 若在实数范围内有意义，则实数x取值范围是_______．
-  answer: ''
-  solution: ''
+  question: 若$\sqrt{x-5}$在实数范围内有意义，则实数x的取值范围是_______．
+  answer: $x\geq5$
+  solution: '解：根据题意得：$x-5\quad0$，
+
+    解得：$x\geq5$．
+
+    故答案为：$x\geq5$．'
   knowledge_points:
   - 综合
   module: numbersAndExpressions
@@ -224,12 +258,15 @@ questions:
 - id: 10
   type: 填空
   score: 2
-  question: 分解因式：____．
-  answer: ''
-  solution: ''
+  question: 分解因式：$3x^{2}-3y^{2}=$____．
+  answer: $3(x+y)(x-y)$
+  solution: '解：$3x^{2}-3y^{2}=3(x^{2}-y^{2})=3(x+y)(x-y)$，
+
+    故答案为：$3(x+y)(x-y)$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 因式分解
+  - 方差
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -240,8 +277,10 @@ questions:
   type: 填空
   score: 2
   question: 正十边形的外角和为______．
-  answer: ''
-  solution: ''
+  answer: $360^\circ$##$360$度
+  solution: '解：正十边形的外角和为：$360^\circ$．
+
+    故答案为：$360^\circ$.'
   knowledge_points:
   - 综合
   module: triangles
@@ -254,10 +293,21 @@ questions:
 - id: 12
   type: 填空
   score: 2
-  question: 如图所示，正方形网格中，三个正方形A，B，C的顶点都在格点上，用等式表示三个正方形的面积之间的关系___________．
-  answer: ''
-  solution: ''
+  question: '如图所示，正方形网格中，三个正方形A，B，C的顶点都在格点上，用等式表示三个正方形的面积$S_{A''}\ S_{B''}\ S_{C}$之间的关系___________．
+
+    [图]'
+  answer: $S_{A}+S_{B}=S_{C}$
+  solution: '解：$S_{A}=3^{2}=9$，$S_{B}=5^{2}=25$，
+
+    正方形C的边长为$\sqrt{3^{2}+5^{2}}=\sqrt{34}$，
+
+    ∴$S_{\triangle}=\sqrt{34^{2}}=34$，
+
+    ∴$S_{A''}\ S_{B''}\ S_{C}$之间的关系为$S_{A}+S_{B}=S_{C}$，
+
+    故答案为：$S_{A}+S_{B}=S_{C}$，'
   knowledge_points:
+  - 勾股定理
   - 正方形
   module: functions
   difficulty: 基础
@@ -266,12 +316,34 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-fengtai-er-fig10.png
 - id: 13
   type: 填空
   score: 2
-  question: 在平面直角坐标系中，反比例函数和的图象如图所示，k的值可以是___________．（写出一个即可）．
-  answer: ''
-  solution: ''
+  question: '在平面直角坐标系xOy中，反比例函数$\gamma_{1}=\frac{1}{x}(x>0)$和$y_{2}=\frac{k}{x}(x>0)$的图象如图所示，k的值可以是___________．（写出一个即可）．
+
+    [图]'
+  answer: 2（答案不唯一）
+  solution: '如图，在$y_{2}=\frac{k}{x}(x>0)$上任取一点A，作$AB \perp x$轴，交$\gamma_{1}=\frac{1}{x}(x>0)$与点D，作$AC \perp y$轴，过点D作$DE \perp y$轴，
+
+    [图]
+
+    设$A\left(a,\frac{k}{a}\right)$，则$D\left(a,\frac{1}{a}\right)$，
+
+    ∴$OC=\frac{k}{a}$，$OE = \frac{1}{a}$．
+
+    ∵$OC > OE$，
+
+    ∴$\frac{k}{a}>\frac{1}{a}$．
+
+    ∵$a > 0$，
+
+    ∴$k>1$．
+
+    ∴k的值可以是2．
+
+    故答案为：2．（答案不唯一）'
   knowledge_points:
   - 反比例函数
   - 坐标系
@@ -281,11 +353,14 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-fengtai-er-fig11.png
+  - figures/2023-fengtai-er-fig12.png
 - id: 14
   type: 填空
   score: 2
-  question: 若，则代数式的值为__________．
-  answer: ''
+  question: 若$a-b=2$，则代数式$\frac{a^{2}}{a-b}+\frac{b^{2}-2ab}{a-b}$的值为__________．
+  answer: '2'
   solution: ''
   knowledge_points:
   - 综合
@@ -298,9 +373,13 @@ questions:
 - id: 15
   type: 填空
   score: 2
-  question: 下图是某书店2022年7月至12月教育类图书销售额占当月全部图书销售额的百分比折线统计图．小华认为，8月份教育类图书销售额比7月份减少了．他的结论___________（填“正确”或“错误”），理由是_______．
-  answer: ''
-  solution: ''
+  question: '下图是某书店2022年7月至12月教育类图书销售额占当月全部图书销售额的百分比折线统计图．小华认为，8月份教育类图书销售额比7月份减少了．他的结论___________（填“正确”或“错误”），理由是_______．
+
+    [图]'
+  answer: ①.错误②.没有提供7月和8月份教育类图书销售额的数据
+  solution: '解：只知道7月和8月份教育类图书销售额的占比，不知道7月和8月份教育类图书销售额，无法比较8月份教育类图书销售额比7月份是增加还是减少了．
+
+    故答案为：错误；没有提供7月和8月份教育类图书销售额的数据．'
   knowledge_points:
   - 统计
   module: statisticsAndProbability
@@ -309,17 +388,77 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-fengtai-er-fig13.png
 - id: 16
   type: 填空
   score: 2
   question: '甲地组织20辆汽车装运食品、药品、生活用品三种物资共100吨到乙地．每辆汽车可装运物资的运载量和每吨所需运费如下表．
 
+    物资种类
+
+    食品
+
+    药品
+
+    生活用品
+
+    每辆汽车运载量/吨
+
+    6
+
+    5
+
+    4
+
+    每吨所需运费/元
+
+    120
+
+    160
+
+    100
+
     如果20辆汽车都要装运，每辆汽车只能装运同一种物资且必须装满，每种物资至少装运1辆车，那么总运费最少的车辆安排方案为：装运食品、药品、生活用品的汽车辆数依次是_______，此时总运费为____元．'
-  answer: ''
-  solution: ''
+  answer: ①.$9,2,9$②.$11680$
+  solution: '解：设x辆汽车装运食品，y辆汽车装运药品，则装运生活用品的车辆数为$(20-x-y)$，
+
+    由题意，得：$6x+5y+4(20-x-y)=100$，
+
+    ∴$y = -2x + 20$．
+
+    ∴$20-x-y=20-x-(-2x+20)=x$．
+
+    ∵每种物资至少装运1辆车，
+
+    ∴$\begin{pmatrix}
+
+    x & 1 \\
+
+    -2x+20 & 1
+
+    \end{pmatrix}$．
+
+    解得：$1 \leq x \leq \frac{19}{2}$，
+
+    设总费用为w，则
+
+    $w=120\times6x+160\times5\left(-2x+20\right)+100\times4x=-480x+16000$，
+
+    ∵$k = -480 < 0$，
+
+    ∴w随x的增大而减小．
+
+    ∵$1 \leq x \leq \frac{19}{2}$，且为整数，
+
+    ∴当$x=9$时，总费最少，最少费用为$w=-480\times9+16000-11680$元．
+
+    此时$y = -2x + 20 = 2$．
+
+    故答案为：$9,2,9$；$11680$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 一次函数
+  module: functions
   difficulty: 较难
   recommended_for:
   - L2
@@ -327,12 +466,18 @@ questions:
 - id: 17
   type: 解答
   score: 5
-  question: （第17题，详见原卷）
-  answer: ''
-  solution: ''
+  question: 计算：$2\sin 30^{\circ}+(-1)^{5}-\sqrt{8}+\left(\frac{1}{2}\right)^{-1}$
+  answer: $2-2\sqrt{2}$；
+  solution: '解：$2\sin 30^{\circ}+(-1)^{5}-\sqrt{8}+\left(\frac{1}{2}\right)^{-1}$
+
+    $-2\times\frac{1}{2}+(-1)-2\sqrt{2}+2$
+
+    $=1+(-1)-2\sqrt{2}+2$
+
+    $=2-2\sqrt{2}$；'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 三角函数
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -342,12 +487,22 @@ questions:
 - id: 18
   type: 解答
   score: 5
-  question: （第18题，详见原卷）
-  answer: ''
-  solution: ''
+  question: 解方程：$\frac{x}{x-1}+\frac{1}{x+1}=1$
+  answer: $x = 0$
+  solution: '解：$\frac{x}{x-1}+\frac{1}{x+1}=1$
+
+    去分母得：$x(x+1)+(x-1)=(x-1)(x+1)$，
+
+    去括号并合并同类项得：$2x = 0$，
+
+    解得：$x = 0$，
+
+    经检验，$x = 0$是方程的根，
+
+    ∴原方程的解为$x = 0$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 分式方程
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -357,11 +512,79 @@ questions:
 - id: 19
   type: 解答
   score: 5
-  question: 下面是过直线外一点，作已知直线的平行线的两种方法．请选择一种作法，使用直尺和圆规，补全图形（保留作图痕迹），并完成证明．
-  answer: ''
-  solution: ''
+  question: '下面是过直线外一点，作已知直线的平行线的两种方法．请选择一种作法，使用直尺和圆规，补全图形（保留作图痕迹），并完成证明．
+
+    已知：如图，直线l及直线l外一点P．
+
+    求作：直线$\overline{PQ}$，使得$PQ \parallel l$．
+
+    [图]
+
+    作法一：如图，
+
+    [图]
+
+    ①在直线l上取一点A，作射线PA，以点A为圆心，AP长为半径画弧，交PA的延长线于点B；
+
+    ②在直线l上取一点C（不与点A重合），作射线BC，以点C为圆心，CB长为半径画弧，交BC的延长线于点Q；
+
+    ③作直线PQ，所以直线$\overline{PQ}$就是所求作的直线．
+
+    作法二：如图，
+
+    [图]
+
+    ①在直线l上取两点A，B，连接AP；
+
+    ②分别以点P，点B为圆心，AB，AP的长为半径画弧，两弧在l上方交于点Q；
+
+    ③作直线$\overline{PQ}$．
+
+    所以直线$\overline{PQ}$就是所求作的直线．
+
+    证明：∵$AB =$________，$BC =$__________，
+
+    ∴$PQ \parallel l$（）
+
+    （填推理的依据）
+
+    证明：连接BQ，
+
+    ∵$AP =$________，$AB =$__________，
+
+    ∴四边形$APQB$是平行四边形（）（填推理的依据）
+
+    ∴$PQ \parallel l$（）
+
+    （填推理的依据）'
+  answer: 尺规作图见解析；AP，cQ，三角形的中位线定理，BQ，$\overline{PQ}$，两组对边分别相等的四边形是平行四边形，平行四边形的对边平行
+  solution: '作法一：如图
+
+    [图]
+
+    证明：∵$AB = AP$，$BC = CQ$，
+
+    ∴$PQ \parallel l$（三角形的中位线定理）
+
+    作法二：如图
+
+    [图]
+
+    证明：连接BQ，
+
+    [图]
+
+    ∵$AP = BQ$，$AB = PQ$，
+
+    ∴四边形$APQB$是平行四边形（两组对边分别相等的四边形是平行四边形）
+
+    ∴$PQ \parallel l$（平行四边形的对边平行）
+
+    故答案是AP，cQ，三角形的中位线定理，BQ，$\overline{PQ}$，两组对边分别相等的四边形是平行四边形，平行四边形的对边平行．'
   knowledge_points:
   - 平行线
+  - 平行四边形
+  - 尺规作图
   module: triangles
   difficulty: 基础
   recommended_for:
@@ -369,19 +592,47 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-fengtai-er-fig14.png
+  - figures/2023-fengtai-er-fig15.png
+  - figures/2023-fengtai-er-fig16.png
+  - figures/2023-fengtai-er-fig17.png
+  - figures/2023-fengtai-er-fig18.png
+  - figures/2023-fengtai-er-fig19.png
 - id: 20
   type: 解答
   score: 5
-  question: '已知关于x的一元二次方程．
+  question: '已知关于x的一元二次方程$x^{2}-2mx+m^{2}-4=0$．
 
     （1）求证：该方程总有两个不相等的实数根；
 
     （2）选择一个m的值，使得方程至少有一个正整数根，并求出此时方程的根．'
-  answer: ''
-  solution: ''
+  answer: （1）证明见解析 （2）当$m = 0$时，方程的根是$x_{1}=2,x_{2}=-2$（答案不唯一）
+  solution: '【小问1详解】
+
+    ∵$\Delta =(-2m)^{2}-4\times1\times(m^{2}-4)=4m^{2}-4m^{2}+16=16>0$，
+
+    ∴该方程总有两个不相等的实数根．
+
+    【小问2详解】
+
+    ∵$\Delta=(-2m)^{2}-4\times1\times(m^{2}-4)=4m^{2}-4m^{2}+16=16$，
+
+    ∴$\frac{2m+\sqrt{16}}{2}-\frac{2m-4}{2}=m\leq 4$．
+
+    ∵方程至少有一个正整数根，
+
+    ∴$m+4>0$．
+
+    ∴$m > -4$．
+
+    当$m = 0$时，一元二次方程$x^{2}-2mx+m^{2}-4=0$可化为$x^{2}-4=0$，
+
+    解得：$x_{1}=2,x_{2}=-2$．'
   knowledge_points:
   - 一元二次方程
-  module: numbersAndExpressions
+  - 根的判别式
+  module: equationsAndInequalities
   difficulty: 中档
   recommended_for:
   - L1
@@ -390,29 +641,194 @@ questions:
 - id: 21
   type: 解答
   score: 5
-  question: '如图，在中，，点D为的中点，连接，过点C作，且，连接，．
+  question: '如图，在$\triangle ABC$中，$\angle ABC = 90^\circ$，点D为AC的中点，连接DB，过点C作$CE \parallel DB$，且$CE = DB$，连接BE，DE．
 
-    （1）求证：四边形是菱形；
+    [图]
 
-    （2）连接，当，时，求的长．'
-  answer: ''
-  solution: ''
+    （1）求证：四边形$BEC D$$[公式]$菱形；
+
+    （2）连接AE，当$\angle ACB=30^{\circ}$，$AB=2$时，求AE的长．'
+  answer: （1）证明见解析； （2）$2\sqrt{3}$
+  solution: '【小问1详解】
+
+    证明：$\because CE \parallel DB$，$CE = DB$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$四边形$BEC D$是平行四边形，
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$在$\triangle ABC$中，$\angle ABC = 90^\circ$，点D为AC的中点，
+
+    $\ldots BD = AD = CD = \frac{1}{2}AC$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$四边形$BEC D$是菱形；
+
+    【小问2详解】
+
+    解：$\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$四边形$BEC D$是菱形，
+
+    $WCD \parallel BE$，$BC \perp DE$，
+
+    $\colon AD \parallel BE$，
+
+    $\because AB \perp BC$，
+
+    $\therefore DE \parallel AB$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt)'
   knowledge_points:
+  - 勾股定理
+  - 平行四边形
   - 菱形
-  module: quadrilaterals
+  module: triangles
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-fengtai-er-fig20.png
+  - figures/2023-fengtai-er-fig21.png
 - id: 22
   type: 解答
   score: 5
   question: '某校兴趣小组在学科实践活动中，从市场上销售的A，B两个品种的花生仁中各随机抽取30粒，测量其长轴长度，然后对测量数据进行了收集、整理和分析．下面是部分信息．
 
+    [图]
+
     a．两种花生仁的长轴长度统计表：
 
+    花生仁长轴长度（mm）
+
+    12
+
+    13
+
+    14
+
+    15
+
+    16
+
+    17
+
+    18
+
+    19
+
+    20
+
+    21
+
+    A品种花生仁粒数
+
+    5
+
+    10
+
+    6
+
+    7
+
+    2
+
+    0
+
+    0
+
+    0
+
+    0
+
+    0
+
+    B品种花生仁粒数
+
+    0
+
+    0
+
+    2
+
+    3
+
+    6
+
+    4
+
+    5
+
+    4
+
+    4
+
+    2
+
     b.两种花生仁的长轴长度的平均数、中位数、众数、方差如下：
+
+    平均数
+
+    中位数
+
+    众数
+
+    方差
+
+    A品种花生仁
+
+    a
+
+    13.5
+
+    c
+
+    1.4
+
+    B品种花生仁
+
+    17.5
+
+    b
+
+    16
+
+    3.9
 
     根据以上信息，回答下列问题：
 
@@ -425,8 +841,26 @@ questions:
     （2）写出a，b，c的值；
 
     （3）学校食堂准备从A，B两个品种的花生仁中选购一批做配菜食材，根据菜品质量要求，花生仁大小要均匀，那么兴趣小组应向食堂推荐选购_____（填“A”或“B”）品种花生仁，理由是_______________________'
-  answer: ''
-  solution: ''
+  answer: （1）②（2）$a=13.7$，$b=17.5$，$c = 13$ （3）A，A的方差小于B的方差．
+  solution: '【小问1详解】
+
+    解：抽样时应当尽量避免主观因素的影响，则②符合题意．
+
+    故答案为②．
+
+    【小问2详解】
+
+    解：A品种花生仁的平均数为：$\frac{5\times12+10\times13+6\times14+7\times15+2\times16}{30}=13.7$；
+
+    A品种花生仁的样本中13出现了10次，次数最多，则众数为$c = 13$；
+
+    B品种花生仁的样本有30个数据，从小到大排列处于中间为第15和第16的数据分别是17,18，则中位数为$b-\frac{17+18}{2}=17.5$．
+
+    【小问3详解】
+
+    解：由于菜品质量要求，花生仁大小要均匀，即数据波动小，方差小；因为A品种花生仁的方差1.4小于B品种花生仁的方差,则应选A．
+
+    故答案为：A，A的方差小于B的方差．'
   knowledge_points:
   - 统计
   - 平均数
@@ -439,19 +873,64 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-fengtai-er-fig22.png
 - id: 23
   type: 解答
   score: 6
-  question: '在平面直角坐标系xOy中，一次函数图象经过点．
+  question: '在平面直角坐标系xOy中，一次函数$y=kx+b$的图象经过点$(2,0),(3,1)$．
 
     （1）求这个一次函数的表达式；
 
-    （2）当时，对于x的每一个值，正比例函数的值大于一次函数的值，直接写出m的取值范围．'
-  answer: ''
-  solution: ''
+    （2）当$x > m$时，对于x的每一个值，正比例函数$y = mx$的值大于一次函数$y=kx+b$的值，直接写出m的取值范围．'
+  answer: （1）一次函数的解析式$y=x-2$； （2）$m\ 1$．
+  solution: '【小问1详解】
+
+    解：∵一次函数$y=kx+b$的图象过点$(2,0),(3,1)$，
+
+    ∴把$(2,0),(3,1)$代入得：$\begin{cases}
+
+    2k + b = 0 \\
+
+    3k + b = 1
+
+    \end{cases}$，
+
+    解得：$\left\{
+
+    \begin{array}{l}
+
+    k = 1 \\
+
+    b = -2
+
+    \end{array}
+
+    \right.$，
+
+    ∴一次函数的解析式$y=x-2$；
+
+    【小问2详解】
+
+    解：由（1）得：一次函数的解析式$y=x-2$，
+
+    当$x = m$时，$y = m - 2$，
+
+    当$x > m$时，对于x的每一个值，正比例函数$y = mx$的值大于一次函数$y=kx+b$的值，
+
+    ∴$m\ 1$，
+
+    把$x = m$代入$y = mx$得：$y = m^2$，
+
+    ∴$m^{2}>m-2$，即$\left(m-2\right)^{\frac{1}{2}}>\frac{7}{4}$，
+
+    无论m取何值，不等式均成立，
+
+    ∴$m\ 1$.'
   knowledge_points:
   - 一次函数
   - 正比例函数
+  - 不等式
   - 坐标系
   module: functions
   difficulty: 较难
@@ -461,43 +940,179 @@ questions:
 - id: 24
   type: 解答
   score: 6
-  question: '如图，是的外接圆，是的直径，点是的中点，点是的延长线上的一点，，的延长线交于点．
+  question: '如图，$\odot\odot$是$\triangle ABC$的外接圆，AB是$\odot\odot$的直径，点D是BC的中点，点E是AB的延长线上的一点，$\angle BCE = \angle BOD$，OD的延长线交CE于点F．
 
-    （1）求证：是的切线；
+    [图]
 
-    （2）若，求的长．'
-  answer: ''
-  solution: ''
+    （1）求证：CE是$\odot\odot$的切线；
+
+    （2）若$\sin E=\frac{2}{3},AC=5$，求DF的长．'
+  answer: （1）证明见解析； （2）$\frac{1}{2}$；
+  solution: '【小问1详解】
+
+    解：连接OC，
+
+    ∵AB是$\odot\odot$的直径，
+
+    ∴$\angle ACB=90^\circ$，$OC = OB$，点O是AB中点，
+
+    ∵点D是BC的中点，
+
+    ∴OD是AC的中位线，
+
+    ∴$OD \parallel AC$，
+
+    ∴$\angle ODB = \angle ACB = 90^{\circ}$，
+
+    ∴$\angle OBD+\angle BOD=90^{\circ}$，
+
+    ∵$\angle OCB = \angle OBC$，$\angle BCE = \angle BOD$，
+
+    ∴$\angle BCE+\angle OCB=90^{\circ}$，
+
+    ∴$OC \perp CE$，
+
+    ∵OC为半径，
+
+    ∴CE是$\odot\odot$的切线；
+
+    [图]【小问2详解】
+
+    解：连接OC，
+
+    ∵AB是$\odot\odot$的直径，
+
+    ∴$\angle ACB=90^\circ$，$OC = OB$，点O是AB中点，
+
+    ∵点D是BC的中点，
+
+    ∴OD是AC的中位线，
+
+    ∴$OD \parallel AC$，$OD = \frac{1}{2}AC = \frac{5}{2}$，
+
+    ∴$OF \parallel AC$，
+
+    ∴$\frac{OF}{AC}=\frac{OE}{AE}$，
+
+    ∵$\sin E = \frac{2}{3}$，EC是$\odot\odot$的切线，
+
+    ∴$[公式]$$Rt\triangle OCE$中，$\sin E=\frac{OC}{OE}=\frac{2}{3}$，
+
+    ∴$OE=\frac{3}{2}OC$，
+
+    设$OC = x$，
+
+    ∴$\frac{OF}{AC}=\frac{OE}{AE}=\frac{3}{2}\times\frac{x}{x+5}=\frac{3}{5}$，
+
+    ∵$AC = 5$，
+
+    ∴$OF = 3$，$OD=\frac{5}{2}$，
+
+    '
   knowledge_points:
+  - 平行线
   - 切线
-  module: circles
+  module: triangles
   difficulty: 较难
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2023-fengtai-er-fig23.png
+  - figures/2023-fengtai-er-fig24.png
+  - figures/2023-fengtai-er-fig25.png
 - id: 25
   type: 解答
   score: 6
-  question: '学校新建的体育器材室的一面外墙如图1所示，它的轮廓由抛物线和矩形构成．数学兴趣小组要为器材室设计一个矩形标牌，要求矩形的顶点E，H在抛物线上，顶点F，G在矩形的边上．为了设计面积最大的矩形，兴趣小组对矩形的面积与它的一边的长之间的关系进行研究．
+  question: '学校新建的体育器材室的一面外墙如图1所示，它的轮廓由抛物线和矩形$ABCD$构成．数学兴趣小组要为器材室设计一个矩形标牌$EFGH$，要求矩形$EFGH$的顶点E，H在抛物线上，顶点F，G在矩形$ABCD$的边AD上．为了设计面积最大的矩形$EFGH$，兴趣小组对矩形$EFGH$的面积与它的一边FG的长之间的关系进行研究．
+
+    [图]
 
     具体研究过程如下，请补充完整．
 
     （1）建立模型：
 
-    以的中点为坐标原点，建立如图2所示的平面直角坐标系，通过研究发现，抛物线满足函数关系．设矩形的面积为，的长为，则另一边的长为_______m（用含a的代数式表示），得到S与a的关系式为：_________；
+    以FG的中点为坐标原点，建立如图2所示的平面直角坐标系xOy，通过研究发现，抛物线满足函数关系$y = -\frac{1}{4}x^2 + |(-2 \leq x \leq 2)|$．设矩形$EFGH$的面积为$Sm^{2}$，FG的长为am，则另一边HG的长为_______m（用含a的代数式表示），得到S与a的关系式为：_________$(0<a<4)$；
 
     （2）探究函数：
 
     列出S与a的几组对应值：
 
+    $a / m$
+
+    …
+
+    0.5
+
+    1.0
+
+    1.5
+
+    2.0
+
+    2.5
+
+    3.0
+
+    3.5
+
+    …
+
+    $S / m^2$
+
+    …
+
+    0.49
+
+    0.94
+
+    1.29
+
+    1.50
+
+    1.52
+
+    1$[公式]$31
+
+    0.82
+
+    …
+
     在下面的平面直角坐标系中，描出表中各组数值对应的点，并画出该函数的图象；
+
+    [图]
 
     （3）解决问题：
 
-    结合函数图象得到，长约为__________m时，矩形面积最大．'
-  answer: ''
-  solution: ''
+    结合函数图象得到，FG的长约为__________m时，矩形面积最大．'
+  answer: （1）$\left(-\frac{1}{16}a^{2}+1\right)$；$S = -\frac{1}{16}a^3 + a$ （2）图象见解析（3）$2.3$
+  solution: '【小问1详解】
+
+    ∵$FG = a$，
+
+    ∴$OG = \frac{1}{2}a$．
+
+    当$x = \frac{1}{2}a$时，$y=-\frac{1}{4}\times\left(\frac{1}{2}a\right)^{2}+1=-\frac{1}{16}a^{2}+1$，
+
+    ∴$HG=-\frac{1}{16}a^{2}+1$．
+
+    ∴$S = FG \cdot HG \cdot \left( -\frac{1}{16}a^2 + 1 \right) \cdot a - \frac{1}{16}a^3 + a$．
+
+    故答案是$\left(-\frac{1}{16}a^{2}+1\right)$；$S = -\frac{1}{16}a^3 + a$．
+
+    【小问2详解】
+
+    正确画出该函数的图象，如下图：
+
+    [图]【小问3详解】
+
+    结合函数图象可得到，$a \approx 2.3$时，S取得最大值，
+
+    ∴FG的长约为$2.3m$时，矩形面积最大．
+
+    故答案是$2.3$．'
   knowledge_points:
+  - 二次函数
   - 矩形
   - 坐标系
   module: functions
@@ -505,19 +1120,72 @@ questions:
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2023-fengtai-er-fig26.png
+  - figures/2023-fengtai-er-fig27.png
+  - figures/2023-fengtai-er-fig28.png
 - id: 26
   type: 解答
   score: 6
-  question: '在平面直角坐标系中，点在抛物线上．
+  question: '在平面直角坐标系xOy中，点$(4,3)$在抛物线$y=ax^{2}+bx+3(a\neq 0)$上．
 
     （1）求抛物线的对称轴；
 
-    （2）若点在抛物线上，求a的取值范围；
+    （2）若点$(x_{1},5),(x_{2},-3)$在抛物线上，求a的取值范围；
 
-    （3）若点在抛物线上，对于任意的，都有，直接写出a的取值范围．'
-  answer: ''
-  solution: ''
+    （3）若点$(m, y_1), (m+1, y_2)$在抛物线上，对于任意的$m^{3}$，都有$\left|y_{2}-y_{1}\right|\ 3$，直接写出a的取值范围．'
+  answer: （1）直线$x=2$ （2）$a\frac{3}{2}$或$a \leq -\frac{1}{2}$ （3）$a\ 1$或$a \leq -1$
+  solution: '【小问1详解】
+
+    ∵点$(4,3)$在抛物线$y=ax^{2}+bx+3(a\neq 0)$上，
+
+    ∴$16a+4b+3=3$．
+
+    ∴$b = -4a$．
+
+    ∴$x = -\frac{b}{2a} = -\frac{-4a}{2a} = 2$．
+
+    ∴抛物线的对称轴为直线$x=2$．
+
+    【小问2详解】
+
+    ∵抛物线的对称轴为直线$x=2$，$b = -4a$，
+
+    ∴$y=4a-2b+3=4a-8a+3=3-4a$．
+
+    ∴抛物线顶点坐标为$(2,3-4a)$．
+
+    ∵点$(x_{1},5),(x_{2},-3)$在抛物线上，，
+
+    ∴当$a > 0$时，$3-4a\leq-3$，解得$a\frac{3}{2}$；
+
+    当$a<0$时，$3-4a\quad5$，解得$a \leq -\frac{1}{2}$．
+
+    综上所述，$a\frac{3}{2}$或$a \leq -\frac{1}{2}$．
+
+    【小问3详解】
+
+    当$x = m$时，$y_{1}=am^{2}-4am+3$，
+
+    当$x = m + 1$时，$y_{2}=a(m+1)^{2}-4a(m+1)+3=am^{2}-2am-3a+3$，
+
+    ∴$\left|y_{2}-y_{3}\right|=\left|am^{2}-2am-3a+3\right|-\left(am^{2}-4am+3\right)=\left|a\left(2m-3\right)\right|$．
+
+    ∵$m^{3}$，
+
+    ∴$2m-3\quad 3$．
+
+    ∴当$a > 0$时，$|y_2-y_1|=|a(2m-3)-a(2m-3)|=3$．
+
+    ∴$a\ 1$．
+
+    ∴当$a<0$时，$|y_{2}-v|=|a(2m-3)|=-a(2m-3)\quad 3$．
+
+    ∴$a \leq -1$．
+
+    ∴$a\ 1$或$a \leq -1$．'
   knowledge_points:
+  - 二次函数
   - 坐标系
   module: functions
   difficulty: 压轴
@@ -526,34 +1194,142 @@ questions:
 - id: 27
   type: 解答
   score: 7
-  question: '如图，在等边中，点D，E分别在，的延长线上，且，的延长线交于点F．
+  question: '如图，在等边$\triangle ABC$中，点D，E分别在CB，AC的延长线上，且$BD = CE$，EB的延长线交AD于点F．
 
-    （1）求的度数；
+    [图]
 
-    （2）延长至点G，使，连接交于点H．依题意补全图形，猜想线段与的数量关系，并证明．'
-  answer: ''
-  solution: ''
+    （1）求$\angle AFE$的度数；
+
+    （2）延长EF至点G，使$FG = AF$，连接CG交AD于点H．依题意补全图形，猜想线段CH与GH的数量关系，并证明．'
+  answer: （1）$60^\circ$ （2）补全图形见解析；$CH = GH$；证明见解析
+  solution: '【小问1详解】
+
+    ∵$\triangle ABC$是等边三角形，
+
+    ∴$AB = BC$，$\angle ACB=\angle ABC=60^{\circ}$．
+
+    ∴$\angle ABD=\angle BCE=120^{\circ}$．
+
+    ∵$CE = BD$，
+
+    ∴$\triangle ABD\cong\triangle BCE(SAS)$．
+
+    ∴$\angle D=\angle E$．
+
+    ∵$\angle DBF = \angle CBE$，
+
+    ∴$\angle D+\angle DBF=\angle E+\angle CBE$．
+
+    即$\angle AEC=\angle ACB=60^{\circ}$．
+
+    【小问2详解】
+
+    补全图形，如下图：
+
+    [图]
+
+    猜想$CH = GH$，理由如下：
+
+    在EF上截取$FM = FA$，连接AM，CM，
+
+    ∵$\angle AFE = 60^\circ$，
+
+    ∴$\triangle AFM$是等边三角形，
+
+    ∴$\angle FAM = \angle AFM = 60^\circ$，$AM = AF = MF$，
+
+    ∵$\triangle ABC$是等边三角形，
+
+    ∴$\angle BAC = 60^\circ$，$AB = AC$，
+
+    ∴$\angle BAC=\angle MAB=\angle FAM-\angle MAB$．
+
+    即$\angle CAM = \angle BAF$．
+
+    ∴$\triangle ACM\cong\triangle ABE(SAS)$．
+
+    ∴$\angle AMC = \angle AFE = 60^\circ$．
+
+    ∴$\angle CMF=\angle AMC+\angle AMB=120^{\circ}$．
+
+    ∴$\angle CMF + \angle AFE = 180^{\circ}$．
+
+    ∴$CM \parallel HF$．
+
+    ∴$\'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 平行线
+  - 全等三角形
+  module: triangles
   difficulty: 压轴
   recommended_for:
   - L3
+  figures:
+  - figures/2023-fengtai-er-fig29.png
+  - figures/2023-fengtai-er-fig30.png
 - id: 28
   type: 解答
   score: 7
-  question: '对于和的弦，以为边的正方形为关于的“关联正方形”在平面直角坐标系中，已知点，点，以点为圆心，的长为半径作，点为上的任意一点（不与点重合）．
+  question: '对于$\omega$和$\omega$的弦$\overline{PQ}$，以$\overline{PQ}$为边的正方形为$\overline{PQ}$关于$\omega$的“关联正方形”在平面直角坐标系xoy中，已知点$T(m,0)$，点$M (m,-1)$，以点T为圆心，TM的长为半径作eT，点N为eT上的任意一点（不与点M重合）．
 
-    （1）当时，若直线上存在点在关于的“关联正方形”上，求的取值范围；
+    （1）当$m = 0$时，若直线$y = x + t$上存在点在MN关于eT的“关联正方形”上，求t的取值范围；
 
-    （2）若点在关于的“关联正方形”上，点与点的最大距离，当取最小值时，直接写出此时和的值．'
-  answer: ''
-  solution: ''
+    （2）若点A在MN关于eT的“关联正方形”上，点$B(-m+2,3)$与点A的最大距离d，当d取最小值时，直接写出此时m和d的值．'
+  answer: （1）$-\sqrt{2}-2\leq t\leq 3$； （2）$m = 1$，$d=\sqrt{17}+1$．
+  solution: '【小问1详解】
+
+    如图，MN关于$\odot T$的“关联正方形”上的所有的点在以$C(-1,0)$和点$D(1,0)$为圆心，$\sqrt{2}$为半径，以$E(-1,1)$，$F(1,-1)$和$O(0,0)$，$1$为半径的五个圆上及圆内，由直线$y=x+t$上存在点在MN关于$\odot T$的“关联正方形”上，
+
+    [图]
+
+    ①当直线与$\mathrm{OC}$相切时，设切点为G，交x轴于点H，交y轴于点I
+
+    ∵$CG = \sqrt{2}$，
+
+    ∴$CH = 2$，
+
+    ∴$OH = OI = 3$，此时$t=3$；
+
+    ②当直线与$\odot F$相切时，设切点为J，交y轴于点K，
+
+    ∵$OJ=1+\sqrt{2}$，
+
+    ∴$OK=\sqrt{2}OJ=\sqrt{2}+2$，此时$t=-\sqrt{2}-2$，
+
+    综上所述，$-\sqrt{2}-2\leq t\leq 3$．
+
+    【小问2详解】
+
+    如图，当$BA_{1}=BA_{2}$时，d取最小值，即点B在点T正上方时，
+
+    [图]
+
+    故有$m = -m + 2$，解得：$m = 1$；
+
+    如图，
+
+    [图]
+
+    由上可知：$m = 1$，d取最小值，
+
+    ∴$MB=4,\ MS=1$，
+
+    由勾股定理得：$BS=\sqrt{1^{2}+4^{2}}=\sqrt{17}$，
+
+    ∴$d=\sqrt{17}+1$，
+
+    故写：$m=1,\ d=\sqrt{17}+1$．'
   knowledge_points:
+  - 切线
   - 弦
   - 正方形
   - 坐标系
+  - 最值
   module: circles
   difficulty: 压轴
   recommended_for:
   - L3
+  figures:
+  - figures/2023-fengtai-er-fig31.png
+  - figures/2023-fengtai-er-fig32.png
+  - figures/2023-fengtai-er-fig33.png

@@ -1,12 +1,12 @@
 # ============================================================
 # 2023年北京燕山区中考数学二模试卷 — 逐题分析
 # ============================================================
-# 数据来源：knowledge-original/精品解析：2023年北京市燕山地区中考二模数学试题（原卷版）.docx
-# 自动生成，部分数学公式可能显示不全（docx公式对象无法完整提取）
+# 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
+# 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
 # 满分：100分  时长：120分钟
 
 year: 2023
-district: 燕山区
+district: 燕山
 exam_type: 二模
 subject: 数学
 full_score: 100
@@ -17,9 +17,19 @@ questions:
 - id: 1
   type: 选择
   score: 2
-  question: "下图是某几何体三视图，该几何体是（    ）\nA. 圆柱\tB. 圆锥\tC. 长方体\tD. 三棱柱"
-  answer: ''
-  solution: ''
+  question: '下图是某几何体的三视图，该几何体是（
+
+    ）
+
+    [图]
+
+    A.圆柱B.圆锥C.长方体D.三棱柱'
+  answer: A
+  solution: '根据主视图和左视图为矩形，则几何体为柱体；
+
+    由俯视图为圆形，所以得几何体为圆柱．
+
+    故选A．'
   knowledge_points:
   - 综合
   module: circles
@@ -29,14 +39,21 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-yanshan-er-fig01.png
 - id: 2
   type: 选择
   score: 2
-  question: "我国自主研发的“北斗系统”在卫星导航、通信、遥感等多项核心技术方面取得了突破，已经在国民经济和国防建设等多个领域得到了广泛的应用．2023年2月，北斗终端数量在交通运输营运车辆领域超过8000000台．将8000000用科学记数法表示应为（   ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '我国自主研发的“北斗系统”在卫星导航、通信、遥感等多项核心技术方面取得了突破，已经在国民经济和国防建设等多个领域得到了广泛的应用．2023年2月，北斗终端数量在交通运输营运车辆领域超过8000000台．将8000000用科学记数法表示应为（）
+
+    A.$0.8\times10^{6}$B.$8\times10^{6}$C.$8\times10^{7}$D.$80\times10^{5}$'
+  answer: B
+  solution: '解：8000000用科学记数法表示应为$8\times10^{6}$．
+
+    故选：B．'
   knowledge_points:
   - 科学记数法
+  - 绝对值
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -47,9 +64,17 @@ questions:
 - id: 3
   type: 选择
   score: 2
-  question: "图中的图形为轴对称图形，该图形的对称轴的条数为（    ）\nA. 2\tB. 4\tC. 6\tD. 8"
-  answer: ''
-  solution: ''
+  question: '图中的图形为轴对称图形，该图形的对称轴的条数为（）
+
+    [图]
+
+    A.2B.4C.6D.8'
+  answer: C
+  solution: '解：由图可知，
+
+    该图形有6条对称轴；
+
+    故选：C'
   knowledge_points:
   - 轴对称图形
   - 轴对称
@@ -60,29 +85,90 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-yanshan-er-fig02.png
 - id: 4
   type: 选择
   score: 2
-  question: "一副三角板如图摆放，直线，则的度数是（   ）\nA. 15°\tB. 30°\tC. 45°\tD. 75°"
-  answer: ''
-  solution: ''
+  question: '一副三角板如图摆放，直线$AB \parallel CD$，则$\angle\alpha$的度数是（）
+
+    [图]
+
+    A.15°B.30°C.45°D.75°'
+  answer: A
+  solution: '解：如图，
+
+    [图]
+
+    ∵$\angle ECD=45^{\circ}+30^{\circ}=75^{\circ}$，
+
+    又∵$AB \parallel CD$，
+
+    ∴$\angle BEC+\angle ECD=180^{\circ}$，
+
+    ∴$\angle BEC=180^{\circ}-75^{\circ}=105^{\circ}$，
+
+    ∴$\angle\alpha=105^{\circ}-90^{\circ}=15^{\circ}$；
+
+    故选：A．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 平行线
+  module: triangles
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-yanshan-er-fig03.png
+  - figures/2023-yanshan-er-fig04.png
 - id: 5
   type: 选择
   score: 2
-  question: "实数a，b，c，d在数轴上的对应点的位置如图所示，下列结论中正确的是（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '实数a，b，c，d在数轴上的对应点的位置如图所示，下列结论中正确的是（）
+
+    [图]
+
+    A.$\left| a \right| < \left| b \right|$B.$ac > 0$C.$b+c>0$D.$d-a>0$'
+  answer: D
+  solution: '解：$a < b < 0 < c < d$
+
+    $\therefore a > b$，
+
+    $\therefore A$选项错误，
+
+    $a < b < 0 < c < d$，
+
+    $\therefore a$和c的符号相反，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$ac < 0$，
+
+    $\therefore B$选项错误，
+
+    $\because b = -1, c = 1$，
+
+    $\therefore b+c=0$，
+
+    $\therefore C$选项错误，
+
+    $a < b < 0 < c < d$
+
+    $\therefore d-a>0$，
+
+    $\therefore D$选项正确，
+
+    故选：D．'
   knowledge_points:
-  - 综合
+  - 绝对值
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -90,12 +176,18 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-yanshan-er-fig05.png
 - id: 6
   type: 选择
   score: 2
-  question: "一个不透明的袋子中装有红、黄小球各两个，除颜色外四个小球无其他差别，从中随机同时摸出两个球，那么两个球的颜色相同的概率是（   ）\nA \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '一个不透明的袋子中装有红、黄小球各两个，除颜色外四个小球无其他差别，从中随机同时摸出两个球，那么两个球的颜色相同的概率是（）
+
+    A.$\frac{2}{3}$B.$\frac{1}{2}$C.$\frac{1}{3}$D.$\frac{1}{4}$'
+  answer: C
+  solution: '解：用$A,B$表示两个红球，$C,D$表示两个黄球，随机从中同时摸出两个球，共有：$(A,B),(A,C),(A,D),(B,C),(B,D),(C,D)$$6$种等可能的结果，其中两个球颜色相同的有2种结果，则两个球的颜色相同的概率$P = \frac{2}{6} = \frac{1}{3}$．
+
+    故选C．'
   knowledge_points:
   - 概率
   module: statisticsAndProbability
@@ -107,12 +199,28 @@ questions:
 - id: 7
   type: 选择
   score: 2
-  question: "如果，那么代数式的值为（    ）．\nA 2\tB. 1\tC. \tD."
-  answer: ''
-  solution: ''
+  question: '如果$a-b=1$，那么代数式$\left(\frac{b^{2}}{a}-a\right)\cdot\frac{2a}{a+b}$的值为（）．
+
+    A.2B.1C.$-1$D.$-2$'
+  answer: D
+  solution: '解：$\left(\frac{b^{2}}{a}-a\right)\cdot\frac{2a}{a+b}$，
+
+    $=\frac{b^{2}}{a}-\frac{a^{2}}{a}-\frac{2a}{a+b}$，
+
+    $=\frac{b^{2}-a^{2}}{a}\cdot\frac{2a}{a+b}$，
+
+    $\frac{(a+b)(b-a)}{a}+\frac{2a}{a+b}$，
+
+    $=2(b-a)$，
+
+    $-2(a-b)$，
+
+    $=-2$．
+
+    故选D．'
   knowledge_points:
   - 综合
-  module: geometryComprehensive
+  module: numbersAndExpressions
   difficulty: 中档
   recommended_for:
   - L1
@@ -121,9 +229,35 @@ questions:
 - id: 8
   type: 选择
   score: 2
-  question: "如图，某小区有一块三角形绿地，其中．计划在绿地上建造一个矩形的休闲书吧，使点P，M，N分别在边上．记，图中阴影部分的面积为．当x在一定范围内变化时，y和S都随x的变化而变化，则y与x，S与x满足的函数关系分别是（    ）\nA. 一次函数关系，二次函数关系\tB. 一次函数关系，反比例函数关系\nC. 二次函数关系，一次函数关系\tD. 反比例函数关系，二次函数关系"
-  answer: ''
-  solution: ''
+  question: '如图，某小区有一块三角形绿地ABC，其中$\angle B=90^{\circ}, AB=BC$．计划在绿地上建造一个矩形的休闲书吧$PMBN$，使点P，M，N分别在边$AC, BC, AB$上．记$PM = xm, PN = ym$，图中阴影部分的面积为$Sm^{2}$．当x在一定范围内变化时，y和S都随x的变化而变化，则y与x，S与x满足的函数关系分别是（）
+
+    [图]
+
+    A.一次函数关系，二次函数关系B.一次函数关系，反比例函数关系
+
+    C.二次函数关系，一次函数关系D.反比例函数关系，二次函数关系'
+  answer: A
+  solution: '解：∵$\angle B=90^{\circ}, AB=BC$，
+
+    ∴$\angle A=\angle C=45^{\circ}$，
+
+    ∵四边形$PMBN$是矩形，
+
+    ∴$\angle PMB=\angle PMC=\angle PNB=\angle PNA=90^{\circ}$，$PN = BM$，
+
+    ∴$\triangle PCM, \triangle APN$都是等腰直角三角形，
+
+    ∴$CM\cdot PM,\ AN=PN=BM$，
+
+    ∴$PM + PM = CM + BM = BC$，即$x+y=BC$，
+
+    ∴$y = -x + BC$，$S = \frac{1}{2}PM \cdot CM + \frac{1}{2}PN \cdot AN = \frac{1}{2}x^2 + \frac{1}{2}(BC - x)^2$
+
+    ∴$S = \frac{1}{2}PM \cdot CM + \frac{1}{2}PN \cdot AN = \frac{1}{2}x^2 + \frac{1}{2}(BC - x)^2$，
+
+    ∴y与x，S与x满足的函数关系分别是一次函数关系，二次函数关系，
+
+    故选A．'
   knowledge_points:
   - 一次函数
   - 反比例函数
@@ -134,12 +268,20 @@ questions:
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2023-yanshan-er-fig06.png
 - id: 9
   type: 填空
   score: 2
-  question: 若分式有意义，则的取值范围是__．
-  answer: ''
-  solution: ''
+  question: 若分式$\frac{1}{x-3}$有意义，则x的取值范围是__．
+  answer: $x \neq 3$
+  solution: '解：∵分式$\frac{1}{x-3}$有意义，
+
+    ∴$x-3\neq0$，
+
+    ∴$x \neq 3$，
+
+    故答案为：$x \neq 3$．'
   knowledge_points:
   - 综合
   module: numbersAndExpressions
@@ -152,12 +294,18 @@ questions:
 - id: 10
   type: 填空
   score: 2
-  question: 分解因式：__．
-  answer: ''
-  solution: ''
+  question: 分解因式：$a^{3}-4a^{2}+4a$__．
+  answer: $a(a-2)^2$
+  solution: '解：$a^{3}-4a^{2}+4a$，
+
+    $=a(a^{2}-4a+4)$，
+
+    $=a(a-2)^{2}$．
+
+    故答案为：$a(a-2)^2$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 因式分解
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -167,9 +315,23 @@ questions:
 - id: 11
   type: 填空
   score: 2
-  question: 方程组的解为________．
-  answer: ''
-  solution: ''
+  question: 方程组$\begin{cases} 2x - y = 4 \\ x - 2y = -1 \end{cases}$的解为________．
+  answer: $\left\{ \begin{array} { l } { x = 3 } \\ { y = 2 } \end{array} \right.$
+  solution: '解：$\begin{cases}
+
+    2x - y = 4 \\
+
+    x - 2y = -12
+
+    \end{cases}$
+
+    $\textcircled{1}\times2-\textcircled{2}$得$3x = 9$，解得$x=3$，
+
+    把$x=3$代入①得$6-y=4$，解得$y=2$．
+
+    故原方程组的解为$\left\{ \begin{array} { l } { x = 3 } \\ { y = 2 } \end{array} \right.$．
+
+    故答案为：$\left\{ \begin{array} { l } { x = 3 } \\ { y = 2 } \end{array} \right.$'
   knowledge_points:
   - 综合
   module: equationsAndInequalities
@@ -182,24 +344,48 @@ questions:
 - id: 12
   type: 填空
   score: 2
-  question: 如图所示的网格是正方形网格，点A，B，C，D均在格点上，则__________ (填“＞”，“＜”或“＝”)．
-  answer: ''
-  solution: ''
+  question: '如图所示的网格是正方形网格，点A，B，C，D均在格点上，则$S_{\triangle ABC}$__________$S_{\triangle ACD}$(填“＞”，“＜”或“＝”)．
+
+    [图]'
+  answer: ＜
+  solution: '解：由题意，
+
+    $S_{\triangle ABC}=\frac{1}{2}\times3\times3=\frac{9}{2}$，
+
+    $S_{\text{MED}}=\frac{1}{2}\times(2+3)\times5-\frac{9}{2}-\frac{1}{2}\times2\times6=6$，
+
+    ∴$S_{\triangle ABC}<S_{\triangle ACD}$；
+
+    故答案为：＜．'
   knowledge_points:
   - 正方形
-  module: quadrilaterals
+  module: triangles
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-yanshan-er-fig07.png
 - id: 13
   type: 填空
   score: 2
-  question: 反比例函数在第一象限的图象如图所示，已知点A的坐标为(3，1)，写出一个满足条件的k的值________．
-  answer: ''
-  solution: ''
+  question: '反比例函数$y=\frac{k}{x}(k\neq0)$在第一象限的图象如图所示，已知点A的坐标为(3，1)，写出一个满足条件的k的值________．
+
+    [图]'
+  answer: 答案不唯一，如，1
+  solution: '解：∵反比例函数的图象在第一象限，
+
+    ∴$k > 0$，
+
+    ∵点A的坐标为(3，1)，
+
+    ∴$0<k<3$
+
+    ∴满足条件的k的值，例如：1．
+
+    故答案为：1．（答案不唯一）'
   knowledge_points:
   - 反比例函数
   module: functions
@@ -208,17 +394,54 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-yanshan-er-fig08.png
 - id: 14
   type: 填空
   score: 2
   question: '校运动会前夕，要选60名身高基本相同的女生组成表演方队，现从全校200名女生中随机抽取40人，了解了她们的身高情况，数据如下：
 
+    身高/cm
+
+    145-150
+
+    150-155
+
+    155-160
+
+    160-165
+
+    165-170
+
+    170-175
+
+    人数/人
+
+    2
+
+    6
+
+    10
+
+    16
+
+    4
+
+    2
+
     根据以上数据，估计入选表演方队的女生身高范围为________cm．'
-  answer: ''
-  solution: ''
+  answer: $160-165$
+  solution: '解：在这个问题中，最值得关注的是队伍的整齐，身高必须差不多，
+
+    故应该关注该校所有女生身高的众数，
+
+    ∴估计入选表演方队的女生身高范围为:$160-165$；'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 平均数
+  - 中位数
+  - 众数
+  - 方差
+  module: statisticsAndProbability
   difficulty: 中档
   recommended_for:
   - L1
@@ -227,31 +450,130 @@ questions:
 - id: 15
   type: 填空
   score: 2
-  question: 魏晋时期，数学家刘徽利用如图所示的“青朱出入图”证明了勾股定理，其中四边形，和都是正方形．如果图中与的面积比为，那么的值为________．
-  answer: ''
-  solution: ''
+  question: '魏晋时期，数学家刘徽利用如图所示的“青朱出入图”证明了勾股定理，其中四边形$ABCD$，$AFLJ$和$BFGH$都是正方形．如果图中$\triangle BCE$与$\sqrt{FDE}$的面积比为$\frac{16}{9}$，那么$\tan \angle GFI$的值为________．
+
+    [图]'
+  answer: $\frac{4}{7}$
+  solution: '解：$\therefore ABCD$都是正方形，
+
+    $\angle VDC=90^{\circ}=\angle BCD$，
+
+    $\angle FED = \angle CLB$，
+
+    $\triangle BCE \cong \triangle DCE$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\frac{S_{\triangle ABC}}{S_{\triangle BDF}} = \frac{BC}{DF}$，
+
+    $QV\ BCE$与$\sqrt{FDE}$的面积比为$\frac{16}{9}$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\frac{BC}{DF}=\frac{4}{3}$，
+
+    设$BC = 4l = AD = AB$，则$DF = 3t$，
+
+    $\ldots AF = AD + DF = 7\ldots$，
+
+    在$Rt_{\triangle AFB}$中，
+
+    $\tan\angle BFA=\frac{AB}{AF}=\frac{4a}{7a}=\frac{4}{7}$，
+
+    由“青朱出入图”可知：$\angle GPH = 90^\circ - \angle AFG = \angle FBA$，
+
+    $\tan\angle GFI-\tan\angle BFA=\frac{4}{7}$．
+
+    故答案为：$\frac{4}{7}$．'
   knowledge_points:
+  - 相似三角形
   - 勾股定理
   - 正方形
-  module: quadrilaterals
+  module: triangles
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-yanshan-er-fig09.png
 - id: 16
   type: 填空
   score: 2
   question: '一个17人的旅游团到一家酒店住宿，酒店的客房只有双人标准间和三人间，其中双人标准间每间每晚100元，三人间每间每晚130元．住宿要求男士只能与男士同住，女士只能与女士同住．
 
-    （1）若该旅游团一晚的住宿费用为750元，则他们租住了_______ 间三人间；
+    （1）若该旅游团一晚的住宿费用为750元，则他们租住了_______间三人间；
 
     （2）若该旅游团中共有7名男士，则租住一晚的住宿费用最少为________元．'
-  answer: ''
-  solution: ''
+  answer: ①.5②.790
+  solution: '解：（1）设该旅游团租住了x间双人间，y间三人间，
+
+    根据题意得：$100x+130y=750$，
+
+    $\therefore x = \frac{75 - 13y}{10}$，
+
+    又$\therefore x$，y均为自然数，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\left\{\begin{array}{l}x=1\\y=5\end{array}\right.$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$他们租住了5间三人间．
+
+    故答案为：5；
+
+    （2）当租住的三人间全部住满时，租住一晚的住宿房费最少．
+
+    女士：$17-7=10$（人)，男士7人，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$租住一晚的住宿房费最少的租住方案为：租住的4间双人间里面2间住男士，2间住女士，另租住3间三人间，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$此时租住一晚的住宿房费为$100x+130\times3=790$（元'
   knowledge_points:
   - 综合
-  module: geometryComprehensive
+  module: numbersAndExpressions
   difficulty: 较难
   recommended_for:
   - L2
@@ -259,12 +581,13 @@ questions:
 - id: 17
   type: 解答
   score: 5
-  question: （第17题，详见原卷）
-  answer: ''
-  solution: ''
+  question: 计算：$(-3)^{0}-2\cos45^{\circ}+\left|-\sqrt{2}+\sqrt{18}\right|$．
+  answer: $1+3\sqrt{2}$
+  solution: 解：原式＝$1-2\times\frac{\sqrt{2}}{2}+\sqrt{2}+3\sqrt{2}$$=1+3\sqrt{2}$．
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 三角函数
+  - 绝对值
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -274,9 +597,21 @@ questions:
 - id: 18
   type: 解答
   score: 5
-  question: 解不等式组：
-  answer: ''
-  solution: ''
+  question: 解不等式组：$\left\{ \begin{array} { l } { | 4 + x - 5 - 3 x | = 6 } \\ { x < \frac { x + 6 } { 3 } } \end{array} \right.$
+  answer: $1<x<3$
+  solution: '解：$\begin{cases}
+
+    1+x>5-3x \quad \text{①} \\
+
+    x<\dfrac{x+6}{3} \quad \text{②}
+
+    \end{cases}$
+
+    解不等式①，得$x>1$，
+
+    解不等式②，得$x<3$，
+
+    ∴原不等式组的解集为：$1<x<3$.'
   knowledge_points:
   - 不等式
   - 不等式组
@@ -292,17 +627,21 @@ questions:
   score: 5
   question: '下面是小东设计的“作三角形一边上的高”的尺规作图过程．
 
-    已知：．
+    [图]
 
-    求作：边上的高．
+    已知：$\triangle ABC$．
+
+    求作：边BC上的高AD．
 
     作法：如图1，
 
-    ①以点A为圆心，适当长为半径画弧，交直线于点M，N；
+    ①以点A为圆心，适当长为半径画弧，交直线BC于点M，N；
 
-    ②分别以点M，N为圆心，以大于的长为半径画弧，两弧相交于点P（不同于点A）；
+    ②分别以点M，N为圆心，以大于$\frac{1}{2}MN$的长为半径画弧，两弧相交于点P（不同于点A）；
 
-    ③作直线交于点D． 所以线段就是所求作的的边上的高．
+    ③作直线AP交BC于点D．所以线段AD就是所求作的$\triangle ABC$的边BC上的高．
+
+    [图]
 
     根据小东设计的尺规作图过程，
 
@@ -310,17 +649,31 @@ questions:
 
     （2）完成下面的证明．
 
-    证明：连接．
+    证明：连接$AM, AN, PM, PN$．
 
-    ∵       ，         ，
+    ∵$AM =$，$PM =$，
 
-    ∴是线段的垂直平分线（         ）(填推理的依据) ，
+    ∴AP是线段MN的垂直平分线（）(填推理的依据)，
 
-    ∴于点D，
+    ∴$AD \perp BC$于点D，
 
-    即线段为的边上的高．'
-  answer: ''
-  solution: ''
+    即线段AD为$\triangle ABC$的边BC上的高．'
+  answer: （1）见解析（2）见解析
+  solution: '【小问1详解】
+
+    解：使用直尺和圆规，补全图形，如图；
+
+    [图]【小问2详解】
+
+    证明：连接$AM, AN, PM, PN$．
+
+    ∵$AM = AN$，$PM = PN$，
+
+    ∴AP是线段MN的垂直平分线（到线段两端距离相等的点在线段的垂直平分线上），
+
+    ∴$AD \perp BC$于点D，
+
+    即线段AD为$\triangle ABC$的边BC上的高．'
   knowledge_points:
   - 尺规作图
   module: triangles
@@ -330,19 +683,49 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-yanshan-er-fig10.png
+  - figures/2023-yanshan-er-fig11.png
+  - figures/2023-yanshan-er-fig12.png
 - id: 20
   type: 解答
   score: 5
-  question: '关于x的方程有两个不相等的实数根．
+  question: '关于x的方程$x^{2}+4x+m+2=0$有两个不相等的实数根．
 
     （1）求m的取值范围；
 
     （2）若m为正整数，求此时方程的根．'
-  answer: ''
-  solution: ''
+  answer: （1）$m<2$ （2）$x_{1}=-3$，$x_{2}=-1$
+  solution: '【小问1详解】
+
+    解：由题意得：
+
+    $\triangle=4^{2}-4\times(m+2)$
+
+    $=16-4m-8$
+
+    $=8-4m$，
+
+    ∵该方程有两个不相等的实数根，
+
+    ∴$8-4m>0$，
+
+    ∴$m<2$．
+
+    【小问2详解】
+
+    解：∵m为正整数，且$m<2$，
+
+    ∴$m = 1$，
+
+    此时，方程为$x^{2}+4x+3=0$，
+
+    解得$x_{1}=-3$，$x_{2}=-1$．'
   knowledge_points:
-  - 综合
-  module: numbersAndExpressions
+  - 一元二次方程
+  - 根的判别式
+  - 不等式
+  module: equationsAndInequalities
   difficulty: 中档
   recommended_for:
   - L1
@@ -351,34 +734,167 @@ questions:
 - id: 21
   type: 解答
   score: 5
-  question: '如图，在中，对角线交于点．
+  question: '如图，在$Y_{ABCD}$中，对角线$AC, BD$交于点$O, AO = BO$．
 
-    （1）求证：四边形是矩形；
+    [图]
 
-    （2）若的平分线交于点E，求的长．'
-  answer: ''
-  solution: ''
+    （1）求证：四边形$ABCD$是矩形；
+
+    （2）若$AD = 3,\ AB = 4,\ \angle ADB$的平分线DE交AB于点E，求AE的长．'
+  answer: （1）证明见解析 （2）$\frac{3}{2}$
+  solution: '【小问1详解】
+
+    证明：∵四边形$ABCD$是平行四边形，
+
+    ∴$AC = 2AO,\ BD = 2BO$．
+
+    ∵$AO = BO$，
+
+    ∴$AC = BD$，
+
+    ∴平行四边形$ABCD$为矩形．
+
+    【小问2详解】
+
+    解：如图，过点E作$EF \perp BD$于点F．
+
+    [图]
+
+    ∵四边形$ABCD$是矩形，
+
+    ∴$\angle DAB = 90^\circ$，
+
+    ∴$EA\perp AD$．
+
+    ∵DE为$\angle ADB$的角平分线，
+
+    ∴$EF=EA,\ DF=DA$．
+
+    ∵$AD = 3,\ AB = 4$，
+
+    ∴$BD = \sqrt{AD^{2} + AB^{2}}$$\sqrt{3^{2}+4^{2}}=5$．
+
+    ∵$DF = DA = 3$，
+
+    ∴$BF=BD-DF=2$．
+
+    在$\triangle BEF$中，$\angle BFE = 90^\circ$，设$EF=EA=x$，则$BE = 4 - x$，
+
+    由$\sin\angle FBE=\frac{EF}{BE}$$\frac{x}{4-x}$$=\frac{3}{5}$，
+
+    解得$x=\frac{3}{2}$，
+
+    ∴$AE =$$\frac{3}{2}$．'
   knowledge_points:
+  - 勾股定理
+  - 平行四边形
   - 矩形
-  module: quadrilaterals
+  - 三角函数
+  - 锐角三角函数
+  module: triangles
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-yanshan-er-fig13.png
+  - figures/2023-yanshan-er-fig14.png
 - id: 22
   type: 解答
   score: 5
-  question: '某蔬菜批发基地为指导2023年的番茄销售，对历年的市场行情和供求情况进行了调查统计，得到番茄的售价x(单位：元/千克)与相应需求量(单位：吨)以及供给量(单位：吨)的几组数据：
+  question: '某蔬菜批发基地为指导2023年的番茄销售，对历年的市场行情和供求情况进行了调查统计，得到番茄的售价x(单位：元/千克)与相应需求量$y_1$(单位：吨)以及供给量$y_{2}$(单位：吨)的几组数据：
 
-    （1）根据表中数据，供给量与售价x之间满足         函数关系(填“一次”、“二次”或“反比例”)，它的函数表达式为         ；需求量与售价x之间近似满足函数关系，它的函数表达式为         ．
+    售价x/元/千克
 
-    （2）在同一平面直角坐标系中，画出(1)中所确定函数的图象；
+    …
 
-    （3）结合函数图象，解决问题：为使番茄的供需平衡(即供给量与需求量相等)，售价应定为           元/千克．'
-  answer: ''
-  solution: ''
+    2
+
+    3
+
+    4
+
+    5
+
+    6
+
+    …
+
+    需求量$y_1$/吨
+
+    …
+
+    9.5
+
+    8.875
+
+    8
+
+    6.875
+
+    5.5
+
+    …
+
+    供给量$y_{2}$/吨
+
+    …
+
+    1
+
+    2
+
+    3
+
+    4
+
+    5
+
+    …
+
+    （1）根据表中数据，供给量$y_{2}$与售价x之间满足函数关系(填“一次”、“二次”或“反比例”)，它的函数表达式为；需求量$y_1$与售价x之间近似满足函数关系$y_{1}=ax^{2}+c(a<0)$，它的函数表达式为．
+
+    （2）在同一平面直角坐标系中，画出(1)中所确定的函数的图象；
+
+    [图]
+
+    （3）结合函数图象，解决问题：为使番茄的供需平衡(即供给量与需求量相等)，售价应定为元/千克．'
+  answer: （1）一次，$y_{2}=x-1$，$y_{1}=-\frac{1}{8}x^{2}+10$ （2）见解析（3）6.2
+  solution: '【小问1详解】
+
+    由表中数据可知，供给量比售价少1，所以供给量$y_{2}$与售价x之间满足一次函数关系，它的函数表达式为$y_{2}=x-1$；
+
+    把$x = 4, y = 8$和$x-6,y=5.5$代入$y_{1}=ax^{2}+c(a<0)$，得
+
+    $\begin{aligned}
+
+    &16a+c=8 \\
+
+    &36a+c=5.5
+
+    \end{aligned}$，
+
+    解得
+
+    $\left\{ \begin{array} { l } { a = - \frac { 1 } { 8 } } \\ { c = 10 } \end{array} \right.$，
+
+    ∴$y_{1}=-\frac{1}{8}x^{2}+10$．
+
+    故答案为：一次，$y_{2}=x-1$，$y_{1}=-\frac{1}{8}x^{2}+10$；
+
+    【小问2详解】
+
+    描点，连线，得
+
+    [图]【小问3详解】
+
+    由函数图象可知，为使番茄的供需平衡(即供给量与需求量相等)，售价应定为6.2元/千克．
+
+    故答案为：6.2．'
   knowledge_points:
+  - 一次函数
+  - 二次函数
   - 统计
   - 坐标系
   module: functions
@@ -387,16 +903,67 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2023-yanshan-er-fig15.png
+  - figures/2023-yanshan-er-fig16.png
 - id: 23
   type: 解答
   score: 6
-  question: '在平面直角坐标系中，一次函数(k＞0)与反比例函数(m≠0)的图象交于点A(1，6)和点B．
+  question: '在平面直角坐标系xOy中，一次函数$y=kx+b$(k＞0)与反比例函数$y = \frac{m}{x}$(m≠0)的图象交于点A(1，6)和点B．
 
     （1）若点B(－6，－1)，求该一次函数和反比例函数的解析式；
 
-    （2）当时，对于的每一个值，函数(m≠0)的值大于一次函数(k＞0)的值，直接写出k的取值范围．'
-  answer: ''
-  solution: ''
+    （2）当$x \leq -3$时，对于x的每一个值，函数$y = \frac{m}{x}$(m≠0)的值大于一次函数$y=kx+b$(k＞0)的值，直接写出k的取值范围．'
+  answer: （1）$y=x+5$．$y=\frac{6}{x}$ （2）$k^{2}$
+  solution: '【小问1详解】
+
+    解：将点A(1，6)，B(－6，－1)的坐标分别代入$y=kx+b$中，
+
+    得$\begin{aligned}
+
+    x + b &= 6, \\
+
+    -6k + b &= -1.
+
+    \end{aligned}$
+
+    解得$\left\{
+
+    \begin{array}{l}
+
+    k = 1, \\
+
+    b = 5,
+
+    \end{array}
+
+    \right.$
+
+    ∴一次函数的解析式$y=x+5$．
+
+    将点A(1，6)的坐标代入$y = \frac{m}{x}$中，
+
+    得m＝6，
+
+    ∴反比例函数的解析式$y=\frac{6}{x}$．
+
+    【小问2详解】
+
+    解：由点A(1，6)在一次函数$y=kx+b$和反比例函数$y = \frac{m}{x}$的图像上，
+
+    ∴$b=6-k$，$y=\frac{6}{x}$，
+
+    令$\frac{6}{x}=kx+6-k$，
+
+    ∴$(kx+6)(x-1)=0$；
+
+    ∴$x_{1}=1$，$x_{2}=-\frac{6}{k}$，
+
+    ∵当$x \leq -3$时，对于x的每一个值，不等式都成立，
+
+    ∴$-\frac{6}{k} \leq -3$，
+
+    ∴$k^{2}$；'
   knowledge_points:
   - 一次函数
   - 反比例函数
@@ -413,13 +980,63 @@ questions:
 
     a．两次竞赛学生成绩情况统计图：
 
+    [图]
+
     b．两次竞赛学生的获奖情况如下：
 
-    (说明：成绩，获卓越奖；成绩，获优秀奖；成绩，获参与奖)
+    奖项
+
+    竞赛
+
+    参与奖
+
+    优秀奖
+
+    卓越奖
+
+    第一次竞赛
+
+    人数
+
+    8
+
+    m
+
+    n
+
+    平均分
+
+    73
+
+    85
+
+    95
+
+    第二次竞赛
+
+    人数
+
+    9
+
+    5
+
+    16
+
+    平均分
+
+    74
+
+    85
+
+    93
+
+    (说明：成绩$90$，获卓越奖；$80\leq$成绩$<90$，获优秀奖；成绩$<80$，获参与奖)
 
     c．第二次竞赛获卓越奖的学生成绩如下：
 
-    90  90  91  91  91  91  92  93  93  94  94  94  95  95  96  98
+    90
+
+    90  91  91  91  91  92  93  93  94  94  94  95  95  96  98
 
     根据以上信息，回答下列问题:
 
@@ -427,91 +1044,357 @@ questions:
 
     （2）甲同学第一次竞赛成绩是83分，第二次竞赛成绩是96分，在图中用“〇”圈出代表甲同学的点；
 
-    （3）下列推断合理的是          ．
+    （3）下列推断合理的是．
 
     ①第二次竞赛成绩数据的中位数是90；
 
     ②两次竞赛都获得卓越奖的有10人；
 
     ③第二次竞赛的平均成绩高于第一次竞赛的平均成绩．'
-  answer: ''
-  solution: ''
+  answer: （1）$m=12,n=10$（2）见解析 （3）①③
+  solution: '【小问1详解】
+
+    解：根据竞赛成绩统计图，第一次竞赛成绩在$80\leq$成绩$<90$之间的有12人，成绩$90$的有10人
+
+    ∴$m=12,n=10$；
+
+    【小问2详解】
+
+    如图所示：
+
+    [图]【小问3详解】
+
+    ①第二次竞赛成绩数据中参与奖及优秀奖的人数为9+5=14人，
+
+    第15、16名学生的成绩为90、90，
+
+    ∴第二次竞赛成绩数据的中位数是90；故推断合理；
+
+    ②由统计图得，两次都获得卓越奖的人数有9人，故推断不合理；
+
+    ③第二次竞赛的平均成绩为：$\frac{74\times9+85\times5+93\times16}{30}=85.97$，
+
+    第一次竞赛的平均成绩为：$73\times8+85\times12+95\times10=85.13<85.97$，故推断合理；
+
+    故答案为：①③．'
   knowledge_points:
   - 统计
+  - 平均数
   - 中位数
   module: statisticsAndProbability
   difficulty: 较难
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2023-yanshan-er-fig17.png
+  - figures/2023-yanshan-er-fig18.png
 - id: 25
   type: 解答
   score: 6
-  question: '如图，为的直径，为弦，射线与相切于点A，过点O作交于点D，连接．
+  question: '如图，AB为$\odot\odot$的直径，BC为弦，射线AM与$\odot\odot$相切于点A，过点O作$OD \parallel BC$交AM于点D，连接DC．
 
-    （1）求证：是的切线；
+    [图]
 
-    （2）过点B作交的延长线于点E，连接交于点F．若，，求的长．'
-  answer: ''
-  solution: ''
+    （1）求证：DC是$\odot\odot$的切线；
+
+    （2）过点B作$BE \perp AB$交DC的延长线于点E，连接AC交OD于点F．若$AB = 12$，$BE = 4$，求AF的长．'
+  answer: （1）证明见解析 （2）$\frac{18\sqrt{13}}{13}$
+  solution: '【小问1详解】
+
+    证明：如图，连接OC，
+
+    [图]
+
+    $\because AM$与$\odot\odot$相切于点A，
+
+    $\overrightarrow{OA} \perp \overrightarrow{AD}$，
+
+    $\because OD\parallel BC$，
+
+    $\angle1=\angle2$，$\angle B=\angle 3$，
+
+    $QOC = OB$，
+
+    $\therefore \angle B = \angle 1$，
+
+    $\angle2=\angle3$，
+
+    又$\because OC = OA$，$OD = OD$，
+
+    $\triangle DOC\cong\triangle DOA(SAS)$，
+
+    $\angle OCD = \angle OAD = 90^\circ$，
+
+    即$OC \perp DC$，
+
+    又$\because OC$是$\odot\odot$的半径，
+
+    $\therefore DC$是$\odot\odot$的切线．
+
+    【小问2详解】
+
+    解：如图，连接OE，
+
+    [图]
+
+    $\because BE \perp AB$，
+
+    $\therefore BE$为$\odot\odot$的切线，
+
+    $\because EC$也为$\odot\odot$的切线，
+
+    $\therefore EC = EB$，
+
+    又$QOC = OB$，
+
+    $\therefore OE \perp BC$，
+
+    $\therefore AB$是$\odot\odot$的直径，$AB = 12$，
+
+    $OA = OB = 6$，$\angle ACB=90^\circ$，即$AC \perp BC$，
+
+    $\ldots OE \parallel AC$，
+
+    $\angle EOB = \angle FAO$，
+
+    $\because OD\parallel BC$，
+
+    $\ldots AC \perp OD$于点F，
+
+    '
   knowledge_points:
+  - 平行线
   - 切线
   - 弦
-  module: circles
+  - 勾股定理
+  - 三角函数
+  module: triangles
   difficulty: 较难
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2023-yanshan-er-fig19.png
+  - figures/2023-yanshan-er-fig20.png
+  - figures/2023-yanshan-er-fig21.png
 - id: 26
   type: 解答
   score: 6
-  question: '在平面直角坐标系中，抛物线．
+  question: '在平面直角坐标系xOy中，抛物线$y=ax^{2}-4a^{2}x$$(a \neq 0)$．
 
-    （1）求抛物线与x轴的交点坐标及抛物线的对称轴(用含的式子表示)；
+    （1）求抛物线与x轴的交点坐标及抛物线的对称轴(用含a的式子表示)；
 
-    （2）已知点，在该抛物线上，若，求的取值范围．'
-  answer: ''
-  solution: ''
+    （2）已知点$P(a-1,y_{1})$，$Q(a+5,y_{2})$在该抛物线上，若$y_{1}\cdot y_{2}<0$，求a的取值范围．'
+  answer: （1）$(0,0)$；$(4a,0)$；$x = 2a$ （2）$1 < a < \frac{5}{3}$或$-5 < a < -\frac{1}{3}$．
+  solution: '【小问1详解】
+
+    解：$y=ax^{2}-4a^{2}x=ax(x-4a)$，
+
+    当$y = 0$时，$ax(x-4a)=0$，解得$x_{1}=0$，$x_{2}=4a$，
+
+    所以抛物线与x轴交于点$(0,0)$和$(4a,0)$，抛物线的对称轴为直线$x=\frac{-4a^{2}}{2a}=2a$．
+
+    【小问2详解】
+
+    解：抛物线与x轴交于点$(0,0)$和$(4a,0)$
+
+    当$a > 0$，由$y_{1}\cdot y_{2}<0$，
+
+    ∴$\begin{aligned}
+
+    &0 < a - 1 < 4, \\
+
+    &a + 5 > 4a.
+
+    \end{aligned}$或$\begin{aligned}
+
+    &|a-1|<0, \\
+
+    &0<a+5<4a.
+
+    \end{aligned}$解得$1 < a < \frac{5}{3}$或无解；
+
+    当$a<0$，由$y_{1}\cdot y_{2}<0$，
+
+    ∴$\begin{cases}
+
+    4a < a - 1 < 0, \\
+
+    a + 5 > 0.
+
+    \end{cases}$或$\begin{aligned}
+
+    &|a-1|<4a, \\
+
+    &4a<a+5<0.
+
+    \end{aligned}$解得$-5 < a < -\frac{1}{3}$或无解．
+
+    综上，$1 < a < \frac{5}{3}$或$-5 < a < -\frac{1}{3}$．'
   knowledge_points:
+  - 一元二次方程
+  - 二次函数
+  - 不等式
+  - 不等式组
   - 坐标系
-  module: functions
+  module: equationsAndInequalities
   difficulty: 压轴
   recommended_for:
   - L3
 - id: 27
   type: 解答
   score: 7
-  question: '中，，，点D为边的中点，点E在线段上，连接，将线段绕点A逆时针旋转得到线段，连接．
+  question: '$\triangle ABC$中，$\angle ACB=90^\circ$，$AC = BC$，点D为边AB的中点，点E在线段CD上，连接AE，将线段AE绕点A逆时针旋转$90^\circ$得到线段AF，连接CF．
 
-    （1）如图1，当点E与点D重合时，求证：；
+    [图]
 
-    （2）当点E在线段上(与点C，D不重合)时，依题意补全图2；用等式表示线段，，之间的数量关系，并证明．'
-  answer: ''
-  solution: ''
+    （1）如图1，当点E与点D重合时，求证：$CF = AE$；
+
+    （2）当点E在线段CD上(与点C，D不重合)时，依题意补全图2；用等式表示线段CF，ED，AD之间的数量关系，并证明．'
+  answer: （1）证明见解析 （2）$CF = ED + AD$，证明见解析
+  solution: '【小问1详解】
+
+    证明：∵$\angle ACB=90^\circ$，$AC = BC$，点D为边AB$[公式]$中点，
+
+    ∴$CD \perp AD$于点D，$AD = CD$，
+
+    ∵将线段AE绕点A逆时针旋转$90^\circ$得到线段AF，
+
+    ∴$AF = AE$，$\angle FAE = 90^\circ$，
+
+    ∵点E与点D重合，
+
+    ∴$AF \perp AD$，$AF = AD$，
+
+    ∴$AF \parallel CD$，且$AF = CD$，
+
+    ∴四边形$AFCD$为平行四边形，
+
+    ∴$CF = AD$，
+
+    即$CF = AE$．
+
+    【小问2详解】
+
+    依题意补全图形，如图，
+
+    [图]
+
+    线段CF，ED，AD之间的数量关系：$CF = ED + AD$，
+
+    证明：如图，过点F作$FG \perp AB$交DA延长线于点G，
+
+    ∵$\angle ACB=90^\circ$，$AC = BC$，点D为边AB的中点，
+
+    ∴$CD \perp AB$于点D，$AD = CD$，
+
+    ∴$\angle FGA=\angle ADE=90^{\circ}$，
+
+    ∴$FG \parallel CD$，
+
+    ∵将线段AE绕点A逆时针旋转$90^\circ$得到线段AF，
+
+    ∴$AF = AE$，$\angle FAE = 90^\circ$，
+
+    ∴$\angle FAG+\angle EAD=90^{\circ}$，$\angle PAG+\angle GPA=90^\circ$，
+
+    ∴$\angle GFA = \angle LAD$，
+
+    ∴$Rt\triangle CAC \cong Rt\triangle AED (AAS)$，
+
+    ∴$GA = ED$，$FG = AD = CD$，
+
+    ∴四边形$FGDC$为矩形，
+
+    ∴$CF\cdot DG\cdot AG+AD\cdot ED+AD$；'
   knowledge_points:
+  - 全等三角形
+  - 平行四边形
+  - 矩形
   - 旋转
-  module: geometryComprehensive
+  module: triangles
   difficulty: 压轴
   recommended_for:
   - L3
+  figures:
+  - figures/2023-yanshan-er-fig22.png
+  - figures/2023-yanshan-er-fig23.png
 - id: 28
   type: 解答
   score: 7
-  question: '在平面直角坐标系中，的半径为2．对于直线l和线段，给出如下定义：若将线段关于直线l对称，可以得到的弦 (，分别是B，C的对应点)，则称线段是以直线l为轴的的“关联线段”．例如，图1中线段是以直线l为轴的的“关联线段”．
+  question: '在平面直角坐标系xOy中，$\odot\odot$的半径为2．对于直线l和线段BC，给出如下定义：若将线段BC关于直线l对称，可以得到$\odot\odot$的弦$B''C''$($B''$，$C''$分别是B，C的对应点)，则称线段BC是以直线l为轴的$\odot\odot$的“关联线段”．例如，图1中线段BC是以直线l为轴的$\odot\odot$的“关联线段”．
 
-    （1）如图2，点，，，，，的横、纵坐标都是整数．
+    [图]
 
-    ① 在线段，，中，以直线：为轴的的“关联线段”是            ；
+    （1）如图2，点$B_1$，$C_1$，$B_2$，$C_{2}$，$B_3$，$C_3$的横、纵坐标都是整数．
 
-    ② 在线段，，中，存在以直线：为轴的的“关联线段”，求b的值；
+    ①在线段$B_1C_1$，$B_{2}C_{2}$，$B_{3}C_{3}$中，以直线$\ell_{1}$：$y=x+4$为轴的$\odot\odot$的“关联线段”是；
 
-    （2）已知直线：交x轴于点A．在中，，，若线段是以直线为轴的的“关联线段”，直接写出m的最大值与最小值，以及相应的的长．'
-  answer: ''
-  solution: ''
+    ②在线段$B_1C_1$，$B_{2}C_{2}$，$B_{3}C_{3}$中，存在以直线$l_2$：$y = -x + b$为轴的$\odot\odot$的“关联线段”，求b的值；
+
+    （2）已知直线$l_{3}$：$y=\sqrt{3}x+m(m>0)$交x轴于点A．在$\triangle ABC$中，$AB = 6$，$BC = 2$，若线段BC是以直线$l_{3}$为轴的$\odot\odot$的“关联线段”，直接写出m的最大值与最小值，以及相应的AC的长．'
+  answer: （1）①$B_1C_1$；②1或3 （2）m的最大值为$8\sqrt{3}$，$AC = 2\sqrt{13}$；m的最小值为$4\sqrt{3}$，$AC = 2\sqrt{7}$．
+  solution: '【小问1详解】
+
+    解：①如图所示：
+
+    [图]
+
+    ∴以直线$\ell_{1}$：$y=x+4$为轴的$\odot\odot$的“关联线段”是$B_1C_1$；
+
+    ②∵直线$l_2$：$y = -x + b$与x轴夹角为$45^\circ$，
+
+    ∴线段$B_{1}C_{1}\perp$直线$l_2$，
+
+    ∴线段$B_1C_1$关于直线$l_2$的对称线段还在直线$B_1C_1$上，不可能是$\odot\odot$的弦，
+
+    ∵$\odot\odot$的最长的弦即直径为4，
+
+    $B_{2}C_{2}$$=\sqrt{20}>4$，
+
+    ∴线段$B_{2}C_{2}$的对称线段不可能是$\odot\odot$的弦；
+
+    ∵线段$B_3C_3 \parallel$直线$l_2$，且$B_{3}C_{3} =$$2\sqrt{2}$，
+
+    ∴线段$B_{3}C_{3}$的对称线段可以是$\odot\odot$的弦．
+
+    线段$B_{3}C_{3}$的对称线段$B_{1}C_{3}\parallel B_{2}C_{3}$，
+
+    且$B_{3}C_{3}^{\prime} =$$2\sqrt{2}$．
+
+    如图，平移线段$B_{3}C_{3}$使之成为$\odot\odot$的弦，有两种情况：
+
+    [图]
+
+    (ⅰ)$B_{3}^{\prime}$，$C_{3}^{''}$的坐标分别为$(0,2)$，$(2,0)$，此时$b=3$；
+
+    (ⅱ)$B_{3}''''$，$C_{3}^{n}$的坐标分别为$(-2,0)$，$(0,-2)$，此时$b = 1$．
+
+    综上所述，$b = 1$或3．
+
+    【小问2详解】
+
+    解：画$\odot\odot$与eT关于直线$l_{3}$：$y=\sqrt{3}x+m(m>0)$对称，
+
+    ∵$AB = 6$，
+
+    以点A为圆心，6为半径画$\odot A$，则$\odot A$与eT至少有一个交点，才能满足题目条件，
+
+    ∵$\od'
   knowledge_points:
   - 弦
+  - 勾股定理
   - 坐标系
   module: geometryComprehensive
   difficulty: 压轴
   recommended_for:
   - L3
+  figures:
+  - figures/2023-yanshan-er-fig24.png
+  - figures/2023-yanshan-er-fig25.png
+  - figures/2023-yanshan-er-fig26.png
+  - figures/2023-yanshan-er-fig27.png
+  - figures/2023-yanshan-er-fig28.png
+  - figures/2023-yanshan-er-fig29.png
+  - figures/2023-yanshan-er-fig30.png
