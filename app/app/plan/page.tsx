@@ -2,6 +2,12 @@
 
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
+import {
+  SCHOOLS_BY_DISTRICT as SCHOOLS_510,
+  DISTRICTS,
+  daysUntilZhongkao,
+  type School,
+} from "@/lib/schools";
 
 type SelfAssessment = "很差" | "薄弱" | "还行" | "不错" | "擅长" | "不确定";
 
@@ -44,53 +50,8 @@ const ASSESSMENT_COLORS: Record<SelfAssessment, string> = {
   "擅长": "bg-emerald-100 text-emerald-700 border-emerald-300",
 };
 
-// 各区学校列表（按层级排列）
-const SCHOOLS_BY_DISTRICT: Record<string, { name: string; tier: string; refScore: number }[]> = {
-  "朝阳区": [
-    { name: "八十中（创新班）", tier: "顶尖", refScore: 95 },
-    { name: "北京中学", tier: "顶尖", refScore: 93 },
-    { name: "八十中（普通班）", tier: "顶尖", refScore: 90 },
-    { name: "人大附中朝阳学校", tier: "重点", refScore: 88 },
-    { name: "清华附中朝阳学校", tier: "重点", refScore: 87 },
-    { name: "陈经纶中学", tier: "重点", refScore: 85 },
-    { name: "朝阳外国语学校", tier: "重点", refScore: 85 },
-    { name: "工大附中", tier: "普通", refScore: 78 },
-    { name: "日坛中学", tier: "普通", refScore: 75 },
-    { name: "和平街一中", tier: "普通", refScore: 73 },
-    { name: "三里屯一中", tier: "保底", refScore: 65 },
-  ],
-  "海淀区": [
-    { name: "十一学校（科实班）", tier: "顶尖", refScore: 97 },
-    { name: "人大附中", tier: "顶尖", refScore: 95 },
-    { name: "101中学", tier: "顶尖", refScore: 93 },
-    { name: "清华附中", tier: "顶尖", refScore: 92 },
-    { name: "首师大附中", tier: "顶尖", refScore: 92 },
-    { name: "北大附中", tier: "重点", refScore: 90 },
-    { name: "十一学校（普通班）", tier: "重点", refScore: 90 },
-    { name: "育英学校", tier: "重点", refScore: 85 },
-    { name: "五十七中", tier: "普通", refScore: 78 },
-  ],
-  "西城区": [
-    { name: "北师大实验中学", tier: "顶尖", refScore: 95 },
-    { name: "北京四中", tier: "顶尖", refScore: 93 },
-    { name: "北京八中", tier: "顶尖", refScore: 92 },
-    { name: "北师大附中", tier: "重点", refScore: 90 },
-    { name: "北师大二附中", tier: "重点", refScore: 90 },
-    { name: "161中学", tier: "重点", refScore: 85 },
-    { name: "三十五中", tier: "普通", refScore: 82 },
-    { name: "十三中", tier: "普通", refScore: 82 },
-  ],
-  "东城区": [
-    { name: "北京二中", tier: "顶尖", refScore: 93 },
-    { name: "171中学", tier: "顶尖", refScore: 90 },
-    { name: "北京五中", tier: "重点", refScore: 88 },
-    { name: "汇文中学", tier: "重点", refScore: 86 },
-    { name: "广渠门中学", tier: "重点", refScore: 85 },
-    { name: "东直门中学", tier: "重点", refScore: 83 },
-    { name: "景山学校", tier: "普通", refScore: 80 },
-    { name: "166中学", tier: "普通", refScore: 78 },
-  ],
-};
+// 数学规划页面使用总分510制的学校数据作为参考
+const SCHOOLS_BY_DISTRICT = SCHOOLS_510;
 
 const TIER_COLORS: Record<string, string> = {
   "顶尖": "text-red-600",
@@ -98,12 +59,6 @@ const TIER_COLORS: Record<string, string> = {
   "普通": "text-gray-600",
   "保底": "text-gray-400",
 };
-
-function daysUntilZhongkao(): number {
-  const examDate = new Date("2026-06-24");
-  const today = new Date();
-  return Math.max(1, Math.ceil((examDate.getTime() - today.getTime()) / (1000 * 60 * 60 * 24)));
-}
 
 export default function Home() {
   // 支持从 /score-check 或 /assessment 跳转时通过 URL 参数预填
@@ -160,7 +115,7 @@ export default function Home() {
   // 选择学校时自动设置目标分数
   const handleSchoolChange = (schoolName: string) => {
     setFormData((prev) => {
-      const schools = SCHOOLS_BY_DISTRICT[prev.district] || [];
+      const schools = (SCHOOLS_BY_DISTRICT as Record<string, School[]>)[prev.district] || [];
       const school = schools.find((s) => s.name === schoolName);
       return {
         ...prev,
@@ -255,7 +210,7 @@ export default function Home() {
     }
   }, [plan]);
 
-  const schools = SCHOOLS_BY_DISTRICT[formData.district] || [];
+  const schools = (SCHOOLS_BY_DISTRICT as Record<string, School[]>)[formData.district] || [];
   const showResults = diagnosis || plan;
 
   return (
