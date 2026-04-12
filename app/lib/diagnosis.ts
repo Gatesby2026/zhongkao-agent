@@ -21,7 +21,7 @@ export interface StudentInput {
   };
 }
 
-export type SelfAssessment = "很差" | "薄弱" | "还行" | "不错" | "擅长";
+export type SelfAssessment = "很差" | "薄弱" | "还行" | "不错" | "擅长" | "不确定";
 
 export type Level = "L0" | "L1" | "L2" | "L3";
 
@@ -58,7 +58,7 @@ export interface TimeAllocation {
 }
 
 // 自评 → 水平等级映射
-function assessmentToLevel(assessment: SelfAssessment): Level {
+function assessmentToLevel(assessment: SelfAssessment, totalScore?: number): Level {
   switch (assessment) {
     case "很差":
       return "L0";
@@ -70,7 +70,18 @@ function assessmentToLevel(assessment: SelfAssessment): Level {
       return "L2";
     case "擅长":
       return "L3";
+    case "不确定":
+      // 基于总分推算水平
+      return estimateLevelFromScore(totalScore || 60);
   }
+}
+
+// 基于总分推算模块水平（当学生选"不确定"时使用）
+function estimateLevelFromScore(totalScore: number): Level {
+  if (totalScore >= 85) return "L2";      // 85+ → 基本熟练
+  if (totalScore >= 70) return "L1";      // 70-84 → 概念模糊偏上
+  if (totalScore >= 55) return "L1";      // 55-69 → 概念模糊
+  return "L0";                             // <55 → 基础薄弱
 }
 
 // 水平等级 → 预估得分率
@@ -148,7 +159,7 @@ export function diagnose(input: StudentInput): DiagnosisResult {
   const moduleEntries = Object.entries(assessments) as [string, SelfAssessment][];
 
   const modules: ModuleDiagnosis[] = moduleEntries.map(([key, assessment]) => {
-    const level = assessmentToLevel(assessment);
+    const level = assessmentToLevel(assessment, input.totalScore);
     const weight = MODULE_WEIGHTS[key];
     const currentScore = Math.round(weight.maxScore * levelToScoreRate(level));
     const targetLvl = nextLevel(level);

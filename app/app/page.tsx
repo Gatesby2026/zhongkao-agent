@@ -25,8 +25,26 @@ export default function Home() {
         </p>
       </div>
 
-      {/* 三个入口 */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+      {/* 四个入口 */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+        {/* 🏫 快速入口（P0 核心钩子） */}
+        <Link href="/score-check" className="group md:col-span-2">
+          <div className="bg-gradient-to-r from-indigo-50 to-blue-50 rounded-xl border-2 border-indigo-200 p-6 transition-all hover:border-indigo-400 hover:shadow-md group-hover:scale-[1.01]">
+            <div className="flex items-center gap-4">
+              <div className="text-4xl">🏫</div>
+              <div className="flex-1">
+                <h2 className="text-lg font-bold text-gray-900 mb-1">我的分数能上什么学校？</h2>
+                <p className="text-sm text-gray-500">
+                  输入区和分数，3 秒看到可冲 / 稳妥 / 保底三档学校匹配。家长、学生都适用。
+                </p>
+              </div>
+              <div className="text-indigo-600 font-medium text-sm group-hover:underline whitespace-nowrap">
+                立即查看 &rarr;
+              </div>
+            </div>
+          </div>
+        </Link>
+
         {/* 专项突破 */}
         <Link href="/drill" className="group">
           <div className="bg-white rounded-xl border-2 border-gray-200 p-6 h-full transition-all hover:border-blue-400 hover:shadow-md group-hover:scale-[1.02]">
@@ -55,7 +73,7 @@ export default function Home() {
               全面诊断 7 个模块水平，生成整体路线图 + 本周详细计划，直到中考。
             </p>
             <div className="text-xs text-gray-400 space-y-1">
-              <div>- 7 个模块全面自评</div>
+              <div>- 不确定水平？系统帮你推算</div>
               <div>- 目标学校 &rarr; 数学目标分</div>
               <div>- 路线图 + 每周计划</div>
             </div>
@@ -64,27 +82,17 @@ export default function Home() {
             </div>
           </div>
         </Link>
+      </div>
 
-        {/* 全科规划 */}
-        <div className="relative">
-          <div className="bg-white rounded-xl border-2 border-dashed border-gray-200 p-6 h-full opacity-60">
-            <div className="text-3xl mb-3">📋</div>
-            <h2 className="text-lg font-bold text-gray-900 mb-2">全科规划</h2>
-            <p className="text-sm text-gray-500 mb-4">
-              输入各科成绩和目标学校，AI 帮你分配各科时间，找到最优提分路径。
-            </p>
-            <div className="text-xs text-gray-400 space-y-1">
-              <div>- 6 科统筹安排</div>
-              <div>- 跨科时间分配优化</div>
-              <div>- 整体分数最大化</div>
-            </div>
-            <div className="mt-4 text-gray-400 font-medium text-sm">
-              即将上线
-            </div>
+      {/* 全科规划预告 */}
+      <div className="mt-5 relative">
+        <div className="bg-white rounded-xl border-2 border-dashed border-gray-200 p-4 opacity-60 flex items-center gap-4">
+          <div className="text-2xl">📋</div>
+          <div className="flex-1">
+            <h2 className="text-base font-bold text-gray-900">全科规划</h2>
+            <p className="text-xs text-gray-500">6科统筹安排，跨科时间分配优化</p>
           </div>
-          <div className="absolute top-3 right-3 bg-gray-100 text-gray-500 text-xs px-2 py-1 rounded-full">
-            Coming Soon
-          </div>
+          <div className="text-gray-400 text-xs px-2 py-1 bg-gray-100 rounded-full">Coming Soon</div>
         </div>
       </div>
 

@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 
-type SelfAssessment = "很差" | "薄弱" | "还行" | "不错" | "擅长";
+type SelfAssessment = "很差" | "薄弱" | "还行" | "不错" | "擅长" | "不确定";
 
 interface FormData {
   district: string;
@@ -33,9 +33,10 @@ const MODULE_NAMES: Record<string, string> = {
   geometryComprehensive: "压轴题（几何综合、动态几何、代几综合）",
 };
 
-const ASSESSMENTS: SelfAssessment[] = ["很差", "薄弱", "还行", "不错", "擅长"];
+const ASSESSMENTS: SelfAssessment[] = ["不确定", "很差", "薄弱", "还行", "不错", "擅长"];
 
 const ASSESSMENT_COLORS: Record<SelfAssessment, string> = {
+  "不确定": "bg-gray-100 text-gray-600 border-gray-300",
   "很差": "bg-red-100 text-red-700 border-red-300",
   "薄弱": "bg-orange-100 text-orange-700 border-orange-300",
   "还行": "bg-yellow-100 text-yellow-700 border-yellow-300",
@@ -105,21 +106,26 @@ function daysUntilZhongkao(): number {
 }
 
 export default function Home() {
+  // 支持从 /score-check 跳转时通过 URL 参数预填
+  const searchParams = typeof window !== "undefined" ? new URLSearchParams(window.location.search) : null;
+  const urlDistrict = searchParams?.get("district") || "朝阳区";
+  const urlScore = parseInt(searchParams?.get("score") || "75") || 75;
+
   const [formData, setFormData] = useState<FormData>({
-    district: "朝阳区",
-    totalScore: 75,
+    district: urlDistrict,
+    totalScore: urlScore,
     availableHoursPerDay: 1.5,
     targetSchool: "",
     targetSchoolScore: "",
     daysUntilExam: daysUntilZhongkao(),
     modules: {
-      numbersAndExpressions: "还行",
-      equationsAndInequalities: "薄弱",
-      functions: "很差",
-      triangles: "还行",
-      circles: "薄弱",
-      statisticsAndProbability: "不错",
-      geometryComprehensive: "很差",
+      numbersAndExpressions: "不确定",
+      equationsAndInequalities: "不确定",
+      functions: "不确定",
+      triangles: "不确定",
+      circles: "不确定",
+      statisticsAndProbability: "不确定",
+      geometryComprehensive: "不确定",
     },
   });
 
@@ -352,9 +358,9 @@ export default function Home() {
           </div>
 
           {/* 各模块自评 */}
-          <h2 className="text-lg font-semibold text-gray-800 mb-4">各模块自评</h2>
+          <h2 className="text-lg font-semibold text-gray-800 mb-4">各模块自评（可选）</h2>
           <p className="text-sm text-gray-500 mb-4">
-            根据你的真实感受选择，越准确规划越精准
+            不确定的模块可以不改，系统会根据你的总分自动推算。知道的越多，规划越精准。
           </p>
 
           <div className="space-y-3">
