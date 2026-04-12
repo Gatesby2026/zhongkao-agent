@@ -4,8 +4,8 @@ import { AuthProvider } from "@/components/AuthProvider";
 import { Header } from "@/components/Header";
 
 export const metadata: Metadata = {
-  title: "中考数学学习规划 - 智能 Agent",
-  description: "基于AI的中考数学个性化学习规划系统",
+  title: "北京中考提分规划",
+  description: "AI 驱动的北京中考个性化提分方案，覆盖6科全科诊断与学习规划",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

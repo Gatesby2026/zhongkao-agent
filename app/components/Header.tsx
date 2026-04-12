@@ -14,7 +14,7 @@ export function Header() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 text-lg font-bold text-gray-900">
           <span>🎯</span>
-          <span className="text-sm">中考智能规划</span>
+          <span className="text-sm">北京中考提分规划</span>
         </Link>
 
         {/* 右侧：登录状态 */}

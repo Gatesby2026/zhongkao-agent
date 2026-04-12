@@ -177,7 +177,7 @@ export default function LoginPage() {
         {/* 标题 */}
         <div className="text-center mb-8">
           <div className="text-4xl mb-3">🎯</div>
-          <h1 className="text-xl font-bold text-gray-900">中考智能规划</h1>
+          <h1 className="text-xl font-bold text-gray-900">北京中考提分规划</h1>
           <p className="text-sm text-gray-500 mt-1">手机号验证码登录</p>
         </div>
 
