@@ -25,7 +25,7 @@ export default function Home() {
         </p>
       </div>
 
-      {/* 四个入口 */}
+      {/* 入口卡片 */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         {/* 🏫 快速入口（P0 核心钩子） */}
         <Link href="/score-check" className="group md:col-span-2">
@@ -40,6 +40,24 @@ export default function Home() {
               </div>
               <div className="text-indigo-600 font-medium text-sm group-hover:underline whitespace-nowrap">
                 立即查看 &rarr;
+              </div>
+            </div>
+          </div>
+        </Link>
+
+        {/* 📝 快速测评 */}
+        <Link href="/assessment" className="group md:col-span-2">
+          <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl border-2 border-purple-200 p-5 transition-all hover:border-purple-400 hover:shadow-md group-hover:scale-[1.01]">
+            <div className="flex items-center gap-4">
+              <div className="text-3xl">📝</div>
+              <div className="flex-1">
+                <h2 className="text-lg font-bold text-gray-900 mb-1">5 分钟快速测评</h2>
+                <p className="text-sm text-gray-500">
+                  10 道精选题，精确诊断 7 个模块水平。比自评准 10 倍，直接生成个性化学习计划。
+                </p>
+              </div>
+              <div className="text-purple-600 font-medium text-sm group-hover:underline whitespace-nowrap">
+                开始测评 &rarr;
               </div>
             </div>
           </div>

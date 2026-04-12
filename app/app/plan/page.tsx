@@ -106,10 +106,40 @@ function daysUntilZhongkao(): number {
 }
 
 export default function Home() {
-  // 支持从 /score-check 跳转时通过 URL 参数预填
+  // 支持从 /score-check 或 /assessment 跳转时通过 URL 参数预填
   const searchParams = typeof window !== "undefined" ? new URLSearchParams(window.location.search) : null;
   const urlDistrict = searchParams?.get("district") || "朝阳区";
   const urlScore = parseInt(searchParams?.get("score") || "75") || 75;
+  const fromAssessment = searchParams?.get("fromAssessment") === "1";
+
+  // 从测评结果中解析模块水平
+  const getInitialModules = (): FormData["modules"] => {
+    const defaults: FormData["modules"] = {
+      numbersAndExpressions: "不确定",
+      equationsAndInequalities: "不确定",
+      functions: "不确定",
+      triangles: "不确定",
+      circles: "不确定",
+      statisticsAndProbability: "不确定",
+      geometryComprehensive: "不确定",
+    };
+    if (fromAssessment && searchParams) {
+      try {
+        const modulesJson = searchParams.get("modules");
+        if (modulesJson) {
+          const parsed = JSON.parse(modulesJson) as Record<string, string>;
+          for (const key of Object.keys(defaults)) {
+            if (parsed[key] && ASSESSMENTS.includes(parsed[key] as SelfAssessment)) {
+              (defaults as any)[key] = parsed[key] as SelfAssessment;
+            }
+          }
+        }
+      } catch {
+        // ignore parse errors
+      }
+    }
+    return defaults;
+  };
 
   const [formData, setFormData] = useState<FormData>({
     district: urlDistrict,
@@ -118,15 +148,7 @@ export default function Home() {
     targetSchool: "",
     targetSchoolScore: "",
     daysUntilExam: daysUntilZhongkao(),
-    modules: {
-      numbersAndExpressions: "不确定",
-      equationsAndInequalities: "不确定",
-      functions: "不确定",
-      triangles: "不确定",
-      circles: "不确定",
-      statisticsAndProbability: "不确定",
-      geometryComprehensive: "不确定",
-    },
+    modules: getInitialModules(),
   });
 
   const [loading, setLoading] = useState(false);
