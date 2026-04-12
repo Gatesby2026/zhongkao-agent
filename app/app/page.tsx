@@ -91,6 +91,18 @@ export default function Home() {
 
           {/* 次要入口 */}
           <div className="mt-5 space-y-3">
+            <Link href="/report/weekly" className="block group">
+              <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl border-2 border-blue-200 p-4 transition-all hover:border-blue-400 hover:shadow-md flex items-center gap-4">
+                <div className="text-2xl">📈</div>
+                <div className="flex-1">
+                  <h2 className="text-sm font-bold text-gray-900">学习周报</h2>
+                  <p className="text-xs text-gray-500">查看孩子本周做题量、正确率变化、薄弱模块</p>
+                </div>
+                <div className="text-blue-600 font-medium text-xs group-hover:underline whitespace-nowrap">
+                  查看 &rarr;
+                </div>
+              </div>
+            </Link>
             <Link href="/assessment" className="block group">
               <div className="bg-white rounded-xl border border-gray-200 p-4 transition-all hover:border-purple-300 hover:shadow-sm flex items-center gap-4">
                 <div className="text-2xl">📝</div>
@@ -210,6 +222,20 @@ export default function Home() {
                 </div>
               </div>
             </Link>
+            {isLoggedIn && (
+              <Link href="/report/weekly" className="block group">
+                <div className="bg-white rounded-xl border border-gray-200 p-4 transition-all hover:border-blue-300 hover:shadow-sm flex items-center gap-4">
+                  <div className="text-2xl">📈</div>
+                  <div className="flex-1">
+                    <h2 className="text-base font-bold text-gray-900">学习周报</h2>
+                    <p className="text-xs text-gray-500">查看本周做题量、正确率、进步趋势</p>
+                  </div>
+                  <div className="text-blue-600 font-medium text-sm group-hover:underline whitespace-nowrap">
+                    查看 &rarr;
+                  </div>
+                </div>
+              </Link>
+            )}
             <Link href="/diagnosis" className="block group">
               <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl border-2 border-green-200 p-4 transition-all hover:border-green-400 hover:shadow-md flex items-center gap-4">
                 <div className="text-2xl">📋</div>
