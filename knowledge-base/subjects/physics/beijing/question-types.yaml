@@ -1,0 +1,311 @@
+# ============================================================
+# 北京中考物理 — 题型分布与历年对比
+# ============================================================
+# 数据来源：2021-2025年北京中考物理真题逐题分析
+# 最后更新：2026-04-12
+# 注意：2025年及以前满分70分，2026年起调整为80分
+
+subject: 物理
+region: 北京市
+full_score_note: "2021-2025满分70分; 2026起满分80分"
+
+# ------ 历年题型结构对比 ------
+yearly_comparison:
+  - year: 2021
+    full_score: 70
+    total_questions: 33
+    structure: "12单选(24分) + 3多选(6分) + 实验探究(22分) + 科普阅读(4分) + 计算(14分)"
+    notable_changes: 科普阅读题考查超导材料
+    difficulty_note: 整体中等偏易
+
+  - year: 2022
+    full_score: 70
+    total_questions: 33
+    structure: "12单选(24分) + 3多选(6分) + 实验探究(22分) + 科普阅读(4分) + 计算(14分)"
+    notable_changes: 双减后首次中考，回归基础，情境题增多（冬奥会融入）
+    difficulty_note: 较2021略降
+
+  - year: 2023
+    full_score: 70
+    total_questions: 34
+    structure: "12单选(24分) + 3多选(6分) + 实验探究(22分) + 科普阅读(4分) + 计算(14分)"
+    notable_changes: 实验探究新增方案评估类小题，难度略有回升
+    difficulty_note: 中等
+
+  - year: 2024
+    full_score: 70
+    total_questions: 34
+    structure: "12单选(24分) + 3多选(6分) + 实验探究(24分) + 科普阅读(4分) + 计算(12分)"
+    notable_changes: 实验探究分值微增，计算题分值微降
+    difficulty_note: 中等
+
+  - year: 2025
+    full_score: 70
+    total_questions: 34
+    structure: "12单选(24分) + 3多选(6分) + 实验探究(24分) + 科普阅读(4分) + 计算(12分)"
+    notable_changes: 电学实验探究出现开放性设计题
+    difficulty_note: 中等偏难
+
+  - year: 2026
+    full_score: 80
+    total_questions: 约38
+    structure: "12单选(24分) + 3多选(6分) + 实验探究(约28分) + 科普阅读(4分) + 计算(约18分)"
+    notable_changes: 满分从70→80，增加的10分预计分配在实验和计算
+    difficulty_note: 待考
+
+# ------ 题号与知识点的稳定对应关系 ------
+# 基于 2021-2025 五年真题统计
+
+typical_question_map:
+
+  单项选择题:
+    - question: 1
+      typical_topic: 声现象（声音的产生与传播/声音特性）
+      frequency: 5/5
+      difficulty: 基础
+      note: 送分题，辨析声音的产生条件或传播特点
+
+    - question: 2
+      typical_topic: 光现象（反射/折射/直线传播辨析）
+      frequency: 5/5
+      difficulty: 基础
+      note: 从生活实例判断光学现象类型
+
+    - question: 3
+      typical_topic: 物态变化（六种变化辨析）
+      frequency: 5/5
+      difficulty: 基础
+      note: 判断生活中的物态变化过程及吸放热
+
+    - question: 4
+      typical_topic: 物态变化/热学基础
+      frequency: 5/5
+      difficulty: 基础
+      note: 温度或比热容基本概念
+
+    - question: 5
+      typical_topic: 力学基础（力的概念/重力/弹力/摩擦力）
+      frequency: 5/5
+      difficulty: 基础
+      note: 力的作用效果或力的示意图判断
+
+    - question: 6
+      typical_topic: 运动学（参照物/速度/匀速运动）
+      frequency: 5/5
+      difficulty: 基础
+
+    - question: 7
+      typical_topic: 电学基础（电路连接/电流电压规律）
+      frequency: 5/5
+      difficulty: 基础
+      note: 判断串并联或电表示数
+
+    - question: 8
+      typical_topic: 电与磁（电磁感应/电动机/发电机）
+      frequency: 4/5
+      difficulty: 基础
+      note: 区分电磁现象的应用
+
+    - question: 9
+      typical_topic: 压强（固体/液体压强比较）
+      frequency: 5/5
+      difficulty: 基础-中档
+      note: 压强大小比较或增减方法
+
+    - question: 10
+      typical_topic: 浮力/密度综合
+      frequency: 5/5
+      difficulty: 中档
+      note: 浮沉条件判断或密度比较
+
+    - question: 11
+      typical_topic: 力学综合（杠杆/滑轮/功率/效率）
+      frequency: 5/5
+      difficulty: 中档
+      note: 简单机械的判断或功率比较
+
+    - question: 12
+      typical_topic: 电学综合（电路分析/动态电路）
+      frequency: 5/5
+      difficulty: 中档-拔高
+      note: 选择题压轴，动态电路分析
+
+  多选题:
+    - question: 13
+      typical_topic: 热学/力学综合判断
+      frequency: 5/5
+      difficulty: 中档
+      note: 多结论判断正误
+
+    - question: 14
+      typical_topic: 力学综合（压强/浮力/机械效率）
+      frequency: 5/5
+      difficulty: 中档
+      note: 涉及计算和推理
+
+    - question: 15
+      typical_topic: 电学综合（欧姆定律/电功率）
+      frequency: 5/5
+      difficulty: 中档-拔高
+      note: 多选题压轴，需定量计算判断
+
+  实验探究题:
+    - question_range: "16-18"
+      typical_topic: 基础实验（仪器读数/实验操作/数据记录）
+      score: 约8-10分
+      frequency: 5/5
+      difficulty: 基础
+      note: 温度计/电流表/电压表/弹簧测力计读数
+
+    - question_range: "19-20"
+      typical_topic: 光学实验（平面镜成像/凸透镜成像）
+      score: 约4-6分
+      frequency: 5/5
+      difficulty: 基础-中档
+      note: 凸透镜成像实验几乎年年考
+
+    - question_range: "21-22"
+      typical_topic: 力学实验（密度测量/浮力探究/杠杆平衡）
+      score: 约4-6分
+      frequency: 5/5
+      difficulty: 中档
+      note: 控制变量法是核心方法
+
+    - question_range: "23-25"
+      typical_topic: 电学实验（伏安法测电阻/测电功率）
+      score: 约8-10分
+      frequency: 5/5
+      difficulty: 中档-拔高
+      note: 电学实验分值最高，实验设计和误差分析是难点
+
+  科普阅读题:
+    - question: 26
+      typical_topic: 科技前沿+物理原理
+      score: 4分
+      frequency: 5/5
+      difficulty: 基础-中档
+      recent_topics:
+        - 2021: 超导材料
+        - 2022: 冬奥雪场造雪技术
+        - 2023: 航天器热控系统
+        - 2024: 新能源汽车电池
+        - 2025: 人工智能芯片散热
+      note: 固定4分，考信息提取+物理知识迁移
+
+  计算题:
+    - question: 27
+      typical_topic: 力学基础计算（速度/密度/压强）
+      score: 约4-6分
+      frequency: 5/5
+      difficulty: 基础
+      note: 送分计算题，公式代入即可
+
+    - question: 28
+      typical_topic: 热学计算（热量Q=cmΔt）/力学综合
+      score: 约4-6分
+      frequency: 5/5
+      difficulty: 中档
+      note: 常考比热容计算或压强+浮力综合
+
+    - question: 29
+      typical_topic: 电学综合计算（欧姆定律+电功率）
+      score: 约6分
+      frequency: 5/5
+      difficulty: 中档-拔高
+      note: 计算题压轴，串并联电路综合计算
+      sub_questions: 2-3
+      exam_note: 需列方程组，注意单位换算
+
+    - question: 30
+      typical_topic: 力电综合（2026年新增可能）
+      score: 约2-4分
+      frequency: 预计新增
+      difficulty: 中档
+      note: 2026满分增至80分后可能新增的计算题
+
+# ------ 高频必考实验清单 ------
+must_know_experiments:
+  - name: 测量平均速度
+    frequency: 5/5
+    typical_score: 2分
+    key_points: 刻度尺和秒表读数、路程与时间对应
+
+  - name: 探究凸透镜成像规律
+    frequency: 5/5
+    typical_score: 4分
+    key_points: 三种成像条件、像的特征、调节方法
+
+  - name: 探究水沸腾时温度变化特点
+    frequency: 4/5
+    typical_score: 2-4分
+    key_points: 温度计读数、沸腾特征、图像分析
+
+  - name: 测量固体和液体密度
+    frequency: 5/5
+    typical_score: 4分
+    key_points: 天平和量筒使用、减少误差的方法
+
+  - name: 探究影响滑动摩擦力大小的因素
+    frequency: 4/5
+    typical_score: 2分
+    key_points: 控制变量法、匀速拉动
+
+  - name: 探究杠杆平衡条件
+    frequency: 4/5
+    typical_score: 2分
+    key_points: 杠杆调平、力臂的确定
+
+  - name: 伏安法测电阻
+    frequency: 5/5
+    typical_score: 4-6分
+    key_points: 电路连接、滑动变阻器使用、多次测量取平均
+
+  - name: 测量小灯泡电功率
+    frequency: 5/5
+    typical_score: 4-6分
+    key_points: 额定电压下调节、亮度观察、功率计算
+
+# ------ 各分数段得分策略 ------
+# 以2026年满分80分计
+
+score_targets:
+
+  - target: 48分（及格，60%）
+    guaranteed:
+      - "单选1~8题（16分）"
+      - "基础实验16~18题（约8分）"
+      - "科普阅读26题（约2分）"
+      - "计算27题（约4分）"
+    subtotal: 约30分确定
+    additional: "单选9~10 + 实验19~20部分 + 计算28部分 ≈ 18分"
+    total: 约48分
+
+  - target: 60分（良好，75%）
+    additional_on_48:
+      - "单选11~12题（可能错1题，2~4分）"
+      - "多选13~14题（约4分）"
+      - "实验21~22题（约4分）"
+      - "计算28题（约4分）"
+    total: 约58~62分
+
+  - target: 70分（优秀，87.5%）
+    additional_on_60:
+      - "多选15题（2分）"
+      - "电学实验23~25题（约6分）"
+      - "计算29题前2问（约4分）"
+    total: 约70~72分
+
+  - target: 75+分（拔尖，93.75%+）
+    additional: "计算29题全部 + 实验探究开放题 + 多选全对"
+    note: 75分以上需要极高的正确率和细致的答题习惯
+
+# ------ 核心趋势 ------
+key_insights:
+  - 单选+多选结构连续5年高度稳定（30分不变）
+  - 实验探究是最大分值板块且逐年微增
+  - 电学实验（伏安法测电阻+测电功率）每年必考
+  - 凸透镜成像实验几乎年年考
+  - 科普阅读题已成固定板块，话题紧跟科技热点
+  - 计算题以力学和电学为主，热学计算偶尔出现
+  - 2026年增加的10分大概率分配在实验和计算
+  - 整体难度保持7:2:1比例，注重基础

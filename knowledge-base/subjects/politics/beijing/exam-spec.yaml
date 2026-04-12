@@ -1,0 +1,163 @@
+# 北京中考 道德与法治 考试说明
+# 2026年起满分由70分调整为80分
+# 重要: 道德与法治为开卷考试
+
+subject: 道德与法治
+region: 北京
+year: 2026
+full_score: 80
+duration_minutes: 90
+exam_type: 开卷
+exam_type_note: 考生可携带教材（七至九年级全部6册）和自己整理的笔记本入场
+
+# 分值变化历史
+score_history:
+  - year: 2018-2024
+    full_score: 70
+    note: 选考科目之一（五选三），折算计分
+  - year: 2025
+    full_score: 70
+    note: 取消选考，全部必考，卷面70分
+  - year: 2026
+    full_score: 80
+    note: 全部必考，卷面分提升至80分
+
+# 试卷结构
+paper_structure:
+  total_score: 80
+  sections:
+
+    - name: 单项选择题
+      code: CHOICE
+      question_count: 13
+      score_per_question: 2
+      total_score: 26
+      percentage: 0.325
+      description: 每题4个选项选1个正确答案
+      features:
+        - 前6-7题侧重基础概念辨析
+        - 后6-7题结合时政材料考查综合判断
+        - 常见干扰项设置：偷换概念、以偏概全、因果倒置
+      topics_covered:
+        - 法治常识（约4-5题）
+        - 道德与心理（约3-4题）
+        - 国情与时政（约4-5题）
+
+    - name: 材料分析题
+      code: ANALYSIS
+      question_count_range: "5-6"
+      total_score: 54
+      percentage: 0.675
+      description: 阅读材料后回答问题，需结合教材知识与材料信息
+      sub_types:
+
+        - name: 图表材料题
+          typical_score: 8-10
+          frequency: 每年1题
+          description: 读取图表数据，分析变化趋势，结合知识点说明原因或意义
+
+        - name: 情境探究题
+          typical_score: 10-12
+          frequency: 每年1-2题
+          description: 给出生活情境，要求运用知识分析、提出建议或评价行为
+
+        - name: 时政分析题
+          typical_score: 10-14
+          frequency: 每年1-2题
+          description: 围绕当年重大时政，要求运用国情、法治等知识进行分析
+
+        - name: 综合探究题
+          typical_score: 12-14
+          frequency: 每年1题
+          description: 最后一道大题，综合多个知识领域，分设多个小问
+
+        - name: 观点评析题
+          typical_score: 6-8
+          frequency: 多数年份出现
+          description: 给出一个观点，判断正误并说明理由
+
+# 难度分布
+difficulty_distribution:
+  easy:
+    label: 基础题
+    ratio: 0.50
+    score: 40
+    description: 基本概念识别、教材原文理解
+  medium:
+    label: 中等题
+    ratio: 0.30
+    score: 24
+    description: 知识运用与材料分析结合
+  hard:
+    label: 较难题
+    ratio: 0.20
+    score: 16
+    description: 综合运用多个知识点，深入分析材料
+
+# 开卷考试特点与备考策略
+open_book_features:
+  allowed_materials:
+    - 七至九年级道德与法治教材（共6册）
+    - 考生自行整理的笔记本（通常允许1本）
+  not_allowed:
+    - 手机及电子设备
+    - 复印资料（部分区县有限制）
+    - 其他同学的笔记
+
+  exam_characteristics:
+    - 不考死记硬背的纯知识再现题
+    - 重点考查知识的理解、运用和迁移能力
+    - 材料阅读量较大，需要快速定位信息
+    - 答案不能直接从书上抄到，需要结合材料组织语言
+    - 时间管理很重要——翻书找答案会消耗大量时间
+
+  preparation_strategy:
+    - 熟悉教材结构，建立知识框架，考场能快速翻阅定位
+    - 整理高频考点的笔记索引（按专题、按册分类）
+    - 练习材料分析题的答题模板和术语表达
+    - 关注时政热点，提前整理到笔记本中
+    - 做题时先凭理解作答，再翻书补充和验证
+
+# 评分标准要点
+scoring_notes:
+  choice_section:
+    - 单选题无部分得分，选错即0分
+    - 注意审题：选"正确的"还是"不正确的"
+  analysis_section:
+    - 要求"结合材料"的题，必须引用材料信息，否则扣分
+    - 知识点准确+联系材料+逻辑清晰 = 满分
+    - 只写教材原话不联系材料，通常得一半分
+    - 答题要分点作答，条理清晰
+    - 多答不倒扣分，但不要答非所问
+
+# 命题趋势（2021-2025）
+trends:
+  - year_range: 2021-2023
+    observations:
+      - 法治板块分值持续占比最高（约30%）
+      - 时政与国情结合更加紧密
+      - 情境化命题增多，纯知识考查减少
+  - year_range: 2024-2025
+    observations:
+      - 核心素养导向更加明显
+      - 开放性设问增加（"你认为""请你建议"等）
+      - 跨领域综合题增多
+      - 劳动教育、生态文明等新课标主题频繁出现
+  - year: 2026
+    predictions:
+      - 分值提升至80分，材料分析题预计增加分值
+      - 选择题数量可能维持13题不变，分析题分值增大
+      - 新课标（2022版）全面落地，核心素养考查深化
+      - 中国式现代化、新质生产力等新提法可能入题
+
+# 考试时间安排建议
+time_allocation:
+  choice_section:
+    suggested_minutes: 20
+    note: 每题约1.5分钟，不确定的先标记后回头
+  analysis_section:
+    suggested_minutes: 65
+    note: 每大题约10-13分钟，含审题、翻书、组织答案
+  review:
+    suggested_minutes: 5
+    note: 检查选择题涂卡、分析题是否漏答

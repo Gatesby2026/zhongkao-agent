@@ -1,0 +1,616 @@
+# ============================================================
+# 北京中考体育 — 评分标准
+# ============================================================
+# 数据来源：北京教育考试院发布的体育现场考试评分标准
+# 最后更新：2026-04-12
+# 说明：各项目按性别分别列出满分、良好、及格等档次对应成绩
+
+subject: 体育与健康
+region: 北京市
+year: 2026
+
+# ================================================================
+# 第一类：耐力项目（满分16分）
+# ================================================================
+category_1:
+  name: 耐力项目
+  full_score: 16
+
+  items:
+    # ---------- 1000米跑（男生） ----------
+    - name: 1000米跑
+      gender: 男
+      unit: 分秒
+      scoring_table:
+        - score: 16
+          performance: "3'40\""
+          level: 满分
+        - score: 15
+          performance: "3'45\""
+        - score: 14
+          performance: "3'50\""
+        - score: 13
+          performance: "3'55\""
+          level: 良好
+        - score: 12
+          performance: "4'00\""
+        - score: 11
+          performance: "4'10\""
+        - score: 10
+          performance: "4'20\""
+          level: 及格
+        - score: 9
+          performance: "4'25\""
+        - score: 8
+          performance: "4'30\""
+        - score: 7
+          performance: "4'35\""
+        - score: 6
+          performance: "4'45\""
+        - score: 5
+          performance: "4'55\""
+        - score: 4
+          performance: "5'05\""
+        - score: 3
+          performance: "5'15\""
+        - score: 2
+          performance: "5'30\""
+        - score: 1
+          performance: "5'45\""
+      training_reference:
+        full_score_pace: "约每圈(400m)1分28秒"
+        key_ability: 心肺耐力、有氧能力
+
+    # ---------- 800米跑（女生） ----------
+    - name: 800米跑
+      gender: 女
+      unit: 分秒
+      scoring_table:
+        - score: 16
+          performance: "3'25\""
+          level: 满分
+        - score: 15
+          performance: "3'30\""
+        - score: 14
+          performance: "3'35\""
+        - score: 13
+          performance: "3'42\""
+          level: 良好
+        - score: 12
+          performance: "3'48\""
+        - score: 11
+          performance: "3'55\""
+        - score: 10
+          performance: "4'05\""
+          level: 及格
+        - score: 9
+          performance: "4'10\""
+        - score: 8
+          performance: "4'18\""
+        - score: 7
+          performance: "4'25\""
+        - score: 6
+          performance: "4'35\""
+        - score: 5
+          performance: "4'45\""
+        - score: 4
+          performance: "4'55\""
+        - score: 3
+          performance: "5'10\""
+        - score: 2
+          performance: "5'25\""
+        - score: 1
+          performance: "5'40\""
+      training_reference:
+        full_score_pace: "约每圈(400m)1分42秒"
+        key_ability: 心肺耐力、有氧能力
+
+    # ---------- 游泳200米（男女） ----------
+    - name: 200米游泳
+      gender: 男
+      unit: 分秒
+      scoring_table:
+        - score: 16
+          performance: "4'05\""
+          level: 满分
+        - score: 15
+          performance: "4'15\""
+        - score: 14
+          performance: "4'25\""
+        - score: 13
+          performance: "4'35\""
+          level: 良好
+        - score: 12
+          performance: "4'50\""
+        - score: 10
+          performance: "5'10\""
+          level: 及格
+        - score: 7
+          performance: "5'50\""
+        - score: 4
+          performance: "6'30\""
+        - score: 1
+          performance: "7'30\""
+      notes: 不限泳姿，中途不得扶池壁或水线休息
+
+    - name: 200米游泳
+      gender: 女
+      unit: 分秒
+      scoring_table:
+        - score: 16
+          performance: "4'20\""
+          level: 满分
+        - score: 15
+          performance: "4'30\""
+        - score: 14
+          performance: "4'40\""
+        - score: 13
+          performance: "4'55\""
+          level: 良好
+        - score: 12
+          performance: "5'10\""
+        - score: 10
+          performance: "5'30\""
+          level: 及格
+        - score: 7
+          performance: "6'10\""
+        - score: 4
+          performance: "7'00\""
+        - score: 1
+          performance: "8'00\""
+
+# ================================================================
+# 第二类：力量项目（满分10分）
+# ================================================================
+category_2:
+  name: 力量项目
+  full_score: 10
+
+  items:
+    # ---------- 引体向上（男生） ----------
+    - name: 引体向上
+      gender: 男
+      unit: 个
+      scoring_table:
+        - score: 10
+          performance: 10
+          level: 满分
+        - score: 9
+          performance: 9
+        - score: 8
+          performance: 8
+          level: 良好
+        - score: 7
+          performance: 7
+        - score: 6
+          performance: 6
+          level: 及格
+        - score: 5
+          performance: 5
+        - score: 4
+          performance: 4
+        - score: 3
+          performance: 3
+        - score: 2
+          performance: 2
+        - score: 1
+          performance: 1
+      technique_requirements:
+        - 正手握杠（掌心向前），双手与肩同宽
+        - 身体悬垂静止后开始
+        - 上拉至下颏超过横杠上沿为完成一次
+        - 下放时手臂完全伸直后再做下一次
+        - 身体不得借助摆动发力
+
+    # ---------- 仰卧起坐（女生） ----------
+    - name: 仰卧起坐
+      gender: 女
+      unit: 个/分钟
+      scoring_table:
+        - score: 10
+          performance: 49
+          level: 满分
+        - score: 9
+          performance: 46
+        - score: 8
+          performance: 43
+          level: 良好
+        - score: 7
+          performance: 40
+        - score: 6
+          performance: 37
+          level: 及格
+        - score: 5
+          performance: 34
+        - score: 4
+          performance: 30
+        - score: 3
+          performance: 26
+        - score: 2
+          performance: 22
+        - score: 1
+          performance: 18
+      technique_requirements:
+        - 仰卧于垫上，双手交叉抱于脑后
+        - 双脚屈膝约90度，同伴按压踝关节
+        - 起坐时双肘触及或超过双膝为完成一次
+        - 仰卧时肩胛骨须触垫
+        - 计时一分钟
+
+    # ---------- 实心球（男生） ----------
+    - name: 实心球
+      gender: 男
+      unit: 米
+      ball_weight: 2kg
+      scoring_table:
+        - score: 10
+          performance: 10.0
+          level: 满分
+        - score: 9
+          performance: 9.4
+        - score: 8
+          performance: 8.8
+          level: 良好
+        - score: 7
+          performance: 8.2
+        - score: 6
+          performance: 7.6
+          level: 及格
+        - score: 5
+          performance: 7.0
+        - score: 4
+          performance: 6.4
+        - score: 3
+          performance: 5.8
+        - score: 2
+          performance: 5.2
+        - score: 1
+          performance: 4.6
+      technique_requirements:
+        - 原地正面双手头上前掷
+        - 两脚前后或左右开立
+        - 身体面向投掷方向
+        - 出手后身体不得过投掷线
+
+    # ---------- 实心球（女生） ----------
+    - name: 实心球
+      gender: 女
+      unit: 米
+      ball_weight: 2kg
+      scoring_table:
+        - score: 10
+          performance: 7.6
+          level: 满分
+        - score: 9
+          performance: 7.0
+        - score: 8
+          performance: 6.5
+          level: 良好
+        - score: 7
+          performance: 6.0
+        - score: 6
+          performance: 5.6
+          level: 及格
+        - score: 5
+          performance: 5.2
+        - score: 4
+          performance: 4.8
+        - score: 3
+          performance: 4.4
+        - score: 2
+          performance: 4.0
+        - score: 1
+          performance: 3.6
+
+# ================================================================
+# 第三类：球类技能（满分8分）
+# ================================================================
+category_3:
+  name: 球类技能项目
+  full_score: 8
+
+  items:
+    # ---------- 足球运球绕杆（男生） ----------
+    - name: 足球运球绕杆
+      gender: 男
+      unit: 秒
+      scoring_table:
+        - score: 8
+          performance: 7.5
+          level: 满分
+        - score: 7
+          performance: 8.4
+          level: 良好
+        - score: 6
+          performance: 9.4
+          level: 及格
+        - score: 5
+          performance: 10.4
+        - score: 4
+          performance: 11.4
+        - score: 3
+          performance: 12.4
+        - score: 2
+          performance: 13.4
+        - score: 1
+          performance: 14.4
+      course_description: |
+        起点出发，运球依次绕过5个标志杆后冲过终点线。
+        标志杆间距约2米，全程约20米。
+        碰倒标志杆须扶起后从碰倒处继续。
+
+    # ---------- 足球运球绕杆（女生） ----------
+    - name: 足球运球绕杆
+      gender: 女
+      unit: 秒
+      scoring_table:
+        - score: 8
+          performance: 8.1
+          level: 满分
+        - score: 7
+          performance: 9.2
+          level: 良好
+        - score: 6
+          performance: 10.4
+          level: 及格
+        - score: 5
+          performance: 11.6
+        - score: 4
+          performance: 12.8
+        - score: 3
+          performance: 14.0
+        - score: 2
+          performance: 15.2
+        - score: 1
+          performance: 16.4
+
+    # ---------- 篮球运球往返（男生） ----------
+    - name: 篮球运球往返
+      gender: 男
+      unit: 秒
+      scoring_table:
+        - score: 8
+          performance: 11.4
+          level: 满分
+        - score: 7
+          performance: 12.2
+          level: 良好
+        - score: 6
+          performance: 13.2
+          level: 及格
+        - score: 5
+          performance: 14.2
+        - score: 4
+          performance: 15.2
+        - score: 3
+          performance: 16.2
+        - score: 2
+          performance: 17.2
+        - score: 1
+          performance: 18.2
+      course_description: |
+        听到指令后从起点运球出发，绕过标志杆后
+        行进间上篮，无论是否投中立即运球返回起点。
+        全程约20米，包含两次变向运球和一次上篮。
+
+    # ---------- 篮球运球往返（女生） ----------
+    - name: 篮球运球往返
+      gender: 女
+      unit: 秒
+      scoring_table:
+        - score: 8
+          performance: 13.8
+          level: 满分
+        - score: 7
+          performance: 14.8
+          level: 良好
+        - score: 6
+          performance: 16.0
+          level: 及格
+        - score: 5
+          performance: 17.2
+        - score: 4
+          performance: 18.4
+        - score: 3
+          performance: 19.6
+        - score: 2
+          performance: 20.8
+        - score: 1
+          performance: 22.0
+
+    # ---------- 排球连续垫球（男生） ----------
+    - name: 排球连续垫球
+      gender: 男
+      unit: 个
+      scoring_table:
+        - score: 8
+          performance: 34
+          level: 满分
+        - score: 7
+          performance: 30
+          level: 良好
+        - score: 6
+          performance: 25
+          level: 及格
+        - score: 5
+          performance: 20
+        - score: 4
+          performance: 15
+        - score: 3
+          performance: 10
+        - score: 2
+          performance: 7
+        - score: 1
+          performance: 4
+      technique_requirements:
+        - 站在规定区域内连续自垫
+        - 垫球高度须超过一定高度线（约2.24米以上）
+        - 球落地或出区域即停止计数
+        - 采用标准正面双手垫球姿势
+
+    # ---------- 排球连续垫球（女生） ----------
+    - name: 排球连续垫球
+      gender: 女
+      unit: 个
+      scoring_table:
+        - score: 8
+          performance: 34
+          level: 满分
+        - score: 7
+          performance: 30
+          level: 良好
+        - score: 6
+          performance: 25
+          level: 及格
+        - score: 5
+          performance: 20
+        - score: 4
+          performance: 15
+        - score: 3
+          performance: 10
+        - score: 2
+          performance: 7
+        - score: 1
+          performance: 4
+      technique_requirements:
+        - 要求同男生
+        - 垫球高度线约2.00米以上
+
+# ================================================================
+# 第四类：速度灵敏力量项目（满分6分）
+# ================================================================
+category_4:
+  name: 速度灵敏力量项目
+  full_score: 6
+
+  items:
+    # ---------- 50米跑（男生） ----------
+    - name: 50米跑
+      gender: 男
+      unit: 秒
+      scoring_table:
+        - score: 6
+          performance: 7.1
+          level: 满分
+        - score: 5
+          performance: 7.5
+          level: 良好
+        - score: 4
+          performance: 7.9
+          level: 及格
+        - score: 3
+          performance: 8.4
+        - score: 2
+          performance: 8.9
+        - score: 1
+          performance: 9.4
+
+    # ---------- 50米跑（女生） ----------
+    - name: 50米跑
+      gender: 女
+      unit: 秒
+      scoring_table:
+        - score: 6
+          performance: 7.9
+          level: 满分
+        - score: 5
+          performance: 8.4
+          level: 良好
+        - score: 4
+          performance: 8.9
+          level: 及格
+        - score: 3
+          performance: 9.4
+        - score: 2
+          performance: 9.9
+        - score: 1
+          performance: 10.4
+
+    # ---------- 一分钟跳绳（男生） ----------
+    - name: 一分钟跳绳
+      gender: 男
+      unit: 个/分钟
+      scoring_table:
+        - score: 6
+          performance: 140
+          level: 满分
+        - score: 5
+          performance: 126
+          level: 良好
+        - score: 4
+          performance: 110
+          level: 及格
+        - score: 3
+          performance: 94
+        - score: 2
+          performance: 78
+        - score: 1
+          performance: 60
+
+    # ---------- 一分钟跳绳（女生） ----------
+    - name: 一分钟跳绳
+      gender: 女
+      unit: 个/分钟
+      scoring_table:
+        - score: 6
+          performance: 140
+          level: 满分
+        - score: 5
+          performance: 126
+          level: 良好
+        - score: 4
+          performance: 110
+          level: 及格
+        - score: 3
+          performance: 94
+        - score: 2
+          performance: 78
+        - score: 1
+          performance: 60
+
+    # ---------- 立定跳远（男生） ----------
+    - name: 立定跳远
+      gender: 男
+      unit: 米
+      scoring_table:
+        - score: 6
+          performance: 2.48
+          level: 满分
+        - score: 5
+          performance: 2.35
+          level: 良好
+        - score: 4
+          performance: 2.19
+          level: 及格
+        - score: 3
+          performance: 2.03
+        - score: 2
+          performance: 1.87
+        - score: 1
+          performance: 1.71
+      technique_requirements:
+        - 两脚自然分开站在起跳线后
+        - 原地双脚同时起跳
+        - 可预摆但不可踩线或助跑
+        - 落地后前移取最近着地点计距离
+
+    # ---------- 立定跳远（女生） ----------
+    - name: 立定跳远
+      gender: 女
+      unit: 米
+      scoring_table:
+        - score: 6
+          performance: 1.99
+          level: 满分
+        - score: 5
+          performance: 1.87
+          level: 良好
+        - score: 4
+          performance: 1.72
+          level: 及格
+        - score: 3
+          performance: 1.56
+        - score: 2
+          performance: 1.41
+        - score: 1
+          performance: 1.25

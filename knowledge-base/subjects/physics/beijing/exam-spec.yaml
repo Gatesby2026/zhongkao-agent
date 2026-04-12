@@ -1,0 +1,188 @@
+# ============================================================
+# 北京中考物理 — 考试规格说明
+# ============================================================
+# 数据来源：北京教育考试院、历年真题分析、教育媒体
+# 最后更新：2026-04-12
+# 重要变化：2026年起物理满分由70分调整为80分
+
+subject: 物理
+region: 北京市
+year: 2026
+
+# ------ 基本信息 ------
+basic_info:
+  full_score: 80          # 2026年起从70→80
+  full_score_before_2026: 70
+  duration_min: 90
+  exam_type: 闭卷
+  exam_date: "2026年6月（具体日期待考试院公布）"
+  note: 物理与道德与法治同日考试，物理在上午
+
+# ------ 试卷结构 ------
+# 基于2021-2025年结构推算2026年（满分80分版本）
+paper_structure:
+  total_questions: 约38题  # 2025年满分70时约33题，2026增加10分后预计调整
+
+  sections:
+    - type: 单项选择题
+      count: 12
+      score_per_question: 2
+      total_score: 24
+      description: 四选一，覆盖各模块基础概念
+      difficulty_distribution:
+        easy: 8          # 前8题送分
+        medium: 3        # 第9-11题中档
+        hard: 1          # 第12题有区分度
+      exam_note: 2025年前为12题×2分=24分，预计保持
+
+    - type: 多选题
+      count: 3
+      score_per_question: 2
+      total_score: 6
+      description: 四选二或三，少选得1分，错选不得分
+      difficulty_distribution:
+        medium: 2
+        hard: 1
+      exam_note: 多选题是北京物理特色，选对但不全得1分
+
+    - type: 实验探究题
+      count: 约8-10题
+      total_score: 28
+      description: 含填空、作图、实验设计、数据分析
+      sub_detail:
+        - range: "基础实验"
+          score: "约12分"
+          difficulty: 基础
+          typical_topics:
+            - 基本仪器读数（温度计、电流表、电压表、弹簧测力计）
+            - 实验步骤补充
+            - 数据记录与处理
+        - range: "探究实验"
+          score: "约16分"
+          difficulty: 中档-拔高
+          typical_topics:
+            - 凸透镜成像实验
+            - 测量密度/电阻/电功率
+            - 探究影响因素类实验（控制变量法）
+            - 实验方案设计与评估
+      exam_note: 实验探究是北京物理最大分值板块
+
+    - type: 科普阅读题
+      count: 1
+      total_score: 4
+      description: 阅读科技短文后回答问题
+      difficulty: 基础-中档
+      typical_topics:
+        - 新材料、新能源、航天技术
+        - 物理学史（重大发现过程）
+        - 前沿科技的物理原理
+      exam_note: 2018年后固定题型，考查信息提取和物理知识应用
+
+    - type: 计算题
+      count: 约3-4题
+      total_score: 18
+      description: 需写出完整解题过程
+      sub_detail:
+        - range: "基础计算"
+          score: "约6分"
+          difficulty: 基础
+          typical_topics:
+            - 密度计算（ρ=m/V）
+            - 速度计算（v=s/t）
+            - 热量计算（Q=cmΔt）
+        - range: "中档计算"
+          score: "约6分"
+          difficulty: 中档
+          typical_topics:
+            - 压强计算（固体/液体综合）
+            - 浮力综合计算
+            - 功和机械效率
+        - range: "综合计算"
+          score: "约6分"
+          difficulty: 中档-拔高
+          typical_topics:
+            - 电学综合计算（欧姆定律+电功率）
+            - 力电综合
+      exam_note: 计算题从70分时约15分增至80分时约18分
+
+# ------ 2025→2026年变化对比 ------
+score_change:
+  before_2026:
+    full_score: 70
+    单选: "12题×2分=24分"
+    多选: "3题×2分=6分"
+    实验探究: "约22-24分"
+    科普阅读: "约4分"
+    计算题: "约14-16分"
+
+  after_2026:
+    full_score: 80
+    单选: "12题×2分=24分（预计不变）"
+    多选: "3题×2分=6分（预计不变）"
+    实验探究: "约28分（增加约4-6分）"
+    科普阅读: "约4分（预计不变）"
+    计算题: "约18分（增加约2-4分）"
+    note: 增加的10分预计主要分配在实验探究和计算题
+
+# ------ 难度分布 ------
+difficulty_ratio:
+  official_guideline:
+    easy: 70        # 基础题约70%（约56分）
+    medium: 20      # 中档题约20%（约16分）
+    hard: 10        # 拔高题约10%（约8分）
+    note: 北京中考物理整体偏重基础，难度低于数学
+
+  five_year_average:
+    easy: 68
+    medium: 22
+    hard: 10
+    note: 2021-2025五年数据，基本符合7:2:1比例
+
+# ------ 命题趋势（2022新课标后）------
+trends:
+  - name: 实验探究权重加大
+    description: 实验探究题分值占比逐年提升，2026年预计占35%
+  - name: 情境化命题
+    description: 试题嵌入真实生活场景（北京冬奥、航天、新能源等）
+  - name: 科普阅读固定化
+    description: 科普阅读题已成为固定题型，考查科学素养
+  - name: 计算难度稳定
+    description: 计算题以基础和中档为主，不出偏题怪题
+  - name: 跨学科融合
+    description: 部分题目融合化学、生物、地理等学科知识
+  - name: 核心素养导向
+    description: 强调物理观念、科学思维、科学探究、科学态度与责任
+  - name: 图表信息提取
+    description: 增加图表类题目，考查从图像中提取和分析信息的能力
+
+# ------ 评分说明 ------
+scoring_notes:
+  - 选择题和多选题无过程分
+  - 多选题选对但不全给1分，错选不给分
+  - 实验探究题按关键词和步骤给分
+  - 计算题需写出公式、代入过程和结果（含单位）
+  - 只写答案不写过程的计算题不给分
+  - 作图题需用铅笔和直尺，保留作图痕迹
+
+# ------ 必备公式清单 ------
+key_formulas:
+  力学:
+    - "v = s/t （速度）"
+    - "G = mg （重力，g=10N/kg）"
+    - "ρ = m/V （密度）"
+    - "p = F/S （固体压强）"
+    - "p = ρgh （液体压强）"
+    - "F浮 = ρ液gV排 （浮力）"
+    - "F₁L₁ = F₂L₂ （杠杆平衡条件）"
+    - "W = Fs （功）"
+    - "P = W/t （功率）"
+    - "η = W有/W总 （机械效率）"
+  热学:
+    - "Q = cmΔt （热量）"
+    - "Q = mq （燃料完全燃烧放热）"
+  电学:
+    - "I = U/R （欧姆定律）"
+    - "W = UIt （电功）"
+    - "P = UI （电功率）"
+    - "P = I²R = U²/R （电功率变形）"
+    - "Q = I²Rt （焦耳定律）"

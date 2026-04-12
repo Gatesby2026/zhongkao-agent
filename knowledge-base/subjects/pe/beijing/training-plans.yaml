@@ -1,0 +1,681 @@
+# ============================================================
+# 北京中考体育 — 训练计划与备考指导
+# ============================================================
+# 数据来源：体育教师经验、运动训练学原理
+# 最后更新：2026-04-12
+# 说明：为每个考试项目提供系统训练方案和考试策略
+
+subject: 体育与健康
+region: 北京市
+year: 2026
+
+# ================================================================
+# 总体备考原则
+# ================================================================
+general_principles:
+  training_timeline:
+    - phase: 基础期（初一至初二上学期）
+      focus: 全面发展体能，培养运动习惯
+      frequency: 每周3-4次体育活动
+    - phase: 提高期（初二下至初三上学期）
+      focus: 确定选考项目，针对性训练
+      frequency: 每周4-5次专项训练
+    - phase: 冲刺期（初三寒假至考前）
+      focus: 模拟考试，查漏补缺，调整状态
+      frequency: 每天训练，考前一周减量调整
+  safety_notes:
+    - 训练前必须充分热身（慢跑+动态拉伸，至少10分钟）
+    - 训练后进行充分的放松和静态拉伸
+    - 循序渐进，避免突然大幅增加运动量
+    - 出现疼痛应立即停止训练并就医
+    - 保证充足睡眠和合理营养
+
+# ================================================================
+# 第一类：耐力项目
+# ================================================================
+category_1:
+  name: 耐力项目
+
+  items:
+    # ---------- 中长跑（1000m/800m） ----------
+    - name: 中长跑
+      applicable: 男生1000米 / 女生800米
+      training_frequency: 每周4-5次，每次30-50分钟
+
+      training_methods:
+        - name: 持续匀速跑
+          description: 以中等强度（心率130-150次/分）匀速跑步
+          example: 每次跑2000-3000米，逐渐增加到4000-5000米
+          purpose: 建立有氧基础，提高心肺耐力
+
+        - name: 间歇跑
+          description: 高强度跑与休息交替进行
+          example: 400米快跑(比目标配速快5-10秒) × 4-6组，组间休息2-3分钟
+          purpose: 提高最大摄氧量和速度耐力
+
+        - name: 变速跑（法特莱克）
+          description: 在跑步中交替加速和减速
+          example: 快跑200米+慢跑200米，重复6-8次
+          purpose: 提高变速能力和比赛节奏感
+
+        - name: 计时测试跑
+          description: 按目标配速完成全程计时
+          example: 每周1次全程模拟测试，记录成绩变化
+          purpose: 熟悉比赛节奏，建立信心
+
+        - name: 核心力量训练
+          description: 辅助训练，增强跑步稳定性
+          example: 平板支撑、俄式转体、臀桥各3组×30秒-1分钟
+          purpose: 减少跑步后半程体能下降
+
+      progression:
+        beginner:
+          current_level: 跑不完全程 或 男生超过5分钟/女生超过4分45秒
+          plan:
+            - 先从走跑交替开始（跑200米走200米）
+            - 逐步延长跑步距离，减少步行
+            - 2-3周后实现全程不停跑完
+            - 每周匀速跑3次，逐步提高速度
+        intermediate:
+          current_level: 男生4'20"-5'00" / 女生4'05"-4'45"
+          plan:
+            - 以匀速跑为主，每周加入1-2次间歇跑
+            - 间歇跑400米×4组，目标每圈比当前快3-5秒
+            - 每两周做一次全程测试，调整配速目标
+        advanced:
+          current_level: 男生3'40"-4'20" / 女生3'25"-4'05"
+          plan:
+            - 增加间歇跑强度和组数（400米×6组）
+            - 加入200米冲刺训练提高绝对速度
+            - 精确控制配速，前半程不宜过快
+            - 训练最后200米冲刺加速能力
+
+      common_mistakes:
+        - mistake: 起跑太快，后半程掉速严重
+          correction: 前400米按目标配速跑，宁慢勿快；后程逐步加速
+        - mistake: 跑步姿势不正确，浪费体力
+          correction: 保持上身微前倾，手臂自然摆动，步频稳定
+        - mistake: 呼吸节奏紊乱
+          correction: 采用"两步一吸两步一呼"或"三步一吸三步一呼"的节奏
+        - mistake: 训练时只跑不做其他辅助训练
+          correction: 配合核心训练和下肢力量训练
+
+      exam_day_tips:
+        - 考前2小时进食，以碳水化合物为主（面包/香蕉）
+        - 考前30分钟开始热身，慢跑800米+动态拉伸
+        - 起跑后不要被带节奏，按自己的配速跑
+        - 最后200米全力冲刺
+        - 跑完不要立即停下，慢走2-3分钟恢复
+
+    # ---------- 游泳（200米） ----------
+    - name: 游泳200米
+      training_frequency: 每周3-4次，每次60-90分钟
+
+      training_methods:
+        - name: 技术练习
+          description: 分解泳姿练习各环节技术
+          example: 腿部打水练习、划臂练习、呼吸配合练习各200米
+          purpose: 提高游泳效率，减少无效动力
+
+        - name: 持续游
+          description: 中等强度不间断游完目标距离
+          example: 连续游400-800米，保持均匀配速
+          purpose: 建立有氧耐力和水感
+
+        - name: 间歇游
+          description: 分段高强度游泳
+          example: 50米快游×8组，组间休息30-45秒
+          purpose: 提高速度和无氧能力
+
+        - name: 转身练习
+          description: 反复练习到池边触壁转身
+          example: 每次训练专门练习10-15次转身
+          purpose: 减少转身时间损耗
+
+      common_mistakes:
+        - mistake: 换气时抬头过高
+          correction: 侧头换气（自由泳）或顺势换气（蛙泳），减少身体起伏
+        - mistake: 中途体力分配不均
+          correction: 前100米适当控制速度，后100米保持稳定不减速
+
+      exam_day_tips:
+        - 进入泳池前充分活动关节和拉伸
+        - 选择自己最熟练的泳姿
+        - 注意转身技术，减少停顿
+        - 每50米为一个节奏单元控制配速
+
+# ================================================================
+# 第二类：力量项目
+# ================================================================
+category_2:
+  name: 力量项目
+
+  items:
+    # ---------- 引体向上（男生） ----------
+    - name: 引体向上
+      gender: 男
+      training_frequency: 每周4-5次（隔天训练效果更好）
+
+      training_methods:
+        - name: 标准引体向上
+          description: 按考试标准完成动作
+          example: 每组做到力竭，共3-5组，组间休息2-3分钟
+          purpose: 直接提升考试能力
+
+        - name: 反向引体（离心训练）
+          description: 跳上杠后缓慢下放身体（5秒计时下放）
+          example: 每次5个×4组
+          purpose: 适合初期拉不上去的学生建立力量基础
+
+        - name: 弹力带辅助引体
+          description: 使用弹力带减轻体重辅助完成动作
+          example: 每组8-10个×3-4组，逐步减小弹力带阻力
+          purpose: 在无法完成标准动作时过渡训练
+
+        - name: 悬垂训练
+          description: 双手握杠悬垂不动
+          example: 每次悬垂30-60秒×3组
+          purpose: 增强握力和肩部稳定性
+
+        - name: 辅助力量训练
+          description: 哑铃划船、俯卧撑等上肢力量训练
+          example: 俯卧撑15个×3组 + 哑铃划船12个×3组
+          purpose: 全面提升上肢和背部力量
+
+      progression:
+        beginner:
+          current_level: 0-2个
+          plan:
+            - 先从悬垂开始（每次30秒×5组）
+            - 加入离心引体（跳上去慢放5个×4组）
+            - 使用弹力带辅助完成标准动作
+            - 每周尝试1次不借助完成
+        intermediate:
+          current_level: 3-6个
+          plan:
+            - 每次训练做3-5组，每组做到力竭
+            - 加入反手引体向上变化练习
+            - 配合俯卧撑和哑铃训练增强力量
+        advanced:
+          current_level: 7-9个
+          plan:
+            - 负重引体向上（腰挂1-3kg重物）
+            - 每组8-10个×4组的高量训练
+            - 训练速度控制，每个动作干净利落
+
+      common_mistakes:
+        - mistake: 身体晃动借力
+          correction: 核心收紧，双腿微曲交叉，减少摆动
+        - mistake: 下放不充分（手臂未伸直）
+          correction: 每次下放至手臂完全伸直再做下一个，否则不计数
+        - mistake: 握力不足导致提前脱杠
+          correction: 加强悬垂训练和握力器训练
+
+      exam_day_tips:
+        - 考前搓手擦干汗液或涂镁粉（如允许）
+        - 悬垂稳定后再开始第一个
+        - 保持均匀节奏，不要冲刺式快做
+        - 每个动作做到位比多做半个更重要
+
+    # ---------- 仰卧起坐（女生） ----------
+    - name: 仰卧起坐
+      gender: 女
+      training_frequency: 每周5-6次（可每天训练）
+
+      training_methods:
+        - name: 标准仰卧起坐
+          description: 按考试标准计时一分钟完成
+          example: 每次计时1分钟×3组，组间休息2分钟
+          purpose: 模拟考试，掌握节奏
+
+        - name: 慢速控制训练
+          description: 不计时，慢起慢放，每个动作3-4秒
+          example: 每组15-20个×3组
+          purpose: 增强腹肌力量和动作质量
+
+        - name: 卷腹训练
+          description: 上半身抬起至肩胛骨离地即可
+          example: 每组20个×3组
+          purpose: 针对性增强上腹部力量
+
+        - name: 两头起训练
+          description: 同时抬起上身和双腿
+          example: 每组12-15个×3组
+          purpose: 增强核心整体力量
+
+      progression:
+        beginner:
+          current_level: 25个以下/分钟
+          plan:
+            - 先从不计时的慢速训练开始，确保动作标准
+            - 每天做3组×20个标准动作
+            - 逐步加快速度，一周后开始计时训练
+        intermediate:
+          current_level: 25-40个/分钟
+          plan:
+            - 计时训练为主，每天3组1分钟测试
+            - 训练节奏感：前30秒均匀快速，后30秒保持不掉速
+            - 配合平板支撑增强耐力
+        advanced:
+          current_level: 40-48个/分钟
+          plan:
+            - 冲击速度极限：30秒内完成25个以上
+            - 负重训练（手持小重物做仰卧起坐）
+            - 精确控制呼吸节奏
+
+      common_mistakes:
+        - mistake: 靠惯性甩起来，动作不到位
+          correction: 确保双肘触及双膝，肩胛骨触垫，否则不计数
+        - mistake: 双手抱头时用力拉颈部
+          correction: 手轻扶耳后即可，靠腹肌发力
+        - mistake: 后半段频率大幅下降
+          correction: 训练时刻意练后30秒的节奏保持
+
+      exam_day_tips:
+        - 和搭档配合好，确保按压踝关节稳固
+        - 开始后立即进入稳定节奏（约每秒1个偏上）
+        - 听到"开始"口令立即做，不要犹豫
+        - 累了也不要停，哪怕慢一点也持续做
+
+    # ---------- 实心球 ----------
+    - name: 实心球
+      gender: 男女均可
+      training_frequency: 每周3-4次
+
+      training_methods:
+        - name: 标准投掷练习
+          description: 按考试标准动作反复投掷
+          example: 每次投掷20-30次，注意动作技术
+          purpose: 建立正确动作模式和肌肉记忆
+
+        - name: 鞭打练习
+          description: 空手模仿出手鞭打动作
+          example: 每组20次快速挥臂×3组
+          purpose: 提高出手速度和力量传导
+
+        - name: 背弓拉伸练习
+          description: 持球做满弓拉伸不投出
+          example: 每组保持满弓姿势5秒×10次
+          purpose: 增大出手前的肌肉拉伸幅度
+
+        - name: 辅助力量训练
+          description: 针对投掷相关肌群的力量训练
+          example: 俯卧撑20个×3组 + 仰卧起坐30个×3组 + 深蹲20个×3组
+          purpose: 全面增强上肢、腰腹和下肢力量
+
+      progression:
+        beginner:
+          current_level: 男生7米以下 / 女生5米以下
+          plan:
+            - 先掌握正确出手角度（约40-42度）
+            - 注重蹬地-收腹-挥臂的发力顺序
+            - 每次训练20-25次投掷+力量训练
+        intermediate:
+          current_level: 男生7-9米 / 女生5-7米
+          plan:
+            - 细化鞭打动作技术
+            - 增加腰腹和上肢力量训练比重
+            - 每周增加1-2次模拟投掷测试
+        advanced:
+          current_level: 男生9米以上 / 女生7米以上
+          plan:
+            - 微调出手角度和时机
+            - 增强蹬地力量（深蹲负重训练）
+            - 考前稳定状态，减少训练量
+
+      common_mistakes:
+        - mistake: 出手角度过高或过低
+          correction: 最佳出手角度约40-42度，对准前上方标志物投掷
+        - mistake: 只用手臂力量，没有蹬地送髋
+          correction: 发力顺序：蹬地→送髋→收腹→挥臂→拨指
+        - mistake: 投掷后脚过线犯规
+          correction: 投掷后重心迅速前移但双脚不过线，可微曲膝缓冲
+
+      exam_day_tips:
+        - 充分活动肩关节和腰部
+        - 试投时感受场地（风向、地面摩擦）
+        - 最好成绩往往在第2-3次投掷时出现
+        - 保持自信，深呼吸后果断出手
+
+# ================================================================
+# 第三类：球类技能项目
+# ================================================================
+category_3:
+  name: 球类技能项目
+
+  items:
+    # ---------- 足球运球绕杆 ----------
+    - name: 足球运球绕杆
+      training_frequency: 每周4-5次，每次30-45分钟
+
+      training_methods:
+        - name: 基础控球练习
+          description: 原地和低速运球练习触感
+          example: 脚内侧/脚外侧/脚底拨球各50次
+          purpose: 建立良好的球感和触球感觉
+
+        - name: 绕杆练习
+          description: 按考试标准摆放标志杆反复练习
+          example: 每次完成10-15趟绕杆，记录时间
+          purpose: 熟悉考试路线和节奏
+
+        - name: 变速变向练习
+          description: 在高速运球中急停急转
+          example: 直线快速运球+急停转向+加速，反复10次
+          purpose: 提高运球时的变向速度
+
+        - name: 小场地控球
+          description: 在限制区域内运球
+          example: 在3米×3米区域内自由运球2分钟
+          purpose: 提高狭小空间控球能力
+
+      common_mistakes:
+        - mistake: 运球时球离脚太远
+          correction: 每次触球幅度要小，用脚外侧轻推过杆
+        - mistake: 绕杆时减速太多
+          correction: 提前调整步伐，用脚外侧推球同时身体已开始转向
+        - mistake: 碰倒标志杆
+          correction: 留出约30-40cm的安全距离，宁绕远不碰杆
+
+      exam_day_tips:
+        - 考前用自己熟悉的球热身5分钟
+        - 第一个杆放慢节奏确保不失误
+        - 用习惯脚的脚外侧绕杆最高效
+        - 过最后一个杆后直线冲刺到终点
+
+    # ---------- 篮球运球往返 ----------
+    - name: 篮球运球往返
+      training_frequency: 每周4-5次，每次30-45分钟
+
+      training_methods:
+        - name: 基础运球练习
+          description: 原地和行进间运球练习
+          example: 左右手交替运球各50次+行进间运球200米
+          purpose: 提高运球稳定性和手感
+
+        - name: 全程模拟练习
+          description: 按考试标准场地反复跑全程
+          example: 每次完成8-10趟模拟测试，记录成绩
+          purpose: 熟悉路线和上篮节奏
+
+        - name: 上篮专项练习
+          description: 反复练习行进间上篮
+          example: 右侧上篮20次+左侧上篮20次
+          purpose: 提高上篮成功率和流畅度
+
+        - name: 折返跑练习
+          description: 运球折返跑提高变向能力
+          example: 半场往返运球×10组
+          purpose: 提高运球中的速度和转身能力
+
+      common_mistakes:
+        - mistake: 运球过高容易失误
+          correction: 运球高度控制在腰部以下，快速推进时略低
+        - mistake: 上篮步伐紊乱
+          correction: 右手上篮固定"左-右-跳"步伐，反复练习直到自动化
+        - mistake: 转身时球脱手
+          correction: 转身前降低重心、减小运球幅度，转身后立即加速
+
+      exam_day_tips:
+        - 考前在场地上做2-3次慢速完整流程
+        - 上篮不强求投中（不影响成绩），但球不能丢远
+        - 返回时注意不要踩线或走错路线
+        - 全程保持低重心运球
+
+    # ---------- 排球连续垫球 ----------
+    - name: 排球连续垫球
+      training_frequency: 每周5-6次，每次20-30分钟
+
+      training_methods:
+        - name: 对墙垫球
+          description: 面对墙壁连续垫球
+          example: 距墙1.5米，连续垫球不停，每组100次目标
+          purpose: 建立稳定的垫球手型和力度控制
+
+        - name: 自垫练习
+          description: 按考试标准原地自垫
+          example: 每组连续垫50个以上，每次练习5-8组
+          purpose: 直接模拟考试动作
+
+        - name: 高度控制练习
+          description: 刻意控制垫球高度
+          example: 在高度标线下练习，确保每球超过规定高度
+          purpose: 养成垫球高度达标的习惯
+
+        - name: 移动垫球
+          description: 垫球偏离时快速移动脚步调整
+          example: 刻意把球垫偏后快速移动接回，20次×3组
+          purpose: 提高失误后的补救能力
+
+      common_mistakes:
+        - mistake: 垫球时屈臂或用手掌拍球
+          correction: 双臂伸直并拢，用小臂前端（腕关节以上10cm处）触球
+        - mistake: 垫球高度不够
+          correction: 适当增加蹬地力量，让球弹起更高
+        - mistake: 球越垫越歪，控制不住方向
+          correction: 核心要稳，垫球时面朝正前方，两臂对称发力
+
+      exam_day_tips:
+        - 考前找个空地自垫20-30个热身
+        - 第一球不要太大力，先稳住节奏
+        - 球稍偏时积极移动脚步，不要光伸手臂
+        - 保持呼吸均匀，不要紧张
+
+# ================================================================
+# 第四类：速度灵敏力量项目
+# ================================================================
+category_4:
+  name: 速度灵敏力量项目
+
+  items:
+    # ---------- 50米跑 ----------
+    - name: 50米跑
+      training_frequency: 每周3-4次
+
+      training_methods:
+        - name: 起跑反应练习
+          description: 练习站立式起跑的反应速度和加速
+          example: 听口令起跑×10次，专注前10米爆发
+          purpose: 提高起跑反应和前程加速
+
+        - name: 30米冲刺
+          description: 短距离全速冲刺
+          example: 30米全速跑×6-8组，组间休息2分钟
+          purpose: 提升绝对速度
+
+        - name: 高抬腿训练
+          description: 原地和行进间高抬腿
+          example: 原地高抬腿30秒×4组 + 行进间高抬腿30米×4组
+          purpose: 提高步频
+
+        - name: 后蹬跑练习
+          description: 强调后蹬充分的跑步练习
+          example: 后蹬跑30米×6组
+          purpose: 增大步幅
+
+      common_mistakes:
+        - mistake: 起跑时身体直立
+          correction: 起跑身体前倾约45度，前几步小步快频逐步抬起身体
+        - mistake: 跑到后半程明显减速
+          correction: 加强30-50米段的专项训练，保持冲刺到终点
+        - mistake: 摆臂姿势不正确
+          correction: 前后摆臂，肘关节约90度，不要左右摆
+
+      exam_day_tips:
+        - 考前做充分的动态热身（高抬腿、小步跑、加速跑）
+        - 起跑时集中注意力，听到枪响/口令立即反应
+        - 全程保持最大努力，冲过终点线后再减速
+        - 不要回头看其他人
+
+    # ---------- 一分钟跳绳 ----------
+    - name: 一分钟跳绳
+      training_frequency: 每天练习（可每天15-20分钟）
+
+      training_methods:
+        - name: 计时跳绳
+          description: 按考试标准计时一分钟
+          example: 1分钟计时跳×3-5组，组间休息1分钟
+          purpose: 模拟考试，掌握节奏
+
+        - name: 速度突破训练
+          description: 短时间内追求最快频率
+          example: 30秒全速跳×4组，追求每组80+个
+          purpose: 突破速度瓶颈
+
+        - name: 耐力跳绳
+          description: 持续跳绳不断
+          example: 连续跳3分钟不停×2组
+          purpose: 提高手腕和小腿耐力
+
+        - name: 技术优化
+          description: 减小动作幅度提高效率
+          example: 手腕发力练习（减少大臂摆动），小跳练习（离地2-3cm）
+          purpose: 减少无效动作，提高效率
+
+      progression:
+        beginner:
+          current_level: 80个以下/分钟
+          plan:
+            - 先练不断绳（连续跳60个不断）
+            - 调整绳子长度（单脚踩绳，手柄到腋下）
+            - 每天练习3组1分钟，先求稳再求快
+        intermediate:
+          current_level: 80-120个/分钟
+          plan:
+            - 开始追求手腕发力，减小摆臂幅度
+            - 跳起高度控制在2-3cm，减少体能消耗
+            - 加入30秒冲刺训练提升速度
+        advanced:
+          current_level: 120-139个/分钟
+          plan:
+            - 精细调节绳长（可适当缩短1-2cm）
+            - 训练节奏感：每10秒约23-24个的频率
+            - 考前训练以稳定性为主
+
+      common_mistakes:
+        - mistake: 用大臂甩绳，速度上不去
+          correction: 肘关节固定在腰侧，完全用手腕转绳
+        - mistake: 跳得太高浪费体力
+          correction: 脚尖离地2-3cm即可，膝盖微曲缓冲
+        - mistake: 断绳后慌张导致连续失误
+          correction: 断绳后深呼吸，冷静调整好再开始，不要急
+
+      exam_day_tips:
+        - 自带顺手的跳绳（确认考场是否允许）
+        - 考前轻跳50-80个热身，不要太多
+        - 开始后保持稳定节奏，不要一上来就冲
+        - 断绳不慌，快速恢复继续跳
+
+    # ---------- 立定跳远 ----------
+    - name: 立定跳远
+      training_frequency: 每周4-5次
+
+      training_methods:
+        - name: 标准立定跳远练习
+          description: 按考试标准反复练习
+          example: 每次跳20-30次，注意起跳和落地技术
+          purpose: 建立正确动作模式
+
+        - name: 蹲跳训练
+          description: 原地深蹲后向上跳起
+          example: 连续蹲跳15个×3组
+          purpose: 增强腿部爆发力
+
+        - name: 多级跳练习
+          description: 连续蛙跳前进
+          example: 连续蛙跳5步×6组
+          purpose: 增强下肢连续爆发力
+
+        - name: 台阶跳
+          description: 单脚或双脚跳上台阶（30-40cm高）
+          example: 双脚跳上跳下×15个×3组
+          purpose: 增强踝关节和膝关节爆发力
+
+        - name: 摆臂配合练习
+          description: 强调手臂带动身体的协调发力
+          example: 先练空摆臂，再配合起跳，20次×3组
+          purpose: 提高手臂摆动对跳远距离的贡献
+
+      progression:
+        beginner:
+          current_level: 男生2米以下 / 女生1.5米以下
+          plan:
+            - 学习正确预摆和起跳技术
+            - 加强基础腿部力量（深蹲、蹲跳）
+            - 每天练习15-20次标准跳远
+        intermediate:
+          current_level: 男生2.0-2.3米 / 女生1.5-1.8米
+          plan:
+            - 优化预摆节奏和起跳角度
+            - 加强爆发力训练（多级跳、台阶跳）
+            - 练习收腿技术（空中屈膝前伸小腿）
+        advanced:
+          current_level: 男生2.3米以上 / 女生1.8米以上
+          plan:
+            - 细化起跳角度（约35-40度最佳）
+            - 强化手臂摆动和收腿时机配合
+            - 每次训练开始时先跳3-5次找最佳状态
+
+      common_mistakes:
+        - mistake: 预摆不充分就急于起跳
+          correction: 预摆2-3次，最后一次摆臂到最高点时蹬地起跳
+        - mistake: 起跳角度太高（跳得高但不远）
+          correction: 起跳方向应向前上方约35-40度
+        - mistake: 落地时身体后倒
+          correction: 落地瞬间双脚着地后膝盖前屈缓冲，重心前移
+        - mistake: 踩线犯规
+          correction: 站位时脚尖离起跳线留1-2cm余量
+
+      exam_day_tips:
+        - 充分热身，做几次小幅度跳跃激活腿部肌肉
+        - 每次试跳都全力以赴
+        - 预摆节奏要稳，不要被其他考生打乱
+        - 注意落地后向前走出测量区域
+
+# ================================================================
+# 项目选择策略建议
+# ================================================================
+item_selection_guide:
+  overview: |
+    体育中考共需从四类中各选一项，合理选项是拿高分的关键。
+    建议在初二下学期前完成选项确定，留出至少半年专项训练时间。
+
+  selection_principles:
+    - 选自己最擅长的项目，不要跟风选热门项目
+    - 第一类（16分）分值最高，必须重点突破
+    - 容易拿满分的项目：跳绳（第四类）、排球（第三类）
+    - 引体向上对体重大的男生不友好，可考虑选实心球
+    - 有游泳基础的学生可选游泳替代中长跑
+
+  recommended_by_type:
+    athletic_type:
+      description: 运动基础好、体能强的学生
+      recommendation:
+        category_1: 中长跑（更容易拿满分）
+        category_2: 引体向上（男）/ 仰卧起坐（女）
+        category_3: 篮球或足球
+        category_4: 50米跑或立定跳远
+
+    average_type:
+      description: 运动基础一般的学生
+      recommendation:
+        category_1: 中长跑（通过训练可提升）
+        category_2: 实心球（技术提升空间大）
+        category_3: 排球（最容易通过练习拿满分）
+        category_4: 跳绳（最容易拿满分的项目）
+
+    overweight_type:
+      description: 体重偏大的学生
+      recommendation:
+        category_1: 游泳（减少体重对成绩影响）
+        category_2: 实心球（体重大反而有优势）
+        category_3: 排球（对体重要求低）
+        category_4: 跳绳（坚持练习可拿满分）
+
+    coordination_type:
+      description: 协调性好但体能一般的学生
+      recommendation:
+        category_1: 中长跑（耐力可训练提升）
+        category_2: 实心球（注重技术发力）
+        category_3: 足球（协调性好有优势）
+        category_4: 跳绳（协调性好易拿满分）

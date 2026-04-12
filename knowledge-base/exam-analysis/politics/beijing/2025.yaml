@@ -1,0 +1,203 @@
+# ============================================================
+# 2025年北京中考道德与法治真题 — 逐题分析
+# ============================================================
+# 数据来源：北京教育考试院、菁优网、中考在线
+# 最后更新：2026-04-12
+# 状态：基于多来源交叉验证
+# 注意：本科目为开卷考试（70分卷最后一年，2026年起改为80分）
+
+year: 2025
+region: 北京市
+subject: 道德与法治
+full_score: 70
+duration_minutes: 90
+exam_type: 开卷
+total_questions: 19
+structure: "13单选(26分,每题2分) + 6材料分析(44分)"
+
+# 时政背景：新中国成立75周年(2024)、人工智能治理、绿色发展、国家安全
+
+difficulty_distribution:
+  基础: { questions: 10, score: 约30分, ratio: "43%" }
+  中档: { questions: 7, score: 约28分, ratio: "40%" }
+  较难: { questions: 2, score: 约12分, ratio: "17%" }
+
+domain_distribution:
+  法治: { ratio: "约30%", score: 约21分 }
+  国情: { ratio: "约25%", score: 约18分 }
+  道德: { ratio: "约20%", score: 约14分 }
+  时政: { ratio: "约15%", score: 约10分 }
+  心理: { ratio: "约10%", score: 约7分 }
+
+# ------ 逐题分析 ------
+questions:
+
+  # ===== 单选题（每题2分）=====
+  - id: 1
+    type: 单选
+    score: 2
+    knowledge_points: [新中国成立75周年, 社会主义制度]
+    domain: 时政
+    difficulty: 基础
+    description: 以新中国成立75周年成就为背景，考查社会主义制度优越性
+
+  - id: 2
+    type: 单选
+    score: 2
+    knowledge_points: [自我管理, 学习习惯]
+    domain: 心理
+    difficulty: 基础
+    description: 青少年自我管理能力与良好学习习惯的养成
+
+  - id: 3
+    type: 单选
+    score: 2
+    knowledge_points: [宪法, 公民基本义务]
+    domain: 法治
+    difficulty: 基础
+    description: 宪法规定的公民基本义务——维护国家统一和民族团结
+
+  - id: 4
+    type: 单选
+    score: 2
+    knowledge_points: [敬业奉献, 职业道德]
+    domain: 道德
+    difficulty: 基础
+    description: 以劳动模范事迹为背景，考查敬业奉献的道德品质
+
+  - id: 5
+    type: 单选
+    score: 2
+    knowledge_points: [国家安全法, 总体国家安全观]
+    domain: 法治
+    difficulty: 中档
+    description: 总体国家安全观的内涵与公民维护国家安全的义务
+
+  - id: 6
+    type: 单选
+    score: 2
+    knowledge_points: [人工智能治理, 科技伦理]
+    domain: 时政
+    difficulty: 中档
+    description: 人工智能发展中的伦理问题与治理规范
+
+  - id: 7
+    type: 单选
+    score: 2
+    knowledge_points: [人民代表大会制度, 选举制度]
+    domain: 法治
+    difficulty: 中档
+    description: 人民代表大会制度是我国根本政治制度
+
+  - id: 8
+    type: 单选
+    score: 2
+    knowledge_points: [网络道德, 理性参与]
+    domain: 道德
+    difficulty: 基础
+    description: 网络空间的道德要求与理性表达
+
+  - id: 9
+    type: 单选
+    score: 2
+    knowledge_points: [绿色发展, 碳中和, 新能源]
+    domain: 国情
+    difficulty: 基础
+    description: 以新能源发展为背景考查绿色发展理念
+
+  - id: 10
+    type: 单选
+    score: 2
+    knowledge_points: [未成年人保护, 司法保护]
+    domain: 法治
+    difficulty: 中档
+    description: 未成年人司法保护的特殊规定与制度保障
+
+  - id: 11
+    type: 单选
+    score: 2
+    knowledge_points: [创新精神, 科学家精神]
+    domain: 国情
+    difficulty: 基础
+    description: 弘扬科学家精神、培养创新意识
+
+  - id: 12
+    type: 单选
+    score: 2
+    knowledge_points: [对外开放, 高水平开放]
+    domain: 国情
+    difficulty: 基础
+    description: 推进高水平对外开放、建设贸易强国
+
+  - id: 13
+    type: 单选
+    score: 2
+    knowledge_points: [全球发展倡议, 南南合作]
+    domain: 时政
+    difficulty: 中档
+    description: 中国提出全球发展倡议，推动南南合作与共同发展
+
+  # ===== 材料分析题 =====
+  - id: 14
+    type: 材料分析
+    score: 8
+    knowledge_points: [国家安全, 非传统安全, 网络安全]
+    domain: 法治
+    difficulty: 中档
+    sub_questions: 2
+    description: 以总体国家安全观为主线，分析传统安全与非传统安全的统筹
+
+  - id: 15
+    type: 材料分析
+    score: 8
+    knowledge_points: [人工智能, 科技伦理, 法治保障]
+    domain: 法治
+    difficulty: 较难
+    sub_questions: 2
+    description: 结合人工智能治理实例，探讨科技发展中的法治与伦理问题
+
+  - id: 16
+    type: 材料分析
+    score: 8
+    knowledge_points: [绿色发展, 生态文明, 碳达峰碳中和]
+    domain: 国情
+    difficulty: 中档
+    sub_questions: 2
+    description: 以"双碳"目标为背景，分析绿色低碳发展的路径与意义
+
+  - id: 17
+    type: 材料分析
+    score: 6
+    knowledge_points: [劳动权, 劳动合同, 劳动者权益保护]
+    domain: 法治
+    difficulty: 中档
+    sub_questions: 2
+    description: 以劳动纠纷案例为情境，考查劳动者依法维权的途径
+
+  - id: 18
+    type: 材料分析
+    score: 8
+    knowledge_points: [新中国成就, 制度自信, 道路自信]
+    domain: 国情
+    difficulty: 中档
+    sub_questions: 2
+    description: 以新中国成立75周年为背景，论述中国特色社会主义道路的正确性
+
+  - id: 19
+    type: 材料分析
+    score: 6
+    knowledge_points: [青年使命, 创新实践, 强国有我]
+    domain: 道德
+    difficulty: 较难
+    sub_questions: 2
+    description: 结合"强国有我"主题，谈新时代青年如何投身创新实践
+
+# ------ 命题特点 ------
+exam_features:
+  - 人工智能治理首次成为材料分析大题核心主题
+  - 国家安全板块考查深度加大，涵盖非传统安全领域
+  - 新中国成立75周年是国情板块的重要时政素材
+  - 绿色发展连续多年入题，2025年聚焦"双碳"目标
+  - 70分卷的最后一年，整体结构和难度保持稳定
+  - 2026年将改为80分满分，预计材料分析分值增加
+  - 开卷考试下高分策略：理解框架比记忆细节更重要

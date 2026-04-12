@@ -1,0 +1,325 @@
+# ============================================================
+# 2022年北京中考英语笔试真题 — 逐题分析
+# ============================================================
+# 数据来源：北京教育考试院、菁优网、学科网
+# 最后更新：2026-04-12
+# 状态：基于多来源交叉验证
+# 注：双减后首次中考，难度适中，强调基础
+
+year: 2022
+region: 北京市
+subject: 英语
+full_score: 70
+duration_minutes: 90
+total_questions: 35
+structure: "12单选(12分) + 8完形(8分) + 13阅读(26分) + 2文段表达(24分)"
+
+difficulty_distribution:
+  基础: { questions: 19, score: 约32分, ratio: "46%" }
+  中档: { questions: 12, score: 约24分, ratio: "34%" }
+  较难: { questions: 4, score: 约14分, ratio: "20%" }
+
+domain_distribution:
+  语法与词汇: { ratio: "约29%", questions: [1,2,3,4,5,6,7,8,9,10,11,12] }
+  完形填空: { ratio: "约11%", questions: [13,14,15,16,17,18,19,20] }
+  阅读理解: { ratio: "约37%", questions: [21,22,23,24,25,26,27,28,29,30,31,32,33] }
+  书面表达: { ratio: "约23%", questions: [34,35] }
+
+# ------ 逐题分析 ------
+questions:
+
+  # ===== 单项选择（每题1分）=====
+  - id: 1
+    type: 单选
+    score: 1
+    knowledge_points: [物主代词, 形容词性物主代词]
+    module: 词法
+    difficulty: 基础
+    description: 考查形容词性物主代词my/your/his/her的用法
+
+  - id: 2
+    type: 单选
+    score: 1
+    knowledge_points: [地点介词, in/on/at]
+    module: 词法
+    difficulty: 基础
+    description: 介词表示地点的基本用法
+
+  - id: 3
+    type: 单选
+    score: 1
+    knowledge_points: [特殊疑问词, what/which/who]
+    module: 句法
+    difficulty: 基础
+    description: 根据答语内容选择恰当的疑问词
+
+  - id: 4
+    type: 单选
+    score: 1
+    knowledge_points: [形容词最高级, the+最高级+of/in]
+    module: 词法
+    difficulty: 基础
+    description: 形容词最高级的用法，三者及以上比较
+
+  - id: 5
+    type: 单选
+    score: 1
+    knowledge_points: [一般将来时, will/be going to]
+    module: 时态
+    difficulty: 基础
+    description: 根据时间标志词tomorrow/next week使用一般将来时
+
+  - id: 6
+    type: 单选
+    score: 1
+    knowledge_points: [情态动词, can表能力/许可]
+    module: 词法
+    difficulty: 基础
+    description: can表示能力或许可的用法
+
+  - id: 7
+    type: 单选
+    score: 1
+    knowledge_points: [并列连词, and/but/or/so]
+    module: 句法
+    difficulty: 基础
+    description: 根据句意选择表示并列、转折或因果的连词
+
+  - id: 8
+    type: 单选
+    score: 1
+    knowledge_points: [现在完成时, have/has done]
+    module: 时态
+    difficulty: 中档
+    description: 现在完成时表示过去发生的事对现在产生影响，含since/for
+
+  - id: 9
+    type: 单选
+    score: 1
+    knowledge_points: [被动语态, 含情态动词的被动]
+    module: 语态
+    difficulty: 中档
+    description: 含情态动词的被动语态 can/should be done
+
+  - id: 10
+    type: 单选
+    score: 1
+    knowledge_points: [动名词, enjoy/finish/practice doing]
+    module: 非谓语
+    difficulty: 中档
+    description: 动名词作宾语，考查固定搭配enjoy doing
+
+  - id: 11
+    type: 单选
+    score: 1
+    knowledge_points: [状语从句, when/while时间状语从句]
+    module: 从句
+    difficulty: 中档
+    description: when引导时间状语从句的用法
+
+  - id: 12
+    type: 单选
+    score: 1
+    knowledge_points: [宾语从句, that引导/语序]
+    module: 从句
+    difficulty: 中档
+    description: 宾语从句中使用陈述语序
+
+  # ===== 完形填空（每题1分）=====
+  - id: 13
+    type: 完形
+    score: 1
+    knowledge_points: [记叙文理解, 人物心理]
+    module: 完形填空
+    difficulty: 基础
+    description: 记叙文讲述志愿服务经历，开篇背景设置，考查名词辨析
+
+  - id: 14
+    type: 完形
+    score: 1
+    knowledge_points: [动词辨析, 语境理解]
+    module: 完形填空
+    difficulty: 基础
+    description: 根据语境选择正确的动词
+
+  - id: 15
+    type: 完形
+    score: 1
+    knowledge_points: [形容词辨析, 情感表达]
+    module: 完形填空
+    difficulty: 中档
+    description: 描述人物情感变化的形容词选择
+
+  - id: 16
+    type: 完形
+    score: 1
+    knowledge_points: [名词辨析, 主题相关]
+    module: 完形填空
+    difficulty: 基础
+    description: 与志愿服务话题相关的名词辨析
+
+  - id: 17
+    type: 完形
+    score: 1
+    knowledge_points: [动词短语, 搭配辨析]
+    module: 完形填空
+    difficulty: 中档
+    description: 动词短语在语境中的正确搭配
+
+  - id: 18
+    type: 完形
+    score: 1
+    knowledge_points: [副词辨析, 程度/方式]
+    module: 完形填空
+    difficulty: 中档
+    description: 副词修饰动词，表达方式或程度
+
+  - id: 19
+    type: 完形
+    score: 1
+    knowledge_points: [代词辨析, 指代关系]
+    module: 完形填空
+    difficulty: 基础
+    description: 根据上文确定代词指代对象
+
+  - id: 20
+    type: 完形
+    score: 1
+    knowledge_points: [主旨理解, 文章升华]
+    module: 完形填空
+    difficulty: 中档
+    description: 文章结尾处总结感悟，考查对文章主题的深层理解
+
+  # ===== 阅读理解（每题2分）=====
+  - id: 21
+    type: 阅读A
+    score: 2
+    knowledge_points: [应用文阅读, 信息匹配]
+    module: 阅读理解
+    difficulty: 基础
+    description: 应用文（学校社团/课程介绍），快速定位信息
+
+  - id: 22
+    type: 阅读A
+    score: 2
+    knowledge_points: [应用文阅读, 细节查找]
+    module: 阅读理解
+    difficulty: 基础
+    description: 从表格/通知中提取具体信息
+
+  - id: 23
+    type: 阅读A
+    score: 2
+    knowledge_points: [应用文阅读, 目的推断]
+    module: 阅读理解
+    difficulty: 基础
+    description: 判断应用文的写作目的
+
+  - id: 24
+    type: 阅读B
+    score: 2
+    knowledge_points: [记叙文阅读, 细节理解]
+    module: 阅读理解
+    difficulty: 基础
+    description: 记叙文（个人经历），细节事实的理解
+
+  - id: 25
+    type: 阅读B
+    score: 2
+    knowledge_points: [记叙文阅读, 推理判断]
+    module: 阅读理解
+    difficulty: 中档
+    description: 根据故事情节推断人物态度或行为原因
+
+  - id: 26
+    type: 阅读B
+    score: 2
+    knowledge_points: [记叙文阅读, 词义猜测]
+    module: 阅读理解
+    difficulty: 中档
+    description: 利用上下文线索推测词义
+
+  - id: 27
+    type: 阅读B
+    score: 2
+    knowledge_points: [记叙文阅读, 主旨把握]
+    module: 阅读理解
+    difficulty: 中档
+    description: 概括文章主题或作者感悟
+
+  - id: 28
+    type: 阅读C
+    score: 2
+    knowledge_points: [说明文阅读, 细节理解]
+    module: 阅读理解
+    difficulty: 中档
+    description: 说明文阅读（科普类），理解具体事实信息
+
+  - id: 29
+    type: 阅读C
+    score: 2
+    knowledge_points: [说明文阅读, 推理判断]
+    module: 阅读理解
+    difficulty: 较难
+    description: 对科普内容进行逻辑推理
+
+  - id: 30
+    type: 阅读C
+    score: 2
+    knowledge_points: [说明文阅读, 标题选择]
+    module: 阅读理解
+    difficulty: 较难
+    description: 为文章选择最佳标题
+
+  - id: 31
+    type: 阅读D
+    score: 2
+    knowledge_points: [还原句子, 逻辑衔接]
+    module: 阅读理解
+    difficulty: 中档
+    description: 还原句子题，利用连接词和逻辑关系判断
+
+  - id: 32
+    type: 阅读D
+    score: 2
+    knowledge_points: [还原句子, 代词指代]
+    module: 阅读理解
+    difficulty: 较难
+    description: 通过代词和指示词确定句子位置
+
+  - id: 33
+    type: 阅读D
+    score: 2
+    knowledge_points: [还原句子, 总分结构]
+    module: 阅读理解
+    difficulty: 较难
+    description: 利用段落总分结构还原主题句或支撑句
+
+  # ===== 文段表达 =====
+  - id: 34
+    type: 文段表达
+    score: 10
+    knowledge_points: [应用文写作, 邮件回复, 建议表达]
+    module: 书面表达
+    difficulty: 中档
+    description: 回复邮件，围绕校园生活话题，给朋友提供建议或分享信息
+    topic: 回复朋友关于如何准备学校运动会的邮件
+
+  - id: 35
+    type: 文段表达
+    score: 14
+    knowledge_points: [命题作文, 议论文/记叙文, 观点表达]
+    module: 书面表达
+    difficulty: 较难
+    description: 围绕"劳动教育"话题写作，描述一次劳动经历及收获
+    topic: "某英文网站征稿，题目与劳动实践相关，分享一次劳动经历并谈感悟"
+    word_count: "50词以上"
+
+# ------ 命题特点 ------
+exam_features:
+  - 双减后首年考试，整体难度适中，注重基础知识考查
+  - 单选语法点覆盖：代词、介词、疑问词、比较级最高级、时态、语态、从句
+  - 完形填空为记叙文，体现志愿服务主题，传递正能量
+  - 阅读素材贴近生活，B篇记叙文取代往年说明文位置，降低难度
+  - 写作话题涉及劳动教育，体现"五育并举"育人理念
+  - 整体阅读量与往年持平，词汇难度略有下降

@@ -1,0 +1,507 @@
+# ============================================================
+# 初中物理课程标准知识点体系（2022年版）
+# ============================================================
+# 来源：《义务教育物理课程标准（2022年版）》
+# 适用：北京中考物理（2026年起满分80分）
+# 最后更新：2026-04-12
+#
+# 要求层级说明：
+#   了解 — 能从具体事例中知道或举例说明
+#   认识 — 能描述现象特征，能进行简单解释
+#   理解 — 能把握内在逻辑，能定量分析和计算
+#   独立操作 — 能独立完成实验操作并分析数据
+#
+# 中考权重说明（以北京为例）：
+#   ★★★ = 高频必考（近5年几乎每年出现）
+#   ★★  = 常考（3-4年出现）
+#   ★   = 偶考（1-2年出现或仅作了解）
+# ============================================================
+
+subject: 物理
+standard_version: "2022年版"
+grade_range: "8-9年级"
+full_score: 80  # 2026年起由70分调整为80分
+domains: 5  # 声学、光学、热学、力学、电学
+
+# ================================================================
+#                    领域一：声学
+# ================================================================
+# 北京中考占比：约5%（约4分）
+
+声学:
+
+  声音的产生与传播:
+    exam_weight: ★★
+    typical_score: 2分
+    knowledge_points:
+      - name: 声音由物体振动产生
+        level: 了解
+      - name: 声音的传播需要介质（固体、液体、气体）
+        level: 了解
+      - name: 真空不能传声
+        level: 了解
+        exam_note: 常以实验情境考查（抽气机实验）
+      - name: 声速与介质种类和温度的关系
+        level: 了解
+        exam_note: 15°C空气中声速约340m/s
+      - name: 回声现象及其应用
+        level: 了解
+
+  声音的特性:
+    exam_weight: ★★
+    typical_score: 2分
+    knowledge_points:
+      - name: 音调与频率的关系
+        level: 认识
+      - name: 响度与振幅的关系
+        level: 认识
+      - name: 音色与发声体材料结构的关系
+        level: 了解
+      - name: 人耳听觉范围（20Hz~20000Hz）
+        level: 了解
+      - name: 超声波与次声波的概念及应用
+        level: 了解
+
+  噪声的危害与控制:
+    exam_weight: ★
+    typical_score: 0-2分
+    knowledge_points:
+      - name: 噪声的来源
+        level: 了解
+      - name: 噪声的等级与危害（分贝）
+        level: 了解
+      - name: 控制噪声的三条途径（声源处、传播过程中、人耳处）
+        level: 了解
+        exam_note: 常以选择题考查
+
+# ================================================================
+#                    领域二：光学
+# ================================================================
+# 北京中考占比：约10%（约8分）
+
+光学:
+
+  光的直线传播:
+    exam_weight: ★★
+    typical_score: 2分
+    knowledge_points:
+      - name: 光在同种均匀介质中沿直线传播
+        level: 了解
+      - name: 光的直线传播应用（影子、日食月食、小孔成像）
+        level: 了解
+      - name: 光速（真空中约3×10⁸m/s）
+        level: 了解
+      - name: 光年是长度单位
+        level: 了解
+
+  光的反射:
+    exam_weight: ★★
+    typical_score: 2分
+    knowledge_points:
+      - name: 光的反射定律（三线共面、两线分居、角度相等）
+        level: 理解
+        exam_note: 作图题高频考点
+      - name: 镜面反射与漫反射
+        level: 认识
+      - name: 平面镜成像特点（等大、等距、虚像、左右相反）
+        level: 理解
+        exam_note: 实验探究题常考
+      - name: 平面镜成像作图
+        level: 独立操作
+
+  光的折射:
+    exam_weight: ★★
+    typical_score: 2分
+    knowledge_points:
+      - name: 光的折射现象
+        level: 认识
+      - name: 光从空气斜射入水或玻璃中折射角小于入射角
+        level: 认识
+      - name: 折射现象的生活实例（池底变浅、筷子弯折等）
+        level: 了解
+      - name: 光的色散（白光由七色光组成）
+        level: 了解
+
+  透镜及其成像:
+    exam_weight: ★★★
+    typical_score: 4分
+    knowledge_points:
+      - name: 凸透镜和凹透镜的辨别
+        level: 了解
+      - name: 凸透镜对光的会聚作用、凹透镜对光的发散作用
+        level: 认识
+      - name: 焦点和焦距的概念
+        level: 认识
+      - name: 凸透镜成像规律
+        level: 理解
+        exam_note: 必考重点——u>2f、f<u<2f、u<f三种情况
+      - name: 凸透镜成像实验（光具座实验）
+        level: 独立操作
+        exam_note: 实验探究题高频考点
+      - name: 照相机、投影仪、放大镜的成像原理
+        level: 认识
+      - name: 近视眼和远视眼的成因与矫正
+        level: 了解
+
+# ================================================================
+#                    领域三：热学
+# ================================================================
+# 北京中考占比：约15%（约12分）
+
+热学:
+
+  温度与温度计:
+    exam_weight: ★
+    typical_score: 2分
+    knowledge_points:
+      - name: 温度的概念（物体的冷热程度）
+        level: 了解
+      - name: 摄氏温度的规定
+        level: 了解
+      - name: 温度计的使用方法
+        level: 独立操作
+      - name: 体温计的特殊结构
+        level: 了解
+
+  物态变化:
+    exam_weight: ★★★
+    typical_score: 4分
+    knowledge_points:
+      - name: 熔化和凝固（晶体与非晶体的区别）
+        level: 认识
+        exam_note: 熔化凝固图像分析是常考题型
+      - name: 汽化（蒸发和沸腾的区别）
+        level: 认识
+      - name: 液化及其应用（降温/压缩体积）
+        level: 认识
+      - name: 升华和凝华现象
+        level: 了解
+        exam_note: 常考生活实例辨析
+      - name: 水的沸腾实验
+        level: 独立操作
+        exam_note: 实验探究题常考
+      - name: 物态变化过程中的吸放热
+        level: 理解
+
+  内能:
+    exam_weight: ★★
+    typical_score: 2-4分
+    knowledge_points:
+      - name: 分子动理论（分子运动、分子间作用力）
+        level: 了解
+      - name: 内能的概念
+        level: 认识
+      - name: 改变内能的两种方式（做功和热传递）
+        level: 理解
+        exam_note: 常以选择题或填空题考查
+      - name: 热量的概念
+        level: 认识
+      - name: 热值的概念和计算
+        level: 认识
+
+  比热容:
+    exam_weight: ★★★
+    typical_score: 4分
+    knowledge_points:
+      - name: 比热容的概念（物质的特性）
+        level: 理解
+      - name: 比热容的物理意义
+        level: 理解
+      - name: 热量计算公式 Q=cm△t
+        level: 理解
+        exam_note: 计算题常考，需熟练运用
+      - name: 水的比热容及其应用
+        level: 认识
+        exam_note: 水的比热容4.2×10³J/(kg·℃)需记忆
+      - name: 比较不同物质比热容的实验
+        level: 独立操作
+
+# ================================================================
+#                    领域四：力学
+# ================================================================
+# 北京中考占比：约35%（约28分）
+
+力学:
+
+  运动与力:
+    exam_weight: ★★★
+    typical_score: 4分
+    knowledge_points:
+      - name: 机械运动的概念
+        level: 了解
+      - name: 参照物的概念
+        level: 认识
+        exam_note: 选择题常考
+      - name: 速度的概念与计算（v=s/t）
+        level: 理解
+      - name: 匀速直线运动
+        level: 认识
+      - name: 平均速度的概念和测量
+        level: 理解
+        exam_note: 测量平均速度实验是必考实验之一
+      - name: 力的概念和三要素
+        level: 认识
+      - name: 力的作用效果（改变运动状态、使物体形变）
+        level: 认识
+      - name: 力的示意图
+        level: 独立操作
+      - name: 弹力、弹簧测力计的使用
+        level: 独立操作
+      - name: 重力的概念与计算（G=mg）
+        level: 理解
+        exam_note: g取10N/kg
+      - name: 重力的方向（竖直向下）
+        level: 了解
+      - name: 摩擦力的概念与影响因素
+        level: 认识
+        exam_note: 探究摩擦力实验常考
+
+  牛顿第一定律与惯性:
+    exam_weight: ★★
+    typical_score: 2-4分
+    knowledge_points:
+      - name: 牛顿第一定律的内容
+        level: 理解
+        exam_note: 注意"一切物体"和"不受外力"的条件
+      - name: 惯性的概念及应用
+        level: 认识
+        exam_note: 惯性与质量有关，与速度无关
+      - name: 力与运动的关系（力不是维持运动的原因）
+        level: 理解
+
+  二力平衡:
+    exam_weight: ★★
+    typical_score: 2分
+    knowledge_points:
+      - name: 二力平衡的条件（同体、等大、反向、共线）
+        level: 理解
+      - name: 平衡力与相互作用力的区别
+        level: 认识
+        exam_note: 选择题易错点
+      - name: 力的合成（同一直线上的两个力）
+        level: 认识
+
+  压强:
+    exam_weight: ★★★
+    typical_score: 6-8分
+    knowledge_points:
+      - name: 压力与压强的概念
+        level: 理解
+      - name: 压强公式 p=F/S
+        level: 理解
+        exam_note: 计算题高频考点
+      - name: 增大和减小压强的方法
+        level: 认识
+      - name: 液体压强的特点
+        level: 理解
+      - name: 液体压强公式 p=ρgh
+        level: 理解
+        exam_note: 计算题常考，注意h的含义
+      - name: 连通器原理及应用
+        level: 了解
+      - name: 大气压强的存在及测量（托里拆利实验）
+        level: 认识
+      - name: 标准大气压的值（1.013×10⁵Pa）
+        level: 了解
+      - name: 流体压强与流速的关系
+        level: 了解
+
+  浮力:
+    exam_weight: ★★★
+    typical_score: 4-6分
+    knowledge_points:
+      - name: 浮力的概念及方向
+        level: 认识
+      - name: 阿基米德原理（F浮=ρ液gV排）
+        level: 理解
+        exam_note: 计算题必考公式
+      - name: 物体浮沉条件
+        level: 理解
+      - name: 浮力的应用
+        level: 认识
+      - name: 探究浮力大小的实验
+        level: 独立操作
+
+  简单机械:
+    exam_weight: ★★
+    typical_score: 2-4分
+    knowledge_points:
+      - name: 杠杆的五要素
+        level: 认识
+      - name: 杠杆平衡条件（F₁L₁=F₂L₂）
+        level: 理解
+        exam_note: 计算和实验均常考
+      - name: 省力杠杆、费力杠杆、等臂杠杆
+        level: 认识
+      - name: 定滑轮、动滑轮、滑轮组
+        level: 认识
+      - name: 滑轮组的省力规律
+        level: 理解
+      - name: 探究杠杆平衡条件的实验
+        level: 独立操作
+
+  功和能:
+    exam_weight: ★★★
+    typical_score: 4-6分
+    knowledge_points:
+      - name: 功的概念与计算（W=Fs）
+        level: 理解
+      - name: 功率的概念与计算（P=W/t）
+        level: 理解
+        exam_note: 计算题常考
+      - name: 有用功、额外功、总功
+        level: 理解
+      - name: 机械效率（η=W有/W总）
+        level: 理解
+        exam_note: 计算题高频考点，常与滑轮组结合
+      - name: 动能和势能（重力势能、弹性势能）
+        level: 认识
+      - name: 动能和势能的转化
+        level: 认识
+        exam_note: 常以过山车、单摆等情境考查
+      - name: 机械能守恒（定性了解）
+        level: 了解
+
+# ================================================================
+#                    领域五：电学
+# ================================================================
+# 北京中考占比：约35%（约28分）
+
+电学:
+
+  电荷与电路:
+    exam_weight: ★★
+    typical_score: 2-4分
+    knowledge_points:
+      - name: 摩擦起电现象
+        level: 了解
+      - name: 两种电荷及其相互作用
+        level: 了解
+      - name: 电路的组成（电源、用电器、开关、导线）
+        level: 了解
+      - name: 通路、断路、短路
+        level: 认识
+      - name: 串联电路和并联电路的特点
+        level: 理解
+        exam_note: 识别和设计电路是基础
+      - name: 电路图的画法
+        level: 独立操作
+
+  电流、电压、电阻:
+    exam_weight: ★★★
+    typical_score: 4-6分
+    knowledge_points:
+      - name: 电流的概念与单位（A、mA）
+        level: 认识
+      - name: 电流表的使用
+        level: 独立操作
+      - name: 串并联电路中电流的规律
+        level: 理解
+      - name: 电压的概念与单位（V、kV、mV）
+        level: 认识
+      - name: 电压表的使用
+        level: 独立操作
+      - name: 串并联电路中电压的规律
+        level: 理解
+      - name: 电阻的概念与影响因素
+        level: 认识
+      - name: 滑动变阻器的使用
+        level: 独立操作
+        exam_note: 实验中连接方式和调节方法是常考点
+
+  欧姆定律:
+    exam_weight: ★★★
+    typical_score: 6-8分
+    knowledge_points:
+      - name: 欧姆定律（I=U/R）
+        level: 理解
+        exam_note: 计算题核心公式
+      - name: 串联电路的等效电阻
+        level: 理解
+      - name: 并联电路的等效电阻
+        level: 理解
+      - name: 伏安法测电阻实验
+        level: 独立操作
+        exam_note: 必考实验——电路设计、数据处理、误差分析
+      - name: 欧姆定律的应用与计算
+        level: 理解
+        exam_note: 串并联电路计算是重点
+
+  电功率:
+    exam_weight: ★★★
+    typical_score: 6-8分
+    knowledge_points:
+      - name: 电能与电功（W=UIt）
+        level: 理解
+      - name: 电功率的概念与计算（P=UI）
+        level: 理解
+        exam_note: 计算题高频考点
+      - name: 额定功率与实际功率
+        level: 理解
+        exam_note: 区分额定电压下和实际电压下的功率
+      - name: 测量小灯泡电功率实验
+        level: 独立操作
+        exam_note: 必考实验——连接电路、记录数据、分析现象
+      - name: 焦耳定律（Q=I²Rt）
+        level: 理解
+      - name: 电热器的工作原理
+        level: 了解
+
+  电与磁:
+    exam_weight: ★★
+    typical_score: 2-4分
+    knowledge_points:
+      - name: 磁现象（磁极、磁化）
+        level: 了解
+      - name: 磁场和磁感线
+        level: 认识
+      - name: 地磁场
+        level: 了解
+      - name: 电流的磁效应（奥斯特实验）
+        level: 认识
+        exam_note: 奥斯特实验是常考实验
+      - name: 通电螺线管的磁场
+        level: 认识
+      - name: 电磁铁及其应用
+        level: 了解
+      - name: 电磁感应现象
+        level: 了解
+      - name: 电动机和发电机的工作原理
+        level: 了解
+        exam_note: 注意区分电动机（电→动）和发电机（动→电）
+
+  家庭电路与安全用电:
+    exam_weight: ★★
+    typical_score: 2分
+    knowledge_points:
+      - name: 家庭电路的组成（进户线、电能表、总开关、保险装置等）
+        level: 了解
+      - name: 火线与零线
+        level: 了解
+      - name: 三线插头和漏电保护器
+        level: 了解
+      - name: 安全用电常识
+        level: 了解
+        exam_note: 选择题偶尔考查
+      - name: 触电类型和急救
+        level: 了解
+
+# ================================================================
+#                    2022新课标变化要点
+# ================================================================
+
+new_in_2022:
+  added:
+    - "强调科学探究与工程实践的融合"
+    - "增加跨学科实践内容"
+    - "引入'物质''运动和相互作用''能量'三大主题"
+    - "强化实验探究的过程性评价"
+  adjusted:
+    - "从'科学内容'改为'学科核心概念'组织"
+    - "实验要求从验证性向探究性转变"
+    - "加强与生活、技术、社会的联系"
+  exam_impact:
+    - "情境化命题增多（真实问题情境）"
+    - "实验探究题分值占比提升"
+    - "科普阅读题成为固定题型"
+    - "计算难度整体保持平稳"

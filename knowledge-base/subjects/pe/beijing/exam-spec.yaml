@@ -1,0 +1,144 @@
+# ============================================================
+# 北京中考体育 — 考试规格说明
+# ============================================================
+# 数据来源：北京教育考试院、北京市教委文件
+# 最后更新：2026-04-12
+
+subject: 体育与健康
+region: 北京市
+year: 2026
+
+# ------ 基本信息 ------
+basic_info:
+  full_score: 50
+  exam_type: 现场测试 + 过程性考核
+  exam_date: "2026年4月-5月（具体时间各区安排）"
+  exam_location: 各区教育考试中心指定考场
+  notes:
+    - 体育中考不同于文化课笔试，为身体素质现场测试
+    - 因天气/场地等原因可能调整考试时间
+    - 考生须持准考证、身份证参加考试
+
+# ------ 总分结构 ------
+score_structure:
+  total: 50
+  components:
+    - name: 过程性考核
+      score: 10
+      description: 体育课出勤、课堂表现、体质健康测试综合评定
+      details:
+        assessment_period: 初一至初三每学期
+        scoring_method: 各学期成绩汇总
+        sub_items:
+          - name: 体育课出勤与课堂表现
+            description: 体育课考勤记录和课堂参与度、学习态度
+          - name: 国家学生体质健康测试
+            description: 每年秋季统一进行的体质健康标准测试成绩
+        notes:
+          - 过程性考核由学校组织实施，区教委抽查监督
+          - 免体学生按相关政策另行评定
+          - 初一初二初三各占一定比例
+
+    - name: 现场考试
+      score: 40
+      description: 四类项目各选一项进行现场测试
+      exam_categories:
+        - category: 第一类
+          name: 耐力项目
+          full_score: 16
+          selection: 必选一项
+          items:
+            - name: 中长跑
+              detail_male: 1000米
+              detail_female: 800米
+              description: 耐力跑，考查心肺耐力
+            - name: 游泳
+              detail: 200米（不限泳姿）
+              description: 在标准泳池完成200米，考查心肺耐力
+              notes: 部分区未设游泳考点，需提前确认
+
+        - category: 第二类
+          name: 力量项目
+          full_score: 10
+          selection: 选一项
+          items:
+            - name: 引体向上
+              gender: 男生
+              description: 正手握杠，完成标准引体向上次数
+            - name: 仰卧起坐
+              gender: 女生
+              description: 一分钟内完成标准仰卧起坐次数
+            - name: 实心球
+              gender: 男女均可选
+              detail: 原地正面双手头上前掷实心球（2kg）
+              description: 考查上肢力量和腰腹爆发力
+
+        - category: 第三类
+          name: 球类技能项目
+          full_score: 8
+          selection: 选一项
+          items:
+            - name: 足球
+              detail: 运球绕杆
+              description: 运球绕标志杆往返，考查脚下控球和灵敏性
+            - name: 篮球
+              detail: 运球往返上篮
+              description: 全场运球往返，包含行进间上篮
+            - name: 排球
+              detail: 连续垫球
+              description: 对墙或自垫连续垫球计数
+
+        - category: 第四类
+          name: 速度灵敏力量项目
+          full_score: 6
+          selection: 选一项
+          items:
+            - name: 50米跑
+              description: 直道冲刺跑，考查速度素质
+            - name: 一分钟跳绳
+              description: 一分钟内双脚跳绳计数
+            - name: 立定跳远
+              description: 原地起跳，考查下肢爆发力
+
+# ------ 考试流程 ------
+exam_procedure:
+  preparation:
+    - 考前需进行体检，确认身体健康可参加考试
+    - 建议提前到考场熟悉环境和场地
+    - 穿着运动服、运动鞋，不得穿钉鞋（田径项目除外由考场决定）
+  on_exam_day:
+    - 按准考证时间到达指定考场
+    - 先进行检录，核验身份
+    - 按照考场安排的顺序依次完成四类项目测试
+    - 每个项目通常有1-2次测试机会，取最好成绩
+    - 全部项目完成后签字确认成绩
+  special_policies:
+    - name: 免考
+      conditions:
+        - 因残疾丧失运动能力的考生可申请免考
+        - 现场考试成绩按满分40分计
+    - name: 缓考
+      conditions:
+        - 因伤病短期不能参加考试的考生可申请缓考
+        - 缓考在正式考试结束后另行安排时间
+    - name: 因病免体
+      conditions:
+        - 因病不能参加体育现场考试的考生
+        - 需提交区级以上医院证明
+        - 现场考试部分按一定比例折算分数
+
+# ------ 选项策略建议 ------
+selection_strategy:
+  principles:
+    - 优先选择自己最擅长的项目，确保拿满分或接近满分
+    - 第一类分值最高（16分），应重点训练
+    - 球类项目（第三类）可短期提升，适合运动基础一般的学生
+    - 跳绳是第四类中最易拿满分的项目
+  common_combinations:
+    - name: 体能型（适合跑步好的学生）
+      choices: [中长跑, 引体向上/仰卧起坐, 篮球, 50米跑]
+    - name: 技巧型（适合协调性好的学生）
+      choices: [中长跑, 实心球, 排球, 跳绳]
+    - name: 稳妥型（适合运动基础一般的学生）
+      choices: [中长跑, 实心球, 排球, 跳绳]
+      notes: 跳绳和排球相对容易通过练习拿满分

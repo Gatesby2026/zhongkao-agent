@@ -1,0 +1,212 @@
+# ============================================================
+# 北京中考英语 — 考试规格说明
+# ============================================================
+# 数据来源：北京教育考试院、历年真题分析、教育媒体
+# 最后更新：2026-04-12
+
+subject: 英语
+region: 北京市
+year: 2026
+
+# ------ 基本信息 ------
+basic_info:
+  full_score: 100
+  composition:
+    - part: 听力口语机考
+      score: 40
+      note: 两次机考取高分，一般在3月和12月（初三上学期末+初三下学期）
+    - part: 笔试
+      score: 60
+      duration_min: 90
+  exam_type: 闭卷
+  exam_date_written: "2026年6月24日上午（笔试）"
+  exam_date_oral:
+    first: "2025年12月（第一次机考）"
+    second: "2026年3月（第二次机考）"
+    note: 取两次中较高分计入总成绩
+
+# ------ 听力口语机考结构（40分）------
+listening_speaking:
+  full_score: 40
+  duration_min: 30
+  format: 人机对话，计算机自动评分
+  sections:
+    - type: 听后选择
+      count: 4
+      score_per_question: 1.5
+      total_score: 6
+      description: 听对话或独白，选择正确答案
+      difficulty: 基础
+
+    - type: 听后回答
+      count: 5
+      score_per_question: 2
+      total_score: 10
+      description: 听问题后口头回答，需完整句子
+      difficulty: 基础-中档
+
+    - type: 听后记录并转述
+      count: 1
+      total_score: 10
+      description: 听短文后填写关键信息表格，然后口头转述主要内容
+      sub_parts:
+        - 听后填表：5个空，每空1分（5分）
+        - 听后转述：根据表格内容口头转述（5分）
+      difficulty: 中档
+
+    - type: 朗读短文
+      count: 1
+      total_score: 6
+      description: 朗读一篇约80词的短文，考查语音语调
+      scoring: 发音准确性3分 + 语调自然度3分
+      difficulty: 基础
+
+    - type: 看图说话 / 回答问题
+      count: 2
+      total_score: 8
+      description: 根据图片或情境，口头回答或描述
+      difficulty: 中档
+      note: 2024年改革后新增/调整的题型
+
+  scoring_notes:
+    - 发音准确性、语调自然度、语法正确性、内容完整性均计分
+    - 转述题有内容要点和语言表达两个维度评分
+    - 两次机考难度基本一致，取高分计入
+
+# ------ 笔试结构（60分）------
+paper_structure:
+  total_score: 60
+  duration_min: 90
+  total_questions: 约45题
+
+  sections:
+    - type: 单项填空
+      count: 12
+      score_per_question: 1
+      total_score: 12
+      description: 语法和词汇的语境选择
+      difficulty_distribution:
+        easy: 8        # 基础语法和词汇
+        medium: 3      # 时态语态/从句
+        hard: 1        # 综合语境题
+      typical_topics:
+        - 代词（人称/物主/不定代词）
+        - 介词和介词短语
+        - 连词（并列/从属）
+        - 时态（一般现在/过去/将来/现在完成时）
+        - 被动语态
+        - 形容词/副词比较级最高级
+        - 宾语从句（语序/时态呼应）
+        - 状语从句（if/when/because/although）
+        - 情态动词
+        - 非谓语动词（to do / doing）
+
+    - type: 完形填空
+      count: 8
+      score_per_question: 1
+      total_score: 8
+      description: 一篇约200-250词短文，8个空
+      difficulty_distribution:
+        easy: 3
+        medium: 4
+        hard: 1
+      typical_topics:
+        - 记叙文为主（成长/感悟/助人为乐）
+        - 考查词义辨析、上下文逻辑、固定搭配
+      notes: 2024年起从10题减至8题
+
+    - type: 阅读理解
+      sub_sections:
+        - name: 阅读选择（A篇、B篇、C篇）
+          count: 13
+          score_per_question: 2
+          total_score: 26
+          description: 3篇文章，每篇4-5题
+          article_types:
+            - A篇: 应用文（广告/通知/表格），约200词，较简单
+            - B篇: 记叙文（故事/人物），约300词，中档
+            - C篇: 说明文/议论文（科普/社会），约350词，较难
+          typical_question_types:
+            - 细节理解（约50%）
+            - 主旨大意（每篇1题）
+            - 推理判断（B/C篇各1-2题）
+            - 词义猜测（1题）
+          difficulty_distribution:
+            easy: 5
+            medium: 5
+            hard: 3
+
+        - name: 阅读回答问题（D篇）
+          count: 5
+          total_score: 10
+          description: 1篇约350词文章，5个问题需书面回答
+          scoring:
+            - 前4题：每题2分（信息提取+语言表达）
+            - 第5题：2分（开放性问题，需写出个人观点）
+          difficulty: 中档-较难
+          notes: D篇是北京特色题型，最后一题开放性强
+      total_reading_score: 26  # 注：D篇归入阅读，部分统计归入写作
+
+    - type: 文段表达
+      sub_sections:
+        - name: 选词/短语填空
+          count: 约4-5空
+          total_score: 4
+          description: 根据语境从方框中选词/短语填入短文
+          difficulty: 基础-中档
+
+        - name: 书面表达（大作文）
+          count: 1
+          total_score: 10
+          description: 根据中文提示或图表写一篇50-80词的短文
+          scoring_criteria:
+            content: 4分（要点完整、内容充实）
+            language: 4分（语法正确、用词得当、句式多样）
+            structure: 2分（结构清晰、逻辑连贯）
+          typical_topics:
+            - 学校活动（运动会/读书节/志愿服务）
+            - 个人成长（学习方法/兴趣爱好/难忘经历）
+            - 社会实践（志愿活动/文化体验）
+            - 计划与建议（假期计划/给朋友的建议）
+          difficulty: 中档
+          notes: 近年趋向半开放式，给出情境和要点，自由发挥空间增大
+
+# ------ 难度分布 ------
+difficulty_ratio:
+  five_year_average:
+    easy: 55       # 基础题约55%（约33分笔试）
+    medium: 35     # 中档题约35%（约21分笔试）
+    hard: 10       # 较难题约10%（约6分笔试）
+    note: 英语难度整体低于数学，注重基础和语用能力
+
+  reform_trend:
+    note: |
+      2024年起笔试从70→60分，听口从30→40分
+      笔试难度略有提升以保持区分度
+      听口加强意味着口语表达能力更重要
+
+# ------ 命题趋势（2022新课标后）------
+trends:
+  - name: 听口分值提升
+    description: 从30分→40分，口语表达和听力理解的重要性大幅提升
+  - name: 语境化命题
+    description: 语法不再孤立考查，全部嵌入真实语境中
+  - name: 中华文化融入
+    description: 阅读和写作素材增加中国传统文化、北京地方文化内容
+  - name: 开放性增强
+    description: 阅读D篇最后一题和大作文均要求表达个人观点
+  - name: 减少纯记忆考查
+    description: 弱化单纯语法规则记忆，强调语言在真实情境中的运用
+  - name: 核心素养导向
+    description: 考查思维品质（推理判断）和文化意识（跨文化理解）
+
+# ------ 评分说明 ------
+scoring_notes:
+  - 单选和完形：每题1分，选错不给分
+  - 阅读选择：每题2分，选错不给分
+  - 阅读回答：按要点和语言给分，答案不完整可得部分分
+  - 选词填空：每空约1分，拼写错误不给分
+  - 书面表达：按内容(4)+语言(4)+结构(2)三维评分
+  - 书面表达中语法错误每个扣0.5分，同类错误不重复扣分
+  - 字数不足50词扣1分，严重偏离主题最高给2分
+  - 听口机考由计算机自动评分，转述题人工复核

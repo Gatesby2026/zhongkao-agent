@@ -1,0 +1,363 @@
+# ============================================================
+# 北京中考物理 — 知识点权重分析
+# ============================================================
+# 数据来源：近5年(2021-2025)北京中考真题统计
+# 最后更新：2026-04-12
+# 注意：2026年起满分80分（此前70分），下文分值按80分制换算
+
+subject: 物理
+region: 北京市
+full_score: 80
+
+# ------ 五大模块总体占比 ------
+modules_overview:
+  - module: 力学
+    score_ratio: 35%
+    typical_score: 约28分
+    description: 占比最大，压强+浮力+功能是核心
+
+  - module: 电学
+    score_ratio: 35%
+    typical_score: 约28分
+    description: 与力学并列第一，实验+计算分值高
+
+  - module: 热学
+    score_ratio: 15%
+    typical_score: 约12分
+    description: 物态变化+比热容必考
+
+  - module: 光学
+    score_ratio: 10%
+    typical_score: 约8分
+    description: 透镜成像是重点
+
+  - module: 声学
+    score_ratio: 5%
+    typical_score: 约4分
+    description: 分值最小，基础送分
+
+# ------ 细分知识点权重 ------
+knowledge_points:
+
+  # ====== 力学 ======
+  力学:
+    - name: 压强（固体+液体+大气压）
+      frequency: 极高
+      typical_score: 6-8分
+      difficulty: 基础-中档
+      typical_questions: 选择/计算
+      details:
+        - 固体压强计算（p=F/S）每年必考
+        - 液体压强（p=ρgh）常与容器问题结合
+        - 大气压偶尔在选择题中出现
+        - 增大减小压强的方法是常考选择题
+      trend: 近5年每年至少8分与压强相关
+
+    - name: 浮力
+      frequency: 极高
+      typical_score: 4-6分
+      difficulty: 中档
+      typical_questions: 选择/多选/计算
+      details:
+        - 阿基米德原理（F浮=ρ液gV排）是核心公式
+        - 浮沉条件判断是选择题常考
+        - 浮力计算常与密度结合
+        - 实验探究中浮力影响因素偶尔考
+      trend: 稳定高频
+
+    - name: 功、功率与机械效率
+      frequency: 高
+      typical_score: 4-6分
+      difficulty: 中档
+      typical_questions: 选择/计算
+      details:
+        - 功率计算（P=W/t）
+        - 机械效率（η=W有/W总）与滑轮组结合
+        - 动能势能转化选择题
+      trend: 滑轮组机械效率是计算题常见载体
+
+    - name: 运动与力
+      frequency: 高
+      typical_score: 4分
+      difficulty: 基础
+      typical_questions: 选择/填空
+      details:
+        - 参照物判断
+        - 速度计算（v=s/t）
+        - 惯性现象解释
+        - 二力平衡应用
+      trend: 稳定，基础送分
+
+    - name: 密度
+      frequency: 高
+      typical_score: 2-4分
+      difficulty: 基础-中档
+      typical_questions: 实验/计算
+      details:
+        - 密度公式（ρ=m/V）
+        - 测量固体和液体密度实验
+        - 密度与其他量的综合计算
+      trend: 实验探究中几乎每年涉及
+
+    - name: 简单机械（杠杆/滑轮）
+      frequency: 中-高
+      typical_score: 2-4分
+      difficulty: 基础-中档
+      typical_questions: 选择/实验
+      details:
+        - 杠杆平衡条件
+        - 滑轮组省力分析
+        - 探究杠杆平衡的实验
+      trend: 实验探究中轮流考查
+
+    - name: 重力与摩擦力
+      frequency: 中
+      typical_score: 2分
+      difficulty: 基础
+      typical_questions: 选择/填空
+      details:
+        - 重力计算（G=mg）
+        - 摩擦力影响因素
+        - 增大减小摩擦力的方法
+
+  # ====== 电学 ======
+  电学:
+    - name: 欧姆定律及应用
+      frequency: 极高
+      typical_score: 6-8分
+      difficulty: 中档-拔高
+      typical_questions: 选择/多选/计算
+      details:
+        - I=U/R 基本计算
+        - 串并联电路计算
+        - 动态电路分析（滑动变阻器改变时各量变化）
+        - 伏安法测电阻实验
+      trend: 计算题和实验题的绝对核心
+
+    - name: 电功率
+      frequency: 极高
+      typical_score: 6-8分
+      difficulty: 中档-拔高
+      typical_questions: 实验/计算
+      details:
+        - P=UI 及变形公式
+        - 额定功率与实际功率的区别
+        - 测量小灯泡电功率实验
+        - 焦耳定律（Q=I²Rt）
+      trend: 实验和计算均必考，电学最高频
+
+    - name: 电路基础（串并联/电流电压规律）
+      frequency: 高
+      typical_score: 4-6分
+      difficulty: 基础
+      typical_questions: 选择/实验
+      details:
+        - 串并联电路的识别
+        - 电流表和电压表的使用与读数
+        - 串联分压、并联分流
+        - 滑动变阻器连接与使用
+      trend: 基础但不可忽视
+
+    - name: 电与磁
+      frequency: 中
+      typical_score: 2-4分
+      difficulty: 基础
+      typical_questions: 选择
+      details:
+        - 奥斯特实验
+        - 电动机与发电机的区别
+        - 电磁铁
+        - 通电螺线管极性判断
+      trend: 选择题1-2题
+
+    - name: 家庭电路与安全用电
+      frequency: 低-中
+      typical_score: 0-2分
+      difficulty: 基础
+      typical_questions: 选择
+      details:
+        - 安全用电常识
+        - 火线零线
+        - 保险装置
+      trend: 偶尔出现在选择题
+
+  # ====== 热学 ======
+  热学:
+    - name: 物态变化
+      frequency: 极高
+      typical_score: 4分
+      difficulty: 基础
+      typical_questions: 选择/实验
+      details:
+        - 六种物态变化及吸放热判断（选择必考）
+        - 水沸腾实验（温度-时间图像）
+        - 晶体与非晶体熔化图像
+        - 生活中的物态变化实例
+      trend: 连续5年选择题必考
+
+    - name: 比热容与热量计算
+      frequency: 高
+      typical_score: 4分
+      difficulty: 基础-中档
+      typical_questions: 选择/计算
+      details:
+        - Q=cmΔt 计算
+        - 水的比热容特点及应用
+        - 比较不同物质比热容的实验
+      trend: 计算题中每1-2年出现一次
+
+    - name: 内能与分子动理论
+      frequency: 中
+      typical_score: 2分
+      difficulty: 基础
+      typical_questions: 选择/填空
+      details:
+        - 改变内能的两种方式
+        - 分子运动（扩散现象）
+        - 热值概念
+      trend: 选择题常考1题
+
+    - name: 温度与温度计
+      frequency: 低-中
+      typical_score: 0-2分
+      difficulty: 基础
+      typical_questions: 实验（读数）
+      details:
+        - 温度计读数
+        - 温度计使用方法
+      trend: 实验基础读数题
+
+  # ====== 光学 ======
+  光学:
+    - name: 透镜及成像
+      frequency: 极高
+      typical_score: 4分
+      difficulty: 基础-中档
+      typical_questions: 选择/实验
+      details:
+        - 凸透镜成像规律（三种情况）
+        - 凸透镜成像实验操作和分析
+        - 照相机/投影仪/放大镜原理
+        - 近视眼远视眼矫正
+      trend: 实验探究几乎年年考
+
+    - name: 光的反射
+      frequency: 中-高
+      typical_score: 2分
+      difficulty: 基础
+      typical_questions: 选择/作图
+      details:
+        - 反射定律
+        - 平面镜成像特点
+        - 光路作图
+      trend: 选择题或作图题1题
+
+    - name: 光的直线传播与折射
+      frequency: 中
+      typical_score: 2分
+      difficulty: 基础
+      typical_questions: 选择
+      details:
+        - 影子、小孔成像属于直线传播
+        - 折射现象辨析
+        - 色散
+      trend: 与反射合并在1-2道选择题中
+
+  # ====== 声学 ======
+  声学:
+    - name: 声现象
+      frequency: 高
+      typical_score: 2-4分
+      difficulty: 基础
+      typical_questions: 选择
+      details:
+        - 声音的产生和传播条件
+        - 音调、响度、音色的区别
+        - 噪声控制途径
+        - 超声波应用
+      trend: 选择题第1题固定考查，送分
+
+# ------ 提分优先级建议 ------
+# 按"投入产出比"排序，基于80分满分
+score_improvement_priority:
+
+  - rank: 1
+    area: 声学 + 光学基础 + 物态变化 + 运动与力
+    reason: 纯基础分，概念辨析为主，短期记忆见效最快
+    potential: 12-16分
+    effort: 低
+    target_student: 目前40分以下
+
+  - rank: 2
+    area: 基础实验操作（仪器读数+基本实验步骤）
+    reason: 题型固定，读数和操作步骤有固定模板
+    potential: 8-10分
+    effort: 低
+    target_student: 目前40-55分
+
+  - rank: 3
+    area: 压强 + 浮力（基础计算）
+    reason: 公式明确，代入计算即可，是力学得分核心
+    potential: 6-10分
+    effort: 中
+    target_student: 目前50-60分
+
+  - rank: 4
+    area: 电路基础 + 欧姆定律基本计算
+    reason: 电学半壁江山，掌握基本电路分析是前提
+    potential: 6-10分
+    effort: 中
+    target_student: 目前50-60分
+
+  - rank: 5
+    area: 电学实验（伏安法测电阻+测电功率）
+    reason: 分值高(8-12分)，实验步骤有固定套路
+    potential: 8-12分
+    effort: 中-高
+    target_student: 目前55-65分
+
+  - rank: 6
+    area: 电功率综合计算 + 力学综合计算
+    reason: 计算题分值大但需要综合能力
+    potential: 6-10分
+    effort: 中-高
+    target_student: 目前60-70分
+
+  - rank: 7
+    area: 动态电路分析 + 多选压轴 + 实验设计开放题
+    reason: 拔高题，适合冲击75+分的学生
+    potential: 4-8分
+    effort: 高
+    target_student: 目前70分以上
+
+# ------ 易错点与失分陷阱 ------
+common_mistakes:
+  力学:
+    - "压强计算中受力面积取错（应取接触面积，非物体底面积）"
+    - "液体压强中h理解错误（h是深度，不是高度）"
+    - "浮力公式中V排≠V物（部分浸入时）"
+    - "机械效率中有用功的判断（提升物体还是拉力做的功）"
+    - "惯性与力混淆（惯性不是力，不能说受到惯性）"
+
+  电学:
+    - "电压表和电流表接法搞反"
+    - "滑动变阻器接线柱选错（应一上一下）"
+    - "串联电路中电压分配与电阻成正比搞混"
+    - "额定功率和实际功率混淆"
+    - "短路和断路对电路的影响判断错误"
+
+  热学:
+    - "升华和凝华的实例判断错误（霜是凝华不是凝固）"
+    - "Q=cmΔt中Δt理解为末温（应为温度变化量）"
+    - "沸腾时继续吸热但温度不变"
+
+  光学:
+    - "凸透镜成像中物距和像距搞反"
+    - "平面镜成像中像的大小与物体相同（与镜面大小无关）"
+    - "折射中光路可逆性忘记"
+
+  实验:
+    - "天平使用前未调平衡"
+    - "量筒读数时视线未与凹液面最低处平齐"
+    - "电学实验前滑动变阻器未调至最大阻值"
+    - "实验结论写成过程而非规律"

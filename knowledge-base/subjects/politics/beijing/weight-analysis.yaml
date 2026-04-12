@@ -1,0 +1,436 @@
+# 北京中考 道德与法治 知识点权重分析
+# 满分: 80分（2026年起）  考试形式: 开卷考试
+
+subject: 道德与法治
+region: 北京
+target_year: 2026
+full_score: 80
+
+# ============================================================
+# 一、模块权重总览
+# ============================================================
+module_weights:
+  - module: 法治教育
+    code: LAW
+    weight: 0.30
+    estimated_score: 24
+    trend: 稳定偏高
+    note: 北京中考法治板块始终占比最大，宪法和公民权利是核心
+
+  - module: 国情教育
+    code: NATION
+    weight: 0.25
+    estimated_score: 20
+    trend: 稳中有升
+    note: 国情与时政常结合出题，政治制度和发展战略考查频繁
+
+  - module: 道德教育
+    code: MORAL
+    weight: 0.20
+    estimated_score: 16
+    trend: 稳定
+    note: 主要在选择题和情境探究题中考查
+
+  - module: 时政热点
+    code: CURRENT
+    weight: 0.15
+    estimated_score: 12
+    trend: 波动（取决于当年大事）
+    note: 每年内容更新，与国情、法治板块交叉出题
+
+  - module: 心理健康
+    code: MENTAL
+    weight: 0.10
+    estimated_score: 8
+    trend: 稳定偏低
+    note: 主要在选择题中出现，偶尔在情境题中涉及
+
+# ============================================================
+# 二、详细知识点权重与频次
+# ============================================================
+detailed_weights:
+
+  # --- 法治教育（约24分）---
+  law_module:
+    total_score: 24
+    knowledge_points:
+
+      - name: 宪法的地位与最高法律效力
+        frequency: 5/5  # 近五年出现次数
+        avg_score: 4
+        importance: S
+        question_types: [选择题, 材料分析题]
+        exam_focus: 宪法是根本大法的三个原因；宪法与普通法律的关系
+
+      - name: 公民基本权利
+        frequency: 5/5
+        avg_score: 3.5
+        importance: S
+        question_types: [选择题, 情境探究题]
+        exam_focus: 人身自由权、受教育权、政治权利的辨析与运用
+
+      - name: 公民基本义务
+        frequency: 4/5
+        avg_score: 2.5
+        importance: A
+        question_types: [选择题, 材料分析题]
+        exam_focus: 权利与义务的统一关系
+
+      - name: 依法治国
+        frequency: 5/5
+        avg_score: 3
+        importance: S
+        question_types: [选择题, 时政分析题]
+        exam_focus: 全面依法治国的"十六字方针"
+
+      - name: 未成年人保护（六大保护）
+        frequency: 5/5
+        avg_score: 3
+        importance: S
+        question_types: [选择题, 情境探究题]
+        exam_focus: 家庭/学校/社会/司法/政府/网络保护的区分与辨析
+
+      - name: 违法与犯罪的区别
+        frequency: 4/5
+        avg_score: 2
+        importance: A
+        question_types: [选择题]
+        exam_focus: 三种违法行为的区分；犯罪的三个基本特征
+
+      - name: 国家机构及其职能
+        frequency: 3/5
+        avg_score: 2
+        importance: B
+        question_types: [选择题]
+        exam_focus: 人大、政府、法院、检察院、监察委的职能辨析
+
+      - name: 依法维权途径
+        frequency: 3/5
+        avg_score: 1.5
+        importance: B
+        question_types: [情境探究题]
+        exam_focus: 诉讼与非诉讼途径的选择
+
+      - name: 民法典与生活
+        frequency: 3/5
+        avg_score: 1.5
+        importance: B
+        question_types: [选择题, 情境探究题]
+        exam_focus: 民事权利的保护；合同、侵权等基本概念
+
+  # --- 国情教育（约20分）---
+  nation_module:
+    total_score: 20
+    knowledge_points:
+
+      - name: 人民代表大会制度
+        frequency: 5/5
+        avg_score: 3
+        importance: S
+        question_types: [选择题, 材料分析题]
+        exam_focus: 根本政治制度；人大代表的权利；人民当家作主
+
+      - name: 创新驱动发展战略
+        frequency: 5/5
+        avg_score: 3
+        importance: S
+        question_types: [选择题, 时政分析题]
+        exam_focus: 科技创新的地位；建设创新型国家的举措
+
+      - name: 基本国策（对外开放、环保、节约资源）
+        frequency: 4/5
+        avg_score: 2.5
+        importance: A
+        question_types: [选择题, 材料分析题]
+        exam_focus: 各基本国策的内容与意义
+
+      - name: 生态文明建设
+        frequency: 4/5
+        avg_score: 2.5
+        importance: A
+        question_types: [材料分析题, 时政分析题]
+        exam_focus: 绿色发展理念；碳达峰碳中和
+
+      - name: 中华优秀传统文化与文化自信
+        frequency: 5/5
+        avg_score: 2.5
+        importance: A
+        question_types: [选择题, 情境探究题]
+        exam_focus: 中华文化的特点；传承与创新；文化自信的内涵
+
+      - name: 社会主义核心价值观
+        frequency: 4/5
+        avg_score: 2
+        importance: A
+        question_types: [选择题]
+        exam_focus: 三个层面24字的对应与理解
+
+      - name: 民族团结与国家统一
+        frequency: 3/5
+        avg_score: 1.5
+        importance: B
+        question_types: [选择题]
+        exam_focus: 民族区域自治制度；一国两制
+
+      - name: 基本经济制度
+        frequency: 3/5
+        avg_score: 1.5
+        importance: B
+        question_types: [选择题]
+        exam_focus: 公有制主体地位；多种所有制经济
+
+      - name: 中国共产党的领导
+        frequency: 4/5
+        avg_score: 2
+        importance: A
+        question_types: [时政分析题]
+        exam_focus: 党的领导核心地位；党的初心和使命
+
+  # --- 道德教育（约16分）---
+  moral_module:
+    total_score: 16
+    knowledge_points:
+
+      - name: 诚实守信
+        frequency: 4/5
+        avg_score: 2.5
+        importance: A
+        question_types: [选择题, 情境探究题]
+        exam_focus: 诚信的重要性；践行诚信的做法
+
+      - name: 责任与担当
+        frequency: 5/5
+        avg_score: 3
+        importance: S
+        question_types: [选择题, 情境探究题, 综合探究题]
+        exam_focus: 责任的来源；承担责任的意义
+
+      - name: 遵守社会规则
+        frequency: 4/5
+        avg_score: 2
+        importance: A
+        question_types: [选择题, 情境探究题]
+        exam_focus: 自由与规则的关系；遵守规则的原因
+
+      - name: 关爱他人与服务社会
+        frequency: 3/5
+        avg_score: 2
+        importance: B
+        question_types: [选择题, 情境探究题]
+        exam_focus: 关爱的表现；志愿服务与社会责任
+
+      - name: 合理利用网络
+        frequency: 4/5
+        avg_score: 2
+        importance: A
+        question_types: [选择题]
+        exam_focus: 网络的利弊；理性参与网络生活
+
+      - name: 珍爱生命
+        frequency: 3/5
+        avg_score: 1.5
+        importance: B
+        question_types: [选择题]
+        exam_focus: 生命的独特性；敬畏生命
+
+      - name: 孝亲敬长与家庭美德
+        frequency: 3/5
+        avg_score: 1.5
+        importance: B
+        question_types: [选择题, 情境探究题]
+        exam_focus: 孝敬父母的做法；家庭责任
+
+      - name: 自尊自信自立自强
+        frequency: 2/5
+        avg_score: 1.5
+        importance: B
+        question_types: [选择题]
+        exam_focus: 自信的表现；自强的意义
+
+  # --- 时政热点（约12分）---
+  current_module:
+    total_score: 12
+    note: 时政内容每年更新，以下为常见出题方向
+    knowledge_points:
+
+      - name: 党和国家重大会议与决策
+        frequency: 5/5
+        avg_score: 3.5
+        importance: S
+        question_types: [选择题, 时政分析题]
+        exam_focus: 两会热点、党代会精神、重大政策文件
+        update_cycle: 每年
+
+      - name: 科技与经济发展成就
+        frequency: 5/5
+        avg_score: 3
+        importance: S
+        question_types: [选择题, 材料分析题]
+        exam_focus: 重大科技成就（航天/芯片/AI等）；经济数据变化
+        update_cycle: 每年
+
+      - name: 民生与社会热点
+        frequency: 4/5
+        avg_score: 2.5
+        importance: A
+        question_types: [情境探究题, 综合探究题]
+        exam_focus: 教育、医疗、就业、养老等社会热点
+        update_cycle: 每年
+
+      - name: 国际关系与全球治理
+        frequency: 4/5
+        avg_score: 2
+        importance: A
+        question_types: [选择题, 时政分析题]
+        exam_focus: 一带一路、人类命运共同体、中国的国际贡献
+        update_cycle: 每年
+
+      - name: 纪念日与重大活动
+        frequency: 3/5
+        avg_score: 1
+        importance: B
+        question_types: [选择题]
+        exam_focus: 国家公祭日、宪法日、重大周年纪念等
+        update_cycle: 每年
+
+  # --- 心理健康（约8分）---
+  mental_module:
+    total_score: 8
+    knowledge_points:
+
+      - name: 情绪调节
+        frequency: 4/5
+        avg_score: 2.5
+        importance: A
+        question_types: [选择题, 情境探究题]
+        exam_focus: 情绪调节方法的辨析与运用
+
+      - name: 青春期心理变化
+        frequency: 3/5
+        avg_score: 2
+        importance: B
+        question_types: [选择题]
+        exam_focus: 正确对待青春期烦恼
+
+      - name: 人际交往与友谊
+        frequency: 3/5
+        avg_score: 1.5
+        importance: B
+        question_types: [选择题, 情境探究题]
+        exam_focus: 交友的智慧；学会沟通
+
+      - name: 学习与成长
+        frequency: 3/5
+        avg_score: 1
+        importance: B
+        question_types: [选择题]
+        exam_focus: 学习的意义；正确面对学习压力
+
+      - name: 挫折与意志
+        frequency: 2/5
+        avg_score: 1
+        importance: C
+        question_types: [选择题]
+        exam_focus: 正确对待挫折；培养坚强意志
+
+# ============================================================
+# 三、提分优先级排序
+# ============================================================
+improvement_priority:
+  description: |
+    根据分值权重、提分难度和投入产出比排序。
+    开卷考试特点：知识点可以翻书查，但理解运用能力和答题技巧才是提分关键。
+
+  ranking:
+    - rank: 1
+      area: 选择题正确率提升
+      potential_gain: 4-8分
+      difficulty: 低
+      method: |
+        选择题不需要翻书，靠日常积累和审题技巧。
+        练习排除法，熟悉常见陷阱（偷换概念、绝对化表述）。
+        这是最高性价比的提分点。
+
+    - rank: 2
+      area: 法治板块（宪法+公民权利+依法治国）
+      potential_gain: 4-6分
+      difficulty: 中
+      method: |
+        法治知识概念性强，容易混淆但也容易通过对比记忆掌握。
+        重点突破：宪法地位、公民权利辨析、违法犯罪区分。
+        制作对比表格贴在笔记本上。
+
+    - rank: 3
+      area: 材料分析题答题规范
+      potential_gain: 6-10分
+      difficulty: 中
+      method: |
+        掌握"知识点+材料分析"的答题模板。
+        练习分点作答、使用教材术语。
+        即使知识点找到了，表述不规范也会丢分。
+
+    - rank: 4
+      area: 时政热点积累
+      potential_gain: 4-6分
+      difficulty: 中
+      method: |
+        提前整理当年重大时政到笔记本。
+        练习将时政与教材知识点建立联系。
+        重点：两会、重大科技成就、国际关系。
+
+    - rank: 5
+      area: 国情板块（政治制度+国策+发展战略）
+      potential_gain: 3-5分
+      difficulty: 中
+      method: |
+        制度类知识概念辨析是选择题常考点。
+        重点突破：根本制度vs基本制度、人大vs政协。
+
+    - rank: 6
+      area: 道德与品格板块
+      potential_gain: 2-4分
+      difficulty: 低
+      method: |
+        这部分贴近生活，理解难度低。
+        重点掌握诚信、责任、规则三个核心概念。
+
+    - rank: 7
+      area: 综合探究题（压轴题）
+      potential_gain: 3-5分
+      difficulty: 高
+      method: |
+        需要跨板块综合运用知识。
+        练习从多个角度（道德+法治+国情）分析同一问题。
+        开放性设问要体现思辨能力。
+
+    - rank: 8
+      area: 心理健康板块
+      potential_gain: 1-3分
+      difficulty: 低
+      method: |
+        分值占比低，但难度也低，容易拿分。
+        重点掌握情绪调节方法和人际交往原则。
+
+# ============================================================
+# 四、时政热点专项说明
+# ============================================================
+current_events_note:
+  importance: |
+    时政热点在道法考试中的渗透远超"时政板块"本身。
+    选择题、时政分析题、综合探究题都可能以时政为背景材料。
+    实际涉及时政的分值可能高达20-25分（含交叉部分）。
+
+  focus_period: 2025年7月 - 2026年6月
+  key_tracking_areas:
+    - 全国两会（2026年3月）重点议题
+    - 中央经济工作会议精神
+    - 重大科技突破（航天、AI、新能源等）
+    - 国际重大事件及中国立场
+    - 民生领域新政策
+    - 北京市重大发展举措
+
+  preparation_advice:
+    - 每月整理1次时政要点，写入笔记本
+    - 每条时政关联2-3个教材知识点
+    - 考前1个月集中梳理，做成快速查阅索引
+    - 关注《时事》杂志（中学版）和官方时政学习材料

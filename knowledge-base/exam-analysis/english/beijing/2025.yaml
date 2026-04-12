@@ -1,0 +1,294 @@
+# ============================================================
+# 2025年北京中考英语笔试真题 — 逐题分析
+# ============================================================
+# 数据来源：北京教育考试院、菁优网、学科网
+# 最后更新：2026-04-12
+# 状态：基于多来源交叉验证
+# 注：延续2024年改革后60分笔试结构
+
+year: 2025
+region: 北京市
+subject: 英语
+full_score: 60
+duration_minutes: 90
+total_questions: 31
+structure: "10单选(10分) + 6完形(6分) + 13阅读(26分) + 2文段表达(18分)"
+
+difficulty_distribution:
+  基础: { questions: 16, score: 约26分, ratio: "43%" }
+  中档: { questions: 11, score: 约22分, ratio: "37%" }
+  较难: { questions: 4, score: 约12分, ratio: "20%" }
+
+domain_distribution:
+  语法与词汇: { ratio: "约17%", questions: [1,2,3,4,5,6,7,8,9,10] }
+  完形填空: { ratio: "约10%", questions: [11,12,13,14,15,16] }
+  阅读理解: { ratio: "约43%", questions: [17,18,19,20,21,22,23,24,25,26,27,28,29] }
+  书面表达: { ratio: "约30%", questions: [30,31] }
+
+# ------ 逐题分析 ------
+questions:
+
+  # ===== 单项选择（每题1分）=====
+  - id: 1
+    type: 单选
+    score: 1
+    knowledge_points: [物主代词, 名词性物主代词]
+    module: 词法
+    difficulty: 基础
+    description: 形容词性物主代词与名词性物主代词的辨析
+
+  - id: 2
+    type: 单选
+    score: 1
+    knowledge_points: [方位介词, behind/between/beside]
+    module: 词法
+    difficulty: 基础
+    description: 方位介词在描述位置关系中的用法
+
+  - id: 3
+    type: 单选
+    score: 1
+    knowledge_points: [形容词最高级, 范围限定]
+    module: 词法
+    difficulty: 基础
+    description: 形容词最高级在三者以上比较中的用法
+
+  - id: 4
+    type: 单选
+    score: 1
+    knowledge_points: [现在进行时, look/listen标志]
+    module: 时态
+    difficulty: 基础
+    description: 根据look/listen等标志词使用现在进行时
+
+  - id: 5
+    type: 单选
+    score: 1
+    knowledge_points: [情态动词, had better/must]
+    module: 词法
+    difficulty: 基础
+    description: 情态动词表示强烈建议或必须的用法
+
+  - id: 6
+    type: 单选
+    score: 1
+    knowledge_points: [并列连词, or表选择]
+    module: 句法
+    difficulty: 基础
+    description: or在选择疑问句和祈使句中的用法
+
+  - id: 7
+    type: 单选
+    score: 1
+    knowledge_points: [现在完成时, for/since时间段]
+    module: 时态
+    difficulty: 中档
+    description: 现在完成时与for/since搭配，表示持续状态
+
+  - id: 8
+    type: 单选
+    score: 1
+    knowledge_points: [被动语态, 一般将来时被动]
+    module: 语态
+    difficulty: 中档
+    description: will be done一般将来时被动语态
+
+  - id: 9
+    type: 单选
+    score: 1
+    knowledge_points: [动名词, mind/enjoy/finish doing]
+    module: 非谓语
+    difficulty: 中档
+    description: 动名词作宾语的固定搭配
+
+  - id: 10
+    type: 单选
+    score: 1
+    knowledge_points: [定语从句, who/that/which]
+    module: 从句
+    difficulty: 中档
+    description: 定语从句关系代词的选择和用法
+
+  # ===== 完形填空（每题1分）=====
+  - id: 11
+    type: 完形
+    score: 1
+    knowledge_points: [记叙文理解, 场景设定]
+    module: 完形填空
+    difficulty: 基础
+    description: 记叙文讲述文化交流故事，开篇场景和人物设定
+
+  - id: 12
+    type: 完形
+    score: 1
+    knowledge_points: [动词辨析, 交际动词]
+    module: 完形填空
+    difficulty: 基础
+    description: 交际场景中的动词选择，如share/introduce/explain
+
+  - id: 13
+    type: 完形
+    score: 1
+    knowledge_points: [形容词辨析, 评价性形容词]
+    module: 完形填空
+    difficulty: 中档
+    description: 对文化体验的感受和评价词选择
+
+  - id: 14
+    type: 完形
+    score: 1
+    knowledge_points: [名词辨析, 文化类名词]
+    module: 完形填空
+    difficulty: 中档
+    description: 与文化交流话题相关的名词辨析
+
+  - id: 15
+    type: 完形
+    score: 1
+    knowledge_points: [副词/连词, 逻辑过渡]
+    module: 完形填空
+    difficulty: 中档
+    description: 表示转折或递进的过渡词选择
+
+  - id: 16
+    type: 完形
+    score: 1
+    knowledge_points: [主旨理解, 文化认同]
+    module: 完形填空
+    difficulty: 中档
+    description: 文末总结，理解跨文化交流的意义
+
+  # ===== 阅读理解（每题2分）=====
+  - id: 17
+    type: 阅读A
+    score: 2
+    knowledge_points: [应用文阅读, 活动信息]
+    module: 阅读理解
+    difficulty: 基础
+    description: 应用文（社区/学校活动通知），提取基本信息
+
+  - id: 18
+    type: 阅读A
+    score: 2
+    knowledge_points: [应用文阅读, 条件判断]
+    module: 阅读理解
+    difficulty: 基础
+    description: 根据活动要求判断参与条件
+
+  - id: 19
+    type: 阅读A
+    score: 2
+    knowledge_points: [应用文阅读, 信息匹配]
+    module: 阅读理解
+    difficulty: 基础
+    description: 将需求与选项进行信息匹配
+
+  - id: 20
+    type: 阅读B
+    score: 2
+    knowledge_points: [说明文阅读, 事实提取]
+    module: 阅读理解
+    difficulty: 基础
+    description: 说明文（健康/环保话题），提取关键事实
+
+  - id: 21
+    type: 阅读B
+    score: 2
+    knowledge_points: [说明文阅读, 因果推断]
+    module: 阅读理解
+    difficulty: 中档
+    description: 理解文中的因果关系链
+
+  - id: 22
+    type: 阅读B
+    score: 2
+    knowledge_points: [说明文阅读, 细节比较]
+    module: 阅读理解
+    difficulty: 中档
+    description: 对文中多组信息进行比较和判断
+
+  - id: 23
+    type: 阅读B
+    score: 2
+    knowledge_points: [说明文阅读, 写作意图]
+    module: 阅读理解
+    difficulty: 中档
+    description: 推断作者写这篇文章的目的
+
+  - id: 24
+    type: 阅读C
+    score: 2
+    knowledge_points: [议论文阅读, 论点提取]
+    module: 阅读理解
+    difficulty: 中档
+    description: 议论文（学习方法/思维方式话题），提取中心论点
+
+  - id: 25
+    type: 阅读C
+    score: 2
+    knowledge_points: [议论文阅读, 论证方式]
+    module: 阅读理解
+    difficulty: 较难
+    description: 识别作者使用的论证方法（举例/对比/引用）
+
+  - id: 26
+    type: 阅读C
+    score: 2
+    knowledge_points: [议论文阅读, 深层推理]
+    module: 阅读理解
+    difficulty: 较难
+    description: 对作者隐含观点进行推理
+
+  - id: 27
+    type: 阅读D
+    score: 2
+    knowledge_points: [还原句子, 话题一致性]
+    module: 阅读理解
+    difficulty: 中档
+    description: 还原句子题，确保句子与所在段落话题一致
+
+  - id: 28
+    type: 阅读D
+    score: 2
+    knowledge_points: [还原句子, 衔接与连贯]
+    module: 阅读理解
+    difficulty: 较难
+    description: 通过衔接词和语义连贯判断句子位置
+
+  - id: 29
+    type: 阅读D
+    score: 2
+    knowledge_points: [还原句子, 信息补充]
+    module: 阅读理解
+    difficulty: 较难
+    description: 判断哪句话为上下文提供了缺失的关键信息
+
+  # ===== 文段表达 =====
+  - id: 30
+    type: 文段表达
+    score: 8
+    knowledge_points: [应用文写作, 邮件回复, 活动介绍]
+    module: 书面表达
+    difficulty: 中档
+    description: 回复外国朋友邮件，介绍或推荐一项中国特色活动
+    topic: 回复朋友关于参加学校中国文化节活动的邮件
+
+  - id: 31
+    type: 文段表达
+    score: 10
+    knowledge_points: [命题作文, 记叙文/议论文, 品质表达]
+    module: 书面表达
+    difficulty: 较难
+    description: 围绕"创新精神"或"解决问题"话题写作
+    topic: "某英文网站征稿，围绕'创新与实践'话题，分享一次创新解决问题的经历"
+    word_count: "50词以上"
+
+# ------ 命题特点 ------
+exam_features:
+  - 延续2024年改革后结构，10+6+13+2的题量分布稳定
+  - 单选考点稳定：代词、介词、比较级/最高级、时态、语态、非谓语、从句
+  - 2025年单选新增定语从句考点（替代2024年的条件状语从句位置）
+  - 完形填空继续采用记叙文，话题涉及跨文化交流
+  - 阅读话题紧跟时代，关注健康生活和思维培养
+  - 写作话题突出创新精神，体现新课标核心素养要求
+  - 整体难度稳定，与2024年保持一致

@@ -1,0 +1,305 @@
+# 2025年北京中考物理试卷分析
+# 70分制最后一年，2026年起改为80分
+year: 2025
+region: 北京
+subject: 物理
+full_score: 70
+duration_minutes: 90
+total_questions: 23
+
+structure:
+  - section: 单项选择题
+    question_range: "1-12"
+    count: 12
+    score_per_question: 2
+    total_score: 24
+  - section: 多项选择题
+    question_range: "13-15"
+    count: 3
+    score_per_question: 2
+    total_score: 6
+  - section: 实验探究题
+    question_range: "16-20"
+    count: 5
+    total_score: 28
+  - section: 科普阅读题
+    question_range: "21"
+    count: 1
+    total_score: 4
+  - section: 计算题
+    question_range: "22-23"
+    count: 2
+    total_score: 8
+
+difficulty_distribution:
+  easy:
+    ratio: 0.43
+    score: 30
+    description: 基础概念题保持稳定，送分性质
+  medium:
+    ratio: 0.40
+    score: 28
+    description: 情境化中等题，考查知识迁移能力
+  hard:
+    ratio: 0.17
+    score: 12
+    description: 实验探究设计和综合计算有一定难度
+
+domain_distribution:
+  力学:
+    ratio: 0.34
+    score: 24
+    key_topics: [力与运动, 压强, 浮力, 功率, 机械效率]
+  电学:
+    ratio: 0.36
+    score: 25
+    key_topics: [欧姆定律, 电功率, 电与磁, 串并联电路]
+  热学:
+    ratio: 0.13
+    score: 9
+    key_topics: [内能, 比热容, 物态变化, 热值]
+  光学:
+    ratio: 0.11
+    score: 8
+    key_topics: [凸透镜成像, 光的折射与反射]
+  声学:
+    ratio: 0.06
+    score: 4
+    key_topics: [声音特征, 噪声防治]
+
+questions:
+  # ===== 单项选择题 =====
+  - number: 1
+    type: 单选
+    score: 2
+    difficulty: easy
+    domain: 声学
+    knowledge_point: 噪声及其控制
+    description: 生活中降噪措施及其对应途径
+    common_error: 在传播过程中减弱与在声源处减弱混淆
+
+  - number: 2
+    type: 单选
+    score: 2
+    difficulty: easy
+    domain: 光学
+    knowledge_point: 光的折射
+    description: 筷子在水中"弯折"等折射现象
+    common_error: 折射光线与入射光线的方向关系
+
+  - number: 3
+    type: 单选
+    score: 2
+    difficulty: easy
+    domain: 热学
+    knowledge_point: 物态变化与吸放热
+    description: 北京四季中常见物态变化及吸放热判断
+    common_error: 雾和露的形成是液化而非凝固
+
+  - number: 4
+    type: 单选
+    score: 2
+    difficulty: easy
+    domain: 力学
+    knowledge_point: 力的三要素
+    description: 力的大小、方向、作用点对效果的影响
+    common_error: 忽略作用点对力的效果的影响
+
+  - number: 5
+    type: 单选
+    score: 2
+    difficulty: easy
+    domain: 电学
+    knowledge_point: 串并联电路识别
+    description: 从实物图或电路图中判断串并联
+    common_error: 复杂电路中串并联关系的简化分析
+
+  - number: 6
+    type: 单选
+    score: 2
+    difficulty: easy
+    domain: 力学
+    knowledge_point: 摩擦力
+    description: 增大和减小摩擦力的方法
+    common_error: 静摩擦力方向与运动趋势方向相反
+
+  - number: 7
+    type: 单选
+    score: 2
+    difficulty: medium
+    domain: 热学
+    knowledge_point: 热值与能源
+    description: 燃料热值的概念及完全燃烧放热计算
+    common_error: 热值是燃料的属性不随质量变化
+
+  - number: 8
+    type: 单选
+    score: 2
+    difficulty: medium
+    domain: 电学
+    knowledge_point: 电功与电能
+    description: 电能表的读数与电功的计算
+    common_error: 电能表参数含义（如3200imp/kWh）理解不准
+
+  - number: 9
+    type: 单选
+    score: 2
+    difficulty: medium
+    domain: 力学
+    knowledge_point: 压强应用
+    description: 生活中增大或减小压强的实例分析
+    common_error: 压力不等于重力的情形判断
+
+  - number: 10
+    type: 单选
+    score: 2
+    difficulty: medium
+    domain: 电学
+    knowledge_point: 磁场与磁感线
+    description: 磁场方向判断与磁感线分布
+    common_error: 磁感线是假想的辅助线而非真实存在
+
+  - number: 11
+    type: 单选
+    score: 2
+    difficulty: medium
+    domain: 光学
+    knowledge_point: 凸透镜成像应用
+    description: 手机摄像头成像原理分析
+    common_error: 手机拍照时物距和焦距的关系
+
+  - number: 12
+    type: 单选
+    score: 2
+    difficulty: hard
+    domain: 力学
+    knowledge_point: 功和机械效率
+    description: 斜面的机械效率综合分析
+    common_error: 斜面效率与倾斜角度和摩擦的关系
+
+  # ===== 多项选择题 =====
+  - number: 13
+    type: 多选
+    score: 2
+    difficulty: medium
+    domain: 力学
+    knowledge_point: 密度与浮力
+    description: 密度计原理和浮力综合应用
+    common_error: 密度计在不同液体中浸入深度与液体密度的关系
+
+  - number: 14
+    type: 多选
+    score: 2
+    difficulty: hard
+    domain: 电学
+    knowledge_point: 动态电路分析
+    description: 含多个开关和变阻器的电路变化分析
+    common_error: 多个变量同时变化时的逐步分析
+
+  - number: 15
+    type: 多选
+    score: 2
+    difficulty: hard
+    domain: 电学
+    knowledge_point: 电功率综合
+    description: 比较不同连接方式下用电器的功率
+    common_error: 额定功率与实际功率的区别
+
+  # ===== 实验探究题 =====
+  - number: 16
+    type: 实验探究
+    score: 4
+    difficulty: easy
+    domain: 力学
+    knowledge_point: 测量密度
+    description: 天平和量筒测量不规则固体的密度
+    key_steps: [天平调平, 测质量, 排水法测体积, 计算密度]
+    common_error: 先测体积后测质量会因表面带水导致质量偏大
+
+  - number: 17
+    type: 实验探究
+    score: 6
+    difficulty: medium
+    domain: 热学
+    knowledge_point: 水的沸腾实验
+    description: 观察水的沸腾现象并记录温度变化
+    key_steps: [组装装置, 记录温度时间数据, 画温度-时间图像, 分析沸点]
+    common_error: 沸腾时继续吸热但温度不变的理解
+
+  - number: 18
+    type: 实验探究
+    score: 6
+    difficulty: medium
+    domain: 电学
+    knowledge_point: 伏安法测电阻
+    description: 用电压表和电流表测量未知电阻
+    key_steps: [画电路图, 连接实物, 多次测量, 取平均值]
+    common_error: 电压表内接法和外接法的系统误差分析
+
+  - number: 19
+    type: 实验探究
+    score: 6
+    difficulty: hard
+    domain: 力学
+    knowledge_point: 探究杠杆平衡条件
+    description: 验证杠杆平衡条件F1×L1=F2×L2
+    key_steps: [调节水平平衡, 在不同位置挂钩码, 记录力和力臂, 验证关系]
+    common_error: 杠杆不水平时力臂的确定方法
+
+  - number: 20
+    type: 实验探究
+    score: 6
+    difficulty: hard
+    domain: 电学
+    knowledge_point: 探究电流与电压和电阻的关系
+    description: 控制变量法分步探究欧姆定律
+    key_steps: [控制电阻不变探究I与U关系, 控制电压不变探究I与R关系, 画图像]
+    common_error: 换电阻后未调节变阻器保持电压不变
+
+  # ===== 科普阅读题 =====
+  - number: 21
+    type: 科普阅读
+    score: 4
+    difficulty: medium
+    domain: 力学
+    knowledge_point: 高铁与流体力学
+    description: 阅读高铁空气动力学材料，回答流体压强相关问题
+    context: 中国高铁技术，体现科技自信
+    common_error: 流速与压强的关系在实际工程中的应用
+
+  # ===== 计算题 =====
+  - number: 22
+    type: 计算
+    score: 4
+    difficulty: medium
+    domain: 力学
+    knowledge_point: 浮力计算
+    description: 物体在液体中的受力分析与浮力计算
+    formula: ["F浮=ρ液gV排", "G=mg", "ρ=m/V"]
+    common_error: 部分浸没与完全浸没的V排区别
+
+  - number: 23
+    type: 计算
+    score: 4
+    difficulty: hard
+    domain: 电学
+    knowledge_point: 电功率计算
+    description: 含温控开关的电暖器电路功率计算
+    formula: ["P=U²/R", "R总=R1+R2", "W=Pt"]
+    common_error: 高低温档对应的电阻连接方式分析
+
+overall_analysis:
+  avg_score_estimate: 54
+  pass_rate_estimate: 0.86
+  highlights:
+    - 70分制收官之作，题型结构与历年保持稳定
+    - 情境化命题更加成熟，科技主题持续渗透
+    - 实验探究继续强调过程性分析和评估能力
+    - 计算题保持浮力+电功率的经典组合
+    - 整体难度与2023-2024年持平
+  advice:
+    - 基础题确保不丢分，这是高分的基础
+    - 实验题注意"评估与改进"类问题的训练
+    - 关注2026年改革，提前适应80分制可能的变化
+    - 强化情境迁移能力，练习从新材料中提取物理问题
+  note: 2026年起物理满分从70分变为80分，题量和分值分布可能调整

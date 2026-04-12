@@ -1,0 +1,304 @@
+# 2024年北京中考物理试卷分析
+# 延续情境化命题趋势，注重核心素养考查
+year: 2024
+region: 北京
+subject: 物理
+full_score: 70
+duration_minutes: 90
+total_questions: 23
+
+structure:
+  - section: 单项选择题
+    question_range: "1-12"
+    count: 12
+    score_per_question: 2
+    total_score: 24
+  - section: 多项选择题
+    question_range: "13-15"
+    count: 3
+    score_per_question: 2
+    total_score: 6
+  - section: 实验探究题
+    question_range: "16-20"
+    count: 5
+    total_score: 28
+  - section: 科普阅读题
+    question_range: "21"
+    count: 1
+    total_score: 4
+  - section: 计算题
+    question_range: "22-23"
+    count: 2
+    total_score: 8
+
+difficulty_distribution:
+  easy:
+    ratio: 0.43
+    score: 30
+    description: 基础概念和课本实验，情境化但难度不大
+  medium:
+    ratio: 0.40
+    score: 28
+    description: 需要在新情境中应用物理知识
+  hard:
+    ratio: 0.17
+    score: 12
+    description: 综合性强的实验设计和多步计算
+
+domain_distribution:
+  力学:
+    ratio: 0.36
+    score: 25
+    key_topics: [力与运动, 压强, 浮力, 简单机械, 功和功率]
+  电学:
+    ratio: 0.34
+    score: 24
+    key_topics: [欧姆定律, 电功率, 电与磁, 家庭电路]
+  热学:
+    ratio: 0.14
+    score: 10
+    key_topics: [内能, 比热容, 热值, 物态变化]
+  光学:
+    ratio: 0.10
+    score: 7
+    key_topics: [凸透镜成像, 光的反射定律]
+  声学:
+    ratio: 0.06
+    score: 4
+    key_topics: [声音的产生, 声音的利用]
+
+questions:
+  # ===== 单项选择题 =====
+  - number: 1
+    type: 单选
+    score: 2
+    difficulty: easy
+    domain: 声学
+    knowledge_point: 声音的产生
+    description: 乐器发声与振动的关系
+    common_error: 不同乐器发声部位判断错误
+
+  - number: 2
+    type: 单选
+    score: 2
+    difficulty: easy
+    domain: 光学
+    knowledge_point: 光的反射
+    description: 光的反射定律及应用
+    common_error: 入射角与法线的关系理解偏差
+
+  - number: 3
+    type: 单选
+    score: 2
+    difficulty: easy
+    domain: 热学
+    knowledge_point: 物态变化
+    description: 二十四节气中的物态变化现象
+    common_error: 霜的形成是凝华而非凝固
+
+  - number: 4
+    type: 单选
+    score: 2
+    difficulty: easy
+    domain: 力学
+    knowledge_point: 速度计算
+    description: 根据s-t图像判断运动状态和计算速度
+    common_error: 图像斜率与速度的对应关系
+
+  - number: 5
+    type: 单选
+    score: 2
+    difficulty: easy
+    domain: 电学
+    knowledge_point: 电路基本概念
+    description: 电流、电压、电阻的基本概念辨析
+    common_error: 电阻是导体本身的性质与电流电压无关
+
+  - number: 6
+    type: 单选
+    score: 2
+    difficulty: easy
+    domain: 力学
+    knowledge_point: 力的作用效果
+    description: 力可以改变物体运动状态和形状
+    common_error: 只关注运动状态改变而忽视形变
+
+  - number: 7
+    type: 单选
+    score: 2
+    difficulty: medium
+    domain: 热学
+    knowledge_point: 比热容应用
+    description: 城市热岛效应与水的比热容大的关系
+    common_error: 比热容大意味着吸热多但升温慢
+
+  - number: 8
+    type: 单选
+    score: 2
+    difficulty: medium
+    domain: 电学
+    knowledge_point: 电与磁综合
+    description: 通电螺线管磁极判断与安培定则
+    common_error: 右手螺旋定则的使用方向错误
+
+  - number: 9
+    type: 单选
+    score: 2
+    difficulty: medium
+    domain: 力学
+    knowledge_point: 压强综合
+    description: 液体压强与固体压强的比较情境题
+    common_error: 柱形容器底部压强计算方法选择不当
+
+  - number: 10
+    type: 单选
+    score: 2
+    difficulty: medium
+    domain: 电学
+    knowledge_point: 家庭电路
+    description: 安全用电与漏电保护器的作用
+    common_error: 保险丝与漏电保护器功能混淆
+
+  - number: 11
+    type: 单选
+    score: 2
+    difficulty: medium
+    domain: 力学
+    knowledge_point: 杠杆
+    description: 实际杠杆的力臂分析
+    common_error: 力臂不是支点到力的作用点的距离
+
+  - number: 12
+    type: 单选
+    score: 2
+    difficulty: hard
+    domain: 电学
+    knowledge_point: 电路综合分析
+    description: 含开关切换的电路状态变化分析
+    common_error: 开关断开闭合时电路拓扑变化分析错误
+
+  # ===== 多项选择题 =====
+  - number: 13
+    type: 多选
+    score: 2
+    difficulty: medium
+    domain: 力学
+    knowledge_point: 功和机械能
+    description: 动能势能转化与机械能守恒
+    common_error: 有摩擦时机械能不守恒但总能量守恒
+
+  - number: 14
+    type: 多选
+    score: 2
+    difficulty: hard
+    domain: 电学
+    knowledge_point: 欧姆定律图像
+    description: 从U-I图像中提取电阻信息并分析电路
+    common_error: 非线性元件的电阻随电压变化
+
+  - number: 15
+    type: 多选
+    score: 2
+    difficulty: hard
+    domain: 力学
+    knowledge_point: 浮力与密度综合
+    description: 不同液体中物体浮沉状态的综合比较
+    common_error: 实心与空心物体在不同液体中浮沉判断
+
+  # ===== 实验探究题 =====
+  - number: 16
+    type: 实验探究
+    score: 4
+    difficulty: easy
+    domain: 力学
+    knowledge_point: 弹簧测力计的使用
+    description: 校零、读数、测量重力
+    key_steps: [调零, 竖直悬挂物体, 静止时读数, 视线与刻度盘垂直]
+    common_error: 未校零直接测量导致系统误差
+
+  - number: 17
+    type: 实验探究
+    score: 6
+    difficulty: medium
+    domain: 光学
+    knowledge_point: 凸透镜成像实验
+    description: 在光具座上探究凸透镜成像规律
+    key_steps: [测焦距, 调节共轴等高, 改变物距记录像距和成像特点, 分析规律]
+    common_error: 蜡烛烧短后像会上移的分析
+
+  - number: 18
+    type: 实验探究
+    score: 6
+    difficulty: medium
+    domain: 电学
+    knowledge_point: 探究影响电磁铁磁性的因素
+    description: 控制变量探究电流大小和匝数对电磁铁磁性的影响
+    key_steps: [控制匝数相同改变电流, 控制电流相同改变匝数, 用吸引大头针数量比较]
+    common_error: 两个变量同时改变导致无法得出结论
+
+  - number: 19
+    type: 实验探究
+    score: 6
+    difficulty: hard
+    domain: 力学
+    knowledge_point: 测量滑轮组机械效率
+    description: 组装滑轮组并测量不同条件下的机械效率
+    key_steps: [组装滑轮组, 匀速拉动测力计, 测量距离, 计算有用功总功和效率]
+    common_error: 未匀速拉动或绳段数数错
+
+  - number: 20
+    type: 实验探究
+    score: 6
+    difficulty: hard
+    domain: 电学
+    knowledge_point: 电功率综合实验
+    description: 设计实验比较两个电阻的电功率大小
+    key_steps: [设计串联或并联方案, 选择合适仪器, 实验操作, 数据分析]
+    common_error: 实验方案设计不完整缺少控制变量
+
+  # ===== 科普阅读题 =====
+  - number: 21
+    type: 科普阅读
+    score: 4
+    difficulty: medium
+    domain: 电学
+    knowledge_point: 无线充电技术
+    description: 阅读关于电磁感应与无线充电的科普材料
+    context: 科技前沿应用，体现物理与生活的联系
+    common_error: 电磁感应原理在新技术中的迁移应用能力不足
+
+  # ===== 计算题 =====
+  - number: 22
+    type: 计算
+    score: 4
+    difficulty: medium
+    domain: 力学
+    knowledge_point: 功率计算
+    description: 电梯运行的功率和机械效率计算
+    formula: ["W=Fs", "P=W/t", "η=W有/W总"]
+    common_error: 有用功和额外功的区分
+
+  - number: 23
+    type: 计算
+    score: 4
+    difficulty: hard
+    domain: 电学
+    knowledge_point: 电功率计算
+    description: 两档位电暖器的电功率和电热计算
+    formula: ["P=U²/R", "Q=I²Rt", "R总=R1+R2(串联)"]
+    common_error: 两个档位对应不同电路连接方式的分析
+
+overall_analysis:
+  avg_score_estimate: 53
+  pass_rate_estimate: 0.85
+  highlights:
+    - 情境化命题成为主流，传统文化与现代科技结合
+    - 二十四节气、无线充电等情境融入试题
+    - 实验题注重"为什么"和"怎么改进"的开放性提问
+    - 图像分析和数据处理能力要求提升
+    - 计算题保持力学+电学经典组合
+  advice:
+    - 训练从新情境中提取物理模型的能力
+    - 实验题要能解释实验原理而非只记步骤
+    - 提升图表和数据分析的读取能力
+    - 计算题注意审题中的隐含条件

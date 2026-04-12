@@ -1,0 +1,293 @@
+# 2024年北京中考语文真题逐题分析
+year: 2024
+region: 北京
+subject: 语文
+full_score: 100
+duration_minutes: 150
+total_questions: 25
+
+structure:
+  - section: 基础·运用
+    score: 15
+    question_range: "1-5"
+    description: 语文基础知识与语言运用（情境化任务）
+  - section: 古诗文阅读
+    score: 18
+    question_range: "6-13"
+    description: 古诗文默写、古诗词鉴赏、文言文阅读
+  - section: 名著阅读
+    score: 5
+    question_range: "14-15"
+    description: 名著阅读理解与分析
+  - section: 现代文阅读
+    score: 22
+    question_range: "16-23"
+    description: 散文阅读、议论文阅读
+  - section: 写作
+    score: 40
+    question_range: "24-25"
+    description: 作文二选一
+
+difficulty_distribution:
+  easy: 0.28
+  medium: 0.48
+  hard: 0.24
+  estimated_avg_score: 70
+
+domain_distribution:
+  基础积累与运用: 0.15
+  古诗文阅读: 0.18
+  名著阅读: 0.05
+  现代文阅读: 0.22
+  写作: 0.40
+
+questions:
+  # ===== 基础·运用 =====
+  - id: 1
+    section: 基础·运用
+    score: 2
+    type: 选择题
+    knowledge_point: 字音字形
+    description: 结合实践活动语境判断字音字形正确的一项
+    difficulty: easy
+    key_content: 以校园实践活动为情境，考查"怡然自得""巧妙绝伦"等
+
+  - id: 2
+    section: 基础·运用
+    score: 2
+    type: 选择题
+    knowledge_point: 词语运用
+    description: 根据活动情境选择词语填空
+    difficulty: easy
+    key_content: 情境化考查，将词语运用融入活动策划语境
+
+  - id: 3
+    section: 基础·运用
+    score: 2
+    type: 选择题
+    knowledge_point: 语句衔接·病句
+    description: 修改活动方案中的表述问题
+    difficulty: medium
+    key_content: 结合真实活动文本考查病句辨识和语句衔接
+
+  - id: 4
+    section: 基础·运用
+    score: 4
+    type: 综合题
+    knowledge_point: 综合性学习·实践活动
+    description: 为校园文化活动设计方案并完成表达任务
+    difficulty: medium
+    key_content: |
+      创新命题形式，以"走进博物馆"实践活动为情境：
+      - 撰写开场白或邀请函
+      - 提取材料信息
+      - 语言表达得体
+
+  - id: 5
+    section: 基础·运用
+    score: 5
+    type: 综合题
+    knowledge_point: 书法鉴赏与文化常识
+    description: 书法作品鉴赏及传统文化知识综合
+    difficulty: medium
+    key_content: 辨识书法作品的书体与风格，结合传统文化完成任务
+
+  # ===== 古诗文阅读 =====
+  - id: 6
+    section: 古诗文阅读
+    score: 4
+    type: 填空题
+    knowledge_point: 古诗文默写
+    description: 古诗文名句默写
+    difficulty: easy
+    key_content: |
+      考查篇目包括：
+      - 《饮酒（其五）》"采菊东篱下，悠然见南山"
+      - 《出师表》"受任于败军之际，奉命于危难之间"
+      - 《水调歌头》"但愿人长久，千里共婵娟"
+      - 理解性默写：根据情境填写相应名句
+
+  - id: 7
+    section: 古诗文阅读
+    score: 2
+    type: 选择题
+    knowledge_point: 古诗词鉴赏
+    description: 选出对诗歌理解不正确的一项
+    difficulty: medium
+    key_content: 考查诗歌的意象、手法、情感等综合理解能力
+
+  - id: 8
+    section: 古诗文阅读
+    score: 2
+    type: 简答题
+    knowledge_point: 古诗词鉴赏
+    description: 赏析诗歌中的名句
+    difficulty: medium
+    key_content: 从意境营造、情感表达、语言特色等角度赏析
+
+  - id: 9
+    section: 古诗文阅读
+    score: 2
+    type: 选择题
+    knowledge_point: 文言文实词
+    description: 解释文言文中加点词语
+    difficulty: easy
+    key_content: 考查课内文言文核心实词，一词多义辨析
+
+  - id: 10
+    section: 古诗文阅读
+    score: 2
+    type: 选择题
+    knowledge_point: 文言文虚词·句式
+    description: 辨别文言虚词用法或特殊句式
+    difficulty: medium
+    key_content: '"其""于""所以"等虚词辨析，或判断句、倒装句'
+
+  - id: 11
+    section: 古诗文阅读
+    score: 2
+    type: 简答题
+    knowledge_point: 文言文翻译
+    description: 翻译画线文言语句
+    difficulty: medium
+    key_content: 准确翻译，注意补充省略成分
+
+  - id: 12
+    section: 古诗文阅读
+    score: 2
+    type: 简答题
+    knowledge_point: 文言文内容理解
+    description: 结合内容分析人物品质或文章主旨
+    difficulty: hard
+    key_content: 深层理解文本，分析作者的思想情感
+
+  - id: 13
+    section: 古诗文阅读
+    score: 2
+    type: 简答题
+    knowledge_point: 文言文比较阅读
+    description: 比较甲乙两文的写作目的或表达方式
+    difficulty: hard
+    key_content: 课内外对比阅读，考查迁移理解能力
+
+  # ===== 名著阅读 =====
+  - id: 14
+    section: 名著阅读
+    score: 2
+    type: 选择题
+    knowledge_point: 名著内容识记
+    description: 判断名著相关信息的正误
+    difficulty: easy
+    key_content: 考查《简·爱》《儒林外史》《昆虫记》等必读名著
+
+  - id: 15
+    section: 名著阅读
+    score: 3
+    type: 简答题
+    knowledge_point: 名著阅读方法
+    description: 结合具体名著，谈某种阅读方法的收获
+    difficulty: medium
+    key_content: |
+      考查阅读方法的迁移运用：
+      - 可从圈点批注、比较阅读、专题探究等方法切入
+      - 结合名著内容具体阐述
+
+  # ===== 现代文阅读 =====
+  - id: 16
+    section: 现代文阅读
+    score: 2
+    type: 选择题
+    knowledge_point: 散文内容理解
+    description: 选出对文章内容理解正确的一项
+    difficulty: medium
+    key_content: 散文阅读，文章以自然或乡土为主题
+
+  - id: 17
+    section: 现代文阅读
+    score: 3
+    type: 简答题
+    knowledge_point: 散文线索梳理
+    description: 梳理文章的行文线索
+    difficulty: medium
+    key_content: 找出明线（事件）和暗线（情感）的发展脉络
+
+  - id: 18
+    section: 现代文阅读
+    score: 3
+    type: 简答题
+    knowledge_point: 散文语言赏析
+    description: 品味文中画线句子的语言特色
+    difficulty: medium
+    key_content: 从修辞、句式、用词、感官等角度赏析
+
+  - id: 19
+    section: 现代文阅读
+    score: 3
+    type: 简答题
+    knowledge_point: 散文手法分析
+    description: 分析文中某种表现手法的作用
+    difficulty: hard
+    key_content: 象征、借景抒情、虚实结合、对比等手法
+
+  - id: 20
+    section: 现代文阅读
+    score: 3
+    type: 简答题
+    knowledge_point: 散文主题探究
+    description: 结合全文理解作者表达的思想感情
+    difficulty: hard
+    key_content: 从多个层面理解散文主旨
+
+  - id: 21
+    section: 现代文阅读
+    score: 2
+    type: 选择题
+    knowledge_point: 议论文论点
+    description: 概括文章的中心论点
+    difficulty: medium
+    key_content: 议论文阅读，关于学习方法或人生态度的思辨
+
+  - id: 22
+    section: 现代文阅读
+    score: 3
+    type: 简答题
+    knowledge_point: 议论文论证过程
+    description: 梳理文章的论证思路
+    difficulty: medium
+    key_content: 分层概括，说明每层的论证内容和方法
+
+  - id: 23
+    section: 现代文阅读
+    score: 3
+    type: 简答题
+    knowledge_point: 议论文论据分析
+    description: 分析文中某个论据的作用或补写论据
+    difficulty: medium
+    key_content: 论据与论点的关系分析
+
+  # ===== 写作 =====
+  - id: 24
+    section: 写作
+    score: 40
+    type: 作文
+    knowledge_point: 记叙类作文
+    description: 以成长或生活体验为主题的命题作文
+    difficulty: medium
+    key_content: |
+      题目一：记叙类作文
+      围绕个人成长中的一次重要经历展开
+      要求叙事完整，有细节描写，情感真挚
+      字数600-800字
+
+  - id: 25
+    section: 写作
+    score: 40
+    type: 作文
+    knowledge_point: 想象·思辨类作文
+    description: 以给定话题为引发的思考类作文
+    difficulty: hard
+    key_content: |
+      题目二：思辨类或想象类作文
+      围绕对某一社会现象或人生问题的思考展开
+      要求观点明确，论证有力，或想象合理
+      字数600-800字

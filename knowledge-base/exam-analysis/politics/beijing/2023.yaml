@@ -1,0 +1,203 @@
+# ============================================================
+# 2023年北京中考道德与法治真题 — 逐题分析
+# ============================================================
+# 数据来源：北京教育考试院、菁优网、中考在线
+# 最后更新：2026-04-12
+# 状态：基于多来源交叉验证
+# 注意：本科目为开卷考试
+
+year: 2023
+region: 北京市
+subject: 道德与法治
+full_score: 70
+duration_minutes: 90
+exam_type: 开卷
+total_questions: 19
+structure: "13单选(26分,每题2分) + 6材料分析(44分)"
+
+# 时政背景：二十大精神、中国式现代化、法治中国、文化自信
+
+difficulty_distribution:
+  基础: { questions: 10, score: 约30分, ratio: "43%" }
+  中档: { questions: 7, score: 约28分, ratio: "40%" }
+  较难: { questions: 2, score: 约12分, ratio: "17%" }
+
+domain_distribution:
+  法治: { ratio: "约30%", score: 约21分 }
+  国情: { ratio: "约25%", score: 约18分 }
+  道德: { ratio: "约20%", score: 约14分 }
+  时政: { ratio: "约15%", score: 约10分 }
+  心理: { ratio: "约10%", score: 约7分 }
+
+# ------ 逐题分析 ------
+questions:
+
+  # ===== 单选题（每题2分）=====
+  - id: 1
+    type: 单选
+    score: 2
+    knowledge_points: [二十大, 中国式现代化]
+    domain: 时政
+    difficulty: 基础
+    description: 党的二十大报告中关于中国式现代化的核心论述
+
+  - id: 2
+    type: 单选
+    score: 2
+    knowledge_points: [自尊自信, 青春期心理]
+    domain: 心理
+    difficulty: 基础
+    description: 培养自尊自信的心理品质，正确认识青春期变化
+
+  - id: 3
+    type: 单选
+    score: 2
+    knowledge_points: [宪法, 公民基本权利]
+    domain: 法治
+    difficulty: 基础
+    description: 宪法规定的公民基本权利与义务的统一
+
+  - id: 4
+    type: 单选
+    score: 2
+    knowledge_points: [中华文化, 文化自信]
+    domain: 道德
+    difficulty: 基础
+    description: 以传统文化节目为背景，考查坚定文化自信
+
+  - id: 5
+    type: 单选
+    score: 2
+    knowledge_points: [法治政府, 依法行政]
+    domain: 法治
+    difficulty: 中档
+    description: 法治政府建设与依法行政的要求
+
+  - id: 6
+    type: 单选
+    score: 2
+    knowledge_points: [科教兴国, 人才强国]
+    domain: 国情
+    difficulty: 基础
+    description: 科教兴国战略与建设教育强国的关系
+
+  - id: 7
+    type: 单选
+    score: 2
+    knowledge_points: [全国人大, 立法权, 监督权]
+    domain: 法治
+    difficulty: 中档
+    description: 全国人民代表大会的职权——最高立法权、决定权、任免权、监督权
+
+  - id: 8
+    type: 单选
+    score: 2
+    knowledge_points: [友善, 人际交往]
+    domain: 道德
+    difficulty: 基础
+    description: 友善待人、和谐人际关系的道德品质
+
+  - id: 9
+    type: 单选
+    score: 2
+    knowledge_points: [高质量发展, 新发展理念]
+    domain: 国情
+    difficulty: 中档
+    description: 贯彻新发展理念、推动经济高质量发展
+
+  - id: 10
+    type: 单选
+    score: 2
+    knowledge_points: [个人信息保护法, 隐私权]
+    domain: 法治
+    difficulty: 中档
+    description: 个人信息保护法对公民隐私权的保障
+
+  - id: 11
+    type: 单选
+    score: 2
+    knowledge_points: [维护国家安全, 总体国家安全观]
+    domain: 国情
+    difficulty: 基础
+    description: 坚持总体国家安全观、维护国家安全人人有责
+
+  - id: 12
+    type: 单选
+    score: 2
+    knowledge_points: [生态文明, 美丽中国]
+    domain: 国情
+    difficulty: 基础
+    description: 建设美丽中国、推进生态文明建设
+
+  - id: 13
+    type: 单选
+    score: 2
+    knowledge_points: [一带一路, 开放发展]
+    domain: 时政
+    difficulty: 中档
+    description: 共建"一带一路"十周年，体现开放发展与合作共赢
+
+  # ===== 材料分析题 =====
+  - id: 14
+    type: 材料分析
+    score: 8
+    knowledge_points: [中国式现代化, 新发展理念, 高质量发展]
+    domain: 国情
+    difficulty: 中档
+    sub_questions: 2
+    description: 以二十大报告为纲，分析中国式现代化的特征与推进路径
+
+  - id: 15
+    type: 材料分析
+    score: 8
+    knowledge_points: [法治中国, 全面依法治国, 公正司法]
+    domain: 法治
+    difficulty: 中档
+    sub_questions: 2
+    description: 结合法治建设实例，分析全面依法治国的重要性与实践
+
+  - id: 16
+    type: 材料分析
+    score: 8
+    knowledge_points: [文化自信, 中华优秀传统文化, 文化创新]
+    domain: 道德
+    difficulty: 较难
+    sub_questions: 2
+    description: 以文化传承创新为主题，论述文化自信的来源与践行路径
+
+  - id: 17
+    type: 材料分析
+    score: 6
+    knowledge_points: [民事法律, 合同, 消费者权益]
+    domain: 法治
+    difficulty: 中档
+    sub_questions: 2
+    description: 运用民法典和消费者权益保护法分析日常消费中的法律纠纷
+
+  - id: 18
+    type: 材料分析
+    score: 8
+    knowledge_points: [科技创新, 自主研发, 关键核心技术]
+    domain: 国情
+    difficulty: 较难
+    sub_questions: 2
+    description: 以芯片等"卡脖子"技术为例，分析科技自立自强的紧迫性
+
+  - id: 19
+    type: 材料分析
+    score: 6
+    knowledge_points: [青年责任, 时代使命, 中国梦]
+    domain: 道德
+    difficulty: 中档
+    sub_questions: 2
+    description: 结合新时代青年事迹，谈如何在中国式现代化中贡献青春力量
+
+# ------ 命题特点 ------
+exam_features:
+  - 二十大精神全面融入试卷，中国式现代化成为核心主线
+  - 法治中国建设板块比重略有上升
+  - 文化自信从选择题延伸到材料分析大题
+  - '"一带一路"十周年成为对外开放的命题热点'
+  - 科技自立自强从一般性考查升级为深度材料分析
+  - 整体难度与2022年持平，保持双减后的稳定风格
+  - 开卷考试强调对教材知识的灵活运用，而非单纯翻书抄写

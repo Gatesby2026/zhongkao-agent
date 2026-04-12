@@ -1,0 +1,290 @@
+# 2023年北京中考语文真题逐题分析
+year: 2023
+region: 北京
+subject: 语文
+full_score: 100
+duration_minutes: 150
+total_questions: 25
+
+structure:
+  - section: 基础·运用
+    score: 15
+    question_range: "1-5"
+    description: 语文基础知识与语言运用
+  - section: 古诗文阅读
+    score: 18
+    question_range: "6-13"
+    description: 古诗文默写、古诗词鉴赏、文言文阅读
+  - section: 名著阅读
+    score: 5
+    question_range: "14-15"
+    description: 名著阅读理解与分析
+  - section: 现代文阅读
+    score: 22
+    question_range: "16-23"
+    description: 非连续性文本阅读、记叙文阅读
+  - section: 写作
+    score: 40
+    question_range: "24-25"
+    description: 作文二选一
+
+difficulty_distribution:
+  easy: 0.28
+  medium: 0.50
+  hard: 0.22
+  estimated_avg_score: 71
+
+domain_distribution:
+  基础积累与运用: 0.15
+  古诗文阅读: 0.18
+  名著阅读: 0.05
+  现代文阅读: 0.22
+  写作: 0.40
+
+questions:
+  # ===== 基础·运用 =====
+  - id: 1
+    section: 基础·运用
+    score: 2
+    type: 选择题
+    knowledge_point: 字音字形
+    description: 选出字音字形全部正确的一项
+    difficulty: easy
+    key_content: 考查"矗立""栩栩如生""锐不可当"等常见词语
+
+  - id: 2
+    section: 基础·运用
+    score: 2
+    type: 选择题
+    knowledge_point: 词语·成语运用
+    description: 选出词语或成语运用恰当的一项
+    difficulty: easy
+    key_content: 成语的感情色彩、适用对象、语境匹配
+
+  - id: 3
+    section: 基础·运用
+    score: 2
+    type: 选择题
+    knowledge_point: 病句辨析
+    description: 选出没有语病的一项
+    difficulty: medium
+    key_content: 搭配不当、语序不当、成分残缺或赘余
+
+  - id: 4
+    section: 基础·运用
+    score: 4
+    type: 综合题
+    knowledge_point: 综合性学习
+    description: 围绕"北京中轴线"主题完成综合性学习任务
+    difficulty: medium
+    key_content: |
+      2023年北京中轴线申遗为背景：
+      - 提取信息，完成宣传语
+      - 语段修改（语病、标点）
+      - 语言得体表达
+
+  - id: 5
+    section: 基础·运用
+    score: 5
+    type: 综合题
+    knowledge_point: 书法与语言表达
+    description: 书法赏析及语言综合运用
+    difficulty: medium
+    key_content: 辨识碑帖书体，结合文化常识完成表达任务
+
+  # ===== 古诗文阅读 =====
+  - id: 6
+    section: 古诗文阅读
+    score: 4
+    type: 填空题
+    knowledge_point: 古诗文默写
+    description: 古诗文名句默写（含理解性默写）
+    difficulty: easy
+    key_content: |
+      考查篇目包括：
+      - 《送东阳马生序》"以中有足乐者，不知口体之奉不若人也"
+      - 《破阵子·为陈同甫赋壮词以寄之》相关名句
+      - 《茅屋为秋风所破歌》"安得广厦千万间"
+      - 理解性默写一题
+
+  - id: 7
+    section: 古诗文阅读
+    score: 2
+    type: 选择题
+    knowledge_point: 古诗词鉴赏
+    description: 理解古诗内容，选出分析不正确的一项
+    difficulty: medium
+    key_content: 考查诗歌的内容概括、情感理解和艺术手法
+
+  - id: 8
+    section: 古诗文阅读
+    score: 2
+    type: 简答题
+    knowledge_point: 古诗词鉴赏
+    description: 展开想象，描绘诗句所呈现的画面
+    difficulty: medium
+    key_content: 将诗歌意象转化为具体画面描写，注意语言优美
+
+  - id: 9
+    section: 古诗文阅读
+    score: 2
+    type: 选择题
+    knowledge_point: 文言文实词
+    description: 解释《送东阳马生序》中加点词的含义
+    difficulty: easy
+    key_content: '"嗜""叱咄""逾约""烨然"等实词解释'
+
+  - id: 10
+    section: 古诗文阅读
+    score: 2
+    type: 选择题
+    knowledge_point: 文言文句意理解
+    description: 选出翻译正确的一项
+    difficulty: medium
+    key_content: 注意"以""因""之"等虚词的翻译
+
+  - id: 11
+    section: 古诗文阅读
+    score: 2
+    type: 简答题
+    knowledge_point: 文言文翻译
+    description: 翻译文中画线句子
+    difficulty: medium
+    key_content: 要求字字落实、句意通顺
+
+  - id: 12
+    section: 古诗文阅读
+    score: 2
+    type: 简答题
+    knowledge_point: 文言文内容理解
+    description: 分析作者求学经历中体现的品质
+    difficulty: medium
+    key_content: 从"勤且艰"的角度分析宋濂的求学精神
+
+  - id: 13
+    section: 古诗文阅读
+    score: 2
+    type: 简答题
+    knowledge_point: 文言文比较阅读
+    description: 比较两文在劝学方式上的不同
+    difficulty: hard
+    key_content: 《送东阳马生序》以自身经历劝学，对比材料用他法
+
+  # ===== 名著阅读 =====
+  - id: 14
+    section: 名著阅读
+    score: 2
+    type: 选择题
+    knowledge_point: 名著内容识记
+    description: 选出名著信息搭配正确的一项
+    difficulty: easy
+    key_content: 人物、情节、作品的对应关系判断
+
+  - id: 15
+    section: 名著阅读
+    score: 3
+    type: 简答题
+    knowledge_point: 名著主题探究
+    description: 从指定名著中选一部，结合内容谈"坚持"的力量
+    difficulty: medium
+    key_content: 可选《钢铁是怎样炼成的》《红星照耀中国》《西游记》等
+
+  # ===== 现代文阅读 =====
+  - id: 16
+    section: 现代文阅读
+    score: 2
+    type: 选择题
+    knowledge_point: 非连续性文本·信息筛选
+    description: 根据材料内容选出正确的一项
+    difficulty: medium
+    key_content: 多则材料组合，涉及图表、文字信息的整合
+
+  - id: 17
+    section: 现代文阅读
+    score: 3
+    type: 简答题
+    knowledge_point: 非连续性文本·信息概括
+    description: 根据材料概括某一事物的特点或发展趋势
+    difficulty: medium
+    key_content: 要求从多则材料中提取共同信息进行概括
+
+  - id: 18
+    section: 现代文阅读
+    score: 2
+    type: 简答题
+    knowledge_point: 非连续性文本·材料运用
+    description: 结合材料内容，为某活动提出建议
+    difficulty: medium
+    key_content: 开放性题目，要求建议与材料内容紧密关联
+
+  - id: 19
+    section: 现代文阅读
+    score: 3
+    type: 简答题
+    knowledge_point: 非连续性文本·图文转换
+    description: 读图提取信息并用文字表述
+    difficulty: medium
+    key_content: 考查图表信息的准确读取和文字表达能力
+
+  - id: 20
+    section: 现代文阅读
+    score: 3
+    type: 简答题
+    knowledge_point: 记叙文内容概括
+    description: 概括文章主要事件
+    difficulty: medium
+    key_content: 记叙文以"北京"为线索，讲述对城市的情感记忆
+
+  - id: 21
+    section: 现代文阅读
+    score: 3
+    type: 简答题
+    knowledge_point: 记叙文词句赏析
+    description: 品味画线句子的表达效果
+    difficulty: medium
+    key_content: 从描写手法、修辞手法、情感表达等角度分析
+
+  - id: 22
+    section: 现代文阅读
+    score: 3
+    type: 简答题
+    knowledge_point: 记叙文结构分析
+    description: 分析文章某段在结构上的作用
+    difficulty: hard
+    key_content: 承上启下、铺垫、照应等结构作用
+
+  - id: 23
+    section: 现代文阅读
+    score: 3
+    type: 简答题
+    knowledge_point: 记叙文主题理解
+    description: 理解文章结尾段的深层含义
+    difficulty: hard
+    key_content: 结合全文理解结尾的象征意义和主题升华
+
+  # ===== 写作 =====
+  - id: 24
+    section: 写作
+    score: 40
+    type: 作文
+    knowledge_point: 半命题作文
+    description: "我读到了____的北京"
+    difficulty: medium
+    key_content: |
+      题目一：半命题作文
+      将题目"我读到了____的北京"补充完整
+      可填"古老""现代""温暖""包容"等
+      要求写出对北京的真实感受和独特理解，字数600-800字
+
+  - id: 25
+    section: 写作
+    score: 40
+    type: 作文
+    knowledge_point: 记叙类作文
+    description: "我生活中的一棵树"
+    difficulty: medium
+    key_content: |
+      题目二：记叙类作文
+      以"我生活中的一棵树"为题
+      "树"可实可虚，可以是具体的树，也可以象征某个人或某种精神
+      要求感情真挚、内容充实，字数600-800字

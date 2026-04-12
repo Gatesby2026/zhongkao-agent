@@ -1,0 +1,203 @@
+# ============================================================
+# 2024年北京中考道德与法治真题 — 逐题分析
+# ============================================================
+# 数据来源：北京教育考试院、菁优网、中考在线
+# 最后更新：2026-04-12
+# 状态：基于多来源交叉验证
+# 注意：本科目为开卷考试
+
+year: 2024
+region: 北京市
+subject: 道德与法治
+full_score: 70
+duration_minutes: 90
+exam_type: 开卷
+total_questions: 19
+structure: "13单选(26分,每题2分) + 6材料分析(44分)"
+
+# 时政背景：新质生产力、全面深化改革、高质量发展、科技自立自强
+
+difficulty_distribution:
+  基础: { questions: 10, score: 约30分, ratio: "43%" }
+  中档: { questions: 7, score: 约28分, ratio: "40%" }
+  较难: { questions: 2, score: 约12分, ratio: "17%" }
+
+domain_distribution:
+  法治: { ratio: "约30%", score: 约21分 }
+  国情: { ratio: "约25%", score: 约18分 }
+  道德: { ratio: "约18%", score: 约13分 }
+  时政: { ratio: "约17%", score: 约12分 }
+  心理: { ratio: "约10%", score: 约6分 }
+
+# ------ 逐题分析 ------
+questions:
+
+  # ===== 单选题（每题2分）=====
+  - id: 1
+    type: 单选
+    score: 2
+    knowledge_points: [新质生产力, 创新驱动]
+    domain: 时政
+    difficulty: 基础
+    description: 以新质生产力概念为背景，考查创新驱动发展战略的内涵
+
+  - id: 2
+    type: 单选
+    score: 2
+    knowledge_points: [生命教育, 珍爱生命]
+    domain: 心理
+    difficulty: 基础
+    description: 珍爱生命、热爱生活的积极态度
+
+  - id: 3
+    type: 单选
+    score: 2
+    knowledge_points: [宪法修正案, 宪法权威]
+    domain: 法治
+    difficulty: 基础
+    description: 维护宪法权威、宪法是国家根本法
+
+  - id: 4
+    type: 单选
+    score: 2
+    knowledge_points: [道德模范, 社会公德]
+    domain: 道德
+    difficulty: 基础
+    description: 以道德模范事迹为背景，考查社会公德与个人品德
+
+  - id: 5
+    type: 单选
+    score: 2
+    knowledge_points: [行政诉讼, 依法维权]
+    domain: 法治
+    difficulty: 中档
+    description: 公民通过行政诉讼依法维护合法权益
+
+  - id: 6
+    type: 单选
+    score: 2
+    knowledge_points: [高质量发展, 经济体制改革]
+    domain: 国情
+    difficulty: 中档
+    description: 全面深化改革推动经济高质量发展
+
+  - id: 7
+    type: 单选
+    score: 2
+    knowledge_points: [政协, 协商民主, 民主监督]
+    domain: 法治
+    difficulty: 中档
+    description: 人民政协的职能与协商民主的实践
+
+  - id: 8
+    type: 单选
+    score: 2
+    knowledge_points: [家风家教, 家庭美德]
+    domain: 道德
+    difficulty: 基础
+    description: 传承优良家风、弘扬家庭美德
+
+  - id: 9
+    type: 单选
+    score: 2
+    knowledge_points: [科技自立自强, 关键核心技术]
+    domain: 国情
+    difficulty: 基础
+    description: 加快实现高水平科技自立自强的战略意义
+
+  - id: 10
+    type: 单选
+    score: 2
+    knowledge_points: [刑法, 刑事责任年龄, 校园欺凌]
+    domain: 法治
+    difficulty: 中档
+    description: 预防校园欺凌的法律知识与刑事责任年龄规定
+
+  - id: 11
+    type: 单选
+    score: 2
+    knowledge_points: [民族团结, 铸牢中华民族共同体意识]
+    domain: 国情
+    difficulty: 基础
+    description: 铸牢中华民族共同体意识、促进各民族交往交流交融
+
+  - id: 12
+    type: 单选
+    score: 2
+    knowledge_points: [乡村振兴, 农业农村现代化]
+    domain: 国情
+    difficulty: 基础
+    description: 全面推进乡村振兴、加快农业农村现代化
+
+  - id: 13
+    type: 单选
+    score: 2
+    knowledge_points: [全球治理, 多边主义, 联合国]
+    domain: 时政
+    difficulty: 中档
+    description: 中国积极参与全球治理、维护多边主义
+
+  # ===== 材料分析题 =====
+  - id: 14
+    type: 材料分析
+    score: 8
+    knowledge_points: [新质生产力, 科技创新, 产业升级]
+    domain: 国情
+    difficulty: 中档
+    sub_questions: 2
+    description: 以新质生产力为主题，分析科技创新与产业升级的关系
+
+  - id: 15
+    type: 材料分析
+    score: 8
+    knowledge_points: [全面依法治国, 法治社会, 公民法治意识]
+    domain: 法治
+    difficulty: 中档
+    sub_questions: 2
+    description: 结合法治社会建设案例，论述全面依法治国的深入推进
+
+  - id: 16
+    type: 材料分析
+    score: 8
+    knowledge_points: [全面深化改革, 制度优势, 国家治理现代化]
+    domain: 国情
+    difficulty: 较难
+    sub_questions: 2
+    description: 分析全面深化改革如何将制度优势转化为治理效能
+
+  - id: 17
+    type: 材料分析
+    score: 6
+    knowledge_points: [消费者权益, 网络购物, 维权途径]
+    domain: 法治
+    difficulty: 中档
+    sub_questions: 2
+    description: 以网络购物纠纷为情境，考查消费者维权的法律途径
+
+  - id: 18
+    type: 材料分析
+    score: 8
+    knowledge_points: [绿色发展, 生态文明, 可持续发展]
+    domain: 国情
+    difficulty: 中档
+    sub_questions: 2
+    description: 以绿色低碳转型为背景，分析生态文明建设的重要举措
+
+  - id: 19
+    type: 材料分析
+    score: 6
+    knowledge_points: [青年奋斗, 个人与社会, 人生价值]
+    domain: 道德
+    difficulty: 较难
+    sub_questions: 2
+    description: 以新时代青年典型为素材，谈个人价值与社会价值的统一
+
+# ------ 命题特点 ------
+exam_features:
+  - 新质生产力首次进入中考试卷，成为国情板块亮点
+  - 全面深化改革的深度考查成为材料分析重点
+  - 时政热点占比略有上升（约17%），关注度增加
+  - 法治板块仍稳定在30%左右，维持核心地位
+  - 校园欺凌相关法律知识再次入题，贴近学生生活
+  - 开卷考试下材料分析题更注重多角度分析能力
+  - 答题策略：先审题定位知识点，再翻书补充细节

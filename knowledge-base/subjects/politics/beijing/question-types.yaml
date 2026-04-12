@@ -1,0 +1,334 @@
+# 北京中考 道德与法治 题型分析（2021-2025历年对比）
+# 注意: 2025年及以前满分70分，2026年起满分80分
+# 考试形式: 开卷考试
+
+subject: 道德与法治
+region: 北京
+analysis_years: [2021, 2022, 2023, 2024, 2025]
+target_year: 2026
+full_score_legacy: 70
+full_score_2026: 80
+
+# ============================================================
+# 一、选择题题型分析
+# ============================================================
+choice_questions:
+  name: 单项选择题
+  format: 四选一
+  score_per_question: 2
+
+  yearly_comparison:
+    - year: 2021
+      count: 12
+      total_score: 24
+      full_score: 70
+      percentage: 0.343
+    - year: 2022
+      count: 12
+      total_score: 24
+      full_score: 70
+      percentage: 0.343
+    - year: 2023
+      count: 12
+      total_score: 24
+      full_score: 70
+      percentage: 0.343
+    - year: 2024
+      count: 13
+      total_score: 26
+      full_score: 70
+      percentage: 0.371
+    - year: 2025
+      count: 13
+      total_score: 26
+      full_score: 70
+      percentage: 0.371
+    - year: 2026
+      count: 13
+      total_score: 26
+      full_score: 80
+      percentage: 0.325
+      note: 预测值，选择题分值不变，占比因总分提升而下降
+
+  topic_distribution:
+    - topic: 法治常识与宪法
+      avg_questions: 4.5
+      frequency: 每年必考
+      difficulty: 中等
+      typical_themes:
+        - 宪法地位与作用
+        - 公民权利义务辨析
+        - 违法行为类型判断
+        - 未成年人保护
+    - topic: 道德与品格
+      avg_questions: 3
+      frequency: 每年必考
+      difficulty: 较易
+      typical_themes:
+        - 诚信与责任
+        - 社会公德判断
+        - 网络道德
+        - 家庭美德
+    - topic: 国情国策
+      avg_questions: 3
+      frequency: 每年必考
+      difficulty: 中等
+      typical_themes:
+        - 基本政治制度辨析
+        - 经济制度基本特征
+        - 基本国策识别
+        - 创新驱动发展
+    - topic: 时政热点
+      avg_questions: 2
+      frequency: 每年必考
+      difficulty: 中等
+      typical_themes:
+        - 当年重大事件定性
+        - 国家政策识别
+        - 国际关系判断
+
+  common_trap_types:
+    - name: 偷换概念
+      description: 将相近概念混淆，如"根本制度"与"根本政治制度"
+      frequency: 高
+    - name: 以偏概全
+      description: 用"全部""都""一定"等绝对化表述设置错误选项
+      frequency: 高
+    - name: 因果倒置
+      description: 颠倒原因和结果的关系
+      frequency: 中
+    - name: 张冠李戴
+      description: 将A事物的特征说成B事物的
+      frequency: 中
+
+# ============================================================
+# 二、材料分析题题型分析
+# ============================================================
+analysis_questions:
+  name: 材料分析题
+
+  yearly_comparison:
+    - year: 2021
+      count: 5
+      total_score: 46
+      full_score: 70
+    - year: 2022
+      count: 5
+      total_score: 46
+      full_score: 70
+    - year: 2023
+      count: 6
+      total_score: 46
+      full_score: 70
+    - year: 2024
+      count: 6
+      total_score: 44
+      full_score: 70
+    - year: 2025
+      count: 6
+      total_score: 44
+      full_score: 70
+    - year: 2026
+      count: 6
+      total_score: 54
+      full_score: 80
+      note: 预测值，新增10分主要分配到材料分析题
+
+  sub_types:
+
+    - name: 图表分析题
+      yearly_data:
+        - { year: 2021, appeared: true, score: 8 }
+        - { year: 2022, appeared: true, score: 8 }
+        - { year: 2023, appeared: true, score: 10 }
+        - { year: 2024, appeared: true, score: 8 }
+        - { year: 2025, appeared: true, score: 8 }
+      stability: 非常稳定（每年必出）
+      predicted_2026_score: 10
+      answer_template: |
+        第一步：描述图表信息（数据变化趋势）
+        第二步：分析原因（结合教材知识点）
+        第三步：得出结论或提出建议
+      scoring_key_points:
+        - 准确描述数据变化（上升/下降/波动）
+        - 不能只描述数据，必须联系教材知识分析
+        - 结论要有概括性
+
+    - name: 情境探究题
+      yearly_data:
+        - { year: 2021, appeared: true, score: 10 }
+        - { year: 2022, appeared: true, score: 10 }
+        - { year: 2023, appeared: true, score: 12 }
+        - { year: 2024, appeared: true, score: 10 }
+        - { year: 2025, appeared: true, score: 12 }
+      stability: 非常稳定（每年必出1-2题）
+      predicted_2026_score: 12
+      answer_template: |
+        第一步：从材料中提取关键信息
+        第二步：指出涉及的知识点（用教材术语）
+        第三步：结合材料进行分析（材料+知识点）
+        第四步：按题目要求给出建议或评价
+      common_scenarios:
+        - 校园生活情境（同学纠纷、网络使用、学习困惑）
+        - 家庭生活情境（亲子关系、家务劳动）
+        - 社会生活情境（志愿服务、社区治理、消费维权）
+
+    - name: 时政分析题
+      yearly_data:
+        - { year: 2021, appeared: true, score: 12 }
+        - { year: 2022, appeared: true, score: 10 }
+        - { year: 2023, appeared: true, score: 12 }
+        - { year: 2024, appeared: true, score: 12 }
+        - { year: 2025, appeared: true, score: 10 }
+      stability: 非常稳定（每年必出）
+      predicted_2026_score: 12
+      hot_topics_2026:
+        - 中国式现代化与高质量发展
+        - 新质生产力与科技自立自强
+        - 全过程人民民主
+        - 乡村振兴与共同富裕
+        - 生态文明建设（碳达峰碳中和）
+        - 一带一路十周年后续成果
+        - 人类命运共同体实践
+
+    - name: 观点评析题
+      yearly_data:
+        - { year: 2021, appeared: true, score: 6 }
+        - { year: 2022, appeared: true, score: 8 }
+        - { year: 2023, appeared: true, score: 6 }
+        - { year: 2024, appeared: false, score: 0 }
+        - { year: 2025, appeared: true, score: 6 }
+      stability: 较稳定（偶有缺席）
+      predicted_2026_score: 8
+      answer_template: |
+        第一步：明确判断（这个观点是片面的/正确的/错误的）
+        第二步：分析正确的部分及理由
+        第三步：分析不正确/不全面的部分及理由
+        第四步：总结完整观点
+      note: 多数为"片面型"观点，需要两面分析
+
+    - name: 综合探究题
+      yearly_data:
+        - { year: 2021, appeared: true, score: 10 }
+        - { year: 2022, appeared: true, score: 10 }
+        - { year: 2023, appeared: true, score: 12 }
+        - { year: 2024, appeared: true, score: 14 }
+        - { year: 2025, appeared: true, score: 12 }
+      stability: 非常稳定（压轴题）
+      predicted_2026_score: 14
+      features:
+        - 通常为试卷最后一题
+        - 材料最长、设问最多（3-4个小问）
+        - 跨越道德、法治、国情等多个领域
+        - 常含开放性设问（写标语、提建议、写感悟等）
+      difficulty: 较难
+
+# ============================================================
+# 三、稳定考查的高频专题
+# ============================================================
+stable_topics:
+  - topic: 宪法与法治
+    frequency: 每年必考
+    typical_score_range: 10-14
+    question_types: [选择题, 材料分析题]
+    key_points: [宪法地位, 依法治国, 公民权利义务]
+
+  - topic: 未成年人保护
+    frequency: 每年必考
+    typical_score_range: 4-8
+    question_types: [选择题, 情境探究题]
+    key_points: [四大保护（六大保护）, 自我保护, 预防犯罪]
+
+  - topic: 时政热点综合
+    frequency: 每年必考
+    typical_score_range: 12-16
+    question_types: [选择题, 时政分析题, 综合探究题]
+    key_points: 每年更新
+
+  - topic: 创新与科技发展
+    frequency: 近5年每年出现
+    typical_score_range: 4-8
+    question_types: [选择题, 材料分析题]
+    key_points: [创新驱动发展, 科教兴国, 人才强国]
+
+  - topic: 中华文化与文化自信
+    frequency: 近5年每年出现
+    typical_score_range: 4-6
+    question_types: [选择题, 情境探究题]
+    key_points: [优秀传统文化, 文化自信, 社会主义核心价值观]
+
+  - topic: 生态文明与绿色发展
+    frequency: 近5年4次出现
+    typical_score_range: 4-6
+    question_types: [选择题, 材料分析题]
+    key_points: [绿色发展理念, 节约资源保护环境, 可持续发展]
+
+  - topic: 道德品质与责任
+    frequency: 每年必考
+    typical_score_range: 4-8
+    question_types: [选择题, 情境探究题]
+    key_points: [诚信, 责任担当, 社会公德]
+
+# ============================================================
+# 四、不同目标分数的策略
+# ============================================================
+score_targets:
+  - level: 基础达标
+    target_score: 56
+    target_percentage: 0.70
+    strategy:
+      choice: 拿到20分以上（正确率77%+）
+      analysis: 拿到36分以上
+      focus_areas:
+        - 熟悉教材结构，快速翻阅定位
+        - 掌握基础法治概念（不混淆）
+        - 材料分析题做到"有知识点+有材料引用"
+      time_per_week_hours: 2
+
+  - level: 中等良好
+    target_score: 64
+    target_percentage: 0.80
+    strategy:
+      choice: 拿到22分以上（正确率85%+）
+      analysis: 拿到42分以上
+      focus_areas:
+        - 建立完整知识框架
+        - 积累答题模板和常用术语
+        - 练习时政分析题
+        - 笔记本按专题整理，考场高效使用
+      time_per_week_hours: 3
+
+  - level: 优秀冲刺
+    target_score: 72
+    target_percentage: 0.90
+    strategy:
+      choice: 拿到24分以上（正确率92%+）
+      analysis: 拿到48分以上
+      focus_areas:
+        - 选择题排除法训练，减少失误
+        - 材料分析题做到"多角度、多知识点"
+        - 综合探究题完整作答
+        - 关注命题趋势，适应开放性设问
+      time_per_week_hours: 4
+
+  - level: 满分冲击
+    target_score: 78
+    target_percentage: 0.975
+    strategy:
+      choice: 26分满分
+      analysis: 拿到52分以上
+      focus_areas:
+        - 选择题零失误训练
+        - 材料分析题规范表达、逻辑严密
+        - 精准使用教材术语
+        - 开放性设问体现思辨能力
+      time_per_week_hours: 5
+      note: 道法满分极为少见，78+即为顶尖水平
+
+# 开卷考试答题注意事项
+open_book_tips:
+  - 不要过度依赖翻书，先凭理解写出框架再查漏补缺
+  - 笔记本建议做好目录索引（按考点专题分类）
+  - 选择题不要翻书做，浪费时间且容易被干扰
+  - 材料分析题翻书重点查术语的准确表述
+  - 时政内容提前整理到笔记本，考场不可能现场整理

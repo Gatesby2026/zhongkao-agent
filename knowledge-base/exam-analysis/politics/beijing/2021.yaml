@@ -1,0 +1,202 @@
+# ============================================================
+# 2021年北京中考道德与法治真题 — 逐题分析
+# ============================================================
+# 数据来源：北京教育考试院、菁优网、中考在线
+# 最后更新：2026-04-12
+# 状态：基于多来源交叉验证
+# 注意：本科目为开卷考试
+
+year: 2021
+region: 北京市
+subject: 道德与法治
+full_score: 70
+duration_minutes: 90
+exam_type: 开卷
+total_questions: 19
+structure: "13单选(26分,每题2分) + 6材料分析(44分)"
+
+# 时政背景：建党100周年、脱贫攻坚全面胜利、民法典施行、抗疫精神
+
+difficulty_distribution:
+  基础: { questions: 10, score: 约28分, ratio: "40%" }
+  中档: { questions: 7, score: 约30分, ratio: "43%" }
+  较难: { questions: 2, score: 约12分, ratio: "17%" }
+
+domain_distribution:
+  法治: { ratio: "约30%", score: 约21分 }
+  国情: { ratio: "约25%", score: 约18分 }
+  道德: { ratio: "约20%", score: 约14分 }
+  时政: { ratio: "约15%", score: 约10分 }
+  心理: { ratio: "约10%", score: 约7分 }
+
+# ------ 逐题分析 ------
+questions:
+
+  # ===== 单选题（每题2分）=====
+  - id: 1
+    type: 单选
+    score: 2
+    knowledge_points: [建党100周年, 中国共产党的领导]
+    domain: 国情
+    difficulty: 基础
+    description: 以建党100周年为背景，考查中国共产党的领导地位
+
+  - id: 2
+    type: 单选
+    score: 2
+    knowledge_points: [自我认识, 正确对待挫折]
+    domain: 心理
+    difficulty: 基础
+    description: 青少年正确认识自我、积极面对挫折的心理品质
+
+  - id: 3
+    type: 单选
+    score: 2
+    knowledge_points: [民法典, 民事权利]
+    domain: 法治
+    difficulty: 基础
+    description: 以民法典施行为背景，考查公民民事权利的保护
+
+  - id: 4
+    type: 单选
+    score: 2
+    knowledge_points: [抗疫精神, 社会主义核心价值观]
+    domain: 道德
+    difficulty: 基础
+    description: 从抗疫精神中感悟社会主义核心价值观的内涵
+
+  - id: 5
+    type: 单选
+    score: 2
+    knowledge_points: [全面依法治国, 宪法]
+    domain: 法治
+    difficulty: 基础
+    description: 宪法作为根本法的地位与全面依法治国的基本方略
+
+  - id: 6
+    type: 单选
+    score: 2
+    knowledge_points: [脱贫攻坚, 共同富裕]
+    domain: 国情
+    difficulty: 基础
+    description: 脱贫攻坚全面胜利体现的制度优势
+
+  - id: 7
+    type: 单选
+    score: 2
+    knowledge_points: [人大代表, 人民代表大会制度]
+    domain: 法治
+    difficulty: 中档
+    description: 人大代表的职责与人民代表大会制度
+
+  - id: 8
+    type: 单选
+    score: 2
+    knowledge_points: [文化自信, 传统文化]
+    domain: 道德
+    difficulty: 基础
+    description: 传承中华优秀传统文化、坚定文化自信
+
+  - id: 9
+    type: 单选
+    score: 2
+    knowledge_points: [科技创新, 创新驱动发展]
+    domain: 国情
+    difficulty: 中档
+    description: 以航天成就为背景考查创新驱动发展战略
+
+  - id: 10
+    type: 单选
+    score: 2
+    knowledge_points: [未成年人保护法, 家庭保护]
+    domain: 法治
+    difficulty: 中档
+    description: 新修订未成年人保护法中家庭、学校、社会保护的分类
+
+  - id: 11
+    type: 单选
+    score: 2
+    knowledge_points: [民族团结, 民族区域自治]
+    domain: 国情
+    difficulty: 中档
+    description: 各民族共同团结奋斗、共同繁荣发展
+
+  - id: 12
+    type: 单选
+    score: 2
+    knowledge_points: [生态文明, 绿色发展]
+    domain: 国情
+    difficulty: 基础
+    description: 践行绿色发展理念、建设生态文明
+
+  - id: 13
+    type: 单选
+    score: 2
+    knowledge_points: [构建人类命运共同体, 国际合作]
+    domain: 时政
+    difficulty: 中档
+    description: 推动构建人类命运共同体、加强国际抗疫合作
+
+  # ===== 材料分析题 =====
+  - id: 14
+    type: 材料分析
+    score: 8
+    knowledge_points: [党史学习教育, 中国共产党百年奋斗, 初心使命]
+    domain: 国情
+    difficulty: 中档
+    sub_questions: 2
+    description: 以党史学习教育为主题，分析中国共产党的初心使命与百年奋斗历程
+
+  - id: 15
+    type: 材料分析
+    score: 8
+    knowledge_points: [乡村振兴, 共同富裕, 脱贫攻坚成果巩固]
+    domain: 国情
+    difficulty: 中档
+    sub_questions: 2
+    description: 结合乡村振兴战略，分析巩固脱贫攻坚成果的措施与意义
+
+  - id: 16
+    type: 材料分析
+    score: 8
+    knowledge_points: [科技创新, 科教兴国, 人才强国]
+    domain: 国情
+    difficulty: 较难
+    sub_questions: 2
+    description: 以科技创新成果为背景，论述科教兴国战略的重要性
+
+  - id: 17
+    type: 材料分析
+    score: 6
+    knowledge_points: [民法典, 公民权利, 法治保障]
+    domain: 法治
+    difficulty: 中档
+    sub_questions: 2
+    description: 运用民法典相关规定分析生活中的法律问题
+
+  - id: 18
+    type: 材料分析
+    score: 8
+    knowledge_points: [道德修养, 志愿服务, 社会责任]
+    domain: 道德
+    difficulty: 中档
+    sub_questions: 2
+    description: 以志愿服务活动为情境，探究道德修养与社会责任
+
+  - id: 19
+    type: 材料分析
+    score: 6
+    knowledge_points: [理想信念, 青少年成长, 时代担当]
+    domain: 道德
+    difficulty: 较难
+    sub_questions: 2
+    description: 结合建党百年，谈青少年如何树立理想信念、担当时代责任
+
+# ------ 命题特点 ------
+exam_features:
+  - 建党100周年主线贯穿全卷，党史相关题目约占25%
+  - 民法典首年施行是法治板块核心素材
+  - 脱贫攻坚与乡村振兴衔接成为国情热点
+  - 抗疫精神与志愿服务结合考查道德品质
+  - 开卷考试下仍需理解运用，不能照搬照抄
+  - 材料分析题注重"是什么—为什么—怎么做"的答题逻辑

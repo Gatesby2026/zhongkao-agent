@@ -1,0 +1,325 @@
+# ============================================================
+# 2023年北京中考英语笔试真题 — 逐题分析
+# ============================================================
+# 数据来源：北京教育考试院、菁优网、学科网
+# 最后更新：2026-04-12
+# 状态：基于多来源交叉验证
+# 注：最后一年70分笔试制，2024年起改为60分
+
+year: 2023
+region: 北京市
+subject: 英语
+full_score: 70
+duration_minutes: 90
+total_questions: 35
+structure: "12单选(12分) + 8完形(8分) + 13阅读(26分) + 2文段表达(24分)"
+
+difficulty_distribution:
+  基础: { questions: 18, score: 约30分, ratio: "43%" }
+  中档: { questions: 13, score: 约26分, ratio: "37%" }
+  较难: { questions: 4, score: 约14分, ratio: "20%" }
+
+domain_distribution:
+  语法与词汇: { ratio: "约29%", questions: [1,2,3,4,5,6,7,8,9,10,11,12] }
+  完形填空: { ratio: "约11%", questions: [13,14,15,16,17,18,19,20] }
+  阅读理解: { ratio: "约37%", questions: [21,22,23,24,25,26,27,28,29,30,31,32,33] }
+  书面表达: { ratio: "约23%", questions: [34,35] }
+
+# ------ 逐题分析 ------
+questions:
+
+  # ===== 单项选择（每题1分）=====
+  - id: 1
+    type: 单选
+    score: 1
+    knowledge_points: [人称代词, 反身代词]
+    module: 词法
+    difficulty: 基础
+    description: 考查反身代词的用法，主语和宾语指同一人时用反身代词
+
+  - id: 2
+    type: 单选
+    score: 1
+    knowledge_points: [介词, with/for/about]
+    module: 词法
+    difficulty: 基础
+    description: 介词表示伴随或方式的用法
+
+  - id: 3
+    type: 单选
+    score: 1
+    knowledge_points: [特殊疑问词, where]
+    module: 句法
+    difficulty: 基础
+    description: 根据回答中的地点信息判断用where提问
+
+  - id: 4
+    type: 单选
+    score: 1
+    knowledge_points: [形容词比较级, as...as]
+    module: 词法
+    difficulty: 基础
+    description: as+形容词原级+as表示"和……一样"的同级比较
+
+  - id: 5
+    type: 单选
+    score: 1
+    knowledge_points: [一般过去时, 不规则动词]
+    module: 时态
+    difficulty: 基础
+    description: 一般过去时不规则动词变化，yesterday标志词
+
+  - id: 6
+    type: 单选
+    score: 1
+    knowledge_points: [情态动词, need/must/may]
+    module: 词法
+    difficulty: 基础
+    description: 情态动词表示必要性或可能性的用法
+
+  - id: 7
+    type: 单选
+    score: 1
+    knowledge_points: [并列连词, not only...but also]
+    module: 句法
+    difficulty: 中档
+    description: not only...but also并列结构的用法
+
+  - id: 8
+    type: 单选
+    score: 1
+    knowledge_points: [过去进行时, was/were doing]
+    module: 时态
+    difficulty: 中档
+    description: 过去进行时，表示过去某一时刻正在进行的动作
+
+  - id: 9
+    type: 单选
+    score: 1
+    knowledge_points: [被动语态, 一般过去时被动]
+    module: 语态
+    difficulty: 中档
+    description: 一般过去时的被动语态was/were done
+
+  - id: 10
+    type: 单选
+    score: 1
+    knowledge_points: [不定式, want/decide/plan to do]
+    module: 非谓语
+    difficulty: 中档
+    description: 不定式作宾语，固定搭配decide to do
+
+  - id: 11
+    type: 单选
+    score: 1
+    knowledge_points: [状语从句, so that目的状语]
+    module: 从句
+    difficulty: 中档
+    description: so that引导目的状语从句
+
+  - id: 12
+    type: 单选
+    score: 1
+    knowledge_points: [宾语从句, 引导词whether/if]
+    module: 从句
+    difficulty: 中档
+    description: whether/if引导宾语从句，表示"是否"
+
+  # ===== 完形填空（每题1分）=====
+  - id: 13
+    type: 完形
+    score: 1
+    knowledge_points: [记叙文理解, 事件起因]
+    module: 完形填空
+    difficulty: 基础
+    description: 记叙文讲述克服困难的经历，开头考查背景信息理解
+
+  - id: 14
+    type: 完形
+    score: 1
+    knowledge_points: [动词辨析, 动作描写]
+    module: 完形填空
+    difficulty: 基础
+    description: 在叙事语境中选择恰当的动作动词
+
+  - id: 15
+    type: 完形
+    score: 1
+    knowledge_points: [形容词辨析, 心理描写]
+    module: 完形填空
+    difficulty: 中档
+    description: 根据事件发展判断人物心理状态
+
+  - id: 16
+    type: 完形
+    score: 1
+    knowledge_points: [名词辨析, 抽象名词]
+    module: 完形填空
+    difficulty: 中档
+    description: 抽象名词辨析，如courage/confidence/patience/effort
+
+  - id: 17
+    type: 完形
+    score: 1
+    knowledge_points: [动词短语, give up/keep on]
+    module: 完形填空
+    difficulty: 中档
+    description: 与"坚持/放弃"主题相关的动词短语
+
+  - id: 18
+    type: 完形
+    score: 1
+    knowledge_points: [副词辨析, finally/gradually]
+    module: 完形填空
+    difficulty: 基础
+    description: 表示结果或过程的副词选择
+
+  - id: 19
+    type: 完形
+    score: 1
+    knowledge_points: [连词辨析, however/therefore]
+    module: 完形填空
+    difficulty: 中档
+    description: 转折或因果连词的选择
+
+  - id: 20
+    type: 完形
+    score: 1
+    knowledge_points: [主旨理解, 人生感悟]
+    module: 完形填空
+    difficulty: 中档
+    description: 文末总结，考查对"坚持才能成功"主题的理解
+
+  # ===== 阅读理解（每题2分）=====
+  - id: 21
+    type: 阅读A
+    score: 2
+    knowledge_points: [应用文阅读, 信息提取]
+    module: 阅读理解
+    difficulty: 基础
+    description: 应用文（暑期项目/课外活动介绍），信息快速定位
+
+  - id: 22
+    type: 阅读A
+    score: 2
+    knowledge_points: [应用文阅读, 细节理解]
+    module: 阅读理解
+    difficulty: 基础
+    description: 提取具体的时间、地点、费用等细节信息
+
+  - id: 23
+    type: 阅读A
+    score: 2
+    knowledge_points: [应用文阅读, 写作目的]
+    module: 阅读理解
+    difficulty: 基础
+    description: 判断应用文的功能和目的
+
+  - id: 24
+    type: 阅读B
+    score: 2
+    knowledge_points: [说明文阅读, 细节理解]
+    module: 阅读理解
+    difficulty: 基础
+    description: 说明文（环保/科技话题），提取事实信息
+
+  - id: 25
+    type: 阅读B
+    score: 2
+    knowledge_points: [说明文阅读, 词义猜测]
+    module: 阅读理解
+    difficulty: 中档
+    description: 根据语境推测词义或短语含义
+
+  - id: 26
+    type: 阅读B
+    score: 2
+    knowledge_points: [说明文阅读, 推理判断]
+    module: 阅读理解
+    difficulty: 中档
+    description: 基于文章信息进行合理推断
+
+  - id: 27
+    type: 阅读B
+    score: 2
+    knowledge_points: [说明文阅读, 段落主旨]
+    module: 阅读理解
+    difficulty: 中档
+    description: 归纳段落或全文主旨大意
+
+  - id: 28
+    type: 阅读C
+    score: 2
+    knowledge_points: [议论文阅读, 观点识别]
+    module: 阅读理解
+    difficulty: 中档
+    description: 议论文（教育/社会话题），识别作者中心论点
+
+  - id: 29
+    type: 阅读C
+    score: 2
+    knowledge_points: [议论文阅读, 论据分析]
+    module: 阅读理解
+    difficulty: 较难
+    description: 分析论据与论点的关系
+
+  - id: 30
+    type: 阅读C
+    score: 2
+    knowledge_points: [议论文阅读, 态度推断]
+    module: 阅读理解
+    difficulty: 较难
+    description: 推断作者对某一问题的态度和立场
+
+  - id: 31
+    type: 阅读D
+    score: 2
+    knowledge_points: [还原句子, 主题句识别]
+    module: 阅读理解
+    difficulty: 中档
+    description: 还原句子题，将主题句填入段首位置
+
+  - id: 32
+    type: 阅读D
+    score: 2
+    knowledge_points: [还原句子, 逻辑过渡]
+    module: 阅读理解
+    difficulty: 较难
+    description: 利用过渡词和逻辑关系判断句子位置
+
+  - id: 33
+    type: 阅读D
+    score: 2
+    knowledge_points: [还原句子, 举例与总结]
+    module: 阅读理解
+    difficulty: 较难
+    description: 区分例证句和总结句的位置关系
+
+  # ===== 文段表达 =====
+  - id: 34
+    type: 文段表达
+    score: 10
+    knowledge_points: [应用文写作, 邮件回复, 经历分享]
+    module: 书面表达
+    difficulty: 中档
+    description: 回复外国朋友的邮件，分享中国传统文化活动的经历
+    topic: 回复朋友邮件，介绍一次传统文化体验活动（如剪纸、书法等）
+
+  - id: 35
+    type: 文段表达
+    score: 14
+    knowledge_points: [命题作文, 记叙文, 成长感悟]
+    module: 书面表达
+    difficulty: 较难
+    description: 围绕"自律"主题写作，讲述自律的经历和收获
+    topic: "某英文网站征稿，题目围绕'自律的重要性'，分享自律的经历及感悟"
+    word_count: "50词以上"
+
+# ------ 命题特点 ------
+exam_features:
+  - 最后一年70分制笔试，题型结构与前两年保持一致
+  - 单选延续"必考八大语法"：代词、介词、疑问词、比较级、时态、语态、非谓语、从句
+  - 完形填空记叙文主题积极向上，讲述克服困难坚持不懈的故事
+  - 阅读C篇议论文难度略有提升，推理判断题增加
+  - 写作话题关注传统文化和自律品质，体现立德树人导向
+  - 整体难度与2022年持平，基础分容易拿到，区分度在阅读和写作

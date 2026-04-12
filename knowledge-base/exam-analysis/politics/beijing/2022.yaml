@@ -1,0 +1,204 @@
+# ============================================================
+# 2022年北京中考道德与法治真题 — 逐题分析
+# ============================================================
+# 数据来源：北京教育考试院、菁优网、中考在线
+# 最后更新：2026-04-12
+# 状态：基于多来源交叉验证
+# 注意：本科目为开卷考试（双减后首次中考）
+
+year: 2022
+region: 北京市
+subject: 道德与法治
+full_score: 70
+duration_minutes: 90
+exam_type: 开卷
+total_questions: 19
+structure: "13单选(26分,每题2分) + 6材料分析(44分)"
+
+# 时政背景：北京冬奥会、共同富裕、双减政策、全过程人民民主
+# 特殊说明：双减后首次中考，试题难度整体降低、回归教材比例提升
+
+difficulty_distribution:
+  基础: { questions: 11, score: 约32分, ratio: "46%" }
+  中档: { questions: 6, score: 约26分, ratio: "37%" }
+  较难: { questions: 2, score: 约12分, ratio: "17%" }
+
+domain_distribution:
+  法治: { ratio: "约28%", score: 约20分 }
+  国情: { ratio: "约27%", score: 约19分 }
+  道德: { ratio: "约20%", score: 约14分 }
+  时政: { ratio: "约15%", score: 约10分 }
+  心理: { ratio: "约10%", score: 约7分 }
+
+# ------ 逐题分析 ------
+questions:
+
+  # ===== 单选题（每题2分）=====
+  - id: 1
+    type: 单选
+    score: 2
+    knowledge_points: [北京冬奥会, 民族自豪感]
+    domain: 时政
+    difficulty: 基础
+    description: 以北京冬奥会成功举办为背景，考查民族自豪感与自信心
+
+  - id: 2
+    type: 单选
+    score: 2
+    knowledge_points: [情绪管理, 调节方法]
+    domain: 心理
+    difficulty: 基础
+    description: 青少年情绪管理与合理调节情绪的方法
+
+  - id: 3
+    type: 单选
+    score: 2
+    knowledge_points: [双减政策, 受教育权]
+    domain: 法治
+    difficulty: 基础
+    description: 双减政策背景下学生受教育权的保障
+
+  - id: 4
+    type: 单选
+    score: 2
+    knowledge_points: [冬奥志愿者, 亲社会行为]
+    domain: 道德
+    difficulty: 基础
+    description: 冬奥志愿者体现的亲社会行为与奉献精神
+
+  - id: 5
+    type: 单选
+    score: 2
+    knowledge_points: [宪法, 国家机构]
+    domain: 法治
+    difficulty: 基础
+    description: 宪法规定的国家机构组织原则——民主集中制
+
+  - id: 6
+    type: 单选
+    score: 2
+    knowledge_points: [共同富裕, 基本经济制度]
+    domain: 国情
+    difficulty: 中档
+    description: 推动共同富裕与社会主义基本经济制度的关系
+
+  - id: 7
+    type: 单选
+    score: 2
+    knowledge_points: [全过程人民民主, 基层民主]
+    domain: 法治
+    difficulty: 中档
+    description: 全过程人民民主的实践形式与基层群众自治
+
+  - id: 8
+    type: 单选
+    score: 2
+    knowledge_points: [诚实守信, 道德品质]
+    domain: 道德
+    difficulty: 基础
+    description: 诚实守信是社会交往的基本准则
+
+  - id: 9
+    type: 单选
+    score: 2
+    knowledge_points: [科技冬奥, 创新驱动]
+    domain: 国情
+    difficulty: 基础
+    description: 科技赋能冬奥，体现创新驱动发展战略
+
+  - id: 10
+    type: 单选
+    score: 2
+    knowledge_points: [未成年人网络保护, 法律意识]
+    domain: 法治
+    difficulty: 中档
+    description: 未成年人网络保护的法律规定与自我保护
+
+  - id: 11
+    type: 单选
+    score: 2
+    knowledge_points: [民族精神, 冬奥精神]
+    domain: 道德
+    difficulty: 基础
+    description: 从冬奥健儿身上感悟民族精神与拼搏品质
+
+  - id: 12
+    type: 单选
+    score: 2
+    knowledge_points: [人与自然和谐共生, 碳达峰碳中和]
+    domain: 国情
+    difficulty: 基础
+    description: 绿色冬奥理念体现人与自然和谐共生
+
+  - id: 13
+    type: 单选
+    score: 2
+    knowledge_points: [人类命运共同体, 和平发展]
+    domain: 时政
+    difficulty: 中档
+    description: 冬奥会促进世界各国交流，推动构建人类命运共同体
+
+  # ===== 材料分析题 =====
+  - id: 14
+    type: 材料分析
+    score: 8
+    knowledge_points: [北京冬奥会, 文化自信, 科技创新]
+    domain: 国情
+    difficulty: 中档
+    sub_questions: 2
+    description: 以冬奥会开闭幕式为素材，探究文化自信与科技创新的结合
+
+  - id: 15
+    type: 材料分析
+    score: 8
+    knowledge_points: [全过程人民民主, 人民当家作主, 协商民主]
+    domain: 法治
+    difficulty: 中档
+    sub_questions: 2
+    description: 结合社区治理实例，分析全过程人民民主的具体体现
+
+  - id: 16
+    type: 材料分析
+    score: 8
+    knowledge_points: [共同富裕, 乡村振兴, 收入分配]
+    domain: 国情
+    difficulty: 较难
+    sub_questions: 2
+    description: 分析推动共同富裕的政策措施及其与基本经济制度的关系
+
+  - id: 17
+    type: 材料分析
+    score: 6
+    knowledge_points: [网络安全, 个人信息保护, 依法上网]
+    domain: 法治
+    difficulty: 中档
+    sub_questions: 2
+    description: 以个人信息泄露案例为情境，分析网络时代的法治保障
+
+  - id: 18
+    type: 材料分析
+    score: 8
+    knowledge_points: [劳动教育, 社会实践, 全面发展]
+    domain: 道德
+    difficulty: 中档
+    sub_questions: 2
+    description: 以双减后的课后服务和劳动教育为背景，探讨全面发展
+
+  - id: 19
+    type: 材料分析
+    score: 6
+    knowledge_points: [冬奥精神, 理想与奋斗, 青春担当]
+    domain: 道德
+    difficulty: 较难
+    sub_questions: 2
+    description: 从冬奥运动员故事中感悟理想信念，谈青少年如何奋斗成长
+
+# ------ 命题特点 ------
+exam_features:
+  - 北京冬奥会主线贯穿全卷，冬奥相关题目约占30%
+  - 双减后首次中考，回归教材比例显著提升至约80%
+  - 全过程人民民主首次作为重点考查内容
+  - 共同富裕成为国情板块新增热点
+  - 整体难度较2021年略有降低，体现"双减"精神
+  - 开卷考试注重考查学生对知识的理解和运用能力
+  - 答题逻辑仍然强调"观点+材料+分析"三段式

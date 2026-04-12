@@ -1,0 +1,402 @@
+# 初中道德与法治课程知识点体系
+# 依据《义务教育道德与法治课程标准（2022年版）》
+# 适用: 北京中考 2026  满分: 80分  考试形式: 开卷
+
+subject: 道德与法治
+alias: 道法
+curriculum_standard: 义务教育道德与法治课程标准（2022年版）
+full_score: 80
+exam_type: 开卷考试
+
+domains:
+
+  - name: 道德教育
+    code: MORAL
+    exam_weight: 0.20
+    typical_score: 16
+    description: 个人品德修养、家庭美德、社会公德与网络道德
+    modules:
+
+      - name: 个人品德
+        code: MORAL-01
+        knowledge_points:
+          - name: 自尊自信
+            level: 理解运用
+            exam_weight: 0.02
+            typical_score: 1.5
+            description: 自尊的含义与表现；自信的作用与培养
+          - name: 自立自强
+            level: 理解运用
+            exam_weight: 0.02
+            typical_score: 1.5
+            description: 自立的表现；自强不息的精神
+          - name: 诚实守信
+            level: 理解运用
+            exam_weight: 0.03
+            typical_score: 2
+            description: 诚信的含义、重要性；践行诚信的做法
+          - name: 善于反思与自我完善
+            level: 了解
+            exam_weight: 0.01
+            typical_score: 1
+            description: 自省的意义；知错就改
+          - name: 珍爱生命
+            level: 理解运用
+            exam_weight: 0.02
+            typical_score: 1.5
+            description: 生命的独特性；敬畏生命；守护生命
+
+      - name: 家庭美德
+        code: MORAL-02
+        knowledge_points:
+          - name: 孝亲敬长
+            level: 理解运用
+            exam_weight: 0.02
+            typical_score: 1.5
+            description: 孝敬父母的表现与做法；家庭责任
+          - name: 家庭关系与家风
+            level: 了解
+            exam_weight: 0.01
+            typical_score: 1
+            description: 家庭结构变化；优良家风的传承
+
+      - name: 社会公德
+        code: MORAL-03
+        knowledge_points:
+          - name: 关爱他人与社会
+            level: 理解运用
+            exam_weight: 0.02
+            typical_score: 1.5
+            description: 关爱的表现；服务社会与奉献精神
+          - name: 遵守社会规则
+            level: 理解运用
+            exam_weight: 0.02
+            typical_score: 1.5
+            description: 社会规则的种类；自由与规则的关系
+          - name: 责任与担当
+            level: 理解运用
+            exam_weight: 0.02
+            typical_score: 1.5
+            description: 责任的含义；承担责任的代价与回报
+
+      - name: 网络道德
+        code: MORAL-04
+        knowledge_points:
+          - name: 合理利用网络
+            level: 理解运用
+            exam_weight: 0.02
+            typical_score: 1.5
+            description: 网络的利与弊；理性参与网络生活
+          - name: 网络安全与文明
+            level: 了解
+            exam_weight: 0.01
+            typical_score: 1
+            description: 网络谣言的危害；文明上网
+
+  - name: 法治教育
+    code: LAW
+    exam_weight: 0.30
+    typical_score: 24
+    description: 宪法、公民权利与义务、法律常识、未成年人保护、违法与犯罪
+    modules:
+
+      - name: 宪法
+        code: LAW-01
+        knowledge_points:
+          - name: 宪法的地位与作用
+            level: 理解运用
+            exam_weight: 0.04
+            typical_score: 3
+            description: 宪法是根本大法；宪法具有最高法律效力
+          - name: 国家机构
+            level: 了解
+            exam_weight: 0.02
+            typical_score: 1.5
+            description: 全国人大、国务院、监察委、法院、检察院的职能
+          - name: 宪法与公民生活
+            level: 理解运用
+            exam_weight: 0.03
+            typical_score: 2.5
+            description: 宪法规定公民基本权利和义务；宪法宣誓制度
+
+      - name: 公民权利与义务
+        code: LAW-02
+        knowledge_points:
+          - name: 公民基本权利
+            level: 理解运用
+            exam_weight: 0.04
+            typical_score: 3
+            description: 政治权利、人身自由、受教育权、财产权等
+          - name: 公民基本义务
+            level: 理解运用
+            exam_weight: 0.03
+            typical_score: 2.5
+            description: 遵守宪法法律、维护国家利益、依法纳税、服兵役等
+          - name: 权利与义务的关系
+            level: 理解运用
+            exam_weight: 0.02
+            typical_score: 1.5
+            description: 权利义务相统一；依法行使权利
+
+      - name: 法律常识
+        code: LAW-03
+        knowledge_points:
+          - name: 法律的特征与作用
+            level: 了解
+            exam_weight: 0.02
+            typical_score: 1.5
+            description: 法律由国家制定或认可、靠国家强制力保证实施
+          - name: 依法治国
+            level: 理解运用
+            exam_weight: 0.03
+            typical_score: 2.5
+            description: 全面依法治国的要求；科学立法、严格执法、公正司法、全民守法
+          - name: 生活中的法律保障
+            level: 了解
+            exam_weight: 0.01
+            typical_score: 1
+            description: 民法典与日常生活；劳动法、消费者权益保护法等
+
+      - name: 未成年人保护
+        code: LAW-04
+        knowledge_points:
+          - name: 未成年人保护法
+            level: 理解运用
+            exam_weight: 0.03
+            typical_score: 2.5
+            description: 家庭保护、学校保护、社会保护、司法保护、网络保护、政府保护
+          - name: 预防未成年人犯罪法
+            level: 了解
+            exam_weight: 0.01
+            typical_score: 1
+            description: 不良行为与严重不良行为的区分与预防
+
+      - name: 违法与犯罪
+        code: LAW-05
+        knowledge_points:
+          - name: 违法行为的种类
+            level: 理解运用
+            exam_weight: 0.02
+            typical_score: 1.5
+            description: 民事违法、行政违法、刑事违法的区分
+          - name: 犯罪的基本特征
+            level: 理解运用
+            exam_weight: 0.02
+            typical_score: 1.5
+            description: 严重社会危害性、刑事违法性、应受刑罚处罚性
+          - name: 依法维权
+            level: 了解
+            exam_weight: 0.01
+            typical_score: 1
+            description: 诉讼与非诉讼途径；法律援助
+
+  - name: 国情教育
+    code: NATION
+    exam_weight: 0.25
+    typical_score: 20
+    description: 基本国策、经济制度、政治制度、文化自信、民族团结
+    modules:
+
+      - name: 基本国策与发展战略
+        code: NATION-01
+        knowledge_points:
+          - name: 基本国策
+            level: 理解运用
+            exam_weight: 0.03
+            typical_score: 2.5
+            description: 对外开放、计划生育、节约资源、保护环境
+          - name: 创新驱动发展战略
+            level: 理解运用
+            exam_weight: 0.03
+            typical_score: 2.5
+            description: 科技创新的重要性；建设创新型国家
+          - name: 可持续发展与绿色发展
+            level: 理解运用
+            exam_weight: 0.02
+            typical_score: 1.5
+            description: 绿水青山就是金山银山；生态文明建设
+
+      - name: 经济制度
+        code: NATION-02
+        knowledge_points:
+          - name: 基本经济制度
+            level: 了解
+            exam_weight: 0.02
+            typical_score: 1.5
+            description: 公有制为主体、多种所有制经济共同发展
+          - name: 社会主义市场经济
+            level: 了解
+            exam_weight: 0.01
+            typical_score: 1
+            description: 市场经济的基本特征；共同富裕
+
+      - name: 政治制度
+        code: NATION-03
+        knowledge_points:
+          - name: 人民代表大会制度
+            level: 理解运用
+            exam_weight: 0.03
+            typical_score: 2.5
+            description: 根本政治制度；人大代表的权利与义务
+          - name: 中国共产党领导的多党合作和政治协商制度
+            level: 了解
+            exam_weight: 0.02
+            typical_score: 1.5
+            description: 基本政治制度；政协的职能
+          - name: 民族区域自治制度
+            level: 了解
+            exam_weight: 0.01
+            typical_score: 1
+            description: 基本政治制度；民族平等团结互助和谐
+          - name: 基层群众自治制度
+            level: 了解
+            exam_weight: 0.01
+            typical_score: 1
+            description: 村委会、居委会；基层民主
+
+      - name: 文化自信
+        code: NATION-04
+        knowledge_points:
+          - name: 中华优秀传统文化
+            level: 理解运用
+            exam_weight: 0.03
+            typical_score: 2
+            description: 中华文化的特点；传承与创新
+          - name: 社会主义核心价值观
+            level: 理解运用
+            exam_weight: 0.02
+            typical_score: 1.5
+            description: 国家层面、社会层面、个人层面的价值准则
+          - name: 文化交流与互鉴
+            level: 了解
+            exam_weight: 0.01
+            typical_score: 1
+            description: 开放包容的文化态度；讲好中国故事
+
+      - name: 民族团结与国家统一
+        code: NATION-05
+        knowledge_points:
+          - name: 维护国家统一与领土完整
+            level: 理解运用
+            exam_weight: 0.02
+            typical_score: 1.5
+            description: 一国两制；台湾问题；国家安全
+          - name: 民族团结
+            level: 了解
+            exam_weight: 0.01
+            typical_score: 1
+            description: 各民族共同繁荣；铸牢中华民族共同体意识
+
+  - name: 心理健康
+    code: MENTAL
+    exam_weight: 0.10
+    typical_score: 8
+    description: 青春期心理、情绪管理、人际交往
+    modules:
+
+      - name: 青春期心理
+        code: MENTAL-01
+        knowledge_points:
+          - name: 认识青春期
+            level: 了解
+            exam_weight: 0.02
+            typical_score: 1.5
+            description: 青春期的身体与心理变化；正确对待青春期困惑
+          - name: 行己有耻与止于至善
+            level: 了解
+            exam_weight: 0.01
+            typical_score: 1
+            description: 明辨是非；追求高尚的道德境界
+
+      - name: 情绪管理
+        code: MENTAL-02
+        knowledge_points:
+          - name: 情绪的多样性
+            level: 了解
+            exam_weight: 0.01
+            typical_score: 1
+            description: 基本情绪与复合情绪；影响情绪的因素
+          - name: 调节情绪的方法
+            level: 理解运用
+            exam_weight: 0.02
+            typical_score: 1.5
+            description: 合理宣泄、转移注意力、换位思考、理性分析
+          - name: 培养积极心态
+            level: 了解
+            exam_weight: 0.01
+            typical_score: 1
+            description: 乐观面对困难；增强抗挫折能力
+
+      - name: 人际交往
+        code: MENTAL-03
+        knowledge_points:
+          - name: 友谊与成长
+            level: 了解
+            exam_weight: 0.01
+            typical_score: 1
+            description: 友谊的特质；交友的智慧
+          - name: 师生关系
+            level: 了解
+            exam_weight: 0.01
+            typical_score: 0.5
+            description: 尊重老师；建立良好师生关系
+          - name: 学会沟通与合作
+            level: 了解
+            exam_weight: 0.01
+            typical_score: 0.5
+            description: 有效沟通的技巧；团队合作精神
+
+  - name: 时政热点
+    code: CURRENT
+    exam_weight: 0.15
+    typical_score: 12
+    description: 结合当年国内外大事，综合运用所学知识分析
+    modules:
+
+      - name: 国内时政
+        code: CURRENT-01
+        knowledge_points:
+          - name: 党和国家重大决策
+            level: 理解运用
+            exam_weight: 0.04
+            typical_score: 3
+            description: 党代会精神、两会热点、重大改革举措（每年更新）
+          - name: 经济社会发展成就
+            level: 理解运用
+            exam_weight: 0.03
+            typical_score: 2.5
+            description: 科技突破、脱贫攻坚成果、乡村振兴、共同富裕等
+          - name: 民生与社会治理
+            level: 理解运用
+            exam_weight: 0.02
+            typical_score: 1.5
+            description: 教育双减、医疗改革、社会保障等民生热点
+          - name: 生态文明建设
+            level: 了解
+            exam_weight: 0.01
+            typical_score: 1
+            description: 碳达峰碳中和、环保政策新进展
+
+      - name: 国际时政
+        code: CURRENT-02
+        knowledge_points:
+          - name: 构建人类命运共同体
+            level: 理解运用
+            exam_weight: 0.02
+            typical_score: 1.5
+            description: 一带一路倡议；全球治理中的中国方案
+          - name: 国际形势与中国立场
+            level: 了解
+            exam_weight: 0.02
+            typical_score: 1.5
+            description: 和平与发展的时代主题；中国的大国担当
+          - name: 全球性挑战与合作
+            level: 了解
+            exam_weight: 0.01
+            typical_score: 1
+            description: 气候变化、公共卫生、粮食安全等全球议题
+
+notes:
+  - 时政热点内容每年更新，需关注考试当年（2025年7月至2026年6月）的国内外重大事件
+  - 开卷考试重在理解运用，非死记硬背，需能将知识点与材料结合分析
+  - 2022版新课标新增"法治观念""责任意识""健全人格"等核心素养要求

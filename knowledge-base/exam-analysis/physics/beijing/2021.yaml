@@ -1,0 +1,300 @@
+# 2021年北京中考物理试卷分析
+year: 2021
+region: 北京
+subject: 物理
+full_score: 70
+duration_minutes: 90
+total_questions: 23
+
+structure:
+  - section: 单项选择题
+    question_range: "1-12"
+    count: 12
+    score_per_question: 2
+    total_score: 24
+  - section: 多项选择题
+    question_range: "13-15"
+    count: 3
+    score_per_question: 2
+    total_score: 6
+  - section: 实验探究题
+    question_range: "16-20"
+    count: 5
+    total_score: 28
+  - section: 科普阅读题
+    question_range: "21"
+    count: 1
+    total_score: 4
+  - section: 计算题
+    question_range: "22-23"
+    count: 2
+    total_score: 8
+
+difficulty_distribution:
+  easy: # 基础题
+    ratio: 0.40
+    score: 28
+    description: 课本基础概念、基本公式直接应用
+  medium: # 中等题
+    ratio: 0.40
+    score: 28
+    description: 需要综合两个以上知识点或简单推理
+  hard: # 较难题
+    ratio: 0.20
+    score: 14
+    description: 实验设计、综合计算、多步推理
+
+domain_distribution:
+  力学:
+    ratio: 0.34
+    score: 24
+    key_topics: [力与运动, 压强, 浮力, 简单机械, 功和功率]
+  电学:
+    ratio: 0.34
+    score: 24
+    key_topics: [欧姆定律, 电功率, 串并联电路, 电与磁]
+  热学:
+    ratio: 0.14
+    score: 10
+    key_topics: [内能, 比热容, 热量计算, 物态变化]
+  光学:
+    ratio: 0.11
+    score: 8
+    key_topics: [凸透镜成像, 光的反射与折射, 平面镜成像]
+  声学:
+    ratio: 0.06
+    score: 4
+    key_topics: [声音的产生与传播, 音调响度音色]
+
+questions:
+  # ===== 单项选择题 =====
+  - number: 1
+    type: 单选
+    score: 2
+    difficulty: easy
+    domain: 声学
+    knowledge_point: 声音的产生与传播
+    description: 判断声音产生条件和传播介质
+    common_error: 混淆声速在不同介质中的大小关系
+
+  - number: 2
+    type: 单选
+    score: 2
+    difficulty: easy
+    domain: 光学
+    knowledge_point: 光现象辨析
+    description: 判断光的反射、折射、直线传播现象
+    common_error: 将折射现象误判为反射
+
+  - number: 3
+    type: 单选
+    score: 2
+    difficulty: easy
+    domain: 热学
+    knowledge_point: 物态变化
+    description: 识别生活中的物态变化类型及吸放热
+    common_error: 升华与凝华混淆
+
+  - number: 4
+    type: 单选
+    score: 2
+    difficulty: easy
+    domain: 力学
+    knowledge_point: 力的概念与示意图
+    description: 根据情境画力的示意图或判断力的作用效果
+    common_error: 力的方向标注错误
+
+  - number: 5
+    type: 单选
+    score: 2
+    difficulty: easy
+    domain: 电学
+    knowledge_point: 电路基础
+    description: 判断串并联电路及电路图
+    common_error: 混淆串联和并联的电流特点
+
+  - number: 6
+    type: 单选
+    score: 2
+    difficulty: easy
+    domain: 热学
+    knowledge_point: 内能与热量
+    description: 改变内能的方式及热量概念
+    common_error: '"温度高"等同于"内能大"的错误认识'
+
+  - number: 7
+    type: 单选
+    score: 2
+    difficulty: medium
+    domain: 力学
+    knowledge_point: 惯性与牛顿第一定律
+    description: 根据生活情境判断惯性现象
+    common_error: 认为惯性大小与速度有关
+
+  - number: 8
+    type: 单选
+    score: 2
+    difficulty: medium
+    domain: 电学
+    knowledge_point: 安全用电与家庭电路
+    description: 家庭电路连接方式及安全用电常识
+    common_error: 火线零线接法混淆
+
+  - number: 9
+    type: 单选
+    score: 2
+    difficulty: medium
+    domain: 力学
+    knowledge_point: 压强
+    description: 固体压强或液体压强的比较与计算
+    common_error: 液体压强公式中h的理解错误
+
+  - number: 10
+    type: 单选
+    score: 2
+    difficulty: medium
+    domain: 电学
+    knowledge_point: 电与磁
+    description: 电磁感应或磁场方向判断
+    common_error: 混淆电动机和发电机的原理
+
+  - number: 11
+    type: 单选
+    score: 2
+    difficulty: medium
+    domain: 光学
+    knowledge_point: 凸透镜成像规律
+    description: 根据物距判断成像特点
+    common_error: 物距与像距变化关系判断错误
+
+  - number: 12
+    type: 单选
+    score: 2
+    difficulty: hard
+    domain: 力学
+    knowledge_point: 功和机械效率
+    description: 利用滑轮组或杠杆计算机械效率
+    common_error: 额外功的计算遗漏
+
+  # ===== 多项选择题 =====
+  - number: 13
+    type: 多选
+    score: 2
+    difficulty: medium
+    domain: 力学
+    knowledge_point: 浮力与密度
+    description: 浮沉条件的综合判断
+    common_error: 漏选或多选，浮力与重力关系判断失误
+
+  - number: 14
+    type: 多选
+    score: 2
+    difficulty: medium
+    domain: 电学
+    knowledge_point: 欧姆定律
+    description: 电路变化分析与电表读数变化
+    common_error: 滑动变阻器移动方向与电阻变化关系判断错
+
+  - number: 15
+    type: 多选
+    score: 2
+    difficulty: hard
+    domain: 电学
+    knowledge_point: 电功率综合
+    description: 含有多个用电器的电路功率比较
+    common_error: 串并联电路中功率分配规律混淆
+
+  # ===== 实验探究题 =====
+  - number: 16
+    type: 实验探究
+    score: 4
+    difficulty: easy
+    domain: 力学
+    knowledge_point: 测量密度
+    description: 用天平和量筒测量固体或液体密度
+    key_steps: [调节天平平衡, 测量质量, 测量体积, 计算密度]
+    common_error: 量筒读数时视线未平视凹液面最低处
+
+  - number: 17
+    type: 实验探究
+    score: 6
+    difficulty: medium
+    domain: 光学
+    knowledge_point: 凸透镜成像实验
+    description: 探究凸透镜成像规律，调节光屏找像
+    key_steps: [确定焦距, 调节三心等高, 移动物距观察成像, 记录数据]
+    common_error: 光屏上找不到像时未分析物距是否小于焦距
+
+  - number: 18
+    type: 实验探究
+    score: 6
+    difficulty: medium
+    domain: 电学
+    knowledge_point: 探究电流与电压关系
+    description: 控制变量法探究欧姆定律
+    key_steps: [连接电路, 控制电阻不变, 调节电压, 记录电流, 画图像]
+    common_error: 未控制变量导致结论错误
+
+  - number: 19
+    type: 实验探究
+    score: 6
+    difficulty: hard
+    domain: 力学
+    knowledge_point: 探究杠杆平衡条件
+    description: 设计实验验证杠杆平衡条件
+    key_steps: [调节杠杆水平平衡, 挂钩码, 记录力和力臂, 分析数据]
+    common_error: 力臂测量时未从支点到力的作用线做垂线
+
+  - number: 20
+    type: 实验探究
+    score: 6
+    difficulty: hard
+    domain: 电学
+    knowledge_point: 测量小灯泡电功率
+    description: 设计电路测量小灯泡额定功率
+    key_steps: [设计串联电路含滑动变阻器, 调至额定电压, 读取电流, 计算功率]
+    common_error: 未将电压调至额定电压就读取电流
+
+  # ===== 科普阅读题 =====
+  - number: 21
+    type: 科普阅读
+    score: 4
+    difficulty: medium
+    domain: 热学
+    knowledge_point: 比热容与生活应用
+    description: 阅读暖气系统材料，回答比热容相关问题
+    common_error: 无法从文本中提取物理量进行计算
+
+  # ===== 计算题 =====
+  - number: 22
+    type: 计算
+    score: 4
+    difficulty: medium
+    domain: 力学
+    knowledge_point: 浮力计算
+    description: 利用阿基米德原理和浮沉条件计算浮力
+    formula: ["F浮=ρ液gV排", "F浮=G物(漂浮)"]
+    common_error: 排开液体体积与物体体积混淆
+
+  - number: 23
+    type: 计算
+    score: 4
+    difficulty: hard
+    domain: 电学
+    knowledge_point: 电功率计算
+    description: 含有档位变化的电热器电功率综合计算
+    formula: ["P=UI", "P=I²R", "P=U²/R", "Q=I²Rt"]
+    common_error: 多档位电路中电阻连接方式分析错误
+
+overall_analysis:
+  avg_score_estimate: 52
+  pass_rate_estimate: 0.82
+  highlights:
+    - 声光热力电五大板块全面覆盖，基础题占比较高
+    - 实验探究题考查经典实验（密度、凸透镜、欧姆定律）
+    - 计算题浮力+电功率为经典组合
+    - 选择题前8道为基础送分题，后4道需要分析推理
+  advice:
+    - 牢记基本概念和公式，确保选择题前8题全对
+    - 实验探究题重点练习操作步骤的规范表述
+    - 计算题注意公式选用和单位统一

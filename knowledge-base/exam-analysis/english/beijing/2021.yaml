@@ -1,0 +1,323 @@
+# ============================================================
+# 2021年北京中考英语笔试真题 — 逐题分析
+# ============================================================
+# 数据来源：北京教育考试院、菁优网、学科网
+# 最后更新：2026-04-12
+# 状态：基于多来源交叉验证
+
+year: 2021
+region: 北京市
+subject: 英语
+full_score: 70  # 笔试部分，听说机考30分另计
+duration_minutes: 90
+total_questions: 35
+structure: "12单选(12分) + 8完形(8分) + 13阅读(26分) + 2文段表达(24分)"
+
+difficulty_distribution:
+  基础: { questions: 18, score: 约30分, ratio: "43%" }
+  中档: { questions: 13, score: 约26分, ratio: "37%" }
+  较难: { questions: 4, score: 约14分, ratio: "20%" }
+
+domain_distribution:
+  语法与词汇: { ratio: "约29%", questions: [1,2,3,4,5,6,7,8,9,10,11,12] }
+  完形填空: { ratio: "约11%", questions: [13,14,15,16,17,18,19,20] }
+  阅读理解: { ratio: "约37%", questions: [21,22,23,24,25,26,27,28,29,30,31,32,33] }
+  书面表达: { ratio: "约23%", questions: [34,35] }
+
+# ------ 逐题分析 ------
+questions:
+
+  # ===== 单项选择（每题1分）=====
+  - id: 1
+    type: 单选
+    score: 1
+    knowledge_points: [人称代词, 主格宾格]
+    module: 词法
+    difficulty: 基础
+    description: 考查人称代词的用法，根据语境选择正确的代词形式
+
+  - id: 2
+    type: 单选
+    score: 1
+    knowledge_points: [时间介词, at/in/on]
+    module: 词法
+    difficulty: 基础
+    description: 介词in/on/at在时间表达中的用法
+
+  - id: 3
+    type: 单选
+    score: 1
+    knowledge_points: [特殊疑问词, how often]
+    module: 句法
+    difficulty: 基础
+    description: 根据答语判断正确的特殊疑问词
+
+  - id: 4
+    type: 单选
+    score: 1
+    knowledge_points: [形容词比较级, than]
+    module: 词法
+    difficulty: 基础
+    description: 形容词比较级的基本用法，含than的比较句型
+
+  - id: 5
+    type: 单选
+    score: 1
+    knowledge_points: [现在进行时, be doing]
+    module: 时态
+    difficulty: 基础
+    description: 根据时间标志词now判断使用现在进行时
+
+  - id: 6
+    type: 单选
+    score: 1
+    knowledge_points: [情态动词, must/can/should]
+    module: 词法
+    difficulty: 基础
+    description: 情态动词表示义务或建议的用法
+
+  - id: 7
+    type: 单选
+    score: 1
+    knowledge_points: [连词, because/so/but/although]
+    module: 句法
+    difficulty: 中档
+    description: 根据前后句逻辑关系选择正确的连词
+
+  - id: 8
+    type: 单选
+    score: 1
+    knowledge_points: [一般过去时, 规则变化]
+    module: 时态
+    difficulty: 基础
+    description: 根据时间标志词last week判断使用一般过去时
+
+  - id: 9
+    type: 单选
+    score: 1
+    knowledge_points: [被动语态, 一般现在时被动]
+    module: 语态
+    difficulty: 中档
+    description: 主语与动词之间的被动关系，is/are + done结构
+
+  - id: 10
+    type: 单选
+    score: 1
+    knowledge_points: [不定式, 目的状语]
+    module: 非谓语
+    difficulty: 中档
+    description: to do不定式作目的状语的用法
+
+  - id: 11
+    type: 单选
+    score: 1
+    knowledge_points: [if条件状语从句, 主将从现]
+    module: 从句
+    difficulty: 中档
+    description: if引导条件状语从句，主句将来时从句一般现在时
+
+  - id: 12
+    type: 单选
+    score: 1
+    knowledge_points: [宾语从句, 语序/时态]
+    module: 从句
+    difficulty: 中档
+    description: 宾语从句的陈述语序及时态呼应
+
+  # ===== 完形填空（每题1分）=====
+  - id: 13
+    type: 完形
+    score: 1
+    knowledge_points: [记叙文理解, 上下文语境]
+    module: 完形填空
+    difficulty: 基础
+    description: 记叙文体裁，讲述个人成长经历，考查动词辨析
+
+  - id: 14
+    type: 完形
+    score: 1
+    knowledge_points: [名词辨析, 语境推断]
+    module: 完形填空
+    difficulty: 基础
+    description: 根据上下文选择合适的名词
+
+  - id: 15
+    type: 完形
+    score: 1
+    knowledge_points: [形容词辨析, 感情色彩]
+    module: 完形填空
+    difficulty: 中档
+    description: 根据人物心理变化选择形容词
+
+  - id: 16
+    type: 完形
+    score: 1
+    knowledge_points: [动词短语, 固定搭配]
+    module: 完形填空
+    difficulty: 中档
+    description: 动词短语辨析，结合语境选择
+
+  - id: 17
+    type: 完形
+    score: 1
+    knowledge_points: [副词辨析, 逻辑衔接]
+    module: 完形填空
+    difficulty: 中档
+    description: 副词辨析，体现故事情节转折
+
+  - id: 18
+    type: 完形
+    score: 1
+    knowledge_points: [动词辨析, 语境推断]
+    module: 完形填空
+    difficulty: 基础
+    description: 常见动词在语境中的辨析
+
+  - id: 19
+    type: 完形
+    score: 1
+    knowledge_points: [连词辨析, 逻辑关系]
+    module: 完形填空
+    difficulty: 中档
+    description: 前后句因果/转折关系判断
+
+  - id: 20
+    type: 完形
+    score: 1
+    knowledge_points: [主旨推断, 文章中心]
+    module: 完形填空
+    difficulty: 中档
+    description: 结尾处点题，考查对文章主旨的把握
+
+  # ===== 阅读理解（每题2分）=====
+  - id: 21
+    type: 阅读A
+    score: 2
+    knowledge_points: [应用文阅读, 信息提取]
+    module: 阅读理解
+    difficulty: 基础
+    description: 阅读A篇应用文（活动通知/广告），细节信息查找
+
+  - id: 22
+    type: 阅读A
+    score: 2
+    knowledge_points: [应用文阅读, 细节理解]
+    module: 阅读理解
+    difficulty: 基础
+    description: 从活动信息中提取时间/地点/要求等细节
+
+  - id: 23
+    type: 阅读A
+    score: 2
+    knowledge_points: [应用文阅读, 细节理解]
+    module: 阅读理解
+    difficulty: 基础
+    description: 应用文中的具体信息匹配
+
+  - id: 24
+    type: 阅读B
+    score: 2
+    knowledge_points: [说明文阅读, 细节理解]
+    module: 阅读理解
+    difficulty: 基础
+    description: 说明文阅读，关于科技/自然话题，细节定位
+
+  - id: 25
+    type: 阅读B
+    score: 2
+    knowledge_points: [说明文阅读, 词义猜测]
+    module: 阅读理解
+    difficulty: 中档
+    description: 根据上下文推测生词含义
+
+  - id: 26
+    type: 阅读B
+    score: 2
+    knowledge_points: [说明文阅读, 推理判断]
+    module: 阅读理解
+    difficulty: 中档
+    description: 对文章内容进行合理推断
+
+  - id: 27
+    type: 阅读B
+    score: 2
+    knowledge_points: [说明文阅读, 主旨大意]
+    module: 阅读理解
+    difficulty: 中档
+    description: 概括文章或段落的主旨大意
+
+  - id: 28
+    type: 阅读C
+    score: 2
+    knowledge_points: [议论文阅读, 观点理解]
+    module: 阅读理解
+    difficulty: 中档
+    description: 议论文阅读，理解作者观点和论据
+
+  - id: 29
+    type: 阅读C
+    score: 2
+    knowledge_points: [议论文阅读, 推理判断]
+    module: 阅读理解
+    difficulty: 较难
+    description: 根据文章论述进行深层推理
+
+  - id: 30
+    type: 阅读C
+    score: 2
+    knowledge_points: [议论文阅读, 主旨概括]
+    module: 阅读理解
+    difficulty: 较难
+    description: 概括议论文的中心论点
+
+  - id: 31
+    type: 阅读D
+    score: 2
+    knowledge_points: [还原句子, 逻辑衔接]
+    module: 阅读理解
+    difficulty: 中档
+    description: 阅读D篇还原句子题，根据上下文逻辑将句子填入正确位置
+
+  - id: 32
+    type: 阅读D
+    score: 2
+    knowledge_points: [还原句子, 指代关系]
+    module: 阅读理解
+    difficulty: 较难
+    description: 利用代词指代和逻辑连接词判断句子位置
+
+  - id: 33
+    type: 阅读D
+    score: 2
+    knowledge_points: [还原句子, 段落结构]
+    module: 阅读理解
+    difficulty: 较难
+    description: 把握段落结构和行文逻辑，还原句子
+
+  # ===== 文段表达 =====
+  - id: 34
+    type: 文段表达
+    score: 10
+    knowledge_points: [应用文写作, 邮件回复, 语言得体]
+    module: 书面表达
+    difficulty: 中档
+    description: 回复邮件，就朋友询问的问题给出建议或分享经历，要求语言得体、要点完整
+    topic: 回复朋友关于学习中文方法的邮件
+
+  - id: 35
+    type: 文段表达
+    score: 14
+    knowledge_points: [命题作文, 记叙文/议论文, 逻辑表达]
+    module: 书面表达
+    difficulty: 较难
+    description: 根据题目要求写一篇短文，要求观点明确、条理清晰、语言准确
+    topic: "某英文网站征稿，题目围绕'做一个有责任感的人'，描述一次承担责任的经历及感悟"
+    word_count: "50词以上"
+
+# ------ 命题特点 ------
+exam_features:
+  - 单选语法覆盖全面：代词、介词、时态、语态、从句、非谓语均有涉及
+  - 完形填空为记叙文，讲述成长故事，体现育人导向
+  - 阅读理解A应用文+B说明文+C议论文+D还原句子，梯度明显
+  - 文段表达贴近学生生活，注重实际交际能力
+  - 试题素材体现社会主义核心价值观和中华优秀传统文化

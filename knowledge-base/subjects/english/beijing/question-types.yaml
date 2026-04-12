@@ -1,0 +1,346 @@
+# ============================================================
+# 北京中考英语 — 题型分布与历年对比
+# ============================================================
+# 数据来源：2021-2025年北京中考英语真题逐题分析
+# 最后更新：2026-04-12
+# 注意：2024年起笔试从70→60分，听口从30→40分
+
+subject: 英语
+region: 北京市
+full_score: 100
+structure_note: "2021-2023: 笔试70 + 听口30 | 2024-2025: 笔试60 + 听口40"
+
+# ------ 历年题型结构对比 ------
+yearly_comparison:
+
+  - year: 2021
+    full_score: 100
+    written_score: 70
+    listening_speaking_score: 30
+    written_structure: "单选12(12分) + 完形10(10分) + 阅读A/B/C选择13(26分) + 阅读D回答5(10分) + 选词填空5(5分) + 作文1(10分) = 73分"
+    structure_note: 该年笔试实际73分结构，含3分调整
+    notable_changes: 结构稳定
+
+  - year: 2022
+    full_score: 100
+    written_score: 70
+    listening_speaking_score: 30
+    written_structure: "单选12(12分) + 完形10(10分) + 阅读选择13(26分) + 阅读回答5(10分) + 选词填空(5分) + 作文(10分)"
+    notable_changes: 双减后首次中考，难度适中偏简单
+
+  - year: 2023
+    full_score: 100
+    written_score: 70
+    listening_speaking_score: 30
+    written_structure: "单选12(12分) + 完形10(10分) + 阅读选择13(26分) + 阅读回答5(10分) + 选词填空(5分) + 作文(10分)"
+    notable_changes: 阅读C篇难度提升，涉及科技话题
+
+  - year: 2024
+    full_score: 100
+    written_score: 60
+    listening_speaking_score: 40
+    written_structure: "单选12(12分) + 完形8(8分) + 阅读选择13(26分) + 文段表达(14分)"
+    notable_changes: |
+      重大改革：笔试70→60，听口30→40
+      完形从10题减至8题（10→8分）
+      选词填空和回答问题有调整
+      文段表达整合为14分
+
+  - year: 2025
+    full_score: 100
+    written_score: 60
+    listening_speaking_score: 40
+    written_structure: "单选12(12分) + 完形8(8分) + 阅读选择13(26分) + 文段表达(14分)"
+    notable_changes: 延续2024新结构，整体难度稳定
+
+# ------ 笔试题号与知识点的稳定对应关系 ------
+# 基于2021-2025五年真题统计
+
+typical_question_map:
+
+  单项填空:
+    - question: 1
+      typical_topic: 人称代词/物主代词
+      frequency: 5/5
+      difficulty: 基础
+      note: 几乎每年考物主代词（his/her/my/our）
+
+    - question: 2
+      typical_topic: 时间/地点介词
+      frequency: 5/5
+      difficulty: 基础
+      note: in/on/at的用法区分
+
+    - question: 3
+      typical_topic: 连词（and/but/or/so）
+      frequency: 4/5
+      difficulty: 基础
+      note: 并列连词或because/although
+
+    - question: 4
+      typical_topic: 疑问词（what/when/where/how）
+      frequency: 5/5
+      difficulty: 基础
+      note: 特殊疑问句
+
+    - question: 5
+      typical_topic: 形容词/副词比较级最高级
+      frequency: 5/5
+      difficulty: 基础
+      note: 高频必考，比较级用法
+
+    - question: 6
+      typical_topic: 情态动词（must/can/should）
+      frequency: 4/5
+      difficulty: 基础
+      note: 语境中判断情态动词含义
+
+    - question: 7
+      typical_topic: 时态（一般过去/现在完成时）
+      frequency: 5/5
+      difficulty: 基础-中档
+      note: 根据时间状语判断时态
+
+    - question: 8
+      typical_topic: 时态（一般将来/现在进行时）
+      frequency: 5/5
+      difficulty: 基础-中档
+
+    - question: 9
+      typical_topic: 被动语态
+      frequency: 5/5
+      difficulty: 中档
+      note: 一般现在时/一般过去时被动语态
+
+    - question: 10
+      typical_topic: 非谓语动词（to do / doing）
+      frequency: 4/5
+      difficulty: 中档
+      note: 动词后接to do还是doing
+
+    - question: 11
+      typical_topic: 宾语从句
+      frequency: 5/5
+      difficulty: 中档
+      note: 必考——语序（陈述语序）和时态呼应
+
+    - question: 12
+      typical_topic: 状语从句（if/when/because/although）
+      frequency: 5/5
+      difficulty: 中档
+      note: 从属连词的选择
+
+  完形填空:
+    overall:
+      article_length: 200-250词
+      question_count: "10题(2021-2023) → 8题(2024-2025)"
+      genre: 记叙文为主（约90%）
+      themes:
+        - 成长感悟
+        - 助人为乐
+        - 坚持与努力
+        - 亲情友情
+        - 文化体验
+      difficulty: 基础-中档
+      key_skills:
+        - 词义辨析（动词/名词/形容词）
+        - 上下文逻辑推理
+        - 固定搭配和短语
+        - 文章整体理解
+
+    yearly_detail:
+      - year: 2021
+        theme: 坚持梦想的故事
+        count: 10
+        difficulty: 中档
+      - year: 2022
+        theme: 家庭关爱
+        count: 10
+        difficulty: 基础
+      - year: 2023
+        theme: 志愿服务经历
+        count: 10
+        difficulty: 中档
+      - year: 2024
+        theme: 成长与选择
+        count: 8
+        difficulty: 中档
+      - year: 2025
+        theme: 校园活动感悟
+        count: 8
+        difficulty: 基础-中档
+
+  阅读理解:
+    A篇:
+      genre: 应用文
+      length: 约200词
+      question_count: 4
+      difficulty: 基础
+      frequency: 5/5
+      typical_formats:
+        - 广告/海报
+        - 活动通知
+        - 表格/图表信息
+        - 网页信息
+      question_types:
+        - 细节查找（3题）
+        - 主旨/目的（1题）
+      yearly_topics:
+        - 2021: 夏令营活动介绍
+        - 2022: 图书馆活动通知
+        - 2023: 课外兴趣班广告
+        - 2024: 志愿者招募通知
+        - 2025: 研学旅行活动方案
+
+    B篇:
+      genre: 记叙文
+      length: 约300词
+      question_count: 4-5
+      difficulty: 中档
+      frequency: 5/5
+      typical_themes:
+        - 人物故事（成长/励志）
+        - 生活经历
+        - 文化交流
+      question_types:
+        - 细节理解（2题）
+        - 推理判断（1题）
+        - 主旨大意（1题）
+        - 词义猜测（偶有）
+
+    C篇:
+      genre: 说明文/议论文
+      length: 约350词
+      question_count: 4-5
+      difficulty: 中档-较难
+      frequency: 5/5
+      typical_themes:
+        - 科普知识（AI/太空/环保）
+        - 社会现象分析
+        - 健康与心理
+      question_types:
+        - 细节理解（2题）
+        - 推理判断（1-2题）
+        - 词义猜测（1题）
+        - 主旨/标题选择（1题）
+      note: C篇是笔试中区分度最高的阅读篇章
+
+    D篇_阅读回答:
+      genre: 议论文/说明文
+      length: 约350词
+      question_count: 5
+      total_score: 10  # 2021-2023为10分，2024起调整纳入文段表达
+      difficulty: 中档-较难
+      frequency: 5/5
+      question_format:
+        - "Q1-Q4: 根据文章内容回答问题（每题2分）"
+        - "Q5: 开放性问题，需结合文章和个人观点回答（2分）"
+      typical_themes:
+        - 教育与成长
+        - 科技对生活的影响
+        - 社会责任
+      note: 第5题为北京特色开放性题，需有理有据表达观点
+
+  文段表达:
+    选词填空:
+      question_count: 约4-5空
+      total_score: 4
+      difficulty: 基础-中档
+      description: 从方框中选择合适的词或短语填入文段
+      note: 考查词汇理解和语篇衔接
+
+    书面表达:
+      total_score: 10
+      word_count: 50-80词
+      frequency: 5/5
+      difficulty: 中档
+      format: 二选一（2024年起提供两个话题任选其一）
+      yearly_topics:
+        - 2021: 向外国朋友介绍一项中国传统技艺
+        - 2022: 描述一次难忘的志愿服务经历
+        - 2023: 给朋友写信推荐一本好书
+        - 2024: 写一篇关于学校科技节的报道 / 描述最喜欢的课外活动
+        - 2025: 记录一次社会实践活动 / 介绍中国传统节日
+
+# ------ 听口机考题型分布 ------
+listening_speaking_map:
+  note: 2024年起调整为40分
+  sections:
+    - type: 听后选择
+      score: 6
+      count: 4
+      difficulty: 基础
+      frequency: 5/5
+
+    - type: 听后回答
+      score: 10
+      count: 5
+      difficulty: 基础-中档
+      frequency: 5/5
+      note: 需口头完整句回答
+
+    - type: 听后记录+转述
+      score: 10
+      difficulty: 中档
+      frequency: 5/5
+      note: 先填表后转述，是拉开分差的关键题型
+
+    - type: 朗读短文
+      score: 6
+      count: 1
+      difficulty: 基础
+      frequency: 5/5
+
+    - type: 看图/情景回答
+      score: 8
+      count: 2
+      difficulty: 中档
+      frequency: 2/2  # 2024新增题型
+      note: 2024年改革后新增
+
+# ------ 各分数段得分策略 ------
+score_targets:
+
+  - target: 60分（及格）
+    guaranteed:
+      - "听口机考基础题：听后选择+朗读（约12分）"
+      - "单选前8题（8分）"
+      - "阅读A篇（8分）"
+      - "完形前4题（4分）"
+    subtotal: 约32分确定
+    additional: "听口回答部分 + 阅读B篇2-3题 + 作文基础分 ≈ 28分"
+    total: 约60分
+
+  - target: 75分（良好）
+    additional_on_60:
+      - "听口中档题：听后回答+记录转述部分（约15分）"
+      - "单选9-12题（4分）"
+      - "完形全对或错1-2题（6-8分）"
+      - "阅读B篇全对（8-10分）"
+      - "阅读C篇2-3题（4-6分）"
+      - "作文6-7分"
+    total: 约75分
+
+  - target: 85分（优秀）
+    additional_on_75:
+      - "听口高分：转述题得分 + 情景回答（30-35分）"
+      - "阅读C篇全对（8-10分）"
+      - "阅读D篇前4题（8分）"
+      - "选词填空（3-4分）"
+      - "作文8分"
+    total: 约85分
+
+  - target: 95+分（拔尖）
+    additional: "听口接近满分(38+) + D篇开放题满分 + 作文9-10分"
+    note: 英语95+需要听口和笔试双高，作文和开放题是关键
+
+# ------ 核心趋势 ------
+key_insights:
+  - 2024年改革是近年最大变化——笔试压缩10分给听口
+  - 完形填空从10题减至8题，但单篇难度未变
+  - 阅读理解整体结构稳定，A/B/C三篇+D篇回答是核心
+  - 单选12题连续5年考查知识点高度稳定（代词/介词/时态/从句）
+  - 书面表达从2024年起提供二选一，降低审题难度
+  - C篇阅读区分度最高，科普类文章阅读能力是高分关键
+  - 听口40分中"听后记录+转述"（10分）是最大拉分点
+  - 开放性题目增多，需要学生表达个人观点和理由

@@ -1,0 +1,294 @@
+# 2025年北京中考语文真题逐题分析
+year: 2025
+region: 北京
+subject: 语文
+full_score: 100
+duration_minutes: 150
+total_questions: 25
+
+structure:
+  - section: 基础·运用
+    score: 15
+    question_range: "1-5"
+    description: 语文基础知识与语言运用（情境化任务加强）
+  - section: 古诗文阅读
+    score: 18
+    question_range: "6-13"
+    description: 古诗文默写、古诗词鉴赏、文言文阅读
+  - section: 名著阅读
+    score: 5
+    question_range: "14-15"
+    description: 名著阅读理解与分析
+  - section: 现代文阅读
+    score: 22
+    question_range: "16-23"
+    description: 非连续性文本/说明文阅读、记叙文/散文阅读
+  - section: 写作
+    score: 40
+    question_range: "24-25"
+    description: 作文二选一
+
+difficulty_distribution:
+  easy: 0.26
+  medium: 0.50
+  hard: 0.24
+  estimated_avg_score: 69
+
+domain_distribution:
+  基础积累与运用: 0.15
+  古诗文阅读: 0.18
+  名著阅读: 0.05
+  现代文阅读: 0.22
+  写作: 0.40
+
+questions:
+  # ===== 基础·运用 =====
+  - id: 1
+    section: 基础·运用
+    score: 2
+    type: 选择题
+    knowledge_point: 字音字形
+    description: 在情境任务中判断字音字形正误
+    difficulty: easy
+    key_content: 延续2024情境化命题风格，以学校社团活动为场景
+
+  - id: 2
+    section: 基础·运用
+    score: 2
+    type: 选择题
+    knowledge_point: 词语运用
+    description: 根据活动情境选择恰当词语
+    difficulty: easy
+    key_content: 近义词辨析，注意词语的语体色彩和搭配
+
+  - id: 3
+    section: 基础·运用
+    score: 2
+    type: 选择题
+    knowledge_point: 语病·标点
+    description: 修改情境文本中的表达问题
+    difficulty: medium
+    key_content: 语病辨识和标点符号的规范使用
+
+  - id: 4
+    section: 基础·运用
+    score: 4
+    type: 综合题
+    knowledge_point: 综合性学习·情境任务
+    description: 围绕"传统文化进校园"主题完成系列任务
+    difficulty: medium
+    key_content: |
+      情境化综合任务：
+      - 为活动撰写解说词或倡议书
+      - 材料信息的提炼与整合
+      - 口语交际中的得体表达
+
+  - id: 5
+    section: 基础·运用
+    score: 5
+    type: 综合题
+    knowledge_point: 书法鉴赏与文化常识
+    description: 书法鉴赏及传统文化综合运用
+    difficulty: medium
+    key_content: 辨识不同书体的艺术特点，融合文化常识考查
+
+  # ===== 古诗文阅读 =====
+  - id: 6
+    section: 古诗文阅读
+    score: 4
+    type: 填空题
+    knowledge_point: 古诗文默写
+    description: 古诗文名句默写（含情境化理解性默写）
+    difficulty: easy
+    key_content: |
+      考查篇目包括：
+      - 《关雎》"窈窕淑女，君子好逑"
+      - 《行路难》"长风破浪会有时，直挂云帆济沧海"
+      - 《醉翁亭记》相关名句
+      - 情境化理解性默写：给出生活情境，填写对应名句
+
+  - id: 7
+    section: 古诗文阅读
+    score: 2
+    type: 选择题
+    knowledge_point: 古诗词鉴赏
+    description: 选出对诗歌赏析不恰当的一项
+    difficulty: medium
+    key_content: 综合考查诗歌内容、手法、情感的准确理解
+
+  - id: 8
+    section: 古诗文阅读
+    score: 2
+    type: 简答题
+    knowledge_point: 古诗词鉴赏
+    description: 从炼字角度赏析诗中某个字词的妙处
+    difficulty: medium
+    key_content: 炼字赏析，要求结合诗句分析字词的表达效果
+
+  - id: 9
+    section: 古诗文阅读
+    score: 2
+    type: 选择题
+    knowledge_point: 文言文实词
+    description: 解释文言实词含义
+    difficulty: easy
+    key_content: 课内核心篇目实词，注意通假字和古今异义
+
+  - id: 10
+    section: 古诗文阅读
+    score: 2
+    type: 选择题
+    knowledge_point: 文言文虚词·句式
+    description: 辨析虚词用法或翻译文言语句
+    difficulty: medium
+    key_content: 虚词一词多义，或判断特殊句式
+
+  - id: 11
+    section: 古诗文阅读
+    score: 2
+    type: 简答题
+    knowledge_point: 文言文翻译
+    description: 翻译画线语句
+    difficulty: medium
+    key_content: 关键词准确翻译，语句通顺完整
+
+  - id: 12
+    section: 古诗文阅读
+    score: 2
+    type: 简答题
+    knowledge_point: 文言文内容理解
+    description: 分析文中人物的思想或文章主旨
+    difficulty: hard
+    key_content: 深入理解文本内涵，把握作者情感态度
+
+  - id: 13
+    section: 古诗文阅读
+    score: 2
+    type: 简答题
+    knowledge_point: 文言文比较·拓展
+    description: 结合甲乙两文，谈对某一主题的理解
+    difficulty: hard
+    key_content: 课内外比较阅读，要求联系两文内容进行综合分析
+
+  # ===== 名著阅读 =====
+  - id: 14
+    section: 名著阅读
+    score: 2
+    type: 选择题
+    knowledge_point: 名著内容识记
+    description: 选出名著信息表述正确的一项
+    difficulty: easy
+    key_content: 考查《水浒传》《朝花夕拾》《艾青诗选》等必读名著
+
+  - id: 15
+    section: 名著阅读
+    score: 3
+    type: 简答题
+    knowledge_point: 名著深度阅读
+    description: 从名著中选择一个人物，分析其身上体现的精神力量
+    difficulty: medium
+    key_content: |
+      要求：
+      - 选择具体人物和情节
+      - 分析人物精神品质
+      - 联系自身或现实谈感悟
+
+  # ===== 现代文阅读 =====
+  - id: 16
+    section: 现代文阅读
+    score: 2
+    type: 选择题
+    knowledge_point: 非连续性文本·信息判断
+    description: 根据材料判断信息的正误
+    difficulty: medium
+    key_content: 多材料组合阅读，涉及科技发展或社会热点话题
+
+  - id: 17
+    section: 现代文阅读
+    score: 3
+    type: 简答题
+    knowledge_point: 非连续性文本·信息整合
+    description: 综合多则材料概括信息
+    difficulty: medium
+    key_content: 从不同材料中提取关键信息并归纳整合
+
+  - id: 18
+    section: 现代文阅读
+    score: 2
+    type: 简答题
+    knowledge_point: 非连续性文本·观点表达
+    description: 结合材料表达自己的观点或建议
+    difficulty: medium
+    key_content: 开放性题目，观点需有材料依据支撑
+
+  - id: 19
+    section: 现代文阅读
+    score: 3
+    type: 简答题
+    knowledge_point: 非连续性文本·图文分析
+    description: 分析图表与文字材料之间的关系
+    difficulty: medium
+    key_content: 图表信息的读取与文本信息的对照分析
+
+  - id: 20
+    section: 现代文阅读
+    score: 3
+    type: 简答题
+    knowledge_point: 记叙文/散文·内容概括
+    description: 概括文章叙写的主要内容
+    difficulty: medium
+    key_content: 文章主题关联成长、亲情或时代记忆
+
+  - id: 21
+    section: 现代文阅读
+    score: 3
+    type: 简答题
+    knowledge_point: 记叙文/散文·语言赏析
+    description: 赏析文中精彩语句的表达效果
+    difficulty: medium
+    key_content: 修辞手法、描写方法、语言风格等多角度赏析
+
+  - id: 22
+    section: 现代文阅读
+    score: 3
+    type: 简答题
+    knowledge_point: 记叙文/散文·手法与结构
+    description: 分析文章的写作特色或结构安排
+    difficulty: hard
+    key_content: 首尾呼应、线索贯穿、详略得当等
+
+  - id: 23
+    section: 现代文阅读
+    score: 3
+    type: 简答题
+    knowledge_point: 记叙文/散文·主题理解
+    description: 结合全文，深入理解文章主旨
+    difficulty: hard
+    key_content: 多层次理解主题，体现对文本的深度思考
+
+  # ===== 写作 =====
+  - id: 24
+    section: 写作
+    score: 40
+    type: 作文
+    knowledge_point: 记叙类作文
+    description: 围绕生活感悟的命题作文
+    difficulty: medium
+    key_content: |
+      题目一：记叙类作文
+      以日常生活中的细微发现或感悟为切入点
+      要求有具体的叙事、生动的描写和真实的情感
+      字数600-800字
+
+  - id: 25
+    section: 写作
+    score: 40
+    type: 作文
+    knowledge_point: 想象·议论类作文
+    description: 以话题引发思考的开放性作文
+    difficulty: hard
+    key_content: |
+      题目二：思辨类或想象类作文
+      围绕传统与创新、个人与社会等话题展开
+      可以写议论文，也可以写想象文
+      要求思路清晰、有深度，字数600-800字

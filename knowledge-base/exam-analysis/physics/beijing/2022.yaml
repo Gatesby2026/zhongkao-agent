@@ -1,0 +1,301 @@
+# 2022年北京中考物理试卷分析
+# 双减后首次中考，难度明显下降，更贴近课本
+year: 2022
+region: 北京
+subject: 物理
+full_score: 70
+duration_minutes: 90
+total_questions: 23
+
+structure:
+  - section: 单项选择题
+    question_range: "1-12"
+    count: 12
+    score_per_question: 2
+    total_score: 24
+  - section: 多项选择题
+    question_range: "13-15"
+    count: 3
+    score_per_question: 2
+    total_score: 6
+  - section: 实验探究题
+    question_range: "16-20"
+    count: 5
+    total_score: 28
+  - section: 科普阅读题
+    question_range: "21"
+    count: 1
+    total_score: 4
+  - section: 计算题
+    question_range: "22-23"
+    count: 2
+    total_score: 8
+
+difficulty_distribution:
+  easy:
+    ratio: 0.50
+    score: 35
+    description: 双减后基础比例增大，直接考课本原题或变式
+  medium:
+    ratio: 0.35
+    score: 24.5
+    description: 中等难度题减少，综合性降低
+  hard:
+    ratio: 0.15
+    score: 10.5
+    description: 难题比例压缩，压轴难度下降
+
+domain_distribution:
+  力学:
+    ratio: 0.36
+    score: 25
+    key_topics: [力与运动, 压强, 浮力, 功和功率, 简单机械]
+  电学:
+    ratio: 0.33
+    score: 23
+    key_topics: [欧姆定律, 电功率, 串并联, 电与磁]
+  热学:
+    ratio: 0.14
+    score: 10
+    key_topics: [内能, 比热容, 物态变化, 热量计算]
+  光学:
+    ratio: 0.11
+    score: 8
+    key_topics: [凸透镜成像, 光的反射, 平面镜]
+  声学:
+    ratio: 0.06
+    score: 4
+    key_topics: [声音特征, 噪声控制]
+
+questions:
+  # ===== 单项选择题 =====
+  - number: 1
+    type: 单选
+    score: 2
+    difficulty: easy
+    domain: 声学
+    knowledge_point: 声音的特征
+    description: 辨别音调、响度、音色的区别
+    common_error: 将响度与音调混淆
+
+  - number: 2
+    type: 单选
+    score: 2
+    difficulty: easy
+    domain: 光学
+    knowledge_point: 光的直线传播
+    description: 影子、日食月食等直线传播现象
+    common_error: 日食成因解释错误
+
+  - number: 3
+    type: 单选
+    score: 2
+    difficulty: easy
+    domain: 热学
+    knowledge_point: 物态变化判断
+    description: 冬奥会情境下的物态变化辨析
+    common_error: 人造雪的物态变化类型判断错
+
+  - number: 4
+    type: 单选
+    score: 2
+    difficulty: easy
+    domain: 力学
+    knowledge_point: 运动和静止的相对性
+    description: 参照物的选取与运动状态判断
+    common_error: 参照物选取不当导致判断矛盾
+
+  - number: 5
+    type: 单选
+    score: 2
+    difficulty: easy
+    domain: 电学
+    knowledge_point: 电路连接
+    description: 根据实物图画电路图或判断连接方式
+    common_error: 实物图转电路图时短路判断错
+
+  - number: 6
+    type: 单选
+    score: 2
+    difficulty: easy
+    domain: 力学
+    knowledge_point: 二力平衡
+    description: 判断平衡力与相互作用力
+    common_error: 混淆平衡力和作用力反作用力
+
+  - number: 7
+    type: 单选
+    score: 2
+    difficulty: easy
+    domain: 热学
+    knowledge_point: 热传递与内能
+    description: 做功和热传递改变内能的辨析
+    common_error: 认为只有加热才能改变内能
+
+  - number: 8
+    type: 单选
+    score: 2
+    difficulty: medium
+    domain: 电学
+    knowledge_point: 磁现象
+    description: 电磁铁磁性强弱的影响因素
+    common_error: 匝数和电流对磁性影响方向判错
+
+  - number: 9
+    type: 单选
+    score: 2
+    difficulty: medium
+    domain: 力学
+    knowledge_point: 液体压强
+    description: 连通器原理及液体压强影响因素
+    common_error: 忽略液体密度对压强的影响
+
+  - number: 10
+    type: 单选
+    score: 2
+    difficulty: medium
+    domain: 电学
+    knowledge_point: 安全用电
+    description: 家庭电路中开关、保险丝的正确接法
+    common_error: 三孔插座接线位置混淆
+
+  - number: 11
+    type: 单选
+    score: 2
+    difficulty: medium
+    domain: 力学
+    knowledge_point: 功率
+    description: 比较不同情境下的功率大小
+    common_error: 做功多不代表功率大
+
+  - number: 12
+    type: 单选
+    score: 2
+    difficulty: medium
+    domain: 光学
+    knowledge_point: 凸透镜成像
+    description: 生活中凸透镜应用（放大镜、照相机、投影仪）
+    common_error: 物距像距与成像特点的对应错误
+
+  # ===== 多项选择题 =====
+  - number: 13
+    type: 多选
+    score: 2
+    difficulty: medium
+    domain: 力学
+    knowledge_point: 密度与浮力
+    description: 物质密度比较及浮沉条件综合
+    common_error: 密度公式变形使用不当
+
+  - number: 14
+    type: 多选
+    score: 2
+    difficulty: medium
+    domain: 电学
+    knowledge_point: 欧姆定律应用
+    description: 动态电路分析，电表示数变化判断
+    common_error: 串联分压与并联分流关系分析错
+
+  - number: 15
+    type: 多选
+    score: 2
+    difficulty: hard
+    domain: 电学
+    knowledge_point: 电功率综合
+    description: 电路中功率、电流、电压的综合比较
+    common_error: 串并联切换时总功率变化判断失误
+
+  # ===== 实验探究题 =====
+  - number: 16
+    type: 实验探究
+    score: 4
+    difficulty: easy
+    domain: 力学
+    knowledge_point: 测量物体速度
+    description: 用刻度尺和停表测量小车在斜面上的平均速度
+    key_steps: [测量路程, 测量时间, 计算平均速度, 比较各段速度]
+    common_error: 全程平均速度不等于各段速度的算术平均
+
+  - number: 17
+    type: 实验探究
+    score: 6
+    difficulty: medium
+    domain: 热学
+    knowledge_point: 比较不同物质吸热能力
+    description: 探究水和食用油的吸热升温特点
+    key_steps: [控制质量相同, 相同加热方式, 记录温度变化, 比较吸热能力]
+    common_error: 未控制变量导致结论不可靠
+
+  - number: 18
+    type: 实验探究
+    score: 6
+    difficulty: medium
+    domain: 电学
+    knowledge_point: 伏安法测电阻
+    description: 用电压表和电流表测量定值电阻的阻值
+    key_steps: [连接电路, 多次测量取平均值, 画U-I图像, 计算电阻]
+    common_error: 滑动变阻器未调至最大阻值就闭合开关
+
+  - number: 19
+    type: 实验探究
+    score: 6
+    difficulty: medium
+    domain: 力学
+    knowledge_point: 探究液体压强
+    description: 利用U形管压强计探究液体压强规律
+    key_steps: [同种液体不同深度, 同深度不同液体, 同深度不同方向]
+    common_error: U形管液面差与压强的对应关系理解错
+
+  - number: 20
+    type: 实验探究
+    score: 6
+    difficulty: hard
+    domain: 电学
+    knowledge_point: 测量小灯泡电功率
+    description: 伏安法测小灯泡在不同电压下的实际功率
+    key_steps: [调节滑动变阻器, 分别在额定电压和偏低偏高电压下测量, 比较亮度]
+    common_error: 灯丝电阻随温度变化导致多次测量结果不一致的原因分析
+
+  # ===== 科普阅读题 =====
+  - number: 21
+    type: 科普阅读
+    score: 4
+    difficulty: medium
+    domain: 力学
+    knowledge_point: 北京冬奥会与冰雪运动
+    description: 阅读冬奥冰壶运动材料，解答摩擦力与惯性相关问题
+    common_error: 不能从材料中准确提取信息作答
+
+  # ===== 计算题 =====
+  - number: 22
+    type: 计算
+    score: 4
+    difficulty: medium
+    domain: 力学
+    knowledge_point: 压强计算
+    description: 固体压强的基本计算
+    formula: ["p=F/S", "F=G=mg"]
+    common_error: 受力面积选取错误
+
+  - number: 23
+    type: 计算
+    score: 4
+    difficulty: hard
+    domain: 电学
+    knowledge_point: 电功率计算
+    description: 电热水壶加热问题，涉及电功率和热量计算
+    formula: ["P=UI", "Q=cmΔt", "W=Pt", "η=Q吸/W电"]
+    common_error: 效率计算中有用功和总功概念混淆
+
+overall_analysis:
+  avg_score_estimate: 56
+  pass_rate_estimate: 0.88
+  highlights:
+    - 双减后首考，难度明显下降，基础题占比从40%增至50%
+    - 情境贴近课本和生活，冬奥主题融入科普阅读
+    - 实验探究难度降低，操作步骤描述要求简化
+    - 计算题步骤减少，压轴题难度显著低于2021年
+  advice:
+    - 回归课本基础，确保课后习题全部掌握
+    - 关注时事热点（冬奥、航天等）与物理的结合
+    - 实验题重点掌握控制变量法的表述

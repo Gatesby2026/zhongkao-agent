@@ -1,0 +1,370 @@
+# ============================================================
+# 北京中考英语 — 知识点权重分析
+# ============================================================
+# 数据来源：近5年(2021-2025)北京中考英语真题统计
+# 最后更新：2026-04-12
+# 满分：100分（笔试60 + 听口40）
+
+subject: 英语
+region: 北京市
+
+# ------ 大模块总体占比 ------
+modules_overview:
+  - module: 听力口语
+    score_ratio: 40%       # 40分
+    description: 2024年起从30→40分，包含听后选择/回答/记录转述/朗读/情景回答
+
+  - module: 语法与词汇（单选）
+    score_ratio: 12%       # 12分
+    description: 12道单选题，语境化考查语法和词汇
+
+  - module: 完形填空
+    score_ratio: 8%        # 8分
+    description: 一篇记叙文，8道选择题
+
+  - module: 阅读理解
+    score_ratio: 26%       # 26分
+    description: A/B/C三篇选择题，13题共26分
+
+  - module: 文段表达
+    score_ratio: 14%       # 14分
+    description: 选词填空(4分) + 书面表达(10分)
+
+# ------ 细分知识点权重 ------
+knowledge_points:
+
+  # ====== 语法核心考点 ======
+  语法核心考点:
+    - name: 时态（8大时态）
+      frequency: 极高
+      typical_score: 3-4分（单选直接考2-3题，完形/写作间接涉及）
+      difficulty: 基础-中档
+      typical_questions: 单选第7-8题
+      details:
+        - 一般现在时（三单变化，频率副词）
+        - 一般过去时（规则/不规则动词过去式）
+        - 一般将来时（will / be going to 区分）
+        - 现在进行时（be + doing）
+        - 过去进行时（when/while引导的时间从句）
+        - 现在完成时（for/since/already/yet/ever/never，高频必考）
+        - 过去完成时（阅读中出现，单选偶考）
+      exam_note: 现在完成时是近5年考频最高的时态考点
+
+    - name: 被动语态
+      frequency: 高
+      typical_score: 1-2分
+      difficulty: 中档
+      typical_questions: 单选第9题
+      details:
+        - 一般现在时被动（am/is/are + done）
+        - 一般过去时被动（was/were + done）
+        - 含情态动词的被动（can/must/should + be done）
+      exam_note: 连续5年在单选中出现
+
+    - name: 宾语从句
+      frequency: 极高
+      typical_score: 1-2分
+      difficulty: 中档
+      typical_questions: 单选第11题
+      details:
+        - that引导的宾语从句
+        - if/whether引导的宾语从句
+        - 疑问词引导的宾语从句
+        - 语序规则（陈述语序）
+        - 时态呼应（主句过去时，从句相应后移）
+      exam_note: 北京中考单选必考，重点考语序和时态呼应
+
+    - name: 状语从句
+      frequency: 极高
+      typical_score: 1-2分
+      difficulty: 中档
+      typical_questions: 单选第12题
+      details:
+        - 时间状语从句（when/while/before/after/until/as soon as）
+        - 条件状语从句（if — 主将从现）
+        - 原因状语从句（because）
+        - 让步状语从句（although/though）
+      exam_note: if条件句"主将从现"是最高频考点
+
+    - name: 代词
+      frequency: 极高
+      typical_score: 1分
+      difficulty: 基础
+      typical_questions: 单选第1题
+      details:
+        - 人称代词主格/宾格
+        - 形容词性物主代词 vs 名词性物主代词
+        - 不定代词（something/anything/nothing/everyone等）
+      exam_note: 连续5年第1题考代词
+
+    - name: 介词与介词短语
+      frequency: 高
+      typical_score: 1分
+      difficulty: 基础
+      typical_questions: 单选第2题
+      details:
+        - 时间介词（in+月/年, on+具体日, at+时刻）
+        - 地点介词（in/on/at/between/among）
+        - 固定搭配（be good at, be interested in, look forward to）
+
+    - name: 形容词/副词比较级最高级
+      frequency: 极高
+      typical_score: 1分
+      difficulty: 基础
+      typical_questions: 单选第5题
+      details:
+        - 规则变化（-er/-est, more/most）
+        - 不规则变化（good-better-best, bad-worse-worst）
+        - 比较级句型（比较级+than, as...as）
+        - 最高级句型（the+最高级+in/of）
+      exam_note: 连续5年必考
+
+    - name: 非谓语动词
+      frequency: 高
+      typical_score: 1分
+      difficulty: 中档
+      typical_questions: 单选第10题
+      details:
+        - to do 作宾语（want/decide/plan/hope + to do）
+        - doing 作宾语（enjoy/finish/mind/practice + doing）
+        - see/hear/make/let + do/doing
+      exam_note: 核心考点是区分动词后接to do还是doing
+
+    - name: 情态动词
+      frequency: 高
+      typical_score: 1分
+      difficulty: 基础
+      typical_questions: 单选第6题
+      details:
+        - can/could（能力/许可）
+        - must/have to（必须）
+        - should/had better（建议）
+        - may/might（可能）
+        - needn't（不必要）
+
+    - name: 定语从句
+      frequency: 中
+      typical_score: 0-1分
+      difficulty: 中档
+      typical_questions: 阅读理解中理解，单选偶考
+      details:
+        - that/which引导（修饰物）
+        - who引导（修饰人）
+        - 限定性定语从句基本结构
+      exam_note: 北京中考单选不常直接考，但阅读中频繁出现
+
+  # ====== 词汇与语篇能力 ======
+  词汇与语篇能力:
+    - name: 词义辨析
+      frequency: 极高
+      typical_score: 4-6分（完形填空核心）
+      difficulty: 中档
+      typical_questions: 完形填空
+      details:
+        - 动词辨析（look/watch/see/read, say/tell/speak/talk）
+        - 名词辨析（chance/choice/change）
+        - 形容词辨析（happy/glad/pleased/cheerful）
+        - 副词辨析（also/too/either/as well）
+      strategy_note: 完形填空的核心能力，需大量阅读积累语感
+
+    - name: 固定搭配与短语
+      frequency: 高
+      typical_score: 2-4分
+      difficulty: 基础-中档
+      typical_questions: 单选/完形
+      details:
+        - 动词短语（turn on/off/up/down, give up, look after）
+        - 介词短语（in front of, instead of, because of）
+        - 形容词短语（be afraid of, be proud of）
+
+    - name: 上下文逻辑推理
+      frequency: 极高
+      typical_score: 融入完形和阅读
+      difficulty: 中档-较难
+      typical_questions: 完形填空/阅读C篇
+      details:
+        - 因果关系推理
+        - 转折关系判断
+        - 总分关系理解
+        - 代词指代分析
+
+  # ====== 阅读核心能力 ======
+  阅读核心能力:
+    - name: 细节理解
+      frequency: 极高
+      typical_score: 12-14分
+      difficulty: 基础-中档
+      typical_questions: 阅读A/B/C篇约50%的题
+      details:
+        - 直接查找信息（时间/地点/人物/数字）
+        - 信息匹配和比较
+        - 表格/图表信息提取
+      strategy_note: 阅读理解中占比最大，是基础得分点
+
+    - name: 主旨大意
+      frequency: 高
+      typical_score: 4-6分
+      difficulty: 中档
+      typical_questions: 每篇阅读1题
+      details:
+        - 标题选择
+        - 主旨概括
+        - 作者目的判断
+
+    - name: 推理判断
+      frequency: 高
+      typical_score: 4-6分
+      difficulty: 中档-较难
+      typical_questions: B/C篇各1-2题
+      details:
+        - 推断作者态度和观点
+        - 推断事件发展
+        - 推断隐含信息
+      strategy_note: C篇推理判断题是区分度最高的题型
+
+    - name: 词义猜测
+      frequency: 中
+      typical_score: 2分
+      difficulty: 中档
+      typical_questions: C篇通常1题
+      details:
+        - 根据上下文语境猜词
+        - 根据构词法（前缀/后缀）猜词
+        - 根据同义/反义关系猜词
+
+  # ====== 听口核心能力 ======
+  听口核心能力:
+    - name: 听力信息获取
+      frequency: 极高
+      typical_score: 16分（听后选择6 + 听后回答10）
+      difficulty: 基础-中档
+      details:
+        - 获取对话中的事实信息（who/what/when/where）
+        - 理解对话主旨
+        - 听懂短文大意
+      strategy_note: 听力是得分的基础，需每天练习
+
+    - name: 听后记录与转述
+      frequency: 极高
+      typical_score: 10分
+      difficulty: 中档
+      details:
+        - 边听边记关键信息
+        - 填写信息表格（5分）
+        - 根据表格口头转述（5分）
+      strategy_note: 这是听口中拉分差最大的题型，转述需要组织语言
+
+    - name: 朗读与口语表达
+      frequency: 极高
+      typical_score: 14分（朗读6 + 情景回答8）
+      difficulty: 基础-中档
+      details:
+        - 发音准确（元音/辅音/重音）
+        - 语调自然（升降调/停顿）
+        - 情景中的口头表达能力
+      strategy_note: 朗读是最容易提分的听口题型，多模仿录音
+
+# ------ 提分优先级建议 ------
+score_improvement_priority:
+
+  - rank: 1
+    area: 听口基础题（听后选择 + 朗读）
+    reason: 题型固定，难度低，练习见效快，共12分
+    potential: 10-12分
+    effort: 低
+
+  - rank: 2
+    area: 单选语法（代词/介词/比较级/时态/从句）
+    reason: 考点高度稳定，历年真题复现率极高
+    potential: 8-12分
+    effort: 低-中
+
+  - rank: 3
+    area: 阅读A篇 + B篇前半
+    reason: 应用文和记叙文，难度低，信息查找即可得分
+    potential: 12-16分
+    effort: 低
+
+  - rank: 4
+    area: 完形填空
+    reason: 记叙文为主，词汇量达标后正确率会显著提升
+    potential: 5-8分
+    effort: 中
+
+  - rank: 5
+    area: 听后记录与转述
+    reason: 分值大（10分），但需要专项训练听写和口头组织能力
+    potential: 6-10分
+    effort: 中
+
+  - rank: 6
+    area: 书面表达
+    reason: 背模板+练真题，基础分容易拿，高分需语言多样性
+    potential: 6-10分
+    effort: 中
+    strategy:
+      基础目标: 背熟开头结尾句型，确保要点完整，拿6-7分
+      进阶目标: 使用从句/非谓语/高级词汇，争取8-10分
+
+  - rank: 7
+    area: 阅读C篇 + D篇开放题
+    reason: 难度较高，需要较强的推理判断和表达能力
+    potential: 6-10分
+    effort: 中-高
+
+  - rank: 8
+    area: 听口情景回答
+    reason: 开放性强，需要较好的临场口语表达能力
+    potential: 4-8分
+    effort: 高
+
+# ------ 各题型知识点交叉分析 ------
+cross_analysis:
+  - knowledge: 时态
+    appears_in:
+      - 单选（直接考查，2-3分）
+      - 完形填空（间接涉及）
+      - 书面表达（时态使用是评分维度）
+      - 听口转述（需用正确时态转述）
+    total_impact: 约8-12分
+
+  - knowledge: 词汇量（1600词）
+    appears_in:
+      - 完形填空（词义辨析）
+      - 阅读理解（基础理解）
+      - 书面表达（用词得当）
+      - 听力理解（听懂关键词）
+    total_impact: 全卷基础，影响所有题型
+
+  - knowledge: 阅读能力
+    appears_in:
+      - 阅读理解（26分直接）
+      - 完形填空（需理解全文）
+      - 选词填空（需理解语篇）
+    total_impact: 约38分
+
+  - knowledge: 口语表达
+    appears_in:
+      - 听后回答（10分）
+      - 听后转述（5分）
+      - 朗读（6分）
+      - 情景回答（8分）
+    total_impact: 约29分
+
+# ------ 分数段特征 ------
+score_band_analysis:
+  - band: "40-60分"
+    weakness: 词汇量不足，语法基础薄弱，听力跟不上
+    strategy: 补词汇（重点600核心词）+ 语法基础（时态/从句）+ 每天听力15分钟
+  - band: "60-75分"
+    weakness: 完形和阅读B/C篇失分多，作文模板化
+    strategy: 精读训练 + 完形专项（每周2篇）+ 积累作文好句
+  - band: "75-85分"
+    weakness: C篇推理题和D篇开放题失分，听口转述不流利
+    strategy: 限时阅读训练 + 转述专项练习 + 作文升级句型
+  - band: "85-95分"
+    weakness: 细节失误（拼写/时态/大小写），开放题深度不够
+    strategy: 错题本精细化 + 读原版文章扩展思维 + 口语流利度训练
+  - band: "95+分"
+    weakness: 极少失分，主要在开放性题目和作文的表达深度
+    strategy: 保持语感（每天阅读+听力）+ 积累高级表达

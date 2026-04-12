@@ -1,0 +1,431 @@
+# ============================================================
+# 初中英语课程标准知识点体系（2022年版）
+# ============================================================
+# 来源：《义务教育英语课程标准（2022年版）》第四学段（7-9年级）
+# 最后更新：2026-04-12
+#
+# 要求层级说明：
+#   了解 — 能识别、辨认相关语言现象
+#   理解 — 能在语境中理解含义和用法
+#   掌握 — 能在交际中准确运用
+#   运用 — 能综合运用，灵活表达
+#
+# 中考权重说明（以北京为例）：
+#   ★★★ = 高频必考（近5年几乎每年出现）
+#   ★★  = 常考（3-4年出现）
+#   ★   = 偶考（1-2年出现或仅作了解）
+# ============================================================
+
+subject: 英语
+standard_version: "2022年版"
+grade_range: "7-9年级（第四学段）"
+total_vocabulary: 1600  # 课标要求掌握约1600个单词
+domains: 3    # 语言知识、语言技能、话题范围
+full_score: 100  # 笔试60分 + 听力口语40分
+
+# ================================================================
+#                    领域一：语言知识
+# ================================================================
+
+语言知识:
+
+  # ------ 语音 ------
+  语音:
+    exam_weight: ★
+    typical_score: 主要在听口机考中体现
+    knowledge_points:
+      - name: 26个字母的读音与书写
+        level: 掌握
+      - name: 元音字母在重读开音节和闭音节中的读音
+        level: 掌握
+      - name: 常见字母组合的读音规则
+        level: 理解
+      - name: 单词重音（双音节和多音节词）
+        level: 理解
+        exam_note: 听口机考朗读题考查
+      - name: 句子重读与语调（升调/降调）
+        level: 理解
+        exam_note: 听口机考中的朗读和听后回答题涉及
+      - name: 连读、失去爆破等语流音变
+        level: 了解
+
+  # ------ 词汇 ------
+  词汇:
+    exam_weight: ★★★
+    typical_score: 贯穿全卷各题型
+    knowledge_points:
+      - name: 课标1600词的拼写与基本词义
+        level: 掌握
+        exam_note: 北京考纲以课标1600词为准，是所有题型的基础
+      - name: 常用词组和固定搭配（约300个）
+        level: 掌握
+        exam_note: 完形填空和单选的核心考点
+      - name: 词汇的一词多义与词义辨析
+        level: 理解
+        exam_note: 单选和完形中常考近义词辨析
+      - name: 构词法——前缀（un-, dis-, re-, im-/in-）
+        level: 理解
+      - name: 构词法——后缀（-tion, -ment, -ful, -less, -ly, -er/-or）
+        level: 理解
+        exam_note: 阅读理解中猜词义的重要方法
+      - name: 构词法——合成词（something, everyday等）
+        level: 了解
+      - name: 词性转换（名→动、形→副等）
+        level: 理解
+
+  # ------ 语法 ------
+  语法:
+    exam_weight: ★★★
+    typical_score: 单选约12分直接考查，其他题型间接涉及
+
+    八大词类:
+      名词:
+        exam_weight: ★★★
+        typical_score: 1-2分
+        knowledge_points:
+          - name: 可数名词与不可数名词
+            level: 掌握
+          - name: 名词的复数形式（规则变化与不规则变化）
+            level: 掌握
+          - name: 名词所有格（'s 和 of 结构）
+            level: 掌握
+          - name: 专有名词的用法
+            level: 了解
+
+      代词:
+        exam_weight: ★★★
+        typical_score: 1-2分
+        knowledge_points:
+          - name: 人称代词（主格/宾格）
+            level: 掌握
+          - name: 物主代词（形容词性/名词性）
+            level: 掌握
+            exam_note: 单选高频考点
+          - name: 反身代词
+            level: 掌握
+          - name: 指示代词（this/that/these/those）
+            level: 掌握
+          - name: 不定代词（some/any/no/every及复合形式）
+            level: 掌握
+            exam_note: 完形填空常考
+          - name: 疑问代词（who/what/which/whose）
+            level: 掌握
+
+      冠词:
+        exam_weight: ★★
+        typical_score: 1分
+        knowledge_points:
+          - name: 不定冠词a/an的用法
+            level: 掌握
+          - name: 定冠词the的用法
+            level: 掌握
+          - name: 零冠词的用法
+            level: 理解
+
+      数词:
+        exam_weight: ★
+        typical_score: 0-1分
+        knowledge_points:
+          - name: 基数词（1-1000及以上）
+            level: 掌握
+          - name: 序数词
+            level: 掌握
+          - name: 时间/日期/年份的表达
+            level: 掌握
+
+      形容词:
+        exam_weight: ★★★
+        typical_score: 1-2分
+        knowledge_points:
+          - name: 形容词的基本用法（定语和表语）
+            level: 掌握
+          - name: 形容词比较级和最高级（规则与不规则变化）
+            level: 掌握
+            exam_note: 高频考点，单选几乎每年考
+          - name: 比较级的常见句型（as...as, more...than）
+            level: 掌握
+
+      副词:
+        exam_weight: ★★
+        typical_score: 1分
+        knowledge_points:
+          - name: 副词的基本用法
+            level: 掌握
+          - name: 副词的比较级和最高级
+            level: 掌握
+          - name: 频度副词（always/usually/often/sometimes/never）
+            level: 掌握
+          - name: 副词在句中的位置
+            level: 理解
+
+      介词:
+        exam_weight: ★★
+        typical_score: 1-2分
+        knowledge_points:
+          - name: 时间介词（in/on/at/before/after/during/for/since）
+            level: 掌握
+          - name: 地点介词（in/on/at/under/behind/between/among）
+            level: 掌握
+          - name: 方式/工具介词（by/with/in）
+            level: 掌握
+          - name: 介词短语（固定搭配）
+            level: 掌握
+            exam_note: 完形和单选常考固定介词搭配
+
+      连词:
+        exam_weight: ★★
+        typical_score: 1-2分
+        knowledge_points:
+          - name: 并列连词（and/but/or/so）
+            level: 掌握
+          - name: 从属连词（when/while/because/if/although/that）
+            level: 掌握
+            exam_note: 引导状语从句，单选必考
+
+    动词与时态语态:
+      exam_weight: ★★★
+      typical_score: 3-5分（单选直接考查）
+      knowledge_points:
+        - name: 动词的基本形式（原形/三单/过去式/过去分词/现在分词）
+          level: 掌握
+        - name: 一般现在时
+          level: 掌握
+        - name: 一般过去时
+          level: 掌握
+        - name: 一般将来时（will / be going to）
+          level: 掌握
+        - name: 现在进行时
+          level: 掌握
+        - name: 过去进行时
+          level: 掌握
+          exam_note: 常与when/while引导的时间状语从句结合考查
+        - name: 现在完成时
+          level: 掌握
+          exam_note: 高频必考，for/since/already/yet/ever/never
+        - name: 过去完成时
+          level: 理解
+          exam_note: 阅读理解中出现较多
+        - name: 被动语态（一般现在时/一般过去时/一般将来时/含情态动词）
+          level: 掌握
+          exam_note: 单选高频考点
+        - name: 情态动词（can/could/may/might/must/should/need/had better）
+          level: 掌握
+        - name: 系动词（be/look/sound/feel/taste/smell/become/get/turn）
+          level: 掌握
+
+    五大基本句型:
+      exam_weight: ★★
+      typical_score: 融入各题型
+      knowledge_points:
+        - name: 主 + 谓（S+V）
+          level: 掌握
+        - name: 主 + 谓 + 宾（S+V+O）
+          level: 掌握
+        - name: 主 + 谓 + 宾 + 宾补（S+V+O+OC）
+          level: 掌握
+        - name: 主 + 谓 + 间宾 + 直宾（S+V+IO+DO）
+          level: 掌握
+        - name: 主 + 系 + 表（S+V+P）
+          level: 掌握
+
+    从句:
+      exam_weight: ★★★
+      typical_score: 2-4分
+      knowledge_points:
+        - name: 宾语从句（that/if(whether)/疑问词引导）
+          level: 掌握
+          exam_note: 北京中考高频必考，注意语序和时态呼应
+        - name: 状语从句——时间（when/while/before/after/until/as soon as）
+          level: 掌握
+        - name: 状语从句——条件（if引导）
+          level: 掌握
+          exam_note: '"主将从现"规则必考'
+        - name: 状语从句——原因（because）
+          level: 掌握
+        - name: 状语从句——让步（although/though）
+          level: 理解
+        - name: 定语从句（that/which/who引导，限定性）
+          level: 理解
+          exam_note: 阅读理解中频繁出现，单选偶考
+
+    非谓语动词:
+      exam_weight: ★★
+      typical_score: 1-2分
+      knowledge_points:
+        - name: 动词不定式（to do作宾语/目的状语/宾补）
+          level: 掌握
+          exam_note: want/decide/plan/hope/agree + to do
+        - name: 动名词（doing作主语/宾语）
+          level: 掌握
+          exam_note: enjoy/finish/mind/keep/practice + doing
+        - name: 既跟to do又跟doing的动词（stop/remember/forget）
+          level: 理解
+        - name: 感官/使役动词后的非谓语（see/hear/make/let + do/doing）
+          level: 理解
+
+    特殊句式:
+      exam_weight: ★★
+      typical_score: 1-2分
+      knowledge_points:
+        - name: There be 句型
+          level: 掌握
+        - name: 祈使句
+          level: 掌握
+        - name: 感叹句（What/How引导）
+          level: 掌握
+        - name: 反意疑问句
+          level: 理解
+          exam_note: 单选偶考
+        - name: it作形式主语/形式宾语
+          level: 理解
+
+# ================================================================
+#                    领域二：语言技能
+# ================================================================
+
+语言技能:
+
+  听力理解:
+    exam_weight: ★★★
+    typical_score: 听口机考共40分
+    knowledge_points:
+      - name: 听懂日常对话获取事实性信息（时间/地点/人物/事件）
+        level: 掌握
+        exam_note: 听后选择题，听口机考Part 1
+      - name: 听懂短文大意，把握主旨
+        level: 掌握
+      - name: 听后回答问题（口头表达）
+        level: 掌握
+        exam_note: 听口机考Part 2，需口头作答
+      - name: 听后记录信息并转述
+        level: 运用
+        exam_note: 听口机考Part 3，听后填表或转述
+      - name: 根据语调判断说话者的态度和意图
+        level: 理解
+
+  阅读理解:
+    exam_weight: ★★★
+    typical_score: 笔试约26分
+    knowledge_points:
+      - name: 理解文章主旨大意
+        level: 掌握
+        exam_note: 阅读A篇/B篇常考
+      - name: 获取具体事实信息（细节题）
+        level: 掌握
+        exam_note: 阅读最基础题型，占比最大
+      - name: 根据上下文猜测词义
+        level: 掌握
+        exam_note: 几乎每年考1题
+      - name: 推断隐含信息和作者意图
+        level: 掌握
+        exam_note: C篇/D篇常考推理判断题
+      - name: 理解文章结构和逻辑关系
+        level: 理解
+      - name: 阅读回答问题（开放性回答）
+        level: 运用
+        exam_note: 阅读D篇最后一题为开放性问题
+
+  书面表达:
+    exam_weight: ★★★
+    typical_score: 笔试约14分（含10分大作文 + 约4分选词填空等）
+    knowledge_points:
+      - name: 根据提示写通知、邮件、日记、短文
+        level: 运用
+        exam_note: 大作文10分，话题贴近学生生活
+      - name: 语句通顺、时态正确、表达得体
+        level: 掌握
+      - name: 使用连接词使文章连贯（first/then/besides/finally/however）
+        level: 掌握
+      - name: 正确使用标点和大小写
+        level: 掌握
+      - name: 词数要求（一般50-80词）
+        level: 掌握
+
+# ================================================================
+#                    领域三：话题范围（24个话题）
+# ================================================================
+# 课标规定的24个话题覆盖中考阅读和写作的核心素材
+
+话题范围:
+  exam_weight: ★★★
+  typical_score: 贯穿阅读理解和书面表达
+  topics:
+    - name: 个人情况（Personal information）
+      level: 掌握
+      exam_note: 自我介绍、个人爱好，书面表达常考
+    - name: 家庭、朋友与周围的人（Family, friends and people around）
+      level: 掌握
+    - name: 居住环境（Living environment）
+      level: 理解
+    - name: 日常活动（Daily routines）
+      level: 掌握
+      exam_note: 阅读和作文高频话题
+    - name: 学校生活（School life）
+      level: 掌握
+      exam_note: 北京中考作文最常见话题之一
+    - name: 兴趣与爱好（Interests and hobbies）
+      level: 掌握
+    - name: 个人感受（Feelings and emotions）
+      level: 掌握
+    - name: 人际交往（Interpersonal communication）
+      level: 掌握
+    - name: 计划与愿望（Plans and intentions）
+      level: 掌握
+      exam_note: 书面表达常涉及未来计划
+    - name: 节假日与庆祝活动（Festivals, holidays and celebrations）
+      level: 掌握
+      exam_note: 中国传统节日是阅读热门话题
+    - name: 购物（Shopping）
+      level: 掌握
+    - name: 饮食（Food and drink）
+      level: 掌握
+    - name: 健康（Health）
+      level: 掌握
+      exam_note: 阅读和完形常考话题
+    - name: 天气（Weather）
+      level: 理解
+    - name: 文娱与体育（Entertainment and sports）
+      level: 掌握
+    - name: 旅游与交通（Travel and transport）
+      level: 掌握
+    - name: 语言学习（Language learning）
+      level: 掌握
+      exam_note: 书面表达偶尔涉及学习方法
+    - name: 自然（Nature）
+      level: 理解
+    - name: 世界与环境（The world and the environment）
+      level: 掌握
+      exam_note: 环保是近年阅读理解热门话题
+    - name: 科普知识与现代技术（Popular science and modern technology）
+      level: 掌握
+      exam_note: 阅读C/D篇科普文常考AI、航天等
+    - name: 历史与社会（History and society）
+      level: 理解
+    - name: 故事与诗歌（Stories and poems）
+      level: 理解
+    - name: 文学艺术（Literature and art）
+      level: 了解
+    - name: 安全与救护（Safety and first aid）
+      level: 理解
+
+# ================================================================
+#                    2022新课标变化要点
+# ================================================================
+
+new_in_2022:
+  added:
+    - "强调英语学科核心素养：语言能力、文化意识、思维品质、学习能力"
+    - "增加'看'（viewing）技能，即视觉信息理解"
+    - "加强中华优秀传统文化相关语篇"
+    - "新增跨文化交际意识的培养要求"
+    - "项目式学习和跨学科融合"
+  level_changes:
+    - "阅读理解要求提升：从获取信息到分析评价"
+    - "写作要求提升：从模仿到半开放性表达"
+    - "语法教学从碎片化转向语境化"
+  exam_impact:
+    - "北京中考听口分值从30→40分（2024年起），强调语用能力"
+    - "阅读理解增加开放性回答题"
+    - "书面表达更注重真实情境下的语言运用"
+    - "命题素材更多涉及中国文化和社会发展"
+    - "减少纯语法考查，增加语境中的语言运用"

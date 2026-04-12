@@ -1,0 +1,297 @@
+# ============================================================
+# 2024年北京中考英语笔试真题 — 逐题分析
+# ============================================================
+# 数据来源：北京教育考试院、菁优网、学科网
+# 最后更新：2026-04-12
+# 状态：基于多来源交叉验证
+# 注：改革后首年，笔试从70分降至60分，听说机考从30分升至40分
+
+year: 2024
+region: 北京市
+subject: 英语
+full_score: 60  # 笔试部分，听说机考40分另计
+duration_minutes: 90
+total_questions: 31
+structure: "10单选(10分) + 6完形(6分) + 13阅读(26分) + 2文段表达(18分)"
+
+# 改革要点：单选减2题(12→10)，完形减2题(8→6)，文段表达减6分(24→18)
+# 阅读理解保持13题26分不变，凸显阅读核心地位
+
+difficulty_distribution:
+  基础: { questions: 16, score: 约26分, ratio: "43%" }
+  中档: { questions: 11, score: 约22分, ratio: "37%" }
+  较难: { questions: 4, score: 约12分, ratio: "20%" }
+
+domain_distribution:
+  语法与词汇: { ratio: "约17%", questions: [1,2,3,4,5,6,7,8,9,10] }
+  完形填空: { ratio: "约10%", questions: [11,12,13,14,15,16] }
+  阅读理解: { ratio: "约43%", questions: [17,18,19,20,21,22,23,24,25,26,27,28,29] }
+  书面表达: { ratio: "约30%", questions: [30,31] }
+
+# ------ 逐题分析 ------
+questions:
+
+  # ===== 单项选择（每题1分）=====
+  - id: 1
+    type: 单选
+    score: 1
+    knowledge_points: [人称代词, 主格/宾格]
+    module: 词法
+    difficulty: 基础
+    description: 考查人称代词在句中的正确形式
+
+  - id: 2
+    type: 单选
+    score: 1
+    knowledge_points: [时间介词, in/on/at]
+    module: 词法
+    difficulty: 基础
+    description: 介词在具体时间表达中的用法
+
+  - id: 3
+    type: 单选
+    score: 1
+    knowledge_points: [形容词比较级, more...than]
+    module: 词法
+    difficulty: 基础
+    description: 多音节形容词比较级more+adj的用法
+
+  - id: 4
+    type: 单选
+    score: 1
+    knowledge_points: [一般过去时, 时间标志词]
+    module: 时态
+    difficulty: 基础
+    description: 根据ago/last等标志词使用一般过去时
+
+  - id: 5
+    type: 单选
+    score: 1
+    knowledge_points: [情态动词, should表建议]
+    module: 词法
+    difficulty: 基础
+    description: should表示"应该"，给出建议的用法
+
+  - id: 6
+    type: 单选
+    score: 1
+    knowledge_points: [连词, because引导原因状语从句]
+    module: 句法
+    difficulty: 基础
+    description: because引导原因状语从句
+
+  - id: 7
+    type: 单选
+    score: 1
+    knowledge_points: [现在完成时, already/yet/ever]
+    module: 时态
+    difficulty: 中档
+    description: 现在完成时与already/yet等副词搭配
+
+  - id: 8
+    type: 单选
+    score: 1
+    knowledge_points: [被动语态, 一般现在时被动]
+    module: 语态
+    difficulty: 中档
+    description: 一般现在时被动语态is/are done
+
+  - id: 9
+    type: 单选
+    score: 1
+    knowledge_points: [不定式, It's+adj+to do]
+    module: 非谓语
+    difficulty: 中档
+    description: It's important/necessary to do结构
+
+  - id: 10
+    type: 单选
+    score: 1
+    knowledge_points: [宾语从句, 语序与时态]
+    module: 从句
+    difficulty: 中档
+    description: 宾语从句的引导词、语序和时态综合考查
+
+  # ===== 完形填空（每题1分）=====
+  - id: 11
+    type: 完形
+    score: 1
+    knowledge_points: [记叙文理解, 人物介绍]
+    module: 完形填空
+    difficulty: 基础
+    description: 记叙文讲述团队合作故事，开篇人物和背景介绍
+
+  - id: 12
+    type: 完形
+    score: 1
+    knowledge_points: [动词辨析, 行为动词]
+    module: 完形填空
+    difficulty: 基础
+    description: 根据故事情节选择合适的行为动词
+
+  - id: 13
+    type: 完形
+    score: 1
+    knowledge_points: [形容词辨析, 态度情感]
+    module: 完形填空
+    difficulty: 中档
+    description: 描述人物从犹豫到积极的心理变化
+
+  - id: 14
+    type: 完形
+    score: 1
+    knowledge_points: [名词辨析, 品质名词]
+    module: 完形填空
+    difficulty: 中档
+    description: 与teamwork/cooperation相关的名词选择
+
+  - id: 15
+    type: 完形
+    score: 1
+    knowledge_points: [动词短语, work out/figure out]
+    module: 完形填空
+    difficulty: 中档
+    description: 解决问题相关的动词短语辨析
+
+  - id: 16
+    type: 完形
+    score: 1
+    knowledge_points: [主旨理解, 团队精神]
+    module: 完形填空
+    difficulty: 中档
+    description: 结尾总结，理解"合作的力量"主题
+
+  # ===== 阅读理解（每题2分）=====
+  - id: 17
+    type: 阅读A
+    score: 2
+    knowledge_points: [应用文阅读, 信息查找]
+    module: 阅读理解
+    difficulty: 基础
+    description: 应用文（校园活动公告），快速定位关键信息
+
+  - id: 18
+    type: 阅读A
+    score: 2
+    knowledge_points: [应用文阅读, 细节理解]
+    module: 阅读理解
+    difficulty: 基础
+    description: 从公告中提取具体要求和安排
+
+  - id: 19
+    type: 阅读A
+    score: 2
+    knowledge_points: [应用文阅读, 目的推断]
+    module: 阅读理解
+    difficulty: 基础
+    description: 判断文章的目标读者和写作目的
+
+  - id: 20
+    type: 阅读B
+    score: 2
+    knowledge_points: [说明文阅读, 细节定位]
+    module: 阅读理解
+    difficulty: 基础
+    description: 说明文（AI与日常生活），提取具体应用场景信息
+
+  - id: 21
+    type: 阅读B
+    score: 2
+    knowledge_points: [说明文阅读, 词义猜测]
+    module: 阅读理解
+    difficulty: 中档
+    description: 利用定义线索和上下文推测科技类词汇含义
+
+  - id: 22
+    type: 阅读B
+    score: 2
+    knowledge_points: [说明文阅读, 推理判断]
+    module: 阅读理解
+    difficulty: 中档
+    description: 基于文章信息推断AI技术的发展趋势
+
+  - id: 23
+    type: 阅读B
+    score: 2
+    knowledge_points: [说明文阅读, 主旨大意]
+    module: 阅读理解
+    difficulty: 中档
+    description: 概括文章关于AI应用的核心观点
+
+  - id: 24
+    type: 阅读C
+    score: 2
+    knowledge_points: [议论文阅读, 观点理解]
+    module: 阅读理解
+    difficulty: 中档
+    description: 议论文（青少年成长话题），理解作者论点
+
+  - id: 25
+    type: 阅读C
+    score: 2
+    knowledge_points: [议论文阅读, 例证分析]
+    module: 阅读理解
+    difficulty: 较难
+    description: 理解文中举例与论点之间的支撑关系
+
+  - id: 26
+    type: 阅读C
+    score: 2
+    knowledge_points: [议论文阅读, 推理概括]
+    module: 阅读理解
+    difficulty: 较难
+    description: 对作者观点进行深层推理和概括
+
+  - id: 27
+    type: 阅读D
+    score: 2
+    knowledge_points: [还原句子, 逻辑连贯]
+    module: 阅读理解
+    difficulty: 中档
+    description: 还原句子题，根据上下文逻辑关系判断
+
+  - id: 28
+    type: 阅读D
+    score: 2
+    knowledge_points: [还原句子, 指代衔接]
+    module: 阅读理解
+    difficulty: 较难
+    description: 利用代词指代和同义替换判断句子归属
+
+  - id: 29
+    type: 阅读D
+    score: 2
+    knowledge_points: [还原句子, 篇章结构]
+    module: 阅读理解
+    difficulty: 较难
+    description: 把握全文结构，将总结句或过渡句还原
+
+  # ===== 文段表达 =====
+  - id: 30
+    type: 文段表达
+    score: 8  # 改革后从10分降至8分
+    knowledge_points: [应用文写作, 邮件回复, 信息提供]
+    module: 书面表达
+    difficulty: 中档
+    description: 回复邮件，围绕校园生活或文化交流话题提供信息和建议
+    topic: 回复外国朋友关于北京特色景点推荐的邮件
+
+  - id: 31
+    type: 文段表达
+    score: 10  # 改革后从14分降至10分
+    knowledge_points: [命题作文, 记叙文/议论文, 价值观表达]
+    module: 书面表达
+    difficulty: 较难
+    description: 围绕成长或品质话题写作，要求观点明确、内容充实
+    topic: "某英文网站征稿，围绕'乐于助人'话题，讲述一次帮助他人的经历及感悟"
+    word_count: "50词以上"
+
+# ------ 命题特点 ------
+exam_features:
+  - 改革后首年，笔试60分，单选减至10题，完形减至6题，写作减6分
+  - 阅读理解13题26分保持不变，占比从37%升至43%，地位进一步强化
+  - 单选压缩后仍覆盖核心语法：代词、介词、比较级、时态、语态、非谓语、从句
+  - 完形填空仍为记叙文，篇幅缩短但考查逻辑不变
+  - 阅读话题紧跟时代，B篇涉及AI与生活
+  - 写作分值下降但评分标准不变，要求更加精炼
+  - 整体难度与2023年相当，改革更多体现在分值结构调整

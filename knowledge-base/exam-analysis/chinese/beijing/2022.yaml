@@ -1,0 +1,290 @@
+# 2022年北京中考语文真题逐题分析
+year: 2022
+region: 北京
+subject: 语文
+full_score: 100
+duration_minutes: 150
+total_questions: 25
+
+structure:
+  - section: 基础·运用
+    score: 15
+    question_range: "1-5"
+    description: 语文基础知识与语言运用
+  - section: 古诗文阅读
+    score: 18
+    question_range: "6-13"
+    description: 古诗文默写、古诗词鉴赏、文言文阅读
+  - section: 名著阅读
+    score: 5
+    question_range: "14-15"
+    description: 名著阅读理解与分析
+  - section: 现代文阅读
+    score: 22
+    question_range: "16-23"
+    description: 说明文阅读、记叙文阅读
+  - section: 写作
+    score: 40
+    question_range: "24-25"
+    description: 作文二选一
+
+difficulty_distribution:
+  easy: 0.32
+  medium: 0.48
+  hard: 0.20
+  estimated_avg_score: 74
+
+domain_distribution:
+  基础积累与运用: 0.15
+  古诗文阅读: 0.18
+  名著阅读: 0.05
+  现代文阅读: 0.22
+  写作: 0.40
+
+questions:
+  # ===== 基础·运用 =====
+  - id: 1
+    section: 基础·运用
+    score: 2
+    type: 选择题
+    knowledge_point: 字音字形
+    description: 根据语境判断字音字形正确的一项
+    difficulty: easy
+    key_content: 考查"酝酿""惟妙惟肖""不言而喻"等常见易错字词
+
+  - id: 2
+    section: 基础·运用
+    score: 2
+    type: 选择题
+    knowledge_point: 词语运用·成语
+    description: 选择成语使用恰当的一项
+    difficulty: easy
+    key_content: 成语使用正误判断，注意望文生义、褒贬误用等常见错误
+
+  - id: 3
+    section: 基础·运用
+    score: 2
+    type: 选择题
+    knowledge_point: 语句衔接
+    description: 将语句填入语段横线处，选择最恰当的排序
+    difficulty: medium
+    key_content: 语句排序与衔接，考查逻辑思维和语感
+
+  - id: 4
+    section: 基础·运用
+    score: 4
+    type: 综合题
+    knowledge_point: 综合性学习
+    description: 结合"冬奥会"主题活动，完成综合性学习任务
+    difficulty: medium
+    key_content: |
+      2022年北京冬奥会为背景：
+      - 拟写宣传标语
+      - 修改语段中的语病
+      - 正确使用标点符号
+
+  - id: 5
+    section: 基础·运用
+    score: 5
+    type: 综合题
+    knowledge_point: 语言表达与书法
+    description: 书法作品辨识及语段综合运用
+    difficulty: medium
+    key_content: 辨识楷书、行书等书体，结合语境完成语言表达任务
+
+  # ===== 古诗文阅读 =====
+  - id: 6
+    section: 古诗文阅读
+    score: 4
+    type: 填空题
+    knowledge_point: 古诗文默写
+    description: 根据提示默写古诗文名句
+    difficulty: easy
+    key_content: |
+      考查篇目包括：
+      - 《望岳》"会当凌绝顶，一览众山小"
+      - 《岳阳楼记》"先天下之忧而忧，后天下之乐而乐"
+      - 《白雪歌送武判官归京》相关名句
+      - 理解性默写一题
+
+  - id: 7
+    section: 古诗文阅读
+    score: 2
+    type: 选择题
+    knowledge_point: 古诗词鉴赏
+    description: 阅读古诗，分析诗歌内容与手法
+    difficulty: medium
+    key_content: 考查诗歌的景物描写、抒情方式及情感把握
+
+  - id: 8
+    section: 古诗文阅读
+    score: 2
+    type: 简答题
+    knowledge_point: 古诗词鉴赏
+    description: 赏析诗中某联的表达效果
+    difficulty: medium
+    key_content: 从炼字、修辞、意境等角度进行赏析
+
+  - id: 9
+    section: 古诗文阅读
+    score: 2
+    type: 选择题
+    knowledge_point: 文言文实词
+    description: 解释加点文言词语的含义
+    difficulty: easy
+    key_content: 考查《岳阳楼记》中"谪""属""汤汤"等实词
+
+  - id: 10
+    section: 古诗文阅读
+    score: 2
+    type: 选择题
+    knowledge_point: 文言文虚词
+    description: 选出"之""以""而"等虚词用法相同的一项
+    difficulty: medium
+    key_content: 文言虚词的一词多义辨析
+
+  - id: 11
+    section: 古诗文阅读
+    score: 2
+    type: 简答题
+    knowledge_point: 文言文翻译
+    description: 翻译文中画线句子
+    difficulty: medium
+    key_content: 注意关键词语的准确翻译和语句通顺
+
+  - id: 12
+    section: 古诗文阅读
+    score: 2
+    type: 简答题
+    knowledge_point: 文言文内容理解
+    description: 理解范仲淹的"忧乐观"
+    difficulty: hard
+    key_content: 结合文章内容分析"不以物喜，不以己悲"的思想境界
+
+  - id: 13
+    section: 古诗文阅读
+    score: 2
+    type: 简答题
+    knowledge_point: 文言文比较阅读
+    description: 比较两篇文章中人物的精神品质
+    difficulty: hard
+    key_content: 主文《岳阳楼记》与对比材料的主旨比较
+
+  # ===== 名著阅读 =====
+  - id: 14
+    section: 名著阅读
+    score: 2
+    type: 选择题
+    knowledge_point: 名著内容识记
+    description: 关于必读名著内容的判断
+    difficulty: easy
+    key_content: 涉及《朝花夕拾》《红星照耀中国》《钢铁是怎样炼成的》等
+
+  - id: 15
+    section: 名著阅读
+    score: 3
+    type: 简答题
+    knowledge_point: 名著人物分析
+    description: 选择一位名著中的人物，分析其成长历程给你的启示
+    difficulty: medium
+    key_content: 要求结合人物经历进行分析，语言流畅、观点明确
+
+  # ===== 现代文阅读 =====
+  - id: 16
+    section: 现代文阅读
+    score: 2
+    type: 选择题
+    knowledge_point: 说明文内容理解
+    description: 选出与原文内容相符的一项
+    difficulty: medium
+    key_content: 科普说明文，介绍科技创新或自然科学知识
+
+  - id: 17
+    section: 现代文阅读
+    score: 3
+    type: 简答题
+    knowledge_point: 说明文说明方法
+    description: 指出文中使用的说明方法并分析其作用
+    difficulty: medium
+    key_content: 考查列数字、作比较、举例子等说明方法
+
+  - id: 18
+    section: 现代文阅读
+    score: 2
+    type: 简答题
+    knowledge_point: 说明文语言特点
+    description: 分析说明文语言的准确性
+    difficulty: medium
+    key_content: 品味"大约""目前""之一"等限定性词语的表达效果
+
+  - id: 19
+    section: 现代文阅读
+    score: 3
+    type: 简答题
+    knowledge_point: 说明文信息提取
+    description: 根据文章内容，概括说明对象的特征
+    difficulty: medium
+    key_content: 要求准确概括，条理清晰
+
+  - id: 20
+    section: 现代文阅读
+    score: 3
+    type: 简答题
+    knowledge_point: 记叙文内容概括
+    description: 梳理文章脉络，概括主要内容
+    difficulty: medium
+    key_content: 记叙文以家庭亲情为主题，叙述温暖细腻
+
+  - id: 21
+    section: 现代文阅读
+    score: 3
+    type: 简答题
+    knowledge_point: 记叙文词句赏析
+    description: 从修辞或描写角度赏析画线句
+    difficulty: medium
+    key_content: 比喻、拟人等修辞手法，或细节描写的表达效果
+
+  - id: 22
+    section: 现代文阅读
+    score: 3
+    type: 简答题
+    knowledge_point: 记叙文写作手法
+    description: 分析文中某种写作手法的作用
+    difficulty: hard
+    key_content: 考查伏笔、照应、对比、象征等手法
+
+  - id: 23
+    section: 现代文阅读
+    score: 3
+    type: 简答题
+    knowledge_point: 记叙文主题探究
+    description: 结合全文理解标题的含义
+    difficulty: hard
+    key_content: 从表层含义和深层含义两方面分析标题
+
+  # ===== 写作 =====
+  - id: 24
+    section: 写作
+    score: 40
+    type: 作文
+    knowledge_point: 记叙类作文
+    description: "我创造了新纪录"
+    difficulty: medium
+    key_content: |
+      题目一：记叙类作文
+      以"我创造了新纪录"为题写一篇文章
+      "纪录"可以是学习、生活、体育等各方面的突破
+      要求有真实的情感体验，字数600-800字
+
+  - id: 25
+    section: 写作
+    score: 40
+    type: 作文
+    knowledge_point: 情感类作文
+    description: "那个星期天"
+    difficulty: medium
+    key_content: |
+      题目二：情感类作文
+      以"那个星期天"为题写一篇文章
+      呼应课文《那个星期天》的写法，重在表达真实的等待与期盼
+      要求叙事清楚、感情真挚，字数600-800字

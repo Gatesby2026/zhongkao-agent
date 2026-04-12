@@ -1,0 +1,357 @@
+# ============================================================
+# 北京中考语文 — 知识点权重分析
+# ============================================================
+# 数据来源：近5年(2021-2025)北京中考真题统计
+# 最后更新：2026-04-12
+
+subject: 语文
+region: 北京市
+
+# ------ 五大模块总体占比 ------
+modules_overview:
+  - module: 基础·积累与运用
+    score_ratio: 15%       # 约15分（100分制）
+    description: 基础分为主，送分区，确保全对是关键
+
+  - module: 古诗文阅读（含默写）
+    score_ratio: 23%       # 约23分（默写5-6 + 文言文12 + 古诗6）
+    description: 第二大板块，积累+理解并重
+
+  - module: 名著阅读
+    score_ratio: 5%        # 约5分
+    description: 分值不大但必考，深度考查趋增
+
+  - module: 现代文阅读
+    score_ratio: 17-22%    # 约17-22分
+    description: 区分度最高的板块，记叙文是重中之重
+
+  - module: 写作
+    score_ratio: 40%       # 40分
+    description: 分值最大，是决定总分的关键
+
+# ------ 细分知识点权重 ------
+knowledge_points:
+
+  # ====== 基础·积累与运用 ======
+  基础·积累与运用:
+    - name: 字音字形
+      frequency: 极高（5/5必考）
+      typical_score: 2分
+      difficulty: 基础
+      typical_questions: 选择题
+      details:
+        - 多音字辨析（"处""数""供""载"等）
+        - 形近字辨析（"辩/辨/辫""燥/躁/澡"等）
+        - 常见易错字（"蛰伏""恣意""殷红"等）
+
+    - name: 词语/成语运用
+      frequency: 极高（5/5必考）
+      typical_score: 2分
+      difficulty: 基础
+      typical_questions: 选择题
+      details:
+        - 近义词语境辨析
+        - 成语误用判断（望文生义/对象误用/感情色彩/谦敬错位）
+        - 关联词语搭配
+
+    - name: 病句辨析/语句衔接
+      frequency: 极高（5/5必考）
+      typical_score: 2分
+      difficulty: 基础
+      typical_questions: 选择题
+      details:
+        - 搭配不当（最高频）
+        - 成分残缺或赘余
+        - 语序不当
+        - 语句排序/衔接（近2年考查增多）
+
+    - name: 文学文化常识
+      frequency: 极高（5/5必考）
+      typical_score: 2分
+      difficulty: 基础
+      typical_questions: 选择题
+      details:
+        - 作者-作品-朝代/国籍匹配
+        - 古代文化常识（科举/称谓/节日/年龄别称）
+        - 文体常识
+
+    - name: 古诗文默写
+      frequency: 极高（5/5必考）
+      typical_score: 5-6分
+      difficulty: 基础-中档
+      typical_questions: 填空题
+      details:
+        - 理解性默写占比约70%（给语境/主题提示）
+        - 直接默写占比约30%（上下句互填）
+        - 高频考查篇目：《岳阳楼记》《醉翁亭记》《出师表》《水调歌头》
+          《望岳》《春望》《行路难》《过零丁洋》等
+      strategy_note: 逐篇逐句过关，重点攻克易错字；理解性默写需理解每句含义
+
+    - name: 综合性学习/语言运用
+      frequency: 高（5/5必考）
+      typical_score: 2-3分
+      difficulty: 基础-中档
+      typical_questions: 主观题
+      details:
+        - 信息概括（从材料中提取关键信息）
+        - 图文转换（表格/图表→文字描述）
+        - 实用文体拟写（通知/邀请函/解说词/标语）
+
+  # ====== 古诗文阅读 ======
+  古诗文阅读:
+    - name: 文言实词
+      frequency: 极高（5/5必考）
+      typical_score: 2分
+      difficulty: 基础
+      typical_questions: 选择或填空
+      details:
+        - 一词多义（"之""以""而""为"等虚词兼考）
+        - 古今异义（"走""去""妻子""交通""卑鄙"等）
+        - 词类活用（名词作动词、形容词作动词）
+        - 通假字（"说""知""反""见"等高频通假）
+
+    - name: 文言虚词
+      frequency: 极高（5/5必考）
+      typical_score: 2分
+      difficulty: 基础-中档
+      typical_questions: 选择题
+      details:
+        - 10个高频虚词：之/而/以/于/其/为/乃/则/然/者
+        - 常考辨析：结构助词vs代词（之）、转折vs顺承（而）、介词vs连词（以）
+
+    - name: 文言文翻译
+      frequency: 极高（5/5必考）
+      typical_score: 2-4分
+      difficulty: 中档
+      typical_questions: 主观题
+      details:
+        - 直译为主、意译为辅
+        - 关键词（实词/虚词/句式）逐一采分
+        - 常考特殊句式：判断句/省略句/倒装句
+
+    - name: 文言文内容理解
+      frequency: 极高（5/5必考）
+      typical_score: 4分
+      difficulty: 中档
+      typical_questions: 主观题
+      details:
+        - 概括文章主旨/中心思想
+        - 分析人物品质/形象
+        - 课内外对比阅读（异同分析）
+      strategy_note: 课内篇目需精读透彻，课外迁移靠课内功底
+
+    - name: 古诗词鉴赏——情感主旨
+      frequency: 极高（5/5必考）
+      typical_score: 2-3分
+      difficulty: 中档
+      typical_questions: 主观题
+      details:
+        - 分析诗歌表达的思想感情
+        - 结合时代背景/诗人经历理解情感
+        - 常考情感类型：忧国忧民/思乡/壮志难酬/离别/归隐/爱国
+
+    - name: 古诗词鉴赏——手法语言
+      frequency: 极高（5/5必考）
+      typical_score: 3-4分
+      difficulty: 中档-较难
+      typical_questions: 主观题
+      details:
+        - 炼字题（分析某字的妙处）
+        - 表现手法（借景抒情/托物言志/动静结合/虚实结合/对比/用典）
+        - 意象分析（常见意象的象征意义）
+        - 赏析名句（从内容+手法+情感三个角度）
+
+  # ====== 名著阅读 ======
+  名著阅读:
+    - name: 名著基本信息
+      frequency: 极高（5/5必考）
+      typical_score: 2-3分
+      difficulty: 基础
+      typical_questions: 填空/选择
+      details:
+        - 作者/体裁/主要人物
+        - 经典情节概述
+        - 人物与绰号/外号对应（如水浒传）
+
+    - name: 名著深度理解
+      frequency: 高（4/5）
+      typical_score: 2-3分
+      difficulty: 中档
+      typical_questions: 主观简答
+      details:
+        - 人物形象分析（性格特点+具体情节支撑）
+        - 主题思想探讨
+        - 艺术特色分析
+        - 阅读方法/读书体验（北京特色新题型）
+      strategy_note: 12部名著须真正读过，不能只背简介；近年越来越考"真实阅读"
+
+  # ====== 现代文阅读 ======
+  现代文阅读:
+    - name: 记叙文——内容梳理
+      frequency: 极高（5/5必考）
+      typical_score: 3分
+      difficulty: 基础-中档
+      typical_questions: 填表/简答
+      details:
+        - 概括主要事件/情节
+        - 梳理行文线索（明线/暗线）
+        - 理清文章结构层次
+
+    - name: 记叙文——词句赏析
+      frequency: 极高（5/5必考）
+      typical_score: 3-4分
+      difficulty: 中档-较难
+      typical_questions: 主观题
+      details:
+        - 理解关键词语的含义（表层+深层）
+        - 分析句子的表达效果（修辞/描写方法/表达方式）
+        - 品味语言特色
+      strategy_note: 全卷难度最大的题型之一，需要分析能力和语言表达能力
+
+    - name: 记叙文——手法/人物分析
+      frequency: 极高（5/5必考）
+      typical_score: 3-4分
+      difficulty: 中档-较难
+      typical_questions: 主观题
+      details:
+        - 人物描写方法及作用
+        - 环境描写的作用
+        - 表现手法（对比/衬托/伏笔/照应/象征）
+        - 叙述视角/叙述顺序的作用
+
+    - name: 记叙文——主旨/情感
+      frequency: 极高（5/5必考）
+      typical_score: 3-4分
+      difficulty: 中档-较难
+      typical_questions: 主观题
+      details:
+        - 概括文章主旨/中心思想
+        - 分析标题的含义和作用
+        - 体会作者/人物的情感变化
+
+    - name: 记叙文——开放探究
+      frequency: 高（4/5）
+      typical_score: 2-3分
+      difficulty: 中档
+      typical_questions: 主观题
+      details:
+        - 联系自身经历谈感受
+        - 对文中观点的看法
+        - 拓展延伸思考
+
+    - name: 说明文/议论文/非连续性文本
+      frequency: 极高（5/5必考）
+      typical_score: 5-7分
+      difficulty: 基础-中档
+      typical_questions: 选择+主观题
+      details:
+        - 信息筛选与整合
+        - 说明方法/论证方法辨识及作用
+        - 语言特点分析（准确性/严密性）
+        - 多材料之间的关联与比较
+      strategy_note: 近年非连续性文本取代传统单篇说明文/议论文，需练习多材料整合能力
+
+  # ====== 写作 ======
+  写作:
+    - name: 审题与立意
+      frequency: 极高（每年必用）
+      typical_score: 融入作文总分
+      difficulty: 中档
+      details:
+        - 准确理解题目关键词
+        - 立意要深刻或新颖
+        - 避免跑题或偏题
+      strategy_note: 审题失误直接降档，是作文最大风险点
+
+    - name: 选材与构思
+      frequency: 极高
+      typical_score: 融入作文总分
+      difficulty: 中档-较难
+      details:
+        - 选材真实、贴近生活
+        - 素材新颖、避免撞车（老师/妈妈/考试三大俗题）
+        - 构思有巧思（线索清晰/结构独特）
+
+    - name: 语言表达
+      frequency: 极高
+      typical_score: 融入作文总分
+      difficulty: 中档-较难
+      details:
+        - 语言通顺、无病句
+        - 善用修辞、细节描写生动
+        - 有个人风格和文采
+
+    - name: 卷面书写
+      frequency: 极高
+      typical_score: 隐性1-2分
+      difficulty: 基础
+      details:
+        - 字迹工整、卷面整洁
+        - 段落分明、格式规范
+      strategy_note: 卷面整洁可使阅卷老师印象分上浮1-2分，反之亦然
+
+# ------ 提分优先级建议 ------
+# 按"投入产出比"排序
+score_improvement_priority:
+  - rank: 1
+    area: 古诗文默写
+    reason: 纯记忆分，题型固定，短期见效最快；只要背准不写错字就能拿满分
+    potential: 5-6分
+    effort: 低
+    timeline: 2-4周可突破
+
+  - rank: 2
+    area: 基础·运用（字词/病句/文学常识）
+    reason: 选择题固定套路，刷历年真题即可提高正确率
+    potential: 6-8分
+    effort: 低
+    timeline: 2-4周可突破
+
+  - rank: 3
+    area: 文言文阅读（实词/虚词/翻译）
+    reason: 课内篇目有限，系统梳理150个高频实词+10个虚词即可覆盖
+    potential: 6-10分
+    effort: 中
+    timeline: 4-8周系统复习
+
+  - rank: 4
+    area: 名著阅读
+    reason: 12部名著范围明确，掌握人物+情节+主题即可拿分
+    potential: 3-5分
+    effort: 中
+    timeline: 需要持续阅读积累
+
+  - rank: 5
+    area: 说明文/议论文/非连续性文本
+    reason: 题型有固定答题模板，掌握方法即可稳定得分
+    potential: 4-6分
+    effort: 中
+    timeline: 3-5周掌握答题框架
+
+  - rank: 6
+    area: 古诗词鉴赏
+    reason: 课内篇目有限，掌握常见题型的答题模式可以拿到基本分
+    potential: 4-6分
+    effort: 中
+    timeline: 4-6周
+
+  - rank: 7
+    area: 写作——基础提档（三类→二类文）
+    reason: 从24-29分提到30-35分，掌握基本结构和选材即可
+    potential: 5-8分
+    effort: 中
+    timeline: 6-10周持续训练
+
+  - rank: 8
+    area: 记叙文深层理解（词句赏析/手法分析）
+    reason: 区分度最高但提升最慢，需要长期积累阅读分析能力
+    potential: 5-8分
+    effort: 高
+    timeline: 需长期训练
+
+  - rank: 9
+    area: 写作——冲刺高分（二类→一类文）
+    reason: 从30-35分提到36-40分，需要语言功底和思维深度
+    potential: 3-5分
+    effort: 极高
+    timeline: 长期积累，短期难以突破

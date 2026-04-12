@@ -1,52 +1,96 @@
 # 知识库建设方案 — 现状、结构与迭代计划
 
-> 最后更新：2026-04-11
+> 最后更新：2026-04-12
 > 关联文档：[DESIGN.md](./DESIGN.md)（产品设计）
-> 当前范围：北京市 × 数学（MVP）
+> 当前范围：北京市 × 6 科全覆盖
 
 ---
 
 ## 一、知识库总览
 
-知识库共 **8 层**，51 个 YAML 文件。下表为当前建设状态：
+知识库共 **195 个 YAML 文件**，覆盖 2026 年北京中考全部 6 个计分科目（总分 510）。
 
-| 层级 | 目录 | 文件数 | 完成度 | 说明 |
-|------|------|--------|--------|------|
-| ① 地区政策 | `regions/` | 5 | ✅ 可用 | 北京市政策 + 4 区特色 |
-| ② 学科考纲 | `subjects/` | 4 | ⚠️ 需修正 | 课标知识点树 + 题型/权重分析 |
-| ③ 诊断标准 | `diagnostics/` | 8 | ✅ 可用 | 8 个模块 × L0-L3 分级 |
-| ④ 学习路径 | `learning-paths/` | 7 | ✅ 可用 | 7 个模块 × 分级路径 |
-| ⑤ 真题分析 | `exam-analysis/` | 6 | ✅ 可用 | 2021-2025 逐题 + 跨年汇总 |
-| ⑥ 录取分数线 | `admission/` | 6 | ✅ 可用 | 分制变迁 + 4 区逐校分数线 + 目标映射 + 校额到校 |
-| ⑦ 易错点 | `common-mistakes/` | 8 | ✅ 已接入代码 | 8 模块 × 分级易错点，已注入 prompt |
-| ⑧ 模拟题 | `mock-exams/` | 3 (+1 待补) | ⚠️ 未接入代码 | 一模试卷含完整题目+答案+解析 |
-| 辅助：资源库 | `resources/` | 4 | ✅ 已接入代码 | 教辅推荐矩阵已注入 prompt |
+### 科目覆盖状态
+
+| 科目 | 满分 | 考纲 | 真题分析 | 诊断标准 | 学习路径 | 易错点 | 试卷库 |
+|------|------|:----:|:--------:|:--------:|:--------:|:------:|:------:|
+| 数学 | 100 | ✅ 4 | ✅ 6 | ✅ 8 | ✅ 7 | ✅ 8 | ✅ 101+ |
+| 语文 | 100 | ✅ 4 | ✅ 6 | ⏳ | ⏳ | ⏳ | ⏳ |
+| 英语 | 100 | ✅ 4 | ✅ 6 | ⏳ | ⏳ | ⏳ | ⏳ |
+| 物理 | 80  | ✅ 4 | ✅ 6 | ⏳ | ⏳ | ⏳ | ⏳ |
+| 道法 | 80  | ✅ 4 | ✅ 6 | ⏳ | ⏳ | ⏳ | ⏳ |
+| 体育 | 50  | ✅ 3 | N/A | N/A | N/A | N/A | N/A |
+
+> ✅ = 已完成  ⏳ = 待建设  N/A = 该科目不适用
+
+### 知识库层级结构
+
+| 层级 | 目录 | 数学 | 语/英/物/道 | 体育 | 说明 |
+|------|------|:----:|:-----------:|:----:|------|
+| ① 地区政策 | `regions/` | ✅ 5 | 共用 | 共用 | 北京市政策 + 4 区特色 |
+| ② 学科考纲 | `subjects/` | ✅ 4 | ✅ 各 4 | ✅ 3 | 课标知识点 + 题型/权重分析 |
+| ③ 诊断标准 | `diagnostics/` | ✅ 8 | ⏳ | N/A | L0-L3 分级标准 |
+| ④ 学习路径 | `learning-paths/` | ✅ 7 | ⏳ | N/A | 分级进阶路径 + 资源推荐 |
+| ⑤ 真题分析 | `exam-analysis/` | ✅ 6 | ✅ 各 6 | N/A | 2021-2025 逐题 + 跨年汇总 |
+| ⑥ 录取数据 | `admission/` | ✅ 6 | 共用 | 共用 | 4 区分数线 + 目标映射 |
+| ⑦ 易错点 | `common-mistakes/` | ✅ 8 | ⏳ | N/A | 分级易错点 + 纠正方法 |
+| ⑧ 试卷库 | `mock-exams/` | ✅ 101+ | ⏳ | N/A | 真题+模拟卷结构化 |
+| 辅助 | `resources/` | ✅ 4 | 共用 | 共用 | 教辅/教材/平台推荐 |
 
 ---
 
 ## 二、目录结构（实际）
 
 ```
-knowledge-base/
+knowledge-base/                              # 195 个 YAML 文件
 │
-├── regions/                              # ① 地区政策
+├── regions/                                 # ① 地区政策（跨科目共用）
 │   └── beijing/
-│       ├── policy.yaml                   #    2026年中考政策（510分制、6科计分、校额到校等）
+│       ├── policy.yaml                      #    2026年中考政策（510分制、6科计分）
 │       └── districts/
-│           ├── haidian.yaml              #    海淀区（人教版、教研特色）
-│           ├── xicheng.yaml              #    西城区
-│           ├── dongcheng.yaml            #    东城区
-│           └── chaoyang.yaml             #    朝阳区
+│           ├── haidian.yaml                 #    海淀区
+│           ├── xicheng.yaml                 #    西城区
+│           ├── dongcheng.yaml               #    东城区
+│           └── chaoyang.yaml                #    朝阳区
 │
-├── subjects/                             # ② 学科考纲
-│   └── math/
-│       ├── curriculum.yaml               #    课标知识点树（2022版课标）
+├── subjects/                                # ② 学科考纲（6 科目）
+│   ├── math/
+│   │   ├── curriculum.yaml                  #    数学课标知识点树（2022版）
+│   │   └── beijing/
+│   │       ├── exam-spec.yaml               #    考试说明（100分/120分钟/闭卷）
+│   │       ├── question-types.yaml          #    题型分布与历年对比
+│   │       └── weight-analysis.yaml         #    知识点权重（真题统计）
+│   ├── chinese/
+│   │   ├── curriculum.yaml                  #    语文课标知识点树（2022版）
+│   │   └── beijing/
+│   │       ├── exam-spec.yaml               #    考试说明（100分/150分钟/闭卷）
+│   │       ├── question-types.yaml          #    题型分布（基础+古诗文+现代文+写作）
+│   │       └── weight-analysis.yaml         #    知识点权重
+│   ├── english/
+│   │   ├── curriculum.yaml                  #    英语课标知识点树（2022版/1600词）
+│   │   └── beijing/
+│   │       ├── exam-spec.yaml               #    考试说明（笔试60+听口40=100分）
+│   │       ├── question-types.yaml          #    题型分布（含2024改革对比）
+│   │       └── weight-analysis.yaml         #    知识点权重
+│   ├── physics/
+│   │   ├── curriculum.yaml                  #    物理课标知识点树（声光热力电）
+│   │   └── beijing/
+│   │       ├── exam-spec.yaml               #    考试说明（80分/90分钟/闭卷）
+│   │       ├── question-types.yaml          #    题型分布
+│   │       └── weight-analysis.yaml         #    知识点权重（力电各35%）
+│   ├── politics/
+│   │   ├── curriculum.yaml                  #    道法课标知识点树（道德/法治/国情/时政/心理）
+│   │   └── beijing/
+│   │       ├── exam-spec.yaml               #    考试说明（80分/90分钟/开卷！）
+│   │       ├── question-types.yaml          #    题型分布（含开卷考策略）
+│   │       └── weight-analysis.yaml         #    知识点权重
+│   └── pe/
 │       └── beijing/
-│           ├── exam-spec.yaml            #    北京数学考试说明
-│           ├── question-types.yaml       #    题型分布（⚠️ 总分仍写120，需改为100）
-│           └── weight-analysis.yaml      #    知识点权重（真题统计）
+│           ├── exam-spec.yaml               #    体育考试说明（过程性10+现场40=50分）
+│           ├── scoring-standards.yaml        #    男女各项目评分标准
+│           └── training-plans.yaml           #    各项目训练方案
 │
-├── diagnostics/                          # ③ 诊断标准（8模块 × L0-L3）
+├── diagnostics/                             # ③ 诊断标准（目前仅数学）
 │   └── math/
 │       ├── numbers-and-expressions.yaml
 │       ├── equations-and-inequalities.yaml
@@ -57,79 +101,102 @@ knowledge-base/
 │       ├── geometry-comprehensive.yaml
 │       └── statistics-and-probability.yaml
 │
-├── learning-paths/                       # ④ 学习路径（7模块 × 分级）
+├── learning-paths/                          # ④ 学习路径（目前仅数学）
 │   └── math/
 │       └── beijing/
 │           ├── numbers-and-expressions.yaml
 │           ├── equations-and-inequalities.yaml
 │           ├── functions.yaml
 │           ├── triangles.yaml
-│           ├── quadrilaterals-and-circles.yaml  # 四边形+圆合并
+│           ├── quadrilaterals-and-circles.yaml
 │           ├── geometry-comprehensive.yaml
 │           └── statistics-and-probability.yaml
 │
-├── exam-analysis/                        # ⑤ 真题分析
-│   └── math/
-│       └── beijing/
-│           ├── 2021.yaml                 #    28题逐题分析
-│           ├── 2022.yaml
-│           ├── 2023.yaml
-│           ├── 2024.yaml
-│           ├── 2025.yaml
-│           └── summary.yaml              #    5年汇总：题号规律/考频矩阵/分数段策略/趋势
+├── exam-analysis/                           # ⑤ 真题分析（5 科目 × 6 文件）
+│   ├── math/beijing/
+│   │   ├── 2021.yaml ~ 2025.yaml           #    逐题分析（28题/年）
+│   │   └── summary.yaml                    #    5年汇总
+│   ├── chinese/beijing/
+│   │   ├── 2021.yaml ~ 2025.yaml           #    逐题分析（~25题/年）
+│   │   └── summary.yaml                    #    5年汇总（含作文题目规律）
+│   ├── english/beijing/
+│   │   ├── 2021.yaml ~ 2025.yaml           #    逐题分析（含2024改革前后对比）
+│   │   └── summary.yaml                    #    5年汇总（含改革影响分析）
+│   ├── physics/beijing/
+│   │   ├── 2021.yaml ~ 2025.yaml           #    逐题分析（含实验探究详解）
+│   │   └── summary.yaml                    #    5年汇总（含高频实验统计）
+│   └── politics/beijing/
+│       ├── 2021.yaml ~ 2025.yaml           #    逐题分析（含时政热点关联）
+│       └── summary.yaml                    #    5年汇总（含开卷答题策略）
 │
-├── admission/                            # ⑥ 录取分数线
+├── admission/                               # ⑥ 录取数据（跨科目共用）
 │   └── beijing/
-│       ├── scoring-system.yaml           #    总分制度变迁（660→670→510→520→530）
-│       ├── math-target-mapping.yaml      #    目标学校→数学目标分映射
-│       ├── chaoyang.yaml                 #    朝阳区25校·3年 + 校额到校数据
-│       ├── haidian.yaml                  #    海淀区12校 + 校额到校数据
-│       ├── xicheng.yaml                  #    西城区9校 + 校额到校数据
-│       └── dongcheng.yaml               #    东城区11校 + 校额到校数据
+│       ├── scoring-system.yaml
+│       ├── math-target-mapping.yaml
+│       ├── chaoyang.yaml
+│       ├── haidian.yaml
+│       ├── xicheng.yaml
+│       └── dongcheng.yaml
 │
-├── common-mistakes/                      # ⑦ 易错点（NEW - 已接入代码）
+├── common-mistakes/                         # ⑦ 易错点（目前仅数学）
 │   └── math/
-│       ├── numbers-and-expressions.yaml  #    8模块各含高频易错点
-│       ├── equations-and-inequalities.yaml#   + 按 L0/L1/L2 分级聚焦
-│       ├── functions.yaml                #   + 典型丢分·纠正方法·真题例子
+│       ├── numbers-and-expressions.yaml
+│       ├── equations-and-inequalities.yaml
+│       ├── functions.yaml
 │       ├── triangles.yaml
 │       ├── quadrilaterals.yaml
 │       ├── circles.yaml
 │       ├── geometry-comprehensive.yaml
 │       └── statistics-and-probability.yaml
 │
-├── mock-exams/                           # ⑧ 模拟题（NEW - 未接入代码）
+├── mock-exams/                              # ⑧ 试卷库（目前仅数学）
 │   └── math/
 │       └── beijing/
-│           ├── 2025-xicheng-yi.yaml      #    2025西城一模 28题完整
-│           ├── 2025-chaoyang-yi.yaml      #    2025朝阳一模 28题完整
-│           ├── 2025-dongcheng-yi.yaml     #    2025东城一模 28题完整
-│           └── (2025-haidian-yi.yaml)     #    ⏳ 海淀一模待补充
+│           ├── 2005-beijing-zhenti.yaml ~ 2025-beijing-zhenti.yaml  # 21年真题
+│           ├── 2023-*.yaml                  #    2023各区一二三模
+│           ├── 2024-*.yaml                  #    2024各区一二三模
+│           └── 2025-*.yaml                  #    2025各区一二模
 │
-└── resources/                            # 辅助：资源库
-    ├── textbooks.yaml                    #    教材版本（人教版/北京版·按区分配）
-    ├── workbooks.yaml                    #    教辅推荐 + 水平段推荐矩阵（已接入 prompt）
-    ├── online-platforms.yaml             #    平台（智慧教育/菁优网等）
-    └── exam-papers.yaml                  #    真题/模拟题索引
+├── assessment/                              # 快速测评题
+│   └── math/
+│       └── quick-test.yaml
+│
+└── resources/                               # 辅助资源（跨科目共用）
+    ├── textbooks.yaml
+    ├── workbooks.yaml
+    ├── online-platforms.yaml
+    └── exam-papers.yaml
 ```
 
 ---
 
 ## 三、代码接入状态
 
-知识库数据通过两个核心文件注入 LLM prompt：
+知识库通过 `app/lib/knowledge-base.ts` 加载，`prompt-builder.ts` 注入 LLM prompt。
 
-| 模块 | knowledge-base.ts 加载 | prompt-builder.ts 注入 | 说明 |
-|------|:---:|:---:|------|
+### 数据加载
+
+`knowledge-base.ts` 已支持多科目加载：
+- `KnowledgeBase.subjects.chinese/english/physics/politics` — 各科 `SubjectData`（curriculum + examSpec + questionTypes + weightAnalysis + examAnalysis）
+- `KnowledgeBase.subjects.pe` — 体育 `PEData`（examSpec + scoringStandards + trainingPlans）
+- 数学保持原有字段向后兼容
+- 新增 `getSubjectData()` 和 `getAllSubjectsOverview()` 便捷方法
+
+### Prompt 注入状态
+
+| 数据 | 加载 | 注入 Prompt | 说明 |
+|------|:----:|:-----------:|------|
 | ① 地区政策 | ✅ | ✅ | 全量注入 |
-| ② 学科考纲 | ✅ | ✅ | 全量注入 |
+| ② 数学考纲 | ✅ | ✅ | 全量注入 |
+| ② 其他科目考纲 | ✅ | ⏳ | 已加载，待 prompt 注入 |
 | ③ 诊断标准 | ✅ | ✅ | 按用户模块定级注入 |
 | ④ 学习路径 | ✅ | ✅ | 按用户模块定级注入 |
-| ⑤ 真题分析 | ✅ | ✅ | 注入 summary + 当年数据 |
-| ⑥ 录取分数线 | ✅ | ✅ | 按用户所在区注入 |
-| ⑦ 易错点 | ✅ | ✅ | 按模块+水平段注入 top 3 易错点 |
-| ⑧ 模拟题 | ❌ | ❌ | **待接入** |
-| 资源·教辅推荐矩阵 | ✅ | ✅ | 按用户水平段注入推荐 |
+| ⑤ 数学真题分析 | ✅ | ✅ | summary + 当年数据 |
+| ⑤ 其他科目真题分析 | ✅ | ⏳ | 已加载，待 prompt 注入 |
+| ⑥ 录取数据 | ✅ | ✅ | 按用户所在区注入 |
+| ⑦ 易错点 | ✅ | ✅ | 按模块+水平段注入 |
+| ⑧ 模拟题 | ✅ | ⚠️ 部分 | 加载了但 prompt 中仅做题目推荐 |
+| 资源推荐 | ✅ | ✅ | 按用户水平段注入 |
 
 ---
 
@@ -138,13 +205,13 @@ knowledge-base/
 | 标记 | 含义 | 占比 |
 |------|------|------|
 | 🟢 官方数据 | 来自教育考试院/教委/课标 | ~15% |
-| 🟡 网络数据 | 来自家长帮/菁优网/知乎，交叉验证过 | ~50% |
-| 🔴 LLM 生成 | Claude/GPT 生成，未经教师审核 | ~35% |
+| 🟡 网络数据 | 来自家长帮/菁优网/知乎，交叉验证过 | ~45% |
+| 🔴 LLM 生成 | Claude/GPT 生成，未经教师审核 | ~40% |
 
 各层分布：
-- 🟢：policy.yaml、curriculum.yaml、textbooks.yaml
-- 🟡：exam-analysis/*、admission/*、weight-analysis.yaml、mock-exams/*、common-mistakes/*
-- 🔴：diagnostics/*、learning-paths/*
+- 🟢：policy.yaml、各科 curriculum.yaml、textbooks.yaml
+- 🟡：exam-analysis/*（数学）、admission/*、weight-analysis.yaml（数学）、mock-exams/*、common-mistakes/*
+- 🔴：diagnostics/*、learning-paths/*、其他科目的 exam-analysis 和 weight-analysis（基于 LLM 知识生成，待真题原卷验证）
 
 ---
 
@@ -152,52 +219,73 @@ knowledge-base/
 
 ### P0 — 数据错误
 
-| # | 问题 | 文件 | 状态 |
-|---|------|------|------|
-| 1 | ~~question-types.yaml 总分写了 120~~ | subjects/math/beijing/question-types.yaml | ✅ 实际已是 100 |
-| 2 | ~~exam-spec.yaml 与 510 分制对齐~~ | subjects/math/beijing/exam-spec.yaml | ✅ 已确认正确 |
-| 3 | exam-papers.yaml 2024年误写 full_score: 120 | resources/exam-papers.yaml | ✅ 已修正为 100 |
+| # | 问题 | 状态 |
+|---|------|------|
+| 1 | ~~question-types.yaml 总分写了 120~~ | ✅ 已修正 |
+| 2 | ~~exam-spec.yaml 与 510 分制对齐~~ | ✅ 已确认 |
+| 3 | ~~exam-papers.yaml 2024年误写 full_score: 120~~ | ✅ 已修正 |
 
 ### P1 — 功能缺失
 
 | # | 问题 | 状态 |
 |---|------|------|
-| 3 | 模拟题未接入代码（knowledge-base.ts + prompt-builder.ts） | 🔴 待做 |
-| 4 | 海淀一模试卷数据待补充 | ⏳ 等用户提供文件 |
-| 5 | 诊断标准缺少配套诊断例题 | 待做 |
-| 6 | 学习路径缺少时间维度（距中考 X 月应有不同策略） | 待做 |
-| 7 | "目标学校→数学目标分→需达到什么水平"链路未结构化 | 待做 |
+| 4 | 其他科目数据未注入 prompt（已加载但 prompt-builder 尚未使用） | ⏳ 待做 |
+| 5 | 诊断标准缺少配套诊断例题 | ⏳ 待做 |
+| 6 | 学习路径缺少时间维度（距中考 X 月应有不同策略） | ⏳ 待做 |
+| 7 | "目标学校→各科目标分→需达到什么水平"链路未结构化 | ⏳ 待做 |
 
 ### P2 — 覆盖不足
 
-| # | 问题 |
-|---|------|
-| 8 | 只覆盖 4 个区（缺丰台/大兴/石景山/通州） |
-| 9 | 只覆盖数学 1 科（缺物理/英语/道法） |
-| 10 | 北京版教材未建章节目录 |
-| 11 | 模拟题只有 2025 一模，缺二模和 2024 数据 |
+| # | 问题 | 状态 |
+|---|------|------|
+| 8 | 只覆盖 4 个区（缺丰台/大兴/石景山/通州等 12 区） | ⏳ |
+| 9 | ~~只覆盖数学 1 科~~ | ✅ 已扩展至 6 科 |
+| 10 | 语文/英语/物理/道法缺诊断标准（diagnostics） | ⏳ Phase 3 |
+| 11 | 语文/英语/物理/道法缺学习路径（learning-paths） | ⏳ Phase 3 |
+| 12 | 语文/英语/物理/道法缺易错点（common-mistakes） | ⏳ Phase 5 |
+| 13 | 语文/英语/物理/道法缺试卷库（mock-exams） | ⏳ Phase 5 |
+| 14 | 其他科目真题分析基于 LLM 生成，需用 knowledge-original 原卷验证 | ⏳ |
 
 ---
 
-## 六、下一步迭代计划
+## 六、迭代计划
 
-### 近期
+### ~~Phase 1 — 四科考试大纲（已完成 2026-04-12）~~
 
-1. **模拟题接入代码** — 将 mock-exams 加载到 knowledge-base.ts，在 prompt-builder.ts 中按模块/难度推荐练习题
-2. **修正 P0** — question-types.yaml 总分 120→100，检查 exam-spec.yaml
-3. **海淀一模补全** — 用户提供文件后转为 YAML
+✅ 语文/英语/物理/道法各 4 文件（curriculum + exam-spec + question-types + weight-analysis）
 
-### 中期
+### ~~Phase 2 — 四科真题分析（已完成 2026-04-12）~~
 
-4. **持续学习功能** — 模拟题作为学习跟进的练习题源，按用户水平段推荐
-5. **诊断例题** — 为 diagnostics 每个级别配 3-5 道真题
-6. **时间维度** — 学习路径按"距中考 X 月"区分策略
+✅ 语文/英语/物理/道法各 6 文件（2021-2025 逐年 + summary）
 
-### 远期
+### ~~Phase 4 — 体育科目（已完成 2026-04-12）~~
 
-7. **扩展学科** — 物理（第 2 个计分科目）
-8. **扩展区域** — 丰台/大兴等区
-9. **教师审核** — 将 diagnostics/learning-paths 从 🔴 升级为 🟡
+✅ 3 文件（exam-spec + scoring-standards + training-plans）
+
+### ~~Phase 6 — 代码适配（已完成 2026-04-12）~~
+
+✅ knowledge-base.ts 重构为多科目加载，向后兼容
+
+### Phase 3 — 四科诊断标准 + 学习路径（下一步）
+
+为语文/英语/物理/道法建立：
+- `diagnostics/<科目>/<模块>.yaml` — L0-L3 分级标准
+- `learning-paths/<科目>/beijing/<模块>.yaml` — 进阶路径
+- 每科 5-8 个模块，预计 40-64 个文件
+- **这是实现"因材施教"的关键层**
+
+### Phase 5 — 易错点 + 试卷库
+
+- `common-mistakes/<科目>/<模块>.yaml` — 典型错误 + 纠正
+- `mock-exams/<科目>/beijing/*.yaml` — 结构化试卷
+- 利用 `knowledge-original/` 中已有的真题原卷和模拟卷
+- 试卷量大，建议先覆盖 2023-2025 真题 + 海淀/西城一二模
+
+### Phase 7 — Prompt 全科注入
+
+- 扩展 `prompt-builder.ts`，支持多科目学习规划
+- 根据用户选择的科目注入对应知识库
+- 支持全科总分规划（510分制目标拆分到各科）
 
 ---
 
@@ -267,4 +355,4 @@ matching_rules:           # 水平匹配（已通过 workbooks.yaml 推荐矩阵
 
 ---
 
-> 本文档随项目演进持续更新。当前 MVP 阶段（北京 × 数学），8 层知识库 51 个文件基本建成。核心待办：模拟题接入代码、P0 数据修正、海淀一模补全。
+> 本文档随项目演进持续更新。截至 2026-04-12，知识库已从 MVP 阶段（北京 × 数学，51 文件）扩展至 6 科全覆盖（195 文件）。核心待办：Phase 3（诊断标准+学习路径扩科）、Phase 7（全科 Prompt 注入）。
