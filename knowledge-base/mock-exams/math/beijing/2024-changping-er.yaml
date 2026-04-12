@@ -1,0 +1,1339 @@
+# ============================================================
+# 2024年北京昌平区中考数学二模试卷 — 逐题分析
+# ============================================================
+# 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
+# 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
+# 满分：100分  时长：120分钟
+
+year: 2024
+district: 昌平区
+exam_type: 二模
+subject: 数学
+full_score: 100
+duration_minutes: 120
+total_questions: 28
+structure: 8选择(16分) + 8填空(16分) + 12解答(68分)
+questions:
+- id: 1
+  type: 选择
+  score: 2
+  question: '2024年2月5日至25日，人民网连续第23次开展全国两会调查，调查围绕10个领域设置49个候选热词．本次调查广纳民情民意，吸引约6
+
+    150 000人次参与，其中6
+
+    150 000用科学记数法可以表示为（）
+
+    A.$6.15\times10^{5}$B.$6.15\times10^{6}$C.$0.615\times 10^{6}$D.$0.615\times10^{7}$'
+  answer: B
+  solution: '解：$6150000=6.15\times10^{6}$，
+
+    故选：B．'
+  knowledge_points:
+  - 科学记数法
+  - 绝对值
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 2
+  type: 选择
+  score: 2
+  question: '下列图形中是轴对称图形，但不是中心对称图形的是（）
+
+    A.[图]B.[图]C.[图]D.[图]'
+  answer: D
+  solution: '解：A．该图既是轴对称图形，也是中心对称图形，故不符合题意；
+
+    B．该图不是轴对称图形，是中心对称图形，故不符合题意；
+
+    C．该图既是轴对称图形，也是中心对称图形，故不符合题意；
+
+    D．该图是轴对称图形，但不是中心对称图形，故符合题意；
+
+    故选D．'
+  knowledge_points:
+  - 中心对称图形
+  - 轴对称图形
+  - 轴对称
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 3
+  type: 选择
+  score: 2
+  question: '光线在不同介质中的传播速度是不同的，因此光线从水中射向空气时，要发生折射．由于折射率相同，所以在水中平行的光线，在空气中也是平行的．如图，$\angle1=45^{\circ},\angle2=120^{\circ}$，则$\angle3+\angle4=$（）
+
+    [图]
+
+    A.$165^\circ$B.$155^\circ$C.$105^\circ$D.$90^\circ$'
+  answer: C
+  solution: '解：如图所示，$AB \parallel CD$，光线在空气中也平行，
+
+    [图]
+
+    $\angle 1 = \angle 3$，$\angle2+\angle4=180^\circ$.
+
+    $\angle1=45^{\circ},\angle2=120^{\circ}$，
+
+    $\angle3=45^\circ$，$\angle 4=180^{\circ}-120^{\circ}=60^{\circ}$.
+
+    $\angle 3+\angle 4=45^{\circ}+60^{\circ}=105^{\circ}$.
+
+    故选：C.'
+  knowledge_points:
+  - 平行线
+  module: triangles
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 4
+  type: 选择
+  score: 2
+  question: '实数a，b在数轴上的对应点的位置如图所示，则下列结论中正确的是（）
+
+    $\begin{tikzpicture}
+
+    \draw[->] (-4.5,0) -- (4.5,0);
+
+    \foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+
+    \draw (\x cm,3pt) -- (\x cm,-3pt) node[anchor=north] {\x};
+
+    \draw[fill=black] (-2.8,0) circle (2pt) node[above] {$a$};
+
+    \draw[fill=black] (3.2,0) circle (2pt) node[above] {$b$};
+
+    \end{tikzpicture}$
+
+    A.$b = \sqrt{7}$B.$a < -b$C.$\left| b \right| < -a$D.$a+b>0$'
+  answer: D
+  solution: '解：由数轴可知，$-3 < a < -2$，$b>3$，
+
+    A、$\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$$\sqrt{7}<\sqrt{9}=3$，$\therefore b > \sqrt{7}$，故本选项不符合题意；
+
+    B、$\because -3 < a < -2$，$b>3$，$\therefore -b < -3$，$\therefore a > -b$，故本选项不符合题意；
+
+    C、$\because -3 < a < -2$，$b>3$，$2 < -a < 3$，$|b|>3$，$\therefore |b| > -a$，故本选项不符合题意；
+
+    D、$\because -3 < a < -2$，$b>3$，$\therefore a+b>0$，故本选项符合题意；
+
+    故选：D．'
+  knowledge_points:
+  - 综合
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 5
+  type: 选择
+  score: 2
+  question: '正多边形的一个外角是$60^\circ$，那么这个正多边形是（）
+
+    A.正四边形B.正六边形C.正八边形D.正十边形'
+  answer: B
+  solution: '解：∵正多边形的一个外角是$60^\circ$，
+
+    ∴这个正多边形的边数为$n = \frac{360^{\circ}}{60^{\circ}} = 6$，
+
+    ∴这个正多边形为正六边形．
+
+    故选：B．'
+  knowledge_points:
+  - 综合
+  module: triangles
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 6
+  type: 选择
+  score: 2
+  question: '已知关于x的一元二次方程$x^{2}-2x+m=0$有两个实数根，则m的取值范围是（）
+
+    A.$m < 1$B.$m > 1$C.$m\geq1$D.$m\ 1$'
+  answer: C
+  solution: '解：根据题意，得：$\Delta=(-2)^{2}-4\times1\times m=0$，
+
+    解得$m\geq1$，
+
+    故选：C．'
+  knowledge_points:
+  - 一元二次方程
+  - 根的判别式
+  - 不等式
+  module: equationsAndInequalities
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 7
+  type: 选择
+  score: 2
+  question: '在不透明的袋子里有三个除颜色外其它都相同的小球，两个红球，一个黄球，从中随机同时取出两个小球，其中取到一个红球一个黄球的概率为（）
+
+    A.$\frac{2}{3}$B.$\frac{5}{6}$C.$\frac{1}{2}$D.1'
+  answer: A
+  solution: '解：列表把所有等可能结果表示出来，两个红球分别表示为红1，红2，
+
+    红1
+
+    红2
+
+    黄
+
+    红1
+
+    --------
+
+    红1，红2
+
+    红1，黄
+
+    红2
+
+    红2，红1
+
+    ----------
+
+    红2，黄
+
+    黄
+
+    黄，红1
+
+    黄，红2
+
+    ---------
+
+    共有6种等可能结果，其中一个红球一个黄球的结果有4种，
+
+    ∴取到一个红球一个黄球的概率为$\frac{4}{6}=\frac{2}{3}$，
+
+    故选：A．'
+  knowledge_points:
+  - 概率
+  - 树状图
+  - 列表法
+  module: statisticsAndProbability
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 8
+  type: 选择
+  score: 2
+  question: '如图，AB为半圆O的直径，C，D是直径AB上两点，且$AC = BD$，过点D作AB的垂线交半圆于点E，$CD = 2DE$．设$AD = a$，$AC = b$，$DE = c$，给出下面三个结论：①$a-b=2c$；②$\frac{c}{a}=\frac{b}{c}$；③$a+b=2\sqrt{2}c$．所有正确结论的序号是（）
+
+    [图]
+
+    A.①②B.①③C.②③D.①②③'
+  answer: D
+  solution: '解：由题意知，$BD = AC = b$，$CD=AD-AC=a-b$，
+
+    ∵$CD = 2DE$，
+
+    ∴$a-b=2c$，①正确，故符合要求；
+
+    如图，连接$AE, BE$，
+
+    [图]
+
+    ∵AB为半圆O的直径，
+
+    ∴$\angle AEB = 90^\circ$，
+
+    ∵$\angle AED + \angle BED = 90^\circ = \angle AED + \angle EAD$，
+
+    ∴$\angle BED = \angle EAD$，
+
+    又∵$\angle BDE=90^{\circ}=\angle EDA$，
+
+    ∴$\triangle BED \sim \triangle EAD$，
+
+    ∴$\frac{DE}{AD} = \frac{BD}{DE}$，即$\frac{c}{a}=\frac{b}{c}$，②正确，故符合要求；
+
+    ∴$ab = c^2$，
+
+    ∴$(a+b)^{2}=(a-b)^{2}+4ab=(2c^{2})+4c^{2}=8c^{2}$，
+
+    ∴$a+b=2\sqrt{2}c$，③正确，故不符合要求；
+
+    故选：D．'
+  knowledge_points:
+  - 圆周角
+  - 相似三角形
+  module: triangles
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 9
+  type: 填空
+  score: 2
+  question: 使代数式$\sqrt{x-1}$有意义的x的取值范围是_______．
+  answer: $x\ 1$
+  solution: '解：代数式$\sqrt{x-1}$有意义，
+
+    $Wx-1\neq0,$
+
+    $\therefore x=1,$
+
+    故答案为：$x\ 1$'
+  knowledge_points:
+  - 综合
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 10
+  type: 填空
+  score: 2
+  question: 分解因式：3x2+6xy+3y2＝_____．
+  answer: 3（x+y）2．
+  solution: '3x2+6xy+3y2=3（x2+2xy+y2）=3（x+y）2．
+
+    故答案为3（x+y）2．'
+  knowledge_points:
+  - 因式分解
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 11
+  type: 填空
+  score: 2
+  question: 分式方程$\frac{3}{x}=\frac{2}{x-1}$的解是__________．
+  answer: $x=3$
+  solution: '解：去分母得：$3(x-1)=2x$，
+
+    解得：$x=3$，
+
+    当$x=3$时，$x-1\neq0$．
+
+    所以原方程的解为$x=3$．
+
+    故答案为：$x=3$．'
+  knowledge_points:
+  - 分式方程
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 12
+  type: 填空
+  score: 2
+  question: 在平面直角坐标系xOy中，若点$(1,m)$和$(4,2)$在反比例函数$y=\frac{k}{x}(k\neq0)$图象上，则$m =$__________．
+  answer: '8'
+  solution: '解：$\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$点$(1,m)$和$(4,2)$在反比例函数$y=\frac{k}{x}(k\neq0)$图象上，
+
+    $k=4\times2-m$，
+
+    解得$m=8$，
+
+    故答案为：8．'
+  knowledge_points:
+  - 反比例函数
+  - 坐标系
+  module: functions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 13
+  type: 填空
+  score: 2
+  question: '如图，点P为$\odot\odot$外一点，过点P作$\odot\odot$的两条切线，切点分别为A，B，点C为优弧AB上一点，若$\angle P = 80^\circ$，则$\angle ACB =$__________°．
+
+    [图]'
+  answer: '50'
+  solution: '解：连接OA，OB，
+
+    [图]
+
+    $\therefore PA$，PB分别切圆于A、B，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$半径$OA \perp PA$，半径$OB \perp PB$，
+
+    $\angle PAO = \angle PBO = 90^\circ$，
+
+    $Q\angle P=80^\circ$，
+
+    $\angle AOB=360^{\circ}-90^{\circ}-90^{\circ}-80^{\circ}=100^{\circ}$，
+
+    $\angle ACB = \frac{1}{2} \angle AOB = 50^\circ$．
+
+    故答案为：50．'
+  knowledge_points:
+  - 圆周角
+  - 切线
+  module: circles
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 14
+  type: 填空
+  score: 2
+  question: '$2024$年3月$12$日，是我国的第$46$个植树节，今年植树节的主题是“共同呵护地球家园，筑造美丽未来”．下表是某地区在植树节期间，不同批次种植杨树的成活率的统计结果，请你估计植树节期间，种植杨树的成活率大约为__________（结果保留两位小数）．
+
+    第一批次
+
+    第二批次
+
+    第三批次
+
+    第四批次
+
+    第五批次
+
+    种植数量
+
+    $200$
+
+    $200$
+
+    $200$
+
+    $200$
+
+    $200$
+
+    成活数量
+
+    $194$
+
+    $193$
+
+    $192$
+
+    $196$
+
+    $195$
+
+    成活频率
+
+    $0.970$
+
+    $0.965$
+
+    $0.960$
+
+    $0.980$
+
+    $0.975$'
+  answer: $0.97$
+  solution: '解：由题意知，种植杨树的成活率大约为$\frac{194+193+192+196+195}{5\times200}=0.97$，
+
+    故答案为：$0.97$．'
+  knowledge_points:
+  - 频率
+  - 统计
+  module: statisticsAndProbability
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 15
+  type: 填空
+  score: 2
+  question: '图1是装满红酒的高脚杯示意图，装酒的杯体可看作一个三角形，液面宽度为6cm，其它数据如图所示，喝掉一部分后的数据如图2所示，此时液面宽度为__________cm．
+
+    [图]
+
+    图1图2'
+  answer: '3'
+  solution: '解：如图，过点O作$OM \perp CD$，垂足为M，过点$O''$作$O''N\perp AB$，垂足为N，
+
+    [图]
+
+    ∵$AB \parallel CD$，
+
+    $\triangle CDO \cong \triangle ABO$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\frac{CD}{AB} = \frac{OM}{O''N}$，
+
+    $\because OM=15-7=8(\mathrm{cm})$，$O''N=|1-7|=6(\mathrm{cm})$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\frac{6}{AB} = \frac{8}{4}$，
+
+    解得：$AB = 3$，
+
+    故答案为：3．'
+  knowledge_points:
+  - 相似三角形
+  module: triangles
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 16
+  type: 填空
+  score: 2
+  question: 某学校为丰富学生的课余生活，组织校园篮球赛，初三年级6个班进行单循环比赛（即每班都与其他班比赛一场），每天同时在三个场地各进行一场比赛．已知第一天（2）班与（4）班比赛，第二天（3）班与（5）班比赛，第三天（4）班与（6）班比赛，第四天（2）班与（3）班比赛，那么第三天与（3）班比赛的是__________班，第五天与（1）班比赛的是__________班．
+  answer: ①.（1）②.（2）
+  solution: '解：（3）班已知的比赛：第二天（3）班与（5）班比赛，第四天（2）班与（3）班比赛，而第三天已知进行的是（4）班与（6）班比赛，故第三天只有（1）班与（3）班比赛，
+
+    （4）班与（2）班比赛在第一天，（4）班与（6）班比赛在第三天，第二天已知（3）班与（5）班比赛，故第二天（4）班与（1）班比赛，（2）班与（6）班比赛，同理可得：第四天（1）班与（6）班比赛，（4）班与（5）班比赛，第一天（3）班与（6）班比赛，（1）班与（5）班比赛，故最后一天为（1）班与（2）班比赛，（3）班与（4）班比赛，（5）班与（6）班比赛，如表1
+
+    第一天
+
+    第二天
+
+    第三天
+
+    第四天
+
+    第五天
+
+    场地1
+
+    $2-4$
+
+    $3-5$
+
+    $4-6$
+
+    $2-3$
+
+    $1-2$
+
+    场地2
+
+    $3-6$
+
+    $1-4$
+
+    $1-3$
+
+    $1-6$
+
+    $3-4$
+
+    场地3
+
+    $1-5$
+
+    $2-6$
+
+    $2-5$
+
+    $4-5$
+
+    $5-6$
+
+    同一天场地上的比赛可交换进行．
+
+    故答案为：（1），（2）.'
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 17
+  type: 解答
+  score: 5
+  question: 计算：$\sqrt{8}+\left(\frac{1}{2}\right)^{-1}-2\sin 45^{\circ}+|1-\sqrt{2}|$.
+  answer: $2\sqrt{2}+1$
+  solution: '解：原式$=2\sqrt{2}+2-2\times\frac{\sqrt{2}}{2}+\sqrt{2}-1$
+
+    $=2\sqrt{2}+2-\sqrt{2}+\sqrt{2}-1$
+
+    $=2\sqrt{2}+1$．'
+  knowledge_points:
+  - 三角函数
+  - 绝对值
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 18
+  type: 解答
+  score: 5
+  question: '解不等式组：$\begin{cases}
+
+    3x-8>1\quad①\\
+
+    \dfrac{3x-1}{2}>x②
+
+    \end{cases}$．'
+  answer: $x\ 4$
+  solution: '解：$\begin{cases}
+
+    3x-8>1\quad①\\
+
+    \dfrac{3x-1}{2}>x②
+
+    \end{cases}$．
+
+    解不等式①得，$x\ 4$；
+
+    解不等式②得，$x>1$，
+
+    所以这个不等式的解集为$x\ 4$．'
+  knowledge_points:
+  - 不等式
+  - 不等式组
+  module: equationsAndInequalities
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 19
+  type: 解答
+  score: 5
+  question: 已知$x^{2}+x-2=0$，求代数式$\left(\frac{1}{x-1}+1\right)\cdot\frac{2}{x-1}$的值．
+  answer: '1'
+  solution: '解：原式$\frac{1}{4}+\frac{x-1}{x-2}-\frac{2}{x^{2}-4}$$= \frac{x}{x - 1} \cdot \frac{(x + 1)(x - 1)}{2}$$=\frac{x^{2}+x}{2}$
+
+    $x^{2}+x-2=0$，
+
+    $\therefore x^{2}+x=2$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$原式$=1$.'
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 20
+  type: 解答
+  score: 5
+  question: '如图，在四边形$ABCD$中，$AB \parallel CD$，$AB = AD$，对角线$AC, BD$交于O，AC平分$\angle BAD$．
+
+    [图]
+
+    （1）求证：四边形$ABCD$是菱形；
+
+    （2）过点C作AB的垂线交其延长线于点E，若$BD = 6$，$\tan\angle OAB=\frac{3}{4}$，求CE的长．'
+  answer: （1）见解析（2）$CE = \frac{24}{5}$
+  solution: '【小问1详解】
+
+    证明：$\because AC$平分$\angle BAD$，
+
+    $\angle DAC = \angle BAC$，
+
+    $\because AB \parallel CD$，
+
+    $\angle DCA = \angle BAC$，
+
+    $\angle DAC = \angle DCA$，
+
+    $\therefore AD = CD$，
+
+    $\because AB = AD$，
+
+    $\therefore AB = CD$，
+
+    $\because AB \parallel CD$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$四边形$ABCD$是平行四边形，
+
+    $\because AB = AD$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$四边形$ABCD$是菱形；
+
+    【小问2详解】
+
+    解：$\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$四边形$ABCD$是菱形，
+
+    $AC \perp BD$，$OB - OD = \frac{1}{2}BD = 3$，$AO = OC = \frac{1}{2}AC$，
+
+    $\therefore R\triangle AOB$中，$\tan\angle OAB=\frac{OB}{OA}=\frac{3}{4}$，
+
+    $\therefore AO = 4$，$AC = '
+  knowledge_points:
+  - 勾股定理
+  - 平行四边形
+  - 菱形
+  - 三角函数
+  module: triangles
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 21
+  type: 解答
+  score: 5
+  question: '如图，初三年级准备制作一个长$8.5m$的横幅，横幅内容定为16个字，对横幅的有关数据作如下规定：每个字的字宽是相同的，每两个字之间的字距均相等，边空宽：字宽：字距$=3:4:1$，试求横幅字距是多少？
+
+    [图]'
+  answer: $0.1m$
+  solution: '解：因为边空宽：字宽：字距$=3:4:1$，
+
+    所以设边空宽为$3xm$，字宽为$4xm$，字距为xm.
+
+    由题意可得：$2x+3x+16+4x+15x=6.5$，
+
+    解得$x = 0.1$.
+
+    答：横幅字距为$0.1m$．'
+  knowledge_points:
+  - 综合
+  module: equationsAndInequalities
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 22
+  type: 解答
+  score: 5
+  question: '在平面直角坐标系xOy中，一次函数y＝kx＋b（k≠0）的图象是由函数y＝2x的图象平移得到，且经过点（1，3）．
+
+    （1）求这个一次函数的表达式；
+
+    （2）当x＞1时，对于x的每一个值，函数y＝mx（m≠0）的值大于一次函数y＝kx＋b（k≠0）的值，直接写出m的取值范围．'
+  answer: （1）y=2x+1；（2）m≥3
+  solution: '解：（1）∵一次函数y=kx+b（k≠0）的图象由函数y=2x的图象平移得到，
+
+    ∴k=2．
+
+    ∵一次函数y=2x+b的图象过点（1，3），
+
+    ∴3=2×1+b．
+
+    ∴b=1．
+
+    ∴这个一次函数的表达式为y=2x+1．
+
+    （2）把点（1，3）代入y=mx，求得m=3，
+
+    ∵当x＞1时，对于x的每一个值，函数y=mx（m≠0）的值大于一次函数y=2x+1的值，
+
+    ∴m≥3．'
+  knowledge_points:
+  - 一次函数
+  - 平移
+  - 不等式
+  - 坐标系
+  module: geometryComprehensive
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 23
+  type: 解答
+  score: 6
+  question: '4月24日是中国航天日，某校初中部举办了“航天知识”竞赛，每个年级各随机抽取10名学生，统计这部分学生的竞赛成绩，并对成绩进行了收集、整理，分析．下面给出了部分信息．
+
+    a.初一、初二年级学生得分的折线图
+
+    [图]
+
+    b.初三年级学生得分：
+
+    10，9，6，10，8，7，10，7，3，10
+
+    c.初一、初二、初三，三个年级学生得分的平均数和中位数如下
+
+    年级
+
+    初一
+
+    初二
+
+    初三
+
+    平均数
+
+    8
+
+    8
+
+    m
+
+    中位数
+
+    8
+
+    8.5
+
+    n
+
+    根据以上信息，回答下列问题：
+
+    （1）由折线图可知，初一、初二两个年级学生“航天知识”竞赛，成绩更稳定的是__________（填“初一”或“初二”）；
+
+    （2）统计表中$m =$__________，$n =$__________；
+
+    （3）由于数据统计出现失误，初三年级所调查的10名学生中有一名学生被记录为6分，实际得分为9分，将数据修正后，初三年级所调查的10名学生中以下统计数据发生变化的：__________（写出符合题意的序号）.
+
+    ①平均数；②中位数；③众数；④方差.'
+  answer: （1）初一（2）$m=8$，$n = 8.5$ （3）①②④
+  solution: '【小问1详解】
+
+    解：由折线图可知，初一学生得分的波动比初二的小，所以成绩更稳定的是初一．
+
+    故答案为：初一；
+
+    【小问2详解】
+
+    解：由题意得，$m=\frac{1}{10}\times(10\times4+9+6+8+7+2+3)=8$，
+
+    把初三年级学生得分从小到大排列，排在中间的两个数分别是8、9，
+
+    故中位数$n=\frac{8+9}{2}=8.5$，
+
+    故答案为：8，8.5；
+
+    【小问3详解】
+
+    解：将其中的数据6改为9，则数据变为：10，9，9，10，8，7，10，7，3，10
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$数据变化，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$平均数、方差改变，
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$中位数为：$\frac{9+9}{2}=9\ne8.5$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$中位数改变，
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$众数依然是10，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) cir'
+  knowledge_points:
+  - 统计
+  - 平均数
+  - 中位数
+  - 众数
+  - 方差
+  module: statisticsAndProbability
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 24
+  type: 解答
+  score: 6
+  question: '如图，AB是$\odot\odot$的直径，点C在$\odot\odot$上，若弦CD平分$\angle ACB$，交AB于点E，过点C作$\odot\odot$的切线CF，交AB的延长线于点F．
+
+    [图]
+
+    （1）求证：$\angle BCF = \angle FEC$；
+
+    （2）连接BD，若$\angle CDB=30^{\circ}$，$BF = 2$，求$\odot\odot$半径的长．'
+  answer: （1）见解析（2）$2$
+  solution: '【小问1详解】
+
+    证明：连接$OD, OC$.
+
+    [图]
+
+    $\therefore CD$平分$\angle ACB$
+
+    $\angle ACD = \angle BCD$
+
+    ∴$\widehat{AD}=\widehat{BD}$
+
+    $\therefore AB$是直径，$\widehat{AD}=\widehat{BD}$
+
+    $\angle AOD = \angle BOD = 90^\circ$
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$在$Rt\triangle EOD$中，$\angle ODE + \angle OED = 90^\circ$
+
+    $\because CF$是$\odot\odot$切线
+
+    $\angle OCF = \angle OCE + \angle FCE = 90^\circ$
+
+    $\because OD = OC$
+
+    $\angle LODE = \angle LOCE$
+
+    $\angle OED = \angle PCE$
+
+    $\because \angle OED = \angle PEC$
+
+    $\angle FCE = \angle FEC$
+
+    【小问2详解】
+
+    解：连接BD，
+
+    [图]
+
+    $\therefore AB$$[公式]$直径，
+
+    ∴$\angle ACB=90^\circ$，
+
+    $\because \widehat{BC}=\widehat{BC}$
+
+    $\angle CDB = \angle CAB = 30^\circ$
+
+    $\angle ABC=60^\circ$
+
+    $\because OB = OC$，
+
+    $\therefore \triangle OBC$为等边'
+  knowledge_points:
+  - 圆周角
+  - 切线
+  - 弦
+  - 三角函数
+  - 锐角三角函数
+  module: triangles
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 25
+  type: 解答
+  score: 6
+  question: '通常把脏衣服用洗衣液清洗后会进行拧干，但由于不可能拧净衣服上的全部污水，所以还需要用清水进行多次漂洗，不断降低衣服中污水的含量．如：把一件存留1斤污水的衣服用10斤清水漂洗后，拧干到仍然存留1斤污水，则漂洗后衣服中存有的污物是原来的$\frac{1}{11}$．
+
+    某小组决定使用20斤清水，对某件存留1斤污水衣服分别进行漂洗，且每次拧干后的衣服上都存留约1斤的污水．
+
+    （1）该小组设计了如下两个方案，请你完善方案内容：
+
+    方案一：采用一次漂洗的方式.
+
+    将20斤清水一次用掉，漂洗后该衣服中存有的污物是原来的__________；
+
+    方案二：采用两次漂洗的方式.
+
+    若第一次用14斤清水，第二次用6斤清水，漂洗后该衣服中存有的污物是原来的__________；若在第一次用$x(0<x<20)$斤清水，第二次用$(20-x)$斤清水，漂洗后该衣服中存有的污物是原来的__________（用含有x的代数式表示）；
+
+    通过计算分析，方案__________（“一”或“二”）的漂洗效果更好.
+
+    （2）若采用方案二，第一次用__________斤清水，漂洗效果最好，二次漂洗后该衣服中存有的污物是原来的__________．'
+  answer: （1）$\frac{1}{21}$；$\frac{1}{105}$；$\frac{1}{x^{2}-20x-21}$；二 （2）10；$\frac{1}{121}$
+  solution: '【小问1详解】
+
+    解：方案一：采用一次漂洗的方式．
+
+    将20斤清水一次用掉，漂洗后该衣服中存有的污物是原来的$\frac{1}{20+1}=\frac{1}{21}$；
+
+    方案二：采用两次漂洗的方式．
+
+    若第一次用14斤清水，第二次用6斤清水，漂洗后该衣服中存有的污物是原来的$\frac{1}{14} + \frac{1}{6} + \frac{1}{105}$，
+
+    若在第一次用$x(0<x<20)$斤清水，第二次用$(20 - x)$斤清水，漂洗后该衣服中存有的污物是原来的$\frac{x}{x+1}-\frac{20-x}{20-x+1}=\frac{(x+1)(21-x)}{(x+1)(20-x)}-x^{2}-20x-21$
+
+    $\frac{1}{21}-\frac{5}{105}>\frac{1}{105}$，方案二效果更好；
+
+    故答案为：$\frac{1}{21}$，$\frac{1}{105}$，$\frac{1}{x^{2}-20x-21}$；二；
+
+    【小问2详解】
+
+    解：$x(20-x)=-(x^{2}-20x)=-(x-10)^{2}+100$，
+
+    当$x = 10$时有最大值，分母越大，分数值最小，漂洗效果最好，
+
+    第一次用10斤清水，漂洗效果最好，
+
+    二次漂洗后该衣服中存有$[公式]$污物是原来的$10+1\times10+1=121$
+
+    故答案为：二，$\frac{1}{121}$．'
+  knowledge_points:
+  - 二次函数
+  - 最值
+  module: numbersAndExpressions
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 26
+  type: 解答
+  score: 6
+  question: '在平面直角坐标系xOy中，$M(x_{1},y_{1})$，$N(x_{2},y_{2})$是抛物线$y=ax^{2}+bx+c(a>0)$上任意两点，其中$x_{1}<x_{2}$．
+
+    （1）若抛物线经过点$(4,c)$，
+
+    ①求抛物线的对称轴；
+
+    ②当$x_{1}+x_{2}>4$时，比较$y_{1}$，$y_{2}$的大小，并说明理由；
+
+    （2）设抛物线的对称轴为直线$x = t$，若存在实数m，当$t \leq m$时，$x_1 = m$，$x_{2}=m+1$，都有$\left|x_{1}-y_{2}\right|^{2}$，直接写出a的取值范围．'
+  answer: （1）$1$$x=2$；$\textcircled{2}$$y_1 < y_2$，理由见解析 （2）$a^{2}$
+  solution: '【小问1详解】
+
+    解：①∵抛物线经过点$(4,c)$和点$(0,c)$，
+
+    ∴抛物线的对称轴是：直线$x = \frac{4 + 0}{2} = 2$，
+
+    ②$y_1 < y_2$，理由如下：
+
+    ∵$a > 0$，
+
+    ∴离对称轴越近，函数值越小，
+
+    ∵$x_{1}<x_{2}$，$x_{1}+x_{2}>4$，
+
+    ∴$2x_{3}>x_{1}+x_{2}>4$，
+
+    ∴$x_{2}>2$，
+
+    当$x_{2}>x_{1} \quad 2$时，$x_{2}-2>x_{1}-2$，
+
+    即点$M(x_{1},y_{1})$比点$N(x_{2},y_{2})$离对称轴更近，
+
+    ∴$y_1 < y_2$，
+
+    当$x_{2}>2>x_{1}$时，
+
+    ∵$x_{1}+x_{2}>4$
+
+    ∴$x_{2}-2>2-x_{1}$，
+
+    即点$M(x_{1},y_{1})$比点$N(x_{2},y_{2})$离对称轴更近，
+
+    ∴$y_1 < y_2$，
+
+    综上所述：$y_1 < y_2$．
+
+    【小问2详解】
+
+    ∵$\left\{S_{m}<m+1\right\}$即$1 \leq x_{1} < x_{2}$，开口向上，
+
+    ∴$y_1 < y_2$，
+
+    ∴$|x_1 - x_2| = x_2 - x_1$
+
+    $=(ax_{i}^{2}+bx_{i}+c)-(ax_{i}^{2}+bx_{i}+c)$
+
+    $=a(m+1)^{2}+b(m+1)+c-(am^{2}+bm+c)$
+
+    $=a(m+1)^{2}-am^{2}+b(m+1)-bm+c-c$
+
+    $=a(2m+1)+b$
+
+    $=2am+a+b$，
+
+    ∵$2a > 0$，
+
+    ∴$\left| x_{1} - x_{2} \right|$随着m的增大而增大，
+
+    要使得存在实数m，当$t \leq m$时，都有$\left|x_{1}-y_{2}\right|^{2}$，
+
+    只需保证$\left|y_{1}-y_{'
+  knowledge_points:
+  - 二次函数
+  - 坐标系
+  module: functions
+  difficulty: 压轴
+  recommended_for:
+  - L3
+- id: 27
+  type: 解答
+  score: 7
+  question: '如图，在$\triangle ABC$中，$\angle B = \angle C = \alpha$，点D是平面内任意一点（不与点A，B，C重合），将线段AD绕点A逆时针旋转$2\alpha$得到线段AE，连接BE，G为BE的中点，连接AG，CD．
+
+    [图]
+
+    （1）如图1，当点D在AC边上时，
+
+    ①根据题意，补全图1；
+
+    ②直接写出：$\frac{CD}{AG} =$__________；
+
+    （2）如图2，当点D在$\triangle ABC$内部时，（1）问中$\frac{CD}{AG}$的比值还成立吗？如果成立，请证明你的结论，如果不成立，请说明理由．'
+  answer: （1）①补图见解析； ②$\frac{CD}{AG}=2$ （2）仍成立，证明见解析
+  solution: '【小问1详解】
+
+    解：①根据题意补全图形如下：
+
+    [图]
+
+    ②设$AB = AC = x$，$AD = AE = y$，
+
+    $\therefore BE = x + y$，$CD = x - y$，
+
+    $GE=\frac{1}{2}(x+y)$，
+
+    $AG = GE - AE = \frac{1}{2}(x + y) - y = \frac{1}{2}(x - y)$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\frac{CD}{AG}=2$；
+
+    【小问2详解】
+
+    解：成立，
+
+    延长BA，取$AB = AH$，连接EH，
+
+    [图]
+
+    $\angle HAC = \angle ABC + \angle ACB = 2\alpha$，$\angle DAE=2\alpha$，
+
+    $\angle DAC = \angle HAE$，
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$$AH = AB = AC$，$AE = AD$，
+
+    $\triangle AEH \cong \triangle ADC (SAS)$，
+
+    $\therefore EH = CD$，
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$点A为BH的中点，点G为BE的中点，
+
+    $\therefore AG \parallel EH$，$EH=2AG$，
+
+    $CD = 2AG$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) '
+  knowledge_points:
+  - 全等三角形
+  - 旋转
+  module: triangles
+  difficulty: 压轴
+  recommended_for:
+  - L3
+- id: 28
+  type: 解答
+  score: 7
+  question: '对于平面直角坐标系xOy中的点P和图形M，给出如下定义：将图形M绕P顺时针旋转$90^\circ$得到图形N，当图形M与图形N有公共点时，我们称点P是图形M的“关联点”．已知$A(0,2)$，$B(3,1)$．
+
+    [图]
+
+    （1）如图1，点P是线段AB的“关联点”，在点$P_{1}(1,0)$，$P_{2}(0,1)$，$P_{3}(2,3)$中，则满足条件的点是__________；
+
+    （2）若直线$y = -x + b$上存在点P，使点P为线段AB的“关联点”，直接写出b的取值范围；
+
+    （3）以$(t,0)$为圆心，1为半径的$\mathrm{e}T$，若线段AB上存在点P，使点P为$\mathrm{e}T$的“关联点”，直接写出t的取值范围．'
+  answer: （1）$P_{1}$，$P_3$ （2）$1 \leq b \leq 5$ （3）$6-2\sqrt{5}\leq s\leq 4$
+  solution: '【小问1详解】
+
+    解：连接$P_{1}A$和$P_{1}B$，过点B作$BH \perp x$轴于点H，如图，
+
+    [图]
+
+    ∵$A(0,2)$，$B(3,1)$，$P_{1}(1,0)$，
+
+    ∴$OP = 1, OA = 2,$$BH=1,PH=2,$$AB=\sqrt{(0-3)^{2}+(2-1)^{2}}=\sqrt{10}$，
+
+    ∴$PA = \sqrt{5}, PB = \sqrt{5}$
+
+    ∴$P_{1}A^{2}+P_{1}B^{2}=AB^{2}$
+
+    ∴点A饶点$P_{1}$顺时针旋转$90^\circ$得到点B，
+
+    则点$P_{1}$是线段AB的“关联点”；
+
+    ∵$A(0,2)$，$B(3,1)$，$P_{2}(0,1)$，
+
+    ∴$AP_{2}=1,\,P_{2}B=3,$
+
+    设点A、点B饶点$P_{2}$顺时针旋转$90^\circ$得到点$A_1$、点$B_1$，则$AP=1,PB=3$
+
+    ∴点$A_{1}(1,1)$、点$B_1(0,-2)$，
+
+    ∵点$A_1$的纵坐标小于点B纵坐标
+
+    ∴线段$A_1B_1$与线段AB无交点，
+
+    则点$P_{2}$不是线段AB的“关联点”；
+
+    ∵$A(0,2)$，$B(3,1)$，$P_{3}(2,3)$，
+
+    ∴$AP_{1}=\sqrt{(2-0)^{2}+(3-2)^{2}}=\sqrt{5},BP_{1}=\sqrt{(2-3)^{2}+(5-1)^{2}}=\sqrt{5},$$AB=\sqrt{(0-3)^{2}+(2-1)^{2}}=\sqrt{10}$，
+
+    ∴$P_{1}A^{2}+P_{1}B^{2}=AB^{2}$
+
+    ∴点B饶点$P_{1}$顺时针旋转$90^\circ$得到点A，
+
+    则点$P_3$是线段AB的“关联点”；
+
+    故答案为：$P_{1}$，$P_3$；
+
+    【小问2详解】
+
+    设线段AB饶点P顺时针旋转$90^\circ$得$A''B''$'
+  knowledge_points:
+  - 全等三角形
+  - 相似三角形
+  - 勾股定理
+  - 旋转
+  - 坐标系
+  module: triangles
+  difficulty: 压轴
+  recommended_for:
+  - L3

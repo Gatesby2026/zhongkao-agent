@@ -1,0 +1,1222 @@
+# ============================================================
+# 2024年北京怀柔区中考数学三模试卷 — 逐题分析
+# ============================================================
+# 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
+# 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
+# 满分：100分  时长：120分钟
+
+year: 2024
+district: 怀柔区
+exam_type: 三模
+subject: 数学
+full_score: 100
+duration_minutes: 120
+total_questions: 28
+structure: 8选择(16分) + 8填空(16分) + 12解答(68分)
+questions:
+- id: 1
+  type: 选择
+  score: 2
+  question: '$-\frac{1}{3}$的倒数是（　　）
+
+    A.3B.$-3$C.$\frac{1}{3}$D.$-\frac{1}{3}$'
+  answer: B
+  solution: '解：$-\frac{1}{3}$的倒数是$-3$，
+
+    故选：B．'
+  knowledge_points:
+  - 综合
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 2
+  type: 选择
+  score: 2
+  question: '2024年4月25日20时58分57秒在酒泉卫星发射中心成功发射神舟十八号载人飞船，神舟十八号载人飞船与长征二号F遥十八运载火箭组合体，总重量400000多千克，总高度近60米．将400000用科学记数法表示应为（）
+
+    A.$40\times10^{4}$B.$4\times10^{4}$C.$4\times10^{5}$D.$0.4\times10^{6}$'
+  answer: C
+  solution: '解：$400000 = 4 \times 10^{5}$，
+
+    故选：C．'
+  knowledge_points:
+  - 科学记数法
+  - 绝对值
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 3
+  type: 选择
+  score: 2
+  question: '下面四个图形，既是轴对称图形又是中心对称图形的是（）
+
+    A.[图]B.[图]C.[图]D.[图]'
+  answer: D
+  solution: '解：A、是轴对称图形，不是中心对称图形，故此选项不合题意；
+
+    B、不是轴对称图形，是中心对称图形，故此选项不合题意；
+
+    C、是轴对称图形，不是中心对称图形，故此选项不合题意；
+
+    D、既是轴对称图形，又是中心对称图形，故此选项符合题意；
+
+    故选：D．'
+  knowledge_points:
+  - 中心对称图形
+  - 轴对称图形
+  - 旋转
+  - 轴对称
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 4
+  type: 选择
+  score: 2
+  question: '如图，直线AB、CD相交于点O，OC平分$\angle AOE, \angle BOD = 35^\circ$则$\angle BOE$的度数为（）
+
+    [图]
+
+    A.$95^\circ$B.$100^\circ$C.$110^\circ$D.$145^\circ$'
+  answer: C
+  solution: '解：∵$\angle AOC=\angle BOD=35^{\circ}$，
+
+    又∵OC平分$\angle AOE$，
+
+    $\angle AOB=2\angle AOC=70^{\circ}$，
+
+    $\angle BOE = 180^\circ - \angle AOE = 110^\circ$，
+
+    故选：C．'
+  knowledge_points:
+  - 对顶角
+  - 邻补角
+  module: triangles
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 5
+  type: 选择
+  score: 2
+  question: '不透明的盒子中装有3个小球，每个小球上面写着一个汉字分别是“向”、“前”、“冲”，这3个小球除汉字外无其他差别，从中随机摸出一个小球，记录其汉字，放回并摇匀，再从中随机摸出一个小球，记录其汉字，则两次都摸到“冲”字的概率是（）
+
+    A.$\frac{2}{3}$B.$\frac{1}{3}$C.$\frac{1}{6}$D.$\frac{1}{9}$'
+  answer: D
+  solution: '解：根据题意列表如下：
+
+    向
+
+    前
+
+    冲
+
+    向
+
+    向，向
+
+    前，向
+
+    冲，向
+
+    前
+
+    向，前
+
+    前，前
+
+    前，冲
+
+    冲
+
+    向，冲
+
+    前，冲
+
+    冲，冲
+
+    共有9种等可能得情况，其中两次都摸到“冲”字的情况有1种，
+
+    则两次都摸到“冲”字的概率是：$\frac{1}{9}$，
+
+    故选：D．'
+  knowledge_points:
+  - 概率
+  - 树状图
+  - 列表法
+  module: statisticsAndProbability
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 6
+  type: 选择
+  score: 2
+  question: '如果$m+n=1$，那么代数式$\left(1-\frac{m}{m-n}\right)\cdot\frac{m^{2}-n^{2}}{m}$的值为（）
+
+    A.$-1$B.1C.$-2$D.2'
+  answer: A
+  solution: '∵$m+n=1$
+
+    ∴$\left(1-\frac{m}{m-n}\right)\cdot\frac{m^{2}-n^{2}}{m}$
+
+    $= \frac{m - n}{m - n} - \frac{m}{m - n} = m^2 - n^2$
+
+    $\frac{-n}{m-n}(m+n)(m-n)$
+
+    $=-(m+n)$
+
+    $=-1$．
+
+    故选：A．'
+  knowledge_points:
+  - 综合
+  module: numbersAndExpressions
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 7
+  type: 选择
+  score: 2
+  question: '在今年的慈善基金捐款活动中，某单位对捐款金额分别是人民币$100$元、$200$元、$300$元、$400$元和$500$元的人数进行了统计，制成如下统计图，那么从该统计图获得的四条信息中正确的是（）
+
+    [图]
+
+    A.捐款金额越高，捐款的人数越少
+
+    B.捐款金额为$400$元的人数比捐款金额为$200$元的人数要少
+
+    C.捐款金额为$300$元的人数最多
+
+    D.捐款金额为$200$元的人数最少'
+  answer: C
+  solution: '解：由图知，捐款金额分别是人民币100元、200元、300元、400元和500元的人数分别是2，5，11，5，6．
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$选项A、B、D是错误的，正确的是C，捐款金额为300元的人数最多是11人．
+
+    故选：C．'
+  knowledge_points:
+  - 统计
+  - 条形统计图
+  module: statisticsAndProbability
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 8
+  type: 选择
+  score: 2
+  question: '2024年1月23日，国内在建规模最大塔式光热项目——甘肃省阿克塞汇东新能源“光热＋光伏”试点项目，一万多面定日镜（如图1）全部安装完成．该项目建成后，年发电量将达17亿千瓦时．该项目采用塔式聚光热技术，使用国内首创的五边形巨蜥式定日镜，单块定日镜（如图2）的形状可近似看作正五边形，面积约为$48m^{2}$，则该正五边形的边长大约是（）（结果保留一位小数，参考数据：$\tan
+    36^{\circ} \approx 0.7$，$\tan 54^\circ \approx 1.4$，$\sqrt{42} \approx 6.5$，$\sqrt{21} \approx 4.6$）
+
+    [图]
+
+    A.5.2mB.4.8mC.3.7mD.2.6m'
+  answer: A
+  solution: '解：如图：设正五边形的中心为O，连接OA，OB，过点O作$OF \perp AB$，垂足为F，
+
+    [图]
+
+    $\angle AOB=\frac{360^{\circ}}{5}=72^{\circ}$，$\triangle AOB$的面积$=\frac{1}{5}$正五边形的面积$-\frac{48}{5}\mathrm{m}^2$，
+
+    $\because OA = OB$，$OF \perp AB$，
+
+    $\angle AOF=\frac{1}{2}\angle AOB=36^\circ$，$AB = 2AF$，
+
+    设$OF = xm$，
+
+    在$Rt\triangle OAF$中，$AF=OF\cdot\tan36^{\circ}=0.7x(\mathrm{m})$，
+
+    $\therefore AB = 2AF - 1.4 \, (\text{cm})$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\frac{1}{2}AB\cdot OF=\frac{48}{5}$，
+
+    $\frac{1}{2} \times 1.4x \cdot x = \frac{48}{5}$，
+
+    解得：$x \approx 3.71$，
+
+    $\ldots AB \cdot 1.4x = 5.2(m)$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$该正五边形的边长大约是$5.2m$，
+
+    故选：A．'
+  knowledge_points:
+  - 三角函数
+  - 锐角三角函数
+  module: triangles
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 9
+  type: 填空
+  score: 2
+  question: 分解因式：$mx^{2}-4m=$_____．
+  answer: $m(x+2)(x-2)$
+  solution: '解：$mx^{2}-4m=m(x^{2}-4)$，
+
+    $=m(x+2)(x-2)$，
+
+    故答案为：$m(x+2)(x-2)$．'
+  knowledge_points:
+  - 方差
+  module: statisticsAndProbability
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 10
+  type: 填空
+  score: 2
+  question: 若$\sqrt{3+x}$在实数范围内有意义，则x的取值范围是______．
+  answer: $x^{-3}$
+  solution: '解：∵$\sqrt{3+x}$在实数范围内有意义，
+
+    ∴$3+x\quad0$，解得：$x^{-3}$，
+
+    故答案为：$x^{-3}$．'
+  knowledge_points:
+  - 综合
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 11
+  type: 填空
+  score: 2
+  question: 化简：$\frac{3x}{x-1}+\frac{3}{1-x}$的结果为______．
+  answer: $3$
+  solution: '解：$\frac{3x}{x-1}+\frac{3}{1-x}$
+
+    原式$\frac{3x}{x-1}-\frac{3}{x-1}$
+
+    $\frac{3x-3}{x-1}$
+
+    $=\frac{3(x-1)}{x-1}$
+
+    $=3$
+
+    故答案为：$3$．'
+  knowledge_points:
+  - 综合
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 12
+  type: 填空
+  score: 2
+  question: '某学校为了解九年级800名学生的课外阅读情况，从全体学生中随机抽取了40名学生进行调查，并将调查结果绘制成如下的统计表，根据表中信息估计全校每周课外阅读时间不超过2小时的学生有________人．
+
+    每周课外阅读时间x
+
+    （小时）
+
+    $0\leq x\leq 1$
+
+    $1<x\leq2$
+
+    $2<x\leq3$
+
+    $x>3$
+
+    人数
+
+    6
+
+    9
+
+    13
+
+    12'
+  answer: '300'
+  solution: '解：$800\times\frac{6+9}{40}=300$（人），
+
+    估计全校每周课外阅读时间不超过2小时的学生大约有300人．
+
+    故答案为：300．'
+  knowledge_points:
+  - 统计
+  module: statisticsAndProbability
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 13
+  type: 填空
+  score: 2
+  question: '如图，点A，B，C，D在$\odot\odot$上，$\angle CAD=30^\circ$，$\angle ABD = 50^\circ$，则$\angle ADC =$_________．
+
+    [图]'
+  answer: $100^\circ$##100度
+  solution: '解：∵$\angle ABD = 50^\circ$，$\widehat{AD}=\widehat{AD}$
+
+    ∴$\angle ACD = \angle ABD = 50^\circ$，
+
+    ∵$\angle CAD=30^\circ$，
+
+    ∴$\angle ADC=180^{\circ}-\angle DAC-\angle ACD=180^{\circ}-30^{\circ}-50^{\circ}=100^{\circ}$．
+
+    故答案为：$100^\circ$．'
+  knowledge_points:
+  - 圆周角
+  module: triangles
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 14
+  type: 填空
+  score: 2
+  question: '如图，在平面直角坐标系xOy中，二次函数$y=ax^{2}+bx+c(a\neq 0)$的图象与x轴交于$A(-2,0)$，B两点，并且过$C(m,n)$和$D(2-m,n)$，则点B的坐标为______．
+
+    [图]'
+  answer: $(4,0)$
+  solution: '解：$\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$点$C(m,n)$和$D(2-m,n)$在二次函数$y=ax^{2}+bx+c(a\neq 0)$的图象上，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$该函数图象的对称轴为直线$x=\frac{m+2}{2}-m=1$，
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$二次函数$y=ax^{2}+bx+c(a\neq 0)$的图象与x轴交于$A(-2,0)$，B两点，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$点B的横坐标为：$1\times2-(-2)=4$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$点B的坐标为$(4,0)$，
+
+    故答案为：$(4,0)$．'
+  knowledge_points:
+  - 二次函数
+  - 坐标系
+  module: functions
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 15
+  type: 填空
+  score: 2
+  question: '汽车的“燃油效率”是指汽车每年消耗1升汽油最多可行驶的公里数，下图描述了A，B两辆汽车在不同速度下的燃油效率情况．根据图中信息，下面4个推断中，合理的是__________．
+
+    [图]
+
+    ①消耗1升汽油，A车最多可行使5千米；
+
+    ②B车以40千米/小时的速度行驶1小时，最少消耗4升汽油：
+
+    ③对于A车而言，行驶速度越快越省油；
+
+    ④某城市机动车最高限速80千米/小时，相同条件下，在该市驾驶B车比驾驶A车更省油．'
+  answer: ②④
+  solution: '解：①由图象可知，当A车速度超过40千米时，燃油效率大于$5\mathrm{km}/\mathrm{L}$，所以当速度超过40千米时，消耗1升汽油，A车行驶距离大于5千米，故此项错误；
+
+    ②B车以40千米/小时的速度行驶1小时，路程为40千米，$40km\cdot10km\cdot L=4L$，最多消耗4升汽油，此项正确；
+
+    ③对于A车而言，行驶速度在$0-80\mathrm{km/h}$时，越快越省油，故此项错误；
+
+    ④某城市机动车最高限速80千米/小时，相同条件下，在该市驾驶B车比驾驶A车燃油效率更高，所以更省油，故此项正确．
+
+    故②④合理，
+
+    故答案为：②④．'
+  knowledge_points:
+  - 统计
+  module: statisticsAndProbability
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 16
+  type: 填空
+  score: 2
+  question: '如图$\triangle ABC$中，$\angle ACB=90^\circ$，$AB = 4$，$AC = x$，$\angle BAC = \alpha$，O为AB的中点，若点D为直线BC下方一点，且$\triangle BCD$与$\triangle ABC$相似，则下列结论：①若$\alpha=60^\circ$，$\triangle ABC \sim \triangle
+    CBD$，则OD的长为$2\sqrt{3}$；②若$\alpha=60^\circ$，则AD的最大值为$2\sqrt{7}$；③若$\alpha=45^\circ$，BC与OD相交于E，则点E不一定是$\triangle ABD$的重心；④若$\triangle ABC\sim\triangle BCD$，则当$x=2$时，$AC + CD$取得最大值．其中正确的结论是______．
+
+    [图]'
+  answer: ③④
+  solution: '当$a = 60^\circ$，如图，AD取得最大值，$AB = 4$，
+
+    [图]
+
+    $AC = BE = 2, BC = AE = 2\sqrt{3}$$,BD=\sqrt{3}BC=6$，
+
+    $\therefore DE = 8$，
+
+    $AD=2\sqrt{9}\times 2\sqrt{7}$故②错误．
+
+    如图，若$a=60^\circ,\angle ABC=\angle CBD$，
+
+    [图]
+
+    $\angle BCD=60^{\circ},\angle CDB=90^{\circ}$$AB = 4, AC = 2, BC = 2\sqrt{3}$$OE = \sqrt{3}, CE = 1$，
+
+    $\cdots CD = \sqrt{3}, GE = DF = \frac{\sqrt{3}}{2}, CF$$=\frac{3}{2}$，
+
+    $EF = DG = \frac{5}{2}, CG = \frac{\sqrt{3}}{2}$，
+
+    $CD=\sqrt{7}\approx 2.65$，故①错误．
+
+    有3种情况，如图1，BC和OD都是中线，点E是$\triangle ABD$的重心；
+
+    [图]
+
+    如图2，四边形$ABDC$是平行四边形，F是AD中点，点E是的$\triangle ABD$重心；
+
+    如图3，点F不是AD中点，所以点E不是$\triangle ABD$的重心；故③正确；
+
+    如图，$\triangle ABC\sim\triangle BCD$，
+
+    [图]
+
+    $\therefore \frac{CD}{BC} = \frac{BC}{AB}$，
+
+    即$CD=\frac{1}{4}BC^{2}$，
+
+    在$Rt\triangle ABC$中，$BC^{2}=16-x^{2}$，
+
+    $\cdots CD=\frac{1}{4}\left(16-x^{2}\right)=\frac{1}{4}x^{'
+  knowledge_points:
+  - 二次函数
+  - 相似三角形
+  - 勾股定理
+  module: triangles
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 17
+  type: 解答
+  score: 5
+  question: 计算：$\left(\pi -3\right)^{0}-4\sin 60^{\circ}+\left|-2\right|+\sqrt{12}$．
+  answer: '3'
+  solution: '$\left(\pi -3\right)^{0}-4\sin 60^{\circ}+\left|-2\right|+\sqrt{12}$
+
+    $m=1+4\sqrt{3}+2+2\sqrt{3}$
+
+    $=3$．'
+  knowledge_points:
+  - 三角函数
+  - 绝对值
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 18
+  type: 解答
+  score: 5
+  question: 已知$x^{2}+x-2=0$，求代数式$\left(\frac{1}{x-1}+1\right)\cdot\frac{2}{x-1}$的值．
+  answer: '1'
+  solution: '解：原式$\frac{1}{4}+\frac{x-1}{x-2}-\frac{2}{x^{2}-4}$$= \frac{x}{x - 1} \cdot \frac{(x + 1)(x - 1)}{2}$$=\frac{x^{2}+x}{2}$
+
+    $x^{2}+x-2=0$，
+
+    $\therefore x^{2}+x=2$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$原式$=1$.'
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 19
+  type: 解答
+  score: 5
+  question: '解不等式组：$\begin{cases}
+
+    x < \dfrac{x + 1}{2} \\
+
+    8 - 2x > 2 + x
+
+    \end{cases}$．'
+  answer: $x<1$
+  solution: '解：原不等式组为$\left\{\begin{array}{l}x<\frac{x+1}{2}\text{①}\\8-2x>2+x\text{②}\end{array}\right.$
+
+    解不等式①，得$x<1$；
+
+    解不等式②，得$x<2$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$原不等式组的解集为$x<1$．'
+  knowledge_points:
+  - 不等式
+  - 不等式组
+  module: equationsAndInequalities
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 20
+  type: 解答
+  score: 5
+  question: '在平面直角坐标系xOy中，一次函数$y=kx+b\,(k\neq0)$的图像经过点$(4,1)$和$(0,-1)$．
+
+    （1）求这个一次函数的解析式；
+
+    （2）当$x > -2$时，对于x的每一个值，函数$y = mx \, (m \neq 0)$的值大于一次函数$y=kx+b\,(k\neq0)$的值，直接写出m的取值范围．'
+  answer: （1）$y=\frac{1}{2}x-1$ （2）$\frac{1}{2} \leq m \leq 1$
+  solution: '【小问1详解】
+
+    解：∵一次函数$y=kx+b\,(k\neq0)$的图象经过$(4,1)$，$(0,-1)$，
+
+    ∴$\begin{cases}
+
+    4k + b = 1 \\
+
+    0k + b = -1
+
+    \end{cases}$，
+
+    ∴$\left\{
+
+    \begin{array}{l}
+
+    k = \dfrac{1}{2} \\
+
+    b = -1
+
+    \end{array}
+
+    \right.$，
+
+    ∴一次函数解析式为$y=\frac{1}{2}x-1$；
+
+    【小问2详解】
+
+    解：把$x = -2$代入$y=\frac{1}{2}x-1$，求得$y = -2$，
+
+    ∴函数$y = mx \, (m \neq 0)$与一次函数$y=\frac{1}{2}x-1$的交点为$(-2,-2)$，
+
+    把点$(-2,-2)$代入$y = mx \, (m \neq 0)$，求得$m = 1$，
+
+    当两直线平行时，$m = \frac{1}{2}$，
+
+    如图，
+
+    [图]
+
+    ∵当$x > -2$时，对于x的每一个值，函数$y = mx \, (m \neq 0)$的值大于一次函数$y=\frac{1}{2}x-1$的值，
+
+    ∴$\frac{1}{2} \leq m \leq 1$．'
+  knowledge_points:
+  - 一次函数
+  - 坐标系
+  module: functions
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 21
+  type: 解答
+  score: 5
+  question: '如图，在平行四边形$ABCD$中，$BD \perp CD$，延长CD到点E，使$DE = CD$，连接AE．
+
+    [图]
+
+    （1）求证：四边形$ABCD$是矩形；
+
+    （2）连接AC，若$\angle BCD = 60^\circ$，$CD = 1$，求AC的长．'
+  answer: （1）见解析（2）$AC = \sqrt{7}$
+  solution: '【小问1详解】
+
+    证明：$\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$四边形$ABCD$是平行四边形，
+
+    $\therefore AB \parallel CD$，$AB = CD$．
+
+    $\therefore DE = CD$，
+
+    $\therefore AB = DE$，且$AB \parallel CE$．
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$四边形$ABDE$是平行四边形，
+
+    ∵$BD \perp CD$，
+
+    ∴$\angle BDF = 90^\circ$，
+
+    四边形$ABDE$是矩形；
+
+    【小问2详解】
+
+    解：连接AC，
+
+    [图]
+
+    $\because DE=CD, CD=1,$
+
+    $\therefore DE=CD=1$
+
+    $\therefore CE = 2$
+
+    $QBD\perp CD,$
+
+    $\angle BDC = 90^\circ$
+
+    $\angle BCD = 60^\circ$
+
+    在$Rt\triangle BDC$中，$\angle BDC=90^\circ$
+
+    $:CD=1,\tan\angle BCD=\sqrt{3}$
+
+    $\therefore BD = \sqrt{3},$
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$四边形$ABDE$是矩形
+
+    $\therefore AE = BD = \sqrt{3}, \angle E = 90^\circ,$
+
+    在$\mathrm{R'
+  knowledge_points:
+  - 勾股定理
+  - 平行四边形
+  - 矩形
+  module: triangles
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 22
+  type: 解答
+  score: 5
+  question: '在平面直角坐标系xOy中，对于点P和图形M，给出如下定义：若图形M上存在一点Q不与O重合，使点P关于直线OQ的对称点$P''$在图形M上，则称P为图形M的关联点．
+
+    [图]
+
+    （1）如图，点$A(-2,2)$，$B(2,2)$．在点$C_{1}(1,0)$，$C_{2}(2,-2)$，$C_{3}(-2,0)$中，线段AB的关联点是______；
+
+    （2）已知点$D(-1,0)$，$\odot D$的半径为2，点P在直线$y=\sqrt{3}x$上，若P为$\odot D$的关联点，求点P的横坐标$x_{p}$的取值范围；
+
+    （3）$\mathrm{e}T$的圆心为$(0,t)$，半径为3，x轴上存在$\mathrm{e}T$的关联点，直接写出t的取值范围．'
+  answer: （1）$C_{2},C_{3}$ （2）$-\frac{3}{2} \leq x_{\circ} \leq -\frac{1}{2}$或$\frac{1}{2} \leq x_{\rho} \leq \frac{3}{2}$ （3）$-6\leq t\leq 6$
+  solution: '【小问1详解】
+
+    解：如图，作直线OA，OB，
+
+    [图]
+
+    由图可知：点$C_{2}$关于直线OB的对称点是点A，点$C_3$关于直线OA的对称点是线段AB上的点$C''$，
+
+    所以线段AB的关联点是$C_{2}$、$C_3$，
+
+    故答案为：$C_{2}$，$C_3$；
+
+    【小问2详解】
+
+    解：由题意得$OP=OP''$，则以O为圆心，OP为半径的圆要与$\odot D$有公共点即$P''$，$PP''$的中垂线OQ与$\odot D$有交点即点Q，
+
+    ∴满足$|R_{\mathrm{o}}-R_{\mathrm{i}}|\leq OD\leq R_{\mathrm{o}}+R_{\mathrm{i}}$，
+
+    ∴$|OP-2|\leq z\leq 2+OP$，
+
+    解得：$1 \leq OP \leq 3$，
+
+    ①当点P在第一象限时，
+
+    当$OP = 1$时，$\odot D,\odot O$内切于x轴正半轴，切点$[公式]$点$P''$，如图：
+
+    过点P作x轴的垂线，垂足为点G，设$P\left(m,\sqrt{3}m\right)$，
+
+    [图]
+
+    则$OG = m, PG = \sqrt{3}m$，
+
+    ∴$\tan \angle OPG = \frac{OG}{PG} = \frac{\sqrt{3}}{3}$，
+
+    ∴$\angle OPG=30^{\circ}$，
+
+    ∴$OG = x_{p} - \frac{1}{2} OP = \frac{1}{2}$；
+
+    当$OP = 3$时，$\odot D,\odot O$内切于x轴负半轴，切点为点$P''$，如图：
+
+    [图]
+
+    ∴$OG = x_{p} = \frac{1}{2} OP = \frac{3}{2}$
+
+    ∴当$\frac{1}{2} \leq x_{\rho} \leq \frac{3}{2}$时，满足条件；
+
+    ②当点P在第三象限时，同理可求$-\frac{3}{2} '
+  knowledge_points:
+  - 轴对称图形
+  - 轴对称
+  - 坐标系
+  module: geometryComprehensive
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 23
+  type: 解答
+  score: 6
+  question: '燕几（即宴几）是世界上最早的一套组合桌，设计者是北宋进士黄伯思．全套燕几一共有七张桌子，每张桌子高度相同．其桌面共有三种尺寸，包括$2$张长桌、$2$张中桌和$3$张小桌，它们的宽都相同．七张桌面可以拼成一个大的长方形，或者分开组合成不同的图形，其方式丰富多样，燕几也被认为是现代七巧板的前身．右图给出了《燕几图》中列出的名称为“函三”和“回文”的两种桌面拼合方式．若全套七张桌子桌面的总面积为$61.25$平方尺，则长桌的长为多少尺？
+
+    [图]'
+  answer: $7$
+  solution: '解：设每张桌面的宽为x尺，
+
+    根据图形可得：小桌的长为$2x$尺，中桌的长为$3x$尺，长桌的长为$4x$尺，
+
+    故可得$2\times4x^{2}+2\times3x^{2}+3\times2x^{2}=61.25$，
+
+    解得：$x_{1}=\frac{7}{4}$，$x_{2}=-\frac{7}{4}$（舍去），
+
+    ∴$4x = 7$，
+
+    答：长桌的长为$7$尺．'
+  knowledge_points:
+  - 一元二次方程
+  module: equationsAndInequalities
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 24
+  type: 解答
+  score: 6
+  question: '如图，AB为$\odot\odot$的直径，点C在$\odot\odot$上，$\angle EAC = \angle CAB$，直线$CD \perp AE$于点D，交AB的延长线于点F．
+
+    [图]
+
+    （1）求证：直线CD为$\odot\odot$的切线；
+
+    （2）当$\tan F = \frac{1}{2}$，$CD = 4$时，求BF的长．'
+  answer: （1）见解析（2）$10-2\sqrt{5}$
+  solution: '【小问1详解】
+
+    证明：连接OC，BC
+
+    [图]
+
+    $\therefore OA = OC$，
+
+    $\angle CAO = \angle ACO$，
+
+    $\angle EAC = \angle CAB$，
+
+    $\angle DAC = \angle ACO$，
+
+    $\because OC \parallel AD$，
+
+    $\because CDAD$，
+
+    $\therefore OC \perp DF$，
+
+    $\because OC$是$\odot\odot$的半径，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$直线CD为$\odot\odot$的切线；
+
+    【小问2详解】
+
+    解：$\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$$\tan F = \frac{1}{2}$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\frac{OC}{CF}=\frac{1}{2}$，
+
+    设$OC = x$，则$CF = 2x$，$AO = OB = x$，
+
+    $OC = \sqrt{OC^{2} + CP^{2}} = \sqrt{5}x$，
+
+    $\because OC \parallel AD$，
+
+    $\triangle AFD \sim \triangle OFC$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,'
+  knowledge_points:
+  - 平行线
+  - 切线
+  - 相似三角形
+  - 勾股定理
+  module: triangles
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 25
+  type: 解答
+  score: 6
+  question: '某市为提倡节约用水，准备实行自来水“阶梯计费”方式，用户用水不超出基本用水量的部分享受基本价格，超出基本用水量的部分实行超价收费，为更好地决策，自来水公司随机抽取了部分用户的用水量数据，并绘制了如图不完整的统计图，（每组数据包括右端点但不包括左端点），请你根据统计图解答下列问题：
+
+    [图]
+
+    （1）此次抽样调查的样本容量是_____；
+
+    （2）补全频数分布直方图；
+
+    （3）求扇形图中“15吨～20吨”部分的圆心角的度数；
+
+    （4）如果自来水公司将基本用水量定为每户25吨，那么该地区7万用户中约有多少万户的用水全部享受基本价格？'
+  answer: （1）100； （2）见解析；（3）$72^\circ$； （4）$4.76$万户．
+  solution: '【小问1详解】
+
+    解：$10\div10\%=100$，
+
+    ∴此次抽样调查的样本容量是$100$；
+
+    【小问2详解】
+
+    $100-(10+78+24+x)=20$（户），
+
+    补全图形如图所示
+
+    ．[图]
+
+    【小问3详解】
+
+    $\frac{20}{100} \times 360^{\circ} = 72^{\circ}$，
+
+    答：“15吨-20吨”部分的圆心角度数为$72^\circ$；
+
+    【小问4详解】
+
+    $\frac{10+20+38}{100}\times7=4.76$（万户）
+
+    答：该地7万用户中约有$4.76$万户居民的用水全部享受基本价格．'
+  knowledge_points:
+  - 统计
+  module: circles
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 26
+  type: 解答
+  score: 6
+  question: '某校九年级某班开展数学活动，小明和小军合作用一副三角板测量学校的旗杆，小明站在B点测得旗杆顶端E点的仰角为45°，小军站在D点测得旗杆顶端E点的仰角为30°．已知小明和小军的距离BD＝6m，小明的身高AB＝1.5m，小军的身高CD＝1.75m，求旗杆的高EF．（结果精确到0.1，参考数据：$\sqrt{2}$≈1.41，$\sqrt{3}$≈1.73）
+
+    [图]'
+  answer: 10.3米
+  solution: '过点A作AM⊥EF于M，过点C作CN⊥EF于N，
+
+    [图]
+
+    则MN＝0.25米．
+
+    ∵∠EAM＝45°，
+
+    ∴AM＝ME．
+
+    设AM＝ME＝x米，
+
+    则CN＝（x＋6）米，EN＝（x－0.25）米．
+
+    ∵∠ECN＝30°，
+
+    ∴$\tan\angle ECN=\frac{EN}{CN}=\frac{x-0.25}{x+6}=\frac{\sqrt{3}}{3}$，
+
+    解得x≈8.8，
+
+    则EF＝EM＋MF≈8.8＋1.5＝10.3（米）．
+
+    ∴旗杆的高EF约为10.3米．'
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 压轴
+  recommended_for:
+  - L3
+- id: 27
+  type: 解答
+  score: 7
+  question: '如图，已知抛物线$y = ax^{2} - \frac{8}{3}a\sqrt{3}$的图象经过点D，$OE = \sqrt{3}OC$，C是ED的中点，P是拋物线上的一个动点，连接PD，设点P的横坐标为n．
+
+    [图]
+
+    （1）求抛物线的表达式；
+
+    （2）若点P在x轴上方的拋物线上运动，连接OP，当四边形$OCDP$面积最大时，求n的值；
+
+    （3）如图，若点Q在坐标轴上，是否存在点Q，使$\angle EDQ = 75^\circ$，若存在，直接写出所有符合条件的点Q的坐标；若不存在，请说明理由．'
+  answer: （1）$y = -\sqrt{3}x + \frac{8\sqrt{3}}{3}x - \sqrt{3}$ （2）$n=\frac{5}{3}$ （3）存在，$Q(4\sqrt{3}-3,0)$或$\left(0,-2\sqrt{3}-3\right)$
+  solution: '【小问1详解】
+
+    解：∵$y = ax^{2} - \frac{8}{3}a\sqrt{3}$，
+
+    ∴$C(0,-\sqrt{3})$，
+
+    ∵$OE = \sqrt{3}OC$，
+
+    ∴$E(-3,0)$．
+
+    ∵C是ED的中点，
+
+    ∴$D(3,-2\sqrt{3})$．
+
+    ∵D在$y = ax^{2} - \frac{8}{3}a\sqrt{3}$的图象上，
+
+    $2-2\sqrt{3}=9a-8a-\sqrt{3}$，
+
+    得$a = -\sqrt{3}$，
+
+    $3\cdot 3\pi =\sqrt{3}\cdot \pi ^{2}+\frac{8\sqrt{3}}{3}-\sqrt{3}$．
+
+    【小问2详解】
+
+    过P作x轴垂线交DE于F，
+
+    [图]
+
+    设直线$DE: y = kx - \sqrt{3}$，即$0 = 3k - \sqrt{3}$，
+
+    解得：$k = -\frac{\sqrt{3}}{3}$，
+
+    故解析式为：$y = -\frac{\sqrt{3}}{3}x - \sqrt{3}$，
+
+    由$P\left(n,-\sqrt{3}n^{2}+\frac{8\sqrt{3}}{3}n-\sqrt{3}\right)$，得$F\left(n,-\frac{\sqrt{3}}{3}n-\sqrt{3}\right)$，
+
+    $PF = \sqrt{3}n^{2} + 3\sqrt{3}n$，
+
+    $S_{\mathrm{ABCD}} = S_{\mathrm{ABCP}} + S_{\mathrm{PCD}}$$m=\frac{1}{2} \times \sqrt{3} n+\frac{1}{2} p f \times 3=-\frac{3 \sqrt{3}}{2} n^{2}+\sqrt{3} \cdot 5 n$，
+
+    当四边形$OCDP$面积最大时，$n = -\frac{5\sqrt{3}}{2 \times'
+  knowledge_points:
+  - 平行线
+  - 一次函数
+  - 二次函数
+  - 相似三角形
+  - 动点
+  - 最值
+  module: functions
+  difficulty: 压轴
+  recommended_for:
+  - L3
+- id: 28
+  type: 解答
+  score: 7
+  question: '在$Rt\triangle ABC$中，$\angle BAC = 90^\circ$，$AB = AC$，点D，E是BC边上的点，$DE=\frac{1}{2}BC$，连接AD．过点D作AD的垂线，过点E作BC的垂线，两垂线交于点F．连接AF交BC于点G．
+
+    [图]
+
+    （1）如图1，当点D与点B重合时，直接写出$\angle DAF$与$\angle BAC$之间的数量关系；
+
+    （2）如图2，当点D与点B不重合（点D在点E的左侧）时，
+
+    ①补全图形；
+
+    ②$\angle DAF$与$\angle BAC$在（1）中的数量关系是否仍然成立？若成立，加以证明；若不成立，请说明理由．
+
+    （3）在（2）$[公式]$条件下，直接用等式表示线段$BD, DG, CG$之间的数量关系．'
+  answer: （1）$\angle BAF = \frac{1}{2} \angle BAC$ （2）①见解析；②$\angle DAF = \frac{1}{2} \angle BAC$仍然成立，证明见解析 （3）$DG^{2}=CG^{2}+BD^{1}$
+  solution: '【小问1详解】
+
+    解：∵在$Rt\triangle ABC$中，$\angle BAC = 90^\circ$，$AB = AC$，点D与点B重合，$DE=\frac{1}{2}BC$，
+
+    ∴$AE\perp BC,\ \angle BAE=\frac{1}{2}\angle BAC$，
+
+    ∵$EF \perp BC$，
+
+    ∴$A, E, F$三点共线，
+
+    ∴$\angle DAF = \frac{1}{2} \angle BAC$；
+
+    【小问2详解】
+
+    解：①如图所示，即为所求；
+
+    [图]
+
+    ②$\angle DAF = \frac{1}{2} \angle BAC$仍然成立，证明如下：
+
+    如图所示，过点A作$AH \perp BC$于H，
+
+    ∴$\angle AHD = 90^\circ$，
+
+    ∵$AD\perp DF,\ EF\perp CD$，
+
+    ∴$\angle AHD=\angle ADF=\angle DEF=90^{\circ}$，
+
+    ∴$\angle HAD + \angle HDA = 90^\circ = \angle HDA + \angle EDF$，
+
+    ∴$\angle HAD=\angle EDF$，
+
+    ∵在$Rt\triangle ABC$中，$\angle BAC = 90^\circ$，$AB = AC$，
+
+    ∴$AH = \frac{1}{2} BC$，
+
+    ∵$DE=\frac{1}{2}BC$，
+
+    ∴$AH = DE$，
+
+    ∴$\triangle ADH \cong \triangle DPE (ASA)$，
+
+    ∴$AD = DF$，
+
+    ∴$\angle DAF = 45^\circ$，
+
+    ∴$\angle DAF = \frac{1}{2} \angle BAC$，
+
+    [图]【小问3详解】
+
+    解：如图所示，将$\triangle ABD$绕点A逆时针旋转得到$\triangle A'
+  knowledge_points:
+  - 全等三角形
+  - 勾股定理
+  - 旋转
+  module: triangles
+  difficulty: 压轴
+  recommended_for:
+  - L3

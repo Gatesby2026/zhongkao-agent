@@ -1,0 +1,1359 @@
+# ============================================================
+# 2023年北京昌平区中考数学二模试卷 — 逐题分析
+# ============================================================
+# 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
+# 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
+# 满分：100分  时长：120分钟
+
+year: 2023
+district: 昌平区
+exam_type: 二模
+subject: 数学
+full_score: 100
+duration_minutes: 120
+total_questions: 28
+structure: 8选择(16分) + 8填空(16分) + 12解答(68分)
+questions:
+- id: 1
+  type: 选择
+  score: 2
+  question: '经文化和旅游部数据中心测算，2023年清明节假期（4月5日），全国国内旅游出游2376.64万人次，较去年清明节当日增长22.7%．将23766400用科学记数法表示应为（　　）
+
+    A$[公式]$$237.664\times10^{5}$B.$23.7664\times10^{6}$C.$2.37664\times10^{7}$D.$2.37664\times10^{8}$'
+  answer: C
+  solution: '$23766400=2.37664\times10^{7}$．
+
+    故选：C．'
+  knowledge_points:
+  - 科学记数法
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 2
+  type: 选择
+  score: 2
+  question: '图是某几何体的三视图，该几何体是（　　）
+
+    [图]
+
+    A.三棱锥B.三棱柱C.圆柱D.长方体'
+  answer: B
+  solution: '解：∵主视图和左视图是矩形
+
+    ∴该几何体是柱体，
+
+    ∵俯视图是三角形，
+
+    ∴该几何体是三棱柱，
+
+    故选：B．'
+  knowledge_points:
+  - 矩形
+  module: quadrilaterals
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 3
+  type: 选择
+  score: 2
+  question: '若实数$a,b$在数轴上的对应点的位置如图所示，则以下结论正确的是（　　）
+
+    [图]
+
+    A.$\left|a\right|>\left|b\right|$B.$ab > 0$C.$-a > b$D.$a < b$'
+  answer: D
+  solution: '解：根据数轴可得，$-2 < a < -1$，$2<b<3$，
+
+    ∴$|a|<|b|$，$ab < 0$，$-a < b$，$a < b$，即D正确，
+
+    故选：D．'
+  knowledge_points:
+  - 绝对值
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 4
+  type: 选择
+  score: 2
+  question: '某餐厅计划推出一个新菜品，在菜品研发阶段研制出$A\cdot B$两种味道，为测试哪种味道更符合当地人口味，随机抽取餐厅内的5位当地顾客分别为两种味道的菜品打分，打分情况如下表，下列关系全部正确的是（　　）
+
+    口味
+
+    顾客1
+
+    顾客2
+
+    顾客3
+
+    顾客4
+
+    顾客5
+
+    A
+
+    7
+
+    9
+
+    8
+
+    6
+
+    10
+
+    B
+
+    5
+
+    6
+
+    10
+
+    10
+
+    9
+
+    A.$\bar{x}_{1}>\bar{x}_{2},\quad S_{1}^{2}=S_{2}^{2}$B.$\overline{x}_{1}=\overline{x}_{2},\ S_{1}^{2}>S_{2}^{2}$
+
+    C.$\overline{x}_{1}=\overline{x}_{2},\ S_{1}^{2}\leq S_{2}^{2}$D.$\bar{x}_{1}<\bar{x}_{2},\ S_{1}^{2}>S_{2}^{2}$'
+  answer: C
+  solution: '$\bar{x}_{s}=\frac{1}{5}\times(7+9+8+6+10)=8$，
+
+    $\bar{x}_{p}=\frac{1}{5}(5+6+10+10+9)=8$，
+
+    $S_{1}^{2}=\frac{1}{5}\times\left[\left(7-8\right)^{2}+\left(9-8\right)^{2}+\left(8-8\right)^{2}+\left(6-8\right)^{2}+\left(10-8\right)^{2}\right]=2$，
+
+    $S_{c}^{2}=\frac{1}{5}\left[\left(5-8\right)^{2}+\left(6-8\right)^{2}+\left(10-8\right)^{2}+\left(10-8\right)^{2}+\left(9-8\right)^{2}\right]=4.4$，
+
+    ∴$\overline{x}_{1}=\overline{x}_{2},\ S_{1}^{2}\leq S_{2}^{2}$．
+
+    故选：C．'
+  knowledge_points:
+  - 平均数
+  - 方差
+  module: statisticsAndProbability
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 5
+  type: 选择
+  score: 2
+  question: '《墨子·天文志》记载：“执规矩，以度天下之方圆.”度方知圆，感悟数学之美.如图，正方形$ABCD$的面积为4，以它的对角线的交点为位似中心，作它的位似图形$A''B''C''D''$，若$AB\cdot A''B''=1.2B''$，则四边形$A''B''C''D''$的外接圆的半径为（　　）
+
+    [图]
+
+    A.$\sqrt{2}$B.2C.$2\sqrt{2}$D.4'
+  answer: C
+  solution: '解：如图，连接$B''D''$．
+
+    [图]
+
+    ∵正方形$ABCD$与四边形$A''B''C''D''$是位似图形，$AB\cdot A''B''=1.2B''$，正方形$ABCD$的面积为4，
+
+    ∴四边形$A''B''C''D''$是正方形，面积为$4\times2^{2}=16$，
+
+    ∴$\overline{AB}=\overline{AD}=4$，$\angle B''A''D''=90^\circ$，
+
+    ∴$B''D''=\sqrt{2}A''B''=4\sqrt{2}$，
+
+    ∴四边形$A''B''C''D''$$[公式]$外接圆的半径为$2\sqrt{2}$．
+
+    故选C．'
+  knowledge_points:
+  - 正方形
+  module: quadrilaterals
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 6
+  type: 选择
+  score: 2
+  question: '一个不透明的盒子中装有10个除颜色外无其他差别的小球，其中有1个黄球和3个绿球，其余都是红球，从中随机摸出一个小球，恰好是红球的概率为（　　）
+
+    A.$\frac{3}{5}$B.$\frac{3}{10}$C.$\frac{1}{5}$D.$\frac{1}{3}$'
+  answer: A
+  solution: '解：∵盒子中装有$10-1-3=6$个红球，
+
+    ∴从中随机摸出一个小球，恰好是红球的概率是$\frac{6}{10}=\frac{3}{5}$；
+
+    故选：A．'
+  knowledge_points:
+  - 概率
+  module: statisticsAndProbability
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 7
+  type: 选择
+  score: 2
+  question: '船航行的海岸附近有暗礁，为了使船不触上暗礁，可以在暗礁的两侧建立两座灯塔.只要留心从船上到两个灯塔间的角度不超过一定的大小，就不用担心触礁.如图所示的网格是正方形网格，点$A,B,C,D,P,M,N$是网格线交点，当船航行到点P的位置时，此时与两个灯塔$M,N$间的角度（$\angle MPN$的大小）一定无触礁危险.那么，对于$A,B,C,D$四个位置，船处于___________时，也一定无触礁危险.（　　）
+
+    [图]
+
+    A.位置AB.位置BC.位置CD.位置D'
+  answer: B
+  solution: '解：如图，
+
+    [图]
+
+    由网格可知，点O是MN和MP垂直平分线的交点，
+
+    即点O是$\triangle MNP$的外接圆的圆心，
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$$OM = OB = \sqrt{1^{2} + 2^{2}} = \sqrt{5}$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$点M在$\triangle MNP$的外接圆上，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\angle MPN = \angle MBN$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$船处于位置B时，也一定无触礁危险，
+
+    故选B．'
+  knowledge_points:
+  - 圆周角
+  - 勾股定理
+  - 正方形
+  module: circles
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 8
+  type: 选择
+  score: 2
+  question: '《九章算术》中记载，浮箭漏出现于汉武帝时期，如图，它由供水壶和箭壶组成，箭壶内装有箭尺，水匀速地从供水壶流到箭壶，箭壶中的水位逐渐上升，箭尺匀速上浮，可通过读取箭尺读数计算时间．某学校$STEAM$小组仿制了一套浮箭漏，通过观察，每2小时记录一次箭尺读数，得到表格如下．
+
+    供水时间x（小时）
+
+    0
+
+    2
+
+    4
+
+    6
+
+    8
+
+    箭尺读数y（厘米）
+
+    6
+
+    18
+
+    30
+
+    42
+
+    54
+
+    那么箭尺读数y和供水时间x最可能满足$[公式]$函数关系是（　　）
+
+    [图]
+
+    A.正比例函数关系B.一次函数关系C.二次函数关系D.反比例函数关系'
+  answer: B
+  solution: '解：如图，以供水时间为横轴，箭尺读数为纵轴建立平面直角坐标系，描出以表格中数据为坐标的点$(0,6)$，$(2,18)$，$(4,30)$，$(6,42)$，$(8,54)$：
+
+    [图]
+
+    观察图中各点的分布规律，可知它们都在同一条直线上，
+
+    ∴箭尺读数y和供水时间x最可能满足的函数关系是一次函数．
+
+    故选B．'
+  knowledge_points:
+  - 一次函数
+  - 反比例函数
+  - 二次函数
+  - 正比例函数
+  - 坐标系
+  module: functions
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 9
+  type: 填空
+  score: 2
+  question: 若分式$\frac{1}{x-4}$有意义，则x的取值范围是___________．
+  answer: x≠4．
+  solution: '解：若分式$\frac{1}{x-4}$有意义，则分母不为0，
+
+    可得，x-4≠0，
+
+    解得x≠4，
+
+    故答案为：x≠4．'
+  knowledge_points:
+  - 不等式
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 10
+  type: 填空
+  score: 2
+  question: 分解因式：$2x^{3}-4x^{2}+2x=$______．
+  answer: $2x(x-1)^2$
+  solution: '解：$2x^{2}-4x^{2}+2x$
+
+    $-2x(x^2-2x+1)$
+
+    $=2x(x-1)^2$
+
+    故答案为：$2x(x-1)^2$．'
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 11
+  type: 填空
+  score: 2
+  question: 分式方程$\frac{1}{x}=\frac{2}{x+3}$的解为________．
+  answer: $x=3$
+  solution: '解：$\frac{1}{x}=\frac{2}{x+3}$，
+
+    方程两边都乘以$x(x+3)$约去分母得：$x+3=2x$，
+
+    解这个整式方程得$x=3$，
+
+    检验：当$x=3$时，$x(x+3)\neq0$，
+
+    ∴$x=3$是原分式方程的解．
+
+    故答案为：$x=3$．'
+  knowledge_points:
+  - 分式方程
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 12
+  type: 填空
+  score: 2
+  question: 写出一个比$\sqrt{2}$大且比$\sqrt{17}$小的整数_____．
+  answer: 3（答案不唯一）
+  solution: '解：∵$\sqrt{2}$＜2＜3＜4＜$\sqrt{17}<5$，
+
+    ∴比$\sqrt{2}$大且比$\sqrt{17}$小的整数有2，3，4.
+
+    故答案为：3（答案不唯一）．'
+  knowledge_points:
+  - 综合
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 13
+  type: 填空
+  score: 2
+  question: '如图，在$\triangle ABC$中，CD平分$\angle ACB, DE \perp AC$若$BC = 2, DE = 1$，则$S_{\triangle BCD} =$___________．
+
+    [图]'
+  answer: '1'
+  solution: '如图所示，作$DF \perp BC$交BC于点F，
+
+    [图]
+
+    ∵CD平分$\angle ACB$，$DE \perp AC$
+
+    ∴$DF=DE=1$，
+
+    ∴$S_{\triangle BCF} = \frac{1}{2} \times BC \times DF = \frac{1}{2} \times 2 \times 1 = 1$．
+
+    故答案为：1．'
+  knowledge_points:
+  - 综合
+  module: triangles
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 14
+  type: 填空
+  score: 2
+  question: 不等式$x+1<\frac{4+3x}{2}$的解集为___________.
+  answer: $x > -2$
+  solution: '解：$x+1<\frac{4+3x}{2}$，
+
+    去分母，得：$2(x+1)<4+3x$，
+
+    去括号，得：$2x+2<4-3x$，
+
+    移项、合并同类项，得：$-x<2$，
+
+    系数化为1，得：$x > -2$，
+
+    故答案为：$x > -2$．'
+  knowledge_points:
+  - 不等式
+  module: equationsAndInequalities
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 15
+  type: 填空
+  score: 2
+  question: 一个正多边形的内角和是它的外角和的2倍，则这个正多边形是正___________边形.
+  answer: '6'
+  solution: '解：设这个多边形的边数为n，
+
+    根据题意得：$(n-2)\times180^{\circ}=2\times360^{\circ}$，
+
+    解得：$n = 6$，
+
+    故答案为：6．'
+  knowledge_points:
+  - 综合
+  module: triangles
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 16
+  type: 填空
+  score: 2
+  question: '某旅店的客房有两人间和三人间两种，两人间每间200元，三人间每间250元，某学校50人的研学团到该旅店住宿，租住了若干客房.其中男生27人，女生23人.若要求男女不能混住，且所有租住房间必须住满.
+
+    （1）要想使花费最少，需要___________间两人间；
+
+    （2）现旅店对两人间打八折优惠，且仅剩15间两人间，此时要想花费最少，需要___________间三人间.'
+  answer: ①.1②.8
+  solution: '解：（1）由题意知，两人间每间200元，平均每人100元，三人间每间250元，平均每人$\frac{250}{3}$元，
+
+    因此要想花费最少，则应尽可能多租三人间，
+
+    花费最少时，27个男生租9个三人间，23个女生可以租7个三人间和1个两个间，
+
+    故答案为：1；
+
+    （2）两人间打八折优惠，则160元，平均每人80元，
+
+    此时，要想花费最少，则应尽可能多租两人间，
+
+    设27个男生租x个两个间，y个三个间，23个女生租m个两个间，n个三个间，
+
+    则$2x+3y=27$，$2m+3n=23$，
+
+    当$x = 12$，$y = 1$时，满足$2x+3y=27$，
+
+    因此27个男生租12个两个间，1个三个间，
+
+    此时还剩两人间：$15-12=3$（个），
+
+    因此m可以取3，2，1，0，
+
+    当$m = 3$时，女生需要租三人间$n=\frac{23-3\times2}{3}=\frac{17}{3}$个，不合题意；
+
+    当$m = 2$时，女生需要租三人间$n=\frac{23-2\times2}{3}=\frac{19}{3}$个，不合题意；
+
+    当$m = 1$时，女生需要租三人间$n=\frac{23-1\times2}{3}=7$个，符合题意；
+
+    因此需要租三人间：$y+n=1+7=8$（个），
+
+    故答案为：8．'
+  knowledge_points:
+  - 综合
+  module: equationsAndInequalities
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 17
+  type: 解答
+  score: 5
+  question: 计算：$(1-\sqrt{5})^{0}+(-\sqrt{2})^{-1}-2\cos45^{\circ}+\left(\frac{1}{4}\right)^{-1}$.
+  answer: '5'
+  solution: '解：$(1-\sqrt{5})^{0}+(-\sqrt{2})^{-1}-2\cos45^{\circ}+\left(\frac{1}{4}\right)^{-1}$
+
+    $1+\sqrt{2}-2\cdot\frac{\sqrt{2}}{2}+4$
+
+    $=1+\sqrt{2}-\sqrt{2}+4$
+
+    =5．'
+  knowledge_points:
+  - 三角函数
+  - 绝对值
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 18
+  type: 解答
+  score: 5
+  question: 已知$5x^{2}-x-2=0$，求代数式$(2x+1)(2x-1)+x(x-1)$的值．
+  answer: '1'
+  solution: '解：$(2x+1)(2x-1)+x(x-1)$
+
+    $=4x^{2}-1+x^{2}-x$
+
+    $-5x^2-x-1$，
+
+    ∵$5x^{2}-x-2=0$，
+
+    ∴$5x^2 - x = 2$．
+
+    ∴原式$=5x^{2}-x-1=2-1=1$．'
+  knowledge_points:
+  - 方差
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 19
+  type: 解答
+  score: 5
+  question: '用尺规“三等分任意角”是数学史上一个著名难题，它已经被数学家伽罗瓦用《近世代数》和《群论》证明是不可能的．但对于特定度数的已知角，如$90^\circ$角，$45^\circ$角等，是可以用尺规进行三等分的．下面是小明的探究过程：
+
+    已知：如图1，$\angle AOB=90^\circ$．
+
+    求作：射线$OE,OG$三等分$\angle AOB$．
+
+    [图]
+
+    作法：如图2，
+
+    ①在射线OB上取任一点C；
+
+    ②分别以$O,C$为圆心，OC长为半径画弧，两弧在OB上方交于点E，在OB下方交于点F，连接CE；
+
+    ③作直线EF交OC于点D；
+
+    ④以D为圆心，OD长为半径作圆，交线段CE于点G（点G不与点C重合）；
+
+    ⑤作射线$OG,OE$．
+
+    所以射线$OG,OE$即为所求射线．
+
+    （1）利用直尺和圆规，依作法补全图形（保留作图痕迹）；
+
+    （2）完成下面的证明．
+
+    证明：$\because OE = OC = CE$，
+
+    $\therefore \triangle COE$为等边三角形．
+
+    $\angle COE = 60^\circ$．
+
+    $\angle AOE = \angle AOB - \angle COE = 30^\circ$．
+
+    $\because OC$为$\odot D$的直径，
+
+    $\angle CGO =$___________$\text{o}$．
+
+    又$\colon OE=OC,\ OG\perp EC$，
+
+    $\therefore OG$平分$\angle EOC$（　　）（填推理的依据）．
+
+    $\angle COG = \angle EOG = \frac{1}{2} \angle COE = 30^\circ$．
+
+    $\angle AOE = \angle COG = \angle EOG$．
+
+    即射线$OE,OG$三等分$\angle AOB$．'
+  answer: （1）见解析（2）$90$，等腰三角形三线合一
+  solution: '【小问1详解】
+
+    如图所示，
+
+    [图]【小问2详解】
+
+    证明：$\because OE = OC = CE$，
+
+    $\therefore \triangle COE$为等边三角形．
+
+    $\angle COE = 60^\circ$．
+
+    $\angle AOE = \angle AOB - \angle COE = 30^\circ$．
+
+    $\because OC$为$\odot D$的直径，
+
+    $\angle CGO = 90^\circ$．
+
+    又$\colon OE=OC,\ OG\perp EC$，
+
+    $\therefore OG$平分$\angle EOC$（等腰三角形三线合一）（填推理的依据）．
+
+    $\angle COG = \angle EOG = \frac{1}{2} \angle COE = 30^\circ$．
+
+    $\angle AOE = \angle COG = \angle EOG$．
+
+    即射线$OE,OG$三等分$\angle AOB$．
+
+    故答案为：$90$，等腰三角形三线合一．'
+  knowledge_points:
+  - 综合
+  module: triangles
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 20
+  type: 解答
+  score: 5
+  question: '关于x的一元二次方程$x^{2}-kx+k-1=0$．
+
+    （1）求证：方程总有两个实数根；
+
+    （2）若方程有一个根小于0，求k的取值范围．'
+  answer: （1）见解析（2）$k<1$
+  solution: '【小问1详解】
+
+    解：$\Delta=(-k)^2-4\times1\times(-k-1)$，
+
+    $=k^{2}-4k+4$，
+
+    $=(k-2)^{2}0$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$方程总有两个实数根；
+
+    【小问2详解】
+
+    解：$x=\frac{k\pm\sqrt{(k-2)^{2}}}{2\times1}$，
+
+    $\therefore x=\frac{k\pm(k-2)}{2}$，
+
+    $\ldots x_{k}=1, x_{k-1}=k-1$，
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$方程有一根小于0，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$k-1<0$，
+
+    $\therefore k<1$．'
+  knowledge_points:
+  - 一元二次方程
+  - 根的判别式
+  - 不等式
+  module: equationsAndInequalities
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 21
+  type: 解答
+  score: 5
+  question: '如图，在菱形$ABCD$中，对角线$AC,BD$交于点O，点E是过点O作BC的平行线与过点B作BD的垂线（垂足为B）的交点.
+
+    [图]
+
+    （1）求证：四边形$OEB C$是平行四边形；
+
+    （2）连接AE，求证：四边形$AEBO$是矩形.'
+  answer: （1）见解析（2）见解析
+  solution: '【小问1详解】
+
+    证明：$\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$四边形$ABCD$是菱形，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$AC \perp BD$，
+
+    又$\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$$EB \perp BD$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$AC \parallel EB$，即$OC \parallel EB$，
+
+    又$\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$$OE \parallel BC$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$四边形$OEB C$是平行四边形；
+
+    【小问2详解】
+
+    证明：$\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$四'
+  knowledge_points:
+  - 平行线
+  - 平行四边形
+  - 矩形
+  - 菱形
+  module: quadrilaterals
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 22
+  type: 解答
+  score: 5
+  question: '在平面直角坐标系xOy中，函数$y=\frac{k}{x}(k\neq0)$过点$(1,3)$.
+
+    （1）求这个反比例函数的解析式；
+
+    （2）当$0<x\leq1$时，对于x的每一个值，函数$y=\frac{k}{x}(k\neq0)$的值都大于函数$\hat{y}=mx(m\neq0)$的值，直接写出m的取值范围.'
+  answer: （1）$y=\frac{3}{x}$ （2）$m<3$且$m \neq 0$
+  solution: '【小问1详解】
+
+    解：∵反比例函数$y=\frac{k}{x}(k\neq0)$的图象经过点$(1,3)$，
+
+    ∴$k=1\times3=3$，
+
+    ∴这个反比例函数的解析式为$y=\frac{3}{x}$；
+
+    【小问2详解】
+
+    解：将$(1,3)$代入$\hat{y}=mx(m\neq0)$，
+
+    解得$m = 3$，
+
+    [图]
+
+    ∵当$0<x\leq1$时，对于x的每一个值，函数$y=\frac{k}{x}(k\neq0)$的值都大于函数$\hat{y}=mx(m\neq0)$的值，
+
+    ∴$m<3$且$m \neq 0$．'
+  knowledge_points:
+  - 一次函数
+  - 反比例函数
+  - 不等式
+  - 坐标系
+  module: functions
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 23
+  type: 解答
+  score: 6
+  question: '如图，AB是$\odot\odot$直径，C是$\odot\odot$上一点，过点A作直线PA，使$\angle PAC = \angle ABC$．
+
+    [图]
+
+    （1）求证：PA是$\odot\odot$的切线；
+
+    （2）点D是弧BC中点，连接DO并延长，分别交$BC, PA$于点$E,F$，若$BC = 8$，$\cos\angle PAC=\frac{4}{5}$，求线段DF的长．'
+  answer: （1）见解析（2）$\frac{40}{3}$
+  solution: '【小问1详解】
+
+    ∵AB是$\odot\odot$直径，
+
+    ∴$\angle C=90^{\circ}$，
+
+    ∴$\angle CAB+\angle B=90^{\circ}$，
+
+    ∵$\angle PAC = \angle ABC$，
+
+    ∴$\angle CAB+\angle PAC=90^\circ$，
+
+    ∴$PA \perp AB$，
+
+    ∵AB是$\odot\odot$直径，
+
+    ∴PA是$\odot\odot$的切线；
+
+    【小问2详解】
+
+    如图所示，
+
+    [图]
+
+    ∵$\cos\angle PAC=\frac{4}{5}$，
+
+    ∴$\cos \angle B = \frac{4}{5}$，
+
+    ∵$BC = 8$，
+
+    ∴$AB=\frac{BC}{\cos \angle B}=\frac{8}{\frac{4}{5}}=10$，
+
+    ∴$OA = OB = OD = 5$，
+
+    ∵点D是弧BC中点，
+
+    ∴$OD \perp BC$，
+
+    ∵$\angle C=90^{\circ}$，
+
+    ∴$AC \parallel DF$，
+
+    ∴$\angle PAC = \angle AFD$，
+
+    ∴$\cos\angle FPD-\cos\angle PAC=\frac{4}{5}$，
+
+    ∴$\sin \angle AFD = \frac{3}{5}$，即$\frac{5}{OF} = \frac{3}{5}$，
+
+    ∴解得$OF = \frac{25}{3}$，
+
+    ∴$DF=OF+OD=\frac{25}{3}+5=\frac{40}{3}$．'
+  knowledge_points:
+  - 垂径定理
+  - 切线
+  - 三角函数
+  module: circles
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 24
+  type: 解答
+  score: 6
+  question: '兴寿镇草莓园是北京最大的草莓基地，通过一颗颗小草莓，促进了农民增收致富，也促进了农旅融合高质量发展．小梅家有一个草莓大棚，大棚的一端固定在离地面高$1m$的墙体A处，另一端固定在离地面高$1m$的墙体B处，记大棚的截面顶端某处离A的水平距离为xm，离地面的高度为ym，测量得到如下数值：
+
+    $x / m$
+
+    0
+
+    1
+
+    2
+
+    4
+
+    5
+
+    $y/m$
+
+    1
+
+    $\frac{8}{3}$
+
+    $\frac{11}{3}$
+
+    $\frac{11}{3}$
+
+    $\frac{8}{3}$
+
+    [图]
+
+    小梅根据学习函数的经验，发现y是x的函数，并对y随x的变化而变化的规律进行了探究．
+
+    下面是小梅的探究过程，请补充完整：
+
+    （1）在下边网格中建立适当的平面直角坐标系，描出表中各组数值所对应的点$(x, y)$，并画出函数的图象；
+
+    [图]
+
+    解决问题：
+
+    （2）结合图表回答，大棚截面顶端最高处到地面的距离高度为___________m；此时距离A的水平距离为___________m；
+
+    （3）为了草莓更好的生长需要在大棚内安装补光灯，补光灯采用吊装模式悬挂在顶部，已知补光灯在距离地面$1,5m$时补光效果最好，若在距离A处水平距离$1,5m$的地方挂补光灯，为使补光效果最好补光灯悬挂部分的长度应是多少m？（灯的大小忽略不计）'
+  answer: （1）见解析（2）4；3 （3）为使补光效果最好补光灯悬挂部分的长度应是$1.75m$．
+  solution: '【小问1详解】
+
+    解：描点，连线，函数的图象如图所示，
+
+    [图]；
+
+    【小问2详解】
+
+    解：根据图表知，大棚截面顶端最高处到地面的距离高度为$4m$；此时距离A的水平距离为$3m$；
+
+    故答案为：4；3；
+
+    【小问3详解】
+
+    解：设抛物线的解析式为$y=ax^{2}+bx+c$，
+
+    把$(0,1)$，$\left(1,\frac{8}{3}\right)$，$\left(2,\frac{11}{3}\right)$，代入得，$\begin{aligned}
+
+    & c = 1 \\
+
+    & a + b + c = \frac{8}{3} \\
+
+    & 4a + 2b + c = \frac{11}{3}
+
+    \end{aligned}$，
+
+    解得$\left\{ \begin{array} { l } { a = - \frac { 1 } { 3 } } \\ { b = 2 } \\ { c = 1 } \end{array} \right.$，
+
+    ∴抛物线的解析式为$y = -\frac{1}{3}x^2 + 2x + 1$，
+
+    令$x = 1.5$，则$y=-\frac{1}{3}\times\left(\frac{3}{2}\right)^{2}+2\times\frac{3}{2}+1=\frac{13}{4}=3.25$，
+
+    $3.25-1.5=1.75(\mathrm{m})$，
+
+    答：为使补光效果最好补光灯悬挂部分的长度应是$1.75m$．'
+  knowledge_points:
+  - 二次函数
+  - 坐标系
+  module: functions
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 25
+  type: 解答
+  score: 6
+  question: '某学校初中各年级进行体质健康测试，为了解学生成绩，从七年级和九年级各随机抽取40名学生的成绩进行整理、描述和分析，下面给出了部分信息.
+
+    a.七年级成绩的频数分布直方图如下（数据分成5组：$60 < x < 70,\quad 70 \leq x < 80$，$80<x<90,\ 90\leq x<100,\ 100\leq x\leq110$）
+
+    [图]
+
+    b.七年级成绩在$80 \leq x < 90$这一组的是：
+
+    82
+
+    82    83    84    85    85    85    87    87    88    88
+
+    c.七年级、九年级成绩的平均数、中位数如下：
+
+    平均数
+
+    中位数
+
+    七年级
+
+    87.55
+
+    m
+
+    九年级
+
+    86.25
+
+    90
+
+    根据以上信息，回答下列问题：
+
+    （1）写出表中m的值；
+
+    （2）分别对本次抽取的学生的成绩进行等级赋分，不少于90分就可以赋予“优秀”等级，七年级赋予“优秀”等级的学生人数为$p_1$，九年级赋予“优秀”等级的学生人数为$p_{2}$，判断$p_{1},p_{2}$大小，并说明理由；
+
+    （3）该校共有七年级学生310人，不少于80分就可以赋予“良好”等级，估计该校七年级所有学生本次体质健康测试成绩等级为良好及以上的人数为___________（直接写出结果）.'
+  answer: （1）87（2）$p_{2}>p_{1}$，理由见解析 （3）217
+  solution: '【小问1详解】
+
+    解：由条形统计图及知$80 \leq x < 90$组的数据可知，将七年级成绩的数据按从小到大顺序排列，第20位和第21位均是87，
+
+    因此七年级成绩的中位数是87，
+
+    即m的值为87；
+
+    【小问2详解】
+
+    解：$p_{2}>p_{1}$，理由如下：
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$七年级成绩的中位数是87，九年级成绩的中位数是90，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$九年级成绩的中位数大于七年级成绩的中位数，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$p_{2}>p_{1}$；
+
+    【小问3详解】
+
+    解：$310x-\frac{11x+7+10}{40}=217$（人），
+
+    故答案为：217．'
+  knowledge_points:
+  - 平均数
+  - 中位数
+  module: statisticsAndProbability
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 26
+  type: 解答
+  score: 6
+  question: '在平面直角坐标系xOy中，点$(2a+1,m)(b,n)$是抛物线$y=ax^{2}-2a^{2}x+c(a>0,\ c>0)$上的点．
+
+    （1）当$a = 1$时，求抛物线对称轴，并直接写出m与c大小关系；
+
+    （2）若对于任意的$2\leq b\leq4$，都有$m > c > n$，求a的取值范围．'
+  answer: （1）抛物线的对称轴为$x = 1$，$m > c$ （2）$a > 2$或$a<-\frac{1}{2}$
+  solution: '【小问1详解】
+
+    解：当$a = 1$时，抛物线$y = x^2 - 2x + c$，抛物线过点$(3,\ m)$，$(0,\ c)$，
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$抛物线的对称轴为$x = -\frac{2}{2} = 1$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$点$(3,\ m)$比点$(0,\ c)$离对称轴水平距离远，且抛物线开口向上，
+
+    $\therefore m > c$；
+
+    $[公式]$小问2详解】
+
+    解：①当$a > 0$时，
+
+    $\because m > c$，
+
+    $\therefore a<\frac{2a+1}{2}$，
+
+    $\therefore 2a < 2a + 1$恒成立，
+
+    $\because c<n$，
+
+    $\therefore a>\frac{b}{2}$，
+
+    $\because 2\leq b\leq 4$，
+
+    $\therefore a>2$；
+
+    ②当$-\frac{1}{2} \leq a < 0$时，
+
+    $\because m > c$，
+
+    $\ldots a\frac{2a+1}{2}$，
+
+    $\therefore 2a, 2a+1$恒不成立，
+
+    $\therefore -\frac{1}{2} \leq a < 1$舍去；
+
+    ③当$a<-\frac{1}{2}$时，$2a+1<0$，
+
+    $\because m > c$，
+
+    $\therefore a<\frac{2a+1}{2}$，
+
+    $\therefore 2a < 2a + 1$恒成立，
+
+    $\b'
+  knowledge_points:
+  - 二次函数
+  - 坐标系
+  module: functions
+  difficulty: 压轴
+  recommended_for:
+  - L3
+- id: 27
+  type: 解答
+  score: 7
+  question: '在等边$\triangle ABC$中，点D是AB中点，点E是线段BC上一点，连接$DE,\angle DEB=\alpha(30^{\circ}\leq\alpha<60^{\circ})$，将射线DA绕点D顺时针旋转$\alpha$，得到射线DQ，点F是射线DQ上一点，且$DF = DE$，连接$FE,FC$.
+
+    [图]
+
+    （1）补全图形；
+
+    （2）求$\angle EDF$度数；
+
+    （3）用等式表示$FE,FC$的数量关系，并证明.'
+  answer: （1）见解析； （2）$60^\circ$； （3）$EF = CF$，理由见解析；
+  solution: '【小问1详解】
+
+    解：如图所示即为所求，
+
+    [图]【小问2详解】
+
+    解：∵$\triangle ABC$是等边三角形，
+
+    ∴$\angle A=\angle B=\angle C=60^{\circ}$，
+
+    ∵$\angle ADQ = \angle DEB = \alpha$，
+
+    ∴$\angle ADE=\angle B+\angle DEB=60^{\circ}+\alpha$，$\angle ADE = \angle ADQ + \angle EDF = \alpha + \angle EDF$，
+
+    ∴$60^{\circ}+\alpha=\alpha+\angle EDF$，
+
+    ∴$\angle EDF=60^{\circ}$；
+
+    【小问3详解】
+
+    解：$EF = FC$，理由如下：
+
+    连接CD，作$FH \perp DE$于点H，
+
+    ∵$\angle EDF=60^{\circ}$，$DF = DE$，
+
+    ∴$\triangle DEF$是等边三角形，
+
+    ∴FH是DE的垂直平分线，
+
+    ∴$FD=FE$，
+
+    ∵$\triangle ABC$是等边三角形，
+
+    ∴CD是$\angle ACB$的平分线，
+
+    ∵$\angle ACB=60^\circ$，
+
+    ∴$\angle BCD=30^\circ$，
+
+    ∵$\angle DFE=60^{\circ}$，
+
+    ∴$\angle DFE=2\angle BCD$
+
+    ∵$\angle BCD$与$\angle DFE$所对的弦是DE，
+
+    ∴圆F是$\triangle CDE$的外接圆，
+
+    ∴$EF = CF$，
+
+    [图]【点睛】本题考查了旋转的性质，等边三角形的判定与性质，同弦所对的圆心角、圆周角的性质，同圆或者等圆的半径相等，掌握等边三角形的判定与性质是解题的关键．'
+  knowledge_points:
+  - 圆周角
+  - 弦
+  - 旋转
+  module: circles
+  difficulty: 压轴
+  recommended_for:
+  - L3
+- id: 28
+  type: 解答
+  score: 7
+  question: '在平面直角坐标系xOy中，对于点P，点Q和直线l，点P关于l的对称点$P''$，点Q是直线l上一点，将线段$P''Q$绕点$P''$逆时针旋转$90^\circ$得到$P''K$，如果线段$P''K$与直线l有交点，称点K是点P关于直线l和点Q的“双垂点”.
+
+    [图]
+
+    （1）若$P(2,1)$，点$K_{1}(1), K_{1}(0), K_{1}(-2)$中是点P关于x轴和点Q的“双垂点”的是___________；
+
+    （2）若点$Q(0,5)$，点$P,K$是直线$y=x+3$上的点，点K是点P关于y轴和点Q的“双垂点”，求P点的坐标；
+
+    （3）点P在以$(0,t)$为圆心，1为半径的圆M上，直线$l:y=x+2$，若圆M上存在点K是点P关于直线l和点Q的“双垂点”，直接写出t的取值范围.'
+  answer: （1）$K_1,K_2$ （2）$P(-1,2)$ （3）$-\sqrt{2} \leq 1.5 + 4\sqrt{2}$
+  solution: '【小问1详解】
+
+    解：如图所示，
+
+    [图]
+
+    故答案为：$K_1,K_2$．
+
+    【小问2详解】
+
+    解：根据题意，点P是直线$y=x+3$上的点，则点P关于y轴的对称点在直线$y=-x+3$上，
+
+    由题意可得，点K在直线$y=x+3$上，$P''Q=P''K$且$P''Q\perp P''K$，
+
+    如图所示，作$P''A\perp y$轴于点A，分别作$P''C \perp x$轴，$KC \perp y$轴，KC交y轴于点B，$P''C$与KC交于点C，
+
+    [图]
+
+    ∴四边形$ABCP''$为矩形，
+
+    ∵$\angle QPK-\angle APC=90^\circ$
+
+    ∴$\angle QPA = \angle KPC$
+
+    又∵$P''Q''=P''K,\angle QAP''=\angle KCP''=90^{\circ}$
+
+    ∴$\triangle QPA \cong \triangle KPC$
+
+    ∴$PA=PC,QA=KC$
+
+    ∴四边形$ABCP''$为正方形，
+
+    设$P''(m,-m+3)$
+
+    ∴$A(0, -m + 3), C(m, -2m + 3)$
+
+    ∵$Q_{A}=KC=5-(-m+3)=m+2$
+
+    ∴$K(-2, -2m+3)$
+
+    将点$K(-2, -2m+3)$代入直线$y=x+3$中，
+
+    解得：$m = 1$
+
+    ∴$P''(1,2)$
+
+    ∴$P(-1,2)$
+
+    【小问3详解】
+
+    解：由（1）可得，K点的轨迹为垂直于直线l垂直的一条直线，
+
+    当$t > 0$时，如图所示，
+
+    在$\bigcirc$$M''$上找到一点$P''$，得K点落在$y=x+2$上，则当K的轨迹所在直线k与$\odot M$相切时，t取得最大值，
+
+    [图]
+
+    ∵$M(0,t)$，关于直线$y=x+2$对称，
+
+    ∴$M''(t-2,2)$
+
+    如图所示，当K刚好在直线$y=x+2$上时，$K(1,3)$，依题意，$\triangle QP''K$是等腰直角三角形，
+
+    ∵直线l与直线k'
+  knowledge_points:
+  - 旋转
+  - 坐标系
+  module: geometryComprehensive
+  difficulty: 压轴
+  recommended_for:
+  - L3
