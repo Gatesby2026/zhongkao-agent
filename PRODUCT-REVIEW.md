@@ -1,7 +1,7 @@
-# PRODUCT-DESIGN.md 评审报告
+# PRD v2.1 评审报告
 
 > 评审人：资深教育行业产品经理
-> 评审对象：PRODUCT-DESIGN.md v2.1
+> 评审对象：PRD.md v2.1（原 PRODUCT-DESIGN.md）
 > 评审日期：2026-04-12
 > 评审视角：家长使用场景优先，兼顾学生和商业可行性
 
