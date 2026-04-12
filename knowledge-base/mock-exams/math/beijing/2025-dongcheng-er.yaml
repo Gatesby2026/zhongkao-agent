@@ -1,8 +1,8 @@
 # ============================================================
 # 2025年北京东城区中考数学二模试卷 — 逐题分析
 # ============================================================
-# 数据来源：knowledge-original/精品解析：2025年北京市东城区九年级中考二模数学试卷（原卷版）.docx
-# 自动生成，部分数学公式可能显示不全（docx公式对象无法完整提取）
+# 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
+# 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
 # 满分：100分  时长：120分钟
 
 year: 2025
@@ -17,12 +17,25 @@ questions:
 - id: 1
   type: 选择
   score: 2
-  question: "下列几何图形中，既是中心对称图形又是轴对称图形的是（　　）\nA. \tB.\nC. \tD."
-  answer: ''
-  solution: ''
+  question: '下列几何图形中，既是中心对称图形又是轴对称图形的是（　　）
+
+    A.[图]B.[图]
+
+    C.[图]D.[图]'
+  answer: A
+  solution: '解：A、既是中心对称图形，又是轴对称图形，故此选项符合题意；
+
+    B、是轴对称图形，不是中心对称图形，故此选项不合题意；
+
+    C、不是轴对称图形，是中心对称图形，故此选项不合题意；
+
+    D、是轴对称图形，不是中心对称图形，故此选项不合题意．
+
+    故选A．'
   knowledge_points:
   - 中心对称图形
   - 轴对称图形
+  - 旋转
   - 轴对称
   module: geometryComprehensive
   difficulty: 基础
@@ -34,12 +47,24 @@ questions:
 - id: 2
   type: 选择
   score: 2
-  question: "如图，直线交于点O，于O，若，则的度数是（   ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '如图，直线$AB,\ CD$交于点O，$OE \perp AB$于O，若$\angle1=35^{\circ}$，则$\angle 2$的度数是（
+
+    ）
+
+    [图]
+
+    A.$55^\circ$B.$45^\circ$C.$35^\circ$D.$30^\circ$'
+  answer: A
+  solution: '解：∵$OE \perp AB, \angle 1 = 35^\circ$，
+
+    $\angle AOC = 55^\circ$，
+
+    $\angle C = \angle OCA = 55^{\circ}$，
+
+    故选：A．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 对顶角
+  module: triangles
   difficulty: 基础
   recommended_for:
   - L0
@@ -49,12 +74,17 @@ questions:
 - id: 3
   type: 选择
   score: 2
-  question: "某遥感卫星每秒向地面站传回数据量为比特．后续发射的升级型号卫星数据传输速率是原遥感卫星的25倍，达到比特，则的值为（   ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '某遥感卫星每秒向地面站传回的数据量为$4\times10^{12}$比特．后续发射的升级型号卫星数据传输速率是原遥感卫星的25倍，达到m比特，则m的值为（）
+
+    A.$4\times10^{12}$B.$4\times10^{14}$C.$1\times10^{14}$D.$1\times10^{15}$'
+  answer: C
+  solution: '解：$4\times10^{12}\times25=100\times10^{12}=10^{2}\times10^{12}=10^{14}$，
+
+    故选：C'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 科学记数法
+  - 绝对值
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -64,9 +94,17 @@ questions:
 - id: 4
   type: 选择
   score: 2
-  question: "一元二次方程2x2﹣3x+1=0的根的情况是（　　）\nA. 有两个相等的实数根\tB. 有两个不相等的实数根\nC. 只有一个实数根\tD. 没有实数根"
-  answer: ''
-  solution: ''
+  question: '一元二次方程2x2﹣3x+1=0的根的情况是（　　）
+
+    A.有两个相等的实数根B.有两个不相等的实数根
+
+    C.只有一个实数根D.没有实数根'
+  answer: B
+  solution: '解：根据题意得：△=$(-3)^{2}-4\times2\times1>0$，
+
+    则方程有两个不相等的实数根．
+
+    故选：B'
   knowledge_points:
   - 一元二次方程
   module: numbersAndExpressions
@@ -79,9 +117,19 @@ questions:
 - id: 5
   type: 选择
   score: 2
-  question: "若实数，，在数轴上对应点的位置如图所示，下列结论中正确的是（   ）\nA \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '若实数a，b，c在数轴上对应点的位置如图所示，下列结论中正确的是（）
+
+    $\frac{1}{2} \times 4 \times 3 = 6$
+
+    A.$b<a$B.$ab < 0$C.$|b| < |c|$D.$a+c<0$'
+  answer: D
+  solution: '解：∵$a < b < 0 < c$，
+
+    ∴$a < b$，$ab > 0$，$\left|b\right|>\left|c\right|$，$a+c<0$，
+
+    ∴选项A，B，C不符合题意，选项D符合题意；
+
+    故选：D．'
   knowledge_points:
   - 综合
   module: numbersAndExpressions
@@ -94,11 +142,33 @@ questions:
 - id: 6
   type: 选择
   score: 2
-  question: "3月14日是国际数学节、某学校在今年国际数学节策划了“竞速华容道”“玩转幻方”和“巧解鲁班锁”三个挑战活动，如果小红和小丽每人随机选择参加其中一个活动，则她们恰好选到同一个活动的概率是（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '3月14日是国际数学节、某学校在今年国际数学节策划了“竞速华容道”“玩转幻方”和“巧解鲁班锁”三个挑战活动，如果小红和小丽每人随机选择参加其中一个活动，则她们恰好选到同一个活动的概率是（）
+
+    A.$\frac{1}{9}$B.$\frac{1}{6}$C.$\frac{1}{3}$D.$\frac{2}{3}$'
+  answer: C
+  solution: '解：把“竞速华容道”“玩转幻方”和“巧解鲁班锁”三个活动分别记为A、B、C，
+
+    画树状图如下：
+
+    [图]
+
+    共有9种等可能的结果，小红和小丽恰好选到同一个活动的结果有3种，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$小红和小丽恰好选到同一个活动的概率为$\frac{3}{9}=\frac{1}{3}$，
+
+    故选：C．'
   knowledge_points:
   - 概率
+  - 树状图
+  - 列表法
   module: statisticsAndProbability
   difficulty: 中档
   recommended_for:
@@ -108,12 +178,34 @@ questions:
 - id: 7
   type: 选择
   score: 2
-  question: "如图，在中，，．分别以，为圆心，大于长为半径画弧，两弧交于点，，作直线交于点，连接．下列说法中，错误的是（   ）\nA. \tB. 是的平分线\nC. \tD."
-  answer: ''
-  solution: ''
+  question: '如图，在$V_{ABC}$中，$\angle C=90^{\circ}$，$\angle A = 30^\circ$．分别以A，B为圆心，大于$\frac{1}{2}AB$长为半径画弧，两弧交于点D，E，作直线DE交AC于点F，连接BF．下列说法中，错误的是（）
+
+    [图]
+
+    A.$AF = BF$B.BF是$\angle ABC$的平分线
+
+    C.$CF=\frac{1}{2}BF$D.$S_{\triangle ABC}=3S_{\triangle BCT}$'
+  answer: D
+  solution: '解：由作图可得EF垂直平分AB，
+
+    ∴$FA = FB$，故A选项正确，不符合题意；
+
+    ∴$\angle A=\angle ABF=30^{\circ}$，
+
+    又∵$\angle C=90^{\circ}$，
+
+    ∴$\angle ABC = 60^\circ$，
+
+    ∴$\angle CBF = \angle ABC - \angle ABF = 60^\circ - 30^\circ = 30^\circ$，
+
+    ∴$BF = AF = 2CF$，BF是$\angle ABC$的平分线，故B、C选项正确，不符合题意；
+
+    ∴$S_{\triangle ABCF} = 2S_{\triangle BCF}$，故D选项错误，符合题意；
+
+    故选：D．'
   knowledge_points:
   - 综合
-  module: circles
+  module: triangles
   difficulty: 中档
   recommended_for:
   - L1
@@ -122,11 +214,27 @@ questions:
 - id: 8
   type: 选择
   score: 2
-  question: "如图，将正五边形纸片沿着虚线剪开，记阴影部分Ⅰ，Ⅱ，Ⅲ的面积分别为，，．\n给出以下结论：\n①Ⅰ和Ⅱ合在一起（无重叠部分）能拼成一个等腰三角形；\n②Ⅰ，Ⅱ，Ⅲ合在一起（无重叠部分）能拼成一个等腰梯形；\n③；\n④Ⅰ中最大内角的度数是最小内角度数的3倍．\n上述结论中，所有正确结论的序号是（   ）\nA. ①②\tB. ①④\tC. ①②③\tD. ①②④"
-  answer: ''
+  question: '如图，将正五边形纸片沿着虚线剪开，记阴影部分Ⅰ，Ⅱ，Ⅲ的面积分别为$S_{I}$，$S_{\mathrm{II}}$，$S_{\mathrm{III}}$．
+
+    [图]
+
+    给出以下结论：
+
+    ①Ⅰ和Ⅱ合在一起（无重叠部分）能拼成一个等腰三角形；
+
+    ②Ⅰ，Ⅱ，Ⅲ合在一起（无重叠部分）能拼成一个等腰梯形；
+
+    ③$S_{1}+S_{\mathrm{II}}=4S_{\mathrm{II}}$；
+
+    ④Ⅰ中最大内角的度数是最小内角度数的3倍．
+
+    上述结论中，所有正确结论$[公式]$序号是（）
+
+    A.①②B.①④C.①②③D.①②④'
+  answer: D
   solution: ''
   knowledge_points:
-  - 综合
+  - 全等三角形
   module: triangles
   difficulty: 较难
   recommended_for:
@@ -135,11 +243,14 @@ questions:
 - id: 9
   type: 填空
   score: 2
-  question: 因式分解：_______．
-  answer: ''
-  solution: ''
+  question: 因式分解：$a^{3}-4a=$_______．
+  answer: $(a+2)(a-2)$
+  solution: '解：$a^{2}-4a=a(a^{2}-4)=a(a+2)(a-2)$，
+
+    故答案为：$(a+2)(a-2)$．'
   knowledge_points:
   - 因式分解
+  - 方差
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -150,9 +261,13 @@ questions:
 - id: 10
   type: 填空
   score: 2
-  question: 若在实数范围内有意义，则实数x的取值范围是______．
-  answer: ''
-  solution: ''
+  question: 若$\sqrt{x-3}$在实数范围内有意义，则实数x的取值范围是______．
+  answer: $x\ 3$
+  solution: '解：由题意得：$x-3\quad0$，
+
+    ∴$x\ 3$；
+
+    故答案为$x\ 3$．'
   knowledge_points:
   - 综合
   module: numbersAndExpressions
@@ -165,12 +280,20 @@ questions:
 - id: 11
   type: 填空
   score: 2
-  question: 如图，已知直线y＝mx与双曲线y＝一个交点坐标为（3，4），则它们的另一个交点坐标是_____．
-  answer: ''
-  solution: ''
+  question: '如图，已知直线y＝mx与双曲线y＝$\frac{k}{x}$一个交点坐标为（3，4），则它们的另一个交点坐标是_____．
+
+    [图]'
+  answer: （﹣3，﹣4）
+  solution: '解：因为直线y＝mx过原点，双曲线y＝$\frac{k}{x}$的两个分支关于原点对称，
+
+    所以其交点坐标关于原点对称，一个交点坐标为（3，4），则另一个交点的坐标为（﹣3，﹣4）．
+
+    故答案是：（﹣3，﹣4）．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 中心对称图形
+  - 反比例函数
+  - 正比例函数
+  module: functions
   difficulty: 基础
   recommended_for:
   - L0
@@ -180,9 +303,19 @@ questions:
 - id: 12
   type: 填空
   score: 2
-  question: 分式方程＝1的解为________．
-  answer: ''
-  solution: ''
+  question: 分式方程$\frac{2}{x-2}+\frac{3x}{2-x}$＝1的解为________．
+  answer: X=1；
+  solution: '分析：分式方程变形后，去分母转化为整式方程，求出整式方程的解得到x的值，经检验即可得到分式方程的解．
+
+    详解：去分母得：2−3x=x−2，
+
+    解得：x=1，
+
+    经检验x=1是分式方程的解.
+
+    故选A.
+
+    点睛：本题考查了解分式方程，解分式方程的基本思想是“转化思想”，把分式方程转化为整式方程求解；解分式方程一定要注意验根.'
   knowledge_points:
   - 分式方程
   module: numbersAndExpressions
@@ -195,12 +328,14 @@ questions:
 - id: 13
   type: 填空
   score: 2
-  question: 如图，⊙O的内接四边形ABCD中，∠A=115°，则∠BOD等于__．
-  answer: ''
-  solution: ''
+  question: '如图，⊙O的内接四边形ABCD中，∠A=115°，则∠BOD等于__．
+
+    [图]'
+  answer: 130°.
+  solution: ∵四边形ABCD内接与⊙O，∴∠A+∠C=180°，∵∠A=115°，∴∠C=65°，∴∠BOD＝2∠C＝130°；
   knowledge_points:
-  - 综合
-  module: quadrilaterals
+  - 圆周角
+  module: circles
   difficulty: 中档
   recommended_for:
   - L1
@@ -209,12 +344,29 @@ questions:
 - id: 14
   type: 填空
   score: 2
-  question: 《海岛算经》是中国古代测量术的代表作，原名《重差》，这本著作建立了从直接测量到间接测量的桥梁，直至近代，重差测量法仍有借鉴意义．某实践小组利用重差法测量海岛上一座山峰的高度，分别在，两点观察山顶点，测得仰角分别为，，同时测得长为200米，则山峰的高度约为_____米．(，，)
-  answer: ''
-  solution: ''
+  question: '《海岛算经》是中国古代测量术的代表作，原名《重差》，这本著作建立了从直接测量到间接测量的桥梁，直至近代，重差测量法仍有借鉴意义．某实践小组利用重差法测量海岛上一座山峰AB的高度，分别在C，D两点观察山顶点A，测得仰角分别为$45^\circ$，$26.5^\circ$，同时测得CD长为200米，则山峰AB的高度约为_____米．($\sin26.5^{\circ}\approx0.45$，$\cos
+    26.5^\circ \approx 0.89$，$\tan26.5^{\circ}\approx0.50$)
+
+    [图]'
+  answer: '200'
+  solution: '解：由题意得$AB \perp BC$，
+
+    ∵在C，D两点观察山顶点A，测得仰角分别为$45^\circ$，$26.5^\circ$，
+
+    ∴$\angle ACB = 45^\circ$，$\angle ADB=26.5^\circ$，
+
+    ∴$\tan\angle ACB=\frac{AB}{BC}=1$，$\tan \angle ADB = \frac{AB}{BD} = 0.50$，
+
+    ∴$AB = BC$，$BD=2AB$
+
+    ∴$CD=BD-BC=AB$
+
+    ∴AB的高度约为$200$m．
+
+    故答案为：200．'
   knowledge_points:
   - 综合
-  module: functions
+  module: triangles
   difficulty: 中档
   recommended_for:
   - L1
@@ -223,12 +375,47 @@ questions:
 - id: 15
   type: 填空
   score: 2
-  question: 如图，在矩形中，，，点E是边上的一点，连接，将沿翻折，使点D恰好落在边上的点F处，则___________．
-  answer: ''
-  solution: ''
+  question: '如图，在矩形$ABCD$中，$AB = 9$，$AD=15$，点E是CD边上的一点，连接AE，将$\mathrm{V}_{ADE}$沿AE翻折，使点D恰好落在BC边上的点F处，则$\frac{S_{\triangle ECF}}{S_{\triangle FBA}} =$___________．
+
+    [图]'
+  answer: $\frac{1}{9}$
+  solution: '解：$\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$四边形$ABCD$是矩形，
+
+    $\therefore DC = AB,\ AD = BC,\ \angle B = \angle C = 90^\circ$，
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$将$\mathrm{V}_{ADE}$沿AE翻折，使点D恰好落在BC边上的点F处，
+
+    $AF = AD = 15$，
+
+    $.BF=\sqrt{AF^{2}-AB^{2}}=12$，
+
+    $\therefore FC = BC - BF = 3$，
+
+    设$CE = x$，则$EF = DE = 9 - x$，根据$EF^{2}=FC^{2}+EC^{2}$，可得方程$(9-x)^{2}=3^{2}+x^{2}$，
+
+    解得$x = 4$，即$CE = 4$，
+
+    $\frac{S_{BCH}}{S_{ABC}}=\frac{3\times4+2}{9\times12+2}=\frac{1}{9}$．'
   knowledge_points:
+  - 勾股定理
   - 矩形
-  module: quadrilaterals
+  module: triangles
   difficulty: 中档
   recommended_for:
   - L1
@@ -237,12 +424,32 @@ questions:
 - id: 16
   type: 填空
   score: 2
-  question: 图为一个的开关阵列，每个开关只有“开”和“关”两种状态，每次只能按一个开关．按任意一个开关一次将导致自身和所有相邻(上、下、左、右)的开关改变状态．例如，按开关E，一次将导致B，D，E，F，H改变状态．如果按任意一个开关一次，则至少导致_____个开关改变状态；如果要求只改变A，E，I的状态，则最少按_____次开关．
-  answer: ''
-  solution: ''
+  question: '图为一个$3\times3$的开关阵列，每个开关只有“开”和“关”两种状态，每次只能按一个开关．按任意一个开关一次将导致自身和所有相邻(上、下、左、右)的开关改变状态．例如，按开关E，一次将导致B，D，E，F，H改变状态．如果按任意一个开关一次，则至少导致_____个开关改变状态；如果要求只改变A，E，I的状态，则最少按_____次开关．
+
+    [图]'
+  answer: ①.3②.3
+  solution: '解：根据题意可知：导致改变状态的开关最少，应该按四个角的开关，即开关A、D、G、I，此时受影响的开关只有三个，
+
+    首先A，E，I的状态三者不相邻，因此一次是不可能的，
+
+    其次考虑按两次开关，分为3种情况，其他通过旋转对称可以同理推导视为一种，按一次后的三种情况如下图所示：其中改变状态的用阴影表示：
+
+    [图]
+
+    这三种情况都不可能再按一次就只改变A，E，I的状态，
+
+    三次是可行的，方法如下，其中相比上一步改变状态的用阴影表示：
+
+    [图]
+
+    说明：这三步的顺序可以任意交换，都可以完成要求．
+
+    综上所述：如果按任意一个开关一次，则至少导致3个开关改变状态；如果要求只改变A，E，I的状态，则最少按3次开关．
+
+    故答案为：3；3．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 正方形
+  module: quadrilaterals
   difficulty: 较难
   recommended_for:
   - L2
@@ -250,12 +457,16 @@ questions:
 - id: 17
   type: 解答
   score: 5
-  question: （第17题，详见原卷）
-  answer: ''
-  solution: ''
+  question: 计算：$2^{-1}+4\cos30^{\circ}+\left(\pi-3.14\right)^{0}-\sqrt{12}$．
+  answer: $\frac{3}{2}$
+  solution: '解：$2^{-1}+4\cos30^{\circ}+(\pi-3.14)^{0}-\sqrt{12}$
+
+    $=\frac{1}{2}+2\sqrt{3}+1-2\sqrt{3}$
+
+    $=\frac{3}{2}$'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 三角函数
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -265,9 +476,21 @@ questions:
 - id: 18
   type: 解答
   score: 5
-  question: 解不等式，并写出其非负整数解．
-  answer: ''
-  solution: ''
+  question: 解不等式$\frac{2x-1}{3}-\frac{3x+2}{4}=-1$，并写出其非负整数解．
+  answer: $x \leq 2$，非负整数解为：0，1，2
+  solution: '解：$\frac{2x-1}{3}-\frac{3x+2}{4}=-1$
+
+    去分母得，$4(2x-1)=3(3x+2)-12$，
+
+    去括号得，$8x-4\quad 9x+6=12$，
+
+    移项得，$8x-9x-6+4$，
+
+    合并同类项得，$-x\quad-2$，
+
+    系数化为1得，$x \leq 2$，
+
+    ∴非负整数解为：0，1，2．'
   knowledge_points:
   - 不等式
   module: equationsAndInequalities
@@ -280,12 +503,28 @@ questions:
 - id: 19
   type: 解答
   score: 5
-  question: 已知，求代数式的值．
-  answer: ''
-  solution: ''
+  question: 已知$3a^{2}+2a=1$，求代数式$3a(a+2)+(a-2)^{2}-(a-1)(a+1)$的值．
+  answer: '6'
+  solution: '解：$3a(a+2)+(a-2)^{2}-(a-1)(a+1)$
+
+    $= 3a^2 + 6a + a^2 - 4a + 4 - a^2 + 1$
+
+    $=3a^{2}+2a+5$，
+
+    $3a^{2}+2a=1$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$原式$=1+5=6$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 方差
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -295,12 +534,34 @@ questions:
 - id: 20
   type: 解答
   score: 5
-  question: 某地区防风林工程种植乔木和灌木，要求乔木种植面积占比不超过．今年已种植乔木、灌木的面积共1000公顷；计划明年种植乔木和灌木的面积共1450公顷；其中乔木的面积比今年减少，灌木的面积比今年增加．判断经过今明两年种植后该地区乔木面积占比是否符合防风林工程要求，并说明理由．
-  answer: ''
-  solution: ''
+  question: 某地区防风林工程种植乔木和灌木，要求乔木种植面积占比不超过$10\%$．今年已种植乔木、灌木的面积共1000公顷；计划明年种植乔木和灌木的面积共1450公顷；其中乔木的面积比今年减少$40\%$，灌木的面积比今年增加$60\%$．判断经过今明两年种植后该地区乔木面积占比是否符合防风林工程要求，并说明理由．
+  answer: 符合要求，理由见解析．
+  solution: '解：符合要求，理由如下：
+
+    设今年种植乔木的面积为x公顷，则今年种植灌木的面积为$(1000-x)$公顷，
+
+    由题意可得：$x(1-40\%)+(1000-x)(1+60\%)=1450$，
+
+    解得：$x=150$，
+
+    则今明两年种植乔木的面积为：$x+x(1-40\%)=240$，
+
+    按照防风林工程要求种植面积不超过：$(1000+1450)\times10\%=245$，
+
+    $\because 240<245$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$今明两年终止后该地区乔木面积占比符合防风林工程要求．'
   knowledge_points:
   - 综合
-  module: geometryComprehensive
+  module: equationsAndInequalities
   difficulty: 中档
   recommended_for:
   - L1
@@ -309,13 +570,41 @@ questions:
 - id: 21
   type: 解答
   score: 5
-  question: '在平面直角坐标系中，一次函数的图象过点和．
+  question: '在平面直角坐标系xOy中，一次函数$y_{1}=kx+b(k\neq 0)$的图象过点$(0,2)$和$(1,3)$．
 
-    （1）求，的值；
+    （1）求k，b的值；
 
-    （2）当时，对于的每一个值，函数的值与函数的值之和都大于6，直接写出的取值范围．'
-  answer: ''
-  solution: ''
+    （2）当$x>1$时，对于x的每一个值，函数$y_{1}=kx+b$的值与函数$y_{x}=mx(m\neq0)$的值之和都大于6，直接写出m的取值范围．'
+  answer: （1）$k = 1$，$b = 2$ （2）$m^{3}$
+  solution: '【小问1详解】
+
+    解：∵一次函数$y_{1}=kx+b(k\neq 0)$的图象过点$(0,2)$和$(1,3)$，
+
+    ∴$\begin{cases}
+
+    k + b = 3 \\
+
+    b = 2
+
+    \end{cases}$，
+
+    解得$k = 1, b = 2$．
+
+    【小问2详解】
+
+    解：由（1）可知，$y_{1}=x+2$，
+
+    ∴$y_{1}$随x的增大而增大，
+
+    当$x = 1$时，$y_{1}=1+2=3$，
+
+    ∴当$x>1$时，$y_1 > 3$，
+
+    要使得当$x>1$时，对于x的每一个值，函数$y_{1}=kx+b$的值与函数$y_{x}=mx(m\neq0)$的值之和都大于6，
+
+    则$y_{2}$随x的增大而增大，且当$x = 1$时，$y_{2}=6-3$，即$y_{2}^{3}$，
+
+    ∴$m^{3}$．'
   knowledge_points:
   - 一次函数
   - 坐标系
@@ -328,16 +617,45 @@ questions:
 - id: 22
   type: 解答
   score: 5
-  question: '如图，在中，对角线，交于点，线段上一点，且．
+  question: '如图，在$\Box ABCD$中，对角线AC，BD交于点O，E为线段OD上一点，且$AE = CE$．
 
-    （1）求证：四边形是菱形；
+    [图]
 
-    （2）若，，求的长．'
-  answer: ''
-  solution: ''
+    （1）求证：四边形$ABCD$是菱形；
+
+    （2）若$AB = BE = 5$，$\tan \angle CAE = \frac{1}{3}$，求AC的长．'
+  answer: （1）见解析； （2）$AC = 6$．
+  solution: '【小问2详解】
+
+    解：$\tan\angle CAE=\frac{OE}{AO}=\frac{1}{3}$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$设$OE = x$，则$AO=3x$，$BO=BE-OE=5-x$，
+
+    $\because AC \perp BD$，
+
+    在$Rt\triangle AOB$中，由勾股定理有$AO^{2}+BO^{2}=AB^{2}$，
+
+    即$(3,5) + (5,-1)^2 = 25$，
+
+    解得：$x = 1$，
+
+    $AO = 3x = 3$，
+
+    $WAC-2AO-6$．'
   knowledge_points:
+  - 全等三角形
+  - 勾股定理
+  - 平行四边形
   - 菱形
-  module: quadrilaterals
+  module: triangles
   difficulty: 中档
   recommended_for:
   - L1
@@ -346,29 +664,101 @@ questions:
 - id: 23
   type: 解答
   score: 6
-  question: '某气象站对四月份30天的气温（单位：）进行了监测，数据分为上旬（4月1日—10日）、中旬（4月11日—20日）和下旬（4月21日—30日）三部分．
+  question: '某气象站对四月份30天的气温（单位：$^\circ\mathrm{C}$）进行了监测，数据分为上旬（4月1日—10日）、中旬（4月11日—20日）和下旬（4月21日—30日）三部分．
 
     a．上旬10天的日平均气温如下：
 
-    21  23  24  25  26  26  26  27  27  28
+    21
 
-    b．中下旬20天日平均气温频数分布直方图如下（数据分为5组：第1组，第2组，第3组，第4组，第5组）；
+    23  24  25  26  26  26  27  27  28
+
+    b．中下旬20天的日平均气温频数分布直方图如下（数据分为5组：第1组$15\leq x<20$，第2组$20 \leq x < 25$，第3组$25 \leq x < 30$，第4组$30 \leq x < 35$，第5组$35 \leq x < 40$）；
+
+    [图]
 
     c．上旬、中旬、下旬日平均气温的平均数、众数、中位数如下表：
 
+    平均数
+
+    众数
+
+    中位数
+
+    上旬
+
+    25.3
+
+    26
+
+    m
+
+    中旬
+
+    24.6
+
+    26
+
+    24.5
+
+    下旬
+
+    27.5
+
+    26
+
+    27
+
     根据以上信息，回答下列问题：
 
-    （1）的值为_____；
+    （1）m的值为_____；
 
-    （2）4月份30天的日平均气温的平均数是_____，气温为及以上的天数为_____天；
+    （2）4月份30天的日平均气温的平均数是_____，气温为$25^\circ\mathrm{C}$及以上的天数为_____天；
 
-    （3）根据《气候季节划分》的规定，立夏之后，若连续五天日平均气温不低于，则视为入夏．立夏之后，某地连续五天的日平均气温的数据满足如下条件，则一定能断定这个地区人夏的是_____．
+    （3）根据《气候季节划分》的规定，立夏之后，若连续五天日平均气温不低于$22^\circ\mathrm{C}$，则视为入夏．立夏之后，某地连续五天的日平均气温的数据满足如下条件，则一定能断定这个地区人夏的是_____．
 
-    A．平均数为25，中位数为22　B．平均数为23，众数为25
+    A．平均数为25，中位数为22B．平均数为23，众数为25
 
-    C．中位数为23，众数为25　D．平均数为25，方差'
-  answer: ''
-  solution: ''
+    C．中位数为23，众数为25D．平均数为25，方差$\leq 1$'
+  answer: （1）26；（2）25.8；20； （3）D．
+  solution: '【小问1详解】
+
+    解：根据排序后的数据可得：$m = \frac{26 + 26}{2} - 26$
+
+    【小问2详解】
+
+    解：4月份30天的日平均气温的平均数是$\frac{25.3\times10+24.6\times10+27.5\times10}{30}=25.8$，
+
+    气温为$25^\circ\mathrm{C}$及以上的天数为$7+8+4+1=20$(天)
+
+    【小问3详解】
+
+    解：A、平均数为25，中位数为22，
+
+    这组数据为$x_{1}\le x_{2}\le x_{3}\le x_{4}\le x_{5}$，中位数$x_{3}=22$，
+
+    平均数$\frac{x_{1}+x_{2}+x_{3}+x_{4}+x_{5}}{5}=25$，
+
+    ∴$x_{1}+x_{2}+x_{3}+x_{4}+x_{5}=125$，
+
+    即$x_{1}+x_{2}+22+x_{4}+x_{5}=125$，
+
+    ∴$x_{1}+x_{2}+x_{3}+x_{4}+x_{5}=103$，
+
+    ∴有可能$x_{1}<22$或$x_{2}<22$，不满足连续五天日平均气温不低于$22^\circ\mathrm{C}$，不能判定入夏，故A选项不符合题意．
+
+    B．平均数为23，众数为25
+
+    设这组数据为$x_{1}\le x_{2}\le x_{3}\le x_{4}\le x_{5}$，众数是25，则至少有2个25
+
+    平均数$\frac{x_{1}+x_{2}+x_{3}+x_{4}+x_{5}}{5}=23$，
+
+    ∴$x_{1}+x_{2}+x_{3}+x_{4}+x_{5}=115$，
+
+    假设$x_{3}=25$，$x_{4}=25$
+
+    即$x_{1}+x_{2}+x_{3}=-65$，
+
+    ∴有可能$x_{1}<22$，$x_{2}<22$，不满足连续五天日平均气温不低于$22^\circ\mathrm{C}$，不能判定入夏，故B'
   knowledge_points:
   - 平均数
   - 中位数
@@ -382,16 +772,79 @@ questions:
 - id: 24
   type: 解答
   score: 6
-  question: '如图，在中，，以为直径作，交于点，过点作，交于点，连接．
+  question: '如图，在$Rt\triangle ABC$中，$\angle ABC = 90^\circ$，以AB为直径作$\odot\odot$，交AC于点D，过点O作$OE \parallel AC$，交BC于点E，连接DE．
 
-    （1）求证：是的切线；
+    [图]
 
-    （2）已知，，求的半径．'
-  answer: ''
-  solution: ''
+    （1）求证：DE是$\odot\odot$的切线；
+
+    （2）已知$OE = \frac{13}{2}$，$CD = 9$，求$\odot\odot$的半径．'
+  answer: （1）见解析； （2）$\sqrt{13}$．
+  solution: '【小问1详解】
+
+    证明：如图，连接OD，则有$AO = DO = BO$
+
+    [图]
+
+    $\angle OAD = \angle ODA$
+
+    $\because OE \parallel AC$
+
+    $\angle BCE = \angle OAD$，$\angle EOD = \angle ADO$
+
+    $\angle BOE = \angle DOE$
+
+    $\therefore OE = OE$
+
+    $\triangle BOE \cong \triangle DOE (SAS)$
+
+    $\angle ODE=\angle OBE=90^{\circ}$
+
+    ∵OD是半径，
+
+    ∴DE是$\odot\odot$的切线；
+
+    【小问2详解】
+
+    解：$\therefore O$为AB中点且$OE \parallel AC$
+
+    $\therefore AC=2OE=13$
+
+    $\because CD = 9$
+
+    $\therefore AD=AC-CD=13-9=4$
+
+    如图，连接BD
+
+    [图]
+
+    $\because AC$为$\odot\odot$直径
+
+    $\angle ADB = 90^\circ$
+
+    $\angle BAC + \angle ABD = 90^\circ$
+
+    $\angle ABC=\angle ABD+\angle CBD=90^\circ$
+
+    $\angle BAC = \angle CBD$
+
+    $\triangle ABD \cong \triangle BDC$
+
+    $\because \frac{AD}{BD} = \frac{BD}{DC}$
+
+    $\therefore BD^{2}=AD\cdot DC=9\times4=36$
+
+    $\therefore BD = 6$
+
+    $AB = \sqrt{a^{2} + b^{2}} = 2\sqrt{13}$
+
+    $x = AO = \frac{1}{2}AB = \sqrt'
   knowledge_points:
   - 切线
-  module: circles
+  - 全等三角形
+  - 相似三角形
+  - 勾股定理
+  module: triangles
   difficulty: 较难
   recommended_for:
   - L2
@@ -399,24 +852,106 @@ questions:
 - id: 25
   type: 解答
   score: 6
-  question: '某团队设计了一款智能灯，它可以根据自然光照度自动开启或关闭，当自然光照度小于或等于勒克斯（勒克斯为光照度单位）时，自动开启；大于勒克斯时，自动关闭．该团队通过模拟自然光照度进行了一次实验，记录了实验中模拟自然光照度（单位：勒克斯）与时间（单位：分钟）的关系数据，如下表所示：
+  question: '某团队设计了一款智能灯，它可以根据自然光照度自动开启或关闭，当自然光照度小于或等于k勒克斯（勒克斯为光照度单位）时，自动开启；大于k勒克斯时，自动关闭．该团队通过模拟自然光照度进行了一次实验，记录了实验中模拟自然光照度y（单位：勒克斯）与时间t（单位：分钟）的关系数据，如下表所示：
 
-    （1）团队成员发现可以用函数刻画模拟自然光照度与之间的关系．在给出的平面直角坐标系中，描出了以上表中各对对应值为坐标的点，根据描出的点画出该函数的图象；
+    t
+
+    0
+
+    1
+
+    2
+
+    3
+
+    4
+
+    5
+
+    6
+
+    7
+
+    8
+
+    9
+
+    10
+
+    11
+
+    12
+
+    y
+
+    32.9
+
+    30.0
+
+    27.5
+
+    25.6
+
+    24.2
+
+    23.3
+
+    22.9
+
+    23.0
+
+    23.7
+
+    24.8
+
+    26.5
+
+    28.7
+
+    31.4
+
+    （1）团队成员发现可以用函数刻画模拟自然光照度y与t之间的关系．在给出的平面直角坐标系中，描出了以上表中各对对应值为坐标的点，根据描出的点画出该函数的图象；
+
+    [图]
 
     根据以上数据与函数图象，解决下列问题：
 
-    （2）若．
+    （2）若$k = 30$．
 
-    ①智能灯首次开启时，_____；
+    ①智能灯首次开启时，$t =$_____；
 
     ②智能灯的工作时长约为_____分钟；（结果保留小数点后一位）
 
-    （3）设当为30，27，24时，智能灯工作时长分别为，，，则_____．（填“>”“=”或“<”）'
-  answer: ''
-  solution: ''
+    （3）设当k为30，27，24时，智能灯工作时长分别为$t_{1}$，$t_{2}$，$t_{3}$，则$t_{1}-t_{2}$_____$t_{2}-t_{3}$．（填“>”“=”或“<”）'
+  answer: （1）见详解（2）①1；②10.5（答案不唯一，此为估算值，原则上上下浮动0.2以内均正确）； （3）<．
+  solution: '【小问1详解】
+
+    解：如图，
+
+    [图]【小问2详解】
+
+    解：①由图可知，智能灯首次开启时，$t = 1$，
+
+    ②∵$k \leq 30$时，自动开启；
+
+    ∴智能灯首次开启时，$t = 1$；智能灯开启后关闭时，$t=11.5$
+
+    则智能灯的工作时长约为$11.5-1=10.5$分钟；
+
+    【小问3详解】
+
+    解：由（2）知当k为30时，智能灯工作时长为$t_{1}=10.5$分钟，
+
+    同理可得当k为27时，智能灯工作时长为$t_{2}=10.2-2.1=8.1$分钟，
+
+    当k为24时，智能灯工作时长$c_{3}=-8.4-4=-4.4$分钟，
+
+    则$t_{1}-t_{2}=10.5-8.1=2.4$分钟，$t_{1}-t_{2}=8.1-4.4=3.7$分钟，
+
+    那么，$t_{1}-t_{2}<t_{2}-t_{3}$$t_{2}-t_{3}$．'
   knowledge_points:
   - 坐标系
-  module: functions
+  module: numbersAndExpressions
   difficulty: 较难
   recommended_for:
   - L2
@@ -424,55 +959,175 @@ questions:
 - id: 26
   type: 解答
   score: 6
-  question: '在平面直角坐标系中，抛物线经过点，点，在抛物线上．
+  question: '在平面直角坐标系xOy中，抛物线$G: y = ax^2 + 2x + c \, (a \ne 0)$经过点$(1,2t+c-1)$，点$A(t-1,y_{1})$，$B(t+2,y_{2})$在抛物线G上．
 
-    （1）求的值；
+    （1）求a的值；
 
-    （2）将抛物线向右平移2个单位长度得到抛物线，点在抛物线上，且总有，求的取值范围．'
-  answer: ''
-  solution: ''
+    （2）将抛物线G向右平移2个单位长度得到抛物线$G''$，点$C(2t+2,y_{2})$在抛物线$G''$上，且总有$y_{2}<y_{3}<y_{1}$，求t的取值范围．'
+  answer: （1）$a = -1$； （2）$-2 < t < -1$或$1<t<2$．
+  solution: '【小问1详解】
+
+    解：将点$(1,2t+c-1)$代入抛物线G中，
+
+    得：$a + 2t + c = 2t + c - 1$，
+
+    解得：$a = -1$；
+
+    【小问2详解】
+
+    解：将C点向左平移2个单位长度即在抛物线G上，记为$C''(2t,y_{3})$，
+
+    对称轴：$x = \frac{2t}{-2(-1)} = t$，
+
+    点A关于对称轴的对称点为$A''(t+1,y_1)$，
+
+    点B关于对称轴的对称点为$B''(t+2,y_{2})$，
+
+    ①当$t\ 0$时，在对称轴右侧y随x的增大而减小，
+
+    $r_{1} > r_{2} > \cdots > r_{n}$，
+
+    $t+1<2t\leq t+2$，
+
+    解得：$1<t<2$；
+
+    ②当$t \leq 0$时，在对称轴左侧y随x的增大而增大，
+
+    $r_{1} > r_{2} > \cdots > r_{n}$，
+
+    $\therefore-2<2t<t-1$，
+
+    解得：$-2 < t < -1$；
+
+    综上所述，$-2 < t < -1$或$1<t<2$．
+
+    [图]'
   knowledge_points:
+  - 二次函数
   - 平移
+  - 不等式
+  - 不等式组
   - 坐标系
-  module: geometryComprehensive
+  module: functions
   difficulty: 压轴
   recommended_for:
   - L3
 - id: 27
   type: 解答
   score: 7
-  question: '如图，在中，，为上一点，，，过点作于点，交于点．
+  question: '如图，在$V_{ABC}$中，$\angle A=45^{\circ}$，D为AC上一点，$BC = BD$，$\angle ABC=\alpha(0^{\circ}<\alpha<45^{\circ})$，过点C作$CE \perp BD$于点E，交AB于点F．
 
-    （1）求的度数（用含的式子表示）；
+    [图]
 
-    （2）用等式表示线段与之间的数量关系，并证明．'
-  answer: ''
-  solution: ''
+    （1）求$\angle BCF$的度数（用含$\alpha$的式子表示）；
+
+    （2）用等式表示线段BF与AD之间$[公式]$数量关系，并证明．'
+  answer: （1）$2\alpha$； （2）$BF = \sqrt{2}AD$，证明见解析．
+  solution: '【小问1详解】
+
+    解：$\because \angle A = 45^\circ$，$\angle ABC=\alpha(0^{\circ}<\alpha<45^{\circ})$
+
+    $\angle BDC = \angle A + \angle ABD = 45^\circ + \alpha$
+
+    $\because BC = BD$，
+
+    $\angle BCD = \angle BDC = 45^\circ + \alpha$，
+
+    $\angle DBC = 180^\circ - 2\angle BCD = 90^\circ - 2\alpha$，
+
+    $\because CE \perp BD$，
+
+    $\angle BEC = 90^\circ$，
+
+    $\angle BCF = 90^\circ - \angle DBC = 2\alpha$；
+
+    【小问2详解】
+
+    解：$BF = \sqrt{2}AD$，证明如下
+
+    如图，过点D作AB的对称点G，连接AG、BG，则$BD = BG$，$AD = AG$，
+
+    $\because \angle ABD = \alpha$，
+
+    $\angle GBD = 2\alpha = \angle BCF$，$\angle BFC = \angle FBC = \angle ABD + \angle DBC = 90^\circ - \alpha$，
+
+    $\therefore BC = CF = BD = BG$，
+
+    $\triangle BDG\cong\triangle CFB(SAS)$，
+
+    $\therefore BF = DG$，
+
+    $\angle BAD = 45^\circ$，
+
+    $\therefore \angle GAD = 2\angle BAD = 90^\circ$，
+
+    $.BF=DG=\sqrt{2}AD$．
+
+    [图]'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 轴对称图形
+  - 勾股定理
+  - 轴对称
+  module: triangles
   difficulty: 压轴
   recommended_for:
   - L3
 - id: 28
   type: 解答
   score: 7
-  question: '在平面直角坐标系中，对于线段和不在直线上的点，给出如下定义：若存在点，满足点与点在直线的异侧，，且，则称点为点关于线段的“平衡点”．
+  question: '在平面直角坐标系xOy中，对于线段AB和不在直线AB上的点M，给出如下定义：若存在点N，满足点N与点M在直线AB的异侧，$NA^{2}+MB^{2}=NB^{2}+MA^{2}$，且$\angle MAN + \angle MBN \leq 180^\circ$，则称点N为点M关于线段AB的“平衡点”．
 
-    （1）已知点，．
+    （1）已知点$A(4,0)$，$M(1,1)$．
 
-    ①在点，，中，点_____是点关于线段的“平衡点”；
+    ①在点$N_{1}\left(3,-1\right)$，$N_{2}\left(1,-2\right)$，$N_{1}(2,-1)$中，点_____是点M关于线段OA的“平衡点”；
 
-    ②若直线上存在点关于线段的“平衡点”，直接写出的取值范围；
+    ②若直线$y = -2x + b$上存在点M关于线段OA的“平衡点”，直接写出b的取值范围；
 
-    （2）已知半径为2，是的弦，且．点，，以为对角线作正方形．若正方形边上存在点关于线段的“平衡点”，直接写出的取值范围．'
-  answer: ''
-  solution: ''
+    （2）已知$\odot\odot$半径为2，CD是$\odot\odot$的弦，且$CD = 2$．点$P(t,0)$，$Q(i+1,1)$，以$\overline{PQ}$为对角线作正方形．若正方形边上存在点O关于线段CD的“平衡点”，直接写出t的取值范围．'
+  answer: （1）①$N_{2}$；②$-1\leq b<2$； （2）$\sqrt{2}-1<t\leq\frac{4\sqrt{3}}{3}$或$\frac{4\sqrt{3}-3}{3}<t<-\sqrt{2}$．
+  solution: '【小问1详解】
+
+    解：定义分析，如图，满足点N与点M在直线AB的异侧，过点$M,N$分别作AB的垂线，垂足分别为$C,D$
+
+    [图]
+
+    根据勾股定理可得：$AM^{2}+NB^{2}=AC^{2}+MC^{2}+DB^{2}+DN^{2}$，$NA^{2}+MB^{2}=AD^{2}+DN^{2}+MC^{2}+BC^{2}$
+
+    ∵$NA^{2}+MB^{2}=NB^{2}+MA^{2}$，
+
+    ∴$AC^{2}+MC^{2}+DB^{2}+DN^{2}=AD^{2}+DN^{2}+MC^{2}+BC^{2}$
+
+    ∴$AC^{2}\cdot DB^{2}=AD^{2}\cdot BC^{2}$
+
+    $AC^{2}+DB^{2}=(AC+CD)^{2}+(CD+DB)^{2}$
+
+    $AC^{2}+DB^{2}=AC^{2}+CD^{2}+2AC\cdot CD+CD^{2}+DB^{2}+2CD\cdot DB$
+
+    ∴$2CD^{2}+2AC\cdot CD+2CD\cdot DB=0$
+
+    ∴$CD(CD + AD + DB) = 0$
+
+    ∴$CD = 0$，即$C,D$重合，
+
+    ∴符合条件$NA^{2}+MB^{2}=NB^{2}+MA^{2}$的四边形，$MN \perp AB$，如图，
+
+    [图]
+
+    又∵$\angle MAN + \angle MBN \leq 180^\circ$，
+
+    ∴$\angle AMB+\angle ANB=180^{\circ}$，即MN的长度临界值为$A,N,B,M$四点共圆，且包括圆上的点，
+
+    ①∵点$A(4,0)$，$M(1,1)$，$N_{1}\left(3,-1\right)$，$N_{2}\left(1,-2\right)$，$N_{1}(2,-1)$，
+
+    ∴只有点$N_{2}$使得，$MN_{2} \perp OA$，且$\angle MON + \angle MA'
   knowledge_points:
+  - 一次函数
+  - 切线
   - 弦
+  - 勾股定理
   - 正方形
   - 坐标系
-  module: quadrilaterals
+  module: circles
   difficulty: 压轴
   recommended_for:
   - L3
