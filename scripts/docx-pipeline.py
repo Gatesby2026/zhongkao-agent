@@ -22,6 +22,7 @@ import sys
 import glob
 import json
 import time
+import shutil
 import hashlib
 import base64
 import argparse
@@ -44,6 +45,7 @@ except ImportError:
 ROOT = Path(__file__).resolve().parent.parent
 SRC_DIR = ROOT / "knowledge-original" / "北京中考数学模拟卷"
 DST_DIR = ROOT / "knowledge-base" / "mock-exams" / "math" / "beijing"
+FIG_DIR = DST_DIR / "figures"  # 几何/函数图形保存目录
 CACHE_DIR = ROOT / "scripts" / ".ocr-cache"  # OCR 结果缓存
 
 # Qwen-VL API
@@ -402,9 +404,16 @@ def batch_ocr(formula_images, cache):
 # Step 4: 组装纯文本（公式用 $LaTeX$ 替换）
 # ============================================================
 
-def assemble_text(segments, cache):
-    """把 HTML segments 组装成带 LaTeX 的纯文本"""
+def assemble_text(segments, cache, exam_key=None):
+    """把 HTML segments 组装成带 LaTeX 的纯文本，同时保存几何图形文件。
+
+    exam_key: e.g. "2025-haidian-yi"，用于图片文件命名
+    返回: (text, figure_paths)  figure_paths 是按出现顺序排列的相对路径列表
+    """
     parts = []
+    figure_paths = []  # 收集图片相对路径
+    fig_counter = 0
+
     for seg_type, content in segments:
         if seg_type == "text":
             parts.append(content)
@@ -420,12 +429,23 @@ def assemble_text(segments, cache):
             else:
                 parts.append("[公式]")
         elif seg_type == "figure_img":
-            parts.append("[图]")
+            if os.path.exists(content) and exam_key:
+                fig_counter += 1
+                ext = Path(content).suffix or ".png"
+                fig_name = f"{exam_key}-fig{fig_counter:02d}{ext}"
+                dst_path = FIG_DIR / fig_name
+                FIG_DIR.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(content, dst_path)
+                rel_path = f"figures/{fig_name}"
+                figure_paths.append(rel_path)
+                parts.append(f"[图:{rel_path}]")
+            else:
+                parts.append("[图]")
 
     text = "".join(parts)
     # 清理多余空行
     text = re.sub(r'\n{3,}', '\n\n', text)
-    return text.strip()
+    return text.strip(), figure_paths
 
 
 # ============================================================
@@ -695,6 +715,13 @@ def build_yaml(questions, year, district_cn, exam_type_cn):
         module = detect_module(analysis_text, question_text)
         kps = extract_knowledge_points(analysis_text, question_text)
 
+        # 提取本题引用的图片路径
+        all_text = question_text + "\n" + detail_text
+        figures = re.findall(r'\[图:(figures/[^\]]+)\]', all_text)
+        # 清理显示文本：[图:figures/xxx.png] → [图]
+        question_text = re.sub(r'\[图:figures/[^\]]+\]', '[图]', question_text)
+        detail_text = re.sub(r'\[图:figures/[^\]]+\]', '[图]', detail_text)
+
         yaml_q = {
             "id": qid,
             "type": qtype,
@@ -707,6 +734,8 @@ def build_yaml(questions, year, district_cn, exam_type_cn):
             "difficulty": difficulty,
             "recommended_for": get_recommended_for(difficulty),
         }
+        if figures:
+            yaml_q["figures"] = figures
         yaml_questions.append(yaml_q)
 
     district_label = f"{district_cn}区" if not district_cn.endswith(("区", "山")) else district_cn
@@ -827,9 +856,10 @@ def convert_single(docx_path, year, district_cn, district_en, exam_type_cn, exam
             print(f"    Step 3: Qwen-VL 公式 OCR...")
             batch_ocr(formula_images, cache)
 
-        # Step 4: 组装纯文本
-        print(f"    Step 4: 组装 LaTeX 文本...")
-        full_text = assemble_text(segments, cache)
+        # Step 4: 组装纯文本 + 保存图形
+        exam_key = f"{year}-{district_en}-{exam_type_en}"
+        print(f"    Step 4: 组装 LaTeX 文本 + 保存图形...")
+        full_text, figure_paths = assemble_text(segments, cache, exam_key=exam_key)
 
         # Step 5: 解析题目
         print(f"    Step 5: 解析题目结构...")
@@ -857,7 +887,8 @@ def convert_single(docx_path, year, district_cn, district_en, exam_type_cn, exam
         with open(yaml_path, "w", encoding="utf-8") as f:
             f.write(header + yaml_content)
 
-        print(f"    ✅ 完成: {len(questions)} 题 → {yaml_filename}")
+        fig_count = sum(len(q.get("figures", [])) for q in data["questions"])
+        print(f"    ✅ 完成: {len(questions)} 题, {fig_count} 张图 → {yaml_filename}")
         return "success"
 
     except Exception as ex:
