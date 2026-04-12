@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
+import { useAuth } from "@/components/AuthProvider";
 
 const MODULES = [
   { id: "numbersAndExpressions", name: "数与式", desc: "实数运算、因式分解、分式", icon: "🔢" },
@@ -34,6 +35,7 @@ function daysUntilZhongkao(): number {
 }
 
 export default function DrillPage() {
+  const { token } = useAuth();
   const [step, setStep] = useState(1);
   const [moduleId, setModuleId] = useState("");
   const [level, setLevel] = useState("");
@@ -45,6 +47,12 @@ export default function DrillPage() {
   const [plan, setPlan] = useState("");
   const [error, setError] = useState("");
   const planRef = useRef<HTMLDivElement>(null);
+
+  // 练习反馈
+  const [correctRate, setCorrectRate] = useState<number | null>(null);
+  const [questionsAttempted, setQuestionsAttempted] = useState(10);
+  const [saving, setSaving] = useState(false);
+  const [saved, setSaved] = useState(false);
 
   const selectedModule = MODULES.find((m) => m.id === moduleId);
   const selectedLevel = LEVELS.find((l) => l.id === level);
@@ -117,6 +125,28 @@ export default function DrillPage() {
     }
   };
 
+  const handleSaveFeedback = async () => {
+    if (correctRate === null || !token) return;
+    setSaving(true);
+    try {
+      await fetch("/api/profile/drill", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` },
+        body: JSON.stringify({
+          moduleId,
+          correctRate: correctRate / 100,
+          questionsAttempted,
+          timeSpent: 0,
+        }),
+      });
+      setSaved(true);
+    } catch {
+      // ignore
+    } finally {
+      setSaving(false);
+    }
+  };
+
   // 自动滚动
   useEffect(() => {
     if (planRef.current && plan) {
@@ -175,10 +205,70 @@ export default function DrillPage() {
           )}
         </div>
 
+        {/* 练习反馈 */}
+        {plan && !loading && (
+          <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+            <h3 className="text-sm font-semibold text-gray-800 mb-3">练完了？记录一下效果</h3>
+            {saved ? (
+              <p className="text-sm text-green-600">✓ 已保存到学习画像，下次计划会更精准</p>
+            ) : (
+              <>
+                <div className="flex items-center gap-4 mb-3">
+                  <span className="text-sm text-gray-500">做了几道：</span>
+                  <div className="flex gap-2">
+                    {[5, 10, 15, 20].map((n) => (
+                      <button
+                        key={n}
+                        onClick={() => setQuestionsAttempted(n)}
+                        className={`px-3 py-1 rounded border text-sm ${
+                          questionsAttempted === n
+                            ? "border-blue-500 bg-blue-50 text-blue-700"
+                            : "border-gray-200 text-gray-500 hover:border-gray-300"
+                        }`}
+                      >
+                        {n}题
+                      </button>
+                    ))}
+                  </div>
+                </div>
+                <div className="flex items-center gap-4 mb-4">
+                  <span className="text-sm text-gray-500">正确率：</span>
+                  <div className="flex gap-2">
+                    {[20, 40, 60, 80, 100].map((r) => (
+                      <button
+                        key={r}
+                        onClick={() => setCorrectRate(r)}
+                        className={`px-3 py-1 rounded border text-sm ${
+                          correctRate === r
+                            ? "border-blue-500 bg-blue-50 text-blue-700"
+                            : "border-gray-200 text-gray-500 hover:border-gray-300"
+                        }`}
+                      >
+                        {r}%
+                      </button>
+                    ))}
+                  </div>
+                </div>
+                {token ? (
+                  <button
+                    onClick={handleSaveFeedback}
+                    disabled={correctRate === null || saving}
+                    className="px-5 py-2 bg-blue-600 text-white rounded-lg text-sm hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed"
+                  >
+                    {saving ? "保存中..." : "保存练习记录"}
+                  </button>
+                ) : (
+                  <p className="text-xs text-gray-400">登录后可保存练习记录到学习画像</p>
+                )}
+              </>
+            )}
+          </div>
+        )}
+
         {/* 操作按钮 */}
         <div className="flex justify-center gap-4 mb-8">
           <button
-            onClick={() => { setStep(1); setPlan(""); setError(""); }}
+            onClick={() => { setStep(1); setPlan(""); setError(""); setSaved(false); setCorrectRate(null); }}
             className="px-6 py-2 border border-gray-300 text-gray-600 rounded-lg hover:bg-gray-100"
           >
             换个模块练
