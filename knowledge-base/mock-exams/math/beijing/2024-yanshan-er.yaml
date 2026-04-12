@@ -1,27 +1,32 @@
 # ============================================================
 # 2024年北京燕山区中考数学二模试卷 — 逐题分析
 # ============================================================
-# 数据来源：knowledge-original/精品解析：2024年北京市燕山地区中考二模数学试题（原卷版）.docx
-# 自动生成，部分数学公式可能显示不全（docx公式对象无法完整提取）
+# 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
+# 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
 # 满分：100分  时长：120分钟
 
 year: 2024
-district: 燕山区
+district: 燕山
 exam_type: 二模
 subject: 数学
 full_score: 100
 duration_minutes: 120
-total_questions: 27
+total_questions: 28
 structure: 8选择(16分) + 8填空(16分) + 12解答(68分)
 questions:
 - id: 1
   type: 选择
   score: 2
-  question: "中国空间站作为重大创新成果入选“2023全球十大工程成就”．中国空间站轨道高度约为，将数字400000用科学记数法表示应为（   ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '中国空间站作为重大创新成果入选“2023全球十大工程成就”．中国空间站轨道高度约为$400000m$，将数字400000用科学记数法表示应为（）
+
+    A.$0.4\times10^{5}$B.$0.4\times10^{6}$C.$4\times10^{5}$D.$4\times10^{6}$'
+  answer: C
+  solution: '解：400000用科学记数法表示为$4\times10^{5}$．
+
+    故选：C．'
   knowledge_points:
   - 科学记数法
+  - 绝对值
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -32,9 +37,19 @@ questions:
 - id: 2
   type: 选择
   score: 2
-  question: "下列几何体中，主视图为三角形的是（　　）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '下列几何体中，主视图为三角形的是（　　）
+
+    A.[图]B.[图]C.[图]D.[图]'
+  answer: A
+  solution: 'A、主视图为[图]，是三角形，故此选项正确；
+
+    B、主视图为[图]，是矩形，故此选项错误；
+
+    C、主视图为[图]，是圆，故此选项错误；
+
+    D、主视图为[图]，是矩形，故此选项错误；
+
+    故选A．'
   knowledge_points:
   - 综合
   module: triangles
@@ -44,29 +59,80 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-yanshan-er-fig01.png
+  - figures/2024-yanshan-er-fig02.png
+  - figures/2024-yanshan-er-fig03.png
+  - figures/2024-yanshan-er-fig04.png
+  - figures/2024-yanshan-er-fig05.png
+  - figures/2024-yanshan-er-fig06.png
+  - figures/2024-yanshan-er-fig07.png
+  - figures/2024-yanshan-er-fig08.png
 - id: 3
   type: 选择
   score: 2
-  question: "如图，，的顶点B，C分别在，上，，，则的大小为（   ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '如图，$\ell_{1}$$\parallel$$l_2$，$\triangle ABC$的顶点B，C分别在$\ell_{1}$，$l_2$上，$\angle1=70^\circ$，$\angle2=40^{\circ}$，则$\angle A$的大小为（）
+
+    [图]
+
+    A.$50^\circ$B.$40^\circ$C.$30^\circ$D.$20^\circ$'
+  answer: C
+  solution: '解：如图，
+
+    [图]
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$$\ell_{1}$$\parallel$$l_2$，
+
+    $\angle3=\angle1=70^\circ$，
+
+    $\angle 2=40^{\circ}$，
+
+    $\angle A=\angle 3-\angle 2=30^{\circ}$，
+
+    故选：C．'
   knowledge_points:
-  - 综合
-  module: functions
+  - 平行线
+  module: triangles
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-yanshan-er-fig09.png
+  - figures/2024-yanshan-er-fig10.png
 - id: 4
   type: 选择
   score: 2
-  question: "在数轴上，点A，B在原点O的两侧，分别表示数a，3，将点A向左平移1个单位长度，得到点C．若，则a的值为（   ）\nA. \tB. \tC. 1\tD. 2"
-  answer: ''
-  solution: ''
+  question: '在数轴上，点A，B在原点O的两侧，分别表示数a，3，将点A向左平移1个单位长度，得到点C．若$CO = BO$，则a的值为（）
+
+    A.$-2$B.$-1$C.1D.2'
+  answer: A
+  solution: '解：由题意知：A点表示的数为a，B点表示的数为3，C点表示的数为$a-1$，
+
+    $\because CO = BO$，
+
+    $\therefore |a-1|=3$，
+
+    解得$a = -2$或4，
+
+    $\because a<0$，
+
+    $\therefore a = -2$，
+
+    故选：A．'
   knowledge_points:
   - 平移
+  - 绝对值
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -77,12 +143,20 @@ questions:
 - id: 5
   type: 选择
   score: 2
-  question: "若关于的一元二次方程有两个不相等的实数根，则实数的取值范围是（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '若关于x的一元二次方程$x^{2}+2x-m=0$有两个不相等的实数根，则实数m的取值范围是（）
+
+    A.$m > -1$B.$m^{-1}$C.$m > 1$D.$m\ 1$'
+  answer: A
+  solution: '解：根据题意得$\Delta=2^{2}-4\times1\times(-m)>0$，
+
+    解得$m > -1$．
+
+    故选：A．'
   knowledge_points:
   - 一元二次方程
-  module: numbersAndExpressions
+  - 根的判别式
+  - 不等式
+  module: equationsAndInequalities
   difficulty: 基础
   recommended_for:
   - L0
@@ -92,9 +166,17 @@ questions:
 - id: 6
   type: 选择
   score: 2
-  question: "一个多边形的内角和是900°，则这个多边形的边数为 （  ）\nA. 6\tB. 7\tC. 8\tD. 9"
-  answer: ''
-  solution: ''
+  question: "一个多边形的内角和是900°，则这个多边形的边数为\n（  ）\nA.\n6\tB. 7\tC. 8\tD. 9"
+  answer: B
+  solution: '解：设这个多边形的边数为n，
+
+    则有（n-2）180°=900°，
+
+    解得：n=7，
+
+    ∴这个多边形的边数为7．
+
+    故选B．'
   knowledge_points:
   - 综合
   module: triangles
@@ -106,11 +188,53 @@ questions:
 - id: 7
   type: 选择
   score: 2
-  question: "不透明的袋子中装有1个红球和2个黄球，两种球除颜色外无其他差别，从中随机摸出一个小球，放回并摇匀，再从中随机摸出一个小球，那么两次摸出的球都是红球的概率是（   ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '不透明的袋子中装有1个红球和2个黄球，两种球除颜色外无其他差别，从中随机摸出一个小球，放回并摇匀，再从中随机摸出一个小球，那么两次摸出的球都是红球的概率是（
+
+    ）
+
+    A.$\frac{1}{9}$B.$\frac{2}{9}$C.$\frac{1}{3}$D.$\frac{2}{3}$'
+  answer: A
+  solution: '解：列表如下：
+
+    红
+
+    黄
+
+    黄
+
+    红
+
+    红红
+
+    黄红
+
+    黄红
+
+    黄
+
+    红黄
+
+    黄黄
+
+    黄黄
+
+    黄
+
+    红黄
+
+    黄黄
+
+    黄黄
+
+    共有9种等可能的结果，其中两次都摸到红球的结果有1种，
+
+    ∴两次都摸到红球的概率为$\frac{1}{9}$．
+
+    故选：A．'
   knowledge_points:
   - 概率
+  - 树状图
+  - 列表法
   module: statisticsAndProbability
   difficulty: 中档
   recommended_for:
@@ -120,24 +244,80 @@ questions:
 - id: 8
   type: 选择
   score: 2
-  question: "如图，是半圆O的直径，C是半圆周上的动点(与A，B不重合），于点D，连接．设，给出下面三个结论：①；②；③．上述结论中，所有正确结论的序号是（     ）\nA. ①②\tB. ②③\tC. ①③\tD. ①②③"
-  answer: ''
-  solution: ''
+  question: '如图，AB是半圆O的直径，C是半圆周上的动点(与A，B不重合），$CD \perp AB$于点D，连接OC．设$AD = a,\ BD = b,\ CD = h$，给出下面三个结论：①$h \leq \frac{a + b}{2}$；②$\left|\frac{a-b}{2}\right|\leq h$；③$\frac{a+b}{2}\geq\sqrt{ab}$．上述结论中，所有正确结论的序号是（
+
+    ）
+
+    [图]
+
+    A.①②B.②③C.①③D.①②③'
+  answer: C
+  solution: '解：∵AB是半圆O的直径，
+
+    ∴$\angle ACB=90^\circ$，
+
+    ∵点O是AB中点，
+
+    ∴$CO=\frac{1}{2}AB$，
+
+    ∵$CD \perp AB$，$AD = a,\ BD = b,\ CD = h$，
+
+    ∴$CD\leq CO$，$CO = AO - BO = \frac{1}{2}AB = \frac{1}{2}(AD + BD) = \frac{a + b}{2}$，
+
+    即$h \leq \frac{a + b}{2}$，故①正确；
+
+    ∵C是半圆周上的动点(与A，B不重合），
+
+    ∴$OD < AO$，$CD < DO$，
+
+    ∴$DO = |BD - BO| = \left| b - \frac{a + b}{2} \right| = \left| \frac{b - a}{2} \right| = \frac{|a - b|}{2}$，
+
+    ∴$\left|\frac{a-b}{2}\right|<h$，故②错误；
+
+    $\because DC \perp AB$，$\angle ACB=90^\circ$，
+
+    $\angle ADC = \angle BDC = 90^\circ$，
+
+    $\angle DAC + \angle ACD = 90^\circ$，$\angle DCB+\angle DCB=90^\circ$，
+
+    $\angle DAC = \angle DCB$
+
+    $\therefore Rt\triangle ADC\cong Rt\triangle CDB$，
+
+    $\frac{AD}{CD}=\frac{CD}{DB}$，
+
+    ∴$\frac{a}{h}=\frac{h}{b}$，
+
+    ∴$h^{2}=ab$，
+
+    ∴$h = \sqrt{ab}$，
+
+    ∵$h \leq \frac{a + b}{2}$，
+
+    ∴$\sqrt{ab} \leq \frac{a+b}{2}$'
   knowledge_points:
+  - 圆周角
+  - 相似三角形
   - 动点
-  module: circles
+  module: triangles
   difficulty: 较难
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2024-yanshan-er-fig11.png
 - id: 9
   type: 填空
   score: 2
-  question: 若代数式有意义，则实数的取值范围是__________．
-  answer: ''
-  solution: ''
+  question: 若代数式$\frac{1}{x-2}$有意义，则实数x的取值范围是__________．
+  answer: $x \neq 2$
+  solution: '解：根据题意，$x-2\ne0$，
+
+    ∴$x \neq 2$，
+
+    故答案为：$x \neq 0$．'
   knowledge_points:
-  - 综合
+  - 不等式
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -148,12 +328,18 @@ questions:
 - id: 10
   type: 填空
   score: 2
-  question: 分解因式：________．
-  answer: ''
-  solution: ''
+  question: 分解因式：$2a^{2}-8ab^{2}$________．
+  answer: $2a(a+2b)(a-2b)$
+  solution: '解：$2a^{3}-8ab^{2}$
+
+    $=2a\left(a^{2}-4b^{2}\right)$
+
+    $=2a(a+2b)(a-2b)$
+
+    故答案为：$2a(a+2b)(a-2b)$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 方差
+  module: statisticsAndProbability
   difficulty: 基础
   recommended_for:
   - L0
@@ -163,12 +349,30 @@ questions:
 - id: 11
   type: 填空
   score: 2
-  question: 写出一个大于且小于的整数________．
-  answer: ''
-  solution: ''
+  question: 写出一个大于$\sqrt{5}$且小于$\sqrt{13}$的整数________．
+  answer: '3'
+  solution: '∵$4<5<9$，
+
+    $\therefore 2<\sqrt{5}<3$，
+
+    $\because 9<13<16$，
+
+    $3<\sqrt{13}<4$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$一个大于$\sqrt{5}$且小于$\sqrt{13}$的整数是3，
+
+    故答案为：3；'
   knowledge_points:
   - 综合
-  module: geometryComprehensive
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -178,9 +382,19 @@ questions:
 - id: 12
   type: 填空
   score: 2
-  question: 在平面直角坐标系中，若点在反比例函数的图象上，则________(填“＞”，“＜”或“＝”)．
-  answer: ''
-  solution: ''
+  question: 在平面直角坐标系xOy中，若点$P(1,x_1),Q(4,x_2)$在反比例函数$y=\frac{k}{x}(k>0)$的图象上，则$y_{1}$________$y_{2}$(填“＞”，“＜”或“＝”)．
+  answer: ＞
+  solution: '解：∵$k > 0$，
+
+    ∴反比例函数$y=\frac{k}{x}(k>0)$的图象在一、三象限，
+
+    $Q4>1>0$，
+
+    ∴点$P(1,x_1),Q(4,x_2)$在第一象限，y随x的增大而减小，
+
+    $\therefore y_1 > y_2$，
+
+    故答案为：$\gt$．'
   knowledge_points:
   - 反比例函数
   - 坐标系
@@ -194,42 +408,142 @@ questions:
 - id: 13
   type: 填空
   score: 2
-  question: 如图，在中，平分于点E．若则________．
-  answer: ''
-  solution: ''
+  question: '如图，在$\triangle ABC$中，$\angle C=90^{\circ},BD$平分$\angle ABC,\ DE \perp AB$于点E．若$CD=3,\ AB=10.$则$S_{\triangle ABD} =$________．
+
+    [图]'
+  answer: '15'
+  solution: '解：∵$\angle C=90^{\circ},BD$平分$\angle ABC, DE \perp AB$，
+
+    $DE = CD = 3$，
+
+    ∴$\triangle ABD$的面积$\frac{1}{2}AB\cdot DE-\frac{1}{2}\times10\times3=15$，
+
+    故答案为：15．'
   knowledge_points:
   - 综合
-  module: geometryComprehensive
+  module: triangles
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-yanshan-er-fig12.png
 - id: 14
   type: 填空
   score: 2
-  question: 《周髀算经》中记载了“偃矩以望高”的方法．“矩”在古代指两条边呈直角的曲尺（即图中的）．“偃矩以望高”的意思是把“矩”仰立放，可测量物体的高度．小明同学依照此法测量学校操场边一棵树的高度，如图，点在同一水平线上，与相交于点D．测得，则树高________m．
-  answer: ''
-  solution: ''
+  question: '《周髀算经》中记载了“偃矩以望高”的方法．“矩”在古代指两条边呈直角的曲尺（即图中的ABC）．“偃矩以望高”的意思是把“矩”仰立放，可测量物体的高度．小明同学依照此法测量学校操场边一棵树的高度，如图，点$A, B, Q$在同一水平线上，$\angle ABC=\angle AQP=90^{\circ},\ AP$与BC相交于点D．测得$AB=1.2\mathrm{m},BD=0.5\mathrm{m},AQ=9\mathrm{m}$，则树高$PQ
+    =$________m．
+
+    [图]'
+  answer: $3.75$
+  solution: '解：∵$\angle ABC$和$LAQP$均为直角，
+
+    $\ldots BD \parallel PQ$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\triangle ABD \sim \triangle AQP$，
+
+    $\therefore \frac{AB}{AQ} = \frac{BD}{PQ}$，
+
+    $QAB=1.2m,BD=0.5m,AQ=9m$，
+
+    $.PQ=\frac{AQ\cdot BD}{AB}=\frac{9\times0.5}{1.2}=3.75(m)$，
+
+    故答案为：$3.75$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 相似三角形
+  module: triangles
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-yanshan-er-fig13.png
 - id: 15
   type: 填空
   score: 2
-  question: '某种兰花种子的发芽率与浸泡时间有关：浸泡时间不足4小时，发芽率约为；浸泡时间4到8小时，发芽率会逐渐上升到；浸泡时间8到12小时，发芽率会逐渐上升到．农科院记录了同一批次该种兰花种子的发芽情况，结果如下表：
+  question: '某种兰花种子的发芽率与浸泡时间有关：浸泡时间不足4小时，发芽率约为$40\%$；浸泡时间4到8小时，发芽率会逐渐上升到$65\%$；浸泡时间8到12小时，发芽率会逐渐上升到$90\%$．农科院记录了同一批次该种兰花种子的发芽情况，结果如下表：
+
+    种子数量n
+
+    100
+
+    200
+
+    500
+
+    800
+
+    1000
+
+    2000
+
+    发芽数量m
+
+    88
+
+    174
+
+    436
+
+    692
+
+    864
+
+    1728
+
+    发芽率$\frac{m}{n}$
+
+    0.88
+
+    0.87
+
+    0.872
+
+    0.865
+
+    0.864
+
+    0.864
 
     据此推测，这批兰花种子的浸泡时间是________(填“不足4小时”，“4到8小时”或“8到12小时”)．'
-  answer: ''
-  solution: ''
+  answer: 8到12小时
+  solution: '根据表格可知，这批兰花种子的发芽率接近$0.86$，
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$浸泡时间4到8小时，发芽率会逐渐上升到$65\%$；浸泡时间8到12小时，发芽率会逐渐上升到$90\%$．
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$这批兰花种子的浸泡时间是8到12小时．
+
+    故答案为：8到12小时．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 概率
+  - 频率
+  module: statisticsAndProbability
   difficulty: 中档
   recommended_for:
   - L1
@@ -238,15 +552,117 @@ questions:
 - id: 16
   type: 填空
   score: 2
-  question: '年月日，联合国教科文组织将每年的月日定为“国际数学日”，这个节日的昵称是“节”，是为了纪念中国南北朝时期杰出的数学家祖冲之而设立的节日．某校今年“节”举办了“数学素养”大赛，现有甲、乙、丙三位同学进入了决赛争夺冠军，决赛共分为四轮，规定： 每轮分别决出第一，二，三名（没有并列），对应名次的得分都分别为，，（，且，，均为正整数）． 选手最后得分为各轮得分之和，得分最高者为冠军．
+  question: '$2019$年$11$月$26$日，联合国教科文组织将每年的$3$月$14$日定为“国际数学日”，这个节日的昵称是“$\pi$节”，是为了纪念中国南北朝时期杰出的数学家祖冲之而设立的节日．某校今年“$\pi$节”举办了“数学素养”大赛，现有甲、乙、丙三位同学进入了决赛争夺冠军，决赛共分为四轮，规定：$1$每轮分别决出第一，二，三名（没有并列），对应名次的得分都分别为a，b，c（$a>b>c$，且a，b，c均为正整数）．$\textcircled{2}$选手最后得分为各轮得分之和，得分最高者为冠军．
 
     下表是三位选手在每轮比赛中的部分得分情况：
 
-    （1）每轮比赛第一名得分的值为_____；
+    第一轮
+
+    第二轮
+
+    第三轮
+
+    第四轮
+
+    最后得分
+
+    甲
+
+    a
+
+    a
+
+    $17$
+
+    乙
+
+    a
+
+    c
+
+    $8$
+
+    丙
+
+    b
+
+    $7$
+
+    （1）每轮比赛第一名的得分a的值为_____；
 
     （2）丙同学在第二轮比赛中，获得了第_____名．'
-  answer: ''
-  solution: ''
+  answer: ①.$5$；②.三．
+  solution: '（$1$）解：由题意可得：$4(a+b+c)=17+8+7$，
+
+    ∴$a+b+c=8$，
+
+    ∵a，b，c均为正整数，
+
+    若甲每轮比赛第一名得分a为$4$，则最后得分最高的为$4\times4=16<17$，
+
+    ∴$a > 4$，
+
+    又∵$a>b>c$，
+
+    ∴$b+c$最小取3，
+
+    ∴$4<a<6$，
+
+    ∴$a=5$，
+
+    故答案为：$5$；
+
+    （$2$）根据表格即甲、乙、丙得分可知：
+
+    第一轮
+
+    第二轮
+
+    第三轮
+
+    第四轮
+
+    最后得分
+
+    甲
+
+    a
+
+    b
+
+    a
+
+    a
+
+    $17$
+
+    乙
+
+    c
+
+    a
+
+    c
+
+    c
+
+    $8$
+
+    丙
+
+    b
+
+    c
+
+    b
+
+    b
+
+    $7$
+
+    ∴丙同学在第二轮比赛中，获得了第三名，
+
+    故答案为：三．'
   knowledge_points:
   - 综合
   module: geometryComprehensive
@@ -257,11 +673,46 @@ questions:
 - id: 17
   type: 解答
   score: 5
-  question: '计算：．
+  question: 计算：$(a-2024)^{2}+4\sin60^{\circ}+|-5|-\sqrt{12}$．
+  answer: '6'
+  solution: '解：$(a-2024)^{2}+4\sin60^{\circ}+|-5|-\sqrt{12}$
 
-    18 解不等式组：'
-  answer: ''
-  solution: ''
+    $=-1+4\cdot\frac{\sqrt{3}}{2}+5-2\sqrt{3}$
+
+    $=6$．'
+  knowledge_points:
+  - 三角函数
+  - 锐角三角函数
+  - 绝对值
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 18
+  type: 解答
+  score: 5
+  question: '解不等式组：$\left\{
+
+    \begin{array}{l}
+
+    2x - 1 \leq x \\
+
+    x + 2 > \dfrac{x}{3}
+
+    \end{array}
+
+    \right.$'
+  answer: $-3<x\leq1$
+  solution: '解：原不等式组为$\left\{\begin{array}{l}2x-1\leqslant x\odot1\\x+2>\frac{x}{3}\oplus2\end{array}\right.$，
+
+    解不等式①，得$x \leq 1$，
+
+    解不等式②，得$x > -3$，
+
+    ∴原不等式组的解集为$-3<x\leq1$．'
   knowledge_points:
   - 不等式
   - 不等式组
@@ -275,12 +726,22 @@ questions:
 - id: 19
   type: 解答
   score: 5
-  question: 已知，求代数式的值．
-  answer: ''
-  solution: ''
+  question: 已知$m+3n-4=0$，求代数式$\frac{2m+6n}{m^{2}+16mn+9n^{2}}$的值．
+  answer: $\frac{1}{2}$
+  solution: '解：$\frac{2m+6n}{m^{2}+16mn+9n^{2}}$
+
+    $\frac{2k(m+3n)}{(m+3n)^{2}}$
+
+    $\frac{2}{m+3n}$．
+
+    ∵$m+3n-4=0$，
+
+    ∴$m + 3n = 4$，
+
+    ∴原式$\frac{2}{4}=\frac{1}{2}$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 因式分解
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -290,47 +751,146 @@ questions:
 - id: 20
   type: 解答
   score: 5
-  question: 如图，小雯家客厅的电视背景墙是由10块相同的小长方形墙砖砌成的大长方形，已知电视背景墙的高度为，求每块小长方形墙砖的长和宽．
-  answer: ''
-  solution: ''
+  question: '如图，小雯家客厅的电视背景墙是由10块相同的小长方形墙砖砌成的大长方形，已知电视背景墙的高度为$1,5m$，求每块小长方形墙砖的长和宽．
+
+    [图]'
+  answer: 长为$1.2m$，宽为$0.3m$
+  solution: '解：设每块小长方形墙砖的长为xm，宽为ym．
+
+    由题意得$\begin{cases}
+
+    x + y = 1.5 \\
+
+    x + 4y = 2x
+
+    \end{cases}$，
+
+    解得$\left\{ \begin{array} { l } { x = 1 . 2 } \\ { y = 0 . 3 } \end{array} \right.$，
+
+    答：小长方形墙砖的长为$1.2m$，宽为$0.3m$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 二元一次方程组
+  module: equationsAndInequalities
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-yanshan-er-fig14.png
 - id: 21
   type: 解答
   score: 5
-  question: '如图，在中，，D为的中点，连接，过点A作，过点C作，与相交于点E．
+  question: '如图，在$\mathrm{Rt}_{\triangle ABC}$中，$\angle ACB=90^\circ$，D为AB的中点，连接CD，过点A作$AE \parallel DC$，过点C作$CE \parallel DA$，AE与CE相交于点E．
 
-    （1）求证：四边形是菱形；
+    [图]
 
-    （2）连接，若，，求的长．'
-  answer: ''
-  solution: ''
+    （1）求证：四边形$ADCE$是菱形；
+
+    （2）连接BE，若$AE = \sqrt{5}$，$BC = 4$，求BE的长．'
+  answer: （1）见解析（2）$\sqrt{37}$
+  solution: '【小问1详解】
+
+    证明：∵$AE \parallel DC$，$CE \parallel DA$，
+
+    ∴四边形$AECD$$[公式]$平行四边形，
+
+    ∵在$\mathrm{Rt}_{\triangle ABC}$中，$\angle ACB=90^\circ$，D为AB的中点，
+
+    ∴$CD = AD$，
+
+    ∴四边形$AECD$是菱形．
+
+    【小问2详解】
+
+    解：如图，作$EF \perp BC$，交BC的延长线于点F．
+
+    [图]
+
+    ∵菱形$ADCE$，
+
+    ∴$AD = AE = EC = \sqrt{5}$．
+
+    ∵D为AB的中点，
+
+    ∴$AB-2AD=2\sqrt{5}$．
+
+    在$Rt_{\triangle}ACB$中，$\angle ACB=90^\circ$，
+
+    $BC = 4$，$AB = 2\sqrt{5}$，
+
+    ∴$AC = \sqrt{AB^{2} - BC^{2}} = 2$．
+
+    ∵$CE \parallel DA$，
+
+    ∴$\angle ECF=\angle ABC$．
+
+    ∴$Rt\triangle ECF\cong Rt\triangle ABC$，
+
+    ∴$\frac{EF}{EC}$$=$$\frac{AC}{AB}$，
+
+    ∴$EF = 1$，
+
+    ∴$CF=\sqrt{CE^{2}-EF^{2}}=2$．
+
+    在$Rt\triangle EFB$中，$\angle EFB=90^{\circ}$，$BE = BC - CF = 6$，$EF = 1$，
+
+    ∴$BE=\sqrt{BF^{2}+EF^{2}}=\sqrt{37}$．'
   knowledge_points:
+  - 相似三角形
+  - 勾股定理
+  - 平行四边形
   - 菱形
-  module: quadrilaterals
+  module: triangles
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-yanshan-er-fig15.png
+  - figures/2024-yanshan-er-fig16.png
 - id: 22
   type: 解答
   score: 5
-  question: '在平面直角坐标系中，一次函数图象经过点，．
+  question: '在平面直角坐标系xOy中，一次函数$y=kx+b\ (k\neq0)$的图象经过点$A(3,5)$，$B(0,2)$．
 
     （1）求该一次函数的解析式；
 
-    （2）当时，对于的每一个值，函数()的值大于一次函数的值，直接写出m的取值范围．'
-  answer: ''
-  solution: ''
+    （2）当$x<3$时，对于x的每一个值，函数$y = mx + 3$($m \neq 0$)的值大于一次函数$y=kx+b\ (k\neq0)$的值，直接写出m的取值范围．'
+  answer: （1）$y=x+2$ （2）$\frac{2}{3}\leq m\leq 1$
+  solution: '【小问1详解】
+
+    解：把$A(3,5)$，$B(0,2)$代入$y=kx+b\,(k\neq0)$得：
+
+    $\left\{ \begin{array} { l } { 3 k + b = 5 } \\ { b = 2 } \end{array} \right.$，解得$\left\{
+
+    \begin{array}{l}
+
+    k = 1 \\
+
+    b = 2
+
+    \end{array}
+
+    \right.$，
+
+    ∴一次函数的解析式为$y=x+2$；
+
+    【小问2详解】
+
+    解：直线$y = mx + 3$绕着点$(0,3)$旋转，如图，当直线在$l_{1}$和$l_2$之间时，满足条件，
+
+    当$x=3$时，$y = 5$，代入$y = mx + 3$得：$m = \frac{2}{3}$；
+
+    当直线$y = mx + 3$与$y=x+2$平行时，$m = 1$；
+
+    ∴当$\frac{2}{3} \leq m \leq 1$时，对于$x<3$的每一个值，函数$y = mx + 3$($m \neq 0$)的值大于一次函数$y=kx+b\,(k\neq0)$的值．
+
+    [图]'
   knowledge_points:
   - 一次函数
+  - 旋转
   - 坐标系
   module: functions
   difficulty: 中档
@@ -338,24 +898,68 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-yanshan-er-fig17.png
 - id: 23
   type: 解答
   score: 6
   question: '某跳高集训队对16名队员进行了一次跳高测试，对测试成绩数据(单位：cm)进行整理、描述和分析，下面给出了部分信息．
 
-    a．测试成绩的频数分布直方图（数据分为四组：，，，）：
+    a．测试成绩的频数分布直方图（数据分为四组：$150 \leq x < 155$，$155 \leq x < 160$，$160 \leq x < 165$，$165 \leq x \leq 170$）：
 
-    b．测试成绩在这一组的是：162   163   163   164   164  164
+    [图]
+
+    b．测试成绩在$160 \leq x < 165$这一组的是：162
+
+    163   163   164   164  164
 
     c．测试成绩的平均数、中位数、众数：
 
+    平均数
+
+    中位数
+
+    众数
+
+    162
+
+    m
+
+    164
+
     （1）写出表中m的值；
 
-    （2）队员小锐的成绩是，他认为“高于测试成绩的平均数，所以我的成绩高于集训队一半队员的成绩”，他的说法      （填“正确”或“不正确”），理由是                  ；
+    （2）队员小锐的成绩是$163\mathrm{cm}$，他认为“$163\mathrm{cm}$高于测试成绩的平均数，所以我的成绩高于集训队一半队员的成绩”，他的说法（填“正确”或“不正确”），理由是；
 
-    （3）有两名请假的队员进行了补测，成绩分别为，．将这两名队员的成绩与原16名队员成绩并成一组新数据，记新数据的中位数为n，方差为，原数据的方差为，则m          n，            （填“”，“”或“”）．'
-  answer: ''
-  solution: ''
+    （3）有两名请假的队员进行了补测，成绩分别为$153cm$，$17\mathrm{cm}$．将这两名队员的成绩与原16名队员成绩并成一组新数据，记新数据的中位数为n，方差为$S_{18}^{2}$，原数据的方差为$S_{16}^{2}$，则mn，$S_{18}^{2}$$S_{16}^{2}$（填“$\gt$”，“$\gt$”或“$=$”）．'
+  answer: （1）$m=163.5$ （2）不正确，理由：平均数不能反映一组数据中居于中间位置的数，利用中位数进行判断比较合理．由于中位数是$163.5\mathrm{cm}$，小锐的成绩是$163\mathrm{cm}$，所以他的成绩低于集训队一半队员的成绩（答案不唯一） （3）$m = n$，$S_{18}^{2}$＞$S_{16}^{2}$
+  solution: '【小问1详解】
+
+    解：在测试成绩数据中居于中间的两个数为163，164，
+
+    ∴中位数$m=\frac{163+164}{2}=163.5$，
+
+    故答案为：$163.5$；
+
+    【小问2详解】
+
+    不正确，
+
+    理由：平均数不能反映一组数据中居于中间位置的数，利用中位数进行判断比较合理．由于中位数是$163.5\mathrm{cm}$，小锐的成绩是$163\mathrm{cm}$，所以他的成绩低于集训队一半队员的成绩；
+
+    【小问3详解】
+
+    解：∵$153<163<164<171$，
+
+    ∴中位数$n=163.5$，
+
+    故$m = n$；
+
+    又∵$153cm$，$17\mathrm{cm}$是极端值，与平均数$162\mathrm{cm}$偏差大，故波动性比原数的大，
+
+    ∴$S_{18}^{2}>S_{16}^{2}$，
+
+    故答案为：$=$，$\gt$．'
   knowledge_points:
   - 平均数
   - 中位数
@@ -366,58 +970,259 @@ questions:
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2024-yanshan-er-fig18.png
 - id: 24
   type: 解答
   score: 6
-  question: '如图，为四边形的外接圆，平分，于点E．
+  question: '如图，$\odot\odot$为四边形$ABCD$的外接圆，BD平分$\angle ABC$，$OC \perp BD$于点E．
 
-    （1）求证：；
+    [图]
 
-    （2）延长交于点F，连接，若，，求的长．'
-  answer: ''
-  solution: ''
+    （1）求证：$AD = BC$；
+
+    （2）延长CO交$\odot\odot$于点F，连接AF，若$AD = 5$，$\sin\angle CBD=\frac{3}{5}$，求AF的长．'
+  answer: （1）见解析（2）$\frac{7}{3}$
+  solution: '【小问1详解】
+
+    证明：∵BD平分$\angle ABC$，
+
+    ∴$\angle ABD = \angle CBD$，
+
+    ∴$\widehat{AD}=\widehat{CD}$，
+
+    ∵$OC \perp BD$，
+
+    $\therefore \widehat{BC}=\widehat{CD}$，
+
+    ∴$BC = AD$，
+
+    ∴$AD = BC$；
+
+    【小问2详解】
+
+    解：如图，连接AC，BF，
+
+    [图]
+
+    ∵CF是$\odot\odot$的直径，
+
+    ∴$\angle CBF=\angle CAF=90^{\circ}$，
+
+    ∵$OC \perp BD$，
+
+    ∴$BD = 2BE$，$\angle BEC = 90^\circ$，
+
+    在$Rt\triangle BEC$中，$BC = AD = 5,$$\sin \angle CBE = \frac{CE}{BC} = \frac{3}{5}$，
+
+    $\therefore CE = 3$，
+
+    $BE=\sqrt{BC^{2}-CE^{2}}=4$，
+
+    $BD = 2BE = 8$，
+
+    $\because \widehat{BC}=\widehat{AD}$，
+
+    $\therefore \widehat{AC} = \widehat{BD}$，
+
+    $AC = BD = 8$，
+
+    ∵$\angle BEC=\angle FBC=90^{\circ}$，$\angle ECB = \angle FCB$，
+
+    ∴$\triangle BEC \cong \triangle FBC$，
+
+    ∴$\frac{CE}{BC}$＝$\frac{BC}{CF}$，
+
+    $\therefore CF=\frac{BC^{2}}{CE}=\frac{25}{3}$，
+
+    在$Rt\triangle CAF$中，$\angle CAF=90^{\circ},CF=\frac{25}{3},AC=8$，
+
+    $\'
   knowledge_points:
-  - 综合
-  module: circles
+  - 圆周角
+  - 垂径定理
+  - 相似三角形
+  - 勾股定理
+  - 三角函数
+  module: triangles
   difficulty: 较难
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2024-yanshan-er-fig19.png
+  - figures/2024-yanshan-er-fig20.png
 - id: 25
   type: 解答
   score: 6
-  question: '下表是气象台某天发布的某地区气象信息，预报了次日0时至12时气温y(单位：)随着时间t(单位：时)的变化情况．
+  question: '下表是气象台某天发布的某地区气象信息，预报了次日0时至12时气温y(单位：$^\circ C$)随着时间t(单位：时)的变化情况．
 
-    气象台对数据进行分析后发现，次日0时至5时，y与t近似满足一次函数关系，5时至12时，y与t近似满足函数关系．
+    时间$t /$时
+
+    0
+
+    2
+
+    4
+
+    6
+
+    8
+
+    10
+
+    12
+
+    温度$y/^\circ\mathrm{C}$
+
+    6
+
+    1
+
+    $-4$
+
+    $-2$
+
+    4
+
+    6
+
+    4
+
+    气象台对数据进行分析后发现，次日0时至5时，y与t近似满足一次函数关系，5时至12时，y与t近似满足函数关系$y = -0.5x^2 + bx + c$．
 
     根据以上信息，补充完成以下内容：
 
-    （1）在平面直角坐标系中，补全次日0时至12时气温y与时间t的函数图象；
+    （1）在平面直角坐标系xOy中，补全次日0时至12时气温y与时间t的函数图象；
+
+    [图]
 
     （2）求出次日5时至12时y与t满足的函数关系式，并直接写出次日0时至12时的最高气温与最低气温；
 
-    （3）某种植物在气温以下持续时间超过小时，即遭到霜冻灾害，需采取防霜措施，则该植物次日           采取防霜措施(填“需要”或“不需要”)．'
-  answer: ''
-  solution: ''
+    （3）某种植物在气温$0^\circ\mathrm{C}$以下持续时间超过$3.5$小时，即遭到霜冻灾害，需采取防霜措施，则该植物次日采取防霜措施(填“需要”或“不需要”)．'
+  answer: （1）见解析 （2）最高气温为$6^\circ\mathrm{C}$，最低气温为$-6.5^\circ\mathrm{C}$ （3）需要
+  solution: '【小问1详解】
+
+    解：依题意描点连线，绘图如下：
+
+    [图]【小问2详解】
+
+    当$5\leq t\leq12$时，
+
+    依题意可知点$(10,6)$是此时抛物线的顶点，
+
+    设此时解析式为：$y=a(t-10)^{2}+6$
+
+    ∵5时至12时，y与t近似满足函数关系$y = -0.5x^2 + bx + c$．
+
+    ∴$a = -0.5$，
+
+    ∴此时解析式为：$y=-0.5(x-10)^{2}+6$，
+
+    令$t=5$，得：$y=-0.5(5-10)^{2}+6=-6.5$，
+
+    由图可知：最高气温为$6^\circ\mathrm{C}$，最低气温为$-6.5^\circ\mathrm{C}$，
+
+    【小问3详解】
+
+    当$5\leq t\leq12$时，y与t近似满足一次函数关系，
+
+    设此时解析式为：$y = kt + n$，
+
+    将点$(0,6)$，$(2,1)$代入得：$\begin{cases}
+
+    n = 6 \\
+
+    2k + n - 1
+
+    \end{cases}$，
+
+    解得：$\left\{
+
+    \begin{array}{l}
+
+    k = -\dfrac{5}{2} \\
+
+    b = 6
+
+    \end{array}
+
+    \right.$，
+
+    此时解析式为：$y=-\frac{5}{2}t+6$，
+
+    令$y=-\frac{5}{2}t+6=0$，解得：$t=\frac{12}{5}$，
+
+    当$5\leq t\leq12$时，
+
+    令$y=-0.5(x-10)^{2}+6$，解得：$t=10\pm2\sqrt{3}$，
+
+    ∴当$\frac{12}{5}<t<10-2\sqrt{3}$时，$y<0$，即气温在$0^\circ\mathrm{C}$以下，
+
+    ∴气温$0^\circ\mathrm{C}$以下持续时间为：$10-2\sqrt{3}-\frac{12}{5}=7.6-2\sqrt{3}$，
+
+    ∵$\sqrt{3}<2$，
+
+    ∴$7.6-2\sqrt{'
   knowledge_points:
   - 一次函数
+  - 二次函数
   - 坐标系
+  - 最值
   module: functions
   difficulty: 较难
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2024-yanshan-er-fig21.png
+  - figures/2024-yanshan-er-fig22.png
 - id: 26
   type: 解答
   score: 6
-  question: '在平面直角坐标系中，抛物线()的对称轴为．
+  question: '在平面直角坐标系xOy中，抛物线$y=ax^{2}+bx+c$($a \neq 0$)的对称轴为$x = t$．
 
-    （1）若，求t的值；
+    （1）若$3a+2b=0$，求t的值；
 
-    （2）已知点，，在该抛物线上．若，且，比较，，的大小，并说明理由．'
-  answer: ''
-  solution: ''
+    （2）已知点$(-1,\ y_{1})$，$(2,\ y_{2})$，$(3,\ y_{3})$在该抛物线上．若$a>c>0$，且$3a + 2b + c = 0$，比较$y_{1}$，$y_{2}$，$y_{3}$的大小，并说明理由．'
+  answer: （1）$t = \frac{3}{4}$ （2）$y_{2}$$\gt$$y_{1}$$\gt$$y_{3}$，理由见解析
+  solution: '【小问1详解】
+
+    ∵$3a+2b=0$，
+
+    ∴$b = -\frac{3a}{2}$，
+
+    ∴$t = -\frac{b}{2a} = \frac{3}{4}$，
+
+    即$t = \frac{3}{4}$．
+
+    【小问2详解】
+
+    ∵$3a + 2b + c = 0$，
+
+    ∴$b=-\frac{3a+c}{2}$，
+
+    ∴$t = \frac{b}{2a} + \frac{3a + c}{4a} - \frac{3}{4} + \frac{c}{4a}$．
+
+    ∵$a>c>0$，
+
+    ∴$0 < \frac{c}{4a} < \frac{3}{4}$，
+
+    ∴$\frac{3}{4}<t<1$．
+
+    ∵点$(-1,\ y_{1})$关于直线$x = t$的对称点的坐标是$(2t+1,\ y_1)$，
+
+    ∴$\frac{5}{2}<2t+1<3$．
+
+    ∴$t<2<2t+1<3$．
+
+    ∵$a > 0$，抛物线$y=ax^{2}+bx+c$开口向上，
+
+    ∴当$x\quad t$时，y随x增大而增大，
+
+    ∴$y_{2}$$\gt$$y_{1}$$\gt$$y_{3}$．'
   knowledge_points:
+  - 二次函数
   - 坐标系
   module: functions
   difficulty: 压轴
@@ -426,39 +1231,139 @@ questions:
 - id: 27
   type: 解答
   score: 7
-  question: '在中，，，M为的中点，D为线段上的动点，连接，将线段绕点C逆时针旋转得到线段，连接，．
+  question: '在$\triangle ABC$中，$\angle ACB=90^\circ$，$\angle B=30^{\circ}$，M为AB的中点，D为线段AB上的动点，连接CD，将线段CD绕点C逆时针旋转$60^\circ$得到线段CE，连接AE，CM．
 
-    （1）如图1，点D在线段上，求证：；
+    [图]
 
-    （2）如图2，点D在线段上，连接，取中点F，连接并延长交的延长线于点G，若，用等式表示线段的数量关系，并证明．'
-  answer: ''
-  solution: ''
+    （1）如图1，点D在线段AM上，求证：$AE = MD$；
+
+    （2）如图2，点D在线段BM上，连接DE，取DE的中点F，连接AF并延长交CD的延长线于点G，若$\angle G=\angle ACE$，用等式表示线段$AE, AF, FG$的数量关系，并证明．'
+  answer: （1）见解析（2）$FG = AE + AF$，证明见解析
+  solution: '【小问1详解】
+
+    证明：∵将线段CD绕点C逆时针旋转$60^\circ$得到线段CE，
+
+    $CD=CE,\angle ECD=60^{\circ}$，
+
+    $\angle ACB=90^{\circ},\angle B=30^{\circ}$，
+
+    $\angle BAC=60^\circ,AC=\frac{1}{2}AB$，
+
+    ∵M为AB的中点，
+
+    $\therefore AM = \frac{1}{2} AB$，
+
+    $\therefore AC = AM$，
+
+    $\therefore \triangle ACM$为等边三角形，
+
+    $\angle AOM=60^\circ,CA=CM$，
+
+    $\therefore \angle ECA = \angle ECD - \angle ACD = 60^\circ - \angle ACD$，
+
+    $\angle DCM = \angle ACM = \angle ACD = 60^\circ \quad \angle ACD$，
+
+    $\angle LCA = \angle DCM$，
+
+    $\therefore CE = CD$，$CA = CM$，
+
+    $\triangle ACE \cong \triangle CDM \ (SAS)$，
+
+    $\therefore AE = MD$；
+
+    【小问2详解】
+
+    $FG = AE + AF$，
+
+    证明：如图，在FG上截取$FH = AF$，连接DH，
+
+    [图]
+
+    ∵F是DE的中点，
+
+    $\therefore EF = DF$，
+
+    $\because AF, \angle AFE = \angle HFD,$
+
+    $\triangle EAF\cong\triangle DHF(SAS)$，
+
+    $AE=DH,\angle EAF=\angle FHD$，
+
+    $\therefore AE \parallel DH$，
+
+    $\therefore\tr'
   knowledge_points:
+  - 平行线
+  - 全等三角形
   - 旋转
   - 动点
-  module: geometryComprehensive
+  module: triangles
   difficulty: 压轴
   recommended_for:
   - L3
+  figures:
+  - figures/2024-yanshan-er-fig23.png
+  - figures/2024-yanshan-er-fig24.png
 - id: 28
   type: 解答
   score: 7
-  question: '在平面直角坐标系中，的半径为1．对于的弦和外一点C给出如下定义：若直线，都是的切线，则称点C是弦的“关联点”．
+  question: '在平面直角坐标系xOy中，$\odot\odot$的半径为1．对于$\odot\odot$的弦AB和$\odot\odot$外一点C给出如下定义：若直线CA，CB都是$\odot\odot$的切线，则称点C是弦AB的“关联点”．
 
-    （1）如图，点，，．
+    [图]
 
-    ① 在点，，中，弦的“关联点”是         ；
+    （1）如图，点$A(-1,0)$，$B_{1}\left(\frac{1}{2},\frac{\sqrt{3}}{2}\right)$，$B_{1}\left(-\frac{1}{2},-\frac{\sqrt{3}}{2}\right)$．
 
-    ② 若点C是弦的“关联点”，直接写出，的长．
+    ①在点$C_{1}(-1,1)$，$C_{2}\left(-1,\sqrt{3}\right)$，$C_{3}\left(0,\sqrt{3}\right)$中，弦$AB_{1}$的“关联点”是；
 
-    （2）已知直线与x轴，y轴分别交于点M，N，对于线段上一点T，存在的弦，使得点T是弦的“关联点”，记四边形的面积为S，当点T在线段上运动时，直接写出S的最小值和最大值，以及相应的长．'
-  answer: ''
-  solution: ''
+    ②若点C是弦$AB_{2}$的“关联点”，直接写出AC，OC的长．
+
+    （2）已知直线$y = -\sqrt{3}x + 2\sqrt{3}$与x轴，y轴分别交于点M，N，对于线段MN上一点T，存在$\odot\odot$的弦$\overline{PQ}$，使得点T是弦$\overline{PQ}$的“关联点”，记四边形$\mathrm{O} \mathrm{P} \mathrm{T} \mathrm{Q}$的面积为S，当点T在线段MN上运动时，直接写出S的最小值和最大值，以及相应的$\overline{PQ}$长．'
+  answer: （1）①$C_{2}$；②$AC = \frac{\sqrt{3}}{3}$，$OC = \frac{2\sqrt{3}}{3}$ （2）S的最小值为$\sqrt{2}$，$PQ = \frac{2\sqrt{6}}{3}$；S的最大值为$\sqrt{11}$，$PQ = \frac{\sqrt{33}}{3}$
+  solution: '【小问1详解】
+
+    ①∵点$C_{1}(-1,1)$，$C_{2}\left(-1,\sqrt{3}\right)$，$C_{3}\left(0,\sqrt{3}\right)$,点$A(-1,0)$，$B_{1}\left(\frac{1}{2},\frac{\sqrt{3}}{2}\right)$，
+
+    $\angle AOC_{3}=90^{\circ}$
+
+    ∴$\angle C_{3}AO\lt 90^{\circ}$，
+
+    ∴$C_{3}A$不可能是$\odot\odot$的切线，
+
+    故$C_{3}\left(0,\sqrt{3}\right)$不是弦$AB_{1}$的“关联点”，
+
+    设$M(-1,n)$，
+
+    根据题意，得$OM^{2}=OB^{2}+MB^{2}$，
+
+    ∴$1+n^{2}=1+\left(\frac{1}{2}+n\right)^{2}+\left(\frac{\sqrt{3}}{2}-n\right)^{2}$，
+
+    解得$n = \sqrt{3}$，
+
+    ∴$M\left(-1,\sqrt{3}\right)$．
+
+    故$C_{2}\left(-1,\sqrt{3}\right)$符合题意，$C_{1}(-1,1)$不符合题意，
+
+    故答案为：$C_{2}\left(-1,\sqrt{3}\right)$．
+
+    ②根据$A(-1,0)$，$AC_{2}\perp OA$，点C是弦$AB_{2}$的“关联点”，
+
+    ∴点C一定在直线$AC_{2}$上，设$C(-1,m)$，$B_{1}\left(-\frac{1}{2},-\frac{\sqrt{3}}{2}\right)$,
+
+    ∴$OC^{2}=OB^{2}+CB^{2}$，
+
+    ∴$1+m^{2}=1+\left(-\frac{1}{2}+1\right)^{2}+\left(\frac{\sqrt{3}}{2}+m\right)^{2}$'
   knowledge_points:
   - 切线
   - 弦
+  - 勾股定理
   - 坐标系
-  module: circles
+  - 最值
+  module: triangles
   difficulty: 压轴
   recommended_for:
   - L3
+  figures:
+  - figures/2024-yanshan-er-fig25.png
+  - figures/2024-yanshan-er-fig26.png
+  - figures/2024-yanshan-er-fig27.png
+  - figures/2024-yanshan-er-fig28.png

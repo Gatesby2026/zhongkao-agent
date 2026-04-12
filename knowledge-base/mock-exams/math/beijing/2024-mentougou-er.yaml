@@ -1,8 +1,8 @@
 # ============================================================
 # 2024年北京门头沟区中考数学二模试卷 — 逐题分析
 # ============================================================
-# 数据来源：knowledge-original/精品解析：2024年北京市门头沟区九年级中考二模数学试题（原卷版）.docx
-# 自动生成，部分数学公式可能显示不全（docx公式对象无法完整提取）
+# 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
+# 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
 # 满分：100分  时长：120分钟
 
 year: 2024
@@ -11,90 +11,25 @@ exam_type: 二模
 subject: 数学
 full_score: 100
 duration_minutes: 120
-total_questions: 33
+total_questions: 28
 structure: 8选择(16分) + 8填空(16分) + 12解答(68分)
 questions:
 - id: 1
   type: 选择
   score: 2
-  question: 本试卷共8页，共三道大题，28个小题．满分100分．考试时间120分钟．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 2
-  type: 选择
-  score: 2
-  question: 在试卷和答题卡上准确填写学校和姓名，并将条形码粘贴在答题卡相应位置处．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 3
-  type: 选择
-  score: 2
-  question: 试题答案一律填涂或书写在答题卡上，在试卷上作答无效．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 4
-  type: 选择
-  score: 2
-  question: 在答题卡上，选择题、作图题用2B铅笔作答，其它试题用黑色字迹签字笔作答．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 5
-  type: 选择
-  score: 2
-  question: 考试结束，将试卷、答题卡和草稿纸一并交回．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 1
-  type: 选择
-  score: 2
-  question: "某几何体的展开图是由大小形状相等的两个正方形、四个长宽不等的矩形组成，则该几何体是（    ）\nA. 正方体\tB. 长方体\tC. 四棱锥\tD. 三棱柱"
-  answer: ''
-  solution: ''
+  question: '某几何体的展开图是由大小形状相等的两个正方形、四个长宽不等的矩形组成，则该几何体是（
+
+    ）
+
+    A.正方体B.长方体C.四棱锥D.三棱柱'
+  answer: B
+  solution: '解：某几何体的展开图是由大小形状相等的两个正方形、四个长宽不等的矩形组成，如图，
+
+    [图]
+
+    ∴则该几何体是长方体；
+
+    故选B'
   knowledge_points:
   - 矩形
   - 正方形
@@ -105,15 +40,24 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-mentougou-er-fig02.png
 - id: 2
   type: 选择
   score: 2
-  question: "目前所知病毒中最小的是一级口蹄疫病毒，它属于微核糖核酸病毒科鼻病毒属，其最大颗粒直径为23纳米，即米，将化成科学计数法为（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '目前所知病毒中最小的是一级口蹄疫病毒，它属于微核糖核酸病毒科鼻病毒属，其最大颗粒直径为23纳米，即$0.000000023$米，将$0.000000023$化成科学计数法为（
+
+    ）
+
+    A.$2.3\times10^{-7}$B.$2.3\times10^{-8}$C.$2.3\times10^{-9}$D.$0.23\times10^{-19}$'
+  answer: B
+  solution: '解：$0.000000623=2.3\times10^{-6}$．
+
+    故选：B．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 科学记数法
+  - 绝对值
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -123,9 +67,23 @@ questions:
 - id: 3
   type: 选择
   score: 2
-  question: "下图是手机的一些手势密码图形，其中既是轴对称图形又是中心对称图形的是（    ）\nA. \tB.\nC. \tD."
-  answer: ''
-  solution: ''
+  question: '下图是手机的一些手势密码图形，其中既是轴对称图形又是中心对称图形的是（
+
+    ）
+
+    A.[图]B.[图]
+
+    C.[图]D.[图]'
+  answer: D
+  solution: '解：A．该图既不$[公式]$轴对称图形，也不是中心对称图形，故不符合题意；
+
+    B．该图是轴对称图形，不是中心对称图形，故不符合题意；
+
+    C．该图不是轴对称图形，是中心对称图形，故不符合题意；
+
+    D．该图既是轴对称图形，也是中心对称图形，故符合题意；
+
+    故选D．'
   knowledge_points:
   - 中心对称图形
   - 轴对称图形
@@ -137,12 +95,33 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-mentougou-er-fig03.png
+  - figures/2024-mentougou-er-fig04.png
+  - figures/2024-mentougou-er-fig05.png
+  - figures/2024-mentougou-er-fig06.png
 - id: 4
   type: 选择
   score: 2
-  question: "某个正多边形的一个内角是它的外角的2倍，则该正多边形是（    ）\nA. 正方形\tB. 正五边形\tC. 正六边形\tD. 正七边形"
-  answer: ''
-  solution: ''
+  question: '某个正多边形的一个内角是它的外角的2倍，则该正多边形是（
+
+    ）
+
+    A.正方形B.正五边形C.正六边形D.正七边形'
+  answer: C
+  solution: '解：设这个多边形的边数是n，
+
+    ∵一个内角是它的外角的2倍，
+
+    ∴该正多边形内角和是其外角和的2倍，
+
+    ∴$(n-2)\times180^{\circ}=2\times360^{\circ}$，
+
+    解得：$n = 6$，
+
+    即这个多边形是六边形．
+
+    故选：C．'
   knowledge_points:
   - 正方形
   module: triangles
@@ -155,9 +134,23 @@ questions:
 - id: 5
   type: 选择
   score: 2
-  question: "数轴上的三点A、B、C所表示的数分别为a、b、c且满足，，则原点在（    ）\nA. 点A左侧\tB. 点A点B之间（不含点A点B）\nC. 点B点C之间（不含点B点C）\tD. 点C右侧"
-  answer: ''
-  solution: ''
+  question: '数轴上的三点A、B、C所表示的数分别为a、b、c且满足$a+b<0$，$b\cdot c<0$，则原点在（
+
+    ）
+
+    [图]
+
+    A.点A左侧B.点A点B之间（不含点A点B）
+
+    C.点B点C之间（不含点B点C）D.点C右侧'
+  answer: C
+  solution: '解：由图可知，$a<b<c$，而$a+b<0$，$b\cdot c<0$，
+
+    ∴$a < b < 0 < c$，
+
+    ∴原点在点B点C之间；
+
+    故选C'
   knowledge_points:
   - 综合
   module: numbersAndExpressions
@@ -167,26 +160,54 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-mentougou-er-fig07.png
 - id: 6
   type: 选择
   score: 2
-  question: "如图，，平分，，的度数为（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '如图，$AB \parallel CD$，CE平分$\angle ACD$，$\angle1=70^\circ$，$\angle 2$的度数为（
+
+    ）
+
+    [图]
+
+    A.$30^\circ$B.$35^\circ$C.$45^\circ$D.$70^\circ$'
+  answer: B
+  solution: '∵$AB \parallel CD$，
+
+    ∴$\angle ACD=70^\circ$．
+
+    ∵CE平分$\angle ACD$，
+
+    ∴$\angle DCE=\frac{1}{2}\angle ACD=35^\circ$．
+
+    ∵$AB \parallel CD$，
+
+    ∴$\angle2-\angle DCE=35^{\circ}$．
+
+    故选：B．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 平行线
+  module: triangles
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-mentougou-er-fig08.png
 - id: 7
   type: 选择
   score: 2
-  question: "小明去商场购物，购买完后商家有一个抽奖答谢活动，有m张奖券，其中含奖项的奖券有n张，每名已购物的顾客只能抽取一次，小明抽之前有名顾客已经抽过奖券，中奖的有3人，则小明中奖的概率为（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '小明去商场购物，购买完后商家有一个抽奖答谢活动，有m张奖券，其中含奖项的奖券有n张，每名已购物的顾客只能抽取一次，小明抽之前有$10$名顾客已经抽过奖券，中奖的有3人，则小明中奖的概率为（
+
+    ）
+
+    A.$\frac{n}{m}$B.$\frac{n}{m-10}$C.$\frac{n-3}{m-10}$D.$\frac{n-3}{m}$'
+  answer: C
+  solution: '解：由题意知，小明中奖的概率为$\frac{n-3}{m-10}$，
+
+    故选：C．'
   knowledge_points:
   - 概率
   module: statisticsAndProbability
@@ -198,22 +219,44 @@ questions:
 - id: 8
   type: 选择
   score: 2
-  question: "如图所示，两个体积不等的圆柱形水杯，大小水杯口均朝上，现往大水杯中均匀注水，注水过程中小水杯始终在原来位置，设水面上升高度为h，注水时间为t，下列图象能正确反应注水高度随时间变化关系的是（    ）\nA \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '如图所示，两个体积不等的圆柱形水杯，大小水杯口均朝上，现往大水杯中均匀注水，注水过程中小水杯始终在原来位置，设水面上升高度为h，注水时间为t，下列图象能正确反应注水高度随时间变化关系的是（
+
+    ）
+
+    [图]
+
+    A.[图]B.[图]C.[图]D.[图]'
+  answer: C
+  solution: '解：开始往大水杯中均匀注水，h的值由0逐渐增大，当水漫过小水杯向小水杯注水，此时h的值保持不变，小烧杯注满后，水再次进入大水杯中直至到大水杯顶部时，h的再次增大，但变化比开始时变慢．
+
+    观察四个图象，选项C符合题意．
+
+    故选：C．'
   knowledge_points:
   - 综合
-  module: circles
+  module: functions
   difficulty: 较难
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2024-mentougou-er-fig09.png
+  - figures/2024-mentougou-er-fig10.png
+  - figures/2024-mentougou-er-fig11.png
+  - figures/2024-mentougou-er-fig12.png
+  - figures/2024-mentougou-er-fig13.png
 - id: 9
   type: 填空
   score: 2
-  question: 如果分式值为零，那么实数m的取值是______．
-  answer: ''
-  solution: ''
+  question: 如果分式$\frac{m+1}{m-1}$值为零，那么实数m的取值是______．
+  answer: $-1$
+  solution: '解：∵分式$\frac{m+1}{m-1}$值为零，
+
+    ∴$m+1=0$，
+
+    解得，$m = -1$，
+
+    故答案为：$-1$．'
   knowledge_points:
   - 综合
   module: numbersAndExpressions
@@ -226,26 +269,48 @@ questions:
 - id: 10
   type: 填空
   score: 2
-  question: 如图所示的网格是正方形网格，点，，是网格线交点，则______．
-  answer: ''
-  solution: ''
+  question: '如图所示的网格是正方形网格，点A，B，C是网格线交点，则$\sin A =$______．
+
+    [图]'
+  answer: $\frac{\sqrt{2}}{2}$
+  solution: '解：如图所示，连接BC，
+
+    [图]
+
+    ∴$AB = BC = \sqrt{1^{2} + 3^{2}} = \sqrt{10}, AC = \sqrt{2^{2} + 4^{2}} = 2\sqrt{5}$
+
+    ∴$AB^{2}+BC^{2}=AC^{2}$
+
+    ∴$\triangle ABC$是等腰直角三角形，
+
+    ∴$\sin A=\frac{BC}{AC}=\frac{\sqrt{2}}{2}$
+
+    故答案为：$\frac{\sqrt{2}}{2}$．'
   knowledge_points:
+  - 弦
+  - 勾股定理
   - 正方形
-  module: quadrilaterals
+  module: triangles
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-mentougou-er-fig14.png
+  - figures/2024-mentougou-er-fig15.png
 - id: 11
   type: 填空
   score: 2
-  question: 在实数范围内进行因式分解：______．
-  answer: ''
-  solution: ''
+  question: 在实数范围内进行因式分解：$mx^{2}-2m=$______．
+  answer: $m(x+\sqrt{2})(x-\sqrt{2})$
+  solution: '解：$mx^{2}-2m=m(x^{2}-2)=m(x+\sqrt{2})(x-\sqrt{2})$；
+
+    故答案为：$m\left(x+\sqrt{2}\right)\left(x-\sqrt{2}\right)$．'
   knowledge_points:
   - 因式分解
+  - 方差
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -256,26 +321,64 @@ questions:
 - id: 12
   type: 填空
   score: 2
-  question: 如图，是直径，弦于点，，如果则的半径长为______．
-  answer: ''
-  solution: ''
+  question: '如图，AB是$\odot\odot$的直径，弦$CD \perp AB$于点E，$AC = CD$，如果$AC = 2\sqrt{3}$则$\odot\odot$的半径长为______．
+
+    [图]'
+  answer: '2'
+  solution: '解：如图，连接AD，OC，
+
+    [图]
+
+    ∵AB是$\odot\odot$的直径，弦$CD \perp AB$，
+
+    ∴$CE = DE$，$AC = AD$，
+
+    ∵$AC = CD$，
+
+    ∴$AC = CD = AD$，
+
+    ∴$\triangle ABC$为等边三角形，
+
+    ∴$\angle ACD = 60^\circ$，$\angle CAE=90^{\circ}-60^{\circ}+30^{\circ}$，
+
+    ∴$CE=\frac{1}{2}AC=\sqrt{3}$，
+
+    ∵$OA = OC$，
+
+    ∴$\angle OCA = \angle OAC = 30^\circ$，
+
+    ∴$\angle OCE=60^{\circ}-30^{\circ}=30^{\circ}$，
+
+    ∴$CO = \frac{CE}{\cos 30^\circ} = \frac{\sqrt{3}}{\frac{\sqrt{3}}{2}} = 2$，
+
+    故答案为：$2$'
   knowledge_points:
+  - 垂径定理
   - 弦
-  module: circles
+  - 三角函数
+  - 锐角三角函数
+  module: triangles
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-mentougou-er-fig16.png
+  - figures/2024-mentougou-er-fig17.png
 - id: 13
   type: 填空
   score: 2
-  question: 某函数图象满足过点，且当时，y随x的增大而增大，写出一个满足条件的表达式______．
-  answer: ''
-  solution: ''
+  question: 某函数图象满足过点$(0,2)$，且当$x > 0$时，y随x的增大而增大，写出一个满足条件的表达式______．
+  answer: $y=x^{2}+2$（答案不唯一）
+  solution: '解：∵某函数图象满足过点$(0,2)$，且当$x > 0$时，y随x的增大而增大
+
+    ∴$y=x^{2}+2$
+
+    故答案为：$y=x^{2}+2$（答案不唯一）'
   knowledge_points:
-  - 综合
+  - 二次函数
   module: functions
   difficulty: 中档
   recommended_for:
@@ -285,23 +388,39 @@ questions:
 - id: 14
   type: 填空
   score: 2
-  question: 如图，在平面直角坐标系内，某图象上的点A、B为整数点，以点O为位似中心将该图像扩大为原的2倍，则点A的坐标为______．
-  answer: ''
-  solution: ''
+  question: '如图，在平面直角坐标系内，某图象上的点A、B为整数点，以点O为位似中心将该图像扩大为原的2倍，则点A的坐标为______．
+
+    [图]'
+  answer: $(-2,2)$或$(2,-2)$##$(2,-2)$或$(-2,2)$
+  solution: '解：由题意得：A的坐标为$(-1\times2,1\times2)$或$(-1)\times(-2.1)\times(-2)$，
+
+    ∴A的坐标为$(-2,2)$或$(2,-2)$，
+
+    故答案为：$(-2,2)$或$(2,-2)$．'
   knowledge_points:
   - 坐标系
-  module: geometryComprehensive
+  module: triangles
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-mentougou-er-fig18.png
 - id: 15
   type: 填空
   score: 2
-  question: 某校抽测了某班级的10名学生竞赛成绩（均为整数），从低到高排序如下：，，，，，，，，，，如果，，该组数据的中位数是85，则______．
-  answer: ''
-  solution: ''
+  question: 某校抽测了某班级的10名学生竞赛成绩（均为整数），从低到高排序如下：$x_1$，$x_2$，$x_{3}$，$x_{4}$，$x_5$，$x_{6}$，$x_{7}$，$x_8$，$x_9$，$x_{10}$，如果$x_{4}=83$，$x_7 = 86$，该组数据的中位数是85，则$x_5 =$______．
+  answer: 84或85
+  solution: '由已知，10个成绩从低到高排列，居中的两个成绩为$x_5$和$x_{6}$,且该组数据的中位数是85，
+
+    $\therefore \frac{x_{5}+x_{6}}{2}=85$
+
+    $\therefore x_{4}=83$，$x_7 = 86$，
+
+    $\therefore x_{5}=84$，$x_{6}=86$，或$x_{3}=85$，$x_6 = 85$，
+
+    故答案为：84或85．'
   knowledge_points:
   - 中位数
   module: statisticsAndProbability
@@ -314,8 +433,30 @@ questions:
   type: 填空
   score: 2
   question: “谁知盘中餐，粒粒皆辛苦”知农爱农，珍惜粮食，传承美德，从校园做起．为响应此号召学校举办“减少舌尖上的浪费”宣传活动，参加活动的共60人，其中有校领导，教师代表，七年级学生代表，八年级学生代表和九年级学生代表．已知校领导和教师代表的总人数是七年级学生代表和八年级学生代表总人数的四分之一，校领导和七年级学生代表的总人数是教师代表和八年级学生代表总人数的七倍，则参加这次活动的九年级学生代表有______人．
-  answer: ''
-  solution: ''
+  answer: '20'
+  solution: '解：设参加这次活动的校领导有x人，教师代表有y人，七年级学生代表有z人，则参加这次活动的八年级学生代表有$\left[4(x+y)-z\right]$人，九年级学生代表有$\left[60-5(x+y)\right]$人，
+
+    根据题意得：$x-z=7\left[4+4(x+y)-z\right]$，
+
+    整理得：$27x+35y=8z$，
+
+    ∴$27(x+y)=8(z-y)$．
+
+    ∵x，y，z均为正整数，且27和8互质，
+
+    ∴$x+y$是8的倍数，
+
+    又∵$60-5(x+y)>0$，
+
+    ∴$x + y < 12$，
+
+    ∴$x+y=8$，
+
+    ∴$60-5(x+y)=60-5\times8=20$（人），
+
+    ∴参加这次活动的九年级学生代表有20人．
+
+    故答案为：20．'
   knowledge_points:
   - 综合
   module: geometryComprehensive
@@ -326,12 +467,16 @@ questions:
 - id: 17
   type: 解答
   score: 5
-  question: （第17题，详见原卷）
-  answer: ''
-  solution: ''
+  question: 计算：$\sqrt{3}-2-\left(\pi+2021\right)^{0}+2\sin60^{\circ}+\left(\frac{1}{2}\right)^{-2}$．
+  answer: '5'
+  solution: '$\sqrt{3}-2-\left(\pi+2021\right)^{0}+2\sin60^{\circ}+\left(\frac{1}{2}\right)^{-2}$
+
+    $=2\sqrt{3}-1+\sqrt{3}+4$
+
+    $= 5$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 三角函数
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -341,9 +486,31 @@ questions:
 - id: 18
   type: 解答
   score: 5
-  question: （第18题，详见原卷）
-  answer: ''
-  solution: ''
+  question: 解分式方程$\frac{x}{x+1}-\frac{6}{x^{2}-1}=1$
+  answer: $x = -5$
+  solution: '解：$\frac{x}{x+1}-\frac{6}{x^{2}-1}=1$，
+
+    方程两边乘以$(x+1)(x-1)$得：$x(x-1)-6=(x+1)(x-1)$，
+
+    去括号：$x^2 - x - 6 = x - 1$，
+
+    移项：$x^{2}-x^{2}=-1+6$，
+
+    合并同类项：$-x = 5$，
+
+    系数化1：$x = -5$．
+
+    经检验：$x = -5$是原方程的解．
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$原方程的解是$x = -5$．'
   knowledge_points:
   - 分式方程
   module: numbersAndExpressions
@@ -356,12 +523,22 @@ questions:
 - id: 19
   type: 解答
   score: 5
-  question: 已知：，求的值．
-  answer: ''
-  solution: ''
+  question: 已知：$x-y=0$，求$\frac{x-2y}{x^{2}+2xy+y^{2}}\cdot(x+y)$的值．
+  answer: $\frac{x-2y}{x+y}$，$-\frac{1}{2}$
+  solution: '解：$\frac{x-2y}{x^{2}+2xy+y^{2}}\cdot(x+y)$
+
+    $=\frac{x-2y}{(x+y)^{2}}\cdot(x+y)$
+
+    $=\frac{x-2y}{x+y}$，
+
+    ∵$x-y=0$，
+
+    ∴$x = y$，
+
+    ∴原式$\frac{x-2x}{x+x}=-\frac{1}{2}$．'
   knowledge_points:
   - 综合
-  module: geometryComprehensive
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -371,28 +548,96 @@ questions:
 - id: 20
   type: 解答
   score: 5
-  question: 如图，小明在拼图时，发现8个一样的小长方形恰好可以拼成一个边长为22的正方形，但是中间留了个洞，恰好是边长为2的小正方形，求每个小长方形的长和宽．
-  answer: ''
-  solution: ''
+  question: '如图，小明在拼图时，发现8个一样的小长方形恰好可以拼成一个边长为22的正方形，但是中间留了个洞，恰好是边长为2的小正方形，求每个小长方形的长和宽．
+
+    [图]'
+  answer: 每个小长方形的长为10，宽为6
+  solution: '解：设小长方形的长为x，宽为y，根据题意可得
+
+    $\begin{cases}
+
+    x + 2y = 22 \\
+
+    2y - x = 2
+
+    \end{cases}$，
+
+    解得：$\left\{\begin{array}{l}x=10\\y=6\end{array}\right.$，
+
+    ∴每个小长方形的长为10，宽为6．'
   knowledge_points:
+  - 二元一次方程组
   - 正方形
-  module: quadrilaterals
+  module: equationsAndInequalities
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-mentougou-er-fig19.png
 - id: 21
   type: 解答
   score: 5
-  question: '已知：如图，在中，过点D作于E，点F在边上，，连接和．
+  question: '已知：如图，在$Y_{ABCD}$中，过点D作$DE \perp AB$于E，点F在边CD上，$DF=BE$，连接AF和BF．
 
-    （1）求证：四边形是矩形；
+    [图]
 
-    （2）如果平分，，，求的长．'
-  answer: ''
-  solution: ''
+    （1）求证：四边形$BFDE$$[公式]$矩形；
+
+    （2）如果AF平分$\angle DAB$，$BF = 4$，$\sin C = \frac{4}{5}$，求CD的长．'
+  answer: （1）见解析（2）8
+  solution: '【小问1详解】
+
+    ∵$Y_{ABCD}$，
+
+    ∴$AB \parallel CD$，
+
+    ∴$DF \parallel BE$，
+
+    ∵$DF=BE$，
+
+    ∴四边形$BFDE$为平行四边形，
+
+    ∵$DE \perp AB$，
+
+    $\angle DEB = 90^\circ$，
+
+    ∴四边形$BFDE$为矩形；
+
+    【小问2详解】
+
+    由（1）可得四边形$BFDE$为矩形，
+
+    ∴$\angle BFC = 90^\circ$，
+
+    在$Rt\triangle ABC$中，$BF = 4$，$\sin C=\frac{4}{5}=\frac{BF}{BC}$，
+
+    $\therefore BC = 5$，
+
+    由勾股定理得$FC = 3$，
+
+    ∵四边形$ABCD$是平行四边形，
+
+    ∴$AD = BC = 5$，
+
+    ∵AF平分$\angle DAB$，
+
+    ∴$\angle DAF = \angle FAB$.
+
+    又$\because AB \parallel CD$，
+
+    ∴$\angle DFA = \angle FAB$，
+
+    ∴$\angle DAF = \angle DPA = \angle FAB$，
+
+    $DF = AD = 5$，
+
+    $\therefore DC = DF + FC = 8$．'
   knowledge_points:
+  - 弦
+  - 勾股定理
+  - 平行四边形
   - 矩形
   module: quadrilaterals
   difficulty: 中档
@@ -400,20 +645,76 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-mentougou-er-fig20.png
 - id: 22
   type: 解答
   score: 5
-  question: '在平面直角坐标系中，反比例函数的图象过点．
+  question: '在平面直角坐标系xOy中，反比例函数$y=\frac{k}{x}(k\neq0)$的图象过点$A(1,1)$．
 
-    （1）求k值；
+    [图]
 
-    （2）一次函数的图象过，与的图象交于两点，两函数图象交点之间的部分组成的封闭图形称作图象“”，该图象内横纵坐标均为整数的点称为“区域点”（不含边界）；
+    （1）求k的值；
 
-    ①当一次函数图象过时，存在______个“区域点”；
+    （2）一次函数$y=ax+b(a\neq0)$的图象过$A(0,3)$，与$y=\frac{k}{x}(x>0)$的图象交于两点，两函数图象交点之间的部分组成的封闭图形称作图象“G”，该图象内横纵坐标均为整数的点称为“G区域点”（不含边界）；
 
-    ②如果“区域点”的个数为3个，画出示意图，直接写出a的取值范围．'
-  answer: ''
-  solution: ''
+    ①当一次函数图象过$(3,1)$时，存在______个“G区域点”；
+
+    ②如果“G区域点”的个数为3个，画出示意图，直接写出a的取值范围．'
+  answer: （1）$k = 1$ （2）①2个；②见解析，$-\frac{2}{3}<a\leq-\frac{1}{2}$
+  solution: '【小问1详解】
+
+    ∵反比例函数$y=\frac{k}{x}(k\neq0)$的图象过点$A(1,1)$，
+
+    ∴$k=1\times1=1$；
+
+    ∴k的值为1；
+
+    【小问2详解】
+
+    ①一次函数$y=ax+b(a\neq0)$的图象过$(0,3)$，$(3,1)$，
+
+    ∴$\begin{cases}
+
+    b = 3 \\
+
+    3k + b = 1
+
+    \end{cases}$，解得$\left\{
+
+    \begin{array}{l}
+
+    k = -\dfrac{2}{3} \\
+
+    b = 3
+
+    \end{array}
+
+    \right.$，
+
+    ∴直线l的解析式为$y=-\frac{2}{3}x+3$，
+
+    画出图形，如图所示，
+
+    [图]
+
+    区域G内的整点有$(1,2)$和$(2,1)$共两个；
+
+    故存在2个“G区域点”；
+
+    故答案为：2；
+
+    ②如图，直线l：$y=ax+3$过$(3,1)$时，$1=3a+3$，
+
+    解得$a = -\frac{2}{3}$，
+
+    [图]
+
+    直线l：$y=ax+3$过$(4,1)$时，$1=4a+3$，
+
+    解得$a = -\frac{1}{2}$，
+
+    观察图象可知：“G区域点”的个数为3个时，a的取值范围是$-\frac{2}{3}<a\leq-\frac{1}{2}$．'
   knowledge_points:
   - 一次函数
   - 反比例函数
@@ -424,6 +725,10 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-mentougou-er-fig21.png
+  - figures/2024-mentougou-er-fig22.png
+  - figures/2024-mentougou-er-fig23.png
 - id: 23
   type: 解答
   score: 6
@@ -431,15 +736,123 @@ questions:
 
     a．16名学生的身高：
 
-    b．16名学生的身高的平均数、中位数、众数：
+    153
+
+    153
+
+    157
+
+    158
+
+    159
+
+    160
+
+    160
+
+    161
+
+    164
+
+    164
+
+    164
+
+    164
+
+    167
+
+    169
+
+    169
+
+    169
+
+    b．16名学生$[公式]$身高的平均数、中位数、众数：
+
+    平均数
+
+    中位数
+
+    众数
+
+    161.94
+
+    m
+
+    n
 
     （1）写出表中m，n的值；
 
     （2）教练将学员分组进行PK赛，如果一组学员的身高的方差越小，则认为该舞台呈现效果越好，据此推断：下列两组学员中，舞台呈现效果更好的是______（填“A组”或“B组”）；
 
-    （3）该啦啦操队要选五名学生，已确定三名学员参赛，她们身高分别为：160，160，164，她们的身高的方差为．在选另外两名学员时，首先要求所选的两名学员与已确定的三名学员所组成的五名学员的身高的方差小于，其次要求所选的两名学员与已确定的三名学员所组成的五名学员的身高的平均数尽可能的大，则选出的另外两名学员的身高分别为______和______．'
-  answer: ''
-  solution: ''
+    A组学员的身高
+
+    157
+
+    158
+
+    159
+
+    160
+
+    161
+
+    B组学员的身高
+
+    161
+
+    164
+
+    164
+
+    164
+
+    167
+
+    （3）该啦啦操队要选五名学生，已确定三名学员参赛，她们的身高分别为：160，160，164，她们的身高的方差为$\frac{32}{9}$．在选另外两名学员时，首先要求所选的两名学员与已确定的三名学员所组成的五名学员的身高的方差小于$\frac{32}{9}$，其次要求所选的两名学员与已确定的三名学员所组成的五名学员的身高的平均数尽可能的大，则选出的另外两名学员的身高分别为______和______．'
+  answer: （1）$m = 162.5$，$n = 164$ （2）A组（3）161，164
+  solution: '【小问1详解】
+
+    解：将这组数据按照从小到大的顺序排列为：$153$，$153$，$157$，$158$，$159$，$160$，$160$，$161$，$164$，$164$，$164$，$164$，$167$，$169$，$169$，$169$，
+
+    出现次数最多的数是$164$，出现了4次，即众数$n = 164$，
+
+    16个数据中的第8和第9个数据分别是$161$，$164$，
+
+    ∴中位数$m=\frac{161+164}{2}=162.5$，
+
+    ∴$m = 166$，$n = 165$；
+
+    【小问2详解】
+
+    解：A组身高的平均数为$\frac{1}{5}(57+58+59+60+61)=159$，
+
+    A组身高的方差为$\frac{1}{5}\left((157-159)^2+(158-159)^2+(159-159)^2+(160-159)^2+(161-159)^2\right)-2$
+
+    B组身高的平均数为$\frac{1}{5}(61+164+164+164+67)=164$，
+
+    B组身高的方差为$\frac{1}{5}\left[(161-164)^{2}+3(164-164)^{2}+(167-164)^{2}\right]=3.6$，
+
+    ∵$3.6>2$
+
+    ∴舞台呈现效果更好的是A组，
+
+    故答案为：A组；
+
+    【小问3详解】
+
+    解：160，160，164的平均数为$\frac{1}{3}(60+60+64)=161\frac{1}{3}$
+
+    ∵所选的两名学生与已确定的三名学生所组成的五名学生的身高的方差小于$\frac{32}{9}$，
+
+    ∴数据的差别较小，数据才稳定，
+
+    可供选择的有：$161$，$164$，
+
+    且选择$161$，$164$时，平均数会增大，
+
+    故答案为：$161$，$164$．'
   knowledge_points:
   - 平均数
   - 中位数
@@ -453,34 +866,198 @@ questions:
 - id: 24
   type: 解答
   score: 6
-  question: '如图，是的直径，切于点A，连接交于点D，，连接并延长交于点E，连接．
+  question: '如图，AB是$\odot\odot$的直径，AC切$\odot\odot$于点A，连接BC交$\odot\odot$于点D，$AC = CF$，连接AF并延长交$\odot\odot$于点E，连接AD．
 
-    （1）求证：；
+    [图]
 
-    （2）若，，求的值．'
-  answer: ''
-  solution: ''
+    （1）求证：$\angle EBD=\angle EAB$；
+
+    （2）若$AB = 4$，$CF = 3$，求AF的值．'
+  answer: （1）见解析（2）$\frac{6\sqrt{5}}{5}$
+  solution: '【小问1详解】
+
+    证明：∵AB是$\odot\odot$的直径，
+
+    $\angle AEB = 90^\circ$，
+
+    $\angle EBD + \angle EFB = 90^\circ$，
+
+    $\because AC$切$\odot\odot$于点A，
+
+    $\angle BAC = 90^\circ$，
+
+    $\angle CAF + \angle EAB = 90^\circ$
+
+    $\because AC = CF$，
+
+    $\angle CAF = \angle CFA$，
+
+    $\angle EFB = \angle CFA$，
+
+    $\angle EBD = \angle EAB$
+
+    【小问2详解】
+
+    解：连接AD，
+
+    [图]
+
+    $\because AB = 4$，$AC = 3$，
+
+    ∴在$Rt\triangle ABC$中，$BC = \sqrt{AB^{2} + AC^{2}} = \sqrt{3^{2} + 4^{2}} = 5$，
+
+    $\therefore AB$是$\odot\odot$的直径，
+
+    $\angle ADB = 90^\circ$，
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$由（1）可得$\angle CAB=90^\circ$，
+
+    $S_{\triangle CAB} = \frac{1}{2} CA \cdot AB = \frac{1}{2} CB \cdot AD$
+
+    $\ldots CA \cdot AB = CB \cdot AD$
+
+    ∴$3\times4=5AD$
+
+    $\therefore AD = \frac{12}{5}$，
+
+    ∵$\angle C=\angle C$，$\angle CAD=\angle CDA=90^{\circ}$，
+
+    ∴$\triangle '
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 圆周角
+  - 切线
+  - 相似三角形
+  - 勾股定理
+  module: triangles
   difficulty: 较难
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2024-mentougou-er-fig24.png
+  - figures/2024-mentougou-er-fig25.png
 - id: 25
   type: 解答
   score: 6
-  question: '医学院某药物研究所研发了甲，乙两种新药，据监测，如果成人按规定的剂量服用，服药后的时间x（小时），服用甲种药物后每毫升血液中的含药量（微克），服用乙种药物后每毫升血液中的含药量（微克），记录部分实验数据如下：
+  question: '医学院某药物研究所研发了甲，乙两种新药，据监测，如果成人按规定的剂量服用，服药后的时间x（小时），服用甲种药物后每毫升血液中的含药量$y_{1}$（微克），服用乙种药物后每毫升血液中的含药量$y_{2}$（微克），记录部分实验数据如下：
+
+    x
+
+    0
+
+    0.20
+
+    0.40
+
+    1.00
+
+    1.53
+
+    2.26
+
+    2.52
+
+    3.38
+
+    4.53
+
+    5.44
+
+    …
+
+    $y_{1}$
+
+    0
+
+    0.68
+
+    1.36
+
+    3.40
+
+    3.21
+
+    2.77
+
+    2.65
+
+    2.31
+
+    1.92
+
+    1.65
+
+    …
+
+    $y_{2}$
+
+    0
+
+    0.18
+
+    0.36
+
+    9.00
+
+    5.03
+
+    2.26
+
+    1.70
+
+    0.66
+
+    0.19
+
+    0.07
+
+    …
 
     对以上数据进行分析，补充完成以下内容．
 
-    （1）可以用函数刻画与x，与x之间的关系，在同一平面直角坐标系xOy中，已经画出与x的函数图象，请画出与x的函数图象；
+    （1）可以用函数刻画$y_{1}$与x，$y_{2}$与x之间的关系，在同一平面直角坐标系xOy中，已经画出$y_{1}$与x的函数图象，请画出$y_{2}$与x的函数图象；
+
+    [图]
 
     （2）如果两位病人在同一时刻分别服用这两种药物，服药1小时后两位病人每毫升血液中含药量相差______微克；两位病人大约服药后______小时每毫升血液中含药量相等；（结果保留小数点后一位）
 
     （3）据测定，每毫升血液中含药量不少于2微克时对治疗疾病有效，则两种药物中______种药的药效持续时间较长，药效大约相差______小时（结果保留小数点后一位）．'
-  answer: ''
-  solution: ''
+  answer: （1）见解析（2）5.6；0.5或2.1 （3）甲，1.5
+  solution: '【小问1详解】
+
+    解：如图，根据对应x和$y_{2}$的值在图上描点，然后用光滑的曲线连接即可．
+
+    [图]【小问2详解】
+
+    解∶当$x = 1$时，在图象时找到$y_{1}=3.4$，$y_{2}=9$，
+
+    ∴$y_{2}-x_{1}=9-3.4=5.6$，
+
+    当每毫升血液中含药量相等时，即$y_{1}=y_{2}$，在图象上找到$y_{1}$、$y_{2}$交点所对应的x即为两位病人大约服药时间，即x的值约为$0.5$或$2.1$，
+
+    故答案为：5.6；0.5或2.1；
+
+    【小问3详解】
+
+    解：当$y=2$时，$y_{1}$所对应的x的值约为0.7，4，
+
+    ∴甲种药物持续的时间为$4-0.7=3.3$
+
+    同理乙种药物持续的时间为$2.5-0.7=1.8$，
+
+    ∵$3.3-1.8=1.5$，
+
+    ∴每毫升血液中含药量不少于2微克时对治疗疾病有效，则两种药物中甲种药的药效持续时间较长，药效大约相差1.5小时，
+
+    故答案为：甲，1.5．'
   knowledge_points:
   - 坐标系
   module: functions
@@ -488,66 +1065,257 @@ questions:
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2024-mentougou-er-fig26.png
+  - figures/2024-mentougou-er-fig27.png
 - id: 26
   type: 解答
   score: 6
-  question: '在平面直角坐标系xOy中，抛物线的经过点，将点A向左平移4个单位长度，得到点B，点B在抛物线上．
+  question: '在平面直角坐标系xOy中，抛物线$y=ax^{2}+bx+c$的经过点$A\left(0,\frac{1}{a}\right)$，将点A向左平移4个单位长度，得到点B，点B在抛物线上．
+
+    [图]
 
     （1）求抛物线的对称轴；
 
-    （2）点B的纵坐标为时，求a的值；
+    （2）点B的纵坐标为$-3$时，求a的值；
 
-    （3）已知点，．若抛物线与线段恰有一个公共点，结合函数图象，求a的取值范围．'
-  answer: ''
-  solution: ''
+    （3）已知点$M\left(-1,\frac{1}{a}\right)$，$N(-4,-3)$．若抛物线与线段MN恰有一个公共点，结合函数图象，求a的取值范围．'
+  answer: （1）$x = -2$ （2）$a = -\frac{1}{3}$ （3）$a-\frac{1}{3}$且$a \neq 0$
+  solution: '【小问1详解】
+
+    解：∵将抛物线上点$A\left(0,\frac{1}{a}\right)$向左平移4个单位长度，得到点B，
+
+    $:\cdots B\left(-4,\frac{1}{a}\right)$，
+
+    ∵点$B\left(-4,\frac{1}{a}\right)$在抛物线上，
+
+    ∴抛物线对称轴为：$x=\frac{-4+0}{2}=-2$．
+
+    【小问2详解】
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$点$B\left(-4,\frac{1}{a}\right)$的纵坐标为$-3$，
+
+    $\therefore \frac{1}{a}=-3$，
+
+    $\therefore a = -\frac{1}{3}$．
+
+    【小问3详解】
+
+    由题意得：抛物线的对称轴为直线$x = -\frac{b}{2a} = -2$，
+
+    ∵$A\left(0,\frac{1}{a}\right)$，$B\left(-4,\frac{1}{a}\right)$，$M\left(-1,\frac{1}{a}\right)$三个点的纵坐标都为$\frac{1}{a}$，
+
+    ∴可知点$M\left(-1,\frac{1}{a}\right)$必定在抛物线“U型”的内部，
+
+    又∵$N(-4,-3)$，$B\left(-4,\frac{1}{a}\right)$的横坐标相同，
+
+    ∴点$N(-4,-3)$在点$B\left(-4,\frac{1}{a}\right)$的正上方或者正下方，
+
+    分情况讨论：
+
+    当$a > 0$时，$\frac{1}{a}>0$，此时点$B\left(-4,\frac{1}{a}\right)$在第二象限，
+
+    ∵$N(-4,-3)$在第三象限，点$M\left(-1,\frac{1}{a}\right)$必'
   knowledge_points:
+  - 二次函数
   - 平移
   - 坐标系
   module: functions
   difficulty: 压轴
   recommended_for:
   - L3
+  figures:
+  - figures/2024-mentougou-er-fig28.png
+  - figures/2024-mentougou-er-fig29.png
+  - figures/2024-mentougou-er-fig30.png
 - id: 27
   type: 解答
   score: 7
-  question: '在中，，，于点D，点E，F分别在上，且，交于点N．
+  question: '在$\triangle ABC$中，$AB = AC$，$\angle BAC = 45^\circ$，$CD \perp AB$于点D，点E，F分别在$AC, BC$上，且$\angle CBF=\frac{1}{2}\angle BAC$，$EF,\ CD$交于点N．
 
-    （1）如图1，当点E与点A重合时，______；
+    [图]
 
-    （2）如图2，当点E在边上时，
+    （1）如图1，当点E与点A重合时，$\frac{EN}{CF} =$______；
+
+    （2）如图2，当点E在AC边上时，
 
     ①依题意补全图2；
 
-    ②的值是否发生变化，请说明理由．'
-  answer: ''
-  solution: ''
+    ②$\frac{EN}{CF}$的值是否发生变化，请说明理由．'
+  answer: （1）2（2）①见解析；②$\frac{EN}{CF}$的值不变，理由见解析
+  solution: '【小问1详解】
+
+    解：∵$AB = AC$，$\angle CBF=\frac{1}{2}\angle BAC$，
+
+    ∴$AF\perp BC,\ BC=2CF$，
+
+    ∵$\angle BAC = 45^\circ$，$CD \perp AB$，
+
+    ∴$\triangle ADC$是等腰直角三角形，$\angle ADC=\angle BDC=90^\circ$，
+
+    ∴$AD = CD$，
+
+    ∵$\angle ADN=\angle CFN,\ \angle AND=\angle CNF$，
+
+    ∴$\angle DAN=\angle DCB$，
+
+    又∵$\angle BDC = \angle NDA = 90^\circ$，
+
+    ∴$\triangle BDC\cong\triangle NDA(ASA)$，
+
+    ∴$AN = BC = 2CF$，即$EN = 2CF$，
+
+    ∴$\frac{EN}{CF}=2$，
+
+    故答案为：2；
+
+    【小问2详解】
+
+    解：①补全图形如下所示：
+
+    [图]
+
+    ②$\frac{EN}{CF}$的值不变，理由如下；
+
+    如图所示，过点E作$EM\perp CD$，分别交$CD, BC$与G、M，
+
+    ∵$AB = AC$，
+
+    ∴$\angle B=\angle ACB$，
+
+    ∵$AB, CD, EM \perp CD$，
+
+    ∴$AB\parallel EM$，
+
+    ∴$\angle BAC=\angle CEM$，$\angle EMC=\angle ABC=\angle ECM$，
+
+    ∴$EM = EC$，
+
+    ∵$\angle CBF=\frac{1}{2}\angle BAC$，
+
+    ∴$\angle CEF=\frac{1}{2}\angle CEM$，
+
+    同（1）可证明$EN = 2CF$，
+
+    ∴$\frac{EN}{CF}=2$．
+
+    [图]'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 全等三角形
+  module: triangles
   difficulty: 压轴
   recommended_for:
   - L3
+  figures:
+  - figures/2024-mentougou-er-fig31.png
+  - figures/2024-mentougou-er-fig32.png
+  - figures/2024-mentougou-er-fig33.png
 - id: 28
   type: 解答
   score: 7
-  question: '对于关于的一次函数，我们称函数为一次函数的级衍生函数（其中为常数）．
+  question: '对于关于x的一次函数$y=kx+b\,(k\neq0)$，我们称函数$y(n)=\left\{\begin{array}{l} kx+b(x<n), \\ -kx-b(x>n). \end{array}\right.$为一次函数$y=kx+b\,(k\neq0)$的n级衍生函数（其中n为常数）．
 
-    例如，的级衍生函数为：当时，；当时，．
+    [图][图]
 
-    （1）如果的级衍生函数为，
+    例如，$y=-4x+1$的$3$级衍生函数为：当$x<3$时，$y.\left\{x\right\}=-4x+1$；当$x\ 3$时，$y\left\{x\right\}=4x-1$．
 
-    ①当时，______；
+    （1）如果$y=x+1$的$4$级衍生函数为$y\{4\}$，
 
-    ②当时，______．
+    ①当$x=3$时，$y\{4\} =$______；
 
-    （2）如果的级衍生函数为，求双曲线与的图像的交点坐标；
+    ②当$y\{4\}=-\frac{1}{2}$时，$x =$______．
 
-    （3）如果以点为圆心，为半径的与的级衍生函数的图像有交点，直接写出的取值范围．'
-  answer: ''
-  solution: ''
+    （2）如果$y=2x+1$的$-2$级衍生函数为$y\{-2\}$，求双曲线$y = -\frac{3}{x}$与$y\{-2\}$的图像的交点坐标；
+
+    （3）如果以点$A(0,t)$为圆心，$2$为半径的$\odot A$与$y=-x+2$的$-1$级衍生函数$y\{-1\}$的图像有交点，直接写出t的取值范围．'
+  answer: （1）①4；②$-\frac{3}{2}$ （2）$\left(-\frac{3}{2},2\right)$和$(1,-3)$ （3）$-3-\sqrt{3}\leq s\leq 2\sqrt{2}-2$或$3-\sqrt{5}<1<2\sqrt{2}+2$
+  solution: '【小问1详解】
+
+    解：∵$y=x+1$的$4$级衍生函数为$y\{4\}$，
+
+    ∴$y(4)=\left\{\begin{array}{l}x+1(x<4),\\-x-1(x\geq4).\end{array}\right.$，
+
+    ①当$x=3$时，$x\cdot\{4\}=3+1=4$，
+
+    故答案为：$4$；
+
+    ②当$y\{4\}=-\frac{1}{2}$时，
+
+    当$x<4$时，得：$x + 1 = -\frac{1}{2}$，解得：$x = -\frac{3}{2}$，
+
+    当$x\ 4$时，得：$-x-1=-\frac{1}{2}$，解得：$x = -\frac{1}{2}$（舍去），
+
+    故答案为：$-\frac{3}{2}$；
+
+    【小问2详解】
+
+    ∵$y=2x+1$的$-2$级衍生函数为$y\{-2\}$，
+
+    ∴$y(-2)=\begin{cases}2x+1(x<-2),\\-2x-1(x\geq-2).\end{cases}$
+
+    当$x<-2$时，
+
+    联立方程组$\left\{
+
+    \begin{array}{l}
+
+    y = 2x + 1 \\
+
+    y = -\dfrac{3}{x}
+
+    \end{array}
+
+    \right.$，
+
+    ∴$2x^{2}+x+3=0$，
+
+    ∵$\Delta=(-1)^{2}-4\times2\times3=-23<0$，
+
+    ∴方程无解，即方程组无解，
+
+    此时两个函数图像之间没有交点；
+
+    当$x^{-2}$时，
+
+    联立方程组$\left\{
+
+    \begin{array}{l}
+
+    y = -2x - 1 \\
+
+    y = \dfrac{3}{x}
+
+    \end{array}
+
+    \right.$，
+
+    解得：$\begin{cases}
+
+    x = -\dfrac{3}{2} \\
+
+    y = 2
+
+    \end{cases}$或$\left\{\begin{array}{l}x=1\\y=-3\end{array}\r'
   knowledge_points:
   - 一次函数
+  - 反比例函数
+  - 切线
   module: functions
   difficulty: 压轴
   recommended_for:
   - L3
+  figures:
+  - figures/2024-mentougou-er-fig34.png
+  - figures/2024-mentougou-er-fig35.png
+  - figures/2024-mentougou-er-fig36.png
+  - figures/2024-mentougou-er-fig37.png
+  - figures/2024-mentougou-er-fig38.png
+  - figures/2024-mentougou-er-fig39.png

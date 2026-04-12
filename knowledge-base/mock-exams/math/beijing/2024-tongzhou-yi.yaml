@@ -1,8 +1,8 @@
 # ============================================================
 # 2024年北京通州区中考数学一模试卷 — 逐题分析
 # ============================================================
-# 数据来源：knowledge-original/精品解析：2024年北京市通州区九年级中考一模数学试题（解析版）.docx
-# 自动生成，部分数学公式可能显示不全（docx公式对象无法完整提取）
+# 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
+# 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
 # 满分：100分  时长：120分钟
 
 year: 2024
@@ -11,88 +11,17 @@ exam_type: 一模
 subject: 数学
 full_score: 100
 duration_minutes: 120
-total_questions: 33
+total_questions: 28
 structure: 8选择(16分) + 8填空(16分) + 12解答(68分)
 questions:
 - id: 1
   type: 选择
   score: 2
-  question: 本试卷共8页，共三道大题，28个小题，满分为100分，考试时间为120分钟．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 2
-  type: 选择
-  score: 2
-  question: 请在试卷和答题卡上准确填写学校名称、班级、姓名．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 3
-  type: 选择
-  score: 2
-  question: 试题答案一律填涂或书写在答题卡上，在试卷上作答无效．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 4
-  type: 选择
-  score: 2
-  question: 在答题卡上，选择题、作图题用2B铅笔作答，其他试题用黑色字迹签字笔作答．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 5
-  type: 选择
-  score: 2
-  question: 考试结束后，请将答题卡交回．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 1
-  type: 选择
-  score: 2
-  question: "如图是某几何体的三视图，该几何体是（   ）\nA. 三棱柱\tB. 三棱锥\tC. 长方体\tD. 圆柱"
+  question: '如图是某几何体的三视图，该几何体是（）
+
+    [图]
+
+    A.三棱柱B.三棱锥C.长方体D.圆柱'
   answer: A
   solution: '解：由主视图和左视图为长方形可知，这个几何体是柱体，
 
@@ -108,13 +37,16 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-tongzhou-yi-fig01.png
 - id: 2
   type: 选择
   score: 2
-  question: "2024年政府工作报告中提出“大力推进现代化产业体系建设，加快发展新质生产力”．北京正在建设国际科技创新中心，人工智能产业是北京的主导产业之一．目前，人工智能相关企业数量约2200家，全国40％人工智能企业聚集于此．2023年，北京在人工智能领域融资总额约223亿元，约占全国四分之一．数据22300000000用科学记数法表示应为（   ）\nA. \tB. \tC. \t\
-    D."
+  question: '2024年政府工作报告中提出“大力推进现代化产业体系建设，加快发展新质生产力”．北京正在建设国际科技创新中心，人工智能产业是北京的主导产业之一．目前，人工智能相关企业数量约2200家，全国40％人工智能企业聚集于此．2023年，北京在人工智能领域融资总额约223亿元，约占全国四分之一．数据22300000000用科学记数法表示应为（）
+
+    A.$0.223\times10^{11}$B.$2.23\times10^{10}$C.$22.3\times10^{9}$D.$223\times10^{8}$'
   answer: B
-  solution: '解：；
+  solution: '解：$22300000000=2.23\times10^{10}$；
 
     故选：B．'
   knowledge_points:
@@ -129,13 +61,17 @@ questions:
 - id: 3
   type: 选择
   score: 2
-  question: "如图，已知，点E在线段AD上（不与点A，点D重合），连接CE．若∠C＝20°，∠AEC＝50°，则∠A＝（    ）\nA. 10°\tB. 20°\tC. 30°\tD. 40°"
+  question: '如图，已知$AB \parallel CD$，点E在线段AD上（不与点A，点D重合），连接CE．若∠C＝20°，∠AEC＝50°，则∠A＝（）
+
+    [图]
+
+    A.10°B.20°C.30°D.40°'
   answer: C
   solution: '解：∵∠C+∠D＝∠AEC，
 
     ∴∠D=∠AEC-∠C＝50°-20°=30°，
 
-    ∵，
+    ∵$AB \parallel CD$，
 
     ∴∠A＝∠D=30°，
 
@@ -149,16 +85,20 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-tongzhou-yi-fig02.png
 - id: 4
   type: 选择
   score: 2
-  question: "已知关于x的方程有两个不相等的实数根，则n的取值范围是（   ）\nA. \tB. \tC. \tD."
+  question: '已知关于x的方程$x^{2}-4x+n=0$有两个不相等的实数根，则n的取值范围是（）
+
+    A.$n<4$B.$n \leq 4$C.$n > 4$D.$n = 4$'
   answer: A
-  solution: '解：∵关于x的方程有两个不相等的实数根，
+  solution: '解：∵关于x的方程$x^{2}-4x+n=0$有两个不相等的实数根，
 
-    ∴，
+    ∴$\Delta =(-4)^{2}-4\times1\times x>0$，
 
-    解得：；
+    解得：$n<4$；
 
     故选：A．'
   knowledge_points:
@@ -175,9 +115,13 @@ questions:
 - id: 5
   type: 选择
   score: 2
-  question: "如图，由5个“○”和3个“□”组成的图形关于某条直线对称，该直线是（   ）\nA. \tB. \tC. \tD."
+  question: '如图，由5个“○”和3个“□”组成的图形关于某条直线对称，该直线是（）
+
+    [图]
+
+    A.$\ell_{1}$B.$l_2$C.$l_{3}$D.$l_{4}$'
   answer: C
-  solution: '解：由图可知，该图形关于直线对称．
+  solution: '解：由图可知，该图形关于直线$l_{3}$对称．
 
     故选：C'
   knowledge_points:
@@ -189,16 +133,22 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-tongzhou-yi-fig03.png
 - id: 6
   type: 选择
   score: 2
-  question: "一个不透明的口袋中有2个红球和1个白球，这三个球除颜色外完全相同．摇匀后，随机从中摸出一个小球不放回，再随机摸出一个小球，则两次摸出小球的颜色相同的概率是（   ）\nA. \tB. \tC. \tD."
+  question: '一个不透明的口袋中有2个红球和1个白球，这三个球除颜色外完全相同．摇匀后，随机从中摸出一个小球不放回，再随机摸出一个小球，则两次摸出小球的颜色相同的概率是（）
+
+    A.$\frac{3}{4}$B.$\frac{1}{3}$C.$\frac{1}{4}$D.$\frac{1}{2}$'
   answer: B
   solution: '解：画树状图如下：
 
+    [图]
+
     由树状图可知，一共有6种，其中两次摸出小球的颜色相同的结果数有2种，
 
-    ∴两次摸出小球的颜色相同的概率为，
+    ∴两次摸出小球的颜色相同的概率为$\frac{2}{6}=\frac{1}{3}$，
 
     故选：B．'
   knowledge_points:
@@ -211,20 +161,24 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-tongzhou-yi-fig04.png
 - id: 7
   type: 选择
   score: 2
-  question: "已知数轴上有A、B两点，点B在点A的右侧，若点A、B分别表示数a、b，且满足，则下列各式的值一定为负数的是（   ）\nA. a\tB. \tC. \tD."
+  question: '已知数轴上有A、B两点，点B在点A的右侧，若点A、B分别表示数a、b，且满足$a+b=2$，则下列各式的值一定为负数的是（）
+
+    A.aB.$-a$C.$a-1$D.$b-1$'
   answer: C
-  solution: '解：由题意得，，
+  solution: '解：由题意得，$a < b$，
 
-    ，即，
+    $\because a+b=2$，即$b=2-a$，
 
-    ，
+    $\therefore a<2-a$，
 
-    ，
+    $\therefore a<1$，
 
-    ，
+    $\therefore a-1<0$，
 
     故选：C．'
   knowledge_points:
@@ -238,35 +192,43 @@ questions:
 - id: 8
   type: 选择
   score: 2
-  question: "如图，在菱形中，，点P和点Q分别在边和上运动（不与A、C、D重合），满足，连接、交于点E，在运动过程中，则下列四个结论正确的是（    ）\n①；②的度数不变；③；④．\nA. ①②\tB. ③④\tC. ①②④\tD. ①②③④"
+  question: '如图，在菱形$ABCD$中，$\angle ABC = 60^\circ$，点P和点Q分别在边CD和AD上运动（不与A、C、D重合），满足$DP = AQ$，连接AP、cQ交于点E，在运动过程中，则下列四个结论正确的是（
+
+    ）
+
+    ①$AP = CQ$；②$\angle AEC$的度数不变；③$\angle APD+\angle CQD=180^\circ$；④$CP^{2}=AP\cdot EP$．
+
+    [图]
+
+    A.①②B.③④C.①②④D.①②③④'
   answer: D
-  solution: '解：∵是菱形，，，
+  solution: '解：∵$ABCD$是菱形，$\angle ABC = 60^\circ$，$DP = AQ$，
 
-    ∴是等边三角形，
+    ∴$\angle ACP=\angle D=60^{\circ}\vee\angle CD$是等边三角形，
 
-    ∴，
+    ∴$AC = CD$，
 
-    ∴，
+    ∴$\triangle ACP \cong \triangle CDQ$，
 
-    ∴，，，故①正确；
+    ∴$\angle APC = \angle CQP$，$\angle PAC = \angle DCQ$，$AP = CQ$，故①正确；
 
-    ∵，
+    ∵$\angle APC+\angle APC=180^{\circ}$，
 
-    ∴，故②正确；
+    ∴$\angle APD+\angle CQD=180^\circ$，故②正确；
 
-    ∵，
+    ∵$\angle D=60^\circ,\angle APD+\angle CQD=180^\circ$，
 
-    ∴，
+    ∴$\angle QLP=120^{\circ}$，
 
-    ∴，故③正确；
+    ∴$\angle AEC=\angle QEP-120^{\circ}$，故③正确；
 
-    ∵，，
+    ∵$\angle PAC = \angle DCQ$，$\angle APC = \angle EPC$，
 
-    ∴，
+    ∴$\triangle APC \sim \triangle CPE$，
 
-    ∴，
+    ∴$\frac{AP}{CP}=\frac{CP}{EP}$，
 
-    ∴，故④正确；
+    ∴$CP^{2}=AP\cdot EP$，故④正确；
 
     故选：D．'
   knowledge_points:
@@ -278,10 +240,12 @@ questions:
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2024-tongzhou-yi-fig05.png
 - id: 9
   type: 填空
   score: 2
-  question: 式子在实数范围内有意义，则 x 的取值范围是_______ ．
+  question: 式子$\sqrt{x-3}$在实数范围内有意义，则x的取值范围是_______．
   answer: x≥3
   solution: '由题意可得：x—3≥0，
 
@@ -316,19 +280,19 @@ questions:
 - id: 11
   type: 填空
   score: 2
-  question: 分式方程的解是______．
+  question: 分式方程$\frac{2}{x+3}=\frac{1}{2x}$的解是$x =$______．
   answer: '1'
-  solution: '解：
+  solution: '解：$\frac{2}{x+3}=\frac{1}{2x}$
 
-    方程两边同乘，得，
+    方程两边同乘$2x(x+3)$，得$4x = x + 3$，
 
-    移项，得，
+    移项，得$3x=3$，
 
-    系数化为1，得，
+    系数化为1，得$x = 1$，
 
-    检验：当时，，
+    检验：当$x = 1$时，$2x(x+3)=0$，
 
-    ∴原分式方程的解为，
+    ∴原分式方程的解为$x = 1$，
 
     故答案为：1．'
   knowledge_points:
@@ -343,17 +307,25 @@ questions:
 - id: 12
   type: 填空
   score: 2
-  question: 在平面直角坐标系中，直线与双曲线交于点，则k的值是________．
+  question: 在平面直角坐标系xOy中，直线$y=x$与双曲线$y = \frac{k}{x}$交于点$P(m,3)$，则k的值是________．
   answer: '9'
-  solution: '解：点在直线上，
+  solution: '解：$\begin{array}{c}
 
-    ，
+    \bullet \\
 
-    ，
+    \bullet \quad \bullet \\
 
-    在反比例函数图象上，
+    \bullet
 
-    ．
+    \end{array}$点$P(m,3)$在直线$y=x$上，
+
+    $\therefore m = 3$，
+
+    $\therefore P(3,3)$，
+
+    $\because P(3,3)$在反比例函数图象上，
+
+    $\therefore k=3\times3=9$．
 
     故答案为：9．'
   knowledge_points:
@@ -371,19 +343,29 @@ questions:
 - id: 13
   type: 填空
   score: 2
-  question: 如图，点E是的边上一点，且，连接并延长，交的延长线于点F．若，则的长为________．
+  question: '如图，点E是$Y_{ABCD}$的边AD上一点，且$AE:DE=1:2$，连接CE并延长，交BA的延长线于点F．若$AF = 6$，则CD的长为________．
+
+    [图]'
   answer: '12'
-  solution: '解：四边形是平行四边形，
+  solution: '解：$\begin{array}{c}
 
-    ，
+    \bullet \\
 
-    ，
+    \bullet \quad \bullet \\
 
-    ，
+    \bullet
 
-    ，
+    \end{array}$四边形$ABCD$是平行四边形，
 
-    ．
+    $\therefore AB \parallel DC$，
+
+    $\therefore \triangle FAE \cong \triangle CDE$，
+
+    $AF:CD=AE:DE=1:2$，
+
+    $QAF = 6$，
+
+    $\therefore CD = 12$．
 
     故答案为：12．'
   knowledge_points:
@@ -395,16 +377,20 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-tongzhou-yi-fig06.png
 - id: 14
   type: 填空
   score: 2
-  question: 为合理安排进、离校时间，学校调查小组对某一天九年级学生上学、放学途中的用时情况进行了调查．本次调查在九年级随机抽取了20名学生，建立以上学途中用时为横坐标、放学途中用时为纵坐标的平面直角坐标系，并根据调查结果画出相应的点，如图所示：已知该校九年级共有400名学生，请估计九年级学生上学途中用时不超过15min的有________人．
-  answer: ''
-  solution: '解：根据图中信息可知，上学途中用时不超过15min的学生有人，
+  question: '为合理安排进、离校时间，学校调查小组对某一天九年级学生上学、放学途中的用时情况进行了调查．本次调查在九年级随机抽取了20名学生，建立以上学途中用时为横坐标、放学途中用时为纵坐标的平面直角坐标系，并根据调查结果画出相应的点，如图所示：已知该校九年级共有400名学生，请估计九年级学生上学途中用时不超过15min的有________人．
 
-    故该校九年级学生上学途中用时不超过15min的人数为（人）．
+    [图]'
+  answer: $280$
+  solution: '解：根据图中信息可知，上学途中用时不超过15min的学生有$14$人，
 
-    故答案为：．'
+    故该校九年级学生上学途中用时不超过15min的人数为$400\times\frac{14}{20}=280$（人）．
+
+    故答案为：$280$．'
   knowledge_points:
   - 坐标系
   module: statisticsAndProbability
@@ -413,26 +399,37 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-tongzhou-yi-fig07.png
 - id: 15
   type: 填空
   score: 2
-  question: 我国魏晋时期数学家刘徽在《九章算术注》中提出了著名的“割圆术”．所谓“割圆术”，是用圆内接正多边形的面积去无限逼近圆面积，并以此求取圆周率的方法，刘徽指出“割之弥细，所失弥少．割之又割，以至于不可割，则与圆周合体，而无所失矣”．例如，的半径为1，运用“割圆术”，以圆内接正六边形面积估计的面积，，所以的面积近似为，由此可得的估计值为，若用圆内接正十二边形估计的面积，可得的估计值为________．
+  question: '我国魏晋时期数学家刘徽在《九章算术注》中提出了著名的“割圆术”．所谓“割圆术”，是用圆内接正多边形的面积去无限逼近圆面积，并以此求取圆周率$\pi$的方法，刘徽指出“割之弥细，所失弥少．割之又割，以至于不可割，则与圆周合体，而无所失矣”．例如，$\odot\odot$的半径为1，运用“割圆术”，以圆内接正六边形面积估计$\odot\odot$的面积，$S_{\triangle
+    ABC} = 6 \times 1 \times \frac{\sqrt{3}}{2} = \frac{3\sqrt{3}}{2}$，所以$\odot\odot$的面积近似为$\frac{3\sqrt{3}}{2}$，由此可得$\pi$的估计值为$\frac{3\sqrt{3}}{2}$，若用圆内接正十二边形估计$\odot\odot$的面积，可得$\pi$的估计值为________．
+
+    [图]'
   answer: '3'
-  solution: '如图，是正十二边形的一条边，点是正十二边形的中心，设的半径为1，
+  solution: '如图，AB是正十二边形的一条边，点O是正十二边形的中心，设$\odot\odot$的半径为1，
 
-    过作于，
+    过A作$AM \perp OB$于M，
 
-    正十二边形中，
+    [图]
 
-    ，
+    $[公式]$正十二边形中，
 
-    ∴正十二边形的面积为,
+    $\angle AOB=360^{\circ}\div12=30^{\circ}$，
 
-    ，
+    $\therefore AM=\frac{1}{2}OA=\frac{1}{2}$
 
-    ,
+    $\cdots S_{\triangle ABC}=\frac{1}{2}\cdot OP\cdot AM=2\times \frac{1}{2}\times \frac{1}{4}$
 
-    的近似值为3，
+    ∴正十二边形的面积为$12\times\frac{1}{4}=3$,
+
+    $\therefore 3=1^{2}\times\pi$，
+
+    $\therefore \pi = 3$,
+
+    $\therefore \pi$的近似值为3，
 
     故答案为：3．'
   knowledge_points:
@@ -443,20 +440,99 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-tongzhou-yi-fig08.png
+  - figures/2024-tongzhou-yi-fig09.png
 - id: 16
   type: 填空
   score: 2
   question: '某公司筹备一场展览会，现列出筹备展览会的各项工作．具体筹备工作包含以下内容（见下表）．其中，“前期工作”是指相对于某项工作，排在该工作之前需完成的工作称为该工作的前期工作．
 
-    （1）在前期工作结束后，完成“展厅装饰 ”最短需要________天；
+    工作代码
+
+    工作名称
+
+    持续时间（天）
+
+    前期工作
+
+    A
+
+    张贴海报、收集作品
+
+    7
+
+    无
+
+    B
+
+    购买展览用品
+
+    3
+
+    无
+
+    C
+
+    打扫展厅
+
+    1
+
+    无
+
+    D
+
+    展厅装饰
+
+    3
+
+    C
+
+    E
+
+    展位设计与布置
+
+    3
+
+    ABD
+
+    F
+
+    展品布置
+
+    2
+
+    E
+
+    G
+
+    宣传语与环境布置
+
+    2
+
+    ABD
+
+    H
+
+    展前检查
+
+    1
+
+    FG
+
+    （1）在前期工作结束后，完成“展厅装饰
+
+    ”最短需要________天；
 
     （2）完成本次展览会所有筹备工作的最短总工期需要________天．'
-  answer: ①. 4    ②. 13
-  solution: '解：（1）由表格知，在前期工作结束后，完成“展厅装饰 ”最短需要（天）；
+  answer: ①.4②.13
+  solution: '解：（1）由表格知，在前期工作结束后，完成“展厅装饰
+
+    ”最短需要$1+3=4$（天）；
 
     故答案为：4；
 
-    （2）完成本次展览会所有筹备工作的路径为：，最短总工期需要的天数为：（天）；
+    （2）完成本次展览会所有筹备工作的路径为：$A \to E \to G \to H$，最短总工期需要的天数为：$7+3+2+1=13$（天）；
 
     故答案为为：13．'
   knowledge_points:
@@ -469,11 +545,15 @@ questions:
 - id: 17
   type: 解答
   score: 5
-  question: （第17题，详见原卷）
+  question: 计算：$4\sin 45^{\circ}-\sqrt{8}+\left(\frac{1}{2}\right)^{-2}+(3-\pi)^{0}$．
   answer: '5'
-  solution: '解：
+  solution: '解：$4\sin 45^{\circ}-\sqrt{8}+\left(\frac{1}{2}\right)^{-2}+(3-\pi)^{0}$
 
-    ．'
+    $=4\times\frac{\sqrt{2}}{2}-2\sqrt{2}+4+1$
+
+    $=2\sqrt{2}-2\sqrt{2}+4+1$
+
+    $= 5$．'
   knowledge_points:
   - 三角函数
   - 绝对值
@@ -487,15 +567,21 @@ questions:
 - id: 18
   type: 解答
   score: 5
-  question: 解不等式组：
-  answer: ''
-  solution: '解：原不等式组为
+  question: 解不等式组：$\left\{\begin{array}{l}2(x-1)<x+2,\\ \dfrac{x+1}{2}<x.\end{array}\right.$
+  answer: $1<x<4$
+  solution: '解：原不等式组为$\begin{aligned}
 
-    解不等式①得，，
+    &2(x-1)<x+2 \quad \text{①} \\
 
-    解不等式②得，，
+    &\frac{x+1}{2}<x \quad \text{②}
 
-    ∴原不等式组的解集为．'
+    \end{aligned}$
+
+    解不等式①得，$x<4$，
+
+    解不等式②得，$x>1$，
+
+    ∴原不等式组的解集为$1<x<4$．'
   knowledge_points:
   - 不等式
   - 不等式组
@@ -509,19 +595,27 @@ questions:
 - id: 19
   type: 解答
   score: 5
-  question: 已知，求代数式的值．
+  question: 已知$2x^{2}-x-1=0$，求代数式$4x(x-1)+(2x+1)(2x-1)$的值．
   answer: '3'
-  solution: '解：原式
+  solution: '解：原式$4x^{2}-4x+4x-1$
 
-    ；
+    $=8x^{2}-4x-1$；
 
-    ，
+    $2x^{2}-x-1=0$，
 
-    ，
+    $2x^{2}-x=1$，
 
-    原式
+    $\begin{tikzpicture}
 
-    ．'
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$原式$=4(2x^2-x)-1$
+
+    $=3$．'
   knowledge_points:
   - 方差
   module: numbersAndExpressions
@@ -534,13 +628,15 @@ questions:
 - id: 20
   type: 解答
   score: 5
-  question: 2023年12月27日北京城市副中心“三大文化建筑”之一的北京城市图书馆对外开放，其总建筑面积约万平方米，藏书量达800万册，建有世界最大的单体图书馆阅览室．图书馆内的功能区设置阅览坐席，方便读者使用．其中，山体阅览区、非遗文献馆、少年儿童馆的坐席总数为1900个，非遗文献馆的坐席数与少年儿童馆坐席数之比为，山体阅览区的坐席数是少年儿童馆坐席数的4倍多200个，求山体阅览区、非遗文献馆、少年儿童馆的坐席数量．
+  question: '2023年12月27日北京城市副中心“三大文化建筑”之一的北京城市图书馆对外开放，其总建筑面积约$7.5$万平方米，藏书量达800万册，建有世界最大的单体图书馆阅览室．图书馆内的功能区设置阅览坐席，方便读者使用．其中，山体阅览区、非遗文献馆、少年儿童馆的坐席总数为1900个，非遗文献馆的坐席数与少年儿童馆坐席数之比为$2:3$，山体阅览区的坐席数是少年儿童馆坐席数的4倍多200个，求山体阅览区、非遗文献馆、少年儿童馆的坐席数量．
+
+    [图]'
   answer: 非遗文献馆的坐席数为200个，少年儿童馆坐席数为300个，山体阅览区的坐席数为1400个
-  solution: '解：设非遗文献馆的坐席数为个，则少年儿童馆坐席数为个，山体阅览区的坐席数为个，
+  solution: '解：设非遗文献馆的坐席数为$2x$个，则少年儿童馆坐席数为$3x$个，山体阅览区的坐席数为$(12x+200)$个，
 
-    根据题意得：，
+    根据题意得：$2x+3x+12x+200-1900$，
 
-    解得，，
+    解得，$x=100$，
 
     答：非遗文献馆的坐席数为200个，少年儿童馆坐席数为300个，山体阅览区的坐席数为1400个．'
   knowledge_points:
@@ -551,62 +647,68 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-tongzhou-yi-fig10.png
 - id: 21
   type: 解答
   score: 5
-  question: '如图，中，，点D为边中点，过D点作的垂线交于点E，在直线上截取，使，连结、、．
+  question: '如图，$\triangle ABC$中，$\angle ACB=90^\circ$，点D为AB边中点，过D点作AB的垂线交BC于点E，在直线DE上截取DF，使$DF=ED$，连结AE、AF、BF．
 
-    （1）求证：四边形是菱形；
+    [图]
 
-    （2）若，，求的长．'
-  answer: （1）证明见解析 （2）
+    （1）求证：四边形$AEBF$是菱形；
+
+    （2）若$\sin\angle EAF=\frac{4}{5}$，$BE = 5$，求AD的长．'
+  answer: （1）证明见解析 （2）$AD = 2\sqrt{5}$
   solution: '【小问1详解】
 
-    证明：∵点为边中点，
+    证明：∵点D为AB边中点，
 
-    ∴，
+    ∴$AD = BD$，
 
-    ∵，
+    ∵$DF=ED$，
 
-    ∴四边形是平行四边形，
+    ∴四边形$AEBF$是平行四边形，
 
-    ∵，
+    ∵$EF \perp AB$，
 
-    ∴四边形是菱形；
+    ∴四边形$AEBF$是菱形；
 
     【小问2详解】
 
-    解：如图，过点作于点，
+    解：如图，过点E作$EG\parallel AF$于点G，
 
-    ∵四边形是菱形，
+    [图]
 
-    ∴，
+    ∵四边形$AEBF$是菱形，
 
-    ∴，
+    ∴$BE = AE = 5, AF \parallel BC$，
 
-    ∴，
+    ∴$EG \perp BC$，
 
-    ∴，
+    ∴$\angle GEC = 90^\circ$，
 
-    ∴四边形是矩形，
+    ∴$\angle CEG=\angle GEC=\angle ACB=90^{\circ}$，
 
-    ∴，
+    ∴四边形$ACEG$是矩形，
 
-    ∵，
+    ∴$AC = EG, CE = AG$，
 
-    ∴，
+    ∵$\sin \angle EAF = \frac{EG}{AE} = \frac{4}{5}$，
 
-    在中，由勾股定理得：，
+    ∴$EG=\frac{4}{5}AE=\frac{4}{5}\times5=4$，
 
-    ，
+    在$Rt\triangle AGE$中，由勾股定理得：$AG =$$\sqrt{AE^{2}-EG^{2}}=\sqrt{5^{2}-4^{2}}=3$，
 
-    ，
+    $\therefore AC=EG=4,CE=AG=3$，
 
-    在中，由勾股定理得：，
+    $\therefore BC=BE+CE=5+3=8$，
 
-    ∵点边中点，
+    在$Rt\triangle ABC$中，由勾股定理得：$AB =$$\sqrt{AC^{2}+BC^{2}}=\sqrt{4^{2}+8^{2}}=4\sqrt{5}$，
 
-    ．'
+    ∵点D$[公式]$AB边中点，
+
+    $\cdot AD-\frac{1}{2}AB=\frac{1}{2}\times4\sqrt{5}=2\sqrt{5}$．'
   knowledge_points:
   - 勾股定理
   - 平行四边形
@@ -620,58 +722,69 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-tongzhou-yi-fig11.png
+  - figures/2024-tongzhou-yi-fig12.png
 - id: 22
   type: 解答
   score: 5
-  question: '在平面直角坐标系中，函数的图象经过点和，与过点且平行于轴的直线交于点．
+  question: '在平面直角坐标系xOy中，函数$y=kx+b\,(k\neq0)$的图象经过点$A(0,-1)$和$B(4,3)$，与过点$(0,-3)$且平行于x轴的直线交于点C．
 
-    （1）求该函数的表达式及点的坐标；
+    （1）求该函数的表达式及点C的坐标；
 
-    （2）当时，对于的每一个值，函数的值大于函数的值，直接写出的取值范围．'
-  answer: （1）， （2）
+    （2）当$x > -2$时，对于x的每一个值，函数$y = mx \, (m \neq 0)$的值大于函数$y=kx+b\,(k\neq0)$的值，直接写出m的取值范围．'
+  answer: （1）$y=x-1$，$C(-2,-3)$ （2）$1 \leq m \leq \frac{3}{2}$
   solution: '【小问1详解】
 
-    解：将、代入函数表达式可得：
+    解：将$A(0,-1)$、$B(4,3)$代入函数表达式$y=kx+b$可得：
 
-    ，
+    $\left\{\begin{array}{l}b=-1\\4k+b=3\end{array}\right.$，
 
-    解得，
+    解得$\left\{\begin{array}{l}k=1\\b=-1\end{array}\right.$，
 
-    则函数的表达式为，
+    则函数的表达式为$y=x-1$，
 
-    依题得，过点且平行于轴的直线为，
+    依题得，过点$(0,-3)$且平行于x轴的直线为$y = -3$，
 
-    是该函数与过点且平行于轴的直线的交点，
+    $\therefore C$是该函数与过点$(0,-3)$且平行于x轴的直线的交点，
 
-    ，
+    $\therefore x-1=-3$，
 
-    解得，，
+    解得$x = -2$，$y = x - 1 = -2 - 1 = -3$，
 
-    即．
+    即$C(-2,-3)$．
 
     【小问2详解】
 
-    解：当直线过点时，
+    解：当直线$y = mx$过点C时，
 
-    即把代入，
+    即把$(-2,-3)$代入$y = mx$，
 
-    得，
+    得$-2m = -3$，
 
-    ，
+    $m = \frac{3}{2}$，
 
-    当时，对于的每一个值，的值大于的值，
+    $\begin{array}{c}
 
-    ，
+    \bullet \\
 
-    解得，
+    \bullet \quad \bullet \\
 
-    当与直线平行时，，
+    \bullet
+
+    \end{array}$当$x > -2$时，对于x的每一个值，$y = mx \, (m \neq 0)$的值大于$y=x-1$的值，
+
+    $A=-2m-2-1$，
+
+    解得$m \leq \frac{3}{2}$，
+
+    当$y = mx$与直线$y=x-1$平行时，$m = 1$，
 
     此时，满足条件，
 
-    且当时，不满足条件，
+    且当$m < 1$时，不满足条件，
 
-    即．'
+    即$1 \leq m \leq \frac{3}{2}$．'
   knowledge_points:
   - 一次函数
   - 坐标系
@@ -688,31 +801,115 @@ questions:
 
     a．从甲、乙两个大棚各收集了20株秧苗，将每株秧苗上的小番茄的个数做如下记录：
 
-    甲：26  32  40  74  44  63  81  54  62  41  54  43  34  51  63  64  73  64  54  33
+    甲：26
 
-    乙：27  34  46  52  48  67  82  48  56  63  73  35  56  56  58  60  36  46  40  71
+    32  40  74  44  63  81  54  62  41  54  43  34  51  63  64  73  64
+
+    54  33
+
+    乙：27
+
+    34  46  52  48  67  82  48  56  63  73  35  56  56  58  60  36  46
+
+    40  71
 
     b．对以上样本数据按如下分组整理：
 
+    个数
+
+    大棚
+
+    $25 \leq x < 35$
+
+    $35 \leq x < 45$
+
+    $45 \leq x < 55$
+
+    $55\leqslant x<65$
+
+    $65 \leq x < 75$
+
+    $75\leq x<85$
+
+    甲
+
+    4
+
+    4
+
+    m
+
+    n
+
+    2
+
+    1
+
+    乙
+
+    2
+
+    3
+
+    5
+
+    6
+
+    3
+
+    1
+
     c．两组样本数据的平均数、众数、中位数和方差如下表所示：
 
-    （1）________，________．
+    统计量
 
-    （2）________．
+    大棚
+
+    平均数
+
+    众数
+
+    中位数
+
+    方差
+
+    甲
+
+    52.5
+
+    54
+
+    p
+
+    228.75
+
+    乙
+
+    52.7
+
+    56
+
+    54
+
+    196.41
+
+    （1）$m =$________，$n =$________．
+
+    （2）$p =$________．
 
     （3）可以推断出________大棚的小番茄秧苗品种更适应市场需求，理由为_____________．（从两个不同的角度说明推断的合理性）'
-  answer: （1）4，5    （2）54 （3）乙；乙大棚每株秧苗上的小番茄个数的平均数高于甲大棚，且方差小，产量的稳定性更好
+  answer: （1）4，5（2）54 （3）乙；乙大棚每株秧苗上的小番茄个数的平均数高于甲大棚，且方差小，产量的稳定性更好
   solution: '【小问1详解】
 
-    解：甲大棚中的有4株，的有5株，
+    解：甲大棚中$45 \leq x < 55$的有4株，$55\leqslant x<65$的有5株，
 
-    ∴，；
+    ∴$m = 4$，$n = 5$；
 
     故答案为：4，5；
 
     【小问2详解】
 
-    解：将甲大棚中20株秧苗上小番茄的个数从小到大进行排序，排在第10、11位的都是54个，所以中位数为，
+    解：将甲大棚中20株秧苗上小番茄的个数从小到大进行排序，排在第10、11位的都是54个，所以中位数为$\frac{54+54}{2}=54$，
 
     故答案为：54．
 
@@ -722,6 +919,7 @@ questions:
 
     故答案为：乙，乙大棚每株秧苗上的小番茄个数的平均数高于甲大棚，且方差小，产量的稳定性更好．'
   knowledge_points:
+  - 统计
   - 平均数
   - 中位数
   - 众数
@@ -734,61 +932,65 @@ questions:
 - id: 24
   type: 解答
   score: 6
-  question: '如图，为的直径，过点A作的切线，C是半圆上一点（不与点A、B重合），连结，过点C作于点E，连接并延长交于点F．
+  question: '如图，AB为$\odot\odot$的直径，过点A作$\odot\odot$的切线AM，C是半圆AB上一点（不与点A、B重合），连结AC，过点C作$CD \perp AB$于点E，连接BD并延长交AM于点F．
 
-    （1）求证：；
+    [图]
 
-    （2）若的半径为5，，求的长．'
-  answer: （1）证明见解析 （2）
+    （1）求证：$\angle CAB = \angle AFB$；
+
+    （2）若$\odot\odot$的半径为5，$AC = 8$，求DF的长．'
+  answer: （1）证明见解析 （2）$DF = \frac{32}{3}$
   solution: '【小问1详解】
 
-    证明：是的切线，
+    证明：$\because AM$是$\odot\odot$的切线，
 
-    ，
+    $\angle BAM = 90^\circ$，
 
-    于点，
+    $\because CD \perp AB$于点E，
 
-    ，
+    $\therefore \angle CEA = 90^\circ$，
 
-    ，
+    $..CD \parallel AF$，
 
-    ，
+    $\angle CDB = \angle AFB$，
 
-    ，
+    $\angle CDB = \angle CAB$，
 
-    ．
+    $\angle CAB = \angle AFB$．
 
     【小问2详解】
 
-    解：连结，
+    解：连结AD，
 
-    于点，是的直径，
+    [图]
 
-    ，
+    $\because CD \perp AB$于点E，AB是$\odot\odot$的直径，
 
-    是的垂直平分线，
+    $\therefore CE = DE$，
 
-    ，
+    $\therefore AB$是CD的垂直平分线，
 
-    的半径为5，
+    $\therefore AC = AD = 8$，
 
-    ，
+    $\therefore \odot O$的半径为5，
 
-    ，
+    $\therefore AB = 10$，
 
-    是的直径，
+    $\therefore BD = 6$，
 
-    ，
+    $\therefore AB$是$\odot\odot$的直径，
 
-    ，
+    $\angle BDA = 90^\circ$，
 
-    ，
+    $\angle BAD = \angle AFB$，
 
-    ，
+    $\tan \angle BAD = \tan \angle AFB$，
 
-    ，
+    $\frac{AD}{DF}=\frac{BD}{AD}$，
 
-    ．'
+    $AD = DF \cdot BD$，
+
+    $\therefore DF = \frac{32}{3}$．'
   knowledge_points:
   - 平行线
   - 圆周角
@@ -801,54 +1003,149 @@ questions:
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2024-tongzhou-yi-fig13.png
+  - figures/2024-tongzhou-yi-fig14.png
 - id: 25
   type: 解答
   score: 6
-  question: '某部门研究本公司生产某种产品的利润变化y（万元）与生产总量x（吨）之间的关系情况，产品的生产总量为x（吨）时，所获得的利润记为p（万元），公司生产x吨产品所获得的利润与生产吨产品获得的利润之差记为y（万元）．
+  question: '某部门研究本公司生产某种产品的利润变化y（万元）与生产总量x（吨）之间的关系情况，产品的生产总量为x（吨）时，所获得的利润记为p（万元），公司生产x吨产品所获得的利润与生产$(x-1)$吨产品获得的利润之差记为y（万元）．
 
-    例如：当时，，当时，．所以，当时，；当时，，当时，．所以，当时，．
+    例如：当$x = 0$时，$p = -1.00$，当$x = 1$时，$p = 2.50$．所以，当$x = 1$时，$y = 2.50 - (-1.00) - 3.50$；当$x = 1.5$时，$p = 6.31$，当$x=2.5$时，$p=16.19$．所以，当$x=2.5$时，$y=16.19-6.31=9.88$．
 
     记录的部分数据如下：
 
+    x
+
+    0
+
+    $0.5$
+
+    $0.75$
+
+    1
+
+    $1.5$
+
+    $1.75$
+
+    2
+
+    $2.5$
+
+    3
+
+    $3.5$
+
+    4
+
+    $4.5$
+
+    5
+
+    $5.5$
+
+    6
+
+    p
+
+    $-1.00$
+
+    $-0.06$
+
+    $1.04$
+
+    $2.50$
+
+    $6.31$
+
+    $8.57$
+
+    $11.00$
+
+    $16.19$
+
+    $21.50$
+
+    $26.56$
+
+    $31.00$
+
+    $34.44$
+
+    $36.50$
+
+    $36.81$
+
+    $35.00$
+
+    y
+
+    $3.50$
+
+    $6.37$
+
+    $7.53$
+
+    m
+
+    $9.88$
+
+    $10.50$
+
+    $10.37$
+
+    $9.50$
+
+    n
+
+    $5.50$
+
+    $2.37$
+
+    $-1.50$
+
     根据以上数据，解决下列问题：
 
-    （1）________，_______．
+    （1）$m =$________，$n =$_______．
 
-    （2）结合表中的数据，当时可以用函数刻画利润的变化量y（万元）和生产总量x（吨）之间的关系，在平面直角坐标系中画出此函数的图象．
+    （2）结合表中的数据，当$1\leq x\leq6$时可以用函数刻画利润的变化量y（万元）和生产总量x（吨）之间的关系，在平面直角坐标系xOy中画出此函数的图象．
 
     （3）结合数据，利用所画的函数图象可以推断：
 
-    ①当生产总量约为________吨（精确到），利润变化值y最大．
+    ①当生产总量约为________吨（精确到$0.1$），利润变化值y最大．
 
-    ②当生产总量约为________吨（精确到），利润开始降低．'
-  answer: （1） （2）见详解    （3）①（答案不唯一，介于）；②（答案不唯一，介于）
+    ②当生产总量约为________吨（精确到$0.1$），利润开始降低．
+
+    [图]'
+  answer: （1）$8.50,7.88$ （2）见详解（3）①$3.2$（答案不唯一，介于$3.1:3.3$）；②$5.8$（答案不唯一，介于$5.6:5.9$）
   solution: '【小问1详解】
 
-    解：当时，，
+    解：当$x=2$时，$p = 11.00$，
 
-    当时，，
+    当$x = 1$时，$p = 2.50$，
 
-    ∴当时，；
+    ∴当$x=2$时，$m=11.00-2.50=8.50$；
 
-    当时，，
+    当$x = 4.5$时，$p = 34.44$，
 
-    当时，，
+    当$x=3.5$时，$p = 26.56$，
 
-    ∴当时，．
+    ∴当$x = 4.5$时，$n=34.44-26.56=7.88$．
 
-    故答案为：．
+    故答案为：$8.50,7.88$．
 
     【小问2详解】
 
     描点并作图如图所示：
 
-    【小问3详解】
+    [图]【小问3详解】
 
-    ①由图象可知，当生产总量约为吨时，利润变化值最大；
+    ①由图象可知，当生产总量约为$3.2$吨时，利润变化值y最大；
 
-    ②由图象可知，当生产总量约为吨时，利润变化值，之后利润开始降低．
+    ②由图象可知，当生产总量约为$5.8$吨时，利润变化值$y = 0$，之后利润开始降低．
 
-    故答案为：，．'
+    故答案为：$3.2$，$5.8$．'
   knowledge_points:
   - 二次函数
   - 坐标系
@@ -857,60 +1154,71 @@ questions:
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2024-tongzhou-yi-fig15.png
+  - figures/2024-tongzhou-yi-fig16.png
 - id: 26
   type: 解答
   score: 6
-  question: '在平面直角坐标系中，，是抛物线上两点，且满足．设抛物线的对称轴为直线．
+  question: '在平面直角坐标系xOy中，$M(m,y_{1})$，$N(m+2,y_{i})$是抛物线$y=ax^{2}+bx+c(a>0)$上两点，且满足$m > 0$．设抛物线的对称轴为直线$x = t$．
 
-    （1）当时，写出m，t的之间的等量关系．
+    （1）当$y_{1}=y_{2}$时，写出m，t的之间的等量关系．
 
-    （2）当时，均满足，求m的取值范围．'
-  answer: （1） （2）
+    （2）当$3<t<4$时，均满足$c > y_{2} > y_{1}$，求m的取值范围．'
+  answer: （1）$t = m + 1$ （2）$3\leqslant m\leqslant 4$
   solution: '【小问1详解】
 
-    解：点，是抛物线上两点，
+    解：$\begin{array}{c}
 
-    当时，点和点关于抛物线的对称轴直线对称，
+    \bullet \\
 
-    ，
+    \bullet \quad \bullet \\
 
-    ．
+    \bullet
+
+    \end{array}$点$M(m,y_{1})$，$N(m+2,y_{2})$是抛物线$y=ax^{2}+bx+c(a>0)$上两点，
+
+    当$y_{1}=y_{2}$时，点M和点N关于抛物线的对称轴直线$x = t$对称，
+
+    $\ldots m+2-t=t-m$，
+
+    $\therefore f=\frac{m+m+2}{2}=|m|+1$．
 
     【小问2详解】
 
-    解：将点到对称轴的距离记为，点到对称轴的距离记为，抛物线与轴交点记为点，到对称轴的距离记为．
+    解：将点$M(m,y_{1})$到对称轴的距离记为$d_{M}$，点$N(m+2,y_{2})$到对称轴的距离记为$d_{N}$，抛物线与y轴交点记为点$C(0,c)$，到对称轴的距离记为$d_{C}$．
 
-    ，，
+    $\because a>0$，$y_{2}>y_{1}$，
 
-    点到对称轴的距离大于点到对称轴的距离，即，
+    $\begin{tikzpicture}
 
-    ，
+    \fill (0,0) circle (2pt);
 
-    ，
+    \fill (-1,-1) circle (2pt);
 
-    ，
+    \fill (1,-1) circle (2pt);
 
-    ，
+    \end{tikzpicture}$点N到对称轴的距离大于点M到对称轴的距离，即$d_{N}>d_{M}$，
 
-    当时，均满足，
+    $\ldots m-2-t > m-r$，
 
-    ，
+    $\ldots(m+2-t)^{2}-(m-t)^{2}>0$，
 
-    ，，
+    $\left(m+2-t+m-t\right)\left(m+2-t-m+t\right)>0$，
 
-    点到对称轴的距离大于点到对称轴的距离，即，
+    $\therefore m > t - 1$，
 
-    ，
+    当$3<t<4$时，均满足$y_{2}>y_{1}$，
 
-    ，
+    $\therefore m=3$，
 
-    ；
+    $\because a>0$，$c > y_{2}$，
 
-    当时，均满足，
+    $\begin{tikzpicture}
 
-    ，
+    \fill (0,0) circle (2pt);
 
-    综上，．'
+    \fill (-1,'
   knowledge_points:
   - 二次函数
   - 坐标系
@@ -921,73 +1229,69 @@ questions:
 - id: 27
   type: 解答
   score: 7
-  question: '如图，将线段绕点A逆时针旋转度（）得到线段，连结，点N是的中点，点D，E分别在线段，的延长线上，且．
+  question: '如图，将线段AB绕点A逆时针旋转$\alpha$度（$0^\circ<\alpha<180^\circ$）得到线段AC，连结BC，点N是BC的中点，点D，E分别在线段AC，BC的延长线上，且$CE = DE$．
 
-    （1）________（用含的代数式表示）；
+    [图]
 
-    （2）连结，点F为的中点，连接，，．
+    （1）$\angle EDC =$________（用含$\alpha$的代数式表示）；
+
+    （2）连结BD，点F为BD的中点，连接AF，EF，$\mathrm{NF}$．
 
     ①依题意补全图形；
 
-    ②若，用等式表示线段与的数量关系，并证明．'
-  answer: （1） （2）①见解析；②，证明见解析
+    ②若$AF \perp EF$，用等式表示线段$\mathrm{NF}$与CE的数量关系，并证明．'
+  answer: （1）$90^{\circ}-\frac{1}{2}\alpha$ （2）①见解析；②$CE = \sqrt{2}NF$，证明见解析
   solution: '【小问1详解】
 
-    ∵，
+    ∵$\angle A=\alpha$，
 
-    由旋转得，
+    由旋转得$AB = AC$，
 
-    ∴，
+    ∴$\angle ABC = \angle ACB = \frac{180^\circ - \alpha}{2} = 90^\circ - \frac{1}{2}\alpha$，
 
-    ∵，
+    ∵$CE = DE$，
 
-    ∴．
+    ∴$\angle CBE=\angle DCE=\angle ACB=90^\circ-\frac{1}{2}\alpha$．
 
     【小问2详解】
 
     ①补全图形如图：
 
-    ②延长至点，使，连接．
+    [图]
 
-    ∵点为线段中点，
+    ②延长AF至点M，使$FM = AF$，连接$BM, DM, EM, AE$．
 
-    ∴四边形为平行四边形，
+    [图]
 
-    ，
+    ∵点F为线段BD中点，
 
-    ，
+    ∴四边形$ABMD$为平行四边形，
 
-    ，
+    $\ldots AB \parallel DM, AB = DM$，
 
-    ，
+    $\angle BAC + \angle ADM = 180^\circ$，
 
-    ，
+    $\angle ADM=180^\circ-\alpha$，
 
-    又，
+    $\because AF \perp EF$，
 
-    ，
+    $\therefore AE = ME$，
 
-    ∴，
+    又$QAB=AC,EC=ED$，
 
-    ∴，
+    $\therefore AC = DM$，
 
-    ，
+    ∴$\triangle ACE \cong \triangle MDE (SSS)$，
 
-    ，
+    ∴$\angle MDE=\angle ACE=180^{\circ}-\angle ACB=90^{\circ}+\frac{1}{2}\alpha$，
 
-    ，
+    $\angle ADM=\angle MDE-\angle CDE=90^\circ+\frac{1}{2}\alpha-(90^\circ-\frac{1}{2}\alpha)-\alpha$，
 
-    ∴，
+    $180^\circ - \alpha = \alpha$，
 
-    ∴，
+    $\therefore \alpha = 90^\circ$，
 
-    ∵为中点，为中点，
-
-    ∴是中位线，
-
-    ，
-
-    ∴．'
+    ∴$\angle ECD=\angle ED'
   knowledge_points:
   - 全等三角形
   - 平行四边形
@@ -996,70 +1300,72 @@ questions:
   difficulty: 压轴
   recommended_for:
   - L3
+  figures:
+  - figures/2024-tongzhou-yi-fig17.png
+  - figures/2024-tongzhou-yi-fig18.png
+  - figures/2024-tongzhou-yi-fig19.png
 - id: 28
   type: 解答
   score: 7
-  question: '在平面直角坐标系中，已知点，A为坐标系中任意一点．现定义如下两种运动：P运动：将点A向右平移个单位长度，再向上平移个单位长度，得到点，再将点绕点O逆时针旋转，得到点；
+  question: '在平面直角坐标系xOy中，已知点$M(m,n)$，A为坐标系中任意一点．现定义如下两种运动：P运动：将点A向右平移$\left| m \right|$个单位长度，再向上平移$\left| n \right|$个单位长度，得到点$A''$，再将点$A''$绕点O逆时针旋转$90^\circ$，得到点$A_1$；
 
-    Q运动：将点A绕点O逆时针旋转，得到点，再将点向右平移个单位长度，再向上平移个单位长度，得到点．
+    Q运动：将点A绕点O逆时针旋转$90^\circ$，得到点$A''''$，再将点$A''''$向右平移$\left| m \right|$个单位长度，再向上平移$\left| n \right|$个单位长度，得到点$A_2$．
 
-    （1）如图，已知点，，点A分别经过P运动与Q运动后，得到点，．
+    （1）如图，已知点$A(1,1)$，$M(m,0)$，点A分别经过P运动与Q运动后，得到点$A_1$，$A_2$．
 
-    ①若，请你在下图中画出点，的位置；
+    ①若$m = 1$，请你在下图中画出点$A_1$，$A_2$的位置；
 
-    ②若，求m的值．
+    [图]
 
-    （2）已知，点A，B分别经过P运动与Q运动后，得到点，与点，，连接，．若线段与存在公共点，请直接写出此时线段长度的取值范围（用含有t的式子表示）．'
-  answer: （1）①见详解；② （2）
+    ②若$A_{1}A_{2}=2$，求m的值．
+
+    （2）已知$AB = t$，点A，B分别经过P运动与Q运动后，得到点$A_1$，$A_2$与点$B_1$，$B_2$，连接$A_1B_1$，$A_{2}B_{2}$．若线段$A_1B_1$与$A_{2}B_{2}$存在公共点，请直接写出此时线段MO长度的取值范围（用含有t的式子表示）．'
+  answer: （1）①见详解；②$m = \pm \sqrt{2}$ （2）$0 \leq MO \leq \frac{\sqrt{2}}{2} t$
   solution: '【小问1详解】
 
     ①作图如图所示：
 
-    由P运动知，由旋转得，，
+    [图]
 
-    而，
+    由P运动知$A''(2,1)$，由旋转得$OA''=OA_{1}$，$\angle AOQ''=90^{\circ}$，
 
-    ∴，，
+    而$\angle M=\angle N=90^{\circ}$，
 
-    ∴，
+    ∴$\angle AOM + \angle AON = 180^{\circ} - 90^{\circ} = 90^{\circ}$，$\angle AOM+\angle OAM=90^{\circ}$，
 
-    ∴，
+    ∴$\angle ACN=\angle OAM$，
 
-    ∴，
+    ∴$\triangle A_{1}NO\cong\triangle A_{1}OM$，
 
-    ∴；
+    ∴$AN=OM=2,ON=AN=1$，
 
-    由Q运动同理可求，再向右平移1个单位，向上平移0个单位得到．
+    ∴$A_{1}(-1,2)$；
 
-    ②∵，
+    [图]
 
-    ∴点A经过P运动后得到的点的坐标为
+    由Q运动同理可求$A''''(-1,1)$，再向右平移1个单位，向上平移0个单位得到$A_{2}\left(0,1\right)$．
 
-    点A经过Q运动后得到的点的坐标为
+    ②∵$A(1,1)$，
 
-    ∵
+    ∴点A经过P运动后得到的点$A_1$的坐标为$(-1,1+|m|)$
 
-    ∴，
+    点A经过Q运动后得到的点$A_2$的坐标为$(-1+|m|,1)$
 
-    ∴．
+    ∵$A_{1}A_{2}=2$
+
+    ∴$\sqrt{m^{2}+m^{2}}=2$，
+
+    ∴$m = \pm \sqrt{2}$．
 
     【小问2详解】
 
     由题意可得：
 
-    由旋转的不变性和平移的性质得：，，
+    由旋转的不变性和平移的性质得：$A_{1}B_{1}\parallel A_{2}B_{2}$，$A_{1}B_{1}=A_{2}B_{2}=t$，
 
-    设，经过P运动，则，则；
+    设$A(x,y)$，经过P运动，则$A''\left(x+\left|m\right|,\,y+\left|n\right|\right)$，则$A_{\left(-v-|x|,x+|x|\right)}$；
 
-    Q运动后，，，
-
-    则，
-
-    ∴当时，线段与存在公共点，
-
-    ∴，
-
-    ∴．'
+    Q运动后，$A''''(-y,x)$，$\mathcal{A}_2\left(-y+\left|mx+x\left(a\right)\right|\r'
   knowledge_points:
   - 全等三角形
   - 旋转
@@ -1069,3 +1375,7 @@ questions:
   difficulty: 压轴
   recommended_for:
   - L3
+  figures:
+  - figures/2024-tongzhou-yi-fig20.png
+  - figures/2024-tongzhou-yi-fig21.png
+  - figures/2024-tongzhou-yi-fig22.png

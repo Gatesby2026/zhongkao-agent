@@ -1,12 +1,12 @@
 # ============================================================
 # 2024年北京房山区中考数学二模试卷 — 逐题分析
 # ============================================================
-# 数据来源：knowledge-original/精品解析：2024年北京市房山区中考二模数学试题（解析版）.docx
-# 自动生成，部分数学公式可能显示不全（docx公式对象无法完整提取）
+# 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
+# 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
 # 满分：100分  时长：120分钟
 
 year: 2024
-district: 房山区
+district: 房山
 exam_type: 二模
 subject: 数学
 full_score: 100
@@ -17,7 +17,13 @@ questions:
 - id: 1
   type: 选择
   score: 2
-  question: "如图是某几何体的展开图，该几何体是（    ）\nA. 长方体\tB. 圆柱\tC. 圆锥\tD. 三棱柱"
+  question: '如图是某几何体的展开图，该几何体是（
+
+    ）
+
+    [图]
+
+    A.长方体B.圆柱C.圆锥D.三棱柱'
   answer: B
   solution: '解：由图形可得该几何体是圆柱；
 
@@ -31,12 +37,16 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-fangshan-er-fig02.png
 - id: 2
   type: 选择
   score: 2
-  question: "2024年4月25日20时58分57秒在酒泉卫星发射中心成功发射神舟十八号载人飞船，神舟十八号载人飞船与长征二号遥十八运载火箭组合体，总重量400000多千克，总高度近60米．将400000用科学记数法表示应为（    ）\nA. \tB. \tC. \tD."
+  question: '2024年4月25日20时58分57秒在酒泉卫星发射中心成功发射神舟十八号载人飞船，神舟十八号载人飞船与长征二号F遥十八运载火箭组合体，总重量400000多千克，总高度近60米．将400000用科学记数法表示应为（）
+
+    A.$40\times10^{4}$B.$4\times10^{4}$C.$4\times10^{5}$D.$0.4\times10^{6}$'
   answer: C
-  solution: '解：，
+  solution: '解：$400000 = 4 \times 10^{5}$，
 
     故选：C．'
   knowledge_points:
@@ -52,15 +62,19 @@ questions:
 - id: 3
   type: 选择
   score: 2
-  question: "如图，直线相交于点，若，则的度数是（    ）\nA. \tB. \tC. \tD."
+  question: '如图，直线$AB,CD$相交于点$O, OE \perp AB$，若$\angle AOC=34^\circ$，则$\angle DOE$的度数是（）
+
+    [图]
+
+    A.$34^\circ$B.$56^\circ$C.$66^\circ$D.$146^\circ$'
   answer: B
-  solution: '∵，
+  solution: '∵$OE \perp AB$，
 
-    ∴．
+    ∴$\angle BOE=90^\circ$．
 
-    ∵，
+    ∵$\angle AOC=\angle BOD=34^\circ$，
 
-    ∴．
+    ∴$\angle DOE=\angle BOE-\angle DOB=90^\circ-34^\circ=56^\circ$．
 
     故选：B．'
   knowledge_points:
@@ -72,10 +86,14 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-fangshan-er-fig03.png
 - id: 4
   type: 选择
   score: 2
-  question: "下面四个图形，既是轴对称图形又是中心对称图形的是（    ）\nA. \tB. \tC. \tD."
+  question: '下面四个图形，既是轴对称图形又是中心对称图形的是（）
+
+    A.[图]B.[图]C.[图]D.[图]'
   answer: D
   solution: '解：A、是轴对称图形，不是中心对称图形，故此选项不合题意；
 
@@ -98,14 +116,37 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-fangshan-er-fig04.png
+  - figures/2024-fangshan-er-fig05.png
+  - figures/2024-fangshan-er-fig06.png
+  - figures/2024-fangshan-er-fig07.png
 - id: 5
   type: 选择
   score: 2
-  question: "正八边形的外角和为（    ）\nA. \tB. \tC. \tD."
-  answer: B
-  solution: '解： 多边形的外角和都是，
+  question: '正八边形的外角和为（）
 
-    正八边形的外角和为．
+    A.$180^\circ$B.$360^\circ$C.$720^\circ$D.$1080^\circ$'
+  answer: B
+  solution: '解：$\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$多边形的外角和都是$360^\circ$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$正八边形的外角和为$360^\circ$．
 
     故选：B．'
   knowledge_points:
@@ -120,25 +161,31 @@ questions:
 - id: 6
   type: 选择
   score: 2
-  question: "实数a，b在数轴上的对应点的位置如图所示，下列结论中正确的是（    ）\nA. \tB.\nC. \tD."
+  question: '实数a，b在数轴上的对应点的位置如图所示，下列结论中正确的是（）
+
+    [图]
+
+    A.$-b > a > 0$B.$b > -a > 1$
+
+    C.$b <-a <-1$D.$-a < b < -2$'
   answer: A
-  solution: '解：，
+  solution: '解：$\therefore -2 < b < -1$，
 
-    ，
+    $1<-b<2$，
 
-    又，
+    又$\therefore a < 1$，
 
-    ，
+    $\ldots -b > a > 0$，
 
-    选项正确，符合题意；
+    $\therefore A$选项正确，符合题意；
 
-    ，
+    $\because 0<a<1$，
 
-    ，
+    $-1 < -a < 0$，
 
-    ，
+    $\ldots b < -a < 0$，
 
-    选项错误，不符合题意；
+    $\therefore B$选项错误，不符合题意；
 
     C选项错误，不符合题意；
 
@@ -153,20 +200,64 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-fangshan-er-fig08.png
 - id: 7
   type: 选择
   score: 2
   question: '农科院某研究所在相同条件下做某种农作物的发芽率试验，结果如下表所示：
 
-    下面有四个判断，其中合理的是（    ）
+    种子个数
 
-    A. 种子个数为800时，发芽种子的个数是718，所以种子发芽的概率为0.898
+    200
 
-    B. 实验种子的个数最少的那次实验得到的种子发芽的频率一定是种子发芽的概率
+    500
 
-    C. 实验种子的个数最多的那次实验得到的种子发芽的频率一定是种子发芽的概率
+    700
 
-    D. 随着参加实验的种子数量增加，种子发芽的频率在0.9附近摆动，显示出一定的稳定性，可以估计种子发芽的概率约为0.9（精确到0.1）'
+    800
+
+    900
+
+    1000
+
+    发芽种子个数
+
+    187
+
+    435
+
+    624
+
+    718
+
+    814
+
+    901
+
+    种子发芽率
+
+    0.935
+
+    0.870
+
+    0.891
+
+    0.898
+
+    0.904
+
+    0.901
+
+    下面有四个判断，其中合理的是（）
+
+    A.种子个数为800时，发芽种子的个数是718，所以种子发芽的概率为0.898
+
+    B.实验种子的个数最少的那次实验得到的种子发芽的频率一定是种子发芽的概率
+
+    C.实验种子的个数最多的那次实验得到的种子发芽的频率一定是种子发芽的概率
+
+    D.随着参加实验的种子数量增加，种子发芽的频率在0.9附近摆动，显示出一定的稳定性，可以估计种子发芽的概率约为0.9（精确到0.1）'
   answer: D
   solution: '解：A．应该是种子发芽的频率是0.898而不是概率，故选项A不正确，不符合题意；
 
@@ -189,63 +280,53 @@ questions:
 - id: 8
   type: 选择
   score: 2
-  question: "如图，，，分别是直径为的的内接正六边形、正方形、等边三角形的一边．若，给出下而四个结论：①的直径为4；②；③；④连接，则的面积是．上述结论中，所有正确结论的序号是（    ）\nA. ①③\tB. ②④\tC. ①②③\tD. ①②③④"
+  question: '如图，AB，AC，AD分别是直径为AE的$\odot\odot$的内接正六边形、正方形、等边三角形的一边．若$AB=2$，给出下而四个结论：①$\odot\odot$的直径为4；②$AC = 2\sqrt{2}$；③$\overline{BC}=\overline{CD}$；④连接CD，则$\triangle ACD$的面积是$\sqrt{6}$．上述结论中，所有正确结论的序号是（）
+
+    [图]
+
+    A.①③B.②④C.①②③D.①②③④'
   answer: C
-  solution: '解：连接，，
+  solution: '解：连接OB，OC，OD
 
-    ∵，，分别是直径为的的内接正六边形、正方形、等边三角形的一边
+    [图]
 
-    ∴，，
+    ∵AB，AC，AD分别是直径为AE的$\odot\odot$的内接正六边形、正方形、等边三角形的一边
 
-    ∴，
+    ∴$\angle AOB=60^\circ$，$\angle AOC=90^{\circ}$，$\angle AOD=120^\circ$
 
-    ∴，
+    ∴$\angle BOC=\angle AOC-\angle AOB=30^{\circ}$，$\angle COD=\angle AOD-\angle AOC=30^\circ$
 
-    即
+    ∴$\angle BOC = \angle COD$，
+
+    即$\overline{BC}=\overline{CD}$
 
     故③正确；
 
-    ∵
+    ∵$OA = OB = OC = OD$
 
-    ∴是等边三角形，是等腰直角三角形
+    ∴$\triangle AOB$是等边三角形，$\triangle AOC$是等腰直角三角形
 
-    ∴
+    ∴$AE=2OA=2AB=4$
 
     故①正确；
 
-    由勾股定理可得，
+    由勾股定理可得，$AC = \sqrt{OA^{2} + OC^{2}} = 2\sqrt{2}$
 
     故②正确；
 
-    过点A作交延长线于点F，过点D作交于点E
+    过点A作$AF \perp DC$交DC延长线于点F，过点D作$DG \perp AE$交AE于点E
 
-    ∵，
+    [图]
 
-    ∴
+    ∵$\angle COD=30^\circ$，$OC = OD$
 
-    ∵，
+    ∴$\angle OCD = \angle ODC = \frac{1}{2} \times (180^\circ - 30^\circ) = 75^\circ$
 
-    ∴，
+    ∵$\angle AOD=120^\circ$，$OA = OD$
 
-    ∴，
+    ∴$\angle OAD=\angle ODA=\frac{1}{2}\times(180^{\circ}-120^{\circ})=30^{\circ}$，$\angle DOG=60^{\circ}$
 
-    ∴
-
-    即为等腰直角三角形
-
-    ∴
-
-    ∴
-
-    在中，由勾股定理得
-
-    ∴
-
-    ∴
-
-    故④错误；
-
-    故选：C．'
+    ∴$DC=\sin 60^{\circ}\cdot OD=\frac{\sqrt{3}}{2}\times'
   knowledge_points:
   - 勾股定理
   - 正方形
@@ -255,18 +336,22 @@ questions:
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2024-fangshan-er-fig09.png
+  - figures/2024-fangshan-er-fig10.png
+  - figures/2024-fangshan-er-fig11.png
 - id: 9
   type: 填空
   score: 2
-  question: 若式子在实数范围内有意义，则x的取值范围是_____．
-  answer: ''
+  question: 若式子$\sqrt{x-2}$在实数范围内有意义，则x的取值范围是_____．
+  answer: $x^{2}$
   solution: '根据二次根式被开方数必须是非负数的条件，
 
-    要使在实数范围内有意义，必须，
+    要使$\sqrt{x-2}$在实数范围内有意义，必须$x-2\quad0$，
 
-    ∴．
+    ∴$x^{2}$．
 
-    故答案为：'
+    故答案为：$x^{2}$'
   knowledge_points:
   - 综合
   module: numbersAndExpressions
@@ -279,13 +364,15 @@ questions:
 - id: 10
   type: 填空
   score: 2
-  question: 分解因式：__________．
-  answer: ''
-  solution: '解：
+  question: 分解因式：$3x^{2}-3y^{2}=$__________．
+  answer: $3(x+y)(x-y)$
+  solution: '解：$3x^{2}-3y^{2}$
 
-    ，
+    $=3\left(x^{2}-y^{2}\right)$
 
-    故答案为：．'
+    $=3(x+y)(x-y)$，
+
+    故答案为：$3(x+y)(x-y)$．'
   knowledge_points:
   - 方差
   module: statisticsAndProbability
@@ -298,19 +385,19 @@ questions:
 - id: 11
   type: 填空
   score: 2
-  question: 方程的解为______．
-  answer: ''
-  solution: '解：，
+  question: 方程$\frac{2}{5x+4}=\frac{1}{3x}$的解为______．
+  answer: $x = 4$
+  solution: '解：$\frac{2}{5x+4}=\frac{1}{3x}$，
 
-    去分母得，，
+    去分母得，$6x=5x+4$，
 
-    解得，
+    解得$x = 4$，
 
-    检验：将代入，
+    检验：将$x = 4$代入$3x(5x+4)\neq0$，
 
-    ∴原方程的解为．
+    ∴原方程的解为$x = 4$．
 
-    故答案为：．'
+    故答案为：$x = 4$．'
   knowledge_points:
   - 分式方程
   module: numbersAndExpressions
@@ -323,9 +410,9 @@ questions:
 - id: 12
   type: 填空
   score: 2
-  question: 甲、乙、丙、丁四名同学参加立定跳远训练，他们成绩的平均数相同，方差如下：，则这四名同学成绩最稳定的是______．
+  question: 甲、乙、丙、丁四名同学参加立定跳远训练，他们成绩的平均数相同，方差如下：$S^{2}_{\mathrm{甲}}=2.5,S^{2}_{\mathrm{乙}}=3.1,S^{2}_{\mathrm{丙}}=7,S^{2}_{\mathrm{丁}}=0.9$，则这四名同学成绩最稳定的是______．
   answer: 丁
-  solution: '∵，
+  solution: '∵$S^{2}_{\mathrm{甲}}=2.5,S^{2}_{\mathrm{乙}}=3.1,S^{2}_{\mathrm{丙}}=7,S^{2}_{\mathrm{丁}}=0.9$，
 
     ∴丁的方差最小，
 
@@ -345,23 +432,47 @@ questions:
 - id: 13
   type: 填空
   score: 2
-  question: 在平面直角坐标系中，若反比例函数的图像经过点和．则的值为______．
-  answer: '##'
-  solution: '反比例函数的图像经过点，
+  question: 在平面直角坐标系xOy中，若反比例函数$y=\frac{k}{x}(k\neq0)$的图像经过点$A(-1,2)$和$B(4,m)$．则m的值为______．
+  answer: $-\frac{1}{2}$##$-0.5$
+  solution: '$\begin{array}{c}
 
-    ，
+    \bullet \\
 
-    ，
+    \bullet \quad \bullet \\
 
-    反比例函数，
+    \bullet
 
-    该反比例函数还过，
+    \end{array}$反比例函数$y=\frac{k}{x}(k\neq0)$的图像经过点$A(-1,2)$，
 
-    ，
+    $\therefore 2 = \frac{k}{-1}$，
 
-    ，
+    $\therefore k = -2$，
 
-    故答案为．'
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$反比例函数$y=\frac{-2}{x}$，
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$该反比例函数还过$B(4,m)$，
+
+    $\therefore m = \frac{-2}{4}$，
+
+    $\therefore m = -\frac{1}{2}$，
+
+    故答案为$-\frac{1}{2}$．'
   knowledge_points:
   - 反比例函数
   - 坐标系
@@ -374,13 +485,15 @@ questions:
 - id: 14
   type: 填空
   score: 2
-  question: 如图，在中，是的垂直平分线．若，则的周长为______．
+  question: '如图，在$\triangle ABC$中，DE是AB的垂直平分线．若$AC = 5, BC = 7$，则$\triangle ACD$的周长为______．
+
+    [图]'
   answer: '12'
-  solution: '解：∵是的垂直平分线，
+  solution: '解：∵DE是AB的垂直平分线，
 
-    ∴，
+    ∴$DA = DB$，
 
-    ∴的周长，
+    ∴$\triangle ACD$的周长$=AC+CD+DA=AC+CD+DB=AC+CB=5+7=12$，
 
     故答案为：12'
   knowledge_points:
@@ -391,32 +504,36 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-fangshan-er-fig12.png
 - id: 15
   type: 填空
   score: 2
-  question: 如图，在菱形中，点在边上，与交于点．若，，则的值为______．
-  answer: ''
-  solution: '解：∵四边形是菱形，
+  question: '如图，在菱形$ABCD$中，点E在边AD上，BE与AC交于点F．若$AB = 4$，$\angle ABC=60^\circ, AF=1$，则$\frac{AE}{BC}$的值为______．
 
-    ∴
+    [图]'
+  answer: $\frac{1}{3}$
+  solution: '解：∵四边形$ABCD$是菱形，
 
-    ∵
+    ∴$AB=BC,AD\parallel BC$
 
-    ∴是等边三角形，
+    ∵$\angle ABC = 60^\circ$
 
-    ∴，
+    ∴$\triangle ABC$是等边三角形，
 
-    ∵，
+    ∴$AC = AB = 4$，
 
-    ∴
+    ∵$AF = 1$，
 
-    ∵
+    ∴$CF = AC - AF = 4 - 1 = 3$
 
-    ∴
+    ∵$AD \parallel BC$
 
-    ∴
+    ∴$\triangle AEF \sim \triangle CBF$
 
-    故答案为：'
+    ∴$\frac{AE}{BC}=\frac{AF}{CF}=\frac{1}{3}$
+
+    故答案为：$\frac{1}{3}$'
   knowledge_points:
   - 相似三角形
   - 菱形
@@ -426,54 +543,114 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-fangshan-er-fig13.png
 - id: 16
   type: 填空
   score: 2
-  question: '某校文艺部招聘主持人，有甲、乙、丙三名同学参加，学校设置了五轮比赛，规定：每一轮比赛分别决出第一、二、三名（不并列），对应名次的得分分别为（且均为正整数）．三名同学最后得分为五轮比赛得分之和，得分最高者中选，下表是三名同学在五轮比赛中的部分得分情况如下：
+  question: '某校文艺部招聘主持人，有甲、乙、丙三名同学参加，学校设置了五轮比赛，规定：每一轮比赛分别决出第一、二、三名（不并列），对应名次的得分分别为$x,y,z$（$x > y > z$且$x,y,z$均为正整数）．三名同学最后得分为五轮比赛得分之和，得分最高者中选，下表是三名同学在五轮比赛中的部分得分情况如下：
 
-    则的值为______，三名同学在五轮比赛中______获得的第二名最多．'
-  answer: ①. 5    ②. 甲
-  solution: '解： 每轮分别决出第一二三名（不并列），
+    一轮
 
-    ，
+    二轮
 
-    ，
+    三轮
 
-    乙的得分最高为，
+    四轮
 
-    ，均为正整数，
+    五轮
 
-    ，
+    总分
 
-    ，均为正整数，
+    甲
 
-    的最小值分别为，
+    y
 
-    ，
+    9
 
-    ，，，
+    乙
 
-    ，
+    x
 
-    乙4轮得第一，1轮得第二，
+    22
 
-    设甲有一轮得第一，则甲的得分至少，
+    丙
 
-    与甲的实际得分不符合
+    Z
 
-    故甲没有一轮得第一，丙有一轮得第一，
+    9
 
-    ，即丙剩下的三轮总分为3分，
+    则x的值为______，三名同学在五轮比赛中______获得的第二名最多．'
+  answer: ①.5②.甲
+  solution: '解：$\begin{array}{c}
 
-    剩下的三轮丙只能是3轮都是第三，
+    \bullet \\
 
-    丙1轮得第一，4轮得第三，
+    \bullet \quad \bullet \\
 
-    又 乙4轮得第一，1轮得第二，三人第一、第二和第三的总数都是5，
+    \bullet
 
-    甲4轮得第二，1轮得第三，即甲获得的第二名最多．
+    \end{array}$每轮分别决出第一二三名（不并列），
 
-    故答案为：5，甲．'
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$5(x+y+z)=9+22+9=40$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$x+y+z=8$，
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$乙的得分最高为$5x$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$22 \leq 5x$，x均为正整数，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$x\geq5$，
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$$'
   knowledge_points:
   - 综合
   module: geometryComprehensive
@@ -484,9 +661,13 @@ questions:
 - id: 17
   type: 解答
   score: 5
-  question: （第17题，详见原卷）
+  question: 计算：$\left(\pi -3\right)^{0}-4\sin 60^{\circ}+\left|-2\right|+\sqrt{12}$．
   answer: '3'
-  solution: ．
+  solution: '$\left(\pi -3\right)^{0}-4\sin 60^{\circ}+\left|-2\right|+\sqrt{12}$
+
+    $m=1+4\sqrt{3}+2+2\sqrt{3}$
+
+    $=3$．'
   knowledge_points:
   - 三角函数
   - 绝对值
@@ -500,15 +681,29 @@ questions:
 - id: 18
   type: 解答
   score: 5
-  question: 解不等式组：．
-  answer: ''
-  solution: '解：原不等式组为
+  question: '解不等式组：$\begin{cases}
 
-    解不等式①，得；
+    x < \dfrac{x + 1}{2} \\
 
-    解不等式②，得，
+    8 - 2x > 2 + x
 
-    原不等式组的解集为．'
+    \end{cases}$．'
+  answer: $x<1$
+  solution: '解：原不等式组为$\left\{\begin{array}{l}x<\frac{x+1}{2}\text{①}\\8-2x>2+x\text{②}\end{array}\right.$
+
+    解不等式①，得$x<1$；
+
+    解不等式②，得$x<2$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$原不等式组的解集为$x<1$．'
   knowledge_points:
   - 不等式
   - 不等式组
@@ -522,17 +717,27 @@ questions:
 - id: 19
   type: 解答
   score: 5
-  question: 已知，求代数式的值．
-  answer: ''
-  solution: '解：
+  question: 已知$2x^{2}+x-1=0$，求代数式$(x+2)^{2}+x(x-3)$的值．
+  answer: $5$
+  solution: '解：$(x+2)^{2}+x(x-3)$
 
-    ．
+    $x^{2}+4x+4+x^{2}-3x$
 
-    ，
+    $=2x^{2}+x+4$．
 
-    ，
+    $2x^{2}+x-1=0$，
 
-    原式．'
+    $: 2x^2 + x = 1$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$原式$=2x^{2}+x+4=5$．'
   knowledge_points:
   - 综合
   module: numbersAndExpressions
@@ -545,39 +750,43 @@ questions:
 - id: 20
   type: 解答
   score: 5
-  question: '已知关于的一元二次方程．
+  question: '已知关于x的一元二次方程$x^{2}-(m+1)x+m=0$．
 
     （1）求证：该方程总有两个实数根；
 
-    （2）若，且该方程的两个实数根的差为3，求的值．'
-  answer: （1）见解析    （2）
-  solution: '小问1详解】
+    （2）若$m < 0$，且该方程的两个实数根的差为3，求m的值．'
+  answer: （1）见解析（2）$m = -2$
+  solution: '【小问2详解】
 
-    证明：
+    解：$\begin{array}{c}
 
-    ，
+    \bullet \\
 
-    ，
+    \bullet \quad \bullet \\
 
-    ，
+    \bullet
 
-    该方程总有两个实数根．
+    \end{array}$原方程可化为$(x-m)(x-1)=0$，
 
-    【小问2详解】
+    $\ldots x_{1}=m, x_{2}=1$，（也可用求根公式求出两根）
 
-    解：原方程可化为，
+    $\therefore m<0$，
 
-    ，（也可用求根公式求出两根）
+    $\therefore 1 > m$，
 
-    ，
+    $\begin{array}{c}
 
-    ，
+    \bullet \\
 
-    该方程的两个实数根的差为3，
+    \bullet \quad \bullet \\
 
-    ．
+    \bullet
 
-    ．'
+    \end{array}$该方程的两个实数根的差为3，
+
+    $\therefore 1-m=3$．
+
+    $\therefore m = -2$．'
   knowledge_points:
   - 一元二次方程
   - 根的判别式
@@ -590,45 +799,73 @@ questions:
 - id: 21
   type: 解答
   score: 5
-  question: '如图，在中，于点，点在的延长线上，且，连接．
+  question: '如图，在$Y_{ABCD}$中，$AE \perp BC$于点E，点F在BC的延长线上，且$CF = BE$，连接DF．
 
-    （1）求证：四边形是矩形；
+    [图]
 
-    （2）连接，若，，，求的长．'
-  answer: （1）见解析    （2）
+    （1）求证：四边形$AEFD$是矩形；
+
+    （2）连接DE，若$\tan\angle ABC = 2$，$BE = 1$，$AD = 4$，求DE的长．'
+  answer: （1）见解析（2）$2\sqrt{5}$
   solution: '【小问1详解】
 
-    证明：四边形是平行四边形，
+    证明：$\begin{array}{c}
 
-    ，，
+    \bullet \\
 
-    ，
+    \bullet \quad \bullet \\
 
-    ，即，
+    \bullet
 
-    且，
+    \end{array}$四边形$ABCD$是平行四边形，
 
-    四边形是平行四边形，
+    $\therefore AD \parallel BC$，$AD = BC$，
 
-    ，
+    $\because CF = BE$，
 
-    ，
+    $CF + EC = BB + EC$，即$BC = EF$，
 
-    四边形是矩形．
+    $\therefore AD = EF$且$AD \parallel EF$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$四边形$AEFD$是平行四边形，
+
+    $\because AE \perp BC$，
+
+    $\angle AEF = 90^\circ$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$四边形$AEFD$是矩形．
 
     【小问2详解】
 
-    解：连接，
+    解：连接DE，
 
-    在中，，，
+    [图]
 
-    ，
+    在$Rt\triangle ABE$中，$\angle AEB = 90^\circ$，$BE = 1$，
 
-    ，
+    $\tan\angle ABC=\frac{AE}{BE}=2$，
 
-    在中，，，
+    $AE=2BE-2$，
 
-    ．'
+    在$Rt\triangle ADE$中，$\angle DAE=90^\circ$，$AD = 4$，
+
+    $DE=\sqrt{AE^{2}+AD^{2}}=\sqrt{2^{2}+4^{2}}=2\sqrt{5}$．'
   knowledge_points:
   - 勾股定理
   - 平行四边形
@@ -640,40 +877,61 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-fangshan-er-fig14.png
+  - figures/2024-fangshan-er-fig15.png
 - id: 22
   type: 解答
   score: 5
-  question: '在平面直角坐标系中，一次函数的图像经过点和．
+  question: '在平面直角坐标系xOy中，一次函数$y=kx+b\,(k\neq0)$的图像经过点$(4,1)$和$(0,-1)$．
 
     （1）求这个一次函数的解析式；
 
-    （2）当时，对于的每一个值，函数的值大于一次函数的值，直接写出的取值范围．'
-  answer: （1） （2）
+    （2）当$x > -2$时，对于x的每一个值，函数$y = mx \, (m \neq 0)$的值大于一次函数$y=kx+b\,(k\neq0)$的值，直接写出m的取值范围．'
+  answer: （1）$y=\frac{1}{2}x-1$ （2）$\frac{1}{2} \leq m \leq 1$
   solution: '【小问1详解】
 
-    解：∵一次函数的图象经过，，
+    解：∵一次函数$y=kx+b\,(k\neq0)$的图象经过$(4,1)$，$(0,-1)$，
 
-    ∴，
+    ∴$\begin{cases}
 
-    ∴，
+    4k + b = 1 \\
 
-    ∴一次函数解析式为；
+    0k + b = -1
+
+    \end{cases}$，
+
+    ∴$\left\{
+
+    \begin{array}{l}
+
+    k = \dfrac{1}{2} \\
+
+    b = -1
+
+    \end{array}
+
+    \right.$，
+
+    ∴一次函数解析式为$y=\frac{1}{2}x-1$；
 
     【小问2详解】
 
-    解：把代入，求得，
+    解：把$x = -2$代入$y=\frac{1}{2}x-1$，求得$y = -2$，
 
-    ∴函数与一次函数的交点为，
+    ∴函数$y = mx \, (m \neq 0)$与一次函数$y=\frac{1}{2}x-1$的交点为$(-2,-2)$，
 
-    把点代入，求得，
+    把点$(-2,-2)$代入$y = mx \, (m \neq 0)$，求得$m = 1$，
 
-    当两直线平行时，，
+    当两直线平行时，$m = \frac{1}{2}$，
 
     如图，
 
-    ∵当时，对于x的每一个值，函数的值大于一次函数的值，
+    [图]
 
-    ∴．'
+    ∵当$x > -2$时，对于x的每一个值，函数$y = mx \, (m \neq 0)$的值大于一次函数$y=\frac{1}{2}x-1$的值，
+
+    ∴$\frac{1}{2} \leq m \leq 1$．'
   knowledge_points:
   - 一次函数
   - 坐标系
@@ -683,60 +941,136 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-fangshan-er-fig16.png
 - id: 23
   type: 解答
   score: 6
   question: '3月22日是世界水日，世界水日的宗旨是唤起公众的节水意识、加强水资源保护．某校为提倡节约用水、增强节约用水意识，在全校开展了节约用水知识竞赛活动．七、八、九年级各有200名学生参加了知识竞赛活动，为了解三个年级的竞赛答题情况，从三个年级各随机抽取了20名学生的成绩进行调查分析，下面给出了部分信息：
 
-    ．七年级学生的成绩整理如下（单位：分）：
+    a．七年级学生的成绩整理如下（单位：分）：
 
-    ．八年级成绩的频数分布直方图如下（数据分成四组：）：
+    60
 
-    其中成绩在的数据如下（单位：分）：
+    67
 
-    ．三组样本数据的平均数、中位数、众数如下表所示：
+    69
+
+    75
+
+    75
+
+    75
+
+    77
+
+    77
+
+    78
+
+    78
+
+    80
+
+    80
+
+    80
+
+    80
+
+    86
+
+    86
+
+    88
+
+    88
+
+    89
+
+    96
+
+    b．八年级成绩的频数分布直方图如下（数据分成四组：$60\leq x<70,70\leq x<80,80\leq x<90,90\leq x\leq100$）：
+
+    [图]
+
+    其中成绩在$80 \leq x < 90$的数据如下（单位：分）：$81\ 81\ 81\ 82\ 83\ 84\ 85\ 86\ 87\ 89$
+
+    c．三组样本数据的平均数、中位数、众数如下表所示：
+
+    年级
+
+    平均数
+
+    中位数
+
+    众数
+
+    七年级
+
+    79.2
+
+    79
+
+    m
+
+    八年级
+
+    80.3
+
+    n
+
+    78
+
+    九年级
+
+    79.5
+
+    79
+
+    81
 
     根据所给信息，解答下列问题：
 
-    （1）______，______；
+    （1）$m =$______，$n =$______；
 
     （2）估计______年级学生的成绩高于本年级平均分的人数更多；
 
     （3）若成绩达到80分及以上为优秀，九年级抽出的20名学生中有10人优秀，估计三个年级此次竞赛成绩优秀的总人数．'
-  answer: （1）80，81 （2）八    （3）310名
+  answer: （1）80，81 （2）八（3）310名
   solution: '【小问1详解】
 
-    根据七年级的成绩可知，出现次数最多的是80，所以，
+    根据七年级的成绩可知，出现次数最多的是80，所以$m = 80$，
 
     由题意知，八年级学生的成绩中第10、第11位分别是81，81，
 
-    ∴；
+    ∴$n=\frac{81+81}{2}=81$；
 
     【小问2详解】
 
-    由题意知，七年级成绩在平均分以上的有10人，占总数的，
+    由题意知，七年级成绩在平均分以上的有10人，占总数的$\frac{10}{20}=\frac{1}{2}$，
 
-    ∴估计七年级学生的成绩高于平均分的人数为（人）；
+    ∴估计七年级学生的成绩高于平均分的人数为$200\times\frac{x}{2}=100$（人）；
 
-    八年级成绩在平均分以上的有11人，占总数的，
+    八年级成绩在平均分以上的有11人，占总数的$\frac{11}{20}$，
 
-    ∴估计八年级学生的成绩高于平均分的人数为（人），
+    ∴估计八年级学生的成绩高于平均分的人数为$200\times\frac{11}{20}=110$（人），
 
     ∵九年级成绩得平均数为79.5，中位数为79
 
     ∴九年级成绩大于平均数的人数小于10人，
 
-    ∴估计九年级学生的成绩高于平均分的人数小于（人），
+    ∴估计九年级学生的成绩高于平均分的人数小于$200\times\frac{x}{2}=100$（人），
 
-    ∵，
+    ∵$100<110$，
 
     ∴估计八年级学生的成绩高于平均分的人数更多；
 
     【小问3详解】
 
-    由题意知，七年级成绩优秀的人数占比为，八年级成绩优秀的人数占比为，九年级成绩优秀的人数占比为，
+    由题意知，七年级成绩优秀的人数占比为$\frac{10}{20}=\frac{1}{2}$，八年级成绩优秀的人数占比为$\frac{11}{20}$，九年级成绩优秀的人数占比为$\frac{10}{20}=\frac{1}{2}$，
 
-    ∴估计三个年级此次竞赛成绩优秀的总人数（人）．
+    ∴估计三个年级此次竞赛成绩优秀的总人数$200\times\frac{1}{2}+200\times\frac{11}{20}+200\times\frac{1}{2}=310$（人）．
 
     答：估计三个年级此次竞赛成绩优秀的总人数为310人．'
   knowledge_points:
@@ -749,60 +1083,68 @@ questions:
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2024-fangshan-er-fig17.png
 - id: 24
   type: 解答
   score: 6
-  question: '如图，是直径，点在上，且，连接并延长到点，连接，若．
+  question: '如图，AB是$\odot\odot$$[公式]$直径，点$C,D$在$\odot\odot$上，且$\angle COD=90^\circ$，连接AD并延长到点F，连接BF，若$\angle F=\frac{1}{2}\angle AOD$．
 
-    （1）求证：是的切线；
+    [图]
 
-    （2）若，求的长．'
-  answer: （1）见解析    （2）
+    （1）求证：BF是$\odot\odot$的切线；
+
+    （2）若$BF = \frac{4}{3}\sqrt{5},\ \angle BCD = 30^\circ$，求BC的长．'
+  answer: （1）见解析（2）$\sqrt{6}+\sqrt{2}$
   solution: '【小问1详解】
 
-    证明：如图1，连接，
+    证明：如图1，连接BD，
+
+    [图]
 
     图1
 
-    ∵是的直径，
+    ∵AB是$\odot\odot$的直径，
 
-    ∴，
+    ∴$\angle ADB=90^\circ$，
 
-    ∴，，
+    ∴$\angle BDF = 90^\circ$，$\angle DBF+\angle F=90^\circ$，
 
-    ∵，
+    ∵$\widehat{AD}=\widehat{AD}$，
 
-    ∴，
+    ∴$\angle ABD = \frac{1}{2} \angle AOD = \angle F$，
 
-    ∴，即，
+    ∴$\angle DBF+\angle ABD=90^{\circ}$，即$OB \perp BE$，
 
-    又∵是半径，
+    又∵OB是半径，
 
-    ∴是的切线．
+    ∴BF是$\odot\odot$的切线．
 
     【小问2详解】
 
-    解：∵，
+    解：∵$\widehat{BD}=\widehat{BD}$，
 
-    ∴，
+    ∴$\angle BAD=\angle BCD=30^{\circ}$，
 
-    ∴，，
+    ∴$\frac{AB}{\tan 30^{\circ}}=4$，$BD = AB \sin 30^{\circ} = 2$，
 
-    ∵，
+    ∵$\widehat{CD}=\widehat{CD}$，
 
-    ∴，
+    ∴$\angle CBD=\frac{1}{2}\angle COD=45^\circ$，
 
-    如图2，过点作于点，
+    如图2，过点D作$DG \perp BC$于点G，
+
+    [图]
 
     图2
 
-    ∴，，
+    ∴$DG=BD\cdot\sin45^{\circ}=\sqrt{2}$，$BG=BD\cdot\cos45^{\circ}=\sqrt{2}$，
 
-    ∴，
+    ∴$CG=\frac{DG}{\tan 30^{\circ}}=\sqrt{6}$，
 
-    ∴，
+    ∴$BC = CG + BG = \sqrt{6} + \sqrt{2}$，
 
-    ∴的长度为．'
+    ∴BC的长度为$\sqrt{6}+\sqrt{2}$．'
   knowledge_points:
   - 圆周角
   - 切线
@@ -812,32 +1154,98 @@ questions:
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2024-fangshan-er-fig18.png
+  - figures/2024-fangshan-er-fig19.png
+  - figures/2024-fangshan-er-fig20.png
 - id: 25
   type: 解答
   score: 6
-  question: '小平在学习过程中遇到一个函数，下面是小平对其研究的过程，请补充完整：
+  question: '小平在学习过程中遇到一个函数$y=\frac{1}{x-2}+x$，下面是小平对其研究的过程，请补充完整：
 
-    （1）函数的自变量的取值范围是______；
+    （1）函数$y=\frac{1}{x-2}+x$的自变量x的取值范围是______；
 
-    （2）下表是与的几组对应值．
+    （2）下表是y与x的几组对应值．
 
-    其中的值为______；
+    x
 
-    （3）①根据表格中的数据，在平面直角坐标系中，画出函数图象；
+    $\cdots$
 
-    ②过点作平行于轴的直线，结合图像解决问题：若直线与函数的图象有三个交点，则的取值范围是______．'
-  answer: （1） （2）4    （3）①见解析；②
+    $-2$
+
+    $-1$
+
+    $0$
+
+    $1$
+
+    $1.5$
+
+    $1.8$
+
+    $2.2$
+
+    $2.5$
+
+    $3$
+
+    $4$
+
+    $5$
+
+    $6$
+
+    $\cdots$
+
+    y
+
+    $\cdots$
+
+    $-1.75$
+
+    $-0.67$
+
+    $0.5$
+
+    $2$
+
+    $3.5$
+
+    $6.8$
+
+    $7.2$
+
+    $4.5$
+
+    m
+
+    $4.5$
+
+    $5.35$
+
+    $6.25$
+
+    $\cdots$
+
+    其中m的值为______；
+
+    （3）①根据表格中的数据，在平面直角坐标系xOy中，画出函数图象；
+
+    [图]
+
+    ②过点$(0,n)$作平行于x轴的直线l，结合图像解决问题：若直线l与函数$y=\frac{1}{x-2}+x$的图象有三个交点，则n的取值范围是______．'
+  answer: （1）$x \neq 2$ （2）4（3）①见解析；②$n > 4$
   solution: '【小问1详解】
 
-    解：∵，
+    解：∵$|x-2|\neq0$，
 
-    ∴，即，
+    ∴$x-2\ne0$，即$x \neq 2$，
 
-    故答案为：；
+    故答案为：$x \neq 2$；
 
     【小问2详解】
 
-    解：当时，，
+    解：当$x=3$时，$y=\frac{1}{3-2}+3=1+3=4$，
 
     故答案为：4；
 
@@ -845,9 +1253,11 @@ questions:
 
     （3）①描点，连线得，
 
-    ②观察函数图象可知，在直线时即，直线与函数有2个交点，在时，有3个交点，
+    [图]
 
-    故答案为：．'
+    ②观察函数图象可知，在直线$y = 4$时即$n = 4$，直线$y = 4$与函数$y=\frac{1}{x-2}+x$有2个交点，在$n > 4$时，有3个交点，
+
+    故答案为：$n > 4$．'
   knowledge_points:
   - 坐标系
   module: functions
@@ -855,56 +1265,87 @@ questions:
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2024-fangshan-er-fig21.png
+  - figures/2024-fangshan-er-fig22.png
 - id: 26
   type: 解答
   score: 6
-  question: '在平面直角坐标系中，点和点在抛物线上，设抛物线的对称轴为．
+  question: '在平面直角坐标系xOy中，点$(2,m)$和点$(4,n)$在抛物线$y=ax^{2}+bx(a\neq 0)$上，设抛物线的对称轴为$x = t$．
 
-    （1）若时，求的值；
+    （1）若$m = n$时，求t的值；
 
-    （2）已知点在抛物线上．若，比较大小，并说明理由．'
-  answer: （1）； （2），理由见解析．
+    （2）已知点$(-1,1),(1,y_{2}),(3,y_{1})$在抛物线上．若$mn<0$，比较$y_1\quad y_2\quad y_3$$[公式]$大小，并说明理由．'
+  answer: （1）$t=3$； （2）$y_{2}<y_{3}<y_{1}$，理由见解析．
   solution: '【小问1详解】
 
-    解：点和点在抛物线上，且，
+    解：$\begin{array}{c}
 
-    ，
+    \bullet \\
 
-    ；
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$点$(2,m)$和点$(4,n)$在抛物线$y=ax^{2}+bx(a\neq 0)$上，且$m = n$，
+
+    $4-t=t-2$，
+
+    $\therefore t = 3$；
 
     【小问2详解】
 
-    解：，理由如下：
+    解：$y_{2}<y_{3}<y_{1}$，理由如下：
 
-    ∵抛物线过点，
+    ∵抛物线过点$(2,m),(4,n)$，
 
-    ，，
+    $\therefore m=4a+2b$，$n = 16a + 4b$，
 
-    ，
+    $\because mn < 0$，
 
-    ，
+    $(4a+2b)(16a-4b)<0$，
 
-    或，
+    $\begin{cases}
 
-    ∵，
+    4a+2b>0 \\
 
-    ，即，
+    16a+4b<0
 
-    设点关于抛物线的对称轴的对称点为，
+    \end{cases}$或$\begin{cases}
 
-    点在抛物线上，
+    4a+2b<0 \\
 
-    点也在抛物线上，
+    16a+4b>0
 
-    由，得，
+    \end{cases}$，
 
-    ，
+    ∵$a > 0$，
 
-    当时，随的增大而减小，
+    $\ldots<-\frac{b}{2a}<2$，即$1<t<2$，
 
-    点在抛物线上，且，
+    设点$\left(3,y_{3}\right)$关于抛物线的对称轴$x = t$的对称点为$\left(x_{0},y_{3}\right)$，
 
-    ．'
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$点$\left(3,y_{3}\right)$在抛物线上，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$点$\left(x_{0},y_{3}\right)$也在抛物线上，
+
+    由$t-3=x_{0}-t$，得$x_{0}'
   knowledge_points:
   - 二次函数
   - 坐标系
@@ -915,69 +1356,79 @@ questions:
 - id: 27
   type: 解答
   score: 7
-  question: '如图，在正方形中，E是边上的一点（不与A，D重合），连接，点B关于直线的对称点是点F，连接，，直线与直线交于点，连接与直线交于点Q．
+  question: '如图，在正方形$ABCD$中，E是边AD上的一点（不与A，D重合），连接CE，点B关于直线CE的对称点是点F，连接CF，DF，直线CE与直线DF交于点P，连接BF与直线CE交于点Q．
+
+    [图]
 
     （1）依题意补全图形；
 
-    （2）求的度数；
+    （2）求$\angle CPF$的度数；
 
-    （3）用等式表示线段，，之间的数量关系，并证明．'
-  answer: （1）见解析    （2） （3），证明见解析
+    （3）用等式表示线段PC，PD，PF之间的数量关系，并证明．'
+  answer: （1）见解析（2）$\angle CPF=45^\circ$ （3）$PF + PD = \sqrt{2}PC$，证明见解析
   solution: '【小问1详解】
 
     依题意补全图形，如图．
 
-    【小问2详解】
+    [图]【小问2详解】
 
-    解：四边形是正方形，
+    解：$\begin{array}{c}
 
-    ，．
+    \bullet \\
 
-    点B，F是关于直线对称，
+    \bullet \quad \bullet \\
 
-    ，，．
+    \bullet
 
-    ．
+    \end{array}$四边形$ABCD$是正方形，
 
-    ．
+    $\therefore BC = CD$，$\angle BCD = 90^\circ$．
 
-    ，
+    $\begin{array}{c}
 
-    ．
+    \bullet \\
 
-    ，
+    \bullet \quad \bullet \\
 
-    ．
+    \bullet
 
-    ，即．
+    \end{array}$点B，F是关于直线CP对称，
+
+    $\angle CBF = \angle CFB$，$CP \perp BF$，$BC = CF$．
+
+    $\angle BCQ + \angle QBC = \angle BCQ + \angle PCD = 90^\circ$．
+
+    $\angle QBC = \angle PCD$．
+
+    $BC = CF = CD$，
+
+    $\angle CFD = \angle CDF$．
+
+    $\angle CFD=\angle CFO+\angle OFD=\angle CDF=\angle FCD+\angle CFD$，
+
+    $\angle QFD = \angle CPD$．
+
+    $\angle CPD = 45^\circ$，即$\angle CPF=45^\circ$．
 
     【小问3详解】
 
-    ．
+    $PF + PD = \sqrt{2}PC$．
 
-    证明：过点C作交延长线于点H．
+    证明：过点C作$CH \perp PC$交PF延长线于点H．
 
-    ．
+    [图]
 
-    ，
+    $\angle PCH=90^{\circ}$．
 
-    ．
+    $\angle CPF = 45^\circ$，
 
-    ．
+    $\angle H = \angle CPF = 45^\circ$．
 
-    ，
+    $\therefore PC = CH$．
 
-    ．
+    $\because CD = CF$，
 
-    ．
-
-    ．
-
-    ．
-
-    在中，．
-
-    ．'
+    $\angle CDF = \angl'
   knowledge_points:
   - 全等三角形
   - 勾股定理
@@ -987,60 +1438,72 @@ questions:
   difficulty: 压轴
   recommended_for:
   - L3
+  figures:
+  - figures/2024-fangshan-er-fig23.png
+  - figures/2024-fangshan-er-fig24.png
+  - figures/2024-fangshan-er-fig25.png
 - id: 28
   type: 解答
   score: 7
-  question: '在平面直角坐标系中，对于两点和直线，过点作直线的垂线，垂足为点，若点关于点的对称点为点，则称点为点关于直线和点的“垂足对称关联点”．已知点．
+  question: '在平面直角坐标系xOy中，对于两点$M,N$和直线l，过点M作直线l的垂线，垂足为点P，若点N关于点P的对称点为点H，则称点H为点M关于直线l和点N的“垂足对称关联点”．已知点$A(4,0),B(0,2)$．
 
-    （1）①点关于轴和点的“垂足对称关联点”的坐标为______；
+    （1）①点$(1,3)$关于x轴和点A的“垂足对称关联点”的坐标为______；
 
-    ②点为点关于直线和点的“垂足对称关联点”，则点到直线的距离为______；
+    ②点B为点A关于直线l和点$(6,-2)$的“垂足对称关联点”，则点A到直线l的距离为______；
 
-    （2）如图，点在线段上，点在轴下方，且满足，若直线上存在点关于轴和点的“垂足对称关联点”，求的取值范围．'
-  answer: （1）①；②1 （2）
+    （2）如图，点C在线段AB上，点D在x轴下方，且满足$OD = 1$，若直线$y=x+b$上存在点C关于x轴和点D的“垂足对称关联点”，求b的取值范围．
+
+    [图]'
+  answer: （1）①$(-2,0)$；②1 （2）$-9 < b \leq \sqrt{2}$
   solution: '【小问1详解】
 
-    解：①如图，过点作x轴的垂线，则垂足B所表示的数为，
+    解：①如图，过点$(1,3)$作x轴的垂线，则垂足B所表示的数为$(1,0)$，
 
-    ∵，
+    ∵$A(4,0)$，
 
-    ∴点关于轴和点的“垂足对称关联点”的坐标为，
+    ∴点$(1,3)$关于x轴和点A的“垂足对称关联点”的坐标为$(-2,0)$，
 
-    故答案为：；
+    [图]
 
-    ②∵，点，
+    故答案为：$(-2,0)$；
 
-    ∴它们中点的坐标为，即，
+    ②∵$B(0,2)$，点$(6,-2)$，
 
-    ∵点为点关于直线和点的“垂足对称关联点”，
+    ∴它们$[公式]$中点的坐标为$\frac{0+6}{2}-\frac{2-2}{2}$，即$(3,0)$，
 
-    ∴点到直线的距离为1，
+    ∵点B为点A关于直线l和点$(6,-2)$的“垂足对称关联点”，
+
+    ∴点A到直线l的距离为1，
 
     故答案为：1．
 
     【小问2详解】
 
-    ①如图，以点O为圆心，为半径作圆，当直线与圆O相切时，b最大，此时，过点O作直线的垂线，则，且，
+    [图]
 
-    ∵点D与点E中点为O，
+    ①如图，以点O为圆心，OD为半径作圆，当直线$y=x+b$与圆O相切时，b最大，此时，过点O作直线$y=x+b$的垂线，则$\angle EOB=45^\circ$，且$OE = 1$，
+
+    ∵点D与点E$[公式]$中点为O，
 
     ∴点C与点B重合，
 
-    ∵，
+    ∵$\angle OEF=90^\circ,\ \angle EOF=45^\circ,\ OE=1$，
 
-    ∴,
+    ∴$OF = \sqrt{2}$,
 
-    ∴；
+    ∴$b = \sqrt{2}$；
 
-    ②当点D与点重合时，点G关于点A的对称点H最远，此时b最小，如图，
+    ②当点D与点$R(-1,0)$重合时，点G关于点A的对称点H最远，此时b最小，如图，
 
-    ∵，
+    [图]
 
-    ∴点G关于点A的对称点H的坐标为,
+    ∵$G(1,0)，A(4,0)$，
 
-    将代入，得，
+    ∴点G关于点A的对称点H的坐标为$(9,0)$,
 
-    ∴的取值范围为．'
+    将$H(9,0)$代入$y=x+b$，得$b = -9$，
+
+    ∴b的取值范围为$-9 < b \leq \sqrt{2}$．'
   knowledge_points:
   - 一次函数
   - 坐标系
@@ -1048,3 +1511,8 @@ questions:
   difficulty: 压轴
   recommended_for:
   - L3
+  figures:
+  - figures/2024-fangshan-er-fig26.png
+  - figures/2024-fangshan-er-fig27.png
+  - figures/2024-fangshan-er-fig28.png
+  - figures/2024-fangshan-er-fig29.png

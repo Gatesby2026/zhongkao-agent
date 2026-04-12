@@ -1,85 +1,31 @@
 # ============================================================
 # 2024年北京石景山区中考数学二模试卷 — 逐题分析
 # ============================================================
-# 数据来源：knowledge-original/精品解析：2024年北京市石景山区中考二模数学试题（原卷版）.docx
-# 自动生成，部分数学公式可能显示不全（docx公式对象无法完整提取）
+# 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
+# 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
 # 满分：100分  时长：120分钟
 
 year: 2024
-district: 石景山区
+district: 石景山
 exam_type: 二模
 subject: 数学
 full_score: 100
 duration_minutes: 120
-total_questions: 32
+total_questions: 28
 structure: 8选择(16分) + 8填空(16分) + 12解答(68分)
 questions:
 - id: 1
   type: 选择
   score: 2
-  question: 本试卷共8页，共两部分，28道题．满分100分．考试时间120分钟．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 2
-  type: 选择
-  score: 2
-  question: 在试卷和答题卡上准确填写学校名称、姓名和准考证号．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 3
-  type: 选择
-  score: 2
-  question: 试题答案一律填涂或书写在答题卡上，在试卷上作答无效．在答题卡上，选择题、作图题用2B铅笔作答，其他试题用黑色字迹签字笔作答．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 4
-  type: 选择
-  score: 2
-  question: 考试结束，将本试卷、答题卡和草稿纸一并交回．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 1
-  type: 选择
-  score: 2
-  question: "下图是某几何体的展开图，该几何体是（    ）\nA. 三棱柱\tB. 三棱锥\tC. 四棱锥\tD. 圆柱"
-  answer: ''
-  solution: ''
+  question: '下图是某几何体的展开图，该几何体是（）
+
+    [图]
+
+    A.三棱柱B.三棱锥C.四棱锥D.圆柱'
+  answer: A
+  solution: '解：从展开图可知，该几何体有五个面，两个三角形的底面，三个长方形的侧面，因此该几何体是三棱柱，
+
+    故选：A．'
   knowledge_points:
   - 综合
   module: circles
@@ -89,14 +35,29 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-shijingshan-er-fig02.png
 - id: 2
   type: 选择
   score: 2
-  question: "中国的航天事业蓬勃发展，取得了显著的进展和突破．下列航天图标中，其文字上方的图案是中心对称图形的是（    ）\nA. 中国探月\tB. 中国航天\nC. 中国火箭\tD. 中国行星探测"
-  answer: ''
-  solution: ''
+  question: '中国的航天事业蓬勃发展，取得了显著的进展和突破．下列航天图标中，其文字上方的图案是中心对称图形的是（）
+
+    A.[图]中国探月B.[图]中国航天
+
+    C.[图]中国火箭D.[图]中国行星探测'
+  answer: C
+  solution: '解：A、中国探月图标旋转$180^\circ$后，不能与原图形重合，不是中心对称图形，故此选项不符合题意；
+
+    B、中国航天图标旋转$180^\circ$后，不能与原图形重合，不是中心对称图形，故此选项不符合题意；
+
+    C、中国火箭图标旋转$180^\circ$后，能与原图形重合，是中心对称图形，故此选项符合题意；
+
+    D、中国行星探测图标旋转$180^\circ$后，不能与原图形重合，不是中心对称图形，故此选项不符合题意；
+
+    故选：C．'
   knowledge_points:
   - 中心对称图形
+  - 旋转
   module: geometryComprehensive
   difficulty: 基础
   recommended_for:
@@ -104,12 +65,31 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-shijingshan-er-fig03.png
+  - figures/2024-shijingshan-er-fig04.png
+  - figures/2024-shijingshan-er-fig05.png
+  - figures/2024-shijingshan-er-fig06.png
 - id: 3
   type: 选择
   score: 2
-  question: "实数在数轴上的对应点的位置如图所示，下列结论中正确的是（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '实数$a, b$在数轴上的对应点的位置如图所示，下列结论中正确的是（
+
+    ）
+
+    [图]
+
+    A.$a > -1$B.$b > -a$C.$a+b<0$D.$ab > 0$'
+  answer: B
+  solution: '解：由数轴可得，$a<-1<0<2<b$，
+
+    ∴$-a<2$，$a+b>0$，$ab < 0$，
+
+    ∴$b > -a$，
+
+    ∴ACD错误，B正确，
+
+    故选：B．'
   knowledge_points:
   - 综合
   module: numbersAndExpressions
@@ -119,12 +99,22 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-shijingshan-er-fig07.png
 - id: 4
   type: 选择
   score: 2
-  question: "同时抛掷两枚质地均匀的硬币，两枚硬币全部正面向上的概率是（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '同时抛掷两枚质地均匀的硬币，两枚硬币全部正面向上的概率是（
+
+    ）
+
+    A.$\frac{1}{4}$B.$\frac{1}{3}$C.$\frac{1}{2}$D.$\frac{3}{4}$'
+  answer: A
+  solution: '解：∵抛掷两枚质地均匀的硬币，两枚硬币落地后的所有等可能的结果有：正正，正反，反正，反反，
+
+    ∴正面都朝上的概率是：$\frac{1}{4}$.
+
+    故选A．'
   knowledge_points:
   - 概率
   module: statisticsAndProbability
@@ -137,9 +127,17 @@ questions:
 - id: 5
   type: 选择
   score: 2
-  question: "若正多边形的一个外角是40°，则该正多边形的边数是(       )\nA. 9\tB. 8\tC. 7\tD. 6"
-  answer: ''
-  solution: ''
+  question: '若正多边形的一个外角是40°，则该正多边形的边数是(
+
+    )
+
+    A.9B.8C.7D.6'
+  answer: A
+  solution: '解：因为$360^{\circ}+40^{\circ}=9$，
+
+    则正多边形的边数为9．
+
+    故选：A．'
   knowledge_points:
   - 综合
   module: triangles
@@ -152,23 +150,67 @@ questions:
 - id: 6
   type: 选择
   score: 2
-  question: "如图，是的直径，是的弦，于点E，连接．若，，则的半径的长为（    ）\nA. 2\tB. \tC. 4\tD."
-  answer: ''
-  solution: ''
+  question: '如图，AB是$\odot\odot$的直径，CD是$\odot\odot$的弦，$AB \perp CD$于点E，连接BC．若$\angle B=22.5^\circ$，$CD = 4$，则$\odot\odot$的半径的长为（）
+
+    [图]
+
+    A.2B.$2\sqrt{2}$C.4D.$4\sqrt{2}$'
+  answer: B
+  solution: '解：连接$OC, OD$，如图所示：
+
+    [图]
+
+    ∵$\angle B=22.5^\circ$，
+
+    ∴$\angle AOC = 45^\circ$，
+
+    ∵$CD \perp AB, AB$是$\odot\odot$的直径，$CD = 4$，
+
+    ∴$\angle OED=90^\circ,\ ED=2,\ \angle AOD=\angle AOC=45^\circ$，
+
+    ∴$\angle ODE=45^{\circ},\ OE=2$，
+
+    ∴$OD=\sqrt{2^{2}+2}=2\sqrt{2}$，
+
+    故选B．'
   knowledge_points:
+  - 圆周角
+  - 垂径定理
   - 弦
+  - 勾股定理
   module: circles
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-shijingshan-er-fig08.png
+  - figures/2024-shijingshan-er-fig09.png
 - id: 7
   type: 选择
   score: 2
-  question: "a，b，c是实数．若，，则a，b，c之间的大小关系是（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: 'a，b，c是实数．若$a-b=c^{2}-2c+1$，$a+b=3c^{2}+8c+11$，则a，b，c之间的大小关系是（）
+
+    A.$a\quad b>c$B.$a\quad c>b$C.$c>a\ b$D.$b\quad a>c$'
+  answer: A
+  solution: '解：∵$a-b=c^{2}-2c+1=(c-1)^{2}$，
+
+    ∴$a\quad b$，
+
+    ∵$a-b-(a+b)=c^{2}-2c+1-(3c^{2}+8c+11)$，
+
+    ∴$-2b=-2c^{2}-10c-10$，
+
+    则$b = c^2 + 5c + 5$，
+
+    ∵$b-c=c^{2}+4c+5=(c+2)^{2}+1>0$，
+
+    ∴$b > c$，
+
+    ∴$a\quad b>c$，
+
+    故选：A．'
   knowledge_points:
   - 综合
   module: numbersAndExpressions
@@ -180,23 +222,71 @@ questions:
 - id: 8
   type: 选择
   score: 2
-  question: "在平面直角坐标系xOy中，y与x的函数关系如图所示，图象与x轴有三个交点，分别为，，．给出下面四个结论：\n①当时，；\n②当时，y随x的增大而增大；\n③点在此函数图象上，则符合要求的点只有一个；\n④将函数图象向右平移2个或4个单位长度，经过原点．\n上述结论中，所有正确结论的序号是（    ）\nA. ①②\tB. ②③\tC. ②④\tD. ③④"
-  answer: ''
-  solution: ''
+  question: '在平面直角坐标系xOy中，y与x的函数关系如图所示，图象与x轴有三个交点，分别为$(-4,0)$，$(-2,0)$，$(3,0)$．给出下面四个结论：
+
+    ①当$y>0$时，$-2 < x < 3$；
+
+    ②当$-\frac{5}{2} < x < 0$时，y随x的增大而增大；
+
+    ③点$M(m,m+2)$在此函数图象上，则符合要求的点只有一个；
+
+    ④将函数图象向右平移2个或4个单位长度，经过原点．
+
+    上述结论中，所有正确结论的序号是（）
+
+    [图]
+
+    A.①②B.②③C.②④D.③④'
+  answer: C
+  solution: '由图象可得，
+
+    当$y>0$时，$-2 < x < 3$或$x<-4$，故①错误；
+
+    当$-\frac{5}{2} < x < 0$时，y随x的增大而增大；故②正确；
+
+    ∵$M(m,m+2)$
+
+    ∴点M在一次函数$y=x+2$的图象上，
+
+    如图所示，
+
+    [图]
+
+    由图象可得，有3个交点
+
+    ∴点$M(m,m+2)$在此函数图象上，则符合要求$[公式]$点有3个，故③错误；
+
+    ∵函数经过点$(-2,0)$
+
+    ∴将函数图象向右平移2个或4个单位长度，经过原点$(0,0)$，故④正确．
+
+    综上所述，上述结论中，所有正确结论的序号是②④．
+
+    故选：C．'
   knowledge_points:
+  - 一次函数
   - 平移
   - 坐标系
-  module: geometryComprehensive
+  module: functions
   difficulty: 较难
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2024-shijingshan-er-fig10.png
+  - figures/2024-shijingshan-er-fig11.png
 - id: 9
   type: 填空
   score: 2
-  question: 若代数式有意义，则实数的取值范围是__________．
-  answer: ''
-  solution: ''
+  question: 若代数式$\frac{2}{x+1}$有意义，则实数x的取值范围是__________．
+  answer: $x \neq -1$
+  solution: '解：∵代数式$\frac{2}{x+1}$有意义，
+
+    ∴$x+1\neq0$，
+
+    ∴$x \neq -1$，
+
+    故答案为：$x \neq -1$．'
   knowledge_points:
   - 综合
   module: numbersAndExpressions
@@ -209,12 +299,14 @@ questions:
 - id: 10
   type: 填空
   score: 2
-  question: 分解因式：__________．
-  answer: ''
-  solution: ''
+  question: 分解因式：$x^{2}+6xy+9y$__________．
+  answer: $y(x+3)^2$
+  solution: '解：$x^{2}+6xy+9y=y\left(x^{2}+6x+9\right)=y\left(x^{2}+2\times3x+3^{2}\right)=y(x+3)^{2}$．
+
+    故答案为：$y(x+3)^2$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 因式分解
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -224,11 +316,35 @@ questions:
 - id: 11
   type: 填空
   score: 2
-  question: 方程组解为__________．
-  answer: ''
-  solution: ''
+  question: '方程组$\begin{cases}
+
+    x + y = 2 \\
+
+    2x - y = 7
+
+    \end{cases}$的解为__________．'
+  answer: $\left\{\begin{array}{l}x=3\\y=-1\end{array}\right.$
+  solution: '$\begin{aligned}
+
+    &x + y = 2 \quad \text{(1)} \\
+
+    &2x - y = 7 \quad \text{(2)}
+
+    \end{aligned}$
+
+    $① + ②$得：$3x = 9$
+
+    解得$x=3$
+
+    将$x=3$代入①得：$3 + y = 2$
+
+    解得$y=-1$，
+
+    ∴方程组$[公式]$解为：$\left\{\begin{array}{l}x=3\\y=-1\end{array}\right.$．
+
+    故答案为：$\left\{\begin{array}{l}x=3\\y=-1\end{array}\right.$．'
   knowledge_points:
-  - 综合
+  - 二元一次方程组
   module: equationsAndInequalities
   difficulty: 基础
   recommended_for:
@@ -239,12 +355,28 @@ questions:
 - id: 12
   type: 填空
   score: 2
-  question: 若，则代数式的值为__________．
-  answer: ''
-  solution: ''
+  question: 若$x^{2}-3x+1=0$，则代数式$(x+2)(x-2)+x(x-6)$的值为__________．
+  answer: $-6$
+  solution: '∵$x^{2}-3x+1=0$
+
+    ∴$x^{2}-3x=-1$
+
+    $(x+2)(x-2)+x(x-6)$
+
+    $y=x^{2}-4+x^{2}-6x$
+
+    $=2x^{2}-6x-4$
+
+    $=2(x^{2}-3x)-4$
+
+    $=2\times(-1)-4$
+
+    $= -6$．
+
+    故答案为：$-6$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 方差
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -254,12 +386,27 @@ questions:
 - id: 13
   type: 填空
   score: 2
-  question: 在平面直角坐标系中，若函数的图象经过点和，则的值为__________．
-  answer: ''
-  solution: ''
+  question: 在平面直角坐标系xOy中，若函数$y=\frac{k}{x}(k\neq0)$的图象经过点$A(-1,6)$和$B(3,m)$，则m的值为__________．
+  answer: $-2$
+  solution: '解：$\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$函数$y=\frac{k}{x}(k\neq0)$的图象经过点$A(-1,6)$和$B(3,m)$，
+
+    $-1\times6=3m$，
+
+    解得$m = -2$，
+
+    故答案为：$-2$．'
   knowledge_points:
+  - 反比例函数
   - 坐标系
-  module: geometryComprehensive
+  module: functions
   difficulty: 中档
   recommended_for:
   - L1
@@ -268,28 +415,76 @@ questions:
 - id: 14
   type: 填空
   score: 2
-  question: 如图，在中，，，，则的长为__________．
-  answer: ''
-  solution: ''
+  question: '如图，在$\triangle ABC$中，$DE \parallel BC$，$\frac{AD}{DB}=\frac{2}{3}$，$DE = 4$，则BC的长为__________．
+
+    [图]'
+  answer: $10$
+  solution: '解：$\because DE \parallel BC$，
+
+    ∴$\angle ADE = \angle ABC, \angle AED = \angle ACB$，
+
+    ∴$\triangle ADE \sim \triangle ABC$，
+
+    $AD\cdot AB=DE\cdot BC$，
+
+    $\because \frac{AD}{DB} = \frac{2}{3}$，
+
+    $\because AD:AB=2:5$，
+
+    $\therefore DE:BC=2:5$，
+
+    $\therefore DE = 4$，
+
+    $\therefore BC = 10$，
+
+    故答案为：$10$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 相似三角形
+  module: triangles
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-shijingshan-er-fig12.png
 - id: 15
   type: 填空
   score: 2
-  question: '某农科所试验田有3万棵水稻．为了考察水稻穗长的情况，于同一天从中随机抽取了50个稻穗进行测量，获得了它们的长度x（单位：），数据整理如下：
+  question: '某农科所试验田有3万棵水稻．为了考察水稻穗长的情况，于同一天从中随机抽取了50个稻穗进行测量，获得了它们的长度x（单位：cm），数据整理如下：
 
-    根据以上数据，估计此试验田的3万棵水稻中“良好”（穗长在范围内）的水稻数量为__________万棵．'
-  answer: ''
-  solution: ''
+    稻穗长度
+
+    $x<5.0$
+
+    $5.0 \leq x < 5.5$
+
+    $5.5 \leq x < 6.0$
+
+    $6.0 \leq x < 6.5$
+
+    $x\ 6.5$
+
+    稻穗个数
+
+    5
+
+    8
+
+    16
+
+    14
+
+    7
+
+    根据以上数据，估计此试验田的3万棵水稻中“良好”（穗长在$5.5\leq x<6.5$范围内）的水稻数量为__________万棵．'
+  answer: '1.8'
+  solution: '解：由题知，$3\times\frac{16+14}{50}=1.8$（万棵），
+
+    故答案为：$1.8$．'
   knowledge_points:
   - 综合
-  module: geometryComprehensive
+  module: statisticsAndProbability
   difficulty: 中档
   recommended_for:
   - L1
@@ -298,9 +493,21 @@ questions:
 - id: 16
   type: 填空
   score: 2
-  question: 如图，交通示意图中的A，B，C是产地（用■表示，旁边的数字表示产量，单位：吨），D，E，F是销地（用○表示，旁边的数字表示销量，单位：吨），产地与销地之间的线段旁小括号内的数字表示运货单价（单位：百元/吨）．在不考虑其他因素的前提下，将产地B的8吨货物全部运往销地，最少的运费为__________元；将A，B，C三个产地的产品全部运往销地，且每个销地的货物量恰好为该销地的销量，则调运的最小运费为__________元．
-  answer: ''
-  solution: ''
+  question: '如图，交通示意图中的A，B，C是产地（用■表示，旁边的数字表示产量，单位：吨），D，E，F是销地（用○表示，旁边的数字表示销量，单位：吨），产地与销地之间的线段旁小括号内的数字表示运货单价（单位：百元/吨）．在不考虑其他因素的前提下，将产地B的8吨货物全部运往销地，最少的运费为__________元；将A，B，C三个产地的产品全部运往销地，且每个销地的货物量恰好为该销地的销量，则调运的最小运费为__________元．
+
+    [图]'
+  answer: ①.2400②.6000
+  solution: '解：$1$将产地B的8吨货物全部运往销地最少的运费为：
+
+    $300\times8=2400$（元），
+
+    故答案为：$2400$；
+
+    $\textcircled{2}$A地的5吨必然运往D，B地要运$9-5=4$吨到D，剩下的$8-4=4$吨运往E地，C地的运5吨到F，运$6-5=1$吨到E，这样每个销地的货物量恰好为该销地的销量，可使运费最少，则最少运费为：
+
+    $100\times5+300\times4+400\times4+400\times5+700\times1=6000$（元），
+
+    故答案为：$6000$．'
   knowledge_points:
   - 综合
   module: geometryComprehensive
@@ -308,15 +515,21 @@ questions:
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2024-shijingshan-er-fig13.png
 - id: 17
   type: 解答
   score: 5
-  question: （第17题，详见原卷）
-  answer: ''
-  solution: ''
+  question: 计算：$\sqrt{27}-6\tan30^{\circ}=-1+(2024)^{0}$．
+  answer: $\sqrt{3}$
+  solution: '解：原式$x=3.5-6x-\frac{\sqrt{3}}{2}-1-1$
+
+    $=3\sqrt{3}-2\sqrt{3}$
+
+    $=\sqrt{3}$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 三角函数
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -326,9 +539,35 @@ questions:
 - id: 18
   type: 解答
   score: 5
-  question: 解不等式组：
-  answer: ''
-  solution: ''
+  question: '解不等式组：$\begin{cases}
+
+    3x-4<5x+2\\
+
+    2x<\dfrac{9-x}{4}
+
+    \end{cases}$'
+  answer: $-3<x<1$
+  solution: '解：原不等式组为$\begin{cases}
+
+    3x+4<5x+20\textcircled{1}\\
+
+    2x<\dfrac{9-x}{4}\textcircled{2}
+
+    \end{cases}$
+
+    解不等式①，得$x > -3$．
+
+    解不等式②，得$x<1$．
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$原不等式组的解集为$-3<x<1$．'
   knowledge_points:
   - 不等式
   - 不等式组
@@ -342,33 +581,89 @@ questions:
 - id: 19
   type: 解答
   score: 5
-  question: '如图，在四边形中，，，，平分交于点E．
+  question: '如图，在四边形$ABCD$中，$AD \parallel BC$，$\angle BCD = 90^\circ$，$AB = AC$，AE平分$\angle BAC$交BC于点E．
 
-    （1）求证：四边形是矩形；
+    [图]
 
-    （2）连接，若，，求的长．'
-  answer: ''
-  solution: ''
+    （1）求证：四边形$AECD$是矩形；
+
+    （2）连接BD，若$\angle ACD=30^\circ$，$AB=2$，求BD的长．'
+  answer: （1）见解析（2）$\sqrt{7}$
+  solution: '【小问1详解】
+
+    证明：$\therefore AD \parallel BC$，$\angle BCD = 90^\circ$，
+
+    $\angle ADC = 90^\circ$．
+
+    $\because AB = AC$，AE平分$\angle BAC$，
+
+    $\angle AEC = 90^\circ$．
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$四边形$AECD$是矩形．
+
+    【小问2详解】
+
+    解：如图，
+
+    [图]
+
+    $\angle BCD = 90^\circ$，$\angle1=30^{\circ}$，
+
+    $\angle2=60^\circ$．
+
+    ∵$AB = AC$，
+
+    $\therefore \triangle ABC$是等边三角形．
+
+    $\ldots BC = AC = AB = 2$．
+
+    在$Rt\triangle ADC$中，$\cos\angle1=\frac{CD}{AC}=\frac{\sqrt{3}}{2}$，
+
+    $\therefore CD = \sqrt{3}$．
+
+    在$Rt\triangle BCD$中，$BD=\sqrt{BC^{2}+CD^{2}}=\sqrt{7}$．'
   knowledge_points:
+  - 勾股定理
   - 矩形
-  module: quadrilaterals
+  - 三角函数
+  - 锐角三角函数
+  module: triangles
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-shijingshan-er-fig14.png
+  - figures/2024-shijingshan-er-fig15.png
 - id: 20
   type: 解答
   score: 5
   question: '列方程解应用题．
 
     某工程队承担了750米长的道路改造任务，工程队在施工完210米道路后，引进了新设备，每天的工作效率比原来提高了20％，结果共用22天完成了任务．求引进新设备前工程队每天改造道路多少米？'
-  answer: ''
-  solution: ''
+  answer: 30米
+  solution: '解：设引进新设备前工程队每天建造道路x米，则引进新设备后工程队每天改造$(1+20\%)x$米，
+
+    依题意得：$\frac{210}{x}+\frac{750-210}{(1+20\%)x}=22$，
+
+    解得：$x = 30$，
+
+    经检验，$x = 30$是所列方程的解，且符合题意．
+
+    答：引进新设备前工程队每天建造道路30米．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 分式方程
+  module: numbersAndExpressions
   difficulty: 中档
   recommended_for:
   - L1
@@ -377,15 +672,47 @@ questions:
 - id: 21
   type: 解答
   score: 5
-  question: '已知关于x的一元二次方程．
+  question: '已知关于x的一元二次方程$x^{2}-6mx+9m^{2}-1=0$．
 
     （1）求证：方程有两个不相等的实数根；
 
-    （2）设此方程的两个根分别为，，且．若，求m的值．'
-  answer: ''
-  solution: ''
+    （2）设此方程的两个根分别为$x_1$，$x_2$，且$x_{1}<x_{2}$．若$x_{2}=2x_{1}-3$，求m的值．'
+  answer: （1）见解析（2）$2$
+  solution: '【小问1详解】
+
+    证明：依题意，得$\Delta=(-6m)^{2}-4(9m^{2}-1)=36m^{2}-36m^{2}+4=4>0$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$此方程有两个不相等的实数根；
+
+    【小问2详解】
+
+    解：$x^{2}-6mx+9m^{2}-1=0$，
+
+    $\left(x-3m\right)^{2}=1$，
+
+    解得$x=3m\pm1$，
+
+    ∵$x_{1}<x_{2}$，
+
+    $\therefore x_{1}=3m-1$，$x_{2}=3m+1$，
+
+    $\therefore x_{2}=2x_{1}-3$，
+
+    $3m+1=2(3m-1)-3$，
+
+    $\therefore m=2$．'
   knowledge_points:
+  - 因式分解
   - 一元二次方程
+  - 根的判别式
   module: numbersAndExpressions
   difficulty: 中档
   recommended_for:
@@ -395,13 +722,51 @@ questions:
 - id: 22
   type: 解答
   score: 5
-  question: '在平面直角坐标系中，一次函数的图象由函数的图象平移得到，且经过点，与过点且平行于x轴的直线交于点．
+  question: '在平面直角坐标系xOy中，一次函数$y=kx+b(k\neq0)$的图象由函数$y = -2x$的图象平移得到，且经过点$A(1,-3)$，与过点$(0,3)$且平行于x轴的直线交于点B．
 
-    （1）求该函数的解析式及点的坐标；
+    （1）求该函数的解析式及点B的坐标；
 
-    （2）当时，对于的每一个值，函数的值大于的值且小于，直接写出的取值范围．'
-  answer: ''
-  solution: ''
+    （2）当$x > -2$时，对于x的每一个值，函数$y = -x + n$的值大于$y=kx+b(k\neq0)$的值且小于$5$，直接写出n的取值范围．'
+  answer: （1）$y = -2x - 1$，点B的坐标为$(-2,3)$ （2）$1\leq n\leq 3$
+  solution: '【小问1详解】
+
+    解：∵一次函数$y=kx+b(k\neq0)$的图象由函数$y = -2x$的图象平移得到，
+
+    ∴$k = -2$，
+
+    ∵一次函数$y=kx+b(k\neq0)$的图象过点$A(1,-3)$，
+
+    ∴$-2 + b = -3$，
+
+    解得：$b = -1$，
+
+    ∴该函数的解析式为$y = -2x - 1$，
+
+    ∵一次函数$y = -2x - 1$的图象与过点$(0,3)$且平行于x轴的直线交于点B，
+
+    ∴把$y=3$代入$y = -2x - 1$得：$3=-2x-1$，
+
+    解得：$x = -2$，
+
+    ∴点B的坐标为$(-2,3)$．
+
+    【小问2详解】
+
+    如图所示：
+
+    [图]
+
+    把$(-2,3)$代入$y = -x + n$得$2+n=3$，
+
+    解得：$n = 1$，
+
+    把$(-2,5)$代入$y = -x + n$得$2+n=5$，
+
+    解得：$n = 3$，
+
+    ∵$x > -2$时，对于x的每一个值，函数$y = -x + n$的值大于$y=kx+b(k\neq0)$的值且小于$5$，
+
+    ∴n的取值范围为$1\leq n\leq 3$．'
   knowledge_points:
   - 一次函数
   - 平移
@@ -412,6 +777,8 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-shijingshan-er-fig16.png
 - id: 23
   type: 解答
   score: 6
@@ -419,11 +786,37 @@ questions:
 
     a．抽取的七、八年级学生的竞赛成绩：
 
-    七年级：78  79  81  82  83  85  86  88  90  92  92  92  94  96  98  100
+    七年级：78
 
-    八年级：70  78  80  81  83  84  87  90  90  93  93  93  96  98  100  100
+    79  81  82  83  85  86  88  90  92  92  92  94  96  98  100
+
+    八年级：70
+
+    78  80  81  83  84  87  90  90  93  93  93  96  98  100  100
 
     b．抽取的七、八年级学生的竞赛成绩的平均数、中位数、众数：
+
+    平均数
+
+    中位数
+
+    众数
+
+    七年级
+
+    88.5
+
+    89
+
+    n
+
+    八年级
+
+    88.5
+
+    m
+
+    93
 
     根据以上信息，回答下列问题：
 
@@ -432,9 +825,30 @@ questions:
     （2）对于抽取的七、八年级学生竞赛成绩，成绩更稳定的是__________（填“七年级”或“八年级”）；
 
     （3）成绩在95分以上的学生可获得一等奖．若该校八年级有200名学生，估计此次知识竞赛八年级学生获得一等奖的约为__________人．'
-  answer: ''
-  solution: ''
+  answer: （1）m的值为90，n的值为92 （2）七年级（3）50
+  solution: '【小问1详解】
+
+    解：∵八年级竞赛成绩从小到大第8、9两个数据分别是90、90，
+
+    ∴$m = \frac{90 + 90}{2} = 90$；
+
+    ∵七年级竞赛成绩出现次数最多为92，
+
+    ∴$n = 92$；
+
+    【小问2详解】
+
+    解：∵七年级竞赛成绩在78和100之间波动，八年级竞赛成绩在70和100之间波动，
+
+    ∴七年级成绩更稳定；
+
+    【小问3详解】
+
+    $200\times\frac{4}{16}=50$（人）
+
+    答：估计此次知识竞赛八年级学生获得一等奖的约为50人'
   knowledge_points:
+  - 统计
   - 平均数
   - 中位数
   - 众数
@@ -446,40 +860,193 @@ questions:
 - id: 24
   type: 解答
   score: 6
-  question: '如图，过外一点P作的两条切线，，切点分别为A，B，是的直径，连接并延长交直线于点D．
+  question: '如图，过$\odot\odot$外一点P作$\odot\odot$的两条切线PA，PB，切点分别为A，B，AC是$\odot\odot$的直径，连接CB并延长交直线AP于点D．
 
-    （1）求证：；
+    [图]
 
-    （2）延长交的延长线于点E．若的半径为，，求的长．'
-  answer: ''
-  solution: ''
+    （1）求证：$PD = PA$；
+
+    （2）延长BP交CA的延长线于点E．若$\odot\odot$的半径为$\sqrt{2}$，$\sin E = \frac{1}{3}$，求BC的长．'
+  answer: （1）见解析（2）$\frac{4\sqrt{3}}{3}$
+  solution: '【小问1详解】
+
+    证明：连接OB，如图1．
+
+    [图]
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$PA，PB是$\odot\odot$的切线，OA，OB是$\odot\odot$的半径，
+
+    $\therefore PA = PB$，$\angle OAP=\angle OBP=90^{\circ}$，
+
+    $\angle D+\angle C=96^{\circ}$，$\angle1+\angle2=90^{\circ}$．
+
+    $\because OB = OC$，
+
+    $\angle C=\angle 2$，
+
+    $\angle 1 = \angle D$，
+
+    $\therefore PD = PB$．
+
+    又$\because PA = PB$，
+
+    $\therefore PD = PA$．
+
+    【小问2详解】
+
+    解：连接OB，AB，如图2．
+
+    [图]
+
+    在$Rt\triangle PAE$中，$\sin E=\frac{PA}{PE}=\frac{1}{3}$，
+
+    设$PA = x$，$PE = 3x$．则$PD = PB = PA = x$，$AE = 2\sqrt{2}x$．
+
+    在$Rt\triangle OBE$中，$\sin E = \frac{OB}{OE} = \frac{1}{3}$，即$\frac{\sqrt{2}}{\sqrt{2}+2\sqrt{2}}=\frac{1}{3}$．解得$x = 1$．
+
+    $\therefore AD = 2$，$CD=\sqrt{AC^{2}+AD^{2}}=2\sqrt{5}$．
+
+    $\because AC$是$\odot\odot$的直径，
+
+    $\angle CBA = 90^\circ$．
+
+    $\angle CBA = \angle CAD - 90^\ci'
   knowledge_points:
+  - 圆周角
   - 切线
-  module: circles
+  - 相似三角形
+  - 勾股定理
+  module: triangles
   difficulty: 较难
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2024-shijingshan-er-fig17.png
+  - figures/2024-shijingshan-er-fig18.png
+  - figures/2024-shijingshan-er-fig19.png
 - id: 25
   type: 解答
   score: 6
   question: '中国茶文化博大精深，自古以来中国人有饮茶的传统．某校茶文化社团探究了刚泡好的茶水达到最佳饮用口感的时间．部分内容如下：
 
-    a．探究活动在同一社团活动室进行，室温；
+    a．探究活动在同一社团活动室进行，室温$25^\circ\mathrm{C}$；
 
-    b．经查阅资料得知，茶水口感与茶叶类型及水的温度有关．某种普洱茶用的水冲泡，等茶水温度降至饮用，口感最佳；某种绿茶用的水冲泡，等茶水温度降至饮用，口感最佳；
+    b．经查阅资料得知，茶水口感与茶叶类型及水的温度有关．某种普洱茶用$95^\circ\mathrm{C}$的水冲泡，等茶水温度降至$60^\circ C$饮用，口感最佳；某种绿茶用$85^\circ\mathrm{C}$的水冲泡，等茶水温度降至$60^\circ C$饮用，口感最佳；
 
-    c．同时用不同温度的热水冲泡茶叶，记放置时间为x（单位：），普洱茶茶水的温度为（单位：），绿茶茶水的温度为（单位：）．记录的部分数据如下：
+    c．同时用不同温度的热水冲泡茶叶，记放置时间为x（单位：$\min$），普洱茶茶水的温度为$y_{1}$（单位：$^\circ C$），绿茶茶水的温度为$y_{2}$（单位：$^\circ C$）．记录的部分数据如下：
+
+    x
+
+    0$[公式]$0
+
+    1.0
+
+    2.0
+
+    3.0
+
+    4.0
+
+    5.0
+
+    6.0
+
+    7.0
+
+    8.0
+
+    9.0
+
+    10.0
+
+    $y_{1}$
+
+    95.0
+
+    88.5
+
+    82.6
+
+    77.2
+
+    72.4
+
+    68.0
+
+    64.0
+
+    60.3
+
+    57.1
+
+    54.1
+
+    51.4
+
+    $y_{2}$
+
+    85.0
+
+    79.5
+
+    74.5
+
+    70.0
+
+    65.8
+
+    62.0
+
+    58.6
+
+    55.5
+
+    52.7
+
+    50.2
+
+    47.9
 
     对以上数据进行分析，补充完成以下内容．
 
-    （1）可以用函数刻画与x、与x之间的关系，在同一平面直角坐标系中，已经画出与x的函数图象，请画出与x的函数图象；
+    （1）可以用函数刻画$y_{1}$与x、$y_{2}$与x之间的关系，在同一平面直角坐标系xOy中，已经画出$y_{1}$与x的函数图象，请画出$y_{2}$与x的函数图象；
 
-    （2）探究活动中，当绿茶茶水的放置时间约为__________时，其饮用口感最佳，此时普洱茶茶水的温度约为__________（结果保留小数点后一位）；
+    [图]
 
-    （3）探究活动中，当普洱茶茶水的温度为时，再继续放置，测得其温度为，则m__________60（填“>”“=”或“﹤”）．'
-  answer: ''
-  solution: ''
+    （2）探究活动中，当绿茶茶水的放置时间约为__________$\min$时，其饮用口感最佳，此时普洱茶茶水的温度约为__________$^\circ C$（结果保留小数点后一位）；
+
+    （3）探究活动中，当普洱茶茶水的温度为$90^\circ$时，再继续放置$6\min$，测得其温度为$m^{\circ}\mathrm{C}$，则m__________60（填“>”“=”或“﹤”）．'
+  answer: （1）见详解（2）5.5；66.0 （3）>
+  solution: '【小问1详解】
+
+    解：依题意，得$y_{2}$与x的函数图象，如图所示：
+
+    [图]【小问2详解】
+
+    解：∵某种普洱茶用$95^\circ\mathrm{C}$的水冲泡，等茶水温度降至$60^\circ C$饮用，口感最佳；某种绿茶用$85^\circ\mathrm{C}$的水冲泡，等茶水温度降至$60^\circ C$饮用，口感最佳；且结合函数图象
+
+    ∴绿茶茶水降至$60^\circ C$饮用，大概时间轻为5.5$\min$，其饮用口感最佳，
+
+    此时普洱茶茶水的温度约为$66.0^\circ$（结果保留小数点后一位）；
+
+    故答案为：5.5；66.0．
+
+    【小问3详解】
+
+    解：∵某种普洱茶用$88.5^\circ\mathrm{C}$的水冲泡，放置$6\min$，此时测得其温度为接近$60.3^{\circ}(60.3-60)$，
+
+    ∴当普洱茶茶水的温度为$90^\circ$时，再继续放置$6\min$，测得其温度为$m^{\circ}\mathrm{C}$，则$m > 60$
+
+    故答案为：>．'
   knowledge_points:
   - 坐标系
   module: functions
@@ -487,17 +1054,80 @@ questions:
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2024-shijingshan-er-fig20.png
+  - figures/2024-shijingshan-er-fig21.png
 - id: 26
   type: 解答
   score: 6
-  question: '在平面直角坐标系中，点，在抛物线上．
+  question: '在平面直角坐标系xOy中，点$M(2,m)$，$N(4,n)$在抛物线$y = x^3 - 2bx + c$上．
 
-    （1）若，求b的值；
+    （1）若$m = n$，求b的值；
 
-    （2）若点在抛物线上，对于，都有，求b取值范围．'
-  answer: ''
-  solution: ''
+    （2）若点$T(x_{\lambda},p)$在抛物线上，对于$0 < x_0 < 1$，都有$m<p<n$，求b的取值范围．'
+  answer: （1）$3$ （2）$\frac{3}{2} \leq b \leq 2$
+  solution: '【小问1详解】
+
+    解：由题意，抛物线的对称轴为$x = \frac{-2b}{-2} = b$．
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$点$M(2,m)$，$N(4,n)$在抛物线$y = x^3 - 2bx + c$上，且$m = n$，
+
+    $4-b=b-2$．
+
+    $\therefore b = 3$．
+
+    【小问2详解】
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$点$M(2,m)$，$N(4,n)$，$T(x_{\lambda},p)$在抛物线$y = x^3 - 2bx + c$上，
+
+    $\therefore m=4-4b+c$，$n=16-8b+c$，$p = x_0^2 - 2hx_0 + c$．
+
+    $\therefore m < p$，
+
+    $\therefore p-m>0$．
+
+    即$\left(x_{1}^{2}-2bx_{0}+c\right)\cdot(4-4b+c)>0$，$(x-2)(x_n+2-2b)>0$．
+
+    $\therefore 0<x_{0}<1$，
+
+    $\therefore x_0-2<0$，
+
+    $x_{1}+2-2b<0$，$x_{0}<2b-2$，
+
+    $\therefore 2b-2\perp$，
+
+    $\therefore b = \frac{3}{2}$．
+
+    $\therefore p<n$，
+
+    $\therefore p-n<0$．
+
+    即$x_{0}^{2}-2bx_{0}+c)-(-16-8b+c)<0$，$(x-4)(x_n+4-2b)<0$，
+
+    $\therefore 0<x_{0}<1$，
+
+    $\therefore x_{0}-4<0$，
+
+    $x_n '
   knowledge_points:
+  - 二次函数
+  - 不等式
   - 坐标系
   module: functions
   difficulty: 压轴
@@ -506,44 +1136,184 @@ questions:
 - id: 27
   type: 解答
   score: 7
-  question: '在正方形中，E是边上的一动点（不与点A，D重合），连接，点C关于直线的对称点为F，连接，．
+  question: '在正方形$ABCD$中，E是边AD上的一动点（不与点A，D重合），连接BE，点C关于直线BE的对称点为F，连接FA，FB．
 
-    （1）如图1，若是等边三角形，则__________；
+    [图]
 
-    （2）如图2，延长交的延长线于点M，连接交于点H，连接．
+    （1）如图1，若$\triangle ABF$是等边三角形，则$\angle ABE =$__________$\text{o}$；
 
-    ①求的大小；
+    （2）如图2，延长BE交FA$[公式]$延长线于点M，连接CF交BE于点H，连接DM．
 
-    ②用等式表示线段，，之间的数量关系，并证明．'
-  answer: ''
-  solution: ''
+    ①求$\angle MFH$的大小；
+
+    ②用等式表示线段MB，MD，AB之间的数量关系，并证明．'
+  answer: （1）15（2）①$45^\circ$；②$MB^{2}+MD^{2}=2AB^{2}$，见解析
+  solution: '【小问1详解】
+
+    解：$\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$四边形$ABCD$是正方形，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\angle ABC = 90^\circ$，
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$$\triangle ABF$是等边三角形，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\angle ABF = 60^\circ$，
+
+    $\angle FBC = \angle ABF + \angle ABC = 150^\circ$，
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$点C关于直线BE的对称点为F，
+
+    $\angle PBE = \angle CBE = \frac{1}{2} \angle PBC = 75^\circ$，
+
+    $\angle ABE = \angle ABC - \angle CBE = 15^\circ$，
+
+    故答案为：$15$．
+
+    【小问2详解】
+
+    解：①$\begin{array}{c}
+
+    \bullet \\
+
+    \bullet'
   knowledge_points:
+  - 全等三角形
+  - 勾股定理
   - 正方形
   - 动点
   module: triangles
   difficulty: 压轴
   recommended_for:
   - L3
+  figures:
+  - figures/2024-shijingshan-er-fig22.png
+  - figures/2024-shijingshan-er-fig23.png
 - id: 28
   type: 解答
   score: 7
-  question: '在平面直角坐标系中，的半径为1，P为外一点．给出如下定义：以线段为对角线作矩形，若点M在内或上，点N在外，则称矩形是点P的“圆伴矩形”．
+  question: '在平面直角坐标系xOy中，$\odot\odot$的半径为1，P为$\odot\odot$外一点．给出如下定义：以线段OP为对角线作矩形$OMPN$，若点M在$\odot\odot$内或$\odot\odot$上，点N在$\odot\odot$外，则称矩形$OMPN$是点P的“圆伴矩形”．
 
-    例如，图1中的矩形是点P的一个“圆伴矩形”．
+    例如，图1中的矩形$OMPN$是点P的一个“圆伴矩形”．
 
-    （1）已知矩形是点A的“圆伴矩形”且点N在外，
+    [图][图]
 
-    ①若点A的坐标为且点M在上，则矩形的面积是__________；
+    （1）已知矩形$OMAN$是点A的“圆伴矩形”且点N在$\odot\odot$外，
 
-    ②若点A的坐标为，则点N的横坐标t的取值范围是__________；
+    ①若点A的坐标为$(2,1)$且点M在$\odot\odot$上，则矩形$OMAN$的面积是__________；
 
-    （2）已知，直线与x轴，y轴分别交于点C，D．若线段上存在点N，使得矩形是点B的“圆伴矩形”（点在外），直接写出b的取值范围．'
-  answer: ''
-  solution: ''
+    ②若点A的坐标为$(2,0)$，则点N的横坐标t的取值范围是__________；
+
+    （2）已知$OB = 2$，直线$y = \frac{1}{2}x + b (b < 0)$与x轴，y轴分别交于点C，D．若线段CD上存在点N，使得矩形$OMBN$是点B的“圆伴矩形”（点N在$\odot\odot$外），直接写出b的取值范围．'
+  answer: （1）①2；②$\frac{3}{2}\leq t<2$ （2）$-\sqrt{3}<b\leq-\dfrac{\sqrt{3}}{2}$或$\frac{\sqrt{3}}{2}\leq b<\sqrt{5}$
+  solution: '【小问1详解】
+
+    ①如图，由题可得点M坐标为$(0,1)$，
+
+    即$OM=1,\ ON=2,$
+
+    ∴矩形$OMAN$的面积是$1\times2=2$；
+
+    [图]
+
+    ②如图，以OA为直径作圆C，则点M，N在圆C上，
+
+    又∵点M在$\odot\odot$内或边上，
+
+    ∴$0<OM\leq1$，
+
+    当$OM = AN = 1$时，过点N作$NB \perp x$轴于点B，
+
+    ∵$\cos\angle OAN=\frac{AN}{OA}=\frac{AB}{AN}$，即$\frac{1}{2}=\frac{AB}{1}$，
+
+    解得：$AB = \frac{1}{2}$，
+
+    ∴$OB-OA-AB=2-\frac{3}{2}$；
+
+    ∴点N的横坐标t的取值范围是$\frac{3}{2}\leq t<2$；
+
+    [图]【小问2详解】
+
+    解：若$b>0$，当$OM = 1$，ON最小，
+
+    当点N在x轴负半轴上时，b值最小，这时$ON = \sqrt{OB^{2} - BN^{2}} = \sqrt{2^{2} - 1^{2}} = \sqrt{3}$，
+
+    [图]
+
+    ∴点N的坐标为$(-\sqrt{3},0)$，
+
+    代入$y = \frac{1}{2}x + b (b < 0)$可得：$b = \frac{\sqrt{3}}{2}$；
+
+    当$OB \perp CD$时，b值最大，
+
+    [图]
+
+    令$y = 0$，则$\frac{1}{2}x + b = 0$，解得：$x = -2b$，
+
+    ∴$OC = 2b$，
+
+    当$x = 0$时，$y = b$，
+
+    ∴$OD = b$，
+
+    ∴$\tan\angle CDO=\frac{OC}{OD}=\frac{OB}{BD}$，即$\frac{2b}{b}=\frac{2}{BD}$，
+
+    ∴$BD = 1$，
+
+    ∴$OD=\sqrt{OB^{2}+BD^{2}}=\sqrt{2^{2}+1^{2}}=\sqrt'
   knowledge_points:
+  - 一次函数
+  - 切线
+  - 勾股定理
   - 矩形
+  - 三角函数
   - 坐标系
-  module: quadrilaterals
+  module: triangles
   difficulty: 压轴
   recommended_for:
   - L3
+  figures:
+  - figures/2024-shijingshan-er-fig24.png
+  - figures/2024-shijingshan-er-fig25.png
+  - figures/2024-shijingshan-er-fig26.png
+  - figures/2024-shijingshan-er-fig27.png
+  - figures/2024-shijingshan-er-fig28.png
+  - figures/2024-shijingshan-er-fig29.png

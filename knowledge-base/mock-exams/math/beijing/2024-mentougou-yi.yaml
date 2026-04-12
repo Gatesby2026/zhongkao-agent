@@ -1,8 +1,8 @@
 # ============================================================
 # 2024年北京门头沟区中考数学一模试卷 — 逐题分析
 # ============================================================
-# 数据来源：knowledge-original/精品解析：2024年北京市门头沟区九年级中考一模数学试题（原卷版）.docx
-# 自动生成，部分数学公式可能显示不全（docx公式对象无法完整提取）
+# 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
+# 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
 # 满分：100分  时长：120分钟
 
 year: 2024
@@ -11,90 +11,25 @@ exam_type: 一模
 subject: 数学
 full_score: 100
 duration_minutes: 120
-total_questions: 32
+total_questions: 28
 structure: 8选择(16分) + 8填空(16分) + 12解答(68分)
 questions:
 - id: 1
   type: 选择
   score: 2
-  question: 本试卷共10页，共三道大题，28个小题．满分100分．考试时间120分钟．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 2
-  type: 选择
-  score: 2
-  question: 在试卷和答题卡上准确填写学校和姓名，并将条形码粘贴在答题卡相应位置处．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 3
-  type: 选择
-  score: 2
-  question: 试题答案一律填涂或书写在答题卡上，在试卷上作答无效．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 4
-  type: 选择
-  score: 2
-  question: 在答题卡上，选择题、作图题用2B铅笔作答，其它试题用黑色字迹签字笔作答．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 5
-  type: 选择
-  score: 2
-  question: 考试结束，将试卷、答题卡和草稿纸一并交回．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 1
-  type: 选择
-  score: 2
-  question: "下列几何体中，俯视图是三角形的是（　）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '下列几何体中，俯视图是三角形的是（　）
+
+    A.[图]B.[图]C.[图]D.[图]'
+  answer: D
+  solution: '解：A该圆锥的俯视图是带圆心的圆，故本选项不符合题意；
+
+    B.该圆柱的俯视图是圆，故本选项不符合题意；
+
+    C.该正方体的俯视图是正方形，故本选项不符合题意；
+
+    D.该三棱柱的俯视图是三角形，故本选项符合题意．
+
+    故选：D．'
   knowledge_points:
   - 综合
   module: triangles
@@ -104,15 +39,25 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-mentougou-yi-fig02.png
+  - figures/2024-mentougou-yi-fig03.png
+  - figures/2024-mentougou-yi-fig04.png
+  - figures/2024-mentougou-yi-fig05.png
 - id: 2
   type: 选择
   score: 2
-  question: "近几年全国各省市都在发展旅游业，让游客充分感受地域文化，据统计，某市2023年的游客接待量为210000000人次，将210000000用科学记数法表示为（   ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '近几年全国各省市都在发展旅游业，让游客充分感受地域文化，据统计，某市2023年的游客接待量为210000000人次，将210000000用科学记数法表示为（）
+
+    A.$2.1\times10^{7}$B.$2.1\times10^{8}$C.$2.1\times10^{9}$D.$2.1\times10^{10}$'
+  answer: B
+  solution: '解：$210000000=2.1\times10^{8}$，
+
+    故选：B．'
   knowledge_points:
   - 统计
   - 科学记数法
+  - 绝对值
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -123,12 +68,23 @@ questions:
 - id: 3
   type: 选择
   score: 2
-  question: "下图是手机的一些手势密码图形，其中既是轴对称图形又是中心对称图形的是（   ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '下图是手机的一些手势密码图形，其中既是轴对称图形又是中心对称图形的是（）
+
+    A.[图]B.[图]C.[图]D.[图]'
+  answer: C
+  solution: '解：A、原图是中心对称图形，不是轴对称图形，故本选项不符合题意；
+
+    B、原图是轴对称图形，不是中心对称图形，故本选项不符合题意；
+
+    C、原图既是中心对称图形，又是轴对称图形，故本选项符合题意；
+
+    D、原图既不是轴对称图形，也不是中心对称图形，故本选项不符合题意．
+
+    故选：C．'
   knowledge_points:
   - 中心对称图形
   - 轴对称图形
+  - 旋转
   - 轴对称
   module: geometryComprehensive
   difficulty: 基础
@@ -137,12 +93,25 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-mentougou-yi-fig06.png
+  - figures/2024-mentougou-yi-fig07.png
+  - figures/2024-mentougou-yi-fig08.png
+  - figures/2024-mentougou-yi-fig09.png
 - id: 4
   type: 选择
   score: 2
-  question: "一个正n边形的每一个外角都是60°，则这个正n边形是（　　）\nA 正四边形\tB. 正五边形\tC. 正六边形\tD. 正七边形"
-  answer: ''
-  solution: ''
+  question: '一个正n边形的每一个外角都是60°，则这个正n边形是（　　）
+
+    A.正四边形B.正五边形C.正六边形D.正七边形'
+  answer: C
+  solution: '解：∵一个正n边形的每一个外角都是60°，
+
+    ∴n＝360°÷60°＝6．
+
+    这个多边形是正六边形，
+
+    故选C．'
   knowledge_points:
   - 综合
   module: triangles
@@ -155,9 +124,19 @@ questions:
 - id: 5
   type: 选择
   score: 2
-  question: "数轴上的两点所表示的数分别为a，b，且满足，下列结论正确的是（   ）\nA.  \tB.  \tC.  \tD."
-  answer: ''
-  solution: ''
+  question: '数轴上的两点所表示的数分别为a，b，且满足$ab>0,a+b<0$，下列结论正确的是（）
+
+    A.$a>0,b>0$B.$a<0,b<0$C.$a>0,b<0$D.$a<0,b>0$'
+  answer: B
+  solution: '解：∵$a\cdot b>0$，
+
+    ∴a，b同号，
+
+    ∵$a+b<0$，
+
+    ∴$a<0,b<0$，
+
+    故选：B．'
   knowledge_points:
   - 综合
   module: numbersAndExpressions
@@ -170,25 +149,151 @@ questions:
 - id: 6
   type: 选择
   score: 2
-  question: "如图，，平分交于点，，则（   ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '如图，$AB \parallel CD$，AD平分$\angle BAC$交CD于点D，$\angle1=30^{\circ}$，则$\angle CAB =$（）
+
+    [图]
+
+    A.$30^\circ$B.$45^\circ$C.$60^\circ$D.$90^\circ$'
+  answer: C
+  solution: '解：$\because AB \parallel CD$，
+
+    $\angle BAD = \angle 1$，
+
+    $\because \angle 1=30^{\circ}$，
+
+    $\angle BAD = 30^\circ$，
+
+    $\therefore AD$平分$\angle BAC$，
+
+    $\angle CAB = 2\angle BAD = 2\times30^\circ = 60^\circ$，
+
+    故选：C．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 平行线
+  module: triangles
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-mentougou-yi-fig10.png
 - id: 7
   type: 选择
   score: 2
-  question: "同时掷两枚质地均匀的骰子，朝上的一面点数之和为整数的平方的概率为（   ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '同时掷两枚质地均匀的骰子，朝上的一面点数之和为整数的平方的概率为（
+
+    ）
+
+    A.$\frac{1}{6}$B.$\frac{7}{36}$C.$\frac{1}{4}$D.$\frac{29}{36}$'
+  answer: B
+  solution: '解：列表如下：
+
+    $1$
+
+    $2$
+
+    $3$
+
+    $4$
+
+    $5$
+
+    $6$
+
+    $1$
+
+    $2$
+
+    $3$
+
+    $4$
+
+    $5$
+
+    $6$
+
+    $7$
+
+    $2$
+
+    $3$
+
+    $4$
+
+    $5$
+
+    $6$
+
+    $7$
+
+    $8$
+
+    $3$
+
+    $4$
+
+    $5$
+
+    $6$
+
+    $7$
+
+    $8$
+
+    $9$
+
+    $4$
+
+    $5$
+
+    $6$
+
+    $7$
+
+    $8$
+
+    $9$
+
+    $10$
+
+    $5$
+
+    $6$
+
+    $7$
+
+    $8$
+
+    $9$
+
+    $10$
+
+    $11$
+
+    $6$
+
+    $7$
+
+    $8$
+
+    $9$
+
+    $10$
+
+    $11$
+
+    $12$
+
+    由表可得，共有$36$种等结果，其中朝上的一面点数之和为整数的平方的结果有$7$种，
+
+    ∴朝上的一面点数之和为整数的平方的概率为$\frac{7}{36}$，
+
+    故选：B．'
   knowledge_points:
   - 概率
+  - 树状图
+  - 列表法
   module: statisticsAndProbability
   difficulty: 中档
   recommended_for:
@@ -198,22 +303,74 @@ questions:
 - id: 8
   type: 选择
   score: 2
-  question: "如图，在等边三角形中，有一点P，连接、、，将绕点B逆时针旋转得到，连接、，有如下结论：①；②是等边三角形；③如果，那么．以上结论正确的是（   ）\nA. ①②\tB. ①③\tC. ②③\tD. ①②③"
-  answer: ''
-  solution: ''
+  question: '如图，在等边三角形ABC中，有一点P，连接PA、PB、PC，将BP绕点B逆时针旋转$60^\circ$得到BD，连接PD、AD，有如下结论：①$\triangle BPC \cong \triangle BDA$；②$\triangle BDP$是等边三角形；③如果$\angle BPC=150^{\circ}$，那么$PA^{2}=PB^{2}+PC^{2}$．以上结论正确的是（）
+
+    [图]
+
+    A.①②B.①③C.②③D.①②③'
+  answer: D
+  solution: '解：①∵$\triangle ABC$是等边三角形，
+
+    ∴$AB = BC$，$\angle ABC = 60^\circ$，
+
+    ∵BP绕点B逆时针旋转$60^\circ$得到BD，
+
+    ∴$BD = BP, \angle DBP = 60^\circ$，
+
+    ∴$\angle ABC-\angle ABP=\angle DBP-\angle ABP$，即$\angle ABD = \angle CBP$，
+
+    ∵$AB = BC, \angle ABD = \angle CBP, BD = BP$，
+
+    ∴$\triangle BPC \cong \triangle BDA$，故①正确，符合题意；
+
+    ②∵BP绕点B逆时针旋转$60^\circ$得到BD，
+
+    ∴$BD = BP, \angle DBP = 60^\circ$，
+
+    ∴$\triangle BDP$是等边三角形，故②正确，符合题意；
+
+    ③∵$\triangle BDP$是等边三角形，
+
+    ∴$\angle BDP = 60^\circ$
+
+    ∵$\triangle BPC \cong \triangle BDA$，$\angle BPC=150^{\circ}$，
+
+    ∴$\angle ADB=150^{\circ}$，
+
+    ∴$\angle ADP = \angle ADB - \angle BDP = 90^\circ$，
+
+    ∴$PA^{2}=PB^{2}+PC^{2}$，故③正确，符合题意；
+
+    综上：正确的有①②③，
+
+    故选：D．'
   knowledge_points:
+  - 全等三角形
+  - 勾股定理
   - 旋转
   module: triangles
   difficulty: 较难
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2024-mentougou-yi-fig11.png
 - id: 9
   type: 填空
   score: 2
-  question: 若在实数范围内有意义，则实数取值范围是__________．
-  answer: ''
-  solution: ''
+  question: 若$\sqrt{2-x}$在实数范围内有意义，则实数x的取值范围是__________．
+  answer: $x \leq 2$
+  solution: '解：∵$\sqrt{2-x}$在实数范围内有意义，
+
+    ∴$\begin{array}{cc}
+
+    2-x & 0 \\
+
+    \end{array}$，
+
+    解得：$x \leq 2$．
+
+    故答案为：$x \leq 2$．'
   knowledge_points:
   - 综合
   module: numbersAndExpressions
@@ -226,9 +383,15 @@ questions:
 - id: 10
   type: 填空
   score: 2
-  question: 因式分解：______．
-  answer: ''
-  solution: ''
+  question: 因式分解：$mx^{2}-2mx+m=0$______．
+  answer: $m(x-1)^2$
+  solution: '解：原式=$mx^{2}-2mx+m$，
+
+    $=$$m(x^{2}-2x+1)$，
+
+    $=$$m(x-1)^2$，
+
+    故答案为：$m(x-1)^2$．'
   knowledge_points:
   - 因式分解
   module: numbersAndExpressions
@@ -241,11 +404,16 @@ questions:
 - id: 11
   type: 填空
   score: 2
-  question: 如图所示，为了验证某个机械零件的截面是个半圆，某同学用三角板放在了如下位置，通过实际操作可以得出结论，该机械零件的截面是半圆，其中蕴含的数学道理是_______．
-  answer: ''
-  solution: ''
+  question: '如图所示，为了验证某个机械零件的截面是个半圆，某同学用三角板放在了如下位置，通过实际操作可以得出结论，该机械零件的截面是半圆，其中蕴含的数学道理是_______．
+
+    [图]'
+  answer: $90^\circ$的圆周角所对的弦是直径
+  solution: '解：根据“$90^\circ$的圆周角所对的弦是直径”即可得出答案，
+
+    故答案为：$90^\circ$的圆周角所对的弦是直径．'
   knowledge_points:
-  - 综合
+  - 圆周角
+  - 弦
   module: circles
   difficulty: 基础
   recommended_for:
@@ -253,12 +421,30 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-mentougou-yi-fig12.png
 - id: 12
   type: 填空
   score: 2
-  question: 在中，，，，点P在线段上（不与B、C两点重合），如果的长度是个无理数，则的长度可以是______．（写出一个即可）
-  answer: ''
-  solution: ''
+  question: '在$\triangle ABC$中，$\angle C=90^{\circ}$，$AB = 3$，$AC = 2$，点P在线段BC上（不与B、C两点重合），如果AP的长度是个无理数，则AP的长度可以是______．（写出一个即可）
+
+    [图]'
+  answer: $\sqrt{5}$（答案不唯一）
+  solution: '解：∵$\angle C=90^{\circ}$，$AC = 2$，
+
+    ∴$AP > 2$，
+
+    ∵$AB = 3$，
+
+    ∴$AP<3$，
+
+    则$2<AP<3$
+
+    ∴$4 < AP^{2} < 9$，
+
+    ∴AP的长度可以是$\sqrt{5}$，
+
+    故答案为：$\sqrt{5}$（答案不唯一，$\sqrt{6},\sqrt{7},2\sqrt{3},\ldots$）'
   knowledge_points:
   - 综合
   module: numbersAndExpressions
@@ -268,14 +454,55 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-mentougou-yi-fig13.png
 - id: 13
   type: 填空
   score: 2
-  question: 已知一元二次方程，有两个根，两根之和为正数，两根之积是负数，写出一组符合条件的a、b的值_________．
-  answer: ''
-  solution: ''
+  question: 已知一元二次方程$x^{2}+ax+b=0$，有两个根，两根之和为正数，两根之积是负数，写出一组符合条件的a、b的值_________．
+  answer: $a = -1$，$b = -2$（答案不唯一）
+  solution: '解：$\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$一元二次方程$x^{2}+ax+b=0$有两个根，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\Delta = a^{2} - 4b \quad 0$，
+
+    $\therefore 4b \leq a^{2}$，
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$两根之和为正数，两根之积是负数，
+
+    ∴$x_{1}+x_{2}=-a>0$，$x_{1}x_{2}=b<0$，
+
+    $\therefore a<0$，
+
+    令$a = -1$，$b = -2$．
+
+    故答案为：$a = -1$，$b = -2$（答案不唯一）．'
   knowledge_points:
   - 一元二次方程
+  - 根的判别式
   module: equationsAndInequalities
   difficulty: 中档
   recommended_for:
@@ -285,9 +512,13 @@ questions:
 - id: 14
   type: 填空
   score: 2
-  question: “洞门初开，佳景自来”，园林建筑中的门洞设计有很多数学中的图形元素，如图中的门洞造型，由四个相同的半圆构成，且半圆的直径围成了正方形，如果半圆的直径为米，则该门洞的通过面积为_______平方米．
-  answer: ''
-  solution: ''
+  question: '“洞门初开，佳景自来”，园林建筑中的门洞设计有很多数学中的图形元素，如图中的门洞造型，由四个相同的半圆构成，且半圆的直径围成了正方形，如果半圆的直径为$1$米，则该门洞的通过面积为_______平方米．
+
+    [图]'
+  answer: $\left(1+\frac{1}{2}\pi\right)$
+  solution: '解：该门洞的通过面积为$1\times1+2\pi\times\left(\frac{1}{2}\right)^{2}=\left(1+\frac{1}{2}\pi\right)\pi1^{2}$，
+
+    故答案为：$\left(1+\frac{1}{2}\pi\right)$．'
   knowledge_points:
   - 正方形
   module: quadrilaterals
@@ -296,14 +527,44 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-mentougou-yi-fig14.png
 - id: 15
   type: 填空
   score: 2
   question: '下面是某小区随机抽取的50户家庭的某月用电量情况统计表：
 
+    月用电量x（千瓦时/户/月）
+
+    $x \leq 240$
+
+    $240<x\leq300$
+
+    $300 < x \leq 350$
+
+    $350 < x \leq 400$
+
+    $x>400$
+
+    户数（户）
+
+    6
+
+    15
+
+    11
+
+    14
+
+    4
+
     已如月用电量第三档的标准为大于240小于等于400，如果该小区有500户家庭，估计用电量在第三档的家庭有______户．'
-  answer: ''
-  solution: ''
+  answer: '400'
+  solution: '解：样本中月用电量第三档的百分比为$\frac{15+11+4}{50}\times100\%=80\%$，
+
+    ∴由此估计全小区500户家庭中用电量在第三档的家庭有$500\times80\%=400$（户）．
+
+    故答案为：400'
   knowledge_points:
   - 统计
   module: statisticsAndProbability
@@ -317,12 +578,154 @@ questions:
   score: 2
   question: '5月20日是中国学生营养日，青少年合理膳食是社会公共卫生关注的问题之一．某食堂为了均衡学生的营养，特设置如下菜单，每种菜品所含的热量，脂肪和蛋白质如下：
 
-    学校规定每份午餐由1份荤菜，2份素菜，1份汤和1碗米饭搭配．小明想要搭配一份营养午餐，那么他摄入的脂肪最低量是____________g．（12岁岁的青少年男生午餐营养标准：摄入热量为2450千焦，摄入蛋白质为65g，蛋白质越接近标准越营养）'
-  answer: ''
-  solution: ''
+    编号
+
+    菜名
+
+    类别
+
+    热量/千焦
+
+    脂肪/g
+
+    蛋白质/g
+
+    1
+
+    宫保鸡丁
+
+    荤菜
+
+    1033
+
+    18
+
+    7
+
+    2
+
+    炸鸡排
+
+    荤菜
+
+    1254
+
+    19
+
+    20
+
+    3
+
+    糖醋鱼块
+
+    荤菜
+
+    2112
+
+    18
+
+    14
+
+    4
+
+    土豆炖牛肉
+
+    荤菜
+
+    1095
+
+    23
+
+    16
+
+    5
+
+    香菇油菜
+
+    素菜
+
+    911
+
+    11
+
+    7
+
+    6
+
+    家常豆腐
+
+    素菜
+
+    1020
+
+    16
+
+    13
+
+    7
+
+    清炒冬瓜
+
+    素菜
+
+    564
+
+    7
+
+    1
+
+    8
+
+    韭菜炒豆芽
+
+    素菜
+
+    49
+
+    12
+
+    3
+
+    9
+
+    米饭
+
+    主食
+
+    360
+
+    1
+
+    8
+
+    10
+
+    紫菜鸡蛋汤
+
+    汤
+
+    100
+
+    5
+
+    8
+
+    学校规定每份午餐由1份荤菜，2份素菜，1份汤和1碗米饭搭配．小明想要搭配一份营养午餐，那么他摄入的脂肪最低量是____________g．（12岁$-14$岁的青少年男生午餐营养标准：摄入热量为2450千焦，摄入蛋白质为65g，蛋白质越接近标准越营养）'
+  answer: '52'
+  solution: '解：根据蛋白质越接近标准$65g$越营养，可选择编号2、5、6、9、10的菜品，
+
+    ∵2号菜品在荤菜中蛋白质含量最高，5、6号菜品在素菜中蛋白质含量最高，
+
+    且它们总的蛋白质含量为$20+7+13+8+8=56<65(g)$，
+
+    ∴选择这个方案最符合营养标准，
+
+    ∴输入脂肪量为$19+11+16+1+5=52(g)$．
+
+    故答案为：52'
   knowledge_points:
   - 综合
-  module: geometryComprehensive
+  module: numbersAndExpressions
   difficulty: 较难
   recommended_for:
   - L2
@@ -330,12 +733,18 @@ questions:
 - id: 17
   type: 解答
   score: 5
-  question: （第17题，详见原卷）
-  answer: ''
-  solution: ''
+  question: 计算：$(x-2021)^{y}+\left|\sqrt{2}-2\right|+2\sin 45^{\circ}+\left(\frac{1}{3}\right)^{-1}$．
+  answer: '0'
+  solution: '解：原式$1+2-\sqrt{2}+2\cdot\frac{\sqrt{2}}{2}-3$
+
+    $1+\sqrt{2}-\sqrt{2}+\sqrt{3}-3$
+
+    $=0$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 三角函数
+  - 锐角三角函数
+  - 绝对值
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -345,14 +754,66 @@ questions:
 - id: 18
   type: 解答
   score: 5
-  question: '．
+  question: '$\begin{cases}
 
-    19 已知，求代数式的值．'
-  answer: ''
-  solution: ''
+    2x+1>3(x-1) \\
+
+    \dfrac{2-x}{2}<x+4
+
+    \end{cases}$．'
+  answer: $-2 < x < 4$
+  solution: '解：$\begin{aligned}
+
+    &2x+1>3(-x)-1\quad(1)\\
+
+    &\frac{2-x}{2}<x+4\quad(2)
+
+    \end{aligned}$，
+
+    解不等式①可得：$x<4$，
+
+    解不等式②可得：$x > -2$，
+
+    所以该不等式组的解集为$-2 < x < 4$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 不等式
+  - 不等式组
+  module: equationsAndInequalities
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 19
+  type: 解答
+  score: 5
+  question: 已知$3x^{2}+2x-1=0$，求代数式$(x+1)^{2}-(x+2)(x-2)+3x^{2}$的值．
+  answer: '6'
+  solution: '解：$(x+1)^{2}-(x+2)(x-2)+3x^{2}$
+
+    $=x^{2}+2x+1-(x-4)+3x^{2}$
+
+    $x^{2}+2x+1-x^{2}+4+3x$
+
+    $=3x^{2}+2x+5$，
+
+    $3x^{2}+2x-1=0$，
+
+    $3x^{2}+2x=1$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$原式$=1+5=6$．'
+  knowledge_points:
+  - 方差
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -362,45 +823,173 @@ questions:
 - id: 20
   type: 解答
   score: 5
-  question: 如图所示，在长为11、宽为10的矩形内部，沿平行于矩形各边的方向割出三个完全相同的小矩形，求每个小矩形的面积．
-  answer: ''
-  solution: ''
+  question: '如图所示，在长为11、宽为10的矩形内部，沿平行于矩形各边的方向割出三个完全相同的小矩形，求每个小矩形的面积．
+
+    [图]'
+  answer: '12'
+  solution: '解：设每个小矩形的长为x，宽为y，
+
+    根据题意可得：$\begin{cases}
+
+    x + 2y = 10 \\
+
+    2x + y = 11
+
+    \end{cases}$，解得：$\left\{
+
+    \begin{array}{l}
+
+    x = 4 \\
+
+    y = 3
+
+    \end{array}
+
+    \right.$，
+
+    ∴每个小矩形的面积$=3\times4=12$．'
   knowledge_points:
+  - 二元一次方程组
   - 矩形
-  module: quadrilaterals
+  module: equationsAndInequalities
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-mentougou-yi-fig15.png
 - id: 21
   type: 解答
   score: 5
-  question: '如图，在四边形中，，，，点E为中点，射线交的延长线于点F，连接．
+  question: '如图，在四边形$ABCD$中，$AD \parallel BC$，$\angle A = 90^{\circ}$，$BD = BC$，点E为CD中点，射线BE交AD的延长线于点F，连接CF．
 
-    （1）求证：四边形是菱形；
+    [图]
 
-    （2）若，，求的长．'
-  answer: ''
-  solution: ''
+    （1）求证：四边形$BCFD$是菱形；
+
+    （2）若$AD = 1$，$CF = 2$，求BF的长．'
+  answer: （1）见解析（2）$2\sqrt{3}$
+  solution: '【小问1详解】
+
+    证明：∵$AD \parallel BC$，
+
+    ∴$DF \parallel BC$，
+
+    ∴$\angle DFE=\angle CBE,\angle FDE=\angle BCE$，
+
+    ∵点E为CD中点，
+
+    ∴$CE = DE$，
+
+    在$\triangle DEF$和$\triangle CEB$中，
+
+    $\angle DFE = \angle CBE \\
+
+    \angle DFE = \angle BCE \\
+
+    CE = DE$，
+
+    ∴$\triangle DEF\cong\triangle CEB(AAS)$，
+
+    ∴$DF = BC$，
+
+    ∴四边形$BCFD$是平行四边形，
+
+    ∵$BD = BC$，
+
+    ∴四边形$BCFD$是菱形；
+
+    【小问2详解】
+
+    解：∵四边形$BCFD$是菱形，$CF = 2$，
+
+    ∴$BD = DF = CF = 2$，
+
+    ∵$AD = 1$，$\angle A = 90^{\circ}$，
+
+    ∴$AF = AD + CF = 3, AB = \sqrt{BD^2 - AD^2} = \sqrt{3}$，
+
+    ∴$BF = \sqrt{AB^{2} + AF^{2}} = 2\sqrt{5}$．'
   knowledge_points:
+  - 全等三角形
+  - 勾股定理
+  - 平行四边形
   - 菱形
-  module: quadrilaterals
+  module: triangles
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-mentougou-yi-fig16.png
 - id: 22
   type: 解答
   score: 5
-  question: '在平面直角坐标系中，一次函数的图象由的图象向上平移2个单位得到，反比例函数 的图象过点．
+  question: '在平面直角坐标系xOy中，一次函数$y=kx+b\,(k\neq0)$的图象由$y_{1}=x$的图象向上平移2个单位得到，反比例函数$y_{2}=\frac{m}{x}(m\neq0)$的图象过点$A(1,4)$．
+
+    [图]
 
     （1）求一次函数表达式及m的值；
 
-    （2）过点平行于x轴的直线，分别与反比例函数一次函数的图象相交于点M、N，当时，画出示意图并直接写出n的值．'
-  answer: ''
-  solution: ''
+    （2）过点$P(0,\ n)$平行于x轴的直线，分别与反比例函数$y_{2}=\frac{m}{x}$一次函数$y=kx+b$的图象相交于点M、N，当$PM = MN$时，画出示意图并直接写出n的值．'
+  answer: （1）$y=x+2$，$m = 4$ （2）4或$-2$或2
+  solution: '【小问1详解】
+
+    解：$\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$一次函数$y=kx+b(k\neq0)$的图象由$y_{1}=x$的图象向上平移2个单位得到，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$一次函数表达式为$y=x+2$，
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$反比例函数$y_{2}=\frac{m}{x}(m\neq0)$的图象过点$A(1,4)$，
+
+    $\therefore m_{1}=1\times4=4$；
+
+    【小问2详解】
+
+    解：过点$P(0,n)$平行于x轴的直线，分别与反比例函数$y_{2}=\frac{4}{x}$、一次函数$y=x+2$图象相交于点M、N，
+
+    [图]
+
+    则$M\left(\frac{4}{n}\right)$，$n)$，$N(n-2,n)$，
+
+    $\therefore PM = MN$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\left|\frac{4}{n}\right|=n-2-\frac{4}{n}$，整理得$n^2 - 2n - 8 = 0$，解得$n = 4$或$n = -2$，
+
+    令$x = 0$代入$y=x+2$，得$y=2'
   knowledge_points:
   - 一次函数
   - 反比例函数
@@ -412,28 +1001,51 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-mentougou-yi-fig17.png
+  - figures/2024-mentougou-yi-fig18.png
 - id: 23
   type: 解答
   score: 6
-  question: '某市统计局为研究我国省会及以上城市发展水平与人均之间的关系，收集了年个城市的人均数据（单位：万元）以及城市排名，进行了相关的数据分析，下面给出了部分信息．
+  question: '某市统计局为研究我国省会及以上城市发展水平与人均GDP之间的关系，收集了$2023$年$31$个城市的人均GDP数据（单位：万元）以及城市GDP排名，进行了相关的数据分析，下面给出了部分信息．
 
-    ．城市的人均的频数分布直方图（数据分成组：，，，，）：
+    a．城市的人均GDP的频数分布直方图（数据分成$5$组：$5<x\leq8$，$8<x\leq11$，$11<x\leq14$，$14 < x < 17$，$17<x\leq20$）：
 
     频数（城市个数）
 
-    ．城市的人均（万元）的数值在这一组的是：；
+    [图]
 
-    ．以下是个城市年的人均（万元）和城市排名情况散点图：
+    b．城市的人均GDP（万元）的数值在$11<x\leq14$这一组的是：$1234352136438$；
+
+    c．以下是$31$个城市$2023$年的人均GD（万元）和城市GDP排名情况散点图：
+
+    [图]
 
     根据以上信息，回答下列问题
 
-    （1）某城市人均为万元，该城市排名全国第_____；
+    （1）某城市的人均GDP为$13.8$万元，该城市GDP排名全国第_____；
 
-    （2）在个城市年的人均和城市排名情况散点图中，请用“”画出城市排名的中位数所表示的点；
+    （2）在$31$个城市$2023$年的人均GDP和城市GDP排名情况散点图中，请用“$\triangle$”画出城市GDP排名的中位数所表示的点；
 
     （3）观察散点图，请你写出一条正确的结论．'
-  answer: ''
-  solution: ''
+  answer: （1）$8$； （2）画图见解析；（3）结论见解析．
+  solution: '【小问1详解】
+
+    解：根据城市的人均GDP的频数分布直方图得，$14 < x < 17$和$17<x\leq20$两组的城市共有$3+4=7$个，
+
+    由城市的人均GDP(万元)的数值在$11<x\leq14$这一组的数据得，某城市的人均GDP为$13.8$万元，该城市GDP排名全国第$8$，
+
+    故答案为：$8$；
+
+    【小问2详解】
+
+    解：∵收集了$2023$年$31$个城市的人均GDP数据，
+
+    ∴城市GDP排名的中位数是第$16$个，画图如下，
+
+    [图]【小问3详解】
+
+    解：观察散点图可得，人均GDP(万元)大的和城市GDP的排名也靠前．'
   knowledge_points:
   - 统计
   - 中位数
@@ -442,101 +1054,435 @@ questions:
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2024-mentougou-yi-fig19.png
+  - figures/2024-mentougou-yi-fig20.png
+  - figures/2024-mentougou-yi-fig21.png
 - id: 24
   type: 解答
   score: 6
-  question: '如图，在中，，的平分线交于点，过点作交于点．
+  question: '如图，在$\triangle ABC$中，$\angle C=90^{\circ}$，$\angle CAB$的平分线交CB于点D，过点D作$OD \perp CB$交AB于点O．
 
-    （1）求证：直线是以点为圆心，为半径的的切线；
+    [图]
 
-    （2）如果：，，求的半径．'
-  answer: ''
-  solution: ''
+    （1）求证：直线CD是以点O为圆心，OA为半径的$\odot\odot$的切线；
+
+    （2）如果：$\sin \angle CAB = \frac{3}{5}$，$BC = 3$，求$\odot\odot$的半径．'
+  answer: （1）见详解（2）$\frac{20}{9}$
+  solution: '【小问1详解】
+
+    证明：$\because OD \perp BC$，
+
+    ∴$\angle ODB=90^\circ$，
+
+    $\angle ODB=\angle C=60^\circ$，
+
+    $\therefore OD \parallel AC$，
+
+    $\angle CAD = \angle ADO$，
+
+    $\therefore AD$平分$\angle CAB$，
+
+    $\angle CAD = \angle BAD$，
+
+    $\angle DAO = \angle ADO$，
+
+    $\therefore OA = OD$，
+
+    ∵点O到直线CD的距离为$d = OD$，半径为$R = OA$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$直线CD是以点O为圆心，OA为半径的$\odot\odot$的切线；
+
+    【小问2详解】
+
+    解：$\because OD \parallel AC$，
+
+    $\angle BOD = \angle CAB$，
+
+    $\because \angle C = 90^\circ$，$\sin \angle CAB = \frac{BC}{AB} = \frac{3}{5}$，
+
+    $\because BC = 3$，
+
+    $\therefore AB = 5$，
+
+    $\sin\angle CAB=\sin\angle BOD=\frac{BD}{OD}=\frac{3}{5}$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzp'
   knowledge_points:
+  - 平行线
   - 切线
-  module: circles
+  - 勾股定理
+  - 三角函数
+  - 锐角三角函数
+  module: triangles
   difficulty: 较难
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2024-mentougou-yi-fig22.png
 - id: 25
   type: 解答
   score: 6
-  question: '如图是某跳台滑雪场的横截面示意图，一名运动员经过助滑、起跳从地面上点O的正上方4米处的A点滑出，滑出后的路径形状可以看作是抛物线的一部分，通过测量运动员第一次滑下时，在距所在直线水平距离为d米的地点，运动员距离地面高度为h米．获得如下数据：
+  question: '如图是某跳台滑雪场的横截面示意图，一名运动员经过助滑、起跳从地面上点O的正上方4米处的A点滑出，滑出后的路径形状可以看作是抛物线的一部分，通过测量运动员第一次滑下时，在距OA所在直线水平距离为d米的地点，运动员距离地面高度为h米．获得如下数据：
+
+    水平距离d/米
+
+    0
+
+    2
+
+    4
+
+    6
+
+    8
+
+    垂直高度h/米
+
+    4
+
+    $\frac{13}{2}$
+
+    8
+
+    $\frac{17}{2}$
+
+    8
+
+    [图]
 
     请解决以下问题：
 
     （1）在网格中建立适当的平面直角坐标系，根据已知数据描点，并用平滑的曲线连接；
 
+    [图]
+
     （2）结合表中所给数据或所画图象，直接写出运动员滑行过程中距离地面的最大高度为_____米；
 
-    （3）求h 关 于d 的函数表达式；
+    （3）求h关于d的函数表达式；
 
-    （4）运动员第二次滑下时路径形状可表示为：，当第一次和第二次距离所在直线的水平距离分别为、，且时能成功完成空中动作，则该运动员_________（填写“能”或“不能”）完成空中动作．'
-  answer: ''
-  solution: ''
+    （4）运动员第二次滑下时路径形状可表示为$C_{2}$：$h = -\frac{1}{6}d^2 + \frac{5}{3}d + 4$，当第一次和第二次距离OA所在直线的水平距离分别为$d_{1}$、$d_{2}$，且$2 \leq d_{1}-d_{2} \leq 3$时能成功完成空中动作，则该运动员_________（填写“能”或“不能”）完成空中动作．'
+  answer: （1）见详解（2）$\frac{17}{2}$ （3）$h = \frac{1}{8}(d - 6)^2 + \frac{17}{2}$ （4）能
+  solution: '【小问1详解】
+
+    解：①建立如图所示的平面直角坐标系，
+
+    ②根据表中数据描点，
+
+    水平距离$d /$米
+
+    0
+
+    2
+
+    4
+
+    6
+
+    8
+
+    垂直高度$h/$米
+
+    4
+
+    $\frac{13}{2}$
+
+    8
+
+    $\frac{17}{2}$
+
+    8
+
+    ③用平滑的曲线连接，
+
+    所画图象如图所示：
+
+    [图]【小问2详解】
+
+    解：观察图象可得：运动员滑行过程中距离地面的最大高度为$\frac{17}{2}$米，
+
+    故答案为：$\frac{17}{2}$；
+
+    【小问3详解】
+
+    解：由图象可得，顶点$(6,\frac{17}{2})$，
+
+    设二次函数$[公式]$关系式为$h = a(d - 6)^2 + \frac{17}{2}$，
+
+    把$(4,8)$代入得：$8 = a(4 - 6)^2 + \frac{17}{2}$，
+
+    解得：$a = -\frac{1}{8}$，
+
+    $.h = -\frac{1}{8}(d - 6)^2 + \frac{17}{2}$；
+
+    【小问4详解】
+
+    解：能，理由见详解
+
+    令$h_{1}=0$，即$\frac{1}{4}(d-6)^{2}+\frac{17}{2}=0$，
+
+    解得：$d_{1}=6+2\sqrt{17}$，
+
+    令$h_{2}=0$，即$\frac{1}{6}d^{2}-\frac{5}{3}d+4=0$，
+
+    解得：$d_{2}=12$，
+
+    $d_{1}-d_{2}=6+2\sqrt{17}-12=2\sqrt{17}-6$，
+
+    $4<\sqrt{17}<\sqrt{\frac{81}{4}}=4.5$，
+
+    $2<\sqrt{17}-6<3$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$该运动员能完成空中动作．
+
+    故答案为：能'
   knowledge_points:
+  - 二次函数
   - 坐标系
   module: functions
   difficulty: 较难
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2024-mentougou-yi-fig23.png
+  - figures/2024-mentougou-yi-fig24.png
+  - figures/2024-mentougou-yi-fig25.png
 - id: 26
   type: 解答
   score: 6
-  question: '在平面直角坐标系中，点，在抛物线上，设抛物线的对称轴为直线．
+  question: '在平面直角坐标系xoy中，点$A(x,m)$，$B(x_2,n)$在抛物线$y=ax^{2}+bx+4(a>0)$上，设抛物线的对称轴为直线$x = h$．
 
-    （1）如果抛物线经过点，求的值；
+    [图]
 
-    （2）如果对于，，都有，求取值范围；
+    （1）如果抛物线经过点$(2,4)$，求h的值；
 
-    （3）如果对于，或，存在，直接写出的取值范围．'
-  answer: ''
-  solution: ''
+    （2）如果对于$x_{1}=h-4$，$x_{2}=3h$，都有$m > n$，求h取值范围；
+
+    （3）如果对于$h-4\leq x_{1}\leq h+2$，$x_{2}\leq 1$或$x_{2} \quad 12$，存在$m > n$，直接写出h的取值范围．'
+  answer: （1）$1$； （2）$-2<h<2$； （3）$h<5$或$h>8$．
+  solution: '【小问1详解】
+
+    解：∵抛物线经过点$(2,4)$，
+
+    ∴$4a+2b+4=4$，
+
+    ∴$b = -2a$，
+
+    ∴$h = -\frac{b}{2a} = 1$；
+
+    【小问2详解】
+
+    解：∵$a > 0$，
+
+    ∴抛物线$y=ax^{2}+bx+4(a>0)$开口向上，
+
+    当$3h \leq h$，即$h \leq 0$时，都有$m > n$，
+
+    则$h-4<3h$，
+
+    解得$h > -2$，
+
+    ∴$-2<h\leq0$；
+
+    当$3h > h$，即$h > 0$时，都有$m > n$，
+
+    则$\frac{h-4+3k}{2}<h$，
+
+    解得$h<2$，
+
+    ∴$0<h<2$；
+
+    综上所述，$-2<h<2$；
+
+    【小问3详解】
+
+    解：由（1）知，$h = -\frac{b}{2a}$
+
+    ∴$b = -2ah$，
+
+    ∴二次函数的解析式为：$y=ax^{2}-2ahx+4$，
+
+    ∵$h-4\leq x_{1}\leq h+2$，
+
+    ∴$ah^2-2ah^2+4\leq m\leq a(h-4)^2-2ah(h-4)+4$，
+
+    即$4-ah^{2}\leq m\leq16a+4-ah^{2}$，
+
+    当$h \leq 1$或$h\ 12$时，n最小值为$ah^{2}-2ah^{2}+4=4-ah^{2}$，
+
+    ∴一定存在$m > n$，
+
+    当$1<h<12$时，当$x_2$取1或者12时n有最小值，
+
+    即n的最小值为$a-2ah+4$或$144a-24ah+4$，
+
+    ∵存在$m > n$，
+
+    ∴$a-2ah+4<16a+4-ah^{2}$或$144a-24ah+4<16a+4\cdot ah^{2}$，
+
+    ∴$ah^{2}-2ah-15a<0$或$ah^{2}-24ah+128<0$，
+
+    ∵$a > 0$，
+
+    ∴$(k-5)(k+3)<0$或$(h-8)(h-16)<0$，
+
+    ∴$-3<h<5$或$8<h<16$，
+
+    综上所述，$h<5$或$h>8$．'
   knowledge_points:
+  - 二次函数
   - 坐标系
   module: functions
   difficulty: 压轴
   recommended_for:
   - L3
+  figures:
+  - figures/2024-mentougou-yi-fig26.png
 - id: 27
   type: 解答
   score: 7
-  question: '如图，，，点在射线上，且，点在上且，连接，取的中点，连接并延长至，使，连接．
+  question: '如图，$AB = BC$，$\angle ABC = 90^\circ$，点P在射线AB上，且$\angle CEP=90^{\circ}$，点F在EP上且$EF = EC$，连接AF，取AF的中点G，连接EG并延长至H，使$GH = GE$，连接AH．
 
-    （1）如图1，当点在线段上时．
+    [图]
 
-    ①用等式表示与的数量关系；
+    （1）如图1，当点P在线段AB上时．
 
-    ②连接，，直接写出，的数量关系和位置关系；
+    ①用等式表示AH与CE的数量关系；
 
-    （2）如图2，当点在线段的延长线上时，依题意补全图形2，猜想②中的结论是否还成立，并证明．'
-  answer: ''
-  solution: ''
+    ②连接BH，BE，直接写出BH，BE的数量关系和位置关系；
+
+    （2）如图2，当点P在线段AB的延长线上时，依题意补全图形2，猜想②中的结论是否还成立，并证明．'
+  answer: （1）①$AH = CE$；②$BH = BE$，$BH \perp BE$，理由见详解 （2）补全图形见详解，②的结论还成立，证明见详解
+  solution: '【小问2详解】
+
+    补全图形如下，②的结论还成立，
+
+    [图]
+
+    证明：连接BH，BE，
+
+    同①可证$\triangle AGH \cong \triangle FGE$，$AH \parallel EF$，
+
+    设$\angle HAB = \alpha$，则$\angle APE = \alpha$，
+
+    $\angle ABC=90^\circ=\angle APE+\angle EPC+\angle PCB=\alpha+\angle EPC+\angle PCB$，$\angle EPC = 90^{\circ} - \angle ECP$，
+
+    $\therefore a = \angle ECB$，
+
+    $\angle TAB = \angle ECB$，而$AB = BC$，$AH = CE$，
+
+    $\triangle HAB \cong \triangle ECB (SAS)$，
+
+    $\therefore BH = BE$，$\angle ABH = \angle CBE$，
+
+    $\angle HBE = \angle HBA + \angle ABE = \angle CBE + \angle ABE = 90^\circ$，
+
+    $\therefore BH \perp BE$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 平行线
+  - 全等三角形
+  module: triangles
   difficulty: 压轴
   recommended_for:
   - L3
+  figures:
+  - figures/2024-mentougou-yi-fig27.png
+  - figures/2024-mentougou-yi-fig29.png
 - id: 28
   type: 解答
   score: 7
-  question: '在平面直角坐标系中，半径为2，点P、Q是平面内的点，如果点P关于点Q的中心对称点在上，我们称圆上的点为点P关于点Q的“等距点”．
+  question: '在平面直角坐标系xOy中，$\odot\odot$的半径为2，点P、Q是平面内的点，如果点P关于点Q的中心对称点在$\odot\odot$上，我们称圆上的点为点P关于点Q的“等距点”．
 
-    （1）已知如图1点．
+    [图]
 
-    ①如图1，在点 中，上存在点P关于点Q的“等距点”的是________；
+    （1）已知如图1点$P(4,0)$．
 
-    ②如图2，点 ，上存在点P关于点Q的“等距点”，则m的取值范围是________；
+    ①如图1，在点$\varrho_{1}(10),\varrho_{2}(2-1),\varrho_{3}(1)$中，$\odot\odot$上存在点P关于点Q的“等距点”的是________；
 
-    （2）如图3，已知点，点P在的图象上，若上存在点P关于点Q的“等距点”，求b的取值范围．'
-  answer: ''
-  solution: ''
+    ②如图2，点$Q(m,n)$，$\odot\odot$上存在点P关于点Q的“等距点”，则m的取值范围是________；
+
+    （2）如图3，已知点$Q(1,1)$，点P在$y = -x + b$的图象上，若$\odot\odot$上存在点P关于点Q的“等距点”，求b的取值范围．'
+  answer: （1）①$\Omega_{1},\Omega_{2}$；②$1 \leq m \leq 3$ （2）$4-2\sqrt{2}\leq b\leq 4+2\sqrt{2}$
+  solution: '【小问1详解】
+
+    解：①如图，点P关于$\varrho_{1}(10),\varrho_{2}(2-1),\varrho_{3}(1)$的对称点分别为$(2,0),(0,-2),(-2,2)$，则$d_{1}=2=R$，$d_{2}=2=R$，$d_{1}=\sqrt{2^{2}+2^{2}}=2\sqrt{2}>R$
+
+    ∴$(2,0),(0,-2)$在$\odot\odot$上，
+
+    ∴点P关于点Q的“等距点”的是$\Omega_{1},\Omega_{2}$
+
+    [图]
+
+    故答案为：$\Omega_{1},\Omega_{2}$；
+
+    ②在$\odot\odot$上任取一点点P关于点Q的“等距点”M，连接MP，取MP的中点即为点Q，连接OP，取其中点$O''$，连接$QO''$，
+
+    [图]
+
+    ∴$QO''=\frac{1}{2}OM=1$，
+
+    ∴点Q的在以$O''(2,0)$为圆心，半径为1的$\odot O''$上，
+
+    ∵$\odot O''$与x轴交于点$(-1,0),(3,0)$，
+
+    ∴$1 \leq m \leq 3$，
+
+    故答案为：$1 \leq m \leq 3$．
+
+    【小问2详解】
+
+    解：过点O作点Q的对称点$O''$，则点$O''$为$(2,2)$，
+
+    [图]
+
+    ∴$\odot\odot$上所有$[公式]$点关于点Q的对称点都在以$O''$$(2,2)$为圆心，半径为2的$\odot O''$上，
+
+    ∵点P在$y = -x + b$的图象上，
+
+    ∴当直线$y = -x + b$与$\odot O''$相交即可，
+
+    当直线$y = -x + b$与$\odot O''$第一次相切时，设切点为点E，直线与y轴交点G，当直线$y = -x + b$与$\odot O''$第二次相切时，设切点为点F，
+
+    ∵$O''(2,2)$，
+
+    ∴$00\cdot\sqrt{2^{2}+2^{2}}=2\sqrt{2}$，
+
+    ∴$OE=OO''-OE=2'
   knowledge_points:
+  - 勾股定理
   - 坐标系
   module: geometryComprehensive
   difficulty: 压轴
   recommended_for:
   - L3
+  figures:
+  - figures/2024-mentougou-yi-fig30.png
+  - figures/2024-mentougou-yi-fig31.png
+  - figures/2024-mentougou-yi-fig32.png
+  - figures/2024-mentougou-yi-fig33.png

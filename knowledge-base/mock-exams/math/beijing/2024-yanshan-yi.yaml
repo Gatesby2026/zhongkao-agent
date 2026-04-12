@@ -1,102 +1,29 @@
 # ============================================================
 # 2024年北京燕山区中考数学一模试卷 — 逐题分析
 # ============================================================
-# 数据来源：knowledge-original/精品解析：2024年北京市燕山区中考一模数学试题（解析版）.docx
-# 自动生成，部分数学公式可能显示不全（docx公式对象无法完整提取）
+# 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
+# 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
 # 满分：100分  时长：120分钟
 
 year: 2024
-district: 燕山区
+district: 燕山
 exam_type: 一模
 subject: 数学
 full_score: 100
 duration_minutes: 120
-total_questions: 33
+total_questions: 28
 structure: 8选择(16分) + 8填空(16分) + 12解答(68分)
 questions:
 - id: 1
   type: 选择
   score: 2
-  question: 本试卷共6页，共三道大题，28道小题．满分100分．考试时间120分钟．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 2
-  type: 选择
-  score: 2
-  question: 在试卷和答题卡上准确填写学校名称、班级、姓名和准考证号．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 3
-  type: 选择
-  score: 2
-  question: 试题答案一律填涂或书写在答题卡上，在试卷上作答无效．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 4
-  type: 选择
-  score: 2
-  question: 在答题卡上，选择题、画图题用2B铅笔作答，其他试题用黑色字迹签字笔作答．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 5
-  type: 选择
-  score: 2
-  question: '考试结束，请将本试卷和答题卡一并交回．
+  question: '$2023$年，我国共授权发明专利$92.1$万件，同比增长$15.4\%$．将$921000$用科学记数法表示应为（
 
-    第1－8题均有四个选项，符合题意的选项只有一个．'
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 1
-  type: 选择
-  score: 2
-  question: "年，我国共授权发明专利万件，同比增长．将用科学记数法表示应为（    ）\nA. \tB. \tC. \tD."
+    ）
+
+    A.$92.1\times10^{4}$B.$9.21\times10^{4}$C.$9.21\times10^{5}$D.$0.921\times10^{6}$'
   answer: C
-  solution: '解：；
+  solution: '解：$921000=9.21\times10^{5}$；
 
     故选：C．'
   knowledge_points:
@@ -111,7 +38,11 @@ questions:
 - id: 2
   type: 选择
   score: 2
-  question: "下面运动标识图案中，是轴对称图形的是（    ）\nA. \tB. \tC. \tD."
+  question: '下面运动标识图案中，是轴对称图形的是（
+
+    ）
+
+    A.[图]B.[图]C.[图]D.[图]'
   answer: B
   solution: '解：选项B能找到这样的一条直线，使图形沿一条直线折叠，直线两旁的部分能够互相重合，所以是轴对称图形，符合题意，
 
@@ -128,20 +59,31 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-yanshan-yi-fig02.png
+  - figures/2024-yanshan-yi-fig03.png
+  - figures/2024-yanshan-yi-fig04.png
+  - figures/2024-yanshan-yi-fig05.png
 - id: 3
   type: 选择
   score: 2
-  question: "如图，点在直线上，，，则的大小为（    ）\nA. \tB. \tC. \tD."
+  question: '如图，点O在直线AB上，$OC \perp OD$，$\angle BOD = 48^\circ$，则$\angle AOC$的大小为（
+
+    ）
+
+    [图]
+
+    A.$138^\circ$B.$132^\circ$C.$48^\circ$D.$42^\circ$'
   answer: A
-  solution: '解：∵，
+  solution: '解：∵$OC \perp OD$，
 
-    ∴，
+    ∴$\angle COD=90^\circ$，
 
-    ∵，
+    ∵$\angle BOD = 48^\circ$，
 
-    ∴，
+    ∴$\angle COB=\angle COB-\angle BOD=42^\circ$，
 
-    ∴，
+    ∴$\angle AOC=180^\circ-\angle COB=138^\circ$，
 
     故选：A．'
   knowledge_points:
@@ -153,18 +95,24 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-yanshan-yi-fig06.png
 - id: 4
   type: 选择
   score: 2
-  question: "若，则下列结论正确的是（    ）\nA. \tB. \tC.  \tD."
+  question: '若$x<1$，则下列结论正确的是（
+
+    ）
+
+    A.$1-x<0$B.$-x<-1$C.$x^{2}<1$D.$\frac{x}{2}<\frac{1}{2}$'
   answer: D
-  solution: '解：，则，B不符合题意；
+  solution: '解：$x<1$，则$-x > -1$，B不符合题意；
 
-    则；A不符合题意；
+    则$1 - x > 0$；A不符合题意；
 
-    当时，；当时，，C不符合题意；
+    当$0<x<1$时，$x^{2}<x<1$；当$x<0$时，$x^{2}>x$，C不符合题意；
 
-    则；D符合题意；
+    则$\frac{x}{2}<\frac{1}{2}$；D符合题意；
 
     故选：D．'
   knowledge_points:
@@ -179,13 +127,17 @@ questions:
 - id: 5
   type: 选择
   score: 2
-  question: "关于的一元二次方程有两个相等的实数根，则的值为（    ）\nA. \tB. 1\tC. \tD. 4"
+  question: '关于x的一元二次方程$x^{2}+2x+m=0$有两个相等的实数根，则m的值为（
+
+    ）
+
+    A.$-1$B.1C.$-4$D.4'
   answer: B
-  solution: '解：∵关于的一元二次方程有两个相等的实数根，
+  solution: '解：∵关于x的一元二次方程$x^{2}+2x+m=0$有两个相等的实数根，
 
-    ∴，
+    ∴$b^{2}-4ac=4-4m=0$，
 
-    ∴；
+    ∴$m = 1$；
 
     故选B．'
   knowledge_points:
@@ -200,11 +152,15 @@ questions:
 - id: 6
   type: 选择
   score: 2
-  question: "正六边形的外角和为（    ）\nA. \tB. \tC. \tD."
-  answer: C
-  solution: '解：∵任意一个多边形的外角和都是，
+  question: '正六边形的外角和为（
 
-    ∴正六边形的外角和为．
+    ）
+
+    A.$60^\circ$B.$180^\circ$C.$360^\circ$D.$720^\circ$'
+  answer: C
+  solution: '解：∵任意一个多边形的外角和都是$360^\circ$，
+
+    ∴正六边形的外角和为$360^\circ$．
 
     故选：C．'
   knowledge_points:
@@ -218,11 +174,15 @@ questions:
 - id: 7
   type: 选择
   score: 2
-  question: "同时抛掷两枚质地均匀的硬币，两枚硬币全部正面向上的概率是（    ）\nA. \tB. \tC. \tD."
-  answer: A
-  solution: '解：∵抛掷两枚质地均匀硬币，两枚硬币落地后的所有等可能的结果有：正正，正反，反正，反反，
+  question: '同时抛掷两枚质地均匀的硬币，两枚硬币全部正面向上的概率是（
 
-    ∴正面都朝上的概率是： .
+    ）
+
+    A.$\frac{1}{4}$B.$\frac{1}{3}$C.$\frac{1}{2}$D.$\frac{3}{4}$'
+  answer: A
+  solution: '解：∵抛掷两枚质地均匀$[公式]$硬币，两枚硬币落地后的所有等可能的结果有：正正，正反，反正，反反，
+
+    ∴正面都朝上的概率是：$\frac{1}{4}$.
 
     故选A．'
   knowledge_points:
@@ -236,49 +196,57 @@ questions:
 - id: 8
   type: 选择
   score: 2
-  question: "如图，在四边形中，，点E在上，平分，平分．给出下面三个结论：\n①；②；③．上述结论中，所有正确结论的序号是（    ）\nA. ①②\tB. ②③\tC. ①③\tD. ①②③"
+  question: '如图，在四边形$ABCD$中，$AD \parallel BC, \angle A = 90^\circ$，点E在AB上，DE平分$\angle ADC$，CE平分$\angle DCB$．给出下面三个结论：
+
+    [图]
+
+    ①$\angle DEC=90^\circ$；②$AE = EB$；③$AD\cdot BC=AE\cdot EB$．上述结论中，所有正确结论的序号是（）
+
+    A.①②B.②③C.①③D.①②③'
   answer: D
-  solution: '解：∵，
+  solution: '解：∵$AD \parallel BC$，
 
-    ∴，
+    ∴$\angle ABC + \angle BCD = 180^\circ$，
 
-    ∵平分，平分，
+    ∵DE平分$\angle ADC$，CE平分$\angle DCB$，
 
-    ∴，
+    ∴$\angle CBE=\frac{1}{2}\angle ADC,\angle DCE=\frac{1}{2}\angle BCD$，
 
-    ∴，
+    ∴$\angle CBE+\angle DCE=\frac{1}{2}(\angle ADC+\angle BCD)=90^{\circ}$，
 
-    ∴，故①正确；
+    ∴$\angle DEC=90^\circ$，故①正确；
 
-    如图，过点E作于点F，
+    如图，过点E作$EF \perp CD$于点F，
 
-    ∵，
+    [图]
 
-    ∴，
+    ∵$AD \parallel BC$，
 
-    ∵，
+    ∴$\angle A+\angle B=180^{\circ}$，
 
-    ∴，
+    ∵$\angle A = 90^{\circ}$，
 
-    ∵平分，平分，
+    ∴$\sqrt{3} \times 90$，
 
-    ∴，，
+    ∵DE平分$\angle ADC$，CE平分$\angle DCB$，
 
-    ∴，故②正确；
+    ∴$AE = EF$，$BE = EF$，
 
-    ∵，，
+    ∴$AE = BE$，故②正确；
 
-    ∴，
+    ∵$\angle DEC=90^\circ$，$\angle A = 90^{\circ}$，
 
-    ∴，
+    ∴$\angle AED + \angle BEC = \angle AED + \angle ADE = 90^\circ$，
 
-    ∵，
+    ∴$\angle BEC = \angle ADE$，
 
-    ∴，
+    ∵$\angle A=\angle B=90^{\circ}$，
 
-    ∴，
+    ∴$\triangle ADE \sim \triangle BEC$，
 
-    ∴，故③正确；
+    ∴$\frac{AD}{BE} = \frac{AE}{BC}$，
+
+    ∴$AD\cdot BC=AE\cdot EB$，故③正确；
 
     故选：D．'
   knowledge_points:
@@ -289,10 +257,13 @@ questions:
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2024-yanshan-yi-fig07.png
+  - figures/2024-yanshan-yi-fig08.png
 - id: 9
   type: 填空
   score: 2
-  question: 式子在实数范围内有意义，则 x 的取值范围是_______ ．
+  question: 式子$\sqrt{x-3}$在实数范围内有意义，则x的取值范围是_______．
   answer: x≥3
   solution: '由题意可得：x—3≥0，
 
@@ -311,11 +282,11 @@ questions:
 - id: 10
   type: 填空
   score: 2
-  question: 分解因式：________．
-  answer: ''
-  solution: '解：，
+  question: 分解因式：$8a^{2}-8b^{2} =$________．
+  answer: $8(a+b)(a-b)$
+  solution: '解：$8a^{2}-8b^{2}=8(a^{2}-b^{2})=8(a+b)(a-b)$，
 
-    故答案为：．'
+    故答案为：$8(a+b)(a-b)$．'
   knowledge_points:
   - 因式分解
   - 方差
@@ -329,15 +300,15 @@ questions:
 - id: 11
   type: 填空
   score: 2
-  question: 方程的解为________．
-  answer: ''
-  solution: '解：去分母得：，
+  question: 方程$\frac{1}{2x}=\frac{3}{x+1}$的解为________．
+  answer: $x=\frac{1}{5}$
+  solution: '解：去分母得：$x+1=6x$，
 
-    解得：，
+    解得：$x=\frac{1}{5}$，
 
-    经检验：，是分式方程的解．
+    经检验：$2x(x+1)\geq0$，$x=\frac{1}{5}$是分式方程的解．
 
-    故答案为：．'
+    故答案为：$x=\frac{1}{5}$．'
   knowledge_points:
   - 分式方程
   module: numbersAndExpressions
@@ -350,21 +321,21 @@ questions:
 - id: 12
   type: 填空
   score: 2
-  question: 在平面直角坐标系中，反比例函数的图象经过点和，若，则的值为________．
-  answer: ''
-  solution: '解：∵反比例函数的图象经过点和，
+  question: 在平面直角坐标系xOy中，反比例函数$y=\frac{k}{x}(k\neq0)$的图象经过点$P(-2,y_{1})$和$Q(m,y_{2})$，若$y_{1}+y_{2}=0$，则m的值为________．
+  answer: $2$
+  solution: '解：∵反比例函数$y=\frac{k}{x}(k\neq0)$的图象经过点$P(-2,y_{1})$和$Q(m,y_{2})$，
 
-    ∴，，
+    ∴$y_{1}=\frac{k}{-2}$，$y_{2}=\frac{k}{m}$，
 
-    又∵，
+    又∵$y_{1}+y_{2}=0$，
 
-    ∴，
+    ∴$\frac{k}{-2}+\frac{k}{m}=0$，
 
-    即；
+    即$\frac{k}{m}=\frac{k}{2}$；
 
-    即的值为．
+    即m的值为$2$．
 
-    故答案为：．'
+    故答案为：$2$．'
   knowledge_points:
   - 反比例函数
   - 坐标系
@@ -380,11 +351,39 @@ questions:
   score: 2
   question: '某班级计划利用暑假去研学旅行，他们准备订做一批容量相同的双肩包．活动负责人征求了全班40名同学的意向，得到如下数据：
 
-    为了满足大多数人的需求，此次订做的双肩包容量为________．'
-  answer: '29'
-  solution: '解： 出现次23，出现次数最多，
+    容量/L
 
-    ∴众数是，
+    23
+
+    25
+
+    27
+
+    29
+
+    31
+
+    33
+
+    人数/人
+
+    4
+
+    3
+
+    5
+
+    23
+
+    3
+
+    2
+
+    为了满足大多数人的需求，此次订做的双肩包容量为________L．'
+  answer: '29'
+  solution: '解：$29L$出现次23，出现次数最多，
+
+    ∴众数是$29L$，
 
     故答案为：29．'
   knowledge_points:
@@ -398,21 +397,23 @@ questions:
 - id: 14
   type: 填空
   score: 2
-  question: 如图，是的直径，点在上，过点作的切线与直线交于点．若，则________°．
-  answer: ''
-  solution: '解：∵是的直径，为的切线，
+  question: '如图，AB是$\odot\odot$的直径，点C在$\odot\odot$上，过点B作$\odot\odot$的切线与直线AC交于点D．若$\angle D=50^{\circ}$，则$\angle BOC =$________°．
 
-    ∴，
+    [图]'
+  answer: $80$
+  solution: '解：∵AB是$\odot\odot$的直径，BD为$\odot\odot$的切线，
 
-    ∴，
+    ∴$AB \perp BD$，
 
-    ∵，
+    ∴$\angle ABD=90^\circ$，
 
-    ∴，
+    ∵$\angle D=50^{\circ}$，
 
-    ∴．
+    ∴$\angle A=40^{\circ}$，
 
-    故答案为：．'
+    ∴$\angle BOC=2\angle A=80^{\circ}$．
+
+    故答案为：$80$．'
   knowledge_points:
   - 圆周角
   - 切线
@@ -422,26 +423,30 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-yanshan-yi-fig09.png
 - id: 15
   type: 填空
   score: 2
-  question: 如图，在中，点E在上，交于点F．若，则的值为________．
-  answer: '##0.75'
-  solution: '解：在中，，，
+  question: '如图，在$Y_{ABCD}$中，点E在AD上，BE交AC于点F．若$AE = 3ED$，则$\frac{AF}{FC}$的值为________．
 
-    ∵，
+    [图]'
+  answer: $\frac{3}{4}$##0.75
+  solution: '解：在$Y_{ABCD}$中，$AD = BC$，$AD \parallel BC$，
 
-    ∴，
+    ∵$AE = 3ED$，
 
-    ∵，
+    ∴$AE=\frac{3}{4}AD=\frac{1}{4}BC$，
 
-    ∴，
+    ∵$AD \parallel BC$，
 
-    ∴，
+    ∴$\angle EAF = \angle BCF, \angle AEF = \angle CBF$，
 
-    ∴
+    ∴$\triangle EAF\sim\triangle BCF$，
 
-    故答案为：．'
+    ∴$\frac{AF}{FC}=\frac{AE}{BC}=\frac{3}{4}$
+
+    故答案为：$\frac{3}{4}$．'
   knowledge_points:
   - 相似三角形
   - 平行四边形
@@ -451,6 +456,8 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-yanshan-yi-fig10.png
 - id: 16
   type: 填空
   score: 2
@@ -460,27 +467,31 @@ questions:
 
     ②每件工艺品须先在设备甲上加工完成后，才能进入设备乙加工；
 
-    ③每件工艺品在每台设备上所需要的加工时间（单位：）如下表所示：
+    ③每件工艺品在每台设备上所需要的加工时间（单位：$\min$）如下表所示：
 
-    （1） 若要求A，B，C三件工艺品全部加工完成的总时长不超过20，请写出一种满足条件的加工方案________（按顺序写出工艺品的编号）；
+    [图]
 
-    （2） A，B，C三件工艺品全部加工完成，至少需要________．'
-  answer: ①. 答案不唯一，如BCA    ②. 15
-  solution: '按照顺序加工，需要，
+    （1）
 
-    按照顺序加工，需要，
+    若要求A，B，C三件工艺品全部加工完成的总时长不超过20$\min$，请写出一种满足条件的加工方案________（按顺序写出工艺品的编号）；
 
-    按照顺序加工，需要；
+    （2）A，B，C三件工艺品全部加工完成，至少需要________$\min$．'
+  answer: ①.答案不唯一，如BCA②.15
+  solution: '按照ABC顺序加工，需要$7+2+5+6=20\min$，
 
-    按照顺序加工，需要；
+    按照ACB顺序加工，需要$7+2+(4-2)+6+5=22\,\text{min}$，
 
-    按照顺序加工，需要；
+    按照BCA顺序加工，需要$2\cdot5+6+2=15\mathrm{cm}$；
 
-    按照顺序加工，需要．
+    按照BAC顺序加工，需要$2+5+(7-5)+2+(4-2)+6=19\min$；
 
-    （1）总时长不超过20，可以按照顺序加工；
+    按照CAB顺序加工，需要$4+6+(7-6)+5=16:\mathrm{mm}$；
 
-    （2）通过比较发现，最短时间为15．
+    按照CBA顺序加工，需要$4+6+5=15\mathrm{min}$．
+
+    （1）总时长不超过20$\min$，可以按照BCA顺序加工；
+
+    （2）通过比较发现，最短时间为15$\min$．
 
     解答应写出文字说明、演算步骤或证明过程．'
   knowledge_points:
@@ -490,14 +501,16 @@ questions:
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2024-yanshan-yi-fig11.png
 - id: 17
   type: 解答
   score: 5
-  question: （第17题，详见原卷）
-  answer: ''
-  solution: '解：原式
+  question: 计算：$4\sin 45^{\circ}+|-2|-\sqrt{18}+\left(\frac{1}{2}\right)$．
+  answer: $4-\sqrt{2}$
+  solution: '解：原式$4\times\frac{\sqrt{2}}{2}+2-3\sqrt{2}+2$
 
-    ．'
+    $=4-\sqrt{2}$．'
   knowledge_points:
   - 三角函数
   module: numbersAndExpressions
@@ -510,15 +523,27 @@ questions:
 - id: 18
   type: 解答
   score: 5
-  question: 解不等式组：
-  answer: ''
-  solution: '解：原不等式组为
+  question: '解不等式组：$\begin{cases}
 
-    解不等式①，得，
+    3x-4<2x+1\\
 
-    解不等式②，得，
+    \dfrac{5x+3}{2}>x
 
-    ∴原不等式组的解集为．'
+    \end{cases}$'
+  answer: $-1<x<5$
+  solution: '解：原不等式组为$\begin{cases}
+
+    3x+4<2x+1, & \text{①} \\
+
+    \dfrac{5x+3}{2}>x. & \text{②}
+
+    \end{cases}$
+
+    解不等式①，得$x<5$，
+
+    解不等式②，得$x > -1$，
+
+    ∴原不等式组的解集为$-1<x<5$．'
   knowledge_points:
   - 不等式
   - 不等式组
@@ -532,8 +557,8 @@ questions:
 - id: 19
   type: 解答
   score: 5
-  question: 已知，求代数式的值．
-  answer: ，
+  question: 已知$2x^{2}-x-1=0$，求代数式$(3x+2)(3x-2)-3(x+1)$的值．
+  answer: $3(2x^2-x)-4$，$-1$
   solution: ''
   knowledge_points:
   - 综合
@@ -547,47 +572,49 @@ questions:
 - id: 20
   type: 解答
   score: 5
-  question: '如图，在菱形中，对角线与相交于点O，E为的中点，连接并延长到点F，使得，连接．
+  question: '如图，在菱形$ABCD$中，对角线AC与BD相交于点O，E为CD的中点，连接OE并延长到点F，使得$OE = EF$，连接$CF,DF$．
 
-    （1）求证：四边形是矩形；
+    [图]
 
-    （2）若，，求的长．'
-  answer: （1）见解析    （2）8
+    （1）求证：四边形$OCFD$是矩形；
+
+    （2）若$AB = 5$，$\sin \angle DOF = \frac{3}{5}$，求BD的长．'
+  answer: （1）见解析（2）8
   solution: '【小问1详解】
 
-    ∵点E为的中点，
+    ∵点E为CD的中点，
 
-    ∴，
+    ∴$DE = CE$，
 
-    又∵，
+    又∵$OE = EF$，
 
-    ∴四边形是平行四边形，
+    ∴四边形$OCFD$是平行四边形，
 
-    ∵菱形，
+    ∵菱形$ABCD$，
 
-    ∴，
+    ∴$OC \perp OD$，
 
-    ∴，
+    ∴$\angle COD=90^\circ$，
 
-    ∴平行四边形是矩形；
+    ∴平行四边形$OCFD$是矩形；
 
     【小问2详解】
 
-    ∵菱形，
+    ∵菱形$ABCD$，
 
-    ∴．
+    ∴$AB=CD=3,BD=2OD$．
 
-    ∵矩形，
+    ∵矩形$OCFD$，
 
-    ∴，．
+    ∴$OF = CD = 5$，$\angle ODF=90^{\circ}$．
 
-    在中，，
+    在$\mathrm{Rt}\triangle ODF$中，$\sin \angle DOF = \frac{DF}{OF} = \frac{3}{5}$，
 
-    ∴，
+    ∴$DF = 3$，
 
-    ∴，
+    ∴$OD=\sqrt{OF^{2}-DF^{2}}=4$，
 
-    ∴．'
+    ∴$BD = 8$．'
   knowledge_points:
   - 勾股定理
   - 平行四边形
@@ -599,20 +626,24 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-yanshan-yi-fig12.png
 - id: 21
   type: 解答
   score: 5
-  question: 《清明上河图》是北宋画家张择端的作品，是中国十大传世名画之一．如图是某书画家的一幅局部临摹作品，装裱前是长为，宽为的矩形，装裱后，整幅图画长与宽的比是，且四周边衬的宽度相等，求边衬的宽度．
-  answer: ''
-  solution: '解：设边衬宽度为．依题意，得
+  question: '《清明上河图》是北宋画家张择端的作品，是中国十大传世名画之一．如图是某书画家的一幅局部临摹作品，装裱前是长为$2.2m$，宽为$1.6m$的矩形，装裱后，整幅图画长与宽的比是$4:3$，且四周边衬的宽度相等，求边衬的宽度．
 
-    ＝，
+    [图]'
+  answer: $0.1m$
+  solution: '解：设边衬$[公式]$宽度为xm．依题意，得
 
-    解得：．
+    $\frac{2.2+2x}{1.6+2x}$＝$\frac{4}{3}$，
 
-    经检验，是原方程的解且符合实际意义．
+    解得：$x = 0.1$．
 
-    答：边衬的宽度为．'
+    经检验，$x = 0.1$是原方程的解且符合实际意义．
+
+    答：边衬的宽度为$0.1m$．'
   knowledge_points:
   - 分式方程
   - 矩形
@@ -622,38 +653,84 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-yanshan-yi-fig13.png
 - id: 22
   type: 解答
   score: 5
-  question: '在平面直角坐标系中，一次函数（）的图象由函数的图象向下平移4个单位长度得到，且与轴交于点A．
+  question: '在平面直角坐标系xOy中，一次函数$y=kx+b$（$k \neq 0$）的图象由函数$y=2x$的图象向下平移4个单位长度得到，且与x轴交于点A．
 
     （1）求该一次函数的解析式及点A的坐标；
 
-    （2）当时，对于的每一个值，函数的值小于一次函数（）的值且大于，直接写出的取值范围．'
-  answer: （1）， （2）
+    （2）当$x>2$时，对于x的每一个值，函数$y = x + n$的值小于一次函数$y=kx+b$（$k \neq 0$）的值且大于$-3$，直接写出n的取值范围．'
+  answer: （1）$y=2x-4$，$A(2,0)$ （2）$-5 \leq n \leq -2$
   solution: '【小问1详解】
 
-    解：一次函数（）的图象由函数的图象向下平移4个单位长度得到，
+    解：$\begin{array}{c}
 
-    一次函数的解析式为，
+    \bullet \\
 
-    当时，，解得：，
+    \bullet \quad \bullet \\
 
-    ．
+    \bullet
+
+    \end{array}$一次函数$y=kx+b$（$k \neq 0$）的图象由函数$y=2x$的图象向下平移4个单位长度得到，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$一次函数的解析式为$y=2x-4$，
+
+    当$y = 0$时，$0=2x-4$，解得：$x=2$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$A(2,0)$．
 
     【小问2详解】
 
-    当时，对于的每一个值，函数的值小于一次函数的值且大于，
+    $\begin{array}{c}
 
-    且，
+    \bullet \\
 
-    即：且，
+    \bullet \quad \bullet \\
 
-    ，
+    \bullet
 
-    且，
+    \end{array}$当$x>2$时，对于x的每一个值，函数$y = x + n$的值小于一次函数$y=2x-4$的值且大于$-3$，
 
-    解得：．'
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$x+n<2x-4$且$x+n>-3$，
+
+    即：$x>4+n$且$x>-3-n$，
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \en'
   knowledge_points:
   - 一次函数
   - 平移
@@ -668,33 +745,57 @@ questions:
 - id: 23
   type: 解答
   score: 6
-  question: '为了考査甲、乙两种水稻的长势，农业科技人员从一块试验田中分别随机抽取甲、乙两种水稻的稻穗各株，获取了每株稻穗的谷粒数（单位：颗），数据整理如下：
+  question: '为了考査甲、乙两种水稻的长势，农业科技人员从一块试验田中分别随机抽取甲、乙两种水稻的稻穗各$20$株，获取了每株稻穗的谷粒数（单位：颗），数据整理如下：
 
-    ．甲种水稻稻穗谷粒数：
+    a．甲种水稻稻穗谷粒数：
 
-    ，，，，，，，，，，
+    $170$，$172$，$176$，$177$，$178$，$182$，$184$，$193$，$196$，$202$，
 
-    ，，，，，，，，，
+    $206$，$206$，$206$，$206$，$208$，$208$，$214$，$215$，$216$，$219$
 
-    ．乙种水稻稻穗谷粒数的折线图：
+    b．乙种水稻稻穗谷粒数的折线图：
+
+    [图]
 
     c．甲、乙两种水稻稻穗谷粒数的平均数、中位数、众数：
 
+    平均数
+
+    中位数
+
+    众数
+
+    甲
+
+    $196.7$
+
+    m
+
+    $206$
+
+    乙
+
+    $196.8$
+
+    $195$
+
+    n
+
     根据以上信息，回答下列问题：
 
-    （1）写出表中，的值；
+    （1）写出表中m，n的值；
 
-    （2）若水稻稻穗谷粒数的方差越小，则认为水稻产量的稳定性越好．据此推断，甲、乙两种水稻中，产量更稳定的是        （填“甲”或“乙”）；
+    （2）若水稻稻穗谷粒数的方差越小，则认为水稻产量的稳定性越好．据此推断，甲、乙两种水稻中，产量更稳定的是（填“甲”或“乙”）；
 
-    （3）若单株稻穗的谷粒数不低于颗的水稻视为优良水稻，则从水稻优良率分析，应推荐种植        种水稻（填“甲”或“乙”）；若该试验田中有甲、乙两种水稻各株，据此估计，优良水稻共有        株．'
-  answer: （1）的值为，的值为 （2）乙    （3）甲；
+    （3）若单株稻穗的谷粒数不低于$200$颗的水稻视为优良水稻，则从水稻优良率分析，应推荐种植种水稻（填“甲”或“乙”）；若该试验田中有甲、乙两种水稻各$4000$株，据此估计，优良水稻共有株．'
+  answer: （1）m的值为$204$，n的值为$195$ （2）乙（3）甲；$3800$
   solution: '【小问1详解】
 
-    解：中位数为，
+    解：中位数为$m=\frac{202+206}{2}=204$，
 
-    根据乙种水稻稻穗谷粒数的折线图可以发现，每株稻穗的谷粒数为出现的次数最多，
+    根据乙种水稻稻穗谷粒数的折线图可以发现，每株稻穗的谷粒数为$195$出现的次数最多，
 
-    也就是说这组数据的众数为，所以．
+    也就是说这组数据的众数为$195$，所以$n = 195$．
 
     【小问2详解】
 
@@ -704,19 +805,19 @@ questions:
 
     【小问3详解】
 
-    解：甲的水稻优良率为：，
+    解：甲的水稻优良率为：$\frac{11}{20}\times100\%=55\%$，
 
-    乙的水稻优良率为：，
+    乙的水稻优良率为：$\frac{8}{20}\times100\%=40\%$，
 
     故从水稻优良率分析，应推荐种植甲种水稻；
 
-    若该试验田中有甲、乙两种水稻各株，则甲的优良水稻有株，
+    若该试验田中有甲、乙两种水稻各$4000$株，则甲的优良水稻有$4000\times5.5\%=2200$株，
 
-    则乙的优良水稻有株，
+    则乙的优良水稻有$4000\times40\%=1600$株，
 
-    共有株，
+    共有$2200+1460=3800$株，
 
-    故答案为：甲，．'
+    故答案为：甲，$3800$．'
   knowledge_points:
   - 统计
   - 平均数
@@ -728,64 +829,72 @@ questions:
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2024-yanshan-yi-fig14.png
 - id: 24
   type: 解答
   score: 6
-  question: '如图，为的直径，弦，过点A作的切线交的延长线于点E．
+  question: '如图，AB为$\odot\odot$的直径，弦$CD \perp AB$，过点A作$\odot\odot$的切线交BC的延长线于点E．
 
-    （1）求证：；
+    [图]
 
-    （2）若的半径为5，，求的长．'
-  answer: （1）见详解    （2）
+    （1）求证：$\angle BAD = \angle E$；
+
+    （2）若$\odot\odot$的半径为5，$AD = 6$，求CE的长．'
+  answer: （1）见详解（2）$\frac{9}{2}$
   solution: '【小问1详解】
 
-    证明：∵是的切线，为的直径，
+    证明：∵AE是$\odot\odot$的切线，AB为$\odot\odot$的直径，
 
-    ∴，
+    [图]
 
-    ∵，
+    ∴$\angle EAB = 90^\circ$，
 
-    ∴，
+    ∵$CD \perp AB$，
 
-    ∴，
+    ∴$\angle A=\angle AB=90^{\circ}$，
 
-    ∴，
+    ∴$AE \parallel CD$，
 
-    ∵，
+    ∴$\angle BCD = \angle E$，
 
-    ∴，
+    ∵$\widehat{BD}=\widehat{BD}$，
 
-    ∴．
+    ∴$\angle BAD = \angle BCD$，
+
+    ∴$\angle BAD = \angle E$．
 
     【小问2详解】
 
-    解：如图，连接，
+    解：如图，连接AC，
 
-    ∵为的直径，，
+    [图]
 
-    ∴，，
+    ∵AB为$\odot\odot$的直径，$CD \perp AB$，
+
+    ∴$AC = AD = 6$，$\angle ACB=\angle ACE=90^\circ$，
 
     ∵半径为5
 
-    ∴，
+    ∴$AB = 10$，
 
-    ∴，
+    ∴$BC=\sqrt{AB^{2}-AC^{2}}=8$，
 
-    ∵，
+    ∵$\angle ACE = \angle EAB = 90^\circ$，
 
-    ∴，
+    ∴$\angle E+\angle EAC=\angle EAC+\angle CAB=90^{\circ}$，
 
-    ∴，
+    ∴$\angle E=\angle CAB$，
 
-    在和中，
+    在$Rt\triangle EAC$和$\mathrm{Rt}\triangle ACB$中，
 
-    ，，
+    $\angle ACE = \angle BCA = 90^{\circ}$，$\angle E=\angle CAB$，
 
-    ∴ ，
+    ∴$\triangle EAC \sim \triangle ABC$，
 
-    ∴，
+    ∴$\frac{EC}{AC} = \frac{AC}{BC}$，
 
-    ∴．'
+    ∴$\frac{AC}{BC}=\frac{36}{8}=\frac{9}{2}$．'
   knowledge_points:
   - 圆周角
   - 切线
@@ -797,42 +906,56 @@ questions:
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2024-yanshan-yi-fig15.png
+  - figures/2024-yanshan-yi-fig16.png
+  - figures/2024-yanshan-yi-fig17.png
 - id: 25
   type: 解答
   score: 6
-  question: '科研人员为了研究弹射器的某项性能，利用无人机测量小钢球竖直向上运动的相关数据．无人机上升到距离地面处开始计时，此时，在地面用弹射器（高度不计）竖直向上弹射一个小钢球（忽略空气阻力）．记无人机和小钢球距离地面的高度分别为，（单位：），科研人员收集了，随时间x （单位：s）变化的数据，并分别绘制在平面直角坐标系中，如图所示．
+  question: '科研人员为了研究弹射器的某项性能，利用无人机测量小钢球竖直向上运动的相关数据．无人机上升到距离地面$20m$处开始计时，此时，在地面用弹射器（高度不计）竖直向上弹射一个小钢球（忽略空气阻力）．记无人机和小钢球距离地面的高度分别为$y_{1}$，$y_{2}$（单位：m），科研人员收集了$y_{1}$，$y_{2}$随时间x（单位：s）变化的数据，并分别绘制在平面直角坐标系中，如图所示．
 
-    （1）根据，随的变化规律，从 ① ；② （）；③中，选择适当的函数模型，分别求出，满足的函数关系式；
+    [图]
 
-    （2）当时，小钢球和无人机的高度差最大是        ．'
-  answer: （1）；； （2）．
+    （1）根据$y_{1}$，$y_{2}$随x的变化规律，从
+
+    ①$y = mx + n$$(m = 0)$；②$y=ax^{2}+bx$（$a < 0$）；③$y = \frac{k}{x}$$(k \neq 0)$中，选择适当的函数模型，分别求出$y_{1}$，$y_{2}$满足的函数关系式；
+
+    （2）当$0<x<5$时，小钢球和无人机的高度差最大是m．'
+  answer: （1）$y_{1}=5x+20$；$y = -5x^2 + 35x$； （2）$25$．
   solution: '【小问1详解】
 
-    设关于的函数关系式为，
+    设$y_{1}$关于x的函数关系式为$y_{1}=mx+n(m\neq 0)$，
 
-    将点，的坐标代入得 ，
+    将点$(0,20)$，$(1,25)$的坐标代入$y_{1}=mx+n(m\neq 0)$得$\left\{ \begin{array} { l } { 20 = n } \\ { 25 = m + n } \end{array} \right.$，
 
-    解得，
+    解得$\left\{\begin{array}{l}m=5\\n=20\end{array}\right.$，
 
-    ∴关于的函数关系式为
+    ∴$y_{1}$关于x的函数关系式为$y_{1}=5x+20$
 
-    设关于的函数关系式为
+    设$y_{2}$关于x的函数关系式为$y_{2}=ax^{2}+bx(a\lt 0)$
 
-    将点，，坐标代入，得
+    将点$(1,30)$，$(2,50)$，坐标代入$y_{2}=ax^{2}+bx(a\lt 0)$，得$\begin{aligned}
 
-    解得 ，
+    30 &= a + b \\
 
-    ∴关于的函数关系式为；
+    50 &= 4a + 2b
+
+    \end{aligned}$
+
+    解得$\left\{ \begin{array}{l} a = -5 \\ b = 35 \end{array} \right.$，
+
+    ∴$y_{2}$关于x的函数关系式为$y = -5x^2 + 35x$；
 
     【小问2详解】
 
-    由（）得，，
+    由（$1$）得$y_{1}=5x+20$，$y = -5x^2 + 35x$，
 
-    ∴，
+    ∴$y_{2}-y_{1}=-5x^{2}+35x-\left(5x+20\right)=-5x^{2}+30x-20=-5\left(x-3\right)^{2}+25$，
 
-    ∴当时，小钢球和无人机高度差最大是，
+    ∴当$x=3$时，小钢球和无人机$[公式]$高度差最大是$25$m，
 
-    故答案为：．'
+    故答案为：$25$．'
   knowledge_points:
   - 一次函数
   - 二次函数
@@ -843,74 +966,76 @@ questions:
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2024-yanshan-yi-fig18.png
 - id: 26
   type: 解答
   score: 6
-  question: '在平面直角坐标系中，，是抛物线上两点．设该抛物线的对称轴为．
+  question: '在平面直角坐标系xOy中，$M(m,y_{1})$，$N(m+2,y_{2})$是抛物线$y=ax^{2}+bx+c(a>0)$上两点．设该抛物线的对称轴为$x = t$．
 
-    （1）若对于，有，求的值；
+    （1）若对于$m = 1$，有$y_{1}=y_{2}$，求t的值；
 
-    （2）若对于，都有，求的取值范围．'
-  answer: （1） （2）
+    （2）若对于$1<m<2$，都有$y_1 < y_2$，求t的取值范围．'
+  answer: （1）$2$ （2）$t \leq 2$
   solution: '【小问1详解】
 
-    解：∵对于，有，
+    解：∵对于$m = 1$，有$y_{1}=y_{2}$，
 
-    ∴点，关于直线对称，
+    ∴点$M(m,y_{1})$，$N(m+2,y_{2})$关于直线$x = t$对称，
 
-    ∴，
+    ∴$t-1=3-t$，
 
-    ∴．
+    ∴$t=2$．
 
     【小问2详解】
 
-    解：∵，
+    解：∵$a > 0$，
 
-    ∴当时，随增大而增大，当时，随增大而减小．
+    ∴当$x\quad t$时，y随x增大而增大，当$x < t$时，y随x增大而减小．
 
-    ①当时，
+    ①当$t \leq 1$时，
 
-    ∵，
+    ∵$1<m<2$，
 
-    ∴，
+    ∴$3 < m + 2 < 4$，
 
-    ∴，
+    ∴$1 < m < m + 2$，
 
-    ∴，符合题意；
+    ∴$y_1 < y_2$，符合题意；
 
-    ②当时，
+    ②当$1<t\leq2$时，
 
-    （i）当时，
+    （i）当$t\sin m<2$时，
 
-    ∵，
+    ∵$3 < m + 2 < 4$，
 
-    ∴，
+    ∴$1 \leq m < m + 2$，
 
-    ∴，符合题意；
+    ∴$y_1 < y_2$，符合题意；
 
-    （ii）当时，
+    （ii）当$m < t \leq 2$时，
 
-    设点关于的对称点为，则点的坐标为，
+    设点$M(m,y_{1})$关于$x = t$的对称点为$M''$，则点$M''$的坐标为$M''(2i-m,y_{1})$，
 
-    ∵，
+    ∵$1 < m < t \leq 2$，
 
-    ∴.
+    ∴$m < 2t - m < 3$.
 
-    ∵，
+    ∵$3 < m + 2 < 4$，
 
-    ∴，
+    ∴$2t-m<m+2$，
 
-    ∴，符合题意；
+    ∴$y_1 < y_2$，符合题意；
 
-    ③当时，令，则，
+    ③当$2<t<3$时，令$m = t - 1$，则$m+2=t+1$，
 
-    ∴，不符合题意；
+    ∴$y_{1}=y_{2}$，不符合题意；
 
-    ④当时，令，则，
+    ④当$t^{3}$时，令$m = \frac{3}{2}$，则$m+2=\frac{7}{2}$，
 
-    ∴，不符合题意；
+    ∴$y_{1}>y_{2}$，不符合题意；
 
-    综上所述，的取值范围是．'
+    综上所述，t的取值范围是$t \leq 2$．'
   knowledge_points:
   - 二次函数
   - 坐标系
@@ -921,75 +1046,73 @@ questions:
 - id: 27
   type: 解答
   score: 7
-  question: '在中，，，为的中点，D为线段AM上的动点（不与点，重合），过点作，且，连接．
+  question: '在$\triangle ABC$中，$\angle ACB=90^\circ$，$AC = BC$，M为AB的中点，D为线段AM上的动点（不与点A，M重合），过点D作$DE \perp AB$，且$DE = DM$，连接CM．
 
-    （1）如图1，当点在线段上时，求证：是的中点；
+    [图]
 
-    （2）当位于图2位置时，连接，过点作，交于点．用等式表示线段与的数量关系，并证明．'
-  answer: （1）见解析    （2），见解析
+    （1）如图1，当点E在线段AC上时，求证：D是AM的中点；
+
+    （2）当DE位于图2位置时，连接CE，过点E作$EF \perp CE$，交AB于点F．用等式表示线段BF与DE的数量关系，并证明．'
+  answer: （1）见解析（2）$BF=2DE$，见解析
   solution: '【小问1详解】
 
-    证明：∵中，，，
+    证明：∵$\triangle ABC$中，$\angle ACB=90^\circ$，$AC = BC$，
 
-    ∴，
+    ∴$\angle A=45^{\circ}$，
 
-    ∵，
+    ∵$DE \perp AB$，
 
-    ∴，
+    ∴$\angle AED=\angle A=45^{\circ}$，
 
-    ∴，
+    ∴$DE = AD$，
 
-    ∵，
+    ∵$DE = DM$，
 
-    ∴，
+    ∴$AD = DM$，
 
-    即是的中点．
+    即D是AM的中点．
 
     【小问2详解】
 
-    ．
+    $BF=2DE$．
 
-    证明：如图，连接，．
+    证明：如图，连接EA，EM．
 
-    ∵，，
+    [图]
 
-    ∴是等腰直角三角形，
+    ∵$DE = DM$，$DE \perp AB$，
 
-    ∴，
+    ∴$\triangle EDM$是等腰直角三角形，
 
-    ∵在中，，，为的中点，
+    ∴$\angle EMA = 45^\circ$，
 
-    ∴，，
+    ∵在$\triangle ABC$中，$\angle ACB=90^\circ$，$AC = BC$，M为AB的中点，
 
-    ∴，
+    ∴$\angle CMA = 90^\circ$，$AM = CM$，
 
-    在和中，
+    ∴$\angle EMC=45^{\circ}$，
 
-    ，
+    在$\triangle EMA$和$\triangle EMC$中，
 
-    ∴，
+    $\angle EMA = \angle EMC = 45^\circ \\
 
-    ∴．
+    EM = EM$，
 
-    ∵在四边形中，，，
+    ∴$\triangle EMA \cong \triangle EMC$，
 
-    ∴．
+    ∴$\angle EAM = \angle ECM$．
 
-    又∵，
+    ∵在四边形$CEFM$中，$EF \perp CE$，$\angle CMA = 90^\circ$，
 
-    ∴，
+    ∴$\angle EFM + \angle ECM = 360^\circ - (\angle CEF + \angle CMF) = 180^\circ$．
 
-    ∴，
+    又∵$\angle EFA+\angle EFM=180^\circ$，
 
-    ∴，
+    ∴$\angle EFA=\angle ECM$，
 
-    又∵DE⊥AF，
+    ∴$\angle EAM = \angle EFA$，
 
-    ∴为的中点，
-
-    ∴，
-
-    即．'
+    ∴$EA = '
   knowledge_points:
   - 全等三角形
   - 动点
@@ -997,108 +1120,73 @@ questions:
   difficulty: 压轴
   recommended_for:
   - L3
+  figures:
+  - figures/2024-yanshan-yi-fig19.png
+  - figures/2024-yanshan-yi-fig20.png
 - id: 28
   type: 解答
   score: 7
-  question: '在平面直角坐标系中，对于和线段给出如下定义：如果线段上存在点P，Q，使得点P在⊙G内，且点Q在外，则称线段为的“交割线段”．
+  question: '在平面直角坐标系xOy中，对于$\circ G$和线段AB给出如下定义：如果线段AB上存在点P，Q，使得点P在⊙G内，且点Q在$\circ G$外，则称线段AB为$\circ G$的“交割线段”．
 
-    （1）如图，的半径为2，点．
+    [图]
 
-    ①在的三条边中，的“交割线段”是        ；
+    （1）如图，$\odot\odot$的半径为2，点$A(0,2),\ B(2,2),\ C(-1,0)$．
 
-    ②点M是直线上的一个动点，过点M作轴，垂足为N，若线段是的“交割线段”，求点M的横坐标m的取值范围；
+    ①在$\triangle ABC$的三条边$AB, BC, AC$中，$\odot\odot$的“交割线段”是；
 
-    （2）已知三条直线，，分别相交于点D，E，F，的圆心为，半径为2，若的三条边中有且只有两条是的“交割线段”，直接写出的取值范围．'
-  answer: （1）①；②当或 （2）或
+    ②点M是直线OB上的一个动点，过点M作$MN\perp x$轴，垂足为N，若线段MN是$\odot\odot$的“交割线段”，求点M的横坐标m的取值范围；
+
+    （2）已知三条直线$y=3$，$y = -x$，$y = -2x + 3$分别相交于点D，E，F，$\mathrm{e}T$的圆心为$(0,\ t)$，半径为2，若$\triangle DEF$的三条边中有且只有两条是$\mathrm{e}T$的“交割线段”，直接写出t的取值范围．'
+  answer: （1）①BC；②当$-2 < m < -\sqrt{2}$或$\sqrt{2}<m<2$ （2）$3-2\sqrt{5}<t\leq1$或$2\sqrt{2}\leq l<5$
   solution: '【小问1详解】
 
-    解：∵，
+    解：∵$A(0,2),\ B(2,2)$，
 
-    ∴，
+    ∴$OA=2,\ OA\perp AB$，
 
-    ∴点A在上，
+    ∴点A在$\odot\odot$上，
 
-    ∴与相切，
+    ∴$\odot\odot$与AB相切，
 
-    ∴线段上没有点在外，
+    ∴线段AB上没有点在$\odot\odot$外，
 
-    ∴线段不是的“交割线段”，
+    ∴线段AB不是$\odot\odot$的“交割线段”，
 
-    ∵，
+    ∵$OC=1<2,\ OB=\sqrt{2^{2}+2^{2}}=2\sqrt{2}>2$，
 
-    ∴点C在内，点B在外，
+    ∴点C在$\odot\odot$内，点B在$\odot\odot$外，
 
-    ∴线段上没有点在外，线段上有点在内，也有点在内，
+    ∴线段AC上没有点在$\odot\odot$外，线段BC上有点在$\odot\odot$内，也有点在$\odot\odot$内，
 
-    ∴线段不是的“交割线段”，线段是的“交割线段”，
+    ∴线段AC不是$\odot\odot$的“交割线段”，线段BC是$\odot\odot$的“交割线段”，
 
-    故答案为：；
+    故答案为：BC；
 
-    ②如图所示，设直线在x轴上方与交于T，过点T和点B分别作x轴的垂线，垂足分别为G、H，设，
+    [图]
 
-    ∴，，
+    ②如图所示，设直线OB在x轴上方与$\odot\odot$交于T，过点T和点B分别作x轴的垂线，垂足分别为G、H，设$T(t,\ t)$，
 
-    ∴此时点H刚好在上，且此时与相切；
+    ∴$OH = BH = 2$，$OG = TG = t$，
 
-    ∵的半径为2，
+    ∴此时点H刚好在$\odot\odot$上，且此时BH与$\odot\odot$相切；
 
-    ∴，
+    ∵$\odot\odot$的半径为2，
 
-    ∴，
+    ∴$OT = 2$，
 
-    解得或（舍去），
+    ∴$t^{2}+t^{2}=2^{2}$，
 
-    ∴由函数图象可知，当点M在之间（不包括端点），即时，线段是的“交割线段”；
+    解得$t = \sqrt{2}$或$t = -\sqrt{2}$（舍去），
 
-    由对称性可得当时，线段是的“交割线段”；
+    ∴由函数图象可知，当点M在BT之间（不包括端点），即$\sqrt{2}<m<2$时，线段MN是$\odot\odot$的“交割线段”；
 
-    综上所述，当或时，线段是的“交割线段”；
+    由对称性可得当$-2 < m < -\sqrt{2}$时，线段MN是$\odot\odot$的“交割线段”；
 
-    【小问2详解】
+    综上所述，当$-2 < m < -\sqrt{2}$或$\sqrt{2}<m<2$时，线段MN是$\odot\odot$的“交割线段”；
 
-    解：联立 得，
+    [图]【小问2详解】
 
-    ∴，
-
-    同理可得，；
-
-    如图2-1所示，当恰好经过点D时，
-
-    ∴，
-
-    ∴；
-
-    如图2-2所示，当恰好与相切于H时，连接，
-
-    ∵，，
-
-    ∴，
-
-    ∴，
-
-    由切线的性质可得，
-
-    ∴是等腰直角三角形，
-
-    ∴，
-
-    ∴当时，是的“交割线段”，不是的“交割线段”；
-
-    如图2-3所示，当恰好经过点D时，
-
-    ∴，
-
-    ∴；
-
-    如图2-4所示，当恰好与相切于P时，连接，设直线与x轴交于Q，
-
-    ∴，
-
-    ∴，
-
-    ∴；
-
-    由切线的性质可得'
+    解：联立'
   knowledge_points:
   - 一次函数
   - 切线
@@ -1109,3 +1197,11 @@ questions:
   difficulty: 压轴
   recommended_for:
   - L3
+  figures:
+  - figures/2024-yanshan-yi-fig21.png
+  - figures/2024-yanshan-yi-fig22.png
+  - figures/2024-yanshan-yi-fig23.png
+  - figures/2024-yanshan-yi-fig24.png
+  - figures/2024-yanshan-yi-fig25.png
+  - figures/2024-yanshan-yi-fig26.png
+  - figures/2024-yanshan-yi-fig27.png

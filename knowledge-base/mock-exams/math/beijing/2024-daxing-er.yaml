@@ -1,8 +1,8 @@
 # ============================================================
 # 2024年北京大兴区中考数学二模试卷 — 逐题分析
 # ============================================================
-# 数据来源：knowledge-original/精品解析：2024年北京市大兴区中考二模数学试题（原卷版）.docx
-# 自动生成，部分数学公式可能显示不全（docx公式对象无法完整提取）
+# 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
+# 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
 # 满分：100分  时长：120分钟
 
 year: 2024
@@ -11,104 +11,23 @@ exam_type: 二模
 subject: 数学
 full_score: 100
 duration_minutes: 120
-total_questions: 33
+total_questions: 28
 structure: 8选择(16分) + 8填空(16分) + 12解答(68分)
 questions:
-- id: 2024
-  type: 解答
-  score: 5
-  question: '05
-
-    考生须知'
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 压轴
-  recommended_for:
-  - L3
-- id: 1
-  type: 解答
-  score: 5
-  question: 本试卷共7页，共28道题．满分100分．考试时间120分钟．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 2
-  type: 解答
-  score: 5
-  question: 在试卷和答题卡上准确填写姓名、准考证号、考场号和座位号．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 3
-  type: 解答
-  score: 5
-  question: 试题答案一律填涂或书写在答题卡上，在试卷上作答无效．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 4
-  type: 解答
-  score: 5
-  question: 在答题卡上，选择题、作图题用2B铅笔作答、其他试题用黑色字迹签字笔作答．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 5
-  type: 解答
-  score: 5
-  question: 考试结束，将本试卷、答题卡和草稿纸一并交回．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
 - id: 1
   type: 选择
   score: 2
-  question: "如图是某几何体的展开图，该几何体是（    ）\nA. 三棱柱\tB. 三棱锥\tC. 圆柱\tD. 圆锥"
-  answer: ''
-  solution: ''
+  question: '如图是某几何体的展开图，该几何体是（
+
+    ）
+
+    [图]
+
+    A.三棱柱B.三棱锥C.圆柱D.圆锥'
+  answer: D
+  solution: '解：由图可知该几何体是圆锥；
+
+    故选D．'
   knowledge_points:
   - 综合
   module: circles
@@ -118,12 +37,20 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-daxing-er-fig02.png
 - id: 2
   type: 选择
   score: 2
-  question: "截至年月中旬，年全民健身线上运动会已上线项赛事，累计参赛人数达到万，证书总发放量达万张．将用科学记数法表示应为（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '截至$2023$年$12$月中旬，$2023$年全民健身线上运动会已上线$199$项赛事，累计参赛人数达到$2189$万，证书总发放量达$1731$万张．将$21890000$用科学记数法表示应为（
+
+    ）
+
+    A.$21.89\times10^{6}$B.$2.189\times10^{7}$C.$2.189\times10^{8}$D.$0.2189\times10^{9}$'
+  answer: B
+  solution: '解：$21890000=2.189\times10^{7}$，
+
+    故选：B．'
   knowledge_points:
   - 科学记数法
   module: numbersAndExpressions
@@ -136,12 +63,25 @@ questions:
 - id: 3
   type: 选择
   score: 2
-  question: "下列图形中，既是轴对称图形又是中心对称图形的是（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '下列图形中，既是轴对称图形又是中心对称图形的是（
+
+    ）
+
+    A.[图]B.[图]C.[图]D.[图]'
+  answer: D
+  solution: '解：A、是轴对称图形，不是中心对称图形，故此选项不符合题意；
+
+    B、不是轴对称图形，是中心对称图形，故此选项不符合题意；
+
+    C、不是轴对称图形，是中心对称图形，故此选项不符合题意；
+
+    D、既是轴对称图形，也是中心对称图形，故此选项符合题意；
+
+    故选：D．'
   knowledge_points:
   - 中心对称图形
   - 轴对称图形
+  - 旋转
   - 轴对称
   module: geometryComprehensive
   difficulty: 基础
@@ -150,14 +90,29 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-daxing-er-fig03.png
+  - figures/2024-daxing-er-fig04.png
+  - figures/2024-daxing-er-fig05.png
+  - figures/2024-daxing-er-fig06.png
 - id: 4
   type: 选择
   score: 2
-  question: "如图，A，B两点在数轴上表示的数分别是a，b，下列结论中正确的是（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '如图，A，B两点在数轴上表示的数分别是a，b，下列结论中正确的是（
+
+    ）
+
+    [图]
+
+    A.$ab > 0$B.$a+b>0$C.$\left|b\right|>\left|a\right|$D.$b-a>0$'
+  answer: B
+  solution: '解：由数轴知：$-1 < b < 0 < 1 < a$，
+
+    ∴$ab < 0$，$a+b>0$，$|b| < |a|$，$b-a<0$，
+
+    故选：B．'
   knowledge_points:
-  - 综合
+  - 绝对值
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -165,14 +120,25 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-daxing-er-fig07.png
 - id: 5
   type: 选择
   score: 2
-  question: "某学校组织学生到社区开展公益宣传活动，成立了“文明交通”“垃圾分类”两个宣传队，若小明和小亮每人随机选择参加其中一个宣传队，则他们恰好选到同一个宣传队的概率是（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '某学校组织学生到社区开展公益宣传活动，成立了“文明交通”“垃圾分类”两个宣传队，若小明和小亮每人随机选择参加其中一个宣传队，则他们恰好选到同一个宣传队的概率是（）
+
+    A.$\frac{1}{4}$B.$\frac{1}{3}$C.$\frac{1}{2}$D.$\frac{3}{4}$'
+  answer: C
+  solution: '解：用甲表示“文明交通”宣传队，用乙表示“垃圾分类”宣传队，根据题意得，画树状图如下：
+
+    [图]
+
+    共有4种等可能的结果，其中小明和小亮恰好选到同一个宣传队的有2种，则小明和小亮恰好选到同一个宣传队的概率是$\frac{2}{4}=\frac{1}{2}$．
+
+    故选C．'
   knowledge_points:
   - 概率
+  - 树状图
   module: statisticsAndProbability
   difficulty: 基础
   recommended_for:
@@ -180,15 +146,26 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-daxing-er-fig08.png
 - id: 6
   type: 选择
   score: 2
-  question: "若关于的一元二次方程有两个相等的实数根、则实数的值为（    ）\nA. 3\tB. 2\tC. 0\tD."
-  answer: ''
-  solution: ''
+  question: '若关于x的一元二次方程$x^{2}-4x+2a=0$有两个相等的实数根、则实数a的值为（
+
+    ）
+
+    A.3B.2C.0D.$-1$'
+  answer: B
+  solution: '解：根据题意得，$\Delta=(-4)^{2}-4\times2a=0$，
+
+    解得，$a = 2$，
+
+    故选：B．'
   knowledge_points:
   - 一元二次方程
-  module: numbersAndExpressions
+  - 根的判别式
+  module: equationsAndInequalities
   difficulty: 中档
   recommended_for:
   - L1
@@ -197,23 +174,62 @@ questions:
 - id: 7
   type: 选择
   score: 2
-  question: "如图，点在上，为的中点．若，则的大小是（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '如图，点$A, B, C$在$\odot\odot$上，C为$\overline{AB}$的中点．若$\angle ABC=25^{\circ}$，则$\angle AOB$的大小是（
+
+    ）
+
+    [图]
+
+    A.$130^\circ$B.$120^\circ$C.$100^\circ$D.$50^\circ$'
+  answer: C
+  solution: '解：如图所示，连接OC，点C是$\overset{\diamondsuit}{AB}$中点，
+
+    [图]
+
+    ∵$AC = BC$，
+
+    ∴$\angle AOC = \angle COB = \frac{1}{2} \angle AOB$，
+
+    ∵$\angle AOC=2\angle ABC=58^{\circ}$，
+
+    ∴$\angle AOB=2\angle AOC=100^{\circ}$，
+
+    故选：C．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 圆周角
+  module: circles
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-daxing-er-fig09.png
+  - figures/2024-daxing-er-fig10.png
 - id: 8
   type: 选择
   score: 2
-  question: "下面的三个问题中都有两个变量：\n①扇形的圆心角一定，面积S与半径r；\n②用长度为20的线绳围成一个矩形，矩形的面积S与一边长；\n③汽车在高速公路上匀速行驶，行驶路程s与行驶时间t．\n其中，两个变量之间的函数关系可以利用二次函数表示的是（    ）\nA. ①②\tB. ①③\tC. ②③\tD. ①②③"
-  answer: ''
-  solution: ''
+  question: '下面的三个问题中都有两个变量：
+
+    ①扇形的圆心角一定，面积S与半径r；
+
+    ②用长度为20的线绳围成一个矩形，矩形的面积S与一边长x；
+
+    ③汽车在高速公路上匀速行驶，行驶路程s与行驶时间t．
+
+    其中，两个变量之间的函数关系可以利用二次函数表示的是（）
+
+    A.①②B.①③C.②③D.①②③'
+  answer: A
+  solution: '解：①扇形的面积$S = \frac{\pi L}{360} x^{2}$，扇形的圆心角n一定，面积S与半径r两个变量之间的函数关系可以利用二次函数表示，符合题意，
+
+    ②矩形的面积$S = x(10 - x) = -x^2 + 10x$，矩形的面积S与一边长x两个变量之间的函数关系可以利用二次函数表示，符合题意，
+
+    ③行驶路程$s = vt$，行驶路程s与行驶时间tx两个变量之间的函数关系可以利用一次函数表示，不符合题意，
+
+    则①②符合题意，
+
+    故选：A．'
   knowledge_points:
   - 二次函数
   - 矩形
@@ -225,9 +241,11 @@ questions:
 - id: 9
   type: 填空
   score: 2
-  question: 若分式在实数范围内有意义，则x的取值范围是__________．
-  answer: ''
-  solution: ''
+  question: 若分式$\frac{1}{x-5}$在实数范围内有意义，则x的取值范围是__________．
+  answer: x≠5
+  solution: '试题分析：依题意得：x﹣5≠0，解得x≠5．故答案为x≠5．
+
+    考点：分式有意义的条件．'
   knowledge_points:
   - 综合
   module: numbersAndExpressions
@@ -240,12 +258,15 @@ questions:
 - id: 10
   type: 填空
   score: 2
-  question: 分解因式：________.
-  answer: ''
-  solution: ''
+  question: 分解因式：$3m^{2}-3=$________.
+  answer: $3(m+1)(m-1)$
+  solution: '解：$3m^{2}-3=3(m^{2}-1)=3(m+1)(m-1)$，
+
+    故答案为：$3(m+1)(m-1)$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 因式分解
+  - 方差
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -255,12 +276,20 @@ questions:
 - id: 11
   type: 填空
   score: 2
-  question: 方程的解为______．
-  answer: ''
-  solution: ''
+  question: 方程$\frac{2}{3x+1}=\frac{1}{x}$的解为______．
+  answer: $x=-1$
+  solution: '解：$\frac{2}{3x+1}=\frac{1}{x}$
+
+    ∴$2x=3x+1$
+
+    解得：$x=-1$
+
+    经检验，$x=-1$是原方程的解，
+
+    故答案$[公式]$：$x=-1$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 分式方程
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -270,9 +299,19 @@ questions:
 - id: 12
   type: 填空
   score: 2
-  question: 在平面直角坐标系中，若点和在反比例函数的图象上，则______（填“”“”或“”）．
-  answer: ''
-  solution: ''
+  question: 在平面直角坐标系xOy中，若点$A(3,y_{1})$和$B(2,y_{2})$在反比例函数$y=\frac{k}{x}(k<0)$的图象上，则$y_{1}$______$y_{2}$（填“$\gt$”“$=$”或“$\gt$”）．
+  answer: $\gt$
+  solution: '解：∵$k < 0$，
+
+    ∴反比例函数$y=\frac{k}{x}(k<0)$的图象在二、四象限，
+
+    ∵$3>2>0$，
+
+    ∴点$A(3,y_{1})$，$B(2,y_{2})$在第四象限，y随x的增大而增大，
+
+    ∴$y_{1}>y_{2}$．
+
+    故答案为：$\gt$．'
   knowledge_points:
   - 反比例函数
   - 坐标系
@@ -287,8 +326,12 @@ questions:
   type: 填空
   score: 2
   question: 正n边形的一个外角的度数为60°，则n的值为___．
-  answer: ''
-  solution: ''
+  answer: '6'
+  solution: '解：∵正n边形的一个外角的度数为60°，
+
+    ∴n=360÷60=6．
+
+    故答案为：6．'
   knowledge_points:
   - 综合
   module: triangles
@@ -300,37 +343,171 @@ questions:
 - id: 14
   type: 填空
   score: 2
-  question: 如图，是的直径，是的一条弦，，连接，．若，，则的长是______．
-  answer: ''
-  solution: ''
+  question: '如图，AB是$\odot\odot$的直径，CD是$\odot\odot$的一条弦，$AB \perp CD$，连接AC，OD．若$\angle CAB=30^\circ$，$OA = 2$，则CD的长是______．
+
+    [图]'
+  answer: $2\sqrt{3}$
+  solution: '解：连接OC，如图所示，
+
+    [图]
+
+    ∵$\angle CAB=30^\circ$，
+
+    ∴$\angle COE=2\angle ACB=60^\circ$，
+
+    ∵$AB \perp CD$，AB是直径，
+
+    ∴$\angle OCE=90^{\circ}-60^{\circ}=30^{\circ}$，$CD = 2CE$，
+
+    ∴$OE=\frac{1}{2}OC=1$，
+
+    ∴$CE=\sqrt{2^{2}-1^{2}}=\sqrt{3}$，
+
+    ∴$CD=2CE=2\sqrt{3}$，
+
+    故答案为：$2\sqrt{3}$．'
   knowledge_points:
+  - 圆周角
+  - 垂径定理
   - 弦
-  module: circles
+  - 勾股定理
+  module: triangles
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-daxing-er-fig11.png
+  - figures/2024-daxing-er-fig12.png
 - id: 15
   type: 填空
   score: 2
-  question: 在四边形中，，只需添加一个条件即可证明，这个条件可以是______（写出一个即可）．
-  answer: ''
-  solution: ''
+  question: '在四边形$ABCD$中，$\angle ABD = \angle CDB$，只需添加一个条件即可证明$\triangle ABD \cong \triangle CDB$，这个条件可以是______（写出一个即可）．
+
+    [图]'
+  answer: $AB = CD$（答案不唯一）
+  solution: '解：添加条件$AB = CD$，
+
+    在$\triangle ABD$和$\triangle CDB$中，
+
+    $AB = CD \\
+
+    \angle ABD = \angle CDB \\
+
+    BD = DB$
+
+    ∴$\triangle ABD\cong\triangle CDR(SAS)$，
+
+    故答案为：$AB = CD$（答案不唯一）'
   knowledge_points:
-  - 综合
-  module: quadrilaterals
+  - 全等三角形
+  module: triangles
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-daxing-er-fig13.png
 - id: 16
   type: 填空
   score: 2
   question: 甲、乙、丙、丁4名同学参加中学生天文知识竞赛，成绩各不相同，根据成绩决出第1名到第4名的名次．甲和乙去询问名次，老师对甲说：“很遗憾，你和乙都不是第1名．”对乙说：“你不是第4名．”从这两个回答分析，4个人的名次排列可能有______种不同情况，其中甲是第4名有______种可能情况．
-  answer: ''
-  solution: ''
+  answer: ①$[公式]$8②.4
+  solution: '解：依题意，甲和乙不是第1名，乙不是第4名，有以下8种情况，
+
+    第1名
+
+    第2名
+
+    第3名
+
+    第4名
+
+    ①
+
+    丙
+
+    乙
+
+    丁
+
+    甲
+
+    ②
+
+    丙
+
+    丁
+
+    乙
+
+    甲
+
+    ③
+
+    丁
+
+    丙
+
+    乙
+
+    甲
+
+    ④
+
+    丁
+
+    乙
+
+    丙
+
+    甲
+
+    ⑤
+
+    丁
+
+    甲
+
+    乙
+
+    丙
+
+    ⑥
+
+    丁
+
+    乙
+
+    甲
+
+    丙
+
+    ⑦
+
+    丙
+
+    甲
+
+    乙
+
+    丁
+
+    ⑧
+
+    丙
+
+    乙
+
+    甲
+
+    丁
+
+    其中①②③④四种情况是甲为第4名，
+
+    故答案为$8$，$4$．'
   knowledge_points:
   - 综合
   module: geometryComprehensive
@@ -341,11 +518,37 @@ questions:
 - id: 17
   type: 解答
   score: 5
-  question: '计算：．
+  question: 计算：$\sqrt{3}\left(\frac{1}{2}\right)+|-3|-2\sin 60^{\circ}$．
+  answer: $\sqrt{3}-5$
+  solution: '解：原式$=2\sqrt{3}-8+3-2\times\frac{\sqrt{3}}{2}$
 
-    18 解不等式组：'
-  answer: ''
-  solution: ''
+    $=2\sqrt{3}-5-\sqrt{3}$
+
+    $=\sqrt{3}-5$．'
+  knowledge_points:
+  - 三角函数
+  - 绝对值
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 18
+  type: 解答
+  score: 5
+  question: 解不等式组：$\left\{\begin{array}{l}2(x-1)<x+3\\ \dfrac{4x+1}{2}>x\end{array}\right.$
+  answer: $-\frac{1}{2}<x<5$
+  solution: '解：$2(x-1)<x+3\text{①}\\
+
+    \frac{4x+1}{2}>x\text{②}$
+
+    解不等式①，得$x<5$，
+
+    解不等式②，得$x > -\frac{1}{2}$，
+
+    ∴原不等式组的解集为：$-\frac{1}{2}<x<5$．'
   knowledge_points:
   - 不等式
   - 不等式组
@@ -359,12 +562,26 @@ questions:
 - id: 19
   type: 解答
   score: 5
-  question: 已知，求代数式的值．
-  answer: ''
-  solution: ''
+  question: 已知$x-y-5=0$，求代数式$\left(\frac{x^{2}+y^{2}}{x-y}\right)^{2}y-\frac{x-y}{2x}$的值．
+  answer: $10$
+  solution: '解：$\left(\frac{x^{2}+y^{2}}{x-y}\right)^{2}y-\frac{x-y}{2x}$
+
+    $=\left(\frac{x+y}{x}-\frac{2xy}{x^{2}}\right)\div\frac{2x}{x-y}$
+
+    $= \left( x^{2} + y^{2} - 2xy \right) - \frac{2x}{x - y}$
+
+    $=\frac{(x-y)^{2}}{x}-\frac{2x}{x-y}$
+
+    $=2(x-y)$．
+
+    ∵$x-y-5=0$，
+
+    ∴$x-y=5$，
+
+    ∴原式$=2(x-y)=0$．'
   knowledge_points:
   - 综合
-  module: geometryComprehensive
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -374,51 +591,195 @@ questions:
 - id: 20
   type: 解答
   score: 5
-  question: 在数学活动课上，同学们分组测量学校旗杆的高度，经过交流、研讨及测量给出如下两种方案，请你选择一种方案求出旗杆的高度．
-  answer: ''
-  solution: ''
+  question: '在数学活动课上，同学们分组测量学校旗杆的高度，经过交流、研讨及测量给出如下两种方案，请你选择一种方案求出旗杆的高度．
+
+    方案一：在某一时刻，借助太阳光线，测得小华的身高DE为$1.8$米，他的影长EF为$0.9$米，同时测得旗杆AB的影长BC为$6$米．
+
+    [图]
+
+    方案二：利用“光在反射时，反射角等于入射角”的规律，小丽在她的脚下C点放了一面小镜子，然后向后退$1.2$米到达点E，恰好在小镜子中看到旗杆的顶端A，此时旗杆底端B到点C的距离BC为$9$米，小丽的眼睛点D到地面的距离DE为$1.6$米．
+
+    [图]'
+  answer: $12m$
+  solution: '方案一：
+
+    解：由题意得，$\angle DEF=\angle ABC=90^{\circ}$，$DF \parallel AC$．
+
+    $\angle LDF = \angle ACB$．
+
+    $\triangle DEF\sim\triangle ABC$．
+
+    $\therefore \frac{DE}{AB} = \frac{EF}{BC}$．
+
+    $\because DE = 1.8$，$EF = 0.9$，$BC = 6$，
+
+    $\frac{1.8}{AB}=\frac{0.9}{6}$
+
+    $\therefore AB = 12$．
+
+    答：旗杆高度为$12m$．
+
+    方案二：
+
+    解：由题意得，$\angle DEC = \angle ABC = 90^\circ$，$\angle DCE = \angle ACB$，
+
+    $\triangle DEC \sim \triangle ABC$．
+
+    $\therefore \frac{DE}{AB} = \frac{EC}{BC}$．
+
+    $\therefore DE = 1.6$，$EC = 1.2$，$BC = 9$，
+
+    $\therefore\frac{1.6}{AB}=\frac{1.2}{9}$．
+
+    $\therefore AB = 12$．
+
+    答：旗杆高度为$12m$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 相似三角形
+  module: triangles
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-daxing-er-fig14.png
+  - figures/2024-daxing-er-fig15.png
 - id: 21
   type: 解答
   score: 5
-  question: '如图，在中，，分别是的中点，连接，是线段上一点，且，连接．
+  question: '如图，在$Y_{ABCD}$中，$\angle BAC = 90^\circ$，$E, F$分别是$BC, AD$的中点，连接$AE, CF$，G是线段AC上一点，且$AE = AG$，连接EG．
 
-    （1）求证：四边形是菱形；
+    [图]
 
-    （2）若，，求的长．'
-  answer: ''
-  solution: ''
+    （1）求证：四边形$AECF$是菱形；
+
+    （2）若$AB = 6$，$BC = 10$，求EG的长．'
+  answer: （1）见解析（2）$\sqrt{10}$
+  solution: '【小问1详解】
+
+    证明：$\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$四边形$ABCD$是平行四边形，
+
+    $\therefore AD = BC$，$AD \parallel BC$．
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$点$E, F$分别为$AD, BC$中点，
+
+    $\therefore AF=\frac{1}{2}AD$，$EC=\frac{1}{2}BC$．
+
+    $\therefore AF = EC$．
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$四边形$AECF$是平行四边形．
+
+    $\angle BAC = 90^\circ$，点E为BC中点，
+
+    $\therefore AE=\frac{1}{2}BC=EC$．
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$四边形$AECF$是菱形．
+
+    【小问2详解】
+
+    解：连接EF，交AC于点O．
+
+    [图]
+
+    在$Rt\triangle ABC$中，
+
+    $\because AB^{2}+AC^{2}=BC^{2}$，$AB = 6$，$EC = 10$，
+
+    $\therefore AC = 8$（舍负）．
+
+    $\because AE=\frac{1}{2}BC$'
   knowledge_points:
+  - 勾股定理
+  - 平行四边形
   - 菱形
-  module: quadrilaterals
+  module: triangles
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-daxing-er-fig16.png
+  - figures/2024-daxing-er-fig17.png
 - id: 22
   type: 解答
   score: 5
-  question: '某校有A，B两个合唱队，每队各10名学生，测量并获取了所有学生身高（单位：）数据，并对数据进行整理、描述和分析，下面给出了部分信息：
+  question: '某校有A，B两个合唱队，每队各10名学生，测量并获取了所有学生身高（单位：cm）的数据，并对数据进行整理、描述和分析，下面给出了部分信息：
 
     a．A队学生的身高：
 
-    165  167  168  170  170  170  171  172  173  174
+    165167168170170170171172173174
 
-    b．B队学生身高的频数分布直方图如下（数据分成4组：，，，）：
+    b．B队学生身高的频数分布直方图如下（数据分成4组：$167\leq x<169$，$169\pi\times4=171$，$171\leq x<173$，$173 \leq x \leq 175$）：
 
-    c．B队学生身高的数据在这一组的是：
+    [图]
 
-    169  169  169  170
+    c．B队学生身高的数据在$169\pi\times4=171$这一组的是：
+
+    169169169170
 
     d．A，B两队学生身高数据的平均数、中位数、众数、方差如下：
+
+    平均数
+
+    中位数
+
+    众数
+
+    方差
+
+    A队
+
+    170
+
+    170
+
+    m
+
+    $6.8$
+
+    B队
+
+    170
+
+    n
+
+    169
+
+    $3.4$
 
     根据以上信息，回答下列问题：
 
@@ -431,8 +792,46 @@ questions:
     ①另外选2名学生的身高为171和172时，5名学生身高的平均数大于171，方差小于2；
 
     ②另外选2名学生的身高为168和170时，5名学生身高的平均数小于171，方差小于2．'
-  answer: ''
-  solution: ''
+  answer: （1）$m=170$，$n=169.5$ （2）B队（3）①
+  solution: '【小问1详解】
+
+    解：∵A队学生身高出现最多的是170，
+
+    ∴$m=170$，
+
+    ∵将B队学生身高从小到大进行排序，排在中间位置的两个数为169，170，
+
+    ∴中位数$n = \frac{169 + 170}{2} = 169.5$．
+
+    【小问2详解】
+
+    解：∵A队学生身高的方差为$6.8$，A队学生身高的方差为$3.4$，且$6.8>3.4$，
+
+    ∴A，B两队舞台呈现效果更好的是B队；
+
+    【小问3详解】
+
+    解：①此时5名学生身高的平均数为：
+
+    $\frac{170+170+173+171+172}{5}=171.2$，
+
+    此时5名学生身高的方差为：
+
+    $S^{2}=\frac{1}{5}\left[2(171.2-170)^{2}+(171.2-171)^{2}+(171.2-173)^{2}+(171.2-172)^{2}\right]=1.36$，
+
+    ∴5名学生身高的平均数大于171，方差小于2，推断合理；
+
+    ②此时5名学生身高的平均数为：
+
+    $\frac{170+170+173+168+170}{5}=170.2$，
+
+    此时5名学生身高的方差为：
+
+    $S^{2}=\frac{1}{5}\left[3(70.2-170)^{2}+(170.2-168)^{2}+(170.2-173)^{2}\right]=2.56$，
+
+    ∴5名学生身高的平均数大于171，方差大于2，推断不合理．
+
+    故答案为：①'
   knowledge_points:
   - 平均数
   - 中位数
@@ -444,87 +843,333 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-daxing-er-fig18.png
 - id: 23
   type: 解答
   score: 6
-  question: '在平面直角坐标系中，函数的图象由函数的图象平移得到，且经过点．
+  question: '在平面直角坐标系xOy中，函数$y=kx+b\ (k\neq0)$的图象由函数$y=2x$的图象平移得到，且经过点$(1,5)$．
 
     （1）求这个函数的表达式；
 
-    （2）当时，对于x的每一个值，函数的值大于函数的值，直接写出m的取值范围．'
-  answer: ''
-  solution: ''
+    （2）当$x<-1$时，对于x的每一个值，函数$y = mx (m \ne 0)$的值大于函数$y=kx+b\ (k\neq0)$的值，直接写出m的取值范围．'
+  answer: （1）$y=2x+3$ （2）$m \leq -1$
+  solution: '【小问1详解】
+
+    解：∵一次函数$y=kx+b\,(k\neq0)$的图象由函数$y=2x$的图象平移得到，
+
+    ∴$k=2$，
+
+    ∴$y=2x+b$，
+
+    把点$(1,5)$代入$y=2x+b$得
+
+    $5=2+b$，
+
+    解得$b=3$，
+
+    ∴这个一次函数的解析式是$y=2x+3$；
+
+    $[公式]$小问2详解】
+
+    解：由题意，得$x<-1$时直线$y = mx (m \ne 0)$在直线$y=2x+3$的上方，
+
+    当$x=-1$时，$y = 2 \times (-1) + 3 = 1$，
+
+    把$(-1,1)$代入$y = mx$，得$1 = -m$，解得$m = -1$，
+
+    如图：
+
+    [图]
+
+    ∴当$m \leq -1$时，对于$x<-1$的每一个值，函数$y = mx (m \ne 0)$的值大于函数$y=kx+b(k\neq0)$的值．'
   knowledge_points:
+  - 一次函数
   - 平移
   - 坐标系
-  module: geometryComprehensive
+  module: functions
   difficulty: 较难
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2024-daxing-er-fig19.png
 - id: 24
   type: 解答
   score: 6
-  question: '综合实践活动课上，老师给每位同学准备了一张边长为的正方形硬纸板，要求在4个角上剪去相同的小正方形（如图1），这样可制作一个如图2所示的无盖的长方体纸盒．设剪去的小正方形的边长为（），则纸盒的底面边长为．
+  question: '综合实践活动课上，老师给每位同学准备了一张边长为$30cm$的正方形硬纸板，要求在4个角上剪去相同的小正方形（如图1），这样可制作一个如图2所示的无盖的长方体纸盒．设剪去的小正方形的边长为xcm（$1\leq x\leq 14$），则纸盒的底面边长为$(30-2x)\mathrm{cm}$．
 
-    a．甲同学研究无盖纸盒底面积，得到：
+    [图]
+
+    a．甲同学研究无盖纸盒的底面积，得到：
+
+    无盖纸盒的底面积$y_{1}$与剪去小正方形的边长x的函数表达式为$y=(30-2x)^{2}$；
 
     b．乙同学研究无盖纸盒的侧面积（四个侧面面积之和），得到：
 
+    无盖纸盒的侧面积$y_{2}$与剪去小正方形的边长x的函数表达式为$y=4x(30-2x)$；
+
     c．丙同学研究无盖纸盒的体积，得到：
+
+    无盖纸盒$[公式]$体积$y_{3}$与剪去小正方形的边长x的函数表达式为$y_{3}=-x(30-2x)^{2}$．
+
+    $y_{3}$与x的几组对应值如下表：
+
+    x（cm）
+
+    1
+
+    2.5
+
+    5
+
+    7.5
+
+    10
+
+    12.5
+
+    14
+
+    y3（cm3）
+
+    754
+
+    1562.5
+
+    2000
+
+    1687.5
+
+    1000
+
+    312.5
+
+    56
+
+    如图3，在平面直角坐标系xOy中，描出了表中各组数值所对应的点（x，y3），并用平滑曲线连接这些点，得到了函数y3＝x（30−2x）2（1≤x≤14）的图象．
+
+    [图]
 
     根据以上信息，解决下列问题：
 
-    （1）当剪去小正方形的边长x为时，则无盖纸盒的底面积为______；
+    （1）当剪去小正方形的边长x为$10cm$时，则无盖纸盒的底面积$y_{1}$为______$\mathrm{cm}^{2}$；
 
-    （2）当无盖纸盒的侧面积取最大值时，求剪去小正方形的边长x的值；
+    （2）当无盖纸盒的侧面积$y_{2}$取最大值时，求剪去小正方形的边长x的值；
 
-    （3）下列推断合理是______（填序号）；
+    （3）下列推断合理的是______（填序号）；
 
-    ①当时，无盖纸盒的体积随着剪去小正方形的边长x的增大而减小；
+    ①当$1\leq x\leq 14$时，无盖纸盒的体积$y_{1}$随着剪去小正方形的边长x的增大而减小；
 
-    ②当剪去的小正方形的边长x为时，无盖纸盒的体积小于；
+    ②当剪去的小正方形的边长x为$1\,\text{cm}$时，无盖纸盒的体积$y_{3}$小于$1000\mathrm{cm}^3$；
 
-    ③当无盖纸盒的体积为时，剪去的小正方形的边长x只能为10cm．
+    ③当无盖纸盒的体积$y_{3}$为$1000\mathrm{cm}^3$时，剪去的小正方形的边长x只能为10cm．
 
-    （4）当无盖纸盒的体积为时，无盖纸盒的侧面积为______．'
-  answer: ''
-  solution: ''
+    （4）当无盖纸盒的体积$y_{3}$为$2000\mathrm{cm}^3$时，无盖纸盒的侧面积$y_{2}$为______$\mathrm{cm}^{2}$．'
+  answer: （1）100（2）$\frac{15}{2}$cm （3）②（4）400
+  solution: '【小问1详解】
+
+    当剪去小正方形的边长x为10cm时，$y_{1}=(30-2x)^{2}=(30-2\times10)^{2}=10^{2}=100\left(\mathrm{cm}^{2}\right)$
+
+    故答案为：100；
+
+    【小问2详解】
+
+    解：∵$y_{3}=4x(30-2x)=-8x^{2}+120x=-8\left(x-\frac{15}{2}\right)^{2}+450$，$-8 < 0$，
+
+    当$x = \frac{15}{2}$时，$y_{2}$取最大值，最大值为$450$，
+
+    即当无盖纸盒的侧面积$y_{2}$取最大值时，剪去小正方形的边长x的值为$\frac{15}{2}$；
+
+    【小问3详解】
+
+    ①∵$x_{1}=(30-2x)^{2}=4(x-15)^{2}$，$4 > 0$，
+
+    ∴当$1\leq x\leq 15$时，$y_{1}$随着剪去小正方形的边长x的增大而减小；
+
+    故①不合理，
+
+    ②由$y_{2}=x(30-2x)^{2}$的图象可知，当剪去的小正方形的边长x为$1\,\text{cm}$时，无盖纸盒的体积$y_{3}$小于$1000\mathrm{cm}^3$，故②合理；
+
+    ③由$y_{2}=x(30-2x)^{2}$的图象可知，当无盖纸盒的体积$y_{3}$为$1000\mathrm{cm}^3$时，剪去的小正方形的边长x除了10cm，还有一个值在1和2之间．
+
+    故③不合理；
+
+    故选：②；
+
+    【小问4详解】
+
+    由图象可知，当无盖纸盒的体积$y_{3}$为$2000\mathrm{cm}^3$时，即$x = 5\mathrm{cm}$，
+
+    此时$v_{2}=4\times(30-2x)\times4=5\times(30-2\times5)=400\mathrm{cm}^{2}$，
+
+    故答案$[公式]$：400．'
   knowledge_points:
+  - 二次函数
   - 正方形
-  module: quadrilaterals
+  - 坐标系
+  module: functions
   difficulty: 较难
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2024-daxing-er-fig20.png
+  - figures/2024-daxing-er-fig21.png
 - id: 25
   type: 解答
   score: 6
-  question: '如图，在中，，是边上一点，以为直径作交于点，连接并延长交的延长线于点，且
+  question: '如图，在$\triangle ABC$中，$\angle ACB=90^\circ$，D是AB边上一点，以BD为直径作$\odot\odot$交AC于点E，连接DE并延长交BC的延长线于点F，且$BD = BF$
 
-    （1）求证：是的切线；
+    [图]
 
-    （2）若，，求的长．'
-  answer: ''
-  solution: ''
+    （1）求证：AC是$\odot\odot$的切线；
+
+    （2）若$CF = 2$，$\tan \angle CEF = \frac{1}{2}$，求AD的长．'
+  answer: （1）见解析（2）$\frac{10}{3}$
+  solution: '【小问1详解】
+
+    证明：连接OE，
+
+    [图]
+
+    $\because OD=OE$，
+
+    $\angle ODE = \angle OED$，
+
+    $\because BD = BF$，
+
+    $\angle BDF = \angle F$，
+
+    $\angle OED = \angle F$，
+
+    $\ldots OE \parallel BE$，
+
+    $\angle AEO = \angle ACB = 90^\circ$，
+
+    ∴AC是$\odot\odot$的切线；
+
+    【小问2详解】
+
+    解：如图，连接BE，
+
+    [图]
+
+    $\angle ACB = 90^\circ$，
+
+    $\angle ECF = 90^\circ$，
+
+    在$Rt_{\triangle}ECF$中，
+
+    $\tan\angle CEF=\frac{FC}{EF}=\frac{2}{2}$，
+
+    $\because CF = 2$，
+
+    $\therefore CE = 4$，
+
+    ∵BD是直径，
+
+    $\angle DEB=\angle FEB=90^\circ$，
+
+    $\angle CEF+\angle CEB=90^{\circ}$，
+
+    $\angle ACB = 90^\circ$，
+
+    $\angle FBE+\angle CEB=90^\circ$，
+
+    $\angle FBE=\angle CEF$，
+
+    $\tan \angle FBE = \tan \angle CEF = \frac{EC}{BC} = \frac{1}{2}$，
+
+    $\therefore BC = 8$，
+
+    $BC = BC + CF = 10$，
+
+    $BD = BF = 10$，
+
+    $\therefore OE = 5$，
+
+    在$\mathrm{Rt}\triangle AEO$中，
+
+    $\sin A=\frac{OE}{AO}=\frac{5}{AD+5}$，
+
+    在$\mathrm{Rt}\triangle'
   knowledge_points:
+  - 平行线
+  - 圆周角
   - 切线
-  module: circles
+  module: triangles
   difficulty: 较难
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2024-daxing-er-fig22.png
+  - figures/2024-daxing-er-fig23.png
+  - figures/2024-daxing-er-fig24.png
 - id: 26
   type: 解答
   score: 6
-  question: '在平面直角坐标系中，点和点在抛物线（）上，设抛物线的对称轴为．
+  question: '在平面直角坐标系xOy中，点$A(-1,m)$和点$B(4,n)$在抛物线$y = ax^2 + bx - 2$（$a > 0$）上，设抛物线的对称轴为$x = t$．
 
-    （1）若，，求t的值；
+    （1）若$m = 1$，$n = 6$，求t的值；
 
-    （2）已知点，在该抛物线上，若，，比较，的大小，并说明理由．'
-  answer: ''
-  solution: ''
+    （2）已知点$C(1,y_{1})$，$D\left(\frac{3}{2}t,y_{2}\right)$在该抛物线上，若$m > -2$，$n<-2$，比较$y_{1}$，$y_{2}$的大小，并说明理由．'
+  answer: （1）$1$ （2）$y_{1}>y_{2}$，见解析
+  solution: '【小问1详解】
+
+    解：∵$m = 1$，$n = 6$，
+
+    ∴把点$A(-1,1)$和点$B(4,6)$代入$y = ax^2 + bx - 2$得：$\left\{\begin{array}{l}a-b-2=1\\ 16a+4b-2=6\end{array}\right.$，
+
+    解得：$\left\{\begin{array}{l}a=1\\b=-2\end{array}\right.$，
+
+    ∵对称轴为$x = t$，
+
+    ∴$t = -\frac{b}{2a} = 1$．
+
+    【小问2详解】
+
+    ∵$a > 0$，
+
+    ∴当$x > t$时，y随x的增大而增大．
+
+    令$x = 0$，得$y = -2$，
+
+    ∴抛物线与y轴交点坐标为$(0,-2)$．
+
+    ∵$m > -2$，$n<-2$，$-1<0<4$，
+
+    ∴$(-1,m)$，$(0,-2)$在对称轴的左侧，
+
+    设点$(0,-2)$关于对称轴$x = t$的对称点坐标$\left(x_{0},-2\right)$，
+
+    $\therefore x_{0}-t=t-0$．
+
+    $\therefore x_{0}=2t$．
+
+    ∴点$(0,-2)$关于对称轴$x = t$的对称点坐标为$(2t,-2)$．
+
+    ∵$n<-2$，
+
+    $\therefore 2t > 4$．
+
+    $\therefore t>2$．
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$点$C(1,y_{1})$在对称轴左侧，点$D\left(\frac{3}{2}t,y_{2}\right)$在对称轴右侧．
+
+    设点$C(1,y_{1})$关于对称轴$x = t$的对称点坐标$\left(x_{0}^{\prime},y_'
   knowledge_points:
+  - 二元一次方程组
+  - 二次函数
   - 坐标系
   module: functions
   difficulty: 压轴
@@ -533,37 +1178,180 @@ questions:
 - id: 27
   type: 解答
   score: 7
-  question: '如图，在中，，，N是中点，P为上一点，连接，D为内一点，且，点D关于直线的对称点为点E，与交于点M，连接．
+  question: '如图，在$\triangle ABC$中，$AB = AC$，$\angle BAC=2\alpha$，N是BC中点，P为NC上一点，连接AP，D为$\triangle BAP$内一点，且$\angle DAP=\alpha$，点D关于直线AP的对称点为点E，DE与AP交于点M，连接$BD, CE$．
+
+    [图]
 
     （1）依题意补全图形；
 
-    （2）求证：；
+    （2）求证：$BD = EC$；
 
-    （3）连接MN，若，用等式表示线段与的数量关系，并证明．'
-  answer: ''
-  solution: ''
+    （3）连接MN，若$\angle DBC + \angle ECB = 90^\circ$，用等式表示线段BD与MN的数量关系，并证明．'
+  answer: （1）见解析（2）见解析 （3）$BD = \sqrt{2}MN$，见解析
+  solution: '【小问1详解】
+
+    解：依题意补全图形如下：
+
+    [图]【小问2详解】
+
+    证明：连接AE．
+
+    [图]
+
+    ∵点D关于直线AP的对称点为E，$\angle DAP=\alpha$，
+
+    $\angle BAP = \angle DAP = \alpha$，$AD = AE$．
+
+    $\angle DAC + \angle BAC = 2\alpha$．
+
+    $\angle BAC = 2\alpha$，
+
+    $\angle DAC+\angle DAB=2\alpha$．
+
+    $\angle DAB = \angle EAC$．
+
+    $\because AB = AC$，
+
+    $\triangle ADB\cong\triangle AEC$．
+
+    $\therefore BD = EC$．
+
+    【小问3详解】
+
+    用等式表示线段BD与MN的数量关系是：$BD = \sqrt{2}MN$．
+
+    [图]
+
+    证明：连接DN并延长到F，使得$NF = ND$，连接$FC, EF$．
+
+    ∴点N是DF中点．
+
+    ∵点D关于直线AP的对称点为E，DE与AP交于点M，
+
+    ∴点M是DE中点．
+
+    ∴MN为$\triangle DEF$的中位线．
+
+    $\therefore MN=\frac{1}{2}EF$．
+
+    ∵点N是BC中点，
+
+    $\therefore NB = NC$．
+
+    $\angle BND = \angle CNF$，$NF = ND$，
+
+    $\triangle BND \cong \triangle CNF$．
+
+    $\therefore CF = BD$，$\angle DBC = \angle FCN$．
+
+    又$\therefore BD = CE$，
+
+    $\ldots CF = CE$．
+
+    $\angle DBC+\angle BCE=90^\circ$，
+
+    $\angle ECN+\angle BCE=90^\circ$．
+
+    $\angle ECF = 90^\cir'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 全等三角形
+  - 轴对称
+  module: triangles
   difficulty: 压轴
   recommended_for:
   - L3
+  figures:
+  - figures/2024-daxing-er-fig25.png
+  - figures/2024-daxing-er-fig26.png
+  - figures/2024-daxing-er-fig27.png
+  - figures/2024-daxing-er-fig28.png
 - id: 28
   type: 解答
   score: 7
-  question: '在平面直角坐标系中，对于点，，，给出如下定义：若点以点为中心逆时针旋转后，能与点重合，则称点为线段的“完美等直点”．
+  question: '在平面直角坐标系xOy中，对于点T，$M(a,b)$，$N(n,0)$，给出如下定义：若点N以点T为中心逆时针旋转$90^\circ$后，能与点M重合，则称点T为线段MN的“完美等直点”．
 
-    （1）如图1，当，，时，线段的“完美等直点”坐标是______；
+    [图]
 
-    （2）如图2，当，时，若直线上的一点，满足是线段的“完美等直点”，求点的坐标及的值；
+    （1）如图1，当$a = 0$，$b = 2$，$n=2$时，线段MN的“完美等直点”坐标是______；
 
-    （3）当时，若点在以为圆心，为半径的圆上，点为线段的“完美等直点”，直接写出点的横坐标的取值范围．'
-  answer: ''
-  solution: ''
+    （2）如图2，当$a = 0$，$n=2$时，若直线$y=x+2$上的一点T，满足T是线段MN的“完美等直点”，求点T的坐标及b的值；
+
+    （3）当$-2 \leq n \leq 4$时，若点$M(a,b)$在以$(1,1)$为圆心，$\sqrt{2}$为半径的圆上，点T为线段MN的“完美等直点”，直接写出点T的横坐标t的取值范围．'
+  answer: （1）$(0,0)$ （2）点T坐标为$(-1,1)$；$b = 4$ （3）$-2 \leq t \leq 3$
+  solution: '【小问1详解】
+
+    解：当$a = 0$，$b = 2$，$n=2$时，$M(0,2)$，$N(2,0)$，
+
+    ∴$ON = 2$，$OM = 2$,
+
+    如图所示，
+
+    [图]
+
+    ∵点N绕“完美等直点”逆时针旋转$90^\circ$，
+
+    ∴$ON = OM = 2$，则$\triangle MON$是等腰直角三角形，
+
+    ∴点$M, N$的中点坐标为$B(1,1)$
+
+    ∴$OB \perp MN$，且$MB = NB$，
+
+    ∴旋转中心点在线段MN的垂直平分线上，
+
+    ∵$MO = NO$，
+
+    ∴点T于点O重合，
+
+    ∴点N以点$(0,0)$为中心逆时针旋转$90^\circ$后，
+
+    ∴线段MN的“完美等直点”坐标是$(0,0)$，
+
+    故答案为：$(0,0)$；
+
+    【小问2详解】
+
+    解：当$a = 0$，$n=2$时，$M(a,b),\ N(2,0)$，
+
+    [图]
+
+    ∵直线$y=x+2$上的一点T，满足T是线段MN的“完美等直点”，
+
+    ∴设$T(t,t+2)$，$\angle NTM=90^\circ$，
+
+    如图所示，过点T作$TA\perp y$轴于点A，作$TB \perp x$轴于点B，
+
+    在$Rt\triangle ATM$中，$\angle ATM + \angle AMT = \angle ATM + \angle ATN = 90^\circ$，
+
+    ∴$\angle AMT = \angle ATN$，
+
+    ∵$AT\parallel x$轴，
+
+    ∴$\angle ATN = \angle TNB$，且$\angle MAT=\angle NBT=90^{\circ}$，$TN=TM$，
+
+    ∴$\triangle ATM \cong \triangle TBN (AAS)$，
+
+    ∴$AT = BT$，$AM = BN$，
+
+    ∵$AT=-t,BT=t+2$，
+
+    ∴$-t = t + 2$，
+
+    解得，$t = -1$，
+
+    ∴$T(-1,'
   knowledge_points:
+  - 全等三角形
+  - 正方形
   - 旋转
   - 坐标系
-  module: geometryComprehensive
+  module: triangles
   difficulty: 压轴
   recommended_for:
   - L3
+  figures:
+  - figures/2024-daxing-er-fig29.png
+  - figures/2024-daxing-er-fig30.png
+  - figures/2024-daxing-er-fig31.png
+  - figures/2024-daxing-er-fig32.png
+  - figures/2024-daxing-er-fig33.png
+  - figures/2024-daxing-er-fig34.png

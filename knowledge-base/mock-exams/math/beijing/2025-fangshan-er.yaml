@@ -66,6 +66,11 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2025-fangshan-er-fig02.png
+  - figures/2025-fangshan-er-fig03.png
+  - figures/2025-fangshan-er-fig04.png
+  - figures/2025-fangshan-er-fig05.png
 - id: 3
   type: 选择
   score: 2
@@ -93,6 +98,9 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2025-fangshan-er-fig06.png
+  - figures/2025-fangshan-er-fig07.png
 - id: 4
   type: 选择
   score: 2
@@ -194,6 +202,8 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2025-fangshan-er-fig08.png
 - id: 8
   type: 选择
   score: 2
@@ -255,6 +265,10 @@ questions:
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2025-fangshan-er-fig09.png
+  - figures/2025-fangshan-er-fig10.png
+  - figures/2025-fangshan-er-fig11.png
 - id: 9
   type: 填空
   score: 2
@@ -404,6 +418,8 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2025-fangshan-er-fig12.png
 - id: 15
   type: 填空
   score: 2
@@ -450,6 +466,9 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2025-fangshan-er-fig13.png
+  - figures/2025-fangshan-er-fig14.png
 - id: 16
   type: 填空
   score: 2
@@ -539,7 +558,13 @@ questions:
 
     \end{array}\right.$'
   answer: $-4<x<1$
-  solution: '解：$[公式]$
+  solution: '解：$\left\{\begin{array}{l}
+
+    \frac{1}{2}+2x<-\frac{3}{2}x+4\text{①}\\
+
+    x-3<1+2x\text{②}
+
+    \end{array}\right.$
 
     解不等式①得：$x<1$
 
@@ -668,6 +693,9 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2025-fangshan-er-fig15.png
+  - figures/2025-fangshan-er-fig16.png
 - id: 21
   type: 解答
   score: 5
@@ -869,6 +897,8 @@ questions:
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2025-fangshan-er-fig17.png
 - id: 24
   type: 解答
   score: 6
@@ -939,6 +969,9 @@ questions:
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2025-fangshan-er-fig18.png
+  - figures/2025-fangshan-er-fig19.png
 - id: 25
   type: 解答
   score: 6
@@ -1061,6 +1094,8 @@ questions:
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2025-fangshan-er-fig20.png
 - id: 26
   type: 解答
   score: 6
@@ -1134,6 +1169,9 @@ questions:
   difficulty: 压轴
   recommended_for:
   - L3
+  figures:
+  - figures/2025-fangshan-er-fig21.png
+  - figures/2025-fangshan-er-fig22.png
 - id: 27
   type: 解答
   score: 7
@@ -1211,6 +1249,10 @@ questions:
   difficulty: 压轴
   recommended_for:
   - L3
+  figures:
+  - figures/2025-fangshan-er-fig23.png
+  - figures/2025-fangshan-er-fig24.png
+  - figures/2025-fangshan-er-fig25.png
 - id: 28
   type: 解答
   score: 7
@@ -1275,3 +1317,6 @@ questions:
   difficulty: 压轴
   recommended_for:
   - L3
+  figures:
+  - figures/2025-fangshan-er-fig26.png
+  - figures/2025-fangshan-er-fig27.png

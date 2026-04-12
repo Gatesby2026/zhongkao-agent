@@ -1,12 +1,12 @@
 # ============================================================
 # 2025年北京石景山区中考数学一模试卷 — 逐题分析
 # ============================================================
-# 数据来源：knowledge-original/精品解析：2025年北京市石景山区九年级统一练习（一模）数学试题 （解析版）.docx
-# 自动生成，部分数学公式可能显示不全（docx公式对象无法完整提取）
+# 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
+# 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
 # 满分：100分  时长：120分钟
 
 year: 2025
-district: 石景山区
+district: 石景山
 exam_type: 一模
 subject: 数学
 full_score: 100
@@ -17,7 +17,11 @@ questions:
 - id: 1
   type: 选择
   score: 2
-  question: "如图是某几何体的三视图，该几何体是（   ）\nA. 三棱柱\tB. 三棱锥\tC. 长方体\tD. 圆柱"
+  question: '如图是某几何体的三视图，该几何体是（）
+
+    [图]
+
+    A.三棱柱B.三棱锥C.长方体D.圆柱'
   answer: A
   solution: '解：由主视图和左视图为长方形可知，这个几何体是柱体，
 
@@ -33,12 +37,18 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2025-shijingshan-yi-fig01.png
 - id: 2
   type: 选择
   score: 2
-  question: "2025年1月5日，我国首口超万米科探井——深地塔科1井在地下10910米成功完钻，标志着我国在深地领域的技术跨越．将10910用科学记数法表示应为（   ）\nA. \tB. \tC. \tD."
+  question: '2025年1月5日，我国首口超万米科探井——深地塔科1井在地下10910米成功完钻，标志着我国在深地领域的技术跨越．将10910用科学记数法表示应为（
+
+    ）
+
+    A.$1091\times10$B.$109.1\times10^{2}$C.$10.91\times10^{3}$D.$1.091\times10^{4}$'
   answer: D
-  solution: '解：，
+  solution: '解：$1.09\times10^{7}$，
 
     故选D．'
   knowledge_points:
@@ -54,7 +64,11 @@ questions:
 - id: 3
   type: 选择
   score: 2
-  question: "下列图形中，既是中心对称图形又是轴对称图形的是（   ）\nA. \tB. \tC. \tD."
+  question: '下列图形中，既是中心对称图形又是轴对称图形的是（
+
+    ）
+
+    A.[图]B.[图]C.[图]D.[图]'
   answer: C
   solution: '解：A、是轴对称图形，但不是中心对称图形，故选项不符合题意；
 
@@ -77,14 +91,25 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2025-shijingshan-yi-fig02.png
+  - figures/2025-shijingshan-yi-fig03.png
+  - figures/2025-shijingshan-yi-fig04.png
+  - figures/2025-shijingshan-yi-fig05.png
 - id: 4
   type: 选择
   score: 2
-  question: "实数a，b在数轴上的对应点的位置如图所示，下列结论中正确的是（   ）\nA. \tB. \tC. \tD."
-  answer: B
-  solution: '解：由数轴可得，
+  question: '实数a，b在数轴上的对应点的位置如图所示，下列结论中正确的是（
 
-    ∴，，，
+    ）
+
+    [图]
+
+    A.$a < -3$B.$b < |a|$C.$ab > 0$D.$a+3>b$'
+  answer: B
+  solution: '解：由数轴可得$-3<a<-2<|b|<2$，
+
+    ∴$b < |a|$，$ab < 0$，$a+3<1<b$，
 
     ∴四个选项中，只有B选项正确，符合题意，
 
@@ -98,16 +123,22 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2025-shijingshan-yi-fig06.png
 - id: 5
   type: 选择
   score: 2
-  question: "若关于x的一元二次方程有两个相等的实数根，则实数m的值为（   ）\nA. \tB. \tC. 1\tD. 4"
+  question: '若关于x的一元二次方程$x^{2}+4x-m=0$有两个相等的实数根，则实数m的值为（
+
+    ）
+
+    A.$-4$B.$-1$C.1D.4'
   answer: A
-  solution: '解：∵关于x的一元二次方程有两个相等的实数根，
+  solution: '解：∵关于x的一元二次方程$x^{2}+4x-m=0$有两个相等的实数根，
 
-    ∴，
+    ∴$\Delta = 4^{2} - 4 \times 1 \cdot (-m) = 0$，
 
-    ∴，
+    ∴$m = -4$，
 
     故选：A．'
   knowledge_points:
@@ -123,17 +154,19 @@ questions:
 - id: 6
   type: 选择
   score: 2
-  question: "若一个多边形的每个内角都是相邻外角的2倍，则这个多边形的边数为（   ）\nA. 4\tB. 5\tC. 6\tD. 8"
+  question: '若一个多边形的每个内角都是相邻外角的2倍，则这个多边形的边数为（）
+
+    A.4B.5C.6D.8'
   answer: C
-  solution: '解：设这个多边形的一个外角的度数为x，则一个内角的度数为，
+  solution: '解：设这个多边形的一个外角的度数为x，则一个内角的度数为$2x$，
 
-    ∴，
+    ∴$x + 2x = 180^\circ$，
 
-    解得．
+    解得$x = 60^\circ$．
 
-    ∴该多边形一个外角的度数为，
+    ∴该多边形一个外角的度数为$60^\circ$，
 
-    ∴该多边形的边数为，
+    ∴该多边形的边数为$\frac{360^{\circ}}{60^{\circ}}=6$，
 
     故选：C．'
   knowledge_points:
@@ -147,13 +180,45 @@ questions:
 - id: 7
   type: 选择
   score: 2
-  question: "不透明的袋子中有两枚白色棋子，一枚黑色棋子，三枚棋子除颜色外无其他差别．从中随机摸出一枚棋子，放回并摇匀，再从中随机摸出一枚棋子，则第一次摸到白色棋子、第二次摸到黑色棋子的概率是（   ）\nA. \tB. \tC. \tD."
+  question: '不透明的袋子中有两枚白色棋子，一枚黑色棋子，三枚棋子除颜色外无其他差别．从中随机摸出一枚棋子，放回并摇匀，再从中随机摸出一枚棋子，则第一次摸到白色棋子、第二次摸到黑色棋子的概率是（）
+
+    A.$\frac{2}{9}$B.$\frac{1}{3}$C.$\frac{4}{9}$D.$\frac{2}{3}$'
   answer: A
   solution: '解：列表如下：
 
+    白
+
+    白
+
+    黑
+
+    白
+
+    （白，白）
+
+    （白，白）
+
+    （白，黑）
+
+    白
+
+    （白，白）
+
+    （白，白）
+
+    （白，黑）
+
+    黑
+
+    （黑，白）
+
+    （黑，白）
+
+    （黑，黑）
+
     共有9种等可能的结果，其中第一次摸到白色棋子、第二次摸到黑色棋子的结果有2种，
 
-    ∴第一次摸到白色棋子、第二次摸到黑色棋子的概率为，
+    ∴第一次摸到白色棋子、第二次摸到黑色棋子的概率为$\frac{2}{9}$，
 
     故选：A．'
   knowledge_points:
@@ -169,59 +234,71 @@ questions:
 - id: 8
   type: 选择
   score: 2
-  question: "如图，矩形中，．点E在边上，以为边作正方形，点F恰好落在边上，与交于点H．设，，，给出下面三个结论：①；②；③．上述结论中，所有正确结论的序号是（   ）\nA. ①②\tB. ①③\tC. ②③\tD. ①②③"
+  question: '如图，矩形$ABCD$中，$\frac{1}{2}BC < AB < BC$．点E在BC边上，以AE为边作正方形$AEFG$，点F恰好落在边CD上，FG与AD交于点H．设$BE = a$，$CE = b$，$AE = c$，给出下面三个结论：①$CD = b$；②$a+b<\sqrt{2}c$；③$HF=\frac{c}{b}(b-a)$．上述结论中，所有正确结论的序号是（）
+
+    [图]
+
+    A.①②B.①③C.②③D.①②③'
   answer: D
-  solution: '解：四边形为矩形，
+  solution: '解：$\begin{array}{c}
 
-    ，
+    \bullet \\
 
-    四边形为正方形，
+    \bullet \quad \bullet \\
 
-    ，
+    \bullet
 
-    ，
+    \end{array}$四边形$ABCD$为矩形，
 
-    ，
+    $\angle C=\angle B=\angle D=90^{\circ},AB=DC,AD=BC$，
 
-    ，
+    $\begin{array}{c}
 
-    ，故①正确；
+    \bullet \\
 
-    如图，连接，
+    \bullet \quad \bullet \\
 
-    为等腰三角形，
+    \bullet
 
-    ，
+    \end{array}$四边形$AEFG$为正方形，
 
-    根据垂线段最短，可得，即，当点与点重合时，取等号，
+    $\therefore FE = EA$，$\angle FEA=90^\circ$$[公式]$
 
-    ，
+    $\angle CFE + \angle CEF = \angle BEA + \angle CEF = 90^\circ$，
 
-    点不可能与点重合，（否则可知）
+    $\angle CFE = \angle BEA$，
 
-    ，故②正确；
+    $\triangle CFE\cong\triangle BEA(AAS)$，
 
-    ，
+    $\cdots CD = AB = CE = b$，故①正确；
 
-    ，
+    如图，连接AF，
 
-    由题意可知：，
+    [图]
 
-    ，
+    $\begin{tikzpicture}
 
-    ，
+    \fill (0,0) circle (2pt);
 
-    ，
+    \fill (-1,-1) circle (2pt);
 
-    ，
+    \fill (1,-1) circle (2pt);
 
-    ，即，
+    \end{tikzpicture}$$\triangle AEF$为等腰三角形，
 
-    ，故③正确，
+    $AF = \sqrt{2} AE = \sqrt{2} c$，
 
-    综上所述，正确的为①②③，
+    根据垂线段最短，可得$\frac{AF}{AD}$，即$\sqrt{2}c\quad a+b$，当点F与点D重合时，取等号，
 
-    故选：D．'
+    $\frac{1}{2}BC<AB+BC$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill '
   knowledge_points:
   - 全等三角形
   - 相似三角形
@@ -232,18 +309,21 @@ questions:
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2025-shijingshan-yi-fig07.png
+  - figures/2025-shijingshan-yi-fig08.png
 - id: 9
   type: 填空
   score: 2
-  question: 若代数式有意义，则实数的取值范围是__________．
-  answer: ''
-  solution: '解：∵代数式有意义，
+  question: 若代数式$\frac{2}{x+1}$有意义，则实数x的取值范围是__________．
+  answer: $x \neq -1$
+  solution: '解：∵代数式$\frac{2}{x+1}$有意义，
 
-    ∴，
+    ∴$x+1\neq0$，
 
-    ∴，
+    ∴$x \neq -1$，
 
-    故答案为：．'
+    故答案为：$x \neq -1$．'
   knowledge_points:
   - 综合
   module: numbersAndExpressions
@@ -256,13 +336,15 @@ questions:
 - id: 10
   type: 填空
   score: 2
-  question: 分解因式：______．
-  answer: ''
-  solution: '解：
+  question: 分解因式：$x^{3}y-xy=$______．
+  answer: $x(x+1)(x-1)-(x-1)$
+  solution: '解：$x^{3}y-xy$
 
-    ，
+    $=xy\left(x^{2}-1\right)$
 
-    故答案为：．'
+    $=xy(x+1)(x-1)$，
+
+    故答案为：$x(x+1)(x-1)-(x-1)$．'
   knowledge_points:
   - 方差
   module: statisticsAndProbability
@@ -275,21 +357,21 @@ questions:
 - id: 11
   type: 填空
   score: 2
-  question: 方程的解为______．
-  answer: ''
-  solution: '解：
+  question: 方程$\frac{1}{x-1}+\frac{2}{3x+2}=0$的解为______．
+  answer: $x = 0$
+  solution: '解：$\frac{1}{x-1}+\frac{2}{3x+2}=0$
 
-    方程两边同时乘，得，
+    方程两边同时乘$(x-1)(3x+2)$，得$3x+2+2(x-1)=0$，
 
-    去括号，得，
+    去括号，得$3x+2+2x-2=0$，
 
-    解得：，
+    解得：$x = 0$，
 
-    检验：把代入，
+    检验：把$x = 0$代入$(x-1)(3x+2)\neq0$，
 
-    ∴分式方程的解为．
+    ∴分式方程的解为$x = 0$．
 
-    故答案为：．'
+    故答案为：$x = 0$．'
   knowledge_points:
   - 分式方程
   module: numbersAndExpressions
@@ -302,13 +384,13 @@ questions:
 - id: 12
   type: 填空
   score: 2
-  question: 在平面直角坐标系中，若点，在函数的图象上，则m的值为______．
+  question: 在平面直角坐标系xOy中，若点$A(m,n)$，$B(n,3)$在函数$y = \frac{m}{x} \quad (m \ne 0)$的图象上，则m的值为______．
   answer: '3'
-  solution: '解：∵在平面直角坐标系中，点，在函数的图象上，
+  solution: '解：∵在平面直角坐标系xOy中，点$A(m,n)$，$B(n,3)$在函数$y = \frac{m}{x} \quad (m \ne 0)$的图象上，
 
-    ∴，
+    ∴$m = mn = 3n$，
 
-    ∴，
+    ∴$m = 3,\ n = 1$，
 
     故答案为：3．'
   knowledge_points:
@@ -326,9 +408,33 @@ questions:
   score: 2
   question: '某地区有400个公园．为了解公园用地面积的基本情况，从中随机抽取50个公园并获得它们的用地面积x（单位：公顷），数据整理如下：
 
+    用地面积
+
+    $0<x\leq4$
+
+    $4<x\leq8$
+
+    $8<x\leq12$
+
+    $12 < x \leq 16$
+
+    $16<x\leq20$
+
+    公园个数
+
+    4
+
+    10
+
+    16
+
+    12
+
+    8
+
     根据以上数据，估计这400个公园中用地面积不超过12公顷的公园有______个．'
   answer: '240'
-  solution: '解：个，
+  solution: '解：$400\times\frac{4+10+16}{50}-240$个，
 
     ∴估计这400个公园中用地面积不超过12公顷的公园有240个，
 
@@ -344,21 +450,49 @@ questions:
 - id: 14
   type: 填空
   score: 2
-  question: 如图，将沿边向右平移2个单位长度得到．若，阴影部分的面积为6，则的面积为______．
+  question: '如图，将$V_{ABC}$沿BC边向右平移2个单位长度得到$\triangle DEF$．若$BC = 4$，阴影部分的面积为6，则$V_{ABC}$的面积为______．
+
+    [图]'
   answer: '24'
-  solution: '解：如图，设与交于点．
+  solution: '解：如图，设AC与DE交于点G．
 
-    将沿边向右平移2个单位长度得到，
+    [图]
 
-    ，，
+    $\begin{array}{c}
 
-    ，，
+    \bullet \\
 
-    ，
+    \bullet \quad \bullet \\
 
-    ，即，
+    \bullet
 
-    ．
+    \end{array}$将$V_{ABC}$沿BC边向右平移2个单位长度得到$\triangle DEF$，
+
+    $\therefore BE = 2$，$AB \parallel DE$，
+
+    $\therefore CE = BC - BE = 4 - 2 = 2$，$\triangle GEC\sim\triangle ABC$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\frac{CE}{CB}=\frac{2}{4}=\frac{1}{2}$，
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$$\frac{S_{\triangle AOB}}{S_{\triangle ABC}} = \left( \frac{CE}{CB} \right)^2$，即$\frac{6}{S_{\triangle ABC}}=\frac{1}{4}$，
+
+    $\therefore S_{\triangle ABC}=24$．
 
     故答案为：24．'
   knowledge_points:
@@ -370,30 +504,55 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2025-shijingshan-yi-fig09.png
+  - figures/2025-shijingshan-yi-fig10.png
 - id: 15
   type: 填空
   score: 2
-  question: 如图，等边中，于点D，点E在上，的垂直平分线交于点P，连接．若，，则四边形的周长为______．
-  answer: '##'
-  solution: '解：是等边三角形，
+  question: '如图，等边$V_{ABC}$中，$CD \perp AB$于点D，点E在BC上，CE的垂直平分线交CD于点P，连接PE．若$AB = 6$，$BE = 2$，则四边形$BEPD$的周长为______．
 
-    ，，
+    [图]'
+  answer: $5+3\sqrt{3}$##$3\sqrt{3}+5$
+  solution: '解：$\begin{array}{c}
 
-    ，
+    \bullet \\
 
-    ，，
+    \bullet \quad \bullet \\
 
-    ，
+    \bullet
 
-    是的垂直平分线，
+    \end{array}$$V_{ABC}$是等边三角形，
 
-    ，
+    $\therefore \angle ACB = 60^\circ$，$AB = BC = AC = 6$，
 
-    四边形的周长
+    $\because CD \perp AB$，
 
-    ，
+    $\therefore BD = \frac{1}{2}AB = 3$，$\angle BCD=\frac{1}{2}\angle ACB=30^\circ$，
 
-    故答案为：．'
+    $CD=\sqrt{3}BD=3\sqrt{3}$，
+
+    QPF是CE的垂直平分线，
+
+    $\therefore PE = PC$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$四边形$BEPD$的周长$-BD+BE+PE+DP$
+
+    $=3+2+PC+DP$
+
+    $=3+2+CD$
+
+    $=5+3\sqrt{3}$，
+
+    故答案为：$5+3\sqrt{3}$．'
   knowledge_points:
   - 综合
   module: triangles
@@ -402,40 +561,90 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2025-shijingshan-yi-fig11.png
 - id: 16
   type: 填空
   score: 2
-  question: '某周末，小明家有，，，四项家务要完成，已知完成每项家务都需两个阶段，工作要求如下：
+  question: '某周末，小明家有A，B，C，D四项家务要完成，已知完成每项家务都需两个阶段，工作要求如下：
 
-    每项家务的第二阶段须在第一阶段完成后进行且各阶段只能由一人或机器完成；
+    $1$每项家务的第二阶段须在第一阶段完成后进行且各阶段只能由一人或机器完成；
 
-    每人同一时间只能进行一项工作：
+    $\textcircled{2}$每人同一时间只能进行一项工作：
 
-    “家务”与“家务”的第二阶段由机器完成；
+    $3$“家务A”与“家务C”的第二阶段由机器完成；
 
-    每项家务的各阶段所需时间如下表所示：
+    $4$每项家务的各阶段所需时间如下表所示：
 
-    在不考虑其他因素的前提下，若由小明完成家务和家务，则至少需要______分钟；若由小明和哥哥合作完成四项家务，则至少需要______分钟．'
-  answer: ①.     ②.
-  solution: '解：小明先完成家务的第一阶段，用时分钟，
+    家务类别
 
-    由机器完成家务的第二阶段，同时小明开始家务的第一阶段，
+    阶段用时
 
-    小明完成家务的第一阶段和第二阶段共用时分钟，
+    第一阶段用时（分）
 
-    在小明完成家务（第一阶段和第二阶段）时间段内，机器完成了家务的第二阶段，
+    第二阶段用时（分）
 
-    小明完成家务和家务，则至少需要分钟；
+    家务A
 
-    小明和哥哥合作完成四项家务，把和分为一组，和分为一组，
+    $5$
 
-    和分为一组，最少需要的时间是分钟，
+    $20$
 
-    和分为一组，最少需要的时间是分钟，
+    家务B
 
-    小明和哥哥合作完成四项家务，则至少需要分钟．
+    $15$
 
-    故答案为：，．'
+    $16$
+
+    家务C
+
+    $3$
+
+    $30$
+
+    家务D
+
+    $12$
+
+    $15$
+
+    在不考虑其他因素的前提下，若由小明完成家务A和家务B，则至少需要______分钟；若由小明和哥哥合作完成四项家务，则至少需要______分钟．'
+  answer: ①.$36$②.$34$
+  solution: '解：$1$小明先完成家务A的第一阶段，用时$5$分钟，
+
+    由机器完成家务A的第二阶段，同时小明开始家务B的第一阶段，
+
+    小明完成家务B的第一阶段和第二阶段共用时$15+16=31$分钟，
+
+    在小明完成家务B（第一阶段和第二阶段）时间段内，机器完成了家务A的第二阶段，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$小明完成家务A和家务B，则至少需要$5+15+16=36$分钟；
+
+    $\textcircled{2}$小明和哥哥合作完成四项家务，把A和D分为一组，B和C分为一组，
+
+    A和D分为一组，最少需要的时间是$5+12+15=32$分钟，
+
+    B和C分为一组，最少需要的时间是$3+15+16=34$分钟，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$小明和哥哥合作完成四项家务，则至少需要$34$分钟．
+
+    故答案为：$36$，$34$．'
   knowledge_points:
   - 综合
   module: geometryComprehensive
@@ -446,11 +655,15 @@ questions:
 - id: 17
   type: 解答
   score: 5
-  question: （第17题，详见原卷）
-  answer: ''
-  solution: '解：
+  question: 计算：$\left(\frac{1}{2}\right)^{-1}-2\sin60^{\circ}+\sqrt{12}+|-\sqrt{3}|$．
+  answer: $2+2\sqrt{3}$
+  solution: '解：$\left(\frac{1}{2}\right)^{-1}-2\sin60^{\circ}+\sqrt{12}+|-\sqrt{3}|$
 
-    ．'
+    $=\frac{1}{2}-2\times\frac{\sqrt{3}}{2}+2\sqrt{3}+\sqrt{3}$
+
+    $=2-\sqrt{3}+2\sqrt{3}+\sqrt{3}$
+
+    $=2+2\sqrt{3}$．'
   knowledge_points:
   - 三角函数
   - 绝对值
@@ -464,15 +677,43 @@ questions:
 - id: 18
   type: 解答
   score: 5
-  question: 解不等式组：
-  answer: ''
-  solution: '解：，
+  question: '解不等式组：$\left\{
 
-    解①得，
+    \begin{array}{l}
 
-    解②得，
+    3x + y > 4(2 - x) \\
 
-    不等式组的解集为．'
+    \frac{x + 2}{5} - 1 < 0
+
+    \end{array}
+
+    \right.$'
+  answer: $1<x<3$
+  solution: '解：$\left\{
+
+    \begin{array}{l}
+
+    3 + x > 4(2 - x) \quad \text{①} \\
+
+    \frac{x + 2}{5} - 1 < 0 \quad \text{②}
+
+    \end{array}
+
+    \right.$，
+
+    解①得$x>1$，
+
+    解②得$x<3$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$不等式组的解集为$1<x<3$．'
   knowledge_points:
   - 不等式
   - 不等式组
@@ -486,17 +727,23 @@ questions:
 - id: 19
   type: 解答
   score: 5
-  question: 已知，求代数式的值．
-  answer: ''
-  solution: '解：
+  question: 已知$x - 2y = 0$，求代数式$2x^{2}-4xy+2y^{2}=\frac{2-x}{x-y}$的值．
+  answer: $\frac{1}{2}$
+  solution: '解：$2x^{2}-4xy+2y^{2}=\frac{2-x}{x-y}$
 
-    ，
+    $=\frac{x}{2(x^{2}-2xy+y^{2})}+\frac{2}{x-y}$
 
-    ∵，
+    $=\frac{x}{2(x-y)^{2}}\cdot\frac{x-y}{2}$
 
-    ∴，
+    $=\frac{x}{4(x-y)}$
 
-    ∴原式．'
+    $=\frac{x}{4x-4y}$，
+
+    ∵$x - 2y = 0$，
+
+    ∴$x = 2y$，
+
+    ∴原式$\frac{2y}{8y-4y}=\frac{1}{2}$．'
   knowledge_points:
   - 综合
   module: numbersAndExpressions
@@ -509,57 +756,79 @@ questions:
 - id: 20
   type: 解答
   score: 5
-  question: '如图，在四边形中，，平分，E为的中点，连接交于点F，．
+  question: '如图，在四边形$ABCD$中，$AD \parallel BC$，BD平分$\angle ABC$，E为AB的中点，连接EC交BD于点F，$BC = 2BE$．
 
-    （1）求证：四边形是菱形；
+    [图]
 
-    （2）若，，求的长．'
-  answer: （1）见解析    （2）
+    （1）求证：四边形$ABCD$是菱形；
+
+    （2）若$\cos\angle ABD=\frac{2}{3}$，$AB = 6$，求BF的长．'
+  answer: （1）见解析（2）$\frac{8}{3}$
   solution: '【小问1详解】
 
-    证明：，
+    证明：$\therefore AD \parallel BC$，
 
-    ，
+    $\angle ADB = \angle DBC$，
 
-    平分，
+    QBD平分$\angle ABC$，
 
-    ，
+    $\angle ABD = \angle DBC = \angle ADB$，
 
-    ，
+    $\therefore AD = AB$，
 
-    E为中点，，
+    $\begin{array}{c}
 
-    ，
+    \bullet \\
 
-    四边形为平行四边形，
+    \bullet \quad \bullet \\
 
-    ，
+    \bullet
 
-    平行四边形为菱形；
+    \end{array}$E为AB$[公式]$中点，$BC = 2BE$，
+
+    $AB = AD = BC$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$四边形$ABCD$为平行四边形，
+
+    $\because AD = AB$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$平行四边形$ABCD$为菱形；
 
     【小问2详解】
 
-    解：如图，过点作交于点，
+    解：如图，过点A作$AG \perp BD$交于点G，
 
-    ，，
+    [图]
 
-    ，
+    $\because \cos \angle ABD = \frac{2}{3}$，$AB = 6$，
 
-    ，
+    $\therefore BG \cdot AB \cdot \cos \angle ABD = 4$，
 
-    ，
+    $QAB-AD,AG\perp BD$，
 
-    ，
+    $BD = 2BC = 8$，
 
-    ，
+    $Q\in BEPDC$，
 
-    ，
+    $\angle EFB = \angle CFD$，
 
-    ，
-
-    ，
-
-    ．'
+    $\frac{BE}{DC}=\frac{B'
   knowledge_points:
   - 相似三角形
   - 平行四边形
@@ -570,24 +839,75 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2025-shijingshan-yi-fig12.png
+  - figures/2025-shijingshan-yi-fig13.png
 - id: 21
   type: 解答
   score: 5
   question: '每年的5月20日为中国学生营养日，2024年营养日的主题是“奶豆添营养，少油更健康”．某学校为每位学生定制了盒装的牛奶和豆浆，它们的营养成分表如下：
 
-    某天，初中生小石从这两种食品中恰好摄入了能量和蛋白质．
+    营养成分
+
+    食品种类
+
+    一盒牛奶
+
+    一盒豆浆
+
+    能量
+
+    $280\mathrm{kJ}$
+
+    $210kJ$
+
+    蛋白质
+
+    $3.5g$
+
+    $4.2g$
+
+    脂肪
+
+    $3.5g$
+
+    $2.4g$
+
+    碳水化合物
+
+    $5.6g$
+
+    $1.7g$
+
+    钠
+
+    $65mg$
+
+    $13mg$
+
+    钙
+
+    $130mg$
+
+    某天，初中生小石从这两种食品中恰好摄入了$770\mathrm{kJ}$能量和$11.2g$蛋白质．
 
     （1）小石喝了牛奶和豆浆各多少盒？
 
-    （2）初中生每日脂肪摄入量约为．若小石这天已经从其它食品中摄入脂肪，在他喝完牛奶和豆浆后，脂肪摄入量是否超标，并说明理由．'
+    （2）初中生每日脂肪摄入量约为$59 \sim 73g$．若小石这天已经从其它食品中摄入$60g$脂肪，在他喝完牛奶和豆浆后，脂肪摄入量是否超标，并说明理由．'
   answer: （1）小石喝了2盒牛奶和1盒豆浆 （2）他喝完牛奶和豆浆后，脂肪摄入量没有超标，理由见解析
   solution: '【小问1详解】
 
-    解：设小石喝了牛奶盒，豆浆盒，根据题意：
+    解：设小石喝了牛奶x盒，豆浆y盒，根据题意：
 
-    ，
+    $\begin{aligned}
 
-    解得： ，
+    &280x + 210y = 770 \\
+
+    &3.5x + 4.2y = 11.2
+
+    \end{aligned}$，
+
+    解得：$\left\{\begin{array}{l}x=2\\y=1\end{array}\right.$，
 
     答：小石喝了2盒牛奶和1盒豆浆；
 
@@ -597,11 +917,11 @@ questions:
 
     由（1）知小石这天喝了2盒牛奶和1盒豆浆，
 
-    则喝完牛奶和豆浆后，摄入的脂肪为，
+    则喝完牛奶和豆浆后，摄入的脂肪为$3.5x+2.4x=9.4g$，
 
-    则这天小石这天共摄入脂肪，
+    则这天小石这天共摄入$60+9.4=69.4g$脂肪，
 
-    ，
+    $59<69.4<73$，
 
     ∴他喝完牛奶和豆浆后，脂肪摄入量没有超标．'
   knowledge_points:
@@ -615,43 +935,77 @@ questions:
 - id: 22
   type: 解答
   score: 5
-  question: '在平面直角坐标系xOy中，函数的图象由函数的图象平移得到，且经过点．
+  question: '在平面直角坐标系xOy中，函数$y=kx+b\,(k\neq0)$的图象由函数$y=x$的图象平移得到，且经过点$(1,2)$．
 
     （1）求k，b的值；
 
-    （2）当时，对于x的每一个值，函数的值大于函数的值且小于函数的值，直接写出m的取值范围．'
-  answer: （1）； （2）
+    （2）当$x>1$时，对于x的每一个值，函数$\hat{y}=mx(m\neq0)$的值大于函数$y=kx+b$的值且小于函数$y=3x+b$的值，直接写出m的取值范围．'
+  answer: （1）$k = 1$；$b = 1$ （2）$2\leq m\leq 3$
   solution: '【小问1详解】
 
-    解：由题意，函数的图象由函数的图象平移得到，
+    解：由题意，$\begin{array}{c}
 
-    ．
+    \bullet \\
 
-    函数为．
+    \bullet \quad \bullet \\
 
-    又函数过，
+    \bullet
 
-    ．
+    \end{array}$函数$y=kx+b(k\neq0)$的图象由函数$y=x$的图象平移得到，
 
-    ；
+    $\therefore k = 1$．
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$函数为$y=x+b$．
+
+    又$\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$函数过$(1,2)$，
+
+    $\therefore 1+b=2$．
+
+    $\therefore b = 1$；
 
     【小问2详解】
 
-    解：由题意，结合（1）可得为，为，
+    解：由题意，结合（1）可得$y=kx+b$为$y=x+1$，$y=3x+b$为$y=3x+1$，
 
-    在同一坐标系中画出，的图象如下．
+    在同一坐标系中画出$y=x+1$，$y=3x+1$的图象如下．
 
-    当时，，
+    [图]
 
-    当时，对于的每一个值，函数的值大于函数的值，
+    当$x = 1$时，$y = x + 1 = 2$，
 
-    那么，
+    当$x>1$时，对于x的每一个值，函数$y = mx (m \ne 0)$的值大于函数$y=x+1$的值，
 
-    当时，对于的每一个值，函数的值小于函数的值，
+    那么$m^{2}$，
 
-    则，
+    当$x>1$时，对于x的每一个值，函数$y = mx (m \ne 0)$的值小于函数$y=3x+1$的值，
 
-    结合图象可得，．'
+    则$m \leq 3$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$结合图象可得，$2\leq m\leq 3$'
   knowledge_points:
   - 一次函数
   - 平移
@@ -662,6 +1016,8 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2025-shijingshan-yi-fig14.png
 - id: 23
   type: 解答
   score: 6
@@ -669,7 +1025,73 @@ questions:
 
     a．甲、乙两名学生10场比赛的篮板数据：
 
+    甲
+
+    6
+
+    4
+
+    5
+
+    6
+
+    5
+
+    3
+
+    5
+
+    5
+
+    6
+
+    5
+
+    乙
+
+    2
+
+    8
+
+    7
+
+    5
+
+    3
+
+    5
+
+    7
+
+    6
+
+    4
+
+    3
+
     b．甲、乙两名学生10场比赛的得分、篮板和助攻的平均数：
+
+    得分平均数
+
+    篮板平均数
+
+    助攻平均数
+
+    甲
+
+    21.5
+
+    5.0
+
+    1.2
+
+    乙
+
+    18.9
+
+    5.0
+
+    3.0
 
     根据以上信息，回答下列问题：
 
@@ -677,41 +1099,57 @@ questions:
 
     （2）10场比赛中，篮板更稳定的是______学生（填“甲”或“乙”）；
 
-    （3）记某学生的得分为x分，篮板为y个，助攻为z个．若的值越大，则认为该名学生的综合表现越好．根据以上信息，学生______在这10场比赛中的综合表现更好（填“甲”或“乙”）．'
-  answer: （1）5；5； （2）甲    （3）乙
+    （3）记某学生的得分为x分，篮板为y个，助攻为z个．若$x+1.5y+2z$的值越大，则认为该名学生的综合表现越好．根据以上信息，学生______在这10场比赛中的综合表现更好（填“甲”或“乙”）．'
+  answer: （1）5；5； （2）甲（3）乙
   solution: '【小问1详解】
 
     解：甲同学篮板数据中出现次数最多的是5，
 
     故甲学生篮板的众数是5，
 
-    甲同学篮板数据从小到大排列为，
+    甲同学篮板数据从小到大排列为$2,3,4,5,6,7,8$，
 
-    故乙学生篮板的中位数是，
+    故乙学生篮板的中位数是$\frac{5+5}{2}=5$，
 
     故答案为：5；5；
 
     【小问2详解】
 
-    解：，
+    解：$S_{1}^{2}=\frac{(6-5)^{2}+(4-5)^{2}+(5-5)^{2}+(6-5)^{2}+(5-5)^{2}+(3-5)^{2}+(5-5)^{2}+(5-5)^{2}+(6-5)^{2}+(5-5)^{2}}{10}=0.8$，
 
-    ，
+    $S^{2}=\frac{(2-5)^{2}+(8-5)^{2}+(7-5)^{2}+(5-5)^{2}+(3-5)^{2}+(5-5)^{2}+(7-5)^{2}+(6-5)^{2}+(4-5)^{2}+(3-5)^{2}}{10}=3.6$，
 
-    ，
+    $0.08<3.6$，
 
-    篮板更稳定的是甲同学，
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$篮板更稳定的是甲同学，
 
     故选：甲；
 
     【小问3详解】
 
-    解：甲的得分为分；
+    解：甲的得分为$21.5+5\times1.5+2\times1.2=31.4$分；
 
-    乙的得分为分，
+    乙的得分为$18.9+5\times1.5+3\times2=32.4$分，
 
-    ，
+    $Q31.4<32.4$，
 
-    学生乙在这10场比赛中的综合表现更好，
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$学生乙在这10场比赛中的综合表现更好，
 
     故选：乙．'
   knowledge_points:
@@ -727,91 +1165,71 @@ questions:
 - id: 24
   type: 解答
   score: 6
-  question: '如图，是直径，点C在上，交于点D，过点D作的切线交的延长线于点E．
+  question: '如图，AB是$\odot\odot$$[公式]$直径，点C在$\odot\odot$上，$OD \parallel BC$交$\odot\odot$于点D，过点D作$\odot\odot$的切线交CB的延长线于点E．
 
-    （1）求证：；
+    [图]
 
-    （2）过点B作交于点M．若，，求半径的长．'
-  answer: （1）见解析    （2）20
+    （1）求证：$AC = 2DE$；
+
+    （2）过点B作$BM \perp AB$交DE于点M．若$\tan A = \frac{3}{4}$，$DM = 10$，求$\odot\odot$半径的长．'
+  answer: （1）见解析（2）20
   solution: '【小问1详解】
 
-    证明：如图所示，延长交于F，
+    证明：如图所示，延长DO交AC于F，
 
-    ∵是的切线，
+    ∵DE是$\odot\odot$的切线，
 
-    ∴，
+    ∴$\angle FDE=90^\circ$，
 
-    ∵，
+    ∵$OD \parallel BC$，
 
-    ∴，
+    ∴$\angle CED=180^\circ-\angle FDE=90^\circ$，
 
-    ∵是的直径，
+    ∵AB是$\odot\odot$的直径，
 
-    ∴，
+    ∴$\angle ACB=90^\circ$，
 
-    ∴四边形是矩形，
+    ∴四边形$CEDF$是矩形，
 
-    ∴，
+    ∴$CF = DE$，
 
-    ∵，
+    ∵$OD \parallel BC$，
 
-    ∴，
+    ∴$\triangle AOF \sim \triangle ABC$，
 
-    ∴，
+    ∴$\frac{AF}{AC} = \frac{AO}{AB} = \frac{1}{2}$，
 
-    ∴，
+    ∴$AF = \frac{1}{2}AC$，
 
-    ∴，
+    ∴$CF = AC - AF = \frac{1}{2}AC$，
 
-    ∴，即；
+    ∴$DE=\frac{1}{2}AC$，即$AC = 2DE$；
 
-    【小问2详解】
+    [图]【小问2详解】
 
-    解：∵，
+    解：∵$BM \perp AB$，
 
-    ∴，
+    ∴$\angle ACB=\angle ABM=\angle BEM=90^{\circ}$，
 
-    ∴，
+    ∴$\angle CAB+\angle CBA=\angle CBA+\angle EBM$，
 
-    ∴，
+    ∴$\angle CAB = \angle EBM$，
 
-    ∵，
+    ∵$\tan A = \frac{3}{4}$，
 
-    ∴，
+    ∴$\tan \angle EBM = \tan A = \frac{3}{4}$，
 
-    ∴，
+    ∴$\frac{EM}{BE} = \frac{3}{4}$，
 
-    设，则，
+    设$EM=3x,\ BE=4x$，则$PE=3x+10$，
 
-    ∴，
+    ∴$AC+2DE=6x+20$，
 
-    ∵，
+    ∵$\tan A = \frac{BC}{AC} = \frac{3}{4}$，
 
-    ∴；
+    ∴$BC=\frac{3}{4}AC=\frac{9}{2}x+15$；
 
-    ∴，
-
-    ∴；
-
-    ∵，
-
-    ∴，
-
-    ∴，
-
-    ∴，
-
-    ∵四边形是矩形，
-
-    ∴，
-
-    ∴，
-
-    解得，
-
-    ∴，
-
-    ∴半径的长为20．'
+    ∴$AB = \sqrt{AC^{2}'
   knowledge_points:
   - 切线
   - 相似三角形
@@ -821,44 +1239,100 @@ questions:
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2025-shijingshan-yi-fig15.png
+  - figures/2025-shijingshan-yi-fig16.png
+  - figures/2025-shijingshan-yi-fig17.png
 - id: 25
   type: 解答
   score: 6
   question: '沙漏在中国古代被称为“沙钟”，是一种利用沙子流动计时的古老工具，某学校开展了简易沙漏的原理探秘与制作活动．在以下探究实验中，沙漏容器取材于相同规格的瓶子，所用沙子材质与规格完全一样，沙漏的孔洞均为圆形，孔径即为孔洞的直径．
 
-    探究一：甲组同学选择某确定孔径的沙漏，探究漏下沙子的质量m（单位：）与时间t（单位：）之间的关系，部分数据如下：
+    探究一：甲组同学选择某确定孔径的沙漏，探究漏下沙子的质量m（单位：g）与时间t（单位：S）之间的关系，部分数据如下：
 
-    探究二：乙组同学选取除孔径外无其他差别的沙漏，探究漏完沙子所用的时间t（单位：）与孔径d（单位：）之间的关系，部分数据如下：
+    $t / s$
+
+    30
+
+    60
+
+    90
+
+    120
+
+    150
+
+    $m / g$
+
+    $30,8$
+
+    $90,6$
+
+    $150.0$
+
+    $209.5$
+
+    $269.2$
+
+    探究二：乙组同学选取除孔径外无其他差别的沙漏，探究漏完$150g$沙子所用的时间t（单位：S）与孔径d（单位：mm）之间的关系，部分数据如下：
+
+    $d/\mathrm{mm}$
+
+    $2.0$
+
+    $3.0$
+
+    $4.0$
+
+    $5.0$
+
+    $6.0$
+
+    $t / s$
+
+    $123.9$
+
+    $90.0$
+
+    $65.6$
+
+    $47.0$
+
+    $33,2$
 
     根据以上探究的实验数据，解决下列问题：
 
-    （1）在探究一中，时漏下沙子的质量约为______（结果保留小数点后一位）；
+    [图]
 
-    （2）推断：探究一中所用沙漏的孔径为______；
+    （1）在探究一中，$75s$时漏下沙子的质量约为______g（结果保留小数点后一位）；
+
+    （2）推断：探究一中所用沙漏的孔径为______mm；
 
     （3）通过探究二，发现可以用函数刻画时间t与孔径d之间的关系．
 
     ①在给出的平面直角坐标系中，画出这个函数的图象；
 
-    ②根据函数图象，若制作一个漏完沙子所用时间为的沙漏，其孔径约为______（结果保留小数点后一位）．'
-  answer: （1） （2） （3）①见解析；②
+    ②根据函数图象，若制作一个漏完$150g$沙子所用时间为$50s$的沙漏，其孔径约为______mm（结果保留小数点后一位）．'
+  answer: （1）$120.4$ （2）$3.0$ （3）①见解析；②$4.7$
   solution: '【小问1详解】
 
-    解：，
+    解：$90.6+\frac{269.2-30.8}{150-30}\times(75-60)=120.4g$，
 
-    ∴在探究一中，时漏下沙子的质量约为；
+    ∴在探究一中，$75s$时漏下沙子的质量约为$120.4g$；
 
     【小问2详解】
 
-    解：∵探究一中，漏完沙子所用的时间为，
+    解：∵探究一中，漏完$150g$沙子所用的时间为$90.0s$，
 
-    ∴由探究二可知，探究一中所用沙漏的孔径为；
+    ∴由探究二可知，探究一中所用沙漏的孔径为$3.0mm$；
 
     【小问3详解】
 
     解：①如图所示，即为所求；
 
-    ②由函数图象可知制作一个漏完沙子所用时间为的沙漏，其孔径约为．'
+    [图]
+
+    ②由函数图象可知制作一个漏完$150g$沙子所用时间为$50s$的沙漏，其孔径约为$4.7\mathrm{mm}$．'
   knowledge_points:
   - 统计
   - 平均数
@@ -868,64 +1342,73 @@ questions:
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2025-shijingshan-yi-fig18.png
+  - figures/2025-shijingshan-yi-fig19.png
 - id: 26
   type: 解答
   score: 6
-  question: '在平面直角坐标系中，已知抛物线．
+  question: '在平面直角坐标系xOy中，已知抛物线$y = x^2 - 2tx$．
 
-    （1）当时，求抛物线的顶点坐标；
+    （1）当$t = 1$时，求抛物线的顶点坐标；
 
-    （2）点，，在抛物线上．若对于，都有，求t的取值范围．'
-  answer: （1） （2）或
+    （2）点$M(3,y_{1})$，$N(t-2,y_{2})$，$P(n,y_{3})$在抛物线上．若对于$-4 < n < -3$，都有$y_{2}<y_{3}<y_{1}$，求t的取值范围．'
+  answer: （1）$(1,-1)$ （2）$-1 \leq t \leq -\frac{1}{2}$或$t \leq -6$
   solution: '【小问1详解】
 
-    解：当时，抛物线为，
+    解：当$t = 1$时，抛物线为$y = x^2 - 2x$，
 
-    ，
+    $x\cdot y-(x-1)^{2}=1$，
 
-    顶点为；
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$顶点为$(1,-1)$；
 
     【小问2详解】
 
-    解：抛物线，
+    解：抛物线$y = x^2 - 2tx = (x - t)^2 - t^2$，
 
-    点，，在抛物线上，
+    $\begin{array}{c}
 
-    ，，，
+    \bullet \\
 
-    ，
+    \bullet \quad \bullet \\
 
-    ，即，
+    \bullet
 
-    解可得或，
+    \end{array}$点$M(3,y_{1})$，$N(t-2,y_{2})$，$P(n,y_3)$在抛物线上，
 
-    或，
+    $y_{3}=(3-t)^{2}-t^{2}$，$y_{2}=(x-2-t)^{2}-t^{2}=4-t^{2}$，$y_{2}=\left(n-t\right)^{2}-t^{2}$，
 
-    ，
+    $r_{1} > r_{2} > \cdots > r_{n}$，
 
-    或，
+    $\ldots 4-t^{2}<(n-1)^{2}-t^{2}<(3-t)^{2}-t^{2}$，即$4\left(n-\pi\right)<\left(3-n\right)^{2}$，
 
-    解，
+    解$4<(n-t)^{2}$可得$n-t>2$或$n-t<-2$，
 
-    ，
+    $\therefore t < n - 2$或$t>n+2$，
 
-    ，
+    $\begin{array}{c}
 
-    ，
+    \bullet \\
 
-    ，
+    \bullet \quad \bullet \\
 
-    ，
+    \bullet
 
-    ，
+    \end{array}$$-4 < n < -3$，
 
-    则，
+    $\therefore t \leq -6$或$t^{-1}$，
 
-    ，
+    解$(n-t)^2 < (3-t)^2$，
 
-    ，
-
-    综上所述，或．'
+    $(n'
   knowledge_points:
   - 二次函数
   - 不等式
@@ -938,57 +1421,69 @@ questions:
 - id: 27
   type: 解答
   score: 7
-  question: '如图，在中，，，D是的中点，E是线段上的动点（不与点B，D重合），连接．F是的中点，线段绕点F逆时针旋转α得到线段，连接．
+  question: '如图，在$V_{ABC}$中，$AB = AC$，$\angle BAC = \alpha$，D是BC的中点，E是线段BD上的动点（不与点B，D重合），连接AE．F是AE的中点，线段FE绕点F逆时针旋转α得到线段FH，连接$AH, EH$．
 
-    （1）求的大小；
+    [图]
 
-    （2）连接，判断与的位置关系，并证明．'
-  answer: （1） （2），证明见解析
+    （1）求$\angle AHE$的大小；
+
+    （2）连接DH，判断DH与AC的位置关系，并证明．'
+  answer: （1）$90^\circ$ （2）$DH \perp AC$，证明见解析
   solution: '【小问1详解】
 
-    解：F是的中点，线段绕点F逆时针旋转α得到线段，
+    解：$\begin{array}{c}
 
-    ，，
+    \bullet \\
 
-    ，，
+    \bullet \quad \bullet \\
 
-    ，
+    \bullet
 
-    ；
+    \end{array}$F是AE的中点，线段FE绕点F逆时针旋转α得到线段FH，
+
+    $\therefore EA=FE=FH$，$\angle EFH = \alpha$，
+
+    $\angle AHF + \angle FAH = 2\angle AHF = \angle EFH = \alpha$，$\angle FHE=\frac{180^{\circ}-\alpha}{2}$，
+
+    $\therefore \angle AHF = \frac{\alpha}{2}$，
+
+    $\angle AHE = \angle AHF + \angle FHE = \frac{\alpha}{2} + \frac{180^\circ - \alpha}{2} = 90^\circ$；
 
     【小问2详解】
 
-    解：，理由如下：
+    解：$DH \perp AC$，理由如下：
 
-    如图，连接，连接，
+    如图，连接AD，连接FD，
 
-    ，D是的中点，
+    $\because AB = AC$，D是BC的中点，
 
-    ，
+    $\therefore AD \perp BC$，
 
-    F是的中点，
+    $\begin{array}{c}
 
-    ，
+    \bullet \\
 
-    点在以点为圆心，以为半径的圆上，如图，连接并延长交于点，
+    \bullet \quad \bullet \\
 
-    ，
+    \bullet
 
-    ∵，
+    \end{array}$F是AE的中点，
 
-    ，
+    $\therefore FD=FA=FE=FH$，
 
-    ，
+    $\begin{tikzpicture}
 
-    ，，D是的中点，
+    \fill (0,0) circle (2pt);
 
-    ，
+    \fill (-1,-1) circle (2pt);
 
-    ，
+    \fill (1,-1) circle (2pt);
 
-    ，
+    \end{tikzpicture}$点$A,H,E,D$在以点F为圆心，以FA为半径的圆上，如图，连接DH并延长交AC于点G，
 
-    ，即．'
+    [图]，
+
+    ∵$FE=FH,\ \ang'
   knowledge_points:
   - 圆周角
   - 旋转
@@ -997,96 +1492,77 @@ questions:
   difficulty: 压轴
   recommended_for:
   - L3
+  figures:
+  - figures/2025-shijingshan-yi-fig20.png
+  - figures/2025-shijingshan-yi-fig21.png
 - id: 28
   type: 解答
   score: 7
-  question: '在平面直角坐标系中，的半径为1．对于两点A和B，其中点A在上．给出如下定义：若线段的垂直平分线与相交，且两交点之间的距离为d，则称点B是点A的“d关联点”．
+  question: '在平面直角坐标系xOy中，$\odot\odot$的半径为1．对于两点A和B，其中点A在$\odot\odot$上．给出如下定义：若线段AB的垂直平分线与$\odot\odot$相交，且两交点之间的距离为d，则称点B是点A的“d关联点”．
 
-    （1）如图1，点．
+    [图]
 
-    ①在点，，中，点______是点A的“d关联点”，其中d=______；
+    （1）如图1，点$A(-1,0)$．
 
-    ②若点C是点A“1关联点”，则点C的横坐标的最大值为______；
+    ①在点$B_{1}(-1,2)$，$B_{2}\left(0,3\right)$，$B_3\left(1,2\right)$中，点______是点A的“d关联点”，其中d=______；
 
-    （2）直线与x轴，y轴分别交于点M，N．对于线段MN上任意一点P，都存在上的点Q，使得点P是点Q的“t关联点”，直接写出t的取值范围．'
-  answer: （1）①，；②； （2）
+    ②若点C是点A$[公式]$“1关联点”，则点C的横坐标的最大值为______；
+
+    （2）直线$y=x+t\left(t>1\right)$与x轴，y轴分别交于点M，N．对于线段MN上任意一点P，都存在$\odot\odot$上的点Q，使得点P是点Q的“t关联点”，直接写出t的取值范围．'
+  answer: （1）①$B_3$，$\sqrt{2}$；②$1+\sqrt{3}$； （2）$\sqrt{2}<1<\frac{1+\sqrt{7}}{2}$
   solution: '【小问1详解】
 
-    解∶ ①依次作出对应的垂直平分线， 的垂直平分线与相交，
+    解∶①依次作出对应的垂直平分线，$AB_{3}$的垂直平分线与$\odot\odot$相交，
 
-    点．，
+    $\begin{array}{c}
 
-    线段中点坐标为，
+    \bullet \\
 
-    ，
+    \bullet \quad \bullet \\
 
-    ，
+    \bullet
 
-    ，
+    \end{array}$点$A(-1,0)$．$B_3\left(1,2\right)$，
 
-    ，
+    $\begin{tikzpicture}
 
-    ，
+    \fill (0,0) circle (2pt);
 
-    ，
+    \fill (-1,-1) circle (2pt);
 
-    设直线为，
+    \fill (1,-1) circle (2pt);
 
-    得，
+    \end{tikzpicture}$线段$AB_{3}$中点坐标为$L(0,1)$，
 
-    解得，
+    $\ldots OA = OL$，
 
-    其垂直平分线的解析式为，
+    $\angle OAL = \angle OLA = 45^\circ$，
 
-    对应的；
+    $\angle ALI = 90^{\circ} = \angle LOI$，
 
-    ②如图，作等边，轴于点，以点为圆心，长为半径作圆，
+    $\angle OLI = \angle OIL = 45^{\circ}$，
 
-    若点为点的“1关联点”，则的垂直平分线与半径为的圆相切，点与点关于中心对称，
+    $\therefore OL = OI$，
 
-    ，
+    $\therefore I(1,0)$，
 
-    ，
+    设直线IL为$y=ax+c$，
 
-    ，
+    得$\left\{ \begin{array} { l } { c = 1 } \\ { a + c = 0 } \end{array} \right.$，
 
-    ，
+    解得$\left\{ \begin{array}{l} a = -1 \\ c = 1 \end{array} \right.$，
 
-    ，
+    $\begin{tikzpicture}
 
-    可得，
+    \fill (0,0) circle (2pt);
 
-    此即点横坐标的最大值为；
+    \fill (-1,-1) circle (2pt);
 
-    故答案为∶①，； ②；
+    \fill (1,-1) circle (2pt);
 
-    【小问2详解】
+    \end{tikzpicture}$其垂直平分线IL的解析式为$y = -x + 1$，
 
-    解： 如图，点是点的“关联点”，的垂直平分线与相交，截得的线段是，
-
-    则，则，，
-
-    则，
-
-    即点的“关联点”距离点的最远距离为，
-
-    当点在上运动时，点随之运动，则点的“关联点”最远的位置，在以点为圆心，为半径的圆上，
-
-    对于固定的点而言，距离点最近的“关联点”不需要分析，事实上，如图所示，
-
-    弦长，点关于点的对称点，即为距离点最近的“关联点”，
-
-    点是上的点，点是点的“关联点”，则点最远处依然是在一个圆上，圆的半径为，结合已知，点与点的距离最远，因此，需要使得点在以为半径的圆内即可，
-
-    又，
-
-    得，
-
-    解得（舍负），
-
-    据此可得的最大值为，
-
-    直线且，直线与坐标轴的交点，，可知，上任意一点，在上都可以找到一'
+    对应的$d'
   knowledge_points:
   - 垂径定理
   - 勾股定理
@@ -1097,3 +1573,9 @@ questions:
   difficulty: 压轴
   recommended_for:
   - L3
+  figures:
+  - figures/2025-shijingshan-yi-fig22.png
+  - figures/2025-shijingshan-yi-fig23.png
+  - figures/2025-shijingshan-yi-fig24.png
+  - figures/2025-shijingshan-yi-fig25.png
+  - figures/2025-shijingshan-yi-fig26.png

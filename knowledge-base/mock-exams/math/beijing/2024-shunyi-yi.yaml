@@ -1,8 +1,8 @@
 # ============================================================
 # 2024年北京顺义区中考数学一模试卷 — 逐题分析
 # ============================================================
-# 数据来源：knowledge-original/精品解析：2024年北京市顺义区中考一模数学试题（解析版）.docx
-# 自动生成，部分数学公式可能显示不全（docx公式对象无法完整提取）
+# 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
+# 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
 # 满分：100分  时长：120分钟
 
 year: 2024
@@ -11,90 +11,17 @@ exam_type: 一模
 subject: 数学
 full_score: 100
 duration_minutes: 120
-total_questions: 33
+total_questions: 28
 structure: 8选择(16分) + 8填空(16分) + 12解答(68分)
 questions:
 - id: 1
   type: 选择
   score: 2
-  question: 本试卷共8页，共两部分，三道大题，28道小题．满分100分．考试时间120分钟．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 2
-  type: 选择
-  score: 2
-  question: 在答题卡上准确填写学校、班级、姓名和准考证号．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 3
-  type: 选择
-  score: 2
-  question: 试题答案一律填涂或书写在答题卡上，在试卷上作答无效．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 4
-  type: 选择
-  score: 2
-  question: 在答题卡上，选择题、作图题用2B铅笔作答，其他试题用黑色字迹签字笔作答．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 5
-  type: 选择
-  score: 2
-  question: 考试结束后，将答题卡交回．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 1
-  type: 选择
-  score: 2
-  question: "全国绿化委员会办公室发布的《2023年中国国土绿化状况公报》显示，2023年全国完成国土绿化任务超800万公顷，其中造林3998000公顷．将3998000用科学记数法表示应为（    ）\nA. \tB. \tC. \tD."
+  question: '全国绿化委员会办公室发布的《2023年中国国土绿化状况公报》显示，2023年全国完成国土绿化任务超800万公顷，其中造林3998000公顷．将3998000用科学记数法表示应为（）
+
+    A.$3.998\times10^{7}$B.$3.998\times10^{6}$C.$3998\times10^{3}$D.$3.998\times10^{3}$'
   answer: B
-  solution: '解：
+  solution: '解：$3990000=3.99\times10^{6}$
 
     故选：B．'
   knowledge_points:
@@ -110,17 +37,77 @@ questions:
 - id: 2
   type: 选择
   score: 2
-  question: "实数a，b在数轴上对应点的位置如图所示，下列结论正确的是（    ）\nA. \tB. \tC. \tD."
+  question: '实数a，b在数轴上对应点的位置如图所示，下列结论正确的是（）
+
+    [图]
+
+    A.$a > -1$B.$b>1$C.$-a < b$D.$-b > a$'
   answer: D
-  solution: '解：A：点在的左边， ，故该选项不符合题意；
+  solution: '解：A：$\begin{array}{c}
 
-    B：点在的左边， ，故该选项不符合题意；
+    \bullet \\
 
-    C： ， ，又 ， ，故该选项不符合题意；
+    \bullet \quad \bullet \\
 
-    D： ， ，又 ， ，故该选项符合题意；
+    \bullet
 
-    故选：D．'
+    \end{array}$点a在$-1$的左边，$\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$a<-1$，故该选项不符合题意；
+
+    B：$\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$点b在$1$的左边，$\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$b<1$，故该选项不符合题意；
+
+    C：$\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$$a<-1$，$\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$-a>1$，又$\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$$b<1$，$\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1'
   knowledge_points:
   - 综合
   module: numbersAndExpressions
@@ -130,12 +117,20 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-shunyi-yi-fig02.png
 - id: 3
   type: 选择
   score: 2
-  question: "一个凸多边形的内角和等于540°，则这个多边形的边数是（   ）\nA. 5\tB. 6\tC. 7\tD. 8"
+  question: '一个凸多边形的内角和等于540°，则这个多边形的边数是（）
+
+    A.5B.6$[公式]$C.7D.8'
   answer: A
   solution: '解：设这个多边形的边数为n，
+
+    则（n-2）180°=540°，
+
+    解得n=5，
 
     故选A.'
   knowledge_points:
@@ -150,19 +145,23 @@ questions:
 - id: 4
   type: 选择
   score: 2
-  question: "如图，已知直线、相交于点，平分，若，则的度数是（    ）\nA. \tB. \tC. \tD."
+  question: '如图，已知直线AB、CD相交于点O，OE平分$\angle AOD$，若$\angle AOC=30^\circ$，则$\angle BOE$的度数是（）
+
+    [图]
+
+    A.$30^\circ$B.$75^\circ$C.$105^\circ$D.$115^\circ$'
   answer: C
-  solution: '解：∵，，
+  solution: '解：∵$\angle AOC + \angle AOD = 180^\circ$，$\angle AOC=30^\circ$，
 
-    ∴，
+    ∴$\angle AOD=150^{\circ}$，
 
-    平分，
+    $\therefore OE$平分$\angle AOD$，
 
-    ，
+    $\angle BOA=\frac{1}{2}\angle AOD=75^\circ$，
 
-    ，
+    $\angle COT + \angle BOW = 180^{\circ}$，
 
-    ．
+    $\angle BOE = 180^{\circ} - 75^{\circ} = 105^{\circ}$．
 
     故选：C．'
   knowledge_points:
@@ -174,14 +173,20 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-shunyi-yi-fig03.png
 - id: 5
   type: 选择
   score: 2
-  question: "同时抛掷两枚质地均匀硬币，两枚硬币全部正面向上的概率是（    ）\nA. \tB. \tC. \tD."
+  question: '同时抛掷两枚质地均匀$[公式]$硬币，两枚硬币全部正面向上的概率是（
+
+    ）
+
+    A.$\frac{1}{4}$B.$\frac{1}{3}$C.$\frac{1}{2}$D.$\frac{3}{4}$'
   answer: A
   solution: '解：∵抛掷两枚质地均匀的硬币，两枚硬币落地后的所有等可能的结果有：正正，正反，反正，反反，
 
-    ∴正面都朝上的概率是： .
+    ∴正面都朝上的概率是：$\frac{1}{4}$.
 
     故选A．'
   knowledge_points:
@@ -196,7 +201,9 @@ questions:
 - id: 6
   type: 选择
   score: 2
-  question: "下列正多边形中，是轴对称图形但不是中心对称图形的是（    ）\nA. \tB. \tC. \tD."
+  question: '下列正多边形中，是轴对称图形但不是中心对称图形的是（）
+
+    A.[图]B.[图]C.[图]D.[图]'
   answer: B
   solution: '解：A、C、D都既是轴对称图形，也是中心对称图形，不符合题意；
 
@@ -214,16 +221,23 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-shunyi-yi-fig04.png
+  - figures/2024-shunyi-yi-fig05.png
+  - figures/2024-shunyi-yi-fig06.png
+  - figures/2024-shunyi-yi-fig07.png
 - id: 7
   type: 选择
   score: 2
-  question: "若关于x的方程有两个不相等的实数根，则实数m的取值范围是（    ）\nA. \tB. \tC. \tD."
+  question: '若关于x的方程$x^{2}+2x-m=0$有两个不相等的实数根，则实数m的取值范围是（）
+
+    A.$m > -\frac{1}{4}$B.$m<-1$C.$m > -1$D.$m^{-1}$'
   answer: C
-  solution: '解：∵关于x的方程有两个不相等的实数根，
+  solution: '解：∵关于x的方程$x^{2}+2x-m=0$有两个不相等的实数根，
 
-    ∴，
+    ∴$\Delta=2^{2}+4m>0$，
 
-    ∴，
+    ∴$m > -1$，
 
     故选：C．'
   knowledge_points:
@@ -238,11 +252,45 @@ questions:
 - id: 8
   type: 选择
   score: 2
-  question: "已知y是x的函数，下表是x与y的几组对应值：\ny与x的函数关系有以下3个描述：\n①可能是一次函数关系；\n②可能是反比例函数关系；\n③可能是二次函数关系，所有正确描述序号是（    ）\nA. ①②\tB. ①③\tC. ②③\tD. ①②③"
+  question: '已知y是x的函数，下表是x与y的几组对应值：
+
+    x
+
+    …
+
+    1
+
+    2
+
+    4
+
+    …
+
+    y
+
+    …
+
+    4
+
+    2
+
+    1
+
+    …
+
+    y与x的函数关系有以下3个描述：
+
+    ①可能是一次函数关系；
+
+    ②可能是反比例函数关系；
+
+    ③可能是二次函数关系，所有正确描述$[公式]$序号是（）
+
+    A.①②B.①③C.②③D.①②③'
   answer: C
   solution: '解：观察可知，三个点不在同一直线上，故①错误，③正确；
 
-    三个点的横坐标和纵坐标的积都为4，故都在反比例函数图象上，故②正确；
+    三个点的横坐标和纵坐标的积都为4，故都在反比例函数$y = \frac{4}{x}$图象上，故②正确；
 
     故选：C．'
   knowledge_points:
@@ -258,15 +306,23 @@ questions:
 - id: 9
   type: 填空
   score: 2
-  question: 代数式有意义，则实数x的取值范围是_________________．
-  answer: ''
-  solution: '解：代数式有意义，
+  question: 代数式$\frac{2x}{x-3}$有意义，则实数x的取值范围是_________________．
+  answer: $x \neq 3$
+  solution: '解：$\begin{array}{c}
 
-    ，
+    \bullet \\
 
-    ．
+    \bullet \quad \bullet \\
 
-    故答案为：．'
+    \bullet
+
+    \end{array}$代数式$\frac{2x}{x-3}$有意义，
+
+    $\therefore x-3=0$，
+
+    $\therefore x \neq 3$．
+
+    故答案为：$x \neq 3$．'
   knowledge_points:
   - 综合
   module: numbersAndExpressions
@@ -279,11 +335,11 @@ questions:
 - id: 10
   type: 填空
   score: 2
-  question: 分解因式： ______________．
-  answer: ''
-  solution: '解：由题意知，，
+  question: 分解因式：$4x^2-4=$______________．
+  answer: $4(x + 1)(x - 1)$
+  solution: '解：由题意知，$4x^{2}-4=4\left(x^{2}-1\right)=4\left(x+1\right)\left(x-1\right)$，
 
-    故答案为：．'
+    故答案为：$4(x + 1)(x - 1)$．'
   knowledge_points:
   - 因式分解
   module: numbersAndExpressions
@@ -296,25 +352,25 @@ questions:
 - id: 11
   type: 填空
   score: 2
-  question: 方程的解为________．
-  answer: ''
-  solution: '解：
+  question: 方程$\frac{1}{x-1}=\frac{2}{x}$的解为________．
+  answer: $x=2$
+  solution: '解：$\frac{1}{x-1}=\frac{2}{x}$
 
-    去分母得：，
+    去分母得：$x=2(x-1)$，
 
-    去括号得：，
+    去括号得：$x=2x-2$，
 
-    移项得：，
+    移项得：$x-2x=-2$，
 
-    合并同类项得：，
+    合并同类项得：$-x = -2$，
 
-    系数化为1得：，
+    系数化为1得：$x=2$，
 
-    检验，当时，，
+    检验，当$x=2$时，$x(x-1)\neq0$，
 
-    ∴原方程的解为，
+    ∴原方程的解为$x=2$，
 
-    故答案为：．'
+    故答案为：$x=2$．'
   knowledge_points:
   - 分式方程
   module: numbersAndExpressions
@@ -327,7 +383,7 @@ questions:
 - id: 12
   type: 填空
   score: 2
-  question: 已知点，在反比例函数的图象上．若，写出一个满足条件的m的值________．
+  question: 已知点$A(3,y_{1})$，$B(m,y_{2})$在反比例函数$y=\frac{6}{x}$的图象上．若$y_{1}>y_{2}$，写出一个满足条件的m的值________．
   answer: 4（答案不唯一）
   solution: ''
   knowledge_points:
@@ -342,21 +398,23 @@ questions:
 - id: 13
   type: 填空
   score: 2
-  question: 如图，在矩形中，直线分别交于点E，F，O，只需添加一个条件即可证明，这个条件可以是________（写出一个即可）．
-  answer: （答案不唯一）
-  solution: '解：添加条件为：，
+  question: '如图，在矩形$ABCD$中，直线EF分别交$AD,BC,BD$于点E，F，O，只需添加一个条件即可证明$\triangle BOF \cong \triangle DOE$，这个条件可以是________（写出一个即可）．
 
-    证明：∵矩形，
+    [图]'
+  answer: $OE = OF$（答案不唯一）
+  solution: '解：添加条件为：$OE = OF$，
 
-    ∴，
+    证明：∵矩形$ABCD$，
 
-    ∴，
+    ∴$AD \parallel BC$，
 
-    ∵，，
+    ∴$\angle DEO = \angle BFO$，
 
-    ∴，
+    ∵$\angle DOE = \angle BOF$，$OE = OF$，
 
-    故答案为：（答案不唯一）．'
+    ∴$\triangle BOF \cong \triangle COE (ASA)$，
+
+    故答案为：$OE = OF$（答案不唯一）．'
   knowledge_points:
   - 全等三角形
   - 矩形
@@ -366,24 +424,28 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-shunyi-yi-fig08.png
 - id: 14
   type: 填空
   score: 2
-  question: 如图，是的外接圆，，，平分，交于点D，则的度数为________．
-  answer: '##72度'
-  solution: '解：∵，，
+  question: '如图，$\odot\odot$是$\triangle ABC$的外接圆，$AB = AC$，$\angle BAC=36^\circ$，BD平分$\angle ABC$，交$\odot\odot$于点D，则$\angle DAB$的度数为________．
 
-    ∴，
+    [图]'
+  answer: $72^\circ$##72度
+  solution: '解：∵$AB = AC$，$\angle BAC=36^\circ$，
 
-    ∵平分，
+    ∴$\angle ABC = \angle C = \frac{180^\circ - \angle BAC}{2} = \frac{180^\circ - 36^\circ}{2} = 72^\circ$，
 
-    ∴，
+    ∵BD平分$\angle ABC$，
 
-    ∴，
+    ∴$\angle CBD=36^{\circ}$，
 
-    ∴，
+    ∴$\angle CBD=\angle CAD=36^{\circ}$，
 
-    故答案为：．'
+    ∴$\angle DAB=\angle DAC+\angle CAB=72^\circ$，
+
+    故答案为：$72^\circ$．'
   knowledge_points:
   - 圆周角
   module: triangles
@@ -392,16 +454,54 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-shunyi-yi-fig09.png
 - id: 15
   type: 填空
   score: 2
   question: '某商场为了解顾客对某一款式围巾的不同花色的需求情况，调查了某段时间内销售该款式的30条围巾的花色，数据如下：
 
+    花色
+
+    A
+
+    B
+
+    C
+
+    D
+
+    E
+
+    F
+
+    G
+
+    H
+
+    销售量/条
+
+    2
+
+    2
+
+    4
+
+    5
+
+    3
+
+    9
+
+    1
+
+    4
+
     若商场准备再购进200条同款式围巾，估计购进花色最多的围巾数量为________条．'
   answer: '60'
-  solution: '解：估计购进花色最多的围巾数量为（条，
+  solution: '解：估计购进花色最多的围巾数量为$200\times\frac{9}{30}=60$（条$\right)$，
 
-    故答案：60．'
+    故答案$[公式]$：60．'
   knowledge_points:
   - 综合
   module: statisticsAndProbability
@@ -415,8 +515,9 @@ questions:
   score: 2
   question: '小明观看了纸牌魔术表演，非常感兴趣，并做了如下实验和探究：
 
-    将几张纸牌摞起来（从上面分别记为第1张，第2张，第3张），先将第1张牌放到整摞牌的下面，再去掉第2张牌；继续将第3张牌放在整摞牌的下面，再去掉第4张牌……如此循环往复，最终到只留下一张纸牌为止．例如，若将4张纸牌摞起来，按上述规则操作，陆续去掉第2张，第4张，第3张，最终留下第1张纸牌．将8张纸牌摞起来，按上述规则操作，最终留下的是第________张纸牌；将m张纸牌摞起来，按上述规则操作，若最终留下的是第1张纸牌，则________（用含n的代数式表示，其中n为自然数）．'
-  answer: ①. 1    ②.
+    将几张纸牌摞起来（从上面分别记为第1张，第2张，第3张），先将第1张牌放到整摞牌的下面，再去掉第2张牌；继续将第3张牌放在整摞牌的下面，再去掉第4张牌……如此循环往复，最终到只留下一张纸牌为止．例如，若将4张纸牌摞起来，按上述规则操作，陆续去掉第2张，第4张，第3张，最终留下第1张纸牌．将8张纸牌摞起来，按上述规则操作，最终留下的是第________张纸牌；将m张纸牌摞起来，按上述规则操作，若最终留下的是第1张纸牌，则$m
+    =$________（用含n的代数式表示，其中n为自然数）．'
+  answer: ①.1②.$2^n$
   solution: '解：8张纸牌顺序从上到下为，(将1张牌放到牌底，去掉下一张视为一轮)，1，2，3，4，5，6，7，8，
 
     前四轮去掉了2，4，6，8，
@@ -435,9 +536,9 @@ questions:
 
     将m张纸牌摞起来，按上述规则操作，若最终留下的是第1张纸牌，
 
-    ∴；
+    ∴$m = 2^n$；
 
-    故答案为：1；．'
+    故答案为：1；$2^n$．'
   knowledge_points:
   - 综合
   module: geometryComprehensive
@@ -448,11 +549,15 @@ questions:
 - id: 17
   type: 解答
   score: 5
-  question: （第17题，详见原卷）
-  answer: ''
-  solution: '解：
+  question: 计算：$2^{-4}\sin 45^{\circ}+\sqrt{8}+(x-1)^{0}$．
+  answer: $\frac{3}{2}$
+  solution: '解：$2^{-4}\sin 45^{\circ}+\sqrt{8}+(x-1)^{0}$
 
-    ．'
+    $\frac{1}{2}\times4\times\frac{\sqrt{2}}{2}+2\sqrt{2}+1$
+
+    $=\frac{1}{2}+2\sqrt{2}+2\sqrt{2}+1$
+
+    $=\frac{3}{2}$．'
   knowledge_points:
   - 三角函数
   module: numbersAndExpressions
@@ -465,15 +570,31 @@ questions:
 - id: 18
   type: 解答
   score: 5
-  question: 解不等式组：．
-  answer: ''
-  solution: '解：
+  question: '解不等式组：$\left\{
 
-    解不等式①得：，
+    \begin{array}{l}
 
-    解不等式②得：，
+    3x-7>-1 \\
 
-    ∴不等式组的解集为．'
+    \frac{1}{2}x+\frac{1}{2}>1
+
+    \end{array}
+
+    \right.$．'
+  answer: $x>2$
+  solution: '解：$\begin{cases}
+
+    3x-7>1 & \text{①} \\
+
+    \frac{1}{2}x+\frac{1}{2}>1 & \text{②}
+
+    \end{cases}$
+
+    解不等式①得：$x>2$，
+
+    解不等式②得：$x>1$，
+
+    ∴不等式组的解集为$x>2$．'
   knowledge_points:
   - 不等式
   - 不等式组
@@ -487,13 +608,19 @@ questions:
 - id: 19
   type: 解答
   score: 5
-  question: 已知，求代数式的值．
-  answer: ''
-  solution: '解：∵，
+  question: 已知$x^2 + 2x = 1$，求代数式$4(x+1)+(x-1)^{2}$的值．
+  answer: $6$
+  solution: '解：∵$x^2 + 2x = 1$，
 
-    ∴
+    ∴$4(x+1)+(x-1)^{2}$
 
-    ．'
+    $=4x+4+x^{2}-2x+1$
+
+    $=x^{2}+2x+5$
+
+    $=1+5$
+
+    $=6$．'
   knowledge_points:
   - 综合
   module: numbersAndExpressions
@@ -506,43 +633,77 @@ questions:
 - id: 20
   type: 解答
   score: 5
-  question: '如图，在菱形中，对角线与相交于点O，延长到点E，使，连接．
+  question: '如图，在菱形$ABCD$中，对角线AC与BD相交于点O，延长CB到点E，使$BE = BC$，连接AE．
 
-    （1）求证：四边形是平行四边形；
+    [图]
 
-    （2）连接，若，，求的长．'
-  answer: （1）见解析    （2）
+    （1）求证：四边形$AEBD$是平行四边形；
+
+    （2）连接OE，若$\tan \angle AEB = \frac{1}{2}$，$AC = 2$，求OE的长．'
+  answer: （1）见解析 （2）$\sqrt{17}$
   solution: '【小问1详解】
 
-    证明：四边形是菱形，
+    证明：$\begin{array}{c}
 
-    ，，
+    \bullet \\
 
-    ，
+    \bullet \quad \bullet \\
 
-    ，
+    \bullet
 
-    ，
+    \end{array}$四边形$ABCD$是菱形，
 
-    四边形是平行四边形．
+    $\therefore AD \parallel BC$，$AD = BC$，
+
+    $\colon AD \parallel BE$，
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$$BE = BC$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$AD = BE$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$四边形$AEBD$是平行四边形．
 
     【小问2详解】
 
-    ∵菱形，四边形是平行四边形，，
+    ∵菱形$ABCD$，四边形$AEBD$是平行四边形，$AC = 2$，
 
-    ∴，，，
+    ∴$AC \perp BD$，$AE \parallel BD$，$AO = CO = 1$，
 
-    ∴，，
+    ∴$AC \perp AE$，$\angle AEB=\angle DBC$，
 
-    ∵，
+    ∵$\tan \angle AEB = \frac{1}{2}$，
 
-    ∴，
+    ∴$\tan \angle OBC = \frac{OC}{OB} = \frac{1}{2}$，
 
-    ∴，
+    ∴$OB = 2$，
 
-    ∴，
+    ∴$BD=AE=4$，
 
-    在中，．'
+    在$Rt\triangle AEO$中，$OE=\sqrt{AO^{2}+AE^{2}'
   knowledge_points:
   - 勾股定理
   - 平行四边形
@@ -553,6 +714,8 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-shunyi-yi-fig10.png
 - id: 21
   type: 解答
   score: 5
@@ -560,9 +723,23 @@ questions:
 
     a．甲、丙两组参赛作品得分的折线图：
 
+    [图]
+
     b．在给乙组参赛作品的打分中，其中三位评委打分分别为87，93，95，其余两位评委的打分均高于85；
 
     c．甲、乙、丙三个组参赛作品得分的平均数：
+
+    甲组
+
+    乙组
+
+    丙组
+
+    88
+
+    90
+
+    n
 
     根据以上信息，回答下列问题：
 
@@ -571,22 +748,46 @@ questions:
     （2）若某组参赛作品评委打分的5个数据的方差越小，则认为评委对该组参赛作品的评价越“一致”．据此推断：对于甲、丙两组的参赛作品，五位评委评价更“一致”的是_____组（填“甲”或“丙”）；
 
     （3）该校现准备推荐一个小组的作品到区里参加比赛，你认为应该推荐哪个小组，请说明理由．'
-  answer: （1）90；    （2）丙，理由见解析； （3）乙组；
+  answer: （1）90；（2）丙，理由见解析； （3）乙组；
   solution: '【小问1详解】
 
     解：根据折线统计图可得丙组的得分为：92，87，95，83，93，
 
-    丙组得分平均数为：，
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$丙组得分平均数为：$n = \frac{92 + 87 + 95 + 83 + 93}{5} = 90$，
 
     【小问2详解】
 
-    解：甲组的方差为： ，
+    解：甲组的方差为：$S_{c}^{2}=\frac{1}{5}\times\left[(82-88)^{2}+(94-88)^{2}+(86-88)^{2}+(83-88)^{2}+(95-88)^{2}\right]=30$，
 
-    ，
+    $S_{c}^{2}=\frac{1}{5}\times[(92-90)^{2}+(87-90)^{2}+(95-90)^{2}+(83-90)^{2}+(93-90)^{2}]=19.2$，
 
-    ，
+    $\begin{tikzpicture}
 
-    五位评委对丙组的评价更“一致”．
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$S_{甲}^{2}>S_{丙}^{2}$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$五位评委对丙组的评价更“一致”．
 
     【小问3详解】
 
@@ -594,9 +795,7 @@ questions:
 
     所以从乙组和丙组推荐一个小组的作品到区里参加比赛，
 
-    又因为乙组的最低分比丙组的最低分高，
-
-    所以应该推荐乙组．'
+    又因为乙组的最低分比丙组的最'
   knowledge_points:
   - 统计
   - 平均数
@@ -607,40 +806,42 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-shunyi-yi-fig11.png
 - id: 22
   type: 解答
   score: 5
-  question: '在平面直角坐标系中，函数的图象经过点和，与过点且平行于y轴的直线交于点C．
+  question: '在平面直角坐标系xOy中，函数$y=kx+b\ (k\neq0)$的图象经过点$A(4,5)$和$B(0,-1)$，与过点$(2,0)$且平行于y轴的直线交于点C．
 
     （1）求该函数的表达式及点C的坐标；
 
-    （2）当时，对于x的每一个值，函数的值大于函数的值且小于3，直接写出n的取值范围．'
-  answer: （1）， （2）
+    （2）当$x<2$时，对于x的每一个值，函数$y = \frac{1}{2}x + n$的值大于函数$y=kx+b\ (k\neq0)$的值且小于3，直接写出n的取值范围．'
+  answer: （1）$y=\frac{3}{2}x-1$，$C(2,2)$ （2）$1\leq n\leq 2$
   solution: '【小问1详解】
 
-    解：∵函数的图象经过点和，
+    解：∵函数$y=kx+b\,(k\neq0)$的图象经过点$A(4,5)$和$B(0,-1)$，
 
-    ∴，
+    ∴$\left\{\begin{array}{l}4k+b=5\\b=-1\end{array}\right.$，
 
-    ∴，
+    ∴$\left\{\begin{array}{l}k=\dfrac{3}{2}\\b=-1\end{array}\right.$，
 
-    ∴该函数解析式为，
+    ∴该函数解析式为$y=\frac{3}{2}x-1$，
 
-    在中，当时，，
+    在$y=\frac{3}{2}x-1$中，当$x=2$时，$y=2$，
 
-    ∴；
+    ∴$C(2,2)$；
 
     【小问2详解】
 
-    解：当时，
+    解：当$\frac{1}{2}x-1 < -x+n<3$时，
 
-    解得，
+    解得$\left\{\begin{array}{l}x<6-2n\\ x<1+n\end{array}\right.$，
 
-    ∵当时，对于x的每一个值，函数的值大于函数的值且小于3，
+    ∵当$x<2$时，对于x的每一个值，函数$y = \frac{1}{2}x + n$的值大于函数$y=kx+b\,(k\neq0)$的值且小于3，
 
-    ∴，
+    ∴$\frac{6-2n}{1+n}-\frac{2}{2+2n}=\frac{6-2n}{2+2n}$，
 
-    ∴．'
+    ∴$1 \leqslant n \leqslant 2$．'
   knowledge_points:
   - 一次函数
   - 不等式
@@ -657,19 +858,37 @@ questions:
   score: 6
   question: '杆秤是我国度量衡“三大件（尺斗秤）”正要组成都分，是中华民族衡重的基本量具．杆秤依据杠杆原理制作而成，一般由秤钩（秤盘）、秤杆和秤砣三部分组成，秤杆上的刻度叫做“秤星”，古时候秤杆叫做“权”，秤砣叫做“衡”，“权衡”一词就来源于此．
 
-    下图是小阳同学利用自制杆秤称重的示意图，使用时将货物放在秤盘上，用手提起B（相当于支点）处的秤纽，在秤杆上移动秤砣的位置，当秤杆水平平衡时，可根据秤砣在秤杆上的位置送出货物的质量如图1所示，称量货物甲时，秤砣在C处秤杆平衡，此时可读出货物甲的质量是；如图2所示，称量货物乙时，秤砣在D处秤杆平衡，此时可读出货物乙的质量是．根据图中所给数据，求这把杆秤的秤星E对应的刻度是多少克．'
+    [图]
+
+    下图是小阳同学利用自制杆秤称重的示意图，使用时将货物放在秤盘上，用手提起B（相当于支点）处的秤纽，在秤杆上移动秤砣的位置，当秤杆水平平衡时，可根据秤砣在秤杆上的位置送出货物的质量如图1所示，称量货物甲时，秤砣在C处秤杆平衡，此时可读出货物甲的质量是$40g$；如图2所示，称量货物乙时，秤砣在D处秤杆平衡，此时可读出货物乙的质量是$60g$．根据图中所给数据，求这把杆秤的秤星E对应的刻度是多少克．'
   answer: 这把杆秤的秤星E对应的刻度是100克．
   solution: '解：设A处未挂物体时重a克，秤砣重b克，
 
-    根据题意得：，
+    根据题意得：$\begin{aligned}
 
-    解得：，
+    2.5(a+40)&=11b\\
+
+    2.5(a+60)&=16b
+
+    \end{aligned}$，
+
+    解得：$\left\{
+
+    \begin{array}{l}
+
+    a = 4 \\
+
+    b = 10
+
+    \end{array}
+
+    \right.$，
 
     设这把杆秤的秤星E对应的刻度是x克，
 
-    ∴，
+    ∴$2.5(x+4)=26\times10$，
 
-    解得：，
+    解得：$x=100$，
 
     ∴这把杆秤的秤星E对应的刻度是100克．'
   knowledge_points:
@@ -679,68 +898,74 @@ questions:
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2024-shunyi-yi-fig12.png
 - id: 24
   type: 解答
   score: 6
-  question: '如图，是的直径，，与交于点E，的切线交的延长线于点F．
+  question: '如图，AB是$\odot\odot$的直径，$\widehat{AC}=\widehat{AD}$，CD与AB交于点E，$\odot\odot$的切线BF交AD的延长线于点F．
 
-    （1）求证：；
+    [图]
 
-    （2）连接并延长，交的延长线于点G．若E为的中点，的半径为4，求的长．'
-  answer: （1）证明见解析 （2）
+    （1）求证：$CD \parallel BF$；
+
+    （2）连接FO并延长，交DC的延长线于点G．若E为AO的中点，$\odot\odot$的半径为4，求CG的长．'
+  answer: （1）证明见解析 （2）$2\sqrt{3}$
   solution: '【小问1详解】
 
-    证明：∵，
+    证明：∵$\widehat{AC}=\widehat{AD}$，
 
-    ∴，
+    ∴$OA \perp CD$，
 
-    ∵的切线交的延长线于点F，
+    ∵$\odot\odot$的切线BF交AD的延长线于点F，
 
-    ∴，
+    ∴$OB \perp BF$，
 
-    ∵是的直径，
+    ∵AB是$\odot\odot$的直径，
 
-    ∴三点共线，
+    ∴$A, O, B$三点共线，
 
-    ∴；
+    ∴$CD \parallel BF$；
 
     【小问2详解】
 
-    解：如图所示，连接，
+    解：如图所示，连接OD，
 
-    ∵，
+    ∵$OA \perp CD$，
 
-    ∴，
+    ∴$DE=CE,\ \angle OED=90^\circ$，
 
-    ∵E为的中点，的半径为4，
+    ∵E为AO的中点，$\odot\odot$的半径为4，
 
-    ∴，，
+    ∴$OE=\frac{1}{2}OA=2$，$OD = 4$，
 
-    ∴，
+    ∴$\cos\angle EOD=\frac{OE}{OD}=\frac{1}{2}$，
 
-    ∴，
+    ∴$\angle EOD = 60^\circ$，
 
-    ∴，
+    ∴$DE=OD\cdot\sin\angle EOD=2\sqrt{3}$，
 
-    ∴；
+    ∴$CE = DE = 2\sqrt{3}$；
 
-    ∵，
+    ∵$OA = OD$，
 
-    ∴是等边三角形，
+    ∴$\triangle AOD$是等边三角形，
 
-    ∴，
+    ∴$\angle A = 60^\circ$，
 
-    ∴，
+    ∴$BF=AB\cdot\cos A=8\sqrt{3}$，
 
-    ∵，
+    ∵$CD \parallel BF$，
 
-    ∴，
+    ∴$\triangle OEG \sim \triangle OBE$，
 
-    ∴，即，
+    ∴$\frac{EG}{BF} = \frac{OE}{OB}$，即$\frac{EG}{8\sqrt{3}}=\frac{2}{4}$，
 
-    ∴，
+    ∴$EG=4\sqrt{3}$，
 
-    ∴．'
+    ∴$CG=EG-CE=2\sqrt{3}$．
+
+    [图]'
   knowledge_points:
   - 垂径定理
   - 切线
@@ -750,36 +975,93 @@ questions:
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2024-shunyi-yi-fig13.png
+  - figures/2024-shunyi-yi-fig14.png
 - id: 25
   type: 解答
   score: 6
-  question: '为了去除衣物上的某种有害物质（记作“P”），某小组研究了衣物上P的含量（单位：）与浸泡时长（单位：）的关系，该小组选取甲，乙两类服装样品，将样品分成多份，进行浸泡处理，检测处理后样品中P的含量，所得数据如下：
+  question: '为了去除衣物上的某种有害物质（记作“P”），某小组研究了衣物上P的含量（单位：$\mathrm{mg/kg}$）与浸泡时长（单位：h）的关系，该小组选取甲，乙两类服装样品，将样品分成多份，进行浸泡处理，检测处理后样品中P的含量，所得数据如下：
 
-    （1）设浸泡时长为x，甲，乙类衣物中P的含量分别为，，在平面角坐标系中，描出表中各组数值所对应的．点，，并画出函数，的图象；
+    衣物类别
 
-    （2）结合实验数据，利用所画的函数图象可以推断，当浸泡时长为时，甲、乙两类衣物中P的含量的差约为______（精确到）；
+    P含量
 
-    （3）根据衣物中P的含量（单位：）将衣物分为A级（含量）、B级（含量）和C类（含量）．若浸泡时长不超过，则经过浸泡处理后可能达到A级标准的衣物为____（填“甲类”或“乙类”），该类衣物达到A级标准至少需要浸泡_____（精确到）．'
-  answer: （1）见解析    （2） （3）乙；
+    浸泡时长
+
+    甲类
+
+    乙类
+
+    0
+
+    80
+
+    79
+
+    2
+
+    37
+
+    32
+
+    4
+
+    31
+
+    25
+
+    6
+
+    29
+
+    21
+
+    8
+
+    28
+
+    18
+
+    10
+
+    27
+
+    17
+
+    12
+
+    27
+
+    16
+
+    [图]
+
+    （1）设浸泡时长为x，甲，乙类衣物中P的含量分别为$y_{1}$，$y_{2}$，在平面角坐标系xOy中，描出表中各组数值所对应的．点$(x,y_{1})$，$\left(x,y_{2}\right)$，并画出函数$y_{1}$，$y_{2}$的图象；
+
+    （2）结合实验数据，利用所画的函数图象可以推断，当浸泡时长为$5h$时，甲、乙两类衣物中P的含量的差约为______$\mathrm{mg/kg}$（精确到$0.1$）；
+
+    （3）根据衣物中P的含量（单位：$\mathrm{mg/kg}$）将衣物分为A级（含量$<20$）、B级（$20\leq$含量$<75$）和C类（$75 \leq$含量$<300$）．若浸泡时长不超过$12h$，则经过浸泡处理后可能达到A级标准的衣物为____（填“甲类”或“乙类”），该类衣物达到A级标准至少需要浸泡_____h（精确到$0.1$）．'
+  answer: （1）见解析（2）$6.5$ （3）乙；$7.5$
   solution: '【小问1详解】
 
     解：如图所示，即为所求
 
-    【小问2详解】
+    [图]【小问2详解】
 
-    解：由函数图象可知当浸泡时长为时，甲、乙两类衣物中P的含量的差约为，
+    解：由函数图象可知当浸泡时长为$5h$时，甲、乙两类衣物中P的含量的差约为$6.5\mathrm{mg}/\mathrm{kg}$，
 
-    故答案为：；
+    故答案为：$6.5$；
 
     【小问3详解】
 
-    解：由表格中的数据结合函数图象可知，当浸泡时长不超过时，甲含P的最低量大于20，乙的最低含量可以小于20，
+    解：由表格中的数据结合函数图象可知，当浸泡时长不超过$12h$时，甲含P的最低量大于20，乙的最低含量可以小于20，
 
     ∴经过浸泡处理后可能达到A级标准的衣物为乙，
 
-    观察函数图象可知，该类衣物达到A级标准至少需要浸泡，
+    观察函数图象可知，该类衣物达到A级标准至少需要浸泡$7.5h$，
 
-    故答案为：乙；．'
+    故答案为：乙；$7.5$．'
   knowledge_points:
   - 坐标系
   module: functions
@@ -787,56 +1069,81 @@ questions:
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2024-shunyi-yi-fig15.png
+  - figures/2024-shunyi-yi-fig16.png
 - id: 26
   type: 解答
   score: 6
-  question: '在平面直角坐标系中，，是抛物线上任意两点，设抛物线的对称轴为．
+  question: '在平面直角坐标系xOy中，$M(x_{1},y_{1})$，$N(x_{2},y_{2})$是抛物线$y=ax^{2}+bx+c(a>0)$上任意两点，设抛物线的对称轴为$x = t$．
 
-    （1）当，时，求抛物线的对称轴；
+    （1）当$x_{1}=2$，$y_{1}=c$时，求抛物线的对称轴；
 
-    （2）若对于，，都有，求t的取值范围．'
-  answer: （1）抛物线的对称轴 （2）或
+    （2）若对于$1-t<x_{1}<2-t$，$t<x_{2}<t+2$，都有$y_{1}>y_{2}$，求t的取值范围．'
+  answer: （1）抛物线的对称轴$x = 1$ （2）$t \leq -\frac{1}{2}$或$t^{2}$
   solution: '【小问1详解】
 
-    解：由题意得，解得，
+    解：由题意得$4a+2b+c=c$，解得$b = -2a$，
 
-    ∵
+    ∵$x = \frac{b}{2a} = \frac{-2a}{2a} = -1$
 
-    ∴抛物线的对称轴；
+    ∴抛物线的对称轴$x = 1$；
 
     【小问2详解】
 
-    ∵抛物线的对称轴为，，
+    ∵抛物线的对称轴为$x = t$，$t<x_{2}<t+2$，
 
-    ∴在对称轴右侧，
+    ∴$x_2$在对称轴右侧，
 
-    ∵
+    ∵$a > 0$
 
     ∴在对称轴右侧y随x的增大而增大，
 
-    ①当在对称轴右侧，
+    ①当$x_{1}$在对称轴右侧，
 
-    ∵，
+    ∵$y_{1}>y_{2}$，
 
-    ∴，
+    ∴$x_{1}>x_{2}$，
 
-    则，解得，故；
+    则$\begin{cases}
 
-    ②当在对称轴左侧，
+    t < 1 - t \\
 
-    设关于对称轴的点为，
+    t + 2 \leq 1 - t
 
-    ∵抛物线对称轴为，
+    \end{cases}$，解得$\left\{
 
-    ∴，解得，
+    \begin{array}{l}
 
-    ∵，
+    t < \dfrac{1}{2} \\
 
-    ∴，
+    t \leq -\dfrac{1}{2}
 
-    ∴，解得；
+    \end{array}
 
-    故答案为：或．'
+    \right.$，故$t \leq -\frac{1}{2}$；
+
+    ②当$x_{1}$在对称轴左侧，
+
+    设$M(x_1,y_1)$关于对称轴的点为$M''(k,y_1)$，
+
+    ∵抛物线$[公式]$对称轴为$x = t$，
+
+    ∴$2t = h + x_{1}$，解得$h=2t-x_{1}$，
+
+    ∵$1-t<x_{1}<2-t$，
+
+    ∴$3t-2<h<3t-1$，
+
+    ∴$\begin{cases}
+
+    2-t < t \\
+
+    t+2 \leq 3t-2
+
+    \end{cases}$，解得$t^{2}$；
+
+    故答案为：$t \leq -\frac{1}{2}$或$t^{2}$．'
   knowledge_points:
   - 二次函数
   - 不等式
@@ -849,79 +1156,85 @@ questions:
 - id: 27
   type: 解答
   score: 7
-  question: '如图，在正方形中，点E，F分别在，的延长线上，且，的延长线交于点G．
+  question: '如图，在正方形$ABCD$中，点E，F分别在DC，CB的延长线上，且$BF = CE$，EB的延长线交AF于点G．
 
-    （1）求的度数；
+    [图]
 
-    （2）在线段EG上取点H，使得，连接，．
+    （1）求$\angle AGE$的度数；
+
+    （2）在线段EG上取点H，使得$GH = AG$，连接AH，CH．
 
     ①依题意补全图形；
 
-    ②用等式表示线段与的数量关系，并证明．'
-  answer: （1） （2），证明见解析
+    ②用等式表示线段CH与GB的数量关系，并证明．'
+  answer: （1）$\angle AGE = 90^\circ$ （2）$CH = \sqrt{2}GB$，证明见解析
   solution: '【小问1详解】
 
     解：如图所示，
 
-    为正方形，
+    [图]
 
-    ，，
+    $\begin{array}{c}
 
-    ，
+    \bullet \\
 
-    ，
+    \bullet \quad \bullet \\
 
-    ，
+    \bullet
 
-    ，
+    \end{array}$$ABCD$为正方形，
 
-    ，，
+    $\begin{tikzpicture}
 
-    ，
+    \fill (0,0) circle (2pt);
 
-    ，
+    \fill (-1,-1) circle (2pt);
 
-    ．
+    \fill (1,-1) circle (2pt);
 
-    ．
+    \end{tikzpicture}$$AB = BC$，$\angle ABC = \angle DCB = 90^\circ$，
 
-    【小问2详解】
+    $\begin{tikzpicture}
 
-    解：① 如图所示，在线段上取点H，使得，连接，，
+    \fill (0,0) circle (2pt);
 
-    ② 过点作交于点，如图所示，
+    \fill (-1,-1) circle (2pt);
 
-    ，，
+    \fill (1,-1) circle (2pt);
 
-    为等腰直角三角形，
+    \end{tikzpicture}$$\angle ABF=\angle BCE=90^{\circ}$，
 
-    ，
+    $\begin{array}{c}
 
-    ，
+    \bullet \\
 
-    ，，
+    \bullet \quad \bullet \\
 
-    为等腰直角三角形，
+    \bullet
 
-    ，
+    \end{array}$$AB = BC \\
 
-    ，即，
+    \angle ABF = \angle BCE = 90^\circ \\
 
-    （第一问已证），
+    BF = CE$，
 
-    ，
+    $\begin{tikzpicture}
 
-    又  ，
+    \fill (0,0) circle (2pt);
 
-    ，
+    \fill (-1,-1) circle (2pt);
 
-    ，
+    \fill (1,-1) circle (2pt);
 
-    为等腰直角三角形，
+    \end{tikzpicture}$$\triangle ABF \cong \triangle BCE$，
 
-    ，
+    $\begin{tikzpicture}
 
-    ．'
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fil'
   knowledge_points:
   - 平行线
   - 正方形
@@ -929,88 +1242,75 @@ questions:
   difficulty: 压轴
   recommended_for:
   - L3
+  figures:
+  - figures/2024-shunyi-yi-fig17.png
+  - figures/2024-shunyi-yi-fig18.png
+  - figures/2024-shunyi-yi-fig19.png
+  - figures/2024-shunyi-yi-fig20.png
 - id: 28
   type: 解答
   score: 7
-  question: '在平面直角坐标系中，对于图形M和图形N给出如下定义：如果图形M上存在点P、轴上存在点T，使得点P以点T为旋转中心，逆时针旋转得到的点Q在图形N上，那么称图形N是形M的“关联图形”．
+  question: '在平面直角坐标系xOy中，对于图形M和图形N给出如下定义：如果图形M上存在点P、y轴上存在点T，使得点P以点T为旋转中心，逆时针旋转$90^\circ$得到的点Q在图形N上，那么称图形N是形M的“关联图形”．
 
-    （1）如图，点，，，．
+    [图]
+
+    （1）如图，点$A(-3,2)$，$B(0,-1)$，$C(3,2)$，$D(-1,6)$．
 
     ①在点B，C，D中，点A的“关联图形”是_____；
 
-    ②若不是点A的“关联图形”，求的半径的取值范围；
+    ②若$\odot\odot$不是点A的“关联图形”，求$\odot\odot$的半径r的取值范围；
 
-    （2）已知点，，，的半径为1，以线段为对角线的正方形为，若是正方形的“关联图形”，直接写出的最小值和最大值．'
-  answer: （1）①，C②； （2）最小为，最大为．
+    （2）已知点$O''(m,0)$，$E(m-3,0)$，$G(m-2,1)$，$\odot O''$的半径为1，以线段EG为对角线的正方形为$EFGH$，若$\odot O''$是正方形$EFGH$的“关联图形”，直接写出m的最小值和最大值．'
+  answer: （1）①B，C②$0 < r < \frac{\sqrt{2}}{2}$； （2）m最小为$\frac{1-\sqrt{2}}{2}$，m最大为$\frac{3+\sqrt{2}}{2}$．
   solution: '【小问1详解】
 
-    ①点绕逆时针旋转得到点，A点绕逆时针旋转得到点C，
+    ①A点绕$(0,2)$逆时针旋转$90^\circ$得到点B，A点绕$(0,5)$逆时针旋转$90^\circ$得到点C，
 
-    故答案为：，C；
+    故答案为：B，C；
 
-    ②设点，那么点绕点逆时针旋转得到点，作轴交轴于点，作轴交轴于点，如图所示
+    ②设点$T(0,a)$，那么点A绕点T逆时针旋转$90^\circ$得到点$A''$，作$AJ\perp y$轴交y轴于点J，作$A''K\perp y$轴交y轴于点K，如图所示
 
-    由旋转可知，，，
+    [图]
 
-    ，
+    由旋转可知，$AT = A''T$，$\angle ATA''=90^\circ$，
 
-    坐标为
+    $\angle AJT = 90^\circ$
 
-    在上运动
+    $\angle TAJ + \angle ATJ = 90^\circ$
 
-    设与轴的交点为，与轴交点为
+    $\angle ATK=90^{\circ}$
 
-    当，，当时，，
+    $\angle TAJ = \angle ATK$
 
-    ，
+    $\triangle ATJ\cong\triangle AKT$
 
-    以点为圆心，作圆，当与有为唯一交点时，半径为斜边上的高
+    $\because A(-3,2)$
 
-    当不是点的关联图形时，
+    $\ldots TJ = a - 2 \cdot KA''$，$A J = 3 = T K$
 
-    故答案为：．
+    $\ldots OK = TO - TK = a - 3$
 
-    【小问2详解】
+    $\begin{tikzpicture}
 
-    设点绕点逆时针旋转对应点为点，过点作轴交轴于点，连接，，如图所示
+    \fill (0,0) circle (2pt);
 
-    由旋转可知，，，
+    \fill (-1,-1) circle (2pt);
 
-    ，
+    \fill (1,-1) circle (2pt);
 
-    点坐标为
+    \end{tikzpicture}$$A''$坐标为$(a-2,a-3)$
 
-    所以在上运动
+    $\therefore A''$在$y=x-1$上运动
 
-    ，
+    设$y=x-1$与x轴的交点为M，与y轴交点为N
 
-    与轴的夹角为
+    当$x = 0$，$y=-1$，当$y = 0$时，$x = 1$，
 
-    设在轴的交点为，那么点坐标为
+    $\therefore M(1,0)$，$N(0,-1)$
 
-    当与有唯一交点时，最大
+    $\therefore MN=\sqrt{OM^{2}+ON^{2}}=\sqrt{1^{2}+1^{2}}=\sqrt{2}$
 
-    与相切
-
-    为等腰直角三角形且
-
-    故最大为；
-
-    设点绕点逆时针旋转对应点为点，过点作轴交轴于点，过点作轴交连接，，如图所示
-
-    同理可证，
-
-    ，
-
-    的坐标是
-
-    在上运动
-
-    设与轴的交点为，当与该直线有唯一交点时，取最小值．
-
-    同理可证为等腰直角三角形，且
-
-    故最小值为．'
+    以点O为圆心，作圆，当$\odot\odot$与$y'
   knowledge_points:
   - 一次函数
   - 切线
@@ -1021,3 +1321,8 @@ questions:
   difficulty: 压轴
   recommended_for:
   - L3
+  figures:
+  - figures/2024-shunyi-yi-fig21.png
+  - figures/2024-shunyi-yi-fig22.png
+  - figures/2024-shunyi-yi-fig23.png
+  - figures/2024-shunyi-yi-fig24.png

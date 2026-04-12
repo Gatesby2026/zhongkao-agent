@@ -1,8 +1,8 @@
 # ============================================================
 # 2024年北京大兴区中考数学一模试卷 — 逐题分析
 # ============================================================
-# 数据来源：knowledge-original/精品解析：2024年北京市大兴区九年级中考一模数学试题（原卷版）.docx
-# 自动生成，部分数学公式可能显示不全（docx公式对象无法完整提取）
+# 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
+# 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
 # 满分：100分  时长：120分钟
 
 year: 2024
@@ -11,90 +11,25 @@ exam_type: 一模
 subject: 数学
 full_score: 100
 duration_minutes: 120
-total_questions: 32
+total_questions: 28
 structure: 8选择(16分) + 8填空(16分) + 12解答(68分)
 questions:
 - id: 1
   type: 选择
   score: 2
-  question: 本试卷共6页，共28道题．满分100分．考试时间120分钟．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 2
-  type: 选择
-  score: 2
-  question: 在试卷和答题卡上准确填写姓名、准考证号、考场号和座位号．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 3
-  type: 选择
-  score: 2
-  question: 试题答案一律填涂或书写在答题卡上，在试卷上作答无效．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 4
-  type: 选择
-  score: 2
-  question: 在答题卡上，选择题、作图题用2B铅笔作答，其他试题用黑色字迹签字笔作答．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 5
-  type: 选择
-  score: 2
-  question: 考试结束，将本试卷、答题卡和草稿纸一并交回．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 1
-  type: 选择
-  score: 2
-  question: "下面几何体中，是圆锥的为（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '下面几何体中，是圆锥的为（）
+
+    A.[图]B.[图]C.[图]D.[图]'
+  answer: D
+  solution: '解：A选项为正方体，不合题意；
+
+    B选项为球，不符合题意；
+
+    C选项为五棱锥，不合题意；
+
+    D选项为圆锥，符合题意．
+
+    故选：D．'
   knowledge_points:
   - 综合
   module: circles
@@ -104,12 +39,21 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-daxing-yi-fig02.png
+  - figures/2024-daxing-yi-fig03.png
+  - figures/2024-daxing-yi-fig04.png
+  - figures/2024-daxing-yi-fig05.png
 - id: 2
   type: 选择
   score: 2
-  question: "2024年是京津冀协同发展十周年，高标准建设雄安新区成效显著．从新区设立至2023年底，累计开发面积184平方公里，4017栋楼宇拔地而起，总建筑面积4370万平方米．将43700000用科学记数法表示应为（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '2024年是京津冀协同发展十周年，高标准建设雄安新区成效显著．从新区设立至2023年底，累计开发面积184平方公里，4017栋楼宇拔地而起，总建筑面积4370万平方米．将43700000用科学记数法表示应为（）
+
+    A.$43.7\times10^{6}$B.$4.37\times10^{7}$C.$4.37\times10^{8}$D.$0.437\times10^{9}$'
+  answer: B
+  solution: '解：$43700000 =$$4.37\times10^{7}$，
+
+    故选：B．'
   knowledge_points:
   - 科学记数法
   module: numbersAndExpressions
@@ -122,9 +66,13 @@ questions:
 - id: 3
   type: 选择
   score: 2
-  question: "五边形的内角和为（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '五边形的内角和为（）
+
+    A.$180^\circ$B.$360^\circ$C.$540^\circ$D.$720^\circ$'
+  answer: C
+  solution: '解：五边形的内角和为$(5-2)\times180^{\circ}=540^{\circ}$，
+
+    故选：C．'
   knowledge_points:
   - 综合
   module: triangles
@@ -137,24 +85,48 @@ questions:
 - id: 4
   type: 选择
   score: 2
-  question: "如图，直线，相交于点，，若，则的大小为（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '如图，直线AB，CD相交于点O，$OE \perp AB$，若$\angle AOC=30^\circ$，则$\angle EOD$的大小为（）
+
+    [图]
+
+    A.$30^\circ$B.$60^\circ$C.$120^\circ$D.$150^\circ$'
+  answer: B
+  solution: '解：∵$OE \perp AB$，
+
+    ∴$\angle EOB = 90^\circ$．
+
+    ∵$\angle DOB=\angle AOC=30^{\circ}$，
+
+    ∴$\angle EOD = \angle EOB - \angle DOB = 90^{\circ} - 30^{\circ} = 60^{\circ}$．
+
+    故选：B．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 对顶角
+  module: triangles
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-daxing-yi-fig06.png
 - id: 5
   type: 选择
   score: 2
-  question: "实数，，在数轴上的对应点的位置如图所示，下列结论中正确的是（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '实数a，b，c在数轴上的对应点的位置如图所示，下列结论中正确的是（）
+
+    [图]
+
+    A.$b-c>0$B.$ac > 0$C.$b+c<0$D.$ab<1$'
+  answer: C
+  solution: '解：由数轴可知，$-3 < a < -2 < b < -1 < 0 < c < 1$，
+
+    ∴$b-c<0$，$ac < 0$，$b+c<0$，$ab > 1$，
+
+    ∴A、B、D错误，故不符合要求；C正确，故符合要求；
+
+    故选：C．'
   knowledge_points:
   - 综合
   module: numbersAndExpressions
@@ -164,14 +136,56 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-daxing-yi-fig07.png
 - id: 6
   type: 选择
   score: 2
-  question: "不透明的盒子中装有3个小球，每个小球上面写着一个汉字分别是“向”、“前”、“冲”，这3个小球除汉字外无其他差别，从中随机摸出一个小球，记录其汉字，放回并摇匀，再从中随机摸出一个小球，记录其汉字，则两次都摸到“冲”字的概率是（    ）\nA \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '不透明的盒子中装有3个小球，每个小球上面写着一个汉字分别是“向”、“前”、“冲”，这3个小球除汉字外无其他差别，从中随机摸出一个小球，记录其汉字，放回并摇匀，再从中随机摸出一个小球，记录其汉字，则两次都摸到“冲”字的概率是（）
+
+    A.$\frac{2}{3}$B.$\frac{1}{3}$C.$\frac{1}{6}$D.$\frac{1}{9}$'
+  answer: D
+  solution: '解：根据题意列表如下：
+
+    向
+
+    前
+
+    冲
+
+    向
+
+    向，向
+
+    前，向
+
+    冲，向
+
+    前
+
+    向，前
+
+    前，前
+
+    前，冲
+
+    冲
+
+    向，冲
+
+    前，冲
+
+    冲，冲
+
+    共有9种等可能得情况，其中两次都摸到“冲”字的情况有1种，
+
+    则两次都摸到“冲”字的概率是：$\frac{1}{9}$，
+
+    故选：D．'
   knowledge_points:
   - 概率
+  - 树状图
+  - 列表法
   module: statisticsAndProbability
   difficulty: 中档
   recommended_for:
@@ -181,12 +195,20 @@ questions:
 - id: 7
   type: 选择
   score: 2
-  question: "若关于的一元二次方程有两个不相等的实数根，则实数的取值范围是（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '若关于x的一元二次方程$x^{2}+2x-m=0$有两个不相等的实数根，则实数m的取值范围是（）
+
+    A.$m > -1$B.$m^{-1}$C.$m > 1$D.$m\ 1$'
+  answer: A
+  solution: '解：根据题意得$\Delta=2^{2}-4\times1\times(-m)>0$，
+
+    解得$m > -1$．
+
+    故选：A．'
   knowledge_points:
   - 一元二次方程
-  module: numbersAndExpressions
+  - 根的判别式
+  - 不等式
+  module: equationsAndInequalities
   difficulty: 中档
   recommended_for:
   - L1
@@ -195,26 +217,86 @@ questions:
 - id: 8
   type: 选择
   score: 2
-  question: "如图，在中，，于点，设，，，给出下面三个结论：①；②；③若，则．上述结论中，所有正确结论的序号是（    ）\nA ①②\tB. ①③\tC. ②③\tD. ①②③"
-  answer: ''
-  solution: ''
+  question: '如图，在$\triangle ABC$中，$\angle BAC = 90^\circ$，$AD \perp BC$于点D，设$BD = a$，$DC = b$，$AD = c$，给出下面三个结论：①$c^{2}=ab$；②$a+b\quad 2c$；③若$a > b$，则$a > c$．上述结论中，所有正确结论的序号是（）
+
+    [图]
+
+    A.①②B.①③C.②③D.①②③'
+  answer: D
+  solution: '解：∵$\angle BAC = 90^\circ$，$AD \perp BC$，
+
+    ∴$\angle BAD+\angle CAD=90^{\circ}$，$\angle BAD + \angle ABD = 90^\circ$，$\angle BAD = \angle ADC = 90^\circ$，
+
+    ∴$\angle CAD = \angle ABD$，
+
+    ∴$\triangle ABD \sim \triangle CAD$，
+
+    ∴$\frac{BD}{AD}=\frac{AD}{DC}$即：$\frac{a}{c} = \frac{c}{b}$，整理得：$c^{2}=ab$，故①正确，
+
+    ∵$(a-b)^{2}=a^{2}+b^{2}-2ab$，即：$a^{2}+b^{2}=(a-b)^{2}+2ab$，
+
+    ∴$(a+b)^{2}=a^{2}+b^{2}+2ab=(a-b)^{2}+4ab=(a-b)^{2}+4ac^{2}$，
+
+    ∵$\left(a-b\right)^{2}0$，
+
+    ∴$(a+b)^{2}-4a^{2}$，
+
+    ∵$a > 0$、$b>0$、$c > 0$，
+
+    ∴$a+b\quad 2c$，故②正确，
+
+    ∵$a > b$，$b=\frac{c^{2}}{a}$，
+
+    ∴$a>\frac{c^{2}}{a}$，
+
+    ∵$a > 0$，
+
+    ∴$a^{2}>c^{2}$，
+
+    ∴$a > c$，故③正确，
+
+    综上所述，①②③正确，
+
+    故选：D．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 相似三角形
+  - 不等式
+  module: triangles
   difficulty: 较难
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2024-daxing-yi-fig08.png
 - id: 9
   type: 填空
   score: 2
-  question: '若在实数范围内有意义，则实数x的取值范围是______．
+  question: 若$\sqrt{x-3}$在实数范围内有意义，则实数x的取值范围是______．
+  answer: $x\ 3$
+  solution: '由二次根式的概念，可知$x-3\quad0$，
 
-    10 分解因式：_______.'
-  answer: ''
-  solution: ''
+    解得$x\ 3$.
+
+    故答案为：$x\ 3$'
   knowledge_points:
   - 综合
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 10
+  type: 填空
+  score: 2
+  question: 分解因式：$ab^2 - 4a =$_______.
+  answer: $a(b+2)(b-2)$．
+  solution: '解：$ab^{2}-4a-a(b^{2}-4)=a(b+2)(b-2)$，
+
+    故答案为：$a(b+2)(b-2)$．'
+  knowledge_points:
+  - 方差
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -225,12 +307,22 @@ questions:
 - id: 11
   type: 填空
   score: 2
-  question: 方程的解为______．
-  answer: ''
-  solution: ''
+  question: 方程$\frac{1}{x}=\frac{3}{4x-1}$的解为______．
+  answer: $x = 1$
+  solution: '解：$\frac{1}{x}=\frac{3}{4x-1}$
+
+    ∴$4x-1=3x$，
+
+    解得：$x = 1$，
+
+    经检验，$x = 1$是原分式方程的解，
+
+    ∴$x = 1$，
+
+    故答案为：$x = 1$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 分式方程
+  module: equationsAndInequalities
   difficulty: 基础
   recommended_for:
   - L0
@@ -240,9 +332,19 @@ questions:
 - id: 12
   type: 填空
   score: 2
-  question: 在平面直角坐标系中，若点和在反比例函数的图象上，则的值为______．
-  answer: ''
-  solution: ''
+  question: 在平面直角坐标系xOy中，若点$A(5,2)$和$B(m,-2)$在反比例函数$y=\frac{k}{x}(k\neq0)$的图象上，则m的值为______．
+  answer: $-5$
+  solution: '解：把$A(5,2)$代入$y=\frac{k}{x}(k\neq0)$得：$2=\frac{k}{5}$，
+
+    解得，$k = 10,$
+
+    ∴反比例函数解析式为$y=\frac{10}{x}$，
+
+    把$B(m,-2)$代入$y=\frac{10}{x}$，得：$-2 = \frac{10}{m}$，
+
+    解得，$m = -5$，
+
+    故答案为：$-5$'
   knowledge_points:
   - 反比例函数
   - 坐标系
@@ -256,37 +358,77 @@ questions:
 - id: 13
   type: 填空
   score: 2
-  question: 如图，是的直径，点，在上，若，则的度数为______．
-  answer: ''
-  solution: ''
+  question: '如图，AB是$\odot\odot$的直径，点C，D在$\odot\odot$上，若$AC = BC$，则$\angle D$的度数为______$\text{o}$．
+
+    [图]'
+  answer: '45'
+  solution: '解：∵AB是$\odot\odot$的直径，
+
+    ∴$\angle ACB=90^\circ$，
+
+    ∵$AC = BC$，
+
+    ∴$\angle CAB=\angle CBA=45^{\circ}$，
+
+    ∴$\angle D=\angle CAB=45^\circ$．
+
+    故答案$[公式]$：45'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 圆周角
+  module: circles
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-daxing-yi-fig09.png
 - id: 14
   type: 填空
   score: 2
-  question: 如图，在矩形中，与相交于点，于点．若，，则的长为______．
-  answer: ''
-  solution: ''
+  question: '如图，在矩形$ABCD$中，AC与BD相交于点O，$OE \perp BC$于点E．若$AC = 4$，$\angle DBC = 30^\circ$，则OE的长为______．
+
+    [图]'
+  answer: '1'
+  solution: '解：∵矩形$ABCD$，
+
+    ∴$OB = OC$，$\angle BCD = 90^\circ$，$BD = AC = 4$，
+
+    ∵$\angle DBC = 30^\circ$，
+
+    ∴$CD=\frac{1}{2}BD=2$，
+
+    ∴$BC = \sqrt{3}CD = 2\sqrt{3}$，
+
+    ∵$OB = OC$，$OE \perp BC$，
+
+    ∴$BE=\frac{1}{2}BC=\sqrt{3}$，
+
+    ∴$OE=BE\tan 30^{\circ}=\sqrt{3}\times\frac{\sqrt{3}}{3}=1$；
+
+    故答案为：1．'
   knowledge_points:
   - 矩形
-  module: quadrilaterals
+  module: triangles
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-daxing-yi-fig10.png
 - id: 15
   type: 填空
   score: 2
-  question: 某年级为了解学生对“足球”“篮球”“排球”“乒乓球”“羽毛球”五类体育项目的喜爱情况，现从中随机抽取了100名学生进行问卷调查，根据数据绘制了如图所示的统计图．若该年级有800名学生，估计该年级喜爱“篮球”项目的学生有______人．
-  answer: ''
-  solution: ''
+  question: '某年级为了解学生对“足球”“篮球”“排球”“乒乓球”“羽毛球”五类体育项目的喜爱情况，现从中随机抽取了100名学生进行问卷调查，根据数据绘制了如图所示的统计图．若该年级有800名学生，估计该年级喜爱“篮球”项目的学生有______人．
+
+    [图]'
+  answer: '240'
+  solution: '解：$800\times\frac{30}{100}=240$人，
+
+    即该年级喜爱“篮球”项目的学生有240人．
+
+    故答案为：240'
   knowledge_points:
   - 统计
   module: statisticsAndProbability
@@ -295,15 +437,53 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-daxing-yi-fig11.png
 - id: 16
   type: 填空
   score: 2
-  question: 某公园门票价格如下表：某学校组织摄影、美术两个社团的学生游览该公园，两社团的人数分别为和．若两社团分别以各自社团为单位购票，共需1560元；若两社团作为一个团体合在一起购票，共需1170元，那么这两个社团的人数为______，______．
-  answer: ''
-  solution: ''
+  question: '某公园门票价格如下表：某学校组织摄影、美术两个社团的学生游览该公园，两社团的人数分别为a和$b(a > b)$．若两社团分别以各自社团为单位购票，共需1560元；若两社团作为一个团体合在一起购票，共需1170元，那么这两个社团的人数为$a =$______，$b =$______．
+
+    购票人数
+
+    $1 \sim 40$
+
+    $41 \sim 80$
+
+    80以上
+
+    门票价格
+
+    20元$/$人
+
+    16元$/$人
+
+    13元$/$人'
+  answer: ①.60②.30
+  solution: '解：∵1170不能整除16，
+
+    ∴两个部门的人数$a+b\quad81$，
+
+    又1560不能整除16，
+
+    ∴每个部门的人数不可能同时在$41 \sim 80$之间，
+
+    由于$a > b$，所以，当$\left\{\begin{array}{l}5b\leq40,\\4\leq a\leq80\end{array}\right.$，则有：
+
+    $\begin{aligned}
+
+    &20b+16a=1560\\
+
+    &13(a+b)=1170
+
+    \end{aligned}$
+
+    解得，$\left\{\begin{array}{l}a=60\\b=30\end{array}\right.$
+
+    故答案$[公式]$：60，30．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 二元一次方程组
+  module: equationsAndInequalities
   difficulty: 较难
   recommended_for:
   - L2
@@ -311,12 +491,19 @@ questions:
 - id: 17
   type: 解答
   score: 5
-  question: （第17题，详见原卷）
-  answer: ''
-  solution: ''
+  question: 计算：$-3+(\pi+2024)^{0}+\sqrt{8}-2\cos 45^{\circ}$
+  answer: $4+\sqrt{2}$
+  solution: '解：$-3+(\pi+2024)^{0}+\sqrt{8}-2\cos 45^{\circ}$
+
+    $3+1+2\sqrt{2}-2\times\frac{\sqrt{2}}{2}$
+
+    $=3+1+2\sqrt{2}-\sqrt{2}$
+
+    $=4+\sqrt{2}$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 三角函数
+  - 绝对值
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -326,9 +513,23 @@ questions:
 - id: 18
   type: 解答
   score: 5
-  question: 解不等式组：
-  answer: ''
-  solution: ''
+  question: '解不等式组：$\begin{cases}
+
+    4x-1 \\
+
+    2x+5
+
+    \end{cases} \\
+
+    \frac{2x-1}{3}<x$'
+  answer: $x\ 3$
+  solution: '解：$\left\{\begin{array}{l}4x-1<2x+5①\\ \dfrac{2x-1}{3}<x②\end{array}\right.$
+
+    解不等式①，得$x\ 3$．
+
+    解不等式②，得$x > -1$．
+
+    ∴不等式组的解集为$x\ 3$．'
   knowledge_points:
   - 不等式
   - 不等式组
@@ -342,12 +543,36 @@ questions:
 - id: 19
   type: 解答
   score: 5
-  question: 已知，求代数式的值．
-  answer: ''
-  solution: ''
+  question: 已知$a^{2}+3a-1=0$，求代数式$(a+1)^{2}+a(a+4)-2$的值．
+  answer: $1$
+  solution: '解：$(a+1)^{2}+a(a+4)-2$
+
+    $a^{2}+2a+1+a^{2}+4a-2$
+
+    $=2a^{2}+6a-1$．
+
+    $a^{2}+3a-1=0$，
+
+    $a^{2}+3a=1$．
+
+    $2a^{2}+6a=2$．
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$原式$=2a^{2}+6a-1$
+
+    $=2-1$
+
+    $=1$．'
   knowledge_points:
   - 综合
-  module: geometryComprehensive
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -357,27 +582,117 @@ questions:
 - id: 20
   type: 解答
   score: 5
-  question: 某学校开展“浸书香校园，品诗词之美”读书活动．现有，两种诗词书籍整齐地叠放在桌子上，每本书籍和每本书籍厚度的比为，根据图中所给出的数据信息，求每本书籍的厚度．
-  answer: ''
-  solution: ''
+  question: '某学校开展“浸书香校园，品诗词之美”读书活动．现有A，B两种诗词书籍整齐地叠放在桌子上，每本A书籍和每本B书籍厚度的比为$5:6$，根据图中所给出的数据信息，求每本A书籍的厚度．
+
+    [图]'
+  answer: 每本A书籍厚度为$1\mathrm{cm}$
+  solution: '解：设每本A书籍厚度为xcm，桌子高度为ycm，
+
+    由题意可得：$\begin{aligned}
+
+    &3x+y=79 \\
+
+    &5\times\frac{6}{5}x+y=82
+
+    \end{aligned}$，
+
+    解得$\begin{cases} x = 1 \\ y = 76 \end{cases}$，
+
+    答：每本A书籍厚度为$1\mathrm{cm}$．'
   knowledge_points:
   - 综合
-  module: geometryComprehensive
+  module: equationsAndInequalities
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-daxing-yi-fig12.png
 - id: 21
   type: 解答
   score: 5
-  question: '如图，在正方形中，点，分别在，上，，连接，射线和线段的延长线交于点．
+  question: '如图，在正方形$ABCD$中，点E，F分别在BC，AD上，$BE = DF$，连接CF，射线AE和线段DC的延长线交于点G．
 
-    （1）求证：四边形是平行四边形；
+    [图]
 
-    （2）若，，求线段的长．'
-  answer: ''
-  solution: ''
+    （1）求证：四边形$AECF$是平行四边形；
+
+    （2）若$\tan \angle BAE = \frac{2}{3}$，$DG = 9$，求线段CE的长．'
+  answer: （1）见解析（2）$CE = 2$
+  solution: '【小问1详解】
+
+    证明：$\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$四边形$ABCD$是正方形，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$AD \parallel BC$，$AD = BC$．
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$$BE = FD$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$AD-FD=BC-BE$．即$AF = CE$．
+
+    又$\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$$AF \parallel CE$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$四边形$AECF$是平行四边形．
+
+    [图]【小问2详解】
+
+    解：$\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$四边'
   knowledge_points:
   - 平行四边形
   - 正方形
@@ -387,30 +702,87 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-daxing-yi-fig13.png
+  - figures/2024-daxing-yi-fig14.png
 - id: 22
   type: 解答
   score: 5
-  question: '种子被称作农业的“芯片”，粮安天下，种子为基．农科院计划为某地区选择合适的甜玉米种子，随机抽取20块自然条件相同的试验田进行试验，得到各试验田每公顷产量（单位：），并对数据（每公顷产量）进行了整理、描述和分析，下面给出了部分信息：
+  question: '种子被称作农业的“芯片”，粮安天下，种子为基．农科院计划为某地区选择合适的甜玉米种子，随机抽取20块自然条件相同的试验田进行试验，得到各试验田每公顷产量（单位：t），并对数据（每公顷产量）进行了整理、描述和分析，下面给出了部分信息：
 
     a．20块试验田每公顷产量的频数分布表如下：
 
-    b．试验田每公顷产量在这一组的是：7.55  7.55  7.57  7.58  7.59  7.59
+    每公顷产量$(t)$
 
-    c． 20 块试验田每公顷产量的统计图如下：
+    频数
 
-    （1）写出表中的值；
+    $7.40 \leq x < 7.45$
+
+    3
+
+    $7.45\leq x<7.50$
+
+    2
+
+    $7.50 \leq x < 7.55$
+
+    m
+
+    $7.55\leq x<7.60$
+
+    6
+
+    $7.60 \leq x \leq 7.65$
+
+    5
+
+    b．试验田每公顷产量在$7.55\leq x<7.60$这一组的是：7.55
+
+    7.55  7.57  7.58  7.59  7.59
+
+    c．20块试验田每公顷产量的统计图如下：
+
+    [图]
+
+    （1）写出表中m的值；
 
     （2）随机抽取的这20块试验田每公顷产量的中位数为______．
 
-    （3）下列推断合理是______（填序号）；
+    （3）下列推断合理的是______（填序号）；
 
-    ①20块试验田的每公顷产量数据中，每公顷产量低于的试验田数量占试验田总数的；
+    ①20块试验田的每公顷产量数据中，每公顷产量低于$7.50t$的试验田数量占试验田总数的$25\%$；
 
     ②3号试验田每公顷产量在20块试验田的每公顷产量数据中从高到低排第5名．
 
-    （4）号试验田使用的是甲种种子，11~20号试验田使用的是乙种种子，已知甲、乙两种种子的每公顷产量的平均数分别为及，若某种种子在各试验田每公顷产量的10个数据的方差越小，则认为这种种子的产量越稳定．据此推断：甲、乙两种种子中，这个地区比较适合种植的种子是______（填“甲”或“乙”）．'
-  answer: ''
-  solution: ''
+    （4）$1 \sim 10$号试验田使用的是甲种种子，11~20号试验田使用的是乙种种子，已知甲、乙两种种子的每公顷产量的平均数分别为$7.537\pi$及$7.545t$，若某种种子在各试验田每公顷产量的10个数据的方差越小，则认为这种种子的产量越稳定．据此推断：甲、乙两种种子中，这个地区比较适合种植的种子是______（填“甲”或“乙”）．'
+  answer: （1）4（2）7.55 （3）①（4）乙
+  solution: '【小问1详解】
+
+    解：$m=20-3-2-6-5=4$
+
+    【小问2详解】
+
+    解：随机抽取的这20块试验田每公顷产量的中位数是$7.55\leq x<7.60$这一组的第1个和第2个数据，即：7.55和7.55，
+
+    故中位数为：$\frac{7.55+7.55}{2}=7.55$，
+
+    故答案为：7.55；
+
+    【小问3详解】
+
+    解：20块试验田的每公顷产量数据中，每公顷产量低于$7.50t$的试验田数量有5块，
+
+    所以，占试验田总数的百分数为$\frac{5}{20}\times100=25\%$，故①正确；
+
+    3号试验田每公顷产量在20块试验田的每公顷产量数据中从高到低排第4名，故②错误，
+
+    故答案为：①
+
+    【小问4详解】
+
+    解：从20块试验田每公顷产量的统计图中可看出甲种种子每公顷产量波动大，乙种种子每公顷产量波动小，据此推断：甲、乙两种种子中，这个地区比较适合种植的种子是乙；
+
+    故答案为：乙'
   knowledge_points:
   - 统计
   - 平均数
@@ -422,74 +794,320 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-daxing-yi-fig15.png
 - id: 23
   type: 解答
   score: 6
-  question: '在平面直角坐标系中，函数的图象经过点和，与过点且平行于轴的直线交于点．
+  question: '在平面直角坐标系xOy中，函数$y=kx+b(k\neq0)$的图象经过点$A(1,3)$和$B(-1,-1)$，与过点$(-2,0)$且平行于y轴的直线交于点C．
 
-    （1）求该函数的表达式及点的坐标；
+    （1）求该函数的表达式及点C的坐标；
 
-    （2）当时，对于的每一个值，函数的值大于函数的值且小于，直接写出的取值范围．'
-  answer: ''
-  solution: ''
+    （2）当$x<-2$时，对于x的每一个值，函数$y = nx (n \neq 0)$的值大于函数$y=kx+b(k\neq0)$的值且小于$-2$，直接写出n的取值范围．'
+  answer: （1）$y=2x+1$；$(-2, -3)$ （2）$1 \leq n \leq \frac{3}{2}$
+  solution: '【小问1详解】
+
+    解：∵函数$y=kx+b(k\neq0)$的图象经过点$A(1,3)$和$B(-1,-1)$，
+
+    ∴将点$A(1,3)$和$B(-1,-1)$代入$y=kx+b(k\neq0)$中，
+
+    $\begin{cases}
+
+    k + b = 3 \\
+
+    -k + b = -1
+
+    \end{cases}$，解得：$\left\{ \begin{array}{l} k = 2 \\ b = 1 \end{array} \right.$，
+
+    ∴该函数的表达式为：$y=2x+1$，
+
+    ∵与过点$(-2,0)$且平行于y轴的直线交于点C，
+
+    ∴将$x = -2$代入$y=2x+1$中，得$y=-3$，
+
+    ∴$C(-2,-3)$；
+
+    【小问2详解】
+
+    解：∵当$x<-2$时，对于x的每一个值，函数$y = nx (n \neq 0)$的值大于函数$y=kx+b(k\neq0)$的值且小于$-2$，
+
+    [图]，
+
+    通过图象可知，当$y = nx (n \neq 0)$的函数值小于$-2$时，即将$H(-2,-2)$代入$y = nx (n \neq 0)$中，$n = 1$，
+
+    当$y = nx (n \neq 0)$的函数值大于函数$y=kx+b(k\neq0)$的值将$C(-2,-3)$代入$y = nx (n \neq 0)$中，$n = \frac{3}{2}$，
+
+    ∴n的取值范围为：$1 \leq n \leq \frac{3}{2}$．'
   knowledge_points:
+  - 一次函数
   - 坐标系
-  module: geometryComprehensive
+  module: functions
   difficulty: 较难
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2024-daxing-yi-fig16.png
 - id: 24
   type: 解答
   score: 6
-  question: '某洒水车为绿化带浇水，图1是洒水车喷水区域的截面图，其上、下边缘都可以看作是抛物线的一部分，下边缘抛物线是由上边缘抛物线向左平移得到的．喷水口距地面的竖直高度为，喷水区域的上、下边缘与地面交于，两点，上边缘抛物线的最高点恰好在点的正上方，已知，，．建立如图2所示的平面直角坐标系．
+  question: '某洒水车为绿化带浇水，图1是洒水车喷水区域的截面图，其上、下边缘都可以看作是抛物线的一部分，下边缘抛物线是由上边缘抛物线向左平移得到的．喷水口H距地面的竖直高度OH为$1,5m$，喷水区域的上、下边缘与地面交于A，B两点，上边缘抛物线的最高点C恰好在点B的正上方，已知$OA = 6\,\text{m}$，$OB = 2m$，$CB = 2m$．建立如图2所示的平面直角坐标系．
 
-    （1）在①，②两个表达式中，洒水车喷出水的上边缘抛物线的表达式为______，下边缘抛物线的表达式为______（把表达式的序号填在对应横线上）；
+    [图]
 
-    （2）如图3，洒水车沿着平行于绿化带的公路行驶，绿化带的横截面可以看作矩形，水平宽度，竖直高度．如图，为喷水口距绿化带底部的最近水平距离（单位：）．若矩形在喷水区域内，则称洒水车能浇灌到整个绿化带．
+    （1）在①$y = -\frac{1}{8}(x + 2)^2 + 2$，②$y = -\frac{1}{8}(x - 2)^2 + 2$两个表达式中，洒水车喷出水的上边缘抛物线的表达式为______，下边缘抛物线的表达式为______（把表达式的序号填在对应横线上）；
 
-    ①当时，判断洒水车能否浇灌到整个绿化带，并说明理由；
+    （2）如图3，洒水车沿着平行于绿化带的公路行驶，绿化带的横截面可以看作矩形$DEFG$，水平宽度$DE = 3m$，竖直高度$DG = 0.5m$．如图$4$，OD为喷水口距绿化带底部的最近水平距离（单位：m）．若矩形$DEFG$在喷水区域内，则称洒水车能浇灌到整个绿化带．
 
-    ②若洒水车能浇灌到整个绿化带，则的取值范围是______．'
-  answer: ''
-  solution: ''
+    ①当$OD = 2.6\,\text{m}$时，判断洒水车能否浇灌到整个绿化带，并说明理由；
+
+    ②若洒水车能浇灌到整个绿化带，则OD的取值范围是______．'
+  answer: （1）②，①（2）①不能；理由见解析；②$2\leq OD\leq 2\sqrt{3}-1$
+  solution: '【小问1详解】
+
+    解：由题意可知：$C(2,2)$，故设上边缘抛物线的函数解析式为：$y = a(x - 2)^2 + 2$，
+
+    ∵$H(0,1.5)$，
+
+    将其代入$y = a(x - 2)^2 + 2$可得：$1.5=a(0-2)^{2}+2$，解得：$a = -\frac{1}{8}$，
+
+    ∴上边缘抛物线的函数解析式为：$y = -\frac{1}{8}(x - 2)^2 + 2$，
+
+    解：∵$H(0,1.5)$关于对称轴$x=2$的对称点为：$(4,1.5)$，
+
+    ∴下边缘抛物线是由上边缘抛物线向左平移4个单位得到，
+
+    ∴下边缘抛物线为：$y = -\frac{1}{8}(x + 2)^2 + 2$，
+
+    故答案为：②，①．
+
+    【小问2详解】
+
+    ①不能，理由如下，
+
+    依题意，$OE=2.6+3.5.6$
+
+    将$x = 5.6$代入上边缘抛物线的函数解析式$y = -\frac{1}{8}(x - 2)^2 + 2$得
+
+    $y = -\frac{1}{8}(5.6 - 2)^2 + 2 + 0.38 \times 0.5$
+
+    ∴绿化带不全在喷头口的喷水区域内，
+
+    ∴洒水车不能浇灌到整个绿化带；
+
+    ②解：设灌溉车到绿化带的距离OD为d，
+
+    要使灌溉车行驶时喷出的水能浇灌到整个绿化带，则当点B和点D重合时，d有最小值，此时$d = 2$；
+
+    当上边缘抛物线过点F时，d有最大值，
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$$DE = 3m$，$EF = 0.5m$．
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$令$'
   knowledge_points:
+  - 二次函数
   - 矩形
   - 平移
   - 坐标系
-  module: geometryComprehensive
+  module: functions
   difficulty: 较难
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2024-daxing-yi-fig17.png
 - id: 25
   type: 解答
   score: 6
-  question: '如图，过外一点作的切线，切点为点，为的直径，点为上一点，且，连接，，线段交直径于点，交于点，连接．
+  question: '如图，过$\odot\odot$外一点A作$\odot\odot$的切线，切点为点B，BC为$\odot\odot$的直径，点D为$\odot\odot$上一点，且$BD = BA$，连接CD，AD，线段AD交直径BC于点E，交$\odot\odot$于点F，连接BF．
 
-    （1）求证：；
+    [图]
 
-    （2）若，，求半径的长．'
-  answer: ''
-  solution: ''
+    （1）求证：$EF = BF$；
+
+    （2）若$\sin A = \frac{1}{3}$，$OE = \frac{5}{2}$，求$\odot\odot$半径的长．'
+  answer: （1）证明见解析 （2）$\frac{9}{2}$
+  solution: '【小问1详解】
+
+    证明：$\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$AB为$\odot\odot$的切线，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\angle OBA=90^\circ$．
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\angle A+\angle ELB=90^{\circ}$．
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$BC为$\odot\odot$的直径，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\angle CDB=90^\circ$．
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\angle CDE+\angle BDE=90^{\circ}$．
+
+    $\beg'
   knowledge_points:
+  - 圆周角
   - 切线
   module: circles
   difficulty: 较难
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2024-daxing-yi-fig18.png
+  - figures/2024-daxing-yi-fig19.png
+  - figures/2024-daxing-yi-fig20.png
 - id: 26
   type: 解答
   score: 6
-  question: '在平面直角坐标系中，，是抛物线上任意两点．设抛物线的对称轴为直线．
+  question: '在平面直角坐标系xOy中，$M(x_1,y_1)$，$N(x_{2},y_{2})$是抛物线$y=ax^{2}+bx+c(a<0)$上任意两点．设抛物线的对称轴为直线$x = t$．
 
-    （1）若，，求的值；
+    （1）若$x_2 = 2$，$y_{2}=c$，求t的值；
 
-    （2）若对于，，都有，求的取值范围．'
-  answer: ''
-  solution: ''
+    （2）若对于$t+1<x_{1}<t+2$，$4<x_{2}<5$，都有$y_{1}>y_{2}$，求t的取值范围．'
+  answer: （1）$t = 1$ （2）$t \leq 2$或$t\ 7$
+  solution: '【小问1详解】
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$$x_2 = 2$，$y_{2}=c$，
+
+    $4a+2b+c=c$，
+
+    $\therefore b = -2a$，
+
+    $\therefore t=-\frac{b}{2a}=1$，
+
+    【小问2详解】
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$$y=ax^{2}+bx+c(a<0)$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$抛物线开口向下，
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$抛物线的对称轴为$x = t$，$t+1<x_{1}<t+2$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$点M在对称轴的右侧，
+
+    ①当点N在对称轴上或对称轴右侧时，
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$抛物线开口向下，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-'
   knowledge_points:
+  - 二次函数
+  - 不等式
+  - 不等式组
   - 坐标系
   module: functions
   difficulty: 压轴
@@ -498,41 +1116,155 @@ questions:
 - id: 27
   type: 解答
   score: 7
-  question: '在中，，，点是线段上一个动点（不与点，重合），，以为中心，将线段顺时针旋转得到线段，连接．
+  question: '在$\triangle ABC$中，$AC = BC$，$\angle ACB=90^\circ$，点D是线段AB上一个动点（不与点A，B重合），$\angle ACD = \alpha (0 < \alpha < 45^\circ)$，以D为中心，将线段DC顺时针旋转$90^\circ$得到线段DE，连接EB．
+
+    [图]
 
     （1）依题意补全图形；
 
-    （2）求的大小（用含的代数式表示）；
+    （2）求$\angle EDB$的大小（用含$\alpha$的代数式表示）；
 
-    （3）用等式表示线段，，之间的数量关系，并证明．'
-  answer: ''
-  solution: ''
+    （3）用等式表示线段BE，BC，AD之间的数量关系，并证明．'
+  answer: （1）补全图形见解析 （2）$45^\circ-\alpha$ （3）$BC=\sqrt{2}AD+BE$；证明见解析
+  solution: '【小问1详解】
+
+    补全图形如下：
+
+    [图]【小问2详解】
+
+    解：$\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$$AC = BC$，$\angle ACB=90^\circ$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\angle A=\angle ABC=45^{\circ}$．
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\angle CDB = \angle A + \angle ACD = 45^{\circ} + \alpha$．
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$$\angle CDE=90^\circ$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\angle EDB = \angle CDE - \angle CDB = 45^\circ - \alpha$．
+
+    【小问3详解】
+
+    解：用等式表示线段BE，BC，AD之间的数量关系是$BC=\sqrt{2}AD+BE$．
+
+    '
   knowledge_points:
+  - 全等三角形
+  - 勾股定理
   - 旋转
   - 动点
-  module: geometryComprehensive
+  module: triangles
   difficulty: 压轴
   recommended_for:
   - L3
+  figures:
+  - figures/2024-daxing-yi-fig21.png
+  - figures/2024-daxing-yi-fig22.png
+  - figures/2024-daxing-yi-fig23.png
 - id: 28
   type: 解答
   score: 7
-  question: '在平面直角坐标系中，已知点，的半径为1，过外一点作两条射线，一条是的切线，另一条经过点，若这两条射线的夹角大于或等于，则称点为的“伴随点”．
+  question: '在平面直角坐标系xOy中，已知点$T(t,0)$，$\mathrm{e}T$的半径为1，过$\mathrm{e}T$外一点P作两条射线，一条是$\mathrm{e}T$的切线，另一条经过点T，若这两条射线的夹角大于或等于$45^\circ$，则称点P为$\mathrm{e}T$的“伴随点”．
 
-    （1）当时，
+    （1）当$t = 0$时，
 
-    ①在，，，中，的“伴随点”是______．
+    ①在$P_{1}(1,0)$，$P_{2}(\sqrt{2},0)$，$P_{3}(-1,1)$，$P_{4}(1,-2)$中，$\mathrm{e}T$的“伴随点”是______．
 
-    ②若直线上有且只有一个的“伴随点”，求的值；
+    ②若直线$y=\frac{1}{2}x+b$上有且只有一个$\mathrm{e}T$的“伴随点”，求b的值；
 
-    （2）已知正方形对角线的交点，点，若正方形上存在的“伴随点”，直接写出的取值范围．'
-  answer: ''
-  solution: ''
+    （2）已知正方形$EFGH$的对角线的交点$M(0,t)$，点$E\left(-\frac{1}{2}, t+\frac{1}{2}\right)$，若正方形上存在$\mathrm{e}T$的“伴随点”，直接写出t的取值范围．'
+  answer: （1）①$P_{2}$，$P_3$；②$b = \pm \frac{\sqrt{10}}{2}$ （2）$\frac{\sqrt{2}-1}{2}<t\leq\frac{3}{2}$或$-\frac{3}{2} \leq t < \frac{1 - \sqrt{2}}{2}$
+  solution: '【小问1详解】
+
+    解：①如图1，设射线PM与$\mathrm{e}T$相切于点M，连接TM，
+
+    [图]
+
+    ∴$TM \perp PM$，
+
+    当$\angle P=45^{\circ}$时，$\triangle PTM$为等腰直角三角形，
+
+    ∴$PM = TM = 1$，
+
+    $PT = \sqrt{MP^{2} + MT^{2}} = \sqrt{1^{2} + 1^{2}} = \sqrt{2}$，
+
+    ∴当点P在$\mathrm{e}T$外，$\angle P=45^{\circ}$时，$1 < PT \leq \sqrt{2}$，
+
+    当$t = 0$时，点$T(0,0)$，
+
+    ∵$P_{1}T=1$，$p_{2}T=\sqrt{2}$，$p_{T}=\left|(-1)^{T}+1\right|-\sqrt{2}$，$r_{T}=\sqrt{1^{2}+(-2)^{2}}=\sqrt{5}\times\sqrt{2}$，
+
+    ∴在$P_{1}(1,0)$，$P_{2}(\sqrt{2},0)$，$P_{3}(-1,1)$，$P_{4}(1,-2)$中，$\mathrm{e}T$的“伴随点”是$P_{2}$，$P_3$；
+
+    故答案为：$P_{2}$，$P_3$
+
+    ②∵当点P在$\mathrm{e}T$外，$\angle P=45^{\circ}$时，$1 < PT \leq \sqrt{2}$，
+
+    ∴点P在以T为圆心，以$\sqrt{2}$为半径的圆上或圆内且在以1为半径的圆外，
+
+    如图2：
+
+    [图]
+
+    ∵直线$y=\frac{1}{2}x+b$上有且只有一个$\mathrm{e}T$的“伴随点”，
+
+    ∴直线$y=\frac{1}{2}x+b$与以$T(0,0)$为圆心，$\sqrt{2}$为半径的圆相切，
+
+    ∴$b \neq 0$，
+
+    设直线$y=\frac{1}{2}x+b$与x轴，y轴分别交于点A、B，与以'
   knowledge_points:
   - 切线
+  - 勾股定理
   - 正方形
+  - 不等式
+  - 不等式组
   - 坐标系
-  module: quadrilaterals
+  module: triangles
   difficulty: 压轴
   recommended_for:
   - L3
+  figures:
+  - figures/2024-daxing-yi-fig24.png
+  - figures/2024-daxing-yi-fig25.png
+  - figures/2024-daxing-yi-fig26.png
+  - figures/2024-daxing-yi-fig27.png

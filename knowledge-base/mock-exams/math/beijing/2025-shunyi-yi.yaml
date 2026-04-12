@@ -1,8 +1,8 @@
 # ============================================================
 # 2025年北京顺义区中考数学一模试卷 — 逐题分析
 # ============================================================
-# 数据来源：knowledge-original/精品解析：2025年北京市顺义区中考一模数学试卷 （解析版）.docx
-# 自动生成，部分数学公式可能显示不全（docx公式对象无法完整提取）
+# 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
+# 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
 # 满分：100分  时长：120分钟
 
 year: 2025
@@ -17,7 +17,11 @@ questions:
 - id: 1
   type: 选择
   score: 2
-  question: "如图是某几何体的三视图，该几何体是（   ）\nA. 圆柱\tB. 圆锥\tC. 三棱柱\tD. 三棱锥"
+  question: '如图是某几何体的三视图，该几何体是（）
+
+    [图]
+
+    A.圆柱B.圆锥C.三棱柱D.三棱锥'
   answer: B
   solution: '解：根据几何体的三视图即可知道几何体是圆锥．
 
@@ -31,12 +35,16 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2025-shunyi-yi-fig02.png
 - id: 2
   type: 选择
   score: 2
-  question: "每一个外角都是的正多边形为（   ）\nA. 正三角形\tB. 正四边形\tC. 正五边形\tD. 正六边形"
+  question: '每一个外角都是$72^\circ$的正多边形为（）
+
+    A.正三角形B.正四边形C.正五边形D.正六边形'
   answer: C
-  solution: '解：（边），
+  solution: '解：$360^\circ \div 72^\circ = 5$（边），
 
     ∴这个正多边形是正五边形．
 
@@ -53,11 +61,17 @@ questions:
 - id: 3
   type: 选择
   score: 2
-  question: "实数a在数轴上的对应点的位置如图所示，下列结论正确的是（   ）\nA \tB.\nC. \tD."
-  answer: D
-  solution: '由数轴得，，
+  question: '实数a在数轴上的对应点的位置如图所示，下列结论正确的是（）
 
-    ∴，，，故A，B，C错误，D正确．
+    [图]
+
+    A$[公式]$$|a| > 3$B.$a > -2$
+
+    C.$-2 < a - 1 < -1$D.$-2 < a + 1 < -1$'
+  answer: D
+  solution: '由数轴得，$-3 < a < -2$，
+
+    ∴$\left| a \right| < 3$，$-4 < a - 1 < -3$，$-2 < a + 1 < -1$，故A，B，C错误，D正确．
 
     故选：D．'
   knowledge_points:
@@ -70,16 +84,20 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2025-shunyi-yi-fig03.png
 - id: 4
   type: 选择
   score: 2
-  question: "若关于的一元二次方程有两个相等的实数根，则的值是（　　）\nA. \tB. \tC. \tD."
+  question: '若关于x的一元二次方程$2x^2 - x + m = 0$有两个相等的实数根，则m的值是（　　）
+
+    A.$-\frac{1}{8}$B.$\frac{1}{8}$C.$-8$D.$8$'
   answer: B
-  solution: '解：∵关于的一元二次方程有两个相等的实数根，
+  solution: '解：∵关于x的一元二次方程$2x^2 - x + m = 0$有两个相等的实数根，
 
-    即，
+    即$\Delta=(-1)^{2}-4\times2m=0$，
 
-    解得：．
+    解得：$m = \frac{1}{8}$．
 
     故选：B．'
   knowledge_points:
@@ -95,9 +113,13 @@ questions:
 - id: 5
   type: 选择
   score: 2
-  question: "目前，中国国产GPU的运算性能在国际上已经具备较强的竞争力．某型号国产GPU的运算能力高达320 TFlops，TFlops是衡量计算机性能的一个重要单位，．将这种型号国产GPU的运算能力表示为，则m的值为（   ）\nA. \tB. \tC. \tD."
+  question: '目前，中国国产GPU的运算性能在国际上已经具备较强的竞争力．某型号国产GPU的运算能力高达320
+
+    TFlops，TFlops是衡量计算机性能的一个重要单位，$1TFlops=10^{12}Flops$．将这种型号国产GPU的运算能力表示为$m \mathrm{Flops}$，则m的值为（）
+
+    A.$3.2\times10^{13}$B.$3.2\times10^{14}$C.$3.2\times10^{15}$D.$3.2\times10^{16}$'
   answer: B
-  solution: '解：，
+  solution: '解：$320\mathrm{T}\mathrm{F}\mathrm{l}\mathrm{o}\mathrm{p}\mathrm{s}=320\times10^{12}=3.2\times10^{14}\ (\mathrm{F}\mathrm{l}\mathrm{o}\mathrm{p}\mathrm{s})$，
 
     故选B．'
   knowledge_points:
@@ -112,13 +134,41 @@ questions:
 - id: 6
   type: 选择
   score: 2
-  question: "京剧作为中国戏曲的瑰宝，因其独特的艺术魅力和深厚的文化底蕴，深受大众喜爱．正面印有京剧人物的两张卡片如图所示，它们除正面外完全相同，把这两张卡片背面朝上洗匀，从中随机抽取一张，放回洗匀后，再从中随机抽取一张，两次抽取的卡片正面相同的概率是（   ）\nA. \tB. \tC. \tD."
+  question: '京剧作为中国戏曲的瑰宝，因其独特的艺术魅力和深厚的文化底蕴，深受大众喜爱．正面印有京剧人物的两张卡片如图所示，它们除正面外完全相同，把这两张卡片背面朝上洗匀，从中随机抽取一张，放回洗匀后，再从中随机抽取一张，两次抽取的卡片正面相同的概率是（）
+
+    [图]
+
+    A.$\frac{1}{4}$B.$\frac{1}{3}$C.$\frac{1}{2}$D.$\frac{3}{4}$'
   answer: C
   solution: '解∶将这两张卡片分别记为A，B，列表如下：
 
+    A
+
+    B
+
+    A
+
+    $\left(A_{\cdot}A\right)$
+
+    $\left(A,B\right)$
+
+    B
+
+    $\left(B,\mathcal{A}\right)$
+
+    $\left(B,\mathcal{B}\right)$
+
     共有4种等可能的结果，其中两次抽取的卡片正面相同的结果有2种，
 
-    两次抽取的卡片正面相同的概率为．
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$两次抽取的卡片正面相同的概率为$\frac{2}{4}=\frac{1}{2}$．
 
     故选∶C．'
   knowledge_points:
@@ -131,28 +181,62 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2025-shunyi-yi-fig04.png
 - id: 7
   type: 选择
   score: 2
   question: '下面是“作已知角的平分线”的尺规作图方法．
 
-    上述方法通过判定得到，从而得到是的角平分线，其中判定的依据是（   ）
+    （1）如图，以点O为圆心，任意长为半径作弧，分别交$OA, OB$于点$C, D$；
 
-    A. 三边分别相等的两个三角形全等
+    [图]
 
-    B. 两边及其夹角分别相等的两个三角形全等
+    （2）分别以点$C, D$为圆心，大于$\frac{1}{2}CD$长为半径作弧，两弧相交于点P；
 
-    C. 两角及其夹边分别相等的两个三角形全等
+    （3）作射线OP，则射线OP就是所求作的射线．
 
-    D. 两角分别相等且其中一组等角的对边相等的两个三角形全等'
+    上述方法通过判定$\triangle COP\cong\triangle DOP$得到$\angle AOP = \angle BOP$，从而得到OP是$\angle AOB$的角平分线，其中判定$\triangle COP\cong\triangle DOP$的依据是（）
+
+    A.三边分别相等的两个三角形全等
+
+    B.两边及其夹角分别相等的两个三角形全等
+
+    C.两角及其夹边分别相等的两个三角形全等
+
+    D.两角分别相等且其中一组等角的对边相等的两个三角形全等'
   answer: A
-  solution: '解：根据作图过程得，
+  solution: '解：根据作图过程得$OC=OD,PC=PD$，
 
-    ，
+    $\begin{array}{c}
 
-    ，
+    \bullet \\
 
-    判定的依据是三边分别相等的两个三角形全等，
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$$OP = OP$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\angle COP=\angle DOP(\triangle SSS)$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$判定$\triangle COP\cong\triangle DOP$的依据是三边分别相等的两个三角形全等，
 
     故选：A．'
   knowledge_points:
@@ -164,64 +248,71 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2025-shunyi-yi-fig05.png
 - id: 8
   type: 选择
   score: 2
-  question: "如图，在菱形中，，连接，将绕点A逆时针旋转得到，与菱形的交点为E，F，G，H，将绕点C逆时针旋转得到，与菱形的交点为K，L，M，N．对于八边形给出下面四个结论：①该八边形是轴对称图形；②该八边形各内角都相等；③；④．上述结论中，所有正确结论的序号是（   ）\nA ①③\tB. ①④\tC. ②③\tD. ②④"
+  question: '如图，在菱形$ABCD$中，$\angle B=60^{\circ}$，连接AC，将$V_{ABC}$绕点A逆时针旋转$30^\circ$得到$\triangle AB''C''$，与菱形$ABCD$的交点为E，F，G，H，将$\triangle ACD$绕点C逆时针旋转$30^\circ$得到$\triangle A''CD''$，与菱形$ABCD$的交点为K，L，M，N．对于八边形$EFGHKLMN$给出下面四个结论：①该八边形是轴对称图形；②该八边形各内角都相等；③$MN
+    = EF = GH = LK$；④$ML = NE = FG = KH$．上述结论中，所有正确结论的序号是（）
+
+    [图]
+
+    A$[公式]$①③B.①④C.②③D.②④'
   answer: A
-  solution: '解：四边形是菱形，菱形本身就是轴对称图形．
+  solution: '解：$\begin{array}{c}
 
-    又绕点逆时针旋转，绕点逆时针旋转，旋转后的图形与原菱形的组合八边形依然保持轴对称性．该八边形是轴对称图形，结论①正确．
+    \bullet \\
 
-    与关于直线对称，
+    \bullet \quad \bullet \\
 
-    ，
+    \bullet
 
-    四边形是菱形，，
+    \end{array}$四边形$ABCD$是菱形，菱形本身就是轴对称图形．
 
-    ，
+    又$\therefore \triangle ABC$绕点A逆时针旋转$30^\circ$，$\triangle ACD$绕点C逆时针旋转$30^\circ$，旋转后的图形与原菱形的组合八边形$EFGHKLMN$依然保持轴对称性．$\begin{tikzpicture}
 
-    ，
+    \fill (0,0) circle (2pt);
 
-    ，
+    \fill (-1,-1) circle (2pt);
 
-    ，
+    \fill (1,-1) circle (2pt);
 
-    是对称点，
+    \end{tikzpicture}$该八边形是轴对称图形，结论①正确．
 
-    ，
+    $\because M$与L关于直线AC对称，
 
-    是等边三角形，
+    $\therefore AM = AL$，
 
-    ，
+    $\begin{array}{c}
 
-    ，该八边形各内角不都相等，结论②不正确；
+    \bullet \\
 
-    与关于直线对称，与关于直线对称，
+    \bullet \quad \bullet \\
 
-    ，同理，
+    \bullet
 
-    ，结论③正确；
+    \end{array}$四边形$ABCD$是菱形，$\angle B=60^{\circ}$，
 
-    设，
+    $\ldots BC \parallel AD$，
 
-    都是等边三角形，，
+    $\angle ABD=120^{\circ}$，
 
-    ，
+    $\angle AML = \angle ALM = 30^\circ$，
 
-    ，，
+    $\angle NML=156^{\circ}$，
 
-    ，，
+    $\because N、E$是对称点，
 
-    ，
+    $\therefore BN = BE$，
 
-    ，，
+    $\therefore \triangle BNE$是等边三角形，
 
-    同理，不正确，结论④不正确；
+    $\angle BNE=60^{\circ}$，
 
-    综上所述，正确的有①③，
+    $\angle ENM = 120^\circ$，该八边形各内角不都相等，结论②不正确；
 
-    故答案为：A．'
+    $\because M$与L关于直线AC对称，N与L关'
   knowledge_points:
   - 轴对称图形
   - 菱形
@@ -232,18 +323,21 @@ questions:
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2025-shunyi-yi-fig06.png
+  - figures/2025-shunyi-yi-fig07.png
 - id: 9
   type: 填空
   score: 2
-  question: 若 在实数范围内有意义，则实数x的取值范围是_______．
-  answer: ''
-  solution: '解：∵在实数范围内有意义，，
+  question: 若$\sqrt{x-2}$在实数范围内有意义，则实数x的取值范围是_______．
+  answer: $x^{2}$
+  solution: '解：∵$\sqrt{x-2}$在实数范围内有意义，，
 
-    ∴，
+    ∴$x-2\quad0$，
 
-    ∴，
+    ∴$x^{2}$，
 
-    故答案为：．'
+    故答案为：$x^{2}$．'
   knowledge_points:
   - 综合
   module: numbersAndExpressions
@@ -257,10 +351,10 @@ questions:
   type: 填空
   score: 2
   question: 分解因式：ax2-9a=____________________．
-  answer: ''
-  solution: '解：ax2-9a=a(-9)=a(x+3)(x-3).
+  answer: $a(x+3)(x-3)$
+  solution: '解：ax2-9a=a($x^2$-9)=a(x+3)(x-3).
 
-    故答案为：'
+    故答案为：$a(x+3)(x-3)$'
   knowledge_points:
   - 方差
   module: numbersAndExpressions
@@ -273,17 +367,19 @@ questions:
 - id: 11
   type: 填空
   score: 2
-  question: 方程的解为________．
-  answer: ''
-  solution: '解：方程两边同乘，得
+  question: 方程$\frac{2}{x+1}=\frac{1}{2-x}$的解为________．
+  answer: $x = 1$
+  solution: '解：方程两边同乘$(x+1)(2-x)$，得
 
-    解得
+    $2(2-x)=x+1$
 
-    检验：当时，
+    解得$x = 1$
 
-    ∴是原方程的解．
+    检验：当$x = 1$时，$(x+1)(2-x)=0$
 
-    故答案为．'
+    ∴$x = 1$是原方程的解．
+
+    故答案为$x = 1$．'
   knowledge_points:
   - 分式方程
   module: equationsAndInequalities
@@ -296,19 +392,21 @@ questions:
 - id: 12
   type: 填空
   score: 2
-  question: 如图，在平面直角坐标系中，函数的图象与矩形只有一个公共点．若点，在的图象上，则________（填“”“”或“”）．
-  answer: ''
-  solution: '解：∵函数的图象与矩形只有一个公共点，
+  question: '如图，在平面直角坐标系xOy中，函数$y=\frac{k}{x}(k\neq0)$的图象与矩形$OABC$只有一个公共点．若点$D(3,y_{1})$，$E(6,y_{2})$在$y=\frac{k}{x}(k\neq0)$的图象上，则$y_{1}$________$y_{2}$（填“$\gt$”“$=$”或“$\gt$”）．
+
+    [图]'
+  answer: $\gt$
+  solution: '解：∵函数$y=\frac{k}{x}(k\neq0)$的图象与矩形$OABC$只有一个公共点，
 
     ∴双曲线在第一象限，
 
-    ∴随的增大而减小，
+    ∴y随x的增大而减小，
 
-    ∵函数的图象经过点和，且，
+    ∵函数$y=\frac{k}{x}(k\neq0)$的图象经过点$D(3,y_{1})$和$E(6,y_{2})$，且$0<3<6$，
 
-    ∴；
+    ∴$y_1 > y_2$；
 
-    故答案为：．'
+    故答案为：$\gt$．'
   knowledge_points:
   - 反比例函数
   - 矩形
@@ -320,16 +418,42 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2025-shunyi-yi-fig08.png
 - id: 13
   type: 填空
   score: 2
   question: '某图书馆准备购进5000本图书，了解了某段时间内借阅的500本图书的种类，数据如表：
 
+    图书种类
+
+    文学
+
+    人文社科
+
+    自然科学
+
+    工程技术
+
+    艺术
+
+    借阅数量/本
+
+    55
+
+    101
+
+    168
+
+    153
+
+    23
+
     根据以上数据，估计该图书馆购进图书种类需求最多的图书的数量为________本．'
   answer: '1680'
   solution: '解：根据表格信息可得自然科学类图书需求最多，
 
-    ∴该图书馆购进图书种类需求最多的图书的数量为（本），
+    ∴该图书馆购进图书种类需求最多的图书的数量为$5000\times\frac{168}{500}=1680$（本），
 
     故答案为：1680．'
   knowledge_points:
@@ -343,25 +467,35 @@ questions:
 - id: 14
   type: 填空
   score: 2
-  question: 如图，在正方形中，点E在上，连接交对角线于点F．若，，则________．
-  answer: '##'
-  solution: '解：正方形，
+  question: '如图，在正方形$ABCD$中，点E在BC上，连接AE交对角线BD于点F．若$AB = 3$，$BE = 1$，则$BF =$________．
 
-    ，，，
+    [图]'
+  answer: $\frac{3\sqrt{2}}{4}$##$\frac{3}{4}\sqrt{2}$
+  solution: '解：$\begin{array}{c}
 
-    ，
+    \bullet \\
 
-    ，
+    \bullet \quad \bullet \\
 
-    ，
+    \bullet
 
-    ，
+    \end{array}$正方形$ABCD$，
 
-    ，
+    $\therefore AD \parallel BC$，$AD = AB = 3$，$BD=\sqrt{2}AB=3\sqrt{2}$，
 
-    解得：．
+    $\triangle ADF \sim \triangle EBF$，
 
-    故答案为：．'
+    $\frac{DF}{BF}=\frac{AD}{BE}=\frac{3}{1}$，
+
+    $\therefore DF = 3BF$，
+
+    $\because DF + BF = BD$，
+
+    $3BF + BF = 3\sqrt{2}$，
+
+    解得：$BF = \frac{3\sqrt{2}}{4}$．
+
+    故答案为：$\frac{3\sqrt{2}}{4}$．'
   knowledge_points:
   - 相似三角形
   - 正方形
@@ -371,26 +505,34 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2025-shunyi-yi-fig09.png
 - id: 15
   type: 填空
   score: 2
-  question: 如图，是的直径，是的弦，与交于点，若为中点，，，则________．
-  answer: ''
-  solution: '解：如图，连接，
+  question: '如图，AB是$\odot\odot$的直径，CD是$\odot\odot$的弦，AB与CD交于点E，若E为CD中点，$\angle BCD = 60^\circ$，$CD=2\sqrt{3}$，则$AE =$________．
 
-    是的直径，为中点，
+    [图]'
+  answer: $1$
+  solution: '解：如图，连接AC，
 
-    ，，，
+    $\therefore AB$是$\odot\odot$的直径，E为CD中点，
 
-    ，
+    $\therefore AB \perp CD$，$CE=\frac{1}{2}\cdot CD=\frac{1}{2}\times 2\sqrt{3}=\sqrt{3}$，$\angle ACB=90^\circ$，
 
-    ，
+    $\angle AEC = 90^\circ$
 
-    ，
+    $\angle BCD = 60^\circ$，
 
-    ．
+    $\angle ACE = \angle ACB - \angle BCD = 30^\circ$，
 
-    故答案为：．'
+    $\therefore\tan\angle ACE=\tan30^{\circ}=\frac{AE}{CE}=\frac{\sqrt{3}}{3}$，
+
+    $\therefore AE=\frac{\sqrt{3}}{3}, CE=\frac{\sqrt{3}}{3}\sqrt{3}=1$．
+
+    故答案为：$1$．
+
+    [图]'
   knowledge_points:
   - 圆周角
   - 垂径定理
@@ -401,6 +543,9 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2025-shunyi-yi-fig10.png
+  - figures/2025-shunyi-yi-fig11.png
 - id: 16
   type: 填空
   score: 2
@@ -416,43 +561,97 @@ questions:
 
     ④每个产品的两道工序所需时间如下表所示：
 
+    产品
+
+    A
+
+    B
+
+    C
+
+    生产时间/分钟
+
+    2
+
+    7
+
+    6
+
+    冷却时间/分钟
+
+    2
+
+    10
+
+    3
+
     已知A，B，C三种产品各生产一个．
 
-    （1）若按照“”的顺序生产，并完成冷却，那么至少需要________分钟；
+    （1）若按照“$A-B-C$”的顺序生产，并完成冷却，那么至少需要________分钟；
 
     （2）若使完成A，B，C三个产品的加工总时间最短，则应按照________的顺序生产．'
-  answer: ①. 19    ②.
+  answer: ①.19②.$B-C-A$
   solution: '解：（1）由题意得：生产产品的同时可以冷却其他多个产品，
 
-    生产A产品需要2分钟，生产B产品需要7分钟，可在生产B产品的同时冷却A产品，
+    $\begin{array}{c}
 
-    生产1个A产品1个B产品并冷却1个A产品共需要9分钟，即分钟；
+    \bullet \\
 
-    生产C产品的同时冷却B产品，冷却B产品需要10分钟，生产C产品需要6分钟，
+    \bullet \quad \bullet \\
 
-    生产C产品后还需冷却B产品1分钟，
+    \bullet
 
-    冷却C产品需要3分钟，
+    \end{array}$生产A产品需要2分钟，生产B产品需要7分钟，可在生产B产品的同时冷却A产品，
 
-    按照“”的顺序生产，并完成冷却，那么至少需要分钟，
+    $\begin{tikzpicture}
 
-    故答案为：19；
+    \fill (0,0) circle (2pt);
 
-    （2）由（1）知按照“”的顺序生产，并完成冷却，那么至少需要分钟；
+    \fill (-1,-1) circle (2pt);
 
-    同理：按照“”的顺序生产，并完成冷却，那么至少需要分钟；
+    \fill (1,-1) circle (2pt);
 
-    按照“”的顺序生产，并完成冷却，那么至少需要分钟；
+    \end{tikzpicture}$生产1个A产品1个B产品并冷却1个A产品共需要9分钟，即$2+7=9$分钟；
 
-    按照“”的顺序生产，并完成冷却，那么至少需要分钟；
+    $\begin{array}{c}
 
-    按照“”的顺序生产，并完成冷却，那么至少需要分钟；
+    \bullet \\
 
-    按照“”的顺序生产，并完成冷却，那么至少需要分钟；
+    \bullet \quad \bullet \\
 
-    若使完成A，B，C三个产品的加工总时间最短，则应按照“”的顺序生产，并完成冷却，
+    \bullet
 
-    故答案为：．'
+    \end{array}$生产C产品的同时冷却B产品，冷却B产品需要10分钟，生产C产品需要6分钟，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$生产C产品后还需冷却B产品1分钟，
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$冷却C产品需要3分钟，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$按照“$A-B-C$”的顺序生产，并完成冷却，那么至少需要$2+7+10=19$分钟，'
   knowledge_points:
   - 综合
   module: numbersAndExpressions
@@ -463,11 +662,15 @@ questions:
 - id: 17
   type: 解答
   score: 5
-  question: （第17题，详见原卷）
-  answer: ''
-  solution: '解：
+  question: 计算：$(x-2)^{2}+4\sin 30^{\circ}+\sqrt{8}-|-3|$．
+  answer: $2\sqrt{2}$
+  solution: '解：$(x-2)^{2}+4\sin 30^{\circ}+\sqrt{8}-|-3|$
 
-    ．'
+    $1+\pi+4\times\frac{1}{2}+2\sqrt{2}-3$
+
+    $=1+2+2\sqrt{2}-3$
+
+    $=2\sqrt{2}$．'
   knowledge_points:
   - 三角函数
   - 绝对值
@@ -481,15 +684,27 @@ questions:
 - id: 18
   type: 解答
   score: 5
-  question: 解不等式组：
-  answer: ''
-  solution: '解：
+  question: '解不等式组：$\begin{aligned}
 
-    解不等式①，得，
+    &|x+1|=9-3x\\
 
-    解不等式②，得，
+    &x<\frac{2x+4}{3}
 
-    ∴原不等式组的解集为．'
+    \end{aligned}$'
+  answer: $2<x<4$
+  solution: '解：$\begin{aligned}
+
+    &x+1>9-3x \quad ① \\
+
+    &x<\frac{2x+4}{3} \quad ②
+
+    \end{aligned}$
+
+    解不等式①，得$x>2$，
+
+    解不等式②，得$x<4$，
+
+    ∴原不等式组的解集为$2<x<4$．'
   knowledge_points:
   - 不等式
   - 不等式组
@@ -503,13 +718,17 @@ questions:
 - id: 19
   type: 解答
   score: 5
-  question: 已知，求代数式的值．
+  question: 已知$a+b=\sqrt{2}$，求代数式$(a-1)^{2}+b(b+2a)+2a$的值．
   answer: '3'
-  solution: '解：
+  solution: '解：$(a-1)^{2}+b(b+2a)+2a$
 
-    ，
+    $a^{2}-2a+1+2ab+b^{2}+2a$
 
-    当时，原式．'
+    $a^{2}+2ab+b^{2}+1$
+
+    $=(a+b)^{2}+1$，
+
+    当$a+b=\sqrt{2}$时，原式$\left(\sqrt{3}\right)^{2}+1=2+1=3$．'
   knowledge_points:
   - 综合
   module: geometryComprehensive
@@ -522,43 +741,47 @@ questions:
 - id: 20
   type: 解答
   score: 5
-  question: '如图，在矩形中，点，分别在边，上，．
+  question: '如图，在矩形$ABCD$中，点E，F分别在边AD，BC上，$AE = FC$．
 
-    （1）求证：四边形是平行四边形；
+    [图]
 
-    （2）连接，若，，，求的长．'
-  answer: （1）见解析； （2）．
+    （1）求证：四边形$EBFD$是平行四边形；
+
+    （2）连接EF，若$AB = 2$，$AE = 1$，$ED = 3$，求EF的长．'
+  answer: （1）见解析； （2）$2\sqrt{2}$．
   solution: '【小问1详解】
 
-    证明：∵四边形是矩形，
+    证明：∵四边形$ABCD$是矩形，
 
-    ∴，．
+    ∴$AD = BC$，$AD \parallel BC$．
 
-    ∵，
+    ∵$AE = CF$，
 
-    ∴，即．
+    ∴$AD\cdot AE=BC\cdot CF$，即$DE = BF$．
 
-    ∴四边形是平行四边形．
+    ∴四边形$EBFD$是平行四边形．
 
     【小问2详解】
 
-    解：如下图，过点作于点，则．
+    解：如下图，过点E作$EH \perp BC$于点H，则$\angle BHE=\angle FHE=90^{\circ}$．
 
-    ∵四边形是矩形，
+    [图]
 
-    ∴．
+    ∵四边形$ABCD$是矩形，
 
-    ∴四边形是矩形．
+    ∴$\angle A=\angle ABC=90^{\circ}$．
 
-    ∴，．
+    ∴四边形$ABHE$是矩形．
 
-    ∵，
+    ∴$AE = BH = l$，$AB=EH=2$．
 
-    ∴．
+    ∵$BF = DE = 3$，
 
-    ∵在中，，
+    ∴$HF = BF - BH = 2$．
 
-    ∴'
+    ∵在$Rt\triangle HEF$中，$EH^{1} + HF^{2} = EF^{2}$，
+
+    ∴$EF = \sqrt{EH^{2} + HF^{2}} = \sqrt{2^{2} + 2^{2}} = 2\sqrt{2}$'
   knowledge_points:
   - 勾股定理
   - 平行四边形
@@ -569,16 +792,35 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2025-shunyi-yi-fig12.png
+  - figures/2025-shunyi-yi-fig13.png
 - id: 21
   type: 解答
   score: 5
-  question: '2016年1月1日，我国开始实行《环境空气质量标准》，首次将（颗粒物：粒径小于等于）纳入监测范围．2024年某科研团队根据研究成果，建议今后将限值标准（最大允许浓度）继续降低．具体数据如表：
+  question: '2016年1月1日，我国开始实行《环境空气质量标准》$\left(GB3095-2012\right)$，首次将$PM2.5$（颗粒物：粒径小于等于$2.5\mu m$）纳入监测范围．2024年某科研团队根据研究成果，建议今后将$PM2.5$限值标准（最大允许浓度）继续降低．具体数据如表：
 
-    2035年比2025年的限值标准的降低率是2025年比2016年的限值标准的降低率的倍，求2035年限值标准a．'
-  answer: ''
-  solution: '解：由题意可知，
+    年份
 
-    解得：．'
+    2016
+
+    2025
+
+    2035
+
+    $PM2.5$限值标准（单位：$\mathrm{ug}/\mathrm{m}^{3}$）
+
+    35
+
+    25
+
+    a
+
+    2035年比2025年的限值标准的降低率是2025年比2016年的限值标准的降低率的$1.4$倍，求2035年$PM2.5$限值标准a．'
+  answer: $a = 15$
+  solution: '解：由题意可知$\frac{25-a}{25}-\frac{35-25}{35}\times A$，
+
+    解得：$a = 15$．'
   knowledge_points:
   - 综合
   module: equationsAndInequalities
@@ -590,35 +832,37 @@ questions:
 - id: 22
   type: 解答
   score: 5
-  question: '在平面直角坐标系中，函数（）的图象由函数的图象平移得到，且经过点．
+  question: '在平面直角坐标系xOy中，函数$y=kx+b$（$k \neq 0$）的图象由函数$y=x$的图象平移得到，且经过点$(1,-1)$．
 
     （1）求k，b的值；
 
-    （2）当时，对于x的每一个值，函数（）的值大于函数（）的值且小于的值，直接写出m的取值范围．'
-  answer: （1），； （2）．
+    （2）当$x > -1$时，对于x的每一个值，函数$y = mx + 1$（$m \neq 0$）的值大于函数$y=kx+b$（$k \neq 0$）的值且小于$y=5x+4$的值，直接写出m的取值范围．'
+  answer: （1）$k = 1$，$b = -2$； （2）$2\leq m\leq 4$．
   solution: '【小问1详解】
 
-    解：∵函数的图象由函数的图象平移得到，
+    解：∵函数$y=kx+b$的图象由函数$y=x$的图象平移得到，
 
-    ∴
+    ∴$k = 1$
 
-    将点、代入，得
+    将点$(1,-1)$、$k = 1$代入$y=kx+b$，得
 
-    解得
+    $1+b=-1$
 
-    答：的值为1，的值为．
+    解得$b = -2$
+
+    答：k的值为1，b的值为$-2$．
 
     【小问2详解】
 
-    由（1）得，
+    由（1）得$y=x-2$，
 
-    当时，，，，
+    当$x = -1$时，$y = -m + 1$，$y = x - 2 = -3$，$y=5x+4=-1$，
 
-    ∵当时，对于x的每一个值，函数（）的值大于函数（）的值且小于的值，
+    ∵当$x > -1$时，对于x的每一个值，函数$y = mx + 1$（$m \neq 0$）的值大于函数$y=kx+b$（$k \neq 0$）的值且小于$y=5x+4$的值，
 
-    ∴，解得．
+    ∴$\left\{\begin{array}{l} m+1 \geq 3, \\ -m+1 \leq-1 \end{array}\right.$，解得$2\leq m\leq 4$．
 
-    故答案：．'
+    故答案$[公式]$：$2\leq m\leq 4$．'
   knowledge_points:
   - 一次函数
   - 平移
@@ -640,11 +884,37 @@ questions:
 
     a．专业评委打分：
 
-    84  86  88  90  90  90  91  91  92  95  97  98
+    84
 
-    b．群众评委打分的频数分布直方图如下（数据分6组：第1组，第2组，第3组，第4组，第5组，第6组）：
+    86  88  90  90  90  91  91  92  95  97  98
+
+    b．群众评委打分的频数分布直方图如下（数据分6组：第1组$82 \leq x < 85$，第2组$85\leq x<88$，第3组$88 \leq x < 91$，第4组$91 \leq x < 94$，第5组$94 \leq x < 97$，第6组$97 \leq x \leq 100$）：
+
+    [图]
 
     c．评委打分的平均数、中位数、众数如下：
+
+    平均数
+
+    中位数
+
+    众数
+
+    专业评委
+
+    91
+
+    m
+
+    n
+
+    群众评委
+
+    $90,2$
+
+    p
+
+    91
 
     根据以上信息，回答下列问题：
 
@@ -655,26 +925,26 @@ questions:
     ③比赛同时依据群众评委打分来评估选手的受欢迎等级．当有一半及以上的评委打分超过95评为一级；当没有达到一级，且有一半及以上的评委打分超过90评为二级；当没有达到二级，且有一半及以上的评委打分超过85评为三级．那么该选手的受欢迎等级为_______（一级/二级/三级）；
 
     （2）复赛由5名专家评委打分（百分制）．如果某选手得分的5个数据的方差越小，则认为评委对该选手的评价越一致．5名评委给甲选手打分为92，91，93，92，91．前4名评委给乙选手打分为92，91，92，92，乙选手的平均得分高于甲选手的平均得分，且5名评委对乙选手的评价更一致，则第五名评委给乙选手的打分是________（打分为整数）．'
-  answer: （1）①，；②能；③二级 （2）93
+  answer: （1）①$m=90.5$，$n = 90$；②能；③二级 （2）93
   solution: '【小问1详解】
 
     解：①专业评委打分从小到大排序后位于中间位置的两个数分别为90和91，
 
-    ∴，
+    ∴$m=\frac{90+91}{2}=90.5$，
 
     专业评委打分中出现次数最多的是90分，
 
-    ∴；
+    ∴$n = 90$；
 
-    ②专业评委打分的平均分为，
+    ②专业评委打分的平均分为$84+86+88+90+3\times91\times2+92+95+97+98>91>90$，
 
     ∴该选手能进入复赛，
 
     故答案为：能；
 
-    ③由直方图可得，群众评委打分中，有人超过95，人数不足一半；
+    ③由直方图可得，群众评委打分中，有$10+3=13$人超过95，人数不足一半；
 
-    位评委打分超过90，人数超过一半；
+    $18+10+3=31$位评委打分超过90，人数超过一半；
 
     ∴该选手的受欢迎等级为二级，
 
@@ -682,21 +952,21 @@ questions:
 
     【小问2详解】
 
-    解：甲选手的平均分为（分）
+    解：甲选手的平均分为$\frac{92+91+93+92+91}{5}=91.8$（分）
 
-    ∴甲选手的方差为，
+    ∴甲选手的方差为$s_{31}^{2}=\frac{2\times(92-91.8)^{2}+2\times(91-91.8)^{2}+(93-91.8)^{2}}{5}=0.56$，
 
     设第五名评委给乙选手的打a分
 
     ∵乙选手的平均得分高于甲选手的平均得分，且5名评委对乙选手的评价更一致，
 
-    ∴，解得，
+    ∴$\frac{92+91+92+92+a}{5}>91.8$，解得$a > 92$，
 
-    当整数时，
+    当整数$a = 93$时，$\frac{92+91+92+92+93}{5}=92$
 
-    此时，
+    此时$s_{y}^{2}=\frac{3\times(92-92)^{2}+(91-92)^{2}+(93-92)^{2}}{5}=0.4<0.56$，
 
-    当及以上时，方差增大，
+    当$a = 94$及以上时，方差增大，
 
     故答案为：93．'
   knowledge_points:
@@ -711,66 +981,86 @@ questions:
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2025-shunyi-yi-fig14.png
 - id: 24
   type: 解答
   score: 6
-  question: '如图，是的直径，，交于点，过点作的切线交于点．
+  question: '如图，AB是$\odot\odot$的直径，$AB = BC$，AC交$\odot\odot$于点D，过点D作$\odot\odot$的切线交BC于点E．
 
-    （1）求证：；
+    [图]
 
-    （2）过点作交的延长线于点．若，，求的长．'
-  answer: （1）见解析； （2）．
+    （1）求证：$DE \perp BC$；
+
+    （2）过点C作$CF \perp AB$交AB的延长线于点F．若$AD = 5$，$\cos \angle ACB = \frac{4}{5}$，求BF的长．'
+  answer: （1）见解析； （2）$\frac{7}{4}$．
   solution: '【小问1详解】
 
-    证明：如图，连接，
+    证明：如图，连接OD，
 
-    ，
+    $\begin{array}{c}
 
-    ．
+    \bullet \\
 
-    ，
+    \bullet \quad \bullet \\
 
-    ．
+    \bullet
 
-    ．
+    \end{array}$$AB = BC$，
 
-    ．
+    $\begin{tikzpicture}
 
-    ．
+    \fill (0,0) circle (2pt);
 
-    是的切线，
+    \fill (-1,-1) circle (2pt);
 
-    ．
+    \fill (1,-1) circle (2pt);
 
-    ．
+    \end{tikzpicture}$$\angle A=\angle ACB$．
 
-    ．
+    $\begin{array}{c}
 
-    ．
+    \bullet \\
 
-    【小问2详解】
+    \bullet \quad \bullet \\
 
-    解：如图，连接．
+    \bullet
 
-    是的直径，
+    \end{array}$$AO = DO$，
 
-    ．
+    $\begin{tikzpicture}
 
-    ∵，
+    \fill (0,0) circle (2pt);
 
-    是的中点．
+    \fill (-1,-1) circle (2pt);
 
-    ∴．
+    \fill (1,-1) circle (2pt);
 
-    ∵，
+    \end{tikzpicture}$$\angle A=\angle ADO$．
 
-    ∴．
+    $\begin{tikzpicture}
 
-    ∵，，
+    \fill (0,0) circle (2pt);
 
-    ∴，，
+    \fill (-1,-1) circle (2pt);
 
-    ∴．'
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\angle ACB = \angle ADO$．
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$OD \parallel BC$．
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circl'
   knowledge_points:
   - 平行线
   - 切线
@@ -779,6 +1069,10 @@ questions:
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2025-shunyi-yi-fig15.png
+  - figures/2025-shunyi-yi-fig16.png
+  - figures/2025-shunyi-yi-fig17.png
 - id: 25
   type: 解答
   score: 6
@@ -786,7 +1080,63 @@ questions:
 
     下面给出了学习时的正确率和学习后评估测试的正确率，部分数据如下：
 
+    学习次数
+
+    1
+
+    3
+
+    5
+
+    7
+
+    9
+
+    10
+
+    11
+
+    13
+
+    学习时的正确率
+
+    0.530
+
+    0.670
+
+    0.750
+
+    0.800
+
+    0.850
+
+    0.870
+
+    0.890
+
+    0.905
+
+    学习后评估测试的正确率
+
+    0.605
+
+    0.710
+
+    0.755
+
+    0.780
+
+    0.795
+
+    0.800
+
+    0.800
+
+    0.800
+
     （1）根据表格数据，在平面直角坐标系中，以学习次数为横坐标，以学习后评估测试的正确率为纵坐标，已经绘制了相应的点，并用虚线表达变化趋势．请你以学习次数为横坐标，以学习时的正确率为纵坐标，绘制相应的点，并用虚线表达变化趋势；
+
+    [图]
 
     （2）根据以上数据与函数图象，解决下列问题：
 
@@ -795,14 +1145,14 @@ questions:
     ②至少经过_______次学习，学习后评估测试的正确率低于学习时的正确率；
 
     ③当学习后评估测试的正确率达到稳定时，用该模型识别100幅图像，估计_______幅能被正确识别．'
-  answer: （1）见解析    （2）①0.100；②6；③80
+  answer: （1）见解析（2）①0.100；②6；③80
   solution: '【小问1详解】
 
     解：如图所示：
 
-    【小问2详解】
+    [图]【小问2详解】
 
-    解：①由图象可得：差值约为，
+    解：①由图象可得：差值约为$0.900-0.800=0.100$，
 
     故答案为：0.100；
 
@@ -810,7 +1160,7 @@ questions:
 
     故答案为：6；
 
-    ③由图象可得，，
+    ③由图象可得，$100\times0.800=80$，
 
     ∴当学习后评估测试的正确率达到稳定时，用该模型识别100幅图像，估计80幅能被正确识别，
 
@@ -822,56 +1172,61 @@ questions:
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2025-shunyi-yi-fig18.png
+  - figures/2025-shunyi-yi-fig19.png
 - id: 26
   type: 解答
   score: 6
-  question: '在平面直角坐标系xOy中，已知抛物线（）．
+  question: '在平面直角坐标系xOy中，已知抛物线$y=ax^{3}-2a^{3}x$（$a \neq 0$）．
 
     （1）求抛物线的对称轴（用含a的式子表示）；
 
-    （2）已知和是抛物线上的两点．若对于，，都有，求a的取值范围．'
-  answer: （1）； （2）或．
+    （2）已知$M(x_{1},y_{1})$和$N(x_{2},y_{2})$是抛物线上的两点．若对于$a+1<x_{1}<a+2$，$x_{2}=2a$，都有$y_{1}<y_{2}$，求a的取值范围．'
+  answer: （1）$x = a$； （2）$-1 < a < 0$或$a^{2}$．
   solution: '【小问1详解】
 
-    解：抛物线的对称轴为
+    解：抛物线$y=ax^{3}-2a^{3}x$的对称轴为$x=\frac{-2a^{2}}{2a}=-a$
 
     【小问2详解】
 
-    ∵，所以分为两种情况，
+    ∵$a \neq 0$，所以分为两种情况$a > 0$，$a < 0$
 
-    ①当时，对称轴为，开口向上，
+    [图]
 
-    ∵,,
+    ①当$a > 0$时，对称轴为$x = a$，开口向上，
 
-    ∴此时、都在对称轴的右侧，
+    ∵$a+1<x_{1}<a+2$,$x_{2}=2a$,
 
-    又∵当时，y随x的增大而增大，
+    ∴此时$x_1$、$x_{2}$都在对称轴的右侧，
 
-    结合图象，若对于，，都有
+    又∵当$x > a$时，y随x的增大而增大，
 
-    则：，
+    结合图象，若对于$a+1<x_{1}<a+2$，$x_{2}=2a$，都有$y_{1}<y_{2}$
 
-    ∴
+    则：$a+2\leq 2a$，
 
-    ②当时，对称轴为，开口向下，当时，y随x的增大而减小，当时，y随x的增大而增大，
+    ∴$a^{2}$
 
-    ∵,
+    ②当$a < 0$时，对称轴为$x = a$，开口向下，当$x > a$时，y随x的增大而减小，当$x<a$时，y随x的增大而增大，
 
-    ∴此时在对称轴的右侧，在对称轴的左侧,
+    ∵$a+1<x_{1}<a+2$$[公式]$$x_{2}=2a$,
 
-    又∵抛物线的对称轴为，
+    ∴此时$x_1$在对称轴的右侧，$x_{2}$在对称轴的左侧,
 
-    ∴关于对称轴的对称点为，
+    又∵抛物线$y=ax^{3}-2a^{3}x$的对称轴为$x = a$，
 
-    结合图象，若对于，，都有．
+    ∴$(2a,y_{2})$关于对称轴的对称点为$(0, y_2)$，
 
-    ∴
+    结合图象，若对于$a+1<x_{1}<a+2$，$x_{2}=2a$，都有$y_{1}<y_{2}$．
 
-    ∴
+    ∴$\begin{pmatrix} a+1 & 0 \end{pmatrix}$
 
-    ∴
+    ∴$a^{-1}$
 
-    综上，a的取值范围是或．'
+    ∴$-1 \leq a < 0$
+
+    综上，a的取值范围是$-1 \leq a < 0$或$a^{2}$．'
   knowledge_points:
   - 二次函数
   - 轴对称
@@ -882,78 +1237,62 @@ questions:
   difficulty: 压轴
   recommended_for:
   - L3
+  figures:
+  - figures/2025-shunyi-yi-fig20.png
 - id: 27
   type: 解答
   score: 7
-  question: '在中，，过点B作，，E是上一点，连接交于点G，．
+  question: '在$V_{ABC}$中，$AC = BC$，过点B作$DB \perp AB$，$\angle BAD=\frac{1}{2}\angle CAD=\alpha$，E是AB上一点，连接DE交BC于点G，$\angle BDE = \angle CAD$．
 
-    （1）如图1，用含有α的式子表示的度数；
+    [图]
 
-    （2）如图2，将射线绕点E顺时针旋转，分别交，于点F，H．用等式表示线段，与之间的数量关系，并证明．'
-  answer: （1）； （2），证明见解析．
+    （1）如图1，用含有α的式子表示$\angle ADE$的度数；
+
+    （2）如图2，将射线ED绕点E顺时针旋转$4a$，分别交AC，AD于点F，H．用等式表示线段AF，AD与BG之间的数量关系，并证明．'
+  answer: （1）$90^{\circ}-3\alpha$； （2）$AD = AF + 2BG$，证明见解析．
   solution: '【小问1详解】
 
-    解：∵，
+    解：∵$BD \perp AB$，
 
-    ∴．
+    ∴$\angle ABD=90^\circ$．
 
-    ∵，
+    ∵$\angle BAD=\frac{1}{2}\angle CAD=\alpha$，
 
-    ∴．
+    ∴$\angle ADB = 90^\circ - \angle BAD = 90^\circ - \alpha$．
 
-    ∵，
+    ∵$\angle BDE = \angle CAD$，
 
-    ∴，
+    ∴$\angle CAD=\angle BDE=2\alpha$，
 
-    ∴．
+    ∴$\angle ADE=\angle ADB-\angle BDE=90^\circ -3\alpha$．
 
     【小问2详解】
 
-    证明：延长交的延长线于点P，取的中点J，连接，过点B作于点Q，作于点N．
+    证明：延长FE交DB的延长线于点P，取PH的中点J，连接BJ，过点B作$BQ \perp DE$于点Q，作$BN \perp PE$于点N．
 
-    ∵，，
+    [图]
 
-    ∴，
+    ∵$\angle FED=4\alpha$，$\angle BDE=2\alpha$，
 
-    ∴．
+    ∴$\angle P=\angle FED-\angle BDE=2\alpha$，
 
-    又∵，
+    ∴$DE = PE$．
 
-    ∴，．
+    又∵$BD \perp AB$，
 
-    ∴是的中位线，平分．
+    ∴$BD = BP$，$\angle DEB = \angle PEB$．
 
-    ∴，．
+    ∴BJ是$\triangle PDH$的中位线，BE平分$\angle DEP$．
 
-    ∴．
+    ∴$BJ = \frac{1}{2} DH$，$BJ \parallel DH$．
 
-    ∵平分，，，
+    ∴$\angle BJP = \angle DHE$．
 
-    ∴，．
+    ∵BE平分$\angle DEP$，$BQ \perp DE$，$BN \perp PE$，
 
-    在中，．
+    ∴$BQ = BN$，$\angle BQG=\angle BNJ-90^\circ$．
 
-    ∴．
-
-    在中，．
-
-    ∴．
-
-    ∵，
-
-    ∴，
-
-    ∴．
-
-    ∴．
-
-    在与中，
-
-    ∴．
-
-    ∴．
-
-    ∴．'
+    在$\triangle DEH$中，$\angle DHE=180^\circ-\angle ADE-\angle FED=180^\circ-(90^\circ-3\alpha'
   knowledge_points:
   - 全等三角形
   - 旋转
@@ -961,118 +1300,77 @@ questions:
   difficulty: 压轴
   recommended_for:
   - L3
+  figures:
+  - figures/2025-shunyi-yi-fig21.png
+  - figures/2025-shunyi-yi-fig22.png
 - id: 28
   type: 解答
   score: 7
-  question: '在平面直角坐标系xOy中，的半径为．对于的弦和点C（C可以与A，B重合）给出如下定义：若直线经过弦的一个端点，另一端点与点C之间的距离恰好等于，则称点C是弦的“关联点”．
+  question: '在平面直角坐标系xOy中，$\odot\odot$的半径为$2$．对于$\odot\odot$的弦AB和点C（C可以与A，B重合）给出如下定义：若直线CO经过弦AB的一个端点，另一端点与点C之间的距离恰好等于CO，则称点C是弦AB的“关联点”．
 
-    （1）如图，点．
+    （1）如图，点$A(2,0)$．
 
-    ①点，在点，，中，弦AB的“关联点”是________；
+    [图]
 
-    ②点，若点C是弦的“关联点”，直接写出点D的坐标________；
+    ①点$B(\sqrt{2},\sqrt{2})$，在点$C_{1}(1,1)$，$C_{2}(\sqrt{2},0)$，$C_{3}(-1,0)$中，弦AB的“关联点”是________；
 
-    （2）已知点，．线段上存在弦的“关联点”，记的长为t，直接写出t的取值范围．'
-  answer: （1）①，；②，； （2），．
+    ②点$C(4,0)$，若点C是弦AD的“关联点”，直接写出点D的坐标________；
+
+    （2）已知点$M(0,4)$，$N(-\frac{4\sqrt{3}}{3},0)$．线段MN上存在弦$\overline{PQ}$的“关联点”，记$\overline{PQ}$的长为t，直接写出t的取值范围．'
+  answer: （1）①$C_{1}(1,1)$，$C_{2}(\sqrt{2},0)$；②$\left(\frac{1}{2},\frac{\sqrt{15}}{2}\right)$，$\left(\frac{1}{2},-\frac{\sqrt{15}}{2}\right)$； （2）$2\leq t\leq \sqrt{6}$，$\sqrt{10}<2\sqrt{3}$．
   solution: '【小问1详解】
 
-    解：①由点可得，所在直线的解析式为，
+    解：①由点$C_{1}(1,1)$可得，$OC_{1}$所在直线的解析式为$y=x$，
 
-    直线经过点，
+    $\begin{tikzpicture}
 
-    点与点之间的距离为，，
+    \fill (0,0) circle (2pt);
 
-    ，
+    \fill (-1,-1) circle (2pt);
 
-    点是弦的“关联点”；
+    \fill (1,-1) circle (2pt);
 
-    由题中图像可得，直线经过点，
+    \end{tikzpicture}$直线$OC_{1}$经过点$B(\sqrt{2},\sqrt{2})$，
 
-    点与点之间的距离为，，
+    $\begin{array}{c}
 
-    ，
+    \bullet \\
 
-    点是弦的“关联点”；
+    \bullet \quad \bullet \\
 
-    由题中图像可得，直线经过点，
+    \bullet
 
-    点与点之间的距离为，，
+    \end{array}$点$A(2,0)$与点$C_{1}(1,1)$之间的距离为$\sqrt{(2-1)^{2}+(0-1)^{2}}=\sqrt{2}$，$c_{1}o=\sqrt{2}$，
 
-    ，
+    $\therefore AC_{1} = C_{1}O$，
 
-    点不是弦的“关联点”；
+    $\begin{tikzpicture}
 
-    故答案为：，；
+    \fill (0,0) circle (2pt);
 
-    ②点是弦的“关联点”，直线经过点，
+    \fill (-1,-1) circle (2pt);
 
-    ，
+    \fill (1,-1) circle (2pt);
 
-    ，
+    \end{tikzpicture}$点$C_{1}(1,1)$是弦AB的“关联点”；
 
-    ，
+    由题中图像可得，直线$OC_{2}$经过点$A(2,0)$，
 
-    如图所示，以点为圆心，长为半径作圆，交圆于点、点，过点作轴于点，连接、，
+    $\begin{array}{c}
 
-    设点的坐标为，则，
+    \bullet \\
 
-    即，
+    \bullet \quad \bullet \\
 
-    解得，
+    \bullet
 
-    ，
+    \end{array}$点$B(\sqrt{2},\sqrt{2})$与点$C_{2}(\sqrt{2},0)$之间的距离为$\sqrt{2}$，$c_{2}o=\sqrt{2}$，
 
-    点的坐标为，
+    $\therefore BC_{2}=C_{2}O$，
 
-    点与点关于轴对称，
+    $\begin{tikzpicture}
 
-    点的坐标为，
-
-    故答案为：，；
-
-    小问2详解】
-
-    如图所示，在直角坐标系中作出点，，连接，
-
-    根据题意得，，
-
-    ，
-
-    ，
-
-    即等于圆的半径，
-
-    ，即，
-
-    线段与圆相切，
-
-    设线段与圆相切于点，连接，
-
-    线段上存在弦的“关联点”，设此“关联点”为点，点为线段上的动点，
-
-    当点在点时，取最小值，最小值为，当点在点时，取最大值，最大值为，
-
-    设，
-
-    ，
-
-    第一种情况，如图所示，连接交圆于点，以点为圆心，长为半径作圆，交圆于点、点（，点不用考虑），
-
-    过点作于点，连接、、，设，
-
-    根据勾股定理，得，
-
-    即，
-
-    ，
-
-    ，
-
-    记的长为，
-
-    ；
-
-    第二种情况，如图'
+    \fill (0,0) circle (2p'
   knowledge_points:
   - 切线
   - 弦
@@ -1087,3 +1385,9 @@ questions:
   difficulty: 压轴
   recommended_for:
   - L3
+  figures:
+  - figures/2025-shunyi-yi-fig23.png
+  - figures/2025-shunyi-yi-fig24.png
+  - figures/2025-shunyi-yi-fig25.png
+  - figures/2025-shunyi-yi-fig26.png
+  - figures/2025-shunyi-yi-fig27.png

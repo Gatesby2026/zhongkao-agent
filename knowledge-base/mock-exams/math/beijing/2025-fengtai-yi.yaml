@@ -1,8 +1,8 @@
 # ============================================================
 # 2025年北京丰台区中考数学一模试卷 — 逐题分析
 # ============================================================
-# 数据来源：knowledge-original/精品解析：北京市丰台区2025年中考一模考试数学试题(　（原卷版）.docx
-# 自动生成，部分数学公式可能显示不全（docx公式对象无法完整提取）
+# 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
+# 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
 # 满分：100分  时长：120分钟
 
 year: 2025
@@ -11,90 +11,21 @@ exam_type: 一模
 subject: 数学
 full_score: 100
 duration_minutes: 120
-total_questions: 33
+total_questions: 28
 structure: 8选择(16分) + 8填空(16分) + 12解答(68分)
 questions:
 - id: 1
   type: 选择
   score: 2
-  question: 本试卷共7页，共两部分，三道大题，28道小题．满分100分．考试时间120分钟.
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 2
-  type: 选择
-  score: 2
-  question: 在试卷和答题卡上准确填写学校名称、班级、姓名和考号.
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 3
-  type: 选择
-  score: 2
-  question: 试题答案一律填涂或书写在答题卡上，在试卷上作答无效.
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 4
-  type: 选择
-  score: 2
-  question: 在答题卡上，选择题、作图题用2B铅笔作答，其他试题用黑色字迹签字笔作答.
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 5
-  type: 选择
-  score: 2
-  question: 考试结束，将本试卷和答题卡一并交回．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 1
-  type: 选择
-  score: 2
-  question: "图是某几何体的展开图，该几何体是（　　）\nA. 长方体\tB. 三棱柱\tC. 圆柱\tD. 圆锥"
-  answer: ''
-  solution: ''
+  question: '图是某几何体的展开图，该几何体是（　　）
+
+    [图]
+
+    A.长方体B.三棱柱C.圆柱D.圆锥'
+  answer: D
+  solution: '解：根据图示，该几何体是圆锥，
+
+    故选：D．'
   knowledge_points:
   - 综合
   module: circles
@@ -104,29 +35,57 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2025-fengtai-yi-fig02.png
 - id: 2
   type: 选择
   score: 2
-  question: "如图，直线和相交于点，直线，垂足为，若，则的大小为（　　）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '如图，直线AB和CD相交于点O，直线$EF \perp AB$，垂足为O，若$\angle AOD=140^\circ$，则$\angle COF$的大小为（　　）
+
+    [图]
+
+    A.$60^\circ$B.$50^\circ$C.$40^\circ$D.$30^\circ$'
+  answer: B
+  solution: '解：∵$OE \perp AB$，
+
+    ∴$\angle AOE = 90^\circ$，
+
+    ∵$\angle AOD=140^\circ$，
+
+    ∴$\angle DOE=140^{\circ}-90^{\circ}=50^{\circ}$，
+
+    ∴$\angle COF = \angle DOB = 50^\circ$，故B正确．
+
+    故选：B．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 对顶角
+  module: triangles
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  figures:
+  - figures/2025-fengtai-yi-fig03.png
 - id: 3
   type: 选择
   score: 2
-  question: "实数在数轴上的对应点的位置如图所示，下列结论中正确的是（　　）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '实数$a, b, c$在数轴上的对应点的位置如图所示，下列结论中正确的是（　　）
+
+    [图]
+
+    A.$ac > 0$B.$b+c>0$C.$|c|>2$D.$\left|c\right|>\left|b\right|$'
+  answer: D
+  solution: '解:由图知：$-2<c<-1<0<b<1<c<a$，
+
+    ∴$ac < 0$，$b+c<0$，$\left| c \right| < 2$，$\left|c\right|>\left|b\right|$，
+
+    观察四个选项，选项D符合题意；
+
+    故选：D．'
   knowledge_points:
-  - 综合
+  - 绝对值
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -134,15 +93,28 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2025-fengtai-yi-fig04.png
 - id: 4
   type: 选择
   score: 2
-  question: "若关于的一元二次方程有两个相等的实数根，则实数的值为（　　）\nA. \tB. 4\tC. 4或\tD. 16"
-  answer: ''
-  solution: ''
+  question: '若关于x的一元二次方程$x^{2}+mx+4=0$有两个相等的实数根，则实数m的值为（　　）
+
+    A.$-4$B.4C.4或$-4$D.16'
+  answer: C
+  solution: '解：∵关于x的一元二次方程$x^{2}+mx+4=0$有两个相等的实数根，
+
+    ∴$\triangle = m^{2} - 16 = 0$，
+
+    解得，$m = \pm 4$，
+
+    ∴实数m的值为$4$或$-4$，
+
+    故选：C．'
   knowledge_points:
   - 一元二次方程
-  module: numbersAndExpressions
+  - 根的判别式
+  module: equationsAndInequalities
   difficulty: 基础
   recommended_for:
   - L0
@@ -152,12 +124,18 @@ questions:
 - id: 5
   type: 选择
   score: 2
-  question: "目前，我国已成为全球领先的人形机器人生产国．数据显示，2024年中国人形机器人市场规模约为元，到2026年人形机器人市场规模有望是2024年市场规模的4倍，达到元，则的值是（　　）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '目前，我国已成为全球领先的人形机器人生产国．数据显示，2024年中国人形机器人市场规模约为$2.7\times10^{9}$元，到2026年人形机器人市场规模有望是2024年市场规模的4倍，达到m元，则m的值是（　　）
+
+    A.$1.08\times10^{8}$B.$1.08\times10^{9}$C.$1.08\times10^{10}$D.$1.08\times10^{11}$'
+  answer: C
+  solution: '解：2024年中国人形机器人市场规模约为$2.7\times10^{9}$元，到2026年人形机器人市场规模有望是2024年市场规模的4倍，
+
+    ∴$m=2.7\times10^{4}\times4=10.8\times10^{4}=1.08\times10^{5}$，
+
+    故选：C．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 科学记数法
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -167,42 +145,83 @@ questions:
 - id: 6
   type: 选择
   score: 2
-  question: "先后两次抛掷同一枚质地均匀硬币，则第一次正面向上、第二次反面向上的概率是（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '先后两次抛掷同一枚质地均匀的硬币，则第一次正面向上、第二次反面向上的概率是（）
+
+    A.$\frac{1}{4}$B.$\frac{1}{3}$C.$\frac{1}{2}$D.$\frac{3}{4}$'
+  answer: A
+  solution: '[图]
+
+    如图，所有结果有4种，满足要求的结果有1种，故概率为$\frac{1}{4}$.
+
+    故选：A'
   knowledge_points:
   - 概率
+  - 树状图
+  - 列表法
   module: statisticsAndProbability
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2025-fengtai-yi-fig05.png
 - id: 7
   type: 选择
   score: 2
   question: '下面是“作角的平分线”的尺规作图方法：
 
-    （1）如图，以点为圆心，任意长为半径画弧，分别交，于点，；
+    [图]
 
-    （2）分别以，为圆心，以大于的同样长为半径作弧，两弧交于点；
+    （1）如图，以点O为圆心，任意长为半径画弧，分别交OA，OB于点D，E；
 
-    （3）作射线．
+    （2）分别以D，E为圆心，以大于$\frac{1}{2}DE$的同样长为半径作弧，两弧交于点C；
 
-    所以射线即为所求．
+    （3）作射线OC．
 
-    上述方法通过判定得到，其中判定的依据是（   ）
+    所以射线OC即为所求．
 
-    A. 两边及其夹角分别相等的两个三角形全等
+    上述方法通过判定$\triangle OCE \cong \triangle OCD$得到$\angle BOC = \angle AOC$，其中判定$\triangle OCE \cong \triangle OCD$的依据是（）
 
-    B. 两角及其夹边分别相等的两个三角形全等
+    A.两边及其夹角分别相等的两个三角形全等
 
-    C. 两角分别相等且其中一组等角对边相等的两个三角形全等
+    B.两角及其夹边分别相等的两个三角形全等
 
-    D. 三边分别相等的两个三角形全等'
-  answer: ''
-  solution: ''
+    C.两角分别相等且其中一组等角的对边相等的两个三角形全等
+
+    D.三边分别相等的两个三角形全等'
+  answer: D
+  solution: '解∶连接EC，DC，
+
+    [图]
+
+    由作图可得$EO = DO$，$EC = DC$，
+
+    在$\triangle OEC$和$\triangle ODC$中，
+
+    $\left\{
+
+    \begin{array}{l}
+
+    EC = DC \\
+
+    CO = CO \\
+
+    OD = OE
+
+    \end{array}
+
+    \right.$，
+
+    ∴$\triangle OEC\cong\triangle ODC(SSS)$，
+
+    ∴$\angle AOC = \angle BOC$，
+
+    ∴OC平分$\angle AOB$，
+
+    故选：D．'
   knowledge_points:
+  - 全等三角形
   - 尺规作图
   module: triangles
   difficulty: 中档
@@ -210,25 +229,84 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2025-fengtai-yi-fig06.png
+  - figures/2025-fengtai-yi-fig07.png
 - id: 8
   type: 选择
   score: 2
-  question: "如图，是等边三角形且边长为1，点，，分别在边的延长线上，，连接，．给出下面四个结论：\n①是等边三角形；\n②；\n③的面积为；\n④外心与的外心重合．\n上述结论中，所有正确结论的序号是（　　）\nA. ①②③\tB. ①②④\tC. ②③④\tD. ①②③④"
-  answer: ''
-  solution: ''
+  question: '如图，$V_{ABC}$是等边三角形且边长为1，点D，E，F分别在边$CA,\ AB,\ BC$的延长线上，$AD = BE = CF = 1$，连接DE，$EF, FD, EC$．给出下面四个结论：
+
+    [图]
+
+    ①$\triangle DEF$是等边三角形；
+
+    ②$DC \perp EC$；
+
+    ③$\triangle ECF$的面积为$\frac{\sqrt{3}}{2}$；
+
+    ④$\triangle DEF$的外心与$V_{ABC}$的外心重合．
+
+    上述结论中，所有正确结论的序号是（　　）
+
+    A.①②③B.①②④C.②③④D.①②③④'
+  answer: B
+  solution: '解：∵$V_{ABC}$是等边三角形且边长为1，
+
+    ∴$AB = BC = CA = 1$，$\angle ABC=\angle BCA=\angle CAB=60^{\circ}$，
+
+    ∵$AD = BE = CF = 1$，
+
+    ∴$AE = BF = CD = 2$，$\angle DAE=\angle EBF=\angle FCD=180^\circ-60^\circ=120^\circ$，
+
+    ∴$\triangle DAE\cong\triangle EBF\cong\triangle FCD(SAS)$，
+
+    ∴$DE = EF = FD$，
+
+    ∴$\triangle DEF$是等边三角形，故①正确；
+
+    ∵$BE = BC = 1$，$\angle ABC = 60^\circ$，
+
+    ∴$\angle BEC = \angle BCE = \frac{1}{2} \angle ABC = 30^\circ$，
+
+    ∴$\angle DCE = 60^{\circ} + 30^{\circ} = 90^{\circ}$，即$DC \perp EC$，故②正确；
+
+    ∵$\angle ACE = 90^\circ$，$AC = 1$，$AE = 2$，
+
+    ∴$CE=\sqrt{2^{2}-1^{2}}=\sqrt{3}$，
+
+    ∴$S_{\triangle ACE}=\frac{1}{2}CE\times AC=\frac{\sqrt{3}}{2}$，
+
+    ∵$AB=EB=1$，
+
+    ∴$S_{\triangle BFC}=\frac{1}{2}S_{\triangle AEC}=\frac{\sqrt{3}}{4}$，
+
+    ∵$BC = CF = 1$，
+
+    ∴$S_{\triangle PBC}=S_{\triangle PAC}=\frac{\sqrt{3}}{4}$，故③错误；
+
+    设$V_{ABC}$的外心为'
   knowledge_points:
-  - 综合
+  - 全等三角形
+  - 勾股定理
   module: triangles
   difficulty: 较难
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2025-fengtai-yi-fig08.png
+  - figures/2025-fengtai-yi-fig09.png
 - id: 9
   type: 填空
   score: 2
-  question: 若代数式有意义，则实数x的取值范围是________．
-  answer: ''
-  solution: ''
+  question: 若代数式$\frac{1}{x-5}$有意义，则实数x的取值范围是________．
+  answer: $x \neq 5$
+  solution: '解：由题意，得：$x-5\neq0$，
+
+    ∴$x \neq 5$；
+
+    故答案为：$x \neq 5$．'
   knowledge_points:
   - 综合
   module: numbersAndExpressions
@@ -241,12 +319,19 @@ questions:
 - id: 10
   type: 填空
   score: 2
-  question: 分解因式：___________
-  answer: ''
-  solution: ''
+  question: 分解因式：$x^{2}y-4y=$___________
+  answer: $p(x+2)(x-2)$
+  solution: '解：$x^{2}y-4y$
+
+    $= y\left(x^{2} - 4\right)$
+
+    $= y(x+2)(x-2)$，
+
+    故答案$[公式]$：$p(x+2)(x-2)$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 因式分解
+  - 方差
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -256,12 +341,22 @@ questions:
 - id: 11
   type: 填空
   score: 2
-  question: 方程的解为_____．
-  answer: ''
-  solution: ''
+  question: 方程$\frac{3}{2x+1}-\frac{1}{x}=0$的解为_____．
+  answer: $x = 1$
+  solution: '解：$\frac{3}{2x+1}-\frac{1}{x}=0$，
+
+    方程两边同乘$x(2x+1)$，得$3x-\left(2x+1\right)=0$，
+
+    解得$x = 1$，
+
+    检验：当$x = 1$时，$x(2x+1)\neq0$，
+
+    所以分式方程的解是$x = 1$，
+
+    故答案为：$x = 1$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 分式方程
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -271,12 +366,19 @@ questions:
 - id: 12
   type: 填空
   score: 2
-  question: 在平面直角坐标系中，若函数的图象经过点和，则的值为___________
-  answer: ''
-  solution: ''
+  question: 在平面直角坐标系xOy中，若函数$y=\frac{k}{x}(k\neq0)$的图象经过点$(-1,n)$和$(1,2)$，则n的值为___________
+  answer: $-2$
+  solution: '解：∵反比例函数$y=\frac{k}{x}(k\neq0)$的图象经过点$(-1,n)$和$(1,2)$，
+
+    ∴$-1\times n=1\times 2$，
+
+    解得：$n = -2$，
+
+    故答案为：$-2$．'
   knowledge_points:
+  - 反比例函数
   - 坐标系
-  module: geometryComprehensive
+  module: functions
   difficulty: 基础
   recommended_for:
   - L0
@@ -286,14 +388,36 @@ questions:
 - id: 13
   type: 填空
   score: 2
-  question: '为了解某校九年级名学生每周在校的综合体育活动时间（单位：小时），从中随机抽取了名学生进行调查，数据整理如下：
+  question: '为了解某校九年级$400$名学生每周在校的综合体育活动时间（单位：小时），从中随机抽取了$40$名学生进行调查，数据整理如下：
+
+    时间x/小时
+
+    $6\leq x<8$
+
+    $8\leq x<10$
+
+    $10 \leq x < 12$
+
+    $x \quad 12$
+
+    学生人数
+
+    2
+
+    6
+
+    26
+
+    6
 
     根据以上数据，估计该校九年级400名学生每周在校的综合体育活动时间不低于10小时的人数是___________．'
-  answer: ''
-  solution: ''
+  answer: '320'
+  solution: '解：$400\times\frac{26\div6}{40}=320$（人），
+
+    故答案为：320．'
   knowledge_points:
   - 综合
-  module: geometryComprehensive
+  module: statisticsAndProbability
   difficulty: 中档
   recommended_for:
   - L1
@@ -302,39 +426,189 @@ questions:
 - id: 14
   type: 填空
   score: 2
-  question: 如图，内接于，若，则______．
-  answer: ''
-  solution: ''
+  question: '如图，$\triangle ABC$内接于$\odot O$，若$\angle OAB=30^\circ$，则$\angle C=$______．
+
+    [图]'
+  answer: 60°
+  solution: '$\because OA=OB$，
+
+    $\angle OBA = \angle OAB = 30^\circ$，
+
+    $\angle AOB=180^\circ-30^\circ-30^\circ=120^\circ$，
+
+    由圆周角定理得，$\angle C=\frac{1}{2}\angle AOB=60^\circ$，
+
+    故答案为$60^\circ$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 圆周角
+  module: triangles
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2025-fengtai-yi-fig10.png
 - id: 15
   type: 填空
   score: 2
-  question: 如图，在矩形中，点在上，于点．若，则的长为___________．
-  answer: ''
-  solution: ''
+  question: '如图，在矩形$ABCD$中，点E在BC上，$DE \perp AC$于点F．若$AB = 6,\ AD = 8$，则CE的长为___________．
+
+    [图]'
+  answer: $4.5$
+  solution: '解：∵四边形ABCD是矩形，
+
+    ∴$CD = AB = 6$，$BC = AD = 8$，$\angle B=\angle ADC=\angle DCE=90^{\circ}$，
+
+    ∴$AC = \sqrt{AD^{2} + CD^{2}} = 10$，
+
+    ∵$DE \perp AC$，
+
+    ∴$\angle CEF = \angle CFD = 90^\circ = \angle ADC = \angle B$，
+
+    ∵$\angle DCF = \angle ACD$，
+
+    ∴$\triangle CDF \sim \triangle CAD$，
+
+    ∴$\frac{CF}{CD} = \frac{CD}{AC}$，
+
+    ∴$\frac{CF}{AC}=\frac{6}{10}=3.6$，
+
+    ∵$\angle ECF = \angle ACB$，
+
+    ∴$\triangle CEF\sim\triangle CAB$，
+
+    ∴$\frac{CE}{AC} = \frac{CF}{BC}$，
+
+    ∴$CE=\frac{10\times3.6}{8}=4.5$；
+
+    故答案为：$4.5$．'
   knowledge_points:
+  - 相似三角形
+  - 勾股定理
   - 矩形
-  module: quadrilaterals
+  module: triangles
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2025-fengtai-yi-fig11.png
 - id: 16
   type: 填空
   score: 2
   question: '某校举办了“数学节”活动，其中有一项活动是“数学游戏挑战赛”，参赛学生要按顺序依次参加“九连环、七巧板、五子棋、二十四点、魔方、华容道、数独”七个项目（每个项目只能挑战一次）．按照完成情况每个项目都分为参与奖、优秀奖、卓越奖，并奖励相应的积分．七个项目不同奖项对应的奖励积分如下表所示：
 
+    项目奖项
+
+    九连环
+
+    七巧板
+
+    五子棋
+
+    二十四点
+
+    魔方
+
+    华容道
+
+    数独
+
+    参与奖
+
+    2
+
+    7
+
+    5
+
+    7
+
+    4
+
+    7
+
+    4
+
+    优秀奖
+
+    5
+
+    10
+
+    9
+
+    9
+
+    7
+
+    8
+
+    7
+
+    卓越奖
+
+    9
+
+    12
+
+    13
+
+    15
+
+    12
+
+    10
+
+    9
+
     小明同学参加了此次“数学游戏挑战赛”活动，若知道小明在“九连环”项目中没有获得卓越奖，在“魔方”项目中获得了优秀奖，且在所有获得卓越奖项目的前一个项目中都获得参与奖，则可推断小明在“华容道”和“数独”这两个项目的积分之和最高为___________，他参加此次“数学游戏挑战赛”活动的总积分最高为___________'
-  answer: ''
-  solution: ''
+  answer: ①.16②.58
+  solution: '解：∵小明在“九连环”项目中没有获得卓越奖，
+
+    ∴小明在“九连环”项目中可能获得参与奖或优秀奖
+
+    ∵小明在“魔方”项目中获得了优秀奖，
+
+    ∴魔方获得优秀奖的积分为7分
+
+    ∵在所有获得卓越奖项目的前一个项目中都获得参与奖
+
+    ∴当华容道和数独都获得优秀奖时，得分为$8+7=15$（分），
+
+    当华容道获得参与奖，数独获得卓越奖时，得分为$7+9=16$（分），
+
+    ∴可推断小明在“华容道”和“数独”这两个项目的积分之和最高为16分；
+
+    ∵在所有获得卓越奖项目的前一个项目中都获得参与奖，
+
+    ∴①当只七巧板获得卓越奖时，九连环获得参与奖，其他项目获得优秀奖，
+
+    ∴总积分为$2+12+9+9+7+16=55$（分）；
+
+    ②当七巧板，二十四点获得卓越奖，
+
+    ∴九连环，五子棋获得参与奖，
+
+    ∴总积分为$2+12+5+15+7+16=57$（分）；
+
+    ③当五子棋获得卓越奖，二十四点获得优秀奖，
+
+    ∴九连环获得优秀奖，七巧板获得参与奖，
+
+    ∴总积分为$5+7+13+9+7+16=57$（分）；
+
+    ④当二十四点获得卓越奖，九连环，七巧板获得优秀奖，
+
+    ∴五子棋获得参与奖，
+
+    ∴总积分$[公式]$$5+10+5+15+7+16=58$（分）；
+
+    综上所述，他参加此次“数学游戏挑战赛”活动的总积分最高为58分．
+
+    故答案为：16，58．'
   knowledge_points:
   - 综合
   module: geometryComprehensive
@@ -345,12 +619,18 @@ questions:
 - id: 17
   type: 解答
   score: 5
-  question: （第17题，详见原卷）
-  answer: ''
-  solution: ''
+  question: 计算：$(3-\pi)^{0}+\left(\frac{1}{2}\right)^{-2}-2\sin 45^{\circ}+\left|-\sqrt{8}\right|$．
+  answer: $3+\sqrt{2}$
+  solution: '解：$(3-\pi)^{0}+\left(\frac{1}{2}\right)^{-2}-2\sin 45^{\circ}+\left|-\sqrt{8}\right|$
+
+    $1+2-2\cdot\frac{\sqrt{2}}{2}+2\sqrt{2}$
+
+    $=1+2-\sqrt{2}+2\sqrt{2}$
+
+    $=3+\sqrt{2}$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 三角函数
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -360,9 +640,19 @@ questions:
 - id: 18
   type: 解答
   score: 5
-  question: 解不等式组：
-  answer: ''
-  solution: ''
+  question: '解不等式组：$\begin{cases}
+
+    2(x+1)<3x-1 \\
+
+    x-2>\dfrac{x+1}{2}
+
+    \end{cases}$'
+  answer: $x>5$
+  solution: '解：解不等式$2(x+1)<3x-1$得$x>3$，
+
+    解不等式$x-2>\frac{x+1}{2}$得$x>5$，
+
+    ∴不等式组的解集为$x>5$．'
   knowledge_points:
   - 不等式
   - 不等式组
@@ -376,12 +666,24 @@ questions:
 - id: 19
   type: 解答
   score: 5
-  question: 已知，求代数式的值．
-  answer: ''
-  solution: ''
+  question: 已知$a-2b-3=0$，求代数式$\frac{2(a-b)-2b}{a^{2}-4ab+4b^{2}}$的值．
+  answer: $\frac{2}{a-2b},\frac{2}{3}$
+  solution: '解：$\frac{2(a-b)-2b}{a^{2}-4ab+4b^{2}}$
+
+    $\frac{2a-2b-2b}{(a-2b)^{2}}$
+
+    $-\frac{2(a-2b)}{(a-2b)^2}$
+
+    $=\frac{2}{a-2b}$，
+
+    ∵$a-2b-3=0$，
+
+    ∴$a-2b=3$，
+
+    ∴原式$\frac{2}{a-2b}=\frac{2}{3}$．'
   knowledge_points:
   - 综合
-  module: geometryComprehensive
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -391,53 +693,137 @@ questions:
 - id: 20
   type: 解答
   score: 5
-  question: '如图，在四边形中，，为中点，，．
+  question: '如图，在四边形$ABCD$中，$\angle BCD = 90^\circ$，E为BD中点，$EC\parallel AD$，$BE = AD$．
 
-    （1）求证：四边形为平行四边形；
+    [图]
 
-    （2）若，，求的长．'
-  answer: ''
-  solution: ''
+    （1）求证：四边形$AECD$为平行四边形；
+
+    （2）若$AE = 2$，$\tan\angle CBD=\frac{1}{2}$，求AD的长．'
+  answer: （1）证明见解析 （2）$\sqrt{5}$
+  solution: '【小问1详解】
+
+    ∵$\angle BCD = 90^\circ$，E为BD中点，
+
+    ∴$EC = \frac{1}{2} BD = BE$．
+
+    ∵$BE = AD$，
+
+    ∴$EC = AD$．
+
+    ∵$EC\parallel AD$
+
+    ∴四边形$AECD$为平行四边形；
+
+    【小问2详解】
+
+    ∵四边形$AECD$为平行四边形，$AE = 2$，
+
+    ∴$CD = AE = 2$．
+
+    在$Rt\triangle BCD$中，$\tan\angle CBD=\frac{CD}{BC}=\frac{1}{2}$，$CD = 2$，
+
+    则$\frac{2}{BC}=\frac{1}{2}$，
+
+    解得$BC = 4$．
+
+    ∵$BD^{2}=BC^{2}+CD^{2}$，
+
+    把$BC = 4$，$CD = 2$代入可得
+
+    $BD = \sqrt{4^{2} + 2^{2}} = \sqrt{16 + 4} = \sqrt{20} = 2\sqrt{5}$．
+
+    ∴$AD = BE = \frac{1}{2} BD = \sqrt{5}$．'
   knowledge_points:
+  - 勾股定理
   - 平行四边形
-  module: quadrilaterals
+  - 三角函数
+  module: triangles
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2025-fengtai-yi-fig12.png
 - id: 21
   type: 解答
   score: 5
-  question: 鲁班锁是我国古代传统建筑物的固定结合器，也是一种广泛流传的益智玩具，如图．其中六根鲁班锁中一个构件的一个面的尺寸如图所示．已知，求这个面的面积．
-  answer: ''
-  solution: ''
+  question: '鲁班锁是我国古代传统建筑物的固定结合器，也是一种广泛流传的益智玩具，如图$1$．其中六根鲁班锁中一个构件的一个面的尺寸如图$2$所示．已知$a:b=3:4,\ b:c=4:1$，求这个面的面积．
+
+    [图]'
+  answer: $16$
+  solution: '解：∵$a:b=3:4$，$b:c=4:1$，
+
+    可设$a = 3x$，$b = 4x$，$c = x$，
+
+    由图可得，$2a + b = 10$，
+
+    ∴$2\times3x+4x=10$，
+
+    解得$x = 1$，
+
+    ∴$a = 3$，$b = 4$，$c = 1$，
+
+    ∴这个面的面积$=10\times2c-bc=10\times2\times1-4\times1=16$．'
   knowledge_points:
   - 综合
-  module: geometryComprehensive
+  module: numbersAndExpressions
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2025-fengtai-yi-fig13.png
 - id: 22
   type: 解答
   score: 5
-  question: '在平面直角坐标系中，函数与的图象交于点．
+  question: '在平面直角坐标系xOy中，函数$y=kx+b\,(k\neq0)$与$y=x-b$的图象交于点$(-2,-3)$．
 
-    （1）求的值；
+    （1）求$k,\ b$的值；
 
-    （2）当时，对于的每一个值，函数的值大于函数的值且小于函数的值，直接写出的取值范围．'
-  answer: ''
-  solution: ''
+    （2）当$x > 0$时，对于x的每一个值，函数$y = mx \, (m \neq 0)$的值大于函数$y=x-b$的值且小于函数$y=kx+b\,(k\neq0)$的值，直接写出m的取值范围．'
+  answer: （1）$k=2,b=1$, （2）$1\mathrm{~m/s^{2}}$
+  solution: '【小问1详解】
+
+    解：∵函数$y=kx+b\,(k\neq0)$与$y=x-b$的图象交于点$(-2,-3)$，
+
+    ∴$-2 - b = -3$，
+
+    解得，$b = 1$，
+
+    ∴$-2k+1=-3$，
+
+    解得，$k=2$；
+
+    【小问2详解】
+
+    解：由（1）可得，$y=2x+1$，$y=x-1$，
+
+    ∴当$x = 0$时，对于函数$y=2x+1$，则$y = 1$，对于函数$y=x-1$，则$y=-1$，
+
+    ∴当$x > 0$时，对于x的每一个值，函数$y = mx \, (m \neq 0)$的值大于函数$y=x-b$的值且小于函数$y=kx+b\,(k\neq0)$的值，
+
+    如图所示，
+
+    [图]
+
+    ∴$1\mathrm{~m/s^{2}}$，
+
+    ∴m的取值范围为$1\mathrm{~m/s^{2}}$．'
   knowledge_points:
+  - 一次函数
+  - 不等式
   - 坐标系
-  module: geometryComprehensive
+  module: functions
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2025-fengtai-yi-fig14.png
 - id: 23
   type: 解答
   score: 6
@@ -445,19 +831,157 @@ questions:
 
     a.10件作品的得分情况：
 
-    B．分别记甲、乙两位评委对这10件作品评分平均数为：
+    序号
+
+    评委甲评分
+
+    评委乙评分
+
+    初始得分
+
+    1
+
+    70
+
+    82
+
+    76
+
+    2
+
+    80
+
+    84
+
+    m
+
+    3
+
+    61
+
+    76
+
+    68.5
+
+    4
+
+    78
+
+    84
+
+    81
+
+    5
+
+    71
+
+    85
+
+    78
+
+    6
+
+    81
+
+    83
+
+    82
+
+    7
+
+    84
+
+    86
+
+    85
+
+    8
+
+    68
+
+    74
+
+    71
+
+    9
+
+    66
+
+    77
+
+    71.5
+
+    10
+
+    64
+
+    82
+
+    73
+
+    B．分别记甲、乙两位评委对这10件作品评分的平均数为$\overrightarrow{x}_{q1}\cdot\overrightarrow{x}_{\triangle}$：
+
+    $\overline{x}_{\text{甲}}$
+
+    72.3
+
+    $x_{\text{乙}}$
+
+    81.3
 
     C.10件作品初始得分的平均数、中位数、众数如下：
 
+    平均数
+
+    中位数
+
+    众数
+
+    76.8
+
+    n
+
+    82
+
     根据以上信息，回答下列问题：
 
-    （1）的值为___________，的值为___________；
+    （1）m的值为___________，n的值为___________；
 
-    （2）设甲、乙评委对同一件作品的评分之差为，记所有满足的作品的初始得分的平均数为，则___________（填“>”“=”或“<”）；
+    （2）设甲、乙评委对同一件作品的评分之差为k，记所有满足$-10 \leq k \leq 10$的作品的初始得分的平均数为$-x$，则$-x$___________$76.8$（填“>”“=”或“<”）；
 
-    （3）分别记甲、乙两位评委对这10件作品评分的方差为，则___________（填“>”“=”或“<”）；若对于这10件作品中的某件作品，设评委甲的评分为，评委乙的评分为，且以的值作为这件作品的标准化得分，对这10件作品按照其标准化得分由高到低进行排名，则排名第一名、第二名、第三名的作品的序号依次是___________．'
-  answer: ''
-  solution: ''
+    （3）分别记甲、乙两位评委对这10件作品评分的方差为$S_{甲}^{2},\ S_{乙}^{2}$，则$S_{\text{甲}}^{2}$___________$S_{\mathrm{乙}}^{2}$（填“>”“=”或“<”）；若对于这10件作品中的某件作品，设评委甲的评分为p，评委乙的评分为q，且以$\frac{1}{2}\left(\frac{p-\overline{x}_{11}}{\sqrt{s_{11}^{2}}}+\frac{q-\overline{x}_{2}}{\sqrt{s_{2}^{2}}}\right)$的值作为这件作品的标准化得分，对这10件作品按照其标准化得分由高到低进行排名，则排名第一名、第二名、第三名的作品的序号依次是___________．'
+  answer: （1）$82,77$ （2）$\gt$ （3）$>,7,2,6$
+  solution: '【小问1详解】
+
+    解：$m=\frac{80+84}{2}=82$，
+
+    10件作品初始得分从小到大排序为：$68.5$，$71$，$71.5$，$73$，$76$，$78$，$81$，$82$，$82$，$85$，
+
+    ∴$n=\frac{76+78}{2}=77$，
+
+    故答案为：$82,77$；
+
+    【小问2详解】
+
+    解：设甲、乙评委对同一件作品的评分之差为k，
+
+    ∴$k_{3}=70-82=-12$，$k_{2}=80-84=-4$，$k_{3}=61-76=-15$，$k_{1}=78-84=-6$，$k_{3}=71-85=-14$，$k_{\mathrm{e}}=81-83=-2$，$k_{-}84-86=-2$，$k_{x}=-68-74=-6$，$k_{3}=66-77=-11$，$k_{1}=-64-32=-18$，
+
+    ∴$-10 \leq k \leq 10$的有$k_{2}=80-84=-4$，$k_{1}=78-84=-6$，$k_{\mathrm{e}}=81-83=-2$，$k_{-}84-86=-2$，$k_{x}=-68-74=-6$，
+
+    ∴$\bar{x}=\frac{82+81+82+85+7}{5}=80.2$，
+
+    ∴$80.2 > 76.8$，
+
+    故答案为：$\gt$；
+
+    【小问3详解】
+
+    解：甲、乙两位评委对这10件作品评分的平均数为$x_{\mathrm{m}}=72.3,\ \overline{x}=81.3$，
+
+    ∴$S_{c}^{2}=\frac{1}{10}\left[(70-72.3)^{2}+(80-72.3)^{2}+(61-72.3)^{2}+(78-72.3)^{2}+(71-72.3)^{2}\right]$
+
+    $(81-72.3)^{2}+(84-72.3)^{2}+(68-72.3)^{2}+(66-72.3)^{2}+(64-72.3)^{'
   knowledge_points:
   - 平均数
   - 中位数
@@ -471,54 +995,311 @@ questions:
 - id: 24
   type: 解答
   score: 6
-  question: '如图，，是的直径，点在上，连接交于点，连接交于点．
+  question: '如图，AB，CD是$\odot\odot$的直径，点E在$\odot\odot$上，连接DE交AB于点F，连接AE交CD于点$G. \angle CDE = \frac{1}{2} \angle AOC$．
 
-    （1）求证：；
+    [图]
 
-    （2）过点作切线交的延长线于点．若，求的长．'
-  answer: ''
-  solution: ''
+    （1）求证：$CD \perp AE$；
+
+    （2）过点D作$\odot\odot$的切线交AB的延长线于点H．若$\frac{OF}{FB}=\frac{3}{4},\ AE=2\sqrt{5}$，求BH的长．'
+  answer: （1）见解析（2）BH的长为$\frac{3}{2}$．
+  solution: '【小问1详解】
+
+    证明：连接AD，
+
+    [图]
+
+    则$\angle ADC = \frac{1}{2} \angle AOC$，
+
+    ∵$\angle CBE=\frac{1}{2}\angle AOC$，
+
+    ∴$\angle CDE = \angle ADC$，
+
+    ∴$\overline{AC}=\overline{CE}$，
+
+    ∵$OA = OE$，
+
+    ∴$CD \perp AE$；
+
+    【小问2详解】
+
+    解：由（1）知$CD \perp AE$，
+
+    ∴$AG = \frac{1}{2} AE = \sqrt{5}$，
+
+    ∵$\frac{OF}{FB} = \frac{3}{4}$，
+
+    ∴设$OF=3k\,(k>0)$，则$BF = 4k$，$OA=OD=OB=7k$，
+
+    ∵DH是$\odot\odot$的切线，CD是$\odot\odot$的直径，
+
+    ∴$CD \perp DH$，
+
+    ∴$AE \parallel DH$，
+
+    ∴$\triangle DOH \sim \triangle GOA$，$\triangle DHF \sim \triangle EAF$，
+
+    ∴$\frac{DH}{GA} = \frac{OH}{OA}$，$\frac{DH}{EA}=\frac{FH}{FA}$，
+
+    即$\frac{DH}{\sqrt{5}}=\frac{7k+BH}{7k}$，$\frac{DH}{2\sqrt{5}}=\frac{4k+BH}{10k}$，
+
+    ∴$DH=\frac{7\sqrt{5}k+7\sqrt{5}BH}{7k}$，$DH = \frac{8\sqrt{5}k + 2\sqrt{5}BH}{10k}$，
+
+    ∴$\frac{7\sqrt{5}k-\sqrt{5}BH}{7k}=\frac{8\sqrt{5}k+2\sqrt{5}BH}{10k}$，
+
+    整理得$70\sqrt{5}k+10\sqrt'
   knowledge_points:
+  - 圆周角
+  - 垂径定理
   - 切线
+  - 相似三角形
+  - 勾股定理
   module: circles
   difficulty: 较难
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2025-fengtai-yi-fig15.png
+  - figures/2025-fengtai-yi-fig16.png
 - id: 25
   type: 解答
   score: 6
-  question: '某小组研究了不同温度对葡萄酒发酵速率的影响．当发酵时间为（单位：）时，小组成员分别记录了下的发酵速率下的发酵速率，部分数据如下：
+  question: '某小组研究了不同温度对葡萄酒发酵速率的影响．当发酵时间为x（单位：$h.l.w x w 36$）时，小组成员分别记录了$35^\circ\mathrm{C}$下的发酵速率$V_{1}\left(\text{单位: } \mathrm{mL/min}\right), 30^{\circ} \mathrm{C}$下的发酵速率$v_{2}（单位：m/min）$，部分数据如下：
 
-    （1）当时，下的发酵速率每小时增加的值为___________；
+    $x/h$
 
-    （2）通过分析数据，发现可以用函数刻画与与之间的关系．在给出的平面直角坐标系中，画出了函数的图象，描出了与各对对应值为坐标的点，补全函数的图象；
+    1
+
+    5
+
+    9
+
+    10
+
+    11
+
+    14
+
+    17
+
+    19
+
+    23
+
+    26
+
+    29
+
+    32
+
+    36
+
+    $y_{1} / (\mathrm{mL/min})$
+
+    $0.50$
+
+    $0.70$
+
+    $0.90$
+
+    $0.89$
+
+    $0.88$
+
+    $0.86$
+
+    $0.81$
+
+    $0.75$
+
+    $0.58$
+
+    $0.50$
+
+    $0.44$
+
+    $0.38$
+
+    $0.32$
+
+    $y_{2}\left(\mathrm{~m l / m i n ~}\right)$
+
+    $0.05$
+
+    $0.45$
+
+    $0.85$
+
+    $0.87$
+
+    $0.88$
+
+    $0.87$
+
+    $0.84$
+
+    $0.80$
+
+    $0.71$
+
+    $0.64$
+
+    $0.58$
+
+    $0.52$
+
+    $0.41$
+
+    （1）当$1\leq x\leq 9$时，$35^\circ\mathrm{C}$下的发酵速率每小时增加$a\pi\,\mathrm{m/min}\,(a\text{为常数}),\quad a$的值为___________；
+
+    （2）通过分析数据，发现可以用函数刻画$y_{1}$与$x,\ y_{2}$与x之间的关系．在给出的平面直角坐标系中，画出了函数$y_{2}$的图象，描出了$y_{1}$与x各对对应值为坐标的点，补全函数$y_{1}$的图象；
+
+    [图]
 
     （3）根据以上数据与函数图象，解决下列问题：
 
-    ①当发酵时间为___________h时，下的发酵速率等于下的发酵速率；
+    ①当发酵时间为___________h时，$35^\circ\mathrm{C}$下的发酵速率等于$30^{\circ}\mathrm{C}$下的发酵速率；
 
-    ②若发酵速率不低于，葡萄酒的发酵效果较好，下的发酵速率不低于的持续时间为（单位：h），下的发酵速率不低于的持续时间为（单位：h），则的值为___________，的值约为___________（结果保留小数点后一位）．'
-  answer: ''
-  solution: ''
+    ②若发酵速率不低于$0.5\,\text{mL/min}$，葡萄酒的发酵效果较好，$35^\circ\mathrm{C}$下的发酵速率不低于$0.5\,\mathrm{ml/min}$的持续时间为$t_{1}$（单位：h），$30^{\circ}\mathrm{C}$下的发酵速率不低于$0.5\,\text{m}/\min$的持续时间为$t_{2}$（单位：h），则$t_{1}$的值为___________，$t_{2}-t_{1}$的值约为___________（结果保留小数点后一位）．'
+  answer: （1）$0.05$ （2）见解析（3）①25；②$2.2$
+  solution: '【小问1详解】
+
+    解：当$1\leq x\leq 9$时，$35^\circ\mathrm{C}$下的发酵速率每小时增加：
+
+    $a=\frac{0.7-0.5}{5-1}-0.05$．
+
+    【小问2详解】
+
+    解：如图所示：
+
+    [图]【小问3详解】
+
+    解：①根据图象得出$x = 11$时，$35^\circ\mathrm{C}$下的发酵速率等于$30^{\circ}\mathrm{C}$下的发酵速率；
+
+    ②$35^\circ\mathrm{C}$下的发酵速率不低于$0.5\,\mathrm{ml/min}$的持续时间为$t_{1}=26-1=25(h)$，
+
+    根据函数图象可知：当$1\leq x\leq 9$时或$32 \leq x \leq 36$时，$30^{\circ}\mathrm{C}$下的发酵速率是时间的一次函数，
+
+    ∴设当$1\leq x\leq 9$时，$30^{\circ}\mathrm{C}$下的发酵速率的函数解析式为：$y_{2}=kx+b(k\neq 0)$，把$(1,0.05)$，$(5,0.45)$代入得：
+
+    $\begin{aligned}
+
+    k + b &= 0.05 \\
+
+    5k + b &= 0.45
+
+    \end{aligned}$，
+
+    解得：$\left\{
+
+    \begin{array}{l}
+
+    k = 0.1 \\
+
+    b = -0.05
+
+    \end{array}
+
+    \right.$，
+
+    ∴$y_{2}=0.1x-0.05$，
+
+    把$y_{2}=0.5$代入得：$0.5=0.1x-0.05$，
+
+    解得：$x = 5.5$，
+
+    设当$32 \leq x \leq 36$时，$30^{\circ}\mathrm{C}$下的发酵速率的函数解析式为：$y_{2}=kx+b\left(k\neq0\right)$，把$(32,0.52)$，$(36,0.41)$代入得：
+
+    $\begin{alig'
   knowledge_points:
+  - 一次函数
   - 坐标系
   module: functions
   difficulty: 较难
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2025-fengtai-yi-fig17.png
+  - figures/2025-fengtai-yi-fig18.png
 - id: 26
   type: 解答
   score: 6
-  question: '在平面直角坐标系中，是抛物线上的两点．
+  question: '在平面直角坐标系xOy中，$P(x_1,\ y_1),\ Q(x_2,\ y_2)$是抛物线$y = x^{3} - 2tx + c$上的两点．
 
-    （1）若对于，有，求抛物线的对称轴；
+    （1）若对于$x_1 = -1,\ x_2 = 3$，有$y_{1}=y_{2}$，求抛物线的对称轴；
 
-    （2）若对于，都有，求的取值范围．'
-  answer: ''
-  solution: ''
+    （2）若对于$2t-3\leq x_{1}\leq 2t-2,\ t+1\leq x_{2}\leq t+3$，都有$y_1 > y_2$，求t的取值范围．'
+  answer: （1）对称轴为直线$x = 1$； （2）$t > 6$或$t<-1$
+  solution: '【小问1详解】
+
+    解：∵$x_1 = -1,\ x_2 = 3$，有$y_{1}=y_{2}$，
+
+    ∴这两点关于y轴对称，抛物线的对称轴为直线$x=\frac{-1+3}{2}=1$；
+
+    【小问2详解】
+
+    解：∵$y_{1}=x^{2}-2tx+\epsilon$，$y_{2}=x^{2}-2tx+c$，又$y_1 > y_2$，
+
+    ∴$x_{1}^{2}-2cx_{1}+c>x_{2}^{2}-2cx_{2}+c$，
+
+    整理得$(x-x_{2})(x_{1}+x_{2}-2t)>0$，
+
+    ∴$\begin{cases}
+
+    x_1 - x_2 > 0 \\
+
+    x_1 + x_2 - 2t > 0
+
+    \end{cases}$或$\begin{cases}
+
+    x_1 - x_2 < 0 \\
+
+    x_1 + x_2 - 2t < 0
+
+    \end{cases}$，
+
+    ①若$\begin{cases}
+
+    x_1 - x_2 > 0 \\
+
+    x_1 + x_2 - 2t > 0
+
+    \end{cases}$，即$\begin{cases}
+
+    x_1 > x_2 \\
+
+    x_1 + x_2 > 2k
+
+    \end{cases}$，
+
+    ∵$2t-3\leq x_{1}\leq 2t-2,\ t+1\leq x_{2}\leq t+3$，
+
+    ∴$2t-3>t+3$且$2t-3+t+1>2t$，
+
+    ∴$t > 6$且$t>2$，
+
+    ∴$t > 6$；
+
+    ②若$\begin{cases}
+
+    x_1 - x_2 < 0 \\
+
+    x_1 + x_2 - 2t < 0
+
+    \end{cases}$，
+
+    同理$2t - 2 < t + 1$且$2t-2+t+3<2t$，
+
+    ∴$t<3$且$t<-1$，
+
+    ∴$t<-1$；
+
+    综上，$t > 6$或$t<-1$．'
   knowledge_points:
+  - 二次函数
+  - 轴对称
   - 坐标系
   module: functions
   difficulty: 压轴
@@ -527,38 +1308,162 @@ questions:
 - id: 27
   type: 解答
   score: 7
-  question: '如图，在中，，为延长线上一点，过点作射线为射线上一点（不与点重合），连接．将线段绕点逆时针旋转得到线段，连接．
+  question: '如图，在$V_{ABC}$中，$AB = AC,\ \angle BAC = \alpha\ (0^\circ < \alpha < 90^\circ)$，M为BC延长线上一点，过点B作射线$BN \perp AB,\ D$为射线BN上一点（不与点B重合），连接AD．将线段AD绕点A逆时针旋转$\alpha$得到线段AE，连接CE．
 
-    （1）求证：；
+    [图]
 
-    （2）连接，作，交射线于点．连接交于点，若，用等式表示线段与的数量关系，并证明．'
-  answer: ''
-  solution: ''
+    （1）求证：$\angle CBD=\angle ECM$；
+
+    （2）连接CD，作$EF \parallel CD$，交射线BM于点F．连接BE交AC于点G，若$CD \perp BD$，用等式表示线段CG与EF的数量关系，并证明．'
+  answer: （1）见解析（2）$CG=\frac{1}{2}EF$，理由见解析
+  solution: '【小问1详解】
+
+    证明：∵将线段AD绕点A逆时针旋转$\alpha$得到线段AE，
+
+    ∴$AD = AE$，$\angle DAE = \alpha$，
+
+    ∵$\angle BAC = \alpha$，
+
+    ∴$\angle BAD = \angle CAE$，
+
+    ∵$AB = AC$，
+
+    ∴$\triangle ABC \cong \triangle ACE (SAS)$，
+
+    ∴$\angle ABD = \angle ACE$，
+
+    ∵$BN \perp AB$，
+
+    ∴$\angle ABD=90^\circ$，
+
+    ∴$\angle ABC=\angle CBD=90^\circ$，$\angle ACE = 90^\circ$，
+
+    ∴$\angle ACB + \angle ECM = 90^\circ$，
+
+    ∵$AB = AC$，
+
+    ∴$\angle ABC = \angle ACB$，
+
+    ∴$\angle CBD=\angle ECM$；
+
+    【小问2详解】
+
+    解：$CG=\frac{1}{2}EF$，理由如下，
+
+    ∵$CD \perp BD$，$BD \perp AB$，
+
+    ∴$AB \parallel CD$，
+
+    ∵$EF \parallel CD$，
+
+    ∴$EF \parallel AB$，
+
+    ∴$\angle EFH = \angle ABC$，
+
+    作$BH \parallel AC$交BM于点H，
+
+    [图]
+
+    ∴$\angle ACB = \angle EHF$，
+
+    ∴$\angle EFK = \angle EHF$，
+
+    ∴$EF = EH$，
+
+    ∵$\triangle ABD \cong \triangle ACE$，$\angle CBD=\angle ECH$，
+
+    ∴$BD = CE$，$\angle BDC = \angle ACE$，
+
+    ∵$BH \parallel AC$，
+
+    ∴$\angle ACE ='
   knowledge_points:
+  - 平行线
+  - 全等三角形
   - 旋转
-  module: geometryComprehensive
+  module: triangles
   difficulty: 压轴
   recommended_for:
   - L3
+  figures:
+  - figures/2025-fengtai-yi-fig19.png
+  - figures/2025-fengtai-yi-fig20.png
 - id: 28
   type: 解答
   score: 7
-  question: '在平面直角坐标系中，的半径为．对于的弦和平面内的点，给出如下定义：若弦上存在点，使得点绕点旋转后得到的对应点在上，则称点是弦的“伴随点”．
+  question: '在平面直角坐标系xOy中，$\odot\odot$的半径为$1$．对于$\odot\odot$的弦AB和平面内的点C，给出如下定义：若弦AB上存在点P，使得点C绕点P旋转$180^\circ$后得到的对应点$C''$在$\odot\odot$上，则称点C是弦AB的“伴随点”．
 
-    （1）如图，点．
+    [图]
 
-    ①在点中，弦的“伴随点”是___________；
+    （1）如图，点$A(0,1),B(1,0)$．
 
-    ②若点是弦的“伴随点”，则点的横坐标的最小值为___________；
+    ①在点$C_{1}(3,0), C_{2}(0,-2), C_{3}\left(1-\frac{\sqrt{2}}{2}, 1-\frac{\sqrt{2}}{2}\right)$中，弦AB的“伴随点”是___________；
 
-    （2）已知直线与坐标轴交于点和点，点是线段上任意一点，且存在的弦，使得点是弦的“伴随点”．直接写出的取值范围．'
-  answer: ''
-  solution: ''
+    ②若点D是弦AB的“伴随点”，则点D的横坐标的最小值为___________；
+
+    （2）已知直线$y=x+b$与坐标轴交于点E和点F，点Q是线段EF上任意一点，且存在$\odot\odot$的弦$MN,\ MN=1$，使得点Q是弦MN的“伴随点”．直接写出b的取值范围．'
+  answer: （1）①$C_1$、$C_3$；②$-1$ （2）$-3\leq s\leq-\sqrt{6}+\sqrt{2}$或$\sqrt{6}-\sqrt{2}\leq b\leq 3$.
+  solution: '【小问1详解】
+
+    解：①如图，以$(0,2)$为圆心，$1$为半径画圆，以$(2,0)$为圆心，$1$为半径画圆，作两圆$[公式]$切线QH，WT，
+
+    ∵弦AB上存在点P，使得点C绕点P旋转$180^\circ$后得到的对应点$C''$在$\odot\odot$上，
+
+    ∴C在弧$\overline{QW}$，$\widehat{HT}$以及两条切线围成的图形内（包括边界）
+
+    [图]
+
+    ∴$C_1$是弦AB的“伴随点”，$C_2$不是弦AB的“伴随点”；
+
+    如图，$C_{1}\left(1-\frac{\sqrt{2}}{2}, 1-\frac{\sqrt{2}}{2}\right)$，
+
+    [图]
+
+    ∴$C_3$在直线$y=x$上，而直线$y=x$垂直AB，
+
+    ∴$AP = BP$，
+
+    ∵$A(0,1)$，$B(1,0)$，
+
+    ∴$P\left(\frac{1}{2},\frac{1}{2}\right)$，
+
+    ∵$C_{j}P=C''P$，
+
+    ∴$C''\left(-\frac{\sqrt{2}}{2},-\frac{\sqrt{2}}{2}\right)$，
+
+    ∴$OC''=\sqrt{\left(\frac{\sqrt{2}}{2}\right)^{2}+\left(\frac{\sqrt{2}}{2}\right)^{2}}=1$，
+
+    ∴$C''$在$\odot\odot$上，
+
+    ∴$C_3$是弦AB的“伴随点”，
+
+    ②∵点D是弦AB的“伴随点”，
+
+    ∴由①可得：D在弧$\overline{QW}$，$\widehat{HT}$以及两条切线围成的图形内（包括边界），
+
+    结合图形可得点D的横坐标的最小值为：$-1$；
+
+    【小问2详解】
+
+    解：如图，$MN=1$，
+
+    [图]
+
+    把$\odot\odot$分别绕$N,M$旋转$180^\circ$得到$\odot O''$与$\odot O''''$，连接$OO''$，$OO''''$，$O'
   knowledge_points:
+  - 一次函数
+  - 切线
   - 弦
+  - 勾股定理
   - 旋转
   - 坐标系
-  module: geometryComprehensive
+  module: triangles
   difficulty: 压轴
   recommended_for:
   - L3
+  figures:
+  - figures/2025-fengtai-yi-fig21.png
+  - figures/2025-fengtai-yi-fig22.png
+  - figures/2025-fengtai-yi-fig23.png
+  - figures/2025-fengtai-yi-fig24.png
+  - figures/2025-fengtai-yi-fig25.png

@@ -1,8 +1,8 @@
 # ============================================================
 # 2025年北京通州区中考数学一模试卷 — 逐题分析
 # ============================================================
-# 数据来源：knowledge-original/精品解析：2025年北京市通州区中考数学一模试题（原卷版）.docx
-# 自动生成，部分数学公式可能显示不全（docx公式对象无法完整提取）
+# 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
+# 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
 # 满分：100分  时长：120分钟
 
 year: 2025
@@ -11,92 +11,22 @@ exam_type: 一模
 subject: 数学
 full_score: 100
 duration_minutes: 120
-total_questions: 33
+total_questions: 28
 structure: 8选择(16分) + 8填空(16分) + 12解答(68分)
 questions:
 - id: 1
   type: 选择
   score: 2
-  question: 本试卷共8页，共三道大题，28个小题，满分为100分，考试时间为120分钟．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 2
-  type: 选择
-  score: 2
-  question: 请在试卷和答题卡上准确填写学校名称、班级、姓名．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 3
-  type: 选择
-  score: 2
-  question: 试题答案一律填涂或书写在答题卡上，在试卷上作答无效．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 4
-  type: 选择
-  score: 2
-  question: 在答题卡上，选择题、作图题用2B铅笔作答，其他试题用黑色字迹签字笔作答，
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 5
-  type: 选择
-  score: 2
-  question: 考试结束后，请将答题卡交回．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 1
-  type: 选择
-  score: 2
-  question: "“探秘古蜀文明——三星堆与金沙”展览于2024年6月27日至10月13日在北京大运河博物馆举办．展览期间共接待游客153万余人次，客流高峰期间更是创下了单日接待客流量近3万人次．将用科学记数法表示为（   ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '“探秘古蜀文明——三星堆与金沙”展览于2024年6月27日至10月13日在北京大运河博物馆举办．展览期间共接待游客153万余人次，客流高峰期间更是创下了单日接待客流量近3万人次．将$1530000$用科学记数法表示为（）
+
+    A.$0.153\times10^{7}$B.$1.53\times10^{7}$C.$1.53\times10^{6}$D.$15.3\times10^{5}$'
+  answer: C
+  solution: '解：$1.53\times10^{8}$．
+
+    故选C．'
   knowledge_points:
   - 科学记数法
+  - 绝对值
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -107,12 +37,23 @@ questions:
 - id: 2
   type: 选择
   score: 2
-  question: "数学中有许多精美的曲线．以下是“星形线”“三叶玫瑰线”“阿基米德螺线”和“笛卡尔叶形线”．其中既是中心对称图形又是轴对称图形的是（   ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '数学中有许多精美的曲线．以下是“星形线”“三叶玫瑰线”“阿基米德螺线”和“笛卡尔叶形线”．其中既是中心对称图形又是轴对称图形的是（）
+
+    A.[图]B.[图]C.[图]D.[图]'
+  answer: A
+  solution: '解：A、既是中心对称图形又是轴对称图形，则此项符合题意；
+
+    B、不是中心对称图形，是轴对称图形，则此项不符合题意；
+
+    C、既不是中心对称图形又不是轴对称图形，则此项不符合题意；
+
+    D、不是中心对称图形，是轴对称图形，则此项不符合题意；
+
+    故选：A．'
   knowledge_points:
   - 中心对称图形
   - 轴对称图形
+  - 旋转
   - 轴对称
   module: geometryComprehensive
   difficulty: 基础
@@ -121,14 +62,29 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2025-tongzhou-yi-fig02.png
+  - figures/2025-tongzhou-yi-fig03.png
+  - figures/2025-tongzhou-yi-fig04.png
+  - figures/2025-tongzhou-yi-fig05.png
 - id: 3
   type: 选择
   score: 2
-  question: "如图，数轴上的点表示实数，那么下列结论中正确的是（   ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '如图，数轴上的点A表示实数a，那么下列结论中正确的是（）
+
+    [图]
+
+    A.$-a<1$B.$\left| a \right| < 1$C.$a+1>0$D.$1-a>0$'
+  answer: D
+  solution: '根据题意得，$a<-1$
+
+    $\therefore -a > 1$，$\left| a \right| > 1$，$a+1<0$，故选项A、B、C均错误；
+
+    $1-a>0$，故D正确，
+
+    故选：D．'
   knowledge_points:
-  - 综合
+  - 绝对值
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -136,30 +92,67 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2025-tongzhou-yi-fig06.png
 - id: 4
   type: 选择
   score: 2
-  question: "如图，直线、交于点，，如果，那么的度数为（   ）\nA \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '如图，直线AB、CD交于点E，$EF \perp AB$，如果$\angle BED=32^\circ$，那么$\angle CEF$的度数为（
+
+    ）
+
+    [图]
+
+    A.$29^\circ$B.$32^\circ$C.$45^\circ$D.$58^\circ$'
+  answer: D
+  solution: '解：$\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$$EF \perp AB$，
+
+    $\angle AEF = 90^\circ$，
+
+    $\angle BED = 32^\circ$，
+
+    $\angle AEC = \angle BED = 32^\circ$，
+
+    $\angle CEF = \angle AEF - \angle AEC = 90^\circ - 32^\circ = 58^\circ$．
+
+    故选：D．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 对顶角
+  module: triangles
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  figures:
+  - figures/2025-tongzhou-yi-fig07.png
 - id: 5
   type: 选择
   score: 2
-  question: "已知关于的一元二次方程有两个相等的实数根，那么实数的值是（   ）\nA. 16\tB. 4\tC. \tD. 1"
-  answer: ''
-  solution: ''
+  question: '已知关于x的一元二次方程$x^{2}+x+\frac{1}{4}m=0$有两个相等的实数根，那么实数m的值是（）
+
+    A.16B.4C.$-1$D.1'
+  answer: D
+  solution: '解：∵一元二次方程$x^{3}+x+\frac{1}{4}m=0$有两个相等的实数根，
+
+    $\triangle=1^{2}-4\times1\times\frac{1}{4}=0$，
+
+    解得：$m = 1$，
+
+    故选：D．'
   knowledge_points:
   - 一元二次方程
-  module: numbersAndExpressions
+  - 根的判别式
+  module: equationsAndInequalities
   difficulty: 基础
   recommended_for:
   - L0
@@ -169,12 +162,18 @@ questions:
 - id: 6
   type: 选择
   score: 2
-  question: "北京城市副中心绿心公园步行道上有“二十四节气”，每个节气都有独特的设计和标识，在一个不透明的盒子中放了6张关于“二十四节气”的卡片，其中有2张“立春”，3张“立夏”，1张“立秋”，这些卡片除了画面内容外其他都相同，从中随机摸出一张卡，恰好是“立春”的可能性大小为（   ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '北京城市副中心绿心公园步行道上有“二十四节气”，每个节气都有独特的设计和标识，在一个不透明的盒子中放了6张关于“二十四节气”的卡片，其中有2张“立春”，3张“立夏”，1张“立秋”，这些卡片除了画面内容外其他都相同，从中随机摸出一张卡，恰好是“立春”的可能性大小为（）
+
+    A.$\frac{1}{2}$B.$\frac{1}{3}$C.$\frac{1}{6}$D.$\frac{1}{5}$'
+  answer: B
+  solution: '解：在一个不透明的盒子中装了6张关于“二十四节气”的卡片，其中有2张“立春”，
+
+    ∴从中随机摸出一张卡片，恰好是“立春”的可能性为$\frac{2}{6}=\frac{1}{3}$，
+
+    故选：B．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 概率
+  module: statisticsAndProbability
   difficulty: 中档
   recommended_for:
   - L1
@@ -183,39 +182,148 @@ questions:
 - id: 7
   type: 选择
   score: 2
-  question: "下面是“经过直线外一点作这条直线的垂线”的尺规作图方法．\n（1）任意取一点、使点和点在的两旁，\n（2）设点为圆心，长为半径作弧，交于点和点．\n（3）分别以点和点为圆心．大于的同样长为半径作弧．两弧相交于点．\n（4）作直线．则直线就是所求作的垂线．\n根据以上尺规作图过程（如图），给出下面四个结论：①点到四点的距离一定都相等；②点与点一定关于直线对称；③点与点一定关于直线对称；④连接．，一定有．\n\
-    上述结论中，正确结论的序号是（   ）\nA. ①②\tB. ①③\tC. ②③\tD. ②④"
-  answer: ''
-  solution: ''
+  question: '下面是“经过直线l外一点A作这条直线的垂线”的尺规作图方法．
+
+    （1）任意取一点B、使点B和点A在l的两旁，
+
+    （2）设点A为圆心，AB长为半径作弧，交l于点C和点D．
+
+    （3）分别以点C和点D为圆心．大于$\frac{1}{2}CD$的同样长为半径作弧．两弧相交于点E．
+
+    （4）作直线AE．则直线AE就是所求作的垂线．
+
+    [图]
+
+    根据以上尺规作图过程（如图），给出下面四个结论：①点A到$C, B, E, D$四点的距离一定都相等；②点C与点D一定关于直线AE对称；③点A与点E一定关于直线l对称；④连接AC．$CE、AD、ED$，一定有$\triangle ACE \cong \triangle ADE$．
+
+    上述结论中，正确结论的序号是（）
+
+    A.①②B.①③C.②③D.②④'
+  answer: D
+  solution: '解：$\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$步骤（2）以点A为圆心，AB长为半径作弧，交l于点C和点D，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$AC = AD = AB$，
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$点E是步骤（3）中以点C和点D为圆心．相同半径画弧的交点，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$CE = DE$，
+
+    因点E的位置由两弧交点决定，无法保证AE的长度等于AB，
+
+    故结论①错误；
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$步骤（3）中，以点C和点D为圆心．相同半径画弧，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$交点E必在CD的垂直平分线上，即AE是CD的垂直平分线，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circ'
   knowledge_points:
   - 尺规作图
-  module: circles
+  module: triangles
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2025-tongzhou-yi-fig08.png
 - id: 8
   type: 选择
   score: 2
-  question: "如图，在中，，，将线段绕点顺时针旋转，得到线段，连接，过点作交的延长线于点，连接，那么的度数（    ）\nA. 随着的增大而增大\tB. 随着的增大而减小\nC. 不变\tD. 随着的增大，先增大后减小"
-  answer: ''
-  solution: ''
+  question: '如图，在$V_{ABC}$中，$\angle ACB=90^\circ$，$AC = BC$，将线段CB绕点C顺时针旋转$\alpha(0^{\circ}<\alpha<90^{\circ})$，得到线段CD，连接BD，过点A作$AE \perp BD$交BD的延长线于点E，连接AD，那么$\angle DAE$的度数（）
+
+    [图]
+
+    A.随着a的增大而增大B.随着a的增大而减小
+
+    C.不变D.随着a的增大，先增大后减小'
+  answer: C
+  solution: '解：∵将线段CB绕点C顺时针旋转$a(0^{\circ}<a<90^{\circ})$，得到线段CD，
+
+    ∴$BC = CD = AC$，
+
+    ∴$\angle CBD=\angle CDB,\angle ADC=\angle CAD$，
+
+    ∴$\angle BDC+\angle CDA=\frac{1}{2}(360^\circ-\angle ACB)-135^\circ=\angle BDA$，
+
+    ∵$\angle BDA=\angle AED+\angle DAE=135^\circ$，
+
+    ∴$\angle DAE = \angle BDA - \angle AED = 45^\circ$，
+
+    ∴$\angle DAE$的度数是定值，不变
+
+    故选：C．'
   knowledge_points:
   - 旋转
-  module: geometryComprehensive
+  module: triangles
   difficulty: 较难
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2025-tongzhou-yi-fig09.png
 - id: 9
   type: 填空
   score: 2
-  question: 如果代数式有意义，那么实数的取值范围是_____．
-  answer: ''
-  solution: ''
+  question: 如果代数式$\frac{x+2}{x-1}$有意义，那么实数x的取值范围是_____．
+  answer: $x \ne 1$
+  solution: '解：如果代数式$\frac{x+2}{x-1}$有意义，则$x-1\neq0$，
+
+    $\therefore x \ne 1$，
+
+    故答案为：$x \ne 1$．'
   knowledge_points:
-  - 综合
+  - 不等式
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -226,12 +334,19 @@ questions:
 - id: 10
   type: 填空
   score: 2
-  question: 分解因式：_____．
-  answer: ''
-  solution: ''
+  question: 分解因式：$x^{3}-xy^{2}=$_____．
+  answer: $x(x+y)(x-y)$
+  solution: '解：$x^{3}-xy^{2}$
+
+    $= x\left(x^{2} - y^{2}\right)$
+
+    $-x(x+y)(x-y)$
+
+    故答案为：$x(x+y)(x-y)$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 因式分解
+  - 方差
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -241,12 +356,22 @@ questions:
 - id: 11
   type: 填空
   score: 2
-  question: 方程的解为_____．
-  answer: ''
-  solution: ''
+  question: 方程$\frac{3}{2x+1}-\frac{1}{x}=0$的解为_____．
+  answer: $x = 1$
+  solution: '解：$\frac{3}{2x+1}-\frac{1}{x}=0$，
+
+    方程两边同乘$x(2x+1)$，得$3x-\left(2x+1\right)=0$，
+
+    解得$x = 1$，
+
+    检验：当$x = 1$时，$x(2x+1)\neq0$，
+
+    所以分式方程的解是$x = 1$，
+
+    故答案为：$x = 1$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 分式方程
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -256,24 +381,44 @@ questions:
 - id: 12
   type: 填空
   score: 2
-  question: 如图，，都是的切线，切点分别为，若，那么的度数是_____．
-  answer: ''
-  solution: ''
+  question: '如图，CA，CB都是$\odot\odot$的切线，切点分别为$A,B$，若$\angle AOB=100^{\circ}$，那么$\angle ACB$的度数是_____．
+
+    [图]'
+  answer: $80^\circ$
+  solution: '解：∵CA，CB都是$\odot\odot$的切线，
+
+    ∴$\angle CAO = 90^\circ$，$\angle CBO = 90^\circ$，
+
+    ∴$\angle ACB=360^{\circ}-\angle AOB-\angle CAO-\angle CBO=360^{\circ}-100^{\circ}-90^{\circ}-90^{\circ}=80^{\circ}$，
+
+    故答案$[公式]$：$80^\circ$．'
   knowledge_points:
   - 切线
-  module: circles
+  module: triangles
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  figures:
+  - figures/2025-tongzhou-yi-fig10.png
 - id: 13
   type: 填空
   score: 2
-  question: 点都在反比例函数的图象上，如果，那么的值是_____．
-  answer: ''
-  solution: ''
+  question: 点$A(x_{1},y_{1}),B(x_{2},y_{2})$都在反比例函数$y=\frac{3}{x}$的图象上，如果$x_{1}+x_{2}=0$，那么$y_{1}+y_{2}$的值是_____．
+  answer: '0'
+  solution: '解：∵点$A(x_{1},y_{1}),B(x_{2},y_{2})$在函数$y=\frac{3}{x}$的图象上，
+
+    ∴$x_1=\frac{3}{x},\quad x_2=\frac{3}{x_2}$，
+
+    ∵$x_{1}+x_{2}=0$，
+
+    ∴$x_{2}=-x_{1}$，
+
+    ∴$x_{1}+x_{2}-\frac{3}{x_{1}x_{2}}=0$，
+
+    故答案为：0．'
   knowledge_points:
   - 反比例函数
   module: functions
@@ -287,9 +432,41 @@ questions:
   score: 2
   question: '《义务教育劳动课程标准（2022年版）》将劳动教育纳入学生综合素质评价体系，“五育”并举，全面育人．某中学共有1000名学生，为了解这1000名学生每周参加家务劳动的时长情况，从中随机抽取了100名学生进行访问，统计了他们的家务劳动时长（单位：小时），数据整理如下：
 
+    家务劳动时长
+
+    $x<1$
+
+    $1\leq x<2$
+
+    $2\leq x<3$
+
+    $3\leq x<4$
+
+    $4\leq x<5$
+
+    $x\geq5$
+
+    学生人数
+
+    10
+
+    30
+
+    23
+
+    20
+
+    15
+
+    2
+
     根据以上数据，估计这1000名学生中家务劳动时长不小于3小时的学生的人数为_____名．'
-  answer: ''
-  solution: ''
+  answer: '370'
+  solution: '解：$1000\times\frac{20+15+2}{100}=370$，
+
+    即这1000名学生中家务劳动时长不小于3小时的学生的人数约为370名．
+
+    故答案为：370．'
   knowledge_points:
   - 统计
   module: statisticsAndProbability
@@ -301,10 +478,41 @@ questions:
 - id: 15
   type: 填空
   score: 2
-  question: 小云在学习了勾股定理后，尝试制作了四个全等直角三角形纸板，并拼出一个新图形如图所示，其中四边形是正方形．如果，四边形的面积为25，那么的长为_____．
-  answer: ''
-  solution: ''
+  question: '小云在学习了勾股定理后，尝试制作了四个全等直角三角形纸板，并拼出一个新图形如图所示，其中四边形$ABCD$是正方形．如果$EF = 1$，四边形$ABCD$的面积为25，那么GH的长为_____．
+
+    [图]'
+  answer: '7'
+  solution: '解：$\triangle AFB\cong\triangle DGC\cong\triangle CHB\cong\triangle DEA$，
+
+    $\therefore AE = BF = BH = GC$，$AF = CH$，
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$正方形$ABCD$的面积为25，
+
+    $\therefore AB = 5$，
+
+    设$AE = BF = x$，则$AF = x + 1$，
+
+    $AC^{2}+BC^{2}=AB^{2}$，
+
+    $\ldots(x+1)^{2}+x^{2}=5^{2}$，
+
+    解得：$x_{1}=3,\ x_{2}=-4$（舍），
+
+    $\ldots CH=AF=x+1=4$，$GC = BF = 3$，
+
+    $\therefore GH = GC + CH = 7$，
+
+    故答案为：7．'
   knowledge_points:
+  - 全等三角形
   - 勾股定理
   - 正方形
   module: triangles
@@ -313,16 +521,122 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2025-tongzhou-yi-fig11.png
 - id: 16
   type: 填空
   score: 2
   question: '某次数学竞赛中有5道选择题，每题1分，每道题在A、B、C三个选项中，只有一个是正确的．下表是甲、乙、丙、丁四位同学每道题填涂的答案和这5道题的得分：
 
-    （1）则丁同学的得分是           ；
+    第一题
 
-    （2）如果有一个同学得了1分，他的答案可能是           （写出一种即可）'
-  answer: ''
-  solution: ''
+    第二题
+
+    第三题
+
+    第四题
+
+    第五题
+
+    得分
+
+    甲
+
+    C
+
+    C
+
+    A
+
+    B
+
+    B
+
+    4
+
+    乙
+
+    C
+
+    C
+
+    B
+
+    B
+
+    C
+
+    3
+
+    丙
+
+    B
+
+    C
+
+    C
+
+    B
+
+    B
+
+    2
+
+    丁
+
+    B
+
+    C
+
+    C
+
+    B
+
+    A
+
+    （1）则丁同学的得分是；
+
+    （2）如果有一个同学得了1分，他的答案可能是（写出一种即可）'
+  answer: （1）3（2）$CACCC$（答案不唯一）
+  solution: '【小问1详解】
+
+    解：当甲选错了第1题，那么，其余四道全对，
+
+    针对于乙来看，第1，3，5道错了，做对两道，此时，得分为2，而乙得分3，所以，此种情况不符合题意，
+
+    当甲选错了第2题，那么其余四道全对，
+
+    针对于乙来看，第2，3，5道错了，做对2道，此时，得分为2分，而乙得分3分，所以，此种情况不符合题意，
+
+    当甲选错第3题时，那么其余四道都对，
+
+    针对于乙来看，第5道错了，而乙的得分是3分，所以，乙只能做对3道，即：第3题乙也选错，即：第3题的选项C正确，
+
+    针对于丙来看，第1，5题错了，做对3道，此时，丙的得分为3分，而丙的得分为2分，所以，此种情况不符合题意，
+
+    当甲选错第4题，那么其余四道都对，
+
+    针对于乙来看，第3，4，5道错了，做对了2道，此时，得分2分，而乙的得分为3分，所以，此种情况不符合题意，
+
+    当甲选错第5题，那么其余四道都对，
+
+    针对于乙来看，第3道错了，而乙的得分为3分，所以，乙只能做对3道，所以，乙第5题也错了，所以，第5题的选项A是正确的，
+
+    针对于丙来看，第1，3，5题错了，做对了2道，得分2分，
+
+    针对于丁来看，第3，5题错了，做对了3道，得分3分，
+
+    故答案$[公式]$：3；
+
+    【小问2详解】
+
+    解：由（1）知，五道题的正确选项分别是：$CCABA$，
+
+    如果有一个同学得了1分，那么，只选对1道，
+
+    即：他的答案可能是$CACCC$或$CBCCC$或$CABAB$或$BBBB$等，
+
+    故答案为：$CACCC$（答案不唯一）'
   knowledge_points:
   - 综合
   module: geometryComprehensive
@@ -333,12 +647,19 @@ questions:
 - id: 17
   type: 解答
   score: 5
-  question: （第17题，详见原卷）
-  answer: ''
-  solution: ''
+  question: 计算：$\left(\frac{1}{3}\right)^{-1}+4\sin45^{\circ}+|-3|-\sqrt{8}$．
+  answer: $6$
+  solution: '解：$\left(\frac{1}{3}\right)^{-1}+4\sin45^{\circ}+|-3|-\sqrt{8}$
+
+    $m=3+4\times\frac{\sqrt{2}}{2}+3-2\sqrt{2}$
+
+    $3+2\sqrt{2}+3-2\sqrt{2}$
+
+    $=6$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 三角函数
+  - 绝对值
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -348,9 +669,35 @@ questions:
 - id: 18
   type: 解答
   score: 5
-  question: 解不等式组：．
-  answer: ''
-  solution: ''
+  question: '解不等式组：$\begin{cases}
+
+    5x+2>4(x-1)\\
+
+    \dfrac{4x-3}{3}<x
+
+    \end{cases}$．'
+  answer: $-6 < x < 3$
+  solution: '解：$\begin{aligned}
+
+    &5x+2>4(x-1)\quad①\\
+
+    &\frac{4x-3}{3}<x\quad②
+
+    \end{aligned}$
+
+    解不等式①，得$x > -6$
+
+    解不等式②，得$x<3$
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$这个不等式组的解集是$-6 < x < 3$．'
   knowledge_points:
   - 不等式
   - 不等式组
@@ -364,12 +711,32 @@ questions:
 - id: 19
   type: 解答
   score: 5
-  question: 已知，求代数式的值．
-  answer: ''
-  solution: ''
+  question: 已知$a + 2b - 3 = 0$，求代数式$\frac{3a-2(a-b)}{a^{2}+4ab+4b^{2}}$的值．
+  answer: $\frac{1}{3}$
+  solution: '解：$\frac{3a-2(a-b)}{a^{2}+4ab+4b^{2}}$
+
+    $\frac{3a-2a+2b}{(a+2b)^{2}}$
+
+    $=\frac{a+2b}{(a+2b)^2}$
+
+    $\frac{1}{a+2b}$
+
+    ∵$a + 2b - 3 = 0$
+
+    $a + 2b = 3$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$原式$=\frac{1}{3}$'
   knowledge_points:
   - 综合
-  module: geometryComprehensive
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -379,30 +746,113 @@ questions:
 - id: 20
   type: 解答
   score: 5
-  question: '如图，在中，，是边上的中线，过点作于点，过点作交的延长线于点，连接．
+  question: '如图，在$V_{ABC}$中，$\angle ACB=90^\circ$，CD是AB边上的中线，过点D作$DE \perp CB$于点E，过点C作$CF \parallel AB$交DE的延长线于点F，连接FB．
 
-    （1）求证：四边形是平行四边形；
+    [图]
 
-    （2）若，求长．'
-  answer: ''
-  solution: ''
+    （1）求证：四边形$ACFD$是平行四边形；
+
+    （2）若$CD = 5, \sin A = \frac{4}{5}$，求EF的长．'
+  answer: （1）见解析（2）$EF = 3$
+  solution: '【小问1详解】
+
+    证明：$\angle ACB=90^{\circ},DF\perp CB$，
+
+    $WAC \parallel DF$，
+
+    $\because CF \parallel AB$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$四边形$ACFD$是平行四边形；
+
+    【小问2详解】
+
+    解：$\angle ACB=90^{\circ},D$是AB的中点，
+
+    $CD=DB=\frac{1}{2}AB$，
+
+    $\because CD = 5$，
+
+    $\because AB=2CD=10$，
+
+    在$\mathrm{Rt}\triangle ACB$中，$\angle ACB=90^{\circ},\sin A=\frac{4}{5}$，
+
+    $\therefore \sin A = \frac{BC}{AB}$，
+
+    $\therefore \frac{BC}{10} = \frac{4}{5}$，
+
+    $\therefore BC = 8$，
+
+    由勾股定理得：$AC = \sqrt{AB^{2} - BC^{2}} = 6$，
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$四边形$ACFD$是平行四边形，
+
+    $DF = AC = 6$，
+
+    $\because CD=DB, DO\perp CB$，
+
+    $\therefore CE = EB$，
+
+    $\therefore DE$是$\triangle ACB$的中位线，
+
+    $\therefore DE = \frac{1}{4}AC = 3$，
+
+    $\therefore EF'
   knowledge_points:
+  - 勾股定理
   - 平行四边形
-  module: quadrilaterals
+  module: triangles
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2025-tongzhou-yi-fig12.png
 - id: 21
   type: 解答
   score: 5
   question: 某水稻实验基地防治病害虫有无人机喷洒和人工打药两种方式．在一次作业中，一架无人机工作2小时和一名工人工作8小时，共完成了340亩的打药任务（不重复作业），通过测量对比发现无人机每小时作业的面积恰好是人工的6倍．请问一架无人机和一名工人共同作业8小时能否完成960亩的打药任务，并说明理由．
-  answer: ''
-  solution: ''
+  answer: 无人机和人工共同作业8小时不能完成960亩的打药任务，理由见解析
+  solution: '解：设人工每小时作业面积是x亩，无人机每小时作业面积是y亩，
+
+    根据题意得：$\begin{cases}
+
+    8x + 2y = 340 \\
+
+    y = 6x
+
+    \end{cases}$，
+
+    解得：$\begin{cases}
+
+    x = 17 \\
+
+    y = 102
+
+    \end{cases}$，
+
+    $8(x+y)=8\times(17+102)-952=960.$
+
+    所以无人机和人工共同作业8小时不能完成960亩的打药任务．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 二元一次方程组
+  module: equationsAndInequalities
   difficulty: 中档
   recommended_for:
   - L1
@@ -411,13 +861,55 @@ questions:
 - id: 22
   type: 解答
   score: 5
-  question: '在平面直角坐标系中，一次函数的图象经过和两点，与轴交于点．
+  question: '在平面直角坐标系xOy中，一次函数$y=kx+b\,(k\neq0)$的图象经过$A(-1,0)$和$B(2,3)$两点，与y轴交于点C．
 
-    （1）求这个一次函数的表达式及点的坐标；
+    [图]
 
-    （2）当时，对于的每一个值．一次函数的值小于一次函数的值且大于1，直接写出的取值范围．'
-  answer: ''
-  solution: ''
+    （1）求这个一次函数的表达式及点C的坐标；
+
+    （2）当$x>2$时，对于x的每一个值．一次函数$y = mx$的值小于一次函数$y=kx+b\,(k\neq0)$的值且大于1，直接写出m的取值范围．'
+  answer: （1）$y=x+1$，点C的坐标为$(0,1)$ （2）$\frac{1}{2} \leq m \leq 1$
+  solution: '【小问1详解】
+
+    解：$\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$一次函数$y=kx+b\,(k\neq0)$的图象经过$A(-1,0)$和$B(2,3)$两点，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\left\{\begin{array}{l} -k + b = 0 \\ 2k + b = 3 \end{array}\right.$，
+
+    解得$\left\{\begin{array}{l}k=1\\b=1\end{array}\right.$，
+
+    该一次函数的表达式为$y=x+1$，
+
+    令$x = 0$，得$y=x+1=1$，
+
+    $\therefore C(0,1)$；
+
+    【小问2详解】
+
+    解：在同一坐标系中，作出$y = mx$和$y=x+1$的图象如下；
+
+    [图]
+
+    结合图象可得，
+
+    ∵当$x>2$时，对于x的每一个值．一次函数$y = mx$的值小于一次函数$y=kx+b\,(k\neq0)$的值且大于1，
+
+    ∴$\frac{1}{2} \leq m \leq 1$．'
   knowledge_points:
   - 一次函数
   - 坐标系
@@ -427,28 +919,83 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2025-tongzhou-yi-fig13.png
+  - figures/2025-tongzhou-yi-fig14.png
 - id: 23
   type: 解答
   score: 6
   question: '2024年7月27日，联合国教科文组织第46届世界遗产大会通过决议，将“北京中轴线——中国理想都城秩序的杰作”列人《世界遗产名录》．某校组织七、八年级学生开展关于“北京中轴线”研学活动，其中八年级有200名学生，七年级有300名学生，两个年级所有学生都参加了有关“北京中轴线”知识问答，为了解两个年级学生的答题情况，进行了抽样调查，从七、八年级各随机抽取20名学生，对他们本次知识问答的成绩（百分制）进行了整理、描述和分析．下面给出了部分信息：
 
-    a．八年级成绩的频数分布直方图如下（数据分成4组：，，，：
+    a．八年级成绩的频数分布直方图如下（数据分成4组：$60 \leq x < 70$，$70 \leq x < 80$，$80 \leq x < 90$，$90\leq x\leq100$：
 
-    b．八年级成绩在这一组的是：74  74  75  77  77  77  77  78  79   79
+    b．八年级成绩在$70 \leq x < 80$这一组的是：74
 
-    c．七、八年级成绩平均数、中位数如下：
+    74  75  77  77  77  77  78  79   79
+
+    c．七、八年级成绩的平均数、中位数如下：
+
+    [图]
+
+    平均数
+
+    中位数
+
+    七年级
+
+    77
+
+    81.5
+
+    八年级
+
+    79.5
+
+    m
 
     根据以上信息，回答下列问题：
 
-    （1）写出表中的值；
+    （1）写出表中m的值；
 
-    （2）两个年级分别对本次抽取的学生的成绩进行等级赋分，超过本年级的平均分就可以赋予等级，判断在本次抽取的学生中_____年级赋予等级的学生更多（填“七”或“八”）；
+    （2）两个年级分别对本次抽取的学生的成绩进行等级赋分，超过本年级的平均分就可以赋予等级A，判断在本次抽取的学生中_____年级赋予等级A的学生更多（填“七”或“八”）；
 
     （3）在随机抽样的学生中，知识问答成绩为80分的学生，在_____年级排名更靠前，理由是_____；
 
     （4）估计该校七、八年级所有学生本次知识问答的平均分．'
-  answer: ''
-  solution: ''
+  answer: （1）78.5 （2）七年级赋予等级A的学生更多 （3）八；该学生的成绩大于八年级成绩的中位数，而小于七年级成绩的中位数 （4）该校七、八年级所有学生本次知识问答的平均分为78分
+  solution: '【小问1详解】
+
+    解：根据频数分布直方图和$70 \leq x < 80$的这一组的具体成绩得出第$10$、$11$个数据分别为$78$、$79$，
+
+    所以八年级的中位数$m=\frac{78+79}{2}=78.5$，
+
+    故答案为：$78.5$；
+
+    【小问2详解】
+
+    解：因为七年级的平均数为$77$，中位数为$81.5$，可判断七年级赋予等级A的学生至少有$10$人，
+
+    根据频数分布直方图得八年级赋予等级A的人数为$7+1=8$（人），
+
+    所以在本次抽取的学生中七年级赋予等级A的学生更多，
+
+    故答案为：七；
+
+    【小问3详解】
+
+    在随机抽样的学生中，知识问答成绩为80分的学生，在八年级排名更靠前，理由是：
+
+    ∵该学生的成绩大于八年级成绩的中位数，而小于七年级成绩的中位数，
+
+    ∴知识问答成绩为80分的学生，在八年级排名更靠前，
+
+    故答案为：八，该学生的成绩大于八年级成绩的中位数，而小于七年级成绩的中位数
+
+    【小问4详解】
+
+    解：估计七年级$300$名学生成绩的平均数为$77$分，八年级$200$名学生成绩的平均数为$79.5$分，
+
+    所以估计校七、八年级所有学生本次知识问答的平均分为：$77\times300+79.5\times200=78300+200$（分）．'
   knowledge_points:
   - 平均数
   - 中位数
@@ -457,59 +1004,285 @@ questions:
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2025-tongzhou-yi-fig15.png
 - id: 24
   type: 解答
   score: 6
-  question: '如图，是的外接圆，是的直径，点是的中点，连接，分别与交于点．
+  question: '如图，$\odot\odot$是$V_{ABC}$的外接圆，AB是$\odot\odot$的直径，点D是$\widehat{CB}$的中点，连接$AD,OD$，分别与CB交于点$E,F$．
 
-    （1）求证：；
+    [图]
 
-    （2）过点作的切线交的延长线于点．若，求半径的长．'
-  answer: ''
-  solution: ''
+    （1）求证：$AC \parallel OD$；
+
+    （2）过点B作$\odot\odot$的切线交OD的延长线于点G．若$\frac{DE}{AE}=\frac{1}{2},DG=3$，求$\odot\odot$半径的长．'
+  answer: （1）见解析（2）3
+  solution: '【小问1详解】
+
+    证明：∵点D是$\widehat{CB}$的中点，
+
+    $\therefore CD = DB$，
+
+    $\angle CAD = \angle DAB$．
+
+    ∵$OA = OD$，
+
+    $\angle ADO = \angle DAB$．
+
+    $\angle CAD = \angle ADO$，
+
+    $\therefore AC \parallel OD$．
+
+    【小问2详解】
+
+    解：如图，
+
+    [图]
+
+    ∵$AC \parallel OD$，
+
+    $\triangle ACE \sim \triangle DFE$，
+
+    $\frac{DF}{AC}=\frac{DE}{AE}=\frac{1}{2}$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$设$DF = x, AC = 2x$，
+
+    ∵AB是$\odot\odot$的直径，
+
+    $\angle ACB = 90^\circ$，
+
+    ∵$AC \parallel OD$，
+
+    $\therefore OD \perp CB$于点F，
+
+    $\therefore CF = FB$，
+
+    $\therefore OF$是$\triangle ACB$的中位线，
+
+    $\therefore AC=2OE=2x$，
+
+    $OB = OD = 2x$，
+
+    ∵BG是$\odot\odot$的切线，
+
+    $\angle GBO = 90^\circ$，
+
+    $\cos\angle GOB=\frac{OB}{OG}=\frac{OF}{OB}$，
+
+    ∵$DG = 3$，
+
+    $\frac{2x}{2x+3}=\frac{x}{2x+3}$，
+
+    ∴$\odot\odot$半径的长为3．'
   knowledge_points:
+  - 圆周角
   - 切线
-  module: circles
+  - 相似三角形
+  module: triangles
   difficulty: 较难
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2025-tongzhou-yi-fig16.png
+  - figures/2025-tongzhou-yi-fig17.png
 - id: 25
   type: 解答
   score: 6
-  question: '在某项目式学习中，甲、乙两小组分别研究在不同条件下某物质质量随时间的变化情况．设实验时间为分钟，甲、乙两小组研究的该物质的质量分别为克、克，其中，与的几组对应值如下表：
+  question: '在某项目式学习中，甲、乙两小组分别研究在不同条件下某物质的质量随时间的变化情况．设实验时间为x分钟，甲、乙两小组研究的该物质的质量分别为$y_{1}$克、$y_{2}$克，其中$y_{1}$，$y_{2}$与x的几组对应值如下表：
 
-    （1）通过分析数据，发现可以用函数刻画与与之间的关系，且与之间满足某种特殊的变化规律：
+    x
+
+    0
+
+    5
+
+    10
+
+    15
+
+    20
+
+    24
+
+    $y_{1}$
+
+    25
+
+    23.5
+
+    20
+
+    14.5
+
+    7
+
+    0
+
+    $y_{2}$
+
+    25
+
+    20
+
+    15
+
+    10
+
+    5
+
+    1
+
+    （1）通过分析数据，发现可以用函数刻画$y_{1}$与$x, y_{2}$与x之间的关系，且$y_{2}$与x之间满足某种特殊的变化规律：
 
     ①在给出的平面直角坐标系中，画出这两个函数的图象；
 
-    ②直接写出与之间的函数表达式是_____；
+    ②直接写出$y_{2}$与x之间的函数表达式是_____；
+
+    [图]
 
     （2）根据以上数据与函数图象，解决下列问题：
 
     ①当实验时间为7.5分钟时，甲、乙两小组所研究的该物质的质量的差约为_____克（结果保留小数点后一位）；
 
-    ②随着实验的进行，当时，实验时间约为_____分钟（结果保留小数点后一位）．'
-  answer: ''
-  solution: ''
+    ②随着实验的进行，当$y_{1}=y_{2}$时，实验时间约为_____分钟（结果保留小数点后一位）．'
+  answer: （1）①见解析；②$y_{2}=-x+25$ （2）①4.5；②22.5
+  solution: '【小问1详解】
+
+    解：①描点并连线如图所示：
+
+    [图]
+
+    ②∵$y_{2}$与x之间的函数图象是一条直线，
+
+    ∴$y_{2}$与x之间是一次函数的关系，
+
+    设$y_{2}$与x之间的函数表达式是$y_{2}=kx+b$（k、b为常数，且$k \neq 0$），
+
+    将坐标$(0,25)$和$(5,20)$分别代入$y_{2}=kx+b$，
+
+    得$\begin{cases}
+
+    b = 25 \\
+
+    5k + b = 20
+
+    \end{cases}$，
+
+    解得$\left\{
+
+    \begin{array}{l}
+
+    k = -1 \\
+
+    b = 25
+
+    \end{array}
+
+    \right.$，
+
+    ∴$y_{2}$与x之间的函数表达式是$y_{2}=-x+25$；
+
+    【小问2详解】
+
+    解：①当实验时间为7.5分钟时，结合（1）函数图象，甲、乙两小组所研究的该物质的质量的差约为$22.5-17.5=5.0$克，
+
+    故答案为：5.0；
+
+    ②随着实验的进行，当$y_{1}=y_{2}$时，结合（1）函数图象，实验时间约为22.5分钟．
+
+    故答案为：22.5．'
   knowledge_points:
+  - 一次函数
   - 坐标系
   module: functions
   difficulty: 较难
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2025-tongzhou-yi-fig18.png
+  - figures/2025-tongzhou-yi-fig19.png
 - id: 26
   type: 解答
   score: 6
-  question: '在平面直角坐标系中，已知抛物线上有两点．
+  question: '在平面直角坐标系xOy中，已知抛物线$y = a(x - m)^2 - 3 (a > 0)$上有$A(x_{1},y_{1})\cdot B(x_{2},y_{2})$两点．
 
-    （1）对于，有，求该抛物线的顶点坐标；
+    （1）对于$x_{1}=-1,x_{2}=3$，有$y_{1}=y_{2}$，求该抛物线的顶点坐标；
 
-    （2）对于任意实数，若，都有，求的值．'
-  answer: ''
-  solution: ''
+    （2）对于任意实数m，若$m-2<x_{1}<m-1,x_{2}>m+2$，都有$y_{1}\cdot y_{2}<0$，求a的值．'
+  answer: （1）$(1,-3)$ （2）$a = \frac{3}{4}$
+  solution: '【小问1详解】
+
+    解：$y=a(x-m)^{2}-3$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$抛物线的顶点坐标为$(m,-3)$，
+
+    $\therefore x_{1}=-1,x_{2}=3$，有$y_{1}=y_{2}$
+
+    $\therefore m=\frac{-1+3}{2}=1$
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$该抛物线的顶点坐标为$(1,-3)$．
+
+    【小问2详解】
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$抛物线的对称轴是直线$x=m, m-2<x_{1}<m, x_{2}>m+2$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$点A在对称轴的左侧，点B在对称轴的右侧，
+
+    设点$A(x_1,y_1)$关于对称轴的对称点为$A''\left(x'',y_1\right)$，
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$抛物线的对称轴是直线$x = m, m - 2 < x_1'
   knowledge_points:
+  - 二次函数
   - 坐标系
   module: functions
   difficulty: 压轴
@@ -518,41 +1291,166 @@ questions:
 - id: 27
   type: 解答
   score: 7
-  question: '以为斜边在它的同侧分别作和，其中，交于点．
+  question: '以AB为斜边在它$[公式]$同侧分别作$Rt\triangle ABC$和$Rt\triangle ABD$，其中$\angle C=\angle D=90^{\circ},AC=BC$，$BC、AD$交于点E．
 
-    （1）如图1，当平分时，求证：；
+    [图]
 
-    （2）如图2，在上取一点，使得，连接，过点作，分别交、于点、点．
+    （1）如图1，当AD平分$\angle CAB$时，求证：$BE = \sqrt{2}CE$；
+
+    （2）如图2，在AD上取一点F，使得$AF = BD$，连接FB，过点C作$CO \perp AD$，分别交AD、FB于点O、点H．
 
     ①依据题意补全图形；
 
-    ②求证：是的中点．'
-  answer: ''
-  solution: ''
+    ②求证：H是FB的中点．'
+  answer: （1）见解析（2）①见解析；②见解析
+  solution: '【小问1详解】
+
+    证明：如图1，过点E作$EG \perp AB$于点G，
+
+    [图]
+
+    $\therefore AD$平分$\angle CAB, EG \perp AB, \angle C = 90^\circ$，
+
+    $\therefore EC = EG$，
+
+    $\angle C=90,AC=BC$，
+
+    $\angle CAB = \angle CBA = 45^\circ$，
+
+    $\sin\angle CBA=\frac{BG}{BE}=\frac{\sqrt{2}}{2}$，
+
+    $BE = \sqrt{2}EG$，
+
+    $BE = \sqrt{2}EC$．
+
+    【小问2详解】
+
+    ①依据题意补全图形；
+
+    [图]
+
+    ②证明：如图3，连接CF、CD．
+
+    [图]
+
+    $\because CH \perp AD, \angle ADB = 90^\circ$，
+
+    $\because CH \parallel BD, \angle CAD + \angle ACO = 90^\circ$，
+
+    $\angle OCE = \angle CBD$，
+
+    $\angle ACB = 90^\circ$，
+
+    $\angle OCE+\angle ACO=90^{\circ}$，
+
+    $\angle OCE = \angle CAD$，
+
+    $\angle CAD = \angle CBD$，
+
+    在$\triangle ACF$和$\triangle BCD$中
+
+    $AC = BC, \\
+
+    \angle CAD = \angle CBD, \\
+
+    AF = BD.$
+
+    $\triangle ACT\cong\triangle BCD(SAS)$，
+
+    $\therefore CF = CD$，
+
+    $\because CH \perp AD$，
+
+    $\therefore FO = OD$，
+
+    $\because CH \parallel BD$，
+
+    $\frac'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 平行线
+  - 全等三角形
+  module: triangles
   difficulty: 压轴
   recommended_for:
   - L3
+  figures:
+  - figures/2025-tongzhou-yi-fig20.png
+  - figures/2025-tongzhou-yi-fig21.png
+  - figures/2025-tongzhou-yi-fig22.png
+  - figures/2025-tongzhou-yi-fig23.png
 - id: 28
   type: 解答
   score: 7
-  question: '在平面直角坐标系中，的半径为1，对于平面内点和轴上点，给出如下定义：将点绕着点旋转得到的对应点恰好在上，称点为的“赋能点”．
+  question: '在平面直角坐标系xOy中，$\odot\odot$的半径为1，对于平面内点P和y轴上点Q，给出如下定义：将点P绕着点Q旋转$90^\circ$得到的对应点$P''$恰好在$\odot\odot$上，称点P为$\odot\odot$的“赋能点”．
 
-    （1）已知点的坐标为．
+    [图]
 
-    ①如图1，在点中，“赋能点”是_____；
+    （1）已知点Q的坐标为$(0,1)$．
 
-    ②如图2，若直线上存在点，使点为的“赋能点”，求的取值范围；
+    ①如图1，在点$P_{1}(2,1),P_{2}(1,1),P_{3}(-1,2)$中，$\odot\odot$的“赋能点”是_____；
 
-    （2）如图3，点．若线段上存在点，使点为的“赋能点”，直接写出的取值范围．'
-  answer: ''
-  solution: ''
+    ②如图2，若直线$y = -x + b$上存在点P，使点P为$\odot\odot$的“赋能点”，求b的取值范围；
+
+    （2）如图3，点$q(0,1),M(-1,2),N(2,2)$．若线段MN上存在点P，使点P为$\odot\odot$的“赋能点”，直接写出t的取值范围．'
+  answer: （1）①$P_{1},P_{3}$；②$-\sqrt{2} \leq b \leq 2 + \sqrt{2}$ （2）$1 \leq t \leq 2 + \frac{\sqrt{2}}{2}$
+  solution: '【小问1详解】
+
+    解：①将$\odot\odot$绕点$Q(0,1)$旋转$90^\circ$，得到半径为1的$\odot_1$和$\odot O_{2}$，其中$O_1(-1,1)$，$O_2(1,1)$，
+
+    $O_{2}P_{1}=-2-1=-1$，$O_{1}P_{3}=2-1=1$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$点$P_{1}$在$\odot O_{2}$上，点$P_3$在$\odot_1$上，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$点$P_{1},P_{3}$是$\odot\odot$的“赋能点”，
+
+    $\therefore OP_{2}=2\neq1$，$O_{2}P_{2}=0\neq1$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$点$P_{2}$不在$\odot_1$上，也不在$\odot O_{2}$上，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$点$P_{2}$不'
   knowledge_points:
+  - 一次函数
   - 旋转
   - 坐标系
   module: geometryComprehensive
   difficulty: 压轴
   recommended_for:
   - L3
+  figures:
+  - figures/2025-tongzhou-yi-fig24.png
+  - figures/2025-tongzhou-yi-fig25.png
+  - figures/2025-tongzhou-yi-fig26.png
+  - figures/2025-tongzhou-yi-fig27.png
+  - figures/2025-tongzhou-yi-fig28.png

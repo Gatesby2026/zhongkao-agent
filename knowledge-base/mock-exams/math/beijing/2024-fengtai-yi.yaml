@@ -1,8 +1,8 @@
 # ============================================================
 # 2024年北京丰台区中考数学一模试卷 — 逐题分析
 # ============================================================
-# 数据来源：knowledge-original/精品解析：2024年北京市丰台区九年级中考一模数学试题（原卷版）.docx
-# 自动生成，部分数学公式可能显示不全（docx公式对象无法完整提取）
+# 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
+# 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
 # 满分：100分  时长：120分钟
 
 year: 2024
@@ -11,94 +11,22 @@ exam_type: 一模
 subject: 数学
 full_score: 100
 duration_minutes: 120
-total_questions: 32
+total_questions: 27
 structure: 8选择(16分) + 8填空(16分) + 12解答(68分)
 questions:
 - id: 1
   type: 选择
   score: 2
-  question: 本试卷共8页，共28道小题．满分100分．考试时间120分钟．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 2
-  type: 选择
-  score: 2
-  question: 在试卷和答题卡上认真填写学校名称、姓名和考号．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 3
-  type: 选择
-  score: 2
-  question: 试题答案一律填涂或书写在答题卡上，在试卷上作答无效．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 4
-  type: 选择
-  score: 2
-  question: 选择题用2B铅笔作答，其他试题用黑色字迹签字笔作答．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 5
-  type: 选择
-  score: 2
-  question: '考试结束，将本试卷和答题卡一并交回．
+  question: '2023年5月28日，我国自主研发的$C919$国产大飞机商业首航取得圆满成功．一架$C919$飞机最大储油量超过$19000$千克．将数据$19000$用科学记数法表示为（）
 
-    第1—8题均有四个选项，符合题意的选项只有一个．'
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 1
-  type: 选择
-  score: 2
-  question: "2023年5月28日，我国自主研发的国产大飞机商业首航取得圆满成功．一架飞机最大储油量超过千克．将数据用科学记数法表示为（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+    A.$0.19\times10^{5}$B.$1.9\times10^{4}$C.$1.9\times10^{3}$D.$19\times10^{3}$'
+  answer: B
+  solution: '解：$19000=1.9\times10^{4}$，
+
+    故选：B．'
   knowledge_points:
   - 科学记数法
+  - 绝对值
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -109,9 +37,19 @@ questions:
 - id: 2
   type: 选择
   score: 2
-  question: "窗花是中国传统民间艺术之一，下列四个窗花作品既是轴对称图形又是中心对称图形的是（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '窗花是中国传统民间艺术之一，下列四个窗花作品既是轴对称图形又是中心对称图形的是（）
+
+    A.[图]B.[图]C.[图]D.[图]'
+  answer: D
+  solution: '不是中心对称图形，是轴对称图形，不符合题意，
+
+    不是中心对称图形，是轴对称图形，不符合题意，
+
+    是中心对称图形，不是轴对称图形，不符合题意，
+
+    既是中心对称图形，又是轴对称图形，符合题意，
+
+    故选：D．'
   knowledge_points:
   - 中心对称图形
   - 轴对称图形
@@ -123,29 +61,58 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-fengtai-yi-fig02.png
+  - figures/2024-fengtai-yi-fig03.png
+  - figures/2024-fengtai-yi-fig04.png
+  - figures/2024-fengtai-yi-fig05.png
 - id: 3
   type: 选择
   score: 2
-  question: "如图，直线，直线l与直线a，b分别交于点A，B，点C在直线b上，且．若，则的大小为（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '如图，直线$a \parallel b$，直线l与直线a，b分别交于点A，B，点C在直线b上，且$CA = CB$．若$\angle1=32^\circ$，则$\angle 2$的大小为（）
+
+    [图]
+
+    A.$32^\circ$B.$58^\circ$C.$74^\circ$D.$106^\circ$'
+  answer: C
+  solution: '解：$\because CA = CB$，$\angle1=32^\circ$，
+
+    $\angle CBA=\angle CAB=\frac{180^\circ-32^\circ}{2}=74^\circ$，
+
+    $\because a \parallel b$，
+
+    $\angle ABC = 74^\circ$，
+
+    故选C．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 平行线
+  module: triangles
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-fengtai-yi-fig06.png
 - id: 4
   type: 选择
   score: 2
-  question: "已知实数a，b满足，则下列结论正确的是（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '已知实数a，b满足$a > b - 1$，则下列结论正确的是（）
+
+    A.$a > b$B.$a < b$C.$a+2>b+1$D.$a+2<b+1$'
+  answer: C
+  solution: '解：A．当$a = 1, b = 1.1$，满足$a > b - 1$，但$a < b$，故A不正确；
+
+    B．当$a = 1, b = 0$，满足$a > b - 1$，但$a > b$，故B不正确；
+
+    C．∵$a > b - 1$，∴$a+2>b-1+2$，∴$a+2>b+1$，故C正确；
+
+    D∵$a > b - 1$，∴$a+2>b-1+2$，∴$a+2>b+1$，故D不正确．
+
+    故选C．'
   knowledge_points:
-  - 综合
+  - 不等式
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -156,9 +123,33 @@ questions:
 - id: 5
   type: 选择
   score: 2
-  question: "我国古代园林连廊常采用八角形的窗户设计，如图1所示，其轮廓是一个正八边形，从窗户向外观看，景色宛如镶嵌于一个画框之中．图2是八角形窗户的示意图，它的一个外角的大小为（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '我国古代园林连廊常采用八角形的窗户设计，如图1所示，其轮廓是一个正八边形，从窗户向外观看，景色宛如镶嵌于一个画框之中．图2是八角形窗户的示意图，它的一个外角$\angle 1$的大小为（）
+
+    [图]
+
+    A.$22.5^\circ$B.$45^\circ$C.$60^\circ$D.$135^\circ$'
+  answer: B
+  solution: '解：$\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$正八边形的外角和为$360^\circ$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$每一个外角为$360^{\circ} \div 8 = 45^{\circ}$，
+
+    故选：B．'
   knowledge_points:
   - 综合
   module: triangles
@@ -168,15 +159,30 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-fengtai-yi-fig07.png
 - id: 6
   type: 选择
   score: 2
-  question: "若关于x的方程有两个不相等的实数根，则满足条件的实数a，c的值可以是（    ）\nA ，\tB. ，\nC. ，\tD. ，"
-  answer: ''
-  solution: ''
+  question: '若关于x的方程$ax^{2}-3x+c=0$有两个不相等的实数根，则满足条件的实数a，c的值可以是（）
+
+    A.$a = 0$，$c = 1$B.$a = 1$，$c = 3$
+
+    C.$a = -2$，$c = -4$D.$a = -1$，$c = 3$'
+  answer: D
+  solution: '解：A、当$a = 0$，$c = 1$时，方程是一元一次方程，本选项不符合题意；
+
+    B、当$a = 1$，$c = 3$时，$\Delta=(-3)^{2}-4\times1\times3=-3<0$，方程没有实数根，本选项不符合题意；
+
+    C、当$a = -2$，$c = -4$时，$\Delta=(-3)^{2}-4\times(-2)\times(-4)=-23<0$，方程没有实数根，本选项不符合题意；
+
+    D、当$a = -1$，$c = 3$时，$\Delta=(-3)^{2}-4\times(-1)\times3=21>0$，，方程有两个不相等实数根，本选项符合题意；
+
+    故选：D．'
   knowledge_points:
-  - 综合
-  module: numbersAndExpressions
+  - 一元二次方程
+  - 根的判别式
+  module: equationsAndInequalities
   difficulty: 中档
   recommended_for:
   - L1
@@ -185,40 +191,106 @@ questions:
 - id: 7
   type: 选择
   score: 2
-  question: "不透明的袋子中装有四个小球，上面分别写有数字“1”，“2”，“3”，“4”，除数字外这些小球无其他差别．从袋中随机同时摸出两个小球，那么这两个小球上的数字之和是5的概率是（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '不透明的袋子中装有四个小球，上面分别写有数字“1”，“2”，“3”，“4”，除数字外这些小球无其他差别．从袋中随机同时摸出两个小球，那么这两个小球上的数字之和是5的概率是（）
+
+    A.$\frac{1}{2}$B.$\frac{1}{3}$C.$\frac{1}{4}$D.$\frac{1}{6}$'
+  answer: B
+  solution: '解：根据题意画树状图如图：
+
+    [图]
+
+    共有12种情况，两次摸出的卡片的数字之和等于5的有4种，
+
+    ∴两次摸出的卡片的数字之和等于5的概率为$\frac{4}{12}=\frac{1}{3}$
+
+    故选：B．'
   knowledge_points:
   - 概率
+  - 树状图
   module: statisticsAndProbability
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-fengtai-yi-fig08.png
 - id: 8
   type: 选择
   score: 2
-  question: "如图，在正方形中，点E，F分别是边上的点，，且，过点E作于点H，过点F作于点G，交于点D，连接设，，，给出下面三个结论：\n①；②；③．\n上述结论中，所有正确结论的序号是（    ）\nA. ①②\tB. ①③\tC. ②③\tD. ①②③"
-  answer: ''
-  solution: ''
+  question: '如图，在正方形$ABCD$中，点E，F分别是$AD, AB$边上的点，$AE = AF$，且$0 < AE < ED$，过点E作$EH \perp BC$于点H，过点F作$FG\perp CD$于点G，$EH, FG$交于点D，连接$OB, OD, BD.$设$AE = a$，$ED = b$，$BD = c$，给出下面三个结论：
+
+    ①$a+b\sqrt{a^{2}+b^{2}}$；②$2\sqrt{a^{2}+b^{2}}>c$；③$a+b>\frac{\sqrt{2}}{2}c$．
+
+    上述结论中，所有正确结论的序号是（）
+
+    [图]
+
+    A.①②B.①③C.②③D.①②③'
+  answer: A
+  solution: '解：∵四边形$ABCD$是正方形，
+
+    ∴$AB = AD, BD = \sqrt{AB^{2} + AD^{2}} = \sqrt{2}AD$
+
+    ∴$AD = AE + ED = \frac{\sqrt{2}}{2}BD$
+
+    即：$a+b=\frac{\sqrt{2}}{2}c$，故③错误；
+
+    ∵$EH \perp BC$，$FG\perp CD$，
+
+    ∴四边形$AEHB, AFGD, AFQE$均是矩形
+
+    ∵$AE = AF$，
+
+    ∴四边形$AFOE$是正方形
+
+    ∴$AE = AF = OE = OF = a$
+
+    ∴$OD = \sqrt{DE^{2} + OE^{2}} = \sqrt{a^{2} + b^{2}}$
+
+    ∵$OE + DE > DO$
+
+    ∴$a+b\sqrt{a^{2}+b^{2}}$，故①正确；
+
+    ∵$AD = AB, AE = AF$,
+
+    ∴$DE = BF$
+
+    ∵$\angle DEO=\angle BFO=90^\circ,OE=OF,$
+
+    ∴$\triangle DEO\cong\triangle BFO$
+
+    ∴$OD=BO=\sqrt{a^{2}+b^{2}}$
+
+    ∵$BO + DO > BD$
+
+    ∴$2\sqrt{a^{2}+b^{2}}>c$，故②正确；
+
+    故选：A'
   knowledge_points:
+  - 勾股定理
   - 正方形
-  module: quadrilaterals
+  module: triangles
   difficulty: 较难
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2024-fengtai-yi-fig09.png
 - id: 9
   type: 填空
   score: 2
-  question: '若代数式有意义，则实数x的取值范围是______．
+  question: 若代数式$\frac{x}{x-3}$有意义，则实数x的取值范围是______．
+  answer: a（x+2y）（x﹣2y）
+  solution: 'ax2﹣4ay2
 
-    10 分解因式：ax2﹣4ay2=__．'
-  answer: ''
-  solution: ''
+    =a（x2﹣4y2）
+
+    =a（x+2y）（x﹣2y），
+
+    故答案为a（x+2y）（x﹣2y）.'
   knowledge_points:
-  - 综合
+  - 方差
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -229,12 +301,22 @@ questions:
 - id: 11
   type: 填空
   score: 2
-  question: 方程的解为______．
-  answer: ''
-  solution: ''
+  question: 方程$\frac{3}{x+2}-\frac{1}{x}=0$的解为______．
+  answer: $x = 1$
+  solution: '解：$\frac{3}{x+2}-\frac{1}{x}=0$，
+
+    方程两边都乘$x(x+2)$，得$3x-(x+2)=0$，
+
+    解得：$x = 1$，
+
+    检验：当$x = 1$时，$x(x+2)=0$，
+
+    所以分式方程的解是$x = 1$．
+
+    故答案为：$x = 1$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 分式方程
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -244,12 +326,19 @@ questions:
 - id: 12
   type: 填空
   score: 2
-  question: 在平面直角坐标系xOy中，若函数的图象经过点和，则m的值为______．
-  answer: ''
-  solution: ''
+  question: 在平面直角坐标系xOy中，若函数$y=\frac{k}{x}(k\neq0)$的图象经过点$A(m,6)$和$B(-3,4)$，则m的值为______．
+  answer: $-2$
+  solution: '解：∵函数$y=\frac{k}{x}(k\neq0)$的图象经过点$A(m,6)$和$B(-3,4)$，
+
+    ∴$6m = -3 \times 4$，
+
+    ∴$m = -2$．
+
+    故答案为：$-2$．'
   knowledge_points:
+  - 反比例函数
   - 坐标系
-  module: geometryComprehensive
+  module: functions
   difficulty: 基础
   recommended_for:
   - L0
@@ -259,25 +348,54 @@ questions:
 - id: 13
   type: 填空
   score: 2
-  question: 如图，是的中位线，点F在上，，连接并延长，与的延长线交于点M．若，则线段的长为______．
-  answer: ''
-  solution: ''
+  question: '如图，DE是$\triangle ABC$的中位线，点F在DB上，$DF=2BF$，连接EF并延长，与CB的延长线交于点M．若$BC = 8$，则线段CM的长为______．
+
+    [图]'
+  answer: '10'
+  solution: '解：$\therefore DE$是$\triangle ABC$的中位线，$BC = 8$，
+
+    $\therefore DE \parallel BC$，$DE=\frac{1}{2}BC=\frac{1}{2}\times8=4$，
+
+    $\triangle DEP \cong \triangle BMK$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\frac{DE}{BM} \cdot \frac{DF}{BF} = \frac{2BF}{BF} = 2$，
+
+    $\therefore BM = 2$，
+
+    ∴$CM = BC + BM = 10$．
+
+    故答案为：10．'
   knowledge_points:
-  - 综合
+  - 相似三角形
   module: triangles
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-fengtai-yi-fig10.png
 - id: 14
   type: 填空
   score: 2
-  question: '2011年国际数学协会正式宣布：将每年的3月14日设为“国际数学节”．某学校在3月14日举办了校园数学节活动，学生可通过参加多项数学活动获得积分（百分制），次日兑换奖品．为了更好地准备奖品，学生会干部从全校名学生中随机抽取名学生的积分，得到数据的频数分布直方图如下（数据分成6组：，，，，，）：
+  question: '2011年国际数学协会正式宣布：将每年的3月14日设为“国际数学节”．某学校在3月14日举办了校园数学节活动，学生可通过参加多项数学活动获得积分（百分制），次日兑换奖品．为了更好地准备奖品，学生会干部从全校$300$名学生中随机抽取$60$名学生的积分，得到数据的频数分布直方图如下（数据分成6组：$40 \leq x < 50$，$50 \leq x < 60$，$60 \leq
+    x < 70$，$70 \leq x < 80$，$80 \leq x < 90$，$90 \leq x \leq 100$）：
 
-    根据以上数据，估计该校名学生中积分不低于分的学生人数约为______．'
-  answer: ''
-  solution: ''
+    根据以上数据，估计该校$300$名学生中积分不低于$70$分的学生人数约为______．
+
+    [图]'
+  answer: $200$
+  solution: '解：该校$300$名学生中积分不低于$70$分的学生人数约为：$300s + \frac{14+18+8}{60} - 200$（人）
+
+    故答案为：$200$'
   knowledge_points:
   - 综合
   module: statisticsAndProbability
@@ -286,37 +404,97 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-fengtai-yi-fig11.png
 - id: 15
   type: 填空
   score: 2
-  question: 如图，A，B，C是上的点，，点D在优弧上，连接．若，，则的半径为______．
-  answer: ''
-  solution: ''
+  question: '如图，A，B，C是$\odot\odot$上的点，$OA \perp BC$，点D在优弧$\widehat{BC}$上，连接$BD, AD$．若$\angle ADB = 30^\circ$，$BC = 2\sqrt{3}$，则$\odot\odot$的半径为______．
+
+    [图]'
+  answer: '2'
+  solution: '解：连接OB，如图所示：
+
+    [图]
+
+    ∵$\angle ADB = 30^\circ$，
+
+    ∴$\angle AOB=2\angle ADB=60^{\circ}$，
+
+    ∵$OA \perp BC$，
+
+    ∴$BE=\frac{1}{2}BC=\sqrt{3}$
+
+    ∴$\frac{OB}{\sin 60^{\circ}}=2$
+
+    故答案为：2'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 圆周角
+  - 垂径定理
+  module: circles
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-fengtai-yi-fig12.png
+  - figures/2024-fengtai-yi-fig13.png
 - id: 16
   type: 填空
   score: 2
   question: '车间里有五台车床同时出现故障．已知第一台至第五台修复的时间如下表：
 
+    车床代号
+
+    A
+
+    B
+
+    C
+
+    D
+
+    E
+
+    修复时间（分钟）
+
+    15
+
+    8
+
+    29
+
+    7
+
+    10
+
     若每台车床停产一分钟造成经济损失10元，修复后即可投入生产．
 
     （1）若只有一名修理工，且每次只能修理一台车床，则下列三个修复车床的顺序：
 
-    ①；②；③中，经济损失最少的是______（填序号）；
+    ①$D \to B \to E \to A \to C$；②$D \to A \to C \to E \to B$；③$C \to A \to E \to B \to D$中，经济损失最少的是______（填序号）；
 
     （2）若由两名修理工同时修理车床，且每台车床只由一名修理工修理，则最少经济损失为______元．'
-  answer: ''
-  solution: ''
+  answer: ①.①②.1010
+  solution: '解：（1）①总停产时间：$5\times7+4\times8+3\times10+2\times15+29=156$分钟，
+
+    ②总停产时间：$5\times7+4\times15+3\times29+2\times10+6=210$分钟，
+
+    ③总停产时间：$5\times29+4\times15+3\times10+2\times8+7=258$分钟，
+
+    故答案为：①；
+
+    （2）一名修理工修按D，E，C的顺序修，另一名修理工修按B，A的顺序修，
+
+    $7\times5+1\times4+9\times3+6\times2+23=101$分钟，
+
+    $161\times10=1610$（元）
+
+    故答案为：1010．'
   knowledge_points:
   - 综合
-  module: geometryComprehensive
+  module: numbersAndExpressions
   difficulty: 较难
   recommended_for:
   - L2
@@ -324,12 +502,19 @@ questions:
 - id: 17
   type: 解答
   score: 5
-  question: （第17题，详见原卷）
-  answer: ''
-  solution: ''
+  question: 计算：$-3+2\cos30^\circ-\left(\frac{1}{3}\right)^{-1}-\sqrt{12}$.
+  answer: $-\sqrt{3}$
+  solution: '解：$-3+2\cos30^\circ-\left(\frac{1}{3}\right)^{-1}-\sqrt{12}$
+
+    $3+2\sqrt{2}-3-2\sqrt{2}$
+
+    $=3+\sqrt{3}-3-2\sqrt{3}$
+
+    $=-\sqrt{3}$.'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 三角函数
+  - 绝对值
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -339,9 +524,27 @@ questions:
 - id: 18
   type: 解答
   score: 5
-  question: 解不等式组：
-  answer: ''
-  solution: ''
+  question: '解不等式组：$\begin{aligned}
+
+    &2x-3>2x-5\\
+
+    &\frac{2x+6}{3}<2-x
+
+    \end{aligned}$'
+  answer: $x<0$
+  solution: '解：$\begin{cases}
+
+    2x-3>3x-5\cdot1\\
+
+    \dfrac{2x+6}{3}<2-x\cdot2
+
+    \end{cases}$
+
+    解不等式①，得$x<2$，
+
+    解不等式②，得$x<0$，
+
+    ∴不等式组的解集为$x<0$．'
   knowledge_points:
   - 不等式
   - 不等式组
@@ -355,12 +558,18 @@ questions:
 - id: 19
   type: 解答
   score: 5
-  question: 已知，求代数式值．
-  answer: ''
-  solution: ''
+  question: 已知$x-3y-2=0$，求代数式$\frac{2x-6y}{x^{2}-6xy+9y^{2}}+\frac{4}{x-3y}$的值．
+  answer: $3$
+  solution: '解：原式$=\frac{2(x-3y)}{(x-3y)^{2}}+\frac{4}{x-3y}=\frac{2}{x-3y}+\frac{4}{x-3y}=\frac{6}{x-3y}$．
+
+    ∵$x-3y-2=0$，
+
+    ∴$x-3y=2$，
+
+    ∴原式$\frac{6}{2}=3$．'
   knowledge_points:
   - 综合
-  module: geometryComprehensive
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -370,50 +579,139 @@ questions:
 - id: 20
   type: 解答
   score: 5
-  question: '如图，在中，，延长至，使得，过点，分别作，，与交于点，连接．
+  question: '如图，在$Rt\triangle ABC$中，$\angle C=90^{\circ}$，延长CB至D，使得$BD = CB$，过点A，D分别作$AE \parallel BD$，$DE \parallel BA$，AE与DE交于点E，连接BE．
 
-    （1）求证：四边形是矩形；
+    [图]
 
-    （2）连接，若，，求的长．'
-  answer: ''
-  solution: ''
+    （1）求证：四边形$ACBE$是矩形；
+
+    （2）连接AD，若$AD = 5\sqrt{2}$，$\tan \angle BAC = \frac{2}{3}$，求AC的长．'
+  answer: （1）见解析（2）$3\sqrt{2}$
+  solution: '【小问1详解】
+
+    证明：（1）∵$AE \parallel BD$，$DE \parallel BA$，
+
+    ∴四边形$ABDE$是平行四边形．
+
+    ∴$AE = BD$．
+
+    ∵$BD = CB$，
+
+    ∴$AE = CB$．
+
+    ∵$AE \parallel BD$，
+
+    ∴四边形$ACBE$是平行四边形．
+
+    ∵$\angle C=90^{\circ}$，
+
+    ∴四边形$ACBE$是矩形．
+
+    【小问2详解】
+
+    ∵在$Rt\triangle ABC$中，$\angle C=90^{\circ}$，$\tan\angle BAC=\frac{BC}{AC}=\frac{2}{3}$，
+
+    ∴设$BC = 2x$，$AC = 3x$，
+
+    ∴$BD = BC = 2x$，
+
+    ∴$DC = 4x$，
+
+    在$Rt\triangle ADC$中，$\angle C=90^{\circ}$，$AD = 5\sqrt{2}$，
+
+    ∵$AC^{2} + DC^{2} = AD^{2}$，
+
+    ∴$(3x)^{*}+(4x)^{y}=(5\sqrt{2})^{2}$，
+
+    解得，$x = \sqrt{2}$，
+
+    ∴$AC = 3x = 3\sqrt{2}$．'
   knowledge_points:
+  - 勾股定理
+  - 平行四边形
   - 矩形
-  module: quadrilaterals
+  module: triangles
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-fengtai-yi-fig14.png
 - id: 21
   type: 解答
   score: 5
-  question: '小刚对诗仙李白的诗作《早发白帝城》中“朝辞白帝彩云间，千里江陵一日还”的说法产生疑问：李白真能在一日之内从白帝城到达江陵吗?小刚经过查阅资料得知，白帝城是现今的重庆奉节，而江陵是现今的湖北荆州．假设李白乘坐的轻舟从奉节到宜昌的速度约为，从宜昌到荆州的速度约为．从奉节到荆州的水上距离约为．经过分析资料，小刚发现从奉节到宜昌的时间比从宜昌到荆州多．根据小刚的假设，回答下列问题：
+  question: '小刚对诗仙李白的诗作《早发白帝城》中“朝辞白帝彩云间，千里江陵一日还”的说法产生疑问：李白真能在一日之内从白帝城到达江陵吗?小刚经过查阅资料得知，白帝城是现今的重庆奉节，而江陵是现今的湖北荆州．假设李白乘坐的轻舟从奉节到宜昌的速度约为$14\mathrm{km/h}$，从宜昌到荆州的速度约为$10\,\text{km/h}$．从奉节到荆州的水上距离约为$350km$．经过分析资料，小刚发现从奉节到宜昌的时间比从宜昌到荆州多$1h$．根据小刚的假设，回答下列问题：
 
-    （1）奉节到宜昌的水上距离是多少？
+    [图]
 
-    （2）李白能在一日（）之内从白帝城到达江陵吗？说明理由．'
-  answer: ''
-  solution: ''
+    （1）奉节到宜昌的水上距离是多少km？
+
+    （2）李白能在一日（$24h$）之内从白帝城到达江陵吗？说明理由．'
+  answer: （1）奉节到宜昌的水上距离为$210km$ （2）李白不能在一日之内从白帝城到达江陵，见解析．
+  solution: '【小问1详解】
+
+    解：（1）设奉节到宜昌的水上距离是xkm．
+
+    根据题意得：$\frac{x}{14}-\frac{350-x}{10}=1$，解得$x=210$．
+
+    答：奉节到宜昌的水上距离为$210km$．
+
+    【小问2详解】
+
+    ∵$\frac{210}{14} - \frac{350 - 210}{10} = 15 + 14 = 29 > 24$，
+
+    ∴李白不能$[公式]$一日之内从白帝城到达江陵．'
   knowledge_points:
   - 综合
-  module: geometryComprehensive
+  module: equationsAndInequalities
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-fengtai-yi-fig15.png
 - id: 22
   type: 解答
   score: 5
-  question: '在平面直角坐标系中，函数的图象经过点和．
+  question: '在平面直角坐标系xOy中，函数$y=kx+b\ (k\neq0)$的图象经过点$A(2,1)$和$B(0,-1)$．
 
     （1）求该函数解析式；
 
-    （2）当时，对于x的每一个值，函数的值小于函数的值且大于，直接写出n的取值范围．'
-  answer: ''
-  solution: ''
+    （2）当$x > -2$时，对于x的每一个值，函数$y = \frac{1}{2}x + n$的值小于函数$y=kx+b\ (k\neq0)$的值且大于$-4$，直接写出n的取值范围．'
+  answer: （1）$y=x-1$ （2）$-3 \leq n \leq -2$
+  solution: '【小问1详解】
+
+    解：由题意得：将点$A(2,1)$和$B(0,-1)$代入$y=kx+b\,(k\neq0)$中得：
+
+    $\left\{ \begin{array} { l } { 2 k + b = 1 } \\ { b = - 1 } \end{array} \right.$，解得：$\left\{\begin{array}{l}k=1\\b=-1\end{array}\right.$，
+
+    ∴该函数解析式为：$y=x-1$；
+
+    $[公式]$小问2详解】
+
+    解：当$x = -2$时，代入$y=x-1$得：$y=-3$，
+
+    在平面直角坐标系中画出直线$y=x-1$和满足条件的直线$y = \frac{1}{2}x + n$，如图：
+
+    [图]
+
+    ∵当$x > -2$时，对于x的每一个值，函数$y = \frac{1}{2}x + n$的值小于函数$y=kx+b\,(k\neq0)$的值，
+
+    ∴当$y = \frac{1}{2}x + n$过$(-2, -3)$时满足题意
+
+    ∴$\frac{1}{2} \times (-2) + n = -3$，$n = -2$，
+
+    ∵当$x > -2$时，对于x的每一个值，函数$y = \frac{1}{2}x + n$的值大于$-4$，
+
+    ∴当$y = \frac{1}{2}x + n$过$(-2,-4)$时满足题意，
+
+    ∴$\frac{1}{2} \times (-2) + n = -4$，$n = -3$，
+
+    综上：满足条件的n的取值范围为：$-3 \leq n \leq -2$．'
   knowledge_points:
+  - 一次函数
   - 坐标系
   module: functions
   difficulty: 中档
@@ -421,34 +719,129 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-fengtai-yi-fig16.png
 - id: 23
   type: 解答
   score: 6
-  question: '为了增强学生体质，某校九年级举办了小型运动会．其中男子立定跳远项目初赛成绩前名的学生直接进入决赛．现将进入决赛的名学生的立定跳远成绩（单位：厘米），数据整理如下：
+  question: '为了增强学生体质，某校九年级举办了小型运动会．其中男子立定跳远项目初赛成绩前$10$名的学生直接进入决赛．现将进入决赛的$10$名学生的立定跳远成绩（单位：厘米），数据整理如下：
 
-    a．名学生立定跳远成绩：
+    a．$10$名学生立定跳远成绩：$244,243,241,240,240,238,238,238,237,236$
 
-    b．名学生立定跳远成绩的平均数、中位数、众数：
+    b．$10$名学生立定跳远成绩的平均数、中位数、众数：
+
+    平均数
+
+    中位数
+
+    众数
+
+    $239.5$
+
+    m
+
+    n
 
     （1）写出表中m，n的值；
 
     （2）现有甲、乙、丙三名未进入决赛的学生，要通过复活赛进入决赛．在复活赛中每人要进行5次测试，每人的5次测试成绩同时满足以下两个条件方可进入决赛：
 
-    i．平均成绩高于已进入决赛的名学生中一半学生的成绩；
+    i．平均成绩高于已进入决赛的$10$名学生中一半学生的成绩；
 
     ii．成绩最稳定．
 
-    ①若甲学生前4次复活赛测试成绩为，要满足条件i，则第5次测试成绩至少为______（结果取整数）；
+    ①若甲学生前4次复活赛测试成绩为$236,238,240,237$，要满足条件i，则第5次测试成绩至少为______（结果取整数）；
 
     ②若甲、乙、丙三名学生的5次复活赛测试成绩如下表：
 
-    则可以进入决赛的学生为______（填“甲”“乙”或“丙”） ．'
-  answer: ''
-  solution: ''
+    第一次
+
+    第二次
+
+    第三次
+
+    第四次
+
+    第五次
+
+    甲
+
+    $236$
+
+    $238$
+
+    $240$
+
+    $237$
+
+    $237$
+
+    乙
+
+    $237$
+
+    $239$
+
+    $240$
+
+    $244$
+
+    $235$
+
+    丙
+
+    $237$
+
+    $242$
+
+    $237$
+
+    $239$
+
+    $240$
+
+    则可以进入决赛的学生为______（填“甲”“乙”或“丙”）
+
+    ．'
+  answer: （1）$m = 239$，$n = 238$ （2）①$240$；②丙
+  solution: '【小问1详解】
+
+    解：将成绩从小到大依次排序为$236,237,238,238,238,240,240,241,243,244$，
+
+    ∴中位数为第5、6位数的平均数为$m = \frac{238 + 240}{2} = 239$，
+
+    众数为$n = 238$，
+
+    ∴$m = 239$，$n = 238$；
+
+    【小问2详解】
+
+    ①解：设第5次测试成绩为x，
+
+    依题意得，$236+238+240+237+x=238\times5$，
+
+    解得，$x>239$，
+
+    ∴第5次测试成绩至少为$240$，
+
+    故答案$[公式]$：$240$；
+
+    ②解：由题意知，$\bar{x}_{B}=\frac{236+237+238+240}{5}=237.6$，$\bar{x}_{2}=\frac{235+237+239+240+244}{5}=239$，$\overline{x}_{1}=\frac{237\times2+239+240+242}{5}=239$，
+
+    ∵$237.6 < 239$，
+
+    ∴乙、丙的成绩更高，
+
+    由题意知，乙的成绩分布为$235-244$，丙的成绩分布为$237-242$，
+
+    ∴丙的数据波动较小，具有更好的稳定性，
+
+    故答案为：$240$，丙．'
   knowledge_points:
   - 平均数
   - 中位数
   - 众数
+  - 不等式
   module: statisticsAndProbability
   difficulty: 较难
   recommended_for:
@@ -457,32 +850,180 @@ questions:
 - id: 24
   type: 解答
   score: 6
-  question: '如图，四边形是的内接四边形，是直径，C是的中点，过点C作的切线交的延长线于点E．
+  question: '如图，四边形$ABCD$是$\odot\odot$的内接四边形，AB是直径，C是$\widehat{BD}$的中点，过点C作$\odot\odot$的切线CE交AD的延长线于点E．
 
-    （1）求证：；
+    [图]
 
-    （2）连接，若，，求的长．'
-  answer: ''
-  solution: ''
+    （1）求证：$CE \perp AE$；
+
+    （2）连接BD，若$BC = 6$，$AC = 8$，求BD的长．'
+  answer: （1）见解析（2）$BD=9.6$
+  solution: '【小问1详解】
+
+    连接OC，
+
+    ∵CE为$\odot\odot$的切线，
+
+    ∴$OC \perp CE$．
+
+    ∴$\angle OCE=90^{\circ}$．
+
+    ∵C是$\widehat{BD}$的中点，
+
+    ∴$\widehat{CB}=\widehat{CD}$，
+
+    ∴$\angle EAC = \angle CAO$．
+
+    ∵$OA = OC$，
+
+    ∴$\angle CAO = \angle ACO$，
+
+    ∴$\angle EAC = \angle ACO$．
+
+    ∴$CO \parallel AE$，
+
+    ∴$\angle E+\angle OCE=180^{\circ}$，
+
+    ∴$\angle E=90^{\circ}$，
+
+    ∴$CE \perp AE$．
+
+    [图]【小问2详解】
+
+    ∵AB为直径，
+
+    ∴$\angle ACB=\angle ADB=90^{\circ}$．
+
+    ∵$BC = 6$，$AC = 8$，
+
+    ∴$AB = 10$．
+
+    ∵$\angle EAC = \angle CAO$，$\angle E=\angle ACB$，
+
+    ∴$\triangle ACE \sim \triangle ABC$．
+
+    ∴$\frac{CE}{BC} = \frac{AC}{AB}$．
+
+    ∴$CE = 4.8$．
+
+    ∵$\angle E=\angle BDE=\angle ECO=90^{\circ}$，
+
+    ∴四边形$EDFC$是矩形．
+
+    ∴$DF = EC = 4.8$，$OC \perp BD$，
+
+    ∴$OF \parallel AD$，
+
+    ∴$\frac{BD}{DF}=\frac{AB}{AO}=2$，
+
+    ∴$BD = 2DF = 9.6$．'
   knowledge_points:
+  - 平行线
+  - 圆周角
   - 切线
-  module: quadrilaterals
+  - 勾股定理
+  - 矩形
+  module: triangles
   difficulty: 较难
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2024-fengtai-yi-fig17.png
+  - figures/2024-fengtai-yi-fig18.png
 - id: 25
   type: 解答
   score: 6
-  question: '一般来说，市面上某种水果出售量较多时，水果的价格就会降低．这时，将水果进行保鲜存储，等到价格上升之后再出售，可获得更高的出售收入．但是保鲜存储是有成本的，而且成本会随着时间的延长而增大，因此出售水果获得的收益要从出售价格中扣除保鲜存储成本．某水果公司的调研小组收集到去年一段时间内某种水果当日每千克的出售价格和保鲜存储成本的部分数据如下：设水果保鲜存储的时间为t天（），当日每千克水果出售价格为元，每千克水果保鲜存储成本为元．
+  question: '一般来说，市面上某种水果出售量较多时，水果的价格就会降低．这时，将水果进行保鲜存储，等到价格上升之后再出售，可获得更高的出售收入．但是保鲜存储是有成本的，而且成本会随着时间的延长而增大，因此出售水果获得的收益要从出售价格中扣除保鲜存储成本．某水果公司的调研小组收集到去年一段时间内某种水果当日每千克的出售价格和保鲜存储成本的部分数据如下：设水果保鲜存储的时间为t天（$1\leq
+    t\leq 20$），当日每千克水果出售价格为$y_{1}$元，每千克水果保鲜存储成本为$y_{2}$元．
+
+    t
+
+    1
+
+    2
+
+    5
+
+    8
+
+    10
+
+    12
+
+    14
+
+    16
+
+    18
+
+    20
+
+    $y_{1}$
+
+    $4.0$
+
+    $6.3$
+
+    $10.8$
+
+    $12.5$
+
+    $12.7$
+
+    $12.4$
+
+    $12.2$
+
+    $11.8$
+
+    $12.0$
+
+    $13.0$
+
+    $y_{2}$
+
+    $2.4$
+
+    $2.8$
+
+    $4.0$
+
+    $5.2$
+
+    $6.0$
+
+    $6.8$
+
+    $7.6$
+
+    $8.4$
+
+    $9.2$
+
+    $10.0$
+
+    [图]
 
     （1）根据表格中的数据，第8天每千克水果的收益为______元；
 
-    （2）通过分析表格中的数据，发现，都可近似看作t的函数，在平面直角坐标系中，描出表中各组数值所对应的点，并用平滑曲线连接这些点；
+    （2）通过分析表格中的数据，发现$y_{1}$，$y_{2}$都可近似看作t的函数，在平面直角坐标系xOy中，描出表中各组数值所对应的点$(t, y_1)$，并用平滑曲线连接这些点；
 
     （3）结合函数图象，将水果保鲜存储第______天至第______天（结果取整数）时，出售每千克水果所获得的收益超过4元．'
-  answer: ''
-  solution: ''
+  answer: （1）$7.3$；（2）见解析 （3）3，14
+  solution: '【小问1详解】
+
+    解：由表格可得：第8天每千克水果出售价格为$y_{1}=12.5$元，每千克水果保鲜存储成本为$y_{2}=5.2$元
+
+    ∴第8天每千克水果的收益为$x_{1}-x_{2}=12.5-5.2=7.3$
+
+    【小问2详解】
+
+    解：如图，
+
+    [图]【小问3详解】
+
+    解：每千克水果的收益为$y_{1}-y_{2}$，由函数图象可得，将水果保鲜存储第3天至第14天时，出售每千克水果所获得的收益超过4元'
   knowledge_points:
   - 坐标系
   module: functions
@@ -490,17 +1031,77 @@ questions:
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2024-fengtai-yi-fig19.png
+  - figures/2024-fengtai-yi-fig20.png
 - id: 26
   type: 解答
   score: 6
-  question: '在平面直角坐标系中，，是抛物线上的两点．
+  question: '在平面直角坐标系xOy中，$M(2,y_{1})$，$N(5,y_{2})$是抛物线$y = x^2 - 2ax$上的两点．
 
-    （1）直接写出一个a的值，使得成立；
+    （1）直接写出一个a的值，使得$y_1 < y_2$成立；
 
-    （2）是抛物线上不同于M，N的点，若对于，都有，求a的取值范围．'
-  answer: ''
-  solution: ''
+    （2）$P(x_1,y_3)$是抛物线$y = x^2 - 2ax$上不同于M，N的点，若对于$0 < x_{3} \leq 1$，都有$y_{1}<y_{3}<y_{2}$，求a的取值范围．'
+  answer: （1）$a = 3$（答案不唯一） （2）$\frac{3}{2}<a\leq\frac{5}{2}$
+  solution: '【小问1详解】
+
+    解：根据抛物线$y = x^2 - 2ax$可得，
+
+    该抛物线开口向上，对称轴为：$x=\frac{-2a}{2}=a$，
+
+    若使得$y_1 < y_2$成立，
+
+    则M点要比N点离对称轴比较近，或者M点和N点都在对称轴右侧，
+
+    $M(2,y_{1})$，$N(5,y_{2})$中点的横坐标为：$\frac{2+5}{2}=3.5$，
+
+    ∴$a<3.5$，
+
+    ∴$a = 3$（答案不唯一）；
+
+    【小问2详解】
+
+    解：∵二次函数解析式为$y = x^2 - 2ax$，
+
+    ∴函数图像开口向上，对称轴为$x = a$，
+
+    ①当$a \leq x_{3}$时，
+
+    ∴点P，M，N均在对称轴右侧，
+
+    ∴由二次函数性质，必有$y_{3}<y_{1}<y_{2}$，不符题意舍去；
+
+    ②当$x_{3} \leq a < 2$时，
+
+    ∵点P在对称轴左侧，设P点关于$x = a$的对称点为$P''$，
+
+    则点$P''$的坐标为$(2a-x_{2},y_{1})$，
+
+    ∵点$P''$，M，N在对称轴右侧，且$y_{1}<y_{3}<y_{2}$，
+
+    ∴$2<2a-x_{3}$，
+
+    ∴$\frac{3}{2}<a<2$；
+
+    ③当$2 \leq a \leq 5$时，
+
+    ∵点P和M在对称轴左侧，由函数性质，有$y_1 < y_3$，
+
+    ∵点$P''$，N在对称轴右侧，且$y_{3}<y_{2}$，
+
+    ∴$2a - x_{3} < 5$，
+
+    ∴$[公式]$；
+
+    ④当$a > 5$时，
+
+    ∴点P，M，N均在对称轴左侧，
+
+    ∴由二次函数性质，必有$y_{3}>y_{1}>y_{2}$，不符题意舍去；
+
+    由①②③④可知，$\frac{3}{2}<a\leq\frac{5}{2}$．'
   knowledge_points:
+  - 二次函数
   - 坐标系
   module: functions
   difficulty: 压轴
@@ -509,38 +1110,153 @@ questions:
 - id: 27
   type: 解答
   score: 7
-  question: '在中，，，点D中点，点E是线段上一点，以点A为中心，将线段逆时针旋转得到线段，连接．
+  question: '在$\triangle ABC$中，$AB = AC$，$\angle BAC = \alpha$，点D是BC中点，点E是线段BC上一点，以点A为中心，将线段AE逆时针旋转$\alpha$得到线段AF，连接EF．
 
-    （1）如图1，当点E与点D重合时，线段，交于点G，求证：点G是的中点；
+    [图]
 
-    （2）如图2，当点E在线段上时（不与点B，D重合），若点H是的中点，作射线交于点M，补全图形，直接写出的大小，并证明．'
-  answer: ''
-  solution: ''
+    （1）如图1，当点E与点D重合时，线段EF，AC交于点G，求证：点G是EF的中点；
+
+    （2）如图2，当点E在线段BD上时（不与点B，D重合），若点H是EF的中点，作射线DH交AC于点M，补全图形，直接写出$\angle AMD$的大小，并证明．'
+  answer: （1）见解析（2）$\angle AMD = 90^\circ$，见解析
+  solution: '【小问1详解】
+
+    ∵$AB = AC$，点D是BC中点，
+
+    ∴$\angle DAC=\frac{1}{2}\angle BAC=\frac{1}{2}\alpha$．
+
+    ∵$\angle DAF = \alpha$，
+
+    ∴$\angle CAP = \angle DAC = \frac{1}{2} a$．
+
+    ∵$AE = AF$，
+
+    ∴点G是EF的中点．
+
+    【小问2详解】
+
+    依题意补全图形．
+
+    [图]
+
+    $\angle AMD = 90^\circ$．
+
+    证明：连接FC，截取$KC = BE$，连接FK交AC于N．
+
+    ∵$\angle BAC=\angle EAF=\alpha$，
+
+    ∴$\angle BAE = \angle CAF$．
+
+    ∵$AE = AF$，$AB = AC$，
+
+    ∴$\triangle BAE \cong \triangle CAF (SAS)$，
+
+    ∴$BE = CF$，$\angle B = \angle ACF$．
+
+    ∵$\angle B=\angle ACB$，
+
+    ∴$\angle ACB = \angle ACF$．
+
+    ∵$KC = BE$，
+
+    ∴$KC = CF$，
+
+    ∴$KF \perp AC$于N．
+
+    ∵点D是BC中点，
+
+    ∴$BD = CD$，
+
+    ∴$DE = DK$．
+
+    ∵点H是EF的中点，
+
+    ∴$DH \parallel KF$，
+
+    ∴$\angle AMD=\angle ANK=90^{\circ}$．'
   knowledge_points:
+  - 全等三角形
+  - 相似三角形
   - 旋转
-  module: geometryComprehensive
+  module: triangles
   difficulty: 压轴
   recommended_for:
   - L3
+  figures:
+  - figures/2024-fengtai-yi-fig21.png
+  - figures/2024-fengtai-yi-fig22.png
 - id: 28
   type: 解答
   score: 7
-  question: '在平面直角坐标系中，半径为1，对于的弦和外一点，给出如下定义：若直线，都是的切线，则称点是弦的“关联点”．
+  question: '在平面直角坐标系xOy中，$\odot\odot$的半径为1，对于$\odot\odot$的弦AB和$\odot\odot$外一点C，给出如下定义：若直线CA，CB都是$\odot\odot$的切线，则称点C是弦AB的“关联点”．
 
-    （1）已知点．
+    [图]
 
-    ①如图1，若的弦，在点，，中，弦的“关联点”是______；
+    （1）已知点$A(-1,0)$．
 
-    ②如图2，若点，点C是的弦的“关联点”，直接写出长；
+    ①如图1，若$\odot\odot$的弦$AB = \sqrt{3}$，在点$C_{1}\left(-1,\sqrt{3}\right)$，$C_{2}(-1,1)$，$C_{3}\left(-1,-\sqrt{3}\right)$中，弦AB的“关联点”是______；
 
-    （2）已知点，线段是以点D为圆心，以1为半径的的直径，对于线段EF上任意一点S，存在的弦，使得点S是弦的“关联点”．当点S在线段上运动时，将其对应的弦长度的最大值与最小值的差记为t，直接写出t的取值范围．'
-  answer: ''
-  solution: ''
+    ②如图2，若点$B\left(-\frac{1}{2},-\frac{\sqrt{3}}{2}\right)$，点C是$\odot\odot$的弦AB的“关联点”，直接写出OC长；
+
+    （2）已知点$D(3,0)$，线段EF是以点D为圆心，以1为半径的$\odot D$的直径，对于线段EF上任意一点S，存在$\odot\odot$的弦AB，使得点S是弦AB的“关联点”．当点S在线段EF上运动时，将其对应的弦AB长度的最大值与最小值的差记为t，直接写出t的取值范围．'
+  answer: （1）①$C_1$，$C_3$；②$\frac{2\sqrt{3}}{3}$． （2）$\frac{3\sqrt{10}}{5}-\frac{4\sqrt{2}}{3}\leq t\leq\frac{\sqrt{15}}{2}-\sqrt{3}$
+  solution: '【小问1详解】
+
+    解：先探究AB长度确定时，OC的长度，如图，
+
+    [图]
+
+    $\because CA$，CB是$\odot\odot$的切线，切点分别为A，B，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$由切线长定理，得$OA \perp AC$，$OB \perp BC$，$AB \perp OC$，
+
+    $\triangle OAC \sim \triangle ODA$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\frac{OC}{OA} = \frac{OA}{OD}$，即$\frac{OC}{r} = \frac{r}{OD}$，
+
+    $\angle O C=\frac{r^{2}}{O D}$，
+
+    ①$\because AB = \sqrt{3}$，$r = 1$，
+
+    $\therefore OD=\sqrt{r^{2}-\left(\frac{AB}{2}\right)^{2}}=\sqrt{1^{2}-\left(\frac{\sqrt{3}}{2}\right)^{2}}=\frac{1}{2}$，
+
+    $\because OC=\frac{r^{2}}{OD}=\frac{1}{2}$，
+
+    $\colon OC_{3}=\sqrt{1^{2}+\left(\sqrt{5}\right)^{2}}=2$，
+
+    $OC=\sqrt{1^{2}+1^{2}}=\sqrt{2}+2$，
+
+    $OC_{'
   knowledge_points:
   - 切线
   - 弦
+  - 相似三角形
+  - 勾股定理
   - 坐标系
-  module: circles
+  module: triangles
   difficulty: 压轴
   recommended_for:
   - L3
+  figures:
+  - figures/2024-fengtai-yi-fig23.png
+  - figures/2024-fengtai-yi-fig24.png
+  - figures/2024-fengtai-yi-fig25.png
+  - figures/2024-fengtai-yi-fig26.png
+  - figures/2024-fengtai-yi-fig27.png
+  - figures/2024-fengtai-yi-fig28.png
+  - figures/2024-fengtai-yi-fig29.png

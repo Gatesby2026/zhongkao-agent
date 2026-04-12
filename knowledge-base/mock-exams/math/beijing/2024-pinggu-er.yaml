@@ -1,8 +1,8 @@
 # ============================================================
 # 2024年北京平谷区中考数学二模试卷 — 逐题分析
 # ============================================================
-# 数据来源：knowledge-original/精品解析：2024年北京市平谷区中考二模数学试题（解析版）.docx
-# 自动生成，部分数学公式可能显示不全（docx公式对象无法完整提取）
+# 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
+# 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
 # 满分：100分  时长：120分钟
 
 year: 2024
@@ -17,9 +17,13 @@ questions:
 - id: 1
   type: 选择
   score: 2
-  question: "据国家能源网消息，截至2023年12月31日，国家能源集团2023年度发电量首次突破1.2万亿千瓦时，其中1 200 000 000 000用科学记数法表示为（    ）\nA. \tB. \tC. \tD."
+  question: '据国家能源网消息，截至2023年12月31日，国家能源集团2023年度发电量首次突破1.2万亿千瓦时，其中1
+
+    200 000 000 000用科学记数法表示为（）
+
+    A.$1.2\times10^{10}$B.$1.2\times10^{11}$C.$1.2\times10^{12}$D.$1.2\times10^{13}$'
   answer: C
-  solution: '解：，
+  solution: '解：$1200000000000 = 1.2 \times 10^{12}$，
 
     故选：C．'
   knowledge_points:
@@ -35,15 +39,17 @@ questions:
 - id: 2
   type: 选择
   score: 2
-  question: "下列几何体中，主视图为三角形的是（　　）\nA. \tB. \tC. \tD."
+  question: '下列几何体中，主视图为三角形的是（　　）
+
+    A.[图]B.[图]C.[图]D.[图]'
   answer: A
-  solution: 'A、主视图为 ，是三角形，故此选项正确；
+  solution: 'A、主视图为[图]，是三角形，故此选项正确；
 
-    B、主视图为 ，是矩形，故此选项错误；
+    B、主视图为[图]，是矩形，故此选项错误；
 
-    C、主视图为 ，是圆，故此选项错误；
+    C、主视图为[图]，是圆，故此选项错误；
 
-    D、主视图为 ，是矩形，故此选项错误；
+    D、主视图为[图]，是矩形，故此选项错误；
 
     故选A．'
   knowledge_points:
@@ -55,16 +61,31 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-pinggu-er-fig02.png
+  - figures/2024-pinggu-er-fig03.png
+  - figures/2024-pinggu-er-fig04.png
+  - figures/2024-pinggu-er-fig05.png
+  - figures/2024-pinggu-er-fig06.png
+  - figures/2024-pinggu-er-fig07.png
+  - figures/2024-pinggu-er-fig08.png
+  - figures/2024-pinggu-er-fig09.png
 - id: 3
   type: 选择
   score: 2
-  question: "一副三角板如图所示摆放，直线，则的度数是（    ）\nA. \tB. \tC. \tD."
+  question: '一副三角板如图所示摆放，直线$a \parallel b$，则$\angle 1$的度数是（）
+
+    [图]
+
+    A.$60^\circ$B.$65^\circ$C.$75^\circ$D.$80^\circ$'
   answer: C
-  solution: '解：∵，
+  solution: '解：∵$a \parallel b$，
 
-    ∴，
+    ∴$\angle2=60^{\circ}$，
 
-    ∴，
+    [图]
+
+    ∴$\angle1=180^\circ-\angle2-45^\circ=75^\circ$，
 
     故选：C．'
   knowledge_points:
@@ -76,14 +97,19 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-pinggu-er-fig10.png
+  - figures/2024-pinggu-er-fig11.png
 - id: 4
   type: 选择
   score: 2
-  question: "若，则下列结论不正确的是（    ）\nA.  \tB.  \tC.  \tD."
-  answer: B
-  solution: '解：∵，
+  question: '若$a<b<0$，则下列结论不正确的是（）
 
-    ∴，，
+    A.$-a > b$B.$a > -b$C.$-a > -b$D.$\left| a \right| > \left| b \right|$'
+  answer: B
+  solution: '解：∵$a<b<0$，
+
+    ∴$a < b < 0 < -b < -a$，$|a|=-a,|b|=-b$，
 
     ∴A、C、D正确，故不符合要求；B错误，故符合要求；
 
@@ -100,11 +126,13 @@ questions:
 - id: 5
   type: 选择
   score: 2
-  question: "如果正多边形的每个外角都等于，则它的边数为（    ）\nA. 5\tB. 6\tC. 7\tD. 8"
-  answer: B
-  solution: '解：∵正多边形的每个外角都等于，
+  question: '如果正多边形的每个外角都等于$60^\circ$，则它的边数为（）
 
-    ∴它的边数为，
+    A.5B.6C.7D.8'
+  answer: B
+  solution: '解：∵正多边形的每个外角都等于$60^\circ$，
+
+    ∴它的边数为$360^{\circ}+60^{\circ}=6$，
 
     故选：B．'
   knowledge_points:
@@ -119,15 +147,47 @@ questions:
 - id: 6
   type: 选择
   score: 2
-  question: "布袋中有三个除颜色外其余均相同的小球，小球颜色两红一白，从中随机同时抽取两个小球，则抽到的两个小球颜色恰好相同的概率是（    ）\nA. \tB. \tC. \tD."
+  question: '布袋中有三个除颜色外其余均相同的小球，小球颜色两红一白，从中随机同时抽取两个小球，则抽到的两个小球颜色恰好相同的概率是（）
+
+    A.$\frac{1}{3}$B.$\frac{1}{2}$C.$\frac{4}{9}$D.$\frac{5}{9}$'
   answer: A
   solution: '解：列表把所有等可能结果表示出来，两个红球分别表示为红1，红2，
 
+    红1
+
+    红2
+
+    白
+
+    红1
+
+    --------
+
+    红1，红2
+
+    红1，白
+
+    红2
+
+    红2，红1
+
+    ----------
+
+    红2，白
+
+    白
+
+    白，红1
+
+    白，红2
+
+    ---------
+
     共有6种等可能结果，其中一个红球一个黄球的结果有2种，
 
-    ∴抽到的两个小球颜色恰好相同的概率为，
+    ∴抽到的两个小球颜色恰好相同的概率为$\frac{2}{6}=\frac{1}{3}$，
 
-    故选：A ．'
+    故选：A．'
   knowledge_points:
   - 概率
   - 树状图
@@ -141,11 +201,35 @@ questions:
 - id: 7
   type: 选择
   score: 2
-  question: "若关于的一元二次方程有两个实数根，则的取值范围为（    ）\nA. \tB. \tC. \tD."
-  answer: D
-  solution: '关于的一元二次方程有两个实数根
+  question: '若关于x的一元二次方程$x^{2}+2x-k=0$有两个实数根，则k的取值范围为（）
 
-    ，，
+    A.$k\ 1$B.$k > -1$C.$k \leq 1$D.$k^{-1}$'
+  answer: D
+  solution: '$\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$关于x的一元二次方程$x^{2}+2x-k=0$有两个实数根
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$b^2 - 4ac \quad 0$
+
+    $\because a = 1$，$b = 2$，$c = -k$
+
+    $\ldots 4-4\times1\times(-k)\quad0$
+
+    $\therefore k-1$
 
     故选：D．'
   knowledge_points:
@@ -160,33 +244,45 @@ questions:
 - id: 8
   type: 选择
   score: 2
-  question: "如图，正方形中，点E为边上的点（点E不与点C、D重合），以为边作正方形，连接，设，，，给出下面三个结论：\n①；\n②；\n③；上述结论中，所有正确结论的序号是（    ）\nA. ①②\tB. ①③\tC. ②③\tD. ①②③"
+  question: '如图，正方形$ABCD$中，点E为CD边上的点（点E不与点C、D重合），以CE为边作正方形$CEFG$，连接AF，设$AB = a$，$CE = b$，$AF = c$，给出下面三个结论：
+
+    ①$\sqrt{a^{2}+b^{2}}<c$；
+
+    ②$2a > c$；
+
+    ③$2(a^{2}+b^{2})=c^{2}$；上述结论中，所有正确结论的序号是（）
+
+    [图]
+
+    A.①②B.①③C.②③D.①②③'
   answer: D
-  solution: '如图，延长交于点H，
+  solution: '如图，延长FE交AB于点H，
 
-    ∵点E为边上的点（点E不与点C、D重合），以为边作正方形，
+    [图]
 
-    ∴，B，C，G三点共线，，
+    ∵点E为CD边上的点（点E不与点C、D重合），以CE为边作正方形$CEFG$，
 
-    ∴，
+    ∴$EF \perp CD$，B，C，G三点共线，$AB \parallel CD$，
 
-    ∴，，
+    ∴$FH \perp AB$，
 
-    ∴，即，
+    ∴$AH = a - b$，$FH = a + b$，
 
-    ∴，故③正确，符合题意；
+    ∴$AF^{2}=AH^{2}+FH^{2}$，即$c^{2}=(a-b)^{2}+(a+b)^{2}$，
 
-    ∵，，
+    ∴$2(a^{2}+b^{2})=c^{2}$，故③正确，符合题意；
 
-    ∴，故①正确，符合题意；
+    ∵$a^{2}+b^{2}>0$，$c^{2}>0$，
 
-    在中，
+    ∴$\sqrt{a^{2}+b^{2}}=\frac{\sqrt{c^{2}}}{2}=\frac{\sqrt{2}}{2}c<c$，故①正确，符合题意；
 
-    ∵，
+    在$\triangle AHF$中，
 
-    ∴，
+    ∵$AH + FH > AF$，
 
-    ∴，故②正确，符合题意；
+    ∴$a-b+a+b>c$，
+
+    ∴$2a > c$，故②正确，符合题意；
 
     故选：D．'
   knowledge_points:
@@ -197,16 +293,19 @@ questions:
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2024-pinggu-er-fig12.png
+  - figures/2024-pinggu-er-fig13.png
 - id: 9
   type: 填空
   score: 2
-  question: 若代数式有意义，则实数x的取值范围是__________．
-  answer: ''
-  solution: '解：∵代数式有意义，
+  question: 若代数式$\frac{x}{x-2}$有意义，则实数x的取值范围是__________．
+  answer: $x \neq 2$
+  solution: '解：∵代数式$\frac{x}{x-2}$有意义，
 
-    ∴，即，
+    ∴$x-2\ne0$，即$x \neq 2$，
 
-    故答案为：．'
+    故答案为：$x \neq 2$．'
   knowledge_points:
   - 综合
   module: numbersAndExpressions
@@ -219,9 +318,11 @@ questions:
 - id: 10
   type: 填空
   score: 2
-  question: 分解因式：______．
-  answer: ''
-  solution: 故答案为：．
+  question: 分解因式：$mn^{2}-9m=$______．
+  answer: $m(n+3)(n-3)$
+  solution: '$mn^{2}-9m=$$m(n^{2}-9)=m(n+3)(n-3)$
+
+    故答案为：$m(n+3)(n-3)$．'
   knowledge_points:
   - 因式分解
   - 方差
@@ -235,23 +336,23 @@ questions:
 - id: 11
   type: 填空
   score: 2
-  question: 方程的解为________．
-  answer: ''
-  solution: '解：，
+  question: 方程$\frac{7}{x+13}=\frac{1}{2x}$的解为________．
+  answer: $x = 1$
+  solution: '解：$\frac{7}{x+13}=\frac{1}{2x}$，
 
-    方程两边都乘，得：，
+    方程两边都乘$2x(x+13)$，得：$14x=x+13$，
 
-    移项，得：
+    移项，得：$14x - x = 13$
 
-    合并得，，
+    合并得，$13x=13$，
 
-    解得，，
+    解得，$x = 1$，
 
-    检验：当时，，
+    检验：当$x = 1$时，$2x(x+13)=28\neq0$，
 
-    所以分式方程的解是．
+    所以分式方程的解是$x = 1$．
 
-    故答案为：．'
+    故答案为：$x = 1$．'
   knowledge_points:
   - 分式方程
   module: numbersAndExpressions
@@ -264,37 +365,69 @@ questions:
 - id: 12
   type: 填空
   score: 2
-  question: 如图，点A、B分别是反比例函数的图象上两点，分别过点A、B向坐标轴作垂线，四边形的面积记作，四边形的面积记作，则______（填、或）．
-  answer: ''
-  solution: '解：∵A，B两点在反比例函数的图像上，
+  question: '如图，点A、B分别是反比例函数$y=\frac{3}{x}(x>0)$的图象上两点，分别过点A、B向坐标轴作垂线，四边形$ACEG$的面积记作$S_1$，四边形$BFDG$的面积记作$S_{2}$，则$S_1$______$S_{2}$（填$\gt$、$\gt$或$=$）．
 
-    ∴，
+    [图]'
+  answer: $=$
+  solution: '解：∵A，B两点在反比例函数$y=\frac{3}{x}(x>0)$的图像上，
 
-    设，
+    ∴$S_{\text{梯形 } ABCD} = S_{\text{矩形 } ABCD} = 3$，
 
-    ∴，，
+    设$S_{\triangle EDOEG}=m$，
 
-    ∴．
+    ∴$S_{1}=3-m$，$S_2 = 3 - m$，
 
-    故答案为：．'
+    ∴$S_{1}=S_{2}$．
+
+    故答案为：$=$．'
   knowledge_points:
   - 反比例函数
   - 矩形
-  module: functions
+  module: quadrilaterals
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-pinggu-er-fig14.png
 - id: 13
   type: 填空
   score: 2
   question: '某中学共有1000名学生，为了解这1000名学生参加志愿者服务的时长情况，从中随机抽取了100名学生进行访问，获得了他们的志愿者服务时长（单位：小时），数据整理如下：
 
+    志愿者服务时长
+
+    $x<100$
+
+    $100 \leq x < 200$
+
+    $200\lt x\lt 300$
+
+    $300 \leq x < 400$
+
+    $400\leqslant x<500$
+
+    $x\ 500$
+
+    学生人数
+
+    10
+
+    20
+
+    23
+
+    20
+
+    15
+
+    12
+
     根据以上数据，估计这1000名学生的志愿者服务时长不小于300小时的学生的人数为______名．'
   answer: '470'
-  solution: '解：，
+  solution: '解：$1000\times\frac{20+15+12}{100}=470$，
 
     即这1000名学生的志愿者服务时长不小于300小时的学生的人数为470名，
 
@@ -310,25 +443,27 @@ questions:
 - id: 14
   type: 填空
   score: 2
-  question: 如图，正方形边长为3，点E为边的中点，连接，与相交于点F，则的长为______．
-  answer: ''
-  solution: '解：∵正方形，
+  question: '如图，正方形$ABCD$$[公式]$边长为3，点E为AD边的中点，连接$BD、CE$，BD与CE相交于点F，则DF的长为______．
 
-    ∴，，，，
+    [图]'
+  answer: $\sqrt{2}$
+  solution: '解：∵正方形$ABCD$，
 
-    ∴，
+    ∴$AD = BC = 3$，$AD \parallel BC$，$\angle CBD = 45^\circ$，$\angle BCD = 90^\circ$，
 
-    ∵，
+    ∴$BD=\frac{BC}{\cos 45^{\circ}}=3\sqrt{2}$，
 
-    ∴，，
+    ∵$AD \parallel BC$，
 
-    ∴，
+    ∴$\angle EDF = \angle CBF$，$\angle DEF = \angle BCF$，
 
-    ∴，即，
+    ∴$\triangle DEF \sim \triangle BCF$，
 
-    解得，，
+    ∴$\frac{DF}{BF} = \frac{DE}{BC}$，即$\frac{DF}{3\sqrt{3}-DF}=\frac{3}{2}$，
 
-    故答案为：．'
+    解得，$DF = \sqrt{2}$，
+
+    故答案为：$\sqrt{2}$．'
   knowledge_points:
   - 弦
   - 相似三角形
@@ -339,16 +474,38 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-pinggu-er-fig15.png
 - id: 15
   type: 填空
   score: 2
-  question: 如图，PA，PB分别与⊙O相切于A，B两点，C是优弧AB上的一个动点，若∠P = 50°，则∠ACB ＝_____________°
-  answer: ''
-  solution: '解：连接，如图，
+  question: '如图，PA，PB分别与⊙O相切于A，B两点，C是优弧AB上的一个动点，若∠P= 50°，则∠ACB＝_____________°
 
-    PA，PB分别与⊙O相切
+    [图]'
+  answer: $65$
+  solution: '解：连接$OA,OB$，如图，
 
-    故答案为：'
+    [图]
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$PA，PB分别与⊙O相切
+
+    $\angle OAP = \angle OBP = 90^\circ$
+
+    $\angle AOB = 360^\circ - \angle OAP - \angle OBP - \angle P = 130^\circ$
+
+    $\because \overrightarrow{AB}=\overrightarrow{AB}$
+
+    $\angle ACB = \frac{1}{2} \angle AOB = 65^\circ$
+
+    故答案为：$65$'
   knowledge_points:
   - 圆周角
   - 切线
@@ -359,6 +516,9 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-pinggu-er-fig16.png
+  - figures/2024-pinggu-er-fig17.png
 - id: 16
   type: 填空
   score: 2
@@ -374,11 +534,57 @@ questions:
 
     各项工序所需时间如下表所示：
 
+    工序
+
+    A
+
+    B
+
+    C
+
+    D
+
+    E
+
+    F
+
+    G
+
+    H
+
+    M
+
+    N
+
+    所需时间/分钟
+
+    18
+
+    15
+
+    16
+
+    6
+
+    7
+
+    5
+
+    8
+
+    3
+
+    2
+
+    3
+
     在不考虑其他因素的前提下，若由若干名学生合作完成准备工作，则至少需要________分钟才能全部完成；若要在最短的时间内合作完成准备工作，则最少需要________名学生共同参与．'
-  answer: ①. 21    ②. 4
-  solution: '解：由题意得：可知需要先完成A，再完成H，完成时长为（分钟）；若要在最短的时间内合作完成准备工作，需要四名学生，具体安排如下
+  answer: ①.21②.4
+  solution: '解：由题意得：可知需要先完成A，再完成H，完成时长为$18+3=21$（分钟）；若要在最短的时间内合作完成准备工作，需要四名学生，具体安排如下
 
     图：
+
+    [图]
 
     故答案为：21，4．'
   knowledge_points:
@@ -388,14 +594,18 @@ questions:
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2024-pinggu-er-fig18.png
 - id: 17
   type: 解答
   score: 5
-  question: （第17题，详见原卷）
-  answer: ''
-  solution: '解：原式
+  question: 计算：$2\cos 30^{\circ}+\left(\frac{1}{3}\right)^{-1}+\sqrt{3}-2-\sqrt{27}$．
+  answer: $5-3\sqrt{3}$
+  solution: '解：原式$-2\times\frac{\sqrt{3}}{2}+3+2-\sqrt{3}-3\sqrt{3}$
 
-    ．'
+    $\sqrt{3}+3+2-\sqrt{3}-3\sqrt{3}$
+
+    $=5-3\sqrt{3}$．'
   knowledge_points:
   - 弦
   - 绝对值
@@ -409,15 +619,25 @@ questions:
 - id: 18
   type: 解答
   score: 5
-  question: 解不等式组：．
-  answer: ''
-  solution: '解：，
+  question: '解不等式组：$\left\{
 
-    解不等式①得，
+    \begin{array}{l}
 
-    解不等式②得，
+    2x+3 \leq 5x \\
 
-    ．'
+    x > \dfrac{x-2}{2}
+
+    \end{array}
+
+    \right.$．'
+  answer: $-2 < x \leq 1$
+  solution: '解：$\left\{\begin{array}{l}2x+3\leq5x-1\\x>\dfrac{x-2}{2}\quad②\end{array}\right.$，
+
+    解不等式①得$x \leq 1$，
+
+    解不等式②得$x > -2$，
+
+    $-2 < x \leq 1$．'
   knowledge_points:
   - 不等式
   - 不等式组
@@ -431,13 +651,19 @@ questions:
 - id: 19
   type: 解答
   score: 5
-  question: 已知，求代数式的值．
-  answer: ''
-  solution: '解：，
+  question: 已知$x=y+4$，求代数式$\frac{2x-2y}{x^{2}-2xy+y^{2}}$的值．
+  answer: $\frac{1}{2}$
+  solution: '解：$\therefore x = y + 4$，
 
-    ∴，
+    ∴$x-y=4$，
 
-    ．'
+    $\frac{2x-2y}{x^{2}-2xy+y^{2}}$
+
+    $\frac{2(x-y)}{(x-y)^{2}}$
+
+    $=\frac{2}{x-y}$
+
+    $\frac{2}{4}=\frac{1}{2}$．'
   knowledge_points:
   - 综合
   module: numbersAndExpressions
@@ -450,15 +676,18 @@ questions:
 - id: 20
   type: 解答
   score: 5
-  question: 如图，线段表示2米高的一扇窗户，要在窗户上方C点的位置安装一顶遮阳蓬，若已知北京地区冬季太阳光线与水平线夹角的最小值为，夏季太阳光线与水平线夹角的最大值为，要让冬季太阳光线与水平线夹角的最小时温暖的阳光完全照进房间，又能使夏季太阳光线与水平线夹角的最大的时候遮阳蓬能完全遮挡炎热的阳光，设遮阳蓬的长度为x米，遮阳蓬的落空高度为y米，请你根据设计方案计算x与y的值约为多少．（）
-  answer: 遮阳蓬的长度约为米，遮阳蓬的落空高度约为米
-  solution: '解： 由图1可知，，
+  question: '如图，线段AB表示2米高的一扇窗户，要在窗户上方C点的位置安装一顶遮阳蓬，若已知北京地区冬季太阳光线与水平线夹角的最小值为$27^\circ$，夏季太阳光线与水平线夹角的最大值为$72^\circ$，要让冬季太阳光线与水平线夹角的最小时温暖的阳光完全照进房间，又能使夏季太阳光线与水平线夹角的最大的时候遮阳蓬能完全遮挡炎热的阳光，设遮阳蓬的长度CD为x米，遮阳蓬的落空高度AC为y米，请你根据设计方案计算x与y的值约为多少．（$\sin
+    27^{\circ}\approx 0.5,\cos 27^{\circ}\approx 0.9,\tan 27^{\circ}\approx 0.5,\sin 72^{\circ}\approx 1.0,\cos 72^{\circ}\approx 0.3,\tan 72^{\circ}\approx 3.0$）
 
-    由图2可知， ，
+    [图]'
+  answer: 遮阳蓬的长度CD约为$0.8$米，遮阳蓬的落空高度AC约为$0.4$米
+  solution: '解：由图1可知，$\tan 27^{\circ}=\frac{y}{x}-\frac{1}{2}$，
 
-    解得：，
+    由图2可知，$\tan72^\circ =$$\frac{y+2}{x}=3$，
 
-    答：遮阳蓬的长度约为米，遮阳蓬的落空高度约为米．'
+    解得：$x=0.8,\ y=0.4$，
+
+    答：遮阳蓬的长度CD约为$0.8$米，遮阳蓬的落空高度AC约为$0.4$米．'
   knowledge_points:
   - 综合
   module: triangles
@@ -467,32 +696,54 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-pinggu-er-fig19.png
 - id: 21
   type: 解答
   score: 5
-  question: '在平面直角坐标系中，一次函数的图象经过点和．
+  question: '在平面直角坐标系xOy中，一次函数$y=kx+b(k\neq0)$的图象经过点$(1,1)$和$(0,-1)$．
 
     （1）求这个一次函数的解析式；
 
-    （2）当时，对于x的每一个值，一次函数的值大于函数的值，直接写出m的取值范围．'
-  answer: （1）； （2）．
+    （2）当$x<1$时，对于x的每一个值，一次函数$y = mx (m \ne 0)$的值大于函数$y=kx+b\,(k\neq0)$的值，直接写出m的取值范围．'
+  answer: （1）$y=2x-1$； （2）$1\mathrm{~m/s^{2}}$．
   solution: '【小问1详解】
 
-    解：∵一次函数的图象经过点和，
+    解：∵一次函数$y=kx+b(k\neq0)$的图象经过点$(1,1)$和$(0,-1)$，
 
-    ∴把和代入得，
+    ∴把$(1,1)$和$(0,-1)$代入$y=kx+b(k\neq0)$得，
 
-    一次函数的解析式为
+    $\begin{cases}
+
+    k + b = 1 \\
+
+    b = -1
+
+    \end{cases}$
+
+    $解得 $\left\{ \begin{array}{l} k = 2 \\ b = -1 \end{array} \right.$
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$一次函数的解析式为$y=2x-1$
 
     【小问2详解】
 
     解：如图，
 
-    当时，两直线相交于点，
+    [图]
 
-    当时，两直线平行，
+    当$m = 1$时，两直线相交于点$(1,1)$，
 
-    所以，m的取值范围为'
+    当$m = 2$时，两直线平行，
+
+    所以，m的取值范围为$1\mathrm{~m/s^{2}}$'
   knowledge_points:
   - 一次函数
   - 坐标系
@@ -502,60 +753,66 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-pinggu-er-fig20.png
 - id: 22
   type: 解答
   score: 5
-  question: '如图，平分，点A是射线上一点，过点A作交于点D，过A作，过点D作．
+  question: '如图，BD平分$\angle ABF$，点A是射线BM上一点，过点A作$AD \parallel BN$交BG于点D，过A作$AE \perp BN$，过点D作$DF \perp BN$．
 
-    （1）求证：四边形是矩形；
+    [图]
 
-    （2）在上取点C使得，连接、．求证：．'
+    （1）求证：四边形$AEFD$是矩形；
+
+    （2）在BF上取点C使得$CF = BE$，连接AC、CD．求证：$AC \perp BD$．'
   answer: （1）证明见解析； （2）见解析．
   solution: '【小问1详解】
 
-    ∵，，
+    ∵$AE \perp BN$，$DF \perp BN$，
 
-    ∴，
+    ∴$AE \parallel DF$，
 
-    ∵，
+    ∵$AD \parallel EF$，
 
-    ∴四边形是平行四边形，
+    ∴四边形$AEFD$是平行四边形，
 
-    ∵，
+    ∵$AE \perp BN$，
 
-    ∴四边形是矩形；
+    ∴四边形$AEFD$是矩形；
 
     【小问2详解】
 
     如图，
 
-    ∵四边形是矩形
+    [图]
 
-    ∴，，
+    ∵四边形$AEFD$是矩形
 
-    ∵，
+    ∴$AD \parallel EF$，$AD = EF$，
 
-    ∴
+    ∵$BE = CF$，
 
-    ∴，，
+    ∴$BC = EF$
 
-    ∴四边形是平行四边形，
+    ∴$AD \parallel BC$，$AD = BC$，
 
-    ∵平分，
+    ∴四边形$ABCD$是平行四边形，
 
-    ∴，
+    ∵BD平分$\angle ABC$，
 
-    ∵，
+    ∴$\angle ABD = \angle DBC$，
 
-    ∴，
+    ∵$AD \parallel BC$，
 
-    ∴，
+    ∴$\angle ADB = \angle DBC$，
 
-    ∴，
+    ∴$\angle ABD = \angle ADB$，
 
-    ∴四边形是菱形，
+    ∴$AD = AB$，
 
-    ∴．'
+    ∴四边形$ABCD$是菱形，
+
+    ∴$AC \perp BD$．'
   knowledge_points:
   - 平行四边形
   - 矩形
@@ -566,70 +823,87 @@ questions:
   - L1
   - L2
   - L3
+  figures:
+  - figures/2024-pinggu-er-fig21.png
+  - figures/2024-pinggu-er-fig22.png
 - id: 23
   type: 解答
   score: 6
-  question: '如图，点A、C是上两点，过点A作的切线与的延长线交于点B，过点C作的平行线与交于点D，连接、．
+  question: '如图，点A、C是$\odot\odot$上两点，过点A作$\odot\odot$的切线与OC的延长线交于点B，过点C作AB的平行线与$\odot\odot$交于点D，连接AD、AC．
 
-    （1）求证：；
+    [图]
 
-    （2）若，，求的长．'
-  answer: （1）见解析    （2）
+    （1）求证：$\angle D = \angle BAC$；
+
+    （2）若$CD = 8$，$\tan \angle BAC = \frac{1}{2}$，求BC的长．'
+  answer: （1）见解析（2）$BC = \frac{10}{3}$
   solution: '【小问1详解】
 
-    证明：连接交于E，
+    证明：连接OA交CD于E，
 
-    是的切线，
+    [图]
 
-    ，
+    $\because AB$是$\odot\odot$的切线，
 
-    ，
+    $\angle BAO = 90^\circ$，
 
-    ，，
+    $\because AB \parallel CD$，
 
-    ，
+    $\angle CEO = 90^\circ$，$\angle BAC = \angle ACD$，
 
-    ，
+    $\therefore CE = DE$，
 
-    ，
+    $\therefore AC = AD$，
 
-    ；
+    $\angle ACD = \angle D$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\angle BAC = \angle D$；
 
     【小问2详解】
 
-    解：，，
+    解：$\therefore OA \perp CD$，$CD = 8$，
 
-    ，
+    $CE - DE = 4$，
 
-    ，
+    $\begin{array}{c}
 
-    ，
+    \bullet \\
 
-    ，
+    \bullet \quad \bullet \\
 
-    设，
+    \bullet
 
-    ，
+    \end{array}$$\tan \angle BAC = \frac{1}{2}$，
 
-    ，
+    $\tan\angle D=\frac{AE}{DE}=\frac{1}{2}$，
 
-    ，
+    $\therefore AE = 2$，
 
-    ，
+    设$OA = x$，
 
-    解得，
+    $\begin{tikzpicture}
 
-    ，，
+    \fill (0,0) circle (2pt);
 
-    ，
+    \fill (-1,-1) circle (2pt);
 
-    ，
+    \fill (1,-1) circle (2pt);
 
-    ，
+    \end{tikzpicture}$$OE = x - 2$，
 
-    ，
+    $OC = x$，
 
-    解得．'
+    $+OC^{2}+CE=OC^{2}$，
+
+    $\ldots(x-2)^{2}+4^'
   knowledge_points:
   - 平行线
   - 垂径定理
@@ -641,14 +915,19 @@ questions:
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2024-pinggu-er-fig23.png
+  - figures/2024-pinggu-er-fig24.png
 - id: 24
   type: 解答
   score: 6
-  question: '为了了解本年级的学生的身高情况，数学小组的同学从校医务室随机调取了一个班39人的身高数据，（单位：），以下是甲、乙、丙三个小组对数据整理的结果：
+  question: '为了了解本年级的学生的身高情况，数学小组的同学从校医务室随机调取了一个班39人的身高数据，（单位：cm），以下是甲、乙、丙三个小组对数据整理的结果：
 
-    甲：39名学生的身高频数分布图（数据分成4组：，，，）：
+    甲：39名学生的身高频数分布图（数据分成4组：$150<x\leq160$，$160<x\leq170$，$170<x\leq180$，$180<x\leq190$）：
 
-    其中，身高的数值在这一组的是：
+    [图]
+
+    其中，身高的数值在$160<x\leq170$这一组的是：
 
     161，161，162，162，162，163，163，163，163，
 
@@ -656,25 +935,39 @@ questions:
 
     乙：该班有20名女生和19名男生，女生和男生的身高数据的折线图：
 
+    [图]
+
     丙：39名学生的身高的平均数、中位数、众数：
 
-    （1）写出表中和的值；
+    平均数
+
+    中位数
+
+    众数
+
+    167
+
+    m
+
+    n
+
+    （1）写出表中m和n的值；
 
     （2）在男女两组学生中，身高数据更均匀的是________（填“男生”或“女生”）；
 
     （3）现需要从该班男、女生中各抽调6名学生参加该校运动会开幕式仪仗队，已知抽调的女生身高分别为166，168，168，171，172，173．男生已经确定的四名成员的身高数据为168，170，171，173，为了使被抽调的男生身高比女生身高的平均值略大，且仪仗队身高整体比较均匀，则选出的另外两名男生的身高分别为________和________．'
-  answer: （1），； （2）女生；    （3）167，174．
+  answer: （1）$m = 167$，$n = 174$； （2）女生；（3）167，174．
   solution: '【小问1详解】
 
     因为样本数量是39，将这39人身高从低到高排列，中位数是第20位学生的身高，
 
-    根据甲的统计数据，可以知道，第20位学生的身高落在组，
+    根据甲的统计数据，可以知道，第20位学生的身高落在$160<x\leq170$组，
 
-    因为有6个人，
+    因为$150<x\leq160$有6个人，
 
-    所以第20位学生位于的第14个，
+    所以第20位学生位于$160<x\leq170$的第14个，
 
-    其中，身高的数值在这一组的是：
+    其中，身高的数值在$160<x\leq170$这一组的是：
 
     161，161，162，162，162，163，163，163，163，
 
@@ -686,7 +979,7 @@ questions:
 
     所以众数为174；
 
-    故答案为：，
+    故答案为：$m = 167$，$n = 174$
 
     【小问2详解】
 
@@ -700,15 +993,15 @@ questions:
 
     已知抽调的女生身高分别为166，168，168，171，172，173．
 
-    此时，女生的平均身高为：
+    此时，女生的平均身高为：$(166+168+168+171+172+173)\div6=169.5$
 
     男生已经确定的四名成员的身高数据为168，170，171，173，
 
-    那么这四个男生的平均身高为
+    那么这四个男生的平均身高为$(168+170+171+173)\div4=170.5$
 
     为了使被抽调的男生身高比女生身高的平均值略大，且仪仗队身高整体比较均匀，
 
-    那么另外两个男生的身高应选择和；
+    那么另外两个男生的身高应选择$167$和$174$；
 
     故答案为：167，174．'
   knowledge_points:
@@ -722,32 +1015,91 @@ questions:
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2024-pinggu-er-fig25.png
+  - figures/2024-pinggu-er-fig26.png
 - id: 25
   type: 解答
   score: 6
-  question: '商品的价格会影响消费者的购买的欲望，设商品价格减少，商品的销售量上升，商品的销售量上升，以下是某商场销售部统计的两种商品随着价格的变化销售量变化的百分比数据：
+  question: '商品的价格会影响消费者的购买的欲望，设商品价格减少$x\%$，A商品的销售量上升$y_{1}\%$，B商品的销售量上升$y_{2}\%$，以下是某商场销售部统计的$A\cdot B$两种商品随着价格的变化销售量变化的百分比数据：
 
-    （1）通过分析表格中的数据，发现，都可近似看作的函数，在平面直角坐标系中，已经描出表中各组数值所对应的点，补全其余各点，并用平滑曲线连接这些点；
+    $x(\%)$
 
-    （2）据悉对于百姓生活的必需品往往随着价格的涨幅变化不大，但奢侈品会因价格的涨幅呈现明显的变化，若中恰好有一件商品是奢侈品另一件商品为必需品，观察图中的两条曲线的变化情况推测两件商品中是必需品的是_______；（填或）
+    $0$
 
-    （3）结合函数图象，若商场在母亲节那天对商品八折促销，若要使商品的销售增加百分数与商品接近相同，则商品打几折？（打几折就是按照商品价格的百分之几十销售）'
-  answer: （1）画图见解析 （2） （3）六五折
+    $5$
+
+    $10$
+
+    $13$
+
+    $18$
+
+    $22$
+
+    $30$
+
+    $35$
+
+    $y_{1}(\%)$
+
+    $0$
+
+    $2.0$
+
+    $4.6$
+
+    $6.0$
+
+    $7.9$
+
+    $12.1$
+
+    $32.1$
+
+    $47.2$
+
+    $y_{2}(\%)$
+
+    $0$
+
+    $1$
+
+    $1.5$
+
+    $2.0$
+
+    $3.0$
+
+    $4.2$
+
+    $7.2$
+
+    $10.0$
+
+    （1）通过分析表格中的数据，发现$y_{1}$，$y_{2}$都可近似看作x的函数，在平面直角坐标系xOy中，已经描出表中各组数值所对应的点，补全其余各点，并用平滑曲线连接这些点；
+
+    [图]
+
+    （2）据悉对于百姓生活的必需品往往随着价格的涨幅变化不大，但奢侈品会因价格的涨幅呈现明显的变化，若$A\cdot B$中恰好有一件商品是奢侈品另一件商品为必需品，观察图中的两条曲线的变化情况推测$A\cdot B$两件商品中是必需品的是_______；（填A或B）
+
+    （3）结合函数图象，若商场在母亲节那天对A商品八折促销，若要使B商品的销售增加百分数与A商品接近相同，则B商品打几折？（打几折就是按照商品价格的百分之几十销售）'
+  answer: （1）画图见解析 （2）B （3）六五折
   solution: '【小问1详解】
 
     解：画图如下：
 
-    【小问2详解】
+    [图]【小问2详解】
 
-    解：由图可知，随的增大涨幅变化很大，随的增大涨幅比较平缓，
+    解：由图可知，$y_{1}$随x的增大涨幅变化很大，$y_{2}$随x的增大涨幅比较平缓，
 
-    ∴商品是必需品，
+    ∴B商品是必需品，
 
-    故答案为：；
+    故答案为：B；
 
     【小问3详解】
 
-    解：由图象可知商品八折时，即时的值约为，而当的值约为时，值约为，所以商品打六五折．'
+    解：由图象可知A商品八折时，即$x = 20$时$y_{1}$的值约为$10$，而当$y_{2}$的值约为$10$时，$x_2$值约为$35$，所以B商品打六五折．'
   knowledge_points:
   - 统计
   - 坐标系
@@ -756,50 +1108,63 @@ questions:
   recommended_for:
   - L2
   - L3
+  figures:
+  - figures/2024-pinggu-er-fig27.png
+  - figures/2024-pinggu-er-fig28.png
 - id: 26
   type: 解答
   score: 6
-  question: '在平面直角坐标系中，，是抛物线上任意两点．
+  question: '在平面直角坐标系xOy中，$M(x_1,\ y_1)$，$N(x_{2},\ y_{2})$是抛物线$y = x^2 - 2mx + m^2 - 1$上任意两点．
 
-    （1）求抛物线的对称轴（用含的式子表示）；
+    （1）求抛物线的对称轴（用含m的式子表示）；
 
-    （2）若，点中至少有一个点位于轴的上方，直接写出的范围；
+    （2）若$x_2 = x_1 + n(n > 0)$，点$M、N$中至少有一个点位于x轴的上方，直接写出n的范围；
 
-    （3）若对于时，都有，求的取值范围．'
-  answer: （1）； （2）； （3）．
+    （3）若对于$-1 < x < 2,\; x_3 = m + 2$时，都有$y_1 < y_2$，求m的取值范围．'
+  answer: （1）$x = m$； （2）$n^{2}$； （3）$0<m<1$．
   solution: '【小问1详解】
 
-    解：，
+    解：$y = x^2 - 2mx + m^2 - 1 = (x - m)^2 - 1$，
 
-    抛物线的对称轴为，
+    抛物线的对称轴为$x = m$，
 
     【小问2详解】
 
-    由（1）可得，抛物线的顶点坐标为，
+    由（1）可得，抛物线的顶点坐标为$(m,-1)$，
 
-    令，得到或，
+    令$y = 0$，得到$x = m - 1$或$x = m + 1$，
 
-    ∴抛物线与轴的两个交点为，
+    ∴抛物线与x轴的两个交点为$A(m-1,0),B(m+1,0)$，
 
-    ，
+    $AB=2$，
 
-    若点中至少有一个点位于轴的上方
+    $\begin{tikzpicture}
 
-    只需；
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$若点$M、N$中至少有一个点位于x轴的上方
+
+    只需$n^{2}$；
 
     【小问3详解】
 
-    ∵抛物线的对称轴为，
+    ∵抛物线的对称轴为$x = m$，
 
-    ∴点一定位于对称轴的右侧，
+    ∴$(m+2,y_{2})$点一定位于对称轴的右侧，
 
-    它的对称点为，
+    它的对称点为$(m-2,y_{2})$，
 
-    又∵对于时，都有，
+    [图]
 
-    ∴，
+    又∵对于$-1 < x < 2,\; x_3 = m + 2$时，都有$y_1 < y_2$，
 
-    解得．'
+    ∴$\left\{\begin{array}{l} m-2<-1 \\ m+2>2 \end{array}\right.$，
+
+    解得$0<m<1$．'
   knowledge_points:
   - 轴对称
   - 坐标系
@@ -807,80 +1172,70 @@ questions:
   difficulty: 压轴
   recommended_for:
   - L3
+  figures:
+  - figures/2024-pinggu-er-fig29.png
 - id: 27
   type: 解答
   score: 7
-  question: '如图，在中，，点D为平面上一点，连接，将绕着点A逆时针旋转得到线段，连接，取的中点F，取的中点G，连接，取的中点M，连接．
+  question: '如图，在$\triangle ABC$中，$\angle BAC=\alpha^\circ,\ AB=AC$，点D为平面上一点，连接AD，将AD绕着点A逆时针旋转$\alpha^{\circ}$得到线段AE，连接DE，取DE的中点F，取BC的中点G，连接DC，取DC的中点M，连接FM．
+
+    [图]
 
     （1）依题意补全图形；
 
-    （2）猜想的度数（用含α的式子表示），并证明．'
-  answer: （1）图见解析； （2）．
+    （2）猜想$\angle GFM$的度数（用含α的式子表示），并证明．'
+  answer: （1）图见解析； （2）$\frac{1}{2}a$．
   solution: '【小问1详解】
 
     补全图形如下：
 
-    【小问2详解】
+    [图]【小问2详解】
 
-    ，
+    $\angle GFM=\frac{1}{2}\alpha$，
 
-    证明：连接，
+    证明：连接$AF, BD, AG, GM, CE$，
 
-    过M作于点H，
+    [图]
 
-    在中，，F为中点，
+    过M作$MH \perp FG$于点H，
 
-    ∴，
+    在$VADE$中，$\angle DAE = \alpha^\circ,\ AD = AE$，F为DE中点，
 
-    在中，，G为中点，
+    ∴$\angle AFD = 90^\circ,\quad \angle DAF = \frac{1}{2}\alpha$，
 
-    ∴，
+    在$\triangle ABC$中，$\angle BAC=\alpha^\circ,\ AB=AC$，G为BC中点，
 
-    ∴，
+    ∴$\angle AGB=90^{\circ}，\angle BAG=\frac{1}{2}\alpha$，
 
-    ，
+    ∴$\triangle ABG \sim \triangle ADF$，
 
-    ∵，
+    $\therefore \frac{AF}{AG}=\frac{AD}{AB}$，
 
-    ∴，
+    ∵$\angle1=\angle2$，
 
-    ，
+    ∴$\triangle ABD \sim \triangle AGF$，
 
-    ∵，
+    $\therefore \frac{GF}{BD} = \frac{AG}{AB}$，
 
-    ∴，
+    ∵$AB = AC,\ AD = AE,\ \angle BAC = \angle DAE = \alpha$，
 
-    ∴，
+    ∴$\angle1=\angle3$，
 
-    ∴，
+    ∴$\triangle ABD \cong \triangle ACE$，
 
-    ∵点F为中点，M为中点，
+    ∴$BD = CE$，
 
-    ，
+    ∵点F为BE中点，M为DC中点，
 
-    ∵点G为中点，M为中点，
+    $\begin{tikzpicture}
 
-    ，
+    \fill (0,0) circle (2pt);
 
-    ∵，
+    \fill (-1,-1) circle (2pt);
 
-    ∴，
+    \fill (1,-1) circle (2pt);
 
-    ∵，
-
-    ∴，
-
-    ∴，
-
-    ，
-
-    ，
-
-    ，
-
-    ，
-
-    ．'
+    \end{tikzpicture}$$FM=\frac{1}'
   knowledge_points:
   - 全等三角形
   - 相似三角形
@@ -890,36 +1245,45 @@ questions:
   difficulty: 压轴
   recommended_for:
   - L3
+  figures:
+  - figures/2024-pinggu-er-fig30.png
+  - figures/2024-pinggu-er-fig31.png
+  - figures/2024-pinggu-er-fig32.png
 - id: 28
   type: 解答
   score: 7
-  question: '平面直角坐标系中，已知线段，为线段上一点不与点、重合，以为圆心，长为半径画，以为顶点作，，若角的两边一边与相切，另一边与相交，则称线段与关于点关联．
+  question: '平面直角坐标系xOy中，已知线段AB，P为线段AB上一点$\left( \right)$不与点A、B重合$\right)$，以A为圆心，AP长为半径画$\odot A$，以B为顶点作$\angle MBN$，$\angle MBN-\beta^{\circ}$，若角$\angle MBN$的两边一边与$\odot A$相切，另一边与$\odot A$相交，则称线段AB与$\odot
+    A$关于点$P\to\beta$关联．
 
-    （1）若点为线段的中点，线段与关于点关联，则满足条件的值可以是________①②③④．
+    [图]
 
-    （2）半径为，是上一点，，是轴上一点，线段与关于点关联，直接写出的取值范围；
+    （1）若点P为线段AB的中点，线段AB与$\odot A$关于点$P\to\beta$关联，则满足条件的$\beta$值可以是________①$30^\circ$②$45^\circ$③$60^\circ$④$90^\circ$．
 
-    （3）半径为，点是上一点，点，，线段与关于点关联，若在直线上存在满足条件的点，直接写出的取值范围．'
-  answer: （1）①②    （2）或 （3）
+    （2）$\odot\odot$半径为$1$，P是$\odot\odot$上一点，$B(0)$，$m\right)$是y轴上一点，线段OB与$\odot\odot$关于点$P-90$关联，直接写出m的取值范围；
+
+    （3）$\odot\odot$半径为$1$，点A是$\odot\odot$上一点，点$B(5)$，$0)$，线段AB与$\odot A$关于点$P-60$关联，若在直线$y=x+b$上存在满足条件的点P，直接写出b的取值范围．'
+  answer: （1）①②（2）$1 < m < \sqrt{2}$或$-\sqrt{2} < m < -1$ （3）$-5 < b < 1 - \frac{\sqrt{2}}{2} - \frac{5}{2}$
   solution: '【小问1详解】
 
     如图，
 
-    由新定义知与相切，
+    [图]
 
-    ∴.
+    由新定义知BN与$\odot A$相切，
 
-    ∵点P为线段的中点，
+    ∴$\angle ANB = 90^\circ$.
 
-    ∴,
+    ∵点P为线段AB的中点，
 
-    ∴,
+    ∴$AB=2AP=2AN$,
 
-    ∴,
+    ∴$\sin \angle ABN = \frac{AN}{AB} = \frac{1}{2}$,
 
-    ∵与相交，
+    ∴$\angle ABN=30^\circ$,
 
-    ∴,
+    ∵BM与$\odot A$相交，
+
+    ∴$\angle MBN < 60^\circ$,
 
     ∴①②符合题意.
 
@@ -927,71 +1291,51 @@ questions:
 
     【小问2详解】
 
-    如图，当点在轴正半轴时，
+    如图，当点B在y轴$[公式]$正半轴时，
 
-    线段与关于点关联，
+    $\begin{array}{c}
 
-    ，
+    \bullet \\
 
-    当与相切与点时，连接，则
+    \bullet \quad \bullet \\
 
-    ，
+    \bullet
 
-    四边形是矩形，
+    \end{array}$线段OB与$\odot\odot$关于点$P-90$关联，
 
-    ，
+    $\begin{tikzpicture}
 
-    四边形是正方形，
+    \fill (0,0) circle (2pt);
 
-    ，
+    \fill (-1,-1) circle (2pt);
 
-    当点与点重合时，，
+    \fill (1,-1) circle (2pt);
 
-    ；
+    \end{tikzpicture}$$\angle MBN = 90^\circ$，
 
-    当点在轴的负半轴时，如图，
+    当BM与$\odot\odot$相切与点D时，连接OD，则$\angle ODB=90^\circ$$\text{，}$
 
-    同理可求.
+    $\begin{array}{c}
 
-    综上可知，或
+    \bullet \\
 
-    【小问3详解】
+    \bullet \quad \bullet \\
 
-    在上任取一点，在上任取一点，以为圆心，为半径作，过点分别作的切线，
+    \bullet
 
-    ∵要使线段与关于点关联，
+    \end{array}$$\angle ONB = 90^\circ$，
 
-    ∴
+    $\begin{tikzpicture}
 
-    即
+    \fill (0,0) circle (2pt);
 
-    ∴
+    \fill (-1,-1) circle (2pt);
 
-    取 中点则点在线段上不包括端点 、.
+    \fill (1,-1) circle (2pt);
 
-    随着 在 上运动取 中点 ,
+    \end{tikzpicture}$四边形$ODBN$是矩形，
 
-    ∴中点始终在以 为圆心,半径为的上运动，
-
-    ∴始终在线段 扫得区域,
-
-    ∴当与相切时,
-
-    如图所示，取点，则
-
-    ∴是等腰直角三角形，
-
-    ∴
-
-    ∴
-
-    ∵b过点
-
-    代入解得：
-
-    当过点时,
-
-    ∴.'
+    $\'
   knowledge_points:
   - 一次函数
   - 圆周角
@@ -1005,3 +1349,11 @@ questions:
   difficulty: 压轴
   recommended_for:
   - L3
+  figures:
+  - figures/2024-pinggu-er-fig33.png
+  - figures/2024-pinggu-er-fig34.png
+  - figures/2024-pinggu-er-fig35.png
+  - figures/2024-pinggu-er-fig36.png
+  - figures/2024-pinggu-er-fig37.png
+  - figures/2024-pinggu-er-fig38.png
+  - figures/2024-pinggu-er-fig39.png
