@@ -1,8 +1,8 @@
 # ============================================================
 # 2023年北京海淀区中考数学一模试卷 — 逐题分析
 # ============================================================
-# 数据来源：knowledge-original/精品解析：2023年北京市海淀区首都师大附中中考模拟数学调研试卷（3月份）（原卷版）.docx
-# 自动生成，部分数学公式可能显示不全（docx公式对象无法完整提取）
+# 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
+# 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
 # 满分：100分  时长：120分钟
 
 year: 2023
@@ -17,9 +17,23 @@ questions:
 - id: 1
   type: 选择
   score: 2
-  question: "如图的几何体是由一些小正方体组合而成的，则这个几何体的左视图是（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '下列几何体中，主视图为下图的是（
+
+    ）
+
+    [图]
+
+    A.[图]B.[图]C.[图]D.[图]'
+  answer: A
+  solution: '解：A．主视图为矩形，符合题意；
+
+    B．主视图为三角形，不符合题意；
+
+    C．主视图为有一公共边的两个三角形，不符合题意；
+
+    D．主视图为圆，不符合题意；
+
+    故选：A．'
   knowledge_points:
   - 综合
   module: geometryComprehensive
@@ -32,11 +46,16 @@ questions:
 - id: 2
   type: 选择
   score: 2
-  question: "党的二十大报告中指出，我国全社会研发经费支出达二万八千亿元，居世界第二位．“二万八千亿”用科学记数法表示为（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '北京植物园从上世纪五十年代开始建设种子库，目前库中已有种子83000余份，总量位居世界第二位．将83000用科学记数法表示应为（）
+
+    A.$83\times10^{3}$B.$8.3\times10^{4}$C.$8.3\times10^{5}$D.$0.83\times10^{5}$'
+  answer: B
+  solution: '解：83000用科学记数法表示为$8.3\times10^{4}$．
+
+    故选B．'
   knowledge_points:
   - 科学记数法
+  - 绝对值
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -47,9 +66,31 @@ questions:
 - id: 3
   type: 选择
   score: 2
-  question: "如图，平分，则（    ）\nA. 75°\tB. 80°\tC. 45°\tD. 90°"
-  answer: ''
-  solution: ''
+  question: '在一条沿直线MN铺设的电缆两侧有甲、乙两个小区，现要求在MN上选取一点P，向两个小区铺设电缆．下面四种铺设方案中，使用电缆材料最少的是（）
+
+    A.[图]B.[图]C.[图]D.[图]'
+  answer: A
+  solution: '解：$\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$甲、乙位于直线MN的两侧，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$根据两点之间线段最短，连接甲、乙两点，与直线MN交于点P，点P即为所求；
+
+    故选：A．'
   knowledge_points:
   - 综合
   module: geometryComprehensive
@@ -62,24 +103,15 @@ questions:
 - id: 4
   type: 选择
   score: 2
-  question: "一个n边形的每个外角都是45°，则这个n边形的内角和是（ ）\nA 1080°\tB. 540°\tC. 2700°\tD. 2160°"
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: triangles
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 5
-  type: 选择
-  score: 2
-  question: "布袋中装有2个红球、3个白球、5个黑球，它们除颜色外均相同，则从袋中任意摸出一个球是白球的概率是（    ）\nA. \tB. \tC. \tD."
-  answer: ''
-  solution: ''
+  question: '不透明的袋子中装有2个红球和3个黄球，两种球除颜色外无其他差别，从中随机摸出一个小球，摸到黄球的概率是（）
+
+    A.$\frac{2}{3}$B.$\frac{3}{4}$C.$\frac{2}{5}$D.$\frac{3}{5}$'
+  answer: D
+  solution: '解：∵不透明的袋子里装有2个红球，3个黄球，
+
+    ∴从袋子中随机摸出一个，摸到黄球的概率为$\frac{3}{2+3}=\frac{3}{5}$；
+
+    故选：D．'
   knowledge_points:
   - 概率
   module: statisticsAndProbability
@@ -89,15 +121,49 @@ questions:
   - L1
   - L2
   - L3
-- id: 6
+- id: 5
   type: 选择
   score: 2
-  question: "实数a，b，c，d在数轴上的对应点的位置如图所示．若b+d＝0，则下列结论正确的是（　　）\nA. b+c0\tB. 1\tC. adbc\tD. |a||b|"
-  answer: ''
-  solution: ''
+  question: '实数m，n在数轴上的对应点的位置如图所示，下列结论中正确的是（）
+
+    [图]
+
+    A.$|m| < |n|$B.$m+n>0$C.$m-n<0$D.$mn > 0$'
+  answer: B
+  solution: '解：由题意得，$-2<n<-1<3<m<4$，
+
+    ∴$|m| > |n|$，$m+n>0$，$m-n>0$，$mn<0$，
+
+    ∴四个选项中只有B选项符合题意，
+
+    故选B．'
   knowledge_points:
   - 综合
   module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 6
+  type: 选择
+  score: 2
+  question: '若关于x的一元二次方程x2﹣2x+m＝0有两个相等的实数根，则m的值是（　　）
+
+    A.﹣1B.0C.1D.2'
+  answer: C
+  solution: '解：∵关于x的一元二次方程x2﹣2x+m＝0有两个相等的实数根，
+
+    ∴△＝b2﹣4ac＝（﹣2）2﹣4×1×m＝4﹣4m＝0，
+
+    ∴m＝1．
+
+    故选C．'
+  knowledge_points:
+  - 一元二次方程
+  - 根的判别式
+  module: equationsAndInequalities
   difficulty: 中档
   recommended_for:
   - L1
@@ -106,12 +172,26 @@ questions:
 - id: 7
   type: 选择
   score: 2
-  question: "如图，平行四边形ABCD中，E为DC的中点，AC与BE交于点F．则△EFC与△BFA的面积比为（　　）\nA. 1：\tB. 1：2\tC. 1：4\tD. 1：8"
-  answer: ''
-  solution: ''
+  question: '小明制作简易工具来测量物体表面的倾斜程度，方法如下：将刻度重新设计的量角器固定在等腰直角三角板上，使量角器的$90^\circ$刻度线与三角板的底边平行．将用细线和铅锤做成的重锤线顶端固定在量角器中心点O处，现将三角板底边紧贴被测物体表面，如图所示，此时重锤线在量角器上对应的刻度为$27^\circ$，那么被测物体表面的倾斜角$\alpha$为（）
+
+    [图]
+
+    A.$63^\circ$B.$36^\circ$C.$27^\circ$D.$18^\circ$'
+  answer: C
+  solution: '解：如图所示，在$Rt\triangle ABD$中，$\angle BAD = 90^\circ,\ \angle ACD = 90^\circ$，$\angle CAD=27^\circ$，
+
+    ∴$\angle CAD+\angle ADC=90^\circ=\angle ABD+\angle ADB$，
+
+    ∴$\angle ABD=\angle CAB=27^{\circ}$，
+
+    ∴被测物体表面的倾斜角$\alpha$为$27^\circ$，
+
+    故选C．
+
+    [图]'
   knowledge_points:
-  - 平行四边形
-  module: quadrilaterals
+  - 综合
+  module: triangles
   difficulty: 中档
   recommended_for:
   - L1
@@ -120,12 +200,24 @@ questions:
 - id: 8
   type: 选择
   score: 2
-  question: "某函数的图象如图所示，当时，在该函数图象上可找到个不同的点，，……，，使得，则的取值不可能为（    ）\nA. 3\tB. 4\tC. 5\tD. 6"
-  answer: ''
-  solution: ''
+  question: '图1是变量y与变量x的函数关系的图象，图2是变量z与变量y的函数关系的图象，则z与x的函数关系的图象可能是（）
+
+    [图]
+
+    A.[图]B.[图]C.[图]D.[图]'
+  answer: C
+  solution: '根据图像可知y与x是一次函数，z和y是正比例函数，设关系式为$y=kx+b$，
+
+    $z = k_{1}y$，
+
+    所以$z = k y = k (k x + b) = k ^ { 2 } x + k b$，可知z与x是一次函数，
+
+    所以图像C符合题意．
+
+    故选：C．'
   knowledge_points:
   - 综合
-  module: functions
+  module: geometryComprehensive
   difficulty: 较难
   recommended_for:
   - L2
@@ -133,9 +225,15 @@ questions:
 - id: 9
   type: 填空
   score: 2
-  question: 若式子在实数范围内有意义，则x的取值范围是_________．
-  answer: ''
-  solution: ''
+  question: 若$\sqrt{x-5}$在实数范围内有意义，则实数x的取值范围是______．
+  answer: $x\geq5$
+  solution: '解：∵$\sqrt{x-5}$在实数范围内有意义，
+
+    ∴$x-5\quad0$，
+
+    解得：$x\geq5$．
+
+    故答案$[公式]$：$x\geq5$．'
   knowledge_points:
   - 综合
   module: numbersAndExpressions
@@ -148,9 +246,11 @@ questions:
 - id: 10
   type: 填空
   score: 2
-  question: 分解因式：_________________．
-  answer: ''
-  solution: ''
+  question: 分解因式：$a^{2}b+4ab+4b$_________．
+  answer: $b(a+2)^2$
+  solution: '解：$a^{2}b+4ab+4b=b\left(a^{2}+4a+4\right)=b\left(a+2\right)^{2}$．
+
+    故答案为：$b(a+2)^2$．'
   knowledge_points:
   - 综合
   module: geometryComprehensive
@@ -163,12 +263,22 @@ questions:
 - id: 11
   type: 填空
   score: 2
-  question: 若n为整数，且，则n值为________________．
-  answer: ''
-  solution: ''
+  question: 分式方程$\frac{1}{x}=\frac{2}{x+3}$的解为________．
+  answer: $x=3$
+  solution: '解：$\frac{1}{x}=\frac{2}{x+3}$，
+
+    方程两边都乘以$x(x+3)$约去分母得：$x+3=2x$，
+
+    解这个整式方程得$x=3$，
+
+    检验：当$x=3$时，$x(x+3)\neq0$，
+
+    ∴$x=3$是原分式方程的解．
+
+    故答案为：$x=3$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 分式方程
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -178,11 +288,41 @@ questions:
 - id: 12
   type: 填空
   score: 2
-  question: 分式方程的解________．
-  answer: ''
-  solution: ''
+  question: '根据下表估计$\sqrt{269}\approx$_________（精确到$0.1$）．
+
+    x
+
+    $16.2$
+
+    $16.3$
+
+    $16.4$
+
+    $16.5$
+
+    $16.6$
+
+    $x^2$
+
+    $262.44$
+
+    $265.69$
+
+    $268.96$
+
+    $272.25$
+
+    $275.56$'
+  answer: $16.4$
+  solution: '解：∵$268.96<269<272.25$，
+
+    ∴$16.4<\sqrt{269}<16.5$，
+
+    ∴$\sqrt{269}\approx16.4$，
+
+    故答案为：$16.4$．'
   knowledge_points:
-  - 分式方程
+  - 综合
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -193,12 +333,25 @@ questions:
 - id: 13
   type: 填空
   score: 2
-  question: 如图，是的两条切线，切点分别为A，B，连接，若，则________．
-  answer: ''
-  solution: ''
+  question: '如图，菱形$ABCD$的对角线交于点O，点M为AB的中点，连接OM．若$AC = 4,\ BD = 8$，则OM的长为_________．
+
+    [图]'
+  answer: $\sqrt{5}$
+  solution: '解：∵四边形$ABCD$为菱形，
+
+    ∴$OB - OD = \frac{1}{2}BD = 4$，$OC = OA + \frac{1}{2}AC = 2$，$AC \perp BD$，
+
+    ∴$BC = \sqrt{OB^{2} + OC^{2}} = 2\sqrt{5}$．
+
+    ∵点M为AB的中点，
+
+    ∴$OM=\frac{1}{2}BC=\sqrt{5}$．
+
+    故答案为：$\sqrt{5}$．'
   knowledge_points:
-  - 切线
-  module: circles
+  - 勾股定理
+  - 菱形
+  module: triangles
   difficulty: 中档
   recommended_for:
   - L1
@@ -207,12 +360,35 @@ questions:
 - id: 14
   type: 填空
   score: 2
-  question: 在平面直角坐标系中，一次函数y = 6x与反比例函数y=（0）的图象交于A（），B（）两点，则的值是 _____．
-  answer: ''
-  solution: ''
+  question: 在平面直角坐标系xOy中，反比例函数$y=\frac{2}{x}$的图象与正比例函数$y = mx$的图象交于A，B两点，点A的坐标为$(l,\ a)$，则点B的坐标为_________．
+  answer: $(-1,-2)$
+  solution: '解：把$A(1,\ a)$代入反比例函数解析式中得$a=\frac{2}{1}$，解得$a = 2$，
+
+    ∴$A(1,2)$，
+
+    把$A(1,2)$代入正比例函数解析式中得$m = 2$，
+
+    ∴正比例函数解析式为$y=2x$，
+
+    联立$\left\{ \begin{array}{l} y = 2x \\ y = \dfrac{2}{x} \end{array} \right.$，解得$\left\{\begin{array}{l}x=-1\\y=-2\end{array}\right.$或$\left\{
+
+    \begin{array}{l}
+
+    x = 1 \\
+
+    y = 2
+
+    \end{array}
+
+    \right.$（舍去），
+
+    ∴$B(-1,-2)$，
+
+    故答案为：$(-1,-2)$．'
   knowledge_points:
   - 一次函数
   - 反比例函数
+  - 正比例函数
   - 坐标系
   module: functions
   difficulty: 中档
@@ -223,13 +399,50 @@ questions:
 - id: 15
   type: 填空
   score: 2
-  question: 如图，线段AB的端点B在直线MN上，过线段AB上的一点O作MN的平行线，分别交和的平分线于点C，D，连接AC，AD．添加一个适当的条件：当______时，四边形ACBD为矩形．
-  answer: ''
-  solution: ''
+  question: '如图，点M在正六边形的边EF上运动．若$\angle ABM = x^{\circ}$，写出一个符合条件的x的值_________．
+
+    [图]'
+  answer: $31^\circ$（答案不唯一）
+  solution: '解：∵六边形$ABCDEF$是正六边形，
+
+    ∴$\angle A=\angle AFE=$$\frac{(6-2)\times180^{\circ}}{6}=120^{\circ}$，$AB = AF$，
+
+    当点M在点F处时，
+
+    ∵$AF = AB$，$\angle A=120^{\circ}$，
+
+    ∴$\angle ABM =$$\frac{180\times20}{2}=360$，
+
+    [图]
+
+    当点M在点E处时，延长EF交BA的延长线于点H，
+
+    [图]
+
+    ∵$\angle AFE=\angle FAB=120^{\circ}$，$\angle AFE+\angle AFH=\angle FAB+\angle FAH=180^{\circ}$，
+
+    ∴$\angle AFH=\angle FAH=60^\circ$，
+
+    ∴$AH = HF$，
+
+    ∴$\triangle AHF$是正三角形，
+
+    ∴$\angle H=60^{\circ}$，
+
+    ∵$AH = HF$，$AB = EF$，
+
+    ∴$AH + AB = EF + HF$即$BH = EH$，
+
+    ∴$\triangle HBE$$[公式]$正三角形，
+
+    ∴$\angle ABE=60^{\circ}$，
+
+    ∴$30^{\circ} \leq x \leq 60^{\circ}$，
+
+    故答案为$31^\circ$（答案不唯一）．'
   knowledge_points:
-  - 平行线
-  - 矩形
-  module: quadrilaterals
+  - 综合
+  module: triangles
   difficulty: 中档
   recommended_for:
   - L1
@@ -238,12 +451,60 @@ questions:
 - id: 16
   type: 填空
   score: 2
-  question: 某生产基地有五台机器设备，现有五项工作待完成，每台机器完成每项工作获得的效益值如下表所示．若每台机器只完成一项工作，则完成五项工作的效益值总和的最大值为________．
-  answer: ''
-  solution: ''
+  question: '某陶艺工坊有A和B两款电热窑，可以烧制不同尺寸的陶艺品．两款电热窑每次可同时放置陶艺品的尺寸和数量如下表所示．
+
+    [图]
+
+    大
+
+    中
+
+    小
+
+    A
+
+    8
+
+    15
+
+    25
+
+    B
+
+    0
+
+    10
+
+    20
+
+    烧制一个大尺寸陶艺品的位置可替换为烧制两个中尺寸或六个小尺寸陶艺品，但烧制较小陶艺品的位置不能替换为烧制较大陶艺品．
+
+    某批次需要生产10个大尺寸陶艺品，50个中尺寸陶艺品，76个小尺寸陶艺品．
+
+    （1）烧制这批陶艺品，A款电热窑至少使用_________次；
+
+    （2）若A款电热窑每次烧制成本为55元，B款电热窑每次烧制成本为25元，则烧制这批陶艺品成本最低为_________元．'
+  answer: ①.2②.$135$
+  solution: '解：（1）∵需要生产10个大尺寸陶艺品，A款电热窑每次最多可放8个大尺寸陶艺品，B款电热窑不能放大尺寸陶艺品，且烧制较小陶艺品的位置不能替换为烧制较大陶艺品，
+
+    ∴烧制这批陶艺品，A款电热窑至少使用2次，
+
+    故答案为：2；
+
+    （2）∵A款电热窑每次烧制成本为55元，B款电热窑每次烧制成本为25元，
+
+    ∴要使成本最低，则在保证能够完成烧制任务的前提下，A款电热窑的使用次数要保证使用次数最少，且B款电热窑的使用次数也要最少；
+
+    当A款电热窑的使用次数为2次时，则可以烧制10个大尺寸陶艺品，$30+2\times(8\times2-10-1)=40$个中尺寸陶艺品，$25\times2+1\times6=56$个小尺寸陶艺品，
+
+    ∴在此种情形下，只需要B款电热窑的使用次数1次即可完成任务，
+
+    ∴烧制这批陶艺品成本最低为$55\times2+25=135$，
+
+    故答案为：$135$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 不等式
+  module: equationsAndInequalities
   difficulty: 较难
   recommended_for:
   - L2
@@ -251,12 +512,16 @@ questions:
 - id: 17
   type: 解答
   score: 5
-  question: （第17题，详见原卷）
-  answer: ''
-  solution: ''
+  question: 计算：$\left(2023-\pi\right)^{0}+\left(\frac{1}{2}\right)^{-1}+\sqrt{8}-2\cos45^{\circ}$．
+  answer: $3+\sqrt{2}$
+  solution: '解：原式$1+2\sqrt{2}-2\times\frac{\sqrt{2}}{2}$
+
+    $=1+2+3\sqrt{2}-\sqrt{2}$
+
+    $=3+\sqrt{2}$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 三角函数
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -266,9 +531,21 @@ questions:
 - id: 18
   type: 解答
   score: 5
-  question: （第18题，详见原卷）
-  answer: ''
-  solution: ''
+  question: 解不等式组：$\left\{\begin{array}{l}x+2 \geqslant 2x-1 \\ \frac{3x-5}{2}<x\end{array}\right.$．
+  answer: $3<x<5$
+  solution: '解：$\begin{cases}
+
+    x+2<2x-1\\
+
+    \dfrac{3x-5}{2}<x
+
+    \end{cases}$，
+
+    解不等式①得：$x>3$，
+
+    解不等式②得：$x<5$，
+
+    ∴不等式组的解集为$3<x<5$．'
   knowledge_points:
   - 不等式
   - 不等式组
@@ -282,12 +559,24 @@ questions:
 - id: 19
   type: 解答
   score: 5
-  question: 已知，求代数式的值．
-  answer: ''
-  solution: ''
+  question: 已知$2x^{2}+x-1=0$，求代数式$(2x+1)^{2}-2(x-3)$的值．
+  answer: '9'
+  solution: '解：∵$2x^{2}+x-1=0$，
+
+    ∴$2x^{2}+x=1$，
+
+    ∴$(2x+1)^{2}-2(x-3)$
+
+    $=4x^{2}+4x+1-2x+6$
+
+    $=4x^{2}+2x+7$
+
+    $=2(2x^{2}+x)+7$
+
+    $=9$．'
   knowledge_points:
   - 综合
-  module: geometryComprehensive
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -297,16 +586,78 @@ questions:
 - id: 20
   type: 解答
   score: 5
-  question: '已知关于的一元二次方程．
+  question: '下面是小明同学证明定理时使用的两种添加辅助线的方法，选择其中一种，完成证明．
 
-    （1）求证：方程总有两个实数根；
+    定理：在直角三角形中，如果一个锐角等于$30^\circ$，那么它所对的直角边等于斜边的一半．已知：如图，在$\triangle ABC$中，$\angle C=90^{\circ},\ \angle A=30^{\circ}$．
 
-    （2）若方程有一个根小于，求的取值范围．'
-  answer: ''
-  solution: ''
+    求证：$BC=\frac{1}{2}AB$．
+
+    [图]
+
+    方法一
+
+    证明：如图，延长BC到点D，使得$CD = BC$，连接AD．
+
+    [图]
+
+    方法二
+
+    证明：如图，在线段AB上取一点D，使得$BD = BC$，连接CD．
+
+    [图]'
+  answer: 证明见解析
+  solution: '证明：方法一：如图，延长BC到点D，使得$CD = BC$，连接AD，
+
+    ∵$\angle C=90^{\circ},\ \angle A=30^{\circ}$，
+
+    ∴$\angle ACB=\angle ACD=90^{\circ}$，$\angle B=60^{\circ}$，
+
+    在$\triangle ACB$和$\triangle ACD$中，
+
+    $\begin{aligned}
+
+    &BC = DC \\
+
+    &\angle ACB = \angle ACD = 90^\circ \\
+
+    &AC = AC
+
+    \end{aligned}$，
+
+    ∴$\triangle ABC \cong \triangle ACD (SAS)$，
+
+    ∴$AB = AD$，
+
+    ∴$\triangle ABD$是等边三角形，
+
+    ∴$AB = BD$，
+
+    ∴$AB = BC + CD + 2BC$，即$BC=\frac{1}{2}AB$；
+
+    方法二：如图，在线段AB上取一点D，使得$BD = BC$，连接CD，
+
+    ∵$\angle C=90^{\circ},\ \angle A=30^{\circ}$，
+
+    ∴$\angle B=60^{\circ}$，
+
+    ∵$BD = BC$，
+
+    ∴$\triangle BCD$是等边三角形，
+
+    ∴$BC = CD = BD$，$\angle BCD = 60^\circ$，
+
+    ∴$\angle DCA = 30^\circ$，
+
+    ∴$\angle DCA = \angle A$，
+
+    ∴$CD = AD$，
+
+    ∴$BC = BD = AD$，
+
+    ∴$BC=\frac{1}{2}AB$．'
   knowledge_points:
-  - 一元二次方程
-  module: numbersAndExpressions
+  - 全等三角形
+  module: triangles
   difficulty: 中档
   recommended_for:
   - L1
@@ -315,18 +666,50 @@ questions:
 - id: 21
   type: 解答
   score: 5
-  question: '如图，四边形是平行四边形，相交于点O，点E是的中点，连接，过点E作于点F，过点O作于点G．
+  question: '如图，在四边形$ABCD$中，$\angle A=\angle C=90^{\circ}$，过点B作$BE \parallel AD$交CD于点E，点F为AD边上一点，$AF = BE$，连接EF．
 
-    （1）求证：四边形是矩形；
+    [图]
 
-    （2）若四边形是菱形，，求的长．'
-  answer: ''
-  solution: ''
+    （1）求证：四边形$ABEF$为矩形；
+
+    （2）若$AB = 6,\ BC = 3,\ CE = 4$，求ED的长．'
+  answer: （1）见解析（2）10
+  solution: '【小问1详解】
+
+    证明：∵$BE \parallel AD$，即$BE \parallel AF$，$AF = BE$，
+
+    ∴四边形$ABEF$为平行四边形．
+
+    ∵$\angle A = 90^{\circ}$，
+
+    ∴四边形$ABEF$为矩形；
+
+    【小问2详解】
+
+    解：∵$BE \parallel AD$，
+
+    ∴$\angle BEC = \angle D$．
+
+    ∵四边形$ABEF$为矩形，
+
+    ∴$\angle C=\angle EFD=90^{\circ}$，$EF = AB = 6$，
+
+    ∴$\triangle BEC\sim\triangle EDF$，
+
+    ∴$\frac{CE}{DF} = \frac{BC}{EF}$，即$\frac{4}{DF} = \frac{3}{6}$，
+
+    解得：$DF = 8$，
+
+    ∴$DE=\sqrt{EF^{2}+DF^{2}}=10$．
+
+    [图]'
   knowledge_points:
+  - 平行线
+  - 相似三角形
+  - 勾股定理
   - 平行四边形
   - 矩形
-  - 菱形
-  module: quadrilaterals
+  module: triangles
   difficulty: 中档
   recommended_for:
   - L1
@@ -335,16 +718,48 @@ questions:
 - id: 22
   type: 解答
   score: 5
-  question: '在平面直角坐标系中，一次函数图象是由函数的图象平移得到，且经过点．
+  question: '在平面直角坐标系xOy中，一次函数$y=kx+b$的图象过点$(1,3),(2,2)$．
 
-    （1）求这个一次函数的表达式；
+    （1）求这个一次函数的解析式；
 
-    （2）当时，对于的每一个值，函数的值小于一次函数的值，直接写出的取值范围．'
-  answer: ''
-  solution: ''
+    （2）当$x>2$时，对于x的每一个值，一次函数$y = mx$的值大于一次函数$y=kx+b$的值，直接写出m的取值范围．'
+  answer: （1）一次函数的解析式$y = -x + 4$； （2）$m\ 1$
+  solution: '【小问1详解】
+
+    解：∵一次函数$y=kx+b$的图象过点$(1,3),(2,2)$，
+
+    ∴把$(1,3),(2,2)$代入得：$\left\{ \begin{array} { l } { k + b = 3 } \\ { 2 k + b = 2 } \end{array} \right.$，
+
+    解得：$\left\{
+
+    \begin{array}{l}
+
+    k = -1 \\
+
+    b = 4
+
+    \end{array}
+
+    \right.$，
+
+    ∴一次函数的解析式$y = -x + 4$；
+
+    $[公式]$小问2详解】
+
+    解：由（1）得：一次函数的解析式$y = -x + 4$，
+
+    当$x=2$时，$y=2$，
+
+    当$x>2$时，对于x的每一个值，一次函数$y = mx$的值大于一次函数$y=kx+b$的值，
+
+    把$x=2$代入$y = mx$得：$y = 2m$，
+
+    ∴$2m-2$，
+
+    解得：$m\ 1$．'
   knowledge_points:
   - 一次函数
-  - 平移
+  - 不等式
   - 坐标系
   module: functions
   difficulty: 中档
@@ -355,42 +770,67 @@ questions:
 - id: 23
   type: 解答
   score: 6
-  question: '某校七、八年级各有学生600人，为了解这两个年级普及安全教育的情况，进行了抽样调查，过程如下：
+  question: '如图，AB为$\odot\odot$的直径，C为$\odot\odot$上一点，D为$\widehat{BC}$的中点，$DE \perp AC$交AC的延长线于点E．
 
-    选择样本，收集数据
+    [图]
 
-    从七、八年级各随机抽取20名学生，进行安全教育测试，测试成绩（百分制）如下：（单位：分）
+    （1）求证：直线DE为$\odot\odot$的切线；
 
-    七年级 85  79  89  83  89  98  68  89  79  59
+    （2）延长$AB,ED$交于点F．若$BF = 2, \sin \angle AFE = \frac{1}{3}$，求AC的长．'
+  answer: （1）证明见解析 （2）$\frac{2}{3}$
+  solution: '【小问1详解】
 
-    99  87  85  89  97  86  89  90  89  77
+    证明：连接BC，连接OD交BC于点F．
 
-    八年级 71  94  87  92  55  94  98  78  86  94
+    ∵AB是$\odot\odot$的直径，
 
-    62  99  94  51  88  97  94  98  85  91
+    ∴$\angle ACB=90^\circ$，
 
-    分组整理，描述数据
+    ∵点D是$\widehat{BC}$的中点，
 
-    （1）按如下频数分布直方图整理、描述这两组样本数据，请补全七年级20名学生安全教育频数分布直方图．
+    ∴$OD \perp BC$，
 
-    （说明：成绩90分及以上为优秀，80～89分为良好，80分以下为不合格）
+    又∵$DE \perp AC$，
 
-    分析数据，计算填空
+    ∴四边形$CEDF$是矩形，
 
-    （2）两组样本数据的平均数、中位数、众数、优秀率如表所示，请补充完整
+    ∴$\angle ODE=90^{\circ}$，
 
-    分析数据，解决问题
+    ∴$OD \perp DE$，
 
-    （3）请估计该校七、八年级成绩优秀学生共有人数．
+    又∵OD是$\odot\odot$的半径，
 
-    （4）整体成绩较好的年级为　   　，理由为　   　．'
-  answer: ''
-  solution: ''
+    ∴DE是$\odot\odot$的切线．
+
+    [图]【小问2详解】
+
+    解：设$\odot\odot$的半径为r，则$OF=2+r,\ OD=r$，
+
+    在$\mathrm{Rt}\triangle ODF$中，$\sin \angle OFD = \frac{OD}{OF} = \frac{1}{3}$，
+
+    ∴$\frac{r}{r+2}=\frac{1}{3}$，
+
+    ∴$r = 1$，
+
+    ∴$AB = 2r = 2$，
+
+    ∵$\angle A+\angle F=90^{\circ}=\angle A+\angle ABC$，
+
+    ∴$\angle ABC = \angle AFE$，
+
+    ∴$\sin\angle ABC=\sin\angle AFE$，
+
+    在$Rt\triangle ABC$中，$\sin \angle ABC = \frac{AC}{AB} = \frac{1}{3}$，
+
+    ∴$AC = \frac{2}{3}$．
+
+    [图]'
   knowledge_points:
-  - 平均数
-  - 中位数
-  - 众数
-  module: statisticsAndProbability
+  - 圆周角
+  - 垂径定理
+  - 切线
+  - 矩形
+  module: circles
   difficulty: 较难
   recommended_for:
   - L2
@@ -398,17 +838,76 @@ questions:
 - id: 24
   type: 解答
   score: 6
-  question: '如图，为的直径，为的一条弦，过点A作直线，使．
+  question: '某小组对当地2022年3月至10月西红柿与黄瓜市场价格进行调研，经过整理、描述和分析得到了部分信息．
 
-    （1）求证：为的切线；
+    a．西红柿与黄瓜市场价格的折线图：
 
-    （2）若，求长．'
-  answer: ''
-  solution: ''
+    [图]
+
+    b．西红柿与黄瓜价格的众数和中位数：
+
+    蔬菜价格
+
+    众数
+
+    中位数
+
+    西红柿（元/千克）
+
+    6
+
+    m
+
+    黄瓜（元/千克）
+
+    n
+
+    6
+
+    根据以上信息，回答下列问题：
+
+    （1）$m =$________，$n =$_________；
+
+    （2）在西红柿与黄瓜中，_________的价格相对更稳定；
+
+    （3）如果这两种蔬菜的价格随产量的增大而降低，结合题中信息推测这两种蔬菜在_________月的产量相对更高．'
+  answer: （1）$6.5$，$6$ （2）西红柿（3）6
+  solution: '【小问1详解】
+
+    解：把西红柿这8个月的价格从低到高排列为5，6，6，6，7，8，9，10，处在最中间的两个数分别为6，7，
+
+    ∴$m=\frac{6+7}{2}=6.5$；
+
+    ∵黄瓜价格中，价格为6元出现了三次，出现的次数最多，
+
+    ∴$n = 6$；
+
+    故答案为：$6.5$，$6$；
+
+    【小问2详解】
+
+    解：由折线统计图可知，西红柿的价格起伏比较小，黄瓜价格的起伏比较大，
+
+    ∴西红柿的价格相对更加稳定，
+
+    故答案为；西红柿；
+
+    【小问3详解】
+
+    解：∵这两种蔬菜的价格随产量的增大而降低，
+
+    ∴价格最低的月份即是产量最高的月份，
+
+    由折线统计图可知在6月份的时候，两种蔬菜的价格都最低，
+
+    ∴推测这两种蔬菜在6月的产量相对更高，
+
+    故答案为：6．'
   knowledge_points:
-  - 切线
-  - 弦
-  module: circles
+  - 统计
+  - 中位数
+  - 众数
+  module: statisticsAndProbability
   difficulty: 较难
   recommended_for:
   - L2
@@ -416,38 +915,97 @@ questions:
 - id: 25
   type: 解答
   score: 6
-  question: '“城市轨道交通是现代大城市交通的发展方向，发展轨道交通是解决大城市病的有效途径．”如图，北京地铁（）是中华人民共和国北京市的城市轨道交通系统，规划于1953年，始建于1965年，运营于1969年，是中国第一个地铁系统．小华了解到列车从慈寿寺站开往花园桥站时，在距离停车线256米处开始减速．他想知道列车从减速开始，经过多少秒停下来，以及最后一秒滑行的距离．为了解决这个问题，小华通过建立函数模型来描述列车离停车线的距离（米）与滑行时间（秒）的函数关系，再应用该函数解决相应的问题．
+  question: '“兔飞猛进”谐音成语“突飞猛进”．在自然界中，野兔善于奔跑跳跃，“兔飞猛进”名副其实．野兔跳跃时的空中运动路线可以看作是抛物线的一部分．
 
-    （1）建立模型
+    [图]
 
-    ①收集数据
+    （1）建立如图所示的平面直角坐标系．
 
-    ②建立平面直角坐标系
+    通过对某只野兔一次跳跃中水平距离x（单位：m）与竖直高度y（单位：m）进行的测量，得到以下数据：
 
-    为了观察（米）与（秒）的关系，建立如图所示的平面直角坐标系．
+    水平距离$x/m$
 
-    ③描点连线
+    0
 
-    请在平面直角坐标系中将表中未描出点补充完整，并用平滑的曲线依次连接．
+    $0.4$
 
-    ④选择函数模型
+    1
 
-    观察这条曲线的形状，它可能是________函数的图象．
+    $1.4$
 
-    ⑤求函数解析式
+    2
 
-    解：设，因为时，，所以，则．
+    $2.4$
 
-    请根据表格中的数据，求，的值．
+    $2.8$
 
-    验证：把，的值代入中，并将其余几对值代入求出的解析式，发现它们都满足该函数解析式．
+    竖直高度$y/m$
 
-    （2）应用模型
+    0
 
-    列车从减速开始经过________秒，列车停止；最后一秒钟，列车滑行的距离为________米．'
-  answer: ''
-  solution: ''
+    $0.48$
+
+    $0.9$
+
+    $0.98$
+
+    $0.8$
+
+    $0.48$
+
+    0
+
+    根据上述数据，回答下列问题：
+
+    ①野兔本次跳跃的最远水平距离为_________m，最大竖直高度为_________m；
+
+    ②求满足条件的抛物线的解析式；
+
+    （2）已知野兔在高速奔跑时，某次跳跃的最远水平距离为$3m$，最大竖直高度为$1m$．若在野兔起跳点前方$2m$处有高为$0.8m$的篱笆，则野兔此次跳跃_________（填“能”或“不能”）跃过篱笆．'
+  answer: （1）①$2.8$，$0.98$；②$y = -0.5(x - 1.4)^2 + 0.98 \, (0 \leq x \leq 2.8)$ （2）能
+  solution: '【小问1详解】
+
+    解：①由表格中的数据可知，当$x = 2.8$时，$y = 0$，
+
+    ∴野兔本次跳跃的最远水平距离为$2.8m$，
+
+    ∴满足题意的抛物线对称轴为直线$x=\frac{0+2.8}{2}=1.4$，
+
+    ∵抛物线开口向下，
+
+    ∴当$x=1.4$，y最大，
+
+    ∴由表格数据可知最大竖直高度为$0.98m$，
+
+    故答案为：$2.8$，$0.98$；
+
+    ②由①可知抛物线顶点坐标为$(1.4,0.98)$，
+
+    ∴可设抛物线解析式为$y = a(x - 1.4)^2 + 0.98$，
+
+    ∴$a(0-1.4)^{2}+0.98=0$，
+
+    ∴$a = -0.5$，
+
+    ∴抛物线解析式为$y = -0.5(x - 1.4)^2 + 0.98 \, (0 \leq x \leq 2.8)$
+
+    【小问2详解】
+
+    解：∵某次跳跃的最远水平距离为$3m$，最大竖直高度为$1m$，
+
+    ∴此时满足题意的抛物线顶点坐标为$(1.5,1)$，
+
+    同理可求出此时抛物线的解析式为$y = -\frac{4}{9}(x - 1.5)^2 + 1$，
+
+    当$x=2$时，$y=-\frac{4}{9}(2-1.5)^{2}+1=\frac{8}{9}$，
+
+    ∵$\frac{8}{9}>0.8$，
+
+    ∴野兔此次跳跃能跃过篱笆，
+
+    故答案为：能．'
   knowledge_points:
+  - 二次函数
   - 坐标系
   module: functions
   difficulty: 较难
@@ -457,14 +1015,57 @@ questions:
 - id: 26
   type: 解答
   score: 6
-  question: '在平面直角坐标系中，点，，是抛物线上的点，．
+  question: '在平面直角坐标系xOy中，点$A(x_{0},\ m),\ B(x_{0}+4,\ n)$在抛物线$y=x^{2}-2bx+1$上．
 
-    （1）当，时，求和的值；
+    （1）当$b = 5,\ x_0 = 3$时，比较m与n的大小，并说明理由；
 
-    （2）若时，，求的取值范围．'
-  answer: ''
-  solution: ''
+    （2）若对于$3 \leq x_{0} \leq 4$，都有$m<n<1$，求b的取值范围．'
+  answer: （1）$m = n$ （2）$4<b<5$
+  solution: '【小问1详解】
+
+    解：$m = n$．
+
+    理由：当$b = 5,\ x_0 = 3$时，抛物线解析式为$y=x^{2}-10x+1$，点$A(3,\ m),\ B(7,\ n)$，
+
+    将$A(3,\ m),\ B(7,\ n)$代入$y=x^{2}-10x+1$，
+
+    得：$m=3^{2}-10\times3+1=-20$，$n=7^{2}-10\times7+1=-20$，
+
+    ∴$m = n$；
+
+    【小问2详解】
+
+    解：∵该函数解析式$[公式]$$y=x^{2}-2bx+1$，
+
+    ∴其图象开口向上，对称轴为直线$x = \frac{-2b}{-2} = b$，
+
+    ∴在对称轴左侧，y随x的增大而减小，在对称轴右侧，y随x的增大而增大．
+
+    ∵$A(x_{0},\ m),\ B(x_{0}+4,\ n)$，
+
+    ∴点B在点A右侧．
+
+    ∵对于$3 \leq x_{0} \leq 4$，都有$m<n<1$，
+
+    ∴$7\leq x_{0}+4\leq8$，
+
+    ∴当$x=8$时，$y<1$，即$8^2-16b+1<1$，
+
+    解得：$b > 4$．
+
+    ∵对于$3 \leq x_{0} \leq 4$，都有$m<n<1$，
+
+    ∴$\left|x_{n}-b\right|<x_{n}+4-b$，
+
+    两边平方，得：$(x_{0}-b)^{2}<(x_{0}+4-b)^{2}$，
+
+    整理，得：$b < x_0 + 2$，
+
+    ∴$b<3+2=5$．
+
+    综上可知$4<b<5$．'
   knowledge_points:
+  - 二次函数
   - 坐标系
   module: functions
   difficulty: 压轴
@@ -473,37 +1074,157 @@ questions:
 - id: 27
   type: 解答
   score: 7
-  question: '在等边中，点D为的中点，点E为上一点（不与A、D重合），连接．
+  question: '如图，正方形$ABCD$中，点E，F分别在$BC,CD$上，$BE=CF,AE,BF$交于点G．
 
-    将线段绕点E顺时针旋转至，使点F落在的延长线上，在图1中补全图形：
+    [图]
 
-    （1）求的度数；
+    （1）求$\angle AGF$的度数；
 
-    （2）探究线段之间的数量关系，并加以证明；
+    （2）在线段AG上截取$MG = BG$，连接$DM,\angle AGF$的角平分线交DM于点N．
 
-    （3）将线段绕点E旋转，在旋转过程中与边交于点H，连接，若，当时，请写出的最小值．'
-  answer: ''
-  solution: ''
+    ①依题意补全图形；
+
+    ②用等式表示线段MN与ND的数量关系，并证明．'
+  answer: （1）$90^\circ$ （2）①见解析②$MN = ND$，证明见解析
+  solution: '【小问1详解】
+
+    ∵四边形$ABCD$是正方形，
+
+    ∴$AB = BC,\ \angle ABE = \angle BCF = 90^\circ$，
+
+    在$\triangle ABE$和$\triangle BCF$中，
+
+    $AB = BC \\
+
+    \angle ABE = \angle BCF, \\
+
+    BE = CF$
+
+    ∴$\triangle ABE \cong \triangle BCF (SAS)$，
+
+    ∴$\angle BAE = \angle CBF$
+
+    ∴$\angle AGF=\angle BAE+\angle ABG=\angle CBF+\angle ABG=\angle ABE=90^{\circ}$．
+
+    【小问2详解】
+
+    ①根据题意画图如下
+
+    [图]
+
+    ②$MN = ND$,理由如下
+
+    作$AH \perp AG$交GN的延长线于点H，连HD
+
+    ∵GN平分$\angle AGF$,$\angle AGF = 90^\circ$
+
+    ∴$\angle AGH = \frac{1}{2} \angle AGF + 45^\circ$
+
+    ∴$\triangle AGH$为等腰直角三角形
+
+    ∴$AG = AH, \angle AGH = \angle AHG = 45^\circ$
+
+    ∵四边形$ABCD$为正方形
+
+    ∴$AB = AD, \angle BAD = 90^\circ$
+
+    ∴$\angle BAD = \angle GAH = 90^\circ$
+
+    ∴$\angle BAG = \angle DAH$
+
+    在$\triangle ABG$和$\triangle ADH$中
+
+    $\begin{aligned}
+
+    &AB = AD \\
+
+    &\angle BAG = \angle DAH \\
+
+    &AG = AH
+
+    \end{aligned}$
+
+    ∴$\triangle ABG \cong \triangle'
   knowledge_points:
-  - 旋转
-  module: geometryComprehensive
+  - 全等三角形
+  - 正方形
+  module: triangles
   difficulty: 压轴
   recommended_for:
   - L3
 - id: 28
   type: 解答
   score: 7
-  question: '在平面直角坐标系中，将图形W上除原点O外的每一点P变换为射线上的点，使，称点是点P的“对应点”， 构成的图形是图形W的“反形”．已知点S是满足的动点，以点S为圆心作过点O的．点T在半径为4的上运动，过点T作的切线l．
+  question: '在平面直角坐标系xOy中，对于点$P(m,\ n)$，我们称直线$y = mx + n$为点P的关联直线，例如，点$P(2,4)$的关联直线为$y=2x+4$．
 
-    （1）如图，当时，对于，在图中画出上的点，的“对应点”，；
+    （1）已知点$A(1,2)$．
 
-    （2）当点T运动至点时，设为切线l上一点的“对应点”，试求的最大值；
+    ①点A的关联直线为_________；
 
-    （3）如果存在点S与点T，使的“反形”中存在一点，切线l的“反形”中存在一点，满足，直接写出r的取值范围．'
-  answer: ''
-  solution: ''
+    ②若$\odot\odot$与点A的关联直线相切，则$\odot\odot$的半径为_________；
+
+    （2）已知点$C(0,2)$，点$D(d,0)$．点M为直线CD上的动点．
+
+    ①当$d = 2$时，求点O到点M的关联直线的距离的最大值；
+
+    ②以$T(-1,1)$为圆心，3为半径作$\mathrm{e}T$．在点M运动过程中，当点M的关联直线与$\mathrm{e}T$交于E，F两点时，EF的最小值为4，请直接写出d的值．'
+  answer: （1）①$y=x+2$；②$\sqrt{2}$ （2）①$\sqrt{5}$；②$d = 2$或$d = -\frac{2}{3}$
+  solution: '【小问1详解】
+
+    解：①由题意得，点$A(1,2)$的关联直线为$y=x+2$，
+
+    故答案为：$y=x+2$；
+
+    ②如图所示，设直线$y=x+2$与$\odot\odot$相切于点E，连接OE，设直线$y=x+2$与x轴，y轴分别交于C、D，
+
+    ∴$C(-2,0),\ D(0,2)$，
+
+    ∴$OC = OD = 2$，
+
+    ∴$CD=\sqrt{OC^{2}+OD^{2}}=2\sqrt{2}$，
+
+    由切线的性质可得$OE \perp CD$，
+
+    ∴$S_{\triangle OCD} = \frac{1}{2} OC \cdot OD = \frac{1}{2} OE \cdot CD$，
+
+    ∴$OE = \frac{OC \cdot OD}{CD} = \sqrt{2}$，
+
+    ∴$\odot\odot$的半径为$\sqrt{2}$；
+
+    [图]【小问2详解】
+
+    解：①设直线CD的解析式为$y=kx+b$，
+
+    由题意得，点$C(0,2)$，点$D(2,0)$，
+
+    ∴$\left\{\begin{array}{l} 2k + b = 0 \\ b = 2 \end{array}\right.$，
+
+    ∴$\left\{\begin{array}{l}k=-1\\b=2\end{array}\right.$，
+
+    ∴直线CD的解析式为$y=-x+2$，
+
+    设点M的坐标为$(m_{3}-m+2)$，
+
+    ∴点M的关联直线为$y = mx + 2 - m = m(x - 1) + 2$，
+
+    ∴点M的关联直线经过定点$N(1,2)$，
+
+    如图所示，过点O作直线$y = mx + 2 - m$的垂线，垂足为H，
+
+    ∴$ON\ OH$，
+
+    ∴当点H与点N重合时，OH最大，即点O到点M的关联直线的距离最大，
+
+    ∴点O到点M的关联直线的距离的最大值为$\sqrt{1^{2}+2^{2}}=\sqrt{5}$；
+
+    [图]
+
+    ②同理可得直线CD的解析式'
   knowledge_points:
+  - 一次函数
+  - 垂径定理
   - 切线
+  - 勾股定理
   - 坐标系
   - 动点
   module: circles

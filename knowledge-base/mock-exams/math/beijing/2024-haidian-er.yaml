@@ -1,8 +1,8 @@
 # ============================================================
 # 2024年北京海淀区中考数学二模试卷 — 逐题分析
 # ============================================================
-# 数据来源：knowledge-original/精品解析：2024年北京市海淀区首都师范大学附属中学中考模拟数学试题（解析版）.docx
-# 自动生成，部分数学公式可能显示不全（docx公式对象无法完整提取）
+# 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
+# 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
 # 满分：100分  时长：120分钟
 
 year: 2024
@@ -11,104 +11,21 @@ exam_type: 二模
 subject: 数学
 full_score: 100
 duration_minutes: 120
-total_questions: 32
+total_questions: 28
 structure: 8选择(16分) + 8填空(16分) + 12解答(68分)
 questions:
 - id: 1
   type: 选择
   score: 2
-  question: 全卷满分120分．考试时间为120分钟．考生答题全部答在答题卡上，答在本试卷上无效．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 2
-  type: 选择
-  score: 2
-  question: 请认真核对监考教师在答题卡上所粘贴条形码的姓名、考试证号是否与本人相符合，再将自己的姓名、考试证号用0.5毫米黑色墨水签字笔填写在答题卡及本试卷上．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 3
-  type: 选择
-  score: 2
-  question: 答选择题必须用2B铅笔将答题卡上对应的答案标号涂黑．如需改动，请用橡皮擦干净后，再选涂其他答案．答非选择题必须用0.5毫米黑色墨水签字笔写在答题卡上的指定位置，在其他位置答题一律无效．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 4
-  type: 选择
-  score: 2
-  question: 作图必须用2B铅笔作答，并请加黑加粗，描写清楚．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 综合
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 1
-  type: 选择
-  score: 2
-  question: "下列图书馆标志图形中，是轴对称图形的是（    ）\nA. \tB. \tC. \tD."
-  answer: A
-  solution: '解：A．是轴对称图形，故A正确；
+  question: '截至$2023$年底，我国人工智能核心产业规模接近$5800$亿元，形成了京津冀、长三角、珠三角三大集聚发展区．将$580000000000$用科学记数法表示应为（）
 
-    B．不是轴对称图形，故B错误；
+    A.$58\times10^{10}$B.$5.8\times10^{11}$C.$5.8\times10^{12}$D.$0.58\times10^{12}$'
+  answer: B
+  solution: '解：$580000000000=5.8\times10^{11}$用科学记数法的表示为$5.8\times10^{11}$，
 
-    C．不是轴对称图形，故C错误；
-
-    D．不是轴对称图形，故D错误．
-
-    故选：A．'
-  knowledge_points:
-  - 轴对称图形
-  - 轴对称
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 2
-  type: 选择
-  score: 2
-  question: "年月日，搭载神舟十七号载人飞船的长征二号摇十七运载火箭在酒泉卫星发射中心成功发射．长征二号（代号：，简称：长二，绰号：神箭）主要用于发射神舟飞船和大型目标飞行器到近地轨道，其近地轨道运载能力是千克．将用科学记数法表示应为（    ）\nA. \tB. \tC. \tD."
-  answer: C
-  solution: '解：．
-
-    故选C．'
+    故选：B．'
   knowledge_points:
   - 科学记数法
-  - 绝对值
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -116,45 +33,43 @@ questions:
   - L1
   - L2
   - L3
-- id: 3
+- id: 2
   type: 选择
   score: 2
-  question: "已知，则下列结论正确的是（    ）\nA. \tB. \tC. \tD."
-  answer: D
-  solution: '解：∵，
+  question: '下图是一张长方形纸片，用其围成一个几何体的侧面，这个几何体可能是（）
 
-    ∴，
+    [图]
 
-    ∴，
+    A.圆柱B.圆锥C.球D.三棱锥'
+  answer: A
+  solution: '解：A、圆柱的侧面展开图是长方形，符合题意；
 
-    ∴，
+    B、圆锥的侧面展开图是扇形，不符合题意；
 
-    ∴A，B，C不符合题意；D符合题意；
+    C、球的侧面展开不符合长方形的特征，不符合题意；
 
-    故选：D'
+    D、三棱锥的侧面展开图不符合长方形的特征，不符合题意；
+
+    故选：A．'
   knowledge_points:
-  - 不等式
-  module: equationsAndInequalities
+  - 综合
+  module: circles
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
-- id: 4
+- id: 3
   type: 选择
   score: 2
-  question: "下列几何体中，主视图是三角形的是（    ）\nA. \tB. \tC. \tD."
-  answer: B
-  solution: '解：A．主视图是正方形，故本选项错误；
+  question: '五边形的内角和为（）
 
-    B．主视图是三角形，故本选项正确；
+    A.$900^\circ$B.$720^\circ$C.$540^\circ$D.$360^\circ$'
+  answer: C
+  solution: '解：$180^{\circ}\times(5-2)=540^{\circ}$，
 
-    C．主视图是长方形，故本选项错误；
-
-    D．主视图是圆，故本选项错误．
-
-    故选：B．'
+    故选：C．'
   knowledge_points:
   - 综合
   module: triangles
@@ -164,19 +79,49 @@ questions:
   - L1
   - L2
   - L3
-- id: 5
+- id: 4
   type: 选择
   score: 2
-  question: "如图，两个边长为1的正方形整齐地排列在数轴上形成一个大的长方形，以O点为圆心，以长方形的对角线长度为半径作圆与数轴有两个交点，其中点表示的数是（    ）\nA \tB. \tC. \tD."
-  answer: B
-  solution: '解：由勾股定理得，
+  question: '若$a > b$，则下列式子一定成立的是$\left( \right)$$\right)$
 
-    ∴点Р表示的数是．
+    A.$a+b>0$B.$a-b>0$C.$ab > 0$D.$\frac{a}{b}>0$'
+  answer: B
+  solution: 'A、若0＞a＞b时，a+b＜0．故A选项错误；
+
+    B、在a＞b的两边同时减去b，不等式仍成立，即a-b＞0．故B选项正确；
+
+    C、若a＞0＞b时，ab＜0．故C选项错误；
+
+    D、若b=0时，该不等式不成立．故D选项错误．
 
     故选B．'
   knowledge_points:
-  - 勾股定理
-  - 正方形
+  - 不等式
+  module: equationsAndInequalities
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 5
+  type: 选择
+  score: 2
+  question: '如图，实数$\sqrt{5}$在数轴上对应的点可能是（）
+
+    [图]
+
+    A.点AB.点BC.点CD.点D'
+  answer: C
+  solution: '解：∵$\sqrt{4}<\sqrt{5}<\sqrt{9}$，
+
+    ∴$2<\sqrt{5}<3$，
+
+    ∴在数轴上对应的点可能是C，
+
+    故选：C．'
+  knowledge_points:
+  - 综合
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -187,20 +132,28 @@ questions:
 - id: 6
   type: 选择
   score: 2
-  question: "下列各式中，运算正确的是（    ）\nA. \tB.\nC. \tD."
-  answer: D
-  solution: '解：A、不是同类二次根式，不能合并，不符合题意；
+  question: '如图，$l_1 \parallel l_2$，点A在$\ell_{1}$上，以点A为圆心，适当长度为半径画弧，分别交$\ell_{1}$，$l_2$于点B，C，连接AC，BC．若$\angle1=40^{\circ}$，则$\angle ABC$的大小为（）
 
-    B、不同类二次根式，不能合并，不符合题意；
+    [图]
 
-    C、，故C不正确，不符合题意；
+    A.$80^\circ$B.$75^\circ$C.$70^\circ$D.$65^\circ$'
+  answer: C
+  solution: '解：∵点A为圆心，适当长度为半径画弧，分别交直线$\ell_{1}$，$l_2$于B、C，
 
-    D、，故D正确，符合题意；
+    ∴$AC = AB$，
 
-    故选：D．'
+    ∴$\angle ABC = \angle BCA$，
+
+    ∵$l_1 \parallel l_2$，
+
+    ∴$\angle ABC+\angle BCA+\angle 1=180^{\circ}$，即$2\angle BPC+40^{\circ}=180^{\circ}$，
+
+    ∴$\angle ABC=70^\circ$，
+
+    故选：C．'
   knowledge_points:
-  - 综合
-  module: numbersAndExpressions
+  - 平行线
+  module: triangles
   difficulty: 中档
   recommended_for:
   - L1
@@ -209,28 +162,24 @@ questions:
 - id: 7
   type: 选择
   score: 2
-  question: "如图，在中，，在边上截取，连接，过点A作于点E．已知，，如果F是边的中点，连接，那么的长是（    ）\nA. 1\tB. 2\tC. 3\tD. 5"
-  answer: A
-  solution: '解：，，，，
+  question: '九年级（1）班羽毛球小组共有4名队员，其中两名男生，两名女生．从中随机选取两人，恰好能组成一组混双搭档的概率是（）
 
-    ，
+    A.$\frac{1}{4}$B.$\frac{1}{3}$C.$\frac{1}{2}$D.$\frac{2}{3}$'
+  answer: D
+  solution: '解：两名男生表示为男1，男2，两名女生表示为女1，女2，如图所述，画树状图表示所有等可能结果，
 
-    ，，，
+    [图]
 
-    ，点是的中点，
+    共有$12$种等可能结果，其中恰好能组成一组混双搭档的结果有$8$种，
 
-    ，
+    ∴恰好能组成一组混双搭档的概率是$\frac{8}{12}=\frac{2}{3}$，
 
-    又F是边的中点，
-
-    是的中位线，
-
-    ，
-
-    故选A．'
+    故选：D．'
   knowledge_points:
-  - 勾股定理
-  module: triangles
+  - 概率
+  - 树状图
+  - 列表法
+  module: statisticsAndProbability
   difficulty: 中档
   recommended_for:
   - L1
@@ -239,55 +188,20 @@ questions:
 - id: 8
   type: 选择
   score: 2
-  question: "如图，，是内部的射线且，过点作于点，过点作于点，在上取点，使得，连接．\n设，给出下面三个结论：\n①；\n②；\n③．\n上述结论中，所有正确结论的序号是（    ）\nA ①②\tB. ①③\tC. ②③\tD. ①②③"
-  answer: B
-  solution: '解：，，
+  question: '某种型号的纸杯如图$1$所示，若将n个这种型号的杯子按图$2$中的方式叠放在一起，叠在一起的杯子的总高度为H．则H与n满足的函数关系可能是（）
 
-    ，，
+    [图]
 
-    ，，
+    A.$H = 0.3n$B.$H=\frac{10}{0.3n}$C.$H=10-0.3n$D.$H = 10 + 0.3n$'
+  answer: D
+  solution: '解：根据题意，1个杯子的高$h = 10$，1个杯子沿高为$0.3$，
 
-    ，
+    ∴n个杯子叠在一起的总高度为$H = 10 + 0.3n$，
 
-    在和中，
-
-    ，
-
-    ，
-
-    ，，
-
-    ，
-
-    ，
-
-    ，故①正确，
-
-    连接，则，
-
-    ，，
-
-    ，
-
-    ，
-
-    ，故②错误，
-
-    是内部的射线且，
-
-    ，
-
-    ，
-
-    ，
-
-    ，故③正确．
-
-    故选：B．'
+    故选：D．'
   knowledge_points:
-  - 全等三角形
-  - 勾股定理
-  module: triangles
+  - 综合
+  module: geometryComprehensive
   difficulty: 较难
   recommended_for:
   - L2
@@ -295,15 +209,15 @@ questions:
 - id: 9
   type: 填空
   score: 2
-  question: 若在实数范围内有意义，则实数x的取值范围是 ___________．
-  answer: ''
-  solution: '由题意可得，
+  question: 若代数式$\frac{1}{x-2}$有意义，则实数x的取值范围是__________．
+  answer: $x \neq 2$
+  solution: '解：根据题意，$x-2\ne0$，
 
-    解得，
+    ∴$x \neq 2$，
 
-    故答案为：．'
+    故答案为：$x \neq 0$．'
   knowledge_points:
-  - 综合
+  - 不等式
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -314,22 +228,18 @@ questions:
 - id: 10
   type: 填空
   score: 2
-  question: 分式方程的解__________________．
-  answer: '##'
-  solution: '解：去分母得：，
+  question: 已知$x = 1$是方程$x^{2}-3x+c=0$的一个根，则实数c的值是_________．
+  answer: $2$
+  solution: '解：∵$x = 1$是方程$x^{2}-3x+c=0$的一个根，
 
-    去括号得：，
+    ∴$1-3+c=0$
 
-    移项，合并同类项得：，
+    解得：$c = 2$，
 
-    ∴，
-
-    经检验，是原方程的解；
-
-    故答案为：．'
+    故答案为：$2$．'
   knowledge_points:
-  - 分式方程
-  module: numbersAndExpressions
+  - 一元二次方程
+  module: equationsAndInequalities
   difficulty: 基础
   recommended_for:
   - L0
@@ -339,17 +249,72 @@ questions:
 - id: 11
   type: 填空
   score: 2
-  question: 在平面直角坐标系中，若点，在反比例函数的图象上，则_____ （填“”“”或“”）．
-  answer: ''
-  solution: '∵，
+  question: '如图，在$\triangle ABC$中，$D, E$分别在边$AB, BC$上，$DE \parallel AC$．若$AD=2$，$BD = 4$，则$\frac{DE}{AC}$的值为__________．
 
-    ∴反比例函数图象的两个分支在第一、三象限，且在每个象限内随的增大而减小，
+    [图]'
+  answer: $\frac{2}{3}$##$2:3$
+  solution: '解：∵$DE \parallel AC$，
 
-    又∵点，在反比例函数的图象上，且，
+    ∴$\triangle BDE \sim \triangle BAC$，
 
-    ∴，
+    ∴$\frac{BD}{BA}=\frac{BE}{BC}=\frac{DE}{AC}$，且$AD = 2,\ BD = 4$，
 
-    故答案为：．'
+    ∴$AB=BD+AD=4+2=6$，
+
+    ∴$\frac{DE}{AC} = \frac{BD}{AB} = \frac{4}{6} = \frac{2}{3}$，
+
+    故答案为：$\frac{2}{3}$．'
+  knowledge_points:
+  - 相似三角形
+  module: triangles
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 12
+  type: 填空
+  score: 2
+  question: 在平面直角坐标系xOy中，点$A(1,y_{1})$，$B(2,y_{2})$在反比例函数$y=\frac{k}{x}(k\neq0)$的图象上．若$y_1 < y_2$，则满足条件的k的值可以是__________（写出一个即可）．
+  answer: $-1$（答案不唯一）
+  solution: '解：$\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$A、B两点的横坐标都为正数，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$A、B两点在同一个象限，
+
+    又$\therefore 1<2$，$y_1 < y_2$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$y随x的增大而增大，
+
+    $\therefore k<0$，
+
+    $\therefore k$的值可以为$-1$，
+
+    故答案为：$-1$（答案不唯一）．'
   knowledge_points:
   - 反比例函数
   - 坐标系
@@ -360,61 +325,29 @@ questions:
   - L1
   - L2
   - L3
-- id: 12
-  type: 填空
-  score: 2
-  question: 如图，是的直径，是延长线上一点， 与相切于点．若，则_________．
-  answer: ''
-  solution: '解：如图，连接，
-
-    ∵ 与相切于点．，
-
-    ∴，，
-
-    ∴，
-
-    故答案为：'
-  knowledge_points:
-  - 圆周角
-  - 切线
-  module: triangles
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
 - id: 13
   type: 填空
   score: 2
-  question: '小明观看了纸牌魔术表演，非常感兴趣，并做了如下实验和探究：
+  question: '如图所示的网格是正方形网格，A，B，C是网格线的交点，C在以AB为直径的半圆上．若点D在$\widehat{BC}$上，则$\angle BDC =$__________$\text{o}$．
 
-    将几张纸牌摞起来（从上面分别记为第1张，第2张，第3张），先将第1张牌放到整摞牌的下面，再去掉第2张牌；继续将第3张牌放在整摞牌的下面，再去掉第4张牌……如此循环往复，最终到只留下一张纸牌为止．例如，若将4张纸牌摞起来，按上述规则操作，陆续去掉第2张，第4张，第3张，最终留下第1张纸牌．将8张纸牌摞起来，按上述规则操作，最终留下的是第________张纸牌；将m张纸牌摞起来，按上述规则操作，若最终留下的是第1张纸牌，则________（用含n的代数式表示，其中n为自然数）．'
-  answer: ①. 1    ②.
-  solution: '解：8张纸牌顺序从上到下为，(将1张牌放到牌底，去掉下一张视为一轮)，1，2，3，4，5，6，7，8，
+    [图]'
+  answer: $135$
+  solution: '解：如图，记AB的中点为O，连接OC，
 
-    前四轮去掉了2，4，6，8，
+    [图]
 
-    还剩下4张纸牌从上至下为1，3，5，7，
+    由图可知，$AB = 4$，$OC = 2$，$\angle AOC=90^\circ$，
 
-    再经过2轮去掉3，7，
+    ∴$\angle CAB=45^\circ$，
 
-    还利2张纸牌、从上至下为1，5，
+    ∵四边形$ABDC$是圆内接四边形，
 
-    再经过1轮，去掉5，
+    ∴$\angle BDC=180^\circ-\angle CAB=135^\circ$，
 
-    最终剩下的是原来的第1张纸牌；
-
-    由条件中4张纸牌，按上述规则操作后，最后留下的第1张纸牌，
-
-    将m张纸牌摞起来，按上述规则操作，若最终留下的是第1张纸牌，
-
-    ∴；
-
-    故答案为：1；．'
+    故答案为：$135$．'
   knowledge_points:
-  - 综合
-  module: geometryComprehensive
+  - 正方形
+  module: quadrilaterals
   difficulty: 中档
   recommended_for:
   - L1
@@ -423,50 +356,21 @@ questions:
 - id: 14
   type: 填空
   score: 2
-  question: 如图，两个边长相等的正六边形的公共边为，点A，B，C在同一直线上， 点，分别为两个正六边形的中心． 则的值为______．
-  answer: ''
-  solution: '解：如图，连接，过点作，垂足为E，
+  question: 一组数据$3,2,4,2,6,5,6$的平均数为$4$，方差为$S_{0}^{2}$．再添加一个数据$4$，得到一组新数据．若记这组新数据的方差为$S_{1}^{2}$，则$S_{1}^{2}$__________$S_{0}^{2}$（填“$\gt$”“$=$”或“$\gt$”）．
+  answer: $\gt$
+  solution: '解：根据题意，$S_{c}^{''}=\frac{1}{2}\times\left[(4-3)+(4-2)^{2}\times2+(4-4)^{2}+(4-6)^{2}\times2+(4-5)^{2}\right]$
 
-    设正六边形的边长为a，则，
+    $-\frac{1}{7}\times18=\frac{18}{7}$，
 
-    在中，，
+    添加一个数据$4$后的平均数为$\frac{1}{3}+2+4+\frac{1}{2}+6+5+6+4=48$，
 
-    ∴，，
+    ∴$S_{1}^{''}=\frac{1}{8}\left[\left(4-3\right)^{2}+\left(4-2\right)^{2}\times2+\left(4-4\right)^{2}\times2+\left(4-6\right)^{2}\times2+\left(4-5\right)^{2}\right]$
 
-    ∴，
+    $=\frac{1}{8}\times18=\frac{9}{4}$，
 
-    ∴．
+    ∵$\frac{18}{7}>\frac{9}{4}$，即$S_{1}^{2}<S_{0}^{2}$，
 
-    故答案为：．'
-  knowledge_points:
-  - 三角函数
-  - 锐角三角函数
-  module: triangles
-  difficulty: 中档
-  recommended_for:
-  - L1
-  - L2
-  - L3
-- id: 15
-  type: 填空
-  score: 2
-  question: '10名同学分成甲、乙两队进行篮球比赛，他们的身高（单位：）如下表所示：
-
-    则两队队员身高的平均数______（填或），身高的方差______（填或）．'
-  answer: ①.     ②.
-  solution: '解：由题意得，，
-
-    ，
-
-    ∴；
-
-    ，
-
-    ，
-
-    ∴，
-
-    故答案：，．'
+    故答案为：$\gt$．'
   knowledge_points:
   - 平均数
   - 方差
@@ -476,40 +380,97 @@ questions:
   - L1
   - L2
   - L3
+- id: 15
+  type: 填空
+  score: 2
+  question: '下表是n与$2^n$（其中n为自然数）的部分对应值表：
+
+    n
+
+    5
+
+    10
+
+    15
+
+    20
+
+    25
+
+    30
+
+    35
+
+    $2^n$
+
+    32
+
+    1024
+
+    32768
+
+    1048576
+
+    33554432
+
+    1073741824
+
+    34359738368
+
+    根据表格提供的信息，计算$1024\times32768$的结果为__________．'
+  answer: $33554432$
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: numbersAndExpressions
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
 - id: 16
   type: 填空
   score: 2
-  question: 如图1所示，圆形拱门屏风是中国古代家庭中常见的装饰隔断，既美观又实用，彰显出中国元素的韵味．图2是一款拱门的示意图，其中拱门最下端分米，为中点，为拱门最高点，圆心在线段上，分米，则拱门所在圆半径的长为______分米．
-  answer: '15'
-  solution: '解：连接，
+  question: '在$\triangle ABC$中，D为边AB的中点，E为边AC上一点，连接DE．给出下面三个命题：
 
-    ∵过圆心，为的中点，
+    ①若$AE = EC$，则$DE=\frac{1}{2}BC$；
 
-    ∴，
+    ②若$DE=\frac{1}{2}BC$，则$DE \parallel BC$；
 
-    ∵分米，C为的中点，
+    ③若$DE \parallel BC$，则$AE = EC$．
 
-    ∴分米，
+    上述命题中，所有真命题的序号是__________．'
+  answer: ①③##③①
+  solution: '解：∵D是AB的中点，
 
-    设圆的半径为x分米，则分米，
+    ∴$AD = DB$，
 
-    ∵分米，
+    命题①，若$AE = EC$，则点E是AC的中点
 
-    ∴分米，
+    ∴$AE = EC,\ DE = \frac{1}{2}BC$，故命题①真命题；
 
-    在中，由勾股定理，
+    命题②，若$DE=\frac{1}{2}BC$，
 
-    ∴，
+    ∴$\frac{DE}{BC}=\frac{1}{2}$，$\frac{AD}{AB}=\frac{1}{2}$，
 
-    ∴，
+    当$\angle ADE = \angle B$时，$\triangle ADE \sim \triangle ABC$，可得$DE \parallel BC$，故命题②假命题；
 
-    即拱门所在圆的半径是15分米．
+    命题③，若$DE \parallel BC$，
 
-    故答案为：15．'
+    ∴$\angle ADE=\angle B,\ \angle AED=\angle C$，
+
+    ∴$\triangle ADE \sim \triangle ABC$，
+
+    ∴$\frac{AD}{AB}=\frac{AE}{AC}=\frac{1}{2}$，
+
+    ∴点E为AC中点，则$AE = EC$，故命题③真命题；
+
+    综上所述，真命题的序号为①③，
+
+    故答案为：①③．'
   knowledge_points:
-  - 垂径定理
-  - 勾股定理
-  module: circles
+  - 相似三角形
+  module: triangles
   difficulty: 较难
   recommended_for:
   - L2
@@ -517,13 +478,16 @@ questions:
 - id: 17
   type: 解答
   score: 5
-  question: （第17题，详见原卷）
-  answer: ''
-  solution: '解：
+  question: 计算：$2024^{1}-2\sin45^{\circ}+(-3)+\sqrt{8}$．
+  answer: $4+\sqrt{2}$
+  solution: '解：$2024^{\prime}-2\sin45^{\circ}+|-3|+\sqrt{8}$
 
-    ．'
+    $m=2x+\sqrt{2}+3+2\sqrt{2}$
+
+    $=4+\sqrt{2}$．'
   knowledge_points:
   - 三角函数
+  - 绝对值
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -534,34 +498,19 @@ questions:
 - id: 18
   type: 解答
   score: 5
-  question: 已知，求代数式的值．
-  answer: ''
-  solution: '解：∵，
+  question: '解不等式组：$\frac{x+5}{2}<3x
 
-    ∴
+    3x-4>2(x+1)$'
+  answer: $x > 6$
+  solution: '解：由$\frac{x+5}{2}<3x$，
 
-    ．'
-  knowledge_points:
-  - 综合
-  module: numbersAndExpressions
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 19
-  type: 解答
-  score: 5
-  question: 解不等式组：．
-  answer: ''
-  solution: '解：
+    解不等式可得$x>1$，
 
-    解不等式①得：，
+    由$3x - 4 > 2(x + 1)$，
 
-    解不等式②得：，
+    解不等式可得$x > 6$，
 
-    ∴不等式组的解集为．'
+    综上可得，不等式组的解集为$x > 6$．'
   knowledge_points:
   - 不等式
   - 不等式组
@@ -572,46 +521,87 @@ questions:
   - L1
   - L2
   - L3
+- id: 19
+  type: 解答
+  score: 5
+  question: 已知$m^{2}-n^{2}-3=0$，求代数式$(m+n)^{2}-2m(m+n)$的值．
+  answer: '3'
+  solution: '解：$m^{2}-n^{2}-3=0$，
+
+    即$m^{2}-n^{2}=3$，
+
+    $(m+n)^{2}-2m(m+n)$
+
+    $=(m+n)(m+n-2n)$
+
+    $=(m+n)(m-n)$
+
+    $= m^{2} - n^{2}$
+
+    $=3$'
+  knowledge_points:
+  - 方差
+  module: statisticsAndProbability
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
 - id: 20
   type: 解答
   score: 5
-  question: '在平面直角坐标系中，函数的图象经过点和，与过点且平行于轴的直线交于点．
+  question: '如图，点A，B，C，D在一条直线上，$AB = BC = CD$，$AE = EC$，四边形$ECDF$是平行四边形．
 
-    （1）求该函数的表达式及点的坐标；
+    [图]
 
-    （2）当时，对于的每一个值，函数的值大于函数的值且小于，直接写出的取值范围．'
-  answer: （1）； （2）
+    （1）求证：四边形$EBCF$是矩形；
+
+    （2）若$AD=12$，$\cos A = \frac{4}{5}$，求BF的长．'
+  answer: （1）见解析（2）5
   solution: '【小问1详解】
 
-    解：∵函数的图象经过点和，
+    证明：∵四边形$ECDF$是平行四边形，
 
-    ∴将点和代入中，
+    ∴$EF \parallel CD,\ EF = CD$，
 
-    ，解得：，
+    ∵$BC = CD$，
 
-    ∴该函数的表达式为：，
+    ∴$BC = EF$，
 
-    ∵与过点且平行于轴的直线交于点，
+    ∵$BC \parallel EF$，
 
-    ∴将代入中，得，
+    ∴四边形$EBCF$是平行四边形，
 
-    ∴；
+    ∵$AE=EC,\ AB=BC$，
+
+    ∴$EB \perp BC$，
+
+    ∴$\angle EBC = 90^\circ$，
+
+    ∴四边形$EBCF$是矩形；
 
     【小问2详解】
 
-    解：∵当时，对于的每一个值，函数的值大于函数的值且小于，
+    解：∵$AD=12$，$AB = BC = CD$，
 
-    ，
+    ∴$AB = 4$，
 
-    通过图象可知，当的函数值小于时，即将代入中，，
+    在$Rt\triangle ABE$中，$\angle ABE = 90^\circ$，$\cos A = \frac{4}{5}$，
 
-    当的函数值大于函数的值将代入中，，
+    ∴$\frac{AB}{AE}=\frac{4}{5}$，
 
-    ∴的取值范围为：．'
+    ∴$AE = 5$，
+
+    ∵四边形$EBCF$是矩形，
+
+    ∴$BE=EC=AE=5$．'
   knowledge_points:
-  - 一次函数
-  - 坐标系
-  module: functions
+  - 平行四边形
+  - 矩形
+  - 三角函数
+  - 锐角三角函数
+  module: triangles
   difficulty: 中档
   recommended_for:
   - L1
@@ -620,53 +610,20 @@ questions:
 - id: 21
   type: 解答
   score: 5
-  question: '如图，在平行四边形中，对角线、相交于点，，、、分别是、、的中点．
+  question: 我国古代著作《管子·地员篇》中介绍了一种用数学运算获得“宫商角徵羽”五音的方法．研究发现，当琴弦的长度比满足一定关系时，就可以弹奏出不同的乐音．例如，三根弦按长度从长到短排列分别奏出乐音“$do, mi, so$”，需满足相邻弦长的倒数差相等．若最长弦为$15$个单位长，最短弦为$10$个单位长，求中间弦的长度．
+  answer: $12$
+  solution: '解：根据相邻弦长的倒数差相等，设中间弦的长度为x，
 
-    （1）求证；
+    ∴$\frac{1}{15}=\frac{1}{x}-\frac{1}{x}-\frac{1}{10}$，
 
-    （2）连接，求证：四边形是菱形．'
-  answer: （1）见解析    （2）见解析
-  solution: '【小问1详解】
+    解得，$x = 12$，
 
-    证明：∵四边形是平行四边形，
+    检验，当$x = 12$时，原式有意义，
 
-    ∴，
-
-    又∵，
-
-    ∴，
-
-    ∵是的中点，
-
-    ∴；
-
-    【小问2详解】
-
-    证明：如图所示，连接，
-
-    ∵，是的中点，
-
-    ∴，
-
-    ∵，分别是，的中点
-
-    ∴，，
-
-    又∵四边形是平行四边形
-
-    ∴，，
-
-    ∴，，，
-
-    ∴四边形是平行四边形，
-
-    又∵，
-
-    ∴四边形是菱形．'
+    ∴中间弦的长度为$12$．'
   knowledge_points:
-  - 平行四边形
-  - 菱形
-  module: triangles
+  - 弦
+  module: numbersAndExpressions
   difficulty: 中档
   recommended_for:
   - L1
@@ -675,45 +632,41 @@ questions:
 - id: 22
   type: 解答
   score: 5
-  question: '某市统计局为研究我国省会及以上城市发展水平与人均之间的关系，收集了年个城市的人均数据（单位：万元）以及城市排名，进行了相关的数据分析，下面给出了部分信息．
+  question: '在平面直角坐标系xOy中，一次函数$y=kx+b(k\neq0)$的图象由函数$y=\frac{1}{2}x$的图象平移得到，且经过点$(2,4)$．
 
-    ．城市的人均的频数分布直方图（数据分成组：，，，，）：
+    （1）求这个一次函数的解析式；
 
-    频数（城市个数）
-
-    ．城市的人均（万元）的数值在这一组的是：；
-
-    ．以下是个城市年的人均（万元）和城市排名情况散点图：
-
-    根据以上信息，回答下列问题
-
-    （1）某城市的人均为万元，该城市排名全国第_____；
-
-    （2）在个城市年的人均和城市排名情况散点图中，请用“”画出城市排名的中位数所表示的点；
-
-    （3）观察散点图，请你写出一条正确的结论．'
-  answer: （1）； （2）画图见解析；    （3）结论见解析．
+    （2）当$x>2$时，对于x的每一个值，函数$y = x + n$的值与一次函数$y=kx+b(k\neq0)$的值的差大于$1$，直接写出n的取值范围．'
+  answer: （1）$y=\frac{1}{2}x+3$ （2）$n\ 3$
   solution: '【小问1详解】
 
-    解：根据城市的人均的频数分布直方图得，和两组的城市共有个，
+    解：根据图象平移可得$k = \frac{1}{2}$，且经过点$(2,4)$，
 
-    由城市的人均(万元)的数值在这一组的数据得，某城市的人均为万元，该城市排名全国第，
+    ∴$4=\frac{1}{2}\times 2+b$，
 
-    故答案为：；
+    解得，$b=3$，
 
-    【小问2详解】
+    ∴一次函数图象的解析式为$y=\frac{1}{2}x+3$；
 
-    解：∵收集了年个城市的人均数据，
+    $[公式]$小问2详解】
 
-    ∴城市排名的中位数是第个，画图如下，
+    解：根据题意，$x+\left(\frac{1}{2}x+3\right)\geq 1$，
 
-    【小问3详解】
+    解得，$n > -\frac{1}{2}x + 4$，
 
-    解：观察散点图可得，人均(万元)大的和城市的排名也靠前．'
+    ∵$x>2$，
+
+    ∴$n>3$，
+
+    当$n = 3$时，$x+3-\left(\frac{1}{2}x+3\right)-\frac{1}{2}x>1$，
+
+    $n\ 3$．'
   knowledge_points:
-  - 统计
-  - 中位数
-  module: statisticsAndProbability
+  - 一次函数
+  - 平移
+  - 不等式
+  - 坐标系
+  module: functions
   difficulty: 中档
   recommended_for:
   - L1
@@ -722,24 +675,88 @@ questions:
 - id: 23
   type: 解答
   score: 6
-  question: 如图，某校的饮水机有温水、开水两个按钮，温水和开水共用一个出水口，温水的温度为，流速为，开水的温度为流速为，某学生先接了一会儿温水，又接了一会儿开水，得到一杯温度为的水（不计热损失），求该学生分别接温水和开水的时间．
-  answer: 该学生接温水的时间为，接开水的时间为．
-  solution: '解：设该学生接温水的时间为，
+  question: '一本图鉴中的照片由1开始连续编号，由于装订线脱落，照片散落一地．小云想利用统计学知识估计照片总数，于是从中随机抽取20张照片，将其编号作为样本，数据整理如下：
 
-    根据题意可得：，
+    a．20张照片的编号：
 
-    解得，
+    4，8，15，25，34，39，41，48，68，79，85，86，89，91，102，104，110，121，144，147
 
-    ∴，
+    b．20张照片编号的最小值、最大值、平均数和中位数：
 
-    ∵，
+    最小值
 
-    ∴，
+    最大值
 
-    答：该学生接温水的时间为，接开水的时间为．'
+    平均数
+
+    中位数
+
+    4
+
+    147
+
+    72
+
+    m
+
+    （1）写出表中m的值；
+
+    （2）设照片总数为n，所有照片编号分别为1，2，…，n，这n个数的平均数和中位数均为$\frac{n+1}{2}$．
+
+    ①利用样本平均数估计全体平均数，可估算出照片的总数$n_{1}$为__________．
+
+    ②利用样本中位数估计全体中位数，可估算出照片的总数$n_{2}$为__________，
+
+    小云发现，有一个估算结果不合理，这个不合理的结果是__________（填“$n_{1}$”或“$n_{2}$”）；
+
+    （3）小云想到还可使用样本数据的“平均间隔长度”进行估计．在下面的示意图中，用$x_{1},x_{2},\cdots,x_{2n}$表示随机抽取的20张照片编号从小到大排序，则从0到$x_{20}$的平均间隔长度为$\frac{x_{20}}{20}$，从$0$到n的平均间隔长度为$\frac{n}{21}$，直接写出此时估算出照片的总数$n_{3}$（结果取整数）．
+
+    [图]'
+  answer: （1）$82$ （2）$143$，$163$，$n_{1}$ （3）$n_{3}=154$
+  solution: '【小问1详解】
+
+    解：20张照片的编号是第10，11张照片的编号的平均数，
+
+    ∴$\frac{79+85}{2}=82$，
+
+    ∴m的值为$82$；
+
+    【小问2详解】
+
+    解：①20张照片编号的平均数为$72$，$n_{1}$个数的平均数为$\frac{n_{1}+1}{2}$，
+
+    ∴$\frac{m_{1}+1}{2}=72$，
+
+    解得，$n_{1}=143$；
+
+    ②20张照片编号的中位数为$82$，$n_{2}$个数的中位数为$\frac{n_{2}+1}{2}$，
+
+    ∴$\frac{n_{2}+1}{2}=82$，
+
+    解得，$n_{2}=163$；
+
+    ∵20张照片编号的最大值为$147$，且$n_{1}=143<n_{2}=163$，
+
+    ∴不合理的结果是$n_{1}$，
+
+    故答案为：$143$，$163$，$n_{1}$；
+
+    【小问3详解】
+
+    解：从0到$x_{20}$的平均间隔长度为$\frac{x_{20}}{20}$，从$0$到n的平均间隔长度为$\frac{n}{21}$，
+
+    根据题意，20张照片的编号中$x_{20}=147$，
+
+    ∴$\frac{n}{21}=\frac{147}{20}$，
+
+    解得，$n=\frac{3087}{20} \approx 154.35 \approx 154$，
+
+    ∴估算出照片的总数$n_{3}=154$．'
   knowledge_points:
-  - 综合
-  module: equationsAndInequalities
+  - 统计
+  - 平均数
+  - 中位数
+  module: statisticsAndProbability
   difficulty: 较难
   recommended_for:
   - L2
@@ -747,195 +764,69 @@ questions:
 - id: 24
   type: 解答
   score: 6
-  question: '如图，矩形的顶点B，A分别在x轴，y轴上，点C坐标是，D为边上一点，将矩形沿折叠，点C落在x轴上的点E处，的延长线与x轴相交于点
+  question: '如图，P是$\odot\odot$外一点，$PA,\ PB$分别切$\odot\odot$于点$A, B$，PO与$\odot\odot$交于点H，$AH = OH$．
 
-    （1）如图1，求点D的坐标；
+    [图]
 
-    （2）如图2，若P是上一动点，交于M，交于N，设，，求s与t之间的函数关系式；
+    （1）求证：$\triangle ABP$是等边三角形；
 
-    （3）在（2）的条件下，是否存在点P，使为等腰三角形？若存在，请直接写出点P的坐标；若不存在，请说明理由．'
-  answer: （1） （2） （3）存在，或或
+    （2）过点A作PO的平行线，与$\odot\odot$的另一个交点为C，连接CP．若$AB = 6$，求$\odot\odot$的半径和$\tan \angle CPB$的值．'
+  answer: （1）证明过程见详解 （2）$\odot\odot$的半径为$2\sqrt{3}$，$\tan \angle CPB = \frac{2\sqrt{3}}{3}$
   solution: '【小问1详解】
 
-    解：在矩形中，，
+    证明：如图所示，连接$OA, OB$，
 
-    ，，
+    [图]
 
-    设，则，，
+    ∵$PA,\ PB$是$\odot\odot$的切线，
 
-    ，
+    ∴$PA\perp OA,\ PB\perp OB$，$PA = PB$，
 
-    在中，，
+    ∴$\angle OAP = \angle OBP = 90^\circ$，
 
-    ，
+    ∵$OA=OH,\ AH=OA$，
 
-    在中，由勾股定理得：，
+    ∴$OA = AH = OH$，即$\triangle AOH$是等边三角形，
 
-    ，
+    ∴$\angle AOH = 60^\circ$，
 
-    ，
+    在$Rt\triangle AOP$中，$\angle APO=90^{\circ}-60^{\circ}=30^{\circ}$，
 
-    ，
+    ∴$\angle BPC=\angle APO=30^\circ$，则$\angle APB=60^{\circ}$，且$PA = PB$，
 
-    ；
+    ∴$\triangle ABP$是等边三角形；
 
     【小问2详解】
 
-    如图，延长交于，则，
+    解：如图所示，延长PO交$\odot\odot$于点F，连接BO并延长交$\odot\odot$于点E，连接BH，
 
-    ∵，
+    [图]
 
-    ，
+    由（1）可知，$PO \perp AB$，
 
-    ，
+    ∵$AC \parallel PO$，
 
-    ，
+    ∴$\angle BAC = 90^\circ$，且$\angle BAO = 30^\circ$，
 
-    ，
+    ∴$\angle OAC = 60^\circ$，且$OA = OC$，
 
-    由（1）知：，
+    ∴$\triangle AOC$是等边三角形，
 
-    ，又，
+    ∴$\angle AOC = 60^\circ$，
 
-    ，
+    ∵$\angle BOP+\angle POA+\angle AOC=180^{\circ}$，且$\angle BOP=\angle POA=60^{\circ}$，
 
-    ，
+    ∴点$B, O, C$三点共线，即点E与点C重合，
 
-    ，
+    ∴BC是$\odot\odot$的直径，
 
-    在中，由勾股定理得：，
+    ∴$\triangle BCP$是直角三角形，
 
-    ，
-
-    ，
-
-    ，
-
-    ∵，
-
-    ，
-
-    平分，
-
-    ，
-
-    ，
-
-    ，
-
-    ，
-
-    ，
-
-    ，
-
-    ，
-
-    又，
-
-    ，
-
-    ，
-
-    ，
-
-    ，
-
-    ，即，
-
-    ；
-
-    【小问3详解】
-
-    分三种情况：
-
-    ①当时，如图3，
-
-    ，，
-
-    ∽，
-
-    ，
-
-    ，即，
-
-    解得：，
-
-    ∴，
-
-    ，，
-
-    ；
-
-    ②当时，如图4，过M作于H，与的延长线交于点G，
-
-    有，
-
-    ，
-
-    ，
-
-    ，
-
-    即，
-
-    ，
-
-    ∽，
-
-    ，即，
-
-    解得：，
-
-    代入得：，
-
-    ∵，
-
-    ∴，，
-
-    ∴，
-
-    ∴，
-
-    ∴，，
-
-    ∴的纵坐标为：，
-
-    ；
-
-    ③当时，如图5，
-
-    过点N作于Q，
-
-    ，
-
-    ，
-
-    ∽，
-
-    ，
-
-    又，
-
-    ，，
-
-    ，
-
-    ，
-
-    代入得：，
-
-    同理可得：；
-
-    综上，点P的坐标是或或'
+    ∵$\triangle'
   knowledge_points:
-  - 一次函数
-  - 相似三角形
-  - 勾股定理
-  - 矩形
-  - 三角函数
-  - 锐角三角函数
-  - 动点
+  - 平行线
+  - 垂径定理
+  - 切线
   module: triangles
   difficulty: 较难
   recommended_for:
@@ -944,116 +835,104 @@ questions:
 - id: 25
   type: 解答
   score: 6
-  question: '对于平面内的点和点，给出如下定义：
+  question: '生活垃圾水解法是一种科学处理生活垃圾的技术．有研究表明，在生活垃圾水解过程中添加一些微生物菌剂能够加快原料的水解．某小组为研究微生物菌剂添加量对某类生活垃圾水解率的影响，设置了六组不同的菌剂添加量，分别为$0\%$，$2\%$，$4\%$，$6\%$，$8\%$，$10\%$，每隔$12h$测定一次水解率，部分实验结果如下：
 
-    若点是点绕点旋转所得到的点，则称点是点关于点的旋转点；若旋转角小于，则称点是点关于点的锐角旋转点．如图1，点是点关于点的锐角旋转点．
+    a．不同菌剂添加量的生活垃圾，在水解$48h$时，测得的实验数据如下图所示：
 
-    （1）已知点，在点中，是点关于点的锐角旋转点的是______．
+    [图]
 
-    （2）已知点，点在直线上，若点是点关于点的锐角旋转点，求实数的取值范围；
+    为提高这类生活垃圾在水解$48h$时的水解率，在这六组不同的菌剂添加量中，最佳添加量为__________$\%$；
 
-    （3）点是轴上的动点，，点是以为圆心，3为半径的圆上一个动点，且满足．若直线上存在点关于点的锐角旋转点，请直接写出的取值范围．'
-  answer: （1），． （2） （3）
-  solution: '【小问1详解】
+    b．当菌剂添加量为$p\%$时，生活垃圾水解率随时间变化的部分实验数据记录如下：
 
-    解：如图，，，
+    时间$t(h)$
 
-    ，，
+    0
 
-    点不是点关于点的锐角旋转点；
+    12
 
-    ，作轴于点，
+    24
 
-    ，
+    36
 
-    ，
+    48
 
-    ，
+    60
 
-    点是点关于点的锐角旋转点；
+    72
 
-    ，作轴于点，
+    84
 
-    则，
+    96
 
-    ，
+    108
 
-    ，
+    120
 
-    ，
+    水解率$y(\%)$
 
-    不是点关于点的锐角旋转点；
+    0
 
-    ，作轴于点，
+    $28.0$
 
-    则，
+    $35.1$
 
-    ，
+    $39.4$
 
-    ，
+    $42.5$
 
-    是点关于点的锐角旋转点；
+    $44.9$
 
-    综上所述，在点，，，中，是点关于点的锐角旋转点的是，，
+    $46.8$
 
-    故答案为：，．
+    $48.5$
 
-    【小问2详解】
+    $50.0$
 
-    解：在轴上取点，当直线经过点时，可得，
+    $51.2$
 
-    当直线经过点时，则，
+    $52.3$
 
-    解得：，
+    通过分析表格中的数据，发现当菌剂添加量为$p\%$时，可以用函数刻画生活垃圾水解率y和时间t之间的关系，在平面直角坐标系中画出此函数的图象．结合实验数据，利用所画的函数图象可以推断，当水解$132h$时，生活垃圾水解率__________超过$54\%$（填“能”或“不能”）．
 
-    当时，绕点逆时针旋转锐角时，点一定可以落在某条直线上，
+    [图]
 
-    过点作直线，垂足在第四象限时，如图，
+    根据以上实验数据和结果，解决下列问题：
 
-    则，，
+    （1）直接写出p$[公式]$值；
 
-    ，
+    （2）当菌剂添加量为$6\%$时，生活垃圾水解率达到$50\%$所需的时间为$t_{0}$小时，当菌剂添加量为$p\%$时，生活垃圾水解$\left(t_{0}+48\right)$小时的水解率__________$50\%$（填“大于”“小于”或“等于”）．'
+  answer: $a:6\%$，$b:$作图见详解，不能，（1）$p = 4$，（2）等于
+  solution: '解：a：根据水解率的大小可得，菌剂添加量为$6\%$时最佳，
 
-    当时，取得最小值，
+    故答案为：$6\%$；
 
-    ，
+    b：根据表格信息，描点，作函数图像得，
 
-    ，
+    [图]
 
-    ．
+    时间的变化情况为：每次增加量为$12$小时；水解率的变化情况：$35.1-28=7.1$，$39.4-35.1=4.3$，$42.5-39.4=3.1$，$44.9-42.5=2.4$，$46.8-44.9=1.9$，$48.5-46.8=1.7$，$50.0-48.5=1.5$，$51.2-50=1.2$，$52.3-51.2=1.1$，
 
-    【小问3详解】
+    ∴随着时间的增加，水解率的增加量逐渐减小，
 
-    解：根据题意，点关于点的锐角旋转点在半圆上，设点在半圆上，点在半圆上（将半圆绕点旋转），如图3（1），半圆扫过的区域为图3（1）中阴影部分，
+    ∴当水解时间为$132h$时，生活垃圾水解率不能超过$54\%$，
 
-    如图3（2）中，阴影部分与直线相切于点，，，过点作轴于点，过点作于点，
+    故答案为：不能；
 
-    ，
+    （1）根据表格信息可知，时间为$48h$时，水解率为$42.5\%$，
 
-    ，
+    ∴$p\%=4\%$，即$p = 4$；
 
-    ，，
+    （2）当菌剂添加量为$6\%$时，生活垃圾水解率达到$50\%$所需的时间为$t_{0}$小时，
 
-    ，
+    ∴$t_{0}=48$，
 
-    ，
+    ∴当菌剂添加量为$p\%=4\%$时，水解$(i_{n}+48)=96$小时的水解率为$50\%$，即等于$50\%$，
 
-    ，即，
-
-    解得，
-
-    如图3（3）中，阴影部分与相切于点，，，则，，
-
-    ，
-
-    解得，
-
-    观察图象可知，．'
+    故答案为：等于．'
   knowledge_points:
-  - 勾股定理
-  - 旋转
-  - 动点
-  module: triangles
+  - 坐标系
+  module: functions
   difficulty: 较难
   recommended_for:
   - L2
@@ -1061,102 +940,140 @@ questions:
 - id: 26
   type: 解答
   score: 6
-  question: '在平面直角坐标系中，对于线段，直线l和图形W给出如下定义：线段关于直线l的对称线段为（分别是M，N的对应点）．若与均与图形W（包括内部和边界）有公共点，则称线段为图形W关于直线l的“对称连接线段”．
+  question: '在平面直角坐标系xOy中，抛物线$y=ax^{2}+bx+c(a>0)$的对称轴为$x = t$，点$A\left(\frac{1}{2}t,m\right)$，$B(2t,n)$，$C(x_0,y_0)$在抛物线上．
 
-    （1）如图1，已知圆O的半径是2，的横、纵坐标都是整数．在线段中，是关于直线的“对称连接线段”的是            ．
+    （1）当$t=2$时，直接写出m与n的大小关系；
 
-    （2）如图2，已知点，以O为中心的正方形的边长为4，各边与坐标轴平行，若线段是正方形关于直线的“对称连接线段”，求k的取值范围．
-
-    （3）已知的半径为r，点，线段的长度为1．若对于任意过点Q的直线l，都存在线段是关于l的“对称连接线段”，直接写出r的取值范围．'
-  answer: （1）， （2）或 （3）
+    （2）若对于$6<x_{0}<7$，都有$m < y_0 < n$，求t的取值范围．'
+  answer: （1）$m < n$ （2）$t\ 14$或$\frac{7}{2}\leq t\leq 4$
   solution: '【小问1详解】
 
-    解：如图1:
+    解：∵$y=ax^{2}+bx+c(a>0)$，
 
-    因为关于的对称点是在上，所以是关于直线的“对称连接线段”，
+    ∴图象开口向上，则抛物线上的点离对称轴越远，函数值越大，
 
-    因为和关于的对称点是和在外，所以不是关于直线的“对称连接线段”，
+    当$t=2$时，对称轴为$x=2$，$A(1,m)$，$B(4,n)$，
 
-    因为关于的对称点是在内，所以是关于直线的“对称连接线段”．
+    ∵$4-2>2-1$，
 
-    故答案为：．
+    ∴$m < n$；
 
     【小问2详解】
 
-    解：如图2：
+    解：当$t<0$时，如图1，
 
-    设直线交y轴于A，根据轴对称的性质，点P和它的对称点到A的距离相等，
+    [图]
 
-    所以点P的对称点在以A为圆心，1为半径的圆上运动，
+    ∴$A\left(\frac{1}{2}t,m\right)$在NP上，$B(2t,n)$在MN上，$C(x_0,y_0)$在$\overline{PQ}$上，
 
-    当点P的对称点在圆和正方形重合的部分时，满足条件，
+    ∵对于$6<x_{0}<7$，都有$m < y_0 < n$，
 
-    过点P的对称点是和时是临界，此时k的值分别是1和．
+    ∴$t-2t\quad7-t$且$6-t-\frac{1}{2}t-t$，此时无解；
 
-    ∴或．
+    当$t > 0$时，如图2，
 
-    【小问3详解】
+    [图]
 
-    解：如图3：
+    ∴$A\left(\frac{1}{2}t,m\right)$在MN上，$B(2t,n)$在NP上，
 
-    连接，则，
+    当$C(x_0,y_0)$在MN上时，
 
-    ∴点M关于过Q的直线的对称点在以Q为圆心，为半径的圆上运动，点N在以Q为圆心，半径是和的圆上运动，
+    ∵对于$6<x_{0}<7$，都有$m < y_0 < n$，
 
-    设半径是的圆交y轴于点W，
+    ∴$t-7\quad t-\frac{1}{2}t$且$t-6\leq 2t-t$，
 
-    ∴．'
+    解得，$t\ 14$；
+
+    当$C(x_0,y_0)$在NP上时，
+
+    ∵对于$6<x_{0}<7$，都有$m < y_0 < n$，
+
+    ∴$6-t-\frac{1}{2}t$且$7-t\leq2t-t$，
+
+    解得，$\frac{7}{2}\leq t\leq 4$；
+
+    综上所述，t的取值范围为$t\ 14$或$\frac{7}{2}\leq t\leq 4$．'
   knowledge_points:
-  - 正方形
-  - 轴对称
+  - 二次函数
+  - 不等式
   - 坐标系
-  module: geometryComprehensive
+  module: functions
   difficulty: 压轴
   recommended_for:
   - L3
 - id: 27
   type: 解答
   score: 7
-  question: '我国是世界上最早发明历法的国家之一，《周礼》中记载：垒土为圭，立木为表，测日影，正地中，定四时，如图1，圭是地面上一根水平标尺，指向正北，表是一根垂直于地面的杆，正午，表的日影（即表影）落在圭上，根据表影的长度可以测定节气．
+  question: '在$\triangle ABC$中，$AB = AC$，$\angle A<60^{\circ}$，点D在边AC上（不与点A，C重合），连接BD，平移线段BD，使点B移到点C，得到线段CE，连接DE．
 
-    在一次数学活动课上，要制作一个圭表模型，如图2，地面上放置一根长2米的杆，向正北方向画一条射线，在上取点，测得，．
+    [图]
 
-    （1）判断：这个模型中与是否垂直．答：______（填“是”或“否”）；你的理由是：______．
+    （1）在图1中补全图形，若$\angle BAC = 2\angle E$，求证：$\angle CBD$与$\angle CDE$互余；
 
-    （2）利用这个圭表模型，测定某市冬至正午阳光与日影夹角，夏至正午阳光与日影夹角为，请求出这个模型中该市冬至与夏至的日影的长度差（结果保留根号）．'
-  answer: （1）是；，由勾股定理的逆定理可知． （2）该市冬至与夏至的日影的长度差为．
+    （2）连接AE，若AC平分$\angle BAE$，用等式表示$\angle CBD$与$\angle BAE$之间的数量关系，并证明．'
+  answer: （1）补全图形见详解，证明见详解 （2）$\angle CBD=\frac{1}{2}\angle BAE$，证明见详解
   solution: '【小问1详解】
 
-    解：是，
+    解：补全图形，如图1，
 
-    理由：由测量结果可知得，，而，
+    [图]
 
-    ∴，
+    设$\angle E = a$，则$\angle BAC=\angle E=2\alpha$，
 
-    ∴，
+    ∵$AB = AC$，
 
-    ∴．
+    ∴$\angle ABC=\angle ACB=\frac{1}{2}(180^\circ-\angle BAC)=90^\circ-\alpha$，
 
-    故答案是：是；，由勾股定理的逆定理可知．
+    由平移可知，$BC\parallel DE$，$BC = DE$．
+
+    ∴四边形$BCED$为平行四边形，
+
+    ∴$\angle CBD=\angle E=\alpha$，
+
+    ∵$BC\parallel DE$，
+
+    ∴$\angle CDE = \angle ACB = 90^\circ - \alpha$，
+
+    ∴$\angle CBD+\angle CDE=90^\circ$，
+
+    ∴$\angle CBD$与$\angle CDE$互余．
 
     【小问2详解】
 
-    如图，由题意可得：，，，，
+    $\angle CBD$与$\angle BAE$之间的数量关系为$\angle CBD=\frac{1}{2}\angle BAE$．
 
-    ∴，
+    连接BE，交AC于点O，延长AC至F，使$OF=OA$，连接EF，如图2，
 
-    ∴，
+    [图]
 
-    同理：，
+    由(1)可得，四边形$BCED$为平行四边形，则$OB = OE$．
 
-    ∴，
+    ∵$OA = OF$，$\angle BOA = \angle EOF$，
 
-    ∴；
+    ∴$\triangle BOA \cong \triangle EOF$，
 
-    ∴该市冬至与夏至的日影的长度差为．'
+    ∴$AB = FE$，$\angle BAO = \angle EFO$．
+
+    ∵AC平分$\angle BAE$，
+
+    ∴$\angle BAO = \angle EAO = \frac{1}{2} \angle BAE$，．
+
+    ∴$\angle EFO = \angle EAO$，
+
+    ∴$AE = FE$，
+
+    ∵$OB = OE$，
+
+    ∴$AC \perp BE$，
+
+    ∴四边形$BCED$为菱形
+
+    ∴$'
   knowledge_points:
-  - 勾股定理
-  - 三角函数
+  - 全等三角形
+  - 平行四边形
+  - 菱形
+  - 平移
   module: triangles
   difficulty: 压轴
   recommended_for:
@@ -1164,54 +1081,84 @@ questions:
 - id: 28
   type: 解答
   score: 7
-  question: '某公园在人工湖里安装一个喷泉，在湖心处竖直安装一根水管，在水管的顶端安一个喷水头，若记水柱上某一位置与水管的水平距离为d米，与湖面的垂直高度为h米.
+  question: '在平面直角坐标系xOy中，$\odot\odot$的半径为$1$，AB是$\odot\odot$的一条弦，以AB为边作平行四边形$ABCD$．对于平行四边形$ABCD$和弦AB，给出如下定义：若边CD所在直线是$\odot\odot$的切线，则称四边形$ABCD$是弦AB的“弦切四边形”．
 
-    根据上述信息，解决以下问题：
+    [图]
 
-    （1）在如下网格中建立适当的平面直角坐标系，并根据表中所给数据画出表示h与d函数关系的图象；
+    （1）若点$A(0,-1)$，$C(1,0)$，四边形$ABCD$是弦AB的“弦切四边形”，在图中画出“弦切四边形”$ABCD$，并直接写出点D的坐标；
 
-    （2）若水柱最高点距离湖面的高度为m米，则m＝      ；
+    （2）若弦AB的“弦切四边形”为正方形，求AB的长；
 
-    （3）现公园想通过喷泉设立新的游玩项目，准备通过只调节水管露出湖面的高度，使得游船能从水柱下方通过．如图2所示，为避免游船被喷泉淋到，要求游船从水柱下方中间通过时，顶棚上任意一点到水柱的竖直距离均不小于0.5米．已知游船顶棚宽度为3米，顶棚到湖面的高度为2米，那么公园应将水管露出湖面的高度（喷水头忽略不计）至少调节到多少米才能符合要求？请通过计算说明理由（结果保留一位小数）．'
-  answer: （1）见详解    （2）1.5 （3）2.1米
+    （3）已知图形M和图形N是弦AB的两个全等的“弦切四边形”，且均为菱形，图形M与N不重合．P，Q分别为两个“弦切四边形”对角线的交点，记$\overline{PQ}$的长为t，直接写出t的取值范围．'
+  answer: （1）$(1,-2)$ （2）$\frac{8}{5}$ （3）$0<z\leq\dfrac{4\sqrt{5}}{5}$或$t=2$
   solution: '【小问1详解】
 
-    解：以喷泉与湖面的交点为原点，喷泉所在的直线为纵轴建立平面直角坐标系，如图1所示：
+    解：∵四边形$ABCD$是弦AB的“弦切四边形”
+
+    ∴CD是$\odot\odot$的切线，
+
+    ∵$C(1,0)$，四边形$ABCD$是平行四边形，
+
+    故线段CD是在直线$x = 1$上，且垂直于x轴，
+
+    根据平行四边形的性质可得$AB \parallel CD$，
+
+    ∴AB垂直x轴，
+
+    ∵AB是$\odot\odot$的一条弦，B在$\odot\odot$上，$A(0,-1)$，
+
+    由图象可得B点坐标为$(0,1)$，
+
+    ∴$AB=2$，
+
+    ∵$AB=CD=2$，$AB \parallel CD$，$C(1,0)$，
+
+    ∴由图象可得点D的坐标为$(1,-2)$．
+
+    ．[图]
 
     【小问2详解】
 
-    根据题意可知，该抛物线的对称轴为，此时最高，
+    当弦AB的“弦切四边形”为正方形时，则以AB为边作出的四边形$ABCD$为正方形，可得线段CD与$\odot\odot$相切，交点为点E，连接OE并延长交AB于点G，故可得出正方形$ABCD$，如下图所示：
 
-    即，
+    [图]
 
-    故答案为：1.5．
+    ∵线段CD与$\odot\odot$相切，交点为点E，O为$\odot\odot$的圆心，
 
-    【小问3详解】
+    ∴$GE \perp CD$，
 
-    根据图象可设二次函数的解析式为：，
+    ∵$AB \parallel CD$，
 
-    将代入，得，
+    ∴$GE \perp AB$，
 
-    抛物线的解析式为：，
+    ∴$\angle ABC = \angle BCD = \angle CDA = \angle DAB = 90^\circ$，
 
-    设调节后的水管喷出的抛物线的解析式为：，
+    ∴四边形$ABCD$为矩形，
 
-    由题意可知，当横坐标为时，纵坐标的值大于，
+    设OG为m，
 
-    ，
+    ∵$OE = OB = 1$，
 
-    解得，
+    ∴$GE=BD=AB=m+1$，
 
-    水管高度至少向上调节1.6米，
+    又∵$OB = OA$，$OG \perp AB$，
 
-    （米，
+    ∴点G是AB的中点，即$BG=\frac{1}{2}AB=\frac{1}{2}(m+1)=\frac{1}{2}m+\frac{1}{2}$，
 
-    公园应将水管露出湖面的高度（喷水头忽略不计）至少调节到2.1米才能符合要求．'
+    故在$\mathrm{Rt}\triangle OGB$中，$OB^{2}=OG^{2}+BG^{2}$，
+
+    带入数值为$l^{2}=m^{2}+\left'
   knowledge_points:
   - 二次函数
-  - 平移
+  - 切线
+  - 弦
+  - 勾股定理
+  - 平行四边形
+  - 矩形
+  - 菱形
+  - 正方形
   - 坐标系
-  module: functions
+  module: quadrilaterals
   difficulty: 压轴
   recommended_for:
   - L3

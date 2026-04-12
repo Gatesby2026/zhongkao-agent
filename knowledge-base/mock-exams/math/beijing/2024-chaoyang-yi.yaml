@@ -1,8 +1,8 @@
 # ============================================================
 # 2024年北京朝阳区中考数学一模试卷 — 逐题分析
 # ============================================================
-# 数据来源：knowledge-original/精品解析：2024年北京市朝阳区陈经纶中学分校中考一模数学试题（解析版）.docx
-# 自动生成，部分数学公式可能显示不全（docx公式对象无法完整提取）
+# 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
+# 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
 # 满分：100分  时长：120分钟
 
 year: 2024
@@ -17,11 +17,17 @@ questions:
 - id: 1
   type: 选择
   score: 2
-  question: "下图是某个几何体的侧面展开图，则该几何体为（    ）\nA. 棱柱\tB. 圆柱\tC. 棱锥\tD. 圆锥"
-  answer: C
-  solution: '解：由图可知展开图侧面是三角形，所以该几何体是棱锥，
+  question: '如图是某几何体的三视图，该几何体是（）
 
-    故选：C．'
+    [图]
+
+    A.长方体B.三棱柱C.圆锥D.圆柱'
+  answer: A
+  solution: '解：∵长方体的三视图都是长方形，三棱柱的三视图中有三角形，圆锥和圆柱的三视图中有圆，
+
+    ∴该几何体符合长方体的三视图特征，
+
+    故选A．'
   knowledge_points:
   - 综合
   module: circles
@@ -34,19 +40,16 @@ questions:
 - id: 2
   type: 选择
   score: 2
-  question: "实数a，b，c在数轴上的对应点的位置如图所示，则正确的结论是（　　）\nA. a+c＞0\tB. |a|＜|b|\tC. bc＞1\tD. ac＞0"
-  answer: C
-  solution: '由数轴可以发现a＜0＜b＜c，而|a|＞|c|＞|b|，
+  question: '2023年我国规模以上内容创作生产营业收入累计值前三个季度分别约为6500亿元13000亿元，20000亿元，合计约39500亿元．将39500用科学记数法表示应为（）
 
-    ∴a+c＜0，|a|＞|b|，ac＜0
+    A.$395\times10^{2}$B.$3.95\times10^{4}$C.$3.95\times10^{3}$D.$0.395\times10^{5}$'
+  answer: B
+  solution: '解：将39500用科学记数法表示应为$3.95\times10^{4}$．
 
-    又由数轴可发现1＜b＜2，2＜c＜3
-
-    ∴bc＞1正确．
-
-    故选C．'
+    故选：B．'
   knowledge_points:
-  - 综合
+  - 科学记数法
+  - 绝对值
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -57,24 +60,18 @@ questions:
 - id: 3
   type: 选择
   score: 2
-  question: "如图，菱形ABCD的顶点A，B，C的坐标分别是，，，则顶点D的坐标是（    ）\nA. \tB. \tC. \tD."
+  question: '不透明的袋子中装有2个红球和3个黄球，两种球除颜色外无其他差别，从中随机摸出一个小球，摸到黄球的概率是（）
+
+    A.$\frac{2}{3}$B.$\frac{3}{4}$C.$\frac{2}{5}$D.$\frac{3}{5}$'
   answer: D
-  solution: '设D点的坐标为(a,b)，
+  solution: '解：∵不透明的袋子里装有2个红球，3个黄球，
 
-    菱形的对角线的交点也是两条对角线的中点，
-
-    ∴AC的中点与BD的中点坐标相同，
-
-    ∴根据中点坐标公式有：，
-
-    则a=2，b=3，
-
-    即D点坐标为：(2,3)，
+    ∴从袋子中随机摸出一个，摸到黄球的概率为$\frac{3}{2+3}=\frac{3}{5}$；
 
     故选：D．'
   knowledge_points:
-  - 菱形
-  module: functions
+  - 概率
+  module: statisticsAndProbability
   difficulty: 基础
   recommended_for:
   - L0
@@ -84,17 +81,23 @@ questions:
 - id: 4
   type: 选择
   score: 2
-  question: "若一个多边形每一个内角都为144°，则这个多边形是（    ）边形\nA. 6\tB. 8\tC. 10\tD. 12"
+  question: '如图，直线AB，CD相交于点O，若$\angle AOC = 60^\circ$，$\angle BOE=40^{\circ}$，则$\angle DOE$$[公式]$度数为（）
+
+    [图]
+
+    A.$60^\circ$B.$40^\circ$C.$20^\circ$D.$10^\circ$'
   answer: C
-  solution: '一个多边形每一个内角都为144°，
+  solution: '解：$\angle AOC = 60^\circ$，
 
-    该多边形是正多边形，
+    $\angle BOD = 60^\circ$，
 
-    ，
+    $\angle BOE = 40^\circ$，
+
+    ∴$\angle DOE=\angle BOD-\angle BOE=60^{\circ}-40^{\circ}=20^{\circ}$，
 
     故选：C．'
   knowledge_points:
-  - 综合
+  - 对顶角
   module: triangles
   difficulty: 基础
   recommended_for:
@@ -105,15 +108,16 @@ questions:
 - id: 5
   type: 选择
   score: 2
-  question: "掷一枚质地均匀的硬币m次，正面向上n次，则的值（    ）\nA. 一定是\tB. 一定不是\nC. 随着m的增大，越来越接近\tD. 随着m的增大，在附近摆动，呈现一定的稳定性"
-  answer: D
-  solution: '解：投掷一枚质地均匀的硬币正面向上的概率是，而投掷一枚质地均匀的硬币正面向上是随机事件，是它的频率，随着m的增加，的值会在附近摆动，呈现出一定的稳定性．
+  question: '正六边形的外角和是（）
 
-    故选：D．'
+    A.$180^\circ$B.$360^\circ$C.$540^\circ$D.$720^\circ$'
+  answer: B
+  solution: '解：正六边形的外角和是$360^\circ$．
+
+    故选：B．'
   knowledge_points:
-  - 概率
-  - 频率
-  module: statisticsAndProbability
+  - 综合
+  module: triangles
   difficulty: 基础
   recommended_for:
   - L0
@@ -123,22 +127,22 @@ questions:
 - id: 6
   type: 选择
   score: 2
-  question: "以下图形绕点O旋转一定角度后都能与原图形重合，其中旋转角最小的是（    ）\nA.   \tB.    \tC.   \tD."
-  answer: D
-  solution: '解：A选项：最小旋转角度；
+  question: '已知关于x的一元二次方程$x^{2}-2x+a=0$有两个相等的实数根，则实数a的值是（
 
-    B选项：最小旋转角度；
+    ）
 
-    C选项：最小旋转角度；
+    A.$-1$B.1C.2D.3'
+  answer: B
+  solution: '解：∵一元二次方程$x^{2}-2x+a=0$有两个相等的实数根，
 
-    D选项：最小旋转角度；
+    ∴$(-2)-4\times a=0$，
 
-    综上可得：旋转的角度最小的是D．
+    解得：$a = 1$，
 
-    故选：A．'
+    故选：B．'
   knowledge_points:
-  - 旋转
-  module: geometryComprehensive
+  - 一元二次方程
+  module: numbersAndExpressions
   difficulty: 中档
   recommended_for:
   - L1
@@ -147,21 +151,30 @@ questions:
 - id: 7
   type: 选择
   score: 2
-  question: "下列图形中，对称轴条数最少是（    ）\nA.   \tB. \n  \tC. \n  \tD."
-  answer: A
-  solution: 'A.有1数条对称轴，
+  question: '如图1是变量y与变量x的函数关系的图象，图2是变量z与变量y的函数关系的图象，则z与x的函数关系的图象可能是（）
 
-    B.有无数条对称轴，
+    [图]
 
-    C.有2条对称轴，
+    A$[公式]$[图]B.[图]
 
-    D.有3条对称轴，
+    C.[图]D.[图]'
+  answer: D
+  solution: '解：由图1可设$y=kx+b$（k，b为常数，且$k<0,b>0$，由图2可设$z = my$（m为常数，$m > 0$），
 
-    故选：A．'
+    将$y=kx+b$代入$z = my$得：$z = n(x + b) - m(x + a)$，
+
+    $\therefore z$与x的函数关系为一次函数关系，
+
+    $\because k<0$，$b>0$，$m > 0$，
+
+    $\therefore mk < 0$，$mb > 0$，
+
+    $\therefore z$与x的函数图象过一、二、四象限．
+
+    故选：D．'
   knowledge_points:
-  - 轴对称图形
-  - 轴对称
-  module: geometryComprehensive
+  - 一次函数
+  module: functions
   difficulty: 中档
   recommended_for:
   - L1
@@ -170,21 +183,66 @@ questions:
 - id: 8
   type: 选择
   score: 2
-  question: "如图，在中，．动点M，N分别从A，点M从点A开始沿边向点C以每秒1个单位长度的速度移动，点N从点C开始沿向点B以每秒2个单位长度的速度移动．设运动时间为t，M、C之间的距离为y，的面积为S，则y与t，S与t满足的函数关系分别是（　　）\nA. 正比例函数关系，一次函数关系\tB. 正比例函数关系，二次函数关系\nC. 一次函数关系，正比例函数关系\tD. 一次函数关系，二次函数关系"
-  answer: D
-  solution: '解：由题意知，，
+  question: '如图，正方形边长为a，点E是正方形$ABCD$内一点，满足$\angle AEB = 90^\circ$，连接CE．给出下面四个结论：①$AE + CE \geqslant 2\sqrt{a}$；②$CE\leq\dfrac{\sqrt{5}-1}{2}a$；③$\angle BCE$的度数最大值为$60^\circ$；④当$CE = a$时，$\tan \angle ABE
+    = \frac{1}{2}$．上述结论中，所有正确结论的序号为（）
 
-    ∴，，
+    [图]
 
-    ∴y是t的一次函数，S是t的二次函数，
+    A.①②B.①③C.①④D.①③④'
+  answer: C
+  solution: '解：如图所示，连接AC交BD于H，取AB中点O，连接OC，
 
-    故选：D．'
+    ∵四边形$ABCD$是正方形，
+
+    [图]
+
+    ∴$\angle AHB = 90^\circ$；
+
+    ∵$\angle AEB = 90^\circ$，
+
+    ∴点E在以点O为圆心，AB为直径的圆上运动，
+
+    ∵$\angle AHB = 90^\circ$，
+
+    ∴点H在圆O上，
+
+    ∵$AE+CE\quad AC=\sqrt{2}AB=\sqrt{2}a$，
+
+    ∴当$A, E, C$三点共线，即点E运动到点H时，$AE + CE = AC$，故①正确；
+
+    ∵点E在以点O为圆心，AB为直径的圆上运动，
+
+    ∴当$C, O, E$三点共线时，CE有最小值，
+
+    在$\mathrm{Rt}\triangle OBC$中，由勾股定理得$OC = \sqrt{OB^{2} + BC^{2}} = \frac{\sqrt{5}}{2}a$，
+
+    ∴CE的最小值为$\frac{\sqrt{5}}{2}a-1-a=\frac{\sqrt{5}}{2}-1-a$，故②错误；
+
+    如下图所示，当CE与$\odot\odot$相切时$\angle BCE$有最大值，
+
+    ∵$OB=OE,\ OC=OC$，
+
+    ∴$Rt\triangle OBC\cong Rt\triangle OEC\ (HL)$，
+
+    ∴$CE = BC = a$，$\angle OCB = \angle OCB$，
+
+    ∴$\tan \angle OCE = \frac{OE}{CE} = \frac{1}{2}$，
+
+    ∴$\angle OCE=30^\circ$，
+
+    ∴$\angle BCE \neq 60^\circ$，
+
+    ∴$\angle BCE$的度数最大值不是$60^\circ$，故③错误；
+
+    ∵$BC\cdot EC,\ OB=OE$，
+
+    ∴OC垂直平分BE，
+
+    ∴$\angle ABE + \angle BOC = \a'
   knowledge_points:
-  - 一次函数
-  - 二次函数
-  - 正比例函数
-  - 动点
-  module: functions
+  - 勾股定理
+  - 正方形
+  module: triangles
   difficulty: 较难
   recommended_for:
   - L2
@@ -192,13 +250,15 @@ questions:
 - id: 9
   type: 填空
   score: 2
-  question: 函数的自变量的取值范围是______．
-  answer: '##x<0.5'
-  solution: '解：依题意，得，
+  question: 若代数式$\sqrt{x-1}$在实数范围内有意义，则x的取值范围是_______．
+  answer: $x\ 1$
+  solution: '解：∵$\sqrt{x-1}$在实数范围内有意义，
 
-    解得：，
+    ∴x-1≥0，
 
-    故答案为：．'
+    解得x≥1．
+
+    故答案为：x≥1．'
   knowledge_points:
   - 不等式
   module: numbersAndExpressions
@@ -211,17 +271,14 @@ questions:
 - id: 10
   type: 填空
   score: 2
-  question: 如果多项式只能因式分解为，则______．
-  answer: ''
-  solution: '解：∵，多项式只能因式分解为，
+  question: 分解因式：3a2﹣12=___．
+  answer: 3（a+2）（a﹣2）
+  solution: '3a2﹣12
 
-    ∴，
+    =3（a2﹣4）
 
-    ∴．
-
-    故答案为：．'
+    =3（a+2）（a﹣2）．'
   knowledge_points:
-  - 因式分解
   - 方差
   module: numbersAndExpressions
   difficulty: 基础
@@ -233,17 +290,19 @@ questions:
 - id: 11
   type: 填空
   score: 2
-  question: 写出一个比大且比小的整数是___________．
-  answer: 2或3
-  solution: '∵ ，
+  question: 方程$\frac{3}{x+2}=\frac{2}{x}$的解为_______．
+  answer: $x = 4$
+  solution: '解：去分母得：$3x=2(x+2)$，
 
-    ∴
+    解得：$x = 4$，
 
-    即比大且比小的整数为2或3，
+    检验：当$x = 4$时，$x(x+2)=0$，
 
-    故答案为：2或3'
+    所以$x = 4$是分式方程的解，
+
+    故答案为：$x = 4$．'
   knowledge_points:
-  - 综合
+  - 分式方程
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -254,20 +313,19 @@ questions:
 - id: 12
   type: 填空
   score: 2
-  question: 如果，那么代数式的值为_________．
-  answer: ''
-  solution: '解：∵，
+  question: 在平面直角坐标系xOy中，若反比例函数$y=\frac{6}{x}$的图象经过点$A(2,m)$和点$B(-2,n)$，则$m+n=$______．
+  answer: '0'
+  solution: '解：∵点A和B在反比例函数图象上，
 
-    ∴
+    ∴$m = \frac{6}{2} = 3$，$n = \frac{6}{-2} = -3$，
 
-    ∴
+    ∴$m+n=3-3=0$，
 
-    ，
-
-    故答案为：．'
+    故答案为：0；'
   knowledge_points:
-  - 综合
-  module: numbersAndExpressions
+  - 反比例函数
+  - 坐标系
+  module: functions
   difficulty: 基础
   recommended_for:
   - L0
@@ -277,55 +335,63 @@ questions:
 - id: 13
   type: 填空
   score: 2
-  question: 如图，在中，，，，是以斜边为直径的半圆上一动点，为的中点，连接，则的最小值为_______________
-  answer: ''
-  solution: '解：取的中点、的中点、的中点，连接、、、、、，如图，
+  question: '如图，树AB在路灯O的照射下形成投影AC，已知路灯高$PO = 5m$，树影$AC = 3m$，树AB与路灯O的水平距离$AP=4.5m$，则树的高度AB长是______米．
 
-    在中，，，，
+    [图]'
+  answer: '2'
+  solution: '解：由题意知$AB\parallel PO$
 
-    ，
+    在$\mathrm{Rt}_{\triangle ABC}$和$Rt\triangle POC$中
 
-    ，，
+    $\begin{array}{c}
 
-    为的中点，
+    \bullet \\
 
-    ，
+    \bullet \quad \bullet \\
 
-    ，
+    \bullet
 
-    点在以为直径的圆上，
+    \end{array}$$\angle C=\angle C \\
 
-    当点点在点时，点在点；点点在点时，点在点，
+    \angle CAB=\angle CPO \\
 
-    取的中点，连接交于，
+    \angle ABC=\angle POC$
 
-    则的长度即为的最小值，
+    $\begin{tikzpicture}
 
-    延长交于，连接，
+    \fill (0,0) circle (2pt);
 
-    ∵，，
+    \fill (-1,-1) circle (2pt);
 
-    ∴
+    \fill (1,-1) circle (2pt);
 
-    ，，
+    \end{tikzpicture}$$Rt\triangle ABC\sim Rt\triangle POC$
 
-    ，
+    $\begin{tikzpicture}
 
-    ，
+    \fill (0,0) circle (2pt);
 
-    即，
+    \fill (-1,-1) circle (2pt);
 
-    解得：（负值舍去），
+    \fill (1,-1) circle (2pt);
 
-    故的最小值为：，
+    \end{tikzpicture}$$\frac{AB}{PO} = \frac{AC}{PC}$
 
-    故答案为：．'
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\frac{AB}{5}=\frac{3}{3+4.5}$
+
+    解得$AB=2$
+
+    故答案为：$2$．'
   knowledge_points:
-  - 圆周角
-  - 垂径定理
-  - 相似三角形
-  - 勾股定理
-  - 动点
+  - 综合
   module: triangles
   difficulty: 中档
   recommended_for:
@@ -335,48 +401,31 @@ questions:
 - id: 14
   type: 填空
   score: 2
-  question: 如图，有两张矩形纸片和，，．把纸片交叉叠放在纸片上，使重叠部分为平行四边形，且点与点重合．当两张纸片交叉所成的角最小时，等于___
-  answer: ''
-  solution: '解：如图，
+  question: '如图，AB是$\odot\odot$的直径，CD是$\odot\odot$的弦，$\angle BAC=40^\circ$，则$\angle ADC =$________°．
 
-    ，
+    [图]'
+  answer: '50'
+  solution: '解：如图所示，连接BC
 
-    ，
+    ∴∠ADC=∠ABC
 
-    在和中，
+    ∵AB是直径
 
-    ，
+    ∴∠ACB=90°
 
-    ，
+    ∵∠BAC=40°
 
-    ，
+    ∴∠ABC=180°-90°-40°=50°
 
-    四边形是菱形，
+    ∴∠ADC=∠ABC=50°
 
-    ，
+    故答案为：50.
 
-    ，
-
-    当点与点重合时，两张纸片交叉所成的角最小，
-
-    设，则，
-
-    ，
-
-    ，
-
-    ，
-
-    ，
-
-    ．'
+    [图]'
   knowledge_points:
-  - 全等三角形
-  - 勾股定理
-  - 平行四边形
-  - 矩形
-  - 菱形
-  module: quadrilaterals
+  - 圆周角
+  - 弦
+  module: circles
   difficulty: 中档
   recommended_for:
   - L1
@@ -385,33 +434,18 @@ questions:
 - id: 15
   type: 填空
   score: 2
-  question: 在平面直角坐标系xOy中，已知点，，在抛物线上，若，则，，的大小关系为_____（用“<”表示）
-  answer: ''
-  solution: '解：∵，
+  question: 用一组a，b，m的值说明“若$a < b$，则$ma > mb$”是错误的，这组数可以是$a =$___________，$b =$___________，$m =$___________．
+  answer: ①.1②.2③.0
+  solution: '解：当$a=1,b=2,m=0$时，
 
-    ∴抛物线的对称轴为直线，
+    满足$a < b$，而$ma = 0, mb = 0$，不满足$ma > mb$，
 
-    ∵，
+    ∴$a=1,b=2,m=0$符合题意．
 
-    ∴，
-
-    令关于直线对称的点坐标为，
-
-    则，
-
-    ∴，
-
-    ∵，
-
-    ∴当时，随的增大而增大，
-
-    ∴，
-
-    故答案为： ．'
+    故答案为：1,2,0.'
   knowledge_points:
-  - 二次函数
-  - 坐标系
-  module: functions
+  - 综合
+  module: geometryComprehensive
   difficulty: 中档
   recommended_for:
   - L1
@@ -420,44 +454,72 @@ questions:
 - id: 16
   type: 填空
   score: 2
-  question: '如图，双骄制衣厂在厂房的周围租了三幢楼、、作为职工宿舍，每幢宿舍楼之间均有笔直的公路相连，并且厂房与每幢宿舍楼之间也有笔直公路相连，且．已知厂房到每条公路的距离相等．
+  question: '从甲地到乙地有A，B，C三条不同的公交线路．为了解早高峰期间这三条线路上的公交车从甲地到乙地的用时情况，在每条线路上随机选取了500个班次的公交车，收集了这些班次的公交车用时（单位：分钟）的数据，统计如下：
 
-    （1）则点为三条 _________的交点（填写：角平分线或中线或高线）；
+    公交车用时
 
-    （2）如图设，，，，，，现要用汽车每天接送职工上下班后，返回厂房停放，那么最短路线长是 ____________．'
-  answer: ①. 角平分线    ②.
-  solution: '解：（1）点到每条公路的距离相等，
+    公交车用时的频数
 
-    点是的角平分线的交点．
+    线路
 
-    故答案为：角平分线；
+    $30\leq t\leq35$
 
-    （2）共有6条线路：，，，，，，
+    $35 < t \leq 40$
 
-    在上截取，连接，
+    $40 < t \leq 45$
 
-    在和中，
+    $45<t\leq50$
 
-    ，
+    合计
 
-    ，
+    A
 
-    ，
+    59
 
-    在中，
+    151
 
-    推出，
+    166
 
-    同理，，，，
+    124
 
-    最短，
+    500
 
-    故答案为：．
+    B
 
-    三、解答惠（第17-22题各5分，第23-26题各6分，第27、28题各7分．共68分）'
+    50
+
+    50
+
+    122
+
+    278
+
+    500
+
+    C
+
+    45
+
+    265
+
+    167
+
+    23
+
+    500
+
+    早高峰期间，乘坐_________（填“A”，“B”或“C”）线路上的公交车，从甲地到乙地“用时不超过45分钟”的可能性最大．'
+  answer: C
+  solution: '解：样本容量相同，C线路上的公交车用时超过$45$分钟的频数最小，所以其频率也最小，
+
+    ∴乘坐C线路上的公交车，从甲地到乙地“用时不超过45分钟”的可能性最大．
+
+    故答案为：C.'
   knowledge_points:
-  - 综合
-  module: triangles
+  - 概率
+  - 频率
+  - 统计
+  module: statisticsAndProbability
   difficulty: 较难
   recommended_for:
   - L2
@@ -465,14 +527,15 @@ questions:
 - id: 17
   type: 解答
   score: 5
-  question: （第17题，详见原卷）
-  answer: ''
-  solution: '解：
+  question: 计算：$6\cos45^{\circ}-\sqrt{18}+|-5|-(\pi-2)^{0}$．
+  answer: '4'
+  solution: '解：$6\cos45^{\circ}-\sqrt{18}+|-5|-(\pi-2)^{0}$
 
-    ．'
+    $=6x\frac{\sqrt{2}}{2}-3\sqrt{2}+5-1$
+
+    $= 4$．'
   knowledge_points:
   - 三角函数
-  - 绝对值
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -483,15 +546,21 @@ questions:
 - id: 18
   type: 解答
   score: 5
-  question: 解不等式组：
-  answer: ''
-  solution: '解：原不等式组为
+  question: 解不等式组：$\left\{\begin{array}{l}x+2 \geqslant 2x-1 \\ \frac{3x-5}{2}<x\end{array}\right.$．
+  answer: $3<x<5$
+  solution: '解：$\begin{cases}
 
-    解不等式①得，，
+    x+2<2x-1\\
 
-    解不等式②得，，
+    \dfrac{3x-5}{2}<x
 
-    ∴原不等式组的解集为．'
+    \end{cases}$，
+
+    解不等式①得：$x>3$，
+
+    解不等式②得：$x<5$，
+
+    ∴不等式组的解集为$3<x<5$．'
   knowledge_points:
   - 不等式
   - 不等式组
@@ -505,34 +574,22 @@ questions:
 - id: 19
   type: 解答
   score: 5
-  question: '关于x的一元二次方程．
+  question: 已知$x^2 - x - 3 = 0$，求代数式$(x+2)(x-2)-x(2-x)$的值．
+  answer: '2'
+  solution: '解：$(x+2)(x-2)-x(2-x)$，
 
-    （1）求证：方程总有两个实数根；
+    $=x^{2}-4-2x+x^{2}$，
 
-    （2）若方程有一个根小于1，求m的取值范围．'
-  answer: （1）见解析；（2）
-  solution: '（1）证明：，
+    $=2x^{2}-2x-4$，
 
-    ∵无论m取何值时，，
+    ∵$x^2 - x - 3 = 0$，
 
-    ∴此方程总有两个实数根．
+    ∴$x^{2}-x=3$．0
 
-    （2）解：，
-
-    ．
-
-    ．
-
-    ∵此方程有一个根小于1，且．
-
-    ．
-
-    ．'
+    ∴原式$=2(x^{2}-x)-4=2$．'
   knowledge_points:
-  - 一元二次方程
-  - 根的判别式
-  - 不等式
-  module: equationsAndInequalities
+  - 方差
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -542,35 +599,51 @@ questions:
 - id: 20
   type: 解答
   score: 5
-  question: 下面是证明三角形内角和定理的两种添加辅助线的方法，选择其中一种，完成证明．
-  answer: 答案见解析
-  solution: '证明：
+  question: '如图，在$\triangle ABC$中，$AB = AC$．
 
-    方法一：过点作，
+    [图]
 
-    则，． 两直线平行，内错角相等）
+    （1）使用直尺和圆规，作$AD \perp BC$交BC于点D（保留作图痕迹）；
 
-    ∵点，，在同一条直线上，
+    （2）以D为圆心，DC的长为半径作弧，交AC于点E，连接BE，DE．
 
-    ∴．（平角的定义）
+    ①$\angle BEC =$°；
 
-    ．
+    ②写出图中一个与$\angle CBE$相等的角．'
+  answer: （1）见详解（2）①$90$；②$\angle CAD$
+  solution: '【小问1详解】
 
-    即三角形的内角和为．
+    如图，AD即为所作．
 
-    方法二：
+    [图]【小问2详解】
 
-    如图，过点C作
+    ①$\because AB = AC$，$AD \perp BC$，
 
-    ∵CD//AB，
+    $\ldots DB = DC$，AD平分$\angle BAC$，
 
-    ∴∠A=∠ACD，∠B+∠BCD=180°，
+    $\therefore BC$为$\odot D$的直径，
 
-    ∴∠B+∠ACB+∠A=180°．
+    $\angle BEC = 90^\circ$；
 
-    即三角形的内角和为．'
+    ②
+
+    [图]
+
+    $\because AB = AC$，
+
+    $\angle ABC = \angle ACB$，
+
+    $\therefore BC$为$\odot D$的直径，
+
+    $\angle BEC = 90^\circ$，
+
+    $\because AD \perp BC$，
+
+    $\angle CBE+\angle BCE=90^{\circ}$，$\angle CAD+\angle ACD=90^\circ$，
+
+    $\angle CBE = \angle CAD$．'
   knowledge_points:
-  - 平行线
+  - 圆周角
   module: triangles
   difficulty: 中档
   recommended_for:
@@ -580,53 +653,44 @@ questions:
 - id: 21
   type: 解答
   score: 5
-  question: '如图，四边形是平行四边形，、相交于点，是中点，连接，过点作于点，过点作于点．
+  question: '如图，在四边形$ABCD$中，$\angle ACB=\angle CAD=90^{\circ}$，点E在BC上，$AE\parallel DC, EF \perp AB$，垂足为F．
 
-    （1）求证：四边形是矩形；
+    [图]
 
-    （2）若四边形是菱形，，，求长度．'
-  answer: （1）见详解    （2）
-  solution: '【小问1详解】
+    （1）求证：四边形$AECD$是平行四边形；
 
-    解：证明∶四边形是平行四边形，
+    （2）若AE平分$\angle BAC, BE = 5, \cos B = \frac{4}{5}$，求BF和AD$[公式]$长．'
+  answer: （1）见详解；（2）$BF = 4$，$AD = 3$
+  solution: '（1）证明：∵$\angle ACB=\angle CAD=90^{\circ}$，
 
-    ，
+    ∴AD∥CE，
 
-    ∵点是的中点，
+    ∵$AE\parallel DC$，
 
-    ∴是的中位线，
+    ∴四边形$AECD$是平行四边形；
 
-    ∴，
+    （2）解：由（1）可得四边形$AECD$是平行四边形，
 
-    ∵，
+    ∴$CE = AD$，
 
-    ∴，
+    ∵$EF \perp AB$，AE平分$\angle BAC$，$\angle ACB=90^\circ$，
 
-    ∴四边形是矩形；
+    ∴$EF = CE$，
 
-    【小问2详解】
+    ∴EF=CE=AD，
 
-    解∶ ∵四边形菱形，
+    ∵$BE=5,\cos B=\frac{4}{5}$，
 
-    ∴，
+    ∴$BF = BE \cdot \cos B = 5 \cdot \frac{4}{5} = 4$，
 
-    ∵，
+    ∴$EF=\sqrt{BE^{2}-BP^{2}}=3$，
 
-    ∴，
-
-    在中，由勾股定理得，
-
-    ∵，
-
-    ∴，
-
-    ∴．'
+    ∴$AD=EF=3$．'
   knowledge_points:
   - 勾股定理
   - 平行四边形
-  - 矩形
-  - 菱形
-  module: quadrilaterals
+  - 三角函数
+  module: triangles
   difficulty: 中档
   recommended_for:
   - L1
@@ -635,29 +699,61 @@ questions:
 - id: 22
   type: 解答
   score: 5
-  question: '在平面直角坐标系中，一次函数的图象由函数的图象平移得到，且经过点．
+  question: '在平面直角坐标系xOy中，一次函数$y=kx+b$（$k \neq 0$）的图象经过点$(0,1)$，$(-2,2)$，与x轴交于点A．
 
-    （1）求这个一次函数的表达式；
+    （1）求该一次函数的表达式及点A的坐标；
 
-    （2）当时，对于x的每一个值，函数的值小于一次函数的值，直接写出m的取值范围．'
-  answer: （1） （2）且
+    （2）当$x>2$时，对于x的每一个值，函数$y=2x+m$的值大于一次函数$y=kx+b$（$k \neq 0$）的值，直接写出m的取值范围．'
+  answer: （1）$y=-\frac{1}{2}x+1$，$A(2,0)$ （2）$m-4$
   solution: '【小问1详解】
 
-    解：由平移可知，，
+    解：$\begin{array}{c}
 
-    将代入中得，，
+    \bullet \\
 
-    ∴一次函数表达式为；
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$一次函数$y=kx+b(k\neq0)$的图象经过点$(0,1)$，$(-2,2)$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\begin{cases}
+
+    b = 1 \\
+
+    -2k + b = 2
+
+    \end{cases}$，
+
+    解得$\left\{\begin{array}{l}k=-\dfrac{1}{2}\\b=1\end{array}\right.$，
+
+    该一次函数的表达式为$y=-\frac{1}{2}x+1$，
+
+    令$y = 0$，得$0 = -\frac{1}{2}x + 1$，
+
+    $\therefore x=2$，
+
+    $\therefore A(2,0)$；
 
     【小问2详解】
 
-    解：如图，
+    解：当$x>2$时，对于x的每一个值，函数$y=2x+m$的值大于一次函数$y=kx+b(k\neq0)$的值，
 
-    由题意知，当时，对于x的每一个值，函数的值小于一次函数的值，m的取值范围为且．'
+    $2x+m-\frac{1}{2}x+1$，
+
+    $\therefore m-4$．
+
+    [图]'
   knowledge_points:
   - 一次函数
-  - 平移
-  - 不等式
   - 坐标系
   module: functions
   difficulty: 中档
@@ -668,57 +764,20 @@ questions:
 - id: 23
   type: 解答
   score: 6
-  question: '为进一步增强中小学生“知危险会避险”的意识，某校初三年级开展了系列交通安全知识竞赛，从中随机抽取30名学生两次知识竞赛的成绩（百分制），并对数据（成绩）进行收集、整理、描述和分析．下面给出了部分信息．
+  question: '列方程解应用题
 
-    ．这30名学生第一次竞赛成绩和第二次竞赛成绩得分统计图：
+    无人配送以其高效、安全、低成本等优势，正在成为物流运输行业的新趋势．某物流园区使用1辆无人配送车平均每天配送的包裹数量是1名快递员平均每天配送包裹数量的5倍．要配送6000件包裹，使用1辆无人配送车所需时间比4名快递员同时配送所需时间少2天，求1名快递员平均每天可配送包裹多少件？'
+  answer: $150$件
+  solution: '解：设1名快递员平均每天配送包裹x件．则1辆无人配送车平均每天配送的包裹$5x$，
 
-    ．这30名学生两次知识竞赛获奖情况相关统计表：
+    依题意可得：$\frac{6000}{5x}+2=\frac{6000}{4x}$，解得：$x=150$．
 
-    （规定：分数，获卓越奖；分数，获优秀奖：分数，获参与奖）
+    经检验，$x=150$是原分式方程的解且符合题意．
 
-    ．第二次竞赛获卓越奖的学生成绩如下：
-
-    90   90   91   91   91   91   92   93   93   94   94   94   95   95   96   98
-
-    ．两次竞赛成绩样本数据的平均数、中位数、众数如下表：
-
-    根据以上信息，回答下列问题：
-
-    （1）小松同学第一次竞赛成绩是89分，第二次竞赛成绩是91分，在图中用“○”圈出代表小松同学点；
-
-    （2）直接写出的值；
-
-    （3）哪一次竞赛中初三年级全体学生的成绩水平较高?请说明你的理由（至少两个方面）．'
-  answer: （1）见详解    （2）， （3）第二次
-  solution: '【小问1详解】
-
-    解：如图所示；
-
-    【小问2详解】
-
-    ，
-
-    ∵第二次竞赛获卓越奖的学生有16人，成绩从小到大排列为：
-
-    90，90，91，91，91，91，92，93，93，94，94，94，95，95，96，98，
-
-    其中第1个和第2个数是30名学生成绩中第15和第16个数，
-
-    ∴，
-
-    ∴，；
-
-    【小问3详解】
-
-    第二次竞赛，学生成绩的平均数、中位数和众数均高于第一次竞赛，
-
-    故第二次竞赛中初三年级全体学生的成绩水平较高．'
+    答：1名快递员平均每天可配送包裹$150$件．'
   knowledge_points:
-  - 统计
-  - 平均数
-  - 中位数
-  - 众数
-  module: statisticsAndProbability
+  - 分式方程
+  module: numbersAndExpressions
   difficulty: 较难
   recommended_for:
   - L2
@@ -726,54 +785,74 @@ questions:
 - id: 24
   type: 解答
   score: 6
-  question: '某公园在人工湖里安装一个喷泉，在湖心处竖直安装一根水管，在水管的顶端安一个喷水头，若记水柱上某一位置与水管的水平距离为d米，与湖面的垂直高度为h米.
+  question: '如图，AB是$\odot\odot$的直径，点E是OB的中点，过点E作弦$CD \perp AB$，连接AC，AD．
 
-    根据上述信息，解决以下问题：
+    [图]
 
-    （1）在如下网格中建立适当的平面直角坐标系，并根据表中所给数据画出表示h与d函数关系的图象；
+    （1）求证：$\triangle ACD$是等边三角形；
 
-    （2）若水柱最高点距离湖面的高度为m米，则m＝      ；
-
-    （3）现公园想通过喷泉设立新的游玩项目，准备通过只调节水管露出湖面的高度，使得游船能从水柱下方通过．如图2所示，为避免游船被喷泉淋到，要求游船从水柱下方中间通过时，顶棚上任意一点到水柱的竖直距离均不小于0.5米．已知游船顶棚宽度为3米，顶棚到湖面的高度为2米，那么公园应将水管露出湖面的高度（喷水头忽略不计）至少调节到多少米才能符合要求？请通过计算说明理由（结果保留一位小数）．'
-  answer: （1）见详解    （2）1.5 （3）2.1米
+    （2）若点F是$\Diamond AC$的中点，过点C作$CG \perp AF$，垂足为点G．若$\odot\odot$的半径为$2$，求CG的长．'
+  answer: （1）证明见解析； （2）$CG = \sqrt{3}$．
   solution: '【小问1详解】
 
-    解：以喷泉与湖面的交点为原点，喷泉所在的直线为纵轴建立平面直角坐标系，如图1所示：
+    证：如图，连接OC，
+
+    [图]
+
+    $\because AB$是$\odot\odot$的直径，且$CD \perp AB$，
+
+    $\therefore CE = DE$，$BC = BD$，
+
+    $\angle BAC = \angle BAD$，
+
+    $\therefore AB$是CD的垂直平分线，
+
+    $\therefore AC = AD$，
+
+    $\because OC = OB$，点E是OB的中点，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$点C在线段OB的垂直平分线上，$OE-BE=\frac{1}{2}OB=\frac{1}{2}GC$，
+
+    $\triangle COE$中,$\cos\angle COE=\frac{OE}{OC}=\frac{1}{2}$，
+
+    即$\angle COE = 60^\circ$，
+
+    $\therefore BC = BC$，
+
+    $\angle BAD = \angle BAC = \frac{1}{2} \angle COE = 30^\circ$，
+
+    即$\angle CAD=\angle BAC+\angle BAD=60^{\circ}$
+
+    $\therefore \triangle ACD$是等边三角形．
 
     【小问2详解】
 
-    根据题意可知，该抛物线的对称轴为，此时最高，
+    解：由$(1)$得，$\triangle ACD$是等边三角形，
 
-    即，
+    $\angle ADC = 60^\circ$，
 
-    故答案为：1.5．
+    $\therefore F$是$\Diamond AC$的中点，
 
-    【小问3详解】
+    $\therefore CF=\frac{1}{2}AC$，
 
-    根据图象可设二次函数的解析式为：，
-
-    将代入，得，
-
-    抛物线的解析式为：，
-
-    设调节后的水管喷出的抛物线的解析式为：，
-
-    由题意可知，当横坐标为时，纵坐标的值大于，
-
-    ，
-
-    解得，
-
-    水管高度至少向上调节1.6米，
-
-    （米，
-
-    公园应将水管露出湖面的高度（喷水头忽略不计）至少调节到2.1米才能符合要求．'
+    $\therefore \angle GAC = \frac{1}{2} \an'
   knowledge_points:
-  - 二次函数
-  - 平移
-  - 坐标系
-  module: functions
+  - 圆周角
+  - 垂径定理
+  - 弦
+  - 全等三角形
+  - 勾股定理
+  - 三角函数
+  - 锐角三角函数
+  module: triangles
   difficulty: 较难
   recommended_for:
   - L2
@@ -781,65 +860,120 @@ questions:
 - id: 25
   type: 解答
   score: 6
-  question: '如图，在矩形中，，，点A在直线l上，与直线l相交所得的锐角为．点F在直线l上，，⊥直线l，垂足为点F且，以为直径，在的左侧作半圆O，点M是半圆O上任一点．
+  question: '学校组织九年级学生进行跨学科主题学习活动，利用函数的相关知识研究某种化学试剂的挥发情况．在两种不同的场景A和场景B下做对比实验，设实验过程中，该试剂挥发时间为x分钟时，在场景A，B中的剩余质量分别为$y_{1}$，$y_{2}$（单位：克）．
 
-    发现：的最小值为              ，的最大值为              ，与直线l的位置关系是              ．
+    下面是某研究小组的探究过程，请补充完整：
 
-    思考：矩形保持不动，半圆O沿直线l向左平移，当点E落在边上时，重叠部分面积为多少？'
-  answer: 发现：；；平行（或）；思考：
-  solution: '发现：解：如图1，连接，作于，
+    记录$y_{1}$，$y_{2}$与x的几组对应值如下：
 
-    由题意知，，，
+    x（分钟）
 
-    当三点共线时，最小，
+    0
 
-    由勾股定理得，，
+    5
 
-    ∴的最小值为；
+    10
 
-    当重合时，最大，
+    15
 
-    由勾股定理得，，
+    20
 
-    ∴的最大值为；
+    …
 
-    ∵矩形，
+    $y_{1}$（克）
 
-    ∴，
+    25
 
-    ∴，
+    23.5
 
-    ∴，
+    20
 
-    又∵，
+    14.5
 
-    ∴，
+    7
 
-    故答案为：平行（或）；
+    …
 
-    故答案为：；；平行（或）；
+    $y_{2}$（克）
 
-    思考：解：如图2，连接，作于，
+    25
 
-    ∵，
+    20
 
-    ∴，
+    15
 
-    ∴，
+    10
 
-    ∵，
+    5
 
-    ∴，，
+    …
 
-    ∴，
+    （1）在同一平面直角坐标系xOy中，描出上表中各组数值所对应的点$(x,y_{1})$，$\left(x,y_{2}\right)$，并画出函数$y_{1}$，$y_{2}$的图象；
 
-    ∴重叠部分面积为．'
+    [图]
+
+    （2）进一步探究发现，场景A的图象是抛物线的一部分，$y_{1}$与x之间近似满足二次函数：$y_{1}=-0.04x^{2}+bx+c$．场景B的图象是直线的一部分，$y_{2}$与x之间近似满足一次函数$y_{2}=kx+c$（$k \neq 0$）．则$b =$，$c =$，$k =$；
+
+    （3）查阅文献可知，该化学试剂的质量不低于4克时，才能发挥作用，在上述实验中，记该化学试剂在场景A，B中发挥作用的时间分别为$x_{A}$，$x_{B}$，则$x_{A}$$x_{B}$（填“$\gt$”，“$=$”或“$\gt$”）．'
+  answer: （1）见详解（2）$b = -0.1$，$c = 25$，$k = -1$ （3）$\gt$
+  solution: '【小问1详解】
+
+    解：（1）由题意，作图如下．
+
+    [图]【小问2详解】
+
+    解：由题意，场景A的图象是抛物线的一部分，$y_{1}$与x之间近似满足函数关系$y_{1}=-0.04x^{2}+bx+c$．
+
+    又点$(0,25)$，$(10,20)$在函数图象上，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\left\{\begin{array}{l}c=25\\-0.04\times10^{2}+10b+c=20\end{array}\right.$．
+
+    解得：$\begin{cases} b = -0.1 \\ c = 25 \end{cases}$．
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$场景B函数关系式为$y_{1}=-0.04x^{2}-0.1x+25$．
+
+    对于场景B的图象是直线的一部分，$y_{2}$与x之间近似满足函数关系$y_{2}=kx+c$．
+
+    又$(0,25)$，$(10,15)$在函数图象上，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\begin{cases}
+
+    c = 25 \\
+
+    10k + c = 15
+
+    \end{cases}$．
+
+    解得：$\left\{\begin{ar'
   knowledge_points:
-  - 平行线
-  - 勾股定理
-  - 矩形
-  - 平移
-  module: triangles
+  - 一次函数
+  - 二次函数
+  - 坐标系
+  module: functions
   difficulty: 较难
   recommended_for:
   - L2
@@ -847,130 +981,122 @@ questions:
 - id: 26
   type: 解答
   score: 6
-  question: '如图，是的一条弦，E是的中点，过点B作的切线交的延长线于点D．
+  question: '在平面直角坐标系xOy中，点$M(x_{1},y_{1})$，$N(x_{2},y_{2})$是抛物线$y=ax^{2}-2ax+c$（$a > 0$）上任意两点．
 
-    （1）求证：；
+    （1）直接写出抛物线的对称轴；
 
-    （2）若，求的半径．'
-  answer: （1）见解析    （2）
+    （2）若$x_{1}=a+1$，$x_{2}=a+2$，比较$y_{1}$与$y_{2}$的大小，并说明理由；
+
+    （3）若对于$m < x_1 < m + 1$，$m+1<x<m+2$，总有$y_1 < y_2$，求m的取值范围．'
+  answer: （1）抛物线的对称轴为直线$x = 1$ （2）$y_1 < y_2$ （3）$m>\frac{1}{2}$
   solution: '【小问1详解】
 
-    证明：∵是的切线，
+    解：抛物线$y=ax^{2}-2ax+c$（$a > 0$）的对称轴为：$x=\frac{-2a}{2a}=1$，
 
-    ∴，即，
-
-    ∵，
-
-    ∴，
-
-    ∵，，
-
-    ∴，
-
-    ∴；
+    ∴抛物线的对称轴为直线$x = 1$；
 
     【小问2详解】
 
-    解：如图，连接，作于，
+    ∵$a > 0$，抛物线开口向上，对称轴为直线$x = 1$，$x_{1}=a+1,x_{2}=a+2$，
 
-    ∵E是的中点，，，
+    ∴$M(x_1,y_1)$，$N(x_{2},y_{2})$都在对称轴右侧，
 
-    ∴，，，
+    ∵当$x>1$时，y随x的增大而增大，且$x_{1}<x_{2}$，
 
-    由勾股定理得，，
+    ∴$y_1 < y_2$；
 
-    ∵，， ，
+    【小问3详解】
 
-    ∴，
+    ∵$m < x_1 < m + 1$，$m+1<x<m+2$，
 
-    ∴，即，
+    ∵$y_1 < y_2, a > 0$，
 
-    解得，，
+    ∴$M(x_1,y_1)$距离对称轴更近，$x_{1}<x_{2}$，则MN的中点在对称轴的右侧，
 
-    ∴的半径为．'
+    ∴$\frac{m+n+1}{2}>1$，
+
+    解得：$m > \frac{1}{2}$．'
   knowledge_points:
-  - 对顶角
-  - 切线
-  - 弦
-  - 勾股定理
-  module: triangles
+  - 二次函数
+  - 不等式
+  - 坐标系
+  module: functions
   difficulty: 压轴
   recommended_for:
   - L3
 - id: 27
   type: 解答
   score: 7
-  question: '在和中，，，点在的内部，连接，和，设．
+  question: '如图，在$\triangle ABC$中，$AB = AC$，$\angle BAC=2\alpha(45^{\circ}<\alpha<90^{\circ})$，D是BC的中点，E是BD的中点，连接AE．将射线AE绕点A逆时针旋转$\alpha$得到射线AM，过点E作$EF \perp AE$交射线AM于点F．
 
-    （1）当时，如图1，请求出值，
+    [图]
 
-    （2）当时：
+    （1）①依题意补全图形；
 
-    ①如图2，（1）中k值是否发生变化，如无变化；如有变化，请求出k值并说明理由；
+    ②求证：$\angle B = \angle AFE$；
 
-    ②如图3，当，，三点共线，且为中点时，请求出的值．'
-  answer: （1） （2）①；②
+    （2）连接CF，DF，用等式表示线段CF，DF之间的数量关系，并证明．'
+  answer: （1）①见解析；②见解析 （2）$CF = DF$
   solution: '【小问1详解】
 
-    解：，
+    解：①如图所示，
 
-    理由如下：如图1，，，，
+    [图]
 
-    和都是等边三角形，
+    ②连接AD，
 
-    ，，，
+    [图]
 
-    ，
+    ∵$AB = AC$，D是BC的中点，
 
-    在和中，
+    ∴$AD \perp BC$于点D，AD平分$\angle BAC$，
 
-    ，
+    ∵$\angle BAC=2\alpha(45^{\circ}<\alpha<90^{\circ})$
 
-    ，即；
+    ∴$\angle BAD = \alpha$，$\angle B=90^{\circ}-\alpha$，
+
+    ∵$EF \perp AE$，
+
+    ∴$\angle AEF=90^\circ$，$\angle AFE = 90^\circ - \alpha$，
+
+    ∴$\angle B = \angle AFE$；
 
     【小问2详解】
 
-    ①值发生变化，，
+    $CF = DF$；证明如下，
 
-    ，，，
+    延长FE至点H，使得$EH = EF$，连接$BH,AH$，CF，
 
-    和都是等腰直角三角形，
+    [图]
 
-    ，，，
+    ∵E为BD的中点，E为HF的中点
 
-    ，，
+    ∴$EH = EF, EB = ED$，
 
-    ，
+    又$\angle HEB = \angle FED$，
 
-    ，即，
+    ∴$\triangle HBE \cong \triangle FDE$$(SAS)$，
 
-    ；
+    ∴$BH = FD$，
 
-    ②作于，
+    ∵$AE \perp HF$，$EH = EF$，
 
-    设，则，
+    ∴$\triangle AHF$是等腰三角形，则$AH = AF$，$\angle HAE = \angle FAE = \alpha$，，
 
-    点为中点，
+    ∵$\angle BAC = \angle HAF = 2\alpha$，
 
-    ，
+    ∴$\angle HAF-\angle BAF=\angle BAC-\angle BAF$，
 
-    由勾股定理得，，
+    即$\angle BAH = \angle CAF$，
 
-    ，，
+    ∴$\triangle AHB \cong \triangle AFC$$(SAS)$，
 
-    ，
+    ∴$CF = BH$，
 
-    ，即，
-
-    解得，，
-
-    ，
-
-    则．'
+    ∴$CF = FD$．'
   knowledge_points:
   - 全等三角形
-  - 相似三角形
-  - 勾股定理
+  - 旋转
   module: triangles
   difficulty: 压轴
   recommended_for:
@@ -978,103 +1104,81 @@ questions:
 - id: 28
   type: 解答
   score: 7
-  question: '如图，在平面直角坐标系中，点， ，将一个图形先绕点S顺时针旋转α，再绕点T逆时针旋转α．
+  question: '在平面直角坐标系xOy中，$\odot\odot$的半径为1，P是$\odot\odot$外一点，给出如下的定义：若在$\odot\odot$上存在一点T，使得点P关于某条过点T的直线对称后的点Q在$\odot\odot$上，则称Q为点P关于$\odot\odot$的关联点．
 
-    （1）点R在线段ST上，则在点，，， 中，有可能是由点R经过一次“对称旋转”后得到的点是_________；
+    （1）当点P在直线$y=2x$上时，
 
-    （2）x轴上的一点P经过一次“α对称旋转”得到点Q．
+    ①若点$P(1,2)$，在点$Q_1\left(-\frac{\sqrt{2}}{2},-\frac{\sqrt{2}}{2}\right)$，$\mathcal{Q}_{2}(0,1)$，$\mathcal{Q}_{3}(1,0)$中，点P关于$\odot\odot$的关联点是______；
 
-    ①当时， ________；
+    ②若P关于$\odot\odot$的关联点Q存在，求点P的横坐标p的取值范围；
 
-    ②当时，若轴，求点P的坐标；
-
-    （3）以点O为圆心作半径为1的圆．若在上存在点M，使得点M经过一次“α对称旋转”后得到的点在x轴上，直接写出α的取值范围．'
-  answer: （1）B，C； （2）①2；②； （3）或．
+    （2）已知点$A\left(2,\frac{3}{2}\right)$，动点M满足$AM \leq 1$，若M关于$\odot\odot$的关联点N存在，直接写出MN的取值范围．'
+  answer: （1）①$Q_1$，$Q_{2}$；②$-\frac{3\sqrt{5}}{5} \leq p \leq \frac{3\sqrt{5}}{5}$ （2）存在，$1 \leq MN \leq 4$
   solution: '【小问1详解】
 
-    解：由一次“对称旋转”定义，将先绕点T顺时针旋转得，再绕点S逆时针旋转得，如图所示：
+    解：如图所示，
 
-    不是由点R经过一次“对称旋转”后得到的点；
+    [图]
 
-    同理可得，是由点经过一次“对称旋转”后得到的点；是由点经过一次“对称旋转”后得到的点；不是由点R经过一次“对称旋转”后得到的点；
+    $PQ_1$连线的中点在$\odot\odot$的内部，$PQ_{2}$的中点的纵坐标为$1$，则点$P, Q_2$关于$y = 1$对称
 
-    故答案为： B，C；
+    点P关于$\odot\odot$的关联点是$Q_1$，$Q_{2}$，
+
+    故答案为：$Q_1$，$Q_{2}$．
+
+    ②如图所示，设$y=2x$与$\odot\odot$交于点$M, N$，过点$N,P$分别作x轴的垂线，垂足分别为$A,B$，
+
+    [图]
+
+    ∵设$\odot\odot$上的点的坐标为$(x, y)$，则$x^2 + y^2 = 1$，
+
+    联立$\left\{
+
+    \begin{array}{l}
+
+    x^{2}+y^{2}=1 \\
+
+    y=2x
+
+    \end{array}
+
+    \right.$
+
+    解得：$\left\{
+
+    \begin{array}{l}
+
+    x = \dfrac{\sqrt{2}}{5} \\
+
+    y = \dfrac{2\sqrt{5}}{5}
+
+    \end{array}
+
+    \right.$或$\left\{ \begin{array} { l } { x = - \frac { \sqrt { 5 } } { 5 } } \\ { y = - \frac { 2 \sqrt { 5 } } { 5 } } \end{array} \right.$
+
+    当P点的对称点为M时，点P的横坐标最大，
+
+    ∵$ON=1,OP=1+2=3$,$NA \parallel PB$，
+
+    ∴$\frac{ON}{OP} = \frac{x_{N}}{x_{P}}$,
+
+    ∴$p = \frac{3\sqrt{5}}{5}$,
+
+    同理可得p的最小值为$-\frac{3\sqrt{5}}{5}$
+
+    ∴$-\frac{3\sqrt{5}}{5} \leq p \leq \frac{3\sqrt{5}}{5}$
 
     【小问2详解】
 
-    ①当时，如图，
-
-    x轴上的一点P经过一次“α对称旋转”得到点Q，
-
-    和均为等边三角形，
-
-    ，，
-
-    ，
-
-    ，
-
-    ，
-
-    ，
-
-    故答案为：2；
-
-    ②当时，设点P绕点S顺时针旋转30°得到点，则
-
-    如图，将x轴作一次“α对称旋转”后得到直线，
-
-    轴，点P经过一次“α对称旋转”得到点Q，
-
-    点Q的坐标为，
-
-    点绕点T逆时针旋转30°得到点Q，
-
-    ，，
-
-    ，
-
-    ，
-
-    ，
-
-    ，
-
-    ，
-
-    ，
-
-    ,
-
-    点P的坐标为．
-
-    【小问3详解】
-
-    点M在上，则M绕S顺时针旋转α度以后的的轨迹为O绕S顺时针旋转α度以后的上，关于T逆时针旋转α度以后得到点N，则N在关于T逆时针旋转α度以后的上，只需与x轴有交点在粉弧上，且,
-
-    如图，与x轴相切，则，在x轴上取点R,连接，使，
-
-    ″
-
-    ，
-
-    ，，，
-
-    ，
-
-    ，
-
-    故；
-
-    如图，与x轴相切，则，在x轴上取点R,连接，使，
-
-    ，'
+    解：依题意，关于$\od'
   knowledge_points:
-  - 圆周角
+  - 平行线
+  - 一元二次方程
   - 勾股定理
-  - 旋转
   - 坐标系
-  module: triangles
+  - 动点
+  - 最值
+  module: geometryComprehensive
   difficulty: 压轴
   recommended_for:
   - L3

@@ -1,8 +1,8 @@
 # ============================================================
 # 2024年北京东城区中考数学一模试卷 — 逐题分析
 # ============================================================
-# 数据来源：knowledge-original/精品解析：2024年北京市东城区汇文中学中考一模数学试题（解析版）.docx
-# 自动生成，部分数学公式可能显示不全（docx公式对象无法完整提取）
+# 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
+# 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
 # 满分：100分  时长：120分钟
 
 year: 2024
@@ -11,26 +11,28 @@ exam_type: 一模
 subject: 数学
 full_score: 100
 duration_minutes: 120
-total_questions: 27
+total_questions: 28
 structure: 8选择(16分) + 8填空(16分) + 12解答(68分)
 questions:
 - id: 1
   type: 选择
   score: 2
-  question: "下列几何体中，其侧面展开图为扇形的是(     )\nA. \tB. \tC. \tD."
-  answer: C
-  solution: 'A、圆柱的侧面展开图是矩形，故A错误；
+  question: '在下列几何体中，俯视图是矩形的几何体是（）
 
-    B、三棱柱的侧面展开图是矩形，故B错误；
+    A.[图]B.[图]C.[图]D.[图]'
+  answer: B
+  solution: '解：A、球的俯视图是圆，不符合题意；
 
-    C、圆锥的侧面展开图是扇形，故C正确；
+    B、四棱柱的俯视图是矩形，符合题意；
 
-    D、三棱锥的侧面展开图是三个三角形拼成的图形，故D错误，
+    C、三棱锥的俯视图是三角形，不符合题意；
 
-    故选C．'
+    D、圆柱的俯视图是圆，不符合题意；
+
+    故选：B．'
   knowledge_points:
-  - 综合
-  module: circles
+  - 矩形
+  module: quadrilaterals
   difficulty: 基础
   recommended_for:
   - L0
@@ -40,14 +42,16 @@ questions:
 - id: 2
   type: 选择
   score: 2
-  question: "2020年7月23日，中国首颗火星探测器“天问一号”成功发射．2021年2月10日，在经过长达七个月，475 000 000公里的漫长飞行之后，“天问一号”成功进入火星轨道．将475000000科学记数法表示应为（    ）\nA. \tB. \tC. \tD."
-  answer: B
-  solution: '解：475000000＝4.75×108．
+  question: '2024年2月29日，在国家统计局发布的《中华人民共和国2023年国民经济和社会发展统计公报》中，2023年全年完成造林面积400万公顷，其中人工造林面积133万公顷．将数字1330000用科学记数法表示应为（）
 
-    故选择：B．'
+    A.$1.33\times10^{7}$B.$13.3\times 10^{5}$C.$1.33\times10^{6}$D.$0.13\times10^{7}$'
+  answer: C
+  solution: '数字1330000用科学记数法表示应为$1.33\times10^{6}$．
+
+    故选：C．'
   knowledge_points:
+  - 统计
   - 科学记数法
-  - 绝对值
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -58,19 +62,36 @@ questions:
 - id: 3
   type: 选择
   score: 2
-  question: "如图，经过旋转成轴对称得到，其中绕点A逆时针旋转的是（    ）\nA.   \tB.     \tC.     \tD."
-  answer: D
-  solution: '解：由题意，选项B，C可以通过翻折得到．
+  question: '在平面直角坐标系xOy中，点$A(0,2)$，$B(-1,0)$，$C(2,0)$为$Y_{ABCD}$的顶点，则顶点D的坐标为（）
 
-    选项A，其中绕点逆时针旋转可以得到，
+    A.$(-3,2)$B.$(2,2)$C.$(3,2)$D.$(2,3)$'
+  answer: C
+  solution: '解：设点D的坐标为$(m,n)$，
 
-    选项D，其中绕点逆时针旋转可以得到．
+    由平行四边形对角线中点坐标相同可得$\frac{\theta+2}{2}=-1+m \\
 
-    故选：D．'
+    \frac{2+\theta}{2}=\frac{\theta+n}{2}$，
+
+    ∴$\left\{
+
+    \begin{array}{l}
+
+    m = 3 \\
+
+    n = 2
+
+    \end{array}
+
+    \right.$，
+
+    ∴点D的坐标为$(3,2)$，
+
+    故选：C．'
   knowledge_points:
-  - 旋转
-  - 轴对称
-  module: geometryComprehensive
+  - 勾股定理
+  - 平行四边形
+  - 坐标系
+  module: quadrilaterals
   difficulty: 基础
   recommended_for:
   - L0
@@ -80,19 +101,93 @@ questions:
 - id: 4
   type: 选择
   score: 2
-  question: "实数a，b，c在数轴上对应点的位置如图所示，若，则下列结论中正确的是（    ）\nA. \tB. \tC. \tD."
-  answer: C
-  solution: '解：∵，
+  question: '若实数a，b在数轴上的对应点的位置如图所示，在下列结论中，正确的是（）
 
-    ，，故A选项不正确，不符合题意；
+    $\begin{tikzpicture}
 
-    ，故B选项不正确，不符合题意；
+    \draw[->] (-3,0) -- (3,0);
 
-    ，故C选项正确，符合题意；
+    \draw (-2,0.1) -- (-2,-0.1) node[below] {$-2$};
 
-    ，，故D选项不正确，不符合题意；
+    \draw (-1,0.1) -- (-1,-0.1) node[below] {$-1$};
 
-    故选C．'
+    \draw (0,0.1) -- (0,-0.1) node[below] {$0$};
+
+    \draw (1,0.1) -- (1,-0.1) node[below] {$1$};
+
+    \draw (2,0.1) -- (2,-0.1) node[below] {$2$};
+
+    \fill (-1.5,0) circle (2pt) node[below] {$a$};
+
+    \fill (0.5,0) circle (2pt) node[below] {$b$};
+
+    \end{tikzpicture}$
+
+    A.$\left| a \right| < \left| b \right|$B.$a+1<b+1$C.$a^{2}<b^{2}$D.$a > -b$'
+  answer: B
+  solution: '解：根据图示，可得$-2 < a < -1$，$0<b<1$，
+
+    $\because -2 < a < -1$，$0<b<1$，
+
+    $\therefore 1<|a|<2$，$0<|b|<1$，
+
+    $\therefore a > b$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$选项A不符合题意；
+
+    $\because -2 < a < -1$，$0<b<1$，
+
+    $\therefore a < b$，
+
+    $a+1<b+1$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$选项B符合题意；
+
+    $\because -2 < a < -1$，$0<b<1$，
+
+    $\therefore 1 < a^{2} < 4$，$0<b^{2}<1$，
+
+    $\therefore a^{2}>b^{2}$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$选项C不符合题意；
+
+    $\because 0<b<1$，
+
+    $-1 < -b < 0$，
+
+    $\because -2 < a < -1$，
+
+    $\therefore a < -b$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1'
   knowledge_points:
   - 综合
   module: numbersAndExpressions
@@ -105,25 +200,27 @@ questions:
 - id: 5
   type: 选择
   score: 2
-  question: "如图，，是的切线，切点分别为，，的延长线交于点，连接，，．若，，则等于（　　）\nA. \tB. \tC. \tD."
-  answer: B
-  solution: '解：，是的切线，
+  question: '在平面直角坐标系xOy中，点$P(1,2)$在反比例函数$y = \frac{k}{x}$（k是常数，$k \neq 0$）的图象上．下列各点中，在该反比例函数图象上的是（）
 
-    ，，
+    A.$(-2,0)$B.$(-1,2)$C.$(-1,-2)$D.$(1,-2)$'
+  answer: C
+  solution: '解：∵点$P(1,2)$在反比例函数$y = \frac{k}{x}$，
 
-    ，，
+    ∴$k=1\times2=2$，
 
-    ，
+    A．$(-2,0)$在x轴上，而反比例函数图象与坐标轴没有交点，故该选项不符合题意；
 
-    ，
+    B．$-1\times2=-2\neq2$，故该选项不符合题意；
 
-    ．
+    C．$-1\times(-2)=2$，故该选项符合题意；
 
-    故选：B．'
+    D．$1\times(-2)=-2\times2$，故该选项不符合题意；
+
+    故选：C．'
   knowledge_points:
-  - 圆周角
-  - 切线
-  module: circles
+  - 反比例函数
+  - 坐标系
+  module: functions
   difficulty: 基础
   recommended_for:
   - L0
@@ -133,20 +230,24 @@ questions:
 - id: 6
   type: 选择
   score: 2
-  question: "方程的解是（    ）\nA. 4\tB. 3\tC. 2\tD. 1"
-  answer: A
-  solution: '解：分式方程两边同时乘以公分母，得，
+  question: '如图，AB是$\odot\odot$的弦，CD是$\odot\odot$的直径，$CD \perp AB$于点E．在下列结论中，不一定成立的是（）
 
-    ，
+    [图]
 
-    解得．
+    A.$AE = BE$B.$\angle CBD = 90^\circ$C.$\angle COB=2\angle D$D.$\angle COB=\angle C$'
+  answer: D
+  solution: '解：$\therefore CD$是$\odot\odot$的直径，$CD \perp AB$，
 
-    经检验，是原方程的解．
+    $\therefore AE = BE$，$\angle CBD = 90^\circ$，$\angle COB=2\angle D$，$\angle CBO = \angle C$，
 
-    故选A．'
+    故A、B、C不符合题意，D符合题意；
+
+    故选：D．'
   knowledge_points:
-  - 分式方程
-  module: numbersAndExpressions
+  - 圆周角
+  - 垂径定理
+  - 弦
+  module: circles
   difficulty: 中档
   recommended_for:
   - L1
@@ -155,22 +256,22 @@ questions:
 - id: 7
   type: 选择
   score: 2
-  question: "已知三个点，，，，，在反比例函数的图象上，其中，则下列结论中正确的是（　　）\nA. \tB.\nC. \tD."
-  answer: D
-  solution: '解：反比例函数中，，
+  question: '一个不透明的口袋中有三个完全相同的小球，把它们分别标号为1，2，3．随机摸出一个小球后放回，摇匀后再随机摸出一个小球，两次摸出的小球标号相同的概率为（）
 
-    函数图象的两个分支分别位于二、四象限，且在每一象限内，随的增大而增大．
+    A.$\frac{1}{2}$B.$\frac{1}{3}$C.$\frac{1}{6}$D.$\frac{1}{9}$'
+  answer: B
+  solution: '根据题意，画树状图如下：
 
-    ，
+    [图]
 
-    ，，，两点在第二象限，点，在第四象限，
+    共有9种等可能结果，其中两次摸出的小球标号相同的有3种结果，所以两次摸出的小球标号相同的概率是$\frac{3}{9}=\frac{1}{3}$，
 
-    ．
-
-    故选：D．'
+    故选：B．'
   knowledge_points:
-  - 反比例函数
-  module: functions
+  - 概率
+  - 树状图
+  - 列表法
+  module: statisticsAndProbability
   difficulty: 中档
   recommended_for:
   - L1
@@ -179,32 +280,59 @@ questions:
 - id: 8
   type: 选择
   score: 2
-  question: "某校举办校庆晚会，其主舞台为一圆形舞台，圆心为O，A，由线段及优弧围成的区域是表演区．若在A处安装一台某种型号的灯光装置，恰好可以照亮整个表演区，如图2中阴影所示．若将灯光装置改放在如图3所示的点M，N或P处，能使表演区完全照亮的方案可能是（　　）\n①在M处放置2台该型号的灯光装置；②在M，N处各放置1台该型号的灯光装置；③在P处放置2台该型号的灯光装置．\nA. ①②\t\
-    B. ①③\tC. ②③\tD. ①②③"
+  question: '2024年1月23日，国内在建规模最大塔式光热项目——甘肃省阿克塞汇东新能源“光热＋光伏”试点项目，一万多面定日镜（如图1）全部安装完成．该项目建成后，年发电量将达17亿千瓦时．该项目采用塔式聚光热技术，使用国内首创的五边形巨蜥式定日镜，单块定日镜（如图2）的形状可近似看作正五边形，面积约为$48m^{2}$，则该正五边形的边长大约是（）（结果保留一位小数，参考数据：$\tan
+    36^{\circ} \approx 0.7$，$\tan 54^\circ \approx 1.4$，$\sqrt{42} \approx 6.5$，$\sqrt{21} \approx 4.6$）
+
+    [图]
+
+    A.5.2mB.4.8mC.3.7mD.2.6m'
   answer: A
-  solution: '解：①在M处放置2台该型号的灯光装置，如图：
+  solution: '解：如图：设正五边形的中心为O，连接OA，OB，过点O作$OF \perp AB$，垂足为F，
 
-    摄像装置的视角为，
+    [图]
 
-    ∵，
+    $\angle AOB=\frac{360^{\circ}}{5}=72^{\circ}$，$\triangle AOB$的面积$=\frac{1}{5}$正五边形的面积$-\frac{48}{5}\mathrm{m}^2$，
 
-    ∴在M处放置2台该型号的灯光装置，能使表演区完全照亮；
+    $\because OA = OB$，$OF \perp AB$，
 
-    ②在M，N处各放置1台该型号的灯光装置
+    $\angle AOF=\frac{1}{2}\angle AOB=36^\circ$，$AB = 2AF$，
 
-    ∵，
+    设$OF = xm$，
 
-    ∴在M，N处各放置1台该型号的灯光装置；
+    在$Rt\triangle OAF$中，$AF=OF\cdot\tan36^{\circ}=0.7x(\mathrm{m})$，
 
-    ③在P处放置2台该型号的灯光装置，如图：
+    $\therefore AB = 2AF - 1.4 \, (\text{cm})$，
 
-    ∵，不能找到一个角和相等
+    $\begin{tikzpicture}
 
-    ∴由图可知，在P处放置2台该型号的灯光装置，不能使表演区完全照亮；
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\frac{1}{2}AB\cdot OF=\frac{48}{5}$，
+
+    $\frac{1}{2} \times 1.4x \cdot x = \frac{48}{5}$，
+
+    解得：$x \approx 3.71$，
+
+    $\ldots AB \cdot 1.4x = 5.2(m)$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$该正五边形的边长大约是$5.2m$，
 
     故选：A．'
   knowledge_points:
-  - 圆周角
+  - 三角函数
+  - 锐角三角函数
   module: triangles
   difficulty: 较难
   recommended_for:
@@ -213,19 +341,15 @@ questions:
 - id: 9
   type: 填空
   score: 2
-  question: 若分式的值为0，则x的值是_____．
-  answer: 0．
-  solution: '解：∵分式的值为0，
+  question: 若二次根式$\sqrt{x-1}$有意义，则x的取值范围是_____．
+  answer: x≥1
+  solution: '解：根据二次根式有意义的条件，x﹣1≥0，
 
-    ∴x＝0．
+    ∴x≥1，
 
-    将x＝0代入x+1＝1≠0．
-
-    当x＝0时，分式分式的值为0．
-
-    故答案为：0．'
+    故答案为：x≥1．'
   knowledge_points:
-  - 综合
+  - 不等式
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -236,15 +360,18 @@ questions:
 - id: 10
   type: 填空
   score: 2
-  question: 因式分解：=_______________.
-  answer: a(a+b)(a-b).
-  solution: '分析：本题考查的是提公因式法和利用平方差公式分解因式.
+  question: 因式分解：$2mn^{2}-18m=$___________．
+  answer: $2m(n+3)(n-3)$
+  solution: '解：$2mn^{2}-18m$
 
-    解析：原式= a(a+b)(a-b).
+    $=2m(n^{2}-9)$
 
-    故答案为a(a+b)(a-b).'
+    $=2m(n+3)(n-3)$
+
+    故答案为：$2m(n+3)(n-3)$．'
   knowledge_points:
   - 因式分解
+  - 方差
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -255,16 +382,22 @@ questions:
 - id: 11
   type: 填空
   score: 2
-  question: 正六边形的一个外角的度数为______．
-  answer: '##60度'
-  solution: '解：∵正六边形的外角和是，
+  question: 方程$\frac{3}{x}=\frac{2}{x-3}$的解为______．
+  answer: $x=9$
+  solution: '解：去分母得，
 
-    ∴正六边形的一个外角的度数为：，
+    $3(x-3)=2x$，
 
-    故答案为：．'
+    解得：$x=9$，
+
+    ∵当$x=9$时$x(x-3)\neq0$，
+
+    ∴方程的解为$x=9$，
+
+    故答案为：$x=9$．'
   knowledge_points:
-  - 综合
-  module: triangles
+  - 分式方程
+  module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
   - L0
@@ -274,18 +407,19 @@ questions:
 - id: 12
   type: 填空
   score: 2
-  question: 若n为整数，且，则n的值为________________．
-  answer: '4'
-  solution: '解：∵16＜21＜25，
+  question: 若关于x的一元二次方程$x^{2}-2x+m=0$有两个不相等的实数根，则m的取值范围是______．
+  answer: $m < 1$
+  solution: '解：∵关于x的一元二次方程$x^{2}-2x+m=0$有两个不相等的实数根，
 
-    ∴4＜＜5．
+    ∴$\triangle=4-4m>0$，
 
-    ∴n＝4．
+    解得：$m < 1$．
 
-    故答案为：4．'
+    故答案为：$m < 1$．'
   knowledge_points:
-  - 综合
-  module: numbersAndExpressions
+  - 一元二次方程
+  - 根的判别式
+  module: equationsAndInequalities
   difficulty: 基础
   recommended_for:
   - L0
@@ -295,20 +429,38 @@ questions:
 - id: 13
   type: 填空
   score: 2
-  question: 据《墨经》记载，在两千多年前，我国学者墨子和他的学生做了世界上第1个“小孔成像”的实验，如图（1）所示，如图（2），若物距为10cm，像距为15cm，蜡烛火焰倒立时像的高度是6cm，则蜡烛火焰的高度是_______cm．
-  answer: '4'
-  solution: '解：设蜡烛火焰的高度是x cm，
+  question: '为了解某校初三年级500名学生每周在校的体育锻炼时间（单位：小时），随机抽取了50名学生进行调查，结果如下表所示：
 
-    由相似三角形的性质得，
+    锻炼时间x
 
-    解得．
+    $5\leq x<6$
 
-    即蜡烛火焰的高度是4cm．
+    $6\leq x<7$
 
-    故答案为：4'
+    $7\leq x<8$
+
+    $x\ 8$
+
+    学生人数
+
+    10
+
+    16
+
+    19
+
+    5
+
+    以此估计该校初三年级500名学生一周在校的体育锻炼时间不低于7小时的约有______人．'
+  answer: '240'
+  solution: '解：$500\times\frac{19.4}{50}=240$人，
+
+    ∴估计该校初三年级500名学生一周在校的体育锻炼时间不低于7小时的约有240人，
+
+    故答案为：240，．'
   knowledge_points:
-  - 相似三角形
-  module: triangles
+  - 综合
+  module: statisticsAndProbability
   difficulty: 中档
   recommended_for:
   - L1
@@ -317,19 +469,24 @@ questions:
 - id: 14
   type: 填空
   score: 2
-  question: 不透明布袋中有红、黄小球各一个，除颜色外无其他差别．随机摸出一个小球后，放回并摇匀．再随机摸出一个，则两次摸到的球中，一个红球、一个黄球的概率为_________．
-  answer: '##0.5'
-  solution: '解：列表如下
+  question: '在$Rt\triangle ABC$中，$\angle A = 90^{\circ}$，点D在AC上，$DE \perp BC$于点E，且$DE = DA$，连接DB．若$\angle C=20^{\circ}$，则$\angle DBE$的度数为______$\text{o}$．
 
-    共4种等可能结果，两次摸到的球中，其中一个红球、一个黄球的情形有2种，
+    [图]'
+  answer: $35$
+  solution: '解：$DE \perp AB$，$\angle A = 90^{\circ}$，且$DE = DA$，
 
-    则两次摸到的球中，一个红球、一个黄球的概率为，
+    $\angle ABD = \angle EBD$，
 
-    故答案为：'
+    $\because \angle A = 90^\circ$，$\angle C=20^{\circ}$，
+
+    $\angle ABC = 90^{\circ} - 20^{\circ} - 70^{\circ}$
+
+    $\angle DOE=\frac{\pi}{2}-70^\circ=65^\circ$，
+
+    故答案为：35．'
   knowledge_points:
-  - 概率
-  - 列表法
-  module: statisticsAndProbability
+  - 综合
+  module: triangles
   difficulty: 中档
   recommended_for:
   - L1
@@ -338,31 +495,56 @@ questions:
 - id: 15
   type: 填空
   score: 2
-  question: 如图，在边长为1的正方形网格中，点A，B，D在格点上，以为直径的圆过C，D两点，则_______．
-  answer: ''
-  solution: '解：如图，连接，
+  question: '阅读材料：
 
-    ∴，
+    如图，已知直线l及直线l外一点P．
 
-    ∵，
+    按如下步骤作图：
 
-    ∴，
+    ①在直线l上任取两点A，B，作射线AP，以点P为圆心，PA长为半径画弧，交射线AP于点C；
 
-    ∵为圆的直径，
+    ②连接BC，分别以点B，C为圆心，大于$\frac{1}{2}BC$的长为半径画弧，两弧分别交于点M，N，作直线MN，交BC于点Q；
 
-    ∴，
+    ③作直线$\overline{PQ}$．
 
-    由勾股定理得，，
+    回答问题：
 
-    ∴，
+    [图]
 
-    故答案为：．'
+    （1）由步骤②得到的直线MN是线段BC的______；
+
+    （2）若$\triangle CPQ$与$\triangle CAB$的面积分别为$S_1$，$S_{2}$，则$S_{1}:S_{2}=$______．'
+  answer: ①.垂直平分线②.$\frac{1}{4}$
+  solution: '解：（1）由作图过程可知，步骤②得到的直线MN是线段BC的垂直平分线．
+
+    故答案为：垂直平分线．
+
+    （2）由作图过程可知，$AP = CP$，
+
+    $\because MN$是线段BC的垂直平分线，
+
+    $\therefore CQ = BQ$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\frac{CP}{AC}=\frac{CQ}{BC}=\frac{1}{2}$，
+
+    $\angle PCQ = \angle ACB$，
+
+    $\triangle PCQ \sim \triangle ACB$，
+
+    $\therefore S_{1}:S_{2}=\left(\frac{1}{2}\right)^{2}=\frac{1}{4}$．
+
+    故答案为：$\frac{1}{4}$．'
   knowledge_points:
-  - 圆周角
-  - 弦
-  - 勾股定理
-  - 正方形
-  module: circles
+  - 相似三角形
+  module: triangles
   difficulty: 中档
   recommended_for:
   - L1
@@ -371,527 +553,733 @@ questions:
 - id: 16
   type: 填空
   score: 2
-  question: 如图，矩形ABCD中，AB=2，BC=1，将矩形ABCD绕顶点C顺时针旋转90°，得到矩形EFCG，连接AE，取AE的中点H，连接DH，则_______．
-  answer: ''
-  solution: '解：
+  question: '简单多面体的顶点数（V）、面数（F）、棱数（E）之间存在一定的数量关系，称为欧拉公式．
 
-    ．'
+    （1）四种简单多面体的顶点数、面数、棱数如下表：
+
+    名称
+
+    图形
+
+    顶点数（V）
+
+    面数（F）
+
+    棱数（E）
+
+    三棱锥
+
+    [图]
+
+    4
+
+    4
+
+    6
+
+    长方体
+
+    [图]
+
+    8
+
+    6
+
+    12
+
+    五棱柱
+
+    [图]
+
+    10
+
+    7
+
+    15
+
+    正八面体
+
+    [图]
+
+    6
+
+    8
+
+    12
+
+    在简单多面体中，V，F，E之间的数量关系是______；
+
+    （2）数学节期间，老师布置了让同学们自制手工艺品进行展示的任务，小张同学计划做一个如图所示的简单多面体作品．该多面体满足以下两个条件：①每个面的形状是正三角形或正五边形；②每条棱都是正三角形和正五边形的公共边．
+
+    小张同学需要准备正三角形和正五边形的材料共______个．
+
+    [图]'
+  answer: ①.$V + F - E = 2$②.32
+  solution: '解（1）$4+4-6=2$，
+
+    $8+6-12=2$，
+
+    $10+7-15=2$，
+
+    $6+8-12=2$，
+
+    ……，
+
+    以此类推可得$V + F - E = 2$，
+
+    故答案为：$V + F - E = 2$；
+
+    （2）设小张同学需要准备正三角形和正五边形材料各x个，y个，
+
+    ∵每个顶点有4条棱，且每个顶点在四个面里面，
+
+    ∴一共有$\frac{3x+5y}{4}$个顶点，
+
+    ∴一共有$\frac{3x+5y}{4}+4=2-\frac{3x+5y}{2}$条棱，
+
+    ∵$V + F - E = 2$，
+
+    ∴$\frac{3x+5y}{4}+x+y-\frac{3x+5y}{2}=2$，
+
+    ∴$x-y=8$；
+
+    ∵每个正三角形与三个五边形相邻，而每个五边形与五个正三角形相邻，
+
+    ∴$y=\frac{3x}{5}$，
+
+    ∴$x-\frac{3}{5}x=8$，
+
+    ∴$x = 20$，
+
+    ∴$y = 12$，
+
+    ∴$x + y = 32$，
+
+    ∴小张同学需要准备正三角形和正五边形的材料共32个，
+
+    故答案为：32．'
   knowledge_points:
-  - 矩形
-  - 旋转
-  - 三角函数
-  module: numbersAndExpressions
+  - 综合
+  module: functions
   difficulty: 较难
   recommended_for:
+  - L2
+  - L3
+- id: 17
+  type: 解答
+  score: 5
+  question: 计算：$\sqrt{48}-2\cos30^{\circ}+(\pi-1)^{0}-|-2|$．
+  answer: $3\sqrt{3}-1$
+  solution: '解：$\sqrt{48}-2\cos30^{\circ}+(\pi-1)^{0}-|-2|$
+
+    $4\sqrt{3}-2\times\frac{\sqrt{3}}{2}+1-2$
+
+    $=4\sqrt{3}-\sqrt{3}+|-2|$
+
+    $=3\sqrt{3}-1$．'
+  knowledge_points:
+  - 三角函数
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
   - L2
   - L3
 - id: 18
-  type: 填空
-  score: 2
-  question: 已知：，求代数式的值.
-  answer: '1'
-  solution: '解：原式=
+  type: 解答
+  score: 5
+  question: '解不等式组：$\begin{cases}
 
-    =
+    x+2<6 \\
 
-    =
+    \dfrac{5x+1}{3}-1>\dfrac{x-6}{2}
 
-    ∵
+    \end{cases}$．'
+  answer: $-2 \leq x < 4$
+  solution: '$\left\{\begin{array}{l}x+2<6(1)\\ \left|\dfrac{5x+1}{3}-1\right|-\dfrac{x-6}{2}\geqslant 2\end{array}\right.$
 
-    ∴原式==1'
+    解不等式①得，$x<4$
+
+    解不等式②得，$x^{-2}$
+
+    ∴不等式组的解集为：$-2 \leq x < 4$．'
   knowledge_points:
-  - 综合
-  module: numbersAndExpressions
-  difficulty: 较难
+  - 不等式
+  - 不等式组
+  module: equationsAndInequalities
+  difficulty: 基础
   recommended_for:
+  - L0
+  - L1
   - L2
   - L3
 - id: 19
-  type: 填空
-  score: 2
-  question: '下面是小东设计的“过直线外一点作这条直线的平行线”的尺规作图过程．
+  type: 解答
+  score: 5
+  question: 已知$2x - y - 9 = 0$，求代数式$\frac{6x-3y}{4x^{2}-4xy+y^{2}}$的值．
+  answer: $\frac{1}{3}$
+  solution: '解：∵$2x - y - 9 = 0$，
 
-    已知：直线l和直线l外一点P．
+    ∴$2x - y = 9$，
 
-    求作：直线PQ，使得．
+    ∴$\frac{6x-3y}{4x^{2}-4xy+y^{2}}$
 
-    作法：如图，
+    $=\frac{3(2x-y)}{(2x-y)^{2}}$
 
-    ①在直线l上任取两点A，B；
+    $=\frac{3}{2x-y}$
 
-    ②以点P为圆心，AB长为半径画弧，以点B为圆心，AP长为半径画弧，两弧在直线l上方相交于点Q；
+    $= \frac{3}{9}$
 
-    ③作直线PQ．
-
-    直线PQ就是所求作的直线．
-
-    根据小东设计的尺规作图过程，
-
-    （1）使用直尺和圆规，依作法补全图形（保留作图痕迹）；
-
-    （2）完成下面的证明．
-
-    证明：∵，
-
-    ∴四边形PABQ是平行四边形（___________）（填写推理的依据）．
-
-    ∴（______________）（填写推理的依据）．
-
-    即'
-  answer: （1）见解析    （2）两组对边分别相等的四边形是平行四边形；平行四边形的两组对边分别平行．
-  solution: '【小问1详解】
-
-    解：如图所示，直线就是所求作的直线．
-
-    【小问2详解】
-
-    证明：，
-
-    四边形PABQ是平行四边形（两组对边分别相等的四边形是平行四边形）．
-
-    （平行四边形的两组对边分别平行）．
-
-    即．'
+    $=\frac{1}{3}$．'
   knowledge_points:
-  - 平行线
-  - 平行四边形
-  - 尺规作图
-  module: quadrilaterals
-  difficulty: 较难
+  - 综合
+  module: numbersAndExpressions
+  difficulty: 基础
   recommended_for:
+  - L0
+  - L1
   - L2
   - L3
 - id: 20
-  type: 填空
-  score: 2
-  question: '我们知道等腰三角形的“三线合一”定理，即：等腰三角形（前提）的顶角平分线、底边上的中线、底边上的高互相重合．
+  type: 解答
+  score: 5
+  question: '如图，四边形$ABCD$是菱形．延长BA到点E，使得$AE = AB$，延长DA到点F，使得$AF = AD$，连接BD，DE，EF，FB．
 
-    我们也可以逆用“三线合一”定理，证明这个三角形是等腰三角形，即：在三角形中，则这个三角形是等腰三角形（结论）．
+    [图]
 
-    选择下面一种情况，完成证明．
+    （1）求证：四边形$BDEF$是矩形；
 
-    选择情况：_____________．
+    （2）若$\angle ADC = 120^\circ$，$EF = 2$，求BF的长．'
+  answer: （1）见解析（2）$2\sqrt{3}$
+  solution: '【小问1详解】
 
-    证明：'
-  answer: 情况一（或情况二或情况三），证明见解析
-  solution: '解：选择情况一，证明如下：
+    证明：$QAE = AB$，$AF = AD$，
 
-    延长到E，使，连接，如图所示：
+    $\begin{tikzpicture}
 
-    ∵是中点，
+    \fill (0,0) circle (2pt);
 
-    ∴，
+    \fill (-1,-1) circle (2pt);
 
-    在和中，
+    \fill (1,-1) circle (2pt);
 
-    ，
+    \end{tikzpicture}$四边形$BDEF$为平行四边形，
 
-    ∴，
+    $\begin{array}{c}
 
-    ∴，
+    \bullet \\
 
-    ∵平分，
+    \bullet \quad \bullet \\
 
-    ∴，
+    \bullet
 
-    ∴，
+    \end{array}$四边形$ABCD$为菱形，
 
-    ∴；
+    $\therefore AB = AD$，
 
-    选择情况二，证明如下：
+    $\therefore AE=AB=AF=AD$，
 
-    ∵于D，
+    $\therefore BE = DF$，
 
-    ∴为线段的垂直平分线，
+    $\begin{tikzpicture}
 
-    ∴；
+    \fill (0,0) circle (2pt);
 
-    选择情况三，证明如下：
+    \fill (-1,-1) circle (2pt);
 
-    ∴于D，
+    \fill (1,-1) circle (2pt);
 
-    ∴，
+    \end{tikzpicture}$平行四边形$BDEF$是矩形；
 
-    ∵平分，
+    【小问2详解】
 
-    ∴，
+    解：由（1）可知，$AB = AD$，四边形$BDEF$是矩形，
 
-    在和中，
+    $\angle DBF = 90^\circ$，$BD=EF=2$，
 
-    ，
+    $\begin{array}{c}
 
-    ∴，
+    \bullet \\
 
-    ∴．'
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$四边形$ABCD$是菱形，
+
+    $\angle ADB = \frac{1}{2} \angle ADC = 60^\circ$，$AB = AD$，
+
+    $\therefore\triangle ABD$是等边三角形，
+
+    $\therefore AB=AD=BD=2$，
+
+    $\therefore DF = 2AD = 4$，
+
+    $BF = \sqrt{DF^{2} - BD^{2}'
   knowledge_points:
-  - 全等三角形
-  module: triangles
-  difficulty: 较难
+  - 勾股定理
+  - 平行四边形
+  - 矩形
+  - 菱形
+  module: quadrilaterals
+  difficulty: 中档
   recommended_for:
+  - L1
   - L2
   - L3
 - id: 21
-  type: 填空
-  score: 2
-  question: '已知关于的一元二次方程．
+  type: 解答
+  score: 5
+  question: '每当优美的“东方红”乐曲从北京站的钟楼响起时，会唤起很多人的回忆，也引起了同学们的关注．某数学兴趣小组测量北京站钟楼AB的高度，同学们发现在钟楼下方有建筑物遮挡，不能直接到达钟楼底部点B的位置，被遮挡部分的水平距离为BC的长度．通过对示意图的分析讨论，制定了多种测量方案，其中一种方案的测量工具是皮尺和一根直杆．同学们在某两天的正午时刻测量了钟楼顶端A的影子D到点C的距离，以及同一时刻直杆的高度与影长．设AB的长为x米，BC的长为y米．
 
-    （1）不解方程，判断此方程根的情况；
+    [图]
 
-    （2）若是该方程的一个根，求代数式的值．'
-  answer: （1）有两个不相等的实数根 （2）11
+    测量数据（精确到0.1米）如表所示：
+
+    直杆高度
+
+    直杆影长
+
+    CD的长
+
+    第一次
+
+    1.0
+
+    0.6
+
+    15.8
+
+    第二次
+
+    1$[公式]$0
+
+    0.7
+
+    20.1
+
+    （1）由第一次测量数据列出关于x，y的方程是______，由第二次测量数据列出关于x，y的方程是______；
+
+    （2）该小组通过解上述方程组成的方程组，已经求得$y=10$，则钟楼的高度约为______米．'
+  answer: （1）$y = 0.6x - 15.8$，$y = 0.7x - 20.1$ （2）43
   solution: '【小问1详解】
 
-    解：∵Δ=b2-4ac=（-2k）2-4（k2-1）=4k2-4k2+4=4＞0，
+    由同一时刻测量，可得$\frac{AB}{BD}$，
 
-    ∴此一元二次方程有两个不相等的实数根．
+    第一次测量：$\frac{1}{0.6}=\frac{x}{15.8+y}$，化简得，$y = 0.6x - 15.8$，
+
+    第二次测量：$\frac{1}{0.7}=\frac{x}{20.1+y}$，化简得，$y = 0.7x - 20.1$，
+
+    故答案为：$y = 0.6x - 15.8$，$y = 0.7x - 20.1$；
 
     【小问2详解】
 
-    将x=2代入一元二次方程x2-2kx+k2-1=0，
+    对于$y = 0.6x - 15.8$，代入$y=10$，
 
-    得4-4k+k2-1=0，
+    得，$0.6x-15.8=10$，
 
-    整理得k2-4k=-3，
+    解得：$x = 43$，
 
-    ∴-2k2+8k+5
+    $\begin{tikzpicture}
 
-    =-2（k2-4k）+5
+    \fill (0,0) circle (2pt);
 
-    =-2×（-3）+5
+    \fill (-1,-1) circle (2pt);
 
-    =11．'
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$钟楼$AB = 43$米，
+
+    故答案为：43．'
   knowledge_points:
-  - 一元二次方程
-  - 根的判别式
-  module: equationsAndInequalities
-  difficulty: 较难
+  - 相似三角形
+  module: triangles
+  difficulty: 中档
   recommended_for:
+  - L1
   - L2
   - L3
 - id: 22
-  type: 填空
-  score: 2
-  question: '在平面直角坐标系中，一次函数的图象与x轴交于点，且与反比例函数的图象在第四象限的交点为．
+  type: 解答
+  score: 5
+  question: '在平面直角坐标系xOy中，一次函数$y=kx+b$（k为常数，$k \neq 0$）的图象由函数$y=\frac{1}{3}x$的图象平移得到，且经过点$A(3,2)$，与x轴交于点B．
 
-    （1）求b，m的值；
+    （1）求这个一次函数的解析式及点B的坐标；
 
-    （2）点是一次函数图象上的一个动点，且满足，连接OP，结合函数图象，直接写出OP长的取值范围．'
-  answer: （1）b=4，m=-5 （2）2≤OP<
+    （2）当$x > -3$时，对于x的每一个值，函数$y = x + m$的值大于一次函数$y=kx+b$的值，直接写出m的取值范围．'
+  answer: （1）$(-3,0)$ （2）$m^{3}$
   solution: '【小问1详解】
 
-    解：把(4,0)代入y=-x+b，得0=-4+b，
+    $\begin{array}{c}
 
-    解得：b=4，
+    \bullet \\
 
-    ∴一次函数解析式为y=-x+4，
+    \bullet \quad \bullet \\
 
-    把(n,-1)代入y=-x+4，得-1=-n+4，
+    \bullet
 
-    解得：n=5，
+    \end{array}$一次函数$y=kx+b$的图象由函数$y=\frac{1}{3}x$的图象平移得到，且经过点$A(3,2)$，
 
-    把(5,-1)代入得，,
+    $\begin{tikzpicture}
 
-    解得：m=-5；
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\left\{
+
+    \begin{array}{l}
+
+    k = \dfrac{1}{3} \\
+
+    3k + b = 2
+
+    \end{array}
+
+    \right.$，
+
+    解得$\left\{
+
+    \begin{array}{l}
+
+    k = \dfrac{1}{3} \\
+
+    b = 1
+
+    \end{array}
+
+    \right.$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$一次函数的解析式为$y=\frac{1}{3}x+1$；
+
+    在$y=\frac{1}{3}x+1$中，令$y = 0$得$0 = \frac{1}{3}x + 1$，
+
+    解得$x = -3$，
+
+    $\therefore B$的坐标为$(-3,0)$；
 
     【小问2详解】
 
-    解：如图，
+    当$x = -3$时，$y = x + m = -3 + m$，$y = \frac{1}{3}x + 1 = \frac{1}{3} \times (-3) + 1 = 0$，
 
-    ∵，
+    $\begin{array}{c}
 
-    ∴0<xp<5，
+    \bullet \\
 
-    ∴点P在线段BD上运动，
-
-    连接OD，过点O作OC⊥BD于C，
-
-    ∵A（4，0），B（0，4），D（5，-1），
-
-    ∴OA=OB=4，OD=，AB=，
-
-    ∵S△OAB=，
-
-    ∴4×4=OC，
-
-    ∴OC=2，
-
-    ∴OC≤OP<OD，
-
-    ∴2≤OP<，'
+    \bullet \quad \bu'
   knowledge_points:
   - 一次函数
-  - 反比例函数
+  - 平移
   - 不等式
   - 坐标系
-  - 动点
   module: functions
-  difficulty: 较难
+  difficulty: 中档
   recommended_for:
+  - L1
   - L2
   - L3
 - id: 23
-  type: 填空
-  score: 2
-  question: '数学学习小组的同学共同探究体积为330mL圆柱形有盖容器（如图所示）的设计方案．，他们想探究容器表面积与底面半径的关系．
+  type: 解答
+  score: 6
+  question: '某校初三年级两个班要举行韵律操比赛．两个班各选择8名选手，统计了他们的身高（单位：cm），数据整理如下：
 
-    具体研究过程如下，请补充完整：
+    a．1班168
 
-    （1）建立模型：设该容器的表面积为S，底面半径为cm，高为cm，则
+    171   172   174   174   176   177   179
 
-    ，    ①
+    2班168
 
-    ，    ②
+    170   171   174   176   176   178   183
 
-    由①式得，代入②式得
+    b．每班8名选手身高的平均数、中位数、众数如下：
 
-    ．    ③
+    班级
 
-    可知，S是x的函数，自变量x的取值范围是．
+    平均数
 
-    （2）探究函数：
+    中位数
 
-    根据函数解析式③，按照下表中自变量x的值计算（精确到个位），得到了S与x的几组对应值：
+    众数
 
-    在下面平面直角坐标系中，描出了以上表中各对对应值为坐标的点．根据描出的点，画出该函数的图象；
+    1班
 
-    （3）解决问题：根据图表回答，
+    173.875
 
-    ①半径为2.4cm的圆柱形容器比半径为4.4cm的圆柱形容器表面积______．（填“大”或“小”）；
+    174
 
-    ②若容器的表面积为300，容器底面半径约为______cm（精确到0.1）．'
-  answer: ①大；②或
-  solution: '解：①（2）中的表格中数据可知，当时，，当时，，根据函数图象可知，当时，随的增大增大，当时，随的增大而减小，
+    174
 
-    时，,时，
+    2班
 
-    半径为2.4cm的圆柱形容器比半径为4.4cm的圆柱形容器表面积大
+    174.5
 
-    故答案为：大
+    m
 
-    ②根据函数图象可知，当时，或
+    n
 
-    故答案为：或'
+    根据以上信息，回答下列问题：
+
+    （1）写出表中m，n的值；
+
+    （2）如果某班选手的身高的方差越小，则认为该班选手的身高比较整齐．据此推断：在1班和2班的选手中，身高比较整齐的是______班（填“1”或“2”）；
+
+    （3）1班的6位首发选手的身高分别为171，172，174，174，176，177．如果2班已经选出5位首发选手，身高分别为171，174，176，176，178，要使得2班6位首发选手的平均身高不低于1班6位首发选手的平均身高，且方差尽可能小，则第六位选手的身高是______cm．'
+  answer: （1）175、176． （2）1（3）170
+  solution: '【小问1详解】
+
+    2班数据从小到大排列为168、170、171、174、176、176、178、183
+
+    从中可以看出一共八个数，第四个数据为174、第五个数据为176，所以这组数据的中位数为：$(174+176)\div2=175$，故$m = 175$；
+
+    其中176出现的次数最多，所以这组数的众数为176，故$n = 176$；
+
+    故答案为：175、176．
+
+    【小问2详解】
+
+    根据方差的定义可以知道，方差越大，一组数据的波动越大，离散程度越大，稳定性也越小，反之亦然．
+
+    1班的身高分布于$168-179$，2班的身高分布于$168-183$，
+
+    从中可以看出，1班的数据较2班的数据波动较小，更加稳定，所以1班的选手身高比较整齐，
+
+    故答案为：1．
+
+    【小问3详解】
+
+    $(171+172+174+174+176+177)\div6=174$（厘米）
+
+    设2班第六位选手的身高为x厘米，
+
+    则$(171+174+176+176+178+x)\div6=174$，
+
+    $x \quad 169$，
+
+    据此，第六位可选的人员身高为170、183，
+
+    若为170时，2班的身高数据分布于$170-178$，若为183时，2班的身高数据分布于$171-183$，
+
+    从中可以看出当身高为170时的数据波动更小，更加稳定，
+
+    所以第六位选手的身高应该是170厘米，
+
+    故答案为：170．'
   knowledge_points:
-  - 坐标系
-  module: functions
+  - 统计
+  - 平均数
+  - 中位数
+  - 众数
+  - 方差
+  module: statisticsAndProbability
   difficulty: 较难
   recommended_for:
   - L2
   - L3
 - id: 24
-  type: 填空
-  score: 2
-  question: '如图，是的外接圆，AB是的直径，点D为的中点，的切线DE交OC延长线于点E．
+  type: 解答
+  score: 6
+  question: '如图，AB为$\odot\odot$的直径，点C在$\odot\odot$上，$\angle EAC = \angle CAB$，直线$CD \perp AE$于点D，交AB的延长线于点F．
 
-    （1）求证：∥AC；
+    [图]
 
-    （2）连接BD交AC于点P，若，，求DE和BP的长．'
-  answer: （1）见解析    （2），
+    （1）求证：直线CD为$\odot\odot$的切线；
+
+    （2）当$\tan F = \frac{1}{2}$，$CD = 4$时，求BF的长．'
+  answer: （1）见解析（2）$10-2\sqrt{5}$
   solution: '【小问1详解】
 
-    连接OD，
+    证明：连接OC，BC
 
-    ∵点D是中点，
+    [图]
 
-    ∴OD⊥AC，
+    $\therefore OA = OC$，
 
-    ∵DE是⊙O切线，
+    $\angle CAO = \angle ACO$，
 
-    ∴DE⊥OD，
+    $\angle EAC = \angle CAB$，
 
-    ∴DE∥AC
+    $\angle DAC = \angle ACO$，
+
+    $\because OC \parallel AD$，
+
+    $\because CDAD$，
+
+    $\therefore OC \perp DF$，
+
+    $\because OC$是$\odot\odot$的半径，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$直线CD为$\odot\odot$的切线；
 
     【小问2详解】
 
-    设OD与AC交点为F，连接AD，则∠CAD=∠CBD，
+    解：$\begin{array}{c}
 
-    ∵DE∥AC，
+    \bullet \\
 
-    ∴∠E=∠OCA，
+    \bullet \quad \bullet \\
 
-    ∵OA=OC，
+    \bullet
 
-    ∴∠OAC=∠OCA，
+    \end{array}$$\tan F = \frac{1}{2}$，
 
-    ∴∠OAC=∠E，
+    $\begin{tikzpicture}
 
-    ∵AB是⊙O的直径，
+    \fill (0,0) circle (2pt);
 
-    ∴∠ACB=90°，
+    \fill (-1,-1) circle (2pt);
 
-    ∴∠ACB=∠EDO=90°，
+    \fill (1,-1) circle (2pt);
 
-    ∴△ABC∽△EOD，
+    \end{tikzpicture}$$\frac{OC}{CF}=\frac{1}{2}$，
 
-    ∴，
+    设$OC = x$，则$CF = 2x$，$AO = OB = x$，
 
-    ∵，AC=8，
+    $OC = \sqrt{OC^{2} + CP^{2}} = \sqrt{5}x$，
 
-    ∴AB=10，
+    $\because OC \parallel AD$，
 
-    ∴，OD=5，
+    $\triangle AFD \sim \triangle OFC$，
 
-    ∴
+    $\begin{tikzpicture}
 
-    ∴，
-
-    ∵，
-
-    ∴DF=OD-OF=5-3=2，
-
-    ∵，
-
-    ∴，
-
-    ∴，
-
-    ∴，
-
-    ∴'
+    \fill (0,'
   knowledge_points:
   - 平行线
-  - 圆周角
-  - 垂径定理
   - 切线
-  - 弦
   - 相似三角形
   - 勾股定理
-  - 三角函数
-  - 锐角三角函数
   module: triangles
   difficulty: 较难
   recommended_for:
   - L2
   - L3
 - id: 25
-  type: 填空
-  score: 2
-  question: '某校举行“云端好声音”线上歌唱比赛活动丰富同学们的居家生活．由1至4号的专业评委和5至10号的大众评委进行评分．
+  type: 解答
+  score: 6
+  question: '小明是一位羽毛球爱好者，在一次单打训练中，小明对“挑球”这种击球方式进行路线分析，球被击出后的飞行路线可以看作是抛物线的一部分．建立如图所示的平面直角坐标系xOy，击球点P到球网AB的水平距离$OB = 1.5\,\text{m}$．
 
-    例如：A节目演出后各个评委所给分数如下：
+    小明在同一击球点练习两次，球均过网，且落在界内．
 
-    评分方案如下：
+    第一次练习时，小明击出的羽毛球的飞行高度y（单位：m）与水平距离x（单位：m）近似满足函数关系$y=-0.2(x-2.5)^{2}+2.35$．
 
-    方案一：取各位评委所给分数的平均数，则该节目的得分为
+    第二次练习时，小明击出的羽毛球的飞行高度y（单位：m）与水平距离x（单位：m）的几组数据如下：
 
-    ．
+    水平距离$x/m$
 
-    方案二：从评委所给的分数中先去掉一个最高分和一个最低分，再取其余八位评委所给分数的平均数，则该节目的得分为．
+    0
 
-    回答下列问题：
+    1
 
-    （1）小乐认为“方案二”比“方案一”更合理，你_________小乐的说法吗（填“同意”或“不同意”）？理由是___________；
+    2
 
-    （2）小乐认为评分既要突出专业评审的权威性又要尊重大众评审的喜爱度，因此设计了“方案三”；先计算1至4号评委所给分数的平均数，5至10号评委所给分数的平均数，再根据比赛的需求设置相应的权重（表示专业评委的权重，表示大众评委的权重，且）
+    3
 
-    如：当时，则．该节目的得分为
+    4
 
-    I．当按照“方案三”中评分时，A节目的得分为__________；
+    飞行高度$y/m$
 
-    Ⅱ．关于评分方案，下列说法正确的有_________．
+    1.1
 
-    ①当时，A节目按照“方案三”和“方案一”评分结果相同；
+    1.6
 
-    ②当时，说明“方案三”评分更注重节目的专业性；
+    1.9
 
-    ③当时，A节目按照“方案三”评分的结果比“方案一”和“方案二”都高．'
-  answer: （1）同意，评委的评分常带有主观性，去掉最高分和最低分，能够使评分更具公平性；（2）I．7.86；Ⅱ．②③
-  solution: '解：（1）同意小乐的说法，理由是：评委的评分常带有主观性，去掉最高分和最低分，能够使评分更具公平性．
+    2
 
-    故答案是：同意，评委的评分常带有主观性，去掉最高分和最低分，能够使评分更具公平性；
+    1.9
 
-    （2）I．∵，，，，
+    根据上述信息，回答下列问题：
 
-    ∴，
+    [图]
 
-    故答案是：7.86；
+    （1）直接写出击球点的高度；
 
-    Ⅱ．①当时，A节目按照“方案三”的评分结果=，与“方案一”的评分结果不一样，故原说法错误；
+    （2）求小明第二次练习时，羽毛球的飞行高度y与水平距离x满足的函数关系式；
 
-    ②∵当时，A节目按照“方案三”的评分结果=，与“方案一”的评分结果一样，
-
-    ∴当时，说明“方案三”评分更注重节目的专业性，故原说法正确；
-
-    ③当时，A节目按照“方案三”评分的结果=，比“方案一”和“方案二”都高，故原说法正确；
-
-    综上所述：正确的是：②③．
-
-    故答案是：②③．'
-  knowledge_points:
-  - 平均数
-  module: statisticsAndProbability
-  difficulty: 较难
-  recommended_for:
-  - L2
-  - L3
-- id: 26
-  type: 填空
-  score: 2
-  question: '在平面直角坐标系中，已知抛物线．
-
-    （1）求抛物线的顶点坐标（用含t的代数式表示）；
-
-    （2）点在抛物线上，其中．
-
-    ①若的最小值是，求的最大值；
-
-    ②若对于，都有，直接写出t的取值范围．'
-  answer: （1） （2）①时，的最大值为2；②或
+    （3）设第一次、第二次练习时，羽毛球落地点与球网的距离分别为$d_{1}$，$d_{2}$，则$d_{1}$______$d_{2}$（填“$\gt$”，“$\gt$”或“$=$”）．'
+  answer: （1）$1.1m$ （2）$y=-0.1(x-3)^{2}+2$ （3）$\gt$
   solution: '【小问1详解】
 
-    解：（1）∵，
+    当$x = 0$时，$y=-0.2(0-2.5)^{2}+2.35=1.1$，
 
-    ∴抛物线的顶点坐标为．
+    故击球点的高度为$1.1m$；
 
     【小问2详解】
 
-    ①∵，
+    由表格信息可知，第二次练习时，抛物线的顶点为$(3,2)$，
 
-    ∴抛物线开口向上
+    设抛物线的解析式为：$y = a(x - 3)^2 + 2$，
 
-    ∴当时，y有最小值．
+    过点$(4,1.9)$，
 
-    ∵，
+    $1.9=a(4-3)^{2}+2$，
 
-    ∴当时，有最小值．
+    解得$a = -0.1$，
 
-    ∴．
+    $\begin{tikzpicture}
 
-    ∴．
+    \fill (0,0) circle (2pt);
 
-    ∴．
+    \fill (-1,-1) circle (2pt);
 
-    ∵，
+    \fill (1,-1) circle (2pt);
 
-    ∴结合函数图象，当时，的最大值为2．
+    \end{tikzpicture}$抛物线的解析式为：$y=-0.1(x-3)^{2}+2$；
 
-    ②根据题意可得，抛物线的对称轴为，
+    【小问3详解】
 
-    设到对称轴的距离为，
+    $\begin{array}{c}
 
-    ，
+    \bullet \\
 
-    即
+    \bullet \quad \bullet \\
 
-    即到对称轴距离最大2，
+    \bullet
 
-    1）当点在的右侧，且，
+    \end{array}$第一次练习时，当$y = 0$时，$0=-0.2(x-2.5)^{2}+2.35$．
 
-    ，到的距离为
+    解得$x_{1}=\sqrt{11.75}+2.5$，$x_{3}=-\sqrt{11.75}+2.5<0$（舍去），
 
-    ，抛物线开口向上，
+    $\sqrt{11.75+2.5-1.5}=\sqrt{11.75+1}$，
 
-    离对称轴越远则，函数值越大，
+    $\begin{array}{c}
 
-    解得
+    \bullet \\
 
-    2）当点在的左侧，且，
+    \bullet \quad \bullet \\
 
-    同理可得，到的距离为
+    \bullet
 
-    解得
+    \end{array}$第二次练习时，当$y = 0$时，$0=-0.1(x-3)^{2}+2$．
 
-    综上所述：或．'
+    解得$x_{1}=2\sqrt{5}+3$，$x_{2}=-2\sqrt{3}+3<0$（舍去），
+
+    $d_{2}=2\sqrt{3}+3-1.5=2\sqrt{3}+1.5$，
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad '
   knowledge_points:
   - 二次函数
   - 坐标系
@@ -900,190 +1288,205 @@ questions:
   recommended_for:
   - L2
   - L3
-- id: 27
-  type: 填空
-  score: 2
-  question: '已知：在中，，．
+- id: 26
+  type: 解答
+  score: 6
+  question: '在平面直角坐标系xOy中，$M(x_1,y_1)$，$N(x_{2},y_{2})$是抛物线$y=ax^{2}+bx+1(a>0)$上任意两点，设抛物线的对称轴为直线$x = t$．
 
-    （1）如图，将线段绕点逆时针旋转得到，连接、，的平分线交于点，连接．
+    [图]
 
-    求证：；
+    （1）若点$(2,1)$在该抛物线上，求t的值；
 
-    求证：；
-
-    （2）在图中，若将线段绕点顺时针旋转得到，连结、，连结，请补全图形，若，求．'
-  answer: （1）见解析；见解析； （2）图见解析，．
+    （2）当$t \leq 0$时，对于$x_{2}>2$，都有$y_1 < y_2$，求$x_{1}$的取值范围．'
+  answer: （1）$t = 1$ （2）$-2 \leq x_1 \leq 2$
   solution: '【小问1详解】
 
-    证明：如图：
+    解：∵抛物线$y=ax^{2}+bx+1(a>0)$经过点$(2,1)$，
 
-    ∵将线段绕点逆时针旋转得到，
+    ∴$4a + 2b + 1 = 1$，
 
-    ∴，，
+    ∴$b = -2a$，
 
-    ∴，且，
+    ∴抛物线对称轴为直线$x = -\frac{b}{2a} = 1$，
 
-    ∴，
-
-    ∵，，平分，
-
-    ∴，，
-
-    ∵，
-
-    ∴，
-
-    ∴，，
-
-    ∴，
-
-    ∴，
-
-    ∵，
-
-    ∴；
-
-    过点作于点，如图：
-
-    由知：，
-
-    ∵，，
-
-    ∴，
-
-    ∵，，
-
-    ∴，
-
-    ∵，
-
-    ∴，
-
-    ∴，
-
-    ∴；
+    ∴$t = 1$；
 
     【小问2详解】
 
-    补全图形如下：
+    解：∵$a > 0$，
 
-    以为顶点，为一边作，设交于，
+    ∴抛物线开口向上，
 
-    ∵，，
+    ∴当$x > t$时，y随x增大而增大，当$x < t$时，y随x增大而减小，且离对称轴越远函数值越大；
 
-    ∴，
+    当$0 \leq x_{1} \leq 2$时，
 
-    ∴，
+    ∵$1 \leq x_{1} < x_{2}$，
 
-    ∵将线段绕点顺时针旋转得到，
+    ∴此时满足$y_1 < y_2$；
 
-    ∴，，
+    当$-2 \leq x_{1} \leq 0$时，
 
-    ∴，，
+    ∵$t \leq 0$，
 
-    ∴，，
+    ∴点M到对称轴的距离小于点N到对称轴的距离，
 
-    ∴，
+    ∴此时满足$y_1 < y_2$；
 
-    ∴，
+    当$x_{1}>2$时，一定会有$x_2$的值满足$x_{1}>x_{2}$，即此时$y_{1}>y_{2}$，不符合题意；
 
-    ∵，，
+    当$x_{1}<-2$时，若$t = 0$，且$x_{1}=-x_{2}$时，此时$y_{1}=y_{2}$，不符合题意；
 
-    ∴，
+    综上所述，$-2 \leq x_1 \leq 2$；'
+  knowledge_points:
+  - 二次函数
+  - 坐标系
+  module: functions
+  difficulty: 压轴
+  recommended_for:
+  - L3
+- id: 27
+  type: 解答
+  score: 7
+  question: '在$Rt\triangle ABC$中，$\angle BAC = 90^\circ$，$AB = AC$，点D，E是BC边上的点，$DE=\frac{1}{2}BC$，连接AD．过点D作AD的垂线，过点E作BC的垂线，两垂线交于点F．连接AF交BC于点G．
 
-    ∴，
+    [图]
 
-    ∴是的垂直平分线，
+    （1）如图1，当点D与点B重合时，直接写出$\angle DAF$与$\angle BAC$之间的数量关系；
 
-    ∴，
+    （2）如图2，当点D与点B不重合（点D在点E$[公式]$左侧）时，
 
-    ∴，
+    ①补全图形；
 
-    ∴，，
+    ②$\angle DAF$与$\angle BAC$在（1）中的数量关系是否仍然成立？若成立，加以证明；若不成立，请说明理由．
 
-    ∴，
+    （3）在（2）的条件下，直接用等式表示线段$BD, DG, CG$之间的数量关系．'
+  answer: （1）$\angle BAF = \frac{1}{2} \angle BAC$ （2）①见解析；②$\angle DAF = \frac{1}{2} \angle BAC$仍然成立，证明见解析 （3）$DG^{2}=CG^{2}+BD^{1}$
+  solution: '【小问1详解】
 
-    ∵，，
+    解：∵在$Rt\triangle ABC$中，$\angle BAC = 90^\circ$，$AB = AC$，点D与点B重合，$DE=\frac{1}{2}BC$，
 
-    ∴是等边三角形，
+    ∴$AE\perp BC,\ \angle BAE=\frac{1}{2}\angle BAC$，
 
-    ∴，
+    ∵$EF \perp BC$，
 
-    ∵，，
+    ∴$A, E, F$三点共线，
 
-    ∴，
+    ∴$\angle DAF = \frac{1}{2} \angle BAC$；
 
-    ∴，
+    【小问2详解】
 
-    ∴，
+    解：①如图所示，即为所求；
 
-    ∵，
+    [图]
 
-    ∴，
+    ②$\angle DAF = \frac{1}{2} \angle BAC$仍然成立，证明如下：
 
-    ∴的长为．'
+    如图所示，过点A作$AH \perp BC$于H，
+
+    ∴$\angle AHD = 90^\circ$，
+
+    ∵$AD\perp DF,\ EF\perp CD$，
+
+    ∴$\angle AHD=\angle ADF=\angle DEF=90^{\circ}$，
+
+    ∴$\angle HAD + \angle HDA = 90^\circ = \angle HDA + \angle EDF$，
+
+    ∴$\angle HAD=\angle EDF$，
+
+    ∵在$Rt\triangle ABC$中，$\angle BAC = 90^\circ$，$AB = AC$，
+
+    ∴$AH = \frac{1}{2} BC$，
+
+    ∵$DE=\frac{1}{2}BC$，
+
+    ∴$AH = DE$，
+
+    ∴$\triangle ADH \cong \triangle DPE (ASA)$，
+
+    ∴$AD = DF$，
+
+    ∴$\angle DAF = 45^\circ$，
+
+    ∴$\angle DAF = \frac{1}{2} \angle BAC$，
+
+    [图]【小问3详解】
+
+    解：如图所示，将$\triangle ABD$绕点A逆时针旋转得到$\triangle A'
   knowledge_points:
   - 全等三角形
+  - 勾股定理
   - 旋转
   module: triangles
-  difficulty: 较难
+  difficulty: 压轴
   recommended_for:
-  - L2
   - L3
 - id: 28
-  type: 填空
-  score: 2
-  question: '在平面直角坐标系中，的半径为1．对于线段给出如下定义：若线段与有两个交点，，且，则称线段是的“倍弦线”．
+  type: 解答
+  score: 7
+  question: '在平面直角坐标系xOy中，已知线段$\overline{PQ}$和直线$\ell_{1}$，$l_2$，线段$\overline{PQ}$关于直线$\ell_{1}$，$l_2$$[公式]$“垂点距离”定义如下：过点P作$PM \perp l_{1}$于点M，过点Q作$QN \perp l_{2}$于点N，连接MN，称MN的长为线段$\overline{PQ}$关于直线$\ell_{1}$和$l_2$的“垂点距离”，记作d．
 
-    （1）如图，点的横、纵坐标都是整数，在线段，，中，的“倍弦线”是_____；
+    [图]
 
-    （2）的“倍弦线”与直线交于点，求点纵坐标的取值范围；
+    （1）已知点$P(2,1)$，$Q(1,2)$，则线段$\overline{PQ}$关于x轴和y轴的“垂点距离”d为______；
 
-    （3）若的“倍弦线”过点，直线与线段有公共点，直接写出的取值范围．'
-  answer: （1）、； （2）； （3）．
+    （2）如图1，线段$\overline{PQ}$在直线$y=-x+3$上运动（点P的横坐标大于点Q的横坐标），若$PQ=\sqrt{2}$，则线段$\overline{PQ}$关于x轴和y轴的“垂点距离”d的最小值为______；
+
+    （3）如图2，已知点$A\left(0,2\sqrt{3}\right)$，$\odot A$的半径为1，直线$y = -\frac{\sqrt{3}}{3}x + b$与$\odot A$交于P，Q两点（点P的横坐标大于点Q的横坐标），直接写出线段$\overline{PQ}$关于x轴和直线$y = -\sqrt{3}x$的“垂点距离”d的取值范围．'
+  answer: （1）$2\sqrt{2}$ （2）$2\sqrt{2}$ （3）$\frac{\sqrt{21}}{2}<d\leq\sqrt{21}$
   solution: '【小问1详解】
 
-    解：如图1，
+    解：过点P作$PM \perp x$轴于点M，过点Q作$\overline{QN} \perp y$轴于点N，连接MN，
 
-    ，，
+    [图]
 
-    ，是的“倍弦线”，
+    ∵$P(2,1)$，$Q(1,2)$，
 
-    与不相交，，
+    ∴$M(2,0)$，$N(0,2)$，
 
-    和不是的“倍弦线”，
+    ∴$d = MN = \sqrt{(2 - 0)^2 + (0 - 2)^2} = 2\sqrt{2}$，
 
-    故答案为：、；
+    故答案为：$2\sqrt{2}$，
 
     【小问2详解】
 
-    如图2，
+    解：设点$M(m,0)$，$N(0,n)$，
 
-    以为圆心，3 为半径画圆交直线于和，
+    ∵点P，Q在直线$y=-x+3$上，$PM \perp x$轴，$\overline{QN} \perp y$轴，
 
-    ，
+    ∴$P(m,-m+3)$，
 
-    ；
+    将$y = n$代入$y=-x+3$，得：$n = -x + 3$，解得：$x=3-\pi$，
+
+    ∴$Q(3-a,n)$，
+
+    ∴$PQ=\sqrt{(m-3+n)^{2}+(-m+3-n)^{2}}=\sqrt{2}$，整理得：$n=4-m$，
+
+    ∴$N(0,4-m)$，
+
+    ∴$d=MN=\sqrt{(m-0)^{2}+(0-4+m)^{2}}=\sqrt{2(m-2)^{2}+8}$，
+
+    ∵$2(m-2)^{2}0$，
+
+    ∴$d=MN=\sqrt{2(m-2)^{2}+8}=\sqrt{0+8}=2\sqrt{2}$，
+
+    故答案为：$2\sqrt{2}$，
 
     【小问3详解】
 
-    如图3，
+    解：设直线QP与x轴交于点B，与直线NO交于点D，延长NQ、MP交于点C，作直线AC与x轴交于点F，连接OC，作OC中点E，连接EM，EN，AP，AQ，
 
-    以为圆心，2为半径画圆，直线与相切，
+    [图]
 
-    此时，
+    ∵直线NO的解析式为：$y = -\sqrt{3}x$，
 
-    以为圆心，1为半径作，直线与线切，
-
-    此时，
-
-    ．'
+    ∴$\tan\angle NOF=\left|\frac{y_{x}}{x_{x}}\right|=\left|\frac{-\sqrt{3}x_{x}}{x_{x}}\right|=\sqrt{3}$，$\angle NOF=60^\'
   knowledge_points:
+  - 圆周角
   - 弦
-  - 勾股定理
+  - 三角函数
   - 坐标系
-  module: circles
-  difficulty: 较难
+  module: triangles
+  difficulty: 压轴
   recommended_for:
-  - L2
   - L3
