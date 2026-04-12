@@ -15,19 +15,32 @@ const DIFFICULTY_COLORS: Record<string, string> = {
 
 const DIFFICULTIES = ["基础", "基础", "基础", "中档", "中档", "中档", "中档", "较难", "较难", "较难"];
 
-const LEVEL_COLORS: Record<string, string> = {
-  L0: "bg-red-100 text-red-700 border-red-300",
-  L1: "bg-orange-100 text-orange-700 border-orange-300",
-  L2: "bg-green-100 text-green-700 border-green-300",
-  L3: "bg-emerald-100 text-emerald-700 border-emerald-300",
+// 通俗化水平描述（家长看得懂）
+const LEVEL_LABEL: Record<string, string> = {
+  L0: "基础薄弱",
+  L1: "需要巩固",
+  L2: "掌握不错",
+  L3: "掌握很好",
 };
 
-const LEVEL_NAMES: Record<string, string> = {
-  L0: "基础薄弱",
-  L1: "概念模糊",
-  L2: "基本熟练",
-  L3: "熟练精通",
+// 各模块中考占分估算（北京中考数学 100 分）
+const MODULE_EXAM_WEIGHT: Record<string, { min: number; max: number }> = {
+  numbersAndExpressions: { min: 10, max: 15 },
+  equationsAndInequalities: { min: 10, max: 15 },
+  functions: { min: 15, max: 20 },
+  triangles: { min: 12, max: 18 },
+  circles: { min: 8, max: 12 },
+  statisticsAndProbability: { min: 8, max: 10 },
+  geometryComprehensive: { min: 12, max: 14 },
 };
+
+// 按水平估算提分空间
+function estimateGain(level: string, weight: { min: number; max: number }): { min: number; max: number } {
+  const range = weight.max - weight.min;
+  if (level === "L0") return { min: Math.round(weight.min * 0.5), max: Math.round(weight.max * 0.7) };
+  if (level === "L1") return { min: Math.round(range * 0.3), max: Math.round(range * 0.6 + 3) };
+  return { min: 0, max: 0 };
+}
 
 export default function AssessmentPage() {
   const [stage, setStage] = useState<"intro" | "testing" | "result">("intro");
@@ -218,14 +231,28 @@ export default function AssessmentPage() {
       return order[a.level] - order[b.level];
     });
 
-    const weakModules = sortedModules.filter((m) => m.level === "L0" || m.level === "L1");
-    const strongModules = sortedModules.filter((m) => m.level === "L2" || m.level === "L3");
+    // 三组分类：需重点补 / 需巩固 / 掌握不错
+    const criticalModules = sortedModules.filter((m) => m.level === "L0");
+    const needWorkModules = sortedModules.filter((m) => m.level === "L1");
+    const goodModules = sortedModules.filter((m) => m.level === "L2" || m.level === "L3");
+
+    // 计算总提分预期
+    const totalGain = [...criticalModules, ...needWorkModules].reduce((sum, m) => {
+      const w = MODULE_EXAM_WEIGHT[m.moduleId];
+      const g = estimateGain(m.level, w);
+      return { min: sum.min + g.min, max: sum.max + g.max };
+    }, { min: 0, max: 0 });
+
+    // 薄弱模块的中考总占分
+    const weakWeight = [...criticalModules, ...needWorkModules].reduce((sum, m) => {
+      const w = MODULE_EXAM_WEIGHT[m.moduleId];
+      return { min: sum.min + w.min, max: sum.max + w.max };
+    }, { min: 0, max: 0 });
 
     // 构造跳转到 /plan 的 URL 参数
     const planParams = new URLSearchParams();
     planParams.set("score", String(r.estimatedScore));
     planParams.set("fromAssessment", "1");
-    // 把 moduleAssessments 编码为 JSON
     planParams.set("modules", JSON.stringify(r.moduleAssessments));
 
     return (
@@ -239,92 +266,173 @@ export default function AssessmentPage() {
         {/* 总览 */}
         <div className="text-center mb-6">
           <div className="text-5xl mb-3">📊</div>
-          <h1 className="text-2xl font-bold text-gray-900 mb-2">测评结果</h1>
+          <h1 className="text-2xl font-bold text-gray-900 mb-2">
+            测评完成！以下是孩子的数学情况
+          </h1>
           <p className="text-gray-500">
-            答对 {r.totalCorrect}/{r.totalQuestions} 题 · 预估分数 {r.estimatedScore} 分
+            答对 {r.totalCorrect}/{r.totalQuestions} 题 · 预估数学 {r.estimatedScore} 分
+          </p>
+          <p className="text-xs text-amber-600 mt-2 bg-amber-50 inline-block px-3 py-1 rounded-full">
+            本次测评仅覆盖数学，其他科目规划基于成绩估算
           </p>
         </div>
 
-        {/* 模块水平卡片 */}
-        <div className="bg-white rounded-xl border border-gray-200 p-6 mb-4">
-          <h3 className="font-semibold text-gray-800 mb-4">7 模块水平诊断</h3>
-          <div className="space-y-3">
-            {sortedModules.map((m) => (
-              <div key={m.moduleId} className="flex items-center justify-between">
-                <span className="text-sm text-gray-700 flex-1">{m.moduleName}</span>
-                <div className="flex items-center gap-2">
-                  <span
-                    className={`px-2 py-0.5 rounded text-xs font-medium border ${LEVEL_COLORS[m.level]}`}
-                  >
-                    {m.level} {LEVEL_NAMES[m.level]}
-                  </span>
-                  {m.confidence === "low" && (
-                    <span className="text-xs text-gray-400" title="该模块题量较少，精度有限">
-                      *
-                    </span>
-                  )}
-                </div>
-              </div>
-            ))}
-          </div>
-          <p className="text-xs text-gray-400 mt-3">* 表示该模块仅 1 题，精度有限</p>
-        </div>
-
-        {/* 薄弱点详情 */}
-        {weakModules.length > 0 && (
-          <div className="bg-red-50 rounded-xl border border-red-100 p-6 mb-4">
-            <h3 className="font-semibold text-red-800 mb-3">🔍 检测到的具体弱点</h3>
-            <div className="space-y-2">
-              {weakModules.map((m) =>
-                m.weaknesses.map((w, i) => (
-                  <div key={`${m.moduleId}-${i}`} className="flex items-start gap-2 text-sm">
-                    <span className="text-red-400 mt-0.5">•</span>
-                    <div>
-                      <span className="text-red-700 font-medium">{m.moduleName}：</span>
-                      <span className="text-red-600">{w}</span>
+        {/* 🔴 需要重点补的模块 */}
+        {criticalModules.length > 0 && (
+          <div className="bg-red-50 rounded-xl border border-red-200 p-5 mb-4">
+            <h3 className="font-semibold text-red-800 mb-1">
+              🔴 需要重点补的
+            </h3>
+            <p className="text-xs text-red-500 mb-4">
+              这些模块中考共占约 {criticalModules.reduce((s, m) => s + MODULE_EXAM_WEIGHT[m.moduleId].min, 0)}-{criticalModules.reduce((s, m) => s + MODULE_EXAM_WEIGHT[m.moduleId].max, 0)} 分
+            </p>
+            <div className="space-y-4">
+              {criticalModules.map((m) => {
+                const w = MODULE_EXAM_WEIGHT[m.moduleId];
+                const g = estimateGain(m.level, w);
+                return (
+                  <div key={m.moduleId} className="bg-white/70 rounded-lg p-4">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="font-medium text-gray-800">{m.moduleName}</span>
+                      <span className="text-xs px-2 py-0.5 rounded-full bg-red-100 text-red-700">
+                        {LEVEL_LABEL[m.level]}
+                      </span>
                     </div>
+                    {m.weaknesses.length > 0 && (
+                      <p className="text-sm text-gray-600 mb-2">
+                        情况：{m.weaknesses[0]}
+                      </p>
+                    )}
+                    <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-gray-500">
+                      <span>中考占比：约 {w.min}-{w.max} 分</span>
+                      <span className="text-green-600 font-medium">
+                        补上预计多拿 {g.min}-{g.max} 分
+                      </span>
+                    </div>
+                    {m.subTopics.length > 0 && (
+                      <p className="text-xs text-gray-400 mt-1">
+                        诊断依据：测评中 {m.subTopics.map(t => t.name).join("、")} 相关题目表现
+                      </p>
+                    )}
                   </div>
-                ))
-              )}
+                );
+              })}
             </div>
           </div>
         )}
 
-        {/* 优势模块 */}
-        {strongModules.length > 0 && (
-          <div className="bg-green-50 rounded-xl border border-green-100 p-6 mb-4">
-            <h3 className="font-semibold text-green-800 mb-3">✅ 优势模块</h3>
+        {/* 🟡 需要巩固的模块 */}
+        {needWorkModules.length > 0 && (
+          <div className="bg-amber-50 rounded-xl border border-amber-200 p-5 mb-4">
+            <h3 className="font-semibold text-amber-800 mb-1">
+              🟡 需要巩固的
+            </h3>
+            <p className="text-xs text-amber-500 mb-4">
+              基本掌握但有薄弱点，中考共占约 {needWorkModules.reduce((s, m) => s + MODULE_EXAM_WEIGHT[m.moduleId].min, 0)}-{needWorkModules.reduce((s, m) => s + MODULE_EXAM_WEIGHT[m.moduleId].max, 0)} 分
+            </p>
+            <div className="space-y-4">
+              {needWorkModules.map((m) => {
+                const w = MODULE_EXAM_WEIGHT[m.moduleId];
+                const g = estimateGain(m.level, w);
+                return (
+                  <div key={m.moduleId} className="bg-white/70 rounded-lg p-4">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="font-medium text-gray-800">{m.moduleName}</span>
+                      <span className="text-xs px-2 py-0.5 rounded-full bg-amber-100 text-amber-700">
+                        {LEVEL_LABEL[m.level]}
+                      </span>
+                    </div>
+                    {m.weaknesses.length > 0 && (
+                      <p className="text-sm text-gray-600 mb-2">
+                        情况：{m.weaknesses[0]}
+                      </p>
+                    )}
+                    <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-gray-500">
+                      <span>中考占比：约 {w.min}-{w.max} 分</span>
+                      {g.max > 0 && (
+                        <span className="text-green-600 font-medium">
+                          巩固后可多拿 {g.min}-{g.max} 分
+                        </span>
+                      )}
+                    </div>
+                    {m.subTopics.length > 0 && (
+                      <p className="text-xs text-gray-400 mt-1">
+                        诊断依据：测评中 {m.subTopics.map(t => t.name).join("、")} 相关题目表现
+                      </p>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        )}
+
+        {/* 🟢 掌握不错的模块 */}
+        {goodModules.length > 0 && (
+          <div className="bg-green-50 rounded-xl border border-green-100 p-5 mb-4">
+            <h3 className="font-semibold text-green-800 mb-3">🟢 掌握不错的</h3>
             <div className="flex flex-wrap gap-2">
-              {strongModules.map((m) => (
+              {goodModules.map((m) => (
                 <span
                   key={m.moduleId}
-                  className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm"
+                  className="px-3 py-1.5 bg-green-100 text-green-700 rounded-full text-sm"
                 >
-                  {m.moduleName} ({m.level})
+                  {m.moduleName} · {LEVEL_LABEL[m.level]}
                 </span>
               ))}
             </div>
+            <p className="text-xs text-green-600 mt-3">
+              这些模块保持练习即可，不需要额外投入
+            </p>
           </div>
         )}
 
+        {/* 总结 + 结果承诺 */}
+        <div className="bg-gradient-to-r from-indigo-50 to-blue-50 rounded-xl border border-indigo-100 p-5 mb-4">
+          <h3 className="font-semibold text-indigo-800 mb-3">💡 总结与建议</h3>
+          {(criticalModules.length > 0 || needWorkModules.length > 0) ? (
+            <>
+              <p className="text-sm text-gray-700 mb-2">
+                核心策略：先补
+                <span className="font-medium text-red-600">
+                  {[...criticalModules, ...needWorkModules].map(m => m.moduleName).join("和")}
+                </span>
+                ，这些模块中考共占约 {weakWeight.min}-{weakWeight.max} 分，投入产出比最高。
+              </p>
+              <div className="bg-white/70 rounded-lg p-3 mt-3">
+                <p className="text-sm font-medium text-indigo-700">
+                  按方案执行 4 周，数学预计提升 {totalGain.min}-{totalGain.max} 分
+                </p>
+                <p className="text-xs text-gray-500 mt-1">
+                  前提：每天执行 45 分钟 · 基于 10 题测评诊断，做更多练习后预估会更准确
+                </p>
+              </div>
+            </>
+          ) : (
+            <p className="text-sm text-gray-700">
+              各模块掌握情况良好！建议保持练习节奏，关注压轴题和综合题的训练。
+            </p>
+          )}
+        </div>
+
         {/* CTA */}
         <div className="bg-white rounded-xl border border-gray-200 p-5 mb-4">
-          <h3 className="font-semibold text-gray-800 mb-2">基于测评结果，获取精准学习计划</h3>
+          <h3 className="font-semibold text-gray-800 mb-2">下一步：获取专属提分方案</h3>
           <p className="text-sm text-gray-500 mb-4">
-            测评数据已就绪，AI 将根据你的实际水平（而非自评）生成个性化计划
+            测评数据已就绪，AI 将根据实际水平（而非自评）生成个性化方案
           </p>
           <div className="flex gap-3">
             <Link
               href={`/plan?${planParams.toString()}`}
-              className="flex-1 text-center px-4 py-3 bg-green-600 text-white rounded-xl font-medium hover:bg-green-700 transition-colors"
+              className="flex-1 text-center px-4 py-3 bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-xl font-medium hover:from-green-700 hover:to-emerald-700 transition-colors"
             >
-              📊 生成全面学习计划
+              生成我的提分方案
             </Link>
             <Link
               href="/drill"
               className="flex-1 text-center px-4 py-3 bg-blue-600 text-white rounded-xl font-medium hover:bg-blue-700 transition-colors"
             >
-              🎯 先练最弱模块
+              先练最弱模块
             </Link>
           </div>
         </div>
