@@ -1,0 +1,1010 @@
+# ============================================================
+# 2023年北京东城区中考数学一模试卷 — 逐题分析
+# ============================================================
+# 数据来源：knowledge-original/精品解析：2023年北京市东城区广渠门中学中考一检数学试卷（解析版）.docx
+# 自动生成，部分数学公式可能显示不全（docx公式对象无法完整提取）
+# 满分：100分  时长：120分钟
+
+year: 2023
+district: 东城区
+exam_type: 一模
+subject: 数学
+full_score: 100
+duration_minutes: 120
+total_questions: 27
+structure: 8选择(16分) + 8填空(16分) + 12解答(68分)
+questions:
+- id: 1
+  type: 选择
+  score: 2
+  question: "如图是某几何体的三视图，该几何体是（　　）\nA. 长方体\tB. 三棱柱\tC. 圆柱\tD. 圆锥"
+  answer: C
+  solution: '解：∵主视图和左视图为长方形
+
+    ∴几何体不是三棱柱和圆锥
+
+    ∵俯视图为圆
+
+    ∴几何体不是长方体
+
+    ∴该几何体为圆柱
+
+    故选C．'
+  knowledge_points:
+  - 综合
+  module: circles
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 2
+  type: 选择
+  score: 2
+  question: "国家统计局发布2021年国内生产总值达到1140000亿元，比上年增长8.1%．将1140000用科学记数法表示应为（    ）\nA. \tB. \tC. \tD."
+  answer: C
+  solution: '解：的绝对值大于表示成的形式，
+
+    ∵，，
+
+    ∴表示成，
+
+    故选C．'
+  knowledge_points:
+  - 统计
+  - 科学记数法
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 3
+  type: 选择
+  score: 2
+  question: "如图，将一块直角三角板的直角顶点放在直尺的一边上．若，则的度数是（　　）\nA. \tB. \tC. \tD."
+  answer: B
+  solution: '解：如图，
+
+    ∵，直尺两边互相平行，
+
+    ∴，
+
+    ∴．
+
+    故选：B．'
+  knowledge_points:
+  - 平行线
+  module: functions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 4
+  type: 选择
+  score: 2
+  question: "实数a，b在数轴上对应的点的位置如图所示，下列结论中正确的是（    ）\nA. \tB. \tC. \tD."
+  answer: C
+  solution: 'A、∵，∴，，故此选项错误；
+
+    B、∵，∴，故此选项错误；
+
+    C、∵，∴，故此选项正确；
+
+    D、∵，∴，故此选项错误．
+
+    故选：C．'
+  knowledge_points:
+  - 绝对值
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 5
+  type: 选择
+  score: 2
+  question: "五边形的内角和是（    ）\nA. \tB. \tC. \tD."
+  answer: B
+  solution: '解：由题意知，五边形的内角和为，
+
+    故选：B．'
+  knowledge_points:
+  - 综合
+  module: triangles
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 6
+  type: 选择
+  score: 2
+  question: "不透明的袋子中有3个小球，其中有1个红球，1个黄球，1个绿球，除颜色外3个小球无其他差别，从中随机摸出一个小球，放回并摇匀，再从中随机摸出一个小球，那么两次摸出的小球都是红球的概率是（　　）\nA. \tB. \tC. \tD."
+  answer: D
+  solution: '解：列表如下，
+
+    由表可知，共有9种等可能结果，其中满足条件的两次都是红球的结果只有1种，
+
+    ∴P（两次都红球）=，
+
+    故选：D．'
+  knowledge_points:
+  - 概率
+  - 树状图
+  - 列表法
+  module: statisticsAndProbability
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 7
+  type: 选择
+  score: 2
+  question: "已知a、b表示下表第一行中两个相邻的数，且，那么a的值是（    ）\nA. 3.5\tB. 3.6\tC. 3.7\tD. 3.8"
+  answer: B
+  solution: 'a、b表示下表第一行中两个相邻的数，且
+
+    由表得
+
+    故选：B．'
+  knowledge_points:
+  - 综合
+  module: numbersAndExpressions
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 8
+  type: 选择
+  score: 2
+  question: "用绳子围成周长为的矩形，记矩形的一边长为，它的邻边长为，矩形的面积为．当在一定范围内变化时，和都随的变化而变化，则与，与满足的函数关系分别是（    ）\nA. 二次函数关系，一次函数关系\tB. 正比例函数关系，二次函数关系\nC. 二次函数关系，正比例函数关系\tD. 一次函数关系，二次函数关系"
+  answer: D
+  solution: '解：由题意可得：，
+
+    即：，
+
+    ∴y与x是一次函数关系，S与x是二次函数关系，
+
+    故选：D．'
+  knowledge_points:
+  - 一次函数
+  - 二次函数
+  - 正比例函数
+  - 矩形
+  module: functions
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 9
+  type: 填空
+  score: 2
+  question: 若式子在实数范围内有意义，则x的取值范围是_____．
+  answer: ''
+  solution: '根据二次根式被开方数必须是非负数的条件，
+
+    要使在实数范围内有意义，必须，
+
+    ∴．
+
+    故答案为：'
+  knowledge_points:
+  - 综合
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 10
+  type: 填空
+  score: 2
+  question: 分解因式：______．
+  answer: ''
+  solution: 故答案为：．
+  knowledge_points:
+  - 因式分解
+  - 方差
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 11
+  type: 填空
+  score: 2
+  question: 方程的解为___________．
+  answer: x=5
+  solution: '解：
+
+    方程的两边同乘x(x+5),得：2x=x+5, 解得：x=5, 经检验：把x=5代入x(x+5)=50≠0.
+
+    故答案为：x=5.'
+  knowledge_points:
+  - 分式方程
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 12
+  type: 填空
+  score: 2
+  question: 在平面直角坐标系中，直线与双曲线交于点和点B，则点B的坐标为______．
+  answer: ''
+  solution: '解：将代入得
+
+    解得
+
+    ∴
+
+    将代入得
+
+    解得
+
+    ∴
+
+    联立直线与双曲线得
+
+    ∴
+
+    整理得
+
+    解得或
+
+    ∴方程组的解为或
+
+    ∴
+
+    故答案为：．'
+  knowledge_points:
+  - 反比例函数
+  - 正比例函数
+  - 坐标系
+  module: functions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 13
+  type: 填空
+  score: 2
+  question: 如图，点B，E，C，F在一条直线上，BC＝EF，∠B＝∠DEF．只需添加一个条件即可证明△ABC≌△DEF，这个条件可以是 _____（写出一个即可）．
+  answer: AB=DE（答案不唯一）
+  solution: '解：添加条件为AB=DE，
+
+    在△ABC与△DEF中，
+
+    △ABC≌△DEF（SAS），
+
+    故答案为AB=DE（答案不唯一）．'
+  knowledge_points:
+  - 全等三角形
+  module: triangles
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 14
+  type: 填空
+  score: 2
+  question: 如图，点A，B，C是上的三点．若，，则的度数为______．
+  answer: '##度'
+  solution: '解：∵，
+
+    ∴，
+
+    ∵，
+
+    ∴，
+
+    故答案为：．'
+  knowledge_points:
+  - 圆周角
+  module: circles
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 15
+  type: 填空
+  score: 2
+  question: 如图是甲、乙两名射击运动员10次射击训练成绩的统计图，如果甲、乙这10次射击成绩的方差为s甲2，s乙2，那么s甲2___s乙2．（填“＞”，“＝”或“＜”）
+  answer: ＞
+  solution: '解：由图中知，甲的成绩为7，10，7，9，10，9，8，10，8，7，
+
+    乙的成绩为9，8，10，9，9，8，9，7，7，9，
+
+    ，
+
+    ，
+
+    甲的方差，
+
+    乙的方差，
+
+    ，
+
+    故答案为：．'
+  knowledge_points:
+  - 统计
+  - 方差
+  module: statisticsAndProbability
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 16
+  type: 填空
+  score: 2
+  question: 如图是某剧场第一排座位分布图：甲、乙、丙、丁四人购票，所购票分别为2，3，4，5．每人选座购票时，只购买第一排的座位相邻的票，同时使自己所选的座位之和最小．如果按“甲、乙、丙、丁”的先后顺序购票，那么甲购买1，2号座位的票，乙购买3，5，7号座位的票，丙选座购票后，丁无法购买到第一排座位的票．若丙第一购票，要使其他三人都能购买到第一排座位的票，写出一种满足条件的购票的先后顺序______．
+  answer: 丙，丁，甲，乙
+  solution: '解：丙先选择：1，2，3，4．
+
+    丁选：5，7，9，11，13．
+
+    甲选：6，8．
+
+    乙选：10，12，14．
+
+    ∴顺序为丙，丁，甲，乙．
+
+    （答案不唯一）'
+  knowledge_points:
+  - 综合
+  module: numbersAndExpressions
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 17
+  type: 解答
+  score: 5
+  question: （第17题，详见原卷）
+  answer: ''
+  solution: '解：，
+
+    解不等式①得：，
+
+    解不等式②得：，
+
+    ∴此不等式组的解集为．'
+  knowledge_points:
+  - 不等式
+  - 不等式组
+  module: equationsAndInequalities
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 19
+  type: 解答
+  score: 5
+  question: 已知，求代数式的值．
+  answer: '2'
+  solution: '解：
+
+    原式'
+  knowledge_points:
+  - 方差
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 20
+  type: 解答
+  score: 5
+  question: '已知：线段AB．
+
+    求作：，使得，．
+
+    作法：
+
+    ①分别以点A和点B为圆心，AB长为半径作弧，两弧交于点D；
+
+    ②连接BD，在BD的延长线上截取；
+
+    ③连接AC．
+
+    则为所求作的三角形．
+
+    （1）使用直尺和圆规，依作法补全图形（保留作图痕迹）；
+
+    （2）完成下面的证明．
+
+    证明：连接AD．
+
+    ∵，
+
+    ∴为等边三角形（              ）．（填推理的依据）
+
+    ∴．
+
+    ∵，
+
+    ∴．
+
+    ∴__________（              ）．（填推理的依据）
+
+    ∴．
+
+    ∴．
+
+    在中，
+
+    ∴．'
+  answer: （1）见解析    （2）等边三角形的定义；；三角形中等边对等角
+  solution: '【小问1详解】
+
+    解：如图：
+
+    作法：
+
+    ①分别以点A和点B为圆心，AB长为半径作弧，两弧交于点D；
+
+    ②连接BD，在BD的延长线上截取；
+
+    ③连接AC．
+
+    则为所求作的三角形．
+
+    【小问2详解】
+
+    证明：如图：连接AD．
+
+    ∵，
+
+    ∴为等边三角形（等边三角形的定义）．
+
+    ∴．
+
+    ∵，
+
+    ∴．
+
+    ∴（三角形中等边对等角）．
+
+    ．
+
+    ∴．
+
+    在中，
+
+    ∴．'
+  knowledge_points:
+  - 综合
+  module: triangles
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 21
+  type: 解答
+  score: 5
+  question: '已知关于x的一元二次方程有两个不相等的实数根．
+
+    （1）求k的取值范围；
+
+    （2）若k为正整数，且方程的两个根均为整数，求k的值及方程的两个根．'
+  answer: （1） （2）k=2，方程的两个根为，
+  solution: '【小问1详解】
+
+    解：关于x的一元二次方程有两个不相等的实数根
+
+    解得
+
+    故k的取值范围为
+
+    【小问2详解】
+
+    解：且k为正整数
+
+    k的值只能是1或2
+
+    当k=1时，方程为
+
+    解得
+
+    方程的两个根均为整数
+
+    k=1不合题意，舍去
+
+    当k=2时，方程为
+
+    解得，
+
+    方程的两个根均为整数，符合题意
+
+    故k=2，方程的两个根为，'
+  knowledge_points:
+  - 一元二次方程
+  - 根的判别式
+  - 不等式
+  module: equationsAndInequalities
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 22
+  type: 解答
+  score: 5
+  question: '如图，在四边形ABCD中，，，垂足为O，过点D作BD的垂线交BC的延长线于点E．
+
+    （1）求证：四边形ACED是平行四边形；
+
+    （2）若AC=4，AD=2，，求BC的长．'
+  answer: （1）证明见解析 （2）BC的长为
+  solution: '【小问1详解】
+
+    证明：，，
+
+    ，
+
+    ，
+
+    在四边形ABCD中，，
+
+    四边形ACED是平行四边形；
+
+    【小问2详解】
+
+    解：在中，，设，，
+
+    在中，，，，
+
+    ，
+
+    ，即，解得（舍弃）或，
+
+    ．'
+  knowledge_points:
+  - 平行线
+  - 相似三角形
+  - 平行四边形
+  - 三角函数
+  - 锐角三角函数
+  module: triangles
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 23
+  type: 解答
+  score: 6
+  question: '在平面直角坐标系中，一次函数的图象平行于直线，且经过点．
+
+    （1）求这个一次函数的表达式；
+
+    （2）当时，对于x的每一个值，一次函数的值大于一次函数的值，直接写出m的取值范围．'
+  answer: （1） （2）
+  solution: '【小问1详解】
+
+    解：∵一次函数 的图象与函数的图象平行，
+
+    ∴，
+
+    ∵一次函数的图象过点A（2，2），
+
+    ∴，
+
+    ∴，
+
+    ∴这个一次函数的表达式为；
+
+    【小问2详解】
+
+    对于一次函数，当时，有，可知其经过点（0，-1）．
+
+    当时，对于x的每一个值，一次函数的值大于一次函数的值，即一次函数图象在函数的图像上方，由下图可知：
+
+    临界值为当时，两条直线都过点A（2，2），
+
+    将点A（2，2）代入到函数中，
+
+    可得 ，解得，
+
+    结合函数图象及性质可知，当，时，一次函数的值大于一次函数的值，
+
+    又∵如下图，当时，，根据一次函数的图象可知，不符合题意．
+
+    ∴m的取值范围为：．'
+  knowledge_points:
+  - 一次函数
+  - 平移
+  - 坐标系
+  module: functions
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 24
+  type: 解答
+  score: 6
+  question: '如图，AB是⊙O的直径，弦CD⊥AB于点E，点F在弧BC上，AF与CD交于点G，点H在DC的延长线上，且HG=HF，延长HF交AB的延长线于点M．
+
+    （1）求证：HF是⊙O的切线；
+
+    （2）若，BM=1，求AF的长．'
+  answer: （1）见解析    （2）
+  solution: '【小问1详解】
+
+    证明：连接OF，
+
+    ∵CD⊥AB，
+
+    ∴∠AEG=90°，
+
+    ∴∠A+∠AGE=90°，
+
+    ∵HG=HF，
+
+    ∴∠HFG=∠HGF，
+
+    ∵∠HGF=∠AGE，
+
+    ∴∠HFG =∠AGE，
+
+    ∵OA=OF，
+
+    ∴∠A=∠OFA，
+
+    ∴∠OFA+∠HFG=90°，即∠OFH=90°，
+
+    ∴HF是⊙O的切线；
+
+    【小问2详解】
+
+    解：如图，连接BF，
+
+    由（1）得：∠OFM=90°，
+
+    ∴∠BFO+∠BFM=90°，
+
+    ∵AB是⊙O的直径，
+
+    ∴∠AFB=90°，
+
+    ∴∠A+∠ABF=90°，
+
+    ∵OB=OF，
+
+    ∴∠ABF=∠BFO，
+
+    ∴∠BFM=∠A，
+
+    ∵∠M=∠M，
+
+    ∴△BFM∽△FAM，
+
+    ∴，
+
+    ∵，
+
+    ∴，
+
+    ∵BM=1，OB=OF，
+
+    ∴，
+
+    解得：OF=4，
+
+    ∴OM=5，AM=9，AB=8，
+
+    ∴FM=，
+
+    ∴，
+
+    ∴，
+
+    ∵，
+
+    ∴，
+
+    解得： ．'
+  knowledge_points:
+  - 切线
+  - 弦
+  - 相似三角形
+  - 勾股定理
+  - 三角函数
+  - 锐角三角函数
+  module: triangles
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 25
+  type: 解答
+  score: 6
+  question: '如图1是某条公路的一个单向隧道的横断面．经测量，两侧墙AD和与路面AB垂直，隧道内侧宽AB＝4米．为了确保隧道的安全通行，工程人员在路面AB上取点E，测量点E到墙面AD的距离和到隧道顶面的距离EF．设米，米．通过取点、测量，工程人员得到了x与y的几组值，如下表：
+
+    （1）隧道顶面到路面AB的最大高度为______米；
+
+    （2）请你帮助工程人员建立平面直角坐标系，描出上表中各对对应值为坐标的点，画出可以表示隧道顶面的图象．
+
+    （3）今有宽为2.4米，高为3米的货车准备在隧道中间通过（如图2）．根据隧道通行标准，其车厢最高点到隧道顶面的距离应大于0.5米．结合所画图象，请判断该货车是否安全通过：______（填写“是”或“否”）．'
+  answer: （1）3.99 （2）见解析    （3）是
+  solution: '【小问1详解】
+
+    解：根据二次函数的对称性可知：当时，有最大值为3.99；
+
+    故答案为：3.99；
+
+    【小问2详解】
+
+    解：如图，建立直角坐标系，
+
+    【小问3详解】
+
+    解：将代入，得：
+
+    ，解得：，
+
+    抛物线表达式为；
+
+    在中，令，得：
+
+    ，
+
+    车厢最高点到隧道顶面的距离大于0.5米，
+
+    该货车能安全通过；
+
+    故答案为：是．'
+  knowledge_points:
+  - 二次函数
+  - 坐标系
+  module: geometryComprehensive
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 26
+  type: 解答
+  score: 6
+  question: '平面直角坐标系中，点，在抛物线上．
+
+    （1）求抛物线的对称轴（用含的式子表示）；
+
+    （2）若存在，使得，求的取值范围．'
+  answer: （1） （2）
+  solution: '【小问1详解】
+
+    解：抛物线的对称轴为：，
+
+    【小问2详解】
+
+    解：∵点，在抛物线，
+
+    当时，，
+
+    当时， ，
+
+    当时，，
+
+    ∵存在，使得，
+
+    ∴或，
+
+    解得：或，
+
+    ∴.'
+  knowledge_points:
+  - 二次函数
+  - 不等式
+  - 坐标系
+  module: functions
+  difficulty: 压轴
+  recommended_for:
+  - L3
+- id: 27
+  type: 解答
+  score: 7
+  question: '如图，在中，，，点D在边上，将射线绕点B逆时针旋转得到射线，过点D作于E，延长到F，使，连接．
+
+    （1）依题意，补全图形，判断线段与的位置关系与数量关系，并证明；
+
+    （2）若H为线段的中点，连接，请用等式表示线段与之间的数量关系，并证明．'
+  answer: （1）图见解析，，且；理由见解析 （2），理由见解析
+  solution: '【小问1详解】
+
+    解：补全图形，如图，，且；理由如下，
+
+    ∵将射线绕点B逆时针旋转得到射线，过点D作于E，
+
+    ∴是等腰直角三角形，
+
+    ∴，
+
+    设与相交于点G，
+
+    ∵，，
+
+    ∴，
+
+    ∴，
+
+    又∵，，
+
+    ∴，
+
+    ∴，，
+
+    ∴，
+
+    ∴，且；
+
+    【小问2详解】
+
+    解：．理由见解析，
+
+    延长到点T，使，连接、、、，
+
+    ∵H为线段的中点，，，
+
+    ∴，
+
+    ∴，，
+
+    ∵，
+
+    ∴，
+
+    ∴，
+
+    ∴，
+
+    ∵，，
+
+    ∴，
+
+    又∵，，
+
+    ∴，
+
+    ∴，
+
+    ∴，
+
+    由（1）得是等腰直角三角形，
+
+    ∴，
+
+    ∴．'
+  knowledge_points:
+  - 全等三角形
+  - 旋转
+  module: triangles
+  difficulty: 压轴
+  recommended_for:
+  - L3
+- id: 28
+  type: 解答
+  score: 7
+  question: '在平面直角坐标系中，的半径为2．对于直线和线段BC，给出如下定义：若将线段沿直线l翻折可以得到的弦（，分别是B，C的对应点），则称线段是以直线l为轴的的“关联线段”．例如：在图1中，线段BC的是以直线l为轴的的“关联线段”．
+
+    （1）如图2，点，，，，，的横、纵坐标都是整数．在线段，，中，以直线l为轴的的“关联线段”是______；
+
+    （2）是边长为a的等边三角形，点，若是以直线l为轴的的“关联线段”，求a的值；
+
+    （3）如果经过点的直线上存在以直线l为轴的的“关联线段”，直接写出这条直线与y轴交点的纵坐标m的取值范围．'
+  answer: （1），， （2）或 （3）或
+  solution: '【小问1详解】
+
+    解：根据定义作关于的对称点，若线段是的弦，则再次对称（依题意定义）即为的弦，如图，是的弦，与关于轴对称，则是以直线l为轴的的“关联线段”，
+
+    故答案为：；
+
+    【小问2详解】
+
+    解：如图2-1中，过点A作弦，连接，
+
+    当都是等边三角形时，过点O作于点J，连接．
+
+    ∵，
+
+    ∴y轴是的对称轴，
+
+    ∴，
+
+    ∵，
+
+    ∴，
+
+    ∴，，
+
+    ∵，
+
+    ∴，
+
+    ∴，，
+
+    ∴当是以直线l为轴的的“关联线段”时，的边长为或，
+
+    ∴a的值为或；
+
+    【小问3详解】
+
+    解：如图，过点作的切线，与交于点，取的中点,连接，
+
+    ,，
+
+    ，
+
+    的半径为2，
+
+    ，
+
+    是与的交点，
+
+    ，
+
+    是等边三角形，
+
+    同理也是等边三角形，
+
+    ，
+
+    ，
+
+    是等边三角形，
+
+    ，
+
+    ，
+
+    ，
+
+    ，
+
+    ，
+
+    设直线的解析式为，的解析式为，
+
+    ，
+
+    解得，
+
+    直线的解析式为，的解析式为
+
+    根据定义可知，经过点的直线上存在以直线l为轴的的“关联线段”，则直线与相交，
+
+    或．'
+  knowledge_points:
+  - 切线
+  - 弦
+  - 勾股定理
+  - 轴对称
+  - 坐标系
+  module: triangles
+  difficulty: 压轴
+  recommended_for:
+  - L3

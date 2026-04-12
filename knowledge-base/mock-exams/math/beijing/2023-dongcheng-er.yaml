@@ -1,0 +1,919 @@
+# ============================================================
+# 2023年北京东城区中考数学二模试卷 — 逐题分析
+# ============================================================
+# 数据来源：knowledge-original/精品解析：北京市东城区广渠门中学2022~2023学年中考二模数学试卷（4月）（解析版）.docx
+# 自动生成，部分数学公式可能显示不全（docx公式对象无法完整提取）
+# 满分：100分  时长：120分钟
+
+year: 2023
+district: 东城区
+exam_type: 二模
+subject: 数学
+full_score: 100
+duration_minutes: 120
+total_questions: 28
+structure: 8选择(16分) + 8填空(16分) + 12解答(68分)
+questions:
+- id: 1
+  type: 选择
+  score: 2
+  question: "一个几何体的三视图如右图所示，该几何体是（    ）\nA. \tB. \tC. \tD."
+  answer: A
+  solution: '解：由于俯视图为圆形可得为球、圆柱、圆锥．主视图和左视图为三角形可得此几何体为圆锥．
+
+    故选：A．'
+  knowledge_points:
+  - 综合
+  module: circles
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 2
+  type: 选择
+  score: 2
+  question: "我国首次火星探测任务被命名为“天问一号”2021年3月26日，国家航天局发布两幅由天问一号探测器拍摄的南、北半球火星侧身影像．该影像是探测器飞行至距离火星11000公里处利用中分辨率相机拍摄的．将11000用科学记数法表示应为（    ）\nA. \tB. \tC. \tD."
+  answer: B
+  solution: '解：将11000用科学记数法表示为1.1×104．
+
+    故选：B．'
+  knowledge_points:
+  - 科学记数法
+  - 绝对值
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 3
+  type: 选择
+  score: 2
+  question: "实数在数轴上的对应点的位置如图所示，下列结论中正确的是（    ）\nA. \tB. \tC. \tD."
+  answer: D
+  solution: '解：点a在2的右边，故a>2，故A选项错误；
+
+    点b在1的右边，故b>1，故B选项错误；
+
+    b在a的右边，故b>a，故C选项错误；
+
+    由数轴得：2<a<1.5，则1.5<a<2，1<b<1.5，则，故D选项正确，
+
+    故选：D．'
+  knowledge_points:
+  - 综合
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 4
+  type: 选择
+  score: 2
+  question: "不透明的袋子中装有红、绿小球各一个，除颜色外两个小球无其他差别，从中随机摸出一个小球，放回并摇匀，再从中随机摸出一个小球，那么第一次摸到红球、第二次摸到绿球的概率是（    ）\nA. \tB. \tC. \tD."
+  answer: A
+  solution: '解：画树状图得：
+
+    ∵共有4种等可能的结果，第一次摸到红球，第二次摸到绿球有1种情况，
+
+    ∴第一次摸到红球，第二次摸到绿球的概率为，
+
+    故选：A．'
+  knowledge_points:
+  - 概率
+  - 树状图
+  - 列表法
+  module: statisticsAndProbability
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 5
+  type: 选择
+  score: 2
+  question: "已知关于的方程有两个不相等实数根，则可以取以下哪个数值（   ）\nA. 3\tB. 2\tC. 1\tD. 0"
+  answer: D
+  solution: '解：，
+
+    要使方程有两不相等实数根，则有，
+
+    ；
+
+    ∴m可以取0，
+
+    故选D．'
+  knowledge_points:
+  - 一元二次方程
+  - 不等式
+  module: equationsAndInequalities
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 6
+  type: 选择
+  score: 2
+  question: "下列冬奥会会徽的部分图案中，既是轴对称图形也是中心对称图形的是（    ）\nA \tB. \tC. \tD."
+  answer: B
+  solution: '解：A选项既不是轴对称图形也不是中心对称图形，故不符合题意；
+
+    B选项既是轴对称图形也是中心对称图形，故符合题意；
+
+    C选项既不是轴对称图形也不是中心对称图形，故不符合题意；
+
+    D选项既不是轴对称图形也不是中心对称图形，故不符合题意；
+
+    故选B．'
+  knowledge_points:
+  - 中心对称图形
+  - 轴对称图形
+  - 轴对称
+  module: geometryComprehensive
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 7
+  type: 选择
+  score: 2
+  question: "在平面直角坐标系中，直线与双曲线交于，两点，则的值为（   ）\nA. 2\tB. \tC. 4\tD."
+  answer: D
+  solution: '解：联立两个函数表达式得：，即，
+
+    则，
+
+    点在直线上，则，
+
+    故，
+
+    故选D．'
+  knowledge_points:
+  - 反比例函数
+  - 正比例函数
+  - 坐标系
+  module: functions
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 8
+  type: 选择
+  score: 2
+  question: "如图所示是我国现存最完整的古代计时工具——元代铜壶滴漏，该滴漏从上至下通过多级滴漏，使得上层“壶”中的水可以匀速滴入最下层的圆柱形“壶”中，“壶”中漂浮的带有刻度的木箭随水面匀速缓缓上移，对准标尺就可以读出时辰，如果用表示时间，用表示木箭上升的高度，那么下列图象能表示与的函数关系的是（    ）\nA. \tB.\nC. \tD."
+  answer: A
+  solution: '解：∵最下层的“壶”是圆柱形，
+
+    ∴最下层的“壶”中水面上升的高度，即“壶”中漂浮的带有刻度的木箭上升的高度y与时间x是正比例关系，即y与x的函数图象是正比例函数图象，
+
+    故选：A．'
+  knowledge_points:
+  - 综合
+  module: functions
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 9
+  type: 填空
+  score: 2
+  question: 若在实数范围内有意义，则的取值范围是______．
+  answer: '##'
+  solution: '解：在实数范围内有意义，
+
+    ，
+
+    ，
+
+    故答案为：．'
+  knowledge_points:
+  - 不等式
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 10
+  type: 填空
+  score: 2
+  question: 分解因式：__．
+  answer: ．
+  solution: '原式，
+
+    故答案为．'
+  knowledge_points:
+  - 方差
+  module: statisticsAndProbability
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 11
+  type: 填空
+  score: 2
+  question: 如图所示，用量角器度量，可以读出的度数为________．
+  answer: ''
+  solution: '解：由图形所示，的度数为，
+
+    故答案为：．'
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 12
+  type: 填空
+  score: 2
+  question: 若代数式的值为0，则的值为________．
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 13
+  type: 填空
+  score: 2
+  question: '某中学随机地调查了50名学生，了解他们一周在校的体育锻炼时间，结果如下表所示：
+
+    则这50名学生这一周在校的平均体育锻炼时间是________．若该中学共有2000名学生，请你估计这所中学一周在校的体育锻炼时间达到8小时的同学有________名．'
+  answer: ①. 小时    ②. 200
+  solution: '解：．
+
+    ∴这50名学生这一周在校的平均体育锻炼时间是小时，
+
+    ，
+
+    ∴这所中学一周在校的体育锻炼时间达到8小时的同学有200名，
+
+    故答案为：小时，200．'
+  knowledge_points:
+  - 平均数
+  module: statisticsAndProbability
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 14
+  type: 填空
+  score: 2
+  question: 如图，小明同学用自制的直角三角形纸板DEF测量树的高度AB，他调整自己的位置，设法使斜边DF保持水平，并且边DE与点B在同一直线上．已知纸板的两条直角边DE=40cm，EF=20cm，测得边DF离地面的高度AC=1.5 m，CD=8 m，则树高AB=____m．
+  answer: '5.5'
+  solution: '在△DEF和△DBC中，，
+
+    ∴△DEF∽△DBC，
+
+    ∴，
+
+    40cm=0.4m，20cm=0.2m，
+
+    即，
+
+    解得BC=4，
+
+    ∵AC=1.5m，
+
+    ∴AB=AC+BC=1.5+4=5.5m
+
+    故答案为：5.5m'
+  knowledge_points:
+  - 相似三角形
+  module: triangles
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 15
+  type: 填空
+  score: 2
+  question: 如图，在中，利用尺规在射线，射线上分别截取，，使；分别以D，E为圆心、以大于的长为半径作弧，两弧在内交于点；作射线，在射线上取一点，过点作射线，若，为射线上一动点，则的最小值为________，判断的依据是________________________________．
+  answer: ①. 1    ②. 垂线段最短
+  solution: '解：如图，过点作于．
+
+    由作图可知，平分，
+
+    ，，
+
+    ，
+
+    根据垂线段最短可知，的最小值为1，
+
+    故答案为：1，垂线段最短．'
+  knowledge_points:
+  - 动点
+  module: triangles
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 16
+  type: 填空
+  score: 2
+  question: 一个正方体的六个面分别标有数字1、2、3、4、5、6，从三个不同的方向看到的情形如图1所示，图2为这个正方体的侧面展开图，则图中的表示的数字是________．
+  answer: '3'
+  solution: '解：由图1可知，与1相邻的面的数字有2、3、4、6，
+
+    的对面数字是5，
+
+    与4相邻的面的数字有1、3、5、6，
+
+    的对面数字是2，
+
+    的对面数字是6，
+
+    由图2可知：6的对面数字是x，
+
+    ∴x的值为3，
+
+    故答案为：3．'
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 17
+  type: 解答
+  score: 5
+  question: （第17题，详见原卷）
+  answer: ''
+  solution: '解：
+
+    ．'
+  knowledge_points:
+  - 三角函数
+  - 绝对值
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 18
+  type: 解答
+  score: 5
+  question: 解不等式组：
+  answer: ''
+  solution: '解：
+
+    解不等式①，得；
+
+    解不等式②，得 ；
+
+    ∴不等式组的解集为：；'
+  knowledge_points:
+  - 不等式
+  - 不等式组
+  module: equationsAndInequalities
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 19
+  type: 解答
+  score: 5
+  question: 先化简，再求值：，求代数式的值．
+  answer: ，．
+  solution: '解：原式
+
+    ∵，
+
+    ∴，
+
+    原式．'
+  knowledge_points:
+  - 方差
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 20
+  type: 解答
+  score: 5
+  question: 下面是证明定理“等腰三角形两底角相等”的三种添加辅助线的方法，选择其中一种，完成证明．
+  answer: 见解析
+  solution: '解：方法一，
+
+    证明：如图，取中点D，连接．则，
+
+    ∵，，
+
+    ∴，
+
+    ∴；
+
+    方法二：
+
+    证明：如图，过A作垂线段，交于D．
+
+    ∵，，
+
+    ∴，
+
+    ∴；
+
+    方法三：
+
+    证明：如图，作的角平分线，交于点D．
+
+    ∴，
+
+    ∵，，
+
+    ∴，
+
+    ∴．'
+  knowledge_points:
+  - 全等三角形
+  module: triangles
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 21
+  type: 解答
+  score: 5
+  question: '如图，的对角线，相交于点，，．
+
+    （1）求证：四边形是平行四边形；
+
+    （2）当是________（填“矩形”或“菱形”）时，四边形是菱形，并写出证明过程．'
+  answer: （1）见解析    （2）矩形，证明见解析
+  solution: '【小问1详解】
+
+    解：在中，，
+
+    ∵，
+
+    ∴，
+
+    ∵，
+
+    ∴四边形是平行四边形；
+
+    【小问2详解】
+
+    矩形，
+
+    当是矩形时，，
+
+    ∴，
+
+    ∴四边形菱形．'
+  knowledge_points:
+  - 平行四边形
+  - 矩形
+  - 菱形
+  module: quadrilaterals
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 22
+  type: 解答
+  score: 5
+  question: '在平面直角坐标系中，函数的图象经过点，，且与轴交于点．
+
+    （1）求该函数的解析式及点的坐标；
+
+    （2）当时，对于的每一个值，函数的值大于函数的值，直接写出的取值范围．'
+  answer: （1）， （2）
+  solution: '小问1详解】
+
+    解：将，代入函数解析式得，
+
+    ，解得，
+
+    ∴函数的解析式为：，
+
+    当时，得，
+
+    ∴点A的坐标为．
+
+    【小问2详解】
+
+    由题意得，
+
+    ，即，
+
+    又由，得，
+
+    解得，
+
+    ∴的取值范围为．'
+  knowledge_points:
+  - 不等式
+  - 坐标系
+  module: equationsAndInequalities
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 23
+  type: 解答
+  score: 6
+  question: '电影《长津湖之水门桥》于2022年春节期间在全国公映，该片讲述了伟大的中国人民志愿军抗美援朝保家卫国的故事，为了解该影片的上座串，小丽统计了某影城1月31日至2月20日共三周该影片的观影人数（单位：人），相关信息如下：
+
+    a．1月31日至2月20日观影人数统计图：
+
+    b．1月31日至2月20日观影人频数统计图：
+
+    c．1月31日至2月20日观影人数在的数据为
+
+    91，92，93，93，95，98，99
+
+    根据以上信息，回答下列问题：
+
+    （1）2月14日观影人数在这21天中从高到低排名第________；
+
+    （2）这21天观影人数的中位数是________；
+
+    （3）记第一周（1月31日至2月6日）观影人数的方差为，第二周（2月7日至2月13日）观影人数的方差为，第三周（2月14日至2月20日）观影人数的方差为，直接写出，，的大小关系．'
+  answer: （1）7；    （2）91； （3）
+  solution: '小问1详解】
+
+    2月14日观影人数是99人，在这21天中从高到低排名第7；
+
+    故答案为：7；
+
+    【小问2详解】
+
+    ∵抽取的日期天数为奇数，
+
+    ∴中位数为最中间的一个数；
+
+    ∵30≤x＜60，60≤x＜90，90≤x＜120，120≤x＜150，150≤x＜180的数据分别为：2，8，7，3，1；
+
+    ∴中位数是第11个数，在90≤x＜120这组数据：91，92，93，93，95，98，99，
+
+    里面的第一个数据，
+
+    ∴中位数为91，
+
+    故答案为：91；
+
+    【小问3详解】
+
+    ∵方差体现了某组数据的波动情况，波动越大，方差越大，
+
+    从图中数据波动幅度可知，第一周（1月31日至2月6日）观影人数数据波动最大，第二周（2月7日至2月13日）观影人数数据波动最小，
+
+    ∴；'
+  knowledge_points:
+  - 统计
+  - 中位数
+  - 方差
+  module: statisticsAndProbability
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 24
+  type: 解答
+  score: 6
+  question: '如图，的半径与弦垂直于点，连接．
+
+    （1）求证：；
+
+    （2）分别延长、交于点E、F，连接，交于，过点作，交延长线于点．若是的中点，求证：是的切线．'
+  answer: （1）见解析    （2）见解析
+  solution: '【小问1详解】
+
+    连接，
+
+    ∵
+
+    ∴
+
+    ∵
+
+    ∴
+
+    ∵、
+
+    ∴
+
+    【小问2详解】
+
+    连接，
+
+    ∵点是的中点，且位于上
+
+    ∴于点G
+
+    ∴
+
+    ∵
+
+    ∴
+
+    ∵
+
+    ∴
+
+    ∵
+
+    ∴
+
+    ∴
+
+    ∴
+
+    ∵
+
+    ∴即
+
+    ∴是的切线．'
+  knowledge_points:
+  - 平行线
+  - 圆周角
+  - 垂径定理
+  - 切线
+  - 弦
+  module: circles
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 25
+  type: 解答
+  score: 6
+  question: '为了在校运动会的推铅球项目中取得更好的成绩，小石积极训练，铅球被推出后的飞行路线可以看作是抛物线的一部分．建立如图所示的平面直角坐标系，从铅球出手（点A处）到落地的过程中，铅球的竖直高度y（单位：m）与水平距离x（单位：m）近似满足函数关系．
+
+    小石进行了两次训练．
+
+    （1）第一次训练时，铅球的水平距离x与竖直高度y的几组数据如下：
+
+    根据上述数据，求出满足的函数关系，并直接写出小石此次训练的成绩（铅球落地点的水平距离）；
+
+    （2）第二次训练时，小石推出的铅球的竖直高度y与水平距离x近似满足函数关系．记小石第一次训练的成绩为，第二次训练的成绩为，则___________（填“>”，“=”或“＜”）．'
+  answer: （1）；小石此次训练的成绩m （2）
+  solution: '【小问1详解】
+
+    解：根据表格中的数据可知，抛物线的顶点坐标为：，
+
+    ，，
+
+    即该运动员竖直高度的最大值为，
+
+    根据表格中的数据可知，当时，，代入得：
+
+    ，
+
+    解得：，
+
+    函数关系式为：，
+
+    由表格数据可知：第一次训练时的水平距离为8m；
+
+    【小问2详解】
+
+    解：根据表格可知，第一次训练时的水平距离，
+
+    第二次训练时，当时，，解得
+
+    ，（舍）
+
+    水平距离，
+
+    ，
+
+    故答案为：．'
+  knowledge_points:
+  - 二次函数
+  - 坐标系
+  module: functions
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 26
+  type: 解答
+  score: 6
+  question: '在平面直角坐标系中，抛物线与y轴交于点A．
+
+    （1）求点A的坐标及抛物线的对称轴；
+
+    （2）当时，y的最小值是－2，求当时，y的最大值；
+
+    （3）抛物线上的两点 P（，），Q（，），若对于，，都有，直接写出t的取值范围．'
+  answer: （1）A（0，2）；对称轴是x＝2；（2）7；（3）或．
+  solution: '解：（1）令x＝0则y＝2，
+
+    ∴．点A坐标为（0，2）．
+
+    ∵＝＝，
+
+    ∴二次函数图象的对称轴是x＝2；
+
+    （2）∵a＞0，
+
+    ∴抛物线开口向上，
+
+    ∵当时，y的最小值是－2，抛物线对称轴为x＝2，
+
+    ∴2－4a＝－2，
+
+    解得a＝1.
+
+    ∴二次函数表达式为，
+
+    ∴在时，当x＝5时，y有最大值，；
+
+    （3）∵点 P（，），Q（，），且，，都有，
+
+    ∴①当点P、Q都在对称轴x=2左侧时，，此时t+3≤2，解得t≤-1；
+
+    ②当点P、Q都在对称轴x=2右侧时，，此时t≥2；
+
+    ③当点P在对称轴x=2左侧，点Q在对称轴x=2右侧时，且，
+
+    此时2-（t+1）≥（t+3）-2或2-t≤（t+2）-2，解得t≤0,或t≥1，
+
+    综上所述，或．'
+  knowledge_points:
+  - 二次函数
+  - 坐标系
+  module: functions
+  difficulty: 压轴
+  recommended_for:
+  - L3
+- id: 27
+  type: 解答
+  score: 7
+  question: '如图，在中，，．是边上一点，交的延长线于点．
+
+    （1）用等式表示与的数量关系，并证明；
+
+    （2）连接，延长至，使．连接，，．
+
+    ①依题意补全图形；
+
+    ②判断的形状，并证明．'
+  answer: （1），理由见解析； （2）①如图；②结论：是等边三角形，理由见解析．
+  solution: '【小问1详解】
+
+    解：线段与的数量关系：．
+
+    证明： ，
+
+    ．
+
+    ，
+
+    ；
+
+    【小问2详解】
+
+    解：①补全图形，如图．
+
+    ②结论：是等边三角形．
+
+    证明：延长至点使，连接，，如图．
+
+    ，
+
+    ．
+
+    ，
+
+    是等边三角形．
+
+    ，．
+
+    ，，
+
+    ，．
+
+    ．
+
+    ．
+
+    ，
+
+    ，
+
+    ．
+
+    ，
+
+    （）
+
+    ，．
+
+    ．
+
+    是等边三角形．'
+  knowledge_points:
+  - 全等三角形
+  module: triangles
+  difficulty: 压轴
+  recommended_for:
+  - L3
+- id: 28
+  type: 解答
+  score: 7
+  question: '在平面直角坐标系中，对于点和线段，若点到点或点的距离，不超过线段的长度，则称点为线段的近合点．
+
+    （1）已知，，
+
+    ①在点，，中，线段的近合点是________；
+
+    ②若直线上存在线段的近合点，求的取值范围；
+
+    （2）已知的半径为5，，，直线过点，记线段AB关于的对称线段为．若对于实数，存在直线，使得上有的近合点，直接写出的取值范围．'
+  answer: （1）①；② （2）或
+  solution: '【小问1详解】
+
+    解：①∵，，
+
+    ∴，
+
+    ∵，，，
+
+    ∴，，，
+
+    ∴是线段的近合点，
+
+    故答案为：；
+
+    ②由题意得，线段的近合点在以A为圆心，半径为2的圆形区域和以B为圆心，半径为2的圆形区域内，
+
+    ∵直线上存在线段的近合点，
+
+    ∴
+
+    【小问2详解】
+
+    解：∵线段AB关于的对称线段为，且点T在直线l上，
+
+    ∴，
+
+    ∴线段的运动轨迹即为以T为圆心，以，为半径的两个圆组成的圆环上，
+
+    如图2-1所示，当时，则线段的近合点在以T为圆心，，为半径的两个圆组成的圆环上，
+
+    当外圆与内切时，
+
+    ∴，即，
+
+    ∴，
+
+    解得（正值舍去）；
+
+    如图2-2所示，当内圆与外切时，
+
+    ∴，即，
+
+    ∴，
+
+    解得（正值舍去）；
+
+    ∴当时，满足题意；
+
+    同理当，可求得；
+
+    综上所述，或'
+  knowledge_points:
+  - 勾股定理
+  - 坐标系
+  module: geometryComprehensive
+  difficulty: 压轴
+  recommended_for:
+  - L3

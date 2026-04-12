@@ -1,0 +1,857 @@
+# ============================================================
+# 2024年北京西城区中考数学三模试卷 — 逐题分析
+# ============================================================
+# 数据来源：knowledge-original/精品解析：2024年北京市西城区北京师范大学附属中学中考三模数学试题（解析版）.docx
+# 自动生成，部分数学公式可能显示不全（docx公式对象无法完整提取）
+# 满分：100分  时长：120分钟
+
+year: 2024
+district: 西城区
+exam_type: 三模
+subject: 数学
+full_score: 100
+duration_minutes: 120
+total_questions: 25
+structure: 8选择(16分) + 8填空(16分) + 12解答(68分)
+questions:
+- id: 1
+  type: 选择
+  score: 2
+  question: "如图是某几何体的展开图，该几何体是（　　）\nA. 圆柱\tB. 圆锥\tC. 三棱柱\tD. 正方体"
+  answer: A
+  solution: 解：∵圆柱的展开图为两个圆和一个长方形，
+  knowledge_points:
+  - 综合
+  module: circles
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 2
+  type: 选择
+  score: 2
+  question: "北京大力推动光通信技术发展应用，打造全市1毫秒、环京2毫秒、京津冀3毫秒时延圈，其中光传导工具是光纤，一种多模光纤芯的直径是0.0000625米，将0.0000625用科学记数法表示为（    ）\nA. \tB. \tC. \tD."
+  answer: C
+  solution: '解：0.0000625用科学记数法表示为，
+
+    故选C．'
+  knowledge_points:
+  - 科学记数法
+  - 绝对值
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 3
+  type: 选择
+  score: 2
+  question: "如图，A，B两点在数轴上表示的数分别是a，b，下列结论中正确的是（    ）\nA. \tB. \tC. \tD."
+  answer: B
+  solution: '解：由数轴知：，
+
+    ∴，，，，
+
+    故选：B．'
+  knowledge_points:
+  - 绝对值
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 4
+  type: 选择
+  score: 2
+  question: "如图，，，平分，若，则的度数为（    ）\nA. \tB. \tC. \tD."
+  answer: D
+  solution: '解：∵，，
+
+    ∴，
+
+    ∵，
+
+    ∴，
+
+    ∵平分，
+
+    ∴，
+
+    ∵，
+
+    ∴
+
+    故选：D'
+  knowledge_points:
+  - 平行线
+  module: triangles
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 5
+  type: 选择
+  score: 2
+  question: "一组数据的方差为，将这组数据中的每一个数都减去，得到一组新数据，其方差为，则与的大小关系是（    ）\nA. \tB. \tC. \tD. 无法确定"
+  answer: B
+  solution: '解：一组数据中的每一个数据都加上（或都减去）同一个常数后，它的平均数都加上（或都减去）这一个常数，方差不变，
+
+    ，
+
+    故选：B．'
+  knowledge_points:
+  - 方差
+  module: statisticsAndProbability
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 6
+  type: 选择
+  score: 2
+  question: "若关于的一元二次方程有两个相等的实数根、则实数的值为（    ）\nA. 3\tB. 2\tC. 0\tD."
+  answer: B
+  solution: '解：根据题意得，，
+
+    解得，，
+
+    故选：B ．'
+  knowledge_points:
+  - 一元二次方程
+  - 根的判别式
+  module: equationsAndInequalities
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 7
+  type: 选择
+  score: 2
+  question: "不透明的袋子中有红，黄，绿三个小球，这三个小球除颜色外无其他差别．从中随机摸出一个小球，放回并摇匀，再从中随机摸出一个小球，两次摸出的小球的颜色相同的概率是（    ）\nA. \tB. \tC. \tD."
+  answer: B
+  solution: '解：根据题意画出树状图如下：
+
+    共有9种等可能的结果，其中两次摸出的小球的颜色相同的有3种，则两次摸出的小球的颜色相同的概率是．
+
+    故选B．'
+  knowledge_points:
+  - 概率
+  - 树状图
+  module: statisticsAndProbability
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 8
+  type: 选择
+  score: 2
+  question: "如图1，在菱形中，，P是菱形内部一点，动点M从顶点B出发，沿线段运动到点P，再沿线段运动到顶点A，停止运动．设点M运动的路程为x，，表示y与x的函数关系的图象如图2所示，则菱形的边长是（    ）\nA. \tB. 4\tC. \tD. 2"
+  answer: C
+  solution: '如图所示，
+
+    由图象可得，
+
+    当x从0到4时，
+
+    ∴
+
+    ∵四边形是菱形
+
+    ∴点P在对角线上
+
+    ∴由图象可得，，
+
+    ∴
+
+    ∵在菱形中，，
+
+    ∴，
+
+    ∴设，则
+
+    ∴
+
+    ∴
+
+    ∴在中，
+
+    ∴
+
+    解得，负值舍去
+
+    ∴
+
+    ∴菱形的边长是．
+
+    故选：C．'
+  knowledge_points:
+  - 勾股定理
+  - 菱形
+  - 动点
+  module: triangles
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 9
+  type: 填空
+  score: 2
+  question: 若代数式有意义，则实数x的取值范围是____________．
+  answer: ''
+  solution: '∵代数式有意义，
+
+    ∴
+
+    ∴．
+
+    故答案为：．'
+  knowledge_points:
+  - 不等式
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 10
+  type: 填空
+  score: 2
+  question: 分解因式：ax2﹣4ay2=__．
+  answer: a（x+2y）（x﹣2y）
+  solution: 'ax2﹣4ay2
+
+    =a（x2﹣4y2）
+
+    =a（x+2y）（x﹣2y），
+
+    故答案为a（x+2y）（x﹣2y）.'
+  knowledge_points:
+  - 方差
+  module: statisticsAndProbability
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 11
+  type: 填空
+  score: 2
+  question: 方程组的解为____________．
+  answer: ''
+  solution: '解：，
+
+    得，，
+
+    ，
+
+    ，
+
+    把代入①得，，
+
+    ，
+
+    ∴原方程组的解为，
+
+    故答案为： ．'
+  knowledge_points:
+  - 二元一次方程组
+  module: equationsAndInequalities
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 12
+  type: 填空
+  score: 2
+  question: 在平面直角坐标系中，若点和在反比例函数的图象上，则______（填“”“”或“”）．
+  answer: ''
+  solution: '解：∵，
+
+    ∴反比例函数的图象在二、四象限，
+
+    ∵，
+
+    ∴点，在第四象限，y随x的增大而增大，
+
+    ∴．
+
+    故答案：．'
+  knowledge_points:
+  - 反比例函数
+  - 坐标系
+  module: functions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 13
+  type: 填空
+  score: 2
+  question: 正n边形的一个外角的度数为60°，则n的值为___．
+  answer: '6'
+  solution: '解：∵正n边形的一个外角的度数为60°，
+
+    ∴n=360÷60=6．
+
+    故答案为：6．'
+  knowledge_points:
+  - 综合
+  module: triangles
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 14
+  type: 填空
+  score: 2
+  question: 如图，在中，E是上一点，，的延长线与的延长线相交于点F，若，则的长为____________．
+  answer: '10'
+  solution: '解：四边形是平行四边形，，
+
+    ，
+
+    ，
+
+    ，
+
+    ，
+
+    ，
+
+    ．
+
+    故答案为：10．'
+  knowledge_points:
+  - 相似三角形
+  - 平行四边形
+  module: triangles
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 15
+  type: 填空
+  score: 2
+  question: '如图，在中，．
+
+    ①以点A为圆心，适当长为半径画弧，分别与，相交于点，；分别以，为圆心，大于的长为半径画弧，两弧相交于点M；作射线．
+
+    ②以点B为圆心，适当长为半径画弧，分别与，相交于点，；分别以，为圆心，大于的长为半径画弧，两弧相交于点N；作射线，与射线相交于点P．
+
+    ③连接．
+
+    根据以上作图，若点P到直线的距离为1，则线段的长为____________．'
+  answer: ''
+  solution: '解：作，垂足分别是D、E、F，
+
+    由题意得：平分，平分，点P到直线的距离为1，
+
+    ，
+
+    ，
+
+    四边形为矩形，
+
+    ，
+
+    四边形为正方形，
+
+    ，
+
+    ，
+
+    故答案为：．'
+  knowledge_points:
+  - 勾股定理
+  - 正方形
+  module: triangles
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 16
+  type: 填空
+  score: 2
+  question: 甲、乙、丙、丁4名同学参加中学生天文知识竞赛，成绩各不相同，根据成绩决出第1名到第4名的名次．甲和乙去询问名次，老师对甲说：“很遗憾，你和乙都不是第1名．”对乙说：“你不是第4名．”从这两个回答分析，4个人的名次排列可能有______种不同情况，其中甲是第4名有______种可能情况．
+  answer: ①. 8    ②. 4
+  solution: '解：依题意，甲和乙不是第1名，乙不是第4名，有以下8种情况，
+
+    其中①②③④四种情况是甲为第4名，
+
+    故答案为，．'
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 17
+  type: 解答
+  score: 5
+  question: （第17题，详见原卷）
+  answer: ''
+  solution: 解：
+  knowledge_points:
+  - 三角函数
+  - 绝对值
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 18
+  type: 解答
+  score: 5
+  question: 解不等式，并写出它的所有负整数解．
+  answer: 不等式的解集是，其中所有负整数解为，
+  solution: '解：．
+
+    移项得，．
+
+    合并同类项得，．
+
+    系数化为1得，．
+
+    所以原不等式的所有负整数解为，．'
+  knowledge_points:
+  - 不等式
+  module: equationsAndInequalities
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 19
+  type: 解答
+  score: 5
+  question: 已知，求代数式的值．
+  answer: ''
+  solution: '解：
+
+    ．
+
+    ∵，
+
+    ∴，
+
+    ∴原式．'
+  knowledge_points:
+  - 综合
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 20
+  type: 解答
+  score: 5
+  question: '如图，在中，点E，F分别在，上，且，平分．
+
+    （1）求证：四边形是菱形；
+
+    （2）若，，，求证：是矩形．'
+  answer: （1）见解析    （2）见解析
+  solution: '【小问1详解】
+
+    证明：∵四边形是平行四边形，
+
+    ∴，．
+
+    ∴．
+
+    ∵．
+
+    ∴．
+
+    ∴四边形是平行四边形．
+
+    ∵平分，
+
+    ∴．
+
+    ∴．
+
+    ∴．
+
+    ∴四边形是菱形．
+
+    【小问2详解】
+
+    ∵，，
+
+    ∴．
+
+    ∴．
+
+    ∵，
+
+    ∴．
+
+    ∴．
+
+    ∴是矩形．'
+  knowledge_points:
+  - 勾股定理
+  - 平行四边形
+  - 矩形
+  - 菱形
+  module: quadrilaterals
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 21
+  type: 解答
+  score: 5
+  question: '在平面直角坐标系中，函数的图象由函数的图象平移得到，且经过点．
+
+    （1）求这个函数的表达式；
+
+    （2）当时，对于x的每一个值，函数的值大于函数的值，直接写出m的取值范围．'
+  answer: （1） （2）
+  solution: '【小问1详解】
+
+    解：∵一次函数的图象由函数的图象平移得到，
+
+    ∴，
+
+    ∴，
+
+    把点代入得
+
+    ，
+
+    解得，
+
+    ∴这个一次函数的解析式是；
+
+    【小问2详解】
+
+    解：由题意，得时直线在直线的上方，
+
+    当时，，
+
+    把代入，得，解得，
+
+    如图：
+
+    ∴当时，对于的每一个值，函数的值大于函数的值．'
+  knowledge_points:
+  - 一次函数
+  - 平移
+  - 坐标系
+  module: functions
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 22
+  type: 解答
+  score: 5
+  question: '如图，是的直径，点C在上，的平分线交于点D，过点D的直线，分别交，的延长线于点E，F．
+
+    （1）求证：直线是的切线；
+
+    （2）若，，求的长．'
+  answer: （1）见解析； （2）．
+  solution: '【小问1详解】
+
+    证明：如图，连接．
+
+    ∵，
+
+    ∴．
+
+    ∵平分，
+
+    ∴．
+
+    ∴．
+
+    ∴．
+
+    ∴．
+
+    ∵是的直径，
+
+    ∴．
+
+    ∵，
+
+    ∴．
+
+    ∴．
+
+    即．
+
+    ∴直线是的切线．
+
+    【小问2详解】
+
+    解：∵，
+
+    设的半径为r，则．
+
+    ∵，
+
+    ∴．
+
+    ∵，
+
+    在中，．
+
+    即．
+
+    ∴．
+
+    ∴．
+
+    ∴．
+
+    在中，由勾股定理得．'
+  knowledge_points:
+  - 切线
+  - 勾股定理
+  module: triangles
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 23
+  type: 解答
+  score: 6
+  question: '如图，在矩形中，，，点P是边上一动点，连接，过点P作的垂线与，分别相交于点E，F．
+
+    小明根据学习函数的经验对线段，，的长度之间的关系进行了探究．
+
+    下面是小明的探究过程，请补充完整：
+
+    （1）对于点P在边上的不同位置，画图、测量，得到了线段，，的长度的几组值，如下表：
+
+    在，，的长度这三个量中，确定______的长度是自变量，______的长度和______的长度都是这个自变量的函数；
+
+    （2）①确定表格中m的值约为____________（结果精确到0.1）；
+
+    ②在同一平面直角坐标系中，画出（1）中所确定的函数的图象；
+
+    （3）结合函数图象，解决问题：当点P与点B，C不重合，且时，_____（结果精确到0.1）．'
+  answer: （1），，； （2）①2.2；②见解析； （3）1.9．
+  solution: '【小问1详解】
+
+    解：在，，的长度这三个量中，确定的长度是自变量，的长度和的长度都是这个自变量的函数；
+
+    【小问2详解】
+
+    ①如图，当时，而，，
+
+    ∴是的中点，
+
+    ∴，
+
+    此时重合，
+
+    过作交于，交于，
+
+    ∵，
+
+    ∴，
+
+    ∴，，
+
+    ∴，，
+
+    ∵，，
+
+    ∴，
+
+    ∴，
+
+    ∵，
+
+    ∴，
+
+    ∴；
+
+    ②描点画图如下：
+
+    【小问3详解】
+
+    由函数图象可得：当时，；'
+  knowledge_points:
+  - 平行线
+  - 相似三角形
+  - 矩形
+  - 坐标系
+  - 动点
+  module: triangles
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 24
+  type: 解答
+  score: 6
+  question: '在平面直角坐标系中，点和点在抛物线（）上，设抛物线的对称轴为．
+
+    （1）若，，求t的值；
+
+    （2）已知点，在该抛物线上，若，，比较，的大小，并说明理由．'
+  answer: （1） （2），见解析
+  solution: '【小问1详解】
+
+    解：∵，，
+
+    ∴把点和点代入得：，
+
+    解得：，
+
+    ∵对称轴，
+
+    ∴．
+
+    【小问2详解】
+
+    ∵，
+
+    ∴当时，y随x的增大而增大．
+
+    令，得，
+
+    ∴抛物线与y轴交点坐标为．
+
+    ∵，，，
+
+    ∴，在对称轴的左侧，
+
+    设点关于对称轴的对称点坐标，
+
+    ．
+
+    ．
+
+    ∴点关于对称轴对称点坐标为．
+
+    ∵，
+
+    ．
+
+    ．
+
+    点在对称轴左侧，点在对称轴右侧．
+
+    设点关于对称轴的对称点坐标，
+
+    ．
+
+    ．
+
+    ∴点关于对称轴的对称点坐标为．
+
+    ．
+
+    ．'
+  knowledge_points:
+  - 二元一次方程组
+  - 二次函数
+  - 坐标系
+  module: functions
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 25
+  type: 解答
+  score: 6
+  question: '在中，，，将线段绕点A逆时针旋转，得到线段，连接，．
+
+    （1）依据题意，补全图形；
+
+    （2）求的度数；
+
+    （3）作于点E，连接，用等式表示线段，，之间的数量关系，并证明．'
+  answer: （1）见解析    （2） （3），理由见解析
+  solution: '【小问1详解】
+
+    补全图形，如图所示：
+
+    【小问2详解】
+
+    根据题意可知，，
+
+    ，
+
+    ，
+
+    ，
+
+    ，
+
+    ．
+
+    【小问3详解】
+
+    ，证明如下：
+
+    如图，作，交于点F，
+
+    ，
+
+    ，
+
+    ，，
+
+    ，
+
+    ，
+
+    ，
+
+    ，
+
+    在和中
+
+    ，
+
+    ，，
+
+    ，
+
+    ．'
+  knowledge_points:
+  - 全等三角形
+  - 旋转
+  module: triangles
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
