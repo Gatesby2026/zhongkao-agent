@@ -94,10 +94,23 @@ function initTables(db: Database.Database) {
       created_at DATETIME DEFAULT CURRENT_TIMESTAMP
     );
 
+    -- 模考成绩表
+    CREATE TABLE IF NOT EXISTS exam_records (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      user_id INTEGER NOT NULL REFERENCES users(id),
+      exam_name VARCHAR(50) NOT NULL,
+      exam_date VARCHAR(20) NOT NULL,
+      district VARCHAR(20) DEFAULT '',
+      scores_json TEXT NOT NULL,
+      total_score INTEGER NOT NULL,
+      created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+    );
+
     -- 创建索引
     CREATE INDEX IF NOT EXISTS idx_vc_phone ON verification_codes(phone, expires_at);
     CREATE INDEX IF NOT EXISTS idx_assessment_user ON assessment_records(user_id, created_at);
     CREATE INDEX IF NOT EXISTS idx_drill_user ON drill_records(user_id, created_at);
     CREATE INDEX IF NOT EXISTS idx_plan_user ON plan_records(user_id, created_at);
+    CREATE INDEX IF NOT EXISTS idx_exam_user ON exam_records(user_id, created_at);
   `);
 }
