@@ -113,6 +113,9 @@ export function loadKnowledgeBase(): KnowledgeBase {
       yearly: {
         "2025": readYaml("exam-analysis/math/beijing/2025.yaml"),
         "2024": readYaml("exam-analysis/math/beijing/2024.yaml"),
+        "2023": readYaml("exam-analysis/math/beijing/2023.yaml"),
+        "2022": readYaml("exam-analysis/math/beijing/2022.yaml"),
+        "2021": readYaml("exam-analysis/math/beijing/2021.yaml"),
       },
     },
     admission: {

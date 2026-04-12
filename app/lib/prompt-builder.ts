@@ -288,24 +288,141 @@ ${levelDesc}${benchmarkStr}${pathStr}${timeStrategyStr}${mistakesStr}${mockStr}
     trendsStr = `\n命题趋势：实际情境题${examSummary.trends.real_world_context}；函数每年占${examSummary.trends.function_emphasis}；${examSummary.trends.textbook_origin}`;
   }
 
+  // ============ 以下为新增注入：把已加载未使用的知识库数据接入 ============
+
+  // 1. 考试政策与关键日期
+  let policyStr = "";
+  if (kb.policy) {
+    const p = kb.policy;
+    const examDates = p.exam_dates;
+    policyStr = `\n## 考试政策与关键日期\n` +
+      `- 中考总分：${p.total_score}分，数学${p.exam_subjects?.find((s: any) => s.subject === "数学")?.score || 100}分/120分钟闭卷\n` +
+      (examDates ? `- 统考日期：${examDates.written_exam || "2026-06-24~25"}\n` : "") +
+      (p.changes_from_2025 ? `- 2026改革要点：${(p.changes_from_2025 || []).slice(0, 3).map((c: any) => c.change || c).join("；")}\n` : "") +
+      (p.admission?.stages ? `- 录取批次：${p.admission.stages.map((s: any) => s.name || s).join(" → ")}\n` : "");
+  }
+
+  // 2. 区域特色
+  let districtFeatureStr = "";
+  if (districtInfo) {
+    const chars = districtInfo.characteristics;
+    const mathF = districtInfo.math_features;
+    districtFeatureStr = `\n## ${district}特色\n` +
+      (districtInfo.textbook ? `- 教材版本：${districtInfo.textbook}\n` : "") +
+      (chars?.exam_difficulty ? `- 考试难度：${chars.exam_difficulty}\n` : "") +
+      (mathF?.mock_difficulty ? `- 模考难度：${mathF.mock_difficulty}\n` : "") +
+      (mathF?.style ? `- 命题风格：${mathF.style}\n` : "") +
+      (mathF?.notes ? `- 备考提示：${mathF.notes}\n` : "");
+  }
+
+  // 3. 考纲权重与提分优先级（weight-analysis）
+  let weightStr = "";
+  const wa = kb.weightAnalysis;
+  if (wa?.score_improvement_priority) {
+    weightStr = `\n## 提分ROI优先级排序（基于考纲权重分析）\n` +
+      wa.score_improvement_priority.map((p: any) =>
+        `${p.rank}. ${p.area}（潜力${p.potential}，投入${p.effort}）：${p.reason}`
+      ).join("\n");
+  }
+
+  // 4. 题型分布与目标分数对应题号（question-types）
+  let questionTypeStr = "";
+  const qt = kb.questionTypes;
+  if (qt?.score_targets) {
+    questionTypeStr = `\n## 各目标分数对应的必拿题号\n`;
+    for (const [target, data] of Object.entries(qt.score_targets) as any) {
+      if (data?.must_solve) {
+        questionTypeStr += `- ${target}：必拿 ${data.must_solve.join("、")}`;
+        if (data.try_solve) questionTypeStr += `，争取 ${data.try_solve.join("、")}`;
+        questionTypeStr += "\n";
+      }
+    }
+  }
+  if (qt?.difficulty_ratio) {
+    questionTypeStr += `难度比例：基础${qt.difficulty_ratio.basic || "50%"}、中档${qt.difficulty_ratio.medium || "35%"}、压轴${qt.difficulty_ratio.hard || "15%"}\n`;
+  }
+
+  // 5. 教材章节索引（textbooks）— 让 LLM 精准引用教材
+  let textbookStr = "";
+  const tb = kb.resources.textbooks;
+  if (tb) {
+    // 根据区确定教材版本
+    const districtCn = district.replace("区", "");
+    const useRenjiao = ["海淀", "西城", "东城", "朝阳", "丰台"].includes(districtCn);
+    const version = useRenjiao ? "人教版" : "北京版";
+    const versionData = tb[version === "人教版" ? "人教版" : "北京版"];
+    if (versionData?.volumes) {
+      textbookStr = `\n## 教材章节索引（${version}，该生适用）\n`;
+      for (const vol of versionData.volumes) {
+        const keyChapters = (vol.key_chapters || [])
+          .filter((c: any) => c.relevance === "极高" || c.relevance === "高")
+          .map((c: any) => `${c.chapter}→${c.maps_to_module}(${c.relevance})`);
+        if (keyChapters.length > 0) {
+          textbookStr += `- ${vol.volume}：${keyChapters.join("、")}\n`;
+        }
+      }
+    }
+  }
+
+  // 6. 真题/模拟卷使用策略（exam-papers）— 根据时间阶段给出用卷建议
+  let examPaperStrategyStr = "";
+  const ep = kb.resources.examPapers;
+  if (ep?.overall_strategy) {
+    // 根据当前时间阶段匹配策略
+    const phaseMap: Record<string, string> = {
+      "long_term": "phase_1_基础期",
+      "mid_term": "phase_2_一模前",
+      "sprint": "phase_3_一模后",
+    };
+    const currentPhaseKey = phaseMap[timePhase];
+    const phaseData = ep.overall_strategy[currentPhaseKey] || ep.overall_strategy["phase_4_考前冲刺"];
+    if (phaseData) {
+      examPaperStrategyStr = `\n## 当前阶段的做卷策略\n` +
+        `阶段：${phaseData.name || currentPhaseKey}（${phaseData.time || ""}）\n` +
+        `策略：${phaseData.strategy || phaseData.focus || ""}\n`;
+      if (phaseData.frequency) examPaperStrategyStr += `频率：${phaseData.frequency}\n`;
+      if (phaseData.key_rule) examPaperStrategyStr += `关键原则：${phaseData.key_rule}\n`;
+    }
+  }
+  // 用卷水平建议
+  if (ep?.beijing_zhongkao?.usage_guide) {
+    const levelGuide = ep.beijing_zhongkao.usage_guide[diagnosis.estimatedTotalLevel];
+    if (levelGuide) {
+      examPaperStrategyStr += `真题使用建议（${diagnosis.estimatedTotalLevel}水平）：${levelGuide}\n`;
+    }
+  }
+
+  // 7. 在线平台推荐
+  let platformStr = "";
+  const op = kb.resources.onlinePlatforms;
+  if (op?.free_platforms) {
+    const topPlatforms = (op.free_platforms || [])
+      .filter((p: any) => p.recommend_level === "A")
+      .map((p: any) => `${p.name}(${p.key_features?.[0] || p.type})`);
+    if (topPlatforms.length > 0) {
+      platformStr = `\n推荐在线资源：${topPlatforms.join("、")}`;
+    }
+  }
+
   // 模拟题统计
   const mockExamCount = kb.mockExams.length;
   const mockQuestionCount = kb.mockExams.reduce((sum, e) => sum + (e.questions?.length || 0), 0);
 
-  const system = `你是一位经验丰富的北京中考数学辅导专家。你拥有完整的北京中考真题数据库（2021-2025年共140道题的逐题分析）、朝阳/海淀/西城/东城四区高中的录取分数线，以及${mockExamCount}套各区一模试卷（共${mockQuestionCount}道题，含完整题目、答案和解析）。
+  const system = `你是一位经验丰富的北京中考数学辅导专家。你拥有完整的北京中考真题数据库（2021-2025年共140道题的逐题分析）、15个区的高中录取分数线，以及${mockExamCount}套各区模考试卷（共${mockQuestionCount}道题，含完整题目、答案和解析），以及完整的人教版/北京版教材章节索引。
 
 你的任务是根据学生的诊断数据、真题分析和知识库中的学习路径，生成一份针对性极强的学习规划。
 
 核心要求：
 1. 语气亲切但专业，像经验丰富的班主任
-2. 所有建议必须具体——引用真实的题号（如"2025年第22题一次函数"），推荐具体的教材章节和教辅页码
+2. 所有建议必须具体——引用真实的题号（如"2025年第22题一次函数"），推荐具体的教材章节和教辅页码（下方有完整的教材章节索引，请据此引用）
 3. 根据距中考的时间阶段（${getTimePhaseName(timePhase)}）调整策略的激进程度
-4. 明确告诉学生哪些题必须拿分、哪些题可以放弃——基于真题数据而非泛泛而谈
+4. 明确告诉学生哪些题必须拿分、哪些题可以放弃——基于下方的「各目标分数对应必拿题号」数据
 5. 过关标准可量化（"连续做对5年真题Q17"而非"掌握即可"）
 6. 用分数说话（"函数从L0提到L1，Q22能做对就是5分到手"）
-7. 该生在${district}，注意区的特点
+7. 该生在${district}，注意下方给出的区域特色和模考风格
 8. 输出用 Markdown 格式，结构清晰
-9. **周计划是整份报告的核心价值**——学生拿到报告后应该能直接照着第1周的计划开始学习，不需要再做任何翻译和转化。第1周的每一天都要写清楚"几点到几点做什么、用什么材料、做到什么标准算完成"`;
+9. **周计划是整份报告的核心价值**——学生拿到报告后应该能直接照着第1周的计划开始学习，不需要再做任何翻译和转化。第1周的每一天都要写清楚"几点到几点做什么、用什么材料、做到什么标准算完成"
+10. 做卷安排要参考下方的「当前阶段做卷策略」，不同时间阶段用卷方式不同`;
 
   const user = `## 学生基本情况
 
@@ -338,6 +455,13 @@ ${resourceStr}
 ## 真题命题趋势
 ${trendsStr}
 ${admissionStr}
+${policyStr}
+${districtFeatureStr}
+${weightStr}
+${questionTypeStr}
+${textbookStr}
+${examPaperStrategyStr}
+${platformStr}
 
 ---
 
@@ -509,11 +633,33 @@ export function buildModuleDrillPrompt(
   const timePhase = getTimePhase(weeksUntilExam);
   const drillWeeks = Math.min(2, Math.max(1, Math.floor(weeksUntilExam / 5)));
 
-  const system = `你是一位经验丰富的北京中考数学辅导专家，专门帮助学生突破薄弱模块。你拥有完整的真题数据库和各区一模试卷题库。
+  // 教材章节索引（供 drill 模式引用）
+  const districtCn = district.replace("区", "");
+  const useRenjiao = ["海淀", "西城", "东城", "朝阳", "丰台"].includes(districtCn);
+  const tbVersion = useRenjiao ? "人教版" : "北京版";
+  const tbData = kb.resources.textbooks?.[tbVersion === "人教版" ? "人教版" : "北京版"];
+  let drillTextbookStr = "";
+  if (tbData?.volumes) {
+    const relevantChapters: string[] = [];
+    for (const vol of tbData.volumes) {
+      for (const ch of vol.key_chapters || []) {
+        // 匹配当前模块相关的章节
+        const mapsTo = (ch.maps_to_module || "").toLowerCase();
+        if (mapsTo.includes(moduleId.toLowerCase()) || mapsTo.includes(moduleName)) {
+          relevantChapters.push(`${vol.volume} ${ch.chapter}(${ch.relevance})`);
+        }
+      }
+    }
+    if (relevantChapters.length > 0) {
+      drillTextbookStr = `\n## 相关教材章节（${tbVersion}）\n${relevantChapters.join("\n")}\n`;
+    }
+  }
+
+  const system = `你是一位经验丰富的北京中考数学辅导专家，专门帮助学生突破薄弱模块。你拥有完整的真题数据库和${kb.mockExams.length}套各区模考试卷题库。
 
 核心要求：
 1. 你现在只关注**${moduleName}**这一个模块，给出精准的专项突破方案
-2. 所有建议必须具体到题号、页码、时间——学生拿到就能直接执行
+2. 所有建议必须具体到题号、页码、时间——学生拿到就能直接执行。下方提供了教材章节索引，请据此精确引用（如"人教版八下§19.1 一次函数 p.73"）
 3. 当前处于${getTimePhaseName(timePhase)}，策略要匹配时间紧迫程度
 4. 用分数说话：该模块从${level}提到${targetLevel}，能多拿几分，对应哪些真题题号
 5. 输出用 Markdown 格式`;
@@ -549,7 +695,7 @@ ${examStr || "暂无"}
 ## 推荐教辅
 
 ${resourceStr || "暂无"}
-
+${drillTextbookStr}
 ---
 
 请生成一份 **${moduleName}** 模块的 **${drillWeeks}周专项突破计划**，包含：
