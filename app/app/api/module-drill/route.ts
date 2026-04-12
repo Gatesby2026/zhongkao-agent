@@ -8,13 +8,17 @@ import { buildModuleDrillPrompt, ModuleDrillInput } from "@/lib/prompt-builder";
 import { callLLMStream } from "@/lib/llm";
 
 const VALID_MODULES = [
-  "numbersAndExpressions",
-  "equationsAndInequalities",
-  "functions",
-  "triangles",
-  "circles",
-  "statisticsAndProbability",
-  "geometryComprehensive",
+  // 数学
+  "numbersAndExpressions", "equationsAndInequalities", "functions",
+  "triangles", "circles", "statisticsAndProbability", "geometryComprehensive",
+  // 语文
+  "chinese_basics", "chinese_classical", "chinese_reading", "chinese_famous", "chinese_writing",
+  // 英语
+  "english_listening", "english_grammar", "english_cloze", "english_reading", "english_writing",
+  // 物理
+  "physics_mechanics", "physics_electricity", "physics_heat", "physics_optics", "physics_experiments",
+  // 道法
+  "politics_law", "politics_national", "politics_moral", "politics_current", "politics_analysis",
 ];
 
 const VALID_LEVELS = ["L0", "L1", "L2", "L3"];

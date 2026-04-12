@@ -1,605 +1,568 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import {
-  SCHOOLS_BY_DISTRICT as SCHOOLS_510,
-  DISTRICTS,
+  SUBJECT_MAX,
+  TOTAL_MAX,
   daysUntilZhongkao,
-  type School,
 } from "@/lib/schools";
 
-type SelfAssessment = "很差" | "薄弱" | "还行" | "不错" | "擅长" | "不确定";
+// ============================================================
+// 知识库：各科模块 + 提分优先级（与 diagnosis 同源）
+// ============================================================
 
-interface FormData {
-  district: string;
-  totalScore: number;
-  availableHoursPerDay: number;
-  targetSchool: string;
-  targetSchoolScore: string;
-  daysUntilExam: number;
-  modules: {
-    numbersAndExpressions: SelfAssessment;
-    equationsAndInequalities: SelfAssessment;
-    functions: SelfAssessment;
-    triangles: SelfAssessment;
-    circles: SelfAssessment;
-    statisticsAndProbability: SelfAssessment;
-    geometryComprehensive: SelfAssessment;
-  };
+interface KBPriority {
+  area: string;
+  potential: string;
+  effort: "低" | "中" | "中高" | "高" | "极高";
+  timeline: string;
+  tasks: string[]; // 本周具体任务
 }
 
-const MODULE_NAMES: Record<string, string> = {
-  numbersAndExpressions: "计算/数与式（实数运算、因式分解、分式）",
-  equationsAndInequalities: "方程与不等式（一元二次方程、分式方程、应用题）",
-  functions: "函数（一次函数、反比例函数、二次函数）",
-  triangles: "三角形（全等、相似、勾股定理、三角函数）",
-  circles: "圆（垂径定理、圆周角、切线）",
-  statisticsAndProbability: "统计与概率（平均数、方差、树状图）",
-  geometryComprehensive: "压轴题（几何综合、动态几何、代几综合）",
+interface SubjectPlan {
+  priorities: KBPriority[];
+}
+
+const PLAN_KB: Record<string, SubjectPlan> = {
+  语文: {
+    priorities: [
+      { area: "古诗文默写", potential: "4分", effort: "低", timeline: "2-4周",
+        tasks: ["每天默写 2 首古诗词，逐字校对", "重点背诵《岳阳楼记》《出师表》《水调歌头》", "理解性默写专项练习 10 题"] },
+      { area: "基础·运用", potential: "6-8分", effort: "低", timeline: "2-4周",
+        tasks: ["刷 3 套字音字形选择题", "病句辨析专项 20 题", "文学常识卡片复习（作者-作品-朝代）"] },
+      { area: "文言文阅读", potential: "6-10分", effort: "中", timeline: "4-8周",
+        tasks: ["梳理 10 个高频文言实词", "完成 2 篇课内文言文精读", "翻译练习 5 题"] },
+      { area: "名著阅读", potential: "3-5分", effort: "中", timeline: "持续",
+        tasks: ["本周读完 1 部名著的核心章节", "整理人物关系图", "练习 2 道名著简答题"] },
+      { area: "现代文阅读", potential: "4-6分", effort: "中", timeline: "3-5周",
+        tasks: ["完成 1 篇记叙文阅读真题", "整理答题模板（词句赏析/手法分析）", "练习信息筛选题 3 道"] },
+      { area: "写作", potential: "5-8分", effort: "中", timeline: "6-10周",
+        tasks: ["审题训练：分析 3 个历年作文题", "积累 2 个新素材（非老师/妈妈/考试）", "写 1 篇完整作文并自评"] },
+    ],
+  },
+  数学: {
+    priorities: [
+      { area: "方程/不等式/实数", potential: "12-16分", effort: "低", timeline: "2-4周",
+        tasks: ["实数运算专项 15 题", "一元二次方程解法练习 10 题", "因式分解 10 题限时训练"] },
+      { area: "统计与概率", potential: "8-12分", effort: "低", timeline: "2-3周",
+        tasks: ["中位数/众数/平均数辨析 8 题", "频率直方图读图练习 5 题", "树状图/列表法求概率 5 题"] },
+      { area: "一次/反比例函数", potential: "6-10分", effort: "中", timeline: "3-5周",
+        tasks: ["一次函数图象性质归纳", "反比例函数 k 值判断专项", "函数与几何结合 3 题"] },
+      { area: "三角形", potential: "8-12分", effort: "中", timeline: "4-6周",
+        tasks: ["全等三角形证明 5 题", "相似三角形比例计算 5 题", "勾股定理应用 3 题"] },
+      { area: "二次函数", potential: "6-10分", effort: "中高", timeline: "4-8周",
+        tasks: ["顶点式/一般式/交点式转换练习", "二次函数图象与性质 5 题", "简单应用题 2 道"] },
+      { area: "圆+四边形", potential: "6-10分", effort: "中", timeline: "4-6周",
+        tasks: ["圆的基本性质选择题 8 题", "四边形判定与性质 5 题", "垂径定理应用 3 题"] },
+    ],
+  },
+  英语: {
+    priorities: [
+      { area: "基础听力+朗读", potential: "10-12分", effort: "低", timeline: "2-4周",
+        tasks: ["每天跟读 1 篇课文录音（15分钟）", "听力选择题专项 10 题", "朗读评分自测 2 篇"] },
+      { area: "语法核心", potential: "8-12分", effort: "中", timeline: "3-5周",
+        tasks: ["时态辨析专项 10 题（一般/进行/完成）", "代词/介词用法 8 题", "宾语从句/定语从句 5 题"] },
+      { area: "阅读A+B篇", potential: "12-16分", effort: "低", timeline: "3-5周",
+        tasks: ["限时完成 2 篇阅读理解", "细节查找题技巧总结", "主旨归纳题模板练习"] },
+      { area: "完形填空", potential: "5-8分", effort: "中", timeline: "3-5周",
+        tasks: ["完成 2 篇完形真题", "高频词汇复习 30 个", "上下文逻辑推断练习"] },
+      { area: "书面表达", potential: "6-10分", effort: "中", timeline: "4-8周",
+        tasks: ["背诵 2 个万能开头/结尾模板", "话题作文框架练习 1 篇", "常用连接词整理并造句"] },
+      { area: "听力转述", potential: "6-10分", effort: "中", timeline: "4-8周",
+        tasks: ["转述练习 3 篇（听后复述要点）", "关键信息速记技巧练习", "录音对比纠正发音"] },
+    ],
+  },
+  物理: {
+    priorities: [
+      { area: "基础概念", potential: "12-16分", effort: "低", timeline: "2-4周",
+        tasks: ["声光热基础选择题 15 题", "物态变化图象辨析 5 题", "运动学基本概念 8 题"] },
+      { area: "实验操作", potential: "8-10分", effort: "低", timeline: "2-4周",
+        tasks: ["10 个核心实验步骤梳理", "读数练习（天平/量筒/电表）10 题", "实验设计题 3 道"] },
+      { area: "压强+浮力", potential: "6-10分", effort: "中", timeline: "3-5周",
+        tasks: ["压强公式应用 5 题", "浮力三种计算方法各练 3 题", "液体压强计算 5 题"] },
+      { area: "电路+欧姆定律", potential: "6-10分", effort: "中", timeline: "3-5周",
+        tasks: ["串并联电路识别 8 题", "欧姆定律计算 5 题", "电路图画图练习 3 题"] },
+      { area: "电学实验", potential: "8-12分", effort: "中高", timeline: "4-8周",
+        tasks: ["伏安法测电阻实验步骤", "电功率测量实验 2 题", "实验数据处理练习"] },
+      { area: "力学综合", potential: "6-10分", effort: "中高", timeline: "4-8周",
+        tasks: ["功/功率计算 5 题", "简单机械效率 3 题", "力学综合题 2 道"] },
+    ],
+  },
+  道法: {
+    priorities: [
+      { area: "选择题技巧", potential: "4-8分", effort: "低", timeline: "2-3周",
+        tasks: ["审题技巧专项：关键词圈画练习 10 题", "排除法应用 8 题", "易混知识点辨析卡片"] },
+      { area: "法治板块", potential: "4-6分", effort: "中", timeline: "3-5周",
+        tasks: ["宪法核心知识框架整理", "公民权利与义务对比表", "未成年人保护法要点 5 条"] },
+      { area: "材料分析模板", potential: "6-10分", effort: "中", timeline: "3-5周",
+        tasks: ["「观点+分析+总结」模板背诵", "完成 2 道材料分析真题", "评分标准对照自评"] },
+      { area: "时政热点", potential: "4-6分", effort: "中", timeline: "持续",
+        tasks: ["整理本月 3 个重要时政", "时政与教材知识点关联练习", "1 道时政分析题"] },
+      { area: "国情制度", potential: "3-5分", effort: "中", timeline: "3-5周",
+        tasks: ["人大制度/政协制度框架图", "基本国策知识卡片", "1 道综合探究题"] },
+      { area: "道德品格", potential: "2-4分", effort: "低", timeline: "2-3周",
+        tasks: ["诚信/友善/责任情境题 5 题", "生活化案例分析 3 道"] },
+    ],
+  },
+  体育: {
+    priorities: [
+      { area: "中长跑/跳绳", potential: "4-8分", effort: "中", timeline: "4-8周",
+        tasks: ["每天慢跑 15 分钟（逐步加速）", "跳绳计时训练 3 组", "记录成绩对比进步"] },
+      { area: "力量项目", potential: "3-6分", effort: "中", timeline: "4-8周",
+        tasks: ["引体向上/仰卧起坐每天 3 组", "实心球投掷技巧练习", "核心力量训练 10 分钟"] },
+    ],
+  },
 };
 
-const ASSESSMENTS: SelfAssessment[] = ["不确定", "很差", "薄弱", "还行", "不错", "擅长"];
-
-const ASSESSMENT_COLORS: Record<SelfAssessment, string> = {
-  "不确定": "bg-gray-100 text-gray-600 border-gray-300",
-  "很差": "bg-red-100 text-red-700 border-red-300",
-  "薄弱": "bg-orange-100 text-orange-700 border-orange-300",
-  "还行": "bg-yellow-100 text-yellow-700 border-yellow-300",
-  "不错": "bg-green-100 text-green-700 border-green-300",
-  "擅长": "bg-emerald-100 text-emerald-700 border-emerald-300",
+const SUBJECT_KEYS = ["语文", "数学", "英语", "物理", "道法", "体育"] as const;
+const SUBJECT_ICONS: Record<string, string> = { 语文: "📖", 数学: "📐", 英语: "🔤", 物理: "⚡", 道法: "📜", 体育: "🏃" };
+const SUBJECT_COLORS: Record<string, { bar: string; bg: string; border: string; text: string }> = {
+  语文: { bar: "bg-amber-500", bg: "bg-amber-50", border: "border-amber-200", text: "text-amber-700" },
+  数学: { bar: "bg-blue-500", bg: "bg-blue-50", border: "border-blue-200", text: "text-blue-700" },
+  英语: { bar: "bg-green-500", bg: "bg-green-50", border: "border-green-200", text: "text-green-700" },
+  物理: { bar: "bg-purple-500", bg: "bg-purple-50", border: "border-purple-200", text: "text-purple-700" },
+  道法: { bar: "bg-rose-500", bg: "bg-rose-50", border: "border-rose-200", text: "text-rose-700" },
+  体育: { bar: "bg-teal-500", bg: "bg-teal-50", border: "border-teal-200", text: "text-teal-700" },
 };
 
-// 数学规划页面使用总分510制的学校数据作为参考
-const SCHOOLS_BY_DISTRICT = SCHOOLS_510;
+const WEEKDAYS = ["周一", "周二", "周三", "周四", "周五", "周六", "周日"] as const;
 
-const TIER_COLORS: Record<string, string> = {
-  "顶尖": "text-red-600",
-  "重点": "text-blue-600",
-  "普通": "text-gray-600",
-  "保底": "text-gray-400",
-};
+// 计算时间分配
+function calcTimeAlloc(subjects: Record<string, number>): Record<string, number> {
+  const gaps: { name: string; gap: number }[] = [];
+  let totalGap = 0;
+  for (const name of SUBJECT_KEYS) {
+    if (name === "体育") continue;
+    const gap = SUBJECT_MAX[name] - (subjects[name] || 0);
+    gaps.push({ name, gap: Math.max(0, gap) });
+    totalGap += Math.max(0, gap);
+  }
+  const result: Record<string, number> = {};
+  for (const g of gaps) {
+    result[g.name] = totalGap > 0 ? Math.round((g.gap / totalGap) * 100) : 20;
+  }
+  result["体育"] = 0;
+  // Fix sum to 100
+  const sum = Object.values(result).reduce((a, b) => a + b, 0);
+  if (sum !== 100) {
+    const top = gaps.reduce((a, b) => a.gap > b.gap ? a : b);
+    result[top.name] += 100 - sum;
+  }
+  return result;
+}
 
-export default function Home() {
-  // 支持从 /score-check 或 /assessment 跳转时通过 URL 参数预填
-  const searchParams = typeof window !== "undefined" ? new URLSearchParams(window.location.search) : null;
-  const urlDistrict = searchParams?.get("district") || "朝阳区";
-  const urlScore = parseInt(searchParams?.get("score") || "75") || 75;
-  const fromAssessment = searchParams?.get("fromAssessment") === "1";
+// 生成每日课表
+function generateSchedule(
+  timeAlloc: Record<string, number>,
+  hoursPerDay: number,
+  sorted: string[]
+): { day: string; blocks: { subject: string; minutes: number; task: string }[] }[] {
+  const totalMinutes = hoursPerDay * 60;
+  // 工作日主攻前2科，周末全面复习
+  return WEEKDAYS.map((day, i) => {
+    const isWeekend = i >= 5;
+    const blocks: { subject: string; minutes: number; task: string }[] = [];
 
-  // 从测评结果中解析模块水平
-  const getInitialModules = (): FormData["modules"] => {
-    const defaults: FormData["modules"] = {
-      numbersAndExpressions: "不确定",
-      equationsAndInequalities: "不确定",
-      functions: "不确定",
-      triangles: "不确定",
-      circles: "不确定",
-      statisticsAndProbability: "不确定",
-      geometryComprehensive: "不确定",
-    };
-    if (fromAssessment && searchParams) {
-      try {
-        const modulesJson = searchParams.get("modules");
-        if (modulesJson) {
-          const parsed = JSON.parse(modulesJson) as Record<string, string>;
-          for (const key of Object.keys(defaults)) {
-            if (parsed[key] && ASSESSMENTS.includes(parsed[key] as SelfAssessment)) {
-              (defaults as any)[key] = parsed[key] as SelfAssessment;
-            }
-          }
-        }
-      } catch {
-        // ignore parse errors
+    if (isWeekend) {
+      // 周末分配给所有科目
+      const academic = sorted.filter(s => s !== "体育");
+      for (const sub of academic) {
+        const pct = timeAlloc[sub] || 0;
+        const mins = Math.round(totalMinutes * pct / 100);
+        if (mins < 10) continue;
+        const kb = PLAN_KB[sub];
+        const task = kb?.priorities[0]?.tasks[Math.min(i % 3, (kb?.priorities[0]?.tasks.length || 1) - 1)] || "复习巩固";
+        blocks.push({ subject: sub, minutes: mins, task });
       }
-    }
-    return defaults;
-  };
+      // 周末加体育
+      blocks.push({ subject: "体育", minutes: 30, task: "体能训练" });
+    } else {
+      // 工作日：2 科交替 + 1 科补充
+      const dayIndex = i % sorted.length;
+      const primary = sorted[dayIndex % Math.min(sorted.length, 2)];
+      const secondary = sorted[(dayIndex + 1) % Math.min(sorted.length, 3)];
 
-  const [formData, setFormData] = useState<FormData>({
-    district: urlDistrict,
-    totalScore: urlScore,
-    availableHoursPerDay: 1.5,
-    targetSchool: "",
-    targetSchoolScore: "",
-    daysUntilExam: daysUntilZhongkao(),
-    modules: getInitialModules(),
-  });
+      const primaryMins = Math.round(totalMinutes * 0.6);
+      const secondaryMins = totalMinutes - primaryMins;
 
-  const [loading, setLoading] = useState(false);
-  const [diagnosis, setDiagnosis] = useState<any>(null);
-  const [plan, setPlan] = useState("");
-  const [error, setError] = useState("");
-  const planRef = useRef<HTMLDivElement>(null);
+      const kb1 = PLAN_KB[primary];
+      const kb2 = PLAN_KB[secondary];
+      const taskIdx = Math.floor(i / 2);
 
-  // 选择学校时自动设置目标分数
-  const handleSchoolChange = (schoolName: string) => {
-    setFormData((prev) => {
-      const schools = (SCHOOLS_BY_DISTRICT as Record<string, School[]>)[prev.district] || [];
-      const school = schools.find((s) => s.name === schoolName);
-      return {
-        ...prev,
-        targetSchool: schoolName,
-        targetSchoolScore: school ? String(school.refScore) : prev.targetSchoolScore,
-      };
-    });
-  };
-
-  // 切换区时清空学校选择
-  const handleDistrictChange = (district: string) => {
-    setFormData((prev) => ({
-      ...prev,
-      district,
-      targetSchool: "",
-      targetSchoolScore: "",
-    }));
-  };
-
-  const handleSubmit = async () => {
-    setLoading(true);
-    setError("");
-    setDiagnosis(null);
-    setPlan("");
-
-    try {
-      const res = await fetch("/api/generate-plan", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          district: formData.district,
-          totalScore: formData.totalScore,
-          availableHoursPerDay: formData.availableHoursPerDay,
-          targetSchoolScore: formData.targetSchoolScore ? parseInt(formData.targetSchoolScore) : undefined,
-          targetSchool: formData.targetSchool || undefined,
-          daysUntilExam: formData.daysUntilExam,
-          moduleAssessments: formData.modules,
-        }),
+      blocks.push({
+        subject: primary,
+        minutes: primaryMins,
+        task: kb1?.priorities[0]?.tasks[taskIdx % (kb1?.priorities[0]?.tasks.length || 1)] || "专项练习",
       });
-
-      if (!res.ok) {
-        const data = await res.json();
-        throw new Error(data.error || "生成失败");
+      if (secondary !== primary) {
+        blocks.push({
+          subject: secondary,
+          minutes: secondaryMins,
+          task: kb2?.priorities[0]?.tasks[taskIdx % (kb2?.priorities[0]?.tasks.length || 1)] || "基础巩固",
+        });
       }
-
-      // SSE 流式读取
-      const reader = res.body?.getReader();
-      if (!reader) throw new Error("无法读取响应流");
-
-      const decoder = new TextDecoder();
-      let buffer = "";
-
-      while (true) {
-        const { done, value } = await reader.read();
-        if (done) break;
-
-        buffer += decoder.decode(value, { stream: true });
-        const lines = buffer.split("\n");
-        buffer = lines.pop() || "";
-
-        for (const line of lines) {
-          const trimmed = line.trim();
-          if (!trimmed.startsWith("data: ")) continue;
-          const data = trimmed.slice(6);
-          if (data === "[DONE]") continue;
-
-          try {
-            const parsed = JSON.parse(data);
-            if (parsed.type === "diagnosis") {
-              setDiagnosis(parsed.diagnosis);
-              setLoading(false); // 收到诊断结果就可以展示了
-            } else if (parsed.content) {
-              setPlan((prev) => prev + parsed.content);
-            } else if (parsed.error) {
-              setError(parsed.error);
-            }
-          } catch {
-            // 忽略
-          }
-        }
-      }
-    } catch (err: any) {
-      setError(err.message || "网络错误");
-      setLoading(false);
     }
-  };
+    return { day, blocks };
+  });
+}
 
-  // 自动滚动到底部
+export default function PlanPage() {
+  const [subjects, setSubjects] = useState<Record<string, number>>({
+    语文: 82, 数学: 78, 英语: 75, 物理: 55, 道法: 65, 体育: 40,
+  });
+  const [hoursPerDay, setHoursPerDay] = useState(2);
+  const [showPlan, setShowPlan] = useState(false);
+  const [loaded, setLoaded] = useState(false);
+  const [expandedSubject, setExpandedSubject] = useState<string | null>(null);
+  const [currentWeek, setCurrentWeek] = useState(1);
+
+  // URL 参数
   useEffect(() => {
-    if (planRef.current && plan) {
-      planRef.current.scrollTop = planRef.current.scrollHeight;
+    const params = new URLSearchParams(window.location.search);
+    const subjectsJson = params.get("subjects");
+    if (subjectsJson) {
+      try { setSubjects(JSON.parse(subjectsJson)); } catch { /* */ }
     }
-  }, [plan]);
+    const h = params.get("hours");
+    if (h) setHoursPerDay(parseFloat(h) || 2);
+    if (subjectsJson) setShowPlan(true);
+    setLoaded(true);
+  }, []);
 
-  const schools = (SCHOOLS_BY_DISTRICT as Record<string, School[]>)[formData.district] || [];
-  const showResults = diagnosis || plan;
+  const totalScore = Object.values(subjects).reduce((a, b) => a + b, 0);
+  const days = daysUntilZhongkao();
+  const weeks = Math.floor(days / 7);
+  const timeAlloc = calcTimeAlloc(subjects);
+
+  // 按分差排序（体育除外）
+  const sorted = [...SUBJECT_KEYS]
+    .filter(s => s !== "体育")
+    .sort((a, b) => {
+      const gapA = SUBJECT_MAX[a] - (subjects[a] || 0);
+      const gapB = SUBJECT_MAX[b] - (subjects[b] || 0);
+      return gapB - gapA;
+    });
+
+  const schedule = generateSchedule(timeAlloc, hoursPerDay, sorted);
+
+  // 当前阶段（基于周数）
+  const phase = currentWeek <= 4 ? 1 : currentWeek <= 8 ? 2 : 3;
+  const phaseLabel = phase === 1 ? "基础突破期" : phase === 2 ? "强化提升期" : "冲刺巩固期";
+
+  if (!loaded) return null;
 
   return (
-    <main className="max-w-4xl mx-auto px-4 py-8">
-      {/* Header */}
-      <div className="mb-6">
+    <main className="max-w-2xl mx-auto px-4 py-6">
+      <div className="mb-4">
         <Link href="/" className="text-sm text-gray-400 hover:text-gray-600">&larr; 返回首页</Link>
       </div>
-      <div className="text-center mb-8">
-        <h1 className="text-3xl font-bold text-gray-900 mb-2">📊 数学全面规划</h1>
-        <p className="text-gray-500">
-          全面诊断 7 个模块，生成整体路线图 + 本周详细计划
-        </p>
-        <p className="text-xs text-gray-400 mt-1">
-          距 2026 中考还有 {formData.daysUntilExam} 天（{Math.floor(formData.daysUntilExam / 7)} 周）
-        </p>
+
+      <div className="text-center mb-6">
+        <h1 className="text-2xl font-bold text-gray-900 mb-1">学习计划</h1>
+        <p className="text-sm text-gray-500">基于诊断结果生成个性化周计划</p>
+        <p className="text-xs text-orange-600 mt-1.5">距中考 {days} 天（{weeks} 周）</p>
       </div>
 
-      {/* 输入表单 */}
-      {!showResults && (
-        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-6">
-          <h2 className="text-lg font-semibold text-gray-800 mb-4">基本信息</h2>
-          <div className="grid grid-cols-2 gap-4 mb-6">
-            <div>
-              <label className="block text-sm font-medium text-gray-600 mb-1">所在区</label>
-              <select
-                className="w-full border border-gray-300 rounded-lg px-3 py-2 text-gray-800"
-                value={formData.district}
-                onChange={(e) => handleDistrictChange(e.target.value)}
-              >
-                <option>朝阳区</option>
-                <option>海淀区</option>
-                <option>西城区</option>
-                <option>东城区</option>
-              </select>
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-600 mb-1">
-                最近一次数学成绩（满分100）
-              </label>
-              <input
-                type="number"
-                className="w-full border border-gray-300 rounded-lg px-3 py-2 text-gray-800"
-                value={formData.totalScore}
-                onChange={(e) =>
-                  setFormData({ ...formData, totalScore: parseInt(e.target.value) || 0 })
-                }
-                min={0}
-                max={100}
-              />
-            </div>
-
-            {/* 目标学校选择器 */}
-            <div className="col-span-2">
-              <label className="block text-sm font-medium text-gray-600 mb-1">
-                目标学校（选一个你最想上的）
-              </label>
-              <div className="grid grid-cols-3 gap-2 max-h-48 overflow-y-auto border border-gray-200 rounded-lg p-3">
-                {schools.map((s) => (
-                  <button
-                    key={s.name}
-                    onClick={() => handleSchoolChange(s.name)}
-                    className={`text-left px-3 py-2 rounded-lg text-sm transition-all ${
-                      formData.targetSchool === s.name
-                        ? "bg-blue-50 border-blue-400 border-2 font-medium"
-                        : "border border-gray-200 hover:bg-gray-50"
-                    }`}
-                  >
-                    <span className={TIER_COLORS[s.tier]}>{s.name}</span>
-                    <span className="block text-xs text-gray-400 mt-0.5">
-                      数学参考 {s.refScore}+ · {s.tier}
-                    </span>
-                  </button>
-                ))}
-              </div>
-              {formData.targetSchool && (
-                <p className="text-sm text-blue-600 mt-2">
-                  已选择：{formData.targetSchool}（数学目标 {formData.targetSchoolScore} 分）
-                  <button
-                    className="ml-2 text-gray-400 hover:text-gray-600"
-                    onClick={() => setFormData({ ...formData, targetSchool: "", targetSchoolScore: "" })}
-                  >
-                    清除
-                  </button>
-                </p>
-              )}
-              {!formData.targetSchool && (
-                <div className="mt-2 flex items-center gap-2">
-                  <span className="text-xs text-gray-400">或直接填目标分数：</span>
+      {/* 输入区 */}
+      {!showPlan && (
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-5 mb-6">
+          <h2 className="text-base font-semibold text-gray-800 mb-3">各科成绩</h2>
+          <div className="grid grid-cols-3 gap-3 mb-3">
+            {SUBJECT_KEYS.map(sub => (
+              <div key={sub}>
+                <label className="block text-xs text-gray-500 mb-1">{SUBJECT_ICONS[sub]} {sub}</label>
+                <div className="flex items-center gap-1">
                   <input
                     type="number"
-                    className="w-20 border border-gray-300 rounded px-2 py-1 text-sm text-gray-800"
-                    placeholder="如 85"
-                    value={formData.targetSchoolScore}
-                    onChange={(e) => setFormData({ ...formData, targetSchoolScore: e.target.value })}
-                    min={0}
-                    max={100}
+                    className="w-full border border-gray-300 rounded-lg px-2 py-2 text-gray-800"
+                    value={subjects[sub]}
+                    onChange={e => { setSubjects(prev => ({ ...prev, [sub]: Math.min(SUBJECT_MAX[sub], Math.max(0, parseInt(e.target.value) || 0)) })); }}
+                    min={0} max={SUBJECT_MAX[sub]}
                   />
-                </div>
-              )}
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-gray-600 mb-1">
-                每天可用数学学习时间
-              </label>
-              <select
-                className="w-full border border-gray-300 rounded-lg px-3 py-2 text-gray-800"
-                value={formData.availableHoursPerDay}
-                onChange={(e) =>
-                  setFormData({ ...formData, availableHoursPerDay: parseFloat(e.target.value) })
-                }
-              >
-                <option value={0.5}>半小时</option>
-                <option value={1}>1小时</option>
-                <option value={1.5}>1.5小时</option>
-                <option value={2}>2小时</option>
-                <option value={2.5}>2.5小时</option>
-                <option value={3}>3小时</option>
-              </select>
-            </div>
-          </div>
-
-          {/* 各模块自评 */}
-          <h2 className="text-lg font-semibold text-gray-800 mb-4">各模块自评（可选）</h2>
-          <p className="text-sm text-gray-500 mb-4">
-            不确定的模块可以不改，系统会根据你的总分自动推算。知道的越多，规划越精准。
-          </p>
-
-          <div className="space-y-3">
-            {Object.entries(MODULE_NAMES).map(([key, name]) => (
-              <div key={key} className="flex items-center gap-3">
-                <span className="text-sm text-gray-700 w-80 shrink-0">{name}</span>
-                <div className="flex gap-2">
-                  {ASSESSMENTS.map((a) => (
-                    <button
-                      key={a}
-                      className={`px-3 py-1 text-sm rounded-full border transition-all ${
-                        formData.modules[key as keyof typeof formData.modules] === a
-                          ? ASSESSMENT_COLORS[a] + " font-medium"
-                          : "bg-gray-50 text-gray-400 border-gray-200 hover:bg-gray-100"
-                      }`}
-                      onClick={() =>
-                        setFormData({
-                          ...formData,
-                          modules: { ...formData.modules, [key]: a },
-                        })
-                      }
-                    >
-                      {a}
-                    </button>
-                  ))}
+                  <span className="text-xs text-gray-400 whitespace-nowrap">/{SUBJECT_MAX[sub]}</span>
                 </div>
               </div>
             ))}
           </div>
+          <div className="text-right text-sm text-indigo-600 font-medium mb-3">总分：{totalScore} / {TOTAL_MAX}</div>
 
-          {/* 提交按钮 */}
-          <div className="mt-8 text-center">
-            <button
-              onClick={handleSubmit}
-              disabled={loading}
-              className="px-8 py-3 bg-blue-600 text-white rounded-xl font-medium text-lg hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors"
+          <div className="mb-4">
+            <label className="block text-xs text-gray-500 mb-1">每天学习时间</label>
+            <select
+              className="w-full border border-gray-300 rounded-lg px-2 py-2 text-gray-800"
+              value={hoursPerDay}
+              onChange={e => setHoursPerDay(parseFloat(e.target.value))}
             >
-              {loading ? (
-                <span className="flex items-center gap-2">
-                  <svg className="animate-spin h-5 w-5" viewBox="0 0 24 24">
-                    <circle
-                      className="opacity-25"
-                      cx="12"
-                      cy="12"
-                      r="10"
-                      stroke="currentColor"
-                      strokeWidth="4"
-                      fill="none"
-                    />
-                    <path
-                      className="opacity-75"
-                      fill="currentColor"
-                      d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
-                    />
-                  </svg>
-                  正在诊断...
-                </span>
-              ) : (
-                "生成我的学习规划"
-              )}
-            </button>
+              <option value={1}>1 小时</option>
+              <option value={1.5}>1.5 小时</option>
+              <option value={2}>2 小时</option>
+              <option value={2.5}>2.5 小时</option>
+              <option value={3}>3 小时</option>
+            </select>
           </div>
-        </div>
-      )}
 
-      {/* 错误提示 */}
-      {error && (
-        <div className="bg-red-50 border border-red-200 rounded-xl p-4 mb-6">
-          <p className="text-red-700">{error}</p>
           <button
-            className="mt-2 text-sm text-red-500 underline"
-            onClick={() => {
-              setError("");
-              setDiagnosis(null);
-              setPlan("");
-            }}
+            onClick={() => setShowPlan(true)}
+            className="w-full py-3 bg-blue-600 text-white rounded-xl font-medium hover:bg-blue-700 transition-colors"
           >
-            重试
+            生成学习计划
           </button>
+
+          <p className="text-xs text-gray-400 text-center mt-3">
+            建议先做 <Link href="/diagnosis" className="text-blue-500 underline">全科诊断</Link>，诊断结果会自动带入
+          </p>
         </div>
       )}
 
-      {/* 结果展示 */}
-      {showResults && (
-        <div>
-          {/* 诊断概览 */}
-          {diagnosis && (
-            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-6">
-              <h2 className="text-lg font-semibold text-gray-800 mb-4">诊断概览</h2>
-              <div className="grid grid-cols-4 gap-4 mb-4 text-center">
-                <div className="bg-blue-50 rounded-lg p-3">
-                  <div className="text-2xl font-bold text-blue-700">{diagnosis.totalScore}</div>
-                  <div className="text-xs text-blue-500">当前成绩</div>
-                </div>
-                <div className="bg-green-50 rounded-lg p-3">
-                  <div className="text-2xl font-bold text-green-700">
-                    {diagnosis.targetScore}
-                  </div>
-                  <div className="text-xs text-green-500">目标分数</div>
-                </div>
-                <div className="bg-purple-50 rounded-lg p-3">
-                  <div className="text-2xl font-bold text-purple-700">
-                    {diagnosis.weeksUntilExam}周
-                  </div>
-                  <div className="text-xs text-purple-500">距中考</div>
-                </div>
-                <div className="bg-orange-50 rounded-lg p-3">
-                  <div className="text-2xl font-bold text-orange-700">
-                    +{diagnosis.potentialGain}
-                  </div>
-                  <div className="text-xs text-orange-500">预计可提分</div>
-                </div>
-              </div>
+      {/* 计划结果 */}
+      {showPlan && (
+        <div className="space-y-4">
 
-              {formData.targetSchool && (
-                <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 mb-4 text-center">
-                  <span className="text-blue-800 font-medium">
-                    目标：{formData.targetSchool}
-                  </span>
-                  <span className="text-blue-600 text-sm ml-2">
-                    数学需要 {formData.targetSchoolScore}+ 分
-                  </span>
+          {/* 阶段 + 周切换 */}
+          <div className="bg-white rounded-xl border border-gray-200 overflow-hidden">
+            <div className="bg-gradient-to-r from-green-600 to-emerald-600 px-5 py-4 text-white">
+              <div className="flex items-center justify-between">
+                <div>
+                  <div className="text-sm opacity-80">当前阶段</div>
+                  <div className="text-xl font-bold">{phaseLabel}</div>
                 </div>
-              )}
-
-              {/* 模块水平表格 */}
-              <div className="overflow-x-auto">
-                <table className="w-full text-sm">
-                  <thead>
-                    <tr className="border-b border-gray-200">
-                      <th className="text-left py-2 text-gray-500 font-medium">模块</th>
-                      <th className="text-center py-2 text-gray-500 font-medium">水平</th>
-                      <th className="text-center py-2 text-gray-500 font-medium">预估分</th>
-                      <th className="text-center py-2 text-gray-500 font-medium">可提分</th>
-                      <th className="text-center py-2 text-gray-500 font-medium">时间占比</th>
-                      <th className="text-center py-2 text-gray-500 font-medium">优先级</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {diagnosis.modules.map((m: any) => {
-                      const alloc = diagnosis.timeAllocation.find(
-                        (t: any) => t.moduleId === m.id
-                      );
-                      return (
-                        <tr key={m.id} className="border-b border-gray-100">
-                          <td className="py-2 text-gray-800">{m.name}</td>
-                          <td className="py-2 text-center">
-                            <span
-                              className={`px-2 py-0.5 rounded text-xs font-medium ${
-                                m.level === "L0"
-                                  ? "bg-red-100 text-red-700"
-                                  : m.level === "L1"
-                                  ? "bg-orange-100 text-orange-700"
-                                  : m.level === "L2"
-                                  ? "bg-green-100 text-green-700"
-                                  : "bg-emerald-100 text-emerald-700"
-                              }`}
-                            >
-                              {m.level} {m.levelName}
-                            </span>
-                          </td>
-                          <td className="py-2 text-center text-gray-600">
-                            {m.currentEstimatedScore}分
-                          </td>
-                          <td className="py-2 text-center text-green-600 font-medium">
-                            +{m.potentialGain}
-                          </td>
-                          <td className="py-2 text-center text-gray-600">
-                            {alloc?.percentage || 0}%
-                          </td>
-                          <td className="py-2 text-center">
-                            {m.priority <= 3 ? (
-                              <span className="text-red-600 font-bold">#{m.priority}</span>
-                            ) : (
-                              <span className="text-gray-400">#{m.priority}</span>
-                            )}
-                          </td>
-                        </tr>
-                      );
-                    })}
-                  </tbody>
-                </table>
+                <div className="text-right">
+                  <div className="text-sm opacity-80">计划周次</div>
+                  <div className="flex items-center gap-2">
+                    <button
+                      onClick={() => setCurrentWeek(Math.max(1, currentWeek - 1))}
+                      disabled={currentWeek <= 1}
+                      className="px-2 py-1 rounded bg-white/20 hover:bg-white/30 disabled:opacity-30 text-sm"
+                    >←</button>
+                    <span className="text-xl font-bold">第 {currentWeek} 周</span>
+                    <button
+                      onClick={() => setCurrentWeek(Math.min(weeks, currentWeek + 1))}
+                      disabled={currentWeek >= weeks}
+                      className="px-2 py-1 rounded bg-white/20 hover:bg-white/30 disabled:opacity-30 text-sm"
+                    >→</button>
+                  </div>
+                </div>
               </div>
             </div>
-          )}
-
-          {/* AI 生成的学习规划（流式） */}
-          <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-6">
-            <h2 className="text-lg font-semibold text-gray-800 mb-4">
-              AI 学习规划
-              {plan && !plan.includes("[DONE]") && plan.length < 50 && (
-                <span className="ml-2 text-sm font-normal text-gray-400 animate-pulse">
-                  生成中...
+            {/* 时间分配摘要 */}
+            <div className="px-5 py-3 bg-green-50 flex items-center gap-2 flex-wrap">
+              <span className="text-xs text-green-600 font-medium">本周重点：</span>
+              {sorted.slice(0, 3).map(sub => (
+                <span key={sub} className={`inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-medium ${SUBJECT_COLORS[sub].bg} ${SUBJECT_COLORS[sub].text}`}>
+                  {SUBJECT_ICONS[sub]} {sub} {timeAlloc[sub]}%
                 </span>
-              )}
-            </h2>
-            {!plan && !error && (
-              <div className="flex items-center gap-2 text-gray-400">
-                <svg className="animate-spin h-4 w-4" viewBox="0 0 24 24">
-                  <circle
-                    className="opacity-25"
-                    cx="12"
-                    cy="12"
-                    r="10"
-                    stroke="currentColor"
-                    strokeWidth="4"
-                    fill="none"
-                  />
-                  <path
-                    className="opacity-75"
-                    fill="currentColor"
-                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
-                  />
-                </svg>
-                AI 正在基于五年真题数据生成个性化规划...
-              </div>
-            )}
-            {plan && (
-              <div
-                ref={planRef}
-                className="prose prose-sm max-w-none text-gray-700 prose-headings:text-gray-900 prose-strong:text-gray-900 prose-h2:text-lg prose-h3:text-base max-h-[70vh] overflow-y-auto"
-                dangerouslySetInnerHTML={{ __html: markdownToHtml(plan) }}
-              />
-            )}
+              ))}
+            </div>
           </div>
 
-          {/* 重新开始 */}
-          <div className="text-center mb-8">
+          {/* 每日课表 */}
+          <div className="bg-white rounded-xl border border-gray-200 p-5">
+            <h2 className="text-base font-semibold text-gray-800 mb-3">每日安排</h2>
+            <p className="text-xs text-gray-500 mb-4">每天 {hoursPerDay} 小时 · 工作日主攻重点科 · 周末全面复习</p>
+            <div className="space-y-3">
+              {schedule.map(({ day, blocks }) => (
+                <div key={day} className="flex gap-3">
+                  <div className="w-10 shrink-0 text-center">
+                    <div className={`text-sm font-medium ${day.includes("六") || day.includes("日") ? "text-green-600" : "text-gray-700"}`}>{day}</div>
+                  </div>
+                  <div className="flex-1 flex gap-1.5 flex-wrap">
+                    {blocks.map((b, i) => {
+                      const colors = SUBJECT_COLORS[b.subject];
+                      return (
+                        <div
+                          key={i}
+                          className={`px-3 py-2 rounded-lg text-xs ${colors.bg} ${colors.border} border flex-1 min-w-[120px]`}
+                        >
+                          <div className="flex items-center justify-between mb-0.5">
+                            <span className={`font-medium ${colors.text}`}>{SUBJECT_ICONS[b.subject]} {b.subject}</span>
+                            <span className="text-gray-400">{b.minutes}min</span>
+                          </div>
+                          <p className="text-gray-600 truncate">{b.task}</p>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* 各科本周任务 */}
+          <div>
+            <h2 className="text-base font-semibold text-gray-800 mb-3">各科本周任务</h2>
+            <div className="space-y-3">
+              {sorted.map(sub => {
+                const colors = SUBJECT_COLORS[sub];
+                const kb = PLAN_KB[sub];
+                const isExpanded = expandedSubject === sub;
+                // 根据阶段选不同优先级的任务
+                const priorityIdx = phase === 1 ? 0 : phase === 2 ? Math.min(2, (kb?.priorities.length || 1) - 1) : Math.min(4, (kb?.priorities.length || 1) - 1);
+                const mainPriority = kb?.priorities[Math.min(priorityIdx, (kb?.priorities.length || 1) - 1)];
+                const secondPriority = kb?.priorities[Math.min(priorityIdx + 1, (kb?.priorities.length || 1) - 1)];
+
+                return (
+                  <div key={sub} className={`bg-white rounded-xl border ${colors.border} overflow-hidden`}>
+                    <button
+                      onClick={() => setExpandedSubject(isExpanded ? null : sub)}
+                      className="w-full px-4 py-3 flex items-center gap-3 text-left hover:bg-gray-50 transition-colors"
+                    >
+                      <span className="text-2xl">{SUBJECT_ICONS[sub]}</span>
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center gap-2">
+                          <span className="font-semibold text-gray-900">{sub}</span>
+                          <span className="text-xs text-gray-400">{timeAlloc[sub]}% 时间</span>
+                          <span className={`text-xs px-1.5 py-0.5 rounded ${colors.bg} ${colors.text}`}>
+                            {mainPriority?.area}
+                          </span>
+                        </div>
+                        <p className="text-xs text-gray-500 mt-0.5 truncate">
+                          {mainPriority?.tasks[0]}
+                        </p>
+                      </div>
+                      <span className="text-xs text-gray-400">{isExpanded ? "收起 ▲" : "展开 ▼"}</span>
+                    </button>
+
+                    {isExpanded && kb && (
+                      <div className={`border-t ${colors.border} px-4 py-3`}>
+                        {/* 主要任务 */}
+                        <div className="mb-3">
+                          <h4 className="text-xs font-medium text-gray-500 mb-2">
+                            重点：{mainPriority?.area}（{mainPriority?.potential}）
+                          </h4>
+                          <div className="space-y-1.5">
+                            {mainPriority?.tasks.map((task, i) => (
+                              <div key={i} className="flex items-start gap-2">
+                                <span className="w-4 h-4 rounded border border-gray-300 shrink-0 mt-0.5" />
+                                <span className="text-sm text-gray-700">{task}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                        {/* 次要任务 */}
+                        {secondPriority && secondPriority !== mainPriority && (
+                          <div>
+                            <h4 className="text-xs font-medium text-gray-500 mb-2">
+                              辅助：{secondPriority.area}（{secondPriority.potential}）
+                            </h4>
+                            <div className="space-y-1.5">
+                              {secondPriority.tasks.slice(0, 2).map((task, i) => (
+                                <div key={i} className="flex items-start gap-2">
+                                  <span className="w-4 h-4 rounded border border-gray-300 shrink-0 mt-0.5" />
+                                  <span className="text-sm text-gray-700">{task}</span>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+                        {/* 全部优先级列表 */}
+                        <div className="mt-3 pt-3 border-t border-gray-100">
+                          <h4 className="text-xs font-medium text-gray-400 mb-1.5">全阶段提分路径</h4>
+                          <div className="flex flex-wrap gap-1.5">
+                            {kb.priorities.map((p, i) => (
+                              <span key={i} className={`text-xs px-2 py-0.5 rounded-full ${
+                                i <= priorityIdx ? `${colors.bg} ${colors.text}` : "bg-gray-100 text-gray-400"
+                              }`}>
+                                {i + 1}. {p.area}（{p.potential}）
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+
+              {/* 体育 */}
+              <div className={`bg-white rounded-xl border ${SUBJECT_COLORS["体育"].border} px-4 py-3`}>
+                <div className="flex items-center gap-3">
+                  <span className="text-2xl">🏃</span>
+                  <div>
+                    <span className="font-semibold text-gray-900">体育</span>
+                    <span className="text-xs text-gray-400 ml-2">另安排 · 不占学科时间</span>
+                    <p className="text-xs text-gray-500 mt-0.5">
+                      每天 30 分钟体能训练：中长跑/跳绳 + 力量项目
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* 阶段里程碑 */}
+          <div className="bg-white rounded-xl border border-gray-200 p-5">
+            <h2 className="text-base font-semibold text-gray-800 mb-3">阶段里程碑</h2>
+            <div className="space-y-3">
+              <div className={`flex gap-3 ${phase === 1 ? "opacity-100" : "opacity-50"}`}>
+                <div className="flex flex-col items-center">
+                  <div className={`w-3 h-3 rounded-full ${phase >= 1 ? "bg-green-500" : "bg-gray-300"}`} />
+                  <div className="w-0.5 flex-1 bg-gray-200" />
+                </div>
+                <div className="pb-3">
+                  <p className="text-sm font-medium text-gray-800">第 1-4 周：基础突破</p>
+                  <p className="text-xs text-gray-500">主攻 {sorted[0]} 和 {sorted[1]} 基础模块，每周完成任务清单</p>
+                  {phase === 1 && <span className="text-xs text-green-600 font-medium">← 当前阶段</span>}
+                </div>
+              </div>
+              <div className={`flex gap-3 ${phase === 2 ? "opacity-100" : "opacity-50"}`}>
+                <div className="flex flex-col items-center">
+                  <div className={`w-3 h-3 rounded-full ${phase >= 2 ? "bg-blue-500" : "bg-gray-300"}`} />
+                  <div className="w-0.5 flex-1 bg-gray-200" />
+                </div>
+                <div className="pb-3">
+                  <p className="text-sm font-medium text-gray-800">第 5-8 周：强化提升</p>
+                  <p className="text-xs text-gray-500">中档题型专项突破，一模后调整方案</p>
+                  {phase === 2 && <span className="text-xs text-blue-600 font-medium">← 当前阶段</span>}
+                </div>
+              </div>
+              <div className={`flex gap-3 ${phase === 3 ? "opacity-100" : "opacity-50"}`}>
+                <div className="flex flex-col items-center">
+                  <div className={`w-3 h-3 rounded-full ${phase >= 3 ? "bg-purple-500" : "bg-gray-300"}`} />
+                </div>
+                <div>
+                  <p className="text-sm font-medium text-gray-800">第 9 周 - 中考：冲刺巩固</p>
+                  <p className="text-xs text-gray-500">全科模考 + 查缺补漏 + 心态调整</p>
+                  {phase === 3 && <span className="text-xs text-purple-600 font-medium">← 当前阶段</span>}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* 底部操作 */}
+          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl border border-blue-200 p-5">
+            <h3 className="font-semibold text-blue-800 mb-2">执行建议</h3>
+            <div className="space-y-2 text-sm text-gray-700 mb-4">
+              <p>1. 按每日课表执行，每完成一项打勾</p>
+              <p>2. 每周日回顾本周任务完成情况</p>
+              <p>3. 一模/二模后重新做 <Link href="/diagnosis" className="text-blue-600 underline">全科诊断</Link> 调整方案</p>
+            </div>
+            <div className="flex gap-3">
+              <Link
+                href="/drill"
+                className="flex-1 text-center px-4 py-3 bg-blue-600 text-white rounded-xl font-medium hover:bg-blue-700 transition-colors"
+              >
+                开始专项训练
+              </Link>
+              <Link
+                href="/diagnosis"
+                className="flex-1 text-center px-4 py-3 border-2 border-blue-300 text-blue-700 rounded-xl font-medium hover:bg-blue-50 transition-colors"
+              >
+                重新诊断
+              </Link>
+            </div>
+          </div>
+
+          <div className="text-center pb-6">
             <button
-              onClick={() => {
-                setDiagnosis(null);
-                setPlan("");
-                setError("");
-              }}
-              className="px-6 py-2 border border-gray-300 text-gray-600 rounded-lg hover:bg-gray-100 transition-colors"
+              onClick={() => { setShowPlan(false); setExpandedSubject(null); setCurrentWeek(1); }}
+              className="text-sm text-gray-400 hover:text-gray-600 underline"
             >
-              重新填写
+              重新填写成绩
             </button>
           </div>
         </div>
       )}
     </main>
   );
-}
-
-// Markdown → HTML
-function markdownToHtml(md: string): string {
-  return md
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/^### (.+)$/gm, '<h3 class="font-semibold mt-4 mb-2">$1</h3>')
-    .replace(/^## (.+)$/gm, '<h2 class="font-bold mt-6 mb-3 text-lg">$1</h2>')
-    .replace(/^# (.+)$/gm, '<h1 class="font-bold mt-6 mb-3 text-xl">$1</h1>')
-    .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
-    .replace(/\*(.+?)\*/g, "<em>$1</em>")
-    .replace(/^- (.+)$/gm, '<li class="ml-4 list-disc">$1</li>')
-    .replace(/^\d+\. (.+)$/gm, '<li class="ml-4 list-decimal">$1</li>')
-    .replace(/`(.+?)`/g, '<code class="bg-gray-100 px-1 rounded text-sm">$1</code>')
-    .replace(/^---$/gm, '<hr class="my-4 border-gray-200">')
-    .replace(/\n\n/g, '</p><p class="mb-3">')
-    .replace(/\n/g, "<br>")
-    .replace(/^/, '<p class="mb-3">')
-    .replace(/$/, "</p>");
 }
