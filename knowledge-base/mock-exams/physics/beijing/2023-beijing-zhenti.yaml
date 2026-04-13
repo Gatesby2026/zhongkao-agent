@@ -1,0 +1,226 @@
+# ============================================================
+# 2023年北京市中考物理真题试卷 — 结构摘要
+# ============================================================
+# 满分：70分  时长：与化学合卷90分钟  题数：23题
+# 结构：12单选(24分) + 3多选(6分) + 5实验(28分) + 1阅读(4分) + 2计算(8分)
+
+year: 2023
+district: 北京市
+exam_type: 真题
+subject: 物理
+full_score: 70
+total_questions: 23
+structure: 12单选(24分) + 3多选(6分) + 5实验(28分) + 1阅读(4分) + 2计算(8分)
+
+questions:
+# ---- 单选题 Q1-Q12 每题2分 ----
+- id: 1
+  type: 单选
+  score: 2
+  description: 声现象基础——辨别声音的特性（音调、响度、音色）
+  knowledge_points: [声音的特性, 音调, 响度, 音色]
+  module: soundLightHeat
+  difficulty: 基础
+  recommended_for: [L0, L1, L2, L3]
+
+- id: 2
+  type: 单选
+  score: 2
+  description: 光学基础——光的反射定律与平面镜成像特点
+  knowledge_points: [光的反射, 平面镜成像]
+  module: soundLightHeat
+  difficulty: 基础
+  recommended_for: [L0, L1, L2, L3]
+
+- id: 3
+  type: 单选
+  score: 2
+  description: 热学基础——物态变化的判断（蒸发、液化等生活实例）
+  knowledge_points: [物态变化, 蒸发, 液化]
+  module: soundLightHeat
+  difficulty: 基础
+  recommended_for: [L0, L1, L2, L3]
+
+- id: 4
+  type: 单选
+  score: 2
+  description: 力与运动——惯性现象的判断与牛顿第一定律
+  knowledge_points: [惯性, 牛顿第一定律]
+  module: mechanics
+  difficulty: 基础
+  recommended_for: [L0, L1, L2, L3]
+
+- id: 5
+  type: 单选
+  score: 2
+  description: 电路基础——串并联电路的识别与电流方向判断
+  knowledge_points: [串联电路, 并联电路, 电流方向]
+  module: electricity
+  difficulty: 基础
+  recommended_for: [L0, L1, L2, L3]
+
+- id: 6
+  type: 单选
+  score: 2
+  description: 力的平衡——二力平衡条件的应用与受力分析
+  knowledge_points: [二力平衡, 受力分析]
+  module: mechanics
+  difficulty: 中等
+  recommended_for: [L1, L2, L3]
+
+- id: 7
+  type: 单选
+  score: 2
+  description: 内能与比热容——比较不同物质吸热能力的实验分析
+  knowledge_points: [内能, 比热容, 热量计算]
+  module: soundLightHeat
+  difficulty: 中等
+  recommended_for: [L1, L2, L3]
+
+- id: 8
+  type: 单选
+  score: 2
+  description: 电与磁——通电螺线管的磁场方向判断（安培定则）
+  knowledge_points: [通电螺线管, 安培定则, 电磁铁]
+  module: electricity
+  difficulty: 中等
+  recommended_for: [L1, L2, L3]
+
+- id: 9
+  type: 单选
+  score: 2
+  description: 压强——液体压强公式应用与连通器原理
+  knowledge_points: [液体压强, 连通器]
+  module: mechanics
+  difficulty: 中等
+  recommended_for: [L1, L2, L3]
+
+- id: 10
+  type: 单选
+  score: 2
+  description: 电表读数与欧姆定律——电路中电流表电压表的使用与计算
+  knowledge_points: [欧姆定律, 电流表, 电压表]
+  module: electricity
+  difficulty: 中等
+  recommended_for: [L1, L2, L3]
+
+- id: 11
+  type: 单选
+  score: 2
+  description: 光学与力学综合——凸透镜成像规律与物距像距关系
+  knowledge_points: [凸透镜成像, 物距, 像距]
+  module: soundLightHeat
+  difficulty: 较难
+  recommended_for: [L2, L3]
+
+- id: 12
+  type: 单选
+  score: 2
+  description: 力学与电学压轴单选——杠杆平衡与电路动态分析结合
+  knowledge_points: [杠杆平衡, 电路动态分析]
+  module: mechanics
+  difficulty: 较难
+  recommended_for: [L2, L3]
+
+# ---- 多选题 Q13-Q15 每题2分 ----
+- id: 13
+  type: 多选
+  score: 2
+  description: 力学综合多选——浮力、压强、密度的综合比较与判断
+  knowledge_points: [浮力, 压强, 密度]
+  module: mechanics
+  difficulty: 较难
+  recommended_for: [L2, L3]
+
+- id: 14
+  type: 多选
+  score: 2
+  description: 电学多选——欧姆定律在串并联电路中的综合应用
+  knowledge_points: [欧姆定律, 串联分压, 并联分流]
+  module: electricity
+  difficulty: 较难
+  recommended_for: [L2, L3]
+
+- id: 15
+  type: 多选
+  score: 2
+  description: 电学多选——电功率的计算与额定功率/实际功率辨析
+  knowledge_points: [电功率, 额定功率, 实际功率]
+  module: electricity
+  difficulty: 较难
+  recommended_for: [L2, L3]
+
+# ---- 实验题 Q16-Q20 ----
+- id: 16
+  type: 实验
+  score: 4
+  description: 基础实验——用天平和量筒测量固体密度的操作与读数
+  knowledge_points: [密度测量, 天平使用, 量筒读数]
+  module: experiments
+  difficulty: 基础
+  recommended_for: [L0, L1, L2, L3]
+
+- id: 17
+  type: 实验
+  score: 6
+  description: 经典实验——探究水沸腾时温度变化的特点（记录数据、画图像）
+  knowledge_points: [沸腾, 温度计使用, 数据处理]
+  module: experiments
+  difficulty: 中等
+  recommended_for: [L1, L2, L3]
+
+- id: 18
+  type: 实验
+  score: 6
+  description: 电学实验——用伏安法测定小灯泡的电阻（电路连接、数据分析）
+  knowledge_points: [伏安法测电阻, 电路连接, 数据分析]
+  module: experiments
+  difficulty: 中等
+  recommended_for: [L1, L2, L3]
+
+- id: 19
+  type: 实验
+  score: 6
+  description: 力学实验——探究影响滑动摩擦力大小的因素（控制变量法）
+  knowledge_points: [滑动摩擦力, 控制变量法, 弹簧测力计]
+  module: experiments
+  difficulty: 中等
+  recommended_for: [L1, L2, L3]
+
+- id: 20
+  type: 实验
+  score: 6
+  description: 电学压轴实验——测量小灯泡的电功率（滑动变阻器调节、故障分析）
+  knowledge_points: [电功率测量, 滑动变阻器, 实验故障分析]
+  module: experiments
+  difficulty: 较难
+  recommended_for: [L2, L3]
+
+# ---- 科普阅读 Q21 ----
+- id: 21
+  type: 阅读
+  score: 4
+  description: 科普阅读——阅读关于超导材料的科普文章，提取信息并回答物理问题
+  knowledge_points: [科普阅读, 信息提取, 超导]
+  module: experiments
+  difficulty: 中等
+  recommended_for: [L1, L2, L3]
+
+# ---- 计算题 Q22-Q23 ----
+- id: 22
+  type: 计算
+  score: 4
+  description: 力学计算——利用压强公式计算固体对水平面的压强与压力
+  knowledge_points: [压强计算, 固体压强]
+  module: calculation
+  difficulty: 中等
+  recommended_for: [L1, L2, L3]
+
+- id: 23
+  type: 计算
+  score: 4
+  description: 电学计算——根据电路图求电阻、电流及电功率（欧姆定律+电功率公式）
+  knowledge_points: [欧姆定律计算, 电功率计算, 电路分析]
+  module: calculation
+  difficulty: 较难
+  recommended_for: [L2, L3]

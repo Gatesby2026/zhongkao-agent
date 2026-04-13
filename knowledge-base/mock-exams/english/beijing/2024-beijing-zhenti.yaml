@@ -1,0 +1,54 @@
+# ============================================================
+# 2024年北京市中考英语真题试卷 — 结构摘要
+# ============================================================
+# 新题型: 笔试60分
+# 10单选(10分) + 6完形(6分) + 13阅读(26分,含D篇还原句子3题6分) + 文段表达18分(邮件8+作文10)
+
+year: 2024
+district: 北京市
+exam_type: 真题
+subject: 英语
+full_score: 60
+duration_minutes: 90
+total_questions: 33
+structure: 10单选(10分) + 6完形(6分) + 13阅读(26分) + 文段表达(18分)
+questions:
+# ---- 单项填空 1-10 (每题1分) ----
+- {id: 1, type: 单选, score: 1, description: "人称代词主格/宾格/物主代词辨析", knowledge_points: [代词], module: grammarBasics, difficulty: 基础, recommended_for: [L0, L1, L2, L3]}
+- {id: 2, type: 单选, score: 1, description: "介词 at/in/on 时间地点搭配", knowledge_points: [介词], module: grammarBasics, difficulty: 基础, recommended_for: [L0, L1, L2, L3]}
+- {id: 3, type: 单选, score: 1, description: "形容词最高级 the most 结构", knowledge_points: [最高级], module: grammarBasics, difficulty: 基础, recommended_for: [L0, L1, L2, L3]}
+- {id: 4, type: 单选, score: 1, description: "情态动词 should/could/would 建议用法", knowledge_points: [情态动词], module: grammarBasics, difficulty: 基础, recommended_for: [L0, L1, L2, L3]}
+- {id: 5, type: 单选, score: 1, description: "特殊疑问句 what/which/whose 辨析", knowledge_points: [特殊疑问句], module: grammarBasics, difficulty: 基础, recommended_for: [L0, L1, L2, L3]}
+- {id: 6, type: 单选, score: 1, description: "并列连词 and/but/or/so 逻辑判断", knowledge_points: [连词], module: grammarBasics, difficulty: 基础, recommended_for: [L0, L1, L2, L3]}
+- {id: 7, type: 单选, score: 1, description: "一般过去时与现在完成时区分", knowledge_points: [时态辨析], module: grammarAdvanced, difficulty: 中档, recommended_for: [L1, L2, L3]}
+- {id: 8, type: 单选, score: 1, description: "被动语态(含过去时被动)", knowledge_points: [被动语态], module: grammarAdvanced, difficulty: 中档, recommended_for: [L1, L2, L3]}
+- {id: 9, type: 单选, score: 1, description: "宾语从句引导词及语序", knowledge_points: [宾语从句], module: grammarAdvanced, difficulty: 中档, recommended_for: [L1, L2, L3]}
+- {id: 10, type: 单选, score: 1, description: "不定式作目的状语/动名词作主语", knowledge_points: [非谓语动词], module: grammarAdvanced, difficulty: 中档, recommended_for: [L1, L2, L3]}
+# ---- 完形填空 11-16 (每题1分) ----
+- {id: 11, type: 完形填空, score: 1, description: "记叙文语境中动词辨析(try/stop/keep)", knowledge_points: [动词辨析, 上下文逻辑], module: cloze, difficulty: 中档, recommended_for: [L1, L2, L3]}
+- {id: 12, type: 完形填空, score: 1, description: "名词搭配与语境推断", knowledge_points: [名词辨析, 上下文逻辑], module: cloze, difficulty: 中档, recommended_for: [L1, L2, L3]}
+- {id: 13, type: 完形填空, score: 1, description: "形容词描述人物感受变化", knowledge_points: [形容词辨析], module: cloze, difficulty: 中档, recommended_for: [L1, L2, L3]}
+- {id: 14, type: 完形填空, score: 1, description: "副词/介词短语固定搭配", knowledge_points: [短语搭配], module: cloze, difficulty: 中档, recommended_for: [L1, L2, L3]}
+- {id: 15, type: 完形填空, score: 1, description: "转折与因果连词语篇衔接", knowledge_points: [篇章逻辑], module: cloze, difficulty: 中档, recommended_for: [L2, L3]}
+- {id: 16, type: 完形填空, score: 1, description: "结合全文主旨选择结尾词", knowledge_points: [篇章主旨, 情感词汇], module: cloze, difficulty: 较难, recommended_for: [L2, L3]}
+# ---- 阅读理解 A篇 17-19 (每题2分) ----
+- {id: 17, type: 阅读选择, score: 2, description: "A篇应用文: 活动时间地点细节查找", knowledge_points: [细节理解, 应用文], module: reading, difficulty: 基础, recommended_for: [L0, L1, L2, L3]}
+- {id: 18, type: 阅读选择, score: 2, description: "A篇应用文: 多选项信息比对", knowledge_points: [细节理解, 应用文], module: reading, difficulty: 基础, recommended_for: [L0, L1, L2, L3]}
+- {id: 19, type: 阅读选择, score: 2, description: "A篇应用文: 文体目的推断", knowledge_points: [推断题, 应用文], module: reading, difficulty: 基础, recommended_for: [L0, L1, L2, L3]}
+# ---- 阅读理解 B篇 20-22 (每题2分) ----
+- {id: 20, type: 阅读选择, score: 2, description: "B篇记叙文: 事件起因细节定位", knowledge_points: [细节理解, 记叙文], module: reading, difficulty: 中档, recommended_for: [L1, L2, L3]}
+- {id: 21, type: 阅读选择, score: 2, description: "B篇记叙文: 人物情感变化推断", knowledge_points: [推断题, 记叙文], module: reading, difficulty: 中档, recommended_for: [L1, L2, L3]}
+- {id: 22, type: 阅读选择, score: 2, description: "B篇记叙文: 故事寓意/主旨概括", knowledge_points: [主旨大意, 记叙文], module: reading, difficulty: 中档, recommended_for: [L1, L2, L3]}
+# ---- 阅读理解 C篇 23-26 (每题2分) ----
+- {id: 23, type: 阅读选择, score: 2, description: "C篇说明文: 核心概念细节提取", knowledge_points: [细节理解, 说明文], module: reading, difficulty: 中档, recommended_for: [L1, L2, L3]}
+- {id: 24, type: 阅读选择, score: 2, description: "C篇说明文: 生词含义上下文推断", knowledge_points: [词义猜测, 说明文], module: reading, difficulty: 中档, recommended_for: [L2, L3]}
+- {id: 25, type: 阅读选择, score: 2, description: "C篇说明文: 段落主题句识别", knowledge_points: [篇章结构, 说明文], module: reading, difficulty: 较难, recommended_for: [L2, L3]}
+- {id: 26, type: 阅读选择, score: 2, description: "C篇说明文: 作者写作意图推断", knowledge_points: [写作意图, 说明文], module: reading, difficulty: 较难, recommended_for: [L2, L3]}
+# ---- 阅读理解 D篇还原句子 27-29 (每题2分) ----
+- {id: 27, type: 阅读还原, score: 2, description: "D篇议论文: 根据上下文逻辑还原过渡句", knowledge_points: [篇章衔接, 还原句子], module: reading, difficulty: 中档, recommended_for: [L1, L2, L3]}
+- {id: 28, type: 阅读还原, score: 2, description: "D篇议论文: 根据代词/指示词还原支撑句", knowledge_points: [指代关系, 还原句子], module: reading, difficulty: 较难, recommended_for: [L2, L3]}
+- {id: 29, type: 阅读还原, score: 2, description: "D篇议论文: 根据段落结构还原总结句", knowledge_points: [段落结构, 还原句子], module: reading, difficulty: 较难, recommended_for: [L2, L3]}
+# ---- 文段表达: 邮件 30 (8分) ----
+- {id: 30, type: 应用文写作, score: 8, description: "根据提示写一封英文邮件(约50词), 包含邀请/建议/感谢等功能", knowledge_points: [邮件格式, 应用文写作], module: writing, difficulty: 中档, recommended_for: [L1, L2, L3]}
+# ---- 文段表达: 作文 31 (10分) ----
+- {id: 31, type: 作文, score: 10, description: "围绕学校生活/成长话题写60词左右短文, 要求观点明确有具体事例支撑", knowledge_points: [话题作文, 记叙文写作], module: writing, difficulty: 较难, recommended_for: [L1, L2, L3]}

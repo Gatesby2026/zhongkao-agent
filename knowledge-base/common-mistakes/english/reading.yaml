@@ -1,0 +1,166 @@
+# ============================================================
+# 易错点：阅读理解
+# ============================================================
+# 最后更新：2026-04-12
+# 数据来源：北京中考真题阅卷反馈、教师访谈
+# 重要：阅读理解A-D篇共26分，是英语试卷分值最高的模块
+
+module: 阅读理解
+module_id: reading
+
+mistakes:
+
+  - id: RD-01
+    name: A篇信息查找遗漏
+    frequency: 高
+    affected_levels: [L0]
+    typical_score_loss: 2-4分
+    description: |
+      A篇通常是应用文（广告、通知、表格等），考查信息定位和匹配。
+      常见错误：
+      - 时间/地点/价格等细节看错或看漏
+      - 表格类题目行列对应出错
+      - 被相似信息干扰，选了"似是而非"的选项
+      - 没注意题目中的限定词（如"最便宜的"、"周末"等）
+    exam_examples:
+      - { year: 2023, qid: 阅读A, description: "活动通知类应用文" }
+      - { year: 2024, qid: 阅读A, description: "表格信息匹配" }
+    fix_method: |
+      A篇解题策略——"先题后文，精准定位"：
+      1. 先读题干，画出关键词（时间、地点、人物、数字）
+      2. 回到原文定位关键词所在位置
+      3. 仔细比对选项和原文，注意数字和限定条件
+      4. 表格题：用手指或笔尖沿行列交叉定位
+      标准：A篇限时5分钟完成，零失误
+
+  - id: RD-02
+    name: B篇词义猜测只看字面
+    frequency: 高
+    affected_levels: [L0, L1]
+    typical_score_loss: 2-4分
+    description: |
+      B篇常考词义猜测题，要求根据上下文推断生词或短语的含义。
+      常见错误：
+      - 只看生词本身的字面组合，不看上下文语境
+      - 忽略上下文中的同义词、反义词线索
+      - 忽略因果关系和举例对生词的解释作用
+      - 把已知含义强加给语境中的特殊用法
+    exam_examples:
+      - { year: 2022, qid: 阅读B, description: "根据上下文猜测词义" }
+      - { year: 2024, qid: 阅读B, description: "短语含义推断" }
+    fix_method: |
+      词义猜测四种线索：
+      1. 同义线索：前后有 that is, in other words, or 引出解释
+      2. 反义线索：but, however, unlike 后面是反义暗示
+      3. 因果线索：because, so 前后的逻辑推断
+      4. 举例线索：for example, such as 后的例子揭示含义
+      方法：遮住生词，用自己的话说出这个位置应该是什么意思
+      标准：做15道词义猜测题，总结每题用了哪种线索
+
+  - id: RD-03
+    name: C篇推理判断过度推断
+    frequency: 极高
+    affected_levels: [L1, L2]
+    typical_score_loss: 2-4分
+    description: |
+      C篇常考推理判断题（We can infer/learn from...），需要基于原文合理推断。
+      常见错误：
+      - 过度推断：加入了原文没有的个人理解或常识
+      - 推断不足：直接选了原文原话（那是细节题的答案）
+      - 混淆"作者观点"和"文中人物观点"
+      正确的推理=原文信息+一步逻辑推导，不能跳太远
+    exam_examples:
+      - { year: 2023, qid: 阅读C, description: "推理判断题" }
+      - { year: 2024, qid: 阅读C, description: "从文中推断结论" }
+    fix_method: |
+      推理判断题原则——"紧扣原文，只推一步"：
+      1. 找到题目对应的原文段落
+      2. 基于原文信息向前推一步（不是两步三步）
+      3. 排除法：太绝对的（all, never, must）通常是错的
+      4. 排除法：原文原话复述的通常不是推理题答案
+      验证方法：选完后问自己"原文哪句话支持我的推断"
+      标准：做20道推理判断题，每题标注"原文依据+推理过程"
+
+  - id: RD-04
+    name: D篇还原句子忽略代词指代
+    frequency: 高
+    affected_levels: [L1, L2]
+    typical_score_loss: 2-4分
+    description: |
+      D篇（2024改革后为还原句子/任务型阅读），需将句子填回正确位置。
+      常见错误：
+      - 忽略代词（this, it, they, such）的指代关系
+      - 不注意空格前后的逻辑连接词（however, besides, for example）
+      - 只看内容主题匹配，不看衔接是否通顺
+      - 做完不回读检查整体连贯性
+    exam_examples:
+      - { year: 2024, qid: 阅读D, description: "还原句子题" }
+    fix_method: |
+      还原句子三步法：
+      1. 看待选句子中的代词/连接词：
+         - this/these → 前文必须有对应内容
+         - however/but → 前后内容必须转折
+         - for example → 前面必须有总述
+      2. 看空格前一句的结尾和后一句的开头，找衔接点
+      3. 做完后通读整段，确认逻辑和语义连贯
+      标准：做5套D篇还原题，每题标注"选择依据"
+
+  - id: RD-05
+    name: 主旨大意题选细节
+    frequency: 高
+    affected_levels: [L0, L1]
+    typical_score_loss: 2分
+    description: |
+      主旨大意题（What is the best title / main idea）考查全文概括能力。
+      常见错误：
+      - 选了只覆盖某一段的细节选项
+      - 被首段或末段的某个具体事例吸引
+      - 选项范围太大（比文章讨论的范围更广）
+      - 忽略文章体裁：说明文看首段主题句，议论文看论点
+    exam_examples:
+      - { year: 2022, qid: 阅读C, description: "最佳标题选择" }
+      - { year: 2024, qid: 阅读C, description: "文章主旨大意" }
+    fix_method: |
+      主旨题解题公式：
+      1. 通读全文后用一句中文概括"这篇文章在说什么"
+      2. 对比四个选项，选覆盖面最全的（不能太大也不能太小）
+      3. 排除法：只涉及某一段的 → 太窄；超出文章范围的 → 太宽
+      4. 说明文/议论文：主旨常在首段末句或末段首句
+      5. 记叙文：主旨在故事背后的道理/感悟
+      标准：做15道主旨题，每题先自己概括再选，比较差异
+
+  - id: RD-06
+    name: 细节题答非所问
+    frequency: 中
+    affected_levels: [L0, L1]
+    typical_score_loss: 2分
+    description: |
+      细节理解题看似简单，但常因审题不仔细而选错。
+      常见错误：
+      - 题目问"NOT true"但选了正确的选项（审题失误）
+      - 题目问原因但选了结果（因果混淆）
+      - 多个相似选项只看了A就选，没对比BCD
+      - 原文信息和选项用了同义替换，没认出来
+    exam_examples:
+      - { year: 2023, qid: 阅读B, description: "细节理解NOT题" }
+      - { year: 2024, qid: 阅读A, description: "细节信息匹配" }
+    fix_method: |
+      细节题审题清单：
+      1. 画出题干关键词，特别注意 NOT/EXCEPT/TRUE
+      2. 回原文定位，不要凭记忆选
+      3. 逐个对比选项与原文，注意同义替换：
+         - many → a large number of
+         - important → play a key role in
+      4. NOT题用排除法：找到三个对的，剩下的就是答案
+      标准：做题时在NOT/EXCEPT下画双线提醒自己
+
+by_level:
+  L0:
+    focus: [RD-01, RD-02, RD-05, RD-06]
+    message: "A篇信息查找和细节题是保底分，先把审题习惯养好"
+  L1:
+    focus: [RD-02, RD-03, RD-04, RD-05]
+    message: "词义猜测和推理判断是提分核心，还原句子注意代词线索"
+  L2:
+    focus: [RD-03, RD-04]
+    message: "推理判断控制在'一步推理'，还原句子要保证全对"

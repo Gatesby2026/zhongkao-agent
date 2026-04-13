@@ -1,0 +1,145 @@
+# ============================================================
+# 易错点：进阶语法
+# ============================================================
+# 最后更新：2026-04-12
+# 数据来源：北京中考真题阅卷反馈、教师访谈
+# 重要：进阶语法涉及时态、语态和从句，约影响4分
+
+module: 进阶语法
+module_id: grammarAdvanced
+
+mistakes:
+
+  - id: GA-01
+    name: 时态标志词判断错误
+    frequency: 极高
+    affected_levels: [L0, L1]
+    typical_score_loss: 1-2分
+    description: |
+      北京中考必考时态，关键在识别时态标志词。
+      常见错误：
+      - yesterday 用了一般现在时（应为一般过去时）
+      - now/look/listen 用了一般现在时（应为现在进行时）
+      - already/yet/ever/never 用了一般过去时（应为现在完成时）
+      - next week 用了现在时（应为一般将来时 will/be going to）
+      北京中考重点考查四大时态：一般现在、一般过去、现在进行、现在完成
+    exam_examples:
+      - { year: 2023, qid: 单选7, description: "时态标志词判断" }
+      - { year: 2024, qid: 单选4, description: "现在完成时标志词" }
+    fix_method: |
+      制作时态标志词卡片：
+      - 一般现在时：always, usually, often, sometimes, every day
+      - 一般过去时：yesterday, last week, ago, in 2023, just now
+      - 现在进行时：now, look, listen, at the moment
+      - 现在完成时：already, yet, ever, never, since, for, so far
+      - 一般将来时：tomorrow, next, soon, in the future
+      标准：看到标志词3秒内判断时态，做30题正确率>90%
+
+  - id: GA-02
+    name: 被动语态be+done结构出错
+    frequency: 高
+    affected_levels: [L1, L2]
+    typical_score_loss: 1-2分
+    description: |
+      被动语态 = be + 过去分词（done），需随时态变化。
+      常见错误：
+      - "The bridge built in 2020." → 漏掉 was（应为 was built）
+      - "English is spoke widely." → spoke 应为 spoken（不规则动词）
+      - "The cake was make by mom." → make 应为 made
+      - 时态变化搞错：is being built（正在被建）写成 is built
+    exam_examples:
+      - { year: 2022, qid: 单选8, description: "一般过去时被动语态" }
+      - { year: 2024, qid: 单选5, description: "含情态动词的被动语态" }
+    fix_method: |
+      被动语态公式：
+      - 一般现在时：am/is/are + done
+      - 一般过去时：was/were + done
+      - 含情态动词：can/must/should + be + done
+      - 现在完成时：have/has + been + done
+      关键：背熟不规则动词的过去分词（build-built, speak-spoken等）
+      标准：做20道被动语态填空，注意不规则动词过去分词
+
+  - id: GA-03
+    name: 非谓语to do/doing选错
+    frequency: 高
+    affected_levels: [L1, L2]
+    typical_score_loss: 1分
+    description: |
+      非谓语动词是北京中考高频考点，核心是记住哪些动词后接 to do，哪些接 doing。
+      常见错误：
+      - "enjoy to play" → 应为 enjoy playing
+      - "want playing" → 应为 want to play
+      - "finish to write" → 应为 finish writing
+      - 固定搭配记错：spend...doing, it takes...to do
+    exam_examples:
+      - { year: 2023, qid: 单选6, description: "非谓语动词辨析" }
+      - { year: 2024, qid: 单选7, description: "动词+to do/doing" }
+    fix_method: |
+      分组记忆：
+      接 to do 的动词：want, decide, hope, plan, agree, wish, learn, refuse
+      接 doing 的动词：enjoy, finish, practice, mind, keep, suggest, avoid
+      两者都可但意义不同：stop, remember, forget
+      - stop to do = 停下来去做另一件事
+      - stop doing = 停止正在做的事
+      标准：做25道非谓语选择题，正确率>90%
+
+  - id: GA-04
+    name: 宾语从句语序倒装
+    frequency: 极高
+    affected_levels: [L0, L1]
+    typical_score_loss: 1-2分
+    description: |
+      宾语从句必须用陈述语序（主语+谓语），不能用疑问语序。
+      常见错误：
+      - "I don't know where is he." → 应为 where he is
+      - "Can you tell me how can I get there?" → 应为 how I can get there
+      - "Do you know what does he like?" → 应为 what he likes
+      北京中考几乎每年考查宾语从句语序
+    exam_examples:
+      - { year: 2022, qid: 单选9, description: "宾语从句语序" }
+      - { year: 2023, qid: 单选9, description: "宾语从句引导词+语序" }
+      - { year: 2024, qid: 单选8, description: "宾语从句综合" }
+    fix_method: |
+      宾语从句三要素：引导词 + 陈述语序 + 时态呼应
+      语序口诀："从句不倒装，主谓排好队"
+      检查方法：找到引导词后，看后面是不是"主语+谓语"顺序
+      - Could you tell me where the hospital is? ✓（the hospital 是主语，is 是谓语）
+      时态呼应：主句过去时，从句也用过去的某种时态（客观真理除外）
+      标准：做15道宾语从句题，重点看语序
+
+  - id: GA-05
+    name: 现在完成时for/since混淆
+    frequency: 高
+    affected_levels: [L0, L1]
+    typical_score_loss: 1分
+    description: |
+      现在完成时中 for 和 since 的用法是北京中考必考点。
+      - for + 时间段（for three years, for two hours）
+      - since + 时间点/过去的动作（since 2020, since I came here）
+      常见错误：
+      - "I have lived here since three years." → 应为 for three years
+      - "He has worked here for 2020." → 应为 since 2020
+      - 延续性动词问题："I have bought this book for two years." → 应改为 have had
+    exam_examples:
+      - { year: 2022, qid: 单选7, description: "for/since辨析" }
+      - { year: 2024, qid: 单选4, description: "现在完成时持续用法" }
+    fix_method: |
+      核心区分："for+段，since+点"
+      - for three days / for a long time（时间段）
+      - since Monday / since 2020 / since he left（时间点或过去动作）
+      延续性动词替换（高频考点）：
+      - buy → have    die → be dead
+      - borrow → keep  join → be in/be a member of
+      - begin/start → be on   leave → be away from
+      标准：做20道for/since填空 + 10道延续性动词转换
+
+by_level:
+  L0:
+    focus: [GA-01, GA-04, GA-05]
+    message: "时态标志词和宾语从句语序是必考送分题，for/since区分要过关"
+  L1:
+    focus: [GA-01, GA-02, GA-03, GA-04]
+    message: "四大语法点都要掌握，被动语态和非谓语是提分关键"
+  L2:
+    focus: [GA-02, GA-03]
+    message: "被动语态的复杂时态和非谓语的意义辨析是易失分点"

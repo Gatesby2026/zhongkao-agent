@@ -1,0 +1,247 @@
+# ============================================================
+# 2024年北京市中考语文真题 — 结构概要
+# ============================================================
+# 说明: 本文件仅记录试题结构、知识点与模块映射，不含原题文本
+# 满分：100分  时长：150分钟
+
+year: 2024
+district: 北京市
+exam_type: 真题
+subject: 语文
+full_score: 100
+duration_minutes: 150
+total_questions: 25
+structure: 基础·运用(14分) + 古诗文阅读(17分) + 名著阅读(5分) + 现代文阅读(24分) + 写作(40分)
+
+questions:
+# === 一、基础·运用 (共14分) ===
+- id: 1
+  type: 选择
+  score: 2
+  description: 字音字形辨析——考查易读错、易写错的常用汉字
+  knowledge_points: [字音辨析, 字形辨析]
+  module: basicUsage
+  difficulty: 基础
+  recommended_for: [L0, L1, L2, L3]
+
+- id: 2
+  type: 选择
+  score: 2
+  description: 词语/成语使用——辨析近义词语或判断成语使用是否恰当
+  knowledge_points: [词语运用, 成语辨析]
+  module: basicUsage
+  difficulty: 基础
+  recommended_for: [L0, L1, L2, L3]
+
+- id: 3
+  type: 选择
+  score: 2
+  description: 语病辨析与修改——辨别搭配不当、成分残缺等语病类型
+  knowledge_points: [病句辨析, 语病修改]
+  module: basicUsage
+  difficulty: 中档
+  recommended_for: [L1, L2, L3]
+
+- id: 4
+  type: 综合
+  score: 4
+  description: 综合性学习——以社会实践活动为载体，完成拟写、概括等语言运用任务
+  knowledge_points: [语言运用, 活动方案, 综合性学习]
+  module: basicUsage
+  difficulty: 中档
+  recommended_for: [L1, L2, L3]
+
+- id: 5
+  type: 综合
+  score: 4
+  description: 书法欣赏与文化常识——比较不同书体风格，考查传统文化基础知识
+  knowledge_points: [书法鉴赏, 文化常识, 传统文化]
+  module: basicUsage
+  difficulty: 中档
+  recommended_for: [L1, L2, L3]
+
+# === 二、古诗文阅读 (共17分) ===
+- id: 6
+  type: 填空
+  score: 4
+  description: 古诗文默写——涵盖课内必背篇目，含上下句填写和情境式默写
+  knowledge_points: [古诗文默写, 名句积累]
+  module: classicalReading
+  difficulty: 基础
+  recommended_for: [L0, L1, L2, L3]
+
+- id: 7
+  type: 简答
+  score: 2
+  description: 古诗鉴赏——理解诗歌内容，分析意境或情感变化
+  knowledge_points: [诗歌理解, 意境分析]
+  module: classicalReading
+  difficulty: 中档
+  recommended_for: [L1, L2, L3]
+
+- id: 8
+  type: 简答
+  score: 2
+  description: 古诗鉴赏——品析炼字或表现手法的艺术效果
+  knowledge_points: [炼字赏析, 表现手法]
+  module: classicalReading
+  difficulty: 中档
+  recommended_for: [L1, L2, L3]
+
+- id: 9
+  type: 选择
+  score: 2
+  description: 文言文字词解释——考查重点实词在具体语境中的含义
+  knowledge_points: [文言实词, 一词多义]
+  module: classicalReading
+  difficulty: 基础
+  recommended_for: [L0, L1, L2, L3]
+
+- id: 10
+  type: 选择
+  score: 2
+  description: 文言文虚词辨析——比较"其""于""乃"等虚词的意义和用法
+  knowledge_points: [文言虚词, 虚词辨析]
+  module: classicalReading
+  difficulty: 中档
+  recommended_for: [L1, L2, L3]
+
+- id: 11
+  type: 简答
+  score: 2
+  description: 文言文翻译——翻译含有特殊句式或关键实词的句子
+  knowledge_points: [文言翻译, 特殊句式]
+  module: classicalReading
+  difficulty: 中档
+  recommended_for: [L1, L2, L3]
+
+- id: 12
+  type: 简答
+  score: 2
+  description: 文言文内容分析——概括事件发展或分析人物行为动机
+  knowledge_points: [内容分析, 人物动机]
+  module: classicalReading
+  difficulty: 中档
+  recommended_for: [L1, L2, L3]
+
+- id: 13
+  type: 简答
+  score: 1
+  description: 文言文比较探究——对比两篇文言文的观点或写法异同
+  knowledge_points: [比较阅读, 观点异同]
+  module: classicalReading
+  difficulty: 较难
+  recommended_for: [L2, L3]
+
+# === 三、名著阅读 (共5分) ===
+- id: 14
+  type: 简答
+  score: 2
+  description: 名著知识考查——辨识必读名著中的经典情节或人物关系
+  knowledge_points: [名著情节, 人物关系]
+  module: masterpieceReading
+  difficulty: 基础
+  recommended_for: [L0, L1, L2, L3]
+
+- id: 15
+  type: 简答
+  score: 3
+  description: 名著专题探究——围绕某一主题整合多部名著内容进行比较分析
+  knowledge_points: [专题探究, 比较阅读]
+  module: masterpieceReading
+  difficulty: 中档
+  recommended_for: [L1, L2, L3]
+
+# === 四、现代文阅读 (共24分) ===
+# —— 非连续性文本 / 议论文 (10分) ——
+- id: 16
+  type: 选择
+  score: 2
+  description: 非连续性文本信息筛选——从多则材料中筛选并整合关键信息
+  knowledge_points: [信息筛选, 材料整合]
+  module: modernReading
+  difficulty: 基础
+  recommended_for: [L0, L1, L2, L3]
+
+- id: 17
+  type: 简答
+  score: 3
+  description: 非连续性文本要点归纳——提炼材料核心观点并分条概括
+  knowledge_points: [要点归纳, 观点提炼]
+  module: modernReading
+  difficulty: 中档
+  recommended_for: [L1, L2, L3]
+
+- id: 18
+  type: 简答
+  score: 2
+  description: 论证方法分析——辨析举例论证、对比论证等方法及其作用
+  knowledge_points: [论证方法, 论据分析]
+  module: modernReading
+  difficulty: 中档
+  recommended_for: [L1, L2, L3]
+
+- id: 19
+  type: 简答
+  score: 3
+  description: 非连续性文本综合运用——运用材料信息进行推断或提出建议
+  knowledge_points: [综合运用, 推断建议]
+  module: modernReading
+  difficulty: 中档
+  recommended_for: [L1, L2, L3]
+
+# —— 记叙文阅读 (12分) ——
+- id: 20
+  type: 简答
+  score: 3
+  description: 记叙文内容理解——按照线索梳理情节发展脉络
+  knowledge_points: [情节梳理, 线索把握]
+  module: modernReading
+  difficulty: 中档
+  recommended_for: [L1, L2, L3]
+
+- id: 21
+  type: 简答
+  score: 3
+  description: 记叙文词句品味——分析重要词语或语句的深层含义
+  knowledge_points: [词句品味, 深层含义]
+  module: modernReading
+  difficulty: 中档
+  recommended_for: [L1, L2, L3]
+
+- id: 22
+  type: 简答
+  score: 4
+  description: 记叙文写作手法——分析对比、象征、伏笔等手法的表达效果
+  knowledge_points: [写作手法, 表达效果]
+  module: modernReading
+  difficulty: 较难
+  recommended_for: [L2, L3]
+
+- id: 23
+  type: 简答
+  score: 4
+  description: 记叙文主题探究——深入理解文章主旨并结合自身体验阐述感悟
+  knowledge_points: [主题探究, 个性化感悟]
+  module: modernReading
+  difficulty: 较难
+  recommended_for: [L2, L3]
+
+# === 五、写作 (共40分) ===
+- id: 24
+  type: 作文
+  score: 40
+  description: 命题/半命题作文——以成长体验为核心的记叙文写作（二选一之一）
+  knowledge_points: [审题立意, 记叙文写作, 细节描写]
+  module: writing
+  difficulty: 较难
+  recommended_for: [L1, L2, L3]
+
+- id: 25
+  type: 作文
+  score: 40
+  description: 想象/议论类作文——开放性题目，可选想象文或议论文（二选一之二，与第24题共用40分）
+  knowledge_points: [创意写作, 议论表达, 篇章结构]
+  module: writing
+  difficulty: 较难
+  recommended_for: [L1, L2, L3]

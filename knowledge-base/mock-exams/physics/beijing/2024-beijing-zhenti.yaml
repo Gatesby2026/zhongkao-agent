@@ -1,0 +1,226 @@
+# ============================================================
+# 2024年北京市中考物理真题试卷 — 结构摘要
+# ============================================================
+# 满分：70分  时长：与化学合卷90分钟  题数：23题
+# 结构：12单选(24分) + 3多选(6分) + 5实验(28分) + 1阅读(4分) + 2计算(8分)
+
+year: 2024
+district: 北京市
+exam_type: 真题
+subject: 物理
+full_score: 70
+total_questions: 23
+structure: 12单选(24分) + 3多选(6分) + 5实验(28分) + 1阅读(4分) + 2计算(8分)
+
+questions:
+# ---- 单选题 Q1-Q12 每题2分 ----
+- id: 1
+  type: 单选
+  score: 2
+  description: 声现象基础——判断减弱噪声的途径（在声源处、传播过程中、人耳处）
+  knowledge_points: [噪声, 减弱噪声的途径]
+  module: soundLightHeat
+  difficulty: 基础
+  recommended_for: [L0, L1, L2, L3]
+
+- id: 2
+  type: 单选
+  score: 2
+  description: 光学基础——光的折射现象及其生活实例辨析
+  knowledge_points: [光的折射, 折射现象]
+  module: soundLightHeat
+  difficulty: 基础
+  recommended_for: [L0, L1, L2, L3]
+
+- id: 3
+  type: 单选
+  score: 2
+  description: 热学基础——分子热运动与扩散现象的判断
+  knowledge_points: [分子热运动, 扩散现象]
+  module: soundLightHeat
+  difficulty: 基础
+  recommended_for: [L0, L1, L2, L3]
+
+- id: 4
+  type: 单选
+  score: 2
+  description: 力与运动——力的作用效果（改变物体运动状态与形变）
+  knowledge_points: [力的作用效果, 运动状态改变]
+  module: mechanics
+  difficulty: 基础
+  recommended_for: [L0, L1, L2, L3]
+
+- id: 5
+  type: 单选
+  score: 2
+  description: 电路基础——根据电路图判断用电器的串并联关系及开关作用
+  knowledge_points: [电路图, 串并联识别, 开关作用]
+  module: electricity
+  difficulty: 基础
+  recommended_for: [L0, L1, L2, L3]
+
+- id: 6
+  type: 单选
+  score: 2
+  description: 力的平衡——物体在斜面上静止时的受力分析与力的示意图
+  knowledge_points: [力的平衡, 受力分析, 力的示意图]
+  module: mechanics
+  difficulty: 中等
+  recommended_for: [L1, L2, L3]
+
+- id: 7
+  type: 单选
+  score: 2
+  description: 内能与比热容——利用Q=cm△t比较不同液体的吸热情况
+  knowledge_points: [比热容, 热量计算, Q=cm△t]
+  module: soundLightHeat
+  difficulty: 中等
+  recommended_for: [L1, L2, L3]
+
+- id: 8
+  type: 单选
+  score: 2
+  description: 电与磁——判断导体在磁场中切割磁力线时的电流方向（电磁感应）
+  knowledge_points: [电磁感应, 感应电流方向]
+  module: electricity
+  difficulty: 中等
+  recommended_for: [L1, L2, L3]
+
+- id: 9
+  type: 单选
+  score: 2
+  description: 压强——大气压强的测量方法与托里拆利实验分析
+  knowledge_points: [大气压强, 托里拆利实验]
+  module: mechanics
+  difficulty: 中等
+  recommended_for: [L1, L2, L3]
+
+- id: 10
+  type: 单选
+  score: 2
+  description: 电表与欧姆定律——根据电表示数和电路结构计算未知电阻
+  knowledge_points: [欧姆定律, 电表读数, 电阻计算]
+  module: electricity
+  difficulty: 中等
+  recommended_for: [L1, L2, L3]
+
+- id: 11
+  type: 单选
+  score: 2
+  description: 光学与力学综合——凸透镜成像中像的性质随物距变化的规律
+  knowledge_points: [凸透镜成像规律, 实像与虚像]
+  module: soundLightHeat
+  difficulty: 较难
+  recommended_for: [L2, L3]
+
+- id: 12
+  type: 单选
+  score: 2
+  description: 力学与电学压轴单选——滑轮组效率与电路功率的综合分析
+  knowledge_points: [滑轮组, 机械效率, 电功率]
+  module: mechanics
+  difficulty: 较难
+  recommended_for: [L2, L3]
+
+# ---- 多选题 Q13-Q15 每题2分 ----
+- id: 13
+  type: 多选
+  score: 2
+  description: 力学综合多选——物体浮沉条件与液面变化的综合判断
+  knowledge_points: [浮力, 浮沉条件, 液面变化]
+  module: mechanics
+  difficulty: 较难
+  recommended_for: [L2, L3]
+
+- id: 14
+  type: 多选
+  score: 2
+  description: 电学多选——含电压表电流表的混联电路中欧姆定律的应用
+  knowledge_points: [欧姆定律, 电压表, 电流表, 混联电路]
+  module: electricity
+  difficulty: 较难
+  recommended_for: [L2, L3]
+
+- id: 15
+  type: 多选
+  score: 2
+  description: 电学多选——电功率与电热的计算及安全用电分析
+  knowledge_points: [电功率, 电热, 焦耳定律, 安全用电]
+  module: electricity
+  difficulty: 较难
+  recommended_for: [L2, L3]
+
+# ---- 实验题 Q16-Q20 ----
+- id: 16
+  type: 实验
+  score: 4
+  description: 基础实验——用弹簧测力计测量力的大小及正确使用方法
+  knowledge_points: [弹簧测力计, 力的测量, 仪器使用]
+  module: experiments
+  difficulty: 基础
+  recommended_for: [L0, L1, L2, L3]
+
+- id: 17
+  type: 实验
+  score: 6
+  description: 经典实验——探究光的反射定律（入射角与反射角关系、三线共面）
+  knowledge_points: [光的反射定律, 入射角, 反射角]
+  module: experiments
+  difficulty: 中等
+  recommended_for: [L1, L2, L3]
+
+- id: 18
+  type: 实验
+  score: 6
+  description: 电学实验——探究串联电路中电压的规律（电压表多次测量）
+  knowledge_points: [串联电路电压, 电压表使用, 实验设计]
+  module: experiments
+  difficulty: 中等
+  recommended_for: [L1, L2, L3]
+
+- id: 19
+  type: 实验
+  score: 6
+  description: 力学实验——探究杠杆平衡条件（调节平衡、记录数据、得出结论）
+  knowledge_points: [杠杆平衡条件, 力臂, 实验操作]
+  module: experiments
+  difficulty: 中等
+  recommended_for: [L1, L2, L3]
+
+- id: 20
+  type: 实验
+  score: 6
+  description: 电学压轴实验——探究电流与电压的关系（伏安特性、图像分析、误差讨论）
+  knowledge_points: [电流与电压关系, 伏安特性, 图像分析]
+  module: experiments
+  difficulty: 较难
+  recommended_for: [L2, L3]
+
+# ---- 科普阅读 Q21 ----
+- id: 21
+  type: 阅读
+  score: 4
+  description: 科普阅读——阅读关于北斗导航系统的材料，回答电磁波传播等物理问题
+  knowledge_points: [科普阅读, 电磁波, 信息传递]
+  module: experiments
+  difficulty: 中等
+  recommended_for: [L1, L2, L3]
+
+# ---- 计算题 Q22-Q23 ----
+- id: 22
+  type: 计算
+  score: 4
+  description: 力学计算——利用浮力公式和阿基米德原理求物体的密度或体积
+  knowledge_points: [浮力计算, 阿基米德原理, 密度]
+  module: calculation
+  difficulty: 中等
+  recommended_for: [L1, L2, L3]
+
+- id: 23
+  type: 计算
+  score: 4
+  description: 电学计算——根据串联电路求电阻、电功和电功率（多步骤综合计算）
+  knowledge_points: [串联电路计算, 电功, 电功率计算]
+  module: calculation
+  difficulty: 较难
+  recommended_for: [L2, L3]

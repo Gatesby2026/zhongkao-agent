@@ -1,0 +1,226 @@
+# ============================================================
+# 2025年北京市中考物理真题试卷 — 结构摘要
+# ============================================================
+# 满分：70分  时长：与化学合卷90分钟  题数：23题
+# 结构：12单选(24分) + 3多选(6分) + 5实验(28分) + 1阅读(4分) + 2计算(8分)
+
+year: 2025
+district: 北京市
+exam_type: 真题
+subject: 物理
+full_score: 70
+total_questions: 23
+structure: 12单选(24分) + 3多选(6分) + 5实验(28分) + 1阅读(4分) + 2计算(8分)
+
+questions:
+# ---- 单选题 Q1-Q12 每题2分 ----
+- id: 1
+  type: 单选
+  score: 2
+  description: 声现象基础——利用声呐测距原理计算海底深度
+  knowledge_points: [声速, 声呐测距, 回声]
+  module: soundLightHeat
+  difficulty: 基础
+  recommended_for: [L0, L1, L2, L3]
+
+- id: 2
+  type: 单选
+  score: 2
+  description: 光学基础——光的色散与三原色的辨析
+  knowledge_points: [光的色散, 三原色]
+  module: soundLightHeat
+  difficulty: 基础
+  recommended_for: [L0, L1, L2, L3]
+
+- id: 3
+  type: 单选
+  score: 2
+  description: 热学基础——判断生活中的热传递方式（传导、对流、辐射）
+  knowledge_points: [热传递, 传导, 对流, 辐射]
+  module: soundLightHeat
+  difficulty: 基础
+  recommended_for: [L0, L1, L2, L3]
+
+- id: 4
+  type: 单选
+  score: 2
+  description: 力与运动——速度公式v=s/t的基本应用与匀速直线运动
+  knowledge_points: [速度公式, 匀速直线运动]
+  module: mechanics
+  difficulty: 基础
+  recommended_for: [L0, L1, L2, L3]
+
+- id: 5
+  type: 单选
+  score: 2
+  description: 电路基础——家庭电路的组成与安全用电常识
+  knowledge_points: [家庭电路, 安全用电]
+  module: electricity
+  difficulty: 基础
+  recommended_for: [L0, L1, L2, L3]
+
+- id: 6
+  type: 单选
+  score: 2
+  description: 力的平衡——静止在水平面上物体的受力分析与相互作用力辨析
+  knowledge_points: [二力平衡, 相互作用力, 受力分析]
+  module: mechanics
+  difficulty: 中等
+  recommended_for: [L1, L2, L3]
+
+- id: 7
+  type: 单选
+  score: 2
+  description: 内能与比热容——做功改变内能与热传递改变内能的实例判断
+  knowledge_points: [内能, 做功改变内能, 热传递]
+  module: soundLightHeat
+  difficulty: 中等
+  recommended_for: [L1, L2, L3]
+
+- id: 8
+  type: 单选
+  score: 2
+  description: 电与磁——磁场中通电导体的受力方向判断（左手定则）
+  knowledge_points: [通电导体受力, 左手定则, 电动机原理]
+  module: electricity
+  difficulty: 中等
+  recommended_for: [L1, L2, L3]
+
+- id: 9
+  type: 单选
+  score: 2
+  description: 压强——固体压强的比较与叠放问题
+  knowledge_points: [固体压强, 压强比较, 叠放问题]
+  module: mechanics
+  difficulty: 中等
+  recommended_for: [L1, L2, L3]
+
+- id: 10
+  type: 单选
+  score: 2
+  description: 电表与欧姆定律——并联电路中电流表电压表示数的分析
+  knowledge_points: [欧姆定律, 并联电路, 电表分析]
+  module: electricity
+  difficulty: 中等
+  recommended_for: [L1, L2, L3]
+
+- id: 11
+  type: 单选
+  score: 2
+  description: 光学与力学综合——透镜组合与力学情境结合的信息题
+  knowledge_points: [凸透镜, 凹透镜, 力学综合]
+  module: soundLightHeat
+  difficulty: 较难
+  recommended_for: [L2, L3]
+
+- id: 12
+  type: 单选
+  score: 2
+  description: 力学与电学压轴单选——利用图像信息进行功率与效率的综合比较
+  knowledge_points: [功率, 效率, 图像分析]
+  module: mechanics
+  difficulty: 较难
+  recommended_for: [L2, L3]
+
+# ---- 多选题 Q13-Q15 每题2分 ----
+- id: 13
+  type: 多选
+  score: 2
+  description: 力学综合多选——液体压强与固体压强的对比分析（切割/倒置模型）
+  knowledge_points: [液体压强, 固体压强, 压强对比]
+  module: mechanics
+  difficulty: 较难
+  recommended_for: [L2, L3]
+
+- id: 14
+  type: 多选
+  score: 2
+  description: 电学多选——动态电路中电阻变化引起的电表示数变化分析
+  knowledge_points: [欧姆定律, 动态电路分析, 滑动变阻器]
+  module: electricity
+  difficulty: 较难
+  recommended_for: [L2, L3]
+
+- id: 15
+  type: 多选
+  score: 2
+  description: 电学多选——电功率与电能的综合计算及比例关系
+  knowledge_points: [电功率, 电能, 比例计算]
+  module: electricity
+  difficulty: 较难
+  recommended_for: [L2, L3]
+
+# ---- 实验题 Q16-Q20 ----
+- id: 16
+  type: 实验
+  score: 4
+  description: 基础实验——用刻度尺和停表测量纸锥下落的速度
+  knowledge_points: [刻度尺使用, 停表读数, 速度测量]
+  module: experiments
+  difficulty: 基础
+  recommended_for: [L0, L1, L2, L3]
+
+- id: 17
+  type: 实验
+  score: 6
+  description: 经典实验——探究平面镜成像的特点（等大蜡烛替代法、虚像验证）
+  knowledge_points: [平面镜成像, 等大替代法, 虚像]
+  module: experiments
+  difficulty: 中等
+  recommended_for: [L1, L2, L3]
+
+- id: 18
+  type: 实验
+  score: 6
+  description: 电学实验——探究并联电路中电流的规律（多次测量、换用不同电阻）
+  knowledge_points: [并联电路电流, 电流表使用, 多次测量]
+  module: experiments
+  difficulty: 中等
+  recommended_for: [L1, L2, L3]
+
+- id: 19
+  type: 实验
+  score: 6
+  description: 力学实验——探究影响液体内部压强大小的因素（U形管压强计）
+  knowledge_points: [液体压强实验, U形管压强计, 控制变量法]
+  module: experiments
+  difficulty: 中等
+  recommended_for: [L1, L2, L3]
+
+- id: 20
+  type: 实验
+  score: 6
+  description: 电学压轴实验——探究影响电磁铁磁性强弱的因素（线圈匝数与电流）
+  knowledge_points: [电磁铁, 磁性强弱, 线圈匝数, 电流大小]
+  module: experiments
+  difficulty: 较难
+  recommended_for: [L2, L3]
+
+# ---- 科普阅读 Q21 ----
+- id: 21
+  type: 阅读
+  score: 4
+  description: 科普阅读——阅读关于新型半导体材料的文章，回答电阻率与导体性质问题
+  knowledge_points: [科普阅读, 半导体, 电阻率]
+  module: experiments
+  difficulty: 中等
+  recommended_for: [L1, L2, L3]
+
+# ---- 计算题 Q22-Q23 ----
+- id: 22
+  type: 计算
+  score: 4
+  description: 力学计算——利用功和功率公式求起重机提升重物的有用功与机械效率
+  knowledge_points: [功的计算, 功率, 机械效率]
+  module: calculation
+  difficulty: 中等
+  recommended_for: [L1, L2, L3]
+
+- id: 23
+  type: 计算
+  score: 4
+  description: 电学计算——根据并联电路求各支路电流、总电阻及电功率（综合计算）
+  knowledge_points: [并联电路计算, 电阻计算, 电功率计算]
+  module: calculation
+  difficulty: 较难
+  recommended_for: [L2, L3]

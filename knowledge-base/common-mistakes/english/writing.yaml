@@ -1,0 +1,179 @@
+# ============================================================
+# 易错点：文段表达（写作）
+# ============================================================
+# 最后更新：2026-04-12
+# 数据来源：北京中考真题阅卷反馈、教师访谈
+# 重要：文段表达共18分（应用文8分+命题作文10分），是拉开差距的关键
+
+module: 文段表达
+module_id: writing
+
+mistakes:
+
+  - id: WR-01
+    name: 邮件回复格式错误
+    frequency: 高
+    affected_levels: [L0, L1]
+    typical_score_loss: 2-3分
+    description: |
+      北京中考应用文常考邮件回复（8分），格式分占1-2分。
+      常见错误：
+      - 缺少开头称呼（Dear Jim,）
+      - 缺少结尾署名（Yours, Li Hua）
+      - 开头没有回应对方来信（如"Thanks for your email."）
+      - 结尾没有期待回信或祝愿语
+      - 称呼和署名格式不规范（如没有逗号、大小写错误）
+    exam_examples:
+      - { year: 2023, qid: 文段表达1, description: "回复邮件：介绍中国传统文化" }
+      - { year: 2024, qid: 文段表达1, description: "回复邮件：推荐活动" }
+    fix_method: |
+      邮件模板（背熟）：
+      Dear [名字],
+        I'm glad to receive your email. / Thanks for your email.
+        [正文回答对方问题，覆盖所有要点]
+        I hope this helps. / Looking forward to your reply.
+      Yours,
+      Li Hua
+      注意：称呼后用逗号，Yours后用逗号，Li Hua单独一行
+      标准：默写邮件格式模板，格式分不丢
+
+  - id: WR-02
+    name: 要点遗漏
+    frequency: 极高
+    affected_levels: [L0, L1]
+    typical_score_loss: 2-4分
+    description: |
+      北京中考写作题目通常给出2-3个要点（要求回答的问题），每个要点都必须覆盖。
+      常见错误：
+      - 只回答了第一个问题，忽略了后面的
+      - 写了很多但偏离了题目要求的要点
+      - 要点虽然提及但展开不够（只用一句话带过）
+      阅卷时每个要点对应固定分值，漏一个就扣对应分数
+    exam_examples:
+      - { year: 2022, qid: 文段表达1, description: "三个问题只回答了两个" }
+      - { year: 2024, qid: 文段表达1, description: "要点覆盖完整性" }
+    fix_method: |
+      写前列提纲法：
+      1. 读题后在草稿纸上列出所有要点（通常2-3个）
+      2. 每个要点至少写2-3句话展开
+      3. 写完后逐个打钩确认所有要点都已覆盖
+      4. 如果题目有"给建议"等开放性要求，至少写1-2条具体建议
+      标准：写作前必须列要点提纲，写完后对照打钩
+
+  - id: WR-03
+    name: 时态不一致
+    frequency: 极高
+    affected_levels: [L0, L1]
+    typical_score_loss: 2-3分
+    description: |
+      整篇作文中时态混乱是最常见的语法扣分点。
+      常见错误：
+      - 描述过去经历时一般过去时和一般现在时混用
+      - 写计划/打算时忘了用将来时
+      - 同一段落内时态随意切换
+      - 引用名言或事实时不知道用什么时态
+    exam_examples:
+      - { year: 2023, qid: 文段表达2, description: "记叙文时态混乱扣分" }
+      - { year: 2024, qid: 文段表达2, description: "作文时态一致性" }
+    fix_method: |
+      时态选择指南：
+      - 描述过去经历/事件 → 全文用一般过去时
+      - 描述习惯/事实/观点 → 一般现在时
+      - 描述计划/打算 → 一般将来时（will / be going to）
+      - 正在进行的 → 现在进行时
+      写前确定主时态，写完后检查：
+      1. 画出所有动词
+      2. 检查是否和主时态一致
+      3. 有合理理由才切换时态（如"过去→现在感悟"）
+      标准：写完后用彩色笔标出所有动词，检查时态一致性
+
+  - id: WR-04
+    name: 中式英语
+    frequency: 高
+    affected_levels: [L0, L1]
+    typical_score_loss: 1-3分
+    description: |
+      直接按中文语序翻译，产生不地道的英语表达。
+      高频中式英语：
+      - "我很喜欢" → "I very like" → 应为 I like...very much
+      - "我认为不" → "I think not" → 应为 I don't think
+      - "让我介绍" → "Let me introduce" → 应为 I'd like to tell you about
+      - "学习知识" → "learn knowledge" → 应为 learn/gain knowledge 或 study
+      - "提高自己" → "improve myself" → 应为 improve my skills/abilities
+    exam_examples:
+      - { year: 2023, qid: 文段表达2, description: "中式英语表达扣分" }
+      - { year: 2024, qid: 文段表达, description: "表达地道性评分" }
+    fix_method: |
+      高频中式英语纠正表：
+      - 我很喜欢 → I like...very much / I really enjoy
+      - 对我来说很重要 → It's important for me to...
+      - 我认为...不 → I don't think... (否定前移)
+      - 越来越多 → more and more / an increasing number of
+      - 有很多好处 → ...is good for / ...benefits us
+      背诵10篇中考满分范文，积累地道表达
+      标准：写完后检查是否有"先想中文再翻译"的痕迹
+
+  - id: WR-05
+    name: 命题作文观点不明确
+    frequency: 高
+    affected_levels: [L1, L2]
+    typical_score_loss: 2-3分
+    description: |
+      北京中考命题作文（10分）通常要求表达观点或感悟。
+      常见错误：
+      - 全文叙事但没有明确表达观点/感悟
+      - 观点写了但藏在中间，开头结尾看不到
+      - 观点和论据脱节，写了观点但没有例子支撑
+      - 结尾草草收场，没有总结升华
+    exam_examples:
+      - { year: 2023, qid: 文段表达2, description: "关于成长的命题作文" }
+      - { year: 2024, qid: 文段表达2, description: "观点表达类作文" }
+    fix_method: |
+      命题作文结构模板：
+      第一段：开门见山亮观点（1-2句）
+        "In my opinion, ... / I believe that..."
+      第二段：用具体事例或理由支撑（3-5句）
+        "For example, ... / What's more, ..."
+      第三段：总结观点 + 升华感悟（1-2句）
+        "All in all, ... / From this experience, I learned that..."
+      关键：首尾呼应，开头有观点，结尾有总结
+      标准：写完后检查首段和末段是否都有明确观点
+
+  - id: WR-06
+    name: 词汇和句式单一
+    frequency: 中
+    affected_levels: [L1, L2]
+    typical_score_loss: 1-2分
+    description: |
+      全文只用简单句和基础词汇，虽然不出错但拿不到高分。
+      常见问题：
+      - 全文都是 I think / I like / It is 开头
+      - 没有使用任何从句或复合句
+      - 形容词只用 good/bad/happy/sad
+      - 连接词只用 and/but/so
+    exam_examples:
+      - { year: 2024, qid: 文段表达2, description: "语言丰富度评分标准" }
+    fix_method: |
+      加分句型（背熟5个即可）：
+      1. 感叹句：What a wonderful experience it was!
+      2. 宾语从句：I believe that hard work leads to success.
+      3. 状语从句：Although it was difficult, I never gave up.
+      4. 被动语态：I was deeply moved by his words.
+      5. 不定式做目的状语：To improve my English, I read every day.
+      加分词汇替换：
+      - good → wonderful/excellent/amazing
+      - bad → terrible/awful
+      - happy → delighted/pleased/excited
+      - like → be fond of/enjoy/be interested in
+      标准：每篇作文至少用2个加分句型和3个高级词汇
+
+by_level:
+  L0:
+    focus: [WR-01, WR-02, WR-03]
+    message: "先保证格式正确、要点不漏、时态一致，这是写作基础分"
+  L1:
+    focus: [WR-02, WR-04, WR-05]
+    message: "消除中式英语、要点展开充分、观点明确是提分关键"
+  L2:
+    focus: [WR-05, WR-06]
+    message: "观点鲜明+丰富句式是冲满分的关键，背熟加分句型"
