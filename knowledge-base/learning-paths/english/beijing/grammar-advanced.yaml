@@ -1,0 +1,401 @@
+# ============================================================
+# 学习路径：进阶语法（时态/被动/非谓语/从句）
+# ============================================================
+# 状态：LLM生成初稿，待教师审核
+# 最后更新：2026-04-12
+# 地区：北京
+# 重要性：笔试单选7-10题，共4分，区分度高
+
+module: 进阶语法
+subject: 英语
+region: 北京
+
+# ================================================================
+#  L0 -> L1：建立时态和从句的基本概念
+# ================================================================
+L0_to_L1:
+  target: 掌握八大时态的基本构成，知道被动语态和从句的概念
+  estimated_hours: 18-22
+  prerequisite: 基础语法L1以上（代词/介词/连词基本掌握）
+
+  steps:
+    - order: 1
+      topic: 八大时态构成——从时间轴开始
+      goal: 建立时态时间轴概念，掌握每种时态的构成公式
+      estimated_hours: 8
+      resources:
+        - type: 教材
+          name: 人教版Go for it七年级-九年级·各时态章节
+          how_to_use: |
+            第1-2天：三大基本时态
+            一般现在时：do/does（三单加s）
+            标志词：always/usually/often/sometimes/every day
+            一般过去时：did（动词过去式）
+            标志词：yesterday/last.../ago/in 2023/just now
+            一般将来时：will do / be going to do
+            标志词：tomorrow/next.../soon/in 2025
+
+            第3-4天：两大进行时
+            现在进行时：am/is/are + doing
+            标志词：now/look/listen/at the moment
+            过去进行时：was/were + doing
+            标志词：at that time/at 8 last night/when...
+
+            第5-6天：两大完成时
+            现在完成时：have/has + done
+            标志词：since/for/already/yet/ever/never/just/so far
+            过去完成时：had + done
+            标志词：by the time/before/after/by the end of last year
+
+            第7-8天：过去将来时 + 综合复习
+            过去将来时：would do / was going to do
+            用于宾语从句中（He said he would come.）
+            画时间轴总结八大时态的位置关系
+            综合练习20题
+        - type: 练习
+          name: 五三英语·时态基础篇
+          how_to_use: 每个时态做5题基础练习，共40题
+      pass_criteria:
+        - 八大时态的构成公式能默写
+        - 常见标志词和对应时态能匹配
+        - 基础时态选择题正确率≥70%
+      common_pitfalls:
+        - "一般过去时不规则动词过去式要背（go-went, see-saw, do-did）"
+        - "现在完成时的have/has+过去分词（不是过去式！went≠gone）"
+        - "for+时间段，since+时间点（since 2020 / for 3 years）"
+
+    - order: 2
+      topic: 被动语态入门
+      goal: 理解主动和被动的区别，掌握一般现在时和一般过去时的被动语态
+      estimated_hours: 3
+      resources:
+        - type: 教材
+          name: 人教版Go for it八年级下册·被动语态章节
+          how_to_use: |
+            第1天：主动 vs 被动的概念
+            主动：Tom cleans the room.（Tom做动作）
+            被动：The room is cleaned by Tom.（room被清洁）
+            判断方法：主语是动作的执行者→主动；主语是动作的承受者→被动
+
+            第2天：被动语态公式
+            一般现在时被动：am/is/are + done
+            一般过去时被动：was/were + done
+            含情态动词的被动：can/must/should + be + done
+            练习：主动句改被动句10题
+
+            第3天：练习巩固
+            北京卷被动语态常考场景：
+            Chinese is spoken by... / The bridge was built in...
+            做15题被动语态选择题
+        - type: 练习
+          name: 五三英语·被动语态基础
+          how_to_use: 做★和★★题
+      pass_criteria:
+        - 能判断句子应该用主动还是被动
+        - 一般现在时和过去时的被动构成正确
+      common_pitfalls:
+        - "被动语态的done是过去分词不是过去式"
+        - "不及物动词没有被动语态（happen/take place不能用被动）"
+
+    - order: 3
+      topic: 宾语从句基础
+      goal: 掌握宾语从句三要素：引导词+陈述语序+时态呼应
+      estimated_hours: 4
+      resources:
+        - type: 教材
+          name: 人教版Go for it九年级·宾语从句章节
+          how_to_use: |
+            第1天：引导词选择
+            that引导陈述句：I think (that) he is right.
+            if/whether引导一般疑问句：I don't know if he will come.
+            特殊疑问词引导特殊疑问句：Can you tell me where he lives?
+
+            第2天：陈述语序（最核心！）
+            错误：Do you know what is his name?
+            正确：Do you know what his name is?
+            规则：从句部分必须用陈述语序（主+谓）
+            练习：把疑问句改成宾语从句10题
+
+            第3天：时态呼应
+            主句一般现在时→从句任何时态
+            主句一般过去时→从句也要用对应过去时态
+            例外：从句是客观真理时用一般现在时
+            The teacher told us (that) the earth goes around the sun.
+
+            第4天：综合练习
+            做20题宾语从句选择题
+        - type: 练习
+          name: 五三英语·宾语从句专项
+          how_to_use: 做基础题15题
+      pass_criteria:
+        - 引导词选择正确率≥80%
+        - 陈述语序不出错
+        - 基本的时态呼应能判断
+      common_pitfalls:
+        - "Could you tell me...中的could是委婉语气，从句时态不受影响"
+        - "if/whether的区别：whether or not / whether to do只能用whether"
+
+    - order: 4
+      topic: 定语从句和非谓语动词初识
+      goal: 知道定语从句的基本结构，了解to do/doing的常见搭配
+      estimated_hours: 4
+      resources:
+        - type: 教材
+          name: 人教版Go for it九年级·定语从句+非谓语章节
+          how_to_use: |
+            第1-2天：定语从句基础
+            结构：先行词 + 关系词 + 从句
+            关系代词：who/that（修饰人），which/that（修饰物）
+            例：The boy who is reading is Tom.
+                The book that I bought is interesting.
+            关系代词在从句中作主语不能省，作宾语可以省
+            练习：选择关系代词填空15题
+
+            第3-4天：非谓语动词
+            to do（不定式）：want to do / decide to do / It's+adj+to do
+            doing（动名词）：enjoy doing / finish doing / practice doing
+            常考搭配必须背：
+            stop to do（停下来去做）vs stop doing（停止做）
+            forget to do（忘记要做）vs forget doing（忘记做过）
+            remember to do vs remember doing
+            练习15题
+        - type: 练习
+          name: 五三英语·定语从句+非谓语基础
+          how_to_use: 各做10题基础题
+      pass_criteria:
+        - 定语从句能选出正确的关系代词
+        - to do/doing的常见搭配记住10组以上
+      common_pitfalls:
+        - "定语从句的that不能省略的情况：先行词是人+物/有最高级修饰/有the only修饰"
+        - "动词后接to do还是doing需要背，没有规律可言"
+
+# ================================================================
+#  L1 -> L2：攻克高频易错考点
+# ================================================================
+L1_to_L2:
+  target: 单选7-10题正确率达到70%以上
+  estimated_hours: 12-15
+  prerequisite: L1
+
+  steps:
+    - order: 1
+      topic: 现在完成时 vs 一般过去时——北京卷必考
+      goal: 彻底分清两种时态的使用场景
+      estimated_hours: 3
+      resources:
+        - type: 练习
+          name: 万唯英语·现在完成时专项
+          how_to_use: |
+            核心区别：
+            一般过去时：强调过去的动作（When did you come? I came yesterday.）
+            现在完成时：强调过去的动作对现在的影响（I have finished my homework.已经完成了）
+                        或从过去持续到现在（I have lived here since 2020.一直住到现在）
+
+            易错点：
+            1. have been to（去过）vs have gone to（去了还没回）
+            2. 短暂动词不能和for/since连用（不能说have bought for 2 years）
+               要转换：buy→have  borrow→keep  die→be dead  join→be in/be a member of
+            3. 标志词判断：already/yet/ever/never/just→现在完成时
+               yesterday/ago/last→一般过去时
+
+            做25题对比练习
+      pass_criteria:
+        - 现在完成时和一般过去时选择正确率≥85%
+        - 短暂动词的持续性转换至少掌握8组
+
+    - order: 2
+      topic: 宾语从句进阶——主将从现和特殊情况
+      goal: 攻克宾语从句 vs 时间/条件状语从句的时态规则
+      estimated_hours: 3
+      resources:
+        - type: 练习
+          name: 五三英语·从句时态辨析
+          how_to_use: |
+            关键区分：
+            时间/条件状语从句（if/when引导）：主将从现
+            例：I will call you when he arrives.（arrives不是will arrive）
+
+            宾语从句（if/when引导）：正常时态
+            例：Do you know when he will arrive?（will arrive不是arrives）
+
+            判断方法：
+            when/if引导的从句是"什么时候/是否"→宾语从句→正常时态
+            when/if引导的从句是"当...时/如果"→状语从句→主将从现
+
+            做20题辨析练习
+      pass_criteria:
+        - 主将从现 vs 宾语从句正常时态判断正确率≥80%
+
+    - order: 3
+      topic: 定语从句关系词选择专项
+      goal: 掌握who/which/that/whose/where/when的区分
+      estimated_hours: 3
+      resources:
+        - type: 练习
+          name: 万唯英语·定语从句专项
+          how_to_use: |
+            选择策略：
+            1. 先看先行词是人还是物
+            2. 再看关系词在从句中充当什么成分
+               作主语/宾语→who/which/that
+               作定语（...的）→whose
+               作地点状语→where
+               作时间状语→when
+
+            只能用that的情况：
+            先行词是人+物 / 有最高级 / 有the only/the very/the first
+            先行词是all/everything/nothing/anything
+
+            做20题
+      pass_criteria:
+        - 关系词选择正确率≥80%
+        - 只能用that的情况至少记住3种
+
+    - order: 4
+      topic: 非谓语动词作宾补专项
+      goal: 掌握see/hear/make/let等后接非谓语的规则
+      estimated_hours: 2
+      resources:
+        - type: 练习
+          name: 五三英语·非谓语动词拔高
+          how_to_use: |
+            高频考点：
+            1. see/hear/watch/notice + sb + do（全过程）/ doing（正在）
+            2. make/let + sb + do（省略to的不定式）
+               被动：sb is made to do（被动时to要还原）
+            3. ask/tell/want/allow + sb + to do
+            4. spend...doing / It takes...to do / be busy doing
+
+            做15题
+      pass_criteria:
+        - 感官动词和使役动词后的非谓语正确率≥80%
+
+    - order: 5
+      topic: 真题单选7-10逐年精练
+      goal: 适应北京卷出题风格
+      estimated_hours: 3
+      resources:
+        - type: 真题
+          name: 北京中考英语真题2019-2025·单选7-10题
+          how_to_use: |
+            逐年做题：每年4题，共约28题
+            做完对答案，分析每题考查的语法点
+            按考点统计：时态/被动/宾语从句/定语从句各考了几次
+            总结北京卷的出题规律和高频考点
+            限时训练：4题2分钟内完成
+      pass_criteria:
+        - 真题正确率≥70%
+        - 能判断每题考查的语法点
+
+# ================================================================
+#  L2 -> L3：拿下区分度最高的后4题
+# ================================================================
+L2_to_L3:
+  target: 单选7-10题至少对3题，冲击4题全对
+  estimated_hours: 8-10
+  prerequisite: L2
+  notes: 这4分是区分度最高的，适合目标85+的学生
+
+  steps:
+    - order: 1
+      topic: 高难度时态和从句辨析
+      goal: 攻克过去完成时、复杂宾语从句、定语从句综合
+      estimated_hours: 3
+      resources:
+        - type: 练习
+          name: 海淀/西城一模二模·单选7-10题精选
+          how_to_use: |
+            高难度考点：
+            1. 过去完成时：by the time + 一般过去时, 主句用过去完成时
+            2. 宾语从句嵌套：I wonder if you can tell me where...
+            3. 定语从句：where引导（先行词是place/city/school等）
+            4. 被动+时态综合：The bridge has been built since 2020.
+
+            每周做5题，限时练习
+      pass_criteria:
+        - 高难度题正确率≥70%
+
+    - order: 2
+      topic: 易错陷阱总结
+      goal: 识别北京卷常见的干扰选项设置方式
+      estimated_hours: 3
+      resources:
+        - type: 真题
+          name: 北京中考+各区模考·进阶语法错题集
+          how_to_use: |
+            常见陷阱：
+            1. when引导宾语从句 vs 时间状语从句（主将从现的陷阱）
+            2. 被动语态中时态的干扰（is done vs was done vs has been done）
+            3. 定语从句中that作宾语可以省略的误导
+            4. 非谓语动词see sb do vs doing的语境判断
+
+            整理30题易错题，反复练习
+      pass_criteria:
+        - 错题重做正确率≥90%
+        - 能说出每个陷阱的识别方法
+
+    - order: 3
+      topic: 限时综合模拟
+      goal: 在考试条件下稳定发挥
+      estimated_hours: 2
+      resources:
+        - type: 真题
+          name: 北京各区最新模考·单选7-10
+          how_to_use: |
+            做10套模考题的单选7-10
+            每套限时2分钟
+            统计正确率和用时
+            考前一周每天做一套保持手感
+      pass_criteria:
+        - 10套模考正确率均值≥75%（4题对3题）
+        - 做题速度稳定在2分钟以内
+
+# ================================================================
+#  时间维度策略
+# ================================================================
+time_strategies:
+
+  long_term:
+    name: 长线期（距中考6-12个月）
+    principle: 进阶语法需要系统学习，不能临时突击
+    by_level:
+      L0: |
+        按L0→L1路径完整推进，每天35分钟。
+        先时态（最重要）→被动→宾语从句→定语从句→非谓语。
+        时态是重中之重，至少花8天打好基础。
+      L1: |
+        L1→L2正常推进，每天25分钟。
+        重点：现在完成时vs一般过去时、主将从现辨析。
+        每周做一年真题的单选7-10题。
+      L2: |
+        开始L2→L3，每天20分钟。
+        重点练海淀西城模考题，提升难题正确率。
+
+  mid_term:
+    name: 强化期（距中考3-6个月）
+    principle: 聚焦高频考点，放弃极难的
+    by_level:
+      L0: |
+        集中攻时态（3大基本时态+现在完成时）和被动语态。
+        每天20分钟。目标：单选7-10至少对1-2题。
+      L1: |
+        真题精练：单选7-10题逐年做。
+        重点补薄弱考点（看错题分布决定）。每天20分钟。
+      L2: |
+        限时模拟+易错陷阱总结。每周3次，每次15分钟。
+        目标：单选7-10至少对3题。
+
+  sprint:
+    name: 冲刺期（距中考0-3个月）
+    principle: 稳定发挥，不贪全对
+    by_level:
+      L0: |
+        背诵时态标志词对照表（一页纸）。
+        做3套真题的单选7-10，能对1-2题就好。
+        把更多时间分给阅读和写作。
+      L1: |
+        每周做2套真题单选7-10，复盘错题。
+        考前过一遍宾语从句三要素和被动语态公式。
+      L2: |
+        每周1次限时模拟保持手感。
+        考前重做一遍错题本。

@@ -1,0 +1,499 @@
+# ============================================================
+# 学习路径：文段表达（邮件回复8分+命题作文10分=18分）
+# ============================================================
+# 状态：LLM生成初稿，待教师审核
+# 最后更新：2026-04-12
+# 地区：北京
+# 重要性：笔试18/60分，占比30%，提分空间大
+
+module: 文段表达
+subject: 英语
+region: 北京
+
+# ================================================================
+#  L0 -> L1：写出正确的句子 + 掌握邮件格式
+# ================================================================
+L0_to_L1:
+  target: 邮件回复能拿4分+，命题作文能拿3分+，两篇合计7分+
+  estimated_hours: 18-22
+  prerequisite: 基础语法L1以上 + 词汇量600以上
+
+  steps:
+    - order: 1
+      topic: 英语造句基本功
+      goal: 能写出语法正确的简单句（SVO结构）
+      estimated_hours: 5
+      resources:
+        - type: 教材
+          name: 人教版Go for it七年级课文
+          how_to_use: |
+            第1-2天：五种基本句型
+            1. 主+谓：I run.
+            2. 主+谓+宾：I like English.
+            3. 主+谓+宾+宾：She gives me a book.
+            4. 主+谓+宾+宾补：We call him Tom.
+            5. 主+系+表：He is tall. / She looks happy.
+
+            练习：每种句型造5个句子，共25句
+
+            第3-4天：常用句式积累
+            I think (that)... / I hope (that)... / I want to...
+            It's important to... / It's a good idea to...
+            There be句型：There is/are...
+            祈使句：Let's... / Don't...
+            每天写10个句子
+
+            第5天：常见错误自查
+            ✗ I very like → ✓ I like...very much
+            ✗ He go school → ✓ He goes to school.
+            ✗ I am agree → ✓ I agree.
+            ✗ Let me to help → ✓ Let me help
+            写10个句子并自查纠错
+        - type: 练习
+          name: 五三英语·基础写作
+          how_to_use: 做造句练习，每天10句
+      pass_criteria:
+        - 10个简单句中语法错误不超过2个
+        - 能使用至少5种常用句式
+      common_pitfalls:
+        - "每个句子必须有主语和谓语（中文常省略主语，英文不行）"
+        - "三单加s：He likes（不是He like）"
+        - "时态要一致：整篇文章用过去时就全部用过去时"
+
+    - order: 2
+      topic: 邮件回复格式和模板
+      goal: 掌握邮件的标准格式，能写出完整的回复邮件
+      estimated_hours: 4
+      resources:
+        - type: 练习
+          name: 万唯英语·应用文写作模板
+          how_to_use: |
+            邮件格式（必须背下来！）：
+
+            Dear ___,（称呼，逗号不能忘）
+            （空一行或直接开始正文）
+            I'm glad/sorry to hear that... （开头句，回应对方邮件）
+
+            （正文：回答邮件中的问题，每个问题至少1-2句话）
+
+            I hope this helps. / Looking forward to your reply.（结尾句）
+            Yours,（结束语，逗号不能忘）
+            Li Hua（署名）
+
+            三种常见回复类型的模板：
+            1.建议类：I think you should.../Why not.../How about doing...
+            2.介绍类：Let me tell you about.../...is famous for.../You can...
+            3.邀请类：Would you like to.../I'd like to invite you to...
+
+            每种类型仿写2篇，共6篇
+      pass_criteria:
+        - 邮件格式完全正确（称呼/正文/结尾/署名）
+        - 能用模板写出50词以上的回复邮件
+      common_pitfalls:
+        - "Dear后面是人名不是姓（Dear Tom不是Dear Smith）"
+        - "Yours后面有逗号"
+        - "开头要回应对方的邮件内容，不要自说自话"
+
+    - order: 3
+      topic: 命题作文基本结构
+      goal: 掌握"三段式"作文结构，能写出完整的短文
+      estimated_hours: 5
+      resources:
+        - type: 练习
+          name: 五三英语·命题作文基础
+          how_to_use: |
+            三段式结构（万能框架）：
+
+            第一段：开头点题（1-2句）
+            引出话题/表明观点
+            模板：I'd like to share my experience/opinion about...
+                  ...is very important/meaningful in our life.
+
+            第二段：正文展开（3-5句）
+            给出理由/举例/描述经过
+            模板：First,...  Second,...  Besides,...
+                  For example,...  What's more,...
+
+            第三段：结尾总结（1-2句）
+            总结/升华/表达感受
+            模板：In a word,... / All in all,...
+                  I believe/hope that...
+                  It teaches me that...
+
+            常见题目类型 + 练习：
+            1. 个人经历类：A Special Day / An Unforgettable Experience
+            2. 观点建议类：How to Keep Healthy / My Advice on...
+            3. 人物描写类：The Person I Admire / My Best Friend
+            每种类型写1篇，共3篇
+      pass_criteria:
+        - 能写出三段式结构的短文（60词以上）
+        - 要点基本覆盖
+      common_pitfalls:
+        - "不要没有段落，全文挤成一团"
+        - "不要跑题，紧扣题目要求写"
+
+    - order: 4
+      topic: 审题和要点列举训练
+      goal: 拿到题目后能快速列出要写的要点
+      estimated_hours: 4
+      resources:
+        - type: 真题
+          name: 北京中考英语真题2021-2025·文段表达
+          how_to_use: |
+            审题三步法：
+
+            第一步：读题目要求（2分钟）
+            - 邮件回复：对方问了什么问题？需要回答几个？
+            - 命题作文：提示词/提纲有哪些？必须覆盖哪些要点？
+
+            第二步：列要点提纲（1分钟）
+            - 在草稿纸上用中文列出要写的要点
+            - 每个要点旁边写1-2个关键英文词
+            - 检查：题目要求的每个点都列到了吗？
+
+            第三步：按提纲写作
+            - 先写好开头和结尾（用模板）
+            - 中间按提纲逐点展开
+
+            练习：对每年真题做审题和列提纲练习（不需要写全文）
+            共5年10篇，每篇列出要点提纲
+      pass_criteria:
+        - 读完题目后能在1分钟内列出所有要点
+        - 不遗漏题目要求的关键信息
+
+# ================================================================
+#  L1 -> L2：减少错误 + 丰富内容 + 增加连接词
+# ================================================================
+L1_to_L2:
+  target: 邮件回复6分+，命题作文6分+，两篇合计12分+
+  estimated_hours: 14-18
+  prerequisite: L1
+
+  steps:
+    - order: 1
+      topic: 语法错误清零计划
+      goal: 把最常犯的语法错误减少到最低
+      estimated_hours: 3
+      resources:
+        - type: 练习
+          name: 写作常见语法错误20类
+          how_to_use: |
+            自查清单（写完作文后逐条检查）：
+
+            ✓ 三单加s了吗？（He likes / She goes）
+            ✓ 时态一致吗？（全篇过去时或现在时）
+            ✓ 主谓一致吗？（They are / He is）
+            ✓ 名词可数/不可数对吗？（informations→information）
+            ✓ 冠词用了吗？（play the piano / go to school）
+            ✓ 介词对吗？（arrive in/at / be good at）
+            ✓ 拼写对吗？（because不是becaues / beautiful不是beautful）
+            ✓ 标点对吗？（句末有句号，逗号不乱用）
+
+            训练方法：
+            每次写完作文用这个清单自查一遍
+            把自己最常犯的3类错误标红，每次重点检查
+      pass_criteria:
+        - 一篇50词的作文中语法错误不超过2个
+
+    - order: 2
+      topic: 连接词和过渡句使用
+      goal: 文章读起来连贯流畅，不像句子堆砌
+      estimated_hours: 3
+      resources:
+        - type: 练习
+          name: 万唯英语·写作连接词专项
+          how_to_use: |
+            四类必备连接词：
+
+            顺序/列举：
+            First / Second / Third / Finally
+            First of all / To begin with / What's more / Last but not least
+
+            因果：
+            because / so / therefore / as a result / that's why
+
+            转折/对比：
+            but / however / although / on the other hand / instead
+
+            总结：
+            in a word / all in all / in short / to sum up
+
+            过渡句模板：
+            "As for me, I think..." （引出个人观点）
+            "Take...for example." （引出举例）
+            "In my opinion,..." （表达看法）
+            "What impresses me most is that..." （引出印象深刻的事）
+
+            练习：在已写好的作文中添加连接词，改善连贯性
+            改写5篇自己之前写的作文
+      pass_criteria:
+        - 每篇作文至少使用5个不同的连接词
+        - 段落之间有过渡句
+
+    - order: 3
+      topic: 内容展开训练
+      goal: 每个要点不只写一句话，要有展开和细节
+      estimated_hours: 4
+      resources:
+        - type: 练习
+          name: 五三英语·写作内容拓展
+          how_to_use: |
+            展开技巧（把1句话变成3句话）：
+
+            技巧1：加原因
+            原句：I like reading.
+            展开：I like reading. It can help me learn more about
+            the world. Besides, reading before bed makes me relaxed.
+
+            技巧2：加举例
+            原句：We should protect the environment.
+            展开：We should protect the environment. For example,
+            we can use less plastic bags and save water in daily life.
+
+            技巧3：加感受
+            原句：I went to the Great Wall.
+            展开：I went to the Great Wall. When I stood on top of it,
+            I felt so proud of our country. It was an unforgettable experience.
+
+            练习：给出10个主题句，每个展开成3句话
+      pass_criteria:
+        - 每个要点能展开到2-3句话
+        - 展开的内容与主题句相关（不跑题）
+
+    - order: 4
+      topic: 邮件回复实战训练
+      goal: 在限时条件下写出高分邮件回复
+      estimated_hours: 2
+      resources:
+        - type: 真题
+          name: 北京中考真题2021-2025·邮件回复题
+          how_to_use: |
+            限时训练：每篇8分钟
+
+            高分策略：
+            1. 开头回应对方（I'm glad to hear from you.）
+            2. 逐个回答对方的问题（不遗漏！）
+            3. 每个回答至少展开1句
+            4. 结尾有收束（I hope this helps. / Have a good time!）
+
+            做5篇真题邮件回复，每篇做完后对照评分标准自评
+      pass_criteria:
+        - 8分钟内完成50词以上的邮件回复
+        - 要点覆盖完整，语言基本准确
+
+    - order: 5
+      topic: 命题作文实战训练
+      goal: 在限时条件下写出结构清晰、内容完整的作文
+      estimated_hours: 3
+      resources:
+        - type: 真题
+          name: 北京中考真题2021-2025·命题作文题
+          how_to_use: |
+            限时训练：每篇12分钟
+
+            高分步骤：
+            1. 审题+列提纲（2分钟）
+            2. 写作（8分钟）
+            3. 检查语法错误（2分钟）
+
+            评分自查：
+            - 内容：要点都覆盖了吗？有展开吗？
+            - 语言：语法错误多吗？句型是否多样？
+            - 结构：有开头、正文、结尾吗？有连接词吗？
+
+            做5篇真题命题作文
+      pass_criteria:
+        - 12分钟内完成60词以上的作文
+        - 三段式结构 + 要点完整 + 连接词使用
+
+# ================================================================
+#  L2 -> L3：语言升级 + 深度表达 + 冲击高分
+# ================================================================
+L2_to_L3:
+  target: 邮件回复7分+，命题作文8分+，两篇合计15分+
+  estimated_hours: 10-12
+  prerequisite: L2
+  notes: 写作是提分最快的模块之一，值得投入时间
+
+  steps:
+    - order: 1
+      topic: 高级句型积累与运用
+      goal: 在作文中自然使用3-5个高级句型
+      estimated_hours: 4
+      resources:
+        - type: 练习
+          name: 万唯英语·写作高级句型
+          how_to_use: |
+            10个高分句型（背下来并在作文中使用）：
+
+            1. not only...but also...
+            Reading is not only interesting but also useful.
+
+            2. It is+adj+for sb to do
+            It is important for us to protect the environment.
+
+            3. so...that... / such...that...
+            I was so moved that I couldn't say a word.
+
+            4. the+比较级, the+比较级
+            The harder you work, the more you will get.
+
+            5. There is no doubt that...
+            There is no doubt that teamwork is important.
+
+            6. 感叹句 What a/an+adj+n+主+谓! / How+adj+主+谓!
+            What a meaningful experience it was!
+
+            7. 定语从句
+            I have a friend who always encourages me.
+
+            8. 被动语态
+            Beijing is known as the capital of China.
+
+            9. It is said/reported/believed that...
+            It is said that reading can make us wiser.
+
+            10. 非谓语动词
+            Seeing the beautiful scenery, I felt so happy.
+
+            每个句型在3篇不同主题的作文中各用一次
+      pass_criteria:
+        - 10个高分句型能灵活运用
+        - 每篇作文中至少使用3个高级句型
+
+    - order: 2
+      topic: 词汇升级——同义替换
+      goal: 避免重复用词，提升语言丰富度
+      estimated_hours: 2
+      resources:
+        - type: 练习
+          name: 写作同义替换词汇表
+          how_to_use: |
+            常用词 → 高级替换词：
+
+            think → believe / consider / hold the view that
+            like → be fond of / be crazy about / enjoy
+            important → significant / vital / essential / of great importance
+            good → excellent / wonderful / outstanding / remarkable
+            happy → delighted / pleased / overjoyed
+            help → assist / give sb a hand / do sb a favor
+            many → a large number of / plenty of / numerous
+            very → extremely / incredibly / remarkably
+            want → desire / long for / be eager to
+            try → make an effort to / attempt to / spare no effort to
+
+            在修改旧作文时替换重复用词
+      pass_criteria:
+        - 每篇作文中无明显重复用词
+        - 至少使用3个高级替换词
+
+    - order: 3
+      topic: 命题作文深度表达
+      goal: 不只写what happened，还要写why和how I feel
+      estimated_hours: 3
+      resources:
+        - type: 练习
+          name: 北京各区模考·命题作文优秀范文
+          how_to_use: |
+            深度表达三层次：
+
+            第一层：叙事/描述（what）
+            Last week, I helped an old lady cross the road.
+
+            第二层：原因/分析（why）
+            I did this because I think it's our responsibility to
+            help those in need, especially the elderly.
+
+            第三层：感受/升华（how I feel / what I learned）
+            This experience taught me that small acts of kindness
+            can make a big difference. I feel proud of what I did,
+            and I will continue to help others in the future.
+
+            练习：读5篇优秀范文，标注三个层次
+            然后自己写3篇，确保每篇都有三个层次
+      pass_criteria:
+        - 每篇作文都有叙事+分析+感悟三个层次
+        - 结尾段有深度感悟（不是简单的"I'm happy"）
+
+    - order: 4
+      topic: 限时全真模拟
+      goal: 在考试条件下稳定发挥
+      estimated_hours: 3
+      resources:
+        - type: 真题
+          name: 北京2024-2025各区一模二模·文段表达
+          how_to_use: |
+            模拟训练：
+            邮件回复：8分钟（审题1min+写作6min+检查1min）
+            命题作文：12分钟（审题2min+写作8min+检查2min）
+            总时间：20分钟两篇
+
+            评分标准自评：
+            邮件回复（8分）：格式2分+要点3分+语言3分
+            命题作文（10分）：内容4分+语言3分+结构3分
+
+            每周做1套完整的写作模拟
+            做完后：
+            1. 自评打分
+            2. 标注语法错误
+            3. 思考哪里可以用更高级的表达
+      pass_criteria:
+        - 邮件回复稳定7分+
+        - 命题作文稳定8分+
+        - 两篇总分稳定15分+
+
+# ================================================================
+#  时间维度策略
+# ================================================================
+time_strategies:
+
+  long_term:
+    name: 长线期（距中考6-12个月）
+    principle: 写作需要持续练习，不能临时抱佛脚
+    by_level:
+      L0: |
+        每天造10个英语句子，周末写1篇50词短文。
+        背邮件格式模板和三段式作文模板。
+        重点：写出语法正确的句子。
+      L1: |
+        每周写2篇（1篇邮件+1篇作文）。
+        请老师或同学批改，重点纠正语法错误。
+        积累连接词和展开方法。
+      L2: |
+        每周写1-2篇并自评。
+        积累高级句型和同义替换词汇。
+        开始练限时写作。
+
+  mid_term:
+    name: 强化期（距中考3-6个月）
+    principle: 以真题为核心，模拟训练
+    by_level:
+      L0: |
+        背诵3个邮件模板和3个作文模板。
+        每周仿写1篇邮件+1篇作文。
+        目标：邮件4分+作文3分。
+      L1: |
+        真题精练：做近5年的写作题。
+        每篇写完后对照范文找差距。
+        限时训练开始（邮件10分钟+作文15分钟）。
+      L2: |
+        限时模拟（邮件8分钟+作文12分钟）。
+        高级句型运用练习。
+        每周做1套模考写作。
+
+  sprint:
+    name: 冲刺期（距中考0-3个月）
+    principle: 模板保底，高级表达加分
+    by_level:
+      L0: |
+        背熟邮件模板+作文万能开头结尾。
+        考前写3篇真题作文，把模板用熟。
+        目标：两篇合计7分以上。
+      L1: |
+        每周限时写1套。考前把真题写作都过一遍。
+        检查清单背下来，写完必查。
+        目标：两篇合计10分以上。
+      L2: |
+        每周1套限时模拟保持手感。
+        考前快速浏览高级句型和同义替换笔记。
+        目标：两篇合计15分以上。

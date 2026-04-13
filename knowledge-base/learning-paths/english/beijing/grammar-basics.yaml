@@ -1,0 +1,410 @@
+# ============================================================
+# 学习路径：基础语法（代词/介词/比较级/情态动词/连词）
+# ============================================================
+# 状态：LLM生成初稿，待教师审核
+# 最后更新：2026-04-12
+# 地区：北京
+# 重要性：笔试单选1-6题，共6分，属于保分题
+
+module: 基础语法
+subject: 英语
+region: 北京
+
+# ================================================================
+#  L0 -> L1：建立基本语法框架
+# ================================================================
+L0_to_L1:
+  target: 掌握五大基础语法模块的核心规则，单选前6题正确率达到60%
+  estimated_hours: 15-18
+  prerequisite: 认识26个英文字母，掌握最基本的100个英语单词
+
+  steps:
+    - order: 1
+      topic: 代词系统——从"我你他"开始
+      goal: 分清人称代词主格/宾格、物主代词形容词性/名词性、反身代词
+      estimated_hours: 3
+      resources:
+        - type: 教材
+          name: 人教版Go for it七年级上册·Starter Unit + Unit 1-3
+          how_to_use: |
+            第1天：人称代词表格（必须背下来）
+            主格：I / you / he / she / it / we / they
+            宾格：me / you / him / her / it / us / them
+            规则：主语位置用主格，动词/介词后用宾格
+            练习：造10个句子，分别用主格和宾格
+
+            第2天：物主代词表格
+            形容词性：my / your / his / her / its / our / their（后接名词）
+            名词性：mine / yours / his / hers / its / ours / theirs（独立使用）
+            规则：形容词性+名词 = 名词性（如 my book = mine）
+            练习：10组替换练习
+
+            第3天：反身代词
+            myself / yourself / himself / herself / itself / ourselves / themselves
+            固定搭配：enjoy oneself / help oneself to / by oneself / teach oneself
+            做课本练习题10题
+        - type: 练习
+          name: 五三英语·代词专项
+          how_to_use: 只做基础题（标★的），每天5题
+      pass_criteria:
+        - 代词表格能默写
+        - 给句子选正确的代词形式，正确率≥80%
+      common_pitfalls:
+        - "his既是形容词性又是名词性物主代词，容易搞混"
+        - "it的物主代词是its不是it's（it's=it is）"
+
+    - order: 2
+      topic: 介词三大类——时间/地点/方式
+      goal: 掌握in/on/at在时间和地点中的用法，记住20个高频介词短语
+      estimated_hours: 3
+      resources:
+        - type: 教材
+          name: 人教版Go for it七年级·介词相关单元
+          how_to_use: |
+            第1天：时间介词（必考！）
+            in：年/月/季节/上午下午晚上（in 2024 / in May / in summer / in the morning）
+            on：具体日期/星期/节日（on Monday / on May 1st / on Children's Day）
+            at：时刻/固定搭配（at 8:00 / at night / at noon / at the age of）
+            口诀："大in中on小at"
+            练习：填空20题
+
+            第2天：地点介词
+            in：大地方/里面（in Beijing / in the box）
+            on：表面/楼层（on the desk / on the second floor）
+            at：小地方/门口（at school / at the door / at home）
+            其他：behind / in front of / next to / between...and...
+            练习：看图填介词10题
+
+            第3天：高频介词短语（必须背）
+            be good at / be interested in / be afraid of / look after
+            take care of / be proud of / get on well with / depend on
+            listen to / look for / wait for / think about / agree with
+            每天背5个，一周背完
+        - type: 练习
+          name: 五三英语·介词专项
+          how_to_use: 做基础篇，每天5题
+      pass_criteria:
+        - in/on/at时间用法区分正确率≥80%
+        - 20个高频介词短语能默写15个以上
+      common_pitfalls:
+        - "in the morning但on Monday morning（有具体日期时用on）"
+        - "at night不是in night（固定搭配）"
+        - "at home / at school没有the"
+
+    - order: 3
+      topic: 比较级和最高级
+      goal: 掌握规则变化和常见不规则变化，会用比较级/最高级句型
+      estimated_hours: 3
+      resources:
+        - type: 教材
+          name: 人教版Go for it八年级上册·Unit 4 比较级
+          how_to_use: |
+            第1天：规则变化
+            单音节：加-er/-est（tall-taller-tallest）
+            双音节以y结尾：变y为i加-er/-est（easy-easier-easiest）
+            多音节：加more/most（beautiful-more beautiful-most beautiful）
+            双写：big-bigger-biggest / hot-hotter-hottest
+            练习：写出20个形容词的比较级和最高级
+
+            第2天：不规则变化（必须死记）
+            good/well → better → best
+            bad/badly → worse → worst
+            many/much → more → most
+            little → less → least
+            far → farther/further → farthest/furthest
+
+            第3天：句型结构
+            比较级：A is taller than B. / A is more beautiful than B.
+            最高级：A is the tallest in/of... / A is the most beautiful in/of...
+            同级比较：A is as tall as B. / A is not as tall as B.
+            练习：句型转换10题
+        - type: 练习
+          name: 五三英语·比较级专项
+          how_to_use: 做基础题，每天5题
+      pass_criteria:
+        - 20个常见形容词的三级变化能默写
+        - 比较级/最高级/同级比较句型会用
+      common_pitfalls:
+        - "比较级前不加the（除了the+比较级+of the two）"
+        - "最高级前必须加the"
+        - "as...as之间用原级不是比较级"
+
+    - order: 4
+      topic: 情态动词核心五个
+      goal: 掌握can/must/should/may/need的基本用法和否定形式
+      estimated_hours: 3
+      resources:
+        - type: 教材
+          name: 人教版Go for it七年级下册+八年级上册·情态动词章节
+          how_to_use: |
+            第1天：can和must
+            can：表能力（I can swim）/ 表请求（Can I...?）
+            can't：表不能 / 表不可能（推测）
+            must：表必须（You must finish it）
+            mustn't：表禁止（不是"不必"！）
+            must问句的否定回答：needn't / don't have to
+
+            第2天：should和may
+            should：表建议/应该（You should exercise more）
+            shouldn't：表不应该
+            may：表许可（May I come in?）/ 表可能（It may rain）
+            may问句的否定回答：No, you can't/mustn't
+
+            第3天：need和综合练习
+            need作情态动词：Need I go?（多用于疑问/否定）
+            needn't = don't need to = don't have to（不必）
+            核心区别：mustn't（禁止）vs needn't（不必）
+            综合练习15题
+        - type: 练习
+          name: 五三英语·情态动词专项
+          how_to_use: 做基础题，每天5题
+      pass_criteria:
+        - 五个情态动词的基本用法和否定含义能说清楚
+        - must/mustn't/needn't的区别正确率≥80%
+      common_pitfalls:
+        - "情态动词后面加动词原形（不加to，不加s）"
+        - "mustn't是禁止不是不必，needn't才是不必"
+        - "Must I...? 否定回答用needn't不用mustn't"
+
+    - order: 5
+      topic: 连词——并列和从属
+      goal: 掌握and/but/or/so/because/although/if/when的用法
+      estimated_hours: 3
+      resources:
+        - type: 教材
+          name: 人教版Go for it八年级·连词相关章节
+          how_to_use: |
+            第1天：并列连词
+            and（和/而且）/ but（但是）/ or（或者/否则）/ so（所以）
+            练习：用合适的连词连接两个句子，10题
+
+            第2天：从属连词
+            because（因为）— 不能和so同用！
+            although/though（虽然）— 不能和but同用！
+            if（如果）/ when（当...时候）/ before / after / until
+            练习：选词填空10题
+
+            第3天：易错对比
+            because vs so（不能同时用）
+            although vs but（不能同时用）
+            if和when引导的时间/条件状语从句中用一般现在时代替将来时
+            综合练习10题
+        - type: 练习
+          name: 五三英语·连词专项
+          how_to_use: 做基础题，每天5题
+      pass_criteria:
+        - because/so、although/but不同时用
+        - 8个核心连词的用法和区别清楚
+      common_pitfalls:
+        - "中文说'虽然...但是...'，英文只能用although或but其中一个"
+        - "中文说'因为...所以...'，英文只能用because或so其中一个"
+
+# ================================================================
+#  L1 -> L2：攻克易混淆点，提高准确率
+# ================================================================
+L1_to_L2:
+  target: 单选前6题正确率达到85%以上，易混淆考点掌握清晰
+  estimated_hours: 10-12
+  prerequisite: L1
+
+  steps:
+    - order: 1
+      topic: 代词易混淆专项
+      goal: 攻克复合不定代词、it的特殊用法
+      estimated_hours: 2
+      resources:
+        - type: 练习
+          name: 万唯英语·代词易错题精选
+          how_to_use: |
+            重点突破：
+            1. 复合不定代词：something/anything/nothing/everything
+               some-用于肯定句和表请求的疑问句
+               any-用于否定句和一般疑问句
+               形容词后置：something important
+            2. it的特殊用法：
+               指天气/时间/距离（It's sunny. / It's 8 o'clock.）
+               形式主语（It's important to learn English.）
+            做20题专项练习
+      pass_criteria:
+        - 复合不定代词选择正确率≥90%
+        - it的特殊用法能准确判断
+
+    - order: 2
+      topic: 介词固定搭配强化
+      goal: 掌握40个高频介词短语，中考必考
+      estimated_hours: 2
+      resources:
+        - type: 练习
+          name: 五三英语·介词固定搭配专题
+          how_to_use: |
+            分类整理并背诵：
+            动词+介词：look at/for/after/up, take part in, pay for
+            be+adj+介词：be good at, be famous for, be different from
+            其他：on one's way to, in order to, instead of, thanks to
+            每天背10个搭配，一周测试默写
+      pass_criteria:
+        - 40个高频介词短语默写正确率≥85%
+
+    - order: 3
+      topic: 比较级高频考点
+      goal: 掌握比较级的特殊句型和易错点
+      estimated_hours: 2
+      resources:
+        - type: 练习
+          name: 万唯英语·比较级拔高题
+          how_to_use: |
+            重点攻克：
+            1. the+比较级, the+比较级（越...越...）
+            2. 比较级+and+比较级（越来越...）
+            3. one of the+最高级+名词复数
+            4. 倍数表达：A is twice as big as B
+            5. 比较级前的修饰词：much/a lot/a little/even/far
+            做20题
+      pass_criteria:
+        - 比较级特殊句型判断正确率≥85%
+
+    - order: 4
+      topic: 情态动词辨析强化
+      goal: 攻克must be/can't be推测用法和各类否定回答
+      estimated_hours: 2
+      resources:
+        - type: 练习
+          name: 五三英语·情态动词辨析题
+          how_to_use: |
+            重点突破：
+            1. 推测用法：must be（一定是）/ can't be（不可能是）/ may be（可能是）
+            2. 否定回答对照：
+               Must I...? → No, you needn't.
+               May I...? → No, you can't/mustn't.
+               Can I...? → No, you can't.
+            3. have to vs must（have to强调客观，must强调主观）
+            做15题
+      pass_criteria:
+        - 推测用法判断正确率≥85%
+        - 各类否定回答不混淆
+
+    - order: 5
+      topic: 真题单选1-6逐年精练
+      goal: 熟悉北京卷出题风格和陷阱设置
+      estimated_hours: 2
+      resources:
+        - type: 真题
+          name: 北京中考英语真题2019-2025·单选1-6题
+          how_to_use: |
+            逐年做题：每年6题，共约42题
+            每题做完后对答案，记录错题和错因
+            按考点分类统计：哪个模块错得最多就重点补
+            限时训练：6题3分钟以内完成
+      pass_criteria:
+        - 真题正确率≥85%
+        - 错题能说出错因和正确思路
+
+# ================================================================
+#  L2 -> L3：追求满分，秒解技巧
+# ================================================================
+L2_to_L3:
+  target: 单选前6题保证全对，做题速度控制在2-3分钟
+  estimated_hours: 6-8
+  prerequisite: L2
+  notes: 基础语法是保分项，目标是零失误
+
+  steps:
+    - order: 1
+      topic: 易错题整理和反复练
+      goal: 把所有做错过的基础语法题整理成错题本，反复练到不再错
+      estimated_hours: 3
+      resources:
+        - type: 练习
+          name: 个人错题本
+          how_to_use: |
+            步骤：
+            1. 整理所有做错的基础语法题（至少30题）
+            2. 按考点分类：代词/介词/比较级/情态动词/连词
+            3. 分析每题的错因（知识盲点 vs 粗心 vs 审题不清）
+            4. 知识盲点→回去补对应知识点
+            5. 粗心→总结粗心模式，做题时提醒自己
+            6. 每周重做一遍错题本，直到全对
+      pass_criteria:
+        - 错题本中的题全部能做对
+        - 能说出每题的考点和陷阱
+
+    - order: 2
+      topic: 限时模拟+秒解技巧
+      goal: 做题速度提升，为其他题型节省时间
+      estimated_hours: 3
+      resources:
+        - type: 真题
+          name: 北京各区一模二模·单选1-6题
+          how_to_use: |
+            秒解技巧：
+            1. 看到空格先判断考点（代词？介词？时态？）
+            2. 找标志词（than→比较级，since→完成时，if→条件句）
+            3. 排除法：先排除明显错误的选项
+            4. 每套6题限时2分钟
+            做10套模拟题
+      pass_criteria:
+        - 正确率≥95%
+        - 每套用时不超过2.5分钟
+
+    - order: 3
+      topic: 查漏补缺
+      goal: 确保没有知识盲点
+      estimated_hours: 2
+      resources:
+        - type: 练习
+          name: 万唯英语·基础语法综合检测
+          how_to_use: |
+            做一套50题的基础语法综合检测
+            统计正确率和错误分布
+            如果某个模块正确率低于90%就回去重点补
+      pass_criteria:
+        - 综合检测正确率≥95%
+        - 无明显知识盲点
+
+# ================================================================
+#  时间维度策略
+# ================================================================
+time_strategies:
+
+  long_term:
+    name: 长线期（距中考6-12个月）
+    principle: 基础语法越早搞定越好，后期不用再花时间
+    by_level:
+      L0: |
+        按L0→L1路径逐步推进，每天30分钟。
+        代词→介词→比较级→情态动词→连词，按顺序来。
+        每学完一个模块做10题巩固，正确率不到80%不进入下一个。
+      L1: |
+        L1→L2正常推进，每天20分钟。
+        重点：真题单选1-6题逐年练，找出自己最薄弱的模块。
+      L2: |
+        直接做L2→L3，每天15分钟。
+        重点：错题整理+限时训练，追求零失误。
+
+  mid_term:
+    name: 强化期（距中考3-6个月）
+    principle: 保分为主，不留知识盲点
+    by_level:
+      L0: |
+        集中攻代词和介词（这两个最容易拿分）。
+        每天20分钟，先把最简单的2-3题拿到手。
+      L1: |
+        真题精练+错题本。每天15分钟。
+        目标：单选前6题至少对5题。
+      L2: |
+        限时训练+查漏补缺。每周2次，每次15分钟。
+        目标：单选前6题全对。
+
+  sprint:
+    name: 冲刺期（距中考0-3个月）
+    principle: 保住已有水平，不在基础语法上丢分
+    by_level:
+      L0: |
+        背诵代词表格+介词时间搭配口诀+情态动词否定回答。
+        每天10分钟过一遍，考前保证最基础的3-4题能做对。
+      L1: |
+        每周做2套真题单选1-6题，控制在3分钟内。
+        错题快速复盘，考前不纠结难题。
+      L2: |
+        每周1次限时模拟。保持手感即可。
+        把节省的时间投入到阅读和写作上。

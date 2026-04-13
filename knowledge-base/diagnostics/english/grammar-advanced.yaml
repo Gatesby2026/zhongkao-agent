@@ -1,0 +1,184 @@
+# ============================================================
+# 诊断标准：进阶语法（时态/被动/非谓语/从句）
+# ============================================================
+# 状态：LLM生成初稿，待教师审核
+# 最后更新：2026-04-12
+
+module: 进阶语法
+subject: 英语
+covers:
+  - 八大时态（一般现在/过去/将来、现在/过去进行、现在完成、过去完成、过去将来）
+  - 被动语态（一般现在/过去时被动）
+  - 非谓语动词（to do / doing / done 作定语/状语/宾补）
+  - 宾语从句（语序/时态呼应/引导词）
+  - 定语从句（that/which/who/whose/where/when）
+exam_weight: ★★★（笔试60分中的单选7-10题，共4分，区分度高）
+typical_score: 4分（北京中考笔试单选后4题）
+typical_questions: 单选7-10题，每题1分，考查进阶语法，难度递增
+
+# ------ 水平分级 ------
+levels:
+
+  - id: L0
+    name: 零基础/严重薄弱
+    description: 时态概念模糊，被动语态不知道怎么构成，从句完全看不懂
+    signals:
+      - 不知道英语有几种时态，时态标志词完全不敏感
+      - 主动被动分不清，be+done结构不理解
+      - 宾语从句的语序（陈述语序）不知道
+      - 定语从句完全没概念
+      - 非谓语动词to do和doing的区别不知道
+      - 单选7-10题基本靠猜，正确率约25%
+    diagnostic_questions:
+      - question: "Look! The children ___ in the park. (A) play (B) played (C) are playing (D) will play"
+        expected: "C. are playing（Look!是现在进行时标志词）"
+        L0_typical_error: "选A，不知道Look提示正在进行"
+      - question: "The Great Wall ___ by many people every year. (A) visits (B) visited (C) is visited (D) was visited"
+        expected: "C. is visited（被动语态，每年被很多人参观，every year表一般现在时）"
+        L0_typical_error: "选A，不知道这里长城是被参观的关系"
+      - question: "Could you tell me ___? (A) where does he live (B) where he lives (C) where did he live (D) where he lived"
+        expected: "B. where he lives（宾语从句用陈述语序）"
+        L0_typical_error: "选A，不知道宾语从句要用陈述语序"
+
+  - id: L1
+    name: 概念模糊
+    description: 知道时态和被动的概念但混淆，从句规则记不全
+    signals:
+      - 一般现在/过去/将来时基本能判断，但现在完成时和过去完成时搞混
+      - 被动语态结构知道但时态变化记不全
+      - 宾语从句知道要用陈述语序但引导词选择有问题
+      - 定语从句的关系代词that/which/who分不清使用场景
+      - 非谓语动词to do/doing在具体动词后的搭配记不住
+      - 单选7-10题正确率40%-60%
+    diagnostic_questions:
+      - question: "I ___ this book since last week. (A) have read (B) read (C) am reading (D) was reading"
+        expected: "A. have read（since是现在完成时标志词）"
+        L1_typical_error: "选B，知道since和完成时有关但构不出have+done"
+      - question: "The boy who ___ next to me is my friend. (A) sit (B) sits (C) sitting (D) sat"
+        expected: "B. sits（who引导定语从句，修饰the boy，从句中谓语动词用三单）"
+        L1_typical_error: "选C，把定语从句和非谓语混淆"
+      - question: "Do you know when he ___ back tomorrow? (A) come (B) comes (C) will come (D) came"
+        expected: "C. will come（when引导宾语从句而非时间状语从句，不受主将从现限制）"
+        L1_typical_error: "选B，错误地用了主将从现规则"
+
+  - id: L2
+    name: 基本熟练
+    description: 常见时态和从句掌握准确，但复杂语境下仍有失误
+    signals:
+      - 八大时态的构成和标志词基本掌握
+      - 被动语态的构成和时态变化准确
+      - 宾语从句的语序、时态呼应、引导词选择基本正确
+      - 定语从句能区分关系代词和关系副词
+      - 非谓语动词常见搭配掌握（enjoy doing / want to do等）
+      - 单选7-10题正确率60%-80%
+    diagnostic_questions:
+      - question: "By the time I got there, the movie ___. (A) has begun (B) had begun (C) begins (D) will begin"
+        expected: "B. had begun（过去的过去用过去完成时）"
+        L2_response: "正确选出B"
+      - question: "He is the only student ___ can answer the question. (A) who (B) which (C) whom (D) whose"
+        expected: "A. who（先行词是人且有the only修饰，在从句中作主语用who/that）"
+        L2_response: "能正确选出，但如果改为考查whose或where会犹豫"
+      - question: "I saw him ___ basketball when I passed the playground. (A) play (B) played (C) playing (D) to play"
+        expected: "C. playing（see sb doing强调看到正在进行的动作）"
+        L2_typical_difficulty: "see sb do和see sb doing的区别不够清晰"
+
+  - id: L3
+    name: 熟练精通
+    description: 进阶语法全面掌握，单选后4题准确快速
+    signals:
+      - 时态/被动/非谓语/从句各考点准确判断
+      - 能识别干扰选项的设置套路
+      - 复杂语境下（如宾语从句嵌套、主将从现）判断正确
+      - 单选7-10题正确率90%以上
+    pass_standard: 中考单选后4题至少对3题，用时不超过3分钟
+
+# ------ 真题锚点（2021-2025 北京中考）------
+exam_benchmarks:
+
+  L1:
+    must_solve:
+      - { year: 2024, qid: 单选7, topic: 一般过去时, score: 1 }
+      - { year: 2023, qid: 单选7, topic: 现在进行时, score: 1 }
+    should_struggle:
+      - { year: 2024, qid: 单选9, topic: 宾语从句 }
+      - { year: 2024, qid: 单选10, topic: 定语从句 }
+
+  L2:
+    must_solve:
+      - { year: 2024, qid: 单选7-8, topic: 时态+被动, score: 2 }
+      - { year: 2023, qid: 单选7-8, topic: 时态+被动, score: 2 }
+    should_struggle:
+      - { year: 2024, qid: 单选10, topic: 定语从句综合 }
+
+  L3:
+    must_solve:
+      - { year: 2024, qid: 单选7-10, topic: 进阶语法全部, score: 4 }
+      - { year: 2023, qid: 单选7-10, topic: 进阶语法全部, score: 4 }
+    pass_standard: 单选后4题至少对3题
+
+# ------ 各子模块细分诊断 ------
+sub_modules:
+
+  时态:
+    L0_signal: "不知道英语有哪些时态，标志词无感"
+    L1_signal: "简单时态能判断但完成时态和进行时态易混"
+    L2_signal: "八大时态基本掌握，偶尔在过去完成时上失误"
+    L3_signal: "任何语境都能准确判断时态"
+    key_diagnostic: "She ___ in Beijing since 2020. (have lived / lived / lives)"
+
+  被动语态:
+    L0_signal: "不知道be+done是被动语态"
+    L1_signal: "知道被动结构但时态变化记不全"
+    L2_signal: "一般现在/过去时被动准确，含情态动词的被动基本掌握"
+    L3_signal: "各种时态的被动语态都能准确构成"
+    key_diagnostic: "Chinese ___ by more and more people around the world now."
+
+  宾语从句:
+    L0_signal: "不知道宾语从句要用陈述语序"
+    L1_signal: "知道陈述语序但引导词选择和时态呼应有问题"
+    L2_signal: "语序、引导词、时态呼应基本掌握"
+    L3_signal: "宾语从句的各种变式（if/whether、could表委婉）都准确"
+    key_diagnostic: "Do you know what ___ yesterday? (A)did he do (B)he did"
+
+  定语从句:
+    L0_signal: "完全不知道定语从句是什么"
+    L1_signal: "知道who修饰人、which修饰物但其他关系词不清楚"
+    L2_signal: "常见关系代词掌握准确，关系副词where/when基本会用"
+    L3_signal: "各种关系词（包括whose）和只用that的情况都掌握"
+    key_diagnostic: "This is the place ___ we visited last year. (A)that (B)where"
+
+  非谓语动词:
+    L0_signal: "to do和doing的区别不知道"
+    L1_signal: "enjoy doing / want to do 等常见搭配知道，但不全面"
+    L2_signal: "常见动词后接to do或doing的搭配基本掌握"
+    L3_signal: "非谓语动词作宾补（see sb do/doing）等高阶用法都掌握"
+    key_diagnostic: "The teacher asked us ___ quiet in class. (A)keep (B)to keep (C)keeping"
+
+# ------ 升级路径概要 ------
+upgrade_paths:
+  L0_to_L1:
+    focus: 建立时态意识和基本语法框架
+    estimated_hours: 15-18
+    key_tasks:
+      - 八大时态构成表（每天背一个时态，配例句）
+      - 被动语态公式：be+过去分词（变化be的时态）
+      - 宾语从句三要素：引导词+陈述语序+时态呼应
+      - 每天做3题时态判断练习
+
+  L1_to_L2:
+    focus: 攻克易混淆考点，提高准确率
+    estimated_hours: 10-12
+    key_tasks:
+      - 现在完成时vs一般过去时对比训练（20题）
+      - 宾语从句引导词选择专项（that/if/whether/特殊疑问词）
+      - 主将从现规则辨析（时间/条件状语从句vs宾语从句）
+      - 非谓语动词搭配表整理与默写
+
+  L2_to_L3:
+    focus: 拿下定语从句和复杂时态的区分度题
+    estimated_hours: 8-10
+    key_tasks:
+      - 定语从句关系词选择专项（含whose/where/when）
+      - 过去完成时专项（by the time / before / after引导的复合句）
+      - 北京中考真题单选7-10题逐年精练（2019-2025）
+      - 错题本整理，归类错因

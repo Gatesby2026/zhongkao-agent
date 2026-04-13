@@ -1,0 +1,226 @@
+# ============================================================
+# 诊断标准：阅读理解（ABCD四篇，13题26分）
+# ============================================================
+# 状态：LLM生成初稿，待教师审核
+# 最后更新：2026-04-12
+
+module: 阅读理解
+subject: 英语
+covers:
+  - A篇：应用文阅读（广告/通知/表格，3题6分）
+  - B篇：记叙文阅读（故事/经历，4题8分）
+  - C篇：说明文/议论文阅读（科普/社会话题，3题6分）
+  - D篇：还原句子/任务型阅读（5选4或5选5，3题6分，区分度最高）
+exam_weight: ★★★★（笔试60分中阅读13题26分，占比最大）
+typical_score: 26分（北京中考笔试阅读理解）
+typical_questions: A篇3题+B篇4题+C篇3题+D篇3题=13题，每题2分
+
+# ------ 水平分级 ------
+levels:
+
+  - id: L0
+    name: 零基础/严重薄弱
+    description: 文章基本读不懂，词汇量严重不足，只能做最简单的信息匹配
+    signals:
+      - A篇应用文中的关键信息也找不到
+      - 词汇量不足800，文章中大量生词
+      - 不会使用略读和扫读策略
+      - D篇完全放弃
+      - 阅读13题正确率低于40%（5题以下）
+      - 做题时间过长（超过30分钟）
+    diagnostic_questions:
+      - question: |
+          A篇应用文题：一则暑期夏令营广告写着
+          "Time: July 10-20  Place: Sunshine Park  Fee: ¥500"
+          问题：How much does the camp cost?
+          (A) ¥200 (B) ¥300 (C) ¥500 (D) ¥800
+        expected: "C. ¥500（直接从Fee一栏找到信息）"
+        L0_typical_error: "能做对这类直接查找题，但如果需要计算或转换就做不了"
+      - question: |
+          B篇记叙文中一段话：
+          "When I first came to this school, I didn't know anyone.
+          I felt lonely and scared."
+          问题：How did the writer feel at the new school?
+        expected: "lonely and scared（直接从文中找到情感词）"
+        L0_typical_error: "找不到对应句子，或者不认识lonely/scared"
+
+  - id: L1
+    name: 概念模糊
+    description: A篇基本能做，B篇部分能做，CD篇困难
+    signals:
+      - A篇信息查找题能做对大部分
+      - B篇细节题部分能做，推断题和主旨题困难
+      - C篇说明文词汇障碍大，经常误解主旨
+      - D篇还原句子只能做对1题
+      - 阅读13题正确率40%-60%（5-8题）
+      - 不会根据题型调整阅读策略
+    diagnostic_questions:
+      - question: |
+          B篇推断题：文章写一位老师每天很早到校，帮学生补课，
+          周末也不休息。问题：What can we learn about the teacher?
+          (A) She is strict. (B) She is hardworking.
+          (C) She is funny. (D) She is young.
+        expected: "B. She is hardworking.（从行为推断品质）"
+        L1_typical_error: "选A，把早到和严格混淆，或从文中找不到直接对应的词"
+      - question: |
+          C篇主旨题：一篇关于垃圾分类的文章，讲了分类方法、好处和现状。
+          问题：What is the passage mainly about?
+          (A) How to save water (B) Garbage sorting
+          (C) Air pollution (D) Healthy eating
+        expected: "B. Garbage sorting"
+        L1_typical_error: "被某个细节段落带偏，选了与文章某段相关但非全文主旨的选项"
+      - question: |
+          D篇还原句子：前文讲"There are many advantages of reading."
+          中间论述了几个好处，挖空处后文说"Besides, it can also
+          help you relax."
+          选项中有：(A) Reading can improve your writing skills.
+          (B) We should stop reading. (C) TV is better than reading.
+        expected: "A（Besides表递进，前面应该是另一个好处）"
+        L1_typical_error: "不能利用Besides这个逻辑连接词判断"
+
+  - id: L2
+    name: 基本熟练
+    description: ABC篇正确率高，D篇能做对部分，偶尔在推断题和主旨题上失误
+    signals:
+      - A篇信息查找满分
+      - B篇细节题和推断题大部分能做对
+      - C篇说明文能理解主旨，细节题基本准确
+      - D篇还原句子能做对2题，第3题（最难的）经常错
+      - 阅读13题正确率60%-85%（8-11题）
+      - 能根据题型调整阅读策略（先看题再读文）
+    diagnostic_questions:
+      - question: |
+          C篇推断题：文章关于人工智能，最后一段说
+          "Although AI has brought many benefits, we still need to
+          think carefully about how to use it wisely."
+          问题：What does the writer think about AI?
+          (A) AI is perfect. (B) AI is useless.
+          (C) We should use AI carefully. (D) We should stop using AI.
+        expected: "C（作者态度题：use it wisely = use it carefully，辩证态度）"
+        L2_response: "正确选出C"
+      - question: |
+          D篇还原句子（最难一空）：需要结合前后文三句话的逻辑
+          关系和代词指代来判断。
+        expected: "需要分析代词指代链和逻辑递进关系"
+        L2_typical_difficulty: "代词指代判断不准确，或被相似选项干扰"
+
+  - id: L3
+    name: 熟练精通
+    description: 阅读理解全面准确，包括D篇还原句子
+    signals:
+      - ABCD四篇正确率均在90%以上
+      - D篇还原句子3题至少对2题
+      - 做题速度控制在20分钟以内
+      - 能准确判断作者态度和文章主旨
+      - 推断题和主旨题准确率高
+    pass_standard: 中考阅读13题至少对11题（22分以上），D篇至少对2题
+
+# ------ 真题锚点（2021-2025 北京中考）------
+exam_benchmarks:
+
+  L1:
+    must_solve:
+      - { year: 2024, topic: A篇应用文3题, score: 6, note: 信息查找题 }
+      - { year: 2024, topic: B篇前2题（细节题）, score: 4 }
+    should_struggle:
+      - { year: 2024, topic: B篇推断题 }
+      - { year: 2024, topic: C篇主旨题 }
+      - { year: 2024, topic: D篇全部 }
+
+  L2:
+    must_solve:
+      - { year: 2024, topic: A篇全部, score: 6 }
+      - { year: 2024, topic: B篇全部, score: 8 }
+      - { year: 2024, topic: C篇前2题, score: 4 }
+      - { year: 2024, topic: D篇前1-2题, score: 2-4 }
+    should_struggle:
+      - { year: 2024, topic: D篇第3题（区分度最高）}
+
+  L3:
+    must_solve:
+      - { year: 2024, topic: ABCD四篇全部, score: 26 }
+      - { year: 2023, topic: ABCD四篇全部, score: 26 }
+    pass_standard: 13题至少对11题
+
+# ------ 北京卷阅读特点 ------
+beijing_reading_features:
+  A篇:
+    genre: 应用文（广告/通知/活动海报/课程表）
+    difficulty: 最简单，纯信息查找
+    strategy: 先看题目再找对应信息，不需要通读全文
+    common_trap: 数字/时间/地点的干扰项
+  B篇:
+    genre: 记叙文（个人经历/成长故事）
+    difficulty: 中等
+    strategy: 通读全文抓主线，注意情感变化
+    question_types: 细节题+推断题+主旨题
+  C篇:
+    genre: 说明文或议论文（科普/社会话题）
+    difficulty: 中等偏难
+    strategy: 抓每段主旨句（通常是首句或末句）
+    question_types: 细节题+推断题+主旨题+标题概括题
+  D篇:
+    genre: 还原句子（5选4或阅读回答）
+    difficulty: 最难，区分度最高
+    strategy: 利用逻辑连接词+代词指代+上下文语义连贯
+    key_skill: 前后文逻辑衔接判断
+
+# ------ 各子模块细分诊断 ------
+sub_modules:
+
+  信息查找:
+    L0_signal: "A篇简单信息也找不到"
+    L1_signal: "直接信息能找到但需要转换或计算的找不到"
+    L2_signal: "信息查找准确快速"
+    L3_signal: "A篇满分且用时不超过3分钟"
+    key_diagnostic: "从一则活动通知中找出时间、地点、费用、报名方式"
+
+  细节理解:
+    L0_signal: "文章中的细节题大部分做不对"
+    L1_signal: "原文原句的细节能找到，同义替换的找不到"
+    L2_signal: "细节题正确率高，偶尔在同义替换上出错"
+    L3_signal: "细节题准确率95%以上"
+    key_diagnostic: "找出文章中与题目对应的原句并判断选项的同义替换"
+
+  推断判断:
+    L0_signal: "推断题完全靠猜"
+    L1_signal: "简单推断能做但深层推断做不了"
+    L2_signal: "多数推断题能做对"
+    L3_signal: "推断题和作者态度题准确"
+    key_diagnostic: "What can we learn/infer from the passage?"
+
+  还原句子:
+    L0_signal: "D篇完全放弃"
+    L1_signal: "只能做对最简单的1题"
+    L2_signal: "能做对2题，最难的1题不确定"
+    L3_signal: "3题至少对2题"
+    key_diagnostic: "利用逻辑连接词和代词指代判断句子位置"
+
+# ------ 升级路径概要 ------
+upgrade_paths:
+  L0_to_L1:
+    focus: 扩充词汇量 + 培养基本阅读能力
+    estimated_hours: 20-25
+    key_tasks:
+      - 每天背30个核心词汇（重点：阅读高频词）
+      - 每天读一篇A篇难度的短文，做信息查找练习
+      - 学会"先看题再读文"的做题策略
+      - B篇记叙文：练习找主人公+事件+结果的主线
+
+  L1_to_L2:
+    focus: 提升BC篇正确率 + D篇入门
+    estimated_hours: 15-18
+    key_tasks:
+      - B篇推断题专项：从行为推品质/从结果推原因
+      - C篇段落主旨句定位训练（找每段中心句）
+      - D篇入门：学习逻辑连接词分类（递进/转折/因果/举例）
+      - 每周精做2套阅读真题，逐题分析错因
+
+  L2_to_L3:
+    focus: D篇攻坚 + 限时训练
+    estimated_hours: 12-15
+    key_tasks:
+      - D篇还原句子专项训练（每周3篇）
+      - 代词指代链分析训练
+      - 全套阅读限时训练（20分钟内完成ABCD四篇）
+      - 北京中考真题阅读2019-2025逐年精练

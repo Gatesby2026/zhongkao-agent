@@ -1,0 +1,197 @@
+# ============================================================
+# 诊断标准：完形填空（记叙文词义辨析/逻辑推理）
+# ============================================================
+# 状态：LLM生成初稿，待教师审核
+# 最后更新：2026-04-12
+
+module: 完形填空
+subject: 英语
+covers:
+  - 记叙文体裁理解（北京卷完形几乎100%记叙文）
+  - 词义辨析（动词/名词/形容词/副词四选一）
+  - 上下文逻辑推理（因果/转折/递进）
+  - 情感态度变化线索
+  - 篇章整体理解（主旨/情感主线/故事转折点）
+exam_weight: ★★（笔试60分中完形6题，共6分）
+typical_score: 6分（北京中考2024改革后6题6分）
+typical_questions: 6道四选一，每题1分，记叙文体裁，词汇为初中常用词
+
+# ------ 水平分级 ------
+levels:
+
+  - id: L0
+    name: 零基础/严重薄弱
+    description: 文章读不懂，词汇量严重不足，完全靠猜
+    signals:
+      - 文章大意完全看不懂
+      - 四个选项中有2个以上不认识
+      - 不会利用上下文线索判断词义
+      - 完形6题正确率低于50%（3题以下）
+      - 做题时间过长（超过12分钟）或过短（不到3分钟直接猜）
+    diagnostic_questions:
+      - question: |
+          Tom felt very ___ when he lost the game. But his father told him
+          that losing was part of life.
+          (A) excited (B) proud (C) sad (D) bored
+        expected: "C. sad（lost the game对应负面情感，father安慰说losing是生活的一部分）"
+        L0_typical_error: "不认识sad或excited，随机选择"
+      - question: |
+          She always ___ her classmates when they need help.
+          (A) helps (B) leaves (C) forgets (D) follows
+        expected: "A. helps（when they need help是线索，帮助需要帮助的同学）"
+        L0_typical_error: "不理解need help和helps的逻辑对应关系"
+
+  - id: L1
+    name: 概念模糊
+    description: 能读懂文章大意但细节理解有偏差，简单词义辨析能做但难的靠猜
+    signals:
+      - 文章主旨大致能理解
+      - 简单的词义辨析（明显的褒贬对立）能做对
+      - 需要结合上下文推理的题经常错
+      - 容易被干扰选项带偏（选项放在空格处都"读得通"的情况）
+      - 完形6题正确率50%-70%（3-4题）
+      - 做题时间在8-12分钟
+    diagnostic_questions:
+      - question: |
+          The old man lived alone, but he never felt lonely because his
+          neighbors always ___ him.
+          (A) visited (B) missed (C) forgot (D) needed
+        expected: "A. visited（邻居总是拜访他所以不孤独，因果逻辑）"
+        L1_typical_error: "选B或D，单独看miss him或need him也能讲通，但不符合因果逻辑"
+      - question: |
+          At first, I thought the task was too difficult. But after trying
+          again and again, I ___ finished it.
+          (A) hardly (B) never (C) finally (D) seldom
+        expected: "C. finally（转折结构：先以为太难→反复尝试→最终完成）"
+        L1_typical_error: "选A，不清楚hardly是否定副词"
+      - question: |
+          She picked up a pen and ___ a letter to her parents.
+          (A) read (B) wrote (C) received (D) lost
+        expected: "B. wrote（picked up a pen是线索，拿起笔→写信）"
+        L1_typical_error: "能做对简单动作搭配题"
+
+  - id: L2
+    name: 基本熟练
+    description: 多数题能做对，但在微妙的词义辨析和深层逻辑推理上仍有失误
+    signals:
+      - 文章整体理解准确
+      - 能抓住情感变化线索（如从sad到hopeful的转折）
+      - 多数词义辨析能做对
+      - 偶尔在近义词/多义词辨析上出错
+      - 完形6题正确率70%-85%（4-5题）
+      - 做题时间6-8分钟
+    diagnostic_questions:
+      - question: |
+          语篇理解：一篇讲述主人公克服困难的记叙文中，前文说
+          "Everything seemed impossible"，后文转折后说
+          "I realized that nothing could ___ me if I believed in myself."
+          (A) help (B) change (C) stop (D) follow
+        expected: "C. stop（如果相信自己没有什么能阻止我，呼应impossible到突破的转折）"
+        L2_response: "能通过前后文的情感转折正确选出C"
+        L2_typical_difficulty: "如果选项换成stop/prevent/keep/hold等近义词群会犹豫"
+      - question: |
+          完整篇章最后一空：全文讲一个孩子学骑自行车反复摔倒
+          最后终于学会的故事，末句"That experience taught me
+          that ___ is the key to success."
+          (A) luck (B) practice (C) talent (D) knowledge
+        expected: "B. practice（全文反复尝试的主题→practice is the key）"
+        L2_response: "能通过全文主旨得出正确答案"
+
+  - id: L3
+    name: 熟练精通
+    description: 完形填空准确率极高，能快速抓住文章逻辑和情感线索
+    signals:
+      - 6题全对率高（80%以上的套题能全对）
+      - 做题速度快（5-6分钟完成）
+      - 能准确判断文章的情感主线和转折点
+      - 近义词辨析准确（如look/watch/see/notice的区别）
+      - 做题后能说出每题的选择依据
+    pass_standard: 中考完形6题至少对5题，用时不超过6分钟
+
+# ------ 真题锚点（2021-2025 北京中考）------
+exam_benchmarks:
+
+  L1:
+    must_solve:
+      - { year: 2024, topic: 完形前2空（简单词义辨析）, score: 2 }
+      - { year: 2023, topic: 完形前2空, score: 2 }
+    should_struggle:
+      - { year: 2024, topic: 完形后2空（深层逻辑推理）}
+      - { year: 2023, topic: 完形后2空 }
+
+  L2:
+    must_solve:
+      - { year: 2024, topic: 完形前4空, score: 4 }
+      - { year: 2023, topic: 完形前4空, score: 4 }
+    should_struggle:
+      - { year: 2024, topic: 完形第5-6空（主旨和情感推断）}
+
+  L3:
+    must_solve:
+      - { year: 2024, topic: 完形全部6空, score: 6 }
+      - { year: 2023, topic: 完形全部6空, score: 6 }
+    pass_standard: 6题至少对5题
+
+# ------ 北京卷完形特点 ------
+beijing_cloze_features:
+  genre: 几乎100%记叙文（个人成长/亲情友情/社会正能量）
+  word_count: 约250-300词
+  question_count: 6题（2024改革后从15题缩减）
+  difficulty: 选项词汇均为初中常用词，核心考查上下文逻辑
+  common_themes:
+    - 个人成长（克服困难/学会坚持）
+    - 亲情友情（理解父母/帮助朋友）
+    - 社会正能量（志愿服务/环保意识）
+  key_skill: 抓住情感变化线索（负面→正面的转折是最常考的结构）
+
+# ------ 各子模块细分诊断 ------
+sub_modules:
+
+  词义辨析:
+    L0_signal: "四个选项有2个以上不认识"
+    L1_signal: "词都认识但近义词区分不开"
+    L2_signal: "常见词义辨析准确，偶尔在多义词上出错"
+    L3_signal: "动词/名词/形容词/副词辨析都准确"
+    key_diagnostic: "选出正确答案并说出排除其他三个选项的理由"
+
+  逻辑推理:
+    L0_signal: "不会利用上下文线索"
+    L1_signal: "简单因果能判断但转折和递进关系把握不准"
+    L2_signal: "能抓住文章的逻辑脉络"
+    L3_signal: "能快速定位关键线索词并推断"
+    key_diagnostic: "在含有but/however/so/because的段落中选出正确答案"
+
+  篇章理解:
+    L0_signal: "文章大意都读不懂"
+    L1_signal: "大意能懂但情感变化线索抓不住"
+    L2_signal: "情感主线清晰，主旨题基本能做对"
+    L3_signal: "首尾呼应、情感转折等深层结构一眼看出"
+    key_diagnostic: "读完全文后总结主旨（一句话概括故事+道理）"
+
+# ------ 升级路径概要 ------
+upgrade_paths:
+  L0_to_L1:
+    focus: 扩充词汇量 + 培养通读全文的习惯
+    estimated_hours: 15-20
+    key_tasks:
+      - 初中核心词汇1600词每天背30个（重点动词/形容词/副词）
+      - 每天读一篇短文（100-150词记叙文），标注不认识的词
+      - 完形训练：先通读全文再做题，不要看一空填一空
+
+  L1_to_L2:
+    focus: 近义词辨析 + 上下文逻辑推理训练
+    estimated_hours: 10-15
+    key_tasks:
+      - 高频完形词汇辨析整理（50组常考近义词/反义词）
+      - 标注完形文章中的逻辑连接词（but/so/because/however）
+      - 每周做3篇完形，每题写出选择依据
+      - 错题归类（词义不清 vs 逻辑推断错误 vs 粗心）
+
+  L2_to_L3:
+    focus: 限时训练 + 主旨把握
+    estimated_hours: 8-10
+    key_tasks:
+      - 完形限时训练（6分钟一篇）
+      - 北京中考真题完形2019-2025逐年精练
+      - 整理北京卷完形的情感转折模式和常见主题
+      - 做完后复述文章主旨（训练整体理解能力）

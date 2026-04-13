@@ -1,0 +1,151 @@
+# ============================================================
+# 诊断标准：基础语法（代词/介词/比较级/情态动词/连词）
+# ============================================================
+# 状态：LLM生成初稿，待教师审核
+# 最后更新：2026-04-12
+
+module: 基础语法
+subject: 英语
+covers:
+  - 人称代词/物主代词/反身代词
+  - 介词（时间/地点/方式）
+  - 形容词/副词比较级和最高级
+  - 情态动词（can/must/should/may/need）
+  - 连词（and/but/or/so/because/although/if/when）
+exam_weight: ★★（笔试60分中的单选1-6题，共6分）
+typical_score: 6分（北京中考笔试单选前6题）
+typical_questions: 单选1-6题，每题1分，考查基础语法点
+
+# ------ 水平分级 ------
+levels:
+
+  - id: L0
+    name: 零基础/严重薄弱
+    description: 基本语法规则不清楚，代词主宾格混用，介词完全靠猜
+    signals:
+      - 分不清I/me/my/mine/myself的用法
+      - 介词in/on/at的搭配完全靠猜
+      - 比较级变化规则（加-er还是more）不知道
+      - 情态动词后面加不加to搞不清
+      - 连词although和but会同时用（中式英语）
+      - 单选前6题正确率低于50%
+    diagnostic_questions:
+      - question: "— Is this your book? — No, it isn't. It's ___. (A) her (B) hers (C) she (D) herself"
+        expected: "B. hers（名词性物主代词，独立使用代替her book）"
+        L0_typical_error: "选A，分不清形容词性物主代词和名词性物主代词"
+      - question: "We usually have a meeting ___ Monday morning. (A) in (B) on (C) at (D) for"
+        expected: "B. on（具体某一天的上午用on）"
+        L0_typical_error: "选A，只记住in the morning但不知道有具体日期时用on"
+      - question: "Tom is ___ than his brother. (A) tall (B) taller (C) tallest (D) the tallest"
+        expected: "B. taller（两者比较用比较级，标志词than）"
+        L0_typical_error: "选A或D，看不出than是比较级标志词"
+
+  - id: L1
+    name: 概念模糊
+    description: 知道基本规则但容易混淆，变式题经常出错
+    signals:
+      - 代词主格宾格基本分清，但反身代词和不定代词容易错
+      - 介词搭配记了一些但不够系统，遇到固定短语搭配会猜
+      - 比较级规则大体知道但不规则变化（good-better-best）不熟
+      - 情态动词的基本用法知道但委婉表达和推测用法不清楚
+      - 单选前6题正确率50%-70%
+    diagnostic_questions:
+      - question: "— Would you like something to drink? — Yes, I'd like ___. (A) two cup of tea (B) two cups of teas (C) two cups of tea (D) two cup of teas"
+        expected: "C. two cups of tea（cup可数要加s，tea不可数不加s）"
+        L1_typical_error: "选B，不清楚tea是不可数名词"
+      - question: "The old man lives alone, but he doesn't feel ___. (A) alone (B) lonely (C) happy (D) busy"
+        expected: "B. lonely（alone表示客观独自，lonely表示主观孤独）"
+        L1_typical_error: "选A，分不清alone和lonely的区别"
+      - question: "You ___ drive after drinking. It's very dangerous. (A) can (B) must (C) mustn't (D) needn't"
+        expected: "C. mustn't（表示禁止，不准酒后驾车）"
+        L1_typical_error: "选D，混淆mustn't（禁止）和needn't（不必）"
+
+  - id: L2
+    name: 基本熟练
+    description: 常见考点掌握准确，但个别易混淆点仍有失误
+    signals:
+      - 代词各类用法基本掌握，偶尔在复合不定代词上丢分
+      - 介词常见搭配和固定短语掌握较好
+      - 比较级最高级变化规则和句型结构掌握准确
+      - 情态动词常见用法熟练，推测用法（must be / can't be）基本掌握
+      - 单选前6题正确率70%-90%
+    diagnostic_questions:
+      - question: "— Is there ___ in today's newspaper? — Yes, our school team won the match. (A) something new (B) new something (C) anything new (D) new anything"
+        expected: "C. anything new（疑问句用anything，形容词后置修饰不定代词）"
+        L2_response: "能正确选出C"
+      - question: "My father is getting old. He is not as ___ as before. (A) strong (B) stronger (C) strongest (D) the strongest"
+        expected: "A. strong（as...as之间用原级）"
+        L2_response: "正确，但偶尔在not as...as和比较级的转换上出错"
+
+  - id: L3
+    name: 熟练精通
+    description: 所有基础语法点准确无误，单选前6题保证全对
+    signals:
+      - 代词/介词/比较级/情态动词/连词全部掌握
+      - 能快速识别题目考点并选出正确答案
+      - 固定搭配和习惯用法记忆牢固
+      - 单选前6题正确率95%以上
+    pass_standard: 中考单选前6题全对，用时不超过3分钟
+
+# ------ 真题锚点（2021-2025 北京中考）------
+exam_benchmarks:
+
+  L1:
+    must_solve:
+      - { year: 2024, qid: 单选1, topic: 人称代词, score: 1 }
+      - { year: 2024, qid: 单选2, topic: 介词时间搭配, score: 1 }
+      - { year: 2023, qid: 单选1, topic: 物主代词, score: 1 }
+    should_struggle:
+      - { year: 2024, qid: 单选5, topic: 连词辨析 }
+      - { year: 2023, qid: 单选4, topic: 情态动词推测 }
+
+  L2:
+    must_solve:
+      - { year: 2024, qid: 单选1-5, topic: 基础语法全部, score: 5 }
+      - { year: 2023, qid: 单选1-5, topic: 基础语法全部, score: 5 }
+    should_struggle:
+      - { year: 2024, qid: 单选6, topic: 连词综合运用 }
+
+  L3:
+    must_solve:
+      - { year: 2024, qid: 单选1-6, topic: 基础语法满分, score: 6 }
+      - { year: 2023, qid: 单选1-6, topic: 基础语法满分, score: 6 }
+    pass_standard: 单选前6题全对，用时不超过3分钟
+
+# ------ 各子模块细分诊断 ------
+sub_modules:
+
+  代词:
+    L0_signal: "分不清I/me/my/mine/myself"
+    L1_signal: "主宾格会用但不定代词和反身代词易混"
+    L2_signal: "各类代词掌握准确，偶尔在复合不定代词上失误"
+    L3_signal: "代词题秒选，包括it的特殊用法"
+    key_diagnostic: "选择：The teacher told ___ to finish the homework. (A)we (B)us (C)our (D)ours"
+
+  介词:
+    L0_signal: "in/on/at完全靠猜"
+    L1_signal: "基本时间介词会用但固定搭配不全"
+    L2_signal: "常见搭配准确，个别介词短语不熟"
+    L3_signal: "介词题不假思索选出正确答案"
+    key_diagnostic: "I often play basketball ___ my friends ___ weekends."
+
+  比较级:
+    L0_signal: "不知道什么时候加-er什么时候加more"
+    L1_signal: "规则变化会但不规则变化记不全"
+    L2_signal: "比较级最高级变化和句型基本掌握"
+    L3_signal: "比较级相关的各种句型转换都能准确完成"
+    key_diagnostic: "Shanghai is one of ___ cities in China. (A)big (B)bigger (C)biggest (D)the biggest"
+
+  情态动词:
+    L0_signal: "情态动词后面加不加to分不清"
+    L1_signal: "基本用法知道但must/have to、mustn't/needn't易混"
+    L2_signal: "常见用法准确，推测用法基本掌握"
+    L3_signal: "情态动词各种用法和固定句型都掌握"
+    key_diagnostic: "— Must I finish the report today? — No, you ___."
+
+  连词:
+    L0_signal: "although和but同时用"
+    L1_signal: "简单连词会用但because/so、although/but的排斥关系模糊"
+    L2_signal: "并列连词和从属连词区分清楚"
+    L3_signal: "各类连词准确使用，包括if/when/unless等条件时间连词"
+    key_diagnostic: "You will miss the bus ___ you hurry up. (A)if (B)unless (C)after (D)since"

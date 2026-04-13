@@ -1,0 +1,372 @@
+# ============================================================
+# 学习路径：完形填空（记叙文词义辨析/逻辑推理）
+# ============================================================
+# 状态：LLM生成初稿，待教师审核
+# 最后更新：2026-04-12
+# 地区：北京
+# 重要性：笔试6题6分，2024改革后题量减少但每题分值增大
+
+module: 完形填空
+subject: 英语
+region: 北京
+
+# ================================================================
+#  L0 -> L1：读懂文章 + 基本词义辨析
+# ================================================================
+L0_to_L1:
+  target: 能读懂完形文章大意，简单词义辨析题能做对，6题正确率达到50%+
+  estimated_hours: 18-22
+  prerequisite: 基础语法L1以上 + 词汇量800以上
+
+  steps:
+    - order: 1
+      topic: 词汇扩充——完形高频词专项
+      goal: 掌握完形填空中最常考的200个词汇
+      estimated_hours: 8
+      resources:
+        - type: 教材
+          name: 人教版Go for it七-九年级课本词汇表
+          how_to_use: |
+            完形高频词分类背诵（每天20个，10天一轮）：
+
+            情感类（必考！）：
+            happy/sad/excited/worried/surprised/proud/lonely
+            angry/afraid/nervous/disappointed/grateful/confident
+
+            动作类：
+            decide/choose/realize/discover/remember/forget
+            notice/consider/expect/encourage/improve/succeed
+
+            品质类：
+            kind/brave/honest/patient/careful/serious/polite
+
+            程度/方式类副词：
+            finally/suddenly/hardly/immediately/gradually/silently
+
+            背诵方法：每个词造一个句子，放在语境中记忆
+        - type: 练习
+          name: 五三英语·核心词汇速记
+          how_to_use: 每天做词义匹配练习10题
+      pass_criteria:
+        - 200个高频词的中文意思能说出来
+        - 完形选项中的词汇至少认识3个以上
+      common_pitfalls:
+        - "只背中文意思不够，要知道词在句子中怎么用"
+        - "近义词区分：如look/see/watch/notice都是'看'但用法不同"
+
+    - order: 2
+      topic: 阅读习惯养成——先通读再做题
+      goal: 改掉"看一空填一空"的坏习惯，培养通读全文的意识
+      estimated_hours: 4
+      resources:
+        - type: 练习
+          name: 五三英语·完形基础篇
+          how_to_use: |
+            正确的做题步骤（必须严格执行）：
+            第一步：跳过所有空格，通读全文（2分钟）
+            - 抓住：谁？做了什么？结果怎样？
+            - 找到情感变化线（如从sad到happy的转折）
+
+            第二步：逐空填答（3分钟）
+            - 每个空看前后一句话的线索
+            - 先排除明显不对的，再从剩余选项中选
+
+            第三步：代入检查（1分钟）
+            - 把选好的答案放回文章通读一遍
+            - 检查是否通顺、逻辑是否自洽
+
+            每周做2篇，严格按三步走
+      pass_criteria:
+        - 读完文章能用一句话说出大意
+        - 做题时间控制在6-8分钟
+      common_pitfalls:
+        - "不要看到第一个空就开始做，先通读全文找主线"
+        - "不要只看空格所在的那一句，要看前后文"
+
+    - order: 3
+      topic: 简单词义辨析训练
+      goal: 掌握利用褒贬义和基本逻辑判断词义的方法
+      estimated_hours: 4
+      resources:
+        - type: 练习
+          name: 万唯英语·完形基础训练
+          how_to_use: |
+            基础辨析策略：
+
+            策略1：褒贬判断法
+            文章情感是正面的→选褒义词（happy/kind/help/encourage）
+            文章情感是负面的→选贬义词（sad/angry/alone/give up）
+
+            策略2：动作搭配法
+            picked up a pen → wrote（拿笔→写）
+            opened the door → walked in（开门→走进）
+            looked at the sky → saw stars（看天→看到星星）
+
+            策略3：因果对应法
+            because he studied hard → he passed the exam
+            so she was very happy → because she won the prize
+
+            每种策略做5篇练习
+      pass_criteria:
+        - 简单词义辨析正确率≥70%
+        - 能说出选择某个答案的依据
+
+    - order: 4
+      topic: 北京卷完形体裁特点适应
+      goal: 熟悉北京卷记叙文的叙事结构和常见主题
+      estimated_hours: 4
+      resources:
+        - type: 真题
+          name: 北京中考英语真题2021-2025·完形填空
+          how_to_use: |
+            北京卷完形的固定套路：
+            1. 体裁：100%记叙文（个人经历/成长故事）
+            2. 结构：起因→经过→转折→结果→感悟
+            3. 情感线：通常是"负面→正面"的变化
+               例：失败→尝试→成功→感悟
+                   孤独→遇到好人→温暖→感恩
+
+            做法：
+            - 读完文章先标注情感变化的转折点
+            - 转折点前后是出题重点
+            - 最后一空通常考主旨或感悟
+
+            逐年精做5篇，每篇做完后分析文章结构
+      pass_criteria:
+        - 能识别文章的情感转折点
+        - 能说出文章的主旨/道理
+
+# ================================================================
+#  L1 -> L2：近义词辨析 + 深层逻辑推理
+# ================================================================
+L1_to_L2:
+  target: 6题正确率达到70%-85%（4-5题）
+  estimated_hours: 12-15
+  prerequisite: L1
+
+  steps:
+    - order: 1
+      topic: 高频近义词辨析50组
+      goal: 掌握完形中最常考的近义词区分
+      estimated_hours: 4
+      resources:
+        - type: 练习
+          name: 万唯英语·完形高频词义辨析
+          how_to_use: |
+            必须掌握的近义词组：
+
+            "看"类：look（主动看）/see（看到结果）/watch（观看）/notice（注意到）
+            "说"类：say（说内容）/speak（说语言）/tell（告诉某人）/talk（交谈）
+            "想"类：think（思考）/consider（考虑）/realize（意识到）/believe（相信）
+            "给"类：give（给）/offer（主动提供）/provide（提供）/share（分享）
+            "花费"：spend（人+时间/金钱）/cost（物+金钱）/take（It takes）/pay（人+金钱）
+
+            "改变"类：change（改变）/turn（转变）/become（变得）/grow（逐渐变得）
+            "得到"：get（获得）/receive（收到）/win（赢得）/achieve（实现）
+            "重要"：important（重要）/necessary（必要）/valuable（有价值）/meaningful（有意义）
+
+            每天背5组，每组在语境中对比使用
+            做25题近义词辨析专项
+      pass_criteria:
+        - 50组近义词至少掌握40组
+        - 辨析正确率≥80%
+
+    - order: 2
+      topic: 逻辑连接词线索训练
+      goal: 学会利用but/however/so/because/besides等判断空格答案
+      estimated_hours: 3
+      resources:
+        - type: 练习
+          name: 五三英语·完形逻辑推理专题
+          how_to_use: |
+            逻辑连接词是做完形的"金钥匙"：
+
+            转折信号（前后意思相反）：
+            but / however / although / instead / while
+            → 空格前是负面的，空格后一定是正面的（反之亦然）
+
+            因果信号（前因后果）：
+            because / so / therefore / as a result
+            → 空格和另一半构成因果关系
+
+            递进信号（方向一致）：
+            and / also / besides / what's more / moreover
+            → 空格和前文方向一致
+
+            训练方法：
+            1. 在完形文章中圈出所有逻辑连接词
+            2. 根据连接词判断空格前后的逻辑关系
+            3. 再选择答案
+            做10篇，每篇先标注逻辑连接词
+      pass_criteria:
+        - 能在文章中快速找到逻辑连接词
+        - 利用逻辑关系选答案的正确率提升
+
+    - order: 3
+      topic: 情感变化线索专项
+      goal: 准确把握文章中人物情感的变化轨迹
+      estimated_hours: 3
+      resources:
+        - type: 练习
+          name: 北京各区模考·完形精选
+          how_to_use: |
+            情感线追踪法：
+            1. 读完全文，画出情感变化曲线
+               例：happy → 遇到困难 → sad/worried → 得到帮助 → grateful → 感悟
+            2. 空格处的词必须符合当前的情感状态
+            3. 转折处（从负面到正面）是高频出题点
+
+            常考的情感转折词：
+            however / but then / to my surprise / gradually / finally
+
+            做8篇模考完形，每篇画情感曲线
+      pass_criteria:
+        - 每篇能准确画出情感变化曲线
+        - 转折处的题目正确率≥80%
+
+    - order: 4
+      topic: 首尾空和主旨空专项
+      goal: 攻克最容易丢分的首空和末空
+      estimated_hours: 2
+      resources:
+        - type: 练习
+          name: 完形首尾空精选20题
+          how_to_use: |
+            首空策略：
+            - 首空通常设置背景/情感基调
+            - 需要通读全文后再回来做
+            - 不要只看第一句就选
+
+            末空策略：
+            - 末空通常考主旨/感悟/道理
+            - 与文章整体主题一致
+            - 常见答案模式：positive words（hope/love/courage/effort）
+
+            做20组首尾空专项练习
+      pass_criteria:
+        - 首尾空正确率≥75%
+
+# ================================================================
+#  L2 -> L3：追求满分，限时精准
+# ================================================================
+L2_to_L3:
+  target: 6题至少对5题，做题时间控制在5-6分钟
+  estimated_hours: 8-10
+  prerequisite: L2
+  notes: 完形满分需要很强的语感，适合目标90+的学生
+
+  steps:
+    - order: 1
+      topic: 限时强化训练
+      goal: 提速不降准
+      estimated_hours: 3
+      resources:
+        - type: 真题
+          name: 北京中考+各区模考·完形精选20篇
+          how_to_use: |
+            限时训练计划：
+            第1周：每篇8分钟（允许超时）
+            第2周：每篇7分钟
+            第3周：每篇6分钟
+            最终目标：每篇5-6分钟
+
+            做完后严格对答案，统计正确率
+            错题分类：词义不清 / 逻辑推断错 / 粗心
+            如果某类错误超过30%就针对性补
+      pass_criteria:
+        - 6分钟内完成且正确率≥85%
+
+    - order: 2
+      topic: 多义词和熟词生义
+      goal: 攻克利用常见词的不常见含义设置的陷阱
+      estimated_hours: 3
+      resources:
+        - type: 练习
+          name: 万唯英语·完形难词精讲
+          how_to_use: |
+            常见熟词生义：
+            light：轻的（不只是"光"）
+            mean：意味着/吝啬的（不只是"意思"）
+            miss：错过/想念（两个意思都常考）
+            change：零钱/改变
+            right：正确的/右边的/权利
+            still：仍然/安静的
+            match：比赛/匹配/火柴
+            last：最后的/持续
+
+            在完形语境中辨析这些词的含义
+            做15题熟词生义专项
+      pass_criteria:
+        - 常见多义词在语境中能选对含义
+
+    - order: 3
+      topic: 全真模拟冲刺
+      goal: 考试状态下稳定发挥
+      estimated_hours: 2
+      resources:
+        - type: 真题
+          name: 2024-2025北京各区一模二模·完形
+          how_to_use: |
+            模拟考试条件：
+            - 限时6分钟
+            - 不查字典
+            - 做完不改
+            - 对答案后分析丢分原因
+
+            每周做3篇，连续练4周
+      pass_criteria:
+        - 连续5篇以上正确率≥85%（6题对5题以上）
+
+# ================================================================
+#  时间维度策略
+# ================================================================
+time_strategies:
+
+  long_term:
+    name: 长线期（距中考6-12个月）
+    principle: 词汇量和阅读量是完形的基础，要持续积累
+    by_level:
+      L0: |
+        重点扩充词汇量，每天背20个完形高频词。
+        每周读2篇短文培养语感。
+        完形练习每周1篇，不限时，重点理解文章和词义。
+      L1: |
+        每天背5组近义词辨析。
+        每周做2篇完形，做完后分析逻辑连接词和情感线。
+        错题整理，按错因分类。
+      L2: |
+        限时训练开始。每周做3篇完形，逐步缩短到6分钟。
+        攻克多义词和熟词生义。
+
+  mid_term:
+    name: 强化期（距中考3-6个月）
+    principle: 以真题为核心，反复练习
+    by_level:
+      L0: |
+        继续词汇扩充，同时开始做真题完形。
+        每篇不限时，做完逐句翻译，标注生词。
+        每周2篇，目标：读懂文章大意。
+      L1: |
+        真题+模考题精练，每周3篇。
+        每篇做完后画情感变化曲线。
+        限时8分钟。
+      L2: |
+        限时6分钟做完形。每周3篇。
+        重点攻克首尾空和逻辑推断题。
+
+  sprint:
+    name: 冲刺期（距中考0-3个月）
+    principle: 保持手感，稳定发挥
+    by_level:
+      L0: |
+        背诵完形高频情感词（20个）和动作搭配（20个）。
+        做3篇真题完形，重点练简单的词义辨析题。
+        目标：6题对3题。
+      L1: |
+        每周2篇限时完形。
+        考前重做错题本中的完形错题。
+        目标：6题对4题。
+      L2: |
+        每周1-2篇限时完形保持手感。
+        考前快速浏览近义词辨析笔记。
+        目标：6题对5题以上。

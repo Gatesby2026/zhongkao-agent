@@ -1,0 +1,226 @@
+# ============================================================
+# 诊断标准：文段表达（邮件回复+命题作文）
+# ============================================================
+# 状态：LLM生成初稿，待教师审核
+# 最后更新：2026-04-12
+
+module: 文段表达
+subject: 英语
+covers:
+  - 应用文写作/邮件回复（根据邮件内容回复，8分）
+  - 命题作文/半命题作文（围绕主题写短文，10分）
+  - 语言准确性（语法/拼写/标点）
+  - 内容完整性（要点覆盖/逻辑连贯）
+  - 篇章组织（开头/正文/结尾/连接词）
+exam_weight: ★★★★（笔试60分中写作18分，占比30%）
+typical_score: 18分（邮件回复8分+命题作文10分）
+typical_questions: 第一篇应用文（邮件回复），第二篇命题/半命题作文
+
+# ------ 水平分级 ------
+levels:
+
+  - id: L0
+    name: 零基础/严重薄弱
+    description: 无法写出完整的英语句子，基本语法错误频繁
+    signals:
+      - 写不出完整的英语句子（主谓宾结构不完整）
+      - 大量基础语法错误（三单/时态/主谓一致）
+      - 词汇量极少，只会最基本的单词
+      - 邮件格式完全不知道
+      - 不理解题目要求，写不出要点
+      - 两篇作文总分低于6分（18分满分）
+    diagnostic_questions:
+      - question: "用英语写一句话描述你的周末活动"
+        expected: "I usually play basketball with my friends on weekends."
+        L0_typical_error: "I weekend play basketball friend. （缺介词/冠词/时态错误）"
+      - question: "写一封简短的邮件邀请朋友参加你的生日聚会"
+        expected: |
+          Dear Tom,
+          I'm going to have a birthday party this Saturday. Would you
+          like to come? It starts at 6 p.m. at my home.
+          Looking forward to your reply.
+          Yours, Li Hua
+        L0_typical_error: "完全不知道邮件格式，写成几个零散的词或句子"
+
+  - id: L1
+    name: 概念模糊
+    description: 能写出简单句子但错误较多，要点覆盖不全
+    signals:
+      - 能写出简单的SVO句子但复杂句写不了
+      - 三单/时态错误仍然较多
+      - 邮件格式基本知道（Dear.../Yours）但内容不充实
+      - 命题作文能写出3-4句但要点覆盖不完整
+      - 缺乏连接词，文章像句子堆砌
+      - 两篇作文总分6-10分
+    diagnostic_questions:
+      - question: |
+          你收到了好友Peter的邮件，他说最近学习压力很大，
+          请你回复邮件给他一些建议。要求：回答他的问题，
+          给出至少两条建议。
+        expected: |
+          回复应包含：表示理解/同情 + 至少两条具体建议 +
+          鼓励的话语。格式正确（称呼/正文/结尾/署名）
+        L1_typical_error: |
+          Dear Peter,
+          You should study hard. You should sleep early.
+          Yours, Li Hua
+          （有格式但内容单薄，只用should堆砌，缺乏逻辑连接和展开）
+      - question: |
+          以"A Special Day"为题，写一篇不少于50词的短文。
+        expected: "有明确的事件、细节描写和感受"
+        L1_typical_error: |
+          Today is a special day. I go to park. I see many flowers.
+          I am happy. It is a good day.
+          （时态错误，缺少细节，句型单一）
+
+  - id: L2
+    name: 基本熟练
+    description: 语言基本准确，要点覆盖完整，但表达不够丰富
+    signals:
+      - 简单句准确率高，能使用部分复合句（because/if/when引导的从句）
+      - 邮件回复格式正确，内容覆盖题目要求的要点
+      - 命题作文结构清晰（开头点题/正文展开/结尾总结）
+      - 能使用基本的连接词（first/then/finally/besides）
+      - 偶尔有语法错误但不影响理解
+      - 词汇和句型不够丰富，作文读起来比较平淡
+      - 两篇作文总分10-14分
+    diagnostic_questions:
+      - question: |
+          邮件回复题：好友Amy来邮件说她要来北京旅游，
+          问你推荐什么景点、什么时候来最好、需要准备什么。
+        expected: |
+          内容完整（推荐景点+最佳时间+准备事项），
+          语言准确，有适当展开
+        L2_response: |
+          Dear Amy,
+          I'm glad to hear that you're coming to Beijing. I'd like
+          to recommend the Great Wall. It's one of the most famous
+          places in Beijing. I think autumn is the best time to come
+          because the weather is nice. You should bring a camera
+          and comfortable shoes.
+          I'm looking forward to seeing you!
+          Yours, Li Hua
+          （要点覆盖完整，语言基本准确，但句型较简单）
+      - question: |
+          命题作文：以"The Person I Admire Most"为题写短文。
+        expected: "有人物介绍、具体事例、为什么敬佩、自己的感受"
+        L2_typical_difficulty: "具体事例展开不够，或语言表达过于简单"
+
+  - id: L3
+    name: 熟练精通
+    description: 语言准确丰富，内容充实有深度，篇章组织好
+    signals:
+      - 语法错误极少，句型多样（简单句+并列句+复合句+非谓语）
+      - 词汇丰富，能使用高级表达和同义替换
+      - 邮件回复内容充实自然，语气得体
+      - 命题作文有明确主题、丰富细节、深刻感悟
+      - 连接词使用自然流畅
+      - 能使用修辞手段（比喻/排比/引用）
+      - 两篇作文总分14-18分
+    pass_standard: 邮件回复7分以上，命题作文8分以上，总分15分以上
+
+# ------ 真题锚点（2021-2025 北京中考）------
+exam_benchmarks:
+
+  L1:
+    must_achieve:
+      - { year: 2024, topic: 邮件回复, target_score: "4/8", note: 格式正确+至少覆盖1个要点 }
+      - { year: 2024, topic: 命题作文, target_score: "3/10", note: 写出5句以上基本正确的句子 }
+
+  L2:
+    must_achieve:
+      - { year: 2024, topic: 邮件回复, target_score: "6/8", note: 要点覆盖完整+语言基本准确 }
+      - { year: 2024, topic: 命题作文, target_score: "6/10", note: 结构清晰+要点完整+语言基本准确 }
+
+  L3:
+    must_achieve:
+      - { year: 2024, topic: 邮件回复, target_score: "7-8/8", note: 内容充实+语言准确+表达自然 }
+      - { year: 2024, topic: 命题作文, target_score: "8-10/10", note: 内容深刻+语言丰富+篇章连贯 }
+
+# ------ 北京卷写作特点 ------
+beijing_writing_features:
+  邮件回复:
+    format: 回复给定邮件，需回答邮件中的问题
+    score: 8分
+    word_count: 不少于50词
+    scoring_criteria:
+      - 格式正确（称呼/正文/结尾/署名）2分
+      - 要点覆盖完整 3分
+      - 语言准确性 3分
+    common_topics:
+      - 推荐/建议类（推荐景点/建议活动）
+      - 介绍类（介绍学校/介绍传统文化）
+      - 邀请类（邀请参加活动/聚会）
+  命题作文:
+    format: 围绕主题写短文，通常有提示词或提纲
+    score: 10分
+    word_count: 不少于60词
+    scoring_criteria:
+      - 内容完整性 4分
+      - 语言准确性 3分
+      - 篇章组织性 3分
+    common_topics:
+      - 个人经历/成长感悟
+      - 传统文化/校园生活
+      - 社会热点（环保/志愿服务/科技）
+
+# ------ 各子模块细分诊断 ------
+sub_modules:
+
+  语言准确性:
+    L0_signal: "每句话都有语法错误"
+    L1_signal: "简单句基本正确但时态和三单经常错"
+    L2_signal: "语法错误少，偶尔在复杂句上出错"
+    L3_signal: "语法错误极少，句型多样"
+    key_diagnostic: "写5句话描述你的一天，检查时态/三单/主谓一致"
+
+  内容完整性:
+    L0_signal: "题目要求的要点一个都没覆盖"
+    L1_signal: "覆盖了部分要点但不完整"
+    L2_signal: "要点覆盖完整但展开不够"
+    L3_signal: "要点完整且有丰富的细节展开"
+    key_diagnostic: "根据邮件中的3个问题逐一回答"
+
+  篇章组织:
+    L0_signal: "句子堆砌没有逻辑"
+    L1_signal: "有基本顺序但缺少连接词"
+    L2_signal: "使用first/then/finally等连接词"
+    L3_signal: "连接词使用自然，篇章结构完整"
+    key_diagnostic: "写一篇短文检查是否有开头/正文/结尾+连接词"
+
+  高级表达:
+    L0_signal: "只会I like/I think等最基本表达"
+    L1_signal: "句型单一，大量重复使用I think/I like"
+    L2_signal: "能使用because/if/when等从句"
+    L3_signal: "能使用not only...but also/it is...that等高级句型"
+    key_diagnostic: "用不同句型改写同一个意思（如表达建议的5种方式）"
+
+# ------ 升级路径概要 ------
+upgrade_paths:
+  L0_to_L1:
+    focus: 写出正确的简单句 + 掌握邮件格式
+    estimated_hours: 15-20
+    key_tasks:
+      - 每天造5个正确的英语句子（SVO结构）
+      - 背诵邮件格式模板（开头/结尾/署名）
+      - 抄写并仿写范文（每天一篇50词的短文）
+      - 常用句型积累（I think / I like / I want to / I hope）
+
+  L1_to_L2:
+    focus: 要点覆盖 + 篇章组织 + 减少语法错误
+    estimated_hours: 12-15
+    key_tasks:
+      - 审题训练：读完题目后列出要覆盖的要点
+      - 连接词使用练习（first/then/besides/finally/in a word）
+      - 每周写2篇作文，请老师或同学批改
+      - 常见语法错误自查清单（三单/时态/主谓一致/冠词）
+
+  L2_to_L3:
+    focus: 丰富表达 + 深化内容 + 限时训练
+    estimated_hours: 10-12
+    key_tasks:
+      - 高级句型积累（定语从句/感叹句/倒装句/it is...that强调句）
+      - 同义替换词汇表（important→significant/vital/essential）
+      - 命题作文深度训练：不只写what，还要写why和how I feel
+      - 限时训练（邮件8分钟+作文12分钟）
+      - 北京中考真题写作2019-2025逐年仿写
