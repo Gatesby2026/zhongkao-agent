@@ -1,0 +1,376 @@
+# ============================================================
+# 五三·全练版 物理 2026北京版 — 专题→知识库模块映射
+# ============================================================
+# 最后更新：2026-04-13
+# 数据来源：百度百科（5年中考3年模拟·物理）完整目录
+# 对应教辅：五三全练版·中考物理·北京专用（2026版）
+# 对应知识库模块：diagnostics/physics/ 的 5 个 YAML 文件
+# ============================================================
+# 五三物理按知识专题编排，共 2 大部分 21 个专题：
+#   Part 1：专题突破（16 个知识专题）
+#   Part 2：热点题型（5 个能力型专题）
+# ============================================================
+
+book_info:
+  series_id: wusan-quanlian
+  subject: 物理
+  edition_year: 2026
+  region: 北京专用
+  publisher: 教育科学出版社
+  isbn: null  # 待确认
+  total_pages: ~320
+  total_topics: 21
+  organization: 按知识专题编排（2 部分）
+  data_confidence: verified  # 百度百科完整目录
+  data_sources:
+    - "百度百科：5年中考3年模拟·物理 完整目录"
+  last_verified: "2026-04-13"
+
+# ================================================================
+#  第一部分：专题突破（16 个知识专题）
+# ================================================================
+part_1_专题突破:
+
+  # ---- 声光热（对应 sound-light-heat 模块）----
+
+  - topic_id: 1
+    topic_name: 声现象
+    kb_module: sound-light-heat
+    kb_module_name: 声光热
+    key_points:
+      - 声音的产生与传播
+      - 声音的三个特征（音调/响度/音色）
+      - 噪声的控制
+      - 声的利用（超声波/次声波）
+    exam_weight: "约2-3分（选择1题）"
+    difficulty: "基础"
+    notes: "最基础的专题，L0必须拿分"
+
+  - topic_id: 2
+    topic_name: 光现象
+    kb_module: sound-light-heat
+    kb_module_name: 声光热
+    key_points:
+      - 光的直线传播
+      - 光的反射（平面镜成像）
+      - 光的折射（透镜成像规律）
+      - 光的色散
+    exam_weight: "约4-6分（选择+实验）"
+    difficulty: "基础-中等"
+    notes: "凸透镜成像是实验探究必考内容"
+
+  - topic_id: 3
+    topic_name: 测量初步和简单的机械运动
+    kb_module: sound-light-heat
+    kb_module_name: 声光热
+    key_points:
+      - 长度和时间的测量
+      - 误差与有效数字
+      - 速度的计算
+      - 匀速直线运动
+    exam_weight: "约2-3分"
+    difficulty: "基础"
+
+  - topic_id: 14
+    topic_name: 物质的形态和变化
+    kb_module: sound-light-heat
+    kb_module_name: 声光热
+    key_points:
+      - 温度与温度计
+      - 物态变化（六种）
+      - 熔化/凝固/汽化/液化/升华/凝华
+    exam_weight: "约3-4分（选择+填空）"
+    difficulty: "基础-中等"
+    notes: "物态变化图像分析是常考题型"
+
+  # ---- 力学（对应 mechanics 模块）----
+
+  - topic_id: 4
+    topic_name: 质量和密度
+    kb_module: mechanics
+    kb_module_name: 力学
+    key_points:
+      - 质量的概念与测量（天平使用）
+      - 密度的概念与公式（ρ=m/V）
+      - 密度的测量实验
+      - 密度的应用
+    exam_weight: "约4-6分（含实验题）"
+    difficulty: "中等"
+    notes: "测密度实验是6大核心实验之一"
+
+  - topic_id: 5
+    topic_name: 力、力和运动
+    kb_module: mechanics
+    kb_module_name: 力学
+    key_points:
+      - 力的概念与三要素
+      - 重力/弹力/摩擦力
+      - 牛顿第一定律
+      - 二力平衡
+      - 力与运动的关系
+    exam_weight: "约4-6分"
+    difficulty: "中等"
+    notes: "力学基础，理解力与运动的关系是关键"
+
+  - topic_id: 6
+    topic_name: 压强、液体压强、大气压强
+    kb_module: mechanics
+    kb_module_name: 力学
+    key_points:
+      - 压强公式（p=F/S）
+      - 液体压强（p=ρgh）
+      - 连通器原理
+      - 大气压强（托里拆利实验）
+    exam_weight: "约4-6分（选择+计算）"
+    difficulty: "中等-较难"
+
+  - topic_id: 7
+    topic_name: 浮力
+    kb_module: mechanics
+    kb_module_name: 力学
+    key_points:
+      - 浮力的概念
+      - 阿基米德原理（F浮=ρ液gV排）
+      - 物体浮沉条件
+      - 浮力计算的四种方法
+    exam_weight: "约4-6分（计算题常考）"
+    difficulty: "较难"
+    notes: "浮力计算是力学部分难点，L2/L3重点"
+
+  - topic_id: 8
+    topic_name: 简单机械、功和功率
+    kb_module: mechanics
+    kb_module_name: 力学
+    key_points:
+      - 杠杆（平衡条件 F1L1=F2L2）
+      - 滑轮与滑轮组
+      - 功（W=Fs）与功率（P=W/t）
+      - 机械效率（η=W有用/W总）
+    exam_weight: "约6-8分（含实验+计算）"
+    difficulty: "中等-较难"
+    notes: "杠杆实验是6大核心实验之一"
+
+  - topic_id: 15
+    topic_name: 机械能和内能
+    kb_module: mechanics
+    kb_module_name: 力学
+    key_points:
+      - 动能与势能
+      - 机械能守恒
+      - 内能与温度
+      - 热量计算（Q=cmΔt）
+      - 热机效率
+    exam_weight: "约4-6分"
+    difficulty: "中等"
+
+  # ---- 电学（对应 electricity 模块）----
+
+  - topic_id: 9
+    topic_name: 电路
+    kb_module: electricity
+    kb_module_name: 电学
+    key_points:
+      - 电流/电压/电阻的概念
+      - 串联与并联电路
+      - 电路图的识别与连接
+      - 电流表/电压表的使用
+    exam_weight: "约4-6分（选择+填空+实验）"
+    difficulty: "中等"
+    notes: "电学基础，务必掌握串并联电路特点"
+
+  - topic_id: 10
+    topic_name: 欧姆定律
+    kb_module: electricity
+    kb_module_name: 电学
+    key_points:
+      - 欧姆定律（I=U/R）
+      - 串并联电路的欧姆定律
+      - 电阻的测量实验
+      - 欧姆定律的应用
+    exam_weight: "约6-8分（实验+计算）"
+    difficulty: "中等-较难"
+    notes: "探究欧姆定律是6大核心实验之一"
+
+  - topic_id: 11
+    topic_name: 电功和电功率
+    kb_module: electricity
+    kb_module_name: 电学
+    key_points:
+      - 电功（W=UIt）
+      - 电功率（P=UI=I²R=U²/R）
+      - 测量小灯泡电功率实验
+      - 焦耳定律（Q=I²Rt）
+      - 电功率计算题
+    exam_weight: "约8-10分（实验+计算，分值最高！）"
+    difficulty: "较难"
+    notes: "测电功率是6大核心实验之一，计算题高频载体"
+
+  - topic_id: 12
+    topic_name: 家庭电路
+    kb_module: electricity
+    kb_module_name: 电学
+    key_points:
+      - 家庭电路的组成
+      - 安全用电（触电/短路/过载）
+      - 保险丝/空气开关
+    exam_weight: "约2-3分（选择1题）"
+    difficulty: "基础"
+
+  - topic_id: 13
+    topic_name: 电和磁
+    kb_module: electricity
+    kb_module_name: 电学
+    key_points:
+      - 磁现象
+      - 电流的磁效应（电磁铁）
+      - 电磁感应
+      - 电动机/发电机原理
+    exam_weight: "约2-4分（选择+填空）"
+    difficulty: "中等"
+
+  # ---- 综合（对应 sound-light-heat，较少考）----
+
+  - topic_id: 16
+    topic_name: 信息、材料、能源与可持续发展
+    kb_module: sound-light-heat
+    kb_module_name: 声光热
+    key_points:
+      - 电磁波与信息传递
+      - 新材料（纳米/超导/半导体）
+      - 能源分类（可再生/不可再生）
+      - 能量守恒定律
+    exam_weight: "约1-2分（选择1题）"
+    difficulty: "基础"
+    notes: "科普阅读题可能涉及此专题"
+
+# ================================================================
+#  第二部分：热点题型（5 个能力型专题）
+# ================================================================
+# 这部分跨知识模块，按题型分类
+part_2_热点题型:
+
+  - topic_id: 17
+    topic_name: 应用性物理问题
+    kb_modules: [mechanics, electricity]
+    content: "生活中的物理现象分析，用物理知识解释实际问题"
+    exam_position: "选择/填空中的生活应用题"
+    target_levels: [L1, L2]
+
+  - topic_id: 18
+    topic_name: 图表信息题
+    kb_modules: [mechanics, electricity, sound-light-heat]
+    content: "从图象/表格中获取信息并分析计算"
+    exam_position: "填空/选择/实验"
+    target_levels: [L1, L2, L3]
+    notes: "图象分析是北京中考高频题型"
+
+  - topic_id: 19
+    topic_name: 开放性试题
+    kb_modules: [mechanics, electricity]
+    content: "条件不完备/多答案/需设计方案的题目"
+    exam_position: "实验设计/方案评价"
+    target_levels: [L2, L3]
+
+  - topic_id: 20
+    topic_name: 探究性试题
+    kb_module: experiments
+    kb_module_name: 实验探究
+    content: "科学探究的完整过程（提出问题→猜想→设计→实验→分析→结论）"
+    exam_position: "实验探究大题（27分！）"
+    target_levels: [L1, L2, L3]
+    notes: "北京中考物理实验探究占27分，是分值最大的题型"
+
+  - topic_id: 21
+    topic_name: 学科内综合及压轴题
+    kb_modules: [mechanics, electricity, experiments]
+    content: "力学+电学综合计算、多步骤分析"
+    exam_position: "计算题最后1-2题"
+    target_levels: [L2, L3]
+
+# ================================================================
+#  模块汇总（按知识库模块聚合）
+# ================================================================
+module_summary:
+
+  - kb_module: sound-light-heat
+    topics: [1, 2, 3, 14, 16]
+    total_exam_weight: "约12-18分"
+    notes: "基础分，L0/L1 优先拿下"
+
+  - kb_module: mechanics
+    topics: [4, 5, 6, 7, 8, 15]
+    total_exam_weight: "约26-38分（最高！占中考~35%）"
+    notes: "力学是物理半壁江山，压强+浮力+功率是难点"
+
+  - kb_module: electricity
+    topics: [9, 10, 11, 12, 13]
+    total_exam_weight: "约22-31分（占中考~35%）"
+    notes: "电学与力学并重，电功率计算是重中之重"
+
+  - kb_module: experiments
+    topics: [20]
+    cross_cutting: true
+    total_exam_weight: "约27分（实验探究大题）"
+    notes: |
+      实验探究不是独立知识模块，而是横跨力学+电学的能力型题。
+      6大核心实验：测密度(力学)、探究欧姆定律(电学)、
+      测电功率(电学)、凸透镜成像(光学)、杠杆平衡(力学)、浮力(力学)。
+    core_experiments:
+      - name: 测量物质的密度
+        topic: 4
+        kb_module: mechanics
+      - name: 探究凸透镜成像规律
+        topic: 2
+        kb_module: sound-light-heat
+      - name: 探究杠杆平衡条件
+        topic: 8
+        kb_module: mechanics
+      - name: 探究浮力大小
+        topic: 7
+        kb_module: mechanics
+      - name: 探究欧姆定律
+        topic: 10
+        kb_module: electricity
+      - name: 测量小灯泡电功率
+        topic: 11
+        kb_module: electricity
+
+  - kb_module: calculation
+    topics: [21]
+    cross_cutting: true
+    total_exam_weight: "约10-14分（计算大题）"
+    notes: |
+      计算题同样横跨力学+电学，不是独立知识模块。
+      常考类型：压强计算、浮力计算、功/功率/效率、电功率计算。
+
+# ================================================================
+#  分级使用建议
+# ================================================================
+usage_tips:
+
+  L0:
+    priority_topics: [1, 2, 3, 12, 14, 16]
+    strategy: "先做声光热基础专题的★题（容易拿分）"
+    daily_plan: "每天1个专题的★题（约20分钟）"
+    goal: "声光热基础分全拿（约12分）"
+    skip: "跳过专题7(浮力)、8(功率)、11(电功率)的★★★题"
+
+  L1:
+    priority_topics: [4, 5, 9, 10, 14, 15]
+    strategy: "做力学和电学基础专题的★+★★题"
+    daily_plan: "每天1个专题（约40分钟）"
+    goal: "力学+电学基础题拿稳"
+    focus: "特别关注6大核心实验的步骤和注意事项"
+
+  L2:
+    priority_topics: [6, 7, 8, 10, 11, 20]
+    strategy: "全做，重点做压强+浮力+电功率的★★★题"
+    daily_plan: "每天精做10-15题（约60分钟）"
+    goal: "实验探究题拿到20分/27分"
+    supplement: "配合 study-guides/physics/formula-sheet.yaml 复习公式"
+
+  L3:
+    priority_topics: [17, 18, 19, 20, 21]
+    strategy: "重点做第二部分的热点题型"
+    focus: "压轴计算（力学+电学综合）+ 实验设计"
+    supplement: "海淀/西城一模二模物理卷限时训练"

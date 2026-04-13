@@ -1,0 +1,503 @@
+# ============================================================
+# 教辅材料总目录 — 品牌/系列/版本/适用对象
+# ============================================================
+# 最后更新：2026-04-13
+# 数据来源：公开出版信息 + 教师推荐 + 学生实际使用反馈
+# 范围：北京中考 × 5 个文化课科目
+# ============================================================
+
+scope:
+  region: 北京
+  exam_year: 2026
+  subjects: [数学, 语文, 英语, 物理, 道法]
+
+# ================================================================
+#  推荐等级说明
+# ================================================================
+# A级：主流公认有效，覆盖面广，放心推荐
+# B级：质量好但适用场景较窄，需匹配学生水平和阶段
+# C级：有一定价值但需确认后再推荐
+
+# ================================================================
+#  品牌一：五年中考三年模拟（五三）
+# ================================================================
+brands:
+
+  - id: wusan
+    name: 五年中考三年模拟（五三）
+    short_name: 五三
+    publisher: 教育科学出版社 / 首都师范大学出版社
+    brand_owner: 曲一线科学备考
+    official_site: "http://www.quyixian.com/"
+    recommend_level: A
+    market_share: "中考教辅市场占有率第一"
+    overall_notes: |
+      最通用的中考教辅，几乎适合所有学生。
+      购买时注意区分「北京版」和「全国版」——章节编排不同。
+      五三按教材章节编排，适合同步复习。
+
+    series:
+
+      - id: wusan-quanlian
+        name: 五三·全练版
+        full_name: 五年中考三年模拟·全练版
+        recommend_level: A
+        target_levels: [L0, L1, L2]
+        usage_phase: "一轮复习（初三上+寒假）"
+        price_range: "38-50元/本"
+        structure: "知识清单 → 考点突破 → 真题训练 → 模拟演练"
+        organization: 按教材章节编排
+        features:
+          - "每章开头有知识清单（考前速查）"
+          - "题目分★/★★/★★★三档难度"
+          - "包含近5年真题（标注年份和题号）"
+          - "答案册独立成册，解析详细"
+        how_to_use_by_level:
+          L0:
+            strategy: "只看知识清单 + 只做★题"
+            daily_volume: "每天20-30分钟，5-8题"
+            skip: "★★★题全部跳过"
+            goal: "建立基础概念，不追求正确率"
+          L1:
+            strategy: "做★和★★题，跳过★★★"
+            daily_volume: "每天40分钟，10-15题"
+            focus: "★★题错的要回看知识清单"
+            goal: "★★题正确率达到80%"
+          L2:
+            strategy: "全做，重点做★★★和真题"
+            daily_volume: "每天60分钟"
+            focus: "★★★题+标注的真题要精做"
+            goal: "★★★题正确率达到60%"
+        subjects_available:
+          数学:
+            edition_year: 2026
+            region_edition: 北京版
+            isbn_prefix: "978-7-5191"
+            total_chapters: 约21章
+            total_pages: 约380页
+            changes_from_2025: "新增2025年北京真题，调整部分考点权重"
+          语文:
+            edition_year: 2026
+            region_edition: 北京版
+            total_chapters: 约18章
+            changes_from_2025: "新增2025年真题，书法鉴赏考点扩充"
+          英语:
+            edition_year: 2026
+            region_edition: 北京版
+            total_chapters: 约16章
+            changes_from_2025: "适配2024改革新题型（还原句子+文段表达），删除旧题型章节"
+          物理:
+            edition_year: 2026
+            region_edition: 北京版
+            total_chapters: 约15章
+            changes_from_2025: "总分70→80分制调整，新增科普阅读专题"
+          道法:
+            edition_year: 2026
+            region_edition: 北京版
+            total_chapters: 约12章
+            changes_from_2025: "更新2025-2026时政热点专题"
+
+      - id: wusan-zhenti
+        name: 五三·中考真题分类训练
+        full_name: 五年中考三年模拟·中考真题分类训练
+        recommend_level: A
+        target_levels: [L1, L2, L3]
+        usage_phase: "二轮复习（初三下 1-4月）"
+        price_range: "35-45元/本"
+        structure: "按知识点分类的近5年各地真题汇编"
+        organization: 按知识模块编排（非教材章节）
+        features:
+          - "按知识点/题型分类，集中突破"
+          - "包含全国各地真题（标注城市和年份）"
+          - "北京真题有★标注"
+        how_to_use:
+          strategy: "按模块集中刷题，一个模块做完再换"
+          recommended_order: "先做弱项模块，再做强项模块"
+          注意: "北京版中有全国真题，难度参差——优先做标★的北京题"
+        subjects_available:
+          数学: { edition_year: 2026, region_edition: 北京版 }
+          语文: { edition_year: 2026, region_edition: 北京版 }
+          英语: { edition_year: 2026, region_edition: 北京版 }
+          物理: { edition_year: 2026, region_edition: 北京版 }
+          道法: { edition_year: 2026, region_edition: 北京版 }
+
+      - id: wusan-a
+        name: 五三·A版
+        recommend_level: B
+        target_levels: [L1, L2]
+        usage_phase: "同步练习（初二-初三）"
+        price_range: "30-40元/本"
+        structure: "与教材完全同步的配套练习"
+        organization: 按教材课时编排
+        notes: "适合课后当天练习用，比全练版更细分到课时"
+
+      - id: wusan-b
+        name: 五三·B版
+        recommend_level: B
+        target_levels: [L2, L3]
+        usage_phase: "提高训练"
+        price_range: "30-40元/本"
+        structure: "难度高于A版的提高练习"
+        notes: "基础扎实后使用，不适合L0/L1"
+
+  # ================================================================
+  #  品牌二：万唯中考
+  # ================================================================
+  - id: wanwei
+    name: 万唯中考
+    short_name: 万唯
+    publisher: 陕西人民教育出版社
+    brand_owner: 万唯教育
+    official_site: "https://www.wanweiedu.com/"
+    recommend_level: A
+    overall_notes: |
+      万唯按考点组织（非教材章节），更贴近实际考试视角。
+      适合已有一定基础、想要针对性提分的学生。
+      对北京中考的研究深度很好，部分预测题命中率高。
+      注意选购「北京专用」版本。
+
+    series:
+
+      - id: wanwei-shiti
+        name: 万唯·试题研究
+        full_name: 万唯中考试题研究
+        recommend_level: A
+        target_levels: [L1, L2, L3]
+        usage_phase: "一轮/二轮复习均可"
+        price_range: "35-50元/本"
+        structure: "按考点组织：考点梳理 → 真题精选 → 变式训练 → 预测演练"
+        organization: 按考点编排（与教材章节不同）
+        features:
+          - "按中考考点而非教材章节编排，直击考试"
+          - "真题+变式+预测三层递进"
+          - "配有「重难点突破」专题"
+          - "部分题目有视频讲解（扫码）"
+        how_to_use_by_level:
+          L1:
+            strategy: "只做考点梳理+真题精选部分"
+            focus: "先掌握考点知识，再做对应真题"
+          L2:
+            strategy: "做完真题后重点做变式训练"
+            focus: "变式题培养举一反三能力"
+          L3:
+            strategy: "变式+预测全做，限时训练"
+            focus: "预测题模拟考试节奏"
+        subjects_available:
+          数学: { edition_year: 2026, region_edition: 北京专用 }
+          语文: { edition_year: 2026, region_edition: 北京专用 }
+          英语: { edition_year: 2026, region_edition: 北京专用 }
+          物理: { edition_year: 2026, region_edition: 北京专用 }
+          道法: { edition_year: 2026, region_edition: 北京专用 }
+
+      - id: wanwei-nixiji
+        name: 万唯·逆袭卷
+        full_name: 万唯中考逆袭卷
+        recommend_level: B
+        target_levels: [L2, L3]
+        usage_phase: "考前冲刺（5-6月）"
+        price_range: "25-35元/本"
+        structure: "6-8套模拟卷"
+        features:
+          - "难度略高于真题"
+          - "侧重压轴题训练"
+          - "适合考前限时模拟"
+        notes: "不适合L0/L1学生，会打击信心"
+        subjects_available:
+          数学: { edition_year: 2026, region_edition: 北京专用 }
+          物理: { edition_year: 2026, region_edition: 北京专用 }
+
+      - id: wanwei-jichuban
+        name: 万唯·基础过关
+        recommend_level: B
+        target_levels: [L0, L1]
+        usage_phase: "基础补缺"
+        price_range: "25-35元/本"
+        structure: "基础知识梳理 + 基础题训练"
+        notes: "万唯系列中唯一适合L0学生的，但不如五三全练版通用"
+
+  # ================================================================
+  #  品牌三：全品中考复习方案
+  # ================================================================
+  - id: quanpin
+    name: 全品中考复习方案
+    short_name: 全品
+    publisher: 阳光出版社
+    brand_owner: 全品文教
+    recommend_level: B
+    overall_notes: |
+      全品按知识模块编排，介于教材章节和考点之间。
+      体系完整但市场占有率低于五三和万唯。
+      部分科目质量好（如数学、物理），语文和道法一般。
+
+    series:
+
+      - id: quanpin-fuxifangan
+        name: 全品·中考复习方案
+        recommend_level: B
+        target_levels: [L1, L2]
+        usage_phase: "一轮/二轮复习"
+        price_range: "35-45元/本"
+        structure: "知识建构 → 典例精析 → 达标检测 → 综合提升"
+        organization: 按知识模块编排
+        features:
+          - "知识建构部分用思维导图呈现"
+          - "典例有详细的思路分析（不只是解题过程）"
+          - "分基础达标和综合提升两层"
+        subjects_available:
+          数学: { edition_year: 2026 }
+          语文: { edition_year: 2026 }
+          英语: { edition_year: 2026 }
+          物理: { edition_year: 2026 }
+          道法: { edition_year: 2026 }
+
+  # ================================================================
+  #  品牌四：天利38套
+  # ================================================================
+  - id: tianli
+    name: 天利38套
+    short_name: 天利
+    publisher: 西藏人民出版社
+    recommend_level: B
+    overall_notes: |
+      纯套卷集，没有知识梳理。
+      适合考前1-2个月做限时模拟训练。
+      不适合基础薄弱的学生。
+
+    series:
+
+      - id: tianli-38
+        name: 天利38套·中考真题
+        recommend_level: B
+        target_levels: [L2, L3]
+        usage_phase: "考前冲刺（4-6月）"
+        price_range: "25-38元/本"
+        structure: "38套中考真题/模拟卷"
+        how_to_use:
+          strategy: "每周2-3套，严格限时"
+          order: "先做外省真题（练手感）→ 北京往年真题 → 最新模拟"
+        notes: "做完要认真对答案+整理错题，不要只追求套数"
+        subjects_available:
+          数学: { edition_year: 2026 }
+          英语: { edition_year: 2026 }
+          物理: { edition_year: 2026 }
+
+  # ================================================================
+  #  品牌五：金考卷
+  # ================================================================
+  - id: jinkao
+    name: 金考卷
+    short_name: 金考卷
+    publisher: 新疆青少年出版社
+    recommend_level: B
+    overall_notes: "模拟卷质量稳定，适合考前模拟训练。"
+
+    series:
+      - id: jinkao-bdf
+        name: 金考卷·百校联考
+        recommend_level: B
+        target_levels: [L2, L3]
+        usage_phase: "考前冲刺"
+        price_range: "20-30元/本"
+        structure: "10-15套模拟卷"
+        subjects_available:
+          数学: { edition_year: 2026 }
+
+  # ================================================================
+  #  品牌六：学霸笔记
+  # ================================================================
+  - id: xueba
+    name: 学霸笔记
+    short_name: 学霸
+    publisher: 湖南师范大学出版社
+    recommend_level: B
+    overall_notes: |
+      图文并茂的知识点梳理，类似"学长笔记"风格。
+      适合不喜欢看教材的学生用来入门。
+      不能替代做题，只是辅助理解。
+
+    series:
+      - id: xueba-biji
+        name: 学霸笔记·初中全彩版
+        recommend_level: B
+        target_levels: [L0, L1]
+        usage_phase: "基础学习阶段"
+        price_range: "30-40元/本"
+        structure: "彩色手绘风知识梳理"
+        notes: "辅助理解用，不能当主教辅"
+        subjects_available:
+          数学: { edition_year: 2026 }
+          物理: { edition_year: 2026 }
+
+  # ================================================================
+  #  品牌七：中考帮
+  # ================================================================
+  - id: zhongkao-bang
+    name: 中考帮
+    short_name: 中考帮
+    publisher: 北京教育出版社
+    recommend_level: B
+    overall_notes: |
+      北京本地出版，对北京中考的针对性强。
+      适合中等水平学生的全面复习。
+
+    series:
+      - id: zkb-fuxiyong
+        name: 中考帮·复习用书
+        recommend_level: B
+        target_levels: [L1, L2]
+        usage_phase: "一轮复习"
+        price_range: "30-40元/本"
+        structure: "考点梳理+同步练习+真题"
+        notes: "北京本地特色：关注北京考试改革动态"
+        subjects_available:
+          数学: { edition_year: 2026, region_edition: 北京专用 }
+          语文: { edition_year: 2026, region_edition: 北京专用 }
+
+  # ================================================================
+  #  品牌八：五星学霸
+  # ================================================================
+  - id: wuxing
+    name: 五星学霸
+    short_name: 五星
+    publisher: 延边大学出版社
+    recommend_level: B
+    overall_notes: |
+      以「知识梳理+典例精讲」为核心的同步辅导书。
+      最大特色是用星级（★-★★★★★）标注知识点重要程度和考频。
+      图文排版清晰，适合自学和课后复习。
+      和学霸笔记类似偏知识梳理，但比学霸笔记多了配套练习。
+
+    series:
+      - id: wuxing-tongbu
+        name: 五星学霸·同步辅导
+        recommend_level: B
+        target_levels: [L0, L1, L2]
+        usage_phase: "同步学习 + 一轮复习"
+        price_range: "30-45元/本"
+        structure: "知识导图 → 星级考点精讲 → 典例解析 → 分层训练"
+        organization: 按教材章节编排
+        features:
+          - "考点按★-★★★★★标注重要程度，一目了然"
+          - "每个考点配典型例题+详细解析"
+          - "练习分「基础巩固」和「能力提升」两层"
+          - "章末有「思维导图」汇总本章知识"
+        how_to_use_by_level:
+          L0:
+            strategy: "看知识导图+★★★以上考点+只做基础巩固题"
+            goal: "建立知识框架，跟上课堂进度"
+          L1:
+            strategy: "精读考点精讲+做全部基础巩固+部分能力提升"
+            goal: "掌握核心考点"
+          L2:
+            strategy: "快速过考点（已会的跳过）+重点做能力提升题"
+            goal: "查漏补缺，突破薄弱考点"
+        notes: |
+          五星学霸适合「边学边用」，与教材同步使用效果最好。
+          如果已经进入二轮复习，建议用五三真题分类或万唯试题研究替代。
+        subjects_available:
+          数学: { edition_year: 2026 }
+          语文: { edition_year: 2026 }
+          英语: { edition_year: 2026 }
+          物理: { edition_year: 2026 }
+          道法: { edition_year: 2026 }
+
+      - id: wuxing-zhongkao
+        name: 五星学霸·中考总复习
+        recommend_level: B
+        target_levels: [L1, L2]
+        usage_phase: "一轮复习（初三上）"
+        price_range: "35-48元/本"
+        structure: "专题梳理 → 考点突破 → 真题演练 → 模拟检测"
+        features:
+          - "按中考专题（非教材章节）重新组织"
+          - "包含近3年真题"
+          - "每专题末有模拟检测卷"
+        notes: "与五三全练版定位类似，选其一即可，不用都买"
+        subjects_available:
+          数学: { edition_year: 2026 }
+          物理: { edition_year: 2026 }
+
+# ================================================================
+#  版本管理说明
+# ================================================================
+version_management:
+  principle: |
+    教辅材料每年出新版（通常在前一年9-10月上市）。
+    主要变化：新增最新年份真题、删除最旧年份真题、微调考点分布。
+    章节主体结构通常保持80-90%不变。
+
+  tracking_strategy: |
+    1. catalog.yaml 只记录品牌/系列/当前版本的基础信息
+    2. 章节级详细映射放在 workbooks/<brand>/<subject>-<series>-<year>-bj.yaml
+    3. 版本差异用 changes_from_<year> 字段增量记录
+    4. 当新版上市时，更新当年文件即可
+
+  update_timeline:
+    "每年9月": "新学年版教辅上市，更新 catalog.yaml"
+    "每年7月": "中考结束后，确认当年真题是否已被教辅收录"
+    "每年4月": "检查是否有考试改革影响教辅结构"
+
+# ================================================================
+#  综合选购建议
+# ================================================================
+purchase_guide:
+
+  budget_plan:
+    minimum: |
+      只买2本：五三全练版 + 天利38套 ≈ 75元
+      全练版覆盖一轮复习，天利覆盖考前模拟
+    standard: |
+      买4本：五三全练版 + 五三真题分类 + 万唯试题研究 + 天利38套 ≈ 160元
+      全练版打基础 → 真题分类刷专项 → 万唯变式提高 → 天利模拟冲刺
+    注意: "不要贪多！3-4本做精做透 > 买10本翻一遍"
+
+  by_level:
+    L0:
+      must_buy: "五三·全练版（只做★题）"
+      optional: "学霸笔记 或 五星学霸·同步辅导（辅助理解，二选一）"
+      dont_buy: "天利38套、万唯逆袭卷（太难打击信心）"
+    L1:
+      must_buy: "五三·全练版"
+      recommended: "万唯·试题研究"
+      optional: "五星学霸·同步辅导（查漏补缺用）"
+      dont_buy: "天利38套（还不到刷卷阶段）"
+    L2:
+      must_buy: "五三·真题分类训练"
+      recommended: "万唯·试题研究 + 天利38套"
+      dont_buy: "学霸笔记（太基础）"
+    L3:
+      must_buy: "天利38套 + 海淀/西城一模二模真题"
+      recommended: "万唯·逆袭卷"
+      focus: "不是买更多书，而是限时做精做透"
+
+  by_phase:
+    "初三上(9-12月)": "五三全练版（一轮复习）"
+    "寒假(1月)": "五三全练版收尾 + 开始五三真题分类"
+    "初三下(2-3月)": "五三真题分类 + 万唯试题研究（二轮复习）"
+    "一模前后(4月)": "万唯试题研究重难点 + 开始做套卷"
+    "冲刺期(5-6月)": "天利38套 / 万唯逆袭卷 + 各区模拟题"
+
+  purchase_channels:
+    - name: 京东自营
+      note: "正版保证，搜索时加「北京版」关键词"
+    - name: 当当网
+      note: "常有满减活动"
+    - name: 淘宝/拼多多
+      note: "注意辨别盗版（看印刷质量和价格）"
+    - name: 学校周边书店
+      note: "可以翻看实物再决定"
+
+# ================================================================
+#  教辅与知识库模块的对应关系
+# ================================================================
+kb_module_mapping_note: |
+  不同教辅的编排逻辑不同，与知识库模块的对应关系需要在
+  详细的章节映射文件（workbooks/<brand>/）中建立。
+
+  编排对比：
+  - 五三全练版：按教材章节 → 对应 subjects/<科目>/curriculum.yaml
+  - 万唯试题研究：按考点 → 对应 subjects/<科目>/beijing/weight-analysis.yaml
+  - 全品复习方案：按知识模块 → 对应 diagnostics/<科目>/ 模块划分
+
+  章节级映射需要实体书目录数据，待补充。
+  优先级：五三数学 > 万唯数学 > 其他科目

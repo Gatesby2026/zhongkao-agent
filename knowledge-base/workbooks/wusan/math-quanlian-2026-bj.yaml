@@ -1,0 +1,373 @@
+# ============================================================
+# 五三·全练版 数学 2026北京版 — 章节→知识库模块映射
+# ============================================================
+# 最后更新：2026-04-13
+# 数据来源：百度百科+中国考研网+曲一线官网+通用总复习结构
+# 对应教辅：五三全练版·中考数学·北京专用（2026版）
+# 对应知识库模块：diagnostics/math/ 的 8 个 YAML 文件
+# ============================================================
+# 五三全练版按教材知识模块编排，题目分★/★★/★★★三档难度。
+# 各章结构统一：知识清单 → 考点突破 → 真题训练 → 模拟演练。
+#
+# 注意：五三不同版本的章节划分略有不同：
+#   ① 全国版（百度百科）：7 章 + 专题拓展，几何合并为第5章"图形的认识"
+#   ② 地区中考总复习版：9 章 42 课时，几何拆分为三角形/四边形/圆各自独立
+#   ③ 北京版可能采用②的结构，待实体书确认
+# 下面按②的 9 章 42 课时结构编排（更细粒度，便于模块映射）
+# ============================================================
+
+book_info:
+  series_id: wusan-quanlian
+  subject: 数学
+  edition_year: 2026
+  region: 北京专用
+  publisher: 教育科学出版社
+  isbn: "978-7-5191-XXXX-X"  # 待确认；2025北京版 ISBN: 978-7-5656-8216-2
+  total_pages: ~380
+  total_chapters: 9  # 全国版为7章，地区版为9章
+  total_lessons: 42  # 课时数
+  data_confidence: partially_verified  # 基于公开信息交叉验证
+  data_sources:
+    - "百度百科：5年中考3年模拟·中考数学 完整目录"
+    - "百度百科：曲一线科学备考·5年中考3年模拟 词条"
+    - "中国考研网：53中考版数学目录"
+    - "曲一线官网书系介绍"
+    - "豆瓣：2025北京版 ISBN 978-7-5656-8216-2"
+  alternative_structures:
+    national_edition:
+      chapters: 7
+      structure:
+        - "第1章 数与式（实数/整式/分式及数的开方）"
+        - "第2章 方程与不等式（一次方程组/二次方程/分式方程/不等式组）"
+        - "第3章 函数及其图象（坐标系/一次/反比例/二次函数）"
+        - "第4章 图形的变换（视图投影/对称/平移旋转）"
+        - "第5章 图形的认识（平行线/三角形/四边形/相似/圆）"
+        - "第6章 统计与概率"
+        - "第7章 专题拓展（归纳/实验/探究/阅读理解/方案设计）"
+  last_verified: null  # 需实体书最终确认
+
+# ================================================================
+#  章节→模块映射
+# ================================================================
+
+chapters:
+
+  # ==== 第一章 实数 ====
+  - chapter_id: 1
+    chapter_name: 实数
+    kb_module: numbers-and-expressions
+    kb_module_name: 数与式
+    lessons:
+      - id: 1
+        name: 实数的有关概念
+        topics: [有理数, 无理数, 实数的分类, 数轴, 相反数, 绝对值, 科学记数法]
+      - id: 2
+        name: 实数的运算与大小比较
+        topics: [四则运算, 乘方与开方, 大小比较, 估算]
+    exam_weight: "约4-6分（选择/填空各1题）"
+    difficulty_distribution: { "★": 50%, "★★": 35%, "★★★": 15% }
+    notes: "最基础的章节，L0 学生优先搞定"
+
+  # ==== 第二章 代数式 ====
+  - chapter_id: 2
+    chapter_name: 代数式
+    kb_module: numbers-and-expressions
+    kb_module_name: 数与式
+    lessons:
+      - id: 3
+        name: 整式及运算
+        topics: [单项式与多项式, 整式加减乘, 乘法公式, 整式除法]
+      - id: 4
+        name: 因式分解
+        topics: [提公因式法, 公式法(平方差/完全平方), 十字相乘法]
+      - id: 5
+        name: 分式
+        topics: [分式的概念, 分式运算, 分式方程, 增根检验]
+      - id: 6
+        name: 二次根式
+        topics: [二次根式的概念, 最简根式, 二次根式运算]
+    exam_weight: "约8-12分"
+    difficulty_distribution: { "★": 40%, "★★": 40%, "★★★": 20% }
+    notes: "因式分解是后续方程/函数的基础，务必掌握"
+
+  # ==== 第三章 方程（组）与不等式 ====
+  - chapter_id: 3
+    chapter_name: 方程（组）与不等式
+    kb_module: equations-and-inequalities
+    kb_module_name: 方程与不等式
+    lessons:
+      - id: 7
+        name: 一元一次方程及其应用
+        topics: [解法, 实际应用(行程/工程/利润)]
+      - id: 8
+        name: 二元一次方程组及其应用
+        topics: [代入法, 加减法, 实际应用]
+      - id: 9
+        name: 一元二次方程及其应用
+        topics: [直接开方法, 配方法, 公式法, 因式分解法, 实际应用]
+      - id: 10
+        name: 一元二次方程根的判别式及根与系数的关系
+        topics: [判别式Δ, 韦达定理, 构造方程]
+      - id: 11
+        name: 分式方程及其应用
+        topics: [分式方程解法, 增根检验, 实际应用]
+      - id: 12
+        name: 一元一次不等式（组）
+        topics: [不等式性质, 解法, 数轴表示]
+      - id: 13
+        name: 一元一次不等式（组）的应用
+        topics: [实际问题, 与方程联合求解]
+    exam_weight: "约12-16分（含解答题1道）"
+    difficulty_distribution: { "★": 30%, "★★": 40%, "★★★": 30% }
+    notes: |
+      本章课时最多（7个），是代数部分的核心。
+      课时10（韦达定理）是 L2/L3 的重点，经常与二次函数结合出压轴题。
+
+  # ==== 第四章 函数 ====
+  - chapter_id: 4
+    chapter_name: 函数
+    kb_module: functions
+    kb_module_name: 函数
+    lessons:
+      - id: 14
+        name: 平面直角坐标系与函数的概念
+        topics: [坐标系, 函数概念, 函数图象]
+      - id: 15
+        name: 一次函数
+        topics: [正比例函数, 一次函数图象与性质, 待定系数法]
+      - id: 16
+        name: 一次函数的应用
+        topics: [方案选择, 与方程/不等式联系, 分段函数]
+      - id: 17
+        name: 反比例函数
+        topics: [图象与性质, k的几何意义, 面积问题]
+      - id: 18
+        name: 二次函数及其图像
+        topics: [三种表达式, 图象平移, 开口/顶点/对称轴]
+      - id: 19
+        name: 二次函数的应用
+        topics: [最值问题, 实际应用, 方案优化]
+      - id: 20
+        name: 函数的综合应用（一）
+        topics: [函数与方程综合, 面积问题]
+      - id: 21
+        name: 函数的综合应用（二）
+        topics: [函数与几何综合, 动点问题, 存在性问题]
+    exam_weight: "约16-22分（含压轴大题！）"
+    difficulty_distribution: { "★": 20%, "★★": 35%, "★★★": 45% }
+    notes: |
+      中考最核心章节！课时最多（8个），分值最高。
+      课时20-21（函数综合）直接对应中考第27-28题压轴大题。
+      L0学生只需掌握课时14-15（一次函数基础）；
+      L2/L3学生必须精做课时18-21。
+
+  # ==== 第五章 统计与概率 ====
+  - chapter_id: 5
+    chapter_name: 统计与概率
+    kb_module: statistics-and-probability
+    kb_module_name: 统计与概率
+    lessons:
+      - id: 22
+        name: 数据的收集与整理
+        topics: [统计调查, 样本与总体, 统计图表]
+      - id: 23
+        name: 数据的分析
+        topics: [平均数, 中位数, 众数, 方差, 频率分布直方图]
+      - id: 24
+        name: 概率的简单计算
+        topics: [等可能事件, 列表法, 树状图]
+      - id: 25
+        name: 频率与概率
+        topics: [用频率估计概率, 大量重复实验]
+    exam_weight: "约8-10分（解答题1道，选填1-2题）"
+    difficulty_distribution: { "★": 45%, "★★": 40%, "★★★": 15% }
+    notes: "中考送分章节，L0学生的拿分重点"
+
+  # ==== 第六章 三角形 ====
+  - chapter_id: 6
+    chapter_name: 三角形
+    kb_module: triangles
+    kb_module_name: 三角形
+    lessons:
+      - id: 26
+        name: 几何初步及平行线、相交线
+        topics: [线段, 角, 平行线判定与性质, 相交线]
+      - id: 27
+        name: 三角形的有关概念
+        topics: [三角形分类, 内角和, 外角, 中线/角平分线/高]
+      - id: 28
+        name: 等腰三角形与直角三角形
+        topics: [等腰三角形性质与判定, 勾股定理, 直角三角形性质]
+      - id: 29
+        name: 全等三角形
+        topics: [全等判定(SSS/SAS/ASA/AAS/HL), 全等应用]
+      - id: 30
+        name: 相似三角形
+        topics: [相似判定(AA/SAS/SSS), 相似比, 面积比, 位似]
+      - id: 31
+        name: 锐角三角函数
+        topics: [sin/cos/tan定义, 特殊角(30°/45°/60°)]
+      - id: 32
+        name: 解直角三角形及其应用
+        topics: [解直角三角形, 仰角/俯角, 坡度]
+    exam_weight: "约16-22分（含证明解答题1-2道）"
+    difficulty_distribution: { "★": 25%, "★★": 40%, "★★★": 35% }
+    notes: |
+      几何部分的核心，课时多（7个）。
+      全等证明（课时29）是中考解答题常考。
+      相似（课时30）经常出现在压轴题中。
+
+  # ==== 第七章 四边形 ====
+  - chapter_id: 7
+    chapter_name: 四边形
+    kb_module: quadrilaterals
+    kb_module_name: 四边形
+    lessons:
+      - id: 33
+        name: 多边形与平面图形的镶嵌
+        topics: [多边形内角和/外角和, 正多边形镶嵌]
+      - id: 34
+        name: 平行四边形
+        topics: [性质(对边/对角/对角线), 判定(5种)]
+      - id: 35
+        name: 矩形、菱形、正方形
+        topics: [各自性质与判定, 包含关系]
+      - id: 36
+        name: 梯形
+        topics: [梯形性质, 等腰梯形, 中位线]
+    exam_weight: "约6-10分"
+    difficulty_distribution: { "★": 25%, "★★": 40%, "★★★": 35% }
+    notes: "特殊四边形的性质和判定是几何证明的基础"
+
+  # ==== 第八章 圆 ====
+  - chapter_id: 8
+    chapter_name: 圆
+    kb_module: circles
+    kb_module_name: 圆
+    lessons:
+      - id: 37
+        name: 圆的有关概念与性质
+        topics: [圆心角, 圆周角, 垂径定理, 弦/弧/弦心距]
+      - id: 38
+        name: 与圆有关的位置关系
+        topics: [点与圆, 直线与圆(切线), 圆与圆]
+      - id: 39
+        name: 与圆有关的计算
+        topics: [弧长, 扇形面积, 圆锥侧面积]
+    exam_weight: "约6-8分"
+    difficulty_distribution: { "★": 25%, "★★": 40%, "★★★": 35% }
+
+  # ==== 第九章 图形与变换 ====
+  - chapter_id: 9
+    chapter_name: 图形与变换
+    kb_module: geometry-comprehensive
+    kb_module_name: 几何综合
+    lessons:
+      - id: 40
+        name: 视图与投影
+        topics: [三视图, 正投影]
+      - id: 41
+        name: 轴对称与中心对称
+        topics: [轴对称图形, 中心对称图形, 对称性质]
+      - id: 42
+        name: 平移与旋转
+        topics: [平移性质, 旋转性质, 坐标变换]
+    exam_weight: "约4-8分"
+    difficulty_distribution: { "★": 30%, "★★": 35%, "★★★": 35% }
+    notes: "旋转问题常与压轴题结合，是 L3 学生的重点"
+
+# ================================================================
+#  模块汇总（按知识库模块聚合）
+# ================================================================
+module_summary:
+
+  - kb_module: numbers-and-expressions
+    chapters: [1, 2]
+    lessons: [1, 2, 3, 4, 5, 6]
+    total_lessons: 6
+    total_exam_weight: "约12-18分"
+    recommended_for: "L0/L1 最优先"
+
+  - kb_module: equations-and-inequalities
+    chapters: [3]
+    lessons: [7, 8, 9, 10, 11, 12, 13]
+    total_lessons: 7
+    total_exam_weight: "约12-16分"
+    recommended_for: "L0/L1 重点，L2 关注韦达定理"
+
+  - kb_module: functions
+    chapters: [4]
+    lessons: [14, 15, 16, 17, 18, 19, 20, 21]
+    total_lessons: 8
+    total_exam_weight: "约16-22分（最高！）"
+    recommended_for: "全级别核心，L2/L3 关注综合应用"
+
+  - kb_module: triangles
+    chapters: [6]
+    lessons: [26, 27, 28, 29, 30, 31, 32]
+    total_lessons: 7
+    total_exam_weight: "约16-22分"
+    recommended_for: "全级别核心"
+
+  - kb_module: quadrilaterals
+    chapters: [7]
+    lessons: [33, 34, 35, 36]
+    total_lessons: 4
+    total_exam_weight: "约6-10分"
+    recommended_for: "L1/L2 重点"
+
+  - kb_module: circles
+    chapters: [8]
+    lessons: [37, 38, 39]
+    total_lessons: 3
+    total_exam_weight: "约6-8分"
+    recommended_for: "L1/L2 重点"
+
+  - kb_module: geometry-comprehensive
+    chapters: [9]
+    lessons: [40, 41, 42]
+    total_lessons: 3
+    total_exam_weight: "约4-8分"
+    recommended_for: "L2/L3 压轴相关"
+
+  - kb_module: statistics-and-probability
+    chapters: [5]
+    lessons: [22, 23, 24, 25]
+    total_lessons: 4
+    total_exam_weight: "约8-10分"
+    recommended_for: "L0/L1 拿分利器（题目相对简单）"
+
+# ================================================================
+#  分级使用建议
+# ================================================================
+usage_tips:
+
+  L0:
+    priority_chapters: [1, 2, 5]
+    priority_lessons: [1, 2, 3, 7, 12, 22, 23, 24]
+    strategy: "只看知识清单 + 只做★题"
+    daily_plan: "每天1课时的★题（约20-30分钟，5-8题）"
+    goal: "搞定实数+整式基础 + 统计概率送分题"
+    skip: "跳过课时10(韦达)、18-21(二次函数及综合)、30(相似)的★★★题"
+
+  L1:
+    priority_chapters: [3, 4, 6]
+    priority_lessons: [9, 10, 15, 17, 28, 29, 34, 35]
+    strategy: "做★和★★题，★★★酌情尝试"
+    daily_plan: "每天1课时的★+★★题（约40分钟，10-15题）"
+    goal: "★★题正确率达到80%"
+    focus: "一元二次方程 + 一次函数 + 全等三角形 + 平行四边形"
+
+  L2:
+    priority_chapters: [4, 6, 8]
+    priority_lessons: [10, 18, 19, 20, 30, 37, 38, 41, 42]
+    strategy: "全做，重点做★★★和标注的真题"
+    daily_plan: "每天精做10-15题（含★★★），约60分钟"
+    goal: "★★★题正确率达到60%"
+    supplement: "配合五三真题分类训练做专项突破"
+
+  L3:
+    strategy: "全练版主要用于查漏补缺，重心转向真题套卷"
+    use_for: "快速翻阅知识清单、回顾已遗忘的基础知识点"
+    focus_lessons: [20, 21]
+    supplement: "天利38套 + 海淀西城一模二模 限时训练"

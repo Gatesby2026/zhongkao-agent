@@ -1,0 +1,269 @@
+# ============================================================
+# 万唯·试题研究 数学 2026北京专用 — 考点→知识库模块映射
+# ============================================================
+# 最后更新：2026-04-13
+# 数据来源：万唯官网+百度百科+公开评测信息
+# 对应教辅：万唯中考试题研究·数学·北京专用（2026版）
+# 对应知识库模块：diagnostics/math/ 的 8 个 YAML 文件
+# ============================================================
+# 万唯按中考考点编排（非教材章节），分为三个部分：
+#   精讲本（考点研究）+ 夹册（专项训练）+ 预测卷
+# 每个考点标注「近年中考考情」，显示该考点在近年考试中出现的频次。
+# ============================================================
+
+book_info:
+  series_id: wanwei-shiti
+  subject: 数学
+  edition_year: 2026
+  region: 北京专用
+  publisher: 陕西人民教育出版社
+  isbn: null  # 待确认
+  total_pages: ~350
+  organization: 按中考考点编排（精讲本+夹册双册）
+  special_features:
+    - "精讲本+夹册（练习册）双册设计"
+    - "每个考点开头有「近年中考考情」频次标注"
+    - "部分题目有视频讲解（扫码看）"
+    - "变式训练——同一考点的不同出题角度"
+  data_confidence: partially_verified
+  data_sources:
+    - "百度百科：万唯中考试题研究"
+    - "万唯教育官网 wanweiedu.com"
+    - "公开评测和比较文章"
+  last_verified: null
+
+# ================================================================
+#  精讲本：考点研究（Part 1）
+# ================================================================
+# 万唯的编排逻辑：按中考知识模块（与五三9章结构类似，但更聚焦考试）
+# 每个考点内部结构：考点梳理 → 真题精选 → 变式训练 → 预测演练
+
+part_1_考点研究:
+
+  # ==== 模块一：数与式 ====
+  - module_id: 1
+    module_name: 数与式
+    kb_module: numbers-and-expressions
+    kb_module_name: 数与式
+    topics:
+      - name: 实数
+        key_points: [实数分类, 数轴, 绝对值, 相反数, 倒数, 科学记数法, 估算]
+        exam_frequency: "每年必考1-2题"
+        typical_question: "选择题第1-2题"
+      - name: 整式与分式
+        key_points: [整式运算, 乘法公式, 因式分解, 分式化简求值]
+        exam_frequency: "每年必考1-2题"
+        typical_question: "选择题+计算解答题"
+      - name: 二次根式
+        key_points: [化简, 运算, 与实数结合]
+        exam_frequency: "隔年考查"
+    total_exam_weight: "约10-14分"
+    difficulty: "基础-中等"
+
+  # ==== 模块二：方程与不等式 ====
+  - module_id: 2
+    module_name: 方程与不等式
+    kb_module: equations-and-inequalities
+    kb_module_name: 方程与不等式
+    topics:
+      - name: 一元一次方程与方程组
+        key_points: [解法, 整数解问题, 应用题]
+        exam_frequency: "每年必考"
+      - name: 一元二次方程
+        key_points: [四种解法, 判别式, 韦达定理, 新定义问题]
+        exam_frequency: "每年必考2-3题"
+        notes: "高频核心考点，万唯在此处配了大量变式"
+      - name: 分式方程
+        key_points: [解法, 增根, 应用]
+        exam_frequency: "每年1题"
+      - name: 不等式（组）
+        key_points: [性质, 解法, 应用, 与函数图象结合]
+        exam_frequency: "每年1题"
+    total_exam_weight: "约12-16分"
+    difficulty: "中等"
+
+  # ==== 模块三：函数 ====
+  - module_id: 3
+    module_name: 函数
+    kb_module: functions
+    kb_module_name: 函数
+    topics:
+      - name: 一次函数
+        key_points: [图象与性质, 待定系数法, 与方程/不等式关系]
+        exam_frequency: "每年1-2题"
+      - name: 反比例函数
+        key_points: [图象与性质, k的几何意义, 面积问题]
+        exam_frequency: "每年1题"
+      - name: 二次函数
+        key_points: [三种表达式, 图象平移, 最值, 与几何综合]
+        exam_frequency: "每年3-4题（含压轴）"
+        notes: "万唯此处篇幅最大，配有「重难点突破」专题"
+    total_exam_weight: "约16-22分（含压轴大题）"
+    difficulty: "中等-压轴"
+
+  # ==== 模块四：三角形 ====
+  - module_id: 4
+    module_name: 图形认识与三角形
+    kb_module: triangles
+    kb_module_name: 三角形
+    topics:
+      - name: 线/角/平行线
+        key_points: [角度计算, 平行线判定与性质]
+        exam_frequency: "每年1题（选填）"
+      - name: 三角形基础与全等
+        key_points: [三角形性质, 全等判定(5种), 全等应用]
+        exam_frequency: "每年2-3题"
+      - name: 相似三角形
+        key_points: [相似判定, 比例线段, 位似]
+        exam_frequency: "每年1-2题"
+      - name: 直角三角形与三角函数
+        key_points: [勾股定理, sin/cos/tan, 解直角三角形, 仰角俯角]
+        exam_frequency: "每年1题解答题"
+    total_exam_weight: "约16-22分"
+    difficulty: "中等-较难"
+
+  # ==== 模块五：四边形 ====
+  - module_id: 5
+    module_name: 四边形
+    kb_module: quadrilaterals
+    kb_module_name: 四边形
+    topics:
+      - name: 平行四边形
+        key_points: [性质与判定, 中点问题]
+      - name: 矩形/菱形/正方形
+        key_points: [各自特殊性质, 相互判定关系]
+      - name: 梯形
+        key_points: [等腰梯形, 中位线]
+    total_exam_weight: "约6-10分"
+    difficulty: "中等-较难"
+
+  # ==== 模块六：圆 ====
+  - module_id: 6
+    module_name: 圆
+    kb_module: circles
+    kb_module_name: 圆
+    topics:
+      - name: 圆的性质
+        key_points: [圆心角, 圆周角, 垂径定理]
+      - name: 位置关系
+        key_points: [点/线/圆与圆的位置关系, 切线]
+      - name: 弧长与扇形
+        key_points: [弧长公式, 扇形面积, 圆锥侧面展开]
+    total_exam_weight: "约6-8分"
+    difficulty: "中等"
+
+  # ==== 模块七：图形变换 ====
+  - module_id: 7
+    module_name: 图形变换
+    kb_module: geometry-comprehensive
+    kb_module_name: 几何综合
+    topics:
+      - name: 对称/平移/旋转
+        key_points: [轴对称, 中心对称, 平移, 旋转性质]
+      - name: 视图与投影
+        key_points: [三视图, 正投影]
+      - name: 坐标与图形
+        key_points: [坐标变换, 函数与几何结合]
+    total_exam_weight: "约4-8分"
+    difficulty: "中等-较难"
+    notes: "旋转问题常出现在压轴题"
+
+  # ==== 模块八：统计与概率 ====
+  - module_id: 8
+    module_name: 统计与概率
+    kb_module: statistics-and-probability
+    kb_module_name: 统计与概率
+    topics:
+      - name: 统计
+        key_points: [统计图表, 平均数/中位数/众数, 方差, 频率分布直方图]
+      - name: 概率
+        key_points: [等可能事件, 列表法, 树状图, 频率估计概率]
+    total_exam_weight: "约8-10分"
+    difficulty: "基础-中等"
+    notes: "中考送分区，万唯在此处配的真题较多且完整"
+
+# ================================================================
+#  精讲本：重难点突破专题（Part 2）
+# ================================================================
+# 万唯的特色：在常规考点之后，单独设「重难点突破」专题
+
+part_2_重难点突破:
+
+  - special_topic: 代几综合——二次函数与几何
+    kb_modules: [functions, geometry-comprehensive]
+    content: "二次函数+坐标几何+动点/面积/存在性问题"
+    exam_position: "第27-28题（压轴）"
+    target_levels: [L2, L3]
+    notes: "万唯在此处配了大量变式训练，是提分关键"
+
+  - special_topic: 几何综合证明与计算
+    kb_modules: [triangles, quadrilaterals, circles]
+    content: "全等/相似/四边形/圆的综合问题"
+    exam_position: "第25-27题"
+    target_levels: [L2, L3]
+
+  - special_topic: 新定义阅读理解题
+    kb_modules: [functions, equations-and-inequalities]
+    content: "给出新概念/新运算，要求理解并应用"
+    exam_position: "第24或26题"
+    target_levels: [L2, L3]
+
+  - special_topic: 规律探索与归纳
+    kb_modules: [numbers-and-expressions, functions]
+    content: "数列规律、图形规律、操作探究"
+    exam_position: "选择或填空压轴"
+    target_levels: [L2, L3]
+
+# ================================================================
+#  预测演练卷（Part 3）
+# ================================================================
+part_3_预测演练:
+  mock_count: 4  # 通常附4套预测卷
+  difficulty: "略高于真题（尤其压轴题）"
+  use_for: "考前2-3周限时训练"
+  tips: "严格按120分钟限时，做完后逐题对答案"
+
+# ================================================================
+#  万唯 vs 五三 选择对比
+# ================================================================
+comparison_with_wusan:
+  编排逻辑:
+    万唯: "按考点编排，跨章节整合，直击考试要求"
+    五三: "按教材章节编排，9章42课时，与课本同步"
+  最适合:
+    万唯: "已完成一轮复习，想按考点针对性突破的 L1-L3 学生"
+    五三: "初三上同步复习，跟着教材进度走的 L0-L2 学生"
+  独特优势:
+    万唯: "考情频次标注、变式训练丰富、重难点突破专题"
+    五三: "★/★★/★★★难度分层清晰、知识清单速查、覆盖面广"
+  题目重叠度: "约60%不重复，可互补使用"
+  推荐搭配: |
+    一轮复习：五三全练版（跟教材进度）
+    二轮复习：万唯试题研究（按考点突破）
+    考前冲刺：天利38套 / 万唯逆袭卷（限时套卷）
+
+# ================================================================
+#  分级使用建议
+# ================================================================
+usage_tips:
+
+  L1:
+    focus_modules: [1, 2, 8]
+    strategy: "只做考点梳理+真题精选部分"
+    skip: "跳过变式训练和重难点突破专题"
+    daily_plan: "每天1个考点（约40分钟）"
+    goal: "掌握基本考点，真题能做对70%"
+
+  L2:
+    focus_modules: [2, 3, 4, 5, 6]
+    strategy: "做完真题精选后重点做变式训练"
+    include: "重难点突破专题中的第1-2个专题"
+    daily_plan: "每天1-2个考点的变式训练（约60分钟）"
+    goal: "变式题正确率达到60%"
+
+  L3:
+    strategy: "变式+预测全做，限时训练"
+    focus: "重难点突破全部4个专题"
+    include: "预测卷限时训练"
+    daily_plan: "每天精做15-20题（含压轴），约90分钟"
+    goal: "压轴题能拿到60%以上的分数"
