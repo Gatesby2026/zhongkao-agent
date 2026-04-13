@@ -1,0 +1,447 @@
+# 北京中考数学公式速查表
+# 适用：2026年北京中考数学（满分100分）
+# exam_frequency: 极高(近5年必考) / 高(3-4次) / 中(1-2次)
+
+subject: 数学
+region: 北京
+exam_year: 2026
+total_score: 100
+last_updated: "2026-04-13"
+
+modules:
+  # ======================== 数与式 ========================
+  - name: 数与式
+    formulas:
+      - id: MF-NE-01
+        name: 平方差公式
+        formula: "a² - b² = (a+b)(a-b)"
+        reverse: "(a+b)(a-b) = a² - b²"
+        usage: [因式分解, 化简求值]
+        exam_frequency: 极高
+        common_mistake: "与完全平方公式混淆，误将 a²-b² 写成 (a-b)²"
+      - id: MF-NE-02
+        name: 完全平方公式
+        formula: "(a±b)² = a² ± 2ab + b²"
+        reverse: "a² ± 2ab + b² = (a±b)²"
+        usage: [因式分解, 化简求值, 配方法]
+        exam_frequency: 极高
+        common_mistake: "漏掉中间项 2ab，或符号判断错误"
+      - id: MF-NE-03
+        name: 绝对值性质
+        formula: "|a| ≥ 0；当 a≥0 时 |a|=a，当 a<0 时 |a|=-a"
+        usage: [化简求值, 最值问题, 分类讨论]
+        exam_frequency: 极高
+        common_mistake: "认为 |a|=a 恒成立，忽略 a<0 的情况"
+      - id: MF-NE-05
+        name: 同底数幂相乘
+        formula: "aᵐ · aⁿ = aᵐ⁺ⁿ"
+        usage: [幂运算化简]
+        exam_frequency: 高
+        common_mistake: "底数不同时误用，或将指数相乘"
+      - id: MF-NE-06
+        name: 幂的乘方
+        formula: "(aᵐ)ⁿ = aᵐⁿ"
+        usage: [幂运算化简]
+        exam_frequency: 高
+        common_mistake: "与同底数幂相乘混淆，将指数相加"
+      - id: MF-NE-07
+        name: 积的乘方
+        formula: "(ab)ⁿ = aⁿbⁿ"
+        usage: [幂运算化简]
+        exam_frequency: 中
+        common_mistake: "误用于和的乘方，写成 (a+b)ⁿ = aⁿ+bⁿ"
+      - id: MF-NE-09
+        name: 零指数幂
+        formula: "a⁰ = 1 (a≠0)"
+        usage: [幂运算化简, 选择题]
+        exam_frequency: 中
+        common_mistake: "认为 0⁰=1，忽略底数不为零的前提"
+      - id: MF-NE-10
+        name: 负整数指数幂
+        formula: "a⁻ⁿ = 1/aⁿ (a≠0)"
+        usage: [幂运算化简, 科学记数法]
+        exam_frequency: 中
+        common_mistake: "将负指数理解为负数，如 2⁻¹=-2"
+      - id: MF-NE-11
+        name: 二次根式性质
+        formula: "√(a²) = |a|；(√a)² = a (a≥0)"
+        usage: [化简求值, 二次根式运算]
+        exam_frequency: 极高
+        common_mistake: "将 √(a²) 直接写成 a，忽略绝对值"
+      - id: MF-NE-12
+        name: 二次根式乘除法
+        formula: "√a·√b = √(ab) (a≥0,b≥0)；√a÷√b = √(a/b) (a≥0,b>0)"
+        usage: [二次根式化简]
+        exam_frequency: 高
+        common_mistake: "被开方数有负数时误用公式"
+      - id: MF-NE-13
+        name: 科学记数法
+        formula: "a × 10ⁿ (1≤|a|<10)"
+        usage: [大数或小数的表示]
+        exam_frequency: 高
+        common_mistake: "n 的正负判断错误，或 a 的范围不在 [1,10)"
+
+  # ======================== 方程与不等式 ========================
+  - name: 方程与不等式
+    formulas:
+      - id: MF-EI-01
+        name: 一元二次方程求根公式
+        formula: "x = (-b ± √(b²-4ac)) / (2a)，其中 a≠0"
+        usage: [解一元二次方程, 压轴题求交点]
+        exam_frequency: 极高
+        common_mistake: "分母 2a 只写成 2；b²-4ac 中 b 前符号漏掉"
+      - id: MF-EI-02
+        name: 判别式
+        formula: "Δ = b²-4ac；Δ>0 两个不等实根，Δ=0 两个相等实根，Δ<0 无实根"
+        usage: [判断根的情况, 求参数范围]
+        exam_frequency: 极高
+        common_mistake: "Δ=0 时误认为无根；求参数时忘记 a≠0"
+      - id: MF-EI-03
+        name: 韦达定理
+        formula: "x₁+x₂ = -b/a，x₁·x₂ = c/a（需 Δ≥0 且 a≠0）"
+        usage: [求根的和与积, 构造新方程, 求含根代数式的值]
+        exam_frequency: 极高
+        common_mistake: "x₁+x₂ 的符号搞反；忘记验证 Δ≥0"
+      - id: MF-EI-04
+        name: 因式分解法解方程
+        formula: "若 AB=0，则 A=0 或 B=0"
+        usage: [解一元二次方程]
+        exam_frequency: 高
+        common_mistake: "两边同除以含未知数的式子导致丢根"
+      - id: MF-EI-05
+        name: 不等式基本性质
+        formula: "两边加同一数不变号；两边乘正数不变号；两边乘负数要变号"
+        usage: [解不等式, 求参数范围]
+        exam_frequency: 极高
+        common_mistake: "乘或除以负数时忘记变号"
+      - id: MF-EI-06
+        name: 一元一次不等式组解集口诀
+        formula: "同大取大，同小取小，大小小大取中间，大大小小无解"
+        usage: [解不等式组, 求整数解]
+        exam_frequency: 极高
+        common_mistake: "口诀记混；求整数解时端点取舍错误"
+      - id: MF-EI-07
+        name: 分式方程验根
+        formula: "将根代回最简公分母，若最简公分母为零则为增根须舍去"
+        usage: [解分式方程]
+        exam_frequency: 高
+        common_mistake: "解完忘记验根，把增根当作方程的解"
+
+  # ======================== 函数 ========================
+  - name: 函数
+    formulas:
+      - id: MF-FN-01
+        name: 一次函数
+        formula: "y = kx + b (k≠0)；k>0 递增，k<0 递减；b 为 y 轴截距"
+        usage: [函数图象与性质, 实际问题建模]
+        exam_frequency: 极高
+        common_mistake: "k 和 b 的正负号对图象位置的影响判断错误"
+      - id: MF-FN-02
+        name: 反比例函数
+        formula: "y = k/x (k≠0)；k>0 在一三象限，k<0 在二四象限"
+        usage: [反比例函数图象与性质, 面积问题]
+        exam_frequency: 高
+        common_mistake: "误说'y随x增大而减小'时未限定在同一象限"
+      - id: MF-FN-03
+        name: 反比例函数面积性质
+        formula: "过双曲线上一点向坐标轴作垂线围成的矩形面积 S = |k|"
+        usage: [求面积, 求 k 的值]
+        exam_frequency: 高
+        common_mistake: "忘记取绝对值"
+      - id: MF-FN-04
+        name: 二次函数一般式
+        formula: "y = ax² + bx + c (a≠0)"
+        usage: [确定函数解析式, 分析开口方向与y轴截距]
+        exam_frequency: 极高
+        common_mistake: "遗漏 a≠0 的条件"
+      - id: MF-FN-05
+        name: 二次函数顶点式
+        formula: "y = a(x-h)² + k，顶点坐标 (h, k)"
+        usage: [求顶点坐标, 求最值, 平移问题]
+        exam_frequency: 极高
+        common_mistake: "h 的符号：y=a(x+1)²+k 中顶点横坐标为 -1 而非 1"
+      - id: MF-FN-06
+        name: 二次函数交点式
+        formula: "y = a(x-x₁)(x-x₂)，x₁、x₂ 为与 x 轴交点横坐标"
+        usage: [已知两个交点求解析式]
+        exam_frequency: 高
+        common_mistake: "忘记还需一个条件确定 a 的值"
+      - id: MF-FN-07
+        name: 顶点坐标公式
+        formula: "顶点 (-b/(2a), (4ac-b²)/(4a))"
+        usage: [求最值, 求对称轴]
+        exam_frequency: 极高
+        common_mistake: "分子分母计算出错；符号搞反"
+      - id: MF-FN-08
+        name: 对称轴
+        formula: "x = -b/(2a)"
+        usage: [求对称轴, 判断增减性, 比较函数值大小]
+        exam_frequency: 极高
+        common_mistake: "漏掉负号"
+      - id: MF-FN-09
+        name: 二次函数与x轴交点
+        formula: "令 y=0 解 ax²+bx+c=0；交点个数由 Δ=b²-4ac 决定"
+        usage: [求交点坐标, 判断交点个数]
+        exam_frequency: 极高
+        common_mistake: "Δ 的计算错误；忘记将 y=0 代入"
+      - id: MF-FN-10
+        name: 二次函数图象平移
+        formula: "左加右减(h)、上加下减(k)：y=ax² → y=a(x-h)²+k"
+        usage: [图象平移问题]
+        exam_frequency: 高
+        common_mistake: "左右平移方向搞反"
+      - id: MF-FN-11
+        name: 二次函数系数与图象
+        formula: "a 定开口方向；a与b同号对称轴在y轴左，异号在右；c 为 y 轴截距"
+        usage: [由图象判断系数符号, 选择题]
+        exam_frequency: 极高
+        common_mistake: "b 的正负与对称轴位置的对应关系记反"
+
+  # ======================== 三角形与全等 ========================
+  - name: 三角形与全等
+    formulas:
+      - id: MF-TR-01
+        name: 三角形内角和
+        formula: "∠A + ∠B + ∠C = 180°"
+        usage: [求角度, 证明]
+        exam_frequency: 极高
+        common_mistake: "在非三角形中误用"
+      - id: MF-TR-02
+        name: 三角形外角定理
+        formula: "三角形的一个外角等于与它不相邻的两个内角之和"
+        usage: [求角度]
+        exam_frequency: 高
+        common_mistake: "外角与相邻内角搞混"
+      - id: MF-TR-03
+        name: 勾股定理
+        formula: "a² + b² = c²（c 为斜边）"
+        reverse: "若 a²+b²=c²，则为直角三角形（逆定理）"
+        usage: [求边长, 判断直角三角形, 坐标系中求距离]
+        exam_frequency: 极高
+        common_mistake: "将斜边误放在等号左边；非直角三角形误用"
+      - id: MF-TR-04
+        name: 全等三角形判定
+        formula: "SSS / SAS / ASA / AAS / HL（仅直角三角形）"
+        usage: [证明全等]
+        exam_frequency: 极高
+        common_mistake: "SSA 不能判定全等；SAS 中的角必须是夹角"
+      - id: MF-TR-05
+        name: 相似三角形判定
+        formula: "AA / SAS（两边成比例且夹角相等）/ SSS（三边成比例）"
+        usage: [证明相似, 求边长比]
+        exam_frequency: 极高
+        common_mistake: "对应边写反导致比例错误"
+      - id: MF-TR-06
+        name: 相似三角形性质
+        formula: "对应边之比=相似比k，对应周长之比=k，对应面积之比=k²"
+        usage: [求边长, 求面积]
+        exam_frequency: 极高
+        common_mistake: "面积比误写为 k 而非 k²"
+      - id: MF-TR-07
+        name: 锐角三角函数定义
+        formula: "sinA=对边/斜边，cosA=邻边/斜边，tanA=对边/邻边"
+        usage: [解直角三角形, 实际问题]
+        exam_frequency: 极高
+        common_mistake: "对边和邻边搞反；忘记仅适用于直角三角形"
+      - id: MF-TR-08
+        name: 特殊角三角函数值
+        formula: "sin30°=1/2, cos30°=√3/2, tan30°=√3/3; sin45°=√2/2, cos45°=√2/2, tan45°=1; sin60°=√3/2, cos60°=1/2, tan60°=√3"
+        usage: [解直角三角形, 求精确值]
+        exam_frequency: 极高
+        common_mistake: "sin30°和cos60°互混；tan30°和tan60°互混"
+      - id: MF-TR-10
+        name: 三角形中位线定理
+        formula: "中位线平行于第三边且等于第三边的一半"
+        usage: [证明平行, 求边长]
+        exam_frequency: 高
+        common_mistake: "中位线与中线概念混淆"
+      - id: MF-TR-11
+        name: 等腰三角形性质
+        formula: "等边对等角；三线合一（顶角平分线、底边中线、底边高重合）"
+        usage: [证明角相等, 辅助线构造]
+        exam_frequency: 高
+        common_mistake: "三线合一仅对顶角成立，腰上不成立"
+      - id: MF-TR-12
+        name: 直角三角形斜边中线
+        formula: "直角三角形斜边上的中线等于斜边的一半"
+        usage: [求边长, 辅助线]
+        exam_frequency: 高
+        common_mistake: "非直角三角形中误用此结论"
+
+  # ======================== 四边形 ========================
+  - name: 四边形
+    formulas:
+      - id: MF-QD-01
+        name: 平行四边形性质
+        formula: "对边平行且相等；对角相等，邻角互补；对角线互相平分"
+        usage: [证明线段相等, 求角度]
+        exam_frequency: 极高
+        common_mistake: "对角线互相平分 ≠ 对角线相等"
+      - id: MF-QD-02
+        name: 平行四边形判定
+        formula: "①两组对边分别平行 ②两组对边分别相等 ③一组对边平行且相等 ④对角线互相平分"
+        usage: [证明四边形为平行四边形]
+        exam_frequency: 极高
+        common_mistake: "一组对边平行+另一组对边相等 不能判定"
+      - id: MF-QD-03
+        name: 矩形性质与判定
+        formula: "性质：四角直角，对角线相等互相平分。判定：①直角平行四边形 ②对角线相等的平行四边形 ③三角直角四边形"
+        usage: [证明矩形, 利用对角线性质]
+        exam_frequency: 极高
+        common_mistake: "只有对角线相等不能判定矩形（还需互相平分）"
+      - id: MF-QD-04
+        name: 菱形性质与判定
+        formula: "性质：四边相等，对角线互相垂直平分且平分对角。判定：①四边相等 ②邻边相等的平行四边形 ③对角线互相垂直的平行四边形"
+        usage: [证明菱形, 求面积]
+        exam_frequency: 高
+        common_mistake: "菱形面积 S=d₁·d₂/2，常忘除以2"
+      - id: MF-QD-05
+        name: 菱形面积
+        formula: "S = d₁·d₂/2（d₁、d₂ 为两条对角线长）"
+        usage: [求菱形面积]
+        exam_frequency: 高
+        common_mistake: "忘记除以 2"
+      - id: MF-QD-06
+        name: 正方形性质
+        formula: "四边相等四角直角；对角线相等互相垂直平分且平分对角(45°)"
+        usage: [综合证明]
+        exam_frequency: 中
+        common_mistake: "证明正方形需同时满足矩形和菱形条件"
+      - id: MF-QD-07
+        name: 梯形中位线定理
+        formula: "梯形中位线平行于两底且等于两底之和的一半：m=(a+b)/2"
+        usage: [求边长, 求面积]
+        exam_frequency: 中
+        common_mistake: "与三角形中位线公式混淆"
+      - id: MF-QD-08
+        name: 多边形内角和
+        formula: "四边形内角和=360°；n边形内角和=(n-2)×180°"
+        usage: [求角度]
+        exam_frequency: 高
+        common_mistake: "将 n 边形内角和公式中的 n 搞错"
+      - id: MF-QD-09
+        name: 多边形外角和
+        formula: "任意凸多边形外角和 = 360°"
+        usage: [求角度, 正多边形计算]
+        exam_frequency: 中
+        common_mistake: "误认为外角和与边数有关"
+
+  # ======================== 圆 ========================
+  - name: 圆
+    formulas:
+      - id: MF-CR-01
+        name: 圆的面积
+        formula: "S = πr²"
+        usage: [求面积]
+        exam_frequency: 极高
+        common_mistake: "将半径与直径搞混，误用 S=πd²"
+      - id: MF-CR-02
+        name: 圆的周长
+        formula: "C = 2πr = πd"
+        usage: [求周长]
+        exam_frequency: 极高
+        common_mistake: "忘记乘以 2 或混用半径和直径"
+      - id: MF-CR-03
+        name: 弧长公式
+        formula: "l = nπr/180（n 为圆心角度数）"
+        usage: [求弧长]
+        exam_frequency: 高
+        common_mistake: "n 应为角度制下的度数，不是弧度"
+      - id: MF-CR-04
+        name: 扇形面积公式
+        formula: "S = nπr²/360 = lr/2（l 为弧长）"
+        usage: [求扇形面积, 圆锥侧面展开]
+        exam_frequency: 高
+        common_mistake: "两种公式混用时参数不一致"
+      - id: MF-CR-05
+        name: 圆周角定理
+        formula: "同弧上的圆周角等于该弧所对圆心角的一半"
+        corollary: "同弧或等弧上的圆周角相等；直径所对圆周角为90°"
+        usage: [求角度, 证明直角]
+        exam_frequency: 极高
+        common_mistake: "忘记'同弧'条件；将圆心角与圆周角搞反"
+      - id: MF-CR-06
+        name: 直径所对圆周角
+        formula: "直径所对的圆周角是直角；90°圆周角所对的弦是直径"
+        usage: [证明直角, 确定直径]
+        exam_frequency: 极高
+        common_mistake: "逆定理条件遗漏：必须是圆周角"
+      - id: MF-CR-07
+        name: 垂径定理
+        formula: "垂直于弦的直径平分该弦，并平分弦所对的两条弧"
+        reverse: "平分弦（非直径）的直径垂直于该弦"
+        usage: [求弦长, 求弦心距]
+        exam_frequency: 极高
+        common_mistake: "逆定理使用时忘记'非直径的弦'这一条件"
+      - id: MF-CR-08
+        name: 切线判定与性质
+        formula: "判定：过半径外端点且垂直于该半径的直线。性质：切线⊥过切点的半径"
+        usage: [证明切线, 利用切线性质求角度和长度]
+        exam_frequency: 极高
+        common_mistake: "判定时必须同时满足'过外端点'和'垂直于半径'"
+      - id: MF-CR-09
+        name: 切线长定理
+        formula: "从圆外一点引两条切线，切线长相等，连心线平分两切线夹角"
+        usage: [求切线长, 证明角相等]
+        exam_frequency: 高
+        common_mistake: "切线长指从外点到切点的距离，不是整条切线"
+      - id: MF-CR-10
+        name: 圆与直线位置关系
+        formula: "圆心到直线距离d：d<r相交，d=r相切，d>r相离"
+        usage: [判断位置关系, 求切线]
+        exam_frequency: 高
+        common_mistake: "d 的计算错误（需用点到直线距离公式）"
+      - id: MF-CR-11
+        name: 圆锥侧面积
+        formula: "S侧=πrl（r底面半径，l母线长）；侧面展开扇形弧长=底面周长2πr"
+        usage: [圆锥表面积, 展开图问题]
+        exam_frequency: 中
+        common_mistake: "母线长 l 和高 h 混淆；展开图弧长与底面周长对应搞错"
+
+  # ======================== 统计与概率 ========================
+  - name: 统计与概率
+    formulas:
+      - id: MF-SP-01
+        name: 平均数
+        formula: "x̄ = (x₁+x₂+...+xₙ)/n"
+        variant: "加权平均数：x̄ = (x₁f₁+x₂f₂+...+xₖfₖ)/(f₁+f₂+...+fₖ)"
+        usage: [数据集中趋势分析]
+        exam_frequency: 极高
+        common_mistake: "加权平均数中权重分配错误"
+      - id: MF-SP-02
+        name: 中位数
+        formula: "数据从小到大排列，n奇取第(n+1)/2个，n偶取中间两数平均值"
+        usage: [数据集中趋势分析]
+        exam_frequency: 极高
+        common_mistake: "忘记先排序就直接取中间数"
+      - id: MF-SP-03
+        name: 众数
+        formula: "出现次数最多的数据即为众数（可以不唯一）"
+        usage: [数据集中趋势分析]
+        exam_frequency: 极高
+        common_mistake: "误认为众数只有一个"
+      - id: MF-SP-04
+        name: 方差
+        formula: "S² = [(x₁-x̄)²+(x₂-x̄)²+...+(xₙ-x̄)²]/n"
+        meaning: "方差越小，数据越稳定（波动越小）"
+        usage: [数据离散程度分析, 比较稳定性]
+        exam_frequency: 极高
+        common_mistake: "忘记除以n；平均数算错导致连锁出错"
+      - id: MF-SP-06
+        name: 概率（等可能事件）
+        formula: "P(A) = m/n（m为事件A的等可能结果数，n为总等可能结果数）"
+        usage: [求概率, 列表法, 树状图法]
+        exam_frequency: 极高
+        common_mistake: "未做到'等可能'就直接数个数"
+      - id: MF-SP-07
+        name: 频率估计概率
+        formula: "当试验次数n足够大时，频率m/n ≈ 概率P(A)"
+        usage: [用试验估计概率]
+        exam_frequency: 中
+        common_mistake: "频率不等于概率，只是近似值"
+      - id: MF-SP-08
+        name: 列表法与树状图法
+        formula: "两步或多步试验时，用列表法或树状图法列出所有等可能结果"
+        usage: [求复合事件概率]
+        exam_frequency: 极高
+        common_mistake: "遗漏部分结果或重复计数"

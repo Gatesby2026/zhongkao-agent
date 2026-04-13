@@ -1,0 +1,529 @@
+# ============================================================
+# 北京2026中考物理公式速查表
+# 满分80分 | 基于学生实际辅导材料结构化整理
+# ============================================================
+
+subject: 物理
+region: 北京
+exam_year: 2026
+total_score: 80
+last_updated: "2026-04-13"
+data_source: "基于学生实际辅导材料（2025年中考物理公式汇总）结构化"
+
+# ====================
+# 一、公式分类
+# ====================
+categories:
+  # --------------------
+  # 力学公式
+  # --------------------
+  - name: 力学公式
+    formulas:
+      - id: PF-01
+        name: 速度公式
+        formula: "v = s/t"
+        variants: ["s = vt", "t = s/v"]
+        units:
+          速度: "m/s 或 km/h"
+          路程: "m 或 km"
+          时间: "s 或 h"
+        unit_conversion: "1m/s = 3.6km/h"
+        notes:
+          - "计算时单位必须统一"
+          - "各量针对同一运动过程（同一时段、同一路程）"
+          - "可用来求平均速度：v̄ = s总/t总"
+          - "平均速度不等于速度的算术平均"
+        exam_frequency: 极高
+        common_mistakes:
+          - "单位不统一（如路程用km但时间用s）"
+          - "求平均速度时错误地取两段速度的算术平均"
+          - "忘记将km/h换算为m/s（÷3.6）"
+        linked_questions: []
+
+      - id: PF-02
+        name: 密度公式
+        formula: "ρ = m/V"
+        variants: ["m = ρV", "V = m/ρ"]
+        units:
+          密度: "kg/m³ 或 g/cm³"
+          质量: "kg 或 g"
+          体积: "m³ 或 cm³"
+        unit_conversion: "1g/cm³ = 1×10³ kg/m³"
+        notes:
+          - "密度是物质的特性，与质量和体积无关"
+          - "同种物质密度相同（温度、状态不变时）"
+          - "测量密度常用天平和量筒"
+        exam_frequency: 极高
+        common_mistakes:
+          - "单位换算出错（1g/cm³ = 1000kg/m³ 而非 1）"
+          - "认为密度随质量或体积改变"
+          - "量筒读数时视线未与凹液面最低处平齐"
+        linked_questions: []
+
+      - id: PF-03
+        name: 重力公式
+        formula: "G = mg"
+        variants: ["m = G/g"]
+        units:
+          重力: "N（牛顿）"
+          质量: "kg"
+          g: "N/kg"
+        unit_conversion: "g ≈ 10 N/kg"
+        notes:
+          - "重力方向竖直向下"
+          - "重力作用点为重心"
+          - "g值在地球不同位置略有不同，中考取10N/kg"
+        exam_frequency: 极高
+        common_mistakes:
+          - "将质量和重力混淆"
+          - "忘记g的取值（中考统一取10N/kg）"
+          - "重力方向说成'向下'而非'竖直向下'"
+        linked_questions: []
+
+      - id: PF-04
+        name: 压强公式
+        formula: "p = F/S"
+        variants: ["F = pS", "S = F/p"]
+        units:
+          压强: "Pa（帕斯卡）= N/m²"
+          压力: "N"
+          受力面积: "m²"
+        unit_conversion: "1Pa = 1N/m²"
+        notes:
+          - "F为压力（垂直于接触面的力），不一定等于重力"
+          - "S为受力面积，不是物体的底面积"
+          - "规则固体放在水平面上：F=G，S=底面积，此时p=ρgh"
+          - "增大压强：增大压力或减小受力面积"
+          - "减小压强：减小压力或增大受力面积"
+        exam_frequency: 极高
+        common_mistakes:
+          - "将受力面积错选为施力物体的面积"
+          - "物体在水平面上时直接用p=ρgh但不验证条件"
+          - "面积单位忘记换算为m²"
+        linked_questions: []
+
+      - id: PF-05
+        name: 液体压强公式
+        formula: "p = ρgh"
+        variants: ["h = p/(ρg)"]
+        units:
+          压强: "Pa"
+          液体密度: "kg/m³"
+          深度: "m"
+        notes:
+          - "h是从液面到所求点的竖直距离，不是斜面距离"
+          - "液体压强只与密度和深度有关，与容器形状无关"
+          - "同种液体中，同一深度处各方向压强相等"
+          - "连通器原理：静止的同种液体，连通处液面等高"
+        exam_frequency: 极高
+        common_mistakes:
+          - "h取成容器底到该点的距离（应从液面算起）"
+          - "认为液体压强与容器粗细有关"
+          - "倾斜容器中h取斜面长度而非竖直高度"
+        linked_questions: []
+
+      - id: PF-06
+        name: 浮力公式
+        formula: "F浮 = ρ液gV排"
+        variants:
+          - "称重法：F浮 = G - F示"
+          - "压力差法：F浮 = F向上 - F向下"
+          - "平衡法（漂浮/悬浮）：F浮 = G物"
+        units:
+          浮力: "N"
+          液体密度: "kg/m³"
+          排开液体体积: "m³"
+        notes:
+          - "V排为物体浸入液体中的体积，不一定等于物体体积"
+          - "漂浮时V排 < V物，悬浮时V排 = V物"
+          - "物体的浮沉条件：比较F浮与G（或比较ρ物与ρ液）"
+          - "浮力与物体的形状、深度无关（完全浸没后）"
+        exam_frequency: 极高
+        common_mistakes:
+          - "将V排等同于V物（未完全浸没时二者不同）"
+          - "漂浮和悬浮混淆（漂浮在液面，悬浮在液中）"
+          - "忘记称重法中F示是弹簧测力计的示数"
+        linked_questions: []
+
+      - id: PF-07
+        name: 功的公式
+        formula: "W = Fs"
+        variants: ["F = W/s", "s = W/F"]
+        units:
+          功: "J（焦耳）"
+          力: "N"
+          距离: "m"
+        notes:
+          - "s为在力的方向上移动的距离"
+          - "不做功的三种情况：有力无距离、有距离无力、力与运动方向垂直"
+          - "功是标量，没有方向"
+        exam_frequency: 高
+        common_mistakes:
+          - "距离方向与力的方向不一致时直接相乘"
+          - "混淆'有力就做功'——需要在力的方向上有位移"
+          - "搬着重物水平行走认为做了功（重力方向无位移）"
+        linked_questions: []
+
+      - id: PF-08
+        name: 功率公式
+        formula: "P = W/t"
+        variants: ["P = Fv（匀速直线运动）", "W = Pt", "t = W/P"]
+        units:
+          功率: "W（瓦特）"
+          功: "J"
+          时间: "s"
+        notes:
+          - "功率表示做功的快慢"
+          - "P = Fv 仅适用于匀速直线运动"
+          - "1kW = 1000W"
+        exam_frequency: 高
+        common_mistakes:
+          - "用P=Fv时忘记要求匀速"
+          - "功率单位W与功的单位J混淆"
+          - "功率大不代表做功多（还要看时间）"
+        linked_questions: []
+
+      - id: PF-09
+        name: 杠杆平衡条件
+        formula: "F₁L₁ = F₂L₂"
+        variants: []
+        units:
+          力: "N"
+          力臂: "m"
+        notes:
+          - "力臂：从支点到力的作用线的垂直距离"
+          - "省力杠杆：动力臂 > 阻力臂，费距离"
+          - "费力杠杆：动力臂 < 阻力臂，省距离"
+          - "等臂杠杆：天平"
+        exam_frequency: 高
+        common_mistakes:
+          - "力臂画错（不是支点到力作用点的距离，而是到力的作用线的垂直距离）"
+          - "混淆省力和省功（杠杆不省功）"
+        linked_questions: []
+
+      - id: PF-10
+        name: 滑轮组公式
+        formula: "F = G/n（理想滑轮组）"
+        variants:
+          - "定滑轮：F = G（不省力，改变力的方向）"
+          - "动滑轮（理想）：F = G/2"
+          - "动滑轮（考虑自重）：F = (G物 + G动)/2"
+          - "滑轮组（考虑自重）：F = (G物 + G动)/n"
+          - "绳端移动距离：s = nh"
+        units:
+          拉力: "N"
+          物重: "N"
+          n: "承担物重的绳子段数"
+        notes:
+          - "n为承担物体和动滑轮重力的绳子段数"
+          - "s绳 = nh物（绳端移动距离 = n倍物体升高高度）"
+          - "不计绳重和摩擦时的结论"
+        exam_frequency: 高
+        common_mistakes:
+          - "数绳子段数n时数错（只数连在动滑轮上的）"
+          - "忘记加动滑轮的重力"
+          - "定滑轮和动滑轮的作用搞反"
+        linked_questions: []
+
+      - id: PF-11
+        name: 机械效率
+        formula: "η = W有用/W总 × 100%"
+        variants:
+          - "滑轮组提升重物：η = Gh/(Fs) = G/(nF)"
+          - "斜面：η = Gh/(FL)"
+          - "杠杆：η = G物h物/(F动s动)"
+        units:
+          机械效率: "无单位（百分比）"
+          有用功: "J"
+          总功: "J"
+        notes:
+          - "机械效率总是小于1（η < 100%）"
+          - "额外功包括克服摩擦力和机械自重做的功"
+          - "提高效率：减小摩擦、减轻机械自重"
+        exam_frequency: 高
+        common_mistakes:
+          - "机械效率写成大于100%"
+          - "混淆有用功和总功"
+          - "忘记η没有单位（是比值）"
+        linked_questions: []
+
+  # --------------------
+  # 热学公式
+  # --------------------
+  - name: 热学公式
+    formulas:
+      - id: PH-01
+        name: 吸热公式
+        formula: "Q吸 = cm(t - t₀)"
+        variants: ["c = Q/(mΔt)", "m = Q/(cΔt)"]
+        units:
+          吸收热量: "J"
+          比热容: "J/(kg·℃)"
+          质量: "kg"
+          温度变化: "℃"
+        notes:
+          - "t为末温，t₀为初温，Q吸时t > t₀"
+          - "比热容c是物质的特性"
+          - "水的比热容最大，常用作冷却剂和取暖介质"
+        exam_frequency: 极高
+        common_mistakes:
+          - "初温末温搞反导致Q为负"
+          - "质量单位忘记换算为kg"
+          - "混淆温度和温度差"
+        linked_questions: []
+
+      - id: PH-02
+        name: 放热公式
+        formula: "Q放 = cm(t₀ - t)"
+        variants: []
+        units:
+          放出热量: "J"
+          比热容: "J/(kg·℃)"
+          质量: "kg"
+          温度变化: "℃"
+        notes:
+          - "t₀为初温（较高），t为末温（较低）"
+          - "放热过程温度降低，Q放 = cm(t₀ - t)保证结果为正"
+          - "热平衡时：Q吸 = Q放（不计热损失）"
+        exam_frequency: 高
+        common_mistakes:
+          - "放热公式中初温末温写反"
+          - "热平衡计算中忽略'不计热损失'的条件"
+        linked_questions: []
+
+      - id: PH-03
+        name: 燃烧放热公式
+        formula: "Q放 = mq"
+        variants: ["Q放 = Vq（气体燃料，V为体积）"]
+        units:
+          放出热量: "J"
+          质量: "kg"
+          热值: "J/kg"
+          体积: "m³（气体时）"
+          热值_体积: "J/m³（气体时）"
+        notes:
+          - "q为热值，是燃料的特性"
+          - "热值表示1kg某种燃料完全燃烧放出的热量"
+          - "气体燃料用体积：Q = Vq"
+        exam_frequency: 中
+        common_mistakes:
+          - "燃料未完全燃烧时直接用Q=mq（应乘燃烧效率）"
+          - "混淆质量热值和体积热值"
+        linked_questions: []
+
+      - id: PH-04
+        name: 热效率
+        formula: "η = Q有用/Q总 × 100%"
+        variants:
+          - "烧水：η = cm(t-t₀) / (mq)"
+        units:
+          热效率: "无单位（百分比）"
+        notes:
+          - "Q有用为被加热物体吸收的热量"
+          - "Q总为燃料完全燃烧放出的总热量"
+          - "热效率一定小于100%"
+        exam_frequency: 中
+        common_mistakes:
+          - "Q有用和Q总搞反"
+          - "热效率计算结果大于1"
+        linked_questions: []
+
+  # --------------------
+  # 电学公式
+  # --------------------
+  - name: 电学公式
+    formulas:
+      - id: PE-01
+        name: 欧姆定律
+        formula: "I = U/R"
+        variants: ["U = IR", "R = U/I"]
+        units:
+          电流: "A（安培）"
+          电压: "V（伏特）"
+          电阻: "Ω（欧姆）"
+        notes:
+          - "I、U、R必须针对同一段电路、同一时刻"
+          - "电阻R与电压和电流无关（纯电阻）"
+          - "R = U/I 是测量电阻的原理，不是电阻的定义"
+        exam_frequency: 极高
+        common_mistakes:
+          - "不同时刻或不同段电路的量混用"
+          - "认为电阻随电压或电流变化"
+          - "滑动变阻器改变的是电阻不是电压"
+        linked_questions: []
+
+      - id: PE-02
+        name: 电功公式
+        formula: "W = UIt"
+        variants:
+          - "W = I²Rt（纯电阻可用）"
+          - "W = U²t/R（纯电阻可用）"
+          - "W = Pt"
+        units:
+          电功: "J（焦耳）"
+          电压: "V"
+          电流: "A"
+          时间: "s"
+        notes:
+          - "W = UIt 适用于所有电路"
+          - "W = I²Rt 和 W = U²t/R 仅适用于纯电阻电路"
+          - "1kW·h = 3.6×10⁶ J"
+          - "电能表的示数之差就是用电量"
+        exam_frequency: 极高
+        common_mistakes:
+          - "非纯电阻电路中误用W=I²Rt"
+          - "kW·h和J的换算出错"
+          - "时间单位未统一为秒"
+        linked_questions: []
+
+      - id: PE-03
+        name: 电功率公式
+        formula: "P = UI"
+        variants:
+          - "P = I²R（纯电阻可用）"
+          - "P = U²/R（纯电阻可用）"
+          - "P = W/t"
+        units:
+          电功率: "W（瓦特）"
+          电压: "V"
+          电流: "A"
+        notes:
+          - "P = UI 适用于所有电路"
+          - "P = I²R 和 P = U²/R 仅适用于纯电阻电路"
+          - "额定功率：在额定电压下的功率"
+          - "实际功率随实际电压变化"
+        exam_frequency: 极高
+        common_mistakes:
+          - "混淆额定功率和实际功率"
+          - "非纯电阻电路中误用P=I²R"
+          - "计算家庭电路时忘记电压为220V"
+        linked_questions: []
+
+      - id: PE-04
+        name: 焦耳定律
+        formula: "Q = I²Rt"
+        variants: ["纯电阻电路：Q = W = UIt = U²t/R"]
+        units:
+          电热: "J"
+          电流: "A"
+          电阻: "Ω"
+          时间: "s"
+        notes:
+          - "Q = I²Rt 适用于所有电路（通用公式）"
+          - "纯电阻电路中电能全部转化为内能：Q = W"
+          - "非纯电阻电路：Q < W（部分转化为其他形式能）"
+          - "电热器就是利用焦耳定律工作的"
+        exam_frequency: 高
+        common_mistakes:
+          - "纯电阻和非纯电阻电路的公式混用"
+          - "忘记Q=I²Rt是通用公式而其他形式有条件限制"
+        linked_questions: []
+
+# ====================
+# 二、必记物理常量
+# ====================
+constants:
+  - name: 重力加速度
+    symbol: g
+    value: "≈10 N/kg（精确值9.8 N/kg）"
+    note: "北京中考统一取10 N/kg"
+
+  - name: 水的密度
+    symbol: ρ水
+    value: "1.0×10³ kg/m³ = 1 g/cm³"
+    note: "4℃时密度最大"
+
+  - name: 水的比热容
+    symbol: c水
+    value: "4.2×10³ J/(kg·℃)"
+    note: "常见物质中比热容最大"
+
+  - name: 大气压强（标准）
+    symbol: p₀
+    value: "1.013×10⁵ Pa ≈ 10⁵ Pa"
+    note: "约等于76cmHg，随海拔升高而减小"
+
+  - name: 真空中光速
+    symbol: c
+    value: "3×10⁸ m/s"
+    note: "宇宙中最快速度，光年是距离单位"
+
+  - name: 声速（空气中，15℃）
+    symbol: v声
+    value: "340 m/s"
+    note: "声速随温度升高略有增大"
+
+  - name: 冰的密度
+    symbol: ρ冰
+    value: "0.9×10³ kg/m³"
+    note: "冰的密度小于水，所以冰浮在水面"
+
+  - name: 家庭电路电压
+    symbol: U
+    value: "220 V"
+    note: "安全电压不高于36V"
+
+  - name: 一节干电池电压
+    symbol: U
+    value: "1.5 V"
+    note: "铅蓄电池2V"
+
+# ====================
+# 三、串并联电路规则对比表
+# ====================
+circuit_rules:
+  - property: 电流
+    serial_circuit:
+      rule: "处处相等"
+      formula: "I = I₁ = I₂"
+    parallel_circuit:
+      rule: "干路电流等于各支路电流之和"
+      formula: "I = I₁ + I₂"
+
+  - property: 电压
+    serial_circuit:
+      rule: "总电压等于各部分电压之和"
+      formula: "U = U₁ + U₂"
+    parallel_circuit:
+      rule: "各支路电压相等（等于电源电压）"
+      formula: "U = U₁ = U₂"
+
+  - property: 电阻
+    serial_circuit:
+      rule: "总电阻等于各电阻之和"
+      formula: "R = R₁ + R₂"
+    parallel_circuit:
+      rule: "总电阻的倒数等于各电阻倒数之和"
+      formula: "1/R = 1/R₁ + 1/R₂"
+
+  - property: 分配规律
+    serial_circuit:
+      rule: "串联分压（电压与电阻成正比）"
+      formula: "U₁/U₂ = R₁/R₂"
+    parallel_circuit:
+      rule: "并联分流（电流与电阻成反比）"
+      formula: "I₁/I₂ = R₂/R₁"
+
+  - property: 电功/电功率/电热
+    serial_circuit:
+      rule: "与电阻成正比"
+      formula: "W₁/W₂ = P₁/P₂ = Q₁/Q₂ = R₁/R₂"
+    parallel_circuit:
+      rule: "与电阻成反比"
+      formula: "W₁/W₂ = P₁/P₂ = Q₁/Q₂ = R₂/R₁"
+
+  - property: 电功（按定义）
+    serial_circuit:
+      rule: "总功等于各部分之和"
+      formula: "W = W₁ + W₂"
+    parallel_circuit:
+      rule: "总功等于各支路之和"
+      formula: "W = W₁ + W₂"
+
+  - property: 电功率（按定义）
+    serial_circuit:
+      rule: "总功率等于各部分之和"
+      formula: "P = P₁ + P₂"
+    parallel_circuit:
+      rule: "总功率等于各支路之和"
+      formula: "P = P₁ + P₂"

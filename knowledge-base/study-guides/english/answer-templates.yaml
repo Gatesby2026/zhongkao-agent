@@ -1,0 +1,572 @@
+# ============================================================
+# 北京2026中考英语 答题模板与解题指南
+# 笔试60分 + 听力口语40分 = 总分100分
+# ============================================================
+
+subject: 英语
+region: 北京
+exam_year: 2026
+total_score: 100
+written_exam_score: 60
+listening_speaking_score: 40
+last_updated: "2026-04-13"
+
+# 笔试各题型分值速查
+score_breakdown:
+  单项选择: "10题×1分=10分"
+  完形填空: "6题×1分=6分"
+  阅读理解: "13题×2分=26分"
+  文段表达: "邮件回复8分+命题作文10分=18分"
+
+# 时间分配建议（笔试共90分钟）
+time_allocation:
+  单项选择: "5分钟"
+  完形填空: "8分钟"
+  阅读理解: "40分钟"
+  文段表达: "30分钟"
+  检查: "7分钟"
+
+# ============================================================
+# 各题型详细模板
+# ============================================================
+
+question_types:
+
+  # ----------------------------------------------------------
+  # 一、单项选择（10分）
+  # ----------------------------------------------------------
+  - type: 单项选择
+    score: "10分"
+    count: "10题"
+    per_question: "1分"
+    time_budget: "5分钟"
+    description: "考查基础语法和词汇用法，每题四个选项选一个"
+
+    high_frequency_topics:
+      - name: 时态
+        details:
+          - "一般现在时：标志词 every day/usually/often/always"
+          - "一般过去时：标志词 yesterday/last.../ago/in 2024"
+          - "一般将来时：标志词 tomorrow/next.../will/be going to"
+          - "现在完成时：标志词 already/yet/ever/never/since/for/so far"
+          - "现在进行时：标志词 now/look/listen/at the moment"
+          - "过去进行时：标志词 at that time/when+过去时"
+      - name: 被动语态
+        details:
+          - "结构：be + 过去分词"
+          - "判断方法：主语是动作的承受者"
+          - "常考时态：一般现在时被动、一般过去时被动"
+      - name: 宾语从句
+        details:
+          - "三要素：连接词+陈述语序+时态呼应"
+          - "连接词选择：that(陈述句)/if或whether(一般疑问)/特殊疑问词"
+          - "易错点：主句过去时从句也用过去时（客观真理除外）"
+      - name: 定语从句
+        details:
+          - "先行词是人用who/that"
+          - "先行词是物用which/that"
+          - "先行词是时间用when，地点用where"
+      - name: 情态动词
+        details:
+          - "must表推测（肯定）/ can't表推测（否定）"
+          - "should/ought to表建议"
+          - "had better表最好（否定had better not）"
+      - name: 比较级最高级
+        details:
+          - "两者比较用比较级+than"
+          - "三者以上用the+最高级+in/of"
+          - "as...as同级比较"
+
+    steps:
+      - "第一步：快速读题干，抓住考点关键词"
+      - "第二步：找时间标志词→判断时态"
+      - "第三步：看主语与动词关系→判断主动/被动"
+      - "第四步：看从句结构→判断连接词"
+      - "第五步：排除法确认答案"
+
+    key_points:
+      - "不要在单选上花太多时间，不确定的先标记跳过"
+      - "注意题目中的时间状语，这是判断时态的最重要线索"
+      - "被动语态看主语是否为动作承受者"
+      - "宾语从句一定用陈述语序"
+
+    scoring_notes:
+      - "每题1分，共10分"
+      - "基础语法题占大多数，难度中等偏下"
+      - "目标：至少拿8分"
+
+    good_example:
+      question: "The book ___ by Lu Xun is very popular."
+      answer: "written（过去分词作后置定语，书是被写的）"
+      analysis: "主语the book是write的承受者，用过去分词表被动"
+
+    bad_example:
+      question: "The book ___ by Lu Xun is very popular."
+      wrong_answer: "writing"
+      mistake: "没有判断主被动关系，误用现在分词"
+
+  # ----------------------------------------------------------
+  # 二、完形填空（6分）
+  # ----------------------------------------------------------
+  - type: 完形填空
+    score: "6分"
+    count: "6题"
+    per_question: "1分"
+    time_budget: "8分钟"
+    description: "一篇短文挖6个空，每空四选一，考查词汇运用和上下文理解"
+
+    reform_note: "2024改革后从8题缩减为6题，篇幅缩短，难度略降"
+
+    steps:
+      - "第一步【通读】：跳过空格，快速读全文，了解大意和感情基调"
+      - "第二步【逐填】：根据上下文线索逐题分析，选择最佳答案"
+      - "第三步【复读】：填完后通读全文，检查逻辑是否通顺"
+
+    key_points:
+      - "先看全文大意，不要一上来就做题"
+      - "上下文线索是核心：前后句的关键词、转折词、因果关系"
+      - "注意感情色彩：正面/负面词汇要与文章基调一致"
+      - "固定搭配：look forward to / be good at / pay attention to 等"
+      - "动词辨析：注意及物/不及物、搭配介词"
+      - "名词辨析：注意可数/不可数、单复数"
+
+    techniques:
+      - name: 上下文线索法
+        detail: "空格前后的关键词往往暗示答案，特别关注转折词(but/however)和因果词(so/because)"
+      - name: 感情色彩法
+        detail: "整篇文章是积极还是消极？选词要与整体感情一致"
+      - name: 固定搭配法
+        detail: "很多空考的是固定搭配，如 be proud of / make a decision 等"
+      - name: 复现法
+        detail: "文章中重复出现的词或同义词往往是重要线索"
+
+    scoring_notes:
+      - "每题1分，共6分"
+      - "以记叙文为主，偶尔出说明文"
+      - "目标：至少拿4分"
+
+    good_example:
+      context: "文章讲述一个男孩克服困难学会游泳的故事"
+      blank: "After weeks of practice, he finally felt ___."
+      answer: "confident（自信的，符合克服困难后的积极情感）"
+      analysis: "前文提到反复练习，这里应该是正面结果"
+
+    bad_example:
+      context: "同上"
+      blank: "After weeks of practice, he finally felt ___."
+      wrong_answer: "nervous（紧张的）"
+      mistake: "忽视了上下文感情色彩，练习后应该是积极的结果"
+
+  # ----------------------------------------------------------
+  # 三、阅读理解 A/B篇（16分）
+  # ----------------------------------------------------------
+  - type: 阅读理解AB篇
+    score: "16分"
+    count: "A篇4题+B篇4题=8题"
+    per_question: "2分"
+    time_budget: "20分钟（每篇约10分钟）"
+    description: "两篇文章各4道选择题，A篇通常为应用文或记叙文，B篇为说明文或议论文"
+
+    question_categories:
+      - name: 细节理解题
+        frequency: "最高频，约占60%"
+        steps:
+          - "读题干，划出关键词（人名/时间/地点/数字）"
+          - "回原文定位，找到对应段落和句子"
+          - "将原文信息与四个选项逐一对比"
+          - "注意同义替换：原文和选项用词不同但意思相同"
+        key_points:
+          - "答案一定在原文中有依据"
+          - "警惕偷换概念：选项改了主语或范围"
+          - "警惕张冠李戴：把A的特征安到B上"
+        good_example:
+          question: "When does the library close on Saturday?"
+          method: "找Saturday和close两个关键词定位原文"
+        bad_example:
+          mistake: "没有回原文定位，凭印象选择，容易被干扰项误导"
+
+      - name: 主旨大意题
+        frequency: "每篇约1题"
+        steps:
+          - "读首段和尾段，抓主题句"
+          - "浏览各段首句，把握文章结构"
+          - "选择最能概括全文中心的选项"
+        key_points:
+          - "主旨题选项不能太窄（只概括了一段）也不能太宽（超出文章内容）"
+          - "常见提问方式：What is the passage mainly about? / The best title is..."
+        good_example:
+          question: "What is the best title for the passage?"
+          method: "综合首尾段主题句，选择覆盖全文的标题"
+        bad_example:
+          mistake: "只看了一段就选答案，以偏概全"
+
+      - name: 推断题
+        frequency: "每篇约1题"
+        steps:
+          - "找到题干对应的原文段落"
+          - "根据原文信息进行合理推理"
+          - "选择最符合逻辑的推断"
+        key_points:
+          - "推断必须基于原文，不能凭自己的常识"
+          - "不能过度推断，选最保守合理的选项"
+          - "常见提问：We can infer/learn from... / The writer probably thinks..."
+        good_example:
+          question: "We can infer that the writer..."
+          method: "原文说 'She spent every weekend in the lab'，可推断她对研究很投入"
+        bad_example:
+          mistake: "原文没有说她获奖了，但推断她一定获奖了——这属于过度推断"
+
+      - name: 猜词题
+        frequency: "偶尔出现"
+        steps:
+          - "读该词所在的完整句子"
+          - "看前后句，找解释、同义词或反义词线索"
+          - "尝试用选项代入原句，看是否通顺"
+        key_points:
+          - "上下文语境是第一线索"
+          - "构词法：前缀un-/dis-表否定，后缀-ful/-less等"
+          - "转折关系（but/however后面意思相反）可以帮助判断"
+
+    scoring_notes:
+      - "每题2分，共16分，是整张卷子分值最高的板块"
+      - "A篇较简单，B篇中等偏难"
+      - "目标：至少拿12分"
+
+  # ----------------------------------------------------------
+  # 四、阅读理解 C篇（4分）
+  # ----------------------------------------------------------
+  - type: 阅读理解C篇
+    score: "4分"
+    count: "2题"
+    per_question: "2分"
+    time_budget: "8分钟"
+    description: "通常为说明文或议论文，难度最高，题目考查深层理解"
+
+    article_features:
+      - "题材：科技、社会、环保、心理学等热门话题"
+      - "篇幅较长，生词较多"
+      - "逻辑结构复杂，需要理清论点和论据"
+
+    steps:
+      - "第一步：读首尾段，明确文章主题和作者立场"
+      - "第二步：标记每段的关键词和中心句"
+      - "第三步：理清段落之间的逻辑关系（并列/递进/转折/因果）"
+      - "第四步：带着问题精读相关段落"
+
+    key_points:
+      - "C篇是拉分题，基础一般的同学不要在此花太多时间"
+      - "看不懂全文没关系，抓住关键段落和关键句"
+      - "作者态度题：注意形容词和副词的感情色彩"
+      - "文章结构题：常考 总分总/问题-解决/现象-解释"
+
+    scoring_notes:
+      - "每题2分，共4分"
+      - "难度最高，是优秀学生拉开差距的关键"
+      - "目标：基础好的同学拿4分，一般同学争取拿2分"
+
+    good_example:
+      question: "What is the writer's attitude towards AI in education?"
+      method: "找到作者评价AI的句子，注意 helpful/dangerous/promising 等态度词"
+      analysis: "如果原文用了 'promising but challenging'，说明态度是谨慎乐观"
+
+    bad_example:
+      mistake: "没有找到原文依据，凭自己对AI的看法选择答案"
+
+  # ----------------------------------------------------------
+  # 五、D篇 还原句子（6分）——2024改革新题型
+  # ----------------------------------------------------------
+  - type: 阅读理解D篇_还原句子
+    score: "6分"
+    count: "3题"
+    per_question: "2分"
+    time_budget: "12分钟"
+    description: "文章中挖出3个句子，从5个选项中选3个还原到正确位置（多出2个干扰项）"
+
+    reform_note: "这是2024改革后新增的题型！取代了原来的任务型阅读，考生务必重点练习"
+
+    steps:
+      - "第一步：通读全文（跳过空格），把握文章主题和结构"
+      - "第二步：精读每个空格的前后句，分析逻辑关系"
+      - "第三步：浏览5个选项，理解每个选项的含义"
+      - "第四步：先做最有把握的空，缩小选项范围"
+      - "第五步：将选好的句子代入空格，通读检查连贯性"
+
+    key_points:
+      - "逻辑关系是解题核心"
+      - "优先做最确定的题，用排除法处理不确定的"
+      - "注意5选3，有2个干扰选项"
+
+    logic_clues:
+      - name: 代词指代
+        detail: "选项中的 this/that/these/those/it/they 一定指代前文某个名词"
+        example: "前文提到 'a new method'，选项中 'This method...' 就是线索"
+      - name: 连接词
+        detail: "however/but表转折，besides/moreover表递进，for example表举例，so/therefore表因果"
+        example: "前文讲优点，空格后讲缺点，中间应填含 however 的句子"
+      - name: 关键词复现
+        detail: "选项中的关键词如果在前后句重复出现，很可能是正确答案"
+        example: "前文说 'exercise is important'，选项说 'Regular exercise can...' 则关键词复现"
+      - name: 话题一致
+        detail: "空格处的句子话题必须与上下文一致，不能跳跃"
+        example: "这段讲的是饮食健康，突然出现讲运动的句子就不对"
+
+    scoring_notes:
+      - "每题2分，共6分"
+      - "新题型，很多考生不熟悉，需要大量练习"
+      - "目标：至少拿4分"
+
+    good_example:
+      context: "前文: 'Scientists have found a new way to recycle plastic.' 后文: 'It can reduce pollution by 50%.'"
+      correct_option: "This method uses less energy than traditional recycling."
+      analysis: "This method 指代前文的 a new way，且与后文 reduce pollution 话题一致"
+
+    bad_example:
+      context: "同上"
+      wrong_option: "However, many people still prefer to use paper bags."
+      mistake: "话题不一致，前后文在讲回收塑料的新方法，这个选项跳到了纸袋话题"
+
+  # ----------------------------------------------------------
+  # 六、文段表达——邮件回复（8分）
+  # ----------------------------------------------------------
+  - type: 文段表达_邮件回复
+    score: "8分"
+    scoring_detail: "内容4分+语言4分"
+    time_budget: "10分钟"
+    description: "根据收到的一封英文邮件进行回复，需回答对方提问并适当拓展"
+
+    steps:
+      - "第一步：仔细阅读原邮件，标记对方的问题（通常2-3个）"
+      - "第二步：列出要回答的要点"
+      - "第三步：按格式写回复，确保每个问题都回答到"
+      - "第四步：适当拓展1-2句（追问或补充信息）"
+      - "第五步：检查格式、拼写、语法"
+
+    format_template: |
+      Dear ___,
+        I'm glad to hear from you. (开头寒暄)
+        (回答问题1) ...
+        (回答问题2) ...
+        (适当拓展) ...
+      Yours,
+      Li Hua
+
+    key_points:
+      - "必须回答对方的每一个问题，漏答扣分严重"
+      - "适当拓展：可以反问对方、提出建议或补充细节"
+      - "格式规范：称呼+正文+署名"
+      - "字数要求：不少于50词（不含给出的开头和结尾）"
+      - "不要抄原邮件的句子"
+
+    scoring_notes:
+      - "内容4分：是否完整回答问题+是否有拓展"
+      - "语言4分：语法正确+表达丰富+拼写无误"
+      - "目标：拿6分以上"
+
+    good_example:
+      original_email: "对方问：你最喜欢什么运动？你多久运动一次？"
+      response: |
+        Dear Jim,
+          I'm glad to hear from you. My favorite sport is basketball. I play it
+        twice a week with my classmates after school. It makes me feel relaxed
+        and helps me stay healthy. Do you like basketball too? Maybe we can
+        play together someday!
+        Yours,
+        Li Hua
+      analysis: "回答了两个问题（最喜欢的运动、频率），拓展了原因和反问，格式正确"
+
+    bad_example:
+      original_email: "同上"
+      response: |
+        Dear Jim,
+          I like basketball. I play it every week.
+        Yours,
+        Li Hua
+      problems:
+        - "回答过于简略，没有展开"
+        - "没有适当拓展"
+        - "缺少开头寒暄"
+        - "句式单一，语言分会很低"
+
+  # ----------------------------------------------------------
+  # 七、文段表达——命题作文（10分）
+  # ----------------------------------------------------------
+  - type: 文段表达_命题作文
+    score: "10分"
+    scoring_detail: "内容5分+语言5分"
+    time_budget: "20分钟"
+    word_count: "60-80词"
+    description: "根据题目要求写一篇短文，通常给出2-3个要点需要覆盖"
+
+    steps:
+      - "第一步【审题】：看清题目要求，标记必须覆盖的要点（通常2-3个）"
+      - "第二步【列纲】：用中文快速列出每段要写什么"
+      - "第三步【写作】：按 开头→主体→结尾 的结构展开"
+      - "第四步【润色】：加入1-2个高分句式"
+      - "第五步【检查】：核对要点是否覆盖、字数是否达标、拼写语法是否正确"
+
+    structure_template:
+      opening:
+        purpose: "引出话题，表明态度"
+        templates:
+          - "I think/believe that..."
+          - "In my opinion, ..."
+          - "When it comes to..., I'd like to share my ideas."
+      body:
+        purpose: "分点展开，覆盖所有要点"
+        templates:
+          - "First/Firstly, ... Second/Secondly, ... Besides/What's more, ..."
+          - "On one hand, ... On the other hand, ..."
+          - "For example, / Take ... for example."
+      ending:
+        purpose: "总结全文，升华主题"
+        templates:
+          - "In a word, / All in all, ..."
+          - "I hope/wish that..."
+          - "Let's work together to..."
+
+    advanced_sentence_patterns:
+      - name: 定语从句
+        example: "I have a friend who is good at painting."
+        note: "用1句即可，不要每句都用"
+      - name: 感叹句
+        example: "What a meaningful activity it is!"
+        note: "放在结尾效果好"
+      - name: 倒装句
+        example: "Not only did I learn a lot, but I also made new friends."
+        note: "使用需谨慎，确保语法正确"
+      - name: 非谓语动词
+        example: "Seeing the beautiful scenery, I felt very happy."
+        note: "现在分词作状语，简洁高级"
+      - name: 固定句型
+        example: "It is important for us to protect the environment."
+        note: "It is + adj. + for sb. to do sth. 万能句型"
+
+    key_points:
+      - "覆盖所有要点是拿分的前提，漏要点扣分非常重"
+      - "字数控制在60-80词，少于60会扣分"
+      - "高分句式用1-2句即可，堆砌反而容易出错"
+      - "书写工整也会影响印象分"
+      - "不要使用超出自己能力的生僻词，用简单词写对比用难词写错好"
+
+    scoring_notes:
+      - "内容5分：要点覆盖+逻辑清晰+内容充实"
+      - "语言5分：语法正确+词汇丰富+句式多样"
+      - "目标：拿7分以上"
+
+    common_topics:
+      - "校园生活（社团活动、学习方法、师生关系）"
+      - "中国传统文化（节日、美食、民俗）"
+      - "环保与社会责任"
+      - "科技与生活"
+      - "个人成长与感悟"
+
+    good_example:
+      topic: "你校正在开展 'Be a Volunteer' 活动，请写一篇短文介绍你的一次志愿活动经历"
+      requirements: "要点：1.你做了什么 2.你的感受"
+      response: |
+        Last weekend, I volunteered at a community library. I helped organize
+        books and read stories to young children. It was my first time to be a
+        volunteer, and I felt a little nervous at first. However, when I saw the
+        children's happy faces, I felt proud of myself.
+        Not only did I learn to be more patient, but I also realized that helping
+        others can bring us happiness. What a meaningful experience it was! I
+        hope more students will join volunteer activities in the future.
+      analysis:
+        - "覆盖了两个要点（做了什么+感受）"
+        - "使用了倒装句和感叹句各一句"
+        - "逻辑清晰：事件→感受→升华"
+        - "字数约75词，符合要求"
+
+    bad_example:
+      topic: "同上"
+      response: |
+        I am a volunteer. I go to the library. I read books. I am happy. I think
+        volunteer is good. We should be a volunteer.
+      problems:
+        - "句式过于简单，全是主谓宾"
+        - "内容空洞，没有具体细节"
+        - "缺少高分句式"
+        - "没有清晰的文章结构"
+        - "语法错误：volunteer是可数名词，应为a volunteer"
+
+  # ----------------------------------------------------------
+  # 八、听力口语考试（40分）——备考要点
+  # ----------------------------------------------------------
+  - type: 听力口语考试
+    score: "40分"
+    exam_format: "机考，与笔试分开进行"
+    description: "听力口语考试占英语总分的40%，通常在每年3月和12月各考一次，取最高分"
+
+    parts:
+      - name: 听后选择
+        score: "12分"
+        count: "6题×2分"
+        description: "听一段对话或独白，选择正确答案"
+        strategy:
+          - "提前浏览选项，预判听力内容"
+          - "抓关键词：时间、地点、人物、数字"
+          - "第一遍抓大意，第二遍确认细节"
+          - "注意转折词后的信息（but/however/actually）"
+
+      - name: 听后回答
+        score: "10分"
+        count: "5题×2分"
+        description: "听问题后口头回答"
+        strategy:
+          - "注意疑问词：what/where/when/why/how"
+          - "回答要完整，不要只说一个词"
+          - "发音清晰，语速适中"
+          - "如果没听清，用自己理解的内容回答，不要沉默"
+
+      - name: 听后记录并转述
+        score: "8分"
+        description: "听一段材料，记录关键信息，然后口头转述"
+        strategy:
+          - "边听边速记关键词（不要试图写完整句子）"
+          - "用自己的话转述，不需要逐字复述"
+          - "转述时注意人称转换（I→he/she）"
+          - "注意时态转换（通常用过去时转述）"
+
+      - name: 短文朗读
+        score: "10分"
+        description: "朗读一篇英文短文"
+        strategy:
+          - "先快速浏览全文，标记不确定的单词"
+          - "注意意群停顿，不要一个词一个词地读"
+          - "语调自然：陈述句降调，疑问句升调"
+          - "遇到不会读的词，大胆按发音规则猜，不要卡住"
+
+    general_tips:
+      - "听力口语考两次取高分，第一次考试非常重要"
+      - "平时多听英语材料：教材录音、英语新闻、英文歌曲"
+      - "每天朗读15分钟，提高语感和流利度"
+      - "模考练习：用历年真题模拟机考环境"
+      - "考前一周重点练习薄弱环节"
+
+    scoring_notes:
+      - "听力口语共40分，占总分比重很大"
+      - "大部分考生可以拿到30-35分"
+      - "目标：35分以上"
+
+# ============================================================
+# 总体备考策略
+# ============================================================
+overall_strategy:
+  score_targets:
+    优秀: "90分以上（笔试55+听口35+）"
+    良好: "80-89分（笔试48+听口32+）"
+    及格: "60-79分（笔试35+听口25+）"
+
+  priority_order:
+    - "第一优先：阅读理解（26分，分值最高）"
+    - "第二优先：文段表达（18分，提分空间大）"
+    - "第三优先：听力口语（40分，多听多练）"
+    - "第四优先：完形填空（6分，稳定拿分）"
+    - "第五优先：单项选择（10分，语法基本功）"
+
+  exam_day_tips:
+    - "拿到试卷先浏览全卷，心中有数"
+    - "按时间分配做题，不要在一道题上卡太久"
+    - "作文先打草稿再誊抄"
+    - "留5-7分钟检查"
+    - "检查重点：涂卡是否正确、作文拼写、主谓一致"

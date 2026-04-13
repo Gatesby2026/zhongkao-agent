@@ -1,0 +1,329 @@
+# 2026北京中考数学 · 考前14天冲刺清单
+# 满分100分 | 120分钟 | 28题
+# 选择8题(16分) + 填空5题(10分) + 解答15题(74分)
+
+subject: 数学
+region: 北京
+exam_year: 2026
+total_score: 100
+duration_minutes: 120
+total_questions: 28
+last_updated: "2026-04-13"
+timing: 考前14天
+principle: "不学新知识，只巩固已会的+避免已知陷阱"
+
+paper_structure:
+  选择题: { range: "Q1-Q8", count: 8, score_each: 2, subtotal: 16 }
+  填空题: { range: "Q9-Q13", count: 5, score_each: 2, subtotal: 10 }
+  解答题: { range: "Q14-Q28", count: 15, subtotal: 74 }
+
+# === 一、必拿分清单（基本盘 60 分） ===
+must_score_items:
+  - id: MS-01
+    item: "选择Q1-Q6（12分）"
+    topics: [科学记数法, 对称图形/视图, 角度计算, 概率, 判别式与根的情况, 几何基本性质]
+    action: "每天一组6题，限时12分钟完成"
+    common_trap: "Q5概率题注意等可能性条件，树状图不要漏分支"
+    difficulty: 基础
+    target_accuracy: "100%"
+
+  - id: MS-02
+    item: "填空Q9-Q11（6分）"
+    topics: [实数运算/化简, 分式/整式化简求值, 基本几何计算]
+    action: "每天3道填空基础题，注意书写规范"
+    common_trap: "填空没有选项可排除，计算必须准确到底"
+    difficulty: 基础
+    target_accuracy: "100%"
+
+  - id: MS-03
+    item: "解答Q14-Q16（12分）"
+    topics: [实数混合运算, 解一元二次方程, 化简求值]
+    action: "每天练1组，重点检查符号和运算顺序"
+    common_trap: "零指数幂易忘、负指数幂符号出错、分式约分漏项"
+    difficulty: 基础
+    target_accuracy: "100%"
+
+  - id: MS-04
+    item: "解答Q17-Q18（10分）"
+    topics: [一元一次不等式组, 一次函数/反比例函数基本题]
+    action: "不等式组画数轴取交集，函数题先列表描点"
+    common_trap: "不等式两边同乘负数忘记变号"
+    difficulty: 基础
+    target_accuracy: "95%+"
+
+  - id: MS-05
+    item: "解答Q19-Q20（10分）"
+    topics: [统计-中位数/平均数/方差/频率直方图, 概率-列举法/树状图]
+    action: "统计题公式写在草稿纸上再算，概率题画完整树状图"
+    common_trap: "中位数排序后取中间值，奇偶个数处理不同；方差公式别漏平方"
+    difficulty: 基础-中等
+    target_accuracy: "90%+"
+
+  - id: MS-06
+    item: "解答Q21（5分）"
+    topics: [尺规作图, 简单几何证明]
+    action: "背熟5种基本尺规作图，证明题写清每一步理由"
+    common_trap: "作图题不写'作法'和'证明'两部分会扣步骤分"
+    difficulty: 基础-中等
+    target_accuracy: "90%+"
+
+  - id: MS-07
+    item: "解答Q22（5分）"
+    topics: [一次函数应用题, 方程应用题]
+    action: "读题圈关键量，设未知数列方程，解完要验根和检验实际意义"
+    common_trap: "应用题忘记写单位、忘记检验是否符合实际"
+    difficulty: 中等
+    target_accuracy: "85%+"
+
+# === 二、拔高分清单（60→85 分） ===
+stretch_score_items:
+  - id: SS-01
+    item: "选择Q7（2分）"
+    topics: [函数图像与性质综合, 二次函数图像判断]
+    action: "专练函数图像选择题，掌握开口方向/顶点/对称轴快速判断"
+    common_trap: "二次函数系数与图像对应关系易混"
+    difficulty: 中等
+
+  - id: SS-02
+    item: "选择Q8（2分）"
+    topics: [几何综合, 新定义/规律探究]
+    action: "Q8是选择压轴，不会就猜一个跳过，不超过3分钟"
+    common_trap: "时间陷阱——卡在Q8超过3分钟会影响后面大题"
+    difficulty: 中等偏难
+
+  - id: SS-03
+    item: "填空Q12（2分）"
+    topics: [几何计算综合-勾股/相似/圆]
+    action: "画辅助线要有目的：构造直角、构造相似、连半径"
+    common_trap: "圆中角度关系：圆心角=2倍圆周角，别搞反"
+    difficulty: 中等
+
+  - id: SS-04
+    item: "填空Q13（2分）"
+    topics: [二次函数/几何与代数综合, 规律探究]
+    action: "填空压轴题，不会可以先跳过做大题再回来"
+    common_trap: "时间管理——填空压轴不要超过4分钟"
+    difficulty: 中等偏难
+
+  - id: SS-05
+    item: "解答Q23（7分）"
+    topics: [几何证明综合-全等/相似/平行四边形]
+    action: "先写已知条件，找全等/相似的对应关系，规范书写证明过程"
+    common_trap: "证明题跳步扣分严重，每一步必须有依据"
+    difficulty: 中等偏难
+
+  - id: SS-06
+    item: "解答Q24（7分）"
+    topics: [二次函数与几何综合, 函数应用-面积最值/交点问题]
+    action: "第一问求解析式必拿分，第二问面积/最值用公式法"
+    common_trap: "抛物线与x轴交点别忘了验证判别式"
+    difficulty: 中等偏难
+
+  - id: SS-07
+    item: "解答Q25（7分）"
+    topics: [代数/几何综合, 动点问题/旋转/平移]
+    action: "分类讨论要完整，每种情况都要算到底"
+    common_trap: "动点题注意自变量取值范围，别漏端点情况"
+    difficulty: 难
+
+# === 三、冲刺高分（85→95+ 分） ===
+top_score_items:
+  - id: TS-01
+    item: "解答Q26（8分）——二次函数综合压轴"
+    topics: [二次函数与几何综合, 存在性问题, 面积最值]
+    strategy: "第一问求解析式必拿2-3分(待定系数法)；第二问设点坐标转方程拿4分；第三问分类讨论能写多少写多少"
+    action: "每两天做一道Q26真题，总结第一问和第二问的固定套路"
+    difficulty: 难
+    target_score: "5-6分/8分"
+
+  - id: TS-02
+    item: "解答Q27（8分）——几何综合压轴"
+    topics: [圆的综合, 相似三角形综合证明, 旋转/平移变换]
+    strategy: "第一问基础证明必拿2-3分；第二问利用第一问结论拿3分；第三问量力而行"
+    action: "重点练'连半径到切点'和'相似三角形找对应边'两个技巧"
+    difficulty: 难
+    target_score: "4-5分/8分"
+
+  - id: TS-03
+    item: "解答Q28（8分）——新定义探究压轴"
+    topics: [新定义理解与应用, 规律探究, 分类讨论]
+    strategy: "第一问照定义套必拿2-3分；第二问仿照第一问争取拿3分；第三问时间不够可放弃"
+    action: "每三天做一道新定义题，重点是读懂题目定义并准确应用"
+    difficulty: 极难
+    target_score: "3-5分/8分"
+
+# === 四、容易丢分的陷阱 ===
+easy_to_lose:
+  - id: EL-01
+    item: "计算粗心丢分"
+    trap: "符号错误、通分出错、合并同类项遗漏"
+    action: "每道计算题做完回头验算一次，用代入法检验方程的根"
+    affected_questions: "Q1-Q6, Q14-Q16"
+    potential_loss: "4-6分"
+
+  - id: EL-02
+    item: "概率题遗漏情况"
+    trap: "树状图/列表不完整，等可能性条件未验证"
+    action: "强制画完整树状图，数清总数再算概率"
+    affected_questions: "Q5, Q20"
+    potential_loss: "2-4分"
+
+  - id: EL-03
+    item: "几何证明跳步"
+    trap: "觉得显然就不写理由，阅卷老师按步给分"
+    action: "每一步旁边标注定理名称(如SAS/ASA/平行线性质)"
+    affected_questions: "Q21, Q23, Q27"
+    potential_loss: "3-5分"
+
+  - id: EL-04
+    item: "应用题缺单位/缺验根"
+    trap: "解方程后忘记检验实际意义，答案缺单位"
+    action: "最后一步固定写：经检验...符合题意，答：...（单位）"
+    affected_questions: "Q22, Q24"
+    potential_loss: "2-3分"
+
+  - id: EL-05
+    item: "填空题格式错误"
+    trap: "分数线不清晰、根号写法不规范、多余的解未排除"
+    action: "填空答案写最简形式，分数不写假分数"
+    affected_questions: "Q9-Q13"
+    potential_loss: "2-4分"
+
+  - id: EL-06
+    item: "二次函数忘记讨论开口方向"
+    trap: "a的正负影响最值是最大还是最小"
+    action: "求最值前先明确a>0取最小值，a<0取最大值"
+    affected_questions: "Q24, Q26"
+    potential_loss: "2-3分"
+
+  - id: EL-07
+    item: "动点题漏讨论端点"
+    trap: "自变量范围忘记包含/排除端点，分类不完整"
+    action: "动点题先写清范围，再逐段讨论，每段画草图"
+    affected_questions: "Q25, Q26"
+    potential_loss: "3-4分"
+
+  - id: EL-08
+    item: "时间分配失控"
+    trap: "选择填空花太久，压轴题没时间写第一问白丢分"
+    action: "选择填空超过35分钟必须停笔进入解答题"
+    affected_questions: "全卷"
+    potential_loss: "5-10分"
+
+# === 五、14天每日计划 ===
+daily_plan:
+  week_1:
+    label: "倒数第14天-第8天"
+    focus: "错题回顾+专题突破"
+    daily_tasks:
+      - day: "倒数第14天"
+        task: "整理近三年北京中考真题错题，按题型分类贴错题本"
+        duration: "2.5小时"
+      - day: "倒数第13天"
+        task: "专题突破——实数运算+方程（Q14-Q16保分训练），限时练3组"
+        duration: "2小时"
+      - day: "倒数第12天"
+        task: "专题突破——统计与概率（Q19-Q20），练树状图+频率直方图"
+        duration: "2小时"
+      - day: "倒数第11天"
+        task: "专题突破——几何证明（全等+相似），背熟判定定理并练3道"
+        duration: "2.5小时"
+      - day: "倒数第10天"
+        task: "专题突破——二次函数基础，三种形式互化+图像判断练4道"
+        duration: "2小时"
+      - day: "倒数第9天"
+        task: "专题突破——圆的综合，背切线/弦/角度定理并练3道"
+        duration: "2小时"
+      - day: "倒数第8天"
+        task: "第一次全真模拟（严格限时120分钟），考后分析丢分原因"
+        duration: "3小时"
+
+  week_2:
+    label: "倒数第7天-考前1天"
+    focus: "套卷模拟+查漏补缺"
+    daily_tasks:
+      - day: "倒数第7天"
+        task: "针对第一次模拟暴露的薄弱点，找同类题再练3道"
+        duration: "2.5小时"
+      - day: "倒数第6天"
+        task: "压轴题第一问专项训练——收集6道Q26-Q28，每道只做第一问"
+        duration: "2小时"
+      - day: "倒数第5天"
+        task: "第二次全真模拟，重点关注时间分配是否改善"
+        duration: "3小时"
+      - day: "倒数第4天"
+        task: "查漏补缺——针对两次模拟共性错误集中突破"
+        duration: "2小时"
+      - day: "倒数第3天"
+        task: "第三次全真模拟（最后一次），检查基本盘60分是否零失误"
+        duration: "3小时"
+      - day: "倒数第2天"
+        task: "回顾全部错题本，默写所有公式并核对，抄时间分配表"
+        duration: "1.5小时"
+      - day: "考前1天"
+        task: "只看错题本和公式卡，不做新题，准备文具和证件，早睡"
+        duration: "1小时"
+
+# === 六、考场时间分配（120分钟） ===
+time_allocation:
+  total: "120分钟"
+  plan:
+    - phase: "选择题Q1-Q8"
+      time: "20分钟"
+      detail: "Q1-Q6控制在12分钟，Q7-Q8各4分钟，Q8超3分钟就蒙"
+    - phase: "填空题Q9-Q13"
+      time: "10分钟"
+      detail: "Q9-Q11共5分钟，Q12-Q13各2-3分钟，Q13超4分钟先跳"
+    - phase: "解答题Q14-Q22"
+      time: "40分钟"
+      detail: "Q14-Q16限时15分钟，Q17-Q22限时25分钟"
+    - phase: "解答题Q23-Q25"
+      time: "25分钟"
+      detail: "每道争取拿到前两问的分"
+    - phase: "压轴题Q26-Q28"
+      time: "20分钟"
+      detail: "每道先做第一问（共6-9分），剩余时间攻第二问"
+    - phase: "检查"
+      time: "5分钟"
+      detail: "优先检查选择填空涂卡、解答题单位"
+  emergency_rule: "选择填空超过35分钟，立即停笔进入解答题，回头再补"
+
+# === 七、考试当天注意事项 ===
+exam_day_tips:
+  before_exam:
+    - "早餐正常吃，不要太饱或太油腻"
+    - "提前30分钟到考场，熟悉环境"
+    - "进场前快速浏览公式卡（最后一眼记忆）"
+    - "文具清单：黑色签字笔×3、2B铅笔×2、橡皮、直尺、圆规、三角板"
+  during_exam:
+    - "拿到试卷先浏览全卷，看有没有特别题型"
+    - "选择题用排除法提速，不确定的先标记回头检查"
+    - "解答题每道写完画横线分隔，保持卷面整洁"
+    - "遇到不会的题先跳过，把会做的全部做完再回来"
+    - "草稿纸分区使用，标注题号方便回查"
+    - "最后5分钟不要开新题，检查涂卡和已做题"
+  mental_tips:
+    - "紧张时做3次深呼吸，从最简单的题开始找状态"
+    - "遇到难题告诉自己：大家都难，拿到基本分就赢了"
+    - "不要和旁边同学比翻卷子速度"
+    - "交卷前再检查一次姓名和准考证号"
+
+# === 八、必背公式速查 ===
+formula_card:
+  代数:
+    - "求根公式: x = (-b +/- sqrt(b^2-4ac)) / 2a"
+    - "判别式: delta = b^2-4ac (>0两根, =0一根, <0无实根)"
+    - "韦达定理: x1+x2 = -b/a, x1*x2 = c/a"
+    - "顶点坐标: (-b/2a, (4ac-b^2)/4a)"
+    - "完全平方: (a+/-b)^2 = a^2 +/- 2ab + b^2"
+    - "平方差: a^2-b^2 = (a+b)(a-b)"
+  几何:
+    - "勾股定理: a^2+b^2 = c^2"
+    - "圆面积: S=pi*r^2, 周长: C=2*pi*r"
+    - "扇形面积: S = n/360 * pi*r^2"
+    - "弧长: l = n/360 * 2*pi*r"
+    - "相似三角形面积比 = 相似比的平方"
+  统计:
+    - "平均数: x_bar = sum(xi)/n"
+    - "方差: S^2 = sum((xi-x_bar)^2)/n"
+    - "中位数: 排序后取中间值（偶数个取中间两数平均）"

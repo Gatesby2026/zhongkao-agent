@@ -1,0 +1,543 @@
+# ============================================================
+# 北京中考英语词汇速查手册（按学生水平分级 L0-L3）
+# 数据来源: 基于学生实际辅导材料结构化整理
+# ============================================================
+
+subject: 英语
+region: 北京
+exam_year: 2026
+total_score: 100
+last_updated: "2026-04-13"
+data_source: "基于学生实际辅导材料（1600考纲词/718核心词/440纲外词/627词组）结构化"
+
+# ============================================================
+# 一、词汇总览
+# ============================================================
+vocabulary_overview:
+  total_syllabus: 1600       # 课标考纲词总量
+  core_high_freq: 718        # 718高频核心词（从1600中精选）
+  cd_extra: 440              # CD篇纲外高频词（10年110套真题统计）
+  phrases: 627               # 必备词组总量
+  irregular_verbs: 100       # 不规则动词（约100个必背）
+
+  说明: |
+    1600考纲词是北京中考英语课标要求的完整词表。
+    718核心词是从中筛选出的最高频、最重要的词汇。
+    440纲外词来自10年110套真题CD篇阅读的词频统计，是拉开分差的关键。
+    627词组按动词/介词/形容词/连词/固定句式分类，覆盖完形和写作高频搭配。
+
+# ============================================================
+# 二、按水平分级背诵计划
+# ============================================================
+by_level:
+
+  # ----------------------------------------------------------
+  # L0 入门级：零基础或词汇极薄弱
+  # ----------------------------------------------------------
+  L0_beginner:
+    target: "掌握最基础的300个高频词，建立词汇信心"
+    daily_plan: "每天背30个，10天一轮，滚动复习"
+    review_method: "艾宾浩斯复习法：第1/2/4/7/15天各复习一次"
+    focus_categories:
+      - category: 日常生活
+        count: 45
+        words: [family, father, mother, brother, sister, son, daughter, friend, neighbor,
+                home, house, room, door, window, bed, chair, table, kitchen, bathroom,
+                food, water, milk, bread, rice, egg, meat, fruit, apple, cake,
+                weather, rain, snow, wind, sun, hot, cold, warm, cool,
+                morning, afternoon, evening, night, today, tomorrow, yesterday]
+      - category: 学校学习
+        count: 40
+        words: [school, class, student, teacher, lesson, homework, exam, test, book,
+                pen, pencil, paper, desk, blackboard, library, playground,
+                English, Chinese, math, science, history, music, art, sport,
+                learn, study, read, write, listen, speak, answer, question,
+                easy, difficult, hard, important, interesting, boring, useful, careful]
+      - category: 基础动词
+        count: 50
+        words: [be, have, do, go, come, get, make, take, give, put,
+                see, look, watch, hear, listen, say, tell, speak, talk, ask,
+                know, think, want, need, like, love, hope, wish, feel, believe,
+                eat, drink, sleep, wake, walk, run, sit, stand, open, close,
+                help, use, try, work, play, start, stop, finish, wait, carry]
+      - category: 基础形容词与副词
+        count: 35
+        words: [good, bad, big, small, long, short, tall, old, young, new,
+                happy, sad, angry, afraid, tired, hungry, thirsty, sick, well,
+                fast, slow, early, late, much, many, few, little, some, any,
+                very, too, also, still, already, never, always, often, sometimes]
+      - category: 数词与时间
+        count: 30
+        words: [one, two, three, four, five, six, seven, eight, nine, ten,
+                hundred, thousand, first, second, third, last, next,
+                year, month, week, day, hour, minute, Monday, January,
+                spring, summer, autumn, winter, birthday]
+      - category: 代词与连接词
+        count: 25
+        words: [I, you, he, she, it, we, they, this, that, these, those,
+                who, what, where, when, why, how, which,
+                and, but, or, so, because, if, although]
+      - category: 介词与方位
+        count: 25
+        words: [in, on, at, to, from, for, with, about, of, by,
+                up, down, out, off, over, under, between, behind, beside,
+                here, there, left, right, front, back]
+      - category: 身体与健康
+        count: 20
+        words: [body, head, face, eye, ear, nose, mouth, hand, foot, leg,
+                heart, back, arm, finger, tooth, hair,
+                health, healthy, exercise, medicine]
+      - category: 交通与出行
+        count: 15
+        words: [car, bus, bike, train, plane, boat, taxi,
+                road, street, bridge, station, airport,
+                drive, ride, fly]
+      - category: 自然与动物
+        count: 15
+        words: [animal, dog, cat, bird, fish, horse, monkey, elephant, tiger,
+                tree, flower, river, lake, mountain, sea]
+
+  # ----------------------------------------------------------
+  # L1 基础级：有一定基础，目标掌握718核心词
+  # ----------------------------------------------------------
+  L1_basic:
+    target: "掌握718核心词，确保基础阅读无障碍"
+    daily_plan: "每天背50个新词 + 复习50个旧词，14天一轮"
+    review_method: "背完即测：每天晚上英译中+中译英各测一遍，错词单独标记"
+    prerequisite: "L0的300词应已熟练"
+    focus_categories:
+      - category: 情感与态度
+        sample_words: [excited, surprised, proud, worried, nervous, lonely, pleased,
+                       satisfied, disappointed, patient, brave, confident, polite, honest,
+                       lazy, selfish, strange, serious, grateful, curious]
+      - category: 社会与交往
+        sample_words: [community, society, culture, tradition, custom, rule, law,
+                       invite, introduce, celebrate, discuss, argue, agree, disagree,
+                       share, borrow, lend, return, accept, refuse, offer, provide]
+      - category: 科技与媒体
+        sample_words: [computer, Internet, website, phone, message, information, program,
+                       technology, machine, robot, record, search, download, online,
+                       news, newspaper, magazine, radio, television, screen]
+      - category: 环境与自然
+        sample_words: [environment, pollution, energy, recycle, protect, waste, save,
+                       earth, ocean, island, forest, desert, field, garden,
+                       plant, grow, rise, shine, blow, flood]
+      - category: 职业与未来
+        sample_words: [job, work, career, doctor, nurse, engineer, scientist, artist,
+                       manager, reporter, pilot, farmer, worker, volunteer,
+                       company, office, factory, meeting, interview, salary]
+      - category: 学术与思维
+        sample_words: [education, knowledge, skill, ability, experience, practice, method,
+                       research, discover, invent, develop, improve, solve, compare,
+                       explain, describe, express, suppose, consider, realize]
+      - category: 购物与金钱
+        sample_words: [shop, store, market, supermarket, price, cheap, expensive,
+                       cost, pay, spend, save, waste, buy, sell, trade,
+                       dollar, coin, money, customer, bill]
+      - category: 饮食与烹饪
+        sample_words: [meal, breakfast, lunch, dinner, dish, soup, salad, sandwich, noodle,
+                       cook, boil, fry, taste, smell, sweet, sour, bitter, salty, fresh, delicious]
+    study_tips:
+      - "718词中约200个是一词多义，重点关注动词和形容词的多种含义"
+      - "结合真题语境背单词，不要只背中文释义"
+      - "每周做一套完形填空，标记不认识的718词"
+
+  # ----------------------------------------------------------
+  # L2 进阶级：核心词已熟练，攻克纲外高频词
+  # ----------------------------------------------------------
+  L2_intermediate:
+    target: "718核心词熟练 + 系统背诵CD篇纲外440词"
+    daily_plan: "核心词查漏补缺 + 每天15个纲外词，30天完成一轮"
+    review_method: "结合真题CD篇原文复习，在语境中巩固"
+    cd_extra_priority:
+      - tier: "最高频（30次以上，必背7词）"
+        freq_range: "30-42次"
+        words:
+          - {word: motivate, freq: 42, meaning: "激励；促使"}
+          - {word: plastic, freq: 41, meaning: "塑料；塑料的"}
+          - {word: positive, freq: 38, meaning: "积极的；正面的"}
+          - {word: physical, freq: 30, meaning: "身体的；物理的"}
+          - {word: reduce, freq: 30, meaning: "减少；降低"}
+          - {word: performance, freq: 29, meaning: "表现；表演"}
+          - {word: emotional, freq: 27, meaning: "情感的；情绪化的"}
+      - tier: "高频（20-29次，必背8词）"
+        freq_range: "20-29次"
+        words:
+          - {word: participant, freq: 25, meaning: "参与者"}
+          - {word: view, freq: 24, meaning: "观点；风景；看待"}
+          - {word: cooperate, freq: 22, meaning: "合作；协作"}
+          - {word: negative, freq: 21, meaning: "消极的；负面的"}
+          - {word: pressure, freq: 21, meaning: "压力"}
+          - {word: failure, freq: 20, meaning: "失败；失败的人/事"}
+          - {word: garbage, freq: 20, meaning: "垃圾"}
+          - {word: journal, freq: 20, meaning: "日志；期刊"}
+      - tier: "中高频（15-19次，重点背14词）"
+        freq_range: "15-19次"
+        words:
+          - {word: device, freq: 19, meaning: "设备；装置"}
+          - {word: literature, freq: 19, meaning: "文学；文献"}
+          - {word: bacteria, freq: 18, meaning: "细菌"}
+          - {word: landfill, freq: 18, meaning: "垃圾填埋场"}
+          - {word: personality, freq: 18, meaning: "性格；个性"}
+          - {word: solution, freq: 18, meaning: "解决方案；溶液"}
+          - {word: affect, freq: 17, meaning: "影响；感染"}
+          - {word: average, freq: 17, meaning: "平均的；普通的"}
+          - {word: comfort, freq: 17, meaning: "安慰；舒适"}
+          - {word: connection, freq: 17, meaning: "联系；连接"}
+          - {word: quality, freq: 17, meaning: "质量；品质"}
+          - {word: violent, freq: 17, meaning: "暴力的；猛烈的"}
+          - {word: generate, freq: 16, meaning: "产生；发电"}
+          - {word: publish, freq: 16, meaning: "出版；发布"}
+      - tier: "中频（10-14次，建议背诵）"
+        freq_range: "10-14次"
+        sample_words:
+          - {word: anxiety, meaning: "焦虑"}
+          - {word: benefit, meaning: "好处；受益"}
+          - {word: challenge, meaning: "挑战"}
+          - {word: chemical, meaning: "化学的；化学品"}
+          - {word: concept, meaning: "概念"}
+          - {word: contribute, meaning: "贡献；导致"}
+          - {word: creative, meaning: "有创造力的"}
+          - {word: current, meaning: "当前的；水流"}
+          - {word: decade, meaning: "十年"}
+          - {word: employ, meaning: "雇用；使用"}
+          - {word: function, meaning: "功能；运作"}
+          - {word: global, meaning: "全球的"}
+          - {word: greenhouse, meaning: "温室"}
+          - {word: identify, meaning: "识别；确认"}
+          - {word: impact, meaning: "影响；冲击"}
+          - {word: inspire, meaning: "激励；启发"}
+          - {word: mental, meaning: "精神的；心理的"}
+          - {word: nutrition, meaning: "营养"}
+          - {word: organization, meaning: "组织；机构"}
+          - {word: recognize, meaning: "认出；承认"}
+          - {word: resource, meaning: "资源"}
+          - {word: responsible, meaning: "负责的"}
+          - {word: significant, meaning: "重要的；显著的"}
+          - {word: strategy, meaning: "策略；战略"}
+          - {word: sustainable, meaning: "可持续的"}
+          - {word: volunteer, meaning: "志愿者；自愿"}
+    study_tips:
+      - "纲外词集中出现在CD篇阅读，背词时结合原文段落理解"
+      - "重点掌握词根词缀：-tion/-sion(名词), -ive/-ful(形容词), re-/un-(前缀)"
+      - "positive/negative, physical/emotional/mental 这类反义词/同类词一起背"
+
+  # ----------------------------------------------------------
+  # L3 冲刺级：全面精通，冲击高分
+  # ----------------------------------------------------------
+  L3_advanced:
+    target: "全部1600+440纲外词精通，易混淆词和一词多义零失误"
+    focus: "易混淆词辨析 + 一词多义 + 熟词生义"
+    daily_plan: "专项刷题 + 错词本滚动复习，保持每天接触200词以上"
+    confusing_pairs:
+      - pair: [accept, except]
+        辨析: "accept接受 vs except除了"
+      - pair: [affect, effect]
+        辨析: "affect动词影响 vs effect名词效果"
+      - pair: [beside, besides]
+        辨析: "beside在旁边 vs besides此外"
+      - pair: [borrow, lend]
+        辨析: "borrow借入 vs lend借出"
+      - pair: [cloth, clothes, clothing]
+        辨析: "cloth布料 vs clothes衣服(复数) vs clothing衣物(总称)"
+      - pair: [cost, spend, pay, take]
+        辨析: "物cost钱/人spend时间on/人pay钱for/It takes人时间to do"
+      - pair: [discover, invent]
+        辨析: "discover发现已存在的 vs invent发明新事物"
+      - pair: [everyday, every day]
+        辨析: "everyday形容词日常的 vs every day副词每天"
+      - pair: [rise, raise]
+        辨析: "rise不及物升起 vs raise及物举起/养育"
+      - pair: [travel, trip, journey, tour]
+        辨析: "travel泛指旅行 vs trip短途 vs journey长途 vs tour观光"
+      - pair: [used to, be used to]
+        辨析: "used to do过去常常 vs be used to doing习惯于"
+      - pair: [quiet, quite, quit]
+        辨析: "quiet安静 vs quite相当 vs quit放弃"
+    polysemy_focus:
+      - word: run
+        meanings: ["跑", "经营(run a business)", "运行(run a program)", "流淌"]
+      - word: light
+        meanings: ["光/灯", "轻的", "浅色的", "点燃"]
+      - word: present
+        meanings: ["礼物", "目前的", "出席的", "呈现"]
+      - word: mean
+        meanings: ["意味着", "打算", "吝啬的", "平均值"]
+      - word: change
+        meanings: ["改变", "零钱", "换乘"]
+      - word: state
+        meanings: ["状态", "国家/州", "陈述"]
+      - word: note
+        meanings: ["笔记", "纸币", "注意", "音符"]
+      - word: fair
+        meanings: ["公平的", "展览会", "相当的", "晴朗的"]
+
+# ============================================================
+# 三、627必备词组速查
+# ============================================================
+phrases_overview:
+  total: 627
+  categories:
+    # 动词词组（345个）
+    - name: 动词词组
+      count: 345
+      说明: "按核心动词分组，掌握介副词搭配规律"
+      high_freq_groups:
+        - verb: come
+          count: 16
+          must_know: [come across, come up with, come true, come out, come on,
+                      come back, come from, come along, come over, come down]
+        - verb: get
+          count: 29
+          must_know: [get along with, get ready for, get up, get over, get into,
+                      get off, get on, get out, get back, get together,
+                      get down, get through, get away, get rid of, get used to]
+        - verb: give
+          count: 12
+          must_know: [give up, give away, give back, give out, give in,
+                      give off, give a hand, give a speech]
+        - verb: go
+          count: 23
+          must_know: [go on, go over, go through, go ahead, go out,
+                      go away, go back, go up, go down, go off,
+                      go by, go for, go along, go around]
+        - verb: keep
+          count: 14
+          must_know: [keep on, keep up with, keep away from, keep in mind,
+                      keep in touch, keep off, keep out, keep quiet]
+        - verb: look
+          count: 20
+          must_know: [look after, look forward to, look up, look into,
+                      look out, look around, look for, look like,
+                      look through, look over, look at, look down upon]
+        - verb: make
+          count: 24
+          must_know: [make up, make sure, make a decision, make a difference,
+                      make a living, make a mistake, make friends, make progress,
+                      make up one's mind, make it, make fun of, make room for]
+        - verb: put
+          count: 14
+          must_know: [put on, put off, put up, put away, put down,
+                      put out, put up with, put into practice]
+        - verb: take
+          count: 31
+          must_know: [take part in, take place, take care of, take off, take up,
+                      take away, take back, take down, take in, take on,
+                      take out, take over, take pride in, take turns, take it easy]
+        - verb: turn
+          count: 13
+          must_know: [turn on, turn off, turn up, turn down, turn out,
+                      turn into, turn over, turn around, turn to]
+        - verb: fall
+          count: 8
+          must_know: [fall behind, fall down, fall asleep, fall in love,
+                      fall off, fall over, fall into]
+        - verb: 其他高频动词
+          说明: "break/bring/carry/cut/drop/hand/hold/pick/point/pull/run/set/show/work等"
+          sample: [break down, break out, break into, bring up, bring about,
+                   carry on, carry out, cut down, cut off, cut up,
+                   drop by, drop off, drop out, hand in, hand out,
+                   hold on, hold up, pick up, pick out, point out,
+                   pull down, run out of, run away, set up, set off,
+                   show off, show up, work out, work on]
+
+    # 介词词组（117个）
+    - name: 介词词组
+      count: 117
+      说明: "按介词分组，高频介词词组是完形填空常考点"
+      by_preposition:
+        - prep: at
+          must_know: [at least, at first, at last, at once, at present,
+                      at the same time, at the age of, at the end of,
+                      at the beginning of, at night, at noon]
+        - prep: by
+          must_know: [by the way, by accident, by mistake, by oneself,
+                      by the time, by hand, by bus/car/train]
+        - prep: in
+          must_know: [in fact, in order to, in time, in front of, in the end,
+                      in a hurry, in common, in danger, in need, in public,
+                      in return, in silence, in total, in trouble, in charge of]
+        - prep: on
+          must_know: [on time, on duty, on purpose, on business, on foot,
+                      on one's own, on the other hand, on the way,
+                      on display, on sale, on average]
+        - prep: to
+          must_know: [to one's surprise, thanks to, next to,
+                      according to, due to, close to, up to]
+        - prep: "as/from/for等"
+          must_know: [as a result, as usual, as well, as long as,
+                      from now on, from time to time, for example,
+                      for instance, instead of, because of, ahead of]
+
+    # 形容词词组（72个）
+    - name: 形容词词组
+      count: 72
+      must_know: [be afraid of, be angry with, be busy with, be careful of,
+                  be different from, be famous for, be full of, be good at,
+                  be interested in, be late for, be proud of, be ready for,
+                  be responsible for, be similar to, be sorry for, be strict with,
+                  be sure of, be surprised at, be tired of, be worried about]
+
+    # 连词词组（17个）
+    - name: 连词词组
+      count: 17
+      must_know: [as long as, as soon as, as well as, even though, ever since,
+                  in case, in order that, not only...but also,
+                  so that, such...that, whether...or, as if,
+                  no matter what/how, neither...nor, either...or,
+                  both...and, rather than]
+
+    # 固定句式（76个）
+    - name: 固定句式
+      count: 76
+      说明: "写作和语法填空高频句型"
+      key_patterns:
+        - pattern: "It is + adj + (for/of sb) + to do"
+          例句: "It is important for us to protect the environment."
+        - pattern: "too...to... / so...that... / enough to..."
+          例句: "He is too young to go to school alone."
+        - pattern: "not only...but also..."
+          例句: "She is not only beautiful but also smart."
+        - pattern: "It takes sb + 时间 + to do sth"
+          例句: "It took me two hours to finish the homework."
+        - pattern: "find/think/make + it + adj + to do"
+          例句: "I find it difficult to learn physics."
+        - pattern: "would rather...than... / prefer...to..."
+          例句: "I would rather stay at home than go out."
+        - pattern: "the + 比较级..., the + 比较级..."
+          例句: "The more you read, the better you write."
+        - pattern: "There is no doubt that..."
+          例句: "There is no doubt that practice makes perfect."
+        - pattern: "It is said/reported/believed that..."
+          例句: "It is said that the movie is worth watching."
+        - pattern: "so + adj/adv + that... (倒装)"
+          例句: "So excited was he that he could not say a word."
+
+# ============================================================
+# 四、不规则动词必背表
+# ============================================================
+irregular_verbs:
+  说明: "中考必考约100个不规则动词，按重要程度分层"
+
+  must_know_30:
+    - [be, was/were, been, "是；在"]
+    - [begin, began, begun, "开始"]
+    - [break, broke, broken, "打破"]
+    - [bring, brought, brought, "带来"]
+    - [buy, bought, bought, "买"]
+    - [choose, chose, chosen, "选择"]
+    - [come, came, come, "来"]
+    - [do, did, done, "做"]
+    - [draw, drew, drawn, "画；拉"]
+    - [drink, drank, drunk, "喝"]
+    - [drive, drove, driven, "驾驶"]
+    - [eat, ate, eaten, "吃"]
+    - [fall, fell, fallen, "落下"]
+    - [find, found, found, "找到；发现"]
+    - [fly, flew, flown, "飞"]
+    - [forget, forgot, forgotten, "忘记"]
+    - [get, got, got/gotten, "得到"]
+    - [give, gave, given, "给"]
+    - [go, went, gone, "去"]
+    - [grow, grew, grown, "生长；变得"]
+    - [have, had, had, "有"]
+    - [know, knew, known, "知道"]
+    - [leave, left, left, "离开；留下"]
+    - [lose, lost, lost, "丢失；输"]
+    - [make, made, made, "做；制造"]
+    - [read, read, read, "读"]
+    - [run, ran, run, "跑"]
+    - [say, said, said, "说"]
+    - [see, saw, seen, "看见"]
+    - [take, took, taken, "拿；花费"]
+
+  should_know_35:
+    - [build, built, built, "建造"]
+    - [burn, burnt, burnt, "燃烧"]
+    - [catch, caught, caught, "抓住"]
+    - [cut, cut, cut, "切"]
+    - [dig, dug, dug, "挖"]
+    - [feed, fed, fed, "喂养"]
+    - [feel, felt, felt, "感觉"]
+    - [fight, fought, fought, "战斗"]
+    - [hang, hung, hung, "悬挂"]
+    - [hear, heard, heard, "听到"]
+    - [hide, hid, hidden, "藏"]
+    - [hit, hit, hit, "击中"]
+    - [hold, held, held, "握住；举办"]
+    - [hurt, hurt, hurt, "伤害"]
+    - [keep, kept, kept, "保持"]
+    - [lay, laid, laid, "放置；下蛋"]
+    - [lead, led, led, "领导"]
+    - [learn, learnt, learnt, "学习"]
+    - [let, let, let, "让"]
+    - [lie, lay, lain, "躺"]
+    - [light, lit, lit, "点燃"]
+    - [mean, meant, meant, "意味着"]
+    - [meet, met, met, "遇见"]
+    - [pay, paid, paid, "支付"]
+    - [put, put, put, "放"]
+    - [ride, rode, ridden, "骑"]
+    - [ring, rang, rung, "响铃"]
+    - [sell, sold, sold, "卖"]
+    - [send, sent, sent, "发送"]
+    - [set, set, set, "设置"]
+    - [show, showed, shown, "展示"]
+    - [shut, shut, shut, "关闭"]
+    - [sing, sang, sung, "唱"]
+    - [sit, sat, sat, "坐"]
+    - [sleep, slept, slept, "睡"]
+
+  good_to_know_35:
+    - [speak, spoke, spoken, "说话"]
+    - [spend, spent, spent, "花费"]
+    - [spread, spread, spread, "传播"]
+    - [stand, stood, stood, "站"]
+    - [steal, stole, stolen, "偷"]
+    - [stick, stuck, stuck, "粘贴"]
+    - [swim, swam, swum, "游泳"]
+    - [teach, taught, taught, "教"]
+    - [tell, told, told, "告诉"]
+    - [think, thought, thought, "想"]
+    - [throw, threw, thrown, "扔"]
+    - [understand, understood, understood, "理解"]
+    - [wake, woke, woken, "醒来"]
+    - [wear, wore, worn, "穿"]
+    - [win, won, won, "赢"]
+    - [write, wrote, written, "写"]
+    - [blow, blew, blown, "吹"]
+    - [cost, cost, cost, "花费"]
+    - [deal, dealt, dealt, "处理"]
+    - [dream, dreamt, dreamt, "做梦"]
+    - [forbid, forbade, forbidden, "禁止"]
+    - [freeze, froze, frozen, "冻结"]
+    - [lend, lent, lent, "借出"]
+    - [mistake, mistook, mistaken, "弄错"]
+    - [overcome, overcame, overcome, "克服"]
+    - [prove, proved, proven, "证明"]
+    - [rise, rose, risen, "升起"]
+    - [shake, shook, shaken, "摇"]
+    - [shine, shone, shone, "发光"]
+    - [shoot, shot, shot, "射击"]
+    - [sink, sank, sunk, "下沉"]
+    - [smell, smelt, smelt, "闻"]
+    - [strike, struck, struck, "打击"]
+    - [sweep, swept, swept, "扫"]
+    - [tear, tore, torn, "撕裂"]
+
+# ============================================================
+# 五、备考建议
+# ============================================================
+exam_tips:
+  词汇题型分布:
+    - "完形填空（8分）：主要考718核心词的词义辨析和搭配"
+    - "阅读理解CD篇（8-10分）：纲外440词集中出现，影响理解"
+    - "阅读表达（10分）：需要用准确词汇写答语"
+    - "文段表达（10分）：词组和句式的正确运用决定档次"
+    - "语法填空（4分）：不规则动词变形是常考点"
+
+  各级别冲刺策略:
+    L0: "集中突破300基础词，保证听力和简单阅读不丢分"
+    L1: "718核心词反复滚动，配合完形和AB篇阅读训练"
+    L2: "CD篇纲外词按词频优先级背诵，同时强化词组搭配"
+    L3: "查漏补缺，重点练易混淆词和一词多义，冲满分"
