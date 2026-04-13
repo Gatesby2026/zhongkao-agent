@@ -1,44 +1,34 @@
 # ============================================================
 # 朝阳区高中录取分数线（2023-2025）
 # ============================================================
-# 数据来源：北京教育考试院、家长帮、北京中考在线
-# 最后更新：2026-04-11
+# 数据来源：北京中考信息网 (zhongkaobj.cn) 转载自北京教育考试院
+# 最后更新：2026-04-13
 # 注意：2023总分660，2024总分670，2025总分510（改革后不可直比）
 
 district: 朝阳区
 region: 北京市
 
 # ================================================================
-#  学校分层（基于近3年综合排位）
+#  学校分层（基于2025年区排名）
 # ================================================================
-
 tiers:
   tier1:
     name: 第一梯队（区排名前1500）
-    schools: [北京市第八十中学, 北京中学, 人大附中朝阳学校, 清华附中朝阳学校]
+    schools: [北京中学, 中国传媒大学附属中学, 北京八十中, 人大附中朝阳学校, 清华附中朝阳学校, 八十中睿德分校]
   tier2:
     name: 第二梯队（区排名1500-3000）
-    schools: [八十中睿德分校, 陈经纶中学, 朝阳外国语学校, 清华附中望京学校, 中国传媒大学附属中学]
+    schools: [朝阳外国语学校, 清华附中望京学校, 陈经纶中学, 北京中学科技分校, 清华附中广华学校, 首师大附中朝阳学校]
   tier3:
     name: 第三梯队（区排名3000-5000）
-    schools: [北中科技分校, 二中朝阳学校, 清华附中广华学校, 首师大附中朝阳学校, 工大附中, 日坛中学, 和平街一中]
+    schools: [二中朝阳学校, 工大附中, 日坛中学, 和平街一中, 莲葩园中学, 贸大附中, 东北师大附中朝阳学校]
   tier4:
     name: 第四梯队（区排名5000+）
-    schools: [对外经贸大学附属中学, 华东师大附中朝阳学校, 中科院附属实验学校, 三里屯一中, 北京十七中, 东方德才学校, 二外附中]
+    schools: [中科院附属实验学校, 三里屯一中, 十七中, 化工大学附属中学, 东方德才学校, 二外附中, 陈经纶中学团结湖分校, 汇文中学垂杨柳分校]
 
 # ================================================================
 #  逐校逐年录取分数线
 # ================================================================
-
 schools:
-
-  - name: 北京市第八十中学
-    level: 市级示范性高中
-    note: 朝阳区顶尖校，创新班为全区最高录取线
-    scores:
-      2025: { total: 510, score_innovation: 489, rank_innovation: 230, score_normal: 482, rank_normal: 685 }
-      2024: { total: 670, score_innovation: 654, rank_innovation: 148, score_normal: 646, rank_normal: 678 }
-      2023: { total: 660, score: 638, rank: 1473 }
 
   - name: 北京中学
     level: 市级示范性高中
@@ -48,7 +38,23 @@ schools:
       2024: { total: 670, score: 644, rank: 902 }
       2023: { total: 660, score: 642, rank: 796 }
 
-  - name: 中国人民大学附属中学朝阳学校
+  - name: 中国传媒大学附属中学
+    level: 区级示范性高中
+    note: 2025年以"北京中学传媒分校"招生，排名大幅上升
+    scores:
+      2025: { total: 510, score: 484, rank: 541 }
+      2024: { total: 670, score: 637, rank: 1836 }
+      2023: { total: 660, score: 632, rank: 2535 }
+
+  - name: 北京市第八十中学
+    level: 市级示范性高中
+    note: 朝阳区传统强校，创新班为全区最高录取线
+    scores:
+      2025: { total: 510, score: 482, rank: 685 }
+      2024: { total: 670, score: 646, rank: 678 }
+      2023: { total: 660, score: 638, rank: 1473 }
+
+  - name: 人大附中朝阳学校
     level: 市级示范性高中
     note: 人大附中朝阳分校
     scores:
@@ -56,7 +62,7 @@ schools:
       2024: { total: 670, score: 639, rank: 1553 }
       2023: { total: 660, score: 637, rank: 1629 }
 
-  - name: 清华大学附属中学朝阳学校
+  - name: 清华附中朝阳学校
     level: 市级示范性高中
     note: 清华附中朝阳分校
     scores:
@@ -72,22 +78,6 @@ schools:
       2024: { total: 670, score: 637, rank: 1836 }
       2023: { total: 660, score: 631, rank: 2691 }
 
-  - name: 中国传媒大学附属中学
-    level: 区级示范性高中
-    note: 北京中学传媒分校（2025年更名）
-    scores:
-      2025: { total: 510, score: 484, rank: 541, note: '以"北京中学传媒分校"招生' }
-      2024: { total: 670, score: 637, rank: 1836 }
-      2023: { total: 660, score: 632, rank: 2535 }
-
-  - name: 陈经纶中学
-    level: 市级示范性高中
-    note: 老牌名校，实验班与普通班分差较大
-    scores:
-      2025: { total: 510, score: 469, rank: 2376 }
-      2024: { total: 670, score_lab: 637, rank_lab: 1836, score_normal: 630, rank_normal: 2902 }
-      2023: { total: 660, score: 630, rank: 2886 }
-
   - name: 朝阳外国语学校
     level: 区级示范性高中
     note: 外语特色校
@@ -101,11 +91,32 @@ schools:
       2025: { total: 510, score: 471, rank: 2070 }
       2024: { total: 670, score: 632, rank: 2569 }
 
-  - name: 北中科技分校
+  - name: 陈经纶中学
+    level: 市级示范性高中
+    note: 老牌名校，实验班与普通班分差较大
+    scores:
+      2025: { total: 510, score: 469, rank: 2376 }
+      2024: { total: 670, score: 630, rank: 2902 }
+      2023: { total: 660, score: 630, rank: 2886 }
+
+  - name: 北京中学科技分校
     level: 区级
+    note: 2025年新增招生
     scores:
       2025: { total: 510, score: 468, rank: 2533 }
-      2024: { total: 670, score: 626, rank: 3498 }
+
+  - name: 清华附中广华学校
+    level: 区级
+    scores:
+      2025: { total: 510, score: 466, rank: 2830 }
+      2024: { total: 670, score: 624, rank: 3797 }
+
+  - name: 首师大附中朝阳学校
+    level: 区级
+    scores:
+      2025: { total: 510, score: 465, rank: 2966 }
+      2024: { total: 670, score: 622, rank: 4071 }
+      2023: { total: 660, score: 618, rank: 4647 }
 
   - name: 二中朝阳学校
     level: 区级
@@ -113,25 +124,12 @@ schools:
       2025: { total: 510, score: 463, rank: 3301 }
       2024: { total: 670, score: 624, rank: 3797 }
 
-  - name: 清华附中广华学校
-    level: 区级
-    scores:
-      2025: { total: 510, score: 466, rank: 2830 }
-      2024: { total: 670, score: 623, rank: 3941 }
-
-  - name: 首师大附中朝阳学校
-    level: 区级
-    scores:
-      2025: { total: 510, note: 暂无独立数据 }
-      2024: { total: 670, score: 622, rank: 4071 }
-      2023: { total: 660, score: 618, rank: 4647 }
-
   - name: 北京工业大学附属中学
     level: 市级示范性高中
     note: 简称工大附中
     scores:
       2025: { total: 510, score: 460, rank: 3741 }
-      2024: { total: 670, score_boarding: 623, rank_boarding: 3941, score_day: 619, rank_day: 4487 }
+      2024: { total: 670, score: 619, rank: 4487 }
 
   - name: 日坛中学
     level: 市级示范性高中
@@ -148,14 +146,22 @@ schools:
       2024: { total: 670, score: 608, rank: 5766 }
       2023: { total: 660, score: 610, rank: 5604 }
 
+  - name: 莲葩园中学
+    level: 区级
+    scores:
+      2025: { total: 510, score: 453, rank: 4762 }
+      2024: { total: 670, score: 602, rank: 6420 }
+
   - name: 对外经济贸易大学附属中学
     level: 区级
+    note: 简称贸大附中
     scores:
       2025: { total: 510, score: 452, rank: 4914 }
       2024: { total: 670, score: 603, rank: 6304 }
 
-  - name: 华东师范大学附属中学朝阳学校
+  - name: 东北师大附中朝阳学校
     level: 区级
+    note: 原华东师范大学附属中学朝阳学校
     scores:
       2025: { total: 510, score: 451, rank: 5061 }
       2024: { total: 670, score: 604, rank: 6218 }
@@ -179,7 +185,13 @@ schools:
     level: 区级
     scores:
       2025: { total: 510, score: 438, rank: 6617 }
-      2024: { total: 670, score: 587, rank: 7755 }
+      2024: { total: 670, score: 588, rank: 7695 }
+
+  - name: 北京化工大学附属中学
+    level: 区级
+    note: 简称化工附中
+    scores:
+      2025: { total: 510, score: 434, rank: 7077 }
 
   - name: 东方德才学校
     level: 区级
@@ -207,38 +219,30 @@ schools:
 # ================================================================
 #  目标分数速查（2026年参考，基于2025年510分制）
 # ================================================================
-# 2026年总分仍为510分，可直接参考2025年分数线
-
 target_guide_2026:
-  - target: 八十中创新班
-    reference_score: 489
-    math_target: 95+
-    note: 数学需接近满分
-  - target: 八十中/北京中学普通班
+  - target: 北京中学/八十中
     reference_score: 482-488
-    math_target: 90+
-  - target: 人大附朝阳/清华附朝阳
-    reference_score: 476-477
-    math_target: 85+
-  - target: 陈经纶/朝外/清华附望京
+    math_target: 92+
+  - target: 人朝/清朝/八十睿德/传媒附
+    reference_score: 476-484
+    math_target: 88+
+  - target: 朝外/清望/陈经纶
     reference_score: 469-474
-    math_target: 80+
+    math_target: 82+
+  - target: 清广/首师附朝阳/二中朝阳
+    reference_score: 463-466
+    math_target: 78+
   - target: 工大附中/日坛/和平街一中
     reference_score: 454-460
     math_target: 70+
   - target: 普通高中保底
-    reference_score: 420-440
+    reference_score: 420-450
     math_target: 60+
     note: 低于此分数段可能无法录取朝阳区公办普高
 
 # ================================================================
 #  校额到校录取参考（2025年数据）
 # ================================================================
-# 说明：校额到校是优质高中分配给普通初中的名额，
-# 录取分数线通常比统招低20-40分，是普通初中学生进入好高中的重要通道。
-# 前提：考生须在同一所初中连续三年学籍且实际就读。
-# 注意：各初中分配的名额和分数线不同，以下为典型参考范围。
-
 quota_allocation:
   policy_summary: |
     校额到校在统招之前录取，分数线通常比统招线低20-40分。
@@ -246,12 +250,12 @@ quota_allocation:
     名额分配到具体初中校，每校可能只有1-3个名额到某高中。
     因此实际"够不够"取决于该初中校内排名，而非全区排名。
 
-  typical_discount:  # 相比统招线的典型降分幅度
+  typical_discount:
     tier1_schools: "统招线下降15-25分（八十中/北京中学等）"
     tier2_schools: "统招线下降20-35分（陈经纶/朝外等）"
     tier3_schools: "统招线下降25-40分（工大附中/日坛等）"
 
-  examples_2025:  # 2025年部分校额到校录取实例
+  examples_2025:
     - high_school: 北京市第八十中学
       统招线: 482
       校额到校典型线: 460-475
@@ -262,9 +266,9 @@ quota_allocation:
       校额到校典型线: 440-460
       降分幅度: 9-29分
     - high_school: 工大附中
-      统招线: 454
-      校额到校典型线: 425-445
-      降分幅度: 9-29分
+      统招线: 460
+      校额到校典型线: 430-450
+      降分幅度: 10-30分
     - high_school: 日坛中学
       统招线: 455
       校额到校典型线: 420-440

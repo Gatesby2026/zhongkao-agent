@@ -1,33 +1,35 @@
 # ============================================================
 # 西城区高中录取分数线（2023-2025）
 # ============================================================
-# 数据来源：北京教育考试院、家长帮、北京中考在线
-# 最后更新：2026-04-11
+# 数据来源：北京中考信息网 (zhongkaobj.cn) 转载自北京教育考试院
+# 最后更新：2026-04-13
+# 注意：2023总分660，2024总分670，2025总分510（改革后不可直比）
 
 district: 西城区
 region: 北京市
 
+# ================================================================
+#  学校分层（基于2025年区排名）
+# ================================================================
 tiers:
   tier1:
-    name: 第一梯队
-    schools: [北师大实验中学, 北京四中, 北京八中, 北师大附中, 北师大二附中]
+    name: 第一梯队（区排名前2000）
+    schools: [北京四中, 北京八中, 北师大实验中学, 北师大附中, 北师大二附中]
     note: 西城五大名校
   tier2:
-    name: 第二梯队
-    schools: [161中学, 三十五中, 十三中, 十五中]
+    name: 第二梯队（区排名2000-4000）
+    schools: [161中学, 三十五中, 十三中, 北师大亚太实验学校, 十五中]
   tier3:
-    name: 第三梯队
-    schools: [铁二中, 六十六中, 一五六中, 鲁迅中学]
+    name: 第三梯队（区排名4000-7000）
+    schools: [铁路二中, 十四中, 一五六中学, 三中, 一五九中学, 西城外国语学校, 四十四中, 育才学校]
+  tier4:
+    name: 第四梯队（区排名7000+）
+    schools: [三十一中, 三十九中, 七中, 六十六中, 鲁迅中学, 回民学校, 四十三中, 教院附中, 宣武外国语, 五十六中]
 
+# ================================================================
+#  逐校逐年录取分数线
+# ================================================================
 schools:
-
-  - name: 北师大实验中学
-    level: 市级示范性高中
-    note: 西城区顶尖校，科学实验班为西城最高线
-    scores:
-      2025: { total: 510, score_normal: 481, rank_normal: 1356 }
-      2024: { total: 670, score_lab: 649, rank_lab: 455, score_normal: 642, rank_normal: 1277 }
-      2023: { total: 660, score_lab: 645, rank_lab: 350, score_normal: 638, rank_normal: 1247 }
 
   - name: 北京四中
     level: 市级示范性高中
@@ -41,31 +43,39 @@ schools:
     level: 市级示范性高中
     note: 少儿班/素质班为提前招生，统招含科技班和普通班
     scores:
-      2025: { total: 510, score_lab: 484, rank_lab: 928, score_normal: 481, rank_normal: 1356 }
-      2024: { total: 670, score_lab: 646, rank_lab: 759, score_normal: 640, rank_normal: 1537 }
+      2025: { total: 510, score: 481, rank: 1356 }
+      2024: { total: 670, score: 640, rank: 1537 }
       2023: { total: 660, score_lab: 641, rank_lab: 823, score_normal: 637, rank_normal: 1406 }
+
+  - name: 北师大实验中学
+    level: 市级示范性高中
+    note: 西城区顶尖校，科学实验班为西城最高线
+    scores:
+      2025: { total: 510, score: 481, rank: 1356 }
+      2024: { total: 670, score: 642, rank: 1277 }
+      2023: { total: 660, score_lab: 645, rank_lab: 350, score_normal: 638, rank_normal: 1247 }
 
   - name: 北师大附中
     level: 市级示范性高中
     note: 钱学森班为特色班
     scores:
       2025: { total: 510, score: 478, rank: 1802 }
-      2024: { total: 670, score_lab: 647, rank_lab: 649, score_normal: 637, rank_normal: 1974 }
+      2024: { total: 670, score: 637, rank: 1974 }
       2023: { total: 660, score_lab: 642, rank_lab: 694, score_normal: 633, rank_normal: 2080 }
 
   - name: 北师大二附中
     level: 市级示范性高中
     note: 项目式学习实验班和文科实验班是特色
     scores:
-      2025: { total: 510, score_lab: 482, rank_lab: 1210, score_normal: 478, rank_normal: 1802 }
-      2024: { total: 670, score_project: 644, rank_project: 1010, score_liberal: 640, rank_liberal: 1537, score_normal: 637, rank_normal: 1974 }
+      2025: { total: 510, score: 478, rank: 1802 }
+      2024: { total: 670, score: 637, rank: 1974 }
       2023: { total: 660, score_project: 641, rank_project: 823, score_liberal: 637, rank_liberal: 1406, score_normal: 634, rank_normal: 1919 }
 
   - name: 161中学
     level: 市级示范性高中
     scores:
       2025: { total: 510, score: 470, rank: 3149 }
-      2024: { total: 670, score_lab: 636, rank_lab: 2140, score_normal: 632, rank_normal: 2754 }
+      2024: { total: 670, score: 632, rank: 2754 }
       2023: { total: 660, score_lab: 633, rank_lab: 2080, score_normal: 631, rank_normal: 2443 }
 
   - name: 三十五中
@@ -73,31 +83,158 @@ schools:
     note: 科技创新实验班有竞争力
     scores:
       2025: { total: 510, score: 470, rank: 3149 }
-      2024: { total: 670, score_lab: 635, rank_lab: 2295 }
+      2024: { total: 670, score: 626, rank: 3664 }
       2023: { total: 660, score_lab: 632, rank_lab: 2247 }
 
   - name: 十三中
     level: 市级示范性高中
     scores:
-      2025: { total: 510, score: 470, rank: 3149 }
-      2024: { total: 670, score_lab: 634, rank_lab: 2459 }
+      2025: { total: 510, score: 469, rank: 3337 }
+      2024: { total: 670, score: 626, rank: 3664 }
       2023: { total: 660, score_lab: 631, rank_lab: 2443 }
+
+  - name: 北师大亚太实验学校
+    level: 民办
+    scores:
+      2025: { total: 510, score: 467, rank: 3646 }
+      2024: { total: 670, score: 621, rank: 4357 }
 
   - name: 十五中
     level: 市级示范性高中
     scores:
-      2024: { total: 670, score_lab: 630, rank_lab: 3048 }
+      2025: { total: 510, score: 464, rank: 4102 }
+      2024: { total: 670, score: 622, rank: 4232 }
 
+  - name: 铁路二中
+    level: 区级示范性高中
+    scores:
+      2025: { total: 510, score: 463, rank: 4280 }
+      2024: { total: 670, score: 619, rank: 4644 }
+
+  - name: 十四中
+    level: 市级示范性高中
+    scores:
+      2025: { total: 510, score: 459, rank: 4860 }
+      2024: { total: 670, score: 614, rank: 5242 }
+
+  - name: 一五六中学
+    level: 区级
+    scores:
+      2025: { total: 510, score: 455, rank: 5508 }
+      2024: { total: 670, score: 610, rank: 5721 }
+
+  - name: 三中
+    level: 区级
+    scores:
+      2025: { total: 510, score: 451, rank: 6049 }
+      2024: { total: 670, score: 606, rank: 6185 }
+
+  - name: 一五九中学
+    level: 区级
+    scores:
+      2025: { total: 510, score: 448, rank: 6464 }
+      2024: { total: 670, score: 602, rank: 6584 }
+
+  - name: 西城外国语学校
+    level: 区级
+    scores:
+      2025: { total: 510, score: 445, rank: 6842 }
+      2024: { total: 670, score: 598, rank: 6970 }
+
+  - name: 四十四中
+    level: 区级
+    scores:
+      2025: { total: 510, score: 444, rank: 6956 }
+      2024: { total: 670, score: 595, rank: 7210 }
+
+  - name: 育才学校
+    level: 区级
+    scores:
+      2025: { total: 510, score: 440, rank: 7435 }
+      2024: { total: 670, score: 590, rank: 7670 }
+
+  - name: 三十一中
+    level: 区级
+    scores:
+      2025: { total: 510, score: 438, rank: 7626 }
+      2024: { total: 670, score: 587, rank: 7914 }
+
+  - name: 三十九中
+    level: 区级
+    scores:
+      2025: { total: 510, score: 435, rank: 7943 }
+      2024: { total: 670, score: 580, rank: 8445 }
+
+  - name: 七中
+    level: 区级
+    scores:
+      2025: { total: 510, score: 431, rank: 8338 }
+      2024: { total: 670, score: 573, rank: 8853 }
+
+  - name: 六十六中
+    level: 区级
+    scores:
+      2025: { total: 510, score: 428, rank: 8576 }
+      2024: { total: 670, score: 578, rank: 8566 }
+
+  - name: 鲁迅中学
+    level: 区级
+    scores:
+      2025: { total: 510, score: 425, rank: 8833 }
+      2024: { total: 670, score: 573, rank: 8853 }
+
+  - name: 回民学校
+    level: 区级
+    scores:
+      2025: { total: 510, score: 420, rank: 9158 }
+      2024: { total: 670, score: 566, rank: 9236 }
+
+  - name: 四十三中
+    level: 区级
+    scores:
+      2025: { total: 510, score: 414, rank: 9508 }
+      2024: { total: 670, score: 562, rank: 9425 }
+
+  - name: 教院附中
+    level: 区级
+    scores:
+      2025: { total: 510, score: 410, rank: 9690 }
+      2024: { total: 670, score: 557, rank: 9635 }
+
+  - name: 宣武外国语实验学校
+    level: 区级
+    scores:
+      2025: { total: 510, score: 409, rank: 9742 }
+      2024: { total: 670, score: 555, rank: 9720 }
+
+  - name: 五十六中
+    level: 区级
+    scores:
+      2025: { total: 510, score: 407, rank: 9819 }
+      2024: { total: 670, score: 554, rank: 9759 }
+
+# ================================================================
+#  目标分数速查（2026年参考，基于2025年510分制）
+# ================================================================
 target_guide_2026:
-  - target: 四中/北师大实验
-    reference_score: 481-487
+  - target: 四中
+    reference_score: 487
     math_target: 92+
-  - target: 八中/师大附中/师大二附中
-    reference_score: 478-484
+  - target: 八中/北师大实验
+    reference_score: 481
+    math_target: 90+
+  - target: 师大附中/师大二附中
+    reference_score: 478
     math_target: 88+
   - target: 161/三十五/十三中
-    reference_score: 470-475
+    reference_score: 469-470
     math_target: 82+
+  - target: 十五中/铁二中/十四中
+    reference_score: 459-464
+    math_target: 75+
+  - target: 普通高中保底
+    reference_score: 407-455
+    math_target: 60+
 
 # ================================================================
 #  校额到校录取参考（2025年数据）
@@ -124,9 +261,9 @@ quota_allocation:
       校额到校典型线: 468-478
       降分幅度: 3-13分
     - high_school: 八中
-      统招线: 478
+      统招线: 481
       校额到校典型线: 460-472
-      降分幅度: 6-18分
+      降分幅度: 9-21分
     - high_school: 161中学
       统招线: 470
       校额到校典型线: 448-462

@@ -1,24 +1,34 @@
 # ============================================================
 # 东城区高中录取分数线（2023-2025）
 # ============================================================
-# 数据来源：北京教育考试院、家长帮、北京中考在线
-# 最后更新：2026-04-11
+# 数据来源：北京中考信息网 (zhongkaobj.cn) 转载自北京教育考试院
+# 最后更新：2026-04-13
+# 注意：2023总分660，2024总分670，2025总分510（改革后不可直比）
 
 district: 东城区
 region: 北京市
 
+# ================================================================
+#  学校分层（基于2025年区排名）
+# ================================================================
 tiers:
   tier1:
-    name: 第一梯队
-    schools: [北京二中, 171中学, 北京五中]
-    note: 东城三强
+    name: 第一梯队（区排名前1500）
+    schools: [北京二中, 171中学, 北京五中, 汇文中学, 广渠门中学]
+    note: 东城五强
   tier2:
-    name: 第二梯队
-    schools: [汇文中学, 广渠门中学, 东直门中学, 景山学校]
+    name: 第二梯队（区排名1500-3000）
+    schools: [景山学校, 东直门中学, 龙潭中学, 166中学, 十一中学]
   tier3:
-    name: 第三梯队
-    schools: [166中学, 十一中学, 龙潭中学, 五十中]
+    name: 第三梯队（区排名3000-5000）
+    schools: [五十中, 五十五中学, 一六五中学, 二十二中学, 二十四中学, 一零九中学, 九十六中]
+  tier4:
+    name: 第四梯队（区排名5000+）
+    schools: [一中, 六十五中, 一四二中学, 二十七中, 二十五中学, 五十四中, 二十一中, 五十分校, 翔宇中学]
 
+# ================================================================
+#  逐校逐年录取分数线
+# ================================================================
 schools:
 
   - name: 北京二中
@@ -36,27 +46,19 @@ schools:
       2024: { total: 670, score: 634, rank: 1033 }
       2023: { total: 660, score: 637, rank: 1248 }
 
-  - name: 北京五中
-    level: 市级示范性高中
-    scores:
-      2025: { total: 510, score: 475, rank: 1216 }
-      2024: { total: 670, score: 632, rank: 1210 }
-      2023: { total: 660, score: 636, rank: 1372 }
-
-  - name: 东直门中学
-    level: 市级示范性高中
-    note: 叶企孙实验班录取线高于普通班
-    scores:
-      2025: { total: 510, score_lab: 477, rank_lab: 1016, score_normal: 469, rank_normal: 1752 }
-      2024: { total: 670, score_lab: 632, rank_lab: 1210, score_normal: 623, rank_normal: 2030 }
-      2023: { total: 660, score: 629, rank: 2164 }
-
   - name: 汇文中学
     level: 市级示范性高中
     scores:
       2025: { total: 510, score: 476, rank: 1114 }
       2024: { total: 670, score: 624, rank: 1943 }
       2023: { total: 660, score: 635, rank: 1485 }
+
+  - name: 北京五中
+    level: 市级示范性高中
+    scores:
+      2025: { total: 510, score: 475, rank: 1216 }
+      2024: { total: 670, score: 632, rank: 1210 }
+      2023: { total: 660, score: 636, rank: 1372 }
 
   - name: 广渠门中学
     level: 市级示范性高中
@@ -72,6 +74,14 @@ schools:
       2025: { total: 510, score: 470, rank: 1664 }
       2024: { total: 670, score: 616, rank: 2626 }
 
+  - name: 东直门中学
+    level: 市级示范性高中
+    note: 叶企孙实验班录取线高于普通班
+    scores:
+      2025: { total: 510, score: 469, rank: 1752 }
+      2024: { total: 670, score: 623, rank: 2030 }
+      2023: { total: 660, score: 629, rank: 2164 }
+
   - name: 龙潭中学
     level: 区级
     scores:
@@ -80,8 +90,9 @@ schools:
 
   - name: 166中学
     level: 区级示范性高中
+    note: 生命科学实验班录取线高于普通班
     scores:
-      2025: { total: 510, score: 464, rank: 2219 }
+      2025: { total: 510, score_lab: 468, rank_lab: 1851, score_normal: 464, rank_normal: 2219 }
       2024: { total: 670, score: 613, rank: 2858 }
       2023: { total: 660, score: 623, rank: 2780 }
 
@@ -95,10 +106,100 @@ schools:
   - name: 五十中
     level: 区级
     scores:
-      2025: { total: 510, note: 暂无数据 }
+      2025: { total: 510, score: 454, rank: 3106 }
       2024: { total: 670, score: 598, rank: 3877 }
       2023: { total: 660, score: 614, rank: 3519 }
 
+  - name: 五十五中学
+    level: 区级
+    scores:
+      2025: { total: 510, score: 453, rank: 3195 }
+      2024: { total: 670, score: 597, rank: 3929 }
+
+  - name: 一六五中学
+    level: 区级
+    scores:
+      2025: { total: 510, score: 447, rank: 3680 }
+      2024: { total: 670, score: 534, rank: 6422 }
+
+  - name: 二十二中学
+    level: 区级
+    scores:
+      2025: { total: 510, score: 444, rank: 3926 }
+      2024: { total: 670, score: 590, rank: 4356 }
+
+  - name: 二十四中学
+    level: 区级
+    scores:
+      2025: { total: 510, score: 439, rank: 4244 }
+      2024: { total: 670, score: 579, rank: 4909 }
+
+  - name: 一零九中学
+    level: 区级
+    scores:
+      2025: { total: 510, score: 438, rank: 4308 }
+      2024: { total: 670, score: 581, rank: 4818 }
+
+  - name: 九十六中
+    level: 区级
+    scores:
+      2025: { total: 510, score: 431, rank: 4747 }
+      2024: { total: 670, score: 568, rank: 5361 }
+
+  - name: 一中
+    level: 区级
+    scores:
+      2025: { total: 510, score: 427, rank: 4950 }
+
+  - name: 六十五中
+    level: 区级
+    scores:
+      2025: { total: 510, score: 426, rank: 5004 }
+      2024: { total: 670, score: 561, rank: 5619 }
+
+  - name: 一四二中学
+    level: 区级
+    scores:
+      2025: { total: 510, score: 421, rank: 5242 }
+
+  - name: 二十七中
+    level: 区级
+    scores:
+      2025: { total: 510, score: 409, rank: 5657 }
+      2024: { total: 670, score: 547, rank: 6074 }
+
+  - name: 二十五中学
+    level: 区级
+    scores:
+      2025: { total: 510, score: 402, rank: 5837 }
+      2024: { total: 670, score: 537, rank: 6356 }
+
+  - name: 五十四中
+    level: 区级
+    scores:
+      2025: { total: 510, score: 400, rank: 5896 }
+      2024: { total: 670, score: 533, rank: 6445 }
+
+  - name: 二十一中
+    level: 区级
+    scores:
+      2025: { total: 510, score: 390, rank: 6101 }
+      2024: { total: 670, score: 528, rank: 6541 }
+
+  - name: 五十分校
+    level: 区级
+    scores:
+      2025: { total: 510, score: 389, rank: 6118 }
+
+  - name: 翔宇中学
+    level: 民办
+    scores:
+      2025: { total: 510, score: 338, rank: 6525 }
+      2024: { total: 670, score: 490, rank: 6994 }
+
+# ================================================================
+#  目标分数速查（2026年参考，基于2025年510分制）
+# ================================================================
 target_guide_2026:
   - target: 北京二中
     reference_score: 485
@@ -112,6 +213,12 @@ target_guide_2026:
   - target: 景山/166中学
     reference_score: 464-470
     math_target: 75+
+  - target: 十一中学/五十中
+    reference_score: 454-459
+    math_target: 70+
+  - target: 普通高中保底
+    reference_score: 400-440
+    math_target: 60+
 
 # ================================================================
 #  校额到校录取参考（2025年数据）
