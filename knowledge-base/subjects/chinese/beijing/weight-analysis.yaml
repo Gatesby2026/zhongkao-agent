@@ -13,16 +13,16 @@ modules_overview:
     score_ratio: 15%       # 约15分（100分制）
     description: 基础分为主，送分区，确保全对是关键
 
-  - module: 古诗文阅读（含默写）
-    score_ratio: 23%       # 约23分（默写5-6 + 文言文12 + 古诗6）
-    description: 第二大板块，积累+理解并重
+  - module: 古诗文阅读
+    score_ratio: 18%       # 约18分（文言文10-12 + 古诗6）
+    description: 第二大板块，积累+理解并重（默写已计入基础·运用）
 
   - module: 名著阅读
     score_ratio: 5%        # 约5分
     description: 分值不大但必考，深度考查趋增
 
   - module: 现代文阅读
-    score_ratio: 17-22%    # 约17-22分
+    score_ratio: 22%       # 约22分（说明文/非连续性文本10 + 记叙文12）
     description: 区分度最高的板块，记叙文是重中之重
 
   - module: 写作
@@ -77,7 +77,7 @@ knowledge_points:
 
     - name: 古诗文默写
       frequency: 极高（5/5必考）
-      typical_score: 5-6分
+      typical_score: 4分
       difficulty: 基础-中档
       typical_questions: 填空题
       details:
@@ -296,7 +296,7 @@ score_improvement_priority:
   - rank: 1
     area: 古诗文默写
     reason: 纯记忆分，题型固定，短期见效最快；只要背准不写错字就能拿满分
-    potential: 5-6分
+    potential: 4分
     effort: 低
     timeline: 2-4周可突破
 

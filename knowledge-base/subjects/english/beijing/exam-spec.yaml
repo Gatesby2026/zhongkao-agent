@@ -77,99 +77,107 @@ listening_speaking:
 paper_structure:
   total_score: 60
   duration_min: 90
-  total_questions: 约45题
+  total_questions: 约31题
 
   sections:
     - type: 单项填空
-      count: 12
+      count: 10
       score_per_question: 1
-      total_score: 12
+      total_score: 10
       description: 语法和词汇的语境选择
       difficulty_distribution:
-        easy: 8        # 基础语法和词汇
+        easy: 6        # 基础语法和词汇
         medium: 3      # 时态语态/从句
         hard: 1        # 综合语境题
       typical_topics:
         - 代词（人称/物主/不定代词）
         - 介词和介词短语
         - 连词（并列/从属）
-        - 时态（一般现在/过去/将来/现在完成时）
+        - 时态（一般过去/现在完成时）
         - 被动语态
         - 形容词/副词比较级最高级
         - 宾语从句（语序/时态呼应）
-        - 状语从句（if/when/because/although）
         - 情态动词
         - 非谓语动词（to do / doing）
+      notes: 2024年起从12题减至10题，但10大语法考点全部保留
 
     - type: 完形填空
-      count: 8
+      count: 6
       score_per_question: 1
-      total_score: 8
-      description: 一篇约200-250词短文，8个空
+      total_score: 6
+      description: 一篇约200-250词短文，6个空
       difficulty_distribution:
-        easy: 3
-        medium: 4
+        easy: 2
+        medium: 3
         hard: 1
       typical_topics:
         - 记叙文为主（成长/感悟/助人为乐）
         - 考查词义辨析、上下文逻辑、固定搭配
-      notes: 2024年起从10题减至8题
+      notes: 2024年起从10题减至6题
 
     - type: 阅读理解
+      total_score: 26
+      total_questions: 13
+      description: 4篇文章共13题，每题2分，共26分
       sub_sections:
-        - name: 阅读选择（A篇、B篇、C篇）
-          count: 13
+        - name: A篇（应用文）
+          count: 3
           score_per_question: 2
-          total_score: 26
-          description: 3篇文章，每篇4-5题
-          article_types:
-            - A篇: 应用文（广告/通知/表格），约200词，较简单
-            - B篇: 记叙文（故事/人物），约300词，中档
-            - C篇: 说明文/议论文（科普/社会），约350词，较难
-          typical_question_types:
-            - 细节理解（约50%）
-            - 主旨大意（每篇1题）
-            - 推理判断（B/C篇各1-2题）
-            - 词义猜测（1题）
-          difficulty_distribution:
-            easy: 5
-            medium: 5
-            hard: 3
+          total_score: 6
+          description: 约200词，活动通知/课程介绍/广告/社团招募
+          difficulty: 基础
+          question_types: [信息提取, 细节查找, 写作目的]
 
-        - name: 阅读回答问题（D篇）
-          count: 5
-          total_score: 10
-          description: 1篇约350词文章，5个问题需书面回答
-          scoring:
-            - 前4题：每题2分（信息提取+语言表达）
-            - 第5题：2分（开放性问题，需写出个人观点）
+        - name: B篇（说明文/记叙文）
+          count: 4
+          score_per_question: 2
+          total_score: 8
+          description: 约300词，科技生活/自然环保/健康饮食/AI应用
+          difficulty: 基础-中档
+          question_types: [细节理解, 词义猜测, 推理判断, 主旨大意]
+
+        - name: C篇（议论文）
+          count: 3
+          score_per_question: 2
+          total_score: 6
+          description: 约350词，教育观点/社会问题/青少年成长
           difficulty: 中档-较难
-          notes: D篇是北京特色题型，最后一题开放性强
-      total_reading_score: 26  # 注：D篇归入阅读，部分统计归入写作
+          question_types: [观点理解, 论据分析, 深层推理, 态度推断]
+
+        - name: D篇（还原句子）
+          count: 3
+          score_per_question: 2
+          total_score: 6
+          description: 从备选句子中选择正确的句子还原到文章空缺处
+          difficulty: 中档-较难
+          question_types: [逻辑衔接, 代词指代, 段落结构, 信息补充]
+          notes: 区分度最大的阅读题型，需要篇章分析能力
 
     - type: 文段表达
+      total_score: 18
       sub_sections:
-        - name: 选词/短语填空
-          count: 约4-5空
-          total_score: 4
-          description: 根据语境从方框中选词/短语填入短文
-          difficulty: 基础-中档
+        - name: 邮件回复
+          count: 1
+          total_score: 8
+          description: 回复外国朋友的邮件，要点完整、语言得体、格式正确
+          typical_topics:
+            - 学习方法/文化活动/景点推荐/校园生活
+          difficulty: 中档
+          notes: 格式固定，话题围绕中外交流和文化分享
 
-        - name: 书面表达（大作文）
+        - name: 命题作文
           count: 1
           total_score: 10
-          description: 根据中文提示或图表写一篇50-80词的短文
+          description: 某英文网站征稿，50词以上
           scoring_criteria:
-            content: 4分（要点完整、内容充实）
+            content: 4分（观点明确、内容充实）
             language: 4分（语法正确、用词得当、句式多样）
-            structure: 2分（结构清晰、逻辑连贯）
+            structure: 2分（条理清晰、逻辑连贯）
           typical_topics:
-            - 学校活动（运动会/读书节/志愿服务）
-            - 个人成长（学习方法/兴趣爱好/难忘经历）
-            - 社会实践（志愿活动/文化体验）
-            - 计划与建议（假期计划/给朋友的建议）
-          difficulty: 中档
-          notes: 近年趋向半开放式，给出情境和要点，自由发挥空间增大
+            - 核心品质（责任/自律/助人/创新等）
+            - 个人经历与感悟
+          difficulty: 较难
+          notes: 每年围绕一个核心品质词，"经历+感悟"三段式结构
 
 # ------ 难度分布 ------
 difficulty_ratio:
@@ -203,10 +211,9 @@ trends:
 # ------ 评分说明 ------
 scoring_notes:
   - 单选和完形：每题1分，选错不给分
-  - 阅读选择：每题2分，选错不给分
-  - 阅读回答：按要点和语言给分，答案不完整可得部分分
-  - 选词填空：每空约1分，拼写错误不给分
-  - 书面表达：按内容(4)+语言(4)+结构(2)三维评分
-  - 书面表达中语法错误每个扣0.5分，同类错误不重复扣分
+  - 阅读理解：每题2分，选错不给分（含还原句子D篇）
+  - 邮件回复：按要点完整性+语言得体+格式正确评分，共8分
+  - 命题作文：按内容(4)+语言(4)+结构(2)三维评分，共10分
+  - 作文中语法错误每个扣0.5分，同类错误不重复扣分
   - 字数不足50词扣1分，严重偏离主题最高给2分
   - 听口机考由计算机自动评分，转述题人工复核

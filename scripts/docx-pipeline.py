@@ -76,9 +76,10 @@ DISTRICT_MAP = {
     "顺义": "shunyi", "门头沟": "mentougou", "密云": "miyun",
     "平谷": "pinggu", "燕山": "yanshan", "延庆": "yanqing",
     "怀柔": "huairou", "昌平": "changping",
+    "北京": "beijing",  # 中考真题（全市统考）
 }
 
-EXAM_TYPE_MAP = {"一模": "yi", "二模": "er", "三模": "san"}
+EXAM_TYPE_MAP = {"一模": "yi", "二模": "er", "三模": "san", "真题": "zhenti"}
 
 # 模块关键词
 MODULE_KEYWORDS = {
@@ -177,14 +178,32 @@ def docx_to_html(docx_path, output_dir):
 # ============================================================
 
 class ExamHTMLParser(HTMLParser):
-    """解析 LibreOffice 导出的 HTML，提取文本并标记公式图片位置"""
+    """解析 LibreOffice 导出的 HTML，提取文本并标记公式图片位置。
+
+    segment 类型:
+      - ("text", str)
+      - ("formula_img", img_path)
+      - ("figure_img", img_path)
+      - ("table", [row, row, ...])   ← 新增
+        每个 row = [cell, cell, ...]
+        每个 cell = [segment, segment, ...]  (子 segment，同上三种类型)
+    """
 
     def __init__(self, html_dir):
         super().__init__()
         self.html_dir = html_dir
-        self.segments = []  # [(type, content)] → type: "text" | "formula_img" | "figure_img"
+        self.segments = []
         self._in_body = False
         self._skip = False  # 跳过 style/script 标签
+        # ── 表格状态 ──
+        self._in_table = False
+        self._table_rows = []   # [[cell, ...], ...]
+        self._current_row = []  # [cell, ...]
+        self._current_cell = [] # [segment, ...]
+
+    def _target(self):
+        """当前 segment 应写入的列表（表格单元格 or 顶层）"""
+        return self._current_cell if self._in_table else self.segments
 
     def handle_starttag(self, tag, attrs):
         attrs_dict = dict(attrs)
@@ -200,12 +219,23 @@ class ExamHTMLParser(HTMLParser):
         if not self._in_body or self._skip:
             return
 
+        # ── 表格标签 ──
+        if tag == "table":
+            self._in_table = True
+            self._table_rows = []
+            return
+        if tag == "tr":
+            self._current_row = []
+            return
+        if tag == "td" or tag == "th":
+            self._current_cell = []
+            return
+
         if tag == "br":
-            self.segments.append(("text", "\n"))
+            self._target().append(("text", "\n"))
 
         if tag == "p":
-            # 段落开始，加换行
-            self.segments.append(("text", "\n"))
+            self._target().append(("text", "\n"))
 
         if tag == "img":
             src = attrs_dict.get("src", "")
@@ -213,31 +243,49 @@ class ExamHTMLParser(HTMLParser):
             width = int(attrs_dict.get("width", 0) or 0)
             height = int(attrs_dict.get("height", 0) or 0)
 
-            # 解码 URL 编码的文件名
             from urllib.parse import unquote
             src_decoded = unquote(src)
             img_path = os.path.join(self.html_dir, src_decoded)
 
             if src.endswith(".gif") or name.startswith("Object"):
-                # 公式图片 → 需要 OCR
-                self.segments.append(("formula_img", img_path))
+                self._target().append(("formula_img", img_path))
             elif src.endswith(".png") or src.endswith(".jpg"):
-                # 题图/几何图形
                 if width > 30 and height > 30:
-                    self.segments.append(("figure_img", img_path))
+                    # 保存原始 HTML 宽高（96dpi 下的 mm 值）
+                    w_mm = round(width * 25.4 / 96, 1)
+                    h_mm = round(height * 25.4 / 96, 1)
+                    self._target().append(("figure_img", (img_path, w_mm, h_mm)))
                 else:
-                    # 很小的图可能也是公式
-                    self.segments.append(("formula_img", img_path))
+                    self._target().append(("formula_img", img_path))
 
     def handle_endtag(self, tag):
         if tag in ("style", "script"):
             self._skip = False
+            return
+
+        if tag in ("td", "th") and self._in_table:
+            self._current_row.append(self._current_cell)
+            self._current_cell = []
+        elif tag == "tr" and self._in_table:
+            if self._current_row:
+                self._table_rows.append(self._current_row)
+            self._current_row = []
+        elif tag == "table" and self._in_table:
+            self._in_table = False
+            if self._table_rows:
+                self.segments.append(("table", self._table_rows))
+            self._table_rows = []
 
     def handle_data(self, data):
         if self._in_body and not self._skip:
-            text = data.strip()
+            # HTML 内部换行只是格式化，语义上等同于空格
+            normalized = data.replace('\n', ' ')
+            text = normalized.strip()
             if text:
-                self.segments.append(("text", text))
+                # 保留前导 tab/空格作为分隔符（选项 A.\tB. 的场景）
+                if normalized and normalized[0] in (' ', '\t') and not self._in_table:
+                    text = ' ' + text
+                self._target().append(("text", text))
 
 
 def parse_html(html_path):
@@ -404,14 +452,37 @@ def batch_ocr(formula_images, cache):
 # Step 4: 组装纯文本（公式用 $LaTeX$ 替换）
 # ============================================================
 
+def _assemble_cell(cell_segments, cache):
+    """组装单个表格单元格的 segments → 纯文本（含 $LaTeX$）"""
+    parts = []
+    for seg_type, content in cell_segments:
+        if seg_type == "text":
+            parts.append(content.strip())
+        elif seg_type == "formula_img":
+            if os.path.exists(content):
+                img_hash = get_image_hash(content)
+                latex = cache.get(img_hash, "[公式]")
+                if re.match(r'^[A-Za-z]{1,3}$', latex):
+                    parts.append(latex)
+                else:
+                    parts.append(f"${latex}$")
+            else:
+                parts.append("[公式]")
+        elif seg_type == "figure_img":
+            # content 可能是 (path, w_mm, h_mm) 元组或纯路径
+            parts.append("[图]")
+    return " ".join(p for p in parts if p).strip()
+
+
 def assemble_text(segments, cache, exam_key=None):
     """把 HTML segments 组装成带 LaTeX 的纯文本，同时保存几何图形文件。
 
     exam_key: e.g. "2025-haidian-yi"，用于图片文件命名
-    返回: (text, figure_paths)  figure_paths 是按出现顺序排列的相对路径列表
+    返回: (text, figure_infos)  figure_infos 是按出现顺序排列的 dict 列表
+           每项: {"path": "figures/xxx.png", "width_mm": 29.0, "height_mm": 14.0}
     """
     parts = []
-    figure_paths = []  # 收集图片相对路径
+    figure_infos = []  # 收集图片信息（含尺寸）
     fig_counter = 0
 
     for seg_type, content in segments:
@@ -429,23 +500,50 @@ def assemble_text(segments, cache, exam_key=None):
             else:
                 parts.append("[公式]")
         elif seg_type == "figure_img":
-            if os.path.exists(content) and exam_key:
+            # content 是 (img_path, w_mm, h_mm) 元组
+            if isinstance(content, tuple):
+                img_path, w_mm, h_mm = content
+            else:
+                img_path, w_mm, h_mm = content, 0, 0
+            if os.path.exists(img_path) and exam_key:
                 fig_counter += 1
-                ext = Path(content).suffix or ".png"
+                ext = Path(img_path).suffix or ".png"
                 fig_name = f"{exam_key}-fig{fig_counter:02d}{ext}"
                 dst_path = FIG_DIR / fig_name
                 FIG_DIR.mkdir(parents=True, exist_ok=True)
-                shutil.copy2(content, dst_path)
+                shutil.copy2(img_path, dst_path)
                 rel_path = f"figures/{fig_name}"
-                figure_paths.append(rel_path)
+                fig_info = {"path": rel_path, "width_mm": w_mm, "height_mm": h_mm}
+                figure_infos.append(fig_info)
                 parts.append(f"[图:{rel_path}]")
             else:
                 parts.append("[图]")
+        elif seg_type == "table":
+            # content = [[cell_segments, ...], ...]  即 rows × cols
+            rows = content
+            if not rows:
+                continue
+            # 组装每个单元格文本
+            text_rows = []
+            for row in rows:
+                text_row = [_assemble_cell(cell, cache) for cell in row]
+                text_rows.append(text_row)
+            # 输出为 Markdown 表格
+            n_cols = max(len(r) for r in text_rows)
+            md_lines = []
+            for i, row in enumerate(text_rows):
+                # 补齐列数
+                while len(row) < n_cols:
+                    row.append("")
+                md_lines.append("| " + " | ".join(row) + " |")
+                if i == 0:
+                    md_lines.append("| " + " | ".join(["---"] * n_cols) + " |")
+            parts.append("\n" + "\n".join(md_lines) + "\n")
 
     text = "".join(parts)
     # 清理多余空行
     text = re.sub(r'\n{3,}', '\n\n', text)
-    return text.strip(), figure_paths
+    return text.strip(), figure_infos
 
 
 # ============================================================
@@ -702,7 +800,13 @@ def parse_questions(text):
 # Step 6: 输出 YAML
 # ============================================================
 
-def build_yaml(questions, year, district_cn, exam_type_cn):
+def build_yaml(questions, year, district_cn, exam_type_cn, figure_infos=None):
+    # 建立 path → figure_info 的查找表
+    fig_info_map = {}
+    if figure_infos:
+        for fi in figure_infos:
+            fig_info_map[fi["path"]] = fi
+
     yaml_questions = []
     for q in questions:
         qid = q["id"]
@@ -712,12 +816,25 @@ def build_yaml(questions, year, district_cn, exam_type_cn):
         answer_text = q["answer"].strip()
         analysis_text = q["analysis"].strip()
         detail_text = q["detail"].strip()
+
+        # ── 选项规范化：拆分同一行内的 A.xxxB.xxxC.xxxD.xxx ──
+        # 检测模式: 同一行有多个选项标记挤在一起
+        if qtype == "选择":
+            # 在 B./C./D. 前插入换行（仅当前面不是换行时）
+            question_text = re.sub(r'(?<!\n)\s*([B-D][\.\．])', r'\n\1', question_text)
         module = detect_module(analysis_text, question_text)
         kps = extract_knowledge_points(analysis_text, question_text)
 
-        # 提取本题引用的图片路径
-        all_text = question_text + "\n" + detail_text
-        figures = re.findall(r'\[图:(figures/[^\]]+)\]', all_text)
+        # 提取本题引用的图片路径（仅 question_text 中的，不含解析/答案区的图）
+        q_fig_paths = re.findall(r'\[图:(figures/[^\]]+)\]', question_text)
+        # 构建带尺寸信息的 figures 列表
+        figures = []
+        for fp in q_fig_paths:
+            fi = fig_info_map.get(fp)
+            if fi and fi.get("width_mm") and fi.get("height_mm"):
+                figures.append(fi)  # {"path": ..., "width_mm": ..., "height_mm": ...}
+            else:
+                figures.append({"path": fp})
         # 清理显示文本：[图:figures/xxx.png] → [图]
         question_text = re.sub(r'\[图:figures/[^\]]+\]', '[图]', question_text)
         detail_text = re.sub(r'\[图:figures/[^\]]+\]', '[图]', detail_text)
@@ -738,7 +855,9 @@ def build_yaml(questions, year, district_cn, exam_type_cn):
             yaml_q["figures"] = figures
         yaml_questions.append(yaml_q)
 
-    district_label = f"{district_cn}区" if not district_cn.endswith(("区", "山")) else district_cn
+    district_label = f"{district_cn}区" if not district_cn.endswith(("区", "山", "京")) else district_cn
+    if district_cn == "北京":
+        district_label = "北京市"
     return {
         "year": int(year),
         "district": district_label,
@@ -848,8 +967,17 @@ def convert_single(docx_path, year, district_cn, district_en, exam_type_cn, exam
         print(f"    Step 2: 解析 HTML...")
         segments = parse_html(html_path)
 
-        # 收集所有公式图片
-        formula_images = [s[1] for s in segments if s[0] == "formula_img"]
+        # 收集所有公式图片（包括表格单元格内的）
+        formula_images = []
+        for seg_type, content in segments:
+            if seg_type == "formula_img":
+                formula_images.append(content)
+            elif seg_type == "table":
+                for row in content:
+                    for cell in row:
+                        for cell_seg_type, cell_content in cell:
+                            if cell_seg_type == "formula_img":
+                                formula_images.append(cell_content)
 
         # Step 3: 批量 OCR
         if formula_images:
@@ -859,7 +987,7 @@ def convert_single(docx_path, year, district_cn, district_en, exam_type_cn, exam
         # Step 4: 组装纯文本 + 保存图形
         exam_key = f"{year}-{district_en}-{exam_type_en}"
         print(f"    Step 4: 组装 LaTeX 文本 + 保存图形...")
-        full_text, figure_paths = assemble_text(segments, cache, exam_key=exam_key)
+        full_text, figure_infos = assemble_text(segments, cache, exam_key=exam_key)
 
         # Step 5: 解析题目
         print(f"    Step 5: 解析题目结构...")
@@ -870,7 +998,7 @@ def convert_single(docx_path, year, district_cn, district_en, exam_type_cn, exam
             print(f"    ⚠️ 题目数量偏少，可能存在解析问题")
 
         # Step 6: 生成 YAML
-        data = build_yaml(questions, year, district_cn, exam_type_cn)
+        data = build_yaml(questions, year, district_cn, exam_type_cn, figure_infos=figure_infos)
 
         header = f"""# ============================================================
 # {year}年北京{district_cn}区中考数学{exam_type_cn}试卷 — 逐题分析
