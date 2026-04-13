@@ -512,6 +512,344 @@ ${platformStr}
 }
 
 // ============================================================
+// 场景2：全科总分规划模式（510分制）
+// ============================================================
+
+export interface MultiSubjectInput {
+  district: string;
+  daysUntilExam: number;
+  availableHoursPerDay: number;
+  targetTotalScore?: number;  // 目标总分（满分510）
+  targetSchool?: string;
+  scores: {
+    chinese: number;    // /100
+    math: number;       // /100
+    english: number;    // /100
+    physics: number;    // /80
+    politics: number;   // /80
+    pe: number;         // /50
+  };
+}
+
+interface SubjectAnalysis {
+  name: string;
+  key: string;
+  fullScore: number;
+  current: number;
+  gap: number;
+  gapRatio: number;
+  roi: number;         // 提分性价比
+  suggestedHoursPercent: number;
+}
+
+const SUBJECT_FULL_SCORES: Record<string, number> = {
+  chinese: 100, math: 100, english: 100, physics: 80, politics: 80, pe: 50,
+};
+const SUBJECT_NAMES: Record<string, string> = {
+  chinese: "语文", math: "数学", english: "英语", physics: "物理", politics: "道德与法治", pe: "体育",
+};
+// 各科提分难度系数（越低越容易提分）
+const SUBJECT_DIFFICULTY: Record<string, number> = {
+  math: 0.6, english: 0.7, physics: 0.7, politics: 0.65, chinese: 1.0, pe: 0.8,
+};
+
+function analyzeSubjects(scores: MultiSubjectInput["scores"]): SubjectAnalysis[] {
+  const subjects: SubjectAnalysis[] = [];
+  let totalROI = 0;
+
+  for (const [key, current] of Object.entries(scores)) {
+    const fullScore = SUBJECT_FULL_SCORES[key];
+    const gap = fullScore - current;
+    const gapRatio = gap / fullScore;
+    // ROI = 提分空间 × (1 - 难度系数)，空间越大、难度越低的科目ROI越高
+    const roi = gap * (1 - SUBJECT_DIFFICULTY[key] * 0.5);
+    totalROI += roi;
+    subjects.push({
+      name: SUBJECT_NAMES[key],
+      key,
+      fullScore,
+      current,
+      gap,
+      gapRatio,
+      roi,
+      suggestedHoursPercent: 0,
+    });
+  }
+
+  // 按ROI分配时间（体育单独占10%）
+  const peSubject = subjects.find(s => s.key === "pe")!;
+  const culturalSubjects = subjects.filter(s => s.key !== "pe");
+  const culturalTotalROI = culturalSubjects.reduce((sum, s) => sum + s.roi, 0);
+
+  peSubject.suggestedHoursPercent = 10;
+  for (const s of culturalSubjects) {
+    s.suggestedHoursPercent = Math.round((s.roi / culturalTotalROI) * 90);
+  }
+  // 修正误差
+  const sum = subjects.reduce((s, x) => s + x.suggestedHoursPercent, 0);
+  if (sum !== 100) {
+    const maxS = culturalSubjects.sort((a, b) => b.roi - a.roi)[0];
+    maxS.suggestedHoursPercent += 100 - sum;
+  }
+
+  return subjects.sort((a, b) => b.roi - a.roi);
+}
+
+function buildSubjectKBContext(
+  kb: KnowledgeBase,
+  subjectKey: string,
+  current: number,
+  fullScore: number
+): string {
+  if (subjectKey === "math") {
+    // 数学已经有深度数据，只给摘要
+    const wa = kb.weightAnalysis;
+    let str = "**数学**（知识库深度：★★★★★，含完整诊断/路径/易错点/试卷库）\n";
+    if (wa?.score_improvement_priority) {
+      str += "提分优先级：" + wa.score_improvement_priority.slice(0, 3)
+        .map((p: any) => `${p.area}(潜力${p.potential})`)
+        .join(" → ") + "\n";
+    }
+    return str;
+  }
+
+  if (subjectKey === "pe") {
+    const pe = kb.subjects.pe;
+    let str = "**体育**（50分 = 过程性10分 + 现场40分）\n";
+    if (pe.examSpec) {
+      const spec = pe.examSpec;
+      if (spec.on_site_exam?.events) {
+        str += "现场考试项目：" + spec.on_site_exam.events
+          .map((e: any) => `${e.name}(${e.score}分)`)
+          .join("、") + "\n";
+      }
+    }
+    if (pe.scoringStandards) {
+      str += "评分标准数据已加载，可精确到性别/项目/成绩段\n";
+    }
+    if (pe.trainingPlans) {
+      str += "训练方案数据已加载，可生成专项训练计划\n";
+    }
+    return str;
+  }
+
+  // 语文/英语/物理/道法
+  const subjectMap: Record<string, keyof KnowledgeBase["subjects"]> = {
+    chinese: "chinese", english: "english", physics: "physics", politics: "politics",
+  };
+  const data = kb.subjects[subjectMap[subjectKey] as "chinese" | "english" | "physics" | "politics"];
+  if (!data) return "";
+
+  const name = SUBJECT_NAMES[subjectKey];
+  let str = `**${name}**\n`;
+
+  // 考试规格摘要
+  if (data.examSpec) {
+    const spec = data.examSpec;
+    const bi = spec.basic_info;
+    if (bi) {
+      str += `满分${bi.full_score}分，${bi.duration_min}分钟，${bi.exam_type}`;
+      if (bi.composition) {
+        str += "（" + bi.composition.map((c: any) => `${c.part}${c.score}分`).join("+") + "）";
+      }
+      str += "\n";
+    }
+  }
+
+  // 权重分析 —— 提分优先级
+  if (data.weightAnalysis?.score_improvement_priority) {
+    const priorities = data.weightAnalysis.score_improvement_priority.slice(0, 5);
+    str += "提分优先级：\n";
+    for (const p of priorities) {
+      str += `  ${p.rank}. ${p.area}（潜力${p.potential}，投入${p.effort}）：${p.reason}\n`;
+    }
+  }
+
+  // 得分策略 —— 根据当前分数匹配
+  if (data.weightAnalysis?.score_sources || data.examSpec?.score_targets) {
+    const sources = data.weightAnalysis?.score_sources || {};
+    const ratio = current / fullScore;
+    let matchedKey = "";
+    if (ratio < 0.6) matchedKey = Object.keys(sources)[0] || "";
+    else if (ratio < 0.8) matchedKey = Object.keys(sources)[1] || "";
+    else if (ratio < 0.9) matchedKey = Object.keys(sources)[2] || "";
+    else matchedKey = Object.keys(sources)[3] || "";
+    if (matchedKey && sources[matchedKey]) {
+      str += `当前分数段得分策略（${matchedKey}）：\n`;
+      const sd = sources[matchedKey];
+      if (sd.guaranteed_questions) {
+        for (const q of sd.guaranteed_questions) {
+          str += `  - ${q}\n`;
+        }
+      }
+    }
+  }
+
+  // 考试分析 —— 命题趋势
+  if (data.examAnalysis?.summary?.trends) {
+    const trends = data.examAnalysis.summary.trends;
+    if (typeof trends === "object" && !Array.isArray(trends)) {
+      const entries = Object.entries(trends).slice(0, 3);
+      str += "命题趋势：" + entries.map(([k, v]) => `${k}=${typeof v === 'string' ? v.slice(0, 40) : v}`).join("；") + "\n";
+    } else if (typeof trends === "string") {
+      str += "命题趋势：" + trends.slice(0, 100) + "\n";
+    }
+  }
+
+  // 题型结构概览
+  if (data.questionTypes?.yearly_comparison) {
+    const latest = data.questionTypes.yearly_comparison[data.questionTypes.yearly_comparison.length - 1];
+    if (latest) {
+      str += `最新题型结构（${latest.year}年）：${latest.written_structure || latest.notable_changes || ""}\n`;
+    }
+  }
+
+  return str;
+}
+
+export function buildMultiSubjectPrompt(
+  input: MultiSubjectInput,
+  kb: KnowledgeBase
+): { system: string; user: string } {
+  const weeksUntilExam = Math.ceil(input.daysUntilExam / 7);
+  const timePhase = getTimePhase(weeksUntilExam);
+  const totalCurrent = Object.values(input.scores).reduce((s, v) => s + v, 0);
+  const targetTotal = input.targetTotalScore || Math.min(totalCurrent + 50, 510);
+  const totalWeeklyHours = input.availableHoursPerDay * 7;
+
+  // 分析各科
+  const subjects = analyzeSubjects(input.scores);
+
+  // 各科知识库上下文
+  const subjectContexts = subjects.map(s =>
+    buildSubjectKBContext(kb, s.key, s.current, s.fullScore)
+  ).join("\n---\n");
+
+  // 时间分配表
+  const timeTable = subjects.map(s =>
+    `| ${s.name} | ${s.current}/${s.fullScore} | ${s.gap}分 | ${s.suggestedHoursPercent}%（${Math.round(totalWeeklyHours * s.suggestedHoursPercent / 100 * 10) / 10}h/周）|`
+  ).join("\n");
+
+  // 录取信息
+  const districtMap: Record<string, string> = {
+    "海淀": "haidian", "西城": "xicheng", "东城": "dongcheng", "朝阳": "chaoyang",
+  };
+  const dKey = districtMap[input.district.replace("区", "")] || "haidian";
+  let admissionStr = "";
+  const admDistrict = kb.admission.districts[dKey];
+  if (admDistrict && input.targetSchool) {
+    const school = admDistrict.schools?.find((s: any) =>
+      s.name.includes(input.targetSchool!) || input.targetSchool!.includes(s.name.replace(/北京市|中学|学校/g, ""))
+    );
+    if (school) {
+      admissionStr = `\n## 目标学校录取参考\n${school.name}\n${yaml.dump(school.scores, { lineWidth: 200 })}`;
+    }
+  }
+
+  // 政策信息
+  let policyStr = "";
+  if (kb.policy) {
+    const p = kb.policy;
+    policyStr = `\n## 2026年北京中考政策\n` +
+      `- 总分：${p.total_score}分（语数英各100 + 物理道法各80 + 体育50）\n` +
+      `- 考试日期：${p.exam_dates?.written_exam || "2026年6月24-25日"}\n` +
+      (p.changes_from_2025 ? `- 改革要点：${(p.changes_from_2025 || []).slice(0, 3).map((c: any) => c.change || c).join("；")}\n` : "");
+  }
+
+  // 区域特色
+  const districtInfo = kb.districts[dKey];
+  let districtStr = "";
+  if (districtInfo) {
+    districtStr = `\n## ${input.district}特色\n` +
+      (districtInfo.textbook ? `- 教材版本：${districtInfo.textbook}\n` : "") +
+      (districtInfo.characteristics?.exam_difficulty ? `- 考试难度：${districtInfo.characteristics.exam_difficulty}\n` : "");
+  }
+
+  const system = `你是一位经验丰富的北京中考学习规划专家，精通全部6个计分科目（语文100+数学100+英语100+物理80+道德与法治80+体育50=510分）。
+
+你拥有完整的北京中考知识库：
+- 6科考试大纲、题型分析、权重分析
+- 2021-2025年五年真题逐年分析和跨年汇总
+- 数学科目有完整的诊断/学习路径/易错点/试卷库（最深度的科目）
+- 4区录取分数线数据
+- 体育评分标准和训练方案
+
+核心要求：
+1. 语气亲切但专业，像经验丰富的班主任
+2. **全科统筹**——不是6科分别给建议，而是站在510分总分的高度做全局最优分配
+3. 根据各科的"提分性价比"排序，把时间优先投入ROI最高的科目
+4. 数学科目可以引用具体题号和真题锚点（你有最完整的数据）
+5. 其他科目基于考纲权重和提分优先级给出方向性建议
+6. 体育需要考虑训练周期——不能考前突击，需要提前安排
+7. 当前处于${getTimePhaseName(timePhase)}，策略要匹配时间紧迫程度
+8. 明确指出哪些科目该"主攻"、哪些"保稳"、哪些"放养"
+9. 输出用 Markdown 格式，结构清晰`;
+
+  const user = `## 学生基本情况
+
+- 所在区：${input.district}
+- 当前总分：${totalCurrent}/510
+- 目标总分：${targetTotal}/510${input.targetSchool ? `\n- 目标学校：${input.targetSchool}` : ""}
+- 每天可用学习时间：${input.availableHoursPerDay}小时（每周${totalWeeklyHours}小时）
+- 距中考：${weeksUntilExam}周（当前处于**${getTimePhaseName(timePhase)}**）
+
+## 各科成绩与分析
+
+| 科目 | 当前/满分 | 差距 | 建议时间占比 |
+|------|-----------|------|-------------|
+${timeTable}
+
+## 各科知识库数据
+
+${subjectContexts}
+${policyStr}
+${districtStr}
+${admissionStr}
+
+---
+
+请基于以上数据，为这位同学生成一份 **全科学习规划报告**，包含：
+
+## 第一部分：全局诊断与策略
+
+1. **一句话总评**：当前水平定位、与目标的差距、核心策略方向
+
+2. **各科诊断表**（表格）：
+   | 科目 | 当前分 | 目标分 | 策略定位 | 核心任务 | 预期提分 |
+   策略定位分为：主攻（投入最多）、重点（次优先）、保稳（维持）、放养（投入最少）
+
+3. **提分路径**：按"投入产出比"从高到低排序，说明每科主要提分点在哪里
+   - 引用各科的提分优先级数据
+   - 数学可以精确到模块和题号
+
+4. **总体时间线**（按月/阶段划分）：
+   - 每个阶段各科的重点任务
+   - 阶段性目标（用分数衡量）
+
+## 第二部分：本周执行计划
+
+精确到每天的学习安排：
+- 每天按时间段分配不同科目
+- 优先级高的科目安排在精力最好的时段
+- 每天标注具体任务（对于数学可以精确到题号和页码）
+- 每天的完成标准
+- 周末安排阶段检测
+
+## 第三部分：各科专项建议（简要）
+
+每科3-5行的核心备考建议，包括：
+- 重点攻克的知识点/题型
+- 推荐的学习方法和材料
+- 需要避免的常见误区
+
+---
+
+篇幅控制：第一部分40%，第二部分40%，第三部分20%。`;
+
+  return { system, user };
+}
+
+// ============================================================
 // 场景1：模块突破模式
 // ============================================================
 
