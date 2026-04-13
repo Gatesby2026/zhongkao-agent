@@ -1,0 +1,1213 @@
+# ============================================================
+# 2022年北京市中考数学真题试卷 — 逐题分析
+# ============================================================
+# 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
+# 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
+# 满分：100分  时长：120分钟
+
+year: 2022
+district: 北京市
+exam_type: 真题
+subject: 数学
+full_score: 100
+duration_minutes: 120
+total_questions: 28
+structure: 8选择(16分) + 8填空(16分) + 12解答(68分)
+questions:
+- id: 1
+  type: 选择
+  score: 2
+  question: '下面几何体中，是圆锥的为（）
+
+    A.[图]
+
+    B.[图]
+
+    C.[图]
+
+    D.[图]'
+  answer: B
+  solution: '解：A选项为圆柱，不合题意；
+
+    B选项为圆锥，符合题意；
+
+    C选项为三棱柱，不合题意；
+
+    D选项为球，不合题意；
+
+    故选B．'
+  knowledge_points:
+  - 综合
+  module: circles
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2022-beijing-zhenti-fig02.png
+    width_mm: 15.3
+    height_mm: 15.9
+  - path: figures/2022-beijing-zhenti-fig03.png
+    width_mm: 17.7
+    height_mm: 15.6
+  - path: figures/2022-beijing-zhenti-fig04.png
+    width_mm: 16.1
+    height_mm: 18.8
+  - path: figures/2022-beijing-zhenti-fig05.png
+    width_mm: 16.1
+    height_mm: 16.9
+- id: 2
+  type: 选择
+  score: 2
+  question: '截至2021年12月31日，长江干流六座梯级水电站全年累计发电量达2628．83亿千瓦时，相当于减排二氧化碳约2.2亿吨．将262 883 000 000用科学记数法表示应为（）
+
+    A.$26.2883\times10^{10}$
+
+    B.$2.62883\times10^{11}$
+
+    C.$2.62883\times10^{12}$
+
+    D.$0.262883\times10^{12}$'
+  answer: B
+  solution: '解：将262 883 000 000保留1位整数是$2.62883$，小数点向左移动了11位，
+
+    ∴262 883 000 000$=2.62883\times10^{11}$，
+
+    故选B．'
+  knowledge_points:
+  - 科学记数法
+  - 绝对值
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 3
+  type: 选择
+  score: 2
+  question: '如图，利用工具测量角，则$\angle 1$$[公式]$大小为（）
+
+    [图]
+
+    A.30°
+
+    B.60°
+
+    C.120°
+
+    D.150°'
+  answer: A
+  solution: '解：量角器测量的度数为30°，
+
+    由对顶角相等可得，$\angle1=30^{\circ}$．
+
+    故选A．'
+  knowledge_points:
+  - 对顶角
+  module: triangles
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2022-beijing-zhenti-fig06.png
+    width_mm: 60.1
+    height_mm: 39.4
+- id: 4
+  type: 选择
+  score: 2
+  question: '实数$a, b$在数轴上的对应点的位置如图所示，下列结论中正确的是（）
+
+    [图]
+
+    A.$a\leqslant-2$
+
+    B.$b<1$
+
+    C.$a>b$
+
+    D.$-a>b$'
+  answer: D
+  solution: '解：点a在-2的右边，故a>-2，故A选项错误；
+
+    点b在1的右边，故b>1，故B选项错误；
+
+    b在a的右边，故b>a，故C选项错误；
+
+    由数轴得：-2<a<-1.5，则1.5<-a<2，1<b<1.5，则$-a>b$，故D选项正确，
+
+    故选：D．'
+  knowledge_points:
+  - 综合
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2022-beijing-zhenti-fig07.png
+    width_mm: 92.6
+    height_mm: 14.6
+- id: 5
+  type: 选择
+  score: 2
+  question: '不透明的袋子中装有红、绿小球各一个，除颜色外两个小球无其他差别，从中随机摸出一个小球，放回并摇匀，再从中随机摸出一个小球，那么第一次摸到红球、第二次摸到绿球的概率是（）
+
+    A.$\frac{1}{4}$
+
+    B.$\frac{1}{3}$
+
+    C.$\frac{1}{2}$
+
+    D.$\frac{3}{4}$'
+  answer: A
+  solution: ''
+  knowledge_points:
+  - 概率
+  - 树状图
+  - 列表法
+  module: statisticsAndProbability
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 6
+  type: 选择
+  score: 2
+  question: '若关于x的一元二次方程$x^{2}+x+m=0$有两个相等的实数根，则实数m的值为（）
+
+    A.$-4$
+
+    B.$-\frac{1}{4}$
+
+    C.$\frac{1}{4}$
+
+    D.$4$'
+  answer: C
+  solution: '∵一元二次方程$x^{2}+x+m=0$有两个相等的实数根，
+
+    ∴∆=0，
+
+    ∴$1^{2}-4m=0$，
+
+    解得$m = \frac{1}{4}$，故C正确．
+
+    故选：C．'
+  knowledge_points:
+  - 一元二次方程
+  module: numbersAndExpressions
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 7
+  type: 选择
+  score: 2
+  question: '图中的图形为轴对称图形，该图形的对称轴的条数为（）
+
+    [图]
+
+    A.$1$
+
+    B.$2$
+
+    C.$3$
+
+    D.$5$'
+  answer: D
+  solution: '解∶如图，
+
+    [图]
+
+    一共有5条对称轴．
+
+    故选：D'
+  knowledge_points:
+  - 轴对称图形
+  - 轴对称
+  module: geometryComprehensive
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2022-beijing-zhenti-fig09.png
+    width_mm: 26.2
+    height_mm: 25.1
+- id: 8
+  type: 选择
+  score: 2
+  question: '下面的三个问题中都有两个变量：
+
+    ①汽车从A地匀速行驶到B地，汽车的剩余路程y与行驶时间x；
+
+    ②将水箱中的水匀速放出，直至放完，水箱中的剩余水量y与放水时间x；
+
+    ③用长度一定的绳子围成一个矩形，矩形的面积y与一边长x，其中，变量y与变量x之间的函数关系可以利用如图所示的图象表示的是（）
+
+    [图]
+
+    A.①②
+
+    B.①③
+
+    C.②③
+
+    D.①②③'
+  answer: A
+  solution: '解：①汽车从A地匀速行驶到B地，汽车的剩余路程y随行驶时间x的增大而减小，故①可以利用该图象表示；
+
+    ②将水箱中的水匀速放出，直至放完，水箱中的剩余水量y随放水时间x的增大而减小，故②可以利用该图象表示；
+
+    ③设绳子的长为L，一边长x，则另一边长为$\frac{1}{2}L-x$，
+
+    则矩形的面积为：$y = \left(\frac{1}{2}L - x\right)x = -x^2 + \frac{1}{2}Lx$，
+
+    故③不可以利用该图象表示；
+
+    故可以利用该图象表示的有：①②，
+
+    故选：A．'
+  knowledge_points:
+  - 矩形
+  module: functions
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+  figures:
+  - path: figures/2022-beijing-zhenti-fig11.png
+    width_mm: 48.2
+    height_mm: 34.7
+- id: 9
+  type: 填空
+  score: 2
+  question: 若$\sqrt{x-8}$在实数范围内有意义，则实数x的取值范围是___________．
+  answer: x≥8
+  solution: '解：由题意得：
+
+    x-8≥0，
+
+    解得：x≥8．
+
+    故答案为：x≥8．'
+  knowledge_points:
+  - 综合
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 10
+  type: 填空
+  score: 2
+  question: 分解因式：$xy^{2}-x=$______．
+  answer: $x(y+1)(y-1)$
+  solution: '$xy^{2}-x$
+
+    $=x\left(y^{2}-1\right)$
+
+    $=x(y+1)(y-1)$
+
+    故答案为：$x(y+1)(y-1)$．'
+  knowledge_points:
+  - 因式分解
+  - 方差
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 11
+  type: 填空
+  score: 2
+  question: 方程$\frac{2}{x+5}=\frac{1}{x}$的解为___________．
+  answer: x=5
+  solution: '解：$\frac{2}{x+5}=\frac{1}{x}$
+
+    方程的两边同乘x(x+5),得：2x=x+5,解得：x=5,经检验：把x=5代入x(x+5)=50≠0.故原方程的解为：x=5'
+  knowledge_points:
+  - 分式方程
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 12
+  type: 填空
+  score: 2
+  question: 在平面直角坐标系xOy中，若点$A(2,\ y_{1}),B(5,\ y_{2})$在反比例函数$y=\frac{k}{x}(k>0)$的图象上，则$y_{1}$______$y_{2}$（填“>”“=”或“<”）
+  answer: ＞
+  solution: '解：∵k>0，
+
+    ∴在每个象限内，y随x的增大而减小，
+
+    $\because 2<5$，
+
+    ∴$y_{1}$>$y_{2}$．
+
+    故答案为：>．'
+  knowledge_points:
+  - 反比例函数
+  - 坐标系
+  module: functions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 13
+  type: 填空
+  score: 2
+  question: '某商场准备进400双滑冰鞋，了解了某段时间内销售的40双滑冰鞋的鞋号，数据如下：
+
+    | 鞋号 | 35 | 36 | 37 | 38 | 39 | 40 | 41 | 42 | 43 |
+
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+
+    | 销售量 / 双 | 2 | 4 | 5 | 5 | 12 | 6 | 3 | 2 | 1 |
+
+    根据以上数据，估计该商场进鞋号需求最多的滑冰鞋的数量为________双．'
+  answer: '120'
+  solution: '解：根据题意得：39码的鞋销售量为12双，销售量最高，
+
+    ∴该商场进鞋号需求最多的滑冰鞋的数量为$400\times\frac{12}{40}=120$双．
+
+    故答案为：120'
+  knowledge_points:
+  - 综合
+  module: statisticsAndProbability
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 14
+  type: 填空
+  score: 2
+  question: '如图，在$\triangle ABC$中，AD平分$\angle BAC, DE \perp AB$若$AC = 2, DE = 1,$则$S_{\triangle ACD} =$____．
+
+    [图]'
+  answer: '1'
+  solution: '解：如图，作$DF \perp AC$于点F，
+
+    [图]
+
+    ∵AD平分$\angle BAC$，$DE \perp AB$，$DF \perp AC$，
+
+    ∴$DF=DE=1$，
+
+    ∴$S_{\triangle BDF} = \frac{1}{2} AC \cdot DF = \frac{1}{2} \times 2x \times 1 = x$．
+
+    故答案为：1．'
+  knowledge_points:
+  - 综合
+  module: triangles
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2022-beijing-zhenti-fig12.png
+    width_mm: 32.0
+    height_mm: 28.8
+- id: 15
+  type: 填空
+  score: 2
+  question: '如图，在矩形$ABCD$中，若$AB = 3, AC = 5, \frac{AD}{EC} = \frac{1}{4}$，则AE的长为_______．
+
+    [图]'
+  answer: '1'
+  solution: '解：在矩形$ABCD$中：$AD \parallel BC$，$\angle ABC = 90^\circ$，
+
+    ∴$\frac{AE}{BC}=\frac{AF}{FC}=\frac{1}{4}$，$BC = \sqrt{AC^{2} - AB^{2}} = \sqrt{5^{2} - 3^{2}} = 4$，
+
+    ∴$\frac{AE}{4}=\frac{1}{4}$，
+
+    ∴$AE = 1$，
+
+    故答案为：1．'
+  knowledge_points:
+  - 平行线
+  - 勾股定理
+  - 矩形
+  module: triangles
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2022-beijing-zhenti-fig14.png
+    width_mm: 40.2
+    height_mm: 27.3
+- id: 16
+  type: 填空
+  score: 2
+  question: '甲工厂将生产$[公式]$I号、II号两种产品共打包成5个不同的包裹，编号分别为A，B，C，D，E，每个包裹的重量及包裹中I号、II号产品的重量如下：
+
+    | 包裹编号 | I 号产品重量 / 吨 | II 号产品重量 / 吨 | 包裹的重量 / 吨 |
+
+    | --- | --- | --- | --- |
+
+    | A | 5 | 1 | 6 |
+
+    | B | 3 | 2 | 5 |
+
+    | C | 2 | 3 | 5 |
+
+    | D | 4 | 3 | 7 |
+
+    | E | 3 | 5 | 8 |
+
+    甲工厂准备用一辆载重不超过19.5吨的货车将部分包裹一次运送到乙工厂．
+
+    （1）如果装运的I号产品不少于9吨，且不多于11吨，写出一种满足条件的装运方案________（写出要装运包裹的编号）；
+
+    （2）如果装运的I号产品不少于9吨，且不多于11吨，同时装运的II号产品最多，写出满足条件的装运方案________（写出要装运包裹的编号）．'
+  answer: ①.ABC（或ABE或AD或ACD或BCD） ②.ABE或BCD
+  solution: '解：（1）根据题意，
+
+    选择ABC时，装运的I号产品重量为：$5+3+2=10$（吨），总重$6+5+5=16<19.5$（吨），符合要求；
+
+    选择ABE时，装运的I号产品重量为：$5+3+3=11$（吨），总重$6.5+8<19.5$（吨），符合要求；
+
+    选择AD时，装运的I号产品重量为：$5+4=9$（吨），总重$6+7=13<19.5$（吨），符合要求；
+
+    选择ACD时，装运的I号产品重量为：$5+2+4=11$（吨），总重$6+5+7=18<19.5$（吨），符合要求；
+
+    选择BCD时，装运的I号产品重量为：$3+2+4=9$（吨），总重$5+5\cdot7<19.5$（吨），符合要求；
+
+    选择DCE时，装运的I号产品重量为：$4+2+3=9$（吨），总重$7+5+8=20>19.5$（吨），不符合要求；
+
+    选择BDE时，装运的I号产品重量为：$3 + 4 + 3 = 10$（吨），总重$5 + 7 + 8 = 20 > 19.5$（吨），不符合要求；
+
+    综上，满足条件的装运方案有ABC或ABE或AD或ACD或BCD．
+
+    故答案为：ABC（或ABE或AD或ACD或BCD）．
+
+    （2）选择ABC时，装运的II号产品重量为：$1+2+3=6$（吨）；
+
+    选择ABE时，装运的II号产品重量为：$1+2+5=8$（吨）；
+
+    选择AD时，装运的II号产品重量为：$1+3=4$（吨）；
+
+    选择ACD时，装运的II号产品重量为：$1+3+3=7$（吨）；
+
+    选择BCD时，装运的II号产品重量为：$2+3+3=8$（吨）；
+
+    故答案为：ABE或BCD．'
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 17
+  type: 解答
+  score: 5
+  question: 计算：$(x-1)^{0}+4\sin 45^{\circ}-\sqrt{8}+|-3|$
+  answer: '4'
+  solution: '解：$(x-1)^{0}+4\sin 45^{\circ}-\sqrt{8}+|-3|$
+
+    $-1 + \frac{4 - \sqrt{2}}{2} - 2\sqrt{2} + 3$
+
+    $=4$．'
+  knowledge_points:
+  - 弦
+  - 绝对值
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 18
+  type: 解答
+  score: 5
+  question: 解不等式组：$\left\{ \begin{array} { l } { 2 + x > 7 - 4 x , } \\ { x < \frac { 4 + x } { 2 } } \end{array} \right.$
+  answer: $1<x<4$
+  solution: '解：$\begin{aligned}
+
+    &2+x>7-4x \quad ① \\
+
+    &x<\frac{4+x}{2} \quad ②
+
+    \end{aligned}$
+
+    解不等式①得$x>1$，
+
+    解不等式②得$x<4$，
+
+    故所给不等式组的解集为：$1<x<4$．'
+  knowledge_points:
+  - 不等式
+  - 不等式组
+  module: equationsAndInequalities
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 19
+  type: 解答
+  score: 5
+  question: 已知$x^{2}+2x-2=0$，求代数式$x(x+2)+(x+1)^{2}$的值．
+  answer: ５
+  solution: '解：∵$x^{2}+2x-2=0$，
+
+    ∴$x^{2}+2x=2$，
+
+    ∴$x(x+2)+(x+1)^{2}$
+
+    $x^{2}+2x+x^{2}+2x+1$
+
+    $=2x^{2}+4x+1$
+
+    $=2(x^{2}+2x)+1$
+
+    $=2\times2+1$
+
+    $= 5$'
+  knowledge_points:
+  - 综合
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 20
+  type: 解答
+  score: 5
+  question: '下面是证明三角形内角和定理的两种添加辅助线的方法，选择其中一种，完成证明．
+
+    | [图] 三角形内角和定理：三角形三个内角和等于 180° ， 已知：如图， $\triangle ABC$ , 求证： $\angle A+\angle B+\angle C=180^\circ$ |  |
+
+    | --- | --- |
+
+    | 方法一 证明：如图，过点 A 作 $DE\parallel BC.$ [图] | 方法二 证明：如图，过点 C 作 $CD\parallel AB.$ [图] |'
+  answer: 答案见解析
+  solution: '证明：过点A作$DE \parallel BC$，
+
+    则$\angle B=\angle BAD$，$\angle C=\angle EAC$．$\left( \right)$两直线平行，内错角相等）
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$点D，A，E在同一条直线上，
+
+    $\angle DAB + \angle BAC + \angle C = 180^\circ$．（平角的定义）
+
+    $\angle B+\angle BAC+\angle C=180^{\circ}$．
+
+    即三角形的内角和为$180^\circ$．'
+  knowledge_points:
+  - 平行线
+  module: triangles
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 21
+  type: 解答
+  score: 5
+  question: '如图，在$\Box ABCD$中，$AC, BD$交于点O，点$E, F$在AC上，$AE = CF$．
+
+    [图]
+
+    （1）求证：四边形$EBFD$是平行四边形；
+
+    （2）若$\angle BAC = \angle DAC,$求证：四边形$EBFD$是菱形．'
+  answer: （1）见解析 （2）见解析
+  solution: '【小问1详解】
+
+    证明：∵四边形ABCD为平行四边形，
+
+    ∴$AO = CO$，$BO = DO$，
+
+    ∵$AE = CF$，
+
+    ∴$AO\cdot AE=CO\cdot CF$，
+
+    即$EO = FO$，
+
+    ∴四边形$EBFD$是平行四边形．
+
+    【小问2详解】
+
+    ∵四边形ABCD为平行四边形，
+
+    ∴$AB \parallel CD$，
+
+    ∴$\angle DCA = \angle BAC$，
+
+    ∵$\angle BAC = \angle DAC,$
+
+    ∴$\angle DCA = \angle DAC$，
+
+    ∴$DA = DC$，
+
+    ∴四边形ABCD为菱形，
+
+    ∴$AC \perp BD$，
+
+    即$EF \perp BD$，
+
+    ∵四边形$EBFD$是平行四边形，
+
+    ∴四边形$EBFD$是菱形．'
+  knowledge_points:
+  - 平行线
+  - 平行四边形
+  - 菱形
+  module: quadrilaterals
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2022-beijing-zhenti-fig15.png
+    width_mm: 70.9
+    height_mm: 33.1
+- id: 22
+  type: 解答
+  score: 5
+  question: '在平面直角坐标系xOy中，函数$y=kx+b(k\neq0)$$[公式]$图象经过点$(4,3)$，$(-2,0)$，且与y轴交于点A．
+
+    （1）求该函数的解析式及点A的坐标；
+
+    （2）当$x > 0$时，对于x的每一个值，函数$y = x + n$的值大于函数$y=kx+b(k\neq0)$的值，直接写出n的取值范围．'
+  answer: （1）$y=\frac{1}{2}x+1$，$(0,1)$ （2）$n\ 1$
+  solution: '【小问1详解】
+
+    解：将$(4,3)$，$(-2,0)$代入函数解析式得，
+
+    $\left\{\begin{array}{l}3-4k+b\\0=-2k+b\end{array}\right.$，解得$\left\{
+
+    \begin{array}{l}
+
+    k = \dfrac{1}{2} \\
+
+    b = 1
+
+    \end{array}
+
+    \right.$，
+
+    ∴函数的解析式为：$y=\frac{1}{2}x+1$，
+
+    当$x = 0$时，得$y = 1$，
+
+    ∴点A的坐标为$(0,1)$．
+
+    【小问2详解】
+
+    由题意得，
+
+    $x + \pi > \frac{1}{2}x + 1$，即$x > 2 - 2n$，
+
+    又由$x > 0$，得$2-2n\leq0$，
+
+    解得$n\ 1$，
+
+    ∴n的取值范围为$n\ 1$．'
+  knowledge_points:
+  - 不等式
+  - 坐标系
+  module: equationsAndInequalities
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 23
+  type: 解答
+  score: 6
+  question: '某校举办“歌唱祖国”演唱比赛，十位评委对每位同学的演唱进行现场打分，对参加比赛的甲、乙、丙三位同学得分的数据进行整理、描述和分析，下面给出了部分信息．
+
+    a．甲、乙两位同学得分的折线图：
+
+    [图]
+
+    b．丙同学得分：
+
+    10，10，10，9，9，8，3，9，8，10
+
+    c．甲、乙、丙三位同学得分的平均数：
+
+    | 同学 | 甲 | 乙 | 丙 |
+
+    | --- | --- | --- | --- |
+
+    | 平均数 | 8.6 | 8.6 | m |
+
+    根据以上信息，回答下列问题：
+
+    （1）求表中m的值；
+
+    （2）在参加比赛的同学中，如果某同学得分的10个数据的方差越小，则认为评委对该同学演唱的评价越一致．据此推断：甲、乙两位同学中，评委对_________的评价更一致（填“甲”或“乙”）；
+
+    （3）如果每位同学的最后得分为去掉十位评委打分中的一个最高分和一个最低分后的平均分，最后得分越高，则认为该同学表现越优秀．据此推断：在甲、乙、丙三位同学中，表现最优秀的是_________（填“甲”“乙”或“丙”）．'
+  answer: （1）$8.6$ （2）甲 （3）丙
+  solution: '【小问1详解】
+
+    解：丙的平均数：$\frac{10+10+10+9+8+3+9+8+10}{10}=8.6$，
+
+    则$m = 8.6$．
+
+    【小问2详解】
+
+    $S_{1}^{2}=\frac{1}{10}\left[2\times(8.6-8)^{2}+4\times(8.6-9)^{2}+2\times(8.6-7)^{2}+2\times(8.6-10)^{2}\right]=1.04$，
+
+    $S_{x}^{2}=\frac{1}{10}\left[4\times(8.6-7)^{2}+4\times(8.6-10)^{2}+2\times(8.6-9)^{2}\right]=1.84$，
+
+    $\therefore S_{\parallel}^{2}<S_{\angle}^{2}$，
+
+    ∴甲、乙两位同学中，评委对甲的评价更一致，
+
+    故答案为：甲．
+
+    【小问3详解】
+
+    由题意得，去掉一个最高分和一个最低分后的平均分为：
+
+    甲：$\frac{8+8+9+7+9+9+9+10}{8}=8.625$，
+
+    乙：$7+7+7+9+9+10+10+10=8.625$，
+
+    丙：$\frac{10+10+9+8+8+9+8+10}{8}=9.125$，
+
+    ∵去掉一个最高分和一个最低分后丙的平均分最高，
+
+    因此最优秀的是丙，
+
+    故答案为：丙．'
+  knowledge_points:
+  - 统计
+  - 平均数
+  - 中位数
+  - 方差
+  module: statisticsAndProbability
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+  figures:
+  - path: figures/2022-beijing-zhenti-fig16.png
+    width_mm: 113.8
+    height_mm: 57.7
+- id: 24
+  type: 解答
+  score: 6
+  question: '如图，AB是$\odot\odot$的直径，CD是$\odot\odot$的一条弦，$AB \perp CD,$连接$AC,OD.$
+
+    [图]
+
+    （1）求证：$\angle BOD=2\angle A$
+
+    （2）连接DB,过点C作$CE \perp DB,$交DB的延长线于点E，延长$DO,$交AC于点F，若F为AC的中点，求证：直线CE为$\odot\odot$的切线．'
+  answer: （1）答案见解析 （2）答案见解析
+  solution: '【小问1详解】
+
+    证明：设AB交CD于点H，连接OC，
+
+    [图]
+
+    由题可知，
+
+    $\therefore OC = OD$，$\angle OHC=\angle OHD=90^{\circ}$，
+
+    $\therefore OH = OH$，
+
+    $\ldots R\triangle COH \cong R\triangle DOH (HL)$，
+
+    $\angle COH = \angle DOH$，
+
+    $\therefore \widehat{BC}=\widehat{BD}$，
+
+    $\angle COB = \angle BOD$，
+
+    $\angle COB=2\angle A$，
+
+    $\angle BOD=2\angle A$；
+
+    【小问2详解】
+
+    证明：$\pi$
+
+    [图]
+
+    连接AD，
+
+    $\because OA = OD$，
+
+    $\angle OAD = \angle ODA$，
+
+    同理可得：$\angle OAC = \angle OCA$,$\angle OCD = \angle ODC$，
+
+    ∵点H是CD的中点，点F是AC的中点，
+
+    $\angle OAD = \angle ODA = \angle OAC = \angle OCA = \angle OCD = \angle ODC$，
+
+    $\angle OAD+\angle ODA+\angle OAC+\angle OCA+\angle ODC+\angle ODC=180^\circ$，
+
+    $\angle LOAD = \angle LODA = \angle OAC = \angle OCA = \angle OCD = \angle ODC = 30^\circ$，
+
+    $\angle COB = \angle CAO = 2 \times 30^\circ = 60^\circ$，
+
+    QAB为$\odot\odot$的直径，
+
+    $\angle AD'
+  knowledge_points:
+  - 平行线
+  - 圆周角
+  - 切线
+  - 弦
+  module: triangles
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+  figures:
+  - path: figures/2022-beijing-zhenti-fig17.png
+    width_mm: 54.8
+    height_mm: 49.2
+- id: 25
+  type: 解答
+  score: 6
+  question: '单板滑雪大跳台是北京冬奥会比赛项目之一，举办场地为首钢滑雪大跳台，运动员起跳后的飞行路线可以看作是抛物线的一部分，建立如图所示的平面直角坐标系，从起跳到着陆的过程中，运动员的竖直高度y（单位：m）与水平距离x（单位：m）近似满足函数关系$y = a(x - h)^2 + k (a < 0)$．
+
+    [图]
+
+    某运动员进行了两次训练．
+
+    （1）第一次训练时，该运动员的水平距离x与竖直高度y的几组数据如下：
+
+    | 水平距离 x /m | 0 | 2 | 5 | 8 | 11 | 14 |
+
+    | --- | --- | --- | --- | --- | --- | --- |
+
+    | 竖直高度 y /m | 20.00 | 21.40 | 22.75 | 23.20 | 22.75 | 21.40 |
+
+    根据上述数据，直接写出该运动员竖直高度的最大值，并求出满足的函数关系$y = a(x - h)^2 + k (a < 0)$
+
+    （2）第二次训练时，该运动员的竖直高度y与水平距离x近似满足函数关系$y = -0.04(x - 9)^2 + 23.24$记该运动员第一次训练的着陆点的水平距离为d1，第二次训练的着陆点的水平距离为$d_{2}$，则$d_{1}$______$d_{2}$（填“>”“=”或“<”）．'
+  answer: （1）23.20m；$y = -0.05(x - 8)^2 + 23.20$ （2）$\lt$
+  solution: '【小问1详解】
+
+    解：根据表格中的数据可知，抛物线的顶点坐标为：$(8,23.20)$，
+
+    ∴$h=8$，$k = 23.20$，
+
+    即该运动员竖直高度的最大值为23.20m，
+
+    根据表格中的数据可知，当$x = 0$时，$y = 20.00$，代入$y=a(x-8)^{2}+23.20$得：
+
+    $20.00=a(0-8)^{x}+23.20$，解得：$a = -0.05$，
+
+    ∴函数关系关系式为：$y = -0.05(x - 8)^2 + 23.20$．
+
+    【小问2详解】
+
+    设着陆点的纵坐标为t，则第一次训练时，$t = 0.051 \times (-8)^{2} + 23.20$，
+
+    解得：$x=8+\sqrt{20(23.20-t)}$或$x=8-\sqrt{20(23.20-\tau)}$，
+
+    ∴根据图象可知，第一次训练时着陆点的水平距离$d_{1}=8+\sqrt{26(23.20-\bar{c})}$，
+
+    第二次训练时，$t = -0.04(x - 9)^2 + 23.24$，
+
+    解得：$x=9+\sqrt{25(23.24-x)}$或$x=9-\sqrt{25(23.24-x)}$，
+
+    ∴根据图象可知，第二次训练时着陆点的水平距离$d_{2}=9+\sqrt{25(23.24-t)}$，
+
+    ∵$20(23.20-r)<25(23.24-r)$，
+
+    ∴$\sqrt{20(23.20-t)}<\sqrt{28(23.24-t)}$，
+
+    ∴$d_{1}<d_{2}$．
+
+    故答案为：$\lt$．'
+  knowledge_points:
+  - 二次函数
+  - 坐标系
+  module: functions
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+  figures:
+  - path: figures/2022-beijing-zhenti-fig20.png
+    width_mm: 143.7
+    height_mm: 53.4
+- id: 26
+  type: 解答
+  score: 6
+  question: '在平面直角坐标系xOy中，点$(1,m),(3,n)$在抛物线$y=ax^{2}+bx+c(a>0)$上，设抛物线的对称轴为$x = t.$
+
+    （1）当$c = 2, m = n$时，求抛物线与y轴交点的坐标及t的值；
+
+    （2）点$(x_0,m)(x_0\neq1)$在抛物线上，若$m < n < c,$求t的取值范围及$x_0$的取值范围．'
+  answer: （1）（0，2）；2 （2）t的取值范围为$\frac{3}{2}<t<2$，$x_0$的取值范围为$2 < x_0 < 3$
+  solution: '【小问1详解】
+
+    解：当$c = 2$时，$y = ax^2 + bx + 2$，
+
+    ∴当x=0时，y=2，
+
+    ∴抛物线与y轴交点的坐标为（0，2）；
+
+    ∵$m = n$，
+
+    ∴点$(1,m),(3,n)$关于对称轴为$x = t$对称，
+
+    ∴$t=\frac{1+3}{2}=2$；
+
+    【小问2详解】
+
+    解：当x=0时，y=c，
+
+    ∴抛物线与y轴交点坐标为（0，c），
+
+    ∴抛物线与y轴交点关于对称轴$x = t$的对称点坐标为（2t，c），
+
+    ∵$a > 0$，
+
+    ∴当$x \leq t$时，y随x的增大而减小，当$x > t$时，y随x的增大而增大，
+
+    当点$(1,m)$，点$(3,n)$，（2t，c）均在对称轴的右侧时，$t < 1$，
+
+    ∵$m < n < c,$1＜3，
+
+    ∴2t＞3，即$t>\frac{3}{2}$（不合题意，舍去），
+
+    当点$(1,m)$在对称轴的左侧，点$(3,n)$，（2t，c）均在对称轴的右侧时，点$(x_0,m)$在对称轴的右侧，$1<t<3$，
+
+    此时点$(3,n)$到对称轴$x = t$的距离大于点$(1,m)$到对称轴$x = t$的距离，
+
+    ∴$t-1<3-t$，解得：$t<2$，
+
+    ∵$m < n < c,$1＜3，
+
+    ∴2t＞3，即$t>\frac{3}{2}$，
+
+    ∴$\frac{3}{2}<t<2$，
+
+    ∵$(x_0,m)$，$(1,m)$，对称轴为$x = t$，
+
+    ∴$t = \frac{x_0 + 1}{2}$，
+
+    ∴$\frac{3}{2}<\frac{x_{0}+1}{2}<2$，解得：$2 < x_0 < 3$，
+
+    ∴t的取值范围为$\frac{3}{2}<t<2$，$x_0$的取值范围为$2 < x_0 < 3$．'
+  knowledge_points:
+  - 二次函数
+  - 坐标系
+  module: functions
+  difficulty: 压轴
+  recommended_for:
+  - L3
+- id: 27
+  type: 解答
+  score: 7
+  question: '在$\triangle ABC$中，$\angle ACB=90^{\circ}$，D为$\triangle ABC$内一点，连接BD，DC，延长DC到点E，使得$CE = DC.$
+
+    [图][图]
+
+    （1）如图1，延长BC到点F，使得$CF = BC$，连接AF，EF，若$AF \perp EF$，求证：$BD \perp AF$；
+
+    （2）连接AE，交BD的延长线于点H，连接CH，依题意补全图2，若$AB^{2}=AE^{2}+BD^{2}$，用等式表示线段CD与CH的数量关系，并证明．'
+  answer: （1）见解析 （2）$CD = CH$；证明见解析
+  solution: '【小问1详解】
+
+    证明：在$\triangle FCE$和$\triangle BCD$中，
+
+    $CE = CD \\
+
+    \angle FCE = \angle BCD \\
+
+    CF = CB$，
+
+    ∴$\triangle FCE \cong \triangle BCD (SAS)$，
+
+    ∴$\triangle CFE \cong \triangle CBD$，
+
+    ∴$EF \parallel BD$，
+
+    ∵$AF \perp EF$，
+
+    ∴$BD \perp AF$．
+
+    【小问2详解】
+
+    解：补全后的图形如图所示，$CD = CH$，证明如下：
+
+    [图]
+
+    延长BC到点M，使CM＝CB，连接EM，AM，
+
+    ∵$\angle ACB=90^{\circ}$，CM＝CB，
+
+    ∴AC垂直平分BM，
+
+    ∴$AB = AM$，
+
+    在$\triangle MEC$和$\triangle BDC$中，
+
+    $CM = CB \\
+
+    \angle MCE = \angle BCD \\
+
+    CE = CD$，
+
+    ∴$\triangle MEC \cong \triangle BDC (SAS)$，
+
+    ∴$ME=BD$，$\triangle CME \cong \triangle CBD$，
+
+    ∵$AB^{2}=AE^{2}+BD^{2}$，
+
+    ∴$AM^{2}=AE^{2}+ME^{2}$，
+
+    ∴$\angle AEM = 90^\circ$，
+
+    ∵$\triangle CME \cong \triangle CBD$，
+
+    ∴$BH \parallel EM$，
+
+    ∴$\text{BHE} \diamondsuit \text{EM} \quad 90$，即$\angle DHE=90^\circ$，
+
+    ∵$CF - CD = \frac{1}{2}DE$，
+
+    ∴$CH = \frac{1}{2} DE$，
+
+    ∴$CD = CH$．'
+  knowledge_points:
+  - 平行线
+  - 全等三角形
+  - 勾股定理
+  module: triangles
+  difficulty: 压轴
+  recommended_for:
+  - L3
+  figures:
+  - path: figures/2022-beijing-zhenti-fig21.png
+    width_mm: 45.2
+    height_mm: 39.4
+  - path: figures/2022-beijing-zhenti-fig22.png
+    width_mm: 39.2
+    height_mm: 41.8
+- id: 28
+  type: 解答
+  score: 7
+  question: '在平面直角坐标系xOy中，已知点$M(a,b),N.$对于点P给出如下定义：将点P向右$(a\quad 0)$或向左$(a < 0)$平移$\left| a \right|$个单位长度，再向上$\left(b\quad0\right)$或向下$(b < 0)$平移$\left| b \right|$个单位长度，得到点$P''$，点$P''$关于点N的对称点为Q，称点Q为点P的“对应点”．
+
+    （1）如图，点$M(1,1)$点N在线段OM的延长线上，若点$P(-2,0)$点Q为点P的“对应点”．
+
+    [图]
+
+    ①在图中画出点Q；
+
+    ②连接$PQ,$交线段ON于点$T.$求证：$NT=\frac{1}{2}OM;$
+
+    （2）$\odot\odot$的半径为1，M是$\odot\odot$上一点，点N在线段OM上，且$\mathcal{O}N=\left\{\left(t,\frac{1}{2}t\right)\mid 0<t<1\right\}$，若P为$\odot\odot$外一点，点Q为点P的“对应点”，连接$PQ.$当点M在$\odot\odot$上运动时直接写出$\overline{PQ}$长的最大值与最小值的差（用含t的式子表示）'
+  answer: （1）见解析 （2）$4t-2$
+  solution: '【小问1详解】
+
+    解：①点Q如下图所示．
+
+    ∵点$M(1,1)$，
+
+    ∴点$P(-2,0)$向右平移1个单位长度，再向上平移1个单位长度，得到点$P''$，
+
+    ∴$P''(-1,1)$，
+
+    ∵点$P''$关于点N的对称点为Q，$N(2,2)$，
+
+    ∴点Q的横坐标为：$2\times2-(-1)=5$，纵坐标为：$2\times2-1=3$，
+
+    ∴点$Q(5,3)$，在坐标系内找出该点即可；
+
+    [图]
+
+    ②证明：如图延长ON至点$A(3,3)$，连接AQ，
+
+    ∵$AQ\parallel OP$，
+
+    ∴$\angle AQT = \angle OPT$，
+
+    在$\Delta QOT$与$\Delta\angle OPT$中，
+
+    $\angle AQT = \angle OPT \\
+
+    \angle ATQ = \angle OPT \\
+
+    AQ = OP$，
+
+    ∴$\triangle AQT \cong \triangle OPT (AAS)$，
+
+    ∴$TA=TO=\frac{1}{2}OA$，
+
+    ∵$A(3,3)$，$M(1,1)$，$N(2,2)$，
+
+    ∴$Ox=\sqrt{3^{2}+3^{2}}=3\sqrt{2}$，$OM = \sqrt{1^{2} + 1^{2}} = \sqrt{2}$，$ON=\sqrt{2^{2}+2^{2}}=2\sqrt{2}$，
+
+    ∴$TO=\frac{1}{2}OA=2\sqrt{2}$，
+
+    ∴$NT = ON - OT = 2\sqrt{2} - \frac{3}{2}\sqrt{2} = \frac{\sqrt{2}}{2}$，
+
+    ∴$NT=\frac{1}{2}OM$；
+
+    【小问2详解】
+
+    解：如图所示，
+
+    [图]
+
+    连接PO并延长至S，使$OP = OS$，延长SQ至T，使$ST = OM$，
+
+    ∵$M(a,b)$，点P向右$(a\quad 0)$或向左$(a < 0)$平移$\lef'
+  knowledge_points:
+  - 全等三角形
+  - 平移
+  - 坐标系
+  - 最值
+  module: geometryComprehensive
+  difficulty: 压轴
+  recommended_for:
+  - L3
+  figures:
+  - path: figures/2022-beijing-zhenti-fig24.png
+    width_mm: 78.8
+    height_mm: 45.0

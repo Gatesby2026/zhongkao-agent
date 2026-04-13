@@ -19,7 +19,13 @@ questions:
   score: 2
   question: '2023年5月28日，我国自主研发的$C919$国产大飞机商业首航取得圆满成功．一架$C919$飞机最大储油量超过$19000$千克．将数据$19000$用科学记数法表示为（）
 
-    A.$0.19\times10^{5}$B.$1.9\times10^{4}$C.$1.9\times10^{3}$D.$19\times10^{3}$'
+    A.$0.19\times10^{5}$
+
+    B.$1.9\times10^{4}$
+
+    C.$1.9\times10^{3}$
+
+    D.$19\times10^{3}$'
   answer: B
   solution: '解：$19000=1.9\times10^{4}$，
 
@@ -39,7 +45,13 @@ questions:
   score: 2
   question: '窗花是中国传统民间艺术之一，下列四个窗花作品既是轴对称图形又是中心对称图形的是（）
 
-    A.[图]B.[图]C.[图]D.[图]'
+    A.[图]
+
+    B.[图]
+
+    C.[图]
+
+    D.[图]'
   answer: D
   solution: '不是中心对称图形，是轴对称图形，不符合题意，
 
@@ -62,10 +74,18 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-fengtai-yi-fig02.png
-  - figures/2024-fengtai-yi-fig03.png
-  - figures/2024-fengtai-yi-fig04.png
-  - figures/2024-fengtai-yi-fig05.png
+  - path: figures/2024-fengtai-yi-fig02.png
+    width_mm: 27.5
+    height_mm: 26.7
+  - path: figures/2024-fengtai-yi-fig03.png
+    width_mm: 27.5
+    height_mm: 27.0
+  - path: figures/2024-fengtai-yi-fig04.png
+    width_mm: 28.8
+    height_mm: 28.0
+  - path: figures/2024-fengtai-yi-fig05.png
+    width_mm: 28.8
+    height_mm: 29.4
 - id: 3
   type: 选择
   score: 2
@@ -73,7 +93,13 @@ questions:
 
     [图]
 
-    A.$32^\circ$B.$58^\circ$C.$74^\circ$D.$106^\circ$'
+    A.$32^\circ$
+
+    B.$58^\circ$
+
+    C.$74^\circ$
+
+    D.$106^\circ$'
   answer: C
   solution: '解：$\because CA = CB$，$\angle1=32^\circ$，
 
@@ -94,13 +120,21 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-fengtai-yi-fig06.png
+  - path: figures/2024-fengtai-yi-fig06.png
+    width_mm: 41.0
+    height_mm: 30.4
 - id: 4
   type: 选择
   score: 2
   question: '已知实数a，b满足$a > b - 1$，则下列结论正确的是（）
 
-    A.$a > b$B.$a < b$C.$a+2>b+1$D.$a+2<b+1$'
+    A.$a > b$
+
+    B.$a < b$
+
+    C.$a+2>b+1$
+
+    D.$a+2<b+1$'
   answer: C
   solution: '解：A．当$a = 1, b = 1.1$，满足$a > b - 1$，但$a < b$，故A不正确；
 
@@ -127,7 +161,13 @@ questions:
 
     [图]
 
-    A.$22.5^\circ$B.$45^\circ$C.$60^\circ$D.$135^\circ$'
+    A.$22.5^\circ$
+
+    B.$45^\circ$
+
+    C.$60^\circ$
+
+    D.$135^\circ$'
   answer: B
   solution: '解：$\begin{array}{c}
 
@@ -160,15 +200,21 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-fengtai-yi-fig07.png
+  - path: figures/2024-fengtai-yi-fig07.png
+    width_mm: 60.6
+    height_mm: 26.5
 - id: 6
   type: 选择
   score: 2
   question: '若关于x的方程$ax^{2}-3x+c=0$有两个不相等的实数根，则满足条件的实数a，c的值可以是（）
 
-    A.$a = 0$，$c = 1$B.$a = 1$，$c = 3$
+    A.$a = 0$，$c = 1$
 
-    C.$a = -2$，$c = -4$D.$a = -1$，$c = 3$'
+    B.$a = 1$，$c = 3$
+
+    C.$a = -2$，$c = -4$
+
+    D.$a = -1$，$c = 3$'
   answer: D
   solution: '解：A、当$a = 0$，$c = 1$时，方程是一元一次方程，本选项不符合题意；
 
@@ -193,7 +239,13 @@ questions:
   score: 2
   question: '不透明的袋子中装有四个小球，上面分别写有数字“1”，“2”，“3”，“4”，除数字外这些小球无其他差别．从袋中随机同时摸出两个小球，那么这两个小球上的数字之和是5的概率是（）
 
-    A.$\frac{1}{2}$B.$\frac{1}{3}$C.$\frac{1}{4}$D.$\frac{1}{6}$'
+    A.$\frac{1}{2}$
+
+    B.$\frac{1}{3}$
+
+    C.$\frac{1}{4}$
+
+    D.$\frac{1}{6}$'
   answer: B
   solution: '解：根据题意画树状图如图：
 
@@ -213,12 +265,12 @@ questions:
   - L1
   - L2
   - L3
-  figures:
-  - figures/2024-fengtai-yi-fig08.png
 - id: 8
   type: 选择
   score: 2
-  question: '如图，在正方形$ABCD$中，点E，F分别是$AD, AB$边上的点，$AE = AF$，且$0 < AE < ED$，过点E作$EH \perp BC$于点H，过点F作$FG\perp CD$于点G，$EH, FG$交于点D，连接$OB, OD, BD.$设$AE = a$，$ED = b$，$BD = c$，给出下面三个结论：
+  question: '如图，在正方形$ABCD$中，点E，F分别是$AD, AB$边上的点，$AE = AF$，且$0 < AE < ED$，过点E作$EH \perp BC$于点H，过点F作$FG\perp CD$于点G，$EH, FG$交于点D，连接$OB, OD, B
+
+    D.$设$AE = a$，$ED = b$，$BD = c$，给出下面三个结论：
 
     ①$a+b\sqrt{a^{2}+b^{2}}$；②$2\sqrt{a^{2}+b^{2}}>c$；③$a+b>\frac{\sqrt{2}}{2}c$．
 
@@ -226,7 +278,13 @@ questions:
 
     [图]
 
-    A.①②B.①③C.②③D.①②③'
+    A.①②
+
+    B.①③
+
+    C.②③
+
+    D.①②③'
   answer: A
   solution: '解：∵四边形$ABCD$是正方形，
 
@@ -276,7 +334,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-fengtai-yi-fig09.png
+  - path: figures/2024-fengtai-yi-fig09.png
+    width_mm: 32.0
+    height_mm: 33.1
 - id: 9
   type: 填空
   score: 2
@@ -382,7 +442,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-fengtai-yi-fig10.png
+  - path: figures/2024-fengtai-yi-fig10.png
+    width_mm: 36.8
+    height_mm: 30.2
 - id: 14
   type: 填空
   score: 2
@@ -405,7 +467,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-fengtai-yi-fig11.png
+  - path: figures/2024-fengtai-yi-fig11.png
+    width_mm: 63.5
+    height_mm: 52.4
 - id: 15
   type: 填空
   score: 2
@@ -438,36 +502,19 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-fengtai-yi-fig12.png
-  - figures/2024-fengtai-yi-fig13.png
+  - path: figures/2024-fengtai-yi-fig12.png
+    width_mm: 37.6
+    height_mm: 38.9
 - id: 16
   type: 填空
   score: 2
   question: '车间里有五台车床同时出现故障．已知第一台至第五台修复的时间如下表：
 
-    车床代号
+    | 车床代号 | A | B | C | D | E |
 
-    A
+    | --- | --- | --- | --- | --- | --- |
 
-    B
-
-    C
-
-    D
-
-    E
-
-    修复时间（分钟）
-
-    15
-
-    8
-
-    29
-
-    7
-
-    10
+    | 修复时间（分钟） | 15 | 8 | 29 | 7 | 10 |
 
     若每台车床停产一分钟造成经济损失10元，修复后即可投入生产．
 
@@ -476,7 +523,7 @@ questions:
     ①$D \to B \to E \to A \to C$；②$D \to A \to C \to E \to B$；③$C \to A \to E \to B \to D$中，经济损失最少的是______（填序号）；
 
     （2）若由两名修理工同时修理车床，且每台车床只由一名修理工修理，则最少经济损失为______元．'
-  answer: ①.①②.1010
+  answer: ①.① ②.1010
   solution: '解：（1）①总停产时间：$5\times7+4\times8+3\times10+2\times15+29=156$分钟，
 
     ②总停产时间：$5\times7+4\times15+3\times29+2\times10+6=210$分钟，
@@ -586,7 +633,7 @@ questions:
     （1）求证：四边形$ACBE$是矩形；
 
     （2）连接AD，若$AD = 5\sqrt{2}$，$\tan \angle BAC = \frac{2}{3}$，求AC的长．'
-  answer: （1）见解析（2）$3\sqrt{2}$
+  answer: （1）见解析 （2）$3\sqrt{2}$
   solution: '【小问1详解】
 
     证明：（1）∵$AE \parallel BD$，$DE \parallel BA$，
@@ -637,7 +684,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-fengtai-yi-fig14.png
+  - path: figures/2024-fengtai-yi-fig14.png
+    width_mm: 45.5
+    height_mm: 39.7
 - id: 21
   type: 解答
   score: 5
@@ -671,7 +720,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-fengtai-yi-fig15.png
+  - path: figures/2024-fengtai-yi-fig15.png
+    width_mm: 123.8
+    height_mm: 38.4
 - id: 22
   type: 解答
   score: 5
@@ -719,8 +770,6 @@ questions:
   - L1
   - L2
   - L3
-  figures:
-  - figures/2024-fengtai-yi-fig16.png
 - id: 23
   type: 解答
   score: 6
@@ -730,17 +779,11 @@ questions:
 
     b．$10$名学生立定跳远成绩的平均数、中位数、众数：
 
-    平均数
+    | 平均数 | 中位数 | 众数 |
 
-    中位数
+    | --- | --- | --- |
 
-    众数
-
-    $239.5$
-
-    m
-
-    n
+    | $239.5$ | m | n |
 
     （1）写出表中m，n的值；
 
@@ -754,55 +797,17 @@ questions:
 
     ②若甲、乙、丙三名学生的5次复活赛测试成绩如下表：
 
-    第一次
+    |  | 第一次 | 第二次 | 第三次 | 第四次 | 第五次 |
 
-    第二次
+    | --- | --- | --- | --- | --- | --- |
 
-    第三次
+    | 甲 | $236$ | $238$ | $240$ | $237$ | $237$ |
 
-    第四次
+    | 乙 | $237$ | $239$ | $240$ | $244$ | $235$ |
 
-    第五次
+    | 丙 | $237$ | $242$ | $237$ | $239$ | $240$ |
 
-    甲
-
-    $236$
-
-    $238$
-
-    $240$
-
-    $237$
-
-    $237$
-
-    乙
-
-    $237$
-
-    $239$
-
-    $240$
-
-    $244$
-
-    $235$
-
-    丙
-
-    $237$
-
-    $242$
-
-    $237$
-
-    $239$
-
-    $240$
-
-    则可以进入决赛的学生为______（填“甲”“乙”或“丙”）
-
-    ．'
+    则可以进入决赛的学生为______（填“甲”“乙”或“丙”） ．'
   answer: （1）$m = 239$，$n = 238$ （2）①$240$；②丙
   solution: '【小问1详解】
 
@@ -857,7 +862,7 @@ questions:
     （1）求证：$CE \perp AE$；
 
     （2）连接BD，若$BC = 6$，$AC = 8$，求BD的长．'
-  answer: （1）见解析（2）$BD=9.6$
+  answer: （1）见解析 （2）$BD=9.6$
   solution: '【小问1详解】
 
     连接OC，
@@ -929,79 +934,22 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-fengtai-yi-fig17.png
-  - figures/2024-fengtai-yi-fig18.png
+  - path: figures/2024-fengtai-yi-fig17.png
+    width_mm: 33.9
+    height_mm: 34.1
 - id: 25
   type: 解答
   score: 6
   question: '一般来说，市面上某种水果出售量较多时，水果的价格就会降低．这时，将水果进行保鲜存储，等到价格上升之后再出售，可获得更高的出售收入．但是保鲜存储是有成本的，而且成本会随着时间的延长而增大，因此出售水果获得的收益要从出售价格中扣除保鲜存储成本．某水果公司的调研小组收集到去年一段时间内某种水果当日每千克的出售价格和保鲜存储成本的部分数据如下：设水果保鲜存储的时间为t天（$1\leq
     t\leq 20$），当日每千克水果出售价格为$y_{1}$元，每千克水果保鲜存储成本为$y_{2}$元．
 
-    t
+    | t | 1 | 2 | 5 | 8 | 10 | 12 | 14 | 16 | 18 | 20 |
 
-    1
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
-    2
+    | $y_{1}$ | $4.0$ | $6.3$ | $10.8$ | $12.5$ | $12.7$ | $12.4$ | $12.2$ | $11.8$ | $12.0$ | $13.0$ |
 
-    5
-
-    8
-
-    10
-
-    12
-
-    14
-
-    16
-
-    18
-
-    20
-
-    $y_{1}$
-
-    $4.0$
-
-    $6.3$
-
-    $10.8$
-
-    $12.5$
-
-    $12.7$
-
-    $12.4$
-
-    $12.2$
-
-    $11.8$
-
-    $12.0$
-
-    $13.0$
-
-    $y_{2}$
-
-    $2.4$
-
-    $2.8$
-
-    $4.0$
-
-    $5.2$
-
-    $6.0$
-
-    $6.8$
-
-    $7.6$
-
-    $8.4$
-
-    $9.2$
-
-    $10.0$
+    | $y_{2}$ | $2.4$ | $2.8$ | $4.0$ | $5.2$ | $6.0$ | $6.8$ | $7.6$ | $8.4$ | $9.2$ | $10.0$ |
 
     [图]
 
@@ -1010,7 +958,7 @@ questions:
     （2）通过分析表格中的数据，发现$y_{1}$，$y_{2}$都可近似看作t的函数，在平面直角坐标系xOy中，描出表中各组数值所对应的点$(t, y_1)$，并用平滑曲线连接这些点；
 
     （3）结合函数图象，将水果保鲜存储第______天至第______天（结果取整数）时，出售每千克水果所获得的收益超过4元．'
-  answer: （1）$7.3$；（2）见解析 （3）3，14
+  answer: （1）$7.3$； （2）见解析 （3）3，14
   solution: '【小问1详解】
 
     解：由表格可得：第8天每千克水果出售价格为$y_{1}=12.5$元，每千克水果保鲜存储成本为$y_{2}=5.2$元
@@ -1032,8 +980,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-fengtai-yi-fig19.png
-  - figures/2024-fengtai-yi-fig20.png
+  - path: figures/2024-fengtai-yi-fig19.png
+    width_mm: 90.2
+    height_mm: 67.2
 - id: 26
   type: 解答
   score: 6
@@ -1091,7 +1040,7 @@ questions:
 
     ∴$2a - x_{3} < 5$，
 
-    ∴$[公式]$；
+    ∴$2 \leq a \leq \frac{5}{2}$；
 
     ④当$a > 5$时，
 
@@ -1117,7 +1066,7 @@ questions:
     （1）如图1，当点E与点D重合时，线段EF，AC交于点G，求证：点G是EF的中点；
 
     （2）如图2，当点E在线段BD上时（不与点B，D重合），若点H是EF的中点，作射线DH交AC于点M，补全图形，直接写出$\angle AMD$的大小，并证明．'
-  answer: （1）见解析（2）$\angle AMD = 90^\circ$，见解析
+  answer: （1）见解析 （2）$\angle AMD = 90^\circ$，见解析
   solution: '【小问1详解】
 
     ∵$AB = AC$，点D是BC中点，
@@ -1182,8 +1131,9 @@ questions:
   recommended_for:
   - L3
   figures:
-  - figures/2024-fengtai-yi-fig21.png
-  - figures/2024-fengtai-yi-fig22.png
+  - path: figures/2024-fengtai-yi-fig21.png
+    width_mm: 96.8
+    height_mm: 31.0
 - id: 28
   type: 解答
   score: 7
@@ -1253,10 +1203,6 @@ questions:
   recommended_for:
   - L3
   figures:
-  - figures/2024-fengtai-yi-fig23.png
-  - figures/2024-fengtai-yi-fig24.png
-  - figures/2024-fengtai-yi-fig25.png
-  - figures/2024-fengtai-yi-fig26.png
-  - figures/2024-fengtai-yi-fig27.png
-  - figures/2024-fengtai-yi-fig28.png
-  - figures/2024-fengtai-yi-fig29.png
+  - path: figures/2024-fengtai-yi-fig23.png
+    width_mm: 109.5
+    height_mm: 113.5

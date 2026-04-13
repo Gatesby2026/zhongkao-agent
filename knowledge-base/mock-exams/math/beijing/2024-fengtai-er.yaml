@@ -21,7 +21,9 @@ questions:
 
     [图]
 
-    A.$\boxed{1}$B.$\begin{tikzpicture}
+    A.$\boxed{1}$
+
+    B.$\begin{tikzpicture}
 
     \draw (0,0) rectangle (6,2);
 
@@ -37,13 +39,17 @@ questions:
 
     \draw[dashed] (4.5,0) -- (4.5,2);
 
-    \end{tikzpicture}$C.$\begin{array}{c}
+    \end{tikzpicture}$
+
+    C.$\begin{array}{c}
 
     \boxed{} \\
 
     \boxed{} \\
 
-    \end{array}$D.[图]'
+    \end{array}$
+
+    D.[图]'
   answer: D
   solution: '解：由题意，得：“榫”的主视图为：[图]
 
@@ -58,15 +64,24 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-fengtai-er-fig01.png
-  - figures/2024-fengtai-er-fig02.png
-  - figures/2024-fengtai-er-fig03.png
+  - path: figures/2024-fengtai-er-fig01.png
+    width_mm: 25.1
+    height_mm: 25.1
+  - path: figures/2024-fengtai-er-fig02.png
+    width_mm: 22.5
+    height_mm: 12.4
 - id: 2
   type: 选择
   score: 2
   question: '芯片内部有数以亿计的晶体管，为追求更高质量的芯片和更低的电力功耗，需要设计4积更小的晶体管．目前，某品牌手机自主研发了最新型号芯片，其晶体管栅极的宽度为0.000000014米，将数据0.000000014用科学记数法表示为（）
 
-    A.$1.4\times10^{-8}$B.$14\times10^{-7}$C.$0.14\times10^{-6}$D.$1.4\times10^{-9}$'
+    A.$1.4\times10^{-8}$
+
+    B.$14\times10^{-7}$
+
+    C.$0.14\times10^{-6}$
+
+    D.$1.4\times10^{-9}$'
   answer: A
   solution: '解：$0.000000014=1.4\times10^{-8}$，
 
@@ -88,7 +103,13 @@ questions:
 
     [图]
 
-    A.$34^\circ$B.$44^\circ$C.$46^\circ$D.$54^\circ$'
+    A.$34^\circ$
+
+    B.$44^\circ$
+
+    C.$46^\circ$
+
+    D.$54^\circ$'
   answer: B
   solution: '∵$l_1 \parallel l_2$，
 
@@ -112,7 +133,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-fengtai-er-fig04.png
+  - path: figures/2024-fengtai-er-fig04.png
+    width_mm: 48.2
+    height_mm: 27.8
 - id: 4
   type: 选择
   score: 2
@@ -130,7 +153,13 @@ questions:
 
     \end{tikzpicture}$
 
-    A.$-a > -b$B.$\left| a \right| < \left| b \right|$C.$\frac{1}{a} > \frac{1}{b}$D.$a^{2}<b^{2}$'
+    A.$-a > -b$
+
+    B.$\left| a \right| < \left| b \right|$
+
+    C.$\frac{1}{a} > \frac{1}{b}$
+
+    D.$a^{2}<b^{2}$'
   answer: A
   solution: '解：根据题意，得$a<0$，$b>0$，$\left| a \right| > \left| b \right|$，
 
@@ -157,7 +186,13 @@ questions:
 
     [图]
 
-    A.$\pi$B.$2\pi$C.$\frac{1}{2}\pi$D.$\sqrt{2}\pi$'
+    A.$\pi$
+
+    B.$2\pi$
+
+    C.$\frac{1}{2}\pi$
+
+    D.$\sqrt{2}\pi$'
   answer: A
   solution: '解：连接OB，OC，
 
@@ -216,14 +251,21 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-fengtai-er-fig05.png
-  - figures/2024-fengtai-er-fig06.png
+  - path: figures/2024-fengtai-er-fig05.png
+    width_mm: 29.4
+    height_mm: 32.3
 - id: 6
   type: 选择
   score: 2
   question: '已知点$A(x_1,y_1)$，$B\left(x_{2},y_{2}\right)$在反比例函数$y=\frac{2}{x}$的图象上，且$x_{1}<0<x_{2}$，则下列结论一定正确的是（　　）
 
-    A.$y_{1}+y_{2}<0$B.$x_{1}+y_{2}>0$C.$y_{1}-y_{2}<0$D.$y_{1}-y_{2}>0$'
+    A.$y_{1}+y_{2}<0$
+
+    B.$x_{1}+y_{2}>0$
+
+    C.$y_{1}-y_{2}<0$
+
+    D.$y_{1}-y_{2}>0$'
   answer: C
   solution: '∵反比例函数$y=\frac{2}{x}$的图象在一、三象限，而$x_{1}<0<x_{2}$，
 
@@ -273,7 +315,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-fengtai-er-fig07.png
+  - path: figures/2024-fengtai-er-fig07.png
+    width_mm: 64.8
+    height_mm: 48.7
 - id: 8
   type: 选择
   score: 2
@@ -281,7 +325,13 @@ questions:
 
     [图]
 
-    A.1个B.2个C.3个D.4个'
+    A.1个
+
+    B.2个
+
+    C.3个
+
+    D.4个'
   answer: B
   solution: '解：①：当$y>0$时，$-3 < x < -1$或$x>3$，故①错误；
 
@@ -311,8 +361,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-fengtai-er-fig08.png
-  - figures/2024-fengtai-er-fig09.png
+  - path: figures/2024-fengtai-er-fig08.png
+    width_mm: 73.8
+    height_mm: 48.9
 - id: 9
   type: 填空
   score: 2
@@ -399,7 +450,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-fengtai-er-fig10.png
+  - path: figures/2024-fengtai-er-fig10.png
+    width_mm: 39.2
+    height_mm: 33.3
 - id: 13
   type: 填空
   score: 2
@@ -417,7 +470,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-fengtai-er-fig11.png
+  - path: figures/2024-fengtai-er-fig11.png
+    width_mm: 43.9
+    height_mm: 22.5
 - id: 14
   type: 填空
   score: 2
@@ -445,7 +500,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-fengtai-er-fig12.png
+  - path: figures/2024-fengtai-er-fig12.png
+    width_mm: 83.3
+    height_mm: 34.9
 - id: 15
   type: 填空
   score: 2
@@ -488,8 +545,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-fengtai-er-fig13.png
-  - figures/2024-fengtai-er-fig14.png
+  - path: figures/2024-fengtai-er-fig13.png
+    width_mm: 89.7
+    height_mm: 52.4
 - id: 16
   type: 填空
   score: 2
@@ -500,7 +558,7 @@ questions:
     （1）如图1，在4×4的正方形网格图形中，从格点A经过一次“跳马”变换可以到达的格点为______（填“B”“C”或“D”）；
 
     （2）如图2，现有6×6的正方形网格图形，若从该正方形的格点M经过三次“跳马变换到达格点N，则共有_____中不同的跳法．'
-  answer: ①.C②.12
+  answer: ①.C ②.12
   solution: '解：∵$AD=2$，$AC = \sqrt{2^{2} + 1^{2}} = \sqrt{5}$，$AB = \sqrt{2^{2} + 2^{2}} = 2\sqrt{2}$，
 
     ∴从格点A经过一次“跳马”变换可以到达的格点为C；
@@ -541,12 +599,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-fengtai-er-fig15.png
-  - figures/2024-fengtai-er-fig16.png
-  - figures/2024-fengtai-er-fig17.png
-  - figures/2024-fengtai-er-fig18.png
-  - figures/2024-fengtai-er-fig19.png
-  - figures/2024-fengtai-er-fig20.png
+  - path: figures/2024-fengtai-er-fig15.png
+    width_mm: 67.5
+    height_mm: 37.3
 - id: 17
   type: 解答
   score: 5
@@ -604,7 +659,7 @@ questions:
     （1）求证：四边形$ADBE$是菱形；
 
     （2）连接CE，若$AB=2$，$\angle AEB = 60^\circ$，求CE的长．'
-  answer: （1）见解析（2）$2\sqrt{7}$
+  answer: （1）见解析 （2）$2\sqrt{7}$
   solution: '【小问1详解】
 
     ∵$AE \parallel BC$且$AE = BD$，
@@ -665,8 +720,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-fengtai-er-fig21.png
-  - figures/2024-fengtai-er-fig22.png
+  - path: figures/2024-fengtai-er-fig21.png
+    width_mm: 54.8
+    height_mm: 25.9
 - id: 21
   type: 解答
   score: 5
@@ -748,37 +804,19 @@ questions:
 
     $169$，$169$，$170$，$171$，$171$，$172$，$173$，$173$，$174$，$179$，$180$
 
-    班级
+    | 班级 | 平均数 | 中位数 | 众数 |
 
-    平均数
+    | --- | --- | --- | --- |
 
-    中位数
+    | 甲 | $169$ | m | n |
 
-    众数
-
-    甲
-
-    $169$
-
-    m
-
-    n
-
-    乙
-
-    $169$
-
-    $170$
-
-    $167$
+    | 乙 | $169$ | $170$ | $167$ |
 
     b.两班学生身高的平均数、中位数、众数如下表所示：
 
     （1）写出表中m，n的值；
 
-    （2）在甲班的$23$名学生中，高于平均身高的学生人数为$p_1$，在乙班的$23$名学生中，高于平均身高的学生人数为$p_{2}$，则$p_1$$p_{2}$（填“$\gt$”
-
-    “$\gt$”或“$=$”）；
+    （2）在甲班的$23$名学生中，高于平均身高的学生人数为$p_1$，在乙班的$23$名学生中，高于平均身高的学生人数为$p_{2}$，则$p_1$$p_{2}$（填“$\gt$” “$\gt$”或“$=$”）；
 
     （3）若每班只能有$20$人参加入场式队列表演，首先要求这$20$人与原来$23$人的身高平均数相同，其次要求这$20$人身高的方差尽可能小，则甲班未入选的$3$名学生的身高分别为_____cm．'
   answer: （1）$m = 168$，$n = 166$ （2）$\gt$ （3）$180$，$164$，$163$
@@ -848,7 +886,7 @@ questions:
     （1）求证：EF与$\odot\odot$相切；
 
     （2）若$BF = \frac{1}{2} \sin \angle AFE = \frac{4}{5}$，求BC的长．'
-  answer: （1）见解析（2）$BC = \frac{24}{5}$．
+  answer: （1）见解析 （2）$BC = \frac{24}{5}$．
   solution: '【小问1详解】
 
     证明：连接OE，
@@ -909,66 +947,21 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-fengtai-er-fig23.png
-  - figures/2024-fengtai-er-fig24.png
+  - path: figures/2024-fengtai-er-fig23.png
+    width_mm: 39.2
+    height_mm: 32.8
 - id: 25
   type: 解答
   score: 6
   question: '某实验室在10℃~12℃温度下培育一种植物幼苗，该种幼苗在此温度范围下的生长速度相同．现为了提高其生长速度，研究人员配制了一种营养素，在开始培育幼苗时添加到培育容器中，研究其对幼苗生长速度的影响．研究发现，使用一定量的营养素，会促进该种幼苗的生长速度，营养素超过一定量时，则会抑制幼苗的生长速度，并且在10℃~12℃范围内的不同温度下，该种幼苗所能达到的最大生长速度始终不变．经过进一步实验，获得了10℃和12℃温度下营养素用量与幼苗生长速度的部分数据如下表所示：
 
-    x
+    | x | 0 | 0.1 | 0.2 | 0.4 | 0.6 | 0.7 | 0.8 | 1.0 |
 
-    0
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
-    0.1
+    | y 1 | 1.00 | 1.38 | 1.69 | 2.06 | 2.12 | 2.04 | 1.88 | 1.31 |
 
-    0.2
-
-    0.4
-
-    0.6
-
-    0.7
-
-    0.8
-
-    1.0
-
-    y1
-
-    1.00
-
-    1.38
-
-    1.69
-
-    2.06
-
-    2.12
-
-    2.04
-
-    1.88
-
-    1.31
-
-    y2
-
-    1.00
-
-    1.77
-
-    2.07
-
-    2.04
-
-    1.60
-
-    1.31
-
-    0.97
-
-    0.23
+    | y 2 | 1.00 | 1.77 | 2.07 | 2.04 | 1.60 | 1.31 | 0.97 | 0.23 |
 
     设营养素用量为x毫克（$0 \leq x \leq 1.0$），10℃温度下幼苗生长速度为$y_{1}$毫米/天，12℃温度下幼苗生长速度为$y_{2}$毫米/天．
 
@@ -983,7 +976,7 @@ questions:
     ①在12℃温度下，使用约______毫克的营养素时，该种幼苗生长速度最快；（结果保留小数点后两位）；
 
     ②当该种幼苗的生长速度在10℃和12℃温度下均不低于1.6毫米/天时，营养素用量x的取值范围为______（结果保留小数点后两位）．'
-  answer: （1）$1.00$ （2）见解析（3）①$0.28$；②$0.17\leq x\leq 0.60$
+  answer: （1）$1.00$ （2）见解析 （3）①$0.28$；②$0.17\leq x\leq 0.60$
   solution: '【小问1详解】
 
     解：当$x = 0$时，$y_{1}=y_{2}=1.00$，
@@ -1007,8 +1000,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-fengtai-er-fig25.png
-  - figures/2024-fengtai-er-fig26.png
+  - path: figures/2024-fengtai-er-fig25.png
+    width_mm: 75.4
+    height_mm: 67.2
 - id: 26
   type: 解答
   score: 6
@@ -1019,7 +1013,7 @@ questions:
     （2）若对于$-2 < x_1 < -1$，$2<x_{2}<3$，都有$y_1y_2<0$，求证：$3a-2=0$；
 
     （3）若对于$2<x_{2}<3$，$m < x_3 < m + 1$，都有$y_{3}>y_{2}$，求m的取值范围．'
-  answer: （1）抛物线的对称轴$x = 1$ （2）见解析（3）$m \leq -2$或$m^{3}$
+  answer: （1）抛物线的对称轴$x = 1$ （2）见解析 （3）$m \leq -2$或$m^{3}$
   solution: '【小问1详解】
 
     ∵二次函数解析式为$y=ax^{2}-2ax-2$$(a>0)$，
@@ -1167,9 +1161,9 @@ questions:
   recommended_for:
   - L3
   figures:
-  - figures/2024-fengtai-er-fig27.png
-  - figures/2024-fengtai-er-fig28.png
-  - figures/2024-fengtai-er-fig29.png
+  - path: figures/2024-fengtai-er-fig27.png
+    width_mm: 44.7
+    height_mm: 31.0
 - id: 28
   type: 解答
   score: 7
@@ -1229,14 +1223,6 @@ questions:
   recommended_for:
   - L3
   figures:
-  - figures/2024-fengtai-er-fig30.png
-  - figures/2024-fengtai-er-fig31.png
-  - figures/2024-fengtai-er-fig32.png
-  - figures/2024-fengtai-er-fig33.png
-  - figures/2024-fengtai-er-fig34.png
-  - figures/2024-fengtai-er-fig35.png
-  - figures/2024-fengtai-er-fig36.png
-  - figures/2024-fengtai-er-fig37.png
-  - figures/2024-fengtai-er-fig38.png
-  - figures/2024-fengtai-er-fig39.png
-  - figures/2024-fengtai-er-fig40.png
+  - path: figures/2024-fengtai-er-fig30.png
+    width_mm: 145.3
+    height_mm: 52.9

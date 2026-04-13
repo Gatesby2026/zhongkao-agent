@@ -1,0 +1,694 @@
+# ============================================================
+# 2008年北京市中考数学真题试卷 — 逐题分析
+# ============================================================
+# 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
+# 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
+# 满分：100分  时长：120分钟
+
+year: 2008
+district: 北京市
+exam_type: 真题
+subject: 数学
+full_score: 100
+duration_minutes: 120
+total_questions: 24
+structure: 8选择(16分) + 8填空(16分) + 12解答(68分)
+questions:
+- id: 1
+  type: 选择
+  score: 2
+  question: '$-6$ 的绝对值等于（    ）
+
+    A．$6$
+
+    B．$\frac{1}{6}$
+
+    C．$-\frac{1}{6}$
+
+    D．$-6$'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 绝对值
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 2
+  type: 选择
+  score: 2
+  question: '截止到2008年5月19日，已有21 600名中外记者成为北京奥运会的注册记者，创历届奥运会之最．将21 600用科学记数法表示应为（    ）
+
+    A．$0.216\times10^{5}$
+
+    B．$21.6\times10^{3}$
+
+    C．$2.16\times10^{3}$
+
+    D．$2.16\times10^{4}$'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 科学记数法
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 3
+  type: 选择
+  score: 2
+  question: '若两圆的半径分别是1cm和5cm，圆心距为6cm，则这两圆的位置关系是（    ）
+
+    A．内切
+
+    B．相交
+
+    C．外切
+
+    D．外离'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: circles
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 4
+  type: 选择
+  score: 2
+  question: '众志成城，抗震救灾．某小组7名同学积极捐出自己的零花钱支援灾区，他们捐款的数额分别是（单位：元）：50，20，50，30，50，25，135．这组数据的众数和中位数分别是（    ）
+
+    A．50，20
+
+    B．50，30
+
+    C．50，50
+
+    D．135，50'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 中位数
+  - 众数
+  module: statisticsAndProbability
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 5
+  type: 选择
+  score: 2
+  question: '若一个多边形的内角和等于$720^\circ$ ，则这个多边形的边数是（    ）
+
+    A．5
+
+    B．6
+
+    C．7
+
+    D．8'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: triangles
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 6
+  type: 选择
+  score: 2
+  question: '如图，有5张形状、大小、质地均相同的卡片，正面分别印有北京奥运会的会徽、吉祥物（福娃）、火炬和奖牌等四种不同的图案，背面完全相同．现将这5张卡片洗匀后正面向下放在桌子上，从中随机抽取一张，抽出的卡片正面图案恰好是吉祥物（福娃）的概率是（    ）
+
+    $\text{北京2008}$
+
+    A．$\frac{1}{5}$
+
+    B．$\frac{2}{5}$
+
+    C．$\frac{1}{2}$
+
+    D．$\frac{3}{5}$'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 概率
+  module: statisticsAndProbability
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 7
+  type: 选择
+  score: 2
+  question: '若$|x+2|+\sqrt{y-3}=0$ ，则xy 的值为（    ）
+
+    A．$-8$
+
+    B．$-6$
+
+    C．$5$
+
+    D．$6$'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 8
+  type: 选择
+  score: 2
+  question: '已知O 为圆锥的顶点，M 为圆锥底面上一点，点P 在OM 上．一只蜗牛从P 点出发，绕圆锥侧面爬行，回到P 点时所爬过的最短路线的痕迹如右图所示．若沿OM 将圆锥侧面剪开并展开，所得侧面展开图是（    ）
+
+    $\begin{tikzpicture}[scale=0.5]
+
+    % First figure
+
+    \draw (0,0) circle (1);
+
+    \draw (0,0) -- (0,2);
+
+    \draw (0,2) -- (-1,0);
+
+    \draw (0,2) -- (1,0);
+
+    \draw (0,0) -- (1,0);
+
+    \draw (0,0) -- (-1,0);
+
+    \draw (0,2) node[above] {O};
+
+    \draw (-1,0) node[left] {P};
+
+    \draw (1,0) node[right] {M};
+
+    \draw (0,0) node[below] {M''};
+
+    \draw (-0.5,0.5) arc (180:360:0.5);
+
+    \draw (0.5,0.5) arc (0:180:0.5);
+
+    % Second figure
+
+    \draw (4,0) circle (1);
+
+    \draw (4,0) -- (4,2);
+
+    \draw (4,2) -- (3,0);
+
+    \draw (4,2) -- (5,0);
+
+    \draw (4,0) -- (5,0);
+
+    \draw (4,0) -- (3,0);
+
+    \draw (4,2) node[above] {O};
+
+    \draw (3,0) node[left]$
+
+    2008年北京市高级中等学校招生考试
+
+    数 学 试 卷
+
+    第Ⅱ卷（非机读卷  共88分）
+
+    | 考 生 须 知： | 1 ．第Ⅱ卷从第 1 页到第 8 页，共 8 页，共八道大题， 17 道小题． 2 ．除画图可以用铅笔外，答题必须用黑色或蓝色钢笔、圆珠笔或签字笔． |
+
+    | --- | --- |
+
+    $\triangle ABC$9．在函数$y=\frac{1}{2x-1}$ 中，自变量x 的取值范围是．'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: functions
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 10
+  type: 填空
+  score: 2
+  question: 分解因式：$a^{3}-ab^{2}=$．
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 11
+  type: 填空
+  score: 2
+  question: '如图，在$\triangle ABC$ 中，$D, E$ 分别是$AB, AC$ 的中点，
+
+    若$DE = 2\mathrm{cm}$ ，则$BC =$cm．'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 12
+  type: 填空
+  score: 2
+  question: 一组按规律排列的式子：$-\frac{b^{2}}{a}$ ，$\frac{b^{5}}{a^{2}}$ ，$-\frac{b^{8}}{a^{3}}$ ，$\frac{b^{11}}{a^{4}}$ ，…（$ab \neq 0$ ），其中第7个式子是，第n 个式子是（n 为正整数）．
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 13
+  type: 解答
+  score: 5
+  question: '（本小题满分5分）
+
+    计算：$\sqrt{8}-2\sin 45^{\circ}+(2-\pi)^{0}-\left(\frac{1}{3}\right)^{-1}$ ．
+
+    解：'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 14
+  type: 解答
+  score: 5
+  question: '（本小题满分5分）
+
+    解不等式$5x-12\leqslant 2(4x-3)$ ，并把它的解集在数轴上表示出来．
+
+    解$-3\quad -2\quad -1\quad 0\quad 1\quad 2\quad 3$ ：'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 不等式
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 15
+  type: 解答
+  score: 5
+  question: '（本小题满分5分）
+
+    已$\angle ABC = \angle CDE, \quad AB = CD, \quad BC = DE$ 知：如图，C为BE上一点，点$A, D$分别在BE两侧．$AB \parallel ED$，$AB = CE$，$BC = ED$．
+
+    求证：$AC = CD$．
+
+    证明：'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 16
+  type: 解答
+  score: 5
+  question: '（本小题满分5分）
+
+    如图，已知直线$y = kx - 3$ 经过点M ，求此直线与x 轴，y 轴的交点坐标．
+
+    解$y=kx-3$ ：'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 17
+  type: 解答
+  score: 5
+  question: '（本小题满分5分）
+
+    已知$x-3y=0$ ，求$\frac{2x+y}{x^{2}-2xy+y^{2}}\cdot(x-y)$ 的值．
+
+    解：
+
+    四、解答题（共2道小题，共10分）'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 18
+  type: 解答
+  score: 5
+  question: '（本小题满分5分）
+
+    如$\angle BAC = 90^\circ$ 图，在梯形$ABCD$ 中，$AD \parallel BC$ ，$AB \perp AC$ ，$\angle B = 45^\circ$ ，$AD = \sqrt{2}$ ，$BC = 4\sqrt{2}$ ，求DC 的长．
+
+    解：'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: quadrilaterals
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 19
+  type: 解答
+  score: 5
+  question: '（本小题满分5分）
+
+    已知：如图，在$Rt\triangle ABC$ 中，$\angle C = 90^\circ$ ，点O 在AB 上，以O 为圆心，OA 长为半径的圆与$AC, AB$ 分别交于点$D, E$ ，且$\angle CBD = \angle A$ ．
+
+    （$\angle ABC = 90^\circ, \quad \angle ACB = 90^\circ, \quad AB \text{ 是直径}, \quad O \text{ 是圆心}$1）判断直线BD 与$00$ 的位置关系，并证明你的结论；
+
+    （2）若$AD:AO=8:5$ ，$BC = 2$ ，求BD 的长．
+
+    解：（1）
+
+    （2）
+
+    五、解答题（本题满分6分）'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: circles
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 20
+  type: 解答
+  score: 5
+  question: '为减少环境污染，自2008年6月1日起，全国的商品零售场所开始实行“塑料购物袋有偿使用制度”（以下简称“限塑令”）．某班同学于6月上旬的一天，在某超市门口采用问卷调查的方式，随机调查了“限塑令”实施前后，顾客在该超市用购物袋的情况，以下是根据100位顾客的100份有效答卷画出的统计图表的一部分：
+
+    $\begin{tabular}{|c|c|c|c|c|c|c|}
+
+    \hline
+
+    塑料袋数 / 个 & 1 & 2 & 3 & 4 & 5 & 6 \\
+
+    \hline
+
+    人数 / 位 & 9 & 37 & 26 & 11 & 4 & 3 \\
+
+    \hline
+
+    \end{tabular}
+
+    \begin{tabular}{|c|c|}
+
+    \hline
+
+    购物袋种类 & 百分比 \\
+
+    \hline
+
+    自备袋 & 46\% \\
+
+    \hline
+
+    押金式环保袋 & 24\% \\
+
+    \hline
+
+    收费塑料购物袋 & ?\% \\
+
+    \hline
+
+    其它 & 5\% \\
+
+    \hline
+
+    \end{tabular}$
+
+    “限塑令”实施后，塑料购物袋使用后的处理方式统计表
+
+    | 处理方式 | 直接丢弃 | 直接做垃圾袋 | 再次购物使用 | 其它 |
+
+    | --- | --- | --- | --- | --- |
+
+    | 选该项的人数占 总人数的百分比 | 5% | 35% | 49% | 11% |
+
+    请你根据以上信息解答下列问题：
+
+    （1）补全图1，“限塑令”实施前，如果每天约有2 000人次到该超市购物．根据这100位顾客平均一次购物使用塑料购物袋的平均数，估计这个超市每天需要为顾客提供多少个塑料购物袋？
+
+    （2）补全图2，并根据统计图和统计表说明，购物时怎样选用购物袋，塑料购物袋使用后怎样处理，能对环境保护带来积极的影响．
+
+    解：（1）
+
+    （2）
+
+    六、解答题（共2道小题，共9分）'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 统计
+  - 平均数
+  module: statisticsAndProbability
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 21
+  type: 解答
+  score: 5
+  question: '（本小题满分5分）列方程或方程组解应用题：
+
+    京津城际铁路将于2008年8月1日开通运营，预计高速列车在北京、天津间单程直达运行时间为半小时．某次试车时，试验列车由北京到天津的行驶时间比预计时间多用了6分钟，由天津返回北京的行驶时间与预计时间相同．如果这次试车时，由天津返回北京比去天津时平均每小时多行驶40千米，那么这次试车时由北京到天津的平均速度是每小时多少千米？
+
+    解：'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: equationsAndInequalities
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 22
+  type: 解答
+  score: 5
+  question: '（本小题满分4分）
+
+    已$\triangle ABC$ 知等边三角形纸片ABC 的边长为$8$ ，D 为AB 边上的点，过点D 作$DG \parallel BC$ 交AC 于点G ．$DE \perp BC$ 于点E ，过点G 作$GF \perp BC$ 于点F ，把三角形纸片ABC 分别沿$DG,\ DE,\ GF$ 按图1所示方式折叠，点$A, B, C$ 分别落在点$A''$ ，$B''$ ，$C''$
+    处．若点$A''$ ，$B''$ ，$C''$ 在矩形$DEFG$ 内或其边上，且互不重合，此时我们称$\triangle A''B''C''$ （即图中阴影部分）为“重叠三角形”．
+
+    $\angle 1=\angle 2, \angle 3=\angle 4, DE=BF$
+
+    （1）若把三角形纸片ABC 放在等边三角形网格中（图中每个小三角形都是边长为1的等边三角形），点$A, B, C, D$ 恰好落在网格图中的格点上．如图2所示，请直接写出此时重叠三角形$A''B''C''$ 的面积；
+
+    （2）实验探究：设AD 的长为m ，若重叠三角形$A''B''C''$ 存在．试用含m 的代数式表示重叠三角形$A''B''C''$ 的面积，并写出m 的取值范围（直接写出结果，备用图供实验，探究使用）．
+
+    $\triangle ABC$
+
+    解：（1）重叠三角形$A''B''C''$ 的面积为；
+
+    （2）用含m 的代数式表示重叠三角形$A''B''C''$ 的面积为；m 的取值范围为．
+
+    七、解答题（本题满分7分）'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 矩形
+  module: triangles
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 23
+  type: 解答
+  score: 6
+  question: '已知：关于x 的一元二次方程$mx^2 - (3m + 2)x + 2m + 2 = 0 (m > 0)$ ．
+
+    （1）求证：方程有两个不相等的实数根；
+
+    （2）设方程的两个实数根分别为$x_1$ ，$x_2$ （其中$x_{1}<x_{2}$ ）．若y 是关于m 的函数，且$y = x_{2} - 2x_{1}$ ，求这个函数的解析式；
+
+    （$\begin{tikzpicture}
+
+    \draw[step=1cm,dashed, color=purple] (-4,-4) grid (4,4);
+
+    \draw[thick, ->] (-4,0) -- (4,0) node[right] {$x$};
+
+    \draw[thick, ->] (0,-4) -- (0,4) node[above] {$y$};
+
+    \foreach \x in {-4,...,4}
+
+    \draw (\x cm,1pt) -- (\x cm,-1pt) node[anchor=north] {\x};
+
+    \foreach \y in {-4,...,4}
+
+    \draw (1pt,\y cm) -- (-1pt,\y cm) node[anchor=east] {\y};
+
+    \end{tikzpicture}$3）在（2）的条件下，结合函数的图象回答：当自变量m 的取值范围满足什么条件时，$y \leq 2m$ ．
+
+    （1）证明：
+
+    （2）解：
+
+    （3）解：
+
+    八、解答题（本题满分7分）'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 一元二次方程
+  module: functions
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 24
+  type: 解答
+  score: 6
+  question: '在平面直角坐标系xOy 中，抛物线$y = x^2 + bx + c$ 与x 轴交于$A, B$ 两点（点A 在点B 的左侧），与y 轴交于点C ，点B 的坐标为$(3,0)$ ，将直线$y = kx$ 沿y 轴向上平移3个单位长度后恰好经过$B, C$ 两点．
+
+    （1）求直线BC 及抛物线的解析式；
+
+    （2）设抛物线的顶点为D ，点P 在抛物线的对称轴上，且$\angle APD = \angle ACB$ ，求点P 的坐标；
+
+    （$\begin{tikzpicture}
+
+    \draw[->] (-3,0) -- (5,0) node[right] {$x$};
+
+    \draw[->] (0,-3) -- (0,5) node[above] {$y$};
+
+    \foreach \x in {-2,-1,1,2,3,4}
+
+    \draw (\x cm,1pt) -- (\x cm,-1pt) node[anchor=north] {\x};
+
+    \foreach \y in {-2,-1,1,2,3,4}
+
+    \draw (1pt,\y cm) -- (-1pt,\y cm) node[anchor=east] {\y};
+
+    \draw[fill=black] (0,0) circle (2pt);
+
+    \end{tikzpicture}$3）连结CD ，求$\angle OCA$ 与$\angle OCD$ 两角和的度数．
+
+    解：（1）
+
+    （2）
+
+    （3）
+
+    九、解答题（本题满分8分）'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 平移
+  - 坐标系
+  module: functions
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 25
+  type: 解答
+  score: 6
+  question: '请阅读下列材料：
+
+    问题：如图1，在菱形$ABCD$ 和菱形$BEFG$ 中，点$A, B, E$ 在同一条直线上，P 是线段DF
+
+    的中点，连结$PG, PC$ ．若$\angle ABC = \angle BEF = 60^\circ$ ，探究PG 与PC 的位置关系及$\frac{PG}{PC}$ 的值．
+
+    小聪同学的思路是：延长GP 交DC 于点H ，构造全等三角形，经过推理使问题得到解决．
+
+    $\angle DAB = \angle CBA, \quad \angle ABC = \angle BCD, \quad \angle CDE = \angle DEA, \quad \angle EAF = \angle FAB$$\angle DAB=\angle CBA=90^\circ,\quad AD=BC, \quad AB=CD, \quad AE=BF, \quad DE\perp
+    CF$
+
+    请你参考小聪同学的思路，探究并解决下列问题：
+
+    （1）写出上面问题中线段PG 与PC 的位置关系及$\frac{PG}{PC}$ 的值；
+
+    （2）将图1中的菱形$BEFG$ 绕点B 顺时针旋转，使菱形$BEFG$ 的对角线BF 恰好与菱形$ABCD$ 的边AB 在同一条直线上，原问题中的其他条件不变（如图2）．你在（1）中得到的两个结论是否发生变化？写出你的猜想并加以证明．
+
+    （3）若图1中$\angle ABC = \angle BEF = 2\alpha(0^\circ < \alpha < 90^\circ)$ ，将菱形$BEFG$ 绕点B 顺时针旋转任意角度，原问题中的其他条件不变，请你直接写出$\frac{PG}{PC}$ 的值（用含$\alpha$ 的式子表示）．
+
+    解：（1）线段PG 与PC 的位置关系是；$\frac{PG}{PC} =$．
+
+    （2）
+
+    2008年北京市高级中等学校招生考试
+
+    数学试卷答案及评分参考
+
+    阅卷须知：'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 全等三角形
+  - 菱形
+  - 旋转
+  module: triangles
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3

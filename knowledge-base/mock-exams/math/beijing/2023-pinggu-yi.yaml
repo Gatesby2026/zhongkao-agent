@@ -19,7 +19,13 @@ questions:
   score: 2
   question: '下面几何体中，是圆柱$[公式]$为（）
 
-    A.[图]B.[图]C.[图]D.[图]'
+    A.[图]
+
+    B.[图]
+
+    C.[图]
+
+    D.[图]'
   answer: A
   solution: '解：A、是圆柱，故此选项符合题意；
 
@@ -40,16 +46,30 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-pinggu-yi-fig02.png
-  - figures/2023-pinggu-yi-fig03.png
-  - figures/2023-pinggu-yi-fig04.png
-  - figures/2023-pinggu-yi-fig05.png
+  - path: figures/2023-pinggu-yi-fig02.png
+    width_mm: 18.0
+    height_mm: 22.8
+  - path: figures/2023-pinggu-yi-fig03.png
+    width_mm: 18.3
+    height_mm: 19.8
+  - path: figures/2023-pinggu-yi-fig04.png
+    width_mm: 18.8
+    height_mm: 22.2
+  - path: figures/2023-pinggu-yi-fig05.png
+    width_mm: 20.4
+    height_mm: 20.4
 - id: 2
   type: 选择
   score: 2
   question: '为了确保我国粮食种植的稳定性，国家提出了“严防死守18亿亩耕地的红线目标”，经过了多年的努力和坚守，我国耕地面积止住了下跌趋势，而且还实现了增长．到2020年，全国耕地保有量回升至18.65亿亩以上，1865000000用科学记数法表示为（）
 
-    A.$1.865\times10^{7}$B.$18.65\times 10^{8}$C.$1.865\times10^{9}$D.$1.865\times10^{12}$'
+    A.$1.865\times10^{7}$
+
+    B.$18.65\times 10^{8}$
+
+    C.$1.865\times10^{9}$
+
+    D.$1.865\times10^{12}$'
   answer: C
   solution: '解：$1865000000=1.865\times10^{9}$，
 
@@ -70,7 +90,13 @@ questions:
 
     [图]
 
-    A.30°B.40°C.50°D.75°'
+    A.30°
+
+    B.40°
+
+    C.50°
+
+    D.75°'
   answer: B
   solution: '解：由量角器得$\angle ABC = 50^\circ$，
 
@@ -91,7 +117,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-pinggu-yi-fig06.png
+  - path: figures/2023-pinggu-yi-fig06.png
+    width_mm: 58.5
+    height_mm: 41.8
 - id: 4
   type: 选择
   score: 2
@@ -99,7 +127,13 @@ questions:
 
     [图]
 
-    A.1B.0C.$-1$D.$-2$'
+    A.1
+
+    B.0
+
+    C.$-1$
+
+    D.$-2$'
   answer: D
   solution: '解：由数轴的得：$1<a<2$，
 
@@ -128,13 +162,21 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-pinggu-yi-fig07.png
+  - path: figures/2023-pinggu-yi-fig07.png
+    width_mm: 53.2
+    height_mm: 11.1
 - id: 5
   type: 选择
   score: 2
   question: '不透明的袋子中有三个小球．上面分别写着数学“1”“2”“3”，除数字外三个小球无其他差别．从中随机摸出一个小球，记录其数字，不放回，再从中随机摸出一个小球．记录其数字，那么两次记录的数字之和为3的概率是（）
 
-    A.$\frac{1}{4}$B.$\frac{1}{3}$C.$\frac{1}{2}$D.$\frac{2}{3}$'
+    A.$\frac{1}{4}$
+
+    B.$\frac{1}{3}$
+
+    C.$\frac{1}{2}$
+
+    D.$\frac{2}{3}$'
   answer: B
   solution: '解：画树状图如下：
 
@@ -155,14 +197,18 @@ questions:
   - L1
   - L2
   - L3
-  figures:
-  - figures/2023-pinggu-yi-fig08.png
 - id: 6
   type: 选择
   score: 2
   question: '若关于x的一元二次方程$x^{2}+2x+m=0$有两个不相等的实数解．则实数m的取值范围为（）
 
-    A.$m\ 1$B.$m\geq1$C.$m > 1$D.$m < 1$'
+    A.$m\ 1$
+
+    B.$m\geq1$
+
+    C.$m > 1$
+
+    D.$m < 1$'
   answer: D
   solution: '解：∵关于x的一元二次方程$x^{2}+2x+m=0$有两个不相等的实数解，
 
@@ -187,7 +233,13 @@ questions:
 
     [图]
 
-    A.1B.2C.4D.5'
+    A.1
+
+    B.2
+
+    C.4
+
+    D.5'
   answer: C
   solution: '解：如图所示：由4条对称轴，
 
@@ -205,32 +257,29 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-pinggu-yi-fig09.png
-  - figures/2023-pinggu-yi-fig10.png
+  - path: figures/2023-pinggu-yi-fig09.png
+    width_mm: 32.3
+    height_mm: 32.3
 - id: 8
   type: 选择
   score: 2
   question: '摄氏温度（$^\circ C$）与华氏温度（$^\circ F$）是表示温度的两种方法，它们的关系如下：
 
-    摄氏温度（$^\circ C$）
+    | 摄氏温度（ $^\circ C$ ） | 0 | 10 | 20 |
 
-    0
+    | --- | --- | --- | --- |
 
-    10
-
-    20
-
-    华氏温度（$^\circ F$）
-
-    32
-
-    50
-
-    68
+    | 华氏温度（ $^\circ F$ ） | 32 | 50 | 68 |
 
     若设摄氏温度（$^\circ C$）为x，华氏温度（$^\circ F$）为y，y与x之间满足如下我们学习过的一种函数关系，则y与x满足的函数关系为（）
 
-    A.正比例函数B.一次函数C.反比例函数D.二次函数'
+    A.正比例函数
+
+    B.一次函数
+
+    C.反比例函数
+
+    D.二次函数'
   answer: B
   solution: '解；由表格数据可得：$\frac{50-32}{10-6}=1.8$，$\frac{68-50}{20-10}=1.8$，
 
@@ -379,29 +428,11 @@ questions:
   score: 2
   question: '为了提高大家的环境保护意识，某小区在假期开展了废旧电池回收的志愿者活动，该社区的10名中学生参与了该项活动，回收的旧电池数盘如下表：
 
-    电池数量（节）
+    | 电池数量（节） | 2 | 5 | 6 | 8 | 10 |
 
-    2
+    | --- | --- | --- | --- | --- | --- |
 
-    5
-
-    6
-
-    8
-
-    10
-
-    人数
-
-    1
-
-    4
-
-    2
-
-    2
-
-    1
+    | 人数 | 1 | 4 | 2 | 2 | 1 |
 
     根据以上数据，这10名中学生收集废旧电池的平均数为______．'
   answer: '6'
@@ -459,12 +490,14 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-pinggu-yi-fig11.png
+  - path: figures/2023-pinggu-yi-fig11.png
+    width_mm: 45.0
+    height_mm: 29.6
 - id: 16
   type: 填空
   score: 2
   question: 某货运公司临时接到一个任务，从工厂同时运送A、B两种货物各20箱到展馆，货运公司调派甲货车运送A种货物，乙货车运送B种货物，A种货物每箱80千克，B种货物每箱70千克，因为两种货物包装箱完全一样，装运工人一时疏忽两车虽然所装货物数量正确，但部分货物却装混了．运送途中安检时，两车过地秤，发现甲车比乙车的货物重160千克，则甲、乙两车各有______箱货物装错，到达展馆，为了尽快把货物区分开，乙车司机借来了一台最多可以称300千克的秤精选最优称重方案，根据被错装货物出现的所有可能情况，最多需要称______次就能把乙车上装错的货物区分出来．
-  answer: ①.2②.8
+  answer: ①.2 ②.8
   solution: '解：设甲、乙两车各有x箱货物装错，根据题意得：
 
     $80x(20-x)+70x-[70x(20-x)+80x]=160$
@@ -580,7 +613,7 @@ questions:
     ∴$\angle M=\angle A$（_____________）（填推理依据）
 
     ∴$\triangle MBC$即为所求作的三角形．'
-  answer: （1）见解析（2）90，同弧（或等弧）所对的圆周角相等
+  answer: （1）见解析 （2）90，同弧（或等弧）所对的圆周角相等
   solution: '【小问1详解】
 
     解：尺规作图，如下所示：
@@ -614,8 +647,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-pinggu-yi-fig12.png
-  - figures/2023-pinggu-yi-fig13.png
+  - path: figures/2023-pinggu-yi-fig12.png
+    width_mm: 47.6
+    height_mm: 41.8
 - id: 21
   type: 解答
   score: 5
@@ -626,7 +660,7 @@ questions:
     （1）求证：四边形$AECF$是菱形：
 
     （2）连接AC，与EF交于点O，连接OD．若$AF = 5$，$\sin\angle FAC=\frac{3}{5}$，求OD的长．'
-  answer: （1）见解析（2）$2\sqrt{13}$
+  answer: （1）见解析 （2）$2\sqrt{13}$
   solution: '【小问1详解】
 
     证明：∵四边形ABCD是平行四边形
@@ -689,8 +723,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-pinggu-yi-fig14.png
-  - figures/2023-pinggu-yi-fig15.png
+  - path: figures/2023-pinggu-yi-fig14.png
+    width_mm: 54.5
+    height_mm: 27.5
 - id: 22
   type: 解答
   score: 5
@@ -766,35 +801,13 @@ questions:
 
     b．A、B两个城市3月1号至10号的日最高气温数据的平均数中位数众数、极差：
 
-    城市
+    | 城市 | 平均数 | 中位数 | 众数 | 极差 |
 
-    平均数
+    | --- | --- | --- | --- | --- |
 
-    中位数
+    | A | 17.5 | 17.5 | 19 | z |
 
-    众数
-
-    极差
-
-    A
-
-    17.5
-
-    17.5
-
-    19
-
-    z
-
-    B
-
-    12.4
-
-    m
-
-    n
-
-    8
+    | B | 12.4 | m | n | 8 |
 
     根据以上信息，回答下列问题：
 
@@ -803,7 +816,7 @@ questions:
     （2）记A城市3月1号至10号的日最高气温的方差为$S_{1}^{2}$，B城市3月1号至10号的日最高气温的方差为$s_{2}^{2}$，则$S_{1}^{2}$______$s_{2}^{2}$（填“＞”“＜”或“=”）；
 
     （3）如果你是明明，请根据以上统计数据，对A、B两个城市3月1号至10号的日最高气温情况做简单的分析．（至少从两个方面做出分析）'
-  answer: （1）$m = 12.5$，$n = 14$，$z = 15$ （2）＞（3）见解析
+  answer: （1）$m = 12.5$，$n = 14$，$z = 15$ （2）＞ （3）见解析
   solution: '【小问1详解】
 
     解：将B城市3月1号至10号的日最高气温（℃）从小到大排列：
@@ -861,7 +874,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-pinggu-yi-fig16.png
+  - path: figures/2023-pinggu-yi-fig16.png
+    width_mm: 71.7
+    height_mm: 108.2
 - id: 24
   type: 解答
   score: 6
@@ -872,7 +887,7 @@ questions:
     （1）求证：$\angle E=90^{\circ}$；
 
     （2）连接CD．若$\cos\angle ECD=\frac{2}{3}$，$AB = 9$，求CE的长．'
-  answer: （1）见解析（2）$CE = 4$
+  answer: （1）见解析 （2）$CE = 4$
   solution: '【小问1详解】
 
     解：连接OD．
@@ -933,9 +948,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-pinggu-yi-fig17.png
-  - figures/2023-pinggu-yi-fig18.png
-  - figures/2023-pinggu-yi-fig19.png
+  - path: figures/2023-pinggu-yi-fig17.png
+    width_mm: 39.4
+    height_mm: 37.8
 - id: 25
   type: 解答
   score: 6
@@ -945,34 +960,16 @@ questions:
 
     （1）谷粒距离喷射口的水平距离x（单位：m）与竖直高度y（单位：m）的几组数据如下：
 
-    水平距离$x/m$
+    | 水平距离 $x/m$ | 0 | 2 | 3 | 4 | 5 |
 
-    0
+    | --- | --- | --- | --- | --- | --- |
 
-    2
-
-    3
-
-    4
-
-    5
-
-    竖直高度$y/m$
-
-    3.5
-
-    4$[公式]$3
-
-    4.4
-
-    4.3
-
-    4.0
+    | 竖直高度 $y/m$ | 3.5 | 4 $[公式]$ 3 | 4.4 | 4.3 | 4.0 |
 
     根据上述数据，若用货车接运谷粒，保证和喷射口在同一平面的情况下，谷粒落下过程中恰好落到车厢的中心点．若货车车厢的中心点距地面1.9米，则货车车厢的中心点应距离喷射口几米？
 
     （2）谷粒喷出的同时石子等较重的杂质会跟随谷粒一起在重力作用下沿抛物线①被分离出来，谷皮和颗粒等较轻的杂质也会跟着谷粒一起沿抛物线②被分离出来，若已知两条抛物线的解析式分别为A：$y = -0.09(x - 3.2)^2 + 4.42$；B：$y = -0.12(x - 2.8)^2 + 4.44$，则A、B对应的抛物线分别为A：______；B：______（写①或②即可）．'
-  answer: （1）8米（2）②；①
+  answer: （1）8米 （2）②；①
   solution: '【小问1详解】
 
     解：由表可知，抛物线的顶点坐标为$(3,4.4)$，
@@ -1019,7 +1016,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-pinggu-yi-fig20.png
+  - path: figures/2023-pinggu-yi-fig20.png
+    width_mm: 63.5
+    height_mm: 28.0
 - id: 26
   type: 解答
   score: 6
@@ -1090,7 +1089,7 @@ questions:
     （2）求证：$\angle EMP = \angle ACF$；
 
     （3）判断$BM、CM、AC$的数量关系，并证明．'
-  answer: （1）见解析（2）见解析 （3）$AC^{2}+BM^{2}=MC^{2}$，见解析
+  answer: （1）见解析 （2）见解析 （3）$AC^{2}+BM^{2}=MC^{2}$，见解析
   solution: '【小问1详解】
 
     解：补全图形，如图所示：
@@ -1168,9 +1167,9 @@ questions:
   recommended_for:
   - L3
   figures:
-  - figures/2023-pinggu-yi-fig21.png
-  - figures/2023-pinggu-yi-fig22.png
-  - figures/2023-pinggu-yi-fig23.png
+  - path: figures/2023-pinggu-yi-fig21.png
+    width_mm: 59.8
+    height_mm: 41.8
 - id: 28
   type: 解答
   score: 7
@@ -1229,7 +1228,9 @@ questions:
   recommended_for:
   - L3
   figures:
-  - figures/2023-pinggu-yi-fig24.png
-  - figures/2023-pinggu-yi-fig25.png
-  - figures/2023-pinggu-yi-fig26.png
-  - figures/2023-pinggu-yi-fig27.png
+  - path: figures/2023-pinggu-yi-fig24.png
+    width_mm: 78.8
+    height_mm: 63.2
+  - path: figures/2023-pinggu-yi-fig25.png
+    width_mm: 78.6
+    height_mm: 63.0

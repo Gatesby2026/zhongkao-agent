@@ -1,0 +1,953 @@
+# ============================================================
+# 2015年北京市中考数学真题试卷 — 逐题分析
+# ============================================================
+# 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
+# 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
+# 满分：100分  时长：120分钟
+
+year: 2015
+district: 北京市
+exam_type: 真题
+subject: 数学
+full_score: 100
+duration_minutes: 120
+total_questions: 28
+structure: 8选择(16分) + 8填空(16分) + 12解答(68分)
+questions:
+- id: 1
+  type: 选择
+  score: 2
+  question: '截止到2015年6月1日，北京市已建成34个地下调蓄设施，蓄水能力达到1 40 000立方平米。将1 40 000用科学记数法表示应为
+
+    A．14×104
+
+    B．1.4×105
+
+    C．1.4×106$[公式]$
+
+    D．0.14×106'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 科学记数法
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 2
+  type: 选择
+  score: 2
+  question: '实数a，b，c，d在数轴上的对应点的位置如图所示，这四个数中，绝对值最大的是
+
+    [图]
+
+    A．a
+
+    B．b
+
+    C．c$[公式]$
+
+    D．d'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 绝对值
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2015-beijing-zhenti-fig01.png
+    width_mm: 51.1
+    height_mm: 10.8
+- id: 3
+  type: 选择
+  score: 2
+  question: '一个不透明的盒子中装有3个红球，2个黄球和1个绿球，这些球除了颜色外无其他差别，从中随机摸出一个小球，恰好是黄球的概率为
+
+    A．
+
+    B．
+
+    C．
+
+    D．'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 概率
+  module: statisticsAndProbability
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 4
+  type: 选择
+  score: 2
+  question: '剪纸是我国传统的民间艺术，下列剪纸作品中，是轴对称图形的为
+
+    [图]
+
+    5[图]．如图，直线l1，l2，l$[公式]$3交于一点，直线l4∥l1，若∠1=124°，∠2=88°，则∠3的度数为
+
+    A．26°
+
+    B．36°
+
+    C．46°             D$[公式]$．56°
+
+    [图]'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 轴对称图形
+  - 轴对称
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2015-beijing-zhenti-fig02.png
+    width_mm: 125.4
+    height_mm: 30.7
+  - path: figures/2015-beijing-zhenti-fig03.jpg
+    width_mm: 43.1
+    height_mm: 21.4
+  - path: figures/2015-beijing-zhenti-fig04.png
+    width_mm: 35.5
+    height_mm: 28.0
+- id: 6
+  type: 选择
+  score: 2
+  question: '如图，公路AC，BC互相垂直，公路AB的中点M与点C被湖隔开，若测得AM的长为1.2km，则M，C两点间的距离为
+
+    A．0.5km
+
+    B．0.6km
+
+    C．0.9km
+
+    D．1.2k$[公式]$ m
+
+    [图]'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2015-beijing-zhenti-fig05.png
+    width_mm: 45.8
+    height_mm: 31.2
+- id: 7
+  type: 选择
+  score: 2
+  question: '某市6月份日平均气温统计如图所示，则$[公式]$ 在日平均气温这组数据中，众数和中位数分别是
+
+    A．21，21
+
+    B．21，21.5
+
+    C．21，22
+
+    D．22，22
+
+    8[图]．右图是利用平面直角坐标系画出的故宫博物院的主要建筑分布图。若这个坐标系分别以正东、正北方向为x轴、y轴的正方向。表示太和门的点坐标为（0，-1），表示九龙壁的点的坐标为（4，1），则表示下列宫殿的点的坐标正确的是
+
+    A．景仁宫（4，2）
+
+    B．养心殿（-2，3）
+
+    C．保和殿（1，0）
+
+    D．武英殿（-3.5，-4）'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 统计
+  - 中位数
+  - 众数
+  - 坐标系
+  module: statisticsAndProbability
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2015-beijing-zhenti-fig06.png
+    width_mm: 46.0
+    height_mm: 49.2
+- id: 9
+  type: 填空
+  score: 2
+  question: '一家游泳馆的游泳收费标准为30元/次，若购买会员年卡，可享受如下优惠：
+
+    | 会员年卡类型 | 办卡费用（元） | 每次游泳收费（元） |
+
+    | --- | --- | --- |
+
+    | A 类 | 50 | 25 |
+
+    | B 类 | 200 | 20 |
+
+    | C 类 | 400 | 15 |
+
+    例如，购买A类会员卡，一年内游泳20次，消费50+25×20=550元，若一年内在该游泳馆游泳的次数介于45~55次$[公式]$ 之间，则最省钱的方$[公式]$ 式为
+
+    A．购买A类会员年卡B．购买B类会员年卡
+
+    C．购买C类会员年卡D．不购买会员年卡'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 10
+  type: 填空
+  score: 2
+  question: '一个寻宝游戏的寻宝通道如图1所示，通道由在同$[公式]$ 一平面内的AB，BC，CA，OA，OB，OC组成。为记录寻宝者的进行路线，在BC的中点M处放置了一台定位仪器，设寻宝者行进的时间为x，寻宝者与定位仪器之间的距离为y，若寻宝者匀速行进，且表示y与x的函数关系的图象大致如图2所示，则寻宝者的行进路线可能为
+
+    [图]$[公式]$
+
+    A．A→O→B      B．B→A→CC．B→O→CD．C→B→O'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2015-beijing-zhenti-fig07.png
+    width_mm: 83.6
+    height_mm: 34.9
+- id: 11
+  type: 填空
+  score: 2
+  question: '分解因式：5x3﹣10x2+5x=_________．
+
+    1[图] 2．右图是由射线AB，BC，CD，DE，组成的平面图形，则∠1+∠2+∠3+∠4+∠5=_____．
+
+    1[图] 3．《九章算术》是中国传统数学最重要的著作，奠定了中国传统数学的基本框架。它的代数成就主要包括开放术、正负术和方程术。其中，方程术是《九章算术》最高的数学成就。《九$[公式]$ 章算术》中记载：“今有牛五、羊二，直金十两；牛二、羊五，直金八两。问牛、羊各直金几何？”
+
+    译文：“假设有5头牛、2只羊，值金10$[公式]$两；2头牛、5只羊，值金8两。问每头牛、每只羊各值金多少两”
+
+    设每头牛值金x，每只羊各值金y两，可列方程组为_____________．
+
+    1[图] 4．关于x的一元二次方程ax2+bx+$\frac{1}{4}$ =0有两个相等的实数根，写出一组满足条件的实数a，b的值：a=______，b=______．'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 一元二次方程
+  module: equationsAndInequalities
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2015-beijing-zhenti-fig08.png
+    width_mm: 27.0
+    height_mm: 26.7
+  - path: figures/2015-beijing-zhenti-fig09.png
+    width_mm: 32.8
+    height_mm: 46.3
+  - path: figures/2015-beijing-zhenti-fig10.png
+    width_mm: 50.0
+    height_mm: 38.4
+- id: 15
+  type: 填空
+  score: 2
+  question: 北京市2009-2014年轨道交通日均客运量统计如图所示。根据统计图中提供信息，预估2015年北京市轨道交通日均客运量约________万人次，你的预估理由是________________________．
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 统计
+  module: statisticsAndProbability
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 16
+  type: 填空
+  score: 2
+  question: '阅读下面材料：
+
+    在数学课上，老师提出如下问题：
+
+    [来源:学科网ZXXK]
+
+    尺规作图：作一条线段的垂直平分线．
+
+    已知：线段AB．
+
+    $\overline{AB}$
+
+    小芸的作法如下：
+
+    如图，
+
+    （1）分别以点A和点B为圆心，大于AB
+
+    的长为半径作弧，两弧相交于C、D两点；
+
+    （2）作直线CD
+
+    [图]
+
+    老师说$[公式]$ ：“小芸的作法正确．”
+
+    请回答：小芸的作图依据是_________________________．'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 尺规作图
+  module: circles
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+  figures:
+  - path: figures/2015-beijing-zhenti-fig11.png
+    width_mm: 36.8
+    height_mm: 37.0
+- id: 17
+  type: 解答
+  score: 5
+  question: 计算：$\left(\frac{1}{2}\right)^{-2}-(\pi-\sqrt{7})^{0}+\left|\sqrt{3}-2\right|+4\sin 60^{\circ}$。
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 18
+  type: 解答
+  score: 5
+  question: 已知$2a^2 + 3a - 6 = 0$.求代数式$3a(2a+1)-(2a+1)(2a-1)$的值。[来源:学.科.网Z.X.X.K]
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 19
+  type: 解答
+  score: 5
+  question: '解不等式组$\left\{
+
+    \begin{array}{l}
+
+    4(x+1) \leq 7x + 10 \\
+
+    x - 5 < \dfrac{x - 8}{3}
+
+    \end{array}
+
+    \right.$，并写出它的所有非负整数解。
+
+    2$\triangle ABC, AD \perp BC, BE \perp AC, D \in BC, E \in AC$ 0.如图，在$\triangle ABC$中，$AB = AC$，AD是BC边上的中线，$BE \perp AC$于点E。
+
+    求证：$\angle CBE = \angle BAD$。
+
+    [来源:Z*xx*k.Com]'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 不等式
+  - 不等式组
+  module: equationsAndInequalities
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 21
+  type: 解答
+  score: 5
+  question: 为解决“最后一公里”的交通接驳问题，北京市投放了大量公租自行车供市民使用。到2013年底，全市已有公租自行车25000辆，租赁点600个，预计到2015年底，全市将有公租自行车50000辆，并且平均每个租赁点$[公式]$ 的公租自行车数量是2013年底平均每个租赁点的公租自行车数量的1.2倍。预计到2015年底，全市将有租赁点多少个？
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 22
+  type: 解答
+  score: 5
+  question: '在YABCD中，过点D作$DE \perp AB$于点E，点F在边CD上，$DF = BE$，连接AF，BF。
+
+    (1)求证：四边形BFDE是矩形；
+
+    (2)若$CF = 3$，$BF = 4$，$DF = 5$，求证：AF平分$\angle DAB$。
+
+    $\angle AED = 90^\circ$
+
+    [来源:Z*xx*k.Com]
+
+    23$[公式]$ .在平面直角坐标系xOy中，直线$y = kx + b(k \ne 0)$与双曲线$y=\frac{8}{x}$的一个交点为$P(2,m)$，与x轴、y$[公式]$轴分别交于点A，B。
+
+    (1)求m的$[公式]$ 值；
+
+    (2)若$PA = 2AB$，求k的值。
+
+    2$\angle AFD = 90^\circ$ 4.如图，AB是$00$的直径，过点B作$00$的切线BM，弦$CD \parallel BM$，交AB于点F，且$DA = DC$，链接AC，AD，延长AD交BM地点E。
+
+    (1)求证：$\triangle ACD$是等边三角形。
+
+    (2)链接OE，若$DE = 2$，求OE的长。'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 切线
+  - 弦
+  - 矩形
+  - 坐标系
+  module: triangles
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 25
+  type: 解答
+  score: 6
+  question: '阅读下列材料：
+
+    2015年清明小长假，北京市属公园开展以$[公式]$ “清明踏青，春色满园”为主题的游园活动，虽然气温小幅走低，但游客踏青赏花的热情很高，市属公园游客接待量约为190万人次，其中玉渊潭公园的樱花，北京$[公式]$ 植物园的桃花受到了游客的热捧，两公园的$[公式]$ 游客接待量分别为38万人次、21.75万人次；颐和园、天坛公园、北海公园因皇家$[公式]$ 园林的厚重文化底蕴与满园春色成为游客的重要目的地，游客接待量分别为26万人次、20万人次、17.6万人次；北京动物园游客接待量为18万人次，熊猫馆的游客密集度较高。
+
+    2014年清明小长假，天气晴好，北京晴好，北京市属$[公式]$ 公园游客接待量约为200万人次，其中，玉渊潭公园游客接待量比2013年清明小长假增加了25%；颐和园游客接待量为26.2万人次，比2013年清明小长假增加了4.6万人次；北京动物园游客接待量为22万人次。[来源:Zxxk.Com]
+
+    2013年清明小长假，玉渊潭公园、陶然亭公园、北京动物园游客接待量分别为32万人次、13万人次、14.9万人次。
+
+    根据以上材料回答下列问题：
+
+    (1)2014年清明小长假，玉渊潭公园游客$[公式]$ 接待量为___________万人次。
+
+    (2)选择统计表或统计图，将2013－2015年玉渊潭公园、颐和园和北京动物园的游客接待量表示出来。
+
+    [来源:学_科_网]'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 统计
+  module: statisticsAndProbability
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 26
+  type: 解答
+  score: 6
+  question: '有这样一个问题：探究函数$y=\frac{1}{2}x^{2}+\frac{1}{x}$的图象与性质。
+
+    小东根据学习函数的经验，对函数$y=\frac{1}{2}x^{2}+\frac{1}{x}$的图象与性质进行了探究。
+
+    下面是小东的探究过程，请补充完成：
+
+    (1)函数$y=\frac{1}{2}x^{2}+\frac{1}{x}$的自变量x的取值范围是___________；
+
+    (2)下表是y与x的几组对应值。
+
+    | x | … | $-3$ | $-2$ | $-1$ | $-\frac{1}{2}$ | $-\frac{1}{3}$ | $\frac{1}{3}$ | $\frac{1}{2}$ | 1 | 2 | 3 | … |
+
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+
+    | y | … | $\frac{25}{6}$ | $\frac{3}{2}$ | $-\frac{1}{2}$ | $-\frac{15}{8}$ | $-\frac{53}{18}$ | $\frac{55}{18}$ | $\frac{17}{8}$ | $\frac{3}{2}$ | $\frac{5}{2}$ | m | … |
+
+    求m的值；
+
+    ($\begin{tikzpicture}[scale=0.8]
+
+    \draw[->] (-4,0) -- (4,0) node[right] {$x$};
+
+    \draw[->] (0,-4) -- (0,4) node[above] {$y$};
+
+    \foreach \x in {-3,...,3}
+
+    \draw (\x,-0.1) -- (\x,0.1);
+
+    \foreach \y in {-3,...,3}
+
+    \draw (-0.1,\y) -- (0.1,\y);
+
+    \foreach \x in {-3,...,3}
+
+    \node at (\x,-0.3) {\x};
+
+    \foreach \y in {-3,...,3}
+
+    \node at (-0.3,\y) {\y};
+
+    \fill (-3,3) circle (2pt);
+
+    \fill (-2,1) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (0,2) circle (2pt);
+
+    \fill (1,1) circle (2pt);
+
+    \fill (2,3) circle (2pt);
+
+    \fill (3,2) circle (2pt);
+
+    \end{tikzpicture}$ 3)如下图，在平面直角坐标系xOy中，描出了以上表中各对对应值为坐标的点，格局描出的点，画出该函数的图象；
+
+    ($\begin{tikzpicture}
+
+    \draw[->] (-5,0) -- (5,0) node[right] {$x$};
+
+    \draw[->] (0,-5) -- (0,5) node[above] {$y$};
+
+    \foreach \x in {-4,-3,-2,-1,1,2,3,4}
+
+    \draw (\x cm,1pt) -- (\x cm,-1pt) node[anchor=north] {$\x$};
+
+    \foreach \y in {-4,-3,-2,-1,1,2,3,4}
+
+    \draw (1pt,\y cm) -- (-1pt,\y cm) node[anchor=east] {$\y$};
+
+    \node at (0,-6) {第14题};
+
+    \end{tikzpicture}$ 4)进一步探究发现，该函数图象在第一象限内的最低点$[公式]$ 的$[公式]$ 坐标是$\left(1,\frac{3}{2}\right)$，结合函数的图象，写出该函数的其他性质（一条即可）：________________。'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 坐标系
+  module: functions
+  difficulty: 压轴
+  recommended_for:
+  - L3
+- id: 27
+  type: 解答
+  score: 7
+  question: '在平面直角坐标系xOy中，过点$(0,2)$且平行于x轴的直线，与直线$y = x - 1$交于点A，点A关于直线$x = 1$的对称点为B，抛物线$C_1:y=x^2+bx+c$经过点A，B。
+
+    (1)求点A，B的坐标；
+
+    (2)求抛物线$C_1$的表达式及顶点坐标；
+
+    (3)若抛物线$C_2:y=ax^2(a\ne0)$与线段AB恰有一个公共$[公式]$ 点，结合函数的图象，求a的取值范围。'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 坐标系
+  module: functions
+  difficulty: 压轴
+  recommended_for:
+  - L3
+- id: 28
+  type: 解答
+  score: 7
+  question: '在正方形ABCD中，BD是一条对角线，点P在射线CD上（与点C、D不重合），连接AP，平移$\triangle ADP$，使点D移动到点C，得到$\triangle BCQ$，过点Q作$QH \perp BD$于H，连接AH，PH。
+
+    (1)若点P在线段CD上，如图1。
+
+    ①依题意补全图1；[来源:学+科+网Z+X+X+K]
+
+    ②判断AH与PH的数量关系与位置关系并加以证明；
+
+    (2)若点P在线段CD的延长线上，且$\angle AHQ = 152^\circ$，正方形ABCD的边长为1，请写出求DP长的思路。（可以不写出计算结果）
+
+    $\begin{tikzpicture}[scale=0.8]
+
+    % 左图
+
+    \draw (0,0) rectangle (4,4);
+
+    \draw (0,4) -- (4,0);
+
+    \draw (0,4) -- (1,0);
+
+    \draw (0,0) -- (4,4);
+
+    \draw (0,0) node[below left] {$D$};
+
+    \draw (4,0) node[below right] {$C$};
+
+    \draw (0,4) node[above left] {$A$};
+
+    \draw (4,4) node[above right] {$B$};
+
+    \draw (1,0) node[below] {$P$};
+
+    \draw (2,-0.5) node {图1};
+
+    % 右图
+
+    \draw (6,0) rectangle (10,4);
+
+    \draw (6,4) -- (10,0);
+
+    \draw (6,0) node[below left] {$D$};
+
+    \draw (10,0) node[below right] {$C$};
+
+    \draw (6,4) node[above left] {$A$};
+
+    \draw (10,4) node[above right] {$B$};
+
+    \draw (5,-0.5) node {备用图};
+
+    \end{tikzpicture}$
+
+    [来源:学科网ZXXK]
+
+    29.在平面直角坐标系xOy中，OC的半径为r，P是与圆心C不重合的点，点P关于$00$的反称点的定义如下：若$[公式]$ 在射线CP上存在一点$P''$，满足$CP + CP'' = 2r$，则称$P''$为点P关于OC的反称点，下图为点P及其$[公式]$ 关于OC的反称点$P''$的示意图。
+
+    $\begin{tikzpicture}
+
+    \draw[thick,->] (-1,0) -- (4,0) node[right] {$x$};
+
+    \draw[thick,->] (0,-1) -- (0,4) node[above] {$y$};
+
+    \draw (1,2) circle (1.5);
+
+    \draw (1,2) -- (2.5,3.5) node[above] {$P$};
+
+    \draw (1,2) -- (1,3.5);
+
+    \draw (1,2) -- (1,0.5);
+
+    \draw (0.8,1.5) node[left] {$C$};
+
+    \draw (0,0) node[below left] {$O$};
+
+    \draw (1,0) node[below] {$1$};
+
+    \draw (0,1) node[left] {$1$};
+
+    \end{tikzpicture}$
+
+    [来源:Z.xx.k.Com]
+
+    (1)当$00$的半径为1时。
+
+    ①分别判断点$M(2,1)$，$N(\frac{3}{2},0)$，$T(1,\sqrt{3})$关于$00$的反称点是否存在，若存$[公式]$ 在？
+
+    求其坐标；
+
+    ②点P在直线$y = -x + 2$上，若点P关于$00$的反称点$P''$存在，且点$P''$不在x轴上，求点P的横坐标的取值范围；
+
+    (2)当OC的圆心在x轴上，半径为1，直线$y = -\frac{\sqrt{3}}{3}x + 2\sqrt{3}$与x轴，y轴分别交于点A，B，若线段AB上存在点P，使得点P关于OC的反称点$P''$在OC的内部，求圆心C的横坐标的取值范围。
+
+    2015年北京市中考数学试卷
+
+    参考答案与试题解析'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 正方形
+  - 平移
+  - 坐标系
+  module: geometryComprehensive
+  difficulty: 压轴
+  recommended_for:
+  - L3
+- id: 5
+  type: 选择
+  score: 2
+  question: '（3分）（2015•北京）如图，直线l1，l2，l3交于一点，直线l4∥l1，若∠1=124°，∠2=88°，则∠3的度数为（　　）
+
+    [图]
+
+    |  | A ． | 26° | B ． | 36° | C ． | 46° | D ． | 56° |
+
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+
+    | 考点 ： | 平行线的性质． 12999 数学网 |
+
+    | --- | --- |
+
+    | 分析： | 如图，首先运用平行线的性质求出∠ AOB 的大小，然后借助平角的定义求出∠ 3 即可解决问题． |
+
+    | 解答： | 解：如图，∵直线 l 4 ∥l 1 ， ∴∠ 1+∠AOB=180° ，而∠ 1=124° ， ∴∠ AOB=56° ， ∴∠ 3=180°﹣∠2﹣∠AOB =180°﹣88°﹣56° =36° ， 故选 B ． [图] |
+
+    | 点评： | 该题主要考查了平行线的性质及其应用问题；应牢固掌握平行线的性质，这是灵活运用、解题的基础和关键． |'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 平行线
+  module: triangles
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2015-beijing-zhenti-fig13.png
+    width_mm: 45.5
+    height_mm: 28.0
+- id: 8
+  type: 选择
+  score: 2
+  question: '（3分）（2015•北京）如图是利用平面直角坐标系画出的故宫博物院的主要建筑分布图，若这个坐标系分别以正东、正北方向为x轴、y轴的正方向，表示太和门的点的坐标为（0，﹣1），表示九龙壁的点的坐标为（4，1），则表示下列宫殿的点的坐标正确的是（　　）
+
+    [图]
+
+    |  | A ． | 景仁宫（ 4 ， 2 ） | B ． | 养心殿（﹣ 2 ， 3 ） |
+
+    | --- | --- | --- | --- | --- |
+
+    |  | C ． | 保和殿（ 1 ， 0 ） | D ． | 武英殿（﹣ 3.5 ，﹣ 4 ） |
+
+    | 考点 ： | 坐标确定位置． 12999 数学网 |
+
+    | --- | --- |
+
+    | 分析： | 根据平面直角坐标系，找出相应的位置，然后写出坐标即可． |
+
+    | 解答： | 解：根据表示太和门的点的坐标为（ 0 ，﹣ 1 ），表示九龙壁的点的坐标为（ 4 ， 1 ）， 可得：原点是中和殿， [图] 所以可得景仁宫（ 2 ， 4 ），养心殿（﹣ 2 ， 3 ），保和殿（ 0 ， 1 ），武英殿（﹣ 3.5 ，﹣ 3 ）， 故选 B |
+
+    | 点评： | 此题考查坐标确定位置，本题解题的关键就是确定坐标原点和 x ， y 轴的位置及方向． |'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 坐标系
+  module: geometryComprehensive
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+  figures:
+  - path: figures/2015-beijing-zhenti-fig16.png
+    width_mm: 60.9
+    height_mm: 66.1
+- id: 12
+  type: 填空
+  score: 2
+  question: "（3分）（2015•北京）如图是由射线AB，BC，CD，DE，EA组成的平面图形，则∠1+∠2+∠3+∠4+∠5=360°．\n[图]\n| 考点 ： | 多边形内角与外角． 12999 数学网 |\n| --- | --- |\n| 分析： | 首先根据图示，可得∠ 1=180°﹣∠BAE ，∠ 2=180°﹣∠ABC ，∠ 3=180°﹣∠BCD ，∠ 4=180°﹣∠CDE\
+    \ ，∠ 5=180°﹣∠DEA ，然后根据三角形的内角和定理，求出五边形 ABCDE 的内角和是多少，再用 180°×5 减去五边形 ABCDE 的内角和，求出∠ 1+∠2+∠3+∠4+∠5 等于多少即可． |\n| 解答： | 解：∠ 1+∠2+∠3+∠4+∠5 = （ 180°﹣∠BAE ） + （ 180°﹣∠ABC ） + （ 180°﹣∠BCD ） + （ 180°﹣∠CDE ）\
+    \ + （ 180°﹣∠DEA ） =180°×5﹣ （∠ BAE+∠ABC+∠BCD+∠CDE+∠DEA ） =900°﹣ （ 5﹣2 ） ×180° =900°﹣540° =360° ． 故答案为： 360° ． |\n| 点评： | 此题主要考查了多边形内角和定理，要熟练掌握，解答此题的关键是要明确：（ 1 ） n 边形的内角和 = （ n﹣2 ）• 180 \t\t\t(n≥3 ）且\
+    \ n 为整数）．（ 2 ）多边形的外角和指每个顶点处取一个外角，则 n 边形取 n 个外角，无论边数是几，其外角和永远为 360° ． |"
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: triangles
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2015-beijing-zhenti-fig18.png
+    width_mm: 37.6
+    height_mm: 37.6
+- id: 13
+  type: 填空
+  score: 2
+  question: '（3分）（2015•北京）《九章算术》是中国传统数学最重要的著作，奠定了中国传统数学的基本框架．它的代数成就主要包括开方术、正负术和方程术．其中，方程术是《九章算术》最高的数学成就．
+
+    《九章算术》中记载：“今有牛五、羊二，直金十两；牛二、羊五，直金八两．问：牛、羊各直金几何？”
+
+    译文：“假设有5头牛、2只羊，值金10两；2头牛、5只羊，值金8两．问：每头牛、每只羊各值金多少两？”
+
+    设每头牛值金x两，每只羊值金y两，可列方程组为[图]．
+
+    [图]
+
+    | 考点 ： | 由实际问题抽象出二元一次方程组． 12999 数学网 |
+
+    | --- | --- |
+
+    | 分析： | 根据“假设有 5 头牛、 2 只羊，值金 10 两； 2 头牛、 5 只羊，值金 8 两”，得到等量关系，即可列出方程组． |
+
+    | 解答： | 解：根据题意得： [图] ， 故答案为： [图] ． |
+
+    | 点评： | 本题考查了由实际问题抽象出二元一次方程组，解决本题的关键是找到题目中所存在的等量关系． |'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 二元一次方程组
+  module: equationsAndInequalities
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2015-beijing-zhenti-fig19.png
+    width_mm: 20.1
+    height_mm: 10.6
+  - path: figures/2015-beijing-zhenti-fig20.png
+    width_mm: 24.6
+    height_mm: 42.9
+- id: 14
+  type: 填空
+  score: 2
+  question: '（3分）（2015•北京）关于x的一元二次方程ax2+bx+$\frac{1}{4}$ =0有两个相等的实数根，写出一组满足条件的实数a，b的值：a=4，b=2．
+
+    | 考点 ： | 根的判别式． 12999 数学网 |
+
+    | --- | --- |
+
+    | 专题 ： | 开放型． |
+
+    | 分析： | 由于关于 x 的一元二次方程 ax 2 +bx+ $\frac{1}{4}$ =0 有两个相等的实数根，得到 a=b 2 ，找一组满足条件的数据即可． |
+
+    | 解答： | 关于 x 的一元二次方程 ax 2 +bx+ $\frac{1}{4}$ =0 有两个相等的实数根， ∴△ =b 2 ﹣4× $\frac{1}{4}$ a=b 2 ﹣a=0 ， ∴ a=b 2 ， 当 b=2 时， a=4 ， 故 b=2 ， a=4 时满足条件． 故答案为： 4 ， 2 ． |
+
+    | 点评： | 本题主要考查了一元二次方程根的判别式，熟练掌握判别式的意义是解题的关键． |'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 一元二次方程
+  - 根的判别式
+  module: equationsAndInequalities
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 20
+  type: 解答
+  score: 5
+  question: '（5分）（2015•北京）如图，在△ABC中，AB=AC，AD是BC边上的中线，BE⊥AC于点E．求证：∠CBE=∠BAD．
+
+    [图]
+
+    | 考点 ： | 等腰三角形的性质． 12999 数学网 |
+
+    | --- | --- |
+
+    | 专题 ： | 证明题． |
+
+    | 分析： | 根据三角形三线合一的性质可得∠ CAD=∠BAD ，根据同角的余角相等可得：∠ CBE=∠CAD ，再根据等量关系得到∠ CBE=∠BAD ． |
+
+    | 解答： | 证明：∵ AB=AC ， AD 是 BC 边上的中线， BE⊥AC ， ∴∠ CBE+∠C=∠CAD+∠C=90° ，∠ CAD=∠BAD ， ∴∠ CBE=∠BAD ． |
+
+    | 点评： | 考查了余角的性质，等腰三角形的性质：等腰三角形的顶角平分线、底边上的中线、底边上的高相互重合． |'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: triangles
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2015-beijing-zhenti-fig25.png
+    width_mm: 32.3
+    height_mm: 33.9
+- id: 23
+  type: 解答
+  score: 6
+  question: '（5分）（2015•北京）在平面直角坐标系xOy中，直线y=kx+b（k≠0）与双曲线y=$\frac{8}{x}$的一个交点为P（2，m），与x轴、y轴分别交于点A，B．
+
+    (1）求m的值；
+
+    (2）若PA=2AB，求k的值．
+
+    | 考点 ： | 反比例函数与一次函数的交点问题． 12999 数学网 |
+
+    | --- | --- |
+
+    | 分析： | （ 1 ）将点 P 的坐标代入反比例函数的解析式即可求得 m 的值； (2 ）作 PC⊥x 轴于点 C ，设点 A 的坐标为（ a ， 0 ），则 AO=﹣a ， AC=2﹣a ，根据 PA=2AB 得到 AB ： AP=AO ： AC=1 ： 2 ，求得 a 值后代入求得 k 值即可． |
+
+    | 解答： | 解：∵ y= $\frac{8}{x}$ 经过 P （ 2 ， m ）， ∴ 2m=8 ， 解得： m=4 ； (2 ）点 P （ 2 ， 4 ）在 y=kx+b 上， ∴ 4=2k+b ， ∴ b=4﹣2k ， ∵ 直线 y=kx+b （ k≠0 ）与 x 轴、 y 轴分别交于点 A ， B ， ∴ A （ 2﹣ $\frac{4}{k}$ ， 0 ）， B （ 0 ， 4﹣2k
+    ）， 如图， ∵ PA=2AB ， ∴ AB=PB ，则 OA=OC ， ∴ $\frac{4}{k}$ ﹣ 2=2 ， 解得 k=1 ； [图] |
+
+    | 点评： | 本题考查了反比例函数与一次函数的交点问题，解题的关键是表示出 A 的坐标，然后利用线段之间的倍数关系确定 k 的值，难度不大． |'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 一次函数
+  - 反比例函数
+  - 坐标系
+  module: functions
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 24
+  type: 解答
+  score: 6
+  question: '（5分）（2015•北京）如图，AB是⊙O的直径，过点B作⊙O的切线BM，弦CD∥BM，交AB于点F，且$\widehat{DA}$=$\widehat{DC}$，连接AC，AD，延长AD交BM于点E．
+
+    (1）求证：△ACD是等边三角形；
+
+    (2）连接OE，若DE=2，求OE的长．
+
+    [图]
+
+    | 考点 ： | 切线的性质；等边三角形的判定与性质． 12999 数学网 |
+
+    | --- | --- |
+
+    | 分析： | （ 1 ）由 AB 是⊙ O 的直径， BM 是⊙ O 的切线，得到 AB⊥BE ，由于 CD∥BE ，得到 CD⊥AB ，根据垂径定理得到 $\widehat{AD}=\widehat{AC}$ ，于是得到 $\widehat{AD}=\widehat{AC}=\widehat{CD}$ ，问题即可得证； (2 ）连接 OE ，过 O 作 ON⊥AD 于 N ，由（ 1 ）知，△
+    ACD 是等边三角形，得到∠ DAC=60° 又直角三角形的性质得到 BE= $\frac{1}{2}$ AE ， ON= $\frac{1}{2}$ AO ，设⊙ O 的半径为： r 则 ON= $\frac{1}{2}$ r ， AN=DN= $\frac{\sqrt{3}}{2}$ r ，由于得到 EN=2+ $\frac{\sqrt{3}}{2}r$ ， BE= $\frac{1}{2}$
+    AE= [图] ，在 R t △DEF 与 R t △BEO 中，由勾股定理列方程即可得到结论． |
+
+    | 解答： | （ 1 ）证明：∵ AB 是⊙ O 的直径， BM 是⊙ O 的切线， ∴ AB⊥BE ， ∵ CD∥BE ， ∴ CD⊥AB ， ∴ $\widehat{AD}=\widehat{AC}$ ， ∵ $\widehat{DA}$ = $\widehat{DC}$ ， ∴ $\overline{AD}=\overline{AC}=\overline{CD}$ ， ∴ AD=AC=CD
+    ， ∴△ ACD 是等边三角形； (2 ）解：连接 OE ，过 O 作 ON⊥AD 于 N ，由（ 1 ）知，△ ACD 是等边三角形， ∴∠ DAC=60° ∵ AD=AC ， CD⊥AB ， ∴∠ DAB=30° ， ∴ BE= $\frac{1}{2}$ AE ， ON= $\frac{1}{2}$ AO ， 设⊙ O 的半径为： r ， ∴ ON= $\frac{1}{2}$ r ，
+    AN=DN= $\sqrt{3}2$ r ， ∴ EN=2+ $\frac{\sqrt{3}}{2}r$ ， BE= $\frac{1}{2}$ AE= [图] ， 在 R t △DEF 与 R t △BEO 中， OE 2 =ON 2 +NE 2 =OB 2 +BE 2 ， 即 [图] =r 2 + [图] ， ∴ r=2 $\sqrt{3}$ ， ∴ OE 2 = $\left(\sqrt{3}\right)^{2}$
+    +25=28 ， ∴ OE=2 $\sqrt{7}$ ． [图] |
+
+    | 点评： | 本题考查了切线的性质，垂径定理，等边三角形的判定，直角三角形的性质，勾股定理，过 O 作 ON⊥AD 于 N ，构造直角三角形是解题的关键． |'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 垂径定理
+  - 切线
+  - 弦
+  - 勾股定理
+  module: triangles
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+  figures:
+  - path: figures/2015-beijing-zhenti-fig27.png
+    width_mm: 38.1
+    height_mm: 43.4

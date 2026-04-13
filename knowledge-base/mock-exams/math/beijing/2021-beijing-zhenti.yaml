@@ -1,0 +1,1012 @@
+# ============================================================
+# 2021年北京市中考数学真题试卷 — 逐题分析
+# ============================================================
+# 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
+# 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
+# 满分：100分  时长：120分钟
+
+year: 2021
+district: 北京市
+exam_type: 真题
+subject: 数学
+full_score: 100
+duration_minutes: 120
+total_questions: 28
+structure: 8选择(16分) + 8填空(16分) + 12解答(68分)
+questions:
+- id: 1
+  type: 解答
+  score: 5
+  question: '如图是某几何体的展开图，该几何体是（    ）
+
+    [图]
+
+    A.长方体 B.圆柱 C.圆锥 D.三棱柱'
+  answer: B
+  solution: '解：由图形可得该几何体是圆柱；
+
+    故选B．'
+  knowledge_points:
+  - 综合
+  module: circles
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2021-beijing-zhenti-fig19.png
+    width_mm: 29.6
+    height_mm: 28.8
+- id: 2
+  type: 解答
+  score: 5
+  question: '党的十八大以来，坚持把教育扶贫作为脱贫攻坚的优先任务．$2014-2018$年，中央财政累计投入“全面改善贫困地区义务教育薄弱学校基本办学条件”专项补助资金1692亿元，将169200000000用科学记数法表示应为（    ）
+
+    A$\pi$$0.1692\times10^{12}$ B.$1.692\times10^{12}$ C.$1.692\times10^{11}$ D.$16.92\times10^{10}$'
+  answer: C
+  solution: '解：由题意得：将169200000000用科学记数法表示应为$1.692\times10^{11}$；
+
+    故选C．'
+  knowledge_points:
+  - 科学记数法
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 3
+  type: 解答
+  score: 5
+  question: '如图，点O在直线AB上，$OC \perp OD$．若$\angle AOC = 120^\circ$，则$\angle BOD$的大小为（ ）
+
+    [图]
+
+    A.$30\text{?}$ B.$40^\circ$ C.$50^\circ$ D.$60^\circ$'
+  answer: A
+  solution: '解：∵点O在直线AB上，$OC \perp OD$，
+
+    ∴$\angle AOC + \angle COB = 180^\circ$，$\angle COD = 90^\circ$，
+
+    ∵$\angle AOC = 120^\circ$，
+
+    ∴$\angle COB = 60^\circ$，
+
+    ∴$\angle BOD = 90^\circ - \angle COB = 30^\circ$；
+
+    故选A．'
+  knowledge_points:
+  - 邻补角
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2021-beijing-zhenti-fig20.png
+    width_mm: 51.6
+    height_mm: 35.2
+- id: 4
+  type: 解答
+  score: 5
+  question: '下列多边形中，内角和最大的是（    ）
+
+    A.[图] B.[图] C.[图] D.[图]'
+  answer: D
+  solution: '解：A、是一个三角形，其内角和为180°；
+
+    B、是一个四边形，其内角和为360°；
+
+    C、是一个五边形，其内角和为540°；
+
+    D、是一个六边形，其内角和为720°；
+
+    ∴内角和最大的是六边形；
+
+    故选D．'
+  knowledge_points:
+  - 综合
+  module: triangles
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2021-beijing-zhenti-fig21.png
+    width_mm: 23.5
+    height_mm: 22.0
+  - path: figures/2021-beijing-zhenti-fig22.png
+    width_mm: 24.1
+    height_mm: 22.5
+  - path: figures/2021-beijing-zhenti-fig23.png
+    width_mm: 27.3
+    height_mm: 23.0
+  - path: figures/2021-beijing-zhenti-fig24.png
+    width_mm: 25.7
+    height_mm: 22.8
+- id: 5
+  type: 解答
+  score: 5
+  question: '实数$a,b$在数轴上的对应点的位置如图所示，下列结论中正确的是（    ）
+
+    [图]
+
+    A.$a > -2$ B.$|a|>b$ C.$a+b>0$ D.$b-a<0$'
+  answer: B
+  solution: '解：由数轴及题意可得：$-3 < a < -2, 0 < b < 1$，
+
+    ∴$|a|>b,a+b<0,b-a>0$，
+
+    ∴只有B选项正确，
+
+    故选B．'
+  knowledge_points:
+  - 综合
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2021-beijing-zhenti-fig25.png
+    width_mm: 83.9
+    height_mm: 11.4
+- id: 6
+  type: 解答
+  score: 5
+  question: '同时抛掷两枚质地均匀的硬币，则一枚硬币正面向上､一枚硬币反面向上的概率是（    ）
+
+    A.$\frac{1}{4}$ B.$\frac{1}{3}$ C.$\frac{1}{2}$ D.$\frac{2}{3}$'
+  answer: C
+  solution: '解：由题意得：
+
+    [图]
+
+    ∴一枚硬币正面向上､一枚硬币反面向上的概率是$P=\frac{2}{4}=\frac{1}{2}$；
+
+    故选C．'
+  knowledge_points:
+  - 概率
+  - 树状图
+  module: statisticsAndProbability
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 7
+  type: 解答
+  score: 5
+  question: '已知$43^2 = 1849, 44^2 = 1936, 45^2 = 2025, 46^2 = 2116$．若n为整数且$n < \sqrt{2021} < n + 1$，则n的值为（    ）
+
+    A.43 B.44 C.45 D.46'
+  answer: B
+  solution: '解：∵$43^2 = 1849, 44^2 = 1936, 45^2 = 2025, 46^2 = 2116$，
+
+    ∴$44^2 < 2021 < 45^2$，
+
+    ∴$44<\sqrt{2021}<45$，
+
+    ∴$n = 44$；
+
+    故选B．'
+  knowledge_points:
+  - 综合
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 8
+  type: 解答
+  score: 5
+  question: '如图，用绳子围成周长为$10m$的矩形，记矩形的一边长为xm，它的邻边长为$y^{m}$，矩形的面积为$Sm^2$．当x在一定范围内变化时，y和S都随x的变化而变化，则y与$x,S$与x满足的函数关系分别是（    ）
+
+    [图]
+
+    A.一次函数关系，二次函数关系 B.反比例函数关系，二次函数关系
+
+    C.一次函数关系，反比例函数关系 D.反比例函数关系，一次函数关系'
+  answer: A
+  solution: '解：由题意得：
+
+    $2(x+y)=10$，整理得：$y = -x + 5, (0 < x < 5)$，
+
+    $S = xy = x(-x + 5) = -x^2 + 5x, (0 < x < 5)$，
+
+    ∴y与x成一次函数的关系，S与x成二次函数的关系；
+
+    故选A．'
+  knowledge_points:
+  - 一次函数
+  - 反比例函数
+  - 二次函数
+  - 矩形
+  module: functions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2021-beijing-zhenti-fig27.png
+    width_mm: 33.1
+    height_mm: 22.8
+- id: 9
+  type: 填空
+  score: 2
+  question: 若$\sqrt{x-7}$在实数范围内有意义，则实数x的取值范围是_______________．
+  answer: $x^{7}$
+  solution: '解：由题意得：
+
+    $x-7\quad0$，
+
+    解得：$x^{7}$；
+
+    故答案为$x^{7}$．'
+  knowledge_points:
+  - 综合
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 10
+  type: 填空
+  score: 2
+  question: 分解因式：$5x^2 - 5y^2 =$______________．
+  answer: $5(x+y)(x-y)$
+  solution: '解：$5x^2 - 5y^2 = 5(x^2 - y^2) = 5(x + y)(x - y)$；
+
+    故答案为$5(x+y)(x-y)$．'
+  knowledge_points:
+  - 因式分解
+  - 方差
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 11
+  type: 填空
+  score: 2
+  question: 方程$\frac{2}{x+3}=\frac{1}{x}$的解为______________．
+  answer: $x = 3$
+  solution: '解：$\frac{2}{x+3}=\frac{1}{x}$
+
+    $2x = x + 3$，
+
+    ∴$x = 3$，
+
+    经检验：$x = 3$是原方程的解．
+
+    故答案为：x=3．'
+  knowledge_points:
+  - 分式方程
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 12
+  type: 填空
+  score: 2
+  question: 在平面直角坐标系xOy中，若反比例函数$y=\frac{k}{x}(k\neq0)$的图象经过点$A(1,2)$和点$B(-1,m)$，则m的值为______________．
+  answer: $-2$
+  solution: '解：把点$A(1,2)$代入反比例函数$y=\frac{k}{x}(k\neq0)$得：$k = 2$，
+
+    ∴$-1\times m=2$，解得：$m = -2$，
+
+    故答案为-2．'
+  knowledge_points:
+  - 反比例函数
+  - 坐标系
+  module: functions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 13
+  type: 填空
+  score: 2
+  question: '如图，$PA,PB$是$00$的切线，$A,B$是切点．若$\angle P = 50^\circ$，则$\angle AOB =$______________．
+
+    [图]'
+  answer: 130°
+  solution: '解：∵$PA,PB$是$00$的切线，
+
+    ∴$\angle PAO = \angle PBO = 90^\circ$，
+
+    ∴由四边形内角和可得：$\angle AOB + \angle P = 180^\circ$，
+
+    ∵$\angle P = 50^\circ$，
+
+    ∴$\angle AOB = 130^\circ$；
+
+    故答案为130°．'
+  knowledge_points:
+  - 切线
+  module: triangles
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2021-beijing-zhenti-fig28.png
+    width_mm: 52.4
+    height_mm: 33.6
+- id: 14
+  type: 填空
+  score: 2
+  question: '如图，在矩形$ABCD$中，点$E,F$分别在$BC, AD$上，$AF = EC$．只需添加一个条件即可证明四边形$AECF$是菱形，这个条件可以是______________（写出一个即可）．
+
+    [图]'
+  answer: $AF = AE$（答案不唯一）
+  solution: '解：∵四边形$ABCD$是矩形，
+
+    ∴$AD\parallel BC$，
+
+    ∵$AF = EC$，
+
+    ∴四边形$AECF$是平行四边形，
+
+    若要添加一个条件使其为菱形，则可添加$AF = AE$或AE=CE或CE=CF或AF=CF，理由：一组邻边相等的平行四边形是菱形；
+
+    故答案为$AF = AE$（答案不唯一）．'
+  knowledge_points:
+  - 平行四边形
+  - 矩形
+  - 菱形
+  module: quadrilaterals
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2021-beijing-zhenti-fig29.png
+    width_mm: 50.0
+    height_mm: 30.7
+- id: 15
+  type: 填空
+  score: 2
+  question: '有甲､乙两组数据，如表所示：
+
+    | 甲 | 11 | 12 | 13 | 14 | 15 |
+
+    | --- | --- | --- | --- | --- | --- |
+
+    | 乙 | 12 | 12 | 13 | 14 | 14 |
+
+    甲､乙两组数据的方差分别为$s_{甲}^{2},s_{乙}^{2}$，则$s_{\text{甲}}^{2}$______________$s_{乙}^{2}$（填“＞”，“＜”或“＝”）．'
+  answer: ＞
+  solution: '解：由题意得：
+
+    $\overline{x}_{\text{甲}}=\frac{11+12+13+14+15}{5}=13$，$\overline{x_{乙}}=\frac{12+12+13+14+14}{5}=13$，
+
+    ∴$s_{\text{甲}}^2 = \frac{\left[(11-13)^2 + (12-13)^2 + (13-13)^2 + (14-13)^2 + (15-13)^2\right]}{5} = 2$，
+
+    $s_{\mathrm{Z}}^{2}=\frac{\left[(12-13)^{2}+(12-13)^{2}+(13-13)^{2}+(14-13)^{2}+(14-13)^{2}\right]}{5}=\frac{4}{5}$，
+
+    ∴$2>\frac{4}{5}$，
+
+    ∴$s_{\text{甲}}^{2}>s_{\text{乙}}^{2}$；
+
+    故答案为＞．'
+  knowledge_points:
+  - 平均数
+  - 方差
+  module: statisticsAndProbability
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 16
+  type: 填空
+  score: 2
+  question: 某企业有$A,B$两条加工相同原材料的生产线．在一天内，A生产线共加工a吨原材料，加工时间为$(4a+1)$小时；在一天内，B生产线共加工b吨原材料，加工时间为$(2b+3)$小时．第一天，该企业将5吨原材料分配到$A,B$两条生产线，两条生产线都在一天内完成了加工，且加工时间相同，则分配到A生产线的吨数与分配到B生产线的吨数的比为______________．第二天开工前，该企业按第一天的分配结果分配了5吨原材料后，又给A生产线分配了m吨原材料，给B生产线分配了n吨原材料．若两条生产线都能在一天内加工完各自分配到的所有原材料，且加工时间相同，则$\frac{m}{n}$的值为______________．
+  answer: ①.2∶3 ②.$\frac{1}{2}$
+  solution: '解：设分配到A生产线的吨数为x吨，则分配到B生产线的吨数为（5-x）吨，依题意可得：
+
+    $4x+1=2(5-x)+3$，解得：$x = 2$，
+
+    ∴分配到B生产线的吨数为5-2=3（吨），
+
+    ∴分配到A生产线的吨数与分配到B生产线的吨数的比为2∶3；
+
+    ∴第二天开工时，给A生产线分配了$(2+m)$吨原材料，给B生产线分配了$(3+n)$吨原材料，
+
+    ∵加工时间相同，
+
+    ∴$4(2+m)+1=2(3+n)+3$，
+
+    解得：$m = \frac{1}{2}n$，
+
+    ∴$\frac{m}{n}=\frac{1}{2}$；
+
+    故答案为$2:3$，$\frac{1}{2}$．'
+  knowledge_points:
+  - 综合
+  module: equationsAndInequalities
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 17
+  type: 解答
+  score: 5
+  question: 计算：$2\sin 60^{\circ}+\sqrt{12}+|-5|-(\pi+\sqrt{2})^{0}$．
+  answer: $3\sqrt{3}+4$
+  solution: 解：原式=$2\times\frac{\sqrt{3}}{2}+2\sqrt{3}+5-1=3\sqrt{3}+4$．
+  knowledge_points:
+  - 三角函数
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 18
+  type: 解答
+  score: 5
+  question: '解不等式组：$\left\{
+
+    \begin{array}{l}
+
+    4x - 5 > x + 1 \\
+
+    \dfrac{3x - 4}{2} < x
+
+    \end{array}
+
+    \right.$'
+  answer: $2 < x < 4$
+  solution: '解：$\left\{
+
+    \begin{array}{l}
+
+    4x - 5 > x + 1 \quad \textcircled{1} \\
+
+    \dfrac{3x - 4}{2} < x \quad \textcircled{2}
+
+    \end{array}
+
+    \right.$
+
+    由①可得：$x>2$，
+
+    由②可得：$x<4$，
+
+    ∴原不等式组的解集为$2 < x < 4$．'
+  knowledge_points:
+  - 不等式
+  - 不等式组
+  module: equationsAndInequalities
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 19
+  type: 解答
+  score: 5
+  question: 已知$a^2 + 2b^2 - 1 = 0$，求代数式$(a-b)^2+b(2a+b)$的值．
+  answer: '1'
+  solution: '解：$(a-b)^2+b(2a+b)$
+
+    =$a^{2}-2ab+b^{2}+2ab+b^{2}$
+
+    =$a^2 + 2b^2$，
+
+    ∵$a^2 + 2b^2 - 1 = 0$，
+
+    ∴$a^{2}+2b^{2}=1$，
+
+    代入原式得：原式=$1$．'
+  knowledge_points:
+  - 综合
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 20
+  type: 解答
+  score: 5
+  question: '《淮南子･天文训》中记载了一种确定东西方向的方法，大意是：日出时，在地面上点A处立一根杆，在地面上沿着杆的影子的方向取一点B，使$B,A$两点间的距离为10步（步是古代的一种长度单位），在点B处立一根杆；日落时，在地面上沿着点B处的杆的影子的方向取一点C，使$C,B$两点间的距离为10步，在点C处立一根杆．取CA的中点D，那么直线DB表示的方向为东西方向．
+
+    （1）上述方法中，杆在地面上的影子所在直线及点$A,B,C$的位置如图所示．使用直尺和圆规，在图中作CA的中点D（保留作图痕迹）；
+
+    [图]
+
+    （2）在如图中，确定了直线DB表示的方向为东西方向．根据南北方向与东西方向互相垂直，可以判断直线CA表示的方向为南北方向，完成如下证明．
+
+    证明：在$\triangle ABC$中，$BA =$______________，D是CA的中点，
+
+    $\therefore CA \perp DB$（______________）（填推理的依据）．
+
+    ∵直线DB表示的方向为东西方向，
+
+    ∴直线CA表示的方向为南北方向．'
+  answer: （1）图见详解；（2）BC，等腰三角形的三线合一
+  solution: '解：（1）如图所示：
+
+    [图]
+
+    （2）证明：在$\triangle ABC$中，$BA = BC$，D是CA的中点，
+
+    $\therefore CA \perp DB$（等腰三角形的三线合一）（填推理的依据）．
+
+    ∵直线DB表示的方向为东西方向，
+
+    ∴直线CA表示的方向为南北方向；
+
+    故答案为BC，等腰三角形的三线合一．'
+  knowledge_points:
+  - 尺规作图
+  module: triangles
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2021-beijing-zhenti-fig30.png
+    width_mm: 90.5
+    height_mm: 34.1
+- id: 21
+  type: 解答
+  score: 5
+  question: '已知关于x的一元二次方程$x^{2}-4mx+3m^{2}=0$．
+
+    （1）求证：该方程总有两个实数根；
+
+    （2）若$m > 0$，且该方程的两个实数根的差为2，求m的值．'
+  answer: （1）见详解；（2）$m = 1$
+  solution: ''
+  knowledge_points:
+  - 一元二次方程
+  - 根的判别式
+  module: equationsAndInequalities
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 22
+  type: 解答
+  score: 5
+  question: '如图，在四边形$ABCD$中，$\angle ACB = \angle CAD = 90^\circ$，点E在BC上，$AE\parallel DC,EF\perp AB$，垂足为F．
+
+    [图]
+
+    （1）求证：四边形$AECD$是平行四边形；
+
+    （2）若AE平分$\angle BAC, BE = 5, \cos B = \frac{4}{5}$，求BF和AD的长．'
+  answer: （1）见详解；（2）$BF = 4$，$AD = 3$
+  solution: '（1）证明：∵$\angle ACB = \angle CAD = 90^\circ$，
+
+    ∴AD∥CE，
+
+    ∵$AE\parallel DC$，
+
+    ∴四边形$AECD$是平行四边形；
+
+    （2）解：由（1）可得四边形$AECD$是平行四边形，
+
+    ∴$CE = AD$，
+
+    ∵$EF \perp AB$，AE平分$\angle BAC$，$\angle ACB = 90^\circ$，
+
+    ∴$EF = CE$，
+
+    ∴EF=CE=AD，
+
+    ∵$BE = 5, \cos B = \frac{4}{5}$，
+
+    ∴$BF = BE \cdot \cos B = 5 \times \frac{4}{5} = 4$，
+
+    ∴$EF = \sqrt{BE^2 - BF^2} = 3$，
+
+    ∴$AD = EF = 3$．'
+  knowledge_points:
+  - 勾股定理
+  - 平行四边形
+  - 三角函数
+  module: triangles
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2021-beijing-zhenti-fig32.png
+    width_mm: 57.4
+    height_mm: 38.6
+- id: 23
+  type: 解答
+  score: 6
+  question: '在平面直角坐标系xOy中，一次函数$y = kx + b(k \ne 0)$的图象由函数$y=\frac{1}{2}x$的图象向下平移1个单位长度得到．
+
+    （1）求这个一次函数的解析式；
+
+    （2）当$x > -2$时，对于x的每一个值，函数$y = mx (m \neq 0)$的值大于一次函数$y = kx + b$的值，直接写出m的取值范围．'
+  answer: （1）$y=\frac{1}{2}x-1$；（2）$\frac{1}{2} \leq m \leq 1$
+  solution: '解：（1）由一次函数$y = kx + b(k \neq 0)$的图象由函数$y=\frac{1}{2}x$的图象向下平移1个单位长度得到可得：一次函数的解析式为$y=\frac{1}{2}x-1$；
+
+    （2）由题意可先假设函数$y = mx (m \neq 0)$与一次函数$y = kx + b$的交点横坐标为$-2$，则由（1）可得：
+
+    $-2m = \frac{1}{2} \times (-2) - 1$，解得：$m = 1$，
+
+    函数图象如图所示：
+
+    [图]
+
+    ∴当$x > -2$时，对于x的每一个值，函数$y = mx (m \neq 0)$的值大于一次函数$y = kx + b$的值时，根据一次函数的k表示直线的倾斜程度可得当$m = \frac{1}{2}$时，符合题意，当$\angle AOC = 90^\circ$时，则函数$y = mx (m \neq 0)$与一次函数$y = kx + b$的交点在第一象限，此时就不符合题意，
+
+    综上所述：$\frac{1}{2} \leq m \leq 1$．'
+  knowledge_points:
+  - 一次函数
+  - 平移
+  - 坐标系
+  module: functions
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 24
+  type: 解答
+  score: 6
+  question: '如图，$00$是$\triangle ABC$的外接圆，AD是$00$的直径，$AD \perp BC$于点E．
+
+    [图]
+
+    （1）求证：$\angle BAD = \angle CAD$；
+
+    （2）连接BO并延长，交AC于点F，交$00$于点G，连接GC．若$00$的半径为5，$OE = 3$，求GC和OF的长．'
+  answer: （1）见详解；（2）$GC = 6$，$OF = \frac{25}{11}$
+  solution: '（1）证明：∵AD是$00$的直径，$AD \perp BC$，
+
+    ∴$\widehat{BD} = \widehat{CD}$，
+
+    ∴$\angle BAD = \angle CAD$；
+
+    （2）解：由题意可得如图所示：
+
+    [图]
+
+    由（1）可得点E为BC的中点，
+
+    ∵点O是BG的中点，
+
+    ∴$OE =\frac{1}{2}CG,OE//CG$，
+
+    ∴$\triangle AOF \sim \triangle CGF$，
+
+    ∴$\frac{OA}{CG}=\frac{OF}{GF}$，
+
+    ∵$OE = 3$，
+
+    ∴$CG = 6$，
+
+    ∵$00$的半径为5，
+
+    ∴$OA = OG = 5$，
+
+    ∴$\frac{5}{6} = \frac{OF}{GF}$，
+
+    ∴$OF = \frac{5}{11}OG = \frac{25}{11}$．'
+  knowledge_points:
+  - 垂径定理
+  - 相似三角形
+  module: triangles
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+  figures:
+  - path: figures/2021-beijing-zhenti-fig34.png
+    width_mm: 46.0
+    height_mm: 40.0
+- id: 25
+  type: 解答
+  score: 6
+  question: '为了解甲､乙两座城市的邮政企业4月份收入的情况，从这两座城市的邮政企业中，各随机抽取了25家邮政企业，获得了它们4月份收入（单位：百万元）的数据，并对数据进行整理､描述和分析．下面给出了部分信息．
+
+    a．甲城市邮政企业4月份收入的数据的频数分布直方图如下（数据分成5组：$6 \leq x < 8, 8 \leq x < 10, 10 \leq x < 12, 12 \leq x < 14, 14 \leq x \leq 16$）：
+
+    [图]
+
+    b．甲城市邮政企业4月份收入的数据在$10 \leq x < 12$这一组的是：10.0，10.0，10.1，10.9，11.4，11.5，11.6，11.8
+
+    c．甲､乙两座城市邮政企业4月份收入的数据的平均数､中位数如下：
+
+    |  | 平均数 | 中位数 |
+
+    | --- | --- | --- |
+
+    | 甲城市 | 10.8 | m |
+
+    | 乙城市 | 11.0 | 11.5 |
+
+    根据以上信息，回答下列问题：
+
+    （1）写出表中m的值；
+
+    （2）在甲城市抽取的邮政企业中，记4月份收入高于它们的平均收入的邮政企业的个数为$p_1$．在乙城市抽取的邮政企业中，记4月份收入高于它们的平均收入的邮政企业的个数为$p_2$．比较$p_1,p_2$的大小，并说明理由；
+
+    （3）若乙城市共有200家邮政企业，估计乙城市的邮政企业4月份的总收入（直接写出结果）．'
+  answer: （1）$m = 10.1$；（2）$p_{1}<p_{2}$，理由见详解；（3）乙城市的邮政企业4月份的总收入为2200百万元．
+  solution: '解：（1）由题意可得m为甲城市的中位数，由于总共有25家邮政企业，所以第13家邮政企业的收入作为该数据的中位数，
+
+    ∵$6 \leq x < 8$有3家，$8 \leq x < 10$有7家，$10 \leq x < 12$有8家，
+
+    ∴中位数落在$10 \leq x < 12$上，
+
+    ∴$m = 10.1$；
+
+    （2）由（1）可得：甲城市中位数低于平均数，则$p_1$最大为12个；乙城市中位数高于平均数，则$p_2$至少为13个，
+
+    ∴$p_{1}<p_{2}$；
+
+    （3）由题意得：
+
+    $200\times11=2200$（百万元）；
+
+    答：乙城市的邮政企业4月份的总收入为2200百万元．'
+  knowledge_points:
+  - 统计
+  - 平均数
+  - 中位数
+  module: statisticsAndProbability
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+  figures:
+  - path: figures/2021-beijing-zhenti-fig36.png
+    width_mm: 97.6
+    height_mm: 58.2
+- id: 26
+  type: 解答
+  score: 6
+  question: '在平面直角坐标系xOy中，点$(1,m)$和点$(3,n)$在抛物线$y = ax^2 + bx (a > 0)$上．
+
+    （1）若$m = 3, n = 15$，求该抛物线的对称轴；
+
+    （2）已知点$(-1,y_{1}),(2,y_{2}),(4,y_{3})$在该抛物线上．若$mn < 0$，比较$y_1,y_2,y_3$的大小，并说明理由．'
+  answer: （1）$x = -1$；（2）$y_{2}<y_{1}<y_{3}$，理由见解析
+  solution: '解：（1）当$m = 3, n = 15$时，则有点$(1,3)$和点$(3,15)$，代入二次函数$y = ax^2 + bx (a > 0)$得：
+
+    $\left\{
+
+    \begin{array}{l}
+
+    a + b = 3 \\
+
+    9a + 3b = 15
+
+    \end{array}
+
+    \right.$，解得：$\left\{
+
+    \begin{array}{l}
+
+    a = 1 \\
+
+    b = 2
+
+    \end{array}
+
+    \right.$，
+
+    ∴抛物线解析式为$y = x^2 + 2x$，
+
+    ∴抛物线的对称轴为$x = -\frac{b}{2a} = -1$；
+
+    （2）由题意得：抛物线$y = ax^2 + bx (a > 0)$始终过定点$(0,0)$，则由$mn < 0$可得：
+
+    ①当$m > 0, n < 0$时，由抛物线$y = ax^2 + bx (a > 0)$始终过定点$(0,0)$可得此时的抛物线开口向下，即$a < 0$，与$a > 0$矛盾；
+
+    ②当$m < 0, n > 0$时，
+
+    ∵抛物线$y = ax^2 + bx (a > 0)$始终过定点$(0,0)$，
+
+    ∴此时抛物线的对称轴的范围为$\frac{1}{2}<x<\frac{3}{2}$，
+
+    ∵点$(-1,y_{1}),(2,y_{2}),(4,y_{3})$在该抛物线上，
+
+    ∴它们离抛物线对称轴的距离的范围分别为$\frac{3}{2}<x-(-1)<\frac{5}{2},\frac{1}{2}<2-x<\frac{3}{2},\frac{5}{2}<4-x<\frac{7}{2}$，
+
+    ∵$a > 0$，开口向上，
+
+    ∴由抛物线的性质可知离对称轴越近越小，
+
+    ∴$y_{2}<y_{1}<y_{3}$．'
+  knowledge_points:
+  - 二次函数
+  - 坐标系
+  module: functions
+  difficulty: 压轴
+  recommended_for:
+  - L3
+- id: 27
+  type: 解答
+  score: 7
+  question: '如图，在$\triangle ABC$中，$AB = AC, \angle BAC = \alpha, M$为BC的中点，点D在MC上，以点A为中心，将线段AD顺时针旋转$\alpha$得到线段AE，连接$BE, DE$．
+
+    [图]
+
+    （1）比较$\angle BAE$与$\angle CAD$的大小；用等式表示线段$BE,BM,MD$之间的数量关系，并证明；
+
+    （2）过点M作AB的垂线，交DE于点N，用等式表示线段NE与ND的数量关系，并证明．'
+  answer: （1）$\angle BAE = \angle CAD$，$BM = BE + MD$，理由见详解；（2）$DN = EN$，理由见详解．
+  solution: '（1）证明：∵$\angle BAC = \angle EAD = \alpha$，
+
+    ∴$\angle BAE + \angle BAD = \angle BAD + \angle CAD = \alpha$，
+
+    ∴$\angle BAE = \angle CAD$，
+
+    由旋转的性质可得$AE = AD$，
+
+    ∵$AB = AC$，
+
+    ∴$\triangle ABE\cong\triangle ACD(SAS)$，
+
+    ∴$BE = CD$，
+
+    ∵点M为BC的中点，
+
+    ∴$BM = CM$，
+
+    ∵$CM = MD + CD = MD + BE$，
+
+    ∴$BM = BE + MD$；
+
+    （2）证明：$DN = EN$，理由如下：
+
+    过点E作EH⊥AB，垂足为点Q，交AB于点H，如图所示：
+
+    [图]
+
+    ∴$\angle EQB = \angle HQB = 90^\circ$，
+
+    由（1）可得$\triangle ABE\cong\triangle ACD$，
+
+    ∴$\angle ABE = \angle ACD$，$BE = CD$，
+
+    ∵$AB = AC$，
+
+    ∴$\angle ABC = \angle C = \angle ABE$，
+
+    ∵$BQ = BQ$，
+
+    ∴$\triangle BQE \cong \triangle BQH \ (ASA)$，
+
+    ∴$BH = BE = CD$，
+
+    ∵$MB = MC$，
+
+    ∴$HM = DM$，
+
+    ∵$MN \perp AB$，
+
+    ∴$MN\parallel EH$，
+
+    ∴$\triangle DMN \sim \triangle DHE$，
+
+    ∴$\frac{DM}{DH}=\frac{DN}{DE}=\frac{1}{2}$，
+
+    ∴$DN = EN$．'
+  knowledge_points:
+  - 全等三角形
+  - 相似三角形
+  - 旋转
+  module: triangles
+  difficulty: 压轴
+  recommended_for:
+  - L3
+  figures:
+  - path: figures/2021-beijing-zhenti-fig37.png
+    width_mm: 70.1
+    height_mm: 35.5
+- id: 28
+  type: 解答
+  score: 7
+  question: '在平面直角坐标系xOy中，$00$的半径为1，对于点A和线段BC，给出如下定义：若将线段BC绕点A旋转可以得到$00$的弦$B''C''$（$B'',C''$分别是$B,C$的对应点），则称线段BC是$00$的以点A为中心的“关联线段”．
+
+    [图]
+
+    （1）如图，点$A,B_1,C_1,B_2,C_2,B_3,C_3$的横､纵坐标都是整数．在线段$B_1C_1,B_2C_2,B_3C_3$中，$00$的以点A为中心的“关联线段”是______________；
+
+    （2）$\triangle ABC$是边长为1的等边三角形，点$A(0,t)$，其中$t \neq 0$．若BC是$00$的以点A为中心的“关联线段”，求t的值；
+
+    （3）在$\triangle ABC$中，$AB = 1, AC = 2$．若BC是$00$的以点A为中心的“关联线段”，直接写出OA的最小值和最大值，以及相应的BC长．'
+  answer: （1）$B_{2}C_{2}$；（2）$t = \pm\sqrt{3}$；（3）当$OA_{\min} = 1$时，此时$BC = \sqrt{3}$；当$OA_{\max} = 2$时，此时$BC = \frac{\sqrt{6}}{2}$．
+  solution: '解：（1）由题意得：
+
+    [图]
+
+    通过观察图象可得：线段$B_{2}C_{2}$能绕点A旋转90°得到$00$的“关联线段”，$B_1C_1,B_3C_3$都不能绕点A进行旋转得到；
+
+    故答案为$B_{2}C_{2}$；
+
+    （2）由题意可得：当BC是$00$的以点A为中心的“关联线段”时，则有$\triangle AB''C''$是等边三角形，且边长也为1，当点A在y轴的正半轴上时，如图所示：
+
+    [图]
+
+    设$B''C''$与y轴的交点为D，连接$OB''$，易得$B''C'' \perp y$轴，
+
+    ∴$B''D = DC'' = \frac{1}{2}$，
+
+    ∴$OD = \sqrt{OB''^2 - B''D^2} = \frac{\sqrt{3}}{2}$，$AD = \sqrt{AB''^2 - B''D^2} = \frac{\sqrt{3}}{2}$，
+
+    ∴$OA = \sqrt{3}$，
+
+    ∴$t = \sqrt{3}$；
+
+    当点A在y轴的正半轴上时，如图所示：
+
+    [图]
+
+    同理可得此时的$OA = \sqrt{3}$，
+
+    ∴$t = -\sqrt{3}$；
+
+    （3）由BC是$00$的以点A为中心的“关联线段”，则可知$B'',C''$都在$00$上，且$AB'' = AB = 1, AC'' = AC = 2$，则有当以$B''$为圆心，1为半径作圆，然后以点A为圆心，2为半径作圆，即可得到点A的运动轨迹，如图所示：
+
+    [图]
+
+    由运动轨迹可得当点A也在$00$上时为最小，最小值为1，此时$AC''$为$00$的直径，
+
+    ∴$\angle AB''C'' = 90^\circ$，
+
+    ∴$\angle AC''B'' = 30^\circ$，
+
+    ∴$BC = B''C'' = AC'' \cdot \cos 30^\circ = \sqrt{3}$；
+
+    由以上情况可知当点$A,B'',O$三点共线时，OA的值为最大，最大值为2，如图所示：
+
+    [图]
+
+    连接'
+  knowledge_points:
+  - 弦
+  - 旋转
+  - 三角函数
+  - 坐标系
+  module: triangles
+  difficulty: 压轴
+  recommended_for:
+  - L3
+  figures:
+  - path: figures/2021-beijing-zhenti-fig39.png
+    width_mm: 81.2
+    height_mm: 72.2

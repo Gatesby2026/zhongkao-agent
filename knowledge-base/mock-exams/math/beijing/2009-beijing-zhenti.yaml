@@ -1,0 +1,618 @@
+# ============================================================
+# 2009年北京市中考数学真题试卷 — 逐题分析
+# ============================================================
+# 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
+# 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
+# 满分：100分  时长：120分钟
+
+year: 2009
+district: 北京市
+exam_type: 真题
+subject: 数学
+full_score: 100
+duration_minutes: 120
+total_questions: 25
+structure: 8选择(16分) + 8填空(16分) + 12解答(68分)
+questions:
+- id: 1
+  type: 选择
+  score: 2
+  question: '7的相反数是()
+
+    A．$\frac{1}{7}$
+
+    B．7
+
+    C．－$\frac{1}{7}$
+
+    D．－7'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 2
+  type: 选择
+  score: 2
+  question: '改革开放以来，我国国内生产总值由1978年的3645亿元增长到2008年的300 670亿元．将300670用科学记数法表示应为()
+
+    A．0.30067×106
+
+    B．3.006 7×105
+
+    C．3.006 7×104
+
+    D．30.067×104'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 科学记数法
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 3
+  type: 选择
+  score: 2
+  question: '若右图是某几何体的三视图，则这个几何体是()
+
+    [图]
+
+    第3题图
+
+    A．圆柱
+
+    B．正方体
+
+    C．球
+
+    D．圆锥'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: circles
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2009-beijing-zhenti-fig01.png
+    width_mm: 31.8
+    height_mm: 15.1
+- id: 4
+  type: 选择
+  score: 2
+  question: '若一个正多边形的一个外角是40°，则这个正多边形的边数是()
+
+    A．10
+
+    B．9
+
+    C．8
+
+    D．6'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: triangles
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 5
+  type: 选择
+  score: 2
+  question: '某班共有41名同学，其中有2名同学习惯用左手写字，其余同学都习惯用右手写字．老师随机请1名同学解答问题，习惯用左手写字的同学被选中的概率是()
+
+    A．0
+
+    B．$\frac{1}{41}$
+
+    C．$\frac{2}{41}$
+
+    D．1'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 概率
+  module: statisticsAndProbability
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 6
+  type: 选择
+  score: 2
+  question: '某班派9名同学参加拔河比赛，他们的体重分别是(单位：千克)：67，59，61，59，63，57，70，59，65，这组数据的众数和中位数分别是()
+
+    A．59，63
+
+    B．59，61
+
+    C．59，59
+
+    D．57，61'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 中位数
+  - 众数
+  module: statisticsAndProbability
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 7
+  type: 选择
+  score: 2
+  question: '把x3－2x2y＋xy2分解因式，结果正确的是()
+
+    A．x(x＋y)(x－y)
+
+    B．x(x2－2xy＋y2)
+
+    C．x(x＋y)2
+
+    D．x(x－y)2'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 8
+  type: 选择
+  score: 2
+  question: '如图，C为⊙O直径AB上一动点，过点C的直线交⊙O于D、E两点，且∠ACD＝
+
+    45°，DF⊥AB于点F，EG⊥AB于点G．当点C在AB上运动时，设AF＝x，DE＝y，下列图象中，能表示y与x的函数关系的图象大致是()
+
+    [图]
+
+    第8题图
+
+    [图]'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 动点
+  module: geometryComprehensive
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+  figures:
+  - path: figures/2009-beijing-zhenti-fig02.png
+    width_mm: 29.4
+    height_mm: 25.1
+  - path: figures/2009-beijing-zhenti-fig03.png
+    width_mm: 105.6
+    height_mm: 35.7
+- id: 9
+  type: 填空
+  score: 2
+  question: 不等式3x＋2≥5的解集是________．
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 不等式
+  module: equationsAndInequalities
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 10
+  type: 填空
+  score: 2
+  question: '如图，AB为⊙O的直径，弦CD⊥AB，E为$\widehat{BC}$ 上一点，若∠CEA＝28°，则∠ABD＝________°．
+
+    [图][图]
+
+    第10题图          第12题图'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 弦
+  module: circles
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2009-beijing-zhenti-fig04.png
+    width_mm: 24.3
+    height_mm: 23.5
+  - path: figures/2009-beijing-zhenti-fig05.png
+    width_mm: 23.8
+    height_mm: 24.9
+- id: 11
+  type: 填空
+  score: 2
+  question: 若把代数式x2－2x－3化为(x－m)2＋k的形式，其中m、k为常数，则m＋k＝________．
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 12
+  type: 填空
+  score: 2
+  question: 如图，正方形纸片ABCD的边长为1，M、N分别是AD、BC边上的点，将纸片的一角沿过点B的直线折叠，使点A落在MN上，落点记为A′，折痕交AD于点E．若M、N分别是AD、BC边的中点，则A′N＝________；若M、N分别是AD、BC边上距DC最近的n等分点(n≥2，且n为整数)，则A′N＝________(用含有n的式子表示)．
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 正方形
+  module: quadrilaterals
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 13
+  type: 解答
+  score: 5
+  question: 计算：$\left(\frac{1}{6}\right)^{-1}-2009^{0}+\left|-2\sqrt{5}\right|-\sqrt{20}$ ．
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 14
+  type: 解答
+  score: 5
+  question: 解分式方程$\frac{x}{x-2}+\frac{6}{x+2}=1$ ．
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 分式方程
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 15
+  type: 解答
+  score: 5
+  question: '已知：如图，在△ABC中，∠ACB＝90°，CD⊥AB于点D，点E在AC上，CE＝BC，过E点作AC的垂线，交CD的延长线于点F．
+
+    求证：AB＝FC．
+
+    [图]
+
+    第15题图'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2009-beijing-zhenti-fig06.png
+    width_mm: 25.9
+    height_mm: 27.0
+- id: 16
+  type: 解答
+  score: 5
+  question: 已知x2－5x＝14，求(x－1)(2x－1)－(x＋1)2＋1的值．
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 17
+  type: 解答
+  score: 5
+  question: '如图，A、B两点在函数$y=\frac{m}{x}$(x＞0)的图象上．
+
+    (1)求m的值及直线AB的解析式；
+
+    (2)如果一个点的横、纵坐标均为整数，那么我们称这个点是格点．请直接写出图中阴影部分(不包括边界)所含格点的个数．
+
+    [图]
+
+    第17题图'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: functions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2009-beijing-zhenti-fig07.png
+    width_mm: 28.3
+    height_mm: 28.6
+- id: 18
+  type: 解答
+  score: 5
+  question: '列方程或方程组解应用题：
+
+    北京市实施交通管理新措施以来，全市公共交通客运量显著增加．据统计，2008年10月11日至2009年2月28日期间，地面公交日均客运量与轨道交通日均客运量总和为1696万人次，地面公交日均客运量比轨道交通日均客运量的4倍少69万人次．在此期间，地面公交和轨道交通日均客运量各为多少万人次?
+
+    四、解答题(本题共20分，第19题5分，第20题5分，第21题6分，第22题4分)'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 统计
+  module: equationsAndInequalities
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 19
+  type: 解答
+  score: 5
+  question: '如图，在梯形ABCD中，AD∥BC，∠B＝90°，∠C＝45°，AD＝1，BC＝4，E为AB中点，EF∥DC交BC于点F，求EF的长．
+
+    [图]
+
+    第19题图'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: quadrilaterals
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2009-beijing-zhenti-fig08.png
+    width_mm: 29.4
+    height_mm: 23.8
+- id: 20
+  type: 解答
+  score: 5
+  question: '已知：如图，在△ABC中，AB＝AC，AE是角平分线，BM平分∠ABC交AE于点M，经过B、M两点的⊙O交BC于点G，交AB于点F，FB恰为⊙O的直径．
+
+    (1)求证：AE与⊙O相切；
+
+    (2)当BC＝4，$\cos C = \frac{1}{3}$ 时，求⊙O的半径．
+
+    [图]
+
+    第20题图'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: triangles
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2009-beijing-zhenti-fig09.png
+    width_mm: 33.9
+    height_mm: 29.1
+- id: 21
+  type: 解答
+  score: 5
+  question: '在每年年初召开的市人代会上，北京市财政局都要报告上一年度市财政预算执行情况和当年预算情况．以下是根据2004—2008年报告中的有关数据制作的市财政教育预算与实际投入统计图表的一部分．
+
+    [图]
+
+    第21题图
+
+    表12004—2008年北京市财政教育实际投入与预算的差值统计表(单位：亿元)
+
+    | 年份 | 2004 | 2005 | 2006 | 2007 | 2008 |
+
+    | --- | --- | --- | --- | --- | --- |
+
+    | 教育实际投入与预算的差值 |  | 6.7 | 5.7 | 14.6 | 7.3 |
+
+    请根据以上信息解答下列问题：
+
+    (1)请在表1的空格内填入2004年市财政教育实际投入与预算的差值；
+
+    (2)求2004—2008年北京市财政教育实际投入与预算差值的平均数；
+
+    (3)已知2009年北京市财政教育预算是141.7亿元，在此基础上，如果2009年北京市财政教育实际投入按照(2)中求出的平均数增长，估计它的金额可能达到多少亿元?'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 统计
+  - 平均数
+  module: statisticsAndProbability
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2009-beijing-zhenti-fig10.png
+    width_mm: 103.5
+    height_mm: 50.0
+- id: 22
+  type: 解答
+  score: 5
+  question: '阅读下列材料：
+
+    小明遇到一个问题：5个同样大小的正方形纸片排列形式如图①所示，将它们分割后拼接成一个新的正方形．
+
+    他的做法是：按图②所示的方法分割后，将三角形纸片①绕AB的中点O旋转至三角形纸片②处，依此方法继续操作，即可拼接成一个新的正方形DEFG．
+
+    [图]
+
+    [图]
+
+    第22题图
+
+    请你参考小明的做法解决下列问题：
+
+    (1)现有5个形状、大小相同的矩形纸片，排列形式如图③所示．请将其分割后拼接成一个平行四边形．要求：在图③中画出并指明拼接成的平行四边形(画出一个符合条件的平行四边形即可)；
+
+    (2)如图④，在面积为2的平行四边形ABCD中，点E、F、G、H分别是边AB、BC、CD、DA的中点，分别连结AF、BG、CH、DE得到一个新的平行四边形MNPQ．请在图④中探究平行四边形MNPQ面积的大小(画图并直接写出结果)．
+
+    五、解答题(本题共22分，第23题7分，第24题8分，第25题7分)'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 平行四边形
+  - 矩形
+  - 正方形
+  - 旋转
+  module: quadrilaterals
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2009-beijing-zhenti-fig11.png
+    width_mm: 81.0
+    height_mm: 29.1
+  - path: figures/2009-beijing-zhenti-fig12.png
+    width_mm: 88.4
+    height_mm: 26.5
+- id: 23
+  type: 解答
+  score: 6
+  question: '已知关于x的一元二次方程2x2＋4x＋k－1＝0有实数根，k为正整数．
+
+    (1)求k的值；
+
+    (2)当此方程有两个非零的整数根时，将关于x的二次函数y＝2x2＋4x＋k－1的图象向下平移8个单位长度，求平移后的图象的解析式；
+
+    (3)在(2)的条件下，将平移后的二次函数的图象在x轴下方的部分沿x轴翻折，图象的其余部分保持不变，得到一个新的图象．请你结合这个新的图象回答：当直线$y=\frac{1}{2}x+b$(b＜k)与此图象有两个公共点时，b的取值范围．
+
+    [图]
+
+    第23题图'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 一元二次方程
+  - 二次函数
+  - 平移
+  module: functions
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+  figures:
+  - path: figures/2009-beijing-zhenti-fig13.png
+    width_mm: 33.6
+    height_mm: 52.1
+- id: 24
+  type: 解答
+  score: 6
+  question: '在□ABCD中，过点C作CE⊥CD交AD于点E，将线段EC绕点E逆时针旋转90°得到线段EF(如图①)．
+
+    (1)在图①中画图探究：
+
+    ①当P1为射线CD上任意一点(P1不与C点重合)时，连结EP1，将线段EP1绕点E逆时针旋转90°得到线段EG1．判断直线FG1与直线CD的位置关系并加以证明；
+
+    ②当P2为线段DC的延长线上任意一点时，连结EP2，将线段EP2绕点E逆时针旋转90°得到线段EG2．判断直线G1G2与直线CD的位置关系，画出图形并直接写出你的结论．
+
+    (2)若AD＝6，$\tan B = \frac{4}{3}$ ，AE＝1，在①的条件下，设CP1＝x，$S_{\triangle P_1FG_1}$ ＝y，求y与x之间的函数关系式，并写出自变量x的取值范围．
+
+    [图]
+
+    第24题图'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 旋转
+  module: functions
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+  figures:
+  - path: figures/2009-beijing-zhenti-fig14.png
+    width_mm: 79.6
+    height_mm: 36.2
+- id: 25
+  type: 解答
+  score: 6
+  question: '如图，在平面直角坐标系xOy中，△ABC三个顶点的坐标分别为A(－6，0)，B(6，0)，C(0，4$\sqrt{3}$)，延长AC到点D，使$CD = \frac{1}{2} AC$ ，过D点作DE∥AB交BC的延长线于点E．
+
+    (1)求D点的坐标；
+
+    (2)作C点关于直线DE的对称点F，分别连结DF、EF，若过B点的直线y＝kx＋b将四边形CDFE分成周长相等的两个四边形，确定此直线的解析式；
+
+    (3)设G为y轴上一点，点P从直线y＝kx＋b与y轴的交点出发，先沿y轴到达G点，再沿GA到达A点．若P点在y轴上运动的速度是它在直线GA上运动速度的2倍，试确定G点的位置，使P点按照上述要求到达A点所用的时间最短．
+
+    (要求：简述确定G点位置的方法，但不要求证明)
+
+    [图]
+
+    第25题图
+
+    答  案'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 坐标系
+  module: functions
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+  figures:
+  - path: figures/2009-beijing-zhenti-fig15.png
+    width_mm: 38.4
+    height_mm: 41.3

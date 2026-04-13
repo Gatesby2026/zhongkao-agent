@@ -11,7 +11,7 @@ exam_type: 一模
 subject: 数学
 full_score: 100
 duration_minutes: 120
-total_questions: 19
+total_questions: 18
 structure: 8选择(16分) + 8填空(16分) + 12解答(68分)
 questions:
 - id: 1
@@ -19,9 +19,13 @@ questions:
   score: 2
   question: '下列图形中，既是轴对称图形又是中心对称图形的是（）
 
-    A.[图]B.[图]
+    A.[图]
 
-    C.[图]D.[图]'
+    B.[图]
+
+    C.[图]
+
+    D.[图]'
   answer: B
   solution: '解：A、不是轴对称图形，是中心对称图形，故A选项不符合题意；
 
@@ -45,10 +49,18 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-yanshan-yi-fig02.png
-  - figures/2025-yanshan-yi-fig03.png
-  - figures/2025-yanshan-yi-fig04.png
-  - figures/2025-yanshan-yi-fig05.png
+  - path: figures/2025-yanshan-yi-fig02.png
+    width_mm: 25.1
+    height_mm: 10.8
+  - path: figures/2025-yanshan-yi-fig03.png
+    width_mm: 16.4
+    height_mm: 15.9
+  - path: figures/2025-yanshan-yi-fig04.png
+    width_mm: 22.8
+    height_mm: 13.0
+  - path: figures/2025-yanshan-yi-fig05.png
+    width_mm: 17.5
+    height_mm: 14.8
 - id: 2
   type: 选择
   score: 2
@@ -56,7 +68,13 @@ questions:
 
     [图]
 
-    A.40°B.50°C.80°D.140°'
+    A.40°
+
+    B.50°
+
+    C.80°
+
+    D.140°'
   answer: B
   solution: '解：如图可得：$\angle1+\angle3+90^{\circ}-180^{\circ}$，
 
@@ -79,8 +97,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-yanshan-yi-fig06.png
-  - figures/2025-yanshan-yi-fig07.png
+  - path: figures/2025-yanshan-yi-fig06.png
+    width_mm: 64.0
+    height_mm: 32.8
 - id: 3
   type: 选择
   score: 2
@@ -100,7 +119,13 @@ questions:
 
     \end{tikzpicture}$
 
-    A.$a+b<0$B.$ab > 0$C.$\left| a \right| < \left| b \right|$D.$a<-1$'
+    A.$a+b<0$
+
+    B.$ab > 0$
+
+    C.$\left| a \right| < \left| b \right|$
+
+    D.$a<-1$'
   answer: C
   solution: '解：由数轴可知$a<0<b$，且$\left| a \right| < \left| b \right|$
 
@@ -127,7 +152,13 @@ questions:
   score: 2
   question: '若关于x的一元二次方程$x^{2}-3x+m=0$有两个相等的实数根，则实数m的值为（）
 
-    A.$\frac{4}{9}$B.$-\frac{4}{9}$C.$\frac{9}{4}$D.$-\frac{9}{4}$'
+    A.$\frac{4}{9}$
+
+    B.$-\frac{4}{9}$
+
+    C.$\frac{9}{4}$
+
+    D.$-\frac{9}{4}$'
   answer: C
   solution: '解：$\Delta = \left(-3\right)^{2} - 4m = 0$
 
@@ -147,11 +178,15 @@ questions:
 - id: 5
   type: 选择
   score: 2
-  question: '不透明的袋子中装有黑、白小球各一个，除颜色之外两个小球无其他差别．从中随机摸出一个小球，放回并摇匀，再从中随机摸出一个小球，那么两次都摸到白球的概率是（
+  question: '不透明的袋子中装有黑、白小球各一个，除颜色之外两个小球无其他差别．从中随机摸出一个小球，放回并摇匀，再从中随机摸出一个小球，那么两次都摸到白球的概率是（    ）
 
-    ）
+    A.$\frac{1}{2}$
 
-    A.$\frac{1}{2}$B.$\frac{1}{3}$C.$\frac{1}{4}$D.$\frac{3}{4}$'
+    B.$\frac{1}{3}$
+
+    C.$\frac{1}{4}$
+
+    D.$\frac{3}{4}$'
   answer: C
   solution: '解：画树状图如下：
 
@@ -180,14 +215,18 @@ questions:
   - L1
   - L2
   - L3
-  figures:
-  - figures/2025-yanshan-yi-fig08.png
 - id: 6
   type: 选择
   score: 2
   question: '2024年$5.5G$技术正式开始商用，它的数据下载的最高速率从$5.5G$初期的$1Gbps$提升到$10Gbps$．其中$10Gbps$表示每秒传输$10^{10}$（bit）的数据．若我们的科技“再提速”到$10Gbps$的10倍，达到每秒m（bit），则m的值为（）
 
-    A.$10^{10}$B.$100\times10^{10}$C.$0.1\times10^{11}$D.$10^{11}$'
+    A.$10^{10}$
+
+    B.$100\times10^{10}$
+
+    C.$0.1\times10^{11}$
+
+    D.$10^{11}$'
   answer: D
   solution: '解：依题意得，$m=10\times10^{10}=10^{11}$，
 
@@ -205,15 +244,9 @@ questions:
   score: 2
   question: '下面是“作一个$\triangle A''B''C''$，使得$\triangle A''B''C''\cong\triangle ABC$”的尺规作图方法，
 
-    （1）作一条线段$\overrightarrow{AB}=AB$；
+    | （ 1 ）作一条线段 $\overrightarrow{AB}=AB$ ； （ 2 ）以 $A''$ 为圆心， AC 长为半径画弧，以 $B''$ 为圆心， BC 长为半径画弧，两弧交于点 $C''$ ； （ 3 ）连接 $A''C''$ ， $B''C''$ ， 则 $\triangle A''B''C''\cong\triangle ABC$ ． [图] |
 
-    （2）以$A''$为圆心，AC长为半径画弧，以$B''$为圆心，BC长为半径画弧，两弧交于点$C''$；
-
-    （3）连接$A''C''$，$B''C''$，
-
-    则$\triangle A''B''C''\cong\triangle ABC$．
-
-    [图]
+    | --- |
 
     上述判定$\triangle A''B''C''\cong\triangle ABC$的依据是（）
 
@@ -239,8 +272,6 @@ questions:
   - L1
   - L2
   - L3
-  figures:
-  - figures/2025-yanshan-yi-fig09.png
 - id: 8
   type: 选择
   score: 2
@@ -248,7 +279,13 @@ questions:
 
     [图]
 
-    A$[公式]$①②B.①③C.②③D.①②③'
+    A$[公式]$①②
+
+    B.①③
+
+    C.②③
+
+    D.①②③'
   answer: B
   solution: '解：∵$CD \perp AB$
 
@@ -281,7 +318,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-yanshan-yi-fig10.png
+  - path: figures/2025-yanshan-yi-fig09.png
+    width_mm: 35.5
+    height_mm: 22.2
 - id: 9
   type: 填空
   score: 2
@@ -412,9 +451,7 @@ questions:
 - id: 13
   type: 填空
   score: 2
-  question: '某社区医院六月份有300名女教师做体检，医生从中随机抽取10名女教师计算了它们的体重指数，得到的数据如下：
-
-    24.8'
+  question: 某社区医院六月份有300名女教师做体检，医生从中随机抽取10名女教师计算了它们的体重指数，得到的数据如下：
   answer: ''
   solution: ''
   knowledge_points:
@@ -425,17 +462,15 @@ questions:
   - L1
   - L2
   - L3
-- id: 23
+- id: 24
   type: 填空
   score: 2
-  question: '0    23.5    23.9    25.2
+  question: '8    23.0    23.5    23.9    25.2
 
-    18.9
-
-    22.1    19.7    22.4    17.3
+    18.9    22.1    19.7    22.4    17.3
 
     当体重指数参考值x$\mathrm{kg}/\mathrm{m}^{2}$满足$18.5 \leq x \leq 23.9$时，评定为标准体重．根据以上数据，估计这300名女教师中标准体重的人数是__________．'
-  answer: （1）$k = \frac{1}{3}$，$b = 1$，$m = -1$ （2）$n\ 1$
+  answer: （1）①90,3②$=$ （2）甲，89
   solution: '解：（1）设A型洗衣机的售价为x元，B型洗衣机的售价为y元
 
     根据题意，得$\begin{cases}
@@ -486,86 +521,29 @@ questions:
 
     如图所示，当$x>3$时，对于x的每一个值，函数$y = nx$（$n \neq 0$）的值既大于函数$y=\frac{1}{3}x+1$的值，也大于函数$y=x-1$的值，
 
-    则$n\ 1$．'
+    则$n\ 1$．
+
+    23.某校“$\pi$节科技创意”比赛分为初赛和决赛两个阶段．
+
+    （1）初赛由8名教师评委和50名学生评委给每位选手打分（百分制）．对评委给某位选手的打分进行整理、描述和分析，下面给出了部分信息．
+
+    a．教师评委打分：
+
+    85，86，88，90，90，91，92，94
+
+    b．学生评委'
   knowledge_points:
-  - 一次函数
-  - 平移
-  module: functions
+  - 统计
+  - 平均数
+  - 中位数
+  - 众数
+  - 方差
+  - 条形统计图
+  module: statisticsAndProbability
   difficulty: 较难
   recommended_for:
   - L2
   - L3
-  figures:
-  - figures/2025-yanshan-yi-fig15.png
-- id: 24
-  type: 解答
-  score: 6
-  question: '如图，在△ABC中，$\angle ACB=90^\circ$，点D在AB上，以AD为直径作$\odot\odot$与BC相切于点E，连接DE并延长交AC的延长线于点F．
-
-    [图]
-
-    （1）求证：$\angle F=\angle ODE$；
-
-    （2）若$\tan \angle ADE = 2$，$CF = 2$，求$\odot\odot$的半径的长．'
-  answer: （1）证明见详解 （2）5
-  solution: '【小问1详解】
-
-    证明:∵BC是$\odot\odot$的切线，
-
-    $\therefore OE \perp BC$，
-
-    $\angle OEB = 90^\circ$，
-
-    $\angle OEB=\angle ACB=90^{\circ}$，
-
-    $\ldots AF \parallel OE$，
-
-    $\angle F = \angle OED$，
-
-    $\because OE = OD$，
-
-    $\angle OED = \angle ODE$，
-
-    $\angle F=\angle ODE$；
-
-    【小问2详解】
-
-    解：如图所示，连接AE，则$\angle AED=\angle AEF=90^{\circ}$，
-
-    [图]
-
-    由（1）得$\angle F=\angle ODE$，
-
-    $\tan\angle F=\tan\angle ADE=2=\frac{CF}{CE}$，
-
-    $\therefore CE = 4$，
-
-    在$Rt_{\triangle}ECF$中，由勾股定理得：$EF=\sqrt{CF^{2}+CE^{2}}=2\sqrt{5}$，
-
-    在$Rt\triangle AEF$中，$\tan\angle F=\frac{AE}{EF}=2$，
-
-    $\therefore AE = 4\sqrt{5}$，
-
-    在$Rt\triangle ADE$中，$\tan \angle ADE = \frac{AE}{ED} = 2$，
-
-    $\therefore ED=2\sqrt{3}$，
-
-    在$Rt\triangle ADE$中，由勾股定理得：$AD=\sqrt{AE^{2}+ED^{2}}=10$，
-
-    $\therefore \odot O$的半径长为5．'
-  knowledge_points:
-  - 平行线
-  - 切线
-  - 勾股定理
-  - 三角函数
-  module: triangles
-  difficulty: 较难
-  recommended_for:
-  - L2
-  - L3
-  figures:
-  - figures/2025-yanshan-yi-fig17.png
-  - figures/2025-yanshan-yi-fig18.png
 - id: 25
   type: 解答
   score: 6
@@ -578,7 +556,7 @@ questions:
     （2）BE和$BE''$为支撑斜坡的立柱，其高都为4米，相应的AB和$A''B''$为两个方向的行人及非机动车通行区，直接写出宽AB的长度；
 
     （3）按规定，汽车通过该桥下时，载货最高处和桥拱之间的距离不得小于$0.4$米．今有一大型运货汽车，装载某大型设备后，其宽为4米，车载大型设备的顶部与地面的距离均为7米．它能否从桥下区域安全通过？请说明理由．'
-  answer: （1）$y = -\frac{1}{90}x^2 + 8$，37米 （2）6米（3）该大型货车可以从桥下区域安全通过，理由见详解
+  answer: （1）$y = -\frac{1}{90}x^2 + 8$，37米 （2）6米 （3）该大型货车可以从桥下区域安全通过，理由见详解
   solution: '【小问3详解】
 
     解：该大型货车可以从桥下区域安全通过，理由如下：
@@ -596,7 +574,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-yanshan-yi-fig19.png
+  - path: figures/2025-yanshan-yi-fig18.png
+    width_mm: 79.1
+    height_mm: 23.8
 - id: 26
   type: 解答
   score: 6
@@ -748,10 +728,9 @@ questions:
   recommended_for:
   - L3
   figures:
-  - figures/2025-yanshan-yi-fig20.png
-  - figures/2025-yanshan-yi-fig21.png
-  - figures/2025-yanshan-yi-fig22.png
-  - figures/2025-yanshan-yi-fig23.png
+  - path: figures/2025-yanshan-yi-fig19.png
+    width_mm: 77.5
+    height_mm: 40.5
 - id: 28
   type: 解答
   score: 7
@@ -819,10 +798,6 @@ questions:
   recommended_for:
   - L3
   figures:
-  - figures/2025-yanshan-yi-fig24.png
-  - figures/2025-yanshan-yi-fig25.png
-  - figures/2025-yanshan-yi-fig26.png
-  - figures/2025-yanshan-yi-fig27.png
-  - figures/2025-yanshan-yi-fig28.png
-  - figures/2025-yanshan-yi-fig29.png
-  - figures/2025-yanshan-yi-fig30.png
+  - path: figures/2025-yanshan-yi-fig23.png
+    width_mm: 74.1
+    height_mm: 41.3

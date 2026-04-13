@@ -19,7 +19,13 @@ questions:
   score: 2
   question: '2025年全国两会顺利召开，在政府工作报告中提到，2024年粮食产量首次跃上1.4万亿斤新台阶、亩产提升10.1斤．将1400000000000用科学记数法表示应为（）
 
-    A.$14\times10^{11}$B.$1.4\times10^{12}$C.$1.4\times10^{13}$D.$0.14\times10^{13}$'
+    A.$14\times10^{11}$
+
+    B.$1.4\times10^{12}$
+
+    C.$1.4\times10^{13}$
+
+    D.$0.14\times10^{13}$'
   answer: B
   solution: '解：$14000000000000=1.4\times10^{13}$．
 
@@ -40,7 +46,13 @@ questions:
 
     [图]
 
-    A.$16^\circ$B.$32^\circ$C.$37^\circ$D.$74^\circ$'
+    A.$16^\circ$
+
+    B.$32^\circ$
+
+    C.$37^\circ$
+
+    D.$74^\circ$'
   answer: B
   solution: '解：∵OE平分$\angle AOC$，$\angle AOE = 74^\circ$，
 
@@ -59,13 +71,21 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-chaoyang-er-fig02.png
+  - path: figures/2025-chaoyang-er-fig02.png
+    width_mm: 38.6
+    height_mm: 29.1
 - id: 3
   type: 选择
   score: 2
   question: '下列图形中，是轴对称图形不是中心对称图形的是（）
 
-    A.等边三角形B.矩形C.菱形D.圆'
+    A.等边三角形
+
+    B.矩形
+
+    C.菱形
+
+    D.圆'
   answer: A
   solution: '解：A、等边三角形是轴对称图形，不是中心对称图形，故此选项符合题意；
 
@@ -95,33 +115,25 @@ questions:
   score: 2
   question: '不透明的袋子中装有$2$个红球、$1$个绿球，这$3$个球除颜色外无其他差别，随机一次摸出两个球，颜色相同的概率是（）
 
-    A.$\frac{2}{3}$B.$\frac{1}{2}$C.$\frac{1}{3}$D.$\frac{1}{6}$'
+    A.$\frac{2}{3}$
+
+    B.$\frac{1}{2}$
+
+    C.$\frac{1}{3}$
+
+    D.$\frac{1}{6}$'
   answer: C
   solution: '解：运用列表法或画树状图法把所有等可能结果表示如下，有$2$个红球分别用$A,B$表示、$1$个绿球用C表示，
 
-    A
+    |  | A | B | C |
 
-    B
+    | --- | --- | --- | --- |
 
-    C
+    | A |  | $\left(A,B\right)$ | $(A,C)$ |
 
-    A
+    | B | $\left(B,A\right)$ |  | $(B,C)$ |
 
-    $\left(A,B\right)$
-
-    $(A,C)$
-
-    B
-
-    $\left(B,A\right)$
-
-    $(B,C)$
-
-    C
-
-    $(C,A)$
-
-    $(C,B)$
+    | C | $(C,A)$ | $(C,B)$ |  |
 
     共有6种等可能结果，其中相同的有2种，
 
@@ -146,9 +158,13 @@ questions:
 
     [图]
 
-    A.$-a < a + b < -b < a - b$B.$-a<-b<a-b<a+b$
+    A.$-a < a + b < -b < a - b$
 
-    C.$a-b<-a<-b<a+b$D.$-b < -a < a + b < a - b$'
+    B.$-a<-b<a-b<a+b$
+
+    C.$a-b<-a<-b<a+b$
+
+    D.$-b < -a < a + b < a - b$'
   answer: A
   solution: '解：由数轴可知$1<a<2$，$-2 < b < -1$，
 
@@ -195,7 +211,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-chaoyang-er-fig03.png
+  - path: figures/2025-chaoyang-er-fig03.png
+    width_mm: 44.2
+    height_mm: 10.1
 - id: 6
   type: 选择
   score: 2
@@ -203,7 +221,13 @@ questions:
 
     [图]
 
-    A.8B.9C.10D.12'
+    A.8
+
+    B.9
+
+    C.10
+
+    D.12'
   answer: D
   solution: '解：如图所示，设这个正n边形内接于$\odot\odot$，连接$OC,OD$，
 
@@ -225,8 +249,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-chaoyang-er-fig04.png
-  - figures/2025-chaoyang-er-fig05.png
+  - path: figures/2025-chaoyang-er-fig04.png
+    width_mm: 27.5
+    height_mm: 15.9
 - id: 7
   type: 选择
   score: 2
@@ -264,8 +289,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-chaoyang-er-fig06.png
-  - figures/2025-chaoyang-er-fig07.png
+  - path: figures/2025-chaoyang-er-fig06.png
+    width_mm: 37.6
+    height_mm: 26.2
 - id: 8
   type: 选择
   score: 2
@@ -283,7 +309,13 @@ questions:
 
     [图]
 
-    A.①②③B.②③④C.①④D.①②③④'
+    A.①②③
+
+    B.②③④
+
+    C.①④
+
+    D.①②③④'
   answer: D
   solution: '解：∵正方形$ABCD$，
 
@@ -343,8 +375,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-chaoyang-er-fig08.png
-  - figures/2025-chaoyang-er-fig09.png
+  - path: figures/2025-chaoyang-er-fig08.png
+    width_mm: 28.8
+    height_mm: 30.2
 - id: 9
   type: 填空
   score: 2
@@ -481,8 +514,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-chaoyang-er-fig10.png
-  - figures/2025-chaoyang-er-fig11.png
+  - path: figures/2025-chaoyang-er-fig10.png
+    width_mm: 35.2
+    height_mm: 36.8
 - id: 14
   type: 填空
   score: 2
@@ -519,8 +553,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-chaoyang-er-fig12.png
-  - figures/2025-chaoyang-er-fig13.png
+  - path: figures/2025-chaoyang-er-fig12.png
+    width_mm: 34.9
+    height_mm: 38.9
 - id: 15
   type: 填空
   score: 2
@@ -548,12 +583,14 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-chaoyang-er-fig14.png
+  - path: figures/2025-chaoyang-er-fig14.png
+    width_mm: 90.5
+    height_mm: 39.7
 - id: 16
   type: 填空
   score: 2
   question: 某学校安排15名老师和一些学生参加团体操表演，所有师生恰好排列成矩形方阵，要求每一行都有且只有6名男学生，每一列都有且只有8名女学生，则此次团体操表演最多可以安排___________名男学生，此次团体操表演最少需要___________名学生．
-  answer: ①.426②.206
+  answer: ①.426 ②.206
   solution: '解：设矩形方阵为m行n列，
 
     ∵每一行都有且只有6名男学生，每一列都有且只有8名女学生，且有15名老师，
@@ -671,7 +708,7 @@ questions:
     （1）求证：四边形$ABCF$是平行四边形；
 
     （2）若$CB = CD$，$\angle ABD=90^\circ$，$\tan\angle BAC=\frac{1}{3}$，$AB = 3$，求AD的长．'
-  answer: （1）见解析（2）5
+  answer: （1）见解析 （2）5
   solution: '【小问1详解】
 
     证明：$\because AF \parallel BC$，
@@ -736,7 +773,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-chaoyang-er-fig15.png
+  - path: figures/2025-chaoyang-er-fig15.png
+    width_mm: 50.5
+    height_mm: 32.0
 - id: 21
   type: 解答
   score: 5
@@ -827,8 +866,6 @@ questions:
   - L1
   - L2
   - L3
-  figures:
-  - figures/2025-chaoyang-er-fig16.png
 - id: 23
   type: 解答
   score: 6
@@ -840,153 +877,25 @@ questions:
 
     b.该快餐连锁店的两名外卖骑手甲、乙在这30天的送外卖量（单位：单）如下：
 
-    甲
+    | 甲 | 12 | 12 | 15 | 16 | 17 | 19 | 20 | 21 | 21 | 21 | 23 | 23 | 24 | 24 | 27 |
 
-    12
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
-    12
+    | 29 | 32 | 33 | 42 | 47 | 56 | 56 | 56 | 56 | 56 | 58 | 59 | 59 | 60 | 62 |  |
 
-    15
+    | 乙 | 18 | 23 | 24 | 25 | 25 | 26 | 27 | 28 | 29 | 31 | 34 | 35 | 36 | 38 | 38 |
 
-    16
-
-    17
-
-    19
-
-    20
-
-    21
-
-    21
-
-    21
-
-    23
-
-    23
-
-    24
-
-    24
-
-    27
-
-    29
-
-    32
-
-    33
-
-    42
-
-    47
-
-    56
-
-    56
-
-    56
-
-    56
-
-    56
-
-    58
-
-    59
-
-    59
-
-    60
-
-    62
-
-    乙
-
-    18
-
-    23
-
-    24
-
-    25
-
-    25
-
-    26
-
-    27
-
-    28
-
-    29
-
-    31
-
-    34
-
-    35
-
-    36
-
-    38
-
-    38
-
-    38
-
-    39
-
-    39
-
-    39
-
-    39
-
-    39
-
-    39
-
-    39
-
-    39
-
-    43
-
-    43
-
-    44
-
-    45
-
-    46
-
-    48
+    | 38 | 39 | 39 | 39 | 39 | 39 | 39 | 39 | 39 | 43 | 43 | 44 | 45 | 46 | 48 |  |
 
     c.甲、乙两名外卖骑手这30天送外卖量的平均数、众数、中位数如下：
 
-    平均数
+    |  | 平均数 | 众数 | 中位数 |
 
-    众数
+    | --- | --- | --- | --- |
 
-    中位数
+    | 甲 | 35.2 | 56 | m |
 
-    甲
-
-    35.2
-
-    56
-
-    m
-
-    乙
-
-    35.2
-
-    n
-
-    38
+    | 乙 | 35.2 | n | 38 |
 
     根据以上信息，回答下列问题：
 
@@ -999,7 +908,7 @@ questions:
     ①若甲、乙两人都选择了方案一，则甲这30日的工资___________乙这30日的工资（填“$\gt$”“$\gt$”或“$=$”）；
 
     ②为了获得这30天的最高工资，在这两种方案中，甲应选择方案___________，乙应选择方案___________．'
-  answer: （1）$28,39$ （2）不能（3）①$=$；②二，一
+  answer: （1）$28,39$ （2）不能 （3）①$=$；②二，一
   solution: '【小问1详解】
 
     解：甲在这30天的送外卖量中，排在第15和16的是27和29，
@@ -1022,9 +931,7 @@ questions:
 
     【小问3详解】
 
-    解：甲、乙的30天的日平均送单量都是35.2单/天
-
-    ，
+    解：甲、乙的30天的日平均送单量都是35.2单/天 ，
 
     则这30天甲、乙的总送单量为$35.2\times30=1056$（单），
 
@@ -1054,7 +961,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-chaoyang-er-fig17.png
+  - path: figures/2025-chaoyang-er-fig17.png
+    width_mm: 69.6
+    height_mm: 42.6
 - id: 24
   type: 解答
   score: 6
@@ -1124,70 +1033,21 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-chaoyang-er-fig18.png
-  - figures/2025-chaoyang-er-fig19.png
+  - path: figures/2025-chaoyang-er-fig18.png
+    width_mm: 40.5
+    height_mm: 36.0
 - id: 25
   type: 解答
   score: 6
   question: '科创小组分别用$A、B$两台装置提取实验物质，当$A、B$两台装置各自工作$t_{\min}$时，记录员分别记录了A装置提取的实验物质的体积$V_{1}$（单位：mL）和B装置提取的实验物质的体积$V_2$（单位：mL），部分数据如下：
 
-    $t / \min$
+    | $t / \min$ | $0$ | $5$ | $10$ | $20$ | $30$ | $40$ | $50$ | $60$ | $\cdots$ |
 
-    $0$
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
-    $5$
+    | $V_{1} / \mathrm{mL}$ | $0$ |  | $1.0$ | $2.0$ | $3.0$ | $4.0$ | $5.0$ | $6.0$ | $\cdots$ |
 
-    $10$
-
-    $20$
-
-    $30$
-
-    $40$
-
-    $50$
-
-    $60$
-
-    $\cdots$
-
-    $V_{1} / \mathrm{mL}$
-
-    $0$
-
-    $1.0$
-
-    $2.0$
-
-    $3.0$
-
-    $4.0$
-
-    $5.0$
-
-    $6.0$
-
-    $\cdots$
-
-    $V_{2} / \mathrm{mL}$
-
-    $0$
-
-    $2.1$
-
-    $2.9$
-
-    $4.0$
-
-    $4.8$
-
-    $5.5$
-
-    $6.1$
-
-    $6.6$
-
-    $\cdots$
+    | $V_{2} / \mathrm{mL}$ | $0$ | $2.1$ | $2.9$ | $4.0$ | $4.8$ | $5.5$ | $6.1$ | $6.6$ | $\cdots$ |
 
     （1）补全表格（结果保留小数点后一位）；
 
@@ -1200,7 +1060,7 @@ questions:
     $1$若A装置比B装置早启动了$15min$，则A装置启动___________$\min$时，两台装置提取的实验物质体积相同，约为___________mL（结果保留小数点后一位）；
 
     $\textcircled{2}$在$1$的条件下，在同一时刻，B装置最多可以比A装置多提取___________mL实验物质（结果保留小数点后一位）．'
-  answer: （1）$0.5$ （2）见解析；（3）$1$$19$或$55$，$1.9$或$5.5$；$\textcircled{2}$$0.5$
+  answer: （1）$0.5$ （2）见解析； （3）$1$$19$或$55$，$1.9$或$5.5$；$\textcircled{2}$$0.5$
   solution: '【小问1详解】
 
     解：∵当$t = 10$时，$V_{1}=1.0$，当$t = 20$时，$V_{2}=2.0$，
@@ -1245,9 +1105,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-chaoyang-er-fig20.png
-  - figures/2025-chaoyang-er-fig21.png
-  - figures/2025-chaoyang-er-fig22.png
+  - path: figures/2025-chaoyang-er-fig20.png
+    width_mm: 77.5
+    height_mm: 69.8
 - id: 26
   type: 解答
   score: 6
@@ -1392,9 +1252,9 @@ questions:
   recommended_for:
   - L3
   figures:
-  - figures/2025-chaoyang-er-fig23.png
-  - figures/2025-chaoyang-er-fig24.png
-  - figures/2025-chaoyang-er-fig25.png
+  - path: figures/2025-chaoyang-er-fig23.png
+    width_mm: 50.5
+    height_mm: 50.5
 - id: 28
   type: 解答
   score: 7
@@ -1452,13 +1312,6 @@ questions:
   recommended_for:
   - L3
   figures:
-  - figures/2025-chaoyang-er-fig26.png
-  - figures/2025-chaoyang-er-fig27.png
-  - figures/2025-chaoyang-er-fig28.png
-  - figures/2025-chaoyang-er-fig29.png
-  - figures/2025-chaoyang-er-fig30.png
-  - figures/2025-chaoyang-er-fig31.png
-  - figures/2025-chaoyang-er-fig32.png
-  - figures/2025-chaoyang-er-fig33.png
-  - figures/2025-chaoyang-er-fig34.png
-  - figures/2025-chaoyang-er-fig35.png
+  - path: figures/2025-chaoyang-er-fig26.png
+    width_mm: 82.5
+    height_mm: 46.6

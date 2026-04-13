@@ -21,7 +21,13 @@ questions:
 
     [图]
 
-    A.[图]B.[图]C.[图]D.$\begin{tabular}{|c|c|c|}
+    A.[图]
+
+    B.[图]
+
+    C.[图]
+
+    D.$\begin{tabular}{|c|c|c|}
 
     \hline
 
@@ -50,19 +56,30 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-shijingshan-er-fig02.png
-  - figures/2025-shijingshan-er-fig03.png
-  - figures/2025-shijingshan-er-fig04.png
-  - figures/2025-shijingshan-er-fig05.png
-  - figures/2025-shijingshan-er-fig06.png
+  - path: figures/2025-shijingshan-er-fig02.png
+    width_mm: 25.4
+    height_mm: 21.4
+  - path: figures/2025-shijingshan-er-fig03.png
+    width_mm: 8.5
+    height_mm: 16.1
+  - path: figures/2025-shijingshan-er-fig04.png
+    width_mm: 8.5
+    height_mm: 8.2
+  - path: figures/2025-shijingshan-er-fig05.png
+    width_mm: 25.1
+    height_mm: 14.8
 - id: 2
   type: 选择
   score: 2
-  question: '根据公开资料，我国载人航天测控系统的时间同步精度为$0.000001$秒（微妙级时间同步），确保指令和数据的精确．请将$0.000001$用科学记数法表示应为（
+  question: '根据公开资料，我国载人航天测控系统的时间同步精度为$0.000001$秒（微妙级时间同步），确保指令和数据的精确．请将$0.000001$用科学记数法表示应为（    ）
 
-    ）
+    A.$1\times10^{-6}$
 
-    A.$1\times10^{-6}$B.$-1\times10^{6}$C.$0.1\times10^{-5}$D.$-0.1\times10^{5}$'
+    B.$-1\times10^{6}$
+
+    C.$0.1\times10^{-5}$
+
+    D.$-0.1\times10^{5}$'
   answer: A
   solution: '解：$0.000001=1\times0.000001=1\times10^{-6}$．
 
@@ -80,13 +97,17 @@ questions:
 - id: 3
   type: 选择
   score: 2
-  question: '如图，直线$a \parallel b$，直线c与a交于点E，过点E作直线c的垂线交直线b于点F．若$\angle1=130^\circ$，则$\angle 2$的度数为（
-
-    ）
+  question: '如图，直线$a \parallel b$，直线c与a交于点E，过点E作直线c的垂线交直线b于点F．若$\angle1=130^\circ$，则$\angle 2$的度数为（    ）
 
     [图]
 
-    A.$30^\circ$B.$40^\circ$C.$50^\circ$D.$60^\circ$'
+    A.$30^\circ$
+
+    B.$40^\circ$
+
+    C.$50^\circ$
+
+    D.$60^\circ$'
   answer: B
   solution: '解：如图，
 
@@ -115,14 +136,21 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-shijingshan-er-fig07.png
-  - figures/2025-shijingshan-er-fig08.png
+  - path: figures/2025-shijingshan-er-fig07.png
+    width_mm: 37.8
+    height_mm: 28.0
 - id: 4
   type: 选择
   score: 2
   question: '正十边形的内角和度数为（　　）
 
-    A.$360^\circ$B.$720^\circ$C.$1440^\circ$D.$1800^\circ$'
+    A.$360^\circ$
+
+    B.$720^\circ$
+
+    C.$1440^\circ$
+
+    D.$1800^\circ$'
   answer: C
   solution: '解：正十边形的内角和度数为：$(10-2)\times180^{\circ}=1440^{\circ}$，
 
@@ -141,7 +169,13 @@ questions:
   score: 2
   question: '圆心角为60°，且半径为3的扇形的弧长为
 
-    A.$\frac{\pi}{2}$B.$\pi$C.$\frac{3\pi}{2}$D.$3\pi$'
+    A.$\frac{\pi}{2}$
+
+    B.$\pi$
+
+    C.$\frac{3\pi}{2}$
+
+    D.$3\pi$'
   answer: B
   solution: '解：∵圆心角为60°，且半径为3，
 
@@ -162,11 +196,15 @@ questions:
 - id: 6
   type: 选择
   score: 2
-  question: '关于x的方程$x^{2}-2x-m=0$有两个不相等的实数根，则m的取值范围是（
+  question: '关于x的方程$x^{2}-2x-m=0$有两个不相等的实数根，则m的取值范围是（    ）
 
-    ）
+    A.$m^{-1}$
 
-    A.$m^{-1}$B.$m < 1$C.$m\ 1$D.$m > -1$'
+    B.$m < 1$
+
+    C.$m\ 1$
+
+    D.$m > -1$'
   answer: D
   solution: '∵方程$x^{2}-2x-m=0$有两个不相等实数根，
 
@@ -190,11 +228,15 @@ questions:
 - id: 7
   type: 选择
   score: 2
-  question: '不透明的袋子中有两个红球和一个黑球，三个球除颜色外无其他差别．从中随机摸出一个球，放回并摇匀，再从中随机摸出一个球，则两次摸到不同颜色球的概率是（
+  question: '不透明的袋子中有两个红球和一个黑球，三个球除颜色外无其他差别．从中随机摸出一个球，放回并摇匀，再从中随机摸出一个球，则两次摸到不同颜色球的概率是（    ）
 
-    ）
+    A.$\frac{2}{9}$
 
-    A.$\frac{2}{9}$B.$\frac{1}{3}$C.$\frac{4}{9}$D.$\frac{2}{3}$'
+    B.$\frac{1}{3}$
+
+    C.$\frac{4}{9}$
+
+    D.$\frac{2}{3}$'
   answer: C
   solution: '解：树状图如下所示，
 
@@ -215,8 +257,6 @@ questions:
   - L1
   - L2
   - L3
-  figures:
-  - figures/2025-shijingshan-er-fig09.png
 - id: 8
   type: 选择
   score: 2
@@ -230,11 +270,15 @@ questions:
 
     ④如果EG与FH相互垂直且平分，则$AE + AF = CD$；
 
-    所有正确结论的序号是（
+    所有正确结论的序号是（    ）
 
-    ）
+    A.①③
 
-    A.①③B.②④C.①④D.②③'
+    B.②④
+
+    C.①④
+
+    D.②③'
   answer: B
   solution: '解：如图，①如果$EG = FH$，显然不存在$EG \perp FH$，①不正确；
 
@@ -302,11 +346,6 @@ questions:
   recommended_for:
   - L2
   - L3
-  figures:
-  - figures/2025-shijingshan-er-fig10.png
-  - figures/2025-shijingshan-er-fig11.png
-  - figures/2025-shijingshan-er-fig12.png
-  - figures/2025-shijingshan-er-fig13.png
 - id: 9
   type: 填空
   score: 2
@@ -424,7 +463,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-shijingshan-er-fig14.png
+  - path: figures/2025-shijingshan-er-fig14.png
+    width_mm: 32.5
+    height_mm: 35.7
 - id: 13
   type: 填空
   score: 2
@@ -527,50 +568,28 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-shijingshan-er-fig15.png
+  - path: figures/2025-shijingshan-er-fig15.png
+    width_mm: 36.0
+    height_mm: 39.2
 - id: 16
   type: 填空
   score: 2
   question: '某工厂根据现有条件可选择A，B，C三种产品中的一种、两种或三种进行生产，每种产品生产一个分别需要的钢材（单位：吨）、工时（单位：小时）、获得利润（单位：万元）如下表所示：
 
-    项目
+    | 项目 种类 | 所需钢材（吨） | 工时（小时） | 利润（万元） |
 
-    种类
+    | --- | --- | --- | --- |
 
-    所需钢材（吨）
+    | A | 2 | 3 | 3 |
 
-    工时（小时）
+    | B | 3 | 5 | 4 |
 
-    利润（万元）
-
-    A
-
-    2
-
-    3
-
-    3
-
-    B
-
-    3
-
-    5
-
-    4
-
-    C
-
-    5
-
-    7
-
-    5
+    | C | 5 | 7 | 5 |
 
     （1）现有钢材60吨，可安排工时100小时，工厂利润最大时，需生产A种产品_________个；
 
     （2）若生产一个产品B所需工时由5小时缩减到3小时，现有钢材60吨，可安排工时81小时，则工厂能获得的最大利润为_________万元．'
-  answer: ①.30②.$87$
+  answer: ①.30 ②.$87$
   solution: '解：（1）由表格可知$\frac{3}{2}>\frac{4}{3}>\frac{5}{5}$，可知A种类产品钢材每吨的利润最大，
 
     ∴A种类产品生产的越多，利润越大，
@@ -686,7 +705,7 @@ questions:
     （1）求证：四边形$AEBD$是矩形；
 
     （2）若$\tan\angle DEB=\frac{3}{4}$，$CD=2$，求BC的长．'
-  answer: （1）见解析（2）$2\sqrt{10}$
+  answer: （1）见解析 （2）$2\sqrt{10}$
   solution: '【小问1详解】
 
     证明：∵点D关于点O的对称点为点E，
@@ -731,7 +750,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-shijingshan-er-fig16.png
+  - path: figures/2025-shijingshan-er-fig16.png
+    width_mm: 37.3
+    height_mm: 38.4
 - id: 21
   type: 解答
   score: 5
@@ -830,29 +851,13 @@ questions:
 
     c．A，B两门课程成绩的平均数、中位数、众数如下：
 
-    课程
+    | 课程 | 平均数 | 中位数 | 众数 |
 
-    平均数
+    | --- | --- | --- | --- |
 
-    中位数
+    | A | 80 | m | 85 |
 
-    众数
-
-    A
-
-    80
-
-    m
-
-    85
-
-    B
-
-    79.9
-
-    84
-
-    86
+    | B | 79.9 | 84 | 86 |
 
     根据以上信息，回答下列问题：
 
@@ -869,7 +874,7 @@ questions:
     其中所有正确推断的序号是__________；
 
     （4）假设该年级200名学生都参加此次测试，估计A课程成绩不低于80分的学生有__________人．'
-  answer: （1）82（2）A （3）①② （4）120
+  answer: （1）82（2）A （3）①②    （4）120
   solution: '【小问1详解】
 
     解：∵A课程总人数为20，
@@ -917,7 +922,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-shijingshan-er-fig17.png
+  - path: figures/2025-shijingshan-er-fig17.png
+    width_mm: 64.6
+    height_mm: 38.4
 - id: 24
   type: 解答
   score: 6
@@ -928,7 +935,7 @@ questions:
     （1）求证：$AB \parallel DC$；
 
     （2）作直径AE，交CD于点F，连接BE，交CD于点G．若$AF = 2OF$，$AD=2$，$BE = 3\sqrt{3}$．求DF的长．'
-  answer: （1）见解析（2）$DF = \frac{8}{3}$
+  answer: （1）见解析 （2）$DF = \frac{8}{3}$
   solution: '【小问1详解】
 
     证明：∵四边形$ABCD$内接于$\odot\odot$，$\widehat{AC}=\widehat{BD}$，
@@ -988,8 +995,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-shijingshan-er-fig18.png
-  - figures/2025-shijingshan-er-fig19.png
+  - path: figures/2025-shijingshan-er-fig18.png
+    width_mm: 45.8
+    height_mm: 38.4
 - id: 25
   type: 解答
   score: 6
@@ -999,37 +1007,11 @@ questions:
 
     某次训练，发球机从球台边缘O点正上方$28.75\mathrm{cm}$的高度A处发球（即OA的长为$28.75\mathrm{cm}$），乒乓球到球台的竖直高度记为y（单位：cm），乒乓球运行的水平距离记为x（单位：cm），测得几组数据如下：
 
-    水平距离$x / \mathrm{cm}$
+    | 水平距离 $x / \mathrm{cm}$ | 0 | 10 | 50 | 90 | 130 | 170 | 230 |
 
-    0
+    | --- | --- | --- | --- | --- | --- | --- | --- |
 
-    10
-
-    50
-
-    90
-
-    130
-
-    170
-
-    230
-
-    竖直高度$y/\mathrm{cm}$
-
-    $28.75$
-
-    33
-
-    45
-
-    49
-
-    n
-
-    33
-
-    0
+    | 竖直高度 $y/\mathrm{cm}$ | $28.75$ | 33 | 45 | 49 | n | 33 | 0 |
 
     根据以上数据，解决下列问题：
 
@@ -1078,7 +1060,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-shijingshan-er-fig20.png
+  - path: figures/2025-shijingshan-er-fig20.png
+    width_mm: 104.5
+    height_mm: 15.1
 - id: 26
   type: 解答
   score: 6
@@ -1217,9 +1201,9 @@ questions:
   recommended_for:
   - L3
   figures:
-  - figures/2025-shijingshan-er-fig21.png
-  - figures/2025-shijingshan-er-fig22.png
-  - figures/2025-shijingshan-er-fig23.png
+  - path: figures/2025-shijingshan-er-fig21.png
+    width_mm: 137.1
+    height_mm: 54.0
 - id: 28
   type: 解答
   score: 7
@@ -1285,10 +1269,6 @@ questions:
   recommended_for:
   - L3
   figures:
-  - figures/2025-shijingshan-er-fig24.png
-  - figures/2025-shijingshan-er-fig25.png
-  - figures/2025-shijingshan-er-fig26.png
-  - figures/2025-shijingshan-er-fig27.png
-  - figures/2025-shijingshan-er-fig28.png
-  - figures/2025-shijingshan-er-fig29.png
-  - figures/2025-shijingshan-er-fig30.png
+  - path: figures/2025-shijingshan-er-fig24.png
+    width_mm: 59.0
+    height_mm: 61.6

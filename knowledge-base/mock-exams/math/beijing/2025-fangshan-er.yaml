@@ -19,7 +19,13 @@ questions:
   score: 2
   question: '$2024$年6月6日，嫦娥六号在距离地球约$384000$千米外上演“太空牵手”，完成月球轨道的交会对接．数据$384000$用科学记数法表示为（）
 
-    A.$3.84\times10^{4}$B.$3.84\times10^{5}$C.$3.84\times10^{6}$D.$38.4\times10^{5}$'
+    A.$3.84\times10^{4}$
+
+    B.$3.84\times10^{5}$
+
+    C.$3.84\times10^{6}$
+
+    D.$38.4\times10^{5}$'
   answer: B
   solution: '解：$384000$大于1，用科学记数法表示为$a\times10^{n}$，其中$a = 3.84$，$n = 5$，
 
@@ -41,9 +47,13 @@ questions:
   score: 2
   question: '下列图形中，既是轴对称图形又是中心对称图形的是（）
 
-    A.[图]B.[图]
+    A.[图]
 
-    C.[图]D.[图]'
+    B.[图]
+
+    C.[图]
+
+    D.[图]'
   answer: D
   solution: '解：A、是轴对称图形，不是中心对称图形，故A选项不合题意；
 
@@ -67,10 +77,18 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-fangshan-er-fig02.png
-  - figures/2025-fangshan-er-fig03.png
-  - figures/2025-fangshan-er-fig04.png
-  - figures/2025-fangshan-er-fig05.png
+  - path: figures/2025-fangshan-er-fig02.png
+    width_mm: 19.1
+    height_mm: 23.8
+  - path: figures/2025-fangshan-er-fig03.png
+    width_mm: 19.1
+    height_mm: 23.8
+  - path: figures/2025-fangshan-er-fig04.png
+    width_mm: 28.8
+    height_mm: 21.7
+  - path: figures/2025-fangshan-er-fig05.png
+    width_mm: 31.0
+    height_mm: 18.5
 - id: 3
   type: 选择
   score: 2
@@ -78,7 +96,13 @@ questions:
 
     [图]
 
-    A.$30^\circ$B.$40^\circ$C.$50^\circ$D.$60^\circ$'
+    A.$30^\circ$
+
+    B.$40^\circ$
+
+    C.$50^\circ$
+
+    D.$60^\circ$'
   answer: B
   solution: '解：如图所示，
 
@@ -99,14 +123,21 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-fangshan-er-fig06.png
-  - figures/2025-fangshan-er-fig07.png
+  - path: figures/2025-fangshan-er-fig06.png
+    width_mm: 50.3
+    height_mm: 27.8
 - id: 4
   type: 选择
   score: 2
   question: '已知$a > b - 1$，则下列论一定正确的是（）
 
-    A.$a+1<b$B.$a-1<b$C.$a-1>b$D.$a+1>b$'
+    A.$a+1<b$
+
+    B.$a-1<b$
+
+    C.$a-1>b$
+
+    D.$a+1>b$'
   answer: D
   solution: '解：$a > b - 1$，
 
@@ -133,7 +164,13 @@ questions:
   score: 2
   question: '若关于x的一元二次方程$x^{2}+x-m=0$有两个不相等的实数根，则实数m的取值范围是（）
 
-    A.$m<-\frac{1}{4}$B.$m = -\frac{1}{4}$C.$m > -\frac{1}{4}$D.$m>\frac{1}{4}$'
+    A.$m<-\frac{1}{4}$
+
+    B.$m = -\frac{1}{4}$
+
+    C.$m > -\frac{1}{4}$
+
+    D.$m>\frac{1}{4}$'
   answer: C
   solution: '解：$\begin{array}{c}
 
@@ -162,7 +199,13 @@ questions:
   score: 2
   question: '已知一个正多边形的每一个外角等于60°，则这个正多边形的边数是（）
 
-    A.五B.六C.七D.八'
+    A.五
+
+    B.六
+
+    C.七
+
+    D.八'
   answer: B
   solution: '解：∵多边形的外角和为$360^\circ$，每个外角等于$60^\circ$
 
@@ -180,11 +223,15 @@ questions:
 - id: 7
   type: 选择
   score: 2
-  question: '同时抛掷两枚质地均匀的硬币，则一枚硬币正面向上､一枚硬币反面向上的概率是（
+  question: '同时抛掷两枚质地均匀的硬币，则一枚硬币正面向上､一枚硬币反面向上的概率是（    ）
 
-    ）
+    A.$\frac{1}{4}$
 
-    A.$\frac{1}{4}$B.$\frac{1}{3}$C.$\frac{1}{2}$D.$\frac{2}{3}$'
+    B.$\frac{1}{3}$
+
+    C.$\frac{1}{2}$
+
+    D.$\frac{2}{3}$'
   answer: C
   solution: '解：由题意得：
 
@@ -202,8 +249,6 @@ questions:
   - L1
   - L2
   - L3
-  figures:
-  - figures/2025-fangshan-er-fig08.png
 - id: 8
   type: 选择
   score: 2
@@ -211,9 +256,13 @@ questions:
 
     [图]
 
-    A.$-\frac{5}{4} \leq t \leq 5$B.$-1 \leq t \leq 5$
+    A.$-\frac{5}{4} \leq t \leq 5$
 
-    C.$-\frac{1}{4} \leq t \leq 5$D.$-\frac{1}{2} \leq t \leq 5$'
+    B.$-1 \leq t \leq 5$
+
+    C.$-\frac{1}{4} \leq t \leq 5$
+
+    D.$-\frac{1}{2} \leq t \leq 5$'
   answer: A
   solution: '解：设$P(a,1)$，过点P作$PF \perp x$轴，延长BA交y轴于点E，设$\overline{PQ}$交x轴于点D
 
@@ -266,9 +315,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-fangshan-er-fig09.png
-  - figures/2025-fangshan-er-fig10.png
-  - figures/2025-fangshan-er-fig11.png
+  - path: figures/2025-fangshan-er-fig09.png
+    width_mm: 48.4
+    height_mm: 48.2
 - id: 9
   type: 填空
   score: 2
@@ -357,25 +406,11 @@ questions:
   score: 2
   question: '某校为了解全校$2000$名学生的课外阅读情况，从中随机抽取了50名学生进行调查，获得了他们每周课外阅读时间的数据，数据整理如下：
 
-    每周课外阅读时间x/小时
+    | 每周课外阅读时间 x / 小时 | $0\leq x<1$ | $1\leq x<2$ | $2\leq x<3$ | $3 \leq x$ |
 
-    $0\leq x<1$
+    | --- | --- | --- | --- | --- |
 
-    $1\leq x<2$
-
-    $2\leq x<3$
-
-    $3 \leq x$
-
-    人数
-
-    $7$
-
-    $10$
-
-    $14$
-
-    $19$
+    | 人数 | $7$ | $10$ | $14$ | $19$ |
 
     若学校计划对阅读时间大于等于2小时的同学进行表彰，请你根据表中信息估计全校共需要表彰约_____人．'
   answer: $1320$
@@ -419,7 +454,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-fangshan-er-fig12.png
+  - path: figures/2025-fangshan-er-fig12.png
+    width_mm: 64.0
+    height_mm: 25.4
 - id: 15
   type: 填空
   score: 2
@@ -467,39 +504,24 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-fangshan-er-fig13.png
-  - figures/2025-fangshan-er-fig14.png
+  - path: figures/2025-fangshan-er-fig13.png
+    width_mm: 35.7
+    height_mm: 32.8
 - id: 16
   type: 填空
   score: 2
   question: '某校九年级有370名师生要去参加社会实践活动，学校计划租用甲、乙、丙三种型号的客车前往．每种型号客车的载客量及租金如下表所示：
 
-    客车型号
+    | 客车型号 | 甲 | 乙 | 丙 |
 
-    甲
+    | --- | --- | --- | --- |
 
-    乙
+    | 每辆客车载客量 / 人 | $25$ | $35$ | $45$ |
 
-    丙
-
-    每辆客车载客量/人
-
-    $25$
-
-    $35$
-
-    $45$
-
-    每辆客车的租金/元
-
-    $800$
-
-    $1000$
-
-    $1200$
+    | 每辆客车的租金 / 元 | $800$ | $1000$ | $1200$ |
 
     如果甲、乙、丙三种型号的客车分别租用7辆，3辆，2辆，那么租车的总费用为______元；如果使租车的总费用最低，那么总费用最低为______元．'
-  answer: ①.$11000$②.$10200$
+  answer: ①.$11000$ ②.$10200$
   solution: '解：依题意得$800\times\pi+1000\times3.4+1200\times2=11000$(元)；
 
     设甲，乙，丙三种型号客车的租用数量分别是a，b，c，
@@ -694,8 +716,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-fangshan-er-fig15.png
-  - figures/2025-fangshan-er-fig16.png
+  - path: figures/2025-fangshan-er-fig15.png
+    width_mm: 61.1
+    height_mm: 24.6
 - id: 21
   type: 解答
   score: 5
@@ -777,45 +800,11 @@ questions:
 
     a．初二年级20名学生的分数数据如下：
 
-    $77$
+    | $77$ | $82$ | $85$ | $88$ | $76$ | $87$ | $69$ | $93$ | $66$ | $84$ |
 
-    $82$
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
-    $85$
-
-    $88$
-
-    $76$
-
-    $87$
-
-    $69$
-
-    $93$
-
-    $66$
-
-    $84$
-
-    $90$
-
-    $88$
-
-    $67$
-
-    $88$
-
-    $91$
-
-    $96$
-
-    $68$
-
-    $97$
-
-    $59$
-
-    $88$
+    | $90$ | $88$ | $67$ | $88$ | $91$ | $96$ | $68$ | $97$ | $59$ | $88$ |
 
     b．初一年级20名学生分数的频数分布直方图如下（数据分5组：第1组$50 \leq x < 60$，第2组$60 \leq x < 70$，第3组$70 \leq x < 80$，第4组$80 \leq x < 90$，第5组$90 \leq x < 100$）：
 
@@ -823,27 +812,13 @@ questions:
 
     c．样本数据的平均数、众数、方差如下：
 
-    平均数
+    |  | 平均数 | 众数 | 方差 |
 
-    众数
+    | --- | --- | --- | --- |
 
-    方差
+    | 初一年级 | $81.95$ | $85$ | $185.30$ |
 
-    初一年级
-
-    $81.95$
-
-    $85$
-
-    $185.30$
-
-    初二年级
-
-    $81.95$
-
-    a
-
-    $115.25$
+    | 初二年级 | $81.95$ | a | $115.25$ |
 
     根据以上信息，回答下列问题：
 
@@ -854,7 +829,7 @@ questions:
     （3）可以推断出______（填“初一”或“初二”）年级学生在本次比赛中发挥比较稳定；
 
     （4）初二年级共有学生600人，如果前120名学生将被推荐参加区级比赛，请你估计，成绩至少达到____分才能参加区级比赛．'
-  answer: （1）$88$ （2）$4$ （3）初二（4）$91$
+  answer: （1）$88$ （2）$4$ （3）初二 （4）$91$
   solution: '【小问1详解】
 
     解：根据表格可得初二年级学生分数中，$88$出现次数最多，则$a = 88$，
@@ -898,7 +873,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-fangshan-er-fig17.png
+  - path: figures/2025-fangshan-er-fig17.png
+    width_mm: 59.0
+    height_mm: 58.2
 - id: 24
   type: 解答
   score: 6
@@ -970,40 +947,19 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-fangshan-er-fig18.png
-  - figures/2025-fangshan-er-fig19.png
+  - path: figures/2025-fangshan-er-fig18.png
+    width_mm: 34.9
+    height_mm: 34.7
 - id: 25
   type: 解答
   score: 6
   question: '小明观察到一个水龙头因损坏而不断地向外滴水，为探究其漏水造成的浪费情况，小明用一个带有刻度的量筒放在水龙头下面装水，每隔一分钟记录量筒中的总水量，但由于操作延误，开始计时的时候量筒中已经有少量水，因而得到如下表的一组数据：
 
-    时间t（单位：分钟）
+    | 时间 t （单位：分钟） | $1$ | $2$ | $3$ | $4$ | $5$ | $\cdots$ |
 
-    $1$
+    | --- | --- | --- | --- | --- | --- | --- |
 
-    $2$
-
-    $3$
-
-    $4$
-
-    $5$
-
-    $\cdots$
-
-    总水量y（单位：毫升）
-
-    $7$
-
-    $12$
-
-    $17$
-
-    $22$
-
-    $27$
-
-    $\cdots$
+    | 总水量 y （单位：毫升） | $7$ | $12$ | $17$ | $22$ | $27$ | $\cdots$ |
 
     （1）通过分析数据，发现可以用函数$y = kt + b$（$k,b$为常数）刻画总水量y与时间t之间的关系，画出这个函数的图象；
 
@@ -1094,8 +1050,6 @@ questions:
   recommended_for:
   - L2
   - L3
-  figures:
-  - figures/2025-fangshan-er-fig20.png
 - id: 26
   type: 解答
   score: 6
@@ -1169,9 +1123,6 @@ questions:
   difficulty: 压轴
   recommended_for:
   - L3
-  figures:
-  - figures/2025-fangshan-er-fig21.png
-  - figures/2025-fangshan-er-fig22.png
 - id: 27
   type: 解答
   score: 7
@@ -1250,9 +1201,9 @@ questions:
   recommended_for:
   - L3
   figures:
-  - figures/2025-fangshan-er-fig23.png
-  - figures/2025-fangshan-er-fig24.png
-  - figures/2025-fangshan-er-fig25.png
+  - path: figures/2025-fangshan-er-fig23.png
+    width_mm: 98.4
+    height_mm: 42.3
 - id: 28
   type: 解答
   score: 7
@@ -1317,6 +1268,3 @@ questions:
   difficulty: 压轴
   recommended_for:
   - L3
-  figures:
-  - figures/2025-fangshan-er-fig26.png
-  - figures/2025-fangshan-er-fig27.png

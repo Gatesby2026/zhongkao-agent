@@ -1,0 +1,1191 @@
+# ============================================================
+# 2023年北京市中考数学真题试卷 — 逐题分析
+# ============================================================
+# 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
+# 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
+# 满分：100分  时长：120分钟
+
+year: 2023
+district: 北京市
+exam_type: 真题
+subject: 数学
+full_score: 100
+duration_minutes: 120
+total_questions: 28
+structure: 8选择(16分) + 8填空(16分) + 12解答(68分)
+questions:
+- id: 1
+  type: 选择
+  score: 2
+  question: '截至2023年6月11日17时，全国冬小麦收款2.39亿亩，进度过七成半，将239000000用科学记数法表示应为（）
+
+    A.$23.9\times10^{7}$
+
+    B.$2.39\times10^{8}$
+
+    C.$2.39\times10^{9}$
+
+    D.$0.239\times10^{9}$'
+  answer: B
+  solution: '解：$239000000=2.39\times10^{8}$，
+
+    故选：B．'
+  knowledge_points:
+  - 科学记数法
+  - 绝对值
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 2
+  type: 选择
+  score: 2
+  question: '下列图形中，既是轴对称图形又是中心对称图形的是（）
+
+    A.[图]
+
+    B.[图]
+
+    C.[图]
+
+    D.[图]'
+  answer: A
+  solution: '解：A既是轴对称图形又是中心对称图形，故符合要求；
+
+    B不是轴对称图形，是中心对称图形，故不符合要求；
+
+    C$[公式]$轴对称图形，不是中心对称图形，故不符合要求；
+
+    D是轴对称图形，不是中心对称图形，故不符合要求；
+
+    故选：A．'
+  knowledge_points:
+  - 中心对称图形
+  - 轴对称图形
+  - 旋转
+  - 轴对称
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2023-beijing-zhenti-fig02.png
+    width_mm: 20.4
+    height_mm: 20.4
+  - path: figures/2023-beijing-zhenti-fig03.png
+    width_mm: 27.0
+    height_mm: 19.8
+  - path: figures/2023-beijing-zhenti-fig04.png
+    width_mm: 20.1
+    height_mm: 20.1
+  - path: figures/2023-beijing-zhenti-fig05.png
+    width_mm: 23.3
+    height_mm: 20.1
+- id: 3
+  type: 选择
+  score: 2
+  question: '如图，$\angle AOC = \angle BOD = 90^\circ$，$\angle AOD=126^\circ$，则$\angle BOC$的大小为（）
+
+    [图]
+
+    A.$36^\circ$
+
+    B.$44^\circ$
+
+    C.$54^\circ$
+
+    D.$63^\circ$'
+  answer: C
+  solution: '∵$\angle AOC=90^\circ$，$\angle AOD=126^\circ$，
+
+    ∴$\angle COD=\angle AOD-\angle AOC=36^\circ$，
+
+    ∵$\angle BOD = 90^\circ$，
+
+    ∴$\angle BOC=\angle BOD-\angle COD=90^\circ-36^\circ=54^\circ$．
+
+    故选：C．'
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2023-beijing-zhenti-fig06.png
+    width_mm: 61.4
+    height_mm: 43.7
+- id: 4
+  type: 选择
+  score: 2
+  question: '已知$a-1>0$，则下列结论正确的是（）
+
+    A.$-1 < -a < a < 1$
+
+    B.$-a < -1 < 1 < a$
+
+    C$[公式]$$-a<-1<a<1$
+
+    D.$-1 < -a < 1 < a$'
+  answer: B
+  solution: '解：$a-1>0$得$a>1$，则$a > 0$，
+
+    ∴$-a<-1$，
+
+    ∴$-a < -1 < 1 < a$，
+
+    故选：B．'
+  knowledge_points:
+  - 不等式
+  module: equationsAndInequalities
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 5
+  type: 选择
+  score: 2
+  question: '若关于x的一元二次方程$x^{2}-3x+m=0$有两个相等的实数根，则实数m的值为（）
+
+    A.$-9$
+
+    B.$-\frac{9}{4}$
+
+    C.$\frac{9}{4}$
+
+    D.9'
+  answer: C
+  solution: '解：∵关于x的一元二次方程$x^{2}-3x+m=0$有两个相等的实数根，
+
+    ∴$\Delta = b^{2} - 4ac = 9 - 4a = 0$．
+
+    解得：$m = \frac{9}{4}$．
+
+    故选：C．'
+  knowledge_points:
+  - 一元二次方程
+  - 根的判别式
+  module: equationsAndInequalities
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 6
+  type: 选择
+  score: 2
+  question: '十二边形的外角和为（）
+
+    A.$30^\circ$
+
+    B.$150^\circ$
+
+    C.$360^\circ$
+
+    D.$1800^\circ$'
+  answer: C
+  solution: '解：∵多边形的外角和为360°
+
+    ∴十二边形的外角和是360°．
+
+    故选：C．'
+  knowledge_points:
+  - 综合
+  module: triangles
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 7
+  type: 选择
+  score: 2
+  question: '先后两次抛掷同一枚质地均匀的硬币，则第一次正面向上、第二次反面向上的概率是（）
+
+    A.$\frac{1}{4}$
+
+    B.$\frac{1}{3}$
+
+    C.$\frac{1}{2}$
+
+    D.$\frac{3}{4}$'
+  answer: A
+  solution: '[图]
+
+    如图，所有结果有4种，满足要求的结果有1种，故概率为$\frac{1}{4}$.
+
+    故选：A'
+  knowledge_points:
+  - 概率
+  - 树状图
+  - 列表法
+  module: statisticsAndProbability
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 8
+  type: 选择
+  score: 2
+  question: '如图，点A、B、C在同一条线上，点B在点A，C之间，点D，E在直线AC同侧，$AB < BC$，$\angle A=\angle C=90^{\circ}$，$\triangle EAB\cong\triangle BCD$，连接DE，设$AB = a$，$BC = b$，$DE = c$，给出下面三个结论：①$a+b<c$；②$a+b\sqrt{a^{2}+b^{2}}$；③$\sqrt{2}(a+b)>c$；
+
+    [图]
+
+    上述结论中，所有正确结论的序号是（）
+
+    A.①②
+
+    B.①③
+
+    C.②③
+
+    D.①②③'
+  answer: D
+  solution: '解：如图，过D作$DF \perp AE$于F，则四边形$ACDF$是矩形，
+
+    [图]
+
+    ∴$DF = AC = a + b$，
+
+    ∵$DF < DE$，
+
+    ∴$a+b<c$，①正确，故符合要求；
+
+    ∵$\triangle EAB\cong\triangle BCD$，
+
+    ∴$BE = BD$，$CD = AB = a$，$AE = BC = b$，$\angle ABE = \angle CDB$，
+
+    ∵$\angle CBD+\angle CDB=90^{\circ}$，
+
+    ∴$\angle CBD + \angle ABE = 90^\circ$，$\angle EBD=90^\circ$，
+
+    ∴$\triangle BDE$是等腰直角三角形，
+
+    由勾股定理得，$BE = \sqrt{AB^{2} + AE^{2}} = \sqrt{a^{2} + b^{2}}$，
+
+    ∵$AB + AE > BE$，
+
+    ∴$a+b\sqrt{a^{2}+b^{2}}$，②正确，故符合要求；
+
+    由勾股定理得$DE^{2}=BD^{2}+BE^{2}$，即$c^{2}=2\left(a^{2}+b^{2}\right)$，
+
+    ∴$c=\sqrt{2}\times\sqrt{a^{2}+b^{2}}<\sqrt{2}(a+b)$，③正确，故符合要求；
+
+    故选：D．'
+  knowledge_points:
+  - 全等三角形
+  - 勾股定理
+  - 矩形
+  - 不等式
+  module: triangles
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+  figures:
+  - path: figures/2023-beijing-zhenti-fig08.png
+    width_mm: 52.9
+    height_mm: 35.7
+- id: 9
+  type: 填空
+  score: 2
+  question: 若代数式$\frac{5}{x-2}$有意义，则实数x的取值范围是______．
+  answer: $x \neq 2$
+  solution: '解：若代数式$\frac{5}{x-2}$有意义，则$x-2\ne0$，
+
+    解得：$x \neq 2$，
+
+    故答案为：$x \neq 2$．'
+  knowledge_points:
+  - 不等式
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 10
+  type: 填空
+  score: 2
+  question: 分解因式：$x^{2}y-y^{3}$=__________________.
+  answer: $y(x+y)(x-y)$
+  solution: '试题分析：原式提公因式得：y（x2-y2）=$y(x+y)(x-y)$
+
+    考点：分解因式
+
+    点评：本题难度中等，主要考查学生对多项式提公因式分解因式等知识点的掌握．需要运用平方差公式．'
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 11
+  type: 填空
+  score: 2
+  question: 方程$\frac{3}{5x+1}=\frac{1}{2x}$的解为______．
+  answer: $x = 1$
+  solution: '解：方程两边同时乘以$2x(5x+1)$，得$6x=5x+1$，
+
+    解得：$x = 1$，
+
+    经检验，$x = 1$是原方程的解，
+
+    故答案为：$x = 1$．'
+  knowledge_points:
+  - 分式方程
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 12
+  type: 填空
+  score: 2
+  question: 在平面直角坐标系xOy中，若函数$y=\frac{k}{x}(k\neq0)$的图象经过点$A(-3,2)$和$B(m,-2)$，则m的值为______．
+  answer: '3'
+  solution: '解：∵函数$y=\frac{k}{x}(k\neq0)$的图象经过点$A(-3,2)$和$B(m,-2)$
+
+    ∴把点$A(-3,2)$代入得$k = -3 \times 2 = -6$，
+
+    ∴反比例函数解析式为$y=\frac{-6}{x}$，
+
+    把点$B(m,-2)$代入得：$-2 = \frac{-6}{m}$，
+
+    解得：$m = 3$，
+
+    故答案为：3．'
+  knowledge_points:
+  - 反比例函数
+  - 坐标系
+  module: functions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 13
+  type: 填空
+  score: 2
+  question: '某厂生产了1000只灯泡.为了解这1000只灯泡的使用寿命，从中随机抽取了50只灯泡进行检测，获得了它们的使用寿命（单位：小时），数据整理如下：
+
+    | 使用寿命 | $x<1000$ | $1000 \leq x < 1600$ | $1600 \leq x < 2200$ | $2200 \leq x < 2800$ | $x \quad 2800$ |
+
+    | --- | --- | --- | --- | --- | --- |
+
+    | 灯泡只数 | 5 | 10 | 12 | 17 | 6 |
+
+    根据以上数据，估计这1000只灯泡中使用寿命不小于2200小时的灯泡的数量为______只．'
+  answer: '460'
+  solution: '解：估计这1000只灯泡中使用寿命不小于2200小时的灯泡的数量为$1000\times\frac{17+6}{50}=460$（只），
+
+    故答案为：460．'
+  knowledge_points:
+  - 综合
+  module: statisticsAndProbability
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 14
+  type: 填空
+  score: 2
+  question: '如图，直线AD，BC交于点O，$AB \parallel EF \parallel CD$.若$AO = 2$，$OF = 1$，$FD=2$.则$\frac{BE}{EC}$的值为______．
+
+    [图]'
+  answer: $\frac{3}{2}$
+  solution: '$\because AB \parallel EF \parallel CD$，$AO = 2$，$OF = 1$，
+
+    $\therefore \frac{BO}{OE} = \frac{AO}{OF} = \frac{2}{1}$，
+
+    $\therefore BO = 2OE$，
+
+    $\because \frac{OE}{EC}=\frac{OF}{FD}=\frac{1}{2}$，
+
+    $EC = 2OE$，
+
+    $\frac{BE}{EC}=\frac{2OE+OE}{2OE}=\frac{3}{2}$；
+
+    故答案为：$\frac{3}{2}$.'
+  knowledge_points:
+  - 平行线
+  module: triangles
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2023-beijing-zhenti-fig10.png
+    width_mm: 60.1
+    height_mm: 46.6
+- id: 15
+  type: 填空
+  score: 2
+  question: '如图，OA是$\odot\odot$的半径，BC是$\odot\odot$的弦，$OA \perp BC$于点D，AE是$\odot\odot$的切线，AE交OC的延长线于点E．若$\angle AOC = 45^\circ$，$BC = 2$，则线段AE的长为______．
+
+    [图]'
+  answer: $\sqrt{2}$
+  solution: '解：∵$OA \perp BC$，
+
+    ∴$\angle ODC=90^{\circ}$，$DC = \frac{1}{2}BC = 1$．
+
+    ∵$\angle AOC = 45^\circ$，
+
+    ∴$\triangle ODC$为等腰直角三角形，
+
+    ∴$OC = \sqrt{2}DC = \sqrt{2}$，
+
+    ∴$OA = OC = \sqrt{2}$．
+
+    ∵AE是$\odot\odot$的切线，
+
+    ∴$\angle OAE=90^\circ$，
+
+    ∵$\angle AOC = 45^\circ$，
+
+    ∴$\triangle AOE$为等腰直角三角形，
+
+    ∴$AE = OA = \sqrt{2}$．
+
+    故答案为：$\sqrt{2}$．'
+  knowledge_points:
+  - 垂径定理
+  - 切线
+  - 弦
+  module: circles
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2023-beijing-zhenti-fig11.png
+    width_mm: 55.3
+    height_mm: 41.3
+- id: 16
+  type: 填空
+  score: 2
+  question: '学校组织学生参加木艺艺术品加工劳动实践活动．已知某木艺艺术品加工完成共需A，B，C，D，E，F，G七道工序，加工要求如下：
+
+    ①工序C，D须在工序A完成后进行，工序E须在工序B，D都完成后进行，工序F须在工序C，D都完成后进行；
+
+    ②一道工序只能由一名学生完成，此工序完成后该学生才能进行其他工序；
+
+    ③各道工序所需时间如下表所示：
+
+    | 工序 | A | B | C | D | E | F | G |
+
+    | --- | --- | --- | --- | --- | --- | --- | --- |
+
+    | 所需时间 / 分钟 | 9 | 9 | 7 | 9 | 7 | 10 | 2 |
+
+    在不考虑其他因素的前提下，若由一名学生单独完成此木艺艺术品的加工，则需要______分钟；若由两名学生合作完成此木艺艺术品的加工，则最少需要______分钟．'
+  answer: ①.53 ②.28
+  solution: '解：由题意得：$9+9+7+9+7+10-2=53$（分钟），
+
+    即由一名学生单独完成此木艺艺术品的加工，需要53分钟；
+
+    假设这两名学生为甲、乙，
+
+    ∵工序C，D须在工序A完成后进行，工序E须在工序B，D都完成后进行，且工序A，B都需要9分钟完成，
+
+    ∴甲学生做工序A，乙学生同时做工序B，需要9分钟，
+
+    然后甲学生做工序D，乙学生同时做工序C，乙学生工序C完成后接着做工序G，需要9分钟，
+
+    最后甲学生做工序E，乙学生同时做工序F，需要10分钟，
+
+    ∴若由两名学生合作完成此木艺艺术品的加工，最少需要$9+9+10=28$（分钟），
+
+    故答案为：53，28；'
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 17
+  type: 解答
+  score: 5
+  question: 计算：$4\sin 60^{\circ}+\left(\frac{1}{3}\right)^{-1}+|-2|-\sqrt{12}$．
+  answer: $5$
+  solution: '解：原式$4\times\frac{\sqrt{3}}{2}+3+2-2\sqrt{3}$
+
+    $=2\sqrt{3}+3+2-2\sqrt{3}$
+
+    $= 5$．'
+  knowledge_points:
+  - 三角函数
+  - 绝对值
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 18
+  type: 解答
+  score: 5
+  question: '解不答式组：$\begin{cases}
+
+    x > \dfrac{x + 2}{3} \\
+
+    5x - 3 < 5 + x
+
+    \end{cases}$．'
+  answer: $1<x<2$
+  solution: '$\begin{cases}
+
+    x > \dfrac{x+2}{3} \quad \text{①} \\
+
+    5x - 3 < 5 + x \quad \text{②}
+
+    \end{cases}$
+
+    解不等式①得：$x>1$
+
+    解不等式②得：$x<2$
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$不等式的解集为：$1<x<2$'
+  knowledge_points:
+  - 不等式
+  - 不等式组
+  module: equationsAndInequalities
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 19
+  type: 解答
+  score: 5
+  question: 已知$x+2y-1=0$，求代数式$\frac{2x+4y}{x^{2}+4xy+4y^{2}}$的值．
+  answer: '2'
+  solution: '解：原式$=2(x+2y)\cdot\frac{2}{(x+2y)^{2}}$，
+
+    由$x+2y-1=0$可得$x+2y=1$，
+
+    将$x+2y=1$代入原式可得，原式$=\frac{2}{1}=2$．'
+  knowledge_points:
+  - 综合
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 20
+  type: 解答
+  score: 5
+  question: '如图，在$Y_{ABCD}$中，点E，F分别在BC，AD上，$BE = DF$，$AC = EF$．
+
+    [图]
+
+    （1）求证：四边形$AECF$是矩形；
+
+    （2）$AE = BE$，$AB=2$，$\tan \angle ACB = \frac{1}{2}$，求BC的长．'
+  answer: （1）见解析 （2）$3\sqrt{2}$
+  solution: '【小问1详解】
+
+    证明：∵四边形$ABCD$是平行四边形，
+
+    ∴$AD = BC$，$AD \parallel BC$，
+
+    ∵$BE = DF$，
+
+    ∴$AF = EC$，
+
+    ∴四边形$AECF$是平行四边形，
+
+    ∵$AC = EF$，
+
+    ∴平行四边形$AECF$是矩形；
+
+    【小问2详解】
+
+    解：由（1）知四边形$AECF$是矩形，
+
+    ∴$\angle AEC = \angle AEB = 90^\circ$，
+
+    ∵$AE = BE$，$AB=2$，
+
+    ∴$\triangle ABE$是等腰直角三角形，
+
+    ∴$AE = BE = \frac{\sqrt{2}}{2} AB = \sqrt{2}$，
+
+    又∵$\tan\angle ACB=\frac{AE}{EC}=\frac{1}{2}$，
+
+    ∴$\frac{\sqrt{2}}{EC}=\frac{1}{2}$，
+
+    ∴$EC = 2\sqrt{2}$，
+
+    ∴$BC = BE + EC = \sqrt{2} + 2\sqrt{2} = 3\sqrt{2}$．'
+  knowledge_points:
+  - 平行四边形
+  - 矩形
+  module: quadrilaterals
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2023-beijing-zhenti-fig12.png
+    width_mm: 60.9
+    height_mm: 23.0
+- id: 21
+  type: 解答
+  score: 5
+  question: '对联是中华传统文化的瑰宝，对联装裱后，如图所示，上、下空白处分别称为天头和地头，左、右空白处统称为边．一般情况下，天头长与地头长的比是$6:4$，左、右边的宽相等，均为天头长与地头长的和的$\frac{1}{10}$．某人要装裱一幅对联，对联的长为$100cm$，宽为$27\mathrm{cm}$．若要求装裱后的长是装裱后的宽的4倍，求边的宽和天头长．（书法作品选自《启功法书》）
+
+    [图]'
+  answer: 边的宽为$4\mathrm{cm}$，天头长为$24cm$
+  solution: '解：设天头长为xcm，
+
+    由题意天头长与地头长的比是$6:4$，可知地头长为$\frac{2}{3}x\mathrm{cm}$，
+
+    边的宽为$\frac{1}{10}\left(x+\frac{2}{3}\right)\cdot\sin\frac{\pi}{6}\cdot x\mathrm{cm}$，
+
+    装裱后的长为$\left(\frac{2}{3}x+x+109\right)\text{cm}-\left(\frac{2}{3}x+100\right)\text{cm}$，
+
+    装裱后的宽为$\left(\frac{1}{6}x^{2}+\frac{1}{3}x+27\right)\mathrm{cm}-\left(\frac{1}{3}x+27\right)\mathrm{cm}$，
+
+    由题意可得：$\frac{5}{3}x+100=\left(\frac{1}{3}x+27\right)\times4$
+
+    解得$x = 24$，
+
+    ∴$\frac{1}{6}x = 4$，
+
+    答：边的宽为$4\mathrm{cm}$，天头长为$24\mathrm{cm}$．'
+  knowledge_points:
+  - 综合
+  module: equationsAndInequalities
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2023-beijing-zhenti-fig13.jpg
+    width_mm: 70.1
+    height_mm: 88.1
+- id: 22
+  type: 解答
+  score: 5
+  question: '在平面直角坐标系xOy中，函数$y=kx+b\ (k\neq0)$的图象经过点$A(0,1)$和$B(1,2)$，与过点$(0,4)$且平行于x轴的线交于点C．
+
+    （1）求该函数的解析式及点C的坐标；
+
+    （2）当$x<3$时，对于x的每一个值，函数$y=\frac{2}{3}x+n$的值大于函数$y=kx+b\ (k\neq0)$的值且小于4，直接写出n的值．'
+  answer: （1）$y=x+1$，$C(3,4)$； （2）$n=2$．
+  solution: '【小问1详解】
+
+    解：把点$A(0,1)$，$B(1,2)$代入$y=kx+b\ (k\neq0)$得：$\begin{cases}
+
+    b = 1 \\
+
+    k + b = 2
+
+    \end{cases}$，
+
+    解得：$\left\{\begin{array}{l}k=1\\b=1\end{array}\right.$，
+
+    ∴该函数的解析式为$y=x+1$，
+
+    由题意知点C的纵坐标为4，
+
+    当$y = x + 1 = 4$时，
+
+    解得：$x=3$，
+
+    ∴$C(3,4)$；
+
+    【小问2详解】
+
+    解：由（1）知：当$x=3$时，$y = x + 1 = 4$，
+
+    因为当$x<3$时，函数$y=\frac{2}{3}x+n$的值大于函数$y=x+1$的值且小于4，
+
+    所以如图所示，当$y=\frac{2}{3}x+n$过点$(3,4)$时满足题意，
+
+    代入$(3,4)$得：$4=\frac{2}{3}\times 3+n$，
+
+    解得：$n=2$．
+
+    [图] 【点睛】本题考查了一次函数的图象和性质，待定系数法的应用，一次函数图象上点的坐标特征，利用数形结合的思想是解题的关键．'
+  knowledge_points:
+  - 坐标系
+  module: functions
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 23
+  type: 解答
+  score: 6
+  question: '某校舞蹈队共16名学生，测量并获取了所有学生的身高（单位：cm），数据整理如下：
+
+    a.16名学生的身高：
+
+    161，162，162，164，165，165，165，166，
+
+    166，167，168，168，170，172，172，175
+
+    b.16名学生的身高的平均数、中位数、众数：
+
+    | 平均数 | 中位数 | 众数 |
+
+    | --- | --- | --- |
+
+    | 166.75 | m | n |
+
+    （1）写出表中m，n的值；
+
+    （2）对于不同组的学生，如果一组学生的身高的方差越小，则认为该组舞台呈现效果越好．据此推断：在下列两组学生中，舞台呈现效果更好的是______（填“甲组”或“乙组”）；
+
+    | 甲组学生的身高 | 162 | 165 | 165 | 166 | 166 |
+
+    | --- | --- | --- | --- | --- | --- |
+
+    | 乙组学生的身高 | 161 | 162 | 164 | 165 | 175 |
+
+    （3）该舞蹈队要选五名学生参加比赛．已确定三名学生参赛，他们的身高分别为168，168，172，他们的身高的方差为$\frac{32}{9}$．在选另外两名学生时，首先要求所选的两名学生与已确定的三名学生所组成的五名学生的身高的方差小于$\frac{32}{9}$，其次要求所选的两名学生与已确定的三名学生所组成的五名学生的身高的平均数尽可能大，则选出的另外两名学生的身高分别为______和______．'
+  answer: （1）$m = 166$，$n = 165$； （2）甲组 （3）170，172
+  solution: '【小问1详解】
+
+    解：将这组数据按照从小到大的顺序排列为：161，162，162，164，165，165，165，166，166，167，168，168，170，172，172，175，
+
+    出现次数最多的数是165，出现了3次，即众数$n = 165$，
+
+    16个数据中的第8和第9个数据分别是166，166，
+
+    ∴中位数$m=\frac{166+166}{2}=166$，
+
+    ∴$m = 166$，$n = 165$；
+
+    【小问2详解】
+
+    解：甲组身高的平均数为$\frac{1}{5}(162+165+165+166+166)=164.8$，
+
+    甲组身高的方差为$\frac{1}{5}\left[(162-164.8)^{2}+(165-164.8)^{2}+(165-164.8)^{2}+(166-164.8)^{2}+(166-164.8)^{2}\right]=2.16$
+
+    乙组身高的平均数为$\frac{1}{5}(161+162+164+165+175)=165.4$，
+
+    乙组身高的方差为$\frac{1}{5}\left[(161-165.4)^2+(162-165.4)^2+(164-165.4)^2+(165-165.4)^2+(175-165.4)^2\right]=25.04$，
+
+    ∵$25.04 > 2.16$
+
+    ∴舞台呈现效果更好的是甲组，
+
+    故答案为：甲组；
+
+    【小问3详解】
+
+    解：168，168，172的平均数为$\frac{1}{3}(68+68+72)=169\frac{1}{3}$
+
+    ∵所选的两名学生与已确定的三名学生所组成的五名学生的身高的方差小于$\frac{32}{9}$，
+
+    ∴数据的差别较小，数据才稳定，
+
+    可供选择的有：170，172，
+
+    且选择170，172时，平均数会增大，
+
+    故答案为：170，172．'
+  knowledge_points:
+  - 平均数
+  - 中位数
+  - 众数
+  - 方差
+  module: statisticsAndProbability
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 24
+  type: 解答
+  score: 6
+  question: '如图，圆内接四边形$ABCD$的对角线AC，BD交于点E，BD平分$\angle ABC$，$\angle BAC = \angle ADB$．
+
+    [图]
+
+    （1）求证DB平分$\angle ADC$，并求$\angle BAD$的大小；
+
+    （2）过点C作$CF \parallel AD$交AB的延长线于点F．若$AC = AD$，$BF = 2$，求此圆半径的长．'
+  answer: （1）见解析，$\angle BAD = 90^\circ$ （2）$4$
+  solution: '【小问1详解】
+
+    解：∵$\angle BAC = \angle ADB$
+
+    ∴$\widehat{AB}=\widehat{BC}$，
+
+    ∴$\angle ADB = \angle CDB$，即DB平分$\angle ADC$．
+
+    ∵BD平分$\angle ABC$，
+
+    ∴$\angle ABD = \angle CBD$，
+
+    ∴$\widehat{AD}=\widehat{CD}$，
+
+    ∴$\overrightarrow{AB}+\overrightarrow{AD}=\overrightarrow{BC}+\overrightarrow{CD}$，即$\widehat{BAD}=\widehat{BCD}$，
+
+    ∴BD是直径，
+
+    ∴$\angle BAD = 90^\circ$；
+
+    【小问2详解】
+
+    解：∵$\angle BAD = 90^\circ$，$CF \parallel AD$，
+
+    ∴$\angle F+\angle BAD=180^\circ$，则$\angle F = 90^\circ$．
+
+    ∵$\widehat{AD}=\widehat{CD}$，
+
+    ∴$AD = DC$．
+
+    ∵$AC = AD$，
+
+    ∴$AC = AD = CD$，
+
+    ∴$\triangle ADC$是等边三角形，则$\angle ADC = 60^\circ$．
+
+    ∵BD平分$\angle ADC$，
+
+    ∴$\angle CDB=\frac{1}{2}\angle ADC=30^\circ$．
+
+    ∵BD是直径，
+
+    ∴$\angle BCD = 90^\circ$，则$BC=\frac{1}{2}BD$．
+
+    ∵四边形$ABCD$是圆内接四边形，
+
+    ∴$\angle ADC + \angle ABC = 180^\circ$，则$\angle ABC = 120^\circ$，
+
+    ∴$\angle FBC = 60^\circ$，
+
+    '
+  knowledge_points:
+  - 圆周角
+  module: triangles
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+  figures:
+  - path: figures/2023-beijing-zhenti-fig15.png
+    width_mm: 54.8
+    height_mm: 44.2
+- id: 25
+  type: 解答
+  score: 6
+  question: '某小组研究了清洗某种含污物品的节约用水策略．部分内容如下．
+
+    每次清洗1个单位质量的该种含污物品，清洗前的清洁度均为0.800要求清洗后的清洁度为0.990
+
+    方案一：采用一次清洗的方式．
+
+    结果：当用水量为19个单位质量时，清洗后测得的清洁度为0.990．
+
+    方案二：采用两次清洗的方式．
+
+    记第一次用水量为$x_{1}$个单位质量，第二次用水量为$x_2$个单位质量，总用水量为$\left(x_{1}+x_{2}\right)$个单位质量，两次清洗后测得的清洁度为C．记录的部分实验数据如下：
+
+    | $x_{1}$ | 11.0 | 9.0 | 9.0 | 7.0 | 5.5 | 4.5 | 3.5 | 3.0 | 3.0 | 2.0 | 1.0 |
+
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+
+    | $x_2$ | 0.8 | 1.0 | 1.3 | 1.9 | 2.6 | 3.2 | 4.3 | 4 $[公式]$ 0 | 5.0 | 7.1 | 11.5 |
+
+    | $x_{1}+x_{2}$ | 11.8 | 10.0 | 10.3 | 8.9 | 8.1 | 7.7 | 7.8 | 7.0 | 8.0 | 9.1 | 12.5 |
+
+    | C | 0.990 | 0.989 | 0.990 | 0.990 | 0.990 | 0.990 | 0.990 | 0.988 | 0.990 | 0.990 | 0.990 |
+
+    对以上实验数据进行分析，补充完成以下内容．
+
+    （Ⅰ）选出C是0.990的所有数据组，并划“√”；
+
+    （Ⅱ）通过分析（Ⅰ）中选出的数据，发现可以用函数刻画第一次用水量$x_{1}$和总用水量$x_{1}+x_{2}$之间的关系，在平面直角坐标系xOy中画出此函数的图象；
+
+    [图]
+
+    结果：结合实验数据，利用所画的函数图象可以推断，当第一次用水量约为______个单位质量（精确到个位）时，总用水量最小．
+
+    根据以上实验数据和结果，解决下列问题：
+
+    （1）当采用两次清洗的方式并使总用水量最小时，与采用一次清洗的方式相比、可节水约______个单位质量（结果保留小数点后一位）；
+
+    （2）当采用两次清洗的方式时，若第一次用水量为6个单位质量，总用水量为7.5个单位质量，则清洗后的清洁度C______0.990（填“>”“=”或“<”）．'
+  answer: （Ⅰ）见解析；（Ⅱ）见解析，4；（1）11.3；（2）<
+  solution: '（Ⅰ）表格如下：
+
+    | $x_{1}$ | 11.0 | 9.0 | 9.0 | 7.0 | 5.5 | 4.5 | 3.5 | 3.0 | 3.0 | 2.0 | 1.0 |
+
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+
+    | $x_2$ | 0.8 | 1.0 | 1.3 | 1.9 | 2.6 | 3.2 | 4.3 | 4.0 | 5.0 | 7.1 | 11.5 |
+
+    | $x_{1}+x_{2}$ | 11.8 | 10.0 | 10.3 | 8.9 | 8.1 | 7.7 | 7.8 | 7.0 | 8.0 | 9.1 | 12.5 |
+
+    | C | 0.990 √ | 0.989 | 0.990 √ | 0.990 √ | 0.990 √ | 0.990 √ | 0.990 √ | 0.988 | 0.990 √ | 0.990 √ | 0.990 √ |
+
+    （Ⅱ）函数图象如下：
+
+    [图]
+
+    由图象可得，当第一次用水量约为4个单位质量（精确到个位）时，总用水量最小；
+
+    （1）当采用两次清洗的方式并使总用水量最小时，用水量为7.7个单位质量，
+
+    19-7.7=11.3，
+
+    即可节水约11.3个单位质量；
+
+    （2）由图可得，当第一次用水量为6个单位质量，总用水量超过8个单位质量，则清洗后的清洁度能达到0.990，
+
+    第一次用水量为6个单位质量，总用水量为7.5个单位质量，则清洗后的清洁度$C<0.990$，
+
+    故答案为：<．'
+  knowledge_points:
+  - 坐标系
+  module: functions
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+  figures:
+  - path: figures/2023-beijing-zhenti-fig16.png
+    width_mm: 72.8
+    height_mm: 71.7
+- id: 26
+  type: 解答
+  score: 6
+  question: '在平面直角坐标系xOy中，$M(x_{1},y_{1})$，$N(x_{2},y_{2})$是抛物线$y=ax^{2}+bx+c(a>0)$上任意两点，设抛物线的对称轴为$x = t$．
+
+    （1）若对于$x_{1}=1$，$x_2 = 2$有$y_{1}=y_{2}$，求t的值；
+
+    （2）若对于$0 < x_{1} < 1$，$1<x_{2}<2$，都有$y_1 < y_2$，求t的取值范围．'
+  answer: （1）$t = \frac{3}{2}$ （2）$t \leqslant \frac{1}{2}$
+  solution: '【小问1详解】
+
+    解：∵对于$x_{1}=1$，$x_2 = 2$有$y_{1}=y_{2}$，
+
+    ∴抛物线的对称轴为直线$x=\frac{x_{1}+x_{2}}{2}=\frac{3}{2}$，
+
+    ∵抛物线的对称轴为$x = t$．
+
+    ∴$t = \frac{3}{2}$；
+
+    【小问2详解】
+
+    解：∵当$0 < x_{1} < 1$，$1<x_{2}<2$，
+
+    ∴$\frac{1}{2}<\frac{x_{1}*x_{2}}{2}<\frac{3}{2}$，$x_{1}<x_{2}$，
+
+    ∵$y_1 < y_2$，$a > 0$，
+
+    ∴$(x_1,y_1)$离对称轴更近，$x_{1}<x_{2}$，则$(x_1,y_1)$与$\left(x_{2},y_{2}\right)$的中点在对称轴的右侧，
+
+    ∴$\frac{x_{1}+x_{2}}{2}>t$，
+
+    即$t \leqslant \frac{1}{2}$．'
+  knowledge_points:
+  - 二次函数
+  - 坐标系
+  module: functions
+  difficulty: 压轴
+  recommended_for:
+  - L3
+- id: 27
+  type: 解答
+  score: 7
+  question: '在$\triangle ABC$中、$\angle B=\angle C-\alpha(0^{\circ}<\alpha<45^{\circ})$，$AM \perp BC$于点M，D是线段MC上的动点（不与点M，C重合），将线段DM绕点D顺时针旋转$2\alpha$得到线段DE．
+
+    [图]
+
+    （1）如图1，当点E在线段AC上时，求证：D是MC的中点；
+
+    （2）如图2，若在线段BM上存在点F（不与点B，M重合）满足$DF = DC$，连接AE，EF，直接写出$\angle AEF$的大小，并证明．'
+  answer: （1）见解析 （2）$\angle AEF=90^\circ$，证明见解析
+  solution: '【小问1详解】
+
+    证明：由旋转的性质得：$DM = DE$，$\angle MDE=2\alpha$，
+
+    ∵$\angle C = \alpha$，
+
+    ∴$\angle DEC=\angle MDE+\angle C=\alpha$，
+
+    ∴$\angle C=\angle DEC$，
+
+    ∴$DE = DC$，
+
+    ∴$DM = DC$，即D是MC$[公式]$中点；
+
+    【小问2详解】
+
+    $\angle AEF=90^\circ$；
+
+    证明：如图2，延长FE到H使$FE = EH$，连接CH，AH，
+
+    ∵$DF = DC$，
+
+    ∴DE是$V FCH$的中位线，
+
+    ∴$DE \parallel CH$，$CH = 2DE$，
+
+    由旋转的性质得：$DM = DE$，$\angle MDE=2\alpha$，
+
+    ∴$\angle FCH=2\alpha$，
+
+    ∵$\angle B = \angle C = \alpha$，
+
+    ∴$\angle ACH = \alpha$，$\triangle ABC$是等腰三角形，
+
+    ∴$\angle B=\angle ACH$，$AB = AC$，
+
+    设$DM = DE = m$，$CD = n$，则$CH = 2m$，$CM = m + n$，
+
+    ∴$DF = CD = n$，
+
+    ∴$FM = DF - DM = n - m$，
+
+    ∵$AM \perp BC$，
+
+    ∴$BM=CM=m+n$，
+
+    ∴$BF = BM - FM = m + n - (n - m) = 2m$，
+
+    ∴$CH = BF$，
+
+    在$\triangle ABF$和$\triangle ACH$中，$AB = AC \\
+
+    \angle B = \angle ACH \\
+
+    BF = CH$，
+
+    ∴$\triangle ABF \cong \triangle ACH (SAS)$，
+
+    ∴$AF = AH$，
+
+    ∵$FE = EH$，
+
+    ∴$'
+  knowledge_points:
+  - 旋转
+  - 动点
+  module: triangles
+  difficulty: 压轴
+  recommended_for:
+  - L3
+  figures:
+  - path: figures/2023-beijing-zhenti-fig18.png
+    width_mm: 90.0
+    height_mm: 29.9
+- id: 28
+  type: 解答
+  score: 7
+  question: '在平面直角坐标系xOy中，$\odot\odot$的半径为1．对于$\odot\odot$的弦AB和$\odot\odot$外一点C给出如下定义：
+
+    若直线CA，CB中一条经过点O，另一条是$\odot\odot$的切线，则称点C是弦AB的“关联点”．
+
+    [图]
+
+    （1）如图，点$A(-1,0)$，$B_{1}\left(-\frac{\sqrt{2}}{2}, \frac{\sqrt{2}}{2}\right)$，$B_{1}\left(\frac{\sqrt{2}}{2},-\frac{\sqrt{2}}{2}\right)$
+
+    ①在点$C_{1}(-1,1)$，$C_{2}(-\sqrt{2},0)$，$C_{3}\left(0,\sqrt{2}\right)$中，弦$AB_{1}$的“关联点”是______．
+
+    ②若点C是弦$AB_{2}$的“关联点”，直接写出OC的长；
+
+    （2）已知点$M(0,3)$，$N\left(\frac{6\sqrt{5}}{5},0\right)$．对于线段MN上一点S，存在$\odot\odot$的弦$\overline{PQ}$，使得点S是弦$\overline{PQ}$的“关联点”，记$\overline{PQ}$的长为t，当点S在线段MN上运动时，直接写出t的取值范围．'
+  answer: （1）$C_1$，$C_{2}$；$OC = \sqrt{2}$ （2）$1 \leq s \leq \frac{2\sqrt{3}}{3}$或$\frac{2\sqrt{6}}{3}\leq l\leq\sqrt{3}$．
+  solution: '【小问1详解】
+
+    解：①由关联点的定义可知，若直线$CA, CB$中一经过点O，另一条是$\odot\odot$的切线，则称点C是弦AB的“关联点”，
+
+    ∵点$A(-1,0)$，$B_{1}\left(-\frac{\sqrt{2}}{2}, \frac{\sqrt{2}}{2}\right)$，$C_{1}(-1,1)$，$C_{2}(-\sqrt{2},0)$，$C_{3}\left(0,\sqrt{2}\right)$，
+
+    ∴直线$AC_{2}$经过点O，且$BC_{2}$与$\odot\odot$相切，
+
+    ∴$C_{2}$是弦$AB_{1}$的“关联点”，
+
+    又∵$C_{1}(-1,1)$和$A(-1,0)$横坐标相等，与$B_{1}\left(-\frac{\sqrt{2}}{2}, \frac{\sqrt{2}}{2}\right)$都位于直线$y = -x$上，
+
+    ∴$AC_{1}$与$\odot\odot$相切，$B_1C_1$经过点O，
+
+    ∴$C_1$是弦$AB_{1}$的“关联点”．
+
+    ②∵$A(-1,0)$，$B_{1}\left(\frac{\sqrt{2}}{2},-\frac{\sqrt{2}}{2}\right)$，
+
+    设$C(a,\ b)$，如下图所示，共有两种情况，
+
+    [图]
+
+    a、若$C_{1}B_{2}$与$\odot\odot$相切，AC经过点O，
+
+    则$C_{1}B_{2}$、$AC_{1}$所在直线为：$\left\{
+
+    \begin{array}{l}
+
+    y = x - \sqrt{2} \\
+
+    y = 0
+
+    \end{array}
+
+    \right.$，
+
+    解得：$C_1\left(\sqrt{2},\ 0\right)$，
+
+    ∴$OC_{1}=\sqrt{2}$，
+
+    b、若$AC_{2}$与$\odot\odot$相切，$C_{2}B_{2}$经过点O，
+
+    则$C_{'
+  knowledge_points:
+  - 切线
+  - 弦
+  - 相似三角形
+  - 坐标系
+  - 最值
+  module: triangles
+  difficulty: 压轴
+  recommended_for:
+  - L3
+  figures:
+  - path: figures/2023-beijing-zhenti-fig20.png
+    width_mm: 45.2
+    height_mm: 47.9

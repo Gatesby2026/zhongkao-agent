@@ -17,13 +17,17 @@ questions:
 - id: 1
   type: 选择
   score: 2
-  question: '如图是某一几何体的三视图，则这个几何体是（
-
-    ）
+  question: '如图是某一几何体的三视图，则这个几何体是（ ）
 
     [图]
 
-    A.圆柱体B.圆锥体C.正方体D.球体'
+    A.圆柱体
+
+    B.圆锥体
+
+    C.正方体
+
+    D.球体'
   answer: A
   solution: '解：∵三视图中有两个视图为矩形，
 
@@ -44,13 +48,21 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-mentougou-er-fig02.png
+  - path: figures/2025-mentougou-er-fig02.png
+    width_mm: 24.9
+    height_mm: 28.8
 - id: 2
   type: 选择
   score: 2
   question: '某种细胞的直径是$0.00058$毫米，$0.00058$这个数用科学记数法可表示为（　　）
 
-    A.$5.8\times10^{-4}$B.$58\times10^{-5}$C.$5.8\times10^{-5}$D.$0.58\times10^{-5}$'
+    A.$5.8\times10^{-4}$
+
+    B.$58\times10^{-5}$
+
+    C.$5.8\times10^{-5}$
+
+    D.$0.58\times10^{-5}$'
   answer: A
   solution: '解：$0.00058 = 5.8 \times 10^{-4}$，
 
@@ -68,13 +80,17 @@ questions:
 - id: 3
   type: 选择
   score: 2
-  question: '如图，直线$AB,\ CD$交于点O，$OE \perp AB$于O，若$\angle1=35^{\circ}$，则$\angle 2$的度数是（
-
-    ）
+  question: '如图，直线$AB,\ CD$交于点O，$OE \perp AB$于O，若$\angle1=35^{\circ}$，则$\angle 2$的度数是（   ）
 
     [图]
 
-    A.$55^\circ$B.$45^\circ$C.$35^\circ$D.$30^\circ$'
+    A.$55^\circ$
+
+    B.$45^\circ$
+
+    C.$35^\circ$
+
+    D.$30^\circ$'
   answer: A
   solution: '解：∵$OE \perp AB, \angle 1 = 35^\circ$，
 
@@ -93,13 +109,21 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-mentougou-er-fig03.png
+  - path: figures/2025-mentougou-er-fig03.png
+    width_mm: 32.3
+    height_mm: 33.1
 - id: 4
   type: 选择
   score: 2
   question: '先后两次抛掷同一枚质地均匀的硬币，则第一次正面向上、第二次反面向上的概率是（）
 
-    A.$\frac{1}{4}$B.$\frac{1}{3}$C.$\frac{1}{2}$D.$\frac{3}{4}$'
+    A.$\frac{1}{4}$
+
+    B.$\frac{1}{3}$
+
+    C.$\frac{1}{2}$
+
+    D.$\frac{3}{4}$'
   answer: A
   solution: '[图]
 
@@ -117,8 +141,6 @@ questions:
   - L1
   - L2
   - L3
-  figures:
-  - figures/2025-mentougou-er-fig04.png
 - id: 5
   type: 选择
   score: 2
@@ -126,7 +148,13 @@ questions:
 
     [图]
 
-    A.$a > b$B.$|b| < |a|$C.$ab > 0$D.$a+b<-3$'
+    A.$a > b$
+
+    B.$|b| < |a|$
+
+    C.$ab > 0$
+
+    D.$a+b<-3$'
   answer: B
   solution: '解：由数轴图可知：$a < 0$，$b>0$，$|b| < |a|$，
 
@@ -157,15 +185,21 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-mentougou-er-fig05.png
+  - path: figures/2025-mentougou-er-fig05.png
+    width_mm: 80.4
+    height_mm: 15.6
 - id: 6
   type: 选择
   score: 2
-  question: '一个多边形的内角和与外角和相等，则这个多边形的边数为（
+  question: '一个多边形的内角和与外角和相等，则这个多边形的边数为（   ）
 
-    ）
+    A.8
 
-    A.8B.6C.5D.4'
+    B.6
+
+    C.5
+
+    D.4'
   answer: D
   solution: '设多边形的边数为n，根据题意
 
@@ -187,21 +221,7 @@ questions:
   score: 2
   question: '下面是小明设计的“过直线外一点作这条直线平行线”的尺规作图过程：
 
-    已知：如图1，直线BC及直线BC外一点P．求作：直线PE，使得$PE \parallel BC$．
-
-    [图]
-
-    作法：如图2，
-
-    ①在直线BC上取一点A，连接PA．
-
-    ②作$\angle PAC$的平分线AD．
-
-    ③以点P$[公式]$圆心PA长为半径画弧，交射线AD于点E．
-
-    ④作直线PE．
-
-    $\begin{tikzpicture}
+    | 已知：如图 1 ，直线 BC 及直线 BC 外一点 P ．求作：直线 PE ，使得 $PE \parallel BC$ ． [图] 作法：如图 2 ， ① 在直线 BC 上取一点 A ，连接 PA ． ② 作 $\angle PAC$ 的平分线 AD ． ③ 以点 P $[公式]$ 圆心 PA 长为半径画弧，交射线 AD 于点 E ． ④ 作直线 PE ． $\begin{tikzpicture}
 
     \fill (0,0) circle (2pt);
 
@@ -209,15 +229,19 @@ questions:
 
     \fill (1,-1) circle (2pt);
 
-    \end{tikzpicture}$直线PE就是所求作的直线．
+    \end{tikzpicture}$ 直线 PE 就是所求作的直线． [图] |
 
-    [图]
+    | --- |
 
     上述的方法是通过判定$\angle PEA = \angle EAC$得到$PE \parallel BC$的，其中判定$PE \parallel BC$的依据是（　　）
 
-    A.同位角相等，两直线平行B.两直线平行，同位角相等
+    A.同位角相等，两直线平行
 
-    C.内错角相等，两直线平行D.两直线平行，内错角相等'
+    B.两直线平行，同位角相等
+
+    C.内错角相等，两直线平行
+
+    D.两直线平行，内错角相等'
   answer: C
   solution: '解：∵AD是$\angle PAC$的角平分线，
 
@@ -241,9 +265,6 @@ questions:
   - L1
   - L2
   - L3
-  figures:
-  - figures/2025-mentougou-er-fig06.png
-  - figures/2025-mentougou-er-fig07.png
 - id: 8
   type: 选择
   score: 2
@@ -253,7 +274,13 @@ questions:
 
     [图]
 
-    A.$1$个B.$2$个C.$3$个D.$4$个'
+    A.$1$个
+
+    B.$2$个
+
+    C.$3$个
+
+    D.$4$个'
   answer: D
   solution: ''
   knowledge_points:
@@ -264,7 +291,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-mentougou-er-fig08.png
+  - path: figures/2025-mentougou-er-fig06.png
+    width_mm: 47.1
+    height_mm: 28.6
 - id: 9
   type: 填空
   score: 2
@@ -314,7 +343,7 @@ questions:
   type: 填空
   score: 2
   question: 用一组a，b的值说明命题“若a2＞b2，则a＞b”是错误的，这组值可以是a=____，b=____．
-  answer: ①.$a = -3$，②.$b = -1$
+  answer: ①.$a = -3$， ②.$b = -1$
   solution: '解：当a＝−3，b＝−1时，满足a2＞b2，但是a＜b，
 
     ∴命题“若a2＞b2，则a＞b”是错误的．
@@ -409,7 +438,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-mentougou-er-fig10.png
+  - path: figures/2025-mentougou-er-fig08.png
+    width_mm: 37.0
+    height_mm: 31.5
 - id: 15
   type: 填空
   score: 2
@@ -453,40 +484,24 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-mentougou-er-fig11.png
+  - path: figures/2025-mentougou-er-fig09.png
+    width_mm: 45.2
+    height_mm: 37.0
 - id: 16
   type: 填空
   score: 2
   question: '某快递公司因天气原因需将五种货物进行延迟配送，每名配送员每次只能配送一种货物，从配送开始起进行计时，每延迟一分钟需赔付1元，忽略其它因素的影响，五种货物的配送时间如下表：
 
-    货物
+    | 货物 | A | B | C | D | E |
 
-    A
+    | --- | --- | --- | --- | --- | --- |
 
-    B
-
-    C
-
-    D
-
-    E
-
-    配送时间（分钟）
-
-    5
-
-    8
-
-    9
-
-    7
-
-    10
+    | 配送时间（分钟） | 5 | 8 | 9 | 7 | 10 |
 
     （1）如果由一名配送员进行配送，那么下列三个配送顺序：①$D \to B \to E \to A \to C$；②$D \to A \to C \to E \to B$；③$C \to A \to E \to B \to D$中，赔付最少的是_______（填序号）；
 
     （2）如果由两名配送员同时进行配送，最少需要赔付_______元．'
-  answer: ①.②②.64
+  answer: ①.② ②.64
   solution: '解：（1）①总赔付：$5\times7+4\times8+3\times10+2\times5+9=116$（元），
 
     ②总赔付：$5\times7+4\times5+3\times9+2\times10+8=110$（元），
@@ -605,7 +620,7 @@ questions:
     （1）求证：四边形$AOBF$是矩形；
 
     （2）若$AD=10,\tan\angle AFO=\frac{3}{4}$，求AC的长．'
-  answer: （1）见解析（2）12
+  answer: （1）见解析 （2）12
   solution: '【小问1详解】
 
     证明：$\therefore E$为AB的中点，$EF = OE$，
@@ -690,7 +705,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-mentougou-er-fig12.png
+  - path: figures/2025-mentougou-er-fig10.png
+    width_mm: 45.2
+    height_mm: 32.8
 - id: 21
   type: 解答
   score: 5
@@ -767,82 +784,26 @@ questions:
   - L1
   - L2
   - L3
-  figures:
-  - figures/2025-mentougou-er-fig13.png
 - id: 23
   type: 解答
   score: 6
   question: '“端午节”是中国的一个传统节日，某粽子厂为迎接端午的到来，组织了“浓情端午，长粽叶飘香”的包粽子比赛，规定粽子质量为$(160\pm3)$克时都符合标准，其中质量$(160\pm1)$为优秀产品．现从甲、乙两位员工所包粽子中各随机抽取10个进行评测，数据如下（单位：克）：
 
-    甲
+    | 甲 | 157 | 157 | 159 | 159 | 160 | 161 | 161 | 161 | 162 | 163 |
 
-    157
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
-    157
-
-    159
-
-    159
-
-    160
-
-    161
-
-    161
-
-    161
-
-    162
-
-    163
-
-    乙
-
-    158
-
-    158
-
-    159
-
-    159
-
-    159
-
-    159
-
-    161
-
-    162
-
-    162
-
-    163
+    | 乙 | 158 | 158 | 159 | 159 | 159 | 159 | 161 | 162 | 162 | 163 |
 
     甲、乙两名员工所包粽子质量的平均数、众数、中位数如下：
 
-    员工
+    | 员工 | 平均数 | 中位数 | 众数 |
 
-    平均数
+    | --- | --- | --- | --- |
 
-    中位数
+    | 甲 | 160 | 160.5 | a |
 
-    众数
-
-    甲
-
-    160
-
-    160.5
-
-    a
-
-    乙
-
-    160
-
-    b
-
-    159
+    | 乙 | 160 | b | 159 |
 
     根据以上信息，回答下列问题：
 
@@ -851,7 +812,7 @@ questions:
     （2）如果从甲、乙两名员工中，选取一位包粽子质量稳定的员工给奖，这名员工是______；
 
     （3）在此次比赛中，在相同时间内，甲员工共包了100个粽子，乙员工共包了104个粽子，估计两位员工各自所包粽子质量属于“优秀产品”的个数，并判断如果以优秀率作为评奖标准时，哪位员工能获奖？并说明理由．'
-  answer: （1）$161,159$（2）乙 （3）甲的优秀品的个数为$60$个，乙的优秀品的个数为$52$个，甲能获奖，理由见详解
+  answer: （1）$161,159$ （2）乙 （3）甲的优秀品的个数为$60$个，乙的优秀品的个数为$52$个，甲能获奖，理由见详解
   solution: '【小问1详解】
 
     解：甲的数据中，161出现的次数最多，
@@ -989,9 +950,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-mentougou-er-fig14.png
-  - figures/2025-mentougou-er-fig15.png
-  - figures/2025-mentougou-er-fig16.png
+  - path: figures/2025-mentougou-er-fig12.png
+    width_mm: 30.2
+    height_mm: 39.7
 - id: 25
   type: 解答
   score: 6
@@ -1001,33 +962,11 @@ questions:
 
     （1）小明第一次射门时，记录了水平距离x与竖直高度y的几组数据如下：
 
-    水平距离x/米
+    | 水平距离 x / 米 | 1 | 2 | 3 | 4 | 5 | 6 |
 
-    1
+    | --- | --- | --- | --- | --- | --- | --- |
 
-    2
-
-    3
-
-    4
-
-    5
-
-    6
-
-    竖直高度y/米
-
-    $\frac{35}{12}$
-
-    3
-
-    $\frac{35}{12}$
-
-    $\frac{8}{3}$
-
-    $\frac{9}{4}$
-
-    $\frac{5}{3}$
+    | 竖直高度 y / 米 | $\frac{35}{12}$ | 3 | $\frac{35}{12}$ | $\frac{8}{3}$ | $\frac{9}{4}$ | $\frac{5}{3}$ |
 
     根据上述数据，回答下列问题：
 
@@ -1077,7 +1016,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-mentougou-er-fig17.png
+  - path: figures/2025-mentougou-er-fig15.png
+    width_mm: 86.0
+    height_mm: 32.0
 - id: 26
   type: 解答
   score: 6
@@ -1139,7 +1080,7 @@ questions:
     ①依题意补全图形；
 
     ②若点F恰是CD的中点，用等式表示AE与BD之间的数量关系，并证明．'
-  answer: （1）见详解（2）①见详解；②$AE = 2BD$
+  answer: （1）见详解 （2）①见详解；②$AE = 2BD$
   solution: '【小问1详解】
 
     设$\angle BAD = \alpha$，
@@ -1201,9 +1142,9 @@ questions:
   recommended_for:
   - L3
   figures:
-  - figures/2025-mentougou-er-fig18.png
-  - figures/2025-mentougou-er-fig19.png
-  - figures/2025-mentougou-er-fig20.png
+  - path: figures/2025-mentougou-er-fig16.png
+    width_mm: 48.9
+    height_mm: 26.5
 - id: 28
   type: 解答
   score: 7
@@ -1231,7 +1172,7 @@ questions:
 
     [图]
 
-    ∵$A_{1}(0,-1)$，$A_{2}\left(1,-1\right)$，$A_{3}\left(0,-2\right)$，$A_{4}\left(-1,-2\right)$，
+    ∵$A_{1}(0,-1)$，$A_{2}\left(1,-1\right)$，$A_{3}\left(0,-2\right)$，$A_{4}\left(-1,-2\right)$ ，
 
     ∴根据图形可知$A_{1}(0,-1)$，$A_{4}\left(-1,-2\right)$在$\odot O''A''$上，
 
@@ -1269,7 +1210,7 @@ questions:
 
     ∴当$B''''$在$\odot\odot$上且不与点N重合时，连接$OB''''$，则$\triangle OB''''N''$即为等边三角形，
 
-    ∴$B''\left(\frac{\sqrt{3}}{'
+    ∴$B''\left(\frac{\sqrt{3}}'
   knowledge_points:
   - 一次函数
   - 勾股定理
@@ -1281,7 +1222,6 @@ questions:
   recommended_for:
   - L3
   figures:
-  - figures/2025-mentougou-er-fig21.png
-  - figures/2025-mentougou-er-fig22.png
-  - figures/2025-mentougou-er-fig23.png
-  - figures/2025-mentougou-er-fig24.png
+  - path: figures/2025-mentougou-er-fig19.png
+    width_mm: 101.3
+    height_mm: 52.9

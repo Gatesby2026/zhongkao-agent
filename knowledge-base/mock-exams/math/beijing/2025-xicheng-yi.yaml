@@ -19,7 +19,13 @@ questions:
   score: 2
   question: '下列图形中，是轴对称图形但不是中心对称图形的是（）
 
-    A.[图]B.[图]C.[图]D.[图]'
+    A.[图]
+
+    B.[图]
+
+    C.[图]
+
+    D.[图]'
   answer: A
   solution: '解：A．.是轴对称图形，但不是中心对称图形，符合题意；
 
@@ -43,10 +49,18 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-xicheng-yi-fig02.png
-  - figures/2025-xicheng-yi-fig03.png
-  - figures/2025-xicheng-yi-fig04.png
-  - figures/2025-xicheng-yi-fig05.png
+  - path: figures/2025-xicheng-yi-fig02.png
+    width_mm: 22.8
+    height_mm: 27.8
+  - path: figures/2025-xicheng-yi-fig03.png
+    width_mm: 32.0
+    height_mm: 25.7
+  - path: figures/2025-xicheng-yi-fig04.png
+    width_mm: 21.7
+    height_mm: 30.4
+  - path: figures/2025-xicheng-yi-fig05.png
+    width_mm: 16.7
+    height_mm: 30.2
 - id: 2
   type: 选择
   score: 2
@@ -54,7 +68,13 @@ questions:
 
     [图]
 
-    A.$52^\circ$B.$48^\circ$C.$42^\circ$D.$32^\circ$'
+    A.$52^\circ$
+
+    B.$48^\circ$
+
+    C.$42^\circ$
+
+    D.$32^\circ$'
   answer: C
   solution: '解：∵$\angle AOC = \angle BOD = 48^\circ, \angle BOD + \angle DOE = 90^\circ$，
 
@@ -71,7 +91,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-xicheng-yi-fig06.png
+  - path: figures/2025-xicheng-yi-fig06.png
+    width_mm: 41.3
+    height_mm: 37.8
 - id: 3
   type: 选择
   score: 2
@@ -79,7 +101,13 @@ questions:
 
     [图]
 
-    A.$a > 0$B.$a+b<0$C.$\left| a \right| > 1$D.$ab < 0$'
+    A.$a > 0$
+
+    B.$a+b<0$
+
+    C.$\left| a \right| > 1$
+
+    D.$ab < 0$'
   answer: D
   solution: '解：根据图示可得，$-\pi<a<0<\pi<b<2\pi$，则A选项错误，不符合题意；
 
@@ -100,13 +128,21 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-xicheng-yi-fig07.png
+  - path: figures/2025-xicheng-yi-fig07.png
+    width_mm: 58.5
+    height_mm: 11.1
 - id: 4
   type: 选择
   score: 2
   question: '如果一个正多边形的每个外角都是$72^\circ$，那么这个正多边形是（）
 
-    A.正三边形B.正四边形C.正五边形D.正六边形'
+    A.正三边形
+
+    B.正四边形
+
+    C.正五边形
+
+    D.正六边形'
   answer: C
   solution: '解：这个正多边形的边数：$360^\circ \div 72^\circ = 5$，
 
@@ -125,7 +161,13 @@ questions:
   score: 2
   question: '某创新型科技公司在遭遇到一次大规模网络攻击时及时启动了防御体系，构建了动态加密隧道，成功拦截了大部分恶意流量．假设该公司被攻击的恶意流量为平均每秒$5.6\times10^{12}$字节，若持续被攻击80秒的总流量为m字节，则m的值为（）
 
-    A.$4.48\times10^{13}$B.$4.48\times10^{14}$C.$5.6\times10^{12}$D.$5.6\times10^{13}$'
+    A.$4.48\times10^{13}$
+
+    B.$4.48\times10^{14}$
+
+    C.$5.6\times10^{12}$
+
+    D.$5.6\times10^{13}$'
   answer: B
   solution: '解：$5.6\times80=448$
 
@@ -146,33 +188,25 @@ questions:
   score: 2
   question: '在一个不透明的袋子里装有两个红色小球和一个绿色小球，它们除颜色外无其他差别．从中随机摸出两个小球，那么摸到一个红球和一个绿球的概率是（）
 
-    A.$\frac{2}{3}$B.$\frac{1}{2}$C.$\frac{1}{3}$D.$\frac{1}{4}$'
+    A.$\frac{2}{3}$
+
+    B.$\frac{1}{2}$
+
+    C.$\frac{1}{3}$
+
+    D.$\frac{1}{4}$'
   answer: A
   solution: '解：根据题意列表如下：
 
-    红
+    |  | 红 | 红 | 绿 |
 
-    红
+    | --- | --- | --- | --- |
 
-    绿
+    | 红 |  | （红，红） | （红，绿） |
 
-    红
+    | 红 | （红，红） |  | （红，绿） |
 
-    （红，红）
-
-    （红，绿）
-
-    红
-
-    （红，红）
-
-    （红，绿）
-
-    绿
-
-    （绿，红）
-
-    （绿，红）
+    | 绿 | （绿，红） | （绿，红） |  |
 
     共有6种等可能的结果，其中摸到一个红球和一个绿球的结果有4种，
 
@@ -194,19 +228,13 @@ questions:
   score: 2
   question: '下面是“过直线l外一点P作直线l$[公式]$垂线”的尺规作图方法．
 
-    （1）任取一点K，使得点K和点P在直线l的两旁；
+    | （ 1 ）任取一点 K ，使得点 K 和点 P 在直线 l 的两旁； （ 2 ）以点 P 为圆心， PK 长为半径作弧，交直线 l 于点 A 和点 B ； （ 3 ）分别以点 A 和点 B 为圆心，大于 $\frac{AB}{2}$ 的长为半径作弧，两弧相交于点 C ； （ 4 ）作直线 PC ． 直线 PC 就是所求作的垂线． [图] |
 
-    （2）以点P为圆心，PK长为半径作弧，交直线l于点A和点B；
+    | --- |
 
-    （3）分别以点A和点B为圆心，大于$\frac{AB}{2}$的长为半径作弧，两弧相交于点C；
+    上述方法通过构造直线l上线段AB的垂直平分线，得到直线l的垂线P
 
-    （4）作直线PC．
-
-    直线PC就是所求作的垂线．
-
-    [图]
-
-    上述方法通过构造直线l上线段AB的垂直平分线，得到直线l的垂线PC．其中判定点C在线段AB的垂直平分线上的依据可以是（）
+    C．其中判定点C在线段AB的垂直平分线上的依据可以是（）
 
     A.点P与点C关于直线l对称
 
@@ -227,8 +255,6 @@ questions:
   - L1
   - L2
   - L3
-  figures:
-  - figures/2025-xicheng-yi-fig08.png
 - id: 8
   type: 选择
   score: 2
@@ -244,7 +270,13 @@ questions:
 
     [图]
 
-    A.①②B.①③C.②③D.①②③'
+    A.①②
+
+    B.①③
+
+    C.②③
+
+    D.①②③'
   answer: D
   solution: '解：如图，连接$AB_{1}$、$BC_{1}$、$C A_{1}$，
 
@@ -299,9 +331,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-xicheng-yi-fig09.png
-  - figures/2025-xicheng-yi-fig10.png
-  - figures/2025-xicheng-yi-fig11.png
+  - path: figures/2025-xicheng-yi-fig08.png
+    width_mm: 38.4
+    height_mm: 40.5
 - id: 9
   type: 填空
   score: 2
@@ -402,13 +434,9 @@ questions:
   score: 2
   question: '某单位有A，B两条生产线生产同一种产品．为了解两条生产线产品质量的稳定性，要在两条生产线的产品中随机抽取一定数量的样品进行调查．在两条生产线的产品中每次各抽取100个样品，共抽取五次．已知在五次抽取中，A，B两条生产线合格产品的数量（单位：个）如下：
 
-    A：89
+    A：89  91  92  93  95
 
-    91  92  93  95
-
-    B：88
-
-    91  92  93  96
+    B：88  91  92  93  96
 
     则五次抽取的样品中产品质量更为稳定的生产线是______．'
   answer: A
@@ -438,7 +466,7 @@ questions:
   type: 填空
   score: 2
   question: 用一组a，b的值说明命题“若$\sqrt{a^{2}}>\sqrt{b^{2}}$，则$a > b$”是错误的，这组值可以是：$a =$______，$b =$______．
-  answer: ①.$-2$②.1
+  answer: ①.$-2$ ②.1
   solution: '解：例如$a = -2$，$b = 1$，则$\sqrt{(-2)^{2}}>\sqrt{2^{2}}$，满足$\sqrt{a^{2}}>\sqrt{b^{2}}$，
 
     但是$a < b$，故原命题是错误的，
@@ -491,48 +519,28 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-xicheng-yi-fig12.png
+  - path: figures/2025-xicheng-yi-fig11.png
+    width_mm: 39.7
+    height_mm: 27.5
 - id: 16
   type: 填空
   score: 2
   question: '某公园有四处景点需要修复，修复每个景点需要一定数量的工人连续数天完成（每名工人每天的工作量相同）．修复每个景点所需的工人数（单位：人）和天数（单位：天）如下：
 
-    景点
+    | 景点 | A | B | C | D |
 
-    A
+    | --- | --- | --- | --- | --- |
 
-    B
+    | 工人数 | 4 | 3 | 2 | 5 |
 
-    C
-
-    D
-
-    工人数
-
-    4
-
-    3
-
-    2
-
-    5
-
-    天数
-
-    3
-
-    4
-
-    5
-
-    2
+    | 天数 | 3 | 4 | 5 | 2 |
 
     公园计划聘用m人，用n天的时间完成所有修复工作．
 
     （1）若$m=7$，则n的最小值是______；
 
     （2）假设每名工人每天的工资为a元，且一旦聘用，在完成所有景点修复工作前，每天无论是否工作都要支付工资，不得中途辞退，则支付给工人的工资总额最少为______元（用含a的式子表示）．'
-  answer: ①.8②.$50a$
+  answer: ①.8 ②.$50a$
   solution: '（1）解：景点D：第1-2天，使用5人，
 
     景点C：第1-5天，使用2人，
@@ -579,27 +587,11 @@ questions:
 
     这样安排后，每天的工人需求如下：
 
-    第1-2天：5（D）+
+    第1-2天：5（D）+ 3（B）+ 2（C）= 10人；
 
-    3（B）+
+    第3-4天：3（B）+ 4（A）+ 2（C）= 9人；
 
-    2（C）=
-
-    10人；
-
-    第3-4天：3（B）+
-
-    4（A）+
-
-    2（C）=
-
-    9人；
-
-    第5天：4（A）+
-
-    2（C）=
-
-    6人．
+    第5天：4（A）+ 2（C）= 6人．
 
     总天数n=5天，最大工人数m=10人．因此，工资总额为$m\cdot n\cdot a=10\times 5\times a=50a$元．'
   knowledge_points:
@@ -729,7 +721,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-xicheng-yi-fig13.png
+  - path: figures/2025-xicheng-yi-fig12.png
+    width_mm: 30.4
+    height_mm: 37.6
 - id: 21
   type: 解答
   score: 5
@@ -778,9 +772,7 @@ questions:
 
     [图]
 
-    b．30个数据在$65 \leq x < 75$这一组的是：65
-
-    66  66  67  69  71  72  72  73  73  73  74
+    b．30个数据在$65 \leq x < 75$这一组的是：65  66  66  67  69  71  72  72  73  73  73  74
 
     根据以上信息，回答下列问题：
 
@@ -789,7 +781,7 @@ questions:
     （2）本次面试平均成绩约为______（同一组数据用该组的组中值作代表，结果四舍五入取整数）：
 
     （3）将本次面试成绩从高到低排序，面试成绩在前30%的报名者可以被录用为“文化志愿者”．若一名报名者的面试成绩为75分，判断他能否被录用，并说明理由．'
-  answer: （1）6，70； （2）69；（3）能被录用，理由见解析．
+  answer: （1）6，70； （2）69； （3）能被录用，理由见解析．
   solution: '【小问1详解】
 
     解：$m=30-2-8-12-2=6$，
@@ -839,7 +831,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-xicheng-yi-fig14.png
+  - path: figures/2025-xicheng-yi-fig13.png
+    width_mm: 53.7
+    height_mm: 48.2
 - id: 23
   type: 解答
   score: 6
@@ -891,8 +885,6 @@ questions:
   recommended_for:
   - L2
   - L3
-  figures:
-  - figures/2025-xicheng-yi-fig15.png
 - id: 24
   type: 解答
   score: 6
@@ -970,8 +962,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-xicheng-yi-fig16.png
-  - figures/2025-xicheng-yi-fig17.png
+  - path: figures/2025-xicheng-yi-fig15.png
+    width_mm: 43.9
+    height_mm: 34.4
 - id: 25
   type: 解答
   score: 6
@@ -981,51 +974,13 @@ questions:
 
     已知两个帐篷的底圆半径都是2.0m，点M是线段AB上的一动点，点N是曲线段CD上的一动点．当M与B的水平距离和N与D的水平距离都是x（单位：m）时，小菲分别记录了M和N的竖直高度$h_1$（单位：m）和$h_{2}$（单位：m），部分数据如下：
 
-    $x/m$
+    | $x/m$ | 0 | 0.4 | 0.8 | 1.2 | 1.6 | 1.8 | 2.0 |
 
-    0
+    | --- | --- | --- | --- | --- | --- | --- | --- |
 
-    0.4
+    | $h_{1}/m$ | 0 | 0.60 | 1.20 | 1.80 | 2.40 |  | 3.00 |
 
-    0.8
-
-    1.2
-
-    1.6
-
-    1.8
-
-    2.0
-
-    $h_{1}/m$
-
-    0
-
-    0.60
-
-    1.20
-
-    1.80
-
-    2.40
-
-    3.00
-
-    $h_2/m$
-
-    0
-
-    1.60
-
-    2.20
-
-    2.42
-
-    2.51
-
-    2.52
-
-    2.53
+    | $h_2/m$ | 0 | 1.60 | 2.20 | 2.42 | 2.51 | 2.52 | 2.53 |
 
     （1）补全表格（结果保留小数点后两位）；
 
@@ -1038,7 +993,7 @@ questions:
     ①某学生的身高是1.80m，则他在两个帐篷内自由活动区的半径差约为______m（结果保留小数点后一位）；
 
     ②甲、乙、丙三名学生的身高（单位：m）分别为$a_{1}$，$a_{2}$，$a_{3}$，若$a_{1}<a_{2}<a_{3}<2.29$，且$a_{2}-a_{1}=a_{3}-a_{2}$，则在2号帐篷中，甲与乙自由活动区的半径差______乙与丙自由活动区的半径差（填“$\gt$”“$\gt$”“$=$”）．'
-  answer: （1）补全表格见解析 （2）图见解析（3）①0.7；②$\gt$．
+  answer: （1）补全表格见解析 （2）图见解析 （3）①0.7；②$\gt$．
   solution: '【小问1详解】
 
     解：观察表格可知：$\frac{h_{1}}{x}$为定值，
@@ -1047,53 +1002,13 @@ questions:
 
     补全表格如下：
 
-    $x/m$
+    | $x/m$ | 0 | 0.4 | 0.8 | 1.2 | 1.6 | 1.8 | 2.0 |
 
-    0
+    | --- | --- | --- | --- | --- | --- | --- | --- |
 
-    0.4
+    | $h_{1}/m$ | 0 | 0.60 | 1.20 | 1.80 | 2.40 | 2.70 | 3.00 |
 
-    0.8
-
-    1.2
-
-    1.6
-
-    1.8
-
-    2.0
-
-    $h_{1}/m$
-
-    0
-
-    0.60
-
-    1.20
-
-    1.80
-
-    2.40
-
-    2.70
-
-    3.00
-
-    $h_2/m$
-
-    0
-
-    1$[公式]$60
-
-    2.20
-
-    2.42
-
-    2.51
-
-    2.52
-
-    2.53
+    | $h_2/m$ | 0 | 1 $[公式]$ 60 | 2.20 | 2.42 | 2.51 | 2.52 | 2.53 |
 
     故答案为：2.70
 
@@ -1130,9 +1045,12 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-xicheng-yi-fig18.png
-  - figures/2025-xicheng-yi-fig19.png
-  - figures/2025-xicheng-yi-fig20.png
+  - path: figures/2025-xicheng-yi-fig17.png
+    width_mm: 77.0
+    height_mm: 43.9
+  - path: figures/2025-xicheng-yi-fig18.png
+    width_mm: 48.2
+    height_mm: 63.8
 - id: 26
   type: 解答
   score: 6
@@ -1271,8 +1189,9 @@ questions:
   recommended_for:
   - L3
   figures:
-  - figures/2025-xicheng-yi-fig21.png
-  - figures/2025-xicheng-yi-fig22.png
+  - path: figures/2025-xicheng-yi-fig20.png
+    width_mm: 42.1
+    height_mm: 48.9
 - id: 28
   type: 解答
   score: 7
@@ -1347,10 +1266,6 @@ questions:
   recommended_for:
   - L3
   figures:
-  - figures/2025-xicheng-yi-fig23.png
-  - figures/2025-xicheng-yi-fig24.png
-  - figures/2025-xicheng-yi-fig25.png
-  - figures/2025-xicheng-yi-fig26.png
-  - figures/2025-xicheng-yi-fig27.png
-  - figures/2025-xicheng-yi-fig28.png
-  - figures/2025-xicheng-yi-fig29.png
+  - path: figures/2025-xicheng-yi-fig22.png
+    width_mm: 47.9
+    height_mm: 48.9

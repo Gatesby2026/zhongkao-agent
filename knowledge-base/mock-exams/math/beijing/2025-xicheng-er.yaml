@@ -21,7 +21,13 @@ questions:
 
     [图]
 
-    A.圆锥B.圆柱C.长方体D.球'
+    A.圆锥
+
+    B.圆柱
+
+    C.长方体
+
+    D.球'
   answer: A
   solution: '解：A：圆锥的三视图为三角形、三角形、圆，符合题意；
 
@@ -42,7 +48,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-xicheng-er-fig02.png
+  - path: figures/2025-xicheng-er-fig02.png
+    width_mm: 35.2
+    height_mm: 40.7
 - id: 2
   type: 选择
   score: 2
@@ -50,7 +58,13 @@ questions:
 
     [图]
 
-    A.$38^\circ$B.$52^\circ$C.$60^\circ$D.$62^\circ$'
+    A.$38^\circ$
+
+    B.$52^\circ$
+
+    C.$60^\circ$
+
+    D.$62^\circ$'
   answer: B
   solution: '解：由题意得：$\angle AOC = \angle BOD = 90^\circ$，
 
@@ -71,13 +85,21 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-xicheng-er-fig03.png
+  - path: figures/2025-xicheng-er-fig03.png
+    width_mm: 36.0
+    height_mm: 38.4
 - id: 3
   type: 选择
   score: 2
   question: '“双碳”目标战略为中国汽车工业带来了新的生命力，截至2023年底，全国新能源汽车保有量约为$2.0\times10^{7}$辆，根据新能源汽车产业规划目标，预计到2033年底，新能源汽车保有量将会是2023年底的5倍，达到约m辆，则m的值是（）
 
-    A.$1.0\times10^{7}$B.$1.0\times10^{8}$C.$1.0\times10^{9}$D.$1.0\times10^{10}$'
+    A.$1.0\times10^{7}$
+
+    B.$1.0\times10^{8}$
+
+    C.$1.0\times10^{9}$
+
+    D.$1.0\times10^{10}$'
   answer: B
   solution: '解：$2.0\times10^{5}\times5=10\times10^{5}=1.0\times10^{6}$；
 
@@ -122,7 +144,13 @@ questions:
   score: 2
   question: '六边形的内角和为（　　）
 
-    A.$360^\circ$B.$540^\circ$C.$720^\circ$D.$1080^\circ$'
+    A.$360^\circ$
+
+    B.$540^\circ$
+
+    C.$720^\circ$
+
+    D.$1080^\circ$'
   answer: C
   solution: '解：根据多边形的内角和可得：
 
@@ -145,7 +173,13 @@ questions:
 
     [图]
 
-    A.$a+b=0$B.$\left| a \right| > \left| b \right|$C.$b-2a>0$D.$\frac{1}{a}>\frac{1}{b}$'
+    A.$a+b=0$
+
+    B.$\left| a \right| > \left| b \right|$
+
+    C.$b-2a>0$
+
+    D.$\frac{1}{a}>\frac{1}{b}$'
   answer: C
   solution: '解：由数轴可得，$a < b$，
 
@@ -175,13 +209,21 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-xicheng-er-fig04.png
+  - path: figures/2025-xicheng-er-fig04.png
+    width_mm: 87.3
+    height_mm: 9.3
 - id: 7
   type: 选择
   score: 2
   question: '在反比例函数y＝$\frac{6}{x}$的图象上横、纵点坐标都是整数的点有（　　）
 
-    A.2个B.4个C.6个D.8个'
+    A.2个
+
+    B.4个
+
+    C.6个
+
+    D.8个'
   answer: D
   solution: '解：将反比例函数y=$\frac{6}{x}$变形，得xy=6
 
@@ -217,7 +259,13 @@ questions:
 
     [图]
 
-    A.①④B.②③C.①②④D.①②③④'
+    A.①④
+
+    B.②③
+
+    C.①②④
+
+    D.①②③④'
   answer: C
   solution: '解：连接等腰梯形$ABCD$的对角线AC、BD．
 
@@ -283,10 +331,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-xicheng-er-fig05.png
-  - figures/2025-xicheng-er-fig06.png
-  - figures/2025-xicheng-er-fig07.png
-  - figures/2025-xicheng-er-fig08.png
+  - path: figures/2025-xicheng-er-fig05.png
+    width_mm: 49.2
+    height_mm: 31.8
 - id: 9
   type: 填空
   score: 2
@@ -448,46 +495,26 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-xicheng-er-fig10.png
+  - path: figures/2025-xicheng-er-fig10.png
+    width_mm: 61.9
+    height_mm: 37.8
 - id: 16
   type: 填空
   score: 2
   question: '小林驾车去某地办事，目的地附近有甲、乙两个停车场．已知小林停车时间不超过24小时．甲停车场收费标准是：
 
-    停车时长t（单位：小时）
+    | 停车时长 t （单位：小时） | $0<t\leq1$ | $1<t\leq3$ | $3<t\leq6$ | $6<t\leq9$ | $9<t\leq12$ | $12 < r \leq 24$ |
 
-    $0<t\leq1$
+    | --- | --- | --- | --- | --- | --- | --- |
 
-    $1<t\leq3$
-
-    $3<t\leq6$
-
-    $6<t\leq9$
-
-    $9<t\leq12$
-
-    $12 < r \leq 24$
-
-    收费标准（单位：元）
-
-    免费
-
-    5
-
-    10
-
-    15
-
-    18
-
-    24
+    | 收费标准（单位：元） | 免费 | 5 | 10 | 15 | 18 | 24 |
 
     乙停车场收费标准是；每小时2元（不足1小时按1小时收费）．
 
     （1）若小林10点25分将车停入甲停车场，当天18点45分将车开出，则小林需交的停车费是______元；
 
     （2）若小林将车停到乙停车场，且停车费比停在甲停车场更优惠，则小林停车时间最长为______小时，'
-  answer: ①.15②.7
+  answer: ①.15 ②.7
   solution: '解：（1）∵小林10点25分将车停入甲停车场，当天18点45分将车开出，
 
     ∴$18-10=8,45-25=20$，
@@ -668,8 +695,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-xicheng-er-fig11.png
-  - figures/2025-xicheng-er-fig12.png
+  - path: figures/2025-xicheng-er-fig11.png
+    width_mm: 40.2
+    height_mm: 36.0
 - id: 21
   type: 解答
   score: 5
@@ -772,13 +800,9 @@ questions:
 
     a．甲款软件评分：
 
-    60
+    60  60  70  70  72  75  80  80  80  80
 
-    60  70  70  72  75  80  80  80  80
-
-    80
-
-    80  81  81  81  82  82  85  90  91
+    80  80  81  81  81  82  82  85  90  91
 
     b．乙款软件评分频数分布直方图如下：（数据分5组：第1组$50 \leq x < 60$，第2组$60 \leq x < 70$，第3组$70 \leq x < 80$，第4组$80 \leq x < 90$，第5组$90 \leq x \leq 100$）
 
@@ -786,29 +810,13 @@ questions:
 
     c．甲、乙两款软件评分的平均数、中位数、众数如下：
 
-    软件
+    | 软件 | 平均数 | 中位数 | 众数 |
 
-    平均数
+    | --- | --- | --- | --- |
 
-    中位数
+    | 甲 | 78 | 80 | m |
 
-    众数
-
-    甲
-
-    78
-
-    80
-
-    m
-
-    乙
-
-    78
-
-    n
-
-    72
+    | 乙 | 78 | n | 72 |
 
     根据以上信息，解答下列问题：
 
@@ -818,37 +826,13 @@ questions:
 
     （2）邀请专业人士对甲、乙两款软件从四个维度体验、评分（百分制），评分结果由维度1和维度2各占30%，维度3和维度4各占20%组成，评分如下：
 
-    维度
+    | 维度 软件 | 维度 1 | 维度 2 | 维度 3 | 维度 4 |
 
-    软件
+    | --- | --- | --- | --- | --- |
 
-    维度1
+    | 甲 | 94 | k | 92 | 93 |
 
-    维度2
-
-    维度3
-
-    维度4
-
-    甲
-
-    94
-
-    k
-
-    92
-
-    93
-
-    乙
-
-    91
-
-    93
-
-    93
-
-    92
+    | 乙 | 91 | 93 | 93 | 92 |
 
     ①乙款软件的评分为______；
 
@@ -886,7 +870,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-xicheng-er-fig13.png
+  - path: figures/2025-xicheng-er-fig13.png
+    width_mm: 42.6
+    height_mm: 37.8
 - id: 24
   type: 解答
   score: 6
@@ -964,60 +950,21 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-xicheng-er-fig14.png
-  - figures/2025-xicheng-er-fig15.png
+  - path: figures/2025-xicheng-er-fig14.png
+    width_mm: 33.1
+    height_mm: 33.3
 - id: 25
   type: 解答
   score: 6
   question: '小明妈妈早晨骑电动车将小明送到幼儿园后再去单位上班．已知小明家到幼儿园的路程为$8km$，幼儿园到小明妈妈单位的路程为$3km$，小明妈妈骑电动车带小明行驶是载重行驶，下表记录了电池中剩余电量占电池容量的百分比（简称剩余电量占比）P与小明妈妈独自行驶和载重行驶状态下可行驶的路程$S_1$（单位：km）和$S_{2}$（单位：km）的部分数据：
 
-    P
+    | P | 0% | 10% | 20% | 40% | 60% | 80% | 100% |
 
-    0%
+    | --- | --- | --- | --- | --- | --- | --- | --- |
 
-    10%
+    | $S_1$ | 0 | 3 | 7 | 15 | 23 | 31 | 39 |
 
-    20%
-
-    40%
-
-    60%
-
-    80%
-
-    100%
-
-    $S_1$
-
-    0
-
-    3
-
-    7
-
-    15
-
-    23
-
-    31
-
-    39
-
-    $S_{2}$
-
-    0
-
-    2
-
-    4
-
-    9
-
-    15
-
-    22
-
-    30
+    | $S_{2}$ | 0 | 2 | 4 | 9 | 15 | 22 | 30 |
 
     （1）通过分析数据，发现可以用函数刻画$S_1$与P，$S_{2}$与P之间的关系．在给出的平面直角坐标系中，补全这两个函数的图象；
 
@@ -1030,7 +977,7 @@ questions:
     ②假设一天早晨该电动车剩余电量占比为30%，在电量耗尽前，判断小明妈妈骑电动车______（填“能”“不能”）将小明送到幼儿园；
 
     ③若在电量耗尽前小明妈妈能到达单位，则当天早晨出门时该电动车剩余电量占比至少为______（精确到1%）．'
-  answer: （1）见解析（2）①7.1（答案不唯一）；②不能；③$44\%$
+  answer: （1）见解析 （2）①7.1（答案不唯一）；②不能；③$44\%$
   solution: '【小问1详解】
 
     解：如图，
@@ -1060,8 +1007,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-xicheng-er-fig16.png
-  - figures/2025-xicheng-er-fig17.png
+  - path: figures/2025-xicheng-er-fig16.png
+    width_mm: 68.3
+    height_mm: 57.9
 - id: 26
   type: 解答
   score: 6
@@ -1207,8 +1155,9 @@ questions:
   recommended_for:
   - L3
   figures:
-  - figures/2025-xicheng-er-fig18.png
-  - figures/2025-xicheng-er-fig19.png
+  - path: figures/2025-xicheng-er-fig18.png
+    width_mm: 57.1
+    height_mm: 42.6
 - id: 28
   type: 解答
   score: 7
@@ -1276,8 +1225,6 @@ questions:
   recommended_for:
   - L3
   figures:
-  - figures/2025-xicheng-er-fig20.png
-  - figures/2025-xicheng-er-fig21.png
-  - figures/2025-xicheng-er-fig22.png
-  - figures/2025-xicheng-er-fig23.png
-  - figures/2025-xicheng-er-fig24.png
+  - path: figures/2025-xicheng-er-fig20.png
+    width_mm: 67.5
+    height_mm: 69.1

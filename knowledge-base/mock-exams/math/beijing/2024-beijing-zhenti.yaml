@@ -1,0 +1,1232 @@
+# ============================================================
+# 2024年北京市中考数学真题试卷 — 逐题分析
+# ============================================================
+# 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
+# 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
+# 满分：100分  时长：120分钟
+
+year: 2024
+district: 北京市
+exam_type: 真题
+subject: 数学
+full_score: 100
+duration_minutes: 120
+total_questions: 28
+structure: 8选择(16分) + 8填空(16分) + 12解答(68分)
+questions:
+- id: 1
+  type: 选择
+  score: 2
+  question: '下列图形中，既是轴对称图形又是中心对称图形的是（）
+
+    A.[图]
+
+    B.[图]
+
+    C.[图]
+
+    D.[图]'
+  answer: B
+  solution: '解：A、是中心对称图形，但不是轴对称图形，故不符合题意；
+
+    B、既是轴对称图形，也是中心对称图形，故符合题意；
+
+    C、不是轴对称图形，也不是中心对称图形，故不符合题意；
+
+    D、是轴对称图形，但不是中心对称图形，故不符合题意；
+
+    故选：B．'
+  knowledge_points:
+  - 中心对称图形
+  - 轴对称图形
+  - 旋转
+  - 轴对称
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2024-beijing-zhenti-fig02.png
+    width_mm: 27.8
+    height_mm: 13.5
+  - path: figures/2024-beijing-zhenti-fig03.png
+    width_mm: 25.9
+    height_mm: 13.5
+  - path: figures/2024-beijing-zhenti-fig04.png
+    width_mm: 20.1
+    height_mm: 14.0
+  - path: figures/2024-beijing-zhenti-fig05.png
+    width_mm: 21.2
+    height_mm: 15.9
+- id: 2
+  type: 选择
+  score: 2
+  question: '如图，直线AB和CD相交于点O，$OE \perp OC$，若$\angle AOC = 58^\circ$，则$\angle EOB$的大小为（）
+
+    [图]
+
+    A.$29^\circ$
+
+    B.$32^\circ$
+
+    C.$45^\circ$
+
+    D.$58^\circ$'
+  answer: B
+  solution: '解：∵$OE \perp OC$，
+
+    ∴$\angle COE = 90^\circ$，
+
+    ∵$\angle AGC+\angle COE+\angle BOE=180^{\circ}$，$\angle AOC = 58^\circ$，
+
+    ∴$\angle EOB=180^{\circ}-90^{\circ}-58^{\circ}=32^{\circ}$，
+
+    故选：B．'
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2024-beijing-zhenti-fig06.png
+    width_mm: 34.1
+    height_mm: 29.6
+- id: 3
+  type: 选择
+  score: 2
+  question: '实数a，b在数轴上的对应点的位置如图所示，下列结论中正确的是（）
+
+    [图]
+
+    A.$b > -1$
+
+    B.$\left|b\right|>2$
+
+    C.$a+b>0$
+
+    D.$ab > 0$'
+  answer: C
+  solution: '解：A、由数轴可知$-2 < b < -1$，故本选项不符合题意；
+
+    B、由数轴可知$-2 < b < -1$，由绝对值的意义知$1<|b|<2$，故本选项不符合题意；
+
+    C、由数轴可知$2<a<3$，而$-2 < b < -1$，则$\left| a \right| > \left| b \right|$，故$a+b>0$，故本选项符合题意；
+
+    D、由数轴可知$2<a<3$，而$-2 < b < -1$，因此$ab < 0$，故本选项不符合题意．
+
+    故选：C．'
+  knowledge_points:
+  - 绝对值
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2024-beijing-zhenti-fig07.png
+    width_mm: 51.6
+    height_mm: 10.1
+- id: 4
+  type: 选择
+  score: 2
+  question: '若关于x的一元二次方程$x^{2}-4x+c=0$有两个相等的实数根，则实数c的值为（）
+
+    A.$-16$
+
+    B.$-4$
+
+    C.4
+
+    D.16'
+  answer: C
+  solution: '∵方程$x^{2}-4x+c=0$，$a=1,b=-4,c=c$，
+
+    ∴$\Delta=b^{2}-4ac=(-4)^{2}-4\times1\times c=0$，
+
+    ∴$4c=16$，
+
+    解得$c = 4$．
+
+    故选C．'
+  knowledge_points:
+  - 一元二次方程
+  - 根的判别式
+  module: equationsAndInequalities
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 5
+  type: 选择
+  score: 2
+  question: '不透明的袋子中装有一个红色小球和一个白色小球，除颜色外两个小球无其他差别．从中随机取出一个小球后，放回并摇匀，再从中随机取出一个小球，则两次都取到白色小球的概率为（　）
+
+    A.$\frac{3}{4}$
+
+    B.$\frac{1}{2}$
+
+    C.$\frac{1}{3}$
+
+    D.$\frac{1}{4}$'
+  answer: D
+  solution: '解：画树状图如下：
+
+    [图]
+
+    共有4种等可能的结果，其中两次都取到白色小球的结果有1种，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$两次都取到白色小球的概率为$\frac{1}{4}$．
+
+    故选：D．'
+  knowledge_points:
+  - 概率
+  - 树状图
+  - 列表法
+  module: statisticsAndProbability
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 6
+  type: 选择
+  score: 2
+  question: '为助力数字经济发展，北京积极推进多个公共算力中心的建设.北京数字经济算力中心日前已部署上架和调试的设备的算力为$4\times10^{17}$Flops（Flops是计算机系统算力的一种度量单位），整体投产后，累计实现的算力将是日前已部署上架和调试的设备的算力的5倍，达到mFlops，则m的值为（）
+
+    A.$8\times10^{16}$
+
+    B.$2\times10^{17}$
+
+    C.$5\times10^{17}$
+
+    D.$2\times10^{18}$'
+  answer: D
+  solution: '$m=4\times10^{17}\times5=2\times10^{18}$，
+
+    故选D．'
+  knowledge_points:
+  - 科学记数法
+  module: numbersAndExpressions
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 7
+  type: 选择
+  score: 2
+  question: '下面是“作一个角使其等于$\angle AOB$”的尺规作图方法.
+
+    | （ 1 ）如图，以点 O $[公式]$ 圆心，任意长为半径画弧，分别交 OA ， OB 于点 C ， D ； （ 2 ）作射线 $O''A''$ ，以点 $O''$ 为圆心， OC 长为半径画弧，交 $O''A''$ 于点 $C''$ ；以点 $C''$ 为圆心， CD 长为半径画弧，两弧交于点 $D\leftarrow$ ； （ 3 ）过点 $D\leftarrow$ 作射线 $O''B''$
+    ，则 $\angle AOB''=\angle AOB$ . [图] |
+
+    | --- |
+
+    上述方法通过判定$\triangle COD''\cong\triangle COB$得到$\angle AOB''=\angle AOB$，其中判定$\triangle COD''\cong\triangle COB$的依据是（）
+
+    A.三边分别相等的两个三角形全等
+
+    B.两边及其夹角分别相等的两个三角形全等
+
+    C.两角及其夹边分别相等的两个三角形全等
+
+    D.两角分别相等且其中一组等角的对边相等的两个三角形全等'
+  answer: A
+  solution: '根据基本作图中，同圆半径相等，判定三角形全等的依据是边边边原理，
+
+    故选A.'
+  knowledge_points:
+  - 尺规作图
+  module: triangles
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 8
+  type: 选择
+  score: 2
+  question: '如图，在菱形$ABCD$中，$\angle BAD = 60^\circ$，O为对角线的交点.将菱形$ABCD$绕点O逆时针旋转$90^\circ$得到菱形$A''B''C''D''$，两个菱形的公共点为E，F，G，H.对八边形$BFB''GDHD''E$给出下面四个结论：
+
+    ①该八边形各边长都相等；
+
+    ②该八边形各内角都相等；
+
+    ③点O到该八边形各顶点的距离都相等；
+
+    ④点O到该八边形各边所在直线的距离都相等。
+
+    上述结论中，所有正确结论的序号是（）
+
+    [图]
+
+    A.①③
+
+    B.①④
+
+    C.②③
+
+    D.②④'
+  answer: B
+  solution: '向两方分别延长BD，连接OH，
+
+    根据菱形$ABCD$，$\angle BAD = 60^\circ$，则$\angle BAO = \angle DAO = 30^\circ$，$\angle AOD=\angle AOB=90^{\circ}$，
+
+    ∵菱形$ABCD$绕点O逆时针旋转$90^\circ$得到菱形$A''B''C''D''$，
+
+    ∴点$A'',D'',B'',C''$一定在对角线$AC,BD$上，且$OD=OD''=OB=OB''$，$\overline{OA}=\overline{OA''}=\overline{OC}=\overline{OC''}$，
+
+    ∴$AD'' = C''D$，$\angle D^{\prime}AH = \angle DC^{\prime}H = 30^{\circ}$，
+
+    ∵$\angle DHA = \angle DHC$，
+
+    ∴$\triangle ADH \cong \triangle CDH$，
+
+    ∴$D''H=DH$，$C''H = AH$，同理可证$DE=BE,BF=BF,BG=DG$，
+
+    ∵$\angle EAB=\angle HCD=30^\circ,AB=CD,\angle ABE=\angle CDH=120^\circ$，
+
+    ∴$\triangle ABE \cong \triangle CDH$，
+
+    ∴$DH = BE$，
+
+    ∴$DH = BE = D''H'' = D''E'' = BP = FP'' = B''G'' = DG$，
+
+    ∴该八边形各边长都相等，
+
+    故①正确；
+
+    根据角的平分线的性质定理，得点O到该八边形各边所在直线的距离都相等，
+
+    ∴④正确；
+
+    根据题意，得$\angle ED''H = 120^\circ$，
+
+    ∵$\angle D''OD = 90^\circ$，$\angle ODH=60^{\circ}$，
+
+    ∴$\angle D''HD=150^{\circ}'
+  knowledge_points:
+  - 菱形
+  - 旋转
+  module: triangles
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+  figures:
+  - path: figures/2024-beijing-zhenti-fig09.png
+    width_mm: 48.7
+    height_mm: 48.4
+- id: 9
+  type: 填空
+  score: 2
+  question: 若$\sqrt{x-9}$在实数范围内有意义，则实数x的取值范围是_________．
+  answer: $x\ 9$
+  solution: '解：根据题意得$x-9\quad0$，
+
+    解得：$x\ 9$．
+
+    故答案为：$x\ 9$'
+  knowledge_points:
+  - 综合
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 10
+  type: 填空
+  score: 2
+  question: 分解因式：$x^{3}-25x=$___________.
+  answer: $x(x+5)(x-5)$
+  solution: '$x^{2}-25x=x\left(x^{2}-5^{2}\right)=x\left(x+5\right)\left(x-5\right)$．
+
+    故答案为：$x(x+5)(x-5)$．'
+  knowledge_points:
+  - 因式分解
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 11
+  type: 填空
+  score: 2
+  question: 方程$\frac{1}{2x+3}+\frac{1}{x}=0$的解为___________.
+  answer: $x=-1$
+  solution: '解：$\frac{1}{2x+3}+\frac{1}{x}=0$
+
+    $x+2x+3=0$，
+
+    解得：$x=-1$，
+
+    经检验：$x=-1$是原方程的解，
+
+    所以，原方程的解为$x=-1$，
+
+    故答案为：$x=-1$．'
+  knowledge_points:
+  - 分式方程
+  module: equationsAndInequalities
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 12
+  type: 填空
+  score: 2
+  question: 在平面直角坐标系xOy中，若函数$y=\frac{k}{x}(k\neq0)$的图象经过点$(3,y_{1})$和$(-3,y_{2})$，则$y_{1}+y_{2}$的值是___________.
+  answer: '0'
+  solution: '解：∵函数$y=\frac{k}{x}(k\neq0)$的图象经过点$(3,y_{1})$和$(-3,y_{2})$，
+
+    ∴有$y_1 = \frac{k}{3}, y_2 = -\frac{k}{3}$，
+
+    ∴$x_{1}+x_{2}=\frac{k}{3}-\frac{k}{3}=0$，
+
+    故答案为：0．'
+  knowledge_points:
+  - 反比例函数
+  - 坐标系
+  module: functions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 13
+  type: 填空
+  score: 2
+  question: '某厂加工了200个工件，质检员从中随机抽取10个工件检测了它们的质量（单位：g），得到的数据如下：
+
+    50.03    49.98    50.00    49.99    50.02
+
+    49.99    50.01    49.97    50.00    50.02
+
+    当一个工件的质量x（单位：g）满足$49.98 \leq x \leq 50.02$时，评定该工件为一等品.根据以上数据，估计这200个工件中一等品的个数是___________.'
+  answer: '160'
+  solution: '解：10个工件中为一等品的有49.98，50.00，49.99，50.02，49.99，50.01，50.00，50.02这8个，
+
+    ∴这200个工件中一等品的个数为$200\times\frac{8}{10}=160$个，
+
+    故答案为：160．'
+  knowledge_points:
+  - 频率
+  module: statisticsAndProbability
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 14
+  type: 填空
+  score: 2
+  question: '如图，$\odot\odot$的直径AB平分弦CD（不是直径）.若$\angle D=35^{\circ}$，则$\angle C =$___________$\text{o}$
+
+    [图]'
+  answer: '55'
+  solution: '解：∵直径AB平分弦CD，
+
+    ∴$AB \perp CD$，
+
+    ∵$\widehat{BC}=\widehat{BC}$，
+
+    ∴$\angle A = \angle D = 35^\circ$，
+
+    ∴$\angle C=90^{\circ}-35^{\circ}=55^{\circ}$，
+
+    故答案为：$55^\circ$．'
+  knowledge_points:
+  - 圆周角
+  - 垂径定理
+  - 弦
+  module: circles
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2024-beijing-zhenti-fig11.png
+    width_mm: 37.0
+    height_mm: 40.2
+- id: 15
+  type: 填空
+  score: 2
+  question: '如图，在正方形$ABCD$中，点E在AB上，$AF \perp DE$于点F，$CG \perp DE$于点G．若$AD = 5$，$CG = 4$，则$\triangle AEF$$[公式]$面积为___________．
+
+    [图]'
+  answer: $\frac{27}{8}$
+  solution: '解：根据正方形的性质，得$AD = 5 = DC$，$CD \parallel AB$，
+
+    ∴$\angle CDG = \angle AEK$，
+
+    ∵$CG = 4$，
+
+    ∴$DC=\sqrt{DC^{2}-CG^{2}}=3$,
+
+    $\sin\angle CDG=\sin\angle ABF=\frac{CG}{5}=\frac{4}{5}$，
+
+    $\tan \angle CDG = \tan \angle AEP = \frac{CG}{DG} = \frac{AD}{AE} = \frac{4}{3}$，
+
+    ∴$AE = \frac{15}{4}$，
+
+    ∴$AJ''=\frac{4}{5}\times\frac{15}{4}=3$，
+
+    ∴$EF = \frac{9}{4}$，
+
+    ∴$\triangle AEF$的面积为$\frac{1}{2}EF\cdot AF=\frac{27}{8}$；
+
+    故答案为：$\frac{27}{8}$．'
+  knowledge_points:
+  - 正方形
+  module: triangles
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2024-beijing-zhenti-fig12.png
+    width_mm: 27.5
+    height_mm: 33.1
+- id: 16
+  type: 填空
+  score: 2
+  question: '联欢会有A，B，C，D四个节目需要彩排.所有演员到场后节目彩排开始。一个节目彩排完毕，下一个节目彩排立即开始.每个节目的演员人数和彩排时长（单位：min）如下：
+
+    | 节目 | A | B | C | D |
+
+    | --- | --- | --- | --- | --- |
+
+    | 演员人数 | 10 | 2 | 10 | 1 |
+
+    | 彩排时长 | 30 | 10 | 20 | 10 |
+
+    已知每位演员只参演一个节目.一位演员的候场时间是指从第一个彩排的节目彩排开始到这位演员参演的节目彩排开始的时间间隔（不考虑换场时间等其他因素）。
+
+    若节目按“$A-B-C-D$”的先后顺序彩排，则节目D的演员的候场时间为____________min；
+
+    若使这23位演员的候场时间之和最小，则节目应按___________的先后顺序彩排'
+  answer: ①.60 ②.$C-A-B-D$
+  solution: '解：①节目D的演员的候场时间为$30+10+20=60\mathrm{mm}$，
+
+    故答案为：60；
+
+    ②由题意得节目A和C演员人数一样，彩排时长不一样，那么时长长的节目应该放在后面，那么C在A的前面，B和D彩排时长一样，人数不一样，那么人数少的应该往后排，这样等待时长会短一些，那么B在D前面，
+
+    ∴①按照$C-B-A-D$顺序，则候场时间为：$(10+2+1)\times20+(10+1)\times10+1\times30=400$分钟；
+
+    ②按照$C-B-D-A$顺序，则候场时间为：$(10+2+1)\times20+(10+1)\times10+10\times10=470$分钟；
+
+    ③按照$C-A-B-D$顺序，则候场时间为：$(10+2+1)\times20+(2+1)\times30+1\times10=360$分钟；
+
+    ④按照$B-C-A-D$顺序，则候场时间为：$(10+10+1)\times(10+(10+1))\times20-1\times30=460$分钟；
+
+    ⑤按照$B-C-D-A$顺序，则候场时间为：$(10+10+1)\times10+(10+1)\times20+10\times10=530$分钟；
+
+    ⑥按照$B-D-C-A$顺序，则候场时间为：$(10+10+1)\times10+(10+10)\times10+10\times20=610$分钟．
+
+    ∴按照$C-A-B-D$顺序彩排，候场时间之和最小，
+
+    故答案为：$C-A-B-D$．
+
+    解答应写出文字说明、演算步骤或证明过程.'
+  knowledge_points:
+  - 综合
+  module: numbersAndExpressions
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 17
+  type: 解答
+  score: 5
+  question: 计算：$(x-5)^{0}+\sqrt{8}-2\sin 30^{\circ}+\sqrt{2}$
+  answer: $3\sqrt{2}$
+  solution: '解：原式$=1+2\sqrt{2}-2\times\frac{1}{2}+\sqrt{2}$
+
+    $=3\sqrt{2}$．'
+  knowledge_points:
+  - 三角函数
+  - 绝对值
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 18
+  type: 解答
+  score: 5
+  question: 解不等式组：$\left\{\begin{array}{l}3(x-1)<4+2x,\\ \dfrac{x-9}{5}<2x.\end{array}\right.$
+  answer: $-1 < x < 7$
+  solution: '∵$\frac{3(x-1)}{5}<4+2x\text{①} \\
+
+    \frac{x-9}{5}<2x\text{②}$
+
+    ∴解不等式①，得$x<7$，解不等式,②，得$x > -1$，
+
+    ∴不等式组的解集为$-1 < x < 7$．'
+  knowledge_points:
+  - 不等式
+  - 不等式组
+  module: equationsAndInequalities
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 19
+  type: 解答
+  score: 5
+  question: 已知$a-b-1=0$，求代数式$\frac{3(a-2b)+3b}{a^{2}-2ab+b^{2}}$$[公式]$值.
+  answer: '3'
+  solution: '解：原式$\frac{3a-6b+3b}{(a-b)^{2}}$
+
+    $-\frac{3(a-b)}{(a-b)^{2}}$
+
+    $=\frac{3}{a-b}$，
+
+    ∵$a-b-1=0$，
+
+    ∴$a-b=1$，
+
+    ∴原式$= \frac{3}{1} = 3$．'
+  knowledge_points:
+  - 综合
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 20
+  type: 解答
+  score: 5
+  question: '如图，在四边形$ABCD$中，E是AB的中点，DB，CE交于点F，$DF = FB$，$AF \parallel DC$.
+
+    [图]
+
+    （1）求证：四边形$AFCD$为平行四边形；
+
+    （2）若$\angle EFB=90^{\circ}$，$\tan \angle FEB = 3$，$EF = 1$，求BC的长.'
+  answer: （1）见详解 （2）$\sqrt{13}$
+  solution: '【小问1详解】
+
+    证明：∵E是AB的中点，$DF = FB$，
+
+    ∴$EF \parallel AD$，
+
+    ∵$AF \parallel DC$，
+
+    ∴四边形$AFCD$为平行四边形；
+
+    【小问2详解】
+
+    解：∵$\angle EFB=90^{\circ}$，
+
+    ∴$\angle CFB=180^{\circ}-90^{\circ}=90^{\circ}$，
+
+    在$\mathrm{Rt}\triangle EFB$中，$\tan \angle FEB = \frac{FB}{FE} = 3$，$EF = 1$，
+
+    ∴$FB=3$，
+
+    ∵E是AB的中点，$DF = FB$
+
+    ∴$AD=2EF=2$，
+
+    ∵四边形$AFCD$为平行四边形，
+
+    ∴$CF = AD = 2$，
+
+    ∴在$\mathrm{Rt}\triangle CFB$中，由勾股定理得$CB = \sqrt{CF^{2} + FB} = \sqrt{13}$．'
+  knowledge_points:
+  - 勾股定理
+  - 平行四边形
+  module: triangles
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2024-beijing-zhenti-fig13.png
+    width_mm: 52.4
+    height_mm: 32.5
+- id: 21
+  type: 解答
+  score: 5
+  question: 为防治污染，保护和改善生态环境，自2023年7月1日起，我国全面实施汽车国六排放标准6b阶段（以下简称“标准”）.对某型号汽车，“标准”要求A类物质排放量不超过$35mg/km$，A，B两类物质排放量之和不超过$50mg / km$.已知该型号某汽车的A，B两类物质排放量之和原为$92\,\mathrm{mg/km}$.经过一次技术改进，该汽车的A类物质排放量降低了$50\%$，B类物质排放量降低了$75\%$，A，B两类物质排放量之和为$40mg
+    / km$，判断这次技术改进后该汽车的A类物质排放量是否符合“标准”，并说明理由.
+  answer: 符合，理由见详解
+  solution: '解：设技术改进后该汽车的A类物质排放量为$x\,\mathrm{mg/km}$，则B类类物质排放量为$(40-x)\mathrm{mg/km}$，
+
+    由题意得：$\frac{x}{1-50\%}+\frac{40-x}{1-75\%}=92$，
+
+    解得：$x = 34$，
+
+    ∵$34<35$，
+
+    ∴这次技术改进后该汽车的A类物质排放量是符合“标准”．'
+  knowledge_points:
+  - 综合
+  module: equationsAndInequalities
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 22
+  type: 解答
+  score: 5
+  question: '在平面直角坐标系xOy中，函数$y=kx+b\ (k\neq0)$与$y = -kx + 3$的图象交于点$(2,1)$.
+
+    （1）求k，b的值；
+
+    （2）当$x>2$时，对于x的每一个值，函数$\hat{y}=mx(m\neq0)$的值既大于函数$y=kx+b$的值，也大于函数$y = -kx + 3$的值，直接写出m的取值范围.'
+  answer: （1）$k=1,b=-1$ （2）$m\ 1$
+  solution: '【小问1详解】
+
+    解：由题意得将$(2,1)$代入$y = -kx + 3$得：$-2k+3=1$，
+
+    解得：$k = 1$，
+
+    将$k = 1$，$(2,1)$，代入函数$y=kx+b\,(k\neq0)$中，
+
+    得：$\left\{\begin{array}{l}2k+b=1\\ k-1\end{array}\right.$，
+
+    解得：$\left\{
+
+    \begin{array}{l}
+
+    k = 1 \\
+
+    b = -1
+
+    \end{array}
+
+    \right.$，
+
+    ∴$k=1,b=-1$；
+
+    【小问2详解】
+
+    解：∵$k=1,b=-1$，
+
+    ∴两个一次函数的解析式分别为$y = -k, y = x + 3$，
+
+    当$x>2$时，对于x的每一个值，函数$y = mx \, (m \neq 0)$的值既大于函数$y=x-1$的值，也大于函数$y=-x+3$的值，
+
+    即当$x>2$时，对于x的每一个值，直线$y = mx \, (m \neq 0)$的图像在直线$y=x-1$和直线$y=-x+3$的上方，则画出图象为：
+
+    [图]
+
+    由图象得：当直线$y = mx \, (m \neq 0)$与直线$y=x-1$平行时符合题意或者当$y = mx \, (m \neq 0)$与x轴的夹角大于直线$y = mx \, (m \neq 0)$与直线$y=x-1$平行时的夹角也符合题意，
+
+    ∴当直线$y = mx \, (m \neq 0)$与直线$y=x-1$平行时，$m = 1$，
+
+    ∴当$x>2$时，对于x的每一个值，直线$y = mx \, (m \neq 0)$的图像在直线$y=x-1$和直线$y=-x+3$的上方时，$m\ 1$，
+
+    ∴m的取值范围为$m\ 1$．'
+  knowledge_points:
+  - 一次函数
+  - 坐标系
+  module: functions
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 23
+  type: 解答
+  score: 6
+  question: '某学校举办的“青春飞扬”主题演讲比赛分为初赛和决赛两个阶段.
+
+    （1）初赛由$10$名数师评委和$45$名学生评委给每位选手打分（百分制）$\cdot$对评委给某位选手的打分进行整理、描述和分析.下面给出了部分信息.
+
+    a.教师评委打分：
+
+    $86$$88$$90$$91$$91$$91$$91$$92$$92$$98$
+
+    b.学生评委打分的频数分布直方图如下（数据分6组：第1组$82 \leq x < 85$，第2组$85\leq x<88$，第3组$88 \leq x < 91$，第4组$91 \leq x < 94$，第5组$94 \leq x < 97$，第6组$97 \leq x \leq 100$）：
+
+    [图]
+
+    c.评委打分的平均数、中位数、众数如下：
+
+    |  | 平均数 | 中位数 | 众数 |
+
+    | --- | --- | --- | --- |
+
+    | 教师评委 | $91$ | $91$ | m |
+
+    | 学生评委 | $90,8$ | n | $93$ |
+
+    根据以上信息，回答下列问题：
+
+    ①m的值为___________，n的值位于学生评委打分数据分组的第__________组；
+
+    ②若去掉教师评委打分中的最高分和最低分，记其余8名教师评委打分的平均数为$\overline{x}$，则$\overline{x}$___________$91$（填“$\gt$”“$=$”或“$\gt$”）；
+
+    （2）决赛由5名专业评委给每位选手打分（百分制）.对每位选手，计算5名专业评委给其打分的平均数和方差.平均数较大的选手排序靠前，若平均数相同，则方差较小的选手排序靠前，5名专业评委给进入决赛的甲、乙、丙三位选手的打分如下：
+
+    |  | 评委 1 | 评委 2 | 评委 3 | 评委 4 | 评委 5 |
+
+    | --- | --- | --- | --- | --- | --- |
+
+    | 甲 | $93$ | $90$ | $92$ | $93$ | $92$ |
+
+    | 乙 | $91$ | $92$ | $92$ | $92$ | $92$ |
+
+    | 丙 | $90$ | $94$ | $90$ | $94$ | k |
+
+    若丙在甲、乙、丙三位选手中的排序居中，则这三位选手中排序最靠前的是____________，表中k（k为整数）的值为____________.'
+  answer: （1）①$91$，$4$；②$\gt$ （2）甲，$92$
+  solution: '【小问1详解】
+
+    ①从教师评委打分的情况看，$91$分出现的次数最多，故教师评委打分的众数为$91$，
+
+    所以$m = 91$，
+
+    共有45名学生评委给每位选手打分，
+
+    所以学生评委给每位选手打分的中位数应当是第$23$个，从频数分面直方图上看，可得学生评委给每位选手打分的中位数在第4组$91 \leq x < 94$，
+
+    故答案为：$91$，$4$；
+
+    ②去掉教师评委打分中的最高分和最低分，其余8名教师评委打分分别为：$88$，$90$，$91$，$91$，$91$，$91$，$92$，$92$，
+
+    $\overline{x}=\frac{88+90+91+91+91+91+92+92}{8}=90.75<91$，
+
+    故答案为：$\gt$；
+
+    【小问2详解】
+
+    $\frac{90+92+92+93+93}{5}=92$，
+
+    $S_{0}^{2}=\frac{1}{5}\left[(90-92)^{2}+(92-92)^{2}+(92-92)^{2}+(93-92)^{2}+(93-92)^{2}\right]=1.2$，
+
+    $\frac{91+92+92+92+92}{5}=91.8$，
+
+    $S_{r}^{2}=\frac{1}{5}\left[\left(91-91.8\right)^{2}+\left(92-91.8\right)^{2}+\left(92-91.8\right)^{2}+\left(92-91.8\right)^{2}+\left(92-91.8\right)^{2}\right]=0.16$，
+
+    $\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$丙在甲、乙、丙三位选手中的排序居中，
+
+    依题意，当$x_{11} \quad x_{12} \quad x_{13}$，则$91.8=\f'
+  knowledge_points:
+  - 统计
+  - 平均数
+  - 中位数
+  - 众数
+  - 方差
+  module: statisticsAndProbability
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+  figures:
+  - path: figures/2024-beijing-zhenti-fig15.png
+    width_mm: 68.5
+    height_mm: 46.6
+- id: 24
+  type: 解答
+  score: 6
+  question: '如图，AB是$\odot\odot$的直径，点C，D在$\odot\odot$上，OD平分$\angle AOC$.
+
+    [图]
+
+    （1）求证：$OD \parallel BC$；
+
+    （2）延长DO交$\odot\odot$于点E，连接CE交OB于点F，过点B作$\odot\odot$的切线交DE的延长线于点P.若$\frac{OF}{BF} = \frac{5}{6}$，$PE = 1$，求$\odot\odot$半径的长.'
+  answer: （1）见解析 （2）$\frac{3}{2}$
+  solution: '【小问1详解】
+
+    根据题意，得$\angle AOC=\angle B+\angle C$，
+
+    ∵$OB = OC$，
+
+    ∴$\angle B = \angle C$，
+
+    ∴$\angle AOC = 2\angle B$，
+
+    ∵OD平分$\angle AOC$，
+
+    ∴$\angle AOC=2\angle AOD$，
+
+    ∴$\angle B=\angle AOD$，
+
+    ∴$OD \parallel BC$；
+
+    【小问2详解】
+
+    ∵$\frac{OF}{BF} = \frac{5}{6}$，$PE = 1$，
+
+    不妨设$OE=3x,BF=6x$，则$OB=OF+BF=||x=OC=OE$，
+
+    ∴$OP=OE+PE=11x+1$，
+
+    ∵$OD \parallel BC$，
+
+    ∴$\triangle OFE \sim \triangle BFC$，$\angle OBM = \angle POB$，
+
+    ∴$\frac{OE}{BC}=\frac{OF}{BF}=\frac{5}{6}$，
+
+    ∴$\frac{11x}{BC}=\frac{5}{6}$，
+
+    解得$BC = \frac{66x}{5}$，
+
+    取BC的中点M，连接OM，
+
+    则$BM = \frac{33x}{5}$
+
+    ∵$OB = OC$，
+
+    ∴$OM \perp BC$，
+
+    ∴$\cos\angle OBM=\frac{BM}{OB}=\frac{3}{5}$，
+
+    ∴$\cos\angle POB=\frac{3}{5}$，
+
+    ∵PB是$\odot\odot$的切线，
+
+    ∴$OB \perp PB$，
+
+    ∴$\cos\angle POB=\frac{3}{5}=\frac{OB}{OP}=\frac{OB}{OE+PE}=\frac{OB}{OB+1}$，
+
+    解得$OB = \frac{3}{2}$，
+
+    故$\odot\odot$半径的长为$\frac{3}{2}$.
+
+    ['
+  knowledge_points:
+  - 切线
+  module: circles
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+  figures:
+  - path: figures/2024-beijing-zhenti-fig16.png
+    width_mm: 34.9
+    height_mm: 39.7
+- id: 25
+  type: 解答
+  score: 6
+  question: '小云有一个圆柱形水杯（记为1号杯），在科技活动中，小云用所学数学知识和人工智能软件设计了一个新水杯，并将其制作出来，新水杯（记为2号杯）示意图如下，
+
+    [图]
+
+    当1号杯和2号杯中都有VmL水时，小云分别记录了1号杯的水面高度$h_{1}$（单位：cm）和2号杯的水面高度$h_{2}$（单位：cm），部分数据如下：
+
+    | V /mL | 0 | 40 | 100 | 200 | 300 | 400 | 500 |
+
+    | --- | --- | --- | --- | --- | --- | --- | --- |
+
+    | $h_{1}$ /cm | 0 |  | 2.5 | 5.0 | 7.5 | 10.0 | 12.5 |
+
+    | $h_{2}$ /cm | 0 | 2.8 | 4.8 | 7.2 | 8.9 | 10.5 | 11.8 |
+
+    （1）补全表格（结果保留小数点后一位）；
+
+    （2）通过分析数据，发现可以用函数刻画$h_{1}$与V，$h_{2}$与V之间的关系.在给出的平面直角坐标系中，画出这两个函数的图象；
+
+    [图]
+
+    （3）根据以上数据与函数图象，解决下列问题：
+
+    ①当1号杯和2号杯中都有320mL水时，2号杯的水面高度与1号杯的水面高度的差约为___________cm（结果保留小数点后一位）；
+
+    ②在①的条件下，将2号杯中的一都分水倒入1号杯中，当两个水杯的水面高度相同时，其水面高度约为___________cm（结果保留小数点后一位）．'
+  answer: （1）1.0（2）见详解 （3）1.2，8.5
+  solution: '【小问1详解】
+
+    解：由题意得，设V与$h_{1}$的函数关系式为：$V = k h, \left( k \neq 0 \right)$，
+
+    由表格数据得：$100 = 2.5k$，
+
+    解得：$k = 40$，
+
+    ∴$V = 40h_{1}$，
+
+    ∴当$V = 40$时，$40k_{1}=40$，
+
+    ∴$h_{1}=1.0\mathrm{cm}$；
+
+    【小问2详解】
+
+    解：如图所示，即为所画图像，
+
+    [图]【小问3详解】
+
+    解：①当$V = 320\,\text{ml}$时，$h_{\lambda}=\frac{320}{40}=8\mathrm{cm}$，由图象可知高度差$CD=1.2\mathrm{cm}$，
+
+    [图]
+
+    故答案为：1.2；
+
+    ②由图象可知当两个水杯的水面高度相同时，估算高度约为$8.5\mathrm{cm}$，
+
+    故答案为：$8.5$．'
+  knowledge_points:
+  - 一次函数
+  - 正比例函数
+  - 坐标系
+  module: functions
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+  figures:
+  - path: figures/2024-beijing-zhenti-fig18.png
+    width_mm: 22.5
+    height_mm: 30.4
+  - path: figures/2024-beijing-zhenti-fig19.png
+    width_mm: 74.6
+    height_mm: 78.1
+- id: 26
+  type: 解答
+  score: 6
+  question: '在平面直角坐标系xOy中，已知抛物线$y=ax^{2}-2a^{2}x(a\neq 0)$.
+
+    （1）当$a = 1$时，求抛物线的顶点坐标；
+
+    （2）已知$M(x_{1},y_{1})$和$N(x_{2},y_{2})$是抛物线上的两点.若对于$x_{1}=3a$，$3 \leq x_{2} \leq 4$，都有$y_1 < y_2$，求a的取值范围.'
+  answer: （1）$(1,-1)$； （2）$0<a<1$或$-4<a<0$．
+  solution: '【小问1详解】
+
+    解：把$a = 1$代入$y=ax^{3}-2a^{3}x$得，$y=x^{2}-2x=(x-1)^{2}-1$，
+
+    ∴抛物线的顶点坐标为$(1,-1)$；
+
+    【小问2详解】
+
+    解：分两种情况：
+
+    $1$当$a > 0$时，如图，此时$3a<3$，
+
+    ∴$a < 1$，
+
+    又∵$a > 0$，
+
+    ∴$0<a<1$；
+
+    [图]
+
+    当$a<0$时，如图，此时$-a < 4$，
+
+    解得$a > -4$，
+
+    又∵$a<0$，
+
+    ∴$-4<a<0$；
+
+    [图]
+
+    综上，当$0<a<1$或$-4<a<0$，都有$y_1 < y_2$．'
+  knowledge_points:
+  - 二次函数
+  - 坐标系
+  module: functions
+  difficulty: 压轴
+  recommended_for:
+  - L3
+- id: 27
+  type: 解答
+  score: 7
+  question: '已知$\angle MAN=\alpha(0^{\circ}<\alpha<45^{\circ})$，点B，C分别在射线AN，AM上，将线段BC绕点B顺时针旋转$180^\circ-2\alpha$得到线段BD，过点D作AN的垂线交射线AM于点E.
+
+    [图]
+
+    （1）如图1，当点D在射线AN上时，求证：C是AE的中点；
+
+    （2）如图2，当点D在$\angle MAN$内部时，作$DF \parallel AN$，交射线AM于点F，用等式表示线段EF与AC的数量关系，并证明。'
+  answer: （1）见详解 （2）$EF = 2AC$，理由见详解
+  solution: '【小问1详解】
+
+    证明：连接CD，
+
+    [图]
+
+    由题意得：$BC = BD$，$\angle CBD=180^\circ-2\alpha$，
+
+    ∴$\angle BDC = \angle BCD$，
+
+    ∵$\angle BDC+\angle BCD+\angle CBD=180^{\circ}$，
+
+    ∴$\angle BDC=180^{\circ}-\frac{(180^{\circ}-2\alpha)}{2}=\alpha$，
+
+    ∴$\angle BDC = \angle A$，
+
+    ∴$CA = CD$，
+
+    ∵$DN \perp AN$，
+
+    ∴$\angle 1+\angle 4=\angle 2+\angle BDC=90^{\circ}$，
+
+    ∴$\angle1=\angle2$，
+
+    ∴$CD = CE$，
+
+    ∴$CA = CE$，
+
+    ∴点C是AE的中点；
+
+    【小问2详解】
+
+    解：$EF = 2AC$，
+
+    在射线AM上取点H，使得$BH = BA$，取EF的中点G，连接DG，
+
+    [图]
+
+    ∵$BH = BA$，
+
+    ∴$\angle BAH = \angle BHA = \alpha$，
+
+    ∴$\angle ABH=180^\circ-2\alpha=\angle CBD$，
+
+    ∴$\angle ABC = \angle HBD$，
+
+    又∵$BC = BD$，
+
+    ∴$\triangle ABC\cong\triangle HBD$，
+
+    ∴$AC = DH$，$\angle BHD = \angle A = \alpha$，
+
+    ∴$\angle FHD=\angle BHA+\angle BHD=2\alpha$，
+
+    ∵$DF \parallel AN$，
+
+    ∴$\angle EFD=\angle A=\alpha$，$\angle EDF=\angle 3=90^{\circ}$，
+
+    ∵G是AE的中点，
+
+    ∴$GF = GD$，'
+  knowledge_points:
+  - 平行线
+  - 全等三角形
+  - 旋转
+  module: triangles
+  difficulty: 压轴
+  recommended_for:
+  - L3
+  figures:
+  - path: figures/2024-beijing-zhenti-fig24.png
+    width_mm: 100.0
+    height_mm: 46.6
+- id: 28
+  type: 解答
+  score: 7
+  question: '在平面直角坐标系xOy中，$\odot\odot$的半径为1，对于$\odot\odot$的弦AB和不在直线AB上的点C，给出如下定义：若点C关于直线AB的对称点$C''$在$\odot\odot$上或其内部，且$\angle ACB=\alpha$，则称点C是弦AB的“$\alpha$可及点”．
+
+    [图]
+
+    （1）如图，点$A(0,1)$，$B(1,0)$．
+
+    ①在点$C_1(2,0)$，$C_{2}(1,2)$，$C_{3}\left(\frac{1}{2},0\right)$中，点___________是弦AB的“$\alpha$可及点”，其中$\alpha =$____________$\text{o}$；
+
+    ②若点D是弦AB的“$90^\circ$可及点”，则点D的横坐标的最大值为__________；
+
+    （2）已知P是直线$y = \sqrt{3}x - \sqrt{3}$上一点，且存在$\odot\odot$的弦MN，使得点P是弦MN的“$60^\circ$可及点”．记点P的横坐标为t，直接写出t的取值范围．'
+  answer: （1）①$C_{2}$，45；②$\frac{1+\sqrt{2}}{2}$ （2）$\frac{3-\sqrt{13}}{4}\leq1<\frac{1}{2}$或$1<t\leq\dfrac{3+\sqrt{3}}{4}$
+  solution: '【小问1详解】
+
+    解：①：反过来思考，由相对运动理解，作出$\odot\odot$关于AB的对称圆$\odot O''$，
+
+    ∵若点C关于直线AB的对称点$C''$在$\odot\odot$上或其内部，且$\angle ACB=\alpha$，则称点C是弦AB的“$\alpha$可及点”，
+
+    ∴点C应在$\odot O''$的圆内或圆上，
+
+    [图]
+
+    ∵点$A(0,1)$，$B(1,0)$，
+
+    ∴$OA = OB = 1$，
+
+    而$\angle AOB=90^\circ$，
+
+    ∴$\angle ABO=\angle OAB=45^{\circ}$,
+
+    由对称得：$\angle OBA=\angle A''B=45^{\circ}$，
+
+    ∴$\triangle O''BA$为等腰直角三角形，
+
+    ∴$O(1,1)$,
+
+    设$\odot\odot$半径为R，
+
+    则$|C_{1}C''|=\sqrt{1^{2}+1^{2}}=\sqrt{2}>R=1$,故$C_1$在$\odot O''$外，不符合题意；
+
+    $C_{1}O^{\prime }=2+1=3=R$，故$C_{2}$在$\odot O''$上，符合题意；
+
+    $C_{1}O''=\sqrt{\left(\frac{1}{2}\right)^{2}+1^{2}}=\frac{\sqrt{5}}{2}>R=1$，故$C_3$在$\odot O''$外，不符合题意，
+
+    ∴点$C_{2}$是弦AB的“$\alpha$可及点”，
+
+    可知$B,O'',C_2$三点共线，
+
+    ∵$\widehat{AB}=\overline{AB}$，
+
+    ∴$\alpha=\angle ACB,\beta=\frac{1}{2}\angle AOB=45^\circ$，
+
+    故答案为：$C_{2}$，45；
+
+    ②取AB中点为H，连接DH，
+
+    [图]
+
+    ∵则$\angle ADB=90^\circ$，
+
+    ∴$HD = HA ='
+  knowledge_points:
+  - 一次函数
+  - 圆周角
+  - 弦
+  - 轴对称
+  - 坐标系
+  module: circles
+  difficulty: 压轴
+  recommended_for:
+  - L3
+  figures:
+  - path: figures/2024-beijing-zhenti-fig27.png
+    width_mm: 43.4
+    height_mm: 43.9

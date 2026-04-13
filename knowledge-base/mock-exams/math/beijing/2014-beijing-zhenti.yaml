@@ -1,0 +1,552 @@
+# ============================================================
+# 2014年北京市中考数学真题试卷 — 逐题分析
+# ============================================================
+# 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
+# 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
+# 满分：100分  时长：120分钟
+
+year: 2014
+district: 北京市
+exam_type: 真题
+subject: 数学
+full_score: 100
+duration_minutes: 120
+total_questions: 20
+structure: 8选择(16分) + 8填空(16分) + 12解答(68分)
+questions:
+- id: 1
+  type: 选择
+  score: 2
+  question: '$2$ 的相反数是（   ）．
+
+    A．$2$
+
+    B．$-2$
+
+    C．$-\frac{1}{2}$
+
+    D．$\frac{1}{2}$'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 2
+  type: 选择
+  score: 2
+  question: '据报道，某小区居民李先生改进用水设备，在十年内帮助他居住小区的居民累计节水$300\,000$ 吨，将$300\,000$ 用科学计数法表示应为（   ）．
+
+    A．$0.3\times10^{6}$
+
+    B．$3\times10^{5}$
+
+    C．$3\times10^{6}$
+
+    D．$30\times10^{4}$'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 3
+  type: 选择
+  score: 2
+  question: '如图，有$6$ 张扑克牌，从中随机抽取$1$ 张，点数为偶数的概率（   ）．
+
+    [图]
+
+    A．$\frac{1}{6}$
+
+    B．$\frac{1}{4}$
+
+    C．$\frac{1}{3}$
+
+    D．$\frac{1}{2}$
+
+    [图]'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 概率
+  module: statisticsAndProbability
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2014-beijing-zhenti-fig01.png
+    width_mm: 133.6
+    height_mm: 28.3
+  - path: figures/2014-beijing-zhenti-fig02.png
+    width_mm: 43.4
+    height_mm: 38.4
+- id: 4
+  type: 选择
+  score: 2
+  question: '右图是某几何体的三视图，该几何体是（   ）．
+
+    A．圆锥
+
+    B．圆柱
+
+    C．正三棱柱
+
+    D．正三棱锥'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: circles
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 5
+  type: 选择
+  score: 2
+  question: '某篮球队$12$ 名队员的年龄如下表所示：
+
+    | 年龄（岁） | 18 | 19 | 20 | 21 |
+
+    | --- | --- | --- | --- | --- |
+
+    | 人数 | 5 | 4 | 1 | 2 |
+
+    则这$12$ 名队员年龄的众数和平均数分别是（   ）．
+
+    A．$0.3\times10^{6}$ ，$19$
+
+    B．$19$ ，$19$
+
+    C．$18$ ，$19.5$
+
+    D．$19$ ，$19.5$
+
+    [图]6．园林队公园进行绿化，中间休息了一段时间．已知绿化面积S （单位：平方米）与工作时间t （单位：小时）的函数关系的图像如图所示，则休息后园林队每小时绿化面积为（   ）．
+
+    A．$40$ 平方米
+
+    B．$50$ 平方米
+
+    C．$80$ 平方米
+
+    D．$100$ 平方米
+
+    [图]7．如图，⊙O 的直径AB 垂直于弦CD ，垂足是E ，$\angle A = 22.5^\circ$ ，$OC = 4$ ，CD 的长为（   ）．
+
+    A．$2\sqrt{2}$
+
+    B．$4$
+
+    C．$4\sqrt{2}$
+
+    D．$8$
+
+    [图]'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 平均数
+  - 众数
+  - 弦
+  module: statisticsAndProbability
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2014-beijing-zhenti-fig03.png
+    width_mm: 48.4
+    height_mm: 47.1
+  - path: figures/2014-beijing-zhenti-fig04.png
+    width_mm: 40.0
+    height_mm: 34.1
+  - path: figures/2014-beijing-zhenti-fig05.png
+    width_mm: 61.4
+    height_mm: 38.4
+- id: 8
+  type: 选择
+  score: 2
+  question: '已知点A 为某封闭图形边界的一定点，动点P 从点A 出发，沿其边界顺时针匀速运动一周，设点P 的时间为x ，线段AP 的长为y ，表示y 与x 的函数关系的图象大致如图所示，则该封闭图形可能是（   ）．
+
+    [图]
+
+    二．填空题（本体共16分，每题4分）'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 动点
+  module: geometryComprehensive
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+  figures:
+  - path: figures/2014-beijing-zhenti-fig06.png
+    width_mm: 121.7
+    height_mm: 27.8
+- id: 9
+  type: 填空
+  score: 2
+  question: '分解因式：$ax^{4}-9ay^{4}=$___________________．
+
+    [图]'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2014-beijing-zhenti-fig07.png
+    width_mm: 39.4
+    height_mm: 43.7
+- id: 10
+  type: 填空
+  score: 2
+  question: 在某一时刻，测得一根高为$1.8\,\text{m}$ 的竹竿的影长为$3m$ ，同时测得一根旗杆的影长为$25\,\text{m}$ ，那么这根旗杆的高度为_________________m．
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 11
+  type: 填空
+  score: 2
+  question: 如图，在平面直角坐标系xOy 中，正方形$OABC$ 的边长为$2$ ．写出一个函数$y = \frac{k}{x} (k \neq 0)$ 使它的图象与正方形$OABC$ 有公共点，这个函数的表达式为______________．
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 正方形
+  - 坐标系
+  module: quadrilaterals
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 12
+  type: 填空
+  score: 2
+  question: '在平面直角坐标系xOy 中，对于点$P(x,y)$ ，我们把点$P''(-y+1,x+1)$ 叫做点P 伴随点，一直点$A_1$ 的伴随点为$A_2$ ，点$A_2$ 的伴随点为$A_3$ ，点$A_3$ 的伴随点为$A_4$ ，这样依次得到点$A_1$ ，$A_2$ ，$A_3$ …，$A_n$ …，若点$A_1$ 的坐标为$(3,1)$ ，则点$A_3$ 的坐标为__________，点$A_{2014}$
+    的坐标为__________；若点$A_1$ 的坐标为$(a,b)$ ，对于任意正整数n ，点$A_n$ 均在x 轴上方，则a ，b 应满足的条件为_____________．
+
+    三．解答题（本题共30分，每小题5分）'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 坐标系
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 13
+  type: 填空
+  score: 2
+  question: '如图，点B 在线段AD 上，$BC\parallel DE$ ，$AB = ED$ ，$BC = DB$ ．
+
+    求证：$\angle A = \angle E$ ．
+
+    [图]'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2014-beijing-zhenti-fig08.png
+    width_mm: 60.6
+    height_mm: 34.9
+- id: 14
+  type: 填空
+  score: 2
+  question: 计算：$(6-\pi)^{0}+\left(-\frac{1}{5}\right)^{-1}-3\tan30^{\circ}+\left|-\sqrt{3}\right|$．
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 15
+  type: 填空
+  score: 2
+  question: "解不等式$\\frac{1}{2}x-1\\leq\\frac{2}{3}x-\\frac{1}{2}$，并把它的解集在数轴上表示出来．（添加图）\n[图]\n已知x-y=$\\sqrt{3}$,求代数式（x+1 \t)2- \t2x + y(y-2x)的值．\n已知关于x的方程mx2-(m+2)x+2=0（m≠0)．\n(1)求证：方程总有两个实数根；\n(2)若方程的两个实数根都是整数，求正整数m的值．"
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 不等式
+  module: numbersAndExpressions
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2014-beijing-zhenti-fig09.png
+    width_mm: 69.1
+    height_mm: 9.8
+- id: 18
+  type: 填空
+  score: 2
+  question: '列方程或方程组解应用题
+
+    小马自驾私家车从A地到B地，驾驶原来的燃油汽车所需油费108元，驾驶新购买的纯电动汽车所需电费27．已知每行驶1千米，原来的燃油汽车所需的油费比新购买的纯电动汽车所需的电费多0．54元，求新购买的纯电动汽车每行驶1千米所需的电费．
+
+    1$\sqrt{2}$ 9． 如图，在ABCD中，AE平分∠BAD，交BC于点E，BF平分∠ABC，交AD于点F，AE与BF交于点P，连接EF．PD．
+
+    （1）求证：四边形ABEF是菱形；
+
+    （2）若AB=4，AD=6，∠ABC=60°，求tan∠ADP的值．
+
+    [图]'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 菱形
+  module: quadrilaterals
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+  figures:
+  - path: figures/2014-beijing-zhenti-fig10.png
+    width_mm: 56.4
+    height_mm: 25.1
+- id: 20
+  type: 填空
+  score: 2
+  question: '根据某研究院公布的2009-2013年我国成年国民阅读调查报告的部分数据，绘制的统计图表如下：
+
+    2013年成年国民2009~2013年成年国民
+
+    倾向的阅读方式人数分布统计图年人均阅读图书数量统计表
+
+    [图]
+
+    | 年份 | 年人均阅读图书数量（本） |
+
+    | --- | --- |
+
+    | 2009 | 3.88 |
+
+    | 2010 | 4.12 |
+
+    | 2011 | 4.35 |
+
+    | 2012 | 4.56 |
+
+    | 2013 | 4.78 |
+
+    根据以上信息解答下列问题：
+
+    直接写出扇形统计图中m的值；
+
+    从2009到2013年，成年国民年人均阅读图书的数量每年增长的幅度近似相等，估算2014年成年国民年人均阅读图书的数量约为_______本；
+
+    2013年某小区倾向图书阅读的成年国民有990人，若该小区2014年与2013年成年国民的人数基本持平，估算2014年该小区成年国民阅读图书的总数量约为_____本．'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 统计
+  - 扇形统计图
+  module: statisticsAndProbability
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+  figures:
+  - path: figures/2014-beijing-zhenti-fig11.png
+    width_mm: 53.2
+    height_mm: 47.6
+- id: 21
+  type: 填空
+  score: 2
+  question: '如图，AB是⊙O的直径，C是弧AB的中点，⊙O的切线BD交AC的延长线于点D，E是OB的中点，CE的延长线交切线DB于点F，AF交⊙O于点H，连结BH．
+
+    （1）求证：AC=CD；
+
+    （2）若OB=2，求BH的长．
+
+    [图]'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 切线
+  module: circles
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+  figures:
+  - path: figures/2014-beijing-zhenti-fig12.png
+    width_mm: 38.4
+    height_mm: 48.7
+- id: 22
+  type: 填空
+  score: 2
+  question: '阅读下面材料：
+
+    小腾遇到这样一个问题：如图1，在△ABC中，点D在线段BC上，∠BAD=75°，∠CAD=30°，AD=2，BD=2DC，求AC的长．
+
+    [图][图]
+
+    小腾发现，过点C作CE∥AB，交AD的延长线于点E，通过构造△ACE，经过推理和计算能够使问题得到解决（如图2）．
+
+    请回答：∠ACE的度数为___________，AC的长为_____________．
+
+    参考小腾思考问题的方法，解决问题：
+
+    如图3，在四边形ABCD中，∠BAC=90°，∠CAD=30°，∠ADC=75°，AC与BD交于点E，
+
+    AE=2，BE=2ED，求BC的长．
+
+    [图]
+
+    五．解答题（本题共22分，第23题7分，第24题7分，第25题8分）'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: quadrilaterals
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+  figures:
+  - path: figures/2014-beijing-zhenti-fig13.png
+    width_mm: 45.5
+    height_mm: 33.6
+  - path: figures/2014-beijing-zhenti-fig14.png
+    width_mm: 47.4
+    height_mm: 40.2
+  - path: figures/2014-beijing-zhenti-fig15.png
+    width_mm: 55.0
+    height_mm: 27.8
+- id: 23
+  type: 填空
+  score: 2
+  question: '在平面直角坐标系xOy中，抛物线y=2x2+mx+n经过点A（0，-2），B（3，4）．
+
+    （1）求抛物线的表达式及对称轴；
+
+    （2）设点B关于原点的对称点为C，点D是抛物线对称轴上一动点，记抛物线在A，B之
+
+    间的部分为图象G（包含A，B两点）．若直线CD与图象G有公共点，结合函数图象，求点
+
+    D纵坐标t的取值范围．
+
+    [图]'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 坐标系
+  - 动点
+  module: functions
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+  figures:
+  - path: figures/2014-beijing-zhenti-fig16.png
+    width_mm: 67.2
+    height_mm: 74.3
+- id: 24
+  type: 填空
+  score: 2
+  question: '在正方形ABCD外侧作直线AP，点B关于直线AP的对称点为E，连接BE，DE，其中DE交直线AP于点F．
+
+    （1）依题意补全图1；
+
+    （2）若∠PAB=20°，求∠ADF的度数；
+
+    （3）如图2，若45°<∠PAB < 90°，用等式表示线段AB，FE，FD之间的数量关系，并证明．
+
+    [图]'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 正方形
+  module: quadrilaterals
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+  figures:
+  - path: figures/2014-beijing-zhenti-fig17.png
+    width_mm: 113.5
+    height_mm: 52.9
+- id: 25
+  type: 填空
+  score: 2
+  question: "对某一个函数给出如下定义：若存在实数M>0，对于任意的函数值y，都满足-M≤y≤M，则称这个函数是有界函数．在所有满足条件的M中，其最小值称为这个函数的边界值．例如，下图中的函数是有界函数，其边界值是1．\n[图]\n分别判断函数y=（x \t> 0）和y= \tx + 1（-4 \t< x ≤ 2）是不是有界函数？若是有界函数，求边界值；\n若函数y=-x+1（a \t≤\
+    \ x ≤ b，b \t> a）的边界值是2，且这个函数的最大值也是2，求b的取值范围；\n将函数$y = x^2 (-1 \\leq x \\leq m, m \\geq 0)$ 的图象向下平移m个单位，得到的函数的边界值是t，当m在什么范围时，满足 \t≤t \t≤1？\n[图][图][图][图][图]\n14/14"
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 平移
+  module: numbersAndExpressions
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+  figures:
+  - path: figures/2014-beijing-zhenti-fig18.png
+    width_mm: 77.3
+    height_mm: 55.3
+  - path: figures/2014-beijing-zhenti-fig19.png
+    width_mm: 146.6
+    height_mm: 209.3
+  - path: figures/2014-beijing-zhenti-fig20.png
+    width_mm: 146.6
+    height_mm: 211.9
+  - path: figures/2014-beijing-zhenti-fig21.png
+    width_mm: 146.3
+    height_mm: 207.4
+  - path: figures/2014-beijing-zhenti-fig22.png
+    width_mm: 146.3
+    height_mm: 212.7
+  - path: figures/2014-beijing-zhenti-fig23.png
+    width_mm: 151.3
+    height_mm: 215.9

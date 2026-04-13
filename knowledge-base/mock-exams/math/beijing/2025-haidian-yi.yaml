@@ -19,7 +19,13 @@ questions:
   score: 2
   question: '中国传统工艺美术纹样承载着深厚的文化内涵和象征意义．下列纹样中，是中心对称图形的是（）
 
-    A.[图]B.[图]C.[图]D.[图]'
+    A.[图]
+
+    B.[图]
+
+    C.[图]
+
+    D.[图]'
   answer: A
   solution: '解：A、图形绕着某一个点旋转$180^\circ$，旋转后的图形能与原来的图形重合，该图是中心对称图形，符合题意；
 
@@ -41,10 +47,18 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-haidian-yi-fig02.png
-  - figures/2025-haidian-yi-fig03.png
-  - figures/2025-haidian-yi-fig04.png
-  - figures/2025-haidian-yi-fig05.png
+  - path: figures/2025-haidian-yi-fig02.png
+    width_mm: 20.1
+    height_mm: 19.3
+  - path: figures/2025-haidian-yi-fig03.png
+    width_mm: 18.5
+    height_mm: 18.0
+  - path: figures/2025-haidian-yi-fig04.png
+    width_mm: 26.5
+    height_mm: 17.2
+  - path: figures/2025-haidian-yi-fig05.png
+    width_mm: 21.4
+    height_mm: 22.5
 - id: 2
   type: 选择
   score: 2
@@ -52,7 +66,13 @@ questions:
 
     [图]
 
-    A.$25^\circ$B.$120^\circ$C.$130^\circ$D.$155^\circ$'
+    A.$25^\circ$
+
+    B.$120^\circ$
+
+    C.$130^\circ$
+
+    D.$155^\circ$'
   answer: C
   solution: '解：$\begin{array}{c}
 
@@ -80,7 +100,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-haidian-yi-fig06.png
+  - path: figures/2025-haidian-yi-fig06.png
+    width_mm: 42.6
+    height_mm: 27.8
 - id: 3
   type: 选择
   score: 2
@@ -114,7 +136,13 @@ questions:
 
     \end{tikzpicture}$
 
-    A.$a-b>0$B.$\left| a \right| < 1$C.$\frac{b}{a}>0$D.$-b > a$'
+    A.$a-b>0$
+
+    B.$\left| a \right| < 1$
+
+    C.$\frac{b}{a}>0$
+
+    D.$-b > a$'
   answer: D
   solution: '解：根据题意可得：$a<-1$，$0<b<1$，
 
@@ -143,7 +171,13 @@ questions:
   score: 2
   question: '若关于x的一元二次方程$x^{2}-2x+c=0$有两个相等的实数根，则实数c的值为（）
 
-    A.$-4$B.$-1$C.1D.4'
+    A.$-4$
+
+    B.$-1$
+
+    C.1
+
+    D.4'
   answer: C
   solution: '解：由题意，得：$\triangle-(-2)^{2}-4c=0$，
 
@@ -165,7 +199,13 @@ questions:
   score: 2
   question: '不透明袋子中装有$1$个红球和$2$个黄球，这些小球除颜色外无其他差别．从中随机摸出两个小球，恰好摸出$1$个红球和1个黄球的概率是（）
 
-    A.$\frac{1}{3}$B.$\frac{2}{3}$C.$\frac{1}{9}$D.$\frac{4}{9}$'
+    A.$\frac{1}{3}$
+
+    B.$\frac{2}{3}$
+
+    C.$\frac{1}{9}$
+
+    D.$\frac{4}{9}$'
   answer: B
   solution: '解：列树状图，如图：
 
@@ -186,14 +226,18 @@ questions:
   - L1
   - L2
   - L3
-  figures:
-  - figures/2025-haidian-yi-fig07.png
 - id: 6
   type: 选择
   score: 2
   question: '为进一步提高义务教育质量，某地区今年义务教育财政预算支出比去年上调了$5\%$．已知该地区去年的义务教育财政预算支出约为$3.8\times10^{10}$元，则今年的义务教育财政预算支出约为（）
 
-    A.$3.8\times10^{10}$元B.$5.7\times10^{10}$元C.$3.99\times10^{10}$元D.$3.99\times10^{11}$元'
+    A.$3.8\times10^{10}$元
+
+    B.$5.7\times10^{10}$元
+
+    C.$3.99\times10^{10}$元
+
+    D.$3.99\times10^{11}$元'
   answer: C
   solution: '解：$3.8\times10^{20}x(1+5\%)=3.99\times10^{20}$元，
 
@@ -227,7 +271,13 @@ questions:
 
     [图]
 
-    A.甲、乙B.乙、丙C.甲、丙D.甲、乙、丙'
+    A.甲、乙
+
+    B.乙、丙
+
+    C.甲、丙
+
+    D.甲、乙、丙'
   answer: C
   solution: '解：
 
@@ -276,10 +326,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-haidian-yi-fig08.png
-  - figures/2025-haidian-yi-fig09.png
-  - figures/2025-haidian-yi-fig10.png
-  - figures/2025-haidian-yi-fig11.png
+  - path: figures/2025-haidian-yi-fig08.png
+    width_mm: 52.9
+    height_mm: 23.8
 - id: 8
   type: 选择
   score: 2
@@ -288,7 +337,13 @@ questions:
 
     [图]
 
-    A.轨道①B.轨道②C.轨道③D.轨道④'
+    A.轨道①
+
+    B.轨道②
+
+    C.轨道③
+
+    D.轨道④'
   answer: B
   solution: '解：∵圆形硬币的半径为$1\mathrm{cm}$，
 
@@ -348,11 +403,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-haidian-yi-fig12.png
-  - figures/2025-haidian-yi-fig13.png
-  - figures/2025-haidian-yi-fig14.png
-  - figures/2025-haidian-yi-fig15.png
-  - figures/2025-haidian-yi-fig16.png
+  - path: figures/2025-haidian-yi-fig12.png
+    width_mm: 139.7
+    height_mm: 44.4
 - id: 9
   type: 填空
   score: 2
@@ -453,8 +506,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-haidian-yi-fig17.png
-  - figures/2025-haidian-yi-fig18.png
+  - path: figures/2025-haidian-yi-fig17.png
+    width_mm: 44.4
+    height_mm: 43.9
 - id: 13
   type: 填空
   score: 2
@@ -506,25 +560,11 @@ questions:
   score: 2
   question: '某智能家居公司生产了3000台智能音箱．为了解这3000台智能音箱的响应时间，从中随机抽取60台智能音箱进行检测，获得了它们的响应时间（单位：秒），数据整理如下：
 
-    响应时间t（秒）
+    | 响应时间 t （秒） | $0\leq t<0.5$ | $0.5\leq t<1$ | $1\leq t<1.5$ | $t\geqslant1.5$ |
 
-    $0\leq t<0.5$
+    | --- | --- | --- | --- | --- |
 
-    $0.5\leq t<1$
-
-    $1\leq t<1.5$
-
-    $t\geqslant1.5$
-
-    音箱数量（台）
-
-    15
-
-    25
-
-    10
-
-    10
+    | 音箱数量（台） | 15 | 25 | 10 | 10 |
 
     根据以上数据，估计这3000台智能音箱中响应时间小于1秒的音箱数量为______台．'
   answer: $2000$
@@ -596,54 +636,28 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-haidian-yi-fig19.png
+  - path: figures/2025-haidian-yi-fig19.png
+    width_mm: 33.3
+    height_mm: 31.8
 - id: 16
   type: 填空
   score: 2
   question: '某公司设有三个充电桩，分别为一个快充桩和两个慢充桩．每个充电桩在同一时间仅为一辆车提供充电服务，且每辆车充电完成前，充电过程不得中断．现有五辆车待充电，每辆车的充电需求如下表：
 
-    车辆序号
+    | 车辆序号 | A | B | C | D | E |
 
-    A
+    | --- | --- | --- | --- | --- | --- |
 
-    B
+    | 快充桩充电时间（分钟） | 70 | 40 | 无法使用 | 90 | 60 |
 
-    C
-
-    D
-
-    E
-
-    快充桩充电时间（分钟）
-
-    70
-
-    40
-
-    无法使用
-
-    90
-
-    60
-
-    慢充桩充电时间（分钟）
-
-    210
-
-    120
-
-    150
-
-    无法使用
-
-    170
+    | 慢充桩充电时间（分钟） | 210 | 120 | 150 | 无法使用 | 170 |
 
     车辆充电交接时间忽略不计，请回答下列问题：
 
     （1）若其中的四辆车完成充电的总用时不超过150分钟，则这四辆车的序号可以为______（写出一种即可）；
 
     （2）这五辆车完成充电总用时最短为______分钟．'
-  answer: ①.$ABCE$（答案不唯一）②.200
+  answer: ①.$ABCE$（答案不唯一） ②.200
   solution: '解：（1）要使其中的四辆车完成充电的总用时不超过150分钟，可安排如下：快充桩可依次提供给$A,E$充电，两个慢充桩可分别提供给$B,C$充电，
 
     故答案为：$ABCE$（答案不唯一）；
@@ -765,7 +779,7 @@ questions:
     （1）求证：四边形$ADCE$是菱形；
 
     （2）若$BD = 6$，$\tan \angle BCE = \frac{4}{3}$，求AC的长．'
-  answer: （1）见详解（2）$4\sqrt{5}$
+  answer: （1）见详解 （2）$4\sqrt{5}$
   solution: '【小问1详解】
 
     证明：$\because AD \parallel CE$，$AE \parallel DC$，
@@ -837,8 +851,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-haidian-yi-fig20.png
-  - figures/2025-haidian-yi-fig21.png
+  - path: figures/2025-haidian-yi-fig20.png
+    width_mm: 50.3
+    height_mm: 26.5
 - id: 21
   type: 解答
   score: 5
@@ -928,9 +943,6 @@ questions:
   - L1
   - L2
   - L3
-  figures:
-  - figures/2025-haidian-yi-fig22.png
-  - figures/2025-haidian-yi-fig23.png
 - id: 23
   type: 解答
   score: 6
@@ -942,63 +954,21 @@ questions:
 
     b．生长素浓度为10和15时，各重复组绿豆幼苗高度的数据如下：
 
-    生长素浓度
+    | 生长素浓度 | 各重复组绿豆幼苗高度 |  |  |  |  |  |
 
-    各重复组绿豆幼苗高度
+    | --- | --- | --- | --- | --- | --- | --- |
 
-    10
+    | 10 | 9.9 | 10.0 | 10.1 | 10.2 | 10.7 | 10.7 |
 
-    9.9
-
-    10.0
-
-    10.1
-
-    10.2
-
-    10.7
-
-    10.7
-
-    15
-
-    8.4
-
-    8.5
-
-    8$[公式]$6
-
-    8.7
-
-    8.8
-
-    9.2
+    | 15 | 8.4 | 8.5 | 8 $[公式]$ 6 | 8.7 | 8.8 | 9.2 |
 
     c．同浓度生长素溶液中的绿豆幼苗高度的方差如下：
 
-    生长素浓度
+    | 生长素浓度 | 0 | 5 | 10 | 15 | 20 |
 
-    0
+    | --- | --- | --- | --- | --- | --- |
 
-    5
-
-    10
-
-    15
-
-    20
-
-    方差
-
-    0.108
-
-    0.083
-
-    n
-
-    0.067
-
-    0.041
+    | 方差 | 0.108 | 0.083 | n | 0.067 | 0.041 |
 
     根据以上信息，回答下列问题：
 
@@ -1011,7 +981,7 @@ questions:
     ①正比例函数②一次函数③反比例函数④二次函数
 
     （4）请判断：n______$0.067$（填“$\gt$”“$\gt$”或“$=$”）．'
-  answer: （1）见解析（2）$10$ （3）④（4）$\gt$
+  answer: （1）见解析 （2）$10$ （3）④ （4）$\gt$
   solution: '【小问3详解】
 
     解：根据统计图得，数据呈现先增厚减的趋势，符合二次函数的特征，
@@ -1043,7 +1013,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-haidian-yi-fig24.png
+  - path: figures/2025-haidian-yi-fig24.png
+    width_mm: 95.0
+    height_mm: 44.2
 - id: 24
   type: 解答
   score: 6
@@ -1054,7 +1026,7 @@ questions:
     （1）求证：$\angle CBE = 2\angle BAC$；
 
     （2）连接OD交BF于点G．若$EF = 2EG$，$CD = 3$，求$\odot\odot$的半径．'
-  answer: （1）见解析（2）$3\sqrt{3}$
+  answer: （1）见解析 （2）$3\sqrt{3}$
   solution: '【小问1详解】
 
     证明：如图，连接BD，设$\angle BAC = \alpha$，
@@ -1116,85 +1088,21 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-haidian-yi-fig26.png
-  - figures/2025-haidian-yi-fig27.png
-  - figures/2025-haidian-yi-fig28.png
+  - path: figures/2025-haidian-yi-fig26.png
+    width_mm: 43.9
+    height_mm: 42.9
 - id: 25
   type: 解答
   score: 6
   question: '科学兴趣小组利用不同材料制作了A，B两种太阳能电池板，记录了在一定条件下，当光照强度为x（单位：klx）时，A电池板的输出电压$y_{1}$（单位：V）和B电池板的输出电压$y_{1}$（单位：V）．部分数据如下：
 
-    $x/k1x$
+    | $x/k1x$ | 0 | 10 | 20 | 30 | 40 | 50 | 60 | 70 | 80 | 90 | 100 |
 
-    0
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
-    10
+    | $y_{1}/V$ | 0 | 0.6 | 1.2 | 1.8 | m | 3.0 | 3.6 | 4.2 | 4.8 | 5.4 | 6.0 |
 
-    20
-
-    30
-
-    40
-
-    50
-
-    60
-
-    70
-
-    80
-
-    90
-
-    100
-
-    $y_{1}/V$
-
-    0
-
-    0.6
-
-    1.2
-
-    1.8
-
-    m
-
-    3.0
-
-    3.6
-
-    4.2
-
-    4.8
-
-    5.4
-
-    6.0
-
-    $y_{2}/N$
-
-    0
-
-    2.4
-
-    3.8
-
-    4.6
-
-    5.0
-
-    5.3
-
-    5.5
-
-    5.7
-
-    5.8
-
-    5.6
-
-    6.0
+    | $y_{2}/N$ | 0 | 2.4 | 3.8 | 4.6 | 5.0 | 5.3 | 5.5 | 5.7 | 5.8 | 5.6 | 6.0 |
 
     通过分析数据发现，可以用函数刻画$y_{1}$与x，$y_{2}$与x之间的关系，回答下列问题：
 
@@ -1211,7 +1119,7 @@ questions:
     ①当光照强度为$55k1x$时，B电池板的输出电压与A电池板的输出电压之差约为______V（结果保留小数点后一位）；
 
     ②如果想使两块电池板的输出电压之和不低于$6.5V$，则光照强度应至少达到______klx（结果保留整数）．'
-  answer: （1）①$2.4$；②见解析 （2）见解析（3）①$2.1$；②31
+  answer: （1）①$2.4$；②见解析 （2）见解析 （3）①$2.1$；②31
   solution: '【小问1详解】
 
     解：①由题意，设$y_{1}=k_{1}x\left(k_{1}\ne0\right)$，
@@ -1226,79 +1134,15 @@ questions:
 
     ②当光照强度越大时，太阳能电池板的输出电压越高．选出$y_{2}$中不符合这条规律的数据，在表格中划“x”如下：
 
-    $x/k1x$
+    | $x/k1x$ | 0 | 10 | 20 | 30 | 40 | 50 | 60 | 70 | 80 | 90 | 100 |
 
-    0
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
-    10
+    | $y_{1}/V$ | 0 | 0.6 | 1.2 | 1.8 | m | 3.0 | 3.6 | 4.2 | 4.8 | 5.4 | 6.0 |
 
-    20
+    | $y_{2}/N$ | 0 | 2.4 | 3.8 | 4.6 | 5.0 | 5.3 | 5.5 | 5.7 | 5.8 | 5.6 | 6.0 |
 
-    30
-
-    40
-
-    50
-
-    60
-
-    70
-
-    80
-
-    90
-
-    100
-
-    $y_{1}/V$
-
-    0
-
-    0.6
-
-    1.2
-
-    1.8
-
-    m
-
-    3.0
-
-    3.6
-
-    4.2
-
-    4.8
-
-    5.4
-
-    6.0
-
-    $y_{2}/N$
-
-    0
-
-    2.4
-
-    3.8
-
-    4.6
-
-    5.0
-
-    5.3
-
-    5.5
-
-    5.7
-
-    5.8
-
-    5.6
-
-    6.0
-
-    x
+    |  |  |  |  |  |  |  |  |  |  | x |  |
 
     【小问2详解】
 
@@ -1318,15 +1162,7 @@ questions:
 
     故答案为：$2.1$．
 
-    ②由表格数据可知，当$x = 30$时，$x_{1}+y_{2}=1.8+4.6=6.4$，
-
-    当$x=31$时，$x_1=0.06\times31=1.86$，$y_{2}=4.6+\frac{50-4.6}{40-30}=4.61$，
-
-    ∴当$x=31$时，$y_{1}+y_{2}=6.5$，
-
-    ∵$y_{1}, y_{2}$都是随x的增大而增大，
-
-    ∴如果想使两块电池板的输出电'
+    '
   knowledge_points:
   - 正比例函数
   - 坐标系
@@ -1336,8 +1172,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-haidian-yi-fig29.png
-  - figures/2025-haidian-yi-fig30.png
+  - path: figures/2025-haidian-yi-fig29.png
+    width_mm: 73.3
+    height_mm: 48.7
 - id: 26
   type: 解答
   score: 6
@@ -1518,9 +1355,9 @@ questions:
   recommended_for:
   - L3
   figures:
-  - figures/2025-haidian-yi-fig31.png
-  - figures/2025-haidian-yi-fig32.png
-  - figures/2025-haidian-yi-fig33.png
+  - path: figures/2025-haidian-yi-fig31.png
+    width_mm: 47.4
+    height_mm: 14.6
 - id: 28
   type: 解答
   score: 7
@@ -1591,11 +1428,6 @@ questions:
   recommended_for:
   - L3
   figures:
-  - figures/2025-haidian-yi-fig34.png
-  - figures/2025-haidian-yi-fig35.png
-  - figures/2025-haidian-yi-fig36.png
-  - figures/2025-haidian-yi-fig37.png
-  - figures/2025-haidian-yi-fig38.png
-  - figures/2025-haidian-yi-fig39.png
-  - figures/2025-haidian-yi-fig40.png
-  - figures/2025-haidian-yi-fig41.png
+  - path: figures/2025-haidian-yi-fig34.png
+    width_mm: 92.6
+    height_mm: 75.1

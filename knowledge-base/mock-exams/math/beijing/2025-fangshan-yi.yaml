@@ -19,7 +19,13 @@ questions:
   score: 2
   question: '在以下绿色食品、回收、节能、节水四个标志中，是轴对称图形的是（　　）
 
-    A.[图]B.[图]C.[图]D.[图]'
+    A.[图]
+
+    B.[图]
+
+    C.[图]
+
+    D.[图]'
   answer: A
   solution: 'A．是轴对称图形，故A符合题意；
 
@@ -41,16 +47,30 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-fangshan-yi-fig02.png
-  - figures/2025-fangshan-yi-fig03.png
-  - figures/2025-fangshan-yi-fig04.png
-  - figures/2025-fangshan-yi-fig05.png
+  - path: figures/2025-fangshan-yi-fig02.png
+    width_mm: 22.8
+    height_mm: 19.1
+  - path: figures/2025-fangshan-yi-fig03.png
+    width_mm: 19.8
+    height_mm: 18.8
+  - path: figures/2025-fangshan-yi-fig04.png
+    width_mm: 19.3
+    height_mm: 18.8
+  - path: figures/2025-fangshan-yi-fig05.png
+    width_mm: 18.5
+    height_mm: 18.0
 - id: 2
   type: 选择
   score: 2
   question: '据网络平台数据，截至2025年3月5日18时25分，电影《哪吒之魔童闹海》观影人次突破300000000，成为中国影史首部观影人次突破300000000的电影．将300000000用科学记数法表示为（）
 
-    A.$3\times10^{7}$B.$3\times10^{8}$C.$3\times10^{9}$D.$30\times10^{8}$'
+    A.$3\times10^{7}$
+
+    B.$3\times10^{8}$
+
+    C.$3\times10^{9}$
+
+    D.$30\times10^{8}$'
   answer: B
   solution: '解：$300000000=3\times10^{8}$；
 
@@ -68,13 +88,17 @@ questions:
 - id: 3
   type: 选择
   score: 2
-  question: '如图，直线$AB,\ CD$交于点O，$OE \perp AB$于O，若$\angle1=35^{\circ}$，则$\angle 2$的度数是（
-
-    ）
+  question: '如图，直线$AB,\ CD$交于点O，$OE \perp AB$于O，若$\angle1=35^{\circ}$，则$\angle 2$的度数是（   ）
 
     [图]
 
-    A.$55^\circ$B.$45^\circ$C.$35^\circ$D.$30^\circ$'
+    A.$55^\circ$
+
+    B.$45^\circ$
+
+    C.$35^\circ$
+
+    D.$30^\circ$'
   answer: A
   solution: '解：∵$OE \perp AB, \angle 1 = 35^\circ$，
 
@@ -93,7 +117,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-fangshan-yi-fig06.png
+  - path: figures/2025-fangshan-yi-fig06.png
+    width_mm: 32.3
+    height_mm: 33.1
 - id: 4
   type: 选择
   score: 2
@@ -101,7 +127,13 @@ questions:
 
     [图]
 
-    A.$b > -1$B.$b-c<0$C.$- ab > 0$D.$a+c>0$'
+    A.$b > -1$
+
+    B.$b-c<0$
+
+    C.$- ab > 0$
+
+    D.$a+c>0$'
   answer: C
   solution: '解：由数轴知：$a < b < -1 < 0 < a$，$a < b < c$，
 
@@ -118,13 +150,21 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-fangshan-yi-fig07.png
+  - path: figures/2025-fangshan-yi-fig07.png
+    width_mm: 63.5
+    height_mm: 11.1
 - id: 5
   type: 选择
   score: 2
   question: '若关于x的一元二次方程$x^{2}-2x+c=0$有两个相等的实数根，则实数c的值为（）
 
-    A.$-9$B.4C.$-1$D.1'
+    A.$-9$
+
+    B.4
+
+    C.$-1$
+
+    D.1'
   answer: D
   solution: '解：由题意，得：$\Delta-(-2)^{2}-4c=0$，
 
@@ -146,39 +186,25 @@ questions:
   score: 2
   question: '不透明袋子中仅有2个白球，1个红球，这些球除颜色外无其他差别，从中随机摸出1个球，放回并摇匀、再从中随机摸出一个球，则两次摸出的都是红球的概率是（）
 
-    A.$\frac{2}{3}$B.$\frac{1}{9}$C.$\frac{4}{9}$D.$\frac{1}{4}$'
+    A.$\frac{2}{3}$
+
+    B.$\frac{1}{9}$
+
+    C.$\frac{4}{9}$
+
+    D.$\frac{1}{4}$'
   answer: B
   solution: '解：由题意，列表如下：
 
-    白
+    |  | 白 | 白 | 红 |
 
-    白
+    | --- | --- | --- | --- |
 
-    红
+    | 白 | （白，白） | （白，白） | （白，红） |
 
-    白
+    | 白 | （白，白） | （白，白） | （白，红） |
 
-    （白，白）
-
-    （白，白）
-
-    （白，红）
-
-    白
-
-    （白，白）
-
-    （白，白）
-
-    （白，红）
-
-    红
-
-    （红，白）
-
-    （红，白）
-
-    （红，红）
+    | 红 | （红，白） | （红，白） | （红，红） |
 
     共9种等可能的结果，其中两次摸出的都是红球的结果为1种，
 
@@ -199,19 +225,19 @@ questions:
   score: 2
   question: '如图，在$V_{ABC}$中，$AB > BC$，O是AB边的中点．按下列要求作图：
 
-    （1）以点B为圆心，小于BO长度为半径画弧，分别交BA，BC于点D，E；
+    | （ 1 ）以点 B 为圆心，小于 BO 长度为半径画弧，分别交 BA ， BC 于点 D ， E ； （ 2 ）以点 O 为圆心， BD 长为半径画弧，交 OA 于点 F ；以点 F 为圆心， DE 长为半径画弧，两弧交于点 G ，点 G 与点 C 在直线 AB 同侧； （ 3 ）作直线 OG ，交 AC 于点 M ． [图] |
 
-    （2）以点O为圆心，BD长为半径画弧，交OA于点F；以点F为圆心，DE长为半径画弧，两弧交于点G，点G与点C在直线AB同侧；
-
-    （3）作直线OG，交AC于点M．
-
-    [图]
+    | --- |
 
     根据上面作图，下列结论错误的是（）
 
-    A.$\angle AOM = \angle B$B.$\triangle BDE \cong \triangle OFG$
+    A.$\angle AOM = \angle B$
 
-    C.$OM=\frac{1}{2}AB$D.$AM = CM$'
+    B.$\triangle BDE \cong \triangle OFG$
+
+    C.$OM=\frac{1}{2}AB$
+
+    D.$AM = CM$'
   answer: C
   solution: '解：由作图过程可知，$\angle AOM = \angle B$，故A选项正确，不符合题意；
 
@@ -252,8 +278,6 @@ questions:
   - L1
   - L2
   - L3
-  figures:
-  - figures/2025-fangshan-yi-fig08.png
 - id: 8
   type: 选择
   score: 2
@@ -271,7 +295,13 @@ questions:
 
     上述结论中，所有正确结论的序号是（）
 
-    A.①②B.③④C.①②③D.①②③④'
+    A.①②
+
+    B.③④
+
+    C.①②③
+
+    D.①②③④'
   answer: D
   solution: '解：∵$\triangle ABC, \triangle DEF$都是等边三角形，
 
@@ -333,7 +363,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-fangshan-yi-fig09.png
+  - path: figures/2025-fangshan-yi-fig08.png
+    width_mm: 42.9
+    height_mm: 41.5
 - id: 9
   type: 填空
   score: 2
@@ -431,29 +463,11 @@ questions:
   score: 2
   question: '某小区有500户家庭，随机抽取50户家庭，对某月用电量情况统计如表：
 
-    月用电量x（千瓦时）
+    | 月用电量 x （千瓦时） | $x \leq 240$ | $240<x\leq300$ | $300 < x \leq 350$ | $350 < x \leq 400$ | $x>400$ |
 
-    $x \leq 240$
+    | --- | --- | --- | --- | --- | --- |
 
-    $240<x\leq300$
-
-    $300 < x \leq 350$
-
-    $350 < x \leq 400$
-
-    $x>400$
-
-    户数（户）
-
-    7
-
-    13
-
-    10
-
-    15
-
-    5
+    | 户数（户） | 7 | 13 | 10 | 15 | 5 |
 
     根据以上数据，估计该小区用电量在$240 < x \leq 400$（千瓦时）的家庭有______户．'
   answer: '380'
@@ -493,7 +507,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-fangshan-yi-fig10.png
+  - path: figures/2025-fangshan-yi-fig09.png
+    width_mm: 31.0
+    height_mm: 28.6
 - id: 15
   type: 填空
   score: 2
@@ -565,36 +581,24 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-fangshan-yi-fig11.png
+  - path: figures/2025-fangshan-yi-fig10.png
+    width_mm: 35.5
+    height_mm: 34.4
 - id: 16
   type: 填空
   score: 2
   question: '某工厂需要生产三种产品A，B，C，每种产品的生产分为两个阶段：第一阶段是制作，第二阶段是包装，每种产品在每个阶段所需的时间（单位：小时）如表所示：
 
-    A
+    |  | A | B | C |
 
-    B
+    | --- | --- | --- | --- |
 
-    C
+    | 制作 | 10 | 8 | 12 |
 
-    制作
-
-    10
-
-    8
-
-    12
-
-    包装
-
-    6
-
-    10
-
-    8
+    | 包装 | 6 | 10 | 8 |
 
     若由一名工人单独完成三种产品的生产，那么总共需要_____小时；若由两位工人合作完成这三种产品的生产，每个阶段由一个人单独完成，每种产品制作完才可以包装，那么完成这三种产品的生产最少需要_____小时．'
-  answer: ①.54②.28
+  answer: ①.54 ②.28
   solution: '解：$10+6+8+10+12+8=54$（小时）；
 
     当由两位工人合作完成时，一人依次完成A产品第一阶段，B产品的第一阶段，C产品的第二阶段，另一人依次完成C产品第一阶段，A产品的第二阶段，B产品的第二阶段，则至少需要$12+6+10=28$（小时）．
@@ -683,7 +687,7 @@ questions:
     （1）求证：四边形$ABCD$是菱形；
 
     （2）若$BC = \sqrt{5}$，$BD = 4$，求DG的长．'
-  answer: （1）见解析（2）$DG=2$
+  answer: （1）见解析 （2）$DG=2$
   solution: '【小问1详解】
 
     ∵$AE \parallel BF$
@@ -748,8 +752,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-fangshan-yi-fig12.png
-  - figures/2025-fangshan-yi-fig13.png
+  - path: figures/2025-fangshan-yi-fig11.png
+    width_mm: 69.8
+    height_mm: 28.8
 - id: 21
   type: 解答
   score: 5
@@ -773,7 +778,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-fangshan-yi-fig14.png
+  - path: figures/2025-fangshan-yi-fig13.png
+    width_mm: 111.1
+    height_mm: 32.8
 - id: 22
   type: 解答
   score: 5
@@ -822,20 +829,16 @@ questions:
   - L1
   - L2
   - L3
-  figures:
-  - figures/2025-fangshan-yi-fig15.png
 - id: 23
   type: 解答
   score: 6
   question: '为进一步推动阳光体育运动，提高学生身体素质，某校举行健美操比赛．最终有甲、乙、丙三个班级进入团体决赛，团体决赛需要分别进行五个单项比赛．单项比赛和团体决赛的计分规则如下表：
 
-    单项比赛计分规则
+    | 单项比赛计分规则 | 五名裁判打分，去掉一个最高分和一个最低分，剩下三个有效分的平均数即为该项得分． |
 
-    五名裁判打分，去掉一个最高分和一个最低分，剩下三个有效分的平均数即为该项得分．
+    | --- | --- |
 
-    团体决赛计分规则
-
-    各单项比赛得分之和为团体最终成绩，最终成绩较高的班级排序靠前，若最终成绩相同，则整体发挥稳定性较好的班级排序靠前．
+    | 团体决赛计分规则 | 各单项比赛得分之和为团体最终成绩，最终成绩较高的班级排序靠前，若最终成绩相同，则整体发挥稳定性较好的班级排序靠前． |
 
     现将参加比赛的甲、乙、丙三个班级的得分数据进行整理、描述和分析，并绘制统计图表，部分信息如下：
 
@@ -845,29 +848,11 @@ questions:
 
     b．丙班五个单项得分表：
 
-    项目
+    | 项目 | 一 | 二 | 三 | 四 | 五 |
 
-    一
+    | --- | --- | --- | --- | --- | --- |
 
-    二
-
-    三
-
-    四
-
-    五
-
-    得分
-
-    88
-
-    m
-
-    94
-
-    90
-
-    92
+    | 得分 | 88 | m | 94 | 90 | 92 |
 
     根据以上信息，回答下列问题：
 
@@ -878,7 +863,7 @@ questions:
     （3）甲班与丙班相比较，排名比较靠前的是________班（填“甲”或“丙”）；
 
     （4）若最终的比赛结果乙班排名居中，则乙班第五个项目的得分可能为________（得分为整数）．'
-  answer: （1）92（2）83 （3）丙（4）98
+  answer: （1）92（2）83 （3）丙 （4）98
   solution: '【小问1详解】
 
     解：由折线统计图知，甲班得分按由低到高排列为80，83，92，93，98，则中间位置的分数是92，即中位数为92；
@@ -920,7 +905,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-fangshan-yi-fig16.png
+  - path: figures/2025-fangshan-yi-fig15.png
+    width_mm: 117.5
+    height_mm: 57.4
 - id: 24
   type: 解答
   score: 6
@@ -931,7 +918,7 @@ questions:
     （1）求证：$CO \perp AB$；
 
     （2）若$AE = \sqrt{10}$，$\tan \angle DAB = \frac{1}{3}$，求AD的长．'
-  answer: （1）见解析（2）$\frac{9\sqrt{10}}{5}$
+  answer: （1）见解析 （2）$\frac{9\sqrt{10}}{5}$
   solution: '【小问1详解】
 
     证明：∵CD是$\odot\odot$切线，
@@ -984,8 +971,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-fangshan-yi-fig17.png
-  - figures/2025-fangshan-yi-fig18.png
+  - path: figures/2025-fangshan-yi-fig16.png
+    width_mm: 29.9
+    height_mm: 39.4
 - id: 25
   type: 解答
   score: 6
@@ -997,53 +985,11 @@ questions:
 
     （1）通过取点、画图、测量，得到了x与y的几组值，如表：
 
-    x
+    | x | 0 | 1 | 1.5 | 2 | 2.5 | 3 | 3.45 | 3.5 | 3.8 | 3.9 | 4 |
 
-    0
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
-    1
-
-    1.5
-
-    2
-
-    2.5
-
-    3
-
-    3.45
-
-    3.5
-
-    3.8
-
-    3.9
-
-    4
-
-    y
-
-    0
-
-    0.12
-
-    0$[公式]$39
-
-    0.87
-
-    1.52
-
-    2.23
-
-    2.60
-
-    2.59
-
-    2.13
-
-    1.62
-
-    m
+    | y | 0 | 0.12 | 0 $[公式]$ 39 | 0.87 | 1.52 | 2.23 | 2.60 | 2.59 | 2.13 | 1.62 | m |
 
     m的值为________；
 
@@ -1080,8 +1026,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-fangshan-yi-fig19.png
-  - figures/2025-fangshan-yi-fig20.png
+  - path: figures/2025-fangshan-yi-fig18.png
+    width_mm: 34.4
+    height_mm: 20.1
 - id: 26
   type: 解答
   score: 6
@@ -1139,7 +1086,7 @@ questions:
     （1）依题意补全图形；
 
     （2）若点N是AF的中点，连接ND和NE，猜想线段ND与NE的数量关系和位置关系，并证明．'
-  answer: （1）见解析（2）$DN = NE$，$DN \perp NE$
+  answer: （1）见解析 （2）$DN = NE$，$DN \perp NE$
   solution: '【小问1详解】
 
     解：如图所示，可得$DC = FD$，$\angle CDF = 90^\circ$．
@@ -1207,9 +1154,9 @@ questions:
   recommended_for:
   - L3
   figures:
-  - figures/2025-fangshan-yi-fig21.png
-  - figures/2025-fangshan-yi-fig22.png
-  - figures/2025-fangshan-yi-fig23.png
+  - path: figures/2025-fangshan-yi-fig20.png
+    width_mm: 31.8
+    height_mm: 24.1
 - id: 28
   type: 解答
   score: 7
@@ -1271,7 +1218,6 @@ questions:
   recommended_for:
   - L3
   figures:
-  - figures/2025-fangshan-yi-fig24.png
-  - figures/2025-fangshan-yi-fig25.png
-  - figures/2025-fangshan-yi-fig26.png
-  - figures/2025-fangshan-yi-fig27.png
+  - path: figures/2025-fangshan-yi-fig23.png
+    width_mm: 41.3
+    height_mm: 41.5

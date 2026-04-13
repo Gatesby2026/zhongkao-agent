@@ -1,0 +1,587 @@
+# ============================================================
+# 2005年北京市中考数学真题试卷 — 逐题分析
+# ============================================================
+# 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
+# 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
+# 满分：100分  时长：120分钟
+
+year: 2005
+district: 北京市
+exam_type: 真题
+subject: 数学
+full_score: 100
+duration_minutes: 120
+total_questions: 20
+structure: 8选择(16分) + 8填空(16分) + 12解答(68分)
+questions:
+- id: 1
+  type: 选择
+  score: 2
+  question: '$-2$的相反数是（    ）
+
+    A.$-\frac{1}{2}$
+
+    B.$\frac{1}{2}$
+
+    C. 2
+
+    D.$-2$'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 2
+  type: 选择
+  score: 2
+  question: '下列运算中，正确的是（    ）
+
+    A.$\sqrt{4}=2$
+
+    B.$2^{-1} = -6$
+
+    C.$(ab)^2 = ab^2$
+
+    D.$3a+2a=5a^{2}$'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 3
+  type: 选择
+  score: 2
+  question: '下列根式中，与$\sqrt{3}$ 是同类二次根式的是（    ）
+
+    A.$\sqrt{24}$
+
+    B.$\sqrt{12}$
+
+    C.$\sqrt{\frac{3}{2}}$
+
+    D.$\sqrt{18}$'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 4
+  type: 选择
+  score: 2
+  question: '下列图形中，不是中心对称图形的是（    ）
+
+    A.圆
+
+    B.菱形
+
+    C.矩形
+
+    D.等边三角形'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 中心对称图形
+  - 矩形
+  - 菱形
+  module: triangles
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 5
+  type: 选择
+  score: 2
+  question: '据国家环保总局通报，北京市是“十五”水污染防治计划完成最好的城市。预计今年年底，北京市污水处理能力可以达到每日1684000吨。将1684000吨用科学记数法表示为（    ）
+
+    A.$1.684 \times 10^{6}$吨
+
+    B.$1.684 \times 10^{5}$吨
+
+    C.$0.1684 \times 10^{7}$吨
+
+    D.$16.84 \times 10^{5}$吨'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 科学记数法
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 6
+  type: 选择
+  score: 2
+  question: '如图，在半径为5的⊙O中，如果弦AB的长为8，那么它的弦心距OC等于（    ）
+
+    $\angle AOB = 120^\circ$
+
+    A. 2
+
+    B. 3
+
+    C. 4
+
+    D. 6'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 弦
+  module: circles
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 7
+  type: 选择
+  score: 2
+  question: '用换元法解方程$\frac{x^{2}}{x^{2}-1}-6\left(\frac{x^{2}-1}{x^{2}}\right)+1=0$ 时，如果设$\frac{x^{2}}{x^{2}-1}=\gamma$ ，那么原方程可化为（    ）
+
+    A.$y+\frac{6}{y}+1=0$
+
+    B.$y^{2}-6y+1=0$
+
+    C.$y-\frac{6}{y}+1=0$
+
+    D.$y-\frac{6}{y^{2}}+1=0$'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 8
+  type: 选择
+  score: 2
+  question: '如图，PA、PB是⊙O的两条切线，切点是A、B。如果OP＝4，$PA = 2\sqrt{3}$ ，那么∠AOB等于（    ）
+
+    $\angle AOB = 2\angle APB$
+
+    A. 90°
+
+    B. 100°
+
+    C. 110°
+
+    D. 120°'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 切线
+  module: circles
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 9
+  type: 填空
+  score: 2
+  question: "如图，在平行四边形ABCD中，E是AD上一点，连结CE并延长交BA的延长线于点F，则下列结论中错误的是（    ）\n$\\triangle ABC$\nA.∠AEF＝∠DEC\t\t\tB. FA:CD＝AE:BCC. FA:AB＝FE:ECD. AB＝DC"
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 平行四边形
+  module: quadrilaterals
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 10
+  type: 填空
+  score: 2
+  question: '李大伯承包了一个果园，种植了100棵樱桃树，今年已进入收获期。收获时，从中任选并采摘了10棵树的樱桃，分别称得每棵树所产樱桃的质量如下表：
+
+    | 序号 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
+
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+
+    | 质量（千克） | 14 | 21 | 27 | 17 | 18 | 20 | 19 | 23 | 19 | 22 |
+
+    据调查，市场上今年樱桃的批发价格为每千克15元。用所学的统计知识估计今年此果园樱桃的总产量与按批发价格销售樱桃所得的总收入分别约为（    ）
+
+    A. 200千克，3000元 B. 1900千克，28500元C. 2000千克，30000元 D. 1850千克，27750元'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 统计
+  module: statisticsAndProbability
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 11
+  type: 填空
+  score: 2
+  question: '如下图，在平行四边形ABCD中，∠DAB＝60°，AB＝5，BC＝3，点P从起点D出发，沿DC、CB向终点B匀速运动。设点P所走过的路程为x，点P所经过的线段与线段AD、AP所围成图形的面积为y，y随x的变化而变化。在下列图象中，能正确反映y与x的函数关系的是（    ）
+
+    $\begin{tikzpicture}[scale=0.8]
+
+    % Draw parallelogram ABCD
+
+    \draw (0,0) -- (4,0) -- (6,2) -- (2,2) -- cycle;
+
+    \draw (0,0) node[anchor=north east] {A};
+
+    \draw (4,0) node[anchor=north west] {B};
+
+    \draw (6,2) node[anchor=south west] {C};
+
+    \draw (2,2) node[anchor=south east] {D};
+
+    % Draw point P and arrow
+
+    \draw (2,2) -- (3.5,1.5);
+
+    \draw (3.5,1.5) node[anchor=south west] {P};
+
+    \draw[->] (3.5,1.5) -- (4.5,1.5);
+
+    % Draw arrow from B to C
+
+    \draw[->] (4,0) -- (4.5,0.5);
+
+    % Graph A
+
+    \begin{scope}[xshift=-5cm]
+
+    \draw[->] (0,0) -- (3,0) node[right] {$x$};
+
+    \draw[->] (0,0) -- (0,2) node[above] {$y$};
+
+    \draw (0,0) -- (2,2);
+
+    \draw[dashed] (2,2)$
+
+    第II卷（非机读卷共76分）
+
+    二.填空题（共5个小题，每小题4分，共20分）'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 平行四边形
+  module: quadrilaterals
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 12
+  type: 填空
+  score: 2
+  question: 在函数$y=\frac{1}{x-2}$ 中，自变量x的取值范围是____________。
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: functions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 13
+  type: 填空
+  score: 2
+  question: '不等式组$\begin{cases}
+
+    x-2<1 \\
+
+    2x+1>0
+
+    \end{cases}$ 的解集是____________。'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 不等式
+  - 不等式组
+  module: equationsAndInequalities
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 14
+  type: 填空
+  score: 2
+  question: '如果反比例函数的图象经过点（1，-2），那么这个反比例函数的解析式为_______
+
+    _________________。'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 反比例函数
+  module: functions
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 15
+  type: 填空
+  score: 2
+  question: 如果正多边形的一个外角为72°，那么它的边数是____________。
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: triangles
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 16
+  type: 填空
+  score: 2
+  question: '在△ABC中，∠B＝25°，AD是BC边上的高，并且$AD^{2}=BD\cdot DC$ ，则∠BCA的度数为____________。
+
+    三.（共3个小题，共15分）'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 17
+  type: 解答
+  score: 5
+  question: '（本小题满分4分）    分解因式：$m^{2}-n^{2}+2m-2n$
+
+    解：'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 18
+  type: 解答
+  score: 5
+  question: '（本小题满分5分）    计算：$\sqrt{27}+\frac{1}{2+\sqrt{3}}-(\cos 30^{\circ})^{2}$
+
+    解'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 19
+  type: 解答
+  score: 5
+  question: "（本小题满分6分）    用配方法解方程$x^{2}-4x+1=0$\n解：\n四.（本题满分5分）20.已知：如图，在梯形ABCD中，AD∥BC，AB＝DC，点E、F分别在AB、DC上，且BE＝2EA，CF＝2FD。    求证：∠BEC＝∠CFB\n$\\begin{tikzpicture}\n\\draw (0,0) -- (4,0) -- (3,2) -- (1,2)\
+    \ -- cycle;\n\\draw (1,2) -- (4,0);\n\\draw (0,0) -- (3,2);\n\\draw (1,2) -- (1.5,1) -- (3,2);\n\\draw (0,0) -- (1.5,1) -- (4,0);\n\\node at (0,2) {A};\n\\node at (4,2) {D};\n\\node at (0,0) {B};\n\\\
+    node at (4,0) {C};\n\\node at (1,2) {E};\n\\node at (3,2) {F};\n\\end{tikzpicture}$\n证明：\n五.（本题满分6分）21.如图，河旁有一座小山，从山顶A处测得河对岸点C的俯角为30°，测得岸边点D的俯角为45°，又知河宽CD为50米。现需从山顶A到河对岸点C拉一条笔直的缆绳AC，求缆绳AC的长（答案可带根号）。\n\
+    $\\angle EAC = 43^\\circ$\n解：\n六.（本题满分6分）22.列方程或方程组解应用题：\n夏季，为了节约用电，常对空调采取调高设定温度和清洗设备两种措施。某宾馆先把甲、乙两种空调的设定温度都调高1℃，结果甲种空调比乙种空调每天多节电27度；再对乙种空调清洗设备，使得乙种空调每天的总节电量是只将温度调高1℃后的节电量的1.1倍，而甲种空调节电量不变，这样两种空调每天共节电405度。求只将温度调高1℃后两种空调每天各节电多少度？\n\
+    解：\n七.（本题满分7分）23.已知：关于x的方程$(a+2)^{2}x^{2}-2ax+a=0$ 有两个不相等的实数根$x_{1}$ 和$x_{2}$ ，并且抛物线$y = x^2 - (2a + 1)x + 2a - 5$ 与x轴的两个交点分别位于点（2，0）的两旁。\n（1）求实数a的取值范围；\n（2）当$|x_{1}|+|x_{2}|=2\\sqrt{2}$ 时，求a的值。\n解：（1）\n\
+    （2）\n八.（本题满分8分）24.已知：在Rt△ABC中，∠ABC＝90°，D是AC的中点，⊙O经过A、D、B三点，CB的延长线交⊙O于点E（如图1）。\n在满足上述条件的情况下，当∠CAB的大小变化时，图形也随着改变（如图2），在这个变化过程中，有些线段总保持着相等的关系。\n（1）观察上述图形，连结图2中已标明字母的某两点，得到一条新线段，证明它与线段CE相等；\n（2）在图2中，过点E作⊙O的切线，交AC的延长线于点F。\n\
+    ①若CF＝CD，求sin∠CAB的值；\n②若$\\frac{CF}{CD}=n\\,(n>0)$ ，试用含n的代数式表示sin∠CAB（直接写出结果）。\n$\\angle ABD = \\angle CBD, \\quad \\angle ADB = \\angle CDB$\n（1）连结__________________\n求证：_________＝CE\n证明：\n（2）解：①\n\
+    ②$\\sin \\angle CAB =$_____________（$n>0$ ）\n九.（本题满分9分）25.已知：在平面直角坐标系xOy中，一次函数$y=kx-4k$ 的图象与x轴交于点A，抛物线$y = ax^{2} + bx + c$ 经过O、A两点。\n（1）试用含a的代数式表示b；\n（2）设抛物线的顶点为D，以D为圆心，DA为半径的圆被x轴分为劣弧和优弧两部分。若将劣弧沿x轴翻折，翻折后的劣弧落在⊙D内，它所在的圆恰与OD相切，求⊙D半径的长及抛物线的解析式；\n\
+    （3）设点B是满足（2）中条件的优弧上的一个动点，抛物线在x轴上方的部分上是否存在这样的点P，使得$\\angle POA=\\frac{4}{3}\\angle OBA$ ？若存在，求出点P的坐标；若不存在，请说明理由。\n（1）解：\n（2）解：\n（3）解答：\n参考答案\n第I卷（机读卷共44分）\n一.选择题（共11个小题，每小题4分，共44分）1. C\t2. A\t\t3. B\t\
+    \t4. D\t5. A\t6. B  7. C8. D\t9. B\t10. \t11. A\n第II卷（非机读卷共76分）\n二.填空题（共5个小题，每小题4分，共20分）12.$x=2$ 13.$-\\frac{1}{2}<x<3$ 14.$y = -\\frac{2}{x}$ 15. 5  16. 65°或115°\n三.（共3个小题，共15分）17.（本小题满分4分）分解因式：$m^{2}-n^{2}+2m-2n$\n\
+    解：$m^{2}-n^{2}+2m-2n$\n$=m^2-n^2+(2m-2n)$ ………………1分\n$=(m+n)(m-n)+2(m-n)$ ………………3分\n$=(m-n)(m+n+2)$ ………………4分\n18.（本小题满分5分）计算：$\\sqrt{27}+\\frac{1}{2+\\sqrt{3}}-(\\cos 30^{\\circ})^{2}$\n解：$\\sqrt{27}+\\\
+    frac{1}{2+\\sqrt{3}}-(\\cos 30^{\\circ})^{2}$\n$=3\\sqrt{3}+\\frac{2-\\sqrt{3}}{(2+\\sqrt{3})(2-\\sqrt{3})}-1$ ………………3分\n$=3\\sqrt{3}+2-\\sqrt{3}-1$ ………………4分\n$=2\\sqrt{3}+1$ ………………5分"
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 一次函数
+  - 切线
+  - 坐标系
+  - 动点
+  module: functions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 25
+  type: 解答
+  score: 6
+  question: '已知：在平面直角坐标系xOy中，一次函数$y=kx-4k$的图象与x轴交于点A，抛物线$y = ax^{2} + bx + c$经过O、A两点。
+
+    （1）试用含a的代数式表示b；
+
+    （2）设抛物线的顶点为D，以D为圆心，DA为半径的圆被x轴分为劣弧和优弧两部分。若将劣弧沿x轴翻折，翻折后的劣弧落在⊙D内，它所在的圆恰与OD相切，求⊙D半径的长及抛物线的解析式；
+
+    （3）设点B是满足（2）中条件的优弧上的一个动点，抛物线在x轴上方的部分上是否存在这样的点P，使得$\angle POA=\frac{4}{3}\angle OBA$？若存在，求出点P的坐标；若不存在，请说明理由。
+
+    （1）解法一：∵一次函数$y=kx-4k$的图象与x轴交于点A
+
+    ∴点A的坐标为（4，0）
+
+    ∵抛物线$y = ax^{2} + bx + c$经过O、A两点
+
+    $\ldots c=0,\ 16a+4b=0$
+
+    $\therefore b = -4a$ ………………1分
+
+    解法二：∵一次函数$y=kx-4k$的图象与x轴交于点A
+
+    ∴点A的坐标为（4，0）
+
+    ∵抛物线$y = ax^{2} + bx + c$经过O、A两点
+
+    ∴抛物线的对称轴为直线$x=2$
+
+    $\therefore x=-\frac{b}{2a}=2$
+
+    $\therefore b = -4a$ ………………1分
+
+    （2）解：由抛物线的对称性可知，DO＝DA
+
+    ∴点O在⊙D上，且∠DOA＝∠DAO
+
+    又由（1）知抛物线的解析式为$y = ax^2 - 4ax$
+
+    ∴点D的坐标为（$2,\ -4a$）
+
+    ①当$a>0$时，
+
+    $\angle D''OA = \angle DOA$
+
+    如图1，设⊙D被x轴分得的劣弧为$\overset{\frown}{OmA}$，它沿x轴翻折后所得劣弧为$\widehat{O n A}$，显然$\widehat{O n A}$所在的圆与⊙D关于x轴对称，设它的圆心为D''
+
+    ∴点D''与点D也关于x轴对称
+
+    ∵点O在⊙D''上，且⊙D与⊙D''相切
+
+    ∴点O为切点………………2分
+
+    ∴D''O⊥OD
+
+    ∴∠DOA＝∠D''OA＝45°
+
+    ∴△ADO为等腰直角三角形
+
+    $\therefore OD = 2\sqrt{2}$ ………………3分
+
+    ∴点D的纵坐标为$-2$
+
+    $\therefore -4a = -2 \\
+
+    \therefore a = \frac{1}{2},\quad b = -4a = -2$
+
+    ∴抛物线的解析式为$y=\frac{1}{2}x^{2}-2x$………………4分
+
+    ②当$a < 0$时，
+
+    同理可得：$OD = 2\sqrt{2}$
+
+    抛物线的解析式为$y = -\frac{1}{2}x^2 + 2x$………………5分
+
+    综上，⊙D半径的长为$2\sqrt{2}$，抛物线的解析式为$y=\frac{1}{2}x^{2}-2x$或$y = -\frac{1}{2}x^2 + 2x$
+
+    （3）解答：抛物线在x轴上方的部分上存在点P，使得$\angle POA=\frac{4}{3}\angle OBA$
+
+    设点P的坐标为（x，y），且y＞0
+
+    ①当点P在抛物线$y=\frac{1}{2}x^{2}-2x$上时（如图2）
+
+    $\angle PAB = \angle PBA$
+
+    ∵点B是⊙D的优弧上的一点
+
+    $\angle OBA=\frac{1}{2}\angle ADO=45^{\circ}$
+
+    $\angle POA=\frac{4}{3}\angle OBA=60^{\circ}$
+
+    过点P作PE⊥x轴于点E
+
+    $\begin{aligned}
+
+    &1. \tan \angle POE = \frac{EP}{OE} \\
+
+    &2. \frac{y}{x} = \tan 60^\circ \\
+
+    &3. y = \sqrt{3}x
+
+    \end{aligned}$
+
+    由$\begin{cases}
+
+    y = \sqrt{3}x \\
+
+    y = \dfrac{1}{2}x^2 - 2x
+
+    \end{cases}$解得：$\left\{\begin{array}{l}x_{1}=4+2 \sqrt{5} \\ y_{1}=6+4 \sqrt{5}\end{array}\right.\left\{\begin{array}{l}x_{2}=0 \\ y_{2}=0\end{array}\right.$（舍去）
+
+    ∴点P的坐标为$\left(4+2\sqrt{3},\ 6+4\sqrt{3}\right)$………………7分
+
+    ②当点P在抛物线$y = -\frac{1}{2}x^2 + 2x$上时（如图3）
+
+    $\angle AOB = 90^\circ$
+
+    同理可得，$y=\sqrt{3}x$
+
+    由$\begin{aligned}
+
+    & y = \sqrt{3}x \\
+
+    & y = -\frac{1}{2}x^2 + 2x
+
+    \end{aligned}$解得：$\left\{\begin{array}{l}x_{1}=4-2 \sqrt{3} \\ y_{1}=-6+4 \sqrt{3}\end{array}\right.,\left\{\begin{array}{l}x_{2}=0 \\ y_{2}=0\end{array}\right.$（舍去）
+
+    ∴点P的坐标为$(1-2\sqrt{3}, -6+4\sqrt{3})$………………9分
+
+    综上，存在满足条件的点P，点P的坐标为
+
+    $\left(4+2\sqrt{3},\ 6+4\sqrt{3}\right)$或$(1-2\sqrt{3}, -6+4\sqrt{3})$'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 一次函数
+  - 轴对称
+  - 坐标系
+  - 动点
+  module: functions
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3

@@ -17,13 +17,17 @@ questions:
 - id: 1
   type: 选择
   score: 2
-  question: '下列几何体中，主视图为下图的是（
-
-    ）
+  question: '下列几何体中，主视图为下图的是（    ）
 
     [图]
 
-    A.[图]B.[图]C.[图]D.[图]'
+    A.[图]
+
+    B.[图]
+
+    C.[图]
+
+    D.[图]'
   answer: A
   solution: '解：A．主视图为矩形，符合题意；
 
@@ -44,17 +48,33 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-haidian-yi-fig02.png
-  - figures/2023-haidian-yi-fig03.png
-  - figures/2023-haidian-yi-fig04.png
-  - figures/2023-haidian-yi-fig05.png
-  - figures/2023-haidian-yi-fig06.png
+  - path: figures/2023-haidian-yi-fig02.png
+    width_mm: 13.8
+    height_mm: 15.9
+  - path: figures/2023-haidian-yi-fig03.png
+    width_mm: 13.2
+    height_mm: 19.6
+  - path: figures/2023-haidian-yi-fig04.png
+    width_mm: 14.3
+    height_mm: 18.5
+  - path: figures/2023-haidian-yi-fig05.png
+    width_mm: 18.8
+    height_mm: 20.1
+  - path: figures/2023-haidian-yi-fig06.png
+    width_mm: 19.6
+    height_mm: 20.6
 - id: 2
   type: 选择
   score: 2
   question: '北京植物园从上世纪五十年代开始建设种子库，目前库中已有种子83000余份，总量位居世界第二位．将83000用科学记数法表示应为（）
 
-    A.$83\times10^{3}$B.$8.3\times10^{4}$C.$8.3\times10^{5}$D.$0.83\times10^{5}$'
+    A.$83\times10^{3}$
+
+    B.$8.3\times10^{4}$
+
+    C.$8.3\times10^{5}$
+
+    D.$0.83\times10^{5}$'
   answer: B
   solution: '解：83000用科学记数法表示为$8.3\times10^{4}$．
 
@@ -74,7 +94,13 @@ questions:
   score: 2
   question: '在一条沿直线MN铺设的电缆两侧有甲、乙两个小区，现要求在MN上选取一点P，向两个小区铺设电缆．下面四种铺设方案中，使用电缆材料最少的是（）
 
-    A.[图]B.[图]C.[图]D.[图]'
+    A.[图]
+
+    B.[图]
+
+    C.[图]
+
+    D.[图]'
   answer: A
   solution: '解：$\begin{array}{c}
 
@@ -107,16 +133,30 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-haidian-yi-fig07.png
-  - figures/2023-haidian-yi-fig08.png
-  - figures/2023-haidian-yi-fig09.png
-  - figures/2023-haidian-yi-fig10.png
+  - path: figures/2023-haidian-yi-fig07.png
+    width_mm: 37.8
+    height_mm: 32.0
+  - path: figures/2023-haidian-yi-fig08.png
+    width_mm: 38.1
+    height_mm: 32.3
+  - path: figures/2023-haidian-yi-fig09.png
+    width_mm: 38.6
+    height_mm: 32.5
+  - path: figures/2023-haidian-yi-fig10.png
+    width_mm: 39.2
+    height_mm: 33.1
 - id: 4
   type: 选择
   score: 2
   question: '不透明的袋子中装有2个红球和3个黄球，两种球除颜色外无其他差别，从中随机摸出一个小球，摸到黄球的概率是（）
 
-    A.$\frac{2}{3}$B.$\frac{3}{4}$C.$\frac{2}{5}$D.$\frac{3}{5}$'
+    A.$\frac{2}{3}$
+
+    B.$\frac{3}{4}$
+
+    C.$\frac{2}{5}$
+
+    D.$\frac{3}{5}$'
   answer: D
   solution: '解：∵不透明的袋子里装有2个红球，3个黄球，
 
@@ -139,7 +179,13 @@ questions:
 
     [图]
 
-    A.$|m| < |n|$B.$m+n>0$C.$m-n<0$D.$mn > 0$'
+    A.$|m| < |n|$
+
+    B.$m+n>0$
+
+    C.$m-n<0$
+
+    D.$mn > 0$'
   answer: B
   solution: '解：由题意得，$-2<n<-1<3<m<4$，
 
@@ -158,13 +204,21 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-haidian-yi-fig11.png
+  - path: figures/2023-haidian-yi-fig11.png
+    width_mm: 76.7
+    height_mm: 10.8
 - id: 6
   type: 选择
   score: 2
   question: '若关于x的一元二次方程x2﹣2x+m＝0有两个相等的实数根，则m的值是（　　）
 
-    A.﹣1B.0C.1D.2'
+    A.﹣1
+
+    B.0
+
+    C.1
+
+    D.2'
   answer: C
   solution: '解：∵关于x的一元二次方程x2﹣2x+m＝0有两个相等的实数根，
 
@@ -189,7 +243,13 @@ questions:
 
     [图]
 
-    A.$63^\circ$B.$36^\circ$C.$27^\circ$D.$18^\circ$'
+    A.$63^\circ$
+
+    B.$36^\circ$
+
+    C.$27^\circ$
+
+    D.$18^\circ$'
   answer: C
   solution: '解：如图所示，在$Rt\triangle ABD$中，$\angle BAD = 90^\circ,\ \angle ACD = 90^\circ$，$\angle CAD=27^\circ$，
 
@@ -211,8 +271,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-haidian-yi-fig12.png
-  - figures/2023-haidian-yi-fig13.png
+  - path: figures/2023-haidian-yi-fig12.png
+    width_mm: 59.8
+    height_mm: 39.7
 - id: 8
   type: 选择
   score: 2
@@ -220,7 +281,13 @@ questions:
 
     [图]
 
-    A.[图]B.[图]C.[图]D.[图]'
+    A.[图]
+
+    B.[图]
+
+    C.[图]
+
+    D.[图]'
   answer: C
   solution: '根据图像可知y与x是一次函数，z和y是正比例函数，设关系式为$y=kx+b$，
 
@@ -239,11 +306,21 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-haidian-yi-fig14.png
-  - figures/2023-haidian-yi-fig15.png
-  - figures/2023-haidian-yi-fig16.png
-  - figures/2023-haidian-yi-fig17.png
-  - figures/2023-haidian-yi-fig18.png
+  - path: figures/2023-haidian-yi-fig14.png
+    width_mm: 76.2
+    height_mm: 38.9
+  - path: figures/2023-haidian-yi-fig15.png
+    width_mm: 35.7
+    height_mm: 36.2
+  - path: figures/2023-haidian-yi-fig16.png
+    width_mm: 24.6
+    height_mm: 33.9
+  - path: figures/2023-haidian-yi-fig17.png
+    width_mm: 22.5
+    height_mm: 31.5
+  - path: figures/2023-haidian-yi-fig18.png
+    width_mm: 23.5
+    height_mm: 31.5
 - id: 9
   type: 填空
   score: 2
@@ -312,29 +389,11 @@ questions:
   score: 2
   question: '根据下表估计$\sqrt{269}\approx$_________（精确到$0.1$）．
 
-    x
+    | x | $16.2$ | $16.3$ | $16.4$ | $16.5$ | $16.6$ |
 
-    $16.2$
+    | --- | --- | --- | --- | --- | --- |
 
-    $16.3$
-
-    $16.4$
-
-    $16.5$
-
-    $16.6$
-
-    $x^2$
-
-    $262.44$
-
-    $265.69$
-
-    $268.96$
-
-    $272.25$
-
-    $275.56$'
+    | $x^2$ | $262.44$ | $265.69$ | $268.96$ | $272.25$ | $275.56$ |'
   answer: $16.4$
   solution: '解：∵$268.96<269<272.25$，
 
@@ -380,7 +439,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-haidian-yi-fig19.png
+  - path: figures/2023-haidian-yi-fig19.png
+    width_mm: 46.0
+    height_mm: 30.2
 - id: 14
   type: 填空
   score: 2
@@ -473,37 +534,21 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-haidian-yi-fig20.png
-  - figures/2023-haidian-yi-fig21.png
-  - figures/2023-haidian-yi-fig22.png
+  - path: figures/2023-haidian-yi-fig20.png
+    width_mm: 43.9
+    height_mm: 42.3
 - id: 16
   type: 填空
   score: 2
   question: '某陶艺工坊有A和B两款电热窑，可以烧制不同尺寸的陶艺品．两款电热窑每次可同时放置陶艺品的尺寸和数量如下表所示．
 
-    [图]
+    | [图] | 大 | 中 | 小 |
 
-    大
+    | --- | --- | --- | --- |
 
-    中
+    | A | 8 | 15 | 25 |
 
-    小
-
-    A
-
-    8
-
-    15
-
-    25
-
-    B
-
-    0
-
-    10
-
-    20
+    | B | 0 | 10 | 20 |
 
     烧制一个大尺寸陶艺品的位置可替换为烧制两个中尺寸或六个小尺寸陶艺品，但烧制较小陶艺品的位置不能替换为烧制较大陶艺品．
 
@@ -512,7 +557,7 @@ questions:
     （1）烧制这批陶艺品，A款电热窑至少使用_________次；
 
     （2）若A款电热窑每次烧制成本为55元，B款电热窑每次烧制成本为25元，则烧制这批陶艺品成本最低为_________元．'
-  answer: ①.2②.$135$
+  answer: ①.2 ②.$135$
   solution: '解：（1）∵需要生产10个大尺寸陶艺品，A款电热窑每次最多可放8个大尺寸陶艺品，B款电热窑不能放大尺寸陶艺品，且烧制较小陶艺品的位置不能替换为烧制较大陶艺品，
 
     ∴烧制这批陶艺品，A款电热窑至少使用2次，
@@ -537,8 +582,6 @@ questions:
   recommended_for:
   - L2
   - L3
-  figures:
-  - figures/2023-haidian-yi-fig23.png
 - id: 17
   type: 解答
   score: 5
@@ -618,23 +661,11 @@ questions:
   score: 5
   question: '下面是小明同学证明定理时使用的两种添加辅助线的方法，选择其中一种，完成证明．
 
-    定理：在直角三角形中，如果一个锐角等于$30^\circ$，那么它所对的直角边等于斜边的一半．已知：如图，在$\triangle ABC$中，$\angle C=90^{\circ},\ \angle A=30^{\circ}$．
+    | 定理：在直角三角形中，如果一个锐角等于 $30^\circ$ ，那么它所对的直角边等于斜边的一半．已知：如图，在 $\triangle ABC$ 中， $\angle C=90^{\circ},\ \angle A=30^{\circ}$ ． 求证： $BC=\frac{1}{2}AB$ ． [图] |  |
 
-    求证：$BC=\frac{1}{2}AB$．
+    | --- | --- |
 
-    [图]
-
-    方法一
-
-    证明：如图，延长BC到点D，使得$CD = BC$，连接AD．
-
-    [图]
-
-    方法二
-
-    证明：如图，在线段AB上取一点D，使得$BD = BC$，连接CD．
-
-    [图]'
+    | 方法一 证明：如图，延长 BC 到点 D ，使得 $CD = BC$ ，连接 AD ． [图] | 方法二 证明：如图，在线段 AB 上取一点 D ，使得 $BD = BC$ ，连接 CD ． [图] |'
   answer: 证明见解析
   solution: '证明：方法一：如图，延长BC到点D，使得$CD = BC$，连接AD，
 
@@ -693,10 +724,6 @@ questions:
   - L1
   - L2
   - L3
-  figures:
-  - figures/2023-haidian-yi-fig24.png
-  - figures/2023-haidian-yi-fig25.png
-  - figures/2023-haidian-yi-fig26.png
 - id: 21
   type: 解答
   score: 5
@@ -707,7 +734,7 @@ questions:
     （1）求证：四边形$ABEF$为矩形；
 
     （2）若$AB = 6,\ BC = 3,\ CE = 4$，求ED的长．'
-  answer: （1）见解析（2）10
+  answer: （1）见解析 （2）10
   solution: '【小问1详解】
 
     证明：∵$BE \parallel AD$，即$BE \parallel AF$，$AF = BE$，
@@ -750,8 +777,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-haidian-yi-fig27.png
-  - figures/2023-haidian-yi-fig28.png
+  - path: figures/2023-haidian-yi-fig23.png
+    width_mm: 58.2
+    height_mm: 39.2
 - id: 22
   type: 解答
   score: 5
@@ -873,9 +901,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-haidian-yi-fig29.png
-  - figures/2023-haidian-yi-fig30.png
-  - figures/2023-haidian-yi-fig31.png
+  - path: figures/2023-haidian-yi-fig25.png
+    width_mm: 38.1
+    height_mm: 40.0
 - id: 24
   type: 解答
   score: 6
@@ -887,23 +915,13 @@ questions:
 
     b．西红柿与黄瓜价格的众数和中位数：
 
-    蔬菜价格
+    | 蔬菜价格 | 众数 | 中位数 |
 
-    众数
+    | --- | --- | --- |
 
-    中位数
+    | 西红柿（元 / 千克） | 6 | m |
 
-    西红柿（元/千克）
-
-    6
-
-    m
-
-    黄瓜（元/千克）
-
-    n
-
-    6
+    | 黄瓜（元 / 千克） | n | 6 |
 
     根据以上信息，回答下列问题：
 
@@ -912,7 +930,7 @@ questions:
     （2）在西红柿与黄瓜中，_________的价格相对更稳定；
 
     （3）如果这两种蔬菜的价格随产量的增大而降低，结合题中信息推测这两种蔬菜在_________月的产量相对更高．'
-  answer: （1）$6.5$，$6$ （2）西红柿（3）6
+  answer: （1）$6.5$，$6$ （2）西红柿 （3）6
   solution: '【小问1详解】
 
     解：把西红柿这8个月的价格从低到高排列为5，6，6，6，7，8，9，10，处在最中间的两个数分别为6，7，
@@ -954,7 +972,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-haidian-yi-fig32.png
+  - path: figures/2023-haidian-yi-fig28.png
+    width_mm: 145.5
+    height_mm: 75.1
 - id: 25
   type: 解答
   score: 6
@@ -966,37 +986,11 @@ questions:
 
     通过对某只野兔一次跳跃中水平距离x（单位：m）与竖直高度y（单位：m）进行的测量，得到以下数据：
 
-    水平距离$x/m$
+    | 水平距离 $x/m$ | 0 | $0.4$ | 1 | $1.4$ | 2 | $2.4$ | $2.8$ |
 
-    0
+    | --- | --- | --- | --- | --- | --- | --- | --- |
 
-    $0.4$
-
-    1
-
-    $1.4$
-
-    2
-
-    $2.4$
-
-    $2.8$
-
-    竖直高度$y/m$
-
-    0
-
-    $0.48$
-
-    $0.9$
-
-    $0.98$
-
-    $0.8$
-
-    $0.48$
-
-    0
+    | 竖直高度 $y/m$ | 0 | $0.48$ | $0.9$ | $0.98$ | $0.8$ | $0.48$ | 0 |
 
     根据上述数据，回答下列问题：
 
@@ -1056,7 +1050,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-haidian-yi-fig33.png
+  - path: figures/2023-haidian-yi-fig29.png
+    width_mm: 78.8
+    height_mm: 31.2
 - id: 26
   type: 解答
   score: 6
@@ -1198,8 +1194,9 @@ questions:
   recommended_for:
   - L3
   figures:
-  - figures/2023-haidian-yi-fig34.png
-  - figures/2023-haidian-yi-fig35.png
+  - path: figures/2023-haidian-yi-fig30.png
+    width_mm: 81.5
+    height_mm: 46.3
 - id: 28
   type: 解答
   score: 7
@@ -1279,7 +1276,3 @@ questions:
   difficulty: 压轴
   recommended_for:
   - L3
-  figures:
-  - figures/2023-haidian-yi-fig36.png
-  - figures/2023-haidian-yi-fig37.png
-  - figures/2023-haidian-yi-fig38.png

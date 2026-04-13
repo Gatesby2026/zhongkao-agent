@@ -17,13 +17,17 @@ questions:
 - id: 5
   type: 选择
   score: 2
-  question: '实数a，b在数轴上的对应点的位置如图所示，下列结论正确的是(
-
-    )
+  question: '实数a，b在数轴上的对应点的位置如图所示，下列结论正确的是(    )
 
     [图]
 
-    A.$\left| a \right| < \left| b \right|$B.$a-b>0$C.$a+b<0$D.$ab > 0$'
+    A.$\left| a \right| < \left| b \right|$
+
+    B.$a-b>0$
+
+    C.$a+b<0$
+
+    D.$ab > 0$'
   answer: C
   solution: '解：根据题意，得$-3 < a < -2$，$0<b<1$，
 
@@ -44,17 +48,23 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-daxing-er-fig03.png
+  - path: figures/2023-daxing-er-fig03.png
+    width_mm: 88.9
+    height_mm: 15.1
 - id: 1
   type: 选择
   score: 2
-  question: '如图是某几何体的三视图，该几何体是（
-
-    ）
+  question: '如图是某几何体的三视图，该几何体是（    ）
 
     [图]
 
-    A.正方体B.长方体C.圆柱D.圆锥'
+    A.正方体
+
+    B.长方体
+
+    C.圆柱
+
+    D.圆锥'
   answer: B
   solution: '解：∵几何体的主视图和侧视图、左视图都是长方形，
 
@@ -71,13 +81,21 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-daxing-er-fig02.png
+  - path: figures/2023-daxing-er-fig02.png
+    width_mm: 46.0
+    height_mm: 34.4
 - id: 2
   type: 选择
   score: 2
   question: '国家统计局官网显示，2023年第一季度国内生产总值达284997亿元，比去年同一时期增长$4.5\%$．数据28499700000000用科学记数法表示应为（）
 
-    A.$28.4997\times10^{12}$B.$2.84997\times10^{13}$C.$2.84997\times10^{4}$D.$0.284997\times10^{14}$'
+    A.$28.4997\times10^{12}$
+
+    B.$2.84997\times10^{13}$
+
+    C.$2.84997\times10^{4}$
+
+    D.$0.284997\times10^{14}$'
   answer: B
   solution: '解：$28499700000000=2.84997\times10^{13}$，
 
@@ -98,7 +116,13 @@ questions:
   score: 2
   question: '正六边形的外角和是（）
 
-    A.$180^\circ$B.$360^\circ$C.$540^\circ$D.$720^\circ$'
+    A.$180^\circ$
+
+    B.$360^\circ$
+
+    C.$540^\circ$
+
+    D.$720^\circ$'
   answer: B
   solution: '解：正六边形的外角和是$360^\circ$．
 
@@ -115,11 +139,15 @@ questions:
 - id: 4
   type: 选择
   score: 2
-  question: '下列运算结果正确的是(
+  question: '下列运算结果正确的是(    )
 
-    )
+    A.$b^{3}\cdot b^{3}=2b^{3}$
 
-    A.$b^{3}\cdot b^{3}=2b^{3}$B.$(-ab)^{2}=-ab^{2}$C.$a^{5}+a^{2}=a^{3}$D.$a^{2}+a=a^{3}$'
+    B.$(-ab)^{2}=-ab^{2}$
+
+    C.$a^{5}+a^{2}=a^{3}$
+
+    D.$a^{2}+a=a^{3}$'
   answer: C
   solution: '解：A．$b^{3}\cdot b^{3}=b^{3-5}=b^{8}$，故该选项错误，不符合题意；
 
@@ -142,13 +170,17 @@ questions:
 - id: 6
   type: 选择
   score: 2
-  question: '如图，将一块直角三角板的顶点B放在直尺的一边DE上，当DE与三角板的一边AC平行时，则$\angle ABD$的度数为(
-
-    )
+  question: '如图，将一块直角三角板的顶点B放在直尺的一边DE上，当DE与三角板的一边AC平行时，则$\angle ABD$的度数为(    )
 
     [图]
 
-    A.$100^\circ$B.$120^\circ$C.$135^\circ$D.$150^\circ$'
+    A.$100^\circ$
+
+    B.$120^\circ$
+
+    C.$135^\circ$
+
+    D.$150^\circ$'
   answer: D
   solution: '解：依题意得：$DE \parallel AC$，$\angle C=90^{\circ}$，$\angle ABC = 60^\circ$，
 
@@ -168,7 +200,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-daxing-er-fig04.png
+  - path: figures/2023-daxing-er-fig04.png
+    width_mm: 77.0
+    height_mm: 45.8
 - id: 7
   type: 选择
   score: 2
@@ -186,11 +220,17 @@ questions:
 
     所有合理推断的序号是（）
 
-    A.①②B.②C.①③D.①②③'
+    A.①②
+
+    B.②
+
+    C.①③
+
+    D.①②③'
   answer: A
   solution: '①随着实验次数的增加，“摸到红球”的频率总在0.35附近摆动，显示出一定的稳定性，可以估计“摸到红球”的概率是0.35，故本选项推理符合题意；
 
-    ②若盒子中装40个小球，可以根据本次实验结果，估算出盒子中有红球$[公式]$个，故本选项推理符合题意；
+    ②若盒子中装40个小球，可以根据本次实验结果，估算出盒子中有红球$40\times0.35=14$个，故本选项推理符合题意；
 
     ③若再次进行上述摸球实验，则当摸球次数为200时，“摸到红球”的频率也还是0.35，故本选项推理不符合题意．
 
@@ -205,7 +245,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-daxing-er-fig05.png
+  - path: figures/2023-daxing-er-fig05.png
+    width_mm: 119.6
+    height_mm: 43.1
 - id: 8
   type: 选择
   score: 2
@@ -213,7 +255,13 @@ questions:
 
     [图]
 
-    A.2B.$2\sqrt{2}$C.4D.8'
+    A.2
+
+    B.$2\sqrt{2}$
+
+    C.4
+
+    D.8'
   answer: C
   solution: '当点Q在CD上运动时，$\mathrm{VBPQ}$的面积为$\frac{1}{2}\times PB\times BC$
 
@@ -237,7 +285,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-daxing-er-fig06.png
+  - path: figures/2023-daxing-er-fig06.png
+    width_mm: 88.6
+    height_mm: 38.4
 - id: 9
   type: 填空
   score: 2
@@ -356,7 +406,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-daxing-er-fig07.png
+  - path: figures/2023-daxing-er-fig07.png
+    width_mm: 91.3
+    height_mm: 60.6
 - id: 14
   type: 填空
   score: 2
@@ -390,7 +442,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-daxing-er-fig08.png
+  - path: figures/2023-daxing-er-fig08.png
+    width_mm: 52.7
+    height_mm: 28.3
 - id: 15
   type: 填空
   score: 2
@@ -414,7 +468,7 @@ questions:
 
     故答案为：$\frac{10}{3}$．
 
-    [图]【点睛】本题考查了相似三角形的判定与性质，勾股定理，证明$\triangle BCO\sim\triangle DAO$是解答本题的关键．'
+    [图] 【点睛】本题考查了相似三角形的判定与性质，勾股定理，证明$\triangle BCO\sim\triangle DAO$是解答本题的关键．'
   knowledge_points:
   - 勾股定理
   - 正方形
@@ -425,8 +479,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-daxing-er-fig09.png
-  - figures/2023-daxing-er-fig10.png
+  - path: figures/2023-daxing-er-fig09.png
+    width_mm: 57.4
+    height_mm: 47.6
 - id: 16
   type: 填空
   score: 2
@@ -435,7 +490,7 @@ questions:
     （1）如果安排5辆A型卡车、1辆B型卡车、1辆C型卡车运输这批原料，需要运费________元；
 
     （2）如果要求每种类型的卡车至少使用一辆，则运输这批原料的总费用最低为________元．'
-  answer: ①.12800②.12600
+  answer: ①.12800 ②.12600
   solution: '（1）安排5辆A型卡车、1辆B型卡车、1辆C型卡车运输的费用为：
 
     $5\times2000+1\times1800+1\times1000=12800$元
@@ -564,8 +619,6 @@ questions:
   - L1
   - L2
   - L3
-  figures:
-  - figures/2023-daxing-er-fig11.png
 - id: 20
   type: 解答
   score: 5
@@ -606,12 +659,12 @@ questions:
     ∴$\angle ACB=\frac{1}{2}\angle ADB$（________）（填推理的依据），
 
     ∴$\angle ACB=30^{\circ}$．'
-  answer: （1）见解析（2）BC，一条弧所对的圆周角等于它所对的圆心角的一半．
+  answer: （1）见解析 （2）BC，一条弧所对的圆周角等于它所对的圆心角的一半．
   solution: '【小问1详解】
 
     解：根据题意尺规作图如下．
 
-    [图]【小问2详解】
+    [图] 【小问2详解】
 
     解：BC；一条弧所对的圆周角等于它所对的圆心角的一半．'
   knowledge_points:
@@ -624,8 +677,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-daxing-er-fig12.png
-  - figures/2023-daxing-er-fig13.png
+  - path: figures/2023-daxing-er-fig12.png
+    width_mm: 36.8
+    height_mm: 14.0
 - id: 21
   type: 解答
   score: 5
@@ -636,7 +690,7 @@ questions:
     （1）求证：四边形$ADFE$是平行四边形；
 
     （2）过点E作$EG \perp DF$于点G，若$BD = 2$，$AE = 5$，求EG的长．'
-  answer: （1）见解析（2）$\frac{12}{5}$
+  answer: （1）见解析 （2）$\frac{12}{5}$
   solution: '【小问1详解】
 
     证明：∵$EF \parallel AD$，
@@ -693,8 +747,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-daxing-er-fig14.png
-  - figures/2023-daxing-er-fig15.png
+  - path: figures/2023-daxing-er-fig14.png
+    width_mm: 47.6
+    height_mm: 49.2
 - id: 22
   type: 解答
   score: 5
@@ -703,10 +758,10 @@ questions:
     （1）求证：该方程总有两个实数根；
 
     （2）若该方程有一个根小于1，求m的取值范围．'
-  answer: （1）见解析（2）$m < 1$
+  answer: （1）见解析 （2）$m < 1$
   solution: '【小问1详解】
 
-    解∶∵$\Delta =\left[ -\left( m+4 \right) \right]^{2}-4\times 4m$
+    解∶ ∵$\Delta =\left[ -\left( m+4 \right) \right]^{2}-4\times 4m$
 
     $=m^{2}-8m+16$
 
@@ -739,47 +794,21 @@ questions:
 
     a．七年级学生竞赛成绩的频数分布表：
 
-    成绩
+    | 成绩 | 频数 | 频率 |
 
-    频数
+    | --- | --- | --- |
 
-    频率
+    | $50 \leq x < 60$ | 2 | 0.05 |
 
-    $50 \leq x < 60$
+    | $60 \leq x < 70$ | 4 | m |
 
-    2
+    | $70 \leq x < 80$ | 10 | 0.25 |
 
-    0.05
+    | $80 \leq x < 90$ | 14 | 0.35 |
 
-    $60 \leq x < 70$
+    | $90 \leq x \leq 100$ | 10 | 0.25 |
 
-    4
-
-    m
-
-    $70 \leq x < 80$
-
-    10
-
-    0.25
-
-    $80 \leq x < 90$
-
-    14
-
-    0.35
-
-    $90 \leq x \leq 100$
-
-    10
-
-    0.25
-
-    合计
-
-    40
-
-    1.00
+    | 合计 | 40 | 1.00 |
 
     b．八年级学生竞赛成绩的扇形统计图：
 
@@ -789,15 +818,13 @@ questions:
 
     d．七、八年级学生竞赛成绩的中位数如下：
 
-    中位数
+    |  | 中位数 |
 
-    七年级
+    | --- | --- |
 
-    81
+    | 七年级 | 81 |
 
-    八年级
-
-    n
+    | 八年级 | n |
 
     根据以上信息，回答下列问题：
 
@@ -843,7 +870,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-daxing-er-fig16.png
+  - path: figures/2023-daxing-er-fig16.png
+    width_mm: 40.5
+    height_mm: 40.5
 - id: 24
   type: 解答
   score: 6
@@ -854,7 +883,7 @@ questions:
     （1）求证：直线DE是$\odot\odot$的切线；
 
     （2）延长AB与直线DE交于点F，若$AB = 5$，$\cos\angle AFD=\frac{4}{5}$，求DE的长．'
-  answer: （1）见解析（2）2
+  answer: （1）见解析 （2）2
   solution: '【小问1详解】
 
     连接OD．
@@ -934,9 +963,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-daxing-er-fig17.png
-  - figures/2023-daxing-er-fig18.png
-  - figures/2023-daxing-er-fig19.png
+  - path: figures/2023-daxing-er-fig17.png
+    width_mm: 34.1
+    height_mm: 37.0
 - id: 25
   type: 解答
   score: 6
@@ -948,33 +977,11 @@ questions:
 
     （1）第一次训练时，该运动员的水平距离x与竖直高度y的几组数据如下：
 
-    水平距离$x / m$
+    | 水平距离 $x / m$ | 0 | 1 | 1.5 | 2 | 2.5 | 3 |
 
-    0
+    | --- | --- | --- | --- | --- | --- | --- |
 
-    1
-
-    1.5
-
-    2
-
-    2.5
-
-    3
-
-    竖直高度$y/m$
-
-    0
-
-    0.75
-
-    0.9375
-
-    1
-
-    0.9375
-
-    0.75
+    | 竖直高度 $y/m$ | 0 | 0.75 | 0.9375 | 1 | 0.9375 | 0.75 |
 
     根据上述数据，直接写出该运动员竖直高度的最大值，并求出满足的函数关系$y = a(x - h)^2 + k (a < 0)$；
 
@@ -1026,7 +1033,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-daxing-er-fig20.png
+  - path: figures/2023-daxing-er-fig20.png
+    width_mm: 87.3
+    height_mm: 38.4
 - id: 26
   type: 解答
   score: 6
@@ -1153,9 +1162,9 @@ questions:
   recommended_for:
   - L3
   figures:
-  - figures/2023-daxing-er-fig21.png
-  - figures/2023-daxing-er-fig22.png
-  - figures/2023-daxing-er-fig23.png
+  - path: figures/2023-daxing-er-fig21.png
+    width_mm: 27.8
+    height_mm: 29.6
 - id: 28
   type: 解答
   score: 7
@@ -1245,6 +1254,6 @@ questions:
   recommended_for:
   - L3
   figures:
-  - figures/2023-daxing-er-fig24.png
-  - figures/2023-daxing-er-fig25.png
-  - figures/2023-daxing-er-fig26.png
+  - path: figures/2023-daxing-er-fig24.png
+    width_mm: 65.9
+    height_mm: 76.7

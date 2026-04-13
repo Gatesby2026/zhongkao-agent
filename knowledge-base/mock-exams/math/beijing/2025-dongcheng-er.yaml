@@ -19,9 +19,13 @@ questions:
   score: 2
   question: '下列几何图形中，既是中心对称图形又是轴对称图形的是（　　）
 
-    A.[图]B.[图]
+    A.[图]
 
-    C.[图]D.[图]'
+    B.[图]
+
+    C.[图]
+
+    D.[图]'
   answer: A
   solution: '解：A、既是中心对称图形，又是轴对称图形，故此选项符合题意；
 
@@ -45,20 +49,32 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-dongcheng-er-fig02.png
-  - figures/2025-dongcheng-er-fig03.png
-  - figures/2025-dongcheng-er-fig04.png
-  - figures/2025-dongcheng-er-fig05.png
+  - path: figures/2025-dongcheng-er-fig02.png
+    width_mm: 22.8
+    height_mm: 22.8
+  - path: figures/2025-dongcheng-er-fig03.png
+    width_mm: 16.7
+    height_mm: 24.6
+  - path: figures/2025-dongcheng-er-fig04.png
+    width_mm: 33.3
+    height_mm: 13.5
+  - path: figures/2025-dongcheng-er-fig05.png
+    width_mm: 20.4
+    height_mm: 19.8
 - id: 2
   type: 选择
   score: 2
-  question: '如图，直线$AB,\ CD$交于点O，$OE \perp AB$于O，若$\angle1=35^{\circ}$，则$\angle 2$的度数是（
-
-    ）
+  question: '如图，直线$AB,\ CD$交于点O，$OE \perp AB$于O，若$\angle1=35^{\circ}$，则$\angle 2$的度数是（   ）
 
     [图]
 
-    A.$55^\circ$B.$45^\circ$C.$35^\circ$D.$30^\circ$'
+    A.$55^\circ$
+
+    B.$45^\circ$
+
+    C.$35^\circ$
+
+    D.$30^\circ$'
   answer: A
   solution: '解：∵$OE \perp AB, \angle 1 = 35^\circ$，
 
@@ -77,13 +93,21 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-dongcheng-er-fig06.png
+  - path: figures/2025-dongcheng-er-fig06.png
+    width_mm: 32.3
+    height_mm: 33.1
 - id: 3
   type: 选择
   score: 2
   question: '某遥感卫星每秒向地面站传回的数据量为$4\times10^{12}$比特．后续发射的升级型号卫星数据传输速率是原遥感卫星的25倍，达到m比特，则m的值为（）
 
-    A.$4\times10^{12}$B.$4\times10^{14}$C.$1\times10^{14}$D.$1\times10^{15}$'
+    A.$4\times10^{12}$
+
+    B.$4\times10^{14}$
+
+    C.$1\times10^{14}$
+
+    D.$1\times10^{15}$'
   answer: C
   solution: '解：$4\times10^{12}\times25=100\times10^{12}=10^{2}\times10^{12}=10^{14}$，
 
@@ -103,9 +127,13 @@ questions:
   score: 2
   question: '一元二次方程2x2﹣3x+1=0的根的情况是（　　）
 
-    A.有两个相等的实数根B.有两个不相等的实数根
+    A.有两个相等的实数根
 
-    C.只有一个实数根D.没有实数根'
+    B.有两个不相等的实数根
+
+    C.只有一个实数根
+
+    D.没有实数根'
   answer: B
   solution: '解：根据题意得：△=$(-3)^{2}-4\times2\times1>0$，
 
@@ -128,7 +156,13 @@ questions:
 
     $\frac{1}{2} \times 4 \times 3 = 6$
 
-    A.$b<a$B.$ab < 0$C.$|b| < |c|$D.$a+c<0$'
+    A.$b<a$
+
+    B.$ab < 0$
+
+    C.$|b| < |c|$
+
+    D.$a+c<0$'
   answer: D
   solution: '解：∵$a < b < 0 < c$，
 
@@ -151,7 +185,13 @@ questions:
   score: 2
   question: '3月14日是国际数学节、某学校在今年国际数学节策划了“竞速华容道”“玩转幻方”和“巧解鲁班锁”三个挑战活动，如果小红和小丽每人随机选择参加其中一个活动，则她们恰好选到同一个活动的概率是（）
 
-    A.$\frac{1}{9}$B.$\frac{1}{6}$C.$\frac{1}{3}$D.$\frac{2}{3}$'
+    A.$\frac{1}{9}$
+
+    B.$\frac{1}{6}$
+
+    C.$\frac{1}{3}$
+
+    D.$\frac{2}{3}$'
   answer: C
   solution: '解：把“竞速华容道”“玩转幻方”和“巧解鲁班锁”三个活动分别记为A、B、C，
 
@@ -182,8 +222,6 @@ questions:
   - L1
   - L2
   - L3
-  figures:
-  - figures/2025-dongcheng-er-fig07.png
 - id: 7
   type: 选择
   score: 2
@@ -191,9 +229,13 @@ questions:
 
     [图]
 
-    A.$AF = BF$B.BF是$\angle ABC$的平分线
+    A.$AF = BF$
 
-    C.$CF=\frac{1}{2}BF$D.$S_{\triangle ABC}=3S_{\triangle BCT}$'
+    B.BF是$\angle ABC$的平分线
+
+    C.$CF=\frac{1}{2}BF$
+
+    D.$S_{\triangle ABC}=3S_{\triangle BCT}$'
   answer: D
   solution: '解：由作图可得EF垂直平分AB，
 
@@ -221,7 +263,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-dongcheng-er-fig08.png
+  - path: figures/2025-dongcheng-er-fig08.png
+    width_mm: 36.5
+    height_mm: 42.6
 - id: 8
   type: 选择
   score: 2
@@ -241,7 +285,13 @@ questions:
 
     上述结论中，所有正确结论$[公式]$序号是（）
 
-    A.①②B.①④C.①②③D.①②④'
+    A.①②
+
+    B.①④
+
+    C.①②③
+
+    D.①②④'
   answer: D
   solution: ''
   knowledge_points:
@@ -252,7 +302,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-dongcheng-er-fig09.png
+  - path: figures/2025-dongcheng-er-fig09.png
+    width_mm: 124.1
+    height_mm: 36.2
 - id: 9
   type: 填空
   score: 2
@@ -314,7 +366,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-dongcheng-er-fig12.png
+  - path: figures/2025-dongcheng-er-fig12.png
+    width_mm: 36.0
+    height_mm: 38.6
 - id: 12
   type: 填空
   score: 2
@@ -357,7 +411,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-dongcheng-er-fig13.png
+  - path: figures/2025-dongcheng-er-fig13.png
+    width_mm: 32.0
+    height_mm: 34.9
 - id: 14
   type: 填空
   score: 2
@@ -390,7 +446,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-dongcheng-er-fig14.png
+  - path: figures/2025-dongcheng-er-fig14.png
+    width_mm: 35.2
+    height_mm: 22.5
 - id: 15
   type: 填空
   score: 2
@@ -441,14 +499,16 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-dongcheng-er-fig15.png
+  - path: figures/2025-dongcheng-er-fig15.png
+    width_mm: 42.1
+    height_mm: 26.2
 - id: 16
   type: 填空
   score: 2
   question: '图为一个$3\times3$的开关阵列，每个开关只有“开”和“关”两种状态，每次只能按一个开关．按任意一个开关一次将导致自身和所有相邻(上、下、左、右)的开关改变状态．例如，按开关E，一次将导致B，D，E，F，H改变状态．如果按任意一个开关一次，则至少导致_____个开关改变状态；如果要求只改变A，E，I的状态，则最少按_____次开关．
 
     [图]'
-  answer: ①.3②.3
+  answer: ①.3 ②.3
   solution: '解：根据题意可知：导致改变状态的开关最少，应该按四个角的开关，即开关A、D、G、I，此时受影响的开关只有三个，
 
     首先A，E，I的状态三者不相邻，因此一次是不可能的，
@@ -476,9 +536,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-dongcheng-er-fig16.png
-  - figures/2025-dongcheng-er-fig17.png
-  - figures/2025-dongcheng-er-fig18.png
+  - path: figures/2025-dongcheng-er-fig16.png
+    width_mm: 22.2
+    height_mm: 21.7
 - id: 17
   type: 解答
   score: 5
@@ -687,7 +747,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-dongcheng-er-fig19.png
+  - path: figures/2025-dongcheng-er-fig19.png
+    width_mm: 32.0
+    height_mm: 31.0
 - id: 23
   type: 解答
   score: 6
@@ -695,9 +757,7 @@ questions:
 
     a．上旬10天的日平均气温如下：
 
-    21
-
-    23  24  25  26  26  26  27  27  28
+    21  23  24  25  26  26  26  27  27  28
 
     b．中下旬20天的日平均气温频数分布直方图如下（数据分为5组：第1组$15\leq x<20$，第2组$20 \leq x < 25$，第3组$25 \leq x < 30$，第4组$30 \leq x < 35$，第5组$35 \leq x < 40$）；
 
@@ -705,35 +765,15 @@ questions:
 
     c．上旬、中旬、下旬日平均气温的平均数、众数、中位数如下表：
 
-    平均数
+    |  | 平均数 | 众数 | 中位数 |
 
-    众数
+    | --- | --- | --- | --- |
 
-    中位数
+    | 上旬 | 25.3 | 26 | m |
 
-    上旬
+    | 中旬 | 24.6 | 26 | 24.5 |
 
-    25.3
-
-    26
-
-    m
-
-    中旬
-
-    24.6
-
-    26
-
-    24.5
-
-    下旬
-
-    27.5
-
-    26
-
-    27
+    | 下旬 | 27.5 | 26 | 27 |
 
     根据以上信息，回答下列问题：
 
@@ -746,7 +786,7 @@ questions:
     A．平均数为25，中位数为22B．平均数为23，众数为25
 
     C．中位数为23，众数为25D．平均数为25，方差$\leq 1$'
-  answer: （1）26；（2）25.8；20； （3）D．
+  answer: （1）26； （2）25.8；20； （3）D．
   solution: '【小问1详解】
 
     解：根据排序后的数据可得：$m = \frac{26 + 26}{2} - 26$
@@ -797,7 +837,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-dongcheng-er-fig20.png
+  - path: figures/2025-dongcheng-er-fig20.png
+    width_mm: 52.1
+    height_mm: 40.5
 - id: 24
   type: 解答
   score: 6
@@ -879,69 +921,19 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-dongcheng-er-fig21.png
-  - figures/2025-dongcheng-er-fig22.png
-  - figures/2025-dongcheng-er-fig23.png
+  - path: figures/2025-dongcheng-er-fig21.png
+    width_mm: 51.1
+    height_mm: 33.1
 - id: 25
   type: 解答
   score: 6
   question: '某团队设计了一款智能灯，它可以根据自然光照度自动开启或关闭，当自然光照度小于或等于k勒克斯（勒克斯为光照度单位）时，自动开启；大于k勒克斯时，自动关闭．该团队通过模拟自然光照度进行了一次实验，记录了实验中模拟自然光照度y（单位：勒克斯）与时间t（单位：分钟）的关系数据，如下表所示：
 
-    t
+    | t | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 |
 
-    0
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
-    1
-
-    2
-
-    3
-
-    4
-
-    5
-
-    6
-
-    7
-
-    8
-
-    9
-
-    10
-
-    11
-
-    12
-
-    y
-
-    32.9
-
-    30.0
-
-    27.5
-
-    25.6
-
-    24.2
-
-    23.3
-
-    22.9
-
-    23.0
-
-    23.7
-
-    24.8
-
-    26.5
-
-    28.7
-
-    31.4
+    | y | 32.9 | 30.0 | 27.5 | 25.6 | 24.2 | 23.3 | 22.9 | 23.0 | 23.7 | 24.8 | 26.5 | 28.7 | 31.4 |
 
     （1）团队成员发现可以用函数刻画模拟自然光照度y与t之间的关系．在给出的平面直角坐标系中，描出了以上表中各对对应值为坐标的点，根据描出的点画出该函数的图象；
 
@@ -956,7 +948,7 @@ questions:
     ②智能灯的工作时长约为_____分钟；（结果保留小数点后一位）
 
     （3）设当k为30，27，24时，智能灯工作时长分别为$t_{1}$，$t_{2}$，$t_{3}$，则$t_{1}-t_{2}$_____$t_{2}-t_{3}$．（填“>”“=”或“<”）'
-  answer: （1）见详解（2）①1；②10.5（答案不唯一，此为估算值，原则上上下浮动0.2以内均正确）； （3）<．
+  answer: （1）见详解 （2）①1；②10.5（答案不唯一，此为估算值，原则上上下浮动0.2以内均正确）； （3）<．
   solution: '【小问1详解】
 
     解：如图，
@@ -990,8 +982,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-dongcheng-er-fig24.png
-  - figures/2025-dongcheng-er-fig25.png
+  - path: figures/2025-dongcheng-er-fig24.png
+    width_mm: 65.4
+    height_mm: 53.7
 - id: 26
   type: 解答
   score: 6
@@ -1048,8 +1041,6 @@ questions:
   difficulty: 压轴
   recommended_for:
   - L3
-  figures:
-  - figures/2025-dongcheng-er-fig26.png
 - id: 27
   type: 解答
   score: 7
@@ -1111,8 +1102,9 @@ questions:
   recommended_for:
   - L3
   figures:
-  - figures/2025-dongcheng-er-fig27.png
-  - figures/2025-dongcheng-er-fig28.png
+  - path: figures/2025-dongcheng-er-fig27.png
+    width_mm: 24.9
+    height_mm: 35.2
 - id: 28
   type: 解答
   score: 7
@@ -1172,13 +1164,3 @@ questions:
   difficulty: 压轴
   recommended_for:
   - L3
-  figures:
-  - figures/2025-dongcheng-er-fig29.png
-  - figures/2025-dongcheng-er-fig30.png
-  - figures/2025-dongcheng-er-fig31.png
-  - figures/2025-dongcheng-er-fig32.png
-  - figures/2025-dongcheng-er-fig33.png
-  - figures/2025-dongcheng-er-fig34.png
-  - figures/2025-dongcheng-er-fig35.png
-  - figures/2025-dongcheng-er-fig36.png
-  - figures/2025-dongcheng-er-fig37.png

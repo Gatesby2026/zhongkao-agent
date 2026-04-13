@@ -17,13 +17,17 @@ questions:
 - id: 1
   type: 选择
   score: 2
-  question: '如图是某几何体的三视图，该几何体是（
-
-    ）
+  question: '如图是某几何体的三视图，该几何体是（   ）
 
     [图]
 
-    A.圆柱B.圆锥C.三棱柱D.长方体'
+    A.圆柱
+
+    B.圆锥
+
+    C.三棱柱
+
+    D.长方体'
   answer: B
   solution: '解：∵该几何体的主视图和左视图都是三角形，俯视图是圆形，
 
@@ -40,13 +44,21 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-xicheng-er-fig02.png
+  - path: figures/2024-xicheng-er-fig02.png
+    width_mm: 27.0
+    height_mm: 28.3
 - id: 2
   type: 选择
   score: 2
   question: '新能源革命受到全球目的同时，也成为中国实现“碳达峰碳中和”目标的关键所在．$2023$年全球可再生能源新增装机$510000000$千瓦，其中中国的贡献超过了$50\%$，将$510000000$用科学记数法表示应为（）
 
-    A.$0.51\times10^{9}$B.$5.1\times10^{8}$C.$5.1\times10^{9}$D.$51\times10^{7}$'
+    A.$0.51\times10^{9}$
+
+    B.$5.1\times10^{8}$
+
+    C.$5.1\times10^{9}$
+
+    D.$51\times10^{7}$'
   answer: B
   solution: '解：$5100000000=5.1\times10^{9}$，
 
@@ -65,7 +77,13 @@ questions:
   score: 2
   question: '正十二边形的一个外角的度数为（　　）
 
-    A.30°B.36°C.144°D.150°'
+    A.30°
+
+    B.36°
+
+    C.144°
+
+    D.150°'
   answer: A
   solution: '解：∵正多边形的外角和等于360°，每个外角相等，
 
@@ -84,15 +102,17 @@ questions:
 - id: 4
   type: 选择
   score: 2
-  question: '如图，直线$AB \perp CD$于点C，射线CE在$\angle BCD$内部，射线CF平分$\angle ACE$，若$\angle BCE = 40^\circ$，则下列结论正确的是（
-
-    ）
+  question: '如图，直线$AB \perp CD$于点C，射线CE在$\angle BCD$内部，射线CF平分$\angle ACE$，若$\angle BCE = 40^\circ$，则下列结论正确的是（   ）
 
     [图]
 
-    A.$\angle ECF = 60^\circ$B.$\angle DCF=30^{\circ}$
+    A.$\angle ECF = 60^\circ$
 
-    C.$\angle ACF$与$\angle BCE$互余D.$\angle ECF$与$\angle BCF$互补'
+    B.$\angle DCF=30^{\circ}$
+
+    C.$\angle ACF$与$\angle BCE$互余
+
+    D.$\angle ECF$与$\angle BCF$互补'
   answer: D
   solution: '解：$\because AB \perp CD$，
 
@@ -141,39 +161,33 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-xicheng-er-fig03.png
+  - path: figures/2024-xicheng-er-fig03.png
+    width_mm: 40.2
+    height_mm: 31.0
 - id: 5
   type: 选择
   score: 2
   question: '不透明的袋子里装有3个完全相同的小球，上面分别标有数字4，5，6．随机从中摸出一个小球不放回，再随机摸出另一个小球．第一次摸出小球上的数字大于第二次摸出小球上的数字的概率是（）
 
-    A.$\frac{1}{2}$B.$\frac{1}{3}$C.$\frac{2}{3}$D.$\frac{4}{9}$'
+    A.$\frac{1}{2}$
+
+    B.$\frac{1}{3}$
+
+    C.$\frac{2}{3}$
+
+    D.$\frac{4}{9}$'
   answer: A
   solution: '解：列表如下：
 
-    4
+    |  | 4 | 5 | 6 |
 
-    5
+    | --- | --- | --- | --- |
 
-    6
+    | 4 |  | （ 4 ， 5 ） | （ 4 ， 6 ） |
 
-    4
+    | 5 | （ 5 ， 4 ） |  | （ 5 ， 6 ） |
 
-    （4，5）
-
-    （4，6）
-
-    5
-
-    （5，4）
-
-    （5，6）
-
-    6
-
-    （6，4）
-
-    （6，5）
+    | 6 | （ 6 ， 4 ） | （ 6 ， 5 ） |  |
 
     共有6种等可能的结果，其中第一次摸出小球上的数字大于第二次摸出小球上的数字的结果有：（5，4），（6，4），（6，5），共3种，
 
@@ -194,15 +208,17 @@ questions:
 - id: 6
   type: 选择
   score: 2
-  question: '如图，点C为线段AB的中点，$\angle BAM = \angle ABN$，点$D,E$分别在射线$AM,BN$上，$\angle ACD$与$\angle BCE$均为锐角，若添加一个条件一定可以证明$\triangle ACD \cong \triangle BCE$，则这个条件不能是（
-
-    ）
+  question: '如图，点C为线段AB的中点，$\angle BAM = \angle ABN$，点$D,E$分别在射线$AM,BN$上，$\angle ACD$与$\angle BCE$均为锐角，若添加一个条件一定可以证明$\triangle ACD \cong \triangle BCE$，则这个条件不能是（   ）
 
     [图]
 
-    A.$\angle ACD = \angle BCE$B.$CD = CE$
+    A.$\angle ACD = \angle BCE$
 
-    C.$\angle ADO=\angle BEC$D.$AD = BE$'
+    B.$CD = CE$
+
+    C.$\angle ADO=\angle BEC$
+
+    D.$AD = BE$'
   answer: B
   solution: '解：如图：
 
@@ -248,18 +264,21 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-xicheng-er-fig04.png
-  - figures/2024-xicheng-er-fig05.png
+  - path: figures/2024-xicheng-er-fig04.png
+    width_mm: 44.2
+    height_mm: 20.9
 - id: 7
   type: 选择
   score: 2
-  question: '某农业合作社在春耕期间采购了A，B两种型号无人驾驶农耕机器，已知每台A型机器的进价比每台B型机器进价的2倍少$0.7$万元；采购相同数量的A，B两种型号机器．分别花费了$21$万元和$12.6$万元．若设每台B型机器的进价为x万元，根据题食可列出关于x的方程为（
+  question: '某农业合作社在春耕期间采购了A，B两种型号无人驾驶农耕机器，已知每台A型机器的进价比每台B型机器进价的2倍少$0.7$万元；采购相同数量的A，B两种型号机器．分别花费了$21$万元和$12.6$万元．若设每台B型机器的进价为x万元，根据题食可列出关于x的方程为（   ）
 
-    ）
+    A.$12.6x=2\left(2x-0.7\right)$
 
-    A.$12.6x=2\left(2x-0.7\right)$B.$\frac{21}{x}=\frac{12.6}{2x-0.7}$
+    B.$\frac{21}{x}=\frac{12.6}{2x-0.7}$
 
-    C.$\frac{21}{2x-0.7}=\frac{12.6}{x}$D.$\frac{21}{x}-2\times\frac{12.6}{x}=0.7$'
+    C.$\frac{21}{2x-0.7}=\frac{12.6}{x}$
+
+    D.$\frac{21}{x}-2\times\frac{12.6}{x}=0.7$'
   answer: C
   solution: '解：设每台B型机器的进价为x万元，则每台A型机器的进价为$(2x-0.7)$万元，
 
@@ -277,9 +296,7 @@ questions:
 - id: 8
   type: 选择
   score: 2
-  question: '下面问题中，y与x满足的函数关系是二次函数的是（
-
-    ）
+  question: '下面问题中，y与x满足的函数关系是二次函数的是（   ）
 
     ①面积为$10\mathrm{cm}^2$的矩形中，矩形的长$y(\mathrm{cm})$与宽$x(\mathrm{cm})$的关系；
 
@@ -287,7 +304,13 @@ questions:
 
     ③某商品每件进价为80元，在某段时间内以每件x元出售，可卖出$(100 - 2x)$件．利润y（元）与每件进价x（元）的关系．
 
-    A.①B.②C.③D.①③'
+    A.①
+
+    B.②
+
+    C.③
+
+    D.①③'
   answer: C
   solution: '解：①$y=\frac{10}{x}$y是x的反比例函数，故题不符合题意；
 
@@ -425,8 +448,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-xicheng-er-fig06.png
-  - figures/2024-xicheng-er-fig07.png
+  - path: figures/2024-xicheng-er-fig06.png
+    width_mm: 46.0
+    height_mm: 24.1
 - id: 14
   type: 填空
   score: 2
@@ -489,8 +513,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-xicheng-er-fig08.png
-  - figures/2024-xicheng-er-fig09.png
+  - path: figures/2024-xicheng-er-fig08.png
+    width_mm: 35.7
+    height_mm: 33.3
 - id: 15
   type: 填空
   score: 2
@@ -545,7 +570,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-xicheng-er-fig10.png
+  - path: figures/2024-xicheng-er-fig10.png
+    width_mm: 38.6
+    height_mm: 35.5
 - id: 16
   type: 填空
   score: 2
@@ -748,8 +775,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-xicheng-er-fig11.png
-  - figures/2024-xicheng-er-fig12.png
+  - path: figures/2024-xicheng-er-fig11.png
+    width_mm: 33.1
+    height_mm: 31.2
 - id: 21
   type: 解答
   score: 5
@@ -801,7 +829,7 @@ questions:
     （1）求证：四边形$AEFG$是矩形；
 
     （2）若$\angle ABD = 30^\circ$，$AG = 2AE = 6$，求BD的长．'
-  answer: （1）见详解（2）$6\sqrt{3}+6$
+  answer: （1）见详解 （2）$6\sqrt{3}+6$
   solution: '【小问1详解】
 
     证明：$\begin{array}{c}
@@ -877,7 +905,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-xicheng-er-fig13.png
+  - path: figures/2024-xicheng-er-fig13.png
+    width_mm: 56.6
+    height_mm: 27.3
 - id: 23
   type: 解答
   score: 6
@@ -888,7 +918,7 @@ questions:
     （1）求证：AC是$\odot\odot$的切线；
 
     （2）若$BF = 6$，$\cos C=\frac{3}{5}$，求AB的长．'
-  answer: （1）见详解（2）12
+  answer: （1）见详解 （2）12
   solution: '【小问1详解】
 
     证明：连接AD，如图，
@@ -956,9 +986,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-xicheng-er-fig14.png
-  - figures/2024-xicheng-er-fig15.png
-  - figures/2024-xicheng-er-fig16.png
+  - path: figures/2024-xicheng-er-fig14.png
+    width_mm: 29.1
+    height_mm: 32.0
 - id: 24
   type: 解答
   score: 6
@@ -976,19 +1006,11 @@ questions:
 
     c．这1000件快递重量的平均数、中位数、众数如下：
 
-    平均数
+    |  | 平均数 | 中位数 | 众数 |
 
-    中位数
+    | --- | --- | --- | --- |
 
-    众数
-
-    快递重量（单位：kg）
-
-    3．6
-
-    m
-
-    n
+    | 快递重量（单位： kg ） | 3 ． 6 | m | n |
 
     根据以上信息，回答下列问题：
 
@@ -1009,7 +1031,7 @@ questions:
     所有正确结论的序号是；
 
     （4）该日此快递公司在全市揽收的快递包裹中有3800件发往相邻城市，估计这批快递的重量．'
-  answer: （1）见解析（2）$3.3kg$ （3）②④（4）估计这批快递的重量为$13680\mathrm{kg}$．
+  answer: （1）见解析 （2）$3.3kg$ （3）②④ （4）估计这批快递的重量为$13680\mathrm{kg}$．
   solution: '【小问1详解】
 
     解：$1000-(87+57+20+336+76+35+2+15+5+17)=350$（件），补全的频数分布直方图如图所示：
@@ -1064,8 +1086,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-xicheng-er-fig17.png
-  - figures/2024-xicheng-er-fig18.png
+  - path: figures/2024-xicheng-er-fig17.png
+    width_mm: 79.9
+    height_mm: 45.8
 - id: 25
   type: 解答
   score: 6
@@ -1081,97 +1104,15 @@ questions:
 
     若$|x - F(x)| \leq 0.001$记为$\sqrt{}$，否则记为x．
 
-    x
+    | x | 0 | 10 | 20 | 30 | 40 | 45 | 50 | 60 | 70 | 80 | 90 |
 
-    0
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
-    10
+    | c | 0 | $0.174$ | $0.342$ | ② | $0.643$ | $0.707$ | $0.766$ | $0.866$ | $0.940$ | $0.985$ | 1 |
 
-    20
+    | $F(x)$ | 0 | $0.174$ | $0.342$ | $0.500$ | $0.643$ | $0.707$ | $0.766$ | $0.866$ | $0.941$ | $0.937$ | $1.005$ |
 
-    30
-
-    40
-
-    45
-
-    50
-
-    60
-
-    70
-
-    80
-
-    90
-
-    c
-
-    0
-
-    $0.174$
-
-    $0.342$
-
-    ②
-
-    $0.643$
-
-    $0.707$
-
-    $0.766$
-
-    $0.866$
-
-    $0.940$
-
-    $0.985$
-
-    1
-
-    $F(x)$
-
-    0
-
-    $0.174$
-
-    $0.342$
-
-    $0.500$
-
-    $0.643$
-
-    $0.707$
-
-    $0.766$
-
-    $0.866$
-
-    $0.941$
-
-    $0.937$
-
-    $1.005$
-
-    $\sqrt{}$或x
-
-    $\sqrt{}$
-
-    $\sqrt{}$
-
-    $\sqrt{}$
-
-    $\sqrt{}$
-
-    $\sqrt{}$
-
-    $\sqrt{}$
-
-    $\sqrt{}$
-
-    $\sqrt{}$
-
-    x
+    | $\sqrt{}$ 或 x | $\sqrt{}$ | $\sqrt{}$ | $\sqrt{}$ |  | $\sqrt{}$ | $\sqrt{}$ | $\sqrt{}$ | $\sqrt{}$ | $\sqrt{}$ | x |  |
 
     [图]
 
@@ -1248,8 +1189,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-xicheng-er-fig19.png
-  - figures/2024-xicheng-er-fig20.png
+  - path: figures/2024-xicheng-er-fig19.png
+    width_mm: 93.4
+    height_mm: 36.8
 - id: 26
   type: 解答
   score: 6
@@ -1363,11 +1305,7 @@ questions:
 
     $ME=2BC$，理由如下：
 
-    如图， 在BC的延长线上截取$CF = BC$，
-
-    连接AF，以点B为圆心BF为半径作弧，交AF于点N，
-
-    连接BN，
+    如图， 在BC的延长线上截取$CF = BC$， 连接AF，以点B为圆心BF为半径作弧，交AF于点N， 连接BN，
 
     ∵$CF = BC, \angle ACB = 90^\circ$，
 
@@ -1396,9 +1334,9 @@ questions:
   recommended_for:
   - L3
   figures:
-  - figures/2024-xicheng-er-fig21.png
-  - figures/2024-xicheng-er-fig22.png
-  - figures/2024-xicheng-er-fig23.png
+  - path: figures/2024-xicheng-er-fig21.png
+    width_mm: 82.3
+    height_mm: 32.3
 - id: 28
   type: 解答
   score: 7
@@ -1509,16 +1447,9 @@ questions:
   recommended_for:
   - L3
   figures:
-  - figures/2024-xicheng-er-fig24.png
-  - figures/2024-xicheng-er-fig25.png
-  - figures/2024-xicheng-er-fig26.png
-  - figures/2024-xicheng-er-fig27.png
-  - figures/2024-xicheng-er-fig28.png
-  - figures/2024-xicheng-er-fig29.png
-  - figures/2024-xicheng-er-fig30.png
-  - figures/2024-xicheng-er-fig31.png
-  - figures/2024-xicheng-er-fig32.png
-  - figures/2024-xicheng-er-fig33.png
-  - figures/2024-xicheng-er-fig34.png
-  - figures/2024-xicheng-er-fig35.png
-  - figures/2024-xicheng-er-fig36.png
+  - path: figures/2024-xicheng-er-fig24.png
+    width_mm: 46.6
+    height_mm: 60.6
+  - path: figures/2024-xicheng-er-fig25.png
+    width_mm: 78.1
+    height_mm: 74.1

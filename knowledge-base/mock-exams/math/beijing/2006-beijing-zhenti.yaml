@@ -1,0 +1,725 @@
+# ============================================================
+# 2006年北京市中考数学真题试卷 — 逐题分析
+# ============================================================
+# 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
+# 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
+# 满分：100分  时长：120分钟
+
+year: 2006
+district: 北京市
+exam_type: 真题
+subject: 数学
+full_score: 100
+duration_minutes: 120
+total_questions: 21
+structure: 8选择(16分) + 8填空(16分) + 12解答(68分)
+questions:
+- id: 1
+  type: 选择
+  score: 2
+  question: '－5的相反数是
+
+    A、5B、－5C、$\frac{1}{5}$D、$-\frac{1}{5}$
+
+    0$\begin{tikzpicture}
+
+    \draw[thick] (0,0) -- (4,0) -- (5,2) -- (1,2) -- cycle;
+
+    \draw[thick] (1,2) -- (6,3);
+
+    \draw[thick] (0,0) -- (5,2);
+
+    \draw (0,0) node[anchor=north east] {B};
+
+    \draw (4,0) node[anchor=north west] {C};
+
+    \draw (5,2) node[anchor=south west] {D};
+
+    \draw (1,2) node[anchor=south east] {A};
+
+    \draw (6,3) node[anchor=south west] {E};
+
+    \draw (2.5,-0.5) node {(第 04 题图)};
+
+    \end{tikzpicture}$ 2．青藏高原是世界上海拔最高的高原，它的面积约为2500000平方千米。将2500000用科学记数法表示应为
+
+    A、0.25×107B、2.5×107C、2.5×106D、25×105'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 科学记数法
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 3
+  type: 选择
+  score: 2
+  question: '在函数$y=\frac{1}{x-3}$ 中，自变量x的取值范围是
+
+    A、x≠3B、x≠0C、x＞3D、x≠－3'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: functions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 4
+  type: 选择
+  score: 2
+  question: '如图，AD∥BC，点E在BD的延长线上，若∠ADE=155°，则∠DBC的度数为
+
+    A、155°B、50°C、45°D、25°'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 5
+  type: 选择
+  score: 2
+  question: '小芸所在学习小组的同学们，响应“为祖国争光，为奥运添彩”的号召，主动到附近的7个社区帮助爷爷、奶奶们学习英语日常用语。他们记录的各社区参加其中一次活动的人数如下：33，32，32，31，28，26，32，那么这组数据的众数和中位数分别是
+
+    A、32，31B、32，32C、3，31D、3，32'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 中位数
+  - 众数
+  module: statisticsAndProbability
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 6
+  type: 选择
+  score: 2
+  question: '把代数式xy2－9x分解因式，结果正确的是
+
+    A、$x(y^2-9)$B、$x(y+3)^2$C、$x(y+3)(y-3)$D、$x(y+9)(y-9)$'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 7
+  type: 选择
+  score: 2
+  question: '掷一枚质地均匀的正方体骰子，骰子的六个面上分别刻有1到6的点数，掷得面朝上的点数为奇数的概率为
+
+    A、$\frac{1}{6}$B、$\frac{1}{3}$C、$\frac{1}{4}$D、$\frac{1}{2}$
+
+    0$\angle AOB = 90^\circ, \quad OA = OB = 10, \quad S_{\text{阴影}} = ?$ 8．将如右图所示的圆心角为90°的扇形纸片AOB围成圆锥形纸帽，使扇形的两条半径OA与OB重合(接缝粘贴部分忽略不计)，则围成的圆锥形纸帽是
+
+    [图]
+
+    二．填空题（本题共16分，每小题4分）'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 概率
+  module: circles
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2006-beijing-zhenti-fig01.jpg
+    width_mm: 101.9
+    height_mm: 32.3
+- id: 9
+  type: 填空
+  score: 2
+  question: 若关于x得一元二次方程x2－3x＋m=0有实数根，则m的取值范围是。
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 一元二次方程
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 10
+  type: 填空
+  score: 2
+  question: 若$\sqrt{m-3}+(n+1)^{2}=0$ ，则m+n的值为。
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 11
+  type: 填空
+  score: 2
+  question: 用“☆”定义新运算： 对于任意实数a、b， 都有a☆b=b2＋1。 例如7☆4=42＋1=17，那么5☆3=；当m为实数时，m☆(m☆2)=。
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 12
+  type: 填空
+  score: 2
+  question: '如图，在△ABC中，AB=AC，M、N分别是AB、AC的中点，D、E为BC上的点，连结DN、EM。若AB=13cm，BC=10cm，DE=5cm，则图中阴影部分的面积为cm2。
+
+    三$\begin{tikzpicture}[scale=0.8]
+
+    \draw (0,0) -- (4,0) -- (2,3) -- cycle;
+
+    \draw (1,1.5) -- (3,1.5);
+
+    \draw (2,0) -- (2,3);
+
+    \draw (1,1.5) -- (2,0);
+
+    \draw (3,1.5) -- (2,3);
+
+    \draw (1,1.5) -- (3,1.5);
+
+    \draw (2,0) -- (2,1.5);
+
+    \fill[gray] (0,0) -- (1,1.5) -- (2,0) -- cycle;
+
+    \fill[gray] (4,0) -- (3,1.5) -- (2,0) -- cycle;
+
+    \fill[gray] (2,3) -- (1,1.5) -- (3,1.5) -- cycle;
+
+    \node at (0,0) [left] {$A$};
+
+    \node at (4,0) [right] {$C$};
+
+    \node at (2,3) [above] {$B$};
+
+    \node at (1,1.5) [left] {$M$};
+
+    \node at (2,0) [below] {$N$};
+
+    \node at (2,1.5) [right$ ．解答题（本题共30分，每小题5分）'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 13
+  type: 填空
+  score: 2
+  question: 计算：$\sqrt{12}+\left|-\sqrt{3}\right|-(-2006)^{0}+\left(\frac{1}{2}\right)^{-1}$ 。
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 14
+  type: 填空
+  score: 2
+  question: '解不等式组：$\left\{
+
+    \begin{array}{l}
+
+    3x-1<5 \\
+
+    2x-6>0
+
+    \end{array}
+
+    \right.$ 。'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 不等式
+  - 不等式组
+  module: equationsAndInequalities
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 15
+  type: 填空
+  score: 2
+  question: 解分式方程：$\frac{1}{x-1}+\frac{2x}{x+1}=2$ 。
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 分式方程
+  module: numbersAndExpressions
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 16
+  type: 填空
+  score: 2
+  question: 已知：如图，AB∥ED，点F、点C在AD上，AB=DE，AF=DC。求证：BC=EF。
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 17
+  type: 解答
+  score: 5
+  question: '已知2x－3=0，求代数式x(x2－x)＋x2(5－x)－9的值。
+
+    1$\begin{tikzpicture}
+
+    \draw (0,0) -- (2,3) -- (4,1) -- (6,4) -- (8,1) -- (6,-1) -- cycle;
+
+    \draw (2,3) -- (6,-1);
+
+    \draw (4,1) -- (6,4);
+
+    \node at (0,0) [left] {$B$};
+
+    \node at (2,3) [above] {$A$};
+
+    \node at (4,1) [below] {$C$};
+
+    \node at (6,4) [above] {$E$};
+
+    \node at (8,1) [right] {$D$};
+
+    \node at (6,-1) [below] {$F$};
+
+    \node at (4,-2) {(第 16 题图)};
+
+    \end{tikzpicture}$ 8．已知：如图，在梯形ABCD中，AD∥BC，∠ABC=90°，∠C=45°，BE⊥CD于点E，AD=1，CD=$2\sqrt{2}$。求：BE的长。
+
+    $\angle AED = \angle CEB, \quad \angle DAE = \angle EBC, \quad AD = BE$
+
+    $\angle OAB = \angle OBA$
+
+    四．解答题（本题共20分，第19题6分，第20题5分，第21题5分，第22题4分）'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: quadrilaterals
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 19
+  type: 解答
+  score: 5
+  question: '已知：如图，△ABC内接于⊙O，点D在OC的延长线上，sinB=$\frac{1}{2}$，∠CAD=30°。
+
+    （1）求证：AD是⊙O的切线；
+
+    （2）若OD⊥AB，BC=5，求AD的长。
+
+    2$\begin{aligned} & \text { 2000年、2005年北京市 } \\ & \text { 常住人口数统计图 } \end{aligned}
+
+    \begin{array}{c|cc} \text { 人数（万人） } & & \\ \hline 1600 & & \\ 1500 & & \\ 1400 & & \\ 1300 & & \\ 1200 & & \\ & 2000 \text { 年 } & 2005 \text { 年 } \\ & 1382 & 1536 \\ \end{array}$$\begin{tikzpicture}
+
+    \begin{axis}[
+
+    axis equal,
+
+    width=10cm,
+
+    height=10cm,
+
+    xmin=0, xmax=1,
+
+    ymin=0, ymax=1,
+
+    xtick=\empty,
+
+    ytick=\empty,
+
+    clip=false
+
+    ]
+
+    % 绘制饼图
+
+    \addplot[
+
+    pie,
+
+    color=black!20,
+
+    fill=black!20,
+
+    draw=black,
+
+    area legend,
+
+    nodes near coords,
+
+    point meta=explicit symbolic,
+
+    visualization depends on={value \thisrow{angle} \as \angle},
+
+    visualization depends on={value \thisrow{color} \as \color},
+
+    ] table [meta=index] {
+
+    angle color label
+
+    79.0 black!20 0-14岁
+
+    10.8 black!60 14-65岁
+
+    10.2 black 65岁以上
+
+    };
+
+    % 添加图例
+
+    \legend{0-14岁, 14-65岁, 65岁以上}
+
+    % 添加标题
+
+    \node at (axis cs:0.5,1.1) {2005年北京市常住人口年龄段};
+
+    \node at (axis cs:0.5,0.95) {人数统计表};
+
+    \end{axis}
+
+    \end{$ 0．根据北京市统计局公布的2000年、2005年北京市常住人口相关数据，绘制统计图表如下：
+
+    2000年、2005年北京市常住人口中受教育程度情况统计表（人数单位：万人）
+
+    | 年份 | 大学程度人数 ( 指大专及以上 ) | 高中程度人数 ( 含中专 ) | 初中程度人数 | 小学程度人数 | 其它人数 |
+
+    | --- | --- | --- | --- | --- | --- |
+
+    | 2000 年 | 233 | 320 | 475 | 234 | 120 |
+
+    | 2005 年 | 362 | 372 | 476 | 212 | 114 |
+
+    请利用上述统计图表提供的信息回答下列问题：
+
+    （1）从2000年到2005年北京市常住人口增加了多少万人？
+
+    （2）2005年北京市常住人口中，少儿(0～14岁)人口约为多少万人？
+
+    （3）请结合2000年和2005年北京市常住人口受教育程度的状况，谈谈你的看法。'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 统计
+  - 切线
+  module: circles
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 21
+  type: 解答
+  score: 5
+  question: '在平面直角坐标系xOy中，直线y=－x绕点O顺时针旋转90°得到直线l，直线l与反比例函数
+
+    $y = \frac{k}{x}$ 的图象的一个交点为A(a，3)，试确定反比例函数的解析式。'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 反比例函数
+  - 旋转
+  - 坐标系
+  module: functions
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 22
+  type: 解答
+  score: 5
+  question: '请阅读下列材料：
+
+    问题：现有5个边长为1的正方形，排列形式如图①，请把它们分割后拼接成一个新的正方形。要求：画出分割线并在正方形网格图(图中每个小正方形的边长均为1)中用实线画出拼接成的新正方形。
+
+    小东同学的做法是：设新正方形的边长为x(x＞0)。依题意，割补前后图形的面积相等，有x2=5，解得x=$\sqrt{5}$。由此可知新正方形得边长等于两个小正方形组成得矩形对角线得长。于是，画出如图②所示的分割线，拼出如图③所示的新正方形。
+
+    $图①: \quad \boxed{\text{图①}} \quad \text{图②:} \quad \boxed{\text{图②}} \quad \text{图③:} \quad \boxed{\text{图③}} \quad (\text{第22题图})$$\begin{array}{c}
+
+    \text{图1} \\
+
+    \begin{array}{|c|c|c|c|c|}
+
+    \hline
+
+    &  &  &  &  \\
+
+    \hline
+
+    \end{array} \\
+
+    \\
+
+    \text{图2} \\
+
+    \begin{array}{|c|c|c|c|c|c|c|c|c|c|}
+
+    \hline
+
+    &  &  &  &  &  &  &  &  &  \\
+
+    \hline
+
+    &  &  &  &  &  &  &  &  &  \\
+
+    \hline
+
+    &  &  &  &  &  &  &  &  &  \\
+
+    \hline
+
+    &  &  &  &  &  &  &  &  &  \\
+
+    \hline
+
+    &  &  &  &  &  &  &  &  &  \\
+
+    \hline
+
+    \end{array}
+
+    \end{array}$
+
+    请你参考小东同学的做法，解决如下问题：
+
+    现有10个边长为1的正方形，排列形式如图④，请把它们分割后拼接成一个新的正方形。要求：在图④中画出分割线，并在图⑤的正方形网格图(图中每个小正方形的边长均为1)中用实线画出拼接成的新正方形。
+
+    说明：直接画出图形，不要求写分析过程。
+
+    五．解答题（本题共22分，第23题6分，第24题8分，第25题8分）'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 矩形
+  - 正方形
+  module: quadrilaterals
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 23
+  type: 解答
+  score: 6
+  question: '如图①，OP是∠MON的平分线，请你利用该图形画一对以OP所在直线为对称轴的全等三角形。请你参考这个作全等三角形的方法，解答下列问题：
+
+    （1）如图②，在△ABC中，∠ACB是直角，∠B=60°，AD、CE分别是∠BAC、∠BCA的平分线，AD、CE相交于点F。请你判断并写出FE与FD之间的数量关系；
+
+    （$\angle OMP = \angle ONP
+
+    \triangle AEC \cong \triangle BDC
+
+    \angle EAC = \angle DBC
+
+    \angle ABC = \angle ACB
+
+    \angle BAC = \angle BCA
+
+    \angle AEC = \angle BDC
+
+    AE = BD
+
+    EC = DC
+
+    AC = BC
+
+    AB = AB
+
+    \angle AEB = \angle BDA
+
+    \angle ABE = \angle BAD
+
+    \angle AED = \angle BFD
+
+    \angle EAF = \angle DBF
+
+    \angle AFE = \angle BFD
+
+    \angle AEF = \angle BDF
+
+    \angle EAF = \angle DBF
+
+    \angle AEF = \angle BDF
+
+    \angle AFE = \angle BFD
+
+    \angle EAF = \angle DBF
+
+    \angle AEF = \angle BDF
+
+    \angle AFE = \angle BFD
+
+    \angle EAF = \angle DBF
+
+    \angle AEF = \angle BDF
+
+    \angle AFE = \angle BFD
+
+    \angle EAF = \angle DBF
+
+    \angle AEF = \angle BDF
+
+    \angle AFE = \angle BFD
+
+    \angle EAF = \angle DBF
+
+    \angle AEF = \angle BDF
+
+    \angle AFE = \angle BFD
+
+    \angle EAF = \angle DBF
+
+    \angle AEF$2）如图③，在△ABC中，如果∠ACB不是直角，而(1)中的其它条件不变，请问，你在(1)中所得结论是否仍然成立？若成立，请证明；若不成立，请说明理由。'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 全等三角形
+  module: triangles
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 24
+  type: 解答
+  score: 6
+  question: '已知抛物线y=ax2+bx+c与y轴交于点A(0，3)，与x轴分别交于B(1，0)、C(5，0)两点。
+
+    （1）求此抛物线的解析式；
+
+    （2）若点D为线段OA的一个三等分点，求直线DC的解析式；
+
+    （3）若一个动点P自OA的中点M出发，先到达x轴上的某点(设为点E)，再到达抛物线的对称轴上某点(设为点F)，最后运动到点A。求使点P运动的总路径最短的点E、点F的坐标，并求出这个最短总路径的长。'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 动点
+  module: functions
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 25
+  type: 解答
+  score: 6
+  question: '我们给出如下定义：若一个四边形的两条对角线相等，则称这个四边形为等对角线四边形。请解答下列问题：
+
+    （1）写出你所学过的特殊四边形中是等对角线四边形的两种图形的名称；
+
+    （2）探究：当等对角线四边形中两条对角线所夹锐角为60°时，这对60°角所对的两边之和与其中一条对角线的大小关系，并证明你的结论。
+
+    [图]
+
+    [图]
+
+    [图]
+
+    [图]
+
+    [图]
+
+    [图]
+
+    [图]
+
+    [图]
+
+    说明
+
+    为了方便各位老师在今后的教学中使用本卷，本人由天利考试信息网上的扫描卷编辑了这份试卷，在此，首先对扫描卷的制作者表示感谢。
+
+    由于本人水平有限，编辑过程中难免出错，如有错落，请大家见谅并对照扫描卷自行更正。
+
+    天门市卢家口中学herewave
+
+    2006.07.12'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: quadrilaterals
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+  figures:
+  - path: figures/2006-beijing-zhenti-fig02.jpg
+    width_mm: 168.8
+    height_mm: 241.3
+  - path: figures/2006-beijing-zhenti-fig03.jpg
+    width_mm: 168.5
+    height_mm: 240.5
+  - path: figures/2006-beijing-zhenti-fig04.jpg
+    width_mm: 160.9
+    height_mm: 245.0
+  - path: figures/2006-beijing-zhenti-fig05.jpg
+    width_mm: 165.1
+    height_mm: 239.2
+  - path: figures/2006-beijing-zhenti-fig06.jpg
+    width_mm: 166.7
+    height_mm: 239.2
+  - path: figures/2006-beijing-zhenti-fig07.jpg
+    width_mm: 167.2
+    height_mm: 238.1
+  - path: figures/2006-beijing-zhenti-fig08.jpg
+    width_mm: 164.3
+    height_mm: 238.4
+  - path: figures/2006-beijing-zhenti-fig09.jpg
+    width_mm: 165.4
+    height_mm: 236.5

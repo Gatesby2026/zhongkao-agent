@@ -1,0 +1,578 @@
+# ============================================================
+# 2016年北京市中考数学真题试卷 — 逐题分析
+# ============================================================
+# 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
+# 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
+# 满分：100分  时长：120分钟
+
+year: 2016
+district: 北京市
+exam_type: 真题
+subject: 数学
+full_score: 100
+duration_minutes: 120
+total_questions: 19
+structure: 8选择(16分) + 8填空(16分) + 12解答(68分)
+questions:
+- id: 1
+  type: 选择
+  score: 2
+  question: '如图所示，用量角器度量$\angle AOB$ ，可以读出$\angle AOB$ 的度数为
+
+    (A)45°   (B)55°     (C)125°    (D) 135°
+
+    [图]'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2016-beijing-zhenti-fig01.jpg
+    width_mm: 69.1
+    height_mm: 42.3
+- id: 2
+  type: 选择
+  score: 2
+  question: '神舟十号飞船是我国“神舟”系列飞船之一，每小时飞行约28000公里，将28000用科学记数法表示应为
+
+    (A)2.8×103 (B) 28×103 (C) 2.8×104 (D)0.28×105'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 科学记数法
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 3
+  type: 选择
+  score: 2
+  question: '实数a，b在数轴上的对应点的位置如图所示，则正确的结论是
+
+    $\begin{tikzpicture}
+
+    \draw[->] (-3.5,0) -- (3.5,0);
+
+    \foreach \x in {-3,-2,-1,0,1,2,3}
+
+    \draw (\x,-0.1) -- (\x,0.1) node[below] {\x};
+
+    \draw[fill=black] (-2.5,0) circle (2pt) node[above] {a};
+
+    \draw[fill=black] (1.5,0) circle (2pt) node[above] {b};
+
+    \end{tikzpicture}$
+
+    (A)$a > -2$ (B)$a<-3$ (C)$a > -b$ (D)$a < -b$'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 4
+  type: 选择
+  score: 2
+  question: '内角和为540°的多边形是
+
+    [图]
+
+    5$\begin{tikzpicture}
+
+    \draw (0,0) rectangle (2,2);
+
+    \draw (3,0.5) rectangle (4,2);
+
+    \draw (0,-1) -- (1,-1) -- (0.5,-0.5) -- cycle;
+
+    \end{tikzpicture}$ .右图是某个几何体的三视图，该几何体是
+
+    (A)圆锥(B)三棱锥(C)圆柱(D)三棱柱'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: circles
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2016-beijing-zhenti-fig02.jpg
+    width_mm: 127.0
+    height_mm: 28.0
+- id: 6
+  type: 选择
+  score: 2
+  question: '如果$a+b=2$ ，那么代数式$\left(a-\frac{b^{2}}{a}\right)\cdot\frac{a}{a-b}$ 的值是
+
+    (A) 2         (B)－2         (C)$\frac{1}{2}$ (D)$-\frac{1}{2}$'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 7
+  type: 选择
+  score: 2
+  question: '甲骨文是我国的一种古代文字，是汉字的早期形式，下列甲骨文中，不是轴对称的是
+
+    [图]'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 轴对称
+  module: geometryComprehensive
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2016-beijing-zhenti-fig03.png
+    width_mm: 133.3
+    height_mm: 28.3
+- id: 8
+  type: 选择
+  score: 2
+  question: '在1～7月份，某种水果的每斤进价与每斤售价的信息如图所示，则出售该种水果每斤利润最大的月份是
+
+    (A)3月份(B) 4月份(C)5月份(D)6月份
+
+    [图]'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: equationsAndInequalities
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+  figures:
+  - path: figures/2016-beijing-zhenti-fig04.jpg
+    width_mm: 136.5
+    height_mm: 71.7
+- id: 9
+  type: 填空
+  score: 2
+  question: '如图，直线$m \perp n$ ，在某平面直角坐标系中，x轴∥m，y轴∥n，点A的坐标为$(-4,2)$ ，点B的坐标为$(2,-4)$ ，则坐标原点为
+
+    (A)$O_1$ (B)$O_2$ (C)$O_3$ (D)$O_4$
+
+    1[图] 0.为了节约水资源，某市准备按照居民家庭年用水量实行阶梯水价，水价分档递增.计划使第一档、第二档和第三档的水价分别覆盖全市居民家庭的80%，15%和5%.为合理确定各档之间的界限，随机抽查了该市5万户居民家庭上一年的年用水量（单位：$m^3$ ），绘制了统计图，如图所示.下面有四个推断：
+
+    ①年用水量不超过180$m^3$的该市居民家庭
+
+    按第一档水价交费
+
+    ②年用水量不超过240$m^3$的该市居民家庭
+
+    按第三档水价交费
+
+    ③该市居民家庭年用水量的中位数
+
+    在150～180之间
+
+    ④该市居民家庭年用水量的平均数
+
+    不超过180
+
+    其中合理的是
+
+    (A) ①③   (B)①④   (C) ②③  (D)②④'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 统计
+  - 平均数
+  - 中位数
+  - 坐标系
+  module: statisticsAndProbability
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2016-beijing-zhenti-fig05.png
+    width_mm: 66.9
+    height_mm: 60.9
+- id: 11
+  type: 填空
+  score: 2
+  question: '如果分式$\frac{2}{x-1}$ 有意义，那么x的取值范围是.
+
+    1[图] 2.右图中四边形均为矩形，根据图形，
+
+    写出一个正确的等式：.'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 矩形
+  module: quadrilaterals
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2016-beijing-zhenti-fig06.png
+    width_mm: 50.8
+    height_mm: 32.0
+- id: 13
+  type: 填空
+  score: 2
+  question: '林业部门要考察某种幼树在一定条件下的移植成活率，下表是这种幼树在移植过程中的一组统计数据：
+
+    | 移植的棵数 n | 1000 | 1500 | 2500 | 4000 | 8000 | 15000 | 20000 | 30000 |
+
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+
+    | 成活的棵数 m | 865 | 1356 | 2220 | 3500 | 7056 | 13170 | 17580 | 26430 |
+
+    | 成活的频率 $\frac{m}{n}$ | 0.865 | 0.904 | 0.888 | 0.875 | 0.882 | 0.878 | 0.879 | 0.881 |
+
+    估计该种幼树在此条件下移植成活的概率为__________.
+
+    1[图] 4.如图，小军、小珠之间的距离为2.7m，他们在同一盏路灯小的影长分别为1.8m、1.5m，已知小军、小珠的身高分别为1.8m、1.5m，
+
+    则路灯的高为__________m'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 概率
+  - 频率
+  - 统计
+  module: statisticsAndProbability
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2016-beijing-zhenti-fig07.png
+    width_mm: 62.7
+    height_mm: 34.7
+- id: 15
+  type: 填空
+  score: 2
+  question: '百子回归图是由1,2,3，...，100无重复排列而成的正方形数表，它是一部数化的澳门简史，如：中央四位“19 99 12 20”标示澳门回归日期，最后一行中间两位“23 50”标示澳门面积，……，同时它也是十阶幻方，其每行10个数之和、每列10个数之和、每条对角线10个数之和均相等，则这个和为________。
+
+    [图][图]'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 正方形
+  module: quadrilaterals
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2016-beijing-zhenti-fig08.png
+    width_mm: 64.0
+    height_mm: 62.7
+  - path: figures/2016-beijing-zhenti-fig09.png
+    width_mm: 56.1
+    height_mm: 59.0
+- id: 16
+  type: 填空
+  score: 2
+  question: '下面是“经过已知直线外一点作这条直线的垂线”的尺规作图过程.
+
+    [图]
+
+    请回答：该作图的依据是__________
+
+    三，解答题（本题共72分，第17-26题，每小题5分，第27题7分，第28分7分，第9题8分）解答应写出文字说明、演算步骤或证明过程。'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 尺规作图
+  module: geometryComprehensive
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+  figures:
+  - path: figures/2016-beijing-zhenti-fig10.png
+    width_mm: 142.9
+    height_mm: 85.5
+- id: 17
+  type: 解答
+  score: 5
+  question: 计算：$(3-\pi)^{0}+4\sin 45^{\circ}-\sqrt{8}+\left|1-\sqrt{3}\right|$.
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 18
+  type: 解答
+  score: 5
+  question: '解不等式组：$\left\{
+
+    \begin{array}{l}
+
+    2x + 5 > 3(x - 1) \\
+
+    4x > \dfrac{x + 7}{2}
+
+    \end{array}
+
+    \right.$'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 不等式
+  - 不等式组
+  module: equationsAndInequalities
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 19
+  type: 解答
+  score: 5
+  question: '如图，四边形ABCD是平行四边形，AE平分$\angle BAD$ ，交DC的延长线于点E.
+
+    求证：DA=DE
+
+    $\triangle ABC \cong \triangle CDE$'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 平行四边形
+  module: quadrilaterals
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 20
+  type: 解答
+  score: 5
+  question: '关于x的一元二次方程$x^2 + (2m + 1)x + m^2 - 1 = 0$
+
+    有两个不想等的实数根。
+
+    （1）求m的取值范围；
+
+    （2）写出一个满足条件的m的值，并求此时方程的根。
+
+    2[图] 1.如图，在平面直角坐标系xOy 中，过点$A(-6,0)$ 的直线$l_1$与直线$l_2$ ：y=2x相交于点$B(m,4)$.
+
+    (1)求直线$l_1$ 的表达式；
+
+    （2）过动点$P(n,0)$ 且垂直与x轴的直线与$l_1$ ，$l_2$
+
+    的交点分别为C，D，当点C位于点D上方时，
+
+    写出n的取值范围。'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 一元二次方程
+  - 坐标系
+  - 动点
+  module: geometryComprehensive
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2016-beijing-zhenti-fig11.jpg
+    width_mm: 50.8
+    height_mm: 48.9
+- id: 22
+  type: 解答
+  score: 5
+  question: '调查作业：了解你所在小区家庭5月份用气量情况。
+
+    小天、小东和小芸三位同学住在同一小区，该小区共有300户家庭，每户家庭人数在2~5之间，这300户家庭的平均人数均为3.4。
+
+    小天、小东和小芸各自对该小区家庭5月份用气量情况进行了抽样调查，将收集的数据进行了整理，绘制的统计表分别为表1、表2和表3。
+
+    表1抽样调查小区4户家庭5月份用气量统计表（单位：m³）
+
+    | 家庭人数 | 2 | 3 | 4 | 5 |
+
+    | --- | --- | --- | --- | --- |
+
+    | 用气量 | 14 | 19 | 21 | 26 |
+
+    表2抽样调查小区15户家庭5月份用气量统计表（单位：m³）
+
+    | 家庭人数 | 2 | 2 | 2 | 3 | 3 | 3 | 3 | 3 | 3 | 3 | 3 | 3 | 3 | 3 | 4 |
+
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+
+    | 用气量 | 10 | 11 | 15 | 13 | 14 | 15 | 15 | 17 | 17 | 18 | 18 | 18 | 18 | 20 | 22 |
+
+    表3抽样调查小区15户家庭5月份用气量统计表（单位：m³）
+
+    | 家庭人数 | 2 | 2 | 3 | 3 | 3 | 3 | 3 | 3 | 3 | 4 | 4 | 4 | 4 | 5 | 5 |
+
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+
+    | 用气量 | 10 | 12 | 13 | 14 | 17 | 17 | 18 | 19 | 20 | 20 | 22 | 26 | 31 | 28 | 31 |
+
+    根据以上材料回答问题：
+
+    小天、小东和小芸三人中，哪一位同学抽样调查的数据能较好地反映出该小区家庭5月份用气量情况，并简要说明其他两位同学抽样调查的不足之处.'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 统计
+  module: statisticsAndProbability
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 23
+  type: 解答
+  score: 6
+  question: "如图，在四边形ABCD中，∠ABC=90°，AC=AD,M,N分别为AC,CD的中点，连接BM,MN,BN.\n求[图] 证：BM=MN;\n若∠BAD=60°，AC平分∠BAD,AC=2，\n求BN的长.\n阅读下列材料：\n北京市正围绕“政治中心、文化中心、国际交往中心、科技创新中心”的定\n位，深入实施“人文北京、科技北京、绿色北京”的发展战略，“十二五”期间，\n北京市文化创意产业展现了良好的发展基础和巨大的发展潜力，已经成为首都\n\
+    经济增长的支柱产业。\n2011年，北京文化创意产业实现增加值1938.6亿元，占地区生产总值的12.1%.\n2012年，北京市文化创意产业继续呈现平稳发展态势，实现产业增加值2189.2亿元，\n占地区生产总值的12.3%，是第三产业中仅次于金融业、批发和零售业的第三大支\n柱产业.2013年，北京市文化创意产业实现增加值2406.7亿元，比上年增长9.1%.\n文化创意产业作为北京市支柱产业已经排到了第二位.2014年，北京市文化创意产业\n\
+    实现增加值2794.3亿元，占地区生产总值的13.1%,创历史新高.2015年，北京市文\n化创意产业发展总体平稳，实现产业增加值3072.3亿元，占地区生产总值的13.4%.\n（以上数据来源于北京市统计局）\n根据以上材料解答下列问题：\n用折线图将2011-2015年北京市文化创意产业实现增加值表示出来，并在图中\n标明相应数据；\n根据绘制的折线图中提供的信息，预估2016年北京市文化创意产业\n\
+    实现增加值约________亿元，你的预估理由是_______________.\n如图，AB为$00$ 的直径，F为弦AC的中点，连接OF并延长交\x04\\s\\up5(⌒)\x05于点D，\n过点D作$00$ 的切线，交BA的延长线于点E.\n求[图] 证：AC∥DE；\n连接CD，若OA=AE=a，\n写出求四边形ACDE面积的思路.\n已知y是x的函数，自变量x的取值范围是x \t\
+    > 0，下表是y与x的几组对应值.\n| x | ··· | 1 | 2 | 3 | 5 | 7 | 9 | ··· |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| y | ··· | 1.98 | 3.95 | 2.63 | 1.58 | 1.13 | 0.88 | ··· |\n小腾根据学习函数的经验，利用上述表格所反映出的y与x之间的变化规律，对该函数的图象与性质进行了探究.\n\
+    下面是小腾的探究过程，请补充完整：\n如图，在平面直角坐标系xOy中，描出了以上表中各对对应值为坐标的点.根据描出的点，画出该函数的图象;\n[图]\n根据画出的函数图象，写出：\nx=4对应的函数值y约为＿＿＿＿；\n该函数的一条性质：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿．\n在平面直角坐标系xOy中，抛物线$y = mx^2 - 2mx + m - 1 (m > 0)$与x轴的交点为A，B.\n\
+    （1）求抛物线的顶点坐标;\n（2）横、纵坐标都是整数的点叫整点.\n①[图]当m=1时，求线段AB上整点的个数；\n②若抛物线在点A，B之间的部分与线\n段AB所围成的区域内（包括边界）恰\n有6个整点，结合函数的图象，求m的\n取值范围."
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 统计
+  - 切线
+  - 弦
+  - 坐标系
+  module: functions
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+  figures:
+  - path: figures/2016-beijing-zhenti-fig12.jpg
+    width_mm: 54.0
+    height_mm: 51.3
+  - path: figures/2016-beijing-zhenti-fig13.jpg
+    width_mm: 73.0
+    height_mm: 44.7
+  - path: figures/2016-beijing-zhenti-fig14.png
+    width_mm: 88.6
+    height_mm: 60.1
+  - path: figures/2016-beijing-zhenti-fig15.png
+    width_mm: 74.6
+    height_mm: 76.2
+- id: 28
+  type: 解答
+  score: 7
+  question: '在等边$\triangle ABC$ 中，
+
+    （1）如图1，P，Q是BC边上两点，AP=AQ，$\angle BAP = 20^\circ$ ，求$\angle AQB$ 的度数；
+
+    （2）点$P,Q$ 是BC 边上的两个动点（不与$B,C$ 重合），点P 在点Q 的左侧，且$AP = AQ$ ，点Q 关于直线AC 的对称点为M ，连接$AM, PM.$
+
+    ①依题意将图2补全；
+
+    ②小茹通过观察、实验，提出猜想：在点$P,Q$ 运动的过程中，始终有$PA = PM.$ 小茹把这个猜想与同学们进行交流，通过讨论，形成了证明该猜想的几种想法：
+
+    想法1：要证$PA = PM$ ，只需证$\triangle APM$ 是等边三角形。
+
+    想法2：在BA 上取一点N ，使得$BN = BP$ ，要证$PA = PM$ ，只需证$\triangle ANP \cong \triangle PCM$.
+
+    想法3：将线段BP 绕点B 顺时针旋转$60^\circ$ ，得到线段BK ，要证$PA = PM$ ，只需证$PA = CK$ ，$PM = CK$.
+
+    ……
+
+    请参考上面的想法，帮助小茹证明$PA = PM$.（一种方法即可）
+
+    [图]
+
+    29.在平面直角坐标系xOy 中，点P 的坐标为$(x_1,y_1)$ ，点Q 的坐标为$(x_2,y_2)$ ，且$x_{1}\neq x_{2}$ ，$y_1 \ne y_2$ ，若$P,Q$ 为某个矩形的两个顶点，且该矩形的边均与某条坐标轴垂直，则称该矩形为点$P,Q$ 的“相关矩形”.下图为点$P,Q$ 的“相关矩形”的示意图.
+
+    [图]
+
+    （1）已知点A 的坐标为（1,0），
+
+    ①若点B 的坐标为（3,1），求点$A,B$ 的“相关矩形”的面积；
+
+    ②点C 在直线x=3上，若点$A,C$ 的“相关矩形”为正方形，求直线AC 的表达式；
+
+    （2）⊙O 的半径为$\sqrt{2}$ ，点M 的坐标为$(m,3)$.若在⊙O 上存在一点N ，使得点$M,N$ 的“相关矩形”为正方形，求m 的取值范围.
+
+    [图][图][图][图][图][图]'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 矩形
+  - 正方形
+  - 旋转
+  - 坐标系
+  - 动点
+  module: geometryComprehensive
+  difficulty: 压轴
+  recommended_for:
+  - L3
+  figures:
+  - path: figures/2016-beijing-zhenti-fig16.jpg
+    width_mm: 101.6
+    height_mm: 48.2
+  - path: figures/2016-beijing-zhenti-fig17.png
+    width_mm: 60.3
+    height_mm: 51.3
+  - path: figures/2016-beijing-zhenti-fig18.jpg
+    width_mm: 143.1
+    height_mm: 231.8
+  - path: figures/2016-beijing-zhenti-fig19.jpg
+    width_mm: 134.1
+    height_mm: 238.4
+  - path: figures/2016-beijing-zhenti-fig20.jpg
+    width_mm: 138.4
+    height_mm: 233.6
+  - path: figures/2016-beijing-zhenti-fig21.jpg
+    width_mm: 143.1
+    height_mm: 240.8
+  - path: figures/2016-beijing-zhenti-fig22.jpg
+    width_mm: 142.9
+    height_mm: 223.0
+  - path: figures/2016-beijing-zhenti-fig23.jpg
+    width_mm: 145.3
+    height_mm: 214.6

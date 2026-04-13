@@ -21,7 +21,13 @@ questions:
 
     [图]
 
-    A.[图]B.[图]C.[图]D.[图]'
+    A.[图]
+
+    B.[图]
+
+    C.[图]
+
+    D.[图]'
   answer: B
   solution: '光线由上向下照射，此正五棱柱的正投影是
 
@@ -38,18 +44,33 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-haidian-er-fig02.png
-  - figures/2023-haidian-er-fig03.png
-  - figures/2023-haidian-er-fig04.png
-  - figures/2023-haidian-er-fig05.png
-  - figures/2023-haidian-er-fig06.png
-  - figures/2023-haidian-er-fig07.png
+  - path: figures/2023-haidian-er-fig02.png
+    width_mm: 19.3
+    height_mm: 25.1
+  - path: figures/2023-haidian-er-fig03.png
+    width_mm: 19.1
+    height_mm: 16.4
+  - path: figures/2023-haidian-er-fig04.png
+    width_mm: 19.8
+    height_mm: 18.0
+  - path: figures/2023-haidian-er-fig05.png
+    width_mm: 15.3
+    height_mm: 15.6
+  - path: figures/2023-haidian-er-fig06.png
+    width_mm: 10.3
+    height_mm: 18.3
 - id: 2
   type: 选择
   score: 2
   question: '下列运算正确的是（）
 
-    A.$2a + 3a = 5a^2$B.$a\cdot a\cdot a=3a$C.$\left(a^{3}\right)^{2}=a^{5}$D.$a(m+n)=am+an$'
+    A.$2a + 3a = 5a^2$
+
+    B.$a\cdot a\cdot a=3a$
+
+    C.$\left(a^{3}\right)^{2}=a^{5}$
+
+    D.$a(m+n)=am+an$'
   answer: D
   solution: '解：A.$2a + 3a = 5a$，故该选项不正确，不符合题意；
 
@@ -86,7 +107,13 @@ questions:
 
     \end{tikzpicture}$
 
-    A.$-2$B.$-1$C.0D.1'
+    A.$-2$
+
+    B.$-1$
+
+    C.0
+
+    D.1'
   answer: A
   solution: '解∶根据题意得∶$1<a<2$，
 
@@ -115,7 +142,13 @@ questions:
 
     [图]
 
-    A.1B.2C.3D.4'
+    A.1
+
+    B.2
+
+    C.3
+
+    D.4'
   answer: C
   solution: '解：由正六边形和正三角形组成的图形为轴对称图形，该图形的对称轴的条数为3条即正三角形的三条高所在的直线．
 
@@ -131,87 +164,37 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-haidian-er-fig08.png
+  - path: figures/2023-haidian-er-fig08.png
+    width_mm: 28.3
+    height_mm: 29.9
 - id: 5
   type: 选择
   score: 2
   question: '投掷两枚质地均匀的骰子，两枚骰子向上一面的点数相同的概率是（）
 
-    A.$\frac{1}{12}$B.$\frac{1}{6}$C.$\frac{1}{3}$D.$\frac{1}{2}$'
+    A.$\frac{1}{12}$
+
+    B.$\frac{1}{6}$
+
+    C.$\frac{1}{3}$
+
+    D.$\frac{1}{2}$'
   answer: B
   solution: '列表得：
 
-    $(1,6)$
+    | $(1,6)$ | $(2,6)$ | $(3,6)$ | $(4,6)$ | $(5,6)$ | $(6,6)$ |
 
-    $(2,6)$
+    | --- | --- | --- | --- | --- | --- |
 
-    $(3,6)$
+    | $(1,5)$ | $(2,5)$ | $(3,5)$ | $(4,5)$ | $(5,5)$ | $(6,5)$ |
 
-    $(4,6)$
+    | $(1,4)$ | $(2,4)$ | $(3,4)$ | $(4,4)$ | $(5,4)$ | $(6,4)$ |
 
-    $(5,6)$
+    | $(1,3)$ | $(2,3)$ | $(3,3)$ | $(4,3)$ | $(5,3)$ | $(6,3)$ |
 
-    $(6,6)$
+    | $(1,2)$ | $(2,2)$ | $(3,2)$ | $(4,2)$ | $(5,2)$ | $(6,2)$ |
 
-    $(1,5)$
-
-    $(2,5)$
-
-    $(3,5)$
-
-    $(4,5)$
-
-    $(5,5)$
-
-    $(6,5)$
-
-    $(1,4)$
-
-    $(2,4)$
-
-    $(3,4)$
-
-    $(4,4)$
-
-    $(5,4)$
-
-    $(6,4)$
-
-    $(1,3)$
-
-    $(2,3)$
-
-    $(3,3)$
-
-    $(4,3)$
-
-    $(5,3)$
-
-    $(6,3)$
-
-    $(1,2)$
-
-    $(2,2)$
-
-    $(3,2)$
-
-    $(4,2)$
-
-    $(5,2)$
-
-    $(6,2)$
-
-    $(1,1)$
-
-    $(2,1)$
-
-    $(3,1)$
-
-    $(4,1)$
-
-    $(5,1)$
-
-    $(6,1)$
+    | $(1,1)$ | $(2,1)$ | $(3,1)$ | $(4,1)$ | $(5,1)$ | $(6,1)$ |
 
     ∵共有$36$种等可能的结果，两个骰子向上一面的点数相同的有$6$种情况，
 
@@ -234,7 +217,13 @@ questions:
   score: 2
   question: '如果$a-b=2$，那么代数式$\frac{2}{a+b}\left(1+\frac{2b}{a-b}\right)$的值是（）
 
-    A.$\frac{1}{2}$B.1C.$\sqrt{2}$D.2'
+    A.$\frac{1}{2}$
+
+    B.1
+
+    C.$\sqrt{2}$
+
+    D.2'
   answer: B
   solution: '解：$\frac{2}{a+b}\left(1+\frac{2b}{a-b}\right)$
 
@@ -264,7 +253,13 @@ questions:
 
     [图]
 
-    A.$\triangle DEF$B.$\triangle DHF$C.$\triangle GEH$D.$\triangle GDH$'
+    A.$\triangle DEF$
+
+    B.$\triangle DHF$
+
+    C.$\triangle GEH$
+
+    D.$\triangle GDH$'
   answer: C
   solution: '解：如图所示，连接$OB,OA,OC$并延长，
 
@@ -282,50 +277,29 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-haidian-er-fig09.png
-  - figures/2023-haidian-er-fig10.png
+  - path: figures/2023-haidian-er-fig09.png
+    width_mm: 52.9
+    height_mm: 40.2
 - id: 8
   type: 选择
   score: 2
   question: '小明近期计划阅读一本总页数不低于300页的名著，他制定的阅读计划如下：
 
-    星期
+    | 星期 | 一 | 二 | 三 | 四 | 五 | 六 | 日 |
 
-    一
+    | --- | --- | --- | --- | --- | --- | --- | --- |
 
-    二
-
-    三
-
-    四
-
-    五
-
-    六
-
-    日
-
-    页数
-
-    15
-
-    20
-
-    15
-
-    10
-
-    20
-
-    40
-
-    30
+    | 页数 | 15 | 20 | 15 | 10 | 20 | 40 | 30 |
 
     若小明按照计划从星期x开始连续阅读，10天后剩下的页数为y，则y与x的图象可能为（）
 
-    A.[图]B.[图]
+    A.[图]
 
-    C.[图]D.[图]'
+    B.[图]
+
+    C.[图]
+
+    D.[图]'
   answer: A
   solution: '解：一周的阅读量为：$15+20+15+10+20+40+30=150$页，
 
@@ -354,10 +328,18 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-haidian-er-fig11.png
-  - figures/2023-haidian-er-fig12.png
-  - figures/2023-haidian-er-fig13.png
-  - figures/2023-haidian-er-fig14.png
+  - path: figures/2023-haidian-er-fig11.png
+    width_mm: 52.1
+    height_mm: 42.1
+  - path: figures/2023-haidian-er-fig12.png
+    width_mm: 52.4
+    height_mm: 42.3
+  - path: figures/2023-haidian-er-fig13.png
+    width_mm: 52.4
+    height_mm: 42.3
+  - path: figures/2023-haidian-er-fig14.png
+    width_mm: 52.4
+    height_mm: 42.3
 - id: 9
   type: 填空
   score: 2
@@ -451,8 +433,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-haidian-er-fig15.png
-  - figures/2023-haidian-er-fig16.png
+  - path: figures/2023-haidian-er-fig15.png
+    width_mm: 38.1
+    height_mm: 29.9
 - id: 13
   type: 填空
   score: 2
@@ -481,47 +464,13 @@ questions:
   score: 2
   question: '咖啡树种子的发芽能力会随着保存时间的增长而减弱．咖啡树种子保存到三个月时，发芽率约为95%；从三个月到五个月，发芽率会逐渐降到75%；从五个月到九个月，发芽率会逐渐降到25%．农科院记录了某批咖啡树种子的发芽情况，结果如下表所示：
 
-    种子数量n
+    | 种子数量 n | 10 | 50 | 150 | 300 | 500 | 800 |
 
-    10
+    | --- | --- | --- | --- | --- | --- | --- |
 
-    50
+    | 发芽数量 m | 9 | 41 | 133 | 261 | 431 | 689 |
 
-    150
-
-    300
-
-    500
-
-    800
-
-    发芽数量m
-
-    9
-
-    41
-
-    133
-
-    261
-
-    431
-
-    689
-
-    发芽率$\frac{n}{m}$
-
-    0.9
-
-    0.82
-
-    0.887
-
-    0.87
-
-    0.862
-
-    0.861
+    | 发芽率 $\frac{n}{m}$ | 0.9 | 0.82 | 0.887 | 0.87 | 0.862 | 0.861 |
 
     据此推测，下面三个时间段中，这批咖啡树种子的保存时间是________（填“三个月内”“三至五个月”或“五至九个月”）．'
   answer: 三至五个月
@@ -568,7 +517,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-haidian-er-fig17.png
+  - path: figures/2023-haidian-er-fig17.png
+    width_mm: 38.1
+    height_mm: 39.4
 - id: 16
   type: 填空
   score: 2
@@ -577,7 +528,7 @@ questions:
     （1）若$c = 10$，则A，B，C中与M距离最小$[公式]$点为_________；
 
     （2）若在A，B，C中，点C与点M的距离最小，则符合条件的点C有_________个．'
-  answer: ①.A②.$3$
+  answer: ①.A ②.$3$
   solution: '解：如图所示，
 
     [图]
@@ -622,9 +573,6 @@ questions:
   recommended_for:
   - L2
   - L3
-  figures:
-  - figures/2023-haidian-er-fig18.png
-  - figures/2023-haidian-er-fig19.png
 - id: 17
   type: 解答
   score: 5
@@ -672,7 +620,7 @@ questions:
 
     表示在数轴上，如图所示：
 
-    [图]【点睛】此题考查了解一元一次不等式，以及在数轴上表示不等式的解集，熟练掌握运算法则是解本题的关键．'
+    [图] 【点睛】此题考查了解一元一次不等式，以及在数轴上表示不等式的解集，熟练掌握运算法则是解本题的关键．'
   knowledge_points:
   - 不等式
   module: numbersAndExpressions
@@ -682,8 +630,6 @@ questions:
   - L1
   - L2
   - L3
-  figures:
-  - figures/2023-haidian-er-fig20.png
 - id: 19
   type: 解答
   score: 5
@@ -698,12 +644,12 @@ questions:
     ①$\angle BEC =$________$\text{o}$；
 
     ②写出图中一个与$\angle CBE$相等的角________．'
-  answer: （1）见解析（2）①$90$；②$\angle DAC$（或$\angle BAD、\angle BED$）
+  answer: （1）见解析 （2）①$90$；②$\angle DAC$（或$\angle BAD、\angle BED$）
   solution: '【小问1详解】
 
     解：如图所示，
 
-    [图]【小问2详解】
+    [图] 【小问2详解】
 
     ①如图所示，
 
@@ -752,9 +698,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-haidian-er-fig21.png
-  - figures/2023-haidian-er-fig22.png
-  - figures/2023-haidian-er-fig23.png
+  - path: figures/2023-haidian-er-fig21.png
+    width_mm: 26.5
+    height_mm: 28.0
 - id: 20
   type: 解答
   score: 5
@@ -851,7 +797,7 @@ questions:
     （1）求证：四边形$AFBO$为平行四边形；
 
     （2）若$\angle BDA = \angle BDC$，求证：四边形$AFBO$为矩形．'
-  answer: （1）见解析（2）见解析
+  answer: （1）见解析 （2）见解析
   solution: '【小问1详解】
 
     证明：∵平行四边形$ABCD$的对角线AC，BD交于点O，
@@ -904,7 +850,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-haidian-er-fig24.png
+  - path: figures/2023-haidian-er-fig24.png
+    width_mm: 51.1
+    height_mm: 28.3
 - id: 23
   type: 解答
   score: 6
@@ -912,29 +860,11 @@ questions:
 
     a．甲款红茶分数（百分制）的频数分布表如下：
 
-    分数
+    | 分数 | $70 \leq x < 75$ | $75 \leq x < 80$ | $80 \leq x < 85$ | $85 \leq x < 90$ | $90 \leq x < 95$ | $95 \leq x \leq 100$ |
 
-    $70 \leq x < 75$
+    | --- | --- | --- | --- | --- | --- | --- |
 
-    $75 \leq x < 80$
-
-    $80 \leq x < 85$
-
-    $85 \leq x < 90$
-
-    $90 \leq x < 95$
-
-    $95 \leq x \leq 100$
-
-    频率
-
-    $2$
-
-    $1$
-
-    $4$
-
-    $4$
+    | 频率 | $2$ | $1$ | $4$ |  |  | $4$ |
 
     b．甲款红茶分数在$85 \leq x < 90$这一组的是：
 
@@ -942,29 +872,13 @@ questions:
 
     c．甲、乙两款红茶分数的平均数、众数、中位数如下表所示：
 
-    品种
+    | 品种 | 平均数 | 众数 | 中位数 |
 
-    平均数
+    | --- | --- | --- | --- |
 
-    众数
+    | 甲 | $86.6$ | m | n |
 
-    中位数
-
-    甲
-
-    $86.6$
-
-    m
-
-    n
-
-    乙
-
-    $87.5$
-
-    $90$
-
-    $86$
+    | 乙 | $87.5$ | $90$ | $86$ |
 
     [图]
 
@@ -975,14 +889,14 @@ questions:
     （2）表格中m的值为________，n的值为________；
 
     （3）专业机构对两款红茶的条索、色泽、整碎、净度、内质、香气、滋味醇厚度、汤色、叶底来进行综合评分如下：甲款红茶93分，乙款红茶87分．若以这25名消费者评分的平均数和专业机构的评分按照$6:4$的比例确定最终成绩，可以认定________款红茶最终成绩更高（填“甲”或“乙”）．'
-  answer: （1）见解析（2）$86$，$87$ （3）甲
+  answer: （1）见解析 （2）$86$，$87$ （3）甲
   solution: '【小问1详解】
 
     解：根据题意，甲款红茶分数在$85 \leq x < 90$这一组的数据有$10$个，则在$90 \leq x < 95$这一组的数据有$25-2-1-4-10-4=4$个，
 
     如图所示，
 
-    [图]【小问2详解】
+    [图] 【小问2详解】
 
     根据甲款红茶分数在$85 \leq x < 90$这一组的是：
 
@@ -1017,8 +931,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-haidian-er-fig25.png
-  - figures/2023-haidian-er-fig26.png
+  - path: figures/2023-haidian-er-fig25.png
+    width_mm: 57.9
+    height_mm: 56.1
 - id: 24
   type: 解答
   score: 6
@@ -1095,9 +1010,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-haidian-er-fig27.png
-  - figures/2023-haidian-er-fig28.png
-  - figures/2023-haidian-er-fig29.png
+  - path: figures/2023-haidian-er-fig27.png
+    width_mm: 57.9
+    height_mm: 36.5
 - id: 25
   type: 解答
   score: 6
@@ -1109,95 +1024,19 @@ questions:
 
     表1直发式
 
-    $x(\mathrm{dm})$
+    | $x(\mathrm{dm})$ | $0$ | $2$ | $4$ | $6$ | $8$ | $10$ | $16$ | $20$ | $\cdots$ |
 
-    $0$
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
-    $2$
-
-    $4$
-
-    $6$
-
-    $8$
-
-    $10$
-
-    $16$
-
-    $20$
-
-    $\cdots$
-
-    $y(\mathrm{dm})$
-
-    $3.84$
-
-    $3.96$
-
-    $4$
-
-    $3.96$
-
-    m
-
-    $3.64$
-
-    $2.56$
-
-    $1.44$
-
-    $\cdots$
+    | $y(\mathrm{dm})$ | $3.84$ | $3.96$ | $4$ | $3.96$ | m | $3.64$ | $2.56$ | $1.44$ | $\cdots$ |
 
     表2间发式
 
-    $x(\mathrm{dm})$
+    | $x(\mathrm{dm})$ | $0$ | $2$ | $4$ | $6$ | $8$ | $10$ | $12$ | $14$ | $16$ | $18$ | $\cdots$ |
 
-    $0$
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
-    $2$
-
-    $4$
-
-    $6$
-
-    $8$
-
-    $10$
-
-    $12$
-
-    $14$
-
-    $16$
-
-    $18$
-
-    $\cdots$
-
-    $y(\mathrm{dm})$
-
-    $3.36$
-
-    n
-
-    $1.68$
-
-    $0.84$
-
-    $0$
-
-    $1.40$
-
-    $2.40$
-
-    $3$
-
-    $3.20$
-
-    $3$
-
-    $\cdots$
+    | $y(\mathrm{dm})$ | $3.36$ | n | $1.68$ | $0.84$ | $0$ | $1.40$ | $2.40$ | $3$ | $3.20$ | $3$ | $\cdots$ |
 
     根据以上信息，回答问题：
 
@@ -1272,7 +1111,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-haidian-er-fig30.png
+  - path: figures/2023-haidian-er-fig30.png
+    width_mm: 121.2
+    height_mm: 21.4
 - id: 26
   type: 解答
   score: 6
@@ -1348,8 +1189,6 @@ questions:
   difficulty: 压轴
   recommended_for:
   - L3
-  figures:
-  - figures/2023-haidian-er-fig31.png
 - id: 27
   type: 解答
   score: 7
@@ -1428,10 +1267,9 @@ questions:
   recommended_for:
   - L3
   figures:
-  - figures/2023-haidian-er-fig32.png
-  - figures/2023-haidian-er-fig33.png
-  - figures/2023-haidian-er-fig34.png
-  - figures/2023-haidian-er-fig35.png
+  - path: figures/2023-haidian-er-fig32.png
+    width_mm: 38.9
+    height_mm: 37.8
 - id: 28
   type: 解答
   score: 7
@@ -1483,7 +1321,7 @@ questions:
 
     ∴$6-\sqrt{3}\leq PA\leq 3$
 
-    [图]【小问2详解】
+    [图] 【小问2详解】
 
     直线$y=-\frac{3}{4}x+b(b>0)$与x轴，y轴分别交于A，B两点，
 
@@ -1491,7 +1329,7 @@ questions:
 
     ∴$A\left(\frac{4}{3}b,0\right)$,$B(0,b)$
 
-    对于$Rt_{\triangle OAB}$中，'
+    对于$Rt_{\triangle OAB}$中'
   knowledge_points:
   - 一次函数
   - 勾股定理
@@ -1501,8 +1339,3 @@ questions:
   difficulty: 压轴
   recommended_for:
   - L3
-  figures:
-  - figures/2023-haidian-er-fig36.png
-  - figures/2023-haidian-er-fig37.png
-  - figures/2023-haidian-er-fig38.png
-  - figures/2023-haidian-er-fig39.png

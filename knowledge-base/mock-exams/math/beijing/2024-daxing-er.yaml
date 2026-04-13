@@ -17,13 +17,17 @@ questions:
 - id: 1
   type: 选择
   score: 2
-  question: '如图是某几何体的展开图，该几何体是（
-
-    ）
+  question: '如图是某几何体的展开图，该几何体是（    ）
 
     [图]
 
-    A.三棱柱B.三棱锥C.圆柱D.圆锥'
+    A.三棱柱
+
+    B.三棱锥
+
+    C.圆柱
+
+    D.圆锥'
   answer: D
   solution: '解：由图可知该几何体是圆锥；
 
@@ -38,15 +42,21 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-daxing-er-fig02.png
+  - path: figures/2024-daxing-er-fig02.png
+    width_mm: 23.8
+    height_mm: 16.1
 - id: 2
   type: 选择
   score: 2
-  question: '截至$2023$年$12$月中旬，$2023$年全民健身线上运动会已上线$199$项赛事，累计参赛人数达到$2189$万，证书总发放量达$1731$万张．将$21890000$用科学记数法表示应为（
+  question: '截至$2023$年$12$月中旬，$2023$年全民健身线上运动会已上线$199$项赛事，累计参赛人数达到$2189$万，证书总发放量达$1731$万张．将$21890000$用科学记数法表示应为（    ）
 
-    ）
+    A.$21.89\times10^{6}$
 
-    A.$21.89\times10^{6}$B.$2.189\times10^{7}$C.$2.189\times10^{8}$D.$0.2189\times10^{9}$'
+    B.$2.189\times10^{7}$
+
+    C.$2.189\times10^{8}$
+
+    D.$0.2189\times10^{9}$'
   answer: B
   solution: '解：$21890000=2.189\times10^{7}$，
 
@@ -63,11 +73,15 @@ questions:
 - id: 3
   type: 选择
   score: 2
-  question: '下列图形中，既是轴对称图形又是中心对称图形的是（
+  question: '下列图形中，既是轴对称图形又是中心对称图形的是（    ）
 
-    ）
+    A.[图]
 
-    A.[图]B.[图]C.[图]D.[图]'
+    B.[图]
+
+    C.[图]
+
+    D.[图]'
   answer: D
   solution: '解：A、是轴对称图形，不是中心对称图形，故此选项不符合题意；
 
@@ -91,20 +105,32 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-daxing-er-fig03.png
-  - figures/2024-daxing-er-fig04.png
-  - figures/2024-daxing-er-fig05.png
-  - figures/2024-daxing-er-fig06.png
+  - path: figures/2024-daxing-er-fig03.png
+    width_mm: 19.8
+    height_mm: 19.3
+  - path: figures/2024-daxing-er-fig04.png
+    width_mm: 20.1
+    height_mm: 19.6
+  - path: figures/2024-daxing-er-fig05.png
+    width_mm: 17.7
+    height_mm: 17.2
+  - path: figures/2024-daxing-er-fig06.png
+    width_mm: 19.6
+    height_mm: 19.1
 - id: 4
   type: 选择
   score: 2
-  question: '如图，A，B两点在数轴上表示的数分别是a，b，下列结论中正确的是（
-
-    ）
+  question: '如图，A，B两点在数轴上表示的数分别是a，b，下列结论中正确的是（    ）
 
     [图]
 
-    A.$ab > 0$B.$a+b>0$C.$\left|b\right|>\left|a\right|$D.$b-a>0$'
+    A.$ab > 0$
+
+    B.$a+b>0$
+
+    C.$\left|b\right|>\left|a\right|$
+
+    D.$b-a>0$'
   answer: B
   solution: '解：由数轴知：$-1 < b < 0 < 1 < a$，
 
@@ -121,13 +147,21 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-daxing-er-fig07.png
+  - path: figures/2024-daxing-er-fig07.png
+    width_mm: 65.9
+    height_mm: 9.3
 - id: 5
   type: 选择
   score: 2
   question: '某学校组织学生到社区开展公益宣传活动，成立了“文明交通”“垃圾分类”两个宣传队，若小明和小亮每人随机选择参加其中一个宣传队，则他们恰好选到同一个宣传队的概率是（）
 
-    A.$\frac{1}{4}$B.$\frac{1}{3}$C.$\frac{1}{2}$D.$\frac{3}{4}$'
+    A.$\frac{1}{4}$
+
+    B.$\frac{1}{3}$
+
+    C.$\frac{1}{2}$
+
+    D.$\frac{3}{4}$'
   answer: C
   solution: '解：用甲表示“文明交通”宣传队，用乙表示“垃圾分类”宣传队，根据题意得，画树状图如下：
 
@@ -146,16 +180,18 @@ questions:
   - L1
   - L2
   - L3
-  figures:
-  - figures/2024-daxing-er-fig08.png
 - id: 6
   type: 选择
   score: 2
-  question: '若关于x的一元二次方程$x^{2}-4x+2a=0$有两个相等的实数根、则实数a的值为（
+  question: '若关于x的一元二次方程$x^{2}-4x+2a=0$有两个相等的实数根、则实数a的值为（    ）
 
-    ）
+    A.3
 
-    A.3B.2C.0D.$-1$'
+    B.2
+
+    C.0
+
+    D.$-1$'
   answer: B
   solution: '解：根据题意得，$\Delta=(-4)^{2}-4\times2a=0$，
 
@@ -174,13 +210,17 @@ questions:
 - id: 7
   type: 选择
   score: 2
-  question: '如图，点$A, B, C$在$\odot\odot$上，C为$\overline{AB}$的中点．若$\angle ABC=25^{\circ}$，则$\angle AOB$的大小是（
-
-    ）
+  question: '如图，点$A, B, C$在$\odot\odot$上，C为$\overline{AB}$的中点．若$\angle ABC=25^{\circ}$，则$\angle AOB$的大小是（    ）
 
     [图]
 
-    A.$130^\circ$B.$120^\circ$C.$100^\circ$D.$50^\circ$'
+    A.$130^\circ$
+
+    B.$120^\circ$
+
+    C.$100^\circ$
+
+    D.$50^\circ$'
   answer: C
   solution: '解：如图所示，连接OC，点C是$\overset{\diamondsuit}{AB}$中点，
 
@@ -204,8 +244,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-daxing-er-fig09.png
-  - figures/2024-daxing-er-fig10.png
+  - path: figures/2024-daxing-er-fig09.png
+    width_mm: 34.4
+    height_mm: 33.1
 - id: 8
   type: 选择
   score: 2
@@ -219,7 +260,13 @@ questions:
 
     其中，两个变量之间的函数关系可以利用二次函数表示的是（）
 
-    A.①②B.①③C.②③D.①②③'
+    A.①②
+
+    B.①③
+
+    C.②③
+
+    D.①②③'
   answer: A
   solution: '解：①扇形的面积$S = \frac{\pi L}{360} x^{2}$，扇形的圆心角n一定，面积S与半径r两个变量之间的函数关系可以利用二次函数表示，符合题意，
 
@@ -378,8 +425,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-daxing-er-fig11.png
-  - figures/2024-daxing-er-fig12.png
+  - path: figures/2024-daxing-er-fig11.png
+    width_mm: 47.1
+    height_mm: 45.0
 - id: 15
   type: 填空
   score: 2
@@ -409,101 +457,35 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-daxing-er-fig13.png
+  - path: figures/2024-daxing-er-fig13.png
+    width_mm: 38.4
+    height_mm: 19.8
 - id: 16
   type: 填空
   score: 2
   question: 甲、乙、丙、丁4名同学参加中学生天文知识竞赛，成绩各不相同，根据成绩决出第1名到第4名的名次．甲和乙去询问名次，老师对甲说：“很遗憾，你和乙都不是第1名．”对乙说：“你不是第4名．”从这两个回答分析，4个人的名次排列可能有______种不同情况，其中甲是第4名有______种可能情况．
-  answer: ①$[公式]$8②.4
+  answer: ①$[公式]$8 ②.4
   solution: '解：依题意，甲和乙不是第1名，乙不是第4名，有以下8种情况，
 
-    第1名
+    |  | 第 1 名 | 第 2 名 | 第 3 名 | 第 4 名 |
 
-    第2名
+    | --- | --- | --- | --- | --- |
 
-    第3名
+    | ① | 丙 | 乙 | 丁 | 甲 |
 
-    第4名
+    | ② | 丙 | 丁 | 乙 | 甲 |
 
-    ①
+    | ③ | 丁 | 丙 | 乙 | 甲 |
 
-    丙
+    | ④ | 丁 | 乙 | 丙 | 甲 |
 
-    乙
+    | ⑤ | 丁 | 甲 | 乙 | 丙 |
 
-    丁
+    | ⑥ | 丁 | 乙 | 甲 | 丙 |
 
-    甲
+    | ⑦ | 丙 | 甲 | 乙 | 丁 |
 
-    ②
-
-    丙
-
-    丁
-
-    乙
-
-    甲
-
-    ③
-
-    丁
-
-    丙
-
-    乙
-
-    甲
-
-    ④
-
-    丁
-
-    乙
-
-    丙
-
-    甲
-
-    ⑤
-
-    丁
-
-    甲
-
-    乙
-
-    丙
-
-    ⑥
-
-    丁
-
-    乙
-
-    甲
-
-    丙
-
-    ⑦
-
-    丙
-
-    甲
-
-    乙
-
-    丁
-
-    ⑧
-
-    丙
-
-    乙
-
-    甲
-
-    丁
+    | ⑧ | 丙 | 乙 | 甲 | 丁 |
 
     其中①②③④四种情况是甲为第4名，
 
@@ -593,13 +575,10 @@ questions:
   score: 5
   question: '在数学活动课上，同学们分组测量学校旗杆的高度，经过交流、研讨及测量给出如下两种方案，请你选择一种方案求出旗杆的高度．
 
-    方案一：在某一时刻，借助太阳光线，测得小华的身高DE为$1.8$米，他的影长EF为$0.9$米，同时测得旗杆AB的影长BC为$6$米．
+    | 方案一：在某一时刻，借助太阳光线，测得小华的身高 DE 为 $1.8$ 米，他的影长 EF 为 $0.9$ 米，同时测得旗杆 AB 的影长 BC 为 $6$ 米． [图] | 方案二：利用“光在反射时，反射角等于入射角”的规律，小丽在她的脚下 C 点放了一面小镜子，然后向后退 $1.2$ 米到达点 E ，恰好在小镜子中看到旗杆的顶端 A ，此时旗杆底端 B 到点 C 的距离 BC 为 $9$
+    米，小丽的眼睛点 D 到地面的距离 DE 为 $1.6$ 米． [图] |
 
-    [图]
-
-    方案二：利用“光在反射时，反射角等于入射角”的规律，小丽在她的脚下C点放了一面小镜子，然后向后退$1.2$米到达点E，恰好在小镜子中看到旗杆的顶端A，此时旗杆底端B到点C的距离BC为$9$米，小丽的眼睛点D到地面的距离DE为$1.6$米．
-
-    [图]'
+    | --- | --- |'
   answer: $12m$
   solution: '方案一：
 
@@ -642,9 +621,6 @@ questions:
   - L1
   - L2
   - L3
-  figures:
-  - figures/2024-daxing-er-fig14.png
-  - figures/2024-daxing-er-fig15.png
 - id: 21
   type: 解答
   score: 5
@@ -655,7 +631,7 @@ questions:
     （1）求证：四边形$AECF$是菱形；
 
     （2）若$AB = 6$，$BC = 10$，求EG的长．'
-  answer: （1）见解析（2）$\sqrt{10}$
+  answer: （1）见解析 （2）$\sqrt{10}$
   solution: '【小问1详解】
 
     证明：$\begin{array}{c}
@@ -732,8 +708,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-daxing-er-fig16.png
-  - figures/2024-daxing-er-fig17.png
+  - path: figures/2024-daxing-er-fig14.png
+    width_mm: 48.2
+    height_mm: 25.1
 - id: 22
   type: 解答
   score: 5
@@ -753,33 +730,13 @@ questions:
 
     d．A，B两队学生身高数据的平均数、中位数、众数、方差如下：
 
-    平均数
+    |  | 平均数 | 中位数 | 众数 | 方差 |
 
-    中位数
+    | --- | --- | --- | --- | --- |
 
-    众数
+    | A 队 | 170 | 170 | m | $6.8$ |
 
-    方差
-
-    A队
-
-    170
-
-    170
-
-    m
-
-    $6.8$
-
-    B队
-
-    170
-
-    n
-
-    169
-
-    $3.4$
+    | B 队 | 170 | n | 169 | $3.4$ |
 
     根据以上信息，回答下列问题：
 
@@ -792,7 +749,7 @@ questions:
     ①另外选2名学生的身高为171和172时，5名学生身高的平均数大于171，方差小于2；
 
     ②另外选2名学生的身高为168和170时，5名学生身高的平均数小于171，方差小于2．'
-  answer: （1）$m=170$，$n=169.5$ （2）B队（3）①
+  answer: （1）$m=170$，$n=169.5$ （2）B队 （3）①
   solution: '【小问1详解】
 
     解：∵A队学生身高出现最多的是170，
@@ -844,7 +801,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-daxing-er-fig18.png
+  - path: figures/2024-daxing-er-fig16.png
+    width_mm: 77.8
+    height_mm: 45.0
 - id: 23
   type: 解答
   score: 6
@@ -892,8 +851,6 @@ questions:
   recommended_for:
   - L2
   - L3
-  figures:
-  - figures/2024-daxing-er-fig19.png
 - id: 24
   type: 解答
   score: 6
@@ -903,49 +860,23 @@ questions:
 
     a．甲同学研究无盖纸盒的底面积，得到：
 
-    无盖纸盒的底面积$y_{1}$与剪去小正方形的边长x的函数表达式为$y=(30-2x)^{2}$；
+    | 无盖纸盒的底面积 $y_{1}$ 与剪去小正方形的边长 x 的函数表达式为 $y=(30-2x)^{2}$ ； |
+
+    | --- |
 
     b．乙同学研究无盖纸盒的侧面积（四个侧面面积之和），得到：
 
-    无盖纸盒的侧面积$y_{2}$与剪去小正方形的边长x的函数表达式为$y=4x(30-2x)$；
+    | 无盖纸盒的侧面积 $y_{2}$ 与剪去小正方形的边长 x 的函数表达式为 $y=4x(30-2x)$ ； |
+
+    | --- |
 
     c．丙同学研究无盖纸盒的体积，得到：
 
-    无盖纸盒$[公式]$体积$y_{3}$与剪去小正方形的边长x的函数表达式为$y_{3}=-x(30-2x)^{2}$．
+    | x （ cm ） | 1 | 2.5 | 5 | 7.5 | 10 | 12.5 | 14 |
 
-    $y_{3}$与x的几组对应值如下表：
+    | --- | --- | --- | --- | --- | --- | --- | --- |
 
-    x（cm）
-
-    1
-
-    2.5
-
-    5
-
-    7.5
-
-    10
-
-    12.5
-
-    14
-
-    y3（cm3）
-
-    754
-
-    1562.5
-
-    2000
-
-    1687.5
-
-    1000
-
-    312.5
-
-    56
+    | y 3 （ cm3 ） | 754 | 1562.5 | 2000 | 1687.5 | 1000 | 312.5 | 56 |
 
     如图3，在平面直角坐标系xOy中，描出了表中各组数值所对应的点（x，y3），并用平滑曲线连接这些点，得到了函数y3＝x（30−2x）2（1≤x≤14）的图象．
 
@@ -966,7 +897,7 @@ questions:
     ③当无盖纸盒的体积$y_{3}$为$1000\mathrm{cm}^3$时，剪去的小正方形的边长x只能为10cm．
 
     （4）当无盖纸盒的体积$y_{3}$为$2000\mathrm{cm}^3$时，无盖纸盒的侧面积$y_{2}$为______$\mathrm{cm}^{2}$．'
-  answer: （1）100（2）$\frac{15}{2}$cm （3）②（4）400
+  answer: （1）100（2）$\frac{15}{2}$cm （3）② （4）400
   solution: '【小问1详解】
 
     当剪去小正方形的边长x为10cm时，$y_{1}=(30-2x)^{2}=(30-2\times10)^{2}=10^{2}=100\left(\mathrm{cm}^{2}\right)$
@@ -1014,8 +945,12 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-daxing-er-fig20.png
-  - figures/2024-daxing-er-fig21.png
+  - path: figures/2024-daxing-er-fig18.png
+    width_mm: 74.9
+    height_mm: 37.3
+  - path: figures/2024-daxing-er-fig19.png
+    width_mm: 76.7
+    height_mm: 56.9
 - id: 25
   type: 解答
   score: 6
@@ -1026,7 +961,7 @@ questions:
     （1）求证：AC是$\odot\odot$的切线；
 
     （2）若$CF = 2$，$\tan \angle CEF = \frac{1}{2}$，求AD的长．'
-  answer: （1）见解析（2）$\frac{10}{3}$
+  answer: （1）见解析 （2）$\frac{10}{3}$
   solution: '【小问1详解】
 
     证明：连接OE，
@@ -1104,9 +1039,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-daxing-er-fig22.png
-  - figures/2024-daxing-er-fig23.png
-  - figures/2024-daxing-er-fig24.png
+  - path: figures/2024-daxing-er-fig20.png
+    width_mm: 28.6
+    height_mm: 37.3
 - id: 26
   type: 解答
   score: 6
@@ -1187,7 +1122,7 @@ questions:
     （2）求证：$BD = EC$；
 
     （3）连接MN，若$\angle DBC + \angle ECB = 90^\circ$，用等式表示线段BD与MN的数量关系，并证明．'
-  answer: （1）见解析（2）见解析 （3）$BD = \sqrt{2}MN$，见解析
+  answer: （1）见解析 （2）见解析 （3）$BD = \sqrt{2}MN$，见解析
   solution: '【小问1详解】
 
     解：依题意补全图形如下：
@@ -1261,10 +1196,9 @@ questions:
   recommended_for:
   - L3
   figures:
-  - figures/2024-daxing-er-fig25.png
-  - figures/2024-daxing-er-fig26.png
-  - figures/2024-daxing-er-fig27.png
-  - figures/2024-daxing-er-fig28.png
+  - path: figures/2024-daxing-er-fig23.png
+    width_mm: 64.6
+    height_mm: 37.8
 - id: 28
   type: 解答
   score: 7
@@ -1349,9 +1283,6 @@ questions:
   recommended_for:
   - L3
   figures:
-  - figures/2024-daxing-er-fig29.png
-  - figures/2024-daxing-er-fig30.png
-  - figures/2024-daxing-er-fig31.png
-  - figures/2024-daxing-er-fig32.png
-  - figures/2024-daxing-er-fig33.png
-  - figures/2024-daxing-er-fig34.png
+  - path: figures/2024-daxing-er-fig27.png
+    width_mm: 96.3
+    height_mm: 47.1

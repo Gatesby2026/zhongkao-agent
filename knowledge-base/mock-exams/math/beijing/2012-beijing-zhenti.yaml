@@ -1,0 +1,599 @@
+# ============================================================
+# 2012年北京市中考数学真题试卷 — 逐题分析
+# ============================================================
+# 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
+# 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
+# 满分：100分  时长：120分钟
+
+year: 2012
+district: 北京市
+exam_type: 真题
+subject: 数学
+full_score: 100
+duration_minutes: 120
+total_questions: 19
+structure: 8选择(16分) + 8填空(16分) + 12解答(68分)
+questions:
+- id: 1
+  type: 选择
+  score: 2
+  question: '$-9$ 的相反数是
+
+    A．$-\frac{1}{9}$
+
+    B．$\frac{1}{9}$
+
+    C．$-9$
+
+    D．9'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 2
+  type: 选择
+  score: 2
+  question: '首届中国（北京）国际服务贸易交易会（京交会）于2012年6月1日闭幕，本届京交会期间签订的项目成交总金额达60 110 000 000美元，将60 110 000 000用科学记数法表示应为
+
+    A．$6.011\times10^{9}$
+
+    B．$60.11\times10^{9}$
+
+    C．$6.011\times10^{10}$
+
+    D．$0.6011\times10^{11}$'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 科学记数法
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 3
+  type: 选择
+  score: 2
+  question: '正十边形的每个外角等于
+
+    A[图] ．$18^\circ$
+
+    B．$36^\circ$
+
+    C．$45^\circ$
+
+    D．$60^\circ$'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: triangles
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2012-beijing-zhenti-fig01.png
+    width_mm: 33.1
+    height_mm: 34.4
+- id: 4
+  type: 选择
+  score: 2
+  question: '右图是某个几何体的三视图，该几何体是
+
+    A．长方体
+
+    B．正方体
+
+    C．圆柱
+
+    D．三棱柱'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: circles
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 5
+  type: 选择
+  score: 2
+  question: '班主任王老师将6份奖品分别放在6个完全相同的不透明礼盒中，准备将它们奖给小英等6位获“爱集体标兵”称号的同学．这些奖品中3份是学习文具，2份是科普读物，1份是科技馆通票．小英同学从中随机取一份奖品，恰好取到科普读物的概率是
+
+    A．$\frac{1}{6}$
+
+    B．$\frac{1}{3}$
+
+    C．$\frac{1}{2}$
+
+    D．$\frac{2}{3}$
+
+    6[图] ． 如图，直线AB ，CD 交于点O ，射线OM 平分$\angle AOC$ ，若$\angle BOD = 76^\circ$ ，则$\angle BOM$ 等于
+
+    A．$38^\circ$
+
+    B．$104^\circ$
+
+    C．$142^\circ$
+
+    D．$144^\circ$'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 概率
+  module: statisticsAndProbability
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2012-beijing-zhenti-fig02.png
+    width_mm: 28.8
+    height_mm: 23.0
+- id: 7
+  type: 选择
+  score: 2
+  question: '某课外小组的同学们在社会实践活动中调查了20户家庭某月的用电量，如下表所示：
+
+    | 用电量（度） | 120 | 140 | 160 | 180 | 200 |
+
+    | --- | --- | --- | --- | --- | --- |
+
+    | 户数 | 2 | 3 | 6 | 7 | 2 |
+
+    则这20户家庭该月用电量的众数和中位数分别是
+
+    A．180，160
+
+    B．160，180
+
+    C．160，160
+
+    D．180，180'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 中位数
+  - 众数
+  module: statisticsAndProbability
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 8
+  type: 选择
+  score: 2
+  question: '小翔在如图1所示的场地上匀速跑步，他从点A 出发，沿箭头所示方向经过点B 跑到点C ，共用时30秒．他的教练选择了一个固定的位置观察小翔的跑步过程．设小翔跑步的时间为t （单位：秒），他与教练的距离为y （单位：米），表示y 与t 的函数关系的图象大致如图2所示，则这个固定位置可能是图1中的
+
+    A．点M
+
+    B．点N
+
+    C．点P
+
+    D．点Q
+
+    [图]'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+  figures:
+  - path: figures/2012-beijing-zhenti-fig03.png
+    width_mm: 101.3
+    height_mm: 39.2
+- id: 9
+  type: 填空
+  score: 2
+  question: 分解因式：$mn^{2} + 6mn + 9m =$．
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 10
+  type: 填空
+  score: 2
+  question: '若关于x 的方程$x^2 - 2x - m = 0$ 有两个相等的实数根，则m 的值是．
+
+    1[图] 1．如图，小明同学用自制的直角三角形纸板DEF 测量树的高度AB ，他调整自己的位置，设法使斜边DF 保持水平，并且边DE 与点B 在同一直线上．已知纸板的两条直角边$DE = 40\,\text{cm}$ ，$EF = 20\,\text{cm}$ ，测得边DF 离地面的高度$AC = 1.5\,\text{m}$ ，$CD = 8m$ ，则树高$AB =$m ．
+
+    1[图] 2．在平面直角坐标系xOy 中，我们把横 、纵坐标都是整数的点叫做整点．已知点$A(0,\ 4)$ ，点B 是x 轴正半轴上的整点，记$\triangle AOB$ 内部（不包括边界）的整点个数为m ．当$m = 3$ 时，点B 的横坐标的所有可能值是；当点B 的横坐标为$4n$ （n 为正整数）时，$m =$（用含n 的代数式表示．）'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 坐标系
+  module: triangles
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2012-beijing-zhenti-fig04.png
+    width_mm: 55.0
+    height_mm: 31.8
+  - path: figures/2012-beijing-zhenti-fig05.png
+    width_mm: 72.5
+    height_mm: 28.3
+- id: 13
+  type: 解答
+  score: 5
+  question: 计算：$(\pi - 3)^0 + \sqrt{18} - 2\sin 45^\circ - \left(\frac{1}{8}\right)^{-1}$.
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 14
+  type: 解答
+  score: 5
+  question: '解不等式组：$\left\{
+
+    \begin{array}{l}
+
+    4x - 3 > x, \\
+
+    x + 4 < 2x - 1.
+
+    \end{array}
+
+    \right.$'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 不等式
+  - 不等式组
+  module: equationsAndInequalities
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 15
+  type: 解答
+  score: 5
+  question: '已知$\frac{a}{2}=\frac{b}{3}\neq0$ ，求代数式$38^\circ$ 的值．
+
+    1[图] 6．已知：如图，点$E, A, C$ 在同一条直线上，$AB \parallel CD$ ，
+
+    $AB = CE,\ AC = CD$ ．
+
+    求证：$BC = ED$.
+
+    1[图] 7．如图，在平面直角坐标系xOy 中，函数$y=\frac{4}{x}(x>0)$ 的图象与一次函数$y = kx - k$ 的图象的交点为$A(m,2)$.
+
+    （1）求一次函数的解析式；
+
+    （2）设一次函数$y = kx - k$ 的图象与y 轴交于点B ，若P 是x 轴上一点， 且满足$\triangle PAB$ 的面积是4，直接写出点P 的坐标．'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 一次函数
+  - 坐标系
+  module: functions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2012-beijing-zhenti-fig06.png
+    width_mm: 56.1
+    height_mm: 25.7
+  - path: figures/2012-beijing-zhenti-fig07.png
+    width_mm: 38.1
+    height_mm: 44.4
+- id: 18
+  type: 解答
+  score: 5
+  question: '列方程或方程组解应用题：
+
+    据林业专家分析，树叶在光合作用后产生的分泌物能够吸附空气中的一些悬浮颗粒物，具有滞尘净化空气的作用．已知一片银杏树叶一年的平均滞尘量比一片国槐树叶一年的平均滞尘量的2倍少4毫克，若一年滞尘1000毫克所需的银杏树叶的片数与一年滞尘550毫克所需的国槐树叶的片数相同，求一片国槐树叶一年的平均滞尘量．
+
+    [图]
+
+    四、解答题（本题共20分，每小题5分）'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: equationsAndInequalities
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2012-beijing-zhenti-fig08.png
+    width_mm: 50.0
+    height_mm: 22.0
+- id: 19
+  type: 解答
+  score: 5
+  question: '如图，在四边形$ABCD$ 中，对角线$AC,\ BD$ 交于点E ，
+
+    $\angle BAC = 90^\circ, \angle CED = 45^\circ, \angle DCE = 30^\circ, DE = \sqrt{2}$
+
+    $BE = 2\sqrt{2}$ ．求CD 的长和四边形$ABCD$ 的面积．
+
+    [图]'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: quadrilaterals
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2012-beijing-zhenti-fig09.png
+    width_mm: 38.9
+    height_mm: 38.1
+- id: 20
+  type: 解答
+  score: 5
+  question: '已知：如图，AB 是$00$ 的直径，C 是$00$ 上一点，$OD \perp BC$ 于点D ，过点C 作$00$ 的切线，交OD 的延长线于点E ，连结BE ．
+
+    （1）求证：BE 与$00$ 相切；
+
+    （2）连结AD 并延长交BE 于点F ，若$OB = 9,$$\sin \angle ABC = \frac{2}{3}$ ，求BF 的长．'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 切线
+  module: circles
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 21
+  type: 解答
+  score: 5
+  question: '近年来，北京市大力发展轨道交通，轨道运营里程大幅增加，2011年北京市又调整修订了2010至2020年轨道交通线网的发展规划．以下是根据北京市轨道交通指挥中心发布的有关数据制作的统计图表的一部分．
+
+    [图]
+
+    北京市轨道交通已开通线路
+
+    相关数据统计表（截至2010年底）
+
+    | 开通时间 | 开通线路 | 运营里程 ( 千米 ) |
+
+    | --- | --- | --- |
+
+    | 1971 | 1 号线 | 31 |
+
+    | 1984 | 2 号线 | 23 |
+
+    | 2003 | 13 号线 | 41 |
+
+    | 八通线 | 19 |  |
+
+    | 2007 | 5 号线 | 28 |
+
+    | 2008 | 8 号线 | 5 |
+
+    | 10 号线 | 25 |  |
+
+    | 机场线 | 28 |  |
+
+    | 2009 | 4 号线 | 28 |
+
+    | 2010 | 房山线 | 22 |
+
+    | 大兴线 | 22 |  |
+
+    | 亦庄线 | 23 |  |
+
+    | 昌平线 | 21 |  |
+
+    | 15 号线 | 20 |  |
+
+    [图]
+
+    请根据以上信息解答下列问题：
+
+    （1）补全条形统计图并在图中标明相应数据；
+
+    （2）按照2011年规划方案，预计2020年北京市轨道交通运营里程将达到多少千米？
+
+    （3）要按时完成截至2015年的轨道交通规划任务，从2011到2015这4年中，平均每年需新增运营里程多少千米？'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 统计
+  - 条形统计图
+  module: statisticsAndProbability
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2012-beijing-zhenti-fig10.png
+    width_mm: 71.7
+    height_mm: 71.4
+  - path: figures/2012-beijing-zhenti-fig11.png
+    width_mm: 98.2
+    height_mm: 37.8
+- id: 22
+  type: 解答
+  score: 5
+  question: '操作与探究：
+
+    （1）对数轴上的点P 进行如下操作：先把点P 表示的数乘以$\frac{1}{3}$ ，再把所得数对应的点向右平移1个单位，得到点P 的对应点$P''$.
+
+    点$A,\ B$ 在数轴上，对线段AB 上的每个点进行上述操作后得到线段$A''B''$ ，其中点$A,\ B$ 的对应点分别为$A'',\ B''$ ．如图1，若点A 表示的数是$-3$ ，则点$A''$ 表示的数是；若点$B''$ 表示的数是2，则点B 表示的数是；已知线段AB 上的点E 经过上述操作后得到的对应点$E''$ 与点E 重合，则点E 表示的数是；
+
+    [图]
+
+    [图] （2）如图2，在平面直角坐标系xOy 中，对正方形$ABCD$ 及其内部的每个点进行如下操作：把每 个点的横、纵坐标都乘以同一种实数a ，将得到的点先向右平移m 个单位，再向上平移n 个单位（$m > 0,\ n > 0$ ），得到正方形$A''B''C''D''$ 及其内部的点，其中点$A,\ B$ 的对应点分别为$A'',\ B''$ 。已知正方形$ABCD$ 内部的一个点F 经过上述操作后得到的对应点$F''$
+    与点F 重合，求点F 的坐标。
+
+    五、解答题（本题共22分，第23题7分，第24题7分，第25题8分）'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 正方形
+  - 平移
+  - 坐标系
+  module: numbersAndExpressions
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2012-beijing-zhenti-fig12.png
+    width_mm: 76.2
+    height_mm: 16.9
+  - path: figures/2012-beijing-zhenti-fig13.png
+    width_mm: 41.5
+    height_mm: 47.6
+- id: 23
+  type: 解答
+  score: 6
+  question: '已知二次函数$y = (t + 1)x^2 + 2(t + 2)x + \frac{3}{2}$
+
+    在$x = 0$ 和$x = 2$ 时的函数值相等。[图]
+
+    求二次函数的解析式；
+
+    若一次函数$y = kx + 6$ 的图象与二次函数的图象都经过点$A(-3,\ m)$ ，求m 和k 的值；
+
+    设二次函数的图象与x 轴交于点$B, C$ （点B 在点C 的左侧），将二次函数的图象在点$B, C$ 间的部分（含点B 和点C ）向左平移$n(n>0)$ 个单位后得到的图象记为G ，同时将（2）中得到的直线$y = kx + 6$ 向上平移n 个单位。请结合图象回答：当平移后的直线与图象G 有公共点时，n 的取值范围。'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 一次函数
+  - 二次函数
+  - 平移
+  module: functions
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+  figures:
+  - path: figures/2012-beijing-zhenti-fig14.png
+    width_mm: 52.1
+    height_mm: 50.8
+- id: 24
+  type: 解答
+  score: 6
+  question: '在$\triangle ABC$ 中，$BA = BC,\ \angle BAC = \alpha$ ，M 是AC 的中点，P 是线段BM 上的动点，将线段PA 绕点P 顺时针旋转$2\alpha$ 得到线段PQ 。
+
+    （1） 若$\alpha=60^\circ$ 且点P 与点M 重合（如图1），线段CQ 的延长线交射线BM 于点D ，请补全图形，并写出$\angle CDB$ 的度数；
+
+    [图]
+
+    （2） 在图2中，点P 不与点$B, M$ 重合，线段CQ 的延长线与射线BM 交于点D ，猜想$\angle CDB$ 的大小（用含$\alpha$ 的代数式表示），并加以证明；
+
+    （3） 对于适当大小的$\alpha$ ，当点P 在线段BM 上运动到某一位置（不与点B ，M 重合）时，能使得线段CQ 的延长线与射线BM 交于点D ，且$PQ = QD$ ，请直接写出$\alpha$ 的范围。
+
+    2[图] 5．在平面直角坐标系xOy 中，对于任意两点$P_{1}(x_{1},\ y_{1})$ 与$P_{2}(x_{2},\ y_{2})$ 的“非常距离”，给出如下定义：
+
+    若$|x_1 - x_2| \geqslant |y_1 - y_2|$ ，则点$P_1$ 与点$P_2$ 的“非常距离”为$\left| x_{1} - x_{2} \right|$ ；
+
+    若$|x_{1}-x_{2}|<|y_{1}-y_{2}|$ ，则点$P_1$ 与点$P_2$ 的“非常距离”为$\left| y_{1} - y_{2} \right|$.
+
+    例如：点$P_{1}(1,\ 2)$ ，点$P_{2}(3,\ 5)$ ，因为$|1-3|<|2-5|$ ，所以点$P_1$ 与点$P_2$ 的“非常距离”为$|2-5|=3$ ，也就是图1中线段$P_1Q$ 与线段$P_{2}Q$ 长度的较大值（点Q 为垂直于y 轴的直线$P_1Q$ 与垂直于x 轴的直线$P_{2}Q$ 的交点）。
+
+    （1）已知点$A\left(-\frac{1}{2},\ 0\right)$ ，B 为y 轴上的一个动点，
+
+    ①若点A 与点B 的“非常距离”为2，写出一个满足条件的点B 的坐标；
+
+    ②直接写出点A 与点B 的“非常距离”的最小值；
+
+    （2）已知C 是直线$y=\frac{3}{4}x+3$ 上的一个动点，
+
+    ①如图2，点D 的坐标是（0，1），求点C 与点D 的“非常距离”的最小值及相应的点C 的坐标；
+
+    ②如图3，E 是以原点O 为圆心，1为半径的圆上的一个动点，求点C 与点E 的“非常距离”
+
+    的最小值及相应的点E 和点C 的坐标。
+
+    [图]
+
+    [图][图][图][图][图]
+
+    12'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 旋转
+  - 坐标系
+  - 动点
+  module: geometryComprehensive
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+  figures:
+  - path: figures/2012-beijing-zhenti-fig15.png
+    width_mm: 89.2
+    height_mm: 36.2
+  - path: figures/2012-beijing-zhenti-fig16.png
+    width_mm: 25.4
+    height_mm: 41.0
+  - path: figures/2012-beijing-zhenti-fig17.png
+    width_mm: 121.7
+    height_mm: 50.3
+  - path: figures/2012-beijing-zhenti-fig18.png
+    width_mm: 146.3
+    height_mm: 223.6
+  - path: figures/2012-beijing-zhenti-fig19.png
+    width_mm: 141.3
+    height_mm: 245.8
+  - path: figures/2012-beijing-zhenti-fig20.png
+    width_mm: 146.3
+    height_mm: 229.4
+  - path: figures/2012-beijing-zhenti-fig21.png
+    width_mm: 146.3
+    height_mm: 216.4
+  - path: figures/2012-beijing-zhenti-fig22.png
+    width_mm: 146.3
+    height_mm: 185.7

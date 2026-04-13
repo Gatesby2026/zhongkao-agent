@@ -21,7 +21,13 @@ questions:
 
     [图]
 
-    A.圆柱B.圆锥C.三棱柱D.三棱锥'
+    A.圆柱
+
+    B.圆锥
+
+    C.三棱柱
+
+    D.三棱锥'
   answer: C
   solution: '解：∵该几何体的主视图和左视图都是矩形，俯视图是三角形，
 
@@ -38,7 +44,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-changping-er-fig02.png
+  - path: figures/2025-changping-er-fig02.png
+    width_mm: 26.7
+    height_mm: 35.2
 - id: 2
   type: 选择
   score: 2
@@ -46,7 +54,13 @@ questions:
 
     [图]
 
-    A.$30^\circ$B.$45^\circ$C.$70^\circ$D.$90^\circ$'
+    A.$30^\circ$
+
+    B.$45^\circ$
+
+    C.$70^\circ$
+
+    D.$90^\circ$'
   answer: C
   solution: '解：∵$AB \parallel CD$，$\angle1=110^{\circ}$，
 
@@ -65,7 +79,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-changping-er-fig03.png
+  - path: figures/2025-changping-er-fig03.png
+    width_mm: 30.4
+    height_mm: 25.4
 - id: 3
   type: 选择
   score: 2
@@ -73,7 +89,13 @@ questions:
 
     [图]
 
-    A.aB.bC.cD.d'
+    A.a
+
+    B.b
+
+    C.c
+
+    D.d'
   answer: B
   solution: '解：∵$1<\sqrt{2}<2$，
 
@@ -94,13 +116,21 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-changping-er-fig04.png
+  - path: figures/2025-changping-er-fig04.png
+    width_mm: 46.0
+    height_mm: 10.3
 - id: 4
   type: 选择
   score: 2
   question: '下列运算正确的是（）
 
-    A.$7a + 2b = 9ab$B.$(a-b)^{2}=a^{2}-b^{2}$C.$(-3a)^{n}=-9a^{2}$D.$a^{6}+a^{2}=a^{4}$'
+    A.$7a + 2b = 9ab$
+
+    B.$(a-b)^{2}=a^{2}-b^{2}$
+
+    C.$(-3a)^{n}=-9a^{2}$
+
+    D.$a^{6}+a^{2}=a^{4}$'
   answer: D
   solution: '解：A.$7a$与$2b$不是同类项，不能合并，原选项计算错误，不符合题意；
 
@@ -125,7 +155,13 @@ questions:
   score: 2
   question: '昌平作为北京国际科创中心建设的重要承载区，已经汇集69个国家级、省部级重点实验室，210个工程技术中心，全国重点实验室数量占全市总量的三分之一以上，并通过有组织的科技成果转化，使得近三年的技术合同成交额达1319亿元．其中131900000000用科学记数法记作（）
 
-    A.$1319\times10^{8}$B.$1.319\times10^{8}$C.$1319\times10^{11}$D.$1.319\times10^{11}$'
+    A.$1319\times10^{8}$
+
+    B.$1.319\times10^{8}$
+
+    C.$1319\times10^{11}$
+
+    D.$1.319\times10^{11}$'
   answer: D
   solution: '解：$1.31900000000=1.319\times10^{11}$．
 
@@ -144,49 +180,27 @@ questions:
   score: 2
   question: '不透明的袋子中有2个红色小球和2个黄色小球，小球除颜色外无其他差别．从中随机摸取2个小球，则这2个小球颜色相同的概率是（）
 
-    A.$\frac{1}{2}$B.$\frac{1}{3}$C.$\frac{2}{3}$D.$\frac{1}{4}$'
+    A.$\frac{1}{2}$
+
+    B.$\frac{1}{3}$
+
+    C.$\frac{2}{3}$
+
+    D.$\frac{1}{4}$'
   answer: B
   solution: '解：用列表法把所有等可能结果表示如下，
 
-    红1
+    |  | 红 1 | 红 2 | 黄 1 | 黄 2 |
 
-    红2
+    | --- | --- | --- | --- | --- |
 
-    黄1
+    | 红 1 |  | （红 1 ，红 2 ） | （红 1 ，黄 1 ） | （红 1 ，黄 2 ） |
 
-    黄2
+    | 红 2 | （红 2 ，红 1 ） |  | （红 2 ，黄 1 ） | （红 2 ，黄 2 ） |
 
-    红1
+    | 黄 1 | （黄 1 ，红 1 ） | （黄 1 ，红 2 ） |  | （黄 1 ，黄 2 ） |
 
-    （红1，红2）
-
-    （红1，黄1）
-
-    （红1，黄2）
-
-    红2
-
-    （红2，红1）
-
-    （红2，黄1）
-
-    （红2，黄2）
-
-    黄1
-
-    （黄1，红1）
-
-    （黄1，红2）
-
-    （黄1，黄2）
-
-    黄2
-
-    （黄2，红1）
-
-    （黄2，红2）
-
-    （黄2，黄1）
+    | 黄 2 | （黄 2 ，红 1 ） | （黄 2 ，红 2 ） | （黄 2 ，黄 1 ） |  |
 
     共有12种等可能结果，其中颜色相同的结果有4种，
 
@@ -208,9 +222,13 @@ questions:
   score: 2
   question: '在平面直角坐标系xOy中，函数$y = -x + 1$的图象与x轴，y轴交于点$A, B$，则下列描述正确的是（）
 
-    A.$\triangle OAB$为等腰直角三角形B.点A坐标为$(-1,0)$
+    A.$\triangle OAB$为等腰直角三角形
 
-    C.图象经过第一、三、四象限D.点O到$y = -x + 1$的图象距离为1'
+    B.点A坐标为$(-1,0)$
+
+    C.图象经过第一、三、四象限
+
+    D.点O到$y = -x + 1$的图象距离为1'
   answer: A
   solution: '解：在平面直角坐标系xOy中，函数$y = -x + 1$的图象与x轴，y轴交于点$A, B$，
 
@@ -281,8 +299,6 @@ questions:
   - L1
   - L2
   - L3
-  figures:
-  - figures/2025-changping-er-fig05.png
 - id: 8
   type: 选择
   score: 2
@@ -302,7 +318,13 @@ questions:
 
     上述结论中，所有正确结论的序号是（）
 
-    A.①②B.②④C.②③D.①④'
+    A.①②
+
+    B.②④
+
+    C.②③
+
+    D.①④'
   answer: B
   solution: '如图：在GA上截取$GH = OG$，
 
@@ -343,8 +365,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-changping-er-fig06.png
-  - figures/2025-changping-er-fig07.png
+  - path: figures/2025-changping-er-fig06.png
+    width_mm: 41.5
+    height_mm: 42.9
 - id: 9
   type: 填空
   score: 2
@@ -393,7 +416,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-changping-er-fig08.png
+  - path: figures/2025-changping-er-fig08.png
+    width_mm: 57.4
+    height_mm: 51.6
 - id: 11
   type: 填空
   score: 2
@@ -517,7 +542,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-changping-er-fig09.png
+  - path: figures/2025-changping-er-fig09.png
+    width_mm: 34.4
+    height_mm: 28.0
 - id: 15
   type: 填空
   score: 2
@@ -559,45 +586,28 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-changping-er-fig10.png
-  - figures/2025-changping-er-fig11.png
+  - path: figures/2025-changping-er-fig10.png
+    width_mm: 35.7
+    height_mm: 38.9
 - id: 16
   type: 填空
   score: 2
   question: '某木材加工厂配备有M型和N型两款木材切割机，两款切割机每次可加工的木材尺寸和数量如下表所示：
 
-    木材尺寸
+    | 木材尺寸 切割机型号 | 大尺寸 | 中尺寸 | 小尺寸 |
 
-    切割机型号
+    | --- | --- | --- | --- |
 
-    大尺寸
+    | M | 2 块／次 | 4 块／次 | 8 块／次 |
 
-    中尺寸
-
-    小尺寸
-
-    M
-
-    2块／次
-
-    4块／次
-
-    8块／次
-
-    N
-
-    不能加工
-
-    3块／次
-
-    6块／次
+    | N | 不能加工 | 3 块／次 | 6 块／次 |
 
     其中加工1块大尺寸木材的位置，可以替换为加工2块中尺寸木材或4块小尺寸木材，加工1块中尺寸木材的位置可以替换为加工2块小尺寸木材．例如：M型切割机可以一次加工2块大尺寸木材，也可以一次加工1块大尺寸、1块中尺寸和2块小尺寸木材．某批次木材共有3块大尺寸，7块中尺寸，12块小尺寸木材．
 
     （1）加工这批木材，M款切割机至少要使用____________次；
 
     （2）若M型切割机加工一次费用为50元，N型切割机加工一次费用为35元，则加工完这批木材所需费用最少____________元．'
-  answer: ①.2②.235
+  answer: ①.2 ②.235
   solution: '解：∵需要加工3块大尺寸木材，且只有M款切割机可加工大尺寸木材，
 
     设加工这批木材，M款切割机使用x次，
@@ -711,8 +721,6 @@ questions:
   - L1
   - L2
   - L3
-  figures:
-  - figures/2025-changping-er-fig12.png
 - id: 19
   type: 解答
   score: 5
@@ -774,7 +782,7 @@ questions:
     （1）求证：四边形$ACED$是矩形；
 
     （2）连接BF．若$BC = 2, \tan \angle AEC = 2$，求BF．'
-  answer: （1）见解析（2）$\sqrt{13}$
+  answer: （1）见解析 （2）$\sqrt{13}$
   solution: '【小问1详解】
 
     证明：$\begin{array}{c}
@@ -857,8 +865,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-changping-er-fig13.png
-  - figures/2025-changping-er-fig14.png
+  - path: figures/2025-changping-er-fig13.png
+    width_mm: 28.3
+    height_mm: 27.0
 - id: 21
   type: 解答
   score: 5
@@ -955,8 +964,6 @@ questions:
   - L1
   - L2
   - L3
-  figures:
-  - figures/2025-changping-er-fig15.png
 - id: 23
   type: 解答
   score: 6
@@ -968,27 +975,13 @@ questions:
 
     b．甲、乙、丙三位同学投篮数据的中位数和总进球数如下：
 
-    甲
+    |  | 甲 | 乙 | 丙 |
 
-    乙
+    | --- | --- | --- | --- |
 
-    丙
+    | 中位数 | 6 | m | 5 |
 
-    中位数
-
-    6
-
-    m
-
-    5
-
-    总进球数
-
-    30
-
-    29
-
-    30
+    | 总进球数 | 30 | 29 | 30 |
 
     根据以上信息，回答下列问题：
 
@@ -998,32 +991,14 @@ questions:
 
     （3）若五个位置投篮命中一次对应的得分如下表所示：
 
-    位置
+    | 位置 | 位置一 | 位置二 | 位置三 | 位置四 | 位置五 |
 
-    位置一
+    | --- | --- | --- | --- | --- | --- |
 
-    位置二
-
-    位置三
-
-    位置四
-
-    位置五
-
-    命中分值
-
-    1
-
-    2
-
-    2
-
-    2
-
-    3
+    | 命中分值 | 1 | 2 | 2 | 2 | 3 |
 
     则从甲、丙同学中选拔总分高的同学进入班队，应选_____________（填“甲”或“丙”）．'
-  answer: （1）见解析，$m=7$； （2）乙（3）丙
+  answer: （1）见解析，$m=7$； （2）乙 （3）丙
   solution: '【小问1详解】
 
     解：$\begin{array}{c}
@@ -1086,8 +1061,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-changping-er-fig16.png
-  - figures/2025-changping-er-fig17.png
+  - path: figures/2025-changping-er-fig16.png
+    width_mm: 84.9
+    height_mm: 43.9
 - id: 24
   type: 解答
   score: 6
@@ -1098,7 +1074,7 @@ questions:
     （1）求证：$AD = BD$；
 
     （2）若$AB = 6, CF = 1$，求MN的长．'
-  answer: （1）见解析（2）$MN = 2\sqrt{7}$
+  answer: （1）见解析 （2）$MN = 2\sqrt{7}$
   solution: '【小问2详解】
 
     解：过点O作$OG \perp MN$于点G，连接ON．
@@ -1157,84 +1133,21 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-changping-er-fig18.png
-  - figures/2025-changping-er-fig20.png
+  - path: figures/2025-changping-er-fig18.png
+    width_mm: 46.8
+    height_mm: 37.6
 - id: 25
   type: 解答
   score: 6
   question: '某次物理实验中，探究弹簧所挂物体质量m（单位：kg）与弹簧伸长长度l（单位：cm）之间的关系．现取A，B两种型号的弹簧各一个进行实验，当弹簧所挂物体质量为m时，记录A型弹簧和B型弹簧的伸长长度$l_{A}$和$l_{\mathrm{B}}$，数据如下：
 
-    所挂物体质量m（kg）
+    | 所挂物体质量 m （ kg ） | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
 
-    0
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
-    1
+    | A 型弹簧伸长长度 $l_{A}(\mathrm{cm})$ | 0 | $2.5$ | 5 | $7.5$ | 10 | $12.5$ | 15 | $17.5$ | 20 | $22.5$ | 25 |
 
-    2
-
-    3
-
-    4
-
-    5
-
-    6
-
-    7
-
-    8
-
-    9
-
-    10
-
-    A型弹簧伸长长度$l_{A}(\mathrm{cm})$
-
-    0
-
-    $2.5$
-
-    5
-
-    $7.5$
-
-    10
-
-    $12.5$
-
-    15
-
-    $17.5$
-
-    20
-
-    $22.5$
-
-    25
-
-    B型弹簧伸长长度$l_{B}(\mathrm{cm})$
-
-    0
-
-    1
-
-    2
-
-    3
-
-    4
-
-    5
-
-    6
-
-    $8.13$
-
-    $12.28$
-
-    $18.45$
-
-    $26.64$
+    | B 型弹簧伸长长度 $l_{B}(\mathrm{cm})$ | 0 | 1 | 2 | 3 | 4 | 5 | 6 | $8.13$ | $12.28$ | $18.45$ | $26.64$ |
 
     通过分析数据发现，可以用函数刻画$l_{A}$与$m,l_{B}$与m之间的关系，回答下列问题：
 
@@ -1249,7 +1162,7 @@ questions:
     ①这些重物的质量为____________kg；
 
     ②若将一部分物体从A型弹簧卸下，挂到B型弹簧上（B型弹簧上原始无重物），恰使得两个弹簧伸长长度一致，则需要挪动的物体质量约为____________kg．'
-  answer: （1）见详解（2）$l_{A}=2.5m$ （3）①4，②$\frac{20}{7}$
+  answer: （1）见详解 （2）$l_{A}=2.5m$ （3）①4，②$\frac{20}{7}$
   solution: '【小问1详解】
 
     解：补全$l_{B}$的函数图象如图：
@@ -1292,8 +1205,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-changping-er-fig21.png
-  - figures/2025-changping-er-fig22.png
+  - path: figures/2025-changping-er-fig21.png
+    width_mm: 64.3
+    height_mm: 72.8
 - id: 26
   type: 解答
   score: 6
@@ -1390,7 +1304,7 @@ questions:
     ①补全图形；
 
     ②判断$BD, CD$与AF之间的数量关系，并证明．'
-  answer: （1）见解析（2）①见解析；②$\sqrt{3}BD + CD = AF$，证明见解析
+  answer: （1）见解析 （2）①见解析；②$\sqrt{3}BD + CD = AF$，证明见解析
   solution: '【小问1详解】
 
     解：$\because AB = AC$，
@@ -1464,9 +1378,9 @@ questions:
   recommended_for:
   - L3
   figures:
-  - figures/2025-changping-er-fig23.png
-  - figures/2025-changping-er-fig24.png
-  - figures/2025-changping-er-fig25.png
+  - path: figures/2025-changping-er-fig23.png
+    width_mm: 93.7
+    height_mm: 48.4
 - id: 28
   type: 解答
   score: 7
@@ -1554,8 +1468,9 @@ questions:
   recommended_for:
   - L3
   figures:
-  - figures/2025-changping-er-fig26.png
-  - figures/2025-changping-er-fig27.png
-  - figures/2025-changping-er-fig28.png
-  - figures/2025-changping-er-fig29.png
-  - figures/2025-changping-er-fig30.png
+  - path: figures/2025-changping-er-fig26.png
+    width_mm: 67.5
+    height_mm: 69.3
+  - path: figures/2025-changping-er-fig27.png
+    width_mm: 67.5
+    height_mm: 69.3

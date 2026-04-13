@@ -1,0 +1,1292 @@
+# ============================================================
+# 2025年北京市中考数学真题试卷 — 逐题分析
+# ============================================================
+# 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
+# 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
+# 满分：100分  时长：120分钟
+
+year: 2025
+district: 北京市
+exam_type: 真题
+subject: 数学
+full_score: 100
+duration_minutes: 120
+total_questions: 28
+structure: 8选择(16分) + 8填空(16分) + 12解答(68分)
+questions:
+- id: 1
+  type: 选择
+  score: 2
+  question: '下列图形中，既是轴对称图形又是中心对称图形的是（）
+
+    A.[图]
+
+    B.[图]
+
+    C.[图]
+
+    D.[图]'
+  answer: D
+  solution: '解：A、该图形是轴对称图形，不是中心对称图形，不符合题意；
+
+    B、该图形是轴对称图形，不是中心对称图形，不符合题意；
+
+    C、该图形是中心对称图形，不是轴对称图形，不符合题意；
+
+    D、该图形既是轴对称图形又是中心对称图形，符合题意，
+
+    故选：D．'
+  knowledge_points:
+  - 中心对称图形
+  - 轴对称图形
+  - 旋转
+  - 轴对称
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2025-beijing-zhenti-fig02.png
+    width_mm: 24.1
+    height_mm: 11.9
+  - path: figures/2025-beijing-zhenti-fig03.png
+    width_mm: 19.3
+    height_mm: 16.4
+  - path: figures/2025-beijing-zhenti-fig04.png
+    width_mm: 27.3
+    height_mm: 11.9
+  - path: figures/2025-beijing-zhenti-fig05.png
+    width_mm: 20.1
+    height_mm: 17.5
+- id: 2
+  type: 选择
+  score: 2
+  question: '实数a，b在数轴上的对应点的位置如图所示，下列结论中正确的是（）
+
+    [图]
+
+    A.$a > -1$
+
+    B.$a+b=0$
+
+    C.$a-b>0$
+
+    D.$\left| a \right| > \left| b \right|$'
+  answer: D
+  solution: '解：由数轴得，$-2<a<-1<0<b<1$，且$|b| < |a|$
+
+    ∴$a+b<0$，$a-b<0$，
+
+    故A，B，C均错误，不符合题意，D正确，符合题意，
+
+    故选：D．'
+  knowledge_points:
+  - 绝对值
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2025-beijing-zhenti-fig06.png
+    width_mm: 40.2
+    height_mm: 11.4
+- id: 3
+  type: 选择
+  score: 2
+  question: '若一个六边形的每个内角都是$x^{\circ}$，则x的值为（）
+
+    A.60
+
+    B.90
+
+    C.120
+
+    D.150'
+  answer: C
+  solution: '解：∵一个六边形的每个内角都是$x^{\circ}$，
+
+    ∴每个内角的度数为：$x^{\circ}=(6-2)\times180^{\circ}\div6=120^{\circ}$，
+
+    故选：C．'
+  knowledge_points:
+  - 综合
+  module: triangles
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 4
+  type: 选择
+  score: 2
+  question: '一个不透明的袋子中仅有3个红球、2个黄球和1个白球，这些球除颜色外无其他差别．从袋子中随机摸出一个球，摸出的球是白球的概率是（）
+
+    A.$\frac{1}{6}$
+
+    B.$\frac{1}{3}$
+
+    C.$\frac{1}{2}$
+
+    D.$\frac{5}{6}$'
+  answer: A
+  solution: '解：∵袋子中仅有3个红球、2个黄球和1个白球，从袋子中随机摸出一个球，
+
+    ∴摸出的球是白球的概率是$\frac{1}{3+2+1}=\frac{1}{6}$．
+
+    故选：A．'
+  knowledge_points:
+  - 概率
+  module: statisticsAndProbability
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 5
+  type: 选择
+  score: 2
+  question: '若关于x的一元二次方程$ax^{2}+2x+1=0$有两个相等的实数根，则实数a的值为（）
+
+    A.$-4$
+
+    B.$-1$
+
+    C.1
+
+    D.4'
+  answer: C
+  solution: '解：由题意，得：$\triangle=2^{2}-4a=0$，
+
+    解得：$a = 1$；
+
+    故选C．'
+  knowledge_points:
+  - 一元二次方程
+  - 根的判别式
+  module: equationsAndInequalities
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 6
+  type: 选择
+  score: 2
+  question: '2025年5月29日，行星探测工程天问二号探测器在西昌卫星发射中心成功发射，开启对近地小行星2016HO3的探测与采样返回之旅．已知该小行星与地球的最近距离约为月球远地点距离的45倍，月球远地点距离约为$4\times10^{5}\mathrm{km}$，则该小行星与地球的最近距离约为（）
+
+    A.$1.8\times 10^{5}\mathrm{~km}$
+
+    B.$1.8\times 10^{6}\mathrm{~km}$
+
+    C.$1.8\times10^{7}\mathrm{~km}$
+
+    D.$1.8\times10^{10}\mathrm{km}$'
+  answer: C
+  solution: '解：月球远地点距离为$4\times10^{5}\mathrm{km}$，小行星的距离是该值的45倍，即：
+
+    $45\times4\times10^{3}=180\times10^{3}=1.8\times10^{5}\mathrm{~km}$．
+
+    故选：C'
+  knowledge_points:
+  - 科学记数法
+  module: numbersAndExpressions
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 7
+  type: 选择
+  score: 2
+  question: '如图，$\angle MON = 100^\circ$，点A在射线OM上，以点O为圆心，OA长为半径画弧，交射线ON于点
+
+    B．若分别以点A，B为圆心，AB长为半径画弧，两弧在$\angle MON$内部交于点C，连接AC，则$\angle OAC$的大小为（）
+
+    [图]
+
+    A.$80^\circ$
+
+    B.$100^\circ$
+
+    C.$110^\circ$
+
+    D.$120^\circ$'
+  answer: B
+  solution: ''
+  knowledge_points:
+  - 全等三角形
+  module: triangles
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2025-beijing-zhenti-fig07.png
+    width_mm: 33.3
+    height_mm: 33.3
+- id: 8
+  type: 选择
+  score: 2
+  question: '如图，在平面直角坐标系xOy中，A，B分别是横、纵轴正半轴上的动点，四边形$OACB$是矩形，函数$y=\frac{1}{x}(x>0)$的图象与边AC交于点M，与边BC交于点N（M，N不重合）．给出下面四个结论：
+
+    [图]
+
+    ①$\triangle COM$与$\triangle CON$的面积一定相等；
+
+    ②$\triangle MON$与$\triangle MCN$的面积可能相等；
+
+    ③$\triangle MON$一定是锐角三角形；
+
+    ④$\triangle MON$可能是等边三角形．
+
+    上述结论中，所有正确结论的序号是（）
+
+    A.①③
+
+    B.①④
+
+    C.②③
+
+    D.②④'
+  answer: B
+  solution: '解：∵四边形$OACB$是矩形，
+
+    ∴$S_{\triangle OBC}=S_{\triangle ABC}$
+
+    又∵$M,N$是反比例函数$y=\frac{1}{x}(x>0)$图象上的动点，$BN \perp y$轴，$MA \perp x$轴，
+
+    ∴$S_{\text{阴影}} = S_{\text{扇形}} = \frac{1}{2}$
+
+    ∴$S_{\triangle OBC}-S_{\triangle OBM}=S_{\triangle MOC}-S_{\triangle AOM}$，即$\triangle COM$与$\triangle CON$的面积一定相等；故①正确，
+
+    由①可得$S_{\text{阴影}} = S_{\text{扇形}} = \frac{1}{2}$
+
+    当$\triangle MON$与$\triangle MCN$的面积相等时，如图，连接AB，BM
+
+    [图]
+
+    ∴$S_{\triangle NQ M}+S_{\triangle O M N}=S_{\triangle B H N}+S_{\triangle O B N}=\frac{1}{2} S_{\text {四边形 } B H Q N}=S_{\triangle A H N}=S_{\triangle A H U}$
+
+    ∴N在直线BM上，则$M,N$重合，
+
+    ∴$\triangle MON$与$\triangle MCN$的面积不可能相等；
+
+    ∵等边三角形和反比例函数都是轴对称图形，当对称轴为直线$y=x$，$\triangle MON$可能是等边三角形，故④正确．
+
+    如图
+
+    [图]
+
+    当$M,N$在$y=x$的同侧时，$\triangle MON$可能是钝角三角形，故③错误
+
+    [图]
+
+    综上，①④正确、②③错误，
+
+    故选：B．'
+  knowledge_points:
+  - 反比例函数
+  - 矩形
+  - 坐标系
+  - 动点
+  module: geometryComprehensive
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+  figures:
+  - path: figures/2025-beijing-zhenti-fig09.png
+    width_mm: 36.8
+    height_mm: 36.2
+- id: 9
+  type: 填空
+  score: 2
+  question: 若$\sqrt{3x-3}$在实数范围内有意义，则实数x的取值范围是_______．
+  answer: $x\ 1$
+  solution: '解：∵$\sqrt{3x-3}$在实数范围内有意义，
+
+    ∴$3x-3\quad0$，
+
+    解得：$x\ 1$，
+
+    故答案为：$x\ 1$．'
+  knowledge_points:
+  - 不等式
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 10
+  type: 填空
+  score: 2
+  question: 分解因式：$7m^{2}-28=$_______．
+  answer: $7(m+2)(m-2)$
+  solution: '解：$7m^{2}-28$
+
+    $=7\left(m^{2}-4\right)$
+
+    $=7(m+2)(m-2)$，
+
+    故答案为：$7(m+2)(m-2)$．'
+  knowledge_points:
+  - 因式分解
+  - 方差
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 11
+  type: 填空
+  score: 2
+  question: 方程$\frac{2}{x-6}+\frac{1}{x}=0$的解为_______．
+  answer: $x=2$
+  solution: '解：$\frac{2}{x-6}+\frac{1}{x}=0$
+
+    去分母得：$2x+x-6=0$，
+
+    移项，合并同类项得：$3x=6$，
+
+    系数化为1得：$x=2$，
+
+    检验，当$x=2$时，$x(x-6)-2\times(2-6)-8\times0$，
+
+    ∴$x=2$是原方程的解，
+
+    故答案为：$x=2$．'
+  knowledge_points:
+  - 分式方程
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 12
+  type: 填空
+  score: 2
+  question: '某地区七年级共有2000名男生．为了解这些男生的体重指数（BMI）分布情况，从中随机抽取了100名男生，测得他们的BMI数据（单位：$\mathrm{kg/m^{2}}$），并根据七年级男生体质健康标准整理如下：
+
+    | 等级 | 低体重 | 正常 | 超重 | 肥胖 |
+
+    | --- | --- | --- | --- | --- |
+
+    | BMI | $\leq15.4$ | $15.5 \sim 22.1$ | $22.2 \sim 24.9$ | $\geqslant25.0$ |
+
+    | 人数 | 6 | 75 | 15 | 4 |
+
+    根据以上信息，估计该地区七年级2000名男生中BMI等级为正常的人数是_______．'
+  answer: $1500$
+  solution: '解：由题意可得：该地区七年级2000名男生中BMI等级为正常的人数是$2000\times\frac{75}{100}=1500$人，
+
+    故答案为：$1500$．'
+  knowledge_points:
+  - 综合
+  module: statisticsAndProbability
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 13
+  type: 填空
+  score: 2
+  question: 能说明命题“若$a^{2}>4b^{2}$，则$a > 2b$”是假命题的一组实数a，b的值为$a =$_______，$b =$_______．
+  answer: ①.$-3$（答案不唯一） ②.1（答案不唯一）
+  solution: '解：当$a = -3$，$b = 1$时，$a^{2}>4b^{2}$，但是$a < 2b$．
+
+    故答案为：$-3$，1（答案不唯一）．'
+  knowledge_points:
+  - 综合
+  module: numbersAndExpressions
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 14
+  type: 填空
+  score: 2
+  question: '如图，$\odot\odot$是地球的示意图，其中AB表示赤道，CD，EF分别表示北回归线和南回归线，$\angle DOB=\angle FOB=23.5^{\circ}$．夏至日正午时，太阳光线GD所在直线经过地心O，此时点F处的太阳高度角$\angle IFH$（即平行于GD的光线HF与$\odot\odot$的切线FI所成的锐角）的大小为_______°．
+
+    [图]'
+  answer: '43'
+  solution: '解：如图，设FI与OG交于点K，
+
+    [图]
+
+    ∵$\angle DOB=\angle FOB=23.5^{\circ}$，
+
+    ∴$\angle KOF=\angle DOB+\angle FOB=23.5^{\circ}+23.5^{\circ}=47^{\circ}$，
+
+    在$\triangle OFK$中，$\angle FOK + \angle OFK + \angle OKF = 180^\circ$，$\angle OFK = 90^\circ$，
+
+    ∴$\angle OKF=43^{\circ}$，
+
+    ∵$FH \parallel OG$，
+
+    ∴$\angle IFH = \angle OKF = 43^\circ$，
+
+    故答案为：$43$．'
+  knowledge_points:
+  - 平行线
+  - 切线
+  module: triangles
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2025-beijing-zhenti-fig13.png
+    width_mm: 54.2
+    height_mm: 33.9
+- id: 15
+  type: 填空
+  score: 2
+  question: '如图，在正方形$ABCD$中，点E在边CD上，$CF \perp BE$，垂足为F．若$AB = 1$，$\angle EBC = 30^\circ$，则$\triangle ABF$的面积为_______．
+
+    [图]'
+  answer: $\frac{3}{8}$##0.375
+  solution: '解：过点F分别作$FM \perp BC, FN \perp AB$，垂足为M，N，连接AM，则$\angle FMC = 90^\circ$，
+
+    [图]
+
+    ∵四边形$ABCD$为正方形，
+
+    ∴$\angle ABC = 90^\circ$，
+
+    ∴$\angle ABC=\angle FMC$，
+
+    ∴$AB \parallel FM$，
+
+    ∴$FN = BM$，
+
+    ∵$S_{\triangle ABM}=\frac{1}{2}AB\cdot FN,S_{\triangle BAM}=\frac{1}{2}AB\cdot BM$,
+
+    ∴$S_{\triangle ABP}=S_{\triangle ABQ}$，
+
+    ∵$CF \perp BE$，垂足为F，$AB=1=BC$，$\angle EBC = 30^\circ$，
+
+    ∴$\angle BFC=90^\circ,CF=\frac{1}{2}BC=\frac{1}{2}$，
+
+    ∴$\angle CFM=90^{\circ}-\angle BCF=30^{\circ}$，
+
+    ∴$CM = \frac{1}{2}CF = \frac{1}{4}$，
+
+    ∴$BM = BC - CM = \frac{3}{4}$，
+
+    ∴$S_{\triangle ABC}=S_{\triangle ABN2}=\frac{1}{2}\times 1\times \frac{3}{4}=\frac{3}{8}$，
+
+    故答案为：$\frac{3}{8}$．'
+  knowledge_points:
+  - 平行线
+  - 正方形
+  module: triangles
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2025-beijing-zhenti-fig15.png
+    width_mm: 34.4
+    height_mm: 36.2
+- id: 16
+  type: 填空
+  score: 2
+  question: '某企业研发并生产了一种新设备，计划分配给A，B，C，D四家经销商销售．当一家经销商将分配到的n台设备全部售出后，企业从该经销商处获得的利润（单位：万元）与n的对应关系如下：
+
+    |  | $n = 1$ | $n=2$ | $n = 3$ | $n = 4$ | $n = 5$ | $n = 6$ | … |
+
+    | --- | --- | --- | --- | --- | --- | --- | --- |
+
+    | A | 40 | 60 |  |  |  |  |  |
+
+    | B | 30 | 55 | 75 | 90 | 100 | 105 |  |
+
+    | C | 20 | 40 | 60 | 70 | 80 | 90 | … |
+
+    | D | 14 | 38 | 62 | 86 | 110 | 134 | … |
+
+    （1）如果企业将5台设备分配给这四家经销商销售，且每家经销商至少分配到1台设备，为使5台设备都售出后企业获得的总利润最大，应向经销商_______分配2台设备（填“A”“B”“C”或“D”）；
+
+    （2）如果企业将6台设备分配给这四家经销商中的一家或多家销售，那么6台设备都售出后，企业可获得的总利润的最大值为_______万元．'
+  answer: ①.B ②.$157$
+  solution: '解：（1）当$n=2$时，
+
+    A经销商的利润为$60$，比$n = 1$时增加$60-40=20$（万元），
+
+    B经销商的利润为$55$，比$n = 1$时增加$55-30=25$（万元），
+
+    C经销商的利润为$40$，比$n = 1$时增加$40-20=20$（万元），
+
+    D经销商的利润为$38$，比$n = 1$时增加$38-14=24$（万元），
+
+    ∵$25 > 24 > 20$，
+
+    ∴应向经销商B分配2台设备．
+
+    （2）当给这四家经销商中的一家分配时，最大利润为D经销商的$134$万元，
+
+    当分配给多家销售时：
+
+    当分配四家时，最大利润为$40+55+20+38=153$（万元），
+
+    当分配给三家时，最大利润为$40+55+62=157$（万元），
+
+    当分配给两家时，最大利润为$60 + 90 = 150$（万元）或$40+110=150$（万元），
+
+    综上所述：企业可获得的总利润的最大值为$157$万元．
+
+    故答案为：B，$157$'
+  knowledge_points:
+  - 综合
+  module: equationsAndInequalities
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 17
+  type: 解答
+  score: 5
+  question: 计算：$|-3|+\sqrt{27}+\left(\frac{1}{2}\right)^{-1}-2\sin 30^{\circ}$．
+  answer: $4+3\sqrt{3}$
+  solution: '解：$|-3|+\sqrt{27}+\left(\frac{1}{2}\right)^{-1}-2\sin 30^{\circ}$
+
+    $=3+3\sqrt{3}+2-2\times\frac{1}{2}$
+
+    $= 4 + 3\sqrt{3}$．'
+  knowledge_points:
+  - 三角函数
+  - 绝对值
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 18
+  type: 解答
+  score: 5
+  question: 解不等式组：$\left\{\begin{array}{l}2(x+1)>x-1\\ \dfrac{x+5}{2}>3x\end{array}\right.$
+  answer: $-3<x<1$
+  solution: '解：$\left\{
+
+    \begin{array}{l}
+
+    2(x+1)>x-1 \\
+
+    \dfrac{x+5}{2}>3x
+
+    \end{array}
+
+    \right.$
+
+    解不等式①得：$x > -3$，
+
+    解不等式②得：$x<1$，
+
+    ∴原不等式组的解集为$-3<x<1$．'
+  knowledge_points:
+  - 不等式
+  - 不等式组
+  module: equationsAndInequalities
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 19
+  type: 解答
+  score: 5
+  question: 已知$a+b-3=0$，求代数式$\frac{4(a-b)+8b}{a^{2}+2ab+b^{2}}$的值．
+  answer: $\frac{4}{3}$
+  solution: '解：原式$\frac{4a-4a+8b}{(a+b)^{2}}$
+
+    $\frac{4(a+b)}{(a+b)^2}$
+
+    $=\frac{4}{a+b}$，
+
+    ∵$a+b-3=0$，
+
+    ∴$a+b=3$，
+
+    ∴原式$=\frac{4}{3}$．'
+  knowledge_points:
+  - 因式分解
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 20
+  type: 解答
+  score: 5
+  question: '如图，在$V_{ABC}$中，D，E分别为$AB, AC$的中点，$DF \perp BC$，垂足为F，点G在DE的延长线上，$DG = FC$．
+
+    [图]
+
+    （1）求证：四边形$DFCG$是矩形；
+
+    （2）若$\angle B=45^{\circ}$，$DF = 3$，$DG = 5$，求BC和AC的长．'
+  answer: （1）见解析 （2）$BC = 8,\ AC = 2\sqrt{10}$
+  solution: '【小问1详解】
+
+    证明：∵D，E分别为$AB, AC$的中点，
+
+    ∴DE是$V_{ABC}$的中位线，
+
+    ∴$DE \parallel CF$，即$DG \parallel CF$，
+
+    ∵$DG = FC$，
+
+    ∴四边形$DFCG$是平行四边形，
+
+    又∵$DF \perp BC$，
+
+    ∴平行四边形$DFCG$是矩形；
+
+    【小问2详解】
+
+    解：∵$DG = 5$，
+
+    ∴$CF=DG=5$；
+
+    ∵$DF \perp BC$，
+
+    ∴$\angle DFB=90^\circ$，
+
+    在$\mathrm{Rt}\triangle BDF$中，$\angle B=45^{\circ}$，$DF = 3$，
+
+    ∴$BD = \frac{DF}{\sin B} = \frac{3}{\sin 45^\circ} = 3\sqrt{2}, \quad BF = \frac{DF}{\tan B} = \frac{3}{\tan 45^\circ} = 3$，
+
+    ∴$BC = BF + CF = 8$；
+
+    ∵点D为AB的中点，
+
+    ∴$AB=2BD=6\sqrt{2}$；
+
+    如图所示，过点A作$AH \perp BC$于H，
+
+    [图]
+
+    在$\mathrm{Rt}\triangle ABH$中，$AH = AB \cdot \sin B = 6\sqrt{2} \cdot \sin 45^\circ = 6,\ BH = AB \cdot \cos B = 6\sqrt{2} \cdot \cos 45^\circ = 6$，
+
+    ∴$CH = BC - BH = 2$，
+
+    在$Rt\triangle AHC$中，由勾股定理得$AC^{2}=\sqrt{AH^{2}+CH^{2}}=\sqrt{6^{2}+2^{2}}=2\sqrt{10}$．'
+  knowledge_points:
+  - 勾股定理
+  - 平行四边形
+  - 矩形
+  module: triangles
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2025-beijing-zhenti-fig17.png
+    width_mm: 45.8
+    height_mm: 41.8
+- id: 21
+  type: 解答
+  score: 5
+  question: '在平面直角坐标系xOy中，函数$y=kx+b\,(k\neq0)$的图象经过点$(1,3)$和$(2,5)$．
+
+    （1）求k，b的值；
+
+    （2）当$x<1$时，对于x的每一个值，函数$\hat{y}=mx(m\neq0)$的值既小于函数$y=kx+b$的值，也小于函数$y=x+k$的值，直接写出m的取值范围．'
+  answer: （1）$\left\{\begin{array}{l}k=2\\b=1\end{array}\right.$ （2）$2\leq m\leq 3$
+  solution: '【小问1详解】
+
+    解：∵在平面直角坐标系xOy中，函数$y=kx+b\,(k\neq0)$的图象经过点$(1,3)$和$(2,5)$，
+
+    ∴$\left\{\begin{array}{l}k+b=3\\2k+b=5\end{array}\right.$，
+
+    解得$\left\{\begin{array}{l}k=2\\b=1\end{array}\right.$；
+
+    【小问2详解】
+
+    解：由（1）可得函数$y=kx+b\,(k\neq0)$的解析式为$y=2x+1$，函数$y=x+k$的解析式为$y=x+2$，
+
+    当$mx < 2x + 1$时，则$(m-2)x<1$，
+
+    当$mx < x + 2$时，则$(m-1)x<2$，
+
+    ∵当$x<1$时，对于x的每一个值，函数$\hat{y}=mx(m\neq0)$的值既小于函数$y=kx+b$的值，也小于函数$y=x+k$的值，
+
+    ∴$\begin{array}{cc}
+
+    m-2 & 0 \\
+
+    \end{array}$，且$\begin{pmatrix} m-1 & 0 \end{pmatrix}$，
+
+    ∴$m \geqslant 2$，
+
+    当$m = 2$，$x<1$时，$2x<2x+1$和$x<2$恒成立，故$m = 2$符合题意；
+
+    当$m > 2$时，则$x < \frac{1}{m - 2}$且$x < \frac{2}{m - 1}$，
+
+    当$\frac{1}{m-2}-\frac{2}{m-1}$时，则$\frac{2}{m-1}1$，
+
+    解不等式$\frac{1}{m-2}-\frac{2}{m-1}$得$m \leq 3$，解不等式$m \leq 3$，
+
+    ∴$2<m\leq3$；
+
+    当$\frac{1}{m-2} < \frac{2}{m-1}$时，则$\frac{1}{m-2} \quad 1$，
+
+    解不等式$\frac{1}{m-2} < '
+  knowledge_points:
+  - 一次函数
+  - 不等式
+  - 坐标系
+  module: functions
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 22
+  type: 解答
+  score: 5
+  question: '北京风筝制作技艺是国家级非物质文化遗产．为制作一只京燕风筝，小明准备了五根直竹条（如图1）：一根门条、两根等长的膀条和两根等长的尾条．他将门条和膀条分别烤弯后与尾条一起扎成风筝的骨架（如图2），其头部高、胸腹高与尾部高的比是$1:1:2$．已知单根膀条长是胸腹高的5倍，门条比单根膀条短10cm，图1中BC的长是门条长的$\frac{5}{9}$，$AB, CD$的长均等于胸腹高．求这只风筝的骨架的总高．
+
+    [图]'
+  answer: $80\mathrm{cm}$
+  solution: '解：设胸腹高为xcm，则单根膀条长为$5\mathrm{cm}$，门条AD的长度为$(5x-10)\mathrm{cm}$，$BC=\frac{5}{9}(5x-10)\mathrm{cm}$，$AB=CD=x$，头部高为x，尾部高为$2x$，这只风筝的骨架的总高为$4x$，
+
+    由$AD=AB+BC+CD$，可得：$5x-10=x+\frac{5}{6}(5x-10)+x$，解得：$x = 20$；
+
+    所以这只风筝的骨架的总高$4x = 80\,\text{cm}$．
+
+    答：这只风筝的骨架的总高$80\mathrm{cm}$．'
+  knowledge_points:
+  - 综合
+  module: equationsAndInequalities
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2025-beijing-zhenti-fig19.png
+    width_mm: 116.4
+    height_mm: 38.4
+- id: 23
+  type: 解答
+  score: 6
+  question: '校田径队教练选出甲、乙、丙、丁四名运动员参加100米比赛．对这四名运动员最近10次100米跑测试成绩（单位：s）的数据进行整理、描述和分析．下面给出了部分信息．
+
+    a．甲、乙两名运动员10次测试成绩的折线图：
+
+    [图]
+
+    b．丙运动员10次测试成绩：12.4  12.4  12.5  12.7  12.8  12.8  12.8  12.8  12.9  12.9
+
+    c．四名运动员10次测试成绩的平均数、中位数、方差：
+
+    |  | 甲 | 乙 | 丙 | 丁 |
+
+    | --- | --- | --- | --- | --- |
+
+    | 平均数 | 12.5 | 12.5 | p | 12.5 |
+
+    | 中位数 | m | 12.5 | 12.8 | 12.45 |
+
+    | 方差 | 0.056 | n | 0.034 | 0.056 |
+
+    （1）表中m的值为_______；
+
+    （2）表中n_______0.056（填“>”“=”或“<”）；
+
+    （3）根据这10次测试成绩，教练按如下方式评估这四名运动员的实力强弱：首先比较平均数，平均数较小者实力更强；若平均数相等，则比较方差，方差较小者实力更强；若平均数、方差分别相等，则测试成绩小于平均数的次数较多者实力更强．
+
+    评估结果：这四名运动员按实力由强到弱依次为_______．'
+  answer: （1）$12.5$ （2）$\gt$ （3）乙、丁、甲、丙
+  solution: '【小问1详解】
+
+    解：甲的10次测试成绩排列为：$12.1,12.1,12.5,12.5,12.5,12.5,12.7,12.7,12.9$，
+
+    ∴中位数$m=\frac{12.4+12.5}{2}=12.5$，
+
+    故答案为：$12.5$；
+
+    【小问2详解】
+
+    解：乙的10次测试成绩平均数为：$\frac{12.6+12.6+12.3+12.5+12.5+12.7+12.5+12.7+12.4+12.2}{10}=12.5$，
+
+    ∴方差为：$n=\frac{1}{10}\left[(12.6-12.5)^{2}\times 2+(12.3-12.5)^{2}+(12.5-12.5)^{2}\times 3+(12.7-12.5)^{2}\times 2+(12.4-12.5)^{2}+(12.2-12.5)^{2}\right]=0.024$
+
+    ∴$n<0.056$，
+
+    故答案为：$\gt$；
+
+    【小问3详解】
+
+    解：丙的平均数$p=\frac{12.4+12.4+12.5+12.7+12.8+12.8+12.8+12.8+12.9+12.9}{10}=12.7$，
+
+    ∴丙的平均数最大，则实力最弱，
+
+    ∵方差$0.024<0.034<0.056$，
+
+    ∴乙实力最强，
+
+    ∵丁的测试成绩中位数为$12.45$，
+
+    ∴第$5,6$次成绩和为$24.9$，
+
+    ∴前5次测试成绩小于平均数，
+
+    ∵甲测试成绩小于平均数12.5的次数有2次，
+
+    ∴丁比甲强，
+
+    ∴这四名运动员按实力由强到弱依次为：乙、丁、甲、丙，
+
+    故答案为：乙、丁、甲、丙．'
+  knowledge_points:
+  - 统计
+  - 平均数
+  - 中位数
+  - 方差
+  module: statisticsAndProbability
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+  figures:
+  - path: figures/2025-beijing-zhenti-fig20.png
+    width_mm: 120.1
+    height_mm: 52.1
+- id: 24
+  type: 解答
+  score: 6
+  question: '如图，过点P作$\odot\odot$的两条切线，切点分别为A，B，连接OA，OB，OP，取OP的中点C，连接AC并延长，交$\odot\odot$于点D，连接BD．
+
+    [图]
+
+    （1）求证：$\angle ADB = \angle AOP$；
+
+    （2）延长OP交DB的延长线于点E．若$AP = 10$，$\tan\angle AOP=\frac{1}{2}$，求DE的长．'
+  answer: （1）见解析； （2）DE长为44．
+  solution: '【小问1详解】
+
+    证明：$\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$AP，BP分别切$\odot\odot$于A点，B点，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$OP平分$\angle AOB$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\angle AOP=\frac{1}{2}\angle AOB$，
+
+    又$\begin{array}{c}
+
+    \bullet \\
+
+    \bullet \quad \bullet \\
+
+    \bullet
+
+    \end{array}$$\widehat{AB}=\overline{AB}$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\angle ADB = \frac{1}{2} \angle ACB$，
+
+    $\begin{tikzpicture}
+
+    \fill (0,0) circle (2pt);
+
+    \fill (-1,-1) circle (2pt);
+
+    \fill (1,-1) circle (2pt);
+
+    \end{tikzpicture}$$\angle A'
+  knowledge_points:
+  - 圆周角
+  - 切线
+  - 相似三角形
+  - 勾股定理
+  - 三角函数
+  module: triangles
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+  figures:
+  - path: figures/2025-beijing-zhenti-fig21.png
+    width_mm: 35.5
+    height_mm: 35.2
+- id: 25
+  type: 解答
+  score: 6
+  question: '工厂对新员工进行某种工艺品制作的培训．在完成理论学习后，新员工接下来先使用智能辅助训练系统进行一次为期T日（T可取0，1，2或3）的模拟练习，然后开始试制．记一名新员工在试制阶段的第x日单日制成的合格品的个数为y，根据以往的培训经验，对于给定的T，可以认为y是x的函数．当$T = 0$和$T = 3$时，部分数据如下：
+
+    | x | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
+
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+
+    | $T = 0$ 时 y 的值 | 0 | 7 | 8 | 10 | 12 | 16 | 20 | 23 | 25 | 26 |
+
+    | $T = 3$ 时 y 的值 | 0 | 26 | 37 | 43 | m | 48 | 50 | 51 | 52 | 53 |
+
+    $T = 3$时，从试制阶段的第2日起，一名新员工每一日比前一日多制成的合格品的个数逐渐减少或保持不变．
+
+    对于给定的T，在平面直角坐标系xOy中描出该T值下各数对$(x, y)$所对应的点，并根据变化趋势用平滑曲线连接，得到曲线$C_{T}$．当$T = 1$和$T = 2$时，曲线$C_1$，$C_2$如图所示．
+
+    [图]
+
+    （1）观察曲线$C_1$，当整数x的值为_______时，y的值首次超过35；
+
+    （2）写出表中m的值，并在给出的平面直角坐标系中画出$T = 3$时的曲线$C_3$；
+
+    （3）新员工小云和小腾刚刚完成理论学习，接下来进行模拟练习和试制．
+
+    ①若新员工单日制成不少于45个合格品即可获得“优秀学员”证书，根据上述函数关系，小云最早在完成理论学习后的第_______日可获得“优秀学员”证书；
+
+    ②若工厂希望小腾在完成理论学习后的4日内制成的合格品的总数最多，根据上述函数关系，在这4日中应安排小腾先进行_______日的模拟练习．'
+  answer: （1）6（2）$m = 46$；画图见解析 （3）①7；②1
+  solution: '【小问1详解】
+
+    解：由曲线$C_1$看出，当整数x的值为6时，y的值首次超过35
+
+    故答案为：6
+
+    【小问2详解】
+
+    解：∵$T = 3$日的模拟练习时，从试制阶段的第2日起，一名新员工每一日比前一日多制成的合格品的个数逐渐减少或保持不变，在试制阶段的第3日单日制成的合格品43个，第5日单日制成的合格品48个
+
+    ∴相差$48-43=5$（个），
+
+    把5分成两个接近的数，$5=3+2$，
+
+    ∴第4日增加3个，第5日增加2个，
+
+    ∴$m = 43 + 3 = 46$，
+
+    画出$T = 3$时的曲线$C_3$：
+
+    [图]【小问3详解】
+
+    解：①单日制成不少于45个合格品的只有$C_2$与$C_3$，
+
+    $C_3$：$T = 3$日的模拟练习，然后试制阶段第$x = 4$日制成的合格品达到$y = 46$个，
+
+    ∴$T + x = 7$；
+
+    $C_2$：$T = 2$日的模拟练习，然后试制阶段第$x = 6$日制成的合格品达到$y = 45$个，
+
+    ∴$T+x=8$，
+
+    ∵$7<8$，
+
+    故小云最早在完成理论学习后的第7日可获得“优秀学员”证书；
+
+    故答案为：7；
+
+    ②当模拟练习$T = 0$日时，
+
+    4日内的试制时间$x = 4 - 0 = 4$日，
+
+    4日的合格产品分别是7，8，10，12，
+
+    ∴合格产品共有$7+8+10+12=37$；
+
+    当模拟练习$T = 1$日时，
+
+    4日内的试制时间$x=4-1=3$日，
+
+    3日的合格产品分别是12，19，26，
+
+    ∴合格产品共有$12+19+26=57$；
+
+    当模拟练习$T = 2$日时，
+
+    4日内的试制时间$x = 4 - 2 = 2$日，
+
+    2日的合格产品分别是20，30，
+
+    ∴合格产品共有$20 + 30 = 50$；
+
+    当模拟练习$T = 3$日时，
+
+    4日内的试制时间$x = 4 - 3 = 1$日，
+
+    1日的合格产品是26；
+
+    ∵$26 < 37 < 50 < 57$，
+
+    ∴希望小腾在完成'
+  knowledge_points:
+  - 坐标系
+  module: functions
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+  figures:
+  - path: figures/2025-beijing-zhenti-fig23.png
+    width_mm: 57.7
+    height_mm: 57.7
+- id: 26
+  type: 解答
+  score: 6
+  question: '在平面直角坐标系xOy中，抛物线$y=ax^{2}+bx+c(a\neq 0)$经过点O和点$A(3,3a)$．
+
+    （1）求c的值，并用含a的式子表示b；
+
+    （2）过点$P(t,0)$作x轴的垂线，交抛物线于点M，交直线$y = ax$于点N．
+
+    ①若$a = 1$，$t = 4$，求MN的长；
+
+    ②已知在点P从点O运动到点$B(2a,0)$的过程中，MN的长随OP的长的增大而增大，求a的取值范围．'
+  answer: （1）0，$b = -2a$ （2）①4；②$a \leq \frac{3}{4}$且$a \neq 0$
+  solution: '【小问2详解】
+
+    ①若$a = 1$，则该抛物线及直线解析分别为$y = x^2 - 2x$，$y=x$，
+
+    当$t = 4$时，可有点$P(4,0)$，
+
+    如下图，
+
+    [图]
+
+    ∵$PM \perp x$轴，
+
+    ∴$x_{M}=x_{N}=4$，
+
+    将$x = 4$代入$y = x^2 - 2x$，可得$y=4^{2}-2\times4=8$，即$M(4,8)$，
+
+    将$x = 4$代入$y=x$，可得$y = 4$，即$N(4,4)$，
+
+    ∴$MN = 8 - 4 = 4$；
+
+    ②当点P从点O运动到点$B(2a,0)$的过程中，
+
+    ∵$PM \perp x$轴，$P(t,0)$，
+
+    ∴$x_{M}=x_{N}=t$，
+
+    将$x = t$代入$y = ax^2 - 2ax$，可得$y = at^2 - 2at$，即$M\left(x,ax^{2}-2ax\right)$，
+
+    将$x = t$代入$y = ax$，可得$y = at$，即$N(t,at)$，
+
+    ∴$MN = at^{2} - 2at - a = at^{2} - 3at$，
+
+    令$MN=0$，即$a^{2}-3at=0$，解得$t = 0$或$t=3$，
+
+    若$a > 0$，可有$2a > 0$，即点B在y轴右侧，如下图，
+
+    [图]
+
+    当$0<t\leq3$时，可有$MN=-a^{2}+3at$，其图像开口向下，对称轴为$x=\frac{3}{2}$，
+
+    若MN的长随OP的长的增大而增大，即MN的长随t的增大而增大，
+
+    则$2a \leq \frac{3}{2}$，解得$a \leq \frac{3}{4}$，
+
+    当$t>3$时，可有$MN = at^{2} - 3at$，其图像开口向上，对称轴为$x=\frac{3}{2}$，不符合题意；
+
+    若$a < 0$，可有$2a<0$，即点B在y轴左侧，如下图，
+
+    [图]
+
+    当$t<0$时，可有$MN=-a^{2'
+  knowledge_points:
+  - 一次函数
+  - 二次函数
+  - 坐标系
+  module: functions
+  difficulty: 压轴
+  recommended_for:
+  - L3
+- id: 27
+  type: 解答
+  score: 7
+  question: '在$V_{ABC}$中，$\angle ACB=90^\circ$，$\angle ABC = \alpha$，点D在射线BC上，连接AD，将线段AD绕点A逆时针旋转$180^\circ-2\alpha$得到线段AE（点E不在直线AB上），过点E作$EF \parallel AB$，交直线BC于点F．
+
+    [图]
+
+    （1）如图1，$\alpha=45^\circ$，点D与点C重合，求证：$BF = AC$；
+
+    （2）如图2，点D，F都在BC的延长线上，用等式表示DF与BC的数量关系，并证明．'
+  answer: （1）见解析 （2）$DF = 2BC$
+  solution: '【小问1详解】
+
+    证明：∵$\angle ACB=90^\circ$，$\angle ABC = 45^\circ$
+
+    ∴$\angle BAC = \angle ABC = 45^{\circ}$
+
+    ∵线段AD绕点A逆时针旋转$180^{\circ}-2\times45^{\circ}=90^{\circ}$得到线段AE，点D与点C重合
+
+    ∴$AE = AD = AC$，$\angle EAB = 90^\circ - \angle BAC = 45^\circ$，
+
+    ∴$\angle EAB = \angle ABC$，
+
+    ∴$BC \parallel AE$
+
+    ∵$EF \parallel AB$，
+
+    ∴四边形$ABFE$是平行四边形，
+
+    ∴$BF = AE$，
+
+    ∴$BF = AC$；
+
+    【小问2详解】
+
+    $DF = 2BC$，
+
+    证明：如图，在DB上取一点G，使得$AG = AB$
+
+    [图]
+
+    ∴$\angle AGB = \angle ABG = \alpha$，
+
+    ∴$\angle BAG = 180^\circ - 2\alpha$
+
+    ∵将线段AD绕点A逆时针旋转$180^\circ-2\alpha$得到线段AE，
+
+    ∴$DA = EA$
+
+    ∴$\angle DAE=\angle GAB=180^{\circ}-2\alpha$
+
+    ∴$\angle DAG = \angle EAB$
+
+    ∴$\triangle DAG \cong \triangle EAB (SAS)$
+
+    ∴$DG = BE$，$\angle AGD=\angle ABE=180^\circ-\angle AGC=180^\circ-\alpha$
+
+    又∵$\angle ABC = \alpha$
+
+    ∴$\angle FBE = \angle ABE - \angle ABC = 180^\circ - \alpha - \alpha ='
+  knowledge_points:
+  - 平行线
+  - 全等三角形
+  - 平行四边形
+  - 旋转
+  module: triangles
+  difficulty: 压轴
+  recommended_for:
+  - L3
+  figures:
+  - path: figures/2025-beijing-zhenti-fig29.png
+    width_mm: 114.8
+    height_mm: 40.7
+- id: 28
+  type: 解答
+  score: 7
+  question: '在平面直角坐标系xOy中，对于点A和$\mathrm{OC}$给出如下定义：若$\mathrm{OC}$上存在两个不同的点M，N，对于$\mathrm{OC}$上任意满足$AP = AQ$的两个不同的点P，Q，都有$\angle PAQ = \angle MAN$，则称点A是$\mathrm{OC}$的关联点，称$\angle MAN$的大小为点A与$\mathrm{OC}$的关联角度．（本定义中的角均指锐角、直角、钝角或平角）
+
+    （1）如图，$\odot\odot$的半径为$1$．
+
+    [图]
+
+    ①在点$A_{1}\left(\frac{1}{2},0\right)$，$A_{2}\left(\frac{4}{3},0\right)$，$A_{3}(2,0)$中，点_______是$\odot\odot$的关联点且其与$\odot\odot$的关联角度小于$90^\circ$，该点与$\odot\odot$的关联角度为$\frac{1}{2}$；
+
+    ②点$B(1,m)$在第一象限，若对于任意长度小于$1$的线段BD，BD上所有的点都是$\odot\odot$的关联点，则m的最小值为_______；
+
+    （2）已知点$E(1,3),F(4,3),T(t,0)$，$\odot T$经过原点，线段EF上所有的点都是$\odot T$的关联点，记这些点与$\odot T$的关联角度的最大值为$\alpha$．若$90^{\circ}\leq\alpha\leq180^{\circ}$，直接写出t的取值范围．'
+  answer: （1）①$A_3$，$60$；②$\sqrt{3}$ （2）$\frac{3\sqrt{2}}{2}\leq t<3$或$t>5$或$t\leq-1-\sqrt{11}$
+  solution: '【小问1详解】
+
+    解：①根据定义可得：当A在$\odot\odot$上时，不存在都有$\angle PAQ = \angle MAN$，当A在$\odot\odot$内部时，过A的直径MN使得$\odot\odot$的关联角度为$180^\circ$，当A在$\odot\odot$的外部时，且$AM,AN$为$\odot\odot$的切线时，$\angle MAN$最大；
+
+    如图，$A_3$是$\odot\odot$的关联点且其与$\odot\odot$的关联角度小于$90^\circ$，$A_1$与$\odot\odot$的关联角度为$180^\circ$，$A_2$与$\odot\odot$的关联角度大于$90^\circ$，
+
+    [图]
+
+    ∵$A_{3}(2,0)$，$\odot\odot$的半径为$1$，
+
+    ∴$OM=1,OA_{4}=2$，且$MA_{3}$是$\odot\odot$的切线，
+
+    ∴$\sin\angle MAO=\frac{OM}{OA}=\frac{1}{2}$，
+
+    ∴$\angle MA_{3}O=30^{\circ}$
+
+    ∴$\angle MA_{1}N=60^{\circ}$，即与$\odot\odot$的关联角度为$60^\circ$
+
+    故答案为：$A_3$，$60$．
+
+    ②根据定义可得B为$\odot\odot$外一点，
+
+    ∵$BD < 1$，$\odot\odot$的半径为$1$，
+
+    ∴$BO\ 2$，当$OB = 2$时，
+
+    如图，取点$G(1,0)$，则$\angle OBC = 90^\circ$，
+
+    [图]
+
+    ∴$m\quad BG=\sqrt{OB^{2}-OG^{2}}=\sqrt{2^{2}-1^{2}}=\sqrt{3}$，
+
+    ∴m的最小值为$\sqrt{3}$，
+
+    故答案为：$\sqrt{3}$．
+
+    【小问2详解】
+
+    解：由（1）可得，当A在圆的外部时，且'
+  knowledge_points:
+  - 切线
+  - 勾股定理
+  - 坐标系
+  module: circles
+  difficulty: 压轴
+  recommended_for:
+  - L3
+  figures:
+  - path: figures/2025-beijing-zhenti-fig31.png
+    width_mm: 45.0
+    height_mm: 32.8

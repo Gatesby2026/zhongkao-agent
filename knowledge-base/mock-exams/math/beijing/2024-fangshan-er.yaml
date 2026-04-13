@@ -17,13 +17,17 @@ questions:
 - id: 1
   type: 选择
   score: 2
-  question: '如图是某几何体的展开图，该几何体是（
-
-    ）
+  question: '如图是某几何体的展开图，该几何体是（    ）
 
     [图]
 
-    A.长方体B.圆柱C.圆锥D.三棱柱'
+    A.长方体
+
+    B.圆柱
+
+    C.圆锥
+
+    D.三棱柱'
   answer: B
   solution: '解：由图形可得该几何体是圆柱；
 
@@ -38,13 +42,21 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-fangshan-er-fig02.png
+  - path: figures/2024-fangshan-er-fig02.png
+    width_mm: 29.6
+    height_mm: 33.1
 - id: 2
   type: 选择
   score: 2
   question: '2024年4月25日20时58分57秒在酒泉卫星发射中心成功发射神舟十八号载人飞船，神舟十八号载人飞船与长征二号F遥十八运载火箭组合体，总重量400000多千克，总高度近60米．将400000用科学记数法表示应为（）
 
-    A.$40\times10^{4}$B.$4\times10^{4}$C.$4\times10^{5}$D.$0.4\times10^{6}$'
+    A.$40\times10^{4}$
+
+    B.$4\times10^{4}$
+
+    C.$4\times10^{5}$
+
+    D.$0.4\times10^{6}$'
   answer: C
   solution: '解：$400000 = 4 \times 10^{5}$，
 
@@ -66,7 +78,13 @@ questions:
 
     [图]
 
-    A.$34^\circ$B.$56^\circ$C.$66^\circ$D.$146^\circ$'
+    A.$34^\circ$
+
+    B.$56^\circ$
+
+    C.$66^\circ$
+
+    D.$146^\circ$'
   answer: B
   solution: '∵$OE \perp AB$，
 
@@ -87,13 +105,21 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-fangshan-er-fig03.png
+  - path: figures/2024-fangshan-er-fig03.png
+    width_mm: 37.8
+    height_mm: 30.4
 - id: 4
   type: 选择
   score: 2
   question: '下面四个图形，既是轴对称图形又是中心对称图形的是（）
 
-    A.[图]B.[图]C.[图]D.[图]'
+    A.[图]
+
+    B.[图]
+
+    C.[图]
+
+    D.[图]'
   answer: D
   solution: '解：A、是轴对称图形，不是中心对称图形，故此选项不合题意；
 
@@ -117,16 +143,30 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-fangshan-er-fig04.png
-  - figures/2024-fangshan-er-fig05.png
-  - figures/2024-fangshan-er-fig06.png
-  - figures/2024-fangshan-er-fig07.png
+  - path: figures/2024-fangshan-er-fig04.png
+    width_mm: 26.7
+    height_mm: 26.2
+  - path: figures/2024-fangshan-er-fig05.png
+    width_mm: 26.7
+    height_mm: 26.2
+  - path: figures/2024-fangshan-er-fig06.png
+    width_mm: 26.7
+    height_mm: 26.2
+  - path: figures/2024-fangshan-er-fig07.png
+    width_mm: 26.7
+    height_mm: 26.2
 - id: 5
   type: 选择
   score: 2
   question: '正八边形的外角和为（）
 
-    A.$180^\circ$B.$360^\circ$C.$720^\circ$D.$1080^\circ$'
+    A.$180^\circ$
+
+    B.$360^\circ$
+
+    C.$720^\circ$
+
+    D.$1080^\circ$'
   answer: B
   solution: '解：$\begin{array}{c}
 
@@ -165,9 +205,13 @@ questions:
 
     [图]
 
-    A.$-b > a > 0$B.$b > -a > 1$
+    A.$-b > a > 0$
 
-    C.$b <-a <-1$D.$-a < b < -2$'
+    B.$b > -a > 1$
+
+    C.$b <-a <-1$
+
+    D.$-a < b < -2$'
   answer: A
   solution: '解：$\therefore -2 < b < -1$，
 
@@ -201,53 +245,21 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-fangshan-er-fig08.png
+  - path: figures/2024-fangshan-er-fig08.png
+    width_mm: 73.3
+    height_mm: 9.8
 - id: 7
   type: 选择
   score: 2
   question: '农科院某研究所在相同条件下做某种农作物的发芽率试验，结果如下表所示：
 
-    种子个数
+    | 种子个数 | 200 | 500 | 700 | 800 | 900 | 1000 |
 
-    200
+    | --- | --- | --- | --- | --- | --- | --- |
 
-    500
+    | 发芽种子个数 | 187 | 435 | 624 | 718 | 814 | 901 |
 
-    700
-
-    800
-
-    900
-
-    1000
-
-    发芽种子个数
-
-    187
-
-    435
-
-    624
-
-    718
-
-    814
-
-    901
-
-    种子发芽率
-
-    0.935
-
-    0.870
-
-    0.891
-
-    0.898
-
-    0.904
-
-    0.901
+    | 种子发芽率 | 0.935 | 0.870 | 0.891 | 0.898 | 0.904 | 0.901 |
 
     下面有四个判断，其中合理的是（）
 
@@ -284,7 +296,13 @@ questions:
 
     [图]
 
-    A.①③B.②④C.①②③D.①②③④'
+    A.①③
+
+    B.②④
+
+    C.①②③
+
+    D.①②③④'
   answer: C
   solution: '解：连接OB，OC，OD
 
@@ -337,9 +355,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-fangshan-er-fig09.png
-  - figures/2024-fangshan-er-fig10.png
-  - figures/2024-fangshan-er-fig11.png
+  - path: figures/2024-fangshan-er-fig09.png
+    width_mm: 36.5
+    height_mm: 37.3
 - id: 9
   type: 填空
   score: 2
@@ -505,7 +523,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-fangshan-er-fig12.png
+  - path: figures/2024-fangshan-er-fig12.png
+    width_mm: 32.8
+    height_mm: 26.2
 - id: 15
   type: 填空
   score: 2
@@ -544,44 +564,26 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-fangshan-er-fig13.png
+  - path: figures/2024-fangshan-er-fig13.png
+    width_mm: 39.4
+    height_mm: 32.0
 - id: 16
   type: 填空
   score: 2
   question: '某校文艺部招聘主持人，有甲、乙、丙三名同学参加，学校设置了五轮比赛，规定：每一轮比赛分别决出第一、二、三名（不并列），对应名次的得分分别为$x,y,z$（$x > y > z$且$x,y,z$均为正整数）．三名同学最后得分为五轮比赛得分之和，得分最高者中选，下表是三名同学在五轮比赛中的部分得分情况如下：
 
-    一轮
+    |  | 一轮 | 二轮 | 三轮 | 四轮 | 五轮 | 总分 |
 
-    二轮
+    | --- | --- | --- | --- | --- | --- | --- |
 
-    三轮
+    | 甲 |  |  |  |  | y | 9 |
 
-    四轮
+    | 乙 |  |  | x |  |  | 22 |
 
-    五轮
-
-    总分
-
-    甲
-
-    y
-
-    9
-
-    乙
-
-    x
-
-    22
-
-    丙
-
-    Z
-
-    9
+    | 丙 | Z |  |  |  |  | 9 |
 
     则x的值为______，三名同学在五轮比赛中______获得的第二名最多．'
-  answer: ①.5②.甲
+  answer: ①.5 ②.甲
   solution: '解：$\begin{array}{c}
 
     \bullet \\
@@ -755,7 +757,7 @@ questions:
     （1）求证：该方程总有两个实数根；
 
     （2）若$m < 0$，且该方程的两个实数根的差为3，求m的值．'
-  answer: （1）见解析（2）$m = -2$
+  answer: （1）见解析 （2）$m = -2$
   solution: '【小问2详解】
 
     解：$\begin{array}{c}
@@ -806,7 +808,7 @@ questions:
     （1）求证：四边形$AEFD$是矩形；
 
     （2）连接DE，若$\tan\angle ABC = 2$，$BE = 1$，$AD = 4$，求DE的长．'
-  answer: （1）见解析（2）$2\sqrt{5}$
+  answer: （1）见解析 （2）$2\sqrt{5}$
   solution: '【小问1详解】
 
     证明：$\begin{array}{c}
@@ -878,8 +880,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-fangshan-er-fig14.png
-  - figures/2024-fangshan-er-fig15.png
+  - path: figures/2024-fangshan-er-fig14.png
+    width_mm: 43.9
+    height_mm: 24.3
 - id: 22
   type: 解答
   score: 5
@@ -941,8 +944,6 @@ questions:
   - L1
   - L2
   - L3
-  figures:
-  - figures/2024-fangshan-er-fig16.png
 - id: 23
   type: 解答
   score: 6
@@ -950,45 +951,11 @@ questions:
 
     a．七年级学生的成绩整理如下（单位：分）：
 
-    60
+    | 60 | 67 | 69 | 75 | 75 | 75 | 77 | 77 | 78 | 78 |
 
-    67
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
-    69
-
-    75
-
-    75
-
-    75
-
-    77
-
-    77
-
-    78
-
-    78
-
-    80
-
-    80
-
-    80
-
-    80
-
-    86
-
-    86
-
-    88
-
-    88
-
-    89
-
-    96
+    | 80 | 80 | 80 | 80 | 86 | 86 | 88 | 88 | 89 | 96 |
 
     b．八年级成绩的频数分布直方图如下（数据分成四组：$60\leq x<70,70\leq x<80,80\leq x<90,90\leq x\leq100$）：
 
@@ -998,37 +965,15 @@ questions:
 
     c．三组样本数据的平均数、中位数、众数如下表所示：
 
-    年级
+    | 年级 | 平均数 | 中位数 | 众数 |
 
-    平均数
+    | --- | --- | --- | --- |
 
-    中位数
+    | 七年级 | 79.2 | 79 | m |
 
-    众数
+    | 八年级 | 80.3 | n | 78 |
 
-    七年级
-
-    79.2
-
-    79
-
-    m
-
-    八年级
-
-    80.3
-
-    n
-
-    78
-
-    九年级
-
-    79.5
-
-    79
-
-    81
+    | 九年级 | 79.5 | 79 | 81 |
 
     根据所给信息，解答下列问题：
 
@@ -1037,7 +982,7 @@ questions:
     （2）估计______年级学生的成绩高于本年级平均分的人数更多；
 
     （3）若成绩达到80分及以上为优秀，九年级抽出的20名学生中有10人优秀，估计三个年级此次竞赛成绩优秀的总人数．'
-  answer: （1）80，81 （2）八（3）310名
+  answer: （1）80，81 （2）八 （3）310名
   solution: '【小问1详解】
 
     根据七年级的成绩可知，出现次数最多的是80，所以$m = 80$，
@@ -1084,7 +1029,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-fangshan-er-fig17.png
+  - path: figures/2024-fangshan-er-fig17.png
+    width_mm: 54.0
+    height_mm: 37.6
 - id: 24
   type: 解答
   score: 6
@@ -1095,7 +1042,7 @@ questions:
     （1）求证：BF是$\odot\odot$的切线；
 
     （2）若$BF = \frac{4}{3}\sqrt{5},\ \angle BCD = 30^\circ$，求BC的长．'
-  answer: （1）见解析（2）$\sqrt{6}+\sqrt{2}$
+  answer: （1）见解析 （2）$\sqrt{6}+\sqrt{2}$
   solution: '【小问1详解】
 
     证明：如图1，连接BD，
@@ -1155,9 +1102,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-fangshan-er-fig18.png
-  - figures/2024-fangshan-er-fig19.png
-  - figures/2024-fangshan-er-fig20.png
+  - path: figures/2024-fangshan-er-fig18.png
+    width_mm: 41.3
+    height_mm: 40.5
 - id: 25
   type: 解答
   score: 6
@@ -1167,65 +1114,11 @@ questions:
 
     （2）下表是y与x的几组对应值．
 
-    x
+    | x | $\cdots$ | $-2$ | $-1$ | $0$ | $1$ | $1.5$ | $1.8$ | $2.2$ | $2.5$ | $3$ | $4$ | $5$ | $6$ | $\cdots$ |
 
-    $\cdots$
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
-    $-2$
-
-    $-1$
-
-    $0$
-
-    $1$
-
-    $1.5$
-
-    $1.8$
-
-    $2.2$
-
-    $2.5$
-
-    $3$
-
-    $4$
-
-    $5$
-
-    $6$
-
-    $\cdots$
-
-    y
-
-    $\cdots$
-
-    $-1.75$
-
-    $-0.67$
-
-    $0.5$
-
-    $2$
-
-    $3.5$
-
-    $6.8$
-
-    $7.2$
-
-    $4.5$
-
-    m
-
-    $4.5$
-
-    $5.35$
-
-    $6.25$
-
-    $\cdots$
+    | y | $\cdots$ | $-1.75$ | $-0.67$ | $0.5$ | $2$ | $3.5$ | $6.8$ | $7.2$ | $4.5$ | m | $4.5$ | $5.35$ | $6.25$ | $\cdots$ |
 
     其中m的值为______；
 
@@ -1266,8 +1159,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-fangshan-er-fig21.png
-  - figures/2024-fangshan-er-fig22.png
+  - path: figures/2024-fangshan-er-fig21.png
+    width_mm: 51.6
+    height_mm: 51.1
 - id: 26
   type: 解答
   score: 6
@@ -1365,7 +1259,7 @@ questions:
     （2）求$\angle CPF$的度数；
 
     （3）用等式表示线段PC，PD，PF之间的数量关系，并证明．'
-  answer: （1）见解析（2）$\angle CPF=45^\circ$ （3）$PF + PD = \sqrt{2}PC$，证明见解析
+  answer: （1）见解析 （2）$\angle CPF=45^\circ$ （3）$PF + PD = \sqrt{2}PC$，证明见解析
   solution: '【小问1详解】
 
     依题意补全图形，如图．
@@ -1439,9 +1333,9 @@ questions:
   recommended_for:
   - L3
   figures:
-  - figures/2024-fangshan-er-fig23.png
-  - figures/2024-fangshan-er-fig24.png
-  - figures/2024-fangshan-er-fig25.png
+  - path: figures/2024-fangshan-er-fig23.png
+    width_mm: 36.5
+    height_mm: 41.5
 - id: 28
   type: 解答
   score: 7
@@ -1512,7 +1406,6 @@ questions:
   recommended_for:
   - L3
   figures:
-  - figures/2024-fangshan-er-fig26.png
-  - figures/2024-fangshan-er-fig27.png
-  - figures/2024-fangshan-er-fig28.png
-  - figures/2024-fangshan-er-fig29.png
+  - path: figures/2024-fangshan-er-fig26.png
+    width_mm: 69.8
+    height_mm: 70.6

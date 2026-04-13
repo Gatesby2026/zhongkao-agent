@@ -17,11 +17,15 @@ questions:
 - id: 1
   type: 选择
   score: 2
-  question: '下面几何体中，是圆柱的是（
+  question: '下面几何体中，是圆柱的是（      ）
 
-    ）
+    A.[图]
 
-    A.[图]B.[图]C.[图]D.[图]'
+    B.[图]
+
+    C.[图]
+
+    D.[图]'
   answer: B
   solution: '解：A.是正方体，故不符合题意；
 
@@ -42,16 +46,30 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-xicheng-yi-fig02.png
-  - figures/2023-xicheng-yi-fig03.png
-  - figures/2023-xicheng-yi-fig04.png
-  - figures/2023-xicheng-yi-fig05.png
+  - path: figures/2023-xicheng-yi-fig02.png
+    width_mm: 23.0
+    height_mm: 23.0
+  - path: figures/2023-xicheng-yi-fig03.png
+    width_mm: 23.5
+    height_mm: 21.4
+  - path: figures/2023-xicheng-yi-fig04.png
+    width_mm: 26.7
+    height_mm: 19.8
+  - path: figures/2023-xicheng-yi-fig05.png
+    width_mm: 21.4
+    height_mm: 21.4
 - id: 2
   type: 选择
   score: 2
   question: '根据地区生产总值统一核算的结果，2022年北京市全年地区生产总值41610.9亿元，按不变价格计算，比2021年增长0.7%．将4161090000000用科学记数法表示应为（）
 
-    A.$41.6109\times10^{11}$B.$4.16109\times10^{11}$C.$4.16109\times10^{12}$D.$4.16109\times10^{13}$'
+    A.$41.6109\times10^{11}$
+
+    B.$4.16109\times10^{11}$
+
+    C.$4.16109\times10^{12}$
+
+    D.$4.16109\times10^{13}$'
   answer: C
   solution: '解：4161090000000用科学记数法表示为$4.16109\times10^{12}$．
 
@@ -73,7 +91,13 @@ questions:
 
     [图]
 
-    A.$120^\circ$B.$130^\circ$C.$140^\circ$D.$150^\circ$'
+    A.$120^\circ$
+
+    B.$130^\circ$
+
+    C.$140^\circ$
+
+    D.$150^\circ$'
   answer: C
   solution: '解：∵$OC \perp OD$，
 
@@ -96,13 +120,21 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-xicheng-yi-fig06.png
+  - path: figures/2023-xicheng-yi-fig06.png
+    width_mm: 40.5
+    height_mm: 34.9
 - id: 4
   type: 选择
   score: 2
   question: '下列图形都是轴对称图形，其中恰有4条对称轴的图形是（）
 
-    A.[图]B.[图]C.[图]D.[图]'
+    A.[图]
+
+    B.[图]
+
+    C.[图]
+
+    D.[图]'
   answer: B
   solution: 'A、是轴对称图形，对称轴是3条，不符合题意；
 
@@ -124,10 +156,18 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-xicheng-yi-fig07.png
-  - figures/2023-xicheng-yi-fig08.png
-  - figures/2023-xicheng-yi-fig09.png
-  - figures/2023-xicheng-yi-fig10.png
+  - path: figures/2023-xicheng-yi-fig07.png
+    width_mm: 19.8
+    height_mm: 18.0
+  - path: figures/2023-xicheng-yi-fig08.png
+    width_mm: 19.8
+    height_mm: 19.8
+  - path: figures/2023-xicheng-yi-fig09.png
+    width_mm: 20.6
+    height_mm: 12.4
+  - path: figures/2023-xicheng-yi-fig10.png
+    width_mm: 20.4
+    height_mm: 17.7
 - id: 5
   type: 选择
   score: 2
@@ -135,7 +175,13 @@ questions:
 
     [图]
 
-    A.$a > -2$B.$\left| a \right| < \left| b \right|$C.$ab > 0$D.$a < -b$'
+    A.$a > -2$
+
+    B.$\left| a \right| < \left| b \right|$
+
+    C.$ab > 0$
+
+    D.$a < -b$'
   answer: D
   solution: '解：通过观察数轴可知：$-3 < a < -2$，故A错误，不符合题意；
 
@@ -156,13 +202,21 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-xicheng-yi-fig11.png
+  - path: figures/2023-xicheng-yi-fig11.png
+    width_mm: 61.1
+    height_mm: 8.2
 - id: 6
   type: 选择
   score: 2
   question: '平面直角坐标系xOy中，若点$A(x_{1},2)$和$B(x_2,4)$在反比例函数$y=\frac{k}{x}(k>0)$图像上，则下列关系式正确的是（）
 
-    A.$x_{1}>x_{2}>0$B.$x_{2}>x_{1}>0$C.$x_{1}<x_{2}<0$D.$x_{2}<x_{1}<0$'
+    A.$x_{1}>x_{2}>0$
+
+    B.$x_{2}>x_{1}>0$
+
+    C.$x_{1}<x_{2}<0$
+
+    D.$x_{2}<x_{1}<0$'
   answer: A
   solution: ''
   knowledge_points:
@@ -179,7 +233,13 @@ questions:
   score: 2
   question: 'x的方程$mx^{2}+3x-1=0$有两个不相等的实数根，则实数m的取值范围是（）
 
-    A.$m > -\frac{9}{4}$B.$m-\frac{9}{4}$C.$m > -\frac{9}{4}$且$m \neq 0$D.$m-\frac{9}{4}$且$m \neq 0$'
+    A.$m > -\frac{9}{4}$
+
+    B.$m-\frac{9}{4}$
+
+    C.$m > -\frac{9}{4}$且$m \neq 0$
+
+    D.$m-\frac{9}{4}$且$m \neq 0$'
   answer: C
   solution: '∵方程$mx^{2}+3x-1=0$有两个不相等的实数根，
 
@@ -220,9 +280,7 @@ questions:
 
     易知，前n年和前$n+1$年差值为$1.4$万元，前$n+1$年和$n+2$年差值为$1.4$万元，
 
-    故第二年起，每年检修费比上一年保持不变，故A
-
-    , B错误；
+    故第二年起，每年检修费比上一年保持不变，故A , B错误；
 
     第一到第五年总支出费用为$y=1.4\times5-0.5=6.5$万元，
 
@@ -359,7 +417,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-xicheng-yi-fig12.png
+  - path: figures/2023-xicheng-yi-fig12.png
+    width_mm: 44.2
+    height_mm: 31.0
 - id: 14
   type: 填空
   score: 2
@@ -388,8 +448,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-xicheng-yi-fig13.png
-  - figures/2023-xicheng-yi-fig14.png
+  - path: figures/2023-xicheng-yi-fig13.png
+    width_mm: 59.8
+    height_mm: 30.2
 - id: 15
   type: 填空
   score: 2
@@ -414,14 +475,12 @@ questions:
   - L1
   - L2
   - L3
-  figures:
-  - figures/2023-xicheng-yi-fig15.png
 - id: 16
   type: 填空
   score: 2
   question: A，B，C三种原料每袋的重量（单位：kg）依次是1，2，3，每袋的价格（单位：万元）依次是3，2，5．现生产某种产品需要A，B，C这三种原料的袋数依次为$x_1, x_2, x_3$（$x_1, x_2, x_3$均为正整数），则生产这种产品时需要的这三类原料的总重量W（单位：kg）=__________（用含$x_1, x_2, x_3$的代数式表示）：为了提升产品的品质，要求$W\
     13$，当$x_1, x_2, x_3$的值依次是_______时，这种产品的成本最低．
-  answer: ①.$x_{1}+2x_{2}+3x_{3}$②.1，5，1
+  answer: ①.$x_{1}+2x_{2}+3x_{3}$ ②.1，5，1
   solution: '∵A，B，C三种原料每袋的重量（单位：kg）依次是1，2，3，需要A，B，C这三种原料的袋数依次为$x_1, x_2, x_3$（$x_1, x_2, x_3$均为正整数），
 
     ∴$W = x_1 + 2x_2 + 3x_3$，
@@ -522,21 +581,11 @@ questions:
   score: 5
   question: '下面是解答一道几何题时两种添加辅助线的方法，选择其中一种，完成证明．
 
-    已知：如图，$AB \parallel CD$．
+    | 已知：如图， $AB \parallel CD$ ． 求证： $\angle ABC = \angle A + \angle C$ [图] |  |
 
-    求证：$\angle ABC = \angle A + \angle C$
+    | --- | --- |
 
-    [图]
-
-    方法一
-
-    证明：如图，过点E作$MN \parallel AB$[图]
-
-    方法二
-
-    证明：如图，延长AE，交CD于点F．
-
-    [图]'
+    | 方法一 证明：如图，过点 E 作 $MN \parallel AB$ [图] | 方法二 证明：如图，延长 AE ，交 CD 于点 F ． [图] |'
   answer: 答案不唯一，见解析
   solution: '方法一
 
@@ -575,12 +624,6 @@ questions:
   - L1
   - L2
   - L3
-  figures:
-  - figures/2023-xicheng-yi-fig16.png
-  - figures/2023-xicheng-yi-fig17.png
-  - figures/2023-xicheng-yi-fig18.png
-  - figures/2023-xicheng-yi-fig19.png
-  - figures/2023-xicheng-yi-fig20.png
 - id: 21
   type: 解答
   score: 5
@@ -595,7 +638,7 @@ questions:
     ①依题意补全图2；
 
     ②求证：四边形$BFCE$为菱形.'
-  answer: （1）见解析（2）①见解析；②见解析
+  answer: （1）见解析 （2）①见解析；②见解析
   solution: '【小问1详解】
 
     证明：∵$CE \parallel FB$，
@@ -643,8 +686,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-xicheng-yi-fig21.png
-  - figures/2023-xicheng-yi-fig22.png
+  - path: figures/2023-xicheng-yi-fig18.png
+    width_mm: 66.7
+    height_mm: 39.4
 - id: 22
   type: 解答
   score: 5
@@ -660,27 +704,13 @@ questions:
 
     c．甲、乙、丙三家民宿“综合满意度”评分的平均数、中位数：
 
-    甲
+    |  | 甲 | 乙 | 丙 |
 
-    乙
+    | --- | --- | --- | --- |
 
-    丙
+    | 平均数 | m | $4.5$ | $4.2$ |
 
-    平均数
-
-    m
-
-    $4.5$
-
-    $4.2$
-
-    中位数
-
-    $4.5$
-
-    $4.7$
-
-    n
+    | 中位数 | $4.5$ | $4.7$ | n |
 
     根据以上信息，回答下列问题：
 
@@ -731,7 +761,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-xicheng-yi-fig23.png
+  - path: figures/2023-xicheng-yi-fig20.png
+    width_mm: 112.7
+    height_mm: 63.5
 - id: 23
   type: 解答
   score: 6
@@ -788,7 +820,7 @@ questions:
     （1）求证：$DE \parallel AB$；
 
     （2）若$OA=5$，$\sin A = \frac{3}{5}$，求线段DE的长．'
-  answer: （1）见解析（2）$\frac{35}{4}$
+  answer: （1）见解析 （2）$\frac{35}{4}$
   solution: '【小问1详解】
 
     证明：连接OD，如图1．
@@ -862,9 +894,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-xicheng-yi-fig24.png
-  - figures/2023-xicheng-yi-fig25.png
-  - figures/2023-xicheng-yi-fig26.png
+  - path: figures/2023-xicheng-yi-fig21.png
+    width_mm: 39.7
+    height_mm: 31.8
 - id: 25
   type: 解答
   score: 6
@@ -874,37 +906,11 @@ questions:
 
     （1）某次喷水浇灌时，测得x与y的几组数据如下：
 
-    x
+    | x | 0 | 2 | 6 | 10 | 12 | 14 | 16 |
 
-    0
+    | --- | --- | --- | --- | --- | --- | --- | --- |
 
-    2
-
-    6
-
-    10
-
-    12
-
-    14
-
-    16
-
-    y
-
-    0
-
-    0.88
-
-    2.16
-
-    2.80
-
-    2.88
-
-    2.80
-
-    2.56
+    | y | 0 | 0.88 | 2.16 | 2.80 | 2.88 | 2.80 | 2.56 |
 
     ①根据上述数据，求这些数据满足的函数关系；
 
@@ -960,7 +966,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-xicheng-yi-fig27.png
+  - path: figures/2023-xicheng-yi-fig24.png
+    width_mm: 107.4
+    height_mm: 30.4
 - id: 26
   type: 解答
   score: 6
@@ -1046,7 +1054,7 @@ questions:
     （1）求证：$\angle MEN = \angle AOC$；
 
     （2）点F在线段NO上，点G在线段NO延长线上，连接EF，EG，若$EF = EG$，依题意补全图形，用等式表示线段$\mathrm{NF}$，OG，OM之间的数量关系，并证明．'
-  answer: （1）见解析（2）$OM=NF+OG$，理由见解析
+  answer: （1）见解析 （2）$OM=NF+OG$，理由见解析
   solution: '【小问1详解】
 
     （1）证明：作$EH \perp CD$，$EK \perp AB$，垂足分别是H，K，如图．
@@ -1115,9 +1123,9 @@ questions:
   recommended_for:
   - L3
   figures:
-  - figures/2023-xicheng-yi-fig28.png
-  - figures/2023-xicheng-yi-fig29.png
-  - figures/2023-xicheng-yi-fig30.png
+  - path: figures/2023-xicheng-yi-fig25.png
+    width_mm: 72.8
+    height_mm: 46.3
 - id: 28
   type: 解答
   score: 7
@@ -1221,7 +1229,3 @@ questions:
   difficulty: 压轴
   recommended_for:
   - L3
-  figures:
-  - figures/2023-xicheng-yi-fig31.png
-  - figures/2023-xicheng-yi-fig32.png
-  - figures/2023-xicheng-yi-fig33.png

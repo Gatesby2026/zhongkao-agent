@@ -1,0 +1,743 @@
+# ============================================================
+# 2019年北京市中考数学真题试卷 — 逐题分析
+# ============================================================
+# 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
+# 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
+# 满分：100分  时长：120分钟
+
+year: 2019
+district: 北京市
+exam_type: 真题
+subject: 数学
+full_score: 100
+duration_minutes: 120
+total_questions: 28
+structure: 8选择(16分) + 8填空(16分) + 12解答(68分)
+questions:
+- id: 1
+  type: 选择
+  score: 2
+  question: '（2分）4月24日是中国航天日.1970年的这一天，我国自行设计、制造的第一颗人造地球卫星“东方红一号”成功发射，标志着中国从此进入了太空时代，它的运行轨道，距地球最近点439000米，将439000用科学记数法表示应为（　　）
+
+    A．0.439×106
+
+    B．4.39×106
+
+    C．4.39×105
+
+    D．439×103'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 科学记数法
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 2
+  type: 选择
+  score: 2
+  question: '（2分）下列倡导节约的图案中，是轴对称图形的是（　　）
+
+    A．[图]
+
+    B．[图]
+
+    C．[图]
+
+    D．[图]'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 轴对称图形
+  - 轴对称
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2019-beijing-zhenti-fig01.png
+    width_mm: 17.2
+    height_mm: 16.9
+  - path: figures/2019-beijing-zhenti-fig02.png
+    width_mm: 17.5
+    height_mm: 16.4
+  - path: figures/2019-beijing-zhenti-fig03.png
+    width_mm: 22.2
+    height_mm: 15.1
+  - path: figures/2019-beijing-zhenti-fig04.png
+    width_mm: 17.2
+    height_mm: 16.9
+- id: 3
+  type: 选择
+  score: 2
+  question: '（2分）正十边形的外角和为（　　）
+
+    A．180°
+
+    B．360°
+
+    C．720°
+
+    D．1440°'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: triangles
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 4
+  type: 选择
+  score: 2
+  question: '（2分）在数轴上，点A，B在原点O的两侧，分别表示数a，2，将点A向右平移1个单位长度，得到点C，若CO＝BO，则a的值为（　　）
+
+    A．﹣3
+
+    B．﹣2
+
+    C．﹣1
+
+    D．1'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 平移
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 5
+  type: 选择
+  score: 2
+  question: '（2分）已知锐角∠AOB，如图，
+
+    （1）在射线OA上取一点C，以点O为圆心，OC长为半径作$\overparen{PQ}$，交射线OB于点D，连接CD；
+
+    （2）分别以点C，D为圆心，CD长为半径作弧，交$\overparen{PQ}$于点M，N；
+
+    （3）连接OM，MN．
+
+    根据以上作图过程及所作图形，下列结论中错误的是（　　）
+
+    [图]
+
+    A．∠COM＝∠COD
+
+    B．若OM＝MN．则∠AOB＝20°
+
+    C．MN∥CD
+
+    D．MN＝3CD'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: circles
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2019-beijing-zhenti-fig05.png
+    width_mm: 55.0
+    height_mm: 50.5
+- id: 6
+  type: 选择
+  score: 2
+  question: '（2分）如果m+n＝1，那么代数式（[图]+$\frac{1}{m}$）•（m2﹣n2）的值为（　　）
+
+    A．﹣3
+
+    B．﹣1
+
+    C．1
+
+    D．3'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2019-beijing-zhenti-fig06.png
+    width_mm: 12.7
+    height_mm: 10.8
+- id: 7
+  type: 选择
+  score: 2
+  question: '（2分）用三个不等式a＞b，ab＞0，$\frac{1}{a}$＜$\frac{1}{b}$中的两个不等式作为题设，余下的一个不等式作为结论组成一个命题，组成真命题的个数为（　　）
+
+    A．0
+
+    B．1
+
+    C．2
+
+    D．3'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 不等式
+  module: equationsAndInequalities
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 8
+  type: 选择
+  score: 2
+  question: '（2分）某校共有200名学生，为了解本学期学生参加公益劳动的情况，收集了他们参加公益劳动时间（单位：小时）等数据，以下是根据数据绘制的统计图表的一部分
+
+    | 时间 t 人数 学生类型 | 0≤ t ＜ 10 | 10≤ t ＜ 20 | 20≤ t ＜ 30 | 30≤ t ＜ 40 | t ≥40 |  |
+
+    | --- | --- | --- | --- | --- | --- | --- |
+
+    | 性别 | 男 | 7 | 31 | 25 | 30 | 4 |
+
+    | 女 | 8 | 29 | 26 | 32 | 8 |  |
+
+    | 学段 | 初中 |  | 25 | 36 | 44 | 11 |
+
+    | 高中 |  |  |  |  |  |  |
+
+    [图]
+
+    下面有四个推断：
+
+    ①这200名学生参加公益劳动时间的平均数一定在24.5﹣25.5之间
+
+    ②这200名学生参加公益劳动时间的中位数在20﹣30之间
+
+    ③这200名学生中的初中生参加公益劳动时间的中位数一定在20～30之间
+
+    ④这200名学生中的高中生参加公益劳动时间的中位数可能在20～30之间
+
+    所有合理推断的序号是（　　）
+
+    A．①③
+
+    B．②④
+
+    C．①②③
+
+    D．①②③④'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 统计
+  - 平均数
+  - 中位数
+  module: statisticsAndProbability
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+  figures:
+  - path: figures/2019-beijing-zhenti-fig07.png
+    width_mm: 83.1
+    height_mm: 64.8
+- id: 9
+  type: 填空
+  score: 2
+  question: （2分）分式$\frac{x-1}{x}$的值为0，则x的值是．
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 10
+  type: 填空
+  score: 2
+  question: '（2分）如图，已知△ABC，通过测量、计算得△ABC的面积约为cm2．（结果保留一位小数）
+
+    [图]'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2019-beijing-zhenti-fig08.png
+    width_mm: 49.2
+    height_mm: 26.2
+- id: 11
+  type: 填空
+  score: 2
+  question: '（2分）在如图所示的几何体中，其三视图中有矩形的是．（写出所有正确答案的序号）
+
+    [图]'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 矩形
+  module: quadrilaterals
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2019-beijing-zhenti-fig09.png
+    width_mm: 62.7
+    height_mm: 31.2
+- id: 12
+  type: 填空
+  score: 2
+  question: '（2分）如图所示的网格是正方形网格，则∠PAB+∠PBA＝°（点A，B，P是网格线交点）．
+
+    [图]'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 正方形
+  module: quadrilaterals
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2019-beijing-zhenti-fig10.png
+    width_mm: 36.0
+    height_mm: 17.7
+- id: 13
+  type: 填空
+  score: 2
+  question: （2分）在平面直角坐标系xOy中，点A（a，b）（a＞0，b＞0）在双曲线y＝$\frac{k_{1}}{x}$上，点A关于x轴的对称点B在双曲线y＝$\frac{k_{2}}{x}$，则k1+k2的值为．
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 坐标系
+  module: geometryComprehensive
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 14
+  type: 填空
+  score: 2
+  question: '（2分）把图1中的菱形沿对角线分成四个全等的直角三角形，将这四个直角三角形分别拼成如图2，图3所示的正方形，则图1中菱形的面积为．
+
+    [图]'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 菱形
+  - 正方形
+  module: triangles
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2019-beijing-zhenti-fig11.png
+    width_mm: 106.6
+    height_mm: 37.3
+- id: 15
+  type: 填空
+  score: 2
+  question: （2分）小天想要计算一组数据92，90，94，86，99，85的方差s02，在计算平均数的过程中，将这组数据中的每一个数都减去90，得到一组新数据2，0，4，﹣4，9，﹣5，记这组新数据的方差为s12，则s12s02（填“＞”，“＝”或”＜”）
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 平均数
+  - 方差
+  module: statisticsAndProbability
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 16
+  type: 填空
+  score: 2
+  question: '（2分）在矩形ABCD中，M，N，P，Q分别为边AB，BC，CD，DA上的点（不与端点重合），对于任意矩形ABCD，下面四个结论中，
+
+    ①存在无数个四边形MNPQ是平行四边形；
+
+    ②存在无数个四边形MNPQ是矩形；
+
+    ③存在无数个四边形MNPQ是菱形；
+
+    ④至少存在一个四边形MNPQ是正方形．
+
+    所有正确结论的序号是．
+
+    二、解答题（本题共68分，第17-21题，每小题5分，第22-24题，每小题5分，第25题5分，第26题6分，第27-28题，每小题5分）解答应写出文字说明、演算步骤或证明过程，'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 平行四边形
+  - 矩形
+  - 菱形
+  - 正方形
+  module: quadrilaterals
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 17
+  type: 解答
+  score: 5
+  question: （5分）计算：|﹣$\sqrt{3}$|﹣（4﹣π）0+2sin60°+（$\frac{1}{4}$）﹣1．
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 18
+  type: 解答
+  score: 5
+  question: （5分）解不等式组：[图]
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 不等式
+  - 不等式组
+  module: equationsAndInequalities
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2019-beijing-zhenti-fig12.png
+    width_mm: 26.5
+    height_mm: 15.9
+- id: 19
+  type: 解答
+  score: 5
+  question: （5分）关于x的方程x2﹣2x+2m﹣1＝0有实数根，且m为正整数，求m的值及此时方程的根．
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 20
+  type: 解答
+  score: 5
+  question: '（5分）如图，在菱形ABCD中，AC为对角线，点E，F分别在AB，AD上，BE＝DF，连接EF．
+
+    （1）求证：AC⊥EF；
+
+    （2）延长EF交CD的延长线于点G，连接BD交AC于点O．若BD＝4，tanG＝$\frac{1}{2}$，求AO的长．
+
+    [图]'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 菱形
+  module: quadrilaterals
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2019-beijing-zhenti-fig13.png
+    width_mm: 54.0
+    height_mm: 31.2
+- id: 21
+  type: 解答
+  score: 5
+  question: '（5分）国家创新指数是反映一个国家科学技术和创新竞争力的综合指数．对国家创新指数得分排名前40的国家的有关数据进行收集、整理、描述和分析．下面给出了部分信息：
+
+    a．国家创新指数得分的频数分布直方图（数据分成7组：30≤x＜40，40≤x＜50，50≤x＜60，60≤x＜70，70≤x＜80，80≤x＜90，90≤x≤100）；
+
+    [图]
+
+    b．国家创新指数得分在60≤x＜70这一组的是：
+
+    61.7 62.4 63.6 65.9 66.4 68.5 69.1 69.3 69.5
+
+    c．40个国家的人均国内生产总值和国家创新指数得分情况统计图：
+
+    [图]
+
+    d．中国的国家创新指数得分为69.5．
+
+    （以上数据来源于《国家创新指数报告（2018）》）
+
+    根据以上信息，回答下列问题：
+
+    （1）中国的国家创新指数得分排名世界第；
+
+    （2）在40个国家的人均国内生产总值和国家创新指数得分情况统计图中，包括中国在内的少数几个国家所对应的点位于虚线l1的上方，请在图中用“〇”圈出代表中国的点；
+
+    （3）在国家创新指数得分比中国高的国家中，人均国内生产总值的最小值约为万美元；（结果保留一位小数）
+
+    （4）下列推断合理的是．
+
+    ①相比于点A，B所代表的国家，中国的国家创新指数得分还有一定差距，中国提出“加快建设创新型国家”的战略任务，进一步提高国家综合创新能力；
+
+    ②相比于点B，C所代表的国家，中国的人均国内生产总值还有一定差距，中国提出“决胜全面建成小康社会”的奋斗目标，进一步提高人均国内生产总值．'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 统计
+  module: statisticsAndProbability
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2019-beijing-zhenti-fig14.png
+    width_mm: 102.1
+    height_mm: 48.2
+  - path: figures/2019-beijing-zhenti-fig15.png
+    width_mm: 79.6
+    height_mm: 53.4
+- id: 22
+  type: 解答
+  score: 5
+  question: '（6分）在平面内，给定不在同一条直线上的点A，B，C，如图所示，点O到点A，B，C的距离均等于a（a为常数），到点O的距离等于a的所有点组成图形G，∠ABC的平分线交图形G于点D，连接AD，CD．
+
+    （1）求证：AD＝CD；
+
+    （2）过点D作DE⊥BA，垂足为E，作DF⊥BC，垂足为F，延长DF交图形G于点M，连接CM．若AD＝CM，求直线DE与图形G的公共点个数．
+
+    [图]'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  figures:
+  - path: figures/2019-beijing-zhenti-fig16.png
+    width_mm: 60.6
+    height_mm: 27.5
+- id: 23
+  type: 解答
+  score: 6
+  question: '（6分）小云想用7天的时间背诵若干首诗词，背诵计划如下：
+
+    ①将诗词分成4组，第i组有xi首，i＝1，2，3，4；
+
+    ②对于第i组诗词，第i天背诵第一遍，第（i+1）天背诵第二遍，第（i+3）天背诵第三遍，三遍后完成背诵，其它天无需背诵，i＝1，2，3，4；
+
+    |  | 第 1 天 | 第 2 天 | 第 3 天 | 第 4 天 | 第 5 天 | 第 6 天 | 第 7 天 |
+
+    | --- | --- | --- | --- | --- | --- | --- | --- |
+
+    | 第 1 组 | x 1 | x 1 |  | x 1 |  |  |  |
+
+    | 第 2 组 |  | x 2 | x 2 |  | x 2 |  |  |
+
+    | 第 3 组 |  |  |  |  |  |  |  |
+
+    | 第 4 组 |  |  |  | x 4 | x 4 |  | x 4 |
+
+    ③每天最多背诵14首，最少背诵4首．
+
+    解答下列问题：
+
+    （1）填入x3补全上表；
+
+    （2）若x1＝4，x2＝3，x3＝4，则x4的所有可能取值为；
+
+    （3）7天后，小云背诵的诗词最多为首．'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 24
+  type: 解答
+  score: 6
+  question: '（6分）如图，P是$\overline{AB}$与弦AB所围成的图形的外部的一定点，C是$\overline{AB}$上一动点，连接PC交弦AB于点D．
+
+    小腾根据学习函数的经验，对线段PC，PD，AD的长度之间的关系进行了探究．下面是小腾的探究过程，请补充完整：
+
+    （1）对于点C在$\overline{AB}$上的不同位置，画图、测量，得到了线段PC，PD，AD的长度的几组值，如下表：
+
+    |  | 位置 1 | 位置 2 | 位置 3 | 位置 4 | 位置 5 | 位置 6 | 位置 7 | 位置 8 |
+
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+
+    | PC / cm | 3.44 | 3.30 | 3.07 | 2.70 | 2.25 | 2.25 | 2.64 | 2.83 |
+
+    | PD / cm | 3.44 | 2.69 | 2.00 | 1.36 | 0.96 | 1.13 | 2.00 | 2.83 |
+
+    | AD / cm | 0.00 | 0.78 | 1.54 | 2.30 | 3.01 | 4.00 | 5.11 | 6.00 |
+
+    在PC，PD，AD的长度这三个量中，确定的长度是自变量，的长度和的长度都是这个自变量的函数；
+
+    （2）在同一平面直角坐标系xOy中，画出（1）中所确定的函数的图象；
+
+    [图]
+
+    （3）结合函数图象，解决问题：当PC＝2PD时，AD的长度约为cm．
+
+    [图]'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 弦
+  - 坐标系
+  - 动点
+  module: functions
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+  figures:
+  - path: figures/2019-beijing-zhenti-fig17.png
+    width_mm: 49.7
+    height_mm: 43.7
+  - path: figures/2019-beijing-zhenti-fig18.png
+    width_mm: 59.8
+    height_mm: 40.7
+- id: 25
+  type: 解答
+  score: 6
+  question: '（5分）在平面直角坐标系xOy中，直线l：y＝kx+1（k≠0）与直线x＝k，直线y＝﹣k分别交于点A，B，直线x＝k与直线y＝﹣k交于点C．
+
+    （1）求直线l与y轴的交点坐标；
+
+    （2）横、纵坐标都是整数的点叫做整点，记线段AB，BC，CA围成的区域（不含边界）为W．
+
+    ①当k＝2时，结合函数图象，求区域W内的整点个数；
+
+    ②若区域W内没有整点，直接写出k的取值范围．'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 坐标系
+  module: functions
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 26
+  type: 解答
+  score: 6
+  question: '（6分）在平面直角坐标系xOy中，抛物线y＝ax2+bx﹣$\frac{1}{a}$与y轴交于点A，将点A向右平移2个单位长度，得到点B，点B在抛物线上．
+
+    （1）求点B的坐标（用含a的式子表示）；
+
+    （2）求抛物线的对称轴；
+
+    （3）已知点P（$\frac{1}{2}$，﹣$\frac{1}{a}$），Q（2，2）．若抛物线与线段PQ恰有一个公共点，结合函数图象，求a的取值范围．'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 平移
+  - 坐标系
+  module: functions
+  difficulty: 压轴
+  recommended_for:
+  - L3
+- id: 27
+  type: 解答
+  score: 7
+  question: '（7分）已知∠AOB＝30°，H为射线OA上一定点，OH＝$\sqrt{3}$+1，P为射线OB上一点，M为线段OH上一动点，连接PM，满足∠OMP为钝角，以点P为中心，将线段PM顺时针旋转150°，得到线段PN，连接ON．
+
+    （1）依题意补全图1；
+
+    （2）求证：∠OMP＝∠OPN；
+
+    （3）点M关于点H的对称点为Q，连接QP．写出一个OP的值，使得对于任意的点M总有ON＝QP，并证明．
+
+    [图]'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 旋转
+  - 动点
+  module: geometryComprehensive
+  difficulty: 压轴
+  recommended_for:
+  - L3
+  figures:
+  - path: figures/2019-beijing-zhenti-fig19.png
+    width_mm: 86.5
+    height_mm: 31.8
+- id: 28
+  type: 解答
+  score: 7
+  question: '（7分）在△ABC中，D，E分别是△ABC两边的中点，如果$\widehat{DE}$上的所有点都在△ABC的内部或边上，则称$\widehat{DE}$为△ABC的中内弧．例如，图1中$\widehat{DE}$是△ABC的一条中内弧．
+
+    [图]
+
+    （1）如图2，在Rt△ABC中，AB＝AC＝$2\sqrt{2}$，D，E分别是AB，AC的中点，画出△ABC的最长的中内弧$\widehat{DE}$，并直接写出此时$\widehat{DE}$的长；
+
+    （2）在平面直角坐标系中，已知点A（0，2），B（0，0），C（4t，0）（t＞0），在△ABC中，D，E分别是AB，AC的中点．
+
+    ①若t＝$\frac{1}{2}$，求△ABC的中内弧$\widehat{DE}$所在圆的圆心P的纵坐标的取值范围；
+
+    ②若在△ABC中存在一条中内弧$\widehat{DE}$，使得$\widehat{DE}$所在圆的圆心P在△ABC的内部或边上，直接写出t的取值范围．
+
+    2019年北京市中考数学试卷答案与解析'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 坐标系
+  module: circles
+  difficulty: 压轴
+  recommended_for:
+  - L3
+  figures:
+  - path: figures/2019-beijing-zhenti-fig20.png
+    width_mm: 80.7
+    height_mm: 37.3

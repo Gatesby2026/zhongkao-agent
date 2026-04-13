@@ -21,7 +21,13 @@ questions:
 
     [图]
 
-    A.圆柱B.三棱柱C.圆锥D.球'
+    A.圆柱
+
+    B.三棱柱
+
+    C.圆锥
+
+    D.球'
   answer: C
   solution: '解：∵圆锥的展开图为一个扇形和一个圆形，
 
@@ -38,7 +44,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-fengtai-er-fig01.png
+  - path: figures/2023-fengtai-er-fig01.png
+    width_mm: 34.4
+    height_mm: 22.2
 - id: 2
   type: 选择
   score: 2
@@ -46,7 +54,13 @@ questions:
 
     [图]
 
-    A.35°B.45°C.55°D.65°'
+    A.35°
+
+    B.45°
+
+    C.55°
+
+    D.65°'
   answer: A
   solution: '解：∵$\angle A+\angle B+\angle AEB=180^{\circ}$，且$\angle AEB = 90^\circ$，$\angle B=55^{\circ}$，
 
@@ -67,7 +81,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-fengtai-er-fig02.png
+  - path: figures/2023-fengtai-er-fig02.png
+    width_mm: 37.0
+    height_mm: 25.4
 - id: 3
   type: 选择
   score: 2
@@ -75,7 +91,13 @@ questions:
 
     [图]
 
-    A.$a > c$B.$\left|b\right|>1$C.$-b < c$D.$ac > 0$'
+    A.$a > c$
+
+    B.$\left|b\right|>1$
+
+    C.$-b < c$
+
+    D.$ac > 0$'
   answer: C
   solution: '解：由数轴可知，$-4 < a < -3$，$-1 < b < 0$，$2<c<3$，
 
@@ -98,13 +120,21 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-fengtai-er-fig03.png
+  - path: figures/2023-fengtai-er-fig03.png
+    width_mm: 84.1
+    height_mm: 15.6
 - id: 4
   type: 选择
   score: 2
   question: '以下图形绕点O旋转一定角度后都能与原图形重合，其中旋转角最小的是（）
 
-    A.[图]B.[图]C.[图]D.[图]'
+    A.[图]
+
+    B.[图]
+
+    C.[图]
+
+    D.[图]'
   answer: D
   solution: '解：A选项：最小旋转角度$=\frac{360^{\circ}}{3}=120^{\circ}$；
 
@@ -127,16 +157,30 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-fengtai-er-fig04.png
-  - figures/2023-fengtai-er-fig05.png
-  - figures/2023-fengtai-er-fig06.png
-  - figures/2023-fengtai-er-fig07.png
+  - path: figures/2023-fengtai-er-fig04.png
+    width_mm: 27.0
+    height_mm: 23.8
+  - path: figures/2023-fengtai-er-fig05.png
+    width_mm: 23.8
+    height_mm: 23.8
+  - path: figures/2023-fengtai-er-fig06.png
+    width_mm: 25.7
+    height_mm: 23.5
+  - path: figures/2023-fengtai-er-fig07.png
+    width_mm: 27.8
+    height_mm: 23.8
 - id: 5
   type: 选择
   score: 2
   question: '已知$3.5^{2}=12.25$，$3.6^{2}=12.96$，$3.7^{2}=13.69$，$3.8^{2}=14.44$，那么$\sqrt{13}$精确到$0.1$的近似值是（）
 
-    A.$3.5$B.$3.6$C.$3.7$D.$3.8$'
+    A.$3.5$
+
+    B.$3.6$
+
+    C.$3.7$
+
+    D.$3.8$'
   answer: B
   solution: '解：$3.6^{2}=12.96<13<13.69=3.7^{2}$，
 
@@ -161,9 +205,13 @@ questions:
   score: 2
   question: '掷一枚质地均匀的硬币m次，正面向上n次，则$\frac{n}{m}$的值（）
 
-    A.一定$[公式]$$\frac{1}{2}$B.一定不是$\frac{1}{2}$
+    A.一定$[公式]$$\frac{1}{2}$
 
-    C.随着m的增大，越来越接近$\frac{1}{2}$D.随着m的增大，在$\frac{1}{2}$附近摆动，呈现一定的稳定性'
+    B.一定不是$\frac{1}{2}$
+
+    C.随着m的增大，越来越接近$\frac{1}{2}$
+
+    D.随着m的增大，在$\frac{1}{2}$附近摆动，呈现一定的稳定性'
   answer: D
   solution: '解：投掷一枚质地均匀的硬币正面向上的概率是$\frac{1}{2}$，而投掷一枚质地均匀的硬币正面向上是随机事件，$\frac{n}{m}$是它的频率，随着m的增加，$\frac{n}{m}$的值会在$\frac{1}{2}$附近摆动，呈现出一定的稳定性．
 
@@ -182,8 +230,13 @@ questions:
   score: 2
   question: '我国明代数学读本《算法统宗》一书中有这样一道题：一支竿子一条索，索比竿子长一托，对折索子来量竿，却比竿子短一托，索和竿子各几何?（1托为5尺）其大意为：现有一根竿和一条绳索，如果用绳索去量竿，绳索比竿长5尺，如果将绳索对折后再去量竿，就比竿短5尺，那么绳索和竿各长几尺?设绳索长为x尺，竿长为y尺，根据题意列方程组，正确的是（）
 
-    A.$\left\{ \begin{array}{l} x - y = 5 \\ y - \dfrac{1}{2}x = 5 \end{array} \right.$B.$\left\{ \begin{array}{l} x - y = 5 \\ \frac{1}{2}x - y = 5 \end{array} \right.$C.$\left\{ \begin{array} { l } {
-    x - y = 5 } \\ { x - 2 y = 5 } \end{array} \right.$D.$\left\{ \begin{array} { l } { x - y = 5 } \\ { y - 2 x = 5 } \end{array} \right.$'
+    A.$\left\{ \begin{array}{l} x - y = 5 \\ y - \dfrac{1}{2}x = 5 \end{array} \right.$
+
+    B.$\left\{ \begin{array}{l} x - y = 5 \\ \frac{1}{2}x - y = 5 \end{array} \right.$
+
+    C.$\left\{ \begin{array} { l } { x - y = 5 } \\ { x - 2 y = 5 } \end{array} \right.$
+
+    D.$\left\{ \begin{array} { l } { x - y = 5 } \\ { y - 2 x = 5 } \end{array} \right.$'
   answer: A
   solution: '设绳索长为x尺，竿长为y尺，
 
@@ -217,7 +270,13 @@ questions:
 
     [图]
 
-    A.①②B.①③C.②③D.①②③'
+    A.①②
+
+    B.①③
+
+    C.②③
+
+    D.①②③'
   answer: D
   solution: '解：①当货车开始进入隧道时y逐渐变大，当货车完全进入隧道，由于隧道长大于货车长，此时y不变且最大，当货车开始离开隧道时y逐渐变小．故①正确；
 
@@ -234,8 +293,12 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-fengtai-er-fig08.png
-  - figures/2023-fengtai-er-fig09.png
+  - path: figures/2023-fengtai-er-fig08.png
+    width_mm: 137.6
+    height_mm: 32.3
+  - path: figures/2023-fengtai-er-fig09.png
+    width_mm: 54.5
+    height_mm: 31.5
 - id: 9
   type: 填空
   score: 2
@@ -317,7 +380,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-fengtai-er-fig10.png
+  - path: figures/2023-fengtai-er-fig10.png
+    width_mm: 45.0
+    height_mm: 46.3
 - id: 13
   type: 填空
   score: 2
@@ -354,8 +419,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-fengtai-er-fig11.png
-  - figures/2023-fengtai-er-fig12.png
+  - path: figures/2023-fengtai-er-fig11.png
+    width_mm: 43.7
+    height_mm: 36.2
 - id: 14
   type: 填空
   score: 2
@@ -376,7 +442,7 @@ questions:
   question: '下图是某书店2022年7月至12月教育类图书销售额占当月全部图书销售额的百分比折线统计图．小华认为，8月份教育类图书销售额比7月份减少了．他的结论___________（填“正确”或“错误”），理由是_______．
 
     [图]'
-  answer: ①.错误②.没有提供7月和8月份教育类图书销售额的数据
+  answer: ①.错误 ②.没有提供7月和8月份教育类图书销售额的数据
   solution: '解：只知道7月和8月份教育类图书销售额的占比，不知道7月和8月份教育类图书销售额，无法比较8月份教育类图书销售额比7月份是增加还是减少了．
 
     故答案为：错误；没有提供7月和8月份教育类图书销售额的数据．'
@@ -389,38 +455,24 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-fengtai-er-fig13.png
+  - path: figures/2023-fengtai-er-fig13.png
+    width_mm: 79.6
+    height_mm: 75.9
 - id: 16
   type: 填空
   score: 2
   question: '甲地组织20辆汽车装运食品、药品、生活用品三种物资共100吨到乙地．每辆汽车可装运物资的运载量和每吨所需运费如下表．
 
-    物资种类
+    | 物资种类 | 食品 | 药品 | 生活用品 |
 
-    食品
+    | --- | --- | --- | --- |
 
-    药品
+    | 每辆汽车运载量 / 吨 | 6 | 5 | 4 |
 
-    生活用品
-
-    每辆汽车运载量/吨
-
-    6
-
-    5
-
-    4
-
-    每吨所需运费/元
-
-    120
-
-    160
-
-    100
+    | 每吨所需运费 / 元 | 120 | 160 | 100 |
 
     如果20辆汽车都要装运，每辆汽车只能装运同一种物资且必须装满，每种物资至少装运1辆车，那么总运费最少的车辆安排方案为：装运食品、药品、生活用品的汽车辆数依次是_______，此时总运费为____元．'
-  answer: ①.$9,2,9$②.$11680$
+  answer: ①.$9,2,9$ ②.$11680$
   solution: '解：设x辆汽车装运食品，y辆汽车装运药品，则装运生活用品的车辆数为$(20-x-y)$，
 
     由题意，得：$6x+5y+4(20-x-y)=100$，
@@ -514,49 +566,14 @@ questions:
   score: 5
   question: '下面是过直线外一点，作已知直线的平行线的两种方法．请选择一种作法，使用直尺和圆规，补全图形（保留作图痕迹），并完成证明．
 
-    已知：如图，直线l及直线l外一点P．
+    | 已知：如图，直线 l 及直线 l 外一点 P ． 求作：直线 $\overline{PQ}$ ，使得 $PQ \parallel l$ ． | [图] |
 
-    求作：直线$\overline{PQ}$，使得$PQ \parallel l$．
+    | --- | --- |
 
-    [图]
+    | 作法一：如图， [图] ① 在直线 l 上取一点 A ，作射线 PA ，以点 A 为圆心， AP 长为半径画弧，交 PA 的延长线于点 B ； ② 在直线 l 上取一点 C （不与点 A 重合），作射线 BC ，以点 C 为圆心， CB 长为半径画弧，交 BC 的延长线于点 Q ； ③ 作直线 PQ ，所以直线 $\overline{PQ}$ 就是所求作的直线． | 作法二：如图， [图]
+    ① 在直线 l 上取两点 A ， B ，连接 AP ； ② 分别以点 P ，点 B 为圆心， AB ， AP 的长为半径画弧，两弧在 l 上方交于点 Q ； ③ 作直线 $\overline{PQ}$ ． 所以直线 $\overline{PQ}$ 就是所求作的直线． |
 
-    作法一：如图，
-
-    [图]
-
-    ①在直线l上取一点A，作射线PA，以点A为圆心，AP长为半径画弧，交PA的延长线于点B；
-
-    ②在直线l上取一点C（不与点A重合），作射线BC，以点C为圆心，CB长为半径画弧，交BC的延长线于点Q；
-
-    ③作直线PQ，所以直线$\overline{PQ}$就是所求作的直线．
-
-    作法二：如图，
-
-    [图]
-
-    ①在直线l上取两点A，B，连接AP；
-
-    ②分别以点P，点B为圆心，AB，AP的长为半径画弧，两弧在l上方交于点Q；
-
-    ③作直线$\overline{PQ}$．
-
-    所以直线$\overline{PQ}$就是所求作的直线．
-
-    证明：∵$AB =$________，$BC =$__________，
-
-    ∴$PQ \parallel l$（）
-
-    （填推理的依据）
-
-    证明：连接BQ，
-
-    ∵$AP =$________，$AB =$__________，
-
-    ∴四边形$APQB$是平行四边形（）（填推理的依据）
-
-    ∴$PQ \parallel l$（）
-
-    （填推理的依据）'
+    | 证明：∵ $AB =$ ________ ， $BC =$ __________ ， ∴ $PQ \parallel l$ （ ） （填推理的依据） | 证明：连接 BQ ， ∵ $AP =$ ________ ， $AB =$ __________ ， ∴ 四边形 $APQB$ 是平行四边形（ ）（填推理的依据） ∴ $PQ \parallel l$ （ ） （填推理的依据） |'
   answer: 尺规作图见解析；AP，cQ，三角形的中位线定理，BQ，$\overline{PQ}$，两组对边分别相等的四边形是平行四边形，平行四边形的对边平行
   solution: '作法一：如图
 
@@ -592,13 +609,6 @@ questions:
   - L1
   - L2
   - L3
-  figures:
-  - figures/2023-fengtai-er-fig14.png
-  - figures/2023-fengtai-er-fig15.png
-  - figures/2023-fengtai-er-fig16.png
-  - figures/2023-fengtai-er-fig17.png
-  - figures/2023-fengtai-er-fig18.png
-  - figures/2023-fengtai-er-fig19.png
 - id: 20
   type: 解答
   score: 5
@@ -723,8 +733,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-fengtai-er-fig20.png
-  - figures/2023-fengtai-er-fig21.png
+  - path: figures/2023-fengtai-er-fig17.png
+    width_mm: 37.8
+    height_mm: 41.8
 - id: 22
   type: 解答
   score: 5
@@ -734,101 +745,23 @@ questions:
 
     a．两种花生仁的长轴长度统计表：
 
-    花生仁长轴长度（mm）
+    | 花生仁长轴长度（ mm ） | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 |
 
-    12
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
-    13
+    | A 品种花生仁粒数 | 5 | 10 | 6 | 7 | 2 | 0 | 0 | 0 | 0 | 0 |
 
-    14
-
-    15
-
-    16
-
-    17
-
-    18
-
-    19
-
-    20
-
-    21
-
-    A品种花生仁粒数
-
-    5
-
-    10
-
-    6
-
-    7
-
-    2
-
-    0
-
-    0
-
-    0
-
-    0
-
-    0
-
-    B品种花生仁粒数
-
-    0
-
-    0
-
-    2
-
-    3
-
-    6
-
-    4
-
-    5
-
-    4
-
-    4
-
-    2
+    | B 品种花生仁粒数 | 0 | 0 | 2 | 3 | 6 | 4 | 5 | 4 | 4 | 2 |
 
     b.两种花生仁的长轴长度的平均数、中位数、众数、方差如下：
 
-    平均数
+    |  | 平均数 | 中位数 | 众数 | 方差 |
 
-    中位数
+    | --- | --- | --- | --- | --- |
 
-    众数
+    | A 品种花生仁 | a | 13.5 | c | 1.4 |
 
-    方差
-
-    A品种花生仁
-
-    a
-
-    13.5
-
-    c
-
-    1.4
-
-    B品种花生仁
-
-    17.5
-
-    b
-
-    16
-
-    3.9
+    | B 品种花生仁 | 17.5 | b | 16 | 3.9 |
 
     根据以上信息，回答下列问题：
 
@@ -841,7 +774,7 @@ questions:
     （2）写出a，b，c的值；
 
     （3）学校食堂准备从A，B两个品种的花生仁中选购一批做配菜食材，根据菜品质量要求，花生仁大小要均匀，那么兴趣小组应向食堂推荐选购_____（填“A”或“B”）品种花生仁，理由是_______________________'
-  answer: （1）②（2）$a=13.7$，$b=17.5$，$c = 13$ （3）A，A的方差小于B的方差．
+  answer: （1）② （2）$a=13.7$，$b=17.5$，$c = 13$ （3）A，A的方差小于B的方差．
   solution: '【小问1详解】
 
     解：抽样时应当尽量避免主观因素的影响，则②符合题意．
@@ -874,7 +807,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-fengtai-er-fig22.png
+  - path: figures/2023-fengtai-er-fig19.png
+    width_mm: 36.5
+    height_mm: 29.9
 - id: 23
   type: 解答
   score: 6
@@ -976,7 +911,7 @@ questions:
 
     ∴CE是$\odot\odot$的切线；
 
-    [图]【小问2详解】
+    [图] 【小问2详解】
 
     解：连接OC，
 
@@ -1006,9 +941,7 @@ questions:
 
     ∵$AC = 5$，
 
-    ∴$OF = 3$，$OD=\frac{5}{2}$，
-
-    '
+    ∴$OF = 3$，$OD=\frac{5}{2}$，'
   knowledge_points:
   - 平行线
   - 切线
@@ -1018,9 +951,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-fengtai-er-fig23.png
-  - figures/2023-fengtai-er-fig24.png
-  - figures/2023-fengtai-er-fig25.png
+  - path: figures/2023-fengtai-er-fig20.png
+    width_mm: 47.9
+    height_mm: 34.7
 - id: 25
   type: 解答
   score: 6
@@ -1038,45 +971,11 @@ questions:
 
     列出S与a的几组对应值：
 
-    $a / m$
+    | $a / m$ | … | 0.5 | 1.0 | 1.5 | 2.0 | 2.5 | 3.0 | 3.5 | … |
 
-    …
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
-    0.5
-
-    1.0
-
-    1.5
-
-    2.0
-
-    2.5
-
-    3.0
-
-    3.5
-
-    …
-
-    $S / m^2$
-
-    …
-
-    0.49
-
-    0.94
-
-    1.29
-
-    1.50
-
-    1.52
-
-    1$[公式]$31
-
-    0.82
-
-    …
+    | $S / m^2$ | … | 0.49 | 0.94 | 1.29 | 1.50 | 1.52 | 1 $[公式]$ 31 | 0.82 | … |
 
     在下面的平面直角坐标系中，描出表中各组数值对应的点，并画出该函数的图象；
 
@@ -1085,7 +984,7 @@ questions:
     （3）解决问题：
 
     结合函数图象得到，FG的长约为__________m时，矩形面积最大．'
-  answer: （1）$\left(-\frac{1}{16}a^{2}+1\right)$；$S = -\frac{1}{16}a^3 + a$ （2）图象见解析（3）$2.3$
+  answer: （1）$\left(-\frac{1}{16}a^{2}+1\right)$；$S = -\frac{1}{16}a^3 + a$ （2）图象见解析 （3）$2.3$
   solution: '【小问1详解】
 
     ∵$FG = a$，
@@ -1104,7 +1003,7 @@ questions:
 
     正确画出该函数的图象，如下图：
 
-    [图]【小问3详解】
+    [图] 【小问3详解】
 
     结合函数图象可得到，$a \approx 2.3$时，S取得最大值，
 
@@ -1121,9 +1020,12 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-fengtai-er-fig26.png
-  - figures/2023-fengtai-er-fig27.png
-  - figures/2023-fengtai-er-fig28.png
+  - path: figures/2023-fengtai-er-fig23.png
+    width_mm: 111.4
+    height_mm: 60.9
+  - path: figures/2023-fengtai-er-fig24.png
+    width_mm: 74.6
+    height_mm: 45.0
 - id: 26
   type: 解答
   score: 6
@@ -1265,8 +1167,9 @@ questions:
   recommended_for:
   - L3
   figures:
-  - figures/2023-fengtai-er-fig29.png
-  - figures/2023-fengtai-er-fig30.png
+  - path: figures/2023-fengtai-er-fig26.png
+    width_mm: 54.0
+    height_mm: 40.2
 - id: 28
   type: 解答
   score: 7
@@ -1329,7 +1232,3 @@ questions:
   difficulty: 压轴
   recommended_for:
   - L3
-  figures:
-  - figures/2023-fengtai-er-fig31.png
-  - figures/2023-fengtai-er-fig32.png
-  - figures/2023-fengtai-er-fig33.png

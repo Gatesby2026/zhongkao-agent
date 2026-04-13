@@ -21,7 +21,13 @@ questions:
 
     [图]
 
-    A.圆柱B.圆锥C.三棱柱D.三棱锥'
+    A.圆柱
+
+    B.圆锥
+
+    C.三棱柱
+
+    D.三棱锥'
   answer: B
   solution: '解：根据几何体的三视图即可知道几何体是圆锥．
 
@@ -36,13 +42,21 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-shunyi-yi-fig02.png
+  - path: figures/2025-shunyi-yi-fig02.png
+    width_mm: 32.3
+    height_mm: 33.1
 - id: 2
   type: 选择
   score: 2
   question: '每一个外角都是$72^\circ$的正多边形为（）
 
-    A.正三角形B.正四边形C.正五边形D.正六边形'
+    A.正三角形
+
+    B.正四边形
+
+    C.正五边形
+
+    D.正六边形'
   answer: C
   solution: '解：$360^\circ \div 72^\circ = 5$（边），
 
@@ -65,9 +79,13 @@ questions:
 
     [图]
 
-    A$[公式]$$|a| > 3$B.$a > -2$
+    A$[公式]$$|a| > 3$
 
-    C.$-2 < a - 1 < -1$D.$-2 < a + 1 < -1$'
+    B.$a > -2$
+
+    C.$-2 < a - 1 < -1$
+
+    D.$-2 < a + 1 < -1$'
   answer: D
   solution: '由数轴得，$-3 < a < -2$，
 
@@ -85,13 +103,21 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-shunyi-yi-fig03.png
+  - path: figures/2025-shunyi-yi-fig03.png
+    width_mm: 72.2
+    height_mm: 10.8
 - id: 4
   type: 选择
   score: 2
   question: '若关于x的一元二次方程$2x^2 - x + m = 0$有两个相等的实数根，则m的值是（　　）
 
-    A.$-\frac{1}{8}$B.$\frac{1}{8}$C.$-8$D.$8$'
+    A.$-\frac{1}{8}$
+
+    B.$\frac{1}{8}$
+
+    C.$-8$
+
+    D.$8$'
   answer: B
   solution: '解：∵关于x的一元二次方程$2x^2 - x + m = 0$有两个相等的实数根，
 
@@ -113,11 +139,15 @@ questions:
 - id: 5
   type: 选择
   score: 2
-  question: '目前，中国国产GPU的运算性能在国际上已经具备较强的竞争力．某型号国产GPU的运算能力高达320
+  question: '目前，中国国产GPU的运算性能在国际上已经具备较强的竞争力．某型号国产GPU的运算能力高达320 TFlops，TFlops是衡量计算机性能的一个重要单位，$1TFlops=10^{12}Flops$．将这种型号国产GPU的运算能力表示为$m \mathrm{Flops}$，则m的值为（）
 
-    TFlops，TFlops是衡量计算机性能的一个重要单位，$1TFlops=10^{12}Flops$．将这种型号国产GPU的运算能力表示为$m \mathrm{Flops}$，则m的值为（）
+    A.$3.2\times10^{13}$
 
-    A.$3.2\times10^{13}$B.$3.2\times10^{14}$C.$3.2\times10^{15}$D.$3.2\times10^{16}$'
+    B.$3.2\times10^{14}$
+
+    C.$3.2\times10^{15}$
+
+    D.$3.2\times10^{16}$'
   answer: B
   solution: '解：$320\mathrm{T}\mathrm{F}\mathrm{l}\mathrm{o}\mathrm{p}\mathrm{s}=320\times10^{12}=3.2\times10^{14}\ (\mathrm{F}\mathrm{l}\mathrm{o}\mathrm{p}\mathrm{s})$，
 
@@ -138,25 +168,23 @@ questions:
 
     [图]
 
-    A.$\frac{1}{4}$B.$\frac{1}{3}$C.$\frac{1}{2}$D.$\frac{3}{4}$'
+    A.$\frac{1}{4}$
+
+    B.$\frac{1}{3}$
+
+    C.$\frac{1}{2}$
+
+    D.$\frac{3}{4}$'
   answer: C
   solution: '解∶将这两张卡片分别记为A，B，列表如下：
 
-    A
+    |  | A | B |
 
-    B
+    | --- | --- | --- |
 
-    A
+    | A | $\left(A_{\cdot}A\right)$ | $\left(A,B\right)$ |
 
-    $\left(A_{\cdot}A\right)$
-
-    $\left(A,B\right)$
-
-    B
-
-    $\left(B,\mathcal{A}\right)$
-
-    $\left(B,\mathcal{B}\right)$
+    | B | $\left(B,\mathcal{A}\right)$ | $\left(B,\mathcal{B}\right)$ |
 
     共有4种等可能的结果，其中两次抽取的卡片正面相同的结果有2种，
 
@@ -182,19 +210,17 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-shunyi-yi-fig04.png
+  - path: figures/2025-shunyi-yi-fig04.png
+    width_mm: 79.1
+    height_mm: 45.8
 - id: 7
   type: 选择
   score: 2
   question: '下面是“作已知角的平分线”的尺规作图方法．
 
-    （1）如图，以点O为圆心，任意长为半径作弧，分别交$OA, OB$于点$C, D$；
+    | （ 1 ）如图，以点 O 为圆心，任意长为半径作弧，分别交 $OA, OB$ 于点 $C, D$ ； [图] （ 2 ）分别以点 $C, D$ 为圆心，大于 $\frac{1}{2}CD$ 长为半径作弧，两弧相交于点 P ； （ 3 ）作射线 OP ，则射线 OP 就是所求作的射线． |
 
-    [图]
-
-    （2）分别以点$C, D$为圆心，大于$\frac{1}{2}CD$长为半径作弧，两弧相交于点P；
-
-    （3）作射线OP，则射线OP就是所求作的射线．
+    | --- |
 
     上述方法通过判定$\triangle COP\cong\triangle DOP$得到$\angle AOP = \angle BOP$，从而得到OP是$\angle AOB$的角平分线，其中判定$\triangle COP\cong\triangle DOP$的依据是（）
 
@@ -248,8 +274,6 @@ questions:
   - L1
   - L2
   - L3
-  figures:
-  - figures/2025-shunyi-yi-fig05.png
 - id: 8
   type: 选择
   score: 2
@@ -258,7 +282,13 @@ questions:
 
     [图]
 
-    A$[公式]$①③B.①④C.②③D.②④'
+    A$[公式]$①③
+
+    B.①④
+
+    C.②③
+
+    D.②④'
   answer: A
   solution: '解：$\begin{array}{c}
 
@@ -324,8 +354,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-shunyi-yi-fig06.png
-  - figures/2025-shunyi-yi-fig07.png
+  - path: figures/2025-shunyi-yi-fig05.png
+    width_mm: 63.0
+    height_mm: 40.2
 - id: 9
   type: 填空
   score: 2
@@ -419,35 +450,19 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-shunyi-yi-fig08.png
+  - path: figures/2025-shunyi-yi-fig07.png
+    width_mm: 41.5
+    height_mm: 34.1
 - id: 13
   type: 填空
   score: 2
   question: '某图书馆准备购进5000本图书，了解了某段时间内借阅的500本图书的种类，数据如表：
 
-    图书种类
+    | 图书种类 | 文学 | 人文社科 | 自然科学 | 工程技术 | 艺术 |
 
-    文学
+    | --- | --- | --- | --- | --- | --- |
 
-    人文社科
-
-    自然科学
-
-    工程技术
-
-    艺术
-
-    借阅数量/本
-
-    55
-
-    101
-
-    168
-
-    153
-
-    23
+    | 借阅数量 / 本 | 55 | 101 | 168 | 153 | 23 |
 
     根据以上数据，估计该图书馆购进图书种类需求最多的图书的数量为________本．'
   answer: '1680'
@@ -506,7 +521,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-shunyi-yi-fig09.png
+  - path: figures/2025-shunyi-yi-fig08.png
+    width_mm: 43.7
+    height_mm: 42.1
 - id: 15
   type: 填空
   score: 2
@@ -544,8 +561,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-shunyi-yi-fig10.png
-  - figures/2025-shunyi-yi-fig11.png
+  - path: figures/2025-shunyi-yi-fig09.png
+    width_mm: 39.7
+    height_mm: 44.4
 - id: 16
   type: 填空
   score: 2
@@ -561,36 +579,20 @@ questions:
 
     ④每个产品的两道工序所需时间如下表所示：
 
-    产品
+    | 产品 | A | B | C |
 
-    A
+    | --- | --- | --- | --- |
 
-    B
+    | 生产时间 / 分钟 | 2 | 7 | 6 |
 
-    C
-
-    生产时间/分钟
-
-    2
-
-    7
-
-    6
-
-    冷却时间/分钟
-
-    2
-
-    10
-
-    3
+    | 冷却时间 / 分钟 | 2 | 10 | 3 |
 
     已知A，B，C三种产品各生产一个．
 
     （1）若按照“$A-B-C$”的顺序生产，并完成冷却，那么至少需要________分钟；
 
     （2）若使完成A，B，C三个产品的加工总时间最短，则应按照________的顺序生产．'
-  answer: ①.19②.$B-C-A$
+  answer: ①.19 ②.$B-C-A$
   solution: '解：（1）由题意得：生产产品的同时可以冷却其他多个产品，
 
     $\begin{array}{c}
@@ -793,28 +795,19 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-shunyi-yi-fig12.png
-  - figures/2025-shunyi-yi-fig13.png
+  - path: figures/2025-shunyi-yi-fig11.png
+    width_mm: 40.7
+    height_mm: 25.1
 - id: 21
   type: 解答
   score: 5
   question: '2016年1月1日，我国开始实行《环境空气质量标准》$\left(GB3095-2012\right)$，首次将$PM2.5$（颗粒物：粒径小于等于$2.5\mu m$）纳入监测范围．2024年某科研团队根据研究成果，建议今后将$PM2.5$限值标准（最大允许浓度）继续降低．具体数据如表：
 
-    年份
+    | 年份 | 2016 | 2025 | 2035 |
 
-    2016
+    | --- | --- | --- | --- |
 
-    2025
-
-    2035
-
-    $PM2.5$限值标准（单位：$\mathrm{ug}/\mathrm{m}^{3}$）
-
-    35
-
-    25
-
-    a
+    | $PM2.5$ 限值标准（单位： $\mathrm{ug}/\mathrm{m}^{3}$ ） | 35 | 25 | a |
 
     2035年比2025年的限值标准的降低率是2025年比2016年的限值标准的降低率的$1.4$倍，求2035年$PM2.5$限值标准a．'
   answer: $a = 15$
@@ -884,9 +877,7 @@ questions:
 
     a．专业评委打分：
 
-    84
-
-    86  88  90  90  90  91  91  92  95  97  98
+    84  86  88  90  90  90  91  91  92  95  97  98
 
     b．群众评委打分的频数分布直方图如下（数据分6组：第1组$82 \leq x < 85$，第2组$85\leq x<88$，第3组$88 \leq x < 91$，第4组$91 \leq x < 94$，第5组$94 \leq x < 97$，第6组$97 \leq x \leq 100$）：
 
@@ -894,27 +885,13 @@ questions:
 
     c．评委打分的平均数、中位数、众数如下：
 
-    平均数
+    |  | 平均数 | 中位数 | 众数 |
 
-    中位数
+    | --- | --- | --- | --- |
 
-    众数
+    | 专业评委 | 91 | m | n |
 
-    专业评委
-
-    91
-
-    m
-
-    n
-
-    群众评委
-
-    $90,2$
-
-    p
-
-    91
+    | 群众评委 | $90,2$ | p | 91 |
 
     根据以上信息，回答下列问题：
 
@@ -982,7 +959,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-shunyi-yi-fig14.png
+  - path: figures/2025-shunyi-yi-fig13.png
+    width_mm: 68.8
+    height_mm: 60.9
 - id: 24
   type: 解答
   score: 6
@@ -1070,9 +1049,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-shunyi-yi-fig15.png
-  - figures/2025-shunyi-yi-fig16.png
-  - figures/2025-shunyi-yi-fig17.png
+  - path: figures/2025-shunyi-yi-fig14.png
+    width_mm: 43.9
+    height_mm: 46.8
 - id: 25
   type: 解答
   score: 6
@@ -1080,59 +1059,13 @@ questions:
 
     下面给出了学习时的正确率和学习后评估测试的正确率，部分数据如下：
 
-    学习次数
+    | 学习次数 | 1 | 3 | 5 | 7 | 9 | 10 | 11 | 13 |
 
-    1
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
-    3
+    | 学习时的正确率 | 0.530 | 0.670 | 0.750 | 0.800 | 0.850 | 0.870 | 0.890 | 0.905 |
 
-    5
-
-    7
-
-    9
-
-    10
-
-    11
-
-    13
-
-    学习时的正确率
-
-    0.530
-
-    0.670
-
-    0.750
-
-    0.800
-
-    0.850
-
-    0.870
-
-    0.890
-
-    0.905
-
-    学习后评估测试的正确率
-
-    0.605
-
-    0.710
-
-    0.755
-
-    0.780
-
-    0.795
-
-    0.800
-
-    0.800
-
-    0.800
+    | 学习后评估测试的正确率 | 0.605 | 0.710 | 0.755 | 0.780 | 0.795 | 0.800 | 0.800 | 0.800 |
 
     （1）根据表格数据，在平面直角坐标系中，以学习次数为横坐标，以学习后评估测试的正确率为纵坐标，已经绘制了相应的点，并用虚线表达变化趋势．请你以学习次数为横坐标，以学习时的正确率为纵坐标，绘制相应的点，并用虚线表达变化趋势；
 
@@ -1145,7 +1078,7 @@ questions:
     ②至少经过_______次学习，学习后评估测试的正确率低于学习时的正确率；
 
     ③当学习后评估测试的正确率达到稳定时，用该模型识别100幅图像，估计_______幅能被正确识别．'
-  answer: （1）见解析（2）①0.100；②6；③80
+  answer: （1）见解析 （2）①0.100；②6；③80
   solution: '【小问1详解】
 
     解：如图所示：
@@ -1173,8 +1106,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-shunyi-yi-fig18.png
-  - figures/2025-shunyi-yi-fig19.png
+  - path: figures/2025-shunyi-yi-fig17.png
+    width_mm: 104.5
+    height_mm: 54.2
 - id: 26
   type: 解答
   score: 6
@@ -1237,8 +1171,6 @@ questions:
   difficulty: 压轴
   recommended_for:
   - L3
-  figures:
-  - figures/2025-shunyi-yi-fig20.png
 - id: 27
   type: 解答
   score: 7
@@ -1301,8 +1233,9 @@ questions:
   recommended_for:
   - L3
   figures:
-  - figures/2025-shunyi-yi-fig21.png
-  - figures/2025-shunyi-yi-fig22.png
+  - path: figures/2025-shunyi-yi-fig20.png
+    width_mm: 78.6
+    height_mm: 38.9
 - id: 28
   type: 解答
   score: 7
@@ -1386,8 +1319,6 @@ questions:
   recommended_for:
   - L3
   figures:
-  - figures/2025-shunyi-yi-fig23.png
-  - figures/2025-shunyi-yi-fig24.png
-  - figures/2025-shunyi-yi-fig25.png
-  - figures/2025-shunyi-yi-fig26.png
-  - figures/2025-shunyi-yi-fig27.png
+  - path: figures/2025-shunyi-yi-fig22.png
+    width_mm: 56.6
+    height_mm: 57.7

@@ -17,13 +17,17 @@ questions:
 - id: 1
   type: 选择
   score: 2
-  question: '下图是某几何体的三视图，该几何体是（
-
-    ）
+  question: '下图是某几何体的三视图，该几何体是（    ）
 
     [图]
 
-    A.圆柱B.圆锥C.长方体D.三棱柱'
+    A.圆柱
+
+    B.圆锥
+
+    C.长方体
+
+    D.三棱柱'
   answer: A
   solution: '根据主视图和左视图为矩形，则几何体为柱体；
 
@@ -40,13 +44,21 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-yanshan-er-fig01.png
+  - path: figures/2023-yanshan-er-fig01.png
+    width_mm: 28.3
+    height_mm: 24.1
 - id: 2
   type: 选择
   score: 2
   question: '我国自主研发的“北斗系统”在卫星导航、通信、遥感等多项核心技术方面取得了突破，已经在国民经济和国防建设等多个领域得到了广泛的应用．2023年2月，北斗终端数量在交通运输营运车辆领域超过8000000台．将8000000用科学记数法表示应为（）
 
-    A.$0.8\times10^{6}$B.$8\times10^{6}$C.$8\times10^{7}$D.$80\times10^{5}$'
+    A.$0.8\times10^{6}$
+
+    B.$8\times10^{6}$
+
+    C.$8\times10^{7}$
+
+    D.$80\times10^{5}$'
   answer: B
   solution: '解：8000000用科学记数法表示应为$8\times10^{6}$．
 
@@ -68,7 +80,13 @@ questions:
 
     [图]
 
-    A.2B.4C.6D.8'
+    A.2
+
+    B.4
+
+    C.6
+
+    D.8'
   answer: C
   solution: '解：由图可知，
 
@@ -86,7 +104,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-yanshan-er-fig02.png
+  - path: figures/2023-yanshan-er-fig02.png
+    width_mm: 25.9
+    height_mm: 25.9
 - id: 4
   type: 选择
   score: 2
@@ -94,7 +114,13 @@ questions:
 
     [图]
 
-    A.15°B.30°C.45°D.75°'
+    A.15°
+
+    B.30°
+
+    C.45°
+
+    D.75°'
   answer: A
   solution: '解：如图，
 
@@ -121,8 +147,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-yanshan-er-fig03.png
-  - figures/2023-yanshan-er-fig04.png
+  - path: figures/2023-yanshan-er-fig03.png
+    width_mm: 39.2
+    height_mm: 23.8
 - id: 5
   type: 选择
   score: 2
@@ -130,7 +157,13 @@ questions:
 
     [图]
 
-    A.$\left| a \right| < \left| b \right|$B.$ac > 0$C.$b+c>0$D.$d-a>0$'
+    A.$\left| a \right| < \left| b \right|$
+
+    B.$ac > 0$
+
+    C.$b+c>0$
+
+    D.$d-a>0$'
   answer: D
   solution: '解：$a < b < 0 < c < d$
 
@@ -177,13 +210,21 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-yanshan-er-fig05.png
+  - path: figures/2023-yanshan-er-fig05.png
+    width_mm: 60.6
+    height_mm: 13.0
 - id: 6
   type: 选择
   score: 2
   question: '一个不透明的袋子中装有红、黄小球各两个，除颜色外四个小球无其他差别，从中随机同时摸出两个球，那么两个球的颜色相同的概率是（）
 
-    A.$\frac{2}{3}$B.$\frac{1}{2}$C.$\frac{1}{3}$D.$\frac{1}{4}$'
+    A.$\frac{2}{3}$
+
+    B.$\frac{1}{2}$
+
+    C.$\frac{1}{3}$
+
+    D.$\frac{1}{4}$'
   answer: C
   solution: '解：用$A,B$表示两个红球，$C,D$表示两个黄球，随机从中同时摸出两个球，共有：$(A,B),(A,C),(A,D),(B,C),(B,D),(C,D)$$6$种等可能的结果，其中两个球颜色相同的有2种结果，则两个球的颜色相同的概率$P = \frac{2}{6} = \frac{1}{3}$．
 
@@ -201,7 +242,13 @@ questions:
   score: 2
   question: '如果$a-b=1$，那么代数式$\left(\frac{b^{2}}{a}-a\right)\cdot\frac{2a}{a+b}$的值为（）．
 
-    A.2B.1C.$-1$D.$-2$'
+    A.2
+
+    B.1
+
+    C.$-1$
+
+    D.$-2$'
   answer: D
   solution: '解：$\left(\frac{b^{2}}{a}-a\right)\cdot\frac{2a}{a+b}$，
 
@@ -233,9 +280,13 @@ questions:
 
     [图]
 
-    A.一次函数关系，二次函数关系B.一次函数关系，反比例函数关系
+    A.一次函数关系，二次函数关系
 
-    C.二次函数关系，一次函数关系D.反比例函数关系，二次函数关系'
+    B.一次函数关系，反比例函数关系
+
+    C.二次函数关系，一次函数关系
+
+    D.反比例函数关系，二次函数关系'
   answer: A
   solution: '解：∵$\angle B=90^{\circ}, AB=BC$，
 
@@ -269,7 +320,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-yanshan-er-fig06.png
+  - path: figures/2023-yanshan-er-fig06.png
+    width_mm: 32.0
+    height_mm: 30.2
 - id: 9
   type: 填空
   score: 2
@@ -367,7 +420,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-yanshan-er-fig07.png
+  - path: figures/2023-yanshan-er-fig07.png
+    width_mm: 41.0
+    height_mm: 29.4
 - id: 13
   type: 填空
   score: 2
@@ -395,39 +450,19 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-yanshan-er-fig08.png
+  - path: figures/2023-yanshan-er-fig08.png
+    width_mm: 39.7
+    height_mm: 37.0
 - id: 14
   type: 填空
   score: 2
   question: '校运动会前夕，要选60名身高基本相同的女生组成表演方队，现从全校200名女生中随机抽取40人，了解了她们的身高情况，数据如下：
 
-    身高/cm
+    | 身高 /cm | 145-150 | 150-155 | 155-160 | 160-165 | 165-170 | 170-175 |
 
-    145-150
+    | --- | --- | --- | --- | --- | --- | --- |
 
-    150-155
-
-    155-160
-
-    160-165
-
-    165-170
-
-    170-175
-
-    人数/人
-
-    2
-
-    6
-
-    10
-
-    16
-
-    4
-
-    2
+    | 人数 / 人 | 2 | 6 | 10 | 16 | 4 | 2 |
 
     根据以上数据，估计入选表演方队的女生身高范围为________cm．'
   answer: $160-165$
@@ -508,7 +543,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-yanshan-er-fig09.png
+  - path: figures/2023-yanshan-er-fig09.png
+    width_mm: 70.1
+    height_mm: 59.0
 - id: 16
   type: 填空
   score: 2
@@ -517,7 +554,7 @@ questions:
     （1）若该旅游团一晚的住宿费用为750元，则他们租住了_______间三人间；
 
     （2）若该旅游团中共有7名男士，则租住一晚的住宿费用最少为________元．'
-  answer: ①.5②.790
+  answer: ①.5 ②.790
   solution: '解：（1）设该旅游团租住了x间双人间，y间三人间，
 
     根据题意得：$100x+130y=750$，
@@ -658,12 +695,12 @@ questions:
     ∴$AD \perp BC$于点D，
 
     即线段AD为$\triangle ABC$的边BC上的高．'
-  answer: （1）见解析（2）见解析
+  answer: （1）见解析 （2）见解析
   solution: '【小问1详解】
 
     解：使用直尺和圆规，补全图形，如图；
 
-    [图]【小问2详解】
+    [图] 【小问2详解】
 
     证明：连接$AM, AN, PM, PN$．
 
@@ -684,9 +721,12 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-yanshan-er-fig10.png
-  - figures/2023-yanshan-er-fig11.png
-  - figures/2023-yanshan-er-fig12.png
+  - path: figures/2023-yanshan-er-fig10.png
+    width_mm: 41.8
+    height_mm: 27.8
+  - path: figures/2023-yanshan-er-fig11.png
+    width_mm: 49.2
+    height_mm: 35.2
 - id: 20
   type: 解答
   score: 5
@@ -798,60 +838,21 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-yanshan-er-fig13.png
-  - figures/2023-yanshan-er-fig14.png
+  - path: figures/2023-yanshan-er-fig13.png
+    width_mm: 33.1
+    height_mm: 29.6
 - id: 22
   type: 解答
   score: 5
   question: '某蔬菜批发基地为指导2023年的番茄销售，对历年的市场行情和供求情况进行了调查统计，得到番茄的售价x(单位：元/千克)与相应需求量$y_1$(单位：吨)以及供给量$y_{2}$(单位：吨)的几组数据：
 
-    售价x/元/千克
+    | 售价 x / 元 / 千克 | … | 2 | 3 | 4 | 5 | 6 | … |
 
-    …
+    | --- | --- | --- | --- | --- | --- | --- | --- |
 
-    2
+    | 需求量 $y_1$ / 吨 | … | 9.5 | 8.875 | 8 | 6.875 | 5.5 | … |
 
-    3
-
-    4
-
-    5
-
-    6
-
-    …
-
-    需求量$y_1$/吨
-
-    …
-
-    9.5
-
-    8.875
-
-    8
-
-    6.875
-
-    5.5
-
-    …
-
-    供给量$y_{2}$/吨
-
-    …
-
-    1
-
-    2
-
-    3
-
-    4
-
-    5
-
-    …
+    | 供给量 $y_{2}$ / 吨 | … | 1 | 2 | 3 | 4 | 5 | … |
 
     （1）根据表中数据，供给量$y_{2}$与售价x之间满足函数关系(填“一次”、“二次”或“反比例”)，它的函数表达式为；需求量$y_1$与售价x之间近似满足函数关系$y_{1}=ax^{2}+c(a<0)$，它的函数表达式为．
 
@@ -860,7 +861,7 @@ questions:
     [图]
 
     （3）结合函数图象，解决问题：为使番茄的供需平衡(即供给量与需求量相等)，售价应定为元/千克．'
-  answer: （1）一次，$y_{2}=x-1$，$y_{1}=-\frac{1}{8}x^{2}+10$ （2）见解析（3）6.2
+  answer: （1）一次，$y_{2}=x-1$，$y_{1}=-\frac{1}{8}x^{2}+10$ （2）见解析 （3）6.2
   solution: '【小问1详解】
 
     由表中数据可知，供给量比售价少1，所以供给量$y_{2}$与售价x之间满足一次函数关系，它的函数表达式为$y_{2}=x-1$；
@@ -904,8 +905,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-yanshan-er-fig15.png
-  - figures/2023-yanshan-er-fig16.png
+  - path: figures/2023-yanshan-er-fig15.png
+    width_mm: 76.7
+    height_mm: 61.9
 - id: 23
   type: 解答
   score: 6
@@ -984,59 +986,23 @@ questions:
 
     b．两次竞赛学生的获奖情况如下：
 
-    奖项
+    | 奖项 竞赛 | 参与奖 | 优秀奖 | 卓越奖 |  |
 
-    竞赛
+    | --- | --- | --- | --- | --- |
 
-    参与奖
+    | 第一次竞赛 | 人数 | 8 | m | n |
 
-    优秀奖
+    | 平均分 | 73 | 85 | 95 |  |
 
-    卓越奖
+    | 第二次竞赛 | 人数 | 9 | 5 | 16 |
 
-    第一次竞赛
-
-    人数
-
-    8
-
-    m
-
-    n
-
-    平均分
-
-    73
-
-    85
-
-    95
-
-    第二次竞赛
-
-    人数
-
-    9
-
-    5
-
-    16
-
-    平均分
-
-    74
-
-    85
-
-    93
+    | 平均分 | 74 | 85 | 93 |  |
 
     (说明：成绩$90$，获卓越奖；$80\leq$成绩$<90$，获优秀奖；成绩$<80$，获参与奖)
 
     c．第二次竞赛获卓越奖的学生成绩如下：
 
-    90
-
-    90  91  91  91  91  92  93  93  94  94  94  95  95  96  98
+    90  90  91  91  91  91  92  93  93  94  94  94  95  95  96  98
 
     根据以上信息，回答下列问题:
 
@@ -1051,7 +1017,7 @@ questions:
     ②两次竞赛都获得卓越奖的有10人；
 
     ③第二次竞赛的平均成绩高于第一次竞赛的平均成绩．'
-  answer: （1）$m=12,n=10$（2）见解析 （3）①③
+  answer: （1）$m=12,n=10$ （2）见解析    （3）①③
   solution: '【小问1详解】
 
     解：根据竞赛成绩统计图，第一次竞赛成绩在$80\leq$成绩$<90$之间的有12人，成绩$90$的有10人
@@ -1087,8 +1053,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-yanshan-er-fig17.png
-  - figures/2023-yanshan-er-fig18.png
+  - path: figures/2023-yanshan-er-fig17.png
+    width_mm: 87.3
+    height_mm: 60.1
 - id: 25
   type: 解答
   score: 6
@@ -1175,9 +1142,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-yanshan-er-fig19.png
-  - figures/2023-yanshan-er-fig20.png
-  - figures/2023-yanshan-er-fig21.png
+  - path: figures/2023-yanshan-er-fig19.png
+    width_mm: 28.8
+    height_mm: 32.0
 - id: 26
   type: 解答
   score: 6
@@ -1318,8 +1285,9 @@ questions:
   recommended_for:
   - L3
   figures:
-  - figures/2023-yanshan-er-fig22.png
-  - figures/2023-yanshan-er-fig23.png
+  - path: figures/2023-yanshan-er-fig22.png
+    width_mm: 124.9
+    height_mm: 40.2
 - id: 28
   type: 解答
   score: 7
@@ -1391,10 +1359,6 @@ questions:
   recommended_for:
   - L3
   figures:
-  - figures/2023-yanshan-er-fig24.png
-  - figures/2023-yanshan-er-fig25.png
-  - figures/2023-yanshan-er-fig26.png
-  - figures/2023-yanshan-er-fig27.png
-  - figures/2023-yanshan-er-fig28.png
-  - figures/2023-yanshan-er-fig29.png
-  - figures/2023-yanshan-er-fig30.png
+  - path: figures/2023-yanshan-er-fig24.png
+    width_mm: 130.2
+    height_mm: 64.8

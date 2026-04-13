@@ -21,7 +21,13 @@ questions:
 
     [图]
 
-    A.球体B.圆锥C.棱柱D.圆柱'
+    A.球体
+
+    B.圆锥
+
+    C.棱柱
+
+    D.圆柱'
   answer: D
   solution: '解：由于主视图和左视图为长方形可得此几何体为柱体，
 
@@ -38,7 +44,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-dongcheng-yi-fig02.png
+  - path: figures/2025-dongcheng-yi-fig02.png
+    width_mm: 40.2
+    height_mm: 26.5
 - id: 2
   type: 选择
   score: 2
@@ -46,7 +54,13 @@ questions:
 
     [图]
 
-    A.$ab > 0$B.$a+b<0$C.$|a|<|b|$D.$a-b>0$'
+    A.$ab > 0$
+
+    B.$a+b<0$
+
+    C.$|a|<|b|$
+
+    D.$a-b>0$'
   answer: D
   solution: '解：由数轴得：$-2 < b < -1$，$2<a<3$，
 
@@ -69,17 +83,21 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-dongcheng-yi-fig03.png
+  - path: figures/2025-dongcheng-yi-fig03.png
+    width_mm: 78.6
+    height_mm: 11.9
 - id: 3
   type: 选择
   score: 2
-  question: '在全球人工智能应用领域，我国AI技术以迅猛的势头崛起．截至2025年2月5日，我国某款AI应用软件的全球下载量已突破40
+  question: '在全球人工智能应用领域，我国AI技术以迅猛的势头崛起．截至2025年2月5日，我国某款AI应用软件的全球下载量已突破40 000 000次．数据40 000 000用科学记数法表示为（）
 
-    000 000次．数据40
+    A.$4\times10^{8}$
 
-    000 000用科学记数法表示为（）
+    B.$4\times10^{7}$
 
-    A.$4\times10^{8}$B.$4\times10^{7}$C.$4\times10^{6}$D.$0.4\times10^{5}$'
+    C.$4\times10^{6}$
+
+    D.$0.4\times10^{5}$'
   answer: B
   solution: '解：40000000$=4\times10^{7}$．
 
@@ -100,7 +118,13 @@ questions:
 
     [图]
 
-    A.20°B.25°C.30°D.35°'
+    A.20°
+
+    B.25°
+
+    C.30°
+
+    D.35°'
   answer: A
   solution: '如图，过点B作BD//l，
 
@@ -131,16 +155,21 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-dongcheng-yi-fig04.png
-  - figures/2025-dongcheng-yi-fig05.png
+  - path: figures/2025-dongcheng-yi-fig04.png
+    width_mm: 41.8
+    height_mm: 30.7
 - id: 5
   type: 选择
   score: 2
-  question: '一个布袋内只装有1个黑球和2个白球，这些球除颜色不同外其余都相同，随机摸出一个球后放回搅匀，再随机摸出一个球，则两次摸出的球都是黑球的概率是(
+  question: '一个布袋内只装有1个黑球和2个白球，这些球除颜色不同外其余都相同，随机摸出一个球后放回搅匀，再随机摸出一个球，则两次摸出的球都是黑球的概率是(    )
 
-    )
+    A.$\frac{4}{9}$
 
-    A.$\frac{4}{9}$B.$\frac{1}{3}$C.$\frac{1}{6}$D.$\frac{1}{9}$'
+    B.$\frac{1}{3}$
+
+    C.$\frac{1}{6}$
+
+    D.$\frac{1}{9}$'
   answer: D
   solution: '解：列表如下
 
@@ -148,35 +177,15 @@ questions:
 
     故选：D．
 
-    黑
+    |  | 黑 | 白 1 | 白 2 |
 
-    白1
+    | --- | --- | --- | --- |
 
-    白2
+    | 黑 | （黑，黑） | （白 1 , 黑） | （白 2 ，黑） |
 
-    黑
+    | 白 1 | （黑，白 1 ） | （白 1 ，白 1 ） | （白 2 ，白 1 ） |
 
-    （黑，黑）
-
-    （白1,黑）
-
-    （白2，黑）
-
-    白1
-
-    （黑，白1）
-
-    （白1，白1）
-
-    （白2，白1）
-
-    白2
-
-    （黑，白2）
-
-    （白1，白2）
-
-    （白2，白2）'
+    | 白 2 | （黑，白 2 ） | （白 1 ，白 2 ） | （白 2 ，白 2 ） |'
   knowledge_points:
   - 概率
   module: statisticsAndProbability
@@ -191,7 +200,13 @@ questions:
   score: 2
   question: '已知关于x的一元二次方程$\log^{2}-2x+1=0$有两个不相等的实数根，则k的取值范围是（）
 
-    A.$k > -1$B.$k<1$C.$k<1$且$k \neq 0$D.$k > -1$且$k \neq 0$'
+    A.$k > -1$
+
+    B.$k<1$
+
+    C.$k<1$且$k \neq 0$
+
+    D.$k > -1$且$k \neq 0$'
   answer: C
   solution: '解：∵关于x的一元二次方程$\log^{2}-2x+1=0$有两个不相等的实数根，
 
@@ -226,9 +241,13 @@ questions:
 
     [图]
 
-    A.$\angle APQ=\angle B$B.$\angle BOP+\angle C=180^\circ$
+    A.$\angle APQ=\angle B$
 
-    C.$\triangle APQ$与$V_{ABC}$的相似比为$1:2$D.$\triangle ABC \sim \triangle APQ$'
+    B.$\angle BOP+\angle C=180^\circ$
+
+    C.$\triangle APQ$与$V_{ABC}$的相似比为$1:2$
+
+    D.$\triangle ABC \sim \triangle APQ$'
   answer: C
   solution: '解：由作图过程可得$\angle APQ=\angle B$，
 
@@ -296,7 +315,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-dongcheng-yi-fig06.png
+  - path: figures/2025-dongcheng-yi-fig06.png
+    width_mm: 32.8
+    height_mm: 31.0
 - id: 8
   type: 选择
   score: 2
@@ -308,7 +329,13 @@ questions:
 
     上述结论中，所有正确结论的序号是（）
 
-    A.①②B.②③C.①③D.①②③'
+    A.①②
+
+    B.②③
+
+    C.①③
+
+    D.①②③'
   answer: D
   solution: '解：①连接$AB''$，如图所示：
 
@@ -372,8 +399,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-dongcheng-yi-fig07.png
-  - figures/2025-dongcheng-yi-fig08.png
+  - path: figures/2025-dongcheng-yi-fig07.png
+    width_mm: 33.9
+    height_mm: 32.8
 - id: 9
   type: 填空
   score: 2
@@ -489,7 +517,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-dongcheng-yi-fig09.png
+  - path: figures/2025-dongcheng-yi-fig09.png
+    width_mm: 59.8
+    height_mm: 47.6
 - id: 14
   type: 填空
   score: 2
@@ -564,7 +594,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-dongcheng-yi-fig10.png
+  - path: figures/2025-dongcheng-yi-fig10.png
+    width_mm: 38.6
+    height_mm: 17.2
 - id: 15
   type: 填空
   score: 2
@@ -599,8 +631,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-dongcheng-yi-fig11.png
-  - figures/2025-dongcheng-yi-fig12.png
+  - path: figures/2025-dongcheng-yi-fig11.png
+    width_mm: 40.5
+    height_mm: 30.2
 - id: 16
   type: 填空
   score: 2
@@ -611,7 +644,7 @@ questions:
     （1）若小明按照P→B→A→C→P的路线骑行，则小明骑行的距离为___________km；
 
     （2）小明骑行的最短距离为___________km．'
-  answer: ①.6.2②.5.2
+  answer: ①.6.2 ②.5.2
   solution: '（1）根据图示计算P→B→A→C→P的路线距离为$2+1.6+1.5+1.1=6.2$km；
 
     （2）找出所以可能路线计算：
@@ -637,7 +670,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-dongcheng-yi-fig13.png
+  - path: figures/2025-dongcheng-yi-fig13.png
+    width_mm: 55.6
+    height_mm: 48.4
 - id: 17
   type: 解答
   score: 5
@@ -744,7 +779,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-dongcheng-yi-fig14.png
+  - path: figures/2025-dongcheng-yi-fig14.png
+    width_mm: 40.2
+    height_mm: 39.7
 - id: 21
   type: 解答
   score: 5
@@ -755,7 +792,7 @@ questions:
     （1）求证：四边形$OABF$是平行四边形；
 
     （2）若$OA=BA=6$，求FG的长．'
-  answer: （1）见解析（2）$FG=2\sqrt{3}$
+  answer: （1）见解析 （2）$FG=2\sqrt{3}$
   solution: '【小问1详解】
 
     解：（1）证明：∵四边形$ABCD$是矩形，
@@ -815,7 +852,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-dongcheng-yi-fig15.png
+  - path: figures/2025-dongcheng-yi-fig15.png
+    width_mm: 34.4
+    height_mm: 46.0
 - id: 22
   type: 解答
   score: 5
@@ -882,23 +921,15 @@ questions:
 
     b．20名学生校外体育活动时长在$55\leqslant x<60$这一组的是：
 
-    55
-
-    56 56 56 56 56 58 59
+    55 56 56 56 56 56 58 59
 
     c．20名学生校外体育活动时长的平均数、中位数、众数如下：
 
-    平均数
+    | 平均数 | 中位数 | 众数 |
 
-    中位数
+    | --- | --- | --- |
 
-    众数
-
-    56.2
-
-    m
-
-    n
+    | 56.2 | m | n |
 
     （1）根据以上信息，回答下列问题：
 
@@ -908,53 +939,15 @@ questions:
 
     （2）甲、乙、丙三名学生参加为期5天的专项训练，每日活动时长记录如下（单位：分钟）：
 
-    学生
+    | 学生 | 第一天 | 第二天 | 第三天 | 第四天 | 第五天 |
 
-    第一天
+    | --- | --- | --- | --- | --- | --- |
 
-    第二天
+    | 甲 | 64 | 58 | 60 | 60 | 59 |
 
-    第三天
+    | 乙 | 60 | 63 | 60 | 60 | 57 |
 
-    第四天
-
-    第五天
-
-    甲
-
-    64
-
-    58
-
-    60
-
-    60
-
-    59
-
-    乙
-
-    60
-
-    63
-
-    60
-
-    60
-
-    57
-
-    丙
-
-    62
-
-    60
-
-    58
-
-    59
-
-    p
+    | 丙 | 62 | 60 | 58 | 59 | p |
 
     对每一名学生计算5天活动时长的平均数和方差．规定平均数较大的学生排序靠前；若平均数相同，则方差较小的学生排序靠前．若丙在甲、乙、丙三名学生中的排序居中，则这三名学生中排序最靠前的是________，表中p（p为整数）的值为________．'
   answer: （1）①见解析，②$56,56$ （2）甲，$61$
@@ -1002,7 +995,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-dongcheng-yi-fig16.png
+  - path: figures/2025-dongcheng-yi-fig16.png
+    width_mm: 59.3
+    height_mm: 41.3
 - id: 24
   type: 解答
   score: 6
@@ -1013,7 +1008,7 @@ questions:
     （1）求证：$\angle B = \angle E$；
 
     （2）若$\odot\odot$的半径为2，$OE = 6$，求BC的长．'
-  answer: （1）见解析（2）$BC = \frac{8\sqrt{2}}{3}$
+  answer: （1）见解析 （2）$BC = \frac{8\sqrt{2}}{3}$
   solution: '【小问1详解】
 
     证明：$\because OD \perp BC$，垂足为D，
@@ -1066,43 +1061,19 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-dongcheng-yi-fig18.png
+  - path: figures/2025-dongcheng-yi-fig18.png
+    width_mm: 43.9
+    height_mm: 28.6
 - id: 25
   type: 解答
   score: 6
   question: '对于纯电动汽车而言，在行驶过程中，实际剩余里程和仪表盘显示的剩余里程之间往往会存在一些差异．某团队对一款纯电动汽车的实际剩余里程和仪表盘显示的剩余里程进行了一次测试，从充满电的状态出发，直到电量耗尽，实际总行驶里程为280km，在这个过程中，记录了已行驶里程x（单位：km）与仪表盘显示的剩余里程$y_{1}$（单位：km）之间的对应关系，部分数据如下表所示：
 
-    $x/\mathrm{km}$
+    | $x/\mathrm{km}$ | 0 | 40 | 80 | 120 | 160 | 200 | 240 |
 
-    0
+    | --- | --- | --- | --- | --- | --- | --- | --- |
 
-    40
-
-    80
-
-    120
-
-    160
-
-    200
-
-    240
-
-    $y_{1}/\mathrm{km}$
-
-    301
-
-    265
-
-    222
-
-    176
-
-    138
-
-    109
-
-    26
+    | $y_{1}/\mathrm{km}$ | 301 | 265 | 222 | 176 | 138 | 109 | 26 |
 
     在这次测试中，记实际剩余里程为$y_{2}$（单位：km）．（注：实际剩余里程＝实际总行驶里程－已行驶里程）
 
@@ -1121,7 +1092,7 @@ questions:
     ②当已行驶里程约为________km时，仪表盘显示的剩余里程与实际剩余里程相等；
 
     ③当仪表盘显示的剩余里程为120km时，实际剩余里程约为________km．'
-  answer: （1）$280-x$（2）见解析 （3）①80，109；②232；③100
+  answer: （1）$280-x$ （2）见解析 （3）①80，109；②232；③100
   solution: '【小问1详解】
 
     解：剩余里程$y_{2}$与已行驶里程x之间的关系式为$y_{2}=280-x$．
@@ -1158,8 +1129,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-dongcheng-yi-fig19.png
-  - figures/2025-dongcheng-yi-fig20.png
+  - path: figures/2025-dongcheng-yi-fig19.png
+    width_mm: 145.5
+    height_mm: 48.9
 - id: 26
   type: 解答
   score: 6
@@ -1224,7 +1196,7 @@ questions:
     （2）求证：$ED = BD$；
 
     （3）用等式表示线段AE与BF的数量关系，并证明，'
-  answer: （1）见解析（2）见解析 （3）$BF=\frac{1}{2}AE$．理由见解析
+  answer: （1）见解析 （2）见解析 （3）$BF=\frac{1}{2}AE$．理由见解析
   solution: '【小问1详解】
 
     解：补全图形如图．
@@ -1297,9 +1269,9 @@ questions:
   recommended_for:
   - L3
   figures:
-  - figures/2025-dongcheng-yi-fig21.png
-  - figures/2025-dongcheng-yi-fig22.png
-  - figures/2025-dongcheng-yi-fig23.png
+  - path: figures/2025-dongcheng-yi-fig21.png
+    width_mm: 38.4
+    height_mm: 37.0
 - id: 28
   type: 解答
   score: 7
@@ -1358,5 +1330,6 @@ questions:
   recommended_for:
   - L3
   figures:
-  - figures/2025-dongcheng-yi-fig24.png
-  - figures/2025-dongcheng-yi-fig27.png
+  - path: figures/2025-dongcheng-yi-fig24.png
+    width_mm: 64.8
+    height_mm: 67.7

@@ -17,13 +17,15 @@ questions:
 - id: 1
   type: 选择
   score: 2
-  question: '2024年2月5日至25日，人民网连续第23次开展全国两会调查，调查围绕10个领域设置49个候选热词．本次调查广纳民情民意，吸引约6
+  question: '2024年2月5日至25日，人民网连续第23次开展全国两会调查，调查围绕10个领域设置49个候选热词．本次调查广纳民情民意，吸引约6 150 000人次参与，其中6 150 000用科学记数法可以表示为（）
 
-    150 000人次参与，其中6
+    A.$6.15\times10^{5}$
 
-    150 000用科学记数法可以表示为（）
+    B.$6.15\times10^{6}$
 
-    A.$6.15\times10^{5}$B.$6.15\times10^{6}$C.$0.615\times 10^{6}$D.$0.615\times10^{7}$'
+    C.$0.615\times 10^{6}$
+
+    D.$0.615\times10^{7}$'
   answer: B
   solution: '解：$6150000=6.15\times10^{6}$，
 
@@ -43,7 +45,13 @@ questions:
   score: 2
   question: '下列图形中是轴对称图形，但不是中心对称图形的是（）
 
-    A.[图]B.[图]C.[图]D.[图]'
+    A.[图]
+
+    B.[图]
+
+    C.[图]
+
+    D.[图]'
   answer: D
   solution: '解：A．该图既是轴对称图形，也是中心对称图形，故不符合题意；
 
@@ -66,10 +74,18 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-changping-er-fig02.png
-  - figures/2024-changping-er-fig03.png
-  - figures/2024-changping-er-fig04.png
-  - figures/2024-changping-er-fig05.png
+  - path: figures/2024-changping-er-fig02.png
+    width_mm: 15.6
+    height_mm: 15.1
+  - path: figures/2024-changping-er-fig03.png
+    width_mm: 20.6
+    height_mm: 10.6
+  - path: figures/2024-changping-er-fig04.png
+    width_mm: 21.4
+    height_mm: 12.4
+  - path: figures/2024-changping-er-fig05.png
+    width_mm: 16.1
+    height_mm: 14.8
 - id: 3
   type: 选择
   score: 2
@@ -77,7 +93,13 @@ questions:
 
     [图]
 
-    A.$165^\circ$B.$155^\circ$C.$105^\circ$D.$90^\circ$'
+    A.$165^\circ$
+
+    B.$155^\circ$
+
+    C.$105^\circ$
+
+    D.$90^\circ$'
   answer: C
   solution: '解：如图所示，$AB \parallel CD$，光线在空气中也平行，
 
@@ -102,8 +124,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-changping-er-fig06.png
-  - figures/2024-changping-er-fig07.png
+  - path: figures/2024-changping-er-fig06.png
+    width_mm: 31.8
+    height_mm: 32.8
 - id: 4
   type: 选择
   score: 2
@@ -123,7 +146,13 @@ questions:
 
     \end{tikzpicture}$
 
-    A.$b = \sqrt{7}$B.$a < -b$C.$\left| b \right| < -a$D.$a+b>0$'
+    A.$b = \sqrt{7}$
+
+    B.$a < -b$
+
+    C.$\left| b \right| < -a$
+
+    D.$a+b>0$'
   answer: D
   solution: '解：由数轴可知，$-3 < a < -2$，$b>3$，
 
@@ -158,7 +187,13 @@ questions:
   score: 2
   question: '正多边形的一个外角是$60^\circ$，那么这个正多边形是（）
 
-    A.正四边形B.正六边形C.正八边形D.正十边形'
+    A.正四边形
+
+    B.正六边形
+
+    C.正八边形
+
+    D.正十边形'
   answer: B
   solution: '解：∵正多边形的一个外角是$60^\circ$，
 
@@ -181,7 +216,13 @@ questions:
   score: 2
   question: '已知关于x的一元二次方程$x^{2}-2x+m=0$有两个实数根，则m的取值范围是（）
 
-    A.$m < 1$B.$m > 1$C.$m\geq1$D.$m\ 1$'
+    A.$m < 1$
+
+    B.$m > 1$
+
+    C.$m\geq1$
+
+    D.$m\ 1$'
   answer: C
   solution: '解：根据题意，得：$\Delta=(-2)^{2}-4\times1\times m=0$，
 
@@ -203,39 +244,25 @@ questions:
   score: 2
   question: '在不透明的袋子里有三个除颜色外其它都相同的小球，两个红球，一个黄球，从中随机同时取出两个小球，其中取到一个红球一个黄球的概率为（）
 
-    A.$\frac{2}{3}$B.$\frac{5}{6}$C.$\frac{1}{2}$D.1'
+    A.$\frac{2}{3}$
+
+    B.$\frac{5}{6}$
+
+    C.$\frac{1}{2}$
+
+    D.1'
   answer: A
   solution: '解：列表把所有等可能结果表示出来，两个红球分别表示为红1，红2，
 
-    红1
+    |  | 红 1 | 红 2 | 黄 |
 
-    红2
+    | --- | --- | --- | --- |
 
-    黄
+    | 红 1 | -------- | 红 1 ，红 2 | 红 1 ，黄 |
 
-    红1
+    | 红 2 | 红 2 ，红 1 | ---------- | 红 2 ，黄 |
 
-    --------
-
-    红1，红2
-
-    红1，黄
-
-    红2
-
-    红2，红1
-
-    ----------
-
-    红2，黄
-
-    黄
-
-    黄，红1
-
-    黄，红2
-
-    ---------
+    | 黄 | 黄，红 1 | 黄，红 2 | --------- |
 
     共有6种等可能结果，其中一个红球一个黄球的结果有4种，
 
@@ -259,7 +286,13 @@ questions:
 
     [图]
 
-    A.①②B.①③C.②③D.①②③'
+    A.①②
+
+    B.①③
+
+    C.②③
+
+    D.①②③'
   answer: D
   solution: '解：由题意知，$BD = AC = b$，$CD=AD-AC=a-b$，
 
@@ -301,8 +334,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-changping-er-fig08.png
-  - figures/2024-changping-er-fig09.png
+  - path: figures/2024-changping-er-fig08.png
+    width_mm: 53.4
+    height_mm: 33.6
 - id: 9
   type: 填空
   score: 2
@@ -436,58 +470,23 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-changping-er-fig10.png
-  - figures/2024-changping-er-fig11.png
+  - path: figures/2024-changping-er-fig10.png
+    width_mm: 51.9
+    height_mm: 34.9
 - id: 14
   type: 填空
   score: 2
   question: '$2024$年3月$12$日，是我国的第$46$个植树节，今年植树节的主题是“共同呵护地球家园，筑造美丽未来”．下表是某地区在植树节期间，不同批次种植杨树的成活率的统计结果，请你估计植树节期间，种植杨树的成活率大约为__________（结果保留两位小数）．
 
-    第一批次
+    |  | 第一批次 | 第二批次 | 第三批次 | 第四批次 | 第五批次 |
 
-    第二批次
+    | --- | --- | --- | --- | --- | --- |
 
-    第三批次
+    | 种植数量 | $200$ | $200$ | $200$ | $200$ | $200$ |
 
-    第四批次
+    | 成活数量 | $194$ | $193$ | $192$ | $196$ | $195$ |
 
-    第五批次
-
-    种植数量
-
-    $200$
-
-    $200$
-
-    $200$
-
-    $200$
-
-    $200$
-
-    成活数量
-
-    $194$
-
-    $193$
-
-    $192$
-
-    $196$
-
-    $195$
-
-    成活频率
-
-    $0.970$
-
-    $0.965$
-
-    $0.960$
-
-    $0.980$
-
-    $0.975$'
+    | 成活频率 | $0.970$ | $0.965$ | $0.960$ | $0.980$ | $0.975$ |'
   answer: $0.97$
   solution: '解：由题意知，种植杨树的成活率大约为$\frac{194+193+192+196+195}{5\times200}=0.97$，
 
@@ -552,62 +551,27 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-changping-er-fig12.png
-  - figures/2024-changping-er-fig13.png
+  - path: figures/2024-changping-er-fig12.png
+    width_mm: 59.0
+    height_mm: 43.7
 - id: 16
   type: 填空
   score: 2
   question: 某学校为丰富学生的课余生活，组织校园篮球赛，初三年级6个班进行单循环比赛（即每班都与其他班比赛一场），每天同时在三个场地各进行一场比赛．已知第一天（2）班与（4）班比赛，第二天（3）班与（5）班比赛，第三天（4）班与（6）班比赛，第四天（2）班与（3）班比赛，那么第三天与（3）班比赛的是__________班，第五天与（1）班比赛的是__________班．
-  answer: ①.（1）②.（2）
+  answer: ①.（1） ②.（2）
   solution: '解：（3）班已知的比赛：第二天（3）班与（5）班比赛，第四天（2）班与（3）班比赛，而第三天已知进行的是（4）班与（6）班比赛，故第三天只有（1）班与（3）班比赛，
 
     （4）班与（2）班比赛在第一天，（4）班与（6）班比赛在第三天，第二天已知（3）班与（5）班比赛，故第二天（4）班与（1）班比赛，（2）班与（6）班比赛，同理可得：第四天（1）班与（6）班比赛，（4）班与（5）班比赛，第一天（3）班与（6）班比赛，（1）班与（5）班比赛，故最后一天为（1）班与（2）班比赛，（3）班与（4）班比赛，（5）班与（6）班比赛，如表1
 
-    第一天
+    |  | 第一天 | 第二天 | 第三天 | 第四天 | 第五天 |
 
-    第二天
+    | --- | --- | --- | --- | --- | --- |
 
-    第三天
+    | 场地 1 | $2-4$ | $3-5$ | $4-6$ | $2-3$ | $1-2$ |
 
-    第四天
+    | 场地 2 | $3-6$ | $1-4$ | $1-3$ | $1-6$ | $3-4$ |
 
-    第五天
-
-    场地1
-
-    $2-4$
-
-    $3-5$
-
-    $4-6$
-
-    $2-3$
-
-    $1-2$
-
-    场地2
-
-    $3-6$
-
-    $1-4$
-
-    $1-3$
-
-    $1-6$
-
-    $3-4$
-
-    场地3
-
-    $1-5$
-
-    $2-6$
-
-    $2-5$
-
-    $4-5$
-
-    $5-6$
+    | 场地 3 | $1-5$ | $2-6$ | $2-5$ | $4-5$ | $5-6$ |
 
     同一天场地上的比赛可交换进行．
 
@@ -712,7 +676,7 @@ questions:
     （1）求证：四边形$ABCD$是菱形；
 
     （2）过点C作AB的垂线交其延长线于点E，若$BD = 6$，$\tan\angle OAB=\frac{3}{4}$，求CE的长．'
-  answer: （1）见解析（2）$CE = \frac{24}{5}$
+  answer: （1）见解析 （2）$CE = \frac{24}{5}$
   solution: '【小问1详解】
 
     证明：$\because AC$平分$\angle BAD$，
@@ -784,7 +748,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-changping-er-fig14.png
+  - path: figures/2024-changping-er-fig14.png
+    width_mm: 32.8
+    height_mm: 28.8
 - id: 21
   type: 解答
   score: 5
@@ -810,7 +776,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-changping-er-fig15.png
+  - path: figures/2024-changping-er-fig15.png
+    width_mm: 82.5
+    height_mm: 23.5
 - id: 22
   type: 解答
   score: 5
@@ -863,29 +831,13 @@ questions:
 
     c.初一、初二、初三，三个年级学生得分的平均数和中位数如下
 
-    年级
+    | 年级 | 初一 | 初二 | 初三 |
 
-    初一
+    | --- | --- | --- | --- |
 
-    初二
+    | 平均数 | 8 | 8 | m |
 
-    初三
-
-    平均数
-
-    8
-
-    8
-
-    m
-
-    中位数
-
-    8
-
-    8.5
-
-    n
+    | 中位数 | 8 | 8.5 | n |
 
     根据以上信息，回答下列问题：
 
@@ -896,7 +848,7 @@ questions:
     （3）由于数据统计出现失误，初三年级所调查的10名学生中有一名学生被记录为6分，实际得分为9分，将数据修正后，初三年级所调查的10名学生中以下统计数据发生变化的：__________（写出符合题意的序号）.
 
     ①平均数；②中位数；③众数；④方差.'
-  answer: （1）初一（2）$m=8$，$n = 8.5$ （3）①②④
+  answer: （1）初一 （2）$m=8$，$n = 8.5$ （3）①②④
   solution: '【小问1详解】
 
     解：由折线图可知，初一学生得分的波动比初二的小，所以成绩更稳定的是初一．
@@ -982,7 +934,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-changping-er-fig16.png
+  - path: figures/2024-changping-er-fig16.png
+    width_mm: 85.5
+    height_mm: 43.1
 - id: 24
   type: 解答
   score: 6
@@ -993,7 +947,7 @@ questions:
     （1）求证：$\angle BCF = \angle FEC$；
 
     （2）连接BD，若$\angle CDB=30^{\circ}$，$BF = 2$，求$\odot\odot$半径的长．'
-  answer: （1）见解析（2）$2$
+  answer: （1）见解析 （2）$2$
   solution: '【小问1详解】
 
     证明：连接$OD, OC$.
@@ -1065,9 +1019,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-changping-er-fig17.png
-  - figures/2024-changping-er-fig18.png
-  - figures/2024-changping-er-fig19.png
+  - path: figures/2024-changping-er-fig17.png
+    width_mm: 45.0
+    height_mm: 32.5
 - id: 25
   type: 解答
   score: 6
@@ -1295,9 +1249,9 @@ questions:
   recommended_for:
   - L3
   figures:
-  - figures/2024-changping-er-fig20.png
-  - figures/2024-changping-er-fig21.png
-  - figures/2024-changping-er-fig22.png
+  - path: figures/2024-changping-er-fig20.png
+    width_mm: 138.1
+    height_mm: 42.6
 - id: 28
   type: 解答
   score: 7
@@ -1369,8 +1323,6 @@ questions:
   recommended_for:
   - L3
   figures:
-  - figures/2024-changping-er-fig23.png
-  - figures/2024-changping-er-fig24.png
-  - figures/2024-changping-er-fig25.png
-  - figures/2024-changping-er-fig26.png
-  - figures/2024-changping-er-fig27.png
+  - path: figures/2024-changping-er-fig23.png
+    width_mm: 126.7
+    height_mm: 67.5

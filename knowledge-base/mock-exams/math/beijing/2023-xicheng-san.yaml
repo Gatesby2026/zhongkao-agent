@@ -17,11 +17,15 @@ questions:
 - id: 1
   type: 选择
   score: 2
-  question: '中国国家航天局2020年4月24日在“中国航天日”之际宣布，将中国行星探测任务命名为“天问”，将中国首次火星探测任务命名为“天问一号”．火星具有与地球十分相近的环境，与地球最近的时候距离约5500万千米，将5500用科学记数法表示为(
+  question: '中国国家航天局2020年4月24日在“中国航天日”之际宣布，将中国行星探测任务命名为“天问”，将中国首次火星探测任务命名为“天问一号”．火星具有与地球十分相近的环境，与地球最近的时候距离约5500万千米，将5500用科学记数法表示为(    )
 
-    )
+    A.$0.55\times10^{4}$
 
-    A.$0.55\times10^{4}$B.$5.5\times10^{3}$C.$5.5\times10^{2}$D.$55\times10^{2}$'
+    B.$5.5\times10^{3}$
+
+    C.$5.5\times10^{2}$
+
+    D.$55\times10^{2}$'
   answer: B
   solution: '解：5500=5.5×103，
 
@@ -42,7 +46,13 @@ questions:
 
     [图]
 
-    A.2B.4C.6D.8'
+    A.2
+
+    B.4
+
+    C.6
+
+    D.8'
   answer: C
   solution: '解：由图可知，
 
@@ -60,7 +70,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-xicheng-san-fig02.png
+  - path: figures/2023-xicheng-san-fig02.png
+    width_mm: 25.9
+    height_mm: 25.9
 - id: 3
   type: 选择
   score: 2
@@ -68,7 +80,13 @@ questions:
 
     [图]
 
-    A.$a+b<0$B.$a+c<0$C.$a-c>0$D.$\frac{a}{b}>0$'
+    A.$a+b<0$
+
+    B.$a+c<0$
+
+    C.$a-c>0$
+
+    D.$\frac{a}{b}>0$'
   answer: B
   solution: '解：由图可知$\left| a \right| < \left| b \right|$，
 
@@ -89,7 +107,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-xicheng-san-fig03.png
+  - path: figures/2023-xicheng-san-fig03.png
+    width_mm: 54.5
+    height_mm: 9.3
 - id: 4
   type: 选择
   score: 2
@@ -97,7 +117,13 @@ questions:
 
     [图]
 
-    A.2B.$\sqrt{2}$C.$\sqrt{2}+1$D.1'
+    A.2
+
+    B.$\sqrt{2}$
+
+    C.$\sqrt{2}+1$
+
+    D.1'
   answer: C
   solution: '解：∵正方形$ABCD,$
 
@@ -127,7 +153,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-xicheng-san-fig04.png
+  - path: figures/2023-xicheng-san-fig04.png
+    width_mm: 38.4
+    height_mm: 43.1
 - id: 5
   type: 选择
   score: 2
@@ -135,7 +163,13 @@ questions:
 
     [图]
 
-    A.$5\sqrt{3}$B.6C.8D.10'
+    A.$5\sqrt{3}$
+
+    B.6
+
+    C.8
+
+    D.10'
   answer: B
   solution: '解：连接PO，如图所示：
 
@@ -174,14 +208,21 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-xicheng-san-fig05.png
-  - figures/2023-xicheng-san-fig06.png
+  - path: figures/2023-xicheng-san-fig05.png
+    width_mm: 54.2
+    height_mm: 42.6
 - id: 6
   type: 选择
   score: 2
   question: '不透明的袋子中装有红、绿小球各一个，除颜色外两个小球无其他差别，从中随机摸出一个小球，放回并摇匀，再从中随机摸出一个小球，那么第一次摸到红球、第二次摸到绿球的概率是（）
 
-    A.$\frac{1}{4}$B.$\frac{1}{3}$C.$\frac{1}{2}$D.$\frac{3}{4}$'
+    A.$\frac{1}{4}$
+
+    B.$\frac{1}{3}$
+
+    C.$\frac{1}{2}$
+
+    D.$\frac{3}{4}$'
   answer: A
   solution: '解：画树状图得：
 
@@ -202,14 +243,18 @@ questions:
   - L1
   - L2
   - L3
-  figures:
-  - figures/2023-xicheng-san-fig07.png
 - id: 7
   type: 选择
   score: 2
   question: '如果$a^{2}-ab-1=0$，.那么代数式$\frac{a^{2}}{a-b}\cdot\left(a+\frac{b^{2}-2ab}{a}\right)$的值是（）
 
-    A.-1B.1C.-3D.3'
+    A.-1
+
+    B.1
+
+    C.-3
+
+    D.3'
   answer: B
   solution: '解：$\frac{a^{2}}{a-b}\cdot\left(a+\frac{b^{2}-2ab}{a}\right)$
 
@@ -245,9 +290,13 @@ questions:
 
     [图]
 
-    A.一次函数关系，二次函数关系B.反比例函数关系，二次函数关系
+    A.一次函数关系，二次函数关系
 
-    C.正比例函数关系，反比例函数关系D.正比例函数关系，一次函数关系'
+    B.反比例函数关系，二次函数关系
+
+    C.正比例函数关系，反比例函数关系
+
+    D.正比例函数关系，一次函数关系'
   answer: C
   solution: '解：由圆柱的底面的周长公式：底面周长＝2×半径×$\pi$，
 
@@ -291,7 +340,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-xicheng-san-fig08.png
+  - path: figures/2023-xicheng-san-fig08.png
+    width_mm: 28.0
+    height_mm: 33.9
 - id: 9
   type: 填空
   score: 2
@@ -358,7 +409,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-xicheng-san-fig09.png
+  - path: figures/2023-xicheng-san-fig09.png
+    width_mm: 41.0
+    height_mm: 29.4
 - id: 12
   type: 填空
   score: 2
@@ -398,7 +451,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-xicheng-san-fig10.png
+  - path: figures/2023-xicheng-san-fig10.png
+    width_mm: 44.2
+    height_mm: 40.0
 - id: 13
   type: 填空
   score: 2
@@ -464,7 +519,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-xicheng-san-fig11.png
+  - path: figures/2023-xicheng-san-fig11.png
+    width_mm: 58.7
+    height_mm: 46.8
 - id: 15
   type: 填空
   score: 2
@@ -515,7 +572,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-xicheng-san-fig12.png
+  - path: figures/2023-xicheng-san-fig12.png
+    width_mm: 145.5
+    height_mm: 20.1
 - id: 17
   type: 解答
   score: 5
@@ -681,10 +740,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-xicheng-san-fig13.png
-  - figures/2023-xicheng-san-fig14.png
-  - figures/2023-xicheng-san-fig15.png
-  - figures/2023-xicheng-san-fig16.png
+  - path: figures/2023-xicheng-san-fig13.png
+    width_mm: 27.0
+    height_mm: 34.7
 - id: 21
   type: 解答
   score: 5
@@ -695,7 +753,7 @@ questions:
     （1）求证：四边形CDEF为菱形；
 
     （2）连接DF交EC于G，若DF＝2，CD$=\frac{5}{3}$，求AD的长．'
-  answer: （1）见详解（2）$\sqrt{17}$
+  answer: （1）见详解 （2）$\sqrt{17}$
   solution: '【小问1详解】
 
     证明：∵E为对角线AC的中点，F为边BC的中点，
@@ -741,8 +799,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-xicheng-san-fig17.png
-  - figures/2023-xicheng-san-fig18.png
+  - path: figures/2023-xicheng-san-fig17.png
+    width_mm: 42.3
+    height_mm: 34.4
 - id: 22
   type: 解答
   score: 5
@@ -850,9 +909,6 @@ questions:
   - L1
   - L2
   - L3
-  figures:
-  - figures/2023-xicheng-san-fig20.png
-  - figures/2023-xicheng-san-fig21.png
 - id: 24
   type: 解答
   score: 6
@@ -912,35 +968,19 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-xicheng-san-fig22.png
+  - path: figures/2023-xicheng-san-fig22.png
+    width_mm: 131.2
+    height_mm: 72.2
 - id: 25
   type: 解答
   score: 6
   question: '兴寿镇草莓园是北京最大的草莓基地，通过一颗颗小草莓，促进了农民增收致富，也促进了农旅融合高质量发展．小梅家有一个草莓大棚，大棚的一端固定在离地面高$1m$的墙体A处，另一端固定在离地面高$1m$的墙体B处，记大棚的截面顶端某处离A的水平距离为xm，离地面的高度为ym，测量得到如下数值：
 
-    $x / m$
+    | $x / m$ | 0 | 1 | 2 | 4 | 5 |
 
-    0
+    | --- | --- | --- | --- | --- | --- |
 
-    1
-
-    2
-
-    4
-
-    5
-
-    $y/m$
-
-    1
-
-    $\frac{8}{3}$
-
-    $\frac{11}{3}$
-
-    $\frac{11}{3}$
-
-    $\frac{8}{3}$
+    | $y/m$ | 1 | $\frac{8}{3}$ | $\frac{11}{3}$ | $\frac{11}{3}$ | $\frac{8}{3}$ |
 
     [图]
 
@@ -957,7 +997,7 @@ questions:
     （2）结合图表回答，大棚截面顶端最高处到地面的距离高度为___________m；此时距离A的水平距离为___________m；
 
     （3）为了草莓更好的生长需要在大棚内安装补光灯，补光灯采用吊装模式悬挂在顶部，已知补光灯在距离地面$1,5m$时补光效果最好，若在距离A处水平距离$1,5m$的地方挂补光灯，为使补光效果最好补光灯悬挂部分的长度应是多少m？（灯的大小忽略不计）'
-  answer: （1）见解析（2）4；3 （3）为使补光效果最好补光灯悬挂部分的长度应是$1.75m$．
+  answer: （1）见解析 （2）4；3 （3）为使补光效果最好补光灯悬挂部分的长度应是$1.75m$．
   solution: '【小问1详解】
 
     解：描点，连线，函数的图象如图所示，
@@ -1002,9 +1042,12 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-xicheng-san-fig23.png
-  - figures/2023-xicheng-san-fig24.png
-  - figures/2023-xicheng-san-fig25.png
+  - path: figures/2023-xicheng-san-fig23.png
+    width_mm: 69.8
+    height_mm: 31.8
+  - path: figures/2023-xicheng-san-fig24.png
+    width_mm: 56.1
+    height_mm: 50.0
 - id: 26
   type: 解答
   score: 6
@@ -1055,7 +1098,9 @@ questions:
   recommended_for:
   - L3
   figures:
-  - figures/2023-xicheng-san-fig26.png
+  - path: figures/2023-xicheng-san-fig26.png
+    width_mm: 65.4
+    height_mm: 64.0
 - id: 27
   type: 解答
   score: 7
@@ -1147,9 +1192,9 @@ questions:
   recommended_for:
   - L3
   figures:
-  - figures/2023-xicheng-san-fig27.png
-  - figures/2023-xicheng-san-fig28.png
-  - figures/2023-xicheng-san-fig29.png
+  - path: figures/2023-xicheng-san-fig27.png
+    width_mm: 64.3
+    height_mm: 31.5
 - id: 28
   type: 解答
   score: 7
@@ -1177,7 +1222,7 @@ questions:
 
     综上所述，满足条件的x的值为$\sqrt{5}\le x\le 3\sqrt{5}$；
 
-    [图]【小问2详解】
+    [图] 【小问2详解】
 
     ∵点C在以O为圆心$5$为半径的上半圆上运动，
 
@@ -1219,7 +1264,7 @@ questions:
 
     \right.$（舍去），
 
-    如图2中，当$CH = 6$时，同法可得$a = \frac{1}{3}$，'
+    如图2中，当$CH = 6$时，同法可得$a = \frac{1}{3}$'
   knowledge_points:
   - 坐标系
   - 动点
@@ -1227,7 +1272,3 @@ questions:
   difficulty: 压轴
   recommended_for:
   - L3
-  figures:
-  - figures/2023-xicheng-san-fig30.png
-  - figures/2023-xicheng-san-fig31.png
-  - figures/2023-xicheng-san-fig32.png

@@ -21,7 +21,13 @@ questions:
 
     [图]
 
-    A.长方体B.三棱柱C.圆锥D.正方体'
+    A.长方体
+
+    B.三棱柱
+
+    C.圆锥
+
+    D.正方体'
   answer: B
   solution: '由几何体的主视图和左视图都是长方形，
 
@@ -42,13 +48,21 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-xicheng-er-fig02.png
+  - path: figures/2023-xicheng-er-fig02.png
+    width_mm: 38.9
+    height_mm: 43.9
 - id: 2
   type: 选择
   score: 2
   question: '据报道，至2022年，我国已经建成世界上规模最大的教育体系、社会保障体系、医疗卫生体系，基本养老保险覆盖10.4亿人，将1040000000用科学记数法表示应为（　　）
 
-    A.$10.4\times10^{8}$B.$1.04\times10^{8}$C.$1.04\times10^{9}$D.$1.04\times10^{10}$'
+    A.$10.4\times10^{8}$
+
+    B.$1.04\times10^{8}$
+
+    C.$1.04\times10^{9}$
+
+    D.$1.04\times10^{10}$'
   answer: C
   solution: '解：将1040000000用科学记数法表示为：$1.04\times10^{9}$．
 
@@ -84,7 +98,9 @@ questions:
 
     \end{array}
 
-    \right.$B.$\left\{
+    \right.$
+
+    B.$\left\{
 
     \begin{array}{l}
 
@@ -94,7 +110,11 @@ questions:
 
     \end{array}
 
-    \right.$C.$\left\{\begin{array}{l}x=2,\\y=1\end{array}\right.$D.$\left\{
+    \right.$
+
+    C.$\left\{\begin{array}{l}x=2,\\y=1\end{array}\right.$
+
+    D.$\left\{
 
     \begin{array}{l}
 
@@ -139,7 +159,13 @@ questions:
   score: 2
   question: '比$\sqrt{3}$大且比$\sqrt{14}$小的整数可以是（　　）
 
-    A.1B.3C.5D.7'
+    A.1
+
+    B.3
+
+    C.5
+
+    D.7'
   answer: B
   solution: '解：$\pi:1<\sqrt{3}<2.3<\sqrt{14}<4$，
 
@@ -170,7 +196,13 @@ questions:
 
     [图]
 
-    A.$116^\circ$B.$74^\circ$C.$64^\circ$D.$58^\circ$'
+    A.$116^\circ$
+
+    B.$74^\circ$
+
+    C.$64^\circ$
+
+    D.$58^\circ$'
   answer: D
   solution: '解：$\angle BEF=116^{\circ}$，EG平分$\angle BEF$，
 
@@ -191,13 +223,21 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-xicheng-er-fig03.png
+  - path: figures/2023-xicheng-er-fig03.png
+    width_mm: 52.9
+    height_mm: 34.1
 - id: 6
   type: 选择
   score: 2
   question: '一个不透明的口袋中有3个红球和1个白球，这四个球除颜色外完全相同．摇匀后，随机从中摸出一个小球不放回，再随机摸出一个小球，则两次摸出小球的颜色相同的概率是()
 
-    A.$\frac{3}{4}$B.$\frac{5}{8}$C.$\frac{1}{2}$D.$\frac{1}{4}$'
+    A.$\frac{3}{4}$
+
+    B.$\frac{5}{8}$
+
+    C.$\frac{1}{2}$
+
+    D.$\frac{1}{4}$'
   answer: C
   solution: '画树状图得所有可能出现的结果数为∶
 
@@ -218,8 +258,6 @@ questions:
   - L1
   - L2
   - L3
-  figures:
-  - figures/2023-xicheng-er-fig04.png
 - id: 7
   type: 选择
   score: 2
@@ -251,7 +289,13 @@ questions:
 
     \end{tikzpicture}$
 
-    A.aB.$-a$C.$a^2$D.$\frac{1}{a}$'
+    A.a
+
+    B.$-a$
+
+    C.$a^2$
+
+    D.$\frac{1}{a}$'
   answer: D
   solution: '解：由数轴可知：$0<a<1$，
 
@@ -289,7 +333,13 @@ questions:
 
     [图]
 
-    A.①②B.①③C.②③D.①②③'
+    A.①②
+
+    B.①③
+
+    C.②③
+
+    D.①②③'
   answer: A
   solution: '解：①由平均速度等于路程除以时间得：$y=\frac{1463}{x}$，符合题意；
 
@@ -308,7 +358,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-xicheng-er-fig05.png
+  - path: figures/2023-xicheng-er-fig05.png
+    width_mm: 33.9
+    height_mm: 31.8
 - id: 9
   type: 填空
   score: 2
@@ -387,15 +439,14 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-xicheng-er-fig06.png
-  - figures/2023-xicheng-er-fig07.png
+  - path: figures/2023-xicheng-er-fig06.png
+    width_mm: 35.5
+    height_mm: 39.4
 - id: 12
   type: 填空
   score: 2
-  question: '用一组a
-
-    ,b的值说明命题：“若a2=b2，则a=b”是错误的，这组值可以是a=_________.，b=______.'
-  answer: ①.1②.$-1$
+  question: 用一组a ,b的值说明命题：“若a2=b2，则a=b”是错误的，这组值可以是a=_________.，b=______.
+  answer: ①.1 ②.$-1$
   solution: '解：当a=1，b=-1时，满足a2=b2，但a≠b．故命题错误.
 
     故答案为1，-1（答案不唯一）．'
@@ -413,27 +464,13 @@ questions:
   score: 2
   question: '某射击队要从甲、乙、丙三名队员中选出一人代表射击队参加市里举行的射击比赛，下表是这三名队员在相同条件下10次射击成绩的数据：
 
-    甲
+    |  | 甲 | 乙 | 丙 |
 
-    乙
+    | --- | --- | --- | --- |
 
-    丙
+    | 平均数 | 8.5 | 9 | 8.8 |
 
-    平均数
-
-    8.5
-
-    9
-
-    8.8
-
-    方差
-
-    0.25
-
-    0.23
-
-    0.27
+    | 方差 | 0.25 | 0.23 | 0.27 |
 
     如果要选出一个成绩好且又稳定的队员去参加比赛，这名队员应是___________．'
   answer: 乙
@@ -486,8 +523,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-xicheng-er-fig08.png
-  - figures/2023-xicheng-er-fig09.png
+  - path: figures/2023-xicheng-er-fig08.png
+    width_mm: 46.3
+    height_mm: 33.9
 - id: 15
   type: 填空
   score: 2
@@ -514,78 +552,22 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-xicheng-er-fig10.png
+  - path: figures/2023-xicheng-er-fig10.png
+    width_mm: 36.5
+    height_mm: 35.5
 - id: 16
   type: 填空
   score: 2
   question: '下表是某市本年度GDP前十强的区县排行榜，变化情况表示该区县相对于上一年度名次变化的情况，“↑”表示上升，“↓”表示下降，“一”则表示名次没有变化．已知每个区县的名次变化都不超过两位，上一年度排名第1的区县是___________，上一年度排在第6，7，8名的区县依次是___________．(写出一种符合条件的排序)
 
-    名次
+    | 名次 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
 
-    1
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
-    2
+    | 区县 | A | B | C | D | E | F | G | H | I | J |
 
-    3
-
-    4
-
-    5
-
-    6
-
-    7
-
-    8
-
-    9
-
-    10
-
-    区县
-
-    A
-
-    B
-
-    C
-
-    D
-
-    E
-
-    F
-
-    G
-
-    H
-
-    I
-
-    J
-
-    变化情况
-
-    ↑
-
-    一
-
-    ↓
-
-    一
-
-    ↑
-
-    ↓
-
-    ↑
-
-    ↓
-
-    ↓
-
-    一'
-  answer: ①.C②.E、H、I或H、E、I．(二者之一即可)
+    | 变化情况 | ↑ | 一 | ↓ | 一 | ↑ | ↓ | ↑ | ↓ | ↓ | 一 |'
+  answer: ①.C ②.E、H、I或H、E、I．(二者之一即可)
   solution: '解：①∵A地GDP名次上升，每个区县的名次变化都不超过两位，B地GDP名次无变化，
 
     ∴只能是第三名上升而来的，即原来A地原来名次是第三名；
@@ -702,8 +684,12 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-xicheng-er-fig11.png
-  - figures/2023-xicheng-er-fig12.png
+  - path: figures/2023-xicheng-er-fig11.png
+    width_mm: 31.0
+    height_mm: 24.6
+  - path: figures/2023-xicheng-er-fig12.png
+    width_mm: 48.9
+    height_mm: 43.4
 - id: 20
   type: 解答
   score: 5
@@ -767,7 +753,7 @@ questions:
     （1）求证：$BD = DE$；
 
     （2）连接OE，若$AB=2$，$BC = 4$，求OE的长．'
-  answer: （1）见解析（2）$OE = \sqrt{37}$
+  answer: （1）见解析 （2）$OE = \sqrt{37}$
   solution: '【小问1详解】
 
     ∵四边形$ABCD$是矩形，
@@ -823,8 +809,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-xicheng-er-fig14.png
-  - figures/2023-xicheng-er-fig15.png
+  - path: figures/2023-xicheng-er-fig14.png
+    width_mm: 68.3
+    height_mm: 31.8
 - id: 23
   type: 解答
   score: 6
@@ -840,49 +827,11 @@ questions:
 
     c．B小区参加有奖问答活动的20名居民成绩的数据如下：
 
-    分数
+    | 分数 | 73 | 81 | 82 | 85 | 88 | 91 | 92 | 94 | 96 | 100 |
 
-    73
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
-    81
-
-    82
-
-    85
-
-    88
-
-    91
-
-    92
-
-    94
-
-    96
-
-    100
-
-    人数
-
-    1
-
-    3
-
-    2
-
-    3
-
-    1
-
-    3
-
-    1
-
-    4
-
-    1
-
-    1
+    | 人数 | 1 | 3 | 2 | 3 | 1 | 3 | 1 | 4 | 1 | 1 |
 
     根据以上信息，解答下列问题：
 
@@ -891,14 +840,14 @@ questions:
     （2）A小区参加有奖问答活动的20名居民成绩的数据的中位数是___________；B小区参加有奖问答活动的20名居民成绩的数据的众数是___________；
 
     （3）为鼓励居民继续关注反诈骗宣传，对在这次有奖问答活动中成绩大于或等于90分的居民颁发小奖品．已知A，B两个小区各有2000名居民参加这次活动，估计这两个小区的居委会一共需要准备多少份小奖品．'
-  answer: （1）见解析（2）88.5分；94分 （3）950份
+  answer: （1）见解析 （2）88.5分；94分 （3）950份
   solution: '【小问1详解】
 
     第三组（$70 \leq x < 80$）的频数为：$20-1-1-7-9=2$，
 
     补全图形如下：
 
-    [图]【小问2详解】
+    [图] 【小问2详解】
 
     ∵20个数据按大小顺序排列，最中间的两个数据是第10和11个，
 
@@ -926,8 +875,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-xicheng-er-fig16.png
-  - figures/2023-xicheng-er-fig17.png
+  - path: figures/2023-xicheng-er-fig16.png
+    width_mm: 83.9
+    height_mm: 55.6
 - id: 24
   type: 解答
   score: 6
@@ -957,7 +907,7 @@ questions:
 
     ∴$DM = BM$；
 
-    [图]【小问2详解】
+    [图] 【小问2详解】
 
     解：连接DE，
 
@@ -1009,9 +959,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-xicheng-er-fig18.png
-  - figures/2023-xicheng-er-fig19.png
-  - figures/2023-xicheng-er-fig20.png
+  - path: figures/2023-xicheng-er-fig18.png
+    width_mm: 53.2
+    height_mm: 28.8
 - id: 25
   type: 解答
   score: 6
@@ -1103,9 +1053,6 @@ questions:
   recommended_for:
   - L2
   - L3
-  figures:
-  - figures/2023-xicheng-er-fig21.png
-  - figures/2023-xicheng-er-fig22.png
 - id: 26
   type: 解答
   score: 6
@@ -1236,7 +1183,7 @@ questions:
 
     ∴FH与BC的数量关系是$FH=\frac{\sqrt{3}}{4}BC$．
 
-    [图]【点睛'
+    [图] 【点'
   knowledge_points:
   - 旋转
   - 三角函数
@@ -1245,9 +1192,9 @@ questions:
   recommended_for:
   - L3
   figures:
-  - figures/2023-xicheng-er-fig23.png
-  - figures/2023-xicheng-er-fig24.png
-  - figures/2023-xicheng-er-fig25.png
+  - path: figures/2023-xicheng-er-fig23.png
+    width_mm: 92.3
+    height_mm: 42.6
 - id: 28
   type: 解答
   score: 7
@@ -1293,7 +1240,7 @@ questions:
 
     故答案为：$2\sqrt{2}$，3；
 
-    [图]【小问2详解】
+    [图] 【小问2详解】
 
     解：设点G是圆O的特征值为4的点，
 
@@ -1317,7 +1264,7 @@ questions:
 
     ∴$OA = OB = b$，
 
-    ∴$\ang'
+    ∴$\an'
   knowledge_points:
   - 垂径定理
   - 弦
@@ -1327,9 +1274,3 @@ questions:
   difficulty: 压轴
   recommended_for:
   - L3
-  figures:
-  - figures/2023-xicheng-er-fig26.png
-  - figures/2023-xicheng-er-fig27.png
-  - figures/2023-xicheng-er-fig28.png
-  - figures/2023-xicheng-er-fig29.png
-  - figures/2023-xicheng-er-fig30.png

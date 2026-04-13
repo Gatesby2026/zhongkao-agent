@@ -17,13 +17,17 @@ questions:
 - id: 1
   type: 选择
   score: 2
-  question: '下图是某几何体的三视图，该几何体是（
-
-    ）
+  question: '下图是某几何体的三视图，该几何体是（    ）
 
     [图]
 
-    A.圆柱B.圆锥C.长方体D.三棱柱'
+    A.圆柱
+
+    B.圆锥
+
+    C.长方体
+
+    D.三棱柱'
   answer: A
   solution: '根据主视图和左视图为矩形，则几何体为柱体；
 
@@ -40,7 +44,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-shijingshan-er-fig02.png
+  - path: figures/2023-shijingshan-er-fig02.png
+    width_mm: 28.3
+    height_mm: 24.1
 - id: 2
   type: 选择
   score: 2
@@ -48,7 +54,13 @@ questions:
 
     [图]
 
-    A.$a > b$B.$\left|a\right|>b$C.$a+b>0$D.$a < -3$'
+    A.$a > b$
+
+    B.$\left|a\right|>b$
+
+    C.$a+b>0$
+
+    D.$a < -3$'
   answer: B
   solution: '解：由题意得，$-3 < a < 0 < b, |a| > |b|$，
 
@@ -67,13 +79,21 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-shijingshan-er-fig03.png
+  - path: figures/2023-shijingshan-er-fig03.png
+    width_mm: 66.1
+    height_mm: 8.2
 - id: 3
   type: 选择
   score: 2
   question: '如果一个多边形的内角和等于540°，则它的边数为（　　）
 
-    A.3B.4C.5D.6'
+    A.3
+
+    B.4
+
+    C.5
+
+    D.6'
   answer: C
   solution: '解：设这个多边形的边数为n，
 
@@ -98,7 +118,13 @@ questions:
 
     [图]
 
-    A.2B.3C.4D.9'
+    A.2
+
+    B.3
+
+    C.4
+
+    D.9'
   answer: D
   solution: '解：∵$BM=2AM$，
 
@@ -125,7 +151,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-shijingshan-er-fig04.png
+  - path: figures/2023-shijingshan-er-fig04.png
+    width_mm: 41.8
+    height_mm: 29.6
 - id: 5
   type: 选择
   score: 2
@@ -133,7 +161,13 @@ questions:
 
     [图]
 
-    A.$20^\circ$B.$35^\circ$C.$40^\circ$D.$70^\circ$'
+    A.$20^\circ$
+
+    B.$35^\circ$
+
+    C.$40^\circ$
+
+    D.$70^\circ$'
   answer: A
   solution: ''
   knowledge_points:
@@ -146,13 +180,21 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-shijingshan-er-fig05.png
+  - path: figures/2023-shijingshan-er-fig05.png
+    width_mm: 35.5
+    height_mm: 31.8
 - id: 6
   type: 选择
   score: 2
   question: '一组数据：1，2，5，0，2，若添加一个数据2，则发生变化的统计量是（）
 
-    A.平均数B.中位数C.众数D.方差'
+    A.平均数
+
+    B.中位数
+
+    C.众数
+
+    D.方差'
   answer: D
   solution: '解：A、发生变化前的平均数：$x_{1}=\frac{1+2+5-0+2}{5}=2$，发生变化后的平均数：$x_{-}=\frac{1+2+5+0+2+2}{6}=2$，，没有变化，故该选项不符合题意；
 
@@ -194,7 +236,13 @@ questions:
 
     其中合理的是（）
 
-    A.①②B.①③C.②③D.②④'
+    A.①②
+
+    B.①③
+
+    C.②③
+
+    D.②④'
   answer: C
   solution: '解：当移植的棵树是800时，成活的棵树是688，所以“移植成活”的频率是0.860，但概率不一定是0.860，故①错误；
 
@@ -218,7 +266,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-shijingshan-er-fig07.png
+  - path: figures/2023-shijingshan-er-fig07.png
+    width_mm: 119.9
+    height_mm: 38.4
 - id: 8
   type: 选择
   score: 2
@@ -226,9 +276,13 @@ questions:
 
     [图]
 
-    A.一次函数关系，二次函数关系B.反比例函数关系，二次函数关系
+    A.一次函数关系，二次函数关系
 
-    C.一次函数关系，反比例函数关系D.反比例函数关系，一次函数关系'
+    B.反比例函数关系，二次函数关系
+
+    C.一次函数关系，反比例函数关系
+
+    D.反比例函数关系，一次函数关系'
   answer: A
   solution: '解：∵在$\mathrm{Rt}\triangle ACB$中，$\angle ACB=90^\circ$，$CA = CB = 10$，
 
@@ -260,7 +314,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-shijingshan-er-fig08.png
+  - path: figures/2023-shijingshan-er-fig08.png
+    width_mm: 31.5
+    height_mm: 31.8
 - id: 9
   type: 填空
   score: 2
@@ -397,7 +453,7 @@ questions:
 
     故答案为：10．
 
-    [图]【点睛】本题主要考查了矩形的性质，三角形中位线定理，熟知三角形中位线平行于第三边且等于第三边长的一半是解题的关键．'
+    [图] 【点睛】本题主要考查了矩形的性质，三角形中位线定理，熟知三角形中位线平行于第三边且等于第三边长的一半是解题的关键．'
   knowledge_points:
   - 矩形
   module: triangles
@@ -407,8 +463,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-shijingshan-er-fig09.png
-  - figures/2023-shijingshan-er-fig10.png
+  - path: figures/2023-shijingshan-er-fig09.png
+    width_mm: 47.1
+    height_mm: 26.7
 - id: 15
   type: 填空
   score: 2
@@ -434,7 +491,7 @@ questions:
 
     故答案为：$\sqrt{3}$．
 
-    [图]【点睛】本题主要考查了角平分线的性质和定义，勾股定理，含30度角的直角三角形的性质，勾股定理等等，正确作出辅助线是解题的关键．'
+    [图] 【点睛】本题主要考查了角平分线的性质和定义，勾股定理，含30度角的直角三角形的性质，勾股定理等等，正确作出辅助线是解题的关键．'
   knowledge_points:
   - 综合
   module: triangles
@@ -444,8 +501,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-shijingshan-er-fig11.png
-  - figures/2023-shijingshan-er-fig12.png
+  - path: figures/2023-shijingshan-er-fig11.png
+    width_mm: 46.3
+    height_mm: 22.5
 - id: 16
   type: 填空
   score: 2
@@ -458,7 +516,7 @@ questions:
     ②黑、白卡片数字相同时，黑卡片放在左边．
 
     将第一行卡片用大写英文字母按顺序标注，第二行卡片用小写英文字母按顺序标注，则白卡片数字1摆在了标注字母_______的位置，标注字母e的卡片写有数字_______．'
-  answer: ①.B②.4
+  answer: ①.B ②.4
   solution: '解：第一行中B与第二行中c肯定有一张为白1，若第二行中c为白1，则左边不可能有2张黑卡片，
 
     $\begin{tikzpicture}
@@ -520,7 +578,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-shijingshan-er-fig13.png
+  - path: figures/2023-shijingshan-er-fig13.png
+    width_mm: 60.6
+    height_mm: 23.3
 - id: 17
   type: 解答
   score: 5
@@ -611,12 +671,12 @@ questions:
     \end{tikzpicture}$四边形$PCDQ$是__________形（__________）（填推理的依据）．
 
     $\ldots PQ \parallel AB$'
-  answer: （1）见解析（2）PC，菱，四边相等的四边形是菱形
+  answer: （1）见解析 （2）PC，菱，四边相等的四边形是菱形
   solution: '【小问1详解】
 
     解：直线$\overline{PQ}$如下图所示：
 
-    [图]【小问2详解】
+    [图] 【小问2详解】
 
     证明：连接DQ．
 
@@ -648,9 +708,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-shijingshan-er-fig14.png
-  - figures/2023-shijingshan-er-fig15.png
-  - figures/2023-shijingshan-er-fig16.png
+  - path: figures/2023-shijingshan-er-fig14.png
+    width_mm: 95.2
+    height_mm: 39.2
 - id: 20
   type: 解答
   score: 5
@@ -790,8 +850,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-shijingshan-er-fig17.png
-  - figures/2023-shijingshan-er-fig18.png
+  - path: figures/2023-shijingshan-er-fig17.png
+    width_mm: 39.2
+    height_mm: 26.5
 - id: 22
   type: 解答
   score: 5
@@ -857,33 +918,17 @@ questions:
 
     b．这20名居民讲座前、讲座后成绩的平均数、中位数、方差如下
 
-    平均数
+    |  | 平均数 | 中位数 | 方差 |
 
-    中位数
+    | --- | --- | --- | --- |
 
-    方差
+    | 讲座前 | 72.0 | 71.5 | 99.7 |
 
-    讲座前
-
-    72.0
-
-    71.5
-
-    99.7
-
-    讲座后
-
-    86.8
-
-    m
-
-    88.4
+    | 讲座后 | 86.8 | m | 88.4 |
 
     c．结合讲座后成绩x，被抽取的20名居民中有5人获得“参与奖”$(x < 80)$，有7人获得“优秀奖”$(80\leq x<90)$，有8人获得“环保达人奖”$(90\leq x\leq100)$，其中成绩在$80 \leq x < 90$这一组的是：
 
-    80
-
-    82   83   85   87   88   88
+    80   82   83   85   87   88   88
 
     根据以上信息，回答下列问题：
 
@@ -892,12 +937,12 @@ questions:
     （2）写出表中m的值；
 
     （3）参加公益讲座的居民有160人，估计能获得“环保达人奖”的有_____人．'
-  answer: （1）见解析（2）$87.5$ （3）64
+  answer: （1）见解析 （2）$87.5$ （3）64
   solution: '【小问1详解】
 
     解：代表居民小张的点如下图所示：
 
-    [图]【小问2详解】
+    [图] 【小问2详解】
 
     解：将讲座后20人的成绩从低到高排序，第10名和第11名的成绩分别为87，88，
 
@@ -921,8 +966,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-shijingshan-er-fig19.png
-  - figures/2023-shijingshan-er-fig20.png
+  - path: figures/2023-shijingshan-er-fig19.png
+    width_mm: 110.3
+    height_mm: 58.2
 - id: 24
   type: 解答
   score: 6
@@ -935,37 +981,11 @@ questions:
 
     （1）第一次训练时，该运动员的水平距离x与竖直高度y的几组数据如下：
 
-    水平距离$x / m$
+    | 水平距离 $x / m$ | 0 | $0.2$ | $0.4$ | $0.6$ | $0.8$ | $1.6$ | $2.0$ |
 
-    0
+    | --- | --- | --- | --- | --- | --- | --- | --- |
 
-    $0.2$
-
-    $0.4$
-
-    $0.6$
-
-    $0.8$
-
-    $1.6$
-
-    $2.0$
-
-    竖直高度$y/m$
-
-    $10.00$
-
-    $10.45$
-
-    $10.60$
-
-    $10.45$
-
-    $10.00$
-
-    $5.20$
-
-    $1.00$
+    | 竖直高度 $y/m$ | $10.00$ | $10.45$ | $10.60$ | $10.45$ | $10.00$ | $5.20$ | $1.00$ |
 
     ①根据上述数据，直接写出该运动员竖直高度的最大值，并求出满足的函数关系$y = a(x - h)^2 + k \, (a < 0)$；
 
@@ -1029,7 +1049,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-shijingshan-er-fig21.png
+  - path: figures/2023-shijingshan-er-fig21.png
+    width_mm: 73.3
+    height_mm: 74.9
 - id: 25
   type: 解答
   score: 6
@@ -1040,7 +1062,7 @@ questions:
     （1）求证：CF是$\odot\odot$的切线；
 
     （2）若$\tan \angle DCB = \frac{1}{2}$，$CF = 8$，求$\odot\odot$半径的长．'
-  answer: （1）见解析 （2）5
+  answer: （1）见解析    （2）5
   solution: '【小问1详解】
 
     证明：连接OC，如图所示：
@@ -1105,8 +1127,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2023-shijingshan-er-fig22.png
-  - figures/2023-shijingshan-er-fig23.png
+  - path: figures/2023-shijingshan-er-fig22.png
+    width_mm: 63.5
+    height_mm: 39.7
 - id: 26
   type: 解答
   score: 6
@@ -1167,9 +1190,6 @@ questions:
   difficulty: 压轴
   recommended_for:
   - L3
-  figures:
-  - figures/2023-shijingshan-er-fig24.png
-  - figures/2023-shijingshan-er-fig25.png
 - id: 27
   type: 解答
   score: 7
@@ -1235,8 +1255,9 @@ questions:
   recommended_for:
   - L3
   figures:
-  - figures/2023-shijingshan-er-fig26.png
-  - figures/2023-shijingshan-er-fig27.png
+  - path: figures/2023-shijingshan-er-fig26.png
+    width_mm: 68.5
+    height_mm: 31.5
 - id: 28
   type: 解答
   score: 7
@@ -1326,8 +1347,6 @@ questions:
   recommended_for:
   - L3
   figures:
-  - figures/2023-shijingshan-er-fig28.jpg
-  - figures/2023-shijingshan-er-fig29.jpg
-  - figures/2023-shijingshan-er-fig30.jpg
-  - figures/2023-shijingshan-er-fig31.jpg
-  - figures/2023-shijingshan-er-fig32.jpg
+  - path: figures/2023-shijingshan-er-fig28.jpg
+    width_mm: 81.2
+    height_mm: 68.5

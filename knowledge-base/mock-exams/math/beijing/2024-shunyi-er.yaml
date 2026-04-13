@@ -19,7 +19,13 @@ questions:
   score: 2
   question: '2024年5月3日，嫦娥六号探测器由长征五号遥八运载火箭在中国文昌航天发射场成功发射，将嫦娥六号探测器直接送入近地点高度约200公里，远地点高度约380000公里的预定地月转移轨道．将380000用科学记数法表示应为（）
 
-    A.$0.38\times10^{6}$B.$3.8\times10^{5}$C.$3.8\times10^{6}$D.$38\times10^{4}$'
+    A.$0.38\times10^{6}$
+
+    B.$3.8\times10^{5}$
+
+    C.$3.8\times10^{6}$
+
+    D.$38\times10^{4}$'
   answer: B
   solution: '解：$380000=3.8\times10^{5}$，
 
@@ -37,11 +43,15 @@ questions:
 - id: 2
   type: 选择
   score: 2
-  question: '下列几何体中，主视图是三角形的是（
+  question: '下列几何体中，主视图是三角形的是（    ）
 
-    ）
+    A.[图]
 
-    A.[图]B.[图]C.[图]D.[图]'
+    B.[图]
+
+    C.[图]
+
+    D.[图]'
   answer: A
   solution: '解：A、圆锥的主视图是三角形，故此选项符合题意；
 
@@ -62,10 +72,18 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-shunyi-er-fig02.png
-  - figures/2024-shunyi-er-fig03.png
-  - figures/2024-shunyi-er-fig04.png
-  - figures/2024-shunyi-er-fig05.png
+  - path: figures/2024-shunyi-er-fig02.png
+    width_mm: 25.9
+    height_mm: 31.0
+  - path: figures/2024-shunyi-er-fig03.png
+    width_mm: 26.2
+    height_mm: 31.5
+  - path: figures/2024-shunyi-er-fig04.png
+    width_mm: 30.2
+    height_mm: 29.1
+  - path: figures/2024-shunyi-er-fig05.png
+    width_mm: 27.3
+    height_mm: 31.0
 - id: 3
   type: 选择
   score: 2
@@ -73,7 +91,13 @@ questions:
 
     [图]
 
-    A.$-\sqrt{2}$B.$\sqrt{2}$C.$\sqrt{5}$D.$\pi$'
+    A.$-\sqrt{2}$
+
+    B.$\sqrt{2}$
+
+    C.$\sqrt{5}$
+
+    D.$\pi$'
   answer: B
   solution: '解：由数轴得：$1<a<2$，
 
@@ -92,13 +116,21 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-shunyi-er-fig06.png
+  - path: figures/2024-shunyi-er-fig06.png
+    width_mm: 55.6
+    height_mm: 13.8
 - id: 4
   type: 选择
   score: 2
   question: '一个不透明的袋子中装有3个白球和2个黄球，它们除颜色外无其他差别，从中随机摸出一个小球，摸到黄球的概率是（）
 
-    A.$\frac{2}{5}$B.$\frac{3}{5}$C.$\frac{2}{3}$D.$\frac{3}{4}$'
+    A.$\frac{2}{5}$
+
+    B.$\frac{3}{5}$
+
+    C.$\frac{2}{3}$
+
+    D.$\frac{3}{4}$'
   answer: A
   solution: '解：∵不透明的袋子里装有3个白球和2个黄球，
 
@@ -121,7 +153,13 @@ questions:
 
     [图]
 
-    A.$95^\circ$B.$100^\circ$C.$110^\circ$D.$145^\circ$'
+    A.$95^\circ$
+
+    B.$100^\circ$
+
+    C.$110^\circ$
+
+    D.$145^\circ$'
   answer: C
   solution: '解：∵$\angle AOC=\angle BOD=35^{\circ}$，
 
@@ -143,13 +181,21 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-shunyi-er-fig07.png
+  - path: figures/2024-shunyi-er-fig07.png
+    width_mm: 37.3
+    height_mm: 35.5
 - id: 6
   type: 选择
   score: 2
   question: '若$a<b<0,$则下列结论正确的是（）
 
-    A.$-a < -b$B.$a+1>b+1$C.$-a+1>-b+1$D.$2a > a + b$'
+    A.$-a < -b$
+
+    B.$a+1>b+1$
+
+    C.$-a+1>-b+1$
+
+    D.$2a > a + b$'
   answer: C
   solution: '解：∵$a<b<0,$
 
@@ -175,7 +221,13 @@ questions:
   score: 2
   question: '如果$m+n=1$，那么代数式$\left(1-\frac{m}{m-n}\right)\cdot\frac{m^{2}-n^{2}}{m}$的值为（）
 
-    A.$-1$B.1C.$-2$D.2'
+    A.$-1$
+
+    B.1
+
+    C.$-2$
+
+    D.2'
   answer: A
   solution: '∵$m+n=1$
 
@@ -209,7 +261,13 @@ questions:
 
     [图]
 
-    A.①③B.②③C.②D.①②③'
+    A.①③
+
+    B.②③
+
+    C.②
+
+    D.①②③'
   answer: B
   solution: '解：连接AD，
 
@@ -274,8 +332,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-shunyi-er-fig08.png
-  - figures/2024-shunyi-er-fig09.png
+  - path: figures/2024-shunyi-er-fig08.png
+    width_mm: 47.1
+    height_mm: 28.6
 - id: 9
   type: 填空
   score: 2
@@ -399,29 +458,11 @@ questions:
   score: 2
   question: '有甲、乙两支舞蹈队，两队都是5人，队员身高数据（单位：$\text{cm})$如下表所示：
 
-    甲
+    | 甲 | 167 | 168 | 168 | 168 | 169 |
 
-    167
+    | --- | --- | --- | --- | --- | --- |
 
-    168
-
-    168
-
-    168
-
-    169
-
-    乙
-
-    167
-
-    167
-
-    168
-
-    168
-
-    170
+    | 乙 | 167 | 167 | 168 | 168 | 170 |
 
     甲、乙两队身高数据的方差分别为$S_{\text{甲}}^{2}$，$S_{\mathbb{Z}}^{2}$，则$S_{\text{甲}}^{2}$______$S_{\mathbb{Z}}^{2}$（填“>”“<”或“＝”）．'
   answer: $\gt$
@@ -493,7 +534,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-shunyi-er-fig10.png
+  - path: figures/2024-shunyi-er-fig10.png
+    width_mm: 46.0
+    height_mm: 43.7
 - id: 15
   type: 填空
   score: 2
@@ -513,7 +556,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-shunyi-er-fig11.png
+  - path: figures/2024-shunyi-er-fig11.png
+    width_mm: 48.4
+    height_mm: 29.4
 - id: 16
   type: 填空
   score: 2
@@ -550,7 +595,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-shunyi-er-fig12.png
+  - path: figures/2024-shunyi-er-fig12.png
+    width_mm: 27.5
+    height_mm: 29.9
 - id: 17
   type: 解答
   score: 5
@@ -602,7 +649,7 @@ questions:
     （1）求证：方程总有两个不相等的实数根；
 
     （2）若方程的一个根是1，求k的值和方程的另一个根．'
-  answer: （1）见解析（2）$k = 3$，方程的另一个根是$-4$
+  answer: （1）见解析 （2）$k = 3$，方程的另一个根是$-4$
   solution: '【小问1详解】
 
     证明：$: a=1,b=6,c=-4,$
@@ -652,7 +699,7 @@ questions:
     （1）求证：四边形$ABCD$是矩形；
 
     （2）连接AC，若$\angle BCD = 60^\circ$，$CD = 1$，求AC的长．'
-  answer: （1）见解析（2）$AC = \sqrt{7}$
+  answer: （1）见解析 （2）$AC = \sqrt{7}$
   solution: '【小问1详解】
 
     证明：$\begin{array}{c}
@@ -735,8 +782,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-shunyi-er-fig13.png
-  - figures/2024-shunyi-er-fig14.png
+  - path: figures/2024-shunyi-er-fig13.png
+    width_mm: 48.4
+    height_mm: 36.8
 - id: 21
   type: 解答
   score: 5
@@ -762,7 +810,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-shunyi-er-fig15.png
+  - path: figures/2024-shunyi-er-fig15.png
+    width_mm: 74.9
+    height_mm: 96.3
 - id: 22
   type: 解答
   score: 5
@@ -802,8 +852,6 @@ questions:
   - L1
   - L2
   - L3
-  figures:
-  - figures/2024-shunyi-er-fig16.png
 - id: 23
   type: 解答
   score: 6
@@ -819,21 +867,13 @@ questions:
 
     c．男生、女生这一周体育锻炼时长的平均数、中位数如下：
 
-    平均数
+    |  | 平均数 | 中位数 |
 
-    中位数
+    | --- | --- | --- |
 
-    男生
+    | 男生 | 7.4 | m |
 
-    7.4
-
-    m
-
-    女生
-
-    7
-
-    6.8
+    | 女生 | 7 | 6.8 |
 
     根据以上信息，回答下列问题：
 
@@ -872,7 +912,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-shunyi-er-fig17.png
+  - path: figures/2024-shunyi-er-fig17.png
+    width_mm: 75.7
+    height_mm: 42.3
 - id: 24
   type: 解答
   score: 6
@@ -883,7 +925,7 @@ questions:
     （1）求证：$\angle DCF = \angle CDF$；
 
     （2）若D为BC的中点，$\odot\odot$的半径为5，$\cos\angle CDF=\frac{3}{5}$求CF的长．'
-  answer: （1）见解析（2）$CF = \frac{10}{3}$
+  answer: （1）见解析 （2）$CF = \frac{10}{3}$
   solution: '【小问1详解】
 
     证明：连接$OC.$
@@ -947,8 +989,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-shunyi-er-fig18.png
-  - figures/2024-shunyi-er-fig19.png
+  - path: figures/2024-shunyi-er-fig18.png
+    width_mm: 37.8
+    height_mm: 37.0
 - id: 25
   type: 解答
   score: 6
@@ -956,45 +999,11 @@ questions:
 
     某小组通过学习、查找文献，得到了夏至日正午中午12时，在北半球不同纬度的地方，$100cm$高的物体的影长和纬度的相关数据，记纬度为x（单位：度），影长为y（单位：cm），x与y的部分数据如下表：
 
-    x
+    | x | 0 | 5 | 15 | $23.5$ | 25 | 35 | 45 | 55 | 65 |
 
-    0
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
-    5
-
-    15
-
-    $23.5$
-
-    25
-
-    35
-
-    45
-
-    55
-
-    65
-
-    y
-
-    $43.5$
-
-    $33.4$
-
-    $15.0$
-
-    0
-
-    $2.6$
-
-    $20.3$
-
-    $39.4$
-
-    $61.3$
-
-    $88.5$
+    | y | $43.5$ | $33.4$ | $15.0$ | 0 | $2.6$ | $20.3$ | $39.4$ | $61.3$ | $88.5$ |
 
     （1）通过分析上表数据，发现可以用函数刻画纬度x和影长y之间的关系，在平面直角坐标系xOy中，画出此函数的图象；
 
@@ -1003,7 +1012,7 @@ questions:
     （2）北京地区位于大约北纬40度，在夏至日正午，$100cm$高的物体的影长约为______cm（精确到$0.1$）；
 
     （3）小红与小明是好朋友，他们生活在北半球不同纬度的地区，在夏至日正午，他们测量了$100cm$高的物体的影长均为$40cm$，那么他们生活的地区纬度差约是______度．'
-  answer: （1）见解析（2）$30,0$ （3）44
+  answer: （1）见解析 （2）$30,0$ （3）44
   solution: '【小问1详解】
 
     解：函数的图象如下：
@@ -1029,8 +1038,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-shunyi-er-fig20.png
-  - figures/2024-shunyi-er-fig21.png
+  - path: figures/2024-shunyi-er-fig20.png
+    width_mm: 62.4
+    height_mm: 62.2
 - id: 26
   type: 解答
   score: 6
@@ -1120,7 +1130,7 @@ questions:
     （2）求证：$BG=2DE$；
 
     （3）在射线BA上取点H（不与点G重合），使$AH = AG$．连接$CH、CF$，用等式表示线段CH与CF的数量关系，并证明．'
-  answer: （1）见解析（2）见解析 （3）$CH = CF$，证明见解析
+  answer: （1）见解析 （2）见解析 （3）$CH = CF$，证明见解析
   solution: '【小问1详解】
 
     解：补全图形如图：
@@ -1201,9 +1211,9 @@ questions:
   recommended_for:
   - L3
   figures:
-  - figures/2024-shunyi-er-fig22.png
-  - figures/2024-shunyi-er-fig23.png
-  - figures/2024-shunyi-er-fig24.png
+  - path: figures/2024-shunyi-er-fig22.png
+    width_mm: 33.9
+    height_mm: 34.1
 - id: 28
   type: 解答
   score: 7
@@ -1273,10 +1283,6 @@ questions:
   recommended_for:
   - L3
   figures:
-  - figures/2024-shunyi-er-fig25.png
-  - figures/2024-shunyi-er-fig26.png
-  - figures/2024-shunyi-er-fig27.png
-  - figures/2024-shunyi-er-fig28.png
-  - figures/2024-shunyi-er-fig29.png
-  - figures/2024-shunyi-er-fig30.png
-  - figures/2024-shunyi-er-fig31.png
+  - path: figures/2024-shunyi-er-fig25.png
+    width_mm: 65.9
+    height_mm: 48.4

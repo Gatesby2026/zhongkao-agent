@@ -19,7 +19,13 @@ questions:
   score: 2
   question: '下面几何体中，是圆锥的为（）
 
-    A.[图]B.[图]C.[图]D.[图]'
+    A.[图]
+
+    B.[图]
+
+    C.[图]
+
+    D.[图]'
   answer: D
   solution: '解：A选项为正方体，不合题意；
 
@@ -40,16 +46,30 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-daxing-yi-fig02.png
-  - figures/2024-daxing-yi-fig03.png
-  - figures/2024-daxing-yi-fig04.png
-  - figures/2024-daxing-yi-fig05.png
+  - path: figures/2024-daxing-yi-fig02.png
+    width_mm: 20.4
+    height_mm: 16.4
+  - path: figures/2024-daxing-yi-fig03.png
+    width_mm: 18.0
+    height_mm: 17.5
+  - path: figures/2024-daxing-yi-fig04.png
+    width_mm: 19.8
+    height_mm: 18.3
+  - path: figures/2024-daxing-yi-fig05.png
+    width_mm: 17.7
+    height_mm: 20.4
 - id: 2
   type: 选择
   score: 2
   question: '2024年是京津冀协同发展十周年，高标准建设雄安新区成效显著．从新区设立至2023年底，累计开发面积184平方公里，4017栋楼宇拔地而起，总建筑面积4370万平方米．将43700000用科学记数法表示应为（）
 
-    A.$43.7\times10^{6}$B.$4.37\times10^{7}$C.$4.37\times10^{8}$D.$0.437\times10^{9}$'
+    A.$43.7\times10^{6}$
+
+    B.$4.37\times10^{7}$
+
+    C.$4.37\times10^{8}$
+
+    D.$0.437\times10^{9}$'
   answer: B
   solution: '解：$43700000 =$$4.37\times10^{7}$，
 
@@ -68,7 +88,13 @@ questions:
   score: 2
   question: '五边形的内角和为（）
 
-    A.$180^\circ$B.$360^\circ$C.$540^\circ$D.$720^\circ$'
+    A.$180^\circ$
+
+    B.$360^\circ$
+
+    C.$540^\circ$
+
+    D.$720^\circ$'
   answer: C
   solution: '解：五边形的内角和为$(5-2)\times180^{\circ}=540^{\circ}$，
 
@@ -89,7 +115,13 @@ questions:
 
     [图]
 
-    A.$30^\circ$B.$60^\circ$C.$120^\circ$D.$150^\circ$'
+    A.$30^\circ$
+
+    B.$60^\circ$
+
+    C.$120^\circ$
+
+    D.$150^\circ$'
   answer: B
   solution: '解：∵$OE \perp AB$，
 
@@ -110,7 +142,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-daxing-yi-fig06.png
+  - path: figures/2024-daxing-yi-fig06.png
+    width_mm: 40.5
+    height_mm: 33.6
 - id: 5
   type: 选择
   score: 2
@@ -118,7 +152,13 @@ questions:
 
     [图]
 
-    A.$b-c>0$B.$ac > 0$C.$b+c<0$D.$ab<1$'
+    A.$b-c>0$
+
+    B.$ac > 0$
+
+    C.$b+c<0$
+
+    D.$ab<1$'
   answer: C
   solution: '解：由数轴可知，$-3 < a < -2 < b < -1 < 0 < c < 1$，
 
@@ -137,45 +177,33 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-daxing-yi-fig07.png
+  - path: figures/2024-daxing-yi-fig07.png
+    width_mm: 61.1
+    height_mm: 8.2
 - id: 6
   type: 选择
   score: 2
   question: '不透明的盒子中装有3个小球，每个小球上面写着一个汉字分别是“向”、“前”、“冲”，这3个小球除汉字外无其他差别，从中随机摸出一个小球，记录其汉字，放回并摇匀，再从中随机摸出一个小球，记录其汉字，则两次都摸到“冲”字的概率是（）
 
-    A.$\frac{2}{3}$B.$\frac{1}{3}$C.$\frac{1}{6}$D.$\frac{1}{9}$'
+    A.$\frac{2}{3}$
+
+    B.$\frac{1}{3}$
+
+    C.$\frac{1}{6}$
+
+    D.$\frac{1}{9}$'
   answer: D
   solution: '解：根据题意列表如下：
 
-    向
+    |  | 向 | 前 | 冲 |
 
-    前
+    | --- | --- | --- | --- |
 
-    冲
+    | 向 | 向，向 | 前，向 | 冲，向 |
 
-    向
+    | 前 | 向，前 | 前，前 | 前，冲 |
 
-    向，向
-
-    前，向
-
-    冲，向
-
-    前
-
-    向，前
-
-    前，前
-
-    前，冲
-
-    冲
-
-    向，冲
-
-    前，冲
-
-    冲，冲
+    | 冲 | 向，冲 | 前，冲 | 冲，冲 |
 
     共有9种等可能得情况，其中两次都摸到“冲”字的情况有1种，
 
@@ -197,7 +225,13 @@ questions:
   score: 2
   question: '若关于x的一元二次方程$x^{2}+2x-m=0$有两个不相等的实数根，则实数m的取值范围是（）
 
-    A.$m > -1$B.$m^{-1}$C.$m > 1$D.$m\ 1$'
+    A.$m > -1$
+
+    B.$m^{-1}$
+
+    C.$m > 1$
+
+    D.$m\ 1$'
   answer: A
   solution: '解：根据题意得$\Delta=2^{2}-4\times1\times(-m)>0$，
 
@@ -221,7 +255,13 @@ questions:
 
     [图]
 
-    A.①②B.①③C.②③D.①②③'
+    A.①②
+
+    B.①③
+
+    C.②③
+
+    D.①②③'
   answer: D
   solution: '解：∵$\angle BAC = 90^\circ$，$AD \perp BC$，
 
@@ -267,7 +307,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-daxing-yi-fig08.png
+  - path: figures/2024-daxing-yi-fig08.png
+    width_mm: 48.2
+    height_mm: 29.9
 - id: 9
   type: 填空
   score: 2
@@ -382,7 +424,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-daxing-yi-fig09.png
+  - path: figures/2024-daxing-yi-fig09.png
+    width_mm: 43.4
+    height_mm: 40.5
 - id: 14
   type: 填空
   score: 2
@@ -416,7 +460,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-daxing-yi-fig10.png
+  - path: figures/2024-daxing-yi-fig10.png
+    width_mm: 43.7
+    height_mm: 27.5
 - id: 15
   type: 填空
   score: 2
@@ -438,28 +484,20 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-daxing-yi-fig11.png
+  - path: figures/2024-daxing-yi-fig11.png
+    width_mm: 68.8
+    height_mm: 32.3
 - id: 16
   type: 填空
   score: 2
   question: '某公园门票价格如下表：某学校组织摄影、美术两个社团的学生游览该公园，两社团的人数分别为a和$b(a > b)$．若两社团分别以各自社团为单位购票，共需1560元；若两社团作为一个团体合在一起购票，共需1170元，那么这两个社团的人数为$a =$______，$b =$______．
 
-    购票人数
+    | 购票人数 | $1 \sim 40$ | $41 \sim 80$ | 80 以上 |
 
-    $1 \sim 40$
+    | --- | --- | --- | --- |
 
-    $41 \sim 80$
-
-    80以上
-
-    门票价格
-
-    20元$/$人
-
-    16元$/$人
-
-    13元$/$人'
-  answer: ①.60②.30
+    | 门票价格 | 20 元 $/$ 人 | 16 元 $/$ 人 | 13 元 $/$ 人 |'
+  answer: ①.60 ②.30
   solution: '解：∵1170不能整除16，
 
     ∴两个部门的人数$a+b\quad81$，
@@ -608,7 +646,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-daxing-yi-fig12.png
+  - path: figures/2024-daxing-yi-fig12.png
+    width_mm: 73.3
+    height_mm: 33.6
 - id: 21
   type: 解答
   score: 5
@@ -619,7 +659,7 @@ questions:
     （1）求证：四边形$AECF$是平行四边形；
 
     （2）若$\tan \angle BAE = \frac{2}{3}$，$DG = 9$，求线段CE的长．'
-  answer: （1）见解析（2）$CE = 2$
+  answer: （1）见解析 （2）$CE = 2$
   solution: '【小问1详解】
 
     证明：$\begin{array}{c}
@@ -703,8 +743,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-daxing-yi-fig13.png
-  - figures/2024-daxing-yi-fig14.png
+  - path: figures/2024-daxing-yi-fig13.png
+    width_mm: 24.1
+    height_mm: 30.7
 - id: 22
   type: 解答
   score: 5
@@ -712,33 +753,21 @@ questions:
 
     a．20块试验田每公顷产量的频数分布表如下：
 
-    每公顷产量$(t)$
+    | 每公顷产量 $(t)$ | 频数 |
 
-    频数
+    | --- | --- |
 
-    $7.40 \leq x < 7.45$
+    | $7.40 \leq x < 7.45$ | 3 |
 
-    3
+    | $7.45\leq x<7.50$ | 2 |
 
-    $7.45\leq x<7.50$
+    | $7.50 \leq x < 7.55$ | m |
 
-    2
+    | $7.55\leq x<7.60$ | 6 |
 
-    $7.50 \leq x < 7.55$
+    | $7.60 \leq x \leq 7.65$ | 5 |
 
-    m
-
-    $7.55\leq x<7.60$
-
-    6
-
-    $7.60 \leq x \leq 7.65$
-
-    5
-
-    b．试验田每公顷产量在$7.55\leq x<7.60$这一组的是：7.55
-
-    7.55  7.57  7.58  7.59  7.59
+    b．试验田每公顷产量在$7.55\leq x<7.60$这一组的是：7.55  7.55  7.57  7.58  7.59  7.59
 
     c．20块试验田每公顷产量的统计图如下：
 
@@ -755,7 +784,7 @@ questions:
     ②3号试验田每公顷产量在20块试验田的每公顷产量数据中从高到低排第5名．
 
     （4）$1 \sim 10$号试验田使用的是甲种种子，11~20号试验田使用的是乙种种子，已知甲、乙两种种子的每公顷产量的平均数分别为$7.537\pi$及$7.545t$，若某种种子在各试验田每公顷产量的10个数据的方差越小，则认为这种种子的产量越稳定．据此推断：甲、乙两种种子中，这个地区比较适合种植的种子是______（填“甲”或“乙”）．'
-  answer: （1）4（2）7.55 （3）①（4）乙
+  answer: （1）4（2）7.55 （3）① （4）乙
   solution: '【小问1详解】
 
     解：$m=20-3-2-6-5=4$
@@ -795,7 +824,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-daxing-yi-fig15.png
+  - path: figures/2024-daxing-yi-fig15.png
+    width_mm: 115.6
+    height_mm: 53.7
 - id: 23
   type: 解答
   score: 6
@@ -846,8 +877,6 @@ questions:
   recommended_for:
   - L2
   - L3
-  figures:
-  - figures/2024-daxing-yi-fig16.png
 - id: 24
   type: 解答
   score: 6
@@ -862,7 +891,7 @@ questions:
     ①当$OD = 2.6\,\text{m}$时，判断洒水车能否浇灌到整个绿化带，并说明理由；
 
     ②若洒水车能浇灌到整个绿化带，则OD的取值范围是______．'
-  answer: （1）②，①（2）①不能；理由见解析；②$2\leq OD\leq 2\sqrt{3}-1$
+  answer: （1）②，① （2）①不能；理由见解析；②$2\leq OD\leq 2\sqrt{3}-1$
   solution: '【小问1详解】
 
     解：由题意可知：$C(2,2)$，故设上边缘抛物线的函数解析式为：$y = a(x - 2)^2 + 2$，
@@ -931,7 +960,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-daxing-yi-fig17.png
+  - path: figures/2024-daxing-yi-fig17.png
+    width_mm: 145.5
+    height_mm: 121.4
 - id: 25
   type: 解答
   score: 6
@@ -1015,9 +1046,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-daxing-yi-fig18.png
-  - figures/2024-daxing-yi-fig19.png
-  - figures/2024-daxing-yi-fig20.png
+  - path: figures/2024-daxing-yi-fig18.png
+    width_mm: 36.2
+    height_mm: 36.0
 - id: 26
   type: 解答
   score: 6
@@ -1197,9 +1228,9 @@ questions:
   recommended_for:
   - L3
   figures:
-  - figures/2024-daxing-yi-fig21.png
-  - figures/2024-daxing-yi-fig22.png
-  - figures/2024-daxing-yi-fig23.png
+  - path: figures/2024-daxing-yi-fig21.png
+    width_mm: 41.5
+    height_mm: 27.5
 - id: 28
   type: 解答
   score: 7
@@ -1263,8 +1294,3 @@ questions:
   difficulty: 压轴
   recommended_for:
   - L3
-  figures:
-  - figures/2024-daxing-yi-fig24.png
-  - figures/2024-daxing-yi-fig25.png
-  - figures/2024-daxing-yi-fig26.png
-  - figures/2024-daxing-yi-fig27.png

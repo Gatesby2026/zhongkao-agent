@@ -17,11 +17,15 @@ questions:
 - id: 1
   type: 选择
   score: 2
-  question: '从水利部长江水利委员会获悉，截止2024年3月24日，南水北调中线一期工程自2014年12月全面通水以来，已累计调水700亿立方米．其中$70000000000$用科学记数法表示为（
+  question: '从水利部长江水利委员会获悉，截止2024年3月24日，南水北调中线一期工程自2014年12月全面通水以来，已累计调水700亿立方米．其中$70000000000$用科学记数法表示为（    ）
 
-    ）
+    A.$7\times10^{8}$
 
-    A.$7\times10^{8}$B.$7\times10^{9}$C.$7\times10^{10}$D.$7\times10^{11}$'
+    B.$7\times10^{9}$
+
+    C.$7\times10^{10}$
+
+    D.$7\times10^{11}$'
   answer: C
   solution: '解：$70000000000$$=7\times10^{10}$，
 
@@ -41,7 +45,13 @@ questions:
   score: 2
   question: '下列图形中，既是轴对称图形又是中心对称图形的是（）
 
-    A.[图]B.[图]C.[图]D.[图]'
+    A.[图]
+
+    B.[图]
+
+    C.[图]
+
+    D.[图]'
   answer: D
   solution: '解：A．是轴对称图形不是中心对称图形，故该选项不符合题意；
 
@@ -65,20 +75,32 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-pinggu-yi-fig02.png
-  - figures/2024-pinggu-yi-fig03.png
-  - figures/2024-pinggu-yi-fig04.png
-  - figures/2024-pinggu-yi-fig05.png
+  - path: figures/2024-pinggu-yi-fig02.png
+    width_mm: 20.1
+    height_mm: 18.8
+  - path: figures/2024-pinggu-yi-fig03.png
+    width_mm: 23.8
+    height_mm: 22.2
+  - path: figures/2024-pinggu-yi-fig04.png
+    width_mm: 24.3
+    height_mm: 23.8
+  - path: figures/2024-pinggu-yi-fig05.png
+    width_mm: 24.6
+    height_mm: 24.1
 - id: 3
   type: 选择
   score: 2
-  question: '如图，点C为直线AB上一点，$CD \perp CE$，若$\angle1=65^\circ$，则$\angle 2$的度数是（
-
-    ）
+  question: '如图，点C为直线AB上一点，$CD \perp CE$，若$\angle1=65^\circ$，则$\angle 2$的度数是（    ）
 
     [图]
 
-    A.$15^\circ$B.$25^\circ$C.$35^\circ$D.$65^\circ$'
+    A.$15^\circ$
+
+    B.$25^\circ$
+
+    C.$35^\circ$
+
+    D.$65^\circ$'
   answer: B
   solution: '解：$\begin{array}{c}
 
@@ -131,15 +153,21 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-pinggu-yi-fig06.png
+  - path: figures/2024-pinggu-yi-fig06.png
+    width_mm: 40.5
+    height_mm: 20.4
 - id: 4
   type: 选择
   score: 2
-  question: '已知$-1 < x < 0$，下列四个结论中，错误的是（
+  question: '已知$-1 < x < 0$，下列四个结论中，错误的是（    ）
 
-    ）
+    A.$\left| x \right| < 1$
 
-    A.$\left| x \right| < 1$B.$-x > 0$C.$-x>1$D.$x+1>0$'
+    B.$-x > 0$
+
+    C.$-x>1$
+
+    D.$x+1>0$'
   answer: C
   solution: '解：由题意得：$-1 < x < 0$，
 
@@ -167,7 +195,13 @@ questions:
   score: 2
   question: '正多边形每个内角都是120°，则它的边数为（）
 
-    A.5B.6C.7D.8'
+    A.5
+
+    B.6
+
+    C.7
+
+    D.8'
   answer: B
   solution: '解：设所求正多边形边数为n，
 
@@ -194,29 +228,25 @@ questions:
 - id: 6
   type: 选择
   score: 2
-  question: '先后两次抛掷同一枚质地均匀的硬币，则两次都是正面向上的概率是（
+  question: '先后两次抛掷同一枚质地均匀的硬币，则两次都是正面向上的概率是（    ）
 
-    ）
+    A.$\frac{1}{4}$
 
-    A.$\frac{1}{4}$B.$\frac{1}{3}$C.$\frac{1}{2}$D.$\frac{2}{3}$'
+    B.$\frac{1}{3}$
+
+    C.$\frac{1}{2}$
+
+    D.$\frac{2}{3}$'
   answer: A
   solution: '解：列表如下：
 
-    正
+    |  | 正 | 反 |
 
-    反
+    | --- | --- | --- |
 
-    正
+    | 正 | 正正 | 正反 |
 
-    正正
-
-    正反
-
-    反
-
-    反正
-
-    反反
+    | 反 | 反正 | 反反 |
 
     共有4种等可能的结果，其中两次都是正面向上的结果有1种，
 
@@ -244,13 +274,15 @@ questions:
 - id: 7
   type: 选择
   score: 2
-  question: '已知两组数据（1）$3005$，$3005$，$3003$，$3000$，$2994$；（2）$5$，$5$，$3$，$0$，$-6$．设第一组数据的平均值为$\overline{x_{1}}$，方差为$S_{1}^{2}$，设第二组数据的平均值为$\overline{x}_{2}$，方差为$s_{2}^{2}$，下列结论正确的是（
+  question: '已知两组数据（1）$3005$，$3005$，$3003$，$3000$，$2994$；（2）$5$，$5$，$3$，$0$，$-6$．设第一组数据的平均值为$\overline{x_{1}}$，方差为$S_{1}^{2}$，设第二组数据的平均值为$\overline{x}_{2}$，方差为$s_{2}^{2}$，下列结论正确的是（    ）
 
-    ）
+    A.$\overline{x}_{1}>\overline{x}_{2}$，$s_{1}^{2}<s_{2}^{2}$
 
-    A.$\overline{x}_{1}>\overline{x}_{2}$，$s_{1}^{2}<s_{2}^{2}$B.$\overline{x}_{1}>\overline{x}_{2}$，$s_{1}^{2}>s_{2}^{2}$
+    B.$\overline{x}_{1}>\overline{x}_{2}$，$s_{1}^{2}>s_{2}^{2}$
 
-    C.$\overline{x_{1}}=\overline{x_{2}}$，$s_{1}^{2}=s_{2}^{2}$D.$\overline{x}_{1}>\overline{x}_{2}$，$s_{1}^{2}=s_{2}^{2}$'
+    C.$\overline{x_{1}}=\overline{x_{2}}$，$s_{1}^{2}=s_{2}^{2}$
+
+    D.$\overline{x}_{1}>\overline{x}_{2}$，$s_{1}^{2}=s_{2}^{2}$'
   answer: D
   solution: '解：（1）的平均数为：$\frac{3005\times2+3003+3000+2994}{5}=3001.4$，
 
@@ -291,11 +323,15 @@ questions:
 
     ①$S_{1}=S_{2}$；②$DF=2AF$；③$S_{\text{扇形}OABCD}=\frac{9}{4}S+2S_{\triangle}$．
 
-    上述结论中，所有正确结论的序号是（
+    上述结论中，所有正确结论的序号是（    ）
 
-    ）
+    A.②
 
-    A.②B.①③C.②③D.①②③'
+    B.①③
+
+    C.②③
+
+    D.①②③'
   answer: C
   solution: '解：①$\begin{array}{c}
 
@@ -362,7 +398,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-pinggu-yi-fig07.png
+  - path: figures/2024-pinggu-yi-fig07.png
+    width_mm: 37.8
+    height_mm: 39.4
 - id: 9
   type: 填空
   score: 2
@@ -482,7 +520,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-pinggu-yi-fig08.png
+  - path: figures/2024-pinggu-yi-fig08.png
+    width_mm: 57.4
+    height_mm: 51.3
 - id: 14
   type: 填空
   score: 2
@@ -532,64 +572,26 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-pinggu-yi-fig09.png
+  - path: figures/2024-pinggu-yi-fig09.png
+    width_mm: 43.7
+    height_mm: 38.9
 - id: 16
   type: 填空
   score: 2
   question: '某工艺坊加工一件艺术品，完成该任务共需A，B，C，D，E，F六道工序，其中A，B是前期准备阶段，C，D，E是中期制作阶段，F为最后的扫尾阶段，三个阶段不能改变顺序，也不能同时进行，但各阶段内的几个工序可以同时进行，完成各道工序所需时间如下表所示：
 
-    阶段
+    | 阶段 | 准备阶段 | 中期制作阶段 | 扫尾阶段 |  |  |  |
 
-    准备阶段
+    | --- | --- | --- | --- | --- | --- | --- |
 
-    中期制作阶段
+    | 工序 | A | B | C | D | E | F |
 
-    扫尾阶段
+    | 所需时间 / 分钟 | $11$ | $15$ | $20$ | $17$ | $6$ | $3$ |
 
-    工序
-
-    A
-
-    B
-
-    C
-
-    D
-
-    E
-
-    F
-
-    所需时间/分钟
-
-    $11$
-
-    $15$
-
-    $20$
-
-    $17$
-
-    $6$
-
-    $3$
-
-    加工时间每缩短一分钟需要增加投入费用/元
-
-    $100$
-
-    $70$
-
-    $100$
-
-    $80$
-
-    $50$
-
-    不能缩短
+    | 加工时间每缩短一分钟需要增加投入费用 / 元 | $100$ | $70$ | $100$ | $80$ | $50$ | 不能缩短 |
 
     在不考虑其它因素的前提下，加工该件艺术品最少需要______分钟；现因情况有变，需将加工时间缩短到$30$分钟．每道工序加工时间每缩短一分钟需要增加投入费用如上表，则所增加的投入最少是______元．'
-  answer: ①.$38$②.$750$
+  answer: ①.$38$ ②.$750$
   solution: '解：$\begin{array}{c}
 
     \bullet \\
@@ -760,8 +762,6 @@ questions:
   - L1
   - L2
   - L3
-  figures:
-  - figures/2024-pinggu-yi-fig10.png
 - id: 22
   type: 解答
   score: 5
@@ -772,7 +772,7 @@ questions:
     （1）求证：四边形$ACEF$是平行四边形；
 
     （2）若$\angle B=30^{\circ}$，求证：四边形$ACEF$是菱形．'
-  answer: （1）见解析（2）见解析
+  answer: （1）见解析 （2）见解析
   solution: '【小问1详解】
 
     证明：∵点D、E分别是$BC、AB$边的中点，
@@ -810,7 +810,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-pinggu-yi-fig11.png
+  - path: figures/2024-pinggu-yi-fig11.png
+    width_mm: 42.9
+    height_mm: 38.4
 - id: 23
   type: 解答
   score: 6
@@ -821,7 +823,7 @@ questions:
     （1）求证：$\angle D=\angle OAD$；
 
     （2）若$BC = 4\sqrt{2}$，$\tan D = \frac{3}{4}$，求$\odot\odot$半径的长．'
-  answer: （1）见解析（2）20
+  answer: （1）见解析 （2）20
   solution: '【小问1详解】
 
     证明：连接OB，
@@ -889,79 +891,21 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-pinggu-yi-fig12.png
-  - figures/2024-pinggu-yi-fig13.png
-  - figures/2024-pinggu-yi-fig14.png
+  - path: figures/2024-pinggu-yi-fig12.png
+    width_mm: 33.6
+    height_mm: 34.9
 - id: 24
   type: 解答
   score: 6
   question: '光合作用是指在光的照射下，植物将二氧化碳和水转化为有机物，并产生氧气的过程，呼吸作用指的是植物将有机物和氧气分解成二氧化碳和水以维持植物生命所必要的过程，光合作用产氧速率与呼吸作用耗氧速率差距越大越利于有机物的积累，植物生长越快，水果的品质越好．下表是某农科院为了更好的指导果农种植草莓，在$0^\circ\mathrm{C}$至$50^\circ C$气温，水资源及光照充分的条件下，对温度对光合作用和呼吸作用的影响进行研究的相关数据：
 
-    温度（℃）
+    | 温度（℃） | $5$ | $10$ | $15$ | $20$ | $25$ | $30$ | $35$ | $40$ | $45$ | $50$ |
 
-    $5$
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
-    $10$
+    | 光合作用产氧速率（ $\mu\mathrm{mol}/\mathrm{m}^2\cdot\mathrm{s}$ ） | $0.02$ | $0.18$ | $0.30$ | $0.40$ | $0.58$ | $0.82$ | $1.42$ | $0.90$ | $0.40$ | $0.02$ |
 
-    $15$
-
-    $20$
-
-    $25$
-
-    $30$
-
-    $35$
-
-    $40$
-
-    $45$
-
-    $50$
-
-    光合作用产氧速率（$\mu\mathrm{mol}/\mathrm{m}^2\cdot\mathrm{s}$）
-
-    $0.02$
-
-    $0.18$
-
-    $0.30$
-
-    $0.40$
-
-    $0.58$
-
-    $0.82$
-
-    $1.42$
-
-    $0.90$
-
-    $0.40$
-
-    $0.02$
-
-    呼吸作用耗氧速率（$\mu\mathrm{mol}/\mathrm{m}^2\cdot\mathrm{s}$）
-
-    $0.03$
-
-    $0.10$
-
-    $0.15$
-
-    $0.20$
-
-    $0.28$
-
-    $0.37$
-
-    $0.42$
-
-    $0.60$
-
-    $0.82$
-
-    $0.60$
+    | 呼吸作用耗氧速率（ $\mu\mathrm{mol}/\mathrm{m}^2\cdot\mathrm{s}$ ） | $0.03$ | $0.10$ | $0.15$ | $0.20$ | $0.28$ | $0.37$ | $0.42$ | $0.60$ | $0.82$ | $0.60$ |
 
     （1）通过观察表格数据可以看出，若设温度为x，光合作用产氧速率、呼吸作用耗氧速率是这个自变量的函数；建立平面直角坐标系，描出表中各组数值所对应的点，下图中已经描出部分点，请补全其余点，并画出函数图象；
 
@@ -972,7 +916,7 @@ questions:
     ①最适合草莓生长的温度约为______℃；
 
     ②当温度约在什么范围内时，呼吸作用耗氧速率大于光合作用产氧速率，呼吸作用成为植物的主要活动，植物生长缓慢．'
-  answer: （1）见解析（2）①$35$；②$5\leq x<7$或$42<x\leq50$
+  answer: （1）见解析 （2）①$35$；②$5\leq x<7$或$42<x\leq50$
   solution: '【小问1详解】
 
     解：描点及图象如图所示：
@@ -992,8 +936,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-pinggu-yi-fig15.png
-  - figures/2024-pinggu-yi-fig16.png
+  - path: figures/2024-pinggu-yi-fig15.png
+    width_mm: 99.2
+    height_mm: 52.4
 - id: 25
   type: 解答
   score: 6
@@ -1005,55 +950,15 @@ questions:
 
     b．七年级参加活动的20名学生成绩的数据在$80 \leq x < 90$这一组的是：
 
-    84
-
-    85  85  86  86  88  89
+    84  85  85  86  86  88  89
 
     c．八年级参加活动的20名学生成绩的数据如下：
 
-    分数
+    | 分数 | 73 | 81 | 82 | 85 | 88 | 91 | 92 | 94 | 96 | 100 |
 
-    73
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
-    81
-
-    82
-
-    85
-
-    88
-
-    91
-
-    92
-
-    94
-
-    96
-
-    100
-
-    人数
-
-    1
-
-    3
-
-    2
-
-    3
-
-    1
-
-    3
-
-    1
-
-    4
-
-    1
-
-    1
+    | 人数 | 1 | 3 | 2 | 3 | 1 | 3 | 1 | 4 | 1 | 1 |
 
     根据以上信息，解答下列问题：
 
@@ -1062,7 +967,7 @@ questions:
     （2）七年级参加活动的20名学生成绩的数据的中位数是______；八年级参加活动的20名学生成绩的数据的众数是______；
 
     （3）已知七八两个年级各有300名学生参加这次活动，若85分（含85分）以上算作优秀，估计这两个年级共有多少人达到了优秀．'
-  answer: （1）见解析（2）88.5；94 （3）435
+  answer: （1）见解析 （2）88.5；94 （3）435
   solution: '【小问1详解】
 
     解：成绩为$70 \leq x < 80$的学生人数为$20-1-1-7-9=2$（人），
@@ -1091,8 +996,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2024-pinggu-yi-fig17.png
-  - figures/2024-pinggu-yi-fig18.png
+  - path: figures/2024-pinggu-yi-fig17.png
+    width_mm: 61.1
+    height_mm: 57.7
 - id: 26
   type: 解答
   score: 6
@@ -1144,9 +1050,6 @@ questions:
   difficulty: 压轴
   recommended_for:
   - L3
-  figures:
-  - figures/2024-pinggu-yi-fig19.png
-  - figures/2024-pinggu-yi-fig20.png
 - id: 27
   type: 解答
   score: 7
@@ -1159,12 +1062,12 @@ questions:
     （2）求证：$DH = BE$；
 
     （3）判断线段FD、HC与BE之间的数量关系，并证明．'
-  answer: （1）见解析（2）见解析 （3）$BE^{2}+HC=DF$，见解析
+  answer: （1）见解析 （2）见解析 （3）$BE^{2}+HC=DF$，见解析
   solution: '【小问1详解】
 
     解：补全图形如图所示．
 
-    [图]【小问2详解】
+    [图] 【小问2详解】
 
     证明：$\therefore DF$平分$\angle EDC$，
 
@@ -1216,7 +1119,7 @@ questions:
 
     $\angle BDE = 45^\circ$，
 
-    $\angle'
+    $\angl'
   knowledge_points:
   - 全等三角形
   - 勾股定理
@@ -1225,9 +1128,9 @@ questions:
   recommended_for:
   - L3
   figures:
-  - figures/2024-pinggu-yi-fig21.png
-  - figures/2024-pinggu-yi-fig22.png
-  - figures/2024-pinggu-yi-fig23.png
+  - path: figures/2024-pinggu-yi-fig21.png
+    width_mm: 52.7
+    height_mm: 30.7
 - id: 28
   type: 解答
   score: 7
@@ -1303,5 +1206,6 @@ questions:
   recommended_for:
   - L3
   figures:
-  - figures/2024-pinggu-yi-fig24.png
-  - figures/2024-pinggu-yi-fig25.png
+  - path: figures/2024-pinggu-yi-fig24.png
+    width_mm: 51.3
+    height_mm: 51.1

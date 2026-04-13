@@ -19,9 +19,13 @@ questions:
   score: 2
   question: '下列图形中，既是轴对称图形又是中心对称图形的是（）
 
-    A.[图]B.[图]
+    A.[图]
 
-    C.[图]D.[图]'
+    B.[图]
+
+    C.[图]
+
+    D.[图]'
   answer: C
   solution: '解：A、是轴对称图形，不是中心对称图形，不符合题意；
 
@@ -45,16 +49,30 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-fengtai-er-fig02.png
-  - figures/2025-fengtai-er-fig03.png
-  - figures/2025-fengtai-er-fig04.png
-  - figures/2025-fengtai-er-fig05.png
+  - path: figures/2025-fengtai-er-fig02.png
+    width_mm: 25.7
+    height_mm: 19.8
+  - path: figures/2025-fengtai-er-fig03.png
+    width_mm: 18.8
+    height_mm: 18.8
+  - path: figures/2025-fengtai-er-fig04.png
+    width_mm: 19.3
+    height_mm: 13.5
+  - path: figures/2025-fengtai-er-fig05.png
+    width_mm: 24.9
+    height_mm: 13.8
 - id: 2
   type: 选择
   score: 2
   question: '据2024年中国国土绿化状况公报显示，我国森林蓄积量超200亿立方米，森林覆盖率超$25\%$，将20000000000用科学记数法表示应为（）
 
-    A.$0.2\times10^{12}$B.$2\times10^{11}$C.$2\times10^{10}$D.$20\times10^{9}$'
+    A.$0.2\times10^{12}$
+
+    B.$2\times10^{11}$
+
+    C.$2\times10^{10}$
+
+    D.$20\times10^{9}$'
   answer: C
   solution: '解：$20000000000=2\times10^{10}$．
 
@@ -76,7 +94,13 @@ questions:
 
     [图]
 
-    A.$60^\circ$B.$50^\circ$C.$40^\circ$D.$30^\circ$'
+    A.$60^\circ$
+
+    B.$50^\circ$
+
+    C.$40^\circ$
+
+    D.$30^\circ$'
   answer: A
   solution: '解：∵点O在直线AB上，$\angle AOE=120^\circ$，
 
@@ -103,13 +127,21 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-fengtai-er-fig06.png
+  - path: figures/2025-fengtai-er-fig06.png
+    width_mm: 46.3
+    height_mm: 26.5
 - id: 4
   type: 选择
   score: 2
   question: '已知$a>b>0$，则下列结论正确的是（）
 
-    A.$-b < -a < 0$B.$-a < -b < 0$C.$a-b<0$D.$b-a<-a$'
+    A.$-b < -a < 0$
+
+    B.$-a < -b < 0$
+
+    C.$a-b<0$
+
+    D.$b-a<-a$'
   answer: B
   solution: '解：A选项：$\begin{array}{c}
 
@@ -150,7 +182,13 @@ questions:
   score: 2
   question: '若关于x的一元二次方程$x^{2}+6x+m=0$有两个相等的实数根，则实数m的值为（）
 
-    A.36B.9或$-9$C.$-9$D.9'
+    A.36
+
+    B.9或$-9$
+
+    C.$-9$
+
+    D.9'
   answer: D
   solution: '解：∵一元二次方程$x^{2}+6x+m=0$有两个相等的实数根，
 
@@ -174,7 +212,13 @@ questions:
   score: 2
   question: '不透明的袋子中装有红、绿小球各一个，除颜色外两个小球无其他差别，从中随机摸出一个小球，放回并摇匀，再从中随机摸出一个小球，那么第一次摸到红球、第二次摸到绿球的概率是（）
 
-    A.$\frac{1}{4}$B.$\frac{1}{3}$C.$\frac{1}{2}$D.$\frac{3}{4}$'
+    A.$\frac{1}{4}$
+
+    B.$\frac{1}{3}$
+
+    C.$\frac{1}{2}$
+
+    D.$\frac{3}{4}$'
   answer: A
   solution: '解：画树状图得：
 
@@ -195,8 +239,6 @@ questions:
   - L1
   - L2
   - L3
-  figures:
-  - figures/2025-fengtai-er-fig07.png
 - id: 7
   type: 选择
   score: 2
@@ -227,7 +269,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-fengtai-er-fig08.png
+  - path: figures/2025-fengtai-er-fig08.png
+    width_mm: 38.1
+    height_mm: 41.3
 - id: 8
   type: 选择
   score: 2
@@ -243,7 +287,13 @@ questions:
 
     [图]
 
-    A.①②B.①③C.②③D.①②③'
+    A.①②
+
+    B.①③
+
+    C.②③
+
+    D.①②③'
   answer: D
   solution: '解：如图，
 
@@ -312,10 +362,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-fengtai-er-fig09.png
-  - figures/2025-fengtai-er-fig10.png
-  - figures/2025-fengtai-er-fig11.png
-  - figures/2025-fengtai-er-fig12.png
+  - path: figures/2025-fengtai-er-fig09.png
+    width_mm: 36.5
+    height_mm: 37.8
 - id: 9
   type: 填空
   score: 2
@@ -420,29 +469,11 @@ questions:
   score: 2
   question: '某商场计划进某款运动服200件，了解了某段时间内销售的40件该款运动服的尺码，数据如下：
 
-    尺码
+    | 尺码 | M | L | XL | XXL | XXX |
 
-    M
+    | --- | --- | --- | --- | --- | --- |
 
-    L
-
-    XL
-
-    XXL
-
-    XXX
-
-    销售量/件
-
-    5
-
-    15
-
-    9
-
-    10
-
-    1
+    | 销售量 / 件 | 5 | 15 | 9 | 10 | 1 |
 
     根据以上数据，估计该商场进尺码需求最多的这款运动服的数量为______件．'
   answer: '75'
@@ -511,7 +542,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-fengtai-er-fig13.png
+  - path: figures/2025-fengtai-er-fig13.png
+    width_mm: 48.2
+    height_mm: 33.1
 - id: 15
   type: 填空
   score: 2
@@ -555,44 +588,24 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-fengtai-er-fig14.png
+  - path: figures/2025-fengtai-er-fig14.png
+    width_mm: 27.5
+    height_mm: 25.9
 - id: 16
   type: 填空
   score: 2
   question: '甲、乙两人需要把A、B、C、D四个零件进行加工，每个零件都需要先由甲进行粗加工，再由乙进行精加工，甲、乙两人在各自的工序中完成一个零件的加工后才能开始加工另一个零件．这四个零件两道工序所需的时间（单位：分钟）如下：
 
-    零件
+    | 零件 | A | B | C | D |
 
-    A
+    | --- | --- | --- | --- | --- |
 
-    B
+    | 粗加工 | 11 | 5 | 16 | 11 |
 
-    C
-
-    D
-
-    粗加工
-
-    11
-
-    5
-
-    16
-
-    11
-
-    精加工
-
-    8
-
-    2
-
-    11
-
-    12
+    | 精加工 | 8 | 2 | 11 | 12 |
 
     在不考虑其他因素的前提下，若甲按“$A-B-C-D$”的先后顺序加工零件，则四个零件全部完成粗加工和精加工至少需要______分钟；若使四个零件全部完成粗加工和精加工的时间最短，则甲按______的先后顺序加工零件．'
-  answer: ①.55②.“$D-C-A-B$”
+  answer: ①.55 ②.“$D-C-A-B$”
   solution: '解：若甲按“$A-B-C-D$”的先后顺序加工零件，则四个零件全部完成粗加工和精加工至少需要的时间为：
 
     $11+5\cdot16+11+12=55$（分钟）；
@@ -699,7 +712,7 @@ questions:
     （1）求证：四边形$AEFD$为菱形；
 
     （2）连接DE交AC于点G，若$DE=2$，$\sin \angle ACD = \frac{1}{4}$，求AF的长．'
-  answer: （1）见解析（2）$AF = \frac{2\sqrt{15}}{3}$
+  answer: （1）见解析 （2）$AF = \frac{2\sqrt{15}}{3}$
   solution: '【小问1详解】
 
     证明：∵E是AB的中点，F是对角线AC的中点，
@@ -757,8 +770,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-fengtai-er-fig15.png
-  - figures/2025-fengtai-er-fig16.png
+  - path: figures/2025-fengtai-er-fig15.png
+    width_mm: 40.5
+    height_mm: 32.8
 - id: 21
   type: 解答
   score: 5
@@ -839,9 +853,7 @@ questions:
 
     a．教师评分：
 
-    79
-
-    84  85  85  88  88  88  89  90  93
+    79  84  85  85  88  88  88  89  90  93
 
     b．学生评分的频数分布直方图如下（数据分成4组：第1组$60 \leq x < 70$，第2组$70 \leq x < 80$，第3组$80 \leq x < 90$，第4组$90 \leq x \leq 100$）：
 
@@ -849,27 +861,13 @@ questions:
 
     c．师生评分的平均数、中位数、众数如下：
 
-    平均数
+    |  | 平均数 | 中位数 | 众数 |
 
-    中位数
+    | --- | --- | --- | --- |
 
-    众数
+    | 教师 | 86.9 | 88 | m |
 
-    教师
-
-    86.9
-
-    88
-
-    m
-
-    学生
-
-    81.38
-
-    n
-
-    87
+    | 学生 | 81.38 | n | 87 |
 
     根据以上信息，回答下列问题：
 
@@ -879,33 +877,13 @@ questions:
 
     （2）学校邀请了四位家长对科技节的“活动丰富”与“学生参与”的满意度进行评分（百分制），评分如下：
 
-    家长1
+    |  | 家长 1 | 家长 2 | 家长 3 | 家长 4 |
 
-    家长2
+    | --- | --- | --- | --- | --- |
 
-    家长3
+    | 活动丰富 | 90 | 93 | 94 | 91 |
 
-    家长4
-
-    活动丰富
-
-    90
-
-    93
-
-    94
-
-    91
-
-    学生参与
-
-    91
-
-    91
-
-    93
-
-    k
+    | 学生参与 | 91 | 91 | 93 | k |
 
     记四位家长对“活动丰富”满意度评分的平均数、方差分别为$\overline{x_{1}}$，$S_{1}^{2}$对“学生参与”满意度评分的平均数、方差分别为$\overline{x}_{2}$，$s_{2}^{2}$，若$\overline{x}_{1} \leq \overline{x}_{2}$，$s_{1}^{2}>s_{2}^{2}$，则k（k为整数）的最大值为______．'
   answer: （1）①88，3；②平均数； （2）94
@@ -945,7 +923,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-fengtai-er-fig17.png
+  - path: figures/2025-fengtai-er-fig17.png
+    width_mm: 46.6
+    height_mm: 33.1
 - id: 24
   type: 解答
   score: 6
@@ -956,7 +936,7 @@ questions:
     （1）求证：$\angle CBD = \angle BAD$；
 
     （2）过点A的切线交DO延长线于点F．若$\tan \angle BAD = \frac{1}{2}$，$BC = 8$，求OF的长．'
-  answer: （1）见解析（2）$OF = \frac{25}{3}$
+  answer: （1）见解析 （2）$OF = \frac{25}{3}$
   solution: '【小问1详解】
 
     证明：∵$OD \perp BC$于点$E_{2}OD$是$\odot\odot$的半径，
@@ -1020,8 +1000,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-fengtai-er-fig18.png
-  - figures/2025-fengtai-er-fig19.png
+  - path: figures/2025-fengtai-er-fig18.png
+    width_mm: 32.3
+    height_mm: 29.6
 - id: 25
   type: 解答
   score: 6
@@ -1031,35 +1012,13 @@ questions:
 
     a．通过仪器测量，小组同学记录了水滴离开出水点后的运动时间为t（单位：S）时的多组数据，其中几组数据如下：
 
-    时间$t / s$
+    | 时间 $t / s$ | 0 | 0.10 | 0.20 | 0.30 |
 
-    0
+    | --- | --- | --- | --- | --- |
 
-    0.10
+    | 水平距离 $x / m$ | 0 | 0.10 | 0.20 | 0.30 |
 
-    0.20
-
-    0.30
-
-    水平距离$x / m$
-
-    0
-
-    0.10
-
-    0.20
-
-    0.30
-
-    竖直线高度$y/m$
-
-    h
-
-    0.75
-
-    0.60
-
-    0.35
+    | 竖直线高度 $y/m$ | h | 0.75 | 0.60 | 0.35 |
 
     b．小组同学通过学习知道，水滴运动时，水平距离x与时间t的关系为$x = vt$（$\nu$为水滴离开出水点时的速度，单位$\mathrm{m/s}$）
 
@@ -1070,7 +1029,7 @@ questions:
     （2）h的值是______，水滴从离开出水点到落在落地点，需要经过______S；
 
     （3）将如图2所示的一个高为$0.2m$的花盆放置在地面上，使花盆底面中心N在图1所示的x轴上，且$ON = 0.4\,\text{m}$．若该装置可以调节出水点的高度（出水管保持水平），要使水滴运动时恰好经过花盆顶端中心M（不考虑其他因素），则需要将出水点向______（填“上”或“下”）平移______m．'
-  answer: （1）1；（2）0.8，0.4； （3）上，0.2
+  answer: （1）1； （2）0.8，0.4； （3）上，0.2
   solution: '【小问1详解】
 
     解：由题意得，$v=0.1C+0.10=1$；
@@ -1132,7 +1091,9 @@ questions:
   - L2
   - L3
   figures:
-  - figures/2025-fengtai-er-fig20.png
+  - path: figures/2025-fengtai-er-fig20.png
+    width_mm: 97.9
+    height_mm: 49.7
 - id: 26
   type: 解答
   score: 6
@@ -1214,7 +1175,7 @@ questions:
     （1）如图1，当点E与点A重合时，求证：$AD \perp BC$；
 
     （2）如图2，当点E在$V_{ABC}$外部时，DE与AC交于点F，取CE中点P，连接AP、DP，直接写出$\angle APD$$[公式]$大小，并证明．'
-  answer: （1）见解析（2）$\angle APD$的大小为$90^\circ$，见解析
+  answer: （1）见解析 （2）$\angle APD$的大小为$90^\circ$，见解析
   solution: '【小问1详解】
 
     证明：由题意可知，$DB=DA$，$\angle BDA=180^{\circ}-\alpha$，
@@ -1288,8 +1249,9 @@ questions:
   recommended_for:
   - L3
   figures:
-  - figures/2025-fengtai-er-fig21.png
-  - figures/2025-fengtai-er-fig22.png
+  - path: figures/2025-fengtai-er-fig21.png
+    width_mm: 66.1
+    height_mm: 43.9
 - id: 28
   type: 解答
   score: 7
@@ -1355,8 +1317,6 @@ questions:
   recommended_for:
   - L3
   figures:
-  - figures/2025-fengtai-er-fig23.png
-  - figures/2025-fengtai-er-fig24.png
-  - figures/2025-fengtai-er-fig25.png
-  - figures/2025-fengtai-er-fig26.png
-  - figures/2025-fengtai-er-fig27.png
+  - path: figures/2025-fengtai-er-fig23.png
+    width_mm: 45.0
+    height_mm: 45.5
