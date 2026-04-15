@@ -1,0 +1,297 @@
+# ============================================================
+# 五三·全练版 英语 2026北京版 — 章节→知识库模块映射
+# ============================================================
+# 最后更新：2026-04-14
+# 数据来源：百度百科(5年中考3年模拟词条) + 公开目录交叉验证
+# 对应教辅：五三全练版·中考英语·北京专用（2026版）
+# 对应知识库模块：diagnostics/english/ 的 5 个 YAML 文件
+# ============================================================
+# 五三英语按语法专题（而非教材章节）编排，
+# 题目分★/★★/★★★三档难度。
+# 北京2024改革后英语增加"阅读还原"题型，
+# 对应五三的新专题"阅读还原（共2篇）"。
+#
+# 数据置信度说明：
+# - 基础章节结构：来自百度百科词条（2008-2009版），主体稳定
+# - ★★★难度题：2026版有新题，主体结构不变
+# - 北京版特有专题（如阅读还原）：2024改革后新增，目录源自网络公开信息
+# ============================================================
+
+book_info:
+  series_id: wusan-quanlian
+  subject: 英语
+  edition_year: 2026
+  region: 北京专用
+  publisher: 首都师范大学出版社
+  isbn: null  # 待确认
+  total_pages: "~300"
+  total_grammar_topics: 15
+  total_sections: 7
+  organization: 按语法专题编排（7大部分）
+  structure: "语法 → 完形 → 阅读 → 写作 → 词汇 → 交际"
+  data_confidence: medium
+  data_sources:
+    - "百度百科：5年中考3年模拟 完整目录（2008版）"
+    - "首都师范大学出版社产品信息"
+  last_verified: null
+
+# ============================================================
+#  编排结构（7大部分）
+# ============================================================
+# 五三英语全练版标准结构：
+# 第1部分 语法（15个专题）
+# 第2部分 完形填空
+# 第3部分 阅读理解
+# 第4部分 词汇运用
+# 第5部分 交际运用
+# 第6部分 改写和翻译句子
+# 第7部分 书面表达
+#
+# 注意：北京2024改革后新增"阅读还原"专题，
+# 可能位于阅读理解部分或单独成专题。
+# ============================================================
+
+sections:
+
+  # ==== 第1部分：语法 ====
+  - section_id: 1
+    section_name: 语法
+    kb_module: grammar
+    kb_module_name: 语法基础
+    topics:
+      - id: 1
+        name: 名词
+        key_points: [名词分类, 可数与不可数, 名词所有格, 名词变复数]
+        exam_weight: "每年必考，选择/完形"
+        difficulty: "★-★★★"
+        notes: "名词所有格是北京中考常考点"
+      - id: 2
+        name: 代词
+        key_points: [人称代词, 物主代词, 指示代词, 不定代词, 疑问代词]
+        exam_weight: "每年必考，选择/完形"
+        difficulty: "★-★★"
+      - id: 3
+        name: 冠词
+        key_points: [不定冠词a/an, 定冠词the, 零冠词]
+        exam_weight: "每年必考1题"
+        difficulty: "★-★★"
+        notes: "零冠词是难点，北京常考"
+      - id: 4
+        name: 数词
+        key_points: [基数词, 序数词, 年龄/日期/编号表达]
+        exam_weight: "中高频，选择/填空"
+        difficulty: "★-★★"
+      - id: 5
+        name: 介词
+        key_points: [时间介词, 地点介词, 介词短语]
+        exam_weight: "每年必考，选择/完形"
+        difficulty: "★-★★"
+      - id: 6
+        name: 连词
+        key_points: [并列连词, 从属连词, 状语从句引导词]
+        exam_weight: "每年必考，选择/完形"
+        difficulty: "★★-★★★"
+        notes: "复合句连词是难点"
+      - id: 7
+        name: 形容词
+        key_points: [形容词作定语/表语, 形容词比较级/最高级, 数量形容词]
+        exam_weight: "每年必考，选择/完形"
+        difficulty: "★-★★"
+      - id: 8
+        name: 副词
+        key_points: [副词作状语, 副词比较级/最高级, 频度副词]
+        exam_weight: "每年必考，选择/完形"
+        difficulty: "★★-★★★"
+      - id: 9
+        name: 动词分类和时态
+        key_points: [动词分类, 一般现在时, 现在进行时, 一般过去时, 一般将来时]
+        exam_weight: "每年必考，选择/完成句子"
+        difficulty: "★★-★★★"
+        notes: "8种时态是北京中考核心"
+      - id: 10
+        name: 动词被动语态
+        key_points: [一般现在时被动, 一般过去时被动, 一般将来时被动, 现在完成时被动]
+        exam_weight: "每年必考，选择/完成句子"
+        difficulty: "★★-★★★"
+      - id: 11
+        name: 情态动词
+        key_points: [can/may/must/have to, 推测用法, 被动语态组合]
+        exam_weight: "每年必考，选择/完形"
+        difficulty: "★★-★★★"
+      - id: 12
+        name: 非谓语动词
+        key_points: [不定式, 动名词, 分词（现在分词/过去分词）]
+        exam_weight: "高频，选择/完成句子"
+        difficulty: "★★★"
+        notes: "非谓语是英语最难专题之一"
+      - id: 13
+        name: 主谓一致
+        key_points: [语法一致原则, 就近原则, 意义一致原则]
+        exam_weight: "中高频，选择"
+        difficulty: "★★★"
+      - id: 14
+        name: 陈述句/感叹句/疑问句/祈使句
+        key_points: [陈述句结构, 感叹句what/how, 疑问词, 祈使句]
+        exam_weight: "基础，选择"
+        difficulty: "★-★★"
+      - id: 15
+        name: 并列句和复合句
+        key_points: [并列句, 宾语从句, 状语从句, 定语从句]
+        exam_weight: "每年必考，选择/完成句子"
+        difficulty: "★★★"
+        notes: "定语从句是北京中考高频难点"
+
+  # ==== 第2部分：完形填空 ====
+  - section_id: 2
+    section_name: 完形填空
+    kb_module: cloze
+    kb_module_name: 完形填空
+    topics:
+      - id: 16
+        name: 记叙文完形
+        key_points: [首句提示, 上下文线索, 固定搭配]
+        exam_weight: "每年必考1篇（10空）"
+        difficulty: "★★-★★★"
+        notes: "北京完形以记叙文为主，夹叙夹议"
+      - id: 17
+        name: 说明文/议论文完形
+        key_points: [逻辑关系词, 主题词复现, 情感色彩]
+        exam_weight: "偶考"
+        difficulty: "★★★"
+
+  # ==== 第3部分：阅读理解 ====
+  - section_id: 3
+    section_name: 阅读理解
+    kb_module: reading
+    kb_module_name: 阅读理解
+    topics:
+      - id: 18
+        name: 判断正误型阅读
+        key_points: [细节判断, 同义替换, 推理判断]
+        exam_weight: "每年必考，选择型"
+        difficulty: "★-★★"
+      - id: 19
+        name: 选择型阅读
+        key_points: [主旨大意, 推理判断, 词义猜测, 细节理解]
+        exam_weight: "每年必考2-3篇"
+        difficulty: "★★-★★★"
+        notes: "北京阅读理解文章较长（200-300词）"
+      - id: 20
+        name: 任务型阅读
+        key_points: [信息匹配, 标题匹配, 补全句子]
+        exam_weight: "高频"
+        difficulty: "★★-★★★"
+      - id: 21
+        name: 阅读还原（北京新增）
+        key_points: [上下文逻辑, 句子插入, 选项干扰]
+        exam_weight: "2024改革后新增，共2篇"
+        difficulty: "★★★"
+        notes: "2024北京中考新增题型，对标全国卷"
+
+  # ==== 第4部分：词汇运用 ====
+  - section_id: 4
+    section_name: 词汇运用
+    kb_module: vocabulary
+    kb_module_name: 词汇
+    topics:
+      - id: 22
+        name: 选词填空
+        key_points: [词性转换, 词语辨析, 固定搭配]
+        exam_weight: "每年必考，10空"
+        difficulty: "★★-★★★"
+
+  # ==== 第5部分：交际运用 ====
+  - section_id: 5
+    section_name: 交际运用
+    kb_module: communication
+    kb_module_name: 交际运用
+    topics:
+      - id: 23
+        name: 情景交际
+        key_points: [补全对话, 选句子, 回答问题]
+        exam_weight: "每年必考，选择+填空"
+        difficulty: "★-★★"
+
+  # ==== 第6部分：改写和翻译句子 ====
+  - section_id: 6
+    section_name: 句型转换与翻译
+    kb_module: writing-basics
+    kb_module_name: 写作基础
+    topics:
+      - id: 24
+        name: 句型转换
+        key_points: [合并句子, 改为否定/一般疑问句, 改为被动语态]
+        exam_weight: "中高频"
+        difficulty: "★★-★★★"
+      - id: 25
+        name: 翻译句子
+        key_points: [中译英, 英译中关键点]
+        exam_weight: "偶考（书面表达替代）"
+        difficulty: "★★-★★★"
+
+  # ==== 第7部分：书面表达 ====
+  - section_id: 7
+    section_name: 书面表达
+    kb_module: writing
+    kb_module_name: 写作
+    topics:
+      - id: 26
+        name: 应用文写作
+        key_points: [信件, 邮件, 通知, 发言稿]
+        exam_weight: "每年必考1篇（15分）"
+        difficulty: "★★-★★★"
+        notes: "北京2024改革后书面表达为应用文"
+      - id: 27
+        name: 记叙文写作
+        key_points: [人物描写, 事件叙述, 情感表达]
+        exam_weight: "偶考"
+        difficulty: "★★★"
+      - id: 28
+        name: 议论文写作
+        key_points: [观点表达, 论据展开, 结论总结]
+        exam_weight: "偶考"
+        difficulty: "★★★"
+
+# ============================================================
+#  与KB模块对应关系
+# ============================================================
+kb_module_mapping:
+  numbersAndExpressions: null  # 英语无此模块
+  grammar: "#第1部分 语法（15个专题）"
+  cloze: "#第2部分 完形填空"
+  reading: "#第3部分 阅读理解"
+  reading-reduction: "#第3部分 阅读理解→阅读还原（北京2024新增）"
+  vocabulary: "#第4部分 词汇运用"
+  communication: "#第5部分 交际运用"
+  writing-basics: "#第6部分 句型转换与翻译"
+  writing: "#第7部分 书面表达"
+
+# ============================================================
+#  备考建议
+# ============================================================
+usage_guide:
+  L0:
+    priority: "语法基础（专题1-8）+ 完形填空（专题16）"
+    skip: "非谓语/定语从句/阅读还原"
+    strategy: "先搞定选择和完形，写作暂时不碰"
+  L1:
+    priority: "全语法15专题 + 完形 + 选择型阅读"
+    skip: "任务型阅读/阅读还原"
+    strategy: "开始做阅读，写作先模仿"
+  L2:
+    priority: "全部专题 + 阅读还原 + 书面表达"
+    skip: null
+    strategy: "开始写应用文，每篇都要有老师批改"
+  L3:
+    priority: "高频难点：非谓语/定语从句/阅读还原 + 书面表达冲刺"
+    skip: null
+    strategy: "限时写作训练，冲击满分"
+
+# ============================================================
+#  数据质量标记
+# ============================================================
+data_confidence_notes: |
+  基础章节结构（★-★★难度）：置信度 高（百度百科2008版与2026版结构相同）
+  ★★★难题部分：置信度 中（2026版有新题，但结构不变）
+  阅读还原（北京新增）：置信度 低（2024改革后新增，公开信息有限）
+  建议：购买实体书2026北京版，对照核实专题顺序和页码
