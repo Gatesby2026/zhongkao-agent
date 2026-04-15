@@ -4,7 +4,6 @@
 # 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
 # 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
 # 满分：100分  时长：120分钟
-
 year: 2014
 district: 北京市
 exam_type: 真题
@@ -12,7 +11,7 @@ subject: 数学
 full_score: 100
 duration_minutes: 120
 total_questions: 20
-structure: 8选择(16分) + 8填空(16分) + 12解答(68分)
+structure: 6选择(12分) + 14填空(28分)
 questions:
 - id: 1
   type: 选择
@@ -550,3 +549,4 @@ questions:
   - path: figures/2014-beijing-zhenti-fig23.png
     width_mm: 151.3
     height_mm: 215.9
+data_quality_note: 2014年北京中考改革前格式，与现行（2021+）8+8+12结构不同。当前录入仅含选择题和部分填空题（共20题，40分），解答题部分缺失，疑似原docx录入不完整或格式未被解析器识别。参考价值有限，仅供历史分析。

@@ -4,7 +4,6 @@
 # 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
 # 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
 # 满分：100分  时长：120分钟
-
 year: 2024
 district: 西城区
 exam_type: 三模
@@ -12,28 +11,14 @@ subject: 数学
 full_score: 100
 duration_minutes: 120
 total_questions: 25
-structure: 8选择(16分) + 8填空(16分) + 12解答(68分)
+structure: 8选择(16分) + 8填空(16分) + 9解答(48分)
 questions:
 - id: 1
   type: 选择
   score: 2
-  question: '如图是某几何体的展开图，该几何体是（　　）
-
-    [图]
-
-    A.圆柱
-
-    B.圆锥
-
-    C.三棱柱
-
-    D.正方体'
+  question: "如图是某几何体的展开图，该几何体是（　　）\nA. 圆柱\tB. 圆锥\tC. 三棱柱\tD. 正方体"
   answer: A
-  solution: '解：∵圆柱的展开图为两个圆和一个长方形，
-
-    ∴展开图可得此几何体为圆柱．
-
-    故选：A．'
+  solution: 解：∵圆柱的展开图为两个圆和一个长方形，
   knowledge_points:
   - 综合
   module: circles
@@ -43,30 +28,17 @@ questions:
   - L1
   - L2
   - L3
-  figures:
-  - path: figures/2024-xicheng-san-fig02.png
-    width_mm: 31.0
-    height_mm: 31.8
 - id: 2
   type: 选择
   score: 2
-  question: '北京大力推动光通信技术发展应用，打造全市1毫秒、环京2毫秒、京津冀3毫秒时延圈，其中光传导工具是光纤，一种多模光纤芯的直径是0.0000625米，将0.0000625用科学记数法表示为（）
-
-    A.$6.25\times10^{-7}$
-
-    B.$62.5\times10^{-6}$
-
-    C.$6.25\times10^{-5}$
-
-    D.$0.625\times10^{-4}$'
+  question: "北京大力推动光通信技术发展应用，打造全市1毫秒、环京2毫秒、京津冀3毫秒时延圈，其中光传导工具是光纤，一种多模光纤芯的直径是0.0000625米，将0.0000625用科学记数法表示为（    ）\nA. \tB. \tC. \tD."
   answer: C
-  solution: '解：0.0000625用科学记数法表示为$6.25\times10^{-5}$，
+  solution: '解：0.0000625用科学记数法表示为，
 
     故选C．'
   knowledge_points:
-  - 科学记数法
-  - 绝对值
-  module: numbersAndExpressions
+  - 综合
+  module: geometryComprehensive
   difficulty: 基础
   recommended_for:
   - L0
@@ -76,117 +48,65 @@ questions:
 - id: 3
   type: 选择
   score: 2
-  question: '如图，A，B两点在数轴上表示的数分别是a，b，下列结论中正确的是（    ）
-
-    [图]
-
-    A.$ab > 0$
-
-    B.$a+b>0$
-
-    C.$\left|b\right|>\left|a\right|$
-
-    D.$b-a>0$'
+  question: "如图，A，B两点在数轴上表示的数分别是a，b，下列结论中正确的是（    ）\nA. \tB. \tC. \tD."
   answer: B
-  solution: '解：由数轴知：$-1 < b < 0 < 1 < a$，
+  solution: '解：由数轴知：，
 
-    ∴$ab < 0$，$a+b>0$，$|b| < |a|$，$b-a<0$，
+    ∴，，，，
 
     故选：B．'
   knowledge_points:
-  - 绝对值
-  module: numbersAndExpressions
+  - 综合
+  module: geometryComprehensive
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
-  figures:
-  - path: figures/2024-xicheng-san-fig03.png
-    width_mm: 65.9
-    height_mm: 9.3
 - id: 4
   type: 选择
   score: 2
-  question: '如图，$AB \parallel CD$，$BC \parallel EF$，ED平分$\angle AEF$，若$\angle C=50^{\circ}$，则$\angle D$的度数为（）
-
-    [图]
-
-    A.$40^\circ$
-
-    B.$50^\circ$
-
-    C.$55^\circ$
-
-    D.$65^\circ$'
+  question: "如图，，，平分，若，则的度数为（    ）\nA. \tB. \tC. \tD."
   answer: D
-  solution: '解：∵$BC \parallel EF$，$\angle C=50^{\circ}$，
+  solution: '解：∵，，
 
-    ∴$\angle EFD=\angle C=50^{\circ}$，
+    ∴，
 
-    ∵$AB \parallel CD$，
+    ∵，
 
-    ∴$\angle AEF=180^{\circ}-\angle EFD=130^{\circ}$，
+    ∴，
 
-    ∵ED平分$\angle AEF$，
+    ∵平分，
 
-    ∴$\angle AED=\frac{1}{2}\angle AEF=65^\circ$，
+    ∴，
 
-    ∵$AB \parallel CD$，
+    ∵，
 
-    ∴$\angle D=\angle AED=65^\circ$
+    ∴
 
     故选：D'
   knowledge_points:
-  - 平行线
-  module: triangles
+  - 综合
+  module: geometryComprehensive
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
-  figures:
-  - path: figures/2024-xicheng-san-fig04.png
-    width_mm: 38.6
-    height_mm: 29.1
 - id: 5
   type: 选择
   score: 2
-  question: '一组数据的方差为$S_{1}^{2}$，将这组数据中的每一个数都减去$m(m>0)$，得到一组新数据，其方差为$s_{2}^{2}$，则$S_{1}^{2}$与$s_{2}^{2}$的大小关系是（）
-
-    A.$s_{1}^{2}>s_{2}^{2}$
-
-    B.$s_{1}^{2}=s_{2}^{2}$
-
-    C.$s_{1}^{2}<s_{2}^{2}$
-
-    D.无法确定'
+  question: "一组数据的方差为，将这组数据中的每一个数都减去，得到一组新数据，其方差为，则与的大小关系是（    ）\nA. \tB. \tC. \tD. 无法确定"
   answer: B
-  solution: '解：$\begin{array}{c}
+  solution: '解：一组数据中的每一个数据都加上（或都减去）同一个常数后，它的平均数都加上（或都减去）这一个常数，方差不变，
 
-    \bullet \\
-
-    \bullet \quad \bullet \\
-
-    \bullet
-
-    \end{array}$一组数据中的每一个数据都加上（或都减去）同一个常数后，它的平均数都加上（或都减去）这一个常数，方差不变，
-
-    $\begin{tikzpicture}
-
-    \fill (0,0) circle (2pt);
-
-    \fill (-1,-1) circle (2pt);
-
-    \fill (1,-1) circle (2pt);
-
-    \end{tikzpicture}$$s_{1}^{2}=s_{2}^{2}$，
+    ，
 
     故选：B．'
   knowledge_points:
-  - 方差
+  - 综合
   module: statisticsAndProbability
   difficulty: 基础
   recommended_for:
@@ -197,25 +117,16 @@ questions:
 - id: 6
   type: 选择
   score: 2
-  question: '若关于x的一元二次方程$x^{2}-4x+2a=0$有两个相等的实数根、则实数a的值为（    ）
-
-    A.3
-
-    B.2
-
-    C.0
-
-    D.$-1$'
+  question: "若关于的一元二次方程有两个相等的实数根、则实数的值为（    ）\nA. 3\tB. 2\tC. 0\tD."
   answer: B
-  solution: '解：根据题意得，$\Delta=(-4)^{2}-4\times2a=0$，
+  solution: '解：根据题意得，，
 
-    解得，$a = 2$，
+    解得，，
 
-    故选：B．'
+    故选：B ．'
   knowledge_points:
-  - 一元二次方程
-  - 根的判别式
-  module: equationsAndInequalities
+  - 综合
+  module: numbersAndExpressions
   difficulty: 中档
   recommended_for:
   - L1
@@ -224,26 +135,15 @@ questions:
 - id: 7
   type: 选择
   score: 2
-  question: '不透明的袋子中有红，黄，绿三个小球，这三个小球除颜色外无其他差别．从中随机摸出一个小球，放回并摇匀，再从中随机摸出一个小球，两次摸出的小球的颜色相同的概率是（）
-
-    A.$\frac{1}{9}$
-
-    B.$\frac{1}{3}$
-
-    C.$\frac{1}{2}$
-
-    D.$\frac{2}{3}$'
+  question: "不透明的袋子中有红，黄，绿三个小球，这三个小球除颜色外无其他差别．从中随机摸出一个小球，放回并摇匀，再从中随机摸出一个小球，两次摸出的小球的颜色相同的概率是（    ）\nA. \tB. \tC. \tD."
   answer: B
   solution: '解：根据题意画出树状图如下：
 
-    [图]
-
-    共有9种等可能的结果，其中两次摸出的小球的颜色相同的有3种，则两次摸出的小球的颜色相同的概率是$\frac{3}{9}=\frac{1}{3}$．
+    共有9种等可能的结果，其中两次摸出的小球的颜色相同的有3种，则两次摸出的小球的颜色相同的概率是．
 
     故选B．'
   knowledge_points:
-  - 概率
-  - 树状图
+  - 综合
   module: statisticsAndProbability
   difficulty: 中档
   recommended_for:
@@ -253,84 +153,66 @@ questions:
 - id: 8
   type: 选择
   score: 2
-  question: '如图1，在菱形$ABCD$中，$\angle B=60^{\circ}$，P是菱形内部一点，动点M从顶点B出发，沿线段BP运动到点P，再沿线段PA运动到顶点A，停止运动．设点M运动的路程为x，$\frac{MA}{MC}=y$，表示y与x的函数关系的图象如图2所示，则菱形$ABCD$的边长是（）
-
-    [图]
-
-    A.$4\sqrt{3}$
-
-    B.4
-
-    C.$2\sqrt{3}$
-
-    D.2'
+  question: "如图1，在菱形中，，P是菱形内部一点，动点M从顶点B出发，沿线段运动到点P，再沿线段运动到顶点A，停止运动．设点M运动的路程为x，，表示y与x的函数关系的图象如图2所示，则菱形的边长是（    ）\nA. \tB. 4\tC. \tD. 2"
   answer: C
   solution: '如图所示，
 
-    [图]
-
     由图象可得，
 
-    当x从0到4时，$\frac{MA}{MC}-y=1$
+    当x从0到4时，
 
-    ∴$MA = MC$
+    ∴
 
-    ∵四边形$ABCD$是菱形
+    ∵四边形是菱形
 
-    ∴点P在对角线BD上
+    ∴点P在对角线上
 
-    ∴由图象可得，$BP = 4$，$BP+AP=6$
+    ∴由图象可得，，
 
-    ∴$AP = 2$
+    ∴
 
-    ∵在菱形$ABCD$中，$\angle B=60^{\circ}$，
+    ∵在菱形中，，
 
-    ∴$\angle ABD = 30^\circ$，$AC \perp BD$
+    ∴，
 
-    ∴设$AO = x$，则$AB = 2AO = 2x$
+    ∴设，则
 
-    ∴$PO = BP - BO = 4 - \sqrt{3}x$
+    ∴
 
-    ∴$BO=\sqrt{AB^{2}-AO^{2}}=\sqrt{3}x$
+    ∴
 
-    ∴在$Rt\triangle APO$中，$AP^{2}=AO^{2}+PO^{2}$
+    ∴在中，
 
-    ∴$2^{x}=x^{2}+(4-\sqrt{3}x)^{2}$
+    ∴
 
-    解得$x = \sqrt{3}$，负值舍去
+    解得，负值舍去
 
-    ∴$AB = 2x = 2\sqrt{3}$
+    ∴
 
-    ∴菱形$ABCD$的边长是$2\sqrt{3}$．
+    ∴菱形的边长是．
 
     故选：C．'
   knowledge_points:
-  - 勾股定理
-  - 菱形
-  - 动点
-  module: triangles
+  - 综合
+  module: functions
   difficulty: 较难
   recommended_for:
   - L2
   - L3
-  figures:
-  - path: figures/2024-xicheng-san-fig06.png
-    width_mm: 102.4
-    height_mm: 38.4
 - id: 9
   type: 填空
   score: 2
-  question: 若代数式$\frac{3}{x-4}$有意义，则实数x的取值范围是____________．
-  answer: $x \neq 4$
-  solution: '∵代数式$\frac{3}{x-4}$有意义，
+  question: 若代数式有意义，则实数x的取值范围是____________．
+  answer: ''
+  solution: '∵代数式有意义，
 
-    ∴$x-4\neq0$
+    ∴
 
-    ∴$x \neq 4$．
+    ∴．
 
-    故答案为：$x \neq 4$．'
+    故答案为：．'
   knowledge_points:
-  - 不等式
+  - 综合
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -351,8 +233,8 @@ questions:
 
     故答案为a（x+2y）（x﹣2y）.'
   knowledge_points:
-  - 方差
-  module: statisticsAndProbability
+  - 综合
+  module: geometryComprehensive
   difficulty: 基础
   recommended_for:
   - L0
@@ -362,57 +244,25 @@ questions:
 - id: 11
   type: 填空
   score: 2
-  question: '方程组$\begin{cases}
+  question: 方程组的解为____________．
+  answer: ''
+  solution: '解：，
 
-    2x + y = -3 \\
+    得，，
 
-    x - 2y = 1
+    ，
 
-    \end{cases}$的解为____________．'
-  answer: $\left\{ \begin{array} { l } { x = - 1 , } \\ { y = - 1 } \end{array} \right.$
-  solution: '解：$\begin{cases}
+    ，
 
-    2x + y = -3 \text{①} \\
+    把代入①得，，
 
-    x - 2y = 1 \text{②}
+    ，
 
-    \end{cases}$，
+    ∴原方程组的解为，
 
-    $\textcircled{1}\times 2+\textcircled{2}$得，$2(2x+y)+x-2y=-6+1$，
-
-    $5x = -5$，
-
-    $x = -1$，
-
-    把$x = -1$代入①得，$2x(-1)+y=-3$，
-
-    $y=-1$，
-
-    ∴原方程组的解为$\left\{
-
-    \begin{array}{l}
-
-    x = -1 \\
-
-    y = -1
-
-    \end{array}
-
-    \right.$，
-
-    故答案为：$\left\{
-
-    \begin{array}{l}
-
-    x = -1 \\
-
-    y = -1
-
-    \end{array}
-
-    \right.$．'
+    故答案为： ．'
   knowledge_points:
-  - 二元一次方程组
+  - 综合
   module: equationsAndInequalities
   difficulty: 基础
   recommended_for:
@@ -423,22 +273,21 @@ questions:
 - id: 12
   type: 填空
   score: 2
-  question: 在平面直角坐标系xOy中，若点$A(3,y_{1})$和$B(2,y_{2})$在反比例函数$y=\frac{k}{x}(k<0)$的图象上，则$y_{1}$______$y_{2}$（填“$\gt$”“$=$”或“$\gt$”）．
-  answer: $\gt$
-  solution: '解：∵$k < 0$，
+  question: 在平面直角坐标系中，若点和在反比例函数的图象上，则______（填“”“”或“”）．
+  answer: ''
+  solution: '解：∵，
 
-    ∴反比例函数$y=\frac{k}{x}(k<0)$的图象在二、四象限，
+    ∴反比例函数的图象在二、四象限，
 
-    ∵$3>2>0$，
+    ∵，
 
-    ∴点$A(3,y_{1})$，$B(2,y_{2})$在第四象限，y随x的增大而增大，
+    ∴点，在第四象限，y随x的增大而增大，
 
-    ∴$y_{1}>y_{2}$．
+    ∴．
 
-    故答案$[公式]$：$\gt$．'
+    故答案：．'
   knowledge_points:
-  - 反比例函数
-  - 坐标系
+  - 综合
   module: functions
   difficulty: 基础
   recommended_for:
@@ -458,7 +307,7 @@ questions:
     故答案为：6．'
   knowledge_points:
   - 综合
-  module: triangles
+  module: geometryComprehensive
   difficulty: 中档
   recommended_for:
   - L1
@@ -467,141 +316,169 @@ questions:
 - id: 14
   type: 填空
   score: 2
-  question: '如图，在$Y_{ABCD}$中，E是AD上一点，$\frac{AE}{ED}=\frac{3}{2}$，BE的延长线与CD的延长线相交于点F，若$AB = 6$，则CF的长为____________．
-
-    [图]'
+  question: 如图，在中，E是上一点，，的延长线与的延长线相交于点F，若，则的长为____________．
   answer: '10'
-  solution: '解：$\begin{array}{c}
+  solution: '解：四边形是平行四边形，，
 
-    \bullet \\
+    ，
 
-    \bullet \quad \bullet \\
+    ，
 
-    \bullet
+    ，
 
-    \end{array}$四边形$ABCD$是平行四边形，$AB = 6$，
+    ，
 
-    $\because AB \parallel DC,\ AB = DC = 6$，
+    ，
 
-    $\triangle ABE \sim \triangle DFE$，
-
-    $\frac{AE}{ED}=\frac{3}{2},\frac{AB}{DF}$，
-
-    $\because AB=6$，
-
-    $\therefore DF = 4$，
-
-    $CF=6+4=10$．
+    ．
 
     故答案为：10．'
   knowledge_points:
-  - 相似三角形
-  - 平行四边形
-  module: triangles
+  - 综合
+  module: geometryComprehensive
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
-  figures:
-  - path: figures/2024-xicheng-san-fig08.png
-    width_mm: 35.7
-    height_mm: 27.5
 - id: 15
   type: 填空
   score: 2
-  question: '如图，在$\triangle ABC$中，$\angle ACB=90^\circ$．
+  question: '如图，在中，．
 
-    ①以点A为圆心，适当长为半径画弧，分别与AC，AB相交于点$M_{1}$，$M_{2}$；分别以$M_{1}$，$M_{2}$为圆心，大于$\frac{1}{2}M_{1}M_{2}$的长为半径画弧，两弧相交于点M；作射线AM．
+    ①以点A为圆心，适当长为半径画弧，分别与，相交于点，；分别以，为圆心，大于的长为半径画弧，两弧相交于点M；作射线．
 
-    ②以点B为圆心，适当长为半径画弧，分别与BC，AB相交于点$N_1$，$N_{2}$；分别以$N_1$，$N_{2}$为圆心，大于$\frac{1}{2}N_{1}N_{2}$的长为半径画弧，两弧相交于点N；作射线BN，与射线AM相交于点P．
+    ②以点B为圆心，适当长为半径画弧，分别与，相交于点，；分别以，为圆心，大于的长为半径画弧，两弧相交于点N；作射线，与射线相交于点P．
 
-    ③连接CP．
+    ③连接．
 
-    根据以上作图，若点P到直线AB的距离为1，则线段CP的长为____________．
+    根据以上作图，若点P到直线的距离为1，则线段的长为____________．'
+  answer: ''
+  solution: '解：作，垂足分别是D、E、F，
 
-    [图]'
-  answer: $\sqrt{2}$
-  solution: '解：作$PD \perp CB, PE \perp AC, PF \perp AB$，垂足分别是D、E、F，
+    由题意得：平分，平分，点P到直线的距离为1，
 
-    [图]
+    ，
 
-    由题意得：AP平分$\angle CAB$，BP平分$\angle ABC$，点P到直线AB的距离为1，
+    ，
 
-    $PD=PE=PF=$，
+    四边形为矩形，
 
-    $\angle ACB = \angle PED = \angle PDE = 90^\circ$，
+    ，
 
-    $\begin{tikzpicture}
+    四边形为正方形，
 
-    \fill (0,0) circle (2pt);
+    ，
 
-    \fill (-1,-1) circle (2pt);
+    ，
 
-    \fill (1,-1) circle (2pt);
-
-    \end{tikzpicture}$四边形$PECD$为矩形，
-
-    $\because PD=PE=1$，
-
-    $\begin{tikzpicture}
-
-    \fill (0,0) circle (2pt);
-
-    \fill (-1,-1) circle (2pt);
-
-    \fill (1,-1) circle (2pt);
-
-    \end{tikzpicture}$四边形$PECD$为正方形，
-
-    $\cdots CD=PD=1$，
-
-    $\cdot CP = \sqrt{1^{2} + 1^{2}} = \sqrt{2}$，
-
-    故答案为：$\sqrt{2}$．'
+    故答案为：．'
   knowledge_points:
-  - 勾股定理
-  - 正方形
-  module: triangles
+  - 综合
+  module: circles
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
-  figures:
-  - path: figures/2024-xicheng-san-fig09.png
-    width_mm: 47.4
-    height_mm: 36.2
 - id: 16
   type: 填空
   score: 2
   question: 甲、乙、丙、丁4名同学参加中学生天文知识竞赛，成绩各不相同，根据成绩决出第1名到第4名的名次．甲和乙去询问名次，老师对甲说：“很遗憾，你和乙都不是第1名．”对乙说：“你不是第4名．”从这两个回答分析，4个人的名次排列可能有______种不同情况，其中甲是第4名有______种可能情况．
-  answer: ①.8 ②.4
+  answer: ①. 8    ②. 4
   solution: '解：依题意，甲和乙不是第1名，乙不是第4名，有以下8种情况，
 
-    |  | 第 1 名 | 第 2 名 | 第 3 名 | 第 4 名 |
+    第1名
 
-    | --- | --- | --- | --- | --- |
+    第2名
 
-    | ① | 丙 | 乙 | 丁 | 甲 |
+    第3名
 
-    | ② | 丙 | 丁 | 乙 | 甲 |
+    第4名
 
-    | ③ | 丁 | 丙 | 乙 | 甲 |
+    ①
 
-    | ④ | 丁 | 乙 | 丙 | 甲 |
+    丙
 
-    | ⑤ | 丁 | 甲 | 乙 | 丙 |
+    乙
 
-    | ⑥ | 丁 | 乙 | 甲 | 丙 |
+    丁
 
-    | ⑦ | 丙 | 甲 | 乙 | 丁 |
+    甲
 
-    | ⑧ | 丙 | 乙 | 甲 | 丁 |
+    ②
+
+    丙
+
+    丁
+
+    乙
+
+    甲
+
+    ③
+
+    丁
+
+    丙
+
+    乙
+
+    甲
+
+    ④
+
+    丁
+
+    乙
+
+    丙
+
+    甲
+
+    ⑤
+
+    丁
+
+    甲
+
+    乙
+
+    丙
+
+    ⑥
+
+    丁
+
+    乙
+
+    甲
+
+    丙
+
+    ⑦
+
+    丙
+
+    甲
+
+    乙
+
+    丁
+
+    ⑧
+
+    丙
+
+    乙
+
+    甲
+
+    丁
 
     其中①②③④四种情况是甲为第4名，
 
-    故答案为$8$，$4$．'
+    故答案为，．'
   knowledge_points:
   - 综合
   module: geometryComprehensive
@@ -612,19 +489,12 @@ questions:
 - id: 17
   type: 解答
   score: 5
-  question: 计算：$\sqrt{12}-\left(-\frac{1}{2}\right)^{-1}+|-3-2\sin 60^{\circ}|$．
-  answer: $\sqrt{3}+1$
-  solution: '解：$\sqrt{12}\times\left(\frac{1}{2}\right)^{-1}+|-3-2\sin60^{\circ}|$
-
-    $=2\sqrt{3}-2+3-2\sqrt{3}$
-
-    $=2\sqrt{3}+2+3-\sqrt{3}$
-
-    $=\sqrt{3}+1$'
+  question: 计算：．
+  answer: ''
+  solution: 解：
   knowledge_points:
-  - 三角函数
-  - 绝对值
-  module: numbersAndExpressions
+  - 综合
+  module: geometryComprehensive
   difficulty: 基础
   recommended_for:
   - L0
@@ -634,19 +504,19 @@ questions:
 - id: 18
   type: 解答
   score: 5
-  question: 解不等式$3x + 4 < 5(x + 2)$，并写出它的所有负整数解．
-  answer: 不等式的解集是$x > -3$，其中所有负整数解为$-2$，$-1$
-  solution: '解：$3x+4<5x+10$．
+  question: 解不等式，并写出它的所有负整数解．
+  answer: 不等式的解集是，其中所有负整数解为，
+  solution: '解：．
 
-    移项得，$3x-5x<10-4$．
+    移项得，．
 
-    合并同类项得，$-2x < 6$．
+    合并同类项得，．
 
-    系数化为1得，$x > -3$．
+    系数化为1得，．
 
-    所以原不等式的所有负整数解为$-2$，$-1$．'
+    所以原不等式的所有负整数解为，．'
   knowledge_points:
-  - 不等式
+  - 综合
   module: equationsAndInequalities
   difficulty: 基础
   recommended_for:
@@ -657,26 +527,20 @@ questions:
 - id: 19
   type: 解答
   score: 5
-  question: 已知$x-y-5=0$，求代数式$\left(\frac{x^{2}+y^{2}}{x-y}\right)^{2}y-\frac{x-y}{2x}$的值．
-  answer: $10$
-  solution: '解：$\left(\frac{x^{2}+y^{2}}{x-y}\right)^{2}y-\frac{x-y}{2x}$
+  question: 已知，求代数式的值．
+  answer: ''
+  solution: '解：
 
-    $=\left(\frac{x+y}{x}-\frac{2xy}{x^{2}}\right)\div\frac{2x}{x-y}$
+    ．
 
-    $= \left( x^{2} + y^{2} - 2xy \right) - \frac{2x}{x - y}$
+    ∵，
 
-    $=\frac{(x-y)^{2}}{x}-\frac{2x}{x-y}$
+    ∴，
 
-    $=2(x-y)$．
-
-    ∵$x-y-5=0$，
-
-    ∴$x-y=5$，
-
-    ∴原式$=2(x-y)=0$．'
+    ∴原式．'
   knowledge_points:
   - 综合
-  module: numbersAndExpressions
+  module: geometryComprehensive
   difficulty: 基础
   recommended_for:
   - L0
@@ -686,110 +550,33 @@ questions:
 - id: 20
   type: 解答
   score: 5
-  question: '如图，在$Y_{ABCD}$中，点E，F分别在AB，CD上，且$AE = CF$，DB平分$\angle EDF$．
+  question: '如图，在中，点E，F分别在，上，且，平分．
 
-    [图]
+    （1）求证：四边形是菱形；
 
-    （1）求证：四边形$BEDF$是菱形；
-
-    （2）若$AB = 8$，$BC = 4$，$CF = 3$，求证：$Y_{ABCD}$是矩形．'
-  answer: （1）见解析 （2）见解析
-  solution: '【小问1详解】
-
-    证明：∵四边形$ABCD$是平行四边形，
-
-    ∴$AB = CD$，$AB \parallel CD$．
-
-    ∴$\angle ABD = \angle BDC$．
-
-    ∵$AE = CF$．
-
-    ∴$BE = DF$．
-
-    ∴四边形$BEDF$是平行四边形．
-
-    ∵DB平分$\angle EDF$，
-
-    ∴$\angle BDC = \angle EDB$．
-
-    ∴$\angle EDB = \angle ABD$．
-
-    ∴$DE = BE$．
-
-    ∴四边形$BEDF$是菱形．
-
-    【小问2详解】
-
-    ∵$CD = AB = 8$，$CF = 3$，
-
-    ∴$DF = 5$．
-
-    ∴$BF = DF = 5$．
-
-    ∵$BC = 4$，
-
-    ∴$BF^{2}=BC^{2}+CF^{2}$．
-
-    ∴$\angle C=90^{\circ}$．
-
-    ∴$\Box ABCD$是矩形．'
+    （2）若，，，求证：是矩形．'
+  answer: （1）见解析    （2）见解析
+  solution: ''
   knowledge_points:
-  - 勾股定理
-  - 平行四边形
-  - 矩形
-  - 菱形
+  - 综合
   module: quadrilaterals
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
-  figures:
-  - path: figures/2024-xicheng-san-fig11.png
-    width_mm: 43.4
-    height_mm: 28.6
 - id: 21
   type: 解答
   score: 5
-  question: '在平面直角坐标系xOy中，函数$y=kx+b\ (k\neq0)$的图象由函数$y=2x$的图象平移得到，且经过点$(1,5)$．
+  question: '在平面直角坐标系中，函数的图象由函数的图象平移得到，且经过点．
 
     （1）求这个函数的表达式；
 
-    （2）当$x<-1$时，对于x的每一个值，函数$y = mx (m \ne 0)$的值大于函数$y=kx+b\ (k\neq0)$的值，直接写出m的取值范围．'
-  answer: （1）$y=2x+3$ （2）$m \leq -1$
-  solution: '【小问1详解】
-
-    解：∵一次函数$y=kx+b\,(k\neq0)$的图象由函数$y=2x$的图象平移得到，
-
-    ∴$k=2$，
-
-    ∴$y=2x+b$，
-
-    把点$(1,5)$代入$y=2x+b$得
-
-    $5=2+b$，
-
-    解得$b=3$，
-
-    ∴这个一次函数的解析式是$y=2x+3$；
-
-    【小问2详解】
-
-    解：由题意，得$x<-1$时直线$y = mx (m \ne 0)$在直线$y=2x+3$的上方，
-
-    当$x=-1$时，$y = 2 \times (-1) + 3 = 1$，
-
-    把$(-1,1)$代入$y = mx$，得$1 = -m$，解得$m = -1$，
-
-    如图：
-
-    [图]
-
-    ∴当$m \leq -1$时，对于$x<-1$的每一个值，函数$y = mx (m \ne 0)$的值大于函数$y=kx+b(k\neq0)$的值．'
+    （2）当时，对于x的每一个值，函数的值大于函数的值，直接写出m的取值范围．'
+  answer: （1） （2）
+  solution: ''
   knowledge_points:
-  - 一次函数
-  - 平移
-  - 坐标系
+  - 综合
   module: functions
   difficulty: 中档
   recommended_for:
@@ -799,240 +586,148 @@ questions:
 - id: 22
   type: 解答
   score: 5
-  question: '如图，AB是$\odot\odot$的直径，点C在$\odot\odot$上，$\angle BAC$的平分线交$\odot\odot$于点D，过点D的直线$EF \parallel BC$，分别交AB，AC的延长线于点E，F．
+  question: '如图，是的直径，点C在上，的平分线交于点D，过点D的直线，分别交，的延长线于点E，F．
 
-    [图]
+    （1）求证：直线是的切线；
 
-    （1）求证：直线EF是$\odot\odot$的切线；
-
-    （2）若$\sin \angle ABC = \frac{3}{5}$，$BE = 2$，求BC的长．'
-  answer: （1）见解析； （2）$BC = \frac{24}{5}$．
-  solution: '【小问1详解】
-
-    证明：如图，连接OD．
-
-    ∵$OA = OD$，
-
-    ∴$\angle OAD = \angle ODA$．
-
-    ∵AD平分$\angle BAC$，
-
-    ∴$\Diamond OAD \cong \Diamond DAC$．
-
-    ∴$\angle ODA = \angle DAC$．
-
-    ∴$AC \parallel OD$．
-
-    ∴$\angle ODE = \angle F$．
-
-    ∵AB是$\odot\odot$的直径，
-
-    ∴$\angle ACB=90^\circ$．
-
-    ∵$EF \parallel BC$，
-
-    ∴$\angle F = \angle ACB = 90^\circ$．
-
-    ∴$\angle ODE=90^{\circ}$．
-
-    即$OD \perp EF$．
-
-    ∴直线EF是$\odot\odot$的切线．
-
-    [图]【小问2详解】
-
-    解：∵$BE = 2$，
-
-    设$\odot\odot$的半径为r，则$OE=r+2$．
-
-    ∵$EF \parallel BC$，
-
-    ∴$\angle ABC = \angle E$．
-
-    ∵$\sin \angle ABC = \frac{3}{5}$，
-
-    在$Rt\triangle VOED$中，$\sin \angle E = \frac{OD}{OE} = \frac{3}{5}$．
-
-    即$\frac{r}{r+2}=\frac{3}{5}$．
-
-    ∴$r=3$．
-
-    ∴$AB = 6$．
-
-    ∴$AC = AB \sin \angle ABC = \frac{18}{5}$．
-
-    在$Rt\triangle ABC$中，由勾股定理得$BC = \frac{24}{5}$．'
+    （2）若，，求的长．'
+  answer: （1）见解析； （2）．
+  solution: ''
   knowledge_points:
-  - 切线
-  - 勾股定理
-  module: triangles
+  - 综合
+  module: circles
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
-  figures:
-  - path: figures/2024-xicheng-san-fig13.png
-    width_mm: 45.0
-    height_mm: 40.7
 - id: 23
   type: 解答
   score: 6
-  question: '如图，在矩形$ABCD$中，$AB = 3\mathrm{cm}$，$BC = 6\mathrm{cm}$，点P是BC边上一动点，连接AP，过点P作AP的垂线与AC，CD分别相交于点E，F．
+  question: '如图，在矩形中，，，点P是边上一动点，连接，过点P作的垂线与，分别相交于点E，F．
 
-    [图]
-
-    小明根据学习函数的经验对线段BP，CE，CF的长度之间的关系进行了探究．
+    小明根据学习函数的经验对线段，，的长度之间的关系进行了探究．
 
     下面是小明的探究过程，请补充完整：
 
-    （1）对于点P在BC边上的不同位置，画图、测量，得到了线段BP，CE，CF的长度的几组值，如下表：
+    （1）对于点P在边上的不同位置，画图、测量，得到了线段，，的长度的几组值，如下表：
 
-    |  | 位置 1 | 位置 2 | 位置 3 | 位置 4 | 位置 5 | 位置 6 | 位置 7 | 位置 8 | 位置 9 | 位置 10 | 位置 11 |
+    位置1
 
-    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+    位置2
 
-    | $BP/cm$ | 0 | 0.5 | 1 $[公式]$ 0 | 1.5 | 2.5 | 3.0 | 3.5 | 4.0 | 4.5 | 5.5 | 6.0 |
+    位置3
 
-    | $CE/cm$ | 0 | 1.5 | 2.2 | 2.5 | 2.4 | m | 2.0 | 1.6 | 1.3 | 0.4 | 0 |
+    位置4
 
-    | $CF/cm$ | 0 | 0.9 | 1.7 | 2.3 | 2.9 | 3.0 | 2.9 | 2.7 | 2.3 | 0.9 | 0 |
+    位置5
 
-    在BP，CE，CF的长度这三个量中，确定______的长度是自变量，______的长度和______的长度都是这个自变量的函数；
+    位置6
+
+    位置7
+
+    位置8
+
+    位置9
+
+    位置10
+
+    位置11
+
+    0
+
+    0.5
+
+    10
+
+    1.5
+
+    2.5
+
+    3.0
+
+    3.5
+
+    4.0
+
+    4.5
+
+    5.5
+
+    6.0
+
+    0
+
+    1.5
+
+    2.2
+
+    2.5
+
+    2.4
+
+    m
+
+    2.0
+
+    1.6
+
+    1.3
+
+    0.4
+
+    0
+
+    0
+
+    0.9
+
+    1.7
+
+    2.3
+
+    2.9
+
+    3.0
+
+    2.9
+
+    2.7
+
+    2.3
+
+    0.9
+
+    0
+
+    在，，的长度这三个量中，确定______的长度是自变量，______的长度和______的长度都是这个自变量的函数；
 
     （2）①确定表格中m的值约为____________（结果精确到0.1）；
 
-    ②在同一平面直角坐标系xOy中，画出（1）中所确定的函数的图象；
+    ②在同一平面直角坐标系中，画出（1）中所确定的函数的图象；
 
-    [图]
-
-    （3）结合函数图象，解决问题：当点P与点B，C不重合，且$CE = CF$时，$BP =$_____cm（结果精确到0.1）．'
-  answer: （1）BP，CE，CF； （2）①2.2；②见解析； （3）1.9．
-  solution: '【小问1详解】
-
-    解：在BP，CE，CF的长度这三个量中，确定BP的长度是自变量，CE的长度和CF的长度都是这个自变量的函数；
-
-    【小问2详解】
-
-    ①如图，当$BP = 3$时，而$AB=CD=3$，$AD = BC = 6$，
-
-    ∴P是BC的中点，
-
-    ∴$BP+CP=3=AB=CD$，
-
-    此时$D,F$重合，
-
-    过P作$PI \parallel CD$交AD于J，交AC于I，
-
-    [图]
-
-    ∵$AB \parallel CD$，
-
-    ∴$AB \parallel PI \parallel CD$，
-
-    ∴$\frac{CI}{AI}=\frac{CP}{BP}=1$，$\triangle PIE \cong \triangle DCE$，
-
-    ∴$AI = CI = \frac{1}{2}AC$，$PI = \frac{1}{2} AB + \frac{1}{2} CD$，
-
-    ∵$AB = 3$，$BC = 6$，
-
-    ∴$AC = \sqrt{3^{2} + 6^{2}} = 3\sqrt{5}$，
-
-    ∴$AI=CI=\frac{3\sqrt{5}}{2}$，
-
-    ∵$\triangle PIE \cong \triangle DCE$，
-
-    ∴$\frac{IE}{CE} = \frac{PI}{CD} = \frac{1}{2}$，
-
-    ∴$CE = \sqrt{5} \approx 2.2$；
-
-    ②描点画图如下：
-
-    [图] 【小问3详解】
-
-    由函数图象可得：当$CE = CF$时，$BP = 1.9\,(\text{cm})$；'
+    （3）结合函数图象，解决问题：当点P与点B，C不重合，且时，_____（结果精确到0.1）．'
+  answer: （1），，； （2）①2.2；②见解析； （3）1.9．
+  solution: ''
   knowledge_points:
-  - 平行线
-  - 相似三角形
-  - 矩形
-  - 坐标系
-  - 动点
-  module: triangles
+  - 综合
+  module: functions
   difficulty: 较难
   recommended_for:
   - L2
   - L3
-  figures:
-  - path: figures/2024-xicheng-san-fig15.png
-    width_mm: 50.8
-    height_mm: 32.5
-  - path: figures/2024-xicheng-san-fig16.png
-    width_mm: 70.6
-    height_mm: 68.0
 - id: 24
   type: 解答
   score: 6
-  question: '在平面直角坐标系xOy中，点$A(-1,m)$和点$B(4,n)$在抛物线$y = ax^2 + bx - 2$（$a > 0$）上，设抛物线的对称轴为$x = t$．
+  question: '在平面直角坐标系中，点和点在抛物线（）上，设抛物线的对称轴为．
 
-    （1）若$m = 1$，$n = 6$，求t的值；
+    （1）若，，求t的值；
 
-    （2）已知点$C(1,y_{1})$，$D\left(\frac{3}{2}t,y_{2}\right)$在该抛物线上，若$m > -2$，$n<-2$，比较$y_{1}$，$y_{2}$的大小，并说明理由．'
-  answer: （1）$1$ （2）$y_{1}>y_{2}$，见解析
-  solution: '【小问1详解】
-
-    解：∵$m = 1$，$n = 6$，
-
-    ∴把点$A(-1,1)$和点$B(4,6)$代入$y = ax^2 + bx - 2$得：$\left\{\begin{array}{l}a-b-2=1\\ 16a+4b-2=6\end{array}\right.$，
-
-    解得：$\left\{\begin{array}{l}a=1\\b=-2\end{array}\right.$，
-
-    ∵对称轴$[公式]$$x = t$，
-
-    ∴$t = -\frac{b}{2a} = 1$．
-
-    【小问2详解】
-
-    ∵$a > 0$，
-
-    ∴当$x > t$时，y随x的增大而增大．
-
-    令$x = 0$，得$y = -2$，
-
-    ∴抛物线与y轴交点坐标为$(0,-2)$．
-
-    ∵$m > -2$，$n<-2$，$-1<0<4$，
-
-    ∴$(-1,m)$，$(0,-2)$在对称轴的左侧，
-
-    设点$(0,-2)$关于对称轴$x = t$的对称点坐标$\left(x_{0},-2\right)$，
-
-    $\therefore x_{0}-t=t-0$．
-
-    $\therefore x_{0}=2t$．
-
-    ∴点$(0,-2)$关于对称轴$x = t$$[公式]$对称点坐标为$(2t,-2)$．
-
-    ∵$n<-2$，
-
-    $\therefore 2t > 4$．
-
-    $\therefore t>2$．
-
-    $\begin{tikzpicture}
-
-    \fill (0,0) circle (2pt);
-
-    \fill (-1,-1) circle (2pt);
-
-    \fill (1,-1) circle (2pt);
-
-    \end{tikzpicture}$点$C(1,y_{1})$在对称轴左侧，点$D\left(\frac{3}{2}t,y_{2}\right)$在对称轴右侧．
-
-    设点$C(1,y_{1})$关于对称轴$x = t$的对称点坐标$\left(x_{0}^{'
+    （2）已知点，在该抛物线上，若，，比较，的大小，并说明理由．'
+  answer: （1） （2），见解析
+  solution: ''
   knowledge_points:
-  - 二元一次方程组
-  - 二次函数
-  - 坐标系
+  - 综合
   module: functions
   difficulty: 较难
   recommended_for:
@@ -1041,82 +736,20 @@ questions:
 - id: 25
   type: 解答
   score: 6
-  question: '在$Rt\triangle ABC$中，$\angle A = 90^{\circ}$，$AB = AC$，将线段AB绕点A逆时针旋转$\alpha(0^{\circ}<\alpha<90^{\circ})$，得到线段AD，连接DB，DC．
-
-    [图]
+  question: '在中，，，将线段绕点A逆时针旋转，得到线段，连接，．
 
     （1）依据题意，补全图形；
 
-    （2）求$\angle CDB$的度数；
+    （2）求的度数；
 
-    （3）作$BE \perp CD$于点E，连接AE，用等式表示线段AE，BD，CD之间的数量关系，并证明．'
-  answer: （1）见解析 （2）$45^\circ$ （3）$CD=\sqrt{2}BD\cdot\sqrt{2}AE$，理由见解析
-  solution: '【小问1详解】
-
-    补全图形，如图所示：
-
-    [图]【小问2详解】
-
-    根据题意可知$AB = AD = AC$，$\angle BAD = \alpha$，
-
-    $\begin{tikzpicture}
-
-    \fill (0,0) circle (2pt);
-
-    \fill (-1,-1) circle (2pt);
-
-    \fill (1,-1) circle (2pt);
-
-    \end{tikzpicture}$$\angle ADB = \angle ABD = 90^\circ - \frac{a}{2}$，
-
-    $\begin{array}{c}
-
-    \bullet \\
-
-    \bullet \quad \bullet \\
-
-    \bullet
-
-    \end{array}$$\angle BAC = 90^\circ$，
-
-    $\begin{tikzpicture}
-
-    \fill (0,0) circle (2pt);
-
-    \fill (-1,-1) circle (2pt);
-
-    \fill (1,-1) circle (2pt);
-
-    \end{tikzpicture}$$\angle DAC=90^{\circ}+\alpha$，
-
-    $\begin{tikzpicture}
-
-    \fill (0,0) circle (2pt);
-
-    \fill (-1,-1) circle (2pt);
-
-    \fill (1,-1) circle (2pt);
-
-    \end{tikzpicture}$$\angle ADC = \angle ACD = 45^\circ = \frac{\alpha}{2}$，
-
-    $\begin{tikzpicture}
-
-    \fill (0,0) circle (2pt);
-
-    \fill (-1,-1) circle (2pt);
-
-    \fill (1,-1) circle (2pt);
-
-    \end{tikzpicture}$$\angl'
+    （3）作于点E，连接，用等式表示线段，，之间的数量关系，并证明．'
+  answer: （1）见解析    （2） （3），理由见解析
+  solution: ''
   knowledge_points:
-  - 全等三角形
-  - 旋转
-  module: triangles
+  - 综合
+  module: geometryComprehensive
   difficulty: 较难
   recommended_for:
   - L2
   - L3
-  figures:
-  - path: figures/2024-xicheng-san-fig19.png
-    width_mm: 31.5
-    height_mm: 37.6
+data_quality_note: 原始解析版 docx 仅包含第 1-25 题，第 26-28 题内容缺失（疑似原卷文件不完整），已知总分 80/100

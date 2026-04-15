@@ -4,7 +4,6 @@
 # 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
 # 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
 # 满分：100分  时长：120分钟
-
 year: 2021
 district: 北京市
 exam_type: 真题
@@ -15,8 +14,8 @@ total_questions: 28
 structure: 8选择(16分) + 8填空(16分) + 12解答(68分)
 questions:
 - id: 1
-  type: 解答
-  score: 5
+  type: 选择
+  score: 2
   question: '如图是某几何体的展开图，该几何体是（    ）
 
     [图]
@@ -40,8 +39,8 @@ questions:
     width_mm: 29.6
     height_mm: 28.8
 - id: 2
-  type: 解答
-  score: 5
+  type: 选择
+  score: 2
   question: '党的十八大以来，坚持把教育扶贫作为脱贫攻坚的优先任务．$2014-2018$年，中央财政累计投入“全面改善贫困地区义务教育薄弱学校基本办学条件”专项补助资金1692亿元，将169200000000用科学记数法表示应为（    ）
 
     A$\pi$$0.1692\times10^{12}$ B.$1.692\times10^{12}$ C.$1.692\times10^{11}$ D.$16.92\times10^{10}$'
@@ -59,8 +58,8 @@ questions:
   - L2
   - L3
 - id: 3
-  type: 解答
-  score: 5
+  type: 选择
+  score: 2
   question: '如图，点O在直线AB上，$OC \perp OD$．若$\angle AOC = 120^\circ$，则$\angle BOD$的大小为（ ）
 
     [图]
@@ -92,8 +91,8 @@ questions:
     width_mm: 51.6
     height_mm: 35.2
 - id: 4
-  type: 解答
-  score: 5
+  type: 选择
+  score: 2
   question: '下列多边形中，内角和最大的是（    ）
 
     A.[图] B.[图] C.[图] D.[图]'
@@ -132,8 +131,8 @@ questions:
     width_mm: 25.7
     height_mm: 22.8
 - id: 5
-  type: 解答
-  score: 5
+  type: 选择
+  score: 2
   question: '实数$a,b$在数轴上的对应点的位置如图所示，下列结论中正确的是（    ）
 
     [图]
@@ -161,8 +160,8 @@ questions:
     width_mm: 83.9
     height_mm: 11.4
 - id: 6
-  type: 解答
-  score: 5
+  type: 选择
+  score: 2
   question: '同时抛掷两枚质地均匀的硬币，则一枚硬币正面向上､一枚硬币反面向上的概率是（    ）
 
     A.$\frac{1}{4}$ B.$\frac{1}{3}$ C.$\frac{1}{2}$ D.$\frac{2}{3}$'
@@ -185,8 +184,8 @@ questions:
   - L2
   - L3
 - id: 7
-  type: 解答
-  score: 5
+  type: 选择
+  score: 2
   question: '已知$43^2 = 1849, 44^2 = 1936, 45^2 = 2025, 46^2 = 2116$．若n为整数且$n < \sqrt{2021} < n + 1$，则n的值为（    ）
 
     A.43 B.44 C.45 D.46'
@@ -210,8 +209,8 @@ questions:
   - L2
   - L3
 - id: 8
-  type: 解答
-  score: 5
+  type: 选择
+  score: 2
   question: '如图，用绳子围成周长为$10m$的矩形，记矩形的一边长为xm，它的邻边长为$y^{m}$，矩形的面积为$Sm^2$．当x在一定范围内变化时，y和S都随x的变化而变化，则y与$x,S$与x满足的函数关系分别是（    ）
 
     [图]

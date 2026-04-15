@@ -143,9 +143,32 @@ def get_score(qid, q_type):
 # ============================================================
 
 def extract_paragraphs(docx_path):
-    """提取 docx 的所有段落文本"""
+    """提取 docx 的所有段落文本（按文档顺序，含表格单元格）
+
+    旧实现只读 doc.paragraphs，会跳过表格内的题目内容（ID 连续跳跃的根因）。
+    新实现按 body 顺序迭代，段落和表格单元格都纳入输出流。
+    """
     doc = docx.Document(docx_path)
-    return [p.text.strip() for p in doc.paragraphs]
+    texts = []
+
+    for child in doc.element.body:
+        tag = child.tag.split("}")[-1] if "}" in child.tag else child.tag
+        if tag == "p":
+            from docx.text.paragraph import Paragraph
+            text = Paragraph(child, doc).text.strip()
+            if text:
+                texts.append(text)
+        elif tag == "tbl":
+            from docx.table import Table
+            table = Table(child, doc)
+            for row in table.rows:
+                for cell in row.cells:
+                    for para in cell.paragraphs:
+                        text = para.text.strip()
+                        if text:
+                            texts.append(text)
+
+    return texts
 
 
 def detect_module(analysis_text, question_text):
@@ -168,8 +191,13 @@ def parse_exam(paragraphs):
     current_section = None  # "question" | "answer" | "analysis" | "detail"
     current_type = None     # "选择" | "填空" | "解答"
 
-    # 正则匹配题号
-    q_pattern = re.compile(r'^(\d+)[.．、]\s*(.*)')
+    # 正则匹配题号（三个互补模式）
+    # q_pattern:       标准分隔符 ．、）) 或 ASCII点+空格（防小数误匹配）
+    # q_space_pattern: 题号+空格后接非数字（"17 计算"格式，排除"17 23.0"数据行）
+    # q_bare_pattern:  裸题号（"17."，题目为图片无法提取，占位记录）
+    q_pattern = re.compile(r'^(\d+)(?:[．、）)]\s*|[.]\s+)(.*)')
+    q_space_pattern = re.compile(r'^(\d+)\s+([^\d\s].*)')
+    q_bare_pattern = re.compile(r'^(\d+)[.．]\s*$')
     answer_pattern = re.compile(r'【答案】(.*)')
     analysis_marker = re.compile(r'【(分析|解析)】(.*)')
     detail_marker = re.compile(r'【详解】(.*)')
@@ -194,22 +222,24 @@ def parse_exam(paragraphs):
             continue
 
         # 匹配新题目
-        m = q_pattern.match(line)
-        if m:
-            qid = int(m.group(1))
-            qtext = m.group(2)
+        m = q_pattern.match(line) or q_space_pattern.match(line)
+        bare = q_bare_pattern.match(line) if not m else None
+        if m or bare:
+            qid = int((m or bare).group(1))
+            qtext = m.group(2) if m else ""
+            # 北京中考题号范围为 1-28，超出范围的为干扰行
+            if qid < 1 or qid > 30:
+                continue
 
-            # 自动判断题型
-            if current_type is None:
-                if qid <= 8:
-                    current_type = "选择"
-                elif qid <= 16:
-                    current_type = "填空"
-                else:
-                    current_type = "解答"
-            elif qid == 9:
+            # 自动判断题型（以题号范围为权威，不依赖节头状态）
+            # Bug fix: 节头"三、解答题"可能出现在题目前（试卷说明页），导致
+            # current_type 被提前设为"解答"，使 qid=1-8 全部错标为解答题。
+            # 修复：始终根据 qid 范围强制设定类型，节头检测保留但不控制最终分类。
+            if qid <= 8:
+                current_type = "选择"
+            elif qid <= 16:
                 current_type = "填空"
-            elif qid == 17:
+            else:
                 current_type = "解答"
 
             # 保存上一题
@@ -278,6 +308,13 @@ def parse_exam(paragraphs):
     if current_q:
         questions.append(current_q)
 
+    # 去重：同一 qid 在 docx 中可能重复出现（如题目跨表格分行导致第二次出现）
+    # 保留每个 qid 的最后一次出现（内容更完整）
+    seen = {}
+    for q in questions:
+        seen[q["id"]] = q
+    questions = [seen[k] for k in sorted(seen)]
+
     return questions
 
 
@@ -315,6 +352,21 @@ def build_yaml_data(questions, year, district_cn, exam_type_cn):
         }
         yaml_questions.append(yaml_q)
 
+    # 动态计算实际结构（不再硬编码，兼容改革前格式）
+    type_order = ["选择", "填空", "解答"]
+    type_counts = {t: 0 for t in type_order}
+    type_scores = {t: 0 for t in type_order}
+    for q in yaml_questions:
+        t = q["type"]
+        if t in type_counts:
+            type_counts[t] += 1
+            type_scores[t] += q["score"]
+    structure_parts = [
+        f"{type_counts[t]}{t}({type_scores[t]}分)"
+        for t in type_order if type_counts[t] > 0
+    ]
+    computed_structure = " + ".join(structure_parts) if structure_parts else "未知结构"
+
     data = {
         "year": int(year),
         "district": f"{district_cn}区" if not district_cn.endswith("区") else district_cn,
@@ -323,7 +375,7 @@ def build_yaml_data(questions, year, district_cn, exam_type_cn):
         "full_score": 100,
         "duration_minutes": 120,
         "total_questions": len(yaml_questions),
-        "structure": "8选择(16分) + 8填空(16分) + 12解答(68分)",
+        "structure": computed_structure,
         "questions": yaml_questions,
     }
     return data

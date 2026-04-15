@@ -1,31 +1,22 @@
 # ============================================================
 # 2025年北京燕山区中考数学一模试卷 — 逐题分析
 # ============================================================
-# 数据来源: knowledge-original docx (LibreOffice HTML + Qwen-VL OCR)
-# 公式格式: LaTeX（通过 Qwen-VL 视觉模型从 MathType 公式图片识别）
+# 数据来源：knowledge-original（解析版 docx，表格修复后重新解析）
 # 满分：100分  时长：120分钟
 
 year: 2025
-district: 燕山
+district: 燕山区
 exam_type: 一模
 subject: 数学
 full_score: 100
 duration_minutes: 120
-total_questions: 18
+total_questions: 28
 structure: 8选择(16分) + 8填空(16分) + 12解答(68分)
 questions:
 - id: 1
   type: 选择
   score: 2
-  question: '下列图形中，既是轴对称图形又是中心对称图形的是（）
-
-    A.[图]
-
-    B.[图]
-
-    C.[图]
-
-    D.[图]'
+  question: "下列图形中，既是轴对称图形又是中心对称图形的是（   ）\nA. \tB.\nC. \tD."
   answer: B
   solution: '解：A、不是轴对称图形，是中心对称图形，故A选项不符合题意；
 
@@ -37,10 +28,7 @@ questions:
 
     故选：B．'
   knowledge_points:
-  - 中心对称图形
-  - 轴对称图形
-  - 旋转
-  - 轴对称
+  - 综合
   module: geometryComprehensive
   difficulty: 基础
   recommended_for:
@@ -48,47 +36,22 @@ questions:
   - L1
   - L2
   - L3
-  figures:
-  - path: figures/2025-yanshan-yi-fig02.png
-    width_mm: 25.1
-    height_mm: 10.8
-  - path: figures/2025-yanshan-yi-fig03.png
-    width_mm: 16.4
-    height_mm: 15.9
-  - path: figures/2025-yanshan-yi-fig04.png
-    width_mm: 22.8
-    height_mm: 13.0
-  - path: figures/2025-yanshan-yi-fig05.png
-    width_mm: 17.5
-    height_mm: 14.8
 - id: 2
   type: 选择
   score: 2
-  question: '如图，直线$a \parallel b$，点B在直线a上，$AB \perp BC$，若∠1=40°，则∠2的度数为（）
-
-    [图]
-
-    A.40°
-
-    B.50°
-
-    C.80°
-
-    D.140°'
+  question: "如图，直线，点B在直线a上，，若∠1=40°，则∠2的度数为（    ）\nA. 40°\tB. 50°\tC. 80°\tD. 140°"
   answer: B
-  solution: '解：如图可得：$\angle1+\angle3+90^{\circ}-180^{\circ}$，
+  solution: '解：如图可得： ，
 
-    $\angle 3=50^{\circ}$，
+    ，
 
-    $\because a \parallel b$，
+    ，
 
-    $\angle2=\angle3=50^{\circ}$（两直线平行同位角相等）．
-
-    [图]
+    （两直线平行同位角相等）．
 
     故选B．'
   knowledge_points:
-  - 平行线
+  - 综合
   module: triangles
   difficulty: 基础
   recommended_for:
@@ -96,50 +59,24 @@ questions:
   - L1
   - L2
   - L3
-  figures:
-  - path: figures/2025-yanshan-yi-fig06.png
-    width_mm: 64.0
-    height_mm: 32.8
 - id: 3
   type: 选择
   score: 2
-  question: '实数a，b在数轴上的对应点的位置如图所示，下列结论中正确的是（）
-
-    $\begin{tikzpicture}
-
-    \draw[->] (-2,0) -- (4,0);
-
-    \foreach \x in {-1,0,1,2,3}
-
-    \draw (\x,-0.1) -- (\x,0.1) node[below] {\x};
-
-    \filldraw (-0.5,0) circle (2pt) node[above] {a};
-
-    \filldraw (2.5,0) circle (2pt) node[above] {b};
-
-    \end{tikzpicture}$
-
-    A.$a+b<0$
-
-    B.$ab > 0$
-
-    C.$\left| a \right| < \left| b \right|$
-
-    D.$a<-1$'
+  question: "实数a，b在数轴上的对应点的位置如图所示，下列结论中正确的是（   ）\nA. \tB. \tC. \tD."
   answer: C
-  solution: '解：由数轴可知$a<0<b$，且$\left| a \right| < \left| b \right|$
+  solution: '解：由数轴可知，且
 
-    A．$a+b>0$，该选项错误，故不符合题意；
+    A．，该选项错误，故不符合题意；
 
-    B．$ab < 0$，该选项错误，故不符合题意；
+    B．，该选项错误，故不符合题意；
 
-    C．$\left| a \right| < \left| b \right|$，该选项正确，故符合题意；
+    C．，该选项正确，故符合题意；
 
-    D．$a > -1$，该选项错误，故不符合题意；
+    D．，该选项错误，故不符合题意；
 
     故选：C．'
   knowledge_points:
-  - 绝对值
+  - 综合
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -150,24 +87,15 @@ questions:
 - id: 4
   type: 选择
   score: 2
-  question: '若关于x的一元二次方程$x^{2}-3x+m=0$有两个相等的实数根，则实数m的值为（）
-
-    A.$\frac{4}{9}$
-
-    B.$-\frac{4}{9}$
-
-    C.$\frac{9}{4}$
-
-    D.$-\frac{9}{4}$'
+  question: "若关于x的一元二次方程有两个相等的实数根，则实数的值为（   ）\nA. \tB. \tC. \tD."
   answer: C
-  solution: '解：$\Delta = \left(-3\right)^{2} - 4m = 0$
+  solution: '解：
 
-    解得$m = \frac{9}{4}$，
+    解得，
 
     故选：C．'
   knowledge_points:
-  - 一元二次方程
-  - 根的判别式
+  - 综合
   module: equationsAndInequalities
   difficulty: 基础
   recommended_for:
@@ -178,36 +106,17 @@ questions:
 - id: 5
   type: 选择
   score: 2
-  question: '不透明的袋子中装有黑、白小球各一个，除颜色之外两个小球无其他差别．从中随机摸出一个小球，放回并摇匀，再从中随机摸出一个小球，那么两次都摸到白球的概率是（    ）
-
-    A.$\frac{1}{2}$
-
-    B.$\frac{1}{3}$
-
-    C.$\frac{1}{4}$
-
-    D.$\frac{3}{4}$'
+  question: "不透明的袋子中装有黑、白小球各一个，除颜色之外两个小球无其他差别．从中随机摸出一个小球，放回并摇匀，再从中随机摸出一个小球，那么两次都摸到白球的概率是（    ）\nA. \tB. \tC. \tD."
   answer: C
   solution: '解：画树状图如下：
 
-    [图]
-
     共有4种等可能的结果，其中两次都摸到白球的结果有1种，
 
-    $\begin{tikzpicture}
-
-    \fill (0,0) circle (2pt);
-
-    \fill (-1,-1) circle (2pt);
-
-    \fill (1,-1) circle (2pt);
-
-    \end{tikzpicture}$两次都摸到白球的概率是$\frac{1}{4}$，
+    两次都摸到白球的概率是，
 
     故选：C．'
   knowledge_points:
-  - 概率
-  - 树状图
+  - 综合
   module: statisticsAndProbability
   difficulty: 基础
   recommended_for:
@@ -218,17 +127,9 @@ questions:
 - id: 6
   type: 选择
   score: 2
-  question: '2024年$5.5G$技术正式开始商用，它的数据下载的最高速率从$5.5G$初期的$1Gbps$提升到$10Gbps$．其中$10Gbps$表示每秒传输$10^{10}$（bit）的数据．若我们的科技“再提速”到$10Gbps$的10倍，达到每秒m（bit），则m的值为（）
-
-    A.$10^{10}$
-
-    B.$100\times10^{10}$
-
-    C.$0.1\times10^{11}$
-
-    D.$10^{11}$'
+  question: "2024年技术正式开始商用，它的数据下载的最高速率从初期的提升到．其中表示每秒传输（）的数据．若我们的科技“再提速”到的10倍，达到每秒m（），则m的值为（   ）\nA. \tB. \tC. \tD."
   answer: D
-  solution: '解：依题意得，$m=10\times10^{10}=10^{11}$，
+  solution: '解：依题意得，，
 
     故选：D．'
   knowledge_points:
@@ -242,30 +143,33 @@ questions:
 - id: 7
   type: 选择
   score: 2
-  question: '下面是“作一个$\triangle A''B''C''$，使得$\triangle A''B''C''\cong\triangle ABC$”的尺规作图方法，
+  question: '下面是“作一个，使得”的尺规作图方法，
 
-    | （ 1 ）作一条线段 $\overrightarrow{AB}=AB$ ； （ 2 ）以 $A''$ 为圆心， AC 长为半径画弧，以 $B''$ 为圆心， BC 长为半径画弧，两弧交于点 $C''$ ； （ 3 ）连接 $A''C''$ ， $B''C''$ ， 则 $\triangle A''B''C''\cong\triangle ABC$ ． [图] |
+    （1）作一条线段；
 
-    | --- |
+    （2）以为圆心，AC长为半径画弧，以为圆心，长为半径画弧，两弧交于点；
 
-    上述判定$\triangle A''B''C''\cong\triangle ABC$的依据是（）
+    （3）连接，，
 
-    A.三边分别相等的两个三角形全等
+    则．
 
-    B.两边及其夹角分别相等的两个三角形全等
+    上述判定的依据是（   ）
 
-    C.两角及其夹边分别相等的两个三角形全等
+    A. 三边分别相等的两个三角形全等
 
-    D.两角分别相等且其中一组等角的对边相等的两个三角形全等'
+    B. 两边及其夹角分别相等的两个三角形全等
+
+    C. 两角及其夹边分别相等的两个三角形全等
+
+    D. 两角分别相等且其中一组等角的对边相等的两个三角形全等'
   answer: A
-  solution: '解：由作图可知，$\overrightarrow{AB}=AB$，$A''C''=AC$，$B''C''=BC$，
+  solution: '解：由作图可知，，，，
 
-    ∴$\triangle A''B''C''\cong\triangle ABC$（三边分别相等的两个三角形全等）
+    ∴（三边分别相等的两个三角形全等）
 
     故选：A．'
   knowledge_points:
-  - 全等三角形
-  - 尺规作图
+  - 综合
   module: triangles
   difficulty: 中档
   recommended_for:
@@ -275,35 +179,25 @@ questions:
 - id: 8
   type: 选择
   score: 2
-  question: '如图，在$V_{ABC}$中，$CD \perp AB$于点D，只需添加下面三个条件中的一个即可证明$V_{ABC}$是直角三角形．①$\angle A=\angle BCD$；②$\angle A+\angle BCD=\angle ADC$；③$\frac{AD}{CD} = \frac{CD}{BD}$．所有正确条件的序号是（）
-
-    [图]
-
-    A$[公式]$①②
-
-    B.①③
-
-    C.②③
-
-    D.①②③'
+  question: "如图，在中，于点，只需添加下面三个条件中的一个即可证明是直角三角形．①；②；③．所有正确条件的序号是（   ）\nA ①②\tB. ①③\tC. ②③\tD. ①②③"
   answer: B
-  solution: '解：∵$CD \perp AB$
+  solution: '解：∵
 
-    $\angle ADC = \angle BDC = 90^\circ$，$\angle A+\angle ACD=90^{\circ},\angle B+\angle BCD=90^{\circ}$，
+    ，，
 
-    ①当$\angle A=\angle BCD$时，$\angle BCD+\angle ACD=90^\circ$，
+    ①当时，，
 
-    即$\angle ACB=90^\circ$，
+    即，
 
-    ∴$V_{ABC}$是直角三角形，故①正确，符合题意；
+    ∴是直角三角形，故①正确，符合题意；
 
-    ②当$\angle A+\angle BCD=\angle ADC$时，无法证明$V_{ABC}$是直角三角形，故②错误，不符合题意；
+    ②当时，无法证明是直角三角形，故②错误，不符合题意；
 
-    ③当$\frac{AD}{CD} = \frac{CD}{BD}$时，且$\angle ADC=\angle BDC=90^\circ$，
+    ③当时，且，
 
-    $\triangle ADC \sim \triangle LCB$，
+    ，
 
-    $\angle A = \angle BCD$,同①可得$V_{ABC}$是直角三角形，
+    ,同①可得是直角三角形，
 
     故③正确，符合题意；
 
@@ -311,22 +205,18 @@ questions:
 
     故选：B．'
   knowledge_points:
-  - 相似三角形
+  - 综合
   module: triangles
   difficulty: 较难
   recommended_for:
   - L2
   - L3
-  figures:
-  - path: figures/2025-yanshan-yi-fig09.png
-    width_mm: 35.5
-    height_mm: 22.2
 - id: 9
   type: 填空
   score: 2
-  question: 若分式$\frac{1}{x-1}$在实数范围内有意义，则x的取值范围是_____．
+  question: 若分式在实数范围内有意义，则x的取值范围是_____．
   answer: x≠1
-  solution: '∵分式$\frac{1}{x-1}$在实数范围内有意义，
+  solution: '∵分式在实数范围内有意义，
 
     ∴x−1≠0，
 
@@ -345,7 +235,7 @@ questions:
 - id: 10
   type: 填空
   score: 2
-  question: 分解因式：2mx2-2m=_____________．
+  question: 分解因式：2mx2-2m= _____________．
   answer: 2m（x+1）（x-1）．
   solution: '试题分析：首先提取公因式2m，再利用平方差公式进行二次分解即可．
 
@@ -366,21 +256,21 @@ questions:
 - id: 11
   type: 填空
   score: 2
-  question: 方程$\frac{2}{x-3}+\frac{1}{x}=0$的解为__________．
-  answer: $x = 1$
-  solution: '解：$\frac{2}{x-3}+\frac{1}{x}=0$
+  question: 方程的解为__________．
+  answer: ''
+  solution: '解：
 
-    方程两边同时乘以$x(x-3)$得，$2x + (x - 3) = 0$，
+    方程两边同时乘以得，，
 
-    解得：$x = 1$，
+    解得：，
 
-    检验，当$x = 1$时，$x(x-3)\neq0$，
+    检验，当时，，
 
-    ∴$x = 1$时原方程的解，
+    ∴时原方程的解，
 
-    故答案为：$x = 1$．'
+    故答案为：．'
   knowledge_points:
-  - 分式方程
+  - 综合
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -391,56 +281,23 @@ questions:
 - id: 12
   type: 填空
   score: 2
-  question: 在平面直角坐标系xOy中，若函数$y = \frac{k}{x}$（$k \neq 0$）的图象经过点$(x_1,2)$和$\left(x_{2},n\right)$，若$x_{1}+x_{2}=0$，则n的值是__________．
-  answer: $-2$
-  solution: '解：$\begin{array}{c}
+  question: 在平面直角坐标系中，若函数（）的图象经过点和，若，则的值是__________．
+  answer: ''
+  solution: '解：函数（）的图象经过点和，
 
-    \bullet \\
+    ，
 
-    \bullet \quad \bullet \\
+    ，
 
-    \bullet
+    ，
 
-    \end{array}$函数$y = \frac{k}{x}$（$k \neq 0$）的图象经过点$(x_1,2)$和$\left(x_{2},n\right)$，
+    ，
 
-    $\begin{tikzpicture}
+    解得，
 
-    \fill (0,0) circle (2pt);
-
-    \fill (-1,-1) circle (2pt);
-
-    \fill (1,-1) circle (2pt);
-
-    \end{tikzpicture}$$x_{1}=\frac{k}{2}x_{2}=\frac{k}{n}$，
-
-    $\begin{array}{c}
-
-    \bullet \\
-
-    \bullet \quad \bullet \\
-
-    \bullet
-
-    \end{array}$$x_{1}+x_{2}=0$，
-
-    $\begin{tikzpicture}
-
-    \fill (0,0) circle (2pt);
-
-    \fill (-1,-1) circle (2pt);
-
-    \fill (1,-1) circle (2pt);
-
-    \end{tikzpicture}$$\frac{k}{2}+\frac{k}{n}=0$，
-
-    $\frac{1}{2}+\frac{1}{n}=0$，
-
-    解得$n = -2$，
-
-    故答案为：$-2$．'
+    故答案为：．'
   knowledge_points:
-  - 反比例函数
-  - 坐标系
+  - 综合
   module: functions
   difficulty: 基础
   recommended_for:
@@ -451,79 +308,235 @@ questions:
 - id: 13
   type: 填空
   score: 2
-  question: 某社区医院六月份有300名女教师做体检，医生从中随机抽取10名女教师计算了它们的体重指数，得到的数据如下：
-  answer: ''
-  solution: ''
+  question: '某社区医院六月份有300名女教师做体检，医生从中随机抽取10名女教师计算了它们的体重指数，得到的数据如下：
+
+    24.8    23.0    23.5    23.9    25.2
+
+    18.9    22.1    19.7    22.4    17.3
+
+    当体重指数参考值x 满足时，评定为标准体重．根据以上数据，估计这300名女教师中标准体重的人数是__________．'
+  answer: '210'
+  solution: '解：抽取10名女教师标准体重有7人，
+
+    ∴这300名女教师中标准体重的人数为人，
+
+    故答案为：210．'
   knowledge_points:
   - 综合
-  module: geometryComprehensive
+  module: statisticsAndProbability
   difficulty: 中档
   recommended_for:
   - L1
   - L2
   - L3
-- id: 24
+- id: 14
   type: 填空
   score: 2
-  question: '8    23.0    23.5    23.9    25.2
+  question: 如图，的直径平分弦（不是直径）．若，则__________．
+  answer: '##35度'
+  solution: '解：∵的直径平分弦，
 
-    18.9    22.1    19.7    22.4    17.3
+    ，
 
-    当体重指数参考值x$\mathrm{kg}/\mathrm{m}^{2}$满足$18.5 \leq x \leq 23.9$时，评定为标准体重．根据以上数据，估计这300名女教师中标准体重的人数是__________．'
-  answer: （1）①90,3②$=$ （2）甲，89
+    ，
+
+    ，
+
+    故答案为：．'
+  knowledge_points:
+  - 综合
+  module: circles
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 15
+  type: 填空
+  score: 2
+  question: 如图，正方形的对角线相交于点，点又是正方形的一个顶点，而且这两个正方形的边长都等于2，无论正方形绕点怎样转动，两个正方形重叠部分的面积都不变，则这两个正方形重叠部分的面积为________．
+  answer: ''
+  solution: '解：四边形是正方形，
+
+    ，，，
+
+    ，
+
+    ，
+
+    ，
+
+    ，且，，
+
+    ，
+
+    ，
+
+    两个正方形重叠部分的面积，
+
+    故答案为：．'
+  knowledge_points:
+  - 综合
+  module: triangles
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 16
+  type: 填空
+  score: 2
+  question: 某汽车的变速箱有1-6号齿轮受电脑程序控制，自动啮合传动，这些齿轮在工作中的程序是：如果1号转动，那么2号转，但是5号停；如果2号或者5号转动，则4号停；3号和4号可以同时转，不能同时停；5号和6号必有一个在转动．若1号齿轮转动，则同时转动的另外三个齿轮是__________．
+  answer: 2号，3号，6号
+  solution: '解：若1号齿轮转动，那么2号转，但是5号停； 2号转动了，则4号停了；
+
+    ∵3号和4号可以同时转，不能同时停，
+
+    ∴3号转动，
+
+    ∵5号和6号必有一个在转动，5号停了，
+
+    ∴6号必在转动，
+
+    综上，转动的另外三个齿轮为：2号，3号，6号．
+
+    故答案为：2号，3号，6号．'
+  knowledge_points:
+  - 综合
+  module: geometryComprehensive
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 17
+  type: 解答
+  score: 5
+  question: 计算：．
+  answer: '1'
+  solution: '解：
+
+    ．'
+  knowledge_points:
+  - 综合
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 18
+  type: 解答
+  score: 5
+  question: 解不等式组：．
+  answer: ．
+  solution: '分析：分别解不等式，找出解集的公共部分即可.
+
+    详解：
+
+    由①得，，
+
+    由②得，，
+
+    ∴不等式的解集为．
+
+    点睛：考查解一元一次不等式组，比较容易，分别解不等式，找出解集的公共部分即可.'
+  knowledge_points:
+  - 综合
+  module: equationsAndInequalities
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 19
+  type: 解答
+  score: 5
+  question: 已知，求代数式的值．
+  answer: ''
+  solution: '解：，
+
+    ，
+
+    ∴
+
+    ．'
+  knowledge_points:
+  - 综合
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 20
+  type: 解答
+  score: 5
+  question: '如图，在四边形ABCD中，BD为一条对角线，，，，E为AD的中点，连接BE．
+
+    （1）求证：四边形BCDE为菱形；
+
+    （2）连接AC，若AC平分，，求AC的长．'
+  answer: （1）证明见解析． （2）．
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: triangles
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 21
+  type: 解答
+  score: 5
+  question: '在“家电下乡”活动期间，凡购买指定家用电器的农村居民均可得到该商品售价13%的财政补贴．村民小李购买了一台A型洗衣机，小王购买了一台B型洗衣机两人一共得到财政补贴351元，又知B型洗衣机售价比A型洗衣机售价多500元．求：
+
+    （1）A型洗衣机和B型洗衣机的售价各是多少元?
+
+    （2）小李和小王购买洗衣机除财政补贴外实际各付款多少元？'
+  answer: （1）A、B型洗衣机的售价分别为1100元和1600元；（2）小李购买洗衣机除财政补贴外实际付款957元，小王购买洗衣机除财政补贴外实际付款1392元.
   solution: '解：（1）设A型洗衣机的售价为x元，B型洗衣机的售价为y元
 
-    根据题意，得$\begin{cases}
-
-    13\%(x+y)=351\\
-
-    y-x=500
-
-    \end{cases}$解得$\begin{cases}
-
-    x = 1100 \\
-
-    y = 1600
-
-    \end{cases}$
+    根据题意，得解得
 
     所以A、B型洗衣机的售价分别为1100元和1600元.
 
     （2）1100-1100×13%=957（元），1600-1600×13%=1392（元）
 
-    所以小李购买洗衣机除财政补贴外实际付款957元，小王购买洗衣机除财政补贴外实际付款1392元.
+    所以小李购买洗衣机除财政补贴外实际付款957元，小王购买洗衣机除财政补贴外实际付款1392元.'
+  knowledge_points:
+  - 综合
+  module: equationsAndInequalities
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 22
+  type: 解答
+  score: 5
+  question: '在平面直角坐标系中，一次函数（为常数，）的图象由函数的图象平移得到且与的图象交于点．
 
-    【小问1详解】
+    （1）求的值；
 
-    解：将$A(3,2)$代入$y = x + m$得，
-
-    $2=3+m$，
-
-    解得$m = -1$；
-
-    ∵一次函数$y=kx+b$的图象由函数$y=\frac{1}{3}x$的图象平移得到，
-
-    $\therefore k = \frac{1}{3}$，
-
-    $\therefore y=\frac{1}{3}x+b$，
-
-    将$A(3,2)$代入$y=\frac{1}{3}x+b$得，
-
-    $2=\frac{1}{3}\times3+b$
-
-    解得$b = 1$；
-
-    【小问2详解】
-
-    解：由（1）得$y=kx+b$的解析式为$y=\frac{1}{3}x+1$，$y = x + m$的解析式为$y=x-1$，
-
-    [图]
-
-    如图所示，当$x>3$时，对于x的每一个值，函数$y = nx$（$n \neq 0$）的值既大于函数$y=\frac{1}{3}x+1$的值，也大于函数$y=x-1$的值，
-
-    则$n\ 1$．
-
-    23.某校“$\pi$节科技创意”比赛分为初赛和决赛两个阶段．
+    （2）当时，对于的每一个值，函数（）的值既大于函数的值，也大于函数的值，直接写出的取值范围．'
+  answer: （1），， （2）
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: functions
+  difficulty: 中档
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 23
+  type: 解答
+  score: 6
+  question: '某校“节科技创意”比赛分为初赛和决赛两个阶段．
 
     （1）初赛由8名教师评委和50名学生评委给每位选手打分（百分制）．对评委给某位选手的打分进行整理、描述和分析，下面给出了部分信息．
 
@@ -531,15 +544,97 @@ questions:
 
     85，86，88，90，90，91，92，94
 
-    b．学生评委'
+    b．学生评委打分的频数分布直方图如下（数据分4组：第1组，第2组，第3组，第4组）
+
+    c．评委打分的平均数、中位数、众数如下：
+
+    平均数
+
+    中位数
+
+    众数
+
+    教师评委
+
+    90
+
+    学生评委
+
+    93
+
+    根据以上信息，回答下列问题：
+
+    ①教师评委打分的众数          ，的值位于学生评委打分数据分组的第          组；
+
+    ②若去掉教师评委打分中的最高分和最低分，记其余6名教师评委打分的平均数为，则          （填“＞”“＝”或“＜”）；
+
+    （2）决赛由5名专业评委给每位选手打分（百分制）．对每位选手，计算5名专业评委给其打分的平均数和方差，平均数较大的选手排序靠前，若平均数相同，则方差较小的选手排序靠前，5名专业评委给进入决赛的甲、乙、丙三位选手的打分如下：
+
+    评委1
+
+    评委2
+
+    评委3
+
+    评委4
+
+    评委5
+
+    甲
+
+    90
+
+    92
+
+    90
+
+    89
+
+    91
+
+    乙
+
+    91
+
+    89
+
+    90
+
+    91
+
+    丙
+
+    92
+
+    89
+
+    91
+
+    91
+
+    若丙在甲、乙、丙三位选手中的排序居中，则这三位选手中排序最靠前的是          ，表中（为整数）的值为          ．'
+  answer: （1）①90,3② （2）甲，89
+  solution: ''
   knowledge_points:
-  - 统计
-  - 平均数
-  - 中位数
-  - 众数
-  - 方差
-  - 条形统计图
+  - 综合
   module: statisticsAndProbability
+  difficulty: 较难
+  recommended_for:
+  - L2
+  - L3
+- id: 24
+  type: 解答
+  score: 6
+  question: '如图，在△ABC中，，点D在AB上，以AD为直径作与BC相切于点E，连接DE并延长交AC的延长线于点F．
+
+    （1）求证：；
+
+    （2）若，，求的半径的长．'
+  answer: （1）证明见详解 （2）5
+  solution: ''
+  knowledge_points:
+  - 综合
+  module: triangles
   difficulty: 较难
   recommended_for:
   - L2
@@ -547,101 +642,34 @@ questions:
 - id: 25
   type: 解答
   score: 6
-  question: '某市一处十字路口立交桥的横断面如图所示，桥拱的$DGD''$部分为一段抛物线，顶点G的高度为8米，它两侧AD和$A''D''$是高为$5.5$米的支柱，OA和$OA''$为两个方向的机动车通行区，宽都为15米，线段CD和$C''D''$为两段对称的上桥斜坡，其坡度（即垂直高度与水平宽度的比）为$1:4$．以$CC''$所在直线为x轴，横断面的对称轴为y轴建立平面直角坐标系．
+  question: '某市一处十字路口立交桥的横断面如图所示，桥拱的部分为一段抛物线，顶点的高度为8米，它两侧和是高为米的支柱，和为两个方向的机动车通行区，宽都为15米，线段和为两段对称的上桥斜坡，其坡度（即垂直高度与水平宽度的比）为．以所在直线为轴，横断面的对称轴为轴建立平面直角坐标系．
 
-    [图]
+    （1）求桥拱所在抛物线的解析式及的长；
 
-    （1）求桥拱$DGD''$所在抛物线的解析式及OC的长；
+    （2）和为支撑斜坡的立柱，其高都为4米，相应的和为两个方向的行人及非机动车通行区，直接写出宽的长度；
 
-    （2）BE和$BE''$为支撑斜坡的立柱，其高都为4米，相应的AB和$A''B''$为两个方向的行人及非机动车通行区，直接写出宽AB的长度；
-
-    （3）按规定，汽车通过该桥下时，载货最高处和桥拱之间的距离不得小于$0.4$米．今有一大型运货汽车，装载某大型设备后，其宽为4米，车载大型设备的顶部与地面的距离均为7米．它能否从桥下区域安全通过？请说明理由．'
-  answer: （1）$y = -\frac{1}{90}x^2 + 8$，37米 （2）6米 （3）该大型货车可以从桥下区域安全通过，理由见详解
-  solution: '【小问3详解】
-
-    解：该大型货车可以从桥下区域安全通过，理由如下：
-
-    在$y = -\frac{1}{90}x^2 + 8$中，当$x = 4$时，$y=-\frac{1}{90}x|6+8=\frac{37}{45}$，
-
-    $x^{2}-37.45-(7+0.4)x=\frac{19}{45}=0$
-
-    ∴该大型货车可以从桥下区域安全通过．'
+    （3）按规定，汽车通过该桥下时，载货最高处和桥拱之间的距离不得小于米．今有一大型运货汽车，装载某大型设备后，其宽为4米，车载大型设备的顶部与地面的距离均为7米．它能否从桥下区域安全通过？请说明理由．'
+  answer: （1），37米 （2）6米    （3）该大型货车可以从桥下区域安全通过，理由见详解
+  solution: ''
   knowledge_points:
-  - 坐标系
+  - 综合
   module: functions
   difficulty: 较难
   recommended_for:
   - L2
   - L3
-  figures:
-  - path: figures/2025-yanshan-yi-fig18.png
-    width_mm: 79.1
-    height_mm: 23.8
 - id: 26
   type: 解答
   score: 6
-  question: '在平面直角坐标系xOy中，抛物线$y = ax^2 + bx + c$$(a \neq 0)$经过点$A(2,c)$．
+  question: '在平面直角坐标系xOy中，抛物线经过点．
 
     （1）求该抛物线的对称轴；
 
-    （2）点$M\left(1-2a,\,y_{1}\right)$，$N(a+2,y_{2})$在抛物线上．若$c < y_1 < y_2$，求a的取值范围'
-  answer: （1）$x = 1$ （2）$-\frac{1}{2}<a<-\frac{1}{3}$或$\frac{1}{2}<a<1$．
-  solution: '【小问1详解】
-
-    解：∵$y = ax^2 + bx + c$经过点$A(2,c)$，
-
-    ∴$4a+2b+c=c$，
-
-    整理得：$b = -2a$，
-
-    ∴抛物线的对称轴为直线$x = \frac{b}{2a} = \frac{-2a}{2a} = -1$；
-
-    【小问2详解】
-
-    当$a > 0$时，抛物线开口向上．
-
-    点$M\left(1-2a,y_{1}\right)$到对称轴$x = 1$的距离$d_{1} \cdot |-2a-1|=2a$．
-
-    点$N(a+2,y_{2})$到对称轴$x = 1$的距离$d_{x}=a+2-|a+1|$．
-
-    ∵$c < y_1 < y_2$，且抛物线开口向上时，离对称轴越远函数值越大，
-
-    ∴$a+1>2a$，同时$1-2a<0$
-
-    解不等式组$\left\{\begin{array}{l}1-2a<0 \\ a+1>2a\end{array}\right.$
-
-    解得$\frac{1}{2}<a<1$；
-
-    当$a < 0$时，抛物线开口向下，离对称轴越远函数值越小，
-
-    点$M(1-2a,y_{1})$到对称轴$x = 1$的距离$d_{v} = | - 2a - 1 | - 2a$．
-
-    点$N(a+2,y_{2})$到对称轴$x = 1$的距离$d_{x}=\left|a+2-1\right|=\left|a+1\right|$．
-
-    若$a^{-1}$，$d_{N}=a+1$；
-
-    ∵$c < y_1 < y_2$，
-
-    ∴$a+1<-2a<1$．
-
-    解得$-\frac{1}{2}<a<-\frac{1}{3}$．
-
-    若$a<-1$，$d_{N}=-a-1$．
-
-    ∴$-a-1<-2a<1$．
-
-    解得：$-\frac{1}{2}<a<1$，
-
-    ∵$a<-1$，
-
-    ∴不等式无解．
-
-    ∴当$a < 0$时，a的取值范围是$-\frac{1}{2}<a<-\frac{1}{3}$；
-
-    综上，a的取值范'
+    （2）点，在抛物线上．若，求a的取值范围'
+  answer: （1） （2）或．
+  solution: ''
   knowledge_points:
-  - 二次函数
-  - 坐标系
+  - 综合
   module: functions
   difficulty: 压轴
   recommended_for:
@@ -649,155 +677,36 @@ questions:
 - id: 27
   type: 解答
   score: 7
-  question: '在$V_{ABC}$中．$\angle ACB=90^\circ$，$\angle ABC=30^\circ$，将线段AC绕点A顺时针旋转$\alpha(0^{\circ}<\alpha\leq60^{\circ})$得到线段AD．点D关于直线BC的对称点为E．连接AE，DE．
+  question: '在中．，，将线段绕点A顺时针旋转得到线段．点D关于直线的对称点为E．连接，．
 
-    [图]
+    （1）如图1，当时，用等式表示线段与的数量关系，并证明；
 
-    （1）如图1，当$\alpha=60^\circ$时，用等式表示线段AE与BD的数量关系，并证明；
-
-    （2）连接BD，依题意补全图2．若$AE = BD$，求$\alpha$的大小．'
-  answer: （1）$AE = \sqrt{3}BD$，证明见解析； （2）$\alpha=30^\circ$．
-  solution: '【小问1详解】
-
-    解：线段AE与BD的数量关系：$AE = \sqrt{3}BD$．
-
-    证明：连接BE，如图1．
-
-    $\begin{array}{c}
-
-    \bullet \\
-
-    \bullet \quad \bullet \\
-
-    \bullet
-
-    \end{array}$点D，E关于直线BC对称，
-
-    $\begin{tikzpicture}
-
-    \fill (0,0) circle (2pt);
-
-    \fill (-1,-1) circle (2pt);
-
-    \fill (1,-1) circle (2pt);
-
-    \end{tikzpicture}$直线BC是线段DE$[公式]$垂直平分线．
-
-    $\therefore BD = BE$．
-
-    $\angle DBC = \angle EBC = 30^\circ$．
-
-    $\angle DBE=60^\circ$．
-
-    $\therefore \triangle DBE$是等边三角形．
-
-    [图]
-
-    $\therefore BD=BE=DE$，$\angle BDE = \angle BED = 60^\circ$．
-
-    $\therefore \triangle ABC$中，$\angle ACB=90^{\circ}$，$\angle ABC=30^{\circ}$，
-
-    $\therefore AB = 2AC$．
-
-    依题意，得$AD = AC$，点D在AB上．
-
-    $AB = 2AD$．
-
-    $\therefore BD = AD$．
-
-    $\therefore DE = AD$．
-
-    $\angle DAE = \angle DEA = 30^\circ$．
-
-    $\angle BEA = 90^\circ$．
-
-    $\begin{tikzpicture}
-
-    \fill (0,0) circle (2pt);
-
-    \fill (-1,-1) circle (2pt);
-
-    \fill (1,-1) circ'
+    （2）连接，依题意补全图2．若，求的大小．'
+  answer: （1），证明见解析； （2）．
+  solution: ''
   knowledge_points:
-  - 全等三角形
-  - 旋转
-  - 轴对称
-  - 三角函数
+  - 综合
   module: triangles
   difficulty: 压轴
   recommended_for:
   - L3
-  figures:
-  - path: figures/2025-yanshan-yi-fig19.png
-    width_mm: 77.5
-    height_mm: 40.5
 - id: 28
   type: 解答
   score: 7
-  question: '在平面直角坐标系xOy中，$\odot\odot$的半径为1，对于$\odot\odot$的弦AB和$\odot\odot$外一点P，给出如下定义：若直线PA，PB都是$\odot\odot$的切线，则称点P是弦AB的“关联点”
+  question: '在平面直角坐标系中，的半径为1，对于的弦和外一点P，给出如下定义：若直线，都是的切线，则称点P是弦的“关联点”
 
-    [图]
+    （1）已知点．
 
-    （1）已知点$A(1,0)$．
+    ①如图1，若的弦，在点，，中，弦的“关联点”是          ；
 
-    ①如图1，若$\odot\odot$的弦$AB = \sqrt{2}$，在点$P_1(1,\sqrt{3})$，$P_{2}(1,1)$，$P_{3}(1,-1)$中，弦AB的“关联点”是；
+    ②如图2，若点，点P是的弦的“关联点”，直接写出线段，线段的长；
 
-    ②如图2，若点$B\left(\frac{1}{2},-\frac{\sqrt{3}}{2}\right)$，点P是$\odot\odot$的弦AB的“关联点”，直接写出线段AB，线段OP的长；
-
-    （2）已知点$C(3,0)$，线段EF是以点C为圆心，以1为半径的$\mathrm{OC}$的直径，对于线段EF上任意一点S，存在$\odot\odot$的弦AB，使得点S是弦AB的“关联点”．当点S在线段EF上运动时，将其对应的弦AB长度的最大值与最小值的差记为t，直接写出t的取值范围．'
-  answer: （1）①$P_{2}$和$P_3$；②$AB = 1$，$OP=\frac{2}{3}\sqrt{3}$ （2）$\frac{3\sqrt{10}}{5}-\frac{4\sqrt{2}}{3}\leq t\leq\frac{\sqrt{15}}{2}-\sqrt{3}$
-  solution: '【小问1详解】
-
-    解：先探究AB长度确定时，OP的长度，如图，
-
-    [图]
-
-    $\therefore PA$，PB是$\odot\odot$的切线，切点分别为A，B，
-
-    $\begin{tikzpicture}
-
-    \fill (0,0) circle (2pt);
-
-    \fill (-1,-1) circle (2pt);
-
-    \fill (1,-1) circle (2pt);
-
-    \end{tikzpicture}$由切线长定理，得$OA \perp AP$，$OB \perp BP$，$AB \perp OP$，
-
-    $\triangle OAP \sim \triangle ODA$，
-
-    $\begin{tikzpicture}
-
-    \fill (0,0) circle (2pt);
-
-    \fill (-1,-1) circle (2pt);
-
-    \fill (1,-1) circle (2pt);
-
-    \end{tikzpicture}$$\frac{OP}{OA}=\frac{OA}{OD}$，即$\frac{OP}{r} = \frac{r}{OD}$，
-
-    $\therefore OP = \frac{r^{2}}{OD}$，
-
-    ①$Q AB = \sqrt{2}$，$r = 1$，
-
-    $\therefore OD=\sqrt{r^{2}-\left(\frac{AB}{2}\right)^{2}}=\sqrt{1^{2}-\left(\frac{\sqrt{2}}{2}\right)^{2}}=\frac{\sqrt{2}}{2}$，
-
-    $\frac{OP}{OD}=\frac{r}{\frac{1}{\sqrt{2}}}=\sqrt{2}$，
-
-    $\therefore OR=\sqrt{1^{2}+\left(\sqrt{5}\right)^{2}}-2\times\sqrt{2}$，
-
-    $OP_{3}=\sqr'
+    （2）已知点，线段是以点C为圆心，以1为半径的的直径，对于线段上任意一点S，存在的弦，使得点S是弦的“关联点”．当点S在线段上运动时，将其对应的弦长度的最大值与最小值的差记为t，直接写出t的取值范围．'
+  answer: （1）①和；②， （2）
+  solution: ''
   knowledge_points:
-  - 切线
-  - 弦
-  - 相似三角形
-  - 勾股定理
-  - 坐标系
+  - 综合
   module: triangles
   difficulty: 压轴
   recommended_for:
   - L3
-  figures:
-  - path: figures/2025-yanshan-yi-fig23.png
-    width_mm: 74.1
-    height_mm: 41.3
