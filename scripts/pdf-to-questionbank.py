@@ -188,6 +188,75 @@ def parse_yaml_safe(raw: str):
         return {"parse_error": str(e), "raw_snippet": raw[:300]}
 
 
+def merge_cross_page_questions(questions: list) -> list:
+    """
+    同一章节内，相同 id 的跨页题目合并为一道完整题。
+
+    规则：
+    - 按 (page_num, page_order) 排序，确保合并顺序正确
+    - stem 顺序拼接（去重）
+    - has_figure 取 OR，figure_page_ref 合并
+    - type / difficulty / source / options 保留第一次出现的值
+    - answer / note 取非空值，多个不同值用 '; ' 拼接
+    """
+    from collections import OrderedDict
+
+    sorted_qs = sorted(
+        questions,
+        key=lambda q: (q.get("_page_num", 0), q.get("_page_order", 0))
+    )
+
+    seen: OrderedDict = OrderedDict()   # id → merged question
+
+    for q in sorted_qs:
+        qid = q.get("id")
+        if qid is None:
+            # 无 id 的题目（通常是解析失败残片），用对象 id 作 key 保留
+            seen[id(q)] = q
+            continue
+
+        if qid not in seen:
+            seen[qid] = dict(q)
+        else:
+            existing = seen[qid]
+
+            # 同页同 id（模型输出重复）→ 保留最后一个（通常更完整）
+            if existing.get("_page_num") == q.get("_page_num"):
+                seen[qid] = dict(q)
+                continue
+
+            # 跨页合并 ─────────────────────────────────────────
+            # stem 拼接
+            stem_a = str(existing.get("stem") or "").strip()
+            stem_b = str(q.get("stem") or "").strip()
+            if stem_b and stem_b not in stem_a:
+                existing["stem"] = stem_a + "\n" + stem_b
+
+            # has_figure / figure_page_ref
+            if q.get("has_figure"):
+                existing["has_figure"] = True
+            ref_a = existing.get("figure_page_ref") or ""
+            ref_b = q.get("figure_page_ref") or ""
+            if ref_b and ref_b not in ref_a:
+                existing["figure_page_ref"] = (
+                    (ref_a + "; " + ref_b).strip("; ") if ref_a else ref_b
+                )
+
+            # answer：取非空
+            if q.get("answer") and not existing.get("answer"):
+                existing["answer"] = q["answer"]
+
+            # note：合并不同内容
+            note_a = existing.get("note") or ""
+            note_b = q.get("note") or ""
+            if note_b and note_b not in note_a:
+                existing["note"] = (
+                    (note_a + "; " + note_b).strip("; ") if note_a else note_b
+                )
+
+    return list(seen.values())
+
+
 def make_chapter_slug(chapter: str, section: str) -> str:
     """章节名 → 合法文件名（去除特殊字符）。"""
     raw = f"{chapter}——{section}"
@@ -280,9 +349,10 @@ def main():
             continue
 
         questions = parsed.get("questions") or []
-        # 注入页面元信息
-        for q in questions:
-            q["_page_num"] = page_num
+        # 注入页面元信息（含页内顺序，供跨页合并排序用）
+        for order, q in enumerate(questions):
+            q["_page_num"]   = page_num
+            q["_page_order"] = order
             if q.get("has_figure"):
                 q["figure_page_ref"] = f".cache/pages/page-{page_num:03d}.png"
 
@@ -313,21 +383,15 @@ def main():
         key = (pd["chapter"], pd["section"])
         grouped[key].extend(pd["questions"])
 
-    # 写 meta.yaml
-    meta = {
-        "book_id":    args.book_id,
-        "pdf_source": str(pdf_path),
-        "model":      QWEN_MODEL,
-        "page_range": [args.start_page, end_idx],
-        "sections":   len(grouped),
-        "total_questions": sum(len(qs) for qs in grouped.values()),
+    # 先合并再统计（meta.yaml 在写完所有文件后更新）
+    merged_grouped = {
+        key: merge_cross_page_questions(qs)
+        for key, qs in grouped.items()
     }
-    with open(out_dir / "meta.yaml", "w", encoding="utf-8") as f:
-        yaml.dump(meta, f, allow_unicode=True, sort_keys=False)
 
     # 写各章节文件
     written = 0
-    for (chapter, section), questions in grouped.items():
+    for (chapter, section), questions in merged_grouped.items():
         # 清除内部字段
         clean_qs = [
             {k: v for k, v in q.items() if not k.startswith("_")}
@@ -349,8 +413,21 @@ def main():
         written += 1
         print(f"  → {out_file.name}  ({len(clean_qs)} 题)")
 
-    total_q = sum(len(qs) for qs in grouped.values())
-    print(f"\n✅ 完成  {written} 个章节文件  共 {total_q} 道题")
+    total_q = sum(len(qs) for qs in merged_grouped.values())
+
+    # 写 meta.yaml（合并后的准确数字）
+    meta = {
+        "book_id":         args.book_id,
+        "pdf_source":      str(pdf_path),
+        "model":           QWEN_MODEL,
+        "page_range":      [args.start_page, end_idx],
+        "sections":        written,
+        "total_questions": total_q,
+    }
+    with open(out_dir / "meta.yaml", "w", encoding="utf-8") as f:
+        yaml.dump(meta, f, allow_unicode=True, sort_keys=False)
+
+    print(f"\n✅ 完成  {written} 个章节文件  共 {total_q} 道题（已跨页合并）")
     print(f"   输出目录: {out_dir}")
 
 
