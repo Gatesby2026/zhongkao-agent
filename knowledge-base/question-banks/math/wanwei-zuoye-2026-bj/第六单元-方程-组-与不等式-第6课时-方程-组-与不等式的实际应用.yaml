@@ -1,0 +1,81 @@
+meta:
+  book_id: wanwei-zuoye-2026-bj
+  chapter: 第六单元 方程(组)与不等式
+  section: 第6课时 方程(组)与不等式的实际应用
+questions:
+- id: 1
+  type: 选择
+  difficulty: 基础
+  source: 北京版七上 P104 例4 改编
+  stem: 一件夹克衫先按成本提高50%标价，再以8折（标价的80%）出售，结果获利20元，若设这件夹克衫的成本是x元，根据题意，可得到的方程是
+  options:
+    A: $(1+50\%)x\times80\%=x-20$
+    B: $(1+50\%)x\times80\%=x+20$
+    C: $(1+50\%x)\times80\%=x-20$
+    D: $(1+50\%x)\times80\%=x+20$
+  answer: ''
+  has_figure: false
+  note: ''
+- id: 2
+  type: 选择
+  difficulty: 基础
+  source: 2025西城区期末改编
+  stem: 我国新能源汽车产业为应对全球气候变化、推动低碳发展做出了巨大贡献。根据中国汽车工业协会发布的数据，2024年10月新能源汽车销量约为143万辆，2024年12月新能源汽车销量约为159.6万辆，设新能源汽车销量的月平均增长率为x，则可列出的方程是
+  options:
+    A: $143(1+2x)=159.6$
+    B: $143(1+2x)^2=159.6$
+    C: $143(1+x)^2=159.6$
+    D: $143(1+x^2)=159.6$
+  answer: ''
+  has_figure: false
+  note: ''
+- id: 3
+  type: 选择
+  difficulty: 基础
+  source: 2025海淀区期中
+  stem: 我国古代数学名著《张丘建算经》中记载：“今有清酒一斗直粟十斗，醑酒一斗直粟三斗，今持粟三斛，得酒五斗，问清、醑酒各几何？”意思是：现在一斗清酒价值10斗谷子，一斗醑酒价值3斗谷子。现拿30斗谷子，共换了5斗清、醑酒各几斗。设醑酒x斗，清酒y斗，则可列方程组为
+  options:
+    A: $\\left\\{\\begin{array}{l}x+y=30\\\\ \\dfrac{x}{3}+\\dfrac{y}{10}=5\\end{array}\\right.$
+    B: $\\left\\{\\begin{array}{l}x+y=5\\\\ \\dfrac{x}{3}+\\dfrac{y}{10}=30\\end{array}\\right.$
+    C: $\\left\\{\\begin{array}{l}x+y=5\\\\ 10x+3y=30\\end{array}\\right.$
+    D: $\\left\\{\\begin{array}{l}x+y=5\\\\ 3x+10y=30\\end{array}\\right.$
+  answer: ''
+  has_figure: false
+  note: ''
+- id: 4
+  type: 填空
+  difficulty: 基础
+  source: ''
+  stem: 已知一艘轮船顺水航行50千米和逆水航行30千米共用的时间，正好等于船在静水中航行80千米所用的时间，并且水流的速度是3千米/小时，设轮船在静水中的速度为x千米/小时，则顺水航行的速度是______千米/小时。
+  options: {}
+  answer: ''
+  has_figure: false
+  note: ''
+- id: 5
+  type: 填空
+  difficulty: 基础
+  source: ''
+  stem: 甲工程队5天完成了一项工程的一半，乙工程队加入后，两工程队合作3天完成了这项工程的另一半，则乙工程队单独完成这项工程需要______天。
+  options: {}
+  answer: ''
+  has_figure: false
+  note: ''
+- id: 6
+  type: 解答
+  difficulty: 基础
+  source: 2025东城区一模
+  stem: 如图，编织大、小两种中国结共12个，总计用绳40 m。已知编织1个大号中国结需用绳4 m，编织1个小号中国结需用绳3 m。问这两种中国结各编织了多少个。
+  options: {}
+  answer: ''
+  has_figure: true
+  note: 第6题图中有两个中国结图案，一大一小
+  figure_page_ref: .cache/pages/page-013.png
+- id: 7
+  type: 解答
+  difficulty: 基础
+  source: 2025北京校级模拟
+  stem: 无人机是现代科技领域的重要创新之一，使用无人机对茶园进行病虫害防治，可以提高效率。已知使用无人机每小时对茶园打药的作业面积是人工每小时对茶园打药的作业面积的6倍，若使用无人机对600亩茶园打药的时间比人工对300亩茶园打药的时间少20小时，求使用无人机每小时对茶园打药的作业面积。
+  options: {}
+  answer: ''
+  has_figure: false
+  note: ''

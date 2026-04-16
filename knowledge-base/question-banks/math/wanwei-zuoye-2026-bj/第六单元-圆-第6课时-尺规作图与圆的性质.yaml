@@ -1,0 +1,55 @@
+meta:
+  book_id: wanwei-zuoye-2026-bj
+  chapter: 第六单元 圆
+  section: 第6课时 尺规作图与圆的性质
+questions:
+- id: 6
+  type: 选择
+  difficulty: 基础
+  source: 2025通州区一模
+  stem: 下面是“经过直线 $l$ 外一点 $A$ 作这条直线的垂线”的尺规作图方法。\n(1) 任意取一点 $B$, 使点 $B$ 和点 $A$ 在 $l$
+    的两旁；\n(2) 以点 $A$ 为圆心, $AB$ 长为半径作弧, 交 $l$ 于点 $C$ 和点 $D$；\n(3) 分别以点 $C$ 和点 $D$ 为圆心,
+    大于 $\dfrac{1}{2}CD$ 的同样长为半径作弧, 两弧在 $l$ 的同一侧相交于点 $E$；\n(4) 作直线 $AE$。\n则直线 $AE$
+    就是所求作的垂线。\n根据以上尺规作图过程（如图），给出下面四个结论：① 点 $A$ 到 $C,B,E,D$ 四点的距离一定都相等；② 点 $C$ 与点 $D$
+    一定关于直线 $AE$ 对称；③ 点 $A$ 与点 $E$ 一定关于直线 $l$ 对称；④ 连接 $AC,CE,AD,ED$, 一定有 $\triangle
+    ACE \cong \triangle ADE$。上述结论中，正确结论的序号是
+  options:
+    A: ①②
+    B: ①③
+    C: ②③
+    D: ②④
+  answer: ''
+  has_figure: true
+  note: ''
+  figure_page_ref: .cache/pages/page-064.png
+- id: 7
+  type: 解答
+  difficulty: 能力
+  source: 2025房山区期末
+  stem: 下面是“过圆外一点作圆的切线”的作图过程。\n如图①，已知：$\odot O$ 和 $\odot O$ 外一点 $P$。\n求作：过点 $P$ 的
+    $\odot O$ 的切线。\n作法：如图②，\n(1) 连接 $OP$；\n(2) 作线段 $OP$ 的中点 $A$, 以 $A$ 为圆心, 以 $AO$
+    为半径作 $\odot A$, 与 $\odot O$ 交于两点 $Q$ 和 $R$；\n(3) 作直线 $PQ, PR$。\n直线 $PQ$ 和直线 $PR$
+    是 $\odot O$ 的两条切线。\n证明：连接 $OQ, OR$。\n∵ $OP$ 是 $\odot A$ 的直径, 点 $Q$ 在 $\odot A$
+    上,\n∴ $\angle OQP =$ ________°。\n∴ $OQ \perp PQ$。\n又∵ 点 $Q$ 在 $\odot O$ 上,\n∴
+    直线 $PQ$ 是 $\odot O$ 的切线（________）\n（填推理的依据）。\n同理可证直线 $PR$ 是 $\odot O$ 的切线。
+  answer: ''
+  has_figure: true
+  note: ''
+  figure_page_ref: .cache/pages/page-064.png
+- id: 8
+  type: 解答
+  difficulty: 能力
+  source: 2024西城区二模
+  stem: 已知：如图，在 $\triangle ABC$ 中，$\angle B = 90^\circ$, $BA = BC$。\n求作：点 $D$, 使得点
+    $D$ 在 $\triangle ABC$ 内，且 $\angle ADB = \dfrac{1}{2}\angle BDC$。\n下面是小华的解答过程，请补充完整：\n(1)
+    使用直尺和圆规，依作法补全图形（保留作图痕迹）。\n① 作线段 $BC$ 的垂直平分线 $PQ$ 交 $BC$ 于点 $E$；\n② 以点 $A$ 为圆心,
+    $AB$ 长为半径作弧, 与直线 $PQ$ 在 $\triangle ABC$ 内交于点 $D$, 点 $D$ 就是所求作的点。\n(2) 完成下面的证明。\n证明：连接
+    $DA, DB, DC$。\n∵ 点 $D$ 在线段 $BC$ 的垂直平分线上，\n∴ $DB = DC$（________）（填推理的依据），\n$DE
+    \perp BC$，\n∴ $\angle BDE = \angle CDE = \dfrac{1}{2}\angle BDC$, $\angle ABE
+    = \angle BED = 90^\circ$，\n∴ $AB // DE$，\n∴ $\angle ABD = \angle BDE$。\n∴ ________,\n∴
+    $\angle ADB = \angle$ ________,\n∴ $\angle ADB = \angle BDE = \dfrac{1}{2}\angle
+    BDC$。
+  answer: ''
+  has_figure: true
+  note: ''
+  figure_page_ref: .cache/pages/page-064.png
