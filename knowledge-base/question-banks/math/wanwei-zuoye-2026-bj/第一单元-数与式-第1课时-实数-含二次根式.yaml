@@ -1,0 +1,289 @@
+meta:
+  book_id: wanwei-zuoye-2026-bj
+  chapter: 第一单元 数与式
+  section: 第1课时 实数（含二次根式）
+questions:
+- id: 1
+  type: 选择
+  difficulty: 基础
+  source: ''
+  stem: $-\dfrac{1}{2025}$ 的相反数是
+  options:
+    A: $\dfrac{1}{2025}$
+    B: '-2025'
+    C: '2025'
+    D: $-\dfrac{1}{2025}$
+  answer: ''
+  has_figure: false
+  note: ''
+- id: 2
+  type: 选择
+  difficulty: 基础
+  source: 2024西城区期末
+  stem: -7 的绝对值是
+  options:
+    A: '-7'
+    B: '7'
+    C: $-\dfrac{1}{7}$
+    D: $\dfrac{1}{7}$
+  answer: ''
+  has_figure: false
+  note: ''
+- id: 3
+  type: 选择
+  difficulty: 基础
+  source: ''
+  stem: 数学家刘徽在《九章算术》中首先给出了正负数的定义：“今两算得失相反，要令正负以名之”。在课堂抢答活动中，若把得 5 分记作+5 分，则扣 3 分可记作
+  options:
+    A: 3 分
+    B: -3 分
+    C: 5 分
+    D: -5 分
+  answer: ''
+  has_figure: false
+  note: ''
+- id: 4
+  type: 选择
+  difficulty: 基础
+  source: ''
+  stem: 在实数 $-\pi$，-3.14，$\dfrac{1}{4}$，$\sqrt{3}$ 中，最小的数是
+  options:
+    A: '-3.14'
+    B: $\dfrac{1}{4}$
+    C: $\sqrt{3}$
+    D: $-\pi$
+  answer: ''
+  has_figure: false
+  note: ''
+- id: 5
+  type: 选择
+  difficulty: 基础
+  source: ''
+  stem: 已知 $-1 < -a < 1$，则实数 $a$ 在数轴上对应的位置为
+  options:
+    A: '[图]'
+    B: '[图]'
+    C: '[图]'
+    D: '[图]'
+  answer: ''
+  has_figure: true
+  note: ''
+  figure_page_ref: .cache/pages/page-005.png
+- id: 6
+  type: 选择
+  difficulty: 基础
+  source: ''
+  stem: 下列二次根式中是最简二次根式的是
+  options:
+    A: $\dfrac{1}{\sqrt{5}}$
+    B: $\sqrt{0.4}$
+    C: $\sqrt{7}$
+    D: $\sqrt{20}$
+  answer: ''
+  has_figure: false
+  note: ''
+- id: 7
+  type: 选择
+  difficulty: 基础
+  source: 2025西城区期中
+  stem: 下列运算中，正确的是
+  options:
+    A: $\sqrt{9} = \pm3$
+    B: $\sqrt[3]{-8} = 2$
+    C: $\sqrt{|-4|} = 2$
+    D: $\sqrt{(-8)^2} = -8$
+  answer: ''
+  has_figure: false
+  note: ''
+- id: 8
+  type: 选择
+  difficulty: 基础
+  source: 2025昌平区二模
+  stem: 昌平作为北京国际科创中心建设的重要承载区，已经汇集 69 个国家级、省部级重点实验室，210 个工程技术中心，全国重点实验室数量占全市总量的三分之一以上，并通过有组织的科技成果转化，使得近三年的技术合同成交额达
+    1319 亿元。其中 131900000000 用科学记数法记作
+  options:
+    A: $1319\times10^8$
+    B: $1.319\times10^8$
+    C: $1319\times10^{11}$
+    D: $1.319\times10^{11}$
+  answer: ''
+  has_figure: false
+  note: ''
+- id: 9
+  type: 选择
+  difficulty: 基础
+  source: 2025石景区二模
+  stem: 根据公开资料，我国载人航天测控系统的时间同步精度为 0.000001 秒（微秒级时间同步），确保指令和数据的精确。请将 0.000001 用科学记数法表示应为
+  options:
+    A: $1\times10^{-6}$
+    B: $-1\times10^6$
+    C: $0.1\times10^{-5}$
+    D: $-0.1\times10^5$
+  answer: ''
+  has_figure: false
+  note: ''
+- id: 10
+  type: 选择
+  difficulty: 基础
+  source: ''
+  stem: '"中国天眼"是目前世界上最大单口径、最灵敏的射电望远镜，具有我国自主知识产权，能够接收到来自 137 亿光年以外的电磁信号，已知 1 光年 $\\approx
+    9.5\times10^5$ 千米，数据 137 亿光年用科学记数法表示约为'
+  options:
+    A: $1.3015\times10^{24}$ 千米
+    B: $13.015\times10^{22}$ 千米
+    C: $1.3015\times10^{23}$ 千米
+    D: $1.3015\times10^{22}$ 千米
+  answer: ''
+  has_figure: false
+  note: ''
+- id: 11
+  type: 选择
+  difficulty: 基础
+  source: 2025顺义区一模
+  stem: 实数 $a$ 在数轴上的对应点的位置如图所示，下列结论正确的是
+  options:
+    A: $|a| > 3$
+    B: $a > -2$
+    C: $-2 < a - 1 < -1$
+    D: $-2 < a + 1 < -1$
+  answer: ''
+  has_figure: true
+  note: ''
+  figure_page_ref: .cache/pages/page-005.png
+- id: 12
+  type: 选择
+  difficulty: 基础
+  source: 2025西城区二模
+  stem: 如图，数轴上 A,B 两点分别对应实数 a,b，且 AO>BO，则下列结论正确的是
+  options:
+    A: $a+b>0$
+    B: $a-b>0$
+    C: $\dfrac{1}{a}>\dfrac{1}{b}$
+    D: $a^2-b^2>0$
+  answer: ''
+  has_figure: true
+  note: 图中显示数轴，A在原点左侧，B在右侧，AO>BO
+  figure_page_ref: .cache/pages/page-006.png
+- id: 13
+  type: 选择
+  difficulty: 基础
+  source: 2025西城区二模
+  stem: '"双碳"目标战略为中国汽车工业带来了新的生命力，截至2023年底，全国新能源汽车保有量约为 $2.0\times10^7$ 辆，根据新能源汽车产业规划目标，预计到2033年底，新能源汽车保有量将会是2023年底的5倍，达到约
+    m 辆，则 m 的值是'
+  options:
+    A: $1.0\times10^7$
+    B: $1.0\times10^8$
+    C: $1.0\times10^9$
+    D: $1.0\times10^{10}$
+  answer: ''
+  has_figure: false
+  note: ''
+- id: 14
+  type: 选择
+  difficulty: 基础
+  source: 逆袭卷
+  stem: 某厂家要设计一个装截面为正方形的木条的圆柱形纸盒（横截面如图①），已知每支木条形状、大小相同，底面均为边长为 6 cm 的正方形，目前厂家提供了装不同数量木条的圆柱形纸盒的收纳设计方案。如图②，若要装
+    2 支木条，则圆柱形纸盒底面圆半径的最小整数值为
+  options:
+    A: 5 cm
+    B: 6 cm
+    C: 7 cm
+    D: 8 cm
+  answer: ''
+  has_figure: true
+  note: 图①为圆内接正方形，图②为圆内并列两个正方形
+  figure_page_ref: .cache/pages/page-006.png
+- id: 15
+  type: 填空
+  difficulty: 基础
+  source: 2025西城区二模
+  stem: 若 $\sqrt{x-2}$ 在实数范围内有意义，则实数 x 的取值范围是
+  answer: ''
+  has_figure: false
+  note: ''
+- id: 16
+  type: 填空
+  difficulty: 基础
+  source: 2025石景区二模
+  stem: 已知：$n<\sqrt{17}<n+1$，其中 n 为正整数，则 n 的值为
+  answer: ''
+  has_figure: false
+  note: ''
+- id: 17
+  type: 填空
+  difficulty: 基础
+  source: ''
+  stem: 若 $|m+2|+|n-3|=0$，则 $mn=$
+  answer: ''
+  has_figure: false
+  note: ''
+- id: 18
+  type: 填空
+  difficulty: 基础
+  source: ''
+  stem: 计算 $(2\sqrt{5}+\sqrt{6})(2\sqrt{5}-\sqrt{6})$ 的结果为
+  answer: ''
+  has_figure: false
+  note: ''
+- id: 19
+  type: 填空
+  difficulty: 基础
+  source: 2025顺义区一模
+  stem: 计算：$(\pi-2)^0+4\sin 30^\circ+\sqrt{8}-|-3|.$
+  answer: ''
+  has_figure: false
+  note: ''
+- id: 20
+  type: 填空
+  difficulty: 基础
+  source: 2025朝阳区二模
+  stem: 计算：$|\sqrt{3}-2|-2\sin 60^\circ-(\dfrac{1}{2})^{-1}+\sqrt{12}.$
+  answer: ''
+  has_figure: false
+  note: ''
+- id: 21
+  type: 填空
+  difficulty: 基础
+  source: 2025平谷区二模改编
+  stem: 计算：$|-1|+4\cos 45^\circ-\sqrt{18}+(\dfrac{1}{2})^{-1}.$
+  answer: ''
+  has_figure: false
+  note: ''
+- id: 22
+  type: 填空
+  difficulty: 基础
+  source: ''
+  stem: 计算：$-1^2+(\dfrac{1}{4})^{-1}+4\cos 60^\circ-\sqrt{3}\times\sqrt{12}.$
+  answer: ''
+  has_figure: false
+  note: ''
+- id: 23
+  type: 选择
+  difficulty: 能力
+  source: 2025海淀区二模
+  stem: 若 $a+b>0$，且 $a>b$，则下列结论中一定正确的是
+  options:
+    A: $a<0$
+    B: $b>0$
+    C: $ab>0$
+    D: $|a|>|b|$
+  answer: ''
+  has_figure: false
+  note: ''
+- id: 24
+  type: 填空
+  difficulty: 能力
+  source: ''
+  stem: 如图，以数轴的单位长度为边长作一个正方形，以表示数-2的点为圆心，正方形对角线长为半径画半圆，交数轴于点 A 和点 B，则点 A 表示的数是
+  answer: ''
+  has_figure: true
+  note: 图中显示数轴，-2处为圆心，半圆与数轴交于A和B
+  figure_page_ref: .cache/pages/page-006.png
+- id: 25
+  type: 填空
+  difficulty: 能力
+  source: ''
+  stem: $4+\sqrt{15}$ 的整数部分是 $a$，小数部分是 $b$，则 $2b+a$ 的值是
+  answer: ''
+  has_figure: false
+  note: ''
