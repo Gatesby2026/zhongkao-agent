@@ -1,0 +1,139 @@
+<!--pages/chat/chat.wxml
+  群聊 UI - 原型阶段
+  布局：顶部固定 group bar / 中间滚动消息区 / 底部输入栏
+-->
+<view class="page">
+  <!-- 顶部小贴士条（提示这是原型） -->
+  <view class="banner">
+    🧪 原型版 · 6 位 AI 老师由后端 Agent 驱动
+  </view>
+
+  <!-- 消息滚动区 -->
+  <scroll-view
+    class="scroll-area"
+    scroll-y
+    scroll-into-view="{{scrollIntoView}}"
+    scroll-with-animation
+    enhanced
+    show-scrollbar="{{false}}"
+  >
+    <view class="msg-list">
+      <block wx:for="{{messages}}" wx:key="_key">
+        <view id="{{item._key}}">
+
+          <!-- 系统消息（居中灰条） -->
+          <view wx:if="{{item.type === 'system'}}" class="sys-msg">
+            <text>{{item.text}}</text>
+          </view>
+
+          <!-- 时间分隔（首条/隔时显示） -->
+          <view wx:if="{{item.showTime}}" class="time-divider">
+            <text>{{item.time}}</text>
+          </view>
+
+          <!-- 文字消息 / 图片消息 / 卡片消息 -->
+          <view
+            wx:if="{{item.type !== 'system' && item._role}}"
+            class="msg-row {{item._role.side === 'right' ? 'msg-row-right' : 'msg-row-left'}}"
+          >
+            <!-- 头像（左侧老师 or 右侧用户） -->
+            <view
+              wx:if="{{item._role.side === 'left'}}"
+              class="avatar"
+              style="background: {{item._role.avatarBg}}"
+            >
+              <text class="avatar-char">{{item._role.avatarChar}}</text>
+            </view>
+
+            <view class="msg-body">
+              <!-- 老师名 + 学科标签 -->
+              <view wx:if="{{item._role.side === 'left'}}" class="msg-name">
+                <text class="name-text">{{item._role.name}}</text>
+                <text wx:if="{{item._role.role}}" class="role-tag">{{item._role.role}}</text>
+              </view>
+
+              <!-- 文字气泡 -->
+              <view
+                wx:if="{{item.type === 'text'}}"
+                class="bubble {{item._role.side === 'right' ? 'bubble-right' : 'bubble-left'}}"
+              >
+                <text class="bubble-text">{{item.text}}</text>
+              </view>
+
+              <!-- 图片占位（原型不放真图） -->
+              <view
+                wx:if="{{item.type === 'image'}}"
+                class="bubble bubble-image {{item._role.side === 'right' ? 'bubble-right' : 'bubble-left'}}"
+              >
+                <view class="image-placeholder">
+                  <text class="image-icon">📷</text>
+                  <text class="image-desc">{{item.imageDesc}}</text>
+                </view>
+              </view>
+
+              <!-- 卡片消息（任务卡 / 解题卡 / 报告卡） -->
+              <view
+                wx:if="{{item.type === 'card'}}"
+                class="card"
+                bindtap="onCardTap"
+                data-action="{{item.cardAction}}"
+              >
+                <view class="card-header">{{item.cardTitle}}</view>
+                <view class="card-items">
+                  <view
+                    wx:for="{{item.cardItems}}"
+                    wx:for-item="ci"
+                    wx:key="label"
+                    class="card-item"
+                  >
+                    <text class="card-icon">{{ci.icon}}</text>
+                    <text class="card-label">{{ci.label}}</text>
+                    <text class="card-value">{{ci.value}}</text>
+                  </view>
+                </view>
+                <view wx:if="{{item.cardFooter}}" class="card-footer">
+                  {{item.cardFooter}}
+                </view>
+              </view>
+            </view>
+
+            <!-- 右侧用户头像 -->
+            <view
+              wx:if="{{item._role.side === 'right'}}"
+              class="avatar"
+              style="background: {{item._role.avatarBg}}"
+            >
+              <text class="avatar-char">{{item._role.avatarChar}}</text>
+            </view>
+          </view>
+
+        </view>
+      </block>
+
+      <!-- 底部留白（防止最后一条被输入栏挡住） -->
+      <view class="bottom-spacer"></view>
+    </view>
+  </scroll-view>
+
+  <!-- 底部输入栏 -->
+  <view class="input-bar">
+    <view class="input-icon">😊</view>
+    <input
+      class="input-field"
+      type="text"
+      value="{{inputValue}}"
+      bindinput="onInput"
+      placeholder="@班主任、问问题..."
+      confirm-type="send"
+      bindconfirm="onSend"
+      adjust-position="{{true}}"
+    />
+    <view class="input-icon">📷</view>
+    <view
+      wx:if="{{inputValue}}"
+      class="send-btn"
+      bindtap="onSend"
+    >发送</view>
+    <view wx:else class="input-icon">+</view>
+  </view>
+</view>
