@@ -15,6 +15,8 @@
   - 支持图片/语音消息
 """
 
+from __future__ import annotations
+
 import base64
 import json
 import secrets
@@ -42,10 +44,24 @@ def base_info() -> dict:
 
 # ==================== 登录 ====================
 
+def ilink_headers(token: str | None = None) -> dict:
+    """构建 iLink 标准请求头（所有接口通用）"""
+    h = {
+        "iLink-App-Id": "bot",
+        "iLink-App-ClientVersion": "65536",
+        "X-WECHAT-UIN": gen_uin(),
+        "Content-Type": "application/json",
+    }
+    if token:
+        h["Authorization"] = f"Bearer {token}"
+        h["AuthorizationType"] = "ilink_bot_token"
+    return h
+
+
 def request_qrcode() -> dict:
     """请求登录二维码"""
     url = f"{BASE_URL}/ilink/bot/get_bot_qrcode?bot_type=3"
-    resp = requests.get(url, headers={"X-WECHAT-UIN": gen_uin()}, timeout=10)
+    resp = requests.get(url, headers=ilink_headers(), timeout=10)
     resp.raise_for_status()
     return resp.json()
 
@@ -59,7 +75,7 @@ def poll_qrcode_status(qrcode_key: str, max_wait: int = 300) -> dict:
             resp = requests.get(
                 url,
                 params={"qrcode": qrcode_key},
-                headers={"X-WECHAT-UIN": gen_uin()},
+                headers=ilink_headers(),
                 timeout=LONG_POLL_TIMEOUT,
             )
             if resp.status_code == 200:
@@ -119,30 +135,30 @@ def load_or_login() -> dict:
 
 # ==================== 消息收发 ====================
 
+class SessionExpiredError(Exception):
+    pass
+
+
 def get_updates(auth: dict, cursor: str = "") -> dict:
     """长轮询接收新消息"""
     base = auth.get("baseurl") or BASE_URL
     url = f"{base}/ilink/bot/getupdates"
-    headers = {
-        "Authorization": f"Bearer {auth['bot_token']}",
-        "X-WECHAT-UIN": gen_uin(),
-        "Content-Type": "application/json",
-    }
+    headers = ilink_headers(auth["bot_token"])
     body = {"get_updates_buf": cursor, "base_info": base_info()}
     resp = requests.post(url, json=body, headers=headers, timeout=LONG_POLL_TIMEOUT)
     resp.raise_for_status()
-    return resp.json()
+    data = resp.json()
+    # iLink errcode -14 = session timeout（token 失效，需重新登录）
+    if data.get("errcode") == -14:
+        raise SessionExpiredError(f"iLink session timeout: {data}")
+    return data
 
 
 def send_text(auth: dict, to_user_id: str, context_token: str, text: str) -> dict:
     """发送文字消息"""
     base = auth.get("baseurl") or BASE_URL
     url = f"{base}/ilink/bot/sendmessage"
-    headers = {
-        "Authorization": f"Bearer {auth['bot_token']}",
-        "X-WECHAT-UIN": gen_uin(),
-        "Content-Type": "application/json",
-    }
+    headers = ilink_headers(auth["bot_token"])
     body = {
         "msg": {
             "to_user_id": to_user_id,
@@ -199,6 +215,11 @@ def main() -> None:
         except KeyboardInterrupt:
             print("\n\n👋 停止监听")
             break
+        except SessionExpiredError:
+            print("🔄 Session 过期，重新登录...")
+            TOKEN_FILE.unlink(missing_ok=True)
+            auth = login()
+            cursor = ""
         except requests.exceptions.HTTPError as e:
             print(f"⚠️  HTTP 错误: {e.response.status_code} {e.response.text[:200]}")
             if e.response.status_code in (401, 403):
