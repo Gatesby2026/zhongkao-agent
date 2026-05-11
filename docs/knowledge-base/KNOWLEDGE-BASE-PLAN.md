@@ -1,7 +1,7 @@
 # 知识库建设方案 — 现状、结构与迭代计划
 
 > 最后更新：2026-04-13
-> 关联文档：[DESIGN.md](./DESIGN.md)（产品设计）、[KNOWLEDGE-BASE-REVIEW.md](./KNOWLEDGE-BASE-REVIEW.md)（质量评估）
+> 关联文档：[../product/PRD.md](../product/PRD.md)（产品设计）、[KNOWLEDGE-BASE-REVIEW.md](./KNOWLEDGE-BASE-REVIEW.md)（质量评估）
 > 当前范围：北京市 × 6 科全覆盖
 
 ---

@@ -5,7 +5,7 @@
 > 核心原则：**通过微信对话，持续陪伴学生备考全程**
 > 交付形态：微信服务号「中考私人教研组」（流量入口/触达）+ 微信小程序（主对话载体，自建群聊 UI）
 
-> **v5.0 重大架构变更**：从「个人微信群 + iLink Bot API」全面改为「服务号 + 小程序群聊 UI」。原因：iLink/ClawBot 设计为"个人账号连接 AI Agent"，不支持"多用户连一个 Bot"；企业微信外部群官方禁止机器人。详见 [memory/wechat-platform-decision.md](../../.claude/projects/-Users-jiakui-projects-zhongkao-agent/memory/wechat-platform-decision.md)。
+> **v5.0 重大架构变更**：从「个人微信群 + iLink Bot API」全面改为「服务号 + 小程序群聊 UI」。原因：iLink/ClawBot 设计为"个人账号连接 AI Agent"，不支持"多用户连一个 Bot"；企业微信外部群官方禁止机器人。详见 `~/.claude/projects/-Users-jiakui-projects-zhongkao-agent/memory/wechat-platform-decision.md`（仓库外的本地决策记录）。
 
 ---
 
@@ -616,7 +616,9 @@ Agent 层（多租户、单实例多会话）
 
 ## 附录 B：相关文档
 
-- `STUDENT-PROFILE-SPEC.md` — 学生画像数据模型详细规格
-- `EXAM-FORMAT-SPEC.md` — 各科试卷格式规范
-- `KNOWLEDGE-BASE-PLAN.md` — 知识库建设计划
-- `TEACHING-MATERIALS-STRATEGY.md` — 教辅材料策略
+- [`../specs/STUDENT-PROFILE-SPEC.md`](../specs/STUDENT-PROFILE-SPEC.md) — 学生画像数据模型详细规格
+- [`../specs/EXAM-FORMAT-SPEC.md`](../specs/EXAM-FORMAT-SPEC.md) — 各科试卷格式规范
+- [`../knowledge-base/KNOWLEDGE-BASE-PLAN.md`](../knowledge-base/KNOWLEDGE-BASE-PLAN.md) — 知识库建设计划
+- [`../knowledge-base/TEACHING-MATERIALS-STRATEGY.md`](../knowledge-base/TEACHING-MATERIALS-STRATEGY.md) — 教辅材料策略
+- [`./PRODUCT-REVIEW.md`](./PRODUCT-REVIEW.md) — 早期 PRD 评审报告
+- [`./USER-PERSONA-REPORT.md`](./USER-PERSONA-REPORT.md) — 用户画像咨询报告

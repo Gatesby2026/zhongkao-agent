@@ -28,7 +28,7 @@
 
 最终选型：**服务号 + 微信小程序（自建群聊 UI）+ 多 Agent 后端**
 
-详见项目根目录 `PRD.md` v5.0。
+详见 [`../../docs/product/PRD.md`](../../docs/product/PRD.md) v5.0。
 
 ## 这份代码的研究价值
 
