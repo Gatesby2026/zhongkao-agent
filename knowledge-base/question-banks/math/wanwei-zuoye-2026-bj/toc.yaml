@@ -1,0 +1,136 @@
+# 万唯中考·试题研究 数学分层作业本 2026北京版 目录
+# book_page = 书内页码（目录标注值）
+# pdf_page = book_page + 4（封面1页 + 说明1页 + 目录2页）
+
+page_offset: 4   # pdf_page = book_page + page_offset
+
+toc:
+  - unit: '第一单元 数与式'
+    book_page_start: 1
+    lessons:
+      - lesson: '第1课时 实数（含二次根式）'
+        book_page: 1
+      - lesson: '第2课时 整式与因式分解'
+        book_page: 3
+      - lesson: '第3课时 分式'
+        book_page: 4
+
+  - unit: '第二单元 方程（组）与不等式（组）'
+    book_page_start: 6
+    lessons:
+      - lesson: '第4课时 一元一次方程与一元一次不等式（组）'
+        book_page: 6
+      - lesson: '第5课时 转化思想，解方程（组）'
+        book_page: 7
+      - lesson: '第6课时 方程（组）与不等式的实际应用'
+        book_page: 9
+
+  - unit: '第三单元 函数'
+    book_page_start: 12
+    lessons:
+      - lesson: '第7课时 平面直角坐标系'
+        book_page: 12
+      - lesson: '第8课时 函数及其图象'
+        book_page: 13
+      - lesson: '第9课时 提升课 探究新函数的图象与性质'
+        book_page: 14
+      - lesson: '第10课时 一次函数的图象与性质'
+        book_page: 16
+      - lesson: '第11课时 提升课 一次函数综合题'
+        book_page: 18
+      - lesson: '第12课时 反比例函数的图象与性质'
+        book_page: 19
+      - lesson: '第13课时 二次函数的图象与性质'
+        book_page: 21
+      - lesson: '第14课时 提升课 二次函数对称性、增减性问题'
+        book_page: 23
+      - lesson: '第15课时 提升课 二次函数公共点问题'
+        book_page: 25
+      - lesson: '第16课时 函数的实际应用'
+        book_page: 26
+
+  - unit: '第四单元 三角形'
+    book_page_start: 28
+    lessons:
+      - lesson: '第17课时 几何初步、相交线与平行线'
+        book_page: 28
+      - lesson: '第18课时 三角形与多边形的性质'
+        book_page: 30
+      - lesson: '第19课时 全等三角形'
+        book_page: 32
+      - lesson: '第20课时 等腰三角形'
+        book_page: 34
+      - lesson: '第21课时 直角三角形与锐角三角函数'
+        book_page: 36
+      - lesson: '第22课时 相似三角形'
+        book_page: 38
+      - lesson: '微专题 遇角平分线如何添加辅助线'
+        book_page: 40
+      - lesson: '微专题 遇中点如何添加辅助线'
+        book_page: 41
+      - lesson: '微专题 手拉手'
+        book_page: 42
+      - lesson: '微专题 一线三垂直'
+        book_page: 43
+      - lesson: '微专题 构造直角三角形解决√2和√3倍的线段数量关系'
+        book_page: 44
+
+  - unit: '第五单元 四边形'
+    book_page_start: 45
+    lessons:
+      - lesson: '第23课时 平行四边形'
+        book_page: 45
+      - lesson: '第24课时 矩形、菱形、正方形'
+        book_page: 47
+
+  - unit: '第六单元 圆'
+    book_page_start: 50
+    lessons:
+      - lesson: '第25课时 圆的基本概念及性质'
+        book_page: 50
+      - lesson: '第26课时 与圆有关的位置关系'
+        book_page: 52
+      - lesson: '第27课时 弧长、扇形面积的相关计算'
+        book_page: 54
+      - lesson: '微专题 辅助圆'
+        book_page: 55
+      - lesson: '微专题 主从联动'
+        book_page: 56
+
+  - unit: '第七单元 图形的变化'
+    book_page_start: 57
+    lessons:
+      - lesson: '第28课时 视图与投影'
+        book_page: 57
+      - lesson: '第29课时 尺规作图'
+        book_page: 59
+      - lesson: '第30课时 图形的对称、平移与旋转'
+        book_page: 61
+
+  - unit: '第八单元 统计与概率'
+    book_page_start: 63
+    lessons:
+      - lesson: '第31课时 统计'
+        book_page: 63
+      - lesson: '第32课时 概率'
+        book_page: 65
+
+  - unit: '第二部分 专题分层突破'
+    book_page_start: 67
+    lessons:
+      - lesson: '一、基础专题保分练'
+        book_page: 67
+      - lesson: '专题二 特殊四边形的相关证明与计算'
+        book_page: 70
+      - lesson: '专题三 方程（组）与不等式的实际应用'
+        book_page: 72
+      - lesson: '专题四 几何多结论判断'
+        book_page: 75
+      - lesson: '专题五 一次函数综合题'
+        book_page: 77
+      - lesson: '专题六 数据的收集、整理与分析'
+        book_page: 79
+      - lesson: '专题七 与圆有关的证明与计算'
+        book_page: 85
+      - lesson: '专题八 探究新函数的图象与性质'
+        book_page: 89
