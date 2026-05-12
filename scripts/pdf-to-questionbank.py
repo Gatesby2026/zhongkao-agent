@@ -36,6 +36,11 @@ import fitz  # pymupdf
 import openai
 import yaml
 
+# ── TOC 页码→章节映射（书内页码，book_page = PDF页码 - page_offset）──────────
+# 从目录页提取，结构：{book_page: (unit, lesson)}
+# 使用方式：每次处理新书时先提取 TOC 存成 toc.yaml，再由本脚本加载
+# 若无 toc.yaml，则回退到模型识别的 chapter/section 字段
+
 # ── 配置 ──────────────────────────────────────────────────────────────────────
 
 DASHSCOPE_API_KEY = os.environ.get(
@@ -257,12 +262,29 @@ def merge_cross_page_questions(questions: list) -> list:
     return list(seen.values())
 
 
-def make_chapter_slug(chapter: str, section: str) -> str:
-    """章节名 → 合法文件名（去除特殊字符）。"""
-    raw = f"{chapter}——{section}"
-    slug = re.sub(r"[^\w\u4e00-\u9fff\-]", "-", raw)
-    slug = re.sub(r"-{2,}", "-", slug).strip("-")
-    return slug[:60]
+def make_slugs(first_page: int, chapter: str, section: str):
+    """
+    返回 (chapter_dir_slug, file_slug)。
+    目录 = 单元名，文件名 = p{页码}-{课时名}。
+    chapter 与 section 相同时归入「未分类」目录。
+    """
+    chapter = (chapter or "").strip()
+    section = (section or "").strip()
+
+    # 章节目录
+    if chapter and chapter != section:
+        dir_slug = re.sub(r"[^\w\u4e00-\u9fff\-]", "-", chapter)
+        dir_slug = re.sub(r"-{2,}", "-", dir_slug).strip("-")[:40]
+    else:
+        dir_slug = "未分类"
+
+    # 文件名（页码前缀 + 课时名）
+    label = section or chapter or "未知"
+    file_slug = re.sub(r"[^\w\u4e00-\u9fff\-]", "-", label)
+    file_slug = re.sub(r"-{2,}", "-", file_slug).strip("-")[:50]
+    file_slug = f"p{first_page:03d}-{file_slug}"
+
+    return dir_slug, file_slug
 
 
 # ── 主流程 ────────────────────────────────────────────────────────────────────
@@ -392,13 +414,19 @@ def main():
     # 写各章节文件
     written = 0
     for (chapter, section), questions in merged_grouped.items():
+        # 取该章节最小页码作为文件名前缀
+        first_page = min(
+            (q.get("_page_num", 0) for q in questions), default=0
+        )
         # 清除内部字段
         clean_qs = [
             {k: v for k, v in q.items() if not k.startswith("_")}
             for q in questions
         ]
-        slug      = make_chapter_slug(chapter, section)
-        out_file  = out_dir / f"{slug}.yaml"
+        dir_slug, file_slug = make_slugs(first_page, chapter, section)
+        chapter_dir = out_dir / dir_slug
+        chapter_dir.mkdir(exist_ok=True)
+        out_file    = chapter_dir / f"{file_slug}.yaml"
         doc_data  = {
             "meta": {
                 "book_id":  args.book_id,
