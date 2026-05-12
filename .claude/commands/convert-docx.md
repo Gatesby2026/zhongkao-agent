@@ -55,7 +55,7 @@ python3 scripts/docx-pipeline.py --limit 3
 - 报告转换统计和质量评估
 
 ### 4. 更新知识库加载
-如果有新的 YAML 文件生成，检查 `app/lib/knowledge-base.ts` 中的 `loadMockExams()` 函数是否能自动加载（该函数会扫描目录下所有 .yaml 文件，通常无需修改）。
+如果有新的 YAML 文件生成，检查 `admin/lib/knowledge-base.ts` 中的 `loadMockExams()` 函数是否能自动加载（该函数会扫描目录下所有 .yaml 文件，通常无需修改）。
 
 ## 注意事项
 - OCR 缓存在 `scripts/.ocr-cache/ocr-results.json`，相同公式图片不会重复调用 API

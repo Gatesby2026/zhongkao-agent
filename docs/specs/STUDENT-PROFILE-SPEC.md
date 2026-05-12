@@ -413,7 +413,7 @@ plan_records (
 
 ## 附录 A：TypeScript 完整类型定义
 
-> 代码位置：`app/lib/profile.ts`
+> 代码位置：`admin/lib/profile.ts`
 
 ```typescript
 type ModuleId =

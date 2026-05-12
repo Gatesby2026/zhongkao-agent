@@ -54,7 +54,13 @@
 
 ## 其他参考（不在 docs/ 下）
 
-- `../backend/README.md` — 后端目录骨架与职责
-- `../miniprogram/README.md` — 小程序前端目录与本地预览方法
+- `../admin/`（Next.js 管理后台 Web 端，含 components / lib / app 路由 / scripts/paper-scout.js）
+- `../miniprogram/README.md` — 微信小程序前端目录与本地预览方法
+- `../backend/README.md` — 服务号/小程序后端骨架（待开发）
+- `../scripts/` — 流水线脚本，按职责分子目录：
+  - `knowledge-base/` — docx/PDF → 题库 YAML、质量检查
+  - `exam-ocr/` — 试卷 OCR（含 RECIPE-beijing-exam-fetch.md 检索方法）
+  - `answer-card-ocr/` — 答题卡识别（Qwen-VL + Aliyun 手写）
+  - `student-report/` — 学情分析报告生成
 - `../archived/wechat-bot-ilink-spike/ARCHIVED.md` — 已废弃的 iLink Bot 预研记录
 - `~/.claude/projects/-Users-jiakui-projects-zhongkao-agent/memory/wechat-platform-decision.md` — 微信接入选型决策记录（仓库外）

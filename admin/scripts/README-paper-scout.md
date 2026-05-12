@@ -28,7 +28,7 @@ npm run scrape:papers -- --search --keyword "北京 初三 一模 数学 试卷 
 Default output:
 
 ```text
-app/data/paper-scout-results.json
+admin/data/paper-scout-results.json
 ```
 
 Each result contains:

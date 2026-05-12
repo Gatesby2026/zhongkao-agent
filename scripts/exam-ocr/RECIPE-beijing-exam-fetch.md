@@ -87,7 +87,7 @@ done < physics.urls
 
 ### 第 7 步 - OCR + 结构化
 
-见 [`README-exam-ocr.md`](README-exam-ocr.md)。
+见 [`README.md`](README.md)（同目录 OCR 流水线笔记）。
 
 简单说：每科目跑 `cloud-ocr-exam.py`（Qwen + Aliyun Education OCR + Cut 三引擎），
 然后 `structure-exam-cloud.py` + `structure-exam-final.py` 融合输出到 `processed/<科目>/structured-cloud/final.{md,json}`。
@@ -106,7 +106,8 @@ done < physics.urls
 
 ## 已验证产出（chaoyang-2026-yimo）
 
-服务器路径：`/opt/zhongkao-agent/app/data/chaoyang-2026-yimo/`（已 gitignore，~35 MB tar.gz 备份）
+服务器路径：`/opt/zhongkao-agent/admin/data/chaoyang-2026-yimo/`（已 gitignore，~35 MB tar.gz 备份）
+> 注：2026-05 清理三端同步时已从阿里云删除，重新跑流水线会再生成。
 
 ```
 chaoyang-2026-yimo/
@@ -136,11 +137,11 @@ chaoyang-2026-yimo/
 # 1. 找汇总页（手工，在 gaokzx 一模二模频道）
 # 2. 从汇总页 HTML 提取 5/9 个区的 5 科目详情页 URL
 # 3. 跑：
-node app/scripts/paper-scout.js --target gaokzx --district chaoyang --exam ermo
-# （需扩展 paper-scout.js 加 gaokzx adapter）
+cd admin && npm run scrape:papers -- --target gaokzx --district chaoyang --exam ermo
+# （需扩展 admin/scripts/paper-scout.js 加 gaokzx adapter）
 
 # 4. 抓 HTML + 抽图片 URL + 下载
-# 5. 跑 OCR pipeline（见 README-exam-ocr.md）
+# 5. 跑 OCR pipeline（见同目录 README.md）
 ```
 
 ⚠️ **paper-scout.js 当前还没有 gaokzx adapter**，朝阳一模这次是混合手工 + 临时脚本完成的。
@@ -148,7 +149,7 @@ node app/scripts/paper-scout.js --target gaokzx --district chaoyang --exam ermo
 
 ## 关联文档
 
-- [`README-paper-scout.md`](README-paper-scout.md) — paper-scout 通用工具说明
-- [`README-exam-ocr.md`](README-exam-ocr.md) — OCR 流水线最佳实践
-- [`README-answer-card-ocr.md`](README-answer-card-ocr.md) — 学生答题卡识别
-- [`build-student-analysis-report.py`](build-student-analysis-report.py) — 用 final.md + 答题卡生成学情报告
+- [`../../admin/scripts/README-paper-scout.md`](../../admin/scripts/README-paper-scout.md) — paper-scout 通用工具说明
+- [`./README.md`](./README.md) — OCR 流水线最佳实践（本目录）
+- [`../answer-card-ocr/README.md`](../answer-card-ocr/README.md) — 学生答题卡识别
+- [`../student-report/build-student-analysis-report.py`](../student-report/build-student-analysis-report.py) — 用 final.md + 答题卡生成学情报告
