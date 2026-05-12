@@ -13,3 +13,14 @@ knowledge-base/question-banks/**/.cache/
 
 # 大型本地缓存/归档
 *.tar.gz
+
+# Claude Code 临时元数据（worktrees 等）
+.claude/worktrees/
+
+# 学生隐私数据（含真实姓名/成绩，禁止公开）
+learning situation/
+students/
+
+# 脚本运行时状态/日志
+scripts/quark_done_ids.json
+scripts/quark_save_log.json
