@@ -28,3 +28,7 @@ scripts/knowledge-base/quark_save_log.json
 # OCR 缓存
 scripts/.ocr-cache/
 **/.ocr-cache/
+
+# LLM 缓存（含学生 prompt 上下文，不公开）
+scripts/student-report/.cache/
+**/.cache/
