@@ -23,9 +23,53 @@ sys.path.insert(0, str(ROOT / "scripts" / "exam-ocr"))
 from lib import analyze, render, pdf  # noqa: E402
 
 import extract_answer_key as extract_ak_mod  # noqa: E402
+import final_to_paper as final_to_paper_mod  # noqa: E402
 
 
 SUBJECT_LABEL = {"语文": "语文", "数学": "数学", "英语": "英语", "物理": "物理", "化学": "化学", "道法": "道法"}
+
+
+def maybe_generate_paper(student_dir: Path) -> Path:
+    """如果 paper.json 不存在但同目录有 paper-final.json（exam-ocr 输出），
+    自动调适配器生成 paper.json。
+
+    寻找顺序：
+        student_dir/paper.json
+        student_dir/paper-final.json（exam-ocr structured-cloud/final.json）
+        student_dir/structured-cloud/final.json
+    """
+    target = student_dir / "paper.json"
+    if target.exists():
+        return target
+
+    candidates = [
+        student_dir / "paper-final.json",
+        student_dir / "structured-cloud" / "final.json",
+    ]
+    final_path = next((p for p in candidates if p.exists()), None)
+    if final_path is None:
+        raise FileNotFoundError(
+            f"找不到 {target}，也没找到 exam-ocr 的 final.json。\n"
+            f"请提供 paper.json 或把 final.json 放到 {student_dir} 下。"
+        )
+
+    print(f"\n📄 未找到 paper.json，从 {final_path.name} 自动转换 ...")
+    final = json.loads(final_path.read_text(encoding="utf-8"))
+
+    # 可选 exam-meta.json
+    exam_meta = None
+    em_path = student_dir / "exam-meta.json"
+    if em_path.exists():
+        exam_meta = json.loads(em_path.read_text(encoding="utf-8"))
+
+    paper = final_to_paper_mod.convert_final_to_paper(
+        final, subject=final.get("subject"), exam_meta=exam_meta,
+    )
+    target.write_text(
+        json.dumps(paper, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
+    print(f"  → 生成 {target.name}（{paper['meta']['questionCount']} 题）")
+    return target
 
 
 def maybe_generate_answer_key(student_dir: Path) -> Path:
@@ -106,7 +150,12 @@ def maybe_generate_answer_card(student_dir: Path) -> Path:
 
 
 def load_inputs(student_dir: Path):
-    """读 4 个 JSON。缺失则自动生成（answer-key 从试卷页提取，answer-card 从答题卡 OCR）。"""
+    """读 4 个 JSON。缺失则自动生成：
+    - paper.json: 从 exam-ocr 的 final.json 适配
+    - answer-key.json: 从试卷扫描页提取
+    - answer-card.json: 从答题卡照片 OCR
+    """
+    maybe_generate_paper(student_dir)
     maybe_generate_answer_key(student_dir)
     maybe_generate_answer_card(student_dir)
     return {
