@@ -9,6 +9,7 @@
 | [PRD.md](./product/PRD.md) | **产品需求文档主线** v5.0（2026-05-10）— 服务号 + 小程序群聊 UI 架构 |
 | [STUDENT-REPORT-FEATURE-SPEC.md](./product/STUDENT-REPORT-FEATURE-SPEC.md) | **学情报告生成**功能标准化规格（v0.1）— 5 步流水线 + 实施路线图 |
 | [ANSWER-CARD-OCR-RESEARCH.md](./product/ANSWER-CARD-OCR-RESEARCH.md) | **答题卡 OCR 技术调研**（2026-05-14）— 决策：B 路线兼容任意答题卡 |
+| [ANSWER-CARD-OCR-DEMO-RESULTS.md](./product/ANSWER-CARD-OCR-DEMO-RESULTS.md) | **答题卡 OCR 半天 demo 结果**（2026-05-14）— OMRChecker + ArUco 都跑通 |
 | [PRODUCT-REVIEW.md](./product/PRODUCT-REVIEW.md) | 早期 PRD v2.1 评审报告（历史参考） |
 | [USER-PERSONA-REPORT.md](./product/USER-PERSONA-REPORT.md) | 用户画像咨询报告 |
 
