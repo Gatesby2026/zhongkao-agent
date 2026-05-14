@@ -16,7 +16,7 @@ questions:
 - id: 1
   type: 单选
   score: 2
-  question: '1. 下列物品中，通常情况下属于固体的是
+  question: '1. 下列物品中，通常情况下属于导体的是
 
 
     A. 陶瓷杯
@@ -29,8 +29,8 @@ questions:
   answer: C
   solution: ''
   knowledge_points:
-  - 声音的传播需要介质（固体、液体、气体）
-  module: soundLightHeat
+  - 导体与绝缘体的辨别
+  module: electricity
   difficulty: 基础
   recommended_for:
   - L0
@@ -116,16 +116,27 @@ questions:
 - id: 5
   type: 单选
   score: 2
-  question: '5. 考试结束，将本试卷和答题卡一并交回。
+  question: '5.《天工开物》中记载："凡冶铁成器，取已炒熟铁为之。先铸铁成砧，以为受锤之地。凡砧薄者，其声清亮；厚者，其声沉浊。"铁砧发出"清亮"的高音或"沉浊"的低音，主要是因为铁砧的厚度会影响声音的
 
 
-    一、单项选择题（下列各题的四个选项中，只有一个选项符合题意。共24分，每小题2分）'
+    A. 音调
+
+    B. 响度
+
+    C. 音色
+
+    D. 声速'
   answer: A
   solution: ''
-  knowledge_points: []
+  knowledge_points:
+  - 音调与频率的关系
   module: soundLightHeat
-  difficulty: ''
-  recommended_for: []
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
 - id: 6
   type: 单选
   score: 2
