@@ -18,11 +18,48 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "scripts" / "student-report"))
 sys.path.insert(0, str(ROOT / "scripts" / "answer-card-ocr"))
+sys.path.insert(0, str(ROOT / "scripts" / "exam-ocr"))
 
 from lib import analyze, render, pdf  # noqa: E402
 
+import extract_answer_key as extract_ak_mod  # noqa: E402
+
 
 SUBJECT_LABEL = {"语文": "语文", "数学": "数学", "英语": "英语", "物理": "物理", "化学": "化学", "道法": "道法"}
+
+
+def maybe_generate_answer_key(student_dir: Path) -> Path:
+    """如果 answer-key.json 不存在但同目录有 paper-pages/，
+    自动调 extract_answer_key 提取标准答案。
+    """
+    target = student_dir / "answer-key.json"
+    if target.exists():
+        return target
+
+    pages_dir = student_dir / "paper-pages"
+    if not pages_dir.exists():
+        raise FileNotFoundError(
+            f"找不到 {target}，也没找到 {pages_dir} 目录。\n"
+            f"请提供 answer-key.json 或把试卷扫描页（含答案页）放到 paper-pages/。"
+        )
+    pages = sorted([
+        p for p in pages_dir.iterdir()
+        if p.suffix.lower() in {".jpg", ".jpeg", ".png", ".heic"}
+    ])
+    if not pages:
+        raise FileNotFoundError(f"{pages_dir} 为空")
+
+    paper_path = student_dir / "paper.json"
+    if not paper_path.exists():
+        raise FileNotFoundError(f"需要 {paper_path} 才能对齐答案到题号")
+
+    print(f"\n🔍 未找到 answer-key.json，从 {len(pages)} 张试卷页自动提取 ...")
+    extract_ak_mod.extract_answer_key(
+        paper_path=paper_path,
+        page_images=pages,
+        output_path=target,
+    )
+    return target
 
 
 def maybe_generate_answer_card(student_dir: Path) -> Path:
@@ -69,7 +106,8 @@ def maybe_generate_answer_card(student_dir: Path) -> Path:
 
 
 def load_inputs(student_dir: Path):
-    """读 4 个 JSON。如 answer-card.json 缺失则自动 OCR 生成。"""
+    """读 4 个 JSON。缺失则自动生成（answer-key 从试卷页提取，answer-card 从答题卡 OCR）。"""
+    maybe_generate_answer_key(student_dir)
     maybe_generate_answer_card(student_dir)
     return {
         "paper": json.loads((student_dir / "paper.json").read_text(encoding="utf-8")),

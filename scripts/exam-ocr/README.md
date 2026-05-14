@@ -1,4 +1,46 @@
-# Exam Paper OCR Notes
+# scripts/exam-ocr/ — 试卷 OCR + 答案抽取
+
+历史 OCR pipeline notes（早期 Codex 工作）+ 新增 `extract_answer_key.py`（2026-05-14）。
+
+## 🎯 主入口：`extract_answer_key.py`
+
+从试卷扫描页（含答案页）→ 标准 `answer-key.json`。
+
+```bash
+python3 extract_answer_key.py \
+    --paper paper.json \
+    --pages paper-images/page-*.png \
+    --output answer-key.json
+```
+
+### 工作流（两阶段）
+
+1. **答案页识别 + OCR**（`qwen-vl-ocr-latest`）
+   - 对每页 OCR，找含"答案"/"评分标准"/"参考答案"关键字的页
+   - 输出纯文本
+2. **结构化对齐**（`qwen-max`）
+   - 把答案页 OCR 文本对齐到 `paper.json` 里的每道题
+   - 输出标准 `answer-key.json`：选择/多选/填空/大题各按 schema 类型
+
+### 实测准确率（朝阳一模 物理）
+
+| 题型 | 准确率 |
+|------|--------|
+| 单选（Q1-Q12） | **12/12** ✅ |
+| 多选（Q13-Q15） | **3/3** ✅ |
+| 填空（Q16-Q19） | **4/4** ✅ |
+| 实验/计算（Q20-Q26） | **7/7 大体完整**（图描述/数学公式格式有损） |
+| **总计** | **26/26** |
+
+### 已知局限
+
+- 电路图、几何示意图等**图形描述会丢失**（OCR 抓不到图）
+- LaTeX 公式格式可能跟手工版略有差异（语义等价但风格不同）
+- 答案页里"答案 + 评分要点"混在一起时，`keySteps` 可能不全
+
+---
+
+## 完整试卷 OCR pipeline（早期 Codex 工作）
 
 This note records the OCR lessons from the 2026 Beijing Chaoyang Grade 9 first mock paper extraction work.
 
