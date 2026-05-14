@@ -17,6 +17,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "scripts" / "student-report"))
+sys.path.insert(0, str(ROOT / "scripts" / "answer-card-ocr"))
 
 from lib import analyze, render, pdf  # noqa: E402
 
@@ -24,8 +25,52 @@ from lib import analyze, render, pdf  # noqa: E402
 SUBJECT_LABEL = {"语文": "语文", "数学": "数学", "英语": "英语", "物理": "物理", "化学": "化学", "道法": "道法"}
 
 
+def maybe_generate_answer_card(student_dir: Path) -> Path:
+    """如果 answer-card.json 不存在但同目录有 answer-card-photos/，
+    自动调 detect.py 生成。
+
+    Returns: answer-card.json 路径
+    """
+    target = student_dir / "answer-card.json"
+    if target.exists():
+        return target
+
+    photos_dir = student_dir / "answer-card-photos"
+    if not photos_dir.exists():
+        raise FileNotFoundError(
+            f"找不到 {target}，也没找到 {photos_dir} 目录可供 OCR。\n"
+            f"请提供 answer-card.json 或把答题卡照片放到 answer-card-photos/ 下。"
+        )
+
+    # 收集照片（jpg/png/heic）
+    photos = sorted([
+        p for p in photos_dir.iterdir()
+        if p.suffix.lower() in {".jpg", ".jpeg", ".png", ".heic"}
+    ])
+    if not photos:
+        raise FileNotFoundError(f"{photos_dir} 为空")
+
+    print(f"\n🔍 未找到 answer-card.json，从 {len(photos)} 张照片自动 OCR ...")
+    import detect  # type: ignore
+    # 从可选的 student.json 取学生姓名（若无则匿名）
+    student_meta = {}
+    student_json = student_dir / "student.json"
+    if student_json.exists():
+        student_meta = json.loads(student_json.read_text(encoding="utf-8"))
+    result = detect.detect_card(
+        photos,
+        student_name=student_meta.get("name", student_dir.name),
+        student_id=student_meta.get("examId", ""),
+    )
+    out = {"student": result.student, "answers": result.answers}
+    target.write_text(json.dumps(out, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"  → 生成 {target.name}（{len(result.answers)} 题）")
+    return target
+
+
 def load_inputs(student_dir: Path):
-    """读 4 个 JSON。"""
+    """读 4 个 JSON。如 answer-card.json 缺失则自动 OCR 生成。"""
+    maybe_generate_answer_card(student_dir)
     return {
         "paper": json.loads((student_dir / "paper.json").read_text(encoding="utf-8")),
         "answer_key": json.loads((student_dir / "answer-key.json").read_text(encoding="utf-8")),

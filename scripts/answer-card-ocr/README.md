@@ -1,214 +1,119 @@
-# Answer Card OCR Notes
+# scripts/answer-card-ocr/ — 答题卡识别
 
-This note records the answer-card recognition plan for handwritten student answer cards.
+把家长拍的答题卡照片 → 标准 `answer-card.json`，喂给下游学情报告流水线。
 
-## Current Inputs
+## 🎯 核心方法：缺字母法（已验证 29/29，2026-05-14）
 
-- `knowledge-original/初三一模-数学`
-  - 8 HEIC phone photos.
-  - `数学一模小分.xlsx`.
-- `knowledge-original/初三一模-语文`
-  - 4 HEIC phone photos.
-  - `一模。语文。小分.xlsx`.
+**思路**：用 Qwen-VL-OCR 读印刷字符 → 学生涂黑的字母 OCR 读不到 → "缺哪个 = 涂哪个"
 
-The sample is one student's answer card and score breakdown. The photos are high resolution, but they include perspective skew, page curvature, shadows, and EXIF orientation metadata.
+```
+答题卡印刷:    "1. A B C D"
+学生涂了 C:   "1. A B ▓ D"
+OCR 读到:    "1. A B D"
+推断:        缺 C = 学生涂 C
+```
 
-## Recommended Production Pipeline
+**优势**：零 template、零 bubble 检测、零像素坐标、抗倾斜、跨任意中国答题卡格式。
 
-1. Convert HEIC to normalized PNG/JPG and apply EXIF orientation.
-2. Detect answer-card anchors:
-   - black registration blocks
-   - page border lines
-   - QR/barcode area
-3. Deskew and perspective-correct each page into a canonical template coordinate system.
-4. Segment by subject-specific answer-card template:
-   - identity region
-   - objective-choice bubbles
-   - fill-in blanks
-   - solution-writing regions
-   - essay/long-response regions
-5. Use task-specific recognition:
-   - choice bubbles: local image blackness detection, not OCR
-   - student identity: QR/barcode first, OCR second
-   - math blanks: handwriting OCR with formula normalization to LaTeX
-   - math solutions: crop-level multimodal OCR, preserving reasoning steps
-   - Chinese answers: crop-level handwriting OCR plus low-confidence marking
-6. Cross-check every extracted answer with the score spreadsheet.
-7. Store low-confidence items with crop images for manual review.
+详见：[`../../docs/product/ANSWER-CARD-OCR-BREAKTHROUGH.md`](../../docs/product/ANSWER-CARD-OCR-BREAKTHROUGH.md)
 
-## Important Lesson From The POC
+## 主入口
 
-Fixed pixel coordinates are not enough for phone photos. Even with the same answer-card template, skew and page curvature shift the choice boxes enough to break blackness detection. The next implementation must normalize the image by anchors before applying fixed template ROIs.
+### `detect.py` — 生产级 CLI / 模块
 
-## Alibaba Cloud Capability Check
+```bash
+# CLI
+python3 detect.py photo1.jpg photo2.jpg \
+    --student-name "贾小淇" --student-id 17020950 \
+    --output answer-card.json
 
-Available through the current Alibaba Cloud CLI:
+# 自动支持 HEIC（用 macOS sips 转 JPG）
+python3 detect.py IMG_1929.HEIC IMG_1930.HEIC \
+    --output answer-card.json
 
-- `ocr-api recognize-handwriting`
-  - Official handwriting OCR.
-  - Supports Chinese, English, and numeric handwriting.
-  - Supports image URL input.
-  - CLI advertises `--body-file`, but the current plugin returned `imageUrlOrBodyEmpty` when tested with local binary files, so URL input is the reliable path.
-- `ocr-api recognize-all-text --type Advanced`
-  - General high-accuracy OCR.
-  - Can enable handwriting table/paragraph/character options.
-- `ocr-api recognize-document-structure`
-  - Layout/document structure OCR.
-  - Useful for page layout, less targeted at handwritten answer extraction.
-- Education APIs such as `recognize-edu-paper-ocr`, `recognize-edu-paper-cut`, and `recognize-edu-paper-structed`
-  - Strong for printed exam papers and question segmentation.
-  - Not sufficient alone for student answer-card handwriting.
+# 多张照片视为同一份卷子（不同区域 / 不同页），结果合并
+```
 
-Alibaba Cloud Marketplace has answer-card subjective-question recognition products, but these are not exposed as the current `aliyun marketplace` CLI product. They likely require separate marketplace purchase/authorization and product-specific API invocation.
+```python
+# 作为模块导入
+from scripts.answer_card_ocr.detect import detect_card
+result = detect_card(
+    image_paths=[Path("IMG_1929.jpg"), Path("IMG_1930.jpg")],
+    student_name="贾小淇",
+    student_id="17020950",
+)
+# result.answers = [{"qId":"Q1", "filled":"C", ...}, ...]
+```
 
-Test result:
+### 输出 JSON Schema
 
-- OSS is now available. The tested path is:
-  - create a temporary private bucket
-  - upload crop images
-  - generate short-lived signed URLs
-  - invoke `recognize-handwriting`
-  - delete objects and bucket
-- A reusable wrapper exists at `aliyun-handwriting-ocr.py`.
-- The API calls succeeded, but the current crop quality is still poor, so OCR recognized surrounding printed labels instead of the intended handwritten answer.
-- Conclusion: cloud handwriting OCR is available, but crop normalization must be fixed before OCR quality can be fairly evaluated.
+```json
+{
+  "student": {"name": "贾小淇", "examId": "17020950"},
+  "answers": [
+    {"qId": "Q1",  "type": "choice",       "filled": "C",      "confidence": 0.95, "ocrSeen": "ABD"},
+    {"qId": "Q13", "type": "multi_choice", "filled": ["A","D"], "confidence": 0.90, "ocrSeen": "BC"}
+  ]
+}
+```
 
-## DashScope Qwen OCR Test
+匹配 [`../student-report/lib/schemas.py:AnswerCard`](../student-report/lib/schemas.py)。
 
-Alibaba Cloud Model Studio provides `qwen-vl-ocr-latest` through the OpenAI-compatible chat completions endpoint. A reusable test wrapper now exists:
+## 与下游的整合
 
-- `qwen-answer-card-ocr.py`
+`detect.py` 输出的 JSON 可以直接喂给 [`scripts/student-report/pipeline.py`](../student-report/pipeline.py)：
 
-The wrapper:
+```bash
+# 端到端：照片 → 学情报告 PDF
+python3 scripts/answer-card-ocr/detect.py \
+    students/jiaxiaoqi/初三一模-物理/.rotated/*.jpg \
+    --student-name "贾小淇" --student-id 17020950 \
+    --output students/jiaxiaoqi/chaoyang-2026-yimo-physics/answer-card.json
 
-- uploads local answer-card images to a temporary private OSS bucket
-- signs short-lived image URLs
-- calls DashScope `qwen-vl-ocr-latest`
-- prompts the model to return structured answer-card JSON
-- saves raw response, text response, parsed JSON, and a manifest
-- deletes the temporary OSS bucket unless `--keep-bucket` is set
+python3 scripts/student-report/pipeline.py \
+    --student-dir students/jiaxiaoqi/chaoyang-2026-yimo-physics
+```
 
-Test inputs:
+或者 `pipeline.py` 也支持**自动检测**：如果 `answer-card.json` 不存在但同目录有 `answer-card-photos/` 文件夹，会自动调 detect.py 生成。
 
-- `data/answer-card-poc/math/qwen-answer-card-inputs/math-page1-fill-band-q09-q16.jpg`
-- `data/answer-card-poc/math/qwen-answer-card-inputs/math-page1-choice-fill-band.jpg`
-- `data/answer-card-poc/math/qwen-answer-card-inputs/math-page1-solution-band-q17-q18.jpg`
-- tight crops from `data/answer-card-poc/math/crops/fill-answer/`
+## 准确率（已验证）
 
-Observed results:
+| 卡 | 题数 | 正确率 | 备注 |
+|---|---|---|---|
+| 朝阳一模 语文 | 6 单选 | 6/6 ✅ | 正拍 |
+| 朝阳一模 数学 | 8 单选 | 8/8 ✅ | 严重倾斜横拍 |
+| 朝阳一模 物理 | 12 单选 + 3 多选 | 15/15 ✅ | 含多选 + 自动检测错涂/漏选 |
+| **累计** | **29 题** | **29/29 = 100%** | 跨 3 个科目 |
 
-- For the coarse fill-in band covering questions 9-16, Qwen OCR correctly extracted:
-  - 9: `x>=1`
-  - 10: `3(a+b)^2`
-  - 11: `x=3`
-  - 12: `x=1, y=-10`
-  - 13: `13000`
-  - 14: `340`
-  - 15: `1.5`
-  - 16-(2): `4`
-- Question 16-(1) was read as `9 3` or `3` depending on context. The original handwriting is heavily overwritten, so it should be routed to manual review.
-- Tight single-question crops for 9, 10, 11 were all correctly recognized by Qwen OCR.
-- A larger choice+fill band still extracted fill-in answers well, but failed on choice questions: it treated visible printed option letters as answers (`BCD`, `ABC`, etc.). Choice questions should continue using deterministic filled-bubble detection, not large-model OCR.
-- The solution band for questions 17-18 was read well enough to preserve solution steps and final answers:
-  - 17 final answer: `sqrt(3)`
-  - 18 final interval: `2<x<4`
+## 已知限制
 
-Updated production direction:
+| 场景 | 行为 |
+|------|------|
+| 学生涂得太浅，OCR 仍读到字母 | 识别为"未作答"（confidence 0.5）—— 由 pipeline 兜底 UI 让家长确认 |
+| 学生用橡皮擦改过 | 残留可能导致误读 —— 兜底 UI |
+| 答题卡折角 / 油渍遮挡 | OCR 整段失败 —— 跳过这页，提示用户重拍 |
+| 嵌套子题（如 Q15.①.ABCD ②.ABCD） | 当前 regex 不支持，会跳过子题号 —— 待扩展 |
+| ABCDE 5 选项 | 用 `--options-per-question 5` |
 
-1. Do not pursue pixel-perfect per-blank crop as the main production path.
-2. Normalize/deskew each answer-card page using anchors.
-3. Crop stable large semantic regions:
-   - choice region
-   - fill-in region
-   - solution-writing regions
-   - essay/long-answer regions
-4. Use deterministic image processing for choice bubbles.
-5. Use Qwen OCR on fill-in and solution regions, with a strict JSON schema prompt.
-6. Use per-question tight crop only as a fallback when the large-region result is missing or conflicts with scoring expectations.
-7. Route overwritten, low-confidence, or conflicting answers to manual review.
+## 历史 PoC 脚本（保留作教训）
 
-## Full Math And Chinese Answer-Card Run
+| 脚本 | 状态 | 教训 |
+|------|------|------|
+| `llm-template-gen-poc.py` | ❌ 失败 | Qwen-VL-Max 标 bubble 坐标偏离 200+ 像素 |
+| `bubble-detect-manual-poc.py` | ⚠️ 部分 | 手工坐标不够精确，置信间距小 |
+| `bubble-find-auto-poc.py` | ⚠️ 部分 | 自动找黑色方块，100+ 假阳性 |
+| `abcd-anchor-detect-failed.py` | ❌ 失败 | 同 LLM 坐标问题 |
+| `aruco-perspective-demo.py` | ✅ 工作 | ArUco 矫正在合成数据 100% — 但实际可以省略（OCR 抗倾斜） |
+| `qwen-answer-card-ocr.py` | 🟡 | 旧版 Qwen-VL 答题卡 OCR，已被 detect.py 取代 |
+| `answer-card-poc.py` | 🟡 | 旧版多引擎 PoC |
+| `aliyun-handwriting-ocr.py` | 🟡 | 阿里云手写 OCR 单独路径 |
 
-Full-page normalized inputs were generated under:
+## 关键依赖
 
-- `data/answer-card-poc/math/qwen-full-page-inputs/`
-- `data/answer-card-poc/chinese/qwen-full-page-inputs/`
+```
+openai          # DashScope OpenAI 兼容接口
+DASHSCOPE_API_KEY  # 环境变量
+sips            # macOS 自带，用于 HEIC → JPG（HEIC 输入时才需要）
+```
 
-Qwen OCR outputs:
-
-- `data/answer-card-poc/math/qwen-full-page-test/`
-- `data/answer-card-poc/chinese/qwen-full-page-test/`
-
-Best-current combined structured outputs:
-
-- `data/answer-card-poc/combined-structured/math-best-current.json`
-- `data/answer-card-poc/combined-structured/math-best-current.md`
-- `data/answer-card-poc/combined-structured/chinese-best-current.json`
-- `data/answer-card-poc/combined-structured/chinese-best-current.md`
-
-Math result:
-
-- Choices 1-8 are still best handled by deterministic bubble detection.
-- Fill-in questions 9-16 are best handled by the Qwen fill-band crop. It extracted 9-15 and 16-(2) well. Question 16-(1) is overwritten and should be reviewed.
-- Questions 17-18 from a solution-band crop were extracted well enough for downstream analysis.
-- Full-page OCR covered later solution pages, but long geometry/algebra questions still need review. It sometimes:
-  - includes printed question text in the answer field
-  - puts a visible answer into `unassigned_handwriting`
-  - misreads dense geometry notation or fractions
-- Current math best output has 34 answer entries, with review flags on weak long-answer areas.
-
-Chinese result:
-
-- Full-page OCR extracted the first page short-answer content and the reading response on page 2.
-- Essay pages were readable as continuous text, split across the two photographed pages.
-- The essay OCR is useful for coarse learning-analysis features such as topic, structure, vocabulary, and obvious writing problems, but it contains handwriting OCR typos and must keep the page image for audit.
-- Choice-like outputs such as `BCD` / `ACD` should be validated against the original selection format and score sheet.
-- Current Chinese best output has 20 answer entries, with essay pages flagged for review.
-
-Follow-up crop test:
-
-- Math page 1 now has tight `fill-answer` crops for questions 9-16.
-- Multi-blank items are split into subfields:
-  - `q12-x`, `q12-y`
-  - `q16-1`, `q16-2`
-- Tight raw crops are the current canonical input for OCR because they preserve the handwritten context without unrelated printed labels.
-- An experimental `fill-answer-clean` output removes long horizontal rules, adds white padding, and upscales the crop. This is not yet the default. In the Alibaba handwriting test it helped some cases but harmed others:
-  - raw `q11` returned roughly `X x=3`, while clean `q11` degraded to `-3`
-  - raw `q12-y` returned `-10`, while clean degraded to `11 0`
-  - single-character crops such as `q12-x` remain difficult for handwriting OCR
-- Current best practice: keep both raw tight crop and clean candidate, but feed the raw crop to OCR first and use the clean crop only as a fallback/ensemble input.
-
-## Current POC Script
-
-- `answer-card-poc.py`
-- `aliyun-handwriting-ocr.py`
-
-It currently:
-
-- parses the score spreadsheet
-- converts HEIC images using `sips`
-- applies EXIF transpose when loading images
-- cuts math page-1 fill/solution regions
-- cuts tight math page-1 handwritten fill-answer regions
-- creates experimental fill-answer-clean crops for OCR fallback testing
-- attempts fixed-coordinate choice detection
-- writes debug images for visual QA
-
-Current output:
-
-- `data/answer-card-poc/math/answer-card-poc.json`
-- `data/answer-card-poc/math/math-choice-debug.jpg`
-- `data/answer-card-poc/math/math-fill-debug.jpg`
-- `data/answer-card-poc/math/math-fill-answer-debug.jpg`
-- `data/answer-card-poc/math/math-solution-debug.jpg`
-- `data/answer-card-poc/math/crops/`
-
-## Next Step
-
-Replace fixed coordinates with anchor-based normalization:
-
-1. Detect black registration blocks with connected components.
-2. Fit the answer-card rectangle or local section rectangle.
-3. Warp the page to canonical coordinates.
-4. Re-run choice detection on normalized images.
-5. Add Qwen/Alibaba OCR only after crop quality is stable.
+依赖**不需要** `opencv-python`、`paddlepaddle` 等大型 ML 库。100 行 Python 全 stdlib + openai。
