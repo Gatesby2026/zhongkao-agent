@@ -525,7 +525,7 @@ SSE / WebSocket 实时推送进度 → 完成时返回 `{ pdfUrl, mdUrl }`
 
 | 术语 | 含义 |
 |------|------|
-| exam-slug | 考试唯一标识，格式 `chaoyang-2026-yimo-physics` |
+| exam-slug | 考试唯一标识，格式 `<year>-<district>-<exam-type>-<subject>`，如 `2026-chaoyang-yi-physics` |
 | 试卷结构化 | 把扫描页 OCR + 题号识别 + 题型分类 + 选项/题干分离 → 标准 JSON |
 | 涂卡 | 选择题答题卡的黑色填涂格 |
 | 失分主因 | 同一类错误的聚类标签（如"电学综合分析能力不足"） |

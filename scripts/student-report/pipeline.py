@@ -1,10 +1,15 @@
 #!/usr/bin/env python3
-"""学情报告生成 pipeline — 端到端：4 JSON 输入 → Markdown + PDF。
+"""学情报告生成 pipeline — 端到端：考试公共数据 + 学生私有数据 → Markdown + PDF。
 
 用法：
     python3 pipeline.py \
-        --student-dir students/jiaxiaoqi/chaoyang-2026-yimo-physics \
+        --exam-slug 2026-chaoyang-yi-physics \
+        --student-dir students/jiaxiaoqi/2026-chaoyang-yi-physics \
         --out-dir "learning situation"
+
+数据来源约定：
+  data/exams/<exam-slug>/paper.json + answer-key.json     # 公共，bulk_pipeline 产
+  <student-dir>/student.json + scores.json + answer-card  # 私有
 
 需环境变量 DASHSCOPE_API_KEY（Qwen-max）。
 """
@@ -22,88 +27,28 @@ sys.path.insert(0, str(ROOT / "scripts" / "exam-ocr"))
 
 from lib import analyze, render, pdf  # noqa: E402
 
-import extract_answer_key as extract_ak_mod  # noqa: E402
-import final_to_paper as final_to_paper_mod  # noqa: E402
-
 
 SUBJECT_LABEL = {"语文": "语文", "数学": "数学", "英语": "英语", "物理": "物理", "化学": "化学", "道法": "道法"}
 
 
-def maybe_generate_paper(student_dir: Path) -> Path:
-    """如果 paper.json 不存在但同目录有 paper-final.json（exam-ocr 输出），
-    自动调适配器生成 paper.json。
+def load_exam_public(exam_slug: str) -> tuple[Path, Path]:
+    """定位 data/exams/<exam-slug>/{paper,answer-key}.json（公共考试数据）。
 
-    寻找顺序：
-        student_dir/paper.json
-        student_dir/paper-final.json（exam-ocr structured-cloud/final.json）
-        student_dir/structured-cloud/final.json
+    缺失则提示用户先跑 bulk_pipeline 生成。
     """
-    target = student_dir / "paper.json"
-    if target.exists():
-        return target
+    exam_dir = ROOT / "data" / "exams" / exam_slug
+    paper_path = exam_dir / "paper.json"
+    ak_path = exam_dir / "answer-key.json"
 
-    candidates = [
-        student_dir / "paper-final.json",
-        student_dir / "structured-cloud" / "final.json",
-    ]
-    final_path = next((p for p in candidates if p.exists()), None)
-    if final_path is None:
+    if not paper_path.exists() or not ak_path.exists():
         raise FileNotFoundError(
-            f"找不到 {target}，也没找到 exam-ocr 的 final.json。\n"
-            f"请提供 paper.json 或把 final.json 放到 {student_dir} 下。"
+            f"考试公共数据缺失：{exam_dir}\n"
+            f"  paper.json 存在={paper_path.exists()}, answer-key.json 存在={ak_path.exists()}\n"
+            f"先跑 bulk_pipeline 生成：\n"
+            f"  python3 scripts/exam-ocr/bulk_pipeline.py "
+            f"--manifest scripts/exam-ocr/manifest-2026-yimo.json --only {exam_slug}"
         )
-
-    print(f"\n📄 未找到 paper.json，从 {final_path.name} 自动转换 ...")
-    final = json.loads(final_path.read_text(encoding="utf-8"))
-
-    # 可选 exam-meta.json
-    exam_meta = None
-    em_path = student_dir / "exam-meta.json"
-    if em_path.exists():
-        exam_meta = json.loads(em_path.read_text(encoding="utf-8"))
-
-    paper = final_to_paper_mod.convert_final_to_paper(
-        final, subject=final.get("subject"), exam_meta=exam_meta,
-    )
-    target.write_text(
-        json.dumps(paper, ensure_ascii=False, indent=2), encoding="utf-8"
-    )
-    print(f"  → 生成 {target.name}（{paper['meta']['questionCount']} 题）")
-    return target
-
-
-def maybe_generate_answer_key(student_dir: Path) -> Path:
-    """如果 answer-key.json 不存在但同目录有 paper-pages/，
-    自动调 extract_answer_key 提取标准答案。
-    """
-    target = student_dir / "answer-key.json"
-    if target.exists():
-        return target
-
-    pages_dir = student_dir / "paper-pages"
-    if not pages_dir.exists():
-        raise FileNotFoundError(
-            f"找不到 {target}，也没找到 {pages_dir} 目录。\n"
-            f"请提供 answer-key.json 或把试卷扫描页（含答案页）放到 paper-pages/。"
-        )
-    pages = sorted([
-        p for p in pages_dir.iterdir()
-        if p.suffix.lower() in {".jpg", ".jpeg", ".png", ".heic"}
-    ])
-    if not pages:
-        raise FileNotFoundError(f"{pages_dir} 为空")
-
-    paper_path = student_dir / "paper.json"
-    if not paper_path.exists():
-        raise FileNotFoundError(f"需要 {paper_path} 才能对齐答案到题号")
-
-    print(f"\n🔍 未找到 answer-key.json，从 {len(pages)} 张试卷页自动提取 ...")
-    extract_ak_mod.extract_answer_key(
-        paper_path=paper_path,
-        page_images=pages,
-        output_path=target,
-    )
-    return target
+    return paper_path, ak_path
 
 
 def maybe_generate_answer_card(student_dir: Path) -> Path:
@@ -149,18 +94,17 @@ def maybe_generate_answer_card(student_dir: Path) -> Path:
     return target
 
 
-def load_inputs(student_dir: Path):
-    """读 4 个 JSON。缺失则自动生成：
-    - paper.json: 从 exam-ocr 的 final.json 适配
-    - answer-key.json: 从试卷扫描页提取
-    - answer-card.json: 从答题卡照片 OCR
+def load_inputs(exam_slug: str, student_dir: Path):
+    """读 4 个 JSON：
+    - paper.json, answer-key.json: 公共，从 data/exams/<slug>/ 读
+    - answer-card.json: 私有，缺则从 answer-card-photos/ 自动 OCR
+    - scores.json: 私有，必须存在
     """
-    maybe_generate_paper(student_dir)
-    maybe_generate_answer_key(student_dir)
+    paper_path, ak_path = load_exam_public(exam_slug)
     maybe_generate_answer_card(student_dir)
     return {
-        "paper": json.loads((student_dir / "paper.json").read_text(encoding="utf-8")),
-        "answer_key": json.loads((student_dir / "answer-key.json").read_text(encoding="utf-8")),
+        "paper": json.loads(paper_path.read_text(encoding="utf-8")),
+        "answer_key": json.loads(ak_path.read_text(encoding="utf-8")),
         "answer_card": json.loads((student_dir / "answer-card.json").read_text(encoding="utf-8")),
         "scores": json.loads((student_dir / "scores.json").read_text(encoding="utf-8")),
     }
@@ -337,19 +281,23 @@ def build_context(student_name, paper, scores, analyzed, overall) -> dict:
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--student-dir", required=True, help="含 paper/answer-key/answer-card/scores.json")
+    parser.add_argument("--exam-slug", required=True,
+                        help="考试 slug，对应 data/exams/<slug>/ 里的 paper.json + answer-key.json")
+    parser.add_argument("--student-dir", required=True,
+                        help="学生私有数据目录（student.json + scores.json + answer-card-photos/）")
     parser.add_argument("--out-dir", default="learning situation")
     parser.add_argument("--skip-pdf", action="store_true")
-    parser.add_argument("--cache-prefix", default=None, help="LLM 缓存前缀，默认按 student-dir basename")
+    parser.add_argument("--cache-prefix", default=None,
+                        help="LLM 缓存前缀，默认 <student>-<exam-slug>")
     args = parser.parse_args()
 
     student_dir = (ROOT / args.student_dir).resolve()
     out_dir = (ROOT / args.out_dir).resolve()
     out_dir.mkdir(parents=True, exist_ok=True)
-    cache_prefix = args.cache_prefix or student_dir.name
+    cache_prefix = args.cache_prefix or f"{student_dir.name}-{args.exam_slug}"
 
-    print(f"📂 输入: {student_dir}")
-    inputs = load_inputs(student_dir)
+    print(f"📂 考试: {args.exam_slug}　学生: {student_dir}")
+    inputs = load_inputs(args.exam_slug, student_dir)
 
     paper = inputs["paper"]
     scores = inputs["scores"]
@@ -374,15 +322,21 @@ def main():
     context = build_context(student_name, paper, scores, analyzed, overall)
     md = render.render_report(context)
 
+    def _rel(p: Path) -> str:
+        try:
+            return str(p.relative_to(ROOT))
+        except ValueError:
+            return str(p)
+
     out_md = out_dir / f"{student_name}_{exam_slug}_失分分析与提分建议_v2.md"
     out_md.write_text(md, encoding="utf-8")
-    print(f"  → {out_md.relative_to(ROOT)} ({len(md)} chars)")
+    print(f"  → {_rel(out_md)} ({len(md)} chars)")
 
     if not args.skip_pdf:
         print("\n=== 步骤 5：转 PDF ===")
         out_pdf = out_md.with_suffix(".pdf")
         pdf.md_to_pdf(md, out_pdf, title=f"{student_name} 学情报告")
-        print(f"  → {out_pdf.relative_to(ROOT)} ({out_pdf.stat().st_size} bytes)")
+        print(f"  → {_rel(out_pdf)} ({out_pdf.stat().st_size} bytes)")
 
     print("\n✅ 完成")
 

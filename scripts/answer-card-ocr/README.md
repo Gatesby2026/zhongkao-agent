@@ -66,12 +66,13 @@ result = detect_card(
 ```bash
 # 端到端：照片 → 学情报告 PDF
 python3 scripts/answer-card-ocr/detect.py \
-    students/jiaxiaoqi/初三一模-物理/.rotated/*.jpg \
+    students/jiaxiaoqi/2026-chaoyang-yi-physics/answer-card-photos/*.jpg \
     --student-name "贾小淇" --student-id 17020950 \
-    --output students/jiaxiaoqi/chaoyang-2026-yimo-physics/answer-card.json
+    --output students/jiaxiaoqi/2026-chaoyang-yi-physics/answer-card.json
 
 python3 scripts/student-report/pipeline.py \
-    --student-dir students/jiaxiaoqi/chaoyang-2026-yimo-physics
+    --exam-slug 2026-chaoyang-yi-physics \
+    --student-dir students/jiaxiaoqi/2026-chaoyang-yi-physics
 ```
 
 或者 `pipeline.py` 也支持**自动检测**：如果 `answer-card.json` 不存在但同目录有 `answer-card-photos/` 文件夹，会自动调 detect.py 生成。
