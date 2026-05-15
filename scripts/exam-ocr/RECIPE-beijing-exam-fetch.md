@@ -104,30 +104,42 @@ done < physics.urls
 3. **CDN 短链可能过期**：URL 里有时间戳（`_1777359811727_...`），未来某天可能 404，**抓完立刻本地保存**。
 4. **每页一张图，文字不可选**：必须走 OCR，不能直接复制文字。
 
-## 已验证产出（chaoyang-2026-yimo）
+## 已验证产出 — 本地存放路径
 
-服务器路径：`/opt/zhongkao-agent/admin/data/chaoyang-2026-yimo/`（已 gitignore，~35 MB tar.gz 备份）
-> 注：2026-05 清理三端同步时已从阿里云删除，重新跑流水线会再生成。
+**2026-05-15 起统一存放规范**：
 
 ```
-chaoyang-2026-yimo/
-├── manifest.json              # 5 个源 URL + 文件清单
-├── summary.html               # gaokzx 汇总页 HTML（备份）
-├── <科目>.html                # 5 份详情页 HTML 备份
-├── <科目>.urls                # 5 份图片 URL 清单
-├── <科目>-images/             # page-NN.{png|jpg}
-└── processed/
-    ├── <科目>/
-    │   ├── pages/             # 每页 OCR 文本
-    │   ├── cloud-ocr/         # 三引擎原始结果
-    │   ├── structured-cloud/
-    │   │   ├── final.md       # ⭐ 干净的题目 + 答案 Markdown
-    │   │   ├── final.json     # 结构化（含题型、选项、分值）
-    │   │   └── validation-report.json
-    │   ├── questions.draft.json
-    │   └── raw.txt
-    └── structured-cloud-index.json   # 全集统计
+knowledge-original/beijing-mock-2026/        # ← gaokzx 原始抓取根
+├── yimo/                                     # 一模
+│   ├── manifest.json                         # 全区 × 全科 详情页 URL 索引
+│   └── <区>/                                  # chaoyang / haidian / xicheng / ...
+│       ├── CODEX-NOTES-ocr-pipeline.md       # 当次跑 OCR 的实战笔记
+│       └── <科目>/                             # physics / math / chinese / english / politics
+│           ├── images/                       # page-*.png 原始扫描
+│           ├── pages/                        # 每页 OCR 文本（中间产物）
+│           ├── cloud-ocr/                    # 三引擎原始 OCR 输出
+│           ├── structured-cloud/
+│           │   ├── final.md                  # ⭐ 干净的题目 + 答案
+│           │   ├── final.json                # 结构化（喂 bulk_pipeline）
+│           │   └── validation-report.json
+│           ├── questions.draft.json
+│           └── raw.txt
+├── ermo/                                     # 二模（5 月底再抓）
+└── truth/                                    # 中考真题（6 月底）
 ```
+
+`knowledge-original/` 已 gitignore，所有 raw 数据本地保存、ECS 备份，不入 git。
+
+**为什么独立子树**（不混入 `中考模拟/北京中考*模拟卷/`）：
+- 历史 2023-2025 是 PDF（一卷一文件，按"科 → 年 × 模"组织）
+- 2026 gaokzx 是 page-*.png（每页一张，按"年 × 模 → 区 × 科"组织）
+- 格式 + 组织维度都不一样，混合后脚本判别复杂
+
+**喂给 `bulk_pipeline.py` 的 manifest 字段**：
+- `paper_pages_dir`: `knowledge-original/beijing-mock-2026/yimo/<区>/<科目>/images`
+- `paper_final_json`: `knowledge-original/beijing-mock-2026/yimo/<区>/<科目>/structured-cloud/final.json`
+
+参考：`scripts/exam-ocr/manifest-2026-yimo.json`（持续增加的 batch manifest）
 
 ## 下次复用清单
 
