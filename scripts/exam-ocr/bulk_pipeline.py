@@ -43,6 +43,7 @@ sys.path.insert(0, str(ROOT / "scripts" / "knowledge-base"))
 import final_to_paper  # noqa: E402
 import extract_answer_key  # noqa: E402
 import enrich_to_mock_exam  # noqa: E402
+import ocr_paper  # noqa: E402
 
 
 SUBJECT_EN = {
@@ -69,14 +70,21 @@ def run_job(job: dict, data_dir: Path, kb_dir: Path, dry_run: bool = False):
     work_dir = data_dir / slug
     work_dir.mkdir(parents=True, exist_ok=True)
 
-    # === Step 1+2: 找试卷扫描 + OCR ===
-    # 暂时跳过自动下载和 OCR：要求 job 已提供 paper_final_json
+    # === Step 1+2: 试卷扫描 (gaokzx fetch by fetch_gaokzx.py) + OCR (ocr_paper.py) ===
     final_json_path = Path(job["paper_final_json"])
-    paper_pages = sorted(Path(job["paper_pages_dir"]).glob("page-*.png"))
-    if not final_json_path.exists():
-        raise FileNotFoundError(f"待开发 step 1+2，目前需提供已有 final.json: {final_json_path}")
-    print(f"📄 final.json: {final_json_path.relative_to(ROOT) if final_json_path.is_relative_to(ROOT) else final_json_path}")
+    paper_pages_dir = Path(job["paper_pages_dir"])
+    paper_pages = sorted(paper_pages_dir.glob("page-*.png"))
+    if not paper_pages:
+        raise FileNotFoundError(f"step 1 缺图：{paper_pages_dir} 无 page-*.png（先跑 fetch_gaokzx.py）")
     print(f"📷 paper pages: {len(paper_pages)} 张")
+
+    if final_json_path.exists():
+        print(f"⏭  step 2 OCR 缓存命中：{final_json_path.relative_to(ROOT) if final_json_path.is_relative_to(ROOT) else final_json_path}")
+    else:
+        print(f"🔧 step 2: ocr_paper → structured-cloud/final.json")
+        if not dry_run:
+            paper_dir = paper_pages_dir.parent  # images/ 的父目录
+            ocr_paper.ocr_one_paper(paper_dir, subject_en=subject_en)
 
     # === Step 3: final.json → paper.json ===
     paper_path = work_dir / "paper.json"
