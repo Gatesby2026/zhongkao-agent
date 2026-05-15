@@ -1,0 +1,829 @@
+# ============================================================
+# 2026年北京海淀区一模数学 — 自动生成
+# ============================================================
+# 流水线：gaokzx OCR + Qwen-VL-OCR + qwen-max enrich
+# 满分: 100 分 时长: 120 分钟
+
+year: 2026
+district: 海淀区
+exam_type: 一模
+subject: 数学
+full_score: 100
+duration_minutes: 120
+total_questions: 28
+structure: 8单选(16分) + 8填空(16分) + 12解答(68分)
+questions:
+- id: 1
+  type: 单选
+  score: 2
+  question: 1. 下列图形中，既是轴对称图形又是中心对称图形的是 \A B C D
+  answer: D
+  solution: ''
+  knowledge_points:
+  - 轴对称图形
+  - 中心对称图形
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 2
+  type: 单选
+  score: 2
+  question: '2. 实数$a$，$b$在数轴上的对应点的位置如图所示，下列结论中正确的是
+
+
+    A. $b < -2$
+
+    B. $a - b < 0$
+
+    C. $-a > -1$
+
+    D. $|a| > |b|$'
+  answer: C
+  solution: ''
+  knowledge_points:
+  - 实数与数轴的对应关系
+  - 有理数大小比较
+  module: numbersAndExpressions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 3
+  type: 单选
+  score: 2
+  question: '3. 若一个多边形的每个外角均为$45^\circ$，则这个多边形的边数为
+
+
+    A. 5
+
+    B. 6
+
+    C. 7
+
+    D. 8'
+  answer: D
+  solution: ''
+  knowledge_points:
+  - 多边形的外角和
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 4
+  type: 单选
+  score: 2
+  question: '4. 不透明的盒子中一共有四个小球，分别写着数字$2$，$0$，$2$，$6$，这些小球除数字外无其他差别。小明从盒子中随机摸出一个小球，摸出的小球是写着数字“2”的小球的概率是
+
+
+    A. $\frac{1}{4}$
+
+    B. $\frac{1}{2}$
+
+    C. $\frac{2}{3}$
+
+    D. $\frac{3}{4}$'
+  answer: B
+  solution: ''
+  knowledge_points:
+  - 概率的概念
+  - 简单随机事件的概率计算
+  module: statisticsAndProbability
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 5
+  type: 单选
+  score: 2
+  question: '5. 若关于$x$的一元二次方程$x^2-2x-c=0$有两个不相等的实数根，则实数$c$的取值范围是
+
+
+    A. $c > -1$
+
+    B. $c > 1$
+
+    C. $c < -1$
+
+    D. $c < 1$'
+  answer: A
+  solution: ''
+  knowledge_points:
+  - 一元二次方程的根的判别式
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 6
+  type: 单选
+  score: 2
+  question: '6. 某云存储平台为用户提供云端照片存储服务。该平台某日登录的用户数量约为 $1.2 \times 10^6$ 人，若当日平均每位用户上传 350 张高清照片，则该平台当日总共收到用户上传高清照片的张数约为
+
+
+    A. $1.2 \times 10^6$
+
+    B. $3.7 \times 10^9$
+
+    C. $4.2 \times 10^8$
+
+    D. $4.2 \times 10^9$'
+  answer: C
+  solution: ''
+  knowledge_points:
+  - 科学记数法
+  - 有理数乘除运算
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 7
+  type: 单选
+  score: 2
+  question: '7. 如图，已知线段 $AB$，分别以点 $A$，$B$ 为圆心，$AB$ 长为半径画弧，两弧在 $AB$ 上方交于点 $C$，在 $AB$ 下方交于点 $D$，连接 $CD$ 交 $AB$ 于点 $O$。以点 $O$ 为圆心，$OA$ 长为半径画弧，交线段 $OD$ 于点 $M$，连接 $AC$，$AM$，则 $\angle CAM$ 的大小为
+
+
+    A. $15^\circ]$
+
+    B. $90^\circ]$
+
+    C. $105^\circ]$
+
+    D. $110^\circ]$'
+  answer: C
+  solution: ''
+  knowledge_points:
+  - 圆的基本性质
+  - 等边三角形的性质
+  module: circles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 8
+  type: 单选
+  score: 2
+  question: '8. 如图，在平面直角坐标系 $xOy$ 中，$A(-2, n)$ 是抛物线 $y = \frac{1}{2}x^2$ 上一点。以点 $C(0, 1)$ 为圆心，$CA$ 长为半径的圆与抛物线在第一象限交于点 $B$，抛物线和 $\odot C$ 在点 $A$，$B$ 之间的部分分别记为 $G_1$，$G_2$，$M$，$N$ 分别是 $G_1$，$G_2$ 上的两个动点（$M$，$N$
+    均不与 $A$，$B$ 重合）。给出下面四个结论：① 当 $MN \perp x$ 轴时，$MN$ 长的最大值为 $\sqrt{5} + 1$；② 若点 $Q$ 在 $x$ 轴上，则在第一象限内存在点 $M$，使四边形 $ABMO$ 的面积等于 $\triangle ABQ$ 的面积；③ $\triangle AMN$ 可能是等边三角形；④ 以 $(0, \frac{3}{2})$ 为中点的线段
+    $MN$ 恰有两条。上述结论中，所有正确结论的序号是
+
+
+    A. ①③
+
+    B. ①④
+
+    C. ②③
+
+    D. ②④'
+  answer: A
+  solution: ''
+  knowledge_points:
+  - 抛物线的性质
+  - 圆的基本性质
+  - 坐标系中的几何问题
+  module: functions
+  difficulty: 能力
+  recommended_for:
+  - L2
+  - L3
+- id: 9
+  type: 填空
+  score: 2
+  question: 9. 若 $\sqrt{x-3}$ 在实数范围内有意义，则实数 $x$ 的取值范围是 _。
+  answer: $x \geq 3$
+  solution: ''
+  knowledge_points:
+  - 二次根式的概念
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 10
+  type: 填空
+  score: 2
+  question: 10. 分解因式：$ab^2 - ac^2 = $。
+  answer: a(b+c)(b-c)
+  solution: ''
+  knowledge_points:
+  - 因式分解——提公因式法
+  - 因式分解——公式法（平方差、完全平方）
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 11
+  type: 填空
+  score: 2
+  question: 11. 方程 $\frac{1}{x+3} + \frac{1}{2x} = 0$ 的解为 _。
+  answer: x = -1
+  solution: ''
+  knowledge_points:
+  - 分式的加减乘除运算
+  - 解一元一次方程
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 12
+  type: 填空
+  score: 2
+  question: 12. 有研究表明，中学生通过肌肉锻炼可有效强健骨骼、促进骨骼健康发展，每周肌肉锻炼时长不少于 60 min 可达到骨骼健康受益标准。某中学共有 3000 名学生，为了解该校学生肌肉锻炼时长是否达到骨骼健康受益标准，在该校随机抽取 100 名学生，获得他们每周肌肉锻炼时长的数据，整理如下： \\ \\ | 每周肌肉锻炼时长 x/min | 0 ≤ x < 30 | 30 ≤ x
+    < 60 | 60 ≤ x < 90 | x ≥ 90 | \\ |------------------------|------------|------------|------------|--------| \\ | 人数 | 2 | 8 | 69 | 21 | \\ 根据以上信息，估计该校达到骨骼健康受益标准的学生约有 _ 人。
+  answer: '2700'
+  solution: ''
+  knowledge_points:
+  - 样本估计总体
+  - 数据的整理与分析
+  module: statisticsAndProbability
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 13
+  type: 填空
+  score: 2
+  question: 13. 能说明命题“若 a > b，则 $\frac{3}{a} < \frac{3}{b}$”是假命题的一组实数 a, b 的值为 a = _，b = _。
+  answer: a=1, b=-1
+  solution: ''
+  knowledge_points:
+  - 有理数大小比较
+  - 分式的基本性质
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 14
+  type: 填空
+  score: 2
+  question: 14. 如图，AB 为 ⊙O 的直径，点 A 为 $\overparen{CD}$ 的中点。若 ∠A = 65°，则 ∠B 的大小为 _°。
+  answer: '25'
+  solution: ''
+  knowledge_points:
+  - 圆周角定理
+  - 直径所对的圆周角是直角
+  module: circles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 15
+  type: 填空
+  score: 2
+  question: 15. 如图，在矩形 ABCD 中，AB = 6，AD = 4。点 E 在 BC 的延长线上，连接 AE，交 CD 于点 F。若 △ABE 的面积为 15，则 △ADF 的面积为 _。
+  answer: \frac{48}{5}
+  solution: ''
+  knowledge_points:
+  - 矩形的性质
+  - 三角形面积计算
+  module: quadrilaterals
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 16
+  type: 填空
+  score: 2
+  question: 16. 陈老师计划带父母一起去理发店理发，并提前预约了一位理发师为他们服务。根据三人的不同需求，理发师需按相应流程完成 A, B, C, D, R 五种工序，其中 A, B, C, D 为人工工序，R 为静置工序。他们一家三口所需的理发工序流程如下表： \\ \\ | 顾客 | 爸爸 | 妈妈 | 陈老师 | \\ |------|------|------|--------|
+    \\ | 所需工序流程 | D | C→R→D | A→R→B→R→D | \\ 各工序完成的要求如下： \\ ① 人工工序，必须由理发师操作才能完成，且这位理发师同一时间只能服务一位顾客，各工序所需时间如下表： \\ \\ | 工序 | A | B | C | D | \\ |------|---|---|---|---| \\ | 所需时间 / min | 10 | 20 | 25 | 20
+    | \\ ② 静置工序，不需要理发师操作，顾客只需静置等待，时长不少于 30 min 即可。在此期间这位理发师可去服务其他顾客。 \\ （1）若只有爸爸和妈妈理发，则这位理发师最短需要 _ min 可以完成为他们俩的服务； \\ （2）若他们一家三口都理发，则这位理发师最短需要 _ min 可以完成为他们三人的服务。
+  answer: 75; 120
+  solution: ''
+  knowledge_points:
+  - 有理数加减乘除运算
+  - 整式的加减运算
+  module: numbersAndExpressions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 17
+  type: 解答
+  score: 5
+  question: 17. 计算：$\sqrt{27} - 6\sin 60^\circ] + (\frac{1}{3})^{-1} + |-2|$。
+  answer: '原式 $= 3\sqrt{3} - 6 \times \frac{\sqrt{3}}{2} + 3 + 2$\\ &= 3\sqrt{3} - 3\sqrt{3} + 3 + 2
+
+    &= 5'
+  solution: '原式 $= 3\sqrt{3} - 6 \times \frac{\sqrt{3}}{2} + 3 + 2$\\ &= 3\sqrt{3} - 3\sqrt{3} + 3 + 2
+
+    &= 5'
+  knowledge_points:
+  - 平方根与算术平方根
+  - 绝对值的意义
+  - 有理数混合运算（运算顺序与运算律）
+  module: numbersAndExpressions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 18
+  type: 解答
+  score: 5
+  question: 18. 解不等式：$\left\{\begin{array}{l} 2(2x+1) < 3x+5, \\ \frac{3x-4}{5} < x. \end{array}\right.$
+  answer: '原不等式组为: $\begin{cases} 2(2x+1) < 3x+5, & \text{①}
+
+    \frac{3x-4}{5} < x, & \text{②} \end{cases}$\\\ 解不等式①, 得 $x < 3$.
+
+    解不等式②, 得 $x > -2$.
+
+    原不等式组的解集是 $-2 < x < 3.$'
+  solution: '原不等式组为: $\begin{cases} 2(2x+1) < 3x+5, & \text{①}
+
+    \frac{3x-4}{5} < x, & \text{②} \end{cases}$\\\ 解不等式①, 得 $x < 3$.
+
+    解不等式②, 得 $x > -2$.
+
+    原不等式组的解集是 $-2 < x < 3.$'
+  knowledge_points:
+  - 解一元一次不等式
+  - 不等式组的解法
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 19
+  type: 解答
+  score: 5
+  question: 19. 已知 $2a - b - 2 = 0$，求代数式 $\frac{6(a-2b) + 9b}{4a^2 - 4ab + b^2}$ 的值。
+  answer: '原式 $= \frac{6a-12b+9b}{4a^2-4ab+b^2}$\\ &= \frac{6a-3b}{(2a-b)^2}
+
+    &= \frac{3(2a-b)}{(2a-b)^2}
+
+    &= \frac{3}{2a-b}.
+
+    \therefore 2a-b-2=0,
+
+    \therefore 2a-b=2.'
+  solution: '原式 $= \frac{6a-12b+9b}{4a^2-4ab+b^2}$\\ &= \frac{6a-3b}{(2a-b)^2}
+
+    &= \frac{3(2a-b)}{(2a-b)^2}
+
+    &= \frac{3}{2a-b}.
+
+    \therefore 2a-b-2=0,
+
+    \therefore 2a-b=2.'
+  knowledge_points:
+  - 整式的加减运算
+  - 因式分解——提公因式法
+  - 分式的加减乘除运算
+  module: numbersAndExpressions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 20
+  type: 解答
+  score: 5
+  question: 20. 如图，在 $\triangle ABC$ 中，$\angle C = 90^\circ]$，$M$，$N$ 分别为 $AB$，$BC$ 的中点，点 $P$，$Q$ 在射线 $CA$ 上，$PQ = MN$。 \\ （1）求证：四边形 $MPQN$ 是平行四边形； \\ （2）若 $\angle CQN = 30^\circ]$，$CN = 2\sqrt{3}$，$MN
+    = 5$，求 $PA$ 的长。
+  answer: (1) $8$; (2) $7.5$, $9$; (3) 丙, 乙.
+  solution: (1) $8$; (2) $7.5$, $9$; (3) 丙, 乙.
+  knowledge_points:
+  - 直角三角形的性质
+  - 平行四边形的判定与性质
+  module: triangles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 21
+  type: 解答
+  score: 5
+  question: 21. “骐骥驰聘纹”是将“骐、骥、驰、骋”四个马字旁汉字的笔意，与中国传统云纹、雷纹、回纹融合，勾勒出“四马齐驱、拾级而上”的视觉意象，寓意开拓进取、生生不息。 \\ 小明想自己绘制一个“骐骥驰聘纹”图案。为此，他先绘制出一个横距为 17 cm，纵距为 12 cm 的“小马”图案（如图1），然后将图1中的“小马”图案以相同的方式连续平移三次，得到了一个由4匹“小马”组成的“骐骥驰聘纹”图案（如图2）。
+    \\ 已知小明每次平移图案时，先水平向右平移，再竖直向上平移，并且水平方向平移距离是竖直方向平移距离的2倍。若图2中“骐骥驰聘纹”图案的横距是纵距的$\frac{5}{3}$倍，求小明每次平移图案时竖直方向的平移距离。
+  answer: '证明: 连接 $OC$, $OD$.
+
+    \because CA \perp AB,
+
+    \therefore \angle CAO = 90^{\circ}.
+
+    \because 点 A, 点 D 在半圆 O 上,
+
+    \therefore OD = OA.
+
+    在 \triangle CAO 和 \triangle CDO 中,
+
+    \begin{cases} CA = CD,
+
+    OC = OC,
+
+    OA = OD. \end{cases}
+
+    \therefore \triangle CAO \cong \triangle CDO.
+
+    \therefore \angle CDO = \angle CAO = 90^{\circ}.
+
+    \therefore OD \perp CD.
+
+    \because OD 为半径,
+
+    \therefore CD 是半圆 O 的切线.'
+  solution: '证明: 连接 $OC$, $OD$.
+
+    \because CA \perp AB,
+
+    \therefore \angle CAO = 90^{\circ}.
+
+    \because 点 A, 点 D 在半圆 O 上,
+
+    \therefore OD = OA.
+
+    在 \triangle CAO 和 \triangle CDO 中,
+
+    \begin{cases} CA = CD,
+
+    OC = OC,
+
+    OA = OD. \end{cases}
+
+    \therefore \triangle CAO \cong \triangle CDO.
+
+    \therefore \angle CDO = \angle CAO = 90^{\circ}.
+
+    \therefore OD \perp CD.
+
+    \because OD 为半径,
+
+    \therefore CD 是半圆 O 的切线.'
+  knowledge_points:
+  - 方程与一元一次方程的概念
+  - 解一元一次方程（去分母/去括号/移项/合并/系数化1）
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 22
+  type: 解答
+  score: 5
+  question: 22. 在平面直角坐标系 xOy 中，函数 $y = kx + b$ (k ≠ 0) 的图象经过点 (2, 0) 和 (0, -1)。 \\ （1）求 k, b 的值； \\ （2）当 x < 2 时，对于 x 的每一个值，函数 $y = mx - 5$ (m ≠ 0) 的值既小于函数 $y = kx + b$ 的值又小于 -3，直接写出 m 的取值范围。
+  answer: '连接 $AD$.
+
+    \because H 为 BD 中点, O 为 AB 中点,
+
+    \therefore OH \parallel AD, \frac{OH}{AD} = \frac{1}{2}, OH \perp BD.
+
+    \therefore \angle DAF = \angle HEF, \angle FDA = \angle FHE.
+
+    \therefore \triangle DAF \sim \triangle HEF.
+
+    \therefore \frac{DF}{FH} = \frac{AD}{EH}.
+
+    在 Rt\triangle OHB 中, \angle OHB = 90^{\circ}, \sin \angle B = \frac{OH}{OB} = \frac{3}{5}.
+
+    设 OH = 3k, OB = 5k, 则 EH = OE - OH = 2k, HB = 4k, AD = 6k.
+
+    \therefore \frac{DF}{FH} = \frac{AD}{EH} = \frac{6k}{2k} = 3.
+
+    \therefore \frac{DF}{DH} = \frac{DF}{HB} = \frac{3}{4}.
+
+    \therefore DF = 3k.
+
+    \because AB 是直径'
+  solution: '连接 $AD$.
+
+    \because H 为 BD 中点, O 为 AB 中点,
+
+    \therefore OH \parallel AD, \frac{OH}{AD} = \frac{1}{2}, OH \perp BD.
+
+    \therefore \angle DAF = \angle HEF, \angle FDA = \angle FHE.
+
+    \therefore \triangle DAF \sim \triangle HEF.
+
+    \therefore \frac{DF}{FH} = \frac{AD}{EH}.
+
+    在 Rt\triangle OHB 中, \angle OHB = 90^{\circ}, \sin \angle B = \frac{OH}{OB} = \frac{3}{5}.
+
+    设 OH = 3k, OB = 5k, 则 EH = OE - OH = 2k, HB = 4k, AD = 6k.
+
+    \therefore \frac{DF}{FH} = \frac{AD}{EH} = \frac{6k}{2k} = 3.
+
+    \therefore \frac{DF}{DH} = \frac{DF}{HB} = \frac{3}{4}.
+
+    \therefore DF = 3k.
+
+    \because AB 是直径'
+  knowledge_points:
+  - 一次函数的概念
+  - 一次函数的图象与性质
+  - 不等式的解法
+  module: functions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 23
+  type: 解答
+  score: 6
+  question: 23. 某校新增了甲、乙、丙三门选修课程。为了解学生对这三门课程的满意度，学校在每门课程的选课学生中分别随机抽取了 10 名学生，记录他们对所选课程的满意度评分（满分 10 分，分值为整数），并对数据进行了整理、描述和分析。下面给出了部分信息。 \\ a. 学生对课程甲、乙的满意度评分的折线统计图： \\ b. 学生对课程丙的满意度评分： \\ c. 三门课程的满意度评分的平均数、中位数如下：
+    \\ \\ | 课程名称 | 平均数 | 中位数 | \\ | --- | --- | --- | \\ | 甲 | 6.6 | 7 | \\ | 乙 | 7.3 | m | \\ | 丙 | 7.3 | 7.5 | \\ 根据以上信息，回答下列问题： \\ （1）课程甲的满意度评分的众数为 _； \\ （2）表中 m 的值为 _，信息 b 中 x 的值为 _； \\ （3）考虑到极端数据对结果的影响，学校先将每门课程的满意度评分中与平均数的差的绝对值最大的一个数据去掉，再计算剩余数据的平均数、方差和中位数，并按照如下方法评估这三门课程：首先比较平均数，平均数较大者学生更加满意；若平均数相等，则比较方差，方差较小者学生更加满意；若平均数、方差分别相等，则中位数较大者学生更加满意。按照这种评估方法，这三门课程中满意度最高的是
+    _，最低的是 _（填“甲”“乙”或“丙”）。
+  answer: '(1) \because 抛物线 y=ax^2+bx+c(a>0) 经过点 O, \therefore c=0。
+
+    \because 抛物线 y=ax^2+bx (经过点 (2,0)), \therefore 4a+2b=0。
+
+    \therefore b=-2a。
+
+    (2) 设点 M(t,y_1), N(t,y_2), 则 y_1=at^2-2at, y_2=-at+2a。
+
+    ① 若 m=0, 则 y_1=y_2。
+
+    \therefore at^2-2at=-at+2a。
+
+    \because a>0,
+
+    \therefore t^2-t-2=0。
+
+    \therefore t=-1 或 t=2。
+
+    ② y_1-y_2=at^2-at-2a=a(t+1)(t-2)(a>0)。
+
+    (i) 当 -2<t\leq-1 时, y_1-y_2>0。
+
+    \therefore m=y_1-y_2=at^2-at-2a(a>0)。
+
+    \because 函数 m=at^2-at-2a(a>0) 的图象开口向上, 对称轴为 t=\frac{1}{2},
+
+    当 t\leq\frac{1}{2} 时, m 随 t 的增大而减小, 当 t\geq\frac{1}{2} 时, m 随 t 的增大而增大,
+
+    \therefore 当 -2<t\leq-1 时, m 随 t 的增大而减小。
+
+    \because 对于 -2<t\leq-1, 都有 m<9, 且 t=-2 时, m=4a。
+
+    \therefore 4a<9。
+
+    \therefore a\leq\frac{9}{4}。
+
+    \therefore 此时 0<a\leq\frac{9}{4}, 符合题意。
+
+    (ii) 当 -1<t\leq2 时, y_1-y_2<0。
+
+    \therefore m=y_2-y_1=-at^2+at+2a(a>0)。
+
+    \because 函数 m=-at^2+at+2a(a>0) 的图象开口向下, 对称轴为 t=\frac{1}{2},
+
+    当 t\leq\frac{1}{2} 时, m 随 t 的增大而增大,'
+  solution: '(1) \because 抛物线 y=ax^2+bx+c(a>0) 经过点 O, \therefore c=0。
+
+    \because 抛物线 y=ax^2+bx (经过点 (2,0)), \therefore 4a+2b=0。
+
+    \therefore b=-2a。
+
+    (2) 设点 M(t,y_1), N(t,y_2), 则 y_1=at^2-2at, y_2=-at+2a。
+
+    ① 若 m=0, 则 y_1=y_2。
+
+    \therefore at^2-2at=-at+2a。
+
+    \because a>0,
+
+    \therefore t^2-t-2=0。
+
+    \therefore t=-1 或 t=2。
+
+    ② y_1-y_2=at^2-at-2a=a(t+1)(t-2)(a>0)。
+
+    (i) 当 -2<t\leq-1 时, y_1-y_2>0。
+
+    \therefore m=y_1-y_2=at^2-at-2a(a>0)。
+
+    \because 函数 m=at^2-at-2a(a>0) 的图象开口向上, 对称轴为 t=\frac{1}{2},
+
+    当 t\leq\frac{1}{2} 时, m 随 t 的增大而减小, 当 t\geq\frac{1}{2} 时, m 随 t 的增大而增大,
+
+    \therefore 当 -2<t\leq-1 时, m 随 t 的增大而减小。
+
+    \because 对于 -2<t\leq-1, 都有 m<9, 且 t=-2 时, m=4a。
+
+    \therefore 4a<9。
+
+    \therefore a\leq\frac{9}{4}。
+
+    \therefore 此时 0<a\leq\frac{9}{4}, 符合题意。
+
+    (ii) 当 -1<t\leq2 时, y_1-y_2<0。
+
+    \therefore m=y_2-y_1=-at^2+at+2a(a>0)。
+
+    \because 函数 m=-at^2+at+2a(a>0) 的图象开口向下, 对称轴为 t=\frac{1}{2},
+
+    当 t\leq\frac{1}{2} 时, m 随 t 的增大而增大,'
+  knowledge_points:
+  - 平均数
+  - 中位数
+  - 众数
+  module: statisticsAndProbability
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 24
+  type: 解答
+  score: 6
+  question: 24. 如图，以线段 $AB$ 为直径作半圆，圆心为点 $O$，$C$ 是半圆外一点，$CA \perp AB$，$D$ 为半圆上异于 $A$ 的一点，且 $CD = CA$。 \\ （1）求证：$CD$ 是半圆 $O$ 的切线； \\ （2）取 $BD$ 中点 $H$，连接 $OH$，并延长交 $\overparen{BD}$ 于点 $E$，连接 $AE$，交 $BD$ 于点
+    $F$。若 $\sin B = \frac{3}{5}$，$CA = 5$，求 $DF$ 的长。
+  answer: 未找到答案
+  solution: 未找到答案
+  knowledge_points:
+  - 圆的切线性质
+  - 三角函数的应用
+  - 圆中的几何关系
+  module: circles
+  difficulty: 能力
+  recommended_for:
+  - L2
+  - L3
+- id: 25
+  type: 解答
+  score: 5
+  question: 25. 竹编是我国历史悠久的经典传统手工艺，并成功入选国家级非物质文化遗产名录。竹编以竹篾为原料，采用平编、绞编等传统技法，编织成各类实用器具与工艺精品。 \\ 为提升生产效率，某竹编工厂引人机器人作业，将平编与绞编两项技法编写为计算机程序。已知一件产品只采用一种编织技法，机器人每完成一件产品后，便会从头开始执行程序编织下一件产品，直至完成全部生产任务。记平编或绞编的编织时间为
+    $t$ min，平编的编织面积为 $S_1$（单位：$\text{dm}^2$），绞编的编织面积为 $S_2$（单位：$\text{dm}^2$），部分数据如下： \\ \\ | $t/\text{min}$ | 0 | 0.5 | 1.0 | 1.5 | 2.0 | 2.5 | 3.0 | ... | \\ |-------------------|---|-----|-----|-----|-----|-----|-----|----|
+    \\ | $S_1/\text{dm}^2$ | 0 | 1.2 | 2.4 | $m$ | 4.8 | 6.0 | 7.2 | ... | \\ | $S_2/\text{dm}^2$ | 0 | 0.8 | 2.0 | 3.8 | 6.2 | 9.0 | 12.0 | ... | \\ 通过分析数据，发现可以用函数刻画 $S_1$ 与 $t$，$S_2$ 与 $t$ 之间的关系，其中 $S_1$
+    与 $t$ 的关系可以近似用正比例函数刻画。 \\ （1）表中 $m$ 的值为 ________（结果保留小数点后一位）； \\ （2）在给出的平面直角坐标系中，画出 $S_1$ 与 $t$，$S_2$ 与 $t$ 的函数图象； \\ （3）根据以上数据与函数图象，解决以下问题： \\ ① 两台机器人分别用平编和绞编各编织一个面积为 $9 \, \text{dm}^2$ 的产品，若它们同时开始编织，则它们完成产品所用的时间相差
+    __________ min； \\ ② 该工厂接到一批补购订单，需要平编产品 200 件，绞编产品 100 件，且每件产品的面积都为 $12 \, \text{dm}^2$。开始时机器人 A 编织平编产品，机器人 B 编织绞编产品，工作一段时间后，机器人 B 出现故障无法工作。机器人 A 完成所有平编产品后，调整为绞编程序接着机器人 B 的进度完成剩余的绞编产品。当编织完所有产品时，机器人
+    A 编织的总面积为 $3052 \, \text{dm}^2$。若生产两件产品之间的时间间隔忽略不计，则机器人 B 出现故障前大约工作了 __________ min（结果保留小数点后一位）。
+  answer: 未找到答案
+  solution: 未找到答案
+  knowledge_points:
+  - 正比例函数的概念
+  - 函数图象的绘制
+  - 函数的应用
+  module: functions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 26
+  type: 解答
+  score: 6
+  question: 26. 在平面直角坐标系 xOy 中，抛物线 $y = ax^2 + bx + c$ ($a > 0$) 经过点 O 和点 (2, 0)。 \\ （1）求 c 的值，并用含 a 的式子表示 b； \\ （2）过点 (t, 0) 作 x 轴的垂线，交抛物线于点 M，交直线 $y = -ax + 2a$ 于点 N，记点 M 与点 N 之间的距离为 m，当 M 与 N 重合时，$m
+    = 0$。 \\ （3）若 $m = 0$，求 t 的值； \\ （4）若对于 $-2 < t < 2$，都有 $m < 9$，求 a 的取值范围。
+  answer: '(1) \because 抛物线 y=ax^2+bx+c(a>0) 经过点 O, \therefore c=0。
+
+    \because 抛物线 y=ax^2+bx (经过点 (2,0)), \therefore 4a+2b=0。
+
+    \therefore b=-2a。
+
+    (2) 设点 M(t,y_1), N(t,y_2), 则 y_1=at^2-2at, y_2=-at+2a。
+
+    ① 若 m=0, 则 y_1=y_2。
+
+    \therefore at^2-2at=-at+2a。
+
+    \because a>0,
+
+    \therefore t^2-t-2=0。
+
+    \therefore t=-1 或 t=2。
+
+    ② y_1-y_2=at^2-at-2a=a(t+1)(t-2)(a>0)。
+
+    (i) 当 -2<t\leq-1 时, y_1-y_2>0。
+
+    \therefore m=y_1-y_2=at^2-at-2a(a>0)。
+
+    \because 函数 m=at^2-at-2a(a>0) 的图象开口向上, 对称轴为 t=\frac{1}{2},
+
+    当 t\leq\frac{1}{2} 时, m 随 t 的增大而减小, 当 t\geq\frac{1}{2} 时, m 随 t 的增大而增大,
+
+    \therefore 当 -2<t\leq-1 时, m 随 t 的增大而减小。
+
+    \because 对于 -2<t\leq-1, 都有 m<9, 且 t=-2 时, m=4a。
+
+    \therefore 4a<9。
+
+    \therefore a\leq\frac{9}{4}。
+
+    \therefore 此时 0<a\leq\frac{9}{4}, 符合题意。
+
+    (ii) 当 -1<t\leq2 时, y_1-y_2<0。
+
+    \therefore m=y_2-y_1=-at^2+at+2a(a>0)。
+
+    \because 函数 m=-at^2+at+2a(a>0) 的图象开口向下, 对称轴为 t=\frac{1}{2},
+
+    当 t\leq\frac{1}{2} 时, m 随 t 的增大而增大,'
+  solution: '(1) \because 抛物线 y=ax^2+bx+c(a>0) 经过点 O, \therefore c=0。
+
+    \because 抛物线 y=ax^2+bx (经过点 (2,0)), \therefore 4a+2b=0。
+
+    \therefore b=-2a。
+
+    (2) 设点 M(t,y_1), N(t,y_2), 则 y_1=at^2-2at, y_2=-at+2a。
+
+    ① 若 m=0, 则 y_1=y_2。
+
+    \therefore at^2-2at=-at+2a。
+
+    \because a>0,
+
+    \therefore t^2-t-2=0。
+
+    \therefore t=-1 或 t=2。
+
+    ② y_1-y_2=at^2-at-2a=a(t+1)(t-2)(a>0)。
+
+    (i) 当 -2<t\leq-1 时, y_1-y_2>0。
+
+    \therefore m=y_1-y_2=at^2-at-2a(a>0)。
+
+    \because 函数 m=at^2-at-2a(a>0) 的图象开口向上, 对称轴为 t=\frac{1}{2},
+
+    当 t\leq\frac{1}{2} 时, m 随 t 的增大而减小, 当 t\geq\frac{1}{2} 时, m 随 t 的增大而增大,
+
+    \therefore 当 -2<t\leq-1 时, m 随 t 的增大而减小。
+
+    \because 对于 -2<t\leq-1, 都有 m<9, 且 t=-2 时, m=4a。
+
+    \therefore 4a<9。
+
+    \therefore a\leq\frac{9}{4}。
+
+    \therefore 此时 0<a\leq\frac{9}{4}, 符合题意。
+
+    (ii) 当 -1<t\leq2 时, y_1-y_2<0。
+
+    \therefore m=y_2-y_1=-at^2+at+2a(a>0)。
+
+    \because 函数 m=-at^2+at+2a(a>0) 的图象开口向下, 对称轴为 t=\frac{1}{2},
+
+    当 t\leq\frac{1}{2} 时, m 随 t 的增大而增大,'
+  knowledge_points:
+  - 二次函数的性质
+  - 一元二次方程的解法
+  module: functions
+  difficulty: 能力
+  recommended_for:
+  - L2
+  - L3
+- id: 27
+  type: 解答
+  score: 7
+  question: 27. 在 $\triangle ABC$ 中，$\angle ABC = 90^\circ]$，$\angle BAC = \alpha$，D 为 BC 的延长线上一点，连接 AD，将线段 AD 绕点 A 顺时针旋转 $180^\circ] - 2\alpha$ 得到线段 AE，连接 CE。 \\ （1）如图 1，$\alpha = 30^\circ]$，点 E 在直线 BC
+    上，求证：$CE = 2CD$； \\ （2）如图 2，用等式表示线段 AB，CD 和 CE 的数量关系，并证明。
+  answer: 未找到答案
+  solution: 未找到答案
+  knowledge_points:
+  - 直角三角形的性质
+  - 旋转的性质
+  - 线段长度的关系
+  module: triangles
+  difficulty: 能力
+  recommended_for:
+  - L2
+  - L3
+- id: 28
+  type: 解答
+  score: 8
+  question: '28. 在平面直角坐标系 $xOy$ 中，对于图形 G、图形 R 和直线 $l$，给出如下定义：若图形 G 上存在点 $T$（$T$ 在直线 $l$ 外），使得图形 R 上至少有 $k(k>0)$ 个点到直线 $l$ 的距离与点 $T$ 到直线 $l$ 的距离相等，则称图形 R 为图形 G 关于直线 $l$ 的 “$k$-等距” 图形。 \\ （1）已知点 $A(t, 2t)$，$B_1(1,
+    5)$，$B_2(-\frac{1}{2}, 0)$，$B_3(3, 3)$。 \\ ① 当 $t=2$ 时，在线段 $OB_1$，$B_1B_2$，$B_2B_3$ 中，线段 ________ 为点 $A$ 关于 $y$ 轴的 “$k$-等距” 图形，其中 $k$ 的值为 ________； \\ ② 若线段 $B_1B_2$ 为线段 $AB_3$ 关于 $y$ 轴的 “2-等距” 图形，则
+    $t$ 的取值范围是 ________； \\ （2）已知直线 $l: y = x$，$\odot C$ 的圆心为 $C(s, a)$，半径为 1。若存在实数 $s$ 以及 $\odot C$ 的弦 $MN$，使得任意以点 $(s, 1)$ 为中心且边长为 $\sqrt{3}$ 的等边 $\triangle PQR$ 均为弦 $MN$ 关于直线 $l$ 的 “3-等距” 图形，直接写出 $a$
+    的取值范围。'
+  answer: 未找到答案
+  solution: 未找到答案
+  knowledge_points:
+  - 平面直角坐标系
+  - 点到直线的距离
+  - 图形的对称性
+  module: geometryComprehensive
+  difficulty: 能力
+  recommended_for:
+  - L2
+  - L3

@@ -1,0 +1,581 @@
+# ============================================================
+# 2026年北京燕山区一模数学 — 自动生成
+# ============================================================
+# 流水线：gaokzx OCR + Qwen-VL-OCR + qwen-max enrich
+# 满分: 100 分 时长: 120 分钟
+
+year: 2026
+district: 燕山区
+exam_type: 一模
+subject: 数学
+full_score: 100
+duration_minutes: 120
+total_questions: 28
+structure: 8单选(16分) + 8填空(16分) + 12解答(68分)
+questions:
+- id: 1
+  type: 单选
+  score: 2
+  question: 1. 下列图形中，既是轴对称图形又是中心对称图形的是 \\(A) (B) (C) (D)
+  answer: B
+  solution: ''
+  knowledge_points:
+  - 轴对称图形
+  - 中心对称图形
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 2
+  type: 单选
+  score: 2
+  question: 2. 如图，点A，B在一条直线上，$\angle EOD = 90^\circ$，且$\angle EOC$与$\angle EOB$互余，$\angle EOC = 63^\circ$，那么$\angle BOD$的大小为 \\(A) $107^\circ$ (B) $117^\circ$ (C) $127^\circ$ (D) $153^\circ$
+  answer: B
+  solution: ''
+  knowledge_points:
+  - 角的概念
+  - 互余与互补
+  - 角度的计算
+  module: geometryComprehensive
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 3
+  type: 单选
+  score: 2
+  question: 3. 实数$m$，$n$在数轴上的位置如图所示，下列结论中正确的是 \\-1 m 0 1 n 2 \\(A) $m+n<0$ (B) $m-n>0$ (C) $mn<0$ (D) $|m|-|n|>0$
+  answer: C
+  solution: ''
+  knowledge_points:
+  - 实数与数轴的对应关系
+  - 有理数大小比较
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 4
+  type: 单选
+  score: 2
+  question: 4. 若关于$x$的一元二次方程$x^2 + x + m = 0$有两个相等的实数根，则实数$m$的值为 \\(A) -4 (B) $-\frac{1}{4}$ (C) $\frac{1}{4}$ (D) 4
+  answer: C
+  solution: ''
+  knowledge_points:
+  - 一元二次方程的根的判别式
+  - 一元二次方程的解法
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 5
+  type: 单选
+  score: 2
+  question: 5. 南水北调东中线一期工程已经成为优化水资源配置、保障群众饮水安全、复苏河湖生态环境、畅通南北经济循环的生命线。南水北调东中线一期工程已经累计调水突破 800 亿立方米，直接受益人口达到 185000000。将 185000000 用科学记数法表示应为 \\(A) $1.85 \times 10^8$ \\(B) $1.85 \times 10^9$ \\(C) $1.85
+    \times 10^9$ \\(D) $0.185 \times 10^{10}$
+  answer: A
+  solution: ''
+  knowledge_points:
+  - 科学记数法
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 6
+  type: 单选
+  score: 2
+  question: 6. 将分别标有“中”“华”“文”“化”汉字的 4 张卡片放在一个不透明盒子中，这些卡片除汉字不同外其余均无差别，随机抽出其中两张，抽出的卡片上汉字为“文”“化”的概率为 \\(A) $\frac{1}{2}$ \\(B) $\frac{1}{3}$ \\(C) $\frac{1}{4}$ \\(D) $\frac{1}{6}$
+  answer: D
+  solution: ''
+  knowledge_points:
+  - 概率的计算
+  module: statisticsAndProbability
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 7
+  type: 单选
+  score: 2
+  question: 7. 如图，在直角三角形 $ABC$ 中，$\angle ABC = 90^\circ$，分别以点 $A$，$C$ 为圆心，大于 $\frac{1}{2}AC$ 长为半径作弧，两弧相交于 $E$，$F$ 两点，作直线 $EF$ 交 $AC$ 于点 $O$，连接 $BO$。若 $BC = 2$，$AB = 4$，则 $OB$ 的长为 \\(A) $\sqrt{3}$ \\(B)
+    2 \\(C) $\sqrt{5}$ \\(D) $2\sqrt{5}$
+  answer: C
+  solution: ''
+  knowledge_points:
+  - 直角三角形的性质
+  - 勾股定理
+  module: triangles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 8
+  type: 单选
+  score: 2
+  question: 8. 如图，在平面直角坐标系 $xOy$ 中，矩形 $OABC$ 的顶点 $A$，$C$ 分别在 $x$，$y$ 轴正半轴上，点 $B$ 坐标为 $(2m, m)$。点 $M$ 是边 $BC$ 上的动点（不与 $B$，$C$ 重合），函数 $y = \frac{k}{x}$（$k > 0$，$x > 0$）的图象经过点 $M$ 且与边 $AB$ 交于点 $N$，给出下面四个结论：
+    \\(1) $\triangle BOM$ 与 $\triangle BON$ 的面积一定相等； \\(2) 若点 $M$ 是边 $BC$ 的中点，则点 $N$ 一定为 $AB$ 的中点； \\(3) 在点 $M$ 的运动过程中，$\frac{MB}{NB}$ 是一个定值； \\(4) $\triangle OCM \sim \triangle OAN$。 上述结论中，所有正确结论的序号是 \\(A)
+    ①② \\(B) ①②③ \\(C) ②③④ \\(D) ①②③④
+  answer: B
+  solution: ''
+  knowledge_points:
+  - 相似三角形的判定与性质
+  - 反比例函数的图象与性质
+  module: geometryComprehensive
+  difficulty: 能力
+  recommended_for:
+  - L2
+  - L3
+- id: 9
+  type: 填空
+  score: 2
+  question: 9. 若 $\sqrt{x-1}$ 在实数范围内有意义，则实数 $x$ 的取值范围是 _。
+  answer: $x \geq 1$
+  solution: ''
+  knowledge_points:
+  - 二次根式的概念
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 10
+  type: 填空
+  score: 2
+  question: 10. 分解因式：$2x^2 - 18 =$ _。
+  answer: 2(x+3)(x-3)
+  solution: ''
+  knowledge_points:
+  - 因式分解——公式法（平方差、完全平方）
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 11
+  type: 填空
+  score: 2
+  question: 11. 方程 $\frac{1}{x} + \frac{3}{x-8} = 0$ 的解为 _。
+  answer: x=2
+  solution: ''
+  knowledge_points:
+  - 分式的加减乘除运算
+  - 解一元一次方程
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 12
+  type: 填空
+  score: 2
+  question: 12. 国家卫生健康委员会将 2025 年定为“体重管理年”，并实施为期三年的体重管理行动。某校计划组织全校学生开展足球、排球、篮球、羽毛球四个球类运动的体育社团。为了解学生对这四项球类运动的喜爱情况，随机抽取部分学生，对其进行了“我最喜爱的球类运动项目”的问卷调查（每名学生在这四项球类运动项目中选择且只能选择一项），将这部分学生的问卷进行整理，依据样本数据绘制了不完整的统计图。
+    这次抽样调查中，选择羽毛球人数是 36%，样本中个体的数目是 _ 个，若该校有 2500 名学生，估计该校最喜爱篮球运动的学生有 _ 人。
+  answer: '50'
+  solution: ''
+  knowledge_points:
+  - 样本数据的整理与分析
+  - 百分比的应用
+  module: statisticsAndProbability
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 13
+  type: 填空
+  score: 2
+  question: 13. 能说明命题“若 $a > b$，则 $a^2 > b^2$”是假命题的一组实数 $a$，$b$ 的值为 $a =$，$b =$。
+  answer: '-1'
+  solution: ''
+  knowledge_points:
+  - 有理数大小比较
+  - 实数的概念（有理数与无理数的统称）
+  module: numbersAndExpressions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 14
+  type: 填空
+  score: 2
+  question: 14. 如图，⊙O 是地球的示意图，其中 MN 表示赤道，点 P 表示北京位置，PQ，RS 分别表示北纬 40° 维线和南纬 40° 维线，$\angle PON = \angle SON = 40^\circ$。某一时刻，太阳光线 AP 所在直线经过地心 O，此时点 S 处的太阳高度角 $\angle TSU$（即平行于 AP 的光线 SU 与⊙O 的切线 ST 所成的锐角）的大小为
+    _°。
+  answer: 10^\circ
+  solution: ''
+  knowledge_points:
+  - 圆的基本性质
+  - 圆周角与圆心角的关系
+  module: circles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 15
+  type: 填空
+  score: 2
+  question: 15. 把图 1 中的菱形沿对角线分成四个全等的直角三角形，将这四个直角三角形分别拼成如图 2，图 3 所示的正方形，则图 1 中菱形的面积为 _。
+  answer: '12'
+  solution: ''
+  knowledge_points:
+  - 菱形的性质
+  - 正方形的性质
+  - 图形的面积计算
+  module: quadrilaterals
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 16
+  type: 填空
+  score: 2
+  question: 16. [图
+  answer: 7, 12
+  solution: ''
+  knowledge_points:
+  - 有理数加减乘除运算
+  - 有理数混合运算（运算顺序与运算律）
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 17
+  type: 解答
+  score: 5
+  question: 17. [图
+  answer: 原式 $=3 \sqrt{3}+2 \times \frac{1}{2}-1-2 \sqrt{3}$
+  solution: 原式 $=3 \sqrt{3}+2 \times \frac{1}{2}-1-2 \sqrt{3}$
+  knowledge_points:
+  - 有理数混合运算（运算顺序与运算律）
+  - 二次根式的加减乘除运算
+  module: numbersAndExpressions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 18
+  type: 解答
+  score: 5
+  question: 18. [图
+  answer: '原不等式组为 $\left\{\begin{array}{l} 2(x+1)>x-1
+
+    \frac{x+6}{2}>2 x \end{array}\right.$'
+  solution: '原不等式组为 $\left\{\begin{array}{l} 2(x+1)>x-1
+
+    \frac{x+6}{2}>2 x \end{array}\right.$'
+  knowledge_points:
+  - 解一元一次不等式
+  - 不等式组的解法
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 19
+  type: 解答
+  score: 5
+  question: 19. 已知 $a+b-3=0$，求代数式 $\frac{2(a+2b)-2b}{a^2+2ab+b^2}$ 的值。
+  answer: 答案不唯一，如 $179.4$，$179.5$，$179.9$，$180.0$，$180.2$；\\ (2) $3.0$；\\ (3) $t/\text{s}$ \ 130 \ 120 \ 110 \ 100 \ 90 \ 80 \ 70 \ 60 \ 50 \ 40 \ 30 \ 20 \ 10 \ O \ 1 \quad 2 \quad 3 \quad 4 \quad 5 \quad
+    6 \quad d/\text{mm}$ \ 答案不唯一，4.7，4.8。
+  solution: 答案不唯一，如 $179.4$，$179.5$，$179.9$，$180.0$，$180.2$；\\ (2) $3.0$；\\ (3) $t/\text{s}$ \ 130 \ 120 \ 110 \ 100 \ 90 \ 80 \ 70 \ 60 \ 50 \ 40 \ 30 \ 20 \ 10 \ O \ 1 \quad 2 \quad 3 \quad 4 \quad 5
+    \quad 6 \quad d/\text{mm}$ \ 答案不唯一，4.7，4.8。
+  knowledge_points:
+  - 整式的加减运算
+  - 乘法公式（平方差公式、完全平方公式）
+  module: numbersAndExpressions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 20
+  type: 解答
+  score: 5
+  question: 20. 如图，在平行四边形 $ABCD$ 中，对角线 $AC$，$BD$ 交于点 $O$，过点 $B$ 作 $BE \perp CD$ 于点 $E$，延长 $CD$ 到点 $F$，使 $DF = CE$，连接 $AF$。 (1) 求证：四边形 $ABEF$ 是矩形； (2) 连接 $OF$，若 $AB = 6$，$DE = 2$，$\angle ADF = 45^\circ$，求
+    $OF$ 的长。
+  answer: '当 $a=1$ 时，抛物线 $y=x^2+2x=(x+1)^2$ 1
+
+    $\therefore$ 抛物线的对称轴为 $x=-1$
+
+    $\therefore$ 抛物线的顶点坐标为直线 $(-1,-1)$.'
+  solution: '当 $a=1$ 时，抛物线 $y=x^2+2x=(x+1)^2$ 1
+
+    $\therefore$ 抛物线的对称轴为 $x=-1$
+
+    $\therefore$ 抛物线的顶点坐标为直线 $(-1,-1)$.'
+  knowledge_points:
+  - 平行四边形的性质
+  - 矩形的判定与性质
+  - 直角三角形的性质
+  module: quadrilaterals
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 21
+  type: 解答
+  score: 5
+  question: 21. 在平面直角坐标系 $xOy$ 中，函数 $y = kx + b$ ($k \neq 0$) 的图象经过点 $A(1, 3)$ 和 $B(-1, -1)$，与过点 $(-2, 0)$ 且平行于 $y$ 轴的直线交于点 $C$。 (1) 求该函数的表达式及点 $C$ 的坐标； (2) 当 $x < -2$ 时，对于 $x$ 的每一个值，函数 $y = nx$ ($n \neq
+    0$) 的值大于函数 $y = kx + b$ ($k \neq 0$) 的值且小于 $-2$，直接写出 $n$ 的取值范围。
+  answer: '若 $a>0$，
+
+    $\because$ 抛物线的对称轴为 $x=-a$，$2-a>-a$
+
+    $\therefore$ 点 $A(2-a,y_1)$ 在对称轴的右侧
+
+    $\because$ 抛物线开口向上，
+
+    $\therefore$ 当 $x>a$ 时，$y$ 随 $x$ 的增大而增大，
+
+    $\therefore$ 当 $x<-a$ 时，$y$ 随 $x$ 的增大而减小
+
+    $\because 2 \leq b \leq 3$，
+
+    $\therefore$ 点 $B$ 在对称轴右侧，
+
+    $\therefore y_1 < y_2$
+
+    $\therefore -a < 2-a < 2$'
+  solution: '若 $a>0$，
+
+    $\because$ 抛物线的对称轴为 $x=-a$，$2-a>-a$
+
+    $\therefore$ 点 $A(2-a,y_1)$ 在对称轴的右侧
+
+    $\because$ 抛物线开口向上，
+
+    $\therefore$ 当 $x>a$ 时，$y$ 随 $x$ 的增大而增大，
+
+    $\therefore$ 当 $x<-a$ 时，$y$ 随 $x$ 的增大而减小
+
+    $\because 2 \leq b \leq 3$，
+
+    $\therefore$ 点 $B$ 在对称轴右侧，
+
+    $\therefore y_1 < y_2$
+
+    $\therefore -a < 2-a < 2$'
+  knowledge_points:
+  - 一次函数的概念与性质
+  - 一次函数的图象与性质
+  - 不等式的解法
+  module: functions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 22
+  type: 解答
+  score: 5
+  question: 22. 羽毛球运动深受大众喜爱，该运动的场地是一块中间设有球网的矩形区域，它既可以进行单打比赛，也可以进行双打比赛。如图是羽毛球场地的平面示意图，已知场地上各条分界线宽均为 $4\text{cm}$，场地的长比宽的 2 倍还多 $120\text{cm}$（包含分界线宽），球网同侧的单、双打后发球线间的距离与中线同侧的单、双打边线间的距离之比是 $12:7$，根据图中所给数据，求中线同侧的单、双打边线间的距离。
+  answer: '②若$a<0$
+
+    抛物线开口向下，
+
+    当$x>-a$时，$y$随$x$的增大而减小
+
+    当$x<-a$时，$y$随$x$的增大而增大
+
+    抛物线的对称轴为$x=-a$，
+
+    点$A(2-a,y_1)$关于对称轴$x=-a$的对称点为
+
+    $A''(-a-2,y_1)$
+
+    $\because y_1 < y_2$，$\therefore -a-2 < b < 2-a$，$\therefore 2 \leq b \leq 3$，
+
+    $\therefore$ 解得$-4 < a < -1$。
+
+    综上所述，$a$的取值范围是$a>0$或$-4 < a < -1$。'
+  solution: '②若$a<0$
+
+    抛物线开口向下，
+
+    当$x>-a$时，$y$随$x$的增大而减小
+
+    当$x<-a$时，$y$随$x$的增大而增大
+
+    抛物线的对称轴为$x=-a$，
+
+    点$A(2-a,y_1)$关于对称轴$x=-a$的对称点为
+
+    $A''(-a-2,y_1)$
+
+    $\because y_1 < y_2$，$\therefore -a-2 < b < 2-a$，$\therefore 2 \leq b \leq 3$，
+
+    $\therefore$ 解得$-4 < a < -1$。
+
+    综上所述，$a$的取值范围是$a>0$或$-4 < a < -1$。'
+  knowledge_points:
+  - 方程与一元一次方程的概念
+  - 解一元一次方程（去分母/去括号/移项/合并/系数化1）
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 23
+  type: 解答
+  score: 6
+  question: '23. 现有甲、乙两款 AI 机器人，有关人员开展了对这两款机器人的使用满意度评分测试，并分别随机抽取 20 份评分数据，对数据进行整理、描述和分析（评分分数用 x 表示，分为 4 组：A: $60 < x \leq 70$，B: $70 < x \leq 80$，C: $80 < x \leq 90$，D: $90 < x \leq 100$）。 下面给出了部分信息： a.
+    甲款机器人评分数据：64, 70, 75, 76, 78, 78, 85, 85, 85, 85, 86, 89, 90, 90, 94, 95, 98, 98, 99, 100. b. 乙款机器人评分数据中 C 组包含的所有数据：84, 86, 87, 87, 87, 88, 90, 90. c. 乙款机器人的评分人数扇形统计图： d. 甲、乙两款机器人评分统计表： | | 平均数 | 中位数
+    | 众数 | | --- | --- | --- | --- | | 甲 | 86 | 85.5 | m | | 乙 | 86 | n | 87 | 根据以上信息，解答下列问题： (1) 表中 m = _，n = _； (2) 计算乙款机器人的评分扇形统计图中，D 组对应的圆心角是 _°； (3) 在此次测验中，有 280 人对甲款机器人进行评分，300 人对乙款机器人进行评分。请通过计算，估计其中对甲、乙两款机器人非常满意（90
+    < x ≤ 100）的用户总人数是 _； (4) 丙款 AI 机器人推出后引发广泛讨论。小明和小红各自从甲、乙、丙三款机器人中随机选择一款进行体验测评，则两人中至少有一人选择丙款机器人的概率是 _。'
+  answer: '由题意,补全图形如图,
+
+    (2) $\because$ 正方形 $ABCD$，
+
+    $\therefore AB=BC=CD=AD$，
+
+    $\angle ABC=\angle BCD=\angle CDA=\angle DAB=90^\circ$，
+
+    $\because$ 旋转，
+
+    $\therefore \angle DCE=a$，$CE=CD=BC$，
+
+    $\therefore \angle CED=\angle CDE=\frac{1}{2}(180^\circ-a)=90^\circ-\frac{1}{2}a$，
+
+    $\angle BCE=\angle BCD+\angle DCE=90^\circ+a$，
+
+    $\therefore \angle CBE=\angle CEB=\frac{1}{2}(180^\circ-\angle BCE)=45^\circ-\frac{1}{2}a$，
+
+    $\therefore \angle BED=\angle CED-\angle BEC=90^\circ-\frac{1}{2}a-45^\circ+\frac{1}{2}a=45^\circ$；'
+  solution: '由题意,补全图形如图,
+
+    (2) $\because$ 正方形 $ABCD$，
+
+    $\therefore AB=BC=CD=AD$，
+
+    $\angle ABC=\angle BCD=\angle CDA=\angle DAB=90^\circ$，
+
+    $\because$ 旋转，
+
+    $\therefore \angle DCE=a$，$CE=CD=BC$，
+
+    $\therefore \angle CED=\angle CDE=\frac{1}{2}(180^\circ-a)=90^\circ-\frac{1}{2}a$，
+
+    $\angle BCE=\angle BCD+\angle DCE=90^\circ+a$，
+
+    $\therefore \angle CBE=\angle CEB=\frac{1}{2}(180^\circ-\angle BCE)=45^\circ-\frac{1}{2}a$，
+
+    $\therefore \angle BED=\angle CED-\angle BEC=90^\circ-\frac{1}{2}a-45^\circ+\frac{1}{2}a=45^\circ$；'
+  knowledge_points:
+  - 统计表的应用
+  - 扇形统计图的理解
+  - 概率的计算
+  module: statisticsAndProbability
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 24
+  type: 解答
+  score: 6
+  question: 24. 如图，过 ⊙O 外一点 P 作 ⊙O 的两条切线 PA, PB，切点分别为 A, B，AC 是 ⊙O 的直径，连接 CB 并延长交直线 AP 于点 D。 (1) 求证：PD = PA； (2) 延长 BP 交 CA 的延长线于点 E。若 ⊙O 的半径为 $\sqrt{2}$，sin E = $\frac{1}{3}$，求 BC 的长。
+  answer: 其它解法请参照评分标准酌情给分。
+  solution: 其它解法请参照评分标准酌情给分。
+  knowledge_points:
+  - 切线的性质
+  - 圆周角定理
+  - 解直角三角形
+  module: circles
+  difficulty: 能力
+  recommended_for:
+  - L2
+  - L3
+- id: 25
+  type: 解答
+  score: 5
+  question: 25. 沙漏，又称沙钟，是以流沙计时的古代装置。某校在九年级开展了简易沙漏的原理探秘与制作活动。在以下探究实验中，沙漏容器取材于相同规格的瓶子，所用沙子材质与规格完全一样，沙漏的孔洞均为圆形，孔径即为孔洞的直径。 探究一：甲组同学选择某确定孔径的沙漏，探究漏下沙子的质量 $m$（单位：g）与时间 $t$（单位：s）之间的关系，部分数据如下： | $t/s$ | 30 | 60
+    | 90 | 120 | 150 | |--------|----|----|----|-----|-----| | $m/g$ | 30.7 | 90.5 | 150.0 | 209.8 | 269.6 | 探究二：乙组同学选取除孔径外无其他差别的沙漏，探究漏完 150g 沙子所用的时间 $t$（单位：s）与孔径 $d$（单位：mm）之间的关系，部分数据如下： | $d/mm$ | 2.0
+    | 3.0 | 4.0 | 5.0 | 6.0 | |---------|-----|-----|-----|-----|-----| | $t/s$ | 123.9 | 90.0 | 65.6 | 47.0 | 33.1 | 根据以上探究的实验数据，解决下列问题： (1) 在探究一中，105s 时漏下沙子的质量约为 _ g（结果保留小数点后一位）； (2) 推断：探究一中所用沙漏的孔径为 _
+    mm； (3) 通过探究二，发现可以用函数刻画时间 $t$ 与孔径 $d$ 之间的关系。 ①在给出的平面直角坐标系中，画出这个函数的图象； ②根据函数图象，若制作一个漏完 150g 沙子所用时间为 50s 的沙漏，其孔径约为 _ mm（结果保留小数点后一位）。
+  answer: 其它解法请参照评分标准酌情给分。
+  solution: 其它解法请参照评分标准酌情给分。
+  knowledge_points:
+  - 函数的概念
+  - 函数的图象
+  - 函数的应用
+  module: functions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 26
+  type: 解答
+  score: 6
+  question: 26. 在平面直角坐标系 $xOy$ 中，已知抛物线 $y = ax^2 + 2a^2x$ ($a \neq 0$). (1) 当 $a = 1$ 时，求抛物线的对称轴和顶点坐标； (2) 已知 $A(2-a, y_1)$ 和 $B(b, y_2)$ 是抛物线上的两点，若对于 $2 \leq b \leq 3$，都有 $y_1 < y_2$，求 $a$ 的取值范围。
+  answer: 其它解法请参照评分标准酌情给分。
+  solution: 其它解法请参照评分标准酌情给分。
+  knowledge_points:
+  - 二次函数的性质
+  - 二次函数的图像与性质
+  module: functions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 27
+  type: 解答
+  score: 7
+  question: 27. 如图，将正方形 $ABCD$ 的边 $CD$ 绕点 $C$ 顺时针方向旋转 $\alpha$ ($0^\circ < \alpha < 90^\circ$) 得到线段 $CE$，连接 $BE$，$DE$，作 $CM \perp DE$ 于点 $M$，交 $BE$ 于点 $N$，连接 $AN$。 (1) 依题意补全图形； (2) 求 $\angle BED$ 的度数； (3)
+    用等式表示 $BE$，$AN$ 的数量关系，并证明。
+  answer: 其它解法请参照评分标准酌情给分。
+  solution: 其它解法请参照评分标准酌情给分。
+  knowledge_points:
+  - 正方形的性质
+  - 旋转的性质
+  - 几何证明
+  module: geometryComprehensive
+  difficulty: 能力
+  recommended_for:
+  - L2
+  - L3
+- id: 28
+  type: 解答
+  score: 8
+  question: 28. 在平面直角坐标系 $xOy$ 中，$\odot O$ 的半径为 1，对于 $\odot O$ 的弦 $AB$ 和 $\odot O$ 外的一点 $C$，给出如下定义：若直线 $CA$，$CB$ 中一条垂直弦 $AB$，另一条是 $\odot O$ 的切线，则称点 $C$ 为弦 $AB$ 的“垂联点”。 (1) 已知点 $A(1,0)$，$B_1(\frac{\sqrt{2}}{2},
+    \frac{\sqrt{2}}{2})$，$B_2(\frac{1}{2}, \frac{\sqrt{3}}{2})$。 [图] ①如图 1，在点 $C_1(1, 2\sqrt{2}-2)$，$C_2(1,1)$，$C_3(2-\frac{\sqrt{2}}{2}, \frac{3\sqrt{2}}{2})$ 中，弦 $AB_1$ 的“垂联点”是 _； ②如图 2，若点 $C$ 为弦 $AB_2$
+    的“垂联点”，直接写出 $OC$ 的长； (2) 已知点 $M(0,3)$，$N(\frac{6\sqrt{5}}{5},0)$，对于线段 $MN$ 上一点 $S$，存在 $\odot O$ 的弦 $PQ$，使得点 $S$ 为弦 $PQ$ 的“垂联点”。设 $PQ$ 的长为 $d$，当点 $S$ 在线段 $MN$ 上运动时，直接写出 $d$ 的取值范围。
+  answer: 其它解法请参照评分标准酌情给分。
+  solution: 其它解法请参照评分标准酌情给分。
+  knowledge_points:
+  - 圆的切线性质
+  - 直线与圆的位置关系
+  - 坐标系中的几何问题
+  module: circles
+  difficulty: 能力
+  recommended_for:
+  - L2
+  - L3

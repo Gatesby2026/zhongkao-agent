@@ -1,0 +1,504 @@
+# ============================================================
+# 2026年北京朝阳区一模数学 — 自动生成
+# ============================================================
+# 流水线：gaokzx OCR + Qwen-VL-OCR + qwen-max enrich
+# 满分: 100 分 时长: 120 分钟
+
+year: 2026
+district: 朝阳区
+exam_type: 一模
+subject: 数学
+full_score: 100
+duration_minutes: 120
+total_questions: 28
+structure: 8单选(16分) + 8填空(16分) + 12解答(68分)
+questions:
+- id: 1
+  type: 单选
+  score: 2
+  question: 1. 传统建筑中的窗格不仅具有实用功能，更承载着深厚的文化寓意与审美价值，下列图形中，既是轴对称图形，又是中心对称图形的是 \\ (A) (B) (C) (D)
+  answer: A
+  solution: ''
+  knowledge_points:
+  - 轴对称图形
+  - 中心对称图形
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 2
+  type: 单选
+  score: 2
+  question: 2. 实数$a,b$在数轴上的对应点的位置如图所示，下列结论中正确的是 \\ (A) $a > -2$ (B) $a + b > 0$ (C) $ab > 0$ (D) $|a| > |b|$
+  answer: D
+  solution: ''
+  knowledge_points:
+  - 实数与数轴的对应关系
+  - 有理数大小比较
+  - 绝对值的意义
+  module: numbersAndExpressions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 3
+  type: 单选
+  score: 2
+  question: 3. 若一个六边形的每个外角都是$x^\circ$，则$x$的值为 \\ (A)30 (B)60 (C)80 (D)120
+  answer: B
+  solution: ''
+  knowledge_points:
+  - 多边形的外角和
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 4
+  type: 单选
+  score: 2
+  question: 4. 若关于$x$的一元二次方程$x^2-2x+k=0$有两个相等的实数根，则实数$k$的值为 \\ (A)2 (B)1 (C) -1 (D) -2
+  answer: B
+  solution: ''
+  knowledge_points:
+  - 一元二次方程的根的判别式
+  - 一元二次方程的解法
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 5
+  type: 单选
+  score: 2
+  question: 5. 不透明的袋子中装有3个红球，5个绿球，这些球除颜色外无其他差别。从袋子中随机摸出1个球是红球的概率为 \\ (A) $\frac{1}{5}$ (B) $\frac{1}{3}$ (C) $\frac{3}{8}$ (D) $\frac{5}{8}$
+  answer: C
+  solution: ''
+  knowledge_points:
+  - 概率的概念
+  - 简单随机事件的概率计算
+  module: statisticsAndProbability
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 6
+  type: 单选
+  score: 2
+  question: 6. 2025年我国外贸进出口总额达$4.547 \times 10^5$亿元，其中出口总额$2.699 \times 10^3$亿元，增长了6.1%，进口总额$1.848 \times 10^5$亿元，增长了0.5%.2025年我国贸易顺差（顺差=出口总额-进口总额）用科学记数法表示为 \\ (A) $0.851 \times 10^3$ 亿元 (B) $8.51 \times
+    10^3$ 亿元 (C) $8.51 \times 10^4$ 亿元 (D) $851 \times 10^2$ 亿元
+  answer: C
+  solution: ''
+  knowledge_points:
+  - 科学记数法
+  - 有理数加减运算
+  module: numbersAndExpressions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 7
+  type: 单选
+  score: 2
+  question: 7. 如图，O 是 $\angle BAC$ 内部一点。若以 O 为圆心，OA 长为半径画弧，分别与射线 $AB, AC$ 交于点 M, N（点 M, N 均不与点 A 重合），连接 OM，ON，若 $\angle BAC = 40^\circ$，则 $\angle MON$ 的大小为 \\ (A) $100^\circ$ (B) $80^\circ$ (C) $50^\circ$
+    (D) $40^\circ$
+  answer: B
+  solution: ''
+  knowledge_points:
+  - 圆的基本性质
+  - 圆心角与圆周角的关系
+  module: circles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 8
+  type: 单选
+  score: 2
+  question: 8. 如图，在平面直角坐标系 xOy 中，一次函数 $y = ax + 3$ 的图象与函数 $y = \frac{2}{x}$ (x > 0) 的图象存在两个交点 A, B(A, B 不重合，点 A 在点 B 的左侧)，与 x 轴交于点 C，与 y 轴交于点 D，连接 OA, OB。给出下面四个结论： \\ ① AB 一定大于 AD； \\ ② OA 可能等于 OB； \\ ③
+    $\triangle AOB$ 的面积可能小于 $\triangle BOC$ 的面积； \\ ④ $\triangle AOD$ 的面积一定等于 $\triangle BOC$ 的面积。 \\ 上述结论中，所有正确结论的序号为 \\ (A) ①② (B) ②③ (C) ①③④ (D) ②③④
+  answer: D
+  solution: ''
+  knowledge_points:
+  - 一次函数的图象与性质
+  - 反比例函数的图象与性质
+  - 三角形的面积
+  module: functions
+  difficulty: 能力
+  recommended_for:
+  - L2
+  - L3
+- id: 9
+  type: 填空
+  score: 2
+  question: 9. 若 $\sqrt{x-1}$ 在实数范围内有意义，则实数 x 的取值范围是 ___________。
+  answer: $$x \geq 1$$
+  solution: ''
+  knowledge_points:
+  - 二次根式的概念
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 10
+  type: 填空
+  score: 2
+  question: 10. 分解因式：$3a^2 + 6ab + 3b^2 = ___________。
+  answer: $$3(a+b)^2$$
+  solution: ''
+  knowledge_points:
+  - 因式分解——公式法（平方差、完全平方）
+  module: numbersAndExpressions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 11
+  type: 填空
+  score: 2
+  question: 11. 方程 $\frac{2}{x+3} = \frac{1}{x}$ 的解为 ___________。
+  answer: $$x=3$$
+  solution: ''
+  knowledge_points:
+  - 分式的加减乘除运算
+  - 解一元一次方程（去分母/去括号/移项/合并/系数化1）
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 12
+  type: 填空
+  score: 2
+  question: 12. 能说明命题“若 $x > y$，则 $x^2 > y^2$”是假命题的一组实数 x, y 的值为 ___________，___________。
+  answer: 答案不唯一,如 $$x=1, y=-2$$
+  solution: ''
+  knowledge_points:
+  - 有理数大小比较
+  - 实数的概念（有理数与无理数的统称）
+  module: numbersAndExpressions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 13
+  type: 填空
+  score: 2
+  question: 13. 某集校有 2000 名学生。为了解这些学生单次使用电子屏幕时长的分布情况，从中随机抽取了 1000 名学生，获得他们单次使用电子屏幕时长的数据（单位：min），数据整理如下： \\ \begin{center} \\ \begin{tabular}{|c|c|c|c|c|c|c|} \\ \hline \\ 分组 & $x \leq 15$ & $15 < x \leq
+    20$ & $20 < x \leq 25$ & $25 < x \leq 30$ & $x > 30$ & \\ \hline \\ 人数 & 650 & 157 & 101 & 63 & 29 & \\ \hline \\ \end{tabular} \\ \end{center} \\ 根据以上信息，估计该集校 2000 名学生单次使用电子屏幕时长不超过 15 min 的人数为 ___________。
+  answer: 13 000
+  solution: ''
+  knowledge_points:
+  - 统计与概率-数据的收集、整理与描述-用样本估计总体
+  module: statisticsAndProbability
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 14
+  type: 填空
+  score: 2
+  question: 14. 声音在空气中传播的速度随温度的变化而变化，科学家测得一定温度下声音在空气中传播的速度 v(m/s) 与温度 t(℃)部分对应数值如下表所示： \\ \begin{center} \\ \begin{tabular}{|c|c|c|c|c|} \\ \hline \\ 温度 t & 0 & 10 & 20 & \\ \hline \\ 声音传播的速度 v & 331 &
+    337 & 343 & \\ \hline \\ \end{tabular} \\ \end{center} \\ 研究发现，在一定条件下，v 是 t 的一次函数，函数关系为 $v = at + b$ (a, b 为常数，且 a \neq 0)。当温度 t 为 15℃ 时，声音传播的速度 v 为 ___________ m/s。
+  answer: '340'
+  solution: ''
+  knowledge_points:
+  - 一次函数的概念
+  - 一次函数的应用
+  module: functions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 15
+  type: 填空
+  score: 2
+  question: 15. 如图，在平面直角坐标系 $xOy$ 中，正方形 $ABCD$ 的顶点 $A, B$ 在 $x$ 轴上，点 $D$ 的坐标为 $(-1,5)$，$CD$ 与 $y$ 轴交于点 $E$，点 $F$ 在 $CD$ 边上，将 $\triangle BCF$ 沿直线 $BF$ 翻折，得到 $\triangle BGF$。若点 $G$ 恰好落在 $y$ 轴上，则 $\triangle
+    EFG$ 的面积为 ___________。
+  answer: $$\frac{3}{2}$$
+  solution: ''
+  knowledge_points:
+  - 正方形的性质
+  - 坐标系中的几何变换
+  - 三角形面积计算
+  module: geometryComprehensive
+  difficulty: 能力
+  recommended_for:
+  - L2
+  - L3
+- id: 16
+  type: 填空
+  score: 2
+  question: 16. 某学校大力普及校园足球运动，在各年级分别举行了足球比赛，要求每两支参赛球队均要比赛一场，根据积分进行排名，比赛的积分规则为每胜一场得 3 分，每负一场得 0 分，每平一场各得 1 分。该校九年级共有 5 支球队参赛，最终各支球队的积分均不相同，积分最低的球队积 1 分。 \\ (1) 积分最低的球队负 ___________ 场； \\ (2) 积分排名第三的球队最低积
+    ___________ 分。
+  answer: 3;4
+  solution: ''
+  knowledge_points:
+  - 方程与一元一次方程的概念
+  - 列一元一次方程解应用题
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 17
+  type: 解答
+  score: 5
+  question: 17. 计算：$(\pi - 3)^0 - 4\cos 45^\circ + \sqrt{3} + |\sqrt{3} - 1|$。
+  answer: '解:原式 $$= 1 - 4 \times \frac{\sqrt{2}}{2} + 2\sqrt{2} + \sqrt{3} - 1 = \sqrt{3}$$
+
+    4分
+
+    5分'
+  solution: '解:原式 $$= 1 - 4 \times \frac{\sqrt{2}}{2} + 2\sqrt{2} + \sqrt{3} - 1 = \sqrt{3}$$
+
+    4分
+
+    5分'
+  knowledge_points:
+  - 绝对值的意义
+  - 实数与数轴的对应关系
+  - 二次根式的加减乘除运算
+  module: numbersAndExpressions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 18
+  type: 解答
+  score: 5
+  question: 18. 解不等式组：$\left\{\begin{array}{l}3(x-1) < 2x+1, \\ \frac{4x-2}{3} > x.\end{array}\right.$
+  answer: '解:原不等式组为 $$\begin{cases} 3(x-1) < 2x+1, & \text{①}
+
+    \frac{4x-2}{3} > x. & \text{②} \end{cases}$$
+
+    解不等式①,得 $$x < 4$$
+
+    解不等式②,得 $$x > 2$$
+
+    原不等式组的解集为 $$2 < x < 4$$'
+  solution: '解:原不等式组为 $$\begin{cases} 3(x-1) < 2x+1, & \text{①}
+
+    \frac{4x-2}{3} > x. & \text{②} \end{cases}$$
+
+    解不等式①,得 $$x < 4$$
+
+    解不等式②,得 $$x > 2$$
+
+    原不等式组的解集为 $$2 < x < 4$$'
+  knowledge_points:
+  - 解一元一次不等式
+  - 不等式组的解法
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 19
+  type: 解答
+  score: 5
+  question: 19. 已知 $a - b - 3 = 0$，求代数式 $\frac{b}{2a+2b} \cdot \frac{a^2 - b^2}{b}$ 的值。
+  answer: '解: $$\frac{b}{2a+2b} \cdot \frac{a^2-b^2}{b}$$
+
+    $$= \frac{b}{2(a+b)} \cdot \frac{(a+b)(a-b)}{b}$$
+
+    $$= \frac{a-b}{2}$$
+
+    $$\therefore a-b-3=0$$
+
+    $$\therefore a-b=3$$
+
+    $$\text{原式} = \frac{3}{2}$$'
+  solution: '解: $$\frac{b}{2a+2b} \cdot \frac{a^2-b^2}{b}$$
+
+    $$= \frac{b}{2(a+b)} \cdot \frac{(a+b)(a-b)}{b}$$
+
+    $$= \frac{a-b}{2}$$
+
+    $$\therefore a-b-3=0$$
+
+    $$\therefore a-b=3$$
+
+    $$\text{原式} = \frac{3}{2}$$'
+  knowledge_points:
+  - 分式的加减乘除运算
+  - 因式分解——公式法（平方差、完全平方）
+  module: numbersAndExpressions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 20
+  type: 解答
+  score: 5
+  question: 20. 如图，在$\square ABCD$中，点$E$在$CD$边上，$\angle CBE = \angle A$，过点$C$作$BE$的平行线，交$AB$的延长线于点$F$。 \\ (1) 求证：四边形$BECF$是菱形； \\ (2) 连接$EF$，若$AB = 6$，$DE = 2$，$\angle A = 60^\circ$，求$EF$的长。
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 四边形的性质
+  - 菱形的判定与性质
+  - 特殊角的三角函数
+  module: quadrilaterals
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 21
+  type: 解答
+  score: 5
+  question: 21. 在平面直角坐标系$xOy$中，函数$y = kx + b(k \neq 0)$的图象与$x$轴交于点$(-2, 0)$，与$y$轴交于点$(0, 2)$。 \\ (1) 求$k, b$的值； \\ (2) 当$x > 2$时，对于$x$的每一个值，函数$y = mx - 1(m \neq 0)$的值既小于函数$y = kx + b$的值，也大于0，直接写出$m$的取值范围。
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 一次函数的概念
+  - 一次函数的图象与性质
+  - 不等式的解法
+  module: functions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 22
+  type: 解答
+  score: 5
+  question: 22. 某校重视学生的传统名著阅读，该校图书管理员在“传统文化宣传月”期间为学校购买了甲种名著8本，乙种名著3本，共支付300元。若乙种名著的单价是甲种名著单价的$\frac{3}{2}$倍，求甲、乙两种名著的单价。
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 解一元一次方程（去分母/去括号/移项/合并/系数化1）
+  - 列一元一次方程解应用题
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 23
+  type: 解答
+  score: 6
+  question: 23. 某学校举办了七、八年级智能机器人应用比赛，比赛包括机器人基础知识、结构搭建、编程控制、综合应用四个分项，采用百分制记录比赛成绩（成绩取整数，单位：分），比赛分为两个阶段。 \\ (1) 第一阶段为机器人基础知识比赛，该校七、八两个年级智能机器人应用代表队各有 8 名学生参赛，对他们的成绩进行描述和分析。下面给出了部分信息。 \\ a. 七、八年级参赛学生基础知识比赛成绩的折线图：
+    \\ b. 七、八年级参赛学生基础知识比赛成绩的中位数分别为 $m$，91，方差分别为 $n$，18。根据以上信息，回答下列问题： \\ ① $m$ 的值为 ___________； \\ ② $n$ ___________ 18；(填“>”“=”或“<”) \\ (2) 七、八年级各选派基础知识比赛成绩前三名的学生，参加第二阶段结构搭建、编程控制、综合应用的比赛，部分数据如下： \\ \begin{center}
+    \\ \begin{tabular}{|c|c|c|c|c|c|c|} \\ \hline \\ 年级 & 学生 & 基础知识 & 结构搭建 & 编程控制 & 综合应用 & 平均数 & 方差 \\ \hline \\ 七年级 & A & 91 & 93 & 96 & 95 & 93.75 & 3.6875 \\ & B & 92 & 92 & 92 & 97 & 93.25 & 4.6875
+    \\ & C & 96 & 92 & 88 & $t$ & & \\ \hline \\ 八年级 & D & 98 & 90 & 92 & 96 & $p$ & 10 \\ & E & 95 & 92 & 93 & 95 & 93.75 & 1.6875 \\ & F & 94 & 91 & 91 & 95 & 92.75 & 3.1875 \\ \hline \\ \end{tabular}
+    \\ \end{center} \\ ① 表中 $p$ 的值为 ___________； \\ ② 根据比赛成绩，学校对这六名学生进行最后的排序，排序标准为：平均数较大的优先；若平均数相等，则综合应用成绩较高的优先；若综合应用成绩也相等，则方差较小的优先。按上述标准排序后，这六名学生的排序由高到低依次为 D, E, A, B, C, F，则表中 $t$ 所有可能的值为 ___________。
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 中位数
+  - 方差
+  - 平均数
+  module: statisticsAndProbability
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 24
+  type: 解答
+  score: 6
+  question: 24. 如图，在 $\triangle ABC$ 中，$\angle ABC = 90^\circ$，点 $O$ 在 $AB$ 边上，以 $O$ 为圆心，$OA$ 为半径作圆，分别与 $AB, AC$ 边交于点 $D, E$，连接 $BE, BE = BC$。 \\ (1) 求证：直线 $BE$ 是 $\odot O$ 的切线； \\ (2) 过点 $A$ 作 $AM \perp
+    BE$，交 $BE$ 的延长线于点 $M$，交 $\odot O$ 于点 $N$。若 $\frac{AO}{ME} = \frac{5}{4}$，$AN = 6$，求 $BC$ 的长。
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 圆的切线判定
+  - 相似三角形的性质与判定
+  module: circles
+  difficulty: 能力
+  recommended_for:
+  - L2
+  - L3
+- id: 25
+  type: 解答
+  score: 5
+  question: 25. 小明帮助家长进行理财分析，他发现在一定时期内，有三种投资方案可供选择，从投资当日起，第 $x$ 天时，选择方案一、方案二、方案三当天所得回报分别为 $y_1, y_2, y_3$（单位：元），部分数据如下： \\ \begin{center} \\ \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|} \\ \hline \\ $x$ & 1 &
+    2 & 3 & 4 & 5 & 6 & 7 & 8 & $\cdots$ \\ \hline \\ $y_1$ & 10 & 10 & 10 & 10 & 10 & 10 & 10 & 10 & $\cdots$ \\ \hline \\ $y_2$ & 1 & 1 & 11 & 16 & 21 & 26 & 31 & 36 & $\cdots$ \\ \hline \\ $y_3$ & 0.5
+    & 1.1 & 2.4 & 5.1 & 10.6 & 21.7 & 44 & 88.7 & $\cdots$ \\ \hline \\ \end{tabular} \\ \end{center} \\ 通过分析数据，发现可以用函数刻画 $y_1$ 与 $x, y_2$ 与 $x, y_3$ 与 $x$ 之间的关系。在平面直角坐标系 $xOy$ 中，分别描出每个方案中各数对所对应的点，并根据变化趋势用平滑的曲线连接，方案一、方案二对应的曲线
+    $C_1, C_2$ 如图所示： \\ (1) 表中 $a$ 的值为 ___________； \\ (2) 在给出的平面直角坐标系中，画出方案三对应的曲线 $C_3$； \\ (3) 根据以上信息，解决下列问题： \\ ① 要使前 4 天的投资总回报最高，应选择方案 ___________；（填写“一”“二”或“三”） \\ ② 可以推断，从第 ___________ 天开始，选择方案三的投资总回报超过同时选择方案一与方案二的投资总回报之和。
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 函数的概念
+  - 一次函数的图像与性质
+  - 二次函数的图像与性质
+  - 指数函数的图像与性质
+  module: functions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 26
+  type: 解答
+  score: 6
+  question: 26. 在平面直角坐标系 xOy 中，点 M(x₁, y₁)，N(x₂, y₂) 在抛物线 y = ax² - a²x (a ≠ 0) 上。 \\ (1) 求该抛物线的对称轴（用含 a 的式子表示）； \\ (2) 若对于 x₁ + x₂ = 0, 2 < x₁ < 3, 总有 y₁, y₂ 同号，且 y₁ > y₂，求 a 的取值范围。
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 二次函数的性质
+  - 二次函数的图像与性质
+  module: functions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 27
+  type: 解答
+  score: 7
+  question: 27. 如图，在 △ABC 中，AB = AC，∠BAC = α，∠ACD = 90°，将线段 AD 绕点 A 顺时针旋转 α 得到线段 AE，连接 DE 交 BC 于点 F。 \\ (1) 根据题意补全图形，并证明 ∠BAE = ∠CAD； \\ (2) 过点 D 作直线 BC 的垂线，垂足为 G，用等式表示线段 BC, FG 之间的数量关系，并证明。
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 等腰三角形的性质
+  - 旋转的性质
+  - 直角三角形的性质
+  module: triangles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 28
+  type: 解答
+  score: 8
+  question: 28. 在平面直角坐标系 $xOy$ 中，点 $A(0,a)$，$B(3,4)$，$\odot B$ 的半径为 1，线段 $PQ$ 的长度为 1，将线段 $PQ$ 绕点 $A$ 逆时针旋转 $90^\circ$，得到线段 $MN$，若线段 $MN$ 与 $\odot B$ 有公共点，则称线段 $PQ$ 为点 $A$ 的旋转线段，并称 $AM, AN$ 的较小值为线段 $PQ$
+    关于点 $A$ 的旋转距离，记为 $d$。 \\ (1) 如图，$a = 3$。 \\ ① 点 $C_1(0,0)$，$D_1(1,0)$，$C_2(2,0)$，$D_2(3,0)$，$C_3(-2,0)$，$D_3(-1,0)$，在线段 $C_1D_1$，$C_2D_2$，$C_3D_3$ 中，点 $A$ 的旋转线段为 ___________； \\ ② 点 $C(b,0)$，$D(b +
+    \frac{\sqrt{3}}{2}, \frac{1}{2})$，若线段 $CD$ 为点 $A$ 的旋转线段，直接写出 $b$ 的取值范围； \\ (2) 已知线段 $CD$ 平行于 $x$ 轴，中点为 $(a-3, a-3)$，若线段 $CD$ 为点 $A$ 的旋转线段，直接写出 $a$ 的取值范围及 $d$ 的最大值。
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 平面直角坐标系
+  - 圆的性质
+  - 旋转与平移
+  module: geometryComprehensive
+  difficulty: 能力
+  recommended_for:
+  - L2
+  - L3

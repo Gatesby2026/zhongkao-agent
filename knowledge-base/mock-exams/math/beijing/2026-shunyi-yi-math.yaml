@@ -1,0 +1,475 @@
+# ============================================================
+# 2026年北京顺义区一模数学 — 自动生成
+# ============================================================
+# 流水线：gaokzx OCR + Qwen-VL-OCR + qwen-max enrich
+# 满分: 100 分 时长: 120 分钟
+
+year: 2026
+district: 顺义区
+exam_type: 一模
+subject: 数学
+full_score: 100
+duration_minutes: 120
+total_questions: 28
+structure: 8单选(16分) + 8填空(16分) + 12解答(68分)
+questions:
+- id: 1
+  type: 单选
+  score: 2
+  question: 1. 下列图形中，既是轴对称图形又是中心对称图形的是 \\(A) \\(B) \\(C) \\(D)
+  answer: A
+  solution: ''
+  knowledge_points:
+  - 轴对称图形
+  - 中心对称图形
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 2
+  type: 单选
+  score: 2
+  question: 2. 每一个外角都是 $60^\circ$ 的正多边形为 \\(A) 正五边形 \\(B) 正六边形 \\(C) 正七边形 \\(D) 正八边形
+  answer: B
+  solution: ''
+  knowledge_points:
+  - 正多边形的性质
+  - 外角和内角的关系
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 3
+  type: 单选
+  score: 2
+  question: 3. 实数 $a$，$b$ 在数轴上的对应点的位置如图所示，下列结论中正确的是 \\(A) $b < 1$ \\(B) $|a| > 1$ \\(C) $ab > 0$ \\(D) $a + b > 0$
+  answer: D
+  solution: ''
+  knowledge_points:
+  - 实数与数轴的对应关系
+  - 有理数大小比较
+  module: numbersAndExpressions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 4
+  type: 单选
+  score: 2
+  question: 4. 若关于 $x$ 的一元二次方程 $2x^2 - 2x + c = 0$ 有两个相等的实数根，则实数 $c$ 的值为 \\(A) -2 \\(B) $-\frac{1}{2}$ \\(C) $\frac{1}{2}$ \\(D) 2
+  answer: C
+  solution: ''
+  knowledge_points:
+  - 一元二次方程的概念
+  - 一元二次方程的根的判别式
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 5
+  type: 单选
+  score: 2
+  question: 5. 一个不透明袋子中仅有红、黄、白球各一个，三个球除颜色外无其他差别。从袋子中随机摸出两个球，其中有一个是红球的概率是 \\(A) $\frac{1}{6}$ \\(B) $\frac{1}{3}$ \\(C) $\frac{1}{2}$ \\(D) $\frac{2}{3}$
+  answer: D
+  solution: ''
+  knowledge_points:
+  - 概率的意义
+  - 简单随机事件的概率计算
+  module: statisticsAndProbability
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 6
+  type: 单选
+  score: 2
+  question: 6. 2025年7月2日，搭载于“天关”卫星上的宽视场X射线望远镜WXT（昵称“万星瞳”）在例行巡天观测中，发现一例突然出现，存在剧烈光变的暂现源，该源区发生一系列X射线闪耀变。已知最亮时达到的光度约是太阳光度的$8 \times 10^{15}$倍，太阳的光度约为$3.8 \times 10^{33}$ erg/s，则该源区最亮时达到的光度约为 \\(A) $3.04 \times
+    10^{48}$ erg/s \\(B) $30.4 \times 10^{48}$ erg/s \\(C) $3.04 \times 10^{49}$ erg/s \\(D) $0.304 \times 10^{50}$ erg/s
+  answer: C
+  solution: ''
+  knowledge_points:
+  - 科学记数法
+  - 有理数乘除运算
+  module: numbersAndExpressions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 7
+  type: 单选
+  score: 2
+  question: 7. 如图，$\angle MON = 40^\circ$，点P在射线OM上，以点P为圆心，PO长为半径画弧，分别交射线OM，ON于点A，B，连接AB，分别以点A，B为圆心，AB长为半径画弧，两弧在$\angle MON$内部交于点C，连接AC，则$\angle OAC$的大小为 \\(A) $100^\circ$ \\(B) $105^\circ$ \\(C) $110^\circ$
+    \\(D) $115^\circ$
+  answer: C
+  solution: ''
+  knowledge_points:
+  - 圆的基本性质
+  - 角的度量与计算
+  module: circles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 8
+  type: 单选
+  score: 2
+  question: 8. 如图，在$\triangle ABC$中，$\angle ACB = 90^\circ$，$AC = BC$，$AD$平分$\angle BAC$，$E$是$AD$上一动点（不与$A$，$D$重合），$EF \perp AC$于点$F$。设$CE = a$，$EF = b$，$BC = c$。给出下面三个结论： ① $a - b > 0$； ② $c - b < \sqrt{a^2
+    - b^2}$； ③ $\sqrt{2}(a + b) \geq c$。上述结论中，所有正确结论的序号是 \\(A) ① \\(B) ①③ \\(C) ②③ \\(D) ①②③
+  answer: B
+  solution: ''
+  knowledge_points:
+  - 直角三角形的性质
+  - 等腰三角形的性质
+  - 勾股定理
+  module: triangles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 9
+  type: 填空
+  score: 2
+  question: 9. 若$\sqrt{x-2}$在实数范围内有意义，则实数$x$的取值范围是_。
+  answer: x \geq 2
+  solution: ''
+  knowledge_points:
+  - 二次根式的概念
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 10
+  type: 填空
+  score: 2
+  question: 10. 分解因式：$xy^2 - 4x = _$。
+  answer: x(y+2)(y-2)
+  solution: ''
+  knowledge_points:
+  - 因式分解——提公因式法
+  - 因式分解——公式法（平方差、完全平方）
+  module: numbersAndExpressions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 11
+  type: 填空
+  score: 2
+  question: 11. 方程$\frac{3}{2x-5} + \frac{1}{x} = 0$的解为_。
+  answer: x = 1
+  solution: ''
+  knowledge_points:
+  - 分式的加减乘除运算
+  - 解一元一次方程
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 12
+  type: 填空
+  score: 2
+  question: 12. 某地区七年级共有4000名女生。为了解这些女生的体能情况，从中随机抽取了100名女生，测得她们一分钟仰卧起坐的个数，数据整理如下：\\ | 仰卧起坐的个数 | $x < 35$ | $35 \leq x < 40$ | $40 \leq x < 45$ | $45 \leq x < 50$ | $50 \leq x < 55$ | $x \geq 55$ |\\ |-----------------|-----------|-------------------|-------------------|-------------------|-------------------|--------------|\\
+    | 人数 | 6 | 15 | 21 | 23 | 27 | 8 |根据以上数据，估计该地区七年级4000名女生中一分钟仰卧起坐的个数不低于50个的人数是_。
+  answer: '1400'
+  solution: ''
+  knowledge_points:
+  - 样本估计总体
+  - 频数分布表的应用
+  module: statisticsAndProbability
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 13
+  type: 填空
+  score: 2
+  question: 13. 在平面直角坐标系 $xOy$ 中，若函数 $y = \frac{k}{x}$ ($k > 0$) 的图象经过点 $(2, y_1)$ 和 $(-3, y_2)$，则 $y_1 + y_2$ \underline{\hspace{1cm}} 0（填 “$>$” “$=$” 或 “$<$”）
+  answer: '>'
+  solution: ''
+  knowledge_points:
+  - 反比例函数的概念
+  - 反比例函数的性质
+  module: functions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 14
+  type: 填空
+  score: 2
+  question: 14. 定滑轮在生活中起着改变力的方向的作用。如图，滑轮支架 $AO$ 垂直向下，且与吊板 $MN$ 垂直，绳子的 $BC$ 部分竖直向下，与 $\odot O$ 相切于点 $B$，绳子的 $DE$ 部分与 $\odot O$ 相切于点 $D$。连接 $OB$，$OD$，若 $\angle BOD = 132^\circ$，则绳子的 $DE$ 部分所在直线与吊板 $MN$ 所在直线所成的锐角的大小为
+    \underline{\hspace{1cm}}。
+  answer: '42'
+  solution: ''
+  knowledge_points:
+  - 圆的切线性质
+  - 角度计算
+  module: circles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 15
+  type: 填空
+  score: 2
+  question: 15. 如图，在正方形 $ABCD$ 中，点 $E$ 在 $BC$ 的延长线上，$BF \perp AE$ 于点 $F$。若 $AB = 4$，$\angle BAE = 60^\circ$，则 $\triangle DEF$ 的面积为 \underline{\hspace{1cm}}。
+  answer: '6'
+  solution: ''
+  knowledge_points:
+  - 正方形的性质
+  - 直角三角形的性质
+  - 三角形面积计算
+  module: quadrilaterals
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 16
+  type: 填空
+  score: 2
+  question: 16. 某工厂生产一种新产品，计划分配给甲、乙、丙三条生产线生产。每条生产线生产 $n$（$n$ 为正整数）批产品后产生的材料费（单位：万元）与 $n$ 的对应关系如下：\\ & $n=1$ & $n=2$ & $n=3$ & $n=4$ & $n=5$ & $\cdots$ \\ \hline 甲 & 15 & 35 & 60 & 90 & 125 & $\cdots$ \\
+    \hline 乙 & 16 & 37 & 63 & 94 & 130 & $\cdots$ \\ \hline 丙 & 17 & 39 & 66 & 93 & 120 & $\cdots$ \\ \hline (1) 如果工厂生产 4 批产品，且每条生产线至少生产 1 批产品，那么为使材料费最小，应向生产线 \underline{\hspace{1cm}} 分配 2 批产品（填 “甲” “乙”
+    或 “丙”）； (2) 如果工厂将 5 批产品分配给这三条生产线中的一条或多条生产，那么 5 批产品都完成生产后，材料费的最小值为 \underline{\hspace{1cm}} 万元。
+  answer: 甲; 89
+  solution: ''
+  knowledge_points:
+  - 整式的加减运算
+  - 方程与不等式的应用
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 17
+  type: 解答
+  score: 5
+  question: 17. 计算：$ \left( \frac{1}{2} \right)^{-1} + |-1| + 4\sin 60^\circ - \sqrt{12} $。
+  answer: '解: 原式 $= 2 + 1 + 2\sqrt{3} - 2\sqrt{3}$\\ = 3'
+  solution: '解: 原式 $= 2 + 1 + 2\sqrt{3} - 2\sqrt{3}$\\ = 3'
+  knowledge_points:
+  - 有理数的乘方
+  - 绝对值的意义
+  - 二次根式的概念
+  module: numbersAndExpressions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 18
+  type: 解答
+  score: 5
+  question: 18. 解不等式组：$ \begin{cases} 3(x+1) > 4x + 1, \\ \frac{x-3}{2} < 2x. \end{cases} $
+  answer: '解: 原不等式组为
+
+    \begin{cases} 3(x+1) > 4x + 1, & \text{①}
+
+    \frac{x-3}{2} < 2x. & \text{②}
+
+    end{cases} 解不等式①，得 $x < 2$; 解不等式②，得 $x > -1$; $\therefore$ 不等式组的解集为 $-1 < x < 2$.'
+  solution: '解: 原不等式组为
+
+    \begin{cases} 3(x+1) > 4x + 1, & \text{①}
+
+    \frac{x-3}{2} < 2x. & \text{②}
+
+    end{cases} 解不等式①，得 $x < 2$; 解不等式②，得 $x > -1$; $\therefore$ 不等式组的解集为 $-1 < x < 2$.'
+  knowledge_points:
+  - 解一元一次不等式
+  - 不等式组的解法
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 19
+  type: 解答
+  score: 5
+  question: 19. 已知 $ a + b - 2 = 0 $，求代数式 $ \frac{2(3a - b) + 8b}{a^2 + 2ab + b^2} $ 的值。
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 整式的加减运算
+  - 乘法公式（平方差公式、完全平方公式）
+  module: numbersAndExpressions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 20
+  type: 解答
+  score: 5
+  question: 20. 如图，在 $ \square ABCD $ 中，$ AC $，$ BD $ 交于点 $ O $，$ E $ 是 $ CD $ 的中点，过点 $ O $，$ E $ 分别作直线 $ BC $ 的垂线，垂足分别为 $ G $，$ F $。 (1) 求证：四边形 $ OGFE $ 是矩形； (2) 若 $ \angle BCO = 45^\circ $，$ OD = \sqrt{5}
+    $，$ OG = 1 $，求 $ CF $ 的长。
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 四边形的性质
+  - 矩形的判定与性质
+  - 直角三角形的性质
+  module: quadrilaterals
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 21
+  type: 解答
+  score: 5
+  question: 21. 中国结是中国传统的手工编织工艺品。小明编织了一个中国结，如图所示，该中国结由挂绳、结体、流苏三部分构成，其中结体内部的形状是四边形，外侧是环状的耳翼。已知挂绳高、结体内部高、流苏高的比例是 $1:3:2$，左、右两侧的耳翼宽都是 $10 \, \text{cm}$，结体内部高和结体内部宽相等，总高是总宽的 $1.5$ 倍，求该中国结的总高。
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 比例的应用
+  - 几何图形的性质
+  module: geometryComprehensive
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 22
+  type: 解答
+  score: 5
+  question: 22. 在平面直角坐标系 $xOy$ 中，函数 $y = k(x-2) + 3$ ($k \neq 0$) 的图象经过点 $(2, m)$，反比例函数 $y = \frac{n}{x}$ 的图象经过点 $(1, 2)$。 (1) 求 $m$，$n$ 的值； (2) 当 $x > 1$ 时，对于 $x$ 的每一个值，函数 $y = k(x-2) + 3$ ($k \neq 0$)
+    的值都大于函数 $y = \frac{n}{x}$ 的值，直接写出 $k$ 的取值范围。
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 一次函数的概念与性质
+  - 反比例函数的概念与性质
+  module: functions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 23
+  type: 解答
+  score: 6
+  question: 23. 某学校举办歌唱比赛，5位评委对每位同学进行现场打分，对参加比赛的甲、乙、丙、丁每位同学得分的数据进行整理、描述和分析，下面给出了部分信息：a. 甲、乙两名同学得分的折线图：[图] b. 丙同学的得分：88 89 90 93 c. 四位同学得分的平均数、中位数、方差：| | 甲 | 乙 | 丙 | 丁 | | --- | --- | --- | --- | --- | |
+    平均数 | 90 | 90.4 | p | 90.4 | | 中位数 | n | 90 | 90 | 91 | | 方差 | 0.4 | 5.04 | q | 6.24 | 根据以上信息，回答下列问题： (1) 表中 n 的值为 _； (2) 对每位同学，计算 5 个得分的平均数和方差，平均数较大的同学排序靠前；若平均数相同，则方差较小的同学排序靠前。已知丙在四位同学中排序第三，则这四位同学中排序最靠前的是
+    _，m（m 为整数）的值为 _。
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 平均数
+  - 中位数
+  - 方差
+  module: statisticsAndProbability
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 24
+  type: 解答
+  score: 6
+  question: 24. 如图，AB 是⊙O 的直径，点 C，D 在⊙O 上，$\widehat{BC} = \widehat{CD}$，连接 AC，AD，BC，过点 B 作⊙O 的切线 BE 交 AD 的延长线于点 E。 (1) 求证：$\angle CBE = \angle CAE$； (2) 延长 BC 交 AE 于点 F，若 DF = 2，$\tan \angle CAE = \frac{1}{2}$，求
+    EF 的长。
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 圆周角定理
+  - 切线的性质
+  - 三角函数的应用
+  module: circles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 25
+  type: 解答
+  score: 5
+  question: 25. 某技术员借助人工智能软件模拟篮球运动员罚篮，当出手位置不变时，研究出手仰角与出手速度对篮球空心入网的影响。当篮球出手仰角为 $\theta$（单位：度）时，分别记录了篮球空心入网的最小出手速度 $v_1$（单位：m/s）和最大出手速度 $v_2$（单位：m/s），部分数据如下：| $\theta$ | 47.5 | 50.0 | 52.5 | 55.0 | 57.5 |
+    60.0 | 62.5 | 65.0 | |----------|-------|-------|-------|-------|-------|-------|-------|-------| | $v_1$ | 7.70 | 7.65 | 7.65 | $m_1$ | 7.76 | 7.90 | 8.08 | 8.31 | | $v_2$ | 7.72 | 7.70 | 7.72 | 7.78
+    | 7.87 | 8.02 | 8.22 | 8.47 | 当出手仰角为 55 度时，篮球空心入网的最大出手速度与最小出手速度的差约为 0.09 m/s。 (1) 写出表中 $m$ 的值（结果保留小数点后两位）； (2) 通过分析数据，发现可以用函数刻画 $v_1$ 与 $\theta$，$v_2$ 与 $\theta$ 之间的关系。如图，在给定的平面直角坐标系中，曲线是函数 $v_2$ 的图象，画出函数
+    $v_1$ 的图象。 [图] 结合数据，利用函数图象可以推断，当篮球空心入网的出手速度最小时，出手仰角约为 _ 度（结果保留整数）； (3) 根据以上数据与函数图象，解决下列问题： ① 若篮球空心入网的出手仰角为 $\theta_1$，最大出手速度与最小出手速度的差不小于 0.10 m/s，则 $\theta_1$ 的最小值约为 _ 度（结果保留整数）； ② 若出手速度一定，$\theta_2$，$\theta_3$
+    分别为篮球空心入网的出手仰角的最大值和最小值，对于 $\theta_2 \leq \theta \leq \theta_3$ 中的每一个值，篮球都能空心入网，则 $\theta_2$ 与 $\theta_3$ 差的最大值约为 _ 度（结果保留小数点后一位）。
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 函数的概念
+  - 函数的图象与性质
+  module: functions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 26
+  type: 解答
+  score: 6
+  question: 26. 在平面直角坐标系 $xOy$ 中，已知抛物线 $y = ax^2 - 3ax$ ($a > 0$)。 (1) 求抛物线的对称轴； (2) 已知抛物线上两点 $M$，$N$ 的横坐标分别为 $t$，$2t$，过点 $M$ 作 $y$ 轴的垂线，过点 $N$ 作 $x$ 轴的垂线，两条垂线交于点 $P$。 ① 若 $a = 1$，$t = 2$，求 $NP$ 的长； ② 当
+    $t$ 取 $t_1$，$t_2$ 时，$NP$ 的长分别为 $d_1$，$d_2$，若存在 $a < t_1 < t_2 < \frac{3}{2}a$，使得 $d_1 = d_2$，求 $a$ 的取值范围。
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 二次函数的性质
+  - 坐标系中的几何问题
+  module: functions
+  difficulty: 能力
+  recommended_for:
+  - L2
+  - L3
+- id: 27
+  type: 解答
+  score: 7
+  question: 27. 如图，在 $\triangle ABC$ 中，$AB = AC$，$\angle BAC = 120^\circ$，$D$ 是 $\triangle ABC$ 内部一点，连接 $AD$，将线段 $AD$ 绕点 $A$ 逆时针旋转 $120^\circ$，得到线段 $AE$，连接 $BD$，$CE$。 (1) 求证：$BD = CE$； (2) 连接 $DE$，分别取线段
+    $BC$，$DE$ 的中点 $F$，$G$，连接 $FG$，用等式表示线段 $FG$ 与 $CE$ 的数量关系，并证明。
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 等腰三角形的性质
+  - 旋转的性质
+  - 中点的性质
+  module: triangles
+  difficulty: 能力
+  recommended_for:
+  - L2
+  - L3
+- id: 28
+  type: 解答
+  score: 8
+  question: 28. 在平面直角坐标系 $xOy$ 中，对于 $\odot C$ 和 $\odot C$ 外一点 $A$ 给出如下定义：若点 $P$ 在 $\odot C$ 上，且对圆上任意一点 $Q$，都有 $\angle PAC \geqslant \angle QAC$，则称线段 $AP$ 是点 $A$ 关于 $\odot C$ 的关联线段，称 $\angle PAC$ 的大小是点 $A$
+    关于 $\odot C$ 的关联角度。 (1) 如图，$\odot O$ 的半径为 1。 [图] ① 已知点 $A\left(\frac{1}{2}, \frac{\sqrt{15}}{2}\right)$，则点 $A$ 关于 $\odot O$ 的关联线段的长为 _，点 $A$ 关于 $\odot O$ 的关联角度为 _°； ② 已知 $\odot O$ 上一点 $B\left(\frac{\sqrt{2}}{2},
+    -\frac{\sqrt{2}}{2}\right)$，点 $D$ 在直线 $y = -x - 3\sqrt{2}$ 上，线段 $DB$ 是点 $D$ 关于 $\odot O$ 的关联线段，则点 $D$ 的坐标为 _； (2) 已知点 $T(t, 0)$，$\odot T$ 的半径为 2，直线 $y = -\sqrt{3}x + 6$ 上的所有点都有关于 $\odot T$ 的关联线段，记这些点关于
+    $\odot T$ 的关联角度的最大值为 $\alpha$，若 $45^\circ \leqslant \alpha < 90^\circ$，直接写出 $t$ 的取值范围。
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 圆的基本性质
+  - 点与圆的位置关系
+  - 直线与圆的位置关系
+  module: circles
+  difficulty: 能力
+  recommended_for:
+  - L2
+  - L3

@@ -1,0 +1,659 @@
+# ============================================================
+# 2026年北京丰台区一模物理 — 自动生成
+# ============================================================
+# 流水线：gaokzx OCR + Qwen-VL-OCR + qwen-max enrich
+# 满分: 70 分 时长: 70 分钟
+
+year: 2026
+district: 丰台区
+exam_type: 一模
+subject: 物理
+full_score: 70
+duration_minutes: 70
+total_questions: 26
+structure: 12单选(24分) + 3多选(6分) + 8实验探究(28分) + 1解答(4分) + 2计算(8分)
+questions:
+- id: 1
+  type: 单选
+  score: 2
+  question: '1. 如图所示的光现象中，由于光的折射形成的是
+
+
+    A. 桥在水中形成的倒影
+
+    B. 日晷上呈现针的影子
+
+    C. 透过放大镜看到放大的字
+
+    D. 景物在镜中成的像'
+  answer: C
+  solution: ''
+  knowledge_points:
+  - 光的折射现象
+  - 透镜及其成像
+  module: soundLightHeat
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 2
+  type: 单选
+  score: 2
+  question: '2. 如图所示的四个实例中，为了减小摩擦的是
+
+
+    A. 汽车轮胎上刻有花纹
+
+    B. 瓶盖上刻有竖条纹
+
+    C. 脚蹬面做得凹凸不平
+
+    D. 储物箱下装有滚轮'
+  answer: D
+  solution: ''
+  knowledge_points:
+  - 摩擦力的产生与影响因素
+  - 减小摩擦的方法
+  module: mechanics
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 3
+  type: 单选
+  score: 2
+  question: '3. 如图所示，正在使用的四种工具，属于费力杠杆的是
+
+
+    A. 单角锤
+
+    B. 核桃夹
+
+    C. 因艺剪
+
+    D. 食品夹'
+  answer: D
+  solution: ''
+  knowledge_points:
+  - 杠杆平衡条件
+  - 费力杠杆的识别
+  module: mechanics
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 4
+  type: 单选
+  score: 2
+  question: '4.2026年2月11日，搭载梦舟飞船的长征十号运载火箭在文昌航天发射场成功发射，完成低空演示验证与最大动压逃逸试验。图中所示为火箭与飞船升空的情境。关于该过程，下列说法正确的是
+
+
+    A. 以地面为参照物，发射塔是运动的
+
+    B. 以发射塔为参照物，飞船是静止的
+
+    C. 以飞船为参照物，火箭是静止的
+
+    D. 以火箭为参照物，发射塔是静止的'
+  answer: C
+  solution: ''
+  knowledge_points:
+  - 参照物的选择与判断
+  module: mechanics
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 5
+  type: 单选
+  score: 2
+  question: '5.如图所示，贾湖骨笛是迄今为止中国考古发现的最早的管乐器，管内中空无簧哨，上下两端口皆为通孔。用骨笛吹奏发声时，下列说法正确的是
+
+
+    A. 骨笛发出的声音是由空气柱振动产生的
+
+    B. 骨笛发出的声音可以在真空中传播
+
+    C. 按压骨笛上不同的孔可以改变笛声的响度
+
+    D. 用力吹奏骨笛是为了改变笛声的音色'
+  answer: A
+  solution: ''
+  knowledge_points:
+  - 声音由物体振动产生
+  - 真空不能传声
+  - 响度与振幅的关系
+  - 音色与发声体材料结构的关系
+  module: soundLightHeat
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 6
+  type: 单选
+  score: 2
+  question: '6.如图所示，两手的食指分别用沿水平方向的力顶在削好的铅笔两端，使铅笔保持水平静止。下列说法正确的是
+
+
+    A. 铅笔对左侧食指的压力较大
+
+    B. 铅笔对右侧食指的压强较大
+
+    C. 铅笔对两侧食指的压力是一对相互作用力
+
+    D. 铅笔对左侧食指的压力与左侧食指对铅笔的压力是一对平衡力'
+  answer: B
+  solution: ''
+  knowledge_points:
+  - 压强的概念
+  - 压力与压强的关系
+  module: mechanics
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 7
+  type: 单选
+  score: 2
+  question: '7.实施人工增雨的一种方法是通过飞机在高空撒干冰(固态二氧化碳)，如图所示。干冰进入云层，很快会变成气体，会使高空中的水蒸气变成小冰晶或小水滴，云中的小冰晶增多，小水滴增大，从而形成降雨。关于高空撒干冰实施人工增雨的过程，下列说法正确的是
+
+
+    A. 干冰变成气体是汽化现象
+
+    B. 水蒸气变成小冰晶是凝华现象
+
+    C. 干冰变成气体要放出热量
+
+    D. 水蒸气变成小水滴要吸收热量'
+  answer: B
+  solution: ''
+  knowledge_points:
+  - 物态变化
+  - 凝华现象
+  module: soundLightHeat
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 8
+  type: 单选
+  score: 2
+  question: '8.图中所示为我国运动员参加米兰冬奥会滑雪比赛时的情境。运动员起跳后，先上升到达最高点，然后再加速下落。下列说法正确的是
+
+
+    A. 运动员在空中能够持续上升，是由于他受到惯性的作用
+
+    B. 运动员在空中上升到达最高点时，所受的合力为零
+
+    C. 运动员在空中加速下落的过程中，重力做功越来越快
+
+    D. 运动员在空中加速下落的过程中，运动员的机械能不变'
+  answer: C
+  solution: ''
+  knowledge_points:
+  - 重力做功
+  - 机械能守恒
+  module: mechanics
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 9
+  type: 单选
+  score: 2
+  question: '9.关于图中所示的四个实验，下列说法正确的是 \甲 \乙 \丙 \丁
+
+
+    A. 图甲：小米和黄豆混合后总体积变小，说明分子间有空隙
+
+    B. 图乙：向两球中间吹气，两球相互靠近，说明气体流速大的地方压强大
+
+    C. 图丙：两根丝绸摩擦过的玻璃棒相互远离，说明异种电荷相互排斥
+
+    D. 图丁：闭合开关，小磁针发生偏转，说明通电导线的周围存在磁场'
+  answer: D
+  solution: ''
+  knowledge_points:
+  - 通电导线的周围存在磁场
+  module: electricity
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 10
+  type: 单选
+  score: 2
+  question: '10. 现有甲、乙、丙三种初温相同的液体，其中甲、乙为质量相等的不同液体，乙、丙为质量不相等的同种液体。若对这三种液体分别加热，根据它们升高的温度 $\Delta t$ 和吸收的热量 $Q$，在图像上分别画出对应的三个点，如图所示。下列判断正确的是
+
+
+    A. 液体甲吸收的热量大于液体乙吸收的热量
+
+    B. 液体乙升高的温度小于液体丙升高的温度
+
+    C. 液体甲的比热容小于液体乙的比热容
+
+    D. 液体乙的质量大于液体丙的质量'
+  answer: D
+  solution: ''
+  knowledge_points:
+  - 比热容的概念及应用
+  - 热量的计算
+  module: soundLightHeat
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 11
+  type: 单选
+  score: 2
+  question: '11. 某同学做电学实验，改变滑动变阻器接入电路的电阻大小，并测量记录了多组电压表和电流表的示数，根据数据分析，连接的电路可能是下面电路中的 \| U/V | 0.9 | 1.1 | 1.3 | 1.4 | 1.5 | 1.7 | \|------|-----|-----|-----|-----|-----|-----| \| I/A | 0.18 | 0.22 | 0.26
+    | 0.28 | 0.30 | 0.34 |
+
+
+    A.
+
+    B.
+
+    C. D.'
+  answer: A
+  solution: ''
+  knowledge_points:
+  - 滑动变阻器的作用
+  - 欧姆定律
+  module: electricity
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 12
+  type: 单选
+  score: 2
+  question: '12. 将一个圆柱形容器放置在水平桌面上，容器内放一个体积为 $200 \, \text{cm}^3$ 的长方体物块，如图所示。缓慢向容器内注水，并记录注水的体积 $V$ 和容器中水的深度 $h$ 的数据，如下表所示。注水过程中，水未溢出容器，物块始终处于直立状态，且不与容器侧壁接触。已知水的密度为 $1.0 \times 10^3 \, \text{kg/m}^3$，取 $10
+    \, \text{N/kg}$。下列说法正确的是 \| $V/\text{cm}^3$ | 60 | 120 | 180 | 240 | 300 | 360 | \|-------------------|----|-----|-----|-----|-----|-----| \| $h/\text{cm}$ | 5 | 10 | 15 | 19 | 22 | 25 |
+
+
+    A. 容器的底面积为 $12 \, \text{cm}^2$
+
+    B. 物块的密度为 $0.7 \times 10^3 \, \text{kg/m}^3$
+
+    C. 物块所受的最大浮力为 $2 \, \text{N}$
+
+    D. 水对容器底部产生的最大压力为 $3.6 \, \text{N}$'
+  answer: B
+  solution: ''
+  knowledge_points:
+  - 浮力的计算
+  - 密度的计算
+  - 液体压强的计算
+  module: mechanics
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 13
+  type: 多选
+  score: 2
+  question: '13. 如图所示，一个风光互补路灯系统，由风力发电机、太阳能电池板、路灯、蓄电池等组成。有风时通过风力发电机发电，有阳光时通过太阳能电池板发电，并将电能储存至蓄电池中，供路灯照明使用。下表为某型号风光互补路灯系统的部分技术参数，若风力发电机的输出功率与风速的三次方成正比，太阳光照射到电池板表面处每平方米的辐射功率为 $800 \, \text{W}$。下列说法正确的是 \|
+    风力发电机 | 太阳能电池板 | \|-------------|----------------| \| 最大限制风速 | 20m/s | 电池板的面积 | \| 最大输出功率 | 800W | 光电转化效率 |
+
+
+    A. 风力发电机发电过程中将电能转化为机械能
+
+    B. 太阳能电池板给蓄电池充电过程中将电能转化为化学能
+
+    C. 风速为10m/s时，该风力发电机的输出功率为100W
+
+    D. 该太阳能电池板的发电功率为400W'
+  answer: BC
+  solution: ''
+  knowledge_points:
+  - 电能的转化与储存
+  - 功率的概念及计算
+  module: electricity
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 14
+  type: 多选
+  score: 2
+  question: '14.如图甲所示，工人站在水平面上通过某滑轮组提升货物，绳子自由端拉力做功随时间变化的关系如图乙所示，在20s内绳子自由端竖直匀速移动25m，货物竖直匀速上升5m。已知工人重600N，货物重720N，动滑轮总重30N。关于货物匀速上升的过程，下列说法正确的是
+
+
+    A. 绳子自由端拉力的功率为200W
+
+    B. 绳子自由端拉力的大小为150N
+
+    C. 工人对水平台面的压力为760N
+
+    D. 滑轮组的机械效率为96% \水平台面 \货物 \甲 \W/(10^3J) \乙 \4 \3 \2 \1 \0 \5 \10 \15 \20 \t/s'
+  answer: AC
+  solution: ''
+  knowledge_points:
+  - 滑轮组的机械效率
+  - 功率的计算
+  - 力的平衡
+  module: mechanics
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 15
+  type: 多选
+  score: 2
+  question: '15.生活中通常使用地磅检测车辆载重情况。为了研究地磅的工作原理，某学习小组设计了模拟地磅原理的简化电路图如图甲所示，其主要由踏板、压力传感器R、定值电阻R0、电流表(量程为0~0.6A)等组成。压力显示表由电流表改装而成，R的阻值与所受压力F的大小关系如图乙所示。电源两端电压不变，踏板重力忽略不计。闭合开关S，当地磅不受压力时，电流表示数为0.24A；当地磅所受压力为1000N时，电流表示数为0.4A。下列说法正确的是
+
+
+    A. 随着地磅所受的压力增加，电流表的示数变小
+
+    B. 当地磅不受压力时，电路消耗的总功率为2.88W
+
+    C. 该地磅的最大测量压力值为2000N
+
+    D. 将R0更换为阻值更大的定值电阻，可以增加该地磅的最大测量值 \F \踏板 \R \R0 \A \S \甲 \乙 \F/(10^3N) \10 \20 \30 \40 \50 \0 \1 \2 \3 \4 \5 \6 \7 \8 \9 \10'
+  answer: BCD
+  solution: ''
+  knowledge_points:
+  - 欧姆定律
+  - 电路分析
+  - 电功率
+  module: electricity
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 16
+  type: 实验探究
+  score: 3
+  question: 16.如图所示，是某实验小组利用频闪照相机每隔0.1s拍摄一次所得到的物体和刻度尺的频闪照片。物体在AB段做____(选填“匀速”或“变速”)直线运动，平均速度为____cm/s。
+  answer: 变速 15
+  solution: ''
+  knowledge_points:
+  - 物体的运动状态
+  - 平均速度的计算
+  module: mechanics
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 17
+  type: 实验探究
+  score: 3
+  question: 17. 某同学为探究水在沸腾前后温度随吸收热量变化的特点，进行了如下实验：用如图甲所示的装置给一定质量的水加热，当水温为 $90^\circ\text{C}$ 时，每隔 1min 记录一次水的温度，从计时开始，经 5min 水沸腾。水沸腾后持续加热一段时间，并记录水的温度。根据实验数据绘制出水的温度随加热时间变化的关系图像，如图乙所示。 (1) 实验中，通过观察 _ 判断水是否沸腾。
+    (2) 在此实验中，水吸收的热量是通过 _ 来反映的。 (3) 由图像可得出的实验结论：水在沸腾前， _ ；水在沸腾过程中， _ 。
+  answer: (1)是否有大量气泡冒出水面 (2)加热时间 (3)随吸收热量增加，温度上升；随吸收热量增加，温度不变
+  solution: (1)是否有大量气泡冒出水面 (2)加热时间 (3)随吸收热量增加，温度上升；随吸收热量增加，温度不变
+  knowledge_points:
+  - 水的沸腾特点
+  - 温度与热量的关系
+  module: soundLightHeat
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 18
+  type: 实验探究
+  score: 4
+  question: 18. (1) 为了探究导体在磁场中运动时产生感应电流的条件，在如图所示的实验装置中，还需在导线夹甲、乙间接入的电路元件是 _ 。 (2) 为了探究磁场对通电导体是否有力的作用，在如图所示的实验装置中，还需在导线夹甲、乙间接入的电路元件是 _ 。闭合开关前，导体 ab 处于静止状态；若闭合开关后，观察到导体 ab _ 的现象，则说明磁场对通电导体有力的作用。
+  answer: (1)灵敏电流计 (2)电源 从静止开始运动
+  solution: (1)灵敏电流计 (2)电源 从静止开始运动
+  knowledge_points:
+  - 电磁感应
+  - 磁场对通电导体的作用
+  module: electricity
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 19
+  type: 实验探究
+  score: 3
+  question: 19. 如图所示，某同学将焦距为 10cm 的凸透镜固定在光具座上 50cm 刻度线处，将点燃的蜡烛放置在光具座上 35cm 刻度线处，移动光屏至 80cm 刻度线处，烛焰在光屏上恰好成清晰的像。 (1) 光屏上所成的像是 _ （选填“放大”“缩小”或“等大”）的实像。这个成像规律可以说明 _ （选填“放大镜”“投影仪”或“照相机”）的成像原理。 (2) 保持凸透镜位置不变，仅将蜡烛和光屏互换位置，光屏上
+    _ （选填“能”或“不能”）成清晰的像。 (3) 该同学在上述器材的基础上，又补充了焦距不同的凸透镜和刻度尺，继续探究凸透镜成实像时，像的高度与焦距的关系。实验测得的数据如下表所示。由表中数据可知：当物距相同时，凸透镜所成实像的高度变化情况是：_。 \| 焦距/ cm | 5 | 10 | 15 | 20 | 25 | \| --- | --- | --- | --- | --- | ---
+    | \| 像高/ cm | 0.6 | 1.5 | 3 | 6 | 15 |
+  answer: (1)放大 投影仪 (2)能 (3)像的高度随焦距的增大而增大
+  solution: (1)放大 投影仪 (2)能 (3)像的高度随焦距的增大而增大
+  knowledge_points:
+  - 凸透镜成像规律
+  - 凸透镜成像实验（光具座实验）
+  - 照相机、投影仪、放大镜的成像原理
+  module: experiments
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 20
+  type: 实验探究
+  score: 4
+  question: 20. 在探究滑动摩擦力大小与哪些因素有关时，某同学在水平桌面上完成了如图所示的实验。 (1)该同学水平拉动木板向左运动，应让木块相对于底板保持_，才能用弹簧测力计的示数表示木块所受摩擦力的大小。此时木块所受摩擦力的方向是水平_。(选填“向左”或“向右”) (2)甲、乙所示的两次实验探究的问题是：滑动摩擦力大小与_是否有关。 [图
+  answer: (1)静止 向左 (2)接触面所受压力大小
+  solution: (1)静止 向左 (2)接触面所受压力大小
+  knowledge_points:
+  - 滑动摩擦力的大小与接触面所受压力的关系
+  - 滑动摩擦力的方向
+  module: mechanics
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 21
+  type: 实验探究
+  score: 4
+  question: 21. 某同学利用一个两端电压不变的电源、三个电流表、两个规格不同的小灯泡、两个滑动变阻器、一个开关和若干导线，探究在并联电路中，干路的电流I与两支路的电流I、I之和的关系。 (1)画出实验电路图。 (2)画出实验数据记录表格。
+  answer: '(1)
+
+    [ \begin{tabular}{l|c|c|c|c|} $I_1$/A & & & &
+
+    \hline $I_2$/A & & & &
+
+    \hline $I_1 + I_2$/A & & & &
+
+    \hline I/A & & & &
+
+    \hline \end{tabular}
+
+    (2)
+
+    [ \begin{tabular}{l|c|c|c|c|} & & & &
+
+    \hline & & & &
+
+    \hline & & & &
+
+    \hline & & & &
+
+    \hline \end{tabular}
+
+    ]'
+  solution: '(1)
+
+    [ \begin{tabular}{l|c|c|c|c|} $I_1$/A & & & &
+
+    \hline $I_2$/A & & & &
+
+    \hline $I_1 + I_2$/A & & & &
+
+    \hline I/A & & & &
+
+    \hline \end{tabular}
+
+    (2)
+
+    [ \begin{tabular}{l|c|c|c|c|} & & & &
+
+    \hline & & & &
+
+    \hline & & & &
+
+    \hline & & & &
+
+    \hline \end{tabular}
+
+    ]'
+  knowledge_points:
+  - 并联电路的电流关系
+  - 实验数据记录与分析
+  module: electricity
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 22
+  type: 实验探究
+  score: 4
+  question: 22. 某同学利用阻值已知的定值电阻R0、一块满足实验要求的电压表、两端电压不变的电源、开关等器材，连接了测量电阻Rx的实验电路，如图所示。 (1)请补充主要实验步骤： ①闭合开关S1，断开开关S2，记录电压表的示数为U1； ②_，记录电压表的示数为U2。 (2)待测电阻的阻值R_x=_。(用已知量和测量量表示) [图
+  answer: (1)闭合开关S1、S2 (2) $\frac{U_2-U_1}{U_1}$, $R_0$
+  solution: (1)闭合开关S1、S2 (2) $\frac{U_2-U_1}{U_1}$, $R_0$
+  knowledge_points:
+  - 欧姆定律
+  - 串联电路电压分配
+  module: electricity
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 23
+  type: 实验探究
+  score: 3
+  question: 23. 某同学在实践活动中利用轻质细杆、容积为V的塑料桶、质量为m的钩码、细线等，制成了一个测量液体密度的“杆秤密度计”，如图所示。在塑料桶内装满液体，移动钩码的位置，当细杆在水平位置平衡时，通过钩码所在位置的刻度线直接读出液体密度的数值。“杆秤密度计”上有密度值为ρ1和ρ2的两条刻度线(ρ1<ρ2)，两刻度线之间的距离为△1，该同学发现△1很小。若想增大△1，分析说明应该增加还是减少塑料桶的容积。
+    [图
+  answer: 设杆秤密度计塑料桶的质量为$m$桶，提纽到塑料桶悬挂位置间的距离为$l_0$，塑料桶装满$\rho_1$液体杆秤密度计水平平衡时，提纽到钩码所在位置的刻线为$l_1$，依据杠杆平衡条件有 $(\rho_1 gV + m_{\text{桶}} g) \cdot l_0 = l_1 \cdot m g$ 解得 $l_1 = \frac{(\rho_1 V + m_{\text{桶}})
+    \cdot l_0}{m}$。塑料桶装满$\rho_2$液体杆秤密度计水平平衡时，提纽到钩码所在位置的刻线为$l_2$，依据杠杆平衡条件有 $(\rho_2 gV + m_{\text{桶}} g) \cdot l_0 = l_2 \cdot m g$ 解得 $l_2 = \frac{(\rho_2 V + m_{\text{桶}}) \cdot l_0}{m}$。由于$\rho_1 < \rho_2$，因此$l_1
+    < l_2$。$\rho_1$、$\rho_2$刻线间距$\Delta l = l_2 - l_1 = \frac{(\rho_2 V + m_{\text{桶}})}{m} \cdot l_0 - \frac{(\rho_1 V + m_{\text{桶}})}{m} \cdot l_0 = \frac{(\rho_2 - \rho_1) \cdot V l_0}{m}$。m,l_0,P_1,P_2不变，若想增大$\Delta
+    l$，即应增大塑料桶的容积V。(其它答案合理即可得分)
+  solution: 设杆秤密度计塑料桶的质量为$m$桶，提纽到塑料桶悬挂位置间的距离为$l_0$，塑料桶装满$\rho_1$液体杆秤密度计水平平衡时，提纽到钩码所在位置的刻线为$l_1$，依据杠杆平衡条件有 $(\rho_1 gV + m_{\text{桶}} g) \cdot l_0 = l_1 \cdot m g$ 解得 $l_1 = \frac{(\rho_1 V + m_{\text{桶}})
+    \cdot l_0}{m}$。塑料桶装满$\rho_2$液体杆秤密度计水平平衡时，提纽到钩码所在位置的刻线为$l_2$，依据杠杆平衡条件有 $(\rho_2 gV + m_{\text{桶}} g) \cdot l_0 = l_2 \cdot m g$ 解得 $l_2 = \frac{(\rho_2 V + m_{\text{桶}}) \cdot l_0}{m}$。由于$\rho_1 < \rho_2$，因此$l_1
+    < l_2$。$\rho_1$、$\rho_2$刻线间距$\Delta l = l_2 - l_1 = \frac{(\rho_2 V + m_{\text{桶}})}{m} \cdot l_0 - \frac{(\rho_1 V + m_{\text{桶}})}{m} \cdot l_0 = \frac{(\rho_2 - \rho_1) \cdot V l_0}{m}$。m,l_0,P_1,P_2不变，若想增大$\Delta
+    l$，即应增大塑料桶的容积V。(其它答案合理即可得分)
+  knowledge_points:
+  - 杠杆平衡条件
+  - 密度的概念及计算
+  module: mechanics
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 24
+  type: 解答
+  score: 4
+  question: 24 (4 分) (1) 可再生 (2) 减小 (3) 做功 (4) $7.2 \times 10^4$
+  answer: (1) 可再生 (2) 减小 (3) 做功 (4) $7.2 \times 10^4$
+  solution: (1) 可再生 (2) 减小 (3) 做功 (4) $7.2 \times 10^4$
+  knowledge_points:
+  - 可再生能源
+  - 能量转化与守恒
+  - 功的计算
+  module: mechanics
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 25
+  type: 计算
+  score: 4
+  question: '25 (4 分) 解: (1) 由电路图可知: 当 S1 闭合、S2 断开时, 只有 R1 工作, 为中温档, 等效电路如图甲, 功率 P1 = 1000 W; 当 S2 闭合、S1 断开时, 只有 R2 工作, 为低温档, 等效电路如图乙, 功率 P2 = 500 W。 [图] 由 P = U^2 / R, 可得 R = U^2 / P 因为 U=220V 不变, 所以 R1
+    / R2 = P2 / P1 = 500 W / 1000 W = 1:2 (2) 该插座允许的最大功率为 P最大 = U I最大 = 220 V × 5 A = 1100 W 低温档: 500 W < 1100 W, 安全但加热慢; 中温档: 1000 W < 1100 W, 安全且加热较快; 高温档: 1500 W > 1100 W, 超过该插座允许的最大功率, 不安全。 所以, 从安全用电和加热快这两个角度综合考虑,
+    应选择中温档。 (其它解法正确的, 均可相应得分)'
+  answer: '解: (1)由电路图可知: 当S1闭合、S2断开时, 只有R1工作, 为中温档, 等效电路如图甲, 功率 $P_1=1000\text{W}$; 当S2闭合、S1断开时, 只有R2工作, 为低温档, 等效电路如图乙, 功率 $P_2=500\text{W}$.
+
+    [ \begin{tabular}{l} \hspace{1cm}R1
+
+    220V
+
+    甲
+
+    \hspace{1cm}R2
+
+    220V
+
+    乙
+
+    \end{tabular}
+
+    由 $P=\frac{U^2}{R}$, 可得 $R=\frac{U^2}{P}$ 因为U=220V 不变, 所以 $\frac{R_1}{R_2}=\frac{P_2}{P_1}=\frac{500\text{W}}{1000\text{W}}=1:2$ (2)该插座允许的最大功率为 $P_{\text{最大}}=UI_{\text{最大}}=220\text{V}\times5\text{A}=1100\text{W}$
+    低温档: $500\text{W} < 1100\text{W}$, 安全但加热慢; 中温档: $1000\text{W} < 1100\text{W}$, 安全且加热较快; 高温档: $1500\text{W}>1100\text{W}$, 超过该插座允许的最大功率, 不安全。 所以, 从安全用电和加热快这两个角度综合考虑, 应选择中温档。 (其它解法正确的, 均可相应得分)'
+  solution: '解: (1)由电路图可知: 当S1闭合、S2断开时, 只有R1工作, 为中温档, 等效电路如图甲, 功率 $P_1=1000\text{W}$; 当S2闭合、S1断开时, 只有R2工作, 为低温档, 等效电路如图乙, 功率 $P_2=500\text{W}$.
+
+    [ \begin{tabular}{l} \hspace{1cm}R1
+
+    220V
+
+    甲
+
+    \hspace{1cm}R2
+
+    220V
+
+    乙
+
+    \end{tabular}
+
+    由 $P=\frac{U^2}{R}$, 可得 $R=\frac{U^2}{P}$ 因为U=220V 不变, 所以 $\frac{R_1}{R_2}=\frac{P_2}{P_1}=\frac{500\text{W}}{1000\text{W}}=1:2$ (2)该插座允许的最大功率为 $P_{\text{最大}}=UI_{\text{最大}}=220\text{V}\times5\text{A}=1100\text{W}$
+    低温档: $500\text{W} < 1100\text{W}$, 安全但加热慢; 中温档: $1000\text{W} < 1100\text{W}$, 安全且加热较快; 高温档: $1500\text{W}>1100\text{W}$, 超过该插座允许的最大功率, 不安全。 所以, 从安全用电和加热快这两个角度综合考虑, 应选择中温档。 (其它解法正确的, 均可相应得分)'
+  knowledge_points:
+  - 电功率的计算
+  - 电路分析
+  module: electricity
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 26
+  type: 计算
+  score: 4
+  question: '26 (4 分) 解: (1) m盐 = 20t + 30t = 5 × 10^4 kg G盐 = m盐 g = 5 × 10^4 kg × 10 N/kg = 5 × 10^5 N 正常工作时, 渔场处于漂浮状态 F浮 = G盐 = 5 × 10^5 N (2) V水 = F浮 / ρ海水 g = 5 × 10^5 N / (1.0 × 10^3 kg/m^3 × 10 N/kg)
+    = 50 m^3 因为养殖网箱、绳索和铸铁块能够排开海水的最大体积为 25 m^3, 所以空心圆柱体排开海水的体积 V1 = 50 m^3 - 25 m^3 = 25 m^3 当养殖网箱的底部下降至海面的距离为 30 m 时, 柱形容器内海水的体积 V2 = Sh - V1 = 5 m^2 × 30 m - 25 m^3 = 125 m^3 h海水 = V2 / S = 125 m^3 / 5
+    m^2 = 25 m (其它解法正确的, 均可相应得分)'
+  answer: '解: (1) $m_{\text{盐}}=20t+30t=5\times10^4\text{kg}$ $G_{\text{盐}}=m_{\text{盐}}g=5\times10^4\text{kg}\times10\text{N/kg}=5\times10^5\text{N}$ 正常工作时, 渔场处于漂浮状态 $F_{\text{浮}}=G_{\text{盐}}=5\times10^5\text{N}$
+    (2) $V_{\text{水}}=\frac{F_{\text{浮}}}{\rho_{\text{海水}}g}=\frac{5\times10^5\text{N}}{1.0\times10^3\text{kg/m}^3\times10\text{N/kg}}=50\text{m}^3$ 因为养殖网箱、绳索和铸铁块能够排开海水的最大体积为$25\text{m}^3$, 所以空心圆柱体排开海水的体积
+    $V_1=50\text{m}^3-25\text{m}^3=25\text{m}^3$ 当养殖网箱的底部下降至海面的距离为30m 时, 柱形容器内海水的 体积 $V_2=Sh_{\text{水}}=5\text{m}^2\times30\text{m}=125\text{m}^3$ $h_{\text{海水}}=\frac{V_2}{S}=\frac{125\text{m}^3}{5\text{m}^2}=25\text{m}$
+    (其它解法正确的, 均可相应得分)'
+  solution: '解: (1) $m_{\text{盐}}=20t+30t=5\times10^4\text{kg}$ $G_{\text{盐}}=m_{\text{盐}}g=5\times10^4\text{kg}\times10\text{N/kg}=5\times10^5\text{N}$ 正常工作时, 渔场处于漂浮状态 $F_{\text{浮}}=G_{\text{盐}}=5\times10^5\text{N}$
+    (2) $V_{\text{水}}=\frac{F_{\text{浮}}}{\rho_{\text{海水}}g}=\frac{5\times10^5\text{N}}{1.0\times10^3\text{kg/m}^3\times10\text{N/kg}}=50\text{m}^3$ 因为养殖网箱、绳索和铸铁块能够排开海水的最大体积为$25\text{m}^3$, 所以空心圆柱体排开海水的体积
+    $V_1=50\text{m}^3-25\text{m}^3=25\text{m}^3$ 当养殖网箱的底部下降至海面的距离为30m 时, 柱形容器内海水的 体积 $V_2=Sh_{\text{水}}=5\text{m}^2\times30\text{m}=125\text{m}^3$ $h_{\text{海水}}=\frac{V_2}{S}=\frac{125\text{m}^3}{5\text{m}^2}=25\text{m}$
+    (其它解法正确的, 均可相应得分)'
+  knowledge_points:
+  - 浮力的计算
+  - 密度的应用
+  - 物体的漂浮条件
+  module: mechanics
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3

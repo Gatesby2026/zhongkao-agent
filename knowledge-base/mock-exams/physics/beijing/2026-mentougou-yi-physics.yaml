@@ -1,0 +1,320 @@
+# ============================================================
+# 2026年北京门头沟区一模物理 — 自动生成
+# ============================================================
+# 流水线：gaokzx OCR + Qwen-VL-OCR + qwen-max enrich
+# 满分: 70 分 时长: 70 分钟
+
+year: 2026
+district: 门头沟区
+exam_type: 一模
+subject: 物理
+full_score: 70
+duration_minutes: 70
+total_questions: 18
+structure: 12单选(24分) + 3多选(6分) + 3实验探究(10分)
+questions:
+- id: 1
+  type: 单选
+  score: 2
+  question: 1. 图1所示的物品中，通常情况下属于导体的是 \换行]A.木制小碗 \换行]B.不锈钢餐盘 \换行]C.塑料饭盒 \换行]D.橡胶手套
+  answer: B
+  solution: ''
+  knowledge_points:
+  - 导体与绝缘体的辨别
+  module: electricity
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 2
+  type: 单选
+  score: 2
+  question: 2. 图2所示的情景中，为了增大压强的是 \换行]A.眼镜架上装有鼻托 \换行]B.背包的背带 \换行]C.压路机的碾子质量很大 \换行]D.载重车装有很多车轮
+  answer: C
+  solution: ''
+  knowledge_points:
+  - 压强的概念及增大和减小压强的方法
+  module: mechanics
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 3
+  type: 单选
+  score: 2
+  question: 3. 图3所示的光现象中，属于光的折射形成的是 \换行]A. 首钢大桥倒影 \换行]B. 日晷计时 \换行]C. 地面树影 \换行]D. 雨后彩虹
+  answer: D
+  solution: ''
+  knowledge_points:
+  - 光的折射现象
+  - 折射现象的生活实例
+  module: soundLightHeat
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 4
+  type: 单选
+  score: 2
+  question: 4. 如图4所示，把两个铅柱的端面磨平，将磨平的端面相对，用力压紧后能吊住大钩码，这个现象说明 \换行]A. 分子之间存在斥力 \换行]B. 分子之间存在引力 \换行]C. 分子在不停地做无规则运动 \换行]D. 物质是由大量分子构成的
+  answer: B
+  solution: ''
+  knowledge_points:
+  - 分子之间存在引力
+  module: mechanics
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 5
+  type: 单选
+  score: 2
+  question: 5. 下列关于声的说法中正确的是 \换行]A. 正在发声的物体都在振动 \换行]B. 只要物体振动，就能听到声音 \换行]C. 声音在各种物质中传播的速度是一样的 \换行]D. 声音不能在固体物质中传播
+  answer: A
+  solution: ''
+  knowledge_points:
+  - 声音由物体振动产生
+  - 声音的传播需要介质（固体、液体、气体）
+  module: soundLightHeat
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 6
+  type: 单选
+  score: 2
+  question: 6. 自然界中，水有多种状态，各种状态之间还可以相互转化。如图 5 所示，下列状态的水，由于凝华形成的是 \换行]A. 山峰间的雾 \换行]B. 树叶上的霜 \换行]C. 河面的冰雪消融 \换行]D. 草叶上的露
+  answer: B
+  solution: ''
+  knowledge_points:
+  - 物态变化
+  - 凝华
+  module: soundLightHeat
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 7
+  type: 单选
+  score: 2
+  question: 7. 下列情境中，人对物体做功的是 \换行]A. 小雨推汽车但没有推动 \换行]B. 小星背着书包在水平路面行走 \换行]C. 小红将掉在地上的树叶捡起来 \换行]D. 小亮投出篮球后，篮球在空中飞行
+  answer: C
+  solution: ''
+  knowledge_points:
+  - 功的概念
+  module: mechanics
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 8
+  type: 单选
+  score: 2
+  question: 8. 图 6 所示，下列做法中符合安全用电原则的是 \换行]A. 床头充电玩手机 \换行]B. 手指触摸插座孔 \换行]C. 出远门断开电闸 \换行]D. 湿手更换灯泡
+  answer: C
+  solution: ''
+  knowledge_points:
+  - 安全用电原则
+  module: electricity
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 9
+  type: 单选
+  score: 2
+  question: 9. 如图 7 所示电路，$AB$ 两点接入电源正负极，此时电流表 $A_1$ 的示数为 $0.48\text{A}$，$A_2$ 的示数为 $0.32\text{A}$，$A_3$ 的示数为 $0.28\text{A}$，则下列判断正确的是 \换行]A. 通过 $L_1$ 的电流为 $0.12\text{A}$ \换行]B. 通过 $L_2$ 的电流为 $0.48\text{A}$
+    \换行]C. 通过 $L_3$ 的电流为 $0.80\text{A}$ \换行]D. 通过三个灯泡的电流之和是 $1.08\text{A}$
+  answer: A
+  solution: ''
+  knowledge_points:
+  - 电流的测量
+  - 并联电路中的电流关系
+  module: electricity
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 10
+  type: 单选
+  score: 2
+  question: 10. 如图 8 所示，有一个未装满液体的饮料瓶，将其正立放置在水平桌面上时瓶对桌面的压强为 $P_1$，瓶底受到液体的压力为 $F_1$。倒立放置时瓶对桌面的压强为 $P_2$，瓶盖受到液体的压力为 $F_2$。则 \换行]A.P2=P1, P2=F1 \换行]B.P2<P1, F2<F1 \换行]C.P2>P1, F2>F1 \换行]D.P2>P1, F2<F1
+  answer: D
+  solution: ''
+  knowledge_points:
+  - 压强的概念
+  - 液体压强的特点
+  module: mechanics
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 11
+  type: 单选
+  score: 2
+  question: 11. 图 9 所示的电路中，电源电压保持不变，当开关 S 闭合，滑动变阻器的滑片 P 向右滑动的过程中，关于电压表和电流表的示数变化，下列四个选项中判断正确的是 \换行]A. 电压表的示数变大 \换行]B. R2 消耗的功率变小 \换行]C. 电路消耗的总功率变大 \换行]D. 电压表和电流表示数的比值不变
+  answer: C
+  solution: ''
+  knowledge_points:
+  - 电路中的电功率
+  - 滑动变阻器的作用
+  module: electricity
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 12
+  type: 单选
+  score: 2
+  question: 12. 如图 10 所示，是乳牛自动喂水器的装置原理图。浮臂 AB 可视为绕 O 点转动的杠杆，OA=10cm，OB=2cm，A 端通过细连接杆 AC 与柱状浮筒连接，浮筒质量为 40g，B 端通过细连接杆 BD 与上下表面积均为 0.3cm² 的圆型的止水阀连接。当储水箱中水位下降时，浮筒带动杠杆使止水阀打开，水从进水管流进储水箱，水位达到一定高度时，浮筒推动杠杆，使止水阀刚好堵住进水管，停止进水，此时
+    AB 处于水平位置，连接杆竖直，大气压强 p0=1.0×10^5 Pa，进水管中水压 p水=2.5×10^5 Pa。除浮筒外其它装置所受重力不计，忽略所有摩擦，g 取 10 N/kg，水的密度 ρ水=1.0×10^3 kg/m³。 \换行]A. 大气压强对止水阀的压力为 4.5N \换行]B. 当进水管停止进水时，接杆 AC 对 A 点的作用力为 1.3N \换行]C. 当进水管停止进水时，浮筒排开水的体积为
+    130cm³ \换行]D. 若只将支点 O 向 A 点移动储水槽最高水位会上升
+  answer: C
+  solution: ''
+  knowledge_points:
+  - 杠杆平衡条件
+  - 浮力的计算
+  module: mechanics
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 13
+  type: 多选
+  score: 2
+  question: 13. 下列说法中，正确的是 \换行]A. 两个物体升高相同的温度，吸收的热量一定相同 \换行]B. 在热传递过程中，吸收热量的物体内能一定增加 \换行]C.温度低的物体一定比温度高的物体具有的内能少 \换行]D.内能大小相同的两个物体之间也可能发生热传递
+  answer: BD
+  solution: ''
+  knowledge_points:
+  - 热传递与内能变化
+  - 温度与内能的关系
+  module: soundLightHeat
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 14
+  type: 多选
+  score: 2
+  question: 14. 如图 11 所示，滑轮组悬挂天花板上，某工人站在水平地面上，用竖直向下的拉力拉动绳子自由端，先后匀速提升两个不同的物体 A 和 B，部分相关数据如表 1 所示。已知该工人重 750N，定滑轮的质量是动滑轮质量的 2 倍，不计滑轮组的绳重和摩擦，取 g=10N/kg。下列说法正确的是 \换行]| 物体 | 质量 kg | 上升高度 m | 时间 s | 机械效率 | 拉力功率
+    w | \换行]|------|---------|------------|--------|----------|------------| \换行]| A | 63 | 2 | 5 | | 280 | \换行]| B | | 3 | 10 | 80% | | \换行]A. 提升物体 A 时，滑轮组的机械效率为 90% \换行]B. 提升物体 B 时，绳子自由端拉力为 350N \换行]C.
+    物体 B 的质量为 28kg \换行]D. 提升物体 B 时定滑轮对天花板的拉力为 665N
+  answer: AC
+  solution: ''
+  knowledge_points:
+  - 滑轮组的机械效率
+  - 滑轮组的拉力计算
+  module: mechanics
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 15
+  type: 多选
+  score: 2
+  question: 15. 有两兴趣小组各自设计了具有高温和低温两挡的电热水壶，其简化电路分别如图 12 甲、12 乙所示，已知 $R_1$、$R_2$、$R_3$ 和 $R_4$ 均为阻值不变的电热丝 $R_1=220\Omega$，$R_2=55\Omega$，$R_3=44\Omega$。下列说法正确的是 \换行]A. 闭合 $S_3$ 与 $S_4$ 时乙电热水壶处于高温档 \换行]B.
+    甲乙电热水壶的高温档功率相同 \换行]C. 若甲乙电热水壶的低温档功率相同，则 $R_4$ 的电阻为 176Ω \换行]D. 乙电热水壶高温档正常工作 3min，消耗的电能为 3300J
+  answer: ABC
+  solution: ''
+  knowledge_points:
+  - 电功率的计算
+  - 电路的连接方式
+  module: electricity
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 16
+  type: 实验探究
+  score: 3
+  question: 16. 10月中旬，门头沟区雁翅镇的苹果迎来了大丰收，小彭同学在帮家长采摘苹果时突发奇想：“苹果的密度是多大呢？”于是他回到学校后带领实验小组借助学校实验室的器材对苹果的密度进行了测量，其步骤如下：
+  answer: '(1) 右 (1 分)
+
+    (2) 162 (1 分)
+
+    (3) $0.9 \times 10^3$ (1 分)'
+  solution: '(1) 右 (1 分)
+
+    (2) 162 (1 分)
+
+    (3) $0.9 \times 10^3$ (1 分)'
+  knowledge_points:
+  - 密度的测量
+  - 天平的使用
+  - 量筒的使用
+  module: experiments
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 17
+  type: 实验探究
+  score: 3
+  question: 17. 如图 14 甲，小勇用标有“等高线”的球形玻璃罩装置进行“光的反射实验”探究。 (1) 将一小块平面镜放在一个能转动的水平圆台上。用固定放置的红色激光笔，发出一束垂直射向平面镜的光，记为 NO；用另一支绿色激光笔，斜射向 O 点发出一束光，记为 AO；AO 经平面镜反射后沿 OE 方向射出，E 点恰好落在 A 点所在的等高线上，如图 14 乙。 (2) 将绿色激光笔固定在玻璃罩上后，缓慢转动圆台，当整个装置旋转到某一位置，可以看到光线
+    OE 恰好把光线 NO 和光线 AO 挡住。这说明光的反射现象中，反射光线、入射光线和光线 NO 在 _。 (3) 保持入射角度不变，让绿色激光笔继续沿 A 点所在的等高线顺时针转动，使入射光始终射向 O 点，如图 14 丙，发现反射光线将 _（选项：“顺时针”或“逆时针”）转动，且所有的反射光线都经过这条等高线。
+  answer: (2)同一平面内 (2 分) (3) 顺时针 (2 分)
+  solution: (2)同一平面内 (2 分) (3) 顺时针 (2 分)
+  knowledge_points:
+  - 光的反射定律
+  - 平面镜成像特点
+  module: experiments
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 18
+  type: 实验探究
+  score: 4
+  question: 18. 为了比较煤油和水比热容的大小，用完全相同的两个烧杯分别装上质量相等的煤油和水，如图 15 所示，用两个相同的电加热器加热。
+  answer: '(1) 加热时间 (1 分) (2) 小 (1 分) 大 (1 分) (1) 同一高度 (1 分) (2) 5 (1 分) 放大 (1 分) 投影仪 (1 分) (1) 右 (2 分)
+
+    (2) 电流方向 (2 分) (1) 右 (2 分)
+
+    (2) 左 (2 分) (1) 图略 (1 分) (2) 灯泡 L 短路 (1 分)
+
+    (3) 0.48 (1 分) (1) 增大 (1 分)
+
+    (2) 所测液体的密度会偏小。理由：电源电压降低，实际电压小于 12V，测量同一液体时电路实际电流偏小；按 12V 计算时，金属棒接入电阻的测量值偏大，由图乙可知对应拉力的测量值偏小；根据 $$\rho = \frac{F}{Vg}$$，拉力偏小导致计算出的液体密度偏小。(2 分)'
+  solution: '(1) 加热时间 (1 分) (2) 小 (1 分) 大 (1 分) (1) 同一高度 (1 分) (2) 5 (1 分) 放大 (1 分) 投影仪 (1 分) (1) 右 (2 分)
+
+    (2) 电流方向 (2 分) (1) 右 (2 分)
+
+    (2) 左 (2 分) (1) 图略 (1 分) (2) 灯泡 L 短路 (1 分)
+
+    (3) 0.48 (1 分) (1) 增大 (1 分)
+
+    (2) 所测液体的密度会偏小。理由：电源电压降低，实际电压小于 12V，测量同一液体时电路实际电流偏小；按 12V 计算时，金属棒接入电阻的测量值偏大，由图乙可知对应拉力的测量值偏小；根据 $$\rho = \frac{F}{Vg}$$，拉力偏小导致计算出的液体密度偏小。(2 分)'
+  knowledge_points:
+  - 比热容的概念
+  - 实验探究方法
+  module: experiments
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3

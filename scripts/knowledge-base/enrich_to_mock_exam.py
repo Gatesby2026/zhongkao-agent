@@ -174,8 +174,8 @@ def enrich_question(
         response_format={"type": "json_object"},
     )
     result = json.loads(resp.choices[0].message.content)
-    # 强制 module 在白名单中
-    if result.get("module") not in modules:
+    # 强制 module 在白名单中（subject 无白名单时不强制）
+    if modules and result.get("module") not in modules:
         result["module"] = modules[0]  # fallback
     if cache_key:
         f.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
