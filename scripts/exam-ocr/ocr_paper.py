@@ -225,19 +225,23 @@ STRUCT_CORRECT_PROMPT = """以下是一份{subject_cn}试卷的答案页 OCR 文
 4. 直接输出 JSON，不要加代码块或解释。"""
 
 STRUCT_SOLUTION_PROMPT = """以下是一份{subject_cn}试卷的答案页 OCR 文本。
-只提取非选择题（实验探究/填空/计算/解答）的解题步骤，输出 JSON，schema：
+需要提取解题步骤的题号为：{non_choice_nums}（即本卷全部非选择题）。
+
+输出 JSON，schema：
 
 {{
   "solutions": [
     {{"number": 16, "solution": "（1）由图像可知熔化过程中温度保持不变，属于晶体。（2）引力使分子间产生相互作用..."}},
-    {{"number": 25, "solution": "（1）U上=220V-2V=218V，R上=218V/0.01A=21800Ω。（2）P=UI=220V×...=1400W"}}
+    {{"number": 23, "solution": "根据杠杆平衡条件 F1*l1=F2*l2，因 l1、l2 不变而 G 增大，所以 G0 增大..."}},
+    {{"number": 25, "solution": "（1）U上=220-2=218V，R上=218/0.01=21800Ω。（2）P=UI=220×10=2200W"}}
   ]
 }}
 
 规则：
-1. 只输出非选择题（含实验探究、填空计算步骤、计算题、解答题），选择题不输出。
-2. solution 含完整推导步骤和评分要点，按小问 (1)(2)(3) 分段写清楚。
-3. 直接输出 JSON，不要加代码块或解释。"""
+1. 对上述每个题号都输出一条，即使答案页只有简短说明也要输出（solution 写实际内容）。
+2. solution 尽量完整保留推导过程、公式推导、评分要点，按小问 (1)(2)(3) 分段。
+3. 若答案页某题只有最终结论无步骤，也要输出该题，solution 写该结论文字。
+4. 直接输出 JSON，不要加代码块或解释。"""
 
 
 def _call_qwen_max(client, system_prompt: str, user_content: str,
@@ -330,9 +334,15 @@ def structure_pages(client, pages_text: list[str], subject_en: str,
                        for a in b_result.get("answers", [])
                        if isinstance(a, dict) and "number" in a}
 
-    # Step C: 提取 solution（非选择题解析步骤，可能较长）
-    print(f"  🧱 [3/3] 提取解析 solution (qwen-max, {len(ans_texts)} 页) ...", file=sys.stderr)
-    c_prompt = STRUCT_SOLUTION_PROMPT.format(subject_cn=subject_cn)
+    # Step C: 提取 solution（非选择题解析步骤，全答案页输入）
+    # 告知模型哪些题号需要 solution，避免选择题干扰
+    non_choice_nums = sorted({
+        q["number"] for q in questions
+        if q.get("type") not in ("choice", "multi_choice")
+    })
+    nums_hint = "、".join(str(n) for n in non_choice_nums) if non_choice_nums else "（无）"
+    print(f"  🧱 [3/3] 提取解析 solution (qwen-max, 非选择题: {nums_hint}) ...", file=sys.stderr)
+    c_prompt = STRUCT_SOLUTION_PROMPT.format(subject_cn=subject_cn, non_choice_nums=nums_hint)
     c_result = _call_qwen_max(client, c_prompt, ans_full,
                                label="solution", retries=retries,
                                min_list_key="solutions", min_count=1)
@@ -364,13 +374,17 @@ def structure_pages(client, pages_text: list[str], subject_en: str,
 # ============== 题面文本归一化 ==============
 
 def _clean_option_value(v: str) -> str:
-    """清理选项文字：去掉 JSON 生成痕迹（尾部 \\、]、["" 等）。"""
+    """清理选项文字：去掉 JSON/LaTeX 格式残留。"""
     v = v.strip()
-    # 去尾部反斜杠（qwen-max 行尾转义残留）
+    # LaTeX 行间距命令：\\[10pt] / \\[10pt / \[10pt] 等
+    v = re.sub(r"\\+\[\d+pt\]?", "", v).strip()
+    # 孤立的 \Npt] 或 \N] 残留
+    v = re.sub(r"\\+\d+pt\]?$", "", v).strip()
+    # 去尾部反斜杠
     v = re.sub(r"\\+$", "", v).strip()
     # 去尾部 ] 或 [ （JSON 数组括号残留）
     v = v.rstrip("]").rstrip("[").strip()
-    # 去首尾引号（有时 value 被加引号）
+    # 去首尾引号
     if len(v) >= 2 and v[0] == '"' and v[-1] == '"':
         v = v[1:-1]
     return v
@@ -479,11 +493,13 @@ def _split_text_to_stem_options(text: str) -> tuple[str, dict | None]:
 
 
 def _clean_stem(text: str) -> str:
-    """清理 stem 字段：去 LaTeX 包裹、合并多余空白。
-    stem 只含题干，不含选项，所以不再做选项拆行逻辑。
-    """
+    """清理 stem 字段：去 LaTeX 包裹/行间距残留、合并多余空白。"""
     t = text or ""
-    # 去 LaTeX \[ \] 包裹（qwen-max 有时误加）
+    # LaTeX 行间距命令：\\[10pt] 等（qwen-max 生成格式残留）
+    t = re.sub(r"\\+\[\d+pt\]?", "", t)
+    # 孤立的 \Npt] 残留
+    t = re.sub(r"\\+\d+pt\]?", "", t)
+    # 去 LaTeX \[ \] 包裹
     t = t.replace("\\[", "").replace("\\]", "")
     # 去多余反斜杠（\\A → A）
     t = re.sub(r"\\+([A-E]\.)", r"\1", t)
