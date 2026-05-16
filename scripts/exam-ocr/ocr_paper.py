@@ -74,14 +74,31 @@ def _img_to_data_url(p: Path) -> str:
 
 OCR_SYS_PROMPT = (
     "你是 OCR 引擎，不是排版器。严格按图片所见逐字识别这页试卷。要求：\n"
+    "\n"
+    "【题号与结构】\n"
     "1. 必须以原始阿拉伯数字保留题号（如 16. 17. 18. 19. 20. ...），逐题独占一行。\n"
     "2. 严禁把题目转成 LaTeX \\begin{enumerate} / \\item 这种环境，必须保留视觉编号。\n"
+    "\n"
+    "【选项】\n"
     "3. 选项标签（A. B. C. D.）每个独占一行。\n"
-    "4. 公式用行内 LaTeX（如 $x^2$）；表格用 Markdown 表格。\n"
-    "5. 图片/电路图/光路图/几何图等用 [图] 占位，不要描述图形内容。\n"
-    "6. 不要改写题面、不要补答案、不要重新编号。\n"
-    "7. 「答案及评分参考」/「参考答案」页：照样如实转录。\n"
-    "8. 直接输出纯文本，不要 ```latex / ```markdown / ```json 代码围栏。"
+    "4. 如果某个选项的内容是图片而非文字，写成「A. [图]」，不要只写字母 A。\n"
+    "   判断依据：字母后面跟着的是图形/实物图/情景图，而不是可读文字。\n"
+    "\n"
+    "【图与图注】\n"
+    "5. 题目中嵌入的图形（电路图、光路图、几何图、实物图等）用 [图] 单独占一行，不描述图形内容。\n"
+    "6. 图中的标注文字（箭头所指的零件名、物理量符号、图例标签等）是图的组成部分，"
+    "   不要把它们单独转录到题目正文或选项文字中。\n"
+    "   例：图中有「紫外线→」「透镜组」「硅片」等标注，这些属于 [图]，不要出现在题目文字里。\n"
+    "\n"
+    "【公式与格式】\n"
+    "7. 数学公式用行内 LaTeX（如 $x^2$、$F=ma$）；独立公式用 $$...$$；表格用 Markdown 表格。\n"
+    "8. 不要改写题面、不要补答案、不要重新编号。\n"
+    "\n"
+    "【答案页】\n"
+    "9. 「答案及评分参考」/「参考答案」页：照样逐题如实转录，保留题号、答案、解析步骤。\n"
+    "\n"
+    "【输出格式】\n"
+    "10. 直接输出纯文本，不要 ```latex / ```markdown / ```json 代码围栏。"
 )
 
 
@@ -154,41 +171,79 @@ def ocr_page(client, image_path: Path, retries: int = 3) -> str:
 
 # ============== step 2: structure via qwen-max ==============
 
-STRUCT_PROMPT_TEMPLATE = """以下是一份{subject_cn}试卷的逐页 OCR 文本（每页用 ## page-NN 标头分隔）。
-请整理为结构化 JSON：
+STRUCT_QUESTIONS_PROMPT = """以下是一份{subject_cn}试卷的逐页 OCR 文本（每页用 ## page-NN 标头分隔）。
+只提取题目列表，不提取答案。输出 JSON，schema：
 
 {{
-  "subject": "{subject_en}",
-  "exam": "<试卷标题，如「2026 北京XX区初三一模 物理」>",
-  "page_count": <总页数>,
+  "exam": "2026 北京朝阳区初三一模 物理",
+  "answer_pages": [9, 10],
   "questions": [
     {{
-      "id": "{subject_en}-q01",
       "number": 1,
       "type": "choice",
-      "text": "1. 完整题干\\n\\nA. 选项A\\nB. 选项B\\nC. 选项C\\nD. 选项D",
+      "text": "1. 下列物品中，通常情况下属于固体的是\\nA. 陶瓷杯\\nB. 橡皮\\nC. 钢尺\\nD. 塑料水瓶",
       "source_page": 1
     }},
-    ...
-  ],
-  "answer_pages": [<答案/评分参考所在页号列表，如 [9,10]，没有则 []>]
+    {{
+      "number": 3,
+      "type": "choice",
+      "text": "3. 如图所示的实例中，目的是为了增大摩擦的是\\n[图]\\nA. [图]\\nB. [图]\\nC. [图]\\nD. [图]",
+      "source_page": 1
+    }},
+    {{
+      "number": 16,
+      "type": "experiment",
+      "text": "16. (1) 在研究某种物质熔化前后温度变化特点的实验时...(2) ...",
+      "source_page": 5
+    }}
+  ]
 }}
 
-要求：
-1. 每道题保留原始题号（题号一定要单调递增，覆盖 1..N 不要漏题）。
-2. text 字段：含题号前缀；选项放进 text，每个选项独占一行，用 \\n 分隔。**不要单独输出 options 字段。**
-3. type 严格在以下枚举之一：choice / multi_choice / fill_blank / essay / experiment / calculation。
-4. 答案页内容**不要混入 questions**，仅把页号填到 answer_pages。
+规则：
+1. 题号单调递增、不漏题、不把答案页内容混入 questions。
+2. text：把该题的完整题面文字（题干 + 选项行，含题号前缀）照原样放入，多行之间用 \\n 分隔。
+   选项行格式保持 "A. 文字" / "A. [图]"；题目中嵌入的图用 [图] 占位。
+3. type 枚举：choice / multi_choice / fill_blank / essay / experiment / calculation。
+4. answer_pages：答案页的页码列表。
 5. 直接输出 JSON，不要加代码块或解释。"""
 
+STRUCT_CORRECT_PROMPT = """以下是一份{subject_cn}试卷的答案页 OCR 文本。
+只提取每道题的正确答案（不含解析步骤），输出 JSON，schema：
 
-def structure_pages(client, pages_text: list[str], subject_en: str,
-                     retries: int = 3) -> dict:
-    """整卷文本 → 结构化 JSON。带重试 + 完整性检验。"""
-    subject_cn = SUBJECT_LABEL_CN.get(subject_en, subject_en)
-    full_text = "\n\n".join(f"## page-{i+1:02d}\n{t}" for i, t in enumerate(pages_text))
-    prompt = STRUCT_PROMPT_TEMPLATE.format(subject_cn=subject_cn, subject_en=subject_en)
+{{
+  "answers": [
+    {{"number": 1, "correct": "C"}},
+    {{"number": 16, "correct": "不变；晶体；引力"}}
+  ]
+}}
 
+规则：
+1. 每题一条，number 为原始题号，覆盖全部题目，不能漏题。
+2. correct：选择题填字母（如 "C"、"AD"），填空/实验题各空答案用「；」分隔，
+   计算/解答题只填最终数值结论（如 "21800Ω；1400W"），不要写推导过程。
+3. 不输出 solution 字段，保持 JSON 紧凑。
+4. 直接输出 JSON，不要加代码块或解释。"""
+
+STRUCT_SOLUTION_PROMPT = """以下是一份{subject_cn}试卷的答案页 OCR 文本。
+只提取非选择题（实验探究/填空/计算/解答）的解题步骤，输出 JSON，schema：
+
+{{
+  "solutions": [
+    {{"number": 16, "solution": "（1）由图像可知熔化过程中温度保持不变，属于晶体。（2）引力使分子间产生相互作用..."}},
+    {{"number": 25, "solution": "（1）U上=220V-2V=218V，R上=218V/0.01A=21800Ω。（2）P=UI=220V×...=1400W"}}
+  ]
+}}
+
+规则：
+1. 只输出非选择题（含实验探究、填空计算步骤、计算题、解答题），选择题不输出。
+2. solution 含完整推导步骤和评分要点，按小问 (1)(2)(3) 分段写清楚。
+3. 直接输出 JSON，不要加代码块或解释。"""
+
+
+def _call_qwen_max(client, system_prompt: str, user_content: str,
+                    label: str, retries: int = 3,
+                    min_list_key: str | None = None, min_count: int = 5) -> dict:
+    """通用 qwen-max JSON 调用，带重试、finish_reason 检测、最小条目检测。"""
     last_err = None
     last_result = None
     for attempt in range(retries):
@@ -196,62 +251,247 @@ def structure_pages(client, pages_text: list[str], subject_en: str,
             resp = client.chat.completions.create(
                 model="qwen-max",
                 messages=[
-                    {"role": "system", "content": prompt},
-                    {"role": "user", "content": full_text},
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": user_content},
                 ],
                 temperature=0.0,
                 max_tokens=8192,
                 response_format={"type": "json_object"},
                 timeout=180,
             )
-            raw = resp.choices[0].message.content.strip()
+            choice = resp.choices[0]
+            finish_reason = choice.finish_reason
+            raw = choice.message.content.strip()
             raw = re.sub(r"^```(?:json)?\s*|\s*```$", "", raw, flags=re.S).strip()
             result = json.loads(raw)
-            qs = result.get("questions", [])
-            # 试卷一般 ≥10 题；少于此视为截断
-            if len(qs) < 10:
-                print(f"    ⚠️ struct attempt {attempt+1}: 只 {len(qs)} 题，可能截断，重试", file=sys.stderr)
-                last_result = result  # 保留以便最终 fallback
+            if finish_reason == "length":
+                n = len(result.get(min_list_key, [])) if min_list_key else "?"
+                print(f"    ⚠️ {label} attempt {attempt+1}: finish_reason=length（截断，{n} 条），重试",
+                      file=sys.stderr)
+                last_result = result
+                time.sleep(3 * (attempt + 1))
+                continue
+            if min_list_key and len(result.get(min_list_key, [])) < min_count:
+                n = len(result.get(min_list_key, []))
+                print(f"    ⚠️ {label} attempt {attempt+1}: 只 {n} 条，可能截断，重试", file=sys.stderr)
+                last_result = result
                 time.sleep(3 * (attempt + 1))
                 continue
             return result
         except Exception as e:
             last_err = e
-            print(f"    ⚠️ struct attempt {attempt+1}/{retries}: {type(e).__name__}: {str(e)[:100]}", file=sys.stderr)
+            print(f"    ⚠️ {label} attempt {attempt+1}/{retries}: {type(e).__name__}: {str(e)[:120]}",
+                  file=sys.stderr)
             time.sleep(5 * (attempt + 1))
 
-    # 全部尝试失败 → 用最后一次成功 parse 的（哪怕题少），或抛
     if last_result is not None:
-        print(f"    ⚠️ 用最后一次结果（{len(last_result.get('questions', []))} 题）", file=sys.stderr)
+        n = len(last_result.get(min_list_key, [])) if min_list_key else "?"
+        print(f"    ⚠️ {label} 用最后一次结果（{n} 条）", file=sys.stderr)
         return last_result
-    raise RuntimeError(f"structure failed after {retries} tries: {last_err}")
+    raise RuntimeError(f"{label} failed after {retries} tries: {last_err}")
+
+
+def structure_pages(client, pages_text: list[str], subject_en: str,
+                     retries: int = 3) -> dict:
+    """整卷文本 → 结构化 JSON。三步：题目 + correct 答案 + solution 解析。
+
+    分开调用以规避 8192 token 上限：
+      Step A: 题目列表（stem + options，全页输入）
+      Step B: correct 答案（仅答案页，无步骤，紧凑）
+      Step C: solution 解析（仅答案页，仅非选择题）
+    """
+    subject_cn = SUBJECT_LABEL_CN.get(subject_en, subject_en)
+    full_text = "\n\n".join(f"## page-{i+1:02d}\n{t}" for i, t in enumerate(pages_text))
+
+    # Step A: 提取题目
+    print(f"  🧱 [1/3] 提取题目 (qwen-max) ...", file=sys.stderr)
+    q_prompt = STRUCT_QUESTIONS_PROMPT.format(subject_cn=subject_cn, subject_en=subject_en)
+    q_result = _call_qwen_max(client, q_prompt, full_text,
+                               label="questions", retries=retries,
+                               min_list_key="questions", min_count=10)
+    questions = q_result.get("questions", [])
+    answer_pages = q_result.get("answer_pages", [])
+    exam_name = q_result.get("exam", "")
+
+    # 答案页文本（只发答案页，节省 tokens）
+    if answer_pages:
+        ans_texts = [pages_text[p - 1] for p in answer_pages if 1 <= p <= len(pages_text)]
+    else:
+        ans_texts = pages_text[-2:]
+    ans_full = "\n\n".join(f"## page-{i+1:02d}\n{t}" for i, t in enumerate(ans_texts))
+
+    # Step B: 提取 correct（紧凑，覆盖全部题目）
+    print(f"  🧱 [2/3] 提取答案 correct (qwen-max, {len(ans_texts)} 页) ...", file=sys.stderr)
+    b_prompt = STRUCT_CORRECT_PROMPT.format(subject_cn=subject_cn)
+    b_result = _call_qwen_max(client, b_prompt, ans_full,
+                               label="correct", retries=retries,
+                               min_list_key="answers", min_count=5)
+    answers_correct = {a["number"]: a["correct"]
+                       for a in b_result.get("answers", [])
+                       if isinstance(a, dict) and "number" in a}
+
+    # Step C: 提取 solution（非选择题解析步骤，可能较长）
+    print(f"  🧱 [3/3] 提取解析 solution (qwen-max, {len(ans_texts)} 页) ...", file=sys.stderr)
+    c_prompt = STRUCT_SOLUTION_PROMPT.format(subject_cn=subject_cn)
+    c_result = _call_qwen_max(client, c_prompt, ans_full,
+                               label="solution", retries=retries,
+                               min_list_key="solutions", min_count=1)
+    answers_solution = {s["number"]: s["solution"]
+                        for s in c_result.get("solutions", [])
+                        if isinstance(s, dict) and "number" in s}
+
+    # 合并 correct + solution
+    all_numbers = sorted(set(answers_correct) | set(answers_solution))
+    answers = [
+        {
+            "number": n,
+            "correct": answers_correct.get(n, ""),
+            "solution": answers_solution.get(n, ""),
+        }
+        for n in all_numbers
+    ]
+
+    return {
+        "subject": subject_en,
+        "exam": exam_name,
+        "page_count": len(pages_text),
+        "questions": questions,
+        "answers": answers,
+        "answer_pages": answer_pages,
+    }
 
 
 # ============== 题面文本归一化 ==============
 
-_OPT_LABEL_RE = re.compile(r"(?<![A-Za-z])([A-E])\.\s*")
+def _clean_option_value(v: str) -> str:
+    """清理选项文字：去掉 JSON 生成痕迹（尾部 \\、]、["" 等）。"""
+    v = v.strip()
+    # 去尾部反斜杠（qwen-max 行尾转义残留）
+    v = re.sub(r"\\+$", "", v).strip()
+    # 去尾部 ] 或 [ （JSON 数组括号残留）
+    v = v.rstrip("]").rstrip("[").strip()
+    # 去首尾引号（有时 value 被加引号）
+    if len(v) >= 2 and v[0] == '"' and v[-1] == '"':
+        v = v[1:-1]
+    return v
 
 
-def _normalize_question_text(text: str) -> str:
-    """把选项规范成独立行 + 去 LaTeX/反斜杠 artifacts。
+def _normalize_options(opts) -> dict | None:
+    """把 qwen-max 可能返回的各种 options 格式统一为 {A: text, ...} dict，或 None。
 
-    输入示例：'1. 题干 \\[A. xxx \\\\B. yyy C. zzz D. www]'
-    输出示例：'1. 题干\\nA. xxx\\nB. yyy\\nC. zzz\\nD. www'
+    已观察到的异常格式：
+      - str:  "A. 陶瓷杯\\nB. 橡皮\\nC. 钢尺\\nD. 塑料水瓶"
+      - list of str: ["A. 陶瓷杯", "B. 橡皮", ...]
+      - list of dict: [{"label": "A", "text": "陶瓷杯"}, ...]
+      - dict (正确): {"A": "陶瓷杯", ...}
     """
-    t = text
-    # 1. 去 LaTeX `\[` `\]` 包裹
-    t = re.sub(r"\\\[|\\\]|^\[|\]$", "", t, flags=re.M).replace("\\[", "").replace("\\]", "")
-    # 2. 去 qwen-max 加的多余反斜杠（\\B. → B.；\B. → B.）
+    if opts is None:
+        return None
+    if isinstance(opts, dict):
+        return opts  # 已是目标格式
+
+    # list 格式
+    if isinstance(opts, list):
+        out = {}
+        for item in opts:
+            if isinstance(item, dict):
+                # {"label": "A", "text": "..."} 或 {"A": "..."}
+                label = item.get("label") or item.get("key")
+                text = item.get("text") or item.get("value") or item.get("content", "")
+                if not label and len(item) == 1:
+                    label, text = next(iter(item.items()))
+                if label and len(label) == 1 and label.isupper():
+                    out[label] = str(text)
+            elif isinstance(item, str):
+                # "A. 陶瓷杯" 或 "A 陶瓷杯"
+                m = re.match(r"^([A-E])[.、．\s]\s*(.*)", item.strip())
+                if m:
+                    out[m.group(1)] = _clean_option_value(m.group(2))
+        return out if out else None
+
+    # str 格式：逐行解析
+    if isinstance(opts, str):
+        out = {}
+        for line in opts.splitlines():
+            line = line.strip()
+            m = re.match(r"^([A-E])[.、．\s]\s*(.*)", line)
+            if m:
+                out[m.group(1)] = _clean_option_value(m.group(2))
+        return out if out else None
+
+    return None
+
+
+def _split_text_to_stem_options(text: str) -> tuple[str, dict | None]:
+    """从 text 字段（题干 + 选项行混合）中拆出 stem 和 options dict。
+
+    处理两种格式：
+      1. 多行：选项每个占独立一行，以 "A." / "B." 等开头
+      2. 单行内联：全部在一行，如 "题干 A. 选项A B. 选项B C. 选项C D. 选项D"
+    返回 (stem_str, options_dict_or_None)。
+    """
+    OPTION_PAT = re.compile(r"(?<!\w)([A-E])[.、．]\s*")
+
+    # 先尝试多行格式
+    lines = text.splitlines()
+    stem_lines = []
+    opt_lines = []
+    in_opts = False
+    for line in lines:
+        stripped = line.strip()
+        if re.match(r"^[A-E][.、．]\s*", stripped):
+            in_opts = True
+            opt_lines.append(stripped)
+        elif in_opts:
+            if opt_lines:
+                opt_lines[-1] += " " + stripped
+        else:
+            stem_lines.append(stripped)
+
+    if opt_lines:
+        stem = "\n".join(l for l in stem_lines if l)
+        return stem, _normalize_options(opt_lines)
+
+    # 单行内联格式：用 "A. " / "B. " 切分
+    # 找第一个选项出现的位置，之前是 stem
+    m = OPTION_PAT.search(text)
+    if m and m.group(1) == "A":
+        # 确保至少有两个选项才算内联格式
+        parts = OPTION_PAT.split(text[m.start():])
+        # split 产出: ['', 'A', 'text_A', 'B', 'text_B', ...]
+        # 即 [prefix, label, content, label, content, ...]
+        opts = {}
+        i = 1
+        while i + 1 < len(parts):
+            label = parts[i].strip()
+            content = parts[i + 1].strip()
+            if label and label.isupper() and len(label) == 1:
+                opts[label] = content
+            i += 2
+        if len(opts) >= 2:
+            stem = re.sub(r"\\+$", "", text[:m.start()].strip()).strip()
+            # clean values
+            opts = {k: _clean_option_value(v) for k, v in opts.items()}
+            return stem, opts
+
+    # 无选项，全部是 stem
+    return text.strip(), None
+
+
+def _clean_stem(text: str) -> str:
+    """清理 stem 字段：去 LaTeX 包裹、合并多余空白。
+    stem 只含题干，不含选项，所以不再做选项拆行逻辑。
+    """
+    t = text or ""
+    # 去 LaTeX \[ \] 包裹（qwen-max 有时误加）
+    t = t.replace("\\[", "").replace("\\]", "")
+    # 去多余反斜杠（\\A → A）
     t = re.sub(r"\\+([A-E]\.)", r"\1", t)
-    # 3. 把 `A. xxx B. yyy ...` 拆成多行：空格 + 字母. → 换行 + 字母.
-    t = re.sub(r"\s+(?=[A-E]\.\s)", "\n", t)
-    # 4. 题号(N.)后接空格再跟选项，先空开
-    t = re.sub(r"^(\d+\.\s*[^\n]+?)(\n[A-E]\.)", r"\1\n\2", t)
-    # 5. 合并多余空白
+    # 若 stem 末尾误混入了选项行（A. xxx），截断到选项前
+    t = re.sub(r"\n+[A-E][\.、．]\s*.*$", "", t, flags=re.DOTALL)
+    # 合并多余空白
     t = re.sub(r"[ \t]+", " ", t)
     t = re.sub(r"\n{3,}", "\n\n", t)
-    # 6. 末尾孤儿 `]`
-    t = re.sub(r"\s*\]\s*$", "", t)
     return t.strip()
 
 
@@ -274,19 +514,27 @@ def ocr_one_paper(paper_dir: Path, subject_en: str, force: bool = False) -> Path
 
     client = _client()
 
-    # Step 1: per-page OCR (cached by file)
+    # Step 1: per-page OCR (cached by file)，并发 10 worker
     pages_cache.mkdir(parents=True, exist_ok=True)
-    pages_text = []
-    for i, img in enumerate(images, 1):
+    pages_text = [None] * len(images)
+    from concurrent.futures import ThreadPoolExecutor, as_completed
+
+    def _ocr_one(args):
+        i, img = args
         cache = pages_cache / f"page-{i:02d}.ocr.txt"
         if cache.exists() and not force:
-            text = cache.read_text(encoding="utf-8")
-            print(f"  ⏭  page-{i:02d} 缓存命中")
-        else:
-            print(f"  🔍 page-{i:02d} OCR ...", flush=True)
-            text = ocr_page(client, img)
-            cache.write_text(text, encoding="utf-8")
-        pages_text.append(text)
+            print(f"  ⏭  page-{i:02d} 缓存命中", flush=True)
+            return i, cache.read_text(encoding="utf-8")
+        print(f"  🔍 page-{i:02d} OCR ...", flush=True)
+        text = ocr_page(client, img)
+        cache.write_text(text, encoding="utf-8")
+        return i, text
+
+    with ThreadPoolExecutor(max_workers=10) as ex:
+        futs = [ex.submit(_ocr_one, (i, img)) for i, img in enumerate(images, 1)]
+        for fut in as_completed(futs):
+            i, text = fut.result()
+            pages_text[i - 1] = text
 
     # Step 2: structure
     print(f"  🧱 整卷结构化 (qwen-max) ...")
@@ -302,15 +550,65 @@ def ocr_one_paper(paper_dir: Path, subject_en: str, force: bool = False) -> Path
         if not isinstance(q, dict):
             print(f"  ⚠️ skip non-dict question: {repr(q)[:80]}", file=sys.stderr)
             continue
-        # 丢弃误生成的 options/选项键（模型有时把 'B. xxx' 当作 key）
-        q = {k: v for k, v in q.items() if k in ("id", "number", "type", "text", "source_page")}
-        if "number" not in q or "text" not in q:
-            print(f"  ⚠️ skip incomplete question: {list(q.keys())}", file=sys.stderr)
+        if "number" not in q:
+            print(f"  ⚠️ skip question missing number: {list(q.keys())}", file=sys.stderr)
             continue
-        q.setdefault("id", f"{subject_en}-q{q['number']:02d}")
-        q["text"] = _normalize_question_text(q["text"])
-        qs.append(q)
+
+        num = q["number"]
+        q_type = q.get("type", "choice")
+        source_page = q.get("source_page", None)
+
+        # --- 从 text 字段（新格式）或 stem+options（旧格式）提取题干和选项 ---
+        raw_text = q.get("text") or ""
+        stem_raw = q.get("stem") or ""
+        opts_raw = q.get("options")
+
+        if raw_text and not stem_raw:
+            # 新格式：text 字段包含题干 + 选项行，逐行拆分
+            stem, opts_raw = _split_text_to_stem_options(raw_text)
+        else:
+            stem = stem_raw
+
+        stem = _clean_stem(stem)
+
+        # 归一化 options → {A: text, ...} dict 或 None
+        opts: dict | None = None
+        if opts_raw is not None:
+            if isinstance(opts_raw, dict):
+                opts = opts_raw
+            else:
+                opts = _normalize_options(opts_raw)
+                if opts:
+                    print(f"  🔧 Q{num} options 格式修正 {type(opts_raw).__name__} → dict({list(opts.keys())})", file=sys.stderr)
+                else:
+                    print(f"  ⚠️ Q{num} options 无法解析: {repr(opts_raw)[:60]}", file=sys.stderr)
+
+        # 图片选项一致性
+        has_image_options = bool(opts and all(v == "[图]" for v in opts.values()))
+
+        qs.append({
+            "id": f"{subject_en}-q{num:02d}",
+            "number": num,
+            "type": q_type,
+            "stem": stem,
+            "options": opts,
+            "has_image_options": has_image_options,
+            "source_page": source_page,
+        })
     result["questions"] = qs
+
+    # answers 数组标准化
+    answers_in = result.get("answers", [])
+    answers = []
+    for a in answers_in:
+        if not isinstance(a, dict) or "number" not in a:
+            continue
+        answers.append({
+            "number": a["number"],
+            "correct": str(a.get("correct", "")),
+            "solution": str(a.get("solution", "")),
+        })
+    result["answers"] = answers
 
     out_dir.mkdir(parents=True, exist_ok=True)
     out_json.write_text(json.dumps(result, ensure_ascii=False, indent=2),
