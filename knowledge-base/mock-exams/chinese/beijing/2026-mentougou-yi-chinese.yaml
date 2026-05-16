@@ -10,8 +10,8 @@ exam_type: 一模
 subject: 语文
 full_score: 100
 duration_minutes: 150
-total_questions: 19
-structure: 9解答(63分) + 7单选(14分) + 3填空(8分)
+total_questions: 27
+structure: 10解答(28分) + 9单选(18分) + 8填空(17分)
 questions:
 - id: 1
   type: 解答
@@ -21,7 +21,7 @@ questions:
   solution: ''
   knowledge_points:
   - 常用汉字的规范书写
-  module: 基础·积累与运用
+  module: 字音字形
   difficulty: 基础
   recommended_for:
   - L0
@@ -97,7 +97,14 @@ questions:
 - id: 6
   type: 单选
   score: 2
-  question: 6. 请你判断上文①—④句中没有使用修辞手法的一项是(2 分)\nA. ① \nB. ② \nC. ③ \nD. ④
+  question: '6. 请你判断上文①—④句中没有使用修辞手法的一项是(2 分)\nA. ① \\quad
+
+
+    B. ② \\quad
+
+    C. ③ \\quad
+
+    D. ④'
   answer: D
   solution: ''
   knowledge_points:
@@ -114,11 +121,86 @@ questions:
   score: 2
   question: 7. 文段中的画线句存在问题，请你修改。(2 分)
   answer: 不但是每个青年学子应当赓续的文化基因，更成为中华民族文化自信的不竭动力。
-  solution: 不但是每个青年学子应当赓续的文化基因，更成为中华民族文化自信的不竭动力。
+  solution: ''
   knowledge_points:
   - 语序不当
   - 搭配不当（主谓/动宾/主宾/修饰语）
   module: 病句辨析与修改
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 8
+  type: 填空
+  score: 1
+  question: 8. 采菊东篱下，__________。（陶渊明《饮酒》）（1 分）
+  answer: 悠然见南山
+  solution: ''
+  knowledge_points:
+  - 古诗文默写
+  module: 古诗文默写
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 9
+  type: 填空
+  score: 1
+  question: 9. 晴川历历汉阳树，__________。（崔颢《黄鹤楼》）（1 分）
+  answer: 芳草萋萋鹦鹉洲
+  solution: ''
+  knowledge_points:
+  - 古诗文默写
+  module: 古诗文默写
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 10
+  type: 填空
+  score: 2
+  question: 10. 古人常以水入诗，很多诗句中与“水”相关的字大都带有三点水。如古诗词中的 “__________”一句，就出现了这样的字。（本试卷中出现的诗歌除外）（2 分）
+  answer: 长河落日圆
+  solution: ''
+  knowledge_points:
+  - 古诗文默写
+  module: 古诗文默写
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 11
+  type: 填空
+  score: 2
+  question: 11. 根据你的理解，在横线上填写恰当的内容。（2 分）\n首句“岱宗夫如何”传神地写出了诗人乍一望见泰山时的 ① 之情；“齐鲁青未了”，写出了泰山的 ② 。
+  answer: ①惊叹仰慕 ②高远辽阔
+  solution: ''
+  knowledge_points:
+  - 古诗文默写
+  - 文学文化常识
+  module: 古诗文默写
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 12
+  type: 解答
+  score: 3
+  question: 12. “钟”有聚集、汇聚的意思，“割”有分割、划分之意。分别说说“钟”和“割”突出了景物的什么特点，表达了诗人怎样的情感。（3 分）
+  answer: “钟”运用拟人手法，描写天地造化，将大自然写得有情，突出了泰山神奇秀丽的特点；“割”写出了泰山参天矗立的雄姿，使静止的山峰充满活力。这两个字表达了诗人对泰山的赞叹之情，以及对祖国山河的热爱。
+  solution: ''
+  knowledge_points:
+  - 拟人
+  - 词语的理解与辨析（近义词辨析）
+  module: 修辞手法
   difficulty: 中等
   recommended_for:
   - L1
@@ -138,7 +220,6 @@ questions:
   answer: B
   solution: ''
   knowledge_points:
-  - 词语的理解与辨析（近义词辨析）
   - 成语的正确使用
   module: 词语运用
   difficulty: 基础
@@ -169,9 +250,9 @@ questions:
   answer: ①不鼓不成列(或“君子不重伤,不禽二毛”) ②善于听取正确意见
   solution: ''
   knowledge_points:
-  - 课内重要作家及其代表作品
   - 古代重要作家（朝代、字号、代表作）
-  module: 文学文化常识
+  - 古诗文默写
+  module: 古诗文阅读
   difficulty: 中等
   recommended_for:
   - L1
@@ -182,11 +263,53 @@ questions:
   score: 5
   question: 16. 《钢铁是怎样炼成的》中的保尔·柯察金，因为有着坚定的理想信念，即便双目失明、全身瘫痪，仍然不改“为人类解放事业奋斗终身”的革命初心。请你从《西游记》《红星照耀中国》《骆驼祥子》中任选一部，说说信念在人物成长过程中的作用。(100字左右)
   answer: 《骆驼祥子》中的祥子，最初怀揣着靠自己力气买一辆属于自己的车的朴实信念。他吃苦耐劳、省吃俭用，在一次次打击中仍不愿放弃。这份信念支撑他在底层挣扎成长，虽最终被现实摧毁，却也让我们看到信念曾给予普通人生活的希望与力量。
-  solution: 《骆驼祥子》中的祥子，最初怀揣着靠自己力气买一辆属于自己的车的朴实信念。他吃苦耐劳、省吃俭用，在一次次打击中仍不愿放弃。这份信念支撑他在底层挣扎成长，虽最终被现实摧毁，却也让我们看到信念曾给予普通人生活的希望与力量。
+  solution: ''
   knowledge_points:
   - 课内重要作家及其代表作品
   - 文体常识（记叙文/说明文/议论文/诗歌/小说/散文/戏剧）
   module: 文学文化常识
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 17
+  type: 单选
+  score: 2
+  question: 17. 根据以上三则材料，下列说法不符合文意的一项是（2 分）\nA. “教联体”建设旨在促进中小学生健康快乐成长。\nB. “教联体”工作模式以家庭为核心、以学校为主体。\nC. 北京市通过“六必访”机制加强对特殊情况的关注。\nD. 门头沟区凝聚起家校社政四方合力，构筑成长护航网。
+  answer: B
+  solution: ''
+  knowledge_points:
+  - 语句的连贯（上下文衔接）
+  module: 语句衔接与排序
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 18
+  type: 单选
+  score: 2
+  question: 18. 根据材料三，在文段结尾横线处补写相关内容。下列不恰当的一项是（2 分）\nA. 体现区域在推进“教联体”建设方面的创新实践。\nB. 展现以安全护航和课程共育为特色的实施模式。\nC. 构建了系统的“教联体”课程体系与实施标准。\nD. 反映“教联体”在基层落地过程中的有效探索。
+  answer: C
+  solution: ''
+  knowledge_points:
+  - 语句的连贯（上下文衔接）
+  module: 语句衔接与排序
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 19
+  type: 填空
+  score: 3
+  question: 19. 综合三则材料，我国“教联体”建设呈现出清晰的实施路径：①______、②______、③______。（3 分）
+  answer: ①国家政策规划 ②市级推进落实 ③区域实践探索
+  solution: ''
+  knowledge_points:
+  - 语句的连贯（上下文衔接）
+  module: 语句衔接与排序
   difficulty: 中等
   recommended_for:
   - L1
@@ -200,6 +323,7 @@ questions:
   solution: ''
   knowledge_points:
   - 语句的连贯（上下文衔接）
+  - 词语的理解与辨析（近义词辨析）
   module: 语句衔接与排序
   difficulty: 中等
   recommended_for:
@@ -211,7 +335,7 @@ questions:
   score: 3
   question: 21. 结合语句内容，分析文章第⑦段画线部分的句式特点及表达效果。（3 分）
   answer: 句式对称工整，生动勾勒出袁老在田间潜心研究水稻的专注身影；语言凝练且画面感强。这句话既体现了袁老严谨细致的科研态度，也饱含着他对粮食与土地的深厚情感。
-  solution: 句式对称工整，生动勾勒出袁老在田间潜心研究水稻的专注身影；语言凝练且画面感强。这句话既体现了袁老严谨细致的科研态度，也饱含着他对粮食与土地的深厚情感。
+  solution: ''
   knowledge_points:
   - '修辞手法: 对偶'
   - 语句的连贯（上下文衔接）
@@ -226,7 +350,7 @@ questions:
   score: 3
   question: 22. 结合全文，说明“执着求索、心系民生的精神”在袁隆平院士杂交水稻科研与推广之路中起到的作用。（3 分）
   answer: 执着求索、心系民生的精神贯穿袁隆平院士杂交水稻科研与推广之路，引领他深耕田间、潜心钻研。筹备试点时，他全力支持增产试验；科研推广中，他扎根稻田钻研技术，推动杂交水稻在江南大面积种植，以一生坚守让高产水稻真正惠及百姓、造福民生。
-  solution: 执着求索、心系民生的精神贯穿袁隆平院士杂交水稻科研与推广之路，引领他深耕田间、潜心钻研。筹备试点时，他全力支持增产试验；科研推广中，他扎根稻田钻研技术，推动杂交水稻在江南大面积种植，以一生坚守让高产水稻真正惠及百姓、造福民生。
+  solution: ''
   knowledge_points:
   - 语句的连贯（上下文衔接）
   - 词语的理解与辨析（近义词辨析）
@@ -241,10 +365,10 @@ questions:
   score: 3
   question: 23. 袁隆平院士毕生致力于杂交水稻的研究与推广。结合文章内容，说说你从中获得的启示。（3 分）
   answer: 袁隆平院士毕生躬耕稻田、心系民生，启示我们学习他脚踏实地、执着坚守的精神，树立为民造福的远大理想，以实干奉献实现人生价值。
-  solution: 袁隆平院士毕生躬耕稻田、心系民生，启示我们学习他脚踏实地、执着坚守的精神，树立为民造福的远大理想，以实干奉献实现人生价值。
+  solution: ''
   knowledge_points:
-  - 课内重要作家及其代表作品
-  - 文体常识（记叙文/说明文/议论文/诗歌/小说/散文/戏剧）
+  - 重要作家及其代表作品
+  - 文体常识
   module: 文学文化常识
   difficulty: 中等
   recommended_for:
@@ -256,7 +380,7 @@ questions:
   score: 2
   question: 24. 结合第①段具体内容，说明本段在全文中的作用。（2 分）
   answer: 第①段讲述张雨霏以“小将”心态轻装上阵，在全运会斩获双冠展“大将”风范的事例，引出论题，同时该事例作为事实论据，为后文论证提供支撑，使文章论点更具说服力。
-  solution: 第①段讲述张雨霏以“小将”心态轻装上阵，在全运会斩获双冠展“大将”风范的事例，引出论题，同时该事例作为事实论据，为后文论证提供支撑，使文章论点更具说服力。
+  solution: ''
   knowledge_points:
   - 语段的逻辑顺序排列
   - 语句的连贯（上下文衔接）
@@ -273,8 +397,8 @@ questions:
   answer: D
   solution: ''
   knowledge_points:
-  - 关联词语的正确搭配
   - 词语的理解与辨析（近义词辨析）
+  - 关联词语的正确搭配
   module: 词语运用
   difficulty: 中等
   recommended_for:
@@ -286,11 +410,11 @@ questions:
   score: 3
   question: 26. 阅读文章，写出第③—⑦段的行文思路。（3 分）
   answer: 第③④段列举事例论述“小将”心态的内涵，要以“空杯心态”迎接新挑战，要有敢闯敢试的闯劲；第⑤段论述“小将”心态与“大将”风范相辅相成的关系；第⑥⑦段分别列举事例，论述“大将”需具备持久韧劲与“功成不必在我，功成必定有我”的担当。
-  solution: 第③④段列举事例论述“小将”心态的内涵，要以“空杯心态”迎接新挑战，要有敢闯敢试的闯劲；第⑤段论述“小将”心态与“大将”风范相辅相成的关系；第⑥⑦段分别列举事例，论述“大将”需具备持久韧劲与“功成不必在我，功成必定有我”的担当。
+  solution: ''
   knowledge_points:
   - 语段的逻辑顺序排列
-  - 文章结构分析
-  module: 现代文阅读
+  - 语句的连贯（上下文衔接）
+  module: 语句衔接与排序
   difficulty: 中等
   recommended_for:
   - L1
@@ -298,11 +422,11 @@ questions:
   - L3
 - id: 27
   type: 解答
-  score: 40
+  score: 2
   question: 27. 从下面两个题目中任选一题，按要求写一篇作文。\n(1) 习惯，是日复一日的坚持，是融入生活的自然；习惯，能沉淀岁月的力量，也能在调整中焕发新的生机。请以“习惯”为题，写一篇文章。\n(2) 生态，藏在一次垃圾分类的实践中，藏在一段绿植养护的经历中，藏在一场亲近自然的探访里……请以“身边的生态”为题，写一篇文章。\n要求：将作文题目写在答题卡上，作文内容积极向上，文体不限，诗歌除外。字数在
     600～800 之间。不出现学校的真实校名、师生姓名等。
-  answer: 作文评分标准
-  solution: 作文评分标准
+  answer: ''
+  solution: ''
   knowledge_points:
   - 写作
   module: 写作

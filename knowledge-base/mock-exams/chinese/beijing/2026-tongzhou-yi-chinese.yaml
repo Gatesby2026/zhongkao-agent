@@ -10,18 +10,18 @@ exam_type: 一模
 subject: 语文
 full_score: 100
 duration_minutes: 150
-total_questions: 39
-structure: 30单选(60分) + 3reading_comprehension(6分) + 3填空(6分) + 3解答(6分)
+total_questions: 37
+structure: 30单选(34.0分) + 3多选(6分) + 3填空(6分) + 1解答(4分)
 questions:
 - id: 1
   type: 单选
-  score: 2
-  question: '1. Peter wants to be a doctor in the future and biology is _ favorite subject.\nA. my \5pt]
+  score: 0.5
+  question: '1. Peter wants to be a doctor in the future and biology is _ favorite subject.\nA. my \0.5em]
 
 
-    B. your \5pt]
+    B. your \0.5em]
 
-    C. her \5pt]
+    C. her \0.5em]
 
     D. his'
   answer: D
@@ -37,13 +37,15 @@ questions:
   - L3
 - id: 2
   type: 单选
-  score: 2
-  question: '2. We often plant some trees and flowers _ spring to make our school beautiful.\\\\nA. in \5pt]
+  score: 0.5
+  question: '2. We often plant some trees and flowers _ spring to make our school beautiful.\0.5em]
 
 
-    B. on \5pt]
+    A. in \0.5em]
 
-    C. at \5pt]
+    B. on \0.5em]
+
+    C. at \0.5em]
 
     D. for'
   answer: A
@@ -59,13 +61,15 @@ questions:
   - L3
 - id: 3
   type: 单选
-  score: 2
-  question: '3. Look at the dark clouds. You''d better take an umbrella, _ you may get wet.\\\\nA. but \5pt]
+  score: 0.5
+  question: '3. Look at the dark clouds. You''d better take an umbrella, _ you may get wet. \0.5em]
 
 
-    B. or \5pt]
+    A. but \0.5em]
 
-    C. and \5pt]
+    B. or \0.5em]
+
+    C. and \0.5em]
 
     D. so'
   answer: B
@@ -81,15 +85,15 @@ questions:
   - L3
 - id: 4
   type: 单选
-  score: 2
-  question: '4. _ we follow the directions when we do this experiment? \\\\-Yes. The experiment is a little dangerous for you. Let''s read the instructions first. \\\\
+  score: 0.5
+  question: '4. _ we follow the directions when we do this experiment? \0.5em] -Yes. The experiment is a little dangerous for you. Let''s read the instructions first. \0.5em]
 
 
-    A. Can \5pt]
+    A. Can \0.5em]
 
-    B. Could \5pt]
+    B. Could \0.5em]
 
-    C. May \5pt]
+    C. May \0.5em]
 
     D. Must'
   answer: D
@@ -105,15 +109,15 @@ questions:
   - L3
 - id: 5
   type: 单选
-  score: 2
-  question: '5. -Jack, your Chinese is so good. _ did you begin to learn it? \\\-Thank you. I began to learn Chinese 2 years ago. \\\\
+  score: 0.5
+  question: '5. -Jack, your Chinese is so good. _ did you begin to learn it? \0.5em] -Thank you. I began to learn Chinese 2 years ago. \0.5em]
 
 
-    A. Where \5pt]
+    A. Where \0.5em]
 
-    B. When \5pt]
+    B. When \0.5em]
 
-    C. What \5pt]
+    C. What \0.5em]
 
     D. How'
   answer: B
@@ -129,21 +133,21 @@ questions:
   - L3
 - id: 6
   type: 单选
-  score: 2
-  question: '6. I think Grand Canal Forest Park is _ park in our city. \\\\
+  score: 0.5
+  question: '6. I think Grand Canal Forest Park is _ park in our city. \0.5em]
 
 
-    A. beautiful \5pt]
+    A. beautiful \0.5em]
 
-    B. more beautiful \5pt]
+    B. more beautiful \0.5em]
 
-    C. most beautiful \5pt]
+    C. most beautiful \0.5em]
 
     D. the most beautiful'
   answer: D
   solution: ''
   knowledge_points:
-  - 形容词的比较级和最高级
+  - 词语的理解与辨析（近义词辨析）
   module: 词语运用
   difficulty: 基础
   recommended_for:
@@ -153,15 +157,15 @@ questions:
   - L3
 - id: 7
   type: 单选
-  score: 2
-  question: '7. -What do you like to do in your free time? \\\nI often _ basketball with my friends. \\\\
+  score: 0.5
+  question: '7. -What do you like to do in your free time? \0.5em] I often _ basketball with my friends. \0.5em]
 
 
-    A. play \5pt]
+    A. play \0.5em]
 
-    B. played \5pt]
+    B. played \0.5em]
 
-    C. am playing \5pt]
+    C. am playing \0.5em]
 
     D. was playing'
   answer: A
@@ -177,18 +181,42 @@ questions:
   - L3
 - id: 8
   type: 单选
-  score: 2
-  question: '8. If you do exercise every day, you _ stronger and healthier. \\\\
+  score: 0.5
+  question: '8. If you do exercise every day, you _ stronger and healthier. \0.5em]
 
 
-    A. become \5pt]
+    A. become \0.5em]
 
-    B. became \5pt]
+    B. became \0.5em]
 
-    C. will become \5pt]
+    C. will become \0.5em]
 
     D. have become'
   answer: C
+  solution: ''
+  knowledge_points:
+  - 关联词语的正确搭配
+  module: 词语运用
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 9
+  type: 单选
+  score: 0.5
+  question: '9. Lily _ some shopping when she was in the shop. \0.5em]
+
+
+    A. do \0.5em]
+
+    B. was doing \0.5em]
+
+    C. will do \0.5em]
+
+    D. has done'
+  answer: B
   solution: ''
   knowledge_points:
   - 时态的正确使用
@@ -199,41 +227,17 @@ questions:
   - L1
   - L2
   - L3
-- id: 9
-  type: 单选
-  score: 2
-  question: '9. Lily _ some shopping when she was in the shop. \\\\
-
-
-    A. do \5pt]
-
-    B. was doing \5pt]
-
-    C. will do \5pt]
-
-    D. has done'
-  answer: B
-  solution: ''
-  knowledge_points:
-  - 时态的正确使用
-  module: 词语运用
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
 - id: 10
   type: 单选
-  score: 2
-  question: '10. Many people _ our volunteer group since we started it last month. \\\\
+  score: 0.5
+  question: '10. Many people _ our volunteer group since we started it last month. \0.5em]
 
 
-    A. Join \5pt]
+    A. Join \0.5em]
 
-    B. joined \5pt]
+    B. joined \0.5em]
 
-    C. will join \5pt]
+    C. will join \0.5em]
 
     D. have joined'
   answer: D
@@ -249,15 +253,15 @@ questions:
   - L3
 - id: 11
   type: 单选
-  score: 2
-  question: '11. Nowadays, many robots _ to help look after patients in the hospital. \\\\
+  score: 0.5
+  question: '11. Nowadays, many robots _ to help look after patients in the hospital. \0.5em]
 
 
-    A. use \5pt]
+    A. use \0.5em]
 
-    B. used \5pt]
+    B. used \0.5em]
 
-    C. are used \5pt]
+    C. are used \0.5em]
 
     D. were used'
   answer: C
@@ -273,21 +277,22 @@ questions:
   - L3
 - id: 12
   type: 单选
-  score: 2
-  question: '12. --Do you know _ the Storytelling Competition? \\\-Next Friday. Our Chinese teacher will come to the competition, too. \\\\
+  score: 0.5
+  question: '12. --Do you know _ the Storytelling Competition? \0.5em] --Next Friday. Our Chinese teacher will come to the competition, too. \0.5em]
 
 
-    A. when will we hold \5pt]
+    A. when will we hold \0.5em]
 
-    B. when we will hold \5pt]
+    B. when we will hold \0.5em]
 
-    C. when did we hold \5pt]
+    C. when did we hold \0.5em]
 
     D. when we held'
   answer: B
   solution: ''
   knowledge_points:
-  - 宾语从句的正确使用
+  - 语序不当
+  - 宾语从句
   module: 病句辨析与修改
   difficulty: 基础
   recommended_for:
@@ -297,15 +302,15 @@ questions:
   - L3
 - id: 13
   type: 单选
-  score: 2
-  question: '13. She just had to find the right _ of ingredients (配料). \\\\
+  score: 1
+  question: '13. She just had to find the right _ of ingredients (配料). \0.5em]
 
 
-    A. price \5pt]
+    A. price \0.5em]
 
-    B. place \5pt]
+    B. place \0.5em]
 
-    C. balance \5pt]
+    C. balance \0.5em]
 
     D. condition'
   answer: C
@@ -321,15 +326,15 @@ questions:
   - L3
 - id: 14
   type: 单选
-  score: 2
-  question: '14. She said _ , throwing her hands up, and she accidentally knocked over a plate of tiny seedlings. \\\\
+  score: 1
+  question: '14. ''No!'' she said _, throwing her hands up, and she accidentally knocked over a plate of tiny seedlings. \0.5em]
 
 
-    A. softly \5pt]
+    A. softly \0.5em]
 
-    B. peacefully \5pt]
+    B. peacefully \0.5em]
 
-    C. clearly \5pt]
+    C. clearly \0.5em]
 
     D. angrily'
   answer: D
@@ -345,15 +350,15 @@ questions:
   - L3
 - id: 15
   type: 单选
-  score: 2
-  question: '15. The more upset she became, the more _ she made. \\\\
+  score: 1
+  question: '15. The more upset she became, the more _ she made. \0.5em]
 
 
-    A. mistakes \5pt]
+    A. mistakes \0.5em]
 
-    B. progress \5pt]
+    B. progress \0.5em]
 
-    C. preparations \5pt]
+    C. preparations \0.5em]
 
     D. decisions'
   answer: A
@@ -369,15 +374,15 @@ questions:
   - L3
 - id: 16
   type: 单选
-  score: 2
-  question: '16. Just _ down, Elara. Do it slowly and do it right... That''s actually the fastest way. \\\\
+  score: 1
+  question: '16. Just _ down, Elara. Do it slowly and do it right... That''s actually the fastest way. \0.5em]
 
 
-    A. feel \5pt]
+    A. feel \0.5em]
 
-    B. calm \5pt]
+    B. calm \0.5em]
 
-    C. get \5pt]
+    C. get \0.5em]
 
     D. come'
   answer: B
@@ -393,15 +398,15 @@ questions:
   - L3
 - id: 17
   type: 单选
-  score: 2
-  question: '17. She had made things so much harder by _ control of her emotions (情绪). \\\\
+  score: 1
+  question: '17. She had made things so much harder by _ control of her emotions (情绪). \0.5em]
 
 
-    A. taking \5pt]
+    A. taking \0.5em]
 
-    B. keeping \5pt]
+    B. keeping \0.5em]
 
-    C. losing \5pt]
+    C. losing \0.5em]
 
     D. exercising'
   answer: C
@@ -417,15 +422,15 @@ questions:
   - L3
 - id: 18
   type: 单选
-  score: 2
-  question: '18. She cleaned up the broken glass and spilled soil, then _ reorganized her workspace. \\\\
+  score: 1
+  question: '18. She cleaned up the broken glass and spilled soil, then _ reorganized her workspace. \0.5em]
 
 
-    A. quickly \5pt]
+    A. quickly \0.5em]
 
-    B. angrily \5pt]
+    B. angrily \0.5em]
 
-    C. bravely \5pt]
+    C. bravely \0.5em]
 
     D. carefully'
   answer: D
@@ -441,15 +446,15 @@ questions:
   - L3
 - id: 19
   type: 单选
-  score: 2
-  question: '19. A wave of disappointment _ over her, but she didn''t throw anything. \\\\
+  score: 1
+  question: '19. A wave of disappointment _ over her, but she didn''t throw anything. \0.5em]
 
 
-    A. got \5pt]
+    A. got \0.5em]
 
-    B. watched \5pt]
+    B. watched \0.5em]
 
-    C. washed \5pt]
+    C. washed \0.5em]
 
     D. looked'
   answer: C
@@ -465,15 +470,15 @@ questions:
   - L3
 - id: 20
   type: 单选
-  score: 2
-  question: '20. She took breaks and reminded herself to be _. \\\\
+  score: 1
+  question: '20. She took breaks and reminded herself to be _. \0.5em]
 
 
-    A. fast \5pt]
+    A. fast \0.5em]
 
-    B. patient \5pt]
+    B. patient \0.5em]
 
-    C. gentle \5pt]
+    C. gentle \0.5em]
 
     D. polite'
   answer: B
@@ -488,9 +493,9 @@ questions:
   - L2
   - L3
 - id: 21
-  type: reading_comprehension
+  type: 多选
   score: 2
-  question: 21. Xiaoaya \\\\ During the Spring Festival, we always put up Spring Festival couplets on the door. Then my family members make dumplings together and enjoy the big dinner at home. I usually
+  question: 21. Xiaoaya \0.5em] During the Spring Festival, we always put up Spring Festival couplets on the door. Then my family members make dumplings together and enjoy the big dinner at home. I usually
     receive red packets from my parents and grandparents as gifts. That's the happiest time for me.
   answer: B
   solution: ''
@@ -504,9 +509,9 @@ questions:
   - L2
   - L3
 - id: 22
-  type: reading_comprehension
+  type: 多选
   score: 2
-  question: 22. Zhang Hua \\\\ The Dragon Boat Festival is a traditional Chinese holiday with a long history. We often hold exciting dragon boat races on the river. People always cheer for their favourite
+  question: 22. Zhang Hua \0.5em] The Dragon Boat Festival is a traditional Chinese holiday with a long history. We often hold exciting dragon boat races on the river. People always cheer for their favourite
     teams on the bank. We also eat Zongzi and tell the Story of Qu Yuan. It's a day full of fun and cultural charm.
   answer: C
   solution: ''
@@ -520,9 +525,9 @@ questions:
   - L2
   - L3
 - id: 23
-  type: reading_comprehension
+  type: 多选
   score: 2
-  question: 23. Meimei \\\\ In the celebration, I often read poems about the Mid-Autumn Festival. And then, I enjoy moon cakes of different tastes with my family. At night, I go outdoors with my family
+  question: 23. Meimei \0.5em] In the celebration, I often read poems about the Mid-Autumn Festival. And then, I enjoy moon cakes of different tastes with my family. At night, I go outdoors with my family
     members to watch the full moon and tell the Story of Chang'e.
   answer: A
   solution: ''
@@ -538,14 +543,14 @@ questions:
 - id: 24
   type: 单选
   score: 2
-  question: '24. What was Madison doing when Mrs. Landon called her name? \\\\
+  question: '24. What was Madison doing when Mrs. Landon called her name? \0.5em]
 
 
-    A. She was doing her math exercises. \5pt]
+    A. She was doing her math exercises. \0.5em]
 
-    B. She was lost in her daydream. \5pt]
+    B. She was lost in her daydream. \0.5em]
 
-    C. She was running after a bird. \5pt]
+    C. She was running after a bird. \0.5em]
 
     D. She was riding her horse on the farm.'
   answer: B
@@ -562,14 +567,14 @@ questions:
 - id: 25
   type: 单选
   score: 2
-  question: '25. Why did Madison’s parents feel surprised when she got home that afternoon? \\\\
+  question: '25. Why did Madison’s parents feel surprised when she got home that afternoon? \0.5em]
 
 
-    A. Because Madison studied math before riding her horse. \5pt]
+    A. Because Madison studied math before riding her horse. \0.5em]
 
-    B. Because Madison talked to her parents about her dream. \5pt]
+    B. Because Madison talked to her parents about her dream. \0.5em]
 
-    C. Because Madison made a plan to improve her riding skills. \5pt]
+    C. Because Madison made a plan to improve her riding skills. \0.5em]
 
     D. Because Madison asked Dr. Landon to help her with math.'
   answer: A
@@ -585,37 +590,38 @@ questions:
 - id: 26
   type: 单选
   score: 2
-  question: '26. What made Madison begin her new plan? \\\\
+  question: '26. What made Madison begin her new plan? \0.5em]
 
 
-    A. Her father talked about college last week. \5pt]
+    A. Her father talked about college last week. \0.5em]
 
-    B. Her teacher’s warning to call her parents. \5pt]
+    B. Her teacher’s warning to call her parents. \0.5em]
 
-    C. Her dream of being an animal doctor. \5pt]
+    C. Her dream of being an animal doctor. \0.5em]
 
     D. Her wish to improve her horse-riding performance.'
   answer: C
   solution: ''
   knowledge_points:
-  - 语句的连贯（上下文衔接）
-  module: 语句衔接与排序
-  difficulty: 中等
+  - 词语的理解与辨析（近义词辨析）
+  module: 词语运用
+  difficulty: 基础
   recommended_for:
+  - L0
   - L1
   - L2
   - L3
 - id: 27
   type: 单选
   score: 2
-  question: '27. In the flipped class, students can _. \\\\
+  question: '27. In the flipped class, students can _. \0.5em]
 
 
-    A. learn the lectures in the classroom and practice at home \5pt]
+    A. learn the lectures in the classroom and practice at home \0.5em]
 
-    B. learn math concepts from their teachers at the same pace \5pt]
+    B. learn math concepts from their teachers at the same pace \0.5em]
 
-    C. have the same learning styles as they do in traditional classes \5pt]
+    C. have the same learning styles as they do in traditional classes \0.5em]
 
     D. take part in the class discussion more actively'
   answer: D
@@ -631,14 +637,14 @@ questions:
 - id: 28
   type: 单选
   score: 2
-  question: '28. What can we learn from the passage? \\\\
+  question: '28. What can we learn from the passage? \0.5em]
 
 
-    A. Slouching in math class makes it easier to do mental math. \5pt]
+    A. Slouching in math class makes it easier to do mental math. \0.5em]
 
-    B. Sitting straight can increase the focused thinking in math class. \5pt]
+    B. Sitting straight can increase the focused thinking in math class. \0.5em]
 
-    C. Making gestures helped students choose the game of ''The Hidden Village''. \5pt]
+    C. Making gestures helped students choose the game of ''The Hidden Village''. \0.5em]
 
     D. Body movements can be improved by playing video games.'
   answer: B
@@ -654,14 +660,14 @@ questions:
 - id: 29
   type: 单选
   score: 2
-  question: '29. What can probably be the best title? \\\\
+  question: '29. What can probably be the best title? \0.5em]
 
 
-    A. Math teachers help students get new learning skills. \5pt]
+    A. Math teachers help students get new learning skills. \0.5em]
 
-    B. Traditional games improve students’ math performance. \5pt]
+    B. Traditional games improve students’ math performance. \0.5em]
 
-    C. Technology is opening new doors for science. \5pt]
+    C. Technology is opening new doors for science. \0.5em]
 
     D. Science is helping kids become math masters.'
   answer: D
@@ -677,14 +683,14 @@ questions:
 - id: 30
   type: 单选
   score: 2
-  question: '30. According to the passage, which is a good way to face failures? \\\\
+  question: '30. According to the passage, which is a good way to face failures? \0.5em]
 
 
-    A. Avoiding taking any risks to prevent mistakes. \5pt]
+    A. Avoiding taking any risks to prevent mistakes. \0.5em]
 
-    B. Viewing failures as barriers when things go wrong. \5pt]
+    B. Viewing failures as barriers when things go wrong. \0.5em]
 
-    C. Analyzing what caused the failures to avoid repeating them. \5pt]
+    C. Analyzing what caused the failures to avoid repeating them. \0.5em]
 
     D. Staying in the comfort zones to stop moving forward.'
   answer: C
@@ -700,20 +706,21 @@ questions:
 - id: 31
   type: 单选
   score: 2
-  question: '31. What are Paragraphs 3-4 mainly talking about? \\\\
+  question: '31. What are Paragraphs 3-4 mainly talking about? \0.5em]
 
 
-    A. New findings in building resilience. \5pt]
+    A. New findings in building resilience. \0.5em]
 
-    B. The rules for finding new paths to success. \5pt]
+    B. The rules for finding new paths to success. \0.5em]
 
-    C. The best solutions to life''s problems. \5pt]
+    C. The best solutions to life''s problems. \0.5em]
 
     D. The role of failure in personal growth.'
   answer: D
   solution: ''
   knowledge_points:
   - 语段的逻辑顺序排列
+  - 语句的连贯（上下文衔接）
   module: 语句衔接与排序
   difficulty: 中等
   recommended_for:
@@ -723,14 +730,14 @@ questions:
 - id: 32
   type: 单选
   score: 2
-  question: '32. What does the word “conquering” in Paragraph 5 most probably mean? \\\\
+  question: '32. What does the word ''conquering'' in Paragraph 5 most probably mean? \0.5em]
 
 
-    A. Getting through. \5pt]
+    A. Getting through. \0.5em]
 
-    B. Staying away from. \5pt]
+    B. Staying away from. \0.5em]
 
-    C. Finding out. \5pt]
+    C. Finding out. \0.5em]
 
     D. Giving up.'
   answer: A
@@ -747,14 +754,14 @@ questions:
 - id: 33
   type: 单选
   score: 2
-  question: '33. What does the writer want to tell us? \\\\
+  question: '33. What does the writer want to tell us? \0.5em]
 
 
-    A. People should avoid failures in order to achieve success. \5pt]
+    A. People should avoid failures in order to achieve success. \0.5em]
 
-    B. People should turn failures into growth opportunities. \5pt]
+    B. People should turn failures into growth opportunities. \0.5em]
 
-    C. People should accept failures to take more risks. \5pt]
+    C. People should accept failures to take more risks. \0.5em]
 
     D. People should be in a safe place to avoid making mistakes.'
   answer: B
@@ -770,7 +777,7 @@ questions:
 - id: 34
   type: 填空
   score: 2
-  question: 34. What is always important before quizzes, exams, or projects?
+  question: 34. What is always important before quizzes, exams, or projects? \0.5em] Preparing well is always important.
   answer: Preparing well is always important.
   solution: ''
   knowledge_points:
@@ -785,7 +792,7 @@ questions:
 - id: 35
   type: 填空
   score: 2
-  question: 35. What are the biggest advantages when you study alone?
+  question: 35. What are the biggest advantages when you study alone? \0.5em] The biggest advantages are fewer distractions, setting your own pace and better focus.
   answer: The biggest advantages are fewer distractions, setting your own pace and better focus.
   solution: ''
   knowledge_points:
@@ -800,7 +807,7 @@ questions:
 - id: 36
   type: 填空
   score: 2
-  question: 36. Why can people learn more from their friends in group study?
+  question: 36. Why can people learn more from their friends in group study? \0.5em] Because everyone brings different knowledge to the group.
   answer: Because everyone brings different knowledge to the group.
   solution: ''
   knowledge_points:
@@ -814,8 +821,9 @@ questions:
   - L3
 - id: 37
   type: 解答
-  score: 2
-  question: 37. Do you want to study alone or study in groups? Why? (Give two reasons.)
+  score: 4
+  question: 37. Do you want to study alone or study in groups? Why? (Give two reasons.) \0.5em] I want to study in groups. Because group study helps me remember things better and my friends can keep me
+    motivated.
   answer: I want to study in groups. Because group study helps me remember things better and my friends can keep me motivated.
   solution: I want to study in groups. Because group study helps me remember things better and my friends can keep me motivated.
   knowledge_points:
@@ -825,40 +833,5 @@ questions:
   recommended_for:
   - L0
   - L1
-  - L2
-  - L3
-- id: 38
-  type: 解答
-  score: 2
-  question: 38. 请根据所给的中文和英文提示，完成一篇不少于 50 词的英语文段写作。文中已给出的内容不计入总词数。所给提示词语仅供选用。请不要写出真实的校名、姓名和地名。\\\\假设你是李华，你校将开展“环保生活有我参与”的活动，鼓励学生积极践行绿色环保生活。请你用英语写一封倡议书，向国际部的同学们介绍环保行为的重要性和你是如何践行环保理念的。
-  answer: Dear students,\nI am writing to call on all of you to join in Green Lifestyles. Green living is important because it helps protect our environment and makes our planet healthier. We can all take
-    action. For example, I always turn off lights when leaving a room to save energy. Also, I ride my bike to school to reduce air pollution. Let's work together to live a green life!\nYours,\nLi Hua
-  solution: Dear students,\nI am writing to call on all of you to join in Green Lifestyles. Green living is important because it helps protect our environment and makes our planet healthier. We can all
-    take action. For example, I always turn off lights when leaving a room to save energy. Also, I ride my bike to school to reduce air pollution. Let's work together to live a green life!\nYours,\nLi Hua
-  knowledge_points:
-  - 词语的理解与辨析（近义词辨析）
-  - 语句的连贯（上下文衔接）
-  - 文体常识（记叙文/说明文/议论文/诗歌/小说/散文/戏剧）
-  module: 写作
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
-- id: 39
-  type: 解答
-  score: 2
-  question: 39. 请根据所给的中文和英文提示，完成一篇不少于 50 词的英语文段写作。文中已给出的内容不计入总词数。所给提示词语仅供选用。请不要写出真实的校名、姓名和地名。\\\\生活中处处有挑战，只有勇敢面对，才能发现潜力，超越自我。\\\\假设你是李华，你校英语社团公众号打算做一期以“My Discovery”为主题的推送。请用英语向同学们介绍你一个自我发现、自我超越的经历以及你在此过程中的感受和收获。
-  answer: I used to be not good at public speaking. Last month, I joined a school speech contest. Though nervous, I practiced hard every day. Finally, I gave a clear speech and won second prize. This experience
-    helped me find my hidden courage. I learned that practice builds confidence. Now I believe challenges help us grow. Facing difficulties bravely can lead to wonderful discoveries about ourselves.
-  solution: I used to be not good at public speaking. Last month, I joined a school speech contest. Though nervous, I practiced hard every day. Finally, I gave a clear speech and won second prize. This
-    experience helped me find my hidden courage. I learned that practice builds confidence. Now I believe challenges help us grow. Facing difficulties bravely can lead to wonderful discoveries about ourselves.
-  knowledge_points:
-  - 词语的理解与辨析（近义词辨析）
-  - 语句的连贯（上下文衔接）
-  - 写作
-  module: 写作
-  difficulty: 能力
-  recommended_for:
   - L2
   - L3

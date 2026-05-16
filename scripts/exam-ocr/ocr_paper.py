@@ -85,9 +85,20 @@ OCR_SYS_PROMPT = (
 )
 
 
+def _is_garbage_ocr(text: str) -> bool:
+    """检测 Qwen-VL-OCR 退化为目标检测（吐 pos_list / rotate_rect JSON）的失败模式。"""
+    if not text or len(text.strip()) < 30:
+        return True
+    sample = text[:500]
+    bad_markers = ("pos_list", "rotate_rect", '"polygons"', '"detection_result"')
+    return any(m in sample for m in bad_markers)
+
+
 def ocr_page(client, image_path: Path, retries: int = 3) -> str:
+    """单页 OCR；若 qwen-vl-ocr-latest 退化（吐坐标 JSON），fallback 到 qwen-vl-max。"""
     data_url = _img_to_data_url(image_path)
     last_err = None
+    # 先用 qwen-vl-ocr-latest（专 OCR 模型，质量高但偶尔退化）
     for i in range(retries):
         try:
             resp = client.chat.completions.create(
@@ -101,12 +112,40 @@ def ocr_page(client, image_path: Path, retries: int = 3) -> str:
                 }],
                 temperature=0.0,
             )
-            return resp.choices[0].message.content.strip()
+            text = resp.choices[0].message.content.strip()
+            if not _is_garbage_ocr(text):
+                return text
+            print(f"    ⚠️ qwen-vl-ocr 退化（坐标 JSON），fallback qwen-vl-max", file=sys.stderr)
+            break
         except Exception as e:
             last_err = e
             print(f"    ⚠️ retry {i+1}/{retries}: {e}", file=sys.stderr)
             time.sleep(2 * (i + 1))
-    raise RuntimeError(f"OCR failed after {retries} tries: {image_path}: {last_err}")
+
+    # fallback：qwen-vl-max（通用多模态，不会输出 detection 模式）
+    for i in range(retries):
+        try:
+            resp = client.chat.completions.create(
+                model="qwen-vl-max",
+                messages=[{
+                    "role": "user",
+                    "content": [
+                        {"type": "image_url", "image_url": {"url": data_url}},
+                        {"type": "text", "text": OCR_SYS_PROMPT},
+                    ],
+                }],
+                temperature=0.0,
+            )
+            text = resp.choices[0].message.content.strip()
+            if not _is_garbage_ocr(text):
+                return text
+            print(f"    ⚠️ qwen-vl-max 也退化，{i+1}/{retries}", file=sys.stderr)
+        except Exception as e:
+            last_err = e
+            print(f"    ⚠️ vl-max retry {i+1}/{retries}: {e}", file=sys.stderr)
+            time.sleep(2 * (i + 1))
+
+    raise RuntimeError(f"OCR failed (both vl-ocr 和 vl-max 退化): {image_path}: {last_err}")
 
 
 # ============== step 2: structure via qwen-max ==============

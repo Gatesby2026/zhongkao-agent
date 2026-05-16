@@ -259,7 +259,7 @@ def enrich_to_mock_exam(
     cache_prefix: str = "enrich",
 ) -> dict:
     """主转换：paper + answer-key → mock-exam dict。"""
-    answers_by_id = {a["id"]: a for a in answer_key.get("answers", [])}
+    answers_by_id = {a["id"]: a for a in answer_key.get("answers", []) if isinstance(a, dict) and "id" in a}
     modules = SUBJECT_MODULES.get(subject, [])
     curriculum = load_curriculum(subject if subject in ("math","chinese","english","physics","politics") else {"物理":"physics","数学":"math","语文":"chinese","英语":"english","道法":"politics"}.get(subject, subject))
 

@@ -10,8 +10,8 @@ exam_type: 一模
 subject: 物理
 full_score: 70
 duration_minutes: 70
-total_questions: 15
-structure: 12单选(24分) + 3多选(6分)
+total_questions: 26
+structure: 12单选(24分) + 3多选(6分) + 8实验探究(28分) + 1解答(4分) + 2计算(8分)
 questions:
 - id: 1
   type: 单选
@@ -29,7 +29,7 @@ questions:
   answer: B
   solution: ''
   knowledge_points:
-  - 导体与绝缘体的辨别
+  - 导体和绝缘体的辨别
   module: electricity
   difficulty: 基础
   recommended_for:
@@ -78,7 +78,7 @@ questions:
   answer: A
   solution: ''
   knowledge_points:
-  - 蒸发的快慢与液体温度、表面积和表面空气流动速度的关系
+  - 蒸发的影响因素
   module: soundLightHeat
   difficulty: 基础
   recommended_for:
@@ -102,7 +102,7 @@ questions:
   answer: A
   solution: ''
   knowledge_points:
-  - 摩擦力的减小方法
+  - 摩擦力的产生与影响因素
   module: mechanics
   difficulty: 基础
   recommended_for:
@@ -153,7 +153,7 @@ questions:
   solution: ''
   knowledge_points:
   - 电动机的工作原理
-  - 电流的磁场
+  - 电流的磁场效应
   - 电阻与电流的关系
   - 电功的概念
   module: electricity
@@ -179,7 +179,7 @@ questions:
   answer: C
   solution: ''
   knowledge_points:
-  - 透镜及其成像
+  - 凸透镜和凹透镜的辨别
   - 近视眼和远视眼的成因与矫正
   module: soundLightHeat
   difficulty: 基础
@@ -204,7 +204,7 @@ questions:
   answer: D
   solution: ''
   knowledge_points:
-  - 电路的连接方式
+  - 串联电路分压
   - 欧姆定律
   module: electricity
   difficulty: 中等
@@ -277,7 +277,7 @@ questions:
   solution: ''
   knowledge_points:
   - 压强的概念
-  - 固体压强的计算
+  - 压强的计算
   module: mechanics
   difficulty: 中等
   recommended_for:
@@ -325,7 +325,7 @@ questions:
   solution: ''
   knowledge_points:
   - 凝华现象
-  - 物态变化（汽化、液化）
+  - 物态变化
   - 比热容
   module: soundLightHeat
   difficulty: 基础
@@ -376,7 +376,269 @@ questions:
   solution: ''
   knowledge_points:
   - 浮力
-  - 液体压强
+  - 压强
+  module: mechanics
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 16
+  type: 实验探究
+  score: 3
+  question: 16. （1）如图 13 所示，温度计的示数为 ________ ℃。 \\(2) 如图丙所示，某同学用滴管向一个装有水的烧杯中滴入一滴红墨水，一段时间后，可以看到：________，这属于扩散现象。
+  answer: '(1) 24
+
+    (2) 红墨水与烧杯内的水逐渐混合，颜色变得均匀'
+  solution: '(1) 24
+
+    (2) 红墨水与烧杯内的水逐渐混合，颜色变得均匀'
+  knowledge_points:
+  - 温度与温度计
+  - 扩散现象
+  module: experiments
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 17
+  type: 实验探究
+  score: 3
+  question: 17. 小华为了测量盐水的密度，进行了如下实验： \\(1) 天平放在水平台面上，将游码移到标尺的零刻线处。横梁静止时，指针指在分度盘中央刻度线的左侧，如图甲所示。为使横梁在水平位置平衡，应将横梁右端的平衡螺母向 ________ 端移动。 \\(2) 将盛有适量盐水的杯子放在调节好的天平左盘内，测出杯子和盐水的总质量为 128g。然后将杯中盐水的一部分倒入量筒中，如图乙所示，则量筒中盐水的体积为
+    ________ cm³。 \\(3) 再将盛有剩余盐水的杯子放在天平左盘内，改变砝码的个数和游码的位置，使天平横梁再次在水平位置平衡，此时右盘中砝码质量和游码在标尺上的位置如图丙所示，则杯子及杯内剩余盐水的总质量为 ________ g。 \\(4) 根据上述实验数据计算盐水的密度为 ________ kg/m³。
+  answer: '(1) 右
+
+    (2) 60
+
+    (3) 62
+
+    (4) $1.1 \times 10^3$'
+  solution: '(1) 右
+
+    (2) 60
+
+    (3) 62
+
+    (4) $1.1 \times 10^3$'
+  knowledge_points:
+  - 密度的测量
+  - 天平的使用
+  - 量筒的使用
+  module: experiments
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 18
+  type: 实验探究
+  score: 4
+  question: 18. 小华想探究电流通过导体产生的热量与电流、电阻、通电时间是否有关。他连接了如图所示的电路进行实验，其中两个完全相同的烧瓶内分别装有质量和初温都相同的煤油，以及阻值为 $R_1$ 和 $R_2$ 的电阻丝（$R_1 < R_2$）。 \\(1) 该实验探究的问题是电流通过导体产生的热量与 ________ 是否有关。 \\(2) 该实验中，电流通过导体产生热量的多少用 ________
+    来反映。
+  answer: '(1) 电阻
+
+    (2) 温度计示数的变化量'
+  solution: '(1) 电阻
+
+    (2) 温度计示数的变化量'
+  knowledge_points:
+  - 焦耳定律
+  - 实验探究方法
+  module: electricity
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 19
+  type: 实验探究
+  score: 3
+  question: 19. 小华为探究水沸腾前后温度随加热时间变化的特点。当水温为 89℃时，每隔一分钟记录一次水的温度，水沸腾后持续加热一段时间，实验数据如下表。 \| 加热时间/min | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | \\|---------------|---|---|---|---|---|---|---|---|---|---|---|
+    \\| 水温/℃ | 89 | 91 | 93 | 95 | 97 | 99 | 99 | 99 | 99 | 99 | 99 | \\(1) 小华应通过观察 _ 判断水是否沸腾。 \\(2) 请你根据表中的数据归纳出实验结论：水在沸腾前， _ ；水在沸腾过程中， _ 。
+  answer: '(1) 是否有大量气泡冒出水面
+
+    (2) 加热时间增加，温度升高
+
+    (3) 加热时间增加，温度不变'
+  solution: '(1) 是否有大量气泡冒出水面
+
+    (2) 加热时间增加，温度升高
+
+    (3) 加热时间增加，温度不变'
+  knowledge_points:
+  - 水的沸腾现象
+  - 温度与加热时间的关系
+  module: soundLightHeat
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 20
+  type: 实验探究
+  score: 4
+  question: 20. 小华用如图所示的装置探究“通电螺线管外部磁场的分布”。 \\(1) 在硬纸板上均匀地撒满铁屑，轻敲纸板，观察铁屑的排列情况，如图甲所示；把小磁针放到螺线管四周不同的位置，闭合开关后，小磁针再次静止时的指向如图乙所示。 \\①通电螺线管外部的磁场与 _ 磁体的磁场相似； \\②乙图放置小磁针的目的是显示小磁针所在处的 _ ； \\③由乙图可知，a端接的是电源的 _ 极。
+    \\(2) 将电源正负极对调，闭合开关，发现小磁针偏转方向与原来相反，说明通电螺线管的磁场方向与 _ 有关。
+  answer: '(1) ①条形
+
+    (2) 磁场方向
+
+    (3) 正
+
+    (4) 电流方向'
+  solution: '(1) ①条形
+
+    (2) 磁场方向
+
+    (3) 正
+
+    (4) 电流方向'
+  knowledge_points:
+  - 通电螺线管的磁场
+  - 磁场方向的判断
+  - 电流方向与磁场方向的关系
+  module: electricity
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 21
+  type: 实验探究
+  score: 4
+  question: 21. 小华整理器材时发现一只铭牌模糊的滑动变阻器，他在不使用电压表的情况下，测出了该滑动变阻器的最大电阻值 $R_0$。电路设计如图所示，电源电压未知且恒定不变，$R_0$ 为已知阻值的定值电阻。请把以下测量步骤补充完整： \\①闭合开关 S，当滑片 P 处于最左端时，电流表示数为 $I_1$； \\②闭合开关 S，当 _ 时，电流表示数为 $I_2$； \\③则滑动变阻器的最大阻值
+    $R_0$ 为 _ （用 $R_0$、$I_1$、$I_2$ 表示）。
+  answer: '(1) 滑片 P 处于最右端
+
+    (2) $\frac{(I_1 - I_2)R_0}{I_2}$'
+  solution: '(1) 滑片 P 处于最右端
+
+    (2) $\frac{(I_1 - I_2)R_0}{I_2}$'
+  knowledge_points:
+  - 滑动变阻器的使用
+  - 欧姆定律的应用
+  module: electricity
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 22
+  type: 实验探究
+  score: 4
+  question: 22. 小华利用如图甲所示的装置（透明玻璃板为平面镜）、刻度尺和如图乙所示的两支规格相同且可以改变高度的电子蜡烛 A、B，探究平面镜所成像的高度与物体的高度是否相等。 \\(1) 蜡烛 A 的高度 \\(2) A 高度 \\(3) 蜡烛 A 的高度 \\(4) 物体的高度/cm \\像的高度/cm
+  answer: '(1) 蜡烛 A 的高度
+
+    (2) A 高度
+
+    (3) 蜡烛 A 的高度
+
+    (4) 物体的高度/cm
+
+    像的高度/cm'
+  solution: '(1) 蜡烛 A 的高度
+
+    (2) A 高度
+
+    (3) 蜡烛 A 的高度
+
+    (4) 物体的高度/cm
+
+    像的高度/cm'
+  knowledge_points:
+  - 平面镜成像特点（等大、等距、虚像、左右相反）
+  module: experiments
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 23
+  type: 实验探究
+  score: 3
+  question: 23. 根据二力平衡和阿基米德原理可知 \\F_{浮1} = G = \rho_1 gsh_1 \\h_1 = \frac{G}{\rho_1 g s} \\同理 h_2 = \frac{G}{\rho_2 g s} = \frac{G}{\rho_3 g s} \\Δ h_{23} = h_{2} - h_{3} = \frac{G}{\rho_{2}gs} - \frac{G}{\rho_{3}gs}
+    = \frac{G}{gs} \left( \frac{1}{\rho_{2}} - \frac{1}{\rho_{3}} \right) = \frac{G}{gs} \left( \frac{\rho_{3} - \rho_{2}}{\rho_{2}\rho_{3}} \right) \\Δ h_{12} = h_{1} - h_{2} = \frac{G}{\rho_{1}gs} - \frac{G}{\rho_{2}gs}
+    = \frac{G}{gs} \left( \frac{1}{\rho_{1}} - \frac{1}{\rho_{2}} \right) = \frac{G}{gs} \left( \frac{\rho_{2} - \rho_{1}}{\rho_{1}\rho_{2}} \right) \\因为 \rho_{3} - \rho_{2} = \rho_{2} - \rho_{1} 由图象可知
+    \rho_{3} > \rho_{1} \\所以 \rho_{2}\rho_{3} > \rho_{1}\rho_{2} \\所以 Δ h_{23} < Δ h_{12}
+  answer: '根据二力平衡和阿基米德原理可知
+
+    [F_{浮} = G = \rho_{液} gsh_1
+
+    h_1 = \frac{G}{\rho_{液}g s}
+
+    同理
+
+    h_2 = \frac{G}{\rho_{物}gs} = \frac{G}{\rho_{液} gs}'
+  solution: '根据二力平衡和阿基米德原理可知
+
+    [F_{浮} = G = \rho_{液} gsh_1
+
+    h_1 = \frac{G}{\rho_{液}g s}
+
+    同理
+
+    h_2 = \frac{G}{\rho_{物}gs} = \frac{G}{\rho_{液} gs}'
+  knowledge_points:
+  - 阿基米德原理
+  - 二力平衡
+  module: mechanics
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 24
+  type: 解答
+  score: 4
+  question: '24. 请根据上述材料，回答下列问题 \\(1) 人形机器人能实现360°环境感知是因为_。 \\(2) 人形机器人H2与成年人的体重相近，请你估测它的体重约是_。
+
+
+    A. 700N
+
+    B. 350N
+
+    C. 1400N \\(3) G1机器人完成720°回旋踢时，腿部关节扭矩达到$120\text{N}\cdot\text{m}$。若力臂为0.25m，则腿部施加的力约为_ N。'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 力的概念
+  - 重力的计算
+  - 力矩的计算
+  module: mechanics
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 25
+  type: 计算
+  score: 4
+  question: 25. 如所示的电路中，定值电阻$R_0$为$10\Omega$，电源两端电压为3V并保持不变。闭合开关S，调节滑动变阻器RP，使电压表示数为2V。 \\(1) 画出实物电路所对应的电路图； \\(2) 求$R_0$接入电路的阻值； \\(3) 求电路中最大的电功率。
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 串联电路分压
+  - 欧姆定律
+  - 电功率计算
+  module: electricity
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 26
+  type: 计算
+  score: 4
+  question: 26. 如图甲是一篮球架，由篮板、支架、底座等部分组成。图乙是其结构大致简图，其中$Q_1$是篮板和横梁支架组合体的重心，$Q_2$是底座的重心（也是中心），$AB$间的水平距离为140cm，底座$BC$长度为200cm，底座四脚与水平地面的总接触面积为$300\text{cm}^2$，整个篮球架的质量约为150kg求：(g取10N/kg) \\(1) 篮球架对水平地面的压强。
+    \\(2) 若篮板和横梁支架的总质量为45kg，为保证篮球架不会向左倾斜，底座的重力至少为多少N？
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 压强的计算
+  - 力的平衡条件
   module: mechanics
   difficulty: 中等
   recommended_for:

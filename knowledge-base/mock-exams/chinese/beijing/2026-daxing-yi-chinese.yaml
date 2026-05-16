@@ -10,8 +10,8 @@ exam_type: 一模
 subject: 语文
 full_score: 100
 duration_minutes: 150
-total_questions: 11
-structure: 6单选(15分) + 4填空(8分) + 1解答(2分)
+total_questions: 26
+structure: 9单选(21分) + 4填空(8分) + 13解答(29分)
 questions:
 - id: 1
   type: 单选
@@ -60,8 +60,112 @@ questions:
   - L1
   - L2
   - L3
-- id: 11
+- id: 4
+  type: 单选
+  score: 2
+  question: 4. 你在文段中的横线处填入一组词语。下列恰当的一项是（2分）\nA. 自主性　稳定性　准确性 \nB. 稳定性　自主性　准确性 \nC. 自主性　准确性　稳定性 \nD. 稳定性　准确性　自主性
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 词语的理解与辨析（近义词辨析）
+  module: 词语运用
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 5
+  type: 单选
+  score: 2
+  question: 5. 你检查了文段中四字词语的使用情况。下列词语使用正确的一项是（2分）\nA. 天伦之乐 \nB. 具体而微 \nC. 各司其职 \nD. 入木三分
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 成语的正确使用
+  module: 词语运用
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 6
+  type: 解答
+  score: 2
+  question: 6. 文段中的画线句存在两处问题，请你修改。（2分）
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 语序不当
+  - 搭配不当（主谓/动宾/主宾/修饰语）
+  module: 病句辨析与修改
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 7
+  type: 解答
+  score: 2
+  question: 7. 根据语境，你在文段中的横线处补写一个分句。（2分）
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 语句的连贯（上下文衔接）
+  module: 语句衔接与排序
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 8
   type: 填空
+  score: 2
+  question: 8. 浊酒一杯家万里，__________。（范仲淹《渔家傲·秋思》）（1分）
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 古诗文默写
+  module: 基础·积累与运用
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 9
+  type: 填空
+  score: 2
+  question: 9. 子曰：“__________，思而不学则殆。”（《论语·为政》）（1分）
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 古诗文默写
+  module: 古诗文默写
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 10
+  type: 填空
+  score: 2
+  question: 10. 诗词中，诗人常借颜色点染画面，营造意境。如“____①____，____②____”。（2分）（本试卷中出现的句子除外）
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 古诗文默写
+  module: 古诗文默写
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+- id: 11
+  type: 解答
   score: 2
   question: 11. 本词开篇以“狂”字统摄全篇。上片写外在形象之“狂”，如“\underline{①}”，写出了着装之狂；下片重内在情志之“狂”，如“持节云中，何日遣冯唐？”，借用典故，表达\textbf{②}的情志。（2分）
   answer: ''
@@ -69,7 +173,7 @@ questions:
   knowledge_points:
   - 古诗文默写
   - 文学文化常识
-  module: 古诗文默写
+  module: 古诗文阅读
   difficulty: 中等
   recommended_for:
   - L1
@@ -93,12 +197,12 @@ questions:
 - id: 13
   type: 单选
   score: 2
-  question: '13. “所识穷乏者得我与”中的“穷”与下列词语中加点的“穷”，意思相同的一项是（2分）\nA. 穷冬烈风 \\quad
+  question: '13. “所识穷乏者得我与”中的“穷”与下列词语中加点的“穷”，意思相同的一项是（2分）\nA. 穷冬烈风 \quad]
 
 
-    B. 理屈词穷 \\quad
+    B. 理屈词穷 \quad]
 
-    C. 山穷水尽 \\quad
+    C. 山穷水尽 \quad]
 
     D. 穷乡僻壤'
   answer: ''
@@ -127,16 +231,30 @@ questions:
   - L2
   - L3
 - id: 15
-  type: 填空
+  type: 解答
   score: 2
-  question: 15. 联系上面《鱼我所欲也》及下面的材料，在后面语段的横线处填写恰当的内容。（3分）\n【材料一】\n子墨子曰：“万事莫贵于义。今谓人曰：‘予\textcircled{1}子\textcircled{2}冠履\textcircled{3}，而断子之手足，子为之乎？’必不为。何故？则冠履不若手足之贵也。又曰：‘予子天下，而杀子之身，子为之乎？’必不为。何故？则天下不若身之贵也。争一言\textcircled{4}以相杀，是贵义于其身也。故曰：万事莫贵于义也。”\n（取材于《墨子・贵义》）\n【材料二】\n至潮阳，见弘范\textcircled{5}，左右命之拜，不拜，弘范遂以容礼见之，与俱入崖山，使为书招\textcircled{6}张世杰\textcircled{7}。天祥曰：“吾不能捍父母，乃教人叛父母，可乎？”索之固\textcircled{8}，乃以书《过零丁洋》诗与之。崖山破，弘范遣使护送天祥至京师。天祥在燕凡三年，上知天祥终不屈也，召入谕之曰：“汝何愿？”天祥对曰：“天祥受宋恩，为宰相，安事二姓？愿赐之一死足矣。”天祥临刑殊\textcircled{9}从容，南乡拜而死，年四十七。\n（取材于《宋史・文天祥传》）
+  question: 15. 联系上面《鱼我所欲也》及下面的材料，在后面语段的横线处填写恰当的内容。（3分）
   answer: ''
   solution: ''
   knowledge_points:
-  - 课内重要作家及其代表作品
-  - 古代重要作家（朝代、字号、代表作）
   - 古诗文默写
-  module: 文学文化常识
+  - 文学文化常识
+  module: 古诗文阅读
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 16
+  type: 解答
+  score: 2
+  question: 16. “复现”指再一次出现，重现。《骆驼祥子》中有多种复现：“骆驼”的反复出现，是意象的复现；买车失车的循环，是情节的复现；大兵、孙侦探的先后出场，是同类人物形象的复现；祥子在烈日、暴雨中拉车奔跑，是典型场景的复现；一次次对生活重燃希望，又一次次遭受打击是心理活动的复现……请从《西游记》《钢铁是怎样炼成的》《水浒传》《简·爱》任选一部，并选取一种复现，写出复现的具体内容，并分析其在刻画人物或表现主题上的作用。(100字左右)
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 文学文化常识
+  - 修辞手法
+  module: 基础·积累与运用
   difficulty: 中等
   recommended_for:
   - L1
@@ -147,7 +265,7 @@ questions:
   score: 5
   question: 17. 根据材料一的内容和表 1 的信息，在材料一横线处补写内容，不恰当的一项是（2 分）\nA. 覆盖体美劳教育、心理健康、健康防护等多维度。\nB. 理念指引与校园落地相结合，多举措系统化推进。\nC. 融合德智体美劳，多措并举，着力提升体育成绩。\nD. 家校、医教协同，校内外联动的全方位保障型。
   answer: 略
-  solution: ''
+  solution: 略
   knowledge_points:
   - 语句的连贯（上下文衔接）
   module: 语句衔接与排序
@@ -171,13 +289,116 @@ questions:
   - L2
   - L3
 - id: 19
-  type: 填空
+  type: 解答
   score: 2
   question: 19. 从上述三则材料可以看出，落实“健康第一”教育理念，应从①、②、③三方面持续发力。（3 分）
   answer: 中国国潮市场经济规模将持续扩大
+  solution: 中国国潮市场经济规模将持续扩大
+  knowledge_points:
+  - 语句的连贯（上下文衔接）
+  module: 语句衔接与排序
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 20
+  type: 解答
+  score: 3
+  question: 20. 文章叙写了程泰宁先生“逐梦建筑”的历程： 观览“闲”书，萌生为国为民英雄梦；苦练专业，坚定潜心寻美建筑梦；观看比赛， ①______；辗转实践，实现中式建筑国际梦； ②______，助力守正创新发展梦。（2分）
+  answer: ①传承传统文化 ②激发消费活力 ③传播中华文化
   solution: ''
   knowledge_points:
   - 语句的连贯（上下文衔接）
+  - 词语的理解与辨析（近义词辨析）
+  module: 语句衔接与排序
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 21
+  type: 解答
+  score: 2
+  question: 21. “自在”一词在第②段和第⑤段两次出现。请结合语境，解释它们各自的含义。（2分）
+  answer: ①受父母态度触动，远行念头有所削弱 ②恰逢家乡迎来发展时机，最终坚定了留守家乡的决心
+  solution: ①受父母态度触动，远行念头有所削弱 ②恰逢家乡迎来发展时机，最终坚定了留守家乡的决心
+  knowledge_points:
+  - 词语的理解与辨析（近义词辨析）
+  module: 词语运用
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 22
+  type: 解答
+  score: 2
+  question: 22. 文章第⑥段画波浪线的句子引用了诗词，请结合上下文，分析这样写的妙处。（3分）
+  answer: '"常常轻抚""慢慢摩挲"这两处动作描写及"反反复复"这一词语，写出了母亲动作的轻柔，表达了母亲对家人相守在一起的眷恋，以及对儿子将远行的不舍。'
+  solution: '"常常轻抚""慢慢摩挲"这两处动作描写及"反反复复"这一词语，写出了母亲动作的轻柔，表达了母亲对家人相守在一起的眷恋，以及对儿子将远行的不舍。'
+  knowledge_points:
+  - 修辞手法的理解与运用
+  - 语句的连贯（上下文衔接）
+  module: 修辞手法
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 23
+  type: 解答
+  score: 3
+  question: 23. 结合全文内容，谈谈你对第⑧段画线句的理解，并说说从中获得了怎样的启示。（3分）
+  answer: 山里的土地并不贫瘠，具备发展中药材种植的优良自然条件；只要辛勤耕耘，再加上技术支持与精心管护，就能有丰厚的收益，生活一定会越来越好，家乡也会越来越好；表达了出“我”和弟弟扎根故土的坚定决心。
+  solution: 山里的土地并不贫瘠，具备发展中药材种植的优良自然条件；只要辛勤耕耘，再加上技术支持与精心管护，就能有丰厚的收益，生活一定会越来越好，家乡也会越来越好；表达了出“我”和弟弟扎根故土的坚定决心。
+  knowledge_points:
+  - 语句的连贯（上下文衔接）
+  - 词语的理解与辨析（近义词辨析）
+  module: 现代文阅读
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 24
+  type: 解答
+  score: 3
+  question: 24. 下列词语中，对理解本文中心论点起关键作用的短语是：有说无类、 ① 、 ② 。（2分）\n备选词语：传承创新 文化经典 敬畏之心 前行力量
+  answer: 老屋与故土 家人与亲情 坚守家乡与建设家乡的信念
+  solution: ''
+  knowledge_points:
+  - 词语的理解与辨析（近义词辨析）
+  module: 词语运用
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 25
+  type: 单选
+  score: 2
+  question: 25. 阅读全文，下列说法不恰当的一项是（2分）\nA. 第①段中的“启人思考”，引出下文对网红说经典的探讨，引发读者思索。\nB. 第②段引用孔子“有教无类”的理念，意在引出本文论述的关键词之一“有说无类”。\nC. 第③段，由肯定人人可创作转向批判篡改经典，突出敬畏之心的重要性。\nD. 第⑥段中“应该”一词的使用，使表达更严谨周密，指出与“知行观”契合的必要性。
+  answer: ①②段分别列举了日常生活中人们使用汉字的情形、感慨担忧和对汉字的创新表达，在看似矛盾的现象中引出信息时代汉字命运（汉字生命力）的话题
+  solution: ①②段分别列举了日常生活中人们使用汉字的情形、感慨担忧和对汉字的创新表达，在看似矛盾的现象中引出信息时代汉字命运（汉字生命力）的话题
+  knowledge_points:
+  - 语句的连贯（上下文衔接）
+  - 词语的理解与辨析（近义词辨析）
+  module: 语句衔接与排序
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+- id: 26
+  type: 解答
+  score: 2
+  question: 26. 阅读文章，写出第④—⑧段的行文思路。（3分）
+  answer: B
+  solution: ''
+  knowledge_points:
+  - 语句的连贯（上下文衔接）
+  - 语段的逻辑顺序排列
   module: 语句衔接与排序
   difficulty: 中等
   recommended_for:
