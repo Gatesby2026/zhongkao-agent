@@ -106,7 +106,12 @@ def submit_pipeline(aid: str, student_dir: Path):
                      daemon=True).start()
 
 
-def _ensure_scores(aid: str, student_dir: Path, wait_s: int = 150):
+def _ensure_scores(aid: str, student_dir: Path, wait_s: int = 25):
+    """小分可选：
+    - 家长上传了班小二小分 → 用它（老师阅卷分，权威）
+    - 没上传 → 系统自动判分（选择题确定性 + 主观题 qwen-vl-max 看图估分）
+    短暂等待上传到位（家长可能正传）；超时则自动判分，不再失败。
+    """
     target = student_dir / "scores.json"
     uploaded = UPLOAD_ROOT / aid / "scores.json"
     waited = 0
@@ -114,13 +119,18 @@ def _ensure_scores(aid: str, student_dir: Path, wait_s: int = 150):
         if uploaded.exists():
             target.write_bytes(uploaded.read_bytes())
             return
-        if target.exists():
-            return
         time.sleep(3)
         waited += 3
-    raise RuntimeError(
-        "未收到小分表。主观题得分需班小二导出的小分 xlsx 才能分析——"
-        "请在「上传小分」步骤上传后重试。")
+
+    # 无小分 → 自动判分
+    import sys as _sys
+    _sys.path.insert(0, str(Path(__file__).resolve().parent))
+    import auto_grade, exam_match  # noqa
+    yaml_path = exam_match.kb_yaml_for_slug(student_dir.name)
+    if not yaml_path:
+        raise RuntimeError(f"找不到试卷标准答案：{student_dir.name}")
+    db.update_stage(aid, 3, "无小分，系统自动判分中")
+    auto_grade.write_auto_scores(student_dir, Path(yaml_path))
 
 
 def _pipeline(aid: str, student_dir: Path):
