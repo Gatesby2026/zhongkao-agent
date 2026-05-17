@@ -73,15 +73,10 @@ async def create_analysis(files: list[UploadFile] = File(default=[])):
             (photos / f"page-{saved:02d}{ext}").write_bytes(data)
         if saved == 0:
             raise HTTPException(400, "未收到有效答题卡图片")
-        # 考试公共数据（试卷 yaml）+ 小分暂沿用 reference（exam 自动识别/Excel 解析待定）
-        for fn in ("scores.json", "student.json"):
-            src = REF_STUDENT_DIR / fn
-            if src.exists():
-                (sdir / fn).write_bytes(src.read_bytes())
         db.create_analysis(aid, "（待识别）", REF_EXAM_SLUG, str(sdir))
         tasks.submit(aid, sdir, ocr_photos=True)
         return {"id": aid, "status": "queued",
-                "exam_slug": REF_EXAM_SLUG, "uploaded": len(files),
+                "exam_slug": REF_EXAM_SLUG, "uploaded": saved,
                 "mode": "real-ocr"}
 
     # 无上传：纯 reference 演示（Phase 1 行为）
@@ -101,9 +96,26 @@ async def upload_scores(aid: str, file: UploadFile = File(...)):
     updir = UPLOAD_ROOT / aid
     updir.mkdir(parents=True, exist_ok=True)
     ext = (Path(file.filename or "").suffix or ".xlsx").lower()
-    (updir / f"scores{ext}").write_bytes(await file.read())
-    # Phase 1：reference scores.json 已存在，此处仅留痕
-    return {"ok": True, "note": "Phase 1 使用 reference scores.json"}
+    raw = updir / f"scores_raw{ext}"
+    raw.write_bytes(await file.read())
+
+    # 班小二 xlsx → 解析为标准 scores.json，落到 aid 稳定位置
+    # （task 完成 OCR/识别/重命名后会取这份并放进学生目录）
+    import parse_scores
+    try:
+        data = parse_scores.parse_scores_xlsx(raw)
+    except Exception as e:
+        raise HTTPException(400, f"小分表解析失败：{e}")
+    out = {k: v for k, v in data.items() if not k.startswith("_")}
+    (updir / "scores.json").write_text(
+        __import__("json").dumps(out, ensure_ascii=False, indent=2),
+        encoding="utf-8")
+    return {
+        "ok": True,
+        "student_name": data.get("_student_name", ""),
+        "exam_total": out["examTotal"],
+        "n_questions": len(out["questions"]),
+    }
 
 
 # ---------- 3. 状态轮询 ----------

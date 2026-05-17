@@ -61,6 +61,16 @@ def update_stage(aid: str, stage: int, stage_name: str,
         )
 
 
+def set_exam_info(aid: str, student_name: str, exam_slug: str,
+                  student_dir: str) -> None:
+    with _conn() as c:
+        c.execute(
+            "UPDATE analyses SET student_name=?, exam_slug=?, student_dir=?, "
+            "updated_at=? WHERE id=?",
+            (student_name, exam_slug, student_dir, time.time(), aid),
+        )
+
+
 def mark_done(aid: str, report_pdf: str) -> None:
     with _conn() as c:
         c.execute(
