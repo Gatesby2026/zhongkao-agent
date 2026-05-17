@@ -18,6 +18,7 @@ CREATE TABLE IF NOT EXISTS analyses (
   stage         INTEGER DEFAULT 0,  -- 0..5
   stage_name    TEXT DEFAULT '',
   error         TEXT DEFAULT '',
+  detected      TEXT DEFAULT '',    -- card_meta 识别结果 JSON
   student_dir   TEXT,
   report_pdf    TEXT DEFAULT '',
   created_at    REAL NOT NULL,
@@ -58,6 +59,16 @@ def update_stage(aid: str, stage: int, stage_name: str,
             "UPDATE analyses SET stage=?, stage_name=?, status=?, updated_at=? "
             "WHERE id=?",
             (stage, stage_name, status, time.time(), aid),
+        )
+
+
+def set_detected(aid: str, detected_json: str, status: str,
+                  stage_name: str = "") -> None:
+    with _conn() as c:
+        c.execute(
+            "UPDATE analyses SET detected=?, status=?, stage_name=?, "
+            "updated_at=? WHERE id=?",
+            (detected_json, status, stage_name, time.time(), aid),
         )
 
 

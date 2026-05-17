@@ -25,10 +25,31 @@ async function j<T>(r: Response): Promise<T> {
 }
 
 export const api = {
-  async createAnalysis(files: File[]): Promise<{ id: string }> {
+  async createAnalysis(files: File[]): Promise<{ id: string; status: string }> {
     const fd = new FormData()
     files.forEach(f => fd.append('files', f))
     return j(await fetch('/api/analyses', { method: 'POST', body: fd }))
+  },
+  async detect(id: string): Promise<{
+    id: string; status: string; error: string;
+    detected: {
+      exam_slug?: string; exam_title?: string; district?: string;
+      subject?: string; year?: string; exam_type?: string;
+      student_name?: string; student_id?: string;
+      pages_complete?: boolean; completeness_note?: string;
+      matched?: boolean;
+    }
+  }> {
+    return j(await fetch(`/api/analyses/${id}/detect`))
+  },
+  async manualExam(id: string, examSlug: string) {
+    const fd = new FormData()
+    fd.append('exam_slug', examSlug)
+    return j(await fetch(`/api/analyses/${id}/manual-exam`,
+      { method: 'POST', body: fd }))
+  },
+  async startPipeline(id: string) {
+    return j(await fetch(`/api/analyses/${id}/start`, { method: 'POST' }))
   },
   async uploadScores(id: string, file: File) {
     const fd = new FormData()

@@ -59,14 +59,13 @@ async def create_analysis(files: list[UploadFile] = File(default=[]),
     manual_slug = exam_slug.strip()
 
     if files:
-        # Phase 2：为本次分析建独立学生目录，真实 OCR 上传的答题卡照片
         sdir = WEB_STUDENTS / aid / REF_EXAM_SLUG
         photos = sdir / "answer-card-photos"
         photos.mkdir(parents=True, exist_ok=True)
         saved = 0
         for f in files:
             data = await f.read()
-            if len(data) < 1024:        # 跳过空/损坏文件
+            if len(data) < 1024:
                 continue
             ext = (Path(f.filename or "").suffix or ".jpg").lower()
             if ext not in (".jpg", ".jpeg", ".png", ".heic"):
@@ -75,18 +74,72 @@ async def create_analysis(files: list[UploadFile] = File(default=[]),
             (photos / f"page-{saved:02d}{ext}").write_bytes(data)
         if saved == 0:
             raise HTTPException(400, "未收到有效答题卡图片")
-        db.create_analysis(aid, "（待识别）",
+        db.create_analysis(aid, "（识别中）",
                             manual_slug or REF_EXAM_SLUG, str(sdir))
-        tasks.submit(aid, sdir, ocr_photos=True, manual_slug=manual_slug)
-        return {"id": aid, "status": "queued",
-                "exam_slug": manual_slug or REF_EXAM_SLUG,
+        # 仅做检测（card_meta 读表头），不跑重流水线；前端轮询 /detect
+        tasks.submit_detect(aid, sdir, manual_slug=manual_slug)
+        return {"id": aid, "status": "detecting",
                 "uploaded": saved, "mode": "real-ocr"}
 
-    # 无上传：纯 reference 演示（Phase 1 行为）
+    # 无上传：纯 reference 演示
     db.create_analysis(aid, "贾小淇", REF_EXAM_SLUG, str(REF_STUDENT_DIR))
-    tasks.submit(aid, REF_STUDENT_DIR, ocr_photos=False)
+    tasks.submit_reference(aid, REF_STUDENT_DIR)
     return {"id": aid, "status": "queued",
             "exam_slug": REF_EXAM_SLUG, "uploaded": 0, "mode": "reference"}
+
+
+# ---------- 1b. 检测结果（答题卡页轮询）----------
+
+@app.get("/api/analyses/{aid}/detect")
+def get_detect(aid: str):
+    a = db.get_analysis(aid)
+    if not a:
+        raise HTTPException(404, "analysis not found")
+    det = {}
+    if a["detected"]:
+        try:
+            det = __import__("json").loads(a["detected"])
+        except Exception:
+            det = {}
+    return {
+        "id": aid, "status": a["status"],          # detecting|ready_confirm|need_manual|failed
+        "error": a["error"],
+        "detected": det,                            # exam_slug/district/subject/year/exam_type/student_name/pages_complete/completeness_note/matched
+    }
+
+
+# ---------- 1b'. 手动指定考试后重新识别 ----------
+
+@app.post("/api/analyses/{aid}/manual-exam")
+def manual_exam(aid: str, exam_slug: str = Form(...)):
+    a = db.get_analysis(aid)
+    if not a:
+        raise HTTPException(404, "analysis not found")
+    slug = exam_slug.strip()
+    sdir = Path(a["student_dir"])
+    # student_dir 可能尚未重命名（未匹配时保持原名）
+    if not (sdir / "answer-card-photos").exists():
+        # 兜底：原始上传目录
+        sdir = WEB_STUDENTS / aid / REF_EXAM_SLUG
+    db.set_detected(aid, "", "detecting", "按所选重新识别")
+    tasks.submit_detect(aid, sdir, manual_slug=slug)
+    return {"id": aid, "status": "detecting"}
+
+
+# ---------- 1c. 确认无误，开始分析 ----------
+
+@app.post("/api/analyses/{aid}/start")
+def start_pipeline(aid: str):
+    a = db.get_analysis(aid)
+    if not a:
+        raise HTTPException(404, "analysis not found")
+    if a["status"] not in ("ready_confirm", "need_manual", "failed"):
+        raise HTTPException(409, f"当前状态 {a['status']} 不能开始")
+    if a["status"] != "ready_confirm":
+        raise HTTPException(409, "考试未识别/未确认，无法开始分析")
+    db.update_stage(aid, 2, "识别答题卡作答", status="running")
+    tasks.submit_pipeline(aid, Path(a["student_dir"]))
+    return {"id": aid, "status": "running"}
 
 
 # ---------- 2. 上传小分表（可选）----------

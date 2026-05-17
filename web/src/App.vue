@@ -3,16 +3,31 @@ import { ref, computed, onUnmounted } from 'vue'
 import { api, type ReportResp } from './api'
 
 const step = ref(1)                       // 1 上传 2 小分 3 分析 4 报告
+// step1 子阶段：pick 选图 / detecting 识别中 / confirm 确认 / manual 手动选
+const phase = ref<'pick'|'detecting'|'confirm'|'manual'>('pick')
 const analysisId = ref<string | null>(null)
 const photos = ref<File[]>([])
 const photoUrls = ref<string[]>([])
+const detected = ref<any>(null)
 const scoresEnabled = ref(true)
 const scoreFile = ref<File | null>(null)
+const scoreInfo = ref<string>('')
 const stageIdx = ref(0)
 const stageName = ref('')
 const report = ref<ReportResp | null>(null)
 const errorMsg = ref('')
 let pollTimer: number | undefined
+
+const DISTRICTS = ['朝阳','海淀','西城','东城','丰台','石景山','顺义',
+  '门头沟','昌平','房山','通州','大兴','延庆','平谷']
+const SUBJECTS = [['物理','physics'],['数学','math'],['语文','chinese'],
+  ['英语','english'],['道德与法治','politics']]
+const DISTRICT_EN: Record<string,string> = {朝阳:'chaoyang',海淀:'haidian',
+  西城:'xicheng',东城:'dongcheng',丰台:'fengtai',石景山:'shijingshan',
+  顺义:'shunyi',门头沟:'mentougou',昌平:'changping',房山:'fangshan',
+  通州:'tongzhou',大兴:'daxing',延庆:'yanqing',平谷:'pinggu'}
+const mDistrict = ref('朝阳')
+const mSubject = ref('physics')
 
 const STAGES = [
   '识别考试信息（区/科目/年份）',
@@ -21,7 +36,6 @@ const STAGES = [
   'AI 分析失分主因',
   '生成知识点提分建议',
 ]
-const NEXT_LABEL = ['', '下一步', '开始分析', '请稍候…', '下载报告 PDF']
 
 const stepperSteps = ['答题卡', '小分', '分析']
 function stepState(n: number) {
@@ -46,39 +60,94 @@ function onScorePick(e: Event) {
   if (f) scoreFile.value = f
 }
 
-async function next() {
+// step1：上传并识别
+async function uploadAndDetect() {
+  errorMsg.value = ''
+  if (!photos.value.length) { errorMsg.value = '请先上传答题卡照片'; return }
+  try {
+    const r = await api.createAnalysis(photos.value)
+    analysisId.value = r.id
+  } catch (e: any) { errorMsg.value = '上传失败：' + e.message; return }
+  phase.value = 'detecting'
+  pollDetect()
+}
+
+function pollDetect() {
+  const id = analysisId.value!
+  clearInterval(pollTimer)
+  const tick = async () => {
+    try {
+      const r = await api.detect(id)
+      if (r.status === 'ready_confirm') {
+        clearInterval(pollTimer)
+        detected.value = r.detected
+        phase.value = 'confirm'
+      } else if (r.status === 'need_manual') {
+        clearInterval(pollTimer)
+        detected.value = r.detected
+        phase.value = 'manual'
+      } else if (r.status === 'failed') {
+        clearInterval(pollTimer)
+        errorMsg.value = r.error || '识别失败'
+        phase.value = 'manual'
+      }
+    } catch {}
+  }
+  tick()
+  pollTimer = window.setInterval(tick, 2500)
+}
+
+async function submitManual() {
+  errorMsg.value = ''
+  const slug = `2026-${DISTRICT_EN[mDistrict.value]}-yi-${mSubject.value}`
+  try { await api.manualExam(analysisId.value!, slug) }
+  catch (e: any) { errorMsg.value = '提交失败：' + e.message; return }
+  phase.value = 'detecting'
+  pollDetect()
+}
+
+function confirmExam() {        // 确认无误 → 进小分步骤
+  step.value = 2
+}
+
+async function onNext() {       // 底部主按钮
   errorMsg.value = ''
   if (step.value === 1) {
-    // 创建分析（后台任务即刻启动）
-    try {
-      const r = await api.createAnalysis(photos.value)
-      analysisId.value = r.id
-    } catch (e: any) { errorMsg.value = '创建分析失败：' + e.message; return }
-    step.value = 2
-  } else if (step.value === 2) {
+    if (phase.value === 'pick') return uploadAndDetect()
+    if (phase.value === 'confirm') return confirmExam()
+    if (phase.value === 'manual') return submitManual()
+    return
+  }
+  if (step.value === 2) {
     if (scoresEnabled.value && scoreFile.value && analysisId.value) {
-      try { await api.uploadScores(analysisId.value, scoreFile.value) } catch {}
+      try {
+        const r: any = await api.uploadScores(analysisId.value, scoreFile.value)
+        scoreInfo.value = `${r.student_name||''} ${r.exam_total?.scored}/${r.exam_total?.fullScore} · ${r.n_questions}题`
+      } catch (e: any) { errorMsg.value = '小分解析失败：' + e.message; return }
     }
+    try { await api.startPipeline(analysisId.value!) }
+    catch (e: any) { errorMsg.value = '启动分析失败：' + e.message; return }
     step.value = 3
     startPolling()
   } else if (step.value === 4) {
-    if (analysisId.value)
-      window.open(api.reportPdfUrl(analysisId.value), '_blank')
+    window.open(api.reportPdfUrl(analysisId.value!), '_blank')
   }
 }
+
 function prev() {
   if (step.value === 4) { resetToStart(); return }
-  if (step.value > 1 && step.value !== 3) step.value--
+  if (step.value === 2) { step.value = 1; phase.value = 'confirm'; return }
 }
 function resetToStart() {
-  step.value = 1
-  report.value = null
-  stageIdx.value = 0
+  step.value = 1; phase.value = 'pick'
+  analysisId.value = null; report.value = null
+  photos.value = []; photoUrls.value = []
+  detected.value = null; scoreFile.value = null; stageIdx.value = 0
 }
 
 function startPolling() {
-  if (!analysisId.value) return
-  const id = analysisId.value
+  const id = analysisId.value!
+  clearInterval(pollTimer)
   const tick = async () => {
     try {
       const s = await api.status(id)
@@ -92,12 +161,26 @@ function startPolling() {
         clearInterval(pollTimer)
         errorMsg.value = '分析失败：' + s.error
       }
-    } catch (e: any) { /* 网络抖动忽略，下次轮询继续 */ }
+    } catch {}
   }
   tick()
-  pollTimer = window.setInterval(tick, 2000)
+  pollTimer = window.setInterval(tick, 2500)
 }
 onUnmounted(() => clearInterval(pollTimer))
+
+const NEXT_LABEL = computed(() => {
+  if (step.value === 1) {
+    if (phase.value === 'pick') return '上传并识别'
+    if (phase.value === 'detecting') return '识别中…'
+    if (phase.value === 'confirm') return '确认无误，下一步'
+    if (phase.value === 'manual') return '用所选识别'
+  }
+  if (step.value === 2) return '开始分析'
+  if (step.value === 4) return '下载报告 PDF'
+  return '请稍候…'
+})
+const nextDisabled = computed(() =>
+  step.value === 1 && phase.value === 'detecting')
 
 function openPaper() {
   if (analysisId.value)
@@ -129,40 +212,83 @@ const correctCnt = computed(() =>
 
     <!-- Step 1 上传答题卡 -->
     <div v-show="step===1" class="scroll-area">
-      <div class="section-title">上传答题卡</div>
-      <div class="section-desc">拍照或从相册选择，可上传多张（每张照片对应答题卡一页）</div>
-
-      <div class="sample-card">
-        <div class="sample-label">📋 示例：物理常见 4 页（2 张纸正反面）</div>
-        <div class="sample-pages">
-          <div class="sample-page"><img src="/sample-card-page1.jpg"><div class="cap">第 1 页</div></div>
-          <div class="sample-page"><img src="/sample-card-page2.jpg"><div class="cap">第 2 页</div></div>
+      <!-- 1a 选图 -->
+      <template v-if="phase==='pick'">
+        <div class="section-title">上传答题卡</div>
+        <div class="section-desc">拍照或从相册选择，可多张（含「考生须知页」——上面印有考试名称）</div>
+        <div class="sample-card">
+          <div class="sample-label">📋 示例：物理常见 4 页（2 张纸正反面）</div>
+          <div class="sample-pages">
+            <div class="sample-page"><img src="/sample-card-page1.jpg"><div class="cap">第 1 页</div></div>
+            <div class="sample-page"><img src="/sample-card-page2.jpg"><div class="cap">第 2 页</div></div>
+          </div>
+          <div class="sample-tips">✓ 务必含顶部「北京市XX区…答题卡」标题行<br>✓ 光线均匀、四角入框、字迹清晰</div>
         </div>
-        <div class="sample-tips">✓ 光线均匀，避免阴影<br>✓ 四角定位标尽量入框<br>✓ 文字、涂卡清晰可读</div>
-      </div>
-
-      <label class="upload-area">
-        <div class="big-icon">📷</div>
-        <div style="font-weight:600;color:var(--gray-700)">拍照或上传图片</div>
-        <div class="hint">支持 JPG/PNG/HEIC · 单张 ≤ 10 MB</div>
-        <input type="file" accept="image/*" multiple hidden @change="onPick">
-        <span class="btn btn-primary btn-sm" style="margin-top:12px;display:inline-flex">+ 选择文件</span>
-      </label>
-
-      <div v-if="photos.length" style="margin-top:14px">
-        <div class="section-title" style="margin-bottom:6px">已上传 {{ photos.length }} 张</div>
-        <div class="photo-grid">
-          <div v-for="(u,i) in photoUrls" :key="i" class="photo-cell" :style="{backgroundImage:`url(${u})`}">
-            <div class="del" @click.stop="delPhoto(i)">×</div>
-            <div class="label">{{ i+1 }}</div>
+        <label class="upload-area">
+          <div class="big-icon">📷</div>
+          <div style="font-weight:600;color:var(--gray-700)">拍照或上传图片</div>
+          <div class="hint">支持 JPG/PNG/HEIC · 单张 ≤ 10 MB</div>
+          <input type="file" accept="image/*" multiple hidden @change="onPick">
+          <span class="btn btn-primary btn-sm" style="margin-top:12px;display:inline-flex">+ 选择文件</span>
+        </label>
+        <div v-if="photos.length" style="margin-top:14px">
+          <div class="section-title" style="margin-bottom:6px">已选 {{ photos.length }} 张</div>
+          <div class="photo-grid">
+            <div v-for="(u,i) in photoUrls" :key="i" class="photo-cell" :style="{backgroundImage:`url(${u})`}">
+              <div class="del" @click.stop="delPhoto(i)">×</div>
+              <div class="label">{{ i+1 }}</div>
+            </div>
           </div>
         </div>
-        <div class="detected-bar">
-          <div class="detected-head">🔍 上传后将自动识别考试信息</div>
-          <div class="detected-title">2026 北京朝阳区初三一模 · 物理 <span class="ok">（reference 演示数据）</span></div>
-          <div class="detected-meta">点「下一步」创建分析任务</div>
+      </template>
+
+      <!-- 1b 识别中 -->
+      <template v-else-if="phase==='detecting'">
+        <div class="processing">
+          <div class="spinner"></div>
+          <div class="section-title" style="margin-bottom:4px">正在识别考试信息…</div>
+          <div class="section-desc">读取答题卡顶部标题（区/科目/年份）+ 学生信息 + 卷面完整性</div>
         </div>
-      </div>
+      </template>
+
+      <!-- 1c 确认 -->
+      <template v-else-if="phase==='confirm'">
+        <div class="section-title">请确认考试信息</div>
+        <div class="section-desc">系统已从答题卡识别，确认无误后继续</div>
+        <div class="card">
+          <div style="font-size:17px;font-weight:700;margin-bottom:8px">
+            {{ detected?.exam_title || (detected?.year+' '+detected?.district+' '+detected?.exam_type+' '+detected?.subject) }}
+          </div>
+          <div style="font-size:13px;color:var(--gray-600);line-height:1.9">
+            <div>学生：<b>{{ detected?.student_name || '（未识别到，可继续）' }}</b>
+              <span v-if="detected?.student_id"> · 准考证 {{ detected.student_id }}</span></div>
+            <div>考试：{{ detected?.year }} 北京{{ detected?.district }} {{ detected?.exam_type }} · {{ detected?.subject }}</div>
+            <div>卷面：<span :style="{color: detected?.pages_complete ? 'var(--success)' : 'var(--warning)'}">
+              {{ detected?.pages_complete ? '完整 ✓' : '可能不完整 ⚠' }}</span>
+              <span style="color:var(--gray-500)"> {{ detected?.completeness_note }}</span></div>
+          </div>
+          <button class="btn btn-outline btn-sm" style="margin-top:12px;width:100%"
+                  @click="openPaper">📄 查看试卷原卷（含答案）核对</button>
+        </div>
+        <div class="card" style="background:var(--brand-50);font-size:13px;color:var(--gray-700)">
+          核对试卷原卷与孩子考的是否一致；不一致点下方「{{ '' }}识别不对，手动选择」。
+        </div>
+        <button class="btn btn-ghost btn-sm" style="width:100%" @click="phase='manual'">识别不对？手动选择考试</button>
+      </template>
+
+      <!-- 1d 手动选 -->
+      <template v-else-if="phase==='manual'">
+        <div class="section-title">手动选择考试</div>
+        <div class="section-desc">自动识别不到（答题卡可能没拍到标题行）。请选择孩子本次考试：</div>
+        <div v-if="errorMsg" class="card" style="background:var(--error-bg);color:var(--error);font-size:13px">{{ errorMsg }}</div>
+        <div class="card">
+          <div style="font-size:13px;color:var(--gray-600);margin-bottom:6px">区</div>
+          <select v-model="mDistrict" class="sel"><option v-for="d in DISTRICTS" :key="d">{{ d }}</option></select>
+          <div style="font-size:13px;color:var(--gray-600);margin:14px 0 6px">科目</div>
+          <select v-model="mSubject" class="sel"><option v-for="s in SUBJECTS" :key="s[1]" :value="s[1]">{{ s[0] }}</option></select>
+          <div style="font-size:12px;color:var(--gray-500);margin-top:12px">年份/模别：2026 一模（当前考季）</div>
+        </div>
+      </template>
     </div>
 
     <!-- Step 2 小分 -->
@@ -256,11 +382,13 @@ const correctCnt = computed(() =>
     </div>
 
     <!-- 底部按钮 -->
-    <div v-show="step!==3" class="action-bar">
-      <button v-if="step>1 && step!==3" class="btn btn-ghost btn-sm btn-secondary" @click="prev">
-        {{ step===4 ? '重新分析' : '上一步' }}
+    <div v-show="step!==3 && !(step===1 && phase==='detecting')" class="action-bar">
+      <button v-if="step===4 || step===2" class="btn btn-ghost btn-sm btn-secondary" @click="prev">
+        {{ step===4 ? '重新开始' : '上一步' }}
       </button>
-      <button class="btn btn-primary" @click="next">{{ NEXT_LABEL[step] }}</button>
+      <button class="btn btn-primary" :disabled="nextDisabled" @click="onNext">
+        {{ NEXT_LABEL }}
+      </button>
     </div>
 </div>
 </template>
@@ -314,6 +442,10 @@ const correctCnt = computed(() =>
   margin-bottom:12px; box-shadow:var(--shadow-sm); }
 .section-title { font-size:15px; font-weight:700; color:var(--gray-800); margin-bottom:10px; }
 .section-desc { color:var(--gray-500); font-size:13px; margin-bottom:12px; }
+.sel { width:100%; height:42px; border:1.5px solid var(--gray-200);
+  border-radius:var(--radius-sm); padding:0 12px; font-size:15px;
+  background:var(--surface); color:var(--gray-900); }
+.btn:disabled { opacity:.5; cursor:not-allowed; }
 .action-bar { position:sticky; bottom:0; flex-shrink:0; padding:10px 16px;
   padding-bottom:calc(10px + env(safe-area-inset-bottom));
   background:var(--surface); border-top:1px solid var(--gray-200);
