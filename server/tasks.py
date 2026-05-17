@@ -60,28 +60,27 @@ def _ocr_answer_card(aid: str, student_dir: Path,
 
     sys.path.insert(0, str(SR_DIR))
     import detect  # noqa
+    import card_meta  # noqa
 
-    # 1. OCR 全部图片（一次性，后续涂卡识别复用），合并全文做考试识别
-    ocr_by_img: dict = {}
-    all_lines: list[str] = []
-    for img in imgs:
-        ls = detect.ocr_one_image(img)
-        ocr_by_img[img] = ls
-        all_lines.extend(ls)
-    idy = exam_match.detect_exam(all_lines)
+    # 1. qwen-vl-max 视觉理解：读表头 → 考试元信息 + 学生 + 卷面完整性
+    meta = card_meta.extract_card_meta(imgs)
+    idy = exam_match.slug_from_meta(meta)
+    idy["completeness_note"] = meta.get("completeness_note", "")
+    idy["pages_complete"] = bool(meta.get("pages_complete", False))
 
     # 2. 自动识别不到 → 手动 slug 兜底
     if not idy["matched"]:
         if manual_slug and exam_match.kb_yaml_for_slug(manual_slug):
             idy["exam_slug"] = manual_slug
             idy["matched"] = True
-            if not idy.get("student_name"):
-                idy["student_name"] = ""
         else:
+            note = idy.get("completeness_note") or ""
             raise RuntimeError(
-                "无法自动识别考试（拍摄的答题卡可能未包含顶部"
-                "「北京市XX区…物理答题卡」标题行）。"
-                "请在上传页选择「区 / 科目」后重试。")
+                f"无法识别考试（区={idy.get('district') or '?'} "
+                f"科={idy.get('subject') or '?'} 年={idy.get('year') or '?'} "
+                f"模={idy.get('exam_type') or '?'}）。"
+                f"{('卷面：' + note) if note else ''} "
+                f"请在上传页选「区/科目」后重试。")
 
     slug = idy["exam_slug"]
     name = idy["student_name"] or "考生"
@@ -121,8 +120,8 @@ def _ocr_answer_card(aid: str, student_dir: Path,
 
 
 def _ensure_scores(aid: str, student_dir: Path, wait_s: int = 150):
-    """build_report 需 scores.json。优先用家长上传并解析好的小分；
-    限时等待其到位；超时则回退 reference（仅当识别到的考试==朝阳物理演示卷）。
+    """真实上传流程：build_report 需 scores.json，必须用家长上传并解析的小分。
+    限时等待其到位；超时报错（绝不套用他人 reference 小分——会张冠李戴）。
     """
     target = student_dir / "scores.json"
     uploaded = UPLOAD_ROOT / aid / "scores.json"
@@ -132,19 +131,14 @@ def _ensure_scores(aid: str, student_dir: Path, wait_s: int = 150):
         if uploaded.exists():
             target.write_bytes(uploaded.read_bytes())
             return
-        if target.exists():        # 已有（极少：之前流程写过）
+        if target.exists():
             return
         time.sleep(3)
         waited += 3
 
-    # 超时无小分：朝阳物理演示卷回退 reference，其余明确报错
-    if student_dir.name == REF_STUDENT_DIR.name and \
-       (REF_STUDENT_DIR / "scores.json").exists():
-        target.write_bytes((REF_STUDENT_DIR / "scores.json").read_bytes())
-        return
     raise RuntimeError(
-        "未收到小分表。请在「上传小分」步骤上传班小二导出的 xlsx "
-        "（主观题得分需小分表才能分析）。")
+        "未收到小分表。主观题得分需班小二导出的小分 xlsx 才能分析——"
+        "请在「上传小分」步骤上传后重试。")
 
 
 def _run(aid: str, student_dir: Path, ocr_photos: bool,
