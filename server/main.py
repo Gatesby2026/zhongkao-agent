@@ -121,6 +121,8 @@ def report_pdf(aid: str):
     p = Path(a["report_pdf"])
     if not p.exists():
         raise HTTPException(404, "报告 PDF 文件丢失")
+    if p.suffix.lower() != ".pdf":
+        raise HTTPException(503, "PDF 生成环境未就绪（缺 Chrome），报告内容请看页面")
     return FileResponse(p, media_type="application/pdf",
                         filename=p.name)
 

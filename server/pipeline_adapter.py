@@ -66,26 +66,39 @@ def run_report(student_dir: Path, on_stage=None) -> Path:
                             stderr=subprocess.STDOUT, text=True,
                             env=env, cwd=str(ROOT), bufsize=1)
     pdf_path = None
+    md_path = None
     for line in proc.stdout:
         line = line.rstrip()
         for marker, (idx, name) in STAGE_MARKERS:
             if marker in line and on_stage:
                 on_stage(idx, name)
+        mp = re.search(r"Markdown → (.+\.md)", line)
+        if mp:
+            md_path = Path(mp.group(1).strip())
         m = re.search(r"PDF → (.+\.pdf)", line)
         if m:
             pdf_path = Path(m.group(1).strip())
     proc.wait()
     if proc.returncode != 0:
         raise RuntimeError(f"build_report 退出码 {proc.returncode}")
+
+    slug = student_dir.name
+    ls_dir = ROOT / "learning situation"
     if pdf_path is None:
-        # 兜底：按命名规则推断
-        slug = student_dir.name
-        for p in (ROOT / "learning situation").glob(f"*_{slug}_学情报告.pdf"):
+        for p in ls_dir.glob(f"*_{slug}_学情报告.pdf"):
             pdf_path = p
             break
-    if not pdf_path or not pdf_path.exists():
-        raise RuntimeError("未找到生成的报告 PDF")
-    return pdf_path
+    if md_path is None:
+        for p in ls_dir.glob(f"*_{slug}_学情报告.md"):
+            md_path = p
+            break
+
+    # PDF 优先；无 Chrome 时降级返回 MD（report JSON 仍可用，仅 PDF 下载缺）
+    if pdf_path and pdf_path.exists():
+        return pdf_path
+    if md_path and md_path.exists():
+        return md_path
+    raise RuntimeError("未找到生成的报告（PDF/MD 均缺）")
 
 
 # ---------- 结构化报告 JSON（报告屏渲染用）----------
