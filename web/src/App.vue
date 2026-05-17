@@ -10,7 +10,7 @@ const analysisId = ref<string | null>(null)
 const photos = ref<File[]>([])
 const photoUrls = ref<string[]>([])
 const detected = ref<any>(null)
-const scoresEnabled = ref(true)
+const scoreMode = ref<'teacher'|'auto'>('auto')   // 默认无小分→自动判分
 const scoreFile = ref<File | null>(null)
 const scoreInfo = ref<string>('')
 const stageIdx = ref(0)
@@ -107,9 +107,10 @@ async function onNext() {       // 底部主按钮
     return
   }
   if (step.value === 2) {
-    if (scoresEnabled.value && scoreFile.value && analysisId.value) {
+    if (scoreMode.value === 'teacher') {
+      if (!scoreFile.value) { errorMsg.value = '请上传小分表，或改选「AI 自动判分」'; return }
       try {
-        const r: any = await api.uploadScores(analysisId.value, scoreFile.value)
+        const r: any = await api.uploadScores(analysisId.value!, scoreFile.value)
         scoreInfo.value = `${r.student_name||''} ${r.exam_total?.scored}/${r.exam_total?.fullScore} · ${r.n_questions}题`
       } catch (e: any) { errorMsg.value = '小分解析失败：' + e.message; return }
     }
@@ -280,32 +281,35 @@ const correctCnt = computed(() =>
       </template>
     </div>
 
-    <!-- Step 2 小分 -->
+    <!-- Step 2 小分（二选一）-->
     <div v-show="step===2" class="scroll-area">
-      <div class="section-title">上传小分表（可选）</div>
-      <div class="section-desc">学校通过班小二等工具发的 Excel 小分表，对齐到每道题得分；可跳过仅用答题卡结果。</div>
-      <div class="card">
-        <div class="toggle-row">
-          <div class="label-text">启用小分对齐<small>关闭则跳过此步</small></div>
-          <div class="switch" :class="{on:scoresEnabled}" @click="scoresEnabled=!scoresEnabled"></div>
+      <div class="section-title">如何给主观题判分？</div>
+      <div class="section-desc">选择题系统自动判（准）。主观题二选一：</div>
+
+      <div class="opt-card" :class="{sel: scoreMode==='teacher'}" @click="scoreMode='teacher'">
+        <div class="opt-head"><span class="opt-radio"></span>
+          <b>我有老师小分表</b><span class="opt-tag green">最精确</span></div>
+        <div class="opt-desc">班小二等工具导出的 Excel/截图，按老师实际阅卷分逐题对齐</div>
+        <div v-if="scoreMode==='teacher'" style="margin-top:10px">
+          <label v-if="!scoreFile" class="upload-area" style="padding:18px">
+            <div style="font-size:13px;color:var(--gray-600)">📊 点此上传小分表（.xlsx/.xls/.csv/截图）</div>
+            <input type="file" accept=".xlsx,.xls,.csv,image/*" hidden @change="onScorePick">
+          </label>
+          <div v-else class="file-preview">
+            <div class="f-icon">📊</div>
+            <div class="f-info">
+              <div class="f-name">{{ scoreFile.name }}</div>
+              <div class="f-meta">{{ scoreInfo || '已选择，点开始分析解析' }}</div>
+            </div>
+            <a href="#" @click.prevent.stop="scoreFile=null" style="color:var(--error);font-size:13px">删除</a>
+          </div>
         </div>
       </div>
-      <div v-show="scoresEnabled">
-        <label v-if="!scoreFile" class="upload-area">
-          <div class="big-icon">📊</div>
-          <div style="font-weight:600;color:var(--gray-700)">上传小分表文件</div>
-          <div class="hint">支持 .xlsx / .xls / .csv / 截图</div>
-          <input type="file" accept=".xlsx,.xls,.csv,image/*" hidden @change="onScorePick">
-          <span class="btn btn-primary btn-sm" style="margin-top:12px;display:inline-flex">+ 选择文件</span>
-        </label>
-        <div v-else class="file-preview">
-          <div class="f-icon">📊</div>
-          <div class="f-info">
-            <div class="f-name">{{ scoreFile.name }}</div>
-            <div class="f-meta">已选择 · Phase 1 演示使用 reference 小分</div>
-          </div>
-          <a href="#" @click.prevent="scoreFile=null" style="color:var(--error);font-size:13px">删除</a>
-        </div>
+
+      <div class="opt-card" :class="{sel: scoreMode==='auto'}" @click="scoreMode='auto'">
+        <div class="opt-head"><span class="opt-radio"></span>
+          <b>没有，用 AI 自动判分</b><span class="opt-tag amber">智能估分</span></div>
+        <div class="opt-desc">系统看答题卡照片对照标答给主观题估分；结果标注"估"，拿到老师小分后可再上传校准</div>
       </div>
     </div>
 
@@ -510,6 +514,19 @@ const correctCnt = computed(() =>
 .stage-item.active .ico::before { content:'◐'; }
 .stage-item.done { color:var(--gray-500); }
 .stage-item.done .ico::before { content:'✓'; color:var(--success); font-weight:bold; }
+.opt-card { background:var(--surface); border:1.5px solid var(--gray-200);
+  border-radius:var(--radius); padding:14px; margin-bottom:12px; cursor:pointer;
+  transition:border-color .15s,background .15s; }
+.opt-card.sel { border-color:var(--brand); background:var(--brand-50); }
+.opt-head { display:flex; align-items:center; gap:8px; font-size:15px; }
+.opt-radio { width:16px; height:16px; border-radius:50%;
+  border:2px solid var(--gray-300); flex-shrink:0; }
+.opt-card.sel .opt-radio { border-color:var(--brand);
+  background:radial-gradient(var(--brand) 40%, transparent 45%); }
+.opt-tag { margin-left:auto; font-size:11px; padding:2px 8px; border-radius:8px; }
+.opt-tag.green { background:var(--success-bg); color:#15803d; }
+.opt-tag.amber { background:var(--accent-bg); color:#b45309; }
+.opt-desc { font-size:12px; color:var(--gray-500); margin-top:6px; line-height:1.6; }
 .src-banner { font-size:12px; padding:8px 12px; border-radius:var(--radius-sm);
   margin-bottom:10px; line-height:1.5; }
 .src-banner.teacher { background:var(--success-bg); color:#15803d; }
