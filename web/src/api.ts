@@ -42,12 +42,6 @@ export const api = {
   }> {
     return j(await fetch(`/api/analyses/${id}/detect`))
   },
-  async manualExam(id: string, examSlug: string) {
-    const fd = new FormData()
-    fd.append('exam_slug', examSlug)
-    return j(await fetch(`/api/analyses/${id}/manual-exam`,
-      { method: 'POST', body: fd }))
-  },
   async startPipeline(id: string) {
     return j(await fetch(`/api/analyses/${id}/start`, { method: 'POST' }))
   },

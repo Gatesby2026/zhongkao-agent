@@ -3,8 +3,9 @@ import { ref, computed, onUnmounted } from 'vue'
 import { api, type ReportResp } from './api'
 
 const step = ref(1)                       // 1 上传 2 小分 3 分析 4 报告
-// step1 子阶段：pick 选图 / detecting 识别中 / confirm 确认 / manual 手动选
-const phase = ref<'pick'|'detecting'|'confirm'|'manual'>('pick')
+// step1 子阶段：pick 选图 / detecting 识别中 / confirm 确认 / failed 识别失败
+const phase = ref<'pick'|'detecting'|'confirm'|'failed'>('pick')
+const detectErr = ref('')
 const analysisId = ref<string | null>(null)
 const photos = ref<File[]>([])
 const photoUrls = ref<string[]>([])
@@ -18,16 +19,6 @@ const report = ref<ReportResp | null>(null)
 const errorMsg = ref('')
 let pollTimer: number | undefined
 
-const DISTRICTS = ['朝阳','海淀','西城','东城','丰台','石景山','顺义',
-  '门头沟','昌平','房山','通州','大兴','延庆','平谷']
-const SUBJECTS = [['物理','physics'],['数学','math'],['语文','chinese'],
-  ['英语','english'],['道德与法治','politics']]
-const DISTRICT_EN: Record<string,string> = {朝阳:'chaoyang',海淀:'haidian',
-  西城:'xicheng',东城:'dongcheng',丰台:'fengtai',石景山:'shijingshan',
-  顺义:'shunyi',门头沟:'mentougou',昌平:'changping',房山:'fangshan',
-  通州:'tongzhou',大兴:'daxing',延庆:'yanqing',平谷:'pinggu'}
-const mDistrict = ref('朝阳')
-const mSubject = ref('physics')
 
 const STAGES = [
   '识别考试信息（区/科目/年份）',
@@ -82,14 +73,11 @@ function pollDetect() {
         clearInterval(pollTimer)
         detected.value = r.detected
         phase.value = 'confirm'
-      } else if (r.status === 'need_manual') {
+      } else if (r.status === 'failed' || r.status === 'need_manual') {
         clearInterval(pollTimer)
-        detected.value = r.detected
-        phase.value = 'manual'
-      } else if (r.status === 'failed') {
-        clearInterval(pollTimer)
-        errorMsg.value = r.error || '识别失败'
-        phase.value = 'manual'
+        detectErr.value = r.error ||
+          '没能从答题卡识别出考试信息，请重拍含顶部标题行的照片重新上传'
+        phase.value = 'failed'
       }
     } catch {}
   }
@@ -97,13 +85,13 @@ function pollDetect() {
   pollTimer = window.setInterval(tick, 2500)
 }
 
-async function submitManual() {
-  errorMsg.value = ''
-  const slug = `2026-${DISTRICT_EN[mDistrict.value]}-yi-${mSubject.value}`
-  try { await api.manualExam(analysisId.value!, slug) }
-  catch (e: any) { errorMsg.value = '提交失败：' + e.message; return }
-  phase.value = 'detecting'
-  pollDetect()
+function retryUpload() {        // 识别失败 → 重新选图
+  clearInterval(pollTimer)
+  phase.value = 'pick'
+  detectErr.value = ''
+  analysisId.value = null
+  photos.value = []
+  photoUrls.value = []
 }
 
 function confirmExam() {        // 确认无误 → 进小分步骤
@@ -115,7 +103,7 @@ async function onNext() {       // 底部主按钮
   if (step.value === 1) {
     if (phase.value === 'pick') return uploadAndDetect()
     if (phase.value === 'confirm') return confirmExam()
-    if (phase.value === 'manual') return submitManual()
+    if (phase.value === 'failed') return retryUpload()
     return
   }
   if (step.value === 2) {
@@ -173,7 +161,7 @@ const NEXT_LABEL = computed(() => {
     if (phase.value === 'pick') return '上传并识别'
     if (phase.value === 'detecting') return '识别中…'
     if (phase.value === 'confirm') return '确认无误，下一步'
-    if (phase.value === 'manual') return '用所选识别'
+    if (phase.value === 'failed') return '重新选择图片上传'
   }
   if (step.value === 2) return '开始分析'
   if (step.value === 4) return '下载报告 PDF'
@@ -276,17 +264,18 @@ const correctCnt = computed(() =>
         <button class="btn btn-ghost btn-sm" style="width:100%" @click="phase='manual'">识别不对？手动选择考试</button>
       </template>
 
-      <!-- 1d 手动选 -->
-      <template v-else-if="phase==='manual'">
-        <div class="section-title">手动选择考试</div>
-        <div class="section-desc">自动识别不到（答题卡可能没拍到标题行）。请选择孩子本次考试：</div>
-        <div v-if="errorMsg" class="card" style="background:var(--error-bg);color:var(--error);font-size:13px">{{ errorMsg }}</div>
-        <div class="card">
-          <div style="font-size:13px;color:var(--gray-600);margin-bottom:6px">区</div>
-          <select v-model="mDistrict" class="sel"><option v-for="d in DISTRICTS" :key="d">{{ d }}</option></select>
-          <div style="font-size:13px;color:var(--gray-600);margin:14px 0 6px">科目</div>
-          <select v-model="mSubject" class="sel"><option v-for="s in SUBJECTS" :key="s[1]" :value="s[1]">{{ s[0] }}</option></select>
-          <div style="font-size:12px;color:var(--gray-500);margin-top:12px">年份/模别：2026 一模（当前考季）</div>
+      <!-- 1d 识别失败 -->
+      <template v-else-if="phase==='failed'">
+        <div class="card" style="text-align:center;padding:28px 16px">
+          <div style="font-size:40px;line-height:1">📷</div>
+          <div class="section-title" style="margin:10px 0 6px">没能识别出考试信息</div>
+          <div style="font-size:13px;color:var(--gray-600);line-height:1.7">
+            {{ detectErr }}
+          </div>
+          <div style="font-size:12px;color:var(--gray-500);margin-top:12px">
+            关键：拍清「考生须知页」最顶部的标题行<br>
+            如「北京市朝阳区九年级综合练习（一）物理答题卡」
+          </div>
         </div>
       </template>
     </div>

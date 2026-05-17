@@ -14,7 +14,7 @@ import time
 import uuid
 from pathlib import Path
 
-from fastapi import FastAPI, UploadFile, File, Form, HTTPException
+from fastapi import FastAPI, UploadFile, File, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
@@ -53,10 +53,8 @@ def health():
 # ---------- 1. 创建分析（上传答题卡）----------
 
 @app.post("/api/analyses")
-async def create_analysis(files: list[UploadFile] = File(default=[]),
-                          exam_slug: str = Form(default="")):
+async def create_analysis(files: list[UploadFile] = File(default=[])):
     aid = uuid.uuid4().hex[:12]
-    manual_slug = exam_slug.strip()
 
     if files:
         sdir = WEB_STUDENTS / aid / REF_EXAM_SLUG
@@ -74,10 +72,9 @@ async def create_analysis(files: list[UploadFile] = File(default=[]),
             (photos / f"page-{saved:02d}{ext}").write_bytes(data)
         if saved == 0:
             raise HTTPException(400, "未收到有效答题卡图片")
-        db.create_analysis(aid, "（识别中）",
-                            manual_slug or REF_EXAM_SLUG, str(sdir))
+        db.create_analysis(aid, "（识别中）", REF_EXAM_SLUG, str(sdir))
         # 仅做检测（card_meta 读表头），不跑重流水线；前端轮询 /detect
-        tasks.submit_detect(aid, sdir, manual_slug=manual_slug)
+        tasks.submit_detect(aid, sdir)
         return {"id": aid, "status": "detecting",
                 "uploaded": saved, "mode": "real-ocr"}
 
@@ -108,24 +105,6 @@ def get_detect(aid: str):
     }
 
 
-# ---------- 1b'. 手动指定考试后重新识别 ----------
-
-@app.post("/api/analyses/{aid}/manual-exam")
-def manual_exam(aid: str, exam_slug: str = Form(...)):
-    a = db.get_analysis(aid)
-    if not a:
-        raise HTTPException(404, "analysis not found")
-    slug = exam_slug.strip()
-    sdir = Path(a["student_dir"])
-    # student_dir 可能尚未重命名（未匹配时保持原名）
-    if not (sdir / "answer-card-photos").exists():
-        # 兜底：原始上传目录
-        sdir = WEB_STUDENTS / aid / REF_EXAM_SLUG
-    db.set_detected(aid, "", "detecting", "按所选重新识别")
-    tasks.submit_detect(aid, sdir, manual_slug=slug)
-    return {"id": aid, "status": "detecting"}
-
-
 # ---------- 1c. 确认无误，开始分析 ----------
 
 @app.post("/api/analyses/{aid}/start")
@@ -133,8 +112,6 @@ def start_pipeline(aid: str):
     a = db.get_analysis(aid)
     if not a:
         raise HTTPException(404, "analysis not found")
-    if a["status"] not in ("ready_confirm", "need_manual", "failed"):
-        raise HTTPException(409, f"当前状态 {a['status']} 不能开始")
     if a["status"] != "ready_confirm":
         raise HTTPException(409, "考试未识别/未确认，无法开始分析")
     db.update_stage(aid, 2, "识别答题卡作答", status="running")

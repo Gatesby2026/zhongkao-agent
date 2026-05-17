@@ -43,12 +43,12 @@ def _imgs(photos_dir: Path) -> list[Path]:
 
 # ============== A. 检测 ==============
 
-def submit_detect(aid: str, student_dir: Path, manual_slug: str = ""):
-    threading.Thread(target=_detect, args=(aid, student_dir, manual_slug),
+def submit_detect(aid: str, student_dir: Path):
+    threading.Thread(target=_detect, args=(aid, student_dir),
                      daemon=True).start()
 
 
-def _detect(aid: str, student_dir: Path, manual_slug: str = ""):
+def _detect(aid: str, student_dir: Path):
     try:
         db.set_detected(aid, "", "detecting", "识别考试信息")
         photos_dir = student_dir / "answer-card-photos"
@@ -66,34 +66,34 @@ def _detect(aid: str, student_dir: Path, manual_slug: str = ""):
         idy["pages_complete"] = bool(meta.get("pages_complete", False))
 
         if not idy["matched"]:
-            if manual_slug and exam_match.kb_yaml_for_slug(manual_slug):
-                idy["exam_slug"] = manual_slug
-                idy["matched"] = True
-                idy["manual"] = True
-            # 未匹配也回传，让前端引导手动选；不直接 fail
+            # 识别不到考试 → 失败（让用户重拍含顶部标题行的照片重传）
+            db.mark_failed(
+                aid,
+                "没能从答题卡识别出考试信息。请重新拍照上传——"
+                "务必拍清「考生须知页」最顶部的标题行"
+                "（如「北京市朝阳区九年级综合练习（一）物理答题卡」）。")
+            return
 
-        slug = idy["exam_slug"] or ""
+        slug = idy["exam_slug"]
         name = idy.get("student_name") or "考生"
 
-        # 匹配到才重命名目录 + 落 student.json（infer_standard 靠 dir 名）
-        if idy["matched"] and slug and student_dir.name != slug:
+        # 按 slug 重命名目录（infer_standard 靠 dir 名找 yaml）
+        if slug and student_dir.name != slug:
             new_dir = student_dir.parent / slug
             if new_dir.exists():
                 import shutil
                 shutil.rmtree(new_dir)
             student_dir.rename(new_dir)
             student_dir = new_dir
-        if idy["matched"]:
-            (student_dir / "student.json").write_text(
-                json.dumps({"name": name,
-                            "examId": idy.get("student_id", "")},
-                           ensure_ascii=False), encoding="utf-8")
-            db.set_exam_info(aid, name, slug, str(student_dir))
+        (student_dir / "student.json").write_text(
+            json.dumps({"name": name,
+                        "examId": idy.get("student_id", "")},
+                       ensure_ascii=False), encoding="utf-8")
+        db.set_exam_info(aid, name, slug, str(student_dir))
 
         idy["student_dir"] = str(student_dir)
-        st = "ready_confirm" if idy["matched"] else "need_manual"
-        db.set_detected(aid, json.dumps(idy, ensure_ascii=False), st,
-                        "待确认" if idy["matched"] else "需手动选择考试")
+        db.set_detected(aid, json.dumps(idy, ensure_ascii=False),
+                        "ready_confirm", "待确认")
     except Exception as e:
         traceback.print_exc()
         db.mark_failed(aid, f"{type(e).__name__}: {e}")
