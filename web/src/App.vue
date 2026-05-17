@@ -259,9 +259,9 @@ const correctCnt = computed(() =>
                   @click="openPaper">📄 查看试卷原卷（含答案）核对</button>
         </div>
         <div class="card" style="background:var(--brand-50);font-size:13px;color:var(--gray-700)">
-          核对试卷原卷与孩子考的是否一致；不一致点下方「{{ '' }}识别不对，手动选择」。
+          请核对试卷原卷与孩子所考是否一致；不一致点下方「重新选择图片上传」重拍。
         </div>
-        <button class="btn btn-ghost btn-sm" style="width:100%" @click="phase='manual'">识别不对？手动选择考试</button>
+        <button class="btn btn-ghost btn-sm" style="width:100%" @click="retryUpload">重新选择图片上传</button>
       </template>
 
       <!-- 1d 识别失败 -->
