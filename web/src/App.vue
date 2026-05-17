@@ -111,22 +111,7 @@ const correctCnt = computed(() =>
 </script>
 
 <template>
-<div id="sim-wrap">
-  <!-- Side Nav -->
-  <div class="side-nav">
-    <h3>步骤导航</h3>
-    <div class="side-link" @click="step=1"><span class="sl-icon">📷</span>1. 上传答题卡</div>
-    <div class="side-link" @click="step=2"><span class="sl-icon">📊</span>2. 上传小分（可选）</div>
-    <div class="side-link" @click="step=3"><span class="sl-icon">⏳</span>3. 分析中</div>
-    <div class="side-link" @click="report && (step=4)"><span class="sl-icon">📈</span>4. 学情分析报告</div>
-  </div>
-
-  <div class="phone-frame"><div class="phone-screen">
-    <div class="ios-status">
-      <div class="ios-time">9:41</div>
-      <div class="ios-icons"><span>●●●●</span><span>WiFi</span><span>🔋</span></div>
-    </div>
-
+<div class="app-shell">
     <div class="hdr">
       <div class="hdr-back" @click="prev">‹</div>
       <div class="hdr-title">北京中考一模试卷学情分析</div>
@@ -277,34 +262,27 @@ const correctCnt = computed(() =>
       </button>
       <button class="btn btn-primary" @click="next">{{ NEXT_LABEL[step] }}</button>
     </div>
-  </div></div>
 </div>
 </template>
 
 <style>
-#sim-wrap { display:flex; align-items:flex-start; justify-content:center;
-  min-height:100vh; padding:32px 16px; gap:32px; flex-wrap:wrap; }
-.phone-frame { width:390px; min-height:844px; background:#111827;
-  border-radius:52px; padding:12px;
-  box-shadow:0 24px 64px rgba(0,0,0,0.3), inset 0 0 0 1px rgba(255,255,255,0.06);
-  flex-shrink:0; }
-.phone-screen { width:100%; height:820px; background:var(--bg);
-  border-radius:42px; overflow:hidden; display:flex; flex-direction:column; }
-.ios-status { height:50px; background:var(--brand-deeper);
-  display:flex; align-items:flex-end; justify-content:space-between;
-  padding:0 28px 6px; flex-shrink:0; }
-.ios-time { color:#fff; font-size:15px; font-weight:600; }
-.ios-icons { display:flex; gap:6px; color:#fff; font-size:11px; }
-.side-nav { width:240px; background:var(--surface); border-radius:var(--radius-lg);
-  box-shadow:var(--shadow); padding:18px 0; flex-shrink:0; position:sticky; top:32px; }
-.side-nav h3 { padding:0 18px 10px; font-size:13px; font-weight:700;
-  border-bottom:1px solid var(--gray-100); margin-bottom:8px; }
-.side-link { display:flex; align-items:center; gap:10px; padding:9px 18px;
-  font-size:13px; color:var(--gray-600); cursor:pointer; }
-.side-link:hover { background:var(--brand-50); color:var(--brand); }
-.side-link .sl-icon { width:22px; text-align:center; }
-.hdr { height:var(--header-h); background:var(--brand-deeper); display:flex;
-  align-items:center; padding:0 14px; gap:10px; flex-shrink:0; }
+/* 真机全屏：无模拟器外壳。移动端占满视口，桌面端居中限宽便于查看 */
+.app-shell {
+  display:flex; flex-direction:column;
+  width:100%; min-height:100vh; min-height:100dvh;
+  background:var(--bg);
+}
+@media (min-width:520px) {
+  html, body { background:var(--gray-200); }
+  .app-shell {
+    max-width:480px; margin:0 auto; min-height:100vh;
+    box-shadow:0 0 24px rgba(0,0,0,0.08);
+  }
+}
+.hdr { position:sticky; top:0; z-index:10; height:var(--header-h);
+  background:var(--brand-deeper); display:flex;
+  align-items:center; padding:0 14px; gap:10px; flex-shrink:0;
+  padding-top:env(safe-area-inset-top); box-sizing:content-box; }
 .hdr-back { width:30px; height:30px; border-radius:50%;
   background:rgba(255,255,255,.12); display:flex; align-items:center;
   justify-content:center; color:#fff; font-size:16px; }
@@ -322,7 +300,7 @@ const correctCnt = computed(() =>
 .step.done .dot::before { content:'✓'; }
 .step-line { flex:1; height:2px; background:var(--gray-200); margin:0 6px; }
 .step-line.done { background:var(--success); }
-.scroll-area { flex:1; overflow-y:auto; padding:16px; }
+.scroll-area { flex:1; padding:16px; }
 .scroll-area::-webkit-scrollbar { display:none; }
 .btn { display:inline-flex; align-items:center; justify-content:center; gap:6px;
   border:none; border-radius:var(--radius-sm); padding:11px 18px; font-size:14px;
@@ -336,8 +314,10 @@ const correctCnt = computed(() =>
   margin-bottom:12px; box-shadow:var(--shadow-sm); }
 .section-title { font-size:15px; font-weight:700; color:var(--gray-800); margin-bottom:10px; }
 .section-desc { color:var(--gray-500); font-size:13px; margin-bottom:12px; }
-.action-bar { flex-shrink:0; padding:10px 16px; background:var(--surface);
-  border-top:1px solid var(--gray-200); display:flex; gap:10px; }
+.action-bar { position:sticky; bottom:0; flex-shrink:0; padding:10px 16px;
+  padding-bottom:calc(10px + env(safe-area-inset-bottom));
+  background:var(--surface); border-top:1px solid var(--gray-200);
+  display:flex; gap:10px; }
 .action-bar .btn { flex:1; }
 .action-bar .btn-secondary { flex:0 0 auto; }
 .sample-card { background:var(--surface); border-radius:var(--radius); padding:14px;
@@ -444,10 +424,4 @@ const correctCnt = computed(() =>
 .wrong-q .reason { font-size:13px; color:var(--gray-800); background:var(--accent-bg);
   padding:8px 10px; border-radius:6px; margin-top:6px; }
 .wrong-q .reason b { color:#B45309; }
-@media (max-width:900px) {
-  .side-nav { display:none; }
-  #sim-wrap { padding:0; }
-  .phone-frame { border-radius:0; padding:0; min-height:100vh; }
-  .phone-screen { border-radius:0; height:100vh; }
-}
 </style>
