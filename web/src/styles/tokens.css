@@ -1,0 +1,26 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --brand: #2563EB; --brand-dark: #1D4ED8; --brand-deeper: #1E40AF;
+  --brand-light: #DBEAFE; --brand-50: #EFF6FF;
+  --accent: #F59E0B; --accent-bg: #FFFBEB;
+  --success: #10B981; --success-bg: #ECFDF5;
+  --warning: #F59E0B; --warning-bg: #FFFBEB;
+  --error: #EF4444; --error-bg: #FEF2F2;
+  --gray-50: #F8FAFC; --gray-100: #F1F5F9; --gray-200: #E2E8F0;
+  --gray-300: #CBD5E1; --gray-400: #94A3B8; --gray-500: #64748B;
+  --gray-600: #475569; --gray-700: #334155; --gray-800: #1E293B;
+  --gray-900: #0F172A;
+  --bg: #F5F7FA; --surface: #FFFFFF;
+  --radius-xs: 6px; --radius-sm: 10px; --radius: 14px;
+  --radius-lg: 20px; --radius-full: 999px;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+  --shadow: 0 4px 12px rgba(0,0,0,0.08);
+  --shadow-lg: 0 12px 32px rgba(0,0,0,0.12);
+  --font: -apple-system, "PingFang SC", "Noto Sans SC", "Helvetica Neue", sans-serif;
+  --header-h: 52px;
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+}
+html, body { height: 100%; font-family: var(--font); background: #E2E8F0;
+  color: var(--gray-900); font-size: 14px; line-height: 1.55;
+  -webkit-font-smoothing: antialiased; }
+button { font-family: inherit; cursor: pointer; }

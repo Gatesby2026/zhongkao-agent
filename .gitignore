@@ -32,3 +32,10 @@ scripts/.ocr-cache/
 # LLM 缓存（含学生 prompt 上下文，不公开）
 scripts/student-report/.cache/
 **/.cache/
+
+# server/web 运行时
+server/data.sqlite3
+server/uploads/
+web/node_modules/
+web/dist/
+out/papers/

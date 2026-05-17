@@ -1,0 +1,154 @@
+"""FastAPI 后端 — 学情分析 H5 支撑接口（Phase 1：纯打通四屏）。
+
+启动：
+  cd server && DASHSCOPE_API_KEY=$KEY uvicorn main:app --host 0.0.0.0 --port 8000
+
+Phase 1 约定：
+  上传的答题卡照片会存盘但分析走 reference 数据
+  （students/jiaxiaoqi/2026-chaoyang-yi-physics）以快速打通四屏。
+"""
+from __future__ import annotations
+
+import sys
+import time
+import uuid
+from pathlib import Path
+
+from fastapi import FastAPI, UploadFile, File, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import db                       # noqa: E402
+import tasks                    # noqa: E402
+import pipeline_adapter as pa   # noqa: E402
+
+ROOT = Path(__file__).resolve().parents[1]
+# Phase 1 reference 数据
+REF_STUDENT_DIR = ROOT / "students" / "jiaxiaoqi" / "2026-chaoyang-yi-physics"
+REF_EXAM_SLUG = "2026-chaoyang-yi-physics"
+UPLOAD_ROOT = ROOT / "server" / "uploads"
+PAPER_OUT = ROOT / "out" / "papers"
+
+app = FastAPI(title="中考一模学情分析 API", version="0.1")
+app.add_middleware(
+    CORSMiddleware, allow_origins=["*"], allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+
+@app.on_event("startup")
+def _startup():
+    db.init_db()
+    UPLOAD_ROOT.mkdir(parents=True, exist_ok=True)
+
+
+@app.get("/api/health")
+def health():
+    return {"ok": True, "ts": time.time()}
+
+
+# ---------- 1. 创建分析（上传答题卡）----------
+
+@app.post("/api/analyses")
+async def create_analysis(files: list[UploadFile] = File(default=[])):
+    aid = uuid.uuid4().hex[:12]
+    # 存上传原图（Phase 1 仅留痕，分析走 reference）
+    updir = UPLOAD_ROOT / aid
+    updir.mkdir(parents=True, exist_ok=True)
+    for i, f in enumerate(files, 1):
+        ext = (Path(f.filename or "").suffix or ".jpg").lower()
+        (updir / f"page-{i:02d}{ext}").write_bytes(await f.read())
+
+    db.create_analysis(aid, "贾小淇", REF_EXAM_SLUG, str(REF_STUDENT_DIR))
+    tasks.submit(aid, REF_STUDENT_DIR)
+    return {"id": aid, "status": "queued",
+            "exam_slug": REF_EXAM_SLUG, "uploaded": len(files)}
+
+
+# ---------- 2. 上传小分表（可选）----------
+
+@app.post("/api/analyses/{aid}/scores")
+async def upload_scores(aid: str, file: UploadFile = File(...)):
+    a = db.get_analysis(aid)
+    if not a:
+        raise HTTPException(404, "analysis not found")
+    updir = UPLOAD_ROOT / aid
+    updir.mkdir(parents=True, exist_ok=True)
+    ext = (Path(file.filename or "").suffix or ".xlsx").lower()
+    (updir / f"scores{ext}").write_bytes(await file.read())
+    # Phase 1：reference scores.json 已存在，此处仅留痕
+    return {"ok": True, "note": "Phase 1 使用 reference scores.json"}
+
+
+# ---------- 3. 状态轮询 ----------
+
+@app.get("/api/analyses/{aid}/status")
+def status(aid: str):
+    a = db.get_analysis(aid)
+    if not a:
+        raise HTTPException(404, "analysis not found")
+    return {
+        "id": a["id"], "status": a["status"],
+        "stage": a["stage"], "stage_name": a["stage_name"],
+        "total_stages": 5, "error": a["error"],
+    }
+
+
+# ---------- 4. 报告 JSON ----------
+
+@app.get("/api/analyses/{aid}/report")
+def report(aid: str):
+    a = db.get_analysis(aid)
+    if not a:
+        raise HTTPException(404, "analysis not found")
+    if a["status"] != "done":
+        raise HTTPException(409, f"分析未完成（{a['status']}）")
+    try:
+        return pa.report_json(Path(a["student_dir"]))
+    except Exception as e:
+        raise HTTPException(500, f"报告生成失败: {e}")
+
+
+# ---------- 5. 报告 PDF ----------
+
+@app.get("/api/analyses/{aid}/report.pdf")
+def report_pdf(aid: str):
+    a = db.get_analysis(aid)
+    if not a or not a["report_pdf"]:
+        raise HTTPException(404, "报告 PDF 未就绪")
+    p = Path(a["report_pdf"])
+    if not p.exists():
+        raise HTTPException(404, "报告 PDF 文件丢失")
+    return FileResponse(p, media_type="application/pdf",
+                        filename=p.name)
+
+
+# ---------- 6. 试卷原卷 PDF ----------
+
+@app.get("/api/analyses/{aid}/paper.pdf")
+def paper_pdf(aid: str):
+    a = db.get_analysis(aid)
+    if not a:
+        raise HTTPException(404, "analysis not found")
+    try:
+        p = pa.paper_pdf(a["exam_slug"], PAPER_OUT)
+    except Exception as e:
+        raise HTTPException(500, f"试卷 PDF 失败: {e}")
+    return FileResponse(p, media_type="application/pdf", filename=p.name)
+
+
+# ---------- 7. 历史报告列表 ----------
+
+@app.get("/api/analyses")
+def list_all():
+    return {"items": db.list_analyses()}
+
+
+# ---------- 静态前端（web 构建产物）----------
+
+WEB_DIST = ROOT / "web" / "dist"
+if WEB_DIST.exists():
+    app.mount("/", StaticFiles(directory=str(WEB_DIST), html=True),
+              name="web")
