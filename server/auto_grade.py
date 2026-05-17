@@ -75,14 +75,40 @@ def _grade_subjective_batch(photos: list[Path], subj_qs: list[dict]) -> dict:
     )
     raw = resp.choices[0].message.content.strip()
     raw = re.sub(r"^```(?:json)?\s*|\s*```$", "", raw, flags=re.S).strip()
+    data = None
     try:
         data = json.loads(raw)
     except json.JSONDecodeError:
-        m = re.search(r"\{.*\}", raw, re.S)
-        data = json.loads(m.group(0)) if m else {"grades": []}
+        m = re.search(r"(\{.*\}|\[.*\])", raw, re.S)
+        if m:
+            try:
+                data = json.loads(m.group(0))
+            except json.JSONDecodeError:
+                data = None
+
+    # 兼容多形状：[{...}] / {"grades":[...]} / {"16":{...}} / 单 {...}
+    grades_list = []
+    if isinstance(data, list):
+        grades_list = data
+    elif isinstance(data, dict):
+        if isinstance(data.get("grades"), list):
+            grades_list = data["grades"]
+        elif "qnum" in data or "suggestedScore" in data:
+            grades_list = [data]
+        else:
+            for k, v in data.items():
+                if isinstance(v, dict):
+                    v.setdefault("qnum", k)
+                    grades_list.append(v)
+
     out = {}
-    for g in data.get("grades", []):
-        out[int(g.get("qnum", 0))] = g
+    for g in grades_list:
+        if not isinstance(g, dict):
+            continue
+        qn = g.get("qnum") or g.get("qid") or g.get("num") or 0
+        m2 = re.search(r"\d+", str(qn))
+        if m2:
+            out[int(m2.group(0))] = g
     return out
 
 
