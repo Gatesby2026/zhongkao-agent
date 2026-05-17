@@ -165,7 +165,7 @@ async function onNext() {       // 底部主按钮
     step.value = 3
     startPolling()
   } else if (step.value === 4) {
-    window.open(api.reportPdfUrl(analysisId.value!), '_blank')
+    openPdf(api.reportPdfUrl(analysisId.value!), '学情分析报告')
   }
 }
 
@@ -220,9 +220,21 @@ const NEXT_LABEL = computed(() => {
 const nextDisabled = computed(() =>
   step.value === 1 && phase.value === 'detecting')
 
+const progressPct = computed(() => {
+  const n = STAGES.length
+  const done = Math.max(0, Math.min(stageIdx.value, n))
+  return Math.max(6, Math.round((done / n) * 100))   // 至少 6% 体现"已启动"
+})
+
+const pdfView = ref<{ url: string; title: string } | null>(null)
+function openPdf(url: string, title: string) {
+  pdfView.value = { url, title }
+}
+function closePdf() { pdfView.value = null }
+
 function openPaper() {
   if (analysisId.value)
-    window.open(api.paperPdfUrl(analysisId.value), '_blank')
+    openPdf(api.paperPdfUrl(analysisId.value), '试卷原卷（含答案）')
 }
 
 const pct = (r: number) => Math.round(r * 100)
@@ -306,10 +318,26 @@ const correctCnt = computed(() =>
         <div class="section-title">上传答题卡</div>
         <div class="section-desc">拍照或从相册选择，可多张（含「考生须知页」——上面印有考试名称）</div>
         <div class="sample-card">
-          <div class="sample-label">📋 示例：物理常见 4 页（2 张纸正反面）</div>
+          <div class="sample-label">📋 示意（脱敏）：物理常见 4 页（2 张纸正反面）</div>
           <div class="sample-pages">
-            <div class="sample-page"><img src="/sample-card-page1.jpg"><div class="cap">第 1 页</div></div>
-            <div class="sample-page"><img src="/sample-card-page2.jpg"><div class="cap">第 2 页</div></div>
+            <div class="sample-page">
+              <div class="schem">
+                <div class="schem-title">北京市 ⬤⬤ 区九年级综合练习（一）物理答题卡</div>
+                <div class="schem-row"><span class="schem-k">姓名</span><span class="schem-blur">░░░</span>
+                  <span class="schem-k">准考证</span><span class="schem-blur">░░░░░</span></div>
+                <div class="schem-grid"><i v-for="n in 12" :key="n"></i></div>
+                <div class="schem-lines"><b></b><b></b><b></b></div>
+              </div>
+              <div class="cap">第 1 页 · 含标题行</div>
+            </div>
+            <div class="sample-page">
+              <div class="schem">
+                <div class="schem-lines tall"><b></b><b></b><b></b><b></b><b></b></div>
+                <div class="schem-grid"><i v-for="n in 8" :key="n"></i></div>
+                <div class="schem-lines"><b></b><b></b></div>
+              </div>
+              <div class="cap">第 2 页 · 作答区</div>
+            </div>
           </div>
           <div class="sample-tips">✓ 务必含顶部「北京市XX区…答题卡」标题行<br>✓ 光线均匀、四角入框、字迹清晰</div>
         </div>
@@ -375,9 +403,9 @@ const correctCnt = computed(() =>
 
       <!-- 1d 识别失败 -->
       <template v-else-if="phase==='failed'">
-        <div class="card" style="text-align:center;padding:28px 16px">
-          <div style="font-size:40px;line-height:1">📷</div>
-          <div class="section-title" style="margin:10px 0 6px">没能识别出考试信息</div>
+        <div class="card state-card state-fail">
+          <div class="state-emoji">📷</div>
+          <div class="section-title" style="margin:8px 0 6px">没能识别出考试信息</div>
           <div style="font-size:13px;color:var(--gray-600);line-height:1.7">
             {{ detectErr }}
           </div>
@@ -423,17 +451,31 @@ const correctCnt = computed(() =>
 
     <!-- Step 3 分析中 -->
     <div v-show="step===3" class="scroll-area">
-      <div class="processing">
+      <!-- 失败态（与首屏失败卡视觉统一） -->
+      <div v-if="errorMsg" class="card state-card state-fail">
+        <div class="state-emoji">⚠️</div>
+        <div class="section-title" style="margin:8px 0 6px">分析未能完成</div>
+        <div style="font-size:13px;color:var(--gray-600);line-height:1.7">{{ errorMsg }}</div>
+        <button class="btn btn-primary btn-sm" style="margin-top:16px;width:100%"
+                @click="resetToStart">返回首页重试</button>
+      </div>
+
+      <div v-else class="processing">
         <div class="spinner"></div>
         <div class="section-title" style="margin-bottom:4px">正在生成学情分析…</div>
         <div class="section-desc">{{ stageName || '排队中' }}</div>
+
+        <div class="progress-wrap">
+          <div class="progress-bar" :style="{ width: progressPct + '%' }"></div>
+        </div>
+        <div class="eta-hint">预计 1–3 分钟，请保持页面打开 · 进度 {{ progressPct }}%</div>
+
         <div class="stages">
           <div v-for="(s,i) in STAGES" :key="i" class="stage-item"
                :class="i+1 < stageIdx ? 'done' : (i+1 === stageIdx ? 'active' : 'pending')">
             <div class="ico"></div><span>{{ s }}</span>
           </div>
         </div>
-        <div v-if="errorMsg" style="color:var(--error);margin-top:14px;font-size:13px">{{ errorMsg }}</div>
       </div>
     </div>
 
@@ -495,6 +537,16 @@ const correctCnt = computed(() =>
       <button class="btn btn-primary" :disabled="nextDisabled" @click="onNext">
         {{ NEXT_LABEL }}
       </button>
+    </div>
+
+    <!-- 应用内 PDF 预览（不跳新标签）-->
+    <div v-if="pdfView" class="pdf-overlay">
+      <div class="pdf-bar">
+        <div class="pdf-close" @click="closePdf">‹ 返回</div>
+        <div class="pdf-title">{{ pdfView.title }}</div>
+        <a class="pdf-ext" :href="pdfView.url" target="_blank" rel="noopener">新窗口</a>
+      </div>
+      <iframe class="pdf-frame" :src="pdfView.url"></iframe>
     </div>
 </div>
 </template>
@@ -565,6 +617,24 @@ const correctCnt = computed(() =>
 .sample-page { background:var(--gray-50); border-radius:6px; overflow:hidden;
   box-shadow:0 1px 3px rgba(0,0,0,0.06); }
 .sample-page img { width:100%; display:block; }
+.schem { background:#fff; padding:8px; aspect-ratio:3/4;
+  display:flex; flex-direction:column; gap:6px; }
+.schem-title { font-size:8px; font-weight:700; color:var(--gray-700);
+  text-align:center; line-height:1.3; padding:3px;
+  background:var(--brand-50); border:1px solid var(--brand-light);
+  border-radius:3px; }
+.schem-row { display:flex; align-items:center; gap:4px; font-size:8px;
+  color:var(--gray-500); }
+.schem-k { flex:none; }
+.schem-blur { flex:1; height:8px; border-radius:2px;
+  background:repeating-linear-gradient(90deg,var(--gray-300) 0 3px,transparent 3px 6px); }
+.schem-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:3px; }
+.schem-grid i { aspect-ratio:1; border:1px solid var(--gray-300);
+  border-radius:50%; }
+.schem-lines { display:flex; flex-direction:column; gap:4px; flex:1; }
+.schem-lines.tall { gap:5px; }
+.schem-lines b { height:5px; border-radius:2px; background:var(--gray-100);
+  border-bottom:1px dashed var(--gray-300); }
 .sample-page .cap { text-align:center; font-size:11px; padding:4px 0;
   color:var(--gray-500); background:#fff; border-top:1px solid var(--gray-100); }
 .sample-tips { font-size:12px; color:var(--gray-600); margin-top:10px; line-height:1.65; }
@@ -622,6 +692,28 @@ const correctCnt = computed(() =>
 .stage-item.active .ico::before { content:'◐'; }
 .stage-item.done { color:var(--gray-500); }
 .stage-item.done .ico::before { content:'✓'; color:var(--success); font-weight:bold; }
+.pdf-overlay { position:fixed; inset:0; z-index:50; background:var(--bg);
+  display:flex; flex-direction:column; }
+@media (min-width:520px) {
+  .pdf-overlay { max-width:480px; margin:0 auto; }
+}
+.pdf-bar { display:flex; align-items:center; gap:10px; padding:12px 14px;
+  background:var(--surface); border-bottom:1px solid var(--gray-200);
+  flex-shrink:0; }
+.pdf-close { font-size:15px; color:var(--brand); font-weight:600; cursor:pointer; }
+.pdf-title { flex:1; text-align:center; font-size:15px; font-weight:700;
+  color:var(--gray-900); overflow:hidden; text-overflow:ellipsis;
+  white-space:nowrap; }
+.pdf-ext { font-size:13px; color:var(--gray-500); text-decoration:none; }
+.pdf-frame { flex:1; width:100%; border:0; background:var(--gray-100); }
+.state-card { text-align:center; padding:28px 16px; }
+.state-emoji { font-size:42px; line-height:1; }
+.state-fail { border:1px solid var(--warning); background:#fff8f0; }
+.progress-wrap { width:100%; height:8px; border-radius:6px;
+  background:var(--gray-200); overflow:hidden; margin:18px 0 8px; }
+.progress-bar { height:100%; border-radius:6px; background:var(--brand);
+  transition:width .5s ease; }
+.eta-hint { font-size:12px; color:var(--gray-500); margin-bottom:16px; }
 .home-hero { text-align:center; padding:20px 12px 18px; }
 .home-emoji { font-size:48px; line-height:1; }
 .home-h1 { font-size:21px; font-weight:800; color:var(--gray-900); margin:12px 0 8px; }
