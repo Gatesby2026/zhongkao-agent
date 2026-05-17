@@ -32,6 +32,39 @@ try:
 except ImportError:
     print("pip install openai", file=sys.stderr); sys.exit(1)
 
+try:
+    from PIL import Image, ImageOps
+    try:
+        import pillow_heif  # noqa
+        pillow_heif.register_heif_opener()
+    except Exception:
+        pass
+    _PIL_OK = True
+except ImportError:
+    _PIL_OK = False
+
+
+def _upright_jpeg_bytes(src: Path, max_dim: int = 3000) -> bytes:
+    """按 EXIF 旋转到位、去 EXIF，返回正立 JPEG 字节。
+
+    手机照片像素横置 + EXIF 方向标记，qwen-vl-ocr 看歪图 → 涂卡识别错。
+    OCR 前必须先把方向烘焙进像素。幂等：已正立图原样重编码。
+    """
+    if not _PIL_OK:
+        return src.read_bytes()
+    im = Image.open(src)
+    im = ImageOps.exif_transpose(im)
+    if im.mode != "RGB":
+        im = im.convert("RGB")
+    w, h = im.size
+    if max(w, h) > max_dim:
+        s = max_dim / float(max(w, h))
+        im = im.resize((round(w * s), round(h * s)), Image.LANCZOS)
+    import io as _io
+    buf = _io.BytesIO()
+    im.save(buf, "JPEG", quality=90)
+    return buf.getvalue()
+
 
 # ============== HEIC 转换 ==============
 
@@ -81,7 +114,7 @@ def _client():
 def ocr_one_image(image_path: Path, model: str = "qwen-vl-ocr-latest") -> list[str]:
     """单张图 OCR，返回行列表。"""
     client = _client()
-    b64 = base64.b64encode(image_path.read_bytes()).decode()
+    b64 = base64.b64encode(_upright_jpeg_bytes(image_path)).decode()
     resp = client.chat.completions.create(
         model=model,
         messages=[{"role": "user", "content": [
@@ -171,7 +204,10 @@ def detect_card(
     all_lines: list[str] = []
     for img in image_paths:
         if img.suffix.lower() == ".heic":
-            img = heic_to_jpg(img)
+            try:
+                img = heic_to_jpg(img)        # macOS sips（若可用）
+            except Exception:
+                pass                          # 无 sips：交给 PIL+pillow_heif
         print(f"  OCR: {img.name} ...", file=sys.stderr, flush=True)
         lines = ocr_one_image(img)
         all_lines.extend(lines)

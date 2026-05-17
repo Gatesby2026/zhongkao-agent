@@ -23,6 +23,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import db                       # noqa: E402
 import tasks                    # noqa: E402
 import pipeline_adapter as pa   # noqa: E402
+import imgnorm                  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 # Phase 1 reference 数据
@@ -61,17 +62,25 @@ async def create_analysis(files: list[UploadFile] = File(default=[])):
         photos = sdir / "answer-card-photos"
         photos.mkdir(parents=True, exist_ok=True)
         saved = 0
+        bad = 0
         for f in files:
             data = await f.read()
             if len(data) < 1024:
                 continue
-            ext = (Path(f.filename or "").suffix or ".jpg").lower()
-            if ext not in (".jpg", ".jpeg", ".png", ".heic"):
-                ext = ".jpg"
             saved += 1
-            (photos / f"page-{saved:02d}{ext}").write_bytes(data)
+            # 关键：手机照片带 EXIF 方向，必须先按 EXIF 旋转到位、
+            # 去 EXIF、统一为正立 JPEG，否则 OCR 看歪图、裁切区域全错。
+            # 统一落盘为 page-NN.jpg（含 HEIC 转码）。
+            try:
+                imgnorm.normalize_bytes_to_upright_jpeg(
+                    data, photos / f"page-{saved:02d}.jpg")
+            except Exception:
+                saved -= 1
+                bad += 1
         if saved == 0:
-            raise HTTPException(400, "未收到有效答题卡图片")
+            raise HTTPException(
+                400, "未收到有效答题卡图片"
+                + ("（图片解码失败，请用 JPG/PNG 重拍）" if bad else ""))
         db.create_analysis(aid, "（识别中）", REF_EXAM_SLUG, str(sdir))
         # 仅做检测（card_meta 读表头），不跑重流水线；前端轮询 /detect
         tasks.submit_detect(aid, sdir)

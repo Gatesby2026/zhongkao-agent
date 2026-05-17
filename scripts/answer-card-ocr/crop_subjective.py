@@ -19,9 +19,27 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 try:
-    from PIL import Image
+    from PIL import Image, ImageOps
 except ImportError:
     print("pip install pillow", file=sys.stderr); sys.exit(1)
+
+
+def _upright_copy(src: Path, work_dir: Path) -> Path:
+    """按 EXIF 旋转到位、去 EXIF，写正立 JPEG 到 work_dir，返回新路径。
+
+    关键：腾讯云 OCR 内部按 EXIF 自动转正→返回正立系 bbox，而 PIL
+    Image.open 读原始横置像素。两者坐标系必须一致——统一先正立化，
+    腾讯云与 PIL 都吃这份无 EXIF 的正立图，bbox 才对得上、裁切不歪。
+    幂等：已正立（无 EXIF）的图原样输出。
+    """
+    work_dir.mkdir(parents=True, exist_ok=True)
+    im = Image.open(src)
+    im = ImageOps.exif_transpose(im)
+    if im.mode != "RGB":
+        im = im.convert("RGB")
+    out = work_dir / f"{src.stem}.jpg"
+    im.save(out, "JPEG", quality=92)
+    return out
 
 
 # 在 .venv-paddle 没装 tencentcloud-sdk-python-ocr 时，把 import 延迟
@@ -75,6 +93,9 @@ def crop_subjective(
     out_dir.mkdir(parents=True, exist_ok=True)
     split_fn = _import_tencent()
     recog_hw = _import_xfyun()
+
+    # 统一正立化：腾讯云方框检测 + PIL 裁切必须用同一坐标系（见 _upright_copy）
+    photos = [_upright_copy(p, out_dir / "_upright") for p in photos]
 
     candidate_set = set(subjective_qnums)
 
