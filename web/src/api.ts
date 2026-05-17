@@ -43,8 +43,9 @@ export const api = {
   }> {
     return j(await fetch(`/api/analyses/${id}/detect`))
   },
-  async startPipeline(id: string) {
-    return j(await fetch(`/api/analyses/${id}/start`, { method: 'POST' }))
+  async startPipeline(id: string, studentName?: string) {
+    const qs = studentName ? `?student_name=${encodeURIComponent(studentName)}` : ''
+    return j(await fetch(`/api/analyses/${id}/start${qs}`, { method: 'POST' }))
   },
   async uploadScores(id: string, file: File) {
     const fd = new FormData()

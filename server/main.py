@@ -108,12 +108,27 @@ def get_detect(aid: str):
 # ---------- 1c. 确认无误，开始分析 ----------
 
 @app.post("/api/analyses/{aid}/start")
-def start_pipeline(aid: str):
+def start_pipeline(aid: str, student_name: str = ""):
     a = db.get_analysis(aid)
     if not a:
         raise HTTPException(404, "analysis not found")
     if a["status"] != "ready_confirm":
         raise HTTPException(409, "考试未识别/未确认，无法开始分析")
+
+    # 家长在确认页纠正了学生姓名 → 覆盖 OCR 结果（影响报告抬头 + 归档）
+    name = (student_name or "").strip()
+    if name and name != (a["student_name"] or ""):
+        import json
+        sdir = Path(a["student_dir"])
+        sj = sdir / "student.json"
+        try:
+            cur = json.loads(sj.read_text(encoding="utf-8")) if sj.exists() else {}
+        except Exception:
+            cur = {}
+        cur["name"] = name
+        sj.write_text(json.dumps(cur, ensure_ascii=False), encoding="utf-8")
+        db.set_exam_info(aid, name, a["exam_slug"], str(sdir))
+
     db.update_stage(aid, 2, "识别答题卡作答", status="running")
     tasks.submit_pipeline(aid, Path(a["student_dir"]))
     return {"id": aid, "status": "running"}

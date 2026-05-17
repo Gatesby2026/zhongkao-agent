@@ -10,6 +10,7 @@ const analysisId = ref<string | null>(null)
 const photos = ref<File[]>([])
 const photoUrls = ref<string[]>([])
 const detected = ref<any>(null)
+const studentName = ref('')               // 确认页可纠正（OCR 偶错）
 const scoreMode = ref<'teacher'|'auto'>('auto')   // 默认无小分→自动判分
 const scoreFile = ref<File | null>(null)
 const scoreInfo = ref<string>('')
@@ -72,6 +73,7 @@ function pollDetect() {
       if (r.status === 'ready_confirm') {
         clearInterval(pollTimer)
         detected.value = r.detected
+        studentName.value = r.detected?.student_name || ''
         phase.value = 'confirm'
       } else if (r.status === 'failed' || r.status === 'need_manual') {
         clearInterval(pollTimer)
@@ -114,7 +116,7 @@ async function onNext() {       // 底部主按钮
         scoreInfo.value = `${r.student_name||''} ${r.exam_total?.scored}/${r.exam_total?.fullScore} · ${r.n_questions}题`
       } catch (e: any) { errorMsg.value = '小分解析失败：' + e.message; return }
     }
-    try { await api.startPipeline(analysisId.value!) }
+    try { await api.startPipeline(analysisId.value!, studentName.value.trim()) }
     catch (e: any) { errorMsg.value = '启动分析失败：' + e.message; return }
     step.value = 3
     startPolling()
@@ -249,8 +251,16 @@ const correctCnt = computed(() =>
             {{ detected?.exam_title || (detected?.year+' '+detected?.district+' '+detected?.exam_type+' '+detected?.subject) }}
           </div>
           <div style="font-size:13px;color:var(--gray-600);line-height:1.9">
-            <div>学生：<b>{{ detected?.student_name || '（未识别到，可继续）' }}</b>
-              <span v-if="detected?.student_id"> · 准考证 {{ detected.student_id }}</span></div>
+            <div style="display:flex;align-items:center;gap:8px;margin:2px 0 6px">
+              <span style="flex:none">学生：</span>
+              <input v-model="studentName" class="name-input"
+                     placeholder="请填写学生姓名" />
+              <span v-if="detected?.student_id" style="flex:none;color:var(--gray-500)">
+                准考证 {{ detected.student_id }}</span>
+            </div>
+            <div style="font-size:12px;color:var(--gray-500);margin:-4px 0 4px">
+              ✏️ 姓名由系统识别，可能有误，请核对修改（将用于报告抬头）
+            </div>
             <div>考试：{{ detected?.year }} 北京{{ detected?.district }} {{ detected?.exam_type }} · {{ detected?.subject }}</div>
             <div>卷面：<span :style="{color: detected?.pages_complete ? 'var(--success)' : 'var(--warning)'}">
               {{ detected?.pages_complete ? '完整 ✓' : '可能不完整 ⚠' }}</span>
@@ -514,6 +524,10 @@ const correctCnt = computed(() =>
 .stage-item.active .ico::before { content:'◐'; }
 .stage-item.done { color:var(--gray-500); }
 .stage-item.done .ico::before { content:'✓'; color:var(--success); font-weight:bold; }
+.name-input { flex:1; min-width:0; font-size:15px; font-weight:700;
+  color:var(--gray-900); padding:7px 10px; border:1.5px solid var(--brand-light);
+  border-radius:8px; background:var(--brand-50); outline:none; }
+.name-input:focus { border-color:var(--brand); background:var(--surface); }
 .opt-card { background:var(--surface); border:1.5px solid var(--gray-200);
   border-radius:var(--radius); padding:14px; margin-bottom:12px; cursor:pointer;
   transition:border-color .15s,background .15s; }

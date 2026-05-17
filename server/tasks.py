@@ -147,11 +147,12 @@ def _pipeline(aid: str, student_dir: Path):
             imgs = _imgs(photos_dir)
             res = detect.detect_card(imgs, photos_dir=photos_dir)
 
-            # 学生名优先用已识别的（student.json 比涂卡区可靠）
+            # 学生名以 student.json 为准（card_meta 表头识别 / 家长确认页纠正，
+            # 均比答题卡涂卡区 OCR 可靠），始终覆盖 detect 结果
             sj = student_dir / "student.json"
             known = json.loads(sj.read_text()) if sj.exists() else {}
             stu = dict(getattr(res, "student", {}) or {})
-            if known.get("name") and not stu.get("name"):
+            if known.get("name"):
                 stu["name"] = known["name"]
             if known.get("examId") and not stu.get("examId"):
                 stu["examId"] = known["examId"]
