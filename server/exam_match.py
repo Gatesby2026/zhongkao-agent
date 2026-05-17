@@ -115,6 +115,35 @@ def kb_yaml_for_slug(slug: str) -> Path | None:
     return None
 
 
+EXAMTYPE_EN = {"一模": "yi", "二模": "er", "三模": "san",
+               "中考": "zhenti", "中考真题": "zhenti"}
+
+
+def slug_from_meta(meta: dict) -> dict:
+    """card_meta（qwen-vl-max 中文字段）→ exam_slug + KB 校验。"""
+    district = (meta.get("district") or "").strip().replace("区", "")
+    subject_cn = (meta.get("subject") or "").strip()
+    year = re.sub(r"\D", "", str(meta.get("year") or ""))[:4]
+    et_cn = (meta.get("exam_type") or "").strip()
+
+    district_en = DISTRICT_EN.get(district, "")
+    subject_en = SUBJECT_EN.get(subject_cn, "")
+    et_en = EXAMTYPE_EN.get(et_cn, "")
+
+    slug = ""
+    if year and district_en and et_en and subject_en:
+        slug = f"{year}-{district_en}-{et_en}-{subject_en}"
+    y = kb_yaml_for_slug(slug) if slug else None
+    return {
+        "exam_slug": slug, "matched": bool(y), "yaml": str(y) if y else "",
+        "district": district, "district_en": district_en,
+        "subject": subject_cn, "subject_en": subject_en,
+        "year": year, "exam_type": et_cn, "exam_type_en": et_en,
+        "student_name": (meta.get("student_name") or "").strip(),
+        "student_id": (meta.get("student_id") or "").strip(),
+    }
+
+
 def detect_exam(lines: list[str]) -> dict:
     """主入口：识别 + 校验知识库。返回 identity，额外含 matched(bool) + yaml。"""
     idy = extract_identity(lines)

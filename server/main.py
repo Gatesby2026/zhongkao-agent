@@ -53,8 +53,10 @@ def health():
 # ---------- 1. 创建分析（上传答题卡）----------
 
 @app.post("/api/analyses")
-async def create_analysis(files: list[UploadFile] = File(default=[])):
+async def create_analysis(files: list[UploadFile] = File(default=[]),
+                          exam_slug: str = Form(default="")):
     aid = uuid.uuid4().hex[:12]
+    manual_slug = exam_slug.strip()
 
     if files:
         # Phase 2：为本次分析建独立学生目录，真实 OCR 上传的答题卡照片
@@ -73,11 +75,12 @@ async def create_analysis(files: list[UploadFile] = File(default=[])):
             (photos / f"page-{saved:02d}{ext}").write_bytes(data)
         if saved == 0:
             raise HTTPException(400, "未收到有效答题卡图片")
-        db.create_analysis(aid, "（待识别）", REF_EXAM_SLUG, str(sdir))
-        tasks.submit(aid, sdir, ocr_photos=True)
+        db.create_analysis(aid, "（待识别）",
+                            manual_slug or REF_EXAM_SLUG, str(sdir))
+        tasks.submit(aid, sdir, ocr_photos=True, manual_slug=manual_slug)
         return {"id": aid, "status": "queued",
-                "exam_slug": REF_EXAM_SLUG, "uploaded": saved,
-                "mode": "real-ocr"}
+                "exam_slug": manual_slug or REF_EXAM_SLUG,
+                "uploaded": saved, "mode": "real-ocr"}
 
     # 无上传：纯 reference 演示（Phase 1 行为）
     db.create_analysis(aid, "贾小淇", REF_EXAM_SLUG, str(REF_STUDENT_DIR))
