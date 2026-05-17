@@ -58,6 +58,12 @@ export const api = {
   async report(id: string): Promise<ReportResp> {
     return j(await fetch(`/api/analyses/${id}/report`))
   },
+  async listAnalyses(): Promise<{ items: Array<{
+    id: string; student_name: string; exam_slug: string;
+    status: string; created_at: number;
+  }> }> {
+    return j(await fetch('/api/analyses'))
+  },
   reportPdfUrl(id: string) { return `/api/analyses/${id}/report.pdf` },
   paperPdfUrl(id: string) { return `/api/analyses/${id}/paper.pdf` },
 }

@@ -1,8 +1,10 @@
 <script setup lang="ts">
-import { ref, computed, onUnmounted } from 'vue'
+import { ref, computed, onUnmounted, onMounted } from 'vue'
 import { api, type ReportResp } from './api'
 
-const step = ref(1)                       // 1 上传 2 小分 3 分析 4 报告
+const step = ref(0)                       // 0 首屏 1 上传 2 小分 3 分析 4 报告
+const history = ref<any[]>([])
+const historyLoading = ref(false)
 // step1 子阶段：pick 选图 / detecting 识别中 / confirm 确认 / failed 识别失败
 const phase = ref<'pick'|'detecting'|'confirm'|'failed'>('pick')
 const detectErr = ref('')
@@ -29,9 +31,18 @@ const STAGES = [
   '生成知识点提分建议',
 ]
 
-const stepperSteps = ['答题卡', '小分', '分析']
+const stepperSteps = ['答题卡', '确认', '分析', '报告']
+// 真实旅程阶段（1..4），confirm 是 step1 子阶段、判分属"确认"范畴
+const journeyStage = computed(() => {
+  if (step.value === 0) return 0
+  if (step.value === 1) return phase.value === 'confirm' ? 2 : 1
+  if (step.value === 2) return 2
+  if (step.value === 3) return 3
+  return 4                                    // step 4 报告
+})
 function stepState(n: number) {
-  return n < step.value ? 'done' : (n === step.value ? 'active' : '')
+  const j = journeyStage.value
+  return n < j ? 'done' : (n === j ? 'active' : '')
 }
 
 function onPick(e: Event) {
@@ -100,6 +111,39 @@ function confirmExam() {        // 确认无误 → 进小分步骤
   step.value = 2
 }
 
+function goStart() {            // 首屏 → 上传流程
+  resetToStart()
+  step.value = 1
+}
+
+async function loadHistory() {
+  historyLoading.value = true
+  try {
+    const r = await api.listAnalyses()
+    history.value = r.items || []
+  } catch { history.value = [] }
+  finally { historyLoading.value = false }
+}
+
+async function openHistoryItem(it: any) {
+  if (it.status !== 'done') return
+  analysisId.value = it.id
+  try {
+    report.value = await api.report(it.id)
+    step.value = 4
+  } catch (e: any) { errorMsg.value = '报告加载失败：' + e.message }
+}
+
+const STATUS_CN: Record<string, string> = {
+  detecting: '识别中', ready_confirm: '待确认', running: '分析中',
+  done: '已完成', failed: '失败',
+}
+function fmtDate(ts: number) {
+  const d = new Date(ts * 1000)
+  const p = (n: number) => String(n).padStart(2, '0')
+  return `${d.getMonth() + 1}-${p(d.getDate())} ${p(d.getHours())}:${p(d.getMinutes())}`
+}
+
 async function onNext() {       // 底部主按钮
   errorMsg.value = ''
   if (step.value === 1) {
@@ -126,14 +170,16 @@ async function onNext() {       // 底部主按钮
 }
 
 function prev() {
-  if (step.value === 4) { resetToStart(); return }
+  if (step.value === 4) { resetToStart(); loadHistory(); return }
   if (step.value === 2) { step.value = 1; phase.value = 'confirm'; return }
+  if (step.value === 1) { resetToStart(); return }
 }
 function resetToStart() {
-  step.value = 1; phase.value = 'pick'
+  step.value = 0; phase.value = 'pick'
   analysisId.value = null; report.value = null
   photos.value = []; photoUrls.value = []
   detected.value = null; scoreFile.value = null; stageIdx.value = 0
+  errorMsg.value = ''
 }
 
 function startPolling() {
@@ -157,6 +203,7 @@ function startPolling() {
   tick()
   pollTimer = window.setInterval(tick, 2500)
 }
+onMounted(loadHistory)
 onUnmounted(() => clearInterval(pollTimer))
 
 const NEXT_LABEL = computed(() => {
@@ -187,18 +234,69 @@ const correctCnt = computed(() =>
 <template>
 <div class="app-shell">
     <div class="hdr">
-      <div class="hdr-back" @click="prev">‹</div>
+      <div class="hdr-back" v-if="step>=1" @click="prev">‹</div>
+      <div class="hdr-back" v-else style="visibility:hidden">‹</div>
       <div class="hdr-title">北京中考一模试卷学情分析</div>
-      <div class="hdr-right">{{ step <= 3 ? step + '/3' : '完成' }}</div>
+      <div class="hdr-right">{{ step===0 ? '' : (journeyStage>=4 ? '完成' : journeyStage + '/4') }}</div>
     </div>
 
-    <div class="stepper">
+    <div class="stepper" v-show="step>=1">
       <template v-for="(nm, i) in stepperSteps" :key="i">
         <div class="step" :class="stepState(i+1)">
           <div class="dot"><span v-if="stepState(i+1)!=='done'">{{ i+1 }}</span></div>{{ nm }}
         </div>
-        <div v-if="i < 2" class="step-line" :class="{ done: i+1 < step }"></div>
+        <div v-if="i < 3" class="step-line" :class="{ done: i+1 < journeyStage }"></div>
       </template>
+    </div>
+
+    <!-- Step 0 首屏引导 -->
+    <div v-show="step===0" class="scroll-area">
+      <div class="home-hero">
+        <div class="home-emoji">📊</div>
+        <div class="home-h1">中考一模学情分析</div>
+        <div class="home-sub">拍下孩子的答题卡，AI 自动还原失分点，<br>给出每道错题的原因与提分建议</div>
+      </div>
+
+      <div class="home-flow">
+        <div class="flow-item"><span class="flow-n">1</span>拍答题卡</div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-item"><span class="flow-n">2</span>确认考试</div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-item"><span class="flow-n">3</span>AI 分析</div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-item"><span class="flow-n">4</span>看报告</div>
+      </div>
+
+      <div class="card">
+        <div class="section-title" style="margin-bottom:8px">开始前请准备</div>
+        <div class="prep-li">📷 答题卡全部页（含「考生须知页」，上面印有考试名称）</div>
+        <div class="prep-li">💡 拍照光线均匀、四角入框、字迹清晰</div>
+        <div class="prep-li">📄 小分表（可选）——没有也行，系统自动判分</div>
+      </div>
+
+      <button class="btn btn-primary" style="width:100%;margin-top:4px"
+              @click="goStart">开始分析 →</button>
+
+      <div class="section-title" style="margin:22px 0 8px">历史报告</div>
+      <div v-if="historyLoading" class="section-desc">加载中…</div>
+      <div v-else-if="!history.length" class="card"
+           style="text-align:center;color:var(--gray-500);font-size:13px">
+        还没有分析记录，点上方开始第一次分析
+      </div>
+      <div v-else>
+        <div v-for="it in history" :key="it.id" class="hist-row"
+             :class="{ clickable: it.status==='done' }"
+             @click="openHistoryItem(it)">
+          <div class="hist-main">
+            <div class="hist-name">{{ it.student_name || '（未命名）' }}</div>
+            <div class="hist-sub">{{ it.exam_slug }} · {{ fmtDate(it.created_at) }}</div>
+          </div>
+          <div class="hist-status" :class="it.status">
+            {{ STATUS_CN[it.status] || it.status }}
+            <span v-if="it.status==='done'" style="margin-left:4px">›</span>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Step 1 上传答题卡 -->
@@ -390,7 +488,7 @@ const correctCnt = computed(() =>
     </div>
 
     <!-- 底部按钮 -->
-    <div v-show="step!==3 && !(step===1 && phase==='detecting')" class="action-bar">
+    <div v-show="step!==0 && step!==3 && !(step===1 && phase==='detecting')" class="action-bar">
       <button v-if="step===4 || step===2" class="btn btn-ghost btn-sm btn-secondary" @click="prev">
         {{ step===4 ? '重新开始' : '上一步' }}
       </button>
@@ -524,6 +622,33 @@ const correctCnt = computed(() =>
 .stage-item.active .ico::before { content:'◐'; }
 .stage-item.done { color:var(--gray-500); }
 .stage-item.done .ico::before { content:'✓'; color:var(--success); font-weight:bold; }
+.home-hero { text-align:center; padding:20px 12px 18px; }
+.home-emoji { font-size:48px; line-height:1; }
+.home-h1 { font-size:21px; font-weight:800; color:var(--gray-900); margin:12px 0 8px; }
+.home-sub { font-size:13px; color:var(--gray-600); line-height:1.7; }
+.home-flow { display:flex; align-items:center; justify-content:space-between;
+  background:var(--brand-50); border-radius:var(--radius); padding:12px 8px;
+  margin-bottom:14px; }
+.flow-item { display:flex; flex-direction:column; align-items:center; gap:4px;
+  font-size:12px; color:var(--gray-700); flex:1; }
+.flow-n { width:22px; height:22px; border-radius:50%; background:var(--brand);
+  color:#fff; font-size:12px; font-weight:700;
+  display:flex; align-items:center; justify-content:center; }
+.flow-arrow { color:var(--brand-light); font-size:13px; flex:none; }
+.prep-li { font-size:13px; color:var(--gray-700); line-height:2; }
+.hist-row { display:flex; align-items:center; gap:10px;
+  background:var(--surface); border:1px solid var(--gray-200);
+  border-radius:var(--radius); padding:12px 14px; margin-bottom:8px; }
+.hist-row.clickable { cursor:pointer; }
+.hist-row.clickable:active { background:var(--brand-50); }
+.hist-main { flex:1; min-width:0; }
+.hist-name { font-size:15px; font-weight:700; color:var(--gray-900); }
+.hist-sub { font-size:12px; color:var(--gray-500); margin-top:2px;
+  overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.hist-status { font-size:12px; font-weight:600; flex:none; color:var(--gray-500); }
+.hist-status.done { color:var(--success); }
+.hist-status.failed { color:var(--warning); }
+.hist-status.running, .hist-status.detecting { color:var(--brand); }
 .name-input { flex:1; min-width:0; font-size:15px; font-weight:700;
   color:var(--gray-900); padding:7px 10px; border:1.5px solid var(--brand-light);
   border-radius:8px; background:var(--brand-50); outline:none; }
