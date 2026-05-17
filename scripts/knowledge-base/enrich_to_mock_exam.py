@@ -15,7 +15,7 @@ YAML schema（每题）：
 qc_status 说明：
   draft        — 机器生成，无已知结构问题，待人工抽查
   needs_review — 机器生成，有已知问题（图片选项/答案缺失/solution缺失）
-  verified     — 人工确认无误（由 review_mock_exam.py 写入）
+  verified     — 人工确认无误（由 tools/exam-review/ 写入）
 """
 from __future__ import annotations
 
@@ -23,6 +23,7 @@ import argparse
 import json
 import os
 import re
+import shutil
 import sys
 from collections import OrderedDict
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -107,7 +108,8 @@ class NormalizedPaper:
         self.subject: str = ""
         self.full_score: int | None = None
         self.duration: int | None = None
-        # [{id, number, type_en, score, stem, options, has_image_options}]
+        self.paper_dir: Path | None = None   # 原始试卷目录（用于定位 figures/）
+        # [{id, number, type_en, score, stem, options, has_image_options, figure_path}]
         self.questions: list[dict] = []
         # {number: {correct, solution}}
         self.answers: dict[int, dict] = {}
@@ -115,10 +117,15 @@ class NormalizedPaper:
     # ── 新格式：final.json ──
 
     @classmethod
-    def from_final(cls, data: dict, subject_hint: str = "") -> "NormalizedPaper":
+    def from_final(cls, data: dict, subject_hint: str = "",
+                   paper_dir: Path | None = None) -> "NormalizedPaper":
         p = cls()
         p.exam_name = data.get("exam", "")
         p.subject = data.get("subject", subject_hint)
+        p.paper_dir = paper_dir
+        # 卷面元数据（v2 流水线从 OCR 头部抽取写入 final.json）
+        p.full_score = data.get("full_score")
+        p.duration = data.get("duration_minutes")
 
         # 从 exam 名称解析元数据（如"2026 北京朝阳区初三一模 物理"）
         _parse_exam_name(p)
@@ -137,6 +144,7 @@ class NormalizedPaper:
                 "stem":             q.get("stem", ""),
                 "options":          opts,
                 "has_image_options": q.get("has_image_options", False),
+                "figure_path":      q.get("figure_path"),   # e.g. "figures/q06.png"
                 "source_pages":     [f"page-{q['source_page']:02d}"]
                                     if q.get("source_page") else [],
             })
@@ -494,6 +502,10 @@ def enrich_paper(paper: NormalizedPaper, cache_prefix: str) -> dict:
             item["options"] = q["options"]
             item["has_image_options"] = q["has_image_options"]
 
+        # figure：含图题目写入相对路径（相对于输出 YAML 所在目录）
+        if q.get("figure_path"):
+            item["figure"] = q["figure_path"]   # 由 _write_yaml 阶段实际复制
+
         item.update({
             "answer":           answer,
             "solution":         solution,
@@ -523,8 +535,34 @@ def enrich_paper(paper: NormalizedPaper, cache_prefix: str) -> dict:
 
 # ─── YAML 写出 ────────────────────────────────────────────────────────────────
 
-def _write_yaml(result: dict, out_path: Path) -> None:
+def _write_yaml(result: dict, out_path: Path,
+                paper_dir: Path | None = None) -> None:
     out_path.parent.mkdir(parents=True, exist_ok=True)
+
+    # 复制 figure 文件到 YAML 旁边的同名子目录
+    # YAML: knowledge-base/mock-exams/physics/beijing/2026-chaoyang-yi.yaml
+    # 图片: knowledge-base/mock-exams/physics/beijing/2026-chaoyang-yi/figures/q06.png
+    exam_slug = out_path.stem   # e.g. "2026-chaoyang-yi"
+    fig_dest_base = out_path.parent / exam_slug  # YAML旁的同名目录
+
+    if paper_dir:
+        copied = 0
+        for q in result["questions"]:
+            fig_rel = q.get("figure")   # e.g. "figures/q06.png"
+            if not fig_rel:
+                continue
+            src = paper_dir / fig_rel
+            if not src.exists():
+                print(f"  ⚠️ 图片源文件不存在，跳过: {src}", file=sys.stderr)
+                continue
+            dst = fig_dest_base / fig_rel   # e.g. .../2026-chaoyang-yi/figures/q06.png
+            dst.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(src, dst)
+            # 更新 YAML 中的 figure 路径为相对于 YAML 目录的路径
+            q["figure"] = f"{exam_slug}/{fig_rel}"
+            copied += 1
+        if copied:
+            print(f"  📷 复制 {copied} 张图片 → {fig_dest_base}/figures/", file=sys.stderr)
 
     # 统计 qc 摘要
     total = len(result["questions"])
@@ -566,7 +604,10 @@ def main():
     # ── 加载输入 ──
     if args.input:
         data = json.loads(args.input.read_text(encoding="utf-8"))
-        paper = NormalizedPaper.from_final(data, subject_hint=args.subject or "")
+        # paper_dir = final.json 的上上级（即 <exam-dir>/），用于定位 figures/
+        paper_dir = args.input.resolve().parent.parent
+        paper = NormalizedPaper.from_final(data, subject_hint=args.subject or "",
+                                           paper_dir=paper_dir)
         print(f"📄 final.json: {len(paper.questions)} 题", file=sys.stderr)
     elif args.paper and args.answer_key:
         paper_data = json.loads(args.paper.read_text(encoding="utf-8"))
@@ -586,7 +627,7 @@ def main():
 
     cache_prefix = args.cache_prefix or args.output.stem
     result = enrich_paper(paper, cache_prefix)
-    _write_yaml(result, args.output)
+    _write_yaml(result, args.output, paper_dir=paper.paper_dir)
 
     total = result["total_questions"]
     nr = sum(1 for q in result["questions"] if q["qc_status"] == "needs_review")

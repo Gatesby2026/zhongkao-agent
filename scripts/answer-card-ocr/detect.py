@@ -149,19 +149,27 @@ def detect_card(
     student_name: Optional[str] = None,
     student_id: Optional[str] = None,
     options_per_question: int = 4,
+    subjective_qnums: Optional[list[int]] = None,
+    photos_dir: Optional[Path] = None,
+    standard_yaml: Optional[Path] = None,
 ) -> CardDetectionResult:
-    """对一组答题卡照片做涂卡识别。
+    """对一组答题卡照片做涂卡识别 + 主观题区裁切。
 
     多张照片视为同一份卷子（不同区域 / 不同页），结果合并。
 
+    Args:
+        subjective_qnums: 主观题题号列表（如 [16,17,...,26]）。如果传入，
+            自动调 crop_subjective.py 裁切主观题作答区到
+            photos_dir/cropped/q{NN}.png，并在结果里加占位条目。
+        photos_dir: 用于存放 cropped/ 子目录的路径（默认取 image_paths[0] 父目录）
+
     Returns:
-        CardDetectionResult，含 student + answers 列表（answer-card.json 标准结构）
+        CardDetectionResult，含 student + answers 列表
     """
     options = tuple("ABCDE"[:options_per_question])
 
     all_lines: list[str] = []
     for img in image_paths:
-        # HEIC 自动转
         if img.suffix.lower() == ".heic":
             img = heic_to_jpg(img)
         print(f"  OCR: {img.name} ...", file=sys.stderr, flush=True)
@@ -189,6 +197,105 @@ def detect_card(
             "ocrSeen": seen,
         })
 
+    # 主观题区裁切 + 手写 OCR（如果传入了 subjective_qnums）
+    if subjective_qnums:
+        pd = photos_dir or image_paths[0].parent
+        cropped_dir = pd / "cropped"
+        cropped_dir.mkdir(parents=True, exist_ok=True)
+        try:
+            from crop_subjective import crop_subjective
+            print(f"\n  🖼️  裁切主观题作答区（共 {len(subjective_qnums)} 题）...",
+                  file=sys.stderr)
+            crop_result = crop_subjective(image_paths, subjective_qnums, cropped_dir)
+
+            # 对每张裁切好的图调讯飞手写识别（并发）
+            print(f"\n  ✍️  讯飞手写 OCR 识别（并发）...", file=sys.stderr)
+            from xfyun_ocr import recognize_handwriting
+            from concurrent.futures import ThreadPoolExecutor, as_completed
+
+            hw_results: dict[int, dict] = {}
+
+            def _hw_one(qid):
+                meta = crop_result.get(qid)
+                if not meta:
+                    return qid, None
+                img_path = cropped_dir / Path(meta["image_path"]).name
+                try:
+                    r = recognize_handwriting(img_path)
+                    return qid, r
+                except Exception as e:
+                    print(f"    ⚠️ Q{qid} 手写 OCR 失败: {e}", file=sys.stderr)
+                    return qid, {"text": "", "confidence_avg": None, "error": str(e)}
+
+            with ThreadPoolExecutor(max_workers=4) as ex:
+                futs = [ex.submit(_hw_one, q) for q in subjective_qnums
+                        if q in crop_result]
+                for fut in as_completed(futs):
+                    qid, r = fut.result()
+                    hw_results[qid] = r
+                    if r and r.get("text"):
+                        preview = r["text"][:40].replace("\n", " | ")
+                        print(f"    Q{qid}: {preview}", file=sys.stderr)
+
+            # 辅助评分（方案 B：直接看图），仅当传入 standard_yaml
+            grade_b_results: dict[int, dict] = {}
+            if standard_yaml:
+                # 采纳方案 B：qwen-vl-max 直接看裁切图 + 题干 + 标准答案辅助评分。
+                # （方案 A 即 OCR 后处理已废弃——易被标准答案带偏过度修正；
+                #  subjective_grade.correct_with_context 保留作 fallback/对照）
+                print(f"\n  🧠 辅助评分（方案 B：直接看图，qwen-vl-max 并发）...",
+                      file=sys.stderr)
+                from subjective_grade import load_paper_questions, read_and_grade
+                paper = load_paper_questions(standard_yaml)
+
+                def _grade_one(qid):
+                    q = paper.get(qid)
+                    meta = crop_result.get(qid, {})
+                    if not q or not meta:
+                        return qid, None
+                    img_path = cropped_dir / Path(meta["image_path"]).name
+                    try:
+                        return qid, read_and_grade(
+                            image_path=img_path,
+                            stem=q.get("stem", ""),
+                            std_answer=str(q.get("answer", "")),
+                            solution=q.get("solution", ""),
+                            full_score=q.get("score", 4),
+                            qtype=q.get("type", "解答"),
+                        )
+                    except Exception as e:
+                        return qid, {"error": str(e)}
+
+                with ThreadPoolExecutor(max_workers=4) as ex:
+                    futs = [ex.submit(_grade_one, q) for q in subjective_qnums
+                            if q in crop_result]
+                    for fut in as_completed(futs):
+                        qid, g = fut.result()
+                        if g:
+                            grade_b_results[qid] = g
+                        print(f"    Q{qid}: 建议 {(g or {}).get('suggestedScore','—')} 分",
+                              file=sys.stderr)
+
+            # 加到 answers
+            for qid in subjective_qnums:
+                meta = crop_result.get(qid, {})
+                hw = hw_results.get(qid) or {}
+                answers.append({
+                    "qId": f"Q{qid}",
+                    "type": "subjective",
+                    "filled": None,
+                    "handwritingText": hw.get("text") or None,
+                    "confidence": hw.get("confidence_avg"),
+                    "regionImage": meta.get("image_path"),
+                    "pageImage": meta.get("page_image"),
+                    "needsReview": True,
+                    "grade": grade_b_results.get(qid),  # 方案 B：看图辅助评分
+                })
+            answers.sort(key=lambda a: int(a["qId"][1:]))
+        except Exception as e:
+            print(f"  ⚠️ 主观题流水线失败：{e}", file=sys.stderr)
+            import traceback; traceback.print_exc(file=sys.stderr)
+
     return CardDetectionResult(
         student={"name": student_name or "", "examId": student_id or ""},
         answers=answers,
@@ -206,6 +313,12 @@ def main():
     parser.add_argument("--student-id", default="")
     parser.add_argument("--options-per-question", type=int, default=4,
                         help="每题选项数（4=ABCD 默认；5=ABCDE）")
+    parser.add_argument("--subjective-qnums", default="",
+                        help="主观题题号列表（逗号分隔），如 16,17,...,26。"
+                             "传入则自动裁切主观题作答区到 cropped/q{NN}.png")
+    parser.add_argument("--standard-yaml", type=Path,
+                        help="试卷标准答案 yaml 路径。传入则自动跑辅助评分"
+                             "（方案 A: OCR 后处理 + 方案 B: 看图阅卷）")
     parser.add_argument("--output", "-o", type=Path,
                         help="输出 answer-card.json 路径")
     parser.add_argument("--save-ocr-raw", type=Path,
@@ -218,11 +331,16 @@ def main():
             print(f"❌ 找不到 {p}", file=sys.stderr); sys.exit(1)
 
     print(f"📷 输入 {len(image_paths)} 张照片", file=sys.stderr)
+    subjective_qnums = None
+    if args.subjective_qnums:
+        subjective_qnums = [int(x) for x in args.subjective_qnums.split(",")]
     result = detect_card(
         image_paths,
         student_name=args.student_name,
         student_id=args.student_id,
         options_per_question=args.options_per_question,
+        subjective_qnums=subjective_qnums,
+        standard_yaml=args.standard_yaml,
     )
 
     out_json = {
@@ -247,10 +365,19 @@ def main():
     # stderr 输出摘要
     print(f"\n📊 识别 {result.matched_questions} 题：", file=sys.stderr)
     for a in result.answers:
-        t = "多选" if a["type"] == "multi_choice" else "单选"
-        f = a["filled"]
-        f_str = "".join(f) if isinstance(f, list) else f
-        print(f"  {a['qId']:<6} {t}  涂卡={f_str:<6}  conf={a['confidence']:.2f}",
+        t_map = {"multi_choice": "多选", "subjective": "主观", "choice": "单选"}
+        t = t_map.get(a["type"], a["type"])
+        f = a.get("filled")
+        if f is None:
+            f_str = "—"
+        elif isinstance(f, list):
+            f_str = "".join(f)
+        else:
+            f_str = str(f)
+        conf = a.get("confidence")
+        conf_str = f"{conf:.2f}" if conf is not None else "—"
+        region = a.get("regionImage", "")
+        print(f"  {a['qId']:<6} {t}  涂卡={f_str:<6}  conf={conf_str}  {region}",
               file=sys.stderr)
 
 

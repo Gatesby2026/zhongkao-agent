@@ -1,91 +1,181 @@
-"""4 个标准 JSON 输入的 TypedDict（运行时校验最低必填字段）。
+"""数据加载 + 按题号 join。
 
-详细 schema 见 docs/product/STUDENT-REPORT-FEATURE-SPEC.md §三
+输入三件套（新数据约定）：
+  - 试卷结构化:  knowledge-base/mock-exams/<subj>/beijing/<slug>.yaml
+  - 学生作答:    students/<name>/<slug>/answer-card.json
+  - 最终得分:    students/<name>/<slug>/scores.json
+  - 学生信息:    students/<name>/<slug>/student.json（可选）
+
+join 后每题一条 QView，喂给 aggregate / analyze。
 """
 from __future__ import annotations
-from typing import TypedDict, Literal, Optional
+
+import json
+import re
+from dataclasses import dataclass, field
+from pathlib import Path
+
+import yaml
 
 
-# ============ paper.json - 试卷结构化 ============
+# module 英文 → 中文（物理；其它学科按需扩展）
+MODULE_CN = {
+    "soundLightHeat": "声光热",
+    "mechanics": "力学",
+    "electricity": "电学",
+    "experiments": "实验",
+    "numbersAndExpressions": "数与式",
+    "equationsAndInequalities": "方程与不等式",
+    "functions": "函数",
+    "triangles": "三角形",
+    "quadrilaterals": "四边形",
+    "circles": "圆",
+    "geometryComprehensive": "几何综合",
+    "statisticsAndProbability": "统计与概率",
+}
 
-QuestionType = Literal[
-    "choice",                # 单项选择
-    "multi_choice",          # 多项选择
-    "fill_blank",            # 填空
-    "calculation",           # 计算题
-    "experiment",            # 实验探究
-    "essay",                 # 大题/科普/简答
-]
+CHOICE_TYPES = {"单选", "多选", "choice", "multi_choice"}
 
-
-class Option(TypedDict):
-    label: str               # "A" / "B" / ...
-    text: str
-
-
-class Question(TypedDict, total=False):
-    id: str                  # "Q12"
-    type: QuestionType
-    section: str             # "一、单项选择题"
-    score: int               # 满分
-    stem: str                # 题干（含格式如 LaTeX）
-    options: list[Option]    # 选择题才有
-    figures: list[str]       # 配图占位符
-    sourcePages: list[str]   # 来源页码
-
-
-class PaperMeta(TypedDict, total=False):
-    exam: dict               # {city, district, grade, examType, year, subject}
-    totalScore: int
-    duration: int            # 分钟
-    questionCount: int
+SUBJECT_CN = {"physics": "物理", "chinese": "语文", "math": "数学",
+              "english": "英语", "politics": "道法", "history": "历史",
+              "chemistry": "化学", "biology": "生物", "geography": "地理"}
+DISTRICT_CN = {"chaoyang": "朝阳", "dongcheng": "东城", "xicheng": "西城",
+               "haidian": "海淀", "fengtai": "丰台", "fangshan": "房山",
+               "daxing": "大兴", "shijingshan": "石景山", "tongzhou": "通州",
+               "changping": "昌平", "beijing": "北京"}
+ROUND_CN = {"yi": "一模", "er": "二模", "zhenti": "真题", "qimo": "期末",
+            "qizhong": "期中"}
 
 
-class Paper(TypedDict):
-    meta: PaperMeta
-    questions: list[Question]
+def _title_from_slug(slug: str, subject: str) -> str:
+    """students 目录名 2026-chaoyang-yi-physics → '2026朝阳一模物理'。
+    比 yaml 顶层可靠（上游 enrich 偶尔丢 year/district）。"""
+    parts = slug.split("-")
+    year = parts[0] if parts and parts[0].isdigit() else ""
+    district = next((DISTRICT_CN.get(p, "") for p in parts if p in DISTRICT_CN), "")
+    rnd = next((ROUND_CN.get(p, "") for p in parts if p in ROUND_CN), "")
+    subj_cn = SUBJECT_CN.get(subject, subject)
+    return f"{year}{district}{rnd}{subj_cn}".strip() or slug
 
 
-# ============ answer-key.json - 标准答案 ============
-
-class AnswerKeyItem(TypedDict, total=False):
-    id: str                  # "Q12"
-    correct: str | list[str] # "C" 或 ["A","B","D"] 或 ["不变","晶体","引力"]
-    correctSolution: str     # 大题：完整解答过程
-    keySteps: list[str]      # 大题：给分要点
+@dataclass
+class QView:
+    """一道题的完整视图（试卷 + 作答 + 得分 三方 join）。"""
+    num: int
+    qid: str
+    type_cn: str
+    is_choice: bool
     score: int
-    partialCreditRule: str   # 多选题计分规则
+    scored: float
+    lost: float
+    stem: str
+    options: dict | None
+    std_answer: str
+    solution: str
+    knowledge_points: list[str]
+    module: str
+    module_cn: str
+    difficulty: str
+    figure: str | None
+    student_filled: str | None
+    student_ocr_seen: str | None
+    student_handwriting: str | None
+    region_image: str | None
+    page_image: str | None
+    grade: dict | None
+
+    @property
+    def is_lost(self) -> bool:
+        return self.lost > 0
 
 
-class AnswerKey(TypedDict):
-    answers: list[AnswerKeyItem]
+@dataclass
+class ExamView:
+    student_name: str
+    student_id: str
+    subject: str
+    exam_slug: str
+    exam_title: str
+    full_score: int
+    total_scored: float
+    questions: list[QView] = field(default_factory=list)
+    raw_sections: list[dict] = field(default_factory=list)  # scores.json 原始 sections（人工填，准确）
+    kb_yaml_path: Path = None
+    student_dir: Path = None
+
+    def figure_abs(self, q: "QView") -> str | None:
+        """试卷配图绝对 file:// 路径（yaml.figure 相对 kb_yaml 目录）。"""
+        if not q.figure or self.kb_yaml_path is None:
+            return None
+        p = (self.kb_yaml_path.parent / q.figure).resolve()
+        return f"file://{p}" if p.exists() else None
 
 
-# ============ answer-card.json - 学生答题 ============
-
-class StudentAnswer(TypedDict, total=False):
-    qId: str
-    type: QuestionType
-    filled: str | list[str]  # 选择题：学生涂的字母
-    rawText: str             # 填空/计算/实验题：学生写的内容
-    confidence: float
+def _qnum(qid) -> int:
+    if isinstance(qid, int):
+        return qid
+    m = re.search(r"(\d+)", str(qid))
+    return int(m.group(1)) if m else 0
 
 
-class AnswerCard(TypedDict):
-    student: dict            # {name, examId}
-    answers: list[StudentAnswer]
+def load_exam_view(kb_yaml: Path, student_dir: Path) -> ExamView:
+    """加载并 join 三方数据。"""
+    paper = yaml.safe_load(kb_yaml.read_text(encoding="utf-8"))
+    ac = json.loads((student_dir / "answer-card.json").read_text(encoding="utf-8"))
+    scores = json.loads((student_dir / "scores.json").read_text(encoding="utf-8"))
 
+    student = dict(ac.get("student", {}))
+    sj_path = student_dir / "student.json"
+    if sj_path.exists():
+        for k, v in json.loads(sj_path.read_text(encoding="utf-8")).items():
+            student.setdefault(k, v)
 
-# ============ scores.json - 小分 ============
+    ac_by_num = {_qnum(a.get("qId")): a for a in ac.get("answers", [])}
+    sc_by_num = {_qnum(s.get("qId")): s for s in scores.get("questions", [])}
 
-class QuestionScore(TypedDict, total=False):
-    qId: str
-    scored: float            # 得分
-    fullScore: float         # 满分
-    isWrong: bool            # 完全错
-    isPartial: bool          # 部分对
+    subject = paper.get("subject", "")
+    exam_title = _title_from_slug(student_dir.name, subject)
 
+    qviews: list[QView] = []
+    for q in paper.get("questions", []):
+        num = _qnum(q.get("id"))
+        sc = sc_by_num.get(num, {})
+        a = ac_by_num.get(num, {})
+        full = sc.get("fullScore", q.get("score", 0))
+        scored = sc.get("scored", 0)
+        type_cn = q.get("type", "")
+        module = q.get("module", "")
+        filled = a.get("filled")
+        qviews.append(QView(
+            num=num, qid=f"Q{num}", type_cn=type_cn,
+            is_choice=type_cn in CHOICE_TYPES,
+            score=full, scored=scored, lost=round(full - scored, 2),
+            stem=q.get("stem", ""), options=q.get("options"),
+            std_answer=str(q.get("answer", "")),
+            solution=q.get("solution", "") or "",
+            knowledge_points=q.get("knowledge_points") or [],
+            module=module, module_cn=MODULE_CN.get(module, module or "其它"),
+            difficulty=q.get("difficulty", ""), figure=q.get("figure"),
+            student_filled=("".join(filled) if isinstance(filled, list) else filled),
+            student_ocr_seen=a.get("ocrSeen"),
+            student_handwriting=a.get("handwritingText"),
+            region_image=a.get("regionImage"),
+            page_image=a.get("pageImage"),
+            grade=a.get("grade"),
+        ))
 
-class Scores(TypedDict):
-    examTotal: dict          # {scored, fullScore}
-    questions: list[QuestionScore]
+    qviews.sort(key=lambda v: v.num)
+    return ExamView(
+        student_name=student.get("name", ""),
+        student_id=str(student.get("examId", "")),
+        subject=subject,
+        exam_slug=student_dir.name,
+        exam_title=exam_title,
+        full_score=scores.get("examTotal", {}).get(
+            "fullScore", paper.get("full_score", 0)),
+        total_scored=scores.get("examTotal", {}).get("scored", 0),
+        questions=qviews,
+        raw_sections=scores.get("sections", []),
+        kb_yaml_path=kb_yaml,
+        student_dir=student_dir,
+    )
