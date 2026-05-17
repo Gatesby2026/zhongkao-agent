@@ -113,11 +113,13 @@ def _ensure_scores(aid: str, student_dir: Path, wait_s: int = 25):
     短暂等待上传到位（家长可能正传）；超时则自动判分，不再失败。
     """
     target = student_dir / "scores.json"
+    src_marker = student_dir / ".score_source"
     uploaded = UPLOAD_ROOT / aid / "scores.json"
     waited = 0
     while waited < wait_s:
         if uploaded.exists():
             target.write_bytes(uploaded.read_bytes())
+            src_marker.write_text("teacher", encoding="utf-8")
             return
         time.sleep(3)
         waited += 3
@@ -131,6 +133,7 @@ def _ensure_scores(aid: str, student_dir: Path, wait_s: int = 25):
         raise RuntimeError(f"找不到试卷标准答案：{student_dir.name}")
     db.update_stage(aid, 3, "无小分，系统自动判分中")
     auto_grade.write_auto_scores(student_dir, Path(yaml_path))
+    src_marker.write_text("auto", encoding="utf-8")
 
 
 def _pipeline(aid: str, student_dir: Path):

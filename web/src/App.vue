@@ -328,10 +328,15 @@ const correctCnt = computed(() =>
     <!-- Step 4 报告 -->
     <div v-show="step===4 && report" class="scroll-area">
       <template v-if="report">
+        <div class="src-banner" :class="report.score_source">
+          <span v-if="report.score_source==='teacher'">✅ 教师小分（精确）</span>
+          <span v-else>🤖 AI 自动判分 · 已对照标答，主观题为智能评分；上传小分表可校准更精确</span>
+        </div>
         <div class="summary-card">
           <div class="student-name">学生：{{ report.student_name }}</div>
           <div class="exam">{{ report.exam_title }}</div>
-          <div class="score-row"><span class="score">{{ report.total_scored }}</span><span class="full">/ {{ report.full_score }}</span></div>
+          <div class="score-row"><span class="score">{{ report.total_scored }}</span><span class="full">/ {{ report.full_score }}</span>
+            <span v-if="report.score_source==='auto'" class="est">估</span></div>
           <div class="rank-hint">得分率 {{ pct(report.rate) }}% · 失分 {{ report.lost_total }} 分</div>
         </div>
         <div class="stat-row">
@@ -505,6 +510,12 @@ const correctCnt = computed(() =>
 .stage-item.active .ico::before { content:'◐'; }
 .stage-item.done { color:var(--gray-500); }
 .stage-item.done .ico::before { content:'✓'; color:var(--success); font-weight:bold; }
+.src-banner { font-size:12px; padding:8px 12px; border-radius:var(--radius-sm);
+  margin-bottom:10px; line-height:1.5; }
+.src-banner.teacher { background:var(--success-bg); color:#15803d; }
+.src-banner.auto { background:var(--accent-bg); color:#b45309; }
+.summary-card .est { font-size:11px; background:rgba(255,255,255,.25); color:#fff;
+  padding:1px 6px; border-radius:8px; align-self:center; }
 .summary-card { background:linear-gradient(135deg,var(--brand-deeper),var(--brand));
   color:#fff; border-radius:var(--radius); padding:18px; margin-bottom:12px; }
 .summary-card .student-name { font-size:13px; opacity:.9; }

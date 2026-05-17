@@ -17,6 +17,7 @@ export interface ReportResp {
   exam_slug: string; total_scored: number; full_score: number;
   rate: number; n_questions: number; n_lost: number; lost_total: number;
   modules: ModuleStat[]; wrong_questions: WrongQ[];
+  score_source: 'teacher' | 'auto';
 }
 
 async function j<T>(r: Response): Promise<T> {

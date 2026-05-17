@@ -155,7 +155,17 @@ def report_json(student_dir: Path) -> dict:
             for m in mods
         ],
         "wrong_questions": wrong,
+        "score_source": _score_source(student_dir),
     }
+
+
+def _score_source(student_dir: Path) -> str:
+    """teacher=老师小分（精确） / auto=系统自动判分（估算）。
+    无标记（reference 演示用真实小分）按 teacher。"""
+    m = student_dir / ".score_source"
+    if m.exists():
+        return m.read_text(encoding="utf-8").strip() or "teacher"
+    return "teacher"
 
 
 # ---------- 试卷原卷 PDF ----------
