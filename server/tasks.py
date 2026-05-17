@@ -32,6 +32,27 @@ UPLOAD_ROOT = ROOT / "server" / "uploads"
 _lock = threading.Lock()
 
 
+_CHOICE_TYPES = {"单选", "多选", "choice", "multi_choice"}
+
+
+def _subjective_qnums(yaml_path: Path) -> list[int]:
+    """从 KB 试卷 yaml 推导主观题题号（非选择题型）。
+
+    驱动 detect_card 的 Phase B（裁切+手写OCR）/ Phase C（看图评分）。
+    """
+    import re
+    import yaml as _yaml
+    d = _yaml.safe_load(yaml_path.read_text(encoding="utf-8"))
+    out: list[int] = []
+    for q in d.get("questions", []):
+        if q.get("type") in _CHOICE_TYPES:
+            continue
+        m = re.search(r"\d+", str(q.get("id", "")))
+        if m:
+            out.append(int(m.group()))
+    return sorted(set(out))
+
+
 def _imgs(photos_dir: Path) -> list[Path]:
     return sorted(
         p for p in photos_dir.iterdir()
@@ -145,7 +166,19 @@ def _pipeline(aid: str, student_dir: Path):
 
             photos_dir = student_dir / "answer-card-photos"
             imgs = _imgs(photos_dir)
-            res = detect.detect_card(imgs, photos_dir=photos_dir)
+
+            # 接入完整技能流水线：Phase A 选择题缺字母法 +
+            # Phase B 主观题腾讯云方框+讯飞手写裁切 +
+            # Phase C qwen-vl-max 看图阅卷（产 grade.missedPoints 供报告错因）
+            yaml_path = exam_match.kb_yaml_for_slug(student_dir.name)
+            if not yaml_path:
+                raise RuntimeError(f"找不到试卷标准答案：{student_dir.name}")
+            subj_qnums = _subjective_qnums(Path(yaml_path))
+            db.update_stage(aid, 2, "识别答题卡作答（选择题+主观题裁切）")
+            res = detect.detect_card(
+                imgs, photos_dir=photos_dir,
+                subjective_qnums=subj_qnums,
+                standard_yaml=Path(yaml_path))
 
             # 学生名以 student.json 为准（card_meta 表头识别 / 家长确认页纠正，
             # 均比答题卡涂卡区 OCR 可靠），始终覆盖 detect 结果

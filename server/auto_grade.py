@@ -2,7 +2,12 @@
 
 设计：小分表可选。家长没传时系统自动判：
   - 选择题/判断：answer-card OCR 涂卡 vs KB 标准答案 → 确定性判分
-  - 主观题：qwen-vl-max 看答题卡照片 + 题干 + 标答 → 估分（批量一次调用）
+  - 主观题：直接复用 answer-card.json 里 Phase C（qwen-vl-max 看图阅卷，
+    技能「方案 B」）已产出的 grade.suggestedScore —— 不再单独二次判分
+
+为什么不再二次判分：scores.json 与报告引用的 grade 必须同源，
+否则会出现「scores 说扣 1 分、grade.missedPoints 为空」的系统性矛盾
+（skill_student_learning_report P0 红线 #1：一处矛盾 → 整份报告信任归零）。
 
 老师小分（若有）才是权威；自动判分仅在无小分时兜底，结果标注 auto。
 """
@@ -10,7 +15,6 @@ from __future__ import annotations
 
 import json
 import re
-import sys
 from pathlib import Path
 
 import yaml
@@ -37,99 +41,16 @@ def _qnum(qid) -> int:
     return int(m.group(0)) if m else 0
 
 
-def _grade_subjective_batch(photos: list[Path], subj_qs: list[dict]) -> dict:
-    """一次 qwen-vl-max 调用，看全部答题卡照片，给所有主观题估分。"""
-    sys.path.insert(0, str(SR_DIR))
-    import subjective_grade as sg  # noqa
-
-    client = sg._client()
-    import base64
-    content = []
-    for p in photos[:6]:
-        b = base64.b64encode(p.read_bytes()).decode()
-        content.append({"type": "image_url",
-                         "image_url": {"url": f"data:image/jpeg;base64,{b}"}})
-
-    qlist = "\n".join(
-        f"- 题号{_qnum(q['id'])}（{q.get('type','')}，{q.get('score',0)}分）"
-        f" 标答：{str(q.get('answer',''))[:200]}"
-        f" 解析：{str(q.get('solution',''))[:200]}"
-        for q in subj_qs
-    )
-    prompt = f"""这是学生的中考物理答题卡照片（多页）。请逐题在图中找到该题的学生作答，
-对照标准答案评分。**忠实学生原作**：没写就 0 分，写错不美化；评分仅供参考。
-
-需评分的主观题：
-{qlist}
-
-严格输出 JSON：
-{{"grades":[{{"qnum":16,"suggestedScore":2,"scoreReason":"命中X要点，缺Y","needsTeacherReview":false}}, ...]}}
-每题都要有；找不到作答按 0 分并 needsTeacherReview=true。"""
-    content.append({"type": "text", "text": prompt})
-
-    resp = client.chat.completions.create(
-        model="qwen-vl-max",
-        messages=[{"role": "user", "content": content}],
-        temperature=0.0, max_tokens=4096,
-        response_format={"type": "json_object"}, timeout=180,
-    )
-    raw = resp.choices[0].message.content.strip()
-    raw = re.sub(r"^```(?:json)?\s*|\s*```$", "", raw, flags=re.S).strip()
-    data = None
-    try:
-        data = json.loads(raw)
-    except json.JSONDecodeError:
-        m = re.search(r"(\{.*\}|\[.*\])", raw, re.S)
-        if m:
-            try:
-                data = json.loads(m.group(0))
-            except json.JSONDecodeError:
-                data = None
-
-    # 兼容多形状：[{...}] / {"grades":[...]} / {"16":{...}} / 单 {...}
-    grades_list = []
-    if isinstance(data, list):
-        grades_list = data
-    elif isinstance(data, dict):
-        if isinstance(data.get("grades"), list):
-            grades_list = data["grades"]
-        elif "qnum" in data or "suggestedScore" in data:
-            grades_list = [data]
-        else:
-            for k, v in data.items():
-                if isinstance(v, dict):
-                    v.setdefault("qnum", k)
-                    grades_list.append(v)
-
-    out = {}
-    for g in grades_list:
-        if not isinstance(g, dict):
-            continue
-        qn = g.get("qnum") or g.get("qid") or g.get("num") or 0
-        m2 = re.search(r"\d+", str(qn))
-        if m2:
-            out[int(m2.group(0))] = g
-    return out
-
-
 def auto_grade(student_dir: Path, yaml_path: Path) -> dict:
-    """→ scores.json dict（含 _auto 标记 + 逐题 _reason）。"""
+    """→ scores.json dict（含 _auto 标记 + 逐题 _reason）。
+
+    选择题：涂卡 vs KB 标答确定性判分。
+    主观题：直接取 answer-card.json 里 Phase C 已写入的 grade.suggestedScore
+            （与报告错因引用的 grade.missedPoints 同源，保证不矛盾）。
+    """
     ac = json.loads((student_dir / "answer-card.json").read_text(encoding="utf-8"))
     ac_by_num = {_qnum(a.get("qId")): a for a in ac.get("answers", [])}
     qs = _load_yaml_questions(yaml_path)
-
-    subj_qs = [q for q in qs if q.get("type") not in CHOICE_TYPES]
-    photos = sorted(
-        p for p in (student_dir / "answer-card-photos").iterdir()
-        if p.is_file() and p.suffix.lower() in (".jpg", ".jpeg", ".png")
-    )
-    subj_grades = {}
-    if subj_qs and photos:
-        try:
-            subj_grades = _grade_subjective_batch(photos, subj_qs)
-        except Exception as e:
-            subj_grades = {}
-            print(f"  ⚠️ 主观题自动判分失败，记 0 待复核：{e}", file=sys.stderr)
 
     questions = []
     total = 0.0
@@ -139,21 +60,27 @@ def auto_grade(student_dir: Path, yaml_path: Path) -> dict:
         full = float(q.get("score", 0))
         full_total += full
         qtype = q.get("type", "")
+        a = ac_by_num.get(num, {})
         if qtype in CHOICE_TYPES:
             std = _norm(q.get("answer", ""))
-            stu = _norm(ac_by_num.get(num, {}).get("filled", ""))
+            stu = _norm(a.get("filled", ""))
             scored = full if (std and stu and std == stu) else 0.0
             reason = f"涂卡={stu or '空'} 标答={std} → {'对' if scored else '错'}"
             review = not stu
         else:
-            g = subj_grades.get(num, {})
+            # 复用 Phase C（detect_card 看图阅卷）已产出的 grade
+            g = a.get("grade") or {}
             sc = g.get("suggestedScore", 0)
             try:
                 scored = max(0.0, min(full, float(sc)))
             except (TypeError, ValueError):
                 scored = 0.0
-            reason = g.get("scoreReason", "未找到作答" if not g else "")
-            review = bool(g.get("needsTeacherReview", True))
+            if not g:
+                reason = "Phase C 未产出评分（裁切/看图失败），记 0 待复核"
+                review = True
+            else:
+                reason = g.get("scoreReason", "")
+                review = bool(g.get("needsTeacherReview", True))
         total += scored
         questions.append({
             "qId": f"Q{num}", "scored": _i(scored), "fullScore": _i(full),
