@@ -29,6 +29,7 @@ ROOT = Path(__file__).resolve().parents[1]
 REF_STUDENT_DIR = ROOT / "students" / "jiaxiaoqi" / "2026-chaoyang-yi-physics"
 REF_EXAM_SLUG = "2026-chaoyang-yi-physics"
 UPLOAD_ROOT = ROOT / "server" / "uploads"
+WEB_STUDENTS = ROOT / "students" / "_web"   # H5 上传产生的学生目录
 PAPER_OUT = ROOT / "out" / "papers"
 
 app = FastAPI(title="中考一模学情分析 API", version="0.1")
@@ -54,17 +55,40 @@ def health():
 @app.post("/api/analyses")
 async def create_analysis(files: list[UploadFile] = File(default=[])):
     aid = uuid.uuid4().hex[:12]
-    # 存上传原图（Phase 1 仅留痕，分析走 reference）
-    updir = UPLOAD_ROOT / aid
-    updir.mkdir(parents=True, exist_ok=True)
-    for i, f in enumerate(files, 1):
-        ext = (Path(f.filename or "").suffix or ".jpg").lower()
-        (updir / f"page-{i:02d}{ext}").write_bytes(await f.read())
 
+    if files:
+        # Phase 2：为本次分析建独立学生目录，真实 OCR 上传的答题卡照片
+        sdir = WEB_STUDENTS / aid / REF_EXAM_SLUG
+        photos = sdir / "answer-card-photos"
+        photos.mkdir(parents=True, exist_ok=True)
+        saved = 0
+        for f in files:
+            data = await f.read()
+            if len(data) < 1024:        # 跳过空/损坏文件
+                continue
+            ext = (Path(f.filename or "").suffix or ".jpg").lower()
+            if ext not in (".jpg", ".jpeg", ".png", ".heic"):
+                ext = ".jpg"
+            saved += 1
+            (photos / f"page-{saved:02d}{ext}").write_bytes(data)
+        if saved == 0:
+            raise HTTPException(400, "未收到有效答题卡图片")
+        # 考试公共数据（试卷 yaml）+ 小分暂沿用 reference（exam 自动识别/Excel 解析待定）
+        for fn in ("scores.json", "student.json"):
+            src = REF_STUDENT_DIR / fn
+            if src.exists():
+                (sdir / fn).write_bytes(src.read_bytes())
+        db.create_analysis(aid, "（待识别）", REF_EXAM_SLUG, str(sdir))
+        tasks.submit(aid, sdir, ocr_photos=True)
+        return {"id": aid, "status": "queued",
+                "exam_slug": REF_EXAM_SLUG, "uploaded": len(files),
+                "mode": "real-ocr"}
+
+    # 无上传：纯 reference 演示（Phase 1 行为）
     db.create_analysis(aid, "贾小淇", REF_EXAM_SLUG, str(REF_STUDENT_DIR))
-    tasks.submit(aid, REF_STUDENT_DIR)
+    tasks.submit(aid, REF_STUDENT_DIR, ocr_photos=False)
     return {"id": aid, "status": "queued",
-            "exam_slug": REF_EXAM_SLUG, "uploaded": len(files)}
+            "exam_slug": REF_EXAM_SLUG, "uploaded": 0, "mode": "reference"}
 
 
 # ---------- 2. 上传小分表（可选）----------
