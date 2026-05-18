@@ -264,26 +264,72 @@ const correctCnt = computed(() =>
     <!-- Step 0 首屏引导 -->
     <div v-show="step===0" class="scroll-area">
       <div class="home-hero">
-        <div class="home-emoji">📊</div>
+        <div class="home-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="5" y="3.5" width="14" height="17" rx="2.2"/>
+            <path d="M9.2 3.5h5.6v2.4H9.2z"/>
+            <path d="M9 16.5v-3M12 16.5v-5.5M15 16.5v-2"/>
+          </svg>
+        </div>
         <div class="home-h1">中考一模学情分析</div>
         <div class="home-sub">拍下孩子的答题卡，AI 自动还原失分点，<br>给出每道错题的原因与提分建议</div>
       </div>
 
       <div class="home-flow">
-        <div class="flow-item"><span class="flow-n">1</span>拍答题卡</div>
-        <div class="flow-arrow">→</div>
-        <div class="flow-item"><span class="flow-n">2</span>确认考试</div>
-        <div class="flow-arrow">→</div>
-        <div class="flow-item"><span class="flow-n">3</span>AI 分析</div>
-        <div class="flow-arrow">→</div>
-        <div class="flow-item"><span class="flow-n">4</span>看报告</div>
+        <div class="flow-item">
+          <span class="flow-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3.5 9A2 2 0 0 1 5.5 7h1.6l1.1-1.7h7.6L17 7h1.5a2 2 0 0 1 2 2v8.5a2 2 0 0 1-2 2h-13a2 2 0 0 1-2-2z"/>
+            <circle cx="12" cy="13" r="3.1"/></svg></span>拍答题卡
+        </div>
+        <div class="flow-link"></div>
+        <div class="flow-item">
+          <span class="flow-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7.5 3.5h6l4.5 4.5v11a1.6 1.6 0 0 1-1.6 1.6H7.5A1.6 1.6 0 0 1 5.9 19V5.1A1.6 1.6 0 0 1 7.5 3.5z"/>
+            <path d="M13.5 3.5V8h4.5"/><path d="M9 14.3l2 2 3.8-4"/></svg></span>确认考试
+        </div>
+        <div class="flow-link"></div>
+        <div class="flow-item">
+          <span class="flow-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M10.5 3.5l1.9 4.8 4.8 1.9-4.8 1.9-1.9 4.8-1.9-4.8L3.8 10.2 8.6 8.3z"/>
+            <path d="M17.5 14l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/></svg></span>AI 分析
+        </div>
+        <div class="flow-link"></div>
+        <div class="flow-item">
+          <span class="flow-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4.5 19.5h15"/><rect x="6.2" y="12" width="3" height="5.5" rx="0.7"/>
+            <rect x="10.8" y="8" width="3" height="9.5" rx="0.7"/>
+            <rect x="15.4" y="4.5" width="3" height="13" rx="0.7"/></svg></span>看报告
+        </div>
       </div>
 
       <div class="card">
         <div class="section-title" style="margin-bottom:8px">开始前请准备</div>
-        <div class="prep-li">📷 答题卡全部页（含「考生须知页」，上面印有考试名称）</div>
-        <div class="prep-li">💡 拍照光线均匀、四角入框、字迹清晰</div>
-        <div class="prep-li">📄 小分表（可选）——没有也行，系统自动判分</div>
+        <div class="prep-li">
+          <svg class="prep-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3.5 9A2 2 0 0 1 5.5 7h1.6l1.1-1.7h7.6L17 7h1.5a2 2 0 0 1 2 2v8.5a2 2 0 0 1-2 2h-13a2 2 0 0 1-2-2z"/>
+            <circle cx="12" cy="13" r="3.1"/></svg>
+          答题卡全部页（含「考生须知页」，上面印有考试名称）
+        </div>
+        <div class="prep-li">
+          <svg class="prep-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3.8"/>
+            <path d="M12 3.5v2M12 18.5v2M3.5 12h2M18.5 12h2M6 6l1.4 1.4M16.6 16.6 18 18M18 6l-1.4 1.4M7.4 16.6 6 18"/></svg>
+          拍照光线均匀、四角入框、字迹清晰
+        </div>
+        <div class="prep-li">
+          <svg class="prep-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="4" y="5" width="16" height="14" rx="2"/>
+            <path d="M4 10h16M10 5v14"/></svg>
+          小分表（可选）——没有也行，系统自动判分
+        </div>
       </div>
 
       <button class="btn btn-primary" style="width:100%;margin-top:4px"
@@ -714,20 +760,29 @@ const correctCnt = computed(() =>
 .progress-bar { height:100%; border-radius:6px; background:var(--brand);
   transition:width .5s ease; }
 .eta-hint { font-size:12px; color:var(--gray-500); margin-bottom:16px; }
-.home-hero { text-align:center; padding:20px 12px 18px; }
-.home-emoji { font-size:48px; line-height:1; }
-.home-h1 { font-size:21px; font-weight:800; color:var(--gray-900); margin:12px 0 8px; }
+.home-hero { text-align:center; padding:22px 12px 18px; }
+.home-badge { width:62px; height:62px; margin:0 auto; border-radius:50%;
+  background:var(--brand-50); color:#5E8DEA;
+  display:flex; align-items:center; justify-content:center;
+  box-shadow:0 0 0 7px rgba(94,141,234,0.05); }
+.home-badge svg { width:30px; height:30px; }
+.home-h1 { font-size:21px; font-weight:800; color:var(--gray-900); margin:15px 0 8px; }
 .home-sub { font-size:13px; color:var(--gray-600); line-height:1.7; }
-.home-flow { display:flex; align-items:center; justify-content:space-between;
-  background:var(--brand-50); border-radius:var(--radius); padding:12px 8px;
+.home-flow { display:flex; align-items:flex-start; justify-content:space-between;
+  background:var(--brand-50); border-radius:var(--radius); padding:15px 6px;
   margin-bottom:14px; }
-.flow-item { display:flex; flex-direction:column; align-items:center; gap:4px;
-  font-size:12px; color:var(--gray-700); flex:1; }
-.flow-n { width:22px; height:22px; border-radius:50%; background:var(--brand);
-  color:#fff; font-size:12px; font-weight:700;
-  display:flex; align-items:center; justify-content:center; }
-.flow-arrow { color:var(--brand-light); font-size:13px; flex:none; }
-.prep-li { font-size:13px; color:var(--gray-700); line-height:2; }
+.flow-item { display:flex; flex-direction:column; align-items:center; gap:7px;
+  font-size:12px; color:var(--gray-600); flex:1; text-align:center; }
+.flow-ico { width:38px; height:38px; border-radius:12px;
+  background:var(--surface); color:#5E8DEA;
+  display:flex; align-items:center; justify-content:center;
+  box-shadow:0 1px 3px rgba(30,58,138,0.07); }
+.flow-ico svg { width:21px; height:21px; }
+.flow-link { flex:0 0 14px; height:2px; margin-top:18px;
+  background:repeating-linear-gradient(90deg,#C7D9F5 0 4px,transparent 4px 7px); }
+.prep-li { display:flex; align-items:flex-start; gap:9px;
+  font-size:13px; color:var(--gray-700); line-height:1.55; padding:6px 0; }
+.prep-ico { width:18px; height:18px; flex:none; color:#8FA9D8; margin-top:1px; }
 .hist-row { display:flex; align-items:center; gap:10px;
   background:var(--surface); border:1px solid var(--gray-200);
   border-radius:var(--radius); padding:12px 14px; margin-bottom:8px; }
