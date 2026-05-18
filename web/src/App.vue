@@ -29,13 +29,13 @@ const STAGES = [
   '生成知识点提分建议',
 ]
 
-const stepperSteps = ['答题卡', '确认', '分析', '报告']
-// 真实旅程阶段（1..4），confirm 是 step1 子阶段、判分属"确认"范畴
+// 方案 B：答题卡（上传+确认合并单页）→ 小分 → 分析 → 报告
+const stepperSteps = ['答题卡', '小分', '分析', '报告']
 const journeyStage = computed(() => {
   if (step.value === 0) return 0
-  if (step.value === 1) return phase.value === 'confirm' ? 2 : 1
-  if (step.value === 2) return 2
-  if (step.value === 3) return 3
+  if (step.value === 1) return 1             // 上传/识别/确认 同属"答题卡"单页
+  if (step.value === 2) return 2             // 小分/判分方式
+  if (step.value === 3) return 3             // 分析中
   return 4                                    // step 4 报告
 })
 function stepState(n: number) {
@@ -187,7 +187,9 @@ const NEXT_LABEL = computed(() => {
   return '请稍候…'
 })
 const nextDisabled = computed(() =>
-  step.value === 1 && phase.value === 'detecting')
+  step.value === 1 && (
+    phase.value === 'detecting' ||
+    (phase.value === 'pick' && !photos.value.length)))
 
 const progressPct = computed(() => {
   const n = STAGES.length
@@ -346,43 +348,44 @@ const correctCnt = computed(() =>
               @click="goStart">开始分析 →</button>
     </div>
 
-    <!-- Step 1 上传答题卡 -->
+    <!-- Step 1 答题卡：上传 + 识别 + 确认 同页渐进展开 -->
     <div v-show="step===1" class="scroll-area">
-      <!-- 1a 选图 -->
-      <template v-if="phase==='pick'">
-        <div class="section-title">上传答题卡</div>
-        <div class="section-desc">拍照或从相册选择，可多张（含「考生须知页」——上面印有考试名称）</div>
-        <label class="upload-area">
-          <div class="big-icon">📷</div>
-          <div style="font-weight:600;color:var(--gray-700)">拍照或上传图片</div>
-          <div class="hint">支持 JPG/PNG/HEIC · 单张 ≤ 10 MB</div>
-          <input type="file" accept="image/*" multiple hidden @change="onPick">
-          <span class="btn btn-primary btn-sm" style="margin-top:12px;display:inline-flex">+ 选择文件</span>
-        </label>
-        <div v-if="photos.length" style="margin-top:14px">
-          <div class="section-title" style="margin-bottom:6px">已选 {{ photos.length }} 张</div>
-          <div class="photo-grid">
-            <div v-for="(u,i) in photoUrls" :key="i" class="photo-cell" :style="{backgroundImage:`url(${u})`}">
-              <div class="del" @click.stop="delPhoto(i)">×</div>
-              <div class="label">{{ i+1 }}</div>
-            </div>
+      <div class="section-title">上传答题卡</div>
+      <div class="section-desc">拍照或从相册选择，可多张（含「考生须知页」——上面印有考试名称）</div>
+
+      <!-- 上传区：仅"选图"阶段显示大拖拽框 -->
+      <label v-if="phase==='pick'" class="upload-area">
+        <div class="big-icon">📷</div>
+        <div style="font-weight:600;color:var(--gray-700)">拍照或上传图片</div>
+        <div class="hint">支持 JPG/PNG/HEIC · 单张 ≤ 10 MB</div>
+        <input type="file" accept="image/*" multiple hidden @change="onPick">
+        <span class="btn btn-primary btn-sm" style="margin-top:12px;display:inline-flex">+ 选择文件</span>
+      </label>
+
+      <!-- 已选缩略图：所有阶段保持可见，单页连贯 -->
+      <div v-if="photos.length" style="margin-top:14px">
+        <div class="section-title" style="margin-bottom:6px">已选 {{ photos.length }} 张</div>
+        <div class="photo-grid">
+          <div v-for="(u,i) in photoUrls" :key="i" class="photo-cell" :style="{backgroundImage:`url(${u})`}">
+            <div v-if="phase==='pick'" class="del" @click.stop="delPhoto(i)">×</div>
+            <div class="label">{{ i+1 }}</div>
           </div>
         </div>
-      </template>
+      </div>
 
-      <!-- 1b 识别中 -->
-      <template v-else-if="phase==='detecting'">
-        <div class="processing">
-          <div class="spinner"></div>
-          <div class="section-title" style="margin-bottom:4px">正在识别考试信息…</div>
-          <div class="section-desc">读取答题卡顶部标题（区/科目/年份）+ 学生信息 + 卷面完整性</div>
-        </div>
-      </template>
+      <!-- 识别中：内联进度（缩略图仍在上方） -->
+      <div v-if="phase==='detecting'" class="card"
+           style="text-align:center;padding:24px 16px;margin-top:14px">
+        <div class="spinner"></div>
+        <div class="section-title" style="margin:10px 0 4px">正在识别考试信息…</div>
+        <div class="section-desc" style="margin:0">
+          读取顶部标题（区/科目/年份）+ 学生信息 + 卷面完整性</div>
+      </div>
 
-      <!-- 1c 确认 -->
+      <!-- 识别结果：同页展开核对 + 确认 -->
       <template v-else-if="phase==='confirm'">
-        <div class="section-title">请确认考试信息</div>
-        <div class="section-desc">系统已从答题卡识别，确认无误后继续</div>
+        <div class="section-title" style="margin-top:18px">请核对识别结果</div>
+        <div class="section-desc">下方为系统识别内容，确认无误后点底部「确认无误，下一步」</div>
         <div class="card">
           <div style="font-size:17px;font-weight:700;margin-bottom:8px">
             {{ detected?.exam_title || (detected?.year+' '+detected?.district+' '+detected?.exam_type+' '+detected?.subject) }}
@@ -412,20 +415,19 @@ const correctCnt = computed(() =>
         <button class="btn btn-ghost btn-sm" style="width:100%" @click="retryUpload">重新选择图片上传</button>
       </template>
 
-      <!-- 1d 识别失败 -->
-      <template v-else-if="phase==='failed'">
-        <div class="card state-card state-fail">
-          <div class="state-emoji">📷</div>
-          <div class="section-title" style="margin:8px 0 6px">没能识别出考试信息</div>
-          <div style="font-size:13px;color:var(--gray-600);line-height:1.7">
-            {{ detectErr }}
-          </div>
-          <div style="font-size:12px;color:var(--gray-500);margin-top:12px">
-            关键：拍清「考生须知页」最顶部的标题行<br>
-            如「北京市朝阳区九年级综合练习（一）物理答题卡」
-          </div>
+      <!-- 识别失败：内联错误 -->
+      <div v-else-if="phase==='failed'" class="card state-card state-fail"
+           style="margin-top:14px">
+        <div class="state-emoji">📷</div>
+        <div class="section-title" style="margin:8px 0 6px">没能识别出考试信息</div>
+        <div style="font-size:13px;color:var(--gray-600);line-height:1.7">
+          {{ detectErr }}
         </div>
-      </template>
+        <div style="font-size:12px;color:var(--gray-500);margin-top:12px">
+          关键：拍清「考生须知页」最顶部的标题行<br>
+          如「北京市朝阳区九年级综合练习（一）物理答题卡」
+        </div>
+      </div>
     </div>
 
     <!-- Step 2 小分（二选一）-->
@@ -541,7 +543,7 @@ const correctCnt = computed(() =>
     </div>
 
     <!-- 底部按钮 -->
-    <div v-show="step!==0 && step!==3 && !(step===1 && phase==='detecting')" class="action-bar">
+    <div v-show="step!==0 && step!==3" class="action-bar">
       <button v-if="step===4 || step===2" class="btn btn-ghost btn-sm btn-secondary" @click="prev">
         {{ step===4 ? '重新开始' : '上一步' }}
       </button>
