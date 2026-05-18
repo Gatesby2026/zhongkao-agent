@@ -1,10 +1,8 @@
 <script setup lang="ts">
-import { ref, computed, onUnmounted, onMounted } from 'vue'
+import { ref, computed, onUnmounted } from 'vue'
 import { api, type ReportResp } from './api'
 
 const step = ref(0)                       // 0 首屏 1 上传 2 小分 3 分析 4 报告
-const history = ref<any[]>([])
-const historyLoading = ref(false)
 // step1 子阶段：pick 选图 / detecting 识别中 / confirm 确认 / failed 识别失败
 const phase = ref<'pick'|'detecting'|'confirm'|'failed'>('pick')
 const detectErr = ref('')
@@ -116,34 +114,6 @@ function goStart() {            // 首屏 → 上传流程
   step.value = 1
 }
 
-async function loadHistory() {
-  historyLoading.value = true
-  try {
-    const r = await api.listAnalyses()
-    history.value = r.items || []
-  } catch { history.value = [] }
-  finally { historyLoading.value = false }
-}
-
-async function openHistoryItem(it: any) {
-  if (it.status !== 'done') return
-  analysisId.value = it.id
-  try {
-    report.value = await api.report(it.id)
-    step.value = 4
-  } catch (e: any) { errorMsg.value = '报告加载失败：' + e.message }
-}
-
-const STATUS_CN: Record<string, string> = {
-  detecting: '识别中', ready_confirm: '待确认', running: '分析中',
-  done: '已完成', failed: '失败',
-}
-function fmtDate(ts: number) {
-  const d = new Date(ts * 1000)
-  const p = (n: number) => String(n).padStart(2, '0')
-  return `${d.getMonth() + 1}-${p(d.getDate())} ${p(d.getHours())}:${p(d.getMinutes())}`
-}
-
 async function onNext() {       // 底部主按钮
   errorMsg.value = ''
   if (step.value === 1) {
@@ -170,7 +140,7 @@ async function onNext() {       // 底部主按钮
 }
 
 function prev() {
-  if (step.value === 4) { resetToStart(); loadHistory(); return }
+  if (step.value === 4) { resetToStart(); return }
   if (step.value === 2) { step.value = 1; phase.value = 'confirm'; return }
   if (step.value === 1) { resetToStart(); return }
 }
@@ -203,7 +173,6 @@ function startPolling() {
   tick()
   pollTimer = window.setInterval(tick, 2500)
 }
-onMounted(loadHistory)
 onUnmounted(() => clearInterval(pollTimer))
 
 const NEXT_LABEL = computed(() => {
@@ -332,29 +301,49 @@ const correctCnt = computed(() =>
         </div>
       </div>
 
-      <button class="btn btn-primary" style="width:100%;margin-top:4px"
-              @click="goStart">开始分析 →</button>
-
-      <div class="section-title" style="margin:22px 0 8px">历史报告</div>
-      <div v-if="historyLoading" class="section-desc">加载中…</div>
-      <div v-else-if="!history.length" class="card"
-           style="text-align:center;color:var(--gray-500);font-size:13px">
-        还没有分析记录，点上方开始第一次分析
-      </div>
-      <div v-else>
-        <div v-for="it in history" :key="it.id" class="hist-row"
-             :class="{ clickable: it.status==='done' }"
-             @click="openHistoryItem(it)">
-          <div class="hist-main">
-            <div class="hist-name">{{ it.student_name || '（未命名）' }}</div>
-            <div class="hist-sub">{{ it.exam_slug }} · {{ fmtDate(it.created_at) }}</div>
+      <div class="card">
+        <div class="section-title" style="margin-bottom:4px">答题卡怎么拍（示意）</div>
+        <div class="section-desc" style="margin-bottom:10px">
+          物理常见 4 页（2 张纸正反面）；务必含顶部标题行</div>
+        <div class="sample-pages">
+          <div class="sample-page">
+            <div class="schem">
+              <div class="schem-title">北京市 ⬤⬤ 区九年级综合练习（一）物理答题卡</div>
+              <div class="schem-row"><span class="schem-k">姓名</span><span class="schem-blur">░░░</span>
+                <span class="schem-k">准考证</span><span class="schem-blur">░░░░░</span></div>
+              <div class="schem-grid"><i v-for="n in 12" :key="n"></i></div>
+              <div class="schem-lines"><b></b><b></b><b></b></div>
+            </div>
+            <div class="cap">第 1 页 · 含标题行</div>
           </div>
-          <div class="hist-status" :class="it.status">
-            {{ STATUS_CN[it.status] || it.status }}
-            <span v-if="it.status==='done'" style="margin-left:4px">›</span>
+          <div class="sample-page">
+            <div class="schem">
+              <div class="schem-lines tall"><b></b><b></b><b></b><b></b><b></b></div>
+              <div class="schem-grid"><i v-for="n in 8" :key="n"></i></div>
+              <div class="schem-lines"><b></b><b></b></div>
+            </div>
+            <div class="cap">第 2 页 · 作答区</div>
           </div>
         </div>
+        <div class="sample-tips">✓ 务必含顶部「北京市XX区…答题卡」标题行<br>✓ 光线均匀、四角入框、字迹清晰</div>
       </div>
+
+      <div class="card sample-report" @click="openPdf('/sample-report.pdf','示例学情报告（脱敏）')">
+        <div class="sr-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7.5 3.5h6l4.5 4.5v11a1.6 1.6 0 0 1-1.6 1.6H7.5A1.6 1.6 0 0 1 5.9 19V5.1A1.6 1.6 0 0 1 7.5 3.5z"/>
+            <path d="M13.5 3.5V8h4.5"/><path d="M9 12.5h6M9 15.5h6M9 18h4"/></svg>
+        </div>
+        <div class="sr-txt">
+          <div class="sr-h">看一份示例报告</div>
+          <div class="sr-d">脱敏样例：失分诊断 + 逐题精析 + 提分建议</div>
+        </div>
+        <div class="sr-arrow">›</div>
+      </div>
+
+      <button class="btn btn-primary" style="width:100%;margin-top:4px"
+              @click="goStart">开始分析 →</button>
     </div>
 
     <!-- Step 1 上传答题卡 -->
@@ -363,30 +352,6 @@ const correctCnt = computed(() =>
       <template v-if="phase==='pick'">
         <div class="section-title">上传答题卡</div>
         <div class="section-desc">拍照或从相册选择，可多张（含「考生须知页」——上面印有考试名称）</div>
-        <div class="sample-card">
-          <div class="sample-label">📋 示意（脱敏）：物理常见 4 页（2 张纸正反面）</div>
-          <div class="sample-pages">
-            <div class="sample-page">
-              <div class="schem">
-                <div class="schem-title">北京市 ⬤⬤ 区九年级综合练习（一）物理答题卡</div>
-                <div class="schem-row"><span class="schem-k">姓名</span><span class="schem-blur">░░░</span>
-                  <span class="schem-k">准考证</span><span class="schem-blur">░░░░░</span></div>
-                <div class="schem-grid"><i v-for="n in 12" :key="n"></i></div>
-                <div class="schem-lines"><b></b><b></b><b></b></div>
-              </div>
-              <div class="cap">第 1 页 · 含标题行</div>
-            </div>
-            <div class="sample-page">
-              <div class="schem">
-                <div class="schem-lines tall"><b></b><b></b><b></b><b></b><b></b></div>
-                <div class="schem-grid"><i v-for="n in 8" :key="n"></i></div>
-                <div class="schem-lines"><b></b><b></b></div>
-              </div>
-              <div class="cap">第 2 页 · 作答区</div>
-            </div>
-          </div>
-          <div class="sample-tips">✓ 务必含顶部「北京市XX区…答题卡」标题行<br>✓ 光线均匀、四角入框、字迹清晰</div>
-        </div>
         <label class="upload-area">
           <div class="big-icon">📷</div>
           <div style="font-weight:600;color:var(--gray-700)">拍照或上传图片</div>
@@ -468,7 +433,7 @@ const correctCnt = computed(() =>
       <div class="section-title">如何给主观题判分？</div>
       <div class="section-desc">选择题系统自动判（准）。主观题二选一：</div>
 
-      <div class="opt-card" :class="{sel: scoreMode==='teacher'}" @click="scoreMode='teacher'">
+      <div class="opt-card" :class="{'is-sel': scoreMode==='teacher'}" @click="scoreMode='teacher'">
         <div class="opt-head"><span class="opt-radio"></span>
           <b>我有老师小分表</b><span class="opt-tag green">最精确</span></div>
         <div class="opt-desc">班小二等工具导出的 Excel/截图，按老师实际阅卷分逐题对齐</div>
@@ -488,7 +453,7 @@ const correctCnt = computed(() =>
         </div>
       </div>
 
-      <div class="opt-card" :class="{sel: scoreMode==='auto'}" @click="scoreMode='auto'">
+      <div class="opt-card" :class="{'is-sel': scoreMode==='auto'}" @click="scoreMode='auto'">
         <div class="opt-head"><span class="opt-radio"></span>
           <b>没有，用 AI 自动判分</b><span class="opt-tag amber">智能估分</span></div>
         <div class="opt-desc">系统看答题卡照片对照标答给主观题估分；结果标注"估"，拿到老师小分后可再上传校准</div>
@@ -632,7 +597,7 @@ const correctCnt = computed(() =>
 .step.done .dot::before { content:'✓'; }
 .step-line { flex:1; height:2px; background:var(--gray-200); margin:0 6px; }
 .step-line.done { background:var(--success); }
-.scroll-area { flex:1; padding:16px; }
+.scroll-area { padding:16px; }
 .scroll-area::-webkit-scrollbar { display:none; }
 .btn { display:inline-flex; align-items:center; justify-content:center; gap:6px;
   border:none; border-radius:var(--radius-sm); padding:11px 18px; font-size:14px;
@@ -650,9 +615,9 @@ const correctCnt = computed(() =>
   border-radius:var(--radius-sm); padding:0 12px; font-size:15px;
   background:var(--surface); color:var(--gray-900); }
 .btn:disabled { opacity:.5; cursor:not-allowed; }
-.action-bar { position:sticky; bottom:0; flex-shrink:0; padding:10px 16px;
-  padding-bottom:calc(10px + env(safe-area-inset-bottom));
-  background:var(--surface); border-top:1px solid var(--gray-200);
+/* 按钮跟随内容，不固定底部 */
+.action-bar { padding:4px 16px 20px;
+  padding-bottom:calc(20px + env(safe-area-inset-bottom));
   display:flex; gap:10px; }
 .action-bar .btn { flex:1; }
 .action-bar .btn-secondary { flex:0 0 auto; }
@@ -783,19 +748,16 @@ const correctCnt = computed(() =>
 .prep-li { display:flex; align-items:flex-start; gap:9px;
   font-size:13px; color:var(--gray-700); line-height:1.55; padding:6px 0; }
 .prep-ico { width:18px; height:18px; flex:none; color:#8FA9D8; margin-top:1px; }
-.hist-row { display:flex; align-items:center; gap:10px;
-  background:var(--surface); border:1px solid var(--gray-200);
-  border-radius:var(--radius); padding:12px 14px; margin-bottom:8px; }
-.hist-row.clickable { cursor:pointer; }
-.hist-row.clickable:active { background:var(--brand-50); }
-.hist-main { flex:1; min-width:0; }
-.hist-name { font-size:15px; font-weight:700; color:var(--gray-900); }
-.hist-sub { font-size:12px; color:var(--gray-500); margin-top:2px;
-  overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
-.hist-status { font-size:12px; font-weight:600; flex:none; color:var(--gray-500); }
-.hist-status.done { color:var(--success); }
-.hist-status.failed { color:var(--warning); }
-.hist-status.running, .hist-status.detecting { color:var(--brand); }
+.sample-report { display:flex; align-items:center; gap:12px; cursor:pointer; }
+.sample-report:active { background:var(--brand-50); }
+.sr-ico { width:38px; height:38px; flex:none; border-radius:10px;
+  background:var(--brand-50); color:#5E8DEA;
+  display:flex; align-items:center; justify-content:center; }
+.sr-ico svg { width:21px; height:21px; }
+.sr-txt { flex:1; min-width:0; }
+.sr-h { font-size:14px; font-weight:700; color:var(--gray-900); }
+.sr-d { font-size:12px; color:var(--gray-500); margin-top:2px; }
+.sr-arrow { flex:none; color:var(--gray-400); font-size:18px; }
 .name-input { flex:1; min-width:0; font-size:15px; font-weight:700;
   color:var(--gray-900); padding:7px 10px; border:1.5px solid var(--brand-light);
   border-radius:8px; background:var(--brand-50); outline:none; }
@@ -803,11 +765,11 @@ const correctCnt = computed(() =>
 .opt-card { background:var(--surface); border:1.5px solid var(--gray-200);
   border-radius:var(--radius); padding:14px; margin-bottom:12px; cursor:pointer;
   transition:border-color .15s,background .15s; }
-.opt-card.sel { border-color:var(--brand); background:var(--brand-50); }
+.opt-card.is-sel { border-color:var(--brand); background:var(--brand-50); }
 .opt-head { display:flex; align-items:center; gap:8px; font-size:15px; }
 .opt-radio { width:16px; height:16px; border-radius:50%;
   border:2px solid var(--gray-300); flex-shrink:0; }
-.opt-card.sel .opt-radio { border-color:var(--brand);
+.opt-card.is-sel .opt-radio { border-color:var(--brand);
   background:radial-gradient(var(--brand) 40%, transparent 45%); }
 .opt-tag { margin-left:auto; font-size:11px; padding:2px 8px; border-radius:8px; }
 .opt-tag.green { background:var(--success-bg); color:#15803d; }
