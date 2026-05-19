@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# exam-review — 试卷审核工具 launcher
+# 解析符号链接、定位脚本目录，调用 exam_review.py
+set -e
+SOURCE="${BASH_SOURCE[0]}"
+while [ -h "$SOURCE" ]; do
+  DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
+  SOURCE="$(readlink "$SOURCE")"
+  [[ $SOURCE != /* ]] && SOURCE="$DIR/$SOURCE"
+done
+DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
+exec python3 "$DIR/exam_review.py" "$@"

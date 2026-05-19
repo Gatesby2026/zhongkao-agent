@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>试卷审核</title>
+<link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMath()"></script>
+<style>
+:root {
+  --bg: #f4f5f7;
+  --card: #ffffff;
+  --sidebar: #1e2330;
+  --sidebar-text: #c9d1d9;
+  --sidebar-hover: #2d3446;
+  --sidebar-active: #3d8ef8;
+  --accent: #3d8ef8;
+  --error: #f85149;
+  --warn: #d29922;
+  --ok: #3fb950;
+  --border: #e1e4e8;
+  --text: #24292f;
+  --muted: #57606a;
+  --tag-bg: #eef2ff;
+  --tag-text: #3d5af1;
+  --radius: 8px;
+  --shadow: 0 1px 4px rgba(0,0,0,.08);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+       background: var(--bg); color: var(--text); display: flex; height: 100vh; overflow: hidden; }
+
+/* ── Sidebar ── */
+#sidebar {
+  width: 280px; min-width: 220px; background: var(--sidebar);
+  color: var(--sidebar-text); display: flex; flex-direction: column;
+  overflow: hidden; flex-shrink: 0;
+}
+#sidebar-header { padding: 16px; font-size: 13px; font-weight: 600;
+  color: #fff; border-bottom: 1px solid #2d3446; }
+#sidebar-files { flex: 1; overflow-y: auto; padding: 8px 0; }
+.file-item {
+  padding: 10px 16px; cursor: pointer; font-size: 13px;
+  border-left: 3px solid transparent; transition: background .15s;
+  display: flex; flex-direction: column; gap: 3px;
+}
+.file-item:hover { background: var(--sidebar-hover); }
+.file-item.active { border-left-color: var(--sidebar-active);
+  background: var(--sidebar-hover); color: #fff; }
+.file-item .file-name { font-weight: 500; font-size: 12px; }
+.file-item .file-meta { font-size: 11px; color: #8b949e;
+  display: flex; gap: 8px; }
+.badge-mini { display: inline-block; border-radius: 10px; padding: 1px 6px;
+  font-size: 10px; font-weight: 600; }
+.badge-error { background: #5a1e1e; color: #f85149; }
+.badge-warn  { background: #3d2f00; color: #d29922; }
+.badge-ok    { background: #0d2c0d; color: #3fb950; }
+
+/* ── Main area ── */
+#main { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
+
+/* ── Top bar ── */
+#topbar {
+  background: var(--card); border-bottom: 1px solid var(--border);
+  padding: 12px 20px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+}
+#paper-title { font-size: 15px; font-weight: 600; }
+#paper-meta { font-size: 13px; color: var(--muted); display: flex; gap: 12px; }
+#paper-meta span { display: flex; align-items: center; gap: 4px; }
+
+/* ── Paper issues ── */
+#paper-issues { background: #fff8e6; border-bottom: 2px solid #f0c040;
+  padding: 8px 20px; font-size: 13px; display: none; gap: 12px; flex-wrap: wrap; }
+#paper-issues.show { display: flex; }
+.paper-issue-tag { background: #fdf0c0; border-radius: 4px;
+  padding: 2px 8px; color: #7a5500; font-size: 12px; }
+
+/* ── Filter bar ── */
+#filterbar {
+  background: var(--card); border-bottom: 1px solid var(--border);
+  padding: 8px 20px; display: flex; align-items: center; gap: 10px;
+}
+.filter-btn {
+  padding: 5px 14px; border-radius: 20px; font-size: 13px; cursor: pointer;
+  border: 1px solid var(--border); background: var(--bg); color: var(--muted);
+  transition: all .15s; font-weight: 500;
+}
+.filter-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+#progress-bar-wrap { flex: 1; display: flex; align-items: center; gap: 8px; }
+#progress-text { font-size: 12px; color: var(--muted); white-space: nowrap; }
+#progress-bar { flex: 1; height: 6px; background: #e1e4e8; border-radius: 3px; overflow: hidden; }
+#progress-fill { height: 100%; background: var(--ok); transition: width .3s; border-radius: 3px; }
+#shortcut-hint { font-size: 11px; color: #aaa; margin-left: auto; }
+
+/* ── Cards area ── */
+#cards-wrap { flex: 1; overflow-y: auto; padding: 16px 20px; }
+
+/* ── Question card ── */
+.q-card {
+  background: var(--card); border-radius: var(--radius);
+  box-shadow: var(--shadow); margin-bottom: 14px;
+  border: 2px solid transparent; transition: border .15s;
+  scroll-margin-top: 10px;
+}
+.q-card.status-ok     { border-left: 4px solid var(--ok); }
+.q-card.status-flag   { border-left: 4px solid var(--error); }
+.q-card.status-none   { border-left: 4px solid transparent; }
+.q-card.has-error     { background: #fff8f8; }
+.q-card.focused       { outline: 2px solid var(--accent); }
+
+.q-card-header {
+  padding: 12px 16px; display: flex; align-items: center; gap: 10px;
+  border-bottom: 1px solid var(--border); cursor: pointer; user-select: none;
+}
+.q-num  { font-weight: 700; font-size: 15px; color: var(--accent); min-width: 28px; }
+.q-type { background: #eef2ff; color: #3d5af1; padding: 2px 8px;
+  border-radius: 4px; font-size: 12px; font-weight: 600; }
+.q-score { color: var(--muted); font-size: 13px; }
+.q-module { font-size: 11px; color: var(--muted); background: var(--bg);
+  padding: 2px 6px; border-radius: 4px; }
+.q-diff { font-size: 11px; padding: 2px 6px; border-radius: 4px; }
+.diff-基础 { background: #eefce8; color: #1a7f37; }
+.diff-中等 { background: #fff3cd; color: #9a6700; }
+.diff-能力 { background: #fce8e8; color: #cf222e; }
+.q-issues { margin-left: auto; display: flex; gap: 5px; flex-wrap: wrap; }
+.issue-badge {
+  font-size: 11px; padding: 2px 7px; border-radius: 10px; font-weight: 600;
+}
+.issue-error { background: #fce8e8; color: var(--error); }
+.issue-warn  { background: #fff3cd; color: var(--warn); }
+
+.q-body { padding: 14px 16px; display: flex; flex-direction: column; gap: 12px; }
+
+.field-label {
+  font-size: 11px; font-weight: 600; color: var(--muted); text-transform: uppercase;
+  letter-spacing: .5px; margin-bottom: 4px;
+}
+.field-content {
+  font-size: 14px; line-height: 1.7; white-space: pre-wrap;
+  word-break: break-word;
+}
+.field-content.answer-text {
+  background: #f0fdf4; border-left: 3px solid var(--ok);
+  padding: 8px 12px; border-radius: 0 6px 6px 0; font-size: 13px;
+}
+.field-content.solution-text {
+  background: #f8f9fa; border-left: 3px solid #bbb;
+  padding: 8px 12px; border-radius: 0 6px 6px 0; font-size: 13px;
+}
+.field-empty { font-size: 13px; color: #aaa; font-style: italic; }
+
+.kp-list { display: flex; flex-wrap: wrap; gap: 5px; }
+.kp-tag { background: var(--tag-bg); color: var(--tag-text);
+  padding: 3px 9px; border-radius: 4px; font-size: 12px; }
+.rec-list { display: flex; gap: 5px; }
+.rec-tag { background: #f0f6ff; color: #1565c0; border-radius: 4px;
+  padding: 2px 7px; font-size: 11px; font-weight: 600; }
+
+/* ── Review actions ── */
+.q-actions {
+  padding: 10px 16px; border-top: 1px solid var(--border);
+  display: flex; align-items: center; gap: 8px;
+}
+.action-btn {
+  padding: 5px 14px; border-radius: 6px; font-size: 13px; cursor: pointer;
+  border: 1px solid var(--border); background: var(--bg);
+  font-weight: 500; transition: all .15s;
+}
+.action-btn:hover { transform: translateY(-1px); box-shadow: 0 2px 6px rgba(0,0,0,.1); }
+.btn-ok   { border-color: var(--ok);    color: var(--ok); }
+.btn-ok.active   { background: var(--ok);   color: #fff; }
+.btn-flag { border-color: var(--error);  color: var(--error); }
+.btn-flag.active { background: var(--error); color: #fff; }
+.btn-clear { color: var(--muted); }
+.note-input {
+  flex: 1; border: 1px solid var(--border); border-radius: 6px;
+  padding: 5px 10px; font-size: 12px; color: var(--text); background: var(--bg);
+  outline: none; transition: border .15s;
+}
+.note-input:focus { border-color: var(--accent); }
+
+/* ── Collapsed state ── */
+.q-card.collapsed .q-body,
+.q-card.collapsed .q-actions { display: none; }
+
+/* ── OCR highlight ── */
+.ocr-hl { background: #fff0c0; border-radius: 2px; padding: 0 2px; }
+
+/* ── Markdown table ── */
+.md-table {
+  border-collapse: collapse; margin: 8px 0;
+  font-size: 13px; background: #fff;
+}
+.md-table th, .md-table td {
+  border: 1px solid #d1d5db; padding: 6px 12px; text-align: center;
+}
+.md-table th { background: #f3f4f6; font-weight: 600; }
+
+/* ── scrollbar ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-thumb { background: #ccc; border-radius: 3px; }
+
+/* ── Keyboard nav cursor ── */
+.q-card.nav-focus { outline: 2px solid var(--accent); }
+
+@media (max-width: 768px) {
+  #sidebar { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- Sidebar -->
+<div id="sidebar">
+  <div id="sidebar-header">📋 试卷列表</div>
+  <div id="sidebar-files" role="list"></div>
+</div>
+
+<!-- Main -->
+<div id="main">
+  <div id="topbar">
+    <div id="paper-title">—</div>
+    <div id="paper-meta"></div>
+  </div>
+  <div id="paper-issues"></div>
+  <div id="filterbar">
+    <button class="filter-btn active" data-filter="all">全部</button>
+    <button class="filter-btn" data-filter="issues">有问题</button>
+    <button class="filter-btn" data-filter="ok">已确认</button>
+    <button class="filter-btn" data-filter="flag">已标记</button>
+    <button class="filter-btn" data-filter="pending">待处理</button>
+    <div id="progress-bar-wrap">
+      <div id="progress-bar"><div id="progress-fill" style="width:0%"></div></div>
+      <div id="progress-text">0 / 0 已审</div>
+    </div>
+    <div id="shortcut-hint">↑↓ 导航 · Space 确认 · F 标记 · C 折叠</div>
+  </div>
+  <div id="cards-wrap"></div>
+</div>
+
+<script>
+// ─── Data injected by Python ────────────────────────────────────────────────
+const PAPERS = __PAPERS_JSON__;
+
+// ─── State ──────────────────────────────────────────────────────────────────
+let currentPaperIdx = 0;
+let currentFilter = 'all';
+let navIdx = 0; // keyboard navigation index into visible cards
+const reviewState = JSON.parse(localStorage.getItem('review_state') || '{}');
+
+function stateKey(paperPath, qid) {
+  return `${paperPath}::${qid}`;
+}
+function getState(paperPath, qid) {
+  return reviewState[stateKey(paperPath, qid)] || { status: 'none', note: '' };
+}
+function setState(paperPath, qid, updates) {
+  const k = stateKey(paperPath, qid);
+  reviewState[k] = { ...getState(paperPath, qid), ...updates };
+  localStorage.setItem('review_state', JSON.stringify(reviewState));
+}
+
+// ─── Sidebar ─────────────────────────────────────────────────────────────────
+function buildSidebar() {
+  const el = document.getElementById('sidebar-files');
+  el.innerHTML = '';
+  PAPERS.forEach((p, i) => {
+    const errCount = p.questions.filter(q => q._issues.some(x => x.level === 'error')).length;
+    const warnCount = p.questions.filter(q => q._issues.some(x => x.level === 'warn')).length;
+    const reviewed = p.questions.filter(q => {
+      const s = getState(p._path, q.id).status;
+      return s === 'ok' || s === 'flag';
+    }).length;
+
+    const div = document.createElement('div');
+    div.className = 'file-item' + (i === currentPaperIdx ? ' active' : '');
+    div.innerHTML = `
+      <div class="file-name">${p._filename}</div>
+      <div class="file-meta">
+        <span>${p.subject} · ${p.district}</span>
+        <span>${reviewed}/${p.questions.length} 审</span>
+      </div>
+      <div class="file-meta" style="margin-top:2px">
+        ${errCount ? `<span class="badge-mini badge-error">错 ${errCount}</span>` : ''}
+        ${warnCount ? `<span class="badge-mini badge-warn">警 ${warnCount}</span>` : ''}
+        ${!errCount && !warnCount ? `<span class="badge-mini badge-ok">✓ 无问题</span>` : ''}
+      </div>
+    `;
+    div.addEventListener('click', () => switchPaper(i));
+    el.appendChild(div);
+  });
+}
+
+function switchPaper(idx) {
+  currentPaperIdx = idx;
+  navIdx = 0;
+  buildSidebar();
+  renderPaper();
+}
+
+// ─── Paper render ─────────────────────────────────────────────────────────────
+function renderPaper() {
+  const p = PAPERS[currentPaperIdx];
+
+  // title
+  document.getElementById('paper-title').textContent =
+    `${p.year}年 ${p.district}${p.exam_type} · ${p.subject}`;
+  document.getElementById('paper-meta').innerHTML = `
+    <span>📝 ${p.total_questions} 题</span>
+    <span>💯 ${p.full_score} 分</span>
+    <span>⏱ ${p.duration_minutes} 分钟</span>
+    <span style="color:#666;font-size:12px">${p.structure || ''}</span>
+  `;
+
+  // paper-level issues
+  const pi = document.getElementById('paper-issues');
+  if (p._paper_issues && p._paper_issues.length) {
+    pi.innerHTML = '⚠️ 卷级问题：' + p._paper_issues.map(x =>
+      `<span class="paper-issue-tag">${x.msg}</span>`).join('');
+    pi.classList.add('show');
+  } else {
+    pi.classList.remove('show');
+  }
+
+  renderCards();
+}
+
+// ─── Cards ───────────────────────────────────────────────────────────────────
+function escapeHtml(s) {
+  return String(s)
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+function highlightOcr(text) {
+  // highlight likely OCR garbage sequences
+  return escapeHtml(text).replace(
+    /(\{[\s]*[A-Za-z_][\s]*_[\s]*\{[^}]{1,20}\}|s\\s*\\\\widehat|\\\\widehat\s*\{)/g,
+    '<span class="ocr-hl">$1</span>'
+  );
+}
+
+function renderMdTable(block) {
+  // block 是已 escapeHtml 的 markdown 表格字符串
+  const lines = block.split('\n').filter(l => l.trim().startsWith('|'));
+  if (lines.length < 2) return null;
+  // 检查第二行是否是分隔行 |---|---|
+  if (!/^\s*\|[\s\-:|]+\|\s*$/.test(lines[1])) return null;
+
+  const splitRow = s => s.trim().replace(/^\||\|$/g, '').split('|').map(c => c.trim());
+  const headers = splitRow(lines[0]);
+  const body = lines.slice(2).map(splitRow);
+  let html = '<table class="md-table"><thead><tr>';
+  headers.forEach(h => html += `<th>${h}</th>`);
+  html += '</tr></thead><tbody>';
+  body.forEach(row => {
+    html += '<tr>';
+    row.forEach(c => html += `<td>${c}</td>`);
+    html += '</tr>';
+  });
+  html += '</tbody></table>';
+  return html;
+}
+
+function formatText(text) {
+  if (!text && text !== 0) return '<span class="field-empty">（空）</span>';
+  // 先 escape，再处理换行和 markdown 表格
+  let s = escapeHtml(String(text));
+  // 提取连续的 | 开头行作为表格块来处理
+  const lines = s.split('\n');
+  const out = [];
+  let i = 0;
+  while (i < lines.length) {
+    // 尝试匹配表格块（至少 2 行连续的 | 开头 + 第 2 行是分隔行）
+    if (lines[i].trim().startsWith('|') &&
+        i + 1 < lines.length &&
+        /^\s*\|[\s\-:|]+\|\s*$/.test(lines[i + 1])) {
+      // 收集所有连续 | 行
+      let j = i;
+      while (j < lines.length && lines[j].trim().startsWith('|')) j++;
+      const tbl = renderMdTable(lines.slice(i, j).join('\n'));
+      if (tbl) {
+        out.push(tbl);
+        i = j;
+        continue;
+      }
+    }
+    out.push(lines[i]);
+    i++;
+  }
+  return out.join('<br>').replace(/<br>(<table)/g, '$1').replace(/(<\/table>)<br>/g, '$1');
+}
+
+function renderCards() {
+  const p = PAPERS[currentPaperIdx];
+  const wrap = document.getElementById('cards-wrap');
+  wrap.innerHTML = '';
+
+  const visibleQs = getVisibleQuestions(p);
+  visibleQs.forEach((q, vi) => {
+    wrap.appendChild(buildCard(p, q, vi));
+  });
+
+  updateProgress(p);
+  applyNavFocus();
+
+  // trigger KaTeX
+  if (window.renderMathInElement) {
+    renderMathInElement(wrap, {
+      delimiters: [
+        {left:'$$', right:'$$', display:true},
+        {left:'$', right:'$', display:false},
+        {left:'\\(', right:'\\)', display:false},
+        {left:'\\[', right:'\\]', display:true},
+      ],
+      throwOnError: false
+    });
+  }
+}
+
+function getVisibleQuestions(p) {
+  return p.questions.filter(q => {
+    const st = getState(p._path, q.id).status;
+    const hasIssues = q._issues.length > 0;
+    if (currentFilter === 'all')     return true;
+    if (currentFilter === 'issues')  return hasIssues;
+    if (currentFilter === 'ok')      return st === 'ok';
+    if (currentFilter === 'flag')    return st === 'flag';
+    if (currentFilter === 'pending') return st === 'none';
+    return true;
+  });
+}
+
+function buildCard(p, q, vi) {
+  const st = getState(p._path, q.id);
+  const hasError = q._issues.some(x => x.level === 'error');
+  const hasWarn  = q._issues.some(x => x.level === 'warn');
+
+  const card = document.createElement('div');
+  card.className = `q-card status-${st.status}${hasError ? ' has-error' : ''}`;
+  card.id = `card-${q.id}`;
+  card.dataset.qid = q.id;
+
+  // ── header
+  const issueBadges = q._issues.map(iss =>
+    `<span class="issue-badge issue-${iss.level}">${iss.msg}</span>`
+  ).join('');
+
+  const diffClass = `diff-${q.difficulty || ''}`;
+  card.innerHTML = `
+    <div class="q-card-header" onclick="toggleCollapse('${q.id}')">
+      <span class="q-num">Q${q.id}</span>
+      <span class="q-type">${escapeHtml(q.type || '')}</span>
+      <span class="q-score">${q.score} 分</span>
+      ${q.module ? `<span class="q-module">${escapeHtml(q.module)}</span>` : ''}
+      ${q.difficulty ? `<span class="q-diff ${diffClass}">${escapeHtml(q.difficulty)}</span>` : ''}
+      <div class="q-issues">${issueBadges}</div>
+    </div>
+
+    <div class="q-body">
+      ${q.qc_status === 'needs_review' && q.qc_note ? `
+      <div style="background:#fff3cd;border-left:3px solid #d29922;padding:6px 10px;border-radius:0 4px 4px 0;font-size:12px;color:#7a5500;">
+        ⚠️ 生成时标记：${escapeHtml(q.qc_note)}
+      </div>` : ''}
+
+      <div>
+        <div class="field-label">题干</div>
+        <div class="field-content">${formatText(q.stem || q.question || '')}</div>
+      </div>
+
+      ${q._figure_b64 ? `
+      <div>
+        <div class="field-label">题目图片</div>
+        <img src="${q._figure_b64}" style="max-width:100%;max-height:320px;border:1px solid #e1e4e8;border-radius:6px;background:#fff;padding:6px;display:block">
+      </div>` : ''}
+
+      ${q.options ? `
+      <div>
+        <div class="field-label">选项${q.has_image_options ? ' <span style="color:#d29922;font-size:10px">⚠️图片选项</span>' : ''}</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px 16px">
+          ${Object.entries(q.options).map(([k,v]) =>
+            `<div style="font-size:13px"><span style="font-weight:700;color:#3d5af1;margin-right:6px">${escapeHtml(k)}.</span>${v === '[图]' ? '<span style="color:#aaa;font-style:italic">[图]</span>' : escapeHtml(String(v))}</div>`
+          ).join('')}
+        </div>
+      </div>` : ''}
+
+      <div>
+        <div class="field-label">答案</div>
+        <div class="field-content answer-text">${q.answer ? formatText(q.answer) : '<span class="field-empty">（空）</span>'}</div>
+      </div>
+
+      ${(q.solution && q.solution !== q.answer && q.solution !== '__MISSING__') ? `
+      <div>
+        <div class="field-label">解析</div>
+        <div class="field-content solution-text">${formatText(q.solution)}</div>
+      </div>` : q.solution === '__MISSING__' ? `
+      <div>
+        <div class="field-label">解析</div>
+        <div style="font-size:12px;color:#aaa;font-style:italic;padding:4px 0">__MISSING__（待补全）</div>
+      </div>` : ''}
+
+      <div style="display:flex;gap:16px;flex-wrap:wrap">
+        ${q.knowledge_points && q.knowledge_points.length ? `
+        <div>
+          <div class="field-label">考查点</div>
+          <div class="kp-list">${q.knowledge_points.map(k =>
+            `<span class="kp-tag">${escapeHtml(k)}</span>`).join('')}</div>
+        </div>` : `<div><div class="field-label">考查点</div><span class="field-empty">（空）</span></div>`}
+
+        ${q.recommended_for && q.recommended_for.length ? `
+        <div>
+          <div class="field-label">适用层次</div>
+          <div class="rec-list">${q.recommended_for.map(r =>
+            `<span class="rec-tag">${escapeHtml(r)}</span>`).join('')}</div>
+        </div>` : ''}
+      </div>
+    </div>
+
+    <div class="q-actions">
+      <button class="action-btn btn-ok${st.status==='ok'?' active':''}"
+        onclick="setStatus('${p._path}','${q.id}','ok')">✅ 确认</button>
+      <button class="action-btn btn-flag${st.status==='flag'?' active':''}"
+        onclick="setStatus('${p._path}','${q.id}','flag')">🚩 标记</button>
+      <button class="action-btn btn-clear"
+        onclick="setStatus('${p._path}','${q.id}','none')">↩ 清除</button>
+      <input class="note-input" type="text"
+        placeholder="备注..."
+        value="${escapeHtml(st.note || '')}"
+        onchange="setNote('${p._path}','${q.id}',this.value)"
+        oninput="setNote('${p._path}','${q.id}',this.value)">
+    </div>
+  `;
+
+  return card;
+}
+
+function toggleCollapse(qid) {
+  const card = document.getElementById(`card-${qid}`);
+  card.classList.toggle('collapsed');
+}
+
+function setStatus(paperPath, qid, status) {
+  setState(paperPath, qid, { status });
+  // re-render the single card
+  const p = PAPERS[currentPaperIdx];
+  const q = p.questions.find(x => String(x.id) === String(qid));
+  if (!q) return;
+  const oldCard = document.getElementById(`card-${qid}`);
+  if (!oldCard) { renderCards(); return; }
+  const newCard = buildCard(p, q, 0);
+  newCard.id = `card-${qid}`;
+  oldCard.replaceWith(newCard);
+  // re-render math in new card
+  if (window.renderMathInElement) {
+    renderMathInElement(newCard, {
+      delimiters: [
+        {left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false},
+        {left:'\\(',right:'\\)',display:false},{left:'\\[',right:'\\]',display:true},
+      ], throwOnError: false
+    });
+  }
+  if (currentFilter !== 'all') renderCards();
+  updateProgress(p);
+  buildSidebar();
+}
+
+function setNote(paperPath, qid, note) {
+  setState(paperPath, qid, { note });
+  buildSidebar();
+}
+
+// ─── Progress ─────────────────────────────────────────────────────────────────
+function updateProgress(p) {
+  const total = p.questions.length;
+  const done = p.questions.filter(q => {
+    const s = getState(p._path, q.id).status;
+    return s === 'ok' || s === 'flag';
+  }).length;
+  document.getElementById('progress-text').textContent = `${done} / ${total} 已审`;
+  document.getElementById('progress-fill').style.width = `${total ? (done/total*100) : 0}%`;
+}
+
+// ─── Filter ───────────────────────────────────────────────────────────────────
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentFilter = btn.dataset.filter;
+    navIdx = 0;
+    renderCards();
+  });
+});
+
+// ─── Keyboard navigation ──────────────────────────────────────────────────────
+function applyNavFocus() {
+  document.querySelectorAll('.q-card').forEach((c, i) => {
+    c.classList.toggle('nav-focus', i === navIdx);
+  });
+  const focused = document.querySelectorAll('.q-card')[navIdx];
+  if (focused) focused.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+}
+
+document.addEventListener('keydown', e => {
+  // don't hijack when typing in input
+  if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+
+  const p = PAPERS[currentPaperIdx];
+  const visibleQs = getVisibleQuestions(p);
+  const cards = document.querySelectorAll('.q-card');
+  const total = cards.length;
+
+  if (e.key === 'ArrowDown' || e.key === 'j') {
+    e.preventDefault();
+    navIdx = Math.min(navIdx + 1, total - 1);
+    applyNavFocus();
+  } else if (e.key === 'ArrowUp' || e.key === 'k') {
+    e.preventDefault();
+    navIdx = Math.max(navIdx - 1, 0);
+    applyNavFocus();
+  } else if (e.key === ' ') {
+    e.preventDefault();
+    const q = visibleQs[navIdx];
+    if (!q) return;
+    const st = getState(p._path, q.id).status;
+    setStatus(p._path, String(q.id), st === 'ok' ? 'none' : 'ok');
+  } else if (e.key === 'f' || e.key === 'F') {
+    e.preventDefault();
+    const q = visibleQs[navIdx];
+    if (!q) return;
+    const st = getState(p._path, q.id).status;
+    setStatus(p._path, String(q.id), st === 'flag' ? 'none' : 'flag');
+  } else if (e.key === 'c' || e.key === 'C') {
+    e.preventDefault();
+    const q = visibleQs[navIdx];
+    if (!q) return;
+    toggleCollapse(q.id);
+  } else if (e.key === '[') {
+    switchPaper(Math.max(0, currentPaperIdx - 1));
+  } else if (e.key === ']') {
+    switchPaper(Math.min(PAPERS.length - 1, currentPaperIdx + 1));
+  }
+});
+
+// ─── KaTeX ────────────────────────────────────────────────────────────────────
+function renderMath() {
+  if (window.renderMathInElement) {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left:'$$',right:'$$',display:true},
+        {left:'$',right:'$',display:false},
+        {left:'\\(',right:'\\)',display:false},
+        {left:'\\[',right:'\\]',display:true},
+      ], throwOnError: false
+    });
+  }
+}
+
+// ─── Init ─────────────────────────────────────────────────────────────────────
+buildSidebar();
+renderPaper();
+</script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# answer-card-review — 学生答题卡审核工具 launcher
+set -e
+SOURCE="${BASH_SOURCE[0]}"
+while [ -h "$SOURCE" ]; do
+  DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
+  SOURCE="$(readlink "$SOURCE")"
+  [[ $SOURCE != /* ]] && SOURCE="$DIR/$SOURCE"
+done
+DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
+exec python3 "$DIR/answer_card_review.py" "$@"

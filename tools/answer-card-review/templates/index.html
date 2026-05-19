@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>答题卡审核</title>
+<style>
+:root {
+  --bg: #f4f5f7;
+  --card: #ffffff;
+  --sidebar: #1e2330;
+  --sidebar-text: #c9d1d9;
+  --accent: #3d8ef8;
+  --error: #f85149;
+  --warn: #d29922;
+  --ok: #3fb950;
+  --border: #e1e4e8;
+  --text: #24292f;
+  --muted: #57606a;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+       background: var(--bg); color: var(--text); display: flex; height: 100vh; overflow: hidden; }
+
+#sidebar { width: 260px; background: var(--sidebar); color: var(--sidebar-text);
+  display: flex; flex-direction: column; overflow: hidden; flex-shrink: 0; }
+#sidebar-header { padding: 14px 16px; font-size: 13px; font-weight: 600;
+  color: #fff; border-bottom: 1px solid #2d3446; }
+#sidebar-files { flex: 1; overflow-y: auto; padding: 6px 0; }
+.card-item { padding: 10px 14px; cursor: pointer; font-size: 12px;
+  border-left: 3px solid transparent; transition: background .15s; }
+.card-item:hover { background: #2d3446; }
+.card-item.active { background: #2d3446; border-left-color: var(--accent); color: #fff; }
+.card-item .stu { font-weight: 600; font-size: 13px; margin-bottom: 2px; }
+.card-item .meta { font-size: 11px; color: #8b949e; }
+
+#main { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
+#topbar { background: var(--card); border-bottom: 1px solid var(--border);
+  padding: 12px 20px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+#student-title { font-size: 15px; font-weight: 600; }
+#stat-meta { font-size: 13px; color: var(--muted); display: flex; gap: 14px; flex-wrap: wrap; }
+#stat-meta .stat { display: inline-flex; align-items: center; gap: 4px; }
+#stat-meta .stat b { color: var(--text); }
+.stat-ok b { color: var(--ok); }
+.stat-warn b { color: var(--warn); }
+.stat-error b { color: var(--error); }
+
+#card-issues { background: #fff8e6; border-bottom: 2px solid #f0c040;
+  padding: 8px 20px; font-size: 13px; display: none; gap: 10px; flex-wrap: wrap; }
+#card-issues.show { display: flex; }
+.card-issue-tag { background: #fdf0c0; border-radius: 4px; padding: 2px 8px;
+  color: #7a5500; font-size: 12px; }
+
+#filterbar { background: var(--card); border-bottom: 1px solid var(--border);
+  padding: 8px 20px; display: flex; align-items: center; gap: 10px; }
+.filter-btn { padding: 4px 12px; border-radius: 16px; font-size: 12px; cursor: pointer;
+  border: 1px solid var(--border); background: var(--bg); color: var(--muted);
+  font-weight: 500; }
+.filter-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+#photos-btn { margin-left: auto; padding: 4px 12px; border-radius: 6px;
+  font-size: 12px; cursor: pointer; border: 1px solid var(--border);
+  background: var(--card); color: var(--text); font-weight: 500; }
+
+#main-body { flex: 1; overflow-y: auto; padding: 14px 20px; }
+
+/* answer card grid */
+.answer-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 10px; }
+.q-card { background: var(--card); border-radius: 8px;
+  border-left: 4px solid transparent; padding: 10px 12px;
+  display: flex; flex-direction: column; gap: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.06); }
+.q-card.correct { border-left-color: var(--ok); }
+.q-card.wrong { border-left-color: var(--error); background: #fff8f8; }
+.q-card.warn { border-left-color: var(--warn); }
+.q-card.no-std { border-left-color: #bbb; }
+.q-card.subjective { border-left-color: #6f42c1; grid-column: span 2; }
+
+.q-row { display: flex; align-items: center; gap: 8px; }
+.q-num { font-weight: 700; color: var(--accent); font-size: 14px; min-width: 36px; }
+.q-type-tag { background: #eef2ff; color: #3d5af1; padding: 1px 6px;
+  border-radius: 3px; font-size: 10px; font-weight: 600; }
+.q-conf { margin-left: auto; font-size: 10px; color: var(--muted); }
+.q-filled { font-size: 16px; font-weight: 700; letter-spacing: 4px; padding: 4px 8px;
+  background: #f6f8fa; border-radius: 4px; display: inline-block; min-width: 80px;
+  text-align: center; }
+.q-std { font-size: 12px; color: var(--muted); }
+.q-std b { color: var(--text); }
+.q-mark { font-size: 13px; font-weight: 700; }
+.q-mark.correct { color: var(--ok); }
+.q-mark.wrong { color: var(--error); }
+.q-ocr { font-size: 10px; color: #888; font-family: ui-monospace, monospace; }
+
+.issue-badge { font-size: 10px; padding: 2px 6px; border-radius: 8px; display: inline-block; }
+.issue-error { background: #fce8e8; color: var(--error); }
+.issue-warn { background: #fff3cd; color: var(--warn); }
+
+/* photo modal */
+#photo-modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.85);
+  z-index: 100; justify-content: center; align-items: center; padding: 30px; }
+#photo-modal.show { display: flex; }
+#photo-modal-inner { background: #fff; border-radius: 8px; max-width: 95vw; max-height: 95vh;
+  overflow: auto; padding: 16px; }
+#photo-modal-close { position: absolute; top: 12px; right: 16px; color: #fff;
+  font-size: 28px; cursor: pointer; }
+.photo-thumbs { display: flex; gap: 12px; flex-wrap: wrap; }
+.photo-thumb { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.photo-thumb img { max-width: 380px; max-height: 480px; border: 1px solid var(--border);
+  cursor: zoom-in; }
+.photo-thumb .name { font-size: 11px; color: var(--muted); }
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-thumb { background: #ccc; border-radius: 3px; }
+
+@media (max-width: 768px) { #sidebar { display: none; } }
+</style>
+</head>
+<body>
+
+<div id="sidebar">
+  <div id="sidebar-header">📋 学生答题卡</div>
+  <div id="sidebar-files"></div>
+</div>
+
+<div id="main">
+  <div id="topbar">
+    <div id="student-title">—</div>
+    <div id="stat-meta"></div>
+  </div>
+  <div id="card-issues"></div>
+  <div id="filterbar">
+    <button class="filter-btn active" data-filter="all">全部</button>
+    <button class="filter-btn" data-filter="wrong">答错</button>
+    <button class="filter-btn" data-filter="warn">有警告</button>
+    <button class="filter-btn" data-filter="noanswer">未作答</button>
+    <button id="photos-btn">📷 查看原图</button>
+  </div>
+  <div id="main-body">
+    <div class="answer-grid" id="answer-grid"></div>
+  </div>
+</div>
+
+<div id="photo-modal">
+  <span id="photo-modal-close">&times;</span>
+  <div id="photo-modal-inner">
+    <div class="photo-thumbs" id="photo-thumbs"></div>
+  </div>
+</div>
+
+<script>
+const CARDS = __CARDS_JSON__;
+let currentIdx = 0;
+let currentFilter = 'all';
+
+function buildSidebar() {
+  const el = document.getElementById('sidebar-files');
+  el.innerHTML = '';
+  CARDS.forEach((c, i) => {
+    const div = document.createElement('div');
+    div.className = 'card-item' + (i === currentIdx ? ' active' : '');
+    const correct = c.answers.filter(a => a._correct === true).length;
+    const wrong = c.answers.filter(a => a._correct === false).length;
+    const noStd = c._standard_count === 0;
+    div.innerHTML = `
+      <div class="stu">${c.student.name || '(无姓名)'}</div>
+      <div class="meta">${c._exam_slug}</div>
+      <div class="meta">${noStd ? `${c.answers.length} 题识别` : `✓ ${correct} / ✗ ${wrong}`}</div>
+    `;
+    div.addEventListener('click', () => { currentIdx = i; render(); });
+    el.appendChild(div);
+  });
+}
+
+function escapeHtml(s) {
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+function fillStr(filled) {
+  if (Array.isArray(filled)) return filled.join('');
+  return filled || '';
+}
+
+function render() {
+  const c = CARDS[currentIdx];
+  buildSidebar();
+
+  // 标题
+  document.getElementById('student-title').textContent =
+    `${c.student.name || '(无姓名)'}  ·  考号 ${c.student.examId || '(无)'}  ·  ${c._exam_slug}`;
+
+  // 统计
+  const total = c.answers.length;
+  const correct = c.answers.filter(a => a._correct === true).length;
+  const wrong = c.answers.filter(a => a._correct === false).length;
+  const warns = c.answers.filter(a => a._issues.some(x => x.level === 'warn')).length;
+  const errors = c.answers.filter(a => a._issues.some(x => x.level === 'error')).length;
+  const noAnswer = c.answers.filter(a => a._issues.some(x => x.code === 'no_answer')).length;
+  const avgConf = total ? (c.answers.reduce((s,a)=>s+(a.confidence||0),0)/total) : 0;
+  const stdCount = c._standard_count || 0;
+
+  const meta = document.getElementById('stat-meta');
+  meta.innerHTML = `
+    <span class="stat">📝 识别 <b>${total}</b> 题</span>
+    ${stdCount ? `<span class="stat">📋 标准 <b>${stdCount}</b> 题</span>` : ''}
+    ${stdCount ? `<span class="stat stat-ok">✓ 正确 <b>${correct}</b></span>` : ''}
+    ${stdCount && wrong ? `<span class="stat stat-error">✗ 错 <b>${wrong}</b></span>` : ''}
+    ${noAnswer ? `<span class="stat stat-warn">⚠ 未作答 <b>${noAnswer}</b></span>` : ''}
+    ${errors ? `<span class="stat stat-error">⚠ error <b>${errors}</b></span>` : ''}
+    ${warns ? `<span class="stat stat-warn">⚠ warn <b>${warns}</b></span>` : ''}
+    <span class="stat">📊 平均置信 <b>${avgConf.toFixed(2)}</b></span>
+    <span class="stat" style="color:#999;font-size:11px">📷 ${c._photos.length} 张原图</span>
+  `;
+
+  // 卡级问题
+  const ci = document.getElementById('card-issues');
+  if (c._card_issues && c._card_issues.length) {
+    ci.innerHTML = '⚠️ 卡级问题：' + c._card_issues.map(x =>
+      `<span class="card-issue-tag">${escapeHtml(x.msg)}</span>`).join('');
+    ci.classList.add('show');
+  } else {
+    ci.classList.remove('show');
+  }
+
+  renderGrid();
+}
+
+function renderGrid() {
+  const c = CARDS[currentIdx];
+  const grid = document.getElementById('answer-grid');
+  grid.innerHTML = '';
+
+  const visible = c.answers.filter(a => {
+    if (currentFilter === 'all') return true;
+    if (currentFilter === 'wrong') return a._correct === false;
+    if (currentFilter === 'warn') return a._issues.length > 0;
+    if (currentFilter === 'noanswer') return a._issues.some(x => x.code === 'no_answer');
+    return true;
+  });
+
+  visible.forEach(a => {
+    const div = document.createElement('div');
+    let cls = 'q-card';
+    if (a.type === 'subjective') cls += ' subjective';
+    else if (a._correct === true) cls += ' correct';
+    else if (a._correct === false) cls += ' wrong';
+    else if (a._issues.some(i => i.level === 'warn')) cls += ' warn';
+    else cls += ' no-std';
+
+    div.className = cls;
+    const typeTagMap = {'multi_choice': '多选', 'subjective': '主观', 'choice': '单选'};
+    const typeTag = typeTagMap[a.type] || a.type;
+    const conf = a.confidence != null ? (a.confidence).toFixed(2) : '—';
+    const filled = a.type === 'subjective' ? '' : (fillStr(a.filled) || '(空)');
+    const std = a._std_answer || '';
+    let markHtml = '';
+    if (a._correct === true) markHtml = '<span class="q-mark correct">✓ 对</span>';
+    else if (a._correct === false) markHtml = '<span class="q-mark wrong">✗ 错</span>';
+
+    const issuesHtml = a._issues.map(iss =>
+      `<span class="issue-badge issue-${iss.level}">${escapeHtml(iss.msg)}</span>`
+    ).join(' ');
+
+    // 主观题：显示裁切的原图
+    const regionImgHtml = (a.type === 'subjective' && a._region_b64)
+      ? `<img src="${a._region_b64}" style="max-width:100%;border:1px solid #e1e4e8;border-radius:4px;background:#fff;display:block;margin-top:4px" />`
+      : (a.type === 'subjective'
+          ? '<div style="color:#999;font-size:11px;font-style:italic">未裁切到作答区</div>'
+          : '');
+
+    const handwritingHtml = a.handwritingText
+      ? `<div class="q-std" style="margin-top:4px;font-size:11px"><b>讯飞 OCR:</b> ${escapeHtml(a.handwritingText)}</div>`
+      : '';
+
+    // 辅助评分（方案 B：qwen-vl-max 直接看图）
+    const g = a.grade;
+    const gradeBlock = (g, color) => {
+      if (!g) return '';
+      if (g.error) return `<div style="font-size:11px;color:#999">辅助评分失败: ${escapeHtml(g.error)}</div>`;
+      const matched = (g.matchedPoints || []).join(' / ');
+      const missed = (g.missedPoints || []).join(' / ');
+      const review = g.needsTeacherReview ? '<span style="color:#d29922">⚠️老师复核</span>' : '';
+      return `
+        <div style="margin-top:6px;padding:6px 8px;border-left:3px solid ${color};background:#fafbfc;border-radius:4px;font-size:11px">
+          <div><b style="color:${color}">🧠 辅助评分</b> 建议: <b>${g.suggestedScore ?? '—'}</b> 分 ${review}</div>
+          <div style="margin-top:2px"><b>识读:</b> ${escapeHtml((g.correctedText||'').slice(0,200))}</div>
+          ${matched ? `<div style="color:#3fb950">✓ ${escapeHtml(matched)}</div>` : ''}
+          ${missed ? `<div style="color:#f85149">✗ 漏: ${escapeHtml(missed)}</div>` : ''}
+          ${g.scoreReason ? `<div style="color:#57606a;margin-top:2px">${escapeHtml(g.scoreReason.slice(0,200))}</div>` : ''}
+        </div>`;
+    };
+    const gradeHtml = g
+      ? gradeBlock(g, '#6f42c1')
+      : '';
+
+    div.innerHTML = `
+      <div class="q-row">
+        <span class="q-num">${a.qId}</span>
+        <span class="q-type-tag">${typeTag}</span>
+        <span class="q-conf">conf ${conf}</span>
+      </div>
+      ${a.type !== 'subjective' ? `
+      <div class="q-row">
+        <span class="q-filled">${escapeHtml(filled)}</span>
+        ${markHtml}
+      </div>` : ''}
+      ${regionImgHtml}
+      ${handwritingHtml}
+      ${gradeHtml}
+      ${std ? `<div class="q-std">标准 <b>${escapeHtml(std)}</b></div>` : ''}
+      ${a.ocrSeen ? `<div class="q-ocr">OCR 看到: ${escapeHtml(a.ocrSeen)}</div>` : ''}
+      ${issuesHtml ? `<div style="margin-top:4px">${issuesHtml}</div>` : ''}
+    `;
+    grid.appendChild(div);
+  });
+
+  if (visible.length === 0) {
+    grid.innerHTML = '<div style="color:#888;padding:20px">该筛选下无题目</div>';
+  }
+}
+
+// filter
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentFilter = btn.dataset.filter;
+    renderGrid();
+  });
+});
+
+// photo modal
+document.getElementById('photos-btn').addEventListener('click', () => {
+  const c = CARDS[currentIdx];
+  const thumbs = document.getElementById('photo-thumbs');
+  thumbs.innerHTML = '';
+  if (c._photos.length === 0) {
+    thumbs.innerHTML = '<div>无原图</div>';
+  } else {
+    c._photos.forEach(p => {
+      const t = document.createElement('div');
+      t.className = 'photo-thumb';
+      t.innerHTML = `<img src="${p.data}" /><div class="name">${escapeHtml(p.name)}</div>`;
+      thumbs.appendChild(t);
+    });
+  }
+  document.getElementById('photo-modal').classList.add('show');
+});
+document.getElementById('photo-modal-close').addEventListener('click', () => {
+  document.getElementById('photo-modal').classList.remove('show');
+});
+document.getElementById('photo-modal').addEventListener('click', (e) => {
+  if (e.target.id === 'photo-modal') {
+    document.getElementById('photo-modal').classList.remove('show');
+  }
+});
+
+render();
+</script>
+</body>
+</html>
