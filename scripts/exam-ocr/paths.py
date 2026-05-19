@@ -1,6 +1,6 @@
 """原始件 ↔ 派生件 路径约定（单一真相，避免各脚本各自硬编码）。
 
-设计（见 docs/specs/KB-LAYOUT.md 五域结构）：
+设计（见 docs/architecture/KB-LAYOUT.md 五域结构）：
   - knowledge-original/ 只放**原始件**（images/page-*.png、source.html、urls.txt）
   - 结构化派生中间件（pages OCR、layout-cache、structured-cloud）落
     knowledge-base/exams/_staging/<subject>/<slug>/

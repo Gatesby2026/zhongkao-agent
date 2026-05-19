@@ -1,7 +1,7 @@
 # 答题卡 OCR — 半天 demo 结果
 
 > 日期：2026-05-14
-> 关联：[`ANSWER-CARD-OCR-RESEARCH.md`](./ANSWER-CARD-OCR-RESEARCH.md)
+> 关联：[`2026-05-14-ANSWER-CARD-OCR-RESEARCH.md`](./2026-05-14-ANSWER-CARD-OCR-RESEARCH.md)
 > 目的：验证 OMRChecker + ArUco perspective correction 在真实场景下的可行性
 
 ---

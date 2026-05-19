@@ -618,7 +618,7 @@ Agent 层（多租户、单实例多会话）
 
 - [`../specs/STUDENT-PROFILE-SPEC.md`](../specs/STUDENT-PROFILE-SPEC.md) — 学生画像数据模型详细规格
 - [`../specs/EXAM-FORMAT-SPEC.md`](../specs/EXAM-FORMAT-SPEC.md) — 各科试卷格式规范
-- [`../knowledge-base/KNOWLEDGE-BASE-PLAN.md`](../knowledge-base/KNOWLEDGE-BASE-PLAN.md) — 知识库建设计划
-- [`../knowledge-base/TEACHING-MATERIALS-STRATEGY.md`](../knowledge-base/TEACHING-MATERIALS-STRATEGY.md) — 教辅材料策略
-- [`./PRODUCT-REVIEW.md`](./PRODUCT-REVIEW.md) — 早期 PRD 评审报告
+- [`../architecture/KB-LAYOUT.md`](../architecture/KB-LAYOUT.md) — 知识库结构与建设（取代旧 KNOWLEDGE-BASE-PLAN）
+- [`../design/TEACHING-MATERIALS-STRATEGY.md`](../design/TEACHING-MATERIALS-STRATEGY.md) — 教辅材料策略
+- [`../archive/2026-05-11-PRODUCT-REVIEW-v2.1.md`](../archive/2026-05-11-PRODUCT-REVIEW-v2.1.md) — 早期 PRD v2.1 评审（历史）
 - [`./USER-PERSONA-REPORT.md`](./USER-PERSONA-REPORT.md) — 用户画像咨询报告

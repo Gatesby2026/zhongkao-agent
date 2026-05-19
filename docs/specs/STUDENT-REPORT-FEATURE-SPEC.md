@@ -1,7 +1,7 @@
 # 学情报告生成 — 产品功能标准化规格
 
 > **版本**：v0.1 草案 | **更新日期**：2026-05-13
-> **关联文档**：[`PRD.md`](./PRD.md) v5.0 · [`../../scripts/README.md`](../../scripts/README.md)
+> **关联文档**：[`../product/PRD.md`](../product/PRD.md) v5.0 · [`../../scripts/README.md`](../../scripts/README.md)
 > **目标**：把目前"手工 + 半自动"的学情报告流程固化为家长用户可一键触发的产品功能
 
 ---
@@ -31,9 +31,9 @@
 ### 1.2 已实现的 MVP 案例
 
 已成功手工生成 **3 份**学情报告（贾小淇 · 2026 朝阳一模）：
-- 数学 79/100（[贾小淇_2026朝阳初三一模_学情诊断与提分建议.pdf](../../../zhongkao-agent/learning%20situation/)）
+- 数学 79/100（[贾小淇 学情报告样例](../../out/student-reports/jiaxiaoqi/_legacy/)）
 - 语文（同上目录）
-- 物理 60/70（[贾小淇_2026朝阳初三一模物理_失分分析与提分建议.pdf](../../../zhongkao-agent/learning%20situation/)）
+- 物理 60/70（[贾小淇 物理失分分析样例](../../out/student-reports/jiaxiaoqi/_legacy/)）
 
 **手工耗时**：每份约 1-2 小时（含人工核对）。**目标自动化后**：≤ 5 分钟。
 
@@ -236,7 +236,7 @@ data/<exam-slug>/processed/<subject>/
 
 **关键技术挑战**：涂卡 OCR 不可靠（Qwen-VL 多次把已涂格识别错）。
 
-详细调研见 [ANSWER-CARD-OCR-RESEARCH.md](./ANSWER-CARD-OCR-RESEARCH.md)。
+详细调研见 [archive/2026-05-14-ANSWER-CARD-OCR-RESEARCH.md](../archive/2026-05-14-ANSWER-CARD-OCR-RESEARCH.md)。
 
 **决策（2026-05-14）**：选 **B 路线 — 兼容任意答题卡**（牺牲准确率换零摩擦）：
 
@@ -513,7 +513,7 @@ SSE / WebSocket 实时推送进度 → 完成时返回 `{ pdfUrl, mdUrl }`
 
 ## 九、与 PRD 主线的关系
 
-本功能是 [PRD v5.0](./PRD.md) **「私人教研组」**模型中**最高频、最有价值**的一项：
+本功能是 [PRD v5.0](../product/PRD.md) **「私人教研组」**模型中**最高频、最有价值**的一项：
 
 - **频次**：每年至少 6 次（开学摸底 + 期中 + 期末 + 一模 + 二模 + 中考）
 - **价值**：直接回答家长五问中的 Q2「差的这些分从哪里补」+ Q4「这周做了没进步了没」

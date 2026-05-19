@@ -2,7 +2,7 @@
 """[LEGACY · 已退役] 旧版批量流水线（产出 data/exams/<slug>/paper.json+answer-key.json）。
 
 ⚠️ 不再使用。data/exams 旧格式已归档至 archived/legacy-data-exams/。
-现行链路见 docs/specs/REPO-LAYOUT.md：
+现行链路见 docs/architecture/REPO-LAYOUT.md：
   ocr_paper.py → knowledge-base/.../<slug>/structured-cloud/final.json
   → enrich_to_mock_exam.py → <slug>.yaml
 保留本文件仅供历史参考；final_to_paper.py / extract_answer_key.py 同为 legacy 子件。

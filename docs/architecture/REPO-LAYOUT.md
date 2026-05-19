@@ -1,7 +1,7 @@
 # REPO-LAYOUT — 仓库目录拓扑与数据流
 
 > 状态：v1.1（2026-05-18）· 阶段 0-3 已执行；阶段 4 + students/_web 迁移 deferred
-> 配套：[EXAM-SLUG-SPEC.md](./EXAM-SLUG-SPEC.md)
+> 配套：[KB-LAYOUT.md](./KB-LAYOUT.md)、[../specs/EXAM-SLUG-SPEC.md](../specs/EXAM-SLUG-SPEC.md)
 >
 > **决策已定**：① data/exams + data/zhongkao.db = legacy（已归档）② 仅 `web/`
 > 在用，`admin/`+`miniprogram/`+`backend/` 半成品（已删）③ 交付物收口 `out/`（已改）。

@@ -2,7 +2,8 @@
 
 > 调研日期：2026-05-14
 > 决策：**B 路线 — 兼容任意答题卡**（牺牲准确率换零摩擦）
-> 关联文档：[`STUDENT-REPORT-FEATURE-SPEC.md`](./STUDENT-REPORT-FEATURE-SPEC.md) §三 步骤 3
+> 关联文档：[`../specs/STUDENT-REPORT-FEATURE-SPEC.md`](../specs/STUDENT-REPORT-FEATURE-SPEC.md) §三 步骤 3
+> （注：本文为 2026-05-14 归档调研流水账，已被落地流水线取代）
 
 ---
 

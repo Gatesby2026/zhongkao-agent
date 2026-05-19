@@ -1,7 +1,7 @@
 # KB-LAYOUT — knowledge-base 域结构与数据契约
 
 > 状态：v1.0（2026-05-18）· 阶段 0 立规（描述**目标态 + 现状差距 + 迁移阶段**）
-> 配套：[KB-MODULE-ID-SPEC.md](./KB-MODULE-ID-SPEC.md)、[REPO-LAYOUT.md](./REPO-LAYOUT.md)、[EXAM-SLUG-SPEC.md](./EXAM-SLUG-SPEC.md)
+> 配套：[../specs/KB-MODULE-ID-SPEC.md](../specs/KB-MODULE-ID-SPEC.md)、[REPO-LAYOUT.md](./REPO-LAYOUT.md)、[../specs/EXAM-SLUG-SPEC.md](../specs/EXAM-SLUG-SPEC.md)
 > 取代：原 `docs/knowledge-base/KNOWLEDGE-BASE-PLAN.md`（已删，结构以本文件为准）
 
 ## 0. 定位
@@ -115,6 +115,10 @@ meta:
 > `.cache/pages/...` 相对引用。raw/派生 划分本就正确，**回迁无收益且会断耦合，
 > 故不做**（符合"不做无意义重构"原则）。
 
-## 6. 待决（阻塞阶段 2）
+## 6. 待决
 
-- `docs/knowledge-base/` 余 5 文件（REVIEW / TRACKING-REPORT / TEACHING-MATERIALS-STRATEGY / EXAM-QUALITY-AUDIT / math-exam-stats.txt）去留——是否一并并入 specs 或归档。
+- （已解决）`docs/knowledge-base/` 已按 docs 重构解散：TEACHING-MATERIALS-STRATEGY
+  / KNOWLEDGE-TRACKING → `docs/design/`；REVIEW / EXAM-QUALITY-AUDIT /
+  math-exam-stats → `docs/archive/`。本文件已移入 `docs/architecture/`。
+- 内容层后续：139 份知识文件 `llm_draft`/`curated` → 人工复核提升为
+  `teacher_reviewed`（教研内容投入，非结构任务）。

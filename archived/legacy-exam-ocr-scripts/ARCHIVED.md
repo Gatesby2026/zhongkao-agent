@@ -13,4 +13,4 @@
 | `segment-exam-draft.py` | 早期切题草稿 | `split_by_question_number`（在 ocr_paper.py） |
 | `ocr-paddle-exam.py` | 早期 paddle OCR 草稿 | `ocr_paper.py` + `paddle_layout.py` |
 
-现行链路与目录约定见 `docs/specs/REPO-LAYOUT.md`。
+现行链路与目录约定见 `docs/architecture/REPO-LAYOUT.md`。

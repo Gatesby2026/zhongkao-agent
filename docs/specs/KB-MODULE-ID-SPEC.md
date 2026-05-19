@@ -1,7 +1,7 @@
 # KB-MODULE-ID-SPEC — 知识模块唯一标识规范
 
 > 状态：v1.0（2026-05-18）· 强制 · pedagogy 域跨层 join 的对齐键
-> 配套：[KB-LAYOUT.md](./KB-LAYOUT.md)、[EXAM-SLUG-SPEC.md](./EXAM-SLUG-SPEC.md)
+> 配套：[../architecture/KB-LAYOUT.md](../architecture/KB-LAYOUT.md)、[EXAM-SLUG-SPEC.md](./EXAM-SLUG-SPEC.md)
 
 ## 1. 为什么需要它
 
