@@ -11,7 +11,7 @@ pdf-to-questionbank.py — 教辅扫描版 PDF → 结构化题库 YAML
 用法示例：
   python3 scripts/pdf-to-questionbank.py \\
     --pdf "knowledge-original/教辅材料/2026《万唯中考•试题研究》北京版/2026《万唯中考•试题研究》数学/2026《万唯中考•试题研究》数学分层作业本.pdf" \\
-    --out knowledge-base/question-banks/math/wanwei-zuoye-2026-bj \\
+    --out knowledge-base/prep/question-banks/math/wanwei-zuoye-2026-bj \\
     --book-id wanwei-zuoye-2026-bj \\
     --start-page 5
 
