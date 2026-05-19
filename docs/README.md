@@ -20,7 +20,9 @@
 | 文档 | 说明 |
 |------|------|
 | [REPO-LAYOUT.md](./specs/REPO-LAYOUT.md) | **仓库目录拓扑与数据流**（三层铁律 + 职责总表 + 整改阶段）v1.0 |
+| [KB-LAYOUT.md](./specs/KB-LAYOUT.md) | **knowledge-base 五域结构与数据契约**（取代旧 KNOWLEDGE-BASE-PLAN）v1.0 |
 | [EXAM-SLUG-SPEC.md](./specs/EXAM-SLUG-SPEC.md) | **试卷唯一标识规范**（跨层 join 对齐键）v1.0 |
+| [KB-MODULE-ID-SPEC.md](./specs/KB-MODULE-ID-SPEC.md) | **知识模块唯一标识规范**（pedagogy 跨层 join 键）v1.0 |
 | [STUDENT-PROFILE-SPEC.md](./specs/STUDENT-PROFILE-SPEC.md) | 学生画像数据模型规范 |
 | [EXAM-FORMAT-SPEC.md](./specs/EXAM-FORMAT-SPEC.md) | 北京中考各科试卷格式规范 |
 
@@ -28,7 +30,7 @@
 
 | 文档 | 说明 |
 |------|------|
-| [KNOWLEDGE-BASE-PLAN.md](./knowledge-base/KNOWLEDGE-BASE-PLAN.md) | 知识库建设方案与迭代计划 |
+| _（KNOWLEDGE-BASE-PLAN.md 已删）_ | 结构规范移至 [specs/KB-LAYOUT.md](./specs/KB-LAYOUT.md) |
 | [KNOWLEDGE-BASE-REVIEW.md](./knowledge-base/KNOWLEDGE-BASE-REVIEW.md) | 知识库质量评估报告 |
 | [KNOWLEDGE-TRACKING-REPORT.md](./knowledge-base/KNOWLEDGE-TRACKING-REPORT.md) | 学生知识掌握动态追踪体系 |
 | [EXAM-QUALITY-AUDIT.md](./knowledge-base/EXAM-QUALITY-AUDIT.md) | 数学试卷质量审核报告 |
@@ -53,7 +55,7 @@
 2. `../miniprogram/README.md`
 
 **做内容/知识库**：
-1. [KNOWLEDGE-BASE-PLAN.md](./knowledge-base/KNOWLEDGE-BASE-PLAN.md)
+1. [specs/KB-LAYOUT.md](./specs/KB-LAYOUT.md) + [specs/KB-MODULE-ID-SPEC.md](./specs/KB-MODULE-ID-SPEC.md)
 2. [EXAM-FORMAT-SPEC.md](./specs/EXAM-FORMAT-SPEC.md)
 3. [TEACHING-MATERIALS-STRATEGY.md](./knowledge-base/TEACHING-MATERIALS-STRATEGY.md)
 
