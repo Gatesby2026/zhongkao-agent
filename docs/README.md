@@ -19,6 +19,8 @@
 
 | 文档 | 说明 |
 |------|------|
+| [REPO-LAYOUT.md](./specs/REPO-LAYOUT.md) | **仓库目录拓扑与数据流**（三层铁律 + 职责总表 + 整改阶段）v1.0 |
+| [EXAM-SLUG-SPEC.md](./specs/EXAM-SLUG-SPEC.md) | **试卷唯一标识规范**（跨层 join 对齐键）v1.0 |
 | [STUDENT-PROFILE-SPEC.md](./specs/STUDENT-PROFILE-SPEC.md) | 学生画像数据模型规范 |
 | [EXAM-FORMAT-SPEC.md](./specs/EXAM-FORMAT-SPEC.md) | 北京中考各科试卷格式规范 |
 

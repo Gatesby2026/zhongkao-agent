@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
-"""批量端到端流水线：试卷扫描 + 已有 OCR 工具 + LLM enrich → mock-exam YAML。
+"""[LEGACY · 已退役] 旧版批量流水线（产出 data/exams/<slug>/paper.json+answer-key.json）。
+
+⚠️ 不再使用。data/exams 旧格式已归档至 archived/legacy-data-exams/。
+现行链路见 docs/specs/REPO-LAYOUT.md：
+  ocr_paper.py → knowledge-base/.../<slug>/structured-cloud/final.json
+  → enrich_to_mock_exam.py → <slug>.yaml
+保留本文件仅供历史参考；final_to_paper.py / extract_answer_key.py 同为 legacy 子件。
+
+────────────────────────────────────────────────────────────
+批量端到端流水线：试卷扫描 + 已有 OCR 工具 + LLM enrich → mock-exam YAML。
 
 6 步：
   1. 抓取试卷扫描页（gaokzx adapter）—— 待写，目前手工提供 URL
@@ -84,7 +93,9 @@ def run_job(job: dict, data_dir: Path, kb_dir: Path, dry_run: bool = False):
         print(f"🔧 step 2: ocr_paper → structured-cloud/final.json")
         if not dry_run:
             paper_dir = paper_pages_dir.parent  # images/ 的父目录
-            ocr_paper.ocr_one_paper(paper_dir, subject_en=subject_en)
+            # 旧 gaokzx 流水线：自带 work_dir 约定，src==out 保持原行为
+            ocr_paper.ocr_one_paper(paper_dir, paper_dir,
+                                    subject_en=subject_en)
 
     # === Step 3: final.json → paper.json ===
     paper_path = work_dir / "paper.json"

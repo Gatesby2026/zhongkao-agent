@@ -418,9 +418,11 @@ def build(student_dir: Path, standard: Path | None, skip_pdf: bool) -> Path:
 
     # 渲染 + 输出
     md = render_markdown(exam, per_q, overall)
-    out_dir = ROOT / "learning situation"
-    out_dir.mkdir(exist_ok=True)
-    md_path = out_dir / f"{exam.student_name}_{slug}_学情报告.md"
+    # 交付物统一收口到 out/（REPO-LAYOUT 三层铁律）。
+    # 路径用学生目录名（拼音 id）+ slug，学生中文名只进报告正文不进路径。
+    out_dir = ROOT / "out" / "student-reports" / student_dir.parent.name / slug
+    out_dir.mkdir(parents=True, exist_ok=True)
+    md_path = out_dir / "report.md"
     md_path.write_text(md, encoding="utf-8")
     print(f"\n📝 Markdown → {md_path}")
 

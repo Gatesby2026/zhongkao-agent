@@ -13,13 +13,14 @@
 旧 qwen-vl-max 实现见 `extract_figures.legacy.py`（备份）。
 
 CLI:
-    python3 extract_figures.py <paper_dir> --subject physics
+    python3 extract_figures.py <src_dir> --subject physics [--out-dir <staging>]
 
-读取:  <paper_dir>/images/page-*.png
-       <paper_dir>/pages/page-*.ocr.txt
-       <paper_dir>/structured-cloud/final.json
-写入:  <paper_dir>/figures/q{NN}.png
-       <paper_dir>/structured-cloud/final.json   （加 figure_path 字段）
+读取:  <src_dir>/images/page-*.png                 （原始件，knowledge-original）
+       <out_dir>/pages/page-*.ocr.txt              （派生件，knowledge-base）
+       <out_dir>/structured-cloud/final.json
+写入:  <out_dir>/figures/q{NN}.png
+       <out_dir>/structured-cloud/final.json       （加 figure_path 字段）
+out_dir 缺省由 paths.derive_out_dir(src_dir) 映射到 knowledge-base。
 """
 from __future__ import annotations
 
@@ -47,6 +48,7 @@ from assign_figures import (  # noqa: E402
     question_figure_demand,
     assign_images_to_questions,
 )
+from paths import derive_out_dir  # noqa: E402
 
 
 # ========================= CV 后处理（保留自 legacy）=========================
@@ -189,13 +191,17 @@ def _load_layout_for_page(page_img: Path, cache_dir: Path) -> list[dict]:
     return boxes
 
 
-def extract_figures(paper_dir: Path, subject: str = "",
+def extract_figures(src_dir: Path, out_dir: Path, subject: str = "",
                      dry_run: bool = False, force: bool = False) -> None:
-    """主入口：从 final.json 读题目，paddle 检测 + 分配 + 裁切，更新 final.json。"""
-    final_json = paper_dir / "structured-cloud" / "final.json"
-    images_dir = paper_dir / "images"
-    figures_dir = paper_dir / "figures"
-    layout_cache_dir = paper_dir / "layout-cache"
+    """主入口：从 final.json 读题目，paddle 检测 + 分配 + 裁切，更新 final.json。
+
+    src_dir: 原始卷目录（只读 images/）。
+    out_dir: 派生 staging 目录（pages/structured-cloud/figures/layout-cache）。
+    """
+    final_json = out_dir / "structured-cloud" / "final.json"
+    images_dir = src_dir / "images"
+    figures_dir = out_dir / "figures"
+    layout_cache_dir = out_dir / "layout-cache"
 
     if not final_json.exists():
         raise FileNotFoundError(f"找不到 final.json: {final_json}")
@@ -207,9 +213,9 @@ def extract_figures(paper_dir: Path, subject: str = "",
                  if q.get("type") in ("choice", "multi_choice")}
 
     # 加载 OCR 文本（每题 demand + y 区间的输入）
-    pages_text = _load_pages_text(paper_dir)
+    pages_text = _load_pages_text(out_dir)
     if not pages_text:
-        raise FileNotFoundError(f"无 OCR 缓存: {paper_dir / 'pages'}")
+        raise FileNotFoundError(f"无 OCR 缓存: {out_dir / 'pages'}")
 
     # 各页是否答案页
     page_names = sorted(pages_text.keys())
@@ -314,8 +320,10 @@ def main():
     p = argparse.ArgumentParser(
         description="paddle CV 模型 + 程序匹配：从试卷页裁切各题图片"
     )
-    p.add_argument("paper_dir", type=Path,
-                   help="单卷目录，含 images/ + pages/ + structured-cloud/final.json")
+    p.add_argument("src_dir", type=Path,
+                   help="原始卷目录（knowledge-original/...），含 images/page-*.png")
+    p.add_argument("--out-dir", type=Path, default=None,
+                   help="派生 staging 目录；缺省按 paths.derive_out_dir 映射")
     p.add_argument("--subject", default="",
                    help="科目（仅用于日志，可选）")
     p.add_argument("--dry-run", action="store_true",
@@ -324,19 +332,20 @@ def main():
                    help="强制重跑 paddle layout 检测（忽略缓存）")
     args = p.parse_args()
 
-    paper_dir = args.paper_dir.resolve()
-    if not paper_dir.is_dir():
-        print(f"目录不存在: {paper_dir}", file=sys.stderr); sys.exit(1)
+    src_dir = args.src_dir.resolve()
+    if not src_dir.is_dir():
+        print(f"目录不存在: {src_dir}", file=sys.stderr); sys.exit(1)
+    out_dir = (args.out_dir or derive_out_dir(src_dir)).resolve()
 
     if args.force:
-        cache = paper_dir / "layout-cache"
+        cache = out_dir / "layout-cache"
         if cache.exists():
             for f in cache.glob("*.json"):
                 f.unlink()
             print(f"🗑  清理 layout 缓存: {cache}")
 
-    extract_figures(paper_dir, subject=args.subject, dry_run=args.dry_run,
-                     force=args.force)
+    extract_figures(src_dir, out_dir, subject=args.subject,
+                     dry_run=args.dry_run, force=args.force)
 
 
 if __name__ == "__main__":

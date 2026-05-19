@@ -44,6 +44,9 @@ try:
 except ImportError:
     print("pip install openai", file=sys.stderr); sys.exit(1)
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from paths import derive_out_dir  # noqa: E402
+
 
 SUBJECT_LABEL_CN = {
     "physics": "物理", "math": "数学", "chinese": "语文",
@@ -217,17 +220,68 @@ def _strip_preamble(text: str, on_first_page: bool) -> str:
     return text
 
 
+def _pick_question_chain(matches: list, expected: int) -> list[tuple]:
+    """从一页的题号锚点里挑出真正的题目链（对 OCR 题号错乱鲁棒）。
+
+    关键事实：试卷题号是**全局连续整数** 1,2,3,…N。OCR 会把单页题号整体
+    重置（如大兴 page-03 多选题 OCR 成 "1./2./3." 实为 11/12/13）或夹入
+    单点跳变（如 page-07 续作行误识成 "16."）。旧版用全局 `n == expected`
+    严格过滤，一旦某页 OCR 题号不接上，整页被吞并且**雪崩**吞掉其后所有页。
+
+    新策略：取该页锚点里「连续 +1 整数最长子序列」作为题目链，
+    打分以链长为主；起点恰为 expected（正常顺延）或贴近 expected 时加权，
+    使「正常顺延页」优先于「页内残留子项 1./2.」，同时整页重置（page-03
+    那种 1/2/3）因自成最长连续链仍被完整保留。
+    返回 [(match, ocr_num), ...]（文档顺序）；无则 []。
+    """
+    if not matches:
+        return []
+    nums = [int(m.group(1)) for m in matches]
+    n = len(nums)
+    dp = [1] * n          # 以 i 结尾的「连续+1」链长
+    prev = [-1] * n
+    for i in range(n):
+        for j in range(i):
+            if nums[j] == nums[i] - 1 and dp[j] + 1 > dp[i]:
+                dp[i] = dp[j] + 1
+                prev[i] = j
+
+    best: list[int] | None = None
+    best_score = None
+    for i in range(n):
+        chain: list[int] = []
+        k = i
+        while k != -1:
+            chain.append(k)
+            k = prev[k]
+        chain.reverse()
+        start_num = nums[chain[0]]
+        score = len(chain)
+        if start_num == expected:        # 正常顺延，强加权
+            score += 5
+        elif abs(start_num - expected) <= 2:
+            score += 2
+        if (best_score is None or score > best_score
+                or (score == best_score and chain[0] < best[0])):
+            best_score = score
+            best = chain
+    return [(matches[k], nums[k]) for k in best]
+
+
 def split_by_question_number(pages_text: list[str]) -> tuple[list[dict], list[int]]:
     """Step A：按题号锚点切段（纯程序，无 LLM）。
 
     返回:
-        questions_raw: [{"number": N, "text": "...", "source_page": P}]
+        questions_raw: [{"number": N, "text": "...", "source_page": P,
+                         "ocr_number": OCR 原始题号(诊断用)}]
         answer_pages: 答案页页码列表（1-based）
 
     切分规则：
     - 每页先剥掉头部（考生须知、答案页标题）
     - 在剩余文本里按 ^N.[\s] 锚点找候选位置
-    - 用"严格递增"过滤误匹（last_num + 1 才接受）
+    - 用 `_pick_question_chain` 取「连续整数最长子序列」抗 OCR 题号错乱
+    - 题号按**文档顺序顺延**重编（不信任 OCR 题号——它会整页重置/跳变），
+      OCR 原始号留在 ocr_number 供 qc 诊断；断号/题数异常由 qc_report 兜底
     - 跨页处理：page-N+1 第一锚点前的内容并入 page-N 末题
     """
     is_ans = _classify_pages(pages_text)
@@ -243,39 +297,32 @@ def split_by_question_number(pages_text: list[str]) -> tuple[list[dict], list[in
         text = _strip_preamble(raw_text, on_first_page=(page_num == 1))
 
         matches = list(NUM_ANCHOR_RE.finditer(text))
-        # 严格递增过滤
-        valid = []
-        expected = last_num + 1
-        for m in matches:
-            n = int(m.group(1))
-            if n == expected:
-                valid.append(m)
-                expected += 1
+        chain = _pick_question_chain(matches, last_num + 1)
 
-        if not valid:
+        if not chain:
             # 整页都是上一题的延续（跨页）
             if segments and text.strip():
                 segments[-1]["text"] += "\n" + text.strip()
             continue
 
         # 第一个锚点之前的内容并入上一题
-        first_start = valid[0].start()
+        first_start = chain[0][0].start()
         if first_start > 0 and segments:
             tail = text[:first_start].strip()
             # 大题标题（如"四、科普阅读题(共4分)"）跳过，别并入上一题
             if tail and not SECTION_HEAD_RE.match(tail):
                 segments[-1]["text"] += "\n" + tail
 
-        for i, m in enumerate(valid):
-            num = int(m.group(1))
+        for i, (m, ocr_n) in enumerate(chain):
+            last_num += 1               # 文档顺序顺延重编
             start = m.start()
-            end = valid[i + 1].start() if i + 1 < len(valid) else len(text)
+            end = chain[i + 1][0].start() if i + 1 < len(chain) else len(text)
             segments.append({
-                "number": num,
+                "number": last_num,
                 "text": text[start:end].strip(),
                 "source_page": page_num,
+                "ocr_number": ocr_n,
             })
-            last_num = num
 
     return segments, answer_pages
 
@@ -287,6 +334,14 @@ OPT_ANCHOR_RE = re.compile(r"(?:(?<=^)|(?<=[\s。，；,;]))([A-D])\s*[.、．]\
 INLINE_4OPTS_RE = re.compile(
     r"A\s*[.、．][^A-D\n]{1,30}B\s*[.、．][^A-D\n]{1,30}C\s*[.、．][^A-D\n]{1,30}D\s*[.、．][^\n]{1,30}"
 )
+# 图片选项行：选项本身是 4 张图，OCR 只剩裸标签 "A B C D"（无 . 无内容），
+# 或带空点/[图] 占位（"A.[图] B.[图] C.[图] D.[图]"）。整行只有这 4 个标签。
+IMG_4OPTS_RE = re.compile(
+    r"(?m)^\s*A\s*[.、．]?\s*(?:\[图\])?\s+"
+    r"B\s*[.、．]?\s*(?:\[图\])?\s+"
+    r"C\s*[.、．]?\s*(?:\[图\])?\s+"
+    r"D\s*[.、．]?\s*(?:\[图\])?\s*$"
+)
 
 
 def split_stem_options(text: str) -> tuple[str, dict | None]:
@@ -296,34 +351,43 @@ def split_stem_options(text: str) -> tuple[str, dict | None]:
     - OCR 偶尔把图象坐标轴/标题误识成 "A. B." 开头（如 Q16 温度-时间图）
     - 用"选项内容长度 < 120 且 ≤ 2 行换行"过滤
     - 至少识别出 3 个合法选项才认为是选择题
+    图片选项兜底：选项是 4 张图时 OCR 仅留裸标签行 "A B C D"，按
+    has_image_options 约定回填 {A:"[图]",...}（否则整道选择题 options 丢失）。
     """
     # 找第一个候选 A 锚点
     m = OPT_ANCHOR_RE.search(text)
-    if not m or m.group(1) != "A":
-        return text.strip(), None
+    if m and m.group(1) == "A":
+        stem = text[:m.start()].rstrip()
+        opts_text = text[m.start():]
 
-    stem = text[:m.start()].rstrip()
-    opts_text = text[m.start():]
+        # 用同一锚点切分
+        parts = OPT_ANCHOR_RE.split(opts_text)
+        raw_opts: dict[str, str] = {}
+        for i in range(1, len(parts) - 1, 2):
+            label = parts[i].strip()
+            content = parts[i + 1].strip()
+            # 最后一个选项常会把后续无关内容（图标 "甲乙"、新大题标题、表格）吞进来。
+            # 选项内部通常无空行，遇到第一个 \n\n 截断。
+            content = re.split(r"\n\s*\n", content, maxsplit=1)[0].strip()
+            if label in "ABCD" and content and label not in raw_opts:
+                raw_opts[label] = content
 
-    # 用同一锚点切分
-    parts = OPT_ANCHOR_RE.split(opts_text)
-    raw_opts: dict[str, str] = {}
-    for i in range(1, len(parts) - 1, 2):
-        label = parts[i].strip()
-        content = parts[i + 1].strip()
-        # 最后一个选项常会把后续无关内容（图标 "甲乙"、新大题标题、表格）吞进来。
-        # 选项内部通常无空行，遇到第一个 \n\n 截断。
-        content = re.split(r"\n\s*\n", content, maxsplit=1)[0].strip()
-        if label in "ABCD" and content and label not in raw_opts:
-            raw_opts[label] = content
+        # OCR 噪声防护：内容 > 120 字符 → 多半是图象/表格内容被误识为选项
+        clean_opts = {k: v for k, v in raw_opts.items() if len(v) <= 120}
+        # 中考选择题约定 4 选项，必须 A/B/C/D 都有才认为是 choice
+        # （防止 Q24 那种"子题内含 A/B/C 备选数值"被误识为选择题）
+        if set(clean_opts.keys()) == {"A", "B", "C", "D"}:
+            return stem, clean_opts
 
-    # OCR 噪声防护：内容 > 120 字符 → 多半是图象/表格内容被误识为选项
-    clean_opts = {k: v for k, v in raw_opts.items() if len(v) <= 120}
-    # 中考选择题约定 4 选项，必须 A/B/C/D 都有才认为是 choice
-    # （防止 Q24 那种"子题内含 A/B/C 备选数值"被误识为选择题）
-    if set(clean_opts.keys()) != {"A", "B", "C", "D"}:
-        return text.strip(), None
-    return stem, clean_opts
+    # 图片选项兜底：整行只有 "A B C D"（选项是图，无文字内容）。
+    # 仅当 stem 较短才认（图片选择题题干都短；防长实验题里的图注 "A B C D" 误判）
+    im = IMG_4OPTS_RE.search(text)
+    if im:
+        stem = text[:im.start()].rstrip()
+        if len(stem) <= 200:
+            return stem, {k: "[图]" for k in "ABCD"}
+
+    return text.strip(), None
 
 
 # Step B：单题类型分类（qwen-max，输入小输出小）
@@ -1045,12 +1109,15 @@ def _clean_stem(text: str) -> str:
 
 # ============== 主入口 ==============
 
-def ocr_one_paper(paper_dir: Path, subject_en: str, force: bool = False,
-                   pipeline: str = "v2") -> Path:
-    images_dir = paper_dir / "images"
-    pages_cache = paper_dir / "pages"
-    out_dir = paper_dir / "structured-cloud"
-    out_json = out_dir / "final.json"
+def ocr_one_paper(src_dir: Path, out_dir: Path, subject_en: str,
+                   force: bool = False, pipeline: str = "v2") -> Path:
+    """src_dir: 原始卷目录（knowledge-original，只读 images/）。
+    out_dir : 派生 staging 目录（knowledge-base），落 pages/structured-cloud。
+    """
+    images_dir = src_dir / "images"
+    pages_cache = out_dir / "pages"
+    struct_dir = out_dir / "structured-cloud"
+    out_json = struct_dir / "final.json"
 
     if out_json.exists() and not force:
         print(f"  ⏭  缓存命中：{out_json}")
@@ -1165,7 +1232,7 @@ def ocr_one_paper(paper_dir: Path, subject_en: str, force: bool = False,
         })
     result["answers"] = answers
 
-    out_dir.mkdir(parents=True, exist_ok=True)
+    struct_dir.mkdir(parents=True, exist_ok=True)
     out_json.write_text(json.dumps(result, ensure_ascii=False, indent=2),
                         encoding="utf-8")
 
@@ -1175,17 +1242,20 @@ def ocr_one_paper(paper_dir: Path, subject_en: str, force: bool = False,
         md_lines.append(f"## Q{q.get('number')} ({q.get('type','?')}) · page-{q.get('source_page','?')}")
         md_lines.append(q.get("text", ""))
         md_lines.append("")
-    (out_dir / "final.md").write_text("\n".join(md_lines), encoding="utf-8")
+    (struct_dir / "final.md").write_text("\n".join(md_lines), encoding="utf-8")
 
-    print(f"  ✅ {out_json.relative_to(paper_dir.parent.parent) if paper_dir.parent.parent in out_json.parents else out_json}")
+    print(f"  ✅ {out_json}")
     print(f"     {len(qs)} 题, answer_pages={result.get('answer_pages')}")
     return out_json
 
 
 def main():
     p = argparse.ArgumentParser()
-    p.add_argument("paper_dir", type=Path,
-                   help="单卷目录，包含 images/page-*.png")
+    p.add_argument("src_dir", type=Path,
+                   help="原始卷目录（knowledge-original/...），含 images/page-*.png")
+    p.add_argument("--out-dir", type=Path, default=None,
+                   help="派生 staging 目录；缺省按 paths.derive_out_dir 映射到 "
+                        "knowledge-base/mock-exams/<subject>/beijing/<slug>/")
     p.add_argument("--subject", required=True,
                    choices=list(SUBJECT_LABEL_CN.keys()))
     p.add_argument("--force", action="store_true",
@@ -1193,7 +1263,8 @@ def main():
     p.add_argument("--pipeline", choices=["v1", "v2"], default="v2",
                    help="结构化流水线：v2（默认，拆职责）/ v1（legacy 单调用）")
     args = p.parse_args()
-    ocr_one_paper(args.paper_dir, args.subject, force=args.force,
+    out_dir = args.out_dir or derive_out_dir(args.src_dir)
+    ocr_one_paper(args.src_dir, out_dir, args.subject, force=args.force,
                   pipeline=args.pipeline)
 
 

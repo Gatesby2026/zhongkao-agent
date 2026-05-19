@@ -7,9 +7,15 @@ knowledge-base/question-banks/**/.cache/
 
 # Python 虚拟环境
 **/.venv-ocr/
+**/.venv-paddle/
 **/.venv/
 **/__pycache__/
 *.pyc
+
+# 结构化 staging 缓存（OCR 文本 / paddle 版面检测，可重生，不入 git）
+# 仅 structured-cloud/（final.json+md）+ figures/ 作为派生真相入库
+knowledge-base/mock-exams/**/pages/
+knowledge-base/mock-exams/**/layout-cache/
 
 # 大型本地缓存/归档
 *.tar.gz
@@ -18,8 +24,15 @@ knowledge-base/question-banks/**/.cache/
 .claude/worktrees/
 
 # 学生隐私数据（含真实姓名/成绩，禁止公开）
-learning situation/
+out/student-reports/
 students/
+
+# Legacy 归档（保留磁盘备查，不入 git 以免膨胀）
+archived/legacy-data-exams/
+archived/legacy-db/
+
+# Node 依赖（全局）
+**/node_modules/
 
 # 脚本运行时状态/日志
 scripts/knowledge-base/quark_done_ids.json
