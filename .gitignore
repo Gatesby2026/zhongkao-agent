@@ -30,6 +30,7 @@ students/
 # Legacy 归档（保留磁盘备查，不入 git 以免膨胀）
 archived/legacy-data-exams/
 archived/legacy-db/
+archived/legacy-answer-card-poc/
 
 # Node 依赖（全局）
 **/node_modules/
@@ -52,3 +53,6 @@ server/uploads/
 web/node_modules/
 web/dist/
 out/papers/
+
+# TypeScript 增量编译缓存（派生产物，可重生）
+*.tsbuildinfo
