@@ -4,7 +4,7 @@ import { api, type ReportResp } from './api'
 
 const step = ref(0)                       // 0 首屏 1 上传 2 小分 3 分析 4 报告
 // step1 子阶段：pick 选图 / detecting 识别中 / confirm 确认 / failed 识别失败
-const phase = ref<'pick'|'detecting'|'confirm'|'failed'>('pick')
+const phase = ref<'pick'|'uploading'|'detecting'|'confirm'|'failed'>('pick')
 const detectErr = ref('')
 const analysisId = ref<string | null>(null)
 const photos = ref<File[]>([])
@@ -65,10 +65,15 @@ function onScorePick(e: Event) {
 async function uploadAndDetect() {
   errorMsg.value = ''
   if (!photos.value.length) { errorMsg.value = '请先上传答题卡照片'; return }
+  phase.value = 'uploading'          // 立即反馈：进入上传中（按钮置灰 + 内联进度）
   try {
     const r = await api.createAnalysis(photos.value)
     analysisId.value = r.id
-  } catch (e: any) { errorMsg.value = '上传失败：' + e.message; return }
+  } catch (e: any) {
+    phase.value = 'pick'             // 上传失败回到选图，可重选重试
+    errorMsg.value = '上传失败：' + e.message; return
+  }
+  if (phase.value !== 'uploading') return   // 用户上传中点了"重新选择"，放弃本次结果
   phase.value = 'detecting'
   pollDetect()
 }
@@ -178,6 +183,7 @@ onUnmounted(() => clearInterval(pollTimer))
 const NEXT_LABEL = computed(() => {
   if (step.value === 1) {
     if (phase.value === 'pick') return '上传并识别'
+    if (phase.value === 'uploading') return '上传中…'
     if (phase.value === 'detecting') return '识别中…'
     if (phase.value === 'confirm') return '确认无误，下一步'
     if (phase.value === 'failed') return '重新选择图片上传'
@@ -188,6 +194,7 @@ const NEXT_LABEL = computed(() => {
 })
 const nextDisabled = computed(() =>
   step.value === 1 && (
+    phase.value === 'uploading' ||
     phase.value === 'detecting' ||
     (phase.value === 'pick' && !photos.value.length)))
 
@@ -260,6 +267,13 @@ const correctCnt = computed(() =>
             stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
             <path d="M7.5 3.5h6l4.5 4.5v11a1.6 1.6 0 0 1-1.6 1.6H7.5A1.6 1.6 0 0 1 5.9 19V5.1A1.6 1.6 0 0 1 7.5 3.5z"/>
             <path d="M13.5 3.5V8h4.5"/><path d="M9 14.3l2 2 3.8-4"/></svg></span>确认考试
+        </div>
+        <div class="flow-link"></div>
+        <div class="flow-item">
+          <span class="flow-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="4" y="5" width="16" height="14" rx="2"/>
+            <path d="M4 10h16M10 5v14"/></svg></span>上传小分
         </div>
         <div class="flow-link"></div>
         <div class="flow-item">
@@ -373,13 +387,33 @@ const correctCnt = computed(() =>
         </div>
       </div>
 
-      <!-- 识别中：内联进度（缩略图仍在上方） -->
-      <div v-if="phase==='detecting'" class="card"
-           style="text-align:center;padding:24px 16px;margin-top:14px">
-        <div class="spinner"></div>
-        <div class="section-title" style="margin:10px 0 4px">正在识别考试信息…</div>
-        <div class="section-desc" style="margin:0">
-          读取顶部标题（区/科目/年份）+ 学生信息 + 卷面完整性</div>
+      <!-- 上传/识别中：就地两步进度（缩略图仍在上方） -->
+      <div v-if="phase==='uploading' || phase==='detecting'" class="card"
+           style="padding:18px 16px;margin-top:14px">
+        <div class="mini-steps">
+          <div class="mini-step" :class="phase==='uploading' ? 'active' : 'done'">
+            <span class="ms-dot">{{ phase==='uploading' ? '' : '✓' }}</span>上传图片
+          </div>
+          <div class="mini-line" :class="{ done: phase!=='uploading' }"></div>
+          <div class="mini-step" :class="phase==='detecting' ? 'active' : ''">
+            <span class="ms-dot"></span>识别考试信息
+          </div>
+        </div>
+        <div style="text-align:center;margin-top:14px">
+          <div class="spinner"></div>
+          <div class="section-title" style="margin:10px 0 4px">
+            {{ phase==='uploading' ? '正在上传答题卡照片…' : '正在识别考试信息…' }}</div>
+          <div class="section-desc" style="margin:0">
+            {{ phase==='uploading'
+               ? '照片较多或网络较慢时需要几秒，请勿离开'
+               : '读取顶部标题（区/科目/年份）+ 学生信息 + 卷面完整性' }}</div>
+        </div>
+        <div class="card" style="background:var(--brand-50);font-size:12.5px;
+             color:var(--gray-600);margin:14px 0 0;padding:10px 12px">
+          识别有误？用上方「+ 选择文件」重新选择，再点底部「上传并识别」。
+        </div>
+        <button class="btn btn-ghost btn-sm" style="width:100%;margin-top:10px"
+                @click="retryUpload">重新选择图片</button>
       </div>
 
       <!-- 识别结果：同页展开核对 + 确认 -->
@@ -599,6 +633,18 @@ const correctCnt = computed(() =>
 .step.done .dot::before { content:'✓'; }
 .step-line { flex:1; height:2px; background:var(--gray-200); margin:0 6px; }
 .step-line.done { background:var(--success); }
+.mini-steps { display:flex; align-items:center; justify-content:center; }
+.mini-step { display:flex; align-items:center; gap:6px; font-size:12.5px;
+  color:var(--gray-400); }
+.mini-step .ms-dot { width:20px; height:20px; border-radius:50%;
+  background:var(--gray-200); color:#fff; font-size:12px; display:flex;
+  align-items:center; justify-content:center; }
+.mini-step.active { color:var(--brand); font-weight:600; }
+.mini-step.active .ms-dot { background:var(--brand); }
+.mini-step.done { color:var(--success); }
+.mini-step.done .ms-dot { background:var(--success); }
+.mini-line { width:42px; height:2px; background:var(--gray-200); margin:0 8px; }
+.mini-line.done { background:var(--success); }
 .scroll-area { padding:16px; }
 .scroll-area::-webkit-scrollbar { display:none; }
 .btn { display:inline-flex; align-items:center; justify-content:center; gap:6px;

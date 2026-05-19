@@ -160,9 +160,9 @@ def render_markdown(exam: ExamView, per_q: dict[int, dict],
         w(f"- **{ws.get('area','')}**（失 {ws.get('lostPoints','?')} 分"
           f"{f'：{qs}' if qs else ''}）— {ws.get('evidence','')}")
 
-    # 三、逐题精析
+    # 三、逐题精析（按题号升序，便于对照试卷）
     w("\n## 三、每道失分题，到底错在哪\n")
-    for q in lost:
+    for q in sorted(lost, key=lambda x: x.num):
         a = per_q.get(q.num, {})
         kp = a.get("knowledgePoint") or q.module_cn
         # 标题对齐旧版标杆：第 N 题（题型 · 精确知识点 · 失 N 分）
