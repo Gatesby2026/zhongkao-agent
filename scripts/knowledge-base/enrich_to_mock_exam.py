@@ -2,10 +2,10 @@
 """试卷结构化数据 → knowledge-base YAML（含 LLM 知识点标注）
 
 支持两种输入格式：
-  新格式（推荐）：--input <exam-dir>/structured-cloud/final.json
+  新格式（推荐）：--input knowledge-base/exams/_staging/<subject>/<slug>/structured-cloud/final.json
   旧格式（兼容）：--paper paper.json --answer-key answer-key.json [--exam-meta exam-meta.json]
 
-输出：knowledge-base/mock-exams/<subject>/beijing/<year>-<district>-<type>.yaml
+输出：knowledge-base/exams/mock/<subject>/beijing/<slug>.yaml（figures 复制到 <slug>/figures/ 旁）
 
 YAML schema（每题）：
   id, type, score, stem, options, has_image_options,
@@ -540,8 +540,8 @@ def _write_yaml(result: dict, out_path: Path,
     out_path.parent.mkdir(parents=True, exist_ok=True)
 
     # 复制 figure 文件到 YAML 旁边的同名子目录
-    # YAML: knowledge-base/mock-exams/physics/beijing/2026-chaoyang-yi.yaml
-    # 图片: knowledge-base/mock-exams/physics/beijing/2026-chaoyang-yi/figures/q06.png
+    # YAML: knowledge-base/exams/mock/physics/beijing/2026-chaoyang-yi.yaml
+    # 图片: knowledge-base/exams/mock/physics/beijing/2026-chaoyang-yi/figures/q06.png
     exam_slug = out_path.stem   # e.g. "2026-chaoyang-yi"
     fig_dest_base = out_path.parent / exam_slug  # YAML旁的同名目录
 

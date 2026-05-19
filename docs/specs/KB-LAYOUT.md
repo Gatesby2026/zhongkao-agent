@@ -93,12 +93,14 @@ meta:
 |---|---|---|---|
 | 0 | 本文件 + KB-MODULE-ID-SPEC；删 KNOWLEDGE-BASE-PLAN | 0 | ✅ |
 | 2 | 解散 resources；subjects→pedagogy/syllabus、common-mistakes→pedagogy/mistakes、diagnostics/learning-paths→pedagogy/、regions→policies、workbooks/study-guides/question-banks→prep/、assessment→prep/quick-tests（221 文件全 rename，history 保留；改 .gitignore + pdf-to-questionbank docstring） | 中 | ✅ |
-| 1 | `mock-exams`→`exams/{zhenti,mock,_staging}` + `exam-analysis`→`exams/analysis`；改 student-report 1 处 glob + paths.py；测一模流程 | 中 | ⏳ |
+| 1 | `mock-exams`→`exams/{zhenti,mock,_staging}` + `exam-analysis`→`exams/analysis`（3355 renames，figures 保相对路径零数据改动）；改 ~20 处引用含 **server×2**（slug 解析搜 mock+zhenti）；本地全链路验证通过 | 中 | ✅（待阿里云重部署） |
 | 3 | module-id 全量 camelCase→kebab；建 kb_lint.py 校验 | 中 | ⏳ |
 | 4 | 全 KB 补 meta 块；question-banks png 回迁 knowledge-original | 低 | ⏳ |
 
-> 阶段 2 已执行（先于阶段 1，因这些域无 live 消费者、风险更低）。阶段 1
-> 仍待——`mock-exams/` `exam-analysis/` 暂留原名，待与 student-report 一并改。
+> 阶段 0/1/2 已执行。⚠️ **阶段 1 改了 server/（线上）**：
+> `server/exam_match.py`、`server/pipeline_adapter.py` 的 KB_ROOT 与 slug 解析
+> 已改为搜 `exams/{mock,zhenti}`；**阿里云需重新部署后线上才生效**（本地已验证）。
+> 剩余 ⏳ 阶段 3（module-id 归一）、阶段 4（meta 块 + png 回迁）。
 
 ## 6. 待决（阻塞阶段 2）
 

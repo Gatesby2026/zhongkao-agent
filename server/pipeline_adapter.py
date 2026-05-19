@@ -16,18 +16,18 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SR_DIR = ROOT / "scripts" / "student-report"
-KB_ROOT = ROOT / "knowledge-base" / "mock-exams"
+KB_ROOT = ROOT / "knowledge-base" / "exams"   # 下含 mock/ zhenti/ analysis/
 
-SUBJECT_EN2DIR = {  # exam_slug 末段 → mock-exams 子目录
+SUBJECT_EN2DIR = {  # exam_slug 末段 → exams/<kind>/ 下科目子目录
     "physics": "physics", "math": "math", "chinese": "chinese",
     "english": "english", "politics": "politics",
 }
 
 
 def kb_yaml_for(exam_slug: str) -> Path | None:
-    """2026-chaoyang-yi-physics → mock-exams/physics/beijing/2026-chaoyang-yi.yaml
+    """2026-chaoyang-yi-physics → exams/{mock,zhenti}/physics/beijing/2026-chaoyang-yi.yaml
 
-    兼容两种命名：
+    搜 mock/ 与 zhenti/；兼容两种命名：
       新：<dir=subject>/beijing/2026-chaoyang-yi.yaml（科目由目录隐含）
       旧：<dir=subject>/beijing/2026-chaoyang-yi-physics.yaml
     """
@@ -35,11 +35,12 @@ def kb_yaml_for(exam_slug: str) -> Path | None:
     if len(parts) < 4:
         return None
     subj = parts[-1]
-    base = KB_ROOT / SUBJECT_EN2DIR.get(subj, subj) / "beijing"
     slug_no_subj = "-".join(parts[:-1])  # 2026-chaoyang-yi
-    for cand in (base / f"{slug_no_subj}.yaml", base / f"{exam_slug}.yaml"):
-        if cand.exists():
-            return cand
+    for kind in ("mock", "zhenti"):
+        base = KB_ROOT / kind / SUBJECT_EN2DIR.get(subj, subj) / "beijing"
+        for cand in (base / f"{slug_no_subj}.yaml", base / f"{exam_slug}.yaml"):
+            if cand.exists():
+                return cand
     return None
 
 

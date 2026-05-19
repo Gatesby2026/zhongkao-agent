@@ -1255,7 +1255,7 @@ def main():
                    help="原始卷目录（knowledge-original/...），含 images/page-*.png")
     p.add_argument("--out-dir", type=Path, default=None,
                    help="派生 staging 目录；缺省按 paths.derive_out_dir 映射到 "
-                        "knowledge-base/mock-exams/<subject>/beijing/<slug>/")
+                        "knowledge-base/exams/_staging/<subject>/<slug>/")
     p.add_argument("--subject", required=True,
                    choices=list(SUBJECT_LABEL_CN.keys()))
     p.add_argument("--force", action="store_true",

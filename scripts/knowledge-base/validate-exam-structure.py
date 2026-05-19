@@ -27,11 +27,11 @@ ORIG_DIR = ROOT / "knowledge-original"
 KB_DIR = ROOT / "knowledge-base"
 
 SUBJECTS = {
-    "math":    ("北京中考数学模拟卷", "mock-exams/math/beijing"),
-    "chinese": ("北京中考语文模拟卷", "mock-exams/chinese/beijing"),
-    "english": ("北京中考英语模拟卷", "mock-exams/english/beijing"),
-    "physics": ("北京中考物理模拟卷", "mock-exams/physics/beijing"),
-    "politics":("北京中考道法模拟卷", "mock-exams/politics/beijing"),
+    "math":    ("北京中考数学模拟卷", "exams/mock/math/beijing"),
+    "chinese": ("北京中考语文模拟卷", "exams/mock/chinese/beijing"),
+    "english": ("北京中考英语模拟卷", "exams/mock/english/beijing"),
+    "physics": ("北京中考物理模拟卷", "exams/mock/physics/beijing"),
+    "politics":("北京中考道法模拟卷", "exams/mock/politics/beijing"),
 }
 
 # 区名 → 英文 key

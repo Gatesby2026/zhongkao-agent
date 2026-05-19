@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 从 YAML 结构化数据生成北京中考数学模拟试卷 PDF
-用法: python3 scripts/generate-exam-pdf.py knowledge-base/mock-exams/math/beijing/2025-chaoyang-yi.yaml
+用法: python3 scripts/generate-exam-pdf.py knowledge-base/exams/mock/math/beijing/2025-chaoyang-yi.yaml
 
 图片尺寸策略（参见 EXAM-FORMAT-SPEC.md § 图形排版规范）:
   - 选项内图片（A.[图]B.[图]）: 2×2 网格, 每格 ≤55mm 宽

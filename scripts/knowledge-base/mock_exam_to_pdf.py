@@ -6,7 +6,7 @@
 
 用法：
     # 单卷
-    python3 mock_exam_to_pdf.py knowledge-base/mock-exams/physics/beijing/2026-chaoyang-yi.yaml
+    python3 mock_exam_to_pdf.py knowledge-base/exams/mock/physics/beijing/2026-chaoyang-yi.yaml
 
     # 批量
     python3 mock_exam_to_pdf.py --all --out-dir out/papers
@@ -68,14 +68,14 @@ def main():
     p = argparse.ArgumentParser()
     p.add_argument("yaml_path", type=Path, nargs="?")
     p.add_argument("--all", action="store_true",
-                   help="批量处理 knowledge-base/mock-exams/ 下所有 2026 一模 YAML")
+                   help="批量处理 knowledge-base/exams/mock/ 下所有 2026 一模 YAML")
     p.add_argument("--out-dir", type=Path, default=Path("out/papers"))
     args = p.parse_args()
 
     args.out_dir.mkdir(parents=True, exist_ok=True)
 
     if args.all:
-        yamls = sorted(Path("knowledge-base/mock-exams").rglob("2026-*-yi-*.yaml"))
+        yamls = sorted(Path("knowledge-base/exams/mock").rglob("2026-*-yi*.yaml"))
         print(f"📦 found {len(yamls)} YAMLs")
         ok, fail = 0, 0
         for y in yamls:

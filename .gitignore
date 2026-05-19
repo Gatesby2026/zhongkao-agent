@@ -14,8 +14,8 @@ knowledge-base/prep/question-banks/**/.cache/
 
 # 结构化 staging 缓存（OCR 文本 / paddle 版面检测，可重生，不入 git）
 # 仅 structured-cloud/（final.json+md）+ figures/ 作为派生真相入库
-knowledge-base/mock-exams/**/pages/
-knowledge-base/mock-exams/**/layout-cache/
+knowledge-base/exams/_staging/**/pages/
+knowledge-base/exams/_staging/**/layout-cache/
 
 # 大型本地缓存/归档
 *.tar.gz

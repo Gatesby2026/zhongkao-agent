@@ -17,7 +17,7 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-KB_ROOT = ROOT / "knowledge-base" / "mock-exams"
+KB_ROOT = ROOT / "knowledge-base" / "exams"   # 下含 mock/ zhenti/ analysis/
 
 DISTRICT_EN = {
     "海淀": "haidian", "西城": "xicheng", "东城": "dongcheng", "朝阳": "chaoyang",
@@ -100,18 +100,19 @@ def extract_identity(lines: list[str]) -> dict:
 
 
 def kb_yaml_for_slug(slug: str) -> Path | None:
-    """exam_slug → mock-exams yaml（兼容 2026-chaoyang-yi[-physics].yaml 两式）。"""
+    """exam_slug → exams yaml（搜 mock/ 与 zhenti/；兼容 2026-chaoyang-yi[-physics].yaml 两式）。"""
     parts = slug.split("-")
     if len(parts) < 4:
         return None
     subj = parts[-1]
-    base = KB_ROOT / SUBJECT_DIR.get(subj, subj) / "beijing"
-    if not base.exists():
-        return None
     no_subj = "-".join(parts[:-1])
-    for cand in (base / f"{no_subj}.yaml", base / f"{slug}.yaml"):
-        if cand.exists():
-            return cand
+    for kind in ("mock", "zhenti"):
+        base = KB_ROOT / kind / SUBJECT_DIR.get(subj, subj) / "beijing"
+        if not base.exists():
+            continue
+        for cand in (base / f"{no_subj}.yaml", base / f"{slug}.yaml"):
+            if cand.exists():
+                return cand
     return None
 
 

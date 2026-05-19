@@ -44,7 +44,7 @@ except ImportError:
 
 ROOT = Path(__file__).resolve().parent.parent
 SRC_DIR = ROOT / "knowledge-original" / "北京中考数学模拟卷"
-DST_DIR = ROOT / "knowledge-base" / "mock-exams" / "math" / "beijing"
+DST_DIR = ROOT / "knowledge-base" / "exams" / "mock" / "math" / "beijing"
 FIG_DIR = DST_DIR / "figures"  # 几何/函数图形保存目录
 CACHE_DIR = ROOT / "scripts" / ".ocr-cache"  # OCR 结果缓存
 

@@ -16,7 +16,7 @@ import yaml
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC_DIR = os.path.join(ROOT, "knowledge-original", "北京中考数学模拟卷")
-DST_DIR = os.path.join(ROOT, "knowledge-base", "mock-exams", "math", "beijing")
+DST_DIR = os.path.join(ROOT, "knowledge-base", "exams", "mock", "math", "beijing")
 
 # 区名 → 英文 key
 DISTRICT_MAP = {

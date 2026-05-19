@@ -29,7 +29,7 @@
 <year>-<region>-<round>-<subject>
 ```
 
-- `subject`：英文小写枚举 `physics | math | chinese | english | politics`（与 `knowledge-base/mock-exams/<subject>/` 一致）
+- `subject`：英文小写枚举 `physics | math | chinese | english | politics`（与 `knowledge-base/exams/{mock,zhenti}/<subject>/` 一致）
 
 示例：`2026-chaoyang-yi-physics`
 
@@ -37,7 +37,7 @@
 
 | 场景 | 用哪种 |
 |---|---|
-| `knowledge-base/mock-exams/<subject>/beijing/<slug>/` 目录 | **试卷级**（科目已在路径上，不重复） |
+| `knowledge-base/exams/{mock,zhenti}/<subject>/beijing/<slug>.yaml` | **试卷级**（科目已在路径上，不重复） |
 | 跨科目聚合 / 学生数据目录 / 交付物文件名 | **卷-科目级** |
 | 程序内对齐键 | 卷-科目级（信息最全，最稳） |
 

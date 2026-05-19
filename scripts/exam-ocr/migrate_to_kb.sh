@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# [已完成·勿再运行] 历史一次性脚本，路径基于旧 mock-exams 布局，已被
+# migrate_exams_layout.sh + KB-LAYOUT 阶段1 取代。仅留作历史参考。
 # 一次性迁移：把已生成的派生件从 knowledge-original 移到 knowledge-base staging，
 # 并删除 knowledge-original 下的旧派生件（images/ 等原始件原地保留）。
 # 幂等：可重复跑；目标已存在则 rsync 合并后删源。

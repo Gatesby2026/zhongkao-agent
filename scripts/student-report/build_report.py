@@ -2,7 +2,7 @@
 """学情分析报告生成（学生向）。
 
 输入（新数据约定）：
-  knowledge-base/mock-exams/<subj>/beijing/<slug>.yaml   # 试卷结构化
+  knowledge-base/exams/{mock,zhenti}/<subj>/beijing/<slug>.yaml   # 试卷结构化
   students/<name>/<exam-slug>/answer-card.json           # 学生作答（含主观题看图评分）
   students/<name>/<exam-slug>/scores.json                # 最终得分
   students/<name>/<exam-slug>/student.json               # 学生信息（可选）
@@ -37,7 +37,7 @@ from lib import analyze                    # noqa: E402
 from lib.schemas import load_exam_view, ExamView, QView  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[2]
-KB_ROOT = ROOT / "knowledge-base" / "mock-exams"
+KB_ROOT = ROOT / "knowledge-base" / "exams"   # 下含 mock/ zhenti/
 MD2PDF = Path.home() / ".claude" / "skills" / "md-to-pdf" / "convert.sh"
 SUBJ_RE = re.compile(
     r"-(physics|chinese|math|english|politics|history|chemistry|biology|geography)$")
@@ -50,8 +50,12 @@ def infer_standard(student_dir: Path) -> Path | None:
     if not m:
         return None
     subj, base = m.group(1), slug[:m.start()]
-    hits = list((KB_ROOT / subj).rglob(f"{base}.yaml")) if (KB_ROOT / subj).exists() else []
-    return hits[0] if hits else None
+    for kind in ("mock", "zhenti"):       # 模拟优先，再真题
+        d = KB_ROOT / kind / subj / "beijing"
+        hits = sorted(d.glob(f"{base}.yaml")) if d.exists() else []
+        if hits:
+            return hits[0]
+    return None
 
 
 # ─── Markdown 渲染 ───────────────────────────────────────────────────────────

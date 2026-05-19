@@ -13,7 +13,7 @@
     answer-card-review students/jiaxiaoqi/2026-chaoyang-yi-physics/answer-card.json
 
     # 显式指定标准答案 yaml
-    answer-card-review <dir> --standard knowledge-base/mock-exams/physics/beijing/2026-chaoyang-yi.yaml
+    answer-card-review <dir> --standard knowledge-base/exams/mock/physics/beijing/2026-chaoyang-yi.yaml
 
     # 批量：某学生所有考试
     answer-card-review --student-all students/jiaxiaoqi
@@ -35,7 +35,7 @@ import yaml
 TOOL_DIR = Path(__file__).resolve().parent
 TEMPLATE_PATH = TOOL_DIR / "templates" / "index.html"
 REPO_ROOT = TOOL_DIR.parent.parent
-DEFAULT_KB_ROOT = REPO_ROOT / "knowledge-base" / "mock-exams"
+DEFAULT_KB_ROOT = REPO_ROOT / "knowledge-base" / "exams" / "mock"
 
 
 # ─── 标准答案定位 ────────────────────────────────────────────────────────────
@@ -47,7 +47,7 @@ def infer_standard_path(exam_dir: Path) -> Path | None:
     """从学生考试目录名推断标准答案 yaml 路径。
 
     students/<name>/<exam-slug>/  例：2026-chaoyang-yi-physics
-    → knowledge-base/mock-exams/physics/<region>/2026-chaoyang-yi.yaml
+    → knowledge-base/exams/mock/physics/<region>/2026-chaoyang-yi.yaml
     """
     slug = exam_dir.name
     m = SLUG_SUBJECT_RE.search(slug)

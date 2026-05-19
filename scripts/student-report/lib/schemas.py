@@ -1,7 +1,7 @@
 """数据加载 + 按题号 join。
 
 输入三件套（新数据约定）：
-  - 试卷结构化:  knowledge-base/mock-exams/<subj>/beijing/<slug>.yaml
+  - 试卷结构化:  knowledge-base/exams/{mock,zhenti}/<subj>/beijing/<slug>.yaml
   - 学生作答:    students/<name>/<slug>/answer-card.json
   - 最终得分:    students/<name>/<slug>/scores.json
   - 学生信息:    students/<name>/<slug>/student.json（可选）
