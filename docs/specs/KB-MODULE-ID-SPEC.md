@@ -50,4 +50,7 @@ key 不统一 = 四层 join 必碎。本规范收口为唯一真相。
 
 ## 5. 唯一真相点
 
-本表。任何脚本/数据与之冲突，改数据或本表，不另立。
+程序事实标准：`scripts/knowledge-base/kb_module_ids.py`（26 模块全集 + 校验）。
+门禁：`scripts/knowledge-base/kb_lint.py`（id 合规 + 三层覆盖矩阵，exit 1 阻断）。
+一次性归一：`scripts/knowledge-base/kb_normalize_module_id.py`。
+本表 / kb_module_ids.py 为准；任何脚本/数据与之冲突，改数据不另立。

@@ -94,13 +94,17 @@ meta:
 | 0 | 本文件 + KB-MODULE-ID-SPEC；删 KNOWLEDGE-BASE-PLAN | 0 | ✅ |
 | 2 | 解散 resources；subjects→pedagogy/syllabus、common-mistakes→pedagogy/mistakes、diagnostics/learning-paths→pedagogy/、regions→policies、workbooks/study-guides/question-banks→prep/、assessment→prep/quick-tests（221 文件全 rename，history 保留；改 .gitignore + pdf-to-questionbank docstring） | 中 | ✅ |
 | 1 | `mock-exams`→`exams/{zhenti,mock,_staging}` + `exam-analysis`→`exams/analysis`（3355 renames，figures 保相对路径零数据改动）；改 ~20 处引用含 **server×2**（slug 解析搜 mock+zhenti）；本地全链路验证通过 | 中 | ✅（待阿里云重部署） |
-| 3 | module-id 全量 camelCase→kebab；建 kb_lint.py 校验 | 中 | ⏳ |
+| 3 | module-id 归一 kebab（pedagogy 三层 + quick-tests，68 文件确定性改写）；`kb_module_ids.py`(spec 真相) + `kb_normalize_module_id.py`(一次性) + `kb_lint.py`(门禁+覆盖矩阵) | 中 | ✅（1 内容缺口待人工） |
 | 4 | 全 KB 补 meta 块；question-banks png 回迁 knowledge-original | 低 | ⏳ |
 
-> 阶段 0/1/2 已执行。⚠️ **阶段 1 改了 server/（线上）**：
-> `server/exam_match.py`、`server/pipeline_adapter.py` 的 KB_ROOT 与 slug 解析
-> 已改为搜 `exams/{mock,zhenti}`；**阿里云需重新部署后线上才生效**（本地已验证）。
-> 剩余 ⏳ 阶段 3（module-id 归一）、阶段 4（meta 块 + png 回迁）。
+> 阶段 0/1/2/3 已执行。⚠️ **阶段 1 改了 server/（线上）** 已部署阿里云
+> （`c33733e`，pull+restart+health+resolver 实测通过）。
+> **阶段 3 遗留 1 内容任务**：`pedagogy/learning-paths/math/beijing/quadrilaterals-and-circles.yaml`
+> 把 spec 两个独立模块 `quadrilaterals`+`circles` 合并成一个非合规文件 →
+> 这两模块在 learning-paths 层缺覆盖。需**人工/LLM 按内容拆成
+> `quadrilaterals.yaml` + `circles.yaml`**（非确定性，normalizer 已正确拒绝臆测）。
+> `kb_lint.py` 会持续以 exit 1 + 覆盖矩阵报这 1 项，修完即绿。
+> 剩余 ⏳ 阶段 4（meta 块 + png 回迁）。
 
 ## 6. 待决（阻塞阶段 2）
 

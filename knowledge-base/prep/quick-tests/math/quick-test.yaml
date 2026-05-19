@@ -11,18 +11,18 @@ version: "1.0"
 total_questions: 10
 time_limit_per_question: 60  # 秒
 target_modules:
-  - numbersAndExpressions
-  - equationsAndInequalities
+  - numbers-and-expressions
+  - equations-and-inequalities
   - functions
   - triangles
   - circles
-  - statisticsAndProbability
-  - geometryComprehensive
+  - statistics-and-probability
+  - geometry-comprehensive
 
 questions:
   # ── Q1：数与式（基础）──────────────────────────
   - id: 1
-    module: numbersAndExpressions
+    module: numbers-and-expressions
     difficulty: 基础
     sub_topic: 因式分解
     question: "因式分解：$x^2 - 4$ 的结果是？"
@@ -52,7 +52,7 @@ questions:
 
   # ── Q2：方程（基础）──────────────────────────
   - id: 2
-    module: equationsAndInequalities
+    module: equations-and-inequalities
     difficulty: 基础
     sub_topic: 一元二次方程
     question: "一元二次方程 $x^2 - 5x + 6 = 0$ 的解是？"
@@ -82,7 +82,7 @@ questions:
 
   # ── Q3：统计与概率（基础）──────────────────────────
   - id: 3
-    module: statisticsAndProbability
+    module: statistics-and-probability
     difficulty: 基础
     sub_topic: 中位数
     question: "数据 3, 5, 2, 8, 7, 1 的中位数是？"
@@ -172,7 +172,7 @@ questions:
 
   # ── Q6：方程应用（中档）──────────────────────────
   - id: 6
-    module: equationsAndInequalities
+    module: equations-and-inequalities
     difficulty: 中档
     sub_topic: 分式方程
     question: "解分式方程 $\\frac{1}{x-1} = \\frac{2}{x^2-1}$，下列哪个是正确的解？"
@@ -262,7 +262,7 @@ questions:
 
   # ── Q9：几何综合（较难）──────────────────────────
   - id: 9
-    module: geometryComprehensive
+    module: geometry-comprehensive
     difficulty: 较难
     sub_topic: 动态几何
     question: "正方形 ABCD 中，E 是 BC 上一点，将 $\\triangle ABE$ 绕点 B 顺时针旋转 $90°$ 得 $\\triangle CBF$，连接 EF。若 $AB=4$，$BE=3$，则 $EF$ 的长度是？"
