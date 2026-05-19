@@ -69,7 +69,7 @@ def main() -> None:
     md = [f"# 批量结构化汇总 · {a.subject}", "",
           f"源：`{parent}`　共 {len(rows)} 卷", ""]
     for state in ["DONE-auto", "NEEDS_REVIEW", "INCOMPLETE",
-                  "QUARANTINE", "DRY", "ERROR"]:
+                  "QUARANTINE", "RUNNING", "DRY", "ERROR"]:
         g = by.get(state, [])
         if not g:
             continue
@@ -89,7 +89,8 @@ def main() -> None:
     counts = {k: len(v) for k, v in by.items()}
     print(f"\nALL DONE → {summary}")
     print("  " + "  ".join(f"{k}={v}" for k, v in counts.items()))
-    sys.exit(0 if not (by.get("INCOMPLETE") or by.get("ERROR")) else 2)
+    sys.exit(0 if not (by.get("INCOMPLETE") or by.get("ERROR")
+                        or by.get("RUNNING")) else 2)
 
 
 if __name__ == "__main__":

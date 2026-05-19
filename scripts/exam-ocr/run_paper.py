@@ -140,6 +140,11 @@ def main() -> None:
     if need_key and not env.get("DASHSCOPE_API_KEY"):
         print("[run_paper] 缺 DASHSCOPE_API_KEY", file=sys.stderr); sys.exit(1)
 
+    # 立即作废旧 status.json（防陈旧终态被 run_batch/Monitor 误读）；
+    # 进程中途崩溃则停在 RUNNING，读者据此判"未完成"而非旧 DONE。
+    st["state"] = "RUNNING"
+    _write_status(staging, st)
+
     # ---- S0 源核验 ----
     n_img = len(list((src / "images").glob("page-*.png")))
     med_p, med_q = _sibling_median(staging)
