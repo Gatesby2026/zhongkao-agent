@@ -1,4 +1,10 @@
 #!/usr/bin/env bash
+# 【LEGACY·勿用】只跑 2/5 步（ocr_paper+qc_report），缺 figures/enrich/审核，
+# 是"跑半截 → 新旧混存"病根。已被 scripts/exam-ocr/run_batch.py 取代。
+# 保留仅作历史参考；批量请用：
+#   python3 scripts/exam-ocr/run_batch.py knowledge-original/<series>/<round> --subject <subj>
+echo "[legacy] batch_regions.sh 已弃用，请用 run_batch.py（见脚本头）" >&2; exit 2
+# ---- 以下为历史实现，不再执行 ----
 # 批量结构化北京一模物理卷 + 每份质量评估。
 # 路径分离（见 docs/architecture/KB-LAYOUT.md）：
 #   原始件   knowledge-original/beijing-mock-2026/yimo/<区>/physics/images/
