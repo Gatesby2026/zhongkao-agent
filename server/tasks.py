@@ -24,6 +24,7 @@ from pathlib import Path
 import db
 import pipeline_adapter as pa
 import exam_match
+import precheck
 
 ROOT = Path(__file__).resolve().parents[1]
 SR_DIR = ROOT / "scripts" / "answer-card-ocr"
@@ -51,6 +52,15 @@ def _subjective_qnums(yaml_path: Path) -> list[int]:
         if m:
             out.append(int(m.group()))
     return sorted(set(out))
+
+
+def _kb_expected(yaml_path: Path) -> dict:
+    """该卷应有的选择题/主观题数（L3 交叉核对用）。"""
+    import yaml as _yaml
+    d = _yaml.safe_load(yaml_path.read_text(encoding="utf-8"))
+    qs = d.get("questions", [])
+    choice = sum(1 for q in qs if q.get("type") in _CHOICE_TYPES)
+    return {"choice": choice, "subjective": len(qs) - choice}
 
 
 def _imgs(photos_dir: Path) -> list[Path]:
@@ -95,7 +105,22 @@ def _detect(aid: str, student_dir: Path):
                 "（如「北京市朝阳区九年级综合练习（一）物理答题卡」）。")
             return
 
+        # ---- 预检 L1+L2+L3：全流水线之前快失败，给逐页可执行指引 ----
         slug = idy["exam_slug"]
+        try:
+            yaml_path = exam_match.kb_yaml_for_slug(slug)
+            expected = _kb_expected(Path(yaml_path)) if yaml_path else {}
+        except Exception:
+            expected = {}
+        quality = precheck.image_quality(imgs)            # L1 本地质量门
+        pc = precheck.evaluate(meta, quality, expected)   # +L2 结构化 +L3 KB
+        idy["precheck"] = pc
+        if pc["block"]:
+            db.set_detected(aid, json.dumps(idy, ensure_ascii=False),
+                            "detecting", "预检未通过")
+            db.mark_failed(aid, precheck.block_message(pc))
+            return
+
         name = idy.get("student_name") or "考生"
 
         # 按 slug 重命名目录（infer_standard 靠 dir 名找 yaml）

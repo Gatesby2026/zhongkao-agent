@@ -39,6 +39,7 @@ export const api = {
       student_name?: string; student_id?: string;
       pages_complete?: boolean; completeness_note?: string;
       matched?: boolean;
+      precheck?: { block: boolean; hard: string[]; warn: string[] };
     }
   }> {
     return j(await fetch(`/api/analyses/${id}/detect`))

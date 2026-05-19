@@ -443,6 +443,13 @@ const correctCnt = computed(() =>
           <button class="btn btn-outline btn-sm" style="margin-top:12px;width:100%"
                   @click="openPaper">📄 查看试卷原卷（含答案）核对</button>
         </div>
+        <div v-if="detected?.precheck?.warn?.length"
+             class="card" style="background:var(--warning-bg);border:1px solid var(--warning)">
+          <div style="font-size:13px;font-weight:700;color:var(--gray-800);margin-bottom:6px">
+            ⚠ 预检提醒（不影响继续，建议核对）</div>
+          <div v-for="(w,i) in detected.precheck.warn" :key="i"
+               style="font-size:12px;color:var(--gray-700);line-height:1.8">· {{ w }}</div>
+        </div>
         <div class="card" style="background:var(--brand-50);font-size:13px;color:var(--gray-700)">
           请核对试卷原卷与孩子所考是否一致；不一致点下方「重新选择图片上传」重拍。
         </div>
@@ -453,10 +460,8 @@ const correctCnt = computed(() =>
       <div v-else-if="phase==='failed'" class="card state-card state-fail"
            style="margin-top:14px">
         <div class="state-emoji">📷</div>
-        <div class="section-title" style="margin:8px 0 6px">没能识别出考试信息</div>
-        <div style="font-size:13px;color:var(--gray-600);line-height:1.7">
-          {{ detectErr }}
-        </div>
+        <div class="section-title" style="margin:8px 0 6px">答题卡未通过检查，请重拍</div>
+        <div style="font-size:13px;color:var(--gray-600);line-height:1.7;white-space:pre-line;text-align:left">{{ detectErr }}</div>
         <div style="font-size:12px;color:var(--gray-500);margin-top:12px">
           关键：拍清「考生须知页」最顶部的标题行<br>
           如「北京市朝阳区九年级综合练习（一）物理答题卡」
