@@ -5,6 +5,12 @@
 # 数据来源：北京中考真题阅卷反馈、教师访谈
 # 说明：古诗文阅读约18分，文言文阅读+古诗词鉴赏，课内外结合
 
+meta:
+  quality_status: curated   # llm_draft|curated|teacher_reviewed|verified
+  source: "北京中考真题阅卷反馈、教师访谈"
+  updated: 2026-04-12
+  reviewed_by: null
+
 module: 古诗文阅读
 module_id: classical-reading
 

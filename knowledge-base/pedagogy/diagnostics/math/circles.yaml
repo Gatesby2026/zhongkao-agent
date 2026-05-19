@@ -4,6 +4,12 @@
 # 状态：LLM生成初稿，待教师审核
 # 最后更新：2026-04-11
 
+meta:
+  quality_status: llm_draft   # llm_draft|curated|teacher_reviewed|verified
+  source: ""
+  updated: 2026-04-11
+  reviewed_by: null
+
 module: 圆
 module_id: circles
 subject: 数学

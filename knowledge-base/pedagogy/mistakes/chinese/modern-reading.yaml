@@ -5,6 +5,12 @@
 # 数据来源：北京中考真题阅卷反馈、教师访谈
 # 说明：现代文阅读约22分，是语文拉分最大的模块，答题规范直接影响得分
 
+meta:
+  quality_status: curated   # llm_draft|curated|teacher_reviewed|verified
+  source: "北京中考真题阅卷反馈、教师访谈"
+  updated: 2026-04-12
+  reviewed_by: null
+
 module: 现代文阅读
 module_id: modern-reading
 

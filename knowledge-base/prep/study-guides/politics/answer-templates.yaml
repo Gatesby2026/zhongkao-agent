@@ -3,6 +3,12 @@
 # 开卷考试专用策略 + 全题型答题公式
 # ============================================================
 
+meta:
+  quality_status: llm_draft   # llm_draft|curated|teacher_reviewed|verified
+  source: ""
+  updated: ""
+  reviewed_by: null
+
 subject: 道德与法治
 region: 北京
 exam_year: 2026

@@ -4,6 +4,10 @@
 # 权重: 力学~35% | 电学~35% | 光热声~20% | 实验方法~10%
 
 meta:
+  quality_status: llm_draft   # llm_draft|curated|teacher_reviewed|verified
+  source: ""
+  updated: ""
+  reviewed_by: null
   subject: 物理
   city: 北京
   year: 2026

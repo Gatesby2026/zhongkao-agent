@@ -7,6 +7,12 @@
 # 3. 高权重模块（函数22分）给 2 题，其他各 1 题
 # 4. 每题限时 60 秒，超时视为不会
 
+meta:
+  quality_status: llm_draft   # llm_draft|curated|teacher_reviewed|verified
+  source: ""
+  updated: ""
+  reviewed_by: null
+
 version: "1.0"
 total_questions: 10
 time_limit_per_question: 60  # 秒

@@ -3,6 +3,12 @@
 # 语文100分，古诗文默写约4分（直接默写）+ 理解性默写散布于阅读题
 # ============================================================
 
+meta:
+  quality_status: llm_draft   # llm_draft|curated|teacher_reviewed|verified
+  source: ""
+  updated: ""
+  reviewed_by: null
+
 subject: 语文
 region: 北京
 exam_year: 2026

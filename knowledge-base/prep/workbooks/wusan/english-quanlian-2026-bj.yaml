@@ -17,6 +17,12 @@
 # - 北京版特有专题（如阅读还原）：2024改革后新增，目录源自网络公开信息
 # ============================================================
 
+meta:
+  quality_status: curated   # llm_draft|curated|teacher_reviewed|verified
+  source: "百度百科(5年中考3年模拟词条) + 公开目录交叉验证"
+  updated: 2026-04-14
+  reviewed_by: null
+
 book_info:
   series_id: wusan-quanlian
   subject: 英语

@@ -6,6 +6,12 @@
 # 完整版：catalog.yaml（同目录，8品牌14系列，含详细选购指南）
 # 注：与 catalog.yaml 内容存在重叠，待人工去重收口（KB-LAYOUT 后续内容任务）
 
+meta:
+  quality_status: llm_draft   # llm_draft|curated|teacher_reviewed|verified
+  source: ""
+  updated: 2026-04-13
+  reviewed_by: null
+
 category: 教辅
 
 # ------ 推荐等级说明 ------

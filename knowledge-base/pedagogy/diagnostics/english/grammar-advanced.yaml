@@ -4,6 +4,12 @@
 # 状态：LLM生成初稿，待教师审核
 # 最后更新：2026-04-12
 
+meta:
+  quality_status: llm_draft   # llm_draft|curated|teacher_reviewed|verified
+  source: ""
+  updated: 2026-04-12
+  reviewed_by: null
+
 module: 进阶语法
 module_id: grammar-advanced
 subject: 英语

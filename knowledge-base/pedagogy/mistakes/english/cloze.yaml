@@ -5,6 +5,12 @@
 # 数据来源：北京中考真题阅卷反馈、教师访谈
 # 重要：完形填空1篇6道题共6分，是阅读类题型中最考查综合能力的部分
 
+meta:
+  quality_status: curated   # llm_draft|curated|teacher_reviewed|verified
+  source: "北京中考真题阅卷反馈、教师访谈"
+  updated: 2026-04-12
+  reviewed_by: null
+
 module: 完形填空
 module_id: cloze
 

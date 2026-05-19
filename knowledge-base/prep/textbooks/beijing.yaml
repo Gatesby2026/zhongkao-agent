@@ -9,6 +9,12 @@
 # 不使用北师大版（北师大版仅用于部分区的小学阶段）。
 # 中考为全市统一命题，不区分教材版本。
 
+meta:
+  quality_status: curated   # llm_draft|curated|teacher_reviewed|verified
+  source: "北京中考在线、北京小升初网、各区教委公告"
+  updated: 2026-04-11
+  reviewed_by: null
+
 category: 教材
 
 # ------ 教材版本总览 ------

@@ -11,6 +11,12 @@
 # 每个考点标注「近年中考考情」，显示该考点在近年考试中出现的频次。
 # ============================================================
 
+meta:
+  quality_status: curated   # llm_draft|curated|teacher_reviewed|verified
+  source: "万唯官网+百度百科+公开评测信息"
+  updated: 2026-04-13
+  reviewed_by: null
+
 book_info:
   series_id: wanwei-shiti
   subject: 数学

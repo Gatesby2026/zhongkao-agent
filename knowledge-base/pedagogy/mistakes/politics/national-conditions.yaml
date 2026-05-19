@@ -5,6 +5,12 @@
 # 数据来源：北京中考真题阅卷反馈、教师访谈
 # 重要：道法是开卷考试，错误核心不是"不知道"而是"翻不到、写不准"
 
+meta:
+  quality_status: curated   # llm_draft|curated|teacher_reviewed|verified
+  source: "北京中考真题阅卷反馈、教师访谈"
+  updated: 2026-04-12
+  reviewed_by: null
+
 module: 国情国策
 module_id: national-conditions
 

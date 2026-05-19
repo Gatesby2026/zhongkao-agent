@@ -6,6 +6,12 @@
 # 范围：北京中考 × 5 个文化课科目
 # ============================================================
 
+meta:
+  quality_status: curated   # llm_draft|curated|teacher_reviewed|verified
+  source: "公开出版信息 + 教师推荐 + 学生实际使用反馈"
+  updated: 2026-04-14
+  reviewed_by: null
+
 scope:
   region: 北京
   exam_year: 2026

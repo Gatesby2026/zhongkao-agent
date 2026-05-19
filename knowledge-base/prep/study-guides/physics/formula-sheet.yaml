@@ -3,6 +3,12 @@
 # 满分80分 | 基于学生实际辅导材料结构化整理
 # ============================================================
 
+meta:
+  quality_status: llm_draft   # llm_draft|curated|teacher_reviewed|verified
+  source: ""
+  updated: ""
+  reviewed_by: null
+
 subject: 物理
 region: 北京
 exam_year: 2026

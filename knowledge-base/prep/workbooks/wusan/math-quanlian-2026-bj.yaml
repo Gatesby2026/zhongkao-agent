@@ -16,6 +16,12 @@
 # 下面按②的 9 章 42 课时结构编排（更细粒度，便于模块映射）
 # ============================================================
 
+meta:
+  quality_status: curated   # llm_draft|curated|teacher_reviewed|verified
+  source: "百度百科+中国考研网+曲一线官网+通用总复习结构"
+  updated: 2026-04-13
+  reviewed_by: null
+
 book_info:
   series_id: wusan-quanlian
   subject: 数学

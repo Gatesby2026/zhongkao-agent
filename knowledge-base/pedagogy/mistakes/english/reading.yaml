@@ -5,6 +5,12 @@
 # 数据来源：北京中考真题阅卷反馈、教师访谈
 # 重要：阅读理解A-D篇共26分，是英语试卷分值最高的模块
 
+meta:
+  quality_status: curated   # llm_draft|curated|teacher_reviewed|verified
+  source: "北京中考真题阅卷反馈、教师访谈"
+  updated: 2026-04-12
+  reviewed_by: null
+
 module: 阅读理解
 module_id: reading
 

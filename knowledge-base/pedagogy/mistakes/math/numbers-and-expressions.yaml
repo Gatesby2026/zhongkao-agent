@@ -5,6 +5,12 @@
 # 数据来源：北京中考真题阅卷反馈、菁优网错题统计、教师访谈
 # 用途：注入LLM prompt，让规划报告精准指出学生易丢分点
 
+meta:
+  quality_status: curated   # llm_draft|curated|teacher_reviewed|verified
+  source: "北京中考真题阅卷反馈、菁优网错题统计、教师访谈"
+  updated: 2026-04-11
+  reviewed_by: null
+
 module: 数与式
 module_id: numbers-and-expressions
 

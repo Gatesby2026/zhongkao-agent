@@ -64,17 +64,24 @@ knowledge-base/
 
 ```yaml
 meta:
-  quality_status: llm_draft     # raw_import | llm_draft | teacher_reviewed | verified
+  quality_status: llm_draft     # llm_draft | curated | teacher_reviewed | verified
   source: "义务教育课程标准2022 / 北京教育考试院 / ..."
   updated: 2026-05-18
   reviewed_by: null             # teacher_reviewed / verified 必填
-  module_id: statistics-and-probability   # 仅 pedagogy 四层，对齐 KB-MODULE-ID-SPEC
+# module_id 为 pedagogy 四层顶层键（对齐 KB-MODULE-ID-SPEC），不放 meta 内
 ```
 
-- `quality_status` 取代现状埋在注释里的「LLM生成初稿待审」自由文本，**可查询可门禁**
-- `scripts/knowledge-base/kb_lint.py`（待建，复用 `qc_report.py` 模式）：遍历全 KB，
-  校验 meta 存在 / 枚举合法 / pedagogy 的 module_id 在 spec 内 /
-  `teacher_reviewed|verified` 必有 `reviewed_by`；输出待审清单，有违规 exit 1
+`quality_status` 枚举（语义诚实，不臆造审核）：
+- `llm_draft`：机器生成初稿、待审（注释含「LLM生成初稿/待审」）
+- `curated`：人工据**权威源**整理、未经本系统教师复核（注释有 数据来源/来源）
+- `teacher_reviewed`：本系统教师已复核（仅人工提升，脚本不臆造）
+- `verified`：交叉核验/定稿（仅人工提升）
+
+- 取代埋在注释里的「LLM生成初稿待审」自由文本，**可查询可门禁**
+- `scripts/knowledge-base/kb_lint.py`：pedagogy module_id 合规 + 三层覆盖矩阵
+  + 知识层（pedagogy/prep非QB/policies/admission）meta 存在与枚举合法 +
+  `teacher_reviewed|verified` 必有 `reviewed_by`；输出待审分布，有违规 exit 1
+- 注入器：`scripts/knowledge-base/kb_add_meta.py`（一次性，确定性，跳过已有 meta）
 
 ## 4. 域 × 功能里程碑（哪层已接入）
 
@@ -95,12 +102,18 @@ meta:
 | 2 | 解散 resources；subjects→pedagogy/syllabus、common-mistakes→pedagogy/mistakes、diagnostics/learning-paths→pedagogy/、regions→policies、workbooks/study-guides/question-banks→prep/、assessment→prep/quick-tests（221 文件全 rename，history 保留；改 .gitignore + pdf-to-questionbank docstring） | 中 | ✅ |
 | 1 | `mock-exams`→`exams/{zhenti,mock,_staging}` + `exam-analysis`→`exams/analysis`（3355 renames，figures 保相对路径零数据改动）；改 ~20 处引用含 **server×2**（slug 解析搜 mock+zhenti）；本地全链路验证通过 | 中 | ✅（待阿里云重部署） |
 | 3 | module-id 归一 kebab（pedagogy 三层 + quick-tests，68 文件确定性改写）；`kb_module_ids.py`(spec 真相) + `kb_normalize_module_id.py`(一次性) + `kb_lint.py`(门禁+覆盖矩阵)；`quadrilaterals-and-circles.yaml` 按内容拆为合规 `quadrilaterals.yaml`+`circles.yaml` | 中 | ✅ kb_lint 全绿 26/26 |
-| 4 | 全 KB 补 meta 块；question-banks png 回迁 knowledge-original | 低 | ⏳ |
+| 4 | 知识层补 meta.quality_status（`kb_add_meta.py` 注入 139 文件 = 84 llm_draft + 55 curated）+ `kb_lint.py` 扩展 meta 门禁；question-banks png 经核查**无需迁移** | 低 | ✅ |
 
-> 阶段 0/1/2/3 已执行。⚠️ **阶段 1 改了 server/（线上）** 已部署阿里云
+> 阶段 0/1/2/3/4 全部执行完毕。⚠️ **阶段 1 改了 server/（线上）** 已部署阿里云
 > （`c33733e`，pull+restart+health+resolver 实测通过）。
-> 阶段 3 `kb_lint.py` 现 exit 0（24/26→26/26 三层齐全、id 合规）。
-> 剩余 ⏳ 阶段 4（meta 块 + png 回迁）。
+> 阶段 3/4 `kb_lint.py` exit 0：26/26 三层齐全、id 合规、139 知识层 meta 完整。
+>
+> **阶段 4 Part2 核查结论**：question-banks 的 102 png 中仅 `cover.png`(1) 入 git；
+> 其余 101 为 `<book>/.cache/pages/page-NNN.png` —— 由源 PDF（**已在
+> `knowledge-original/教辅材料/2026《万唯中考•试题研究》北京版`**）生成的可重生
+> 缓存，且已被 `**/.cache/` gitignore，未污染 git；per-page yaml 以
+> `.cache/pages/...` 相对引用。raw/派生 划分本就正确，**回迁无收益且会断耦合，
+> 故不做**（符合"不做无意义重构"原则）。
 
 ## 6. 待决（阻塞阶段 2）
 

@@ -6,6 +6,12 @@
 # 用途：用户选"我想上XX中"后，自动推算各模块需达到什么水平
 # 基准年份：2025（总分510，数学满分100）
 
+meta:
+  quality_status: curated   # llm_draft|curated|teacher_reviewed|verified
+  source: "admission 分数线 × exam-analysis 真题分值 × diagnostics 分级"
+  updated: 2026-04-11
+  reviewed_by: null
+
 region: 北京市
 subject: 数学
 full_score: 100
