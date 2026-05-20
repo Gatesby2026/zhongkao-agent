@@ -106,9 +106,9 @@ def lost_knowledge_points(exam: ExamView) -> list[dict]:
 
 
 def lost_questions(exam: ExamView) -> list[QView]:
-    """所有失分题（含部分失分），按失分降序——失分多的先讲。"""
+    """所有失分题（含部分失分），按题号升序——与试卷顺序一致便于核对。"""
     return sorted([q for q in exam.questions if q.is_lost],
-                  key=lambda q: (-q.lost, q.num))
+                  key=lambda q: q.num)
 
 
 def overall_stats(exam: ExamView) -> dict:
