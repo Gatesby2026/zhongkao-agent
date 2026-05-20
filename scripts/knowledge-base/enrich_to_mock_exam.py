@@ -406,17 +406,25 @@ def enrich_question(
 # ─── QC 状态推断 ──────────────────────────────────────────────────────────────
 
 def _qc_status(q: dict, answer: str, solution: str, qtype: str) -> tuple[str, str]:
-    """返回 (qc_status, qc_note)。"""
+    """返回 (qc_status, qc_note)。
+
+    判定原则（与「腾讯切题流水线」对齐）：
+      - 选择题（单/多选）：要求 options（文本 OR 图片）+ answer 都齐；
+        has_image_options=True 本身不是问题（若文本选项也齐就是图配文，更不是问题）。
+      - 主观题（含 SOLUTION_REQUIRED 与其他）：不要求 answer，只看 solution。
+    """
     issues = []
-    if q.get("has_image_options"):
-        issues.append("选项为图片，需人工补全选项内容")
-    # 选择题但 options 为空（既非图片选项也没有文字）
-    if qtype in {"单选", "多选"} and not q.get("options") and not q.get("has_image_options"):
-        issues.append("选择题缺少 options 字段，可能是图片选项未标记或 OCR 遗漏")
-    if not answer:
-        issues.append("answer 为空")
-    if qtype in SOLUTION_REQUIRED and solution == "__MISSING__":
-        issues.append("解题步骤未提取，需补全 solution")
+    is_choice = qtype in {"单选", "多选"}
+    opts = q.get("options") or {}
+    if is_choice:
+        if not opts and not q.get("has_image_options"):
+            issues.append("选择题缺少 options（既无文本也无图片选项）")
+        if not answer:
+            issues.append("选择题 answer 为空")
+    else:
+        # 主观题：只要求 solution
+        if qtype in SOLUTION_REQUIRED and (solution == "__MISSING__" or not solution):
+            issues.append("解题步骤未提取，需补全 solution")
     if issues:
         return "needs_review", "；".join(issues)
     return "draft", ""
