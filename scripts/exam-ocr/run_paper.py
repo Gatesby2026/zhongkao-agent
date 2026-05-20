@@ -1,22 +1,27 @@
 #!/usr/bin/env python3
-"""run_paper — 单卷端到端固化编排器（图片试卷 → 知识库 YAML）。
+"""run_paper — 单卷端到端固化编排器（图片试卷 → 知识库 YAML）v2 腾讯路线。
 
-唯一可执行物：S0 源核验 → S1 OCR → S2 结构化 → S3 配图 → S4 入库 → S5(列清单)。
-每步后置门禁；幂等 + 缓存感知；状态机 QUARANTINE / INCOMPLETE / NEEDS_REVIEW /
-DONE-auto；产出 <staging>/status.json 供 batch 聚合。
-不重写任何子步逻辑——只编排既有工具（ocr_paper / qc_report / extract_figures /
-enrich_to_mock_exam），路径只认 paths.derive_out_dir。
+唯一可执行物：S0 源核验 → S1 腾讯切题（题号+stem+options+figures+answers+
+表格 markdown 一次出全）→ S2 入库 enrich。每步后置门禁；幂等 + 缓存感知；
+状态机 QUARANTINE / INCOMPLETE / NEEDS_REVIEW / DONE-auto；产出
+<staging>/status.json 供 batch 聚合。
 
-设计与已决参数见 docs/architecture/KB-LAYOUT 与 skill「已决结论」节：
-  - run_paper=python；S3 含图命中 ≥0.85 才算 auto-clean，余转人工(NEEDS_REVIEW)
-  - S0 页/题数偏离同科目中位 ±30% → QUARANTINE（不进自动批）
-  - S5 只产 needs_review 清单，不自动起 exam-review
+S1 = scripts/exam-ocr/tencent_paper.py（腾讯 QuestionSplitOCR + GeneralAccurate
+OCR + RecognizeTableAccurateOCR + paddle layout 五层 fallback；细节见
+SKILL skill_exam_image_to_kb_yaml.md「v2 腾讯路线」节）。
+
+已决参数：
+  - 含图命中 ≥0.85 才算 auto-clean，余转人工 (NEEDS_REVIEW)
+  - S0 页数 / S1 题数偏离同科目中位 ±30% → QUARANTINE（不进自动批）
   - 旧脏 yaml/figures 直接删除后重建（git 历史留底，磁盘不留副本）
+  - 答案页判定：标准 marker + 题号倒退（min(nums)<max_seen-3）双闸
 
 用法：
-  DASHSCOPE_API_KEY=$KEY python3 scripts/exam-ocr/run_paper.py \
+  DASHSCOPE_API_KEY=$KEY \
+  TENCENT_OCR_SECRET_ID=$SID TENCENT_OCR_SECRET_KEY=$SK \
+    python3 scripts/exam-ocr/run_paper.py \
       knowledge-original/<series>/<round>/<region>/<subject> --subject physics
-  [--force] [--from s1|s2|s3|s4]  [--dry-run]
+  [--force] [--from s1|s2]  [--dry-run]
 退出码：0=DONE-auto；2=NEEDS_REVIEW；3=INCOMPLETE；4=QUARANTINE；1=用法/异常
 """
 from __future__ import annotations
@@ -126,9 +131,9 @@ def main() -> None:
     ap.add_argument("--subject", required=True)
     ap.add_argument("--force", action="store_true")
     ap.add_argument("--from", dest="from_step", default="s1",
-                    choices=["s1", "s2", "s3", "s4"])
+                    choices=["s1", "s2"])
     ap.add_argument("--dry-run", action="store_true",
-                    help="只跑 S0 + 读现有产物判状态，不调 OCR/paddle/LLM")
+                    help="只跑 S0 + 读现有产物判状态，不调 OCR/LLM")
     a = ap.parse_args()
 
     src = a.src_dir.resolve()
@@ -143,8 +148,11 @@ def main() -> None:
 
     env = dict(os.environ)
     need_key = not a.dry_run
-    if need_key and not env.get("DASHSCOPE_API_KEY"):
-        print("[run_paper] 缺 DASHSCOPE_API_KEY", file=sys.stderr); sys.exit(1)
+    if need_key:
+        for k in ("DASHSCOPE_API_KEY", "TENCENT_OCR_SECRET_ID",
+                  "TENCENT_OCR_SECRET_KEY"):
+            if not env.get(k):
+                print(f"[run_paper] 缺 {k}", file=sys.stderr); sys.exit(1)
 
     # 立即作废旧 status.json（防陈旧终态被 run_batch/Monitor 误读）；
     # 进程中途崩溃则停在 RUNNING，读者据此判"未完成"而非旧 DONE。
@@ -163,63 +171,56 @@ def main() -> None:
         _write_status(staging, st); print(json.dumps(st, ensure_ascii=False))
         sys.exit(4)
 
-    order = ["s1", "s2", "s3", "s4"]
+    order = ["s1", "s2"]
     start = order.index(a.from_step)
 
-    # ---- S1+S2 OCR + 结构化（ocr_paper 一次调用，缓存感知）----
-    if start <= 1 and not a.dry_run:
-        cmd = [PY, str(SELF_DIR / "ocr_paper.py"), str(src),
-               "--subject", a.subject, "--pipeline", "v2"]
+    # ---- S1 腾讯切题（题号+stem+options+figures+answers+表格 markdown 一次出）
+    if start <= 0 and not a.dry_run:
+        cmd = [PY, str(SELF_DIR / "tencent_paper.py"), str(src),
+               "--subject", a.subject]
         if a.force:
             cmd.append("--force")
         rc, out = _run(cmd, env)
-        st["steps"]["s1s2"] = {"rc": rc, "tail": out.strip().splitlines()[-3:]}
+        st["steps"]["s1"] = {"rc": rc, "tail": out.strip().splitlines()[-3:]}
         if rc != 0 or not (staging / "structured-cloud" / "final.json").exists():
             st["state"] = "INCOMPLETE"
-            st["reasons"].append(f"S1/S2 ocr_paper 失败 rc={rc}")
+            st["reasons"].append(f"S1 tencent_paper 失败 rc={rc}")
             _write_status(staging, st); print(json.dumps(st, ensure_ascii=False))
             sys.exit(3)
 
-    # ---- S2 门禁 ----
+    # ---- S1 门禁 ----
     verdict, blocking, nr = _qc_classify(staging)
-    st["steps"]["s2_qc"] = {"verdict": verdict, "blocking": blocking}
+    st["steps"]["s1_qc"] = {"verdict": verdict, "blocking": blocking}
     st["needs_review"] += nr
     if verdict == "blocking":
         st["state"] = "INCOMPLETE"
-        st["reasons"] += [f"S2 卷级硬错（回 S1 改源头，不打补丁）：{b}"
+        st["reasons"] += [f"S1 卷级硬错（回源 OCR/重切，不打补丁）：{b}"
                           for b in blocking]
         _write_status(staging, st); print(json.dumps(st, ensure_ascii=False))
         sys.exit(3)
-    # post-S2 题数偏离 → QUARANTINE（yanqing 类）
     fj = json.loads((staging / "structured-cloud" / "final.json")
                      .read_text(encoding="utf-8"))
     nq = len(fj.get("questions", []))
     if _deviates(nq, med_q):
         st["state"] = "QUARANTINE"
         st["reasons"].append(
-            f"S2 题数 {nq} 偏离同科目中位 {med_q} 超 ±{int(DEV_RATIO*100)}%")
+            f"S1 题数 {nq} 偏离同科目中位 {med_q} 超 ±{int(DEV_RATIO*100)}%")
         _write_status(staging, st); print(json.dumps(st, ensure_ascii=False))
         sys.exit(4)
-
-    # ---- S3 配图（.venv-paddle）----
-    if start <= 2 and not a.dry_run:
-        vp = repo_root(src) / ".venv-paddle" / "bin" / "python3"
-        py3 = str(vp) if vp.exists() else PY
-        cmd = [py3, str(SELF_DIR / "extract_figures.py"), str(src),
-               "--subject", a.subject]
-        if a.force:
-            cmd.append("--force")
-        rc, out = _run(cmd, env)
-        st["steps"]["s3"] = {"rc": rc, "paddle_py": py3}
     rate, cut, tot = _figure_hit_rate(staging)
-    st["steps"]["s3_hit"] = {"rate": round(rate, 3), "cut": cut, "total": tot}
-    fig_ok = rate >= FIG_MIN
-    if not fig_ok:
+    st["steps"]["s1_fig_hit"] = {"rate": round(rate, 3), "cut": cut, "total": tot}
+    if rate < FIG_MIN:
         st["needs_review"].append(
-            f"S3 含图命中 {cut}/{tot}={rate:.0%} < {FIG_MIN:.0%}（剩余转人工裁图）")
+            f"含图命中 {cut}/{tot}={rate:.0%} < {FIG_MIN:.0%}（剩余转人工裁图）")
+    # 分值校验：full_score vs 各题 score 合计
+    fs = fj.get("full_score")
+    sc_sum = sum(q.get("score", 0) for q in fj.get("questions", []))
+    st["steps"]["s1_score"] = {"full_score": fs, "sum": sc_sum}
+    if fs and sc_sum and abs(fs - sc_sum) > 2:
+        st["needs_review"].append(f"分值合计 {sc_sum} ≠ full_score {fs}")
 
-    # ---- S4 入库（先删旧脏件再重建；幂等覆盖）----
-    if start <= 3 and not a.dry_run:
+    # ---- S2 入库（先删旧脏件再重建；幂等覆盖）----
+    if start <= 1 and not a.dry_run:
         if final_yaml.exists():
             final_yaml.unlink()
         old_fig = final_yaml.with_suffix("")
@@ -233,10 +234,10 @@ def main() -> None:
                "--output", str(final_yaml), "--subject", a.subject,
                "--cache-prefix", slug]
         rc, out = _run(cmd, env)
-        st["steps"]["s4"] = {"rc": rc, "tail": out.strip().splitlines()[-2:]}
+        st["steps"]["s2"] = {"rc": rc, "tail": out.strip().splitlines()[-2:]}
         if rc != 0 or not final_yaml.exists():
             st["state"] = "INCOMPLETE"
-            st["reasons"].append(f"S4 enrich 失败 rc={rc}")
+            st["reasons"].append(f"S2 enrich 失败 rc={rc}")
             _write_status(staging, st); print(json.dumps(st, ensure_ascii=False))
             sys.exit(3)
 

@@ -1,13 +1,13 @@
 {
-  "slug": "2026-mentougou-yi",
+  "slug": "2026-shunyi-yi",
   "subject": "physics",
-  "src": "/Users/jiakui/projects/zhongkao-agent/knowledge-original/beijing-mock-2026/yimo/mentougou/physics",
-  "staging": "/Users/jiakui/projects/zhongkao-agent/knowledge-base/exams/_staging/physics/2026-mentougou-yi",
-  "final_yaml": "/Users/jiakui/projects/zhongkao-agent/knowledge-base/exams/mock/physics/beijing/2026-mentougou-yi.yaml",
+  "src": "/Users/jiakui/projects/zhongkao-agent/knowledge-original/beijing-mock-2026/yimo/shunyi/physics",
+  "staging": "/Users/jiakui/projects/zhongkao-agent/knowledge-base/exams/_staging/physics/2026-shunyi-yi",
+  "final_yaml": "/Users/jiakui/projects/zhongkao-agent/knowledge-base/exams/mock/physics/beijing/2026-shunyi-yi.yaml",
   "state": "DONE-auto",
   "steps": {
     "s0": {
-      "images": 12,
+      "images": 10,
       "median_pages": 10
     },
     "s1": {
@@ -23,9 +23,9 @@
       "blocking": []
     },
     "s1_fig_hit": {
-      "rate": 1.0,
-      "cut": 23,
-      "total": 23
+      "rate": 0.944,
+      "cut": 17,
+      "total": 18
     },
     "s1_score": {
       "full_score": 70,
@@ -34,8 +34,8 @@
     "s2": {
       "rc": 0,
       "tail": [
-        "✅ /Users/jiakui/projects/zhongkao-agent/knowledge-base/exams/mock/physics/beijing/2026-mentougou-yi.yaml",
-        "   26 题  needs_review=0  structure: 12单选(24分) + 3多选(6分) + 8实验探究(28分) + 1解答(4分) + 2计算(8分)"
+        "✅ /Users/jiakui/projects/zhongkao-agent/knowledge-base/exams/mock/physics/beijing/2026-shunyi-yi.yaml",
+        "   26 题  needs_review=12  structure: 12单选(24分) + 3多选(6分) + 8实验探究(28分) + 1解答(4分) + 2计算(8分)"
       ]
     }
   },

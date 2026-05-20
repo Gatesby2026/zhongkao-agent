@@ -1,0 +1,35 @@
+{
+  "slug": "2026-daxing-yi",
+  "subject": "physics",
+  "src": "/Users/jiakui/projects/zhongkao-agent/knowledge-original/beijing-mock-2026/yimo/daxing/physics",
+  "staging": "/Users/jiakui/projects/zhongkao-agent/knowledge-base/exams/_staging/physics/2026-daxing-yi",
+  "final_yaml": "/Users/jiakui/projects/zhongkao-agent/knowledge-base/exams/mock/physics/beijing/2026-daxing-yi.yaml",
+  "state": "INCOMPLETE",
+  "steps": {
+    "s0": {
+      "images": 11,
+      "median_pages": 10
+    },
+    "s1": {
+      "rc": 0,
+      "tail": [
+        "   题号=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 24, 25, 26, 23, 24, 25, 26]",
+        "/Users/jiakui/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020",
+        "  warnings.warn("
+      ]
+    },
+    "s1_qc": {
+      "verdict": "blocking",
+      "blocking": [
+        "- 分值合计 82 ≠ full_score 70"
+      ]
+    }
+  },
+  "needs_review": [
+    "- Q14 选择题 options 不全: []",
+    "- 非选择题缺 solution: [16, 17, 18, 19, 20, 21, 22, 24, 25, 26, 23, 24, 25, 26]"
+  ],
+  "reasons": [
+    "S1 卷级硬错（回源 OCR/重切，不打补丁）：- 分值合计 82 ≠ full_score 70"
+  ]
+}

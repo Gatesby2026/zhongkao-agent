@@ -51,7 +51,7 @@ questions:
   answer: C
   solution: ''
   knowledge_points:
-  - 压强的概念及增大压强的方法
+  - 压强的概念及应用
   module: mechanics
   difficulty: 基础
   recommended_for:
@@ -211,7 +211,7 @@ questions:
   solution: ''
   knowledge_points:
   - 电路中的电流规律
-  - 并联电路的电流特点
+  - 串联和并联电路的电流特点
   module: electricity
   difficulty: 中等
   recommended_for:
@@ -256,9 +256,8 @@ questions:
   answer: C
   solution: ''
   knowledge_points:
-  - 电路中的电压和电流关系
-  - 滑动变阻器的工作原理
-  - 电功率的计算
+  - 电路中的功率变化
+  - 滑动变阻器的作用
   module: electricity
   difficulty: 中等
   recommended_for:
@@ -402,10 +401,9 @@ questions:
 
     (3)0.9x103(1分)'
   knowledge_points:
-  - 质量与密度的测量
-  - 天平的使用
-  - 量筒的使用
-  module: mechanics
+  - 光的反射定律
+  - 实验探究方法
+  module: soundLightHeat
   difficulty: 中等
   recommended_for:
   - L1
@@ -435,8 +433,8 @@ questions:
   answer: ''
   solution: (2)同一平面内(2分)(3)顺时针(2分)
   knowledge_points:
-  - 光的反射定律
-  - 实验探究方法
+  - 热学实验探究
+  - 比热容的概念与应用
   module: soundLightHeat
   difficulty: 中等
   recommended_for:
@@ -468,8 +466,8 @@ questions:
   answer: ''
   solution: (1)加热时间(1分)(2)小(1分)大(1分)
   knowledge_points:
-  - 比热容的概念
-  - 实验探究方法
+  - 凸透镜成像规律
+  - 实验操作与观察
   module: soundLightHeat
   difficulty: 中等
   recommended_for:
@@ -502,10 +500,9 @@ questions:
   answer: ''
   solution: (1)同一高度(1分)(2)5(1分)放大(1分)投影仪(1分)
   knowledge_points:
-  - 探究凸透镜成像规律
-  - 凸透镜焦距的测量
-  - 实像与虚像的区别
-  module: soundLightHeat
+  - 通电螺线管的磁场
+  - 磁场方向与电流方向的关系
+  module: electricity
   difficulty: 中等
   recommended_for:
   - L1
@@ -533,11 +530,12 @@ questions:
 
     (2)电流方向(2分)'
   knowledge_points:
-  - 通电螺线管的磁场
-  - 磁场方向与电流方向的关系
-  module: electricity
-  difficulty: 中等
+  - 杠杆平衡条件
+  - 力矩的概念
+  module: mechanics
+  difficulty: 基础
   recommended_for:
+  - L0
   - L1
   - L2
   - L3
@@ -557,12 +555,11 @@ questions:
 
     (2)左(2分)'
   knowledge_points:
-  - 杠杆平衡条件
-  - 力矩的概念
-  module: mechanics
-  difficulty: 基础
+  - 电路连接与故障分析
+  - 电功率的测量
+  module: electricity
+  difficulty: 中等
   recommended_for:
-  - L0
   - L1
   - L2
   - L3
@@ -582,8 +579,9 @@ questions:
   answer: ''
   solution: (1)图略(1分)(2)灯泡L短路(1分)(3)0.48(1分)
   knowledge_points:
-  - 电路连接与故障分析
-  - 电功率的测量
+  - 欧姆定律
+  - 电路分析
+  - 密度测量
   module: electricity
   difficulty: 中等
   recommended_for:
@@ -617,10 +615,10 @@ questions:
   solution: (1)增大(1分)(2)所测液体的密度会偏小。理由:电源电压降低，实际电压小于12V，测量同 一液体时电路实际电流偏小;按12V计算时，金属棒接入电阻的测量值偏大，由图乙可知对应拉力的测量 值偏小;根据ρ=，拉力偏小导致计算出的液体密度偏小。(2分)
     vg
   knowledge_points:
-  - 欧姆定律的应用
-  - 电路分析
   - 力与运动的关系
-  module: electricity
+  - 力的合成与分解
+  - 机械平衡
+  module: mechanics
   difficulty: 中等
   recommended_for:
   - L1
@@ -672,9 +670,8 @@ questions:
 
     (3)无人机向前飞行时，机身会机头向下、机尾向上倾斜(前低后高)。因为后方旋翼转速增大、升 力增大，前方旋翼转速减小、升力减小，导致机身倾斜;此时总升力斜向后上方，分解出向前的分力，推 动无人机向前飞行。(1分)'
   knowledge_points:
-  - 力与运动的关系
-  - 力的合成与分解
-  - 机械能
+  - 浮力的计算
+  - 密度的计算
   module: mechanics
   difficulty: 中等
   recommended_for:
@@ -698,9 +695,9 @@ questions:
 
     (2) G 2N m球 2N 10N/kg G F浮 4N V球 = =0.5x10-3m3 0.8x103kg/m3x10N/kg p= m球_____0.2 kg_______=0.4x103kg/m3 V球 0.5x10-3m3'
   knowledge_points:
-  - 浮力的概念与计算
-  - 密度的计算
-  module: mechanics
+  - 电功率的计算
+  - 欧姆定律的应用
+  module: electricity
   difficulty: 中等
   recommended_for:
   - L1

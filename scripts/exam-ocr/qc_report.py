@@ -49,12 +49,15 @@ def eval_final(paper_dir: Path) -> dict:
         gaps = [n for n in range(nums[0], nums[-1] + 1) if n not in nums]
         if gaps:
             errs.append(f"题号断号: {gaps}")
-    # 选择题 options
+    # 选择题 options（has_image_options=True 时 options 可缺—图选项题）
     for q in qs:
         n, t = q["number"], q.get("type", "")
         opts = q.get("options")
         if t in CHOICE:
-            if not opts or set(opts) != {"A", "B", "C", "D"}:
+            has_img = q.get("has_image_options")
+            if not opts and not has_img:
+                errs.append(f"Q{n} 选择题 options 不全: {sorted((opts or {}).keys())}")
+            elif opts and not has_img and set(opts) != {"A", "B", "C", "D"}:
                 errs.append(f"Q{n} 选择题 options 不全: {sorted((opts or {}).keys())}")
         else:
             if opts:

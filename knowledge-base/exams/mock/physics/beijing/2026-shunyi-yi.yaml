@@ -70,7 +70,7 @@ questions:
   solution: ''
   knowledge_points:
   - 物质的三态变化
-  - 熔化和凝固
+  - 熔化与凝固
   module: soundLightHeat
   difficulty: 基础
   recommended_for:
@@ -93,8 +93,7 @@ questions:
   answer: ''
   solution: ''
   knowledge_points:
-  - 参照物
-  - 相对运动
+  - 参照物与运动的相对性
   module: mechanics
   difficulty: 基础
   recommended_for:
@@ -116,8 +115,9 @@ questions:
   answer: ''
   solution: ''
   knowledge_points:
-  - 声音的产生与传播
-  - 声速
+  - 声音的产生
+  - 声音的传播
+  - 音调、响度和音色
   module: soundLightHeat
   difficulty: 基础
   recommended_for:
@@ -213,9 +213,8 @@ questions:
   answer: ''
   solution: ''
   knowledge_points:
-  - 内能的变化
-  - 做功与内能的关系
-  - 能量转化
+  - 内能及其改变方式
+  - 热力学第一定律
   module: soundLightHeat
   difficulty: 中等
   recommended_for:
@@ -245,7 +244,7 @@ questions:
   knowledge_points:
   - 电功率
   - 电路分析
-  - 欧姆定律
+  - 电阻与电流的关系
   module: electricity
   difficulty: 中等
   recommended_for:
@@ -269,7 +268,7 @@ questions:
   solution: ''
   knowledge_points:
   - 杠杆原理
-  - 力矩平衡
+  - 力矩平衡条件
   module: mechanics
   difficulty: 中等
   recommended_for:
@@ -318,8 +317,8 @@ questions:
   answer: ABC
   solution: ''
   knowledge_points:
-  - 可再生能源的概念
-  - 核能的利用
+  - 可再生能源的识别
+  - 核能的应用
   - 电磁波的传播特性
   module: electricity
   difficulty: 基础
@@ -369,9 +368,9 @@ questions:
   answer: ABD
   solution: ''
   knowledge_points:
-  - 欧姆定律的应用
-  - 电路分析与计算
-  - 电功率的计算
+  - 欧姆定律
+  - 电路分析
+  - 电功率计算
   module: electricity
   difficulty: 中等
   recommended_for:
@@ -428,10 +427,11 @@ questions:
     (3)不变 (3分，各1分)'
   knowledge_points:
   - 物质的物态变化
-  - 实验数据处理与分析
+  - 温度的概念及其测量
   module: soundLightHeat
-  difficulty: 中等
+  difficulty: 基础
   recommended_for:
+  - L0
   - L1
   - L2
   - L3
@@ -586,8 +586,8 @@ questions:
 
     (2)滑动摩擦力不变 (3分，各1分)'
   knowledge_points:
-  - 探究滑动摩擦力的影响因素
-  - 实验设计与数据记录
+  - 摩擦力的概念与测量
+  - 实验设计与数据分析
   module: mechanics
   difficulty: 中等
   recommended_for:
@@ -611,8 +611,9 @@ questions:
 
     (2)实验数据记录表如下 (2分) I/A'
   knowledge_points:
-  - 电路的连接
+  - 电路的基本组成
   - 欧姆定律的应用
+  - 实验设计与数据记录
   module: electricity
   difficulty: 中等
   recommended_for:
@@ -734,7 +735,7 @@ questions:
 
     (2)电源两端电压U=Uv+U1=Uv+IR1=6V+2AX1Q=8V (2分)'
   knowledge_points:
-  - 欧姆定律
+  - 欧姆定律的应用
   - 串联电路的电压和电流关系
   module: electricity
   difficulty: 中等
@@ -773,12 +774,11 @@ questions:
     物理答案 第2页(共2页)'
   knowledge_points:
   - 压强的概念与计算
-  - 浮力的概念与计算
+  - 浮力的原理与应用
   - 受力分析
   module: mechanics
-  difficulty: 中等
+  difficulty: 能力
   recommended_for:
-  - L1
   - L2
   - L3
   qc_status: draft
