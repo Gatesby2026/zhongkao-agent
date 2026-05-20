@@ -341,26 +341,21 @@ def _paddle_layout(img_path: Path, cache_dir: Path, src: Path,
 
 def _fallback_missing_figures(questions: list[dict], images_dir: Path,
                                layout_cache_dir: Path, src: Path) -> int:
-    """对 stem 引用「图N/图N甲」但 _fig_bboxes 为空的题，从 paddle 检测的
-    image/table/chart bbox 里补一张。
-    策略：同页 paddle 检测候选 → 排除已被腾讯任何题占用的（IoU > 0.3）→
-    优先选 y 中心落在该题 outer_coord 区间内的 → 不行就选最大面积的剩余项。
-    跨页（如 Q21 stem 在 p6 图在 p7）暂不处理，留待人工。
+    """对 stem 引用「图N/图N甲」但 _figs 为空的题，从 paddle 检测的
+    image/table/chart bbox 里补图。补的 fig 带 page 标记。
     """
     if not _paddle_python(src):
         print("[fallback-fig] 无 .venv-paddle，跳过", flush=True)
         return 0
     fixed = 0
-    # 索引：每页已被腾讯占用的 bbox（用于 IoU 排除）
+    # 每页已占用 bbox（含腾讯检测 + 之前 fallback 已补的）
     occupied: dict[int, list[tuple]] = {}
     for q in questions:
-        pg = q.get("source_page")
-        if not pg: continue
-        for fb in (q.get("_fig_bboxes") or []) + (q.get("_table_bboxes") or []):
-            occupied.setdefault(pg, []).append(fb)
+        for fig in q.get("_figs") or []:
+            occupied.setdefault(fig["page"], []).append(fig["bbox"])
 
     for q in questions:
-        if q.get("_fig_bboxes"):
+        if q.get("_figs"):
             continue
         stem = q.get("stem") or ""
         if not re.search(r"(?:如图|图)\s*\d", stem):
@@ -373,21 +368,19 @@ def _fallback_missing_figures(questions: list[dict], images_dir: Path,
             continue
         cands = [tuple(int(x) for x in b["bbox"]) for b in boxes
                  if b["label"] in ("image", "table", "chart")]
-        # 排除腾讯已占用的
         cands = [c for c in cands
                  if not any(_iou(c, o) > 0.3 for o in occupied.get(pg, []))]
         if not cands:
             continue
-        # 优先：y 中心在该题 outer_coord 内
         outer = q.get("_outer_coord")
         if outer:
             ox1, oy1, ox2, oy2 = outer
             in_q = [c for c in cands if oy1 <= (c[1]+c[3])/2 <= oy2]
             if in_q:
                 cands = in_q
-        # 若多张 → 都加（保守裁多不漏）
         for c in cands:
-            q["_fig_bboxes"].append(c)
+            q.setdefault("_figs", []).append(
+                {"page": pg, "bbox": c, "kind": "image"})
             occupied.setdefault(pg, []).append(c)
         fixed += 1
         print(f"  [fallback-fig] Q{q['number']}: p{pg:02d} 补 {len(cands)} 张",
@@ -395,34 +388,172 @@ def _fallback_missing_figures(questions: list[dict], images_dir: Path,
     return fixed
 
 
-def _refill_short_stems(questions: list[dict], cache_dir: Path,
-                         images_dir: Path, force: bool = False) -> int:
-    """腾讯 QuestionSplitOCR 偶尔只把题号 'N.' 切出来 stem 为空（如 chaoyang/
-    haidian Q16 这类长前导的科普阅读/实验探究大题）→ 用 GeneralAccurateOCR
-    该页文本 + 题号切分补 stem。**不调 VLM，复用通用 OCR 缓存**。
+def _redistribute_figures_by_stem_refs(questions: list[dict]) -> int:
+    """根据 stem 引用"图N/图N甲"的数量 vs 实际 figs 数，做全局图重分配。
+
+    核心场景：Q4 跨页（stem 在 p1 底，图被腾讯归到 p2 顶部的 Q5）→
+    Q5 figs 过量、Q4 figs 不足 → 把 Q5 的"y 最靠上的"那张转给 Q4。
+
+    算法：
+      1. 计算每题 need = len(stem refs 集合), have = len(figs)
+      2. 找 over (have > need) 与 under (have < need) 的题
+      3. 相邻题（题号 ±1）配对：
+         - prev under + curr over → curr 的 y 最靠上 fig 转 prev（跨页倒灌）
+         - curr over + next under → curr 的 y 最靠下 fig 转 next（同页溢出）
+      4. 多轮迭代直到无可转移
+    """
+    STEM_REF = re.compile(r"(?:如图|图)\s*(\d+)\s*([甲乙丙丁戊])?")
+
+    def _info(q):
+        refs = {(m.group(1) + (m.group(2) or ""))
+                for m in STEM_REF.finditer(q.get("stem") or "")}
+        figs = q.get("_figs") or []
+        # 图选项题（如 Q1/Q2/Q3 图选项 4 张）需求 = 选项数（即图本身就是选项）；
+        # 否则需求 = stem 引用图号数。若两者皆有取 max。
+        need = len(refs)
+        if q.get("has_image_options"):
+            n_opts = len(q.get("options") or {}) or 4
+            need = max(need, n_opts)
+        return need, len(figs)
+
+    total_moved = 0
+    for _ in range(5):  # 最多 5 轮（防意外循环）
+        moved_this_round = 0
+        for i, q in enumerate(questions):
+            need, have = _info(q)
+            if have <= need:
+                continue
+            # 优先尝试转给前一题（跨页倒灌：Q5 figs[0] 实际是 Q4 的）
+            for j in (i - 1, i + 1):
+                if not (0 <= j < len(questions)):
+                    continue
+                n_need, n_have = _info(questions[j])
+                if n_have >= n_need:
+                    continue
+                k = min(have - need, n_need - n_have)
+                if k <= 0:
+                    continue
+                figs = q["_figs"]
+                figs.sort(key=lambda f: f["bbox"][1])
+                if j == i - 1:
+                    moved = figs[:k]; q["_figs"] = figs[k:]
+                else:
+                    moved = figs[-k:]; q["_figs"] = figs[:-k]
+                questions[j].setdefault("_figs", []).extend(moved)
+                moved_this_round += k
+                total_moved += k
+                pages_from = sorted({f["page"] for f in moved})
+                print(f"  [redistribute] Q{questions[i]['number']} → "
+                      f"Q{questions[j]['number']}: {k} 张 "
+                      f"(from p{pages_from})", flush=True)
+                have -= k
+                if have <= need: break
+        if moved_this_round == 0:
+            break
+    return total_moved
+
+
+_SUBQ_RE = re.compile(r"\(\s*[1-9]\s*\)")
+_PAGE_FOOTER_NOISE = re.compile(
+    r"(?m)^\s*(?:[一二三四五六七八九十]+\s*[、，][^\n]{0,40}"
+    r"|九年级\S{0,8}试卷第\s*\d+\s*页[^\n]*"
+    r"|第\s*\d+\s*页\s*/?\s*共?\s*\d*\s*页?)\s*$\n?"
+)
+
+
+def _slice_general_text(full_text: str, num: int, next_num: int) -> str:
+    """通用 OCR 文本按 `^N.` 锚点切出第 num 题段（直到 `^next_num.` 或文末）。
+    去掉大题标题/页脚/孤立的图中标签噪声。
+    """
+    clean = _PAGE_FOOTER_NOISE.sub("\n", full_text)
+    start_re = re.compile(rf"(?m)^\s*{num}\s*[.、．]")
+    end_re = re.compile(rf"(?m)^\s*{next_num}\s*[.、．]")
+    sm = start_re.search(clean)
+    if not sm: return ""
+    em = end_re.search(clean, sm.end())
+    chunk = clean[sm.end():em.start() if em else len(clean)]
+    chunk = re.split(r"(?m)^\s*(?:参考答案|答案及评分)", chunk, maxsplit=1)[0]
+    # 清孤立的图标签噪声：单行 ≤ 8 字、不含中文标点/子小题/选项 marker
+    out_lines = []
+    for ln in chunk.split("\n"):
+        s = ln.strip()
+        if not s:
+            out_lines.append(""); continue
+        # 保留：有标点的句子、含 (N) 子小题、含 A./B./C./D. 选项
+        if (re.search(r"[，。；：？！,;:?!]", s)
+                or _SUBQ_RE.search(s)
+                or re.match(r"^[A-D]\s*[.、．]", s)
+                or len(s) > 8):
+            out_lines.append(ln)
+        # 否则丢弃（孤立短词，多半是图中标签）
+    return "\n".join(out_lines).strip()
+
+
+def _expected_subq_count(stem: str) -> int | None:
+    """根据 stem 启动语推 (1)(2)(3) 应有几个。无明显启动语则 None。"""
+    # 试卷常见启动语 + 数字提示，但腾讯返回信息不足时简单计数现有 (N)
+    matches = sorted({int(m.group(1)) for m in re.finditer(r"\((\d)\)", stem)})
+    return max(matches) if matches else None
+
+
+def _refill_subquestions(questions: list[dict], cache_dir: Path,
+                          images_dir: Path, n_pages: int,
+                          force: bool = False) -> int:
+    """主观题（实验/计算/解答/填空）若 stem 缺 (1)(2)(3) 子小题
+    （腾讯 Question.ResultList 给空或残缺）→ 用 GeneralAccurateOCR 跨页补抽。
+
+    策略：对每个 type 为非选择题的题，若 stem 不含 "(N)" 模式：
+      1. OCR source_page 起到下一题号出现为止的所有页
+      2. 切出 `^num.` 到 `^next_num.` 之间的整段
+      3. 若比腾讯返回的 stem 长，则替换
     """
     general_cache = cache_dir / "general"
     general_cache.mkdir(parents=True, exist_ok=True)
+
+    nums_sorted = sorted({q["number"] for q in questions if q.get("number", 0) > 0})
+    next_num: dict[int, int] = {n: nums_sorted[i+1] if i+1 < len(nums_sorted)
+                                else 999 for i, n in enumerate(nums_sorted)}
+    by_num: dict[int, dict] = {q["number"]: q for q in questions
+                                if q.get("number")}
     fixed = 0
     for q in questions:
-        if len((q.get("stem") or "").strip()) >= 5:
+        if q["type"] in ("choice", "multi_choice"):
             continue
+        stem = q.get("stem") or ""
         page = q.get("source_page")
-        if not page:
-            continue
-        gf = general_cache / f"page-{page:02d}.txt"
-        if gf.exists() and not force:
-            txt = gf.read_text(encoding="utf-8")
-        else:
-            txt = _call_general_ocr(images_dir / f"page-{page:02d}.png")
-            gf.write_text(txt, encoding="utf-8")
-        for block in _split_by_qnum(txt):
-            if block["number"] == q["number"] and block.get("stem"):
-                q["stem"] = block["stem"]
-                if block.get("options") and not q.get("options"):
-                    q["options"] = block["options"]
-                fixed += 1
+        if not page: continue
+        num = q["number"]; nxt = next_num.get(num, 999)
+        nxt_q = by_num.get(nxt)
+        nxt_page = (nxt_q.get("source_page") if nxt_q else None) or n_pages
+        # 扫到 next 题源页（含）——子小题可能延续到 next 源页前几行；
+        # 再用 next.stem 头部截断防误吃 next 的前导材料
+        end_page = max(page, nxt_page)
+
+        parts: list[str] = []
+        for pg in range(page, min(end_page + 1, n_pages + 1)):
+            gf = general_cache / f"page-{pg:02d}.txt"
+            if gf.exists() and not force:
+                txt = gf.read_text(encoding="utf-8")
+            else:
+                txt = _call_general_ocr(images_dir / f"page-{pg:02d}.png")
+                gf.write_text(txt, encoding="utf-8")
+            parts.append(txt)
+            if re.search(rf"(?m)^\s*{nxt}\s*[.、．]", txt):
                 break
+        full = "\n".join(parts)
+        chunk = _slice_general_text(full, num, nxt)
+
+        # next 题 stem 头部截断：避免 chunk 越界到 next 题的前导材料
+        if chunk and nxt_q and nxt_q.get("stem"):
+            head = nxt_q["stem"].split("\n")[0].strip()[:25]
+            if len(head) >= 6 and head in chunk:
+                chunk = chunk[:chunk.find(head)].rstrip()
+
+        if chunk and len(chunk) > len(stem):
+            q["stem"] = chunk
+            fixed += 1
+            print(f"  [refill-subq] Q{num} stem: {len(stem)} → {len(chunk)} 字",
+                  flush=True)
     return fixed
 
 
@@ -516,55 +647,92 @@ def _parse_option_text(text: str) -> tuple[str, str]:
 
 def _build_question(item: dict, scale: tuple[float, float],
                     source_page: int) -> dict:
+    """把腾讯 ResultList[i] 一项构造为内部题字典。
+
+    **关键嵌套结构**：腾讯实验探究/解答题的 (1)(2)(3) 子小题放在
+    item.Question[0].ResultList[] 里（每子小题又有 Question/Option/Figure/
+    Table/Coord 全套字段）。本函数把所有子小题的 Text 追加到 stem，把它们的
+    Figure/Option/Table 合并到主题——否则 Q17 等只剩"如图14甲..."一行 stem。
+    """
     sx, sy = scale
     q_arr = item.get("Question") or []
     stem_text = q_arr[0].get("Text", "") if q_arr else ""
     num = _peek_number(item) or 0
     group_type = q_arr[0].get("GroupType", "") if q_arr else ""
 
+    # 收集 main item + 所有子小题（Question[0].ResultList）的 Option/Figure/Table
+    def _collect_subs(item_or_sub: dict, sub_arr: list[dict]):
+        for opt in item_or_sub.get("Option") or []:
+            sub_arr.append(("option", opt))
+        for fig in item_or_sub.get("Figure") or []:
+            sub_arr.append(("figure", fig))
+        for tbl in item_or_sub.get("Table") or []:
+            sub_arr.append(("table", tbl))
+
+    collected: list[tuple[str, dict]] = []
+    _collect_subs(item, collected)
+
+    # 子小题（嵌套 Question[0].ResultList）
+    sub_texts: list[str] = []
+    if q_arr and q_arr[0].get("ResultList"):
+        for sub in q_arr[0]["ResultList"]:
+            sq = sub.get("Question") or []
+            if sq:
+                t = sq[0].get("Text", "").strip()
+                if t:
+                    sub_texts.append(t)
+            _collect_subs(sub, collected)
+
+    # 完整 stem = 主 stem + 所有子小题 Text
+    full_stem = stem_text
+    for st in sub_texts:
+        if st:
+            full_stem += "\n" + st
+
     # 选项
     options: dict[str, str] = {}
-    for opt in item.get("Option") or []:
-        label, text = _parse_option_text(opt.get("Text", ""))
+    for kind, obj in collected:
+        if kind != "option": continue
+        label, text = _parse_option_text(obj.get("Text", ""))
         if label:
             options[label] = text
 
-    # Figures: 每个图的 bbox（保留原始坐标，裁切时再合并）
-    fig_bboxes = [_bbox_xyxy(f.get("Coord", {}), sx, sy)
-                  for f in (item.get("Figure") or [])
-                  if f.get("Coord")]
-    table_bboxes = [_bbox_xyxy(t.get("Coord", {}), sx, sy)
-                    for t in (item.get("Table") or [])
-                    if t.get("Coord")]
+    # Figures / Tables bbox（统一存进 _figs，带 page 标记）
+    fig_count = 0; tbl_count = 0
+    figs: list[dict] = []
+    for kind, obj in collected:
+        if kind not in ("figure", "table"): continue
+        if not obj.get("Coord"): continue
+        bbox = _bbox_xyxy(obj["Coord"], sx, sy)
+        figs.append({"page": source_page, "bbox": bbox, "kind": kind})
+        if kind == "figure": fig_count += 1
+        else: tbl_count += 1
 
     type_en = _infer_type_en(num, options, group_type)
-    # 图选项题判定：选择题 + ≥3 图 + (options 空 OR options 数==figs 数)
-    # 空 options（如 Q8 纯图选项）和等数（如 Q1 图+文字标签）都算
     has_img_opts = (
         type_en in ("choice", "multi_choice")
-        and len(fig_bboxes) >= 3
-        and (not options or len(options) == len(fig_bboxes))
+        and fig_count >= 3
+        and (not options or len(options) == fig_count)
     )
 
     return {
         "number": num,
         "type": type_en,
         "score": _default_score(num),
-        "stem": _normalize_stem(stem_text),
-        "_stem_raw": stem_text,                       # 用于跨页合并日志
+        "stem": _normalize_stem(full_stem),
+        "_stem_raw": stem_text,
         "options": options if options else None,
         "has_image_options": has_img_opts,
         "source_page": source_page,
         "_group_type": group_type,
-        "_fig_bboxes": fig_bboxes,                    # 暂存，裁图阶段消费
-        "_table_bboxes": table_bboxes,
+        "_figs": figs,
         "_outer_coord": _bbox_xyxy(item.get("Coord", {}), sx, sy)
                         if item.get("Coord") else None,
     }
 
 
 def _merge_into(prev: dict, cur: dict) -> None:
-    """把无题号续块合并到上一有号块。"""
+    """把无题号续块合并到上一有号块（stem 接在 prev 后面）。"""
     if cur.get("stem"):
         if prev["stem"]:
             prev["stem"] += "\n" + cur["stem"]
@@ -577,8 +745,18 @@ def _merge_into(prev: dict, cur: dict) -> None:
             prev["options"].setdefault(k, v)
         if not prev.get("has_image_options") and cur.get("has_image_options"):
             prev["has_image_options"] = True
-    prev["_fig_bboxes"].extend(cur.get("_fig_bboxes") or [])
-    prev["_table_bboxes"].extend(cur.get("_table_bboxes") or [])
+    prev.setdefault("_figs", []).extend(cur.get("_figs") or [])
+
+
+def _merge_forward(target: dict, lead: dict) -> None:
+    """把前导块（阅读材料）合并到后续有题号块（stem 接在 target 前面）。"""
+    if lead.get("stem"):
+        if target["stem"]:
+            target["stem"] = lead["stem"] + "\n" + target["stem"]
+        else:
+            target["stem"] = lead["stem"]
+    target.setdefault("_figs", [])
+    target["_figs"] = (lead.get("_figs") or []) + target["_figs"]
 
 
 def _parse_choice_answers_from_text(text: str) -> dict[int, str]:
@@ -682,15 +860,26 @@ def _parse_answer_page(items: list[dict], general_text: str = "") -> list[dict]:
     return [answers_by_num[n] for n in sorted(answers_by_num)]
 
 
+_READ_PASSAGE_REF_RE = re.compile(r"(根据文章|根据材料|阅读|根据上文|根据上述材料)")
+
+
 def _assemble(api_per_page: dict[str, dict],
               answer_pages_text: dict[str, str] | None = None
               ) -> tuple[list[dict], list[dict], int, set[str]]:
-    """聚合多页 API 结果 → (questions, answers, num_pages, answer_pages_set)。"""
+    """聚合多页 API 结果 → (questions, answers, num_pages, answer_pages_set)。
+
+    跨题归属规则（针对无题号块）：
+      - 默认归前一有题号块（续题/选项行/续描述）
+      - 但若下一块也是有题号块、且其 stem 含「根据文章/根据材料/阅读」等
+        引用前文的标记 → 该块是"前导阅读材料"，归后一块（如 Q24 科普阅读）
+    """
     questions: list[dict] = []
     answer_items: list[dict] = []
     in_answer = False
     answer_pages: set[str] = set()
 
+    # 先把所有非答案 item 收集成线性序列，方便用 next 上下文决策
+    flat_items: list[tuple[int, dict, tuple[float, float]]] = []  # (page_num, item, scale)
     for page_name in sorted(api_per_page):
         d = api_per_page[page_name]
         page_num = int(re.search(r"page-(\d+)", page_name).group(1))
@@ -706,13 +895,39 @@ def _assemble(api_per_page: dict[str, dict],
             if in_answer:
                 answer_items.append(item)
                 continue
-            qd = _build_question(item, scale, page_num)
-            if qd["number"] > 0:
-                questions.append(qd)
-            elif questions:
-                _merge_into(questions[-1], qd)
+            flat_items.append((page_num, item, scale))
         if page_is_answer:
             answer_pages.add(page_name)
+
+    # 线性扫描，决策每个 item 归前 vs 归后
+    pending_forward: dict | None = None  # 等待归到下一个有题号块的"前导块"
+    for i, (page_num, item, scale) in enumerate(flat_items):
+        qd = _build_question(item, scale, page_num)
+        if qd["number"] > 0:
+            # 若有前导块在等，先合并进当前题
+            if pending_forward:
+                _merge_forward(qd, pending_forward)
+                pending_forward = None
+            questions.append(qd)
+        else:
+            # 无题号块 → 决定归前还是归后
+            goes_forward = False
+            for j in range(i + 1, len(flat_items)):
+                nxt_qd = _build_question(flat_items[j][1], flat_items[j][2],
+                                          flat_items[j][0])
+                if nxt_qd["number"] > 0:
+                    if _READ_PASSAGE_REF_RE.search(nxt_qd.get("stem") or ""):
+                        goes_forward = True
+                    break
+            if goes_forward:
+                # 暂存，等下一个有题号块来吸收（合并 stem/figs/options）
+                if pending_forward is None:
+                    pending_forward = qd
+                else:
+                    _merge_into(pending_forward, qd)
+            elif questions:
+                _merge_into(questions[-1], qd)
+            # else 丢弃（页头）
 
     # 答案页通用 OCR 文本（外部传入，包含整页选择题表格）
     general_text = "\n".join((answer_pages_text or {}).get(p, "")
@@ -727,9 +942,8 @@ PADDING_PX = 10  # 外扩留白
 
 def _crop_figures(src_images_dir: Path, questions: list[dict],
                   out_figures: Path) -> dict[int, str]:
-    """每题 Figure+Table bbox 外接矩形 → figures/qNN.png；
-    多页 figures 合并到首页那张（按面积比简单选）。
-    返回 {number: 'figures/qNN.png'}。
+    """按 q['_figs'] 中每张图的 page 字段从对应原页裁切。
+    同页多张 → 外接矩形合一张；跨页多张 → vstack 拼成一张 qNN.png。
     """
     out_figures.mkdir(parents=True, exist_ok=True)
     page_imgs: dict[int, Path] = {}
@@ -737,23 +951,52 @@ def _crop_figures(src_images_dir: Path, questions: list[dict],
         m = re.search(r"page-(\d+)", p.name)
         if m:
             page_imgs[int(m.group(1))] = p
+
     figure_paths: dict[int, str] = {}
     for q in questions:
-        bboxes = (q.get("_fig_bboxes") or []) + (q.get("_table_bboxes") or [])
-        if not bboxes:
+        figs = q.get("_figs") or []
+        if not figs:
             continue
-        page = q.get("source_page")
-        img_path = page_imgs.get(page)
-        if not img_path:
+        # 按 page 分组
+        by_page: dict[int, list[tuple]] = {}
+        for f in figs:
+            by_page.setdefault(f["page"], []).append(f["bbox"])
+
+        # 每页裁一张 sub_img
+        sub_imgs = []
+        for pg in sorted(by_page):
+            img_path = page_imgs.get(pg)
+            if not img_path: continue
+            x1, y1, x2, y2 = _outer_rect(by_page[pg])
+            img = Image.open(img_path); W, H = img.size
+            x1 = max(0, x1 - PADDING_PX); y1 = max(0, y1 - PADDING_PX)
+            x2 = min(W, x2 + PADDING_PX); y2 = min(H, y2 + PADDING_PX)
+            if x2 > x1 and y2 > y1:
+                sub_imgs.append(img.crop((x1, y1, x2, y2)))
+
+        if not sub_imgs:
             continue
-        x1, y1, x2, y2 = _outer_rect(bboxes)
-        img = Image.open(img_path); W, H = img.size
-        x1 = max(0, x1 - PADDING_PX); y1 = max(0, y1 - PADDING_PX)
-        x2 = min(W, x2 + PADDING_PX); y2 = min(H, y2 + PADDING_PX)
-        if x2 <= x1 or y2 <= y1:
-            continue
+        # 单页：直接保存；跨页：垂直拼接（宽度取最大宽，等比缩放窄的）
+        if len(sub_imgs) == 1:
+            final = sub_imgs[0]
+        else:
+            max_w = max(s.size[0] for s in sub_imgs)
+            resized = []
+            for s in sub_imgs:
+                sw, sh = s.size
+                if sw < max_w:
+                    new_h = int(sh * max_w / sw)
+                    resized.append(s.resize((max_w, new_h), Image.LANCZOS))
+                else:
+                    resized.append(s)
+            total_h = sum(s.size[1] for s in resized) + 10 * (len(resized) - 1)
+            final = Image.new("RGB", (max_w, total_h), (255, 255, 255))
+            y = 0
+            for s in resized:
+                final.paste(s, (0, y))
+                y += s.size[1] + 10
         out = out_figures / f"q{q['number']:02d}.png"
-        img.crop((x1, y1, x2, y2)).save(out)
+        final.save(out)
         figure_paths[q["number"]] = f"figures/q{q['number']:02d}.png"
     return figure_paths
 
@@ -869,10 +1112,11 @@ def main():
               f"correct 总数 {sum(1 for a in answers if a['correct'])}",
               flush=True)
 
-    # 4a-2) stem 过短兜底：长前导的科普/实验探究大题腾讯只切出"N."
-    rf = _refill_short_stems(questions, cache_dir, images_dir, force=a.force)
+    # 4a-2) 主观题子小题补全：腾讯 Question.ResultList 给空时用通用 OCR 跨页补
+    rf = _refill_subquestions(questions, cache_dir, images_dir,
+                                n_pages=len(pages), force=a.force)
     if rf:
-        print(f"[tencent_paper] 通用 OCR 补 {rf} 题 stem", flush=True)
+        print(f"[tencent_paper] 通用 OCR 补 {rf} 题 stem/子小题", flush=True)
 
     # 4b) 题号缺口 fallback：通用 OCR 补抽（如 chaoyang page-01 漏切）
     got = [q["number"] for q in questions if q.get("number", 0) > 0]
@@ -883,8 +1127,7 @@ def main():
         for q in fb:
             if q["number"] not in existing:
                 # 兼容内部字段（裁图需要这些 _ 字段）
-                q.setdefault("_fig_bboxes", [])
-                q.setdefault("_table_bboxes", [])
+                q.setdefault("_figs", [])
                 q.setdefault("_outer_coord", None)
                 q.setdefault("_group_type", "")
                 q.setdefault("_stem_raw", q["stem"])
@@ -896,7 +1139,13 @@ def main():
           f"(其中 correct 非空 {sum(1 for a in answers if a['correct'])})",
           flush=True)
 
-    # 4c) 缺图 fallback：stem 引"图N"但 figs=0 → paddle 补 image bbox
+    # 4c-1) 图归属重分配：跨页/相邻题 figs 按 stem refs 数全局再分配
+    #     场景：Q4 stem 在 p1 底，图被腾讯归到 p2 顶部的 Q5 → 把 Q5 多余的图转给 Q4
+    nmoved = _redistribute_figures_by_stem_refs(questions)
+    if nmoved:
+        print(f"[tencent_paper] 全局重分配转移 {nmoved} 张图", flush=True)
+
+    # 4c-2) 缺图兜底：经过重分配仍 stem 引"图N"但 figs=0 → paddle 补
     layout_cache_dir = out_dir / "layout-cache"
     nfix = _fallback_missing_figures(questions, images_dir, layout_cache_dir, src)
     if nfix:
