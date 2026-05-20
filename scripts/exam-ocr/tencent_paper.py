@@ -455,9 +455,12 @@ def _redistribute_figures_by_stem_refs(questions: list[dict]) -> int:
 
 _SUBQ_RE = re.compile(r"\(\s*[1-9]\s*\)")
 _PAGE_FOOTER_NOISE = re.compile(
-    r"(?m)^\s*(?:[一二三四五六七八九十]+\s*[、，][^\n]{0,40}"
-    r"|九年级\S{0,8}试卷第\s*\d+\s*页[^\n]*"
-    r"|第\s*\d+\s*页\s*/?\s*共?\s*\d*\s*页?)\s*$\n?"
+    r"(?m)^\s*(?:"
+    r"[一二三四五六七八九十]+\s*[、，][^\n]{0,40}"     # 大题标题"三、实验探究题..."
+    r"|[^\n]{0,30}第\s*\d+\s*页[^\n]*"                # 各种 "...第N页..." 行
+    r"|第\s*\d+\s*页\s*/?\s*共?\s*\d*\s*页?"
+    r"|九年级[^\n]*"                                  # 九年级开头的版心信息
+    r")\s*$\n?"
 )
 
 
@@ -498,6 +501,7 @@ def _expected_subq_count(stem: str) -> int | None:
 
 def _refill_subquestions(questions: list[dict], cache_dir: Path,
                           images_dir: Path, n_pages: int,
+                          answer_pages: set[str] | None = None,
                           force: bool = False) -> int:
     """主观题（实验/计算/解答/填空）若 stem 缺 (1)(2)(3) 子小题
     （腾讯 Question.ResultList 给空或残缺）→ 用 GeneralAccurateOCR 跨页补抽。
@@ -515,6 +519,12 @@ def _refill_subquestions(questions: list[dict], cache_dir: Path,
                                 else 999 for i, n in enumerate(nums_sorted)}
     by_num: dict[int, dict] = {q["number"]: q for q in questions
                                 if q.get("number")}
+    # 答案页起始页号——refill 不能越过这一页，否则会把答案页解答内容拉进 stem
+    first_answer_page = n_pages + 1
+    for ap in (answer_pages or set()):
+        m = re.search(r"page-(\d+)", ap)
+        if m:
+            first_answer_page = min(first_answer_page, int(m.group(1)))
     fixed = 0
     for q in questions:
         if q["type"] in ("choice", "multi_choice"):
@@ -528,6 +538,8 @@ def _refill_subquestions(questions: list[dict], cache_dir: Path,
         # 扫到 next 题源页（含）——子小题可能延续到 next 源页前几行；
         # 再用 next.stem 头部截断防误吃 next 的前导材料
         end_page = max(page, nxt_page)
+        # 不能越过答案页起始（防 Q26 这种最后题把答案页解答拉进 stem）
+        end_page = min(end_page, first_answer_page - 1)
 
         parts: list[str] = []
         for pg in range(page, min(end_page + 1, n_pages + 1)):
@@ -1114,7 +1126,8 @@ def main():
 
     # 4a-2) 主观题子小题补全：腾讯 Question.ResultList 给空时用通用 OCR 跨页补
     rf = _refill_subquestions(questions, cache_dir, images_dir,
-                                n_pages=len(pages), force=a.force)
+                                n_pages=len(pages),
+                                answer_pages=answer_pages, force=a.force)
     if rf:
         print(f"[tencent_paper] 通用 OCR 补 {rf} 题 stem/子小题", flush=True)
 
