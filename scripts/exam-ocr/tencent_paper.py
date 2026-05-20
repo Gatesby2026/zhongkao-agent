@@ -288,6 +288,144 @@ def _split_by_qnum(text: str) -> list[dict]:
     return questions
 
 
+def _iou(a: tuple, b: tuple) -> float:
+    """两个 (x1,y1,x2,y2) bbox 的 IoU。"""
+    ax1, ay1, ax2, ay2 = a; bx1, by1, bx2, by2 = b
+    ix = max(0, min(ax2, bx2) - max(ax1, bx1))
+    iy = max(0, min(ay2, by2) - max(ay1, by1))
+    inter = ix * iy
+    ua = (ax2-ax1)*(ay2-ay1) + (bx2-bx1)*(by2-by1) - inter
+    return inter / ua if ua > 0 else 0.0
+
+
+def _paddle_python(src: Path) -> Path | None:
+    """从 src（原始卷目录）向上找 .venv-paddle/bin/python3。"""
+    cur = src.resolve()
+    while cur.parent != cur:
+        cand = cur / ".venv-paddle" / "bin" / "python3"
+        if cand.exists():
+            return cand
+        cur = cur.parent
+    return None
+
+
+def _paddle_layout(img_path: Path, cache_dir: Path, src: Path,
+                    force: bool = False) -> list[dict]:
+    """对一张页面取 paddle layout 检测结果（带 layout-cache 缓存 + .venv-paddle 子进程）。
+
+    返回 [{label, bbox: [x1,y1,x2,y2], score}, ...]；paddle 不可用或失败时返 []。
+    """
+    cache_dir.mkdir(parents=True, exist_ok=True)
+    cf = cache_dir / f"{img_path.stem}.layout.json"
+    if cf.exists() and not force:
+        return json.loads(cf.read_text(encoding="utf-8"))
+    py = _paddle_python(src)
+    if not py:
+        return []
+    script = Path(__file__).resolve().parent / "paddle_layout.py"
+    try:
+        r = subprocess.run([str(py), str(script), str(img_path)],
+                          capture_output=True, text=True, timeout=120)
+        if r.returncode != 0:
+            print(f"[paddle] {img_path.name} 失败: {r.stderr.strip()[-200:]}",
+                  flush=True)
+            return []
+        boxes = json.loads(r.stdout.strip().splitlines()[-1])
+        cf.write_text(json.dumps(boxes, ensure_ascii=False, indent=2),
+                      encoding="utf-8")
+        return boxes
+    except Exception as e:
+        print(f"[paddle] {img_path.name} 异常: {e}", flush=True)
+        return []
+
+
+def _fallback_missing_figures(questions: list[dict], images_dir: Path,
+                               layout_cache_dir: Path, src: Path) -> int:
+    """对 stem 引用「图N/图N甲」但 _fig_bboxes 为空的题，从 paddle 检测的
+    image/table/chart bbox 里补一张。
+    策略：同页 paddle 检测候选 → 排除已被腾讯任何题占用的（IoU > 0.3）→
+    优先选 y 中心落在该题 outer_coord 区间内的 → 不行就选最大面积的剩余项。
+    跨页（如 Q21 stem 在 p6 图在 p7）暂不处理，留待人工。
+    """
+    if not _paddle_python(src):
+        print("[fallback-fig] 无 .venv-paddle，跳过", flush=True)
+        return 0
+    fixed = 0
+    # 索引：每页已被腾讯占用的 bbox（用于 IoU 排除）
+    occupied: dict[int, list[tuple]] = {}
+    for q in questions:
+        pg = q.get("source_page")
+        if not pg: continue
+        for fb in (q.get("_fig_bboxes") or []) + (q.get("_table_bboxes") or []):
+            occupied.setdefault(pg, []).append(fb)
+
+    for q in questions:
+        if q.get("_fig_bboxes"):
+            continue
+        stem = q.get("stem") or ""
+        if not re.search(r"(?:如图|图)\s*\d", stem):
+            continue
+        pg = q.get("source_page")
+        if not pg: continue
+        boxes = _paddle_layout(images_dir / f"page-{pg:02d}.png",
+                                layout_cache_dir, src)
+        if not boxes:
+            continue
+        cands = [tuple(int(x) for x in b["bbox"]) for b in boxes
+                 if b["label"] in ("image", "table", "chart")]
+        # 排除腾讯已占用的
+        cands = [c for c in cands
+                 if not any(_iou(c, o) > 0.3 for o in occupied.get(pg, []))]
+        if not cands:
+            continue
+        # 优先：y 中心在该题 outer_coord 内
+        outer = q.get("_outer_coord")
+        if outer:
+            ox1, oy1, ox2, oy2 = outer
+            in_q = [c for c in cands if oy1 <= (c[1]+c[3])/2 <= oy2]
+            if in_q:
+                cands = in_q
+        # 若多张 → 都加（保守裁多不漏）
+        for c in cands:
+            q["_fig_bboxes"].append(c)
+            occupied.setdefault(pg, []).append(c)
+        fixed += 1
+        print(f"  [fallback-fig] Q{q['number']}: p{pg:02d} 补 {len(cands)} 张",
+              flush=True)
+    return fixed
+
+
+def _refill_short_stems(questions: list[dict], cache_dir: Path,
+                         images_dir: Path, force: bool = False) -> int:
+    """腾讯 QuestionSplitOCR 偶尔只把题号 'N.' 切出来 stem 为空（如 chaoyang/
+    haidian Q16 这类长前导的科普阅读/实验探究大题）→ 用 GeneralAccurateOCR
+    该页文本 + 题号切分补 stem。**不调 VLM，复用通用 OCR 缓存**。
+    """
+    general_cache = cache_dir / "general"
+    general_cache.mkdir(parents=True, exist_ok=True)
+    fixed = 0
+    for q in questions:
+        if len((q.get("stem") or "").strip()) >= 5:
+            continue
+        page = q.get("source_page")
+        if not page:
+            continue
+        gf = general_cache / f"page-{page:02d}.txt"
+        if gf.exists() and not force:
+            txt = gf.read_text(encoding="utf-8")
+        else:
+            txt = _call_general_ocr(images_dir / f"page-{page:02d}.png")
+            gf.write_text(txt, encoding="utf-8")
+        for block in _split_by_qnum(txt):
+            if block["number"] == q["number"] and block.get("stem"):
+                q["stem"] = block["stem"]
+                if block.get("options") and not q.get("options"):
+                    q["options"] = block["options"]
+                fixed += 1
+                break
+    return fixed
+
+
 def _fill_gaps_via_general_ocr(api_results: dict[str, dict],
                                 cache_dir: Path,
                                 images_dir: Path,
@@ -731,6 +869,11 @@ def main():
               f"correct 总数 {sum(1 for a in answers if a['correct'])}",
               flush=True)
 
+    # 4a-2) stem 过短兜底：长前导的科普/实验探究大题腾讯只切出"N."
+    rf = _refill_short_stems(questions, cache_dir, images_dir, force=a.force)
+    if rf:
+        print(f"[tencent_paper] 通用 OCR 补 {rf} 题 stem", flush=True)
+
     # 4b) 题号缺口 fallback：通用 OCR 补抽（如 chaoyang page-01 漏切）
     got = [q["number"] for q in questions if q.get("number", 0) > 0]
     fb = _fill_gaps_via_general_ocr(api_results, cache_dir, images_dir,
@@ -752,6 +895,12 @@ def main():
     print(f"[tencent_paper] 解析出 {len(questions)} 题 / {len(answers)} 答案 "
           f"(其中 correct 非空 {sum(1 for a in answers if a['correct'])})",
           flush=True)
+
+    # 4c) 缺图 fallback：stem 引"图N"但 figs=0 → paddle 补 image bbox
+    layout_cache_dir = out_dir / "layout-cache"
+    nfix = _fallback_missing_figures(questions, images_dir, layout_cache_dir, src)
+    if nfix:
+        print(f"[tencent_paper] paddle 兜底 {nfix} 题 figures", flush=True)
 
     # 5) 裁图
     if not a.no_crop:

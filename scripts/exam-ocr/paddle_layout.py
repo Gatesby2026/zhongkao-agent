@@ -74,3 +74,13 @@ def get_detector() -> LayoutDetector:
     if _default is None:
         _default = LayoutDetector()
     return _default
+
+
+if __name__ == "__main__":
+    # CLI：python3 paddle_layout.py <image.png> → stdout JSON
+    # 给 tencent_paper.py 的缺图兜底用 subprocess 调用本脚本（需 .venv-paddle）
+    import sys
+    import json as _json
+    if len(sys.argv) < 2:
+        print("usage: paddle_layout.py <image.png>", file=sys.stderr); sys.exit(1)
+    print(_json.dumps(LayoutDetector().detect(sys.argv[1]), ensure_ascii=False))

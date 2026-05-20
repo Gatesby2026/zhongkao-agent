@@ -109,7 +109,8 @@ questions:
   answer: B
   solution: ''
   knowledge_points:
-  - 参照物与运动的相对性
+  - 参照物
+  - 运动与静止的相对性
   module: mechanics
   difficulty: 基础
   recommended_for:
@@ -156,7 +157,7 @@ questions:
   solution: ''
   knowledge_points:
   - 物质的三态变化
-  - 液化
+  - 液化现象
   module: soundLightHeat
   difficulty: 基础
   recommended_for:
@@ -249,9 +250,8 @@ questions:
   answer: D
   solution: ''
   knowledge_points:
-  - 电磁感应
-  - 电动机原理
-  - 能量转化
+  - 电与磁的关系
+  - 能量的转化
   module: electricity
   difficulty: 中等
   recommended_for:
@@ -297,8 +297,8 @@ questions:
   answer: C
   solution: ''
   knowledge_points:
-  - 欧姆定律的应用
-  - 密度的测量方法
+  - 欧姆定律
+  - 密度的概念及计算
   - 电路分析
   module: electricity
   difficulty: 中等
@@ -370,7 +370,7 @@ questions:
   knowledge_points:
   - 机械效率
   - 压强计算
-  - 滑轮组的应用
+  - 滑轮组原理
   module: mechanics
   difficulty: 中等
   recommended_for:
@@ -382,7 +382,45 @@ questions:
 - id: 16
   type: 实验探究
   score: 3
-  stem: ''
+  stem: '(1)在研究某种物质熔化前后温度变化特点的实验时，该物质被加热到第5min时开始
+
+    熔化，经4min全部熔化，然后再加热一段时间。利用记录的数据绘制出该物质的温
+
+    度与时间关系的图像，如图甲所示。从图像可知，该物质在熔化过程中温度
+
+    它属于
+
+    。(选填“晶体”或“非晶体”)
+
+    (2)如图乙所示，将两个铅柱底面削平、削干净，然后紧紧地压在一起，两个铅柱就会结
+
+    合起来，甚至下面吊一个20kg的重物都不能把它们拉开。这主要是因为两个铅柱
+
+    的分子间存在
+
+    ↑温度/℃
+
+    铅柱
+
+    48
+
+    46
+
+    44
+
+    42
+
+    40
+
+    012345678910时间/min
+
+    20kg
+
+    甲
+
+    乙
+
+    九年级物理试卷第4页(共8页)'
   answer: ''
   solution: '(1)不变
 
@@ -392,11 +430,12 @@ questions:
 
     (3分)'
   knowledge_points:
-  - 实验设计与操作
-  - 数据记录与分析
-  module: experiments
-  difficulty: 中等
+  - 物质的熔化和凝固
+  - 分子间的作用力
+  module: soundLightHeat
+  difficulty: 基础
   recommended_for:
+  - L0
   - L1
   - L2
   - L3
@@ -435,7 +474,7 @@ questions:
     (4分)'
   knowledge_points:
   - 力的概念
-  - 滑动摩擦力的影响因素
+  - 摩擦力的影响因素
   module: mechanics
   difficulty: 中等
   recommended_for:
@@ -457,8 +496,8 @@ questions:
 
     (3分)'
   knowledge_points:
+  - 电路的连接与测量
   - 欧姆定律的应用
-  - 电路连接与测量
   module: electricity
   difficulty: 中等
   recommended_for:
@@ -482,8 +521,9 @@ questions:
 
     (4分)'
   knowledge_points:
-  - 欧姆定律
-  - 电路连接与测量
+  - 电流与电压的关系
+  - 欧姆定律的应用
+  - 电路实验设计
   module: electricity
   difficulty: 中等
   recommended_for:
@@ -544,7 +584,7 @@ questions:
     九年级物理试卷答案及评分标准第1页(共2页)'
   knowledge_points:
   - 浮力的概念
-  - 实验探究方法
+  - 阿基米德原理
   module: mechanics
   difficulty: 中等
   recommended_for:
@@ -621,10 +661,11 @@ questions:
 
     (4分)'
   knowledge_points:
-  - 未提供题干和答案，无法确定具体知识点
+  - 未提供题干和标准答案，无法确定具体知识点
   module: soundLightHeat
-  difficulty: 未提供题干和答案，无法确定难度
-  recommended_for: []
+  difficulty: 未提供题干和标准答案，无法确定难度
+  recommended_for:
+  - 未提供题干和标准答案，无法确定推荐层级
   qc_status: draft
   qc_note: ''
 - id: 25
@@ -645,8 +686,9 @@ questions:
 
     (4分)'
   knowledge_points:
-  - 电路的基本概念
-  - 欧姆定律的应用
+  - 电功率
+  - 欧姆定律
+  - 电路分析
   module: electricity
   difficulty: 中等
   recommended_for:

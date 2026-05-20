@@ -207,7 +207,7 @@ questions:
   solution: ''
   knowledge_points:
   - 力的作用效果
-  - 惯性
+  - 物体的运动状态改变
   module: mechanics
   difficulty: 基础
   recommended_for:
@@ -230,8 +230,8 @@ questions:
   answer: C
   solution: ''
   knowledge_points:
-  - 内能的改变方式
-  - 热力学过程
+  - 内能与温度的关系
+  - 做功改变内能
   module: soundLightHeat
   difficulty: 中等
   recommended_for:
@@ -277,8 +277,9 @@ questions:
   answer: C
   solution: ''
   knowledge_points:
-  - 电路与欧姆定律
-  - 电阻及其特性
+  - 电路分析
+  - 电阻与电压的关系
+  - 光敏电阻的应用
   module: electricity
   difficulty: 中等
   recommended_for:
@@ -383,8 +384,7 @@ questions:
   solution: ''
   knowledge_points:
   - 浮力
-  - 密度
-  - 力的平衡
+  - 液体压强
   module: mechanics
   difficulty: 中等
   recommended_for:
@@ -396,17 +396,34 @@ questions:
 - id: 16
   type: 实验探究
   score: 3
-  stem: ''
+  stem: '(1)图甲中，温度计的示数为
+
+    ℃。
+
+    (2)位于通电螺线管周围可自由转动的小磁针静止时的指向如图乙所示，图中小磁针涂黑的
+
+    一端为它的N极，由此可以判断出A端为电源的
+
+    极(选填“正”或“负”)。
+
+    电源
+
+    B
+
+    甲
+
+    乙'
   answer: ''
   solution: '(1)18(2分)
 
     (2)正(2分)'
   knowledge_points:
-  - 实验设计与操作
-  - 数据记录与分析
-  module: experiments
-  difficulty: 中等
+  - 温度计的使用
+  - 通电螺线管的磁场方向
+  module: electricity
+  difficulty: 基础
   recommended_for:
+  - L0
   - L1
   - L2
   - L3
@@ -469,8 +486,8 @@ questions:
 
     (4)不能(1分)'
   knowledge_points:
+  - 光的折射
   - 凸透镜成像规律
-  - 实验探究方法
   module: soundLightHeat
   difficulty: 中等
   recommended_for:
@@ -613,8 +630,8 @@ questions:
   knowledge_points:
   - 流体的压强与流速的关系
   - 能量转化与守恒
-  - 声速与马赫数
-  module: soundLightHeat
+  - 超声速流动现象
+  module: mechanics
   difficulty: 中等
   recommended_for:
   - L1
@@ -645,7 +662,7 @@ questions:
     答图1'
   knowledge_points:
   - 欧姆定律
-  - 串联电路和并联电路
+  - 串联电路和并联电路的电流、电压关系
   module: electricity
   difficulty: 中等
   recommended_for:
