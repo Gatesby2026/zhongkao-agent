@@ -38,6 +38,7 @@ import io
 import json
 import os
 import re
+import subprocess
 import sys
 import time
 from pathlib import Path
@@ -354,11 +355,17 @@ def _fallback_missing_figures(questions: list[dict], images_dir: Path,
         for fig in q.get("_figs") or []:
             occupied.setdefault(fig["page"], []).append(fig["bbox"])
 
+    fig_ref_re = re.compile(r"(?:如图|图)\s*(\d+)\s*([甲乙丙丁戊])?")
     for q in questions:
-        if q.get("_figs"):
-            continue
         stem = q.get("stem") or ""
-        if not re.search(r"(?:如图|图)\s*\d", stem):
+        if not fig_ref_re.search(stem):
+            continue
+        # 按"引图数 vs 实有 image 数"判定（table 单独不算"图"，避免 Q14 这种
+        # 有表无图却跳过 fallback 的情况）
+        refs = {(m.group(1) + (m.group(2) or ""))
+                for m in fig_ref_re.finditer(stem)}
+        img_have = sum(1 for f in q.get("_figs") or [] if f.get("kind") == "image")
+        if img_have >= len(refs):
             continue
         pg = q.get("source_page")
         if not pg: continue
@@ -464,9 +471,64 @@ _PAGE_FOOTER_NOISE = re.compile(
 )
 
 
-def _slice_general_text(full_text: str, num: int, next_num: int) -> str:
+_PUNCT_END = set("。，；：！？.,;:!?)）")
+
+
+# 下一行起始可能是填空续行的特征：单位（g/kg/cm/N/Pa/W/V/A...）、纯数字、
+# 字母变量、英文括号注释（选填"左"或"右"）等——**不是中文字开头**
+_FILL_NEXT_HEAD_RE = re.compile(
+    r"^\s*(?:[(（][^\n]{0,30}[)）]"      # (选填"左"或"右")
+    r"|[a-zA-Z0-9]"                       # g; cm 0.5 P=
+    r"|kg|cm|mm|m/s|N\b|Pa|J\b|°[CF])"  # 常见单位
+)
+
+
+def _join_oversplit_lines(text: str) -> str:
+    """合并 OCR 把"行内填空空白"误切成换行的情况。
+
+    场景：试卷里"...苹果的质量是 _____ g;" 一行，OCR 因填空空白把
+    "g;" 切到了下一行。视觉两行但语义同行。
+
+    判定（同时满足）：
+      - 上行末尾非中文标点结尾
+      - 下行非子小题/选项开头、长度 < 40
+      - 下行起始为单位/数字/字母/(选填...)——**非中文字开头**
+        （避免"轻\n压"这种纯中文换行被误合）
+    """
+    out = []
+    for ln in text.split("\n"):
+        s = ln.rstrip()
+        if not s:
+            out.append(ln); continue
+        prev_tail = out[-1].rstrip() if out else ""
+        # 上行结尾是"图"/"如图" 时下行通常是图编号（图17乙），不应误合
+        is_fig_ref_split = bool(re.search(r"(?:如?图)\s*$", prev_tail))
+        if (out and prev_tail
+                and prev_tail[-1] not in _PUNCT_END
+                and not is_fig_ref_split
+                and not re.match(r"^\s*\(\s*[1-9]\s*\)", s)
+                and not re.match(r"^\s*[A-D]\s*[.、．]", s)
+                and not _SUBQ_RE.match(s)
+                and _FILL_NEXT_HEAD_RE.match(s)
+                and len(s) < 40):
+            out[-1] = out[-1].rstrip() + "____" + s.lstrip()
+        else:
+            out.append(ln)
+    return "\n".join(out)
+
+
+def _slice_general_text(full_text: str, num: int, next_num: int,
+                          nxt_heads: list[str] | None = None) -> str:
     """通用 OCR 文本按 `^N.` 锚点切出第 num 题段（直到 `^next_num.` 或文末）。
-    去掉大题标题/页脚/孤立的图中标签噪声。
+
+    流程（顺序敏感）：
+      1. 清页脚噪声
+      2. 按 num/next_num 切 chunk
+      3. **next.stem 头部截断**：在原始 chunk 上找 next 题任意行（含短标题），
+         截断到最早出现位置——必须在孤立短行清理之前，否则"多旋翼无人机" 这种
+         6 字标题被噪声清理误丢，导致截断点找不到。
+      4. 清孤立短行（图中标签等）
+      5. 行内填空空白合并
     """
     clean = _PAGE_FOOTER_NOISE.sub("\n", full_text)
     start_re = re.compile(rf"(?m)^\s*{num}\s*[.、．]")
@@ -476,20 +538,29 @@ def _slice_general_text(full_text: str, num: int, next_num: int) -> str:
     em = end_re.search(clean, sm.end())
     chunk = clean[sm.end():em.start() if em else len(clean)]
     chunk = re.split(r"(?m)^\s*(?:参考答案|答案及评分)", chunk, maxsplit=1)[0]
+
+    # next.stem 头部截断（在清孤立行之前）
+    if nxt_heads:
+        positions = []
+        for h in nxt_heads:
+            if h and len(h) >= 4 and h in chunk:
+                positions.append(chunk.find(h))
+        if positions:
+            chunk = chunk[:min(positions)].rstrip()
+
     # 清孤立的图标签噪声：单行 ≤ 8 字、不含中文标点/子小题/选项 marker
     out_lines = []
     for ln in chunk.split("\n"):
         s = ln.strip()
         if not s:
             out_lines.append(""); continue
-        # 保留：有标点的句子、含 (N) 子小题、含 A./B./C./D. 选项
         if (re.search(r"[，。；：？！,;:?!]", s)
                 or _SUBQ_RE.search(s)
                 or re.match(r"^[A-D]\s*[.、．]", s)
                 or len(s) > 8):
             out_lines.append(ln)
-        # 否则丢弃（孤立短词，多半是图中标签）
-    return "\n".join(out_lines).strip()
+    chunk = "\n".join(out_lines).strip()
+    return _join_oversplit_lines(chunk)
 
 
 def _expected_subq_count(stem: str) -> int | None:
@@ -553,13 +624,16 @@ def _refill_subquestions(questions: list[dict], cache_dir: Path,
             if re.search(rf"(?m)^\s*{nxt}\s*[.、．]", txt):
                 break
         full = "\n".join(parts)
-        chunk = _slice_general_text(full, num, nxt)
-
-        # next 题 stem 头部截断：避免 chunk 越界到 next 题的前导材料
-        if chunk and nxt_q and nxt_q.get("stem"):
-            head = nxt_q["stem"].split("\n")[0].strip()[:25]
-            if len(head) >= 6 and head in chunk:
-                chunk = chunk[:chunk.find(head)].rstrip()
+        # 从 next 题 stem 抽多候选 head（含短标题），传给 _slice 内部按最早匹配截断
+        nxt_heads: list[str] = []
+        if nxt_q and nxt_q.get("stem"):
+            for ln in nxt_q["stem"].split("\n"):
+                s = ln.strip()
+                if len(s) >= 4:
+                    nxt_heads.append(s[:30])
+                    if len(nxt_heads) >= 5:
+                        break
+        chunk = _slice_general_text(full, num, nxt, nxt_heads=nxt_heads)
 
         if chunk and len(chunk) > len(stem):
             q["stem"] = chunk
@@ -710,13 +784,16 @@ def _build_question(item: dict, scale: tuple[float, float],
             options[label] = text
 
     # Figures / Tables bbox（统一存进 _figs，带 page 标记）
+    # kind 标准化：image / table（"figure" 来源标签统一为 "image"，方便下游 fallback
+    # 按 "image 数 vs stem refs 数" 判定缺图）
     fig_count = 0; tbl_count = 0
     figs: list[dict] = []
     for kind, obj in collected:
         if kind not in ("figure", "table"): continue
         if not obj.get("Coord"): continue
         bbox = _bbox_xyxy(obj["Coord"], sx, sy)
-        figs.append({"page": source_page, "bbox": bbox, "kind": kind})
+        out_kind = "image" if kind == "figure" else "table"
+        figs.append({"page": source_page, "bbox": bbox, "kind": out_kind})
         if kind == "figure": fig_count += 1
         else: tbl_count += 1
 
