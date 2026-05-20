@@ -52,6 +52,8 @@ VALID_MODULES = {
 SOLUTION_REQUIRED = {"计算", "解答", "实验探究"}
 CHOICE_ANSWER_RE = re.compile(r"^[A-D]{1,4}$")
 SINGLE_ANSWER_RE = re.compile(r"^[A-D]$")
+# 题干提到"如图N"/"图N所示"/"图N甲" 这种命名引用 → 必须有 figure 配对
+STEM_FIG_REF_RE = re.compile(r"(?:如图|图)\s*(\d+)\s*([甲乙丙丁戊])?")
 
 
 def detect_issues(q: dict) -> list[dict]:
@@ -109,6 +111,14 @@ def detect_issues(q: dict) -> list[dict]:
         if not sol or sol == "__MISSING__":
             issues.append({"code": "no_solution", "level": "warn",
                            "msg": f"{qtype}题 solution 未填写"})
+
+    # 题干引用"图N/图N甲"但没有 figure → 缺图
+    fig = q.get("figure") or q.get("figure_path")
+    refs = sorted({(m.group(1) + (m.group(2) or ""))
+                   for m in STEM_FIG_REF_RE.finditer(stem)})
+    if refs and not fig:
+        issues.append({"code": "missing_figure", "level": "error",
+                       "msg": f'题干引用 图{"/".join(refs)} 但无 figure'})
 
     if not q.get("knowledge_points"):
         issues.append({"code": "no_kp", "level": "warn", "msg": "knowledge_points 为空"})
