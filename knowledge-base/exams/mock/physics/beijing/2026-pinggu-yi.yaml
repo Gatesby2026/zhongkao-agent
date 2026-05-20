@@ -1,0 +1,729 @@
+# ============================================================
+# 2026年北京北京pinggu区一模physics — 自动生成
+# ============================================================
+# OCR: Qwen-VL-OCR  Enrich: qwen-max
+# QC: draft=26  needs_review=0
+
+year: 2026
+district: 北京pinggu区
+exam_type: 一模
+subject: physics
+full_score: 70
+duration_minutes: null
+total_questions: 26
+structure: 12单选(24分) + 3多选(6分) + 8实验探究(27分) + 1解答(4分) + 2计算(8分)
+questions:
+- id: 1
+  type: 单选
+  score: 2
+  stem: 下列物品中，通常情况下属于导体的是
+  options:
+    A: 塑料笔杆
+    B: 不锈钢尺
+    C: 橡胶手套
+    D: 陶瓷碗
+  answer: B
+  solution: ''
+  knowledge_points:
+  - 物质的导电性
+  module: electricity
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 2
+  type: 单选
+  score: 2
+  stem: 下图所示的光现象中，由于光的反射形成的是
+  has_image_options: true
+  figure: 2026-pinggu-yi/figures/q02.png
+  answer: C
+  solution: ''
+  knowledge_points:
+  - 光的反射
+  module: soundLightHeat
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 3
+  type: 单选
+  score: 2
+  stem: 下列实例中，为了加快蒸发的是
+  options:
+    A: 将湿衣服晾在通风向阳处
+    B: 植树时剪掉多余的枝叶
+    C: 给盛有酒精的瓶子加盖
+    D: 把新鲜的蔬菜装入保鲜袋中
+  answer: A
+  solution: ''
+  knowledge_points:
+  - 物质的三态变化
+  - 蒸发的影响因素
+  module: soundLightHeat
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 4
+  type: 单选
+  score: 2
+  stem: 下图所示的四个实例中，目的是为了减小摩擦的是
+  has_image_options: true
+  figure: 2026-pinggu-yi/figures/q04.png
+  answer: A
+  solution: ''
+  knowledge_points:
+  - 摩擦力的概念及影响因素
+  - 减小摩擦的方法
+  module: mechanics
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 5
+  type: 单选
+  score: 2
+  stem: 某科技小组用粗细相同、长短不同的铜管做成一个风铃，如图所示。关于这个风铃，下列说法正确的是
+  options:
+    A: 敲击铜管时发出的声音在真空中可以传播
+    B: 敲击铜管发出的声音是空气振动产生的
+    C: 敲击粗细相同、长短不同的铜管， 发出声音的音色不同
+    D: 用大小不同的力敲击同一根铜管的同一位置， 发出声音的响度不同
+  answer: D
+  solution: ''
+  knowledge_points:
+  - 声音的产生与传播
+  - 声音的特性
+  module: soundLightHeat
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 6
+  type: 单选
+  score: 2
+  stem: 下列说法中正确的是
+  options:
+    A: 电动机是把机械能转化为电能的机器
+    B: 导体中的负电荷在做定向移动时一定产生磁场
+    C: 金属导体的电阻与通过它的电流成反比
+    D: 电路两端的电压越高， 电流通过该电路做功越多
+  answer: B
+  solution: ''
+  knowledge_points:
+  - 电流与磁场的关系
+  - 电动机的工作原理
+  - 电阻的性质
+  - 电功的概念
+  module: electricity
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 7
+  type: 单选
+  score: 2
+  stem: 在“爱眼护眼”宣传活动中，同学们搜集到了以下图片。下列说法正确的是
+  options:
+    A: 图甲所示眼球好像一架照相机， 晶状体和角膜的共同作用相当于凹透镜
+    B: 图乙所示视力正常的人看远处物体时， 物体在视网膜上成正立、缩小的实像
+    C: 图丙所示是近视眼的成像原理，应戴合适的凹透镜进行矫正
+    D: 带上近视眼镜后， 对光线有发散作用， 视网膜上成的像是虚像
+  figure: 2026-pinggu-yi/figures/q07.png
+  answer: C
+  solution: ''
+  knowledge_points:
+  - 光的折射
+  - 透镜成像原理
+  - 眼睛和眼镜
+  module: soundLightHeat
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 8
+  type: 单选
+  score: 2
+  stem: 如图所示是电烙铁工作的原理图。电源电压为220V保持不变。在预热状态时，通过它的电流较小;在加热状态时，通过它的电流较大，则下列选项中正确的是
+  options:
+    A: 闭合开关S，此时小灯熄灭， 处于预热状态
+    B: 断开开关 S，此时小灯发光，处于加热状态
+    C: 闭合开关S，此时小灯发光，处于预热状态
+    D: 闭合开关S，此时小灯熄灭， 处于加热状态
+  figure: 2026-pinggu-yi/figures/q08.png
+  answer: D
+  solution: ''
+  knowledge_points:
+  - 电路的基本组成和连接方式
+  - 欧姆定律的应用
+  module: electricity
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 9
+  type: 单选
+  score: 2
+  stem: 如图所示是每隔相等时间拍摄的某篮球撞击地面过程的照片，则下列说法正确的是（）
+  options:
+    A: 篮球从A点到B点过程中，运动状态不变
+    B: 篮球从B点到D点过程中，重力做功越来越快
+    C: 篮球从A点到C点的过程中机械能守恒
+    D: 篮球到D点时，若它受到的所有力全部消失，则它将保持静止
+  figure: 2026-pinggu-yi/figures/q09.png
+  answer: B
+  solution: ''
+  knowledge_points:
+  - 机械能守恒
+  - 重力做功
+  module: mechanics
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 10
+  type: 单选
+  score: 2
+  stem: 如图所示，某人用动滑轮将重180N的木箱在 5s内沿竖直方向匀速提升 2m，所用拉力为 100N，不计绳重和摩擦。下列说法正确的是
+  options:
+    A: 动滑轮做的有用功是 400J
+    B: 拉力的功率为 40W
+    C: 动滑轮的机械效率为90%
+    D: 若用此装置沿竖直方向匀速提升 360N重物，拉力为 200N
+  figure: 2026-pinggu-yi/figures/q10.png
+  answer: C
+  solution: ''
+  knowledge_points:
+  - 机械效率
+  - 功和功率的计算
+  module: mechanics
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 11
+  type: 单选
+  score: 2
+  stem: '如图所示，实心均匀正方体甲、乙对水平地面的压强相等均为 p_{0}，若甲、乙分别沿水平方向切去一部分，且切去部分的质量相等，则剩余部分对水平地面的压强变为p、 p_{乙}，则p_{0}、p_{乙}、p_{乙}的大小关系正确的是
+
+    p_0、p_1、p_2的大小关系正确的是'
+  options:
+    A: $p_1$>$p_0$
+    B: p_z>p_0
+    C: p0>p乙>p
+    D: p_>p_
+  figure: 2026-pinggu-yi/figures/q11.png
+  answer: C
+  solution: ''
+  knowledge_points:
+  - 压强的概念
+  - 固体压强的计算
+  module: mechanics
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 12
+  type: 单选
+  score: 2
+  stem: '图甲是电阻$R_{1} $和$R_{2} $的电流随电压变化的图像， 电源电压不变，滑动变阻器R上标有“20$\Omega$，2A”字样，将它们接入图乙所示的电路中。 只闭合开关$S_{1} $，滑片P位于 a 端时，电阻$R_{1}
+    $的实际功率为 1W;同时闭合开关$S_{1} $和$S_{2} $，将滑片P移动到b端时， 电阻$R_{1} $的实际功率为 9.6W。 则下列说法正确的是
+
+    2分，选对但不全的得1分，有错选的不得分)
+
+    13.下列说法中正确的是'
+  options:
+    A: $R_2$的阻值为$5\Omega$
+    B: 电源电压为 10V
+    C: 电路中的最大电流为1.8A
+    D: 电路的最大功率为24W
+  figure: 2026-pinggu-yi/figures/q12.png
+  answer: D
+  solution: ''
+  knowledge_points:
+  - 欧姆定律
+  - 电功率计算
+  - 电路分析
+  module: electricity
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 13
+  type: 多选
+  score: 2
+  stem: '下列说法中正确的是
+
+    第3页/共10页'
+  options:
+    A: 寒冷的冬天，玻璃窗上出现冰花，属于凝华现象
+    B: 在“摩擦生热”的过程中，内能转化为机械能
+    C: 烧水时常看到“白气”，从水到“白气”的物态变化是先汽化后液化
+    D: 内陆地区比沿海地区昼夜温差大，原因之一是砂石的比热容比水的比热容小
+  answer: ACD
+  solution: ''
+  knowledge_points:
+  - 物态变化
+  - 比热容
+  module: soundLightHeat
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 14
+  type: 多选
+  score: 2
+  stem: '某物理兴趣小组的同学在学习了 “影响电阻大小的因素”后，从实验室中找到一个热敏电阻继续实验，他们测量了该热敏电阻的阻值随温度变化的关系，并记录在下表的表格中。
+
+    他们又找来稳压电源、 电压表、电流表、定值电阻$R_0$、开关和一些导线，与热敏电阻R 组成电路，准备将电压表或电流表改装成一个指针式温度计， 且满足温度升高指针偏转角度变大的要求。则下列设计满足要求的电路是
+
+
+    | 温度t(℃) | 30 | 40 | 50 | 60 | 70 | 80 | 90 | 100 |  |
+
+    |---|---|---|---|---|---|---|---|---|---|
+
+    | 电阻R(kΩ) | 4.13 | 2.87 | 2.03 | 1.47 | 1.07 | 0.80 | 0.60 | 0.45 |  |
+
+    |  |  |  |  |  |  |  |  |  |  |'
+  has_image_options: true
+  figure: 2026-pinggu-yi/figures/q14.png
+  answer: BC
+  solution: ''
+  knowledge_points:
+  - 电阻与温度的关系
+  - 电路设计
+  module: electricity
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 15
+  type: 多选
+  score: 2
+  stem: '小华为了自家花园用水方便，设计了一个自动储水水箱，其模型如图所示。柱形水箱内的底面积为$1m^{2}$，浮体A(不吸水)的底面积为$0.01m^{2}$，高为1m，通过一轻质硬细杆与力传感器相连，浮体A 的底面与水箱底的距离为10cm。当水箱内水位低于最低水位线$h_1$时，注水系统自动往水箱内注水;当水位到达60cm时，轻质细杆对力传感器的作用力恰好为
+    0;当水位到达最高水位线$h_2$时，注水系统停止注水。当水位位于$h_1$、$h_2$水位线时，轻质细杆对力传感器的作用力大小均为40N。已知g=10N/kg，
+
+    $\rho _{水}=1.0 \times 10^{3} kg/m^{3} $，则下列说法正确的是'
+  options:
+    A: 水位位于$h_2$时， 浮体A受到细杆对它竖直向下的力
+    B: 浮体 A 的重力为 60N
+    C: 当水位位于最低水位线$h_1$时， 水对浮体A底面的压力为
+    D: 注水系统从开始注水到停止，水箱内水的质量增加了 797kg
+  figure: 2026-pinggu-yi/figures/q15.png
+  answer: AD
+  solution: ''
+  knowledge_points:
+  - 浮力
+  - 液体压强
+  module: mechanics
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 16
+  type: 实验探究
+  score: 4
+  stem: '(1)如图13所示，温度计的示数为
+
+    ℃。
+
+    (2)如图丙所示，某同学用滴管向一个装有水的烧杯中滴入一滴红墨水，一段时间后，可以看
+
+    到:______，这属于扩散现象。'
+  figure: 2026-pinggu-yi/figures/q16.png
+  answer: ''
+  solution: '(1)24
+
+    (2)红墨水与烧杯内的水逐渐混合，颜色变得均匀 (每空2分)'
+  knowledge_points:
+  - 温度计的使用
+  - 扩散现象
+  module: soundLightHeat
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 17
+  type: 实验探究
+  score: 4
+  stem: '小华为了测量盐本的密度，进行了如下实验:
+
+    (1)天平放在水平台面上， 将游码移到标尺的零刻线处。横梁静止时， 指针指在分度盘中央刻度线的左侧，如图甲所示。 为使横梁在水平位置平衡， 应将横梁右端的平衡螺母向_端移动。
+
+    (2)将盛有适量盐水的杯子放在调节好的天平左盘内，测出杯子和盐水的总质量为128g。然后将杯中盐水的一部分倒入量筒中，如图乙所示，则量筒中盐水的体积为_cm^3。
+
+    (3)再将盛有剩余盐水的杯子放在天平左盘内， 改变砝码的个数和游码的位置，使天平横梁再次在水平位置平衡，此时右盘中砝码质量和游码在标尺上的位置如图丙所示， 则杯子及杯内剩余盐水的总质量为_g。
+
+    (4)根据上述实验数据计算盐水的密度为_kg/$m^{3}$。'
+  figure: 2026-pinggu-yi/figures/q17.png
+  answer: ''
+  solution: '(1)右
+
+    (2)60
+
+    (3) 62
+
+    (4) 1.1x103 (每空1分)'
+  knowledge_points:
+  - 测量物质的密度
+  - 天平的使用
+  - 量筒的使用
+  module: mechanics
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 18
+  type: 实验探究
+  score: 3
+  stem: '小华想探究电流通过导体产生的热量与电流、电阻、通电时间是否有关。他连接了如图所示的电路进行
+
+    实验， 其中两个完全相同的烧瓶内分别装有质量和初温都相同的煤油，以及阻值为 $R_{1} $和 $R_{2} $的电阻丝($R_{1} <R_{2} $)。
+
+    (1) 该实验探究的问题是电流通过导体产生的热量与是否有关。
+
+    (2)该实验中，电流通过导体产生热量的多少用_来反映。'
+  figure: 2026-pinggu-yi/figures/q18.png
+  answer: ''
+  solution: '(1)电阻 (每空1分)
+
+    (2)温度计示数的变化量'
+  knowledge_points:
+  - 焦耳定律
+  - 实验探究方法
+  module: electricity
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 19
+  type: 实验探究
+  score: 3
+  stem: '小华为探究水沸腾前后温度随加热时间变化的特点。当水温为
+
+
+    89℃时，每隔一分钟记录一次水的温度，水沸腾后持续加热一段时间，实验数据如下表。
+
+    899193959799999999999
+
+    (1)小华应通过观察
+
+    判断水是否沸腾。
+
+    (2)请你根据表中的数据归纳出实验结论:水在沸腾前，
+
+    ;水在沸腾过程
+
+    中，
+
+
+    | 加热时间/min | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |  |
+
+    |---|---|---|---|---|---|---|---|---|---|---|---|---|
+
+    | 温度/℃ | 89 | 91 | 93 | 95 | 97 | 99 | 99 | 99 | 99 | 99 | 99 |  |
+
+    |  |  |  |  |  |  |  |  |  |  |  |  |  |'
+  answer: ''
+  solution: '(1)是否有大量气泡冒出水面 (每空1分)
+
+    (2)加热时间增加，温度升高 加热时间增加，温度不变'
+  knowledge_points:
+  - 物质的物态变化
+  - 探究水沸腾的特点
+  module: soundLightHeat
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 20
+  type: 实验探究
+  score: 4
+  stem: '小华用如图所示的装置探究 “通电螺线管外部磁场的分布”。
+
+    (1) 在硬纸板上均匀地撒满铁屑， 轻敲纸板，观察铁屑的排列情况， 如图甲所示;把小磁针放到螺线管四周不同的位置，闭合开关后， 小磁针再次静止时的指向如图乙所示。
+
+    ①通电螺线管外部的磁场与_磁体的磁场相似;
+
+    ②乙图放置小磁针的目的是显示小磁针所在处的_;
+
+    ③由乙图可知，a 端接的是电源的_极。
+
+    (2)将电源正负极对调，闭合开关， 发现小磁针偏转方向与原来相反， 说明通电螺线管的磁场方向与_有关。'
+  figure: 2026-pinggu-yi/figures/q20.png
+  answer: ''
+  solution: '(1)①条形 ② 磁场方向 ③ 正 (每空1分)
+
+    (2)电流方向'
+  knowledge_points:
+  - 通电螺线管的磁场
+  - 磁场的方向
+  module: electricity
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 21
+  type: 实验探究
+  score: 3
+  stem: '小华整理器材时发现一只铭牌模糊的滑动变阻器， 他在不使用电压表的情况下，测出了该滑动变阻器的最大电阻值$R_x$。电路设计如图所示，电源电压未知且恒定不变，$R_0$为已知阻值的定值电阻。 请把以下测量步骤补充完整:
+
+    ①闭合开关S，当滑片P处于最左端时， 电流表示数为$I_{1}$;
+
+    ②闭合开关S，当_时， 电流表示数为$I_2$;
+
+    ③则滑动变阻器的最大阻值$R_x$为_（用$R_0、I_1、I_2$表示）。'
+  figure: 2026-pinggu-yi/figures/q21.png
+  answer: ''
+  solution: '(1)滑片P处于最右端 (1分)
+
+    (2) (l1-I2)R0 (2分) I2'
+  knowledge_points:
+  - 欧姆定律的应用
+  - 电路分析与计算
+  module: electricity
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 22
+  type: 实验探究
+  score: 3
+  stem: '小华利用如图甲所示的装置(透明玻璃板为平面镜)、刻度尺和如图乙所示的两支规格相同且可以改变
+
+    高度的电子蜡烛A、B，探究平面镜所成像的高度与物体的高度是否相等。
+
+
+    (1)将点亮的电子蜡烛A放在玻璃板前，用刻度尺测量
+
+    并记录。
+
+    (2)将未点亮的电子蜡烛B放在玻璃板后，眼睛在放有蜡烛____(选填“A”或“B”)的一侧观察，
+
+    不断调整B的位置和
+
+    ，从各个角度观察，直至蜡烛B与蜡烛A的像完全重合。用刻度尺测量电子
+
+    蜡烛B的高度并记录。
+
+    (3)改变
+
+    _，仿照步骤(2)再做5次实验，将实验测得的数据记录在表格中。
+
+    (4)请你画出实验数据记录表格。'
+  figure: 2026-pinggu-yi/figures/q22.png
+  answer: ''
+  solution: '(1)蜡烛A的高度 (每空1分)
+
+    (2) A 高度
+
+    (3)蜡烛A的高度
+
+    (4) 物体的高度/cm 像的高度/cm'
+  knowledge_points:
+  - 光的反射定律
+  - 平面镜成像的特点
+  module: soundLightHeat
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 23
+  type: 实验探究
+  score: 3
+  stem: '某同学在粗细均匀的木棒上缠绕一些细铜丝， 制作简易密度计，如图甲所示。将它依次放入一系列密
+
+    23.某同学在粗细均匀的木棒上缠绕一些细铜丝，制作简易密度计，如图甲所示。将它依次放入一系列密度已知的液体中，每次在液体中处于竖直漂浮状态时，在木棒上标出与液面位置相平的刻度线及相应密度值p，并测量木棒浸入液体的深度h，再利用收集的数据画出p-h图像，如图乙中图线所示。
+    已知$p_{3}-p_{2}-p_{2}-p_{1}$，铜丝的体积可以忽略。请你分析说明密度计上$p_{3}$与$\rho_{2}$刻度线的间距$\Delta \Delta h_{23}$和$\rho_{2}$与$\rho_{1}$刻度线的间距$\Delta
+    \Delta h_{12}$关系。'
+  figure: 2026-pinggu-yi/figures/q23.png
+  answer: ''
+  solution: 根据二力平衡和阿基米德原理可知 F浮1=G=p1gsh1 G h1= 1分 同理h2=G h3=G p2gs p3gs $$ \Delta h_{23}=h_{2}-h_{3}=\frac{G}{p2gs}\rho3gs=\frac{G}{gs}(\frac{1}{p2}-p2)=\frac{G}{gs}(\rho3-p2)
+    $$ △h12=h1-h2=G G G (1分) :03-02=02-01 由图象可知 ρ3>ρ1 ∴ ρ2ρ3 > ρ1P2 ∴△h23<△h12 (1分)
+  knowledge_points:
+  - 浮力
+  - 密度
+  - 图像分析
+  module: mechanics
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 24
+  type: 解答
+  score: 4
+  stem: '阅读《中国“武者”--人形机器人从舞台奔向未来》并回答24题
+
+    《中国“武者”——人形机器人从舞台奔向未来》
+
+    随着科技的不断进步，机器人正逐渐融入人们的日常生活。2025年春晚,宇树科技的人形机器人H1凭借一场《秧BOT》扭秧歌表演惊艳全国，它是全球首款完成原地空翻的全尺寸电驱人形机器人。时隔一年，在2026年马年春晚，宇树科技携全面升级的H2与G1人形机器人再度亮相，为观众献上一场震撼人心的《武BOT》武术表演。从2025年的“舞者”到2026年的“武者”，人形机器人的技术实现了质的飞跃。
+
+    H2机型身高约180厘米，全身关节自由度超过31个， 最大关节扭矩达360N·m。它搭载自研全身运动控制算法，并配备激光雷达与仿生视觉系统，可实现360°环境感知。G1则体型更为小巧（身高约132厘
+
+    米，质量约35公斤)，凭借23至43个关节电机与最大120N$\cdot$m的关节扭矩，完成了720°回旋踢、侧空翻等高难度武术动作。其关键就在于关节扭矩，在力学中，扭矩是衡量力使物体绕轴发生转动效应的物理量其定义为:力与力臂(力的作用线到转轴的垂直距离)的积。正是凭借这一技术突破，数十台机器人完全依靠机载传感器自主协同，实现了毫秒级同步的集群武术表演。同时，它们还能“听懂”音乐节奏，根据旋律实时调整动作，将武术的刚劲与舞蹈的韵律完美融合。
+
+    请根据上述材料，回答下列问题
+
+    (1)人形机器人能实现 360° 环境感知是因为_。
+
+    (2)人形机器人H2与成年人的体重相近， 请你估测它的体重约是_。
+
+    (3)G1机器人完成720°回旋踢时， 腦部关节扭矩达到120N·m。若力臂为0.25m，则腿部施加的力约为_N。'
+  options:
+    A: 700N
+    B: 350N
+    C: 1400N
+  figure: 2026-pinggu-yi/figures/q24.png
+  answer: ''
+  solution: '(1)它搭载自研全身运动控制算法，并配备激光雷达与仿生视觉系统。(1分)
+
+    (2) A (1分)
+
+    (3) 480 (2分)'
+  knowledge_points:
+  - 力学中的力和力矩
+  - 传感器与环境感知
+  - 估算与实际应用
+  module: mechanics
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 25
+  type: 计算
+  score: 4
+  stem: '如所示的电路中，定值电阻$R_0$为$10\Omega$， 电源两端电压为 3V 并保持不变。闭合开关 S，调节滑动变阻器RP，使电压表示数为 2V。
+
+    (1)画出实物电路所对应的电路图;
+
+    (2)求$R_{P}$接入电路的阻值;
+
+    (3)求电路中最大的电功率。'
+  figure: 2026-pinggu-yi/figures/q25.png
+  answer: ''
+  solution: '(1) ① Ro R S (1分)
+
+    (2) I=Uo/Ro=2V/10Ω=0.2A Rp=(U-U0)/I=(3V-2V)/0.2A=5Ω (2分)
+
+    (3) P=U2/R0=(3V)/10Ω=0.9W (1分)'
+  knowledge_points:
+  - 欧姆定律的应用
+  - 电路的连接方式
+  - 电功率的计算
+  module: electricity
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 26
+  type: 计算
+  score: 4
+  stem: '如图甲是一篮球架，由篮板、支架、 底座等部分组成。图乙是其结构大致简图， 其中 a 是篮板和横梁
+
+    支架组合体重的重心，$O_2$是底座的重心(也是中心)，AB间的水平距离为140 cm，底座BC长度为200 cm，底座四脚与水平地面的总接触面积为300$m^{2}$，整个篮球架的质量约为150kg求:(g取10N/kg)
+
+    (1)篮球架对水平地面的压强。
+
+    (2)若篮板和横梁支架的总质量为 45 kg， 为保证篮球架不会向左倾斜， 底座的重力至少为多少 N?'
+  figure: 2026-pinggu-yi/figures/q26.png
+  answer: ''
+  solution: '(1) G=mg=150kg10N/kg=1500N p=F/S=G/S=1500N/300x104m2=5x104pa (2分)
+
+    (2) G 板=m 板 g=45kgx10N/kg=450N G板xL1=G座xL2 450Nx140cm=G 座x(200cm/2) G座=630N (2分)'
+  knowledge_points:
+  - 压强的计算
+  - 力矩平衡条件
+  module: mechanics
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''

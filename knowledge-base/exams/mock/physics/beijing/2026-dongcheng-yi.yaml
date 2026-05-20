@@ -1,35 +1,31 @@
 # ============================================================
-# 2026年北京东城区一模物理 — 自动生成
+# 2026年北京北京dongcheng区一模physics — 自动生成
 # ============================================================
-# 流水线：gaokzx OCR + Qwen-VL-OCR + qwen-max enrich
-# 满分: 70 分 时长: 70 分钟
+# OCR: Qwen-VL-OCR  Enrich: qwen-max
+# QC: draft=25  needs_review=0
 
 year: 2026
-district: 东城区
+district: 北京dongcheng区
 exam_type: 一模
-subject: 物理
+subject: physics
 full_score: 70
-duration_minutes: 70
-total_questions: 26
-structure: 12单选(24分) + 3多选(6分) + 8实验探究(28分) + 1解答(4分) + 2计算(8分)
+duration_minutes: null
+total_questions: 25
+structure: 12单选(24分) + 3多选(6分) + 8实验探究(28分) + 2计算(8分)
 questions:
 - id: 1
   type: 单选
   score: 2
-  question: '1. 下列物品中, 通常情况下属于导体的是
-
-
-    A. 玻璃杯
-
-    B. 陶瓷碗
-
-    C. 铁锅
-
-    D. 木铲'
+  stem: 下列物品中,通常情况下属于导体的是
+  options:
+    A: 玻璃杯
+    B: 陶瓷碗
+    C: 铁锅
+    D: 木铲
   answer: C
   solution: ''
   knowledge_points:
-  - 导体与绝缘体的辨别
+  - 物质的导电性
   module: electricity
   difficulty: 基础
   recommended_for:
@@ -37,14 +33,18 @@ questions:
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 2
   type: 单选
   score: 2
-  question: 2. 如图所示的实例中, 为了减小摩擦的是 \箱子底部装有滚轮 轮胎安装防滑链 旋钮侧面制有条纹 用拧盖器夹紧瓶盖 \\ A B C D
+  stem: 如图所示的实例中，为了减小摩擦的是
+  has_image_options: true
+  figure: 2026-dongcheng-yi/figures/q02.png
   answer: A
   solution: ''
   knowledge_points:
-  - 摩擦力的减小方法
+  - 摩擦力的概念及减小方法
   module: mechanics
   difficulty: 基础
   recommended_for:
@@ -52,23 +52,22 @@ questions:
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 3
   type: 单选
   score: 2
-  question: '3. 如图所示, 溪水缓缓向下游流动, 苍鹭静静地站在溪流中。人们感觉苍鹭好像在逆流而上, 所选的参照物是
-
-
-    A. 岸边的石头
-
-    B. 向下游流动的溪水 \\
-
-    C. 站在岸边的观察者
-
-    D. 远处静止的山峰'
+  stem: 如图所示，溪水缓缓向下游流动，苍鹭静静地站在溪流中。人们感觉苍鹭好像在逆流而上，所选的参照物是 _
+  options:
+    A: 岸边的石头
+    B: 向下游流动的溪水
+    C: 站在岸边的观察者
+    D: 远处静止的山峰
+  figure: 2026-dongcheng-yi/figures/q03.png
   answer: B
   solution: ''
   knowledge_points:
-  - 参照物的选择
+  - 参照物的选择与相对运动
   module: mechanics
   difficulty: 基础
   recommended_for:
@@ -76,25 +75,22 @@ questions:
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 4
   type: 单选
   score: 2
-  question: '4. 琵琶是我国的一种传统弹拨乐器, 通过弹拨琴弦使之发声。下列说法正确的是
-
-
-    A. 琴弦发出的声音可以在真空中传播 \\
-
-    B. 琴弦发出的声音是空气振动产生的 \\
-
-    C. 用大小不同的力拨动同一根琴弦, 琴弦发出声音的响度不同 \\
-
-    D. 用大小相同的力拨动粗细不同的琴弦, 琴弦发出声音的音调相同'
+  stem: 琵琶是我国的一种传统弹拨乐器， 通过弹拨琴弦使之发声。下列说法正确的是
+  options:
+    A: 琴弦发出的声音可以在真空中传播
+    B: 琴弦发出的声音是空气振动产生的
+    C: 用大小不同的力拨动同一根琴弦,琴弦发出声音的响度不同
+    D: 用大小相同的力拨动粗细不同的琴弦,琴弦发出声音的音调相同
   answer: C
   solution: ''
   knowledge_points:
-  - 声音由物体振动产生
-  - 响度与振幅的关系
-  - 真空不能传声
+  - 声音的产生与传播
+  - 声音的特性
   module: soundLightHeat
   difficulty: 基础
   recommended_for:
@@ -102,24 +98,21 @@ questions:
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 5
   type: 单选
   score: 2
-  question: '5. 冬末春初时节，我国部分地区会出现雨夹雪天气，即高空中的水蒸气遇冷形成雪，雪下落经过暖空气层时，部分变为雨，便形成雨夹雪。下列说法正确的是
-
-
-    A. 水蒸气形成雪是凝固现象，此过程中水蒸气放出热量 \\
-
-    B. 水蒸气形成雪是凝华现象，此过程中水蒸气放出热量 \\
-
-    C. 雪形成雨是液化现象，此过程中雪吸收热量 \\
-
-    D. 雪形成雨是升华现象，此过程中雪吸收热量'
+  stem: 冬末春初时节，我国部分地区会出现雨夹雪天气,即高空中的水蒸气遇冷形成雪.雪 下落经过暖空气层时,部分变为雨,便形成雨夹雪。下列说法正确的是
+  options:
+    A: 水蒸气形成雪是凝固现象，此过程中水蒸气放出热量
+    B: 水蒸气形成雪是凝华现象，此过程中水蒸气放出热量
+    C: 雪形成雨是液化现象， 此过程中雪吸收热量
   answer: B
   solution: ''
   knowledge_points:
+  - 物质的三态变化
   - 凝华现象
-  - 液化现象
   module: soundLightHeat
   difficulty: 基础
   recommended_for:
@@ -127,23 +120,22 @@ questions:
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 6
   type: 单选
   score: 2
-  question: '6. 如图所示为学校科技节上展示的某款机器人，它静止站立在水平地面上。下列说法正确的是
-
-
-    A. 机器人对地面的压力与机器人所受重力是一对相互作用力 \\
-
-    B. 机器人对地面的压力与机器人所受重力是一对平衡力 \\
-
-    C. 地面对机器人的支持力和机器人所受重力是一对平衡力 \\
-
-    D. 地面对机器人的支持力和机器人对地面的压力是一对平衡力'
+  stem: 如图所示为学校科技节上展示的某款机器人， 它静止站立在水平地面上。下列说法正确的是
+  options:
+    A: 机器人对地面的压力与机器人所受重力是一对相互作用力
+    B: 机器人对地面的压力与机器人所受重力是一对平衡力
+    C: 地面对机器人的支持力和机器人所受重力是一对平衡力
+  figure: 2026-dongcheng-yi/figures/q06.png
   answer: C
   solution: ''
   knowledge_points:
-  - 力的平衡条件
+  - 力的概念
+  - 平衡力
   module: mechanics
   difficulty: 基础
   recommended_for:
@@ -151,15 +143,19 @@ questions:
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 7
   type: 单选
   score: 2
-  question: 7. 如图所示，一只白鹭在平静的水面上飞翔，人能看到它在水中的像。下列图中能正确描述人看见白鹭像的光路是 \A \\ B \\ C \\ D
+  stem: 如图所示,一只白鹭在平静的水面上飞翔,人能看到它在水中的像。下列图中能正确描述人看见白鹭像的光路是
+  has_image_options: true
+  figure: 2026-dongcheng-yi/figures/q07.png
   answer: D
   solution: ''
   knowledge_points:
   - 光的反射定律
-  - 平面镜成像特点
+  - 平面镜成像
   module: soundLightHeat
   difficulty: 基础
   recommended_for:
@@ -167,383 +163,124 @@ questions:
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 8
   type: 单选
   score: 2
-  question: '8. 如图所示，在试管内装适量水，用橡胶塞塞住管口，将水加热一段时间，橡胶塞被推出，管口出现大量“白气”。下列说法正确的是
-
-
-    A. 水被加热的过程中，水的内能是通过做功的方式改变的 \\
-
-    B. 管口出现的“白气”是水蒸气 \\
-
-    C. 橡胶塞被推出的过程中，水蒸气含有的热量减少 \\
-
-    D. 橡胶塞被推出的过程中，橡胶塞的动能是由水蒸气的内能转化来的'
+  stem: 如图所示， 在试管内装适量水，用橡胶塞塞住管口，将水加热一段时间，橡胶塞被推出，管口出现大量“白气”。下列说法正确的是
+  options:
+    A: 水被加热的过程中，水的内能是通过做功的方式改变的
+    B: 管口出现的“白气”是水蒸气
+    C: 橡胶塞被推出的过程中，水蒸气含有的热量减少
+    D: 橡胶塞被推出的过程中，橡胶塞的动能是由水蒸气的内能转化来的
+  figure: 2026-dongcheng-yi/figures/q08.png
   answer: D
   solution: ''
   knowledge_points:
-  - 内能的改变方式
-  - 能量转化与守恒
+  - 内能与热量
+  - 能量转化
   module: soundLightHeat
   difficulty: 中等
   recommended_for:
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 9
   type: 单选
   score: 2
-  question: '9. 如图所示，游客随滑草板一起下滑且越来越快。下列说法正确的是
-
-
-    A. 游客下滑过程中运动状态保持不变 \\
-
-    B. 游客下滑过程中越来越快是由于受到惯性作用 \\
-
-    C. 游客下滑过程中重力势能减小，动能增大 \\
-
-    D. 游客下滑过程中，游客所受重力不做功'
+  stem: 如图所示，游客随滑草板一起下滑且越来越快。下列说法正确的是
+  options:
+    A: 游客下滑过程中运动状态保持不变
+    B: 游客下滑过程中越来越快是由于受到惯性作用
+    C: 游客下滑过程中重力势能减小，动能增大
+    D: 游客下滑过程中，游客所受重力不做功
+  figure: 2026-dongcheng-yi/figures/q09.png
   answer: C
   solution: ''
   knowledge_points:
-  - 重力势能与动能的转化
-  - 运动状态的变化
+  - 机械能及其转化
+  - 动能和势能的概念
   module: mechanics
-  difficulty: 基础
+  difficulty: 中等
   recommended_for:
-  - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 10
   type: 单选
   score: 2
-  question: '10. 用如图甲所示的滑轮组提升物体 M。卷扬机在绳子自由端施加拉力 F，使物体 M 匀速上升，拉力 F 做的功 W 随时间 t 的变化图像如图乙所示，物体 M 移动的距离 h 随时间 t 的变化图像如图丙所示。已知物体 M 所受重力为 240 N，每个滑轮所受的重力相等，忽略绳重及轮与轴之间的摩擦。下列说法正确的是
-
-
-    A. 绳子自由端移动的速度为 $3 \, \text{m/s}$ \\
-
-    B. 拉力 F 为 $300 \, \text{N}$ \\
-
-    C. 滑轮组的机械效率为 $75\%$ \\
-
-    D. 天花板对定滑轮的拉力为 $360 \, \text{N}$'
+  stem: 用如图甲所示的滑轮组提升物体M。卷扬机在绳子自由端施加拉力F，使物体M匀速上升，拉力F做的功W随时间t的变化图像如图乙所示，物体M移动的距离h随时间t的变化图像如图丙所示。已知物体M所受重力为240N，每个滑轮所受的重力相等，忽略绳重及轮与轴之间的摩擦。下列说法正确的是
+  options:
+    A: 绳子自由端移动的速度为3m/s
+    B: 拉力F为 300 N
+    C: 滑轮组的机械效率为75%
+    D: 天花板对定滑轮的拉力为360N
+  figure: 2026-dongcheng-yi/figures/q10.png
   answer: D
   solution: ''
   knowledge_points:
   - 滑轮组的机械效率
-  - 力与运动的关系
+  - 力和运动的关系
+  - 功和功率
   module: mechanics
   difficulty: 中等
   recommended_for:
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 11
   type: 单选
   score: 2
-  question: '11. 如图甲所示为某汽车的后视镜。后视镜上装有加热装置，该装置有低温、高温两挡，低温挡用于除雾，高温挡用于除霜。其内部电路简化后如图乙所示，电源两端的电压保持不变，$R_1$ 和 $R_2$ 为加热电阻且阻值不变。下列说法正确的是
+  stem: '如图甲所示为某汽车的后视镜。 后视镜上装有加热装置,该装置有低温、高温两挡，
 
-
-    A. 只闭合开关 S 时，该装置处于高温挡 \\
-
-    B. 高温挡时电路的总电阻比低温挡时电路的总电阻大 \\
-
-    C. 高温挡时通过 $R_2$ 的电流比低温挡时通过 $R_2$ 的电流大 \\
-
-    D. 若只减小 $R_2$ 的阻值，则高温挡时电路总功率与低温挡时电路总功率之差不变'
+    低温挡用于除雾，高温挡用于除霜。其内部电路简化后如图乙所示，电源两端的电压保持不变，$R_{1}$和$R_{2}$为加热电阻且阻值不变。下列说法正确的是'
+  options:
+    A: 只闭合开关S时，该装置处于高温挡
+    B: 高温挡时电路的总电阻比低温挡时电路的总电阻大
+    C: 高温挡时通过$R_{2}$的电流比低温挡时通过$R_{2}$的电流大
+    D: 若只减小$R_{2}$的阻值，则高温挡时电路总功率与低温挡时电路总功率之差不变
+  figure: 2026-dongcheng-yi/figures/q11.png
   answer: D
   solution: ''
   knowledge_points:
-  - 串联电路分压
-  - 电功率计算
+  - 电路的连接方式
+  - 欧姆定律的应用
+  - 电功率的计算
   module: electricity
   difficulty: 中等
   recommended_for:
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 12
   type: 单选
   score: 2
-  question: '12. 科技小组设计了一款智能饮水机模型，可以自动控制注水。水箱结构如图所示，柱形水箱底部中心竖直固定一根直的轻质细杆，细杆顶端安装一个力传感器，传感器上方固定一个实心浮子，传感器可以检测细杆受到浮子对它沿竖直方向的力，传感器显示的数值表示力的大小，正负表示力的方向。设计要求使用过程中，当传感器显示 +0.3 N 时开始注水，当传感器显示 -0.8 N 时停止注水。已知水箱的底面积
-    $S_{\text{箱}} = 200 \, \text{cm}^2$，细杆高度 $L = 0.5 \, \text{cm}$，浮子底面积 $S_{\text{浮}} = 20 \, \text{cm}^2$、高度 $h_{\text{浮}} = 10 \, \text{cm}$、密度 $\rho_{\text{浮}} = 0.5 \, \text{g/cm}^3$，细杆、传感器的质量和体积均忽略不计，g
-    取 $10 \, \text{N/kg}$。下列说法正确的是
+  stem: '科技小组设计了一款智能饮水机模型，可以自动控制注水。水箱结构如图所示，柱形水箱底部中心竖直固定一根直的轻质细杆，细杆顶端安装一个力传感器，传感器上方固定一个实心浮子，传感器可以检测细杆受到浮子对它沿竖直方向的力，传感器显示的数值表示力的大小，正负表示力的方向。设计要求使用过程中，当传感器
 
+    显示+0.3N时开始注水，当传感器显示-0.8N时停止注水。已知水箱的底面积$S_{新}=2.00cm^{2} $，细杆高度L=0.5cm，浮子底面积$S_{if}=20cm^{2} $、高度h浮=10cm、密度$\rho_{i7}=0.5g/cm^{3}
+    $，细杆、传感器的质量和体积均忽略不计，g取10N/kg。下列说法正确的是
 
-    A. 使用前水箱中无水时,传感器示数显示的是一-1 N \\
-
-    B. 当传感器显示+0.3 N时,水对水箱底的压强为 350 Pa \\
-
-    C. 使用过程中从停止注水到下次开始注水,能用的水的体积为 1100 cm$^3$ \\
-
-    D. 若浮子的材料和高度不变,将浮子底面积变为 16 cm$^2$,则开始注水时水的深度会减小,停止注水时水的深度会增大'
+    二、多项选择题(下列每题均有四个选项， 其中符合题意的选项均多于一个。共6分，每题2分。每题选项全选对的得2分，选对但不全的得1分，有错选的不得分)'
+  options:
+    A: 使用前水箱中无水时,传感器示数显示的是-1N
+    B: 当传感器显示+0.3N时，水对水箱底的压强为 350Pa
+    C: 使用过程中从停止注水到下次开始注水，能用的水的体积为1100 cm³
+    D: 若浮子的材料和高度不变，将浮子底面积变为16cm²，则开始注水时水的深度会减小，停止注水时水的深度会增大
+  figure: 2026-dongcheng-yi/figures/q12.png
   answer: D
   solution: ''
   knowledge_points:
   - 浮力
   - 液体压强
-  module: mechanics
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
-- id: 13
-  type: 多选
-  score: 2
-  question: '13. 关于如图所示的四个电磁实验,下列说法正确的是
-
-
-    A. 实验甲:断开开关 S,小磁针静止,闭合开关 S,小磁针发生偏转,表明通电导线周围存在磁场 \\
-
-    B. 实验乙:断开开关 S,导体 ab 静止,闭合开关 S,导体 ab 在磁场中运动,表明通电导体在磁场中受到力的作用 \\
-
-    C. 实验丙:闭合开关 S,导体 ab 在磁场中分别水平向左、水平向右运动,灵敏电流计指针偏转方向不同,表明感应电流的方向与导体切割磁感线运动的方向有关 \\
-
-    D. 实验丁:闭合开关 S,两电磁铁吸引大头针个数不同,表明电磁铁磁性强弱和电流大小有关'
-  answer: ABC
-  solution: ''
-  knowledge_points:
-  - 通电导线周围存在磁场
-  - 通电导体在磁场中受到力的作用
-  - 感应电流的方向与导体切割磁感线运动的方向有关
-  module: electricity
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
-- id: 14
-  type: 多选
-  score: 2
-  question: '14. 如图所示是一款悬挂式晾衣架,OA 为轻质硬杆,AB 为不可伸长的细绳。悬挂衣物时硬杆 OA 可视为杠杆,O 为支点,细绳 AB 对杆的拉力作为动力,挂钩对杆的作用力作为阻力。已知 OA=1 m,OC 为细绳 AB 的垂线段,细绳 AB 能承受的最大拉力为 40 N,悬挂衣物所受重力为 25 N 且保持不变,挂钩所受重力忽略不计。悬挂衣物时,硬杆 OA 始终保持水平平衡,$\angle
-    BAO=30^{\circ}$。下列说法正确的是
-
-
-    A. 挂钩对杠杆的作用力就是衣物的重力 \\
-
-    B. 动力的力臂为 OC \\
-
-    C. 若该衣物悬挂点距 O 点间的距离为 0.4 m 时,硬杆 OA 是省力杠杆 \\
-
-    D. 该衣物悬挂点与 O 点间的距离可在 0$\sim$0.8 m 范围内调节'
-  answer: BCD
-  solution: ''
-  knowledge_points:
-  - 杠杆平衡条件
-  - 力臂的概念
-  - 杠杆的分类
-  module: mechanics
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
-- id: 15
-  type: 多选
-  score: 2
-  question: '15. 小东利用某金属弹簧设计了一款测力计，该弹簧所受压力 F 与其压缩量 ΔL 的关系如图甲所示。将弹簧接入如图乙所示的电路，M、N 为绝缘挡板，N 固定不动，当手用力缓慢推 M 时，会带动固定在弹簧左端的滑片 P 一起移动，移动过程中滑片 P 始终与电阻 R 保持接触良好。当弹簧处于原长时，滑片 P 恰好处于电阻 R 的最左端。已知电源两端的电压为 6 V，定值电阻 R0
-    的阻值为 10 Ω，电阻 R 最大阻值为 20 Ω，总长度为 4 cm，电阻 R 的阻值与其长度成正比，电压表测量范围为 0～3 V，弹簧的电阻忽略不计。下列说法正确的是
-
-
-    A. 闭合开关，当滑片向右移动时，电压表示数变大 \\
-
-    B. 当电压表的示数为 2 V 时，弹簧所受压力的大小为 100 N \\
-
-    C. 在保证电路安全的前提下，该测力计能够测量的最大推力为 400 N \\
-
-    D. 若想要增大测力计的测量范围，可以只减小定值电阻 R0 的阻值'
-  answer: AB
-  solution: ''
-  knowledge_points:
-  - 欧姆定律
-  - 串联电路分压
-  - 力与弹簧的关系
-  module: electricity
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
-- id: 16
-  type: 实验探究
-  score: 3
-  question: 16. (1) 如图甲所示，弹簧测力计的示数为 _ N。 \\ (2) 如图乙所示，温度计的示数为 _ ℃。
-  answer: (1)2 (2)39
-  solution: (1)2 (2)39
-  knowledge_points:
-  - 温度与温度计
-  - 力的测量
-  module: experiments
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 17
-  type: 实验探究
-  score: 3
-  question: 17. 如图所示，一个水滴下落过程中先后经过 A、B、C 三点，水滴通过 AB、BC 所用时间均为 0.1 s。水滴由 A 位置下落到 C 位置的平均速度为 _ m/s。该水滴下落过程做 _（选填“匀速直线”或“变速直线”）运动。
-  answer: 变速直线
-  solution: 变速直线
-  knowledge_points:
-  - 速度的概念
-  - 变速直线运动
-  module: mechanics
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-- id: 18
-  type: 实验探究
-  score: 4
-  question: 18. 小东测量定值电阻 Rx 的阻值。 \\ (1) 小东选择了满足实验要求的器材，连接的实验电路如图甲所示，请你添加一条导线将实验电路补充完整。要求滑动变阻器的滑片 P 向右滑动时，电流表的示数变小。 \\ (2)电路连接正确后,闭合开关S,滑动变阻器滑片P滑动到某一位置时,电压表的示数如图乙所示,电流表的示数如图丙所示,则电压表的示数为\underline{\hspace{0.2cm}}V,电流表的示数为\underline{\hspace{0.2cm}}A,电阻R\underline{\hspace{0.2cm}}的阻值为\underline{\hspace{0.2cm}}\Omega。
-    \\ (3)多次改变电阻R\underline{\hspace{0.2cm}}两端的电压,测得多组电压及对应的电流值,其目的是\underline{\hspace{0.2cm}}。
-  answer: (1)见答图 1 (2)2.5 0.5 5 (3)多次测量求平均值,减小误差
-  solution: (1)见答图 1 (2)2.5 0.5 5 (3)多次测量求平均值,减小误差
-  knowledge_points:
-  - 电阻的测量
-  - 滑动变阻器的使用
-  - 电压表和电流表的读数
-  module: electricity
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
-- id: 19
-  type: 实验探究
-  score: 3
-  question: '19. 小东探究海波熔化过程中温度随加热时间变化的特点时,记录了加热时间、海波的温度和物态,实验数据如下表所示。 \\ \begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|} \\ \hline \\ 时间/min & 0 & 2 & 4 & 6 & 8 & 10 & 12 & 14 & 16 & 18 & 20 \\ \hline \\ 温度/℃
-    & 40 & 45 & 48 & 48 & 48 & 48 & 48 & 48 & 48 & 50 & 52 \\ \hline \\ 物态 & $\square$ & $\square$ & $\triangle$ & $\triangle$ & $\triangle$ & $\triangle$ & $\triangle$ & $\triangle$ & $\triangle$ & $\circ$
-    & $\circ$ \\ \hline \\ \end{tabular} \\ 注: $\square$表示海波处于固态, $\triangle$表示海波处于固液共存态, $\circ$表示海波处于液态。 \\ (1)通过观察\underline{\hspace{0.2cm}}现象可以判断海波开始熔化。 \\ (2)依据表格中的信息可以得出结论:\underline{\hspace{0.2cm}}。'
-  answer: (1)有液态海波出现(合理即可) (2)海波熔化过程中随着加热时间的增加,温度保持不变(合理即可)
-  solution: (1)有液态海波出现(合理即可) (2)海波熔化过程中随着加热时间的增加,温度保持不变(合理即可)
-  knowledge_points:
-  - 物质的熔化和凝固
-  - 晶体熔化的特点
-  module: soundLightHeat
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
-- id: 20
-  type: 实验探究
-  score: 4
-  question: 20. 小东想利用钩码、弹簧测力计、带支架的杠杆等器材探究“当杠杆水平平衡,阻力和阻力臂不变时,动力和动力臂之间的关系”。 \\ (1)实验前,杠杆静止在如图所示位置,为了使杠杆在水平位置平衡,应将平衡螺母向\underline{\hspace{0.2cm}}(选填“左”或“右”)调节。 \\ (2)小东测量并记录的实验数据如下表所示,分析下表实验数据,发现\underline{\hspace{0.2cm}}，由此可得实验结论:\underline{\hspace{0.2cm}}。
-    \\ \begin{tabular}{|l|c|c|c|c|c|c|c|} \\ \hline \\ 动力臂 $L_1$/m & 0.05 & 0.1 & 0.15 & 0.2 & 0.25 & 0.4 \\ \hline \\ 动力 $F_1$/N & 4.0 & 2.0 & 1.3 & 1.0 & 0.8 & 0.5 \\ \hline \\ \end{tabular}
-  answer: (1)右 (2)动力与动力臂的乘积是定值 当杠杆水平平衡,阻力、阻力臂一定时,动力与动力臂成反比
-  solution: (1)右 (2)动力与动力臂的乘积是定值 当杠杆水平平衡,阻力、阻力臂一定时,动力与动力臂成反比
-  knowledge_points:
-  - 杠杆平衡条件
-  - 实验操作与数据分析
-  module: mechanics
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
-- id: 21
-  type: 实验探究
-  score: 4
-  question: 21. 为探究凸透镜成实像时像的高度 $h$ 与物体到透镜的距离 $u$ 是否有关,小东用发光体、凸透镜、光具座、光屏、刻度尺等器材进行实验。 \\ (1)实验中应控制\underline{\hspace{0.2cm}}不变,改变发光体到透镜的距离。 \\ (2)请你设计实验记录表格。
-  answer: (1)发光体的高度、凸透镜的焦距 (2)表格内容未提供
-  solution: (1)发光体的高度、凸透镜的焦距 (2)表格内容未提供
-  knowledge_points:
-  - 凸透镜成像规律
-  - 凸透镜成像实验（光具座实验）
-  module: experiments
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
-- id: 22
-  type: 实验探究
-  score: 4
-  question: 22. 小东想探究滑动摩擦力的大小跟接触面的面积大小是否有关。他利用符合要求的定滑轮、木板、带挂钩的长方体木块 A 和 B、已调零的弹簧测力计和细线等器材设计实验，其中木块 A 和 B 的底面积不同，但高度、材料、表面粗糙程度均相同。主要实验步骤如下，请你补充完整： \\ (1) 如图所示组装器材，水平拉动木板，当 ________ 时读出测力计示数 F，记录 F 和接触面积
-    S。 \\ (2) ________ 。
-  answer: (1)弹簧测力计示数稳定 (2)将木块 B 放到木板上,木块 A 放在木块 B 上,水平拉动木板,当弹簧测力计示数稳定时,读出测力计计示数 F,记录 F 和接触面积 S
-  solution: (1)弹簧测力计示数稳定 (2)将木块 B 放到木板上,木块 A 放在木块 B 上,水平拉动木板,当弹簧测力计示数稳定时,读出测力计计示数 F,记录 F 和接触面积 S
-  knowledge_points:
-  - 滑动摩擦力的影响因素
-  - 实验探究方法
-  module: mechanics
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
-- id: 23
-  type: 实验探究
-  score: 3
-  question: 23. 小东设计实验测量盐水的密度，主要实验步骤如下： \\ (1) 在两端开口且粗细均匀的玻璃管一端蒙上薄橡皮膜并用细线扎紧，此时橡皮膜与管口相平。向管内倒入适量的水，橡皮膜向下凸起，如图甲所示。 \\ (2) 在烧杯中装入适量的盐水，将玻璃管缓慢浸入其中，直至橡皮膜再次与管口相平，如图乙所示。用刻度尺测出玻璃管中水面到下管口的距离，记为 $h_1$，用刻度尺测出盐水液面到下管口的距离，记为
-    $h_2$。忽略橡皮膜的质量及体积，则盐水密度表达式 $\rho_{\text{盐}} = \boxed{\frac{h_1}{h_2}}$（用 $\rho_{\text{水}}$、$h_1$、$h_2$ 表示），请从力的角度分析并写出推导过程。
-  answer: 以橡皮膜为研究对象, 受力分析见答图 2 设管口处橡皮膜的面积为 S $$F_{\text{盐}} = \rho_{\text{盐}} g h_2 S = \rho_{\text{水}} g h_1 S$$ $$\rho_{\text{盐}} = \frac{\rho_{\text{水}} h_1}{h_2}$$
-  solution: 以橡皮膜为研究对象, 受力分析见答图 2 设管口处橡皮膜的面积为 S $$F_{\text{盐}} = \rho_{\text{盐}} g h_2 S = \rho_{\text{水}} g h_1 S$$ $$\rho_{\text{盐}} = \frac{\rho_{\text{水}} h_1}{h_2}$$
-  knowledge_points:
-  - 液体压强与深度的关系
-  - 密度的测量方法
-  module: mechanics
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
-- id: 24
-  type: 解答
-  score: 4
-  question: 24. 请根据上述材料，回答下列问题： \\ (1) S2000 浮空风力发电系统的发电效率远高于地面风力发电系统的原因为 _。 \\ (2) S2000 的主气囊采用高强度复合纤维能有效减轻自身质量，说明该材料具有较小的 _（选填“弹性”“密度”或“硬度”）。 \\ (3) 结合 S2000 浮空风力发电系统的优势，写出一个该系统适合使用的场景（地区 / 环境）_。 \\ (4)
-    12 组发电机的总功率约为 $3.6 \, \text{MW}$ ($1 \, \text{MW} = 1000 \, \text{kW}$)，请你估算 12 组发电机的总质量为 _ kg。
-  answer: (1)高空风能充足, 风速大且稳定 (2)密度 (3)岛屿(合理即可) (4)360
-  solution: (1)高空风能充足, 风速大且稳定 (2)密度 (3)岛屿(合理即可) (4)360
-  knowledge_points:
-  - 密度
-  - 电功率
-  - 能源与可持续发展
-  module: electricity
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
-- id: 25
-  type: 计算
-  score: 4
-  question: 25. 实验室有一个规格为“3V 0.3A”的小灯泡（不考虑温度对灯丝电阻的影响）、规格为“20Ω 0.5A”的电位器、两端电压为 4.5V 的电源、开关、导线。小东用以上器材连接了如图所示的电路，制作了简易可调光台灯。求： \\ (1) 小灯泡的额定功率。 \\ (2) 为保证电路安全，电位器接入电路的最小阻值。
-  answer: (1) $$P = U_L I = 3 \text{ V} \times 0.3 \text{ A} = 0.9 \text{ W}$$ (2) $$I$$ $$\times$$ $$U_L$$ $$\times$$ $$U_P$$ (2) $$R_P$$ 为了电路安全, 电路中电流最大值 $$I = 0.3 \text{ A}$$ $$U_L = 3 \text{ V}$$ $$U_P
-    = U - U_L = 4.5 \text{ V} - 3 \text{ V} = 1.5 \text{ V}$$ $$R_P = \frac{U_P}{I} = \frac{1.5 \text{ V}}{0.3 \text{ A}} = 5 \Omega$$
-  solution: (1) $$P = U_L I = 3 \text{ V} \times 0.3 \text{ A} = 0.9 \text{ W}$$ (2) $$I$$ $$\times$$ $$U_L$$ $$\times$$ $$U_P$$ (2) $$R_P$$ 为了电路安全, 电路中电流最大值 $$I = 0.3 \text{ A}$$ $$U_L = 3 \text{ V}$$
-    $$U_P = U - U_L = 4.5 \text{ V} - 3 \text{ V} = 1.5 \text{ V}$$ $$R_P = \frac{U_P}{I} = \frac{1.5 \text{ V}}{0.3 \text{ A}} = 5 \Omega$$
-  knowledge_points:
-  - 电功率的计算
-  - 电路安全与最大电流
-  module: electricity
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
-- id: 26
-  type: 计算
-  score: 4
-  question: 26. 如图甲所示是一台真空吸盘悬臂吊吊起水平放置的玻璃板的情境。抽出吸盘内部的空气，使吸盘内部气压减小，在玻璃板被吸盘覆盖区域的上下表面形成气压差，从而产生垂直于玻璃板的吸附力。玻璃板所受气压作用的示意图如图乙所示。该装置在竖直方向上吊起水平放置的玻璃板时，为保证吊装过程安全可靠，规定允许吊起物体的最大重力为总吸附力的三分之一。已知该装置下方装有 6 个完全相同的圆形真空吸盘，每个吸盘的有效面积（玻璃板被吸盘覆盖区域的面积）为
-    $0.04 \, \text{m}^2$。外界大气压强 $p_0 = 1.0 \times 10^5 \, \text{Pa}$，吸盘工作时内部气体压强的范围为 $2.0 \times 10^4 \, \text{Pa} \leq p_{\text{吸}} \leq 6.0 \times 10^4 \, \text{Pa}$。假设装置工作时 6 个吸盘内的气压均相同。求： \\ (1) 当每个吸盘内部的气体压强为
-    $3 \times 10^4 \, \text{Pa}$ 时，单个吸盘可以使玻璃板受到的吸附力。 \\ (2) 装置在安全使用的前提下，能够吊起的玻璃板所受的最大重力。 \\ (3) 若想增大此装置可吊起玻璃板的最大重力，请写出一种改进方法。
-  answer: (1)单个吸盘产生的吸附力 $$F_{\text{吸}} = (p_0 - p_{\text{内}})S = (1.0 \times 10^5 \text{ Pa} - 0.3 \times 10^5 \text{ Pa}) \times 0.04 \text{ m}^2 = 2.8 \times 10^3 \text{ N}$$ (2)吊起的物体最大质量时吸盘内的压强为 $$2.0
-    \times 10^4 \text{ Pa}$$ $$F_{\text{吸}}' = (p_0 - p_{\text{内}}')S_{\text{E}} = (1.0 \times 10^5 \text{ Pa} - 0.2 \times 10^5 \text{ Pa}) \times 0.04 \text{ m}^2 = 6.4 \times 10^4 \text{ N}$$ $$G_{\text{E}}
-    = \frac{F_{\text{吸}}'}{3} = \frac{6.4 \times 10^4 \text{ N}}{3} = 6.4 \times 10^3 \text{ N}$$ (3)增加吸盘的个数 使吸盘内气压更小
-  solution: (1)单个吸盘产生的吸附力 $$F_{\text{吸}} = (p_0 - p_{\text{内}})S = (1.0 \times 10^5 \text{ Pa} - 0.3 \times 10^5 \text{ Pa}) \times 0.04 \text{ m}^2 = 2.8 \times 10^3 \text{ N}$$ (2)吊起的物体最大质量时吸盘内的压强为 $$2.0
-    \times 10^4 \text{ Pa}$$ $$F_{\text{吸}}' = (p_0 - p_{\text{内}}')S_{\text{E}} = (1.0 \times 10^5 \text{ Pa} - 0.2 \times 10^5 \text{ Pa}) \times 0.04 \text{ m}^2 = 6.4 \times 10^4 \text{ N}$$ $$G_{\text{E}}
-    = \frac{F_{\text{吸}}'}{3} = \frac{6.4 \times 10^4 \text{ N}}{3} = 6.4 \times 10^3 \text{ N}$$ (3)增加吸盘的个数 使吸盘内气压更小
-  knowledge_points:
-  - 压力与压强
   - 力的平衡
   module: mechanics
   difficulty: 中等
@@ -551,3 +288,381 @@ questions:
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
+- id: 13
+  type: 多选
+  score: 2
+  stem: 关于如图所示的四个电磁实验，下列说法正确的是
+  options:
+    A: 实验甲:断开开关S,小磁针静止,闭合开关S,小磁针发生偏转,表明通电导线周围存在磁场
+    B: 实验乙:断开开关S,导体ab静止,闭合开关S,导体ab在磁场中运动,表明通电导体在磁场中受到力的作用
+    C: 实验丙:闭合开关S，导体ab在磁场中分别水平向左、水平向右运动，灵敏电流计指针偏转方向不同，表明感应电流的方向与导体切割磁感线运动的方向有关
+    D: 实验丁:闭合开关S，两电磁铁吸引大头针个数不同，表明电磁铁磁性强弱和电流大小有关
+  has_image_options: true
+  figure: 2026-dongcheng-yi/figures/q13.png
+  answer: ABC
+  solution: ''
+  knowledge_points:
+  - 电磁感应
+  - 磁场对电流的作用
+  - 通电导体在磁场中的受力
+  module: electricity
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 14
+  type: 多选
+  score: 2
+  stem: '如图所示是一款悬挂式晾衣架,OA为轻质硬杆,AB为不可伸长的细绳。悬挂衣物时硬杆OA可视为杠杆,O为支点,细绳AB对杆的拉力作为动力,挂钩对杆的作用
+
+    力作为阻力。已知 OA＝1m,OC为细绳AB的垂线段,细绳AB能承受的最大拉力为40N,悬挂衣物所受重力为25N且保持不变,挂钩所受重力忽略不计。悬挂衣物时,硬杆OA始终保持水平平衡,∠BAO=30°。下列说法正确的是'
+  options:
+    A: 挂钩对杠杆的作用力就是衣物的重力
+    B: 动力的力臂为OC
+    C: 若该衣物悬挂点距 O 点间的距离为 0.4m 时，硬杆OA是省力杠杆
+    D: 该衣物悬挂点与O点间的距离可在0~0.8m范围内调节
+  figure: 2026-dongcheng-yi/figures/q14.png
+  answer: BCD
+  solution: ''
+  knowledge_points:
+  - 杠杆原理
+  - 力臂的计算
+  - 杠杆分类
+  module: mechanics
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 15
+  type: 多选
+  score: 2
+  stem: '小东利用某金属弹簧设计了一款测力计,该弹簧所受压力F与其压缩量$\Delta $L的关系如图甲所示。将弹簧接入如图乙所示的电路,M、N为绝缘挡板,N固定不动,当手用力缓慢推M时,会带动固定在弹簧左端的滑片P一起移动,移动过程中滑片P始
+
+    终与电阻R保持接触良好。当弹簧处于原长时，滑片P恰好处于电阻R的最左端。已知电源两端的电压为6V，定值电阻$R_{0}$的阻值为10$\Omega$，电阻R最大阻值为20$\Omega$，总长度为4cm，电阻R的阻值与其长度成正比，电压表测量范围为0~3V，弹簧的电阻忽略不计。下列说法正确的是'
+  options:
+    A: 闭合开关,当滑片向右移动时,电压表示数变大
+    B: 当电压表的示数为2V时，弹簧所受压力的大小为100N
+    C: 在保证电路安全的前提下，该测力计能够测量的最大推力为400N
+    D: 若想要增大测力计的测量范围,可以只减小定值电阻$R_0$的阻值
+  figure: 2026-dongcheng-yi/figures/q15.png
+  answer: AB
+  solution: ''
+  knowledge_points:
+  - 欧姆定律
+  - 串联电路的电压和电流关系
+  - 力与弹簧的关系
+  module: electricity
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 16
+  type: 实验探究
+  score: 3
+  stem: '(1)如图甲所示，弹簧测力计的示数为____N。
+
+    (2)如图乙所示，温度计的示数为
+
+    ℃。
+
+    B.'
+  figure: 2026-dongcheng-yi/figures/q16.png
+  answer: ''
+  solution: '(1)2
+
+    (2)39'
+  knowledge_points:
+  - 测量工具的使用
+  - 弹簧测力计读数
+  - 温度计读数
+  module: experiments
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 17
+  type: 实验探究
+  score: 4
+  stem: 如图所示，一个水滴下落过程中先后经过A、B、C三点，水滴通过AB、BC所用时间均为____0.1s。水滴由A位置下落到C位置的平均速度为____m/s。该水滴下落过程做____(选填“匀速直线”或“变速直线”)运动。
+  answer: ''
+  solution: 1 变速直线
+  knowledge_points:
+  - 机械运动
+  - 平均速度的计算
+  - 匀速直线运动与变速直线运动的判断
+  module: mechanics
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 18
+  type: 实验探究
+  score: 3
+  stem: '小东测量定值电阻$R_x$的阻值。
+
+    (1)小东选择了满足实验要求的器材,连接的实验电路如图甲所示,请你添加一条导线将实验电路补充完整。要求滑动变阻器的滑片P向右滑动时,电流表的示数变小。
+
+    (2)电路连接正确后,闭合开关 S,滑动变阻器滑片 P滑动到某一位置时,电压表的示数如图乙所示,电流表的示数如图丙所示,则电压表的示数为_V,电流表的示数为_A,电阻$R_{x}$的阻值为_ $\Omega$。
+
+    (3)多次改变电阻$R_{x}$两端的电压,测得多组电压及对应的电流值,其目的是_。'
+  figure: 2026-dongcheng-yi/figures/q18.png
+  answer: ''
+  solution: '(1)见答图1
+
+    (2)2.5 0.5 5 答图1
+
+    (3)多次测量求平均值，减小误差'
+  knowledge_points:
+  - 电路连接与测量
+  - 欧姆定律的应用
+  - 实验数据处理
+  module: electricity
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 19
+  type: 实验探究
+  score: 4
+  stem: '小东探究海波熔化过程中温度随加热时间变化的特点时，记录了加热时间、海波的温度和物态，实验数据如下表所示。
+
+    注:□表示海波处于固态，$\triangle表示海波处于固液共存态，O表示海波处于液态。
+
+    (1)通过观察到_现象可以判断海波开始熔化。
+
+    (2)依据表格中的信息可以得出结论:_。
+
+
+    | 时间/min | 0 | 2 | 4 | 6 | 8 | 10 | 12 | 14 | 16 | 18 | 20 | 22 | 24 | 26 |  |
+
+    |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+
+    | 温度/℃ | 40 | 45 | 48 | 48 | 48 | 48 | 48 | 48 | 48 | 48 | 50 | 52 | 54 | 56 |  |
+
+    | 物态 | □ | □ | △ | △ | △ | △ | △ | △ | △ | △ | 0 | 0 | O | O |  |
+
+    |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |'
+  answer: ''
+  solution: '(1)有液态海波出现(合理即可)
+
+    (2)海波熔化过程中随着加热时间的增加，温度保持不变(合理即可)'
+  knowledge_points:
+  - 物质的三态变化
+  - 熔化过程的特点
+  module: soundLightHeat
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 20
+  type: 实验探究
+  score: 4
+  stem: '小东想利用钩码、弹簧测力计、带支架的杠杆等器材探究“当杠杆水平平衡，阻力和
+
+    阻力臂不变时，动力和动力臂之间的关系”。
+
+    (1)实验前，杠杆静止在如图所示位置，为了使杠杆在水平位置平
+
+    衡，应将平衡螺母向____(选填“左”或“右”)调节。
+
+    (2)小东测量并记录的实验数据如下表所示，分析下表实验数据，
+
+    ，由此可得实验结论:
+
+
+    | 动力臂L1/m | 0.05 | 0.1 | 0.15 | 0.2 | 0.25 | 0.4 |  |
+
+    |---|---|---|---|---|---|---|---|
+
+    | 动力F1/N | 4.0 | 2.0 | 1.3 | 1.0 | 0.8 | 0.5 |  |
+
+    |  |  |  |  |  |  |  |  |'
+  figure: 2026-dongcheng-yi/figures/q20.png
+  answer: ''
+  solution: '(1)右
+
+    (2)动力与动力臂的乘积是定值当杠杆水平平衡，阻力、阻力臂一定时，动力与动力臂 成反比'
+  knowledge_points:
+  - 杠杆平衡条件
+  - 实验探究方法
+  module: mechanics
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 21
+  type: 实验探究
+  score: 4
+  stem: '为探究凸透镜成实像时像的高度h与物体到透镜的距离u是否有关，小东用发光
+
+    体、凸透镜、光具座、光屏、刻度尺等器材进行实验。
+
+    (1)实验中应控制
+
+    不变，改变发光体到透镜的距离。
+
+    (2)请你设计实验记录表格。'
+  answer: ''
+  solution: '(1)发光体的高度、凸透镜的焦距
+
+    (2) u/m h/m'
+  knowledge_points:
+  - 探究凸透镜成像规律
+  - 实验设计与数据记录
+  module: soundLightHeat
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 22
+  type: 实验探究
+  score: 3
+  stem: '小东想探究滑动摩擦力的大小跟接触面的面积大小是否有关。他利用符合要求的定滑轮、木板、带挂钩的长方体木块A和B、已调零的弹资测力计和细线等器材设计
+
+    实验，其中木块A和B的底面积不同，但高度、材料、表面粗糙程度均相同。主要实验步骤如下，请你补充完整：
+
+    (1)如图所示组装器材，水平拉动木板，当_时读出测力计示数F，记录F和接触面积S。
+
+    (2)_。'
+  figure: 2026-dongcheng-yi/figures/q22.png
+  answer: ''
+  solution: '(1)弹簧测力计示数稳定
+
+    (2)将木块B放到木板上，木块A放在木块B上，水平拉动木板，当弹簧测力计示数稳定 时，读出测力计示数F，记录F和接触面积S 物理试卷参考答案及评分标准第1页(共2页)'
+  knowledge_points:
+  - 力的概念
+  - 摩擦力的探究实验
+  module: mechanics
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 23
+  type: 实验探究
+  score: 3
+  stem: '小东设计实验测量盐水的密度，主要实验步骤如下：
+
+    (1)在两端开口且粗细均匀的玻璃管一端蒙上薄橡皮膜并用细线扎紧，此时橡皮膜与管口相平。向管内倒入适量的水，橡皮膜向下凸起。如图甲所示。
+
+    (2)在烧杯中装入适量的盐水,将玻璃管缓慢浸入其中,直至橡皮膜再次与管口相平,如图乙所示。用刻度尺测出玻璃管中水面到下管口的距离,记为$h_1$,用刻度尺测出盐水液面到下管口的距离,记为$h_2$。忽略橡皮膜的质量及体积,则盐水密度表达式$p_盐$=_（用$p_米、h_1,h_2$表示）,请从力的角度分析并写出推导过程。
+
+    请阅读《空中电站》并回答 24 题。
+
+    2026年初，四川宜宾上空，一个造型独特的白色巨物缓缓升空，它并非传统飞艇，而是中国年轻团队打造的全球首台兆瓦级浮空风力发电系统——S2000，如图甲所示。这个发电系统可平稳升至2000m高空，被称为“空中电站”。由于高空风能充足、风速大且稳定。因此发电效率远高于地面的风力发电系统，为清洁能源领域带来全新突破。
+
+    S2000主要由主气囊、副气囊、环翼涵道、风力发电机组、智能系留缆绳及地面控制站构成，如图乙所示。主气囊是核心升力部件，囊皮采用高强度轻量化复合纤维制成。主气囊内充入密度约为 0.18 kg/$m^{3}$ 的氮气，副气囊通
+
+    过充入或排出空气，与主气囊协同工作，使装置平稳上升并稳定悬停在目标高度。在高空环境中，环翼涵可汇聚并加速气流，为内置的12组发电机组提供稳定风场。经过研发团队的技术攻关，S2000的发电机功率密度能达到10kW/kg(功率密度=发电机总功率÷发电机总质量)，处于全球浮空风电领域的领先水平。
+
+    高空风力发电除了发电效率高，由于受地形、气候等自然条件影响小，发电输出稳定，还具有部署灵活的优势，具备十分广阔的应用前景。
+
+    物理试卷 第7页(共8页)
+
+    (1)$S2000$浮空风力发电系统的发电效率远高于地面风力发电系统的原因为_。
+
+    (2)$S2000$的主气囊采用高强度复合纤维能有效减轻自身质量，说明该材料具有较小的_(选填“弹性”“密度”或“硬度”)。
+
+    (3)结合 S2000 浮空风力发电系统的优势，写出一个该系统适合使用的场景(地区/环境) _。
+
+    (4)12组发电机的总功率约为3.6MW (1MW=1000kW),请你估算12组发电机的总质量为_kg。'
+  figure: 2026-dongcheng-yi/figures/q23.png
+  answer: ''
+  solution: 以橡皮膜为研究对象，受力分析见答图2 设管口处橡皮膜的面积为S AF盐 F盐=F水 ρ盐 gh2S=ρ* gh1S =0*h1 ↓F水 h2 答图2
+  knowledge_points:
+  - 密度的概念与测量
+  - 液体压强的计算
+  module: mechanics
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 25
+  type: 计算
+  score: 4
+  stem: '实验室有一个规格为“3 V 0.3 A”的小灯泡(不考虑温度对灯丝电阻的影响)、规格为“20 Q 0.5 A”的电位器、两端电压为 4.5 V的电源、开关、导线。小东用以上器材连接了如图所示的电路，制作了简易可调光台灯。求：
+
+    (1)小灯泡的额定功率。
+
+    (2)为保证电路安全,电位器接入电路的最小阻值。'
+  figure: 2026-dongcheng-yi/figures/q25.png
+  answer: ''
+  solution: '(1)P=ULI=3 VX0.3 A=0.9 W Rp → -Up→
+
+    (2) -U 为了电路安全，电路中电流最大值I=0.3AU1.=3V Up=U-UL=4.5 V-3 V=1.5 V Rp=Up_1.5 V=5Ω I 0.3 A'
+  knowledge_points:
+  - 电功率的计算
+  - 电路安全与电阻
+  module: electricity
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 26
+  type: 计算
+  score: 4
+  stem: '如图甲所示是一台真空吸盘悬臂吊吊起水平放置的玻璃板的情境。抽出吸盘内部的空气，使吸盘内部气压减小，在玻璃板被吸盘覆盖区域的上下表面形成气压差，从而产生垂直于玻璃板的吸附力。玻璃板所受气压作用的示意图如图乙所示。该装置在竖直方向上吊起水平放置的玻璃板时，为保证吊装过程安全可靠，规定允许吊起物体的最大重力为总吸附力的三分之一已知该装置下方装有6个完全相同的圆形真空吸盘，每个吸盘的有效面积(玻璃板被吸盘覆盖区域的面积)为0.04$m^{2}$。外界大气压强$p_{0}=1.0×10^{5}$Pa,吸盘工作时内部气体压强的范围为$2.0×10Pa\leqslant
+    p_{内}\leqslant6.0×10^{4}$Pa。假设装置工作时6个吸盘内的气压均相同。求:
+
+    (1)当每个吸盘内部的气体压强为$3×10^{4}$Pa时,单个吸盘可以使玻璃板受到的吸附力。
+
+    (2)装置在安全使用的前提下,能够吊起的玻璃板所受的最大重力。
+
+    (3)若想增大此装置可吊起玻璃板的最大重力,请写出一种改进方法。'
+  figure: 2026-dongcheng-yi/figures/q26.png
+  answer: ''
+  solution: '(1)单个吸盘产生的吸附力 F吸=(po-p内)S=(1.0x105Pa-0.3x105Pa)x0.04m2=2.8x103N
+
+    (2)吊起的物体最大质量时吸盘内的压强为2.0x104Pa F吸''=(po-p内'')S总=(1.0x106 Pa-0.2x105 Pa)x0.04 m2x6=1.92x104 N F''1.92X104 N G最大= =6.4X103
+    N 3
+
+    (3)增加吸盘的个数使吸盘内气压更小 其他答案正确均可得分 物理试卷参考答案及评分标准第2页(共2页)'
+  knowledge_points:
+  - 压强的概念及计算
+  - 力的平衡条件
+  module: mechanics
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''

@@ -65,9 +65,9 @@ from paths import derive_out_dir, repo_root  # noqa: E402
 
 NUM_PREFIX_RE = re.compile(r"^\s*(\d{1,2})\s*[.、．]")
 ANSWER_PAGE_MARKERS = ("参考答案", "答案及评分", "评分标准", "答案与解析")
-# 答案 chunk 的强特征：题号开头 + 含 "(N 分)"——题目 stem 几乎不会有此模式。
-# 用于无 "参考答案" 标题页的卷子（如 chaoyang，直接以 "16.(1)... (3分)" 开篇）。
-ANSWER_CHUNK_RE = re.compile(r"^\s*\d{1,2}\s*[.、．].*\(\s*\d+\s*分\s*\)", re.DOTALL)
+# 注：曾试过 "题号+(N分)" 模式判定答案 chunk，但题目 stem 也常有 (2分) 标分值
+# （如 shijingshan Q16: "16.(1)如图甲...(2分)"），会误判整页为答案页。
+# 改靠 (1) 标准 marker + (2) 题号倒退（_assemble 中 min(nums) < max_seen - 3）。
 MAX_DIM = 3000              # API 入参图片最长边
 MAX_BYTES = 9_000_000       # API 入参 < 10MB
 
@@ -88,17 +88,39 @@ def _infer_type_en(num: int, options: list, group_type: str) -> str:
     return "experiment"
 
 
-# 北京物理一模题型分值默认表（与 ocr_paper 沿用一致；enrich 可被卷面满分覆盖）
+# 北京物理一模分值默认表（兜底；后续从答案页"题各N分" hint 动态覆盖）
 def _default_score(num: int) -> int:
     if 1 <= num <= 12:  return 2
     if 13 <= num <= 15: return 2
-    if num == 16:       return 3
-    if 17 <= num <= 18: return 3
-    if 19 <= num <= 21: return 4
-    if num in (22, 23): return 4
+    if num in (16, 18, 22, 23): return 3
+    if num in (17, 19, 20, 21): return 4
     if num == 24:       return 4
     if num in (25, 26): return 4
     return 2
+
+
+def _parse_score_rules_from_text(text: str) -> dict[int, int]:
+    """从答案页文本里解析「16、18、22、23题各3分」式样的分值规则。
+    返回 {题号: 分值}。
+    """
+    rules: dict[int, int] = {}
+    # 模式 1：(共N分，A、B、C题各X分，D、E题各Y分)
+    for m in re.finditer(r"([0-9、，,\s]+)题各\s*(\d+)\s*分", text):
+        nums_str = m.group(1).replace(",", "、").replace("，", "、")
+        for n_str in re.findall(r"\d+", nums_str):
+            try:
+                rules[int(n_str)] = int(m.group(2))
+            except ValueError:
+                pass
+    # 模式 2：「16.(1)..." 单题分值合计——逐题 "(N分)" 求和
+    # 暂不实现（模式 1 已覆盖大多北京物理卷）
+    return rules
+
+
+def _parse_full_score_from_text(text: str) -> int | None:
+    """从卷首文本里解析「满分N分」字样。"""
+    m = re.search(r"满分\s*[为是]?\s*(\d+)\s*分", text)
+    return int(m.group(1)) if m else None
 
 
 # ─── 腾讯云 API ─────────────────────────────────────────────────────────────
@@ -189,6 +211,96 @@ def _qwen_extract_choice_answers(img_path: Path) -> dict[int, str]:
     return {}
 
 
+def _crop_to_b64(img_path: Path, bbox: tuple) -> str:
+    """裁切 bbox 区域 → JPEG → base64（用于按区域调 OCR）。"""
+    pad = 8
+    img = Image.open(img_path).convert("RGB")
+    W, H = img.size
+    x1 = max(0, bbox[0] - pad); y1 = max(0, bbox[1] - pad)
+    x2 = min(W, bbox[2] + pad); y2 = min(H, bbox[3] + pad)
+    crop = img.crop((x1, y1, x2, y2))
+    buf = io.BytesIO(); crop.save(buf, "JPEG", quality=85)
+    return base64.b64encode(buf.getvalue()).decode()
+
+
+def _table_cells_to_markdown(cells: list[dict]) -> str:
+    """把腾讯 RecognizeTableAccurateOCR 的 Cells[] 转成 markdown 表格。
+    Cells 每项有 RowTl/RowBr/ColTl/ColBr/Text；按行 col 排列成二维矩阵。
+    """
+    if not cells:
+        return ""
+    n_rows = max(c.get("RowBr", c.get("RowTl", 0)) for c in cells) + 1
+    n_cols = max(c.get("ColBr", c.get("ColTl", 0)) for c in cells) + 1
+    grid = [["" for _ in range(n_cols)] for _ in range(n_rows)]
+    for c in cells:
+        rt = c.get("RowTl", 0); ct = c.get("ColTl", 0)
+        t = (c.get("Text") or "").strip().replace("|", "丨").replace("\n", " ")
+        if 0 <= rt < n_rows and 0 <= ct < n_cols:
+            grid[rt][ct] = t
+    md = []
+    md.append("| " + " | ".join(grid[0]) + " |")
+    md.append("|" + "|".join(["---"] * n_cols) + "|")
+    for row in grid[1:]:
+        md.append("| " + " | ".join(row) + " |")
+    return "\n".join(md)
+
+
+def _call_table_ocr(img_path: Path, bbox: tuple) -> str:
+    """对原页 bbox 区域调 RecognizeTableAccurateOCR → 返回 markdown 表格字符串。
+    失败返回空字符串。
+    """
+    try:
+        b64 = _crop_to_b64(img_path, bbox)
+        req = models.RecognizeTableAccurateOCRRequest()
+        req.ImageBase64 = b64
+        resp = _get_client().RecognizeTableAccurateOCR(req)
+        d = json.loads(resp.to_json_string())
+        out = []
+        for tb in d.get("TableDetections", []):
+            cells = tb.get("Cells", [])
+            md = _table_cells_to_markdown(cells)
+            if md:
+                out.append(md)
+        return "\n\n".join(out)
+    except Exception as e:
+        print(f"[table-ocr] {img_path.name} bbox={bbox} 失败: {e}", flush=True)
+        return ""
+
+
+def _refill_table_data(questions: list[dict], cache_dir: Path,
+                        images_dir: Path, force: bool = False) -> int:
+    """对含 table 的题，把表格内容 OCR 成 markdown 追加到 stem 末尾。
+    带缓存：tencent-cache/tables/q<NN>_<idx>.md。
+    """
+    table_cache = cache_dir / "tables"
+    table_cache.mkdir(parents=True, exist_ok=True)
+    fixed = 0
+    for q in questions:
+        tables = [f for f in (q.get("_figs") or []) if f.get("kind") == "table"]
+        if not tables:
+            continue
+        # 已经含表数据的不重复（stem 末尾已有 markdown 表头识别）
+        if re.search(r"\|\s*-+\s*\|", q.get("stem", "") or ""):
+            continue
+        mds = []
+        for i, t in enumerate(tables):
+            pg = t["page"]
+            cf = table_cache / f"q{q['number']:02d}_{i}.md"
+            if cf.exists() and not force:
+                md = cf.read_text(encoding="utf-8")
+            else:
+                md = _call_table_ocr(images_dir / f"page-{pg:02d}.png", t["bbox"])
+                cf.write_text(md, encoding="utf-8")
+            if md:
+                mds.append(md)
+        if mds:
+            q["stem"] = (q.get("stem", "") or "").rstrip() + "\n\n" + "\n\n".join(mds)
+            fixed += 1
+            print(f"  [refill-table] Q{q['number']}: 追加 {len(mds)} 个表格",
+                  flush=True)
+    return fixed
+
+
 def _call_general_ocr(img_path: Path) -> str:
     """通用文字识别——用于答案页表格（QuestionSplitOCR 把表格 Text 留空）。"""
     b64, _, _ = _img_to_b64(img_path)
@@ -238,12 +350,10 @@ def _peek_number(item: dict) -> int | None:
 
 
 def _is_answer_marker(text: str) -> bool:
+    """仅按显式标题标识；题号倒退判定在 _assemble 里独立处理。"""
     if not text:
         return False
-    if any(m in text for m in ANSWER_PAGE_MARKERS):
-        return True
-    # 答案 chunk 模式（chaoyang 这类无 "参考答案" 标题页的卷子）
-    return bool(ANSWER_CHUNK_RE.match(text))
+    return any(m in text for m in ANSWER_PAGE_MARKERS)
 
 
 # ─── 题号缺口 fallback：通用 OCR + 题号切分 ─────────────────────────────────
@@ -373,8 +483,9 @@ def _fallback_missing_figures(questions: list[dict], images_dir: Path,
                                 layout_cache_dir, src)
         if not boxes:
             continue
+        # 触发条件是缺 image（不缺 table），所以候选只取 image/chart（不补 table）
         cands = [tuple(int(x) for x in b["bbox"]) for b in boxes
-                 if b["label"] in ("image", "table", "chart")]
+                 if b["label"] in ("image", "chart")]
         cands = [c for c in cands
                  if not any(_iou(c, o) > 0.3 for o in occupied.get(pg, []))]
         if not cands:
@@ -883,6 +994,31 @@ def _parse_choice_answers_from_text(text: str) -> dict[int, str]:
     return out
 
 
+def _compact_solution(text: str) -> str:
+    """合并 solution 中散开的短行（数学公式被 OCR 按视觉行切碎的情况）。
+
+    规则：只用「解:」/ 「(N)」 作段落分隔，其余行合并到当前段落（用空格）。
+    Q25 这种"G\\n2N\\nm球\\n2N..." 公式碎片会聚成 1 段，避免视觉上一长串散行。
+    """
+    paragraphs: list[str] = []
+    cur: list[str] = []
+
+    def _flush():
+        if cur:
+            paragraphs.append(" ".join(cur))
+
+    for ln in text.split("\n"):
+        s = ln.strip()
+        if not s: continue
+        # 段落起始：(N) 子小题 或 "解:" 标头；(N分) 不算（分值标注是行尾内联）
+        if re.match(r"^\s*\([1-9]\)(?![分])", s) or re.match(r"^\s*解\s*[:：]", s):
+            _flush(); cur = [s]
+        else:
+            cur.append(s)
+    _flush()
+    return "\n".join(paragraphs)
+
+
 def _parse_solutions_from_text(text: str) -> dict[int, str]:
     """从答案页纯文本里按题号 ^N. 锚点切块，返回 {N: solution}。
 
@@ -898,7 +1034,8 @@ def _parse_solutions_from_text(text: str) -> dict[int, str]:
 
     def _flush():
         if cur_num is not None and buf:
-            out[cur_num] = "\n".join(buf).strip()
+            # 公式碎行紧凑：按 (N)/解: 分段，其余短行合并到段落
+            out[cur_num] = _compact_solution("\n".join(buf)).strip()
 
     for ln in text.splitlines():
         ln = ln.rstrip()
@@ -964,29 +1101,61 @@ def _assemble(api_per_page: dict[str, dict],
     """
     questions: list[dict] = []
     answer_items: list[dict] = []
-    in_answer = False
     answer_pages: set[str] = set()
 
-    # 先把所有非答案 item 收集成线性序列，方便用 next 上下文决策
-    flat_items: list[tuple[int, dict, tuple[float, float]]] = []  # (page_num, item, scale)
-    for page_name in sorted(api_per_page):
+    # 第一遍：page-level 答案页判定。两种触发：
+    #   (a) 某 item.Question.Text 含"参考答案/(N分)" 等 marker
+    #   (b) 某页"最小题号"< 之前页"历史最大题号"- 3（题号显著倒退；
+    #       适配 changping/dongcheng/pinggu 这种无"参考答案"标题的答案页）
+    # 一旦命中，该页及后续所有页都算答案页。
+    sorted_pages = sorted(api_per_page)
+    first_answer_idx = len(sorted_pages)
+
+    # 收集每页题号
+    page_nums: dict[str, list[int]] = {}
+    for page_name in sorted_pages:
+        rl = (api_per_page[page_name].get("QuestionInfo") or [{}])[0]\
+                .get("ResultList", [])
+        nums = []
+        for item in rl:
+            n = _peek_number(item)
+            if n: nums.append(n)
+        page_nums[page_name] = nums
+
+    max_seen = 0
+    for i, page_name in enumerate(sorted_pages):
+        rl = (api_per_page[page_name].get("QuestionInfo") or [{}])[0]\
+                .get("ResultList", [])
+        # (a) 标准 marker
+        for item in rl:
+            q_text = ((item.get("Question") or [{}])[0]).get("Text", "")
+            if _is_answer_marker(q_text):
+                first_answer_idx = i; break
+        if first_answer_idx < len(sorted_pages):
+            break
+        # (b) 题号倒退
+        nums = page_nums[page_name]
+        if nums and max_seen and min(nums) < max_seen - 3:
+            first_answer_idx = i; break
+        if nums:
+            max_seen = max(max_seen, max(nums))
+
+    for page_name in sorted_pages[first_answer_idx:]:
+        answer_pages.add(page_name)
+
+    # 第二遍：把非答案页的 items 收集成线性序列，方便用 next 上下文决策
+    flat_items: list[tuple[int, dict, tuple[float, float]]] = []
+    for page_name in sorted_pages:
         d = api_per_page[page_name]
         page_num = int(re.search(r"page-(\d+)", page_name).group(1))
         scale = tuple(d.get("_scale", [1.0, 1.0]))
         rl = (d.get("QuestionInfo") or [{}])[0].get("ResultList", [])
-
-        page_is_answer = in_answer
-        for item in rl:
-            q_text = ((item.get("Question") or [{}])[0]).get("Text", "")
-            if not in_answer and _is_answer_marker(q_text):
-                in_answer = True
-                page_is_answer = True
-            if in_answer:
+        if page_name in answer_pages:
+            for item in rl:
                 answer_items.append(item)
-                continue
-            flat_items.append((page_num, item, scale))
-        if page_is_answer:
-            answer_pages.add(page_name)
+        else:
+            for item in rl:
+                flat_items.append((page_num, item, scale))
 
     # 线性扫描，决策每个 item 归前 vs 归后
     pending_forward: dict | None = None  # 等待归到下一个有题号块的"前导块"
@@ -1029,10 +1198,57 @@ def _assemble(api_per_page: dict[str, dict],
 
 PADDING_PX = 10  # 外扩留白
 
+def _group_same_row(bboxes: list[tuple]) -> list[list[tuple]]:
+    """按 y 重叠分组：同一行（y_IoU > 0.3）的 bbox 合并为一组；不同行独立。
+    返回 [[bbox,...], ...]，每组内的 bbox 是同行（视觉上横排），不同组独立裁切。
+    """
+    groups: list[list[tuple]] = []
+    used = set()
+    for i, a in enumerate(bboxes):
+        if i in used: continue
+        ay1, ay2 = a[1], a[3]
+        g = [a]; used.add(i)
+        for j in range(i + 1, len(bboxes)):
+            if j in used: continue
+            b = bboxes[j]
+            by1, by2 = b[1], b[3]
+            inter = max(0, min(ay2, by2) - max(ay1, by1))
+            union = max(ay2, by2) - min(ay1, by1)
+            iou_y = inter / union if union > 0 else 0
+            if iou_y > 0.3:
+                g.append(b); used.add(j)
+        groups.append(g)
+    return groups
+
+
+def _vstack_pil(sub_imgs: list, gap: int = 10):
+    """多张 PIL 图垂直拼接（等比缩放窄的到最大宽）。"""
+    if len(sub_imgs) == 1:
+        return sub_imgs[0]
+    max_w = max(s.size[0] for s in sub_imgs)
+    resized = []
+    for s in sub_imgs:
+        sw, sh = s.size
+        if sw < max_w:
+            resized.append(s.resize((max_w, int(sh * max_w / sw)), Image.LANCZOS))
+        else:
+            resized.append(s)
+    total_h = sum(s.size[1] for s in resized) + gap * (len(resized) - 1)
+    out = Image.new("RGB", (max_w, total_h), (255, 255, 255))
+    y = 0
+    for s in resized:
+        out.paste(s, (0, y))
+        y += s.size[1] + gap
+    return out
+
+
 def _crop_figures(src_images_dir: Path, questions: list[dict],
                   out_figures: Path) -> dict[int, str]:
-    """按 q['_figs'] 中每张图的 page 字段从对应原页裁切。
-    同页多张 → 外接矩形合一张；跨页多张 → vstack 拼成一张 qNN.png。
+    """按 q['_figs'] 每张图的 page 字段从对应原页裁切。
+
+    关键：**只对"同行"图合并外接矩形**（如 Q1 的 4 张图选项横排，视觉成一张）。
+    "不同行"图分别裁后 vstack（如 Q14 右上 image11 + 左下 data table，
+    两者位置不重叠，合并外接会吞中间题干文字）。
     """
     out_figures.mkdir(parents=True, exist_ok=True)
     page_imgs: dict[int, Path] = {}
@@ -1043,47 +1259,34 @@ def _crop_figures(src_images_dir: Path, questions: list[dict],
 
     figure_paths: dict[int, str] = {}
     for q in questions:
-        figs = q.get("_figs") or []
+        # 只裁 image kind；table（数据表）属于 stem 内容范畴，应进 stem 文本，
+        # 不应裁成 figure 与示意图拼在一起（Q14 表 1 数据若进图，视觉上奇怪）
+        figs = [f for f in (q.get("_figs") or []) if f.get("kind") == "image"]
         if not figs:
             continue
-        # 按 page 分组
+        # 先按 page 分组，每页内再按"同行"细分
         by_page: dict[int, list[tuple]] = {}
         for f in figs:
             by_page.setdefault(f["page"], []).append(f["bbox"])
 
-        # 每页裁一张 sub_img
         sub_imgs = []
         for pg in sorted(by_page):
             img_path = page_imgs.get(pg)
             if not img_path: continue
-            x1, y1, x2, y2 = _outer_rect(by_page[pg])
             img = Image.open(img_path); W, H = img.size
-            x1 = max(0, x1 - PADDING_PX); y1 = max(0, y1 - PADDING_PX)
-            x2 = min(W, x2 + PADDING_PX); y2 = min(H, y2 + PADDING_PX)
-            if x2 > x1 and y2 > y1:
-                sub_imgs.append(img.crop((x1, y1, x2, y2)))
+            # 同页内按"y 重叠"分组，每组一张外接矩形 crop
+            row_groups = _group_same_row(by_page[pg])
+            row_groups.sort(key=lambda g: min(b[1] for b in g))
+            for group in row_groups:
+                x1, y1, x2, y2 = _outer_rect(group)
+                x1 = max(0, x1 - PADDING_PX); y1 = max(0, y1 - PADDING_PX)
+                x2 = min(W, x2 + PADDING_PX); y2 = min(H, y2 + PADDING_PX)
+                if x2 > x1 and y2 > y1:
+                    sub_imgs.append(img.crop((x1, y1, x2, y2)))
 
         if not sub_imgs:
             continue
-        # 单页：直接保存；跨页：垂直拼接（宽度取最大宽，等比缩放窄的）
-        if len(sub_imgs) == 1:
-            final = sub_imgs[0]
-        else:
-            max_w = max(s.size[0] for s in sub_imgs)
-            resized = []
-            for s in sub_imgs:
-                sw, sh = s.size
-                if sw < max_w:
-                    new_h = int(sh * max_w / sw)
-                    resized.append(s.resize((max_w, new_h), Image.LANCZOS))
-                else:
-                    resized.append(s)
-            total_h = sum(s.size[1] for s in resized) + 10 * (len(resized) - 1)
-            final = Image.new("RGB", (max_w, total_h), (255, 255, 255))
-            y = 0
-            for s in resized:
-                final.paste(s, (0, y))
-                y += s.size[1] + 10
+        final = _vstack_pil(sub_imgs)
         out = out_figures / f"q{q['number']:02d}.png"
         final.save(out)
         figure_paths[q["number"]] = f"figures/q{q['number']:02d}.png"
@@ -1229,6 +1432,11 @@ def main():
           f"(其中 correct 非空 {sum(1 for a in answers if a['correct'])})",
           flush=True)
 
+    # 4b-2) 含表题：表格 OCR 成 markdown 追加到 stem 末尾（与图剥离）
+    rt = _refill_table_data(questions, cache_dir, images_dir, force=a.force)
+    if rt:
+        print(f"[tencent_paper] OCR 表格补 {rt} 题 stem", flush=True)
+
     # 4c-1) 图归属重分配：跨页/相邻题 figs 按 stem refs 数全局再分配
     #     场景：Q4 stem 在 p1 底，图被腾讯归到 p2 顶部的 Q5 → 把 Q5 多余的图转给 Q4
     nmoved = _redistribute_figures_by_stem_refs(questions)
@@ -1254,6 +1462,28 @@ def main():
                 q["figure_path"] = fp
         print(f"[tencent_paper] 裁切 {len(figure_paths)} 张 figures", flush=True)
 
+    # 5b) 从答案页文本 + 卷首文本动态校正分值（覆盖 _default_score 兜底）
+    full_answer_text = "\n".join(answer_text.values())
+    score_rules = _parse_score_rules_from_text(full_answer_text)
+    if score_rules:
+        for q in questions:
+            if q["number"] in score_rules:
+                q["score"] = score_rules[q["number"]]
+        print(f"[tencent_paper] 答案页解析分值规则覆盖 {len(score_rules)} 题",
+              flush=True)
+    # full_score：先尝试 page-01 卷首文本"满分N分"，否则用各题分值求和
+    full_score = None
+    p01 = images_dir / "page-01.png"
+    if p01.exists():
+        gf01 = cache_dir / "general" / "page-01.txt"
+        gf01.parent.mkdir(parents=True, exist_ok=True)
+        if not gf01.exists() or a.force:
+            txt01 = _call_general_ocr(p01)
+            gf01.write_text(txt01, encoding="utf-8")
+        full_score = _parse_full_score_from_text(gf01.read_text(encoding="utf-8"))
+    if full_score is None:
+        full_score = sum(q.get("score", 0) for q in questions) or None
+
     # 6) 输出 final.json（剥离内部 _ 字段）
     meta = _parse_exam_meta(src)
     out_questions = []
@@ -1266,6 +1496,7 @@ def main():
         "subject": meta["subject"],
         "exam": meta["exam"],
         "page_count": n_pages,
+        "full_score": full_score,
         "questions": out_questions,
         "answers": answers,
     }

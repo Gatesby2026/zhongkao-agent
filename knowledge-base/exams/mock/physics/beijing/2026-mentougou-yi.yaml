@@ -8,10 +8,10 @@ year: 2026
 district: 北京mentougou区
 exam_type: 一模
 subject: physics
-full_score: null
+full_score: 70
 duration_minutes: null
 total_questions: 26
-structure: 12单选(24分) + 3多选(6分) + 8实验探究(29分) + 1解答(4分) + 2计算(8分)
+structure: 12单选(24分) + 3多选(6分) + 8实验探究(28分) + 1解答(4分) + 2计算(8分)
 questions:
 - id: 1
   type: 单选
@@ -75,7 +75,7 @@ questions:
   answer: D
   solution: ''
   knowledge_points:
-  - 光的折射现象
+  - 光的折射
   module: soundLightHeat
   difficulty: 基础
   recommended_for:
@@ -168,7 +168,7 @@ questions:
   solution: ''
   knowledge_points:
   - 功的概念
-  - 力与运动的关系
+  - 力的作用效果
   module: mechanics
   difficulty: 基础
   recommended_for:
@@ -210,8 +210,8 @@ questions:
   answer: A
   solution: ''
   knowledge_points:
-  - 电路中的电流计算
-  - 并联电路的特点
+  - 电路中的电流规律
+  - 并联电路的电流特点
   module: electricity
   difficulty: 中等
   recommended_for:
@@ -256,7 +256,8 @@ questions:
   answer: C
   solution: ''
   knowledge_points:
-  - 电路中的欧姆定律
+  - 电路中的电压和电流关系
+  - 滑动变阻器的工作原理
   - 电功率的计算
   module: electricity
   difficulty: 中等
@@ -283,7 +284,7 @@ questions:
   knowledge_points:
   - 杠杆原理
   - 浮力
-  - 液体压强
+  - 压强
   module: mechanics
   difficulty: 中等
   recommended_for:
@@ -317,8 +318,19 @@ questions:
 - id: 14
   type: 多选
   score: 2
-  stem: 如图11所示，滑轮组悬挂天花板上， 某工人站在水平地面上， 用竖直向下的拉力拉动 绳子自由端，先后匀速提升两个不同的物体 A 和 B， 部分相关数据如表1所示。已知该工 人重 750N，定滑轮的质量是动滑轮质量的 2 倍， 不计滑轮组的绳重和摩擦，取
+  stem: '如图11所示，滑轮组悬挂天花板上， 某工人站在水平地面上， 用竖直向下的拉力拉动 绳子自由端，先后匀速提升两个不同的物体 A 和 B， 部分相关数据如表1所示。已知该工 人重 750N，定滑轮的质量是动滑轮质量的 2 倍， 不计滑轮组的绳重和摩擦，取
     g=10N/kg。下列说法正确的是
+
+
+    | 物体 | 质量kg | 上升高度m | 时间s | 机械效率 | 拉力功率w |  |
+
+    |---|---|---|---|---|---|---|
+
+    | A | 63 | 2 | 5 |  | 280 |  |
+
+    | B |  | 3 | 10 | 80% |  |  |
+
+    |  |  |  |  |  |  |  |'
   options:
     A: 提升物体A时， 滑轮组的机械效率为 90%
     B: 提升物体B时，绳子自由端拉力为 350N
@@ -329,7 +341,7 @@ questions:
   solution: ''
   knowledge_points:
   - 滑轮组的机械效率
-  - 力的计算
+  - 力和功率的计算
   module: mechanics
   difficulty: 中等
   recommended_for:
@@ -353,7 +365,7 @@ questions:
   solution: ''
   knowledge_points:
   - 电功率的计算
-  - 电路分析
+  - 电路的连接方式
   - 电阻的串联与并联
   module: electricity
   difficulty: 中等
@@ -390,9 +402,9 @@ questions:
 
     (3)0.9x103(1分)'
   knowledge_points:
-  - 质量的测量
-  - 密度的测量
+  - 质量与密度的测量
   - 天平的使用
+  - 量筒的使用
   module: mechanics
   difficulty: 中等
   recommended_for:
@@ -403,7 +415,7 @@ questions:
   qc_note: ''
 - id: 17
   type: 实验探究
-  score: 3
+  score: 4
   stem: '如图14甲，小勇用标有“等高线”的球形玻璃罩装置进行“光的反射实验”探究。
 
     (1)将一小块平面镜放在一个能转动的水平圆台上。用固定放置的红色激光笔，发出一束垂直射向平面
@@ -424,7 +436,7 @@ questions:
   solution: (2)同一平面内(2分)(3)顺时针(2分)
   knowledge_points:
   - 光的反射定律
-  - 反射现象中的几何关系
+  - 实验探究方法
   module: soundLightHeat
   difficulty: 中等
   recommended_for:
@@ -490,8 +502,9 @@ questions:
   answer: ''
   solution: (1)同一高度(1分)(2)5(1分)放大(1分)投影仪(1分)
   knowledge_points:
-  - 凸透镜成像规律
-  - 实验探究方法
+  - 探究凸透镜成像规律
+  - 凸透镜焦距的测量
+  - 实像与虚像的区别
   module: soundLightHeat
   difficulty: 中等
   recommended_for:
@@ -557,7 +570,7 @@ questions:
   qc_note: ''
 - id: 22
   type: 实验探究
-  score: 4
+  score: 3
   stem: '如图18 甲所示是为测小灯泡电功率连接的不完整电路图。
 
     (1)请你用笔画线代替导线将图20甲中电路连接完整; (要求:P向左移动，电流表示数变小)
@@ -581,7 +594,7 @@ questions:
   qc_note: ''
 - id: 23
   type: 实验探究
-  score: 4
+  score: 3
   stem: '图21甲为一款测量液体密度的装置设计图。电源电压为12V，Ro为一定值电阻，MN间是足够长的轻
 
     质导线，金属棒竖直固定且粗细均匀。一弹簧上端固定，滑片P固定在弹簧下端，与金属棒之间无摩擦
@@ -601,15 +614,10 @@ questions:
     0.2 0.4 0.6 0.8 1.0 F/N'
   figure: 2026-mentougou-yi/figures/q23.png
   answer: ''
-  solution: '(1)增大(1分)(2)所测液体的密度会偏小。理由:电源电压降低，实际电压小于12V，测量同
-
-    一液体时电路实际电流偏小;按12V计算时，金属棒接入电阻的测量值偏大，由图乙可知对应拉力的测量
-
-    值偏小;根据ρ=，拉力偏小导致计算出的液体密度偏小。(2分)
-
-    vg'
+  solution: (1)增大(1分)(2)所测液体的密度会偏小。理由:电源电压降低，实际电压小于12V，测量同 一液体时电路实际电流偏小;按12V计算时，金属棒接入电阻的测量值偏大，由图乙可知对应拉力的测量 值偏小;根据ρ=，拉力偏小导致计算出的液体密度偏小。(2分)
+    vg
   knowledge_points:
-  - 欧姆定律
+  - 欧姆定律的应用
   - 电路分析
   - 力与运动的关系
   module: electricity
@@ -640,25 +648,33 @@ questions:
 
     (2)下表是某种型号四旋翼无人机的部分参数， 当该无人机在空中满载悬停时，旋翼产生的总升力为_N;
 
-    (3)请你分析文章中“例如向前飞行是通过增加后方旋翼转速、 降低前方旋翼转速，使无人机产生倾斜角，升力分解出向前的分力”这段话， 应用所学知识解释无人机向前飞行时机机身前后的倾斜情况。'
+    (3)请你分析文章中“例如向前飞行是通过增加后方旋翼转速、 降低前方旋翼转速，使无人机产生倾斜角，升力分解出向前的分力”这段话， 应用所学知识解释无人机向前飞行时机机身前后的倾斜情况。
+
+
+    | 对称电机轴距 | 850mm |  |
+
+    |---|---|---|
+
+    | 整机重量 | 3kg |  |
+
+    | 最大起飞重量 | 4kg |  |
+
+    | 续航时间 | 20min |  |
+
+    | 作业高度 | 小于1000m |  |
+
+    |  |  |  |'
   figure: 2026-mentougou-yi/figures/q24.png
   answer: ''
-  solution: '(1)旋翼的转速差
+  solution: '(1)旋翼的转速差 成对旋翼(2分)
 
-    成对旋翼(2分)
+    (2) 40(1分)
 
-    (2)
-
-    40(1分)
-
-    (3)无人机向前飞行时，机身会机头向下、机尾向上倾斜(前低后高)。因为后方旋翼转速增大、升
-
-    力增大，前方旋翼转速减小、升力减小，导致机身倾斜;此时总升力斜向后上方，分解出向前的分力，推
-
-    动无人机向前飞行。(1分)'
+    (3)无人机向前飞行时，机身会机头向下、机尾向上倾斜(前低后高)。因为后方旋翼转速增大、升 力增大，前方旋翼转速减小、升力减小，导致机身倾斜;此时总升力斜向后上方，分解出向前的分力，推 动无人机向前飞行。(1分)'
   knowledge_points:
   - 力与运动的关系
-  - 力的分解与合成
+  - 力的合成与分解
+  - 机械能
   module: mechanics
   difficulty: 中等
   recommended_for:
@@ -678,59 +694,11 @@ questions:
     (2)小球的密度为多少?'
   figure: 2026-mentougou-yi/figures/q25.png
   answer: ''
-  solution: '解:(1)受力分析如图所示
+  solution: '解:(1)受力分析如图所示 (1分) 由受力分析可知F浮=G+F拉 代入数据可得:F浮=G球22+2N① F浮 12 2F 浮=G 球+6N② ①②联立可得F浮=4N,G球=2N F拉
 
-    (1分)
-
-    由受力分析可知F浮=G+F拉
-
-    代入数据可得:F浮=G球22+2N①
-
-    F浮
-
-    12
-
-    2F 浮=G 球+6N②
-
-    ①②联立可得F浮=4N,G球=2N
-
-    F拉
-
-    (2)
-
-    G
-
-    2N
-
-    m球
-
-    2N
-
-    10N/kg
-
-    G
-
-    F浮
-
-    4N
-
-    V球
-
-    =
-
-    =0.5x10-3m3
-
-    0.8x103kg/m3x10N/kg
-
-    p=
-
-    m球_____0.2 kg_______=0.4x103kg/m3
-
-    V球
-
-    0.5x10-3m3'
+    (2) G 2N m球 2N 10N/kg G F浮 4N V球 = =0.5x10-3m3 0.8x103kg/m3x10N/kg p= m球_____0.2 kg_______=0.4x103kg/m3 V球 0.5x10-3m3'
   knowledge_points:
-  - 浮力的计算
+  - 浮力的概念与计算
   - 密度的计算
   module: mechanics
   difficulty: 中等
@@ -751,66 +719,13 @@ questions:
     (2)电路消耗的最大功率。'
   figure: 2026-mentougou-yi/figures/q26.png
   answer: ''
-  solution: '(1)由题意可知，当闭合开关S1时，等效电路图如图1。
-
-    通过电阻R1的电流I1=U1/R1=2V/5Ω=0.4A
-
-    通过电阻R3的电流I3=I1=0.4A
-
-    根据P=UI得，U=P/I，电阻R3两端的电压U3=P3/I3=1.6W/0.4A=4V
-
-    R1=5Ω
-
-    R
-
-    R2
-
-    U=2V
-
-    U=4V
-
-    A
-
-    R
-
-    I=0.2A
-
-    U
-
-    U
-
-    图1
-
-    图2
-
-    根据串联电路电压规律可知，电源电压U=U1+U3=2V+4V=6V
-
-    当闭合开关S2时，等效电路图如图2
-
-    根据串联电路电压规律可知，U=U2+U3电阻R3两端的电压U3=U-U2=6V-4V=2V
-
-    通过电阻R3的电流I3=I=0.2A
-
-    R总=U/I=6V/0.2A=30Ω
-
-    R1
-
-    R3=U3/I''3=2V/0.2A=10Ω
-
-    R2=R总-R3=30Ω-10Ω=20Ω
-
-    R2
-
-    S1，S2和S3都闭合时，电路消耗的功率最大，R1和R2并联。
-
-    电阻R1消耗的功率P1=U2/R1=1.8W
-
-    电阻R2消耗的功率P2=U2/R2=7.2W
-
-    电路消耗的功率P总=1.8W+7.2W=9W'
+  solution: (1)由题意可知，当闭合开关S1时，等效电路图如图1。 通过电阻R1的电流I1=U1/R1=2V/5Ω=0.4A 通过电阻R3的电流I3=I1=0.4A 根据P=UI得，U=P/I，电阻R3两端的电压U3=P3/I3=1.6W/0.4A=4V
+    R1=5Ω R R2 U=2V U=4V A R I=0.2A U U 图1 图2 根据串联电路电压规律可知，电源电压U=U1+U3=2V+4V=6V 当闭合开关S2时，等效电路图如图2 根据串联电路电压规律可知，U=U2+U3电阻R3两端的电压U3=U-U2=6V-4V=2V
+    通过电阻R3的电流I3=I=0.2A R总=U/I=6V/0.2A=30Ω R1 R3=U3/I'3=2V/0.2A=10Ω R2=R总-R3=30Ω-10Ω=20Ω R2 S1，S2和S3都闭合时，电路消耗的功率最大，R1和R2并联。
+    电阻R1消耗的功率P1=U2/R1=1.8W 电阻R2消耗的功率P2=U2/R2=7.2W 电路消耗的功率P总=1.8W+7.2W=9W
   knowledge_points:
+  - 欧姆定律
   - 电功率的计算
-  - 欧姆定律的应用
   - 电路分析
   module: electricity
   difficulty: 中等
