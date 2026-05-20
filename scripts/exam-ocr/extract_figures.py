@@ -160,14 +160,29 @@ def crop_and_save(page_img: Path, bbox: tuple, out_path: Path,
 
 # ========================= 主流程 =========================
 
+# 与 ocr_paper._normalize_md_noise 同源：清掉 ```围栏 / # 标题前缀 / 第N页页脚——
+# 否则页内题号被写成 "## 17." 致 NUM_ANCHOR_RE（要求行首数字）整页失配 →
+# extract_figures 误判该页"无含图题"跳过 paddle，q17/q18 永远缺失。
+_MD_FENCE_RE = re.compile(r"(?m)^\s*```[A-Za-z0-9_-]*\s*$\n?")
+_MD_HEAD_RE = re.compile(r"(?m)^\s*#{1,6}[ \t]+")
+_PAGE_FOOTER_RE = re.compile(r"(?m)^\s*第\s*\d+\s*页\s*/?\s*共?\s*\d*\s*页?\s*$\n?")
+
+
+def _normalize_md_noise(text: str) -> str:
+    t = _MD_FENCE_RE.sub("", text)
+    t = _MD_HEAD_RE.sub("", t)
+    t = _PAGE_FOOTER_RE.sub("", t)
+    return t
+
+
 def _load_pages_text(paper_dir: Path) -> dict[str, str]:
-    """读 pages/ 下 OCR 缓存。返回 {page-NN: text}。"""
+    """读 pages/ 下 OCR 缓存。返回 {page-NN: text}（已 md-normalize）。"""
     out = {}
     pages = paper_dir / "pages"
     if pages.exists():
         for f in sorted(pages.glob("page-*.ocr.txt")):
             key = f.name.replace(".ocr.txt", "")  # page-01
-            out[key] = f.read_text(encoding="utf-8")
+            out[key] = _normalize_md_noise(f.read_text(encoding="utf-8"))
     return out
 
 
@@ -272,12 +287,17 @@ def extract_figures(src_dir: Path, out_dir: Path, subject: str = "",
 
         # paddle layout detection
         boxes = _load_layout_for_page(page_img, layout_cache_dir)
-        images = [b for b in boxes if b["label"] == "image"]
-        print(f"   paddle 检测: {len(boxes)} 个 box, 其中 image {len(images)} 个")
+        # paddle 全 label 中，image+table 都是题图候选（数据表也是题的视觉载体，
+        # 如比热容实验数据表；之前只取 image 把 table 题永远漏掉）
+        images = [b for b in boxes if b["label"] in ("image", "table")]
+        print(f"   paddle 检测: {len(boxes)} 个 box, 其中 image+table {len(images)} 个")
 
-        # 全局匹配（传 choice_qs 让 4 选项图组优先归选择题）
-        assigned = assign_images_to_questions(images, intervals, demands, page_h,
-                                              choice_qs=choice_qs)
+        # 全局匹配（图号硬匹配主键 + 选择题 4 图组 + 几何兜底）
+        assigned = assign_images_to_questions(
+            images, intervals, demands, page_h,
+            choice_qs=choice_qs,
+            page_text=pages_text.get(page, ""),
+            is_first_page=(page == "page-01"))
 
         # 同题多 bbox 合并为外接矩形，裁切落地
         for q_num in sorted(assigned):

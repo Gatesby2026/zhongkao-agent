@@ -71,7 +71,7 @@
 ## Q23 (essay) · page-6
 
 
-## Q24 (essay) · page-7
+## Q24 (choice) · page-7
 
 
 ## Q25 (calculation) · page-8

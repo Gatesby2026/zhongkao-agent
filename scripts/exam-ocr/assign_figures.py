@@ -13,12 +13,17 @@ import re
 from typing import Iterable
 
 
-SECTION_HEAD_RE = re.compile(r"(?m)^\s*[一二三四五六七八九十]+\s*[、，][^\n]{0,40}题")
+SECTION_HEAD_RE = re.compile(
+    r"(?m)^\s*[一二三四五六七八九十]+\s*[、，][^\n]{0,40}(?:题|分\s*[)）])")
 STRONG_ANSWER_MARKERS_RE = re.compile(
     r"(答案及评分(参考|标准|说明)?|参考答案|参考解答|答案与解析|评分标准)"
 )
 NUM_ANCHOR_RE = re.compile(r"(?m)^\s*(\d{1,2})\s*[.、．]\s*(?=\S)")
 HAS_FIG_RE = re.compile(r"(如图|\[图\])")
+# 题干里"如图N/图N所示"引用 → 该题需要的图号集合（语义硬键）
+STEM_FIG_REF_RE = re.compile(r"如图\s*(\d+)|图\s*(\d+)\s*所示")
+# 页内"图N[甲乙丙丁戊]"caption（图旁/图下标注，按 OCR 文档顺序≈视觉顺序）
+PAGE_FIG_CAP_RE = re.compile(r"图\s*(\d+)\s*([甲乙丙丁戊])?")
 
 
 def is_answer_page(text: str) -> bool:
@@ -66,9 +71,11 @@ def question_y_intervals(ocr_text: str, is_first_page: bool = False) -> dict[int
 
 
 def question_figure_demand(ocr_text: str, is_first_page: bool = False) -> dict[int, int]:
-    """每题题干含 `[图]` / `如图` 的次数。作为图形 bbox 的 demand。
+    """每题题干含图的次数。作为图形 bbox 的 demand。
 
     返回 {q_num: count}；count = 0 表示该题不含图。
+    覆盖 "如图N"/"[图]"/"图N所示" 三类（旧版只看前两类——"图N所示" 一律算 0
+    导致整页被 extract_figures 跳过、paddle 不跑、q17/q18 等永远缺失）。
     """
     stripped, _ = _strip_preamble(ocr_text, is_first_page)
     anchors = [(int(m.group(1)), m.start()) for m in NUM_ANCHOR_RE.finditer(stripped)]
@@ -77,8 +84,72 @@ def question_figure_demand(ocr_text: str, is_first_page: bool = False) -> dict[i
     for i, (n, pos) in enumerate(anchors):
         end = anchors[i + 1][1] if i + 1 < len(anchors) else len(stripped)
         seg = stripped[pos:end]
-        demand[n] = len(HAS_FIG_RE.findall(seg))
+        narrow = len(HAS_FIG_RE.findall(seg))
+        refs = {(m.group(1) or m.group(2)) for m in STEM_FIG_REF_RE.finditer(seg)}
+        demand[n] = max(narrow, len(refs))
     return demand
+
+
+def question_fig_refs(ocr_text: str, is_first_page: bool = False) -> dict[int, set[str]]:
+    """每题题干引用的"图号"集合（来自 `如图N` / `图N所示`）。
+
+    返回 {q_num: {"1","8甲",...}}。空集表示该题不引用具名图。
+    这是配题的**语义硬键**：题干"如图8"必须配到 caption "图8"的图，
+    不受 paddle 合并/y 区间精度任何影响。
+    """
+    stripped, _ = _strip_preamble(ocr_text, is_first_page)
+    anchors = [(int(m.group(1)), m.start()) for m in NUM_ANCHOR_RE.finditer(stripped)]
+    out: dict[int, set[str]] = {}
+    for i, (n, pos) in enumerate(anchors):
+        end = anchors[i + 1][1] if i + 1 < len(anchors) else len(stripped)
+        seg = stripped[pos:end]
+        refs: set[str] = set()
+        for m in STEM_FIG_REF_RE.finditer(seg):
+            num = m.group(1) or m.group(2)
+            if num:
+                refs.add(num)
+        out[n] = refs
+    return out
+
+
+def page_caption_seq(page_text: str, base_only: bool = False) -> list[str]:
+    """页内"图N[甲乙]"caption 按 OCR 出现顺序（≈视觉 top→bottom）去重列表。
+    返回 ["1","2","8甲","8乙",...]；同一图被多次引用只保首次。
+    base_only=True 时按基础图号去重（"8甲"/"8乙" 合并为 "8"）——用于
+    单题多子图（甲乙丙）场景，避免子图 caption 把序列吹大致配对失败。
+    """
+    seen: set[str] = set(); seq: list[str] = []
+    for m in PAGE_FIG_CAP_RE.finditer(page_text):
+        key = m.group(1) if base_only else m.group(1) + (m.group(2) or "")
+        if key not in seen:
+            seen.add(key); seq.append(key)
+    return seq
+
+
+def pair_units_to_fig_nums(
+    page_text: str, image_boxes: list[dict], units: list[list[int]],
+) -> dict[int, str]:
+    """**按 unit（cluster 后的图组/单图）**与 OCR caption 序列配对。
+
+    关键：图片选项题（"如图N所示"+ABCD 4 张选项图）下，paddle 给 N 张 image
+    bbox，OCR 只给 1 个 "图N" caption——unit 数 = 1 = caption 数。**必须先
+    cluster 再配对**，否则 count 永远对不齐导致整页放弃图号主键。
+
+    units 是 [[image_idx,...], ...]，已按 y_top 排序。返回 {unit_idx: "N"}。
+    """
+    cap_seq = page_caption_seq(page_text)
+    if not cap_seq or not units:
+        return {}
+    # 多子图页（如 Q17 含 14甲/14乙/14丙 + Q20 含 18 + Q21 含 19）会把 cap 序列
+    # 吹大到 units 的 2 倍以上。这种页用「基础图号去重」再试，子图归同一题。
+    if abs(len(cap_seq) - len(units)) > 1:
+        cap_seq = page_caption_seq(page_text, base_only=True)
+        if abs(len(cap_seq) - len(units)) > 1:
+            return {}
+    pairs: dict[int, str] = {}
+    for ui in range(min(len(cap_seq), len(units))):
+        pairs[ui] = cap_seq[ui]
+    return pairs
 
 
 def y_iou(box_y: tuple[float, float], iv: tuple[float, float]) -> float:
@@ -142,6 +213,8 @@ def assign_images_to_questions(
     *,
     choice_qs: set[int] | None = None,
     min_iou: float = 0.05,
+    page_text: str = "",
+    is_first_page: bool = False,
 ) -> dict[int, list[dict]]:
     """全局匹配 image bbox 到题号。
 
@@ -166,32 +239,60 @@ def assign_images_to_questions(
     if choice_qs is None:
         choice_qs = set()
 
-    # 1. 聚类
-    groups = cluster_inline_image_group(image_boxes)
-    grouped_idx = {i for g in groups for i in g}
-    singles = [[i] for i in range(len(image_boxes)) if i not in grouped_idx]
-
     assigned: dict[int, list[dict]] = {}
     remaining = dict(demands)
 
-    # 2. 聚类组：优先归到 y 中心最近的选择题（用区间中心距离，IoU 不参与）
+    # 先把 raw image 聚成「unit」（group=4 图选项簇 OR 单图）。这是 R1 的关键
+    # 修正：图选题下 N 张选项图 vs 1 个"图N"caption——必须 unit 级配对，否则
+    # count 永远对不齐 → 图号主键根本不会触发（之前 14/15 的假信心来源）。
+    groups_rel = cluster_inline_image_group(image_boxes)
+    grouped_idx = {i for g in groups_rel for i in g}
+    units: list[list[int]] = list(groups_rel) + [
+        [i] for i in range(len(image_boxes)) if i not in grouped_idx]
+    # unit 按 y_top 排序（≈视觉 top→bottom，与 OCR caption 文档顺序对齐）
+    units.sort(key=lambda u: min(image_boxes[i]["bbox"][1] for i in u))
+    used_units: set[int] = set()
+
+    # 0. **图号硬匹配（主键）**：unit 序列 ↔ caption 序列（同 y/文档顺序）
+    # 关键：用 stem_refs 作为权威 demand 上限（覆盖 HAS_FIG_RE 窄正则的漏判——
+    # "图N所示" 不带 "如" 会让 demand=0，但 stem_refs 仍能识别）。
+    if page_text and units:
+        stem_refs = question_fig_refs(page_text, is_first_page=is_first_page)
+        for q, refs in stem_refs.items():
+            if refs:
+                remaining[q] = max(remaining.get(q, 0), len(refs))
+        unit_fig = pair_units_to_fig_nums(page_text, image_boxes, units)
+        for u_idx, fig_key in unit_fig.items():
+            fig_num_only = re.match(r"\d+", fig_key).group(0)
+            owner = None
+            for q, refs in stem_refs.items():
+                if remaining.get(q, 0) <= 0:
+                    continue
+                if fig_key in refs or fig_num_only in refs:
+                    owner = q; break
+            if owner is None:
+                continue
+            for i in units[u_idx]:
+                b = dict(image_boxes[i])
+                b["_assign_reason"] = f"fig_num={fig_key}"
+                assigned.setdefault(owner, []).append(b)
+            remaining[owner] -= 1
+            used_units.add(u_idx)
+
+    # 2. 选择题 4 图组：剩余 cluster group unit（len≥3）归 y 最近 choice 题
     eligible_choice = [q for q in choice_qs if intervals.get(q) and demands.get(q, 0) > 0]
-    for unit in groups:
-        # unit 的 y 中心（外接矩形）
+    for u_idx, unit in enumerate(units):
+        if u_idx in used_units or len(unit) < 3:
+            continue
         y1 = min(image_boxes[i]["bbox"][1] for i in unit)
         y2 = max(image_boxes[i]["bbox"][3] for i in unit)
         unit_yc = (y1 + y2) / 2 / page_height * 100
-
         if not eligible_choice:
             continue
-        # 4 选项图通常紧贴题号下方（题号 + ABCD 文字 + 4 张图同行）；
-        # OCR 字符位置算法对"图密集区"y_start 略低估 1-2%。
-        # 用"题号 y_start 距离" 作判据：unit_yc 最接近哪题的起点就归哪题。
-        def _dist(q):
+        def _dist(q, yc=unit_yc):
             s, _ = intervals[q]
-            return abs(s - unit_yc)
+            return abs(s - yc)
         best_q = min(eligible_choice, key=_dist)
-        # 把组内所有图都归 best_q（不消耗 demand 多次，组算 1 unit）
         if remaining.get(best_q, 0) <= 0:
             continue
         for i in unit:
@@ -199,11 +300,13 @@ def assign_images_to_questions(
             b["_assign_reason"] = "choice_group"
             assigned.setdefault(best_q, []).append(b)
         remaining[best_q] -= 1
+        used_units.add(u_idx)
 
-    # 3. 单图按 y-IoU 贪心，受 demand 上限
-    candidates: list[tuple[int, int, float]] = []
-    for s in singles:
-        i = s[0]
+    # 3. 单图（剩余 unit 中 len==1）按 y-IoU 贪心
+    singles = [(u_idx, units[u_idx][0]) for u_idx, u in enumerate(units)
+               if u_idx not in used_units and len(u) == 1]
+    candidates: list[tuple[int, int, float]] = []  # (img_idx, q, iou)
+    for _u_idx, i in singles:
         x1, y1, x2, y2 = image_boxes[i]["bbox"]
         box_y_pct = (y1 / page_height * 100, y2 / page_height * 100)
         for q, iv in intervals.items():

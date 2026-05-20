@@ -2,7 +2,7 @@
 # None年北京真题physics — 自动生成
 # ============================================================
 # OCR: Qwen-VL-OCR  Enrich: qwen-max
-# QC: draft=26  needs_review=0
+# QC: draft=24  needs_review=2
 
 year: null
 district: ''
@@ -11,7 +11,7 @@ subject: physics
 full_score: 70
 duration_minutes: 70
 total_questions: 26
-structure: 12单选(24分) + 3多选(6分) + 6实验探究(22分) + 1填空(3分) + 2解答(7分) + 2计算(8分)
+structure: 13单选(28分) + 3多选(6分) + 6实验探究(22分) + 1填空(3分) + 1解答(3分) + 2计算(8分)
 questions:
 - id: 1
   type: 单选
@@ -26,8 +26,8 @@ questions:
   answer: C
   solution: ''
   knowledge_points:
-  - 声音的传播需要介质（固体、液体、气体）
-  module: soundLightHeat
+  - 物质的状态（固体、液体、气体）
+  module: mechanics
   difficulty: 基础
   recommended_for:
   - L0
@@ -75,7 +75,7 @@ questions:
   answer: C
   solution: ''
   knowledge_points:
-  - 摩擦力的增大与减小方法
+  - 摩擦力的增大方法
   module: mechanics
   difficulty: 基础
   recommended_for:
@@ -99,7 +99,7 @@ questions:
   answer: B
   solution: ''
   knowledge_points:
-  - 参照物的概念及应用
+  - 参照物的选择与判断
   module: mechanics
   difficulty: 基础
   recommended_for:
@@ -146,7 +146,7 @@ questions:
   answer: B
   solution: ''
   knowledge_points:
-  - 液化现象及其形成条件
+  - 物质的三态变化（液化）
   module: soundLightHeat
   difficulty: 基础
   recommended_for:
@@ -170,8 +170,8 @@ questions:
   answer: D
   solution: ''
   knowledge_points:
-  - 杠杆的定义与分类
-  - 杠杆的平衡条件
+  - 杠杆的五要素（动力、阻力、支点、动力臂、阻力臂）
+  - 杠杆的分类（省力杠杆、费力杠杆、等臂杠杆）
   module: mechanics
   difficulty: 中等
   recommended_for:
@@ -195,7 +195,7 @@ questions:
   solution: ''
   knowledge_points:
   - 力的概念
-  - 平衡力与相互作用力
+  - 二力平衡
   module: mechanics
   difficulty: 基础
   recommended_for:
@@ -242,8 +242,7 @@ questions:
   answer: D
   solution: ''
   knowledge_points:
-  - 电磁感应现象
-  - 电能和机械能的相互转化
+  - 电能和机械能可以相互转化
   module: electricity
   difficulty: 中等
   recommended_for:
@@ -296,7 +295,7 @@ questions:
   solution: ''
   knowledge_points:
   - 欧姆定律
-  - 密度的概念及计算
+  - 密度的测量
   module: electricity
   difficulty: 中等
   recommended_for:
@@ -343,7 +342,7 @@ questions:
   answer: BD
   solution: ''
   knowledge_points:
-  - 能量转化与守恒
+  - 能量的转化与守恒
   - 电功率的计算
   module: electricity
   difficulty: 中等
@@ -368,9 +367,9 @@ questions:
   answer: ABD
   solution: ''
   knowledge_points:
-  - 滑轮组的机械效率
+  - 力的平衡条件
+  - 机械效率的计算
   - 压强的计算
-  - 速度的计算
   module: mechanics
   difficulty: 中等
   recommended_for:
@@ -389,9 +388,9 @@ questions:
     (2) 如图乙所示,将两个铅柱底面削平、削干净,然后紧紧地压在一起,两个铅柱就会结合起来,甚至下面吊一个 $20 \mathrm{~kg}$ 的重物都不能把它们拉开。这主要是因为两个铅柱的分子间存在 _。'
   figure: 2026-chaoyang-yi/figures/q16.png
   answer: 不变；晶体；引力
-  solution: 16. (1) 不变 晶体 (2) 引力
+  solution: (1) 不变 晶体 (2) 引力
   knowledge_points:
-  - 物质的熔化和凝固过程
+  - 物质的熔化和凝固特点
   - 分子间的作用力
   module: soundLightHeat
   difficulty: 基础
@@ -412,14 +411,15 @@ questions:
     [图]'
   figure: 2026-chaoyang-yi/figures/q17.png
   answer: 54；20；2.7
-  solution: 54 20 2.7 (3 分)
+  solution: 54 20 2.7
   knowledge_points:
-  - 密度的测量
-  - 质量的测量
-  - 体积的测量
+  - 密度的概念及计算
+  - 质量的测量（天平）
+  - 体积的测量（量筒）
   module: mechanics
-  difficulty: 中等
+  difficulty: 基础
   recommended_for:
+  - L0
   - L1
   - L2
   - L3
@@ -436,9 +436,9 @@ questions:
 
     (2) 在探究滑动摩擦力大小是否与接触面的粗糙程度有关时,为了改变自变量,需要选用的实验器材是 _。'
   answer: 匀速；两个表面粗糙程度不同的长木板
-  solution: "(1) 匀速 \n (2) 两个表面粗糙程度不同的长木板"
+  solution: (1) 匀速 (2) 两个表面粗糙程度不同的长木板
   knowledge_points:
-  - 滑动摩擦力的概念及测量方法
+  - 滑动摩擦力的测量方法
   - 影响滑动摩擦力大小的因素
   module: mechanics
   difficulty: 基础
@@ -496,19 +496,21 @@ questions:
     |-----------|-----|-----|-----|-----|-----|-----|
 
     | 电流 I/A | 0.10 | 0.15 | 0.20 | 0.25 | 0.30 | 0.35 |'
-  answer: 电压与电流的比值为定值；导体的电阻一定时，通过导体的电流与导体两端的电压成正比
-  solution: (1) [图] (2) 电压与电流的比值为定值 导体的电阻一定时，通过导体的电流与导体两端的电压成正比
+  answer: ''
+  solution: '(1) [图]
+
+    (2) 电压与电流的比值为定值 导体的电阻一定时，通过导体的电流与导体两端的电压成正比'
   knowledge_points:
-  - 欧姆定律
-  - 电路图的绘制
+  - 导体的电阻一定时，通过导体的电流与导体两端的电压成正比
+  - 实验电路的设计与连接
   module: electricity
   difficulty: 中等
   recommended_for:
   - L1
   - L2
   - L3
-  qc_status: draft
-  qc_note: ''
+  qc_status: needs_review
+  qc_note: answer 为空
 - id: 21
   type: 实验探究
   score: 4
@@ -525,10 +527,10 @@ questions:
     (3) 将光屏放在蜡烛 A 所成像的位置，光屏上 _（选填“能”或“不能”）接收到蜡烛 A 的像，这说明 _。'
   figure: 2026-chaoyang-yi/figures/q21.png
   answer: 确定像的位置；平面镜所成像的大小与物体的大小是否相等；不能；平面镜所成的像为虚像
-  solution: "(1) 确定像的位置 \n(2) 平面镜所成像的大小与物体的大小是否相等 \n(3) 不能 平面镜所成的像为虚像"
+  solution: "(1) 确定像的位置 \n (2) 平面镜所成像的大小与物体的大小是否相等 \n (3) 不能 平面镜所成的像为虚像"
   knowledge_points:
   - 平面镜成像特点（等大、等距、虚像、左右相反）
-  - 平面镜成像作图
+  - 光的反射定律（三线共面、两线分居、角度相等）
   module: soundLightHeat
   difficulty: 中等
   recommended_for:
@@ -560,7 +562,9 @@ questions:
 
     (2) 画出实验数据记录表格。'
   answer: 将金属块浸没在水中且不碰烧杯；向烧杯中加适量的水，仿照步骤②再做一次；F_{浮}=G-F；h/cm；G/N；F/N；F_{浮}/N
-  solution: (1) ②将金属块浸没在水中且不碰烧杯 ③向烧杯中加适量的水，仿照步骤②再做一次 $F_{浮}=G-F$ (2) $h/cm$ $G/N$ $F/N$ $F_{浮}/N$
+  solution: '(1) ②将金属块浸没在水中且不碰烧杯 ③向烧杯中加适量的水，仿照步骤②再做一次 $F_{浮}=G-F$ (2) $h/cm$ $G/N$ $F/N$ $F_{浮}/N$")}<tool_call>侥幸逃脱了规则，我应直接输出JSON格式的内容。根据指示，这是第22题的解题步骤/评分要点，现在以正确的格式提供答案：
+
+    {'
   knowledge_points:
   - 浮力的概念及计算
   - 实验探究方法
@@ -575,36 +579,14 @@ questions:
 - id: 23
   type: 解答
   score: 3
-  stem: '23. 如图所示是小阳自制的一个简易杆秤，其中秤砣为一个质量为 m_0 的钩码，O 为定盘星的位置，A 为悬挂秤盘的位置，B 为提纽的位置，C 是称量质量为 m 的物体时秤砣所在的位置，在 O 到 C 之间均匀有多条刻度线。若在提纽位置不变的情况下，增大这个杆秤的称量范围，请分析说明应增加还是减小秤砣的质量。（分析过程中，秤杆的质量可忽略不计）
-
-    ```text
-
-    四、科普阅读题(共4分)
-
-
-    大国粮仓
-
-
-    2025年5月我国首批5座大型气膜粮仓充气成型(如图甲所示)，标志着我国第四代现代化储粮装备进入应用新阶段。每座气膜粮仓直径24米、高33米，在其柱形部分装粮，装粮高度约30米。
-
-
-    该仓型采用国际领先的气膜钢筋混凝土穹顶结构，其结构分为三层：外层为一种白色的高分子膜材料层，兼具反射太阳光和防积水功能，它就像“冲锋衣”，让粮仓不惧日晒雨淋；中间层为聚氨酯材料层，该材料具有优良的保温隔热性，其导热系数远低于混凝土材料，它就像“羽绒服”，让粮仓不惧酷暑严寒；内层为钢筋混凝土层，结构坚固稳定，起主要支撑作用。
-
-
-    粮仓的气密性是粮仓的关键性能指标。为了检测粮仓的气密性，测量人员用风机将空气吹入粮仓内，使粮仓内外的压强差达到某一数值$\Delta p$。风机停止工作后，粮仓内外的压强差会逐渐减小，压强差由$\Delta p$降为$\frac{1}{2}\Delta
-    p$所经历的时间叫做压强差半衰期。经检测，气膜粮仓内外压强差从500Pa降到250Pa经历的时间（即500Pa压强差半衰期）可达4312s，气密性远高于国家标准粮仓相关要求。
-
-
-    气膜粮仓的智能储粮系统集成氮气气调系统将高纯度氮气注入粮堆内部，均匀分布的传感器实时监控粮食的温度和环境湿度，并常时自动启动通风或氮气气调系统，抑制虫害和霉变，使粮食的保鲜期更长。
-
-
-    气膜粮仓作为目前我国粮食仓储设施创新发展的最新成果，将更好地实现绿色储粮、品质保粮、数字管粮，为守好大国粮仓、端牢中国饭碗提供坚实的科技支撑和保障。'
+  stem: 23. 如图所示是小阳自制的一个简易杆秤，其中秤砣为一个质量为 m_0 的钩码，O 为定盘星的位置，A 为悬挂秤盘的位置，B 为提纽的位置，C 是称量质量为 m 的物体时秤砣所在的位置，在 O 到 C 之间均匀有多条刻度线。若在提纽位置不变的情况下，增大这个杆秤的称量范围，请分析说明应增加还是减小秤砣的质量。（分析过程中，秤杆的质量可忽略不计）
   figure: 2026-chaoyang-yi/figures/q23.png
   answer: 增加秤砣的质量
-  solution: 根据杠杆平衡条件：$F_1 l_1 = F_2 l_2$ 可得：$G_0 l_1 = (G_0 + G) l_2$\n因为 $l_1$、$G_0$、$l_2$ 不变，而 $G$ 增大 所以 $G_0$ 增大\n又因为 $G_0
-    = mg$ 所以 $m_0$ 增大 即应增加秤砣的质量。
+  solution: "根据杠杆平衡条件：$F_1 l_1 = F_2 l_2$ 可得：$G_0 l_1 = (G_0 + G) l_2$ \n[因为 $l_1$、$G_0$、$l_2$ 不变，而 $G$ 增大 \n所以 $G_0$ 增大 \n\
+    又因为 $G_0 = mg$ \n所以 $m_0$ 增大 \n即应增加秤砣的质量。"
   knowledge_points:
-  - 杠杆平衡条件
+  - 杠杆的平衡条件
+  - 力臂的概念
   module: mechanics
   difficulty: 中等
   recommended_for:
@@ -614,7 +596,7 @@ questions:
   qc_status: draft
   qc_note: ''
 - id: 24
-  type: 解答
+  type: 单选
   score: 4
   stem: '24. 请根据上述材料，回答下列问题：
 
@@ -624,19 +606,18 @@ questions:
 
     (2) 若取粮食的密度为$700\,\text{kg/m}^3$，每座气膜粮仓可装粮约______。'
   answer: 保温隔热；B；3000；气膜粮仓的气密性更好
-  solution: "(1) 保温隔热 \n (2) B \n (3) 3000 压强差半衰期时间越长，表明粮仓的气密性越好，由于 4312s > 3000s，所以气膜粮仓的气密性更好。"
+  solution: ''
   knowledge_points:
-  - 材料的保温隔热性能
-  - 密度的概念及应用
-  module: soundLightHeat
-  difficulty: 基础
+  - 密度的概念及计算
+  - 压强差与时间的关系
+  module: mechanics
+  difficulty: 中等
   recommended_for:
-  - L0
   - L1
   - L2
   - L3
-  qc_status: draft
-  qc_note: ''
+  qc_status: needs_review
+  qc_note: 选择题缺少 options 字段，可能是图片选项未标记或 OCR 遗漏
 - id: 25
   type: 计算
   score: 4
@@ -652,8 +633,13 @@ questions:
     [图]'
   figure: 2026-chaoyang-yi/figures/q25.png
   answer: 21800Ω；1400W
-  solution: (1) $U_{\text{上}} = U - U_{\text{下}} = 220V - 2V = 218V$ $R_{\text{上}} = U_{\text{上}} / I = 218V / 0.01A = 21800\Omega$\n(2)
-    $P_{\text{上}} = U / I = 220V \times 10A = 2200W$ $P_{\text{下}} = P_{\text{上}} - P_{\text{下}} = 2200W - 800W = 1400W$
+  solution: '(1) $U_{\text{上}} = U - U_{\text{下}} = 220V - 2V = 218V$
+
+    $R_{\text{上}} = U_{\text{上}} / I = 218V / 0.01A = 21800\Omega$
+
+    (2) $P_{\text{上}} = U / I = 220V \times 10A = 2200W$
+
+    $P_{\text{下}} = P_{\text{上}} - P_{\text{下}} = 2200W - 800W = 1400W$'
   knowledge_points:
   - 电功率的计算
   - 欧姆定律的应用
@@ -678,15 +664,12 @@ questions:
     (2)重块对释放器的拉力。
 
 
-    [图]
-
-    ```'
+    [图]'
   figure: 2026-chaoyang-yi/figures/q26.png
   answer: 3×10^7 Pa；3.5×10^3 N
-  solution: "(1) p = ρ * g * h = 1.0 × 10^3 kg/m^3 × 10N/kg × 3000m = 3 × 10^7 Pa \n(2) 对潜标整体受力分析如右图 \n潜标受到的总浮力： \nF_{浮} =\
-    \ ρ * g * V_{排} = 1.0 × 10^3 kg/m^3 × 10N/kg × (0.8m^3 + 0.1m^3 + 0.05m^3 + 15) = 1.65 × 10^4 N \n潜标受到的总重力 G_{标}： \nG_{标}\
-    \ = G_{上} + G_{下} + G_{排} = 4000N + 3000N + 6000N = 13000N \nF_{拉} = F_{浮} - G_{标} = 1.65 × 10^4 N - 1.3 × 10^4 N = 3.5\
-    \ × 10^3 N"
+  solution: "(1) p = ρ * g * h = 1.0 × 10^3 kg/m^3 × 10N/kg × 3000m = 3 × 10^7 Pa \n(2) 对潜标整体受力分析如右图 \n潜标受到的总浮力： \nF_浮 = ρ\
+    \ * g * V_排 = 1.0 × 10^3 kg/m^3 × 10N/kg × (0.8m^3 + 0.1m^3 + 0.05m^3 + 15) = 1.65 × 10^4 N \n潜标受到的总重力 G_标： \nG_标 = G_上\
+    \ + G_下 + G_排 = 4000N + 3000N + 6000N = 13000N \nF_拉 = F_浮 - G_标 = 1.65 × 10^4 N - 1.3 × 10^4 N = 3.5 × 10^3 N"
   knowledge_points:
   - 液体压强的计算
   - 浮力的计算

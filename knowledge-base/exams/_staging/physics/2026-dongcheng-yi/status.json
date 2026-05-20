@@ -1,0 +1,24 @@
+{
+  "slug": "2026-dongcheng-yi",
+  "subject": "physics",
+  "src": "/Users/jiakui/projects/zhongkao-agent/knowledge-original/beijing-mock-2026/yimo/dongcheng/physics",
+  "staging": "/Users/jiakui/projects/zhongkao-agent/knowledge-base/exams/_staging/physics/2026-dongcheng-yi",
+  "final_yaml": "/Users/jiakui/projects/zhongkao-agent/knowledge-base/exams/mock/physics/beijing/2026-dongcheng-yi.yaml",
+  "state": "INCOMPLETE",
+  "steps": {
+    "s0": {
+      "images": 10,
+      "median_pages": 10
+    },
+    "s2_qc": {
+      "verdict": "blocking",
+      "blocking": [
+        "- 分值合计 65 ≠ full_score 70"
+      ]
+    }
+  },
+  "needs_review": [],
+  "reasons": [
+    "S2 卷级硬错（回 S1 改源头，不打补丁）：- 分值合计 65 ≠ full_score 70"
+  ]
+}

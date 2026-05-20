@@ -185,7 +185,26 @@ STRONG_ANSWER_MARKERS_RE = re.compile(
 # 题号锚点：行首 1-99 + . / 、/ ． + 后续非空白
 NUM_ANCHOR_RE = re.compile(r"(?m)^\s*(\d{1,2})\s*[.、．]\s*(?=\S)")
 # 大题标题（"一、单项选择题"/"二、多项选择题..."），用于跳过 page 1 考生须知
-SECTION_HEAD_RE = re.compile(r"(?m)^\s*[一二三四五六七八九十]+\s*[、，][^\n]{0,40}题")
+SECTION_HEAD_RE = re.compile(
+    r"(?m)^\s*[一二三四五六七八九十]+\s*[、，][^\n]{0,40}(?:题|分\s*[)）])")
+
+# qwen-vl-ocr 输出常被包成 markdown：``` 围栏 + `## N.` 表头。围栏会跨页
+# 漏进上一题 stem 末尾（"```text"/"```markdown"）；`## ` 前缀让题号锚点
+# 正则看不见行首数字 → 整页题被吞（mentougou p5 实测：Q17/Q18 因 `## 17.`
+# 被 NUM_ANCHOR_RE 漏识，整页并入 Q16，引发 Q16+ 全部错位）。
+# 修：解析前对每页文本做一次 markdown 噪声归一化（确定性、纯正则、无 LLM）。
+_MD_FENCE_RE = re.compile(r"(?m)^\s*```[A-Za-z0-9_-]*\s*$\n?")
+_MD_HEAD_RE = re.compile(r"(?m)^\s*#{1,6}[ \t]+")
+# 页脚"第N页/共N页"——切题时易随"first-anchor 前 tail"漏进上一题 stem（Cluster B）
+_PAGE_FOOTER_RE = re.compile(r"(?m)^\s*第\s*\d+\s*页\s*/?\s*共?\s*\d*\s*页?\s*$\n?")
+
+
+def _normalize_md_noise(text: str) -> str:
+    """剥 markdown 围栏行 + 行首 `# ` 表头前缀 + 页脚"第N页/共N页"行。"""
+    t = _MD_FENCE_RE.sub("", text)
+    t = _MD_HEAD_RE.sub("", t)
+    t = _PAGE_FOOTER_RE.sub("", t)
+    return t
 
 
 def _classify_pages(pages_text: list[str]) -> list[bool]:
@@ -284,6 +303,8 @@ def split_by_question_number(pages_text: list[str]) -> tuple[list[dict], list[in
       OCR 原始号留在 ocr_number 供 qc 诊断；断号/题数异常由 qc_report 兜底
     - 跨页处理：page-N+1 第一锚点前的内容并入 page-N 末题
     """
+    # 关键：解析前先剥 markdown 噪声（围栏/表头），让题号锚点对下游可见
+    pages_text = [_normalize_md_noise(t) for t in pages_text]
     is_ans = _classify_pages(pages_text)
     answer_pages = [i + 1 for i, x in enumerate(is_ans) if x]
 
@@ -669,9 +690,10 @@ META_DURATION_RE = re.compile(r"(?:考试)?时间\s*(\d+)\s*分钟")
 SCORE_LIST_RE = re.compile(r"((?:\d+\s*[、，]\s*)*\d+)\s*题\s*各\s*(\d+)\s*分")
 # "每小题 N 分" / "每题 N 分"
 SCORE_EACH_RE = re.compile(r"每\s*小?\s*题\s*(\d+)\s*分")
-# 大题标题：「X、xxx题(...共 N 分...)」
+# 大题标题：「X、xxx[题]?(...共 N 分...)」——"题"字可选
+# 兼容 mentougou 风格「四、科普阅读（共4分）」（无"题"字）。
 SCORE_SECTION_RE = re.compile(
-    r"(?m)^\s*[一二三四五六七八九十]+\s*[、，][^\n]{0,40}题[^\n]*?共\s*(\d+)\s*分"
+    r"(?m)^\s*[一二三四五六七八九十]+\s*[、，][^\n]{0,40}?共\s*(\d+)\s*分"
 )
 
 
@@ -1074,6 +1096,11 @@ def _split_text_to_stem_options(text: str) -> tuple[str, dict | None]:
 def _clean_stem(text: str) -> str:
     """清理 stem 字段：去 LaTeX 包裹/行间距残留、合并多余空白。"""
     t = text or ""
+    # 防御：万一上游漏掉，stem 里残留 markdown 围栏/表头也在此剥
+    t = _normalize_md_noise(t)
+    # LLM(qwen-max) 偶尔把换行转义成字面 `\n` 两字符（Cluster C：solution 渲染
+    # 时显示为字面"\n"）。还原为真换行；`\\n` 真转义保留。
+    t = re.sub(r"(?<!\\)\\n", "\n", t)
     # LaTeX 行间距命令：\\[10pt] 等（qwen-max 生成格式残留）
     t = re.sub(r"\\+\[\d+pt\]?", "", t)
     # 孤立的 \Npt] 残留

@@ -1,6 +1,6 @@
 # 
 
-科目: physics · 25 题
+科目: physics · 26 题
 
 ## Q1 (choice) · page-1
 
@@ -50,10 +50,10 @@
 ## Q16 (experiment) · page-4
 
 
-## Q17 (experiment) · page-6
+## Q17 (experiment) · page-5
 
 
-## Q18 (experiment) · page-6
+## Q18 (experiment) · page-5
 
 
 ## Q19 (experiment) · page-6
@@ -62,17 +62,20 @@
 ## Q20 (experiment) · page-6
 
 
-## Q21 (experiment) · page-7
+## Q21 (experiment) · page-6
 
 
 ## Q22 (experiment) · page-7
 
 
-## Q23 (essay) · page-8
+## Q23 (experiment) · page-7
 
 
-## Q24 (calculation) · page-9
+## Q24 (essay) · page-8
 
 
 ## Q25 (calculation) · page-9
+
+
+## Q26 (calculation) · page-9
 

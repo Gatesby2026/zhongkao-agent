@@ -93,18 +93,24 @@ def _figure_hit_rate(staging: Path) -> tuple[float, int, int]:
     if not fj.exists():
         return 1.0, 0, 0
     d = json.loads(fj.read_text(encoding="utf-8"))
+    # 宽匹配：覆盖"如图N"/"图N所示"/"[图]"/"示意图"/"如下图"——
+    # 任何题干提到"图"的都计入分母，避免假高基线
+    fig_ref = re.compile(r"图\s*\d|如图|\[图\]|如下图|示意图")
     figq = [q for q in d.get("questions", [])
-            if "如图" in (q.get("stem") or "") or "[图]" in (q.get("stem") or "")]
+            if fig_ref.search(q.get("stem") or "")]
     if not figq:
         return 1.0, 0, 0
-    # 命中按磁盘实有图文件计（解耦 final.json figure_path 回写时效）；
-    # 精确到题的归属由 S5 exam-review 人工核，gate 只看产出覆盖度
+    # 精准到题：分子改为「题号对得上磁盘文件 qNN.png」的题数，
+    # 而非旧版「文件数与题数取 min」的覆盖度近似
     seen: set[str] = set()
     for d2 in (staging / "figures",
                _final_yaml_path(staging).with_suffix("") / "figures"):
         if d2.is_dir():
             seen |= {p.name for p in d2.glob("q*.png")}
-    cut = min(len(seen), len(figq))
+    def _qnum(qid):
+        m = re.search(r"(\d+)$", str(qid or ""))
+        return int(m.group(1)) if m else 0
+    cut = sum(1 for q in figq if f"q{_qnum(q.get('id')):02d}.png" in seen)
     return (cut / len(figq)), cut, len(figq)
 
 

@@ -1,0 +1,38 @@
+{
+  "slug": "2026-chaoyang-yi",
+  "subject": "physics",
+  "src": "/Users/jiakui/projects/zhongkao-agent/knowledge-original/beijing-mock-2026/yimo/chaoyang/physics",
+  "staging": "/Users/jiakui/projects/zhongkao-agent/knowledge-base/exams/_staging/physics/2026-chaoyang-yi",
+  "final_yaml": "/Users/jiakui/projects/zhongkao-agent/knowledge-base/exams/mock/physics/beijing/2026-chaoyang-yi.yaml",
+  "state": "NEEDS_REVIEW",
+  "steps": {
+    "s0": {
+      "images": 10,
+      "median_pages": 10
+    },
+    "s2_qc": {
+      "verdict": "ok",
+      "blocking": []
+    },
+    "s3": {
+      "rc": 0,
+      "paddle_py": "/Users/jiakui/projects/zhongkao-agent/.venv-paddle/bin/python3"
+    },
+    "s3_hit": {
+      "rate": 0.947,
+      "cut": 18,
+      "total": 19
+    },
+    "s4": {
+      "rc": 0,
+      "tail": [
+        "✅ /Users/jiakui/projects/zhongkao-agent/knowledge-base/exams/mock/physics/beijing/2026-chaoyang-yi.yaml",
+        "   26 题  needs_review=2  structure: 13单选(28分) + 3多选(6分) + 6实验探究(22分) + 1填空(3分) + 1解答(3分) + 2计算(8分)"
+      ]
+    }
+  },
+  "needs_review": [
+    "- Q24 选择题 options 不全: []"
+  ],
+  "reasons": []
+}
