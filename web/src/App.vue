@@ -219,6 +219,13 @@ const pct = (r: number) => Math.round(r * 100)
 const barClass = (r: number) => r >= 0.8 ? 'green' : (r >= 0.6 ? 'yellow' : 'red')
 const correctCnt = computed(() =>
   report.value ? report.value.n_questions - report.value.n_lost : 0)
+
+// 失分题界面按题号升序（PDF 报告侧 aggregate.lost_questions 仍按失分降序）
+const wrongByNum = computed(() => {
+  if (!report.value) return []
+  const num = (q: string) => parseInt(String(q).replace(/\D+/g, ''), 10) || 0
+  return [...report.value.wrong_questions].sort((a, b) => num(a.qid) - num(b.qid))
+})
 </script>
 
 <template>
@@ -293,34 +300,9 @@ const correctCnt = computed(() =>
       </div>
 
       <div class="card">
-        <div class="section-title" style="margin-bottom:8px">开始前请准备</div>
-        <div class="prep-li">
-          <svg class="prep-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-            stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M3.5 9A2 2 0 0 1 5.5 7h1.6l1.1-1.7h7.6L17 7h1.5a2 2 0 0 1 2 2v8.5a2 2 0 0 1-2 2h-13a2 2 0 0 1-2-2z"/>
-            <circle cx="12" cy="13" r="3.1"/></svg>
-          答题卡全部页（含「考生须知页」，上面印有考试名称）
-        </div>
-        <div class="prep-li">
-          <svg class="prep-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-            stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="3.8"/>
-            <path d="M12 3.5v2M12 18.5v2M3.5 12h2M18.5 12h2M6 6l1.4 1.4M16.6 16.6 18 18M18 6l-1.4 1.4M7.4 16.6 6 18"/></svg>
-          拍照光线均匀、四角入框、字迹清晰
-        </div>
-        <div class="prep-li">
-          <svg class="prep-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-            stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="4" y="5" width="16" height="14" rx="2"/>
-            <path d="M4 10h16M10 5v14"/></svg>
-          小分表（可选）——没有也行，系统自动判分
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="section-title" style="margin-bottom:4px">答题卡怎么拍（示意）</div>
+        <div class="section-title" style="margin-bottom:4px">开始前请准备</div>
         <div class="section-desc" style="margin-bottom:10px">
-          物理常见 4 页（2 张纸正反面）；务必含顶部标题行</div>
+          以物理为例：常见 4 页（2 张纸正反面）。下方为示意（脱敏）</div>
         <div class="sample-pages">
           <div class="sample-page">
             <div class="schem">
@@ -341,7 +323,27 @@ const correctCnt = computed(() =>
             <div class="cap">第 2 页 · 作答区</div>
           </div>
         </div>
-        <div class="sample-tips">✓ 务必含顶部「北京市XX区…答题卡」标题行<br>✓ 光线均匀、四角入框、字迹清晰</div>
+        <div class="prep-li" style="margin-top:10px">
+          <svg class="prep-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3.5 9A2 2 0 0 1 5.5 7h1.6l1.1-1.7h7.6L17 7h1.5a2 2 0 0 1 2 2v8.5a2 2 0 0 1-2 2h-13a2 2 0 0 1-2-2z"/>
+            <circle cx="12" cy="13" r="3.1"/></svg>
+          拍全部页，必须含「考生须知页」顶部标题行（如图第 1 页）
+        </div>
+        <div class="prep-li">
+          <svg class="prep-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3.8"/>
+            <path d="M12 3.5v2M12 18.5v2M3.5 12h2M18.5 12h2M6 6l1.4 1.4M16.6 16.6 18 18M18 6l-1.4 1.4M7.4 16.6 6 18"/></svg>
+          光线均匀、四角入框、字迹清晰
+        </div>
+        <div class="prep-li">
+          <svg class="prep-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="4" y="5" width="16" height="14" rx="2"/>
+            <path d="M4 10h16M10 5v14"/></svg>
+          小分表（可选）——没有也行，系统自动判分
+        </div>
       </div>
 
       <div class="card sample-report" @click="openPdf('/sample-report.pdf','示例学情报告（脱敏）')">
@@ -561,7 +563,7 @@ const correctCnt = computed(() =>
         </div>
 
         <div class="section-title">❌ 失分题分析（{{ report.wrong_questions.length }} 题）</div>
-        <div v-for="w in report.wrong_questions" :key="w.qid" class="wrong-q"
+        <div v-for="w in wrongByNum" :key="w.qid" class="wrong-q"
              :class="{ partial: w.lost < w.score }">
           <div class="qhead">
             <span><span class="qid">{{ w.qid }}</span><span class="qtype">{{ w.type_cn }} · {{ w.module_cn }}</span></span>
