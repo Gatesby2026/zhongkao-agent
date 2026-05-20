@@ -22,7 +22,6 @@ questions:
     B: 电热水壶
     C: 电视机
     D: 电脑
-  has_image_options: false
   answer: B
   solution: ''
   knowledge_points:
@@ -40,6 +39,7 @@ questions:
   type: 单选
   score: 2
   stem: 如图所示的光现象中，由于光的反射形成的是
+  has_image_options: true
   figure: 2026-haidian-yi/figures/q02.png
   answer: D
   solution: ''
@@ -63,7 +63,6 @@ questions:
     B: 以导弹发射车为参照物，惊雷-1空基远程导弹是运动的
     C: 以惊雷-1空基远程导弹为参照物，人民英雄纪念碑是运动的
     D: 以国旗为参照物，导弹发射车是静止的
-  has_image_options: false
   answer: C
   solution: '6x105N
 
@@ -109,6 +108,7 @@ questions:
   type: 单选
   score: 2
   stem: 如图所示实例中，为了减小摩擦的是
+  has_image_options: true
   figure: 2026-haidian-yi/figures/q04.png
   answer: D
   solution: ''
@@ -133,7 +133,6 @@ questions:
     B: 增大阻力臂，方便使用
     C: 减小动力臂，方便使用
     D: 减小阻力臂，能够省力
-  has_image_options: false
   figure: 2026-haidian-yi/figures/q05.png
   answer: A
   solution: ''
@@ -158,7 +157,6 @@ questions:
     B: 琵琶发出的声音可以在真空中传播
     C: 演奏时按压琵琶琴弦的不同位置，主要是为了改变声音的音调
     D: 我们能辨别出琵琶这一乐器的演奏声，是依据声音的响度
-  has_image_options: false
   answer: C
   solution: ''
   knowledge_points:
@@ -182,12 +180,11 @@ questions:
     B: “大雾不过响，过晌听雨响”，雾的形成是汽化现象， 需要放热
     C: “十月打了霜，来年粮满仓”，霜的形成是凝华现象， 需要吸热
     D: “大雪河封住，冬至不行船”，冰的形成是凝固现象， 需要吸热
-  has_image_options: false
   answer: A
   solution: ''
   knowledge_points:
   - 物态变化
-  - 液化
+  - 液化现象
   module: soundLightHeat
   difficulty: 基础
   recommended_for:
@@ -206,7 +203,6 @@ questions:
     B: 乒乓球被球拍挡回去， 说明力可以改变物体的运动状态
     C: 跳高运动员起跳蹬地时，运动员对地的压力小于地对运动员的支持力
     D: 跳远运动员起跳后能继续向前运动， 是因为运动员受到惯性的作用
-  has_image_options: false
   answer: B
   solution: ''
   knowledge_points:
@@ -230,13 +226,12 @@ questions:
     B: 主要利用了热传递来改变套筒内气体的内能
     C: 艾绒被点燃，表明套筒内气体的温度升高
     D: 艾绒燃烧时，内能转化为化学能
-  has_image_options: false
   figure: 2026-haidian-yi/figures/q09.png
   answer: C
   solution: ''
   knowledge_points:
-  - 内能及其改变
-  - 热传递与做功
+  - 内能的改变方式
+  - 热力学过程
   module: soundLightHeat
   difficulty: 中等
   recommended_for:
@@ -254,7 +249,6 @@ questions:
     B: 小球在①位置的动能可能小于②位置的动能
     C: 小球在②位置的动能可能小于③位置的动能
     D: M位置对应轨迹中的③位置
-  has_image_options: false
   figure: 2026-haidian-yi/figures/q10.png
   answer: D
   solution: ''
@@ -279,13 +273,12 @@ questions:
     B: 照度越大，该电路控制开关两端的电压越大
     C: 若换用阻值更大的定值电阻,则照明系统可在更低的照度下启动
     D: 若换用电压更大的电源，则照明系统可在更低的照度下启动
-  has_image_options: false
   figure: 2026-haidian-yi/figures/q11.png
   answer: C
   solution: ''
   knowledge_points:
   - 电路与欧姆定律
-  - 电阻与导电性
+  - 电阻及其特性
   module: electricity
   difficulty: 中等
   recommended_for:
@@ -308,7 +301,6 @@ questions:
     B: 第二次拉绳子的过程中，工人拉力的功率为56W
     C: 第二次拉绳子的过程中，工人对地面的压强为$8×10^3Pa$
     D: 第二次拉绳子的过程中，该滑轮组的机械效率约为95.2%
-  has_image_options: false
   figure: 2026-haidian-yi/figures/q12.png
   answer: B
   solution: ''
@@ -334,7 +326,6 @@ questions:
     B: 熔化后的液态铜温度升高，是因为其含有的热量变多
     C: 将液态铜倒入钱钱币模具，凝固过程中其内能减小
     D: 固态铜币冷却过程中，比热容不变
-  has_image_options: false
   answer: ACD
   solution: ''
   knowledge_points:
@@ -358,7 +349,6 @@ questions:
     B: 汽轮发电机发电是电磁感应现象的应用
     C: 正午时，每台定日镜接收到太阳能的功率约为92.4kW
     D: 正午时，该电站的发电功率约为1100MW
-  has_image_options: false
   figure: 2026-haidian-yi/figures/q14.png
   answer: BC
   solution: ''
@@ -388,7 +378,6 @@ questions:
     B: 桶内水的深度从15cm增加到25cm的过程中，力传感开关受到的拉力保持不变
     C: 若仅缩短 A 与 B 之间的细线长度，桶内的最低水位升高、最高水位降低
     D: 若仅换用密度为1.3g/$cm^{3}$的材料制作圆柱体A和B，其底面积和高均保持不变，则桶内的最低水位、最高水位均升高
-  has_image_options: false
   figure: 2026-haidian-yi/figures/q15.png
   answer: BD
   solution: ''
@@ -456,8 +445,8 @@ questions:
 
     电流周围磁场的方向与电流方向是否有关(1分)'
   knowledge_points:
-  - 电磁感应
-  - 磁场方向与电流方向的关系
+  - 磁场对电流的作用
+  - 电磁感应现象
   module: electricity
   difficulty: 中等
   recommended_for:
@@ -480,8 +469,8 @@ questions:
 
     (4)不能(1分)'
   knowledge_points:
-  - 光的折射
   - 凸透镜成像规律
+  - 实验探究方法
   module: soundLightHeat
   difficulty: 中等
   recommended_for:
@@ -624,8 +613,8 @@ questions:
   knowledge_points:
   - 流体的压强与流速的关系
   - 能量转化与守恒
-  - 超声速流动现象
-  module: mechanics
+  - 声速与马赫数
+  module: soundLightHeat
   difficulty: 中等
   recommended_for:
   - L1
@@ -656,7 +645,7 @@ questions:
     答图1'
   knowledge_points:
   - 欧姆定律
-  - 串联电路和并联电路的电流、电压关系
+  - 串联电路和并联电路
   module: electricity
   difficulty: 中等
   recommended_for:

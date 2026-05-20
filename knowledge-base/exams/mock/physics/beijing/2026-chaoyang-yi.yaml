@@ -22,7 +22,6 @@ questions:
     B: 橡皮
     C: 钢尺
     D: 塑料水瓶
-  has_image_options: false
   answer: C
   solution: ''
   knowledge_points:
@@ -45,7 +44,6 @@ questions:
     B: 光的折射
     C: 光的直线传播
     D: 光的色散
-  has_image_options: false
   answer: A
   solution: '7
 
@@ -81,10 +79,11 @@ questions:
     C
 
     D'
+  has_image_options: true
   answer: C
   solution: ''
   knowledge_points:
-  - 摩擦力的概念及影响因素
+  - 摩擦力的种类及影响因素
   module: mechanics
   difficulty: 基础
   recommended_for:
@@ -107,7 +106,6 @@ questions:
     B: 以水面为参照物，电梯是运动的
     C: 以电梯为参照物，小阳是运动的
     D: 以小阳为参照物，青山是静止的
-  has_image_options: false
   answer: B
   solution: ''
   knowledge_points:
@@ -130,7 +128,6 @@ questions:
     B: 响度
     C: 音色
     D: 声速
-  has_image_options: false
   answer: A
   solution: ''
   knowledge_points:
@@ -154,13 +151,12 @@ questions:
     B: 这层雾是由于液化形成的
     C: 形成雾的过程中需要吸热
     D: 这层雾出现在前挡风玻璃的外侧
-  has_image_options: false
   figure: 2026-chaoyang-yi/figures/q06.png
   answer: B
   solution: ''
   knowledge_points:
   - 物质的三态变化
-  - 液化现象
+  - 液化
   module: soundLightHeat
   difficulty: 基础
   recommended_for:
@@ -179,7 +175,6 @@ questions:
     B: 食品夹对蛋糕的压力是阻力
     C: 该食品夹是省力杠杆
     D: N点移动的距离大于M点移动的距离
-  has_image_options: false
   figure: 2026-chaoyang-yi/figures/q07.png
   answer: D
   solution: ''
@@ -204,7 +199,6 @@ questions:
     B: 运动员是在惯性的作用下匀速下滑的
     C: 运动员受到的重力和支持力是一对平衡力
     D: 运动员使用滑雪板可以减小对雪地的压力
-  has_image_options: false
   answer: A
   solution: ''
   knowledge_points:
@@ -228,7 +222,6 @@ questions:
     B: 艾绒被点燃是由于推杆直接对艾绒做功的结果
     C: 推杆的部分机械能转化为简内气体的内能
     D: 其能量转化的过程与汽油机的做功冲程相同
-  has_image_options: false
   figure: 2026-chaoyang-yi/figures/q09.png
   answer: C
   solution: ''
@@ -252,12 +245,12 @@ questions:
     B: 图乙所示实验中开关闭合时线圈会摆动
     C: 电磁起重机是利用电磁感应现象工作的
     D: 它们揭示了电能和机械能可以相互转化
-  has_image_options: false
   figure: 2026-chaoyang-yi/figures/q10.png
   answer: D
   solution: ''
   knowledge_points:
-  - 电与磁的关系
+  - 电磁感应
+  - 电动机原理
   - 能量转化
   module: electricity
   difficulty: 中等
@@ -276,7 +269,6 @@ questions:
     B: 该光刻机所成的像为正立缩小的实像
     C: 透镜组的焦距小于掩膜版到透镜组的距离
     D: 掩膜版靠近透镜组，光刻胶上的像会变小
-  has_image_options: false
   figure: 2026-chaoyang-yi/figures/q11.png
   answer: C
   solution: ''
@@ -301,13 +293,12 @@ questions:
     B: 若增大电阻箱的电阻,可以增加该装置的测量范围
     C: 电压表上 2V 刻度线对应的密度值为0.6g/$cm^{3}$
     D: 若将物体Q更换为质量相同、体积更小的物体， 可以使测量值更精确
-  has_image_options: false
   figure: 2026-chaoyang-yi/figures/q12.png
   answer: C
   solution: ''
   knowledge_points:
-  - 欧姆定律
-  - 密度的概念及计算
+  - 欧姆定律的应用
+  - 密度的测量方法
   - 电路分析
   module: electricity
   difficulty: 中等
@@ -326,11 +317,10 @@ questions:
     B: 物体的温度越高，它含有的热量越多
     C: 燃料完全燃烧放出的热量越多,它的热值越大
     D: 沿海地区的昼夜温差较小的原因之一是海水的比热容较大
-  has_image_options: false
   answer: AD
   solution: ''
   knowledge_points:
-  - 分子热运动
+  - 分子动理论
   - 比热容
   module: soundLightHeat
   difficulty: 基础
@@ -350,14 +340,13 @@ questions:
     B: 风力发电机组可将机械能转化为电能
     C: 单台机组的风机叶片旋转一圈获得电能60kW·h
     D: 单台机组的风机叶片旋转一圈获得的电能可供一盏30W的LED灯持续工作1000h
-  has_image_options: false
   figure: 2026-chaoyang-yi/figures/q14.png
   answer: BD
   solution: ''
   knowledge_points:
   - 机械能与电能的转化
   - 功率的概念及计算
-  module: electricity
+  module: mechanics
   difficulty: 中等
   recommended_for:
   - L1
@@ -375,14 +364,13 @@ questions:
     B: 滑轮组的机械效率约为97.2%
     C: 平台对定滑轮的拉力为$3.66×10^{4}N$
     D: 电动机对水平台面的压强为$5×104^4Pa$
-  has_image_options: false
   figure: 2026-chaoyang-yi/figures/q15.png
   answer: ABD
   solution: ''
   knowledge_points:
   - 机械效率
   - 压强计算
-  - 滑轮组原理
+  - 滑轮组的应用
   module: mechanics
   difficulty: 中等
   recommended_for:
@@ -447,7 +435,7 @@ questions:
     (4分)'
   knowledge_points:
   - 力的概念
-  - 摩擦力的影响因素
+  - 滑动摩擦力的影响因素
   module: mechanics
   difficulty: 中等
   recommended_for:
@@ -469,8 +457,8 @@ questions:
 
     (3分)'
   knowledge_points:
-  - 电路的连接与测量
   - 欧姆定律的应用
+  - 电路连接与测量
   module: electricity
   difficulty: 中等
   recommended_for:
@@ -494,9 +482,8 @@ questions:
 
     (4分)'
   knowledge_points:
-  - 电流与电压的关系
-  - 欧姆定律的应用
-  - 电路实验设计
+  - 欧姆定律
+  - 电路连接与测量
   module: electricity
   difficulty: 中等
   recommended_for:
@@ -557,7 +544,7 @@ questions:
     九年级物理试卷答案及评分标准第1页(共2页)'
   knowledge_points:
   - 浮力的概念
-  - 阿基米德原理
+  - 实验探究方法
   module: mechanics
   difficulty: 中等
   recommended_for:
@@ -634,11 +621,10 @@ questions:
 
     (4分)'
   knowledge_points:
-  - 未提供题干具体内容，无法确定知识点
+  - 未提供题干和答案，无法确定具体知识点
   module: soundLightHeat
-  difficulty: 未提供题干具体内容，无法确定难度
-  recommended_for:
-  - 未提供题干具体内容，无法确定推荐层级
+  difficulty: 未提供题干和答案，无法确定难度
+  recommended_for: []
   qc_status: draft
   qc_note: ''
 - id: 25
@@ -661,7 +647,6 @@ questions:
   knowledge_points:
   - 电路的基本概念
   - 欧姆定律的应用
-  - 电功率的计算
   module: electricity
   difficulty: 中等
   recommended_for:

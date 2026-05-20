@@ -79,8 +79,10 @@ def detect_issues(q: dict) -> list[dict]:
         issues.append({"code": "zero_score", "level": "error",
                        "msg": f"score={score}，分值异常"})
 
-    if not ans:
-        issues.append({"code": "no_answer", "level": "error", "msg": "answer 为空"})
+    # 主观题（实验探究/计算/解答）没有 single answer，只看 solution（与 enrich QC 同步）
+    if not ans and qtype in {"单选", "多选", "填空"}:
+        issues.append({"code": "no_answer", "level": "error",
+                       "msg": f"{qtype}题 answer 为空"})
 
     if ans:
         if qtype == "单选" and not SINGLE_ANSWER_RE.match(ans):

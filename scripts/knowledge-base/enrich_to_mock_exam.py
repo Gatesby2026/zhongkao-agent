@@ -508,7 +508,11 @@ def enrich_paper(paper: NormalizedPaper, cache_prefix: str) -> dict:
         # options 仅选择题写；无选项题省略该字段
         if q["options"] is not None:
             item["options"] = q["options"]
-            item["has_image_options"] = q["has_image_options"]
+        # has_image_options 独立写入（纯图选项题 options=None 但仍需此标记，
+        # 否则 yaml 里 has_image_options 永远是 None → 下游 exam-review 误判
+        # 「选择题缺少 options 字段」）
+        if q.get("has_image_options"):
+            item["has_image_options"] = True
 
         # figure：含图题目写入相对路径（相对于输出 YAML 所在目录）
         if q.get("figure_path"):

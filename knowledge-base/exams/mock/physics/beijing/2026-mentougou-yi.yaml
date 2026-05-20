@@ -27,8 +27,7 @@ questions:
   answer: B
   solution: ''
   knowledge_points:
-  - 电学基础知识
-  - 导体与绝缘体
+  - 物质的导电性
   module: electricity
   difficulty: 基础
   recommended_for:
@@ -95,7 +94,6 @@ questions:
     B: 分子之间存在引力
     C: 分子在不停地做无规则运动
     D: 物质是由大量分子构成的
-  has_image_options: false
   answer: B
   solution: ''
   knowledge_points:
@@ -118,7 +116,6 @@ questions:
     B: 只要物体振动，就能听到声音
     C: 声音在各种物质中传播的速度是一样的
     D: 声音不能在固体物质中传播
-  has_image_options: false
   figure: 2026-mentougou-yi/figures/q05.png
   answer: A
   solution: ''
@@ -167,12 +164,11 @@ questions:
     B: 小星背着书包在水平路面行走
     C: 小红将掉在地上的树叶捡起来
     D: 小亮投出篮球后， 篮球在空中飞行
-  has_image_options: false
   answer: C
   solution: ''
   knowledge_points:
   - 功的概念
-  - 力的作用效果
+  - 力与运动的关系
   module: mechanics
   difficulty: 基础
   recommended_for:
@@ -186,6 +182,7 @@ questions:
   type: 单选
   score: 2
   stem: 图 6 所示，下列做法中符合安全用电原则的是
+  has_image_options: true
   figure: 2026-mentougou-yi/figures/q08.png
   answer: C
   solution: ''
@@ -209,13 +206,12 @@ questions:
     B: 通过$L_2$的电流为0.48A
     C: 通过$L_{3}$的电流为0.80A
     D: 通过三个灯泡的电流之和是1.08A
-  has_image_options: false
   figure: 2026-mentougou-yi/figures/q09.png
   answer: A
   solution: ''
   knowledge_points:
-  - 电路中的电流计算
-  - 并联电路的特点
+  - 电路中的电流
+  - 并联电路的电流规律
   module: electricity
   difficulty: 中等
   recommended_for:
@@ -233,7 +229,6 @@ questions:
     B: $P_2$＜$P_1$，$F_2$＜$F_1$
     C: $P_2>P_1,F_2>F_1$
     D: $P_2>P_1$,$F_2<F_1$
-  has_image_options: false
   figure: 2026-mentougou-yi/figures/q10.png
   answer: D
   solution: ''
@@ -257,13 +252,13 @@ questions:
     B: R2消耗的功率变小
     C: 电路消耗的总功率变大
     D: 电压表和电流表示数的比值不变
-  has_image_options: false
   figure: 2026-mentougou-yi/figures/q11.png
   answer: C
   solution: ''
   knowledge_points:
-  - 电路中的电功率
-  - 滑动变阻器的作用
+  - 电路的基本概念
+  - 欧姆定律的应用
+  - 电功率的计算
   module: electricity
   difficulty: 中等
   recommended_for:
@@ -283,14 +278,13 @@ questions:
     B: 当进水管停止进水时，接杆AC对A点的作用力 1.3N
     C: 当进水管停止进水时，浮筒排开水的体积为$130cm^{3}$
     D: 若只将支点O向A点移动储水槽最高水位会上升
-  has_image_options: false
   figure: 2026-mentougou-yi/figures/q12.png
   answer: C
   solution: ''
   knowledge_points:
   - 杠杆原理
   - 浮力
-  - 压强
+  - 液体压强
   module: mechanics
   difficulty: 中等
   recommended_for:
@@ -308,7 +302,6 @@ questions:
     B: 在热传递过程中，吸收热量的物体内能一定增加
     C: 温度低的物体一定比温度高的物体具有的内能少
     D: 内能大小相同的两个物体之间也可能发生热传递
-  has_image_options: false
   answer: BD
   solution: ''
   knowledge_points:
@@ -332,13 +325,11 @@ questions:
     B: 提升物体B时，绳子自由端拉力为 350N
     C: 物体 B 的质量为 28kg
     D: 提升物体B时定滑轮对天花板的拉力为 665N
-  has_image_options: false
   figure: 2026-mentougou-yi/figures/q14.png
   answer: AC
   solution: ''
   knowledge_points:
-  - 机械效率
-  - 滑轮组的应用
+  - 滑轮组的机械效率
   - 力的计算
   module: mechanics
   difficulty: 中等
@@ -358,7 +349,6 @@ questions:
     B: 甲乙电热水壶的高温档功率相同
     C: 若甲乙电热水壶的低温档功率相同，则 R4的电阻为 176 $\Omega $
     D: 乙电热水壶高温档正常工作3min，消耗的电能为 3300J
-  has_image_options: false
   figure: 2026-mentougou-yi/figures/q15.png
   answer: ABC
   solution: ''
@@ -422,7 +412,7 @@ questions:
   answer: ''
   solution: (1)加热时间(1分)(2)小(1分)大(1分)
   knowledge_points:
-  - 比热容的概念与应用
+  - 比热容的概念
   - 实验探究方法
   module: soundLightHeat
   difficulty: 中等
@@ -440,7 +430,8 @@ questions:
   answer: ''
   solution: (1)同一高度(1分)(2)5(1分)放大(1分)投影仪(1分)
   knowledge_points:
-  - 探究凸透镜成像的规律
+  - 凸透镜成像规律
+  - 实验探究方法
   module: soundLightHeat
   difficulty: 中等
   recommended_for:
@@ -536,9 +527,9 @@ questions:
 
     vg'
   knowledge_points:
-  - 欧姆定律
+  - 欧姆定律的应用
   - 电路分析
-  - 力与运动
+  - 力与运动的关系
   module: electricity
   difficulty: 中等
   recommended_for:
@@ -571,7 +562,7 @@ questions:
     动无人机向前飞行。(1分)'
   knowledge_points:
   - 力的合成与分解
-  - 牛顿第二定律
+  - 浮力与升力
   module: mechanics
   difficulty: 中等
   recommended_for:
@@ -714,8 +705,9 @@ questions:
 
     电路消耗的功率P总=1.8W+7.2W=9W'
   knowledge_points:
-  - 欧姆定律
   - 电功率的计算
+  - 欧姆定律的应用
+  - 电路分析
   module: electricity
   difficulty: 中等
   recommended_for:
