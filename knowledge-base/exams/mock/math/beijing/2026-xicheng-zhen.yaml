@@ -1,0 +1,1210 @@
+year: 2026
+district: 西城区
+exam_type: 一模
+subject: math
+full_score: 100
+duration_minutes: 120
+total_questions: 28
+structure: 8单选(16分) + 8填空(16分) + 12解答(68分)
+questions:
+- id: 1
+  type: 单选
+  score: 2
+  stem: 下列图形中，是中心对称图形但不是轴对称图形的是（　　）
+  options:
+    A: '[图]'
+    B: '[图]'
+    C: '[图]'
+    D: '[图]'
+  has_image_options: true
+  figure: 2026-xicheng-zhen/figures/image.png
+  answer: A
+  solution: '解：A、该图形是中心对称图形但不是轴对称图形，符合题意；
+
+    B、该图形既不是中心对称图形，也不是轴对称图形，不符合题意；
+
+    C、该图形是中心对称图形，也是轴对称图形，不符合题意；
+
+    D、该图形是轴对称图形，又是中心对称图形，不符合题意．
+
+    故选：A．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
+  qc_status: draft
+  qc_note: ''
+- id: 2
+  type: 单选
+  score: 2
+  stem: 如图，点O在直线AB上，OC⊥OD，OE平分∠BOC．若∠BOC＝130°，则∠DOE的大小为（　　）
+  options:
+    A: 40°
+    B: 35°
+    C: 30°
+    D: 25°
+  figure: 2026-xicheng-zhen/figures/image5.png
+  answer: D
+  solution: '解：∵∠BOC＝130°，OE平分∠BOC，
+
+    ∴$∠COE=\frac{1}{2}∠BOC=65°$，
+
+    ∵OC⊥OD，
+
+    ∴∠COD＝90°，
+
+    ∴∠DOE＝∠COD﹣∠COE＝90°﹣65°＝25°，
+
+    故选：D．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
+  qc_status: draft
+  qc_note: ''
+- id: 3
+  type: 单选
+  score: 2
+  stem: 2025年7月由中国雅江集团承建的雅鲁藏布江下游水电工程开工建设，总投资约1.2万亿元，总装机容量预计是三峡工程的三倍.2024年西藏自治区发电量累计值约为1.44×1010千瓦时，雅鲁藏布江下游水电工程建成后预计每年发电量可达2024年西藏自治区发电量累计值的20倍，则该工程预计每年发电量约为（　　）
+  options:
+    A: 2.88×1010千瓦时
+    B: 2.88×1011千瓦时
+    C: 2.88×1012千瓦时
+    D: 2.88×1013千瓦时
+  answer: B
+  solution: '解：由题意可知，该工程预计每年发电量为2024年西藏自治区发电量的20倍，
+
+    ∴1.44×1010×20
+
+    ＝28.8×1010
+
+    ＝2.88×1011（千瓦时），
+
+    故选：B．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
+  qc_status: draft
+  qc_note: ''
+- id: 4
+  type: 单选
+  score: 2
+  stem: 实数a，b在数轴上的对应点的位置如图所示，下列结论中正确的是（　　）
+  options:
+    A: a+b＞0
+    B: a﹣b＞3
+    C: '|a|＜|b|'
+    D: ab＞0
+  figure: 2026-xicheng-zhen/figures/image6.png
+  answer: C
+  solution: '解：实数a，b在数轴上的对应点的位置如图所示，
+
+    由图可知：﹣2＜b＜0＜a＜1，
+
+    ∴a+b＜0，a﹣b＜3，|a|＜|b|，ab＜0，
+
+    故选：C．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
+  qc_status: draft
+  qc_note: ''
+- id: 5
+  type: 单选
+  score: 2
+  stem: 一个不透明的袋子中装有1个红球、2个黄球，这些球除了颜色外无其他差别．先从袋子中随机摸出一个小球，放回并摇匀，再从袋子中随机摸出一个小球，那么第一次摸到的球是红球、第二次摸到的球是黄球的概率是（　　）
+  options:
+    A: $\frac{1}{9}$
+    B: $\frac{2}{9}$
+    C: $\frac{1}{3}$
+    D: $\frac{2}{3}$
+  answer: B
+  solution: '解：先从袋子中随机摸出一个小球，放回并摇匀，再从袋子中随机摸出一个小球，作树状图如下：
+
+
+    由树状图可知，共有9种等可能的情况出现，其中第一次摸到红球，第二次摸到黄球的情况共有2种，
+
+    ∴第一次摸到红球，第二次摸到黄球概率为$\frac{2}{9}$，
+
+    故选：B．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
+  qc_status: draft
+  qc_note: ''
+- id: 6
+  type: 单选
+  score: 2
+  stem: 若关于x的一元二次方程mx2+4x﹣2＝0有实数根，则m的取值范围是（　　）
+  options:
+    A: m＞﹣2
+    B: m≥﹣2
+    C: m＞﹣2且m≠0
+    D: m≥﹣2且m≠0
+  answer: D
+  solution: '解：因为关于x的一元二次方程mx2+4x﹣2＝0有实数根，
+
+    所以Δ＝42+8m≥0且m≠0，
+
+    解得m≥﹣2且m≠0．
+
+    故选：D．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
+  qc_status: draft
+  qc_note: ''
+- id: 7
+  type: 单选
+  score: 2
+  stem: 如图，在△ABC中，∠C＝90°，∠B＝40°，以A为圆心，AC长为半径画弧，交AB于点M，再分别以M，C为圆心，AC长为半径画弧，两弧交于点P（点P与点A不重合），连接AP交BC于点D，则∠MDP的大小为（　　）
+  options:
+    A: 50°
+    B: 65°
+    C: 115°
+    D: 130°
+  figure: 2026-xicheng-zhen/figures/image7.png
+  answer: C
+  solution: '解：如图，由作图可知AC＝AM＝PC＝PM，
+
+
+    ∴四边形ACPM是菱形，
+
+    ∴∠CAP＝∠MAP，
+
+    ∵∠ACB＝90°，∠B＝40°，
+
+    ∴∠CAB＝90°﹣40°＝50°，
+
+    ∴∠CAP＝∠MAP＝25°，
+
+    ∵四边形ACPM是菱形，
+
+    ∴C，M关于AP对称，
+
+    ∴∠AMD＝∠ACD＝90°，
+
+    ∴∠MDP＝∠DAM+∠AMD＝25°+90°＝115°．
+
+    故选：C．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
+  qc_status: draft
+  qc_note: ''
+- id: 8
+  type: 单选
+  score: 2
+  stem: '如图，在平面直角坐标系xOy中，点A，B分别为x轴，y轴正半轴上的定点，四边形OACB为矩形，函数$y=\frac{k}{x}(0＜k＜OA⋅OB)$的图象与边AC交于点D，与边BC交于点E，直线DE与x轴交于点F，与y轴交于点G，连接OD，OE．
+
+    给出下面四个结论：
+
+    ①△OED一定为锐角三角形；
+
+    ②△EBG≌△FAD；
+
+    ③当△EGB的面积为2时，k的值可能是4；
+
+    ④△OEB与△OED的面积可能相等．
+
+    上述结论中，所有正确选项的序号是（　　）'
+  options:
+    A: ①③
+    B: ①④
+    C: ②③
+    D: ②④
+  figure: 2026-xicheng-zhen/figures/image8.png
+  answer: D
+  solution: '解：当BE＞OB，EC＞CD时，∠OEB＜45°，∠CED＜45°，
+
+    ∴∠OED＝180°﹣∠OEB﹣∠CED＞90°，
+
+    ∴△OED有可能是钝角三角形，
+
+    故①中结论错误；
+
+    设点C的坐标为（a，b），
+
+    则OA＝a，OB＝b，
+
+    ∴0＜k＜ab，
+
+    当y＝b时，可得$x=\frac{k}{b}$，
+
+    ∴点E的坐标为$(\frac{k}{b}，b)$，
+
+    当x＝a时，可得$y=\frac{k}{a}$，
+
+    ∴点D的坐标为$(a，\frac{k}{a})$，
+
+    设直线ED的解析式为y＝mx+n（m≠0），
+
+    可得：$\left\{\begin{matrix} \frac{k}{b}m+n=b \\ am+n=\frac{k}{a} \end{matrix}\right.$，
+
+    解得：$\left\{\begin{matrix} m=-\frac{b}{a} \\ n=b+\frac{k}{a} \end{matrix}\right.$，
+
+    ∴直线ED的解析式为$y=-\frac{b}{a}x+b+\frac{k}{a}$，
+
+    当y＝0时，可得：$-\frac{b}{a}x+b+\frac{k}{a}=0$，
+
+    解得：$x=a+\frac{k}{b}$，
+
+    ∴点F的坐标为$(a+\frac{k}{b}，0)$，
+
+    ∴$BE=\frac{k}{b}$，$AF=OF-OA=a+\frac{k}{b}-a=\frac{k}{b}$，
+
+    ∴BE＝AF，
+
+    ∵四边形OACB是矩形，
+
+    ∴∠GBE＝∠DAF＝90°，BC∥OF，
+
+    ∴∠GEB＝∠DFA，
+
+    在△GBE和△DAF中，
+
+    $\left\{\begin{matrix} ∠GEB=∠DFA \\ BE=AF \\ ∠GBE=∠DAF=90° \end{matrix}\right.$，
+
+    ∴△EBG≌△FAD（ASA），
+
+    故②中结论正确；
+
+    由②可知直线ED的解析式为$y=-\frac{b}{a}x+b+\frac{k}{a}$，
+
+    当x＝0时，可得$y=b+\frac{k}{a}$，
+
+    ∴$OG=b+\frac{k}{a}$，
+
+    ∴$BG=OG-OB=\frac{k}{a}$，
+
+    ∵$BE=\frac{k}{b}$，
+
+    ∴${S}_{△EGB}=\frac{1}{2}BE⋅BG=\frac{{k}^{2}}{2ab}=2$，
+
+    ∴$\frac{{k}^{2}}{ab}=4$
+
+    ∴k2＝4ab，
+
+    ∵k＜ab，
+
+    ∴$k=\frac{4ab}{k}＞4$，
+
+    故③中结论错误；
+
+    ∵点E的坐标是$(\frac{k}{b}，b)$，点D的坐标是$(a，\frac{k}{a})$，点C的坐标是（a，b），
+
+    ∴$BE=\frac{k}{b}$，$CE=a-\frac{k}{b}$，$AD=\frac{k}{a}$，$CD=b-\frac{k}{a}$，
+
+    ∴${S}_{△OEB}=\frac{1}{2}BE⋅OB=\frac{1}{2}b×\frac{k}{b}=\frac{k}{2}$，
+
+    S△OED＝S梯形OECA﹣S△AOD﹣S△ECD
+
+    $=\frac{1}{2}(EC+OA)⋅AC-\frac{1}{2}EC⋅DC-\frac{1}{2}OA⋅AD$
+
+    $=\frac{1}{2}(a-\frac{k}{b}+a)b-\frac{1}{2}(b-\frac{k}{a})(a-\frac{k}{b})-\frac{1}{2}a×\frac{k}{a}$
+
+    $=ab-\frac{k}{2}-\frac{1}{2}ab+\frac{k}{2}+\frac{k}{2}-\frac{{k}^{2}}{2ab}-\frac{k}{2}$
+
+    $=\frac{1}{2}ab-\frac{{k}^{2}}{2ab}$，
+
+    若△OEB与△OED的面积相等，
+
+    则有$\frac{1}{2}k=\frac{1}{2}ab-\frac{{k}^{2}}{2ab}$，
+
+    整理得：k2+abk﹣a2b2＝0，
+
+    ∵Δ＝（ab）2﹣4×（﹣a2b2）＝5a2b2＞0，
+
+    ∴方程一定有解，
+
+    ∴△OEB与△OED的面积可能相等，
+
+    故④的结论正确；
+
+    ∴结论正确的有②④，
+
+    故选：D．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
+  qc_status: draft
+  qc_note: ''
+- id: 9
+  type: 填空
+  score: 2
+  stem: 若$\sqrt{x+1}$在实数范围内有意义，则实数x的取值范围是 　       　 ．
+  answer: ''
+  solution: '解：根据题意得：x+1≥0，
+
+    ∴x≥﹣1，
+
+    故答案为：x≥﹣1．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
+  qc_status: draft
+  qc_note: ''
+- id: 10
+  type: 填空
+  score: 2
+  stem: 因式分解：3ax2﹣12ay2＝　                 　 ．
+  answer: ''
+  solution: '解：先提取公式因式3a，再利用平方差公式分解因式得，
+
+    原式＝3a（x2﹣4y2）＝3a（x+2y）（x﹣2y），
+
+    故答案为：3a（x+2y）（x﹣2y）．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
+  qc_status: draft
+  qc_note: ''
+- id: 11
+  type: 填空
+  score: 2
+  stem: 方程$\frac{1}{x}-\frac{2}{3x-4}=0$的解为　      　 ．
+  answer: ''
+  solution: '解：原方程移项得：$\frac{1}{x}=\frac{2}{3x-4}$，
+
+    去分母得：3x﹣4＝2x，
+
+    移项，合并同类项得：x＝4，
+
+    检验：当x＝4时，x（3x﹣4）＝4×（3×4﹣4）＝32≠0，
+
+    ∴x＝4是原分式方程的解．
+
+    故答案为：x＝4．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
+  qc_status: draft
+  qc_note: ''
+- id: 12
+  type: 填空
+  score: 2
+  stem: 一个n边形的内角和等于它的外角和的2倍，则n＝　   　 ．
+  answer: ''
+  solution: '解：由题意得：（n﹣2）×180°＝360°×2，
+
+    解得：n＝6，
+
+    故答案为：6．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
+  qc_status: draft
+  qc_note: ''
+- id: 13
+  type: 填空
+  score: 2
+  stem: '某中学九年级共有800名学生，为了解他们一周（7天）课外阅读的时长分布情况，从中随机抽取了50名学生，获得他们阅读时长的数据（单位：小时），数据整理如下：
+
+    | 时长x | 0≤x＜1 | 1≤x＜3 | 3≤x＜5 | x≥5 |
+
+    |---|---|---|---|---|
+
+    | 人数 | 8 | 12 | 25 | 5 |
+
+    根据以上信息，估计该校九年级800名学生中这一周课外阅读时长不少于3小时的人数是　      　 ．'
+  answer: ''
+  solution: '解：由表格可得，抽取的50名学生中，一周课外阅读时长不少于3小时的人数为25+5＝30，
+
+    该组数据的频率为$\frac{30}{50}=0.6$，
+
+    ∴阅读时长不少于3小时的人数为800×0.6＝480．
+
+    故答案为：480．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
+  qc_status: draft
+  qc_note: ''
+- id: 14
+  type: 填空
+  score: 2
+  stem: 如图，由边长为1的小正方形构成的网格中，点A，B，C都在格点上，以AB为直径的圆经过点C，D，则tan∠ADC的值为 　                　 ．
+  figure: 2026-xicheng-zhen/figures/image9.png
+  answer: ''
+  solution: '解：如图，连接AC、BC．
+
+
+    ∵∠ADC和∠ABC所对的弧长都是$\vec{AC}$，
+
+    ∴根据圆周角定理的推论知，∠ADC＝∠ABC．
+
+    在Rt△ACB中，根据锐角三角函数的定义知，
+
+    ∵AC＝2，BC＝3，
+
+    ∴tan∠ABC$=\frac{AC}{BC}=$$\frac{2}{3}$，
+
+    ∴tan∠ADC$=\frac{2}{3}$．
+
+    故答案为：$\frac{2}{3}$．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
+  qc_status: draft
+  qc_note: ''
+- id: 15
+  type: 填空
+  score: 2
+  stem: 如图，在正方形ABCD中，点E在边BC上，点F是DE的中点，过点F作GH⊥DE分别交AB，DC于点G，H，连接EG．若AB＝8，DH＝5，则△EFG的面积为　     　 ．
+  figure: 2026-xicheng-zhen/figures/image10.png
+  answer: ''
+  solution: '解：如图，点F是DE的中点，GH⊥DE，连接DG，EH，
+
+
+    ∴EH＝DH＝5，GD＝GE，
+
+    ∵正方形ABCD中AB＝BC＝CD＝DA＝8，
+
+    ∴HC＝DC﹣DH＝3，
+
+    在Rt△EHC中，由勾股定理得：$EC=\sqrt{E{H}^{2}-H{C}^{2}}=4$，
+
+    ∴BE＝BC﹣EC＝4，
+
+    设AG＝x，则BG＝AB﹣AG＝8﹣x，
+
+    ∵GD2＝AG2+AD2，GE2＝BG2+BE2，
+
+    ∴AG2+AD2＝BG2+BE2，即：x2+82＝（8﹣x）2+42，
+
+    解得：x＝1，
+
+    在直角三角形BEG中，由勾股定理得：$GE=\sqrt{B{G}^{2}+B{E}^{2}}=\sqrt{{(8-1)}^{2}+{4}^{2}}=\sqrt{65}$，
+
+    在直角三角形CDE中，由勾股定理得：$DE=\sqrt{D{C}^{2}+C{E}^{2}}=\sqrt{{8}^{2}+{4}^{2}}=4\sqrt{5}$，点F是DE的中点，
+
+    ∴$EF=\frac{1}{2}DE=2\sqrt{5}$，
+
+    ∵GH⊥DE，
+
+    在直角三角形EFG中，由勾股定理得：$GF=\sqrt{G{E}^{2}-E{F}^{2}}=\sqrt{65-20}=3\sqrt{5}$，
+
+    ∴${S}_{△EFG}=\frac{1}{2}GF×EF=\frac{1}{2}×3\sqrt{5}×2\sqrt{5}=15$，
+
+    故答案为：15．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
+  qc_status: draft
+  qc_note: ''
+- id: 16
+  type: 填空
+  score: 2
+  stem: '某体育馆有三块场地，分别记为场地1，2，3．三块场地每次用完后，需安排甲、乙、丙三名员工进行维护，每个场地都要完成A，B，C三个项目才算维护完成．要求：甲只负责A，乙只负责B，丙只负责C；同一场地同一时间只进行一个项目的维护，一个人维护完一个场地后才能进行下一个场地的维护，C必须最后完成．如表是这三名员工在维护这三个场地时每个项目所需时间（单位：分钟）：
+
+    | 项目 场地 | A | B | C |
+
+    |---|---|---|---|
+
+    | 1 | 6 | 8 | 2 |
+
+    | 2 | 5 | 4 | 1 |
+
+    | 3 | 7 | 6 | 3 |
+
+    （1）若只维护场地1和场地2，则最少需要　     　 分钟；
+
+    （2）若三块场地都要维护，则最少需要　     　 分钟．'
+  answer: ''
+  solution: '解：（1）理解题意，假设早上8：00点开始进行维护，
+
+    当早上8：00开始计时，乙去场地1进行场地的维护，同时甲去场地2进行场地的维护，
+
+    即在8：～8：08，乙维护场地1；
+
+    即在8：～8：07，甲维护场地3；
+
+    ∵同一场地同一时间只进行一个项目的维护，一个人维护完一个场地后才能进行下一个场地的维护，
+
+    ∴早上8：08甲去场地1进行场地的维护，乙去场地2进行场地的维护，
+
+    则8+4＝12，
+
+    ∴8：12乙已结束场地2的维护，丙再去场地2进行场地的维护，
+
+    故8：13丙已结束场地2的维护，
+
+    ∵8+6＝14，
+
+    ∴在8：08～8：14，甲进行场地1的维护，
+
+    ∴8：14甲已结束场地1的维护，丙再去场地1进行场地的维护，
+
+    则14+2＝16，
+
+    故8：16丙已结束场地1的维护，
+
+    ∴只维护场地1和场地2，则最少需要16分钟；
+
+    故答案为：16；
+
+    （2）理解题意，假设早上8：00点开始进行维护，
+
+    当早上8：00开始计时，乙去场地1进行场地的维护，同时甲去场地3进行场地的维护，
+
+    即在8：～8：08，乙维护场地1；
+
+    即在8：～8：07，甲维护场地3；
+
+    在8：07～8：12，甲维护场地2；
+
+    ∴在8：08～8：14，乙维护场地3；
+
+    此时在8：14，乙维护场地3结束后，丙再去场地3进行场地的维护，
+
+    ∴在8：17，丙结束场地3的维护，
+
+    ∴在8：12～8：18，甲维护场地1；
+
+    此时在8：18，甲维护场地1结束后，丙再去场地1进行场地的维护，
+
+    即在8：18～8：20，丙维护场地1；
+
+    当丙维护场地1结束后，马上去场地2进行场地的维护，
+
+    ∴在8：21，丙结束场地2的维护，
+
+    若三块场地都要维护，则最少需要21分钟．
+
+    故答案为：21．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
+  qc_status: draft
+  qc_note: ''
+- id: 17
+  type: 解答
+  score: 5
+  stem: 计算：$|-\sqrt{3}|-\sqrt{12}+4sin60°+{(\frac{1}{4})}^{-1}$．
+  answer: ''
+  solution: 解：原式$=\sqrt{3}-2\sqrt{3}+4×\frac{\sqrt{3}}{2}+4=$$4+\sqrt{3}$．
+  knowledge_points: []
+  module: ''
+  difficulty: ''
+  qc_status: draft
+  qc_note: ''
+- id: 18
+  type: 解答
+  score: 5
+  stem: 解不等式组：$\left\{\begin{matrix} 2(x+2)≥x+3 \\ \frac{x+1}{2}＜2x \end{matrix}\right.$．
+  answer: ''
+  solution: '解：解不等式2（x+2）≥x+3得x≥﹣1，
+
+    解不等式$\frac{x+1}{2}＜2x$得$x＞\frac{1}{3}$，
+
+    ∴原不等式组的解集为$x＞\frac{1}{3}$．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
+  qc_status: draft
+  qc_note: ''
+- id: 19
+  type: 解答
+  score: 5
+  stem: 已知2x﹣y﹣3＝0，求代数式$\frac{{x}^{2}}{2x-y}⋅(2+\frac{{y}^{2}-4xy}{2{x}^{2}})$的值．
+  answer: ''
+  solution: '解：∵2x﹣y﹣3＝0，
+
+    ∴2x﹣y＝3，
+
+    ∴原式$=\frac{{x}^{2}}{2x-y}⋅\frac{4{x}^{2}+{y}^{2}-4xy}{2{x}^{2}}=\frac{{x}^{2}}{2x-y}⋅\frac{{(2x-y)}^{2}}{2{x}^{2}}=\frac{2x-y}{2}=$$\frac{3}{2}$．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
+  qc_status: draft
+  qc_note: ''
+- id: 20
+  type: 解答
+  score: 6
+  stem: '如图，在四边形ABCD中，∠ABC＝∠ADC＝90°，对角线AC平分∠BAD，过点B作BE⊥CD交DC的延长线于点E，过点B作BF∥ED，交AC于点G，交AD于点F．
+
+    （1）求证：四边形BEDF是矩形；
+
+    （2）若点F是AD的中点，DE＝9，求AB的长．'
+  figure: 2026-xicheng-zhen/figures/image11.png
+  answer: ''
+  solution: '（1）证明：∵BE⊥CD，
+
+    ∴∠BED＝90°，
+
+    ∵BF∥ED，
+
+    ∴∠BFD+∠ADC＝180°，
+
+    ∵∠ADC＝90°，
+
+    ∴∠BFD＝90°＝∠FDE＝∠BED，
+
+    ∴四边形BEDF是矩形．
+
+    （2）解：∵点F是AD的中点，
+
+    ∴AD＝2AF，
+
+    ∵AC平分∠BAD，
+
+    ∴∠BAC＝∠DAC，
+
+    ∵∠ABC＝∠ADC＝90°，AC＝AC，
+
+    ∴△ABC≌△ADC（AAS），
+
+    ∴AB＝AD＝2AF，
+
+    ∴在Rt△ABF中，$sin∠ABF=\frac{AF}{AB}=\frac{1}{2}$，
+
+    ∴∠ABF＝30°，
+
+    ∵在矩形BEDF中，DE＝9，
+
+    ∴BF＝DE＝9，
+
+    ∵$cos∠ABF=\frac{BF}{AB}$，
+
+    ∴$cos30°=\frac{9}{AB}=\frac{\sqrt{3}}{2}$，
+
+    ∴$AB=6\sqrt{3}$．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
+  qc_status: draft
+  qc_note: ''
+- id: 21
+  type: 解答
+  score: 5
+  stem: '在平面直角坐标系xOy中，函数y＝kx+b（k≠0）的图象经过点（﹣1，3）和（2，0）．
+
+    （1）求k，b的值；
+
+    （2）当x＞﹣1时，对于x的每一个值，函数y＝mx+4（m≠0）的值既大于函数y＝kx+b的值，也大于函数$y=-\frac{1}{4}x+b$的值，直接写出m的取值范围．'
+  answer: ''
+  solution: '解：（1）由提交可知$\left\{\begin{matrix} -k+b=3 \\ 2k+b=0 \end{matrix}\right.$，
+
+    解得$\left\{\begin{matrix} k=-1 \\ b=2 \end{matrix}\right.$，即y＝﹣x+2，
+
+    ∴k的值为﹣1，b的值为2．
+
+    （2）由上可得函数y＝mx+4（m≠0）的值既大于函数y＝﹣x+2的值，也大于函数$y=-\frac{1}{4}x+2$的值，
+
+    ∴y＝﹣x+2和$y=-\frac{1}{4}x+2$的函数是从左到右为下降的直线，
+
+    当m＜0时，不等式$mx+4＞-\frac{1}{4}x+2$需对所有x＞﹣1成立，
+
+    整理得$(m+\frac{1}{4})x＞-2$，
+
+    要使该不等式对任意大的正数x都成立，则x的系数必须非负，即$m+\frac{1}{4}≥0$，
+
+    解得$m≥-\frac{1}{4}$，
+
+    结合m＜0，得$-\frac{1}{4}≤m＜0$．
+
+    当m＞0时，将x＝﹣1代入y＝﹣x+2和$y=-\frac{1}{4}x+2$中，
+
+    即y＝1+2＝3，$y=\frac{1}{4}+2=\frac{9}{4}$，
+
+    ∵函数y＝mx+4（m≠0）的值既大于函数y＝﹣x+2的值，也大于函数$y=-\frac{1}{4}x+2$的值，
+
+    ∴将x＝﹣1代入y＝mx+4（m≠0）时，y≥3，
+
+    即﹣m+4≥3，
+
+    解得：m≤1，
+
+    综上可得：$-\frac{1}{4}≤m≤1$且m≠0．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
+  qc_status: draft
+  qc_note: ''
+- id: 22
+  type: 解答
+  score: 6
+  stem: 竹节人是中国传统民间玩具，它由竹节与线绳组装而成．如图1，制作一个竹节人，需将一根粗细均匀的竹子截成九段：一段长竹节为头和上身，另八段等长短竹节为四肢．如图2，已知短竹节长与长竹节长的比为1：2，竹节人的头长与上身长的比为1：3，头宽比头长少0.5cm，竹节人完全张开手臂的臂展AB长为22cm，求这个竹节人的总高度．
+  figure: 2026-xicheng-zhen/figures/image12.png
+  answer: ''
+  solution: '解：∵短竹节长与长竹节长的比为1：2，竹节人的头长与上身长的比为1：3，头宽比头长少0.5cm，竹节人完全张开手臂的臂展AB长为22cm，
+
+    ∴设竹节人的头长为xcm，则它的上身长为3xcm，头宽为（x﹣0.5）cm，下身长为4xcm．
+
+    ∴8x+（x﹣0.5）＝22．
+
+    解得x＝2.5．
+
+    所以8x＝20．
+
+    答：这个竹节人的总高度为20cm．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
+  qc_status: draft
+  qc_note: ''
+- id: 23
+  type: 解答
+  score: 5
+  stem: '某校开展合理使用手机的宣传活动，某班班长选取甲、乙、丙、丁四名同学进行经验分享，他收集了这四名同学最近10天使用手机的时长（单位：分钟）的数据，并进行整理、描述和分析．下面给出了部分信息．
+
+    a．甲同学10天使用手机时长：
+
+    12  14  14  14  15  16  19  20  21  25
+
+    b．乙、丙同学10天使用手机时长的折线图：
+
+    c．四名同学10天使用手机时长的平均数、中位数、方差：
+
+    |  | 甲 | 乙 | 丙 | 丁 |
+
+    |---|---|---|---|---|
+
+    | 平均数 | m | 16 | 17 | 16 |
+
+    | 中位数 | 15.5 | 15 | p | 16.5 |
+
+    | 方差 | 15 | 7.8 | n | 7.8 |
+
+    （1）表中m的值为　     　 ，p的值为　       　 ，n　   　 15（填“＞”“＝”或“＜”）；
+
+    （2）根据这10天使用手机的数据，班长按如下方式决定四名同学的分享顺序：首先比较平均数，平均数较小者优先；若平均数相等，则比较方差，方差较小者优先；若平均数、方差分别相等，则使用时长小于平均数的次数较多者优先．四名同学的经验分享顺序依次为　          　 ．'
+  figure: 2026-xicheng-zhen/figures/image13.png
+  answer: ''
+  solution: '解：（1）a．甲同学10天使用手机时长：12  14  14  14  15  16  19  20  21  25，则：
+
+    $m=\frac{1}{10}×(12+3×14+15+16+19+20+21+25)=17$分钟；
+
+    由折线统计图可知，把丙同学使用手机的时长按照从小到大的顺序排列如下：
+
+    12、12、13、16、16、17、19、21、21、23，
+
+    共有10个数据，其中第5和第6个数据是16和17，
+
+    ∴丙同学使用手机时长的中位数为$p=\frac{1}{2}×(16+17)=16.5$；
+
+    丙同学使用手机的时长的方差为$n=\frac{1}{10}[{(12-17)}^{2}+{(12-17)}^{2}+{(13-17)}^{2}+{(16-17)}^{2}+{(16-17)}^{2}+{(17-17)}^{2}+{(19-17)}^{2}+{(21-17)}^{2}+{(21-17)}^{2}+{(23-17)}^{2}]=14$，
+
+    ∴n＜15；
+
+    故答案为：17，16.5，＜；
+
+    （2）由平均数可知，甲和丙的平均数都是17，乙和丁的平均数都是16，
+
+    ∴乙和丁优先，
+
+    ∵甲的方差是15，丙的方差是14，
+
+    ∴丙比甲优先，
+
+    ∵乙和丁的方差都是7.8，
+
+    ∵乙的中位数是15，丁的中位数是16.5，
+
+    ∴乙使用时长小于平均数的次数较多，
+
+    ∴乙比丁优先，
+
+    四名同学的经验分享顺序依次为乙、丁、丙、甲．
+
+    故答案为：乙，丁，丙，甲．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
+  qc_status: draft
+  qc_note: ''
+- id: 24
+  type: 解答
+  score: 6
+  stem: '如图，AB，CD均为⊙O的直径，作弦AE⊥CD于点F，连接AC．过点B作⊙O的切线交AE的延长线于点G．
+
+    （1）求证：$∠CAE=\frac{1}{2}∠AOC$；
+
+    （2）连接DE，若$DE=4\sqrt{6}，cos∠CAE=\frac{\sqrt{6}}{3}$，求EG的长．'
+  figure: 2026-xicheng-zhen/figures/image14.png
+  answer: ''
+  solution: '（1）证明：如图1，弦AE⊥直径CD，连接CE，
+
+
+    ∴$\vec{AC}=\vec{CE}$，
+
+    ∴∠AEC＝∠CAE，
+
+    ∵$∠AEC=\frac{1}{2}∠AOC$，
+
+    ∴$∠CAE=\frac{1}{2}∠AOC$；
+
+    （2）解：如图2，CD是⊙O的直径，连接CE，
+
+
+    ∴∠CED＝90°，
+
+    ∵∠CDE＝∠CAE，$cos∠CAE=\frac{\sqrt{6}}{3}$，
+
+    ∴$cos∠CDE=\frac{\sqrt{6}}{3}$，
+
+    ∵在Rt△CED中，$DE=4\sqrt{6}$，
+
+    ∴$cos∠CDE=\frac{DE}{CD}=\frac{4\sqrt{6}}{CD}=\frac{\sqrt{6}}{3}$，
+
+    解得：CD＝12，
+
+    ∴CD＝AB＝12，OA＝6，
+
+    ∵弦AE⊥直径CD，
+
+    ∴AF＝EF，AE＝2EF，
+
+    在Rt△EFD中，∠EFD＝90°，
+
+    ∴$DF=DEcos∠CDE=4\sqrt{6}×\frac{\sqrt{6}}{3}=8$，
+
+    由勾股定理得：$EF=\sqrt{D{E}^{2}-D{F}^{2}}=\sqrt{{(4\sqrt{6})}^{2}-{8}^{2}}=4\sqrt{2}$，
+
+    ∴$AF=4\sqrt{2}$，$AE=8\sqrt{2}$，
+
+    在Rt△OAF中，$cos∠OAF=\frac{AF}{OA}=\frac{2\sqrt{2}}{3}$，
+
+    ∵BG为⊙O切线，OB是半径，
+
+    ∴BG⊥OB，
+
+    ∴∠ABG＝90°，
+
+    ∵在Rt△ABG中，$cos∠BAG=\frac{AB}{AG}$，
+
+    ∴$cos∠BAG=cos∠OAF=\frac{2\sqrt{2}}{3}$，
+
+    ∴$AG=9\sqrt{2}$，
+
+    ∴$EG=AG-AE=\sqrt{2}$．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
+  qc_status: draft
+  qc_note: ''
+- id: 25
+  type: 解答
+  score: 5
+  stem: '研究表明：记完某种资料后，大脑的记忆保持率为y（单位：%）会随时间t（单位：小时）的变化而变化．设小明记完资料一后的记忆保持率为y1，记完资料二后的记忆保持率为y2，且y1和y2互不影响．通过分析发现，可以用函数刻画y1与t，y2与t之间的关系，部分数据如下：
+
+    | t | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
+
+    |---|---|---|---|---|---|---|---|---|---|---|---|
+
+    | y1 | 100 | 79 | 64 | 51 | 41 | 33 | 26 | 21 | 16 | 13 | 10 |
+
+    | y2 | 100 | 85 | 72 | 60 | 50 | 42 | 36 | 31 | 26 | 22 | 19 |
+
+    在给出的平面直角坐标系xOy中，函数y1的图象如图所示．
+
+    （1）观察函数y1的图象，当整数t的值为　   　 时，y1的值首次低于40；
+
+    （2）在给出的平面直角坐标系xOy中，画出函数y2的图象；
+
+    （3）假设小明首次记完资料一或资料二均需要1小时．
+
+    ①小明先记完资料二，a小时后开始记忆资料一，若他记完资料二8小时后，资料一和资料二的记忆保持率相同，则a的值是　   　 ；
+
+    ②小明记完一个资料后，休息30分钟，再记忆另一个资料．若从开始记忆计时，4小时后资料一和资料二的记忆保持率的和最大，则小明应该先记忆资料　   　 （填“一”或“二”），此时记忆保持率和的最大值是　      　 （结果是整数）．'
+  figure: 2026-xicheng-zhen/figures/image15.png
+  answer: ''
+  solution: '解：（1）由图可知：t＝4时，y＝41（不低于40），
+
+    t＝5时，y＝33（低于40），
+
+    所以整数t的值为5．
+
+    故答案为：5；
+
+    （2）函数y2的图象如图：
+
+    ；
+
+    （3）①由表格可知：t＝6时，y1＝26，
+
+    当t＝8时，y2＝26，
+
+    ∴8﹣a﹣1＝6，即：a＝1；
+
+    ②若先记忆资料一时，
+
+    当t＝4﹣1＝3时，y1＝51，
+
+    当t＝4﹣1﹣0.5﹣1＝1.5时，y2≈78，
+
+    ∴51+78＝129；
+
+    若先记忆资料二时，当t＝4﹣1＝3时，y2＝60，当t＝4﹣1﹣0.5﹣1＝1.5时，y1≈71，
+
+    ∴60+71.5＝131，
+
+    ∵131＞129，
+
+    ∴从开始记忆计时，4小时后资料一和资料二的记忆保持率的和最大，则小明应该先记忆资料二，此时记忆保持率和的最大值是131．
+
+    故答案为：二；131．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
+  qc_status: draft
+  qc_note: ''
+- id: 26
+  type: 解答
+  score: 6
+  stem: '在平面直角坐标系xOy中，已知二次函数y＝ax2﹣bx（a＞0）．
+
+    （1）当x≤2时，y随x的增大而减小，当x≥2时，y随x的增大而增大，用等式表示a与b关系，并说明理由；
+
+    （2）当a＝1，b＝2时，将二次函数y＝ax2﹣bx的图象记为C1，一次函数y＝kx（k＞0）的图象记为C2，过点P（t，0）作x轴的垂线分别交C1，C2于点M，N．当﹣1＜t＜3时，M点与N点的距离存在最大值，求k的取值范围．'
+  answer: ''
+  solution: '解：（1）在平面直角坐标系xOy中，已知二次函数y＝ax2﹣bx（a＞0）．
+
+    由题意可得：二次函数y＝ax2﹣bx图象的对称轴为x＝2，
+
+    ∴$-\frac{-b}{2a}=2$，
+
+    ∴b＝4a；
+
+    （2）当a＝1，b＝2时，将二次函数y＝ax2﹣bx的图象记为C1，一次函数y＝kx（k＞0）的图象记为C2，过点P（t，0）作x轴的垂线分别交C1，C2于点M，N．
+
+    当a＝1，b＝2时，二次函数为y＝x2﹣2x；
+
+    设点M（t，y1），N（t，y2），则${y}_{1}={t}^{2}-2t$，y2＝kt（k＞0），
+
+    解方程t2﹣2t＝kt，
+
+    可得：t＝0，t2＝k+2，
+
+    当t1＝0时，可得：y＝0，
+
+    当t＝2时，可得：y＝t（k+2），
+
+    ∴C1与C2的交点坐标为（0，0）和（k+2，t（k+2）），
+
+    设M点与N点的距离为d，
+
+    （ⅰ）如下图所示，
+
+    当﹣1＜t≤0时，d＝t2﹣（2+k）t，
+
+    ∵$\frac{2+k}{2}＞0$，
+
+    ∴当﹣1＜t≤0时，d随t的增大而减小，
+
+    当t＝0时，d＝0，
+
+    当t＝﹣1时，d＝t2﹣（2+k）t＝k+3，
+
+    ∴0≤d＜k+3；
+
+
+    （ⅱ）如下图所示，
+
+    当0＜t≤k+2时，d＝﹣t2+（2+k）t，
+
+    ∵当$0＜t≤\frac{k+2}{2}$时，d随t的增大而增大，
+
+    当$\frac{k+2}{2}≤t≤k+2$时，d随t的增大而减小，
+
+    ∴当$t=\frac{k+2}{2}$时，d的最大值为$d=-{t}^{2}+(2+k)t=-{(\frac{k+2}{2})}^{2}+(k+2)(\frac{k+2}{2})=\frac{{(k+2)}^{2}}{4}$；
+
+
+    （ⅲ）如下图所示，
+
+    当t＞k+2时，d＝t2﹣（2+k）t，
+
+    此时d随t的增大而增大，
+
+    ∵﹣1＜t＜3，
+
+    ∴令t＝3，则d＝3﹣3k，
+
+    ∵（k+3）﹣（3﹣3k）＝4k＞0，
+
+    ∴k+3＞3﹣3k，
+
+    令$\frac{{(k+2)}^{2}}{4}=k+3$，
+
+    解得：$k=2\sqrt{2}$
+
+    依题意，得$\frac{k+2}{2}＜3$，
+
+    解得：k＜4，
+
+    ∴当﹣1＜t＜3时，d存在最大值，
+
+    结合函数的图象，得$2\sqrt{2}≤k＜4$．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
+  qc_status: draft
+  qc_note: ''
+- id: 27
+  type: 解答
+  score: 7
+  stem: '在△ABC中，∠BAC＝α，AB＝AC，CD⊥AB于点D，过点B作BM∥AC，P是线段DB上一点，连接CP，作∠CAQ＝∠APC，交射线BM于点Q．
+
+    （1）如图1，当∠CAQ＝2α（36°＜α＜60°）时，求∠BCP的度数（用含α的式子表示）；
+
+    （2）如图2，点E为AP中点，用等式表示DE与BQ的数量关系，并证明．'
+  figure: 2026-xicheng-zhen/figures/image16.png
+  answer: ''
+  solution: '解：（1）∵AB＝AC，
+
+    ∴∠ABC＝∠ACB．
+
+    ∵∠BAC＝α，
+
+    ∴$∠ABC=\frac{180°-∠BAC}{2}=90°-\frac{α}{2}$．
+
+    ∵∠CAQ＝2α，∠CAQ＝∠APC，
+
+    ∴$∠BCP=∠APC-∠ABC=2α-(90°-\frac{α}{2})=\frac{5α}{2}-90°$．
+
+    （2）如图，在AD上取点N，使得DN＝DP，连接CN．
+
+
+    ∵CD⊥AB，
+
+    ∴CP＝CN．
+
+    ∴∠CNP＝∠APC．
+
+    ∵∠CAQ＝∠APC，
+
+    ∴∠CNP＝∠CAQ．
+
+    ∵AC∥BM，
+
+    ∴∠AQM＝∠CAQ．
+
+    ∴∠AQM＝∠CNP．
+
+    ∵∠CNA+CNP＝180°，∠AQB+∠AQM＝180°，
+
+    ∴∠AQB＝∠CNA．
+
+    在△CNA和△AQB中，
+
+    $\left\{\begin{matrix} ∠CAB=∠ABM \\ ∠AQB=∠CNA \\ AB=AC \end{matrix}\right.$，
+
+    ∴△CNA≌△AQB（AAS）．
+
+    ∴AN＝BQ．
+
+    ∵E是AP的中点，
+
+    ∴AP＝2PE．
+
+    ∵PN＝2PD，
+
+    ∴AN＝AP﹣PN＝2PE﹣2PD＝2DE．
+
+    ∴BQ＝2DE．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
+  qc_status: draft
+  qc_note: ''
+- id: 28
+  type: 解答
+  score: 7
+  stem: '对于点P，⊙C和直线l，若将⊙C绕点P逆时针旋转α（0°＜α＜180°）得到⊙C′，使得⊙C′与直线l相切，则称点P为⊙C和直线l的旋切点，当存在n个满足条件的α时，称该点为n阶旋切点，其中最小的α称为最小旋切角．
+
+    在平面直角坐标系xOy中．
+
+    （1）若⊙O的半径为1，直线l：x＝2，则在点A（﹣2，0），$B(\frac{1}{2}，-1)$，C（0，2）中，点　   　 是⊙O和直线l的旋切点，且为　   　 阶旋切点；
+
+    （2）已知点T（t，0），⊙T的半径为2，直线m：y＝﹣4，若点（0，3）是⊙T和直线m的旋切点，则t的取值范围是　       　 ；
+
+    （3）已知点K（﹣1，1），⊙K的半径为1，直线n：y＝x+b，点（0，2）是⊙K和直线n的2阶旋切点且最小旋切角不超过60°，直接写出b的取值范围．'
+  answer: ''
+  solution: '解：（1）如图，
+
+
+    ∵0°＜α＜180°，
+
+    ∴⊙O绕点A，B旋转α时，均无法与直线l：x＝2相切．
+
+    当⊙O绕点C（0，2）逆时针旋转α时，可使圆心落在直线x＝1上，此时⊙O与x＝2相切．
+
+    ∴存在两个满足条件的α．
+
+    ∴n＝2，点C为2阶旋切点．
+
+    故答案为：C，2；
+
+    （2）如图，
+
+
+    ∵⊙T逆时针旋转后与y＝﹣4相切．
+
+    ∴点T位于y轴左侧．
+
+    ∵当圆心T''落在y＝﹣2时，⊙T与y＝﹣4相切．
+
+    ∴LT''≥5∴LT≥5．
+
+    ∴在Rt△OLT中，由勾股定理得，t≤﹣4．
+
+    故答案为：t≤﹣4；
+
+    （3）∵最小弦切角不超过60°，
+
+    ∴将K绕点M逆时针旋转60°得到点N，△MKN为等边三角形
+
+    ．以M为圆心，KM为半径作圆，K''在劣弧KN上移动．
+
+    当K''由K向N移动时，
+
+    ∵直线n与⊙K''相切，
+
+    ∴直线n上下平移．
+
+    当直线n与⊙K''在下方相切时，
+
+
+    n1与⊙K相切，
+
+    此时$KO=K′O=\sqrt{2}$，KH＝1，
+
+    ∴$OH=\sqrt{2}-1$，
+
+    ∴${b}_{1}=(\sqrt{2}-1)⋅\sqrt{2}=2-\sqrt{2}$；
+
+    n2与⊙N相切，M（0，2），
+
+    ∴$KM=\sqrt{2}$，$EM=\frac{\sqrt{2}}{2}$，
+
+    ∴$EN=\frac{\sqrt{6}}{2}$，GN$=\frac{\sqrt{6}}{2}-$$\frac{\sqrt{2}}{2}$，
+
+    ∴GF$=\frac{\sqrt{6}}{2}-$$\frac{\sqrt{2}}{2}+$1，
+
+    ∴GJ$=(\frac{\sqrt{6}}{2}-\frac{\sqrt{2}}{2}+1)⋅\sqrt{2}=\sqrt{3}-1+\sqrt{2}$．
+
+    ∴${b}_{2}=1-(\sqrt{3}-1+\sqrt{2})=2-\sqrt{3}-\sqrt{2}$，
+
+    ∴$2-\sqrt{3}-\sqrt{2}≤b＜2-\sqrt{2}$；
+
+    ∵当直线n与⊙K''在上方相切时，
+
+
+    直线n3与⊙K相切，
+
+    此时$OX=\sqrt{2}+1$，
+
+    ∴${b}_{3}=(\sqrt{2}+1)\sqrt{2}=2+\sqrt{2}$．
+
+    直线n4与⊙N相切，$GN=\frac{\sqrt{6}}{2}-\frac{\sqrt{2}}{2}$，
+
+    ∴$YG=1-GN=1-\frac{\sqrt{6}}{2}+\frac{\sqrt{2}}{2}$．
+
+    ∴${b}_{4}=(1-\frac{\sqrt{6}}{2}+\frac{\sqrt{2}}{2})\sqrt{2}+1=\sqrt{2}-\sqrt{3}+2$．
+
+    ∴$2+\sqrt{2}-\sqrt{3}≤b＜2+\sqrt{2}$．
+
+    综上$2+\sqrt{2}-\sqrt{3}≤b＜2+\sqrt{2}$或$2-\sqrt{3}-\sqrt{2}≤b＜2-\sqrt{2}$．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
+  qc_status: draft
+  qc_note: ''

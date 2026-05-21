@@ -1,0 +1,1140 @@
+year: 2026
+district: 平谷区
+exam_type: 一模
+subject: math
+full_score: 100
+duration_minutes: 120
+total_questions: 28
+structure: 8单选(16分) + 8填空(16分) + 12解答(68分)
+questions:
+- id: 1
+  type: 单选
+  score: 2
+  stem: 下列图形中，既是轴对称图形又是中心对称图形的是（　　）
+  options:
+    A: '[图]'
+    B: '[图]'
+    C: '[图]'
+    D: '[图]'
+  has_image_options: true
+  figure: 2026-pinggu-zhen/figures/image.png
+  answer: D
+  solution: '解：A．选项中的图形是轴对称图形，但不是中心对称图形，故不符合题意；
+
+    B．选项中的图形是中心对称图形，但不是轴对称图形，故不符合题意；
+
+    C．选项中的图形是轴对称图形，但不是中心对称图形，故不符合题意；
+
+    D．选项中的图形既是轴对称图形，又是中心对称图形，故符合题意．
+
+    故选：D．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
+  qc_status: draft
+  qc_note: ''
+- id: 2
+  type: 单选
+  score: 2
+  stem: 实数a，b在数轴上的位置如图所示，下列结论中正确的是（　　）
+  options:
+    A: a＞b
+    B: '|a|＞|b|'
+    C: ﹣a＜b
+    D: a+b＞0
+  figure: 2026-pinggu-zhen/figures/image5.png
+  answer: B
+  solution: '解：如图所示：A、a＜b，故此选项错误；
+
+    B、|a|＞|b|，正确；
+
+    C、﹣a＞b，故此选项错误；
+
+    D、a+b＜0，故此选项错误；
+
+    故选：B．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
+  qc_status: draft
+  qc_note: ''
+- id: 3
+  type: 单选
+  score: 2
+  stem: 一个多边形的每个外角都等于72°，则这个多边形的边数为（　　）
+  options:
+    A: '5'
+    B: '6'
+    C: '7'
+    D: '8'
+  answer: A
+  solution: '解：多边形的边数是：360÷72＝5．
+
+    故选：A．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
+  qc_status: draft
+  qc_note: ''
+- id: 4
+  type: 单选
+  score: 2
+  stem: 一个布袋里有2个红球，1个白球，这些球除颜色外无其它差别．从中任意摸出一个球，记下颜色后放回，搅匀，再摸出一个球，则摸到不同颜色的概率是（　　）
+  options:
+    A: $\frac{1}{3}$
+    B: $\frac{2}{3}$
+    C: $\frac{4}{9}$
+    D: $\frac{5}{9}$
+  answer: C
+  solution: '解：列表如下：
+
+    |  | 白 | 红 | 红 |
+
+    |---|---|---|---|
+
+    | 白 | （白，白） | （红，白） | （红，白） |
+
+    | 红 | （白，红） | （红，红） | （红，红） |
+
+    | 红 | （白，红） | （红，红） | （红，红） |
+
+    由表可知，共有9种等可能结果，其中摸到不同颜色的结果有4种，
+
+    ∴摸到不同颜色的概率是$\frac{4}{9}$，
+
+    故选：C．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
+  qc_status: draft
+  qc_note: ''
+- id: 5
+  type: 单选
+  score: 2
+  stem: 若关于x的一元二次方程x2+2（m+1）x+m2﹣1＝0有实数根，则m的取值范围为（　　）
+  options:
+    A: m＞﹣1
+    B: m≥﹣1
+    C: m＜﹣1
+    D: m≤﹣1
+  answer: B
+  solution: '解：由题意得：Δ＝b2﹣4ac＝[2（m+1）]2﹣4×1×（m2﹣1）
+
+    ＝4（m2+2m+1）﹣4m2+4
+
+    ＝4m2+8m+4﹣4m2+4
+
+    ＝8m+8≥0，
+
+    解得：m≥﹣1．
+
+    故选：B．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
+  qc_status: draft
+  qc_note: ''
+- id: 6
+  type: 单选
+  score: 2
+  stem: 一根普通的头发丝的直径约为0.00007m，而光刻机的精度可以达到7nm级别，相当于一根头发丝直径的h分之一，已知1nm＝10﹣9m，则h约为（　　）
+  options:
+    A: 10﹣3
+    B: 10﹣4
+    C: '103'
+    D: '104'
+  answer: D
+  solution: '解：0.00007＝7×10﹣5，7nm＝7×10﹣9m，
+
+    （7×10﹣5）÷（7×10﹣9）＝104，
+
+    即h约为104，
+
+    故选：D．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
+  qc_status: draft
+  qc_note: ''
+- id: 7
+  type: 单选
+  score: 2
+  stem: 如图，△ABC中，∠ABC＝56°，以点B为圆心，任意长为半径画弧，分别交AB，BC于点E，F，若分别以点E，F为圆心，大于$\frac{1}{2}EF$长为半径画弧，两弧在∠ABC内部交于点M，作射线BM，再以点A为圆心，AB长为半径画弧交射线BM于点D，则∠BAD的度数为（　　）
+  options:
+    A: 152°
+    B: 114°
+    C: 124°
+    D: 134°
+  figure: 2026-pinggu-zhen/figures/image6.png
+  answer: C
+  solution: '解：由作图可得，BD平分∠ABC，AD＝AB，
+
+    ∴$∠ADB=∠ABD=\frac{1}{2}∠ABC=\frac{1}{2}×56°=28°$，
+
+    ∴∠BAD＝180°﹣∠ABD﹣∠ADB＝124°，
+
+    故选：C．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
+  qc_status: draft
+  qc_note: ''
+- id: 8
+  type: 单选
+  score: 2
+  stem: '如图，一次函数y＝﹣x+5的图象与反比例函数$y=\frac{4}{x}(x＞0)$的图象在第一象限内交于点A，B，且该一次函数的图象与y轴正半轴交于点C，过A，B分别作y轴的垂线，垂足分别为D，E．若点M为反比例函数图象在A，B之间的动点，作射线OM交直线AB于点N．给出下面四个结论：
+
+    ①$\frac{CD}{CE}=\frac{1}{4}$；
+
+    ②四边形ADEB的面积为$\frac{15}{4}$；
+
+    ③当点M的坐标为（2，2）时，线段MN的长度最大；
+
+    ④当点N的坐标为（3，2）时，线段MN的长度最大．
+
+    上述结论中，所有正确结论的序号是（　　）'
+  options:
+    A: ①③
+    B: ①④
+    C: ②③
+    D: ②④
+  figure: 2026-pinggu-zhen/figures/image7.png
+  answer: A
+  solution: '解：①在y＝﹣x+5中，当x＝0时，y＝5，
+
+    ∴C（0，5），
+
+    ∴OC＝5，
+
+    解$\left\{\begin{matrix} y=-x+5 \\ y=\frac{4}{x} \end{matrix}\right.$得$\left\{\begin{matrix} x=1 \\ y=4 \end{matrix}\right.$或$\left\{\begin{matrix} x=4 \\ y=1 \end{matrix}\right.$，
+
+    ∴A（1，4），B（4，1），
+
+    ∵AD⊥y轴，BE⊥y轴，
+
+    ∴OE＝1，OD＝4，
+
+    ∴CE＝5﹣1＝4，CD＝5﹣4＝1，
+
+    ∴$\frac{CD}{CE}=\frac{1}{4}$；故①正确；
+
+    ②∵AD＝1，BE＝4，DE＝4﹣1＝3，
+
+    ∴四边形ADEB的面积为$\frac{1}{2}×$（1+4）×3$=\frac{15}{2}$，故②错误；
+
+    ③）∵点A与点B关于直线y＝x对称，反比例函数y$=\frac{4}{x}$关于y＝x对称，
+
+    ∴当OM的解析式为y＝x时，MN的长度最大，
+
+    解方程组$\left\{\begin{matrix} y=\frac{4}{x} \\ y=x \end{matrix}\right.$得$\left\{\begin{matrix} x=2 \\ y=2 \end{matrix}\right.$或$\left\{\begin{matrix} x=-2 \\ y=-2 \end{matrix}\right.$，
+
+    ∴此时M点的坐标为（2，2），
+
+    ∴当点M的坐标为（2，2）时，线段MN的长度最大；故③正确；
+
+    ④当OM的解析式为y＝x时，MN的长度最大，
+
+    解方程组$\left\{\begin{matrix} y=-x+5 \\ y=x \end{matrix}\right.$得$\left\{\begin{matrix} x=\frac{5}{2} \\ y=\frac{5}{2} \end{matrix}\right.$，
+
+    ∴此时N点的坐标为（$\frac{5}{2}$，$\frac{5}{2}$），
+
+    ∴当N点的坐标为（$\frac{5}{2}$，$\frac{5}{2}$），时，线段MN的长度最大；故④错误，
+
+    故选：A．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
+  qc_status: draft
+  qc_note: ''
+- id: 9
+  type: 填空
+  score: 2
+  stem: 若代数式$\frac{x}{x+2}$有意义，则实数x的取值范围是 　       　 ．
+  answer: ''
+  solution: '解：根据题意得x+2≠0，
+
+    解得x≠﹣2，
+
+    故答案为：x≠﹣2．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
+  qc_status: draft
+  qc_note: ''
+- id: 10
+  type: 填空
+  score: 2
+  stem: 分解因式：ab2﹣2ab+a＝　          　 ．
+  answer: ''
+  solution: '解：ab2﹣2ab+a，
+
+    ＝a（b2﹣2b+1），
+
+    ＝a（b﹣1）2．
+
+    故答案为：a（b﹣1）2．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
+  qc_status: draft
+  qc_note: ''
+- id: 11
+  type: 填空
+  score: 2
+  stem: 方程$\frac{x}{x-1}-\frac{2}{x+1}=1$的解为　      　 ．
+  answer: ''
+  solution: '解：$\frac{x}{x-1}-\frac{2}{x+1}=1$，
+
+    x（x+1）﹣2（x﹣1）＝（x+1）（x﹣1），
+
+    x2+x﹣2x+2＝x2﹣1，
+
+    x﹣2x+2＝﹣1，
+
+    x﹣2x＝﹣1﹣2，
+
+    ﹣x＝﹣3，
+
+    x＝3，
+
+    经检验，x＝3是原分式方程的解．
+
+    故答案为：x＝3．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
+  qc_status: draft
+  qc_note: ''
+- id: 12
+  type: 填空
+  score: 2
+  stem: 已知点A（1，y1），B（m，y2）在反比例函数$y=\frac{3}{x}$的图象上，若y1＞y2，写出一个满足条件的m的值　           　 ．
+  answer: ''
+  solution: '解：∵k＝3＞0，
+
+    ∴函数图象位于第一、三象限，且在每个象限内y随x的增大而减小，
+
+    ∵点A（1，y1），B（m，y2）在反比例函数$y=\frac{3}{x}$的图象，
+
+    ∴将x＝1代入$y=\frac{3}{x}$，得${y}_{1}=\frac{3}{1}=3$，
+
+    当m＜0时，点B（m，y2）在第三象限，此时y2＜0＜3＝y1，满足y1＞y2，
+
+    当m＞0时，点B（m，y2）在第一象限，由y1＞y2结合反比例函数增减性可得m＞1，
+
+    ∴m满足m＜0或m＞1即可，
+
+    ∴取符合条件的值m＝2．
+
+    故答案为：2（答案不唯一）．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
+  qc_status: draft
+  qc_note: ''
+- id: 13
+  type: 填空
+  score: 2
+  stem: 如图，△ABC内接于⊙O，∠A＝45°，若$BC=2\sqrt{2}$，则$\vec{BC}$的长为　   　 ．
+  figure: 2026-pinggu-zhen/figures/image8.png
+  answer: ''
+  solution: '解：连接OB，OC，
+
+
+    ∵∠A＝45°，
+
+    ∴∠BOC＝2∠A＝90°，
+
+    ∵OB＝OC，
+
+    ∴△OBC 是等腰直角三角形，
+
+    由勾股定理得OB2+OC2＝BC2，
+
+    设⊙O的半径为R，则$2{R}^{2}={(2\sqrt{2})}^{2}=8$，
+
+    解得R＝2（舍负），
+
+    ∴$\vec{BC}$的长为$\frac{90π×2}{180}=π$，
+
+    故答案为：π．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
+  qc_status: draft
+  qc_note: ''
+- id: 14
+  type: 填空
+  score: 2
+  stem: '每年的6月6日是全国爱眼日．某校为了解八年级学生的视力健康状况，从该年级学生今年的体检结果中随机抽取了40名学生的视力数据，将所得视力数据进行整理后分为5组，得到如下的频数分布表：
+
+    | 分组 | A | B | C | D | E |
+
+    |---|---|---|---|---|---|
+
+    |  | 1.0≤x＜4.2 | 4.2≤x＜4.5 | 4.5≤x＜4.8 | 4.8≤x＜5.1 | 5.1≤x≤5.3 |
+
+    | 人数（频数） | 2 | 8 | 14 | 12 | 4 |
+
+    该校八年级共有600名学生．根据上表数据，请估计这600名八年级学生的视力在4.8≤x≤5.3范围内的人数为　      　 ．'
+  answer: ''
+  solution: '解：由题意可得，样本中视力在4.8≤x≤5.3范围内的频数为12+4＝16，
+
+    视力在该范围的人数为：$600×\frac{16}{40}=240$（人）．
+
+    故答案为：240．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
+  qc_status: draft
+  qc_note: ''
+- id: 15
+  type: 填空
+  score: 2
+  stem: 如图，在菱形ABCD中，对角线AC，BD相交于点O，AB＝10，对角线BD的长为16，E是AB的中点，F是BD上一点，连接EF．若DF＝3，则EF的长为　               　 ．
+  figure: 2026-pinggu-zhen/figures/image9.png
+  answer: ''
+  solution: '解：如图所示，取OB的中点G，连接EG，
+
+
+    ∵菱形ABCD的对角线AC与BD相交于点O，AB＝10，BD＝16，
+
+    ∴AC⊥BD，$OB=OD=\frac{1}{2}BD=8$，
+
+    ∴$OA=\sqrt{A{B}^{2}-O{B}^{2}}=6$，
+
+    ∵点E是AB的中点，点G是OB的中点，
+
+    ∴EG是△OAB的中位线，
+
+    ∴EG∥OA，且EG⊥OB，$EG=\frac{1}{2}OA=3$，OG$=\frac{1}{2}$OB＝4，
+
+    又∵DF＝3，
+
+    ∴OF＝OD﹣DF＝5，GF＝OG+OF＝9，
+
+    ∴EF$=\sqrt{E{G}^{2}+G{F}^{2}}=\sqrt{{3}^{2}+{9}^{2}}=3\sqrt{10}$，
+
+    故答案为：3$\sqrt{10}$．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
+  qc_status: draft
+  qc_note: ''
+- id: 16
+  type: 填空
+  score: 2
+  stem: '根据北京初中学业水平体育与健康科目现场考试的要求，考生除了素质项目I必选外，还需要从运动能力I、运动能力Ⅱ、素质项目Ⅱ中各自主选择1项，即每名考生应参加共四项考试内容．某班所有男生的自主选择项目及人数统计如下表所示：
+
+    | 运动能力I | 人数 | 运动能力Ⅱ | 人数 | 素质项目Ⅱ | 人数 |
+
+    |---|---|---|---|---|---|
+
+    | 篮球 | 19 | 健身长拳 | 29 | 立定跳远 | 21 |
+
+    | 足球 | 12 | 游泳 | 4 | 实心球 | m |
+
+    | 排球 | 2 |  |  |  |  |
+
+    表中的m＝　     　 ；若已知选择排球的两位同学均选择了健身长拳和立定跳远的组合，选择游泳的四位同学选择其他两类组合的情况各不相同，则选择篮球、健身长拳、立定跳远组合最多有　     　 人．'
+  answer: ''
+  solution: '解：由题意，19+12+2＝33，
+
+    因为素质项目II人数之和等于总人数，因此m＝33﹣21＝12，
+
+    已知选择排球的2位同学均选择健身长拳和立定跳远组合，
+
+    选择游泳的4位同学的运动能力I和素质项目II组合各不相同，
+
+    为（足球，立定跳远），（足球，实心球），（篮球，立定跳远），（篮球，实心球），
+
+    因此4位游泳同学中，有2人选择立定跳远，2人选择运动能力I的篮球，
+
+    要使目标组合人数最多，应将剩余立定跳远名额尽可能分配给目标组合，
+
+    立定跳远总人数为21，已被排球占用2个名额，被游泳占用2个名额，
+
+    因此剩余立定跳远名额为21﹣2﹣2＝17，
+
+    运动能力I的篮球总人数为19，其中2人选择游泳，
+
+    因此最多有19﹣2＝17名篮球考生选择健身长拳，
+
+    健身长拳总人数为29，已被排球占用2个名额，剩余名额为29﹣2＝27，
+
+    足球总人数12，其中2人选择游泳，剩余10名足球考生均可选择健身长拳，17+10＝27，刚好满足健身长拳的名额限制，
+
+    因此选择篮球、健身长拳、立定跳远组合最多有17人．
+
+    故答案为：12，17．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
+  qc_status: draft
+  qc_note: ''
+- id: 17
+  type: 解答
+  score: 5
+  stem: 计算：$2sin60°+{(\frac{1}{2})}^{-1}-{(π-2026)}^{0}-\sqrt{12}$．
+  answer: ''
+  solution: '解：$2sin60°+{(\frac{1}{2})}^{-1}-{(π-2026)}^{0}-\sqrt{12}$
+
+    $=2×\frac{\sqrt{3}}{2}+2-1-2\sqrt{3}$
+
+    $=\sqrt{3}+2-1-2\sqrt{3}$
+
+    $=1-\sqrt{3}$．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
+  qc_status: draft
+  qc_note: ''
+- id: 18
+  type: 解答
+  score: 5
+  stem: 解不等式组：$\left\{\begin{matrix} 5x+2＞3(x-1) \\ \frac{1}{2}x-1≤7-\frac{3}{2}x \end{matrix}\right.$．
+  answer: ''
+  solution: '解：$\left\{\begin{matrix} 5x+2＞3(x-1)① \\ \frac{1}{2}x-1≤7-\frac{3}{2}x② \end{matrix}\right.$，
+
+    解不等式①得x$＞-\frac{5}{2}$，
+
+    解不等式②得x≤4，
+
+    ∴不等式组的解集为：$-\frac{5}{2}＜$x≤4．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
+  qc_status: draft
+  qc_note: ''
+- id: 19
+  type: 解答
+  score: 5
+  stem: 已知a+2b﹣1＝0，求代数式$\frac{2(a+b)-a}{{a}^{2}+4ab+4{b}^{2}}$的值．
+  answer: ''
+  solution: '解：$\frac{2(a+b)-a}{{a}^{2}+4ab+4{b}^{2}}=$$\frac{2a+2b-a}{{(a+2b)}^{2}}=\frac{a+2b}{{(a+2b)}^{2}}=\frac{1}{a+2b}$，
+
+    ∵a+2b﹣1＝0，
+
+    ∴a+2b＝1，
+
+    代入得，原式$=\frac{1}{1}=1$．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
+  qc_status: draft
+  qc_note: ''
+- id: 20
+  type: 解答
+  score: 6
+  stem: '如图，平行四边形ABCD，E是BC延长线上一点，BD＝DE，且∠ABC＝2∠DEB．
+
+    （1）求证：四边形ABCD是菱形；
+
+    （2）连接AE交BD于F，若∠DEB＝30°，AD＝4，求BE和AF的长．'
+  figure: 2026-pinggu-zhen/figures/image10.png
+  answer: ''
+  solution: '（1）证明：∵平行四边形ABCD，
+
+    ∴AD∥BC，
+
+    ∴∠ADB＝∠DBC，
+
+    ∵BD＝DE，
+
+    ∴∠DBC＝∠DEB，
+
+    ∵∠ABC＝2∠DEB，
+
+    ∴∠ABC＝2∠DBC，
+
+    ∴∠ABD＝∠DBC＝∠ADB，
+
+    ∴AB＝AD，
+
+    ∴四边形ABCD是菱形；
+
+    （2）解：如图，连接AE交BD于F，∠DEB＝30°，AD＝4，过点A作AH⊥BE于点H，
+
+
+    ∵∠DEB＝30°，
+
+    ∴∠ABC＝2∠DEB＝60°，
+
+    由（1）可知，四边形ABCD是菱形，
+
+    ∴AB＝BC＝CD＝AD＝4，AB∥CD，AD∥BC，AC⊥BD，$OA=OC=\frac{1}{2}AC$，$OB=OD=\frac{1}{2}BD$，
+
+    ∴△ABC是等边三角形，
+
+    ∴AC＝BC＝4，
+
+    ∴OA＝OC＝2，
+
+    在Rt△AOB中，由勾股定理得：$OB=\sqrt{A{B}^{2}-O{A}^{2}}=2\sqrt{3}$，
+
+    ∴$BD=2OB=4\sqrt{3}$，
+
+    ∴$BD=DE=4\sqrt{3}$，
+
+    ∵AB∥CD，∠ABC＝60°，
+
+    ∴∠DCE＝∠ABC＝60°，
+
+    ∴∠CDE＝180°﹣∠DEB﹣∠DCE＝90°，
+
+    在直角三角形CDE中，由勾股定理得：$CE=\sqrt{C{D}^{2}+D{E}^{2}}=8$，
+
+    ∴BE＝BC+CE＝12，
+
+    ∵△ABC是等边三角形，AH⊥BE
+
+    ∴$BH=CH=\frac{1}{2}BC=2$，
+
+    在直角三角形ACH中，由勾股定理得：$AH=\sqrt{A{C}^{2}-C{H}^{2}}=2\sqrt{3}$，EH＝BE﹣BH＝10，
+
+    在Rt△AHE中，由勾股定理得：$AE=\sqrt{A{H}^{2}+E{H}^{2}}=4\sqrt{7}$，
+
+    ∵AD∥BC，
+
+    ∴∠ADF＝∠EBF，∠DAF＝∠BEF，
+
+    ∴△ADF∽△EBF，
+
+    ∴$\frac{AF}{EF}=\frac{AD}{BE}=\frac{4}{12}=\frac{1}{3}$，
+
+    ∴EF＝3AF，
+
+    ∴$AF=\frac{1}{4}AE=\sqrt{7}$．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
+  qc_status: draft
+  qc_note: ''
+- id: 21
+  type: 解答
+  score: 6
+  stem: 榫卯结构体现了中国“和”的思想，一凹一凸之间达到巧妙平衡，互补对方之缺，使建筑和家具等物品拥有统一的美学特征．槽口榫（图1）是最基本、最简单的榫卯连接之一．凸出的部分叫做榫头，凹进部分叫榫槽．常用于柜子的背板与面板的连接等非承重结构．图2为槽口榫中一部分榫身的平面图，已知榫身长：榫头长＝7：3，榫头长：榫头宽＝3：1，榫身宽：榫头宽＝3：1，榫身长与榫头长之和为20cm，求此面的表面积．
+  figure: 2026-pinggu-zhen/figures/image11.png
+  answer: ''
+  solution: '解：设榫头长为xcm，则榫身长为$(\frac{7}{3}x)cm$，
+
+    由题意得$\frac{7}{3}x+x=20$，
+
+    解得x＝6，
+
+    ∴榫头长为6cm，则榫身长为14cm，
+
+    ∵榫头长：榫头宽＝3：1，
+
+    ∴榫头宽为$\frac{6}{3}=2cm$，
+
+    ∵榫身宽：榫头宽＝3：1，
+
+    ∴榫身宽为2×3＝6cm，
+
+    ∴此面的表面积为：14×6+6×2＝96（cm2）．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
+  qc_status: draft
+  qc_note: ''
+- id: 22
+  type: 解答
+  score: 5
+  stem: '在平面直角坐标系xOy中，函数y＝kx+b（k≠0）与y＝﹣2kx+1的图象交于点（2，﹣1）．
+
+    （1）求k，b的值；
+
+    （2）当x＞2时，对于x的每一个值，函数y＝mx（m≠0）的值既大于函数y＝kx+b的值，也大于函数y＝﹣2kx+1的值，直接写出m的取值范围．'
+  answer: ''
+  solution: '解：（1）∵直线y＝﹣2kx+1点（2，﹣1），
+
+    ∴﹣4k+1＝﹣1，
+
+    ∴k$=\frac{1}{2}$，
+
+    将点（2，﹣1）代入y$=\frac{1}{2}$x+b得：1+b＝﹣1，
+
+    ∴b＝﹣2；
+
+    （2）∵当x＞2时，对于x的每一个值，函数y＝mx（m≠0）的值既大于函数y$=\frac{1}{2}$x﹣2的值，也大于函数y＝﹣x+1的值，
+
+    ∴m$≥\frac{1}{2}$．
+
+    ∴m的取值范围是m$≥\frac{1}{2}$．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
+  qc_status: draft
+  qc_note: ''
+- id: 23
+  type: 解答
+  score: 6
+  stem: '如图，AB为⊙O直径，CB是⊙O的切线，连结AC交⊙O于点D，E为AD上一点，连接EO并延长交⊙O于点G，交切线CB于点F，若∠A＝∠F．
+
+    （1）求证：E为AD中点；
+
+    （2）连接GD交AB于点H，若GH：HD＝5：6，BF＝6，求BC的值．'
+  figure: 2026-pinggu-zhen/figures/image12.png
+  answer: ''
+  solution: '（1）证明：如图1，AB为⊙O直径，CB是⊙O的切线，连接OD，
+
+
+    ∴∠OBF＝90°，
+
+    ∵∠A＝∠F，∠AOE＝∠FOB，
+
+    ∴180°﹣∠AOE﹣∠A＝180°﹣∠FOB﹣∠F，
+
+    ∴∠AEO＝∠OBF＝90°，
+
+    ∴OE⊥AD，
+
+    ∵OA＝OD，
+
+    ∴AE＝DE，即E为AD中点；
+
+    （2）解：如图2，AB为⊙O直径，连接BD，
+
+
+    ∴∠ADB＝90°，
+
+    由（1）可知，∠AEO＝90°，
+
+    ∴DB∥EF，
+
+    ∴△DHB∽△GHO，
+
+    ∴$\frac{DB}{GO}=\frac{DH}{GH}=\frac{6}{5}$，
+
+    ∴$DB=\frac{6}{5}GO$，
+
+    设OB＝GO＝r，则$DB=\frac{6}{5}r$，AB＝2OB＝2r，
+
+    ∵∠A＝∠F，∠OBF＝∠ADB＝90°，
+
+    ∴△OBF∽△BDA，
+
+    ∴$\frac{OB}{BD}=\frac{BF}{DA}$，即$\frac{r}{\frac{6}{5}r}=\frac{6}{DA}$，
+
+    解得：$DA=6×\frac{6}{5}=\frac{36}{5}$（经检验，是分式方程的解，且符合题意），
+
+    在Rt△ADB中，由勾股定理得：AD2+BD2＝AB2，
+
+    ∴${(\frac{36}{5})}^{2}+{(\frac{6}{5}r)}^{2}={(2r)}^{2}$，
+
+    解得：$r=\frac{9}{2}$，
+
+    ∴$AB=2r=2×\frac{9}{2}=9$，$DB=\frac{6}{5}r=\frac{6}{5}×\frac{9}{2}=\frac{27}{5}$，
+
+    ∵CB是⊙O的切线，AB为⊙O直径，
+
+    ∴∠ABC＝90°，
+
+    ∴∠ABC＝∠ADB，
+
+    ∵∠BAD＝∠CAB，
+
+    ∴△ADB∽△ABC，
+
+    ∴$\frac{AD}{AB}=\frac{DB}{BC}$，即$\frac{\frac{36}{5}}{9}=\frac{\frac{27}{5}}{BC}$，
+
+    解得：$BC=\frac{27}{4}$（经检验，是分式方程的解，且符合题意）．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
+  qc_status: draft
+  qc_note: ''
+- id: 24
+  type: 解答
+  score: 5
+  stem: '为落实“健康教育第一”理念，倡导科学锻炼、健康成长，学校组织男子1000m体能达标测试，以检验学生的体育锻炼效果．测试评分标准如下（表1）
+
+    | 时间 | 4′05′′ | 4′11′′ | 4′18′′ | 4′26′′ | 4′35′′ | 4′44′′ |
+
+    |---|---|---|---|---|---|---|
+
+    | 分值 | 8 | 7.5 | 7 | 6.5 | 6 | 5.5 |
+
+    | 时间 | 4′53′′ | 5′02′′ | 5′11′′ | 5′20′′ | 5′29′′ | 5′38′′ |
+
+    | 分值 | 5 | 4.5 | 4 | 3.5 | 3 | 2.5 |
+
+    | 时间 | 5′47′′ | 5′56′′ | 6′05′′ | 6′14′′ | 6′15′′ |  |
+
+    | 分值 | 2 | 1.5 | 1 | 0.5 | 0 |  |
+
+    表1
+
+    在男子1000m的考试现场，甲、乙两名同学被分到同一个小组．他们同时出发，当跑步的时间为t（单位：s）时，甲同学跑步的路程为S1（单位：m），乙同学跑步的路程为S2（单位：m）．为了取得更好的成绩，每名同学都会根据自身情况制订跑步策略．
+
+    甲同学的策略：先加速跑→再匀速跑→最后平缓冲刺；
+
+    乙同学的策略：先加速跑→再匀速跑．
+
+    甲、乙两名同学现场考试的部分数据如表2所示：
+
+    | 时间（s） | 0 | 20 | 40 | 60 | 80 | 120 | 160 | 180 | 200 | 220 | 240 | 260 |
+
+    |---|---|---|---|---|---|---|---|---|---|---|---|---|
+
+    | 路程（m） | 0 | 35 | 85 | 155 | 245 | 445 | 645 | 745 | 845 | 925 | 1000 | ﹣ |
+
+    | 路程（m） | 0 | 20 | 50 | 100 | 170 | 450 | 570 | 630 | 690 | a | 810 | 870 |
+
+    表2
+
+    （1）a的值为　      　 ．
+
+    （2）请根据表2中的数据，在平面直角坐标系中补全s2的图象．
+
+
+    （3）结合健康体能测试的要求，给出以下三个结论：
+
+    ①当20＜t≤240时，甲同学一直在乙同学的前面；
+
+    ②乙同学完成1000米的测试时间超过285s；
+
+    ③两名同学在匀速跑步阶段速度相同．
+
+    上述结论中，所有正确结论的序号是　   　 ．
+
+    （4）假如乙同学的匀速跑步速度不变，且在150s时恰好跑了610m，则乙同学可以得到　   　 分．'
+  figure: 2026-pinggu-zhen/figures/image13.png
+  answer: ''
+  solution: '解：（1）观察乙同学路程数据，在180s≤t≤260s时间段内，路程增加870﹣630＝240m，时间间隔为260﹣180＝80s，
+
+    则该阶段速度为240÷80＝3m/s，
+
+    当t＝220s时，从180s起经过的时间为220﹣180＝40s，
+
+    则a＝630+3×40＝750，
+
+    故答案为：750；
+
+    （2）S2的图象如下；
+
+
+    （3）当20＜t≤240时，由表2可知，在t＝120s时，甲路程S1＝445m，乙路程S2＝450m，此时乙同学在甲同学前面，故①错误；
+
+    由（1）可知，乙同学最后阶段速度为3m/s，乙260s跑了870m，剩余路程为1000﹣870＝130m，还需要的时间为$\frac{130}{3}≈43.33s$，
+
+    则乙同学完成1000米的测试时间为：260+43.33＝303.33s＞285s，故②正确；
+
+    由表2观察甲同学路程数据，在160s≤t≤200s时间段内，路程增加845﹣645＝200m，时间间隔为200﹣160＝40s，
+
+    则甲同学匀速跑步阶段速度为200÷40＝5m/s，而乙同学匀速跑步阶段速度为3m/s，
+
+    则两名同学在匀速跑步阶段速度不同，故③错误；
+
+    综上所述，正确结论的序号是②，
+
+    故答案为：②；
+
+    （4）乙同学120s跑了450m，150s跑了610m，
+
+    则匀速速度$\frac{610-450}{150-120}=\frac{16}{3}m/s$，
+
+    因此，乙同学跑完全程1000m的总时间为：$150+\frac{1000-610}{5.33}≈150+73.17=223.17s$，
+
+    对应评分标准：223.17s＜245s，
+
+    因此，乙同学得分为8分，
+
+    故答案为：8．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
+  qc_status: draft
+  qc_note: ''
+- id: 25
+  type: 解答
+  score: 5
+  stem: '为参加全国青少年无人机大赛，某校航模社团将从甲、乙、丙、丁4名同学中选拔一名正式参赛队员，选拔赛共进行10轮，主要测试无人机在复杂环境下的定点精准空投能力（各项测试综合成绩满分为100分，成绩均为整数）．教练组对这4名同学最近10次模拟测试的成绩数据进行了整理、描述和分析，下面给出了部分信息：
+
+    a．甲、乙两名同学10次测试成绩的折线图如下：
+
+
+    b．丙同学10次测试成绩：90，91，92，94，94，94，95，96，97，97；
+
+    c．丁同学在10次测试中，出现次数最多的分数是93分；
+
+    d．四名同学10次测试成绩的平均数、中位数、方差情况如表所示：
+
+    |  | 甲 | 乙 | 丙 | 丁 |
+
+    |---|---|---|---|---|
+
+    | 平均数 | 94 | 94 | p | 94 |
+
+    | 中位数 | m | 94 | 94 | 93.5 |
+
+    | 方差 | 1.2 | n | 5.2 | 1.2 |
+
+    根据以上信息，回答下列问题：
+
+    （1）表中m的值为　     　 ，p的值为　     　 ；
+
+    （2）表中n　   　 1.2（填“＞”“＝”或“＜”）；
+
+    （3）大赛组委会引入了全新的“综合评估系统”来选拔最终的参赛选手．评估流程包含三轮：第一轮（平均水平初筛）：4名同学进行比较，平均水平最高者进入第二轮候选名单（若最高平均水平有多人并列，则均进入第2轮）．
+
+    第二轮（极度稳定复赛）：在进入第二轮的同学中比较他们测试成绩的稳定性，成绩最稳定的两名选手才能入选第三轮候选名单．
+
+    第三轮（核心战力比拼）：针对进入第三轮候选名单的选手，组委会将计算他们的“核心战力指数W”．组委会认为，中位数代表了选手的中等水平，众数代表了选手最常出现的典型状态，设核心战力指数的计算公式为W＝2×乘中位数+众数．W分最高者最终当选为正式参赛队员．
+
+    你认为经过三轮的严格评估，最终当选为正式参赛队员的是　   　 同学，该同学的W分是　      　 分．'
+  figure: 2026-pinggu-zhen/figures/image14.png
+  answer: ''
+  solution: '解：（1）甲同学成绩的10个数据排序为92，93，93，94，94，94，94，95，95，96，第5个和第6个数据均为94，
+
+    故m＝94；
+
+    p$=\frac{1}{10}×$（90+91+92+94+94+94+95+96+97+97）＝94，
+
+    故答案为：94，94；
+
+    （2）由折线图可知，乙同学成绩的波动性明显高于甲同学成绩的波动性，
+
+    故乙同学成绩的稳定性低于甲同学成绩的稳定性，即乙同学的方差大于甲同学，
+
+    ∴n＞1.2；
+
+    故答案为：＞；
+
+    （3）设核心战力指数的计算公式为：W＝2×中位数+众数．W分最高者最终当选为正式参赛队员．
+
+    ∵四位同学成绩的平均数相同，甲和丁两位同学的方差相同且均比乙和丙两位同学的方差小，
+
+    ∴甲和丁两位同学进入第三轮，
+
+    ∵甲同学在10次测试中，出现次数最多的分数是94分，丁同学在10次测试中，出现次数最多的分数是93分，
+
+    ∴甲同学的分数的众数为94分，丁同学的分数的众数为93分，
+
+    又∵甲同学的分数的中位数为94分，丁同学的分数的中位数为93.5分，
+
+    ∴W甲＝2×94+94＝282（分），W丁＝2×93.5+93＝280（分），
+
+    ∵282＞280，
+
+    故最终当选正式参赛队员的是甲同学，该同学的W分是282分．
+
+    故答案为：甲，282．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
+  qc_status: draft
+  qc_note: ''
+- id: 26
+  type: 解答
+  score: 6
+  stem: '在平面直角坐标系xOy中，抛物线y＝ax2+bx（a＜0）经过点A（3a，m）和点B（﹣a，m）．
+
+    （1）用含a的式子表示b；
+
+    （2）点C（t﹣1，n）在抛物线上，且m＜n，过点D（t，0）作x轴的垂线，交抛物线于点P，交直线y＝﹣ax于点Q，PQ的长随着t的增大而增大，求a的取值范围．'
+  answer: ''
+  solution: '解：（1）在平面直角坐标系xOy中，抛物线y＝ax2+bx（a＜0）经过点A（3a，m）和点B（﹣a，m）．
+
+    ∴点A、B关于对称轴$x=\frac{3a-a}{2}=a$对称，又抛物线的对称轴方程为$x=-\frac{b}{2a}$，
+
+    ∴$-\frac{b}{2a}=a$，则b＝﹣2a2；
+
+    （2）点C（t﹣1，n）在抛物线上，且m＜n，过点D（t，0）作x轴的垂线，交抛物线于点P，
+
+    由（1）得y＝ax2﹣2a2x，
+
+    ∵点C（t﹣1，n）在抛物线上，且m＜n，a＜0，
+
+    ∴3a＜t﹣1＜﹣a，则3a+1＜t＜﹣a+1，
+
+    由题意，P（t，at2﹣2a2t），Q（t，﹣at），
+
+    ∴PQ＝|at2﹣2a2t+at|＝﹣a|t2﹣（2a﹣1）t|，
+
+    解方程t2﹣（2a﹣1）t＝0得t1＝0，t2＝2a﹣1，
+
+    ∵PQ的长随着t的增大而增大，
+
+    ∴$\left\{\begin{matrix} 3a+1≥2a-1 \\ -a+1≤\frac{2a-1}{2} \\ a＜0 \end{matrix}\right.$或$\left\{\begin{matrix} 3a+1≥0 \\ a＜0 \end{matrix}\right.$，
+
+    解得：无解或$-\frac{1}{3}≤$a＜0，
+
+    故满足条件的a的取值范围为$-\frac{1}{3}≤$a＜0．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
+  qc_status: draft
+  qc_note: ''
+- id: 27
+  type: 解答
+  score: 7
+  stem: '在△ABC中，AB＝AC，∠BAC＝α，点D是BC边上一点（不与B，C重合），连接AD．将线段AD绕点A逆时针旋转α得到线段AE，连接DE．
+
+    （1）如图1，α＝∠BAC＝80°，求∠DCE的度数；
+
+    （2）如图2，α＝∠BAC＝90°，BD＜CD，过点D作DG⊥BC，DG交CA的延长线于G，连接BG．点M是DE的中点，点F是BG的中点，连接FM，CM．用等式表示线段FM与CM的数量关系并证明．'
+  figure: 2026-pinggu-zhen/figures/image15.png
+  answer: ''
+  solution: '解：（1）∵AB＝AC，α＝∠BAC＝80°，
+
+    ∴∠ABC＝∠ACB＝50°，
+
+    ∵将线段AD绕点A逆时针旋转α得到线段AE，
+
+    ∴∠DAE＝α＝∠BAC，AD＝AE，
+
+    ∴∠BAD＝∠CAE＝α﹣∠CAD，
+
+    ∴△BAD≌△CAE（SAS），
+
+    ∴∠ACE＝∠ABD＝50°，
+
+    ∴∠DCE＝∠ACB+∠ACE＝100°；
+
+    （2）$FM=\sqrt{2}CM$，证明如下：
+
+    如图，连接CE，AM，AF，
+
+
+    ∵∠BAC＝90°，AB＝AC，
+
+    ∴∠ACB＝∠ABC＝45°，
+
+    ∵将线段AD绕点A逆时针旋转α得到线段AE，
+
+    ∴∠DAE＝α＝90°，AD＝AE，
+
+    ∴∠BAD＝∠CAE＝90°﹣∠CAD，
+
+    ∴△BAD≌△CAE（SAS），
+
+    ∴∠ACE＝∠ABC＝45°，CE＝BD，
+
+    ∴∠ECD＝∠ACB+∠ACE＝90°，
+
+    ∵DG⊥BC，∠ACB＝45°，
+
+    ∴∠CDG＝∠BDG＝90°，△CDG为等腰直角三角形，
+
+    ∴CD＝DG，
+
+    ∵∠GDB＝∠DCE＝90°，BD＝CE，
+
+    ∴△ECD≌△BDG（SAS），
+
+    ∴DE＝BG，
+
+    ∵点M，F分别为DE，BG的中点，∠ECD＝90°，∠DAE＝90°，∠BAG＝180°﹣∠CAB＝90°，
+
+    ∴$CM=AM=\frac{1}{2}DE$，BF＝AF$=\frac{1}{2}$BG$=\frac{1}{2}$DE，
+
+    ∴CM＝AM＝AF＝BF，
+
+    又∵AC＝AB，
+
+    ∴△CAM≌△BAF（SSS），
+
+    ∴∠CAM＝∠BAF，
+
+    ∴∠BAF+∠BAM＝∠CAM+∠BAM，即∠MAF＝∠CAB＝90°，
+
+    ∵AM＝AF，
+
+    ∴FM$=\sqrt{2}$AM$=\sqrt{2}CM$．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
+  qc_status: draft
+  qc_note: ''
+- id: 28
+  type: 解答
+  score: 7
+  stem: '如图，AB是⊙O的一条弦，点O关于AB的对称点为O′，在射线OO′上截取O′C＝O′A，则点C为⊙O“弦心衍生点”．
+
+    （1）在平面直角坐标系xOy中，⊙O的半径为2，以下各点属于⊙O“弦心衍生点”的有　                  　 ；
+
+    ${P}_{1}(\sqrt{2}，\sqrt{2})，{P}_{2}(-1，\sqrt{2})，{P}_{3}(6，0)，{P}_{4}(3，3)$
+
+    （2）平面直角坐标系xOy中，若⊙O的半径为1，直线y＝kx+b分别与x轴，y轴交于点E，F，若线段EF上的点都是⊙O“弦心衍生点”，则k的取值范围是　                  　 ；
+
+    （3）在（2）的条件下，若存在⊙T上的所有点都是⊙O“弦心衍生点”，则⊙T的半径的取值范围为　        　 ．'
+  figure: 2026-pinggu-zhen/figures/image16.png
+  answer: ''
+  solution: '解：（1）由题意得，当⊙O的半径为r时，设圆心O到弦AB的距离为d，则0≤d＜r，
+
+    ∵点O与点O''关于AB对称，
+
+    ∴O''A＝OA＝r，0≤OO''＝2d＜2r，
+
+    ∴O''C＝O''A＝OA＝r，
+
+    ∴r≤OC＝OO''+O''C＜3r，
+
+    ∵⊙O的半径为2，
+
+    ∴圆心O到⊙O的“弦心衍生点C''''的距离2≤OC＜6，
+
+    ∵$O{P}_{1}=\sqrt{(\sqrt{2}{)}^{2}+(\sqrt{2}{)}^{2}}=2$，$O{P}_{2}=\sqrt{(-1{)}^{2}+(\sqrt{2}{)}^{2}}=\sqrt{3}$，OP3＝6﹣0＝6，$O{P}_{4}=\sqrt{{3}^{2}+{3}^{2}}=3\sqrt{2}$，
+
+    ∴属于⊙O“弦心衍生点”的有${P}_{1}(\sqrt{2}，\sqrt{2})$，P4（3，3），
+
+    故答案为：${P}_{1}(\sqrt{2}，\sqrt{2})$，P4（3，3）；
+
+    （2）∵⊙O的半径为1，
+
+    设点O到线段EF上的点的距离为m，
+
+    ∵线段EF上的点都是⊙O“弦心衍生点”，
+
+    ∴1≤m＜3，
+
+    ∵直线y＝kx+b分别与x轴，y轴交于点E，F，
+
+    ∴$E(-\frac{b}{k}，0$），F（0，b），
+
+    ∴$OE=|-\frac{b}{k}|=|\frac{b}{k}|$，OF＝|b|，
+
+    ∴$EF=\sqrt{O{E}^{2}+O{F}^{2}}=\sqrt{\frac{{b}^{2}}{{k}^{2}}+{b}^{2}}=|\frac{b}{k}|\sqrt{{k}^{2}+1}$，
+
+    如图，过点O作OG⊥EF于点G，
+
+
+    ∵${S}_{△OEF}=\frac{1}{2}OE⋅OF=\frac{1}{2}EF⋅OG$，
+
+    ∴$OG=\frac{OE⋅OF}{EF}=\frac{|\frac{b}{k}|⋅|b|}{|\frac{b}{k}|\sqrt{{k}^{2}+1}}=\frac{|b|}{\sqrt{{k}^{2}+1}}$，
+
+    ∵线段EF上的点都是⊙O“弦心行生点”，
+
+    ∴1≤OE$=|\frac{b}{k}|＜$3，1≤OF＝|b|＜3，$1≤OG=\frac{|b|}{\sqrt{{k}^{2}+1}}＜3$，
+
+    ∴k2≤b2＜9k2，1≤b2＜9，k2+1≤b2＜9（k2+1），
+
+    ∴$\left\{\begin{matrix} {k}^{2}+1＜9{k}^{2} \\ {k}^{2}+1＜9 \end{matrix}\right.$，即$\left\{\begin{matrix} 8{k}^{2}-1＞0 \\ {k}^{2}-8＜0 \end{matrix}\right.$，
+
+    当8k2﹣1＝0时，$k=±\frac{\sqrt{2}}{4}$，当k2﹣8＝0时，$k=±2\sqrt{2}$，
+
+
+    ∴$A(\frac{\sqrt{2}}{4}，0)$，$B(-\frac{\sqrt{2}}{4}，0)$，$C(2\sqrt{2}，0)$，$D(-2\sqrt{2}，0)$，
+
+    ∴$-2\sqrt{2}＜k＜-\frac{\sqrt{2}}{4}$或$\frac{\sqrt{2}}{4}＜k＜2\sqrt{2}$，
+
+    故答案为：$-2\sqrt{2}＜k＜-\frac{\sqrt{2}}{4}$或$\frac{\sqrt{2}}{4}＜k＜2\sqrt{2}$；
+
+    （3）设OT＝n，⊙T的半径为r，
+
+    由题意得，$\left\{\begin{matrix} n-r≥1 \\ n+r＜3 \end{matrix}\right.$，即$\left\{\begin{matrix} n≥r+1 \\ n＜3-r \end{matrix}\right.$，
+
+    ∴1+r＜3﹣r，
+
+    解得r＜1，
+
+    ∴0＜r＜1，
+
+    故答案为：0＜r＜1．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
+  qc_status: draft
+  qc_note: ''

@@ -176,18 +176,22 @@ def docx_to_markdown(docx_path: Path, extract_dir: Path,
     # 全 blip 引用数（图片用次）
     total_blips = len(list(root.iter(f"{{{A_NS}}}blip")))
 
-    # 按段落（w:p）遍历，每段一行 markdown
+    # 按 body 子节点**实际顺序**遍历 w:p / w:tbl（关键！）
+    # 旧版分两次 findall → 表格全聚到 md 末尾被最后一题 stem/solution 吞进
     body = root.find(f"{{{W_NS}}}body")
     if body is None:
         return "", {"omath": 0, "blips": 0, "paragraphs": 0}
     md_lines: list[str] = []
-    for p in body.findall(f"{{{W_NS}}}p"):
-        line = _walk_paragraph(p, rels, extract_dir, figures_dir)
-        if line.strip():
-            md_lines.append(line)
-    # 表格也要遍历
-    for tbl in body.findall(f"{{{W_NS}}}tbl"):
-        md_lines.append(_walk_table(tbl, rels, extract_dir, figures_dir))
+    for child in body:
+        tag = _local(child.tag)
+        if tag == "p":
+            line = _walk_paragraph(child, rels, extract_dir, figures_dir)
+            if line.strip():
+                md_lines.append(line)
+        elif tag == "tbl":
+            tbl_md = _walk_table(child, rels, extract_dir, figures_dir)
+            if tbl_md:
+                md_lines.append(tbl_md)
     md = "\n\n".join(md_lines)
 
     # markdown 中的 $ 配对数 + ![](图片) 数
@@ -228,12 +232,24 @@ def _walk_table(tbl: ET.Element, rels: dict[str, str],
 # ─── 切题 ───────────────────────────────────────────────────────────────────
 
 NUM_HEAD_RE = re.compile(r"^\s*(\d{1,2})\s*[.、．]\s*(.*)$")
-# 答案页 marker 必须是独立标题行（行首 + 短行），否则 Q24 stem "测试评分标准如下"
-# 会误触发整页提前转入答案模式（pinggu 这类长描述题）
+# 答案页 marker 必须是独立标题行（行首 + 短行）
 ANSWER_MARKER_RE = re.compile(
     r"^\s*(?:参考答案|答案及评分|评分标准|答案与解析|参考答案与试题解析"
     r"|参考答案及评分标准)"
 )
+# 噪声行：试卷标题 / 著作权声明 / 用户水印
+NOISE_LINE_RE = re.compile(
+    r"^\s*(?:"
+    r"\d{4}年[^\n]*?(?:试卷|试题)\s*$"
+    r"|声明[:：][^\n]*?著作权"
+    r"|试题解析著作权"
+    r"|发布日期[:：]"
+    r"|用户[:：][^\n]*?(?:邮箱|学号)"
+    r"|菁优网"
+    r")"
+)
+# 题首 `（N分）` 分值标识
+STEM_SCORE_RE = re.compile(r"^\s*[（(]\s*(\d+)\s*分\s*[)）]\s*")
 def _is_answer_title(line: str) -> bool:
     return bool(ANSWER_MARKER_RE.match(line)) and len(line.strip()) <= 20
 SECTION_HEAD_RE = re.compile(r"^\s*[一二三四五六七八九十]+\s*[、，]")
@@ -317,6 +333,9 @@ def split_by_questions(md: str) -> tuple[list[dict], list[dict]]:
 
     for line in md.split("\n"):
         if not line.strip():
+            continue
+        # 噪声行（试卷标题/著作权/水印）一律丢弃
+        if NOISE_LINE_RE.search(line):
             continue
         if not in_answer and _is_answer_title(line):
             if cur:
@@ -503,10 +522,17 @@ def main():
     questions, answers = split_by_questions(md)
     print(f"[docx_paper] 切出 {len(questions)} 题 / {len(answers)} 答案", flush=True)
 
-    # 类型 + 分值
+    # 类型 + 分值（先尝试从 stem 抽"（N分）"标识，失败再用默认）
     for q in questions:
         q["type"] = _infer_type(q["number"], q.get("options"))
-        q["score"] = _default_score(q["number"])
+        stem = q.get("stem", "")
+        score_m = STEM_SCORE_RE.match(stem)
+        if score_m:
+            q["score"] = int(score_m.group(1))
+            # 同时把 stem 开头的 "（N分）" 去掉（视觉噪声，分值已存 score 字段）
+            q["stem"] = STEM_SCORE_RE.sub("", stem).lstrip()
+        else:
+            q["score"] = _default_score(q["number"])
         # has_image_options 推断（选择题且选项含 ![]() 图）
         q["has_image_options"] = (q["type"] == "choice"
             and q.get("options")
@@ -553,6 +579,146 @@ def main():
     fj.write_text(json.dumps(final, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"[docx_paper] ✅ {fj}", flush=True)
     print(f"   题号={[q['number'] for q in questions]}", flush=True)
+
+    # 同步输出兼容物理 exam-review 的 yaml（schema 一致：可用同一审核工具）
+    _write_review_yaml(docx, a.subject, final, questions, answers,
+                       figures_dir, out_dir)
+
+
+# ─── 写 yaml（兼容物理 exam-review schema）─────────────────────────────────
+
+TYPE_EN2CN = {
+    "choice": "单选",
+    "multi_choice": "多选",
+    "fill_blank": "填空",
+    "problem_solving": "解答",
+    "calculation": "计算",
+    "experiment": "实验探究",
+    "essay": "解答",
+}
+
+
+def _write_review_yaml(docx: Path, subject: str, final: dict,
+                        questions: list[dict], answers: list[dict],
+                        figures_dir: Path, out_dir: Path) -> None:
+    """把 final.json 转成兼容 tools/exam-review 的 yaml，落到
+    knowledge-base/exams/mock/<subject>/beijing/<slug>.yaml + figures/ 软目录。
+
+    schema 与物理 enrich 产物一致：
+      year/district/exam_type/subject/full_score/duration_minutes/
+      total_questions/questions[]：id(int)/type(中文)/score/stem/options/
+      has_image_options/figure/answer/solution/knowledge_points/module/
+      difficulty/qc_status/qc_note
+    """
+    try:
+        import yaml  # type: ignore
+    except ImportError:
+        print("[docx_paper] (skip yaml: PyYAML 未装)", flush=True)
+        return
+
+    slug = out_dir.name  # 如 2026-chaoyang-zhen
+    # 解析 slug → year/region/typ
+    m = re.match(r"(\d{4})-(.+?)-(\w+)", slug)
+    year = int(m.group(1)) if m else None
+    region_slug = m.group(2) if m else ""
+    typ_slug = m.group(3) if m else ""
+
+    region_cn = {"chaoyang": "朝阳", "haidian": "海淀", "mentougou": "门头沟",
+                 "fengtai": "丰台", "xicheng": "西城", "dongcheng": "东城",
+                 "shijingshan": "石景山", "tongzhou": "通州", "shunyi": "顺义",
+                 "changping": "昌平", "daxing": "大兴", "fangshan": "房山",
+                 "pinggu": "平谷", "huairou": "怀柔", "miyun": "密云",
+                 "yanqing": "延庆", "yanshan": "燕山"}.get(region_slug, region_slug)
+    type_cn = {"yi": "一模", "er": "二模", "san": "三模", "zhen": "一模"}.get(typ_slug, "一模")
+
+    # 剥离 stem/options/solution 中的 ![](...) markdown 图引用：
+    # 图已被 figure 字段独立持有；留在文本里 exam-review 不渲染 → 显示成
+    # "![](figures/...)" 原文噪声，且与 figure 字段渲染的图重复显示。
+    def _strip_md_img(s: str) -> str:
+        if not isinstance(s, str): return s
+        return re.sub(r"!\[\]\([^)]+\)", "", s).strip()
+
+    answers_by_num = {a["number"]: a for a in answers}
+    yaml_questions = []
+    for q in questions:
+        n = q["number"]
+        a = answers_by_num.get(n, {})
+        qtype = TYPE_EN2CN.get(q["type"], "解答")
+        item: dict = {
+            "id": n,
+            "type": qtype,
+            "score": q["score"],
+            "stem": _strip_md_img(q["stem"]),
+        }
+        if q["options"]:
+            # 图选项题 option 值是 `![](figures/imgN.png)` → 转 "[图]" 占位
+            # （has_image_options=True 让 exam-review 知道是图选项）
+            clean_opts = {}
+            for k, v in q["options"].items():
+                if isinstance(v, str) and v.strip().startswith("![]("):
+                    clean_opts[k] = "[图]"
+                else:
+                    clean_opts[k] = _strip_md_img(v)
+            item["options"] = clean_opts
+        if q.get("has_image_options"):
+            item["has_image_options"] = True
+        # figure 路径：与物理 yaml 一致 `<slug>/figures/<name>`
+        if q["figures"]:
+            item["figure"] = f"{slug}/figures/{q['figures'][0]}"
+        item["answer"] = a.get("correct", "")
+        item["solution"] = _strip_md_img(a.get("solution", ""))
+        item["knowledge_points"] = []
+        item["module"] = ""
+        item["difficulty"] = ""
+        item["qc_status"] = "draft"
+        item["qc_note"] = ""
+        yaml_questions.append(item)
+
+    # 推 mock 目录：knowledge-base/exams/mock/<subject>/beijing/<slug>.yaml
+    repo_root = out_dir
+    while repo_root.parent != repo_root:
+        if (repo_root / "knowledge-base").is_dir():
+            break
+        repo_root = repo_root.parent
+    mock_dir = repo_root / "knowledge-base" / "exams" / "mock" / subject / "beijing"
+    mock_dir.mkdir(parents=True, exist_ok=True)
+    yaml_path = mock_dir / f"{slug}.yaml"
+
+    # figures 复制到 yaml 同级目录
+    yaml_figs_dir = mock_dir / slug / "figures"
+    yaml_figs_dir.mkdir(parents=True, exist_ok=True)
+    import shutil
+    if figures_dir.is_dir():
+        for f in figures_dir.glob("*.png"):
+            shutil.copy(f, yaml_figs_dir / f.name)
+
+    data = {
+        "year": year,
+        "district": (region_cn + "区") if region_cn else "",
+        "exam_type": type_cn,
+        "subject": subject,
+        "full_score": final.get("full_score"),
+        "duration_minutes": 120,  # 北京数学一模默认 120 分钟
+        "total_questions": len(yaml_questions),
+        "structure": _build_structure(yaml_questions),
+        "questions": yaml_questions,
+    }
+    yaml_path.write_text(
+        yaml.safe_dump(data, allow_unicode=True, sort_keys=False, width=200),
+        encoding="utf-8")
+    print(f"[docx_paper] ✅ yaml {yaml_path}", flush=True)
+
+
+def _build_structure(qs: list[dict]) -> str:
+    from collections import OrderedDict
+    counts: "OrderedDict[str, dict]" = OrderedDict()
+    for q in qs:
+        t = q["type"]
+        if t not in counts:
+            counts[t] = {"count": 0, "score": 0}
+        counts[t]["count"] += 1
+        counts[t]["score"] += q["score"]
+    return " + ".join(f"{v['count']}{t}({v['score']}分)" for t, v in counts.items())
 
 
 if __name__ == "__main__":
