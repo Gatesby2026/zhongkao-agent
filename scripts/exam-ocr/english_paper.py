@@ -215,6 +215,7 @@ def _parse_cloze(text: str, num_range: range) -> tuple[dict, list[dict]]:
         if re.search(r"完形填空|选择最佳选项|阅读下面", s): continue
         body_lines.append(s)
     body = _strip_footers("\n".join(body_lines)).strip()
+    body = _join_paragraph_lines(body)  # 合并段内 OCR 误换行
     # 转空位标记：13-20 这些数字（前后非数字/字母边界）→ ___N___
     for n in num_range:
         body = re.sub(rf"(?<![\d\w]){n}(?![\d\w])", f"___{n}___", body)
@@ -265,6 +266,23 @@ def _strip_footers(text: str) -> str:
     return "\n".join(out)
 
 
+def _join_paragraph_lines(text: str) -> str:
+    """合并 OCR 段内换行：上行末非句末标点 → 与下行用空格连。
+    段落起点（含 ___N___ 空位标记的行也算续接段）由 "上行 . ! ? ; " 结尾断开。
+    """
+    lines = [ln.rstrip() for ln in text.split("\n") if ln.strip()]
+    if not lines: return text
+    out = [lines[0]]
+    for ln in lines[1:]:
+        prev = out[-1]
+        # 上一行末以句末标点结束 → 段落分隔；否则与下行连
+        if re.search(r"[.!?;。！？；]\s*['’”\")]?\s*$", prev):
+            out.append(ln)
+        else:
+            out[-1] = prev + " " + ln
+    return "\n".join(out)
+
+
 def _parse_reading(text: str, num_range: range) -> tuple[list[dict], list[dict]]:
     """切阅读理解：每篇用 (中文) 或 单字母行 作 sub-section 边界。
 
@@ -309,7 +327,7 @@ def _parse_reading(text: str, num_range: range) -> tuple[list[dict], list[dict]]
         body = re.sub(r"^\s*[A-E]\s*$", "", body, flags=re.MULTILINE).strip()
         body = re.sub(r"^\s*阅读下[^\n]+", "", body, flags=re.MULTILINE).strip()
         body = re.sub(r"^\s*请阅读[^\n]+", "", body, flags=re.MULTILINE).strip()
-        body = _strip_footers(body)
+        body = _join_paragraph_lines(_strip_footers(body))
         pid = f"reading_{q_anchors[0].group(1)}"
         q_nums_sub = [int(a.group(1)) for a in q_anchors]
         passages.append({"id": pid, "type": "reading", "body": body,
@@ -349,7 +367,7 @@ def _parse_express(text: str, num_range: range) -> tuple[dict, list[dict]]:
     # 清大题标题
     body = re.sub(r"^\s*四、\s*阅读(?:与|表达)[^\n]*\n", "", body).strip()
     body = re.sub(r"^\s*阅读下面[^\n]+\n", "", body, flags=re.MULTILINE).strip()
-    body = _strip_footers(body)
+    body = _join_paragraph_lines(_strip_footers(body))
     q_nums = [int(m.group(1)) for m in q_anchors]
     passage = {"id": "express", "type": "reading_express", "body": body,
                "q_range": [min(q_nums), max(q_nums)] if q_nums else None}
@@ -384,14 +402,42 @@ def _parse_essay(text: str, num_range: range) -> list[dict]:
 
 # ─── 答案页解析 ─────────────────────────────────────────────────────────────
 
+_MULTI_ANS_LINE_RE = re.compile(
+    r"(\d{1,2})\s*[.、．]\s*([A-D]+)(?=\s+\d{1,2}\s*[.、．]|\s*$)")
+
+
+def _expand_multi_ans(text: str) -> str:
+    """把一行多答案 "1.C 2.D 3.A 4.B..." 展开为多行 "1.C\\n2.D\\n3.A...".
+    （前缀如 "(A)" / "(B)" 在 _parse_answers 中独立处理）
+    """
+    out = []
+    for ln in text.split("\n"):
+        # 先剥前缀 "(A)" / "(B)" 之类的篇章标识
+        prefix_m = re.match(r"^\s*[(（][A-D][)）]\s*", ln)
+        prefix = prefix_m.group(0) if prefix_m else ""
+        body = ln[len(prefix):] if prefix else ln
+        ms = list(_MULTI_ANS_LINE_RE.finditer(body))
+        # 若含 ≥ 2 个 "N.X" 模式且全是字母答案 → 拆分
+        if len(ms) >= 2 and all(re.fullmatch(r"[A-D]+", m.group(2)) for m in ms):
+            for m in ms:
+                out.append(f"{m.group(1)}.{m.group(2)}")
+        else:
+            out.append(ln)
+    return "\n".join(out)
+
+
 def _parse_answers(answer_text: str) -> list[dict]:
     """从答案页文本解析每题答案。
 
-    格式：
-      "1.D\n2.D\n..." 选择题字母
-      "34.(The writer uses...)" 阅读表达主观题
-      "37.写出居住地附近..." 写作评分标准
+    格式（北京中考英语典型）：
+      "1.C 2.D 3.A 4.B ..."          单项填空一行 12 题
+      "13.B 14.A 15.D ..."           完形一行 8 题
+      "(A)21.A 22.C 23.B"            阅读 A 篇带篇章标识
+      "(B) 24.C\\n25.D\\n26. A"       阅读 B 篇每题独立行
+      "34. Small actions..."          阅读表达主观答案
+    先预处理把一行多答案展开，再按 ^N. 切。
     """
+    answer_text = _expand_multi_ans(answer_text)
     out: list[dict] = []
     cur_num = None; cur_buf: list[str] = []
 
@@ -405,14 +451,17 @@ def _parse_answers(answer_text: str) -> list[dict]:
     for ln in answer_text.split("\n"):
         s = ln.strip()
         if not s: continue
-        # 跳大题标题
-        if re.match(r"^[一二三四五六]、|第[一二]部分|^\d{4}\.\d|参考答案", s):
+        # 跳大题标题/页脚
+        if re.match(r"^[一二三四五六]、|第[一二]部分|^\d{4}\.\d|参考答案"
+                     r"|英语试卷参考答案|九年级英语", s):
             continue
+        # 剥前缀 "(A)" / "(B)" 等篇章标识
+        s = re.sub(r"^\s*[(（][A-D][)）]\s*", "", s)
         m = re.match(r"^\s*(\d{1,2})\s*[.、．]\s*(.*)$", s)
         if m and 1 <= int(m.group(1)) <= 40:
             _flush()
             cur_num = int(m.group(1))
-            cur_buf = [m.group(2).strip()]
+            cur_buf = [m.group(2).strip()] if m.group(2).strip() else []
         else:
             if cur_num is not None: cur_buf.append(s)
     _flush()
