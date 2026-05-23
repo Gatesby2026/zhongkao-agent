@@ -1,9 +1,15 @@
+# ============================================================
+# 2026年北京2026年北京市石景山区一模math — 自动生成
+# ============================================================
+# OCR: Qwen-VL-OCR  Enrich: qwen-max
+# QC: draft=28  needs_review=0
+
 year: 2026
-district: 石景山区
+district: 2026年北京市石景山区
 exam_type: 一模
 subject: math
 full_score: 100
-duration_minutes: 120
+duration_minutes: null
 total_questions: 28
 structure: 8单选(16分) + 8填空(16分) + 12解答(68分)
 questions:
@@ -12,10 +18,10 @@ questions:
   score: 2
   stem: 刺绣是中华优秀传统文化的璀璨瑰宝．下列刺绣图案既是轴对称图形又是中心对称图形的是（　　）
   options:
-    A: '[图]'
-    B: '[图]'
-    C: '[图]'
-    D: '[图]'
+    A: '![](figures/image.png)'
+    B: '![](figures/image2.png)'
+    C: '![](figures/image3.png)'
+    D: '![](figures/image4.png)'
   has_image_options: true
   figure: 2026-shijingshan-zhen/figures/image.png
   answer: C
@@ -28,9 +34,16 @@ questions:
     D、该图形是轴对称图形，不是中心对称图形，本选项不符合题意．
 
     故选：C．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 轴对称图形
+  - 中心对称图形
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 2
@@ -46,15 +59,24 @@ questions:
   solution: '解：∵3900000000×1.1＝4.29×109，
 
     故选：D．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 科学记数法
+  - 小数与分数的运算
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 3
   type: 单选
   score: 2
-  stem: 实数a，b在数轴上的对应点的位置如图所示，下列结论中正确的是（　　）
+  stem: '实数a，b在数轴上的对应点的位置如图所示，下列结论中正确的是（　　）
+
+    ![](figures/image5.png)'
   options:
     A: b＜﹣a
     B: b﹣a＞3
@@ -69,9 +91,15 @@ questions:
     ∴A，C，D选项的结论不正确，B选项的结论正确，
 
     故选：B．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 实数的大小比较
+  - 数轴上的点与实数的对应关系
+  module: numbersAndExpressions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 4
@@ -91,9 +119,15 @@ questions:
     解得m＝4．
 
     故选：D．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 一元二次方程的根与系数的关系
+  - 判别式的应用
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 5
@@ -115,9 +149,14 @@ questions:
     即这个多边形的边数是6．
 
     故选：B．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 多边形的内角和与外角和
+  module: geometryComprehensive
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 6
@@ -145,15 +184,23 @@ questions:
     ∴第一次摸到白棋子、第二次摸到黑棋子的概率为$\frac{1}{4}$．
 
     故选：A．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 概率的计算
+  module: statisticsAndProbability
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 7
   type: 单选
   score: 2
-  stem: 如图，在△ABC中，AB＝AC，∠B＝65°，以AC为直径画圆，与AB交于点D，与BC交于点E，连接DE，则∠DEC的大小为（　　）
+  stem: '如图，在△ABC中，AB＝AC，∠B＝65°，以AC为直径画圆，与AB交于点D，与BC交于点E，连接DE，则∠DEC的大小为（　　）
+
+    ![](figures/image6.png)'
   options:
     A: 130°
     B: 115°
@@ -163,6 +210,7 @@ questions:
   answer: A
   solution: '解：如图，
 
+    ![](figures/image21.png)
 
     ∵AB＝AC，∠B＝65°，
 
@@ -175,9 +223,15 @@ questions:
     ∴∠DEC＝180°﹣∠BAC＝180°﹣50°＝130°．
 
     故选：A．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 圆的基本性质
+  - 等腰三角形的性质
+  module: circles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 8
@@ -193,7 +247,9 @@ questions:
 
     ④若直线y＝x将正方形AB′C′D′分为面积相等的两部分，则点B′的纵坐标是1．
 
-    上述结论中，所有正确的结论的序号是（　　）'
+    上述结论中，所有正确的结论的序号是（　　）
+
+    ![](figures/image7.png)'
   options:
     A: ①③
     B: ①④
@@ -226,16 +282,22 @@ questions:
     综上，正确结论为①④．
 
     故选：B．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 正方形的性质
+  - 旋转的性质
+  - 坐标系中的几何变换
+  module: geometryComprehensive
+  difficulty: 能力
+  recommended_for:
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 9
   type: 填空
   score: 2
   stem: 若$\sqrt{x-3}$在实数范围内有意义，则实数x的取值范围为　      　 ．
-  answer: ''
+  answer: x≥3
   solution: '解：∵二次根式有意义的条件：被开方数为非负数，
 
     ∴x﹣3≥0，
@@ -243,16 +305,23 @@ questions:
     ∴x≥3，
 
     故答案为：x≥3．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 实数及其运算
+  - 根式的意义
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 10
   type: 填空
   score: 2
   stem: 分解因式：x2y﹣y＝　              　 ．
-  answer: ''
+  answer: y（x+1）（x﹣1）
   solution: '解：x2y﹣y
 
     ＝y（x2﹣1）
@@ -260,16 +329,22 @@ questions:
     ＝y（x+1）（x﹣1）．
 
     故答案为：y（x+1）（x﹣1）．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 因式分解
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 11
   type: 填空
   score: 2
   stem: 方程$\frac{1}{x+5}+\frac{2}{3x}=0$的解为　       　 ．
-  answer: ''
+  answer: x＝﹣2．
   solution: '解：方程两边同时乘3x（x+5），得3x+2（x+5）＝0，
 
     去括号，得3x+2x+10＝0，
@@ -283,16 +358,21 @@ questions:
     ∴分式方程的解为x＝﹣2．
 
     故答案为：x＝﹣2．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 分式方程的解法
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 12
   type: 填空
   score: 2
   stem: 在平面直角坐标系xOy中，点A（2，﹣1），B（n，﹣2）在函数$y=\frac{m}{x}(m≠0)$的图象上，则n的值为　   　 ．
-  answer: ''
+  answer: 1．
   solution: '解：∵点A（2，﹣1），B（n，﹣2）在函数$y=\frac{m}{x}(m≠0)$的图象上，
 
     ∴m＝2×（﹣1）＝n•（﹣2），
@@ -300,9 +380,15 @@ questions:
     ∴n＝1．
 
     故答案为：1．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 反比例函数的性质
+  - 坐标与函数图像的关系
+  module: functions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 13
@@ -319,36 +405,51 @@ questions:
     | 学生人数 | 3 | 12 | 24 | 21 |
 
     根据以上数据，估计这1800名女生中仰卧起坐等级为优秀的学生有　      　 名．'
-  answer: ''
+  answer: 630．
   solution: '解：估计这1800名女生中仰卧起坐等级为优秀的学生有1800$×\frac{21}{60}=$630（人）．
 
     故答案为：630．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 统计与概率-用样本估计总体
+  module: statisticsAndProbability
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 14
   type: 填空
   score: 2
   stem: 能说明命题“若a＜b，则$\frac{1}{a}＞\frac{1}{b}$”是假命题的一组实数a，b的值为a＝　     　 ，b＝　           　 ．
-  answer: ''
+  answer: ﹣2；2（答案不唯一）．
   solution: '解：当a＝﹣2，b＝2时，a＜b，而$\frac{1}{a}＜$$\frac{1}{b}$，
 
     说明说明命题“若a＜b，则$\frac{1}{a}＞\frac{1}{b}$”是假命题，
 
     故答案为：﹣2；2（答案不唯一）．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 实数的性质
+  - 不等式的性质
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 15
   type: 填空
   score: 2
-  stem: 中国古代重要文献《淮南万毕术》中记载了古人利用光的反射定律改变光路的方法．如图，为了将深井照亮，并口放置一平面镜MN，太阳光线AO与地面DE的夹角∠AOD＝46°，反射光线OB恰好垂直于地面DE（反射角∠BOC等于入射角∠AOC，OC⊥MN），则平面镜MN与地面DE的夹角∠MOD＝　     　 °．
+  stem: '中国古代重要文献《淮南万毕术》中记载了古人利用光的反射定律改变光路的方法．如图，为了将深井照亮，并口放置一平面镜MN，太阳光线AO与地面DE的夹角∠AOD＝46°，反射光线OB恰好垂直于地面DE（反射角∠BOC等于入射角∠AOC，OC⊥MN），则平面镜MN与地面DE的夹角∠MOD＝　     　
+    °．
+
+    ![](figures/image8.png)'
   figure: 2026-shijingshan-zhen/figures/image8.png
-  answer: ''
+  answer: 68．
   solution: '解：∵∠BOC＝90°﹣∠COD，
 
     ∠AOC＝∠AOD+∠COD，
@@ -362,9 +463,15 @@ questions:
     ∴∠MOD＝90°﹣∠COD＝68°．
 
     故答案为：68．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 光的反射定律
+  - 几何角度计算
+  module: geometryComprehensive
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 16
@@ -389,7 +496,7 @@ questions:
     （1）若这些工作由多名学生合作完成，则至少需要　     　 分钟；
 
     （2）若这些工作由甲、乙两名学生合作完成，且甲同学先从A工作开始，为使完成全部工作所用的时间最短，则甲同学还需完成的工作的编号为　        　 ．'
-  answer: ''
+  answer: （1）22；
   solution: '解：（1）多名学生合作时，满足前置工作要求，前置工作可并行完成，因此：
 
     当做G的前置工作，A，B，C三个都要完成，最长的时间为B：15分钟，G还要7分钟，则G这路需要15+7＝22（分钟），
@@ -407,31 +514,43 @@ questions:
     乙做B（0﹣15分钟），接着做D（15﹣25分钟），再做F（25﹣26分钟），最后做H（26﹣28分钟），总时长28，满足所有前置限制，
 
     因此甲除A以外，还需完成C，E，G．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 图论初步
+  - 最优化问题
+  module: geometryComprehensive
+  difficulty: 能力
+  recommended_for:
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 17
   type: 解答
   score: 5
   stem: 计算：${(\frac{1}{3})}^{-1}-2sin45°+\sqrt{18}+|-\sqrt{2}|$．
-  answer: ''
+  answer: 3+3$\sqrt{2}$．
   solution: '解：原式＝3﹣2$×\frac{\sqrt{2}}{2}+$3$\sqrt{2}+$$\sqrt{2}$
 
     ＝3$-\sqrt{2}+$3$\sqrt{2}+$$\sqrt{2}$
 
     ＝3+3$\sqrt{2}$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 实数的运算
+  - 三角函数的基本概念
+  - 根式与绝对值的计算
+  module: numbersAndExpressions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 18
   type: 解答
   score: 5
   stem: 解不等式组：$\left\{\begin{matrix} x-5＞3-3x \\ x＜\frac{x+8}{3} \end{matrix}\right.$．
-  answer: ''
+  answer: 2＜x＜4．
   solution: '解：$\left\{\begin{matrix} x-5＞3-3x① \\ x＜\frac{x+8}{3}② \end{matrix}\right.$，
 
     解不等式①，得x＞2．
@@ -439,16 +558,21 @@ questions:
     解不等式②，得x＜4．
 
     ∴不等式组的解集为2＜x＜4．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 一元一次不等式组的解法
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 19
   type: 解答
   score: 5
   stem: 已知a﹣2b﹣1＝0，求代数式$\frac{2(a-3b)+2b}{{a}^{2}-4ab+4{b}^{2}}$的值．
-  answer: ''
+  answer: 2．
   solution: '解：∵a﹣2b﹣1＝0，
 
     ∴a﹣2b＝1，
@@ -462,9 +586,15 @@ questions:
     $=\frac{2}{1}$
 
     ＝2．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 代数式的化简
+  - 方程的应用
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 20
@@ -474,9 +604,11 @@ questions:
 
     （1）求证：四边形DBGF是菱形；
 
-    （2）连接BF，若∠FBC＝30°，DE＝4，CG＝2，求BF的长．'
+    （2）连接BF，若∠FBC＝30°，DE＝4，CG＝2，求BF的长．
+
+    ![](figures/image9.png)'
   figure: 2026-shijingshan-zhen/figures/image9.png
-  answer: ''
+  answer: （1）∵D，E分别为AB，AC的中点，
   solution: '（1）证明：∵D，E分别为AB，AC的中点，
 
     ∴DE是△ABC的中位线，
@@ -493,6 +625,7 @@ questions:
 
     （2）解：连接DG交BF于O，
 
+    ![](figures/image25.png)
 
     ∵D，E分别为AB，AC的中点，
 
@@ -517,16 +650,23 @@ questions:
     ∴OB$=\sqrt{B{G}^{2}-O{G}^{2}}=$3$\sqrt{3}$，
 
     ∴$BF=2BO=6\sqrt{3}$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 三角形的中位线
+  - 菱形的性质与判定
+  - 相似三角形
+  module: triangles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 21
   type: 解答
   score: 6
   stem: 随着智慧物流的发展，全自动化的物流机器人系统大大提升了物流园区的包裹流转速度．某公司用A，B两台不同型号的机器人分拣物流仓库的包裹．已知A机器人每小时可分拣1.8万件包裹，B机器人每小时可分拣1.2万件包裹，两台机器人同时开始分拣工作，A机器人比B机器人提前1小时结束，发现B机器人分拣的包裹总量是A机器人分拣的包裹总量的2倍．求A机器人分拣的包裹总量．
-  answer: ''
+  answer: 0.9万件．
   solution: '解：设A机器人分拣的包裹总量为x万件，则B机器人分拣的包裹总量为2x万件，
 
     根据题意得：$\frac{2x}{1.2}-$$\frac{x}{1.8}=$1，
@@ -534,9 +674,15 @@ questions:
     解得：x＝0.9．
 
     答：A机器人分拣的包裹总量为0.9万件．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 一元一次方程的应用
+  - 比例与方程
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 22
@@ -547,7 +693,7 @@ questions:
     （1）求k，b的值；
 
     （2）当x＜1时，对于x的每一个值，函数y＝mx（m≠0）的值小于函数y＝kx+b的值，直接写出m的取值范围．'
-  answer: ''
+  answer: （1）b＝2，k＝1；
   solution: '解：（1）∵在平面直角坐标系xOy中，函数y＝kx+b（k≠0）的图象经过点（0，2）和（1，3），
 
     ∴$\left\{\begin{matrix} b=2 \\ k+b=3 \end{matrix}\right.$，
@@ -573,9 +719,15 @@ questions:
     m﹣1＜0，即m＜1时，x$＞\frac{2}{m-1}$无法满足x＜1；
 
     综上所述，m的取值范围为1≤m≤3．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 一次函数的性质
+  - 不等式的应用
+  module: functions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 23
@@ -585,6 +737,7 @@ questions:
 
     a．评委给甲、乙的打分的折线图：
 
+    ![](figures/image10.png)
 
     b．评委给丙的打分：5 6 8 8 8 8 9 10 10 10
 
@@ -606,7 +759,7 @@ questions:
 
     评估结果：这三名员工按综合素质由高到低依次为　        　 ．'
   figure: 2026-shijingshan-zhen/figures/image10.png
-  answer: ''
+  answer: （1）8.5；8；
   solution: '解：（1）把甲的得分从小到大排列为6、7、7、8、8、9、9、10、10、10，排在中间的两个数分别是8，9，故中位数m$=\frac{8+9}{2}=$8.5，
 
     乙的得分为8、10、9、8、10、9、8、8、8、9，其中8出现的次数最多，故众数n＝8，
@@ -640,9 +793,15 @@ questions:
     ∴这三名员工按综合素质由高到低依次为：乙、甲、丙．
 
     故答案为：乙、甲、丙．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 统计量的计算与应用
+  - 数据的整理与分析
+  module: statisticsAndProbability
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 24
@@ -652,9 +811,11 @@ questions:
 
     （1）求证：CE为⊙O的切线；
 
-    （2）若tan∠BAD$=\frac{1}{3}$，OA＝3，求DE的长．'
+    （2）若tan∠BAD$=\frac{1}{3}$，OA＝3，求DE的长．
+
+    ![](figures/image11.png)'
   figure: 2026-shijingshan-zhen/figures/image11.png
-  answer: ''
+  answer: （1）连接OC，
   solution: '（1）证明：连接OC，
 
     ∵AB是⊙O的直径，$\vec{AC}=\vec{BC}$，
@@ -715,10 +876,18 @@ questions:
 
     ∴$\frac{\frac{9\sqrt{10}}{5}+DE}{CE}=$$\frac{3\sqrt{2}}{\frac{6\sqrt{5}}{5}}=$$\frac{CE}{DE}$，
 
-    ∴DE$=\frac{6\sqrt{10}}{5}$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+    ∴DE$=\frac{6\sqrt{10}}{5}$．
+
+    ![](figures/image28.png)'
+  knowledge_points:
+  - 圆的切线性质
+  - 三角函数的应用
+  module: circles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 25
@@ -740,11 +909,14 @@ questions:
 
     （2）当A款车的行驶速度约为　     　 km/h（精确到个位）时，其百公里能耗最低；当B款车以70km/h的速度行驶时，其百公里能耗约为　      　 kWh/100km（结果保留小数点后一位）；
 
-    （3）小石和小京分别驾驶A，B两款车从甲地前往乙地，两地相距100km．两车都先以50km/h的速度行驶50km，随后立即切换至110km/h的速度继续行驶，直至到达乙地，则　   　 （填“A”或“B”）款车行驶这100km的能耗更低．'
+    （3）小石和小京分别驾驶A，B两款车从甲地前往乙地，两地相距100km．两车都先以50km/h的速度行驶50km，随后立即切换至110km/h的速度继续行驶，直至到达乙地，则　   　 （填“A”或“B”）款车行驶这100km的能耗更低．
+
+    ![](figures/image12.png)'
   figure: 2026-shijingshan-zhen/figures/image12.png
-  answer: ''
+  answer: （1）![](figures/image30.png)；
   solution: '解：（1）在坐标系中描点，用平滑曲线连接即可，曲线为开口向上的抛物线形状；
 
+    ![](figures/image31.png)
 
     （2）①设A款车能耗二次函数为y1＝ax2+bx+c，
 
@@ -797,9 +969,15 @@ questions:
     ∴B款车能耗更低．
 
     故答案为：B．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 函数的应用
+  - 数据分析
+  module: functions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 26
@@ -814,7 +992,7 @@ questions:
     ①当c＝2，t＝1时，直接写出MN的长；
 
     ②已知点P从点A运动到点B的过程中，MN的长随t的增大而减小，求c的取值范围．'
-  answer: ''
+  answer: （1）b＝﹣1﹣c；
   solution: '解：（1）将（1，0）代入y＝x2+bx+c得，1+b+c＝0，
 
     则b＝﹣1﹣c；
@@ -869,6 +1047,7 @@ questions:
 
     函数图象如图：
 
+    ![](figures/image32.png)
 
     由图象可知当t≤0或$\frac{c}{2}≤$t≤c时，MN随t增大而减小，
 
@@ -894,6 +1073,7 @@ questions:
 
     函数图象如图：
 
+    ![](figures/image33.png)
 
     由图象可知当t≤0或$\frac{1}{2}≤$t≤1时，MN随t增大而减小，
 
@@ -904,9 +1084,15 @@ questions:
     ∴$\frac{1}{2}≤$c＜1；
 
     综上，$\frac{1}{2}≤$c≤2且c≠1．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 二次函数的性质
+  - 抛物线与坐标轴的交点
+  - 直线与抛物线的交点
+  module: functions
+  difficulty: 能力
+  recommended_for:
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 27
@@ -916,9 +1102,11 @@ questions:
 
     （1）用等式表示∠DAE与∠CAB的数量关系，并证明；
 
-    （2）作线段EF的垂直平分线，垂足为G，交AB于点P，交AC于点Q，依题意补全图形．用等式表示线段PQ与DF的数量关系，并证明．'
+    （2）作线段EF的垂直平分线，垂足为G，交AB于点P，交AC于点Q，依题意补全图形．用等式表示线段PQ与DF的数量关系，并证明．
+
+    ![](figures/image13.png)'
   figure: 2026-shijingshan-zhen/figures/image13.png
-  answer: ''
+  answer: （1）∠DAE＝2∠CAB．理由如下：
   solution: '解：（1）∠DAE＝2∠CAB．理由如下：
 
     ∵将线段AD绕点A逆时针旋转180°﹣2α，
@@ -937,6 +1125,7 @@ questions:
 
     连接BE，将△AEB绕点A顺时针旋转180°﹣2a至△ADM，连接BM，
 
+    ![](figures/image36.png)
 
     则∠BAM＝180°﹣2α，AB＝AM，BE＝DM，
 
@@ -1001,9 +1190,15 @@ questions:
     ∴$CK=NK+CN=\frac{1}{2}NF+\frac{1}{2}DN=\frac{1}{2}DF$，
 
     ∴$PQ=\frac{1}{2}DF$，即DF＝2PQ．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 三角形的性质
+  - 旋转对称性
+  - 垂直平分线的性质
+  module: triangles
+  difficulty: 能力
+  recommended_for:
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 28
@@ -1015,9 +1210,11 @@ questions:
 
     （2）已知点M（﹣1，2），点N（1，4），线段MN关于直线y＝kx+2（k≠0）的纵影长为4，则k的值为　       　 ；
 
-    （3）已知A（1，0），⊙A的半径为r．若⊙A上存在点T，使线段OT关于直线y＝2x﹣10的纵影长与线段OT关于直线y＝﹣x﹣10的纵影长的和为6，直接写出r的取值范围．'
+    （3）已知A（1，0），⊙A的半径为r．若⊙A上存在点T，使线段OT关于直线y＝2x﹣10的纵影长与线段OT关于直线y＝﹣x﹣10的纵影长的和为6，直接写出r的取值范围．
+
+    ![](figures/image14.png)'
   figure: 2026-shijingshan-zhen/figures/image14.png
-  answer: ''
+  answer: （1）3；
   solution: '解：（1）∵过线段PQ的两个端点分别作直线l的平行线，交y轴于点P1和Q1，称线段P1Q1的长为线段PQ关于直线l：y＝x﹣5的纵影长，
 
     ∴PP1∥l，QQ1∥l，
@@ -1052,6 +1249,7 @@ questions:
 
     根据纵影长的定义可知，k＝a＝﹣1，
 
+    ![](figures/image38.png)
 
     将M（﹣1，2），H（1，8）代入y＝ax+b，
 
@@ -1061,6 +1259,7 @@ questions:
 
     根据纵影长的定义可知，k＝a＝3，
 
+    ![](figures/image39.png)
 
     综上所述，k＝﹣1或k＝3，
 
@@ -1072,6 +1271,7 @@ questions:
 
     如图，当T1，T2位于点O两侧时，T1T2＝6，过点T作TH⊥TT2，y＝2x﹣10与y轴交于C（0，﹣10），与x轴交于B（5，0），
 
+    ![](figures/image40.png)
 
     设TH＝h，
 
@@ -1099,6 +1299,7 @@ questions:
 
     此时点T的运动轨迹如图所示，
 
+    ![](figures/image41.png)
 
     如图，当T1，T2位于点O同侧时，设T（m，n），
 
@@ -1122,17 +1323,25 @@ questions:
 
     同理可以找到T在第二象限，第三象限和第四象限的运动轨迹，如图，
 
+    ![](figures/image42.png)
 
     整理可得T完整的运动轨迹，以A（1，0）为圆心，r为半径的圆需与此轨迹有交点，
 
+    ![](figures/image43.png)
 
     当⊙A刚好与轨迹相切时，r＝1，
 
     当⊙A过点（﹣2，﹣4）时，r＝5，
 
     综上，1≤r＜5．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 坐标系与图形的位置关系
+  - 直线的方程及其应用
+  - 几何变换
+  module: geometryComprehensive
+  difficulty: 能力
+  recommended_for:
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''

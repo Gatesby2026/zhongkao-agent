@@ -1,9 +1,15 @@
+# ============================================================
+# 2026年北京2026年北京市房山区一模math — 自动生成
+# ============================================================
+# OCR: Qwen-VL-OCR  Enrich: qwen-max
+# QC: draft=28  needs_review=0
+
 year: 2026
-district: 房山区
+district: 2026年北京市房山区
 exam_type: 一模
 subject: math
 full_score: 100
-duration_minutes: 120
+duration_minutes: null
 total_questions: 28
 structure: 8单选(16分) + 8填空(16分) + 12解答(68分)
 questions:
@@ -12,10 +18,10 @@ questions:
   score: 2
   stem: 下列图形中，既是轴对称图形又是中心对称图形的是（　　）
   options:
-    A: '[图]'
-    B: '[图]'
-    C: '[图]'
-    D: '[图]'
+    A: '![](figures/image.png)'
+    B: '![](figures/image2.png)'
+    C: '![](figures/image3.png)'
+    D: '![](figures/image4.png)'
   has_image_options: true
   figure: 2026-fangshan-zhen/figures/image.png
   answer: D
@@ -28,15 +34,25 @@ questions:
     D、该图形既是轴对称图形，又是中心对称图形，符合题意．
 
     故选：D．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 图形的对称性
+  - 轴对称图形
+  - 中心对称图形
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 2
   type: 单选
   score: 2
-  stem: 实数a、b在数轴上的对应点的位置如图所示，则正确的结论是（　　）
+  stem: '实数a、b在数轴上的对应点的位置如图所示，则正确的结论是（　　）
+
+    ![](figures/image5.png)'
   options:
     A: a＜﹣1
     B: ab＞0
@@ -79,9 +95,15 @@ questions:
     故选项D不合题意．
 
     故选：C．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 实数的大小比较
+  - 数轴的应用
+  module: numbersAndExpressions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 3
@@ -99,9 +121,15 @@ questions:
     故正五边形的每个外角等于72°．
 
     故选：C．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 多边形的内角和与外角和
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 4
@@ -117,9 +145,15 @@ questions:
   solution: '解：700000﹣200000＝500000＝5×105．
 
     故选：B．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 科学记数法
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 5
@@ -147,9 +181,15 @@ questions:
     ∴第一次摸到红球、第二次摸到黄球的概率为$\frac{1}{4}$．
 
     故选：A．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 概率的计算
+  module: statisticsAndProbability
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 6
@@ -171,15 +211,22 @@ questions:
     解得c$＜\frac{9}{4}$．
 
     故选：D．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 一元二次方程的根的判别式
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 7
   type: 单选
   score: 2
-  stem: 如图，在Rt△ABC中，∠ACB＝90°，∠ABC＝35°，分别以点A，B为圆心，以大于$\frac{1}{2}AB$的同样长为半径画弧，两弧分别交于点M，N，作直线MN与BC交于点D，连接AD，则∠CAD的大小为（　　）
+  stem: '如图，在Rt△ABC中，∠ACB＝90°，∠ABC＝35°，分别以点A，B为圆心，以大于$\frac{1}{2}AB$的同样长为半径画弧，两弧分别交于点M，N，作直线MN与BC交于点D，连接AD，则∠CAD的大小为（　　）
+
+    ![](figures/image6.png)'
   options:
     A: 70°
     B: 55°
@@ -198,9 +245,15 @@ questions:
     ∴∠CAD＝180°﹣∠ACD﹣∠ADC＝20°．
 
     故选：C．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 直角三角形的性质
+  - 圆的基本性质
+  module: triangles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 8
@@ -216,7 +269,9 @@ questions:
 
     ④当k1+k2＝0时，四边形OACB一定是正方形．
 
-    上述结论中，所有正确结论的序号是（　　）'
+    上述结论中，所有正确结论的序号是（　　）
+
+    ![](figures/image7.png)'
   options:
     A: ①③
     B: ②③
@@ -236,6 +291,7 @@ questions:
 
     ②由题意，设OC的中点为H，
 
+    ![](figures/image24.png)
 
     ∵OC＝4，
 
@@ -262,46 +318,64 @@ questions:
     综上所述，正确结论为①③，
 
     故选：A．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 反比例函数的性质
+  - 平行四边形的性质
+  module: functions
+  difficulty: 能力
+  recommended_for:
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 9
   type: 填空
   score: 2
   stem: 若$\sqrt{5x-10}$在实数范围内有意义，则实数x的取值范围是　      　 ．
-  answer: ''
+  answer: x≥2．
   solution: '解：由已知可得5x﹣10≥0，
 
     ∴x≥2．
 
     故答案为：x≥2．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 二次根式的定义与性质
+  - 不等式的解法
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 10
   type: 填空
   score: 2
   stem: 分解因式：2a2﹣18＝　              　 ．
-  answer: ''
+  answer: 2（a+3）（a﹣3）
   solution: '解：2a2﹣18＝2（a2﹣9）
 
     ＝2（a+3）（a﹣3）．
 
     故答案为：2（a+3）（a﹣3）．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 因式分解
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 11
   type: 填空
   score: 2
   stem: 方程$\frac{2}{x+5}-\frac{1}{x}=0$的解为　      　 ．
-  answer: ''
+  answer: x＝5．
   solution: '解：方程两边同时乘x（x+5），得2x﹣（x+5）＝0，
 
     去括号，得2x﹣x﹣5＝0，
@@ -313,9 +387,14 @@ questions:
     ∴分式方程的解为x＝5．
 
     故答案为：x＝5．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 分式方程的解法
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 12
@@ -330,40 +409,56 @@ questions:
     | 数量/套 | 3 | 7 | 9 | 12 | 6 | 2 | 1 |
 
     根据以上信息，估计该校七年级360名学生中尺码需求最多的校服的数量为　      　 套．'
-  answer: ''
+  answer: 108．
   solution: '解：由统计图可知：抽取的40名学生中，尺码需求最多的校服尺码是175cm的共12套，
 
     则该校七年级360名学生中尺码需求最多的校服的数量为：360$×\frac{12}{40}=$108（套），
 
     故答案为：108．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 数据的收集与整理
+  - 样本估计总体
+  module: statisticsAndProbability
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 13
   type: 填空
   score: 2
   stem: 能说明命题“若m＞n，则m2＞n2”是假命题的一组实数m，n的值为m＝　     　 ，n＝　            　 ．
-  answer: ''
+  answer: ﹣1；﹣2（答案不唯一）．
   solution: '解：当m﹣＝﹣1，n＝﹣2时，m＞n，而m2＜n2，
 
     说明命题“若m＞n，则m2＞n2”是假命题，
 
     故答案为：﹣1；﹣2（答案不唯一）．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 实数的性质
+  - 不等式的性质
+  module: numbersAndExpressions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 14
   type: 填空
   score: 2
-  stem: 我国是世界上最早制造使用水车的国家，筒车（如图1）是水车中的一种类型，是以水流作动力，取水灌田的农具．如图2是筒车的正投影示意图，筒车轮的辐条（圆的半径）将⊙O平均分为若干份，相邻辐条的夹角为15°，固定在轮缘点A处的取水筒，其筒身所在直线AC是⊙O的切线．当辐条OB与水面DE平行时，恰好取水筒的筒口C入水，则∠ACE（取水筒与水面的夹角）的大小为　     　 °．
+  stem: '我国是世界上最早制造使用水车的国家，筒车（如图1）是水车中的一种类型，是以水流作动力，取水灌田的农具．如图2是筒车的正投影示意图，筒车轮的辐条（圆的半径）将⊙O平均分为若干份，相邻辐条的夹角为15°，固定在轮缘点A处的取水筒，其筒身所在直线AC是⊙O的切线．当辐条OB与水面DE平行时，恰好取水筒的筒口C入水，则∠ACE（取水筒与水面的夹角）的大小为　     　
+    °．
+
+    ![](figures/image8.png)'
   figure: 2026-fangshan-zhen/figures/image8.png
-  answer: ''
+  answer: 45．
   solution: '解：延长OA交DE于点M，
 
+    ![](figures/image26.png)
 
     ∵OB∥DE，∠AOB＝3×15°＝45°，
 
@@ -376,17 +471,25 @@ questions:
     ∴∠ACE＝90°﹣45°＝45°．
 
     故答案为：45．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 圆的基本性质
+  - 切线的性质
+  module: circles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 15
   type: 填空
   score: 2
-  stem: 如图，△ABC中，AB＝AC，∠BAC＝90°，点D在AC边上，AE⊥BD于点E，若BE＝3DE，AD＝2，则△ABC的面积为　   　 ．
+  stem: '如图，△ABC中，AB＝AC，∠BAC＝90°，点D在AC边上，AE⊥BD于点E，若BE＝3DE，AD＝2，则△ABC的面积为　   　 ．
+
+    ![](figures/image9.png)'
   figure: 2026-fangshan-zhen/figures/image9.png
-  answer: ''
+  answer: 6．
   solution: '解：设DE＝x，则BE＝3x，
 
     ∴BD＝DE+BE＝4x，
@@ -428,9 +531,15 @@ questions:
     ∴△ABC的面积$=\frac{1}{2}×AB⋅AC=\frac{1}{2}×2\sqrt{3}×2\sqrt{3}=6$，
 
     故答案为：6．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 直角三角形的性质
+  - 相似三角形的判定与性质
+  module: triangles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 16
@@ -453,7 +562,7 @@ questions:
     （1）如果只有A组和B组一起加工，一天内最多能配齐　      　 套完整午餐；
 
     （2）如果有4个小组一起加工，一天内报多能配齐　      　 套完整午餐．'
-  answer: ''
+  answer: （1）100；（2）220．
   solution: '解：（1）A组加工50份主食，B组加工50份主食，主食总数＝50+50＝100（份），
 
     A组：主菜90份，配菜120份，
@@ -577,31 +686,45 @@ questions:
     所以，一天内最多能配齐220套完整午餐，
 
     故答案为：220．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 统计与概率-数据分析
+  - 方程与不等式-应用题
+  module: statisticsAndProbability
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 17
   type: 解答
   score: 5
   stem: 计算：$|-5|-\sqrt{12}+{(\frac{1}{3})}^{-1}+2cos30°$．
-  answer: ''
+  answer: $8-\sqrt{3}$．
   solution: '解：原式$=5-2\sqrt{3}+3+2×\frac{\sqrt{3}}{2}$
 
     $=5+3-2\sqrt{3}+\sqrt{3}$
 
     $=8-\sqrt{3}$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 绝对值
+  - 二次根式
+  - 负指数幂
+  - 特殊角的三角函数
+  module: numbersAndExpressions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 18
   type: 解答
   score: 5
   stem: 解不等式组：$\left\{\begin{matrix} 3(x+1)＞x-1 \\ \frac{x+7}{4}＞2x \end{matrix}\right.$．
-  answer: ''
+  answer: ﹣2＜x＜1．
   solution: '解：$\left\{\begin{matrix} 3(x+1)＞x-1 & ① \\ \frac{x+7}{4}＞2x & ② \end{matrix}\right.$，
 
     解不等式①，得：x＞﹣2，
@@ -609,16 +732,21 @@ questions:
     解不等式②，得：x＜1，
 
     ∴原不等式组的解集为﹣2＜x＜1．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 一元一次不等式组的解法
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 19
   type: 解答
   score: 5
   stem: 已知a+2b﹣4＝0，求代数式$\frac{2(a-b)+6b}{{a}^{2}+4ab+4{b}^{2}}$的值．
-  answer: ''
+  answer: $\frac{1}{2}$．
   solution: '解：$\frac{2(a-b)+6b}{{a}^{2}+4ab+4{b}^{2}}$
 
     $=\frac{2a-2b+6b}{(a+2b{)}^{2}}$
@@ -634,9 +762,15 @@ questions:
     ∴a+2b＝4，
 
     ∴原式$=\frac{2}{4}=\frac{1}{2}$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 代数式的化简与求值
+  - 方程的应用
+  module: numbersAndExpressions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 20
@@ -646,9 +780,11 @@ questions:
 
     （1）求证：四边形EBFD是菱形；
 
-    （2）若DE＝3，DG＝2，求BD的长．'
+    （2）若DE＝3，DG＝2，求BD的长．
+
+    ![](figures/image10.png)'
   figure: 2026-fangshan-zhen/figures/image10.png
-  answer: ''
+  answer: （1）∵DE∥BC交BA于点E，DF∥BA交BC于点F，
   solution: '（1）证明：∵DE∥BC交BA于点E，DF∥BA交BC于点F，
 
     ∴四边形EBFD是平行四边形，∠EDB＝∠DBF，
@@ -665,6 +801,7 @@ questions:
 
     （2）解：连接EF交BD于O，
 
+    ![](figures/image29.png)
 
     ∵四边形EBFD是菱形，
 
@@ -681,9 +818,16 @@ questions:
     ∴BG＝BF+FG＝6，
 
     ∴BD$=\sqrt{B{G}^{2}-D{G}^{2}}=$$\sqrt{{6}^{2}-{2}^{2}}=$4$\sqrt{2}$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 平行线的性质
+  - 菱形的判定与性质
+  - 勾股定理
+  module: quadrilaterals
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 21
@@ -694,7 +838,7 @@ questions:
     （1）求k，b的值；
 
     （2）当x＜﹣1时，对于x的每一个值，函数y＝mx+1（m≠0）的值大于函数y＝kx+b的值，且小于函数y＝x+b的值，直接写出m的取值范围．'
-  answer: ''
+  answer: （1）$\left\{\begin{matrix} k=3 \\ b=2 \end{matrix}\right.$；
   solution: '解：（1）由题意，∵函数y＝kx+b（k≠0）的图象经过点（1，5）和（﹣1，﹣1），
 
     ∴$\left\{\begin{matrix} k+b=5 \\ -k+b=-1 \end{matrix}\right.$．
@@ -705,23 +849,32 @@ questions:
 
     在同一坐标系中画出y＝mx+1，y＝3x+2，y＝x+2的图象如下：
 
+    ![](figures/image30.png)
 
     ∴当y＝mx+1平行于y＝x+2时，m＝1符合题意；
 
     当y＝mx+1经过（﹣1，﹣1）时，﹣m+1＝﹣1，则m＝2，符合题意，
 
     ∴结合图象可得，1≤m≤2．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 一次函数的性质
+  - 不等式的应用
+  module: functions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 22
   type: 解答
   score: 6
-  stem: 如图，“四条屏”是中国书画传统艺术中一种独特的表现形式，通常由四幅主题相关、风格统一的画作或书法作品组合而成，可单独欣赏，也可组合展示，小涵家要在沙发背景墙上悬挂一组“四条屏”装饰画，单幅画的水平宽与竖直高的比是1：3．已知“四条屏”的水平总长（含四幅画的水平宽与画间等距间隔）比单幅画的竖直高多55cm，沙发长比单幅画竖直高的2倍多10cm，“四条屏”的水平总长是沙发长的$\frac{7}{10}$，求单幅画的水平宽．
+  stem: '如图，“四条屏”是中国书画传统艺术中一种独特的表现形式，通常由四幅主题相关、风格统一的画作或书法作品组合而成，可单独欣赏，也可组合展示，小涵家要在沙发背景墙上悬挂一组“四条屏”装饰画，单幅画的水平宽与竖直高的比是1：3．已知“四条屏”的水平总长（含四幅画的水平宽与画间等距间隔）比单幅画的竖直高多55cm，沙发长比单幅画竖直高的2倍多10cm，“四条屏”的水平总长是沙发长的$\frac{7}{10}$，求单幅画的水平宽．
+
+    ![](figures/image11.png)'
   figure: 2026-fangshan-zhen/figures/image11.png
-  answer: ''
+  answer: 单幅画的水平宽为40cm．
   solution: '解：设单幅画的水平宽为xcm，则单幅画的竖直高为3xcm，
 
     根据题意得：3x+55$=\frac{7}{10}$（3x×2+10），
@@ -729,9 +882,15 @@ questions:
     解得：x＝40，
 
     答：单幅画的水平宽为40cm．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 方程的应用
+  - 比例与相似
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 23
@@ -789,9 +948,12 @@ questions:
 
     | 丙区域 | 85 | 87 | a | 86 | 86 |
 
-    区域排名规则为：区域内5个片区得分的平均数越大，该区域排名越靠前；若平均数相同，则方差越小排名越靠前．若丙区域在甲、乙、丙三个区域中排名居中，则这三个区域的排名由前到后依次为　        　 ，此时表中a（a为整数）的值为　     　 ．'
+    区域排名规则为：区域内5个片区得分的平均数越大，该区域排名越靠前；若平均数相同，则方差越小排名越靠前．若丙区域在甲、乙、丙三个区域中排名居中，则这三个区域的排名由前到后依次为　        　 ，此时表中a（a为整数）的值为　     　
+    ．
+
+    ![](figures/image12.png)'
   figure: 2026-fangshan-zhen/figures/image12.png
-  answer: ''
+  answer: （1）①84；4；
   solution: '解：（1）①求m和n其中84出现次数最多，共5次，
 
     因此m＝84；
@@ -859,9 +1021,15 @@ questions:
     排名由前到后为：甲、丙、乙，此时a＝85，
 
     故答案为：甲、丙、乙；85．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 统计量的计算
+  - 频数分布直方图的应用
+  module: statisticsAndProbability
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 24
@@ -871,9 +1039,11 @@ questions:
 
     （1）求证：∠AOP＝∠ACO；
 
-    （2）连接CP交OA于点D，若⊙O的半径为$\sqrt{5}$，且$cos∠AOP=\frac{\sqrt{5}}{5}$，求PD的长．'
+    （2）连接CP交OA于点D，若⊙O的半径为$\sqrt{5}$，且$cos∠AOP=\frac{\sqrt{5}}{5}$，求PD的长．
+
+    ![](figures/image13.png)'
   figure: 2026-fangshan-zhen/figures/image13.png
-  answer: ''
+  answer: （1）证明：连结AB交OP于H点，如图，
   solution: '（1）证明：连结AB交OP于H点，如图，
 
     ∵PA、PB为⊙O的两条切线，
@@ -932,10 +1102,18 @@ questions:
 
     ∴$\frac{PD}{PC}=$$\frac{5}{7}$，
 
-    ∴PD$=\frac{5}{7}$PC$=\frac{5}{7}×$2$\sqrt{10}=$$\frac{10\sqrt{10}}{7}$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+    ∴PD$=\frac{5}{7}$PC$=\frac{5}{7}×$2$\sqrt{10}=$$\frac{10\sqrt{10}}{7}$．
+
+    ![](figures/image34.png)'
+  knowledge_points:
+  - 圆的切线性质
+  - 三角函数的应用
+  module: circles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 25
@@ -945,6 +1123,7 @@ questions:
 
     1号盆和2号盆的株高y关于时间x的函数图象y1和y2如图所示：
 
+    ![](figures/image14.png)
 
     3号盆的株高部分数据如表：
 
@@ -966,7 +1145,7 @@ questions:
 
     ②生物小组发现1号盆中的郁金香长势不理想，在第5天时仅有5.3cm，于是在这一天调整1号盆中营养液浓度，使1号盆与3号盆的株高后续每天增长量都相同，则从第5天起至少需要经过　   　 天，1号盆的株高超过2号盆．'
   figure: 2026-fangshan-zhen/figures/image14.png
-  answer: ''
+  answer: （1）3；
   solution: '解：（1）当x＝15时，从函数图象看，y2＞y1，y2＝32.5，y3＝40.6，
 
     ∴y3＞y2＞y1，
@@ -979,6 +1158,7 @@ questions:
 
     ∴m＝28.7+（28.7﹣22.0﹣0.5）＝34.9．
 
+    ![](figures/image37.png)
 
     （3）①从函数图象看，株高从5cm生长到20cm，1号盆的郁金香所需生长时间大约为7天，
 
@@ -997,9 +1177,16 @@ questions:
     ∵第11天时2号盆的株高约为26.5，第13天时2号盆的株高约为29.5，
 
     ∴从第5天起至少需要经过8天1号盆的株高超过2号盆．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 函数的概念
+  - 函数的表示方法
+  - 函数的应用
+  module: functions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 26
@@ -1014,7 +1201,7 @@ questions:
     ①当线段AB与抛物线有且只有1个公共点时，直接写出a的取值范围；
 
     ②在①的条件下，过点B作x轴的垂线交抛物线于点C，若线段BC的长随a的增大而增大，求a的取值范围．'
-  answer: ''
+  answer: （1）直线x＝a；
   solution: '解：（1）∵抛物线y＝x2﹣2ax，
 
     ∴抛物线的对称轴为直线x$=-\frac{-2a}{2×1}=$a；
@@ -1064,9 +1251,15 @@ questions:
     ∴﹣1＜a＜1；
 
     综上，满足条件的a的取值范围是﹣1＜a＜1或a＞3．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 二次函数的性质
+  - 抛物线的对称轴
+  - 直线与抛物线的位置关系
+  module: functions
+  difficulty: 能力
+  recommended_for:
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 27
@@ -1080,11 +1273,14 @@ questions:
 
     ②求证：AF＝AB；
 
-    （2）如图2，点E不在AD的延长线上，用等式表示∠BCE与∠CBF的数量关系，并证明．'
+    （2）如图2，点E不在AD的延长线上，用等式表示∠BCE与∠CBF的数量关系，并证明．
+
+    ![](figures/image15.png)'
   figure: 2026-fangshan-zhen/figures/image15.png
-  answer: ''
+  answer: （1）①补全图形如下：
   solution: '解：（1）①补全图形如下：
 
+    ![](figures/image41.png)
 
     ②证明：∵∠BAC＝120°，AB＝AC，AD⊥BC，
 
@@ -1112,6 +1308,7 @@ questions:
 
     证明：延长BA到G，使得AB＝AG，连接EG，CG．
 
+    ![](figures/image42.png)
 
     ∵E，F关于点A对称，
 
@@ -1140,9 +1337,15 @@ questions:
     ∵∠CBF＝∠ABF+∠ABC＝∠AGE+90°﹣∠BGC＝∠AGE+90°﹣（∠AGE+∠CGE）＝90°﹣∠CGE，
 
     ∴$∠CBF=90°-(45°-\frac{1}{2}∠BCE)=45°+\frac{1}{2}∠BCE$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 等腰三角形的性质
+  - 全等三角形的判定与性质
+  - 轴对称图形的性质
+  module: triangles
+  difficulty: 能力
+  recommended_for:
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 28
@@ -1156,9 +1359,11 @@ questions:
 
     ②若点P（m，1）是线段BC的衔接点且其与线段BC的衔接角度为90°，则m的最大值为　             　 ；
 
-    （2）已知点$D(0，\sqrt{3}t)，E(0，-\sqrt{3}t)，F(0，4-2t)，⊙O$经过点F，⊙O上存在线段DE的衔接点H，∠DHE的大小为点H与线段DE的衔接角度．直接写出t的取值范围．'
+    （2）已知点$D(0，\sqrt{3}t)，E(0，-\sqrt{3}t)，F(0，4-2t)，⊙O$经过点F，⊙O上存在线段DE的衔接点H，∠DHE的大小为点H与线段DE的衔接角度．直接写出t的取值范围．
+
+    ![](figures/image16.png)'
   figure: 2026-fangshan-zhen/figures/image16.png
-  answer: ''
+  answer: （1）①A1；120；②$\sqrt{2}$；（2）t的取值范围为﹣1$+\sqrt{3}$t≤1或t≤﹣1$-\sqrt{3}$．
   solution: '解：（1）①∵$B(-\sqrt{3}，0)$，$C(\sqrt{3}，0)$，
 
     ∴OB＝OC$=\sqrt{3}$，
@@ -1207,6 +1412,7 @@ questions:
 
     过点P作PH⊥BC于点H，如图，
 
+    ![](figures/image44.png)
 
     则PH＝1，OH＝m，
 
@@ -1263,8 +1469,14 @@ questions:
     ∴t≤1．
 
     综上，t的取值范围为﹣1$+\sqrt{3}$t≤1或t≤﹣1$-\sqrt{3}$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 三角形的性质
+  - 坐标系中的几何问题
+  module: triangles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''

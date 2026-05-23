@@ -1,16 +1,24 @@
+# ============================================================
+# 2026年北京2026年北京市东城区一模math — 自动生成
+# ============================================================
+# OCR: Qwen-VL-OCR  Enrich: qwen-max
+# QC: draft=28  needs_review=0
+
 year: 2026
-district: 东城区
+district: 2026年北京市东城区
 exam_type: 一模
 subject: math
 full_score: 100
-duration_minutes: 120
+duration_minutes: null
 total_questions: 28
 structure: 8单选(16分) + 8填空(16分) + 12解答(68分)
 questions:
 - id: 1
   type: 单选
   score: 2
-  stem: 某几何体的三视图如图所示，则这个几何体是（　　）
+  stem: '某几何体的三视图如图所示，则这个几何体是（　　）
+
+    ![](figures/image.png)'
   options:
     A: 圆柱
     B: 长方体
@@ -25,9 +33,16 @@ questions:
     故该几何体为圆柱．
 
     故选：A．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 三视图
+  - 几何体的识别
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 2
@@ -43,9 +58,15 @@ questions:
   solution: '解：12000000＝1.2×107．
 
     故选：C．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 科学记数法
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 3
@@ -60,15 +81,22 @@ questions:
   answer: B
   solution: '解：树状图如下所示，
 
+    ![](figures/image14.png)
 
     由上可得，一共有16种等可能性，其中两次摸出的小球的标号相同的可能性有4种，
 
     ∴两次摸出的小球的标号相同的概率为$\frac{4}{16}=$$\frac{1}{4}$，
 
     故选：B．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 概率的计算
+  module: statisticsAndProbability
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 4
@@ -90,15 +118,23 @@ questions:
     ∴a＜﹣2＜2＜﹣a．
 
     故选：B．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 不等式的性质
+  - 数的大小比较
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 5
   type: 单选
   score: 2
-  stem: 如图，直线AB∥CD，点E，F分别在直线AB，CD上，连接EF，以点E为圆心，适当长为半径画弧，交射线EA于点M，交EF于点N，再分别以点M，N为圆心，大于$\frac{1}{2}MN$的长为半径画弧（两弧半径相等），两弧在∠AEF的内部交于点H，画射线EH交CD于点G，若∠AEF＝70°，则图中∠1的度数为（　　）
+  stem: '如图，直线AB∥CD，点E，F分别在直线AB，CD上，连接EF，以点E为圆心，适当长为半径画弧，交射线EA于点M，交EF于点N，再分别以点M，N为圆心，大于$\frac{1}{2}MN$的长为半径画弧（两弧半径相等），两弧在∠AEF的内部交于点H，画射线EH交CD于点G，若∠AEF＝70°，则图中∠1的度数为（　　）
+
+    ![](figures/image2.png)'
   options:
     A: 35°
     B: 110°
@@ -117,15 +153,23 @@ questions:
     ∴∠1＝180°﹣∠AEG＝180°﹣35°＝145°（两直线平行，同旁内角互补），
 
     故选：D．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 平行线的性质
+  - 角平分线的性质
+  module: geometryComprehensive
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 6
   type: 单选
   score: 2
-  stem: 人字梯为家庭常用工具．如图，若AB，AC的长都为2m，当α＝53°时，人字梯顶端A离地面BC的高度是（结果精确到0.1m，参考数据：sin53°≈0.8，cos53°≈0.6，tan53°≈1.3）（　　）
+  stem: '人字梯为家庭常用工具．如图，若AB，AC的长都为2m，当α＝53°时，人字梯顶端A离地面BC的高度是（结果精确到0.1m，参考数据：sin53°≈0.8，cos53°≈0.6，tan53°≈1.3）（　　）
+
+    ![](figures/image3.png)'
   options:
     A: 1.0m
     B: 1.2m
@@ -135,6 +179,7 @@ questions:
   answer: C
   solution: '解：过点A作AD⊥BC于点D，
 
+    ![](figures/image17.png)
 
     ∴∠ADC＝90°，
 
@@ -147,9 +192,15 @@ questions:
     ∴人字梯顶端A离地面BC的高度是1.6m．
 
     故选：C．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 解直角三角形
+  - 锐角三角函数的应用
+  module: triangles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 7
@@ -177,9 +228,15 @@ questions:
     解得m＝3，
 
     故选：B．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 二次函数的图象与性质
+  - 二次函数的平移
+  module: functions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 8
@@ -193,7 +250,9 @@ questions:
 
     ③等边三角形的面积的最大值为$\frac{1}{2}$．
 
-    上述结论中，所有正确结论的序号是（　　）'
+    上述结论中，所有正确结论的序号是（　　）
+
+    ![](figures/image4.png)'
   options:
     A: ①②
     B: ①③
@@ -203,6 +262,7 @@ questions:
   answer: A
   solution: '解：如图所示，连接正方形对角交于点O，以点O为圆心，以OD为半径画圆，则点D，E，F，G在圆O上，连接OA，OB，OC，并延长，交圆O于点M，N，P，
 
+    ![](figures/image19.png)
 
     ∵△ABC是等边三角形，
 
@@ -216,6 +276,7 @@ questions:
 
     如图所示，过点A作AM⊥DG，则∠D＝∠E＝∠AMD＝90°，
 
+    ![](figures/image20.png)
 
     ∴四边形AMDE是矩形，
 
@@ -237,6 +298,7 @@ questions:
 
     如图所示，当三角形一个顶点与正方形的一个顶点重合时，
 
+    ![](figures/image21.png)
 
     ∴$∠DAB=∠FAC=\frac{1}{2}(∠DAF-∠BAC)=\frac{1}{2}×(90°-60°)=15°$，
 
@@ -275,31 +337,43 @@ questions:
     综上所述，正确的有①②，
 
     故选：A．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 等边三角形的性质
+  - 正方形的性质
+  module: triangles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 9
   type: 填空
   score: 2
   stem: 若代数式$\frac{1}{x-2}$有意义，则实数x的取值范围是　      　 ．
-  answer: ''
+  answer: x≠2．
   solution: '解：根据题意得x﹣2≠0，
 
     解得x≠2，
 
     故答案为：x≠2．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 分式的定义与性质
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 10
   type: 填空
   score: 2
   stem: 分解因式：2x2﹣8xy+8y2＝　           　 ．
-  answer: ''
+  answer: 2（x﹣2y）2
   solution: '解：2x2﹣8xy+8y2
 
     ＝2（x2﹣4xy+4y2）
@@ -307,16 +381,22 @@ questions:
     ＝2（x﹣2y）2．
 
     故答案为：2（x﹣2y）2．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 因式分解
+  - 完全平方公式
+  module: numbersAndExpressions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 11
   type: 填空
   score: 2
   stem: 方程$\frac{3}{x+1}-\frac{1}{x}=0$的解为　                  　 ．
-  answer: ''
+  answer: $x=\frac{1}{2}$．
   solution: '解：$\frac{3}{x+1}-\frac{1}{x}=0$，
 
     方程两边同乘以最简公分母x（x+1）得，3x﹣（x+1）＝0，
@@ -332,16 +412,21 @@ questions:
     所以$x=\frac{1}{2}$是原方程的解，
 
     故答案为：$x=\frac{1}{2}$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 分式方程的解法
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 12
   type: 填空
   score: 2
   stem: 若关于x的一元二次方程2x2﹣4x+m＝0有两个实数根，则m的取值范围是　      　 ．
-  answer: ''
+  answer: m≤2．
   solution: '解：由题知，
 
     因为关于x的一元二次方程2x2﹣4x+m＝0有两个实数根，
@@ -351,9 +436,14 @@ questions:
     解得m≤2．
 
     故答案为：m≤2．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 一元二次方程的根的判别式
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 13
@@ -368,7 +458,7 @@ questions:
     | 人数 | 10 | 15 | 30 | 25 | 20 |
 
     根据以上信息，估计该中学1200名学生中参加公益活动时间是10h的人数是　      　 ．'
-  answer: ''
+  answer: 240．
   solution: '解：抽取的样本容量为100，其中参加公益活动时间为10h的人数为20，
 
     则样本中参加公益活动时间为10h的频率为：$\frac{20}{100}=0.2$，
@@ -376,19 +466,29 @@ questions:
     ∴估计人数为：1200×0.2＝240．
 
     故答案为：240．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 统计与概率-数据的收集、整理与描述
+  - 统计与概率-样本估计总体
+  module: statisticsAndProbability
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 14
   type: 填空
   score: 2
-  stem: 如图，A，B，C是⊙O上的点，OC⊥AB，垂足为点D，且D为OC的中点，若OA＝5，则BC的长为　   　 ．
+  stem: '如图，A，B，C是⊙O上的点，OC⊥AB，垂足为点D，且D为OC的中点，若OA＝5，则BC的长为　   　 ．
+
+    ![](figures/image5.png)'
   figure: 2026-dongcheng-zhen/figures/image5.png
-  answer: ''
+  answer: 5．
   solution: '解：连接OB，如图，
 
+    ![](figures/image23.png)
 
     ∵A，B，C是⊙O上的点，OA＝5，
 
@@ -403,17 +503,25 @@ questions:
     ∴BC＝OB＝5．
 
     故答案为：5．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 圆的基本性质
+  - 垂径定理
+  module: circles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 15
   type: 填空
   score: 2
-  stem: 如图，在矩形ABCD中，AB＝6，BC＝9，点E，F分别在边AB，BC上，AE＝2，BD，EF交于点G，若G是EF的中点，则BG的长为　              　 ．
+  stem: '如图，在矩形ABCD中，AB＝6，BC＝9，点E，F分别在边AB，BC上，AE＝2，BD，EF交于点G，若G是EF的中点，则BG的长为　              　 ．
+
+    ![](figures/image6.png)'
   figure: 2026-dongcheng-zhen/figures/image6.png
-  answer: ''
+  answer: $\sqrt{13}$．
   solution: '解：∵四边形ABCD是矩形，
 
     ∴AB＝CD＝6，∠ABC＝∠C＝90°，AB∥CD，
@@ -445,9 +553,16 @@ questions:
     ∴BG$=\frac{1}{2}$EF$=\sqrt{13}$，
 
     故答案为：$\sqrt{13}$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 矩形的性质
+  - 中点的应用
+  - 勾股定理
+  module: quadrilaterals
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 16
@@ -470,7 +585,7 @@ questions:
     （1）若只由甲类专用设备工作，则一天最多可生产　      　 个电池；
 
     （2）若40台专用设备都在工作，则一天最多可生产　      　 个电池．'
-  answer: ''
+  answer: （1）200；
   solution: '解：（1）甲设备有15台，
 
     ∴设甲设备有x台生产正极片，则有（15﹣x）台生产负极片，
@@ -530,31 +645,44 @@ questions:
     此时，400个正极片与1600个负极片可以组装成400个电池．
 
     故答案为：400．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 应用题
+  - 比例与比例关系
+  module: numbersAndExpressions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 17
   type: 解答
   score: 5
   stem: 计算：$\sqrt{27}-2sin60°-{(π-1)}^{0}+|-2|$．
-  answer: ''
+  answer: $2\sqrt{3}+1$．
   solution: '解：原式$=3\sqrt{3}-2×\frac{\sqrt{3}}{2}-1+2$
 
     $=3\sqrt{3}-\sqrt{3}-1+2$
 
     $=2\sqrt{3}+1$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 实数的运算
+  - 特殊角的三角函数值
+  - 绝对值
+  module: numbersAndExpressions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 18
   type: 解答
   score: 5
   stem: 解不等式组：$\left\{\begin{matrix} 2x+1≥-5 \\ x-2＜\frac{x+4}{3} \end{matrix}\right.$．
-  answer: ''
+  answer: ﹣3≤x＜5．
   solution: '解：$\left\{\begin{matrix} 2x+1≥-5① \\ x-2＜\frac{x+4}{3}② \end{matrix}\right.$，
 
     解不等式①得x≥﹣3，
@@ -562,16 +690,21 @@ questions:
     解不等式②x＜5，
 
     ∴原不等式组的解集为﹣3≤x＜5．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 一元一次不等式组的解法
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 19
   type: 解答
   score: 5
   stem: 已知x+y﹣2＝0，求代数式x2﹣y2﹣2（x﹣y）+3的值．
-  answer: ''
+  answer: 3．
   solution: '解：原式＝（x+y）（x﹣y）﹣2（x﹣y）+3
 
     ＝（x﹣y）（x+y﹣2）+3
@@ -579,9 +712,15 @@ questions:
     ＝（x﹣y）×0+3
 
     ＝3．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 代数式的化简与求值
+  - 方程的应用
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 20
@@ -591,9 +730,11 @@ questions:
 
     （1）求证：四边形ABCD是菱形；
 
-    （2）若∠H＝30°，BH＝4，求CG的长．'
+    （2）若∠H＝30°，BH＝4，求CG的长．
+
+    ![](figures/image7.png)'
   figure: 2026-dongcheng-zhen/figures/image7.png
-  answer: ''
+  answer: （1）证明：∵E，F分别是AB，AD的中点，
   solution: '（1）证明：∵E，F分别是AB，AD的中点，
 
     ∴EF为△ABD的中位线，
@@ -635,9 +776,16 @@ questions:
     在Rt△CGH中，∵∠H＝30°，CH＝BH+BC＝12，
 
     ∴CG$=\frac{1}{2}$CH＝6．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 四边形的性质
+  - 中点定理
+  - 菱形的判定
+  module: quadrilaterals
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 21
@@ -648,7 +796,7 @@ questions:
     （1）求兑换前购买的圆规和笔记本的数量；
 
     （2）求用于兑换圆规的兑换券的张数．'
-  answer: ''
+  answer: （1）兑换前购买圆规80个，笔记本60本；
   solution: '解：（1）设兑换前购买圆规的数量为4x个，笔记本的数量为3x本，
 
     由题意得，15×4x+6×3x＝1560，
@@ -674,9 +822,15 @@ questions:
     解得m＝2．
 
     答：用于兑换圆规的兑换券为2张．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 方程与不等式
+  - 比例与比率
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 22
@@ -687,7 +841,7 @@ questions:
     （1）求k，b的值；
 
     （2）当x≤﹣1时，对于x的每一个值，函数y＝mx﹣3（m≠0）的值小于y＝kx+b的值，且大于y＝bx+k的值，直接写出m的取值范围．'
-  answer: ''
+  answer: （1）k＝﹣2，b＝2；
   solution: '解：（1）∵函数y＝kx+b的图象由y＝﹣2x平移得到，
 
     ∴k＝﹣2．
@@ -723,9 +877,15 @@ questions:
     （2﹣m）（﹣1）≤﹣1，解得m≤1，
 
     综上，m的取值范围为﹣2＜m≤1且m≠0．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 一次函数的性质
+  - 不等式的应用
+  module: functions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 23
@@ -773,9 +933,11 @@ questions:
 
     排名规则为：5次测试成绩的平均数高的选手排名靠前；若平均数相同，方差小的选手排名靠前．
 
-    若丙在甲、乙、丙三名选手中的排名居中，则表中整数t的最小值为　     　 ，最大值为　     　 ．'
+    若丙在甲、乙、丙三名选手中的排名居中，则表中整数t的最小值为　     　 ，最大值为　     　 ．
+
+    ![](figures/image8.png)'
   figure: 2026-dongcheng-zhen/figures/image8.png
-  answer: ''
+  answer: （1）81，83；
   solution: '解：（1）B队成绩中的数据83出现的次数最多，故众数n＝83；
 
     A队中60≤x＜70，70≤x＜80两组的人数分别为2和7，而20个数据的中位数是第10，11个数据的平均数，那么第10，11个数据在80≤x＜90这一组，是80，82，
@@ -831,9 +993,15 @@ questions:
     故最小值为94，最大值为99，
 
     挂安慰：94，99．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 统计量的计算
+  - 数据的分析与处理
+  module: statisticsAndProbability
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 24
@@ -843,11 +1011,14 @@ questions:
 
     （1）求证：AB∥EF；
 
-    （2）连接BC交DE于点G．若$EF=8，sinE=\frac{3}{5}$，求CG的长．'
+    （2）连接BC交DE于点G．若$EF=8，sinE=\frac{3}{5}$，求CG的长．
+
+    ![](figures/image9.png)'
   figure: 2026-dongcheng-zhen/figures/image9.png
-  answer: ''
+  answer: （1）连接OC，
   solution: '（1）证明：连接OC，
 
+    ![](figures/image29.png)
 
     ∵⊙O的切线交DO的延长线于点E，
 
@@ -863,6 +1034,7 @@ questions:
 
     （2）解：如图，
 
+    ![](figures/image30.png)
 
     ∵OA＝OD，
 
@@ -899,9 +1071,16 @@ questions:
     ∴$\frac{OB}{CE}=\frac{BG}{CG}=\frac{3}{4}$，
 
     ∴$CG=\frac{4}{7}BC=\frac{12\sqrt{2}}{7}$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 圆的基本性质
+  - 相似三角形的判定与性质
+  - 解直角三角形
+  module: circles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 25
@@ -927,15 +1106,18 @@ questions:
 
     ②若两种算法计算的能量消耗值之差的绝对值大于或等于25千卡，则AI动态算法开始计算y1，y2的平均数，如果所得的平均数与y1的差的绝对值大于或等于25千卡，那么AI动态算法再次计算上一次所得的平均数与y1的平均数，重复上述操作，直到所得的平均数与y1的差的绝对值小于25千卡时，手环上显示的能量消耗值是最后一次所得的平均数（AI动态算法计算时间忽略不计）．
 
-    这次测试中，该测试者运动25分钟时，手环显示的能量消耗值是　      　 千卡（保留整数）；运动60分钟时，手环显示的能量消耗值是　      　 千卡．'
+    这次测试中，该测试者运动25分钟时，手环显示的能量消耗值是　      　 千卡（保留整数）；运动60分钟时，手环显示的能量消耗值是　      　 千卡．
+
+    ![](figures/image10.png)'
   figure: 2026-dongcheng-zhen/figures/image10.png
-  answer: ''
+  answer: （1）y1＝5x；
   solution: '解：（1）观察表格得，y1＝5x；
 
     故答案为：y1＝5x；
 
     （2）重复上述操作，直到所得的平均数与y1的差的绝对值小于25千卡时，手环上显示的能量消耗值是最后一次所得的平均数（AI动态算法计算时间忽略不计）．函数图象如图所示：
 
+    ![](figures/image33.png)
 
     （3）根据图象得：当测试者运动25分钟时，两种算法计算的能量消耗值之差的绝对值小于25千卡，
 
@@ -954,9 +1136,16 @@ questions:
     ∴手环显示的能量消耗值是280千卡．
 
     故答案为：117；280．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 函数的概念
+  - 一次函数的表示与性质
+  - 数据处理与分析
+  module: functions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 26
@@ -971,7 +1160,7 @@ questions:
     ①若a＝1，t＝3，求MN的长；
 
     ②当2＜t＜4时，MN的长随t的增大而增大，直接写出a的取值范围．'
-  answer: ''
+  answer: （1）c＝0，A点的横坐标为2a﹣1；
   solution: '解：（1）抛物线y＝ax2+（a﹣2a2）x+c（a＞0）与x轴交于O（0，0），A两点，
 
     ∴c＝0，抛物线的对称轴直线为$x=-\frac{a-2{a}^{2}}{2a}=\frac{2a-1}{2}$$\frac{0+{x}_{A}}{2}=\frac{2a-1}{2}$，
@@ -1017,9 +1206,15 @@ questions:
     ∴4≤a；
 
     综上所示，0＜a≤1或a≥4．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 二次函数的性质
+  - 坐标系中的几何问题
+  module: functions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 27
@@ -1031,11 +1226,14 @@ questions:
 
     ②求证：∠B＝∠DAE；
 
-    （2）判断AF，BC之间的数量关系，并证明．'
+    （2）判断AF，BC之间的数量关系，并证明．
+
+    ![](figures/image11.png)'
   figure: 2026-dongcheng-zhen/figures/image11.png
-  answer: ''
+  answer: （1）①将AB绕点A逆时针旋转120°得到AD．过点D作DE∥BC，交AC的延长线于点E，点F为CE中点．补全图形如图即为所求；
   solution: '（1）①解：将AB绕点A逆时针旋转120°得到AD．过点D作DE∥BC，交AC的延长线于点E，点F为CE中点．补全图形如图即为所求；
 
+    ![](figures/image36.png)
 
     ②证明：根据题意得：∠BAD＝120°，
 
@@ -1082,9 +1280,15 @@ questions:
     ∴AG＝2AF，
 
     ∴BC＝2AF．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 三角形的性质
+  - 旋转对称性
+  - 平行线的性质
+  module: triangles
+  difficulty: 能力
+  recommended_for:
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 28
@@ -1098,11 +1302,14 @@ questions:
 
     ②若OC＝2，点C是⊙O的弦AB的“锐切点”，则弦AB的长的取值范围是　                  　 ；
 
-    （2）已知点T（t，0）（t＞0），⊙O经过点T，若存在一条长为$2\sqrt{7}$的线段，线段上的任意一点都是⊙O的长为t的弦的“锐切点”，直接写出t的取值范围．'
+    （2）已知点T（t，0）（t＞0），⊙O经过点T，若存在一条长为$2\sqrt{7}$的线段，线段上的任意一点都是⊙O的长为t的弦的“锐切点”，直接写出t的取值范围．
+
+    ![](figures/image12.png)'
   figure: 2026-dongcheng-zhen/figures/image12.png
-  answer: ''
+  answer: （1）①C2，C3；
   solution: '解：（1）①如图，
 
+    ![](figures/image38.png)
 
     △ABC1为钝角三角形，则C1（﹣1，1）不符合题意；
 
@@ -1122,11 +1329,13 @@ questions:
 
     如图，当∠B1AC＝90°时，
 
+    ![](figures/image39.png)
 
     AB1为圆的直径，即AB1＝2，
 
     如图，当∠AB2C＝90°时，过点O作OD⊥AB于D，
 
+    ![](figures/image40.png)
 
     ∵OD⊥AB2，
 
@@ -1160,6 +1369,7 @@ questions:
 
     连接OC1OC2，
 
+    ![](figures/image41.png)
 
     ∵∠OAB＝∠AOB＝∠ABO＝60°，
 
@@ -1175,6 +1385,7 @@ questions:
 
     如图，与圆环内圆相切时，是线段在此范围内的最长状态，仅有此时存在EF使得条件成立时，圆的半径最小，连接OF；
 
+    ![](figures/image42.png)
 
     ∴$EF=2\sqrt{7}$，
 
@@ -1185,8 +1396,14 @@ questions:
     解得$t=2\sqrt{3}$t$=-2\sqrt{3}$（不符合题意，舍去），
 
     即$t＞2\sqrt{3}$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 圆的性质
+  - 三角形的性质
+  - 坐标系中的几何问题
+  module: circles
+  difficulty: 能力
+  recommended_for:
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''

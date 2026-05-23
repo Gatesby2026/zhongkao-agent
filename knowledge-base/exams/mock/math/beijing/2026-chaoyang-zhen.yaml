@@ -1,9 +1,15 @@
+# ============================================================
+# 2026年北京2026年北京市朝阳区一模math — 自动生成
+# ============================================================
+# OCR: Qwen-VL-OCR  Enrich: qwen-max
+# QC: draft=28  needs_review=0
+
 year: 2026
-district: 朝阳区
+district: 2026年北京市朝阳区
 exam_type: 一模
 subject: math
 full_score: 100
-duration_minutes: 120
+duration_minutes: null
 total_questions: 28
 structure: 8单选(16分) + 8填空(16分) + 12解答(68分)
 questions:
@@ -12,10 +18,10 @@ questions:
   score: 2
   stem: 传统建筑中的窗格不仅具有实用功能，更承载着深厚的文化寓意与审美价值，下列图形中，既是轴对称图形，又是中心对称图形的是（　　）
   options:
-    A: '[图]'
-    B: '[图]'
-    C: '[图]'
-    D: '[图]'
+    A: '![](figures/image.png)'
+    B: '![](figures/image2.png)'
+    C: '![](figures/image3.png)'
+    D: '![](figures/image4.png)'
   has_image_options: true
   figure: 2026-chaoyang-zhen/figures/image.png
   answer: A
@@ -28,15 +34,24 @@ questions:
     D、该图形是轴对称图形，不是中心对称图形，本选项不符合题意．
 
     故选：A．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 轴对称图形
+  - 中心对称图形
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 2
   type: 单选
   score: 2
-  stem: 实数a，b在数轴上的对应点的位置如图所示，下列结论中正确的是（　　）
+  stem: '实数a，b在数轴上的对应点的位置如图所示，下列结论中正确的是（　　）
+
+    ![](figures/image5.png)'
   options:
     A: a＞﹣2
     B: a+b＞0
@@ -53,9 +68,15 @@ questions:
     D，|a|＞|b|，绝对值指表示的数与原点的距离，离原点越远，绝对值越大，本项正确，符合题意，
 
     故选：D．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 实数的大小比较
+  - 绝对值的概念
+  module: numbersAndExpressions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 3
@@ -73,9 +94,15 @@ questions:
     即x＝60，
 
     故选：B．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 多边形的内角和与外角和
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 4
@@ -95,9 +122,15 @@ questions:
     解得k＝1．
 
     故选：B．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 一元二次方程的根与系数的关系
+  - 判别式
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 5
@@ -115,9 +148,16 @@ questions:
     用红球的个数除以球的总个数可得：摸出红球的概率为$\frac{3}{8}$，
 
     故选：C．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 概率的基本概念
+  - 简单事件的概率计算
+  module: statisticsAndProbability
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 6
@@ -139,15 +179,24 @@ questions:
     ＝8.51×104（亿元），
 
     故选：C．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 科学记数法
+  - 基本运算
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 7
   type: 单选
   score: 2
-  stem: 如图，O是∠BAC内部一点．若以O为圆心，OA长为半径画弧，分别与射线AB，AC交于点M，N（点M，N均不与点A重合），连接OM，ON，若∠BAC＝40°，则∠MON的大小为（　　）
+  stem: '如图，O是∠BAC内部一点．若以O为圆心，OA长为半径画弧，分别与射线AB，AC交于点M，N（点M，N均不与点A重合），连接OM，ON，若∠BAC＝40°，则∠MON的大小为（　　）
+
+    ![](figures/image6.png)'
   options:
     A: 100°
     B: 80°
@@ -159,10 +208,18 @@ questions:
 
     ∴∠MON＝2∠BAC＝80°．
 
-    故选：B．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+    故选：B．
+
+    ![](figures/image21.png)'
+  knowledge_points:
+  - 圆的基本性质
+  - 圆心角与圆周角的关系
+  module: circles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 8
@@ -178,7 +235,9 @@ questions:
 
     ④△AOD的面积一定等于△BOC的面积．
 
-    上述结论中，所有正确结论的序号为（　　）'
+    上述结论中，所有正确结论的序号为（　　）
+
+    ![](figures/image7.png)'
   options:
     A: ①②
     B: ②③
@@ -277,16 +336,22 @@ questions:
     故④正确．
 
     故选：D．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 一次函数的图象与性质
+  - 反比例函数的图象与性质
+  - 三角形的面积计算
+  module: functions
+  difficulty: 能力
+  recommended_for:
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 9
   type: 填空
   score: 2
   stem: 若$\sqrt{x-1}$在实数范围内有意义，则实数x的取值范围是 　      　 ．
-  answer: ''
+  answer: x≥1
   solution: '解：由题意可得$\sqrt{x-1}≥0$，
 
     ∴x﹣1≥0，
@@ -294,29 +359,42 @@ questions:
     ∴x≥1，
 
     故答案为：x≥1．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 实数及其运算
+  - 根式的意义
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 10
   type: 填空
   score: 2
   stem: 分解因式：3a2+6ab+3b2＝　          　 ．
-  answer: ''
+  answer: 3（a+b）2
   solution: '解：3a2+6ab+3b2＝3（a2+2ab+b2）＝3（a+b）2．
 
     故答案为：3（a+b）2．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 因式分解
+  - 公式应用
+  module: numbersAndExpressions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 11
   type: 填空
   score: 2
   stem: 方程$\frac{2}{x+3}=$$\frac{1}{x}$的解为 　      　 ．
-  answer: ''
+  answer: x＝3
   solution: '解：方程两边同时乘以x（x+3）得：
 
     2x＝x+3，
@@ -328,24 +406,35 @@ questions:
     ∴方程的解为x＝3．
 
     故答案为：x＝3．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 分式方程的解法
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 12
   type: 填空
   score: 2
   stem: 能说明命题“若x＞y，则x2＞y2”是假命题的一组实数x，y的值为x＝　     　 ，y＝　             　 ．
-  answer: ''
+  answer: ﹣1；﹣2（答案不唯一）．
   solution: '解：当x＝﹣1，y＝﹣2时，x＞y，而x2＜y2，
 
     说明命题“若x＞y，则x2＞y2”是假命题，
 
     故答案为：﹣1；﹣2（答案不唯一）．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 不等式的性质
+  - 实数的平方
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 13
@@ -360,7 +449,7 @@ questions:
     | 人数 | 650 | 157 | 101 | 63 | 29 |
 
     根据以上信息，估计该集团校20000名学生单次使用电子屏幕时长不超过15min的人数为　        　 ．'
-  answer: ''
+  answer: 13000．
   solution: '解：由表格可得，抽取的1000名学生中，单次使用电子屏幕时长不超过15min的人数为650，
 
     该组数据的频率为$\frac{650}{1000}=$0.65，
@@ -368,9 +457,16 @@ questions:
     ∴估计该集团校20000名学生单次使用电子屏幕时长不超过15min的人数为0.65×20000＝13000，
 
     故答案为：13000．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 统计与概率-数据的收集、整理与描述
+  - 统计与概率-用样本估计总体
+  module: statisticsAndProbability
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 14
@@ -385,7 +481,7 @@ questions:
     | 声音传播的速度v | 331 | 337 | 343 |
 
     研究发现，在一定条件下，v是t的一次函数，函数关系为v＝at+b（a，b为常数，且a≠0）．当温度t为15℃时，声音传播的速度v为　      　 m/s．'
-  answer: ''
+  answer: 340．
   solution: '解：将t＝0，v＝331和t＝10，v＝337分别代入v＝at+b，
 
     得$\left\{\begin{matrix} b=331 \\ 10a+b=337 \end{matrix}\right.$，
@@ -399,17 +495,26 @@ questions:
     ∴当温度t为15℃时，声音传播的速度v为340m/s．
 
     故答案为：340．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 一次函数的应用
+  - 线性方程的求解
+  module: functions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 15
   type: 填空
   score: 2
-  stem: 如图，在平面直角坐标系xOy中，正方形ABCD的顶点A，B在x轴上，点D的坐标为（﹣1，5），CD与y轴交于点E，点F在CD边上，将△BCF沿直线BF翻折，得到△BGF．若点G恰好落在y轴上，则△EFG的面积为　                　 ．
+  stem: '如图，在平面直角坐标系xOy中，正方形ABCD的顶点A，B在x轴上，点D的坐标为（﹣1，5），CD与y轴交于点E，点F在CD边上，将△BCF沿直线BF翻折，得到△BGF．若点G恰好落在y轴上，则△EFG的面积为　                　
+    ．
+
+    ![](figures/image8.png)'
   figure: 2026-chaoyang-zhen/figures/image8.png
-  answer: ''
+  answer: $\frac{3}{2}$．
   solution: '解：∵点D的坐标为（﹣1，5），四边形ABCD是正方形，
 
     ∴点A的坐标为（﹣1，0），AD＝5，
@@ -435,9 +540,15 @@ questions:
     ∴${S}_{△EFG}=\frac{1}{2}EF⋅EG=\frac{1}{2}×2×\frac{3}{2}=\frac{3}{2}$，
 
     故答案为：$\frac{3}{2}$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 正方形的性质
+  - 坐标系中的几何变换
+  - 三角形面积计算
+  module: quadrilaterals
+  difficulty: 能力
+  recommended_for:
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 16
@@ -448,7 +559,7 @@ questions:
     （1）积分最低的球队负　   　 场；
 
     （2）积分排名第三的球队最低积　   　 分．'
-  answer: ''
+  answer: （1）3；
   solution: '解：每两支参赛球队均要比赛一场，每支球队共比赛5﹣1＝4 场．
 
     （1）已知积分最低的球队积1分，根据积分规则，1分只能是0×3+1×1+3×0＝1，即该队0胜1平3负，因此负场数为3，
@@ -464,31 +575,45 @@ questions:
     此时积分排序为12，9，4，2，1，所有积分均不同，符合题意．若C积3分，则第四位只能是2分，无论如何安排，都会出现积分重复或第三名为更高积分的球队，因此C最低积4分，
 
     故答案为：4．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 排列组合
+  - 逻辑推理
+  module: numbersAndExpressions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 17
   type: 解答
   score: 5
   stem: 计算：${(π-3)}^{0}-4cos45°+\sqrt{8}+|\sqrt{3}-1|$．
-  answer: ''
+  answer: $\sqrt{3}$．
   solution: '解：原式$=1-4×\frac{\sqrt{2}}{2}+2\sqrt{2}+\sqrt{3}-1$
 
     $=1-2\sqrt{2}+2\sqrt{2}+\sqrt{3}-1$
 
     $=\sqrt{3}$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 实数的运算
+  - 三角函数的基本概念
+  - 绝对值的概念与计算
+  - 二次根式的化简
+  module: numbersAndExpressions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 18
   type: 解答
   score: 5
   stem: 解不等式组：$\left\{\begin{matrix} 3(x-1)＜2x+1 \\ \frac{4x-2}{3}＞x \end{matrix}\right.$．
-  answer: ''
+  answer: 2＜x＜4．
   solution: '解：由3（x﹣1）＜2x+1得，
 
     x＜4，
@@ -498,16 +623,21 @@ questions:
     x＞2，
 
     所以不等式组的解集为2＜x＜4．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 一元一次不等式组的解法
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 19
   type: 解答
   score: 5
   stem: 已知a﹣b﹣3＝0，求代数式$\frac{b}{2a+2b}⋅\frac{{a}^{2}-{b}^{2}}{b}$的值．
-  answer: ''
+  answer: $\frac{3}{2}$．
   solution: '解：∵a﹣b﹣3＝0，
 
     ∴a﹣b＝3，
@@ -519,9 +649,15 @@ questions:
     $=\frac{a-b}{2}$
 
     $=\frac{3}{2}$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 代数式的化简
+  - 因式分解
+  module: numbersAndExpressions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 20
@@ -531,9 +667,11 @@ questions:
 
     （1）求证：四边形BECF是菱形；
 
-    （2）连接EF，若AB＝6，DE＝2，∠A＝60°，求EF的长．'
+    （2）连接EF，若AB＝6，DE＝2，∠A＝60°，求EF的长．
+
+    ![](figures/image9.png)'
   figure: 2026-chaoyang-zhen/figures/image9.png
-  answer: ''
+  answer: （1）∵四边形ABCD是平行四边形，
   solution: '（1）证明：∵四边形ABCD是平行四边形，
 
     ∴∠BCD＝∠A，CD∥BC，
@@ -554,6 +692,7 @@ questions:
 
     （2）解：连接EF交BC于O，
 
+    ![](figures/image25.png)
 
     ∵四边形BECF是菱形，
 
@@ -576,9 +715,16 @@ questions:
     ∴OE$=\frac{\sqrt{3}}{2}$BE$=\frac{\sqrt{3}}{2}×$4＝2$\sqrt{3}$，
 
     ∴EF＝2OE＝4$\sqrt{3}$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 四边形的性质
+  - 菱形的判定与性质
+  - 解直角三角形
+  module: quadrilaterals
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 21
@@ -589,7 +735,7 @@ questions:
     （1）求k，b的值；
 
     （2）当x＞2时，对于x的每一个值，函数y＝mx﹣1（m≠0）的值既小于函数y＝kx+b的值，也大于0，直接写出m的取值范围．'
-  answer: ''
+  answer: （1）k＝1，b＝2；
   solution: '解：（1）∵一次函数y＝kx+b（k≠0）的图象与x轴交于点（﹣2，0），与y轴交于点（0，2），
 
     ∴$\left\{\begin{matrix} -2k+b=0 \\ b=2 \end{matrix}\right.$，
@@ -604,6 +750,7 @@ questions:
 
     如图：
 
+    ![](figures/image26.png)
 
     ∵当x＞2时，对于x的每一个值，函数y＝mx﹣1（m≠0）的值既小于函数y＝kx+b的值，也大于0，
 
@@ -636,16 +783,22 @@ questions:
     解得m$≥\frac{1}{2}$；
 
     ∴m的取值范围为：$\frac{1}{2}≤$m≤1．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 一次函数的图像与性质
+  - 不等式的解法
+  module: functions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 22
   type: 解答
   score: 5
   stem: 某校重视学生的传统名著阅读，该校图书管理员在“传统文化宣传月”期间为学校购买了甲种名著8本，乙种名著3本，共支付300元．若乙种名著的单价是甲种名著单价的$\frac{3}{2}$倍，求甲、乙两种名著的单价．
-  answer: ''
+  answer: 甲种名著的单价是24元，乙种名著的单价是36元．
   solution: '解：设甲种名著的单价是x元，乙种名著的单价是y元，
 
     由题意得：$\left\{\begin{matrix} 8x+3y=300 \\ y=\frac{3}{2}x \end{matrix}\right.$，
@@ -653,9 +806,15 @@ questions:
     解得：$\left\{\begin{matrix} x=24 \\ y=36 \end{matrix}\right.$，
 
     答：甲种名著的单价是24元，乙种名著的单价是36元．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 一元一次方程的应用
+  - 比例与方程
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 23
@@ -667,6 +826,7 @@ questions:
 
     a．七、八年级参赛学生基础知识比赛成绩的折线图：
 
+    ![](figures/image10.png)
 
     b．七、八年级参赛学生基础知识比赛成绩的中位数分别为m，91，方差分别为n，18．
 
@@ -696,9 +856,10 @@ questions:
 
     ①表中p的值为　     　 ；
 
-    ②根据比赛成绩，学校对这六名学生进行最后的排序，排序标准为：平均数较大的优先；若平均数相等，则综合应用成绩较高的优先；若综合应用成绩也相等，则方差较小的优先．按上述标准排序后，这六名学生的排序由高到低依次为D，E，A，B，C，F，则表中t所有可能的值为　        　 ．'
+    ②根据比赛成绩，学校对这六名学生进行最后的排序，排序标准为：平均数较大的优先；若平均数相等，则综合应用成绩较高的优先；若综合应用成绩也相等，则方差较小的优先．按上述标准排序后，这六名学生的排序由高到低依次为D，E，A，B，C，F，则表中t所有可能的值为　        　
+    ．'
   figure: 2026-chaoyang-zhen/figures/image10.png
-  answer: ''
+  answer: （1）①89.5；②＜；
   solution: '解：（1）①七年级参赛学生基础知识比赛成绩的中位数m$=\frac{89+90}{2}=$89.5，
 
     故答案为：89.5；
@@ -728,9 +889,15 @@ questions:
     当t＝95时，C，F的平均数相同，但C的方差比F大，所以95不符合题意．
 
     故答案为：96，97．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 统计量的计算与应用
+  - 数据的分析与比较
+  module: statisticsAndProbability
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 24
@@ -740,11 +907,14 @@ questions:
 
     （1）求证：直线BE是⊙O的切线；
 
-    （2）过点A作AM⊥BE，交BE的延长线于点M，AM交⊙O于点N，若$\frac{AO}{ME}=\frac{5}{4}$，AN＝6，求BC的长．'
+    （2）过点A作AM⊥BE，交BE的延长线于点M，AM交⊙O于点N，若$\frac{AO}{ME}=\frac{5}{4}$，AN＝6，求BC的长．
+
+    ![](figures/image11.png)'
   figure: 2026-chaoyang-zhen/figures/image11.png
-  answer: ''
+  answer: （1）连接OE，
   solution: '（1）证明：连接OE，
 
+    ![](figures/image30.png)
 
     ∵AO＝EO，
 
@@ -799,9 +969,15 @@ questions:
     ∴BE$=\frac{20}{3}$，
 
     ∴BC＝BE$=\frac{20}{3}$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 圆的切线判定
+  - 相似三角形的应用
+  module: circles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 25
@@ -821,6 +997,7 @@ questions:
 
     通过分析数据，发现可以用函数刻画y1与x，y2与x，y3与x之间的关系．在平面直角坐标系xOy中，分别描出每个方案中各数对所对应的点，并根据变化趋势用平滑的曲线连接，方案一、方案二对应的曲线C1，C2如图所示：
 
+    ![](figures/image12.png)
 
     （1）表中a的值为　   　 ；
 
@@ -832,7 +1009,7 @@ questions:
 
     ②可以推断，从第　   　 天开始，选择方案三的投资总回报超过同时选择方案一与方案二的投资总回报之和．'
   figure: 2026-chaoyang-zhen/figures/image12.png
-  answer: ''
+  answer: （1）6
   solution: '解：（1）由图象可得，y2是关于x的一次函数，
 
     ∴设解析式为y2＝kx+b，
@@ -851,6 +1028,7 @@ questions:
 
     （2）如图，曲线C3即为所求；
 
+    ![](figures/image33.png)
 
     （3）①前4天方案一的投资总回报：10×4＝40（元）；
 
@@ -889,9 +1067,16 @@ questions:
     故第九天开始选择方案三的投资总回报超过同时选择方案一与方案二的投资总回报之和．
 
     故答案为：9．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 函数的概念
+  - 函数的表示方法
+  - 函数的应用
+  module: functions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 26
@@ -902,7 +1087,7 @@ questions:
     （1）求该抛物线的对称轴（用含a的式子表示）；
 
     （2）若对于x1+x2＝0，2＜x2＜3，总有y1，y2同号，且y1＞y2，求a的取值范围．'
-  answer: ''
+  answer: （1）抛物线的对称轴为直线x$=\frac{a}{2}$；
   solution: '解：（1）抛物线的对称轴为直线x$=-\frac{b}{2a}=$$-\frac{-{a}^{2}}{2a}=$$\frac{a}{2}$；
 
     （2）∵x1+x2＝0，2＜x2＜3，
@@ -913,6 +1098,7 @@ questions:
 
     ①当a＞0时，如图1所示，
 
+    ![](figures/image34.png)
 
     ∵y1＞0，y1，y2同号，
 
@@ -928,6 +1114,7 @@ questions:
 
     ②当a＜0时，如图2所示，
 
+    ![](figures/image35.png)
 
     ∵y2＜0，y1，y2同号，
 
@@ -944,9 +1131,15 @@ questions:
     故﹣2≤a＜0，
 
     综上，a的取值范围为﹣2≤a≤2且a≠0．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 二次函数的性质
+  - 二次函数的应用
+  module: functions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 27
@@ -956,11 +1149,14 @@ questions:
 
     （1）根据题意补全图形，并证明∠BAE＝∠CAD；
 
-    （2）过点D作直线BC的垂线，垂足为G，用等式表示线段BC，FG之间的数量关系，并证明．'
+    （2）过点D作直线BC的垂线，垂足为G，用等式表示线段BC，FG之间的数量关系，并证明．
+
+    ![](figures/image13.png)'
   figure: 2026-chaoyang-zhen/figures/image13.png
-  answer: ''
+  answer: （1）图形如图所示：
   solution: '解：（1）图形如图所示：
 
+    ![](figures/image38.png)
 
     理由：∵∠BAC＝α，∠DAE＝α，
 
@@ -1005,9 +1201,15 @@ questions:
     ∴FG$=\frac{1}{2}$JG$=\frac{1}{2}$BC，
 
     ∴BC＝2FG．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 全等三角形的性质与判定
+  - 旋转的性质
+  module: triangles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 28
@@ -1021,13 +1223,16 @@ questions:
 
     ②点$C(b，0)，D(b+\frac{\sqrt{3}}{2}，\frac{1}{2})$，若线段CD为点A的旋转线段，直接写出b的取值范围；
 
-    （2）已知线段CD平行于x轴，中点为（a﹣3，a﹣3），若线段CD为点A的旋转线段，直接写出a的取值范围及d的最大值．'
+    （2）已知线段CD平行于x轴，中点为（a﹣3，a﹣3），若线段CD为点A的旋转线段，直接写出a的取值范围及d的最大值．
+
+    ![](figures/image14.png)'
   figure: 2026-chaoyang-zhen/figures/image14.png
-  answer: ''
+  answer: （1）①C1D1，C2D2；
   solution: '解：（1）①逆向思维，将⊙B绕A（0，3）顺时针旋转90°得到⊙B′，其中B′（1，0），
 
     若线段与⊙B''有交点，即为点A的旋转线段，
 
+    ![](figures/image40.png)
 
     显然C1D1与C2D2符合题意．
 
@@ -1035,6 +1240,7 @@ questions:
 
     ②如图，
 
+    ![](figures/image41.png)
 
     若CD与⊙B''有交点，找到临界位置即可，分别为D在⊙B′上与C在⊙B′上．
 
@@ -1066,6 +1272,7 @@ questions:
 
     过点A作AH⊥C′D′，则H（3，a），
 
+    ![](figures/image42.png)![](figures/image43.png)
 
     当$\frac{11}{4}≤a≤\frac{13}{4}$，
 
@@ -1080,8 +1287,14 @@ questions:
     当$a=\frac{17}{4}$时，有${d}_{max}=\sqrt{{3}^{2}+(\frac{17}{4}-\frac{7}{2}{)}^{2}}=\frac{\sqrt{153}}{4}=\frac{3\sqrt{17}}{4}$．
 
     综上，$\frac{11}{4}≤a≤\frac{13}{4}$或$\frac{15}{4}≤a≤\frac{17}{4}$，d的最大值为$\frac{3\sqrt{17}}{4}$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 平面直角坐标系
+  - 圆的性质
+  - 旋转与变换
+  module: geometryComprehensive
+  difficulty: 能力
+  recommended_for:
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''

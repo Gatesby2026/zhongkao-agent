@@ -317,12 +317,13 @@ def split_by_questions(md: str) -> tuple[list[dict], list[dict]]:
     def _flush_a():
         if cur and cur.get("number"):
             raw = cur["stem"].strip()
-            # 抽【答案】X / 【解答】xxx
-            ans_m = re.search(r"【答案】\s*([A-D]+|[^\n【]*)", raw)
+            # 抽【答案】xxx /【解答】xxx
+            # 选择题: 单/多字母 A-D；填空题: 数字/表达式/取值范围；解答题: 通常空
+            ans_m = re.search(r"【答案】\s*([^\n【]*)", raw)
             correct = ans_m.group(1).strip() if ans_m else ""
-            # 多选题 correct 可能是 "ABC" 多字母
-            if correct and not re.fullmatch(r"[A-D]+", correct):
-                correct = ""  # 非字母答案（填空/解答的最终答案）保留在 solution
+            # 选择题答案末尾的句号/标点剥离（"C．" → "C"）
+            if correct and re.fullmatch(r"[A-D]+\s*[．.、，,]", correct):
+                correct = re.sub(r"[．.、，,]\s*$", "", correct)
             sol_m = re.search(r"【解答】(.+?)(?=\n*【|$)", raw, re.DOTALL)
             solution = sol_m.group(1).strip() if sol_m else raw
             answers.append({

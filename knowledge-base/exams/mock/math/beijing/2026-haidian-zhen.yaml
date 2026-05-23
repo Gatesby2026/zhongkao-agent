@@ -1,9 +1,15 @@
+# ============================================================
+# 2026年北京2026年北京市海淀区一模math — 自动生成
+# ============================================================
+# OCR: Qwen-VL-OCR  Enrich: qwen-max
+# QC: draft=28  needs_review=0
+
 year: 2026
-district: 海淀区
+district: 2026年北京市海淀区
 exam_type: 一模
 subject: math
 full_score: 100
-duration_minutes: 120
+duration_minutes: null
 total_questions: 28
 structure: 8单选(16分) + 8填空(16分) + 12解答(68分)
 questions:
@@ -12,10 +18,10 @@ questions:
   score: 2
   stem: 下列图形中，既是轴对称图形又是中心对称图形的是（　　）
   options:
-    A: '[图]'
-    B: '[图]'
-    C: '[图]'
-    D: '[图]'
+    A: '![](figures/image.png)'
+    B: '![](figures/image2.png)'
+    C: '![](figures/image3.png)'
+    D: '![](figures/image4.png)'
   has_image_options: true
   figure: 2026-haidian-zhen/figures/image.png
   answer: D
@@ -28,15 +34,24 @@ questions:
     D是轴对称图形，也是中心对称图形，符合题意，
 
     故选：D．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 轴对称图形
+  - 中心对称图形
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 2
   type: 单选
   score: 2
-  stem: 实数a，b在数轴上的对应点的位置如图所示，下列结论中正确的是（　　）
+  stem: '实数a，b在数轴上的对应点的位置如图所示，下列结论中正确的是（　　）
+
+    ![](figures/image5.png)'
   options:
     A: b＜﹣2
     B: a﹣b＜0
@@ -53,9 +68,15 @@ questions:
     显然只有C选项符合题意．
 
     故选：C．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 实数的大小比较
+  - 数轴上的点与实数的对应关系
+  module: numbersAndExpressions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 3
@@ -71,9 +92,15 @@ questions:
   solution: '解：360°÷45°＝8．
 
     故选：D．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 多边形的内角和与外角和
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 4
@@ -91,9 +118,15 @@ questions:
     ∴小明从盒子中随机摸出一个小球，摸出的小球是写着数字“2”的小球的概率是$\frac{2}{4}=$$\frac{1}{2}$，
 
     故选：B．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 概率的计算
+  module: statisticsAndProbability
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 5
@@ -111,9 +144,15 @@ questions:
     ∴Δ＝（﹣2）2﹣4×1×（﹣c）＝4+4c＞0，解得：c＞﹣1，
 
     故选：A．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 一元二次方程的根的判别式
+  - 不等式的解法
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 6
@@ -129,15 +168,24 @@ questions:
   solution: '解：该平台当日总共收到用户上传高清照片的张数约为1.2×106×350＝4.2×108．
 
     故选：C．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 科学记数法
+  - 乘法运算
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 7
   type: 单选
   score: 2
-  stem: 如图，已知线段AB，分别以点A，B为圆心，AB长为半径画弧，两弧在AB上方交于点C，在AB下方交于点D，连接CD交AB于点O．以点O为圆心，OA长为半径画弧，交线段OD于点M，连接AC，AM，则∠CAM的大小为（　　）
+  stem: '如图，已知线段AB，分别以点A，B为圆心，AB长为半径画弧，两弧在AB上方交于点C，在AB下方交于点D，连接CD交AB于点O．以点O为圆心，OA长为半径画弧，交线段OD于点M，连接AC，AM，则∠CAM的大小为（　　）
+
+    ![](figures/image6.png)'
   options:
     A: 15°
     B: 90°
@@ -147,6 +195,7 @@ questions:
   answer: C
   solution: '解：如图，连接BC，BM．
 
+    ![](figures/image22.png)
 
     ∵CD垂直平分线段AB，
 
@@ -167,9 +216,16 @@ questions:
     ∴∠CAM＝∠CAB+∠MAB＝105°．
 
     故选：C．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 圆的基本性质
+  - 等边三角形的性质
+  - 角度计算
+  module: circles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 8
@@ -185,7 +241,9 @@ questions:
 
     ④以$(0，\frac{3}{2})$为中点的线段MN恰有两条．
 
-    上述结论中，所有正确结论的序号是（　　）'
+    上述结论中，所有正确结论的序号是（　　）
+
+    ![](figures/image7.png)'
   options:
     A: ①③
     B: ①④
@@ -199,33 +257,40 @@ questions:
 
     ∵点M在抛物线上，如图所示，抛物线在第一象限曲线上的任意一点M，都可以画出△OBM，
 
+    ![](figures/image24.png)
 
     ∴四边形ABMO的面积大于△ABQ的面积，故结论②错误；
 
     ③如图所示，
 
-    ，
+    ![](figures/image25.png)，
 
     可以尝试改变AM的长度和位置，寻找合适的位置，可以使得△AMN是等边三角形，故③正确；
 
     ④如图所示，
 
+    ![](figures/image26.png)
 
     以点$T(0，\frac{3}{2})$为圆心，TO和TA为半径分别画圆，不存在以点T为中点的弦MN，故④错误．
 
     综上可得，正确的是①③．
 
     故选：A．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 二次函数的图像与性质
+  - 圆的基本性质
+  module: functions
+  difficulty: 能力
+  recommended_for:
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 9
   type: 填空
   score: 2
   stem: 若$\sqrt{x-3}$在实数范围内有意义，则实数x的取值范围为　      　 ．
-  answer: ''
+  answer: x≥3
   solution: '解：∵二次根式有意义的条件：被开方数为非负数，
 
     ∴x﹣3≥0，
@@ -233,29 +298,42 @@ questions:
     ∴x≥3，
 
     故答案为：x≥3．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 实数的性质
+  - 根式的意义
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 10
   type: 填空
   score: 2
   stem: 分解因式：ab2﹣ac2＝　              　 ．
-  answer: ''
+  answer: a（b+c）（b﹣c）
   solution: '解：原式＝a（b2﹣c2）＝a（b+c）（b﹣c），
 
     故答案为：a（b+c）（b﹣c）'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 因式分解
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 11
   type: 填空
   score: 2
   stem: 方程$\frac{1}{x+3}+\frac{1}{2x}=0$的解为　       　 ．
-  answer: ''
+  answer: x＝﹣1．
   solution: '解：方程两边同乘2x（x+3），
 
     即2x+x+3＝0，
@@ -265,9 +343,14 @@ questions:
     经检验：x＝﹣1是原分式方程的解．
 
     故答案为：x＝﹣1．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 分式方程的解法
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 12
@@ -282,36 +365,50 @@ questions:
     | 人数 | 2 | 8 | 69 | 21 |
 
     根据以上信息，估计该校达到骨骼健康受益标准的学生约有　       　 人．'
-  answer: ''
+  answer: 2700．
   solution: '解：估计该校达到骨骼健康受益标准的学生约有3000$×\frac{69+21}{100}=$2700（人）．
 
     故答案为：2700．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 统计与概率-样本估计总体
+  module: statisticsAndProbability
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 13
   type: 填空
   score: 2
   stem: 能说明命题“若a＞b，则$\frac{3}{a}＜\frac{3}{b}$”是假命题的一组实数a，b的值为a＝　   　 ，b＝　     　 ．
-  answer: ''
+  answer: 1，﹣1．
   solution: '解：当a＝1，b＝﹣1，满足a＞b，
 
     但$\frac{3}{1}＞$$\frac{3}{-1}$，
 
     故答案为：1，﹣1．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 不等式的性质
+  - 实数的比较
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 14
   type: 填空
   score: 2
-  stem: 如图，AB为⊙O的直径，点A为$\vec{CD}$的中点．若∠A＝65°，则∠B的大小为　      　 ．
+  stem: '如图，AB为⊙O的直径，点A为$\vec{CD}$的中点．若∠A＝65°，则∠B的大小为　      　 ．
+
+    ![](figures/image8.png)'
   figure: 2026-haidian-zhen/figures/image8.png
-  answer: ''
+  answer: 25°．
   solution: '解：∵OA＝OD，
 
     ∴∠D＝∠A＝65°，
@@ -327,17 +424,25 @@ questions:
     ∴∠B$=\frac{1}{2}$∠AOC＝25°，
 
     故答案为：25°．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 圆的基本性质
+  - 圆周角定理
+  module: circles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 15
   type: 填空
   score: 2
-  stem: 如图，在矩形ABCD中，AB＝6，AD＝4．点E在BC的延长线上，连接AE，交CD于点F．若△ABE的面积为15，则△ADF的面积为　                 　 ．
+  stem: '如图，在矩形ABCD中，AB＝6，AD＝4．点E在BC的延长线上，连接AE，交CD于点F．若△ABE的面积为15，则△ADF的面积为　                 　 ．
+
+    ![](figures/image9.png)'
   figure: 2026-haidian-zhen/figures/image9.png
-  answer: ''
+  answer: $\frac{48}{5}$．
   solution: '解：∵四边形ABCD是矩形，AB＝6，AD＝4，
 
     ∴∠B＝∠D＝90°，CD＝AB＝6，AD＝CB＝4，AD∥CB，
@@ -367,9 +472,15 @@ questions:
     ∴S△ADF$=\frac{1}{2}×$4$×\frac{24}{5}=$$\frac{48}{5}$，
 
     故答案为：$\frac{48}{5}$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 矩形的性质
+  - 三角形面积的计算
+  module: quadrilaterals
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 16
@@ -398,7 +509,7 @@ questions:
     （1）若只有爸爸和妈妈理发，则这位理发师最短需要　     　 min可以完成为他们俩的服务；
 
     （2）若他们一家三口都理发，则这位理发师最短需要　      　 min可以完成为他们三人的服务．'
-  answer: ''
+  answer: （1）75；
   solution: '解：（1）拆解两人的工序与耗时
 
     爸爸：仅D工序，20min（无静置），
@@ -426,31 +537,44 @@ questions:
     总时间为120min，该安排为最优安排，故最短时间为120 min．
 
     故答案为：（1）75；（2）120．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 统筹与优化
+  - 时间管理
+  module: numbersAndExpressions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 17
   type: 解答
   score: 5
   stem: 计算：$\sqrt{27}-6sin60°+{(\frac{1}{3})}^{-1}+|-2|$．
-  answer: ''
+  answer: 5．
   solution: '解：原式＝3$\sqrt{3}-$6$×\frac{\sqrt{3}}{2}+$3+2
 
     ＝3$\sqrt{3}-3\sqrt{3}+$3+2
 
     ＝5．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 实数的运算
+  - 三角函数的基本概念
+  - 绝对值的概念
+  module: numbersAndExpressions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 18
   type: 解答
   score: 5
   stem: 解不等式组：$\left\{\begin{matrix} 2(2x+1)＜3x+5 \\ \frac{3x-4}{5}＜x \end{matrix}\right.$．
-  answer: ''
+  answer: ﹣2＜x＜3．
   solution: '解：将第一个不等式去括号得：4x+2＜3x+5，
 
     移项，合并同类项得：x＜3，
@@ -462,16 +586,21 @@ questions:
     系数化为1得：x＞﹣2，
 
     故原不等式组的解集为﹣2＜x＜3．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 一元一次不等式组的解法
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 19
   type: 解答
   score: 5
   stem: 已知2a﹣b﹣2＝0，求代数式$\frac{6(a-2b)+9b}{4{a}^{2}-4ab+{b}^{2}}$的值．
-  answer: ''
+  answer: $\frac{3}{2}$．
   solution: '解：∵2a﹣b﹣2＝0，
 
     ∴2a﹣b＝2，b＝2a﹣2，
@@ -487,9 +616,15 @@ questions:
     $=\frac{6}{4}$
 
     $=\frac{3}{2}$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 代数式的化简与求值
+  - 方程的应用
+  module: numbersAndExpressions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 20
@@ -499,9 +634,11 @@ questions:
 
     （1）求证：四边形MPQN是平行四边形；
 
-    （2）若$∠CQN=30°，CN=2\sqrt{3}，MN=5$，求PA的长．'
+    （2）若$∠CQN=30°，CN=2\sqrt{3}，MN=5$，求PA的长．
+
+    ![](figures/image10.png)'
   figure: 2026-haidian-zhen/figures/image10.png
-  answer: ''
+  answer: （1）∵M，N分别为AB，BC的中点，
   solution: '（1）证明：∵M，N分别为AB，BC的中点，
 
     ∴MN是△ABC的中位线，
@@ -533,9 +670,16 @@ questions:
     ∴CP＝PQ+CQ＝5+6＝11，
 
     ∴PA＝PC﹣AC＝11﹣10＝1．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 三角形的中位线
+  - 平行四边形的判定与性质
+  - 解直角三角形
+  module: triangles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 21
@@ -545,9 +689,11 @@ questions:
 
     小明想自己绘制一个“骐骥驰骋纹”图案．为此，他先绘制出一个横距为17cm，纵距为12cm的“小马”图案（如图1），然后将图1中的“小马”图案以相同的方式连续平移三次，得到了一个由4匹“小马”组成的“骐骥驰骋纹”图案（如图2）．
 
-    已知小明每次平移图案时，先水平向右平移，再竖直向上平移，并且水平方向平移距离是竖直方向平移距离的2倍．若图2中“骐骥驰骋纹”图案的横距是纵距的$\frac{5}{3}$倍，求小明每次平移图案时竖直方向的平移距离．'
+    已知小明每次平移图案时，先水平向右平移，再竖直向上平移，并且水平方向平移距离是竖直方向平移距离的2倍．若图2中“骐骥驰骋纹”图案的横距是纵距的$\frac{5}{3}$倍，求小明每次平移图案时竖直方向的平移距离．
+
+    ![](figures/image11.png)'
   figure: 2026-haidian-zhen/figures/image11.png
-  answer: ''
+  answer: 小明每次平移图案时竖直向上平移3cm，
   solution: '解：设小明每次平移图案时竖直向上平移xcm，水平方向平移2xcm．
 
     由题意17+6x$=\frac{5}{3}$（12+3x），
@@ -555,9 +701,15 @@ questions:
     解得x＝3，
 
     ∴小明每次平移图案时竖直向上平移3cm，'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 平移变换
+  - 比例关系
+  module: geometryComprehensive
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 22
@@ -568,7 +720,7 @@ questions:
     （1）求k，b的值；
 
     （2）当x＜2时，对于x的每一个值，函数y＝mx﹣5（m≠0）的值既小于函数y＝kx+b的值又小于﹣3，直接写出m的取值范围．'
-  answer: ''
+  answer: （1）$\left\{\begin{matrix} k=\frac{1}{2} \\ b=-1 \end{matrix}\right.$；
   solution: '解：（1）∵函数y＝kx+b（k≠0）的图象经过点（2，0）和（0，﹣1），
 
     ∴$\left\{\begin{matrix} -1=b \\ 0=2k+b \end{matrix}\right.$，
@@ -584,9 +736,15 @@ questions:
     ∵当x＜2时，对于x的每一个值，函数y＝mx﹣5（m≠0）的值既小于函数y＝kx+b的值又小于﹣3，
 
     ∴$\frac{1}{2}≤m≤1$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 一次函数的性质
+  - 不等式的应用
+  module: functions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 23
@@ -618,9 +776,12 @@ questions:
 
     （2）表中m的值为　      　 ，信息b中x的值为　   　 ；
 
-    （3）考虑到极端数据对结果的影响，学校先将每门课程的满意度评分中与平均数的差的绝对值最大的一个数据去掉，再计算剩余数据的平均数、方差和中位数，并按照如下方法评估这三门课程：首先比较平均数，平均数较大者学生更加满意；若平均数相等，则比较方差，方差较小者学生更加满意；若平均数、方差分别相等，则中位数较大者学生更加满意．按照这种评估方法，这三门课程中满意度最高的是　   　 ，最低的是　   　 （填“甲”“乙”或“丙”）．'
+    （3）考虑到极端数据对结果的影响，学校先将每门课程的满意度评分中与平均数的差的绝对值最大的一个数据去掉，再计算剩余数据的平均数、方差和中位数，并按照如下方法评估这三门课程：首先比较平均数，平均数较大者学生更加满意；若平均数相等，则比较方差，方差较小者学生更加满意；若平均数、方差分别相等，则中位数较大者学生更加满意．按照这种评估方法，这三门课程中满意度最高的是　   　
+    ，最低的是　   　 （填“甲”“乙”或“丙”）．
+
+    ![](figures/image12.png)'
   figure: 2026-haidian-zhen/figures/image12.png
-  answer: ''
+  answer: （1）8；
   solution: '解：（1）从折线统计图可以看出，10名学生对课程甲的满意度评分8分出现的次数最多，所以课程甲的满意度评分的众数为8．
 
     故答案为：8；
@@ -658,9 +819,15 @@ questions:
     综上，丙课程的平均数最大，乙课程的平均数最小，所以这三门课程中满意度最高的是丙，最低的是乙．
 
     故答案为：丙，乙．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 统计量的计算与应用
+  - 数据的整理与分析
+  module: statisticsAndProbability
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 24
@@ -670,15 +837,18 @@ questions:
 
     （1）求证：CD是半圆O的切线；
 
-    （2）取BD中点H，连接OH，并延长交$\vec{BD}$于点E，连接AE，交BD于点F．若$sinB=\frac{3}{5}，CA=5$，求DF的长．'
+    （2）取BD中点H，连接OH，并延长交$\vec{BD}$于点E，连接AE，交BD于点F．若$sinB=\frac{3}{5}，CA=5$，求DF的长．
+
+    ![](figures/image13.png)'
   figure: 2026-haidian-zhen/figures/image13.png
-  answer: ''
+  answer: （1）∵CA⊥AB，
   solution: '（1）证明：∵CA⊥AB，
 
     ∴∠CAO＝90°，
 
     如图，连接OD、OC，
 
+    ![](figures/image34.png)
 
     在△OAC和△ODC中，
 
@@ -694,6 +864,7 @@ questions:
 
     （2）解：如图：连接AD，
 
+    ![](figures/image35.png)
 
     由（1）可得△OAC≌△ODC（SSS），
 
@@ -746,9 +917,16 @@ questions:
     ∴$\frac{DF}{FH}=\frac{AD}{EH}=\frac{8}{3}=3$，
 
     ∴$DF=\frac{3}{4}DH=4$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 圆的切线判定
+  - 三角函数的应用
+  - 相似三角形
+  module: circles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 25
@@ -772,6 +950,7 @@ questions:
 
     （2）在给出的平面直角坐标系中，画出S1与t，S2与t的函数图象；
 
+    ![](figures/image14.png)
 
     （3）根据以上数据与函数图象，解决以下问题：
 
@@ -780,7 +959,7 @@ questions:
     ②该工厂接到一批补购订单，需要平编产品200件，绞编产品100件，且每件产品的面积都为12dm2．开始时机器人A编织平编产品，机器人B编织绞编产品，工作一段时间后，机器人B出现故障无法工作．机器人A完成所有平编产品后，调整为绞编程序接着机器人B的进度完成剩余的绞编产品．当编织完所有产品时，机器人A编织的总面积为3052dm2．若生产两件产品之间的时间间隔忽略不计，则机器人B出现故障前大约工作了　         　
     min（结果保留小数点后一位）．'
   figure: 2026-haidian-zhen/figures/image14.png
-  answer: ''
+  answer: （1）3.6；
   solution: '解：（1）∵S1与t的关系可以近似用正比例函数刻画，
 
     ∴设S1＝kt，
@@ -799,6 +978,7 @@ questions:
 
     （2）画出S1与t，S2与t的函数图象：
 
+    ![](figures/image38.png)
 
     （3）①由题意可知，机器人用平编编织一个面积为9dm2的产品需要$\frac{9}{2.4}=$3.75（min），
 
@@ -819,9 +999,16 @@ questions:
     ∴机器人B绞编产品的时间为$\frac{548}{12}×$3＝137（min），
 
     故答案为：137.3．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 函数的概念
+  - 函数的图象与性质
+  - 正比例函数
+  module: functions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 26
@@ -836,7 +1023,7 @@ questions:
     ①若m＝0，求t的值；
 
     ②若对于﹣2＜t＜2，都有m＜9，求a的取值范围．'
-  answer: ''
+  answer: （1）c＝0，b＝﹣2a；
   solution: '解：（1）将点O（0，0）代入抛物线y＝ax2+bx+c，
 
     可得c＝0，
@@ -882,9 +1069,15 @@ questions:
     又∵a＞0，
 
     ∴0＜a$≤\frac{9}{4}$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 二次函数的性质
+  - 二次函数的应用
+  module: functions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 27
@@ -894,9 +1087,11 @@ questions:
 
     （1）如图1，α＝30°，点E在直线BC上，求证：CE＝2CD；
 
-    （2）如图2，用等式表示线段AB，CD和CE的数量关系，并证明．'
+    （2）如图2，用等式表示线段AB，CD和CE的数量关系，并证明．
+
+    ![](figures/image15.png)'
   figure: 2026-haidian-zhen/figures/image15.png
-  answer: ''
+  answer: （1）∵∠BAC＝α＝30°，
   solution: '（1）证明：∵∠BAC＝α＝30°，
 
     ∴180°﹣2α＝180°﹣2×30°＝120°，
@@ -931,6 +1126,7 @@ questions:
 
     如图，将△ACD绕点A顺时针旋转180°﹣2α得到△AC1E，
 
+    ![](figures/image41.png)
 
     ∴AC＝AC1，CD＝C1E，∠AC1E＝∠ACD＝90°+α，∠C1AC＝∠EAD＝180°﹣2α，
 
@@ -953,9 +1149,16 @@ questions:
     ∴CE2＝（2AB）2+CD2，
 
     即CE2＝4AB2+CD2．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 直角三角形的性质
+  - 旋转的性质
+  - 线段长度的关系
+  module: triangles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 28
@@ -970,9 +1173,10 @@ questions:
     ②若线段B1B2为线段AB3关于y轴的“2﹣等距“图形，则t的取值范围是　                  　 ；
 
     （2）已知直线l：y＝x，⊙C的圆心为C（s，a），半径为1．若存在实数s以及⊙C的弦MN，使得任意以点（s，1）为中心且边长为$\sqrt{3}$的等边△PQR均为弦MN关于直线l的“3﹣等距”图形，直接写出a的取值范围．'
-  answer: ''
+  answer: （1）①B1B3，1；
   solution: '解：（1）①如图，
 
+    ![](figures/image42.png)
 
     点A到y轴的距离为2，只有线段B1B3存在一个点T（即点A）到y轴的距离为2，
 
@@ -982,6 +1186,7 @@ questions:
 
     ②如图，
 
+    ![](figures/image43.png)
 
     线段B1B2为线段AB3关于y轴的“2﹣等距”图形，
 
@@ -997,6 +1202,7 @@ questions:
 
     （2）分步骤进行分析：第一步，分析等边三角形PQR．
 
+    ![](figures/image44.png)
 
     边长为$\sqrt{3}$的等边△PQR为弦MN关于直线l的“3﹣等距”图形，
 
@@ -1012,6 +1218,7 @@ questions:
 
     第三步，分析临界位置．如图所示，点I在直线l上，作直线NK与直线l平行，IN垂直直线l，且$IN=\frac{1}{2}$，作圆C与直线NK相切于点K．
 
+    ![](figures/image45.png)
 
     若圆C上存在一点T到直线l的距离达到$\frac{1}{2}$，则圆C与直线NK有交点即可，
 
@@ -1028,8 +1235,14 @@ questions:
     解得a＝1$-\frac{3\sqrt{2}}{2}$；
 
     综上可得，$1-\frac{3\sqrt{2}}{2}≤a≤1+\frac{3\sqrt{2}}{2}$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 平面直角坐标系
+  - 点到直线的距离
+  - 图形的对称性
+  module: geometryComprehensive
+  difficulty: 能力
+  recommended_for:
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''

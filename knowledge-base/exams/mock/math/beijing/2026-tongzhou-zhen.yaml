@@ -1,9 +1,15 @@
+# ============================================================
+# 2026年北京2026年北京市通州区一模math — 自动生成
+# ============================================================
+# OCR: Qwen-VL-OCR  Enrich: qwen-max
+# QC: draft=28  needs_review=0
+
 year: 2026
-district: 通州区
+district: 2026年北京市通州区
 exam_type: 一模
 subject: math
 full_score: 100
-duration_minutes: 120
+duration_minutes: null
 total_questions: 28
 structure: 8单选(16分) + 8填空(16分) + 12解答(68分)
 questions:
@@ -12,10 +18,10 @@ questions:
   score: 2
   stem: 下列图形中，既是轴对称又是中心对称图形的是（　　）
   options:
-    A: '[图]'
-    B: '[图]'
-    C: '[图]'
-    D: '[图]'
+    A: '![](figures/image.png)'
+    B: '![](figures/image2.png)'
+    C: '![](figures/image3.png)'
+    D: '![](figures/image4.png)'
   has_image_options: true
   figure: 2026-tongzhou-zhen/figures/image.png
   answer: D
@@ -28,15 +34,25 @@ questions:
     D．该图形既是中心对称图形又是轴对称图形，符合题意．
 
     故选：D．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 图形的对称性
+  - 轴对称图形
+  - 中心对称图形
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 2
   type: 单选
   score: 2
-  stem: 如图，直线AB与CD交于点O，∠AOD＝130°，OE⊥AB，则∠COE的度数为（　　）
+  stem: '如图，直线AB与CD交于点O，∠AOD＝130°，OE⊥AB，则∠COE的度数为（　　）
+
+    ![](figures/image5.png)'
   options:
     A: 30°
     B: 40°
@@ -53,9 +69,15 @@ questions:
     ∴∠COE＝∠BOC﹣∠BOE＝40°．
 
     故选：B．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 角的性质与计算
+  - 垂直关系
+  module: geometryComprehensive
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 3
@@ -77,9 +99,15 @@ questions:
     ∴c的值为﹣1．
 
     故选：A．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 一元二次方程的根与系数的关系
+  - 判别式
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 4
@@ -95,15 +123,24 @@ questions:
   solution: '解：4300万×1.2吨＝5.16×107（吨）．
 
     故选：B．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 科学记数法
+  - 乘法运算
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 5
   type: 单选
   score: 2
-  stem: 实数a、b在数轴上的对应点的位置如图所示，下列结论正确的是（　　）
+  stem: '实数a、b在数轴上的对应点的位置如图所示，下列结论正确的是（　　）
+
+    ![](figures/image6.png)'
   options:
     A: a+b＞0
     B: b﹣a＞0
@@ -120,9 +157,15 @@ questions:
     显然只有D选项符合题意．
 
     故选：D．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 实数的大小比较
+  - 绝对值的概念
+  module: numbersAndExpressions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 6
@@ -150,15 +193,23 @@ questions:
     ∴两次都摸到红色小球的概率为$\frac{1}{4}$．
 
     故选：C．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 概率的计算
+  module: statisticsAndProbability
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 7
   type: 单选
   score: 2
-  stem: 如图，△ABC内接于⊙O，∠BAC＝40°，分别以点A和点B为圆心，大于$\frac{1}{2}AB$的长为半径作弧，两弧交于P、Q两点，作直线PQ交AC于点D，连结BD并延长交⊙O于点E，连结OA、OE，则∠AOE的度数是（　　）
+  stem: '如图，△ABC内接于⊙O，∠BAC＝40°，分别以点A和点B为圆心，大于$\frac{1}{2}AB$的长为半径作弧，两弧交于P、Q两点，作直线PQ交AC于点D，连结BD并延长交⊙O于点E，连结OA、OE，则∠AOE的度数是（　　）
+
+    ![](figures/image7.png)'
   options:
     A: 40°
     B: 60°
@@ -175,9 +226,16 @@ questions:
     ∴∠AOE＝2∠ABD＝80°．
 
     故选：C．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 圆的基本性质
+  - 圆周角与圆心角的关系
+  - 垂径定理
+  module: circles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 8
@@ -193,7 +251,9 @@ questions:
 
     ④若$MF=\frac{1}{3}MB$，则MD＝MA．
 
-    上述结论中，所有正确结论的序号是（　　）'
+    上述结论中，所有正确结论的序号是（　　）
+
+    ![](figures/image8.png)'
   options:
     A: ①②③
     B: ②③④
@@ -255,6 +315,7 @@ questions:
 
     如图，作MK∥OD交OA于K，
 
+    ![](figures/image26.png)
 
     ∵OF∥MK，
 
@@ -277,16 +338,22 @@ questions:
     综上，正确的结论是②③④，
 
     故选：B．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 反比例函数的性质
+  - 三角形的性质
+  - 几何图形的面积
+  module: functions
+  difficulty: 能力
+  recommended_for:
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 9
   type: 填空
   score: 2
   stem: 若代数式$\frac{1}{x+3}$有意义，则实数x的取值范围是 　        　 ．
-  answer: ''
+  answer: x≠﹣3．
   solution: '解：∵x+3≠0，
 
     ∴x≠﹣3，
@@ -294,16 +361,23 @@ questions:
     所以实数x的取值范围是x≠﹣3，
 
     故答案为：x≠﹣3．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 分式的概念
+  - 不等式的解法
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 10
   type: 填空
   score: 2
   stem: 分解因式：x2y﹣y＝　              　 ．
-  answer: ''
+  answer: y（x+1）（x﹣1）
   solution: '解：x2y﹣y
 
     ＝y（x2﹣1）
@@ -311,16 +385,22 @@ questions:
     ＝y（x+1）（x﹣1）．
 
     故答案为：y（x+1）（x﹣1）．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 因式分解
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 11
   type: 填空
   score: 2
   stem: 方程$\frac{2}{x+3}-\frac{1}{x}=0$的解为　      　 ．
-  answer: ''
+  answer: x＝3．
   solution: '解：2x﹣（x+3）＝0，解得：x＝3，
 
     检验：x＝3是原方程的解，
@@ -328,16 +408,21 @@ questions:
     ∴原方程的解为x＝3，
 
     故答案为：x＝3．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 分式方程的解法
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 12
   type: 填空
   score: 2
   stem: 在平面直角坐标系xOy中，若函数$y=\frac{k}{x}(k≠0)$的图象经过点P（1，﹣2）和点Q（n，2），则n的值为　     　 ．
-  answer: ''
+  answer: ﹣1．
   solution: '解：函数$y=\frac{k}{x}(k≠0)$的图象经过点P（1，﹣2）和点Q（n，2），
 
     ∴k＝1×（﹣2）＝2n，
@@ -347,19 +432,29 @@ questions:
     ∴n的值为﹣1．
 
     故答案为：﹣1．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 反比例函数的性质
+  - 坐标系中的点与函数关系
+  module: functions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 13
   type: 填空
   score: 2
-  stem: 抖空竹，这项集技巧、趣味与健身于一体的传统民族运动，深受大众喜爱．图1是某人抖空竹的瞬间的图示，将其抽象成图2所示的数学问题：在平面内，AB∥CD，E为平行线外一点，连结AE、CE．若∠A＝65°，∠E＝20°，则∠C的度数为　      　 ．
+  stem: '抖空竹，这项集技巧、趣味与健身于一体的传统民族运动，深受大众喜爱．图1是某人抖空竹的瞬间的图示，将其抽象成图2所示的数学问题：在平面内，AB∥CD，E为平行线外一点，连结AE、CE．若∠A＝65°，∠E＝20°，则∠C的度数为　      　
+    ．
+
+    ![](figures/image9.png)'
   figure: 2026-tongzhou-zhen/figures/image9.png
-  answer: ''
+  answer: 45°．
   solution: '解：如图，
 
+    ![](figures/image28.png)
 
     ∵AB∥CD，
 
@@ -370,9 +465,15 @@ questions:
     ∴∠C＝∠1﹣∠E＝45°，
 
     故答案为：45°．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 平行线的性质
+  - 三角形内角和定理
+  module: triangles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 14
@@ -387,23 +488,31 @@ questions:
     | 住户数（户） | 30 | 40 | 10 | 20 |
 
     | 被抽取住户当日产生的生活垃圾总量（kg） | 40 | 45 | 70 | 35 |'
-  answer: ''
+  answer: 1900．
   solution: '解：抽取的住户每户产生的生活垃圾每日平均为：$\frac{40+45+70+35}{30+40+10+20}=$$\frac{19}{10}$，
 
     则该小区住户当日生活垃圾总量为：$\frac{19}{10}×$1000＝1900（kg）．
 
     故答案为：1900．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 统计与概率-数据的收集、整理与描述
+  - 统计与概率-样本估计总体
+  module: statisticsAndProbability
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 15
   type: 填空
   score: 2
-  stem: 如图，在矩形ABCD中，AE平分∠BAD交CD于点E，连结BE，点F为BE的中点，连结CF，若AB＝3，AD＝2，则CF的长为　                  　 ．
+  stem: '如图，在矩形ABCD中，AE平分∠BAD交CD于点E，连结BE，点F为BE的中点，连结CF，若AB＝3，AD＝2，则CF的长为　                  　 ．
+
+    ![](figures/image10.png)'
   figure: 2026-tongzhou-zhen/figures/image10.png
-  answer: ''
+  answer: $\frac{\sqrt{5}}{2}$．
   solution: '解：∵四边形ABCD是矩形，
 
     ∴∠DAB＝∠BCD＝∠D＝90°，
@@ -431,9 +540,16 @@ questions:
     ∴$CF=\frac{1}{2}BE=\frac{\sqrt{5}}{2}$，
 
     故答案为：$\frac{\sqrt{5}}{2}$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 矩形的性质
+  - 角平分线的性质
+  - 中点的应用
+  module: quadrilaterals
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 16
@@ -456,7 +572,7 @@ questions:
     （1）现需将5个任务分配给这四款软件处理，且每款软件至少处理1个任务．为了使总效率分最大，应向　   　 （填“甲”、“乙”、“丙”或“丁”）软件分配2个任务；
 
     （2）如果共有6个任务，可以分配给其中一款或多款软件处理，那么这6个任务全部处理后，可获得的最大总效率分是　     　 分．'
-  answer: ''
+  answer: 丁，40．
   solution: '解：（1）由条件可知只有一款软件分配2个任务，其余三款各分配1个任务，
 
     若甲分配2个任务，总效率分为：13+5+6+8＝32；
@@ -486,16 +602,22 @@ questions:
     综上，甲分配1个任务，丙分配3个任务，丁分配2个任务，可获得的总效率分最大，最大总效率分为40分．
 
     故答案为：40．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 统计与概率-数据分析
+  - 函数-实际应用
+  module: statisticsAndProbability
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 17
   type: 解答
   score: 5
   stem: 计算：$2sin60°-\sqrt{12}+{(\frac{1}{2})}^{-2}+{(3-π)}^{0}$．
-  answer: ''
+  answer: $5-\sqrt{3}$．
   solution: '解：$2sin60°-\sqrt{12}+{(\frac{1}{2})}^{-2}+{(3-π)}^{0}$
 
     $=2×\frac{\sqrt{3}}{2}-2\sqrt{3}+4+1$
@@ -503,39 +625,58 @@ questions:
     $=\sqrt{3}-2\sqrt{3}+4+1$
 
     $=5-\sqrt{3}$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 特殊角的三角函数值
+  - 二次根式的化简
+  - 负指数幂
+  - 零指数幂
+  module: numbersAndExpressions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 18
   type: 解答
   score: 5
   stem: 解不等式组：$\left\{\begin{matrix} 2(x+1)＞x-2 \\ \frac{x-1}{2}＜x \end{matrix}\right.$．
-  answer: ''
+  answer: x＞﹣1．
   solution: '解：解不等式2（x+1）＞x﹣2，得x＞﹣4．
 
     解不等式$\frac{x-1}{2}＜$x，得x＞﹣1．
 
     ∴不等式组的解集为x＞﹣1．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 一元一次不等式组的解法
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 19
   type: 解答
   score: 5
   stem: 已知a+b﹣4＝0，求代数式$\frac{6a-3(a-b)}{{a}^{2}+2ab+{b}^{2}}$的值．
-  answer: ''
+  answer: $\frac{3}{4}$．
   solution: '解：由a+b﹣4＝0得，
 
     a+b＝4，
 
     则$\frac{6a-3(a-b)}{{a}^{2}+2ab+{b}^{2}}=$$\frac{6a-3a+3b}{(a+b{)}^{2}}=\frac{3(a+b)}{(a+b{)}^{2}}=$$\frac{3}{a+b}=\frac{3}{4}$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 代数式的化简
+  - 方程的应用
+  module: numbersAndExpressions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 20
@@ -545,9 +686,11 @@ questions:
 
     （1）求证：四边形AEFD是平行四边形；
 
-    （2）若AB＝6，BC＝10，求DE的长．'
+    （2）若AB＝6，BC＝10，求DE的长．
+
+    ![](figures/image11.png)'
   figure: 2026-tongzhou-zhen/figures/image11.png
-  answer: ''
+  answer: （1）∵E，F分别是BC，AC的中点，
   solution: '（1）证明：∵E，F分别是BC，AC的中点，
 
     ∴EF是△ABC的中位线，
@@ -579,17 +722,26 @@ questions:
     ∴DO$=\sqrt{A{D}^{2}+O{A}^{2}}=$$\sqrt{13}$，
 
     ∴DE＝2OD＝2$\sqrt{13}$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 三角形的性质
+  - 平行四边形的判定与性质
+  - 勾股定理
+  module: triangles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 21
   type: 解答
   score: 5
-  stem: 北京城市副中心日新月异、蓬勃发展，这里既有古韵悠长的燃灯古塔，也有现代气派的“三大建筑”．为更好地宣传家乡，数学课堂上，教师组织学生为家乡设计长方形旅游宣传牌．如图1所示，该宣传牌长282cm，宽186cm，计划在牌面均匀绘制24幅大小相同的画作，内容可涵盖本地景点、美食、人文风貌等，以此展现城市魅力，讲好家乡故事．要求如下：图1中四周空白部分的宽度相等，宽度均为10cm；为了美观，将设计部分分成大小相等的上、中、下三个长方形栏目，如图2，栏目与栏目之间的中缝间距相等，相邻中缝间距均为5cm；在每个长方形栏目划出大小相同的正方形方格，如图3，中间有十字间隔，横向两行中间间隔和竖向中间间隔宽度比为2：3．求图3中小正方形的边长．
+  stem: '北京城市副中心日新月异、蓬勃发展，这里既有古韵悠长的燃灯古塔，也有现代气派的“三大建筑”．为更好地宣传家乡，数学课堂上，教师组织学生为家乡设计长方形旅游宣传牌．如图1所示，该宣传牌长282cm，宽186cm，计划在牌面均匀绘制24幅大小相同的画作，内容可涵盖本地景点、美食、人文风貌等，以此展现城市魅力，讲好家乡故事．要求如下：图1中四周空白部分的宽度相等，宽度均为10cm；为了美观，将设计部分分成大小相等的上、中、下三个长方形栏目，如图2，栏目与栏目之间的中缝间距相等，相邻中缝间距均为5cm；在每个长方形栏目划出大小相同的正方形方格，如图3，中间有十字间隔，横向两行中间间隔和竖向中间间隔宽度比为2：3．求图3中小正方形的边长．
+
+    ![](figures/image12.png)'
   figure: 2026-tongzhou-zhen/figures/image12.png
-  answer: ''
+  answer: 图3中小正方形的边长为40cm．
   solution: '解：如图2，根据题意得每个小矩形的长为186﹣2×10＝166（cm），宽为$\frac{1}{3}×$（282﹣2×10﹣2×5）＝84（cm），
 
     如图3，∵横向两行中间间隔和竖向中间间隔宽度比为2：3．
@@ -601,9 +753,15 @@ questions:
     解得a＝40，
 
     答：图3中小正方形的边长为40cm．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 长方形的性质
+  - 方程的应用
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 22
@@ -614,7 +772,7 @@ questions:
     （1）求k，b的值；
 
     （2）当x＞2时，对于x的每一个值，函数y＝mx（m≠0）的值大于函数y＝kx+b的值，且小于y＝x﹣k的值，直接写出m的取值范围．'
-  answer: ''
+  answer: （1）k＝﹣2，b＝5；
   solution: '解：（1）把（1，3），（2，1）分别代入y＝kx+b得$\left\{\begin{matrix} k+b=3 \\ 2k+b=1 \end{matrix}\right.$，
 
     解得$\left\{\begin{matrix} k=-2 \\ b=5 \end{matrix}\right.$，
@@ -652,9 +810,15 @@ questions:
     ∴m≤1，
 
     综上所述，m的取值范围为$\frac{1}{2}≤$m≤1．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 一次函数的性质
+  - 不等式的应用
+  module: functions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 23
@@ -664,6 +828,7 @@ questions:
 
     a：甲、乙选手的得分折线图如图所示．
 
+    ![](figures/image13.png)
 
     b：丙选手五轮比赛部分成绩：其中三轮得分分别是9.0，8.9，8.3．
 
@@ -685,7 +850,7 @@ questions:
 
     （3）该校准备推荐一名选手参加市级比赛，你认为应该推荐　   　 选手（填“甲”或“乙”或“丙”）．'
   figure: 2026-tongzhou-zhen/figures/image13.png
-  answer: ''
+  answer: （1）9.1，9.1；
   solution: '解：（1）选手甲的五轮成绩分别为8.3，9.1，9.3，8.4，9.4，选手乙的五轮成绩分别为9.2，8.8，9.3，8.7，9.5，
 
     将选手甲的五轮成绩从小到大排列，处在中间位置的一个数是9.1，即中位数a＝9.1，
@@ -703,9 +868,16 @@ questions:
     因为乙和丙的平均数相同且比甲高，但乙的中位数比丙高，方差比丙小，乙成绩的稳定性更好，所以推荐乙．
 
     故答案为：乙．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 统计量（平均数、中位数）
+  - 方差的概念与计算
+  - 数据分析与决策
+  module: statisticsAndProbability
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 24
@@ -715,11 +887,14 @@ questions:
 
     （1）求证：EC为圆O的切线；
 
-    （2）连结BD并延长交AE于F，若半圆O的直径为10，tan∠CAB$=\frac{3}{4}$，求AF的长．'
+    （2）连结BD并延长交AE于F，若半圆O的直径为10，tan∠CAB$=\frac{3}{4}$，求AF的长．
+
+    ![](figures/image14.png)'
   figure: 2026-tongzhou-zhen/figures/image14.png
-  answer: ''
+  answer: （1）如图，连接OC，
   solution: '（1）证明：如图，连接OC，
 
+    ![](figures/image35.png)
 
     ∵OE⊥AC，
 
@@ -749,6 +924,7 @@ questions:
 
     （2）解：作DM⊥AB于点M，如图，
 
+    ![](figures/image36.png)
 
     ∵半圆O的直径为10，AB为半圆O的直径，$tan∠CAB=\frac{3}{4}$，
 
@@ -791,9 +967,15 @@ questions:
     即$\frac{\frac{12}{5}}{AF}=\frac{\frac{34}{5}}{10}$，
 
     ∴$AF=\frac{60}{17}$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 圆的切线性质
+  - 三角函数的应用
+  module: circles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 25
@@ -825,9 +1007,11 @@ questions:
 
     ②查阅文献可知，该化学试剂发挥作用的最低质量为3克．在上述实验中，该化学试剂在场景　   　 （填“A”或“B”）下发挥作用的时间更长；
 
-    （3）当5≤x≤15时，两种场景下试剂挥发过程中剩余质量的差值达到最大时，此时对应的时间是第　        　 分钟．'
+    （3）当5≤x≤15时，两种场景下试剂挥发过程中剩余质量的差值达到最大时，此时对应的时间是第　        　 分钟．
+
+    ![](figures/image15.png)'
   figure: 2026-tongzhou-zhen/figures/image15.png
-  answer: ''
+  answer: （1）6，
   solution: '解：（1）设yB与x的函数关系式为yB＝kx+b，
 
     由表可知，图象经过点（0，21.0）和（20，1.0），
@@ -840,7 +1024,7 @@ questions:
 
     当x＝15时，m＝﹣15+21＝6，
 
-    根据表格中yA的数据，在坐标系中描点（0，21），（2.5，20.5），（5，19.5），（7.5，18.0），（10，16.0），（12.5，13.5），（15，10.5），（17.5，7.0），（20，3.0），并用平滑曲线连接；
+    根据表格中yA的数据，在坐标系中描点（0，21），（2.5，20.5），（5，19.5），（7.5，18.0），（10，16.0），（12.5，13.5），（15，10.5），（17.5，7.0），（20，3.0），并用平滑曲线连接![](figures/image39.png)；
 
     （2）①观察表格中yA的数据：
 
@@ -895,9 +1079,15 @@ questions:
     即此时对应的时间是第11.25分钟，
 
     故答案为：11.25．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 一次函数的应用
+  - 二次函数的应用
+  - 数据分析
+  module: functions
+  difficulty: 能力
+  recommended_for:
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 26
@@ -912,7 +1102,7 @@ questions:
     ①当a＝1，t＝3时，求MN的长；
 
     ②若点P从点S（a，0）运动到点T（2a，0）的过程中，MN的长随OP的长的增大而增大，求a的取值范围．'
-  answer: ''
+  answer: （1）c＝0，b＝﹣a；
   solution: '解：（1）由题知，
 
     将（0，0）和（2，2a）代入y＝ax2+bx+c得，
@@ -956,9 +1146,14 @@ questions:
     所以此情况符合题意，
 
     综上所述，a的取值范围是：a＜0或$0＜a≤\frac{1}{8}$或$a＞\frac{1}{2}$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 二次函数的性质
+  - 坐标系中的几何关系
+  module: functions
+  difficulty: 能力
+  recommended_for:
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 27
@@ -968,9 +1163,11 @@ questions:
 
     （1）如图1，当BC＝AB时，求证：DG平分∠ADB；
 
-    （2）如图2，当BC＜AB时，如图，在BD上取一点F，使DF＝BC，连结AF交DG于点M．用等式表示线段MD和AC之间的数量关系，并证明．'
+    （2）如图2，当BC＜AB时，如图，在BD上取一点F，使DF＝BC，连结AF交DG于点M．用等式表示线段MD和AC之间的数量关系，并证明．
+
+    ![](figures/image16.png)'
   figure: 2026-tongzhou-zhen/figures/image16.png
-  answer: ''
+  answer: （1）证明：∵将BA所在的射线绕点B顺时针旋转180°﹣α得到射线BP，
   solution: '（1）证明：∵将BA所在的射线绕点B顺时针旋转180°﹣α得到射线BP，
 
     ∴∠ABC＝180°﹣α，
@@ -997,6 +1194,7 @@ questions:
 
     证明：延长BD到N，使DN＝BC，连接AN，如图，
 
+    ![](figures/image41.png)
 
     则∠ADB+∠ADN＝180°，
 
@@ -1035,9 +1233,14 @@ questions:
     ∴$MD=\frac{1}{2}AN$，
 
     ∴$MD=\frac{1}{2}AC$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 三角形的性质
+  - 旋转对称性
+  module: triangles
+  difficulty: 能力
+  recommended_for:
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 28
@@ -1051,9 +1254,11 @@ questions:
 
     ②如图1，⊙O半径为1，若点A，⊙O，点$C(a，\sqrt{3})$具有“平等关系”，求a的值；
 
-    （2）如图2，点F（﹣2，2），G（1，2），以点O为圆心的两个同心圆，其中一个圆的半径为1，另一个圆的半径为r．若线段FG与这两个同心圆具有“平等关系”，直接写出r的取值范围．'
+    （2）如图2，点F（﹣2，2），G（1，2），以点O为圆心的两个同心圆，其中一个圆的半径为1，另一个圆的半径为r．若线段FG与这两个同心圆具有“平等关系”，直接写出r的取值范围．
+
+    ![](figures/image17.png)'
   figure: 2026-tongzhou-zhen/figures/image17.png
-  answer: ''
+  answer: （1）①$(1，\sqrt{3})$或$(1，-\sqrt{3})$；②a＝2或0；
   solution: '解：（1）①∵点A，点B，点O具有“平等关系”，A（2，0），
 
     ∴OB＝AB＝OA＝2，
@@ -1064,6 +1269,7 @@ questions:
 
     当点B在x轴上方时，连接BD，
 
+    ![](figures/image43.png)
 
     ∵OD＝AD＝1，
 
@@ -1083,6 +1289,7 @@ questions:
 
     ②如图，点B的坐标为$(1，\sqrt{3})$，点E在⊙O上，
 
+    ![](figures/image44.png)
 
     ∵△AOB是等边三角形，
 
@@ -1126,6 +1333,7 @@ questions:
 
     如图，在OM右侧作等边△OMI，当点M坐标为（0，2）时，
 
+    ![](figures/image45.png)
 
     ∴OM＝MI＝2，∠OMI＝60°＝∠HMN，
 
@@ -1137,9 +1345,11 @@ questions:
 
     如图，当点N在线段IO上时，ON取得最小值1，即的最小值为1；
 
+    ![](figures/image46.png)
 
     如图，在OM右侧作等边△OMI，当点M和点F重合时，
 
+    ![](figures/image47.png)
 
     ∴$OM=MI=IO=OF=2\sqrt{2}=2$，∠OMI＝60°＝∠HMN，
 
@@ -1151,10 +1361,17 @@ questions:
 
     如图，当点在线段ON上时，ON取得最大值$2\sqrt{2}+1$，即n的最大值为$2\sqrt{2}+1$；
 
+    ![](figures/image48.png)
 
     综上所述，r的取值范围为$1≤r≤2\sqrt{2}+1$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 平面直角坐标系
+  - 圆的性质
+  - 等边三角形的性质
+  module: circles
+  difficulty: 能力
+  recommended_for:
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
