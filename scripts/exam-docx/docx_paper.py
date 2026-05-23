@@ -553,9 +553,9 @@ def main():
                     q["options"][k] = "[图]"
                 elif isinstance(v, str):
                     q["options"][k] = re.sub(r"!\[\]\([^)]+\)", "", v).strip()
-    # answers solution 中的 ![](figures/...) 也剥
-    for ans in answers:
-        ans["solution"] = re.sub(r"!\[\]\([^)]+\)", "", ans.get("solution","")).strip()
+    # 注：solution 中的 ![](figures/...) **保留**——解答步骤的辅助示意图
+    # （如 Q28 解答含 4 张图），与 stem 的 figure 字段不重复。exam-review
+    # 的 formatText 会把 ![]() 渲染为 <img>。
 
     # 校验
     val = validate(stats, questions, answers, figures_dir)

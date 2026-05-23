@@ -183,6 +183,20 @@ def _load_figure_b64(yaml_path: Path, figure_rel: str):
         return None
 
 
+_MD_IMG_RE = re.compile(r"!\[\]\(([^)]+)\)")
+
+
+def _inline_md_images(text: str, yaml_path: Path) -> str:
+    """把 stem/solution/options 中的 ![](figures/...) 转为 base64 内嵌的
+    ![](data:image/png;base64,...)，让 HTML 自包含。"""
+    if not isinstance(text, str) or "![](" not in text:
+        return text
+    def repl(m):
+        b64 = _load_figure_b64(yaml_path, m.group(1))
+        return f"![]({b64})" if b64 else m.group(0)
+    return _MD_IMG_RE.sub(repl, text)
+
+
 def load_file(path: Path) -> dict:
     """加载单个 YAML 文件，附加检测结果和图片 base64。"""
     with open(path, encoding="utf-8") as f:
@@ -192,6 +206,14 @@ def load_file(path: Path) -> dict:
         q["_issues"] = detect_issues(q)
         fig_rel = q.get("figure")
         q["_figure_b64"] = _load_figure_b64(path, fig_rel) if fig_rel else None
+        # 同时把 stem/solution/options 中的 ![](figures/...) 内嵌成 base64
+        # （数学解答步骤含示意图，如 Q28 解答 4 张辅助图）
+        for fld in ("stem", "solution"):
+            if q.get(fld):
+                q[fld] = _inline_md_images(str(q[fld]), path)
+        if isinstance(q.get("options"), dict):
+            q["options"] = {k: _inline_md_images(str(v), path) if isinstance(v, str) else v
+                            for k, v in q["options"].items()}
     data["_paper_issues"] = check_paper(data)
     data["_path"] = str(path)
     data["_filename"] = path.name

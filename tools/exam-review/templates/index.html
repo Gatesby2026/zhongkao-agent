@@ -368,8 +368,12 @@ function renderMdTable(block) {
 
 function formatText(text) {
   if (!text && text !== 0) return '<span class="field-empty">（空）</span>';
-  // 先 escape，再处理换行和 markdown 表格
+  // 先 escape，再处理换行、markdown 表格、markdown 图
   let s = escapeHtml(String(text));
+  // markdown 图 ![](url) → <img>（url 可能是 data:image/png;base64,... 或相对路径）
+  // 注：escape 后 ![] 仍是 ![]，url 中 ! [ ] ( ) 也保留
+  s = s.replace(/!\[\]\(([^)]+)\)/g,
+    '<img src="$1" style="max-width:100%;max-height:240px;border:1px solid #e1e4e8;border-radius:4px;background:#fff;padding:4px;display:inline-block;margin:4px 0">');
   // 提取连续的 | 开头行作为表格块来处理
   const lines = s.split('\n');
   const out = [];
