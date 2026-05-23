@@ -473,14 +473,17 @@ def main():
         out_dir = a.out_dir.resolve()
     else:
         # 从文件名解析：如"2026年北京市朝阳区中考数学一模试卷.docx"
+        # 注：用列表按优先级匹配——"中考数学一模"中"一模"才是考试类型，
+        # "中考"只是科目修饰，不能 re.search 串一起否则会被"中考"先匹配。
         name = docx.stem
         m_year = re.search(r"(\d{4})", name)
         m_region = re.search(r"北京市?([一-龥]+?)区", name)
-        m_type = re.search(r"(一模|二模|三模|期中|期末|中考)", name)
         year = m_year.group(1) if m_year else "0000"
         region = m_region.group(1) if m_region else "unknown"
-        type_cn = m_type.group(1) if m_type else "一模"
-        type_map = {"一模": "yi", "二模": "er", "三模": "san", "中考": "zhen"}
+        type_cn = next((t for t in ("一模", "二模", "三模", "期中", "期末", "真题")
+                        if t in name), "一模")
+        type_map = {"一模": "yi", "二模": "er", "三模": "san",
+                    "真题": "zhen", "期中": "qz", "期末": "qm"}
         typ = type_map.get(type_cn, type_cn)
         # 区中文 → 拼音/英文 slug（按物理路径风格 mentougou/chaoyang...）
         region_slug = {"朝阳": "chaoyang", "海淀": "haidian", "门头沟": "mentougou",
@@ -630,7 +633,8 @@ def _write_review_yaml(docx: Path, subject: str, final: dict,
                  "changping": "昌平", "daxing": "大兴", "fangshan": "房山",
                  "pinggu": "平谷", "huairou": "怀柔", "miyun": "密云",
                  "yanqing": "延庆", "yanshan": "燕山"}.get(region_slug, region_slug)
-    type_cn = {"yi": "一模", "er": "二模", "san": "三模", "zhen": "一模"}.get(typ_slug, "一模")
+    type_cn = {"yi": "一模", "er": "二模", "san": "三模", "zhen": "真题",
+               "qz": "期中", "qm": "期末"}.get(typ_slug, "一模")
 
     # 剥离 stem/options/solution 中的 ![](...) markdown 图引用：
     # 图已被 figure 字段独立持有；留在文本里 exam-review 不渲染 → 显示成

@@ -23,7 +23,7 @@ questions:
     C: '![](figures/image3.png)'
     D: '![](figures/image4.png)'
   has_image_options: true
-  figure: 2026-shijingshan-zhen/figures/image.png
+  figure: 2026-shijingshan-yi/figures/image.png
   answer: C
   solution: '解：A、该图形既不是轴对称图形，也不是中心对称图形，本选项不符合题意；
 
@@ -35,6 +35,7 @@ questions:
 
     故选：C．'
   knowledge_points:
+  - 图形的对称性
   - 轴对称图形
   - 中心对称图形
   module: geometryComprehensive
@@ -82,7 +83,7 @@ questions:
     B: b﹣a＞3
     C: ab＞0
     D: a＞﹣1
-  figure: 2026-shijingshan-zhen/figures/image5.png
+  figure: 2026-shijingshan-yi/figures/image5.png
   answer: B
   solution: '解：观察数轴可知：﹣2＜a＜﹣1，2＜b＜3，|a|＜|b|，
 
@@ -93,7 +94,7 @@ questions:
     故选：B．'
   knowledge_points:
   - 实数的大小比较
-  - 数轴上的点与实数的对应关系
+  - 数轴的应用
   module: numbersAndExpressions
   difficulty: 中等
   recommended_for:
@@ -120,8 +121,8 @@ questions:
 
     故选：D．'
   knowledge_points:
-  - 一元二次方程的根与系数的关系
-  - 判别式的应用
+  - 一元二次方程的根的判别式
+  - 一元二次方程的解法
   module: equationsAndInequalities
   difficulty: 中等
   recommended_for:
@@ -206,7 +207,7 @@ questions:
     B: 115°
     C: 65°
     D: 50°
-  figure: 2026-shijingshan-zhen/figures/image6.png
+  figure: 2026-shijingshan-yi/figures/image6.png
   answer: A
   solution: '解：如图，
 
@@ -255,7 +256,7 @@ questions:
     B: ①④
     C: ②③
     D: ②④
-  figure: 2026-shijingshan-zhen/figures/image7.png
+  figure: 2026-shijingshan-yi/figures/image7.png
   answer: B
   solution: '解：由题意，∵A（1，0），$B(5\sqrt{2}+1，0)$，
 
@@ -284,8 +285,8 @@ questions:
     故选：B．'
   knowledge_points:
   - 正方形的性质
-  - 旋转的性质
-  - 坐标系中的几何变换
+  - 旋转的几何变换
+  - 坐标系中的点的位置关系
   module: geometryComprehensive
   difficulty: 能力
   recommended_for:
@@ -306,7 +307,7 @@ questions:
 
     故答案为：x≥3．'
   knowledge_points:
-  - 实数及其运算
+  - 实数的性质
   - 根式的意义
   module: numbersAndExpressions
   difficulty: 基础
@@ -410,7 +411,8 @@ questions:
 
     故答案为：630．'
   knowledge_points:
-  - 统计与概率-用样本估计总体
+  - 统计与概率-样本估计总体
+  - 统计与概率-数据的收集与整理
   module: statisticsAndProbability
   difficulty: 基础
   recommended_for:
@@ -431,8 +433,8 @@ questions:
 
     故答案为：﹣2；2（答案不唯一）．'
   knowledge_points:
-  - 实数的性质
   - 不等式的性质
+  - 实数的运算
   module: equationsAndInequalities
   difficulty: 中等
   recommended_for:
@@ -448,7 +450,7 @@ questions:
     °．
 
     ![](figures/image8.png)'
-  figure: 2026-shijingshan-zhen/figures/image8.png
+  figure: 2026-shijingshan-yi/figures/image8.png
   answer: 68．
   solution: '解：∵∠BOC＝90°﹣∠COD，
 
@@ -515,11 +517,12 @@ questions:
 
     因此甲除A以外，还需完成C，E，G．'
   knowledge_points:
-  - 图论初步
+  - 逻辑推理
   - 最优化问题
-  module: geometryComprehensive
-  difficulty: 能力
+  module: equationsAndInequalities
+  difficulty: 中等
   recommended_for:
+  - L1
   - L2
   - L3
   qc_status: draft
@@ -537,7 +540,7 @@ questions:
   knowledge_points:
   - 实数的运算
   - 三角函数的基本概念
-  - 根式与绝对值的计算
+  - 绝对值的概念
   module: numbersAndExpressions
   difficulty: 中等
   recommended_for:
@@ -589,7 +592,7 @@ questions:
   knowledge_points:
   - 代数式的化简
   - 方程的应用
-  module: equationsAndInequalities
+  module: numbersAndExpressions
   difficulty: 中等
   recommended_for:
   - L1
@@ -607,7 +610,7 @@ questions:
     （2）连接BF，若∠FBC＝30°，DE＝4，CG＝2，求BF的长．
 
     ![](figures/image9.png)'
-  figure: 2026-shijingshan-zhen/figures/image9.png
+  figure: 2026-shijingshan-yi/figures/image9.png
   answer: （1）∵D，E分别为AB，AC的中点，
   solution: '（1）证明：∵D，E分别为AB，AC的中点，
 
@@ -651,9 +654,9 @@ questions:
 
     ∴$BF=2BO=6\sqrt{3}$．'
   knowledge_points:
-  - 三角形的中位线
+  - 三角形中位线定理
   - 菱形的性质与判定
-  - 相似三角形
+  - 解直角三角形
   module: triangles
   difficulty: 中等
   recommended_for:
@@ -676,7 +679,7 @@ questions:
     答：A机器人分拣的包裹总量为0.9万件．'
   knowledge_points:
   - 一元一次方程的应用
-  - 比例与方程
+  - 比例与比例方程
   module: equationsAndInequalities
   difficulty: 中等
   recommended_for:
@@ -758,7 +761,7 @@ questions:
     （3）企业按如下方式评估员工的综合素质：首先比较综合成绩，综合成绩更大者综合素质更高；若综合成绩相等，则比较评委给员工打分的平均数，平均数较大者综合素质更高．
 
     评估结果：这三名员工按综合素质由高到低依次为　        　 ．'
-  figure: 2026-shijingshan-zhen/figures/image10.png
+  figure: 2026-shijingshan-yi/figures/image10.png
   answer: （1）8.5；8；
   solution: '解：（1）把甲的得分从小到大排列为6、7、7、8、8、9、9、10、10、10，排在中间的两个数分别是8，9，故中位数m$=\frac{8+9}{2}=$8.5，
 
@@ -795,7 +798,7 @@ questions:
     故答案为：乙、甲、丙．'
   knowledge_points:
   - 统计量的计算与应用
-  - 数据的整理与分析
+  - 数据的整理、描述和分析
   module: statisticsAndProbability
   difficulty: 中等
   recommended_for:
@@ -814,7 +817,7 @@ questions:
     （2）若tan∠BAD$=\frac{1}{3}$，OA＝3，求DE的长．
 
     ![](figures/image11.png)'
-  figure: 2026-shijingshan-zhen/figures/image11.png
+  figure: 2026-shijingshan-yi/figures/image11.png
   answer: （1）连接OC，
   solution: '（1）证明：连接OC，
 
@@ -880,7 +883,8 @@ questions:
 
     ![](figures/image28.png)'
   knowledge_points:
-  - 圆的切线性质
+  - 圆的基本性质
+  - 切线的判定与性质
   - 三角函数的应用
   module: circles
   difficulty: 中等
@@ -912,7 +916,7 @@ questions:
     （3）小石和小京分别驾驶A，B两款车从甲地前往乙地，两地相距100km．两车都先以50km/h的速度行驶50km，随后立即切换至110km/h的速度继续行驶，直至到达乙地，则　   　 （填“A”或“B”）款车行驶这100km的能耗更低．
 
     ![](figures/image12.png)'
-  figure: 2026-shijingshan-zhen/figures/image12.png
+  figure: 2026-shijingshan-yi/figures/image12.png
   answer: （1）![](figures/image30.png)；
   solution: '解：（1）在坐标系中描点，用平滑曲线连接即可，曲线为开口向上的抛物线形状；
 
@@ -1105,7 +1109,7 @@ questions:
     （2）作线段EF的垂直平分线，垂足为G，交AB于点P，交AC于点Q，依题意补全图形．用等式表示线段PQ与DF的数量关系，并证明．
 
     ![](figures/image13.png)'
-  figure: 2026-shijingshan-zhen/figures/image13.png
+  figure: 2026-shijingshan-yi/figures/image13.png
   answer: （1）∠DAE＝2∠CAB．理由如下：
   solution: '解：（1）∠DAE＝2∠CAB．理由如下：
 
@@ -1213,7 +1217,7 @@ questions:
     （3）已知A（1，0），⊙A的半径为r．若⊙A上存在点T，使线段OT关于直线y＝2x﹣10的纵影长与线段OT关于直线y＝﹣x﹣10的纵影长的和为6，直接写出r的取值范围．
 
     ![](figures/image14.png)'
-  figure: 2026-shijingshan-zhen/figures/image14.png
+  figure: 2026-shijingshan-yi/figures/image14.png
   answer: （1）3；
   solution: '解：（1）∵过线段PQ的两个端点分别作直线l的平行线，交y轴于点P1和Q1，称线段P1Q1的长为线段PQ关于直线l：y＝x﹣5的纵影长，
 
@@ -1335,9 +1339,9 @@ questions:
 
     综上，1≤r＜5．'
   knowledge_points:
-  - 坐标系与图形的位置关系
-  - 直线的方程及其应用
-  - 几何变换
+  - 直线的方程
+  - 坐标系中的几何变换
+  - 圆的性质
   module: geometryComprehensive
   difficulty: 能力
   recommended_for:

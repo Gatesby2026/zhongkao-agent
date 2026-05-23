@@ -23,7 +23,7 @@ questions:
     C: '![](figures/image3.png)'
     D: '![](figures/image4.png)'
   has_image_options: true
-  figure: 2026-shunyi-zhen/figures/image.png
+  figure: 2026-shunyi-yi/figures/image.png
   answer: A
   solution: '解：A．该图形既是轴对称图形又是中心对称图形，本选项符合题意；
 
@@ -35,7 +35,6 @@ questions:
 
     故选：A．'
   knowledge_points:
-  - 图形的对称性
   - 轴对称图形
   - 中心对称图形
   module: geometryComprehensive
@@ -86,7 +85,7 @@ questions:
     B: '|a|＞1'
     C: ab＞0
     D: a+b＞0
-  figure: 2026-shunyi-zhen/figures/image5.png
+  figure: 2026-shunyi-yi/figures/image5.png
   answer: D
   solution: '解：观察数轴可知：﹣1＜a＜0，1＜b＜2，|a|＜|b|，
 
@@ -162,7 +161,8 @@ questions:
 
     故选：D．'
   knowledge_points:
-  - 概率的计算
+  - 概率的基本概念
+  - 古典概型
   module: statisticsAndProbability
   difficulty: 中等
   recommended_for:
@@ -207,7 +207,7 @@ questions:
     B: 105°
     C: 110°
     D: 115°
-  figure: 2026-shunyi-zhen/figures/image6.png
+  figure: 2026-shunyi-yi/figures/image6.png
   answer: C
   solution: '解：如图，连接BP，BC，
 
@@ -254,7 +254,7 @@ questions:
     B: ①③
     C: ②③
     D: ①②③
-  figure: 2026-shunyi-zhen/figures/image7.png
+  figure: 2026-shunyi-yi/figures/image7.png
   answer: B
   solution: '解：∵EF⊥AC，
 
@@ -317,7 +317,7 @@ questions:
     故答案为：x≥2．'
   knowledge_points:
   - 实数的性质
-  - 根式的定义
+  - 根式的意义
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -337,10 +337,10 @@ questions:
     故答案为：x（y+2）（y﹣2）'
   knowledge_points:
   - 因式分解
+  - 公式应用
   module: numbersAndExpressions
-  difficulty: 基础
+  difficulty: 中等
   recommended_for:
-  - L0
   - L1
   - L2
   - L3
@@ -433,7 +433,7 @@ questions:
     °．
 
     ![](figures/image8.png)'
-  figure: 2026-shunyi-zhen/figures/image8.png
+  figure: 2026-shunyi-yi/figures/image8.png
   answer: 42．
   solution: '解：如图，延长ED交MN于P，交OA于H，
 
@@ -483,7 +483,7 @@ questions:
   stem: '如图，在正方形ABCD中，点E在BC的延长线上，BF⊥AE于点F．若AB＝4，∠BAE＝60°，则△DEF的面积为 　   　 ．
 
     ![](figures/image9.png)'
-  figure: 2026-shunyi-zhen/figures/image9.png
+  figure: 2026-shunyi-yi/figures/image9.png
   answer: 6．
   solution: '解：过点D作DH⊥AE于点H，如图所示：
 
@@ -526,7 +526,7 @@ questions:
   - 正方形的性质
   - 三角形的面积计算
   - 直角三角形的性质
-  module: quadrilaterals
+  module: triangles
   difficulty: 中等
   recommended_for:
   - L1
@@ -683,7 +683,7 @@ questions:
 
     ＝3．'
   knowledge_points:
-  - 代数式的化简
+  - 代数式的化简与求值
   - 方程的应用
   module: numbersAndExpressions
   difficulty: 中等
@@ -703,7 +703,7 @@ questions:
     （2）若∠BCO＝45°，OD$=\sqrt{5}$，OG＝1，求CF的长．
 
     ![](figures/image10.png)'
-  figure: 2026-shunyi-zhen/figures/image10.png
+  figure: 2026-shunyi-yi/figures/image10.png
   answer: （1）∵四边形ABCD是平行四边形，
   solution: '（1）证明：∵四边形ABCD是平行四边形，
 
@@ -766,7 +766,7 @@ questions:
   stem: '中国结是中国传统的手工编织工艺品．小明编织了一个中国结，如图所示，该中国结由挂绳、结体、流苏三部分构成，其中结体内部的形状是四边形，外侧是环状的耳翼．已知挂绳高、结体内部高、流苏高的比例是1：3：2，左、右两侧的耳翼宽都是10cm，结体内部高和结体内部宽相等，总高是总宽的1.5倍，求该中国结的总高．
 
     ![](figures/image11.png)'
-  figure: 2026-shunyi-zhen/figures/image11.png
+  figure: 2026-shunyi-yi/figures/image11.png
   answer: 该中国结的总高为120cm．
   solution: '解：设挂绳高为xcm、结体内部高为3xcm、流苏高为2xcm，结体内部宽为3ccm，
 
@@ -853,7 +853,7 @@ questions:
     （1）表中n的值为　     　 ；
 
     （2）对每位同学，计算5个得分的平均数和方差，平均数较大的同学排序靠前；若平均数相同，则方差较小的同学排序靠前．已知丙在四位同学中排序第三，则这四位同学中排序最靠前的是　   　 ，m（m为整数）的值为　     　 ．'
-  figure: 2026-shunyi-zhen/figures/image12.png
+  figure: 2026-shunyi-yi/figures/image12.png
   answer: （1）90；
   solution: '解：（1）甲同学的得分从小到大排列为：89，90，90，90，91，故中位数n＝90，
 
@@ -883,8 +883,8 @@ questions:
 
     故答案为：乙，91．'
   knowledge_points:
-  - 统计量的计算与应用
-  - 数据的整理、描述和分析
+  - 统计量的计算
+  - 数据的分析与比较
   module: statisticsAndProbability
   difficulty: 中等
   recommended_for:
@@ -903,7 +903,7 @@ questions:
     （2）延长BC交AE于点F，若DF＝2，tan∠CAE$=\frac{1}{2}$，求EF的长．
 
     ![](figures/image13.png)'
-  figure: 2026-shunyi-zhen/figures/image13.png
+  figure: 2026-shunyi-yi/figures/image13.png
   answer: （1）∵AB是⊙O的直径，
   solution: '（1）证明：∵AB是⊙O的直径，
 
@@ -968,7 +968,6 @@ questions:
     ![](figures/image35.png)'
   knowledge_points:
   - 圆的基本性质
-  - 切线的性质与判定
   - 三角函数的应用
   module: circles
   difficulty: 中等
@@ -1006,7 +1005,7 @@ questions:
     ②若出手速度一定，θ2，θ3分别为篮球空心入网的出手仰角的最大值和最小值，对于θ2≤θ≤θ3中的每一个值，篮球都能空心入网，则θ2与θ3差的最大值约为　     　 度（结果保留小数点后一位）．
 
     ![](figures/image14.png)'
-  figure: 2026-shunyi-zhen/figures/image14.png
+  figure: 2026-shunyi-yi/figures/image14.png
   answer: （1）7.69；
   solution: '解：（1）根据题意，当出手仰角为55度时，篮球空心入网的最大出手速度与最小出手速度的差约为0.09m/s，即v2﹣v1＝0.09，
 
@@ -1043,7 +1042,7 @@ questions:
     故答案为：60．'
   knowledge_points:
   - 函数的应用
-  - 数据分析与处理
+  - 数据分析
   module: functions
   difficulty: 能力
   recommended_for:
@@ -1113,7 +1112,7 @@ questions:
     （2）连接DE，分别取线段BC，DE的中点F，G，连接FG，用等式表示线段FG与CE的数量关系，并证明．
 
     ![](figures/image15.png)'
-  figure: 2026-shunyi-zhen/figures/image15.png
+  figure: 2026-shunyi-yi/figures/image15.png
   answer: （1）证明：∵将线段AD绕点A逆时针旋转120°，得到线段AE．
   solution: '（1）证明：∵将线段AD绕点A逆时针旋转120°，得到线段AE．
 
@@ -1198,7 +1197,7 @@ questions:
     （2）已知点T（t，0），⊙T的半径为2，直线$y=-\sqrt{3}x+6$上的所有点都有关于⊙T的关联线段，记这些点关于⊙T的关联角度的最大值为α，若45°≤α＜90°，直接写出t的取值范围．
 
     ![](figures/image16.png)'
-  figure: 2026-shunyi-zhen/figures/image16.png
+  figure: 2026-shunyi-yi/figures/image16.png
   answer: （1）①$\sqrt{3}$；30；②（$-\sqrt{2}$，﹣2$\sqrt{2}$）；（2）t的取值范围为$\frac{10\sqrt{3}}{3}＜$t$≤\frac{6\sqrt{3}+4\sqrt{6}}{3}$或$\frac{6\sqrt{3}-4\sqrt{6}}{3}＜$t$≤\frac{2\sqrt{3}}{3}$．
   solution: '解：（1）①由题意得：当点A与⊙O相切于点P时，PA为点A关于⊙O的关联线段，∠PAO的大小为点A关于⊙O的关联角度，连接OP，如图，
 
@@ -1342,9 +1341,9 @@ questions:
 
     综上，t的取值范围为$\frac{10\sqrt{3}}{3}＜$t$≤\frac{6\sqrt{3}+4\sqrt{6}}{3}$或$\frac{6\sqrt{3}-4\sqrt{6}}{3}＜$t$≤\frac{2\sqrt{3}}{3}$．'
   knowledge_points:
-  - 圆的基本性质
-  - 直线与圆的位置关系
+  - 圆的性质
   - 坐标几何
+  - 角度与弧度
   module: circles
   difficulty: 能力
   recommended_for:
