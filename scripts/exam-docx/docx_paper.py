@@ -542,6 +542,20 @@ def main():
             and q.get("options")
             and any("![](" in (v or "") for v in q["options"].values()))
         q["source_page"] = 1  # docx 无页号；统一 1
+        # **stem 中的 ![](figures/...) 剥干净**（figures_all 字段已独立持有，
+        # 留在 stem 里会被下游 enrich 直接复用回 yaml，与 figure 字段重复显示）
+        q["stem"] = re.sub(r"!\[\]\([^)]+\)", "", q["stem"]).strip()
+        # 选项里的 ![](figures/...) 转 "[图]" 占位（has_image_options=True 时
+        # exam-review 渲染图选项）
+        if q.get("options"):
+            for k, v in list(q["options"].items()):
+                if isinstance(v, str) and v.strip().startswith("![]("):
+                    q["options"][k] = "[图]"
+                elif isinstance(v, str):
+                    q["options"][k] = re.sub(r"!\[\]\([^)]+\)", "", v).strip()
+    # answers solution 中的 ![](figures/...) 也剥
+    for ans in answers:
+        ans["solution"] = re.sub(r"!\[\]\([^)]+\)", "", ans.get("solution","")).strip()
 
     # 校验
     val = validate(stats, questions, answers, figures_dir)
