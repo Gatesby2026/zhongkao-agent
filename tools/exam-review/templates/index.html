@@ -100,6 +100,37 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 /* ── Cards area ── */
 #cards-wrap { flex: 1; overflow-y: auto; padding: 16px 20px; }
 
+/* ── Passage card (英语等含篇章题用)── */
+.passage-card {
+  background: #fefcf3; border: 2px solid #f0e6c0; border-radius: var(--radius);
+  margin-bottom: 14px; box-shadow: var(--shadow);
+  scroll-margin-top: 10px;
+}
+.passage-header {
+  padding: 12px 16px; cursor: pointer; user-select: none;
+  display: flex; align-items: center; gap: 10px; font-size: 13px;
+}
+.passage-tag {
+  background: #d29922; color: #fff; padding: 3px 10px; border-radius: 12px;
+  font-weight: 600;
+}
+.passage-type { color: #735c0f; font-weight: 600; }
+.passage-info { color: var(--muted); margin-left: auto; }
+.passage-toggle { color: var(--muted); transition: transform .15s; }
+.passage-card.collapsed .passage-toggle { transform: rotate(-90deg); }
+.passage-body {
+  padding: 0 16px 14px; font-size: 14px; line-height: 1.75; color: var(--text);
+  white-space: pre-wrap; word-break: break-word; max-height: 400px;
+  overflow-y: auto;
+}
+.passage-card.collapsed .passage-body { display: none; }
+.q-passage-ref {
+  display: inline-block; background: #fef5e0; color: #735c0f;
+  padding: 3px 10px; border-radius: 12px; font-size: 11px;
+  text-decoration: none; font-weight: 600; margin-right: 6px;
+}
+.q-passage-ref:hover { background: #f0e0a0; }
+
 /* ── Question card ── */
 .q-card {
   background: var(--card); border-radius: var(--radius);
@@ -404,6 +435,25 @@ function renderCards() {
   const wrap = document.getElementById('cards-wrap');
   wrap.innerHTML = '';
 
+  // 顶部 passages 区（英语等含篇章题学科）：每篇文章一卡，默认折叠
+  if (p.passages && p.passages.length) {
+    p.passages.forEach(pas => {
+      const card = document.createElement('div');
+      card.className = 'passage-card';
+      card.id = `passage-${pas.id}`;
+      const typeLabel = {cloze:'完形填空', reading:'阅读理解', reading_express:'阅读表达'}[pas.type] || pas.type;
+      card.innerHTML = `
+        <div class="passage-header" onclick="this.parentElement.classList.toggle('collapsed')">
+          <span class="passage-tag">📖 ${pas.id}</span>
+          <span class="passage-type">${escapeHtml(typeLabel)}</span>
+          <span class="passage-info">${(pas.body||'').length} 字</span>
+          <span class="passage-toggle">▼</span>
+        </div>
+        <div class="passage-body">${formatText(pas.body || '')}</div>`;
+      wrap.appendChild(card);
+    });
+  }
+
   const visibleQs = getVisibleQuestions(p);
   visibleQs.forEach((q, vi) => {
     wrap.appendChild(buildCard(p, q, vi));
@@ -460,6 +510,7 @@ function buildCard(p, q, vi) {
       <span class="q-num">Q${q.id}</span>
       <span class="q-type">${escapeHtml(q.type || '')}</span>
       <span class="q-score">${q.score} 分</span>
+      ${q.passage_id ? `<a class="q-passage-ref" href="#passage-${q.passage_id}" onclick="event.stopPropagation()">📖 ${escapeHtml(q.passage_id)}${q.blank_index ? ' #'+q.blank_index : ''}</a>` : ''}
       ${q.module ? `<span class="q-module">${escapeHtml(q.module)}</span>` : ''}
       ${q.difficulty ? `<span class="q-diff ${diffClass}">${escapeHtml(q.difficulty)}</span>` : ''}
       <div class="q-issues">${issueBadges}</div>

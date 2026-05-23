@@ -213,37 +213,56 @@ def _parse_cloze(text: str, num_range: range) -> tuple[dict, list[dict]]:
 # ─── section 三：阅读理解 ───────────────────────────────────────────────────
 
 _SUB_RE = re.compile(r"^\s*[(（]([一二三四五六])[)）]")
+_SINGLE_LETTER_RE = re.compile(r"^\s*([A-E])\s*$")  # 单字母行（篇章标识）
+_PAGE_FOOTER_RE = re.compile(r"^.*第\s*\d+\s*页\(共")
 
 
 def _parse_reading(text: str, num_range: range) -> tuple[list[dict], list[dict]]:
-    """切阅读理解：多 sub-section（一/二/三/四），每 sub 1 篇 + 多题。
+    """切阅读理解：每篇用 (中文) 或 单字母行 作 sub-section 边界。
 
+    北京中考英语阅读理解结构：
+      (一) 服装/活动配对题（3-4 段描述 + 图选项 A/B/C/D）
+      (二) B 文章 + 4 题（前面有标 B 一行）
+      C 文章 + 2 题（直接单字母 C 行作起点）
+      D 文章 + 4 题
     返回 (passages, questions)。
     """
     lines = text.split("\n")
-    # 找 sub-section 起点（"(一)" "(二)" ...）
-    sub_starts = []
+    # 找 sub-section 起点：(N) 标签 或 单字母行
+    sub_starts: list[tuple[int, str]] = []
     for i, ln in enumerate(lines):
         if _SUB_RE.match(ln):
-            sub_starts.append(i)
-    passages = []
-    questions = []
-    for k, si in enumerate(sub_starts):
-        sub_end = sub_starts[k+1] if k+1 < len(sub_starts) else len(lines)
-        sub_lines = lines[si:sub_end]
-        # 该 sub 内：找题号锚点
+            sub_starts.append((i, "subsec"))
+        elif _SINGLE_LETTER_RE.match(ln):
+            sub_starts.append((i, "letter"))
+    # 去重：紧邻 (二) 后的 "B" 行属同一 sub（subsec 优先，letter 紧跟则丢）
+    cleaned = []
+    for k, (i, kind) in enumerate(sub_starts):
+        if kind == "letter" and cleaned:
+            prev_i, prev_kind = cleaned[-1]
+            if prev_kind == "subsec" and i - prev_i <= 3:
+                continue  # 紧跟 subsec 后的 letter 是其篇章标签
+        cleaned.append((i, kind))
+
+    passages: list[dict] = []
+    questions: list[dict] = []
+    for k, (si, _) in enumerate(cleaned):
+        sub_end = cleaned[k+1][0] if k+1 < len(cleaned) else len(lines)
+        sub_lines = [ln for ln in lines[si:sub_end]
+                     if not _PAGE_FOOTER_RE.match(ln)]
         sub_text = "\n".join(sub_lines)
-        q_anchors = list(_NUM_HEAD_RE.finditer(sub_text))
-        q_anchors = [a for a in q_anchors if int(a.group(1)) in num_range]
+        q_anchors = [m for m in _NUM_HEAD_RE.finditer(sub_text)
+                     if int(m.group(1)) in num_range]
         if not q_anchors:
             continue
-        # 第一个题号之前 = passage body
         body = sub_text[:q_anchors[0].start()].strip()
-        # 清理 sub-section 标题行（"(一) Amy..."）头部
-        body = re.sub(r"^\s*[(（][一二三四五六][)）]", "", body).strip()
-        pid = f"reading_{si}"
+        # 清 sub-section 标识行（"(一)" 或 "B"）+ instruction 行
+        body = re.sub(r"^\s*[(（][一二三四五六][)）][^\n]*", "", body).strip()
+        body = re.sub(r"^\s*[A-E]\s*$", "", body, flags=re.MULTILINE).strip()
+        body = re.sub(r"^\s*阅读下[^\n]+", "", body, flags=re.MULTILINE).strip()
+        body = re.sub(r"^\s*请阅读[^\n]+", "", body, flags=re.MULTILINE).strip()
+        pid = f"reading_{q_anchors[0].group(1)}"
         passages.append({"id": pid, "type": "reading", "body": body})
-        # 切题
         for i, am in enumerate(q_anchors):
             n = int(am.group(1))
             end = q_anchors[i+1].start() if i+1 < len(q_anchors) else len(sub_text)
@@ -410,6 +429,79 @@ def parse_paper(src: Path, out_dir: Path, force=False) -> dict:
     }
 
 
+TYPE_EN2CN = {
+    "choice": "单选", "cloze": "完形", "reading": "阅读", "essay": "写作",
+}
+
+
+def _write_yaml(result: dict, src: Path, out_dir: Path) -> None:
+    """final.json → yaml（schema 兼容 exam-review；含 passages 二级字段）。"""
+    try:
+        import yaml as Y
+    except ImportError:
+        print("(skip yaml: PyYAML 未装)"); return
+    slug = out_dir.name  # 如 2026-changping-yi
+    m = re.match(r"(\d{4})-(.+?)-(\w+)", slug)
+    year = int(m.group(1)) if m else None
+    region_slug = m.group(2) if m else ""
+    typ_slug = m.group(3) if m else ""
+    region_cn = {"chaoyang":"朝阳","haidian":"海淀","mentougou":"门头沟",
+                 "fengtai":"丰台","xicheng":"西城","dongcheng":"东城",
+                 "shijingshan":"石景山","tongzhou":"通州","shunyi":"顺义",
+                 "changping":"昌平","daxing":"大兴","fangshan":"房山",
+                 "pinggu":"平谷","huairou":"怀柔","miyun":"密云",
+                 "yanqing":"延庆","yanshan":"燕山"}.get(region_slug, region_slug)
+    type_cn = {"yi":"一模","er":"二模","san":"三模","zhen":"真题"}.get(typ_slug,"一模")
+
+    answers_by_num = {a["number"]: a for a in result["answers"]}
+    yaml_questions = []
+    for q in result["questions"]:
+        n = q["number"]
+        a = answers_by_num.get(n, {})
+        qtype = TYPE_EN2CN.get(q.get("type"), "解答")
+        item: dict = {
+            "id": n, "type": qtype, "score": q.get("score", 0),
+            "stem": q.get("stem", ""),
+        }
+        if q.get("options"):
+            item["options"] = q["options"]
+        if q.get("passage_id"):
+            item["passage_id"] = q["passage_id"]
+        if q.get("blank_index"):
+            item["blank_index"] = q["blank_index"]
+        item["answer"] = a.get("correct", "")
+        item["solution"] = a.get("solution", "")
+        item["knowledge_points"] = []
+        item["module"] = ""
+        item["difficulty"] = ""
+        item["qc_status"] = "draft"
+        item["qc_note"] = ""
+        yaml_questions.append(item)
+
+    # 推 mock 目录
+    repo_root = out_dir
+    while repo_root.parent != repo_root:
+        if (repo_root / "knowledge-base").is_dir(): break
+        repo_root = repo_root.parent
+    mock_dir = repo_root / "knowledge-base" / "exams" / "mock" / "english" / "beijing"
+    mock_dir.mkdir(parents=True, exist_ok=True)
+    yaml_path = mock_dir / f"{slug}.yaml"
+
+    data = {
+        "year": year, "district": (region_cn + "区") if region_cn else "",
+        "exam_type": type_cn, "subject": "english",
+        "full_score": result.get("full_score"),
+        "duration_minutes": 90,
+        "total_questions": len(yaml_questions),
+        "passages": result.get("passages", []),
+        "questions": yaml_questions,
+    }
+    yaml_path.write_text(
+        Y.safe_dump(data, allow_unicode=True, sort_keys=False, width=200),
+        encoding="utf-8")
+    print(f"[english_paper] ✅ yaml {yaml_path}", flush=True)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("src_dir", type=Path)
@@ -433,6 +525,7 @@ def main():
     print(f"   题号: {sorted(set(q['number'] for q in qs))}", flush=True)
     print(f"   passages: {len(result['passages'])}  questions: {len(qs)}  "
           f"answers: {len(ans)}  full_score: {result['full_score']}", flush=True)
+    _write_yaml(result, src, out_dir)
 
 
 if __name__ == "__main__":
