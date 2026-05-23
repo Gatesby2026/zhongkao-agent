@@ -130,6 +130,36 @@ def _split_sections(full: str) -> dict[str, str]:
 _OPT_INLINE_RE = re.compile(
     r"([A-D])\s*[.、．]\s*([^A-D\n]+?)(?=\s*[A-D]\s*[.、．]|$)", re.DOTALL)
 _NUM_HEAD_RE = re.compile(r"^\s*(\d{1,2})\s*[.、．]\s*(.*)$", re.MULTILINE)
+# 句末标点：仅 . ! ? ; 。 ！ ？ ；（不含逗号——"Mom, [空位] I use" 中逗号
+# 不算结句，下行可能是空位续行）
+_SENT_END = re.compile(r"[.!?;。！？；]\s*$")
+
+
+def _insert_blank_marks(stem: str) -> str:
+    """OCR 漏读单项填空空位：行末无标点 + 下行接非选项/题号起始 → 中间插 `___`。
+
+    英语单选 stem 通常含 1 个空位，OCR 把空白处吞了，留下"前段\\n后段"。
+    把这种换行替换为 ` ___ ` 让空位显式。
+    """
+    lines = [ln.rstrip() for ln in stem.split("\n") if ln.strip()]
+    if len(lines) <= 1: return stem
+    out = [lines[0]]
+    n_blanks = 0  # 单项填空一般 1 个空，避免插入多个
+    for ln in lines[1:]:
+        prev = out[-1]
+        is_sent_end = bool(_SENT_END.search(prev))
+        is_apos_end = bool(re.search(r"['’]s?\s*$|[”\"]\s*$", prev))  # Alice's / "word"
+        is_dialog = bool(re.match(r"^\s*[-—]", ln))
+        is_option = bool(re.match(r"^\s*[A-D]\s*[.、．]", ln))
+        # 用 ___ 合：行末非句末/所有格 + 下行非对话/选项 + 还没插过空位
+        if not is_sent_end and not is_apos_end and not is_dialog and not is_option and n_blanks < 1:
+            out[-1] = prev + " ___ " + ln
+            n_blanks += 1
+        elif is_sent_end or is_dialog:
+            out.append(ln)  # 真换段
+        else:
+            out[-1] = prev + " " + ln  # 普通续行：用空格连（避免显示多行）
+    return "\n".join(out)
 
 
 def _split_choice_questions(text: str, num_range: range) -> list[dict]:
@@ -149,8 +179,9 @@ def _split_choice_questions(text: str, num_range: range) -> list[dict]:
             opts_part = chunk[a_pos.start():]
         else:
             stem_full = chunk; opts_part = ""
-        # stem 去前导题号
+        # stem 去前导题号 + 合并跨行空位标记
         stem = re.sub(r"^\s*\d+\s*[.、．]\s*", "", stem_full).strip()
+        stem = _insert_blank_marks(stem)
         # 抽选项
         opts: dict[str, str] = {}
         for om in _OPT_INLINE_RE.finditer(opts_part):
