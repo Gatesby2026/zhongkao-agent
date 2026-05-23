@@ -640,7 +640,7 @@ function buildCard(p, q, vi) {
       <button class="action-btn btn-flag${st.status==='flag'?' active':''}"
         onclick="setStatus('${p._path}','${q.id}','flag')">🚩 标记</button>
       <button class="action-btn btn-clear"
-        onclick="setStatus('${p._path}','${q.id}','none')">↩ 清除</button>
+        onclick="clearReview('${p._path}','${q.id}')">↩ 清除</button>
       <input class="note-input" type="text"
         placeholder="备注..."
         value="${escapeHtml(st.note || '')}"
@@ -655,6 +655,24 @@ function buildCard(p, q, vi) {
 function toggleCollapse(qid) {
   const card = document.getElementById(`card-${qid}`);
   card.classList.toggle('collapsed');
+}
+
+function clearReview(paperPath, qid) {
+  // 彻底重置：状态 + 备注都清空（与人语义直觉一致）
+  setState(paperPath, qid, { status: 'none', note: '' });
+  // 清输入框 + 重渲染卡片
+  const card = document.getElementById(`card-${qid}`);
+  if (card) {
+    const inp = card.querySelector('.note-input');
+    if (inp) inp.value = '';
+  }
+  const p = PAPERS[currentPaperIdx];
+  const q = p.questions.find(x => String(x.id) === String(qid));
+  if (q && card) {
+    const newCard = buildCard(p, q, 0);
+    card.replaceWith(newCard);
+  }
+  buildSidebar(); updateProgress(PAPERS[currentPaperIdx]);
 }
 
 function setStatus(paperPath, qid, status) {
