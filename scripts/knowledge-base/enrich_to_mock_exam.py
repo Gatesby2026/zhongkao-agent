@@ -560,20 +560,37 @@ def _write_yaml(result: dict, out_path: Path,
 
     if paper_dir:
         copied = 0
+        # 收集所有图引用：q.figure + stem/solution/options 中的 ![](figures/...)
+        all_rel: set[str] = set()
         for q in result["questions"]:
             fig_rel = q.get("figure")   # e.g. "figures/q06.png"
-            if not fig_rel:
-                continue
+            if fig_rel:
+                all_rel.add(fig_rel)
+            # 数学解答步骤含示意图：扫 stem/solution/options 内嵌 ![](figures/...)
+            for fld in ("stem", "solution"):
+                txt = q.get(fld) or ""
+                for m in re.finditer(r"!\[\]\(figures/([^)]+)\)", str(txt)):
+                    all_rel.add(f"figures/{m.group(1)}")
+            opts = q.get("options")
+            if isinstance(opts, dict):
+                for v in opts.values():
+                    for m in re.finditer(r"!\[\]\(figures/([^)]+)\)", str(v)):
+                        all_rel.add(f"figures/{m.group(1)}")
+
+        for fig_rel in sorted(all_rel):
             src = paper_dir / fig_rel
             if not src.exists():
                 print(f"  ⚠️ 图片源文件不存在，跳过: {src}", file=sys.stderr)
                 continue
-            dst = fig_dest_base / fig_rel   # e.g. .../2026-chaoyang-yi/figures/q06.png
+            dst = fig_dest_base / fig_rel
             dst.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(src, dst)
-            # 更新 YAML 中的 figure 路径为相对于 YAML 目录的路径
-            q["figure"] = f"{exam_slug}/{fig_rel}"
             copied += 1
+        # 更新 figure 字段为相对 YAML 目录路径（含 slug 前缀）
+        for q in result["questions"]:
+            fig_rel = q.get("figure")
+            if fig_rel and not fig_rel.startswith(exam_slug):
+                q["figure"] = f"{exam_slug}/{fig_rel}"
         if copied:
             print(f"  📷 复制 {copied} 张图片 → {fig_dest_base}/figures/", file=sys.stderr)
 

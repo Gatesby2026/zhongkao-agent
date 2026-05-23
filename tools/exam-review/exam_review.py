@@ -171,16 +171,25 @@ def check_paper(data: dict) -> list[dict]:
 # ─── 数据加载 ────────────────────────────────────────────────────────────────
 
 def _load_figure_b64(yaml_path: Path, figure_rel: str):
-    """题目 figure 图片读为 base64 data URL，便于内嵌到 HTML（自包含）。"""
-    img_path = yaml_path.parent / figure_rel
-    if not img_path.exists():
-        return None
-    try:
-        mime = "image/png" if img_path.suffix.lower() == ".png" else "image/jpeg"
-        b64 = base64.b64encode(img_path.read_bytes()).decode("ascii")
-        return f"data:{mime};base64,{b64}"
-    except Exception:
-        return None
+    """题目 figure 图片读为 base64 data URL，便于内嵌到 HTML（自包含）。
+    查找顺序：
+      (a) yaml_path.parent / figure_rel              （物理：figure 已含 slug 前缀）
+      (b) yaml_path.parent / yaml_path.stem / figure_rel  （数学：solution 中
+          ![](figures/...) 是相对 yaml 同名子目录的路径）
+    """
+    candidates = [
+        yaml_path.parent / figure_rel,
+        yaml_path.parent / yaml_path.stem / figure_rel,
+    ]
+    for img_path in candidates:
+        if img_path.exists():
+            try:
+                mime = "image/png" if img_path.suffix.lower() == ".png" else "image/jpeg"
+                b64 = base64.b64encode(img_path.read_bytes()).decode("ascii")
+                return f"data:{mime};base64,{b64}"
+            except Exception:
+                return None
+    return None
 
 
 _MD_IMG_RE = re.compile(r"!\[\]\(([^)]+)\)")

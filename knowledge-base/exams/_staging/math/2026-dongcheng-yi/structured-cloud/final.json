@@ -418,7 +418,7 @@
     {
       "number": 3,
       "correct": "B",
-      "solution": "解：树状图如下所示，\n\n由上可得，一共有16种等可能性，其中两次摸出的小球的标号相同的可能性有4种，\n∴两次摸出的小球的标号相同的概率为$\\frac{4}{16}=$$\\frac{1}{4}$，\n故选：B．"
+      "solution": "解：树状图如下所示，\n![](figures/image14.png)\n由上可得，一共有16种等可能性，其中两次摸出的小球的标号相同的可能性有4种，\n∴两次摸出的小球的标号相同的概率为$\\frac{4}{16}=$$\\frac{1}{4}$，\n故选：B．"
     },
     {
       "number": 4,
@@ -433,7 +433,7 @@
     {
       "number": 6,
       "correct": "C",
-      "solution": "解：过点A作AD⊥BC于点D，\n\n∴∠ADC＝90°，\n∵AC＝2m，∠C＝α＝53°，\n∵$sinC=\\frac{AD}{AC}$，\n∴AD＝AC•sin53°≈2×0.8＝1.6（m）．\n∴人字梯顶端A离地面BC的高度是1.6m．\n故选：C．"
+      "solution": "解：过点A作AD⊥BC于点D，\n![](figures/image17.png)\n∴∠ADC＝90°，\n∵AC＝2m，∠C＝α＝53°，\n∵$sinC=\\frac{AD}{AC}$，\n∴AD＝AC•sin53°≈2×0.8＝1.6（m）．\n∴人字梯顶端A离地面BC的高度是1.6m．\n故选：C．"
     },
     {
       "number": 7,
@@ -443,7 +443,7 @@
     {
       "number": 8,
       "correct": "A",
-      "solution": "解：如图所示，连接正方形对角交于点O，以点O为圆心，以OD为半径画圆，则点D，E，F，G在圆O上，连接OA，OB，OC，并延长，交圆O于点M，N，P，\n\n∵△ABC是等边三角形，\n∴$∠AOB=∠AOC=∠BOC=\\frac{360°}{3}=120°$，\n∴MN＝MP＝NP，即△MNP是等边三角形，\n∴当点M，N，P在圆上运动时，对应的△ABC在正方形内部运动，\n∴等边三角形有无数个，故①正确；\n如图所示，过点A作AM⊥DG，则∠D＝∠E＝∠AMD＝90°，\n\n∴四边形AMDE是矩形，\n∴AM＝DE＝1，\n∵AB≥AM，且等边三角形的周长C△ABC＝3AB，\n∴AB最小值为1，\n∴等边三角形的周长的最小值为3，故②正确；\n如图所示，过点A作AN⊥BC，$cos∠BAN=cos30°=\\frac{AN}{AB}=\\frac{\\sqrt{3}}{2}$，\n∴$AN=\\frac{\\sqrt{3}}{2}AB$，\n∴${S}_{△ABC}=\\frac{1}{2}AB⋅AN=\\frac{1}{2}×AB×\\frac{\\sqrt{3}}{2}AB=\\frac{\\sqrt{3}}{4}A{B}^{2}$，\n当AB最大时，等边三角形的面积最大，\n如图所示，当三角形一个顶点与正方形的一个顶点重合时，\n\n∴$∠DAB=∠FAC=\\frac{1}{2}(∠DAF-∠BAC)=\\frac{1}{2}×(90°-60°)=15°$，\n又∵AD＝AF，AB＝AC，\n∴△ADB≌△AFC（SAS），\n∴BD＝CF，\n设BD＝CF＝x（0＜x＜1），则BG＝CG＝1﹣x，\n在Rt△ABD中，AB2＝AD2+BD2＝1+x2，\n在Rt△BCG中，BC2＝2BG2＝2×（1﹣x）2＝2x2﹣4x+2，\n∵AB＝BC，\n∴AB2＝BC2\n∴1+x2＝2x2﹣4x+2，\n整理得，x2﹣4x+1＝0，\n解得，${x}_{1}=2-\\sqrt{3}$，${x}_{2}=2+\\sqrt{3}$（舍去），\n∴$BD=2-\\sqrt{3}$，\n∴$A{B}^{2}=B{C}^{2}=2(1-2+\\sqrt{3}{)}^{2}=8-4\\sqrt{3}$，\n根据上述计算可知，AB≥1，\n∴AB2的最大值为$(8-4\\sqrt{3})$，\n∴${S}_{△ABC}=\\frac{\\sqrt{3}}{4}×(8-4\\sqrt{3})=2\\sqrt{3}-3$，故③错误；\n综上所述，正确的有①②，\n故选：A．"
+      "solution": "解：如图所示，连接正方形对角交于点O，以点O为圆心，以OD为半径画圆，则点D，E，F，G在圆O上，连接OA，OB，OC，并延长，交圆O于点M，N，P，\n![](figures/image19.png)\n∵△ABC是等边三角形，\n∴$∠AOB=∠AOC=∠BOC=\\frac{360°}{3}=120°$，\n∴MN＝MP＝NP，即△MNP是等边三角形，\n∴当点M，N，P在圆上运动时，对应的△ABC在正方形内部运动，\n∴等边三角形有无数个，故①正确；\n如图所示，过点A作AM⊥DG，则∠D＝∠E＝∠AMD＝90°，\n![](figures/image20.png)\n∴四边形AMDE是矩形，\n∴AM＝DE＝1，\n∵AB≥AM，且等边三角形的周长C△ABC＝3AB，\n∴AB最小值为1，\n∴等边三角形的周长的最小值为3，故②正确；\n如图所示，过点A作AN⊥BC，$cos∠BAN=cos30°=\\frac{AN}{AB}=\\frac{\\sqrt{3}}{2}$，\n∴$AN=\\frac{\\sqrt{3}}{2}AB$，\n∴${S}_{△ABC}=\\frac{1}{2}AB⋅AN=\\frac{1}{2}×AB×\\frac{\\sqrt{3}}{2}AB=\\frac{\\sqrt{3}}{4}A{B}^{2}$，\n当AB最大时，等边三角形的面积最大，\n如图所示，当三角形一个顶点与正方形的一个顶点重合时，\n![](figures/image21.png)\n∴$∠DAB=∠FAC=\\frac{1}{2}(∠DAF-∠BAC)=\\frac{1}{2}×(90°-60°)=15°$，\n又∵AD＝AF，AB＝AC，\n∴△ADB≌△AFC（SAS），\n∴BD＝CF，\n设BD＝CF＝x（0＜x＜1），则BG＝CG＝1﹣x，\n在Rt△ABD中，AB2＝AD2+BD2＝1+x2，\n在Rt△BCG中，BC2＝2BG2＝2×（1﹣x）2＝2x2﹣4x+2，\n∵AB＝BC，\n∴AB2＝BC2\n∴1+x2＝2x2﹣4x+2，\n整理得，x2﹣4x+1＝0，\n解得，${x}_{1}=2-\\sqrt{3}$，${x}_{2}=2+\\sqrt{3}$（舍去），\n∴$BD=2-\\sqrt{3}$，\n∴$A{B}^{2}=B{C}^{2}=2(1-2+\\sqrt{3}{)}^{2}=8-4\\sqrt{3}$，\n根据上述计算可知，AB≥1，\n∴AB2的最大值为$(8-4\\sqrt{3})$，\n∴${S}_{△ABC}=\\frac{\\sqrt{3}}{4}×(8-4\\sqrt{3})=2\\sqrt{3}-3$，故③错误；\n综上所述，正确的有①②，\n故选：A．"
     },
     {
       "number": 9,
@@ -473,7 +473,7 @@
     {
       "number": 14,
       "correct": "5．",
-      "solution": "解：连接OB，如图，\n\n∵A，B，C是⊙O上的点，OA＝5，\n∴OA＝OB＝5，\n∵OC⊥AB，垂足为点D，且D为OC的中点，\n∴AB是OC的垂直平分线，\n∴OB＝BC，\n∴BC＝OB＝5．\n故答案为：5．"
+      "solution": "解：连接OB，如图，\n![](figures/image23.png)\n∵A，B，C是⊙O上的点，OA＝5，\n∴OA＝OB＝5，\n∵OC⊥AB，垂足为点D，且D为OC的中点，\n∴AB是OC的垂直平分线，\n∴OB＝BC，\n∴BC＝OB＝5．\n故答案为：5．"
     },
     {
       "number": 15,
@@ -523,12 +523,12 @@
     {
       "number": 24,
       "correct": "（1）连接OC，",
-      "solution": "（1）证明：连接OC，\n\n∵⊙O的切线交DO的延长线于点E，\n∴OC⊥EF，即∠OCE＝90°，\n∵AC＝BC，OC为半径，\n∴OC⊥AB，即∠AOC＝90°，\n∴∠AOC＝∠OCE，\n∴AB∥EF；\n（2）解：如图，\n\n∵OA＝OD，\n∴∠OAD＝∠ODA，\n∵AB∥EF，\n∴∠F＝∠OAD，\n∴∠F＝∠ODA，\n∴ED＝EF＝8，\n∵∠OCE＝90°，\n∴$sinE=\\frac{3}{5}=\\frac{OC}{OE}$，\n设OC＝3k，OE＝5k，\n∴由勾股定理得$CE=\\sqrt{O{E}^{2}-O{C}^{2}}=4k$DE＝OD+OE＝3k+5k＝8k＝8，\n∴k＝1，\n∴CE＝4，OC＝OB＝3，\n∵OC⊥AB\n∴$BC=\\sqrt{O{B}^{2}+O{C}^{2}}=3\\sqrt{2}$，\n∵AB∥EF，\n∴△OBG∽△ECG，\n∴$\\frac{OB}{CE}=\\frac{BG}{CG}=\\frac{3}{4}$，\n∴$CG=\\frac{4}{7}BC=\\frac{12\\sqrt{2}}{7}$．"
+      "solution": "（1）证明：连接OC，\n![](figures/image29.png)\n∵⊙O的切线交DO的延长线于点E，\n∴OC⊥EF，即∠OCE＝90°，\n∵AC＝BC，OC为半径，\n∴OC⊥AB，即∠AOC＝90°，\n∴∠AOC＝∠OCE，\n∴AB∥EF；\n（2）解：如图，\n![](figures/image30.png)\n∵OA＝OD，\n∴∠OAD＝∠ODA，\n∵AB∥EF，\n∴∠F＝∠OAD，\n∴∠F＝∠ODA，\n∴ED＝EF＝8，\n∵∠OCE＝90°，\n∴$sinE=\\frac{3}{5}=\\frac{OC}{OE}$，\n设OC＝3k，OE＝5k，\n∴由勾股定理得$CE=\\sqrt{O{E}^{2}-O{C}^{2}}=4k$DE＝OD+OE＝3k+5k＝8k＝8，\n∴k＝1，\n∴CE＝4，OC＝OB＝3，\n∵OC⊥AB\n∴$BC=\\sqrt{O{B}^{2}+O{C}^{2}}=3\\sqrt{2}$，\n∵AB∥EF，\n∴△OBG∽△ECG，\n∴$\\frac{OB}{CE}=\\frac{BG}{CG}=\\frac{3}{4}$，\n∴$CG=\\frac{4}{7}BC=\\frac{12\\sqrt{2}}{7}$．"
     },
     {
       "number": 25,
       "correct": "（1）y1＝5x；",
-      "solution": "解：（1）观察表格得，y1＝5x；\n故答案为：y1＝5x；\n（2）重复上述操作，直到所得的平均数与y1的差的绝对值小于25千卡时，手环上显示的能量消耗值是最后一次所得的平均数（AI动态算法计算时间忽略不计）．函数图象如图所示：\n\n（3）根据图象得：当测试者运动25分钟时，两种算法计算的能量消耗值之差的绝对值小于25千卡，\n∴手环显示B种算法的能量消耗值为117千卡；\n∵运动60分钟时，y1＝300，y2＝220，\n∴y1﹣y2＝80＞25，\n∴第一次计算平均数为：$\\frac{{y}_{1}+{y}_{2}}{2}=260$，\n∵y1﹣260＝300﹣260＝40＞25，\n∴第二次计算平均数为：$\\frac{{y}_{1}+260}{2}=280$，且y1﹣280＝300﹣280＝20＜25，\n∴手环显示的能量消耗值是280千卡．\n故答案为：117；280．"
+      "solution": "解：（1）观察表格得，y1＝5x；\n故答案为：y1＝5x；\n（2）重复上述操作，直到所得的平均数与y1的差的绝对值小于25千卡时，手环上显示的能量消耗值是最后一次所得的平均数（AI动态算法计算时间忽略不计）．函数图象如图所示：\n![](figures/image33.png)\n（3）根据图象得：当测试者运动25分钟时，两种算法计算的能量消耗值之差的绝对值小于25千卡，\n∴手环显示B种算法的能量消耗值为117千卡；\n∵运动60分钟时，y1＝300，y2＝220，\n∴y1﹣y2＝80＞25，\n∴第一次计算平均数为：$\\frac{{y}_{1}+{y}_{2}}{2}=260$，\n∵y1﹣260＝300﹣260＝40＞25，\n∴第二次计算平均数为：$\\frac{{y}_{1}+260}{2}=280$，且y1﹣280＝300﹣280＝20＜25，\n∴手环显示的能量消耗值是280千卡．\n故答案为：117；280．"
     },
     {
       "number": 26,
@@ -538,18 +538,18 @@
     {
       "number": 27,
       "correct": "（1）①将AB绕点A逆时针旋转120°得到AD．过点D作DE∥BC，交AC的延长线于点E，点F为CE中点．补全图形如图即为所求；",
-      "solution": "（1）①解：将AB绕点A逆时针旋转120°得到AD．过点D作DE∥BC，交AC的延长线于点E，点F为CE中点．补全图形如图即为所求；\n\n②证明：根据题意得：∠BAD＝120°，\n∴∠BAC+∠CAD＝120°，\n∵∠ACB＝60°，\n∴∠BAC+∠B＝120°，\n∴∠B＝∠DAE；\n（2）解：BC＝2AF．\n证明：如图，延长AE到G，使得AG＝BC，\n∵AB绕点A逆时针旋转120°得到AD，\n∴AB＝DA，\n由（1）得∠B＝∠DAE，\n在△ABC和△DAG中，\n$\\left\\{\\begin{matrix} AB=DA \\\\ ∠B=∠DAG \\\\ BC=AG \\end{matrix}\\right.$，\n∴△ABC≌△DAG（SAS），\n∴AC＝DG，∠ACB＝∠DGE＝60°，\n∵DE∥BC，\n∴∠ACB＝∠CEM＝∠DEG＝60°，\n∴△DEG为等边三角形，\n∴EG＝DE＝DG＝AC，\n∵点F为CE中点，\n∴CF＝EF，\n∴AC+CF＝EF+EG即AF＝FG，\n∴AG＝2AF，\n∴BC＝2AF．"
+      "solution": "（1）①解：将AB绕点A逆时针旋转120°得到AD．过点D作DE∥BC，交AC的延长线于点E，点F为CE中点．补全图形如图即为所求；\n![](figures/image36.png)\n②证明：根据题意得：∠BAD＝120°，\n∴∠BAC+∠CAD＝120°，\n∵∠ACB＝60°，\n∴∠BAC+∠B＝120°，\n∴∠B＝∠DAE；\n（2）解：BC＝2AF．\n证明：如图，延长AE到G，使得AG＝BC，\n∵AB绕点A逆时针旋转120°得到AD，\n∴AB＝DA，\n由（1）得∠B＝∠DAE，\n在△ABC和△DAG中，\n$\\left\\{\\begin{matrix} AB=DA \\\\ ∠B=∠DAG \\\\ BC=AG \\end{matrix}\\right.$，\n∴△ABC≌△DAG（SAS），\n∴AC＝DG，∠ACB＝∠DGE＝60°，\n∵DE∥BC，\n∴∠ACB＝∠CEM＝∠DEG＝60°，\n∴△DEG为等边三角形，\n∴EG＝DE＝DG＝AC，\n∵点F为CE中点，\n∴CF＝EF，\n∴AC+CF＝EF+EG即AF＝FG，\n∴AG＝2AF，\n∴BC＝2AF．"
     },
     {
       "number": 28,
       "correct": "（1）①C2，C3；",
-      "solution": "解：（1）①如图，\n\n△ABC1为钝角三角形，则C1（﹣1，1）不符合题意；\n△ABC2为锐角三角形，且BC2是⊙O的切线，则${C}_{2}(1，\\sqrt{3})$符合题意；\n△ABC3为锐角三角形，且AC3是⊙O的切线，则${C}_{3}(\\sqrt{2}，1)$符合题意，\n故答案为：C2，C3；\n②∵OC＝2，\n∴点C在以点O为圆心，2为半径的圆上，\n设A（0，1），$C(\\sqrt{3}，1)$，\n则此时AC一定是⊙O的切线，只需满足△ABC为锐角三角形，则△ABC为直角三角形即可找到临界值，\n如图，当∠B1AC＝90°时，\n\nAB1为圆的直径，即AB1＝2，\n如图，当∠AB2C＝90°时，过点O作OD⊥AB于D，\n\n∵OD⊥AB2，\n∴设AD＝B2D＝x，则AB2＝2x，\n∵∠OAC＝∠AB2C＝90°，\n∴∠OAD＝∠ACB2＝90°﹣∠CAB2，\n∴$sin∠OAD=sin∠AC{B}_{2}=\\frac{OD}{OA}=\\frac{A{B}_{2}}{AC}$，\n∵OA＝1，AD＝x，\n∴$OD=\\sqrt{1-{x}^{2}}$，\n则$\\frac{\\sqrt{1-{x}^{2}}}{1}=\\frac{2x}{\\sqrt{3}}$，\n解得$x=\\frac{\\sqrt{21}}{7}$，x$=-\\frac{\\sqrt{21}}{7}$（不符题意，舍去），\n则AB2＝2x$=\\frac{2\\sqrt{21}}{7}$，\n则当$\\frac{2\\sqrt{21}}{7}＜AB＜2$时，△ABC为锐角三角形，即点C是⊙O的弦AB的“锐切点”，\n故答案为：$\\frac{2\\sqrt{21}}{7}＜AB＜2$；\n（2）已知点T（t，0）（t＞0），⊙O经过点T，则⊙O的半径为t，\n由题可知，AB＝t，则△ABO为等边三角形，\n如图，过点B分别作BC1∥y轴，BC2⊥AB交过点A垂直于y轴的直线于点C1C2，\n连接OC1OC2，\n\n∵∠OAB＝∠AOB＝∠ABO＝60°，\n∴∠BAC1＝30°，\n∴$cos30°=\\frac{A{C}_{1}}{AB}=\\frac{AB}{A{C}_{2}}$，\n则$A{C}_{1}=\\frac{\\sqrt{3}}{2}t$，A${C}_{2}=\\frac{2\\sqrt{3}}{3}t$，\n当点C位于C1，C2之间时，△ABC为锐角三角形，此时$O{C}_{1}=\\frac{\\sqrt{7}}{2}t$，$O{C}_{2}=\\frac{\\sqrt{21}}{3}t$，\n以点O为圆心，分别以$O{C}_{1}=\\frac{\\sqrt{7}}{2}t$，O${C}_{2}=\\frac{\\sqrt{21}}{3}t$为半径画圆，长为$2\\sqrt{7}$的线段在圆弧区域内时，线段上的任意一点都是⊙O的长为的弦的“锐切点”，\n如图，与圆环内圆相切时，是线段在此范围内的最长状态，仅有此时存在EF使得条件成立时，圆的半径最小，连接OF；\n\n∴$EF=2\\sqrt{7}$，\n∴$FD=\\sqrt{7}$，\n在 Rt△FDO 中，$(\\sqrt{7}{)}^{2}+(\\frac{\\sqrt{7}}{2}t{)}^{2}=(\\frac{\\sqrt{21}}{3}t{)}^{2}$，\n解得$t=2\\sqrt{3}$t$=-2\\sqrt{3}$（不符合题意，舍去），\n即$t＞2\\sqrt{3}$．"
+      "solution": "解：（1）①如图，\n![](figures/image38.png)\n△ABC1为钝角三角形，则C1（﹣1，1）不符合题意；\n△ABC2为锐角三角形，且BC2是⊙O的切线，则${C}_{2}(1，\\sqrt{3})$符合题意；\n△ABC3为锐角三角形，且AC3是⊙O的切线，则${C}_{3}(\\sqrt{2}，1)$符合题意，\n故答案为：C2，C3；\n②∵OC＝2，\n∴点C在以点O为圆心，2为半径的圆上，\n设A（0，1），$C(\\sqrt{3}，1)$，\n则此时AC一定是⊙O的切线，只需满足△ABC为锐角三角形，则△ABC为直角三角形即可找到临界值，\n如图，当∠B1AC＝90°时，\n![](figures/image39.png)\nAB1为圆的直径，即AB1＝2，\n如图，当∠AB2C＝90°时，过点O作OD⊥AB于D，\n![](figures/image40.png)\n∵OD⊥AB2，\n∴设AD＝B2D＝x，则AB2＝2x，\n∵∠OAC＝∠AB2C＝90°，\n∴∠OAD＝∠ACB2＝90°﹣∠CAB2，\n∴$sin∠OAD=sin∠AC{B}_{2}=\\frac{OD}{OA}=\\frac{A{B}_{2}}{AC}$，\n∵OA＝1，AD＝x，\n∴$OD=\\sqrt{1-{x}^{2}}$，\n则$\\frac{\\sqrt{1-{x}^{2}}}{1}=\\frac{2x}{\\sqrt{3}}$，\n解得$x=\\frac{\\sqrt{21}}{7}$，x$=-\\frac{\\sqrt{21}}{7}$（不符题意，舍去），\n则AB2＝2x$=\\frac{2\\sqrt{21}}{7}$，\n则当$\\frac{2\\sqrt{21}}{7}＜AB＜2$时，△ABC为锐角三角形，即点C是⊙O的弦AB的“锐切点”，\n故答案为：$\\frac{2\\sqrt{21}}{7}＜AB＜2$；\n（2）已知点T（t，0）（t＞0），⊙O经过点T，则⊙O的半径为t，\n由题可知，AB＝t，则△ABO为等边三角形，\n如图，过点B分别作BC1∥y轴，BC2⊥AB交过点A垂直于y轴的直线于点C1C2，\n连接OC1OC2，\n![](figures/image41.png)\n∵∠OAB＝∠AOB＝∠ABO＝60°，\n∴∠BAC1＝30°，\n∴$cos30°=\\frac{A{C}_{1}}{AB}=\\frac{AB}{A{C}_{2}}$，\n则$A{C}_{1}=\\frac{\\sqrt{3}}{2}t$，A${C}_{2}=\\frac{2\\sqrt{3}}{3}t$，\n当点C位于C1，C2之间时，△ABC为锐角三角形，此时$O{C}_{1}=\\frac{\\sqrt{7}}{2}t$，$O{C}_{2}=\\frac{\\sqrt{21}}{3}t$，\n以点O为圆心，分别以$O{C}_{1}=\\frac{\\sqrt{7}}{2}t$，O${C}_{2}=\\frac{\\sqrt{21}}{3}t$为半径画圆，长为$2\\sqrt{7}$的线段在圆弧区域内时，线段上的任意一点都是⊙O的长为的弦的“锐切点”，\n如图，与圆环内圆相切时，是线段在此范围内的最长状态，仅有此时存在EF使得条件成立时，圆的半径最小，连接OF；\n![](figures/image42.png)\n∴$EF=2\\sqrt{7}$，\n∴$FD=\\sqrt{7}$，\n在 Rt△FDO 中，$(\\sqrt{7}{)}^{2}+(\\frac{\\sqrt{7}}{2}t{)}^{2}=(\\frac{\\sqrt{21}}{3}t{)}^{2}$，\n解得$t=2\\sqrt{3}$t$=-2\\sqrt{3}$（不符合题意，舍去），\n即$t＞2\\sqrt{3}$．"
     }
   ],
   "validation": {
     "errors": [],
     "warnings": [
-      "figures/ 下未引用图 30 张: ['image13.png', 'image14.png', 'image15.png', 'image16.png', 'image17.png']..."
+      "figures/ 下未引用图 15 张: ['image13.png', 'image15.png', 'image16.png', 'image18.png', 'image22.png']..."
     ]
   },
   "stats": {
