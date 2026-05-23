@@ -279,6 +279,93 @@ def build_html(papers: list[dict]) -> str:
     return template.replace("__PAPERS_JSON__", papers_json)
 
 
+# ─── Server 模式（支持把审核备注写回 yaml） ─────────────────────────────────
+
+def save_review_to_yaml(yaml_path: Path, qid, status: str, note: str) -> bool:
+    """把单题的 qc_status/qc_note 写回 yaml 文件。
+    返回 True 表示写成功。
+    """
+    if not yaml_path.exists():
+        return False
+    try:
+        data = yaml.safe_load(yaml_path.read_text(encoding="utf-8"))
+    except Exception:
+        return False
+    qid_int = None
+    try: qid_int = int(qid)
+    except Exception: pass
+    found = False
+    for q in data.get("questions") or []:
+        if str(q.get("id")) == str(qid) or (qid_int is not None and q.get("id") == qid_int):
+            q["qc_status"] = status or "draft"
+            q["qc_note"] = note or ""
+            found = True
+            break
+    if not found:
+        return False
+    # 保留原文档其他字段顺序，安全写回
+    yaml_path.write_text(
+        yaml.safe_dump(data, allow_unicode=True, sort_keys=False, width=200),
+        encoding="utf-8")
+    return True
+
+
+def make_handler(papers: list[dict], yaml_paths: dict[str, Path]):
+    """构造 HTTP handler 闭包；papers 持有 HTML 数据，yaml_paths 记录路径白名单。"""
+    import http.server, urllib.parse
+    html_cache = {"v": build_html(papers)}
+
+    class Handler(http.server.SimpleHTTPRequestHandler):
+        def log_message(self, fmt, *a): pass  # 静默
+        def do_GET(self):
+            if self.path == "/" or self.path.startswith("/?"):
+                self.send_response(200)
+                self.send_header("Content-Type", "text/html; charset=utf-8")
+                self.end_headers()
+                self.wfile.write(html_cache["v"].encode("utf-8"))
+                return
+            self.send_error(404)
+        def do_POST(self):
+            if self.path != "/save":
+                self.send_error(404); return
+            length = int(self.headers.get("Content-Length", 0))
+            try:
+                body = json.loads(self.rfile.read(length).decode("utf-8"))
+                path = body.get("path"); qid = body.get("qid")
+                status = body.get("status",""); note = body.get("note","")
+                yp = yaml_paths.get(path)
+                if not yp:
+                    self.send_response(400); self.end_headers()
+                    self.wfile.write(b'{"ok":false,"err":"unknown path"}')
+                    return
+                ok = save_review_to_yaml(yp, qid, status, note)
+                self.send_response(200 if ok else 500)
+                self.send_header("Content-Type", "application/json")
+                self.end_headers()
+                self.wfile.write(json.dumps({"ok": ok}).encode("utf-8"))
+            except Exception as e:
+                self.send_response(500); self.end_headers()
+                self.wfile.write(json.dumps({"ok": False, "err": str(e)}).encode("utf-8"))
+    return Handler
+
+
+def serve(papers: list[dict], port: int = 0):
+    """启 server 提供 review HTML + POST /save 写回 yaml。"""
+    import http.server, socketserver
+    yaml_paths = {p["_path"]: Path(p["_path"]) for p in papers}
+    Handler = make_handler(papers, yaml_paths)
+    httpd = socketserver.ThreadingTCPServer(("127.0.0.1", port), Handler)
+    port = httpd.server_address[1]
+    url = f"http://127.0.0.1:{port}/"
+    print(f"🌐 Server 启动: {url}（POST /save 写回 yaml）")
+    print("   按 Ctrl+C 退出")
+    webbrowser.open(url)
+    try:
+        httpd.serve_forever()
+    except KeyboardInterrupt:
+        print("\n👋 server stopped")
+
+
 # ─── CLI ─────────────────────────────────────────────────────────────────────
 
 def main():
@@ -292,10 +379,13 @@ def main():
                        help="科目目录名（如 physics）；扫描 knowledge-base/exams/mock/<subject>/")
     group.add_argument("--all", "-a", action="store_true",
                        help="扫描全部科目")
-    parser.add_argument("--out", "-o", help="输出 HTML 路径（默认临时文件，自动打开浏览器）")
+    parser.add_argument("--out", "-o", help="输出 HTML 路径（默认起 server 模式）")
     parser.add_argument("--no-open", action="store_true", help="只生成 HTML，不打开浏览器")
     parser.add_argument("--exams-root", type=Path, default=DEFAULT_EXAMS_ROOT,
                        help=f"试卷库根目录（默认 {DEFAULT_EXAMS_ROOT}）")
+    parser.add_argument("--static", action="store_true",
+                       help="只生成静态 HTML（无 server，备注不能写回 yaml）")
+    parser.add_argument("--port", type=int, default=0, help="server 端口（默认随机）")
     args = parser.parse_args()
 
     files = collect_files(args.file, args.subject, args.all, root=args.exams_root)
@@ -323,24 +413,25 @@ def main():
     )
     print(f"\n📊 共 {len(papers)} 份试卷，{total_q} 道题，检测到 {total_issues} 处问题")
 
-    html = build_html(papers)
-
-    if args.out:
-        out_path = args.out
+    # 默认起 server（备注 POST 写回 yaml）；--static 才生成静态 HTML
+    if args.static or args.out:
+        html = build_html(papers)
+        if args.out:
+            out_path = args.out
+        else:
+            tf = tempfile.NamedTemporaryFile(
+                mode="w", suffix=".html", delete=False, encoding="utf-8",
+                prefix="exam-review-")
+            tf.write(html); tf.flush(); out_path = tf.name
+            tf.close()
         with open(out_path, "w", encoding="utf-8") as f:
             f.write(html)
-    else:
-        tf = tempfile.NamedTemporaryFile(
-            mode="w", suffix=".html", delete=False, encoding="utf-8",
-            prefix="exam-review-",
-        )
-        tf.write(html)
-        tf.flush()
-        out_path = tf.name
-
-    print(f"🌐 生成: {out_path}")
-    if not args.no_open:
-        webbrowser.open(f"file://{os.path.abspath(out_path)}")
+        print(f"🌐 静态 HTML: {out_path}")
+        if not args.no_open:
+            webbrowser.open(f"file://{os.path.abspath(out_path)}")
+        return
+    # server 模式
+    serve(papers, port=args.port)
 
 
 if __name__ == "__main__":

@@ -130,6 +130,17 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   text-decoration: none; font-weight: 600; margin-right: 6px;
 }
 .q-passage-ref:hover { background: #f0e0a0; }
+.passage-range {
+  background: #fff5d6; color: #735c0f;
+  padding: 2px 8px; border-radius: 10px;
+  font-size: 11px; font-weight: 600;
+}
+.cloze-blank {
+  display: inline-block;
+  background: #fff5d6; color: #cb2431; border: 1px dashed #d29922;
+  padding: 0 6px; margin: 0 2px; border-radius: 3px;
+  font-weight: 700; font-family: monospace; font-size: 13px;
+}
 
 /* ── Question card ── */
 .q-card {
@@ -284,6 +295,30 @@ let currentFilter = 'all';
 let navIdx = 0; // keyboard navigation index into visible cards
 const reviewState = JSON.parse(localStorage.getItem('review_state') || '{}');
 
+// 初始化：把 yaml 中已有的 qc_status/qc_note 同步到 localStorage（首次或新题）
+// 用户写过的 ok/flag 状态优先于 yaml 中的 draft 默认值
+(function initStateFromYaml() {
+  PAPERS.forEach(p => {
+    (p.questions || []).forEach(q => {
+      const k = `${p._path}::${q.id}`;
+      const local = reviewState[k];
+      // yaml 中的状态（draft/ok/flag/pending）+ 备注
+      const yamlStatus = q.qc_status === 'ok' || q.qc_status === 'flag' || q.qc_status === 'pending'
+        ? q.qc_status : 'none';
+      const yamlNote = q.qc_note || '';
+      // local 没记录 OR local note 空且 yaml 有 → 用 yaml 填
+      if (!local) {
+        reviewState[k] = {status: yamlStatus, note: yamlNote};
+      } else {
+        // local 有记录 → 只补 note 字段（如果 local 空但 yaml 有）
+        if (!local.note && yamlNote) local.note = yamlNote;
+        if (local.status === 'none' && yamlStatus !== 'none') local.status = yamlStatus;
+      }
+    });
+  });
+  localStorage.setItem('review_state', JSON.stringify(reviewState));
+})();
+
 function stateKey(paperPath, qid) {
   return `${paperPath}::${qid}`;
 }
@@ -294,6 +329,13 @@ function setState(paperPath, qid, updates) {
   const k = stateKey(paperPath, qid);
   reviewState[k] = { ...getState(paperPath, qid), ...updates };
   localStorage.setItem('review_state', JSON.stringify(reviewState));
+  // 同时 POST 到 server 写回 yaml（仅 server 模式有响应）
+  const s = reviewState[k];
+  fetch('/save', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({path: paperPath, qid, status: s.status, note: s.note}),
+  }).catch(() => {});  // 静态模式时静默
 }
 
 // ─── Sidebar ─────────────────────────────────────────────────────────────────
@@ -435,27 +477,44 @@ function renderCards() {
   const wrap = document.getElementById('cards-wrap');
   wrap.innerHTML = '';
 
-  // 顶部 passages 区（英语等含篇章题学科）：每篇文章一卡，默认折叠
+  // passages 局部插入：每篇 passage 在其 q_range 起始题前面插（保试卷原排版）
+  const passagesByStart = {};
   if (p.passages && p.passages.length) {
     p.passages.forEach(pas => {
-      const card = document.createElement('div');
-      card.className = 'passage-card';
-      card.id = `passage-${pas.id}`;
-      const typeLabel = {cloze:'完形填空', reading:'阅读理解', reading_express:'阅读表达'}[pas.type] || pas.type;
-      card.innerHTML = `
-        <div class="passage-header" onclick="this.parentElement.classList.toggle('collapsed')">
-          <span class="passage-tag">📖 ${pas.id}</span>
-          <span class="passage-type">${escapeHtml(typeLabel)}</span>
-          <span class="passage-info">${(pas.body||'').length} 字</span>
-          <span class="passage-toggle">▼</span>
-        </div>
-        <div class="passage-body">${formatText(pas.body || '')}</div>`;
-      wrap.appendChild(card);
+      const start = pas.q_range ? pas.q_range[0] : null;
+      if (start != null) {
+        (passagesByStart[start] = passagesByStart[start] || []).push(pas);
+      }
     });
+  }
+
+  function buildPassageCard(pas) {
+    const card = document.createElement('div');
+    card.className = 'passage-card';
+    card.id = `passage-${pas.id}`;
+    const typeLabel = {cloze:'完形填空', reading:'阅读理解', reading_express:'阅读表达'}[pas.type] || pas.type;
+    let body = formatText(pas.body || '');
+    // 完形填空：把 ___N___ 标记渲染为高亮空位（passes through escapeHtml unchanged）
+    body = body.replace(/_{2,}(\d+)_{2,}/g,
+      '<span class="cloze-blank">__$1__</span>');
+    const qr = pas.q_range ? `Q${pas.q_range[0]}–Q${pas.q_range[1]}` : '';
+    card.innerHTML = `
+      <div class="passage-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <span class="passage-tag">📖 ${pas.id}</span>
+        <span class="passage-type">${escapeHtml(typeLabel)}</span>
+        ${qr ? `<span class="passage-range">${qr}</span>` : ''}
+        <span class="passage-info">${(pas.body||'').length} 字</span>
+        <span class="passage-toggle">▼</span>
+      </div>
+      <div class="passage-body">${body}</div>`;
+    return card;
   }
 
   const visibleQs = getVisibleQuestions(p);
   visibleQs.forEach((q, vi) => {
+    // 该题号是某 passage 的起始题 → 先插 passage 卡
+    const heads = passagesByStart[parseInt(q.id, 10)];
+    if (heads) heads.forEach(pas => wrap.appendChild(buildPassageCard(pas)));
     wrap.appendChild(buildCard(p, q, vi));
   });
 

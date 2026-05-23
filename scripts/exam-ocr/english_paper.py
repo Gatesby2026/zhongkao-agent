@@ -164,7 +164,7 @@ def _split_choice_questions(text: str, num_range: range) -> list[dict]:
 def _parse_cloze(text: str, num_range: range) -> tuple[dict, list[dict]]:
     """切完形填空：1 篇文章（含空位编号） + 8 题（每题 4 选项）。
 
-    文章正文里数字 13/14/15/... 直接作为空位标记。
+    文章正文里数字 13/14/15/... 直接作为空位标记，转换为 `___N___` 显式标记。
     选项行：N. A. xx / B. xx / C. xx / D. xx
     """
     # 找第一个题号 ^N. 选项行（A. xxx）作为"选项段"起点
@@ -175,17 +175,18 @@ def _parse_cloze(text: str, num_range: range) -> tuple[dict, list[dict]]:
         if m and int(m.group(1)) in num_range:
             opt_start = i; break
     if opt_start is None:
-        return {"body": text.strip()}, []
-    # 文章在 opt_start 之前（去除大题标题 + instruction 行）
+        return {"body": _strip_footers(text)}, []
+    # 文章在 opt_start 之前（去除大题标题 + instruction + 页脚）
     body_lines = []
-    in_body = False
     for ln in lines[:opt_start]:
         s = ln.strip()
         if not s: continue
         if re.search(r"完形填空|选择最佳选项|阅读下面", s): continue
-        in_body = True
         body_lines.append(s)
-    body = "\n".join(body_lines).strip()
+    body = _strip_footers("\n".join(body_lines)).strip()
+    # 转空位标记：13-20 这些数字（前后非数字/字母边界）→ ___N___
+    for n in num_range:
+        body = re.sub(rf"(?<![\d\w]){n}(?![\d\w])", f"___{n}___", body)
     # 选项部分：8 题 × 4 行
     opts_block = "\n".join(lines[opt_start:]).strip()
     # 切题：以 "^N. A． " 起点
@@ -206,7 +207,9 @@ def _parse_cloze(text: str, num_range: range) -> tuple[dict, list[dict]]:
             questions.append({"number": n,
                               "blank_index": n - num_range.start + 1,
                               "options": opts, "stem": ""})
-    passage = {"body": body, "type": "cloze"}
+    q_nums = [q["number"] for q in questions]
+    passage = {"body": body, "type": "cloze",
+               "q_range": [min(q_nums), max(q_nums)] if q_nums else None}
     return passage, questions
 
 
@@ -214,7 +217,21 @@ def _parse_cloze(text: str, num_range: range) -> tuple[dict, list[dict]]:
 
 _SUB_RE = re.compile(r"^\s*[(（]([一二三四五六])[)）]")
 _SINGLE_LETTER_RE = re.compile(r"^\s*([A-E])\s*$")  # 单字母行（篇章标识）
-_PAGE_FOOTER_RE = re.compile(r"^.*第\s*\d+\s*页\(共")
+# 页脚噪声："初三英语试卷第2页(共9页)" / "第N页" 等
+_PAGE_FOOTER_RE = re.compile(
+    r"(?:初[一二三]|九年级|高[一二三])[^\n]{0,8}试卷?第\s*\d+\s*页"
+    r"|第\s*\d+\s*页\s*\(?\s*共\s*\d+\s*页\)?"
+)
+
+
+def _strip_footers(text: str) -> str:
+    """从文本中剥页脚 noise 行（独立成行 OR 行尾追加）。"""
+    out = []
+    for ln in text.split("\n"):
+        cleaned = _PAGE_FOOTER_RE.sub("", ln).strip()
+        if cleaned:
+            out.append(cleaned)
+    return "\n".join(out)
 
 
 def _parse_reading(text: str, num_range: range) -> tuple[list[dict], list[dict]]:
@@ -261,8 +278,11 @@ def _parse_reading(text: str, num_range: range) -> tuple[list[dict], list[dict]]
         body = re.sub(r"^\s*[A-E]\s*$", "", body, flags=re.MULTILINE).strip()
         body = re.sub(r"^\s*阅读下[^\n]+", "", body, flags=re.MULTILINE).strip()
         body = re.sub(r"^\s*请阅读[^\n]+", "", body, flags=re.MULTILINE).strip()
+        body = _strip_footers(body)
         pid = f"reading_{q_anchors[0].group(1)}"
-        passages.append({"id": pid, "type": "reading", "body": body})
+        q_nums_sub = [int(a.group(1)) for a in q_anchors]
+        passages.append({"id": pid, "type": "reading", "body": body,
+                          "q_range": [min(q_nums_sub), max(q_nums_sub)]})
         for i, am in enumerate(q_anchors):
             n = int(am.group(1))
             end = q_anchors[i+1].start() if i+1 < len(q_anchors) else len(sub_text)
@@ -298,7 +318,10 @@ def _parse_express(text: str, num_range: range) -> tuple[dict, list[dict]]:
     # 清大题标题
     body = re.sub(r"^\s*四、\s*阅读(?:与|表达)[^\n]*\n", "", body).strip()
     body = re.sub(r"^\s*阅读下面[^\n]+\n", "", body, flags=re.MULTILINE).strip()
-    passage = {"id": "express", "type": "reading_express", "body": body}
+    body = _strip_footers(body)
+    q_nums = [int(m.group(1)) for m in q_anchors]
+    passage = {"id": "express", "type": "reading_express", "body": body,
+               "q_range": [min(q_nums), max(q_nums)] if q_nums else None}
     questions = []
     for i, m in enumerate(q_anchors):
         n = int(m.group(1))
