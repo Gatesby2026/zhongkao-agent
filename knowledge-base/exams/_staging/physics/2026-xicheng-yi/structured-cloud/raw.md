@@ -176,7 +176,7 @@ A．筷子使用时，动力臂小于阻力臂，属于费力杠杆，故A错误
 
 B．把小番茄往手部靠近，改变的是阻力臂，阻力作用点靠近支点，阻力臂减小，动力臂是支点到手指施力点的距离，不会因此增大，故B错误；
 
-C．把小番茄往手部靠近，阻力臂![](figures/image14.png)减小，阻力![](figures/image15.png)不变，根据![](figures/image16.png)，动力![](figures/image17.png)会减小，所以可以更省力，故C正确；
+C．把小番茄往手部靠近，阻力臂$L_{2}$减小，阻力$F_{2}$不变，根据$F_{1} L_{1} = F_{2} L_{2}$，动力$F_{1}$会减小，所以可以更省力，故C正确；
 
 D．小番茄对筷子的反作用力是阻力，筷子对小番茄的压力是动力的反作用力，不是阻力，故D错误。
 
@@ -242,7 +242,7 @@ A. 电流表示数增大
 
 B. 电压表示数增大
 
-C. 定值电阻![](figures/image21.png)消耗的功率增大
+C. 定值电阻$R_{0}$消耗的功率增大
 
 D. 电压表示数与电流表示数的比值减小
 
@@ -250,19 +250,19 @@ D. 电压表示数与电流表示数的比值减小
 
 【解析】
 
-【详解】由图乙可知，定值电阻![](figures/image21.png)与变阻器串联，电流表测电路总电流，电压表测变阻器两端的电压；当半径![](figures/image22.png)增大时，滑片顺时针移动，变阻器接入电路的阻值变大；
+【详解】由图乙可知，定值电阻$R_{0}$与变阻器串联，电流表测电路总电流，电压表测变阻器两端的电压；当半径$r$增大时，滑片顺时针移动，变阻器接入电路的阻值变大；
 
-A．总电阻![](figures/image23.png)​，![](figures/image24.png)变大，电源电压不变，由欧姆定律![](figures/image25.png)​可知，电流表示数减小，故A错误；
+A．总电阻$R_{总} = R_{0} + R_{滑}$​，$R_{滑}$变大，电源电压不变，由欧姆定律$I = \frac{U}{R_{总}}$​可知，电流表示数减小，故A错误；
 
-B．定值电阻电压![](figures/image26.png)，![](figures/image27.png)减小，所以![](figures/image28.png)减小，因此变阻器电压![](figures/image29.png)增大，即电压表示数增大，故B正确；
+B．定值电阻电压$U_{0} = I R_{0}$，$I$减小，所以$U_{0}$减小，因此变阻器电压$U_{滑} = U - U_{0}$增大，即电压表示数增大，故B正确；
 
-C．定值电阻功率![](figures/image30.png)​，![](figures/image27.png)减小、![](figures/image21.png)不变，所以![](figures/image21.png)消耗的功率减小，故C错误；
+C．定值电阻功率$P_{0} = I^{2} R_{0}$​，$I$减小、$R_{0}$不变，所以$R_{0}$消耗的功率减小，故C错误；
 
-D．电压表示数与电流表示数的比值![](figures/image31.png)​，![](figures/image24.png)​变大，所以比值增大，故D错误。
+D．电压表示数与电流表示数的比值$\frac{U_{滑}}{I} = R_{滑}$​，$R_{滑}$​变大，所以比值增大，故D错误。
 
 故选B。
 
-12. 在水平桌面上有一个盛有水的容器，用细线系住一物块浸没在水中（水未溢出），如图甲所示。将细线剪断，物块最终漂浮在水面上，且有![](figures/image32.png)的体积露出水面，如图乙所示。（已知![](figures/image33.png)），下列说法正确的是（　　）
+12. 在水平桌面上有一个盛有水的容器，用细线系住一物块浸没在水中（水未溢出），如图甲所示。将细线剪断，物块最终漂浮在水面上，且有$\frac{2}{5}$的体积露出水面，如图乙所示。（已知$\rho_{酒精} = 0 . 8 \text{g} / \text{cm}^{3}$），下列说法正确的是（　　）
 
 ![](figures/image34.png)
 
@@ -270,7 +270,7 @@ A. 甲、乙两图中，水对两容器底部的压强相等
 
 B. 甲、乙两图中，两容器对桌面的压强之比是5:3
 
-C. 将物块浸在酒精中，最终物块有![](figures/image35.png)的体积露出液面
+C. 将物块浸在酒精中，最终物块有$\frac{3}{4}$的体积露出液面
 
 D. 甲图中细线对物块的拉力与物块所受浮力之比是2∶5
 
@@ -280,23 +280,23 @@ D. 甲图中细线对物块的拉力与物块所受浮力之比是2∶5
 
 【分析】根据物体的漂浮条件求出物块的密度，并能对物块在不同状态下进行受力分析是解题的关键。
 
-【详解】乙图中，物块有![](figures/image32.png)体积露出水面，故排开水的体积![](figures/image36.png)，物块漂浮，则![](figures/image37.png)，即![](figures/image38.png)
+【详解】乙图中，物块有$\frac{2}{5}$体积露出水面，故排开水的体积$V_{排} = \frac{3}{5} V_{物}$，物块漂浮，则$F_{浮} = G_{物}$，即$\rho_{水} g \frac{3}{5} V_{物} = \rho_{物} g V_{物}$
 
-解得![](figures/image39.png)
+解得$\rho_{物} = \frac{3}{5} \rho_{水} = \frac{3}{5} \times 1 . 0 \text{g}/\text{cm}^{\text{3}} = 0 .\text{6g}/\text{cm}^{\text{3}}$
 
-A．甲中物块完全浸没，![](figures/image40.png)；乙中![](figures/image36.png)，因此甲容器水面更高，根据![](figures/image41.png)可知，甲图中水对容器底部的压强较大，故A错误；
+A．甲中物块完全浸没，$V_{排甲} = V_{物}$；乙中$V_{排} = \frac{3}{5} V_{物}$，因此甲容器水面更高，根据$p = \rho g h$可知，甲图中水对容器底部的压强较大，故A错误；
 
-B．容器对桌面的压力等于容器、水和物块的总重力，甲、乙总重力相等，容器底面积不变，根据![](figures/image42.png)，甲、乙两容器对桌面压强相等，比值为1∶1，故B错误；
+B．容器对桌面的压力等于容器、水和物块的总重力，甲、乙总重力相等，容器底面积不变，根据$p = \frac{F}{S}$，甲、乙两容器对桌面压强相等，比值为1∶1，故B错误；
 
-C．由于物块的密度小于酒精的密度，物块在酒精中漂浮，重力等于浮力，故![](figures/image43.png)，![](figures/image44.png)
+C．由于物块的密度小于酒精的密度，物块在酒精中漂浮，重力等于浮力，故$\rho_{物} g V_{物} = \rho_{酒精} g V_{排酒精}$，$V_{排酒精} = \frac{\rho_{物}}{\rho_{酒精}} V = \frac{\text{0}.\text{6g}/\text{cm}^{\text{3}}}{\text{0}.\text{8g}/\text{cm}^{\text{3}}} \times V = \frac{3}{4} V$
 
-则露出酒精的体积为![](figures/image45.png)
+则露出酒精的体积为$V_{露} = V_{物} - V_{排酒精} = V - \frac{3}{4} V = \frac{1}{4} V$
 
 故C错误；
 
-D．甲图中物块静止时受力平衡，![](figures/image46.png)，![](figures/image47.png)，![](figures/image48.png)，故![](figures/image49.png)
+D．甲图中物块静止时受力平衡，$F_{浮甲} = G + F_{拉}$，$F_{浮甲} = \rho_{水} g V_{物}$，$G_{物} = \frac{3}{5} \rho_{水} g V_{物}$，故$F_{拉} = F_{浮} - G = \rho_{水} g V_{物} - \frac{3}{5} \rho_{水} g V_{物} = \frac{2}{5} \rho_{水} g V_{物}$
 
-则![](figures/image50.png)
+则$\frac{F_{拉}}{F_{浮甲}} = \frac{\frac{2}{5} \rho_{水} g V_{物}}{\rho_{水} g V_{物}} = \frac{2}{5}$
 
 故D正确。
 
@@ -344,37 +344,37 @@ D. 滑轮组的机械效率为80%
 
 【解析】
 
-【详解】B．工人对水平地面的压力与地面对工人的支持力是一对相互作用力，大小相等，即![](figures/image52.png)
+【详解】B．工人对水平地面的压力与地面对工人的支持力是一对相互作用力，大小相等，即$F_{压} = F_{支} = 400 \text{N}$
 
-工人站在水平地面受力平衡，![](figures/image53.png)，绳端对工人的拉力![](figures/image54.png)
+工人站在水平地面受力平衡，$G_{人} = F_{拉} + F_{支}$，绳端对工人的拉力$F_{拉} = G_{人} - F_{支} = 650 \text{N} - 400 \text{N} = 250 \text{N}$
 
-则工人对绳端的拉力也是![](figures/image55.png)，故B错误；
+则工人对绳端的拉力也是$F = 250 \text{N}$，故B错误；
 
-A．由图可知，承担物重的绳子段数为![](figures/image56.png)，不计绳重与摩擦，有![](figures/image57.png)，代入数据可得，![](figures/image58.png)
+A．由图可知，承担物重的绳子段数为$n = 3$，不计绳重与摩擦，有$F = \frac{G_{物} + G_{动}}{3}$，代入数据可得，$250 \text{N} = \frac{600 \text{N} + G_{动}}{3}$
 
-解得![](figures/image59.png)
+解得$G_{动} = 3 \times \text{250N} - 60 \text{0N} = 150 \text{N}$
 
-由于三个滑轮的重相同，故![](figures/image60.png)，悬挂点A受到的拉力等于四段绳子的拉力与两个定滑轮的重力之和，故![](figures/image61.png)
+由于三个滑轮的重相同，故$G_{定} = 150 \text{N}$，悬挂点A受到的拉力等于四段绳子的拉力与两个定滑轮的重力之和，故$F_{\text{A}} = 4 F + 2 G_{定} = 4 \times 250 \text{N} + 2 \times 150 \text{N} = 130 \text{0N}$
 
 故A正确；
 
-C．绳子自由端移动的距离为![](figures/image62.png)
+C．绳子自由端移动的距离为$s = n h = 3 \times \text{1m} = 3 \text{m}$
 
-工人做的总功为![](figures/image63.png)
+工人做的总功为$W_{总} = F s = 2 \text{50N} \times \text{3m} = 75 \text{0J}$
 
-功率为![](figures/image64.png)
+功率为$P = \frac{W}{t} = \frac{\text{750J}}{\text{10s}} = 75 \text{W}$
 
 故C错误；
 
-D．所做的有用功为![](figures/image65.png)
+D．所做的有用功为$W_{有用} = G_{物} h = 60 \text{0N} \times \text{1m} = 60 \text{0J}$
 
-滑轮组的机械效率为![](figures/image66.png)
+滑轮组的机械效率为$\eta = \frac{W_{有用}}{W_{总}} \times 100 \% = \frac{\text{600J}}{\text{750J}} \times 100 \% = 80 \%$
 
 故D正确。
 
 故选AD。
 
-15. 某科技小组设计了一个监测水位的装置如图甲所示。电路中电源两端电压保持不变，![](figures/image21.png)为定值电阻，![](figures/image67.png)是竖直放置的起滑动变阻器作用的电阻，其最大阻值为![](figures/image68.png)，浮子可带动金属滑杆AP作为滑片竖直上下移动，通过电流表的示数可反映不同的水位h。![](figures/image67.png)接入电路的阻值随水位h变化关系如图乙所示，与之对应的电压表与电流表示数变化关系如图丙所示。下列说法正确的是（　　）
+15. 某科技小组设计了一个监测水位的装置如图甲所示。电路中电源两端电压保持不变，$R_{0}$为定值电阻，$R_{\text{P}}$是竖直放置的起滑动变阻器作用的电阻，其最大阻值为$40 \Omega$，浮子可带动金属滑杆AP作为滑片竖直上下移动，通过电流表的示数可反映不同的水位h。$R_{\text{P}}$接入电路的阻值随水位h变化关系如图乙所示，与之对应的电压表与电流表示数变化关系如图丙所示。下列说法正确的是（　　）
 
 ![](figures/image69.png)
 
@@ -384,45 +384,45 @@ B. 该电路工作时，总功率最小值为0.6W
 
 C. 当水位达到25 cm时，电压表的示数为4V
 
-D. 当水位分别在10 cm和20 cm时，电阻![](figures/image67.png)的电功率之比为8∶9
+D. 当水位分别在10 cm和20 cm时，电阻$R_{\text{P}}$的电功率之比为8∶9
 
 【答案】BCD
 
 【解析】
 
-【分析】依据图像和题意，计算R0的电阻和滑动变阻器接入电路的电阻与水的深度关系式“![](figures/image70.png)”是解题的关键。
+【分析】依据图像和题意，计算R0的电阻和滑动变阻器接入电路的电阻与水的深度关系式“$R_{\text{P}} = 40 \Omega - 2 \Omega / \text{cm} \times \left(\right. h - 10 \text{cm} \left.\right)$”是解题的关键。
 
-【详解】由图甲可知，R0与RP串联，电压表测量R0两端的电压，电流表测量电路电流。结合图乙、丙可得，当水位为30cm时，滑动变阻器的电阻为0，此时电路为R0的简单电路，电压表示数最大，为电源电压，即![](figures/image71.png)，故![](figures/image72.png)
+【详解】由图甲可知，R0与RP串联，电压表测量R0两端的电压，电流表测量电路电流。结合图乙、丙可得，当水位为30cm时，滑动变阻器的电阻为0，此时电路为R0的简单电路，电压表示数最大，为电源电压，即$U = 6 \text{V}$，故$R_{0} = \frac{U}{I_{\text{max}}} = \frac{\text{6V}}{\text{0}.\text{3A}} = 20 \Omega$
 
 A．当水位升高时，浮子上升，带动滑片向下移动，滑动变阻器接入电路的电阻变小，由串联电路分压原理可知，滑动变阻器两端的电压变小，由串联电路电压特点可知，R0两端的电压变大，即电压表示数变大，故A错误；
 
-B．当水位为10cm时，滑动变阻器的阻值最大为40Ω，此时电路的最大总电阻为![](figures/image73.png)
+B．当水位为10cm时，滑动变阻器的阻值最大为40Ω，此时电路的最大总电阻为$R_{总} = R_{\text{P}} + R_{0} = 40 \Omega + 20 \Omega = 60 \Omega$
 
-电路最小功率为![](figures/image74.png)，故B正确；
+电路最小功率为$P_{\text{min}} = \frac{U^{2}}{R_{总}} = \frac{(\text{6V})^{\text{2}}}{\text{60} \Omega} = 0 . 6 \text{W}$，故B正确；
 
-C．由图乙可知，ℎ从10cm到30cm，RP从40Ω减到0，即水位每升高1cm，RP的电阻减小2Ω，故可得![](figures/image70.png)
+C．由图乙可知，ℎ从10cm到30cm，RP从40Ω减到0，即水位每升高1cm，RP的电阻减小2Ω，故可得$R_{\text{P}} = 40 \Omega - 2 \Omega / \text{cm} \times \left(\right. h - 10 \text{cm} \left.\right)$
 
-当![](figures/image75.png)时，代入数据可知，![](figures/image76.png)
+当$h = 25 \text{cm}$时，代入数据可知，$\left(R_{\text{P}}\right)^{'} = 40 \Omega - 2 \Omega / \text{cm} \times \left(\right. 25 \text{cm} - 10 \text{cm} \left.\right) = 10 \Omega$
 
-此时电路总电阻![](figures/image77.png)
+此时电路总电阻$\left(R_{总}\right)^{'} = \left(R_{\text{P}}\right)^{'} + R_{0} = 10 \Omega + 20 \Omega = 30 \Omega$
 
-电流![](figures/image78.png)
+电流$I = \frac{U}{\left(R_{总}\right)^{'}} = \frac{\text{6V}}{30 \Omega} = 0 . 2 \text{A}$
 
-电压表示数![](figures/image79.png)，故C正确；
+电压表示数$U_{0} = I R_{0} = 0 . \text{2A} \times \text{20} \Omega = 4 \text{V}$，故C正确；
 
-D．当水位为10cm时，滑动变阻器的阻值为40Ω，电路电流![](figures/image80.png)
+D．当水位为10cm时，滑动变阻器的阻值为40Ω，电路电流$I_{1} = \frac{U}{R_{总}} = \frac{\text{6V}}{60 \Omega} = 0 . 1 \text{A}$
 
-滑动变阻器的电功率为![](figures/image81.png)
+滑动变阻器的电功率为$P_{1} = \left(I_{1}\right)^{2} R_{P} = \left(\right. 0 . \text{1A})^{\text{2}} \times \text{40} \Omega = 0 . 4 \text{W}$
 
-当水位20cm时，![](figures/image82.png)
+当水位20cm时，$\left(R_{\text{P1}}\right)^{'} = 40 \Omega - 2 \Omega / \text{cm} \times \left(20,\text{cm},-,10,\text{cm}\right) = 20 \Omega$
 
-电路总电阻为![](figures/image83.png)
+电路总电阻为$R_{总 1} = \left(R_{\text{P1}}\right)^{'} + R_{0} = 20 \Omega + 20 \Omega = 40 \Omega$
 
-电路电流![](figures/image84.png)
+电路电流$I_{2} = \frac{U}{\left(R_{总 1}\right)^{'}} = \frac{\text{6V}}{40 \Omega} = 0 . 15 \text{A}$
 
-滑动变阻器的电功率为![](figures/image85.png)
+滑动变阻器的电功率为$P_{2} = \left(I_{2}\right)^{2} \left(R_{\text{P1}}\right)^{'} = \left(\right. 0 . \text{15A})^{\text{2}} \times 2 \text{0}\Omega = 0 . 45 \text{W}$
 
-功率之比为![](figures/image86.png)，故D正确。
+功率之比为$\frac{P_{1}}{P_{2}} = \frac{\text{0}.\text{4W}}{\text{0}.\text{45W}} = \frac{8}{9}$，故D正确。
 
 故选BCD。
 
@@ -472,7 +472,7 @@ D．当水位为10cm时，滑动变阻器的阻值为40Ω，电路电流![](figu
 
 【解析】
 
-【详解】晶体凝固过程中温度保持不变，这个不变的温度就是晶体的凝固点，从图乙的温度变化图像可以看出，防冻液在降温过程中，有一段温度保持不变的阶段，该阶段的温度为![](figures/image91.png)，因此该防冻液的凝固点为![](figures/image91.png)；凝固点是液体凝固时的温度，当环境温度高于凝固点时，液体不会凝固，题目中环境温度为![](figures/image92.png)，高于防冻液的凝固点![](figures/image91.png)，防冻液不会凝固，因此能在![](figures/image92.png)的环境中使用。
+【详解】晶体凝固过程中温度保持不变，这个不变的温度就是晶体的凝固点，从图乙的温度变化图像可以看出，防冻液在降温过程中，有一段温度保持不变的阶段，该阶段的温度为$- 35 \text{\textdegree C}$，因此该防冻液的凝固点为$- 35 \text{\textdegree C}$；凝固点是液体凝固时的温度，当环境温度高于凝固点时，液体不会凝固，题目中环境温度为$- 20 \text{\textdegree C}$，高于防冻液的凝固点$- 35 \text{\textdegree C}$，防冻液不会凝固，因此能在$- 20 \text{\textdegree C}$的环境中使用。
 
 19. 小华利用如图所示的装置进行实验，他在音叉的叉股一端贴一个小镜片，用一束激光照射到镜面上，镜片将激光反射到右侧的光屏上。
 
@@ -552,7 +552,7 @@ D．当水位为10cm时，滑动变阻器的阻值为40Ω，电路电流![](figu
 
 【小问1详解】
 
-已知凸透镜焦距![](figures/image97.png)，凸透镜固定在50cm刻线处，蜡烛在20cm刻线处，物距![](figures/image98.png)，满足![](figures/image99.png)，成倒立、缩小的实像，生活中照相机就是利用该原理工作的。
+已知凸透镜焦距$f = 10 \text{cm}$，凸透镜固定在50cm刻线处，蜡烛在20cm刻线处，物距$u = 50 \text{cm} - 20 \text{cm} = 30 \text{cm}$，满足$u > 2 f$，成倒立、缩小的实像，生活中照相机就是利用该原理工作的。
 
 【小问2详解】
 
@@ -566,9 +566,9 @@ D．当水位为10cm时，滑动变阻器的阻值为40Ω，电路电流![](figu
 
 （3）分析表中的实验数据，你得到的实验结论是：________。
 
-| ![](figures/image100.png) | 5 | 10 | 15 | 20 | 25 | 30 | 40 |
+| $U = I R$ | 5 | 10 | 15 | 20 | 25 | 30 | 40 |
 |---|---|---|---|---|---|---|---|
-| ![](figures/image101.png) | 0.50 | 0.24 | 0.16 | 0.12 | 0.10 | 0.08 | 0.06 |
+| $5 \Omega \times 0 . 50 \text{A} = 2 . 5 \text{V}$ | 0.50 | 0.24 | 0.16 | 0.12 | 0.10 | 0.08 | 0.06 |
 
 【答案】（1）![](figures/image102.png)    （2）2.4    
 
@@ -582,39 +582,39 @@ D．当水位为10cm时，滑动变阻器的阻值为40Ω，电路电流![](figu
 
 【小问2详解】
 
-根据欧姆定律![](figures/image103.png)，对每组数据计算电压：![](figures/image104.png)、![](figures/image105.png)、![](figures/image106.png)、![](figures/image107.png)、![](figures/image108.png)、![](figures/image109.png)、![](figures/image110.png)考虑到实验误差和数据一致性，取主要趋势值，确定实验中控制的电压为2.4V。
+根据欧姆定律$10 \Omega \times 0 . 24 \text{A} = 2 . 4 \text{V}$，对每组数据计算电压：$15 \Omega \times 0 . 16 \text{A} = 2 . 4 \text{V}$、$20 \Omega \times 0 . 12 \text{A} = 2 . 4 \text{V}$、$25 \Omega \times 0 . 10 \text{A} = 2 . 5 \text{V}$、$30 \Omega \times 0 . 08 \text{A} = 2 . 4 \text{V}$、$40 \Omega \times 0 . 06 \text{A} = 2 . 4 \text{V}$、$\rho_{水}$、$m_{1}$考虑到实验误差和数据一致性，取主要趋势值，确定实验中控制的电压为2.4V。
 
 【小问3详解】
 
 分析表中实验数据发现导体的电阻增大，通过导体的电流减小，通过导体的电流与导体的电阻的乘积保持不变。故可得结论：在电压一定时，通过导体的电流与导体的电阻成反比。
 
-24. 小乐设计了如图所示的实验来测量盐水的密度。（已知水的密度为![](figures/image111.png)）
+24. 小乐设计了如图所示的实验来测量盐水的密度。（已知水的密度为$m_{2}$）
 
 ![](figures/image112.png)
 
 她进行了如下的实验步骤：
 
-①如图甲，在烧杯中加入适量的水，用电子秤测其总质量为![](figures/image113.png)；
+①如图甲，在烧杯中加入适量的水，用电子秤测其总质量为$m_{3}$；
 
-②如图乙，用细针将塑料块压入水中，塑料块未触底，静止时电子秤示数为![](figures/image114.png)；
+②如图乙，用细针将塑料块压入水中，塑料块未触底，静止时电子秤示数为$m_{4}$；
 
-③如图丙，把烧杯中的水倒出，将适量盐水倒入烧杯，用电子秤测其总质量为![](figures/image115.png)；
+③如图丙，把烧杯中的水倒出，将适量盐水倒入烧杯，用电子秤测其总质量为$\rho_{盐水} =$；
 
-④如图丁，用细针将塑料块压入盐水中，塑料块未触底，静止时电子秤示数为![](figures/image116.png)。
+④如图丁，用细针将塑料块压入盐水中，塑料块未触底，静止时电子秤示数为$\frac{m_{4} - m_{3}}{m_{2} - m_{1}} \rho_{水}$。
 
-⑤请利用已知量和测量量表示该盐水的密度![](figures/image117.png)______________。
+⑤请利用已知量和测量量表示该盐水的密度$F_{浮水} = \left(m_{2},-,m_{1}\right) g$______________。
 
-【答案】![](figures/image118.png)
+【答案】$F_{浮} = \rho_{液} g V_{排}$
 
 【解析】
 
-【详解】根据力的作用是相互的，塑料块完全浸没在液体中时，液体对塑料块的浮力，等于塑料块对液体向下的反作用力，电子秤示数增加量对应的重力，就等于浮力的大小；塑料块浸没在水中时，浮力![](figures/image119.png)，结合阿基米德原理 ![](figures/image120.png)​，得![](figures/image121.png)，整理得塑料块体积![](figures/image122.png)；塑料块浸没在盐水中时，同理可得浮力![](figures/image123.png)，将![](figures/image122.png)代入，整理得![](figures/image124.png)
+【详解】根据力的作用是相互的，塑料块完全浸没在液体中时，液体对塑料块的浮力，等于塑料块对液体向下的反作用力，电子秤示数增加量对应的重力，就等于浮力的大小；塑料块浸没在水中时，浮力$\left(\right. m_{2} - m_{1} \left.\right) g = \rho_{水} g V$，结合阿基米德原理 $V = \frac{m_{2} - m_{1}}{\rho_{水}}$​，得$F_{浮盐水} = \left(\right. m_{4} - m_{3} \left.\right) g = \rho_{盐水} g V$，整理得塑料块体积$V = \frac{m_{2} - m_{1}}{\rho_{水}}$；塑料块浸没在盐水中时，同理可得浮力$\rho_{盐水} = \frac{m_{4} - m_{3}}{m_{2} - m_{1}} \rho_{水}$，将$h_{1}$代入，整理得$h_{2}$
 
-25. 小萱把一个装有适量水的柱形容器放在水平桌面上，将一个空的薄壁玻璃杯放在水面，如图所示，当杯子和容器中的水静止时，水面到容器底的距离为![](figures/image125.png)；她将杯口倾斜，从容器中舀取一些水到杯中，然后松开手，当杯子和容器中的水静止时，她观察到装水的杯子仍漂浮在水面，此时容器中水面到容器底的距离为![](figures/image126.png)。请利用力学知识分析推理判断：前、后两次容器中水面到容器底的距离![](figures/image125.png)与![](figures/image126.png)的大小关系。
+25. 小萱把一个装有适量水的柱形容器放在水平桌面上，将一个空的薄壁玻璃杯放在水面，如图所示，当杯子和容器中的水静止时，水面到容器底的距离为$h_{1}$；她将杯口倾斜，从容器中舀取一些水到杯中，然后松开手，当杯子和容器中的水静止时，她观察到装水的杯子仍漂浮在水面，此时容器中水面到容器底的距离为$h_{2}$。请利用力学知识分析推理判断：前、后两次容器中水面到容器底的距离$F_{浮 1} = G_{空杯}$与$F_{浮 2} = G_{空杯} + G_{杯内水}$的大小关系。
 
 ![](figures/image127.png)
 
-【答案】因为杯子前、后两次均漂浮，所以![](figures/image128.png)，![](figures/image129.png)，因此![](figures/image130.png)。又因为![](figures/image131.png)，则![](figures/image132.png)，因此![](figures/image133.png)，即容器中水减少的体积![](figures/image134.png)与后来杯子增加的排水体积![](figures/image135.png)相等。所以容器中的水位不变，则前、后两次容器中的水面到容器底的距离![](figures/image136.png)。
+【答案】因为杯子前、后两次均漂浮，所以$\Delta F_{浮} = G_{杯内水}$，$\Delta F_{浮} = \rho_{水} g \Delta V_{排}$，因此$G_{杯内水} = \rho_{水} g V_{杯内水} = \rho_{水} g \Delta V_{排}$。又因为$V_{杯内水} = \Delta V_{排}$，则$V_{杯内水}$，因此$\Delta V_{排}$，即容器中水减少的体积$h_{1} = h_{2}$与后来杯子增加的排水体积$1 . 8 \times 10^{- 4}$相等。所以容器中的水位不变，则前、后两次容器中的水面到容器底的距离$s = 53 \text{km} = 5 . 3 \times 10^{4} \text{m}$。
 
 【解析】
 
@@ -644,7 +644,7 @@ D．当水位为10cm时，滑动变阻器的阻值为40Ω，电路电流![](figu
 
 （4）在江门中微子实验装置的中心探测器的不锈钢网架上安装了数万个光电倍增管，这些光电倍增管的作用是________。
 
-【答案】（1）内    （2）![](figures/image138.png)    
+【答案】（1）内    （2）$c = 3 \times 10^{8} \text{m}/\text{s}$    
 
 （3）实验样本多##地质优势，使中微子信号纯净    
 
@@ -658,9 +658,9 @@ D．当水位为10cm时，滑动变阻器的阻值为40Ω，电路电流![](figu
 
 【小问2详解】
 
-已知运动距离![](figures/image139.png) 
+已知运动距离$t = \frac{s}{v}$ 
 
-光速![](figures/image140.png)，根据速度公式![](figures/image141.png)得![](figures/image142.png)
+光速$t = \frac{s}{v} = \frac{\text{5}.\text{3} \times \text{10}^{\text{4}} \text{m}}{\text{3} \times \text{10}^{\text{8}} \text{m}/\text{s}} \approx 1 . 8 \times 10^{- 4} \text{s}$，根据速度公式$60 \text{kW} \cdot \text{h}$得$2 \text{kW} \cdot \text{h}$
 
 【小问3详解】
 
@@ -672,7 +672,7 @@ D．当水位为10cm时，滑动变阻器的阻值为40Ω，电路电流![](figu
 
 五、计算题（共8分，27、28题各4分）
 
-27. 如图甲所示，是一款直流充电桩正在为电动汽车充电。已知该汽车电池的充电电压为500 V，总储能为![](figures/image143.png)，汽车充电前剩余20%电能，充电50 min电能达到总储能的90%，60 min后电池充满电。充电电流I随时间t变化图像如图乙所示。假设充电过程中充电桩输出的电能全部转化为电池储能。求：
+27. 如图甲所示，是一款直流充电桩正在为电动汽车充电。已知该汽车电池的充电电压为500 V，总储能为$I = 120 \text{A}$，汽车充电前剩余20%电能，充电50 min电能达到总储能的90%，60 min后电池充满电。充电电流I随时间t变化图像如图乙所示。假设充电过程中充电桩输出的电能全部转化为电池储能。求：
 
 ![](figures/image144.png)
 
@@ -682,25 +682,25 @@ D．当水位为10cm时，滑动变阻器的阻值为40Ω，电路电流![](figu
 
 【答案】（1）60kW    
 
-（2）![](figures/image145.png)
+（2）$I = 120 \text{A}$
 
 【解析】
 
 【小问1详解】
 
-由图乙可知，充电10min~50min过程中，充电电流保持![](figures/image146.png)不变，30min处于该区间内，因此30min时电流![](figures/image146.png)，根据电功率公式![](figures/image147.png)，充电桩的充电功率![](figures/image148.png)
+由图乙可知，充电10min~50min过程中，充电电流保持$P = U I$不变，30min处于该区间内，因此30min时电流$P = U I = 500 \text{V} \times 120 \text{A} = 6 \times 10^{4} \text{W} = 60 \text{kW}$，根据电功率公式$60 \text{kW} \cdot \text{h}$，充电桩的充电功率$\Delta W_{总} = 60 \text{kW} \cdot \text{h} \times \left(\text{90}\%,-,\text{20}\%\right) = 42 \text{kW} \cdot \text{h}$
 
 【小问2详解】
 
-已知总储能为![](figures/image149.png)，充电前剩余20%电能，充电50min后达到总储能的90%，因此50min内总共充入的电能为![](figures/image150.png)
+已知总储能为$t_{1} = 50 \text{min} - 10 \text{min} = 40 \text{min} = \frac{2}{3} \text{h}$，充电前剩余20%电能，充电50min后达到总储能的90%，因此50min内总共充入的电能为$P = 60 \text{kW}$
 
-10min~50min的充电时间![](figures/image151.png)
+10min~50min的充电时间$W_{1} = P t_{1} = 60 \text{kW} \times \frac{2}{3} \text{h} = 40 \text{kW} \cdot \text{h}$
 
-这段时间功率恒定为![](figures/image152.png)，因此这段充入的电能![](figures/image153.png)
+这段时间功率恒定为$W_{0} = \Delta W_{总} - W_{1} = 42 \text{kW} \cdot \text{h} - 40 \text{kW} \cdot \text{h} = 2 \text{kW} \cdot \text{h}$，因此这段充入的电能$2 \text{m}^{2}$
 
-因此0~10 min充入的电能![](figures/image154.png)
+因此0~10 min充入的电能$10 \text{N} / \text{kg}$
 
-28. 如图所示是一款“路边空中存车亭”的工作原理图。存车时，将汽车开到存车架P上，电动机M通过牵引钢丝绳AB，使钢杆OB绕水平地面上的支点O缓慢匀速转动，将钢杆B端拉高，从而通过另一段钢丝绳BC将存车架和汽车提升到空中一定高度并固定。已知：OB长为5m，存车架与水平地面的接触面积为![](figures/image155.png)。某次存车时，存车架P与汽车的总质量为2000kg。若不计钢杆重、钢丝绳重和摩擦，g取![](figures/image156.png)。求：
+28. 如图所示是一款“路边空中存车亭”的工作原理图。存车时，将汽车开到存车架P上，电动机M通过牵引钢丝绳AB，使钢杆OB绕水平地面上的支点O缓慢匀速转动，将钢杆B端拉高，从而通过另一段钢丝绳BC将存车架和汽车提升到空中一定高度并固定。已知：OB长为5m，存车架与水平地面的接触面积为$1 \times 10^{4} \text{Pa}$。某次存车时，存车架P与汽车的总质量为2000kg。若不计钢杆重、钢丝绳重和摩擦，g取$1 . 6 \times 10^{4} \text{N}$。求：
 
 ![](figures/image157.png)
 
@@ -708,23 +708,23 @@ D．当水位为10cm时，滑动变阻器的阻值为40Ω，电路电流![](figu
 
 （2）电动机M牵引钢丝绳使存车架载着汽车离开地面，当B点距地面3m且静止时，AB与OB刚好垂直。请画图分析并计算此时钢丝绳AB对钢杆B端的拉力。
 
-【答案】（1）![](figures/image158.png)    
+【答案】（1）$F = G_{总} = m g = 2000 k g \times 10 \text{N} / k g = 2 \times 10^{4} \text{N}$    
 
-（2）![](figures/image159.png)    ，![](figures/image160.png)
+（2）![](figures/image159.png)    ，$p = \frac{F}{S} = \frac{2 \times 10^{4} \text{N}}{2 \text{m}^{2}} = 1 \times 10^{4} \text{Pa}$
 
 【解析】
 
 【小问1详解】
 
-当钢丝绳BC处于松弛状态时，存车架和汽车对水平地面的压力等于总重力，即![](figures/image161.png)
+当钢丝绳BC处于松弛状态时，存车架和汽车对水平地面的压力等于总重力，即$F_{1}$
 
-存车架对地面的压强![](figures/image162.png)
+存车架对地面的压强$l_{1} = O B = 5 \text{m}$
 
 【小问2详解】
 
-钢杆OB为杠杆，如图所示，O为支点，钢丝绳AB对B端的拉力![](figures/image163.png)为动力，由于AB与OB垂直，则动力臂![](figures/image164.png)
+钢杆OB为杠杆，如图所示，O为支点，钢丝绳AB对B端的拉力$F_{2}$为动力，由于AB与OB垂直，则动力臂$l_{2} = O D$
 
-钢丝绳BC对B端的拉力![](figures/image165.png)为阻力，阻力臂为![](figures/image166.png)。在直角![](figures/image167.png)中，![](figures/image168.png)，![](figures/image169.png)，根据勾股定理可知，![](figures/image170.png)
+钢丝绳BC对B端的拉力$\Delta O B D$为阻力，阻力臂为$B O = 5 \text{m}$。在直角$B D = 3 \text{m}$中，$O D = 4 \text{m}$，$F_{1} l_{1} = F_{2} l_{2}$，根据勾股定理可知，$F_{1} = \frac{G_{总} \cdot O D}{O B} = \frac{2 \times 10^{4} \text{N} \times 4 \text{m}}{5 \text{m}} = 1 . 6 \times 10^{4} \text{N}$
 
 依据杠杆平衡条件![](figures/image171.png)可得，![](figures/image172.png)
 

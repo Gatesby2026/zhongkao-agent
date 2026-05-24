@@ -132,7 +132,7 @@
       },
       "section": "choice",
       "answer": "A",
-      "solution": "由图知，电流表A1测的是L2和L3的电流之和为0.48A，A2测的是L2与L1的电流之和为0.32A，A3测的是L3电流为0.28A。\n根据并联电路电流规律可知：![](figures/image25.png)\n![](figures/image26.png)\n解得通过L1的电流为0.12A，通过L2的电流为0.2A。\n通过三个灯泡的电流之和![](figures/image27.png)\n故A正确，BCD错误。\n故选A。",
+      "solution": "由图知，电流表A1测的是L2和L3的电流之和为0.48A，A2测的是L2与L1的电流之和为0.32A，A3测的是L3电流为0.28A。\n根据并联电路电流规律可知：$I_{1} + I_{2} = 0 . 32 \\text{A}$\n$I_{1} + I_{2} + I_{3} = 0 . 12 \\text{A} + 0 . 2 \\text{A} + 0 . 28 \\text{A} = 0 . 6 \\text{A}$\n解得通过L1的电流为0.12A，通过L2的电流为0.2A。\n通过三个灯泡的电流之和$p = \\frac{F}{S}$\n故A正确，BCD错误。\n故选A。",
       "type": "choice",
       "score": 2
     },
@@ -147,7 +147,7 @@
       },
       "section": "choice",
       "answer": "D",
-      "solution": "瓶对桌面的压力等于瓶子和液体的总重力，所以正立和倒立的压力相等。正立时，受力面积是瓶底的面积，倒立时，受力面积是瓶盖的面积，故倒立时受力面积较小。根据![](figures/image29.png)可知，![](figures/image30.png)。正立时，瓶子是柱形，液体对瓶底的压力等于液体的重力；倒立时，瓶子上宽下窄，瓶盖受到液体的压力![](figures/image31.png)\n因此，![](figures/image32.png)。故选D。",
+      "solution": "瓶对桌面的压力等于瓶子和液体的总重力，所以正立和倒立的压力相等。正立时，受力面积是瓶底的面积，倒立时，受力面积是瓶盖的面积，故倒立时受力面积较小。根据$p_{2} ＞ p_{1}$可知，$F_{2} = p S_{盖} = \\rho_{液} g h S_{盖} ＜ \\rho_{液} g V_{液} = G_{液}$。正立时，瓶子是柱形，液体对瓶底的压力等于液体的重力；倒立时，瓶子上宽下窄，瓶盖受到液体的压力$F_{2} ＜ F_{1}$\n因此，$R_{1}$。故选D。",
       "type": "choice",
       "score": 2
     },
@@ -162,7 +162,7 @@
       },
       "section": "choice",
       "answer": "C",
-      "solution": "根据电路图，![](figures/image34.png)和![](figures/image35.png)串联，电压表测![](figures/image34.png)两端电压，电流表测电路中的电流。滑片向右滑动的过程中，滑动变阻器接入电路的阻值变小。\nA．根据串联分压的原理，滑动变阻器两端的电压变小，电压表的示数变小，故A错误；\nB．电路中的总电阻变小，由欧姆定律可知，电路中的电流变大。根据![](figures/image36.png)，则![](figures/image35.png)消耗的功率变大，故B错误；\nC．根据![](figures/image37.png)，电源电压不变，电路中电流变大，电路消耗的总功率变大，故C正确；\nD．电压表和电流表示数的比值即为![](figures/image34.png)接入电路的阻值，应变小，故D错误。\n故选C。",
+      "solution": "根据电路图，$R_{2}$和$R_{1}$串联，电压表测$P = I^{2} R$两端电压，电流表测电路中的电流。滑片向右滑动的过程中，滑动变阻器接入电路的阻值变小。\nA．根据串联分压的原理，滑动变阻器两端的电压变小，电压表的示数变小，故A错误；\nB．电路中的总电阻变小，由欧姆定律可知，电路中的电流变大。根据$R_{2}$，则$P = U I$消耗的功率变大，故B错误；\nC．根据$R_{1}$，电源电压不变，电路中电流变大，电路消耗的总功率变大，故C正确；\nD．电压表和电流表示数的比值即为$S = 0 . 3 \\text{cm}^{2} = 0 . 3 \\times 10^{- 4} \\text{m}^{2}$接入电路的阻值，应变小，故D错误。\n故选C。",
       "type": "choice",
       "score": 2
     },
@@ -177,7 +177,7 @@
       },
       "section": "choice",
       "answer": "C",
-      "solution": "A．止水阀上表面受大气压力，上表面的面积为![](figures/image39.png)\n则大气压强对止水阀的压力为![](figures/image40.png)\n故A不符合题意；\nBC．止水阀下表面受水压力，![](figures/image41.png)\n则止水阀受到的合力为![](figures/image42.png)\n合力方向向上，这是作用在B点的向上的力，对杠杆来说是阻力。连接杆AC受到浮筒的拉力，等于浮筒重力与浮力的合力，当进水管停止进水时，连接杆AC对A点的作用力即为动力，根据杠杆平衡条件，则有![](figures/image43.png)，代入数据解得![](figures/image44.png)，浮筒的质量为![](figures/image45.png)，则浮筒受到的浮力为![](figures/image46.png)\n浮筒排开水的体积为![](figures/image47.png)\n故B不符合题意，C符合题意；\nD．支点O向A移动，则OA减小，OB增大。储水槽的最高水位是浮筒达到平衡时的水位，根据杠杆平衡条件![](figures/image43.png)，由于止水阀上下表面的压力差不变，则浮筒对杠杆的作用力![](figures/image48.png)需增大，由![](figures/image49.png)可知，需增大浮筒受到的浮力，则需增大浮筒浸没在水中的体积，浮筒排开更多水，说明浮筒浸入水中的深度更深，因此储水槽的最高水位会上升，故D不符合题意。\n故选C。",
+      "solution": "A．止水阀上表面受大气压力，上表面的面积为$F_{0} = p_{0} S = 1 . 0 \\times 10^{5} \\text{Pa} \\times 0 . 3 \\times 10^{- 4} \\text{m}^{2} = 3 \\text{N}$\n则大气压强对止水阀的压力为$F = p_{水} S = 2 . 5 \\times 10^{5} \\text{Pa} \\times 0 . 3 \\times 10^{- 4} \\text{m}^{2} = 7 . 5 \\text{N}$\n故A不符合题意；\nBC．止水阀下表面受水压力，$\\Delta F = F - F_{0} = 7 . 5 \\text{N} - 3 \\text{N} = 4 . 5 \\text{N}$\n则止水阀受到的合力为$\\Delta F l_{O B} = F_{\\text{A}} l_{O A}$\n合力方向向上，这是作用在B点的向上的力，对杠杆来说是阻力。连接杆AC受到浮筒的拉力，等于浮筒重力与浮力的合力，当进水管停止进水时，连接杆AC对A点的作用力即为动力，根据杠杆平衡条件，则有$F_{\\text{A}} = 0 . 9 \\text{N}$，代入数据解得$m_{筒} = 40 \\text{g} = 0 . 04 \\text{kg}$，浮筒的质量为$F_{浮} = F_{\\text{A}} + G_{筒} = F_{\\text{A}} + m_{筒} g = 0 . 9 \\text{N} + 0 . 04 \\text{kg} \\times 10 \\text{N}/\\text{kg} = 1 . 3 \\text{N}$，则浮筒受到的浮力为$V_{排} = \\frac{F_{浮}}{\\rho_{水} g} = \\frac{1 . 3 \\text{N}}{1 . 0 \\times 10^{3} \\text{kg}/\\text{m}^{3} \\times 10 \\text{N}/\\text{kg}} = 1 . 3 \\times 10^{- 4} \\text{m}^{3} = 130 \\text{cm}^{3}$\n浮筒排开水的体积为$\\Delta F l_{O B} = F_{\\text{A}} l_{O A}$\n故B不符合题意，C符合题意；\nD．支点O向A移动，则OA减小，OB增大。储水槽的最高水位是浮筒达到平衡时的水位，根据杠杆平衡条件$F_{\\text{A}}$，由于止水阀上下表面的压力差不变，则浮筒对杠杆的作用力$F_{浮} = F_{\\text{A}} + G_{筒}$需增大，由$\\text{Q} = \\text{cm} \\Delta \\text{t}$可知，需增大浮筒受到的浮力，则需增大浮筒浸没在水中的体积，浮筒排开更多水，说明浮筒浸入水中的深度更深，因此储水槽的最高水位会上升，故D不符合题意。\n故选C。",
       "type": "choice",
       "score": 2
     },
@@ -192,13 +192,13 @@
       },
       "section": "multi_choice",
       "answer": "BD",
-      "solution": "A．根据![](figures/image50.png)可知，两个物体升高相同的温度，但如果它们的比热容或质量不同，吸收的热量也会不同，故A错误；\nB．热传递是内能从高温物体转移到低温物体的过程，在纯热传递过程中不考虑做功的情况，吸收热量的物体其内能必然增加，故B正确；\nC．内能是物体内所有分子动能和势能的总和，它不仅与温度有关，还与物体的质量、状态、物质种类等因素有关，温度低的物体内能不一定少，故C错误；\nD．热传递发生的条件是存在温度差，与内能大小无关。即使两个物体内能相同，只要温度不同，仍可发生热传递，故D正确。\n故选BD。",
+      "solution": "A．根据$\\eta$可知，两个物体升高相同的温度，但如果它们的比热容或质量不同，吸收的热量也会不同，故A错误；\nB．热传递是内能从高温物体转移到低温物体的过程，在纯热传递过程中不考虑做功的情况，吸收热量的物体其内能必然增加，故B正确；\nC．内能是物体内所有分子动能和势能的总和，它不仅与温度有关，还与物体的质量、状态、物质种类等因素有关，温度低的物体内能不一定少，故C错误；\nD．热传递发生的条件是存在温度差，与内能大小无关。即使两个物体内能相同，只要温度不同，仍可发生热传递，故D正确。\n故选BD。",
       "type": "multi_choice",
       "score": 2
     },
     {
       "number": 14,
-      "stem": "如图所示，滑轮组悬挂在天花板上，某工人站在水平地面上，用竖直向下的拉力拉动绳子自由端，先后匀速提升两个不同的物体A和B，部分相关数据如表所示。已知该工人重750N，定滑轮的质量是动滑轮质量的2倍，不计滑轮组的绳重和摩擦，取g=10N/kg。下列说法正确的是（　　）\n\n| 物体 | 质量m/kg | 上升高度h/m | 时间t/s | 机械效率![](figures/image51.png) | 拉力功率P/W |\n|---|---|---|---|---|---|\n| A | 63 | 2 | 5 |  | 280 |\n| B |  | 3 | 10 | 80% |  |\n\n![](figures/image52.png)",
+      "stem": "如图所示，滑轮组悬挂在天花板上，某工人站在水平地面上，用竖直向下的拉力拉动绳子自由端，先后匀速提升两个不同的物体A和B，部分相关数据如表所示。已知该工人重750N，定滑轮的质量是动滑轮质量的2倍，不计滑轮组的绳重和摩擦，取g=10N/kg。下列说法正确的是（　　）\n\n| 物体 | 质量m/kg | 上升高度h/m | 时间t/s | 机械效率$W_{有} = G_{\\text{A}} h = m_{\\text{A}} g h = 63 k g \\times 10 \\text{N} / k g \\times 2 \\text{m} = 1260 \\text{J}$ | 拉力功率P/W |\n|---|---|---|---|---|---|\n| A | 63 | 2 | 5 |  | 280 |\n| B |  | 3 | 10 | 80% |  |\n\n![](figures/image52.png)",
       "options": {
         "A": "提升物体A时，滑轮组的机械效率为90%",
         "B": "提升物体B时，绳子自由端拉力为350N",
@@ -207,22 +207,22 @@
       },
       "section": "multi_choice",
       "answer": "ACD",
-      "solution": "A．提升物体A做的有用功![](figures/image53.png)\n拉力做的总功![](figures/image54.png)\n提升物体A时，滑轮组的机械效率![](figures/image55.png)\n故A正确；\nBC．滑轮组由两根绳承担物重，![](figures/image56.png)，绳子自由端移动的距离![](figures/image57.png),,\n提升物体A时，绳子自由端受到的拉力![](figures/image58.png)\n动滑轮的重力![](figures/image59.png)\n滑轮组的机械效率![](figures/image60.png)\n滑轮组提升物体B的机械效率为80%，![](figures/image61.png)\n解得![](figures/image62.png)，物体B的质量为![](figures/image63.png)\n提升物体B时，绳子自由端拉力为![](figures/image64.png)\n由以上计算可知，B错误，C正确；\nD．定滑轮上有三股绳，绳子对定滑轮的拉力![](figures/image65.png)\n定滑轮的重力![](figures/image66.png)\n提升物体B时定滑轮对天花板的拉力为![](figures/image67.png)\n故D正确。\n故选ACD。",
+      "solution": "A．提升物体A做的有用功$W_{总} = P_{\\text{A}} t = 280 \\text{W} \\times 5 \\text{s} = 1400 \\text{J}$\n拉力做的总功$\\eta_{\\text{A}} = \\frac{W_{有}}{W_{总}} = \\frac{1260 \\text{J}}{1400 \\text{J}} = 90 \\%$\n提升物体A时，滑轮组的机械效率$n = 2$\n故A正确；\nBC．滑轮组由两根绳承担物重，$s = 2 h = 2 \\times 2 \\text{m} = 4 \\text{m}$，绳子自由端移动的距离$F = \\frac{W}{s} = \\frac{1400 \\text{J}}{4 \\text{m}} = 350 \\text{N}$,,\n提升物体A时，绳子自由端受到的拉力$G_{动} = 2 F - G_{\\text{A}} = 2 \\times 350 \\text{N} - 63 k g \\times 10 \\text{N} / k g = 70 \\text{N}$\n动滑轮的重力$\\eta = \\frac{W_{有}}{W_{总}} = \\frac{G h}{F s} = \\frac{G h}{F 2 h} = \\frac{G}{2 F} = \\frac{G}{G + G_{动}}$\n滑轮组的机械效率$\\eta_{\\text{B}} = \\frac{G_{\\text{B}}}{G_{\\text{B}} + G_{动}} = \\frac{G_{\\text{B}}}{G_{\\text{B}} + 70 \\text{N}} = 80 \\%$\n滑轮组提升物体B的机械效率为80%，$G_{\\text{B}} = 280 \\text{N}$\n解得$m_{\\text{B}} = \\frac{G_{\\text{B}}}{g} = \\frac{280 \\text{N}}{10 \\text{N} / k g} = 28 k g$，物体B的质量为$F_{\\text{B}} = \\frac{1}{2} \\left(G_{\\text{B}},+,G_{动}\\right) = \\frac{1}{2} \\left(280,\\text{N},+,70,\\text{N}\\right) = 175 \\text{N}$\n提升物体B时，绳子自由端拉力为$F_{拉} = 3 F_{\\text{B}} = 3 \\times 175 \\text{N} = 525 \\text{N}$\n由以上计算可知，B错误，C正确；\nD．定滑轮上有三股绳，绳子对定滑轮的拉力$G_{定} = 2 G_{动} = 2 \\times 70 \\text{N} = 140 \\text{N}$\n定滑轮的重力$F = F_{拉} + G_{定} = 525 \\text{N} + 140 \\text{N} = 665 \\text{N}$\n提升物体B时定滑轮对天花板的拉力为$R_{1}$\n故D正确。\n故选ACD。",
       "type": "multi_choice",
       "score": 2
     },
     {
       "number": 15,
-      "stem": "有两个兴趣小组各自设计了具有高温和低温两挡的电热水壶，其简化电路分别如图甲、乙所示，已知![](figures/image68.png)、![](figures/image69.png)、![](figures/image70.png)和![](figures/image71.png)均为阻值不变的电热丝![](figures/image72.png)，![](figures/image73.png)，![](figures/image74.png)。下列说法正确的是（　　）\n\n![](figures/image75.png)",
+      "stem": "有两个兴趣小组各自设计了具有高温和低温两挡的电热水壶，其简化电路分别如图甲、乙所示，已知$R_{2}$、$R_{3}$、$R_{4}$和$R_{1} =\\text{220}\\Omega$均为阻值不变的电热丝$R_{2} =\\text{55}\\Omega$，$R_{3} =\\text{44}\\Omega$，$\\text{S}_{3}$。下列说法正确的是（　　）\n\n![](figures/image75.png)",
       "options": {
-        "A": "闭合![](figures/image76.png)与![](figures/image77.png)时乙电热水壶处于高温挡",
+        "A": "闭合$\\text{S}_{4}$与$R_{4}$时乙电热水壶处于高温挡",
         "B": "甲乙电热水壶的高温挡功率相同",
-        "C": "若甲乙电热水壶的低温挡功率相同，则![](figures/image71.png)的电阻为176Ω",
+        "C": "若甲乙电热水壶的低温挡功率相同，则$\\text{S}_{1}$的电阻为176Ω",
         "D": "乙电热水壶高温挡正常工作3min，消耗的电能为3300J"
       },
       "section": "multi_choice",
       "answer": "ABC",
-      "solution": "AB．根据甲电路图，电源电压为220V，只闭合开关![](figures/image78.png)时，电路中只有电阻![](figures/image34.png)工作，电功率为![](figures/image79.png)\n闭合开关![](figures/image78.png)和![](figures/image80.png)时，电阻![](figures/image34.png)与![](figures/image35.png)并联，电路的总功率为![](figures/image81.png)\n则闭合开关![](figures/image78.png)和![](figures/image80.png)时，甲电热水壶为高温挡。根据乙电路图，电源电压为220V，只闭合开关![](figures/image82.png)时，电阻![](figures/image83.png)与![](figures/image84.png)串联；闭合![](figures/image76.png)与![](figures/image77.png)时，![](figures/image84.png)被短路，电路中仅![](figures/image83.png)工作。因此，闭合![](figures/image76.png)与![](figures/image77.png)时电路中的总电阻最小，根据![](figures/image85.png)可知，此时电路的功率最大，因此电热水壶处于高温挡，功率为![](figures/image86.png)\n高温挡时，![](figures/image87.png)，故AB正确；\nC．甲乙电源电压相同，若低温挡功率相同，由![](figures/image85.png)，可得![](figures/image88.png)，则![](figures/image71.png)的电阻![](figures/image89.png)\n故C正确；\nD．乙电热水壶高温挡消耗的电能![](figures/image90.png)\n故D错误。\n故选ABC。",
+      "solution": "AB．根据甲电路图，电源电压为220V，只闭合开关$R_{1}$时，电路中只有电阻$P_{甲 1} = \\frac{U^{2}}{R_{1}} = \\frac{\\left(\\right. 220 \\text{V}）^{2}}{220 \\Omega} = 220 \\text{W}$工作，电功率为$\\text{S}_{1}$\n闭合开关$\\text{S}_{2}$和$R_{1}$时，电阻$R_{2}$与$P_{甲 2} = P_{甲 1} + P_{2} = P_{甲 1} + \\frac{U^{2}}{R_{2}} = 220 \\text{W} + \\frac{（ 220 \\text{V}）^{2}}{55 \\Omega} = 1100 \\text{W}$并联，电路的总功率为$\\text{S}_{1}$\n则闭合开关$\\text{S}_{2}$和$\\text{S}_{3}$时，甲电热水壶为高温挡。根据乙电路图，电源电压为220V，只闭合开关$R_{3}$时，电阻$R_{4}$与$\\text{S}_{3}$串联；闭合$\\text{S}_{4}$与$R_{4}$时，$R_{3}$被短路，电路中仅$\\text{S}_{3}$工作。因此，闭合$\\text{S}_{4}$与$P = \\frac{U^{2}}{R}$时电路中的总电阻最小，根据$P_{乙 1} = \\frac{U^{2}}{R_{3}} = \\frac{（ 220 \\text{V}）^{2}}{44 \\Omega} = 1100 \\text{W}$可知，此时电路的功率最大，因此电热水壶处于高温挡，功率为$P_{甲 2} = P_{乙 1} = 1100 \\text{W}$\n高温挡时，$P = \\frac{U^{2}}{R}$，故AB正确；\nC．甲乙电源电压相同，若低温挡功率相同，由$R_{1} = R_{3} + R_{4}$，可得$R_{4}$，则$R_{4} = R_{1} - R_{3} = 220 \\Omega - 44 \\Omega = 176 \\Omega$的电阻$W = P_{乙 1} t = 1100 \\text{W} \\times 3 \\times 60 \\text{s} = 198000 \\text{J}$\n故C正确；\nD．乙电热水壶高温挡消耗的电能$0 . 9 \\times 10^{3}$\n故D错误。\n故选ABC。",
       "type": "multi_choice",
       "score": 2
     },
@@ -232,7 +232,7 @@
       "options": null,
       "section": "experiment",
       "answer": "",
-      "solution": "（1）右    （2）162      （3）![](figures/image92.png)\n\n详解：（1）\n根据图甲，天平调平时，指针偏向分度盘左侧，说明左盘偏重，此时应将平衡螺母向右调节，使天平平衡。\n\n（2）\n图乙中，游码分度值为0.2g，示数为2g，天平读数为砝码质量与游码示数之和，所以苹果的质量为![](figures/image93.png)\n\n（3）\n图丙中，量筒的分度值为5mL，浸没后总体积为400mL，则苹果块的体积为![](figures/image94.png)\n则苹果的密度为![](figures/image95.png)",
+      "solution": "（1）右    （2）162      （3）$m = 100 \\text{g} + 50 \\text{g} + 10 \\text{g} + 2 \\text{g} = 162 \\text{g}$\n\n详解：（1）\n根据图甲，天平调平时，指针偏向分度盘左侧，说明左盘偏重，此时应将平衡螺母向右调节，使天平平衡。\n\n（2）\n图乙中，游码分度值为0.2g，示数为2g，天平读数为砝码质量与游码示数之和，所以苹果的质量为$V = 400 \\text{mL} - 220 \\text{mL} = 180 \\text{mL}=\\text{180cm}^{3}$\n\n（3）\n图丙中，量筒的分度值为5mL，浸没后总体积为400mL，则苹果块的体积为$\\rho = \\frac{m}{V} = \\frac{162 \\text{g}}{180 \\text{cm}^{3}} = 0 . 9 \\text{g}/\\text{cm}^{3} = 0 . 9 \\times 10^{3} \\text{kg}/\\text{m}^{3}$\n则苹果的密度为$u = 20 . 0 \\text{cm} - 10 . 0 \\text{cm} = 10 . 0 \\text{cm}$",
       "type": "experiment",
       "score": 3
     },
@@ -252,7 +252,7 @@
       "options": null,
       "section": "experiment",
       "answer": "",
-      "solution": "①. 加热时间    ②. 小    ③. 大\n\n详解：（1）[1]电加热器每秒放出的热量是一定的，当浸没在煤油（或水）中加热时，可认为煤油（或水）每秒吸收的热量相同，所以加热时间相同，水和煤油吸收的热量相同，可以用加热时间来表示煤油或水吸收热量的多少。\n（2）[2][3]加热时间相同，即水和煤油吸收热量相同，由\n![](figures/image98.png)\n可知温度变化大的物体，比热容小，吸热能力差，温度变化小的物体，比热容大，吸热能力强；升高相同温度，比较加热时间，加热时间长的物体吸收热量多，比热容大。",
+      "solution": "①. 加热时间    ②. 小    ③. 大\n\n详解：（1）[1]电加热器每秒放出的热量是一定的，当浸没在煤油（或水）中加热时，可认为煤油（或水）每秒吸收的热量相同，所以加热时间相同，水和煤油吸收的热量相同，可以用加热时间来表示煤油或水吸收热量的多少。\n（2）[2][3]加热时间相同，即水和煤油吸收热量相同，由\n$v = 30 . 0 \\text{cm} - 20 . 0 \\text{cm} = 10 . 0 \\text{cm}$\n可知温度变化大的物体，比热容小，吸热能力差，温度变化小的物体，比热容大，吸热能力强；升高相同温度，比较加热时间，加热时间长的物体吸收热量多，比热容大。",
       "type": "experiment",
       "score": 3
     },
@@ -262,7 +262,7 @@
       "options": null,
       "section": "experiment",
       "answer": "",
-      "solution": "（1）同一高度      （2）    ①. 5.0    ②. 放大    ③. 投影仪\n\n详解：（1）\n在探究凸透镜成像规律的实验中，为了使像成在光屏的中央，需要调节发光物体、凸透镜和光屏三者的中心在同一高度。\n\n（2）\n图甲中，物距![](figures/image100.png)\n像距![](figures/image101.png)\n此时物距等于像距，根据凸透镜成像规律，当![](figures/image102.png)时，成倒立、等大的实像。因此，凸透镜的焦距![](figures/image103.png)；图乙中，物距![](figures/image104.png)\n此时满足![](figures/image105.png)，根据凸透镜成像规律，此时成倒立、放大的实像，与投影仪的成像原理相同。",
+      "solution": "（1）同一高度      （2）    ①. 5.0    ②. 放大    ③. 投影仪\n\n详解：（1）\n在探究凸透镜成像规律的实验中，为了使像成在光屏的中央，需要调节发光物体、凸透镜和光屏三者的中心在同一高度。\n\n（2）\n图甲中，物距$u = v = 2 f$\n像距$f = 5 . 0 \\text{cm}$\n此时物距等于像距，根据凸透镜成像规律，当$u^{'} = 7 . 0 \\text{cm} - 0 \\text{cm} = 7 . 0 \\text{cm}$时，成倒立、等大的实像。因此，凸透镜的焦距$f ＜ u^{'} ＜ 2 f$；图乙中，物距$G \\times 6 L = 6 G L$\n此时满足$2 G \\times 3 L = 6 G L$，根据凸透镜成像规律，此时成倒立、放大的实像，与投影仪的成像原理相同。",
       "type": "experiment",
       "score": 4
     },
@@ -282,7 +282,7 @@
       "options": null,
       "section": "experiment",
       "answer": "",
-      "solution": "（1）右    （2）左\n\n详解：（1）\n图甲中杠杆左端低、右端高，为使杠杆在水平位置平衡，应将平衡螺母向右侧调节（平衡螺母总是向杠杆偏高的一侧调）。\n\n（2）\n设每个钩码重力为G，每小格长度为L。原来M处![](figures/image108.png)\nN处![](figures/image109.png)\n杠杆平衡；各加一个钩码后M处![](figures/image110.png)\nN处![](figures/image111.png)\n因为![](figures/image112.png)，所以杠杆左端将向下倾斜。",
+      "solution": "（1）右    （2）左\n\n详解：（1）\n图甲中杠杆左端低、右端高，为使杠杆在水平位置平衡，应将平衡螺母向右侧调节（平衡螺母总是向杠杆偏高的一侧调）。\n\n（2）\n设每个钩码重力为G，每小格长度为L。原来M处$2 G \\times 6 L = 12 G L$\nN处$3 G \\times 3 L = 9 G L$\n杠杆平衡；各加一个钩码后M处$12 G L > 9 G L$\nN处$P = U I = 2 . 4 \\text{V} \\times 0 . 2 \\text{A} = 0 . 48 \\text{W}$\n因为$\\rho = \\frac{m}{V} = \\frac{G}{V g} = \\frac{F}{V g}$，所以杠杆左端将向下倾斜。",
       "type": "experiment",
       "score": 4
     },
@@ -292,7 +292,7 @@
       "options": null,
       "section": "experiment",
       "answer": "",
-      "solution": "（1）![](figures/image114.png)    （2）小灯泡短路      （3）0.48\n\n详解：（1）\n要求P向左移动，电流表示数变小，即滑动变阻器接入电路电阻变大，应将滑动变阻器的右下接线柱与电源正极相连；电压表与小灯泡并联，故将电压表3V接线柱与小灯泡右端连接。\n\n（2）\n正确连接电路后，电流表有示数，说明电路是通路；电压表指针未偏转，移动滑动变阻器滑片，电压表依旧无示数，说明与电压表并联的电路短路或电压表短路，由于是测小灯泡电功率实验，所以故障原因可能是小灯泡短路。\n\n（3）\n由图乙可知，电压表量程为0 -3V，分度值为0.1V，示数为2.4V；由图丙可知，电流表量程为0 - 0.6A，分度值为0.02A，示数为0.2A。此时小灯泡的电功率![](figures/image115.png)",
+      "solution": "（1）![](figures/image114.png)    （2）小灯泡短路      （3）0.48\n\n详解：（1）\n要求P向左移动，电流表示数变小，即滑动变阻器接入电路电阻变大，应将滑动变阻器的右下接线柱与电源正极相连；电压表与小灯泡并联，故将电压表3V接线柱与小灯泡右端连接。\n\n（2）\n正确连接电路后，电流表有示数，说明电路是通路；电压表指针未偏转，移动滑动变阻器滑片，电压表依旧无示数，说明与电压表并联的电路短路或电压表短路，由于是测小灯泡电功率实验，所以故障原因可能是小灯泡短路。\n\n（3）\n由图乙可知，电压表量程为0 -3V，分度值为0.1V，示数为2.4V；由图丙可知，电流表量程为0 - 0.6A，分度值为0.02A，示数为0.2A。此时小灯泡的电功率$m = 4 \\text{kg}$",
       "type": "experiment",
       "score": 3
     },
@@ -302,7 +302,7 @@
       "options": null,
       "section": "experiment",
       "answer": "",
-      "solution": "（1）增大    （2）所测液体的密度会偏小。理由：电源电压降低，实际电压小于12V，测量同一液体时电路实际电流偏小；若仍按12V计算时，金属棒接入电阻的测量值偏大。由图乙可知，对应拉力的测量值会偏小；由![](figures/image117.png)可知，拉力偏小则质量的计算值偏小，会直接导致密度的计算值偏小。\n\n详解：（1）\n向桶内缓缓注入液体时，液体的重力会拉动弹簧伸长，滑片P向下移动。由图乙可知，拉力越大，金属棒接入电路的电阻R越小。电路中定值电阻与滑动变阻器串联，电源电压不变，根据欧姆定律，总电阻减小，电流会增大。\n\n（2）\n略",
+      "solution": "（1）增大    （2）所测液体的密度会偏小。理由：电源电压降低，实际电压小于12V，测量同一液体时电路实际电流偏小；若仍按12V计算时，金属棒接入电阻的测量值偏大。由图乙可知，对应拉力的测量值会偏小；由$G = m g = 4 \\text{kg} \\times 10 \\text{N} / \\text{kg} = 40 \\text{N}$可知，拉力偏小则质量的计算值偏小，会直接导致密度的计算值偏小。\n\n详解：（1）\n向桶内缓缓注入液体时，液体的重力会拉动弹簧伸长，滑片P向下移动。由图乙可知，拉力越大，金属棒接入电路的电阻R越小。电路中定值电阻与滑动变阻器串联，电源电压不变，根据欧姆定律，总电阻减小，电流会增大。\n\n（2）\n略",
       "type": "experiment",
       "score": 3
     },
@@ -312,17 +312,17 @@
       "options": null,
       "section": "comprehensive",
       "answer": "",
-      "solution": "（1）    ①. 旋翼的转速差    ②. 成对旋翼      （2）40    （3）无人机向前飞行时，机身会机头向下、机尾向上倾斜（前低后高）。因为后方旋翼转速增大、升力增大，前方旋翼转速减小、升力减小，导致机身倾斜；此时总升力斜向后上方，分解出向前的分力，推动无人机向前飞行。\n\n详解：（1）\n多旋翼无人机靠旋翼的转速差控制飞行，转向则通过改变成对旋翼的转速差，打破反扭矩平衡，实现机身旋转。\n\n（2）\n无人机满载悬停时，处于受力平衡状态，竖直方向上总升力和总重力大小相等。满载对应最大起飞质量![](figures/image119.png)，满载时的总重力![](figures/image120.png)\n当该无人机在空中满载悬停时，旋翼产生的总升力为40N。\n\n（3）\n见答案",
+      "solution": "（1）    ①. 旋翼的转速差    ②. 成对旋翼      （2）40    （3）无人机向前飞行时，机身会机头向下、机尾向上倾斜（前低后高）。因为后方旋翼转速增大、升力增大，前方旋翼转速减小、升力减小，导致机身倾斜；此时总升力斜向后上方，分解出向前的分力，推动无人机向前飞行。\n\n详解：（1）\n多旋翼无人机靠旋翼的转速差控制飞行，转向则通过改变成对旋翼的转速差，打破反扭矩平衡，实现机身旋转。\n\n（2）\n无人机满载悬停时，处于受力平衡状态，竖直方向上总升力和总重力大小相等。满载对应最大起飞质量$g =\\text{10N}/\\text{kg}$，满载时的总重力$\\rho_{酒精} = 0 . 8 \\times 10^{3} \\text{kg}/\\text{m}^{3}$\n当该无人机在空中满载悬停时，旋翼产生的总升力为40N。\n\n（3）\n见答案",
       "type": "comprehensive",
       "score": 4
     },
     {
       "number": 25,
-      "stem": "如图所示，细线的一端固定在杯底，另一端拴住小球A．向杯内缓慢注酒精，小球A逐渐上浮。当小球A露出液面的体积为总体积的二分之一时，细线对小球的拉力为2N；当小球A浸没在酒精中时，细线对小球的拉力为6N。已知![](figures/image121.png)，![](figures/image122.png)。求：\n\n![](figures/image123.png)\n\n（1）小球A浸没到酒精中受到的浮力为多少？\n\n（2）小球的密度为多少？",
+      "stem": "如图所示，细线的一端固定在杯底，另一端拴住小球A．向杯内缓慢注酒精，小球A逐渐上浮。当小球A露出液面的体积为总体积的二分之一时，细线对小球的拉力为2N；当小球A浸没在酒精中时，细线对小球的拉力为6N。已知$0 . 2 \\times 10^{3} \\text{kg}/\\text{m}^{3}$，$F_{浮} = G + F_{拉}$。求：\n\n![](figures/image123.png)\n\n（1）小球A浸没到酒精中受到的浮力为多少？\n\n（2）小球的密度为多少？",
       "options": null,
       "section": "calculation",
       "answer": "",
-      "solution": "（1）8N    （2）![](figures/image124.png)\n\n详解：（1）\n小球在两种状态下均静止，受力平衡，满足![](figures/image125.png)，当露出液面的体积为总体积一半时，根据阿基米德原理，则有![](figures/image126.png)\n同理，当小球浸没在酒精中时，则有![](figures/image127.png)\n联立两式，解得![](figures/image128.png)\n则小球完全浸没在酒精中受到的浮力为![](figures/image129.png)\n\n（2）\n小球的重力![](figures/image130.png)\n小球的质量![](figures/image131.png)\n小球的体积![](figures/image132.png)\n小球的密度为![](figures/image133.png)",
+      "solution": "（1）8N    （2）$F_{浮 1} = \\rho_{酒精} V_{排} g = \\rho_{酒精} \\frac{1}{2} V_{\\text{A}} g = G + 2 \\text{N}$\n\n详解：（1）\n小球在两种状态下均静止，受力平衡，满足$F_{浮 2} = \\rho_{酒精} V_{排}^{'} g = \\rho_{酒精} V_{\\text{A}} g = G + 6 \\text{N}$，当露出液面的体积为总体积一半时，根据阿基米德原理，则有$F_{浮\\text{1}} = \\rho_{酒精} \\frac{1}{2} V_{\\text{A}} g = 4 \\text{N}$\n同理，当小球浸没在酒精中时，则有$F_{浮 2} = \\rho_{酒精} V_{\\text{A}} g = 2 \\times 4 \\text{N}=\\text{8N}$\n联立两式，解得$G = F_{浮 1} - F_{拉 1} =\\text{4N} - \\text{2N}=\\text{2N}$\n则小球完全浸没在酒精中受到的浮力为$m = \\frac{G}{g} = \\frac{2 \\text{N}}{10 \\text{N}/\\text{kg}} = 0 . 2 \\text{kg}$\n\n（2）\n小球的重力$V_{\\text{A}} = \\frac{F_{浮 2}}{\\rho_{酒精} g} = \\frac{\\text{8N}}{\\text{0}.\\text{8}\\times\\text{10}^{\\text{3}} \\text{kg}/\\text{m}^{\\text{3}} \\times\\text{10N}/\\text{kg}} = 1 \\times 10^{- 3} \\text{m}^{3}$\n小球的质量$\\rho_{\\text{A}} = \\frac{m}{V_{\\text{A}}} = \\frac{0 . 2 \\text{kg}}{1 \\times 10^{- 3} \\text{m}^{3}} = 0 . 2 \\times 10^{3} \\text{kg}/\\text{m}^{3}$\n小球的体积$\\text{S}_{1}$\n小球的密度为$R_{1}$",
       "type": "calculation",
       "score": 4
     },
@@ -332,7 +332,7 @@
       "options": null,
       "section": "calculation",
       "answer": "",
-      "solution": "（1）6V    （2）9W\n\n详解：（1）\n当只闭合开关![](figures/image78.png)时，![](figures/image34.png)与![](figures/image83.png)串联，电压表测![](figures/image34.png)两端的电压，![](figures/image135.png)，则电路中的电流为![](figures/image136.png)\n串联电路中，各处电流相等。根据![](figures/image37.png)，则![](figures/image83.png)两端的电压![](figures/image137.png)\n根据串联电路的电压规律，则电源电压![](figures/image138.png)\n\n（2）\n电源电压保持不变，根据![](figures/image85.png)，电路消耗的功率最大时，电路中的总电阻最小。由（1）可得，![](figures/image139.png)\n当只闭合开关![](figures/image80.png)时，![](figures/image35.png)与![](figures/image83.png)串联，电压表测![](figures/image35.png)两端的电压，![](figures/image140.png)，电流表测电路中的电流，则![](figures/image141.png)\n分析电路图可知，当闭合开关![](figures/image78.png)、![](figures/image80.png)、![](figures/image82.png)时，![](figures/image83.png)被短路，![](figures/image34.png)与![](figures/image35.png)并联，此时电路的总电阻最小，电路的总功率最大为![](figures/image142.png)",
+      "solution": "（1）6V    （2）9W\n\n详解：（1）\n当只闭合开关$R_{3}$时，$R_{1}$与$U_{1} = 2 \\text{V}$串联，电压表测$I = \\frac{U_{1}}{R_{1}} = \\frac{2 \\text{V}}{5 \\Omega} = 0 . 4 \\text{A}$两端的电压，$P = U I$，则电路中的电流为$R_{3}$\n串联电路中，各处电流相等。根据$U_{3} = \\frac{P_{3}}{I} = \\frac{1 . 6 \\text{W}}{0 . 4 \\text{A}} = 4 \\text{V}$，则$U = U_{1} + U_{3} = 2 \\text{V} + 4 \\text{V} = 6 \\text{V}$两端的电压$P = \\frac{U^{2}}{R}$\n根据串联电路的电压规律，则电源电压$R_{3} = \\frac{U_{3}}{I} = \\frac{4 \\text{V}}{0 . 4 \\text{A}} = 10 \\Omega$\n\n（2）\n电源电压保持不变，根据$\\text{S}_{2}$，电路消耗的功率最大时，电路中的总电阻最小。由（1）可得，$R_{2}$\n当只闭合开关$R_{3}$时，$R_{2}$与$U_{2} = 4 \\text{V}$串联，电压表测$R_{2} = \\frac{U_{2}}{I^{'}} = \\frac{4 \\text{V}}{0 . 2 \\text{A}} = 20 \\Omega$两端的电压，$\\text{S}_{1}$，电流表测电路中的电流，则$\\text{S}_{2}$\n分析电路图可知，当闭合开关$\\text{S}_{3}$、$R_{3}$、$R_{1}$时，$R_{2}$被短路，$P_{max} = P_{1} + P_{2} = \\frac{U^{2}}{R_{1}} + \\frac{U^{2}}{R_{2}} = \\frac{\\left(\\right. 6 \\text{V}）^{2}}{5 \\Omega} + \\frac{\\left(\\right. 6 \\text{V}）^{2}}{20 \\Omega} = 9 \\text{W}$与![](figures/image35.png)并联，此时电路的总电阻最小，电路的总功率最大为![](figures/image142.png)",
       "type": "calculation",
       "score": 4
     }
@@ -389,49 +389,49 @@
     {
       "number": 9,
       "correct": "A",
-      "solution": "由图知，电流表A1测的是L2和L3的电流之和为0.48A，A2测的是L2与L1的电流之和为0.32A，A3测的是L3电流为0.28A。\n根据并联电路电流规律可知：![](figures/image25.png)\n![](figures/image26.png)\n解得通过L1的电流为0.12A，通过L2的电流为0.2A。\n通过三个灯泡的电流之和![](figures/image27.png)\n故A正确，BCD错误。\n故选A。",
+      "solution": "由图知，电流表A1测的是L2和L3的电流之和为0.48A，A2测的是L2与L1的电流之和为0.32A，A3测的是L3电流为0.28A。\n根据并联电路电流规律可知：$I_{1} + I_{2} = 0 . 32 \\text{A}$\n$I_{1} + I_{2} + I_{3} = 0 . 12 \\text{A} + 0 . 2 \\text{A} + 0 . 28 \\text{A} = 0 . 6 \\text{A}$\n解得通过L1的电流为0.12A，通过L2的电流为0.2A。\n通过三个灯泡的电流之和$p = \\frac{F}{S}$\n故A正确，BCD错误。\n故选A。",
       "score": 2
     },
     {
       "number": 10,
       "correct": "D",
-      "solution": "瓶对桌面的压力等于瓶子和液体的总重力，所以正立和倒立的压力相等。正立时，受力面积是瓶底的面积，倒立时，受力面积是瓶盖的面积，故倒立时受力面积较小。根据![](figures/image29.png)可知，![](figures/image30.png)。正立时，瓶子是柱形，液体对瓶底的压力等于液体的重力；倒立时，瓶子上宽下窄，瓶盖受到液体的压力![](figures/image31.png)\n因此，![](figures/image32.png)。故选D。",
+      "solution": "瓶对桌面的压力等于瓶子和液体的总重力，所以正立和倒立的压力相等。正立时，受力面积是瓶底的面积，倒立时，受力面积是瓶盖的面积，故倒立时受力面积较小。根据$p_{2} ＞ p_{1}$可知，$F_{2} = p S_{盖} = \\rho_{液} g h S_{盖} ＜ \\rho_{液} g V_{液} = G_{液}$。正立时，瓶子是柱形，液体对瓶底的压力等于液体的重力；倒立时，瓶子上宽下窄，瓶盖受到液体的压力$F_{2} ＜ F_{1}$\n因此，$R_{1}$。故选D。",
       "score": 2
     },
     {
       "number": 11,
       "correct": "C",
-      "solution": "根据电路图，![](figures/image34.png)和![](figures/image35.png)串联，电压表测![](figures/image34.png)两端电压，电流表测电路中的电流。滑片向右滑动的过程中，滑动变阻器接入电路的阻值变小。\nA．根据串联分压的原理，滑动变阻器两端的电压变小，电压表的示数变小，故A错误；\nB．电路中的总电阻变小，由欧姆定律可知，电路中的电流变大。根据![](figures/image36.png)，则![](figures/image35.png)消耗的功率变大，故B错误；\nC．根据![](figures/image37.png)，电源电压不变，电路中电流变大，电路消耗的总功率变大，故C正确；\nD．电压表和电流表示数的比值即为![](figures/image34.png)接入电路的阻值，应变小，故D错误。\n故选C。",
+      "solution": "根据电路图，$R_{2}$和$R_{1}$串联，电压表测$P = I^{2} R$两端电压，电流表测电路中的电流。滑片向右滑动的过程中，滑动变阻器接入电路的阻值变小。\nA．根据串联分压的原理，滑动变阻器两端的电压变小，电压表的示数变小，故A错误；\nB．电路中的总电阻变小，由欧姆定律可知，电路中的电流变大。根据$R_{2}$，则$P = U I$消耗的功率变大，故B错误；\nC．根据$R_{1}$，电源电压不变，电路中电流变大，电路消耗的总功率变大，故C正确；\nD．电压表和电流表示数的比值即为$S = 0 . 3 \\text{cm}^{2} = 0 . 3 \\times 10^{- 4} \\text{m}^{2}$接入电路的阻值，应变小，故D错误。\n故选C。",
       "score": 2
     },
     {
       "number": 12,
       "correct": "C",
-      "solution": "A．止水阀上表面受大气压力，上表面的面积为![](figures/image39.png)\n则大气压强对止水阀的压力为![](figures/image40.png)\n故A不符合题意；\nBC．止水阀下表面受水压力，![](figures/image41.png)\n则止水阀受到的合力为![](figures/image42.png)\n合力方向向上，这是作用在B点的向上的力，对杠杆来说是阻力。连接杆AC受到浮筒的拉力，等于浮筒重力与浮力的合力，当进水管停止进水时，连接杆AC对A点的作用力即为动力，根据杠杆平衡条件，则有![](figures/image43.png)，代入数据解得![](figures/image44.png)，浮筒的质量为![](figures/image45.png)，则浮筒受到的浮力为![](figures/image46.png)\n浮筒排开水的体积为![](figures/image47.png)\n故B不符合题意，C符合题意；\nD．支点O向A移动，则OA减小，OB增大。储水槽的最高水位是浮筒达到平衡时的水位，根据杠杆平衡条件![](figures/image43.png)，由于止水阀上下表面的压力差不变，则浮筒对杠杆的作用力![](figures/image48.png)需增大，由![](figures/image49.png)可知，需增大浮筒受到的浮力，则需增大浮筒浸没在水中的体积，浮筒排开更多水，说明浮筒浸入水中的深度更深，因此储水槽的最高水位会上升，故D不符合题意。\n故选C。",
+      "solution": "A．止水阀上表面受大气压力，上表面的面积为$F_{0} = p_{0} S = 1 . 0 \\times 10^{5} \\text{Pa} \\times 0 . 3 \\times 10^{- 4} \\text{m}^{2} = 3 \\text{N}$\n则大气压强对止水阀的压力为$F = p_{水} S = 2 . 5 \\times 10^{5} \\text{Pa} \\times 0 . 3 \\times 10^{- 4} \\text{m}^{2} = 7 . 5 \\text{N}$\n故A不符合题意；\nBC．止水阀下表面受水压力，$\\Delta F = F - F_{0} = 7 . 5 \\text{N} - 3 \\text{N} = 4 . 5 \\text{N}$\n则止水阀受到的合力为$\\Delta F l_{O B} = F_{\\text{A}} l_{O A}$\n合力方向向上，这是作用在B点的向上的力，对杠杆来说是阻力。连接杆AC受到浮筒的拉力，等于浮筒重力与浮力的合力，当进水管停止进水时，连接杆AC对A点的作用力即为动力，根据杠杆平衡条件，则有$F_{\\text{A}} = 0 . 9 \\text{N}$，代入数据解得$m_{筒} = 40 \\text{g} = 0 . 04 \\text{kg}$，浮筒的质量为$F_{浮} = F_{\\text{A}} + G_{筒} = F_{\\text{A}} + m_{筒} g = 0 . 9 \\text{N} + 0 . 04 \\text{kg} \\times 10 \\text{N}/\\text{kg} = 1 . 3 \\text{N}$，则浮筒受到的浮力为$V_{排} = \\frac{F_{浮}}{\\rho_{水} g} = \\frac{1 . 3 \\text{N}}{1 . 0 \\times 10^{3} \\text{kg}/\\text{m}^{3} \\times 10 \\text{N}/\\text{kg}} = 1 . 3 \\times 10^{- 4} \\text{m}^{3} = 130 \\text{cm}^{3}$\n浮筒排开水的体积为$\\Delta F l_{O B} = F_{\\text{A}} l_{O A}$\n故B不符合题意，C符合题意；\nD．支点O向A移动，则OA减小，OB增大。储水槽的最高水位是浮筒达到平衡时的水位，根据杠杆平衡条件$F_{\\text{A}}$，由于止水阀上下表面的压力差不变，则浮筒对杠杆的作用力$F_{浮} = F_{\\text{A}} + G_{筒}$需增大，由$\\text{Q} = \\text{cm} \\Delta \\text{t}$可知，需增大浮筒受到的浮力，则需增大浮筒浸没在水中的体积，浮筒排开更多水，说明浮筒浸入水中的深度更深，因此储水槽的最高水位会上升，故D不符合题意。\n故选C。",
       "score": 2
     },
     {
       "number": 13,
       "correct": "BD",
-      "solution": "A．根据![](figures/image50.png)可知，两个物体升高相同的温度，但如果它们的比热容或质量不同，吸收的热量也会不同，故A错误；\nB．热传递是内能从高温物体转移到低温物体的过程，在纯热传递过程中不考虑做功的情况，吸收热量的物体其内能必然增加，故B正确；\nC．内能是物体内所有分子动能和势能的总和，它不仅与温度有关，还与物体的质量、状态、物质种类等因素有关，温度低的物体内能不一定少，故C错误；\nD．热传递发生的条件是存在温度差，与内能大小无关。即使两个物体内能相同，只要温度不同，仍可发生热传递，故D正确。\n故选BD。",
+      "solution": "A．根据$\\eta$可知，两个物体升高相同的温度，但如果它们的比热容或质量不同，吸收的热量也会不同，故A错误；\nB．热传递是内能从高温物体转移到低温物体的过程，在纯热传递过程中不考虑做功的情况，吸收热量的物体其内能必然增加，故B正确；\nC．内能是物体内所有分子动能和势能的总和，它不仅与温度有关，还与物体的质量、状态、物质种类等因素有关，温度低的物体内能不一定少，故C错误；\nD．热传递发生的条件是存在温度差，与内能大小无关。即使两个物体内能相同，只要温度不同，仍可发生热传递，故D正确。\n故选BD。",
       "score": 2
     },
     {
       "number": 14,
       "correct": "ACD",
-      "solution": "A．提升物体A做的有用功![](figures/image53.png)\n拉力做的总功![](figures/image54.png)\n提升物体A时，滑轮组的机械效率![](figures/image55.png)\n故A正确；\nBC．滑轮组由两根绳承担物重，![](figures/image56.png)，绳子自由端移动的距离![](figures/image57.png),,\n提升物体A时，绳子自由端受到的拉力![](figures/image58.png)\n动滑轮的重力![](figures/image59.png)\n滑轮组的机械效率![](figures/image60.png)\n滑轮组提升物体B的机械效率为80%，![](figures/image61.png)\n解得![](figures/image62.png)，物体B的质量为![](figures/image63.png)\n提升物体B时，绳子自由端拉力为![](figures/image64.png)\n由以上计算可知，B错误，C正确；\nD．定滑轮上有三股绳，绳子对定滑轮的拉力![](figures/image65.png)\n定滑轮的重力![](figures/image66.png)\n提升物体B时定滑轮对天花板的拉力为![](figures/image67.png)\n故D正确。\n故选ACD。",
+      "solution": "A．提升物体A做的有用功$W_{总} = P_{\\text{A}} t = 280 \\text{W} \\times 5 \\text{s} = 1400 \\text{J}$\n拉力做的总功$\\eta_{\\text{A}} = \\frac{W_{有}}{W_{总}} = \\frac{1260 \\text{J}}{1400 \\text{J}} = 90 \\%$\n提升物体A时，滑轮组的机械效率$n = 2$\n故A正确；\nBC．滑轮组由两根绳承担物重，$s = 2 h = 2 \\times 2 \\text{m} = 4 \\text{m}$，绳子自由端移动的距离$F = \\frac{W}{s} = \\frac{1400 \\text{J}}{4 \\text{m}} = 350 \\text{N}$,,\n提升物体A时，绳子自由端受到的拉力$G_{动} = 2 F - G_{\\text{A}} = 2 \\times 350 \\text{N} - 63 k g \\times 10 \\text{N} / k g = 70 \\text{N}$\n动滑轮的重力$\\eta = \\frac{W_{有}}{W_{总}} = \\frac{G h}{F s} = \\frac{G h}{F 2 h} = \\frac{G}{2 F} = \\frac{G}{G + G_{动}}$\n滑轮组的机械效率$\\eta_{\\text{B}} = \\frac{G_{\\text{B}}}{G_{\\text{B}} + G_{动}} = \\frac{G_{\\text{B}}}{G_{\\text{B}} + 70 \\text{N}} = 80 \\%$\n滑轮组提升物体B的机械效率为80%，$G_{\\text{B}} = 280 \\text{N}$\n解得$m_{\\text{B}} = \\frac{G_{\\text{B}}}{g} = \\frac{280 \\text{N}}{10 \\text{N} / k g} = 28 k g$，物体B的质量为$F_{\\text{B}} = \\frac{1}{2} \\left(G_{\\text{B}},+,G_{动}\\right) = \\frac{1}{2} \\left(280,\\text{N},+,70,\\text{N}\\right) = 175 \\text{N}$\n提升物体B时，绳子自由端拉力为$F_{拉} = 3 F_{\\text{B}} = 3 \\times 175 \\text{N} = 525 \\text{N}$\n由以上计算可知，B错误，C正确；\nD．定滑轮上有三股绳，绳子对定滑轮的拉力$G_{定} = 2 G_{动} = 2 \\times 70 \\text{N} = 140 \\text{N}$\n定滑轮的重力$F = F_{拉} + G_{定} = 525 \\text{N} + 140 \\text{N} = 665 \\text{N}$\n提升物体B时定滑轮对天花板的拉力为$R_{1}$\n故D正确。\n故选ACD。",
       "score": 2
     },
     {
       "number": 15,
       "correct": "ABC",
-      "solution": "AB．根据甲电路图，电源电压为220V，只闭合开关![](figures/image78.png)时，电路中只有电阻![](figures/image34.png)工作，电功率为![](figures/image79.png)\n闭合开关![](figures/image78.png)和![](figures/image80.png)时，电阻![](figures/image34.png)与![](figures/image35.png)并联，电路的总功率为![](figures/image81.png)\n则闭合开关![](figures/image78.png)和![](figures/image80.png)时，甲电热水壶为高温挡。根据乙电路图，电源电压为220V，只闭合开关![](figures/image82.png)时，电阻![](figures/image83.png)与![](figures/image84.png)串联；闭合![](figures/image76.png)与![](figures/image77.png)时，![](figures/image84.png)被短路，电路中仅![](figures/image83.png)工作。因此，闭合![](figures/image76.png)与![](figures/image77.png)时电路中的总电阻最小，根据![](figures/image85.png)可知，此时电路的功率最大，因此电热水壶处于高温挡，功率为![](figures/image86.png)\n高温挡时，![](figures/image87.png)，故AB正确；\nC．甲乙电源电压相同，若低温挡功率相同，由![](figures/image85.png)，可得![](figures/image88.png)，则![](figures/image71.png)的电阻![](figures/image89.png)\n故C正确；\nD．乙电热水壶高温挡消耗的电能![](figures/image90.png)\n故D错误。\n故选ABC。",
+      "solution": "AB．根据甲电路图，电源电压为220V，只闭合开关$R_{1}$时，电路中只有电阻$P_{甲 1} = \\frac{U^{2}}{R_{1}} = \\frac{\\left(\\right. 220 \\text{V}）^{2}}{220 \\Omega} = 220 \\text{W}$工作，电功率为$\\text{S}_{1}$\n闭合开关$\\text{S}_{2}$和$R_{1}$时，电阻$R_{2}$与$P_{甲 2} = P_{甲 1} + P_{2} = P_{甲 1} + \\frac{U^{2}}{R_{2}} = 220 \\text{W} + \\frac{（ 220 \\text{V}）^{2}}{55 \\Omega} = 1100 \\text{W}$并联，电路的总功率为$\\text{S}_{1}$\n则闭合开关$\\text{S}_{2}$和$\\text{S}_{3}$时，甲电热水壶为高温挡。根据乙电路图，电源电压为220V，只闭合开关$R_{3}$时，电阻$R_{4}$与$\\text{S}_{3}$串联；闭合$\\text{S}_{4}$与$R_{4}$时，$R_{3}$被短路，电路中仅$\\text{S}_{3}$工作。因此，闭合$\\text{S}_{4}$与$P = \\frac{U^{2}}{R}$时电路中的总电阻最小，根据$P_{乙 1} = \\frac{U^{2}}{R_{3}} = \\frac{（ 220 \\text{V}）^{2}}{44 \\Omega} = 1100 \\text{W}$可知，此时电路的功率最大，因此电热水壶处于高温挡，功率为$P_{甲 2} = P_{乙 1} = 1100 \\text{W}$\n高温挡时，$P = \\frac{U^{2}}{R}$，故AB正确；\nC．甲乙电源电压相同，若低温挡功率相同，由$R_{1} = R_{3} + R_{4}$，可得$R_{4}$，则$R_{4} = R_{1} - R_{3} = 220 \\Omega - 44 \\Omega = 176 \\Omega$的电阻$W = P_{乙 1} t = 1100 \\text{W} \\times 3 \\times 60 \\text{s} = 198000 \\text{J}$\n故C正确；\nD．乙电热水壶高温挡消耗的电能$0 . 9 \\times 10^{3}$\n故D错误。\n故选ABC。",
       "score": 2
     },
     {
       "number": 16,
       "correct": "",
-      "solution": "（1）右    （2）162      （3）![](figures/image92.png)\n\n详解：（1）\n根据图甲，天平调平时，指针偏向分度盘左侧，说明左盘偏重，此时应将平衡螺母向右调节，使天平平衡。\n\n（2）\n图乙中，游码分度值为0.2g，示数为2g，天平读数为砝码质量与游码示数之和，所以苹果的质量为![](figures/image93.png)\n\n（3）\n图丙中，量筒的分度值为5mL，浸没后总体积为400mL，则苹果块的体积为![](figures/image94.png)\n则苹果的密度为![](figures/image95.png)",
+      "solution": "（1）右    （2）162      （3）$m = 100 \\text{g} + 50 \\text{g} + 10 \\text{g} + 2 \\text{g} = 162 \\text{g}$\n\n详解：（1）\n根据图甲，天平调平时，指针偏向分度盘左侧，说明左盘偏重，此时应将平衡螺母向右调节，使天平平衡。\n\n（2）\n图乙中，游码分度值为0.2g，示数为2g，天平读数为砝码质量与游码示数之和，所以苹果的质量为$V = 400 \\text{mL} - 220 \\text{mL} = 180 \\text{mL}=\\text{180cm}^{3}$\n\n（3）\n图丙中，量筒的分度值为5mL，浸没后总体积为400mL，则苹果块的体积为$\\rho = \\frac{m}{V} = \\frac{162 \\text{g}}{180 \\text{cm}^{3}} = 0 . 9 \\text{g}/\\text{cm}^{3} = 0 . 9 \\times 10^{3} \\text{kg}/\\text{m}^{3}$\n则苹果的密度为$u = 20 . 0 \\text{cm} - 10 . 0 \\text{cm} = 10 . 0 \\text{cm}$",
       "score": 3
     },
     {
@@ -443,13 +443,13 @@
     {
       "number": 18,
       "correct": "",
-      "solution": "①. 加热时间    ②. 小    ③. 大\n\n详解：（1）[1]电加热器每秒放出的热量是一定的，当浸没在煤油（或水）中加热时，可认为煤油（或水）每秒吸收的热量相同，所以加热时间相同，水和煤油吸收的热量相同，可以用加热时间来表示煤油或水吸收热量的多少。\n（2）[2][3]加热时间相同，即水和煤油吸收热量相同，由\n![](figures/image98.png)\n可知温度变化大的物体，比热容小，吸热能力差，温度变化小的物体，比热容大，吸热能力强；升高相同温度，比较加热时间，加热时间长的物体吸收热量多，比热容大。",
+      "solution": "①. 加热时间    ②. 小    ③. 大\n\n详解：（1）[1]电加热器每秒放出的热量是一定的，当浸没在煤油（或水）中加热时，可认为煤油（或水）每秒吸收的热量相同，所以加热时间相同，水和煤油吸收的热量相同，可以用加热时间来表示煤油或水吸收热量的多少。\n（2）[2][3]加热时间相同，即水和煤油吸收热量相同，由\n$v = 30 . 0 \\text{cm} - 20 . 0 \\text{cm} = 10 . 0 \\text{cm}$\n可知温度变化大的物体，比热容小，吸热能力差，温度变化小的物体，比热容大，吸热能力强；升高相同温度，比较加热时间，加热时间长的物体吸收热量多，比热容大。",
       "score": 3
     },
     {
       "number": 19,
       "correct": "",
-      "solution": "（1）同一高度      （2）    ①. 5.0    ②. 放大    ③. 投影仪\n\n详解：（1）\n在探究凸透镜成像规律的实验中，为了使像成在光屏的中央，需要调节发光物体、凸透镜和光屏三者的中心在同一高度。\n\n（2）\n图甲中，物距![](figures/image100.png)\n像距![](figures/image101.png)\n此时物距等于像距，根据凸透镜成像规律，当![](figures/image102.png)时，成倒立、等大的实像。因此，凸透镜的焦距![](figures/image103.png)；图乙中，物距![](figures/image104.png)\n此时满足![](figures/image105.png)，根据凸透镜成像规律，此时成倒立、放大的实像，与投影仪的成像原理相同。",
+      "solution": "（1）同一高度      （2）    ①. 5.0    ②. 放大    ③. 投影仪\n\n详解：（1）\n在探究凸透镜成像规律的实验中，为了使像成在光屏的中央，需要调节发光物体、凸透镜和光屏三者的中心在同一高度。\n\n（2）\n图甲中，物距$u = v = 2 f$\n像距$f = 5 . 0 \\text{cm}$\n此时物距等于像距，根据凸透镜成像规律，当$u^{'} = 7 . 0 \\text{cm} - 0 \\text{cm} = 7 . 0 \\text{cm}$时，成倒立、等大的实像。因此，凸透镜的焦距$f ＜ u^{'} ＜ 2 f$；图乙中，物距$G \\times 6 L = 6 G L$\n此时满足$2 G \\times 3 L = 6 G L$，根据凸透镜成像规律，此时成倒立、放大的实像，与投影仪的成像原理相同。",
       "score": 4
     },
     {
@@ -461,37 +461,37 @@
     {
       "number": 21,
       "correct": "",
-      "solution": "（1）右    （2）左\n\n详解：（1）\n图甲中杠杆左端低、右端高，为使杠杆在水平位置平衡，应将平衡螺母向右侧调节（平衡螺母总是向杠杆偏高的一侧调）。\n\n（2）\n设每个钩码重力为G，每小格长度为L。原来M处![](figures/image108.png)\nN处![](figures/image109.png)\n杠杆平衡；各加一个钩码后M处![](figures/image110.png)\nN处![](figures/image111.png)\n因为![](figures/image112.png)，所以杠杆左端将向下倾斜。",
+      "solution": "（1）右    （2）左\n\n详解：（1）\n图甲中杠杆左端低、右端高，为使杠杆在水平位置平衡，应将平衡螺母向右侧调节（平衡螺母总是向杠杆偏高的一侧调）。\n\n（2）\n设每个钩码重力为G，每小格长度为L。原来M处$2 G \\times 6 L = 12 G L$\nN处$3 G \\times 3 L = 9 G L$\n杠杆平衡；各加一个钩码后M处$12 G L > 9 G L$\nN处$P = U I = 2 . 4 \\text{V} \\times 0 . 2 \\text{A} = 0 . 48 \\text{W}$\n因为$\\rho = \\frac{m}{V} = \\frac{G}{V g} = \\frac{F}{V g}$，所以杠杆左端将向下倾斜。",
       "score": 4
     },
     {
       "number": 22,
       "correct": "",
-      "solution": "（1）![](figures/image114.png)    （2）小灯泡短路      （3）0.48\n\n详解：（1）\n要求P向左移动，电流表示数变小，即滑动变阻器接入电路电阻变大，应将滑动变阻器的右下接线柱与电源正极相连；电压表与小灯泡并联，故将电压表3V接线柱与小灯泡右端连接。\n\n（2）\n正确连接电路后，电流表有示数，说明电路是通路；电压表指针未偏转，移动滑动变阻器滑片，电压表依旧无示数，说明与电压表并联的电路短路或电压表短路，由于是测小灯泡电功率实验，所以故障原因可能是小灯泡短路。\n\n（3）\n由图乙可知，电压表量程为0 -3V，分度值为0.1V，示数为2.4V；由图丙可知，电流表量程为0 - 0.6A，分度值为0.02A，示数为0.2A。此时小灯泡的电功率![](figures/image115.png)",
+      "solution": "（1）![](figures/image114.png)    （2）小灯泡短路      （3）0.48\n\n详解：（1）\n要求P向左移动，电流表示数变小，即滑动变阻器接入电路电阻变大，应将滑动变阻器的右下接线柱与电源正极相连；电压表与小灯泡并联，故将电压表3V接线柱与小灯泡右端连接。\n\n（2）\n正确连接电路后，电流表有示数，说明电路是通路；电压表指针未偏转，移动滑动变阻器滑片，电压表依旧无示数，说明与电压表并联的电路短路或电压表短路，由于是测小灯泡电功率实验，所以故障原因可能是小灯泡短路。\n\n（3）\n由图乙可知，电压表量程为0 -3V，分度值为0.1V，示数为2.4V；由图丙可知，电流表量程为0 - 0.6A，分度值为0.02A，示数为0.2A。此时小灯泡的电功率$m = 4 \\text{kg}$",
       "score": 3
     },
     {
       "number": 23,
       "correct": "",
-      "solution": "（1）增大    （2）所测液体的密度会偏小。理由：电源电压降低，实际电压小于12V，测量同一液体时电路实际电流偏小；若仍按12V计算时，金属棒接入电阻的测量值偏大。由图乙可知，对应拉力的测量值会偏小；由![](figures/image117.png)可知，拉力偏小则质量的计算值偏小，会直接导致密度的计算值偏小。\n\n详解：（1）\n向桶内缓缓注入液体时，液体的重力会拉动弹簧伸长，滑片P向下移动。由图乙可知，拉力越大，金属棒接入电路的电阻R越小。电路中定值电阻与滑动变阻器串联，电源电压不变，根据欧姆定律，总电阻减小，电流会增大。\n\n（2）\n略",
+      "solution": "（1）增大    （2）所测液体的密度会偏小。理由：电源电压降低，实际电压小于12V，测量同一液体时电路实际电流偏小；若仍按12V计算时，金属棒接入电阻的测量值偏大。由图乙可知，对应拉力的测量值会偏小；由$G = m g = 4 \\text{kg} \\times 10 \\text{N} / \\text{kg} = 40 \\text{N}$可知，拉力偏小则质量的计算值偏小，会直接导致密度的计算值偏小。\n\n详解：（1）\n向桶内缓缓注入液体时，液体的重力会拉动弹簧伸长，滑片P向下移动。由图乙可知，拉力越大，金属棒接入电路的电阻R越小。电路中定值电阻与滑动变阻器串联，电源电压不变，根据欧姆定律，总电阻减小，电流会增大。\n\n（2）\n略",
       "score": 3
     },
     {
       "number": 24,
       "correct": "",
-      "solution": "（1）    ①. 旋翼的转速差    ②. 成对旋翼      （2）40    （3）无人机向前飞行时，机身会机头向下、机尾向上倾斜（前低后高）。因为后方旋翼转速增大、升力增大，前方旋翼转速减小、升力减小，导致机身倾斜；此时总升力斜向后上方，分解出向前的分力，推动无人机向前飞行。\n\n详解：（1）\n多旋翼无人机靠旋翼的转速差控制飞行，转向则通过改变成对旋翼的转速差，打破反扭矩平衡，实现机身旋转。\n\n（2）\n无人机满载悬停时，处于受力平衡状态，竖直方向上总升力和总重力大小相等。满载对应最大起飞质量![](figures/image119.png)，满载时的总重力![](figures/image120.png)\n当该无人机在空中满载悬停时，旋翼产生的总升力为40N。\n\n（3）\n见答案",
+      "solution": "（1）    ①. 旋翼的转速差    ②. 成对旋翼      （2）40    （3）无人机向前飞行时，机身会机头向下、机尾向上倾斜（前低后高）。因为后方旋翼转速增大、升力增大，前方旋翼转速减小、升力减小，导致机身倾斜；此时总升力斜向后上方，分解出向前的分力，推动无人机向前飞行。\n\n详解：（1）\n多旋翼无人机靠旋翼的转速差控制飞行，转向则通过改变成对旋翼的转速差，打破反扭矩平衡，实现机身旋转。\n\n（2）\n无人机满载悬停时，处于受力平衡状态，竖直方向上总升力和总重力大小相等。满载对应最大起飞质量$g =\\text{10N}/\\text{kg}$，满载时的总重力$\\rho_{酒精} = 0 . 8 \\times 10^{3} \\text{kg}/\\text{m}^{3}$\n当该无人机在空中满载悬停时，旋翼产生的总升力为40N。\n\n（3）\n见答案",
       "score": 4
     },
     {
       "number": 25,
       "correct": "",
-      "solution": "（1）8N    （2）![](figures/image124.png)\n\n详解：（1）\n小球在两种状态下均静止，受力平衡，满足![](figures/image125.png)，当露出液面的体积为总体积一半时，根据阿基米德原理，则有![](figures/image126.png)\n同理，当小球浸没在酒精中时，则有![](figures/image127.png)\n联立两式，解得![](figures/image128.png)\n则小球完全浸没在酒精中受到的浮力为![](figures/image129.png)\n\n（2）\n小球的重力![](figures/image130.png)\n小球的质量![](figures/image131.png)\n小球的体积![](figures/image132.png)\n小球的密度为![](figures/image133.png)",
+      "solution": "（1）8N    （2）$F_{浮 1} = \\rho_{酒精} V_{排} g = \\rho_{酒精} \\frac{1}{2} V_{\\text{A}} g = G + 2 \\text{N}$\n\n详解：（1）\n小球在两种状态下均静止，受力平衡，满足$F_{浮 2} = \\rho_{酒精} V_{排}^{'} g = \\rho_{酒精} V_{\\text{A}} g = G + 6 \\text{N}$，当露出液面的体积为总体积一半时，根据阿基米德原理，则有$F_{浮\\text{1}} = \\rho_{酒精} \\frac{1}{2} V_{\\text{A}} g = 4 \\text{N}$\n同理，当小球浸没在酒精中时，则有$F_{浮 2} = \\rho_{酒精} V_{\\text{A}} g = 2 \\times 4 \\text{N}=\\text{8N}$\n联立两式，解得$G = F_{浮 1} - F_{拉 1} =\\text{4N} - \\text{2N}=\\text{2N}$\n则小球完全浸没在酒精中受到的浮力为$m = \\frac{G}{g} = \\frac{2 \\text{N}}{10 \\text{N}/\\text{kg}} = 0 . 2 \\text{kg}$\n\n（2）\n小球的重力$V_{\\text{A}} = \\frac{F_{浮 2}}{\\rho_{酒精} g} = \\frac{\\text{8N}}{\\text{0}.\\text{8}\\times\\text{10}^{\\text{3}} \\text{kg}/\\text{m}^{\\text{3}} \\times\\text{10N}/\\text{kg}} = 1 \\times 10^{- 3} \\text{m}^{3}$\n小球的质量$\\rho_{\\text{A}} = \\frac{m}{V_{\\text{A}}} = \\frac{0 . 2 \\text{kg}}{1 \\times 10^{- 3} \\text{m}^{3}} = 0 . 2 \\times 10^{3} \\text{kg}/\\text{m}^{3}$\n小球的体积$\\text{S}_{1}$\n小球的密度为$R_{1}$",
       "score": 4
     },
     {
       "number": 26,
       "correct": "",
-      "solution": "（1）6V    （2）9W\n\n详解：（1）\n当只闭合开关![](figures/image78.png)时，![](figures/image34.png)与![](figures/image83.png)串联，电压表测![](figures/image34.png)两端的电压，![](figures/image135.png)，则电路中的电流为![](figures/image136.png)\n串联电路中，各处电流相等。根据![](figures/image37.png)，则![](figures/image83.png)两端的电压![](figures/image137.png)\n根据串联电路的电压规律，则电源电压![](figures/image138.png)\n\n（2）\n电源电压保持不变，根据![](figures/image85.png)，电路消耗的功率最大时，电路中的总电阻最小。由（1）可得，![](figures/image139.png)\n当只闭合开关![](figures/image80.png)时，![](figures/image35.png)与![](figures/image83.png)串联，电压表测![](figures/image35.png)两端的电压，![](figures/image140.png)，电流表测电路中的电流，则![](figures/image141.png)\n分析电路图可知，当闭合开关![](figures/image78.png)、![](figures/image80.png)、![](figures/image82.png)时，![](figures/image83.png)被短路，![](figures/image34.png)与![](figures/image35.png)并联，此时电路的总电阻最小，电路的总功率最大为![](figures/image142.png)",
+      "solution": "（1）6V    （2）9W\n\n详解：（1）\n当只闭合开关$R_{3}$时，$R_{1}$与$U_{1} = 2 \\text{V}$串联，电压表测$I = \\frac{U_{1}}{R_{1}} = \\frac{2 \\text{V}}{5 \\Omega} = 0 . 4 \\text{A}$两端的电压，$P = U I$，则电路中的电流为$R_{3}$\n串联电路中，各处电流相等。根据$U_{3} = \\frac{P_{3}}{I} = \\frac{1 . 6 \\text{W}}{0 . 4 \\text{A}} = 4 \\text{V}$，则$U = U_{1} + U_{3} = 2 \\text{V} + 4 \\text{V} = 6 \\text{V}$两端的电压$P = \\frac{U^{2}}{R}$\n根据串联电路的电压规律，则电源电压$R_{3} = \\frac{U_{3}}{I} = \\frac{4 \\text{V}}{0 . 4 \\text{A}} = 10 \\Omega$\n\n（2）\n电源电压保持不变，根据$\\text{S}_{2}$，电路消耗的功率最大时，电路中的总电阻最小。由（1）可得，$R_{2}$\n当只闭合开关$R_{3}$时，$R_{2}$与$U_{2} = 4 \\text{V}$串联，电压表测$R_{2} = \\frac{U_{2}}{I^{'}} = \\frac{4 \\text{V}}{0 . 2 \\text{A}} = 20 \\Omega$两端的电压，$\\text{S}_{1}$，电流表测电路中的电流，则$\\text{S}_{2}$\n分析电路图可知，当闭合开关$\\text{S}_{3}$、$R_{3}$、$R_{1}$时，$R_{2}$被短路，$P_{max} = P_{1} + P_{2} = \\frac{U^{2}}{R_{1}} + \\frac{U^{2}}{R_{2}} = \\frac{\\left(\\right. 6 \\text{V}）^{2}}{5 \\Omega} + \\frac{\\left(\\right. 6 \\text{V}）^{2}}{20 \\Omega} = 9 \\text{W}$与![](figures/image35.png)并联，此时电路的总电阻最小，电路的总功率最大为![](figures/image142.png)",
       "score": 4
     }
   ],

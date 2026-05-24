@@ -112,12 +112,12 @@
       "options": {
         "A": "I1<I2",
         "B": "（I1–I2）>I2",
-        "C": "![](figures/image14.png)",
-        "D": "![](figures/image15.png)"
+        "C": "$R_{1} = \\frac{U_{1}}{I_{1}}$",
+        "D": "$R_{2} = \\frac{U_{2}}{I_{2}}$"
       },
       "section": "choice",
       "answer": "D",
-      "solution": "由图可知，闭合开关S后，![](figures/image16.png)与![](figures/image17.png)并联，![](figures/image18.png)测干路电流，![](figures/image19.png)测通过![](figures/image17.png)的电流。\nA．并联电路中，干路电流等于各支路电流之和，所以干路电流大于支路电流，即![](figures/image20.png)，故A错误；\nB．由并联电路电流特点可知，通过![](figures/image16.png)的电流为![](figures/image21.png)，已知两个定值电阻阻值![](figures/image22.png)，![](figures/image16.png)和![](figures/image17.png)两端的电压相等，由欧姆定律可知，通过![](figures/image16.png)的电流小于通过![](figures/image17.png)的电流，即![](figures/image23.png)，故B错误；\nC．由并联电路电流特点可知，通过![](figures/image16.png)的电流为![](figures/image21.png)，![](figures/image16.png)两端的电压为![](figures/image24.png)，则![](figures/image16.png)的阻值为![](figures/image25.png)，故C错误；\nD．由上述分析可知，通过![](figures/image17.png)的电流为![](figures/image26.png)，![](figures/image17.png)两端的电压为![](figures/image27.png)，则![](figures/image17.png)的阻值为![](figures/image28.png)，故D正确。\n故选D。",
+      "solution": "由图可知，闭合开关S后，$R_{1}$与$R_{2}$并联，$\\text{A}_{1}$测干路电流，$\\text{A}_{2}$测通过$R_{2}$的电流。\nA．并联电路中，干路电流等于各支路电流之和，所以干路电流大于支路电流，即$I_{1} > I_{2}$，故A错误；\nB．由并联电路电流特点可知，通过$R_{1}$的电流为$I_{1} - I_{2}$，已知两个定值电阻阻值$R_{1} > R_{2}$，$R_{1}$和$R_{2}$两端的电压相等，由欧姆定律可知，通过$R_{1}$的电流小于通过$R_{2}$的电流，即$\\left(I_{1},-,I_{2}\\right) < I_{2}$，故B错误；\nC．由并联电路电流特点可知，通过$R_{1}$的电流为$I_{1} - I_{2}$，$R_{1}$两端的电压为$U_{1}$，则$R_{1}$的阻值为$R_{1} = \\frac{U_{1}}{I_{1} - I_{2}}$，故C错误；\nD．由上述分析可知，通过$R_{2}$的电流为$I_{2}$，$R_{2}$两端的电压为$U_{2}$，则$R_{2}$的阻值为$R_{2} = \\frac{U_{2}}{I_{2}}$，故D正确。\n故选D。",
       "type": "choice",
       "score": 2
     },
@@ -147,22 +147,22 @@
       },
       "section": "choice",
       "answer": "B",
-      "solution": "首先根据功率公式![](figures/image31.png)，已知四种用电器消耗![](figures/image32.png)，结合图中时间计算得各用电器正常工作的功率： 洗衣机功率![](figures/image33.png)\n吸尘器功率![](figures/image34.png)\n烤面包机功率![](figures/image35.png)\n空调功率![](figures/image36.png)\nA.吸尘器主要将电能转化为机械能，只有少量电能转化为电热；烤面包机是电热器，电能全部转化为电热。二者相同时间消耗总电能相同，但产生的电热不同，故A错误；\nB．电功率是描述电流做功快慢的物理量，功率越小，电流做功越慢。洗衣机的功率是四个用电器中最小的，因此正常工作时洗衣机的电流做功最慢，故B正确；\nC．正常工作时实际功率等于额定功率，计算得吸尘器和烤面包机功率相同，故C错误；\nD．一个月消耗电能![](figures/image37.png)，电费多少和用电器功率、工作时间都有关，不确定工作时间的情况下，不能确定空调电费一定更多，故D错误。\n故选B。",
+      "solution": "首先根据功率公式$P = \\frac{W}{t}$，已知四种用电器消耗$W = 1 \\text{kW} \\cdot \\text{h}$，结合图中时间计算得各用电器正常工作的功率： 洗衣机功率$P_{洗} = \\frac{1 \\text{kW} \\cdot \\text{h}}{2 \\text{h}} = 0 . 5 \\text{kW}$\n吸尘器功率$P_{吸} = \\frac{1 \\text{kW} \\cdot \\text{h}}{1 \\text{h}} = 1 \\text{kW}$\n烤面包机功率$P_{烤} = \\frac{1 \\text{kW} \\cdot \\text{h}}{1 \\text{h}} = 1 \\text{kW}$\n空调功率$P_{空} = \\frac{1 \\text{kW} \\cdot \\text{h}}{0 . 8 \\text{h}} = 1 . 25 \\text{kW}$\nA.吸尘器主要将电能转化为机械能，只有少量电能转化为电热；烤面包机是电热器，电能全部转化为电热。二者相同时间消耗总电能相同，但产生的电热不同，故A错误；\nB．电功率是描述电流做功快慢的物理量，功率越小，电流做功越慢。洗衣机的功率是四个用电器中最小的，因此正常工作时洗衣机的电流做功最慢，故B正确；\nC．正常工作时实际功率等于额定功率，计算得吸尘器和烤面包机功率相同，故C错误；\nD．一个月消耗电能$W = P t$，电费多少和用电器功率、工作时间都有关，不确定工作时间的情况下，不能确定空调电费一定更多，故D错误。\n故选B。",
       "type": "choice",
       "score": 2
     },
     {
       "number": 11,
-      "stem": "如图所示，两个圆柱形容器甲和乙放在水平桌面上，甲容器底面积大于乙容器底面积，它们分别装有体积相等的液体，甲容器中液体的密度为![](figures/image38.png)，乙容器中液体的密度为![](figures/image39.png)。液体内A、B两点到容器底部的距离相等，其压强分别为![](figures/image40.png)、![](figures/image41.png)。若两容器底部受到的液体压强相等，则下列判断正确的是（　　）\n\n![](figures/image42.png)",
+      "stem": "如图所示，两个圆柱形容器甲和乙放在水平桌面上，甲容器底面积大于乙容器底面积，它们分别装有体积相等的液体，甲容器中液体的密度为$\\rho_{甲}$，乙容器中液体的密度为$\\rho_{乙}$。液体内A、B两点到容器底部的距离相等，其压强分别为$p_{\\text{A}}$、$p_{\\text{B}}$。若两容器底部受到的液体压强相等，则下列判断正确的是（　　）\n\n![](figures/image42.png)",
       "options": {
-        "A": "![](figures/image43.png)",
-        "B": "![](figures/image44.png)",
-        "C": "![](figures/image45.png)",
-        "D": "![](figures/image46.png)"
+        "A": "$\\rho_{甲} < \\rho_{乙} , p_{\\text{A}} < p_{\\text{B}}$",
+        "B": "$\\rho_{甲} < \\rho_{乙} , p_{\\text{A}} > p_{\\text{B}}$",
+        "C": "$\\rho_{甲} > \\rho_{乙} , p_{\\text{A}} = p_{\\text{B}}$",
+        "D": "$\\rho_{甲} > \\rho_{乙} , p_{\\text{A}} < p_{\\text{B}}$"
       },
       "section": "choice",
       "answer": "D",
-      "solution": "由于两容器底部受到的液体压强相等，甲容器底面积大于乙容器底面积，由![](figures/image47.png)可知，甲容器底部受到的液体压力F甲大于乙容器底部受到的液体压力F乙，由于\nG甲液=F甲\nG乙液=F乙\n所以\nG甲液>G乙液\n由G=mg可知\nm甲液>m乙液\n由于甲乙两种液体的体积相等，由![](figures/image48.png)可知\n![](figures/image49.png)甲>![](figures/image49.png)乙\n由于A点到容器底部的深度等于B点到容器底部的深度，则两点以下部分液体的压强大小关系为\npA下>pB下\n若两容器底部受到的液体压强相等，则两点处受到液体的大小关系为\n![](figures/image50.png)\n故ABC错误，故D正确。\n故选D。",
+      "solution": "由于两容器底部受到的液体压强相等，甲容器底面积大于乙容器底面积，由$F = p S$可知，甲容器底部受到的液体压力F甲大于乙容器底部受到的液体压力F乙，由于\nG甲液=F甲\nG乙液=F乙\n所以\nG甲液>G乙液\n由G=mg可知\nm甲液>m乙液\n由于甲乙两种液体的体积相等，由$\\rho = \\frac{m}{V}$可知\n$\\rho$甲>$\\rho$乙\n由于A点到容器底部的深度等于B点到容器底部的深度，则两点以下部分液体的压强大小关系为\npA下>pB下\n若两容器底部受到的液体压强相等，则两点处受到液体的大小关系为\n$U_{滑} = U - U_{\\text{L}} = 4 . 5 \\text{V} - 2 . 5 \\text{V} = 2 \\text{V} < 3 \\text{V}$\n故ABC错误，故D正确。\n故选D。",
       "type": "choice",
       "score": 2
     },
@@ -177,7 +177,7 @@
       },
       "section": "choice",
       "answer": "A",
-      "solution": "由电路图可知，闭合开关S，灯泡L与滑动变阻器串联，电压表测滑动变阻器两端的电压。灯泡正常发光时的电压为2.5V，功率为1.25W，因串联电路总电压等于各分电压之和， 所以，此时电压表的示数![](figures/image52.png)\n则电压表安全，因串联电路中各处的电流相等，所以，由![](figures/image53.png)可得，灯泡正常发光时电路中的电流![](figures/image54.png)\n因滑动变阻器允许通过的最大电流为1A，而灯泡允许通过的最大电流为0.5A，所以，电路中的最大电流![](figures/image55.png)，此时电路的总功率最大，滑动变阻器接入电路中的电阻最小，则电路的最大电功率![](figures/image56.png)\n由![](figures/image57.png)可得，滑动变阻器接入电路中的最小阻值![](figures/image58.png)\n灯泡的电阻![](figures/image59.png)\n当电压表的示数为3V时，灯泡两端的电压![](figures/image60.png)\n此时电路中的电流![](figures/image61.png)\n滑动变阻器接入电路中的电阻![](figures/image62.png)，电路安全，\n所以，电压表的最大示数为3V，电路中的最小电流为0.3A，变阻器接入电路中的最大阻值为10Ω，则电压表示数的变化范围是2~3V，电路中电流变化的范围是0.3~0.5A，滑动变阻器阻值变化的范围是4~10Ω，故BCD错误；\n电路的最小电功率![](figures/image63.png)\n则该电路的功率变化范围是1.35~2.25W，故A正确。\n故选 A。",
+      "solution": "由电路图可知，闭合开关S，灯泡L与滑动变阻器串联，电压表测滑动变阻器两端的电压。灯泡正常发光时的电压为2.5V，功率为1.25W，因串联电路总电压等于各分电压之和， 所以，此时电压表的示数$P = U I$\n则电压表安全，因串联电路中各处的电流相等，所以，由$I = I_{\\text{L}} = \\frac{P_{\\text{L}}}{U_{\\text{L}}} = \\frac{1 . 25 \\text{W}}{2 . 5 \\text{V}} = 0 . 5 \\text{A}$可得，灯泡正常发光时电路中的电流$I_{大} = 0 . 5 \\text{A}$\n因滑动变阻器允许通过的最大电流为1A，而灯泡允许通过的最大电流为0.5A，所以，电路中的最大电流$P_{大} = U I_{大} = 4 . 5 \\text{V} \\times 0 . 5 \\text{A} = 2 . 25 \\text{W}$，此时电路的总功率最大，滑动变阻器接入电路中的电阻最小，则电路的最大电功率$I = \\frac{U}{R}$\n由$R_{滑小} = \\frac{U_{滑}}{I_{大}} = \\frac{2 \\text{V}}{0 . 5 \\text{A}} = 4 \\Omega$可得，滑动变阻器接入电路中的最小阻值$R_{\\text{L}} = \\frac{U_{\\text{L}}}{I_{\\text{L}}} = \\frac{2 . 5 \\text{V}}{0 . 5 \\text{A}} = 5 \\Omega$\n灯泡的电阻$\\left(U_{\\text{L}}\\right)^{'} = U - U_{滑大} = 4 . 5 \\text{V} - 3 \\text{V} = 1 . 5 \\text{V}$\n当电压表的示数为3V时，灯泡两端的电压$I = \\frac{\\left(U_{\\text{L}}\\right)^{'}}{R_{\\text{L}}} = \\frac{1 . 5 \\text{V}}{5 \\Omega} = 0 . 3 \\text{A}$\n此时电路中的电流$R_{滑大} = \\frac{U_{滑大}}{I_{小}} = \\frac{3 \\text{V}}{0 . 3 \\text{A}} = 10 \\Omega < 20 \\Omega$\n滑动变阻器接入电路中的电阻$P_{小} = U I_{小} = 4 . 5 \\text{V} \\times 0 . 3 \\text{A} = 1 . 35 \\text{W}$，电路安全，\n所以，电压表的最大示数为3V，电路中的最小电流为0.3A，变阻器接入电路中的最大阻值为10Ω，则电压表示数的变化范围是2~3V，电路中电流变化的范围是0.3~0.5A，滑动变阻器阻值变化的范围是4~10Ω，故BCD错误；\n电路的最小电功率$4 \\times 10^{- 2} \\text{m}^{2}$\n则该电路的功率变化范围是1.35~2.25W，故A正确。\n故选 A。",
       "type": "choice",
       "score": 2
     },
@@ -198,7 +198,7 @@
     },
     {
       "number": 14,
-      "stem": "如图所示，重640N的工人站在水平台面上用滑轮组提货物。工人第一次竖直向上用150N的力拉绳子，使重为360N的货物A在20s内竖直匀速上升了2m；第二次竖直向上拉动绳子，使货物B匀速上升，此时该工人对台面的压强为2.0×104Pa，工人与台面接触的总面积为![](figures/image64.png)两个滑轮质量相等，不计滑轮组的绳重和摩擦，下列说法正确的是（　　）\n\n![](figures/image65.png)",
+      "stem": "如图所示，重640N的工人站在水平台面上用滑轮组提货物。工人第一次竖直向上用150N的力拉绳子，使重为360N的货物A在20s内竖直匀速上升了2m；第二次竖直向上拉动绳子，使货物B匀速上升，此时该工人对台面的压强为2.0×104Pa，工人与台面接触的总面积为$s = n h = 3 \\times 2 \\text{m} = 6 \\text{m}$两个滑轮质量相等，不计滑轮组的绳重和摩擦，下列说法正确的是（　　）\n\n![](figures/image65.png)",
       "options": {
         "A": "第一次拉绳子时，工人拉力的功率为15W",
         "B": "第一次拉绳子时，滑轮组对悬挂点C的拉力为390N",
@@ -207,22 +207,22 @@
       },
       "section": "multi_choice",
       "answer": "BD",
-      "solution": "A.第一次拉绳子时，由图可知，共有3股绳拉动滑轮，货物20s内竖直匀速上升了2m，则工人的拉力移动的距离为![](figures/image66.png)\n工人拉力的功率为![](figures/image67.png)\n故A错误；\nB.不计绳重和摩擦，由滑轮组的规律可知![](figures/image68.png)，则![](figures/image69.png)\n由题知，两个滑轮质量相等，则![](figures/image70.png)\n将滑轮组和货物看成一个整体，整体的重力为![](figures/image71.png)\n滑轮组对悬挂点C的拉力，即为悬挂点C对滑轮组的拉力、工人对绳子的拉力的合力与整体重力是一对平衡力，即![](figures/image72.png)\n![](figures/image73.png)\n故B正确；\nC.第一次拉绳子过程中，该滑轮组的机械效率为![](figures/image74.png)\n故C错误；\nD.第二次拉绳子时，工人对台面的压力为![](figures/image75.png)\n由题意知，第二次拉绳子的拉力为![](figures/image76.png)\n不计绳重和摩擦，根据![](figures/image68.png)得![](figures/image77.png)，解得![](figures/image78.png)\n故D正确；\n故选BD。",
+      "solution": "A.第一次拉绳子时，由图可知，共有3股绳拉动滑轮，货物20s内竖直匀速上升了2m，则工人的拉力移动的距离为$P = \\frac{W}{t} = \\frac{F s}{t} = \\frac{150 \\text{N} \\times 6 \\text{m}}{20 \\text{s}} = 45 \\text{W}$\n工人拉力的功率为$F = \\frac{G + G_{动}}{n}$\n故A错误；\nB.不计绳重和摩擦，由滑轮组的规律可知$G_{动} = n F - G = 3 \\times 150 \\text{N} - 360 \\text{N} = 90 \\text{N}$，则$G_{定} = G_{动} = 90 \\text{N}$\n由题知，两个滑轮质量相等，则$G = G_{定} + G_{动} + G_{物} = 90 \\text{N} + 90 \\text{N} + 360 \\text{N} = 540 \\text{N}$\n将滑轮组和货物看成一个整体，整体的重力为$G = F_{C} + F_{人}$\n滑轮组对悬挂点C的拉力，即为悬挂点C对滑轮组的拉力、工人对绳子的拉力的合力与整体重力是一对平衡力，即$\\eta = \\frac{W_{有}}{W_{总}} = \\frac{G_{物} h}{F_{人} s} = \\frac{360 \\text{N} \\times 2 \\text{m}}{150 \\text{N} \\times 6 \\text{m}} \\times 100 \\% = 80 \\%$\n$F_{压} = p S = 2 . 0 \\times 10^{4} P a \\times 4 \\times 10^{- 2} \\text{m}^{2} = 800 \\text{N}$\n故B正确；\nC.第一次拉绳子过程中，该滑轮组的机械效率为$F_{2} = F_{压} - G_{人} = 800 \\text{N} - 640 \\text{N} = 160 \\text{N}$\n故C错误；\nD.第二次拉绳子时，工人对台面的压力为$F = \\frac{G + G_{动}}{n}$\n由题意知，第二次拉绳子的拉力为$160 \\text{N} = \\frac{G_{\\text{B}} + 90 \\text{N}}{3}$\n不计绳重和摩擦，根据$G_{\\text{B}} =\\text{390N}$得$\\rho_{酒精} = 0 . 8 \\times 10^{3} \\text{kg} / \\text{m}^{3}$，解得$\\rho_{液} = 0 . 9 \\times 10^{3} \\text{kg} / \\text{m}^{3}$\n故D正确；\n故选BD。",
       "type": "multi_choice",
       "score": 2
     },
     {
       "number": 15,
-      "stem": "某同学将粗细均匀的吸管一端密封，在吸管内装入适量的铁砂，制成简易密度计。将该密度计分别放入水和酒精中，静止后，标出与液面位置相平的刻度线及相应的密度值，如图所示，已知吸管的横截面积S=0.8 cm2，![](figures/image79.png)。下列说法正确的是（　　）\n\n![](figures/image80.png)",
+      "stem": "某同学将粗细均匀的吸管一端密封，在吸管内装入适量的铁砂，制成简易密度计。将该密度计分别放入水和酒精中，静止后，标出与液面位置相平的刻度线及相应的密度值，如图所示，已知吸管的横截面积S=0.8 cm2，$F_{浮} = G = m g = \\rho_{液} g V_{排} = \\rho_{液} g S h_{浸}$。下列说法正确的是（　　）\n\n![](figures/image80.png)",
       "options": {
         "A": "图中A刻度线对应的密度值为0.8×103 kg/m3",
         "B": "若A、B刻度线间的距离为2 cm，则该密度计质量为6.4 g",
         "C": "若液体密度增大，密度计底端受到的液体压强不变",
-        "D": "将该密度计放入某种液体中，静止后，若液面到A和B刻度线的间距相等，则![](figures/image81.png)"
+        "D": "将该密度计放入某种液体中，静止后，若液面到A和B刻度线的间距相等，则$h_{浸} = \\frac{m}{\\rho_{液} S}$"
       },
       "section": "multi_choice",
       "answer": "ABC",
-      "solution": "密度计的原理是漂浮时浮力等于自身重力，即![](figures/image82.png)​，整理得![](figures/image83.png)，由此可知，液体密度越小，浸入深度![](figures/image84.png)越大，密度计刻度符合“上小下大”的规律；\nA．A在B上方，对应浸入深度更大，液体密度更小，酒精密度小于水的密度，因此A刻度对应酒精密度![](figures/image85.png)，故A正确；\nB．A对应![](figures/image86.png)，B对应![](figures/image87.png)，AB间距![](figures/image88.png)\n根据![](figures/image89.png)​，得![](figures/image90.png)，解得该密度计质量为![](figures/image91.png)，故B正确；\nC．密度计漂浮时，浮力等于重力，且浮力等于底端受到的液体压力（上端露出液面，液体向下压力为0），即![](figures/image92.png)，G不变，因此底端压力不变；底端面积S不变，由![](figures/image93.png)​可知，底端液体压强不变，故C正确；\nD．若液面到A、B间距相等，说明液面在A、B中间，满足![](figures/image94.png)​​，整理得![](figures/image95.png)，解得![](figures/image96.png)，故D错误。\n故选ABC。",
+      "solution": "密度计的原理是漂浮时浮力等于自身重力，即$h_{浸}$​，整理得$0 . 8 \\times 10^{3} \\text{kg}/\\text{m}^{3}$，由此可知，液体密度越小，浸入深度$\\rho_{\\text{A}} = 0 . 8 \\text{g}/\\text{cm}^{3}$越大，密度计刻度符合“上小下大”的规律；\nA．A在B上方，对应浸入深度更大，液体密度更小，酒精密度小于水的密度，因此A刻度对应酒精密度$\\rho_{\\text{B}} = 1 \\text{g}/\\text{cm}^{3}$，故A正确；\nB．A对应$\\Delta h = h_{\\text{A}} - h_{\\text{B}} = 2 \\text{cm}$，B对应$h_{浸} = \\frac{m}{\\rho_{液} S}$，AB间距$\\Delta h = \\frac{m}{\\rho_{A} S} - \\frac{m}{\\rho_{B} S} = \\frac{m}{S} \\left(\\frac{1}{\\rho_{A}},-,\\frac{1}{\\rho_{B}}\\right)$\n根据$m = 6 . 4 \\text{g}$​，得$F_{底} = F_{浮} = G$，解得该密度计质量为$p = \\frac{F}{S}$，故B正确；\nC．密度计漂浮时，浮力等于重力，且浮力等于底端受到的液体压力（上端露出液面，液体向下压力为0），即$h = \\frac{h_{\\text{A}} + h_{\\text{B}}}{2}$，G不变，因此底端压力不变；底端面积S不变，由$\\frac{1}{\\rho_{液}} = \\frac{1}{2} \\left(\\frac{1}{\\rho_{\\text{A}}},+,\\frac{1}{\\rho_{\\text{B}}}\\right) = 1 . 125$​可知，底端液体压强不变，故C正确；\nD．若液面到A、B间距相等，说明液面在A、B中间，满足$\\rho_{液} \\approx 0 . 89 \\times 10^{3} \\text{kg}/\\text{m}^{3} \\neq 0 . 9 \\times 10^{3} \\text{kg}/\\text{m}^{3}$​​，整理得$c m^{3}$，解得$\\text{cm}^{\\text{3}}$，故D错误。\n故选ABC。",
       "type": "multi_choice",
       "score": 2
     },
@@ -238,11 +238,11 @@
     },
     {
       "number": 17,
-      "stem": "小京测量金属块的密度时，先将金属块放在调节好的天平上测量其质量，天平平衡后，右盘中所放砝码及游码在标尺上的位置如图甲所示，则金属块的质量为___________g。再将金属块用细线系好放进盛有40ml水的量筒中，量筒中的水面升高到如图乙所示的位置，则金属块的体积为___________![](figures/image98.png)。该金属块的密度为___________g/![](figures/image99.png)。\n\n![](figures/image100.png)",
+      "stem": "小京测量金属块的密度时，先将金属块放在调节好的天平上测量其质量，天平平衡后，右盘中所放砝码及游码在标尺上的位置如图甲所示，则金属块的质量为___________g。再将金属块用细线系好放进盛有40ml水的量筒中，量筒中的水面升高到如图乙所示的位置，则金属块的体积为___________$f = \\frac{1}{2} u = \\frac{1}{2} v = \\frac{1}{2} \\times 20 c m = 10 c m$。该金属块的密度为___________g/$f_{\\text{B}} < u = 40 . 0 c m - 10 . 0 c m = 30 . 0 c m < 2 f_{\\text{B}} \\ldots \\ldots \\textcircled{1}$。\n\n![](figures/image100.png)",
       "options": null,
       "section": "experiment",
       "answer": "",
-      "solution": "①. 54    ②. 20    ③. 2.7\n\n详解：[1]砝码的质量为50g，游码对应的质量为4g，所以金属块的质量为\nm=50g+4g=54g\n[2]乙图中金属块和水的总体积为60mL，则金属块的体积为\nV=60mL-40mL=20mL=20cm3\n[3]金属块的密度为\n![](figures/image101.png)",
+      "solution": "①. 54    ②. 20    ③. 2.7\n\n详解：[1]砝码的质量为50g，游码对应的质量为4g，所以金属块的质量为\nm=50g+4g=54g\n[2]乙图中金属块和水的总体积为60mL，则金属块的体积为\nV=60mL-40mL=20mL=20cm3\n[3]金属块的密度为\n$v = 100 . 0 \\text{cm} - 40 . 0 \\text{cm} = 60 . 0 \\text{cm} > 2 f_{\\text{B}} ⋯⋯\\textcircled{2}$",
       "type": "experiment",
       "score": 4
     },
@@ -272,7 +272,7 @@
       "options": null,
       "section": "experiment",
       "answer": "",
-      "solution": "（1）    ①. 10    ②. 越小      （2）小于\n\n详解：（1）\n根据图乙中的信息可知，物距等于像距的坐标为（20cm，20cm），此时物距和像距都等于2倍焦距，所以凸透镜A的焦距![](figures/image105.png)\n根据图乙中的信息可知，物距越大，像距越小。\n\n（2）\n如图丙所示，此时成倒立、放大的实像，则![](figures/image106.png)\n且![](figures/image107.png)\n解①②得![](figures/image108.png)\n即凸透镜A的焦距小于凸透镜B的焦距。",
+      "solution": "（1）    ①. 10    ②. 越小      （2）小于\n\n详解：（1）\n根据图乙中的信息可知，物距等于像距的坐标为（20cm，20cm），此时物距和像距都等于2倍焦距，所以凸透镜A的焦距$15 . 0 c m < f_{\\text{B}} < 30 . 0 c m$\n根据图乙中的信息可知，物距越大，像距越小。\n\n（2）\n如图丙所示，此时成倒立、放大的实像，则$P = U I = 2 . 5 \\text{V} \\times 0 . 28 \\text{A} = 0 . 7 \\text{W}$\n且$\\rho_{水}$\n解①②得$\\rho_{液} =$\n即凸透镜A的焦距小于凸透镜B的焦距。",
       "type": "experiment",
       "score": 4
     },
@@ -282,7 +282,7 @@
       "options": null,
       "section": "experiment",
       "answer": "",
-      "solution": "（1）右    （2）    ①. 2.5    ②. 0.28    ③. 0.7\n\n详解：（1）\n如图甲所示，为了保护电路，闭合开关S前，应将滑动变阻器的滑片P移动至阻值最大处，即右端。\n\n（2）\n[1]小灯泡的额定电压为2.5V，所以为使小灯泡正常发光，电压表示数应为2.5V。\n[2]此时电流表示数如图乙所示，选择小量程，分度值为0.02A，示数为0.28A，即通过小灯泡的电流为0.28A。\n[3]小灯泡正常发光时的功率为额定功率，所以该小灯泡的额定功率为![](figures/image110.png)",
+      "solution": "（1）右    （2）    ①. 2.5    ②. 0.28    ③. 0.7\n\n详解：（1）\n如图甲所示，为了保护电路，闭合开关S前，应将滑动变阻器的滑片P移动至阻值最大处，即右端。\n\n（2）\n[1]小灯泡的额定电压为2.5V，所以为使小灯泡正常发光，电压表示数应为2.5V。\n[2]此时电流表示数如图乙所示，选择小量程，分度值为0.02A，示数为0.28A，即通过小灯泡的电流为0.28A。\n[3]小灯泡正常发光时的功率为额定功率，所以该小灯泡的额定功率为$h_{2}$",
       "type": "experiment",
       "score": 4
     },
@@ -298,11 +298,11 @@
     },
     {
       "number": 23,
-      "stem": "某同学用刻度尺、适量的水和如图所示的器材测量某未知液体的密度。容器用隔板分成左、右两部分，隔板中部有一个圆孔用薄橡皮膜封闭，左、右两部分均可注入液体。已知水的密度为![](figures/image112.png)，以下是他的部分实验步骤，请帮他补充完整。\n\n![](figures/image113.png)\n\n（1）在隔板左侧加入适量的水，橡皮膜发生形变，用刻度尺测量水面到橡皮膜中心的深度为h1并记录；在隔板右侧倒入待测液体，___________；\n\n（2）待测液体的密度![](figures/image114.png)___________。（用已知量和测量量表示）",
+      "stem": "某同学用刻度尺、适量的水和如图所示的器材测量某未知液体的密度。容器用隔板分成左、右两部分，隔板中部有一个圆孔用薄橡皮膜封闭，左、右两部分均可注入液体。已知水的密度为$\\frac{\\rho_{水} h_{1}}{h_{2}}$，以下是他的部分实验步骤，请帮他补充完整。\n\n![](figures/image113.png)\n\n（1）在隔板左侧加入适量的水，橡皮膜发生形变，用刻度尺测量水面到橡皮膜中心的深度为h1并记录；在隔板右侧倒入待测液体，___________；\n\n（2）待测液体的密度$h_{2}$___________。（用已知量和测量量表示）",
       "options": null,
       "section": "experiment",
       "answer": "",
-      "solution": "（1）当橡皮膜恢复平整时，再用刻度尺测量待测液体液面到橡皮膜中心的深度为![](figures/image115.png)并记录。      （2）![](figures/image116.png)\n\n详解：（1）\n向隔板左侧注入适量水后，水对橡皮膜产生压强使其发生形变，向隔板右侧倒入待测液体，当橡皮膜恢复平整时，意味着左右两侧液体对橡皮膜的压强相等，此时再用刻度尺测量待测液体液面到橡皮膜中心的深度为![](figures/image115.png)并记录。\n\n（2）\n根据液体压强公式![](figures/image117.png)，当左右两侧压强相等时，有![](figures/image118.png)，两边同时约去![](figures/image119.png)，可得![](figures/image120.png)",
+      "solution": "（1）当橡皮膜恢复平整时，再用刻度尺测量待测液体液面到橡皮膜中心的深度为$p = \\rho g h$并记录。      （2）$\\rho_{水} g h_{1} = \\rho_{液} g h_{2}$\n\n详解：（1）\n向隔板左侧注入适量水后，水对橡皮膜产生压强使其发生形变，向隔板右侧倒入待测液体，当橡皮膜恢复平整时，意味着左右两侧液体对橡皮膜的压强相等，此时再用刻度尺测量待测液体液面到橡皮膜中心的深度为$g$并记录。\n\n（2）\n根据液体压强公式$\\rho_{液} = \\frac{\\rho_{水} h_{1}}{h_{2}}$，当左右两侧压强相等时，有$31 . 7 \\text{kW} \\cdot \\text{h}$，两边同时约去$P_{最大} = U I_{最大} = 220 \\text{V} \\times 10 \\text{A} = 2200 \\text{W}$，可得$P_{总} = P_{锅} + P_{炉} + P_{抽} = 1000 \\text{W} + 1200 \\text{W} + 300 \\text{W} = 2500 \\text{W}$",
       "type": "experiment",
       "score": 3
     },
@@ -322,7 +322,7 @@
       "options": null,
       "section": "calculation",
       "answer": "",
-      "solution": "（1）该插座不能同时为电饭锅、微波炉、抽油烟机供电      （2）![](figures/image123.png)\n\n详解：（1）\n插座允许承受的最大功率为![](figures/image124.png)\n三个用电器同时工作的总功率为![](figures/image125.png)\n三个用电器同时工作的总功率大于插座允许承受的最大功率，所以该插座不能同时为电饭锅、微波炉、抽油烟机供电。\n\n（2）\n初始读数![](figures/image126.png)，电饭锅消耗电能为![](figures/image127.png)\n微波炉消耗电能为![](figures/image128.png)\n抽油烟机消耗电能为![](figures/image129.png)\n所以做完午餐后插座屏幕上的示数为![](figures/image130.png)",
+      "solution": "（1）该插座不能同时为电饭锅、微波炉、抽油烟机供电      （2）$W_{0} =\n\n详解：（1）\n插座允许承受的最大功率为$W_{1} = P_{1} t_{1} = 1 \\text{kW} \\times 0 . 5 \\text{h} = 0 . 5 \\text{kW} \\cdot \\text{h}$\n三个用电器同时工作的总功率为$W_{2} = P_{2} t_{2} = 1 . 2 \\text{kW} \\times 0 . 25 \\text{h} = 0 . 3 \\text{kW} \\cdot \\text{h}$\n三个用电器同时工作的总功率大于插座允许承受的最大功率，所以该插座不能同时为电饭锅、微波炉、抽油烟机供电。\n\n（2）\n初始读数$W_{3} = P_{3} t_{3} = 0 . 3 \\text{kW} \\times \\frac{1}{3} \\text{h} = 0 . 1 \\text{kW} \\cdot \\text{h}$，电饭锅消耗电能为$W_{总} = W_{0} + W_{1} + W_{2} + W_{3} = 30 . 8 \\text{kW} \\cdot \\text{h} + 0 . 5 \\text{kW} \\cdot \\text{h} + 0 . 3 \\text{kW} \\cdot \\text{h} + 0 . 1 \\text{kW} \\cdot \\text{h} = 31 . 7 \\text{kW} \\cdot \\text{h}$\n微波炉消耗电能为$I_{\\text{max}} = 0 . 05 \\text{A}$\n抽油烟机消耗电能为$U = 10 \\text{V}$\n所以做完午餐后插座屏幕上的示数为$I = \\frac{U}{R}$",
       "type": "calculation",
       "score": 4
     },
@@ -332,7 +332,7 @@
       "options": null,
       "section": "calculation",
       "answer": "",
-      "solution": "（1）  100 kg    （2）  应将踏板向支点O方向移动\n\n详解：（1）\n由题意得，电流表最大测量电流![](figures/image132.png)，电源电压![](figures/image133.png)\n根据欧姆定律![](figures/image134.png)，可得压力传感器的最小值![](figures/image135.png)\n由图乙可知，当![](figures/image136.png)时，压力传感器受到的最大压力![](figures/image137.png)，即杠杆A端受到的阻力![](figures/image138.png)\n设电子秤能测量的最大重力为G，支点为O，根据杠杆平衡条件![](figures/image139.png)可得![](figures/image140.png)\n已知![](figures/image141.png)，代入得![](figures/image142.png)\n根据重力公式![](figures/image143.png)，可得最大测量质量![](figures/image144.png)\n\n（2）\n若要增大电子秤测量范围，即需要增大可测量的最大重力G。\n根据杠杆平衡条件![](figures/image145.png)，压力传感器允许的最大压力Fmax、力臂OA均保持不变，要增大G，需要减小踏板到支点O的力臂OB，因此应将踏板向支点O方向移动，即可增大测量的最大重力，增大电子秤的测量范围。",
+      "solution": "（1）  100 kg    （2）  应将踏板向支点O方向移动\n\n详解：（1）\n由题意得，电流表最大测量电流$R_{\\text{min}} = \\frac{U}{I_{\\text{max}}} = \\frac{10 \\text{V}}{0 . 05 \\text{A}} = 200 \\Omega$，电源电压$R = 200 \\Omega$\n根据欧姆定律$F = 200 \\text{N}$，可得压力传感器的最小值$F_{A} = F = 200 \\text{N}$\n由图乙可知，当$F_{1} L_{1} = F_{2} L_{2}$时，压力传感器受到的最大压力$G \\cdot O B = F_{A} \\cdot O A$，即杠杆A端受到的阻力$A O : B O = 5 : 1$\n设电子秤能测量的最大重力为G，支点为O，根据杠杆平衡条件$G = \\frac{F_{A} \\cdot O A}{O B} = \\frac{200 \\text{N} \\times 5}{1} = 1000 \\text{N}$可得$G = m g$\n已知$m = \\frac{G}{g} = \\frac{1000 \\text{N}}{10 \\text{N}/\\text{kg}} = 100 \\text{kg}$，代入得$G \\cdot O B = F_{\\text{max}} \\cdot O A$\n根据重力公式![](figures/image143.png)，可得最大测量质量![](figures/image144.png)\n\n（2）\n若要增大电子秤测量范围，即需要增大可测量的最大重力G。\n根据杠杆平衡条件![](figures/image145.png)，压力传感器允许的最大压力Fmax、力臂OA均保持不变，要增大G，需要减小踏板到支点O的力臂OB，因此应将踏板向支点O方向移动，即可增大测量的最大重力，增大电子秤的测量范围。",
       "type": "calculation",
       "score": 4
     }
@@ -383,7 +383,7 @@
     {
       "number": 8,
       "correct": "D",
-      "solution": "由图可知，闭合开关S后，![](figures/image16.png)与![](figures/image17.png)并联，![](figures/image18.png)测干路电流，![](figures/image19.png)测通过![](figures/image17.png)的电流。\nA．并联电路中，干路电流等于各支路电流之和，所以干路电流大于支路电流，即![](figures/image20.png)，故A错误；\nB．由并联电路电流特点可知，通过![](figures/image16.png)的电流为![](figures/image21.png)，已知两个定值电阻阻值![](figures/image22.png)，![](figures/image16.png)和![](figures/image17.png)两端的电压相等，由欧姆定律可知，通过![](figures/image16.png)的电流小于通过![](figures/image17.png)的电流，即![](figures/image23.png)，故B错误；\nC．由并联电路电流特点可知，通过![](figures/image16.png)的电流为![](figures/image21.png)，![](figures/image16.png)两端的电压为![](figures/image24.png)，则![](figures/image16.png)的阻值为![](figures/image25.png)，故C错误；\nD．由上述分析可知，通过![](figures/image17.png)的电流为![](figures/image26.png)，![](figures/image17.png)两端的电压为![](figures/image27.png)，则![](figures/image17.png)的阻值为![](figures/image28.png)，故D正确。\n故选D。",
+      "solution": "由图可知，闭合开关S后，$R_{1}$与$R_{2}$并联，$\\text{A}_{1}$测干路电流，$\\text{A}_{2}$测通过$R_{2}$的电流。\nA．并联电路中，干路电流等于各支路电流之和，所以干路电流大于支路电流，即$I_{1} > I_{2}$，故A错误；\nB．由并联电路电流特点可知，通过$R_{1}$的电流为$I_{1} - I_{2}$，已知两个定值电阻阻值$R_{1} > R_{2}$，$R_{1}$和$R_{2}$两端的电压相等，由欧姆定律可知，通过$R_{1}$的电流小于通过$R_{2}$的电流，即$\\left(I_{1},-,I_{2}\\right) < I_{2}$，故B错误；\nC．由并联电路电流特点可知，通过$R_{1}$的电流为$I_{1} - I_{2}$，$R_{1}$两端的电压为$U_{1}$，则$R_{1}$的阻值为$R_{1} = \\frac{U_{1}}{I_{1} - I_{2}}$，故C错误；\nD．由上述分析可知，通过$R_{2}$的电流为$I_{2}$，$R_{2}$两端的电压为$U_{2}$，则$R_{2}$的阻值为$R_{2} = \\frac{U_{2}}{I_{2}}$，故D正确。\n故选D。",
       "score": 2
     },
     {
@@ -395,19 +395,19 @@
     {
       "number": 10,
       "correct": "B",
-      "solution": "首先根据功率公式![](figures/image31.png)，已知四种用电器消耗![](figures/image32.png)，结合图中时间计算得各用电器正常工作的功率： 洗衣机功率![](figures/image33.png)\n吸尘器功率![](figures/image34.png)\n烤面包机功率![](figures/image35.png)\n空调功率![](figures/image36.png)\nA.吸尘器主要将电能转化为机械能，只有少量电能转化为电热；烤面包机是电热器，电能全部转化为电热。二者相同时间消耗总电能相同，但产生的电热不同，故A错误；\nB．电功率是描述电流做功快慢的物理量，功率越小，电流做功越慢。洗衣机的功率是四个用电器中最小的，因此正常工作时洗衣机的电流做功最慢，故B正确；\nC．正常工作时实际功率等于额定功率，计算得吸尘器和烤面包机功率相同，故C错误；\nD．一个月消耗电能![](figures/image37.png)，电费多少和用电器功率、工作时间都有关，不确定工作时间的情况下，不能确定空调电费一定更多，故D错误。\n故选B。",
+      "solution": "首先根据功率公式$P = \\frac{W}{t}$，已知四种用电器消耗$W = 1 \\text{kW} \\cdot \\text{h}$，结合图中时间计算得各用电器正常工作的功率： 洗衣机功率$P_{洗} = \\frac{1 \\text{kW} \\cdot \\text{h}}{2 \\text{h}} = 0 . 5 \\text{kW}$\n吸尘器功率$P_{吸} = \\frac{1 \\text{kW} \\cdot \\text{h}}{1 \\text{h}} = 1 \\text{kW}$\n烤面包机功率$P_{烤} = \\frac{1 \\text{kW} \\cdot \\text{h}}{1 \\text{h}} = 1 \\text{kW}$\n空调功率$P_{空} = \\frac{1 \\text{kW} \\cdot \\text{h}}{0 . 8 \\text{h}} = 1 . 25 \\text{kW}$\nA.吸尘器主要将电能转化为机械能，只有少量电能转化为电热；烤面包机是电热器，电能全部转化为电热。二者相同时间消耗总电能相同，但产生的电热不同，故A错误；\nB．电功率是描述电流做功快慢的物理量，功率越小，电流做功越慢。洗衣机的功率是四个用电器中最小的，因此正常工作时洗衣机的电流做功最慢，故B正确；\nC．正常工作时实际功率等于额定功率，计算得吸尘器和烤面包机功率相同，故C错误；\nD．一个月消耗电能$W = P t$，电费多少和用电器功率、工作时间都有关，不确定工作时间的情况下，不能确定空调电费一定更多，故D错误。\n故选B。",
       "score": 2
     },
     {
       "number": 11,
       "correct": "D",
-      "solution": "由于两容器底部受到的液体压强相等，甲容器底面积大于乙容器底面积，由![](figures/image47.png)可知，甲容器底部受到的液体压力F甲大于乙容器底部受到的液体压力F乙，由于\nG甲液=F甲\nG乙液=F乙\n所以\nG甲液>G乙液\n由G=mg可知\nm甲液>m乙液\n由于甲乙两种液体的体积相等，由![](figures/image48.png)可知\n![](figures/image49.png)甲>![](figures/image49.png)乙\n由于A点到容器底部的深度等于B点到容器底部的深度，则两点以下部分液体的压强大小关系为\npA下>pB下\n若两容器底部受到的液体压强相等，则两点处受到液体的大小关系为\n![](figures/image50.png)\n故ABC错误，故D正确。\n故选D。",
+      "solution": "由于两容器底部受到的液体压强相等，甲容器底面积大于乙容器底面积，由$F = p S$可知，甲容器底部受到的液体压力F甲大于乙容器底部受到的液体压力F乙，由于\nG甲液=F甲\nG乙液=F乙\n所以\nG甲液>G乙液\n由G=mg可知\nm甲液>m乙液\n由于甲乙两种液体的体积相等，由$\\rho = \\frac{m}{V}$可知\n$\\rho$甲>$\\rho$乙\n由于A点到容器底部的深度等于B点到容器底部的深度，则两点以下部分液体的压强大小关系为\npA下>pB下\n若两容器底部受到的液体压强相等，则两点处受到液体的大小关系为\n$U_{滑} = U - U_{\\text{L}} = 4 . 5 \\text{V} - 2 . 5 \\text{V} = 2 \\text{V} < 3 \\text{V}$\n故ABC错误，故D正确。\n故选D。",
       "score": 2
     },
     {
       "number": 12,
       "correct": "A",
-      "solution": "由电路图可知，闭合开关S，灯泡L与滑动变阻器串联，电压表测滑动变阻器两端的电压。灯泡正常发光时的电压为2.5V，功率为1.25W，因串联电路总电压等于各分电压之和， 所以，此时电压表的示数![](figures/image52.png)\n则电压表安全，因串联电路中各处的电流相等，所以，由![](figures/image53.png)可得，灯泡正常发光时电路中的电流![](figures/image54.png)\n因滑动变阻器允许通过的最大电流为1A，而灯泡允许通过的最大电流为0.5A，所以，电路中的最大电流![](figures/image55.png)，此时电路的总功率最大，滑动变阻器接入电路中的电阻最小，则电路的最大电功率![](figures/image56.png)\n由![](figures/image57.png)可得，滑动变阻器接入电路中的最小阻值![](figures/image58.png)\n灯泡的电阻![](figures/image59.png)\n当电压表的示数为3V时，灯泡两端的电压![](figures/image60.png)\n此时电路中的电流![](figures/image61.png)\n滑动变阻器接入电路中的电阻![](figures/image62.png)，电路安全，\n所以，电压表的最大示数为3V，电路中的最小电流为0.3A，变阻器接入电路中的最大阻值为10Ω，则电压表示数的变化范围是2~3V，电路中电流变化的范围是0.3~0.5A，滑动变阻器阻值变化的范围是4~10Ω，故BCD错误；\n电路的最小电功率![](figures/image63.png)\n则该电路的功率变化范围是1.35~2.25W，故A正确。\n故选 A。",
+      "solution": "由电路图可知，闭合开关S，灯泡L与滑动变阻器串联，电压表测滑动变阻器两端的电压。灯泡正常发光时的电压为2.5V，功率为1.25W，因串联电路总电压等于各分电压之和， 所以，此时电压表的示数$P = U I$\n则电压表安全，因串联电路中各处的电流相等，所以，由$I = I_{\\text{L}} = \\frac{P_{\\text{L}}}{U_{\\text{L}}} = \\frac{1 . 25 \\text{W}}{2 . 5 \\text{V}} = 0 . 5 \\text{A}$可得，灯泡正常发光时电路中的电流$I_{大} = 0 . 5 \\text{A}$\n因滑动变阻器允许通过的最大电流为1A，而灯泡允许通过的最大电流为0.5A，所以，电路中的最大电流$P_{大} = U I_{大} = 4 . 5 \\text{V} \\times 0 . 5 \\text{A} = 2 . 25 \\text{W}$，此时电路的总功率最大，滑动变阻器接入电路中的电阻最小，则电路的最大电功率$I = \\frac{U}{R}$\n由$R_{滑小} = \\frac{U_{滑}}{I_{大}} = \\frac{2 \\text{V}}{0 . 5 \\text{A}} = 4 \\Omega$可得，滑动变阻器接入电路中的最小阻值$R_{\\text{L}} = \\frac{U_{\\text{L}}}{I_{\\text{L}}} = \\frac{2 . 5 \\text{V}}{0 . 5 \\text{A}} = 5 \\Omega$\n灯泡的电阻$\\left(U_{\\text{L}}\\right)^{'} = U - U_{滑大} = 4 . 5 \\text{V} - 3 \\text{V} = 1 . 5 \\text{V}$\n当电压表的示数为3V时，灯泡两端的电压$I = \\frac{\\left(U_{\\text{L}}\\right)^{'}}{R_{\\text{L}}} = \\frac{1 . 5 \\text{V}}{5 \\Omega} = 0 . 3 \\text{A}$\n此时电路中的电流$R_{滑大} = \\frac{U_{滑大}}{I_{小}} = \\frac{3 \\text{V}}{0 . 3 \\text{A}} = 10 \\Omega < 20 \\Omega$\n滑动变阻器接入电路中的电阻$P_{小} = U I_{小} = 4 . 5 \\text{V} \\times 0 . 3 \\text{A} = 1 . 35 \\text{W}$，电路安全，\n所以，电压表的最大示数为3V，电路中的最小电流为0.3A，变阻器接入电路中的最大阻值为10Ω，则电压表示数的变化范围是2~3V，电路中电流变化的范围是0.3~0.5A，滑动变阻器阻值变化的范围是4~10Ω，故BCD错误；\n电路的最小电功率$4 \\times 10^{- 2} \\text{m}^{2}$\n则该电路的功率变化范围是1.35~2.25W，故A正确。\n故选 A。",
       "score": 2
     },
     {
@@ -419,13 +419,13 @@
     {
       "number": 14,
       "correct": "BD",
-      "solution": "A.第一次拉绳子时，由图可知，共有3股绳拉动滑轮，货物20s内竖直匀速上升了2m，则工人的拉力移动的距离为![](figures/image66.png)\n工人拉力的功率为![](figures/image67.png)\n故A错误；\nB.不计绳重和摩擦，由滑轮组的规律可知![](figures/image68.png)，则![](figures/image69.png)\n由题知，两个滑轮质量相等，则![](figures/image70.png)\n将滑轮组和货物看成一个整体，整体的重力为![](figures/image71.png)\n滑轮组对悬挂点C的拉力，即为悬挂点C对滑轮组的拉力、工人对绳子的拉力的合力与整体重力是一对平衡力，即![](figures/image72.png)\n![](figures/image73.png)\n故B正确；\nC.第一次拉绳子过程中，该滑轮组的机械效率为![](figures/image74.png)\n故C错误；\nD.第二次拉绳子时，工人对台面的压力为![](figures/image75.png)\n由题意知，第二次拉绳子的拉力为![](figures/image76.png)\n不计绳重和摩擦，根据![](figures/image68.png)得![](figures/image77.png)，解得![](figures/image78.png)\n故D正确；\n故选BD。",
+      "solution": "A.第一次拉绳子时，由图可知，共有3股绳拉动滑轮，货物20s内竖直匀速上升了2m，则工人的拉力移动的距离为$P = \\frac{W}{t} = \\frac{F s}{t} = \\frac{150 \\text{N} \\times 6 \\text{m}}{20 \\text{s}} = 45 \\text{W}$\n工人拉力的功率为$F = \\frac{G + G_{动}}{n}$\n故A错误；\nB.不计绳重和摩擦，由滑轮组的规律可知$G_{动} = n F - G = 3 \\times 150 \\text{N} - 360 \\text{N} = 90 \\text{N}$，则$G_{定} = G_{动} = 90 \\text{N}$\n由题知，两个滑轮质量相等，则$G = G_{定} + G_{动} + G_{物} = 90 \\text{N} + 90 \\text{N} + 360 \\text{N} = 540 \\text{N}$\n将滑轮组和货物看成一个整体，整体的重力为$G = F_{C} + F_{人}$\n滑轮组对悬挂点C的拉力，即为悬挂点C对滑轮组的拉力、工人对绳子的拉力的合力与整体重力是一对平衡力，即$\\eta = \\frac{W_{有}}{W_{总}} = \\frac{G_{物} h}{F_{人} s} = \\frac{360 \\text{N} \\times 2 \\text{m}}{150 \\text{N} \\times 6 \\text{m}} \\times 100 \\% = 80 \\%$\n$F_{压} = p S = 2 . 0 \\times 10^{4} P a \\times 4 \\times 10^{- 2} \\text{m}^{2} = 800 \\text{N}$\n故B正确；\nC.第一次拉绳子过程中，该滑轮组的机械效率为$F_{2} = F_{压} - G_{人} = 800 \\text{N} - 640 \\text{N} = 160 \\text{N}$\n故C错误；\nD.第二次拉绳子时，工人对台面的压力为$F = \\frac{G + G_{动}}{n}$\n由题意知，第二次拉绳子的拉力为$160 \\text{N} = \\frac{G_{\\text{B}} + 90 \\text{N}}{3}$\n不计绳重和摩擦，根据$G_{\\text{B}} =\\text{390N}$得$\\rho_{酒精} = 0 . 8 \\times 10^{3} \\text{kg} / \\text{m}^{3}$，解得$\\rho_{液} = 0 . 9 \\times 10^{3} \\text{kg} / \\text{m}^{3}$\n故D正确；\n故选BD。",
       "score": 2
     },
     {
       "number": 15,
       "correct": "ABC",
-      "solution": "密度计的原理是漂浮时浮力等于自身重力，即![](figures/image82.png)​，整理得![](figures/image83.png)，由此可知，液体密度越小，浸入深度![](figures/image84.png)越大，密度计刻度符合“上小下大”的规律；\nA．A在B上方，对应浸入深度更大，液体密度更小，酒精密度小于水的密度，因此A刻度对应酒精密度![](figures/image85.png)，故A正确；\nB．A对应![](figures/image86.png)，B对应![](figures/image87.png)，AB间距![](figures/image88.png)\n根据![](figures/image89.png)​，得![](figures/image90.png)，解得该密度计质量为![](figures/image91.png)，故B正确；\nC．密度计漂浮时，浮力等于重力，且浮力等于底端受到的液体压力（上端露出液面，液体向下压力为0），即![](figures/image92.png)，G不变，因此底端压力不变；底端面积S不变，由![](figures/image93.png)​可知，底端液体压强不变，故C正确；\nD．若液面到A、B间距相等，说明液面在A、B中间，满足![](figures/image94.png)​​，整理得![](figures/image95.png)，解得![](figures/image96.png)，故D错误。\n故选ABC。",
+      "solution": "密度计的原理是漂浮时浮力等于自身重力，即$h_{浸}$​，整理得$0 . 8 \\times 10^{3} \\text{kg}/\\text{m}^{3}$，由此可知，液体密度越小，浸入深度$\\rho_{\\text{A}} = 0 . 8 \\text{g}/\\text{cm}^{3}$越大，密度计刻度符合“上小下大”的规律；\nA．A在B上方，对应浸入深度更大，液体密度更小，酒精密度小于水的密度，因此A刻度对应酒精密度$\\rho_{\\text{B}} = 1 \\text{g}/\\text{cm}^{3}$，故A正确；\nB．A对应$\\Delta h = h_{\\text{A}} - h_{\\text{B}} = 2 \\text{cm}$，B对应$h_{浸} = \\frac{m}{\\rho_{液} S}$，AB间距$\\Delta h = \\frac{m}{\\rho_{A} S} - \\frac{m}{\\rho_{B} S} = \\frac{m}{S} \\left(\\frac{1}{\\rho_{A}},-,\\frac{1}{\\rho_{B}}\\right)$\n根据$m = 6 . 4 \\text{g}$​，得$F_{底} = F_{浮} = G$，解得该密度计质量为$p = \\frac{F}{S}$，故B正确；\nC．密度计漂浮时，浮力等于重力，且浮力等于底端受到的液体压力（上端露出液面，液体向下压力为0），即$h = \\frac{h_{\\text{A}} + h_{\\text{B}}}{2}$，G不变，因此底端压力不变；底端面积S不变，由$\\frac{1}{\\rho_{液}} = \\frac{1}{2} \\left(\\frac{1}{\\rho_{\\text{A}}},+,\\frac{1}{\\rho_{\\text{B}}}\\right) = 1 . 125$​可知，底端液体压强不变，故C正确；\nD．若液面到A、B间距相等，说明液面在A、B中间，满足$\\rho_{液} \\approx 0 . 89 \\times 10^{3} \\text{kg}/\\text{m}^{3} \\neq 0 . 9 \\times 10^{3} \\text{kg}/\\text{m}^{3}$​​，整理得$c m^{3}$，解得$\\text{cm}^{\\text{3}}$，故D错误。\n故选ABC。",
       "score": 2
     },
     {
@@ -437,7 +437,7 @@
     {
       "number": 17,
       "correct": "",
-      "solution": "①. 54    ②. 20    ③. 2.7\n\n详解：[1]砝码的质量为50g，游码对应的质量为4g，所以金属块的质量为\nm=50g+4g=54g\n[2]乙图中金属块和水的总体积为60mL，则金属块的体积为\nV=60mL-40mL=20mL=20cm3\n[3]金属块的密度为\n![](figures/image101.png)",
+      "solution": "①. 54    ②. 20    ③. 2.7\n\n详解：[1]砝码的质量为50g，游码对应的质量为4g，所以金属块的质量为\nm=50g+4g=54g\n[2]乙图中金属块和水的总体积为60mL，则金属块的体积为\nV=60mL-40mL=20mL=20cm3\n[3]金属块的密度为\n$v = 100 . 0 \\text{cm} - 40 . 0 \\text{cm} = 60 . 0 \\text{cm} > 2 f_{\\text{B}} ⋯⋯\\textcircled{2}$",
       "score": 4
     },
     {
@@ -455,13 +455,13 @@
     {
       "number": 20,
       "correct": "",
-      "solution": "（1）    ①. 10    ②. 越小      （2）小于\n\n详解：（1）\n根据图乙中的信息可知，物距等于像距的坐标为（20cm，20cm），此时物距和像距都等于2倍焦距，所以凸透镜A的焦距![](figures/image105.png)\n根据图乙中的信息可知，物距越大，像距越小。\n\n（2）\n如图丙所示，此时成倒立、放大的实像，则![](figures/image106.png)\n且![](figures/image107.png)\n解①②得![](figures/image108.png)\n即凸透镜A的焦距小于凸透镜B的焦距。",
+      "solution": "（1）    ①. 10    ②. 越小      （2）小于\n\n详解：（1）\n根据图乙中的信息可知，物距等于像距的坐标为（20cm，20cm），此时物距和像距都等于2倍焦距，所以凸透镜A的焦距$15 . 0 c m < f_{\\text{B}} < 30 . 0 c m$\n根据图乙中的信息可知，物距越大，像距越小。\n\n（2）\n如图丙所示，此时成倒立、放大的实像，则$P = U I = 2 . 5 \\text{V} \\times 0 . 28 \\text{A} = 0 . 7 \\text{W}$\n且$\\rho_{水}$\n解①②得$\\rho_{液} =$\n即凸透镜A的焦距小于凸透镜B的焦距。",
       "score": 4
     },
     {
       "number": 21,
       "correct": "",
-      "solution": "（1）右    （2）    ①. 2.5    ②. 0.28    ③. 0.7\n\n详解：（1）\n如图甲所示，为了保护电路，闭合开关S前，应将滑动变阻器的滑片P移动至阻值最大处，即右端。\n\n（2）\n[1]小灯泡的额定电压为2.5V，所以为使小灯泡正常发光，电压表示数应为2.5V。\n[2]此时电流表示数如图乙所示，选择小量程，分度值为0.02A，示数为0.28A，即通过小灯泡的电流为0.28A。\n[3]小灯泡正常发光时的功率为额定功率，所以该小灯泡的额定功率为![](figures/image110.png)",
+      "solution": "（1）右    （2）    ①. 2.5    ②. 0.28    ③. 0.7\n\n详解：（1）\n如图甲所示，为了保护电路，闭合开关S前，应将滑动变阻器的滑片P移动至阻值最大处，即右端。\n\n（2）\n[1]小灯泡的额定电压为2.5V，所以为使小灯泡正常发光，电压表示数应为2.5V。\n[2]此时电流表示数如图乙所示，选择小量程，分度值为0.02A，示数为0.28A，即通过小灯泡的电流为0.28A。\n[3]小灯泡正常发光时的功率为额定功率，所以该小灯泡的额定功率为$h_{2}$",
       "score": 4
     },
     {
@@ -473,7 +473,7 @@
     {
       "number": 23,
       "correct": "",
-      "solution": "（1）当橡皮膜恢复平整时，再用刻度尺测量待测液体液面到橡皮膜中心的深度为![](figures/image115.png)并记录。      （2）![](figures/image116.png)\n\n详解：（1）\n向隔板左侧注入适量水后，水对橡皮膜产生压强使其发生形变，向隔板右侧倒入待测液体，当橡皮膜恢复平整时，意味着左右两侧液体对橡皮膜的压强相等，此时再用刻度尺测量待测液体液面到橡皮膜中心的深度为![](figures/image115.png)并记录。\n\n（2）\n根据液体压强公式![](figures/image117.png)，当左右两侧压强相等时，有![](figures/image118.png)，两边同时约去![](figures/image119.png)，可得![](figures/image120.png)",
+      "solution": "（1）当橡皮膜恢复平整时，再用刻度尺测量待测液体液面到橡皮膜中心的深度为$p = \\rho g h$并记录。      （2）$\\rho_{水} g h_{1} = \\rho_{液} g h_{2}$\n\n详解：（1）\n向隔板左侧注入适量水后，水对橡皮膜产生压强使其发生形变，向隔板右侧倒入待测液体，当橡皮膜恢复平整时，意味着左右两侧液体对橡皮膜的压强相等，此时再用刻度尺测量待测液体液面到橡皮膜中心的深度为$g$并记录。\n\n（2）\n根据液体压强公式$\\rho_{液} = \\frac{\\rho_{水} h_{1}}{h_{2}}$，当左右两侧压强相等时，有$31 . 7 \\text{kW} \\cdot \\text{h}$，两边同时约去$P_{最大} = U I_{最大} = 220 \\text{V} \\times 10 \\text{A} = 2200 \\text{W}$，可得$P_{总} = P_{锅} + P_{炉} + P_{抽} = 1000 \\text{W} + 1200 \\text{W} + 300 \\text{W} = 2500 \\text{W}$",
       "score": 3
     },
     {
@@ -485,14 +485,20 @@
     {
       "number": 25,
       "correct": "",
-      "solution": "（1）该插座不能同时为电饭锅、微波炉、抽油烟机供电      （2）![](figures/image123.png)\n\n详解：（1）\n插座允许承受的最大功率为![](figures/image124.png)\n三个用电器同时工作的总功率为![](figures/image125.png)\n三个用电器同时工作的总功率大于插座允许承受的最大功率，所以该插座不能同时为电饭锅、微波炉、抽油烟机供电。\n\n（2）\n初始读数![](figures/image126.png)，电饭锅消耗电能为![](figures/image127.png)\n微波炉消耗电能为![](figures/image128.png)\n抽油烟机消耗电能为![](figures/image129.png)\n所以做完午餐后插座屏幕上的示数为![](figures/image130.png)",
+      "solution": "（1）该插座不能同时为电饭锅、微波炉、抽油烟机供电      （2）$W_{0} =\n\n详解：（1）\n插座允许承受的最大功率为$W_{1} = P_{1} t_{1} = 1 \\text{kW} \\times 0 . 5 \\text{h} = 0 . 5 \\text{kW} \\cdot \\text{h}$\n三个用电器同时工作的总功率为$W_{2} = P_{2} t_{2} = 1 . 2 \\text{kW} \\times 0 . 25 \\text{h} = 0 . 3 \\text{kW} \\cdot \\text{h}$\n三个用电器同时工作的总功率大于插座允许承受的最大功率，所以该插座不能同时为电饭锅、微波炉、抽油烟机供电。\n\n（2）\n初始读数$W_{3} = P_{3} t_{3} = 0 . 3 \\text{kW} \\times \\frac{1}{3} \\text{h} = 0 . 1 \\text{kW} \\cdot \\text{h}$，电饭锅消耗电能为$W_{总} = W_{0} + W_{1} + W_{2} + W_{3} = 30 . 8 \\text{kW} \\cdot \\text{h} + 0 . 5 \\text{kW} \\cdot \\text{h} + 0 . 3 \\text{kW} \\cdot \\text{h} + 0 . 1 \\text{kW} \\cdot \\text{h} = 31 . 7 \\text{kW} \\cdot \\text{h}$\n微波炉消耗电能为$I_{\\text{max}} = 0 . 05 \\text{A}$\n抽油烟机消耗电能为$U = 10 \\text{V}$\n所以做完午餐后插座屏幕上的示数为$I = \\frac{U}{R}$",
       "score": 4
     },
     {
       "number": 26,
       "correct": "",
-      "solution": "（1）  100 kg    （2）  应将踏板向支点O方向移动\n\n详解：（1）\n由题意得，电流表最大测量电流![](figures/image132.png)，电源电压![](figures/image133.png)\n根据欧姆定律![](figures/image134.png)，可得压力传感器的最小值![](figures/image135.png)\n由图乙可知，当![](figures/image136.png)时，压力传感器受到的最大压力![](figures/image137.png)，即杠杆A端受到的阻力![](figures/image138.png)\n设电子秤能测量的最大重力为G，支点为O，根据杠杆平衡条件![](figures/image139.png)可得![](figures/image140.png)\n已知![](figures/image141.png)，代入得![](figures/image142.png)\n根据重力公式![](figures/image143.png)，可得最大测量质量![](figures/image144.png)\n\n（2）\n若要增大电子秤测量范围，即需要增大可测量的最大重力G。\n根据杠杆平衡条件![](figures/image145.png)，压力传感器允许的最大压力Fmax、力臂OA均保持不变，要增大G，需要减小踏板到支点O的力臂OB，因此应将踏板向支点O方向移动，即可增大测量的最大重力，增大电子秤的测量范围。",
+      "solution": "（1）  100 kg    （2）  应将踏板向支点O方向移动\n\n详解：（1）\n由题意得，电流表最大测量电流$R_{\\text{min}} = \\frac{U}{I_{\\text{max}}} = \\frac{10 \\text{V}}{0 . 05 \\text{A}} = 200 \\Omega$，电源电压$R = 200 \\Omega$\n根据欧姆定律$F = 200 \\text{N}$，可得压力传感器的最小值$F_{A} = F = 200 \\text{N}$\n由图乙可知，当$F_{1} L_{1} = F_{2} L_{2}$时，压力传感器受到的最大压力$G \\cdot O B = F_{A} \\cdot O A$，即杠杆A端受到的阻力$A O : B O = 5 : 1$\n设电子秤能测量的最大重力为G，支点为O，根据杠杆平衡条件$G = \\frac{F_{A} \\cdot O A}{O B} = \\frac{200 \\text{N} \\times 5}{1} = 1000 \\text{N}$可得$G = m g$\n已知$m = \\frac{G}{g} = \\frac{1000 \\text{N}}{10 \\text{N}/\\text{kg}} = 100 \\text{kg}$，代入得$G \\cdot O B = F_{\\text{max}} \\cdot O A$\n根据重力公式![](figures/image143.png)，可得最大测量质量![](figures/image144.png)\n\n（2）\n若要增大电子秤测量范围，即需要增大可测量的最大重力G。\n根据杠杆平衡条件![](figures/image145.png)，压力传感器允许的最大压力Fmax、力臂OA均保持不变，要增大G，需要减小踏板到支点O的力臂OB，因此应将踏板向支点O方向移动，即可增大测量的最大重力，增大电子秤的测量范围。",
       "score": 4
+    },
+    {
+      "number": 30,
+      "correct": "",
+      "solution": "8 \\text{kW} \\cdot \\text{h}$",
+      "score": null
     }
   ],
   "full_score": 70,

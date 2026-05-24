@@ -35,15 +35,37 @@ M_NS = "http://schemas.openxmlformats.org/officeDocument/2006/math"
 R_NS = "http://schemas.openxmlformats.org/officeDocument/2006/relationships"
 V_NS = "urn:schemas-microsoft-com:vml"
 
+# 模块级 mutable 状态：每次 docx_to_markdown_chinese 调用前在 main() 设置 / 重置。
+# 内含 {"formulas": [latex,...], "idx": int}。_extract_ole_object 每被调用一次 idx+1。
+# 用全局态避免给 _walk_paragraph_chinese / _walk_run_chinese / _walk_table_chinese
+# 三层嵌套 walker 都改签名。
+_FORMULA_STATE: dict = {"formulas": [], "idx": 0}
+
 
 def _extract_ole_object(obj_el: ET.Element, rels: dict[str, str],
-                          extract_dir: Path, figures_dir: Path) -> str:
-    """OLE 嵌入对象（MathType 公式）通常带 v:imagedata 指向 PNG 或 WMF。
-    输出：
-      - PNG → 直接 markdown ![](figures/xxx.png)
-      - WMF → 输出 [公式] 占位（浏览器不显示 wmf，保留 wmf 文件备查）
+                          extract_dir: Path, figures_dir: Path,
+                          formula_state: dict | None = None) -> str:
+    """OLE 嵌入对象（MathType 公式）。三层 fallback：
+      1. **优先**：docx2tex 预跑的 LaTeX cache（formula_state["formulas"]）→ $LaTeX$
+      2. PNG 兄弟（soffice 转的）→ ![](figures/xxx.png)
+      3. WMF 没转 → [公式] 占位
+
+    formula_state: {"formulas": list[str], "idx": int}（mutable，跨调用累加 idx）
     """
     import shutil
+
+    # 路线 1: docx2tex LaTeX cache（按出现顺序匹配）
+    if formula_state is not None and formula_state.get("formulas"):
+        idx = formula_state["idx"]
+        formulas = formula_state["formulas"]
+        if idx < len(formulas):
+            latex = formulas[idx]
+            formula_state["idx"] = idx + 1
+            # 行内公式：$...$（KaTeX/MathJax 渲染）
+            return f"${latex}$"
+        # cache 不够长，落回路线 2/3
+
+    # 路线 2/3: WMF/PNG fallback（保留原逻辑）
     for vd in obj_el.iter(f"{{{V_NS}}}imagedata"):
         rid = vd.get(f"{{{R_NS}}}id") or vd.get(f"{{{R_NS}}}href")
         if not rid: continue
@@ -60,9 +82,7 @@ def _extract_ole_object(obj_el: ET.Element, rels: dict[str, str],
         out = figures_dir / src.name
         if not out.exists():
             shutil.copy(src, out)
-        # WMF/EMF 浏览器不显示。优先检查是否已有同名 png 兄弟文件
-        # （由 /tmp/batch_wmf_convert.sh 批量 soffice 转出）。
-        # 有 → 用 png；没有 → [公式] 占位。
+        # WMF/EMF 浏览器不显示。优先用同名 png 兄弟文件
         if out.suffix.lower() in (".wmf", ".emf"):
             png_sibling = out.with_suffix(".png")
             if png_sibling.exists():
@@ -116,8 +136,9 @@ def _walk_run_chinese(r: ET.Element, rels: dict[str, str],
             # 物理保留 OMML 公式（转 LaTeX inline $...$）
             out.append(omml_to_latex(child))
         elif tag == "object":
-            # OLE MathType 公式：包含 v:imagedata r:id 指向 PNG，抽出作 inline 图
-            img = _extract_ole_object(child, rels, extract_dir, figures_dir)
+            # OLE MathType 公式：优先用 docx2tex LaTeX cache（_FORMULA_STATE）
+            img = _extract_ole_object(child, rels, extract_dir, figures_dir,
+                                       formula_state=_FORMULA_STATE)
             if img: out.append(img)
     text = "".join(out)
     if not text.strip():
@@ -1097,7 +1118,27 @@ def main():
     docx = _pick_jiexi_docx(docx_paths)
     print(f"[physics_docx_paper] 用解析版: {docx.name}", flush=True)
 
-    # docx → markdown
+    # docx → markdown（同时把 docx unzip 到 docx_tmp/，下面会用 word/embeddings/）
+    md = docx_to_markdown_chinese(docx, docx_tmp, figures_dir)
+
+    # ── 抽 OLE 公式 LaTeX cache（按出现顺序）──
+    # 走纯 Ruby+Python 链路：MTEF binary → MathML (Ruby gem) → LaTeX (Python)
+    # _FORMULA_STATE 内容用于 _walk_run_chinese 里 OLE→LaTeX 替换（**第二次**调用）
+    global _FORMULA_STATE
+    _FORMULA_STATE = {"formulas": [], "idx": 0}
+    try:
+        from docx_mtef_to_latex import extract_formulas
+        cache_dir = structured_dir / "mtef-cache"
+        # 新签名：传 docx 文件路径（不是 unzip 后的目录），d2t 内部自己 unzip
+        formulas = extract_formulas(docx, cache_dir)
+        _FORMULA_STATE["formulas"] = formulas
+        print(f"[physics_docx_paper] 🧮 MTEF→LaTeX cache: {len(formulas)} 个公式",
+              flush=True)
+    except Exception as e:
+        print(f"[physics_docx_paper] ⚠ MTEF cache 生成失败，OLE 会 fallback 到 WMF/PNG: {e}",
+              flush=True)
+
+    # **第二次 docx → markdown**：这次 _FORMULA_STATE 有内容，OLE 会替换为 $LaTeX$
     md = docx_to_markdown_chinese(docx, docx_tmp, figures_dir)
     # 保存 markdown 备查
     (structured_dir / "raw.md").write_text(md, encoding="utf-8")

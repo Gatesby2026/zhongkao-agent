@@ -132,7 +132,7 @@
       },
       "section": "choice",
       "answer": "B",
-      "solution": "串联电路的电流特点是电流处处相等，因此串联时通过R1、R2的电流相等，根据欧姆定律![](figures/image9.png)，电流相同时，电压与电阻成正比，由于![](figures/image10.png)，所以![](figures/image11.png)；并联电路各支路两端电压相等，因此并联时R1、R2两端电压相等，根据欧姆定律![](figures/image12.png)，电压相同时，电流与电阻成反比，由于![](figures/image10.png)，所以![](figures/image13.png)，故选B。",
+      "solution": "串联电路的电流特点是电流处处相等，因此串联时通过R1、R2的电流相等，根据欧姆定律$U = I R$，电流相同时，电压与电阻成正比，由于$R_{1} < R_{2}$，所以$U_{1} < U_{2}$；并联电路各支路两端电压相等，因此并联时R1、R2两端电压相等，根据欧姆定律$I = \\frac{U}{R}$，电压相同时，电流与电阻成反比，由于$R_{1} < R_{2}$，所以$I_{1} > I_{2}$，故选B。",
       "type": "choice",
       "score": 2
     },
@@ -147,13 +147,13 @@
       },
       "section": "choice",
       "answer": "D",
-      "solution": "A．不计绳重和摩擦时，动滑轮重力为![](figures/image15.png)\n如果考虑绳重和摩擦，动滑轮重力实际小于![](figures/image16.png)，故A错误；\nB．绳子自由端移动距离![](figures/image17.png)\n自由端移动速度![](figures/image18.png)\n故B错误；\nC．拉力做的总功![](figures/image19.png)\n故C错误；\nD．对货箱做的有用功![](figures/image20.png)\n机械效率![](figures/image21.png)\n故D正确。\n故选D。",
+      "solution": "A．不计绳重和摩擦时，动滑轮重力为$G_{动} = n F - G_{物} = 2 \\times 250 \\text{N} - 400 \\text{N} = 100 \\text{N}$\n如果考虑绳重和摩擦，动滑轮重力实际小于$100 N$，故A错误；\nB．绳子自由端移动距离$s = n h = 2 \\times 2 m = 4 m$\n自由端移动速度$v = \\frac{s}{t} = \\frac{4 \\text{m}}{10 \\text{s}} = 0 . 4 \\text{m}/\\text{s}$\n故B错误；\nC．拉力做的总功$W_{总} = F s = 250 \\text{N} \\times 4 \\text{m} = 1000 \\text{J}$\n故C错误；\nD．对货箱做的有用功$W_{有} = G_{物} h = 400 \\text{N} \\times 2 \\text{m} = 800 \\text{J}$\n机械效率$\\eta = \\frac{W_{有}}{W_{总}} \\times 100 \\% = \\frac{800 \\text{J}}{1000 \\text{J}} \\times 100 \\% = 80 \\%$\n故D正确。\n故选D。",
       "type": "choice",
       "score": 2
     },
     {
       "number": 11,
-      "stem": "某电动汽车在水平路面上沿直线向前运动，行驶过程中所受到的阻力不变，当车速从v =10m/s逐渐增大至某速度值后，汽车保持匀速直线运动。此过程中，汽车所受牵引力F与速度的倒数（![](figures/image22.png)）的关系如图中实线所示。关于上述过程说法正确的是（　　）\n\n![](figures/image23.png)",
+      "stem": "某电动汽车在水平路面上沿直线向前运动，行驶过程中所受到的阻力不变，当车速从v =10m/s逐渐增大至某速度值后，汽车保持匀速直线运动。此过程中，汽车所受牵引力F与速度的倒数（$\\frac{1}{v}$）的关系如图中实线所示。关于上述过程说法正确的是（　　）\n\n![](figures/image23.png)",
       "options": {
         "A": "牵引力F做功的功率恒为1000W",
         "B": "加速过程中，牵引力F越来越小",
@@ -162,22 +162,22 @@
       },
       "section": "choice",
       "answer": "B",
-      "solution": "根据功率公式 ![](figures/image24.png)，变形得 ![](figures/image25.png)，可知图中倾斜段![](figures/image26.png)与![](figures/image22.png)成正比，说明此段功率![](figures/image27.png)保持不变，结合图像计算分析各选项：\nA．取点 ![](figures/image28.png)，![](figures/image29.png)，计算功率 ![](figures/image30.png)\n不是![](figures/image31.png)，故A错误；\nB．加速过程车速![](figures/image32.png)逐渐增大，因此![](figures/image22.png)逐渐减小，由图像可知：![](figures/image22.png)减小时，![](figures/image26.png)逐渐减小，因此牵引力越来越小，故B正确；\nC．汽车最终匀速时，牵引力等于阻力，最大速度对应![](figures/image33.png)，此时![](figures/image34.png)，阻力![](figures/image35.png)，阻力全程不变，因此![](figures/image36.png)时阻力仍为![](figures/image37.png)，故C错误；\nD．做功快慢就是功率，加速过程中功率![](figures/image24.png)保持不变，因此牵引力做功的快慢不变，故D错误。\n故选B。",
+      "solution": "根据功率公式 $P = F v$，变形得 $F = P \\times \\frac{1}{v}$，可知图中倾斜段$F$与$\\frac{1}{v}$成正比，说明此段功率$P$保持不变，结合图像计算分析各选项：\nA．取点 $\\frac{1}{v} = 0 . 10 \\text{s}/\\text{m}$，$F = 1 . 0 \\times 10^{4} \\text{N}$，计算功率 $P = F v = F \\times \\frac{1}{\\frac{1}{v}} = 1 . 0 \\times 10^{4} \\text{N} \\times \\frac{1}{0 . 10} \\text{m}/\\text{s} = 1 \\times 10^{5} \\text{W} = 100000 \\text{W}$\n不是$1000 \\text{W}$，故A错误；\nB．加速过程车速$v$逐渐增大，因此$\\frac{1}{v}$逐渐减小，由图像可知：$\\frac{1}{v}$减小时，$F$逐渐减小，因此牵引力越来越小，故B正确；\nC．汽车最终匀速时，牵引力等于阻力，最大速度对应$\\frac{1}{v} = 0 . 03 \\text{s}/\\text{m}$，此时$F = 0 . 3 \\times 10^{4} \\text{N} = 3 \\times 10^{3} \\text{N}$，阻力$f = F = 3 \\times 10^{3} \\text{N}$，阻力全程不变，因此$v = 20 \\text{m}/\\text{s}$时阻力仍为$3 \\times 10^{3} \\text{N}$，故C错误；\nD．做功快慢就是功率，加速过程中功率$P = F v$保持不变，因此牵引力做功的快慢不变，故D错误。\n故选B。",
       "type": "choice",
       "score": 2
     },
     {
       "number": 12,
-      "stem": "某风力发电系统可以为路灯供电。该风力发电机叶片旋转面面积为![](figures/image38.png)，在风速v =8m/s时，空气密度为![](figures/image39.png)，时间t内通过某一截面的风能大小为![](figures/image40.png)，风能利用效率为30%。路灯（LED灯）功率为12W，额定电压为24V，系统还配备了蓄电池储存电能，供无风时照明。假设风能先转化为电能，再对蓄电池充电，充电效率为90%，蓄电池放电供灯工作的效率为95%。下列说法正确的是（　　）",
+      "stem": "某风力发电系统可以为路灯供电。该风力发电机叶片旋转面面积为$S = 2 \\text{m}^{2}$，在风速v =8m/s时，空气密度为$\\rho = 1 . 2 \\text{kg}/\\text{m}^{3}$，时间t内通过某一截面的风能大小为$\\frac{1}{2} \\rho S v^{3} t$，风能利用效率为30%。路灯（LED灯）功率为12W，额定电压为24V，系统还配备了蓄电池储存电能，供无风时照明。假设风能先转化为电能，再对蓄电池充电，充电效率为90%，蓄电池放电供灯工作的效率为95%。下列说法正确的是（　　）",
       "options": {
         "A": "风能是不可再生能源",
         "B": "风力发电机对蓄电池充电过程中，将机械能直接转化为化学能",
         "C": "在8m/s的风速下，风力发电机的输出电功率为184.32W",
-        "D": "充满电的蓄电池可让该 LED 灯正常工作20小时，蓄电池储存的能量约为![](figures/image41.png)"
+        "D": "充满电的蓄电池可让该 LED 灯正常工作20小时，蓄电池储存的能量约为$0 . 28 \\text{kW}\\cdot\\text{h}$"
       },
       "section": "choice",
       "answer": "C",
-      "solution": "A．风能可以源源不断从自然界获取，属于可再生能源，故A错误；\nB．风力发电机给蓄电池充电的过程：先将风能（机械能）转化为电能，再将电能转化为蓄电池的化学能储存，并不是机械能直接转化为化学能，故B错误；\nC．根据题意，![](figures/image42.png)时间内总风能为![](figures/image43.png)，风能利用效率为30%，风力发电机输出电功率为 ![](figures/image44.png)\n风力发电机的输出电功率![](figures/image45.png)\n故C正确；\nD．LED灯正常工作20小时消耗的电能![](figures/image46.png)\n蓄电池放电效率为95%，因此蓄电池储存的能量![](figures/image47.png)\n故D错误。\n故选C。",
+      "solution": "A．风能可以源源不断从自然界获取，属于可再生能源，故A错误；\nB．风力发电机给蓄电池充电的过程：先将风能（机械能）转化为电能，再将电能转化为蓄电池的化学能储存，并不是机械能直接转化为化学能，故B错误；\nC．根据题意，$t$时间内总风能为$E_{风} = \\frac{1}{2} \\rho S v^{3} t$，风能利用效率为30%，风力发电机输出电功率为 $P = \\frac{E_{风} \\times 30 \\%}{t} = \\frac{1}{2} \\rho S v^{3} \\times 30 \\%$\n风力发电机的输出电功率$P = \\frac{1}{2} \\rho S v^{3} \\times 30 \\% = \\frac{1}{2} \\times 1 . 2 \\text{kg}/\\text{m}^{3} \\times 2 \\text{m}^{2} \\times \\left(\\left(8,\\text{m}/\\text{s}\\right)\\right)^{3} \\times 30 \\% = 184 . 32 \\text{W}$\n故C正确；\nD．LED灯正常工作20小时消耗的电能$W_{灯} = P t = 12 \\times 10^{- 3} \\text{kW} \\times 20 \\text{h} = 0 . 24 \\text{kW} \\cdot \\text{h}$\n蓄电池放电效率为95%，因此蓄电池储存的能量$W_{储} = \\frac{W_{灯}}{95 \\%} = \\frac{0 . 24 k W \\cdot \\text{h}}{95 \\%} \\approx 0 . 25 \\text{kW} \\cdot \\text{h}$\n故D错误。\n故选C。",
       "type": "choice",
       "score": 2
     },
@@ -192,13 +192,13 @@
       },
       "section": "multi_choice",
       "answer": "CD",
-      "solution": "A．液体很难被压缩，是因为分子间存在斥力，不是引力，故A错误；\nB．汽油机的做功冲程是燃气膨胀对外做功，将内能转化为机械能，压缩冲程才是机械能转化为内能，故B错误；\nC．红墨水滴入水中后逐渐散开，是不同物质的分子彼此进入对方的现象，属于扩散现象，故C正确；\nD．水的比热容比砂石大，根据公式![](figures/image48.png)，相同质量的水和砂石吸放相同热量时，水的温度变化更小，因此沿海地区（水多）比内陆地区昼夜温差更小，故D正确。\n故选CD。",
+      "solution": "A．液体很难被压缩，是因为分子间存在斥力，不是引力，故A错误；\nB．汽油机的做功冲程是燃气膨胀对外做功，将内能转化为机械能，压缩冲程才是机械能转化为内能，故B错误；\nC．红墨水滴入水中后逐渐散开，是不同物质的分子彼此进入对方的现象，属于扩散现象，故C正确；\nD．水的比热容比砂石大，根据公式$\\Delta t = \\frac{Q}{c m}$，相同质量的水和砂石吸放相同热量时，水的温度变化更小，因此沿海地区（水多）比内陆地区昼夜温差更小，故D正确。\n故选CD。",
       "type": "multi_choice",
       "score": 2
     },
     {
       "number": 14,
-      "stem": "某实验小组设计了一款防溺水定位求救报警器，其简化电路如图甲所示。已知电源电压恒为6V，报警器由电压表改装而成，且并联在定值电阻R0两端，R是一个压敏电阻，其阻值随潜水深度h变化的关系图像如图乙所示。当报警器未进入水中时，电路中电流表示数为0.12A；当潜水深度![](figures/image49.png)时，R0两端的电压大于或等于警戒电压U，报警器开始触发报警。下列说法正确的是（　　）\n\n![](figures/image50.png)",
+      "stem": "某实验小组设计了一款防溺水定位求救报警器，其简化电路如图甲所示。已知电源电压恒为6V，报警器由电压表改装而成，且并联在定值电阻R0两端，R是一个压敏电阻，其阻值随潜水深度h变化的关系图像如图乙所示。当报警器未进入水中时，电路中电流表示数为0.12A；当潜水深度$h \\geq 1 \\text{m}$时，R0两端的电压大于或等于警戒电压U，报警器开始触发报警。下列说法正确的是（　　）\n\n![](figures/image50.png)",
       "options": {
         "A": "R0的阻值为10 Ω",
         "B": "R的阻值随着h的增大而增大",
@@ -207,7 +207,7 @@
       },
       "section": "multi_choice",
       "answer": "AC",
-      "solution": "A．报警器未入水时，潜水深度![](figures/image51.png)，由图乙得此时![](figures/image52.png)。已知电源电压![](figures/image53.png)，电流![](figures/image54.png)，总电阻![](figures/image55.png)\n因此![](figures/image56.png)的阻值![](figures/image57.png)\n故A正确；\nB．由图乙可知，潜水深度![](figures/image58.png)增大时，压敏电阻![](figures/image59.png)的阻值减小，故B错误；\nC．当![](figures/image60.png)时，由图乙得![](figures/image61.png)，此时电路电流![](figures/image62.png)\n![](figures/image63.png)两端电压即警戒电压![](figures/image64.png)\n故C正确；\nD．报警要求![](figures/image63.png)两端电压达到警戒电压![](figures/image65.png)，由![](figures/image66.png)变形得临界压敏电阻![](figures/image67.png)​\n若更换阻值更小的![](figures/image63.png)​，临界![](figures/image59.png)会更小，而![](figures/image59.png)越小对应深度![](figures/image58.png)越大，说明需要更深才会报警，故D错误。\n故选AC。",
+      "solution": "A．报警器未入水时，潜水深度$h = 0$，由图乙得此时$R = 40 \\Omega$。已知电源电压$U = 6 \\text{V}$，电流$I = 0 . 12 \\text{A}$，总电阻$R_{总} = \\frac{U}{I} = \\frac{6 \\text{V}}{0 . 12 \\text{A}} = 50 \\Omega$\n因此$R_{\\text{0}}$的阻值$R_{0} = R_{总} - R = 50 \\Omega - 40 \\Omega = 10 \\Omega$\n故A正确；\nB．由图乙可知，潜水深度$h$增大时，压敏电阻$R$的阻值减小，故B错误；\nC．当$h = 1 \\text{m}$时，由图乙得$R = 30 \\Omega$，此时电路电流$I^{'} = \\frac{U}{R_{0} + R} = \\frac{6 \\text{V}}{10 \\Omega + 30 \\Omega} = 0 . 15 \\text{A}$\n$R_{0}$两端电压即警戒电压$U = I^{'} R_{0} = 0 . 15 \\text{A} \\times 10 \\Omega = 1 . 5 \\text{V}$\n故C正确；\nD．报警要求$R_{0}$两端电压达到警戒电压$U$，由$U = \\frac{U_{总} R_{0}}{R + R_{0}}$变形得临界压敏电阻$R = R_{0} \\cdot \\frac{U_{总} - U}{U}$​\n若更换阻值更小的$R_{0}$​，临界$R$会更小，而$R$越小对应深度$h$越大，说明需要更深才会报警，故D错误。\n故选AC。",
       "type": "multi_choice",
       "score": 2
     },
@@ -222,7 +222,7 @@
       },
       "section": "multi_choice",
       "answer": "ACD",
-      "solution": "A．原样品A的体积![](figures/image69.png)\nA的质量![](figures/image70.png)\n样品B对水平地面的压力等于B的重力，接触底面积不变![](figures/image71.png)\n物体B的重力为![](figures/image72.png)\n则B的质量为![](figures/image73.png)\n切去部分质量![](figures/image74.png)\n故A正确；\nB．切去部分体积![](figures/image75.png)​\n凹槽截面为正方形，边长![](figures/image76.png)，沿宽度方向（5cm方向）通长，故![](figures/image77.png)\n代入得![](figures/image78.png)，![](figures/image79.png)，故B错误；\nC．切去宽度![](figures/image80.png)，剩余长度为![](figures/image81.png)，凹槽在剩余部分的长度为![](figures/image82.png)，剩余体积 ![](figures/image83.png)\n则剩余物体重力![](figures/image84.png)\n底面积![](figures/image85.png)\n则压强为![](figures/image86.png)\n故C正确。\nD．切去宽度d满足![](figures/image87.png)时，剩余物体压力为![](figures/image88.png)\n![](figures/image89.png)\n代入化简可得![](figures/image90.png)\n剩余部分底面积![](figures/image91.png)\n由压强公式可得![](figures/image92.png)\n化简得![](figures/image93.png)\n当切去宽度的取值范围为![](figures/image94.png)时，![](figures/image95.png)，故D正确。\n故选ACD。",
+      "solution": "A．原样品A的体积$V_{A} = 20 \\text{cm} \\times 5 \\text{cm} \\times 10 \\text{cm} = 1000 \\text{cm}^{3} = 1 \\times 10^{- 3} \\text{m}^{3}$\nA的质量$m_{A} = \\rho V_{A} = 2 \\times 10^{3} \\text{kg}/\\text{m}^{3} \\times 1 \\times 10^{- 3} \\text{m}^{3} = 2 \\text{kg}$\n样品B对水平地面的压力等于B的重力，接触底面积不变$S = 20 \\text{cm} \\times 5 \\text{cm} = 100 \\text{cm}^{2} = 0 . 01 \\text{m}^{2}$\n物体B的重力为$G_{B} = F_{B} = p_{B} S = 1840 \\text{Pa} \\times 0 . 01 \\text{m}^{2} = 18 . 4 \\text{N}$\n则B的质量为$m_{B} = \\frac{G_{B}}{g} = 1 . 84 \\text{kg}$\n切去部分质量$\\Delta m = m_{A} - m_{B} = 2 \\text{kg} - 1 . 84 \\text{kg} = 0 . 16 \\text{kg}$\n故A正确；\nB．切去部分体积$\\Delta V = \\frac{\\Delta m}{\\rho} = \\frac{0 . 16 \\text{kg}}{2 \\times 10^{3} \\text{kg}/\\text{m}^{3}} = 8 \\times 10^{- 5} \\text{m}^{3} = 80 \\text{cm}^{3}$​\n凹槽截面为正方形，边长$l$，沿宽度方向（5cm方向）通长，故$\\Delta V = l^{2} \\times 5 \\text{cm}$\n代入得$l^{2} = 16 \\text{cm}^{2}$，$l = 4 \\text{cm}$，故B错误；\nC．切去宽度$d = 10 \\text{cm}$，剩余长度为$10 \\text{cm}$，凹槽在剩余部分的长度为$2 \\text{cm}$，剩余体积 $V^{'} = 10 \\times 5 \\times 10 - 2 \\times 4 \\times 5 = 460 \\text{cm}^{3} = 4 . 6 \\times 10^{- 4} \\text{m}^{3}$\n则剩余物体重力$G^{'} = \\rho V^{'} g = 2 \\times 10^{3} \\text{kg}/\\text{m}^{\\text{3}} \\times 4 . 6 \\times 10^{- 4} \\text{m}^{3} \\times 10 \\text{N} / k g = 9 . 2 \\text{N}$\n底面积$S^{'} = 10 \\text{cm} \\times 5 \\text{cm} = 50 \\text{cm}^{\\text{2}} = 0 . 005 \\text{m}^{2}$\n则压强为$p^{'} = \\frac{G^{'}}{S^{'}} = \\frac{9 . 2 \\text{N}}{0 . 005 \\text{m}^{2}} = 1840 \\text{Pa}$\n故C正确。\nD．切去宽度d满足$0 < d < 8 \\text{cm}$时，剩余物体压力为$G_{剩} = G_{\\text{B}} - G_{切} = 18 . 4 \\text{N} - \\rho V_{切} g$\n$G_{剩} = \\left(18,.,4,-,d\\right) \\text{N}$\n代入化简可得$S_{剩} = S_{\\text{B}} - S_{切} = \\left(20,\\text{cm},\\times,5,\\text{cm},-,5,\\text{cm},\\times,d\\right) \\times 10^{- 4} \\text{m}^{2}$\n剩余部分底面积$p = \\frac{F}{S} = \\frac{G_{剩}}{S_{剩}} = \\frac{\\left(18,.,4,-,d\\right) \\text{N}}{\\left(20,\\text{cm},\\times,5,\\text{cm},-,5,\\text{cm},\\times,d\\right) \\times 10^{- 4}}$\n由压强公式可得$p = \\frac{\\left(\\right. 18 . 4 - d \\left.\\right) \\times 10^{4}}{100 - 5 d} \\text{Pa}$\n化简得$0 < d < 8 c m$\n当切去宽度的取值范围为$p < 1840 \\text{Pa}$时，$0 \\sim 0 . 6 \\text{A}$，故D正确。\n故选ACD。",
       "type": "multi_choice",
       "score": 2
     },
@@ -232,7 +232,7 @@
       "options": null,
       "section": "experiment",
       "answer": "",
-      "solution": "（1）0.3    （2）N      （3）在同一平面内\n\n详解：（1）\n电流表选择的是![](figures/image97.png)量程，该量程的分度值为![](figures/image98.png)，指针正对![](figures/image99.png)刻度处，因此示数为![](figures/image99.png)。\n\n（2）\n小磁针静止时N极的指向为该点的磁场方向，且异名磁极相互吸引；本题中小磁针N极向左，S极向右朝向螺线管左端，S极被N极吸引，因此通电螺线管的左端为N极。\n\n（3）\n只有当反射光线、入射光线和法线在同一平面内时，才会出现反射光线同时挡住入射光线和法线的现象，因此该现象说明：反射现象中，反射光线、入射光线与法线在同一平面内。",
+      "solution": "（1）0.3    （2）N      （3）在同一平面内\n\n详解：（1）\n电流表选择的是$0 . 02 A$量程，该量程的分度值为$0 . 3 A$，指针正对$0 . 3 A$刻度处，因此示数为$m = 20 \\text{g} + 2 \\text{g} = 22 \\text{g}$。\n\n（2）\n小磁针静止时N极的指向为该点的磁场方向，且异名磁极相互吸引；本题中小磁针N极向左，S极向右朝向螺线管左端，S极被N极吸引，因此通电螺线管的左端为N极。\n\n（3）\n只有当反射光线、入射光线和法线在同一平面内时，才会出现反射光线同时挡住入射光线和法线的现象，因此该现象说明：反射现象中，反射光线、入射光线与法线在同一平面内。",
       "type": "experiment",
       "score": 3
     },
@@ -242,7 +242,7 @@
       "options": null,
       "section": "experiment",
       "answer": "",
-      "solution": "①. 22    ②. 2.2\n\n详解：砝码质量为20g ，游码对应刻度值为2g，石块质量![](figures/image101.png)\n 量筒中原有水的体积为50mL，放入石块后总体积为60mL，则石块体积![](figures/image102.png)\n根据密度公式![](figures/image103.png)，可得石块的密度![](figures/image104.png)",
+      "solution": "①. 22    ②. 2.2\n\n详解：砝码质量为20g ，游码对应刻度值为2g，石块质量$V = 60 m L - 50 m L = 10 m L = 10 c m^{3}$\n 量筒中原有水的体积为50mL，放入石块后总体积为60mL，则石块体积$\\rho = \\frac{m}{V}$\n根据密度公式$\\rho_{石} = \\frac{m}{V} = \\frac{22 \\text{g}}{10 c m^{3}} = 2 . 2 \\text{g} / c m^{3}$，可得石块的密度$1^{@} \\text{C}$",
       "type": "experiment",
       "score": 3
     },
@@ -252,7 +252,7 @@
       "options": null,
       "section": "experiment",
       "answer": "",
-      "solution": "（1）88    （2）a      （3）不变\n\n详解：（1）\n温度计的分度值为![](figures/image106.png)，液柱对应刻度为![](figures/image107.png)，因此此时水温为![](figures/image107.png)。\n\n（2）\n水沸腾时，整个容器中水温相同，水内部不停地汽化，产生大量的水蒸气进入气泡，同时气泡上升过程中，水的压力随深度减小而减小，气泡体积越往上越大，因此![](figures/image108.png)是水沸腾时的气泡上升情况；\n\n（3）\n由图丙可知，![](figures/image109.png)时刻水沸腾后，随加热时间增加，温度保持水平不变，因此结论为：水沸腾过程中温度不变。",
+      "solution": "（1）88    （2）a      （3）不变\n\n详解：（1）\n温度计的分度值为$88^{@} \\text{C}$，液柱对应刻度为$88^{@} \\text{C}$，因此此时水温为$a$。\n\n（2）\n水沸腾时，整个容器中水温相同，水内部不停地汽化，产生大量的水蒸气进入气泡，同时气泡上升过程中，水的压力随深度减小而减小，气泡体积越往上越大，因此$t_{0}$是水沸腾时的气泡上升情况；\n\n（3）\n由图丙可知，$\\text{M}_{2}$时刻水沸腾后，随加热时间增加，温度保持水平不变，因此结论为：水沸腾过程中温度不变。",
       "type": "experiment",
       "score": 3
     },
@@ -262,7 +262,7 @@
       "options": null,
       "section": "experiment",
       "answer": "",
-      "solution": "（1）灵敏电流计指针是否偏转      （2）    ①. 闭合    ②. 3      （3）![](figures/image111.png)\n\n详解：（1）\n本实验利用转换法：若电路中产生感应电流，灵敏电流计指针会发生偏转，因此通过观察灵敏电流计指针是否偏转判断电路中是否产生感应电流。\n\n（2）\n对比实验1（开关断开，切割磁感线无电流）和实验3（开关闭合，切割磁感线有电流），可得产生感应电流的条件之一是电路保持闭合状态；\n验证“导体做切割磁感线运动”是感应电流的产生条件，需要控制电路闭合，只改变导体运动状态，因此对比实验2和实验3。\n\n（3）\n由图乙可知，电源接在![](figures/image112.png)​所在电路中，闭合开关后![](figures/image112.png)通电转动，带动同轴连接的![](figures/image111.png)​转动，![](figures/image111.png)​的线圈在磁场中切割磁感线，产生感应电流使二极管发光。",
+      "solution": "（1）灵敏电流计指针是否偏转      （2）    ①. 闭合    ②. 3      （3）$\\text{M}_{1}$\n\n详解：（1）\n本实验利用转换法：若电路中产生感应电流，灵敏电流计指针会发生偏转，因此通过观察灵敏电流计指针是否偏转判断电路中是否产生感应电流。\n\n（2）\n对比实验1（开关断开，切割磁感线无电流）和实验3（开关闭合，切割磁感线有电流），可得产生感应电流的条件之一是电路保持闭合状态；\n验证“导体做切割磁感线运动”是感应电流的产生条件，需要控制电路闭合，只改变导体运动状态，因此对比实验2和实验3。\n\n（3）\n由图乙可知，电源接在$\\text{M}_{1}$​所在电路中，闭合开关后$\\text{M}_{2}$通电转动，带动同轴连接的$\\text{M}_{2}$​转动，$50 . 0 \\text{cm}$​的线圈在磁场中切割磁感线，产生感应电流使二极管发光。",
       "type": "experiment",
       "score": 3
     },
@@ -287,7 +287,7 @@
       "options": null,
       "section": "experiment",
       "answer": "",
-      "solution": "（1）10.0      （2）高    （3）大\n\n详解：（1）\n平行于凸透镜主光轴的光线会聚形成的最小亮斑就是焦点，焦点到凸透镜光心的距离为焦距。由图可知，凸透镜在![](figures/image115.png)刻度处，光屏（焦点）在![](figures/image116.png)刻度处，因此焦距![](figures/image117.png)\n\n（2）\n由表格数据可知：保持物高、物距不变时，凸透镜焦距从![](figures/image118.png)增大到![](figures/image119.png)，像高从![](figures/image120.png)增大到![](figures/image121.png)，因此可得：物高、物距一定时，凸透镜焦距越大，所成实像的高度越大。\n\n（3）\n拍摄完全身照再拍半身照，需要像变大；题目中拍摄者和被拍者位置都不变，即物距不变，根据实验结论，要让像变大，应切换焦距更大的摄像头。",
+      "solution": "（1）10.0      （2）高    （3）大\n\n详解：（1）\n平行于凸透镜主光轴的光线会聚形成的最小亮斑就是焦点，焦点到凸透镜光心的距离为焦距。由图可知，凸透镜在$60 . 0 \\text{cm}$刻度处，光屏（焦点）在$f_{A} = 60 . 0 \\text{cm} - 50 . 0 \\text{cm} = 10 . 0 \\text{cm}$刻度处，因此焦距$5 \\text{cm}$\n\n（2）\n由表格数据可知：保持物高、物距不变时，凸透镜焦距从$12 \\text{cm}$增大到$1 . 7 \\text{cm}$，像高从$7 . 5 \\text{cm}$增大到$R_{x}$，因此可得：物高、物距一定时，凸透镜焦距越大，所成实像的高度越大。\n\n（3）\n拍摄完全身照再拍半身照，需要像变大；题目中拍摄者和被拍者位置都不变，即物距不变，根据实验结论，要让像变大，应切换焦距更大的摄像头。",
       "type": "experiment",
       "score": 3
     },
@@ -297,7 +297,7 @@
       "options": null,
       "section": "experiment",
       "answer": "",
-      "solution": "（1）使电流表的示数仍为I      （2）R0    （3）大于\n\n详解：（1）\n该方法需要两次电路电流相同，因此调节电阻箱后，需要使电流表示数和第一次接入![](figures/image123.png)时相同，仍为![](figures/image124.png)。\n\n（2）\n正确操作时，滑动变阻器接入电阻不变，两次电流都是![](figures/image124.png)，总电阻相等，因此![](figures/image125.png)。\n\n（3）\n滑片向左移动后，滑动变阻器接入电路的阻值变小。为了让电流仍保持为![](figures/image124.png)，总电阻![](figures/image126.png)不变，由![](figures/image127.png)​可知![](figures/image128.png)​变小，测得的![](figures/image63.png)会偏大，因此最终测得的电阻值大于![](figures/image123.png)的真实阻值。",
+      "solution": "（1）使电流表的示数仍为I      （2）R0    （3）大于\n\n详解：（1）\n该方法需要两次电路电流相同，因此调节电阻箱后，需要使电流表示数和第一次接入$I$时相同，仍为$I$。\n\n（2）\n正确操作时，滑动变阻器接入电阻不变，两次电流都是$R_{x} = R_{0}$，总电阻相等，因此$I$。\n\n（3）\n滑片向左移动后，滑动变阻器接入电路的阻值变小。为了让电流仍保持为$R_{总} = \\frac{U}{I}$，总电阻$R_{0} = R_{总} - R_{P}$不变，由$R_{P}$​可知$R_{0}$​变小，测得的$R_{x}$会偏大，因此最终测得的电阻值大于$F_{浮\\text{1}} = G_{总} = G_{冰} + G_{草莓}$的真实阻值。",
       "type": "experiment",
       "score": 7
     },
@@ -307,13 +307,13 @@
       "options": null,
       "section": "experiment",
       "answer": "",
-      "solution": "如图，当冰没有熔化时，水果冰块漂浮在水面上，根据漂浮条件，总浮力等于总重力，则![](figures/image130.png)\n所以总排开水的体积![](figures/image131.png)\n当冰块全部熔化后，此时得到水的质量不变，因此![](figures/image132.png)，因为![](figures/image133.png)草莓最终会漂浮在水面上，根据漂浮条件，有![](figures/image134.png)，则熔化水的体积加草莓的排开体积总和![](figures/image135.png)\n即总体积和原来冰块漂浮时的排开体积相等，原来放入冰块后已经溢出了体积为![](figures/image136.png)​的水，此时水面与杯口相平，所以熔化后水面高度不变，因此水不会溢出。",
+      "solution": "如图，当冰没有熔化时，水果冰块漂浮在水面上，根据漂浮条件，总浮力等于总重力，则$\\Delta V_{\\text{1}} = V_{排} = \\frac{F_{浮\\text{1}}}{\\rho_{水} g} = \\frac{G_{冰} + G_{草莓}}{\\rho_{水} g} = \\frac{m_{冰} + m_{草莓}}{\\rho_{水}}$\n所以总排开水的体积$m_{冰化水} = m_{冰}$\n当冰块全部熔化后，此时得到水的质量不变，因此$\\rho_{草莓} < \\rho_{水} ，$，因为$F_{浮\\text{2}} = G_{草莓}$草莓最终会漂浮在水面上，根据漂浮条件，有$\\Delta V_{2} = V_{冰化水} + V_{排草莓} = \\frac{m_{冰化水}}{\\rho_{水}} + \\frac{F_{浮\\text{2}}}{\\rho_{水} g} = \\frac{m_{冰}}{\\rho_{水}} + \\frac{G_{草莓}}{\\rho_{水} g} = \\frac{m_{冰} + m_{草莓}}{\\rho_{水}}$，则熔化水的体积加草莓的排开体积总和$V_{排}$\n即总体积和原来冰块漂浮时的排开体积相等，原来放入冰块后已经溢出了体积为$\\Delta t$​的水，此时水面与杯口相平，所以熔化后水面高度不变，因此水不会溢出。",
       "type": "experiment",
       "score": 3
     },
     {
       "number": 24,
-      "stem": "请阅读《氧弹量热计》，并回答问题。\n\n氧弹量热计\n\n物理学中，热值被定义为燃料完全燃烧时释放出的热量与其质量的比。燃料的质量可以通过电子天平测得非常精确，而燃料完全燃烧所释放出的热量，通常需要借助一种称为“氧弹量热计”的装置进行测量，如图所示。\n\n氧弹量热计的基本原理并不复杂：燃料燃烧释放的热量使水温升高，通过水温升高值推算出燃烧所放出的热量。测量时，为了使燃料样品完全燃烧，需要将氧弹充入高压氧气。将氧弹置于盛有定量水的内筒中，点燃燃料样品后，其所释放的热量被内筒中的水吸收，待燃烧完全后，用精密温度计记录水温变化。\n\n如果外筒水温低于内筒，热量会散失到外筒中，导致测量不准。为此，氧弹量热计主要分为绝热式和恒温式两种。绝热式通过调节外筒水温，使其与内筒保持一致，阻止热量散失。恒温式则保持外筒温度恒定，由于热交换速率主要取决于温差，此时温差仅由内筒温度决定，因此可用数学方法算出热损失。绝热式量热计主要用于国家级计量院、标准物质定值等高精度场景。恒温式量热计制造成本低、维护简便，在实际应用中更为普遍。\n\n然而，燃料样品燃烧所放出的热量，不仅用于升高水温，也会使测量装置本身温度上升，使用同一量热计测量时，整个系统的热容量（C）是不变的。热容量（C）是量热系统温度升高（或降低）所吸收（或放出）的热量Q与温度变化量![](figures/image137.png)的比，可以通过前期标定实验来测定。其中电能标定的方法是在氧弹内安装标准加热电阻丝，通电后使其加热内筒中的水。由于电压和电流能够被精确地测量，电阻丝在特定时间内释放的热量可以准确得出。对于绝热式量热计而言，只需再测出内筒水温的变化，即可根据公式计算出量热计的总热容量。\n\n![](figures/image138.png)\n\n（1）绝热式与恒温式量热计中，______式量热计在实际应用中更为普遍；\n\n（2）燃料燃烧释放的热量使水温升高，水的内能是通过______（选填“做功”或“热传递”）的方式增加的；\n\n（3）以下操作的目的是使燃料样本完全燃烧的是（　　）\n\n（4）某绝热式量热计的前期电能标定实验中，测得标准加热电阻丝两端电压为10V，通过标准加热电阻丝的电流为5A，通电时间为2min，此时内筒中的水温升高0.6℃。使用该绝热式量热计测量1g燃料样品的热值，待其完全燃烧后，内筒中水温升高2.5℃，则该燃料样品的热值为______J/kg。",
+      "stem": "请阅读《氧弹量热计》，并回答问题。\n\n氧弹量热计\n\n物理学中，热值被定义为燃料完全燃烧时释放出的热量与其质量的比。燃料的质量可以通过电子天平测得非常精确，而燃料完全燃烧所释放出的热量，通常需要借助一种称为“氧弹量热计”的装置进行测量，如图所示。\n\n氧弹量热计的基本原理并不复杂：燃料燃烧释放的热量使水温升高，通过水温升高值推算出燃烧所放出的热量。测量时，为了使燃料样品完全燃烧，需要将氧弹充入高压氧气。将氧弹置于盛有定量水的内筒中，点燃燃料样品后，其所释放的热量被内筒中的水吸收，待燃烧完全后，用精密温度计记录水温变化。\n\n如果外筒水温低于内筒，热量会散失到外筒中，导致测量不准。为此，氧弹量热计主要分为绝热式和恒温式两种。绝热式通过调节外筒水温，使其与内筒保持一致，阻止热量散失。恒温式则保持外筒温度恒定，由于热交换速率主要取决于温差，此时温差仅由内筒温度决定，因此可用数学方法算出热损失。绝热式量热计主要用于国家级计量院、标准物质定值等高精度场景。恒温式量热计制造成本低、维护简便，在实际应用中更为普遍。\n\n然而，燃料样品燃烧所放出的热量，不仅用于升高水温，也会使测量装置本身温度上升，使用同一量热计测量时，整个系统的热容量（C）是不变的。热容量（C）是量热系统温度升高（或降低）所吸收（或放出）的热量Q与温度变化量$2 . 5 \\times 10^{7}$的比，可以通过前期标定实验来测定。其中电能标定的方法是在氧弹内安装标准加热电阻丝，通电后使其加热内筒中的水。由于电压和电流能够被精确地测量，电阻丝在特定时间内释放的热量可以准确得出。对于绝热式量热计而言，只需再测出内筒水温的变化，即可根据公式计算出量热计的总热容量。\n\n![](figures/image138.png)\n\n（1）绝热式与恒温式量热计中，______式量热计在实际应用中更为普遍；\n\n（2）燃料燃烧释放的热量使水温升高，水的内能是通过______（选填“做功”或“热传递”）的方式增加的；\n\n（3）以下操作的目的是使燃料样本完全燃烧的是（　　）\n\n（4）某绝热式量热计的前期电能标定实验中，测得标准加热电阻丝两端电压为10V，通过标准加热电阻丝的电流为5A，通电时间为2min，此时内筒中的水温升高0.6℃。使用该绝热式量热计测量1g燃料样品的热值，待其完全燃烧后，内筒中水温升高2.5℃，则该燃料样品的热值为______J/kg。",
       "options": {
         "A": "用燃料燃烧释放的热量加热水",
         "B": "用精密温度计记录水温变化",
@@ -322,7 +322,7 @@
       },
       "section": "comprehensive",
       "answer": "",
-      "solution": "（1）恒温    （2）热传递    （3）C      （4）![](figures/image139.png)\n\n详解：（1）\n由文章第三段可知，恒温式量热计制造成本低、维护简便，在实际应用中更为普遍。\n\n（2）\n燃料燃烧释放热量，热量被水吸收，使水的内能增加、温度升高，该过程是能量的转移，是通过热传递的方式改变水的内能。\n\n（3）\nA．用燃料燃烧释放的热量加热水的目的是通过水温变化推算燃烧放热，故A不符合题意；\nB．用精密温度计记录水温变化的目的是准确测量温度变化量，故B不符合题意；\nC．根据材料第二段原文“测量时，为了使燃料样品完全燃烧，需要将氧弹充入高压氧气。”可知在氧弹中充入高压氧气的目的是使燃料样本完全燃烧，故C符合题意；\nD．通过恒温控制系统保持外筒温度恒定的目的是方便计算热损失、减小测量误差，故D不符合题意。\n故选C。\n\n（4）\n标定实验中电阻丝释放的热量![](figures/image140.png)\n量热计的热容量![](figures/image141.png)\n燃料完全燃烧放出的总热量![](figures/image142.png)\n则燃料热值![](figures/image143.png)",
+      "solution": "（1）恒温    （2）热传递    （3）C      （4）$Q = W = U I t = 10 \\text{V} \\times 5 \\text{A} \\times 2 \\times 60 \\text{s} = 6000 \\text{J}$\n\n详解：（1）\n由文章第三段可知，恒温式量热计制造成本低、维护简便，在实际应用中更为普遍。\n\n（2）\n燃料燃烧释放热量，热量被水吸收，使水的内能增加、温度升高，该过程是能量的转移，是通过热传递的方式改变水的内能。\n\n（3）\nA．用燃料燃烧释放的热量加热水的目的是通过水温变化推算燃烧放热，故A不符合题意；\nB．用精密温度计记录水温变化的目的是准确测量温度变化量，故B不符合题意；\nC．根据材料第二段原文“测量时，为了使燃料样品完全燃烧，需要将氧弹充入高压氧气。”可知在氧弹中充入高压氧气的目的是使燃料样本完全燃烧，故C符合题意；\nD．通过恒温控制系统保持外筒温度恒定的目的是方便计算热损失、减小测量误差，故D不符合题意。\n故选C。\n\n（4）\n标定实验中电阻丝释放的热量$C = \\frac{Q}{\\Delta t_{1}} = \\frac{6000 \\text{J}}{0 . 6 \\text{\\textdegree C}} = 1 \\times 10^{4} \\text{J} / \\text{\\textdegree C}$\n量热计的热容量$Q_{放} = C \\Delta t_{2} = 1 \\times 10^{4} \\text{J} / \\text{\\textdegree C} \\times 2 . 5 \\text{\\textdegree C} = 2 . 5 \\times 10^{4} \\text{J}$\n燃料完全燃烧放出的总热量$q = \\frac{Q_{放}}{m} = \\frac{2 . 5 \\times 10^{4} \\text{J}}{1 \\times 10^{- 3} \\text{kg}} = 2 . 5 \\times 10^{7} \\text{J} / \\text{kg}$\n则燃料热值$R_{1}$",
       "type": "comprehensive",
       "score": 4
     },
@@ -332,7 +332,7 @@
       "options": null,
       "section": "calculation",
       "answer": "",
-      "solution": "（1）0.4A      （2）20Ω    （3）24J\n\n详解：（1）\n根据并联电路电压规律，![](figures/image145.png)两端电压等于电源电压，即![](figures/image146.png)\n通过电阻R1的电流![](figures/image147.png)\n\n（2）\n根据并联电路电流规律，干路电流等于各支路电流之和，可得通过![](figures/image148.png)的电流![](figures/image149.png)\n![](figures/image148.png)两端电压![](figures/image150.png)\n电阻R2的阻值![](figures/image151.png)\n\n（3）\n10s内整个电路消耗的电能![](figures/image152.png)",
+      "solution": "（1）0.4A      （2）20Ω    （3）24J\n\n详解：（1）\n根据并联电路电压规律，$U_{1} = U = 4 \\text{V}$两端电压等于电源电压，即$I_{1} = \\frac{U_{1}}{R_{1}} = \\frac{4 \\text{V}}{10 \\Omega} = 0 . 4 \\text{A}$\n通过电阻R1的电流$R_{2}$\n\n（2）\n根据并联电路电流规律，干路电流等于各支路电流之和，可得通过$I_{2} = I - I_{1} = 0 . 6 \\text{A} - 0 . 4 \\text{A} = 0 . 2 \\text{A}$的电流$R_{2}$\n$U_{2} = U = 4 \\text{V}$两端电压$R_{2} = \\frac{U_{2}}{I_{2}} = \\frac{4 \\text{V}}{0 . 2 \\text{A}} = 20 \\Omega$\n电阻R2的阻值$W = U I t = 4 \\text{V} \\times 0 . 6 \\text{A} \\times 10 \\text{s} = 24 \\text{J}$\n\n（3）\n10s内整个电路消耗的电能$2 . 4 \\times 10^{3} \\text{kg} / \\text{m}^{\\text{3}}$",
       "type": "calculation",
       "score": 4
     },
@@ -342,7 +342,7 @@
       "options": null,
       "section": "calculation",
       "answer": "",
-      "solution": "（1）![](figures/image154.png)      （2）![](figures/image155.png)\n\n详解：（1）\n根据杠杆平衡条件，![](figures/image156.png)，即![](figures/image157.png)\n将![](figures/image158.png)，![](figures/image159.png)代入上式，且石块浸没在水中，![](figures/image160.png)，可得![](figures/image161.png)\n其中![](figures/image162.png)，![](figures/image163.png)\n小石块的密度为![](figures/image164.png)\n\n（2）\n当水袋挂在杠杆右端最远点，设为D点时，即30cm刻度线，以左端M点作为待测物悬挂点，则最大可测量的密度为![](figures/image165.png)\n以左端N点作为待测物悬挂点，则最大可测量的密度为![](figures/image166.png)\n由于![](figures/image167.png)，![](figures/image168.png)和![](figures/image169.png)一定，因此![](figures/image155.png)。",
+      "solution": "（1）$\\rho_{1} < \\rho_{2}$      （2）$G_{石} \\cdot l_{\\text{OA}} = G_{排} \\cdot l_{\\text{OB}}$\n\n详解：（1）\n根据杠杆平衡条件，$\\frac{G_{石}}{G_{排}} = \\frac{l_{\\text{OB}}}{l_{\\text{OA}}}$，即$F_{浮} = G_{排} = \\rho_{水} g V_{排}$\n将$G_{石} = m_{石} g = \\rho_{石} g V_{石}$，$V_{石} = V_{排}$代入上式，且石块浸没在水中，$\\frac{G_{石}}{G_{排}} = \\frac{\\rho_{石} g V_{石}}{\\rho_{水} g V_{排}} = \\frac{\\rho_{石}}{\\rho_{水}} = \\frac{l_{\\text{OB}}}{l_{\\text{OA}}}$，可得$l_{\\text{OA}} = l_{\\text{A}} - l_{\\text{O}} = 16 \\text{cm} - 11 \\text{cm} = 5 \\text{cm}$\n其中$l_{\\text{OB}} = l_{\\text{B}} - l_{\\text{O}} = 28 \\text{cm} - 16 \\text{cm} = 12 \\text{cm}$，$\\rho_{石} = \\frac{l_{\\text{OB}}}{l_{\\text{OA}}} \\rho_{水} = \\frac{12 \\text{cm}}{5 \\text{cm}} \\times 1 . 0 \\times 10^{3} \\text{kg} / \\text{m}^{3} = 2 . 4 \\times 10^{3} \\text{kg} / \\text{m}^{3}$\n小石块的密度为$\\rho_{1} = \\frac{l_{\\text{OD}}}{l_{\\text{OM}}} \\rho_{水}$\n\n（2）\n当水袋挂在杠杆右端最远点，设为D点时，即30cm刻度线，以左端M点作为待测物悬挂点，则最大可测量的密度为$\\rho_{2} = \\frac{l_{\\text{OD}}}{l_{\\text{ON}}} \\rho_{水}$\n以左端N点作为待测物悬挂点，则最大可测量的密度为$l_{\\text{OM}} > l_{\\text{ON}}$\n由于$l_{\\text{OD}}$，$\\rho_{水}$和$\\rho_{1} < \\rho_{2}$一定，因此![](figures/image155.png)。",
       "type": "calculation",
       "score": 4
     }
@@ -399,67 +399,67 @@
     {
       "number": 9,
       "correct": "B",
-      "solution": "串联电路的电流特点是电流处处相等，因此串联时通过R1、R2的电流相等，根据欧姆定律![](figures/image9.png)，电流相同时，电压与电阻成正比，由于![](figures/image10.png)，所以![](figures/image11.png)；并联电路各支路两端电压相等，因此并联时R1、R2两端电压相等，根据欧姆定律![](figures/image12.png)，电压相同时，电流与电阻成反比，由于![](figures/image10.png)，所以![](figures/image13.png)，故选B。",
+      "solution": "串联电路的电流特点是电流处处相等，因此串联时通过R1、R2的电流相等，根据欧姆定律$U = I R$，电流相同时，电压与电阻成正比，由于$R_{1} < R_{2}$，所以$U_{1} < U_{2}$；并联电路各支路两端电压相等，因此并联时R1、R2两端电压相等，根据欧姆定律$I = \\frac{U}{R}$，电压相同时，电流与电阻成反比，由于$R_{1} < R_{2}$，所以$I_{1} > I_{2}$，故选B。",
       "score": 2
     },
     {
       "number": 10,
       "correct": "D",
-      "solution": "A．不计绳重和摩擦时，动滑轮重力为![](figures/image15.png)\n如果考虑绳重和摩擦，动滑轮重力实际小于![](figures/image16.png)，故A错误；\nB．绳子自由端移动距离![](figures/image17.png)\n自由端移动速度![](figures/image18.png)\n故B错误；\nC．拉力做的总功![](figures/image19.png)\n故C错误；\nD．对货箱做的有用功![](figures/image20.png)\n机械效率![](figures/image21.png)\n故D正确。\n故选D。",
+      "solution": "A．不计绳重和摩擦时，动滑轮重力为$G_{动} = n F - G_{物} = 2 \\times 250 \\text{N} - 400 \\text{N} = 100 \\text{N}$\n如果考虑绳重和摩擦，动滑轮重力实际小于$100 N$，故A错误；\nB．绳子自由端移动距离$s = n h = 2 \\times 2 m = 4 m$\n自由端移动速度$v = \\frac{s}{t} = \\frac{4 \\text{m}}{10 \\text{s}} = 0 . 4 \\text{m}/\\text{s}$\n故B错误；\nC．拉力做的总功$W_{总} = F s = 250 \\text{N} \\times 4 \\text{m} = 1000 \\text{J}$\n故C错误；\nD．对货箱做的有用功$W_{有} = G_{物} h = 400 \\text{N} \\times 2 \\text{m} = 800 \\text{J}$\n机械效率$\\eta = \\frac{W_{有}}{W_{总}} \\times 100 \\% = \\frac{800 \\text{J}}{1000 \\text{J}} \\times 100 \\% = 80 \\%$\n故D正确。\n故选D。",
       "score": 2
     },
     {
       "number": 11,
       "correct": "B",
-      "solution": "根据功率公式 ![](figures/image24.png)，变形得 ![](figures/image25.png)，可知图中倾斜段![](figures/image26.png)与![](figures/image22.png)成正比，说明此段功率![](figures/image27.png)保持不变，结合图像计算分析各选项：\nA．取点 ![](figures/image28.png)，![](figures/image29.png)，计算功率 ![](figures/image30.png)\n不是![](figures/image31.png)，故A错误；\nB．加速过程车速![](figures/image32.png)逐渐增大，因此![](figures/image22.png)逐渐减小，由图像可知：![](figures/image22.png)减小时，![](figures/image26.png)逐渐减小，因此牵引力越来越小，故B正确；\nC．汽车最终匀速时，牵引力等于阻力，最大速度对应![](figures/image33.png)，此时![](figures/image34.png)，阻力![](figures/image35.png)，阻力全程不变，因此![](figures/image36.png)时阻力仍为![](figures/image37.png)，故C错误；\nD．做功快慢就是功率，加速过程中功率![](figures/image24.png)保持不变，因此牵引力做功的快慢不变，故D错误。\n故选B。",
+      "solution": "根据功率公式 $P = F v$，变形得 $F = P \\times \\frac{1}{v}$，可知图中倾斜段$F$与$\\frac{1}{v}$成正比，说明此段功率$P$保持不变，结合图像计算分析各选项：\nA．取点 $\\frac{1}{v} = 0 . 10 \\text{s}/\\text{m}$，$F = 1 . 0 \\times 10^{4} \\text{N}$，计算功率 $P = F v = F \\times \\frac{1}{\\frac{1}{v}} = 1 . 0 \\times 10^{4} \\text{N} \\times \\frac{1}{0 . 10} \\text{m}/\\text{s} = 1 \\times 10^{5} \\text{W} = 100000 \\text{W}$\n不是$1000 \\text{W}$，故A错误；\nB．加速过程车速$v$逐渐增大，因此$\\frac{1}{v}$逐渐减小，由图像可知：$\\frac{1}{v}$减小时，$F$逐渐减小，因此牵引力越来越小，故B正确；\nC．汽车最终匀速时，牵引力等于阻力，最大速度对应$\\frac{1}{v} = 0 . 03 \\text{s}/\\text{m}$，此时$F = 0 . 3 \\times 10^{4} \\text{N} = 3 \\times 10^{3} \\text{N}$，阻力$f = F = 3 \\times 10^{3} \\text{N}$，阻力全程不变，因此$v = 20 \\text{m}/\\text{s}$时阻力仍为$3 \\times 10^{3} \\text{N}$，故C错误；\nD．做功快慢就是功率，加速过程中功率$P = F v$保持不变，因此牵引力做功的快慢不变，故D错误。\n故选B。",
       "score": 2
     },
     {
       "number": 12,
       "correct": "C",
-      "solution": "A．风能可以源源不断从自然界获取，属于可再生能源，故A错误；\nB．风力发电机给蓄电池充电的过程：先将风能（机械能）转化为电能，再将电能转化为蓄电池的化学能储存，并不是机械能直接转化为化学能，故B错误；\nC．根据题意，![](figures/image42.png)时间内总风能为![](figures/image43.png)，风能利用效率为30%，风力发电机输出电功率为 ![](figures/image44.png)\n风力发电机的输出电功率![](figures/image45.png)\n故C正确；\nD．LED灯正常工作20小时消耗的电能![](figures/image46.png)\n蓄电池放电效率为95%，因此蓄电池储存的能量![](figures/image47.png)\n故D错误。\n故选C。",
+      "solution": "A．风能可以源源不断从自然界获取，属于可再生能源，故A错误；\nB．风力发电机给蓄电池充电的过程：先将风能（机械能）转化为电能，再将电能转化为蓄电池的化学能储存，并不是机械能直接转化为化学能，故B错误；\nC．根据题意，$t$时间内总风能为$E_{风} = \\frac{1}{2} \\rho S v^{3} t$，风能利用效率为30%，风力发电机输出电功率为 $P = \\frac{E_{风} \\times 30 \\%}{t} = \\frac{1}{2} \\rho S v^{3} \\times 30 \\%$\n风力发电机的输出电功率$P = \\frac{1}{2} \\rho S v^{3} \\times 30 \\% = \\frac{1}{2} \\times 1 . 2 \\text{kg}/\\text{m}^{3} \\times 2 \\text{m}^{2} \\times \\left(\\left(8,\\text{m}/\\text{s}\\right)\\right)^{3} \\times 30 \\% = 184 . 32 \\text{W}$\n故C正确；\nD．LED灯正常工作20小时消耗的电能$W_{灯} = P t = 12 \\times 10^{- 3} \\text{kW} \\times 20 \\text{h} = 0 . 24 \\text{kW} \\cdot \\text{h}$\n蓄电池放电效率为95%，因此蓄电池储存的能量$W_{储} = \\frac{W_{灯}}{95 \\%} = \\frac{0 . 24 k W \\cdot \\text{h}}{95 \\%} \\approx 0 . 25 \\text{kW} \\cdot \\text{h}$\n故D错误。\n故选C。",
       "score": 2
     },
     {
       "number": 13,
       "correct": "CD",
-      "solution": "A．液体很难被压缩，是因为分子间存在斥力，不是引力，故A错误；\nB．汽油机的做功冲程是燃气膨胀对外做功，将内能转化为机械能，压缩冲程才是机械能转化为内能，故B错误；\nC．红墨水滴入水中后逐渐散开，是不同物质的分子彼此进入对方的现象，属于扩散现象，故C正确；\nD．水的比热容比砂石大，根据公式![](figures/image48.png)，相同质量的水和砂石吸放相同热量时，水的温度变化更小，因此沿海地区（水多）比内陆地区昼夜温差更小，故D正确。\n故选CD。",
+      "solution": "A．液体很难被压缩，是因为分子间存在斥力，不是引力，故A错误；\nB．汽油机的做功冲程是燃气膨胀对外做功，将内能转化为机械能，压缩冲程才是机械能转化为内能，故B错误；\nC．红墨水滴入水中后逐渐散开，是不同物质的分子彼此进入对方的现象，属于扩散现象，故C正确；\nD．水的比热容比砂石大，根据公式$\\Delta t = \\frac{Q}{c m}$，相同质量的水和砂石吸放相同热量时，水的温度变化更小，因此沿海地区（水多）比内陆地区昼夜温差更小，故D正确。\n故选CD。",
       "score": 2
     },
     {
       "number": 14,
       "correct": "AC",
-      "solution": "A．报警器未入水时，潜水深度![](figures/image51.png)，由图乙得此时![](figures/image52.png)。已知电源电压![](figures/image53.png)，电流![](figures/image54.png)，总电阻![](figures/image55.png)\n因此![](figures/image56.png)的阻值![](figures/image57.png)\n故A正确；\nB．由图乙可知，潜水深度![](figures/image58.png)增大时，压敏电阻![](figures/image59.png)的阻值减小，故B错误；\nC．当![](figures/image60.png)时，由图乙得![](figures/image61.png)，此时电路电流![](figures/image62.png)\n![](figures/image63.png)两端电压即警戒电压![](figures/image64.png)\n故C正确；\nD．报警要求![](figures/image63.png)两端电压达到警戒电压![](figures/image65.png)，由![](figures/image66.png)变形得临界压敏电阻![](figures/image67.png)​\n若更换阻值更小的![](figures/image63.png)​，临界![](figures/image59.png)会更小，而![](figures/image59.png)越小对应深度![](figures/image58.png)越大，说明需要更深才会报警，故D错误。\n故选AC。",
+      "solution": "A．报警器未入水时，潜水深度$h = 0$，由图乙得此时$R = 40 \\Omega$。已知电源电压$U = 6 \\text{V}$，电流$I = 0 . 12 \\text{A}$，总电阻$R_{总} = \\frac{U}{I} = \\frac{6 \\text{V}}{0 . 12 \\text{A}} = 50 \\Omega$\n因此$R_{\\text{0}}$的阻值$R_{0} = R_{总} - R = 50 \\Omega - 40 \\Omega = 10 \\Omega$\n故A正确；\nB．由图乙可知，潜水深度$h$增大时，压敏电阻$R$的阻值减小，故B错误；\nC．当$h = 1 \\text{m}$时，由图乙得$R = 30 \\Omega$，此时电路电流$I^{'} = \\frac{U}{R_{0} + R} = \\frac{6 \\text{V}}{10 \\Omega + 30 \\Omega} = 0 . 15 \\text{A}$\n$R_{0}$两端电压即警戒电压$U = I^{'} R_{0} = 0 . 15 \\text{A} \\times 10 \\Omega = 1 . 5 \\text{V}$\n故C正确；\nD．报警要求$R_{0}$两端电压达到警戒电压$U$，由$U = \\frac{U_{总} R_{0}}{R + R_{0}}$变形得临界压敏电阻$R = R_{0} \\cdot \\frac{U_{总} - U}{U}$​\n若更换阻值更小的$R_{0}$​，临界$R$会更小，而$R$越小对应深度$h$越大，说明需要更深才会报警，故D错误。\n故选AC。",
       "score": 2
     },
     {
       "number": 15,
       "correct": "ACD",
-      "solution": "A．原样品A的体积![](figures/image69.png)\nA的质量![](figures/image70.png)\n样品B对水平地面的压力等于B的重力，接触底面积不变![](figures/image71.png)\n物体B的重力为![](figures/image72.png)\n则B的质量为![](figures/image73.png)\n切去部分质量![](figures/image74.png)\n故A正确；\nB．切去部分体积![](figures/image75.png)​\n凹槽截面为正方形，边长![](figures/image76.png)，沿宽度方向（5cm方向）通长，故![](figures/image77.png)\n代入得![](figures/image78.png)，![](figures/image79.png)，故B错误；\nC．切去宽度![](figures/image80.png)，剩余长度为![](figures/image81.png)，凹槽在剩余部分的长度为![](figures/image82.png)，剩余体积 ![](figures/image83.png)\n则剩余物体重力![](figures/image84.png)\n底面积![](figures/image85.png)\n则压强为![](figures/image86.png)\n故C正确。\nD．切去宽度d满足![](figures/image87.png)时，剩余物体压力为![](figures/image88.png)\n![](figures/image89.png)\n代入化简可得![](figures/image90.png)\n剩余部分底面积![](figures/image91.png)\n由压强公式可得![](figures/image92.png)\n化简得![](figures/image93.png)\n当切去宽度的取值范围为![](figures/image94.png)时，![](figures/image95.png)，故D正确。\n故选ACD。",
+      "solution": "A．原样品A的体积$V_{A} = 20 \\text{cm} \\times 5 \\text{cm} \\times 10 \\text{cm} = 1000 \\text{cm}^{3} = 1 \\times 10^{- 3} \\text{m}^{3}$\nA的质量$m_{A} = \\rho V_{A} = 2 \\times 10^{3} \\text{kg}/\\text{m}^{3} \\times 1 \\times 10^{- 3} \\text{m}^{3} = 2 \\text{kg}$\n样品B对水平地面的压力等于B的重力，接触底面积不变$S = 20 \\text{cm} \\times 5 \\text{cm} = 100 \\text{cm}^{2} = 0 . 01 \\text{m}^{2}$\n物体B的重力为$G_{B} = F_{B} = p_{B} S = 1840 \\text{Pa} \\times 0 . 01 \\text{m}^{2} = 18 . 4 \\text{N}$\n则B的质量为$m_{B} = \\frac{G_{B}}{g} = 1 . 84 \\text{kg}$\n切去部分质量$\\Delta m = m_{A} - m_{B} = 2 \\text{kg} - 1 . 84 \\text{kg} = 0 . 16 \\text{kg}$\n故A正确；\nB．切去部分体积$\\Delta V = \\frac{\\Delta m}{\\rho} = \\frac{0 . 16 \\text{kg}}{2 \\times 10^{3} \\text{kg}/\\text{m}^{3}} = 8 \\times 10^{- 5} \\text{m}^{3} = 80 \\text{cm}^{3}$​\n凹槽截面为正方形，边长$l$，沿宽度方向（5cm方向）通长，故$\\Delta V = l^{2} \\times 5 \\text{cm}$\n代入得$l^{2} = 16 \\text{cm}^{2}$，$l = 4 \\text{cm}$，故B错误；\nC．切去宽度$d = 10 \\text{cm}$，剩余长度为$10 \\text{cm}$，凹槽在剩余部分的长度为$2 \\text{cm}$，剩余体积 $V^{'} = 10 \\times 5 \\times 10 - 2 \\times 4 \\times 5 = 460 \\text{cm}^{3} = 4 . 6 \\times 10^{- 4} \\text{m}^{3}$\n则剩余物体重力$G^{'} = \\rho V^{'} g = 2 \\times 10^{3} \\text{kg}/\\text{m}^{\\text{3}} \\times 4 . 6 \\times 10^{- 4} \\text{m}^{3} \\times 10 \\text{N} / k g = 9 . 2 \\text{N}$\n底面积$S^{'} = 10 \\text{cm} \\times 5 \\text{cm} = 50 \\text{cm}^{\\text{2}} = 0 . 005 \\text{m}^{2}$\n则压强为$p^{'} = \\frac{G^{'}}{S^{'}} = \\frac{9 . 2 \\text{N}}{0 . 005 \\text{m}^{2}} = 1840 \\text{Pa}$\n故C正确。\nD．切去宽度d满足$0 < d < 8 \\text{cm}$时，剩余物体压力为$G_{剩} = G_{\\text{B}} - G_{切} = 18 . 4 \\text{N} - \\rho V_{切} g$\n$G_{剩} = \\left(18,.,4,-,d\\right) \\text{N}$\n代入化简可得$S_{剩} = S_{\\text{B}} - S_{切} = \\left(20,\\text{cm},\\times,5,\\text{cm},-,5,\\text{cm},\\times,d\\right) \\times 10^{- 4} \\text{m}^{2}$\n剩余部分底面积$p = \\frac{F}{S} = \\frac{G_{剩}}{S_{剩}} = \\frac{\\left(18,.,4,-,d\\right) \\text{N}}{\\left(20,\\text{cm},\\times,5,\\text{cm},-,5,\\text{cm},\\times,d\\right) \\times 10^{- 4}}$\n由压强公式可得$p = \\frac{\\left(\\right. 18 . 4 - d \\left.\\right) \\times 10^{4}}{100 - 5 d} \\text{Pa}$\n化简得$0 < d < 8 c m$\n当切去宽度的取值范围为$p < 1840 \\text{Pa}$时，$0 \\sim 0 . 6 \\text{A}$，故D正确。\n故选ACD。",
       "score": 2
     },
     {
       "number": 16,
       "correct": "",
-      "solution": "（1）0.3    （2）N      （3）在同一平面内\n\n详解：（1）\n电流表选择的是![](figures/image97.png)量程，该量程的分度值为![](figures/image98.png)，指针正对![](figures/image99.png)刻度处，因此示数为![](figures/image99.png)。\n\n（2）\n小磁针静止时N极的指向为该点的磁场方向，且异名磁极相互吸引；本题中小磁针N极向左，S极向右朝向螺线管左端，S极被N极吸引，因此通电螺线管的左端为N极。\n\n（3）\n只有当反射光线、入射光线和法线在同一平面内时，才会出现反射光线同时挡住入射光线和法线的现象，因此该现象说明：反射现象中，反射光线、入射光线与法线在同一平面内。",
+      "solution": "（1）0.3    （2）N      （3）在同一平面内\n\n详解：（1）\n电流表选择的是$0 . 02 A$量程，该量程的分度值为$0 . 3 A$，指针正对$0 . 3 A$刻度处，因此示数为$m = 20 \\text{g} + 2 \\text{g} = 22 \\text{g}$。\n\n（2）\n小磁针静止时N极的指向为该点的磁场方向，且异名磁极相互吸引；本题中小磁针N极向左，S极向右朝向螺线管左端，S极被N极吸引，因此通电螺线管的左端为N极。\n\n（3）\n只有当反射光线、入射光线和法线在同一平面内时，才会出现反射光线同时挡住入射光线和法线的现象，因此该现象说明：反射现象中，反射光线、入射光线与法线在同一平面内。",
       "score": 3
     },
     {
       "number": 17,
       "correct": "",
-      "solution": "①. 22    ②. 2.2\n\n详解：砝码质量为20g ，游码对应刻度值为2g，石块质量![](figures/image101.png)\n 量筒中原有水的体积为50mL，放入石块后总体积为60mL，则石块体积![](figures/image102.png)\n根据密度公式![](figures/image103.png)，可得石块的密度![](figures/image104.png)",
+      "solution": "①. 22    ②. 2.2\n\n详解：砝码质量为20g ，游码对应刻度值为2g，石块质量$V = 60 m L - 50 m L = 10 m L = 10 c m^{3}$\n 量筒中原有水的体积为50mL，放入石块后总体积为60mL，则石块体积$\\rho = \\frac{m}{V}$\n根据密度公式$\\rho_{石} = \\frac{m}{V} = \\frac{22 \\text{g}}{10 c m^{3}} = 2 . 2 \\text{g} / c m^{3}$，可得石块的密度$1^{@} \\text{C}$",
       "score": 3
     },
     {
       "number": 18,
       "correct": "",
-      "solution": "（1）88    （2）a      （3）不变\n\n详解：（1）\n温度计的分度值为![](figures/image106.png)，液柱对应刻度为![](figures/image107.png)，因此此时水温为![](figures/image107.png)。\n\n（2）\n水沸腾时，整个容器中水温相同，水内部不停地汽化，产生大量的水蒸气进入气泡，同时气泡上升过程中，水的压力随深度减小而减小，气泡体积越往上越大，因此![](figures/image108.png)是水沸腾时的气泡上升情况；\n\n（3）\n由图丙可知，![](figures/image109.png)时刻水沸腾后，随加热时间增加，温度保持水平不变，因此结论为：水沸腾过程中温度不变。",
+      "solution": "（1）88    （2）a      （3）不变\n\n详解：（1）\n温度计的分度值为$88^{@} \\text{C}$，液柱对应刻度为$88^{@} \\text{C}$，因此此时水温为$a$。\n\n（2）\n水沸腾时，整个容器中水温相同，水内部不停地汽化，产生大量的水蒸气进入气泡，同时气泡上升过程中，水的压力随深度减小而减小，气泡体积越往上越大，因此$t_{0}$是水沸腾时的气泡上升情况；\n\n（3）\n由图丙可知，$\\text{M}_{2}$时刻水沸腾后，随加热时间增加，温度保持水平不变，因此结论为：水沸腾过程中温度不变。",
       "score": 3
     },
     {
       "number": 19,
       "correct": "",
-      "solution": "（1）灵敏电流计指针是否偏转      （2）    ①. 闭合    ②. 3      （3）![](figures/image111.png)\n\n详解：（1）\n本实验利用转换法：若电路中产生感应电流，灵敏电流计指针会发生偏转，因此通过观察灵敏电流计指针是否偏转判断电路中是否产生感应电流。\n\n（2）\n对比实验1（开关断开，切割磁感线无电流）和实验3（开关闭合，切割磁感线有电流），可得产生感应电流的条件之一是电路保持闭合状态；\n验证“导体做切割磁感线运动”是感应电流的产生条件，需要控制电路闭合，只改变导体运动状态，因此对比实验2和实验3。\n\n（3）\n由图乙可知，电源接在![](figures/image112.png)​所在电路中，闭合开关后![](figures/image112.png)通电转动，带动同轴连接的![](figures/image111.png)​转动，![](figures/image111.png)​的线圈在磁场中切割磁感线，产生感应电流使二极管发光。",
+      "solution": "（1）灵敏电流计指针是否偏转      （2）    ①. 闭合    ②. 3      （3）$\\text{M}_{1}$\n\n详解：（1）\n本实验利用转换法：若电路中产生感应电流，灵敏电流计指针会发生偏转，因此通过观察灵敏电流计指针是否偏转判断电路中是否产生感应电流。\n\n（2）\n对比实验1（开关断开，切割磁感线无电流）和实验3（开关闭合，切割磁感线有电流），可得产生感应电流的条件之一是电路保持闭合状态；\n验证“导体做切割磁感线运动”是感应电流的产生条件，需要控制电路闭合，只改变导体运动状态，因此对比实验2和实验3。\n\n（3）\n由图乙可知，电源接在$\\text{M}_{1}$​所在电路中，闭合开关后$\\text{M}_{2}$通电转动，带动同轴连接的$\\text{M}_{2}$​转动，$50 . 0 \\text{cm}$​的线圈在磁场中切割磁感线，产生感应电流使二极管发光。",
       "score": 3
     },
     {
@@ -471,37 +471,37 @@
     {
       "number": 21,
       "correct": "",
-      "solution": "（1）10.0      （2）高    （3）大\n\n详解：（1）\n平行于凸透镜主光轴的光线会聚形成的最小亮斑就是焦点，焦点到凸透镜光心的距离为焦距。由图可知，凸透镜在![](figures/image115.png)刻度处，光屏（焦点）在![](figures/image116.png)刻度处，因此焦距![](figures/image117.png)\n\n（2）\n由表格数据可知：保持物高、物距不变时，凸透镜焦距从![](figures/image118.png)增大到![](figures/image119.png)，像高从![](figures/image120.png)增大到![](figures/image121.png)，因此可得：物高、物距一定时，凸透镜焦距越大，所成实像的高度越大。\n\n（3）\n拍摄完全身照再拍半身照，需要像变大；题目中拍摄者和被拍者位置都不变，即物距不变，根据实验结论，要让像变大，应切换焦距更大的摄像头。",
+      "solution": "（1）10.0      （2）高    （3）大\n\n详解：（1）\n平行于凸透镜主光轴的光线会聚形成的最小亮斑就是焦点，焦点到凸透镜光心的距离为焦距。由图可知，凸透镜在$60 . 0 \\text{cm}$刻度处，光屏（焦点）在$f_{A} = 60 . 0 \\text{cm} - 50 . 0 \\text{cm} = 10 . 0 \\text{cm}$刻度处，因此焦距$5 \\text{cm}$\n\n（2）\n由表格数据可知：保持物高、物距不变时，凸透镜焦距从$12 \\text{cm}$增大到$1 . 7 \\text{cm}$，像高从$7 . 5 \\text{cm}$增大到$R_{x}$，因此可得：物高、物距一定时，凸透镜焦距越大，所成实像的高度越大。\n\n（3）\n拍摄完全身照再拍半身照，需要像变大；题目中拍摄者和被拍者位置都不变，即物距不变，根据实验结论，要让像变大，应切换焦距更大的摄像头。",
       "score": 3
     },
     {
       "number": 22,
       "correct": "",
-      "solution": "（1）使电流表的示数仍为I      （2）R0    （3）大于\n\n详解：（1）\n该方法需要两次电路电流相同，因此调节电阻箱后，需要使电流表示数和第一次接入![](figures/image123.png)时相同，仍为![](figures/image124.png)。\n\n（2）\n正确操作时，滑动变阻器接入电阻不变，两次电流都是![](figures/image124.png)，总电阻相等，因此![](figures/image125.png)。\n\n（3）\n滑片向左移动后，滑动变阻器接入电路的阻值变小。为了让电流仍保持为![](figures/image124.png)，总电阻![](figures/image126.png)不变，由![](figures/image127.png)​可知![](figures/image128.png)​变小，测得的![](figures/image63.png)会偏大，因此最终测得的电阻值大于![](figures/image123.png)的真实阻值。",
+      "solution": "（1）使电流表的示数仍为I      （2）R0    （3）大于\n\n详解：（1）\n该方法需要两次电路电流相同，因此调节电阻箱后，需要使电流表示数和第一次接入$I$时相同，仍为$I$。\n\n（2）\n正确操作时，滑动变阻器接入电阻不变，两次电流都是$R_{x} = R_{0}$，总电阻相等，因此$I$。\n\n（3）\n滑片向左移动后，滑动变阻器接入电路的阻值变小。为了让电流仍保持为$R_{总} = \\frac{U}{I}$，总电阻$R_{0} = R_{总} - R_{P}$不变，由$R_{P}$​可知$R_{0}$​变小，测得的$R_{x}$会偏大，因此最终测得的电阻值大于$F_{浮\\text{1}} = G_{总} = G_{冰} + G_{草莓}$的真实阻值。",
       "score": 7
     },
     {
       "number": 23,
       "correct": "",
-      "solution": "如图，当冰没有熔化时，水果冰块漂浮在水面上，根据漂浮条件，总浮力等于总重力，则![](figures/image130.png)\n所以总排开水的体积![](figures/image131.png)\n当冰块全部熔化后，此时得到水的质量不变，因此![](figures/image132.png)，因为![](figures/image133.png)草莓最终会漂浮在水面上，根据漂浮条件，有![](figures/image134.png)，则熔化水的体积加草莓的排开体积总和![](figures/image135.png)\n即总体积和原来冰块漂浮时的排开体积相等，原来放入冰块后已经溢出了体积为![](figures/image136.png)​的水，此时水面与杯口相平，所以熔化后水面高度不变，因此水不会溢出。",
+      "solution": "如图，当冰没有熔化时，水果冰块漂浮在水面上，根据漂浮条件，总浮力等于总重力，则$\\Delta V_{\\text{1}} = V_{排} = \\frac{F_{浮\\text{1}}}{\\rho_{水} g} = \\frac{G_{冰} + G_{草莓}}{\\rho_{水} g} = \\frac{m_{冰} + m_{草莓}}{\\rho_{水}}$\n所以总排开水的体积$m_{冰化水} = m_{冰}$\n当冰块全部熔化后，此时得到水的质量不变，因此$\\rho_{草莓} < \\rho_{水} ，$，因为$F_{浮\\text{2}} = G_{草莓}$草莓最终会漂浮在水面上，根据漂浮条件，有$\\Delta V_{2} = V_{冰化水} + V_{排草莓} = \\frac{m_{冰化水}}{\\rho_{水}} + \\frac{F_{浮\\text{2}}}{\\rho_{水} g} = \\frac{m_{冰}}{\\rho_{水}} + \\frac{G_{草莓}}{\\rho_{水} g} = \\frac{m_{冰} + m_{草莓}}{\\rho_{水}}$，则熔化水的体积加草莓的排开体积总和$V_{排}$\n即总体积和原来冰块漂浮时的排开体积相等，原来放入冰块后已经溢出了体积为$\\Delta t$​的水，此时水面与杯口相平，所以熔化后水面高度不变，因此水不会溢出。",
       "score": 3
     },
     {
       "number": 24,
       "correct": "",
-      "solution": "（1）恒温    （2）热传递    （3）C      （4）![](figures/image139.png)\n\n详解：（1）\n由文章第三段可知，恒温式量热计制造成本低、维护简便，在实际应用中更为普遍。\n\n（2）\n燃料燃烧释放热量，热量被水吸收，使水的内能增加、温度升高，该过程是能量的转移，是通过热传递的方式改变水的内能。\n\n（3）\nA．用燃料燃烧释放的热量加热水的目的是通过水温变化推算燃烧放热，故A不符合题意；\nB．用精密温度计记录水温变化的目的是准确测量温度变化量，故B不符合题意；\nC．根据材料第二段原文“测量时，为了使燃料样品完全燃烧，需要将氧弹充入高压氧气。”可知在氧弹中充入高压氧气的目的是使燃料样本完全燃烧，故C符合题意；\nD．通过恒温控制系统保持外筒温度恒定的目的是方便计算热损失、减小测量误差，故D不符合题意。\n故选C。\n\n（4）\n标定实验中电阻丝释放的热量![](figures/image140.png)\n量热计的热容量![](figures/image141.png)\n燃料完全燃烧放出的总热量![](figures/image142.png)\n则燃料热值![](figures/image143.png)",
+      "solution": "（1）恒温    （2）热传递    （3）C      （4）$Q = W = U I t = 10 \\text{V} \\times 5 \\text{A} \\times 2 \\times 60 \\text{s} = 6000 \\text{J}$\n\n详解：（1）\n由文章第三段可知，恒温式量热计制造成本低、维护简便，在实际应用中更为普遍。\n\n（2）\n燃料燃烧释放热量，热量被水吸收，使水的内能增加、温度升高，该过程是能量的转移，是通过热传递的方式改变水的内能。\n\n（3）\nA．用燃料燃烧释放的热量加热水的目的是通过水温变化推算燃烧放热，故A不符合题意；\nB．用精密温度计记录水温变化的目的是准确测量温度变化量，故B不符合题意；\nC．根据材料第二段原文“测量时，为了使燃料样品完全燃烧，需要将氧弹充入高压氧气。”可知在氧弹中充入高压氧气的目的是使燃料样本完全燃烧，故C符合题意；\nD．通过恒温控制系统保持外筒温度恒定的目的是方便计算热损失、减小测量误差，故D不符合题意。\n故选C。\n\n（4）\n标定实验中电阻丝释放的热量$C = \\frac{Q}{\\Delta t_{1}} = \\frac{6000 \\text{J}}{0 . 6 \\text{\\textdegree C}} = 1 \\times 10^{4} \\text{J} / \\text{\\textdegree C}$\n量热计的热容量$Q_{放} = C \\Delta t_{2} = 1 \\times 10^{4} \\text{J} / \\text{\\textdegree C} \\times 2 . 5 \\text{\\textdegree C} = 2 . 5 \\times 10^{4} \\text{J}$\n燃料完全燃烧放出的总热量$q = \\frac{Q_{放}}{m} = \\frac{2 . 5 \\times 10^{4} \\text{J}}{1 \\times 10^{- 3} \\text{kg}} = 2 . 5 \\times 10^{7} \\text{J} / \\text{kg}$\n则燃料热值$R_{1}$",
       "score": 4
     },
     {
       "number": 25,
       "correct": "",
-      "solution": "（1）0.4A      （2）20Ω    （3）24J\n\n详解：（1）\n根据并联电路电压规律，![](figures/image145.png)两端电压等于电源电压，即![](figures/image146.png)\n通过电阻R1的电流![](figures/image147.png)\n\n（2）\n根据并联电路电流规律，干路电流等于各支路电流之和，可得通过![](figures/image148.png)的电流![](figures/image149.png)\n![](figures/image148.png)两端电压![](figures/image150.png)\n电阻R2的阻值![](figures/image151.png)\n\n（3）\n10s内整个电路消耗的电能![](figures/image152.png)",
+      "solution": "（1）0.4A      （2）20Ω    （3）24J\n\n详解：（1）\n根据并联电路电压规律，$U_{1} = U = 4 \\text{V}$两端电压等于电源电压，即$I_{1} = \\frac{U_{1}}{R_{1}} = \\frac{4 \\text{V}}{10 \\Omega} = 0 . 4 \\text{A}$\n通过电阻R1的电流$R_{2}$\n\n（2）\n根据并联电路电流规律，干路电流等于各支路电流之和，可得通过$I_{2} = I - I_{1} = 0 . 6 \\text{A} - 0 . 4 \\text{A} = 0 . 2 \\text{A}$的电流$R_{2}$\n$U_{2} = U = 4 \\text{V}$两端电压$R_{2} = \\frac{U_{2}}{I_{2}} = \\frac{4 \\text{V}}{0 . 2 \\text{A}} = 20 \\Omega$\n电阻R2的阻值$W = U I t = 4 \\text{V} \\times 0 . 6 \\text{A} \\times 10 \\text{s} = 24 \\text{J}$\n\n（3）\n10s内整个电路消耗的电能$2 . 4 \\times 10^{3} \\text{kg} / \\text{m}^{\\text{3}}$",
       "score": 4
     },
     {
       "number": 26,
       "correct": "",
-      "solution": "（1）![](figures/image154.png)      （2）![](figures/image155.png)\n\n详解：（1）\n根据杠杆平衡条件，![](figures/image156.png)，即![](figures/image157.png)\n将![](figures/image158.png)，![](figures/image159.png)代入上式，且石块浸没在水中，![](figures/image160.png)，可得![](figures/image161.png)\n其中![](figures/image162.png)，![](figures/image163.png)\n小石块的密度为![](figures/image164.png)\n\n（2）\n当水袋挂在杠杆右端最远点，设为D点时，即30cm刻度线，以左端M点作为待测物悬挂点，则最大可测量的密度为![](figures/image165.png)\n以左端N点作为待测物悬挂点，则最大可测量的密度为![](figures/image166.png)\n由于![](figures/image167.png)，![](figures/image168.png)和![](figures/image169.png)一定，因此![](figures/image155.png)。",
+      "solution": "（1）$\\rho_{1} < \\rho_{2}$      （2）$G_{石} \\cdot l_{\\text{OA}} = G_{排} \\cdot l_{\\text{OB}}$\n\n详解：（1）\n根据杠杆平衡条件，$\\frac{G_{石}}{G_{排}} = \\frac{l_{\\text{OB}}}{l_{\\text{OA}}}$，即$F_{浮} = G_{排} = \\rho_{水} g V_{排}$\n将$G_{石} = m_{石} g = \\rho_{石} g V_{石}$，$V_{石} = V_{排}$代入上式，且石块浸没在水中，$\\frac{G_{石}}{G_{排}} = \\frac{\\rho_{石} g V_{石}}{\\rho_{水} g V_{排}} = \\frac{\\rho_{石}}{\\rho_{水}} = \\frac{l_{\\text{OB}}}{l_{\\text{OA}}}$，可得$l_{\\text{OA}} = l_{\\text{A}} - l_{\\text{O}} = 16 \\text{cm} - 11 \\text{cm} = 5 \\text{cm}$\n其中$l_{\\text{OB}} = l_{\\text{B}} - l_{\\text{O}} = 28 \\text{cm} - 16 \\text{cm} = 12 \\text{cm}$，$\\rho_{石} = \\frac{l_{\\text{OB}}}{l_{\\text{OA}}} \\rho_{水} = \\frac{12 \\text{cm}}{5 \\text{cm}} \\times 1 . 0 \\times 10^{3} \\text{kg} / \\text{m}^{3} = 2 . 4 \\times 10^{3} \\text{kg} / \\text{m}^{3}$\n小石块的密度为$\\rho_{1} = \\frac{l_{\\text{OD}}}{l_{\\text{OM}}} \\rho_{水}$\n\n（2）\n当水袋挂在杠杆右端最远点，设为D点时，即30cm刻度线，以左端M点作为待测物悬挂点，则最大可测量的密度为$\\rho_{2} = \\frac{l_{\\text{OD}}}{l_{\\text{ON}}} \\rho_{水}$\n以左端N点作为待测物悬挂点，则最大可测量的密度为$l_{\\text{OM}} > l_{\\text{ON}}$\n由于$l_{\\text{OD}}$，$\\rho_{水}$和$\\rho_{1} < \\rho_{2}$一定，因此![](figures/image155.png)。",
       "score": 4
     }
   ],

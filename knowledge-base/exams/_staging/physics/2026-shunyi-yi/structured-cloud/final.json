@@ -68,7 +68,7 @@
         "A": "吹箫发出的声音是由竹子振动产生的",
         "B": "人们听到吹箫发出的声音是通过空气传播的",
         "C": "按住笛上不同的孔可吹奏出不同音色的声音",
-        "D": "吹奏出的笛声在真空中的传播速度是![](figures/image4.png)"
+        "D": "吹奏出的笛声在真空中的传播速度是$340 \\text{m} / \\text{s}$"
       },
       "section": "choice",
       "answer": "B",
@@ -138,46 +138,46 @@
     },
     {
       "number": 10,
-      "stem": "图甲为某品牌电热水壶实物图，图乙为其电路原理图，![](figures/image8.png)和![](figures/image9.png)为阻值不变的电热丝，![](figures/image10.png)为总开关，![](figures/image11.png)为温控开关，当水加热到![](figures/image12.png)时，电热水壶自动切换到保温状态。电热水壶的额定电压是![](figures/image13.png)，加热功率是![](figures/image14.png)，保温功率是![](figures/image15.png)。电热水壶正常工作过程中，下列说法正确的是（　　）\n\n![](figures/image16.png)",
+      "stem": "图甲为某品牌电热水壶实物图，图乙为其电路原理图，$R_{1}$和$R_{2}$为阻值不变的电热丝，$\\text{S}_{1}$为总开关，$\\text{S}_{2}$为温控开关，当水加热到$100 \\text{\\textdegree C}$时，电热水壶自动切换到保温状态。电热水壶的额定电压是$220 \\text{V}$，加热功率是$880 \\text{W}$，保温功率是$80 \\text{W}$。电热水壶正常工作过程中，下列说法正确的是（　　）\n\n![](figures/image16.png)",
       "options": {
         "A": "加热过程一定比保温过程消耗的电能多",
         "B": "加热过程比保温过程电路中的电流小",
-        "C": "电热丝![](figures/image17.png)",
+        "C": "电热丝$R_{1} : R_{2} = 1 : 10$",
         "D": "加热和保温相同时间产生的热量之比为10∶1"
       },
       "section": "choice",
       "answer": "C",
-      "solution": "当![](figures/image18.png)闭合、![](figures/image19.png)闭合时，![](figures/image20.png)被短路，只有![](figures/image21.png)接入电路，电阻小，由![](figures/image22.png)可知，电压不变时功率大，为加热状态；当![](figures/image18.png)闭合、![](figures/image19.png)断开时，![](figures/image21.png)与![](figures/image20.png)串联，总电阻大，功率小，为保温状态。\nA．根据电能公式![](figures/image23.png)，电能由功率和工作时间共同决定，未说明工作时间，无法比较加热和保温消耗电能的多少，故A错误；\nB．由![](figures/image24.png)，电源电压![](figures/image25.png)不变，加热功率![](figures/image26.png)，因此加热电流![](figures/image27.png)，故B错误；\nC．加热状态![](figures/image21.png)的电阻![](figures/image28.png)\n保温状态总电阻![](figures/image29.png)\n串联电路总电阻等于各电阻之和，因此![](figures/image20.png)的电阻![](figures/image30.png)\n则![](figures/image31.png)，故C正确；\nD．纯电阻电路，相同时间![](figures/image32.png)内产生热量![](figures/image33.png)，因此热量比![](figures/image34.png)\n不是![](figures/image35.png)，故D错误。\n故选C。",
+      "solution": "当$\\text{S}_{1}$闭合、$\\text{S}_{2}$闭合时，$R_{2}$被短路，只有$R_{1}$接入电路，电阻小，由$P = \\frac{U^{2}}{R}$可知，电压不变时功率大，为加热状态；当$\\text{S}_{1}$闭合、$\\text{S}_{2}$断开时，$R_{1}$与$R_{2}$串联，总电阻大，功率小，为保温状态。\nA．根据电能公式$W = P t$，电能由功率和工作时间共同决定，未说明工作时间，无法比较加热和保温消耗电能的多少，故A错误；\nB．由$P = U I$，电源电压$U = 220 \\text{V}$不变，加热功率$P_{加} > P_{保}$，因此加热电流$I_{加} > I_{保}$，故B错误；\nC．加热状态$R_{1}$的电阻$R_{1} = \\frac{U^{2}}{P_{加}} = \\frac{\\left(\\right. 220 \\text{V} \\left.\\right)^{2}}{880 \\text{W}} = 55 \\Omega$\n保温状态总电阻$R_{总} = \\frac{U^{2}}{P_{保}} = \\frac{\\left(\\right. 220 \\text{V} \\left.\\right)^{2}}{80 \\text{W}} = 605 \\Omega$\n串联电路总电阻等于各电阻之和，因此$R_{2}$的电阻$R_{2} = R_{总} - R_{1} = 605 \\Omega - 55 \\Omega = 550 \\Omega$\n则$R_{1} : R_{2} = 55 \\Omega : 550 \\Omega = 1 : 10$，故C正确；\nD．纯电阻电路，相同时间$t$内产生热量$Q = W = P t$，因此热量比$\\frac{Q_{加}}{Q_{保}} = \\frac{P_{加} t}{P_{保} t} = \\frac{P_{加}}{P_{保}} = \\frac{880 \\text{W}}{80 \\text{W}} = \\frac{11}{1}$\n不是$10 : 1$，故D错误。\n故选C。",
       "type": "choice",
       "score": 2
     },
     {
       "number": 11,
-      "stem": "图甲所示为某同学用细杆制作的杆秤，用手提起![](figures/image36.png)点的提纽，秤杆恰好水平平衡。如图乙所示，将物体放在秤盘里，提起提纽，移动秤砣至秤杆上的![](figures/image37.png)点时，秤杆水平平衡，即可称出物体的质量。已知![](figures/image38.png)，![](figures/image39.png)，![](figures/image40.png)，秤砣的质量是![](figures/image41.png)，最远可移至![](figures/image42.png)点。下列说法正确的是（　　）\n\n![](figures/image43.png)",
+      "stem": "图甲所示为某同学用细杆制作的杆秤，用手提起$O$点的提纽，秤杆恰好水平平衡。如图乙所示，将物体放在秤盘里，提起提纽，移动秤砣至秤杆上的$B$点时，秤杆水平平衡，即可称出物体的质量。已知$A O = 5 \\text{cm}$，$O B = 40 \\text{cm}$，$O D = 50 \\text{cm}$，秤砣的质量是$0 . 1 \\text{kg}$，最远可移至$D$点。下列说法正确的是（　　）\n\n![](figures/image43.png)",
       "options": {
-        "A": "物体的质量是![](figures/image44.png)",
-        "B": "此杆秤可称量的最大质量为![](figures/image45.png)",
-        "C": "如果要增大杆秤的量程可将提纽向![](figures/image42.png)点移动",
+        "A": "物体的质量是$0 . 4 \\text{kg}$",
+        "B": "此杆秤可称量的最大质量为$1 \\text{kg}$",
+        "C": "如果要增大杆秤的量程可将提纽向$D$点移动",
         "D": "如果秤砣磨损一部分，用它称得的物体质量小于物体的实际质量"
       },
       "section": "choice",
       "answer": "B",
-      "solution": "杆秤利用杠杆平衡条件工作，题干说明甲图中不放物体时提纽O处已平衡，因此杆秤、秤盘的自重已经平衡，只需分析物体和秤砣满足的杠杆平衡条件：根据杠杆平衡![](figures/image46.png)，得![](figures/image47.png)，整理得![](figures/image48.png)。\nA．秤砣在![](figures/image37.png)点时，![](figures/image49.png)，物体的质量![](figures/image50.png)，故A错误；\nB．最大称量时秤砣移到最远![](figures/image42.png)点，![](figures/image51.png)，此杆秤可称量的最大质量![](figures/image52.png)，故B正确；\nC．由最大称量公式![](figures/image53.png)，若提纽向![](figures/image42.png)移动，支点![](figures/image36.png)右移，![](figures/image54.png)变大，![](figures/image55.png)变小，则![](figures/image56.png)减小，量程减小，因此要增大量程不能将提纽向![](figures/image42.png)移动，故C错误；\nD．秤砣磨损后，实际质量![](figures/image57.png)变小，称量同一物体时，由![](figures/image58.png)，![](figures/image57.png)变小则![](figures/image59.png)变大，对应杆秤读数更大，因此称得的质量大于物体的实际质量，故D错误。\n故选B。",
+      "solution": "杆秤利用杠杆平衡条件工作，题干说明甲图中不放物体时提纽O处已平衡，因此杆秤、秤盘的自重已经平衡，只需分析物体和秤砣满足的杠杆平衡条件：根据杠杆平衡$F_{1} L_{1} = F_{2} L_{2}$，得$m_{物} g \\cdot A O = m_{砣} g \\cdot L_{砣}$，整理得$m_{物} \\cdot A O = m_{砣} \\cdot L_{砣}$。\nA．秤砣在$B$点时，$L_{砣} = O B = 40 \\text{cm}$，物体的质量$m_{物} = \\frac{m_{砣} \\cdot L_{砣}}{A O} = \\frac{0 . 1 \\text{kg} \\times 40 \\text{cm}}{5 \\text{cm}} = 0 . 8 \\text{kg} \\neq 0 . 4 \\text{kg}$，故A错误；\nB．最大称量时秤砣移到最远$D$点，$L_{砣} = O D = 50 \\text{cm}$，此杆秤可称量的最大质量$m_{\\text{max}} = \\frac{m_{砣} \\cdot L_{砣}}{A O} = \\frac{0 . 1 \\text{kg} \\times 50 \\text{cm}}{5 \\text{cm}} = 1 \\text{kg}$，故B正确；\nC．由最大称量公式$m_{\\text{max}} = \\frac{m_{砣} \\cdot O D}{A O}$，若提纽向$D$移动，支点$O$右移，$A O$变大，$O D$变小，则$m_{\\text{max}}$减小，量程减小，因此要增大量程不能将提纽向$D$移动，故C错误；\nD．秤砣磨损后，实际质量$m_{砣}$变小，称量同一物体时，由$L_{砣} = \\frac{m_{物} \\cdot A O}{m_{砣}}$，$m_{砣}$变小则$L_{砣}$变大，对应杆秤读数更大，因此称得的质量大于物体的实际质量，故D错误。\n故选B。",
       "type": "choice",
       "score": 2
     },
     {
       "number": 12,
-      "stem": "科技小组制作了自动冲水装置的模型，在柱形容器内放一个均匀实心长方体物块![](figures/image60.png)（不吸水），其底面积为![](figures/image61.png)、高为![](figures/image62.png)、质量为![](figures/image63.png)，容器底部有一个不计重力及厚度、面积为![](figures/image64.png)的圆形盖片![](figures/image65.png)，可盖住出水口并紧密贴合，![](figures/image60.png)和![](figures/image65.png)用质量不计、长为![](figures/image66.png)的轻质细线连在一起。现慢慢向容器中加水，当物块A对容器底部的压力刚好为零时，容器中水的深度为![](figures/image67.png)，如图甲所示（A和B之间的细线未画出）。继续向容器内加水，当水面升高到某位置时，B刚好被拉起使容器排水，如图乙所示。g取![](figures/image68.png)，下列说法正确的是（　　）\n\n![](figures/image69.png)",
+      "stem": "科技小组制作了自动冲水装置的模型，在柱形容器内放一个均匀实心长方体物块$\\text{A}$（不吸水），其底面积为$100 \\text{cm}^{2}$、高为$30 \\text{cm}$、质量为$0 . 9 \\text{kg}$，容器底部有一个不计重力及厚度、面积为$60 \\text{cm}^{2}$的圆形盖片$\\text{B}$，可盖住出水口并紧密贴合，$\\text{A}$和$\\text{B}$用质量不计、长为$3 \\text{cm}$的轻质细线连在一起。现慢慢向容器中加水，当物块A对容器底部的压力刚好为零时，容器中水的深度为$9 \\text{cm}$，如图甲所示（A和B之间的细线未画出）。继续向容器内加水，当水面升高到某位置时，B刚好被拉起使容器排水，如图乙所示。g取$10 \\text{N} / \\text{kg}$，下列说法正确的是（　　）\n\n![](figures/image69.png)",
       "options": {
-        "A": "A对容器底部的压力刚好为零时，A受到的浮力为![](figures/image70.png)",
+        "A": "A对容器底部的压力刚好为零时，A受到的浮力为$18 \\text{N}$",
         "B": "B刚好被拉起时，A受到的浮力为12 N",
         "C": "B刚好被拉起时，容器中水的深度为30 cm",
         "D": "将A换成材料、体积相同但底面积较小的物块可以减小最大储水量"
       },
       "section": "choice",
       "answer": "C",
-      "solution": "A．当A对容器底压力刚好为零时，A浸入深度![](figures/image72.png) ，排开体积![](figures/image73.png)\nA受到的浮力为 ![](figures/image74.png) \n故A错误；\nBC．长方体物块![](figures/image60.png)的重力为![](figures/image75.png) \n当B刚好被拉起时，对A、B整体受力分析：A受到向上的浮力等于A的重力和水对B向下的压力之和，即![](figures/image76.png)\n设此时水深为![](figures/image77.png)，细线的长度为![](figures/image78.png)，则A浸入深度![](figures/image79.png) \nA排开液体的体积为![](figures/image80.png)\nA受到的浮力为![](figures/image81.png) \n水对B的压强为![](figures/image82.png) \n水对B的压力为![](figures/image83.png)\n代入![](figures/image84.png)得，![](figures/image85.png)​ \n即![](figures/image86.png) \n解得，![](figures/image87.png) \n此时A的浮力为![](figures/image88.png) \n故B错误，C正确；\nD．由![](figures/image85.png)，![](figures/image89.png)​ 得![](figures/image90.png)\nA材料、体积不变，所以重力![](figures/image91.png)不变，底面积![](figures/image92.png)​减小，![](figures/image92.png)越小，![](figures/image93.png)越大，水深越大，最大储水量越大，不是减小，故D错误。\n故选C。",
+      "solution": "A．当A对容器底压力刚好为零时，A浸入深度$h_{浸} = 9 \\text{cm}$ ，排开体积$V_{排} = S_{\\text{A}} h_{浸} = 100 \\text{cm}^{2} \\times 9 \\text{cm} = 900 \\text{cm}^{3} = 9 \\times 10^{- 4} \\text{m}^{3}$\nA受到的浮力为 $F_{浮} = \\rho_{水} g V_{排} = 1 \\times 10^{3} \\text{kg} / \\text{m}^{3} \\times 10 \\text{N} / \\text{kg} \\times 9 \\times 10^{- 4} \\text{m}^{3} = 9 \\text{N}$ \n故A错误；\nBC．长方体物块$\\text{A}$的重力为$G_{\\text{A}} = m g = 0 . 9 \\text{kg} \\times 10 \\text{N} / \\text{kg} = 9 \\text{N}$ \n当B刚好被拉起时，对A、B整体受力分析：A受到向上的浮力等于A的重力和水对B向下的压力之和，即$F_{浮}^{'} = G_{\\text{A}} + F_{\\text{B}}$\n设此时水深为$H$，细线的长度为$L$，则A浸入深度$h_{浸}^{'} = H - L$ \nA排开液体的体积为$V_{排}^{'} = S h = S_{\\text{A}} \\left(H,-,L\\right)$\nA受到的浮力为$F_{浮}^{'} = \\rho_{水} g V_{排}^{'} = \\rho_{水} g S_{\\text{A}} \\left(H,-,L\\right)$ \n水对B的压强为$p_{水} = \\rho_{水} g H$ \n水对B的压力为$F_{\\text{B}} = p_{水} S_{\\text{B}} = \\rho_{水} g H S_{\\text{B}}$\n代入$F_{浮}^{'} = G_{\\text{A}} + F_{\\text{B}}$得，$\\rho_{水} g S_{\\text{A}} \\left(H,-,L\\right) = G_{\\text{A}} + \\rho_{水} g H S_{\\text{B}}$​ \n即$1 . 0 \\times 10^{3} \\text{kg} / \\text{m}^{3} \\times 10 \\text{N} / \\text{kg} \\times 100 \\times 10^{- 4} \\text{m}^{2} \\times \\left(H,-,0,.,03,\\text{m}\\right) = 9 \\text{N} + 1 . 0 \\times 10^{3} \\text{kg} / \\text{m}^{3} \\times 10 \\text{N} / \\text{kg} \\times 60 \\times 10^{- 4} \\text{m}^{2} H$ \n解得，$H = 0 . 3 \\text{m} = 30 \\text{cm}$ \n此时A的浮力为$F_{浮}^{'} = \\rho_{水} g S_{\\text{A}} \\left(H,-,L\\right) = 1 \\times 10^{3} \\text{kg} / \\text{m}^{3} \\times 10 \\text{N} / \\text{kg} \\times 1 \\times 10^{- 2} \\text{m}^{2} \\times \\left(0,.,3,\\text{m},-,0,.,03,\\text{m}\\right) = 27 \\text{N}$ \n故B错误，C正确；\nD．由$\\rho_{水} g S_{\\text{A}} \\left(H,-,L\\right) = G_{\\text{A}} + \\rho_{水} g H S_{\\text{B}}$，$H = h_{浸} + L$​ 得$h_{浸} = \\frac{G_{\\text{A}} + \\rho_{水} g S_{\\text{B}} L}{\\rho_{水} g \\left(S_{\\text{A}},-,S_{\\text{B}}\\right)}$\nA材料、体积不变，所以重力$G_{\\text{A}}$不变，底面积$S_{\\text{A}}$​减小，$S_{\\text{A}}$越小，$h_{浸}$越大，水深越大，最大储水量越大，不是减小，故D错误。\n故选C。",
       "type": "choice",
       "score": 2
     },
@@ -192,37 +192,37 @@
       },
       "section": "multi_choice",
       "answer": "ABC",
-      "solution": "A．太阳能和风能、潮汐能可以源源不断地获取，属于可再生能源，故A正确；\nB．裂变是可控的，核电站是利用可控的核裂变释放核能，故B正确；\nC．光在真空中的传播速度为![](figures/image94.png)，无线电波属于电磁波，在真空中的传播速度和光在真空中的传播速度相等，故C正确；\nD．超导材料在满足其超导性能的条件下电阻为零，由![](figures/image95.png)可知，电阻小的材料不能制作电热丝，故D错误。\n故选ABC。",
+      "solution": "A．太阳能和风能、潮汐能可以源源不断地获取，属于可再生能源，故A正确；\nB．裂变是可控的，核电站是利用可控的核裂变释放核能，故B正确；\nC．光在真空中的传播速度为$\\text{3}\\times\\text{10}^{8} \\text{m}/\\text{s}$，无线电波属于电磁波，在真空中的传播速度和光在真空中的传播速度相等，故C正确；\nD．超导材料在满足其超导性能的条件下电阻为零，由$Q = I^{2} R t$可知，电阻小的材料不能制作电热丝，故D错误。\n故选ABC。",
       "type": "multi_choice",
       "score": 2
     },
     {
       "number": 14,
-      "stem": "如图甲所示，用滑轮组把建筑材料运送到高处。电动机用800N的力拉钢丝绳，使建筑材料竖直匀速上升，滑轮组的机械效率为80%。钢丝绳自由端移动的距离随时间变化的规律如图乙中图线a所示，建筑材料上升的距离随时间的变化规律如图乙中图线b所示，![](figures/image96.png)取![](figures/image68.png)。下列说法正确的是（　　）\n\n![](figures/image97.png)",
+      "stem": "如图甲所示，用滑轮组把建筑材料运送到高处。电动机用800N的力拉钢丝绳，使建筑材料竖直匀速上升，滑轮组的机械效率为80%。钢丝绳自由端移动的距离随时间变化的规律如图乙中图线a所示，建筑材料上升的距离随时间的变化规律如图乙中图线b所示，$g$取$10 \\text{N} / \\text{kg}$。下列说法正确的是（　　）\n\n![](figures/image97.png)",
       "options": {
-        "A": "钢丝绳自由端的移动速度为![](figures/image98.png)",
-        "B": "10s内电动机对钢丝绳做的功为![](figures/image99.png)",
-        "C": "建筑材料的质量为![](figures/image100.png)",
-        "D": "动滑轮对建筑材料做功的功率为![](figures/image101.png)"
+        "A": "钢丝绳自由端的移动速度为$0 . 3 \\text{m} / \\text{s}$",
+        "B": "10s内电动机对钢丝绳做的功为$800 \\text{J}$",
+        "C": "建筑材料的质量为$240 \\text{kg}$",
+        "D": "动滑轮对建筑材料做功的功率为$192 \\text{W}$"
       },
       "section": "multi_choice",
       "answer": "AD",
-      "solution": "A．由图乙可知，钢丝绳自由端的移动速度![](figures/image102.png)，故A正确；\nB．10s内钢丝绳自由端移动的距离![](figures/image103.png)\n电动机对钢丝绳做的功![](figures/image104.png)，故B错误；\nC．根据机械效率公式![](figures/image105.png)，可得建筑材料的重力![](figures/image106.png)\n建筑材料的质量![](figures/image107.png)，故C错误；\nD．建筑材料上升的速度![](figures/image108.png)\n动滑轮对建筑材料做功的功率![](figures/image109.png)，故D正确。\n故选AD。",
+      "solution": "A．由图乙可知，钢丝绳自由端的移动速度$v_{a} = \\frac{s_{a}}{t} = \\frac{\\text{0}.\\text{3m}}{\\text{1}.\\text{0s}} = 0 . 3 \\text{m}/\\text{s}$，故A正确；\nB．10s内钢丝绳自由端移动的距离$s = v_{a} t^{'} =\\text{0}.\\text{3m}/\\text{s}\\times\\text{10s}=\\text{3m}$\n电动机对钢丝绳做的功$W_{总} = F s =\\text{800N}\\times\\text{3m}=\\text{2400J} \\neq \\text{800J}$，故B错误；\nC．根据机械效率公式$\\eta = \\frac{W_{有}}{W_{总}} = \\frac{G h}{F s} = \\frac{G h}{F \\cdot n h} = \\frac{G}{n F}$，可得建筑材料的重力$G = \\eta n F =\\text{80}\\%\\times\\text{3}\\times\\text{800N}=\\text{1920N}$\n建筑材料的质量$m = \\frac{G}{g} = \\frac{\\text{1920N}}{\\text{10N}/\\text{kg}} =\\text{192kg} \\neq \\text{240kg}$，故C错误；\nD．建筑材料上升的速度$v_{物} = \\frac{h}{t_{2}} = \\frac{\\text{0}.\\text{2m}}{\\text{2s}} =\\text{0}.\\text{1m}/\\text{s}$\n动滑轮对建筑材料做功的功率$P = G v_{物} = \\text{1920N}\\times\\text{0}.\\text{1m}/\\text{s}=\\text{192W}$，故D正确。\n故选AD。",
       "type": "multi_choice",
       "score": 2
     },
     {
       "number": 15,
-      "stem": "如图所示电路中，电源两端电压为![](figures/image110.png)且保持不变，滑动变阻器![](figures/image111.png)最大阻值为![](figures/image112.png)，电流表量程为![](figures/image113.png)，电压表量程为![](figures/image114.png)，在![](figures/image115.png)之间接入不同的电学元件，可以进行不同的实验，在确保电流表和电压表不超过题目中规定的量程且实验能够顺利进行的情况下，下列说法正确的是（　　）\n\n![](figures/image116.png)",
+      "stem": "如图所示电路中，电源两端电压为$4 . 5 \\text{V}$且保持不变，滑动变阻器$R$最大阻值为$20 \\Omega$，电流表量程为$0 sim 0 . 6 \\text{A}$，电压表量程为$0 sim 3 \\text{V}$，在$A B$之间接入不同的电学元件，可以进行不同的实验，在确保电流表和电压表不超过题目中规定的量程且实验能够顺利进行的情况下，下列说法正确的是（　　）\n\n![](figures/image116.png)",
       "options": {
-        "A": "探究电流与电压关系时，在AB间接入一个阻值为![](figures/image117.png)的定值电阻，电压表示数变化范围是![](figures/image118.png)",
-        "B": "探究电流与电阻关系时，控制AB间电压是![](figures/image119.png)，在AB间接入电阻的阻值范围是![](figures/image120.png)",
-        "C": "在AB间接入一个大约![](figures/image121.png)的未知电阻，调节滑动变阻器滑片的位置，能够测量出该电阻的阻值",
-        "D": "在AB间接入小灯泡，电压表示数为![](figures/image122.png)，调节滑片，电压表示数变为![](figures/image119.png)，此过程中电流表示数从![](figures/image123.png)变为![](figures/image124.png)，则灯泡的电功率增大了![](figures/image125.png)"
+        "A": "探究电流与电压关系时，在AB间接入一个阻值为$10 \\Omega$的定值电阻，电压表示数变化范围是$1 . 5 sim 3 \\text{V}$",
+        "B": "探究电流与电阻关系时，控制AB间电压是$3 \\text{V}$，在AB间接入电阻的阻值范围是$5 \\sim 40 \\Omega$",
+        "C": "在AB间接入一个大约$300 \\Omega$的未知电阻，调节滑动变阻器滑片的位置，能够测量出该电阻的阻值",
+        "D": "在AB间接入小灯泡，电压表示数为$2 \\text{V}$，调节滑片，电压表示数变为$3 \\text{V}$，此过程中电流表示数从$0 . 25 \\text{A}$变为$0 . 3 \\text{A}$，则灯泡的电功率增大了$0 . 4 \\text{W}$"
       },
       "section": "multi_choice",
       "answer": "ABD",
-      "solution": "AB间元件与滑动变阻器串联，电压表测AB元件两端电压，电流表测电路电流\nA．AB间接入![](figures/image126.png)定值电阻：电压表最大量程为![](figures/image127.png)，因此AB最大电压为![](figures/image127.png)，此时电流![](figures/image128.png)\n符合电流表要求；滑动变阻器接入最大![](figures/image129.png)时，总电阻![](figures/image130.png)\n电路的电流![](figures/image131.png)\nAB两端的电压![](figures/image132.png)，因此电压表示数变化范围为![](figures/image133.png)，故A正确；\nB．控制AB间电压为![](figures/image127.png)，则滑动变阻器分压![](figures/image134.png)\n串联分压得![](figures/image135.png)\n即![](figures/image136.png)；电流最大不超过![](figures/image137.png)，因此在AB间接入电阻的最小阻值![](figures/image138.png)\n滑动变阻器最大接入![](figures/image129.png)，因此在AB间接入电阻的最大阻值![](figures/image139.png)，因此AB电阻范围为![](figures/image140.png)，故B正确；\nC．接入![](figures/image141.png)未知电阻，使滑动变阻器接入阻值为0，电路电流![](figures/image142.png)\n电流表![](figures/image143.png)量程的分度值为![](figures/image144.png)，该电流小于分度值，无法准确读数，因此无法测量该电阻阻值，故C错误；\nD．灯泡功率变化量![](figures/image145.png)\n即功率增大了![](figures/image146.png)，故D正确。\n故选ABD。",
+      "solution": "AB间元件与滑动变阻器串联，电压表测AB元件两端电压，电流表测电路电流\nA．AB间接入$10 \\Omega$定值电阻：电压表最大量程为$3 \\text{V}$，因此AB最大电压为$3 \\text{V}$，此时电流$I = \\frac{U_{R}}{R} = \\frac{3 \\text{V}}{10 \\Omega} = 0 . 3 \\text{A} < 0 . 6 \\text{A}$\n符合电流表要求；滑动变阻器接入最大$20 \\Omega$时，总电阻$R_{总} = 10 \\Omega + 20 \\Omega = 30 \\Omega$\n电路的电流$I = \\frac{U}{R_{总}} = \\frac{4 . 5 \\text{V}}{30 \\Omega} = 0 . 15 \\text{A}$\nAB两端的电压$U_{R} = I R = 0 . 15 \\text{A} \\times 10 \\Omega = 1 . 5 \\text{V}$，因此电压表示数变化范围为$1 . 5 \\sim 3 \\text{V}$，故A正确；\nB．控制AB间电压为$3 \\text{V}$，则滑动变阻器分压$U_{滑} = U - U_{A B} = 4 . 5 \\text{V} - 3 \\text{V} = 1 . 5 \\text{V}$\n串联分压得$\\frac{R_{A B}}{R_{滑}} = \\frac{U_{A B}}{U_{滑}} = \\frac{3 \\text{V}}{1 . 5 \\text{V}} = 2$\n即$R_{A B} = 2 R_{滑}$；电流最大不超过$0 . 6 \\text{A}$，因此在AB间接入电阻的最小阻值$R_{A B 最小} = \\frac{U_{R}}{I_{\\text{max}}} = \\frac{3 \\text{V}}{0 . 6 \\text{A}} = 5 \\Omega$\n滑动变阻器最大接入$20 \\Omega$，因此在AB间接入电阻的最大阻值$R_{A B 最大} = 2 \\times 20 \\Omega = 40 \\Omega$，因此AB电阻范围为$5 \\sim 40 \\Omega$，故B正确；\nC．接入$300 \\Omega$未知电阻，使滑动变阻器接入阻值为0，电路电流$I = \\frac{U}{R} = \\frac{4 . 5 \\text{V}}{300 \\Omega} = 0 . 015 \\text{A}$\n电流表$0 ∼ 0 . 6 \\text{A}$量程的分度值为$0 . 02 \\text{A}$，该电流小于分度值，无法准确读数，因此无法测量该电阻阻值，故C错误；\nD．灯泡功率变化量$\\Delta P = P_{2} - P_{1} = U_{2} I_{2} - U_{1} I_{1} = 3 \\text{V} \\times 0 . 3 \\text{A} - 2 \\text{V} \\times 0 . 25 \\text{A} = 0 . 9 \\text{W} - 0 . 5 \\text{W} = 0 . 4 \\text{W}$\n即功率增大了$0 . 4 \\text{W}$，故D正确。\n故选ABD。",
       "type": "multi_choice",
       "score": 2
     },
@@ -238,17 +238,17 @@
     },
     {
       "number": 17,
-      "stem": "在探究水沸腾过程中温度随时间的变化规律实验中，记录的实验数据如下表所示。\n\n| 时间/min | 0 | 0.5 | 1.0 | 1.5 | 2.0 | 2.5 | 3.0 |\n|---|---|---|---|---|---|---|---|\n| 温度/℃ | 99 | 99 | 99 | 99 | 99 | 99 | 99 |\n\n（1）根据表中数据可得出实验结论________。\n\n（2）水的沸点为________℃。\n\n（3）根据表中的数据可以推断，如果其它条件不变，继续对水加热![](figures/image148.png)，水的温度将_______。（选填“升高”“降低”或“不变”）",
+      "stem": "在探究水沸腾过程中温度随时间的变化规律实验中，记录的实验数据如下表所示。\n\n| 时间/min | 0 | 0.5 | 1.0 | 1.5 | 2.0 | 2.5 | 3.0 |\n|---|---|---|---|---|---|---|---|\n| 温度/℃ | 99 | 99 | 99 | 99 | 99 | 99 | 99 |\n\n（1）根据表中数据可得出实验结论________。\n\n（2）水的沸点为________℃。\n\n（3）根据表中的数据可以推断，如果其它条件不变，继续对水加热$0 . 5 \\text{min}$，水的温度将_______。（选填“升高”“降低”或“不变”）",
       "options": null,
       "section": "experiment",
       "answer": "",
-      "solution": "（1）水在沸腾的过程中，虽然需要持续吸收热量，但温度保持不变      （2）99    （3）不变\n\n详解：从表格数据可以看出，从实验开始的第0分钟到第3分钟，其温度始终保持![](figures/image149.png)没有发生变化。这说明水已经处于沸腾状态。因此，可以得出水在沸腾的过程中，虽然需要持续吸收热量，但温度是保持不变的。\n\n（2）\n 沸点是指液体沸腾时的温度。根据表格数据，水在沸腾时温度稳定![](figures/image149.png) ，所以水的沸点就是![](figures/image150.png)。\n\n（3）\n水在达到沸点后，继续加热，水会持续沸腾，但温度保持在沸点不变，直到水全部汽化。表格数据显示水已经在沸腾，所以即使再继续加热，只要水还没有烧干，其温度就会一直保持在沸点![](figures/image149.png)不变。",
+      "solution": "（1）水在沸腾的过程中，虽然需要持续吸收热量，但温度保持不变      （2）99    （3）不变\n\n详解：从表格数据可以看出，从实验开始的第0分钟到第3分钟，其温度始终保持$99 \\text{\\textdegree C}$没有发生变化。这说明水已经处于沸腾状态。因此，可以得出水在沸腾的过程中，虽然需要持续吸收热量，但温度是保持不变的。\n\n（2）\n 沸点是指液体沸腾时的温度。根据表格数据，水在沸腾时温度稳定$99 \\text{\\textdegree C}$ ，所以水的沸点就是$99 \\text{\\textdegree C}$。\n\n（3）\n水在达到沸点后，继续加热，水会持续沸腾，但温度保持在沸点不变，直到水全部汽化。表格数据显示水已经在沸腾，所以即使再继续加热，只要水还没有烧干，其温度就会一直保持在沸点$99 \\text{\\textdegree C}$不变。",
       "type": "experiment",
       "score": 3
     },
     {
       "number": 18,
-      "stem": "实验小组的同学们进行有关电磁现象的探究实验。\n\n![](figures/image151.png)\n\n（1）如图甲所示，导线![](figures/image152.png)平行小磁针放置在其正上方。开关断开，小磁针处于静止状态；开关闭合，电路中有电流，观察到小磁针发生偏转。根据以上现象得出电流可以产生磁场的结论，请写出从现象到结论的推理过程。\n\n（2）如图乙所示，保持蹄形磁铁静止，闭合开关，金属棒AB向右运动时，灵敏电流计的指针发生偏转；金属棒AB向右运动变快时，指针偏转的角度增大。该组同学所探究的科学问题是：_____________________。",
+      "stem": "实验小组的同学们进行有关电磁现象的探究实验。\n\n![](figures/image151.png)\n\n（1）如图甲所示，导线$\\text{AB}$平行小磁针放置在其正上方。开关断开，小磁针处于静止状态；开关闭合，电路中有电流，观察到小磁针发生偏转。根据以上现象得出电流可以产生磁场的结论，请写出从现象到结论的推理过程。\n\n（2）如图乙所示，保持蹄形磁铁静止，闭合开关，金属棒AB向右运动时，灵敏电流计的指针发生偏转；金属棒AB向右运动变快时，指针偏转的角度增大。该组同学所探究的科学问题是：_____________________。",
       "options": null,
       "section": "experiment",
       "answer": "",
@@ -258,7 +258,7 @@
     },
     {
       "number": 19,
-      "stem": "实验小组的同学们进行有关光学的探究实验。\n\n（1）利用图所示的装置探究平面镜所成像的高度与物距是否有关，装置中的![](figures/image60.png)、![](figures/image65.png)为两根完全相同且高度可调的电子蜡烛，实验步骤如下：\n\n![](figures/image153.png)\n\n①将A放在平面镜前适当位置，将B放在平面镜的另一侧，调节B的位置和高度，从不同角度观察，直至B与A的像完全重合，测量B的高度，将数据记录到表中。\n\n②保持A的位置不变，改变它的高度，仿照步骤①再进行一次实验。\n\n请写出上述实验步骤中存在哪些问题。\n\n（2）利用图所示的装置探究凸透镜成实像时像的高度与物距的关系。将焦距为![](figures/image154.png)。的凸透镜放置在光具座上![](figures/image155.png)刻度线处，改变电子蜡烛在光具座上的位置，移动光屏得到清晰的像，分别测量像的高度![](figures/image156.png)，测得数据如下表所示，分析数据可得出实验结论：_________。\n\n| 物距u/cm | 40 | 28 | 25 |\n|---|---|---|---|\n| 像高h/cm | 2 | 3.3 | 4 |\n\n![](figures/image157.png)",
+      "stem": "实验小组的同学们进行有关光学的探究实验。\n\n（1）利用图所示的装置探究平面镜所成像的高度与物距是否有关，装置中的$\\text{A}$、$\\text{B}$为两根完全相同且高度可调的电子蜡烛，实验步骤如下：\n\n![](figures/image153.png)\n\n①将A放在平面镜前适当位置，将B放在平面镜的另一侧，调节B的位置和高度，从不同角度观察，直至B与A的像完全重合，测量B的高度，将数据记录到表中。\n\n②保持A的位置不变，改变它的高度，仿照步骤①再进行一次实验。\n\n请写出上述实验步骤中存在哪些问题。\n\n（2）利用图所示的装置探究凸透镜成实像时像的高度与物距的关系。将焦距为$10 \\text{cm}$。的凸透镜放置在光具座上$50 \\text{cm}$刻度线处，改变电子蜡烛在光具座上的位置，移动光屏得到清晰的像，分别测量像的高度$h$，测得数据如下表所示，分析数据可得出实验结论：_________。\n\n| 物距u/cm | 40 | 28 | 25 |\n|---|---|---|---|\n| 像高h/cm | 2 | 3.3 | 4 |\n\n![](figures/image157.png)",
       "options": null,
       "section": "experiment",
       "answer": "",
@@ -268,21 +268,21 @@
     },
     {
       "number": 20,
-      "stem": "现用图甲所示电路测量额定电压为![](figures/image158.png)的小灯泡正常工作时的电阻。\n\n![](figures/image159.png)\n\n（1）开关S断开，按图甲连接实验电路，确保导线与各接线柱接触良好，将滑动变阻器的滑片P移至_____端。（选填“A”或“B”）。\n\n（2）闭合开关![](figures/image160.png)，发现小灯泡不亮，无论怎样移动滑动变阻器的滑片P电流表始终无示数、电压表均有示数且接近电源电压，出现这种故障的原因可能是_______，也可能是_______。\n\n（3）排除故障后，闭合开关![](figures/image160.png)，调节滑动变阻器的滑片![](figures/image161.png)，当电压表示数为![](figures/image158.png)时，电流表的示数如图乙所示，则此时小灯泡的电阻为_________![](figures/image162.png)（保留一位小数）。",
+      "stem": "现用图甲所示电路测量额定电压为$2 . 5 \\text{V}$的小灯泡正常工作时的电阻。\n\n![](figures/image159.png)\n\n（1）开关S断开，按图甲连接实验电路，确保导线与各接线柱接触良好，将滑动变阻器的滑片P移至_____端。（选填“A”或“B”）。\n\n（2）闭合开关$\\textit{S}$，发现小灯泡不亮，无论怎样移动滑动变阻器的滑片P电流表始终无示数、电压表均有示数且接近电源电压，出现这种故障的原因可能是_______，也可能是_______。\n\n（3）排除故障后，闭合开关$\\textit{S}$，调节滑动变阻器的滑片$\\text{P}$，当电压表示数为$2 . 5 \\text{V}$时，电流表的示数如图乙所示，则此时小灯泡的电阻为_________$\\Omega$（保留一位小数）。",
       "options": null,
       "section": "experiment",
       "answer": "",
-      "solution": "（1）B    （2）    ①. 小灯泡断路    ②. 小灯泡接线处接触不良      （3）8.3\n\n详解：（1）\n连接电路闭合开关前，滑动变阻器需要调至接入电路的最大阻值处保护电路，由图可知滑动变阻器接入的是左下端A接线柱，滑片移到B端时，接入电路的电阻丝长度最长，阻值最大。\n\n（2）\n电流表始终无示数说明电路是断路状态；电压表有示数且接近电源电压，说明电压表的两个接线柱能连通到电源两端，因此断路位置在小灯泡处，常见的两种故障为小灯泡断路、小灯泡接线处接触不良。\n\n（3）\n电流表选用0~0.6A量程，分度值为0.02A，图乙指针读数为0.3A，根据欧姆定律![](figures/image163.png)，可得小灯泡电阻![](figures/image164.png)",
+      "solution": "（1）B    （2）    ①. 小灯泡断路    ②. 小灯泡接线处接触不良      （3）8.3\n\n详解：（1）\n连接电路闭合开关前，滑动变阻器需要调至接入电路的最大阻值处保护电路，由图可知滑动变阻器接入的是左下端A接线柱，滑片移到B端时，接入电路的电阻丝长度最长，阻值最大。\n\n（2）\n电流表始终无示数说明电路是断路状态；电压表有示数且接近电源电压，说明电压表的两个接线柱能连通到电源两端，因此断路位置在小灯泡处，常见的两种故障为小灯泡断路、小灯泡接线处接触不良。\n\n（3）\n电流表选用0~0.6A量程，分度值为0.02A，图乙指针读数为0.3A，根据欧姆定律$R = \\frac{U}{I}$，可得小灯泡电阻$R = \\frac{U}{I} = \\frac{2 . 5 \\text{V}}{0 . 3 \\text{A}} \\approx 8 . 3 \\Omega$",
       "type": "experiment",
       "score": 4
     },
     {
       "number": 21,
-      "stem": "在水平的实验桌上有如图所示的实验装置，其中长方体木块的长、宽、高均不等。木块各表面的粗糙程度相同且面积已知。利用该装置探究滑动摩擦力的大小与接触面积是否有关。\n\n![](figures/image165.png)\n\n（1）将以下的实验步骤补充完整：\n\n①将木块平放在水平长木板上，调节滑轮的高度，使通过滑轮的细线一端竖直拉紧弹簧测力计的挂钩，另一端沿水平方向拉紧木块。再沿水平方向拉动长木板，弹簧测力计指针的位置稳定后，记录接触面积![](figures/image166.png)和弹簧测力计的示数![](figures/image167.png)。\n\n②_______________________。\n\n③利用![](figures/image168.png)_________，分别得出两次实验中滑动摩擦力的大小并记录。\n\n（2）若__________，则可得出滑动摩擦力的大小与接触面积无关的结论。",
+      "stem": "在水平的实验桌上有如图所示的实验装置，其中长方体木块的长、宽、高均不等。木块各表面的粗糙程度相同且面积已知。利用该装置探究滑动摩擦力的大小与接触面积是否有关。\n\n![](figures/image165.png)\n\n（1）将以下的实验步骤补充完整：\n\n①将木块平放在水平长木板上，调节滑轮的高度，使通过滑轮的细线一端竖直拉紧弹簧测力计的挂钩，另一端沿水平方向拉紧木块。再沿水平方向拉动长木板，弹簧测力计指针的位置稳定后，记录接触面积$S$和弹簧测力计的示数$F$。\n\n②_______________________。\n\n③利用$f =$_________，分别得出两次实验中滑动摩擦力的大小并记录。\n\n（2）若__________，则可得出滑动摩擦力的大小与接触面积无关的结论。",
       "options": null,
       "section": "experiment",
       "answer": "",
-      "solution": "（1）    ①. 应将木块侧放在长木板上，调节滑轮的高度，使连接木块的细线水平，沿水平方向匀速拉动长木板，待弹簧测力计指针的位置稳定后，记录接触面积![](figures/image166.png)和弹簧测力计的示数![](figures/image167.png)    ②. ![](figures/image167.png)      （2）两次实验中滑动摩擦力的大小相等\n\n详解：（1）\n实验目的是探究滑动摩擦力大小与接触面积是否有关，所以需要控制其它因素不变，只改变接触面积，所以应将木块侧放在长木板上，调节滑轮的高度，使连接木块的细线水平，沿水平方向匀速拉动长木板，待弹簧测力计指针的位置稳定后，记录接触面积![](figures/image166.png)和弹簧测力计的示数![](figures/image167.png)。\n木块做匀速直线运动时受平衡力作用，根据二力平衡原理可知，木块所受滑动摩擦力大小等于弹簧测力计的示数，即![](figures/image169.png)。\n\n（2）\n若两次实验中滑动摩擦力的大小相等，则可得出滑动摩擦力的大小与接触面积无关的结论。",
+      "solution": "（1）    ①. 应将木块侧放在长木板上，调节滑轮的高度，使连接木块的细线水平，沿水平方向匀速拉动长木板，待弹簧测力计指针的位置稳定后，记录接触面积$S$和弹簧测力计的示数$F$    ②. $F$      （2）两次实验中滑动摩擦力的大小相等\n\n详解：（1）\n实验目的是探究滑动摩擦力大小与接触面积是否有关，所以需要控制其它因素不变，只改变接触面积，所以应将木块侧放在长木板上，调节滑轮的高度，使连接木块的细线水平，沿水平方向匀速拉动长木板，待弹簧测力计指针的位置稳定后，记录接触面积$S$和弹簧测力计的示数$F$。\n木块做匀速直线运动时受平衡力作用，根据二力平衡原理可知，木块所受滑动摩擦力大小等于弹簧测力计的示数，即$f = F$。\n\n（2）\n若两次实验中滑动摩擦力的大小相等，则可得出滑动摩擦力的大小与接触面积无关的结论。",
       "type": "experiment",
       "score": 3
     },
@@ -298,41 +298,41 @@
     },
     {
       "number": 23,
-      "stem": "如图所示，用量筒和水测量一只小玻璃杯的密度。请将实验步骤补充完整。\n\n![](figures/image171.png)\n\n（1）①在量筒中倒入适量的水，记录水面所对应的刻度值![](figures/image172.png)；\n\n②将小玻璃杯放入量筒中，使其漂浮在水面上，记录水面所对应的刻度值![](figures/image173.png)；\n\n③_______，记录水面所对应的刻度值![](figures/image174.png)；\n\n（2）利用已知量![](figures/image175.png)和测量量![](figures/image172.png)、![](figures/image173.png)、![](figures/image174.png)表示小玻璃杯的密度![](figures/image176.png)，则![](figures/image177.png)_______。",
+      "stem": "如图所示，用量筒和水测量一只小玻璃杯的密度。请将实验步骤补充完整。\n\n![](figures/image171.png)\n\n（1）①在量筒中倒入适量的水，记录水面所对应的刻度值$V_{1}$；\n\n②将小玻璃杯放入量筒中，使其漂浮在水面上，记录水面所对应的刻度值$V_{2}$；\n\n③_______，记录水面所对应的刻度值$V_{3}$；\n\n（2）利用已知量$\\rho_{水}$和测量量$V_{1}$、$V_{2}$、$V_{3}$表示小玻璃杯的密度$\\rho$，则$\\rho =$_______。",
       "options": null,
       "section": "experiment",
       "answer": "",
-      "solution": "（1）使小玻璃杯完全浸没在量筒的水中      （2）![](figures/image178.png)\n\n详解：（1）\n前两步已经测出了水的体积![](figures/image172.png)，以及玻璃杯漂浮时的总体积![](figures/image173.png)；第三步需要得到玻璃杯自身的体积，因此需要让玻璃杯沉入水中完全浸没，读出此时总体积![](figures/image174.png)。\n\n（2）\n玻璃杯漂浮时，排开水的体积为![](figures/image179.png)\n根据沉浮条件，浮力等于重力，即![](figures/image180.png)\n整理得玻璃杯质量![](figures/image181.png)\n玻璃杯完全浸没后，自身体积![](figures/image182.png)\n根据密度公式![](figures/image183.png)​，得玻璃杯的密度为![](figures/image184.png)",
+      "solution": "（1）使小玻璃杯完全浸没在量筒的水中      （2）$\\frac{V_{2} - V_{1}}{V_{3} - V_{1}} \\rho_{水}$\n\n详解：（1）\n前两步已经测出了水的体积$V_{1}$，以及玻璃杯漂浮时的总体积$V_{2}$；第三步需要得到玻璃杯自身的体积，因此需要让玻璃杯沉入水中完全浸没，读出此时总体积$V_{3}$。\n\n（2）\n玻璃杯漂浮时，排开水的体积为$V_{排} = V_{2} - V_{1}$\n根据沉浮条件，浮力等于重力，即$F_{浮} = \\rho_{水} g \\left(V_{2},-,V_{1}\\right) = G = m g$\n整理得玻璃杯质量$m = \\rho_{水} \\left(\\right. V_{2} - V_{1} \\left.\\right)$\n玻璃杯完全浸没后，自身体积$V = V_{3} - V_{1}$\n根据密度公式$\\rho = \\frac{m}{V}$​，得玻璃杯的密度为$\\rho = \\frac{\\rho_{水} \\left(\\right. V_{2} - V_{1} \\left.\\right)}{V_{3} - V_{1}}$",
       "type": "experiment",
       "score": 4
     },
     {
       "number": 24,
-      "stem": "根据下述材料，回答下列问题。\n\n热阻\n\n当物体之间或同一物体的不同部分之间存在温度差时，就会发生热传递，形成热量流动。物体对热量的传导有阻碍作用，称为热阻，用![](figures/image111.png)表示。热阻是有热量在物体上传导时，物体两端温度差![](figures/image185.png)与热源功率![](figures/image186.png)（单位时间内传导的热量）的比值，即![](figures/image187.png)。热阻的单位为开尔文每瓦特（![](figures/image188.png)）或摄氏度每瓦特（![](figures/image189.png)）。物体的热阻与物体在热传导方向上的长度![](figures/image78.png)成正比，与垂直传导方向的横截面积![](figures/image166.png)成反比，还与物体材料的导热性能强弱有关，关系式为![](figures/image190.png)，式中![](figures/image191.png)称为材料的导热系数，不同材料的导热系数一般不同。\n\n（1）将热阻与电阻![](figures/image163.png)对比，温度差相当于电路中的_________。（选填“电流”“电压”或“电阻”）\n\n（2）为了保温，房屋的墙壁应选用导热系数_________（选填“较小”或“较大”）的材料。\n\n（3）如图所示，用某种材料制成的长方体物块，其长、宽、高分别为![](figures/image192.png)、![](figures/image193.png)、![](figures/image194.png)，若![](figures/image191.png)不变，当热量沿![](figures/image195.png)方向传导时，物块的热阻为![](figures/image8.png)，当热量沿![](figures/image196.png)方向传导时，物块的热阻为![](figures/image9.png)，求![](figures/image8.png)与![](figures/image9.png)的比值，并写出过程。\n\n![](figures/image197.png)",
+      "stem": "根据下述材料，回答下列问题。\n\n热阻\n\n当物体之间或同一物体的不同部分之间存在温度差时，就会发生热传递，形成热量流动。物体对热量的传导有阻碍作用，称为热阻，用$R$表示。热阻是有热量在物体上传导时，物体两端温度差$\\Delta T$与热源功率$P$（单位时间内传导的热量）的比值，即$R = \\frac{\\Delta T}{P}$。热阻的单位为开尔文每瓦特（$\\text{K} / \\text{W}$）或摄氏度每瓦特（$\\text{\\textdegree C} / \\text{W}$）。物体的热阻与物体在热传导方向上的长度$L$成正比，与垂直传导方向的横截面积$S$成反比，还与物体材料的导热性能强弱有关，关系式为$R = \\frac{L}{\\lambda S}$，式中$\\lambda$称为材料的导热系数，不同材料的导热系数一般不同。\n\n（1）将热阻与电阻$R = \\frac{U}{I}$对比，温度差相当于电路中的_________。（选填“电流”“电压”或“电阻”）\n\n（2）为了保温，房屋的墙壁应选用导热系数_________（选填“较小”或“较大”）的材料。\n\n（3）如图所示，用某种材料制成的长方体物块，其长、宽、高分别为$3 a$、$2 a$、$a$，若$\\lambda$不变，当热量沿$M N$方向传导时，物块的热阻为$R_{1}$，当热量沿$P Q$方向传导时，物块的热阻为$R_{2}$，求$R_{1}$与$R_{2}$的比值，并写出过程。\n\n![](figures/image197.png)",
       "options": null,
       "section": "comprehensive",
       "answer": "",
-      "solution": "（1）  电压    （2）  较小    （3）  ![](figures/image198.png)\n\n详解：（1）\n根据题干给出的热阻定义![](figures/image199.png)，对比电阻定义式![](figures/image200.png)，二者结构对应：![](figures/image201.png)对应电压![](figures/image202.png)，![](figures/image186.png)对应电流![](figures/image203.png)，因此温度差相当于电路中的电压。\n\n（2）\n墙壁保温需要增大热阻，减少热量传递。根据热阻公式![](figures/image204.png)，![](figures/image78.png)、![](figures/image166.png)固定时，热阻![](figures/image111.png)与导热系数![](figures/image191.png)成反比，因此需要选用导热系数较小的材料来获得更大热阻。\n\n（3）\n沿MN方向传导：传导长度![](figures/image205.png)，横截面积![](figures/image206.png)，![](figures/image8.png)的热阻![](figures/image207.png)\n沿PQ方向传导：传导长度![](figures/image208.png)，横截面积![](figures/image209.png)，![](figures/image20.png)的热阻![](figures/image210.png)\n![](figures/image8.png)与![](figures/image9.png)的比值![](figures/image211.png)，即![](figures/image198.png)。",
+      "solution": "（1）  电压    （2）  较小    （3）  $R = \\frac{\\Delta T}{P}$\n\n详解：（1）\n根据题干给出的热阻定义$R = \\frac{U}{I}$，对比电阻定义式$\\Delta T$，二者结构对应：$U$对应电压$P$，$I$对应电流$R = \\frac{L}{\\lambda S}$，因此温度差相当于电路中的电压。\n\n（2）\n墙壁保温需要增大热阻，减少热量传递。根据热阻公式$L$，$S$、$R$固定时，热阻$\\lambda$与导热系数$L_{1} = 3 a$成反比，因此需要选用导热系数较小的材料来获得更大热阻。\n\n（3）\n沿MN方向传导：传导长度$S_{1} = 2 a \\cdot a = 2 a^{2}$，横截面积$R_{1}$，$R_{1} = \\frac{L_{1}}{\\lambda S_{1}} = \\frac{3 a}{\\lambda \\cdot 2 a^{2}} = \\frac{3}{2 \\lambda a}$的热阻$L_{2} = a$\n沿PQ方向传导：传导长度$S_{2} = 3 a \\cdot 2 a = 6 a^{2}$，横截面积$R_{2}$，$R_{2} = \\frac{L_{2}}{\\lambda S_{2}} = \\frac{a}{\\lambda \\cdot 6 a^{2}} = \\frac{1}{6 \\lambda a}$的热阻$R_{1}$\n$R_{2}$与$\\frac{R_{1}}{R_{2}} = \\frac{\\frac{3}{2 \\lambda a}}{\\frac{1}{6 \\lambda a}} = 9$的比值$R_{1} : R_{2} = 9 : 1$，即$U$。",
       "type": "comprehensive",
       "score": 4
     },
     {
       "number": 25,
-      "stem": "如图所示的电路，电源两端电压![](figures/image202.png)保持不变，![](figures/image8.png)、![](figures/image9.png)为定值电阻，![](figures/image212.png)。闭合开关![](figures/image160.png)，在移动滑动变阻器![](figures/image111.png)的滑片![](figures/image161.png)从一端到另一端的过程中，电流表的示数从![](figures/image213.png)变为2A，电压表的示数从![](figures/image214.png)变为6V。求：\n\n![](figures/image215.png)\n\n（1）电阻![](figures/image9.png)的阻值；\n\n（2）电源两端电压![](figures/image202.png)。",
+      "stem": "如图所示的电路，电源两端电压$R_{1}$保持不变，$R_{2}$、$R_{1} = 1 \\Omega$为定值电阻，$\\textit{S}$。闭合开关$R$，在移动滑动变阻器$\\text{P}$的滑片$0 . 5 \\text{A}$从一端到另一端的过程中，电流表的示数从$7 . 5 \\text{V}$变为2A，电压表的示数从$R_{2}$变为6V。求：\n\n![](figures/image215.png)\n\n（1）电阻$U$的阻值；\n\n（2）电源两端电压$R_{1}$。",
       "options": null,
       "section": "calculation",
       "answer": "",
-      "solution": "（1）  ![](figures/image216.png)      （2）  ![](figures/image217.png)\n\n详解：（1）\n由图可知，![](figures/image21.png)、![](figures/image20.png)、滑动变阻器![](figures/image111.png)串联，电流表测量电路电流，电压表测![](figures/image20.png)与![](figures/image111.png)的总电压，![](figures/image20.png)为定值电阻，其两端电压随电流增大而增大；由图可知，当电路电流![](figures/image218.png)时，滑动变阻器接入的电阻为0，![](figures/image20.png)两端电压![](figures/image219.png)， 根据欧姆定律![](figures/image200.png)，![](figures/image20.png)的阻值![](figures/image220.png)\n\n（2）\n根据串联电路电压规律，电源电压等于各部分电压之和，即![](figures/image221.png)，其中![](figures/image222.png)为![](figures/image21.png)两端电压，![](figures/image223.png)为电压表的示数，电源电压![](figures/image224.png)",
+      "solution": "（1）  $R_{2}$      （2）  $R$\n\n详解：（1）\n由图可知，$R_{2}$、$R$、滑动变阻器$R_{2}$串联，电流表测量电路电流，电压表测$I =\\text{2A}$与$R_{2}$的总电压，$U_{2} =\\text{6V}$为定值电阻，其两端电压随电流增大而增大；由图可知，当电路电流$R = \\frac{U}{I}$时，滑动变阻器接入的电阻为0，$R_{2}$两端电压$R_{2} = \\frac{U_{2}}{I} = \\frac{\\text{6V}}{\\text{2A}} =\\text{3}\\Omega$， 根据欧姆定律$U = U_{R 1} + U_{\\text{V}}$，$U_{R 1}$的阻值$R_{1}$\n\n（2）\n根据串联电路电压规律，电源电压等于各部分电压之和，即$U_{\\text{V}}$，其中$U = I_{1} R_{1} + U_{\\text{V}} = \\text{2A}\\times\\text{1}\\Omega+\\text{6V}=\\text{8V}$为$p$两端电压，$S$为电压表的示数，电源电压$h_{1}$",
       "type": "calculation",
       "score": 4
     },
     {
       "number": 26,
-      "stem": "为了测量班超联赛奖杯放在水平置物架上时对置物架产生的压强![](figures/image225.png)，小明用刻度尺、大水槽、黏土、水、圆柱形玻璃筒（其外底面积为![](figures/image166.png)，厚度不可忽略）进行了如下操作。\n\n①将适量黏土均匀平铺在水平桌面上，模拟置物架表面，将奖杯轻放在黏土上，黏土上留下压痕；将玻璃筒竖直放在黏土上，缓慢向玻璃筒内加水，直至玻璃筒对黏土的压痕深度与奖杯的压痕深度相同，测出玻璃筒内水的深度![](figures/image226.png)，如图甲所示。\n\n②将玻璃筒内的水倒出后轻轻放入盛有水的大水槽中，测出玻璃筒浸入水中的深度![](figures/image227.png)，如图乙所示。\n\n③缓慢向玻璃筒内倒入适量水，测出玻璃筒浸入水中的深度![](figures/image228.png)和玻璃筒内水的深度![](figures/image229.png)，且![](figures/image230.png)，如图丙所示。\n\n若![](figures/image175.png)、![](figures/image96.png)、![](figures/image166.png)已知，根据上面操作，完成下列问题。\n\n![](figures/image231.png)\n\n（1）画出图乙中玻璃筒的受力示意图；\n\n（2）利用已知量和测量量推导出玻璃筒重力![](figures/image232.png)的表达式；\n\n（3）利用已知量和测量量推导出压强![](figures/image225.png)的表达式。",
+      "stem": "为了测量班超联赛奖杯放在水平置物架上时对置物架产生的压强$h_{2}$，小明用刻度尺、大水槽、黏土、水、圆柱形玻璃筒（其外底面积为$h_{3}$，厚度不可忽略）进行了如下操作。\n\n①将适量黏土均匀平铺在水平桌面上，模拟置物架表面，将奖杯轻放在黏土上，黏土上留下压痕；将玻璃筒竖直放在黏土上，缓慢向玻璃筒内加水，直至玻璃筒对黏土的压痕深度与奖杯的压痕深度相同，测出玻璃筒内水的深度$h_{4}$，如图甲所示。\n\n②将玻璃筒内的水倒出后轻轻放入盛有水的大水槽中，测出玻璃筒浸入水中的深度$h_{1} = 1 . 5 h_{4}$，如图乙所示。\n\n③缓慢向玻璃筒内倒入适量水，测出玻璃筒浸入水中的深度$\\rho_{水}$和玻璃筒内水的深度$g$，且$S$，如图丙所示。\n\n若$G$、$p$、$G = \\rho_{水} g S h_{2}$已知，根据上面操作，完成下列问题。\n\n![](figures/image231.png)\n\n（1）画出图乙中玻璃筒的受力示意图；\n\n（2）利用已知量和测量量推导出玻璃筒重力$p = \\frac{\\rho_{水} g \\left(3,h_{3},-,h_{2}\\right)}{2}$的表达式；\n\n（3）利用已知量和测量量推导出压强$F_{浮}$的表达式。",
       "options": null,
       "section": "calculation",
       "answer": "",
-      "solution": "（1）![](figures/image233.png)    （2）![](figures/image234.png)      （3）![](figures/image235.png)\n\n详解：（1）\n图乙中玻璃筒漂浮在水中，静止时受力平衡，竖直方向仅受两个力：竖直向下的重力G、竖直向上的浮力![](figures/image236.png)​，二力大小相等、方向相反，作用点都在玻璃筒的重心，在玻璃筒重心位置，画一条竖直向下带箭头的线段标注G，再画一条等长竖直向上带箭头的线段标注![](figures/image236.png)，据此作图。\n\n（2）\n空玻璃筒漂浮在水中，根据漂浮条件，浮力等于自身重力，由阿基米德原理，空玻璃筒排开水的体积![](figures/image237.png)，浮力为![](figures/image238.png)\n玻璃筒重力![](figures/image239.png)\n\n（3）\n压痕深度相同，说明奖杯对黏土的压强等于甲图中玻璃筒（含水）对黏土的压强；设玻璃筒内横截面积为![](figures/image240.png)，甲图中玻璃筒对黏土的压力等于总重力，即![](figures/image241.png)\n对丙图装水的玻璃筒，仍满足漂浮条件，总浮力等于总重力，即![](figures/image242.png)\n将![](figures/image243.png)代入，整理得内横截面积![](figures/image244.png)\n总压力为![](figures/image245.png)\n根据压强公式![](figures/image246.png)，压强![](figures/image247.png)",
+      "solution": "（1）![](figures/image233.png)    （2）$F_{浮}$      （3）$V_{排} = S h_{2}$\n\n详解：（1）\n图乙中玻璃筒漂浮在水中，静止时受力平衡，竖直方向仅受两个力：竖直向下的重力G、竖直向上的浮力$F_{浮} = \\rho_{水} g V_{排} = \\rho_{水} g S h_{2}$​，二力大小相等、方向相反，作用点都在玻璃筒的重心，在玻璃筒重心位置，画一条竖直向下带箭头的线段标注G，再画一条等长竖直向上带箭头的线段标注$G = F_{浮} = \\rho_{水} g S h_{2}$，据此作图。\n\n（2）\n空玻璃筒漂浮在水中，根据漂浮条件，浮力等于自身重力，由阿基米德原理，空玻璃筒排开水的体积$S_{内}$，浮力为$F = G + G_{水} = G + \\rho_{水} g S_{内} h_{1}$\n玻璃筒重力$\\rho_{水} g S h_{3} = G + \\rho_{水} g S_{内} h_{4}$\n\n（3）\n压痕深度相同，说明奖杯对黏土的压强等于甲图中玻璃筒（含水）对黏土的压强；设玻璃筒内横截面积为$G = \\rho_{水} g S h_{2}$，甲图中玻璃筒对黏土的压力等于总重力，即$S_{内} = \\frac{S \\left(\\right. h_{3} - h_{2} \\left.\\right)}{h_{4}}$\n对丙图装水的玻璃筒，仍满足漂浮条件，总浮力等于总重力，即$F = G + \\rho_{水} g S_{内} h_{1} = \\rho_{水} g S h_{2} + \\rho_{水} g \\frac{S \\left(h_{3},-,h_{2}\\right)}{h_{4}} \\times 1 . 5 h_{4} = \\rho_{水} g S \\left(1,.,5,h_{3},-,0,.,5,h_{2}\\right)$\n将$p = \\frac{F}{S}$代入，整理得内横截面积$p = \\frac{F}{S} = \\frac{\\rho_{水} g S \\left(1,.,5,h_{3},-,0,.,5,h_{2}\\right)}{S} = \\frac{\\rho_{水} g \\left(3,h_{3},-,h_{2}\\right)}{2}$\n总压力为![](figures/image245.png)\n根据压强公式![](figures/image246.png)，压强![](figures/image247.png)",
       "type": "calculation",
       "score": 4
     }
@@ -395,37 +395,37 @@
     {
       "number": 10,
       "correct": "C",
-      "solution": "当![](figures/image18.png)闭合、![](figures/image19.png)闭合时，![](figures/image20.png)被短路，只有![](figures/image21.png)接入电路，电阻小，由![](figures/image22.png)可知，电压不变时功率大，为加热状态；当![](figures/image18.png)闭合、![](figures/image19.png)断开时，![](figures/image21.png)与![](figures/image20.png)串联，总电阻大，功率小，为保温状态。\nA．根据电能公式![](figures/image23.png)，电能由功率和工作时间共同决定，未说明工作时间，无法比较加热和保温消耗电能的多少，故A错误；\nB．由![](figures/image24.png)，电源电压![](figures/image25.png)不变，加热功率![](figures/image26.png)，因此加热电流![](figures/image27.png)，故B错误；\nC．加热状态![](figures/image21.png)的电阻![](figures/image28.png)\n保温状态总电阻![](figures/image29.png)\n串联电路总电阻等于各电阻之和，因此![](figures/image20.png)的电阻![](figures/image30.png)\n则![](figures/image31.png)，故C正确；\nD．纯电阻电路，相同时间![](figures/image32.png)内产生热量![](figures/image33.png)，因此热量比![](figures/image34.png)\n不是![](figures/image35.png)，故D错误。\n故选C。",
+      "solution": "当$\\text{S}_{1}$闭合、$\\text{S}_{2}$闭合时，$R_{2}$被短路，只有$R_{1}$接入电路，电阻小，由$P = \\frac{U^{2}}{R}$可知，电压不变时功率大，为加热状态；当$\\text{S}_{1}$闭合、$\\text{S}_{2}$断开时，$R_{1}$与$R_{2}$串联，总电阻大，功率小，为保温状态。\nA．根据电能公式$W = P t$，电能由功率和工作时间共同决定，未说明工作时间，无法比较加热和保温消耗电能的多少，故A错误；\nB．由$P = U I$，电源电压$U = 220 \\text{V}$不变，加热功率$P_{加} > P_{保}$，因此加热电流$I_{加} > I_{保}$，故B错误；\nC．加热状态$R_{1}$的电阻$R_{1} = \\frac{U^{2}}{P_{加}} = \\frac{\\left(\\right. 220 \\text{V} \\left.\\right)^{2}}{880 \\text{W}} = 55 \\Omega$\n保温状态总电阻$R_{总} = \\frac{U^{2}}{P_{保}} = \\frac{\\left(\\right. 220 \\text{V} \\left.\\right)^{2}}{80 \\text{W}} = 605 \\Omega$\n串联电路总电阻等于各电阻之和，因此$R_{2}$的电阻$R_{2} = R_{总} - R_{1} = 605 \\Omega - 55 \\Omega = 550 \\Omega$\n则$R_{1} : R_{2} = 55 \\Omega : 550 \\Omega = 1 : 10$，故C正确；\nD．纯电阻电路，相同时间$t$内产生热量$Q = W = P t$，因此热量比$\\frac{Q_{加}}{Q_{保}} = \\frac{P_{加} t}{P_{保} t} = \\frac{P_{加}}{P_{保}} = \\frac{880 \\text{W}}{80 \\text{W}} = \\frac{11}{1}$\n不是$10 : 1$，故D错误。\n故选C。",
       "score": 2
     },
     {
       "number": 11,
       "correct": "B",
-      "solution": "杆秤利用杠杆平衡条件工作，题干说明甲图中不放物体时提纽O处已平衡，因此杆秤、秤盘的自重已经平衡，只需分析物体和秤砣满足的杠杆平衡条件：根据杠杆平衡![](figures/image46.png)，得![](figures/image47.png)，整理得![](figures/image48.png)。\nA．秤砣在![](figures/image37.png)点时，![](figures/image49.png)，物体的质量![](figures/image50.png)，故A错误；\nB．最大称量时秤砣移到最远![](figures/image42.png)点，![](figures/image51.png)，此杆秤可称量的最大质量![](figures/image52.png)，故B正确；\nC．由最大称量公式![](figures/image53.png)，若提纽向![](figures/image42.png)移动，支点![](figures/image36.png)右移，![](figures/image54.png)变大，![](figures/image55.png)变小，则![](figures/image56.png)减小，量程减小，因此要增大量程不能将提纽向![](figures/image42.png)移动，故C错误；\nD．秤砣磨损后，实际质量![](figures/image57.png)变小，称量同一物体时，由![](figures/image58.png)，![](figures/image57.png)变小则![](figures/image59.png)变大，对应杆秤读数更大，因此称得的质量大于物体的实际质量，故D错误。\n故选B。",
+      "solution": "杆秤利用杠杆平衡条件工作，题干说明甲图中不放物体时提纽O处已平衡，因此杆秤、秤盘的自重已经平衡，只需分析物体和秤砣满足的杠杆平衡条件：根据杠杆平衡$F_{1} L_{1} = F_{2} L_{2}$，得$m_{物} g \\cdot A O = m_{砣} g \\cdot L_{砣}$，整理得$m_{物} \\cdot A O = m_{砣} \\cdot L_{砣}$。\nA．秤砣在$B$点时，$L_{砣} = O B = 40 \\text{cm}$，物体的质量$m_{物} = \\frac{m_{砣} \\cdot L_{砣}}{A O} = \\frac{0 . 1 \\text{kg} \\times 40 \\text{cm}}{5 \\text{cm}} = 0 . 8 \\text{kg} \\neq 0 . 4 \\text{kg}$，故A错误；\nB．最大称量时秤砣移到最远$D$点，$L_{砣} = O D = 50 \\text{cm}$，此杆秤可称量的最大质量$m_{\\text{max}} = \\frac{m_{砣} \\cdot L_{砣}}{A O} = \\frac{0 . 1 \\text{kg} \\times 50 \\text{cm}}{5 \\text{cm}} = 1 \\text{kg}$，故B正确；\nC．由最大称量公式$m_{\\text{max}} = \\frac{m_{砣} \\cdot O D}{A O}$，若提纽向$D$移动，支点$O$右移，$A O$变大，$O D$变小，则$m_{\\text{max}}$减小，量程减小，因此要增大量程不能将提纽向$D$移动，故C错误；\nD．秤砣磨损后，实际质量$m_{砣}$变小，称量同一物体时，由$L_{砣} = \\frac{m_{物} \\cdot A O}{m_{砣}}$，$m_{砣}$变小则$L_{砣}$变大，对应杆秤读数更大，因此称得的质量大于物体的实际质量，故D错误。\n故选B。",
       "score": 2
     },
     {
       "number": 12,
       "correct": "C",
-      "solution": "A．当A对容器底压力刚好为零时，A浸入深度![](figures/image72.png) ，排开体积![](figures/image73.png)\nA受到的浮力为 ![](figures/image74.png) \n故A错误；\nBC．长方体物块![](figures/image60.png)的重力为![](figures/image75.png) \n当B刚好被拉起时，对A、B整体受力分析：A受到向上的浮力等于A的重力和水对B向下的压力之和，即![](figures/image76.png)\n设此时水深为![](figures/image77.png)，细线的长度为![](figures/image78.png)，则A浸入深度![](figures/image79.png) \nA排开液体的体积为![](figures/image80.png)\nA受到的浮力为![](figures/image81.png) \n水对B的压强为![](figures/image82.png) \n水对B的压力为![](figures/image83.png)\n代入![](figures/image84.png)得，![](figures/image85.png)​ \n即![](figures/image86.png) \n解得，![](figures/image87.png) \n此时A的浮力为![](figures/image88.png) \n故B错误，C正确；\nD．由![](figures/image85.png)，![](figures/image89.png)​ 得![](figures/image90.png)\nA材料、体积不变，所以重力![](figures/image91.png)不变，底面积![](figures/image92.png)​减小，![](figures/image92.png)越小，![](figures/image93.png)越大，水深越大，最大储水量越大，不是减小，故D错误。\n故选C。",
+      "solution": "A．当A对容器底压力刚好为零时，A浸入深度$h_{浸} = 9 \\text{cm}$ ，排开体积$V_{排} = S_{\\text{A}} h_{浸} = 100 \\text{cm}^{2} \\times 9 \\text{cm} = 900 \\text{cm}^{3} = 9 \\times 10^{- 4} \\text{m}^{3}$\nA受到的浮力为 $F_{浮} = \\rho_{水} g V_{排} = 1 \\times 10^{3} \\text{kg} / \\text{m}^{3} \\times 10 \\text{N} / \\text{kg} \\times 9 \\times 10^{- 4} \\text{m}^{3} = 9 \\text{N}$ \n故A错误；\nBC．长方体物块$\\text{A}$的重力为$G_{\\text{A}} = m g = 0 . 9 \\text{kg} \\times 10 \\text{N} / \\text{kg} = 9 \\text{N}$ \n当B刚好被拉起时，对A、B整体受力分析：A受到向上的浮力等于A的重力和水对B向下的压力之和，即$F_{浮}^{'} = G_{\\text{A}} + F_{\\text{B}}$\n设此时水深为$H$，细线的长度为$L$，则A浸入深度$h_{浸}^{'} = H - L$ \nA排开液体的体积为$V_{排}^{'} = S h = S_{\\text{A}} \\left(H,-,L\\right)$\nA受到的浮力为$F_{浮}^{'} = \\rho_{水} g V_{排}^{'} = \\rho_{水} g S_{\\text{A}} \\left(H,-,L\\right)$ \n水对B的压强为$p_{水} = \\rho_{水} g H$ \n水对B的压力为$F_{\\text{B}} = p_{水} S_{\\text{B}} = \\rho_{水} g H S_{\\text{B}}$\n代入$F_{浮}^{'} = G_{\\text{A}} + F_{\\text{B}}$得，$\\rho_{水} g S_{\\text{A}} \\left(H,-,L\\right) = G_{\\text{A}} + \\rho_{水} g H S_{\\text{B}}$​ \n即$1 . 0 \\times 10^{3} \\text{kg} / \\text{m}^{3} \\times 10 \\text{N} / \\text{kg} \\times 100 \\times 10^{- 4} \\text{m}^{2} \\times \\left(H,-,0,.,03,\\text{m}\\right) = 9 \\text{N} + 1 . 0 \\times 10^{3} \\text{kg} / \\text{m}^{3} \\times 10 \\text{N} / \\text{kg} \\times 60 \\times 10^{- 4} \\text{m}^{2} H$ \n解得，$H = 0 . 3 \\text{m} = 30 \\text{cm}$ \n此时A的浮力为$F_{浮}^{'} = \\rho_{水} g S_{\\text{A}} \\left(H,-,L\\right) = 1 \\times 10^{3} \\text{kg} / \\text{m}^{3} \\times 10 \\text{N} / \\text{kg} \\times 1 \\times 10^{- 2} \\text{m}^{2} \\times \\left(0,.,3,\\text{m},-,0,.,03,\\text{m}\\right) = 27 \\text{N}$ \n故B错误，C正确；\nD．由$\\rho_{水} g S_{\\text{A}} \\left(H,-,L\\right) = G_{\\text{A}} + \\rho_{水} g H S_{\\text{B}}$，$H = h_{浸} + L$​ 得$h_{浸} = \\frac{G_{\\text{A}} + \\rho_{水} g S_{\\text{B}} L}{\\rho_{水} g \\left(S_{\\text{A}},-,S_{\\text{B}}\\right)}$\nA材料、体积不变，所以重力$G_{\\text{A}}$不变，底面积$S_{\\text{A}}$​减小，$S_{\\text{A}}$越小，$h_{浸}$越大，水深越大，最大储水量越大，不是减小，故D错误。\n故选C。",
       "score": 2
     },
     {
       "number": 13,
       "correct": "ABC",
-      "solution": "A．太阳能和风能、潮汐能可以源源不断地获取，属于可再生能源，故A正确；\nB．裂变是可控的，核电站是利用可控的核裂变释放核能，故B正确；\nC．光在真空中的传播速度为![](figures/image94.png)，无线电波属于电磁波，在真空中的传播速度和光在真空中的传播速度相等，故C正确；\nD．超导材料在满足其超导性能的条件下电阻为零，由![](figures/image95.png)可知，电阻小的材料不能制作电热丝，故D错误。\n故选ABC。",
+      "solution": "A．太阳能和风能、潮汐能可以源源不断地获取，属于可再生能源，故A正确；\nB．裂变是可控的，核电站是利用可控的核裂变释放核能，故B正确；\nC．光在真空中的传播速度为$\\text{3}\\times\\text{10}^{8} \\text{m}/\\text{s}$，无线电波属于电磁波，在真空中的传播速度和光在真空中的传播速度相等，故C正确；\nD．超导材料在满足其超导性能的条件下电阻为零，由$Q = I^{2} R t$可知，电阻小的材料不能制作电热丝，故D错误。\n故选ABC。",
       "score": 2
     },
     {
       "number": 14,
       "correct": "AD",
-      "solution": "A．由图乙可知，钢丝绳自由端的移动速度![](figures/image102.png)，故A正确；\nB．10s内钢丝绳自由端移动的距离![](figures/image103.png)\n电动机对钢丝绳做的功![](figures/image104.png)，故B错误；\nC．根据机械效率公式![](figures/image105.png)，可得建筑材料的重力![](figures/image106.png)\n建筑材料的质量![](figures/image107.png)，故C错误；\nD．建筑材料上升的速度![](figures/image108.png)\n动滑轮对建筑材料做功的功率![](figures/image109.png)，故D正确。\n故选AD。",
+      "solution": "A．由图乙可知，钢丝绳自由端的移动速度$v_{a} = \\frac{s_{a}}{t} = \\frac{\\text{0}.\\text{3m}}{\\text{1}.\\text{0s}} = 0 . 3 \\text{m}/\\text{s}$，故A正确；\nB．10s内钢丝绳自由端移动的距离$s = v_{a} t^{'} =\\text{0}.\\text{3m}/\\text{s}\\times\\text{10s}=\\text{3m}$\n电动机对钢丝绳做的功$W_{总} = F s =\\text{800N}\\times\\text{3m}=\\text{2400J} \\neq \\text{800J}$，故B错误；\nC．根据机械效率公式$\\eta = \\frac{W_{有}}{W_{总}} = \\frac{G h}{F s} = \\frac{G h}{F \\cdot n h} = \\frac{G}{n F}$，可得建筑材料的重力$G = \\eta n F =\\text{80}\\%\\times\\text{3}\\times\\text{800N}=\\text{1920N}$\n建筑材料的质量$m = \\frac{G}{g} = \\frac{\\text{1920N}}{\\text{10N}/\\text{kg}} =\\text{192kg} \\neq \\text{240kg}$，故C错误；\nD．建筑材料上升的速度$v_{物} = \\frac{h}{t_{2}} = \\frac{\\text{0}.\\text{2m}}{\\text{2s}} =\\text{0}.\\text{1m}/\\text{s}$\n动滑轮对建筑材料做功的功率$P = G v_{物} = \\text{1920N}\\times\\text{0}.\\text{1m}/\\text{s}=\\text{192W}$，故D正确。\n故选AD。",
       "score": 2
     },
     {
       "number": 15,
       "correct": "ABD",
-      "solution": "AB间元件与滑动变阻器串联，电压表测AB元件两端电压，电流表测电路电流\nA．AB间接入![](figures/image126.png)定值电阻：电压表最大量程为![](figures/image127.png)，因此AB最大电压为![](figures/image127.png)，此时电流![](figures/image128.png)\n符合电流表要求；滑动变阻器接入最大![](figures/image129.png)时，总电阻![](figures/image130.png)\n电路的电流![](figures/image131.png)\nAB两端的电压![](figures/image132.png)，因此电压表示数变化范围为![](figures/image133.png)，故A正确；\nB．控制AB间电压为![](figures/image127.png)，则滑动变阻器分压![](figures/image134.png)\n串联分压得![](figures/image135.png)\n即![](figures/image136.png)；电流最大不超过![](figures/image137.png)，因此在AB间接入电阻的最小阻值![](figures/image138.png)\n滑动变阻器最大接入![](figures/image129.png)，因此在AB间接入电阻的最大阻值![](figures/image139.png)，因此AB电阻范围为![](figures/image140.png)，故B正确；\nC．接入![](figures/image141.png)未知电阻，使滑动变阻器接入阻值为0，电路电流![](figures/image142.png)\n电流表![](figures/image143.png)量程的分度值为![](figures/image144.png)，该电流小于分度值，无法准确读数，因此无法测量该电阻阻值，故C错误；\nD．灯泡功率变化量![](figures/image145.png)\n即功率增大了![](figures/image146.png)，故D正确。\n故选ABD。",
+      "solution": "AB间元件与滑动变阻器串联，电压表测AB元件两端电压，电流表测电路电流\nA．AB间接入$10 \\Omega$定值电阻：电压表最大量程为$3 \\text{V}$，因此AB最大电压为$3 \\text{V}$，此时电流$I = \\frac{U_{R}}{R} = \\frac{3 \\text{V}}{10 \\Omega} = 0 . 3 \\text{A} < 0 . 6 \\text{A}$\n符合电流表要求；滑动变阻器接入最大$20 \\Omega$时，总电阻$R_{总} = 10 \\Omega + 20 \\Omega = 30 \\Omega$\n电路的电流$I = \\frac{U}{R_{总}} = \\frac{4 . 5 \\text{V}}{30 \\Omega} = 0 . 15 \\text{A}$\nAB两端的电压$U_{R} = I R = 0 . 15 \\text{A} \\times 10 \\Omega = 1 . 5 \\text{V}$，因此电压表示数变化范围为$1 . 5 \\sim 3 \\text{V}$，故A正确；\nB．控制AB间电压为$3 \\text{V}$，则滑动变阻器分压$U_{滑} = U - U_{A B} = 4 . 5 \\text{V} - 3 \\text{V} = 1 . 5 \\text{V}$\n串联分压得$\\frac{R_{A B}}{R_{滑}} = \\frac{U_{A B}}{U_{滑}} = \\frac{3 \\text{V}}{1 . 5 \\text{V}} = 2$\n即$R_{A B} = 2 R_{滑}$；电流最大不超过$0 . 6 \\text{A}$，因此在AB间接入电阻的最小阻值$R_{A B 最小} = \\frac{U_{R}}{I_{\\text{max}}} = \\frac{3 \\text{V}}{0 . 6 \\text{A}} = 5 \\Omega$\n滑动变阻器最大接入$20 \\Omega$，因此在AB间接入电阻的最大阻值$R_{A B 最大} = 2 \\times 20 \\Omega = 40 \\Omega$，因此AB电阻范围为$5 \\sim 40 \\Omega$，故B正确；\nC．接入$300 \\Omega$未知电阻，使滑动变阻器接入阻值为0，电路电流$I = \\frac{U}{R} = \\frac{4 . 5 \\text{V}}{300 \\Omega} = 0 . 015 \\text{A}$\n电流表$0 ∼ 0 . 6 \\text{A}$量程的分度值为$0 . 02 \\text{A}$，该电流小于分度值，无法准确读数，因此无法测量该电阻阻值，故C错误；\nD．灯泡功率变化量$\\Delta P = P_{2} - P_{1} = U_{2} I_{2} - U_{1} I_{1} = 3 \\text{V} \\times 0 . 3 \\text{A} - 2 \\text{V} \\times 0 . 25 \\text{A} = 0 . 9 \\text{W} - 0 . 5 \\text{W} = 0 . 4 \\text{W}$\n即功率增大了$0 . 4 \\text{W}$，故D正确。\n故选ABD。",
       "score": 2
     },
     {
@@ -437,7 +437,7 @@
     {
       "number": 17,
       "correct": "",
-      "solution": "（1）水在沸腾的过程中，虽然需要持续吸收热量，但温度保持不变      （2）99    （3）不变\n\n详解：从表格数据可以看出，从实验开始的第0分钟到第3分钟，其温度始终保持![](figures/image149.png)没有发生变化。这说明水已经处于沸腾状态。因此，可以得出水在沸腾的过程中，虽然需要持续吸收热量，但温度是保持不变的。\n\n（2）\n 沸点是指液体沸腾时的温度。根据表格数据，水在沸腾时温度稳定![](figures/image149.png) ，所以水的沸点就是![](figures/image150.png)。\n\n（3）\n水在达到沸点后，继续加热，水会持续沸腾，但温度保持在沸点不变，直到水全部汽化。表格数据显示水已经在沸腾，所以即使再继续加热，只要水还没有烧干，其温度就会一直保持在沸点![](figures/image149.png)不变。",
+      "solution": "（1）水在沸腾的过程中，虽然需要持续吸收热量，但温度保持不变      （2）99    （3）不变\n\n详解：从表格数据可以看出，从实验开始的第0分钟到第3分钟，其温度始终保持$99 \\text{\\textdegree C}$没有发生变化。这说明水已经处于沸腾状态。因此，可以得出水在沸腾的过程中，虽然需要持续吸收热量，但温度是保持不变的。\n\n（2）\n 沸点是指液体沸腾时的温度。根据表格数据，水在沸腾时温度稳定$99 \\text{\\textdegree C}$ ，所以水的沸点就是$99 \\text{\\textdegree C}$。\n\n（3）\n水在达到沸点后，继续加热，水会持续沸腾，但温度保持在沸点不变，直到水全部汽化。表格数据显示水已经在沸腾，所以即使再继续加热，只要水还没有烧干，其温度就会一直保持在沸点$99 \\text{\\textdegree C}$不变。",
       "score": 3
     },
     {
@@ -455,13 +455,13 @@
     {
       "number": 20,
       "correct": "",
-      "solution": "（1）B    （2）    ①. 小灯泡断路    ②. 小灯泡接线处接触不良      （3）8.3\n\n详解：（1）\n连接电路闭合开关前，滑动变阻器需要调至接入电路的最大阻值处保护电路，由图可知滑动变阻器接入的是左下端A接线柱，滑片移到B端时，接入电路的电阻丝长度最长，阻值最大。\n\n（2）\n电流表始终无示数说明电路是断路状态；电压表有示数且接近电源电压，说明电压表的两个接线柱能连通到电源两端，因此断路位置在小灯泡处，常见的两种故障为小灯泡断路、小灯泡接线处接触不良。\n\n（3）\n电流表选用0~0.6A量程，分度值为0.02A，图乙指针读数为0.3A，根据欧姆定律![](figures/image163.png)，可得小灯泡电阻![](figures/image164.png)",
+      "solution": "（1）B    （2）    ①. 小灯泡断路    ②. 小灯泡接线处接触不良      （3）8.3\n\n详解：（1）\n连接电路闭合开关前，滑动变阻器需要调至接入电路的最大阻值处保护电路，由图可知滑动变阻器接入的是左下端A接线柱，滑片移到B端时，接入电路的电阻丝长度最长，阻值最大。\n\n（2）\n电流表始终无示数说明电路是断路状态；电压表有示数且接近电源电压，说明电压表的两个接线柱能连通到电源两端，因此断路位置在小灯泡处，常见的两种故障为小灯泡断路、小灯泡接线处接触不良。\n\n（3）\n电流表选用0~0.6A量程，分度值为0.02A，图乙指针读数为0.3A，根据欧姆定律$R = \\frac{U}{I}$，可得小灯泡电阻$R = \\frac{U}{I} = \\frac{2 . 5 \\text{V}}{0 . 3 \\text{A}} \\approx 8 . 3 \\Omega$",
       "score": 4
     },
     {
       "number": 21,
       "correct": "",
-      "solution": "（1）    ①. 应将木块侧放在长木板上，调节滑轮的高度，使连接木块的细线水平，沿水平方向匀速拉动长木板，待弹簧测力计指针的位置稳定后，记录接触面积![](figures/image166.png)和弹簧测力计的示数![](figures/image167.png)    ②. ![](figures/image167.png)      （2）两次实验中滑动摩擦力的大小相等\n\n详解：（1）\n实验目的是探究滑动摩擦力大小与接触面积是否有关，所以需要控制其它因素不变，只改变接触面积，所以应将木块侧放在长木板上，调节滑轮的高度，使连接木块的细线水平，沿水平方向匀速拉动长木板，待弹簧测力计指针的位置稳定后，记录接触面积![](figures/image166.png)和弹簧测力计的示数![](figures/image167.png)。\n木块做匀速直线运动时受平衡力作用，根据二力平衡原理可知，木块所受滑动摩擦力大小等于弹簧测力计的示数，即![](figures/image169.png)。\n\n（2）\n若两次实验中滑动摩擦力的大小相等，则可得出滑动摩擦力的大小与接触面积无关的结论。",
+      "solution": "（1）    ①. 应将木块侧放在长木板上，调节滑轮的高度，使连接木块的细线水平，沿水平方向匀速拉动长木板，待弹簧测力计指针的位置稳定后，记录接触面积$S$和弹簧测力计的示数$F$    ②. $F$      （2）两次实验中滑动摩擦力的大小相等\n\n详解：（1）\n实验目的是探究滑动摩擦力大小与接触面积是否有关，所以需要控制其它因素不变，只改变接触面积，所以应将木块侧放在长木板上，调节滑轮的高度，使连接木块的细线水平，沿水平方向匀速拉动长木板，待弹簧测力计指针的位置稳定后，记录接触面积$S$和弹簧测力计的示数$F$。\n木块做匀速直线运动时受平衡力作用，根据二力平衡原理可知，木块所受滑动摩擦力大小等于弹簧测力计的示数，即$f = F$。\n\n（2）\n若两次实验中滑动摩擦力的大小相等，则可得出滑动摩擦力的大小与接触面积无关的结论。",
       "score": 3
     },
     {
@@ -473,25 +473,25 @@
     {
       "number": 23,
       "correct": "",
-      "solution": "（1）使小玻璃杯完全浸没在量筒的水中      （2）![](figures/image178.png)\n\n详解：（1）\n前两步已经测出了水的体积![](figures/image172.png)，以及玻璃杯漂浮时的总体积![](figures/image173.png)；第三步需要得到玻璃杯自身的体积，因此需要让玻璃杯沉入水中完全浸没，读出此时总体积![](figures/image174.png)。\n\n（2）\n玻璃杯漂浮时，排开水的体积为![](figures/image179.png)\n根据沉浮条件，浮力等于重力，即![](figures/image180.png)\n整理得玻璃杯质量![](figures/image181.png)\n玻璃杯完全浸没后，自身体积![](figures/image182.png)\n根据密度公式![](figures/image183.png)​，得玻璃杯的密度为![](figures/image184.png)",
+      "solution": "（1）使小玻璃杯完全浸没在量筒的水中      （2）$\\frac{V_{2} - V_{1}}{V_{3} - V_{1}} \\rho_{水}$\n\n详解：（1）\n前两步已经测出了水的体积$V_{1}$，以及玻璃杯漂浮时的总体积$V_{2}$；第三步需要得到玻璃杯自身的体积，因此需要让玻璃杯沉入水中完全浸没，读出此时总体积$V_{3}$。\n\n（2）\n玻璃杯漂浮时，排开水的体积为$V_{排} = V_{2} - V_{1}$\n根据沉浮条件，浮力等于重力，即$F_{浮} = \\rho_{水} g \\left(V_{2},-,V_{1}\\right) = G = m g$\n整理得玻璃杯质量$m = \\rho_{水} \\left(\\right. V_{2} - V_{1} \\left.\\right)$\n玻璃杯完全浸没后，自身体积$V = V_{3} - V_{1}$\n根据密度公式$\\rho = \\frac{m}{V}$​，得玻璃杯的密度为$\\rho = \\frac{\\rho_{水} \\left(\\right. V_{2} - V_{1} \\left.\\right)}{V_{3} - V_{1}}$",
       "score": 4
     },
     {
       "number": 24,
       "correct": "",
-      "solution": "（1）  电压    （2）  较小    （3）  ![](figures/image198.png)\n\n详解：（1）\n根据题干给出的热阻定义![](figures/image199.png)，对比电阻定义式![](figures/image200.png)，二者结构对应：![](figures/image201.png)对应电压![](figures/image202.png)，![](figures/image186.png)对应电流![](figures/image203.png)，因此温度差相当于电路中的电压。\n\n（2）\n墙壁保温需要增大热阻，减少热量传递。根据热阻公式![](figures/image204.png)，![](figures/image78.png)、![](figures/image166.png)固定时，热阻![](figures/image111.png)与导热系数![](figures/image191.png)成反比，因此需要选用导热系数较小的材料来获得更大热阻。\n\n（3）\n沿MN方向传导：传导长度![](figures/image205.png)，横截面积![](figures/image206.png)，![](figures/image8.png)的热阻![](figures/image207.png)\n沿PQ方向传导：传导长度![](figures/image208.png)，横截面积![](figures/image209.png)，![](figures/image20.png)的热阻![](figures/image210.png)\n![](figures/image8.png)与![](figures/image9.png)的比值![](figures/image211.png)，即![](figures/image198.png)。",
+      "solution": "（1）  电压    （2）  较小    （3）  $R = \\frac{\\Delta T}{P}$\n\n详解：（1）\n根据题干给出的热阻定义$R = \\frac{U}{I}$，对比电阻定义式$\\Delta T$，二者结构对应：$U$对应电压$P$，$I$对应电流$R = \\frac{L}{\\lambda S}$，因此温度差相当于电路中的电压。\n\n（2）\n墙壁保温需要增大热阻，减少热量传递。根据热阻公式$L$，$S$、$R$固定时，热阻$\\lambda$与导热系数$L_{1} = 3 a$成反比，因此需要选用导热系数较小的材料来获得更大热阻。\n\n（3）\n沿MN方向传导：传导长度$S_{1} = 2 a \\cdot a = 2 a^{2}$，横截面积$R_{1}$，$R_{1} = \\frac{L_{1}}{\\lambda S_{1}} = \\frac{3 a}{\\lambda \\cdot 2 a^{2}} = \\frac{3}{2 \\lambda a}$的热阻$L_{2} = a$\n沿PQ方向传导：传导长度$S_{2} = 3 a \\cdot 2 a = 6 a^{2}$，横截面积$R_{2}$，$R_{2} = \\frac{L_{2}}{\\lambda S_{2}} = \\frac{a}{\\lambda \\cdot 6 a^{2}} = \\frac{1}{6 \\lambda a}$的热阻$R_{1}$\n$R_{2}$与$\\frac{R_{1}}{R_{2}} = \\frac{\\frac{3}{2 \\lambda a}}{\\frac{1}{6 \\lambda a}} = 9$的比值$R_{1} : R_{2} = 9 : 1$，即$U$。",
       "score": 4
     },
     {
       "number": 25,
       "correct": "",
-      "solution": "（1）  ![](figures/image216.png)      （2）  ![](figures/image217.png)\n\n详解：（1）\n由图可知，![](figures/image21.png)、![](figures/image20.png)、滑动变阻器![](figures/image111.png)串联，电流表测量电路电流，电压表测![](figures/image20.png)与![](figures/image111.png)的总电压，![](figures/image20.png)为定值电阻，其两端电压随电流增大而增大；由图可知，当电路电流![](figures/image218.png)时，滑动变阻器接入的电阻为0，![](figures/image20.png)两端电压![](figures/image219.png)， 根据欧姆定律![](figures/image200.png)，![](figures/image20.png)的阻值![](figures/image220.png)\n\n（2）\n根据串联电路电压规律，电源电压等于各部分电压之和，即![](figures/image221.png)，其中![](figures/image222.png)为![](figures/image21.png)两端电压，![](figures/image223.png)为电压表的示数，电源电压![](figures/image224.png)",
+      "solution": "（1）  $R_{2}$      （2）  $R$\n\n详解：（1）\n由图可知，$R_{2}$、$R$、滑动变阻器$R_{2}$串联，电流表测量电路电流，电压表测$I =\\text{2A}$与$R_{2}$的总电压，$U_{2} =\\text{6V}$为定值电阻，其两端电压随电流增大而增大；由图可知，当电路电流$R = \\frac{U}{I}$时，滑动变阻器接入的电阻为0，$R_{2}$两端电压$R_{2} = \\frac{U_{2}}{I} = \\frac{\\text{6V}}{\\text{2A}} =\\text{3}\\Omega$， 根据欧姆定律$U = U_{R 1} + U_{\\text{V}}$，$U_{R 1}$的阻值$R_{1}$\n\n（2）\n根据串联电路电压规律，电源电压等于各部分电压之和，即$U_{\\text{V}}$，其中$U = I_{1} R_{1} + U_{\\text{V}} = \\text{2A}\\times\\text{1}\\Omega+\\text{6V}=\\text{8V}$为$p$两端电压，$S$为电压表的示数，电源电压$h_{1}$",
       "score": 4
     },
     {
       "number": 26,
       "correct": "",
-      "solution": "（1）![](figures/image233.png)    （2）![](figures/image234.png)      （3）![](figures/image235.png)\n\n详解：（1）\n图乙中玻璃筒漂浮在水中，静止时受力平衡，竖直方向仅受两个力：竖直向下的重力G、竖直向上的浮力![](figures/image236.png)​，二力大小相等、方向相反，作用点都在玻璃筒的重心，在玻璃筒重心位置，画一条竖直向下带箭头的线段标注G，再画一条等长竖直向上带箭头的线段标注![](figures/image236.png)，据此作图。\n\n（2）\n空玻璃筒漂浮在水中，根据漂浮条件，浮力等于自身重力，由阿基米德原理，空玻璃筒排开水的体积![](figures/image237.png)，浮力为![](figures/image238.png)\n玻璃筒重力![](figures/image239.png)\n\n（3）\n压痕深度相同，说明奖杯对黏土的压强等于甲图中玻璃筒（含水）对黏土的压强；设玻璃筒内横截面积为![](figures/image240.png)，甲图中玻璃筒对黏土的压力等于总重力，即![](figures/image241.png)\n对丙图装水的玻璃筒，仍满足漂浮条件，总浮力等于总重力，即![](figures/image242.png)\n将![](figures/image243.png)代入，整理得内横截面积![](figures/image244.png)\n总压力为![](figures/image245.png)\n根据压强公式![](figures/image246.png)，压强![](figures/image247.png)",
+      "solution": "（1）![](figures/image233.png)    （2）$F_{浮}$      （3）$V_{排} = S h_{2}$\n\n详解：（1）\n图乙中玻璃筒漂浮在水中，静止时受力平衡，竖直方向仅受两个力：竖直向下的重力G、竖直向上的浮力$F_{浮} = \\rho_{水} g V_{排} = \\rho_{水} g S h_{2}$​，二力大小相等、方向相反，作用点都在玻璃筒的重心，在玻璃筒重心位置，画一条竖直向下带箭头的线段标注G，再画一条等长竖直向上带箭头的线段标注$G = F_{浮} = \\rho_{水} g S h_{2}$，据此作图。\n\n（2）\n空玻璃筒漂浮在水中，根据漂浮条件，浮力等于自身重力，由阿基米德原理，空玻璃筒排开水的体积$S_{内}$，浮力为$F = G + G_{水} = G + \\rho_{水} g S_{内} h_{1}$\n玻璃筒重力$\\rho_{水} g S h_{3} = G + \\rho_{水} g S_{内} h_{4}$\n\n（3）\n压痕深度相同，说明奖杯对黏土的压强等于甲图中玻璃筒（含水）对黏土的压强；设玻璃筒内横截面积为$G = \\rho_{水} g S h_{2}$，甲图中玻璃筒对黏土的压力等于总重力，即$S_{内} = \\frac{S \\left(\\right. h_{3} - h_{2} \\left.\\right)}{h_{4}}$\n对丙图装水的玻璃筒，仍满足漂浮条件，总浮力等于总重力，即$F = G + \\rho_{水} g S_{内} h_{1} = \\rho_{水} g S h_{2} + \\rho_{水} g \\frac{S \\left(h_{3},-,h_{2}\\right)}{h_{4}} \\times 1 . 5 h_{4} = \\rho_{水} g S \\left(1,.,5,h_{3},-,0,.,5,h_{2}\\right)$\n将$p = \\frac{F}{S}$代入，整理得内横截面积$p = \\frac{F}{S} = \\frac{\\rho_{水} g S \\left(1,.,5,h_{3},-,0,.,5,h_{2}\\right)}{S} = \\frac{\\rho_{水} g \\left(3,h_{3},-,h_{2}\\right)}{2}$\n总压力为![](figures/image245.png)\n根据压强公式![](figures/image246.png)，压强![](figures/image247.png)",
       "score": 4
     }
   ],
