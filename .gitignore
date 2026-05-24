@@ -56,3 +56,7 @@ out/papers/
 
 # TypeScript 增量编译缓存（派生产物，可重生）
 *.tsbuildinfo
+
+# docx 解压中间产物（chinese_docx_paper.py）
+knowledge-base/exams/_staging/**/docx-extract/
+knowledge-base/exams/_staging/**/src-unzip/
