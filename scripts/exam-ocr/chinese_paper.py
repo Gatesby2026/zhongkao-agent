@@ -340,22 +340,32 @@ def _strip_footers(text: str) -> str:
 # （下→7），改为不限制下一字符，靠 1<=N<=28 范围筛除误识别。
 _NUM_HEAD_RE = re.compile(r"^\s*(\d{1,2})\s*[.、．,，]\s*(.*)$", re.MULTILINE)
 # 选项标记 anchor（严格：必须 . 后跟字母，避免单字"A"误命中）
-_OPT_MARK_RE = re.compile(r"(?:^|\s)([A-D])\s*[.、．]\s*", re.MULTILINE)
+# 选项标记：A./B./C./D. 标准分隔符 + 兜底 3 类 OCR 缺陷
+#   - 半/全角逗号当分隔（shunyi "D，朝阳区"）
+#   - 直接接中文（shunyi "D桃花源..."）
+#   - 小写 b（shunyi "b.北京市..."）
+# 注：仅认行首（^|\n 紧贴）以避免 passage 正文 "A 段中..." 等误命中。
+_OPT_MARK_RE = re.compile(
+    r"(?:^|\n)\s*([A-Da-d])\s*(?:[.、．,，]\s*|(?=[一-鿿]))",
+    re.MULTILINE)
 
 
 def _parse_options_block(block: str) -> dict[str, str]:
-    """统一选项解析（学英语：anchor + 首现去重 + 页脚保护）。"""
+    """统一选项解析（学英语：anchor + 首现去重 + 页脚保护）。
+    支持 4 种 OCR 缺陷：标准 "A."、半/全角逗号 "A，"、紧贴中文 "A中"、小写 "a."。
+    """
     block = _strip_footers(block)
     marks = list(_OPT_MARK_RE.finditer(block))
     seen: set[str] = set(); marks_uniq = []
     for m in marks:
-        if m.group(1) not in seen:
-            seen.add(m.group(1)); marks_uniq.append(m)
+        key = m.group(1).upper()    # 小写 b/c/d 归一化为 B/C/D
+        if key not in seen:
+            seen.add(key); marks_uniq.append((m, key))
     opts: dict[str, str] = {}
-    for i, m in enumerate(marks_uniq):
-        end = marks_uniq[i+1].start() if i+1 < len(marks_uniq) else len(block)
+    for i, (m, key) in enumerate(marks_uniq):
+        end = marks_uniq[i+1][0].start() if i+1 < len(marks_uniq) else len(block)
         val = block[m.end():end].strip().rstrip(".").strip()
-        opts[m.group(1)] = val
+        opts[key] = val
     return opts
 
 
@@ -697,8 +707,10 @@ def _parse_section_generic(text: str, num_range: range, default_type: str,
         # **关键修复**：chunk 内若含 sub-header（资料二/后记等），在此截断
         # 防止 stem/options bleed 到下一段 passage 内容
         chunk = _trim_at_sub_boundary(chunk)
-        # 切 stem / options：找第一个 "A． " 之前是 stem
-        a_pos = re.search(r"(?:^|\s)A\s*[.、．]\s*", chunk, re.MULTILINE)
+        # 切 stem / options：找第一个 A 选项之前是 stem（支持 A. / A， / A 紧贴中文 / 小写 a.）
+        a_pos = re.search(
+            r"(?:^|\n)\s*[Aa]\s*(?:[.、．,，]\s*|(?=[一-鿿]))",
+            chunk, re.MULTILINE)
         if a_pos:
             stem_part = chunk[:a_pos.start()]
             opts_part = chunk[a_pos.start():]

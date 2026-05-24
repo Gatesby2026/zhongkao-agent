@@ -8,10 +8,10 @@ year: null
 district: ''
 exam_type: 真题
 subject: chinese
-full_score: 101.0
+full_score: 102.0
 duration_minutes: null
 total_questions: 27
-structure: 1handwriting(1分) + 12subjective_blank(30.0分) + 3dictation(4.0分) + 8comprehension(22.0分) + 2单选(4.0分) + 1解答(40分)
+structure: 1handwriting(1分) + 12subjective_blank(30.0分) + 3dictation(4.0分) + 9comprehension(25.0分) + 1单选(2.0分) + 1解答(40分)
 passages:
 - id: base_intro
   type: base
@@ -932,8 +932,8 @@ questions:
   qc_note: ''
   passage_id: argument
 - id: 26
-  type: 单选
-  score: 2.0
+  type: comprehension
+  score: 3
   stem: 阅读文章，写出第④-⑧段的行文思路。(3分)
   answer: B
   solution: B
