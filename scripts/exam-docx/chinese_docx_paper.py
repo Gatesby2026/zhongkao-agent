@@ -969,6 +969,21 @@ def main():
     result["subject"] = "chinese"
     # 卷面元数据（让 enrich 写入 yaml 头部）
     _populate_exam_meta(result, slug, src.stem)
+
+    # **patches 系统**（与 image v3 路线共用 _patches/chinese/<slug>.yaml）
+    # 用于补 docx 源数据缺陷（如 xicheng Q13 docx 解析版漏 D 选项）
+    try:
+        import yaml as Y
+        patch_path = (Path(__file__).resolve().parent.parent.parent
+                      / "knowledge-base" / "exams" / "_patches" / "chinese"
+                      / f"{slug}.yaml")
+        if patch_path.exists():
+            patches = Y.safe_load(patch_path.read_text(encoding="utf-8")) or {}
+            applied = _apply_patches(patches, result)
+            if applied:
+                print(f"[chinese_docx_paper] 🔧 应用 {applied} 处 patch ({patch_path.name})", flush=True)
+    except Exception as e:
+        print(f"[chinese_docx_paper] ⚠ patch 加载失败: {e}", flush=True)
     fj = structured_dir / "final.json"
     fj.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
     qs = result["questions"]
@@ -978,6 +993,79 @@ def main():
     print(f"   passages: {len(result['passages'])}  questions: {len(qs)}  "
           f"answers: {len(result['answers'])}  full_score: {result['full_score']}")
     return result
+
+
+def _apply_patches(patches: dict, result: dict) -> int:
+    """对 result（final.json 结构，questions 用 `number` 字段）应用 patches。
+    schema 同 image 路线 _patches/chinese/*.yaml：
+      passages.<id>.body_replace/body_append/figure/body
+      questions.<N>.{stem,stem_append,options,solution,answer,type,score,create}
+    """
+    n_applied = 0
+    # passages
+    ps_patches = patches.get("passages") or {}
+    for pid, patch in ps_patches.items():
+        for ps in result.get("passages", []):
+            if ps["id"] != pid: continue
+            for rep in patch.get("body_replace") or []:
+                if rep.get("from") and rep["from"] in ps.get("body",""):
+                    ps["body"] = ps["body"].replace(rep["from"], rep.get("to",""))
+                    n_applied += 1
+            if patch.get("body_append"):
+                ps["body"] = (ps.get("body","") + patch["body_append"]); n_applied += 1
+            if patch.get("figure"):
+                ps["figure"] = patch["figure"]; n_applied += 1
+            if patch.get("body"):
+                ps["body"] = patch["body"]; n_applied += 1
+            break
+    # questions（按 number 字段在 result["questions"] 找）
+    q_patches = patches.get("questions") or {}
+    for qid_raw, patch in q_patches.items():
+        qid = int(qid_raw)
+        target = next((q for q in result["questions"] if q["number"] == qid), None)
+        if target is None and patch.get("create"):
+            new_q = {
+                "number": qid,
+                "type": patch.get("type", "subjective_blank"),
+                "stem": patch.get("stem", ""),
+                "options": patch.get("options"),
+                "answer": patch.get("answer", ""),
+                "solution": patch.get("solution", ""),
+                "score": patch.get("score", 0),
+                "section": patch.get("section", ""),
+            }
+            insert_at = next((i for i, q in enumerate(result["questions"])
+                              if q["number"] > qid), len(result["questions"]))
+            result["questions"].insert(insert_at, new_q)
+            n_applied += 1
+            continue
+        if target is None: continue
+        q = target
+        if patch.get("stem") is not None:
+            q["stem"] = patch["stem"]; n_applied += 1
+        if patch.get("stem_append"):
+            q["stem"] = q.get("stem","") + patch["stem_append"]; n_applied += 1
+        if patch.get("options") is not None:
+            q["options"] = patch["options"]; n_applied += 1
+        if patch.get("solution") is not None:
+            q["solution"] = patch["solution"]; n_applied += 1
+        if patch.get("answer") is not None:
+            q["answer"] = patch["answer"]; n_applied += 1
+        if patch.get("type"):
+            q["type"] = patch["type"]; n_applied += 1
+        if patch.get("score") is not None:
+            q["score"] = patch["score"]; n_applied += 1
+    # 同步 answer/solution 到 answers 列表
+    if n_applied:
+        q_by_num = {q["number"]: q for q in result.get("questions", [])}
+        for a in result.get("answers", []):
+            n = a.get("number")
+            q = q_by_num.get(n)
+            if q:
+                if q.get("answer"): a["correct"] = q["answer"]
+                if q.get("solution"): a["solution"] = q["solution"]
+        result["full_score"] = sum(q.get("score", 0) or 0 for q in result["questions"])
+    return n_applied
 
 
 def _populate_exam_meta(result: dict, slug: str, src_stem: str) -> None:
