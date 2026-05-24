@@ -8,10 +8,11 @@ year: null
 district: ''
 exam_type: 真题
 subject: chinese
-full_score: 102.0
+full_score: 100.0
 duration_minutes: null
 total_questions: 27
-structure: 1handwriting(1分) + 12subjective_blank(30.0分) + 3dictation(4.0分) + 9comprehension(25.0分) + 1单选(2.0分) + 1解答(40分)
+structure: 1handwriting(2分) + 11subjective_blank(25.0分) + 3dictation(4.0分) + 1book_review(5分) + 9comprehension(22.0分) + 1单选(2.0分)
+  + 1解答(40分)
 passages:
 - id: base_intro
   type: base
@@ -92,7 +93,7 @@ passages:
 questions:
 - id: 1
   type: handwriting
-  score: 1
+  score: 2
   stem: 有同学对字体加粗的字形和加点字的读音有疑问。下列判断正确的一项是(2分)
   options:
     A: 因为表达的是“深奥的尚未被认识的秘密”的意思，所以“奥秘”一词中有错字。
@@ -690,7 +691,7 @@ questions:
   qc_note: ''
   passage_id: classical_3
 - id: 16
-  type: subjective_blank
+  type: book_review
   score: 5
   stem: “复现”指再一次出现，重现。《骆驼祥子》中有多种复现:“骆驼”的反复出现，是意象的复现;买车失车的循环，是情节的复现;大兵、孙侦探的先后出场，是同类人物形象的复现;祥子在烈日、暴雨中拉车奔跑，是典型场景的复现;一次次对生活重燃希望，又一次次遭受打击是心理活动的复现······请从《西游记》《钢铁是怎样炼成的》《水浒传》《简·爱》任选一部，并选取一种复现，写出复现的具体内容，并分析其在刻画人物或表现主题上的作用。(100字左右)
   answer: ''
@@ -718,7 +719,7 @@ questions:
   passage_id: classical_3
 - id: 17
   type: comprehension
-  score: 5.0
+  score: 3
   stem: 根据材料一的内容和表1的信息，在材料一横线处补写内容，不恰当的一项是(2分)
   options:
     A: 覆盖体美劳教育、心理健康、健康防护等多维度。
@@ -888,7 +889,7 @@ questions:
   passage_id: narrative
 - id: 24
   type: comprehension
-  score: 3.0
+  score: 2
   stem: 下列词语中，对理解本文中心论点起关键作用的短语是:有说无类、①、②。(2分)备选词语:传承创新文化经典敬畏之心前行力量
   answer: ''
   solution: 老屋与故土;家人与亲情;坚守家乡与建设家乡的信念。
