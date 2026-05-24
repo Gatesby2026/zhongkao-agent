@@ -58,6 +58,11 @@ TYPE_MAP = {
     "poem_comprehension":    "古诗内容理解",    # 古诗 section 内容理解（区分现代文）
     "classical_comprehension": "文言文综合理解",  # 文言文 section（区分现代文）
     "book_review":           "名著阅读",
+    # 物理专用 type（physics_docx_paper.py 产出）
+    "multi_choice":          "多选",
+    "experiment":            "实验探究",
+    "comprehensive":         "科普阅读",
+    "calculation":           "计算题",
     # 兼容旧格式中文 key
     "单选": "单选", "多选": "多选", "填空": "填空",
     "计算": "计算", "实验探究": "实验探究", "解答": "解答",
@@ -345,9 +350,23 @@ ENRICH_USER_TEMPLATE = """\
       * 写出启示/谈感悟 → 启示感悟
       * 记叙文文体 → 记叙文阅读；议论文 → 议论文阅读；说明文 → 说明文阅读
   - section=essay（作文）→ 命题作文/材料作文/半命题作文
+  - **物理 section 专用 KP 范围**：
+    - section=choice / multi_choice（单/多选）→ 按物理具体考点：
+      * 力学：力的概念/二力平衡/牛顿定律/压强/浮力/简单机械
+      * 电学：电流/电压/电阻/欧姆定律/电功电功率/电与磁
+      * 光学：光的反射/折射/平面镜成像/凸透镜成像
+      * 热学：温度/比热容/热量计算/物态变化
+      * 能源：能量转化/能源类型/可再生
+      * 声学：声音的产生与传播/响度音调音色
+      * 物质：导体绝缘体/质量密度/分子热运动
+    - section=experiment（实验探究）→ 实验方法/数据处理 + 具体实验
+      （测密度/测电阻/欧姆定律/平面镜成像/熔化/凸透镜）
+    - section=comprehensive（科普阅读）→ 综合应用 + 材料涉及考点
+    - section=calculation（计算题）→ 公式综合应用（如 电功率+欧姆定律 / 压强+浮力）
 - **严禁将现代文题标注成"文言文"知识点，反之亦然**
 - **严禁滥用"信息筛选"标签**：只用于"判断说法是否符合文意"类选择题；
   词语含义/句式赏析/段落作用/启示题 不要标"信息筛选"
+- **物理 KP 必须是物理考点，不能写"信息筛选"等语文 KP**
 - difficulty：基础=直接考概念/简单计算；中等=多步推理/公式应用；能力=综合/压轴
 - recommended_for：基础→[L0-L3]；中等→[L1-L3]；能力→[L2-L3]；压轴→[L3]
 """
@@ -399,11 +418,18 @@ def _answer_with_context(correct: str, opts: dict | None, has_image: bool) -> st
 
 
 _SECTION_HINT_CN = {
+    # 语文
     "base":        "一、基础·运用（字音/字形/成语/病句/词语连贯/书写）",
     "classical":   "二、古诗文阅读（默写/古诗赏析/文言文实词/文言文翻译/语句理解）",
     "book_review": "三、名著阅读（情节/人物形象/主题理解）",
     "modern":      "四、现代文阅读（信息筛选/记叙文/议论文/说明文/散文）",
     "essay":       "五、作文（命题作文/材料作文/半命题作文）",
+    # 物理
+    "choice":         "一、单项选择题（基础概念/简单判断）",
+    "multi_choice":   "二、多项选择题（综合分析/多因素判断）",
+    "experiment":     "三、实验探究题（实验方法/数据处理/装置原理）",
+    "comprehensive":  "四、科普阅读题（综合应用/材料理解）",
+    "calculation":    "五、计算题（公式应用/数据计算/受力分析）",
 }
 
 
@@ -711,20 +737,27 @@ def _write_yaml(result: dict, out_path: Path,
                 "划线", "划线句", "划线的", "加点", "加点字",
                 "图没识别", "图没有", "答案错位", "答案页错位",
                 "patch", "兜底", "占位", "请对照", "请参照", "请补",
+                # enrich 自动生成的 needs_review note（每次重 enrich 应基于新数据
+                # 重新判定，不能保留旧的；否则旧 image 路线把全部题标 needs_review
+                # 会一直传递下去）
+                "answer 为空", "缺少 options", "需补全 solution",
+                "解题步骤未提取", "选择题",
             ]
             for oq in (old_doc.get("questions") or []):
                 qid = oq.get("id")
                 if qid is None: continue
                 note = (oq.get("qc_note") or "").strip()
+                old_status = oq.get("qc_status", "draft") or "draft"
+                # 如果旧 note 是过期的，note 和 status 一起清（自动判定的 NR）
                 if note and any(p in note for p in STALE_PATTERNS):
-                    note = ""    # 丢弃
-                existing_qc[qid] = {
-                    "qc_status": oq.get("qc_status", "draft") or "draft",
-                    "qc_note":   note,
-                }
+                    note = ""
+                    if old_status in ("needs_review", "flag"):
+                        old_status = "draft"
+                existing_qc[qid] = {"qc_status": old_status, "qc_note": note}
             for q in result["questions"]:
                 old = existing_qc.get(q["id"], {})
-                # qc_status: 仅当不是 'draft' / 'flag'（自动写的）才保留
+                # qc_status: 仅当不是 'draft' / 'flag' / 'none'（自动写或重置的）才保留
+                # done / needs_review（人工真正标的）才覆盖新值
                 if old.get("qc_status", "draft") not in ("draft", "flag", "none"):
                     q["qc_status"] = old["qc_status"]
                 if old.get("qc_note", ""):
@@ -793,7 +826,9 @@ def main():
     if not paper.subject:
         parser.error("无法推断学科，请指定 --subject")
 
-    cache_prefix = args.cache_prefix or args.output.stem
+    # **关键**：cache_prefix 必须带 subject 前缀，否则 chinese/physics/math 同名 yaml
+    # （如 2026-chaoyang-yi）会共享 cache 导致 KP 错配。
+    cache_prefix = args.cache_prefix or f"{paper.subject}-{args.output.stem}"
     result = enrich_paper(paper, cache_prefix)
     _write_yaml(result, args.output, paper_dir=paper.paper_dir)
 
