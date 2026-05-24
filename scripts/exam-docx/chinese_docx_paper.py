@@ -230,6 +230,9 @@ def parse_docx_chinese(md: str, figures_dir: Path) -> dict:
     a_lines: list[str] = []
     # 看到 next question anchor 也回 question（用 last_q_seen 跟踪）
     last_q_seen = 0
+    # **关键**：【答案】 行如果不带 "N." 前缀，content 归属上一题。在 a_lines
+    # 里插入 __Q_CTX__:N 标记让 _parse_answers 知道默认归属。
+    last_q_before_answer = 0
 
     for ln in lines:
         sec_m = _is_section_header(ln)
@@ -244,6 +247,10 @@ def parse_docx_chinese(md: str, figures_dir: Path) -> dict:
         if (ANSWER_MARKER_RE.match(ln) or DETAIL_TITLE_RE.match(ln)
             or GENERIC_DETAIL_RE.match(ln) or ANALYSIS_RE.match(ln)
             or DAOYU_RE.match(ln) or DIANJING_RE.match(ln)):
+            if mode == "question":
+                # 入答案模式：记下"上一题号"作为无 N. 前缀【答案】的默认归属
+                last_q_before_answer = last_q_seen
+                a_lines.append(f"__Q_CTX__:{last_q_before_answer}")
             mode = "answer"
             a_lines.append(ln)
             continue
@@ -302,6 +309,13 @@ def parse_docx_chinese(md: str, figures_dir: Path) -> dict:
             trans = poem_trans.get(ps.get("name") or "")
             if trans:
                 ps["body"] = (ps.get("body","") + "\n\n[参考译文]\n" + trans).strip()
+
+    # 4.5 字音/字形题 options 回填 passage 拼音（朝阳 Q3 案例）
+    # passage 里 "矗（zhù）立" → option "·矗·立" 补成 "矗（zhù）立"
+    _backfill_pinyin_to_options(questions, passages)
+
+    # 4.6 passage q_range 兜底填（modern_（一）/材料一/二/三 这种共享阅读材料）
+    _backfill_passage_qrange(passages, questions)
 
     # 5. type 推断 + section/sub-section 总分驱动的 score 分配
     _assign_types(questions)
@@ -480,36 +494,48 @@ def _parse_answers(a_lines: list[str]) -> dict[int, dict]:
     answer_buf: list[str] = []
     detail_blocks: dict[int, list[str]] = {}
     cur_detail: int | None = None
+    # 默认归属题号（来自 q_text 最后题号锚，由调用方在 a_lines 里以 __Q_CTX__:N 标记传入）
+    default_q = 0
 
     def _flush_answer_buf():
         if not answer_buf: return
         text = " ".join(answer_buf)
-        # split by "  N. " / "\tN. "
-        # 用 lookahead 在 "N." 前空白处切
+        # 拆按 "N. " 题号锚；若整体无 "N." 前缀，归到 default_q
         parts = re.split(r"\s+(?=\d{1,2}\s*[.、．])", text)
         for part in parts:
             m = re.match(r"\s*(\d{1,2})\s*[.、．]\s*(.+)$", part, re.DOTALL)
             if m:
                 n = int(m.group(1))
                 content = m.group(2).strip()
-                if n not in out:
-                    out[n] = {"correct": "", "solution": "", "score": None}
-                # 判断是 choice (单字母 A-D) 还是 subjective
-                m_letter = re.match(r"^([A-D])(?:\s|$)", content)
-                if m_letter and len(content) <= 3:
-                    out[n]["correct"] = m_letter.group(1)
-                else:
-                    # 主观题：剥 "示例：" 前缀
-                    sol = re.sub(r"^(?:示例[:：]|参考[:：])\s*", "", content)
+            elif default_q:
+                # 整段【答案】没 "N." 前缀，归 default_q（如朝阳 Q8 默写、Q14 名著、Q25 作文）
+                n = default_q
+                content = part.strip()
+            else:
+                continue
+            if n not in out:
+                out[n] = {"correct": "", "solution": "", "score": None}
+            # choice 单字母答案
+            m_letter = re.match(r"^([A-D])(?:\s|$)", content)
+            if m_letter and len(content) <= 3:
+                out[n]["correct"] = m_letter.group(1)
+            else:
+                sol = re.sub(r"^(?:示例[:：]|参考[:：]|例文[:：]?)\s*", "", content)
+                # 防覆盖：若已有更长 solution，跳过
+                if not out[n]["solution"] or len(sol) > len(out[n]["solution"]):
                     out[n]["solution"] = sol
         answer_buf.clear()
 
     for ln in a_lines:
+        # 上下文标记（由 parse_docx_chinese 注入）
+        if ln.startswith("__Q_CTX__:"):
+            try: default_q = int(ln.split(":",1)[1])
+            except: pass
+            continue
         if ANSWER_MARKER_RE.match(ln):
             _flush_answer_buf()
             in_answer_block = True
             cur_detail = None
-            # 把 "【答案】" 之后的同行内容收进 buf
             after = re.sub(r"^\s*【答案】\s*", "", ln)
             if after.strip(): answer_buf.append(after)
             continue
@@ -525,7 +551,12 @@ def _parse_answers(a_lines: list[str]) -> dict[int, dict]:
             detail_blocks.setdefault(cur_detail, [])
             continue
         if GENERIC_DETAIL_RE.match(ln):
-            # 【详解】用作前一题的详解（如 单题 section）
+            # 【详解】= 单题情况，把后续内容归到 default_q
+            _flush_answer_buf()
+            in_answer_block = False
+            if default_q:
+                cur_detail = default_q
+                detail_blocks.setdefault(cur_detail, [])
             continue
         if DAOYU_RE.match(ln) or DIANJING_RE.match(ln):
             cur_detail = None
@@ -537,17 +568,19 @@ def _parse_answers(a_lines: list[str]) -> dict[int, dict]:
             detail_blocks[cur_detail].append(ln)
     _flush_answer_buf()
 
-    # 把 detail block 拼成 solution（若 answer block 没给 / 或追加）
+    # 把 detail block 拼成 solution（追加策略：若 answer block 的 solution 是
+    # 单字母或很短"略"等→替换；否则追加进 "详解" 后缀）
     for n, dl in detail_blocks.items():
         text = "\n".join(l for l in dl if l.strip()).strip()
         if not text: continue
         if n not in out:
             out[n] = {"correct": "", "solution": "", "score": None}
-        # 若没 solution，用 detail 作 solution；否则可以追加（暂不追加保持简洁）
-        if not out[n]["solution"] and not out[n]["correct"]:
+        cur = out[n].get("solution", "") or ""
+        if not cur:
             out[n]["solution"] = text
-        elif not out[n]["solution"]:
-            out[n]["solution"] = text
+        elif len(cur) < 20 and len(text) > 20:
+            # 当前 solution 太短（如 "B" / "略"），用 detail 补充
+            out[n]["solution"] = f"{cur}\n\n详解：{text}" if cur not in ("略","",) else text
     return out
 
 
@@ -641,6 +674,81 @@ def _parse_score_blocks(md: str, questions: list[dict]) -> list[dict]:
     # 3. 若某 section 完全没有 sub-header（朝阳 essay 是 单 Q25 直接在 essay section），
     #    section 自身作为 block 就够了，无需 sub
     return sec_brackets + sub_brackets
+
+
+# 拼音注音模式：汉字（拼音）—— passage 里的标注
+# 拼音字符类含全部声调（āáǎà ēéěè īíǐì ōóǒò ūúǔù ǖǘǚǜü）
+_PINYIN_CHARS = "a-zāáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜü"
+_PINYIN_RE = re.compile(rf"([一-鿿])\s*[（(]\s*([{_PINYIN_CHARS}]+)\s*[）)]")
+
+
+def _backfill_pinyin_to_options(questions: list[dict], passages: list[dict]) -> None:
+    """字音/字形题（如朝阳 Q3）的 options 是孤立的 ·X·Y 加点字短语；
+    需从关联 passage 里把"X（pīn）Y" 注音回填到 options 才能让学生判断。
+
+    判定字音题：stem 含 "字音" / "读音" / "拼音"，且 options 是中文短语
+    （非完整句子，长度 ≤ 8 字）
+    """
+    # 先建 passage 拼音字典 {汉字串: "汉字（拼音）"}
+    pinyin_map: dict[str, str] = {}
+    for ps in passages:
+        body = ps.get("body","") or ""
+        for m in _PINYIN_RE.finditer(body):
+            char, py = m.group(1), m.group(2)
+            # 抽前后字组成短语，存到 map
+            pinyin_map[char] = f"{char}（{py}）"
+    if not pinyin_map: return
+
+    for q in questions:
+        stem = q.get("stem","") or ""
+        if not any(k in stem for k in ("字音","读音","拼音")):
+            continue
+        opts = q.get("options") or {}
+        if not opts: continue
+        new_opts = {}
+        for k, v in opts.items():
+            new_v = v
+            # 对每个 option 文字里出现的 加点 ·X· 字符做拼音回填
+            for m in re.finditer(r"·([一-鿿])·", v):
+                char = m.group(1)
+                if char in pinyin_map:
+                    # 替换 ·X· → X（拼音）
+                    new_v = new_v.replace(f"·{char}·", pinyin_map[char], 1)
+            new_opts[k] = new_v
+        q["options"] = new_opts
+
+
+def _backfill_passage_qrange(passages: list[dict], questions: list[dict]) -> None:
+    """很多 sub-passage 是"阅读材料"性质（材料一/材料二/(一)/古诗原文 等），它们自身
+    没有题号，q_range=null。但同 section 内题目其实是综合这些材料作答。
+
+    策略：对 q_range=null 的 passage，找同 section_type 邻近的有 q_range 的兄弟，
+    借用其 q_range；若全 section 都没有，用 section 内所有题号的 [min, max]。
+    """
+    # 按 section_type 分组
+    by_type: dict[str, list[dict]] = {}
+    for ps in passages:
+        by_type.setdefault(ps.get("type",""), []).append(ps)
+    section_q_range: dict[str, list[int]] = {}
+    for q in questions:
+        sec = q.get("section","")
+        section_q_range.setdefault(sec, []).append(q["number"])
+
+    for sec, sec_passages in by_type.items():
+        # 该 section 已有 q_range 的题号 union
+        existing_qranges = [ps["q_range"] for ps in sec_passages if ps.get("q_range")]
+        # 该 section 所有题号
+        all_qs = section_q_range.get(sec, [])
+        section_range = [min(all_qs), max(all_qs)] if all_qs else None
+        for ps in sec_passages:
+            if ps.get("q_range"): continue
+            # 找邻近的兄弟 q_range
+            if existing_qranges:
+                # 用最近的（取第一个 sibling 的范围作 fallback）
+                sib = existing_qranges[0]
+                ps["q_range"] = list(sib)
+            elif section_range:
+                ps["q_range"] = section_range
 
 
 def _assign_types(questions: list[dict]) -> None:

@@ -153,6 +153,8 @@ class NormalizedPaper:
                 "figure_path":      q.get("figure_path"),   # e.g. "figures/q06.png"
                 "source_pages":     [f"page-{q['source_page']:02d}"]
                                     if q.get("source_page") else [],
+                "section":          q.get("section", ""),
+                "solution":         q.get("solution", ""),
             })
 
         for a in data.get("answers", []):
@@ -286,6 +288,9 @@ ENRICH_USER_TEMPLATE = """\
 # 题号 / 题型 / 满分
 {qid}（{qtype}，{score} 分）
 
+# 大题归属（**重要**，知识点必须对应该 section 内容）
+{section_hint}
+
 # 题干
 {stem}
 
@@ -310,6 +315,13 @@ ENRICH_USER_TEMPLATE = """\
 }}
 
 规则：
+- **knowledge_points 必须对应「大题归属」**：
+  - section=base（基础·运用）→ 字音字形/成语/病句/词语运用/连贯/书写
+  - section=classical（古诗文阅读）→ 默写/古诗赏析/文言文实词/文言文翻译/文言文理解
+  - section=book_review（名著阅读）→ 名著情节/人物形象/主题理解
+  - section=modern（现代文阅读）→ 信息筛选/段落作用/论证分析/记叙文/议论文/说明文/散文
+  - section=essay（作文）→ 命题作文/材料作文/半命题作文
+- **严禁将现代文题标注成"文言文"知识点，反之亦然**
 - difficulty：基础=直接考概念/简单计算；中等=多步推理/公式应用；能力=综合/压轴
 - recommended_for：基础→[L0-L3]；中等→[L1-L3]；能力→[L2-L3]；压轴→[L3]
 """
@@ -360,6 +372,15 @@ def _answer_with_context(correct: str, opts: dict | None, has_image: bool) -> st
     return correct
 
 
+_SECTION_HINT_CN = {
+    "base":        "一、基础·运用（字音/字形/成语/病句/词语连贯/书写）",
+    "classical":   "二、古诗文阅读（默写/古诗赏析/文言文实词/文言文翻译/语句理解）",
+    "book_review": "三、名著阅读（情节/人物形象/主题理解）",
+    "modern":      "四、现代文阅读（信息筛选/记叙文/议论文/说明文/散文）",
+    "essay":       "五、作文（命题作文/材料作文/半命题作文）",
+}
+
+
 def enrich_question(
     *,
     subject: str,
@@ -373,6 +394,7 @@ def enrich_question(
     modules: list[str],
     curriculum: str,
     cache_key: str | None,
+    section: str = "",
 ) -> dict:
     cache_dir = ROOT / "scripts" / "knowledge-base" / ".cache"
     cache_dir.mkdir(exist_ok=True)
@@ -380,6 +402,8 @@ def enrich_question(
         f = cache_dir / f"{cache_key}.json"
         if f.exists():
             return json.loads(f.read_text(encoding="utf-8"))
+
+    section_hint = _SECTION_HINT_CN.get(section, "（未标注，请根据题干自行判断）")
 
     user = ENRICH_USER_TEMPLATE.format(
         subject=subject,
@@ -391,6 +415,7 @@ def enrich_question(
         answer=_answer_with_context(answer, opts, has_image)[:400],
         modules_str=", ".join(modules),
         curriculum_excerpt=curriculum,
+        section_hint=section_hint,
     )
     client = _client()
     resp = client.chat.completions.create(
@@ -486,7 +511,8 @@ def enrich_paper(paper: NormalizedPaper, cache_prefix: str) -> dict:
             answer=ak["correct"],
             modules=modules,
             curriculum=curriculum,
-            cache_key=f"{cache_prefix}-Q{num}",
+            cache_key=f"{cache_prefix}-Q{num}-v2",   # v2: prompt 加 section_hint
+            section=q.get("section",""),
         )
         return num, r
 
@@ -652,16 +678,28 @@ def _write_yaml(result: dict, out_path: Path,
         try:
             existing_qc: dict = {}
             old_doc = yaml.safe_load(out_path.read_text(encoding="utf-8")) or {}
+            # **过期 qc_note 过滤**：image OCR 时代标注的 patch-related qc 在 docx 路线下
+            # 都是误导，识别后丢弃（"OCR" / "多了：A.xx" / "OCR没识别" / "原划线句" 等）
+            STALE_PATTERNS = [
+                "OCR", "ocr", "多了：", "里多了", "没有识别",
+                "划线", "划线句", "划线的", "加点", "加点字",
+                "图没识别", "图没有", "答案错位", "答案页错位",
+                "patch", "兜底", "占位", "请对照", "请参照", "请补",
+            ]
             for oq in (old_doc.get("questions") or []):
                 qid = oq.get("id")
                 if qid is None: continue
+                note = (oq.get("qc_note") or "").strip()
+                if note and any(p in note for p in STALE_PATTERNS):
+                    note = ""    # 丢弃
                 existing_qc[qid] = {
                     "qc_status": oq.get("qc_status", "draft") or "draft",
-                    "qc_note":   oq.get("qc_note", "") or "",
+                    "qc_note":   note,
                 }
             for q in result["questions"]:
                 old = existing_qc.get(q["id"], {})
-                if old.get("qc_status", "draft") != "draft":
+                # qc_status: 仅当不是 'draft' / 'flag'（自动写的）才保留
+                if old.get("qc_status", "draft") not in ("draft", "flag", "none"):
                     q["qc_status"] = old["qc_status"]
                 if old.get("qc_note", ""):
                     q["qc_note"] = old["qc_note"]

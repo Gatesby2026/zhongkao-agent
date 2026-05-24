@@ -11,7 +11,7 @@ subject: chinese
 full_score: 100
 duration_minutes: null
 total_questions: 25
-structure: 1handwriting(1分) + 9单选(18分) + 3subjective_blank(8分) + 2dictation(4分) + 1appreciation(4分) + 1book_review(5分) + 7comprehension(20分)
+structure: 1handwriting(1分) + 9单选(18分) + 3subjective_blank(7分) + 2dictation(6分) + 1appreciation(3分) + 1book_review(5分) + 7comprehension(20分)
   + 1解答(40分)
 passages:
 - id: base_资料一
@@ -91,14 +91,18 @@ passages:
 - id: classical_材料一
   type: classical
   name: 材料一
-  q_range: null
+  q_range:
+  - 9
+  - 10
   body: '域民不以封疆之界，固国不以山溪之险，威天下不以兵革之利。得道者多助，失道者寡助。寡助之至，亲戚畔之；多助之至，天下顺之。以天下之所顺，攻亲戚之所畔，故君子有不战，战必胜矣。
 
     （节选自《孟子·公孙丑下》）'
 - id: classical_材料二
   type: classical
   name: 材料二
-  q_range: null
+  q_range:
+  - 9
+  - 10
   body: '子贡问政。子曰：“足食，足兵，民信之矣。”子贡曰：“必不得已而去，于斯三者何先？”曰：“去兵。”子贡曰：“必不得已而去，于斯二者何先？”曰：“去食。自古皆有死，民无信不立。”
 
     （节选自《论语·颜渊》）
@@ -107,12 +111,16 @@ passages:
 - id: modern_（一）
   type: modern
   name: （一）
-  q_range: null
+  q_range:
+  - 15
+  - 17
   body: 阅读下面材料，完成下面小题。
 - id: modern_材料一
   type: modern
   name: 材料一
-  q_range: null
+  q_range:
+  - 15
+  - 17
   body: '①班级足球赛、趣味爬树课、科学运动专家讲座……2026年春季开学，北京市各级各类学校以“健康第一”为主题开展开学第一课。开学第一周，北京市中小学全面启动“班超”联赛，全年计划举办赛事40万场，覆盖学生超1000万人次，构建“人人有项目、班班有队伍、周周有比赛”的体育竞赛格局。
 
     ②不仅北京市，全国各地都在深入落实国家“学生体质强健计划”。一方面确保“每天综合体育活动2小时”“课间15分钟”扎扎实实落到每所学校，惠及每个学生；另一方面让校园通过体育赛事，迅速热起来、燃起来、多措并举，让体育锻炼融入学生日常，激发学生锻炼热情，让孩子们真正练通透、玩尽兴、有收获，在奔跑跳跃中增强体质、健全人格和锤炼意志。
@@ -124,7 +132,9 @@ passages:
 - id: modern_材料二
   type: modern
   name: 材料二
-  q_range: null
+  q_range:
+  - 15
+  - 17
   body: 健康，不只是身体无病，更是心灵阳光。培育积极心理品质，要在多方面下功夫，重点要推进心理健康促进行动。除了优化教育教学内容和方式，在学科教学中注重维护学生心理健康，各中小学还应广泛开展丰富多彩的心理健康活动，比如艺术展演、劳动实践、户外拓展、青少年读书行动、游戏活动等，培养学生阳光自信的心态、应对挫折的能力、团结合作的精神。2025年，我国已将“建立监测预警和干预机制”列为重点任务，明确提出“推进建设全国学生心理健康监测预警系统”，2026年将进一步升级完善平台预警功能。此外，还将完善专业化的心理健康教师队伍建设，配齐配强心理健康教师，持续加大心理健康教育师资培养力度，构建全员育心工作格局。
 - id: modern_材料三
   type: modern
@@ -207,8 +217,7 @@ questions:
   answer: ''
   solution: 京城书香之旅
   knowledge_points:
-  - 书写规范
-  - 正楷字书写
+  - 书写
   module: writing
   difficulty: 基础
   recommended_for:
@@ -216,7 +225,7 @@ questions:
   - L1
   - L2
   - L3
-  qc_status: none
+  qc_status: draft
   qc_note: ''
 - id: 2
   type: 单选
@@ -236,7 +245,7 @@ questions:
 
     D.源远流长：比喻历史悠久、根基深厚。用于形容文化传承，使用正确。'
   knowledge_points:
-  - 成语的理解与运用
+  - 成语运用
   module: reading
   difficulty: 基础
   recommended_for:
@@ -244,22 +253,22 @@ questions:
   - L1
   - L2
   - L3
-  qc_status: flag
-  qc_note: 材料一里多了：A.琳琅满目B.惟妙惟肖C.别具匠心D.源远流长
+  qc_status: draft
+  qc_note: ''
   passage_id: base_资料一
 - id: 3
   type: 单选
   score: 2
   stem: 你审核资料中标注的字音。下列判断·不正确·的一项是（   ）
   options:
-    A: ·矗·立
-    B: 登·载·
-    C: ·赫·然
-    D: ·汲·取
+    A: 矗（zhù）立
+    B: 登载（zǎi）
+    C: 赫（hè）然
+    D: 汲（jí）取
   answer: A
   solution: ·矗·（zhù）立——chù
   knowledge_points:
-  - 汉字的正确读音
+  - 字音
   module: reading
   difficulty: 基础
   recommended_for:
@@ -267,8 +276,8 @@ questions:
   - L1
   - L2
   - L3
-  qc_status: flag
-  qc_note: 资料二多了：A.矗立B.登载C.赫然D.汲取
+  qc_status: draft
+  qc_note: ''
   passage_id: base_资料二
 - id: 4
   type: subjective_blank
@@ -277,16 +286,15 @@ questions:
   answer: ''
   solution: 步入楼内，游客感到那个风云变幻的革命年代如在眼前。
   knowledge_points:
-  - 语言表达与修改
-  - 句子结构与语法
+  - 病句
   module: writing
   difficulty: 中等
   recommended_for:
   - L1
   - L2
   - L3
-  qc_status: flag
-  qc_note: 原划线句在资料里体现出来。
+  qc_status: draft
+  qc_note: ''
   passage_id: base_资料二
 - id: 5
   type: 单选
@@ -306,15 +314,15 @@ questions:
 
     D.互相矛盾：指彼此对立、相互冲突。文中建筑设计巧妙结合两种空间，没有对立冲突，不符合。'
   knowledge_points:
-  - 词语理解与运用
-  - 阅读理解
+  - 词语运用
   module: reading
-  difficulty: 中等
+  difficulty: 基础
   recommended_for:
+  - L0
   - L1
   - L2
   - L3
-  qc_status: none
+  qc_status: draft
   qc_note: ''
   passage_id: base_资料三
 - id: 6
@@ -322,17 +330,22 @@ questions:
   score: 2
   stem: 根据语境，你在文段中的横线处补写一个分句。
   answer: ''
-  solution: 领略科技的新奇便捷
+  solution: '领略科技的新奇便捷
+
+
+    详解：看句式结构，句子是“既能……又能……还能……”的排比并列句式，前后分句都是动宾结构，句式、节奏要保持一致。前半句欣赏建筑的自然通透、享受阅读的闲适惬意，对应图书馆建筑景观、读书体验；后半段元宇宙体验馆、AI导览、裸眼3D数字典籍，核心是智慧科技、沉浸式数字阅读。横线处要紧扣图书馆科技智慧特色，沿用动宾结构，和前两个分句构成三层并列：建筑美感+阅读惬意+科技体验。
+
+    示例：体验科技阅读的新奇乐趣'
   knowledge_points:
-  - 语境理解与表达
-  - 句子补写
+  - 词语运用
+  - 连贯
   module: writing
   difficulty: 中等
   recommended_for:
   - L1
   - L2
   - L3
-  qc_status: none
+  qc_status: draft
   qc_note: ''
   passage_id: base_资料三
 - id: 7
@@ -358,18 +371,18 @@ questions:
     创新：创造新的、革新发展。在守护、传播的基础上再加以革新创造，让文脉与时俱进、生生不息，放在最后一空恰当。'
   knowledge_points:
   - 词语运用
-  - 语境理解
   module: reading
-  difficulty: 中等
+  difficulty: 基础
   recommended_for:
+  - L0
   - L1
   - L2
   - L3
-  qc_status: flag
-  qc_note: 后记里多了：A.传播创新守护B.守护传播创新C.守护创新传播D.创新传播守护儿年级
+  qc_status: draft
+  qc_note: ''
   passage_id: base_后记
 - id: 8
-  type: subjective_blank
+  type: dictation
   score: 4
   stem: '补写出空缺的部分
 
@@ -382,9 +395,9 @@ questions:
 
     （3）少年当有鸿鹄志。如果引用两句古诗文来表达你的志向，你会选用“①________，②________”。（本试卷中出现的句子除外）'
   answer: ''
-  solution: ''
+  solution: ①. 化作春泥更护花    ②. 以中有足乐者    ③. 会当凌绝顶    ④. 一览众山小
   knowledge_points:
-  - 古诗文默写
+  - 默写
   module: classical
   difficulty: 基础
   recommended_for:
@@ -395,20 +408,25 @@ questions:
   qc_status: draft
   qc_note: ''
 - id: 9
-  type: dictation
-  score: 2
+  type: subjective_blank
+  score: 3
   stem: '依据你的理解，在下面的横线上填写恰当的内容。
 
 
     诗人首先描写了看到的_____，感受到的军营生活的_____，继而记叙宴饮狂欢的场景及送友人踏上归途的情形。'
   answer: ''
-  solution: ①. 奇丽雪景    ②. 苦寒
+  solution: '①. 奇丽雪景    ②. 苦寒
+
+
+    详解：由诗歌第一至第四句分析，诗人描绘出边塞八月狂风呼啸、大雪漫天飞舞的景象。诗句以梨花比喻枝头积雪，画面新奇又壮美，这是诗人亲眼观赏到的奇丽雪景。所以第一空填：奇丽雪景。
+
+    结合诗歌第五至第八句理解，雪花飘入营帐带来寒气，珍贵的皮衣棉被都挡不住冷意。将军的弓箭冻得无法拉开，都护的铠甲冰冷难以穿戴。这些细节都直观体现边塞气候严寒，也让人真切感受到军营生活环境恶劣、条件艰苦，所以第二空填：苦寒。'
   knowledge_points:
-  - 文言文默写
+  - 古诗赏析
+  - 文言文理解
   module: classical
-  difficulty: 基础
+  difficulty: 中等
   recommended_for:
-  - L0
   - L1
   - L2
   - L3
@@ -417,13 +435,12 @@ questions:
   passage_id: classical_（二）
 - id: 10
   type: appreciation
-  score: 4
+  score: 3
   stem: 画线诗句展现了雪中送别的场景，言有尽而意无穷。请结合诗句，赏析“满”“空”二字的表达效果。
   answer: ''
   solution: 答案示例：“满”写大雪铺天盖地，突出风雪之大，隐含对友人归程之艰的担忧。“空”写雪地上只留下马蹄痕迹，突出雪野的空寂苍茫与送别后场面的清冷。以雪景烘托情感，抒发了诗人对友人的依依不舍之意，以及因友人返京而产生的惆怅之情。
   knowledge_points:
-  - 古诗文积累与运用
-  - 表达个人志向
+  - 古诗赏析
   module: classical
   difficulty: 中等
   recommended_for:
@@ -451,11 +468,11 @@ questions:
 
     D.击鼓进军/弹奏/一种打击乐器；'
   knowledge_points:
-  - 古诗词理解与鉴赏
-  - 文学作品情感体验
+  - 文言文实词
   module: classical
-  difficulty: 中等
+  difficulty: 基础
   recommended_for:
+  - L0
   - L1
   - L2
   - L3
@@ -478,8 +495,7 @@ questions:
 
     D.“肉食者”并非“将士们”，文中急于求成的是鲁庄公。'
   knowledge_points:
-  - 古诗词鉴赏
-  - 词语表达效果分析
+  - 文言文理解
   module: classical
   difficulty: 中等
   recommended_for:
@@ -505,8 +521,8 @@ questions:
   answer: ''
   solution: ①. 虽不能察，必以情    ②. 施行仁政    ③. 民信之
   knowledge_points:
-  - 文言文词汇理解
-  - 词语在不同语境中的意义
+  - 文言文理解
+  - 古诗文默写
   module: classical
   difficulty: 中等
   recommended_for:
@@ -534,11 +550,11 @@ questions:
 
     | 范进 | 《范进中举》（九年级上册） | 《儒林外史》 |'
   answer: ''
-  solution: ''
+  solution: 示例一：《范进中举》里的范进穷酸卑微，醉心科举，中举后喜极而疯，是令人同情的科举牺牲品。读完《儒林外史》，我发现他迎合豪绅，拉拢权贵，戴孝时还大吃大喝，四处卖弄学问，是个虚伪无耻、人格扭曲的腐儒。  示例二：《智取生辰纲》中的杨志押送生辰纲时，急躁蛮横、刚愎自用。通读《水浒传》后才知，他是将门之后，一心想封妻荫子，却先是失陷花石纲，后又丢失生辰纲，屡遭挫折，是一个怀才不遇、被现实逼上梁山的悲剧人物。
   knowledge_points:
-  - 文言文阅读理解
-  - 文言文句子翻译
-  module: classical
+  - 人物形象
+  - 主题理解
+  module: reading
   difficulty: 中等
   recommended_for:
   - L1
@@ -558,9 +574,8 @@ questions:
   answer: C
   solution: C.根据材料二“此外，还将完善专业化的心理健康教师队伍建设，配齐配强心理健康教师，持续加大心理健康教育师资培养力度”，可知我国心理健康教师队伍仍在建设完善中，并非“已培养了数量充足的队伍”，该选项不符合文意。
   knowledge_points:
-  - 文言文阅读理解
-  - 文言文内容概括
-  module: classical
+  - 信息筛选
+  module: reading
   difficulty: 中等
   recommended_for:
   - L1
@@ -568,7 +583,7 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: modern_材料三
+  passage_id: modern_（一）
 - id: 16
   type: 单选
   score: 2
@@ -585,9 +600,26 @@ questions:
 
     D.图表未提供“参与体育锻炼的中小学生人数”的任何数据，该选项属于无中生有。'
   knowledge_points:
-  - 阅读理解
-  - 文学作品分析
-  - 人物形象解读
+  - 信息筛选
+  module: reading
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+  passage_id: modern_（一）
+- id: 17
+  type: comprehension
+  score: 4
+  stem: 综合三则材料，推动“健康第一”的育人理念扎实落地，可以从_____、_____、_____等方面综合发力。
+  answer: ''
+  solution: ①. 增强体质    ②. 促进心理健康    ③. 推进“教联体”建设
+  knowledge_points:
+  - 信息筛选
+  - 论证分析
   module: reading
   difficulty: 中等
   recommended_for:
@@ -596,25 +628,7 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: modern_材料三
-- id: 17
-  type: comprehension
-  score: 4
-  stem: 综合三则材料，推动“健康第一”的育人理念扎实落地，可以从_____、_____、_____等方面综合发力。
-  answer: ''
-  solution: ①. 增强体质    ②. 促进心理健康    ③. 推进“教联体”建设
-  knowledge_points:
-  - 阅读理解
-  - 信息筛选与判断
-  module: reading
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
-  qc_status: flag
-  qc_note: 文章里的图没有识别出来。
-  passage_id: modern_材料三
+  passage_id: modern_（一）
 - id: 18
   type: comprehension
   score: 2
@@ -622,8 +636,8 @@ questions:
   answer: ''
   solution: ①. “我”欣赏钢琴演奏家演奏《黄河》    ②. “我”与钢琴演奏家的对话
   knowledge_points:
-  - 阅读理解
-  - 信息提取与整合
+  - 信息筛选
+  - 记叙文
   module: reading
   difficulty: 中等
   recommended_for:
@@ -640,8 +654,8 @@ questions:
   answer: ''
   solution: 第①段的“回响”指黄河澎湃的涛声及水车与黄河同频共振的声音；第②段的“回响”指钢琴演奏家的演奏再现了黄河奔流的声音；第⑰段的“回响”指的是黄河精神对每一个中国人的影响。
   knowledge_points:
-  - 阅读理解
-  - 信息提取与概括
+  - 信息筛选
+  - 段落作用
   module: reading
   difficulty: 中等
   recommended_for:
@@ -658,8 +672,8 @@ questions:
   answer: ''
   solution: 句式整齐中富有变化。全句以四个“有时……”构成排比，节奏鲜明，末句转折，收束有力，展现出黄河多变的自然形态，强调了黄河的一往无前。语言形式美与情感内涵相融合，表达了对自然力量的敬畏与对生命的赞美。
   knowledge_points:
-  - 阅读理解
-  - 文章结构分析
+  - 信息筛选
+  - 段落作用
   module: reading
   difficulty: 中等
   recommended_for:
@@ -676,8 +690,8 @@ questions:
   answer: ''
   solution: 文中的钢琴演奏家经历车祸后，从未放弃对音乐梦想的追求，克服右臂钢板带来的痛苦，经过超乎寻常的艰辛练习，坚持25年，重新站上舞台，展现出对梦想的热爱和生命的坚忍不屈。这启示我，无论面临怎样的境遇，都要保持对生命的敬畏与热爱，用坚持与顽强面对挫折，执着地追求梦想。
   knowledge_points:
-  - 理解词语在具体语境中的含义
-  - 分析文本结构和内容
+  - 信息筛选
+  - 记叙文
   module: reading
   difficulty: 中等
   recommended_for:
@@ -694,9 +708,7 @@ questions:
   answer: ''
   solution: 第①段通过歌曲中的“慢”与吉语中的“快”，自然引出“快与慢”的论题，为提出观点奠定基础。
   knowledge_points:
-  - 阅读理解
-  - 句式特点分析
-  - 表达效果分析
+  - 段落作用
   module: reading
   difficulty: 中等
   recommended_for:
@@ -718,9 +730,7 @@ questions:
   answer: D
   solution: D.第⑤段是从社会发展、事业建树层面谈快慢辩证，第⑥段“于普通人而言，快与慢也是生活的辩证法”，前后两个层面属于并列关系，因此，“也”不是表递进关系，分析不恰当。
   knowledge_points:
-  - 阅读理解
-  - 文本分析
-  - 情感态度价值观
+  - 论证分析
   module: reading
   difficulty: 中等
   recommended_for:
@@ -737,7 +747,7 @@ questions:
   answer: ''
   solution: 首先提出“快”的前提是“稳”与“好”的观点，接着阐释原因，继而引用《论语》中的话从反面论证，并进一步阐释脱离实际一味求快不可取，从而证明观点。
   knowledge_points:
-  - 阅读理解-段落作用分析
+  - 论证分析
   module: reading
   difficulty: 中等
   recommended_for:
@@ -761,15 +771,13 @@ questions:
 
     要求：将作文题目写在答题卡上，作文内容积极向上，字数在600-800之间，不出现真实的学校名称、师生姓名等。'
   answer: ''
-  solution: __MISSING__
+  solution: 来，动起来  晨光透过窗棂。看着黑板上“生命在于运动，改变始于行动”的标语，我深吸一口气，终于鼓起勇气，迈出了改变的第一步——动起来。  曾经的我，是个十足的“宅家派”，运动于我而言，是遥不可及的事情。直到那次运动会，看着同学们在跑道上奋力奔跑，在操场上肆意跳跃，他们脸上的汗水与笑容，像一束光，照亮了我沉寂的世界。我忽然明白，所谓活力，从来不是凭空而来，而是动起来之后，自然绽放的光芒。  我开始尝试动起来。每天清晨，我不再赖床，迎着朝阳慢跑在小区的小径上，起初不过几百米就气喘吁吁，双腿发软，好几次都想放弃。但我告诉自己，每一次奔跑，都是向更好的自己靠近。渐渐地，我能跑完一圈、两圈，风拂过耳畔，带走疲惫，也让我感受到了前所未有的轻松。课间，我不再久坐，和同学们一起跳绳、踢毽子，欢声笑语中，不仅锻炼了身体，更收获了并肩同行的快乐。  动起来，不仅改变了我的身体状态，更重塑了我的心态。曾经的我胆怯、自卑，遇到困难就想退缩。而运动教会我，坚持与勇气比天赋更重要。记得第一次参加班级跳绳比赛，我紧张得手心冒汗，跳得磕磕绊绊。但看着身边同学鼓励的目光，我咬紧牙关，加快节奏，哪怕汗水模糊了双眼，也没有停下脚步。当听到同学们为我欢呼时，我懂得了：动起来，就有希望；坚持下去，就会收获惊喜。  不必畏惧起点太低，不必担心进步缓慢。动起来，不是为了追求速度与完美，而是为了让活力充盈身心，让美好悄然发生。课堂上，主动举手发言，是思维的“动起来”；生活中，主动帮助他人，是善意的“动起来”；成长中，主动挑战自我，是勇气的“动起来”。  夕阳西下，我再次踏上跑道，晚风温柔，脚步轻盈。我知道，每一次奔跑，都是对生命的热爱；每一次行动，都是对梦想的奔赴。朋友，别再犹豫，别再等待，来，动起来！让我们以运动为翼，以行动为帆，在成长的道路上，一路向阳，绽放属于自己的精彩。
   knowledge_points:
-  - 阅读理解
-  - 语言表达
-  module: reading
-  difficulty: 中等
+  - 命题作文
+  module: writing
+  difficulty: 能力
   recommended_for:
-  - L1
   - L2
   - L3
-  qc_status: flag
-  qc_note: 加点、划线的句子体现到材料里。
+  qc_status: draft
+  qc_note: ''

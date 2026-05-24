@@ -11,7 +11,7 @@ subject: chinese
 full_score: 100
 duration_minutes: null
 total_questions: 25
-structure: 9单选(18分) + 4subjective_blank(12分) + 2dictation(6分) + 1book_review(5分) + 7comprehension(19分) + 2解答(40分)
+structure: 9单选(18分) + 3subjective_blank(7分) + 3dictation(11分) + 1book_review(5分) + 7comprehension(19分) + 2解答(40分)
 passages:
 - id: base_intro
   type: base
@@ -29,14 +29,18 @@ passages:
 - id: classical_材料一
   type: classical
   name: 材料一
-  q_range: null
+  q_range:
+  - 7
+  - 12
   body: '秦王怫然怒，谓唐雎曰：“公亦尝闻天子之怒乎？”唐雎对曰：“臣未尝闻也。”秦王曰：“天子之怒，伏尸百万，流血千里。”唐雎曰：“大王尝闻布衣之怒乎？”秦王曰：“布衣之怒，亦免冠徒跣，以头抢地尔。”唐雎曰：“此庸夫之怒也，非士之怒也。夫专诸之刺王僚也，彗星袭月；聂政之刺韩傀也，白虹贯日；要离之刺庆忌也，仓鹰击于殿上。此三子者，皆布衣之士也，怀怒未发，休祲降于天，与臣而将四矣。若士必怒，伏尸二人，流血五步，天下缟素，今日是也。”挺剑而起。
 
     （节选自《战国策·唐雎不辱使命》）'
 - id: classical_材料二
   type: classical
   name: 材料二
-  q_range: null
+  q_range:
+  - 7
+  - 12
   body: '赵简子①出畋②，命郑龙：“射野人③，使无惊吾鸟。”龙曰：“吾先君晋文公伐卫，不僇④一人；今君一畋而欲杀良民，是虎狼也。”简子曰：“人畋得兽，我畋得士。”
 
     （节选自《金楼子》）
@@ -47,17 +51,23 @@ passages:
 - id: classical_材料一
   type: classical
   name: 材料一
-  q_range: null
+  q_range:
+  - 7
+  - 12
   body: 秦王勃然大怒，对唐雎说：“您曾听说过天子发怒吗？”唐雎回答说：“我未曾听说过。”秦王说：“天子发怒，倒下的尸体有百万，血流千里。”唐雎说：“大王曾听说过平民发怒吗？”秦王说：“平民发怒，也不过是摘掉帽子光着脚，用头撞地罢了。”唐雎说：“这是平庸无能的人发怒，不是有胆识有才能的人发怒。专诸刺杀吴王僚的时候，彗星的尾巴扫过月亮；聂政刺杀韩傀的时候，一道白光直冲太阳；要离刺杀庆忌的时候，苍鹰扑到宫殿上。这三个人，都是平民中有胆识的人，心中的愤怒还没发作出来，上天就降示了征兆。现在加上我，将成为四个人了。如果有胆识的人真的发怒，倒下的尸体只有两具，血流不过五步远，天下百姓都要穿丧服，今天就是这样的时候。”说完，唐雎拔剑站起身。
 - id: classical_材料二
   type: classical
   name: 材料二
-  q_range: null
+  q_range:
+  - 7
+  - 12
   body: 赵简子外出打猎，命令郑龙：“射杀那些百姓，不要让他们惊飞了我的鸟。”郑龙说：“我们前代君主晋文公攻打卫国，不杀一个人；现在您一次打猎却想杀害善良的百姓，这是像虎狼一样凶狠的行为。”赵简子说：“别人打猎得到野兽，我打猎得到了贤士。”
 - id: modern_材料一
   type: modern
   name: 材料一
-  q_range: null
+  q_range:
+  - 14
+  - 23
   body: '①一人健康是立身之本，人民健康是立国之基。我国体育强国建设将全民健身上升为国家战略，坚持把人民作为发展体育事业的主体。为贯彻体育强国建设精神，相关部门积极行动，推动全民健身活动和群众体育赛事蓬勃开展，运动健身成为全民生活新风尚。我国常年参与体育锻炼人数比例达38.52%，养成体育锻炼习惯的人群数量持续攀升。北京市中小学全面启动了班级超级联赛，常态化开展多样赛事，“人人参赛，班班参与”。“班超”联赛在提升学生体育素养的同时，培养学生的意志品质，促进学生身心健康发展。
 
     ②硬件建设为全民健身创造必要条件。截至2025年底，全国共有体育场地500.4万个，面积达43.72亿平方米。全国共建成体育公园1555个，160个国家乡村振兴重点帮扶县实现县级专项运动场地全覆盖，体育场地日趋身边化。甘肃玉门岷州村村民说：“以前想锻炼没地方去，现在出门就是篮球场，身体越练越结实！”同时，科学健身指导也为群众体育高质量发展提供技术支撑。国家体育总局持续推动科学健身指导走基层、进万家，让健身更科学、更有效。390万名社会体育指导员活跃在公园社区，当起群众的“健身管家”。综上所述，__________，为全民积极参与体育锻炼提供保障。
@@ -67,7 +77,9 @@ passages:
 - id: modern_材料二
   type: modern
   name: 材料二
-  q_range: null
+  q_range:
+  - 14
+  - 23
   body: '①加快发展体育产业是体育强国建设的重要战略任务。当下，通过“体育+”的深度融合，体育产业成为各地拉动内需、促进消费升级的重要抓手。
 
     ②由江苏省体育局联合全省13个地市的人民政府共同主办的“苏超”赛事火爆出圈，单场最高上座超6万人。大量群众奔赴各承办城市观赛旅游，带动江苏全域多场景消费近380亿元。“体育+旅游”的融合，成功将以竞技为主导的体育项目变身为具有强经济效益的文旅项目，将体育“流量”转化为旅游“留量”，带来了传统景区难以独立实现的经济增量。安徽肥西农村将闲置农田建成足球训练基地，并联动周边农户定向供应农副产品。“体育+农业”模式让农业资源借体育流量实现经济价值跃升。浙江湖州通过“测—评—导—练”服务和AI体测设备，为群众开具个性化运动处方，激活了运动干预、慢病管理等“非刚需”消费。“体育＋医疗”的创新探索，正在开辟传统医疗体系之外的健康消费新增长极。
@@ -93,8 +105,7 @@ questions:
   answer: D
   solution: D.参·与·（yù）。
   knowledge_points:
-  - 汉语拼音规则
-  - 多音字读音
+  - 字音
   module: reading
   difficulty: 基础
   recommended_for:
@@ -121,8 +132,7 @@ questions:
   answer: ''
   solution: 清华园车站不仅亲历了近代中国的历史变迁，还是新时代红色精神的传递者。
   knowledge_points:
-  - 语言表达与修改
-  - 语段理解与分析
+  - 病句
   module: writing
   difficulty: 中等
   recommended_for:
@@ -152,8 +162,8 @@ questions:
 
     ②“开创伟业”是动宾短语，与“赓续荣光”对应，“铸魂育人”为并列短语（故排除）。'
   knowledge_points:
-  - 对联的基本知识
-  - 词语搭配与语境理解
+  - 词语运用
+  - 成语
   module: writing
   difficulty: 中等
   recommended_for:
@@ -175,7 +185,7 @@ questions:
   answer: A
   solution: A.巧夺天工：指人工制作的事物精巧胜过天然，形容人工技艺高超。文段形容双清别墅“苍松翠竹相互掩映”的自然景致，自然景观不能用“巧夺天工”来形容，属于对象误用。
   knowledge_points:
-  - 成语的理解与运用
+  - 成语
   module: reading
   difficulty: 基础
   recommended_for:
@@ -193,11 +203,11 @@ questions:
   answer: ''
   solution: 去除旧的、落后的制度，建立新的社会与国家格局，破旧立新、开拓全新局面。
   knowledge_points:
-  - 理解并运用成语
-  - 古代汉语基础知识
+  - 成语
   module: classical
-  difficulty: 中等
+  difficulty: 基础
   recommended_for:
+  - L0
   - L1
   - L2
   - L3
@@ -229,8 +239,8 @@ questions:
 
     因此排序为：②①③'
   knowledge_points:
-  - 语言表达与运用
-  - 语境理解
+  - 词语运用
+  - 连贯
   module: reading
   difficulty: 中等
   recommended_for:
@@ -241,7 +251,7 @@ questions:
   qc_note: ''
   passage_id: base_intro
 - id: 7
-  type: subjective_blank
+  type: dictation
   score: 5
   stem: '默写。
 
@@ -254,9 +264,9 @@ questions:
 
     （3）古人常借诗词抒发以身许国的壮志豪情。如“__________，__________”，就表达了诗人的报国之心。（本试卷中出现的句子除外）'
   answer: ''
-  solution: ''
+  solution: ①. 似曾相识燕归来    ②. 二者不可得兼    ③. 舍生而取义者也    ④. 示例：报君黄金台上意    ⑤. 提携玉龙为君死
   knowledge_points:
-  - 古诗词默写
+  - 默写
   module: classical
   difficulty: 基础
   recommended_for:
@@ -266,6 +276,7 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
+  passage_id: classical_材料一
 - id: 8
   type: dictation
   score: 3
@@ -273,25 +284,8 @@ questions:
   answer: ''
   solution: ①. 忽如一夜春风来，千树万树梨花开    ②. 不畏严寒、坚守戍边    ③. 苍凉旷远
   knowledge_points:
-  - 文言文默写
-  module: classical
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-  qc_status: draft
-  qc_note: ''
-- id: 9
-  type: subjective_blank
-  score: 3
-  stem: 本诗的“山回路转不见君”和李白《黄鹤楼送孟浩然之广陵》的“唯见长江天际流”，诗句中一个“不见”，一个“唯见”，均言简意深，有异曲同工之妙。请结合诗句，简要分析其表达效果。
-  answer: ''
-  solution: 两句都描绘了送别友人后，诗人久久伫立远望友人离去的场景：岑参诗中，山路回转，友人远去后再也望不见身影，只留下雪地上浅浅的马蹄印；李白诗中，友人的孤船渐远，只看见长江向天边奔流。“不见”“唯见”异曲同工：都通过细节，含蓄地抒发了诗人对友人依依不舍的留恋之情，将分别后的怅惘孤寂融入景物描写，言有尽而意无穷，耐人寻味。
-  knowledge_points:
-  - 古诗词鉴赏
-  - 文学作品中的情感表达
+  - 古诗赏析
+  - 文言文理解
   module: classical
   difficulty: 中等
   recommended_for:
@@ -300,6 +294,24 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
+  passage_id: classical_材料一
+- id: 9
+  type: subjective_blank
+  score: 3
+  stem: 本诗的“山回路转不见君”和李白《黄鹤楼送孟浩然之广陵》的“唯见长江天际流”，诗句中一个“不见”，一个“唯见”，均言简意深，有异曲同工之妙。请结合诗句，简要分析其表达效果。
+  answer: ''
+  solution: 两句都描绘了送别友人后，诗人久久伫立远望友人离去的场景：岑参诗中，山路回转，友人远去后再也望不见身影，只留下雪地上浅浅的马蹄印；李白诗中，友人的孤船渐远，只看见长江向天边奔流。“不见”“唯见”异曲同工：都通过细节，含蓄地抒发了诗人对友人依依不舍的留恋之情，将分别后的怅惘孤寂融入景物描写，言有尽而意无穷，耐人寻味。
+  knowledge_points:
+  - 古诗赏析
+  module: classical
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+  passage_id: classical_材料一
 - id: 10
   type: 单选
   score: 2
@@ -318,17 +330,17 @@ questions:
 
     D.认为/可译为“来”/用。'
   knowledge_points:
-  - 古诗词鉴赏
-  - 诗歌意境理解
-  - 文言文阅读
+  - 文言文实词
   module: classical
-  difficulty: 中等
+  difficulty: 基础
   recommended_for:
+  - L0
   - L1
   - L2
   - L3
   qc_status: draft
   qc_note: ''
+  passage_id: classical_材料一
 - id: 11
   type: 单选
   score: 2
@@ -341,8 +353,7 @@ questions:
   answer: C
   solution: C.由第②段“由此观之，王之蔽甚矣”可知，邹忌只是指出齐王因受偏爱、畏惧、求助而被严重蒙蔽，并非指责其治国不当、昏庸无能。由第③段“王曰：‘善。’乃下令”可知，齐威王虚心纳谏、开明有为，并非昏庸之君。
   knowledge_points:
-  - 古诗词鉴赏
-  - 诗歌表达技巧
+  - 文言文理解
   module: classical
   difficulty: 中等
   recommended_for:
@@ -351,6 +362,7 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
+  passage_id: classical_材料一
 - id: 12
   type: dictation
   score: 3
@@ -382,8 +394,8 @@ questions:
   answer: ''
   solution: ①. 类比说理    ②. 不畏强暴，敢于斗争    ③. 是虎狼也
   knowledge_points:
-  - 文言文词汇理解
-  - 文言文语境分析
+  - 文言文理解
+  - 古诗文赏析
   module: classical
   difficulty: 中等
   recommended_for:
@@ -392,16 +404,18 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
+  passage_id: classical_材料一
 - id: 13
   type: book_review
   score: 5
   stem: 中国古代小说中，需要经过三次重复才能完成的情节称之为“三复情节”，如《三国演义》中的“三顾茅庐”。随着“三复情节”的逐层推进，人物形象愈发鲜明，主题愈加突出。从《西游记》《水浒传》《儒林外史》中任选一部，结合一处“三复情节”的具体内容，说明其对塑造人物形象或凸显小说主题的作用。（100字左右）
   answer: ''
-  solution: ''
+  solution: 选择《水浒传》——三打祝家庄。一打祝家庄，宋江轻敌失利；二打虽谨慎仍遭挫败，开始反思；三打联合内应、巧用计谋终获大胜。随着情节推进，宋江从鲁莽急躁成长为善谋善断、知人善任的领袖，人物更立体，也愈加凸显团结与智慧方能取胜的主题。
   knowledge_points:
-  - 文言文阅读理解
-  - 文言文实词虚词的理解
-  module: classical
+  - 名著情节
+  - 人物形象
+  - 主题理解
+  module: reading
   difficulty: 中等
   recommended_for:
   - L1
@@ -416,9 +430,8 @@ questions:
   answer: ''
   solution: 全民健身活动的开展、体育场地的完善与科学健身指导的普及
   knowledge_points:
-  - 文言文阅读理解
-  - 文言文内容概括
-  module: classical
+  - 信息筛选
+  module: reading
   difficulty: 中等
   recommended_for:
   - L1
@@ -426,7 +439,7 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: modern_材料三
+  passage_id: modern_材料一
 - id: 15
   type: 单选
   score: 2
@@ -443,9 +456,8 @@ questions:
 
     D.根据材料三可知，“决胜巴黎·绽放奥运”活动是“巡回宣讲”，并未提到“在全国常态化推进”，该选项表述无原文依据。'
   knowledge_points:
-  - 古典文学作品阅读与鉴赏
-  - 小说情节分析
-  module: classical
+  - 信息筛选
+  module: reading
   difficulty: 中等
   recommended_for:
   - L1
@@ -453,7 +465,7 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: modern_材料三
+  passage_id: modern_材料一
 - id: 16
   type: comprehension
   score: 2
@@ -461,8 +473,7 @@ questions:
   answer: ''
   solution: ①. 提升国民健康水平    ②. 推动体育产业发展    ③. 厚植文化自信根基
   knowledge_points:
-  - 阅读理解
-  - 信息提取与整合
+  - 信息筛选
   module: reading
   difficulty: 中等
   recommended_for:
@@ -471,7 +482,7 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: modern_材料三
+  passage_id: modern_材料一
 - id: 17
   type: comprehension
   score: 3
@@ -479,8 +490,8 @@ questions:
   answer: ''
   solution: ①. 前往柳青墓园祭拜缅怀柳青    ②. 探访皇甫村，了解柳青扎根乡土、奉献为民的一生事迹
   knowledge_points:
-  - 阅读理解
-  - 信息提取
+  - 信息筛选
+  - 记叙文
   module: reading
   difficulty: 中等
   recommended_for:
@@ -489,7 +500,7 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: modern_材料三
+  passage_id: modern_材料一
 - id: 18
   type: comprehension
   score: 3
@@ -497,8 +508,8 @@ questions:
   answer: ''
   solution: 运用比喻，将祭奠的黄花比作火苗，生动写出人们对柳青深切永恒的怀念与崇敬；“汇聚”一词写出无数人的心意凝聚在一起，凸显柳青精神感召人心、代代相传、温暖绵长，照亮后人前行的力量，深化文章主旨。
   knowledge_points:
-  - 阅读理解
-  - 信息提取
+  - 信息筛选
+  - 散文
   module: reading
   difficulty: 中等
   recommended_for:
@@ -507,7 +518,7 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: modern_材料三
+  passage_id: modern_材料一
 - id: 19
   type: comprehension
   score: 3
@@ -515,8 +526,8 @@ questions:
   answer: ''
   solution: ①冯秋子如柳青一般低调善良、无私大爱、坚守初心、传承文人风骨，二人都是人格发光、温暖他人的人，相互映衬，丰富文章内涵；  ②写秋子纪念柳青、传承柳青精神，凸显柳青精神跨越时代、长久流传；  ③以文人之间真挚纯粹的知己情谊，丰富文章情感，深化“精神引路、薪火相传”的主题；  ④呼应后文《柳青的阳光》，串联全文文脉，让寻访之行更有缘分与深意。
   knowledge_points:
-  - 阅读理解
-  - 文本结构分析
+  - 信息筛选
+  - 段落作用
   module: reading
   difficulty: 中等
   recommended_for:
@@ -525,7 +536,7 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: modern_材料三
+  passage_id: modern_材料一
 - id: 20
   type: comprehension
   score: 3
@@ -533,8 +544,8 @@ questions:
   answer: ''
   solution: ①谦逊质朴、扎根人民，放下身段融入农民，与百姓同吃同住同劳动；  ②无私奉献、心怀家国，将巨额稿费全部捐献乡村建设，为民造福；  ③潜心创作、扎根大地，一生深耕乡土文学，书写人民与时代；  ④精神高尚、温暖后人，以人格光芒照亮后辈，成为一代代写作者、追光者的人生榜样。
   knowledge_points:
-  - 阅读理解
-  - 修辞手法
+  - 信息筛选
+  - 人物形象
   module: reading
   difficulty: 中等
   recommended_for:
@@ -543,7 +554,7 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: modern_材料三
+  passage_id: modern_材料一
 - id: 21
   type: comprehension
   score: 2
@@ -551,8 +562,7 @@ questions:
   answer: ''
   solution: 开篇点明“韧”当选年度国内字，阐释其“柔而固”的内涵并提出中心论点；总领全文，引出下文对“韧”的具体论述，奠定全文昂扬向上的论述基调。
   knowledge_points:
-  - 阅读理解
-  - 文本结构分析
+  - 段落作用
   module: reading
   difficulty: 中等
   recommended_for:
@@ -561,7 +571,7 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: modern_材料三
+  passage_id: modern_材料一
 - id: 22
   type: 单选
   score: 2
@@ -574,9 +584,7 @@ questions:
   answer: B
   solution: B.根据第④段“韧似毛竹，前四年默默扎根，第五年则以每天30厘米的速度生长，6周可达10多米。主动沉潜，在看不见的地方默默扎根，再节节拔高”可知，“毛竹”的比喻论证的是主动沉潜、厚积薄发的“韧”劲，并非“面对外部打压与制裁时，必须具备节节拔高、瞬间爆发的能力”，选项分析不恰当；
   knowledge_points:
-  - 阅读理解
-  - 人物形象分析
-  - 文本信息提取
+  - 论证分析
   module: reading
   difficulty: 中等
   recommended_for:
@@ -585,7 +593,7 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: modern_材料三
+  passage_id: modern_材料一
 - id: 23
   type: 单选
   score: 2
@@ -597,7 +605,8 @@ questions:
   answer: C
   solution: C.根据原文段落逻辑：①段开篇点题，引出“韧”的核心内涵；②-③段以“弹簧”为喻，阐述“韧”的第一种表现：承压蓄势、危机破局；④-⑤段以“毛竹”为喻，阐述“韧”的第二种表现：沉潜扎根、厚积薄发；⑥段分析“韧”的来源，论述其根本动力；⑦段收束全文，发出号召，升华主旨。本项结构图示与原文逻辑完全匹配：①为总起，分述②-③、④-⑤两种表现，再衔接⑥段分析根源，最后以⑦段收尾。
   knowledge_points:
-  - 阅读理解-段落作用分析
+  - 信息筛选
+  - 段落作用
   module: reading
   difficulty: 中等
   recommended_for:
@@ -606,7 +615,7 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: modern_材料三
+  passage_id: modern_材料一
 - id: 24
   type: 解答
   score: 40
@@ -621,14 +630,12 @@ questions:
 
     要求：请将作文题目写在答题纸上，作文内容积极向上，字数在600-800之间，不出现真实的学校名称、师生姓名等。'
   answer: ''
-  solution: __MISSING__
+  solution: 一堂艺术课  铃声刚落，陈老师抱着一摞厚厚的宣纸走进教室，原本还带着午后慵懒的我们，瞬间挺直了脊背。这是我们期待已久的书法课，也是我第一次真正触摸到毛笔的温度。  陈老师没有急着让我们握笔，而是先展开一幅王羲之的《兰亭集序》复制品。“你们看这‘之’字，二十多个写法各不相同，有的如春风拂柳，有的似苍松卧石，这就是书法的灵魂——在规矩里求变化。”她的指尖轻轻划过纸面，眼神里满是虔诚，“今天我们不学复杂的，就写一个‘人’字。”  我握着毛笔，只觉得那笔杆有千斤重。墨汁在砚台里晕开，像一片深不见底的黑潭。我蘸饱了墨，照着黑板上的范字一笔落下，可那笔画却像一条僵硬的小蛇，歪歪扭扭地趴在纸上。旁边的同桌也没好到哪儿去，他写的“人”字撇画太长，捺画又短又粗，活像个叉着腿的小矮人。  陈老师走到我身边，轻轻握住我的手。“起笔要轻，像燕子点水；行笔要稳，如老牛耕地；收笔要缓，似流水归潭。”她的掌心温暖有力，带着我的手在纸上缓缓移动。墨汁顺着笔尖流淌，留下一道流畅的弧线，撇画如长剑出鞘，捺画似磐石落地，一个挺拔的“人”字跃然纸上。我学着陈老师的样子，重新蘸墨、起笔。  这一次，我不再急于求成，而是静下心来感受毛笔与纸张的摩擦。起笔时，我屏住呼吸，让笔尖轻轻触碰纸面；行笔时，手腕慢慢转动，让墨汁均匀地晕开；收笔时，微微顿笔，再轻轻提起。当我写完最后一笔，看着纸上那个虽然稚嫩却不再歪斜的“人”字，心里像揣了颗糖，甜丝丝的。  教室里渐渐安静下来，只剩下毛笔划过宣纸的“沙沙”声。阳光透过窗户，洒在一张张专注的脸上，也洒在那些或工整或笨拙的字迹上。陈老师在教室里来回走动，时不时停下来指点几句，她的声音温和而坚定，像春雨一样滋润着我们的心。下课铃声响起时，我看着纸上写满的“人”字，忽然明白了陈老师的用意。写“人”字容易，可写好一个“人”字却很难。就像我们的人生，起笔要慎重，行笔要沉稳，收笔要圆满。  这一堂书法课，教会我的不仅是如何写好一个“人”字，更是如何去做一个堂堂正正的人。走出教室，我回头望了一眼黑板上那个遒劲有力的“人”字，它在阳光的照耀下，散发着淡淡的墨香，也散发着一种无形的力量。那是艺术的力量，也是成长的力量。
   knowledge_points:
-  - 阅读理解
-  - 论证方法
-  module: reading
-  difficulty: 中等
+  - 命题作文
+  module: writing
+  difficulty: 能力
   recommended_for:
-  - L1
   - L2
   - L3
   qc_status: needs_review
@@ -644,14 +651,12 @@ questions:
 
     要求：请将作文题目写在答题纸上，作文内容积极向上，字数在600-800之间，不出现真实的学校名称、师生姓名等。'
   answer: ''
-  solution: __MISSING__
+  solution: 追随生命的蓬勃之光  在生活的泥沼中徘徊，我们都曾有过筋疲力尽、几近放弃的时刻。就像那陷入黏稠烂泥的马，被困境紧紧束缚，难以挣脱。然而，当同伴蓬勃的生命力如一道光射来时，我们便有了重新燃起斗志的勇气。  我曾经也陷入过这样的泥沼。那是一次重要的考试，我满怀信心地备考，却在考场上遭遇滑铁卢。成绩公布的那一刻，我仿佛被重锤击中，心情坠入了无尽的深渊。我开始怀疑自己的能力，觉得自己就像那匹被困在泥沼中的马，无论怎么挣扎，都无法摆脱困境。  那段时间，我变得消沉，对学习失去了兴趣，整天浑浑噩噩。直到有一天，我看到了我的同桌。他和我一样在那次考试中失利，但他没有像我一样一蹶不振，而是迅速调整状态，投入到新的学习中。他每天早早地来到教室，认真地整理错题，积极向老师和同学请教问题。他的眼神中充满了坚定和斗志，仿佛身上散发着一种无形的光芒。  看着他，我心中受到了极大的触动。他就像那群疾驰而过的骏马，用蓬勃的生命力感召着我。我开始反思自己，难道我要一直沉沦下去吗？不，我不能！我要像他一样，重新燃起斗志，挣脱泥沼。  于是，我不再自怨自艾，而是振作起来。我制定了详细的学习计划，每天按时完成作业，认真复习功课。遇到难题时，我不再逃避，而是主动向老师和同学请教。在这个过程中，我虽然也会遇到困难和挫折，但每当我想要放弃时，我就会想起同桌那充满斗志的眼神，想起那匹马挣脱泥沼的场景。  经过一段时间的努力，我的成绩有了明显的提高。我终于挣脱了那片泥沼，重新回到了积极向上的学习轨道。  生活中，我们难免会陷入困境，但只要我们身边有那些充满生命力的同伴，他们的光芒就会照亮我们前行的道路。让我们追随生命的蓬勃之光，在困境中重新燃起斗志，勇敢地挣脱泥沼，向着美好的未来奔去。
   knowledge_points:
-  - 阅读理解
-  - 文章结构分析
-  module: reading
-  difficulty: 中等
+  - 材料作文
+  module: writing
+  difficulty: 能力
   recommended_for:
-  - L1
   - L2
   - L3
   qc_status: needs_review

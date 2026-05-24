@@ -32,14 +32,18 @@ passages:
 - id: classical_材料一
   type: classical
   name: 材料一
-  q_range: null
+  q_range:
+  - 10
+  - 14
   body: '子曰：“富与贵，是人之所欲也；不以其道得之，不处①也。贫与贱，是人之所恶也；不以其道得之，不去②也。君子去仁，恶乎③成名？
 
     （《论语·里仁篇》）'
 - id: classical_材料二
   type: classical
   name: 材料二
-  q_range: null
+  q_range:
+  - 10
+  - 14
   body: '太史公④曰：余读孟子书，至梁惠王问“何以利吾国”，未尝不废书而叹也。嗟乎，利诚乱之始也！
 
     （《史记·孟子荀卿列传》）
@@ -50,12 +54,16 @@ passages:
 - id: modern_材料一
   type: modern
   name: 材料一
-  q_range: null
+  q_range:
+  - 16
+  - 25
   body: 北京2月1日电 国务院公布的《全民阅读促进条例》（以下简称《条例》）今起实施。作为我国首部针对全民阅读的行政法规，《条例》的出台标志着全民阅读从政策引导迈向法治保障。《条例》旨在促进全民阅读，增强全民族思想道德素质和科学文化素养，提高全社会文明程度，推动社会主义文化强国的建设。
 - id: modern_材料二
   type: modern
   name: 材料二
-  q_range: null
+  q_range:
+  - 16
+  - 25
   body: “十四五”以来，我国公共文化服务体系建设加快推进，其中以公共图书馆、实体书店、社区阅读空间为核心的阅读设施体系建设已形成了多元服务的格局。公共图书馆面向社会公众免费开放，提供以图书借阅为主的服务。截至2024年末，全国共有公共图书馆3248个，遍布城乡的图书馆服务体系基本形成。与此同时，实体书店成功转型升级，从单一售书场所变为集沉浸式体验、社交互动与文化消费于一体的复合空间，将图书销售与文化体验结合，满足读者高品质文化需求，        。社区阅读空间则以城市书房、文化驿站等形式，打通文化惠民“最后一公里”。如2026年西城区推出的“到社区读书吧”，将阅读服务下沉到居民身边，让优质文化资源抵达基层。这些变化表明，我国阅读设施体系已摆脱了单一服务的困境。
 - id: modern_材料三
   type: modern
@@ -89,8 +97,8 @@ questions:
   answer: C
   solution: “肖”是多音字，表“生肖、相似”的意思读xiào，仅作姓氏时读xiāo；“溯”只有sù一个读音。
   knowledge_points:
-  - 代词的使用
-  module: grammar
+  - 字音字形
+  module: reading
   difficulty: 基础
   recommended_for:
   - L0
@@ -114,8 +122,8 @@ questions:
 
     第二处，祈求：指虔诚地盼望，多用于对神灵祝祷，中性褒义。乞求：指哀求施舍，带贬义。此处形容向马王爷虔诚祝祷，“祈求”更合适。'
   knowledge_points:
-  - 时间介词的使用
-  module: grammar
+  - 词语运用
+  module: reading
   difficulty: 基础
   recommended_for:
   - L0
@@ -139,8 +147,8 @@ questions:
 
     【乙】处是三个不同民俗活动的停顿，是并列的习俗，用顿号。'
   knowledge_points:
-  - 情态动词的用法
-  module: grammar
+  - 标点符号运用
+  module: reading
   difficulty: 基础
   recommended_for:
   - L0
@@ -160,8 +168,8 @@ questions:
   answer: ''
   solution: ①. 结庐在人境    ②. 而伯乐不常有    ③. 弓如霹雳弦惊
   knowledge_points:
-  - 比较级的使用
-  module: grammar
+  - 默写
+  module: classical
   difficulty: 基础
   recommended_for:
   - L0
@@ -189,9 +197,8 @@ questions:
 
     D.入木三分：形容书法笔力刚劲有力，也比喻见解、议论深刻、确切。不能用来指指诗文体现中国人的精神追求，使用有误。'
   knowledge_points:
-  - 疑问词用法
-  - 频率副词
-  module: grammar
+  - 成语
+  module: reading
   difficulty: 基础
   recommended_for:
   - L0
@@ -208,11 +215,11 @@ questions:
   answer: ''
   solution: “奔腾尺幅间”指徐悲鸿的奔马画作，既点明画作中奔马在尺幅间的奔腾气势，也蕴含着徐悲鸿的家国关切与民族精神。
   knowledge_points:
-  - 连词的使用
-  module: grammar
-  difficulty: 基础
+  - 词语运用
+  - 连贯
+  module: reading
+  difficulty: 中等
   recommended_for:
-  - L0
   - L1
   - L2
   - L3
@@ -226,12 +233,10 @@ questions:
   answer: ''
   solution: 逐渐形成了融汇西东、形神兼备的奔马美学风格。
   knowledge_points:
-  - 时态和语态
-  - 条件状语从句
-  module: grammar
-  difficulty: 基础
+  - 病句
+  module: writing
+  difficulty: 中等
   recommended_for:
-  - L0
   - L1
   - L2
   - L3
@@ -264,11 +269,11 @@ questions:
 
     D.水墨写意（四字并列短语）作魂（动宾词语），丹青（名词）可绘（动词）九州情（偏正短语），尾字平声，符合要求。内容上，紧扣原文“以西方解剖透视为骨，以中国水墨写意为魂”核心语句，同时“九州情”呼应文中画家家国关切、家国情怀的内涵，内容贴合展板主旨，是最优下联。'
   knowledge_points:
-  - 现在进行时的用法
-  module: grammar
-  difficulty: 基础
+  - 词语运用
+  - 对联
+  module: writing
+  difficulty: 中等
   recommended_for:
-  - L0
   - L1
   - L2
   - L3
@@ -282,11 +287,11 @@ questions:
   answer: ''
   solution: 马，承载着人文精神，是诗词文章的经典意象。
   knowledge_points:
-  - 现在完成时的用法
-  module: grammar
-  difficulty: 基础
+  - 词语运用
+  - 连贯
+  module: writing
+  difficulty: 中等
   recommended_for:
-  - L0
   - L1
   - L2
   - L3
@@ -303,25 +308,9 @@ questions:
   answer: ''
   solution: ①. 天帝    ②. 谩    ③. 大鹏高飞
   knowledge_points:
-  - 时态-过去进行时
-  module: grammar
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-  qc_status: draft
-  qc_note: ''
-- id: 11
-  type: appreciation
-  score: 3
-  stem: 梁启超评论这首词说：“此绝似苏辛派，不类《漱玉集》中语。”意思是这首词与苏轼、辛弃疾的词风相近，不像李清照《漱玉集》的婉约风格。结合本词中的语句，联系苏轼或辛弃疾的词句（本试卷中出现的除外），说说你对该评论的理解。
-  answer: ''
-  solution: “天接云涛连晓雾，星河欲转千帆舞”描绘了海天苍茫、星河涌动、千帆竞发的壮美景象，境界开阔。辛弃疾《破阵子·为陈同甫赋壮词以寄之》中“八百里分麾下炙，五十弦翻塞外声”渲染出热烈豪迈的军营氛围。二者词风相近，都体现出豪放特点，与婉约风格不同。
-  knowledge_points:
-  - 一般将来时的被动语态
-  module: grammar
+  - 古诗文理解
+  - 默写
+  module: classical
   difficulty: 中等
   recommended_for:
   - L1
@@ -329,6 +318,23 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
+  passage_id: classical_材料一
+- id: 11
+  type: appreciation
+  score: 3
+  stem: 梁启超评论这首词说：“此绝似苏辛派，不类《漱玉集》中语。”意思是这首词与苏轼、辛弃疾的词风相近，不像李清照《漱玉集》的婉约风格。结合本词中的语句，联系苏轼或辛弃疾的词句（本试卷中出现的除外），说说你对该评论的理解。
+  answer: ''
+  solution: “天接云涛连晓雾，星河欲转千帆舞”描绘了海天苍茫、星河涌动、千帆竞发的壮美景象，境界开阔。辛弃疾《破阵子·为陈同甫赋壮词以寄之》中“八百里分麾下炙，五十弦翻塞外声”渲染出热烈豪迈的军营氛围。二者词风相近，都体现出豪放特点，与婉约风格不同。
+  knowledge_points:
+  - 古诗赏析
+  module: classical
+  difficulty: 能力
+  recommended_for:
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+  passage_id: classical_材料一
 - id: 12
   type: 单选
   score: 2
@@ -345,8 +351,8 @@ questions:
 
     C.名词，益处/动词，虚夸、夸大。'
   knowledge_points:
-  - 宾语从句的语序和时态
-  module: grammar
+  - 文言文实词
+  module: classical
   difficulty: 中等
   recommended_for:
   - L1
@@ -354,6 +360,7 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
+  passage_id: classical_材料一
 - id: 13
   type: 单选
   score: 2
@@ -365,16 +372,16 @@ questions:
   answer: A
   solution: A.①句中“是”指苟且求生、规避祸患的做法，不为贤者认同。
   knowledge_points:
-  - 词汇辨析
-  module: vocabulary
-  difficulty: 基础
+  - 文言文实词
+  module: classical
+  difficulty: 中等
   recommended_for:
-  - L0
   - L1
   - L2
   - L3
   qc_status: draft
   qc_note: ''
+  passage_id: classical_材料一
 - id: 14
   type: dictation
   score: 3
@@ -391,16 +398,16 @@ questions:
   answer: ''
   solution: ①. 去仁    ②. 失其本心    ③. 利益确实是一切祸乱的开始
   knowledge_points:
-  - 词汇辨析
-  module: vocabulary
-  difficulty: 基础
+  - 文言文理解
+  module: classical
+  difficulty: 中等
   recommended_for:
-  - L0
   - L1
   - L2
   - L3
   qc_status: draft
   qc_note: ''
+  passage_id: classical_材料一
 - id: 15
   type: book_review
   score: 5
@@ -426,13 +433,13 @@ questions:
 
     这些词语与作品主题有着千丝万缕的联系。从以上三部名著中任选一部，围绕上表中该作品的两个词语，结合具体情节，谈谈你对作品主题的理解。（100字左右）'
   answer: ''
-  solution: ''
+  solution: 示例一：祥子一生都在为拥有一辆属于自己的车而奋斗。可新车被抢、被敲诈、虎妞难产，一次次的痛苦磨难让他失去了车。“车”是祥子的梦想寄托，而“苦”则是他追梦过程中无尽的磨难，这两个词揭示了黑暗社会让底层劳动者无路可走的主题。  示例二：保尔的人生之“路”充满荆棘。从少年时反抗神父，到投身革命、修筑铁路，再到全身瘫痪、双目失明。但他始终选择“斗争”，他与敌人斗争，英勇作战；他与疾病斗争，坚持创作。“路”和“斗争”共同诠释了真正的革命者是在磨难中成长的主题。  示例三：自幼父母双亡、身无分文、寄住在舅妈家的简·爱始终渴求“家”的温暖，但她逃离盖茨海德府的牢笼、拒绝做罗切斯特的情妇、拒绝圣约翰的求婚，则意味着她始终以“自由”为底线守护自己对“家”的追求。这体现了小说追求精神独立的主题。
   knowledge_points:
-  - 词汇辨析
-  module: vocabulary
-  difficulty: 基础
+  - 名著情节
+  - 主题理解
+  module: reading
+  difficulty: 中等
   recommended_for:
-  - L0
   - L1
   - L2
   - L3
@@ -450,9 +457,8 @@ questions:
   answer: B
   solution: B.由材料二第一句可知，公共文化服务体系包含阅读设施体系，选项颠倒主次、逻辑错误。
   knowledge_points:
-  - 词汇运用
-  - 语境理解
-  module: vocabulary
+  - 信息筛选
+  module: reading
   difficulty: 中等
   recommended_for:
   - L1
@@ -460,7 +466,7 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: modern_材料三
+  passage_id: modern_材料一
 - id: 17
   type: 单选
   score: 2
@@ -477,17 +483,16 @@ questions:
 
     BD.城市书房属于社区阅读空间，和实体书店无关。'
   knowledge_points:
-  - 词汇辨析
-  module: vocabulary
-  difficulty: 基础
+  - 信息筛选
+  module: reading
+  difficulty: 中等
   recommended_for:
-  - L0
   - L1
   - L2
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: modern_材料三
+  passage_id: modern_材料一
 - id: 18
   type: comprehension
   score: 3
@@ -495,17 +500,16 @@ questions:
   answer: ''
   solution: ①. 政策引导    ②. 法治保障    ③. 单一服务    ④. 多元服务    ⑤. 学生阅读    ⑥. 亲子阅读
   knowledge_points:
-  - 词汇辨析
-  module: vocabulary
-  difficulty: 基础
+  - 信息筛选
+  module: reading
+  difficulty: 中等
   recommended_for:
-  - L0
   - L1
   - L2
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: modern_材料三
+  passage_id: modern_材料一
 - id: 19
   type: comprehension
   score: 4
@@ -513,17 +517,17 @@ questions:
   answer: ''
   solution: ①. 父亲临终嘱托    ②. 同学帮忙打水    ③. 师生情
   knowledge_points:
-  - 词汇辨析
-  module: vocabulary
-  difficulty: 基础
+  - 信息筛选
+  - 记叙文
+  module: reading
+  difficulty: 中等
   recommended_for:
-  - L0
   - L1
   - L2
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: modern_材料三
+  passage_id: modern_材料一
 - id: 20
   type: comprehension
   score: 2
@@ -531,18 +535,17 @@ questions:
   answer: ''
   solution: 从“提心吊胆”中读出了母亲害怕不能按时喊孩子起床，因而紧张、忐忑的状态，读出了母亲对儿女深沉的关怀与爱。
   knowledge_points:
-  - 词汇运用
-  - 阅读理解
-  module: vocabulary
-  difficulty: 基础
+  - 信息筛选
+  - 段落作用
+  module: reading
+  difficulty: 中等
   recommended_for:
-  - L0
   - L1
   - L2
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: modern_材料三
+  passage_id: modern_材料一
 - id: 21
   type: comprehension
   score: 2
@@ -550,18 +553,17 @@ questions:
   answer: ''
   solution: 示例一：引用杨万里的诗句“莫问早行奇绝处，四方八面野香来”，“儿童急走追黄蝶，飞入菜花无处寻”，写出了春天生机勃勃的景象，增加了文章的文化内涵；用“撒腿跑一阵”“甩甩它”等口语化的表达描绘出青年人的活泼与洒脱。形成了既活泼又典雅的风格。示例二：“暮春三月，江南草长，杂花生树，群莺乱飞”句式整齐，典雅优美，写出了春天明媚而又充满活力的景象；“我照镜子啦！”“看我能站在水上，有轻功”等口语化描写，活泼通俗，充满童趣。两者相融，体现了于漪倡导的语言风格。
   knowledge_points:
-  - 词汇运用
-  - 日常表达
-  module: vocabulary
-  difficulty: 基础
+  - 信息筛选
+  - 散文
+  module: reading
+  difficulty: 中等
   recommended_for:
-  - L0
   - L1
   - L2
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: modern_材料三
+  passage_id: modern_材料一
 - id: 22
   type: comprehension
   score: 2
@@ -569,18 +571,17 @@ questions:
   answer: ''
   solution: 把物质生活的贫乏与艰难踩在脚下，体现在：上学路途艰难，却不缺一节课；点灯自修，却以苦为乐。文娱晚会、暮春踏青、登高吟诗等则体现了追求精神生活的充实与欢乐。而这一切的动力是“一切为民族”，为从愚昧走向文明，为解救苦难的民族于水深火热之中。这句话彰显了那一代青年把个人成长与国家命运紧密相连的忧国忧民的情怀。
   knowledge_points:
-  - 写作技能
-  - 自我评估
-  module: writing
-  difficulty: 基础
+  - 信息筛选
+  - 段落作用
+  module: reading
+  difficulty: 中等
   recommended_for:
-  - L0
   - L1
   - L2
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: modern_材料三
+  passage_id: modern_材料一
 - id: 23
   type: 单选
   score: 2
@@ -601,8 +602,8 @@ questions:
 
     D.仅涉及第⑤段内容，均不够全面。'
   knowledge_points:
-  - 阅读理解
-  - 时间表达
+  - 信息筛选
+  - 议论文
   module: reading
   difficulty: 中等
   recommended_for:
@@ -611,7 +612,7 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: modern_材料三
+  passage_id: modern_材料一
 - id: 24
   type: 单选
   score: 2
@@ -624,26 +625,8 @@ questions:
   answer: C
   solution: C.错误。根据第⑤段第1句可知，“也”字在此处强调的是人文素养对人工智能系统架构的影响，而非“人类的技术优势”。C项将“也”理解为“人类的技术优势对人工智能的影响”，与原文意思不符。
   knowledge_points:
-  - 阅读理解
-  module: reading
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-  qc_status: draft
-  qc_note: ''
-  passage_id: modern_材料三
-- id: 25
-  type: comprehension
-  score: 3
-  stem: 阅读文章，写出第③段的论证过程。
-  answer: ''
-  solution: 首先，引用学者观点，点明人与机器的区别。然后，指出“人工智能是工具，方向和效用如何，归根结底还在于使用者”，并举滥用人工智能赶作业、造假而造成危害的例子加以证明。最后，得出“技术越普及，人文素养的底线越不能失守”的结论。
-  knowledge_points:
-  - 阅读理解
-  - 词汇运用
+  - 信息筛选
+  - 词语运用
   module: reading
   difficulty: 中等
   recommended_for:
@@ -652,7 +635,24 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: modern_材料三
+  passage_id: modern_材料一
+- id: 25
+  type: comprehension
+  score: 3
+  stem: 阅读文章，写出第③段的论证过程。
+  answer: ''
+  solution: 首先，引用学者观点，点明人与机器的区别。然后，指出“人工智能是工具，方向和效用如何，归根结底还在于使用者”，并举滥用人工智能赶作业、造假而造成危害的例子加以证明。最后，得出“技术越普及，人文素养的底线越不能失守”的结论。
+  knowledge_points:
+  - 论证分析
+  module: reading
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+  passage_id: modern_材料一
 - id: 26
   type: 解答
   score: 40
@@ -661,14 +661,12 @@ questions:
 
     要求：将作文题目写在答题卡上。文体不限，诗歌除外。字数在600-800之间。不出现学校的真实校名、师生姓名等。'
   answer: ''
-  solution: __MISSING__
+  solution: 大显身手  成长路上，每个人都有属于自己的闪光点，那些默默积累的努力，终会在某个瞬间绽放光芒，让我们有机会大显身手，遇见更好的自己。于我而言，那次校园文化节的展示，便是我突破自我、绽放光彩的难忘时刻。  学校举办校园文化节，班主任鼓励大家积极报名，展示自己的特长。我从小喜欢书法，临摹字帖已有数年，却始终有些腼腆，从未在众人面前展示过作品。看着同学们踊跃报名，我既羡慕又犹豫，害怕发挥不好，辜负日复一日的练习。班主任看穿了我的心思，拍着我的肩膀说：“别怕，你的努力我们都看在眼里，勇敢去大显身手，无论结果如何，都是一次成长。”  在班主任的鼓励下，我鼓起勇气报名了书法展示。为了更好地发挥，我每天放学后都留在教室，临摹名家字帖，反复练习笔画、结构，哪怕手腕酸痛，也从未放弃。我不仅练习楷书的端庄工整，还尝试行书的流畅洒脱，希望能呈现出最好的自己。期间有同学围观，我起初很紧张，手都发抖，但渐渐地，我沉浸在笔墨世界里，忘却了周围的一切。  展示当天，现场挤满了同学和老师。轮到我上场时，心怦怦直跳，但看着桌上的笔墨纸砚，想到连日的练习，我深吸一口气平复了紧张。我凝神静气，提笔蘸墨，手腕轻转，一笔笔书写起来。笔墨在宣纸上流淌，楷书的端庄、行书的灵动，都在笔下展现得淋漓尽致。周围很安静，只有笔尖划过宣纸的沙沙声，我尽情展现着自己的特长。  展示结束后，现场响起热烈的掌声，老师和同学们投来赞许的目光。有同学说：“没想到你书法这么厉害，真是大显身手！”班主任也笑着对我说：“你看，勇敢迈出第一步，就能绽放光芒。”那一刻，我满心成就感，不仅突破了腼腆，更明白“大显身手”从不是凭空而来，而是源于平时的积累与坚持。  如今回想起来，那次展示让我懂得，每个人都有属于自己的舞台。只要勇于突破自我、坚持努力，就能在属于自己的舞台上大显身手，绽放光彩。那些默默付出的时光，终会成为我们大显身手的底气，照亮成长的前路。
   knowledge_points:
-  - 阅读理解
-  - 推断主旨
-  module: reading
-  difficulty: 中等
+  - 命题作文
+  module: writing
+  difficulty: 能力
   recommended_for:
-  - L1
   - L2
   - L3
   qc_status: needs_review
@@ -681,11 +679,10 @@ questions:
 
     要求：将作文题目写在答题卡上。文体不限，诗歌除外。字数在600-800之间。不出现学校的真实校名、师生姓名等。'
   answer: ''
-  solution: __MISSING__
+  solution: 我与老屋  推土机的轰鸣声从村头传来，我知道，老屋的倒计时开始了。  那是一座青砖黑瓦的老房子，爷爷说，它比父亲的年纪还大。墙角的青苔一年年变厚，木门上的漆一块块剥落，门框上刻着我从小到大的身高线，一条条歪歪扭扭，像在记录时光的脚步。  小时候，老屋是我的乐园。堂屋里的八仙桌，是我写作业的地方，桌子上还有我用圆珠笔刻下的“到此一游”。后院的枇杷树，每到夏天就结满金黄的果子，我爬上去摘，爷爷在下面喊：“小心点！别摔了！”树下的石凳被磨得光滑，那是奶奶坐着择菜、我和她分吃西瓜的地方。  老屋的夏天很热，只有一台老式吊扇，吱呀吱呀地转，声音像催眠曲。我躺在竹席上，听奶奶讲她年轻时的故事，讲着讲着，她就睡着了，手里的蒲扇还搭在我的肚子上。  冬天，老屋很冷，风从门缝里灌进来，呜呜地响。爷爷会把火盆搬到屋里，我们围坐在火边，烤红薯，嗑瓜子。火光映着爷爷的脸，沟壑纵横，但他的眼睛很亮。他总说：“这屋子虽旧，但暖和，是人住出来的。”  后来，我去了县城读书，回老屋的次数越来越少。每次回去，都觉得它又旧了一些，屋顶的瓦缺了几片，墙上的裂缝更长了。爷爷老了，不再生火盆，只用电暖器。他坐在藤椅上，望着窗外，嘴里念叨：“房子老了，我也老了。”  去年冬天，爷爷病重，我们把他接到城里。临走前，他让我扶他回老屋，里里外外看了一遍。他摸着门框上我的身高线，说：“你从这么点长到这么高，这屋都记着呢。”那天他坐在门槛上，很久很久，夕阳把他的影子拉得很长。  爷爷走后，老屋就空了。村里说要拆迁，推土机终于来了。我没有回去，不敢看。我知道，老屋不在了，但它在我的记忆里，永远不会倒。  那里有我的童年，有爷爷的烟斗，有奶奶的蒲扇，有枇杷树下的笑声，有火盆边的故事。老屋与我，一起走过了十五年。如今它要走了，但它给我的温暖，足够我用一辈子。
   knowledge_points:
-  - 数据解读
-  - 图表理解
-  module: reading
+  - 半命题作文
+  module: writing
   difficulty: 中等
   recommended_for:
   - L1
