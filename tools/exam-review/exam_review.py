@@ -72,7 +72,11 @@ def detect_issues(q: dict) -> list[dict]:
     score = q.get("score", None)
     qc = q.get("qc_status", "")
 
-    if not stem:
+    # 完形：stem 故意为空（passage + ___N___ 已表达），有 passage_id + blank_index
+    # 即可视为合规
+    is_cloze_blank = (qtype == "完形"
+                      and q.get("passage_id") and q.get("blank_index"))
+    if not stem and not is_cloze_blank:
         issues.append({"code": "empty_stem", "level": "error", "msg": "stem（题干）为空"})
 
     if score is None or score == 0:
@@ -207,7 +211,7 @@ def _inline_md_images(text: str, yaml_path: Path) -> str:
 
 
 def load_file(path: Path) -> dict:
-    """加载单个 YAML 文件，附加检测结果和图片 base64。"""
+    """加载单个 YAML 文件，附加检测结果和图片 base64（含 passage 图片）。"""
     with open(path, encoding="utf-8") as f:
         data = yaml.safe_load(f)
     questions = data.get("questions", [])
@@ -223,6 +227,18 @@ def load_file(path: Path) -> dict:
         if isinstance(q.get("options"), dict):
             q["options"] = {k: _inline_md_images(str(v), path) if isinstance(v, str) else v
                             for k, v in q["options"].items()}
+    # passage 图片同样 inline
+    # 1) passage.figure - 单图（如阅读理解配源页参考）
+    # 2) passage.image_options - 多图 dict（A/B/C/D 共享图选项，英语 A 篇配对题）
+    for ps in (data.get("passages") or []):
+        fig_rel = ps.get("figure")
+        ps["_figure_b64"] = _load_figure_b64(path, fig_rel) if fig_rel else None
+        img_opts = ps.get("image_options")
+        if isinstance(img_opts, dict):
+            ps["_image_options_b64"] = {
+                k: (_load_figure_b64(path, v) or "")
+                for k, v in img_opts.items()
+            }
     data["_paper_issues"] = check_paper(data)
     data["_path"] = str(path)
     data["_filename"] = path.name
@@ -272,6 +288,13 @@ def build_html(papers: list[dict]) -> str:
             qc["_figure_b64"] = q.get("_figure_b64")
             qc["id"] = str(q.get("id", ""))
             out["questions"].append(qc)
+        # passages 单独 clean 一遍，保留 _figure_b64 / _image_options_b64
+        out["passages"] = []
+        for ps in (p.get("passages") or []):
+            psc = dict(ps)
+            psc["_figure_b64"] = ps.get("_figure_b64")
+            psc["_image_options_b64"] = ps.get("_image_options_b64")
+            out["passages"].append(psc)
         return out
 
     cleaned = [clean(p) for p in papers]
@@ -311,18 +334,27 @@ def save_review_to_yaml(yaml_path: Path, qid, status: str, note: str) -> bool:
 
 
 def make_handler(papers: list[dict], yaml_paths: dict[str, Path]):
-    """构造 HTTP handler 闭包；papers 持有 HTML 数据，yaml_paths 记录路径白名单。"""
+    """构造 HTTP handler 闭包；papers 持有 HTML 数据，yaml_paths 记录路径白名单。
+
+    **GET / 每次都重新读 yaml 并 rebuild HTML**（不再缓存）。原因：之前 yaml
+    被 OCR 重跑修改后，server 内存里的旧 HTML 还在派发，浏览器刷新看到的
+    还是旧版，让人误以为 bug 没修。代价是每次 GET 重新加载 + 解析 yaml，
+    对单卷审稿可忽略。
+    """
     import http.server, urllib.parse
-    html_cache = {"v": build_html(papers)}
 
     class Handler(http.server.SimpleHTTPRequestHandler):
         def log_message(self, fmt, *a): pass  # 静默
         def do_GET(self):
             if self.path == "/" or self.path.startswith("/?"):
+                # 每次 GET 重读 yaml → rebuild HTML
+                fresh_papers = [load_file(yp) for yp in yaml_paths.values()]
+                html = build_html(fresh_papers)
                 self.send_response(200)
                 self.send_header("Content-Type", "text/html; charset=utf-8")
+                self.send_header("Cache-Control", "no-store, must-revalidate")
                 self.end_headers()
-                self.wfile.write(html_cache["v"].encode("utf-8"))
+                self.wfile.write(html.encode("utf-8"))
                 return
             self.send_error(404)
         def do_POST(self):

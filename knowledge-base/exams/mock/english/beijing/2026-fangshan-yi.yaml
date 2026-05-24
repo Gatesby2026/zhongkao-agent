@@ -1,896 +1,1128 @@
-# ============================================================
-# 2026年北京房山区一模英语 — 自动生成
-# ============================================================
-# 流水线：gaokzx OCR + Qwen-VL-OCR + qwen-max enrich
-# 满分: 0 分 时长: 0 分钟
-
 year: 2026
 district: 房山区
 exam_type: 一模
-subject: 英语
-full_score: 0
-duration_minutes: 0
+subject: english
+full_score: 60.0
+duration_minutes: 90
 total_questions: 38
-structure: 33单选(66分) + 3填空(6分) + 2解答(4分)
+passages:
+- body: 'The community library was Megan''s peaceful kingaom. Every summer, she worked as a volunteer, feeling responsible for protecting this quiet space.
+
+    Lately, a boy named Liam became her ___13___. Liam couldn''t sit still. Like clockwork, he would get up to stretch(伸展) his legs. Sometimes he accidentally knocked over a chair.
+
+    Yesterday, Liam let out a loud “Whoa” when he saw a giant dinosaur filled the page. His voice drew looks from other readers. When Megan ___14___ him again, Liam''s face turned red.
+
+    “I’m sorry,” he said,“I don’t mean to. I really like being here.” She believed him. She had noticed that Liam was a ___15___ explorer of books. He would pull out a book on dinosaurs, read for a few
+    minutes, then reach for another about space, as if he couldn''t wait to learn more.
+
+    Back to her office, a note caught her eyes. It read, “More Lively Reading Activities? Book sharing? Acting?” Megan suddenly remembered the librarian had mentioned she could feel free to use the garden
+    at the back of the library. At the time, Megan hadn''t thought much about it. But now an idea came to her: Liam''s energy could be directed into the garden project. Perhaps the solution wasn''t to ___16___
+    Liam down, but to give his energy and love for books a positive stage.
+
+    Soon, her “Garden Reading Corner” project began to take-shape. She found Liam among the bookshelves.“Want to do something cool?” Liam did not answer at once, but the ___17___ light in his eyes said
+    everything.
+
+    For the next week, Megan and Liam busied themselves with the project. They designed two areas in the garden, one for reading and one for ___18___.
+
+    On the opening day, they waited in the garden. When the first few children arrived, Liam eagerly showed them the reading area. As more kids came, Megan invited some to sit around the acting area and
+    nodded for Liam to begin.“Did you know I''m a dinosaur that can fly?” Liam, now dressed as a dinosaur, ___19___ in a clear, excited voice. The children watched, laughed, and were completely drawn into
+    the story.
+
+    Megan''s heart was full. She understood that true peace in a library grows not only from silence, but from ___20___ a place where every reader feels they belong.'
+  type: cloze
+  q_range:
+  - 13
+  - 20
+  id: cloze
+- id: reading_A
+  type: reading
+  body: 下列每个图片代表一个活动场所，请根据人物的周末计划匹配最适合的图片，并 将图片所对应的选项(A、B、C、D)填在相应位置上。其中一个选项为多余选项。
+  q_range:
+  - 21
+  - 23
+  image_options:
+    A: 2026-fangshan-yi/figures/passage-reading_A-opt-A.png
+    B: 2026-fangshan-yi/figures/passage-reading_A-opt-B.png
+    C: 2026-fangshan-yi/figures/passage-reading_A-opt-C.png
+    D: 2026-fangshan-yi/figures/passage-reading_A-opt-D.png
+- id: reading_B
+  type: reading
+  body: '答 Alice and I were both in the school writing club. We weren''t exactly friends, just two people 或 who happened to share the same hobby. We sat on opposite sides of the room and wrote our own 书
+    stories. Then there was a writing competition at school. The winner would get his or her story published in the local newspaper. We both wanted that.
+
+    写 Suddenly, we were rivals(竞争对手). I''d been working on a story about a girl who 在 discovered an old camera in her attic(阁楼), a camera that could take photos of the past. I heard 答 that Alice was writing
+    something about time too. That made me worried. What if our stories ended up being too similar? But I wasn''t about to change my idea. It was mine, and I believed in 题 it. I pushed the thought away
+    and kept writing.
+
+    卡 Finally, we handed in our stories without a word. The next morning, our teacher called us 上 over.“I read both of your stories,” she said.“Alice, your characters feel real, like people I might know.”
+    She looked at me,“As for yours, your time-travel idea is really creative.” She stopped for a while,“Have you thought about working together?”
+
+    We glanced (瞥) at each other, unsure. But that afternoon, we talked. I told her about the magic camera. She described her main character, a girl who missed her grandmother terribly. And then it clicked.
+    What if the camera let that girl see her grandmother one last time? Her character and my idea fit together like puzzle pieces.
+
+    We spent the next three days writing side by side. When we finally finished, the story was better than anything either of us could have written alone. It was chosen for the competition. A few weeks
+    later, we found out it won first prize.
+
+    Standing next to Alice when we got the award, I realized something important. Competition pushes us to do our best. But working together? That''s where the real magic happens.
+
+    务'
+  q_range:
+  - 24
+  - 26
+- id: reading_C
+  type: reading
+  body: '在答题 Birdwatching is a popular hobby around the world. Millions of people enjoy it. But beyond learning to identify (识别) birds, is it possible that birdwatching is actually shaping our brains?
+
+    A new study suggests the answer may be yes.
+
+    Scientists were curious about whether the brains of expert birdwatchers differ from those 卡 of beginners. To find out, they studied 58 adults. Half of them were experienced birdwatchers, 上 while the
+    other half had much less experience. Then the scientists sent all of them into 学校 specialized brain-imaging(脑成像) machines to study brain structure and brain activity while having them identify birds.
+
+    Compared with beginners, expert birdwatchers showed more organized brain structure in areas linked(连接) to attention and visual perception(视觉感知). The more organized the brain structure, the better the
+    ability to identify birds. Interestingly, these same areas of the brain lit up on brain imaging when bird experts were identifying less familiar birds.
+
+    This suggests that spending time birdwatching and becoming an expert may actually reshape the brain over time. This builds on another recent study. It found that people who took part in more creative
+    activities had more youthful-looking brains and this was directly linked to how skilled they were at those activities.
+
+    Besides these brain changes, birdwatching may help improve brain health in other ways.
+
+    With social connections at the top of the list of things that support brain health, joining a social birdwatching group could provide a direct positive brain effect. Birdwatching can lead to physical
+    activity, which is clearly good for the brain. Spending more time in nature is also increasingly linked to improved overall brain health, as is staying away from screens. Finally, birdwatching may help
+    people reduce stress. This is important because stress is bad for the brain.
+
+    There is still much more to learn about the possible good effects of birdwatching on our brain. But while spending your day looking for birds does not replace the need for a healthy diet, good sleep,
+    and daily exercise, it may still be doing your brain some good.'
+  q_range:
+  - 27
+  - 29
+- id: reading_D
+  type: reading
+  body: 'When you travel, do you map out every site ahead of time and stick to the plan, making sure you don''t miss anything? Or do you only make simple preparations and then do whatever you feel like
+    during the trip? The difference being considered is that between planning and spontaneity (随性).
+
+    Some may argue strongly that a well-structured plan is the safer, more trustworthy way.
+
+    Others hold that spontaneity, with its openness to surprise, is the truer way to experience life.The answer, I suppose, is that neither is always better. It depends on the situation, and more importantly,
+    on what we hope to get out of it.
+
+    When launching a spacecraft into space, careful planning is beyond question, for a mistake could lead to disaster. But when playing football with children in the backyard, a strict game plan would feel
+    out of place, for spontaneity allows the joy of the moment to take over. The same activity can call for different ways depending on its purpose.
+
+    Both planning and spontaneity come with their own risks. Over-planning may cause us to focus so much on covering every detail(细节) that we forget to enjoy the experience itself. This can happen when
+    we take too many pictures of famous sites, only to realize later that we never truly enjoy them. On the other hand, a willingness to “wing it” can sometimes turn small mistakes into costly ones. For
+    example, an unplanned hike without enough water may turn a pleasant afternoon into a difficult one. Thus, neither way is always better. What matters is knowing the risks of each and choosing the one
+    that fits the situation.
+
+    Yet planning and spontaneity need not be opposites. Even in highly structured settings, there is room for the unplanned. A symphony orchestra (交响乐团) performs from written music, yet a conductor may
+    make small changes to the way the music is played based on the feel of the moment. Jazz a conductor musicians, famous for their improvisation(即兴创作),still begin with a basic structure. In both cases,
+    planning provides the base, while spontaneity brings it to life.
+
+    So, which is better? The question itself may be too simple. What matters is not choosing one over the other, but understanding when each is called for, and how they can work together.
+
+    Recognizing this allows us to make wiser decisions, but only when we are willing to look closely at our own choices and take responsibility for what we see.'
+  q_range:
+  - 30
+  - 33
+- id: express
+  type: reading_express
+  body: '卡 阅读短文，根据短文内容回答问题。
+
+    In recent years, virtual(虚拟的) museums have changed the way people experience art.
+
+    上 Using Virtual Reality(VR) technology, art lovers can now visit famous museums like the Louvre or the British Museum from home.
+
+    The idea of virtual museums started in the 1990s. Early experiments used basic 3D modeling to create digital copies of art museums, but the experiences did not feel real. Today, virtual museums are
+    different. VR technology is used, letting users do amazing things, like walking through ancient buildings or touching sculptures(雕塑) up close.
+
+    One great advantage of virtual museums is that they help more people enjoy world-famous artworks. People who live far away or cannot travel easily can now enjoy these treasures without leaving their
+    homes. For example, the British Museum''s VR tour has attracted over 2 million users since its start, many from areas where international travel is impractical.
+
+    Virtual museums offer more than just looking at artworks. Visitors can look closely at details, 务 listen to explanations, or join virtual workshops. They can even take part in guided tours led by 必
+    experts. For example, the Louvre''s VR experience allows users to explore the Mona Lisa in 360 degrees and see details that people normally cannot see. Virtual museums turn simple looking 将 into active
+    exploration. That''s why many young people prefer them.
+
+    答 However, traditional museums still have their own advantages. Traditional museums offer 案 the real feeling of standing before a great artwork, which VR cannot provide. Besides, traditional museums
+    let people talk and share ideas with each other, which makes the visit more interesting 将 and educational.
+
+    涂 In fact, virtual museums and traditional museums each have their own special qualities.
+
+    案 Virtual museums bring art closer to more people, while traditional museums offer real and unforgettable feelings for visitors. They serve people in different ways and both play an important 书 role
+    in the world of art.
+
+    写'
+  q_range:
+  - 34
+  - 37
 questions:
 - id: 1
   type: 单选
-  score: 2
-  question: '1. My sister is interested in Chinese poems, and _ favorite poet is Su Shi.
-
-
-    A. her
-
-    B. his
-
-    C. my
-
-    D. their'
+  score: 0.5
+  stem: My sister is interested in Chinese poems, and ___ favorite poet is Su Shi.
+  options:
+    A: her
+    B: his
+    C: my
+    D: their
   answer: A
-  solution: ''
+  solution: A
   knowledge_points:
-  - 物主代词（形容词性/名词性）
-  module: 语法
+  - 代词的使用
+  module: grammar
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 2
   type: 单选
-  score: 2
-  question: '2. Many people like to go to the beach for holidays _ summer.
-
-
-    A. at
-
-    B. on
-
-    C. in
-
-    D. to'
+  score: 0.5
+  stem: Many people like to go to the beach for holidays ___ summer.
+  options:
+    A: at
+    B: 'on'
+    C: in
+    D: to
   answer: C
-  solution: ''
+  solution: C
   knowledge_points:
-  - 介词的用法
-  module: 语法
+  - 时间介词的使用
+  module: grammar
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 3
   type: 单选
-  score: 2
-  question: '3. -Excuse me, _ I park my car here? -Sorry, you can''t. Parking is not allowed in this area.
+  score: 0.5
+  stem: '-Excuse me, I park my car here?
 
+    或
 
-    A. must
+    -Sorry, you can''t. Parking is not allowed in this area.
 
-    B. can
+    书'
+  options:
+    A: must
+    B: can
+    C: need
+    D: 'should
 
-    C. need
-
-    D. should'
+      班级'
   answer: B
-  solution: ''
+  solution: B
   knowledge_points:
   - 情态动词的用法
-  module: 语法
+  module: grammar
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 4
   type: 单选
-  score: 2
-  question: '4. With AI tools, learning a new language is now _ than ever before.
+  score: 0.5
+  stem: 'With AI tools, learning a new language is now than ever before.
 
+    写'
+  options:
+    A: convenient
+    B: more convenient
+    C: 'most convenient
 
-    A. convenient
-
-    B. more convenient
-
-    C. most convenient
-
-    D. the most convenient'
+      在'
+    D: the most convenient
   answer: B
-  solution: ''
+  solution: B
   knowledge_points:
-  - 形容词比较级和最高级（规则与不规则变化）
-  module: 语法
+  - 比较级的使用
+  module: grammar
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 5
   type: 单选
-  score: 2
-  question: '5. - _ do you do sports every day? -For at least two hours. It helps me keep healthy.
+  score: 0.5
+  stem: '- ___ 答 do you do sports every day?
 
+    答
 
-    A. How often
+    -For at least two hours. It helps me keep healthy.'
+  options:
+    A: 'How often
 
-    B. How far
-
-    C. How much
-
-    D. How long'
+      题'
+    B: How far
+    C: How much
+    D: How long
   answer: D
-  solution: ''
+  solution: D
   knowledge_points:
-  - 疑问代词（who/what/which/whose）
-  module: 语法
+  - 疑问词用法
+  - 时间表达
+  module: grammar
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 6
   type: 单选
-  score: 2
-  question: '6. It started to rain heavily, _ we decided to stay indoors and read books.
+  score: 0.5
+  stem: 'It started to rain heavily, we decided to stay indoors and read books.
 
-
-    A. or
-
-    B. but
-
-    C. so
-
-    D. for'
+    卡'
+  options:
+    A: or
+    B: but
+    C: so
+    D: for
   answer: C
-  solution: ''
+  solution: C
   knowledge_points:
-  - 连词的用法
-  module: 语法
+  - 连词的使用
+  module: grammar
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 7
   type: 单选
-  score: 2
-  question: '7. Steve _ his grandparents and helps them with housework on Sundays.
+  score: 0.5
+  stem: 'Steve his grandparents and helps them with housework on Sundays.
 
-
-    A. visits
-
-    B. was visiting
-
-    C. will visit
-
-    D. has visited'
+    上 ___ 学校'
+  options:
+    A: visits
+    B: was visiting
+    C: will visit
+    D: has visited
   answer: A
-  solution: ''
+  solution: A
   knowledge_points:
-  - 一般现在时的用法
-  module: 语法
+  - 时态-一般现在时
+  module: grammar
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 8
   type: 单选
-  score: 2
-  question: '8. -Mike, did you watch the football match last night? -No, I didn''t. I _ a report for the math project in the library.
+  score: 0.5
+  stem: '-Mike, did you watch the football match last night?
 
-
-    A. write
-
-    B. will write
-
-    C. have written
-
-    D. wrote'
+    -No, I didn''t. I ___ a report for the math project in the library.'
+  options:
+    A: write
+    B: will write
+    C: have written
+    D: wrote
   answer: D
-  solution: ''
+  solution: D
   knowledge_points:
-  - 时态（一般过去时）
-  module: 语法
+  - 一般过去时的使用
+  module: grammar
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 9
   type: 单选
-  score: 2
-  question: '9. Linda _ in the kitchen when her mother came back home.
-
-
-    A. cooks
-
-    B. is cooking
-
-    C. will cook
-
-    D. was cooking'
+  score: 0.5
+  stem: Linda ___ in the kitchen when her mother came back home.
+  options:
+    A: cooks
+    B: is cooking
+    C: will cook
+    D: was cooking
   answer: D
-  solution: ''
+  solution: D
   knowledge_points:
-  - 过去进行时的用法
-  module: 语法
+  - 过去进行时
+  module: grammar
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 10
   type: 单选
-  score: 2
-  question: '10. My spoken English _ greatly since I joined the English club.
-
-
-    A. improved
-
-    B. has improved
-
-    C. was improving
-
-    D. will improve'
+  score: 0.5
+  stem: My spoken English greatly since I joined the English club.
+  options:
+    A: improved
+    B: has improved
+    C: was improving
+    D: will improve
   answer: B
-  solution: ''
+  solution: B
   knowledge_points:
-  - 现在完成时的用法
-  module: 语法
+  - 现在完成时
+  module: grammar
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 11
   type: 单选
-  score: 2
-  question: '11. A science festival _ in our school every April.
-
-
-    A. holds
-
-    B. held
-
-    C. is held
-
-    D. was held'
+  score: 0.5
+  stem: A science festival ___ in our school every April.
+  options:
+    A: holds
+    B: held
+    C: is held
+    D: was held
   answer: C
-  solution: ''
+  solution: C
   knowledge_points:
-  - 被动语态的用法
-  module: 语法
+  - 被动语态
+  - 一般现在时
+  module: grammar
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 12
   type: 单选
-  score: 2
-  question: '12. - Alice, do you know _ for the volunteer activity this weekend? - Yes. We''re going to City Park.
+  score: 0.5
+  stem: '-Alice, do you ___ for the volunteer activity this weekend?
 
-
-    A. where we are going
-
-    B. where we went
-
-    C. where are we going
-
-    D. where did we go'
+    -Yes. We''re going to City Park.'
+  options:
+    A: where we are going
+    B: where we went
+    C: where are we going
+    D: where did we go
   answer: A
-  solution: ''
+  solution: A
   knowledge_points:
-  - 疑问代词（who/what/which/whose）
   - 宾语从句
-  module: 语法
+  - 时态
+  module: grammar
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 13
-  type: 单选
-  score: 2
-  question: '13. Lately, a boy named Liam became her _.
-
-
-    A. challenge
-
-    B. surprise
-
-    C. model
-
-    D. helper'
+  type: 完形
+  score: 1
+  stem: ''
+  options:
+    A: challenge
+    B: surprise
+    C: model
+    D: helper
   answer: A
-  solution: ''
+  solution: A
   knowledge_points:
-  - 词汇的一词多义与词义辨析
-  module: 词汇
+  - 词汇辨析
+  module: vocabulary
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 14
-  type: 单选
-  score: 2
-  question: '14. When Megan _ him again, Liam''s face turned red.
-
-
-    A. praised
-
-    B. encouraged
-
-    C. doubted
-
-    D. reminded'
+  type: 完形
+  score: 1
+  stem: ''
+  options:
+    A: praised
+    B: encouraged
+    C: doubted
+    D: reminded
   answer: D
-  solution: ''
+  solution: D
   knowledge_points:
-  - 词汇的一词多义与词义辨析
-  module: 词汇
+  - 词汇辨析
+  module: vocabulary
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 15
-  type: 单选
-  score: 2
-  question: '15. She had noticed that Liam was a _ explorer of books.
-
-
-    A. silent
-
-    B. curious
-
-    C. focused
-
-    D. patient'
+  type: 完形
+  score: 1
+  stem: ''
+  options:
+    A: silent
+    B: curious
+    C: focused
+    D: patient
   answer: B
-  solution: ''
+  solution: B
   knowledge_points:
-  - 词汇的一词多义与词义辨析
-  module: 词汇
+  - 词汇理解与运用
+  module: vocabulary
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 16
-  type: 单选
-  score: 2
-  question: '16. But now an idea came to her: Liam''s energy could be directed into the garden project. Perhaps the solution wasn''t to _ Liam down, but to give his energy and love for books a positive
-    stage.
-
-
-    A. slow
-
-    B. let
-
-    C. quiet
-
-    D. turn'
+  type: 完形
+  score: 1
+  stem: ''
+  options:
+    A: slow
+    B: let
+    C: quiet
+    D: turn
   answer: C
-  solution: ''
+  solution: C
   knowledge_points:
-  - 词汇的一词多义与词义辨析
-  - 常用词组和固定搭配（约300个）
-  module: 词汇
-  difficulty: 中等
+  - 词汇辨析
+  module: vocabulary
+  difficulty: 基础
   recommended_for:
+  - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 17
-  type: 单选
-  score: 2
-  question: '17. Liam did not answer at once, but the _ light in his eyes said everything.
-
-
-    A. puzzled
-
-    B. bright
-
-    C. tired
-
-    D. soft'
+  type: 完形
+  score: 1
+  stem: ''
+  options:
+    A: puzzled
+    B: bright
+    C: tired
+    D: soft
   answer: B
-  solution: ''
+  solution: B
   knowledge_points:
-  - 词汇的一词多义与词义辨析
-  module: 词汇
+  - 词汇辨析
+  module: vocabulary
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 18
-  type: 单选
-  score: 2
-  question: '18. They designed two areas in the garden, one for reading and one for _.
-
-
-    A. acting
-
-    B. relaxing
-
-    C. talking
-
-    D. playing'
+  type: 完形
+  score: 1
+  stem: ''
+  options:
+    A: acting
+    B: relaxing
+    C: talking
+    D: playing
   answer: A
-  solution: ''
+  solution: A
   knowledge_points:
-  - 词汇的一词多义与词义辨析
-  - 常用词组和固定搭配（约300个）
-  module: 词汇
+  - 词汇辨析
+  module: vocabulary
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 19
-  type: 单选
-  score: 2
-  question: '19. now dressed as a dinosaur, _ in a clear, excited voice. The children watched, laughed, and were completely drawn into the story.
-
-
-    A. explained
-
-    B. performed
-
-    C. repeated
-
-    D. shared'
+  type: 完形
+  score: 1
+  stem: ''
+  options:
+    A: explained
+    B: performed
+    C: repeated
+    D: shared
   answer: B
-  solution: ''
+  solution: B
   knowledge_points:
-  - 词汇的一词多义与词义辨析
-  - 常用词组和固定搭配（约300个）
-  module: 词汇
-  difficulty: 中等
+  - 词汇运用
+  module: vocabulary
+  difficulty: 基础
   recommended_for:
+  - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 20
-  type: 单选
-  score: 2
-  question: '20. She understood that true peace in a library grows not only from silence, but from _ a place where every reader feels they belong.
-
-
-    A. imagining
-
-    B. choosing
-
-    C. managing
-
-    D. creating'
+  type: 完形
+  score: 1
+  stem: ''
+  options:
+    A: imagining
+    B: choosing
+    C: managing
+    D: creating
   answer: D
-  solution: ''
+  solution: D
   knowledge_points:
-  - 词汇的一词多义与词义辨析
-  - 常用词组和固定搭配（约300个）
-  module: 词汇
-  difficulty: 中等
+  - 词汇运用
+  module: vocabulary
+  difficulty: 基础
   recommended_for:
+  - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 21
-  type: 单选
+  type: 阅读
   score: 2
-  question: '21. Tina I will go to the cinema with my best friend this weekend. We plan to watch a movie together. It is a perfect way to relax after a busy week.
-
-
-    A. [A]
-
-    B. [B]
-
-    C. [C]
-
-    D. [D'
+  stem: '- - I will go to the cinema with my best friend this weekend. We plan to watch a movie together. It is a perfect way to relax after a busy week. (Tina)'
+  has_image_options: true
   answer: D
-  solution: ''
+  solution: D
   knowledge_points:
-  - 词汇的一词多义与词义辨析
-  - 常用词组和固定搭配（约300个）
-  module: 词汇
+  - 阅读理解
+  - 日常交际用语
+  module: reading
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 22
-  type: 单选
+  type: 阅读
   score: 2
-  question: '22. Kevin I''d like to spend my weekend at a sports center. I want to play basketball with my friends. It would be great to get some exercise and have fun together.
-
-
-    A. [A]
-
-    B. [B]
-
-    C. [C]
-
-    D. [D'
+  stem: I'd like to spend my weekend at a sports center. I want to play basketball with my friends. It would be great to get some exercise and have fun together.
+  has_image_options: true
   answer: A
-  solution: ''
+  solution: A
   knowledge_points:
-  - 课标1600词的拼写与基本词义
-  - 常用词组和固定搭配（约300个）
-  module: 词汇
+  - 日常活动与兴趣表达
+  - 体育运动相关词汇
+  module: vocabulary
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 23
-  type: 单选
+  type: 阅读
   score: 2
-  question: '23. Nancy I''ve decided to visit the park near my home. I''m going to ride my bike there. My little sister will come with me, and we''ll fly a kite if the weather is nice.
-
-
-    A. [A]
-
-    B. [B]
-
-    C. [C]
-
-    D. [D'
+  stem: 务 必 将 I've decided to visit the park near my home. I'm going to ride 将 my bike there. My little sister will come with me, and we'll 答 fly a kite if the weather is nice. (Nancy) 案
+  has_image_options: true
   answer: C
-  solution: ''
+  solution: C
   knowledge_points:
-  - 课标1600词的拼写与基本词义
-  - 常用词组和固定搭配（约300个）
-  module: 词汇
+  - 时态的使用
+  - 连词的使用
+  module: grammar
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 24
-  type: 单选
+  type: 阅读
   score: 2
-  question: '24. How did the writer feel when she heard Alice was writing something similar?
+  stem: How did the writer feel when she heard Alice was writing something similar?
+  options:
+    A: Unsure
+    B: Worried
+    C: Excited
+    D: 'Proud.
 
-
-    A. Unsure.
-
-    B. Worried.
-
-    C. Excited.
-
-    D. Proud.'
+      必'
   answer: B
-  solution: ''
+  solution: B
   knowledge_points:
-  - 词汇的一词多义与词义辨析
-  - 理解
-  module: 词汇
-  difficulty: 基础
+  - 阅读理解
+  - 情感态度词汇
+  module: reading
+  difficulty: 中等
   recommended_for:
-  - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 25
-  type: 单选
+  type: 阅读
   score: 2
-  question: '25. What did the teacher suggest that Alice and the writer do?
+  stem: 'What did the teacher suggest that Alice and the writer do?
 
+    将'
+  options:
+    A: 'Rewrite their stories.
 
-    A. Rewrite their stories.
+      姓名
 
-    B. Keep their ideas secret.
+      答'
+    B: Keep their ideas secret
+    C: 'Work together on a story.
 
-    C. Work together on a story.
+      案'
+    D: 'Hand in their stories on time.
 
-    D. Hand in their stories on time.'
+      填'
   answer: C
-  solution: ''
+  solution: C
   knowledge_points:
-  - 词汇的一词多义与词义辨析
-  - 理解句子含义
-  module: 词汇
+  - 阅读理解
+  - 细节理解
+  module: reading
   difficulty: 中等
   recommended_for:
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 26
-  type: 单选
+  type: 阅读
   score: 2
-  question: '26. What can we learn from the writer''s experience?
+  stem: 'What can we learn from the writer''s experience?
 
+    涂'
+  options:
+    A: Hobbies help us grow
+    B: 'Writing takes hard work.
 
-    A. Hobbies help us grow.
+      或'
+    C: 'Creative ideas bring success.
 
-    B. Writing takes hard work.
+      书'
+    D: 'Teamwork creates better results.
 
-    C. Creative ideas bring success.
+      班级
 
-    D. Teamwork creates better results.'
+      写'
   answer: D
-  solution: ''
+  solution: D
   knowledge_points:
   - 阅读理解
-  - 语篇分析
-  module: 语言技能
+  - 推理判断
+  module: reading
   difficulty: 中等
   recommended_for:
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 27
-  type: 单选
+  type: 阅读
   score: 2
-  question: '27. Why did the scientists compare expert birdwatchers and beginners?
-
-
-    A. To help beginners identify birds better.
-
-    B. To study their ability to know different birds.
-
-    C. To find out whether their brains are different.
-
-    D. To test how quickly birdwatchers can identify birds.'
+  stem: Why did the scientists compare expert birdwatchers and beginners?
+  options:
+    A: To help beginners identify birds better
+    B: To study their ability to know different birds
+    C: To find out whether their brains are different
+    D: To test how quickly birdwatchers can identify birds
   answer: C
-  solution: ''
+  solution: C
   knowledge_points:
   - 阅读理解
-  - 词汇的一词多义与词义辨析
-  module: 语言技能
+  - 推理判断
+  module: reading
   difficulty: 中等
   recommended_for:
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 28
-  type: 单选
+  type: 阅读
   score: 2
-  question: '28. What did the scientists find out from their study?
-
-
-    A. A more organized brain did help with identifying birds.
-
-    B. Long-term birdwatching hardly changed one''s brain structure.
-
-    C. Expert birdwatchers were better at creative activities than beginners.
-
-    D. Experts'' brains showed little activity on identifying birds new to them.'
+  stem: What did the scientists find out from their study?
+  options:
+    A: A more organized brain did help with identifying birds
+    B: Long-term birdwatching hardly changed one's brain structure
+    C: Expert birdwatchers were better at creative activities than beginners
+    D: Experts' brains showed little activity on identifying birds new to them
   answer: A
-  solution: ''
+  solution: A
   knowledge_points:
-  - 词汇的一词多义与词义辨析
   - 阅读理解
-  module: 语言知识
+  - 细节理解
+  module: reading
   difficulty: 中等
   recommended_for:
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 29
-  type: 单选
+  type: 阅读
   score: 2
-  question: '29. What is mainly discussed about birdwatching in Paragraph 5?
-
-
-    A. Its help in reducing stress.
-
-    B. Its benefits for brain health.
-
-    C. Its role in social connection.
-
-    D. Its effects on brain structure.'
+  stem: What is mainly discussed about birdwatching in Paragraph 5?
+  options:
+    A: Its help in reducing stress
+    B: Its benefits for brain health
+    C: Its role in social connection
+    D: Its effects on brain structure
   answer: B
-  solution: ''
+  solution: B
   knowledge_points:
   - 阅读理解
-  - 词汇的一词多义与词义辨析
-  module: 语言技能
+  - 细节理解
+  module: reading
   difficulty: 中等
   recommended_for:
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 30
-  type: 单选
+  type: 阅读
   score: 2
-  question: '30. Why does the writer mention two different examples in Paragraph 3?
-
-
-    A. To stress that careful planning is necessary.
-
-    B. To prove that spontaneity works better in daily life.
-
-    C. To explain that situation decides planning or spontaneity.
-
-    D. To show that planning is more difficult than being spontaneous.'
+  stem: Why does the writer mention two different examples in Paragraph 3?
+  options:
+    A: To stress that careful planning is necessary
+    B: To prove that spontaneity works better in daily life
+    C: To explain that situation decides planning or spontaneity
+    D: To show that planning is more difficult than being spontaneous
   answer: C
-  solution: ''
+  solution: C
   knowledge_points:
-  - 阅读理解
-  - 语篇分析
-  module: 语言技能
+  - 阅读理解-推理判断
+  module: reading
   difficulty: 中等
   recommended_for:
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 31
-  type: 单选
+  type: 阅读
   score: 2
-  question: '31. What do the words “wing it” in Paragraph 4 most probably mean?
+  stem: 'What do the words“wing it” in Paragraph 4 most probably mean?
 
-
-    A. Do things carelessly.
-
-    B. Act without preparation.
-
-    C. Go against rules.
-
-    D. Take unnecessary risks.'
+    务必将答案填涂'
+  options:
+    A: Do things carelessly
+    B: Act without preparation
+    C: Go against rules
+    D: Take unnecessary risks
   answer: B
-  solution: ''
+  solution: B
   knowledge_points:
-  - 词汇的一词多义与词义辨析
-  module: 词汇
+  - 词汇理解
+  - 上下文推断
+  module: reading
   difficulty: 中等
   recommended_for:
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 32
-  type: 单选
+  type: 阅读
   score: 2
-  question: '32. Which of the following shows a balance between planning and spontaneity?
-
-
-    A. Sticking to a strict timetable.
-
-    B. Following a cookbook step by step.
-
-    C. Making a to-do list with the order open.
-
-    D. Going out right after seeing the nice weather.'
+  stem: Which of the following shows a balance between planning and spontaneity?
+  options:
+    A: Sticking to a strict timetable
+    B: Following a cookbook step by step
+    C: Making a to-do list with the order open
+    D: Going out right after seeing the nice weather
   answer: C
-  solution: ''
-  knowledge_points:
-  - 词汇的一词多义与词义辨析
-  - 常用词组和固定搭配
-  module: 词汇
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
-- id: 33
-  type: 单选
-  score: 2
-  question: '33. Which of the following is the best title for this passage?
-
-
-    A. Planning and Spontaneity: Hidden Risks
-
-    B. Planning and Spontaneity: Both Have a Place
-
-    C. Planning over Spontaneity: The Key to Success
-
-    D. Spontaneity before Planning: The Path to Happiness'
-  answer: B
-  solution: ''
+  solution: C
   knowledge_points:
   - 阅读理解
-  - 词汇的一词多义与词义辨析
-  module: 语言技能
+  - 词汇运用
+  module: reading
   difficulty: 中等
   recommended_for:
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
+- id: 33
+  type: 阅读
+  score: 2
+  stem: Which of the following is the best title for this passage?
+  options:
+    A: 'Planning and Spontaneity: Hidden Risks
+
+      或'
+    B: 'Planning and Spontaneity: Both Have a Place
+
+      书'
+    C: 'Planning over Spontaneity: The Key to Success'
+    D: 'Spontaneity before Planning: The Path to Happiness
+
+      写
+
+      在
+
+      第二部分
+
+      答
+
+      本部分共5题，共20分。根据题目要求，完成相应任务。
+
+      题'
+  answer: B
+  solution: B
+  knowledge_points:
+  - 阅读理解
+  - 主旨大意
+  module: reading
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
 - id: 34
-  type: 填空
-  score: 2
-  question: 34. What technology is used in today’s virtual museums? VR technology. /VR.
-  answer: VR technology. /VR.
-  solution: ''
+  type: 阅读表达
+  score: 2.0
+  stem: What technology is used in today's virtual museums?
+  answer: ''
+  solution: VR technology./ VR.
   knowledge_points:
-  - 课标1600词的拼写与基本词义
-  module: 词汇
-  difficulty: 基础
+  - 阅读理解
+  - 科技词汇
+  module: reading
+  difficulty: 中等
   recommended_for:
-  - L0
   - L1
   - L2
   - L3
+  qc_status: needs_review
+  qc_note: 选择题缺少 options（既无文本也无图片选项）；选择题 answer 为空
 - id: 35
-  type: 填空
-  score: 2
-  question: 35. What is one great advantage of virtual museums? They help more people enjoy world-famous artworks.
-  answer: They help more people enjoy world-famous artworks.
-  solution: ''
+  type: 阅读表达
+  score: 2.0
+  stem: 'What is one great advantage of virtual museums?
+
+    在'
+  answer: ''
+  solution: They help more people enjoy world-famous artworks.
   knowledge_points:
-  - 词汇的一词多义与词义辨析
-  - 句子重读与语调（升调/降调）
-  module: 语言知识
-  difficulty: 基础
+  - 阅读理解
+  - 词汇运用
+  module: reading
+  difficulty: 中等
   recommended_for:
-  - L0
   - L1
   - L2
   - L3
+  qc_status: needs_review
+  qc_note: 选择题缺少 options（既无文本也无图片选项）；选择题 answer 为空
 - id: 36
-  type: 填空
-  score: 2
-  question: 36. Why do many young people prefer virtual museums? Because virtual museums turn simple looking into active exploration.
-  answer: Because virtual museums turn simple looking into active exploration.
-  solution: ''
+  type: 阅读表达
+  score: 2.0
+  stem: 'Why do many young people prefer virtual museums?
+
+    答'
+  answer: ''
+  solution: Because virtual museums turn simple looking into active exploration.
   knowledge_points:
-  - 词汇的一词多义与词义辨析
-  - 句子重读与语调（升调/降调）
-  module: 语言知识
-  difficulty: 基础
+  - 阅读理解
+  - 文化背景知识
+  module: reading
+  difficulty: 中等
   recommended_for:
-  - L0
   - L1
   - L2
   - L3
+  qc_status: needs_review
+  qc_note: 选择题缺少 options（既无文本也无图片选项）；选择题 answer 为空
 - id: 37
-  type: 解答
-  score: 2
-  question: 37. Which way of experiencing art do you prefer, visiting a traditional museum or a virtual museum? Why? (Please give two reasons.) 略
-  answer: 略
+  type: 阅读表达
+  score: 4.0
+  stem: 'Which way of experiencing art do you prefer, visiting a traditional museum or a virtual
+
+    题
+
+    museum? Why? (Please give two reasons.)'
+  answer: ''
   solution: 略
   knowledge_points:
-  - 词汇的一词多义与词义辨析
-  - 句子重读与语调（升调/降调）
-  module: 语言技能
+  - 表达个人观点
+  - 提供理由支持观点
+  module: writing
   difficulty: 中等
   recommended_for:
   - L1
   - L2
   - L3
+  qc_status: needs_review
+  qc_note: 选择题缺少 options（既无文本也无图片选项）；选择题 answer 为空
 - id: 38
-  type: 解答
-  score: 2
-  question: '38. One possible version: 题目① I did a survey on my classmates’ weekly reading time. The results show that among 40 students, 8 spend less than one hour reading each week, 20 spend one to three
-    hours, and 12 spend over three hours. Clearly, most of us do not spend enough time reading. Reading not only opens our minds but also helps us relax. I strongly suggest that we develop a daily reading
-    habit and read for at least 30 minutes every day. Besides, we can share our favorite books with one another or set up a small book club. Let’s enjoy reading from now on. 题目② I have a healthy habit that
-    has made a big difference in my life. I go jogging for 30 minutes every morning. To keep this habit, I set an alarm and get up as soon as it rings. I also ask my dad to jog with me so we can encourage
-    each other. This habit has brought me great benefits. First, it fills me with energy for the whole day. Second, I feel relaxed and less stressed. Jogging not only keeps me fit but also helps me stay
-    positive. I will surely keep this habit.'
-  answer: 'One possible version:'
-  solution: 'One possible version:'
+  type: 写作
+  score: 10
+  stem: '卡
+
+    38.从下面两个题目中任选一题，根据所给的中文和英文提示，完成一篇不少于50词的
+
+    上
+
+    英语文段写作。文中已给出的内容不计入总词数。所给提示词语仅供选用。请不要
+
+    子仪
+
+    写出真实的校名、姓名和地名。
+
+    题目①
+
+    假设你是李华，你所在班级的英语研究性学习小组正在开展一项关于“学生课外阅读
+
+    习惯”的研究。你负责调研“每周课外阅读时长”这一主题，并对全班40名同学进行了问
+
+    卷调查。下图是部分统计结果。请用英语写一篇短文，简要描述图表内容，并针对你发现
+
+    的问题，向班级同学提出合理可行的建议。
+
+    How much time do you spend reading each week?
+
+    less than one hour
+
+    one to three hours
+
+    more than three hours
+
+    0
+
+    5
+
+    10
+
+    15
+
+    20
+
+    25
+
+    翻 Numbers of students
+
+    提示词语:show,spend,share,meaningful
+
+    内容提示:● What can you learn from the results?
+
+    ● Offer some advice to your classmates on reading.
+
+    I did a survey on my classmates'' weekly reading time.
+
+    题目②
+
+    假设你是李华，你校英语社团网站正在开展以“好习惯伴我成长”为主题的征文活动。
+
+    请用英语写一篇短文投稿，分享你的一个健康生活习惯(如合理膳食、适量运动、规律作
+
+    息等)，介绍你坚持这一习惯的做法，并说明它给你带来的益处。
+
+    提示词语:exercise,jog,energy,relaxed
+
+    内容提示:● What healthy habit do you have?
+
+    ● How do you keep this habit?
+
+    ● What benefits has it brought you?
+
+    I have a healthy habit that has made a big difference in my life.
+
+    2025-2026学年度综合练习(一)'
+  answer: ''
+  solution: 'One possible version:
+
+    题目①
+
+    I did a survey on my classmates'' weekly reading time. The results show that
+
+    among 40 students, 8 spend less than one hour reading each week, 20 spend one to
+
+    three hours, and 12 spend over three hours. Clearly, most of us do not spend enough
+
+    time reading.
+
+    Reading not only opens our minds but also helps us relax. I strongly suggest
+
+    that we develop a daily reading habit and read for at least 30 minutes every day.
+
+    Besides, we can share our favorite books with one another or set up a small book
+
+    club. Let''s enjoy reading from now on.
+
+    题目②
+
+    I have a healthy habit that has made a big difference in my life. I go jogging for'
   knowledge_points:
-  - 词汇的一词多义与词义辨析
-  - 构词法——前缀（un-, dis-, re-, im-/in-）
-  - 构词法——后缀（-tion, -ment, -ful, -less, -ly, -er/-or）
-  module: 词汇
+  - 写作技能
+  - 图表描述
+  - 提出建议
+  module: writing
   difficulty: 中等
   recommended_for:
   - L1
   - L2
   - L3
+  qc_status: needs_review
+  qc_note: 选择题缺少 options（既无文本也无图片选项）；选择题 answer 为空
+structure: 38单选(60.0分)

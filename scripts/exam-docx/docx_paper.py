@@ -658,6 +658,29 @@ def _write_review_yaml(docx: Path, subject: str, final: dict,
         return re.sub(r"!\[\]\([^)]+\)", "", s).strip()
 
     answers_by_num = {a["number"]: a for a in answers}
+
+    # 读旧 yaml 的 qc_status/qc_note 做合并写入（**禁止覆盖式默认值**）
+    # 历史教训：默认 qc_status='draft' / qc_note='' 会清掉人工审核结果
+    repo_root = out_dir
+    while repo_root.parent != repo_root:
+        if (repo_root / "knowledge-base").is_dir(): break
+        repo_root = repo_root.parent
+    _yaml_path_pre = (repo_root / "knowledge-base" / "exams" / "mock"
+                      / subject / "beijing" / f"{slug}.yaml")
+    existing_qc: dict[int, dict] = {}
+    if _yaml_path_pre.exists():
+        try:
+            old = yaml.safe_load(_yaml_path_pre.read_text(encoding="utf-8")) or {}
+            for oq in (old.get("questions") or []):
+                qid = oq.get("id")
+                if qid is None: continue
+                existing_qc[qid] = {
+                    "qc_status": oq.get("qc_status", "draft"),
+                    "qc_note":   oq.get("qc_note", ""),
+                }
+        except Exception as e:
+            print(f"[docx_paper] ⚠ 读旧 yaml 合并 qc_* 失败: {e}", flush=True)
+
     yaml_questions = []
     for q in questions:
         n = q["number"]
@@ -689,19 +712,15 @@ def _write_review_yaml(docx: Path, subject: str, final: dict,
         item["knowledge_points"] = []
         item["module"] = ""
         item["difficulty"] = ""
-        item["qc_status"] = "draft"
-        item["qc_note"] = ""
+        prev = existing_qc.get(n, {})
+        item["qc_status"] = prev.get("qc_status", "draft")
+        item["qc_note"] = prev.get("qc_note", "")
         yaml_questions.append(item)
 
-    # 推 mock 目录：knowledge-base/exams/mock/<subject>/beijing/<slug>.yaml
-    repo_root = out_dir
-    while repo_root.parent != repo_root:
-        if (repo_root / "knowledge-base").is_dir():
-            break
-        repo_root = repo_root.parent
-    mock_dir = repo_root / "knowledge-base" / "exams" / "mock" / subject / "beijing"
+    # 推 mock 目录（repo_root 已在上面 merge qc 段定位）
+    mock_dir = _yaml_path_pre.parent
     mock_dir.mkdir(parents=True, exist_ok=True)
-    yaml_path = mock_dir / f"{slug}.yaml"
+    yaml_path = _yaml_path_pre
 
     # figures 复制到 yaml 同级目录
     yaml_figs_dir = mock_dir / slug / "figures"

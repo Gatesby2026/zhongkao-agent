@@ -498,15 +498,35 @@ function renderCards() {
     body = body.replace(/_{2,}(\d+)_{2,}/g,
       '<span class="cloze-blank">__$1__</span>');
     const qr = pas.q_range ? `Q${pas.q_range[0]}–Q${pas.q_range[1]}` : '';
+    // 英语图片配对题 A 篇：passage.image_options = {A/B/C/D → base64} 共享 4 图
+    let imgOptsHtml = '';
+    if (pas._image_options_b64 && Object.keys(pas._image_options_b64).length) {
+      const tiles = ['A','B','C','D']
+        .filter(k => pas._image_options_b64[k])
+        .map(k => `
+          <div style="display:flex;flex-direction:column;align-items:center;gap:4px">
+            <div style="font-weight:700;color:#3d5af1;font-size:14px">${k}</div>
+            <img src="${pas._image_options_b64[k]}" style="max-width:100%;max-height:200px;border:1px solid #e1e4e8;border-radius:4px;background:#fff;padding:4px;object-fit:contain">
+          </div>`).join('');
+      imgOptsHtml = `
+        <div style="margin-top:12px;background:#fafbfc;border:1px solid #e1e4e8;border-radius:6px;padding:10px">
+          <div style="font-size:12px;color:#666;margin-bottom:8px;font-weight:600">📷 4 张图选项（题目 ${pas.q_range ? pas.q_range[0]+'-'+pas.q_range[1] : ''} 共享）</div>
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px">${tiles}</div>
+        </div>`;
+    }
+    // 单图 figure（如挂源页参考）
+    const figHtml = pas._figure_b64 ?
+      `<div style="margin-top:10px;text-align:center"><img src="${pas._figure_b64}" style="max-width:100%;max-height:480px;border:1px solid #e1e4e8;border-radius:6px;background:#fff;padding:6px"></div>` : '';
+    const hasMedia = pas._figure_b64 || (pas._image_options_b64 && Object.keys(pas._image_options_b64).length);
     card.innerHTML = `
       <div class="passage-header" onclick="this.parentElement.classList.toggle('collapsed')">
         <span class="passage-tag">📖 ${pas.id}</span>
         <span class="passage-type">${escapeHtml(typeLabel)}</span>
         ${qr ? `<span class="passage-range">${qr}</span>` : ''}
-        <span class="passage-info">${(pas.body||'').length} 字</span>
+        <span class="passage-info">${(pas.body||'').length} 字${hasMedia ? ' · 📷' : ''}</span>
         <span class="passage-toggle">▼</span>
       </div>
-      <div class="passage-body">${body}</div>`;
+      <div class="passage-body">${body}${imgOptsHtml}${figHtml}</div>`;
     return card;
   }
 
@@ -592,13 +612,23 @@ function buildCard(p, q, vi) {
         <img src="${q._figure_b64}" style="max-width:100%;max-height:320px;border:1px solid #e1e4e8;border-radius:6px;background:#fff;padding:6px;display:block">
       </div>` : ''}
 
+      ${q.has_image_options && !q.options ? `
+      <div style="font-size:12px;color:#666;background:#fff8dc;padding:6px 10px;border-left:3px solid #d29922;border-radius:0 4px 4px 0">
+        📷 图片选项（A/B/C/D）见上方 passage 卡（共享 4 张图）
+      </div>` : ''}
       ${q.options ? `
       <div>
         <div class="field-label">选项${q.has_image_options ? ' <span style="color:#d29922;font-size:10px">⚠️图片选项</span>' : ''}</div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px 16px">
-          ${Object.entries(q.options).map(([k,v]) =>
-            `<div style="font-size:13px"><span style="font-weight:700;color:#3d5af1;margin-right:6px">${escapeHtml(k)}.</span>${v === '[图]' ? '<span style="color:#aaa;font-style:italic">[图]</span>' : escapeHtml(String(v))}</div>`
-          ).join('')}
+          ${Object.entries(q.options).map(([k,v]) => {
+            const vStr = String(v);
+            // markdown 图选项（![](...)）走 formatText 渲染成 <img>；
+            // 文本选项继续 escapeHtml；"[图]" 旧占位保留 placeholder 样式
+            const valHtml = vStr === '[图]'
+              ? '<span style="color:#aaa;font-style:italic">[图]</span>'
+              : (vStr.startsWith('![](') ? formatText(vStr) : escapeHtml(vStr));
+            return `<div style="font-size:13px"><span style="font-weight:700;color:#3d5af1;margin-right:6px">${escapeHtml(k)}.</span>${valHtml}</div>`;
+          }).join('')}
         </div>
       </div>` : ''}
 

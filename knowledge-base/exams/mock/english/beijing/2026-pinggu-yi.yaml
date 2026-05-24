@@ -1,806 +1,1110 @@
-# ============================================================
-# 2026年北京平谷区一模英语 — 自动生成
-# ============================================================
-# 流水线：gaokzx OCR + Qwen-VL-OCR + qwen-max enrich
-# 满分: 0 分 时长: 0 分钟
-
 year: 2026
 district: 平谷区
 exam_type: 一模
-subject: 英语
-full_score: 0
-duration_minutes: 0
-total_questions: 37
-structure: 33单选(40.0分) + 4解答(10分)
+subject: english
+full_score: 60.0
+duration_minutes: 90
+total_questions: 38
+passages:
+- body: 'Making Another Kid''s Day It was the day after New Year''s. The air smelled of joy and laughter. My mom took me to Chuck E. Cheese''s, my favorite place to play games.
+
+    口 口口 the joystick It was the day after New Year''s. The air touched seemed to pour out tickets like a waterfall -red, blue, and yellow ones growing in my put in a token hands. I kept putting them into
+    my pocket, and I felt like a(n) ___13___.
+
+    a claw machine Then I saw a claw machine in the corner. A little boy, maybe seven years old, was pulling the joystick with all his strength. His dad stood behind him, cheering softly. The boy''s face
+    was full of ___14___, like that toy was all he cared about. He put in a token and moved the joystick carefully. The claw dropped, catching a small toy bear. Yes! But just as it lifted, the claw let
+    go, and the bear fell back down. The boy''s smile ___15___ .
+
+    “That’s okay,” his dad encouraged him gently. “Try again.”
+
+    The boy put in another token. This time, the claw missed completely. His shoulders dropped. One more token, and the claw caught a toy, but halfway up, it stopped and the toy fell. To make things ___16___,
+    his tickets got stuck inside the machine.
+
+    The boy''s eyes filled with tears. His father tried to help, but there was nothing he could do. The boy looked so disappointed, as if his whole day was broken.
+
+    I stood there watching him. At that moment, I realized I could use my own ___17___ to help him and give him a Kid''s Day.
+
+    I walked over and said, “Hey!” He looked up. I counted out twenty of my own red tickets.
+
+    “These are for you,” I said.“They’re for the tickets you lost.”
+
+    The boy''s eyes ___18___ in surprise.
+
+    “Really?” he asked quietly.
+
+    “Really,” I answered. “Everyone has hard times, but you''re so brave and you deserve to(应得的) have a good time.” He took the tickets ___19___, and his face lit up with a big smile. He turned to his dad
+    and shouted,“Dad! Look!”
+
+    He ran to the prize counter, holding the tickets high. His dad smiled and said, “Thank you. You made his holiday.”
+
+    I watched him pick out a small toy car. He waved at me, and I waved back.
+
+    My mom said,“That was very kind.”
+
+    I smiled. Making others happy gave me more joy than any prize. A small act of ___20___ can brighten anyone''s day.'
+  type: cloze
+  q_range:
+  - 13
+  - 20
+  id: cloze
+- id: reading_A
+  type: reading
+  body: 阅读下列体育活动介绍，请根据人物需求选择最适合的运动项目，并将运
+  q_range:
+  - 21
+  - 23
+  image_options:
+    A: 2026-pinggu-yi/figures/passage-reading_A-opt-A.png
+    B: 2026-pinggu-yi/figures/passage-reading_A-opt-B.png
+    C: 2026-pinggu-yi/figures/passage-reading_A-opt-C.png
+    D: 2026-pinggu-yi/figures/passage-reading_A-opt-D.png
+- id: reading_B
+  type: reading
+  body: 'I grew up in a small town called Palmerston, Ontario. My parents had a small store, and we lived a simple life. In high school, I dreamed of working in TV. But when I talked to a school advisor,
+    she told me I could only be a nurse, a teacher, or a hairdresser. I was too shy to tell anyone about my real dream-except my parents. They always said,“You can do anything you want."
+
+    With their support, I applied for(申请) the radio and TV program at Ryerson University in Toronto. I was accepted and graduated as the best student. But finding a job was not easy. CBC and CTV both said
+    NO to me because I had no experience.
+
+    Then I heard that Global Television was just starting. I made a brave decision. I found the name of the president and decided to call him directly. My heart was beating fast, but I practiced what I
+    would say. When he answered the phone, I politely asked for a visit to the studio. He was surprised but agreed.
+
+    I chose 11 o''clock for the visit, hoping he might ask me to lunch. Sure enough, after the tour, he did. During the lunch, he asked me directly,“What do you want?” I answered, “All I want is a chance.
+    If there is a job on camera, I want a chance to try. I just want you to know me."
+
+    Three months later, his secretary called. There was a chance to try out for a new game show called Wintario. I went, and everything went well. I got the job at once. That was the start of a 22-year
+    career. I went on to host hundreds of shows, appeared in ads, movies and celebrations, and built a life I had only dreamed of as a teenager.
+
+    Looking back, I learned that dreams don''t come true by waiting. You have to be brave, take risks, and take the first step-even when you are afraid. One phone call changed my life. You never know where
+    your courage will lead you.'
+  q_range:
+  - 24
+  - 26
+- id: reading_C
+  type: reading
+  body: 'When you think of fast animals, cheetahs and falcons may come to mind. But do you know some of the fastest living things on Earth are very small cells? If cells had their own cheetah falcon cell
+    Olympics, who would win the speed game?
+
+    Manu Prakash, a scientist at Stanford University, says the “competitors” won''t show up ready to compete.“We have to go search in puddles and ponds and in the deep ocean,” he says. His team collected
+    information on the speed of different cells to compare them.
+
+    So how do these tiny speeders move? Some fast cells jump or slide across water.
+
+    Others move by waving long, thin parts that look like whips(鞭子), or swim with the help of tiny, hair-like parts. There are also speedy cells that do not move from one place to another but grow bigger
+    or become smaller very quickly, and this makes them special “speed players” too.
+
+    Take spirostomum for example. In Liberia, Prakash saw many white spots in a pond.
+
+    They were not spread out randomly. He took a sample(样本) and found this single-celled creature. It can shrink(缩小) its body faster than any other eukaryote(真核生物)-a living thing whose cells have a nucleus.
+    Why does it shrink so fast? Prakash says it''s part of how it communicates.“It actually talks to other cells... using sound underwater.”
+
+    Another amazing cell is pyrocystis. These algae(水藻)do not swim, but they make a huge journey. Prakash found them deep in the ocean near Hawai''i. They need sunlight to live, but how do they get it?
+    The algae can inflate like a balloon to five times their size and then shrink back down. This allows them to travel about one kilometer up to the sunlit surface. Compared to their size, that is the
+    longest journey on Earth.
+
+    Prakash has found many super-fast cells in different places. These unusual living things help us learn more about the secret of life.“This planet is full of amazing things,” he says.“When we study and
+    compare them, we will find how wonderful life is.”'
+  q_range:
+  - 27
+  - 29
+- id: reading_D
+  type: reading
+  body: 'Imagine you just finished a hard hike to the top of a night mode mountain. The view of the city below is beautiful, and you want to take a photo. But it''s already quite dark, and you''re not sure
+    you''ll get a good shot. Luckily, your phone has an AI night mode. It can take great photos even after sunset.
+
+    Here''s something you may not know: that night mode may have been trained on computer-made nighttime images-scenes that were never actually photographed. This kind of data is called synthetic data.
+
+    Why use synthetic data?
+
+    AI researchers use up all the real data on the internet, so they turn to synthetic data.
+
+    But this creates a problem. In science, making up data is a very bad thing. So how can computer-made data be good? Is it just a nice word for lying?
+
+    As a researcher, I think it comes down to why you do it and how open you are about it. Synthetic data is usually not made to cheat. In fact, using it can be the right thing to do. For example, showing
+    real people''s faces can violate privacy, but computer-made faces offer the same benefits without that risk.
+
+    There are other reasons. Some things are so rare that there isn''t enough real data.
+
+    Instead of letting this become a big problem, researchers create those situations with computers. Also, collecting real data can be costly or dangerous. Imagine collecting data for a self-driving car
+    during a storm. It''s much easier and safer to create such data with computers.
+
+    How is synthetic data made?
+
+    Researchers create synthetic data in two main ways. One method uses physics-based models-for example, using the laws of light to show how a scene would look. The other method uses AI that learns from
+    real data and then creates new, realistic text, images, and videos.
+
+    Is synthetic data perfect?
+
+    Synthetic data is not perfect. It is only as good as the model it comes from.
+
+    Researchers have to be careful about biases-unfair patterns in the data. It is also important to know the difference between computer-made data and the real world. Synthetic data is great for training
+    AI, but the final system should be tested with real data before it is used.
+
+    AI systems learn by finding patterns, but they cannot tell what is real or true. The desire for truth belongs to people, not machines. So next time you use a cool AI feature, remember: synthetic data
+    may have helped train it. But reality is still the final judge of what we create.'
+  q_range:
+  - 30
+  - 33
+- id: express
+  type: reading_express
+  body: '阅读短文，根据短文内容回答问题。
+
+    Can Sleeping Longer on Weekends Help Teens Feel Less Anxious?
+
+    For many teens, Saturday mornings are a time to sleep longer. After a busy week, the weekend offers a chance to catch up on sleep. A new study finds that sleeping a little longer on weekends may help
+    reduce anxiety(焦虑)-but only if teens get less than two extra hours of sleep.
+
+    Sleep is important for the brain and body, especially for teenagers. However, 75 percent of American teens do not get the recommended 8 to 10 hours of sleep each night.
+
+    School and other activities make them wake up early, and their body clocks make it hard to fall asleep before 11 p.m.
+
+    Some past studies suggested that too much weekend sleep might be linked to depression(抑郁).But no one had carefully studied how it relates to anxiety. So researcher Sojeong Kim decided to find out.
+
+    Kim used data from nearly 1,900 teens aged 12 to 15. She looked at their sleep patterns(模式) and their feelings of anxiety. She found that teens who slept in for less than two extra hours on weekends
+    reported the lowest anxiety symptoms. Teens who did not sleep in, or who lost sleep on weekends, had higher anxiety. Those who slept more than two extra hours had the highest anxiety symptoms of all.
+
+    Kim shared her findings at a meeting in 2025. She thinks that big changes between weekday and weekend sleep schedules may cause a problem called“social jet lag”. This happens when the body''s clock
+    does not match the sleep cycle. It can make people feel tired and unfocused.
+
+    Kim did not find a clear link between weekend sleep and depression. That may be because depression usually starts later in adolescence(青春期).Anxiety, however, often begins earlier.
+
+    For now, Kim''s advice for teens is simple: getting a little extra sleep on weekends may help you feel less anxious, but too much may have the opposite effect.'
+  q_range:
+  - 34
+  - 37
 questions:
 - id: 1
   type: 单选
   score: 0.5
-  question: '1. My sister is a teacher. _ works in a middle school.\nA. He \newline]
+  stem: 'My sister is a teacher.
 
-
-    B. She \newline]
-
-    C. It \newline]
-
-    D. They'
+    works in a middle school.'
+  options:
+    A: He
+    B: She
+    C: It
+    D: They
   answer: B
-  solution: ''
+  solution: B
   knowledge_points:
-  - 人称代词（主格/宾格）
-  module: 语法
+  - 代词的使用
+  - 主谓一致
+  module: grammar
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 2
   type: 单选
   score: 0.5
-  question: '2. I plan to climb Yaji Mountain with my friends _ May 2nd this year.\\\nA. at \newline]
-
-
-    B. in \newline]
-
-    C. on \newline]
-
-    D. to'
+  stem: I plan to climb Yaji Mountain with my friends ___ May 2nd this year.
+  options:
+    A: at
+    B: in
+    C: 'on'
+    D: to
   answer: C
-  solution: ''
+  solution: C
   knowledge_points:
-  - 介词的用法
-  module: 语法
+  - 时间介词的使用
+  module: grammar
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 3
   type: 单选
   score: 0.5
-  question: '3. I must go right now, _ I will miss the bus. \\\nA. and \newline]
-
-
-    B. but \newline]
-
-    C. so \newline]
-
-    D. or'
+  stem: I must go right now, ___ I will miss the the bus.
+  options:
+    A: and
+    B: but
+    C: It
+    D: or
   answer: D
-  solution: ''
+  solution: D
   knowledge_points:
-  - 连词的用法
-  module: 语法
+  - 连词的使用
+  module: grammar
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 4
   type: 单选
   score: 0.5
-  question: '4. - Which do you like _, swimming or running? \\\n- Running. \\\nA. well \newline]
+  stem: '-Which do you like ___ _,swimming or running?
 
-
-    B. better \newline]
-
-    C. best \newline]
-
-    D. the best'
+    -Running.'
+  options:
+    A: well
+    B: better
+    C: best
+    D: the best
   answer: B
-  solution: ''
+  solution: B
   knowledge_points:
-  - 形容词比较级和最高级（规则与不规则变化）
-  module: 语法
+  - 形容词和副词的比较级
+  module: grammar
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 5
   type: 单选
   score: 0.5
-  question: '5. - Anne, _ do you go to the library? \\\n- Once a week. \\\nA. how long \newline]
+  stem: '-Anne, ___ do you go to the library?
 
-
-    B. how often \newline]
-
-    C. how soon \newline]
-
-    D. how much'
+    -Once a week.'
+  options:
+    A: how long
+    B: how often
+    C: how soon
+    D: how much
   answer: B
-  solution: ''
+  solution: B
   knowledge_points:
-  - 疑问代词（who/what/which/whose）
-  module: 语法
+  - 频率副词的使用
+  module: grammar
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 6
   type: 单选
   score: 0.5
-  question: '6. - Peter, _ you finish the poster in ten minutes? \\\n- Yes, of course I can. \\\nA. can \newline]
+  stem: '-Peter, ___ you finish the poster in ten minutes?
 
-
-    B. must \newline]
-
-    C. need \newline]
-
-    D. should'
+    -Yes, of course I can.'
+  options:
+    A: can
+    B: must
+    C: need
+    D: should
   answer: A
-  solution: ''
+  solution: A
   knowledge_points:
-  - 情态动词can的基本用法
-  module: 语法
+  - 情态动词的用法
+  module: grammar
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 7
   type: 单选
   score: 0.5
-  question: '7. David _ a picture when his dad got home yesterday evening. \\\nA. draws \newline]
-
-
-    B. will draw \newline]
-
-    C. is drawing \newline]
-
-    D. was drawing'
+  stem: David ___ a picture when his dad got home yesterday evening.
+  options:
+    A: draws
+    B: will draw
+    C: is drawing
+    D: was drawing
   answer: D
-  solution: ''
+  solution: D
   knowledge_points:
-  - 时态（过去进行时）
-  module: 语法
+  - 时态-过去进行时
+  module: grammar
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 8
   type: 单选
   score: 0.5
-  question: '8. - What did you do last Sunday? \\\n- I _ to enjoy the peach flowers with my family. \\\nA. go \newline]
+  stem: '-What did you do last Sunday?
 
-
-    B. goes \newline]
-
-    C. went \newline]
-
-    D. will go'
+    -I ___ to enjoy the peach flowers with my family.'
+  options:
+    A: go
+    B: goes
+    C: went
+    D: will go
   answer: C
-  solution: ''
+  solution: C
   knowledge_points:
-  - 动词的时态（一般过去时）
-  module: 语法
+  - 时态-一般过去时
+  module: grammar
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 9
   type: 单选
   score: 0.5
-  question: '9. My uncle _ in Beijing since he graduated from university. \\\nA. lives \newline]
+  stem: My uncle ___ in Beijing since he graduated from university.
+  options:
+    A: lives
+    B: lived
+    C: will live
+    D: 'has lived
 
-
-    B. lived \newline]
-
-    C. will live \newline]
-
-    D. has lived'
+      第1'
   answer: D
-  solution: ''
+  solution: D
   knowledge_points:
-  - 现在完成时的用法
-  module: 语法
+  - 现在完成时
+  module: grammar
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 10
   type: 单选
   score: 0.5
-  question: '10. — Where is your little sister? — Oh, she _ with water in the bathroom. \\\nA. plays \newline]
+  stem: '-Where is your little sister?
 
-
-    B. played \newline]
-
-    C. is playing \newline]
-
-    D. will play'
+    -Oh, she ___ with water in the bathroom.'
+  options:
+    A: plays
+    B: played
+    C: is playing
+    D: will play
   answer: C
-  solution: ''
+  solution: C
   knowledge_points:
-  - 现在进行时的用法
-  module: 语法
+  - 现在进行时
+  module: grammar
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 11
   type: 单选
   score: 0.5
-  question: '11. In this factory, most of the work _ by robots now. \\\nA. does \newline]
-
-
-    B. did \newline]
-
-    C. is done \newline]
-
-    D. was done'
-  answer: A
-  solution: ''
+  stem: In this factory, most of the work ___ by robots now.
+  options:
+    A: does
+    B: did
+    C: is done
+    D: was done
+  answer: C
+  solution: C
   knowledge_points:
-  - 被动语态的用法
-  module: 语法
+  - 被动语态
+  module: grammar
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 12
   type: 单选
   score: 0.5
-  question: '12. — Could you tell me _ the school trip to Beijing Science and Technology Museum? — Next Wednesday. \\\nA. when we will have \newline]
+  stem: '- Could you tell me ___ the school trip to Beijing Science and Technology Museum?
 
+    -Next Wednesday.'
+  options:
+    A: when we will have
+    B: when will we have
+    C: when we had
+    D: when did we have
+  answer: A
+  solution: 'A
 
-    B. when will we have \newline]
-
-    C. when did we have \newline]
-
-    D. when did we have'
-  answer: C
-  solution: ''
+    二完形填空8分(1X8)'
   knowledge_points:
-  - 疑问代词（who/what/which/whose）
   - 宾语从句
-  module: 语法
+  - 时态
+  module: grammar
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 13
-  type: 单选
+  type: 完形
   score: 1
-  question: '13.
-
-    A. artist \newline]
-
-
-    B. owner \newline]
-
-    C. player \newline]
-
-    D. champion'
+  stem: ''
+  options:
+    A: artist
+    B: owner
+    C: player
+    D: champion
   answer: D
-  solution: ''
+  solution: D
   knowledge_points:
-  - 课标1600词的拼写与基本词义
-  - 词汇的一词多义与词义辨析
-  module: 词汇
+  - 词汇辨析
+  module: vocabulary
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 14
-  type: 单选
+  type: 完形
   score: 1
-  question: '14.
-
-    A. worry \newline]
-
-
-    B. surprise \newline]
-
-    C. excitement \newline]
-
-    D. competition'
+  stem: ''
+  options:
+    A: worry
+    B: surprise
+    C: excitement
+    D: competition
   answer: C
-  solution: ''
+  solution: C
   knowledge_points:
-  - 词汇的一词多义与词义辨析
-  module: 词汇
+  - 词汇辨析
+  module: vocabulary
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 15
-  type: 单选
+  type: 完形
   score: 1
-  question: '15.
-
-    A. showed \newline]
-
-
-    B. spread \newline]
-
-    C. remained \newline]
-
-    D. disappeared'
+  stem: ''
+  options:
+    A: showed
+    B: spread
+    C: remained
+    D: disappeared
   answer: D
-  solution: ''
+  solution: D
   knowledge_points:
-  - 词汇的一词多义与词义辨析
-  module: 词汇
+  - 词汇辨析
+  module: vocabulary
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 16
-  type: 单选
+  type: 完形
   score: 1
-  question: '16.
-
-    A. cooler \newline]
-
-
-    B. worse \newline]
-
-    C. easier \newline]
-
-    D. faster'
+  stem: ''
+  options:
+    A: cooler
+    B: worse
+    C: easier
+    D: faster
   answer: B
-  solution: ''
+  solution: B
   knowledge_points:
-  - 形容词比较级和最高级（规则与不规则变化）
-  module: 语法
+  - 形容词比较级
+  module: grammar
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 17
-  type: 单选
+  type: 完形
   score: 1
-  question: '17.
-
-    A. toys \newline]
-
-
-    B. tickets \newline]
-
-    C. snacks \newline]
-
-    D. cards'
+  stem: ''
+  options:
+    A: toys
+    B: tickets
+    C: snacks
+    D: cards
   answer: B
-  solution: ''
+  solution: B
   knowledge_points:
-  - 课标1600词的拼写与基本词义
-  module: 词汇
+  - 词汇识别与应用
+  module: vocabulary
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 18
-  type: 单选
+  type: 完形
   score: 1
-  question: '18.
-
-    A. widened \newline]
-
-
-    B. softened \newline]
-
-    C. brightened \newline]
-
-    D. moved'
+  stem: ''
+  options:
+    A: widened
+    B: softened
+    C: brightened
+    D: moved
   answer: A
-  solution: ''
+  solution: A
   knowledge_points:
-  - 词汇的一词多义与词义辨析
-  module: 词汇
+  - 词汇辨析
+  module: vocabulary
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 19
-  type: 单选
+  type: 完形
   score: 1
-  question: '19.
-
-    A. quietly \newline]
-
-
-    B. luckily \newline]
-
-    C. happily \newline]
-
-    D. nervously'
+  stem: ''
+  options:
+    A: quietly
+    B: luckily
+    C: happily
+    D: nervously
   answer: C
-  solution: ''
+  solution: C
   knowledge_points:
-  - 词汇的一词多义与词义辨析
-  module: 词汇
+  - 词汇运用
+  module: vocabulary
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 20
-  type: 单选
+  type: 完形
   score: 1
-  question: '20.
-
-    A. fitness \newline]
-
-
-    B. kindness \newline]
-
-    C. shyness \newline]
-
-    D. carelessness'
+  stem: ''
+  options:
+    A: fitness
+    B: kindness
+    C: shyness
+    D: carelessness
   answer: B
-  solution: ''
+  solution: 'B
+
+    三阅读理解26分(2X13)'
   knowledge_points:
-  - 词汇的一词多义与词义辨析
-  module: 词汇
+  - 词汇辨析
+  module: vocabulary
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 21
-  type: 单选
+  type: 阅读
   score: 2
-  question: 21. Xiaoyu I chose volleyball passing because I think volleyball is easy to practice on the playground and fun. I practice it for 30 minutes every day after school.
+  stem: I chose volleyball passing because I think volleyball is easy to practice on the playground and fun. I practice it for 30 minutes every day after school.
+  has_image_options: true
   answer: C
-  solution: ''
+  solution: C
   knowledge_points:
-  - 课标1600词的拼写与基本词义
-  - 常用词组和固定搭配（约300个）
-  module: 词汇
+  - 阅读理解
+  - 词汇运用
+  module: reading
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 22
-  type: 单选
+  type: 阅读
   score: 2
-  question: 22. Jin Hao I chose long jump. Because it is easy to practice. I can do it at home, in the park, or anywhere. My best record is 2.6 meters. My PE teacher said I did a great job.
+  stem: I chose long jump. Because it is easy to practice. I can do it at home, in the park, or anywhere. My best record is 2.6 meters. My PE teacher said I did a great job. (Xiaoyu)
+  has_image_options: true
   answer: B
-  solution: ''
+  solution: B
   knowledge_points:
-  - 课标1600词的拼写与基本词义
-  - 常用词组和固定搭配（约300个）
-  module: 词汇
+  - 阅读理解
+  - 词汇运用
+  module: reading
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 23
-  type: 单选
+  type: 阅读
   score: 2
-  question: 23. Lisa I chose playing badminton because it's my favourite sport. I have trained for three years, and this consistent practice has not only improved my skills but also taught me discipline
-    and resilience(自律和坚韧).
+  stem: I chose playing badminton because it's my favourite sport. I have trained for three years, and this consistent practice has not only improved my skills but also taught me discipline and resilience(自律和坚韧).
+    (Lisa)
+  has_image_options: true
   answer: D
-  solution: ''
+  solution: D
   knowledge_points:
-  - 词汇的一词多义与词义辨析
-  - 常用词组和固定搭配（约300个）
-  module: 词汇
+  - 阅读理解
+  - 词汇运用
+  module: reading
   difficulty: 中等
   recommended_for:
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 24
-  type: 单选
+  type: 阅读
   score: 2
-  question: '24. How did the writer feel when she called the president of Global Television? \\\nA. Relaxed. \newline]
-
-
-    B. Nervous. \newline]
-
-    C. Excited. \newline]
-
-    D. Bored.'
+  stem: How did the writer feel when she called the president of Global Television?
+  options:
+    A: Relaxed
+    B: Nervous
+    C: Excited
+    D: Bored
   answer: B
-  solution: ''
+  solution: B
   knowledge_points:
-  - 词汇的一词多义与词义辨析
-  - 理解语境中的情感表达
-  module: 词汇
-  difficulty: 中等
+  - 阅读理解
+  - 情感态度词汇
+  module: reading
+  difficulty: 基础
   recommended_for:
+  - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 25
-  type: 单选
+  type: 阅读
   score: 2
-  question: '25. What happened to the writer after she made the phone call? \\\nA. She got an on-camera job at once. \newline]
-
-
-    B. She was invited to host a show that day. \newline]
-
-    C. She had a tour and lunch with the president. \newline]
-
-    D. She was told to come back three months later.'
+  stem: What happened to the writer after she made the phone call?
+  options:
+    A: She got an on-camera job at once
+    B: She was invited to host a show that day
+    C: She had a tour and lunch with the president
+    D: She was told to come back three months later
   answer: C
-  solution: ''
+  solution: C
   knowledge_points:
   - 阅读理解
-  - 词汇的一词多义与词义辨析
-  module: 语言技能
+  - 细节理解
+  module: reading
   difficulty: 中等
   recommended_for:
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 26
-  type: 单选
+  type: 阅读
   score: 2
-  question: '26. What can we learn from the writer''s experience? \\\nA. Don''t take any risks in life. \newline]
-
-
-    B. Don''t give up your dreams easily. \newline]
-
-    C. Don''t blindly follow others'' advice. \newline]
-
-    D. Don''t make friends with strict people.'
+  stem: What can we learn from the writer's experience?
+  options:
+    A: Don't take any risks in life
+    B: Don't give up your dreams easily
+    C: Don't blindly follow others' advice
+    D: Don't make friends with strict people
   answer: B
-  solution: ''
+  solution: B
   knowledge_points:
-  - 词汇的一词多义与词义辨析
   - 阅读理解
-  module: 语言知识
+  - 推断作者意图
+  module: reading
   difficulty: 中等
   recommended_for:
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 27
-  type: 单选
+  type: 阅读
   score: 2
-  question: '27. Where did Manu Prakash find the fast cells? \\\nA. In rivers and cities. \newline]
-
-
-    B. In space and other planets. \newline]
-
-    C. In high mountains and forests. \newline]
-
-    D. In puddles, ponds and the deep ocean.'
+  stem: Where did Manu Prakash find the fast cells?
+  options:
+    A: In rivers and cities
+    B: In space and other planets
+    C: In high mountains and forests
+    D: In puddles, ponds and the deep ocean
   answer: D
-  solution: ''
+  solution: D
   knowledge_points:
-  - 课标1600词的拼写与基本词义
-  - 常用词组和固定搭配（约300个）
-  module: 词汇
+  - 阅读理解
+  - 细节理解
+  module: reading
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 28
-  type: 单选
+  type: 阅读
   score: 2
-  question: '28. What does the word “inflate” in Paragraph 5 most likely mean? \\\nA. blow up \newline]
-
-
-    B. take off \newline]
-
-    C. calm down \newline]
-
-    D. break down'
+  stem: What does the word“inflate” in Paragraph 5 most likely mean?
+  options:
+    A: blow up
+    B: take off
+    C: calm down
+    D: break down
   answer: A
-  solution: ''
+  solution: A
   knowledge_points:
-  - 词汇的一词多义与词义辨析
-  module: 词汇
+  - 词汇理解
+  - 上下文推断
+  module: vocabulary
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 29
+  type: 阅读
+  score: 2
+  stem: What can we learn about the“speed” of cells from the passage?
+  options:
+    A: It is measured by how fast a cell moves from one place to another
+    B: It can be understood in different ways, including changes in a cell's size
+    C: It mainly depends on a cell's ability to swim using whips or hair-like parts
+    D: It has been fully studied by scientists like Manu Prakash around the world
+  answer: B
+  solution: B
+  knowledge_points:
+  - 阅读理解
+  - 词汇理解
+  module: reading
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 30
+  type: 阅读
+  score: 2
+  stem: 'Why does the writer begin the passage with the example of taking a photo on a dark
+
+    mountain top?'
+  options:
+    A: To explain how AI night mode works in detail
+    B: To show that hiking is a popular outdoor activity
+    C: To lead into the topic of synthetic data used in AI training
+    D: To prove that phone cameras are better than professional ones
+  answer: C
+  solution: C
+  knowledge_points:
+  - 阅读理解
+  - 推理判断
+  module: reading
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 31
+  type: 阅读
+  score: 2
+  stem: What is synthetic data according to the passage?
+  options:
+    A: Information stored in AI night modes
+    B: Data collected from real-life situations
+    C: Man-made data used to train AI systems
+    D: Real photos taken by phones in dark places
+  answer: C
+  solution: C
+  knowledge_points:
+  - 阅读理解
+  - 词汇
+  module: reading
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
-- id: 29
-  type: 单选
-  score: 2
-  question: '29. What can we learn about the “speed” of cells from the passage? \\\nA. It is measured by how fast a cell moves from one place to another. \newline]
-
-
-    B. It can be understood in different ways, including changes in a cell’s size. \newline]
-
-    C. It mainly depends on a cell’s ability to swim using whips or hair-like parts. \newline]
-
-    D. It has been fully studied by scientists like Manu Prakash around the world.'
-  answer: B
-  solution: ''
-  knowledge_points:
-  - 词汇的一词多义与词义辨析
-  - 阅读理解
-  module: 语言知识
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
-- id: 30
-  type: 单选
-  score: 2
-  question: '30. Why does the writer begin the passage with the example of taking a photo on a dark mountain top? \\\nA. To explain how AI night mode works in detail. \newline]
-
-
-    B. To show that hiking is a popular outdoor activity. \newline]
-
-    C. To lead into the topic of synthetic data used in AI training. \newline]
-
-    D. To prove that phone cameras are better than professional ones.'
-  answer: C
-  solution: ''
-  knowledge_points:
-  - 阅读理解
-  - 词汇的一词多义与词义辨析
-  module: 语言技能
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
-- id: 31
-  type: 单选
-  score: 2
-  question: '31. What is synthetic data according to the passage? \\\nA. Information stored in AI night modes. \newline]
-
-
-    B. Data collected from real-life situations. \newline]
-
-    C. Man-made data used to train AI systems. \newline]
-
-    D. Real photos taken by phones in dark places.'
-  answer: C
-  solution: ''
-  knowledge_points:
-  - 词汇的一词多义与词义辨析
-  - 阅读理解
-  module: 语言知识
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
+  qc_status: draft
+  qc_note: ''
 - id: 32
-  type: 单选
+  type: 阅读
   score: 2
-  question: '32. How does the writer mainly support his opinion about synthetic data? \\\nA. By arguing real data is bad. \newline]
-
-
-    B. By showing its uses and limits. \newline]
-
-    C. By listing AI models using it. \newline]
-
-    D. By comparing it with real data.'
+  stem: How does the writer mainly support his opinion about synthetic data?
+  options:
+    A: By arguing real data is bad
+    B: By showing its uses and limits
+    C: By listing AI models using it
+    D: By comparing it with real data
   answer: B
-  solution: ''
+  solution: B
   knowledge_points:
   - 阅读理解
-  - 信息提取与归纳
-  module: 语言技能
+  - 论点支持方式
+  module: reading
   difficulty: 中等
   recommended_for:
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 33
-  type: 单选
+  type: 阅读
   score: 2
-  question: '33. Which of the following is the best title for the passage? \\\nA. Why AI Will Soon Replace Human Judgment \newline]
+  stem: Which of the following is the best title for the passage?
+  options:
+    A: Why AI Will Soon Replace Human Judgment
+    B: The Privacy Problems of Using Real Face Data
+    C: How AI Night Mode Helps You Take Photos in the Dark
+    D: 'Synthetic Data Is Useful but Still Needs Real-World Checks
 
+      第二部分
 
-    B. The Privacy Problems of Using Real Face Data \newline]
-
-    C. How AI Night Mode Helps You Take Photos in the Dark \newline]
-
-    D. Synthetic Data Is Useful but Still Needs Real-World Checks'
+      本部分共5题，共20分。根据题目要求，完成相应任务。'
   answer: D
-  solution: ''
+  solution: 'D
+
+    四阅读表达(34-36题每题 2分,37题4分,共10分)'
   knowledge_points:
   - 阅读理解
-  - 词汇的一词多义与词义辨析
-  module: 语言技能
+  - 文章标题选择
+  module: reading
   difficulty: 中等
   recommended_for:
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 34
-  type: 解答
-  score: 2
-  question: 34. What is important for teenagers’ brain and body according to the passage?
-  answer: Sleep is important for the brain and body, especially for teenagers.
+  type: 阅读表达
+  score: 2.0
+  stem: What is important for teenagers' brain and body according to the passage?
+  answer: ''
   solution: Sleep is important for the brain and body, especially for teenagers.
   knowledge_points:
-  - 词汇的一词多义与词义辨析
   - 阅读理解
-  module: 语言知识
+  - 信息提取
+  module: reading
   difficulty: 中等
   recommended_for:
   - L1
   - L2
   - L3
+  qc_status: needs_review
+  qc_note: 选择题缺少 options（既无文本也无图片选项）；选择题 answer 为空
 - id: 35
-  type: 解答
-  score: 2
-  question: 35. What problem may be caused by big changes between weekday and weekend sleep schedules?
-  answer: A problem called 'social jet lag'
-  solution: A problem called 'social jet lag'
+  type: 阅读表达
+  score: 2.0
+  stem: 'What problem may be caused by big changes between weekday and weekend sleep
+
+    schedules?'
+  answer: A
+  solution: A problem called“social jet lag”
   knowledge_points:
-  - 词汇的一词多义与词义辨析
   - 阅读理解
-  module: 语言知识
+  - 词汇运用
+  module: reading
   difficulty: 中等
   recommended_for:
   - L1
   - L2
   - L3
+  qc_status: needs_review
+  qc_note: 选择题缺少 options（既无文本也无图片选项）
 - id: 36
-  type: 解答
-  score: 2
-  question: 36. Why did Kim not find a clear link between weekend sleep and depression?
-  answer: Because depression usually starts later in adolescence.
+  type: 阅读表达
+  score: 2.0
+  stem: Why did Kim not find a clear link between weekend sleep and depression?
+  answer: ''
   solution: Because depression usually starts later in adolescence.
   knowledge_points:
-  - 词汇的一词多义与词义辨析
   - 阅读理解
-  module: 语言知识
+  - 信息提取
+  module: reading
   difficulty: 中等
   recommended_for:
   - L1
   - L2
   - L3
+  qc_status: needs_review
+  qc_note: 选择题缺少 options（既无文本也无图片选项）；选择题 answer 为空
 - id: 37
-  type: 解答
-  score: 4
-  question: 37. Which sleep habit do you prefer on weekends - not sleeping in, sleeping in for less than two extra hours, or sleeping in for more than two extra hours? Why? (Please give two reasons.)
-  answer: 'I like sleeping in for less than two extra hours best.\nReason 1: Because it is important (good) for the brain and body. / It can make me feel relaxed and focused on weekends.. / It can help
-    me form good sleeping habits on weekends.\nReason 2: Because the study shows that this habit helps me(us) reduce anxiety symptoms. / Because Kim says that too much extra sleep may make me feel more
-    worried, and not sleeping in may also cause higher anxiety. / Because a little extra weekend sleep helps reduce worry, but too much has the opposite effect.'
-  solution: 'I like sleeping in for less than two extra hours best.\nReason 1: Because it is important (good) for the brain and body. / It can make me feel relaxed and focused on weekends.. / It can help
-    me form good sleeping habits on weekends.\nReason 2: Because the study shows that this habit helps me(us) reduce anxiety symptoms. / Because Kim says that too much extra sleep may make me feel more
-    worried, and not sleeping in may also cause higher anxiety. / Because a little extra weekend sleep helps reduce worry, but too much has the opposite effect.'
+  type: 阅读表达
+  score: 4.0
+  stem: 'Which sleep habit do you prefer on weekends-not sleeping in, sleeping in for less
+
+    than two extra hours, or sleeping in for more than two extra hours? Why?(Please give
+
+    two reasons.)'
+  answer: ''
+  solution: 'I like sleeping in for less than two extra hours best.
+
+    Reason 1: Because it is important(good) for the brain and body./
+
+    It can make me feel relaxed and focused on weekends../
+
+    It can help me form good sleeping habits on weekends.
+
+    Reason 2:
+
+    Because the study shows that this habit helps me(us) reduce anxiety symptoms./
+
+    Because Kim says that too much extra sleep may make me feel more worried, and not
+
+    sleeping in may also cause higher anxiety./
+
+    Because a little extra weekend sleep helps reduce worry, but too much has the
+
+    opposite effect.
+
+    评分标准:
+
+    34-36题，内容(关键信息点)正确2分。
+
+    37题第一问内容1分，第二问内容2分;整体语言质量1分。'
   knowledge_points:
-  - 词汇的一词多义与词义辨析
-  - 常用词组和固定搭配（约300个）
-  module: 语言知识
+  - 写作-表达观点
+  - 写作-提供理由
+  module: writing
   difficulty: 中等
   recommended_for:
   - L1
   - L2
   - L3
+  qc_status: needs_review
+  qc_note: 选择题缺少 options（既无文本也无图片选项）；选择题 answer 为空
+- id: 38
+  type: 写作
+  score: 10
+  stem: '38.从下面两个题目中任选一题，根据中文和英文提示，完成一篇不少于50词的英
+
+    语文段写作。文中已给出内容不计入总词数。所给提示词语仅供选用。请不要
+
+    写出你的校名和姓名。
+
+    题目①
+
+    假设你是李华，你们班的英语课正在开展研究性学习，你选择研究同学们
+
+    假期活动的情况，为此你对班里40名同学进行了问卷调查，下图是部分统计结
+
+    果。请用英语写一篇短文，简要说明图表内容，并对班级同学参与周末活动提出
+
+    建议。
+
+    What do you usually do on weekends?
+
+    25人
+
+    25
+
+    Number of students
+
+    20
+
+    15
+
+    9人
+
+    10
+
+    6人
+
+    0
+
+    read books
+
+    visit grandparents
+
+    have a trip
+
+    提示词语:spend,interesting,knowledge,instructive,meaningful,make friends with
+
+    提示问题:●What can you learn from the results?
+
+    ● What advice would you give to your classmates about their weekends?
+
+    I did a survey on my classmates'' weekends.
+
+    题目②
+
+    在平谷有一条“仁义胡同”，以邻里礼让的典故而闻名。“让一尺，敬一丈”
+
+    的故事在这里传承。假设你是李华，你校正在开展“文明谦让，和谐校园”活动，
+
+    英语社团公众号打算做一期以“Good Manners”为主题的推送，为此在校内征集
+
+    故事。请你给公众号留言，分享你的文明校园故事;并简要说明这些行为能带来
+
+    哪些好处。
+
+    提示词语:kindness,respect,get on well, be polite,spread
+
+    提示问题:●What good manners do you have?
+
+    ● How can students benefit from them?
+
+    I''m Li Hua from Class 1, Grade 9.'
+  answer: ''
+  solution: __MISSING__
+  knowledge_points:
+  - 写作技能
+  - 图表描述
+  - 建议表达
+  module: writing
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 解题步骤未提取，需补全 solution
+structure: 38单选(60.0分)

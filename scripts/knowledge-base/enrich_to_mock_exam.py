@@ -594,6 +594,32 @@ def _write_yaml(result: dict, out_path: Path,
         if copied:
             print(f"  📷 复制 {copied} 张图片 → {fig_dest_base}/figures/", file=sys.stderr)
 
+    # **合并旧 yaml 的 qc_***（保护人工审核结果不被自动重算清掉）
+    # 历史教训：enrich/parser 都默认写 qc_status='draft', qc_note=''，会覆盖
+    # 用户在 exam-review 工具里手工写的备注。
+    # 规则：
+    #   - old qc_status != 'draft' → 保留旧（用户标的 done/none/needs_review 不动）
+    #   - old qc_note 非空 → 保留旧（用户的备注永远优先于自动生成的）
+    if out_path.exists():
+        try:
+            existing_qc: dict = {}
+            old_doc = yaml.safe_load(out_path.read_text(encoding="utf-8")) or {}
+            for oq in (old_doc.get("questions") or []):
+                qid = oq.get("id")
+                if qid is None: continue
+                existing_qc[qid] = {
+                    "qc_status": oq.get("qc_status", "draft") or "draft",
+                    "qc_note":   oq.get("qc_note", "") or "",
+                }
+            for q in result["questions"]:
+                old = existing_qc.get(q["id"], {})
+                if old.get("qc_status", "draft") != "draft":
+                    q["qc_status"] = old["qc_status"]
+                if old.get("qc_note", ""):
+                    q["qc_note"] = old["qc_note"]
+        except Exception as e:
+            print(f"  ⚠ 读旧 yaml 合并 qc_* 失败（沿用新值）: {e}", file=sys.stderr)
+
     # 统计 qc 摘要
     total = len(result["questions"])
     needs_review = sum(1 for q in result["questions"] if q["qc_status"] == "needs_review")

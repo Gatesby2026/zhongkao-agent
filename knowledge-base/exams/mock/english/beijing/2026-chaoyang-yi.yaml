@@ -2,9 +2,9 @@ year: 2026
 district: 朝阳区
 exam_type: 一模
 subject: english
-full_score: 58.0
+full_score: 60.0
 duration_minutes: 90
-total_questions: 36
+total_questions: 38
 passages:
 - body: 'When I was in Grade 8, my mother suggested that I help a younger student named Riley who had trouble understanding fractions(分数). At first, I wondered whether I could really be helpful, but my
     mother believed the experience would teach me something important as well.
@@ -12,8 +12,8 @@ passages:
     The first time I visited her apartment, Riley sat at the kitchen table with her arms crossed and her head ___13___ away from me. I opened her math textbook and said, “Alright, Riley. Let''s try some
     problems together.” Riley looked at me impatiently and said,“Why should I learn this? I''ll probably just work at my uncle''s restaurant someday."
 
-    (共10页) Her words surprised me. In my family, education had always been considered very important. Still, I realized that simply telling her this would not ___14___ her mind. Maybe Riley needed something
-    different from the textbook.
+    Her words surprised me. In my family, education had always been considered very important. Still, I realized that simply telling her this would not ___14___ her mind. Maybe Riley needed something different
+    from the textbook.
 
     That evening, I thought about Riley''s words. Maybe not everything we learn is very important. Still, I realized that simply telling her this would not ___14___ her to her home. Riley was sitting quietly,
     holding a small notebook. I smiled ___15___ and asked her if she wanted to try a new way of learning.
@@ -32,24 +32,25 @@ passages:
   type: cloze
   q_range:
   - 13
-  - 18
+  - 20
   id: cloze
-- id: reading_21
+- id: reading_A
   type: reading
-  body: '配最适合的图片，并将图片所对应的选项(A、B、C、D)填在相应位置上。
+  body: '下列每个图片代表一处科学实践活动场景，请根据人物意愿和喜好匹 配最适合的图片，并将图片所对应的选项(A、B、C、D)填在相应位置上。
 
-    其中一个选项为多余选项。
-
-    I love the natural world! I want to join the School Plant Watch. I''ll look at different flowers and'
+    其中一个选项为多余选项。'
   q_range:
   - 21
   - 23
-- id: reading_24
+  image_options:
+    A: 2026-chaoyang-yi/figures/passage-reading_A-opt-A.png
+    B: 2026-chaoyang-yi/figures/passage-reading_A-opt-B.png
+    C: 2026-chaoyang-yi/figures/passage-reading_A-opt-C.png
+    D: 2026-chaoyang-yi/figures/passage-reading_A-opt-D.png
+- id: reading_B
   type: reading
-  body: '四个选项中，选择最佳选项。
-
-    “Dear Daddy” Notes My father was the gentlest and most caring dad in the world. But when we argued, he became strict and never considered that there could be another side. My words seemed to reach no
-    one because his ears were closed. I could never win.
+  body: '“Dear Daddy” Notes My father was the gentlest and most caring dad in the world. But when we argued, he became strict and never considered that there could be another side. My words seemed to reach
+    no one because his ears were closed. I could never win.
 
     When my father refused to understand that I needed privacy for my phone, I felt frustrated(沮丧的) and even cried. When he noticed I was trying to explain my reason for not wearing uniforms to school in
     junior high, he ended our“discussion” leaving me silently sad. Later, when he refused to let me go on my last-year class trip to Montreal, I could do nothing but run out of his room in great sadness.
@@ -69,7 +70,7 @@ passages:
   q_range:
   - 24
   - 26
-- id: reading_27
+- id: reading_C
   type: reading
   body: 'Many people think that eating a fruit in summer has the same effect on your body as eating it in winter. However, new research shows a different result.
 
@@ -94,7 +95,7 @@ passages:
   q_range:
   - 27
   - 29
-- id: reading_30
+- id: reading_D
   type: reading
   body: 'A large body of research has been developed in recent years to explain willpower. Most of the researchers exploring self-control do so with a clear goal in mind: How can willpower be improved?
     If willpower is truly easily used up, as the research suggests, what can be done to keep it strong?
@@ -162,9 +163,15 @@ questions:
     D: their
   answer: C
   solution: C
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 代词的使用
+  module: grammar
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: none
   qc_note: 大幅度发
 - id: 2
@@ -178,9 +185,15 @@ questions:
     D: for
   answer: D
   solution: D
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 介词的使用
+  module: grammar
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 3
@@ -196,9 +209,15 @@ questions:
     D: should
   answer: A
   solution: A
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 情态动词的用法
+  module: grammar
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 4
@@ -212,9 +231,15 @@ questions:
     D: the most confident
   answer: B
   solution: B
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 形容词比较级
+  module: grammar
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 5
@@ -227,12 +252,19 @@ questions:
     A: how
     B: why
     C: when
+    D: where
   answer: B
   solution: B
-  knowledge_points: []
-  module: ''
-  difficulty: ''
-  qc_status: draft
+  knowledge_points:
+  - 疑问词的使用
+  module: grammar
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: none
   qc_note: ''
 - id: 6
   type: 单选
@@ -245,9 +277,15 @@ questions:
     D: so
   answer: A
   solution: A
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 连词的使用
+  module: grammar
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 7
@@ -261,9 +299,15 @@ questions:
     D: was learning
   answer: D
   solution: D
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 过去进行时
+  module: grammar
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 8
@@ -277,9 +321,15 @@ questions:
     D: will work
   answer: A
   solution: A
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 时态-一般现在时
+  module: grammar
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 9
@@ -293,9 +343,15 @@ questions:
     D: are experiencing
   answer: B
   solution: B
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 时态-一般过去时
+  module: grammar
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 10
@@ -309,9 +365,15 @@ questions:
     D: will change
   answer: C
   solution: C
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 现在完成时的用法
+  module: grammar
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 11
@@ -327,9 +389,15 @@ questions:
     D: were shown
   answer: D
   solution: D
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 被动语态
+  - 一般过去时
+  module: grammar
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 12
@@ -338,11 +406,23 @@ questions:
   stem: '-Peter, do you know ___ _?
 
     -Yes. It will land on the southern area of the moon.'
+  options:
+    A: where will the Chang'e-7 land
+    B: when the Chang'e-7 will land
+    C: where the Chang'e-7 will land
+    D: when will the Chang'e-7 land
   answer: C
   solution: C
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 宾语从句
+  - 疑问词引导的宾语从句
+  module: grammar
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 13
@@ -354,14 +434,18 @@ questions:
     B: turned
     C: took
     D: gave
-  passage_id: cloze
-  blank_index: 1
   answer: B
   solution: B
-  knowledge_points: []
-  module: ''
-  difficulty: ''
-  qc_status: draft
+  knowledge_points:
+  - 动词的使用
+  module: vocabulary
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: none
   qc_note: ''
 - id: 14
   type: 完形
@@ -372,13 +456,17 @@ questions:
     B: read
     C: lose
     D: open
-  passage_id: cloze
-  blank_index: 2
   answer: A
   solution: A
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 词汇辨析
+  module: vocabulary
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 15
@@ -390,13 +478,17 @@ questions:
     B: carefully
     C: nervously
     D: softly
-  passage_id: cloze
-  blank_index: 3
   answer: D
   solution: D
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 词汇运用
+  module: vocabulary
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 16
@@ -408,13 +500,17 @@ questions:
     B: uncertain
     C: fearful
     D: satisfied
-  passage_id: cloze
-  blank_index: 4
   answer: B
   solution: B
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 词汇理解与运用
+  module: vocabulary
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 17
@@ -426,13 +522,17 @@ questions:
     B: skills
     C: confidence
     D: trust
-  passage_id: cloze
-  blank_index: 5
   answer: C
   solution: C
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 词汇辨析
+  module: vocabulary
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 18
@@ -444,104 +544,167 @@ questions:
     B: question
     C: accept
     D: forget
-  passage_id: cloze
-  blank_index: 6
   answer: C
   solution: C
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 词汇辨析
+  module: vocabulary
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 19
+  type: 完形
+  score: 1
+  stem: ''
+  options:
+    A: Bored
+    B: Moved
+    C: Shocked
+    D: Encouraged
+  answer: D
+  solution: D
+  knowledge_points:
+  - 词汇理解与运用
+  module: vocabulary
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 20
+  type: 完形
+  score: 1
+  stem: ''
+  options:
+    A: lesson
+    B: example
+    C: story
+    D: memory
+  answer: A
+  solution: A
+  knowledge_points:
+  - 词汇识别与理解
+  module: vocabulary
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 21
-  type: 单选
+  type: 阅读
   score: 2
-  stem: 'leaves, take photos of special plants, and help our
-
-    Liu Hao
-
-    science teacher make a school plant guide.
-
-    I''d like to take part in the Star Watching Club. I''ll
-
-    learn to watch stars, recognize well-known star'
-  passage_id: reading_21
+  stem: I love the natural world! I want to join the School Plant Watch. I'll look at different flowers and leaves, take photos of special plants, and help our science teacher make a school plant guide.
+    (Liu Hao)
+  has_image_options: true
   answer: A
   solution: A
-  knowledge_points: []
-  module: ''
-  difficulty: ''
-  qc_status: draft
+  knowledge_points:
+  - 阅读理解
+  - 词汇运用
+  module: reading
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: none
   qc_note: ''
 - id: 22
-  type: 单选
+  type: 阅读
   score: 2
-  stem: 'groups, and write reports about the different shapes
-
-    Lingling
-
-    of the moon for our class newspaper.
-
-    I care about our planet! I want to join the River
-
-    Protection Group. I''ll check the water quality near'
-  passage_id: reading_21
+  stem: I'd like to take part in the Star Watching Club. I'll learn to watch stars, recognize well-known star groups, and write reports about the different shapes of the moon for our class newspaper. (Lingling)
+  has_image_options: true
   answer: C
   solution: C
-  knowledge_points: []
-  module: ''
-  difficulty: ''
-  qc_status: draft
+  knowledge_points:
+  - 阅读理解
+  - 词汇运用
+  module: reading
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: none
   qc_note: ''
 - id: 23
-  type: 单选
+  type: 阅读
   score: 2
-  stem: 'our school, and send my information to scientists to
-
-    Li Wei
-
-    help protect local water.'
-  passage_id: reading_21
+  stem: I care about our planet! I want to join the River Protection Group. I'll check the water quality near our school, and send my information to scientists to help protect local water. (Li Wei)
+  has_image_options: true
   answer: B
   solution: B
-  knowledge_points: []
-  module: ''
-  difficulty: ''
-  qc_status: draft
+  knowledge_points:
+  - 阅读理解
+  - 环境保护相关词汇
+  module: reading
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: none
   qc_note: ''
 - id: 24
-  type: 单选
+  type: 阅读
   score: 2
   stem: How did the writer feel when her father refused her Montreal trip?
   options:
-    A: Nervous. B. Lonely
+    A: Nervous
+    B: Lonely
     C: Disappointed
-  passage_id: reading_24
+    D: Calm
   answer: C
   solution: C
-  knowledge_points: []
-  module: ''
-  difficulty: ''
-  qc_status: draft
+  knowledge_points:
+  - 阅读理解
+  - 情感词汇
+  module: reading
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: none
   qc_note: ''
 - id: 25
-  type: 单选
+  type: 阅读
   score: 2
   stem: What could the“Dear Daddy” notes help the writer do?
   options:
     A: Send messages faster
     B: Avoid meeting her father
     C: Improve her writing skills
-  passage_id: reading_24
+    D: Make her father understand her
   answer: D
   solution: D
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 阅读理解
+  - 文本细节理解
+  module: reading
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 26
-  type: 单选
+  type: 阅读
   score: 2
   stem: What can we learn from the passage?
   options:
@@ -549,48 +712,65 @@ questions:
     B: Reaching agreement is important in argument
     C: Sweet memories often come from heated fights
     D: Children should consider their parents' opinions
-  passage_id: reading_24
   answer: A
   solution: A
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 阅读理解
+  - 推理判断
+  module: reading
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 27
-  type: 单选
+  type: 阅读
   score: 2
   stem: According to the passage, what can we learn about body cycles?
   options:
     A: They have nothing to do with food
     B: They change as the daylight changes
     C: They work together because of the main clock
-  passage_id: reading_27
+    D: They produce chemical substances to control sleep
   answer: B
   solution: B
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 阅读理解
+  - 细节理解
+  module: reading
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 28
-  type: 单选
+  type: 阅读
   score: 2
   stem: Why does the writer mention polyphenols in Paragraph 5?
   options:
     A: To tell readers what polyphenols are in plants
     B: To show all fruits are good for people's health
     C: To advise people to eat more fruit in cold weather
-  passage_id: reading_27
+    D: To explain why out-of-season fruits influence body cycles
   answer: D
   solution: D
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 阅读理解-推理判断
+  - 阅读理解-细节理解
+  module: reading
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 29
-  type: 单选
+  type: 阅读
   score: 2
   stem: What is the passage mainly about?
   options:
@@ -598,132 +778,181 @@ questions:
     B: The ways to keep our body clocks working properly all year round
     C: The relationship between eating seasonal fruits and our body cycles
     D: The reasons why our bodies need different chemicals in different seasons
-  passage_id: reading_27
   answer: C
   solution: C
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 阅读理解
+  - 主旨大意
+  module: reading
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 30
-  type: 单选
+  type: 阅读
   score: 2
   stem: From the studies, we can learn that
   options:
     A: daily activities can keep people's willpower active
     B: willpower is not easily completely used up in daily life
     C: strong wishes are the key to solving willpower problems
-  passage_id: reading_30
+    D: people can improve their willpower by controlling themselves less
   answer: B
   solution: B
-  knowledge_points: []
-  module: ''
-  difficulty: ''
-  qc_status: draft
-  qc_note: ''
+  knowledge_points:
+  - 阅读理解
+  - 推理判断
+  module: reading
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: none
+  qc_note: (共10页) -- 对应Passage里多了。2、题干是怎么回事？应该
 - id: 31
-  type: 单选
+  type: 阅读
   score: 2
   stem: What does the phrase“tap into” in Paragraph 3 most probably mean?
   options:
     A: Set up
     B: Take up
     C: Run out of
-  passage_id: reading_30
+    D: Make use of
   answer: D
   solution: D
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 词汇理解
+  - 上下文推断
+  module: vocabulary
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 32
-  type: 单选
+  type: 阅读
   score: 2
   stem: To form a good habit, which of the following does the writer prefer?
   options:
     A: Focusing on one goal before moving on to another
     B: Preparing a long list of decisions on New Year's Eve
     C: Trying different plans to develop healthy daily habits
-  passage_id: reading_30
+    D: Carrying out several lifestyle changes at the same time
   answer: A
   solution: A
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 阅读理解
+  - 细节理解
+  module: reading
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 33
-  type: 单选
+  type: 阅读
   score: 2
   stem: What is the writer's main purpose in writing this passage?
   options:
     A: To offer advice on how to improve and keep willpower
     B: To explain why people's willpower becomes weak easily
     C: To show how to avoid different kinds of daily temptations
-  passage_id: reading_30
+    D: 'To discuss the problems caused by poor self-control in life.
+
+      第二部分
+
+      本部分共5题，共20分。根据题目要求，完成相应任务。'
   answer: A
   solution: A
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 阅读理解-主旨大意
+  module: reading
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 34
-  type: 写作
-  score: 2
+  type: 阅读表达
+  score: 2.0
   stem: What can create long-lasting changes?
-  passage_id: express
   answer: ''
   solution: Small actions that are done regularly.
-  knowledge_points: []
-  module: ''
-  difficulty: ''
-  qc_status: draft
-  qc_note: ''
+  knowledge_points:
+  - 语篇理解
+  - 词汇运用
+  module: reading
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 选择题缺少 options（既无文本也无图片选项）；选择题 answer 为空
 - id: 35
-  type: 写作
-  score: 2
+  type: 阅读表达
+  score: 2.0
   stem: What kind of habits are easy to stick to?
-  passage_id: express
   answer: ''
   solution: Easy and enjoyable.
-  knowledge_points: []
-  module: ''
-  difficulty: ''
-  qc_status: draft
-  qc_note: ''
+  knowledge_points:
+  - vocabulary related to habits and routines
+  module: vocabulary
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 选择题缺少 options（既无文本也无图片选项）；选择题 answer 为空
 - id: 36
-  type: 写作
-  score: 2
+  type: 阅读表达
+  score: 2.0
   stem: Why are these changes likely to last?
-  passage_id: express
   answer: ''
   solution: 'Because they come from doing the same things again and again, not from a short time of
 
     hard work.'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
-  qc_status: draft
-  qc_note: ''
+  knowledge_points:
+  - 阅读理解
+  module: reading
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 选择题缺少 options（既无文本也无图片选项）；选择题 answer 为空
 - id: 37
-  type: 写作
-  score: 4
+  type: 阅读表达
+  score: 4.0
   stem: 'What small habit do you have for better health or daily life, and why does it work
 
-    for you?(Please give two reasons.)
-
-    九年级英语试卷第9页(共10页)'
-  passage_id: express
+    for you?(Please give two reasons.)'
   answer: ''
   solution: 略
-  knowledge_points: []
-  module: ''
-  difficulty: ''
-  qc_status: draft
-  qc_note: ''
+  knowledge_points:
+  - 写作表达
+  - 健康与日常生活话题
+  module: writing
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: none
+  qc_note: 选择题缺少 options（既无文本也无图片选项）；选择题 answer 为空
 - id: 38
   type: 写作
   score: 10
@@ -765,13 +994,7 @@ questions:
 
     ● What have you learned from the experience?
 
-    I''d like to share my experience of improving myself.
-
-    九年级英语试卷第10页(共10页)
-
-    北京市朝阳区九年级综合练习(一)
-
-    英语试卷'
+    I''d like to share my experience of improving myself.'
   answer: ''
   solution: 'Possible versions:
 
@@ -841,9 +1064,19 @@ questions:
 
     第四档:(0-2分)
 
-    与题目有关内容不多，只是简单拼凑词语，所写内容难以理解。'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
-  qc_status: draft
-  qc_note: ''
+    与题目有关内容不多，只是简单拼凑词语，所写内容难以理解。
+
+    -、单项填空(每题0.5分，共6分)'
+  knowledge_points:
+  - 写作技能
+  - 表达个人观点
+  - 描述经历
+  module: writing
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: none
+  qc_note: 选择题缺少 options（既无文本也无图片选项）；选择题 answer 为空
+structure: 38单选(60.0分)

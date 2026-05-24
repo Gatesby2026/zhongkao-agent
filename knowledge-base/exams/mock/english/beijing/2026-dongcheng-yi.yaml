@@ -1,894 +1,1085 @@
-# ============================================================
-# 2026年北京东城区一模英语 — 自动生成
-# ============================================================
-# 流水线：gaokzx OCR + Qwen-VL-OCR + qwen-max enrich
-# 满分: 0 分 时长: 0 分钟
-
 year: 2026
 district: 东城区
 exam_type: 一模
-subject: 英语
-full_score: 0
-duration_minutes: 0
+subject: english
+full_score: 60.0
+duration_minutes: 90
 total_questions: 38
-structure: 33单选(66分) + 5解答(10分)
+passages:
+- body: 'We pulled into the parking lot of a fast-food restaurant in our town.
+
+    “Do you think Leo will remember me?” my fourteen-year-old son, Daniel, asked.
+
+    Leo has worked at the restaurant for nearly ten years, and he is always smiling and ready to ___13___ others. When Daniel was in preschool, we often had lunch there, and he always looked forward to
+    seeing Leo.
+
+    Even now, I could sense Daniel''s ___14___. He couldn''t wait to see his old friend.
+
+    We walked inside and immediately heard a familiar voice call out,“Hey, Daniel!
+
+    Is that you?”
+
+    Daniel''s face lit up.“Wow! You remembered me,” he said happily.“I''ll never forget when you ___15___ my favorite toy car.”
+
+    Once, Daniel and I stopped for lunch. His toy car rolled(滚动) under the drink machine and got stuck. Leo offered to help, but he ___16___. Daniel left in tears.
+
+    Two weeks later, we visited the restaurant again. Leo pulled Daniel''s toy car from his pocket.“I got it for you.” The manager told me quietly that Leo ___17___ to leave until he got the car out that
+    day. He carefully washed it off and then carried it in his pocket every day until we returned.
+
+    “Leo, when you gave that car back to him, Daniel thought you were the coolest man in the whole world," I said.
+
+    We talked for a while. Then a family with young kids came in. Leo called out, “Amazing Adam! Super Sarah! I''m so happy to see you!”
+
+    I smiled at Daniel.“Leo makes friends with every kid who comes in here. He makes more people smile each day than almost anyone else I know. He might do a small job, but he does it in a way that really
+    brings ___18___."
+
+    After lunch, Daniel and I stopped at the store. This time we smiled at every person we passed, and people smiled back. This was the most ___19___ shopping trip we''d ever had.
+
+    Leo influenced us in such a positive way. He taught us that, no matter how small a task might be, we can always find a/an ___20___ in it. Truly seeing others, even for a moment, can turn a seemingly
+    unimportant job into a quiet light.'
+  type: cloze
+  q_range:
+  - 13
+  - 20
+  id: cloze
+- id: reading_A
+  type: reading
+  body: 下列每个图片代表一处就餐场所，请根据人物的用餐计划匹配最适合的场所， 并将图片所对应的选项(A、B、C、D)填在相应位置上。其中一个选项为多余选项。
+  q_range:
+  - 21
+  - 23
+  image_options:
+    A: 2026-dongcheng-yi/figures/passage-reading_A-opt-A.png
+    B: 2026-dongcheng-yi/figures/passage-reading_A-opt-B.png
+    C: 2026-dongcheng-yi/figures/passage-reading_A-opt-C.png
+    D: 2026-dongcheng-yi/figures/passage-reading_A-opt-D.png
+- id: reading_B
+  type: reading
+  body: 'David felt no joy. It was his second week at the new school dart but he still had no friends. Every time he went up to his classmates, he found a closed circle. The football team had enough players.
+    The art club was full. Everyone had their own groups.
+
+    During break, he saw some classmates throwing darts and Dartboard Method: counting the holes on a dartboard. David wondered what they a way to find pi(π) were doing but he couldn''t find the courage
+    to ask.
+
+    The next day was the Class Fun Day. There were circles all around David. Big, bright hula hoops(呼啦圈).
+
+    Suddenly someone shouted,“Look at David’s hula hoop.” David had brought an old bicycle tyre(轮胎). He wanted to disappear. Again, he could feel the circle closing, leaving him out. The other children
+    ran out to play. David was left alone.
+
+    “Why are you in class, David?” Mr Wilson, his maths teacher, asked.“They laughed at my ugly circle,” David replied.
+
+    “Ah David,” the teacher said.“It’s not what’s on the outside that matters. It’s what''s inside. Just like pi(π).”
+
+    Mr Wilson picked up David''s tyre and a big, shiny hula hoop.
+
+    “Divide the length of the circumference(周长) of this hula hoop by its diameter (直径),” Mr Wilson said. David got 3.14768.“Great! Now divide the circumference of your tyre by its diameter.” David got 3.1463.
+
+    Mr Wilson smiled.“When we divide the circumference of any circle by its diameter, the number we get is always about 3.14. This is called pi. Whether it is a shiny hula hoop or an old tyre, you will
+    find pi.”
+
+    David understood what Mr Wilson was trying to tell him. When it came to the laws of maths, his tyre was just as good as a shiny hula hoop. He realised that circles may appear to be closed but they had
+    an open mystery(奥秘) inside them. Then he read a book about pi.
+
+    In the afternoon, he saw a younger group of children playing a game at the dartboard.
+
+    “I’m David,” he said.“I read about pi. I know what this is.” The children formed a circle around David. He counted the holes and started doing the maths. The answer was 3.14159. There was a loud cheer.
+    David was finally part of a circle. He felt a sense of wonder.'
+  q_range:
+  - 24
+  - 26
+- id: reading_C
+  type: reading
+  body: 'Have you ever looked up at a beautiful rainbow when noticing your friend looking at it? At that moment, both of you were focusing on the same object and aware of each other''s attention. This shared
+    focus is called joint(共同的) attention. It depends on social cues(提示) such as actions or words that help two people to focus on the same thing.
+
+    When completing tasks or solving problems, it is often said that two heads are better than one. But what does“better” mean? In one study, researchers asked pairs of participants(参与者) to complete a search
+    task alone and then together. They found that when the participants worked together, they were faster at finding the goal, which researchers suggest is“better” performance.
+
+    You might be wondering why two heads are better. Is it simply because you have another pair of eyes or because you divide the task? Well, the answer is both! Just having another pair of eyes can make
+    a task easier and faster, so a group benefit can be found even if two people do not talk about the division of work. By dividing the work, you are more likely to finish the task faster, though one may
+    work a little faster than the other.
+
+    Researchers have also been interested in whether joint attention improves memory. They asked participants to remember pictures and found that when people believed another person was looking at the same
+    picture and doing the same task, they remembered the picture better. So, this suggests that even when people imagine social cues, like just thinking someone else is focusing on the same task, joint
+    attention can help people better remember things.
+
+    Today, however, many interactions(互动) take place online. It is important to understand whether online interactions with others influence people''s attention.
+
+    Researchers asked participants to complete a search task on their home computers, with an imaginary partner. The results showed that people were more accurate(准确的) when they thought they were working
+    together with a partner, but faster when they thought they were competing with that partner. Interestingly, it did not matter how realistic the imaginary partner''s image(形象) was.
+
+    All in all, joint attention is an important part of human interaction that shapes how people work together and how they remember. By understanding this, we can better recognise the value of our interactions.'
+  q_range:
+  - 27
+  - 29
+- id: reading_D
+  type: reading
+  body: '25 and missing or incorrect information may lead to mistakes. Also, a model might learn that some structures or patterns(模式) are common-such as the organization of a scientific report-and copy
+    them even when there is no real source. Finally, the lack of grounding is key. AI models generate text only by probability. Without ways to check against real facts, the model cannot decide whether
+    it is true.
+
+    Researchers are exploring ways to reduce or prevent hallucinations. One promising method is to connect AI models to live databases, scientific collections, or trusted knowledge networks. This allows
+    the model to check its outputs(输出的内容) against them. Some developers are also introducing testing steps, where models explain their reasoning or clearly show their sources, making it easier for users
+    to judge the truthfulness of answers. In addition, AI models can be used together with traditional search engines or fact-checking tools to check the facts before giving the final output.
+
+    However, fixing hallucinations is not just a matter of improving models.
+
+    Education is also important. Just as society learned to question sources during the rise of the Internet, we must now develop the ability to wisely judge AI outputs.
+
+    In the end, the story of AI hallucinations is also the story of humanity''s relationship with its own creations. It is a story of dreams, mistakes, correction, and growth. By facing the problem honestly,
+    we can ensure that AI will be a tool for knowledge, empowerment, and discovery-without letting the hallucinations of machines become hallucinations of our own.'
+  q_range:
+  - 30
+  - 33
+- id: express
+  type: reading_express
+  body: '阅读短文，根据短文内容回答问题。
+
+    Over the weekend, I met up with a friend for lunch. It would be an hour before he arrived. Thinking that I had enough time to clean the kitchen and take a shower, I suddenly realized I was running late.
+
+    Everyone has thought,“This will only take a few minutes,” only to realize an hour later that they''re not on time. Or maybe your to-do list seems impossible to finish. This could be a sign of being
+    a time optimist.
+
+    A time optimist is someone who usually underestimates(低估) how long something takes, and overestimates how much time they actually have. They often say yes to more than they can manage, confident that
+    they can “fit it all in”. They delay(拖延) until the last minute, believing there is still plenty of time. Although they are used to underestimating, they are confused when they fall behind.
+
+    If you are a time optimist, you often rush through the days, leave tasks unfinished, and feel regretful. In light of these clear downsides(弊端), why do so many people become time optimists? Human psychology(心理学)
+    offers several explanations: • The planning problem. We often underestimate the time it will take to complete a future task, even when we have a history of similar tasks taking longer. Most of the time,
+    we focus on the ideal(理想的) path to completion, without considering possible problems.
+
+    • Poor memory of past tasks. Our brains are surprisingly good at forgetting boring, slow, or messy middle parts of tasks. As a result, tasks appear to be completed faster than they actually are.
+
+    • Sense of self and self-worth. Some people believe that being busy means being important. A full timetable can seem like a sign of importance. If they say they need more time or that a task is more
+    challenging than they thought, they may feel weak.
+
+    Do you want to feel less stressed and more productive? Be honest about the time it takes to get things done. Using that truth as your guide, build your days.'
+  q_range:
+  - 34
+  - 37
 questions:
 - id: 1
   type: 单选
-  score: 2
-  question: '1. I took part in a talent show yesterday. Many classmates came to cheer for _.
-
-
-    A. them
-
-    B. you
-
-    C. me
-
-    D. us'
+  score: 0.5
+  stem: I took part in a talent show yesterday. Many classmates came to cheer for
+  options:
+    A: them
+    B: you
+    C: me
+    D: us
   answer: C
-  solution: ''
+  solution: C
   knowledge_points:
-  - 人称代词（主格/宾格）
-  module: 语法
+  - 代词的使用
+  module: grammar
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 2
   type: 单选
-  score: 2
-  question: '2. My family usually goes hiking in the mountains _ spring.
-
-
-    A. in
-
-    B. on
-
-    C. at
-
-    D. for'
+  score: 0.5
+  stem: My family usually goes hiking in the mountains ___ spring.
+  options:
+    A: in
+    B: 'on'
+    C: at
+    D: for
   answer: A
-  solution: ''
+  solution: A
   knowledge_points:
-  - 不定冠词a/an的用法
-  - 定冠词the的用法
-  module: 语法
+  - 时间介词的使用
+  module: grammar
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 3
   type: 单选
-  score: 2
-  question: '3. - This task looks difficult. - Don''t worry, Jim. With teamwork, you _ finish it on time.
+  score: 0.5
+  stem: '-This task looks difficult.
 
-
-    A. must
-
-    B. can
-
-    C. need
-
-    D. might'
+    -Don''t worry, Jim. With teamwork, you ___ finish it on time.'
+  options:
+    A: must
+    B: can
+    C: need
+    D: might
   answer: B
-  solution: ''
+  solution: B
   knowledge_points:
   - 情态动词的用法
-  module: 语法
+  module: grammar
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 4
   type: 单选
-  score: 2
-  question: '4. Space Adventure is one of _ books in our school library.
-
-
-    A. popular
-
-    B. more popular
-
-    C. most popular
-
-    D. the most popular'
+  score: 0.5
+  stem: Space Adventure is one of ___ books in our school library.
+  options:
+    A: popular
+    B: more popular
+    C: most popular
+    D: the most popular
   answer: D
-  solution: ''
+  solution: D
   knowledge_points:
-  - 形容词比较级和最高级（规则与不规则变化）
-  module: 语法
+  - 形容词最高级的使用
+  module: grammar
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 5
   type: 单选
-  score: 2
-  question: '5. - Tony, _ do you water the vegetables in the school garden? - Twice a week. But when it''s very hot, we do it more often.
+  score: 0.5
+  stem: '-Tony, ___ do you water the vegetables in the school garden?
 
-
-    A. how often
-
-    B. how long
-
-    C. how much
-
-    D. how soon'
+    -Twice a week. But when it''s very hot, we do it more often.'
+  options:
+    A: how often
+    B: how long
+    C: how much
+    D: how soon
   answer: A
-  solution: ''
+  solution: A
   knowledge_points:
-  - 疑问代词（who/what/which/whose）
-  module: 语法
+  - 频率副词的使用
+  module: grammar
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 6
   type: 单选
-  score: 2
-  question: '6. Hurry up, _ we''ll miss the beginning of the movie.
-
-
-    A. or
-
-    B. and
-
-    C. so
-
-    D. but'
+  score: 0.5
+  stem: Hurry up, ___ we'll miss the beginning of the movie.
+  options:
+    A: or
+    B: and
+    C: so
+    D: but
   answer: A
-  solution: ''
+  solution: A
   knowledge_points:
-  - 连词的用法
-  module: 语法
+  - 连词的使用
+  - 条件句
+  module: grammar
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 7
   type: 单选
-  score: 2
-  question: '7. - Where is Tom right now? - He _ at the local museum.
+  score: 0.5
+  stem: '-Where is Tom right now?
 
-
-    A. will volunteer
-
-    B. volunteers
-
-    C. is volunteering
-
-    D. has volunteered'
+    -He ___ at the local museum.'
+  options:
+    A: will volunteer
+    B: volunteers
+    C: is volunteering
+    D: has volunteered
   answer: C
-  solution: ''
+  solution: C
   knowledge_points:
   - 现在进行时的用法
-  module: 语法
+  module: grammar
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 8
   type: 单选
-  score: 2
-  question: '8. Amy, you _ your room already. It looks so tidy.
-
-
-    A. clean
-
-    B. are cleaning
-
-    C. have cleaned
-
-    D. will clean'
+  score: 0.5
+  stem: Amy, you ___ your room already. It looks so tidy.
+  options:
+    A: clean
+    B: are cleaning
+    C: have cleaned
+    D: will clean
   answer: C
-  solution: ''
+  solution: C
   knowledge_points:
-  - 现在完成时的用法
-  module: 语法
+  - 现在完成时
+  module: grammar
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 9
   type: 单选
-  score: 2
-  question: '9. My little brother _ with the dog when I came home.
-
-
-    A. plays
-
-    B. played
-
-    C. is playing
-
-    D. was playing'
+  score: 0.5
+  stem: My little brother ___ with the dog when I came home.
+  options:
+    A: plays
+    B: played
+    C: is playing
+    D: was playing
   answer: D
-  solution: ''
+  solution: D
   knowledge_points:
-  - 时态（过去进行时）
-  module: 语法
+  - 过去进行时
+  module: grammar
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 10
   type: 单选
-  score: 2
-  question: '10. Robots _ people do more daily chores in the future.
-
-
-    A. help
-
-    B. will help
-
-    C. helped
-
-    D. have helped'
+  score: 0.5
+  stem: Robots ___ people do more daily chores in the future.
+  options:
+    A: help
+    B: will help
+    C: helped
+    D: have helped
   answer: B
-  solution: ''
+  solution: B
   knowledge_points:
-  - 一般将来时的用法
-  module: 语法
+  - 一般将来时
+  module: grammar
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 11
   type: 单选
-  score: 2
-  question: '11. The school art project _ successfully last Friday.
-
-
-    A. completes
-
-    B. completed
-
-    C. is completed
-
-    D. was completed'
+  score: 0.5
+  stem: The school art project ___ successfully last Friday.
+  options:
+    A: completes
+    B: completed
+    C: is completed
+    D: was completed
   answer: D
-  solution: ''
+  solution: D
   knowledge_points:
-  - 被动语态的构成与用法
-  module: 语法
-  difficulty: 基础
+  - 时态-一般过去时
+  - 语态-被动语态
+  module: grammar
+  difficulty: 中等
   recommended_for:
-  - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 12
   type: 单选
-  score: 2
-  question: '12. - Our school has bought a 3D printer, and we can use it in science class. - Amazing! I wonder _.
+  score: 0.5
+  stem: '-Our school has bought a 3D printer, and we can use it in science class.
 
-
-    A. how does it work
-
-    B. how it works
-
-    C. how did it work
-
-    D. how it worked'
+    -Amazing! I wonder'
+  options:
+    A: how does it work
+    B: how it works
+    C: how did it work
+    D: how it worked
   answer: B
-  solution: ''
+  solution: B
   knowledge_points:
-  - 宾语从句的引导词和语序
-  - 疑问句的语序
-  module: 语法
+  - 宾语从句的时态和语序
+  module: grammar
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 13
-  type: 单选
-  score: 2
-  question: '13. Leo has worked at the restaurant for nearly ten years, and he is always smiling and ready to _ others.
-
-
-    A. teach
-
-    B. protect
-
-    C. help
-
-    D. praise'
+  type: 完形
+  score: 1
+  stem: ''
+  options:
+    A: teach
+    B: protect
+    C: help
+    D: praise
   answer: C
-  solution: ''
+  solution: C
   knowledge_points:
-  - 词汇的一词多义与词义辨析
-  - 常用词组和固定搭配（约300个）
-  module: 词汇
+  - 词汇运用
+  module: vocabulary
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 14
-  type: 单选
-  score: 2
-  question: '14. Even now, I could sense Daniel''s _.
-
-
-    A. pride
-
-    B. excitement
-
-    C. satisfaction
-
-    D. surprise'
+  type: 完形
+  score: 1
+  stem: ''
+  options:
+    A: pride
+    B: excitement
+    C: satisfaction
+    D: surprise
   answer: B
-  solution: ''
+  solution: B
   knowledge_points:
-  - 词汇的一词多义与词义辨析
-  module: 词汇
+  - 词汇辨析
+  module: vocabulary
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 15
-  type: 单选
-  score: 2
-  question: '15. - Wow! You remembered me, - he said happily. - I''ll never forget when you _ my favorite toy car.
-
-
-    A. hid
-
-    B. fixed
-
-    C. cleaned
-
-    D. saved'
+  type: 完形
+  score: 1
+  stem: ''
+  options:
+    A: hid
+    B: fixed
+    C: cleaned
+    D: saved
   answer: D
-  solution: ''
+  solution: D
   knowledge_points:
-  - 词汇的一词多义与词义辨析
-  - 常用词组和固定搭配（约300个）
-  module: 词汇
+  - 动词的过去式和过去分词
+  module: vocabulary
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 16
-  type: 单选
-  score: 2
-  question: '16. Once, Daniel and I stopped for lunch. His toy car rolled (滚动) under the drink machine and got stuck. Leo offered to help, but he _.
-
-
-    A. lied
-
-    B. regretted
-
-    C. failed
-
-    D. stopped'
+  type: 完形
+  score: 1
+  stem: ''
+  options:
+    A: lied
+    B: regretted
+    C: failed
+    D: stopped
   answer: C
-  solution: ''
+  solution: C
   knowledge_points:
-  - 词汇的一词多义与词义辨析
-  module: 词汇
+  - 词汇辨析
+  module: vocabulary
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 17
-  type: 单选
-  score: 2
-  question: '17. Two weeks later, we visited the restaurant again. Leo pulled Daniel''s toy car from his pocket. - I got it for you. - The manager told me quietly that Leo _ to leave until he got the car
-    out that day.
-
-
-    A. planned
-
-    B. decided
-
-    C. refused
-
-    D. forgot'
+  type: 完形
+  score: 1
+  stem: ''
+  options:
+    A: planned
+    B: decided
+    C: refused
+    D: forgot
   answer: C
-  solution: ''
+  solution: C
   knowledge_points:
-  - 词汇的一词多义与词义辨析
-  - 动词的用法
-  module: 语言知识
-  difficulty: 中等
+  - 词汇辨析
+  module: vocabulary
+  difficulty: 基础
   recommended_for:
+  - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 18
-  type: 单选
-  score: 2
-  question: '18. - Leo, when you gave that car back to him, Daniel thought you were the coolest man in the whole world, - I said. - Leo makes friends with every kid who comes in here. He makes more people
-    smile each day than almost anyone else I know. He might do a small job, but he does it in a way that really brings \.
-
-
-    A. warmth
-
-    B. progress
-
-    C. growth
-
-    D. courage'
+  type: 完形
+  score: 1
+  stem: ''
+  options:
+    A: warmth
+    B: progress
+    C: growth
+    D: courage
   answer: A
-  solution: ''
+  solution: A
   knowledge_points:
-  - 词汇的一词多义与词义辨析
-  module: 词汇
+  - 词汇辨析
+  module: vocabulary
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 19
-  type: 单选
-  score: 2
-  question: '19. After lunch, Daniel and I stopped at the store. This time we smiled at every person we passed, and people smiled back. This was the most \.
-
-
-    A. pleasant
-
-    B. relaxing
-
-    C. expensive
-
-    D. convenient'
+  type: 完形
+  score: 1
+  stem: ''
+  options:
+    A: pleasant
+    B: relaxing
+    C: expensive
+    D: convenient
   answer: A
-  solution: ''
+  solution: A
   knowledge_points:
-  - 词汇的一词多义与词义辨析
-  module: 词汇
+  - 词汇辨析
+  module: vocabulary
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 20
-  type: 单选
-  score: 2
-  question: '20. Leo influenced us in such a positive way. He taught us that, no matter how small a task might be, we can always find a/an \ in it. Truly seeing others, even for a moment, can turn a seemingly
-    unimportant job into a quiet light.
-
-
-    A. lesson
-
-    B. purpose
-
-    C. improvement
-
-    D. interest'
+  type: 完形
+  score: 1
+  stem: ''
+  options:
+    A: lesson
+    B: purpose
+    C: improvement
+    D: interest
   answer: B
-  solution: ''
+  solution: B
   knowledge_points:
-  - 词汇的一词多义与词义辨析
-  - 常用词组和固定搭配（约300个）
-  module: 词汇
-  difficulty: 中等
+  - 词汇辨析
+  module: vocabulary
+  difficulty: 基础
   recommended_for:
+  - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 21
-  type: 单选
+  type: 阅读
   score: 2
-  question: '21. Eva I''m visiting Chengdu for the first time and want to try its famous street snacks. I''d like to walk around food stands and enjoy different kinds of food.
-
-
-    A.
-
-    B.
-
-    C. D.'
+  stem: B. C. I'm visiting Chengdu for the first time and want to try its famous street snacks. I'd like to walk around food stands and enjoy different kinds of food.
+  has_image_options: true
   answer: D
-  solution: ''
+  solution: D
   knowledge_points:
-  - 课标1600词的拼写与基本词义
-  - 常用词组和固定搭配（约300个）
-  module: 词汇
+  - 阅读理解
+  - 词汇运用
+  module: reading
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 22
-  type: 单选
+  type: 阅读
   score: 2
-  question: '22. Jack I''d like to learn more about Chinese food culture, so I plan to go to a traditional Chinese restaurant. I want to try some classic dishes and have a nice meal there.
-
-
-    A.
-
-    B.
-
-    C. D.'
+  stem: I'd like to learn more about Chinese food culture, so I plan to go to a traditional Chinese restaurant. I want to try some classic dishes and have a nice meal there. (Eva)
+  has_image_options: true
   answer: A
-  solution: ''
+  solution: A
   knowledge_points:
-  - 课标1600词的拼写与基本词义
-  - 常用词组和固定搭配（约300个）
-  module: 词汇
+  - 阅读理解
+  - 文化背景知识
+  module: reading
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 23
-  type: 单选
+  type: 阅读
   score: 2
-  question: '23. Robert I''m very busy today and don''t have much time to eat, so I just want to get a hamburger from a fast-food restaurant and get back to work as soon as possible.
-
-
-    A.
-
-    B.
-
-    C. D.'
+  stem: I'm very busy today and don't have much time to eat, so I just want to get a hamburger from a fast-food restaurant and get back to work as soon as possible. (Jack) (Robert)
+  has_image_options: true
   answer: B
-  solution: ''
+  solution: B
   knowledge_points:
-  - 词汇的一词多义与词义辨析
-  - 常用词组和固定搭配（约300个）
-  module: 词汇
+  - 阅读理解
+  - 词汇运用
+  module: reading
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 24
-  type: 单选
+  type: 阅读
   score: 2
-  question: '24. How did David feel when he first came to the new school?
-
-
-    A. Lonely.
-
-    B. Bored.
-
-    C. Confident.
-
-    D. Cheerful.'
+  stem: How did David feel when he first came to the new school?
+  options:
+    A: Lonely
+    B: Bored
+    C: Confident
+    D: Cheerful
   answer: A
-  solution: ''
+  solution: A
   knowledge_points:
-  - 词汇的一词多义与词义辨析
-  module: 词汇
+  - 阅读理解
+  - 情感词汇
+  module: reading
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 25
-  type: 单选
+  type: 阅读
   score: 2
-  question: '25. How did David become part of a circle?
-
-
-    A. By asking the teacher for help.
-
-    B. By bringing an old bicycle tyre.
-
-    C. By sharing his maths knowledge.
-
-    D. By showing his dart-throwing skills.'
+  stem: How did David become part of a circle?
+  options:
+    A: By asking the teacher for help
+    B: By bringing an old bicycle tyre
+    C: By sharing his maths knowledge
+    D: By showing his dart-throwing skills
   answer: C
-  solution: ''
+  solution: C
   knowledge_points:
-  - 词汇的一词多义与词义辨析
-  - 常用词组和固定搭配（约300个）
-  module: 词汇
+  - 阅读理解
+  - 词汇运用
+  module: reading
   difficulty: 中等
   recommended_for:
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 26
-  type: 单选
+  type: 阅读
   score: 2
-  question: '26. What does the writer mainly want to tell us?
-
-
-    A. Growth takes time.
-
-    B. Not everything is as it looks.
-
-    C. Happiness lies in small things.
-
-    D. Learning is a lifelong journey.'
+  stem: What does the writer mainly want to tell us?
+  options:
+    A: Growth takes time
+    B: Not everything is as it looks
+    C: Happiness lies in small things
+    D: Learning is a lifelong journey
   answer: B
-  solution: ''
+  solution: B
   knowledge_points:
   - 阅读理解
   - 主旨大意
-  module: 语言技能
+  module: reading
   difficulty: 中等
   recommended_for:
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 27
-  type: 单选
+  type: 阅读
   score: 2
-  question: '27. Which of the following best shows the results of the study in Paragraphs 2 and 3?
-
-
-    A. Slow Search speed in seconds Fast Person A Person B no division of work A+B. A+B.
-
-    B. Slow Search speed in seconds Fast Person A Person B A+B. A+B.
-
-    C. Slow Search speed in seconds Fast Person A Person B no division of work A+B. A+B.
-
-    D. Slow Search speed in seconds Fast Person A Person B A+B. A+B. no division of work of work of work'
+  stem: Which of the following best shows the results of the study in Paragraphs 2 and 3?
+  has_image_options: true
+  figure: 2026-dongcheng-yi/figures/q27-chart-options.png
   answer: D
-  solution: ''
+  solution: D
   knowledge_points:
   - 阅读理解
   - 信息提取
-  module: 语言技能
+  module: reading
   difficulty: 中等
   recommended_for:
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 28
-  type: 单选
+  type: 阅读
   score: 2
-  question: '28. What can we learn from the passage?
-
-
-    A. Joint attention works better online than in the real world.
-
-    B. Joint attention depends on how well people remember things.
-
-    C. Imagining working with others brings about better performance.
-
-    D. Cooperation is more important than competition in online settings.'
+  stem: What can we learn from the passage?
+  options:
+    A: Joint attention works better online than in the real world
+    B: Joint attention depends on how well people remember things
+    C: Imagining working with others brings about better performance
+    D: Cooperation is more important than competition in online settings
   answer: C
-  solution: ''
+  solution: C
   knowledge_points:
   - 阅读理解
-  - 词汇的一词多义与词义辨析
-  module: 语言技能
+  - 推理判断
+  module: reading
   difficulty: 中等
   recommended_for:
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 29
-  type: 单选
+  type: 阅读
   score: 2
-  question: '29. Which of the following is the best title for the passage?
-
-
-    A. From Attention to Performance
-
-    B. The Power of Shared Focus
-
-    C. From Social Cues to Connection
-
-    D. The Key to Effective Interactions'
+  stem: Which of the following is the best title for the passage?
+  options:
+    A: From Attention to Performance
+    B: The Power of Shared Focus
+    C: From Social Cues to Connection
+    D: The Key to Effective Interactions
   answer: B
-  solution: ''
+  solution: B
   knowledge_points:
   - 阅读理解
-  - 标题选择
-  module: 语言技能
+  - 文章主旨
+  module: reading
   difficulty: 中等
   recommended_for:
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 30
-  type: 单选
+  type: 阅读
   score: 2
-  question: '30. According to the passage, what is an example of an AI hallucination?
-
-
-    A. An AI makes up a news event that never happened.
-
-    B. An AI talks in a cold way, without any real feelings.
-
-    C. An AI fails to provide the steps for a science experiment.
-
-    D. An AI misses some information when describing a picture.'
+  stem: According to the passage, what is an example of an AI hallucination?
+  options:
+    A: An AI makes up a news event that never happened
+    B: An AI talks in a cold way, without any real feelings
+    C: An AI fails to provide the steps for a science experiment
+    D: An AI misses some information when describing a picture
   answer: A
-  solution: ''
+  solution: A
   knowledge_points:
-  - 词汇的一词多义与词义辨析
   - 阅读理解
-  module: 语言知识
+  - 词汇理解
+  module: reading
   difficulty: 中等
   recommended_for:
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 31
-  type: 单选
+  type: 阅读
   score: 2
-  question: '31. What do the words “the lack of grounding” in Paragraph 3 most probably mean?
-
-
-    A. Breakdown in reasoning.
-
-    B. Loss of stored information.
-
-    C. Failure to follow instructions.
-
-    D. Disconnection from factual information.'
+  stem: What do the words“the lack of grounding” in Paragraph 3 most probably mean?
+  options:
+    A: Breakdown in reasoning
+    B: Loss of stored information
+    C: Failure to follow instructions
+    D: Disconnection from factual information
   answer: D
-  solution: ''
+  solution: D
   knowledge_points:
-  - 词汇的一词多义与词义辨析
-  module: 词汇
+  - 阅读理解
+  - 词汇理解
+  module: reading
   difficulty: 中等
   recommended_for:
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 32
-  type: 单选
+  type: 阅读
   score: 2
-  question: '32. What can we learn from the passage?
-
-
-    A. Testing steps make AI outputs easier to understand.
-
-    B. Common patterns make AI outputs more trustworthy.
-
-    C. Live data sources can help AI models reduce false outputs.
-
-    D. Fact-checking tools can provide users with the final output.'
+  stem: What can we learn from the passage?
+  options:
+    A: Testing steps make AI outputs easier to understand
+    B: Common patterns make AI outputs more trustworthy
+    C: Live data sources can help AI models reduce false outputs
+    D: Fact-checking tools can provide users with the final output
   answer: C
-  solution: ''
+  solution: C
   knowledge_points:
   - 阅读理解
-  - 词汇的一词多义与词义辨析
-  module: 语言技能
+  - 信息提取
+  module: reading
   difficulty: 中等
   recommended_for:
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 33
-  type: 单选
+  type: 阅读
   score: 2
-  question: '33. What is the writer’s main purpose in writing this passage?
+  stem: What is the writer's main purpose in writing this passage?
+  options:
+    A: To prove that AI hallucinations can be fixed
+    B: To warn people of the risks of AI hallucinations
+    C: To guide proper judgment of AI-generated information
+    D: 'To encourage people to build a closer relationship with AI.
 
+      第二部分
 
-    A. To prove that AI hallucinations can be fixed.
-
-    B. To warn people of the risks of AI hallucinations.
-
-    C. To guide proper judgment of AI-generated information.
-
-    D. To encourage people to build a closer relationship with AI.'
+      本部分共5题，共20分。根据题目要求，完成相应任务。'
   answer: C
-  solution: ''
+  solution: C
   knowledge_points:
-  - 阅读理解
-  - 作者意图
-  module: 语言技能
+  - 阅读理解-主旨大意
+  module: reading
   difficulty: 中等
   recommended_for:
   - L1
   - L2
   - L3
+  qc_status: draft
+  qc_note: ''
 - id: 34
-  type: 解答
-  score: 2
-  question: 34. What is a time optimist?
-  answer: A time optimist is someone who usually underestimates how long something takes, and overestimates how much time they actually have.
-  solution: A time optimist is someone who usually underestimates how long something takes, and overestimates how much time they actually have.
+  type: 阅读表达
+  score: 2.0
+  stem: What is a time optimist?
+  answer: A
+  solution: 'A time optimist is someone who usually underestimates how long
+
+    something takes, and overestimates how much time they actually have.'
   knowledge_points:
-  - 词汇的一词多义与词义辨析
-  - 构词法——前缀（un-, dis-, re-, im-/in-）
-  module: 词汇
+  - 词汇理解
+  module: vocabulary
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
+  qc_status: needs_review
+  qc_note: 选择题缺少 options（既无文本也无图片选项）
 - id: 35
-  type: 解答
-  score: 2
-  question: 35. What are the downsides of being a time optimist?
-  answer: A time optimist often rushes through the days, leaves tasks unfinished, and feels regretful.
-  solution: A time optimist often rushes through the days, leaves tasks unfinished, and feels regretful.
+  type: 阅读表达
+  score: 2.0
+  stem: What are the downsides of being a time optimist?
+  answer: A
+  solution: 'A time optimist often rushes through the days, leaves tasks unfinished,
+
+    and feels regretful.'
   knowledge_points:
-  - 词汇的一词多义与词义辨析
-  - 理解句子含义
-  module: 词汇
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
-- id: 36
-  type: 解答
-  score: 2
-  question: 36. Why do tasks appear to be completed faster than they actually are?
-  answer: Because our brains are good at forgetting boring, slow, or messy middle parts of tasks.
-  solution: Because our brains are good at forgetting boring, slow, or messy middle parts of tasks.
-  knowledge_points:
-  - 词汇的一词多义与词义辨析
   - 阅读理解
-  module: 语言知识
+  - 词汇运用
+  module: reading
   difficulty: 中等
   recommended_for:
   - L1
   - L2
   - L3
+  qc_status: needs_review
+  qc_note: 选择题缺少 options（既无文本也无图片选项）
+- id: 36
+  type: 阅读表达
+  score: 2.0
+  stem: Why do tasks appear to be completed faster than they actually are?
+  answer: ''
+  solution: 'Because our brains are good at forgetting boring, slow, or messy middle
+
+    parts of tasks.'
+  knowledge_points:
+  - 阅读理解
+  - 词汇运用
+  module: reading
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 选择题缺少 options（既无文本也无图片选项）；选择题 answer 为空
 - id: 37
-  type: 解答
-  score: 2
-  question: 37. Give two suggestions to time optimists and explain them.
-  answer: 略
+  type: 阅读表达
+  score: 4.0
+  stem: Give two suggestions to time optimists and explain them.
+  answer: ''
   solution: 略
   knowledge_points:
-  - 词汇的一词多义与词义辨析
-  - 构词法——前缀（un-, dis-, re-, im-/in-）
-  - 构词法——后缀（-tion, -ment, -ful, -less, -ly, -er/-or）
-  module: 词汇
+  - 写作表达
+  - 建议句型
+  module: writing
   difficulty: 中等
   recommended_for:
   - L1
   - L2
   - L3
+  qc_status: needs_review
+  qc_note: 选择题缺少 options（既无文本也无图片选项）；选择题 answer 为空
 - id: 38
-  type: 解答
-  score: 2
-  question: 38. 从下面两个题目中任选一题, 根据所给的中文和英文提示, 完成一篇不少于 50 词的英语文段写作。文中已给出的内容不计入总词数。所给提示词语仅供选用。请不要写出真实的校名、姓名和地名。
-  answer: 'I did a survey on my classmates'' ways of reading. According to the results, 18 students prefer digital reading, 12 students choose paper reading, and 10 students like both. We can see that digital
-    reading has become more popular among students. This shows that technology is changing our reading habits, while traditional books still hold an important place.\nIn my opinion, digital reading is fast
-    and convenient, while paper books help us focus better and think more deeply. We should make good use of both. It''s wise to use digital tools to get information quickly, and read paper books for a
-    better reading experience. In this way, we can become better readers.", "keySteps": "", "score": 0},\'
-  solution: 'I did a survey on my classmates'' ways of reading. According to the results, 18 students prefer digital reading, 12 students choose paper reading, and 10 students like both. We can see that
-    digital reading has become more popular among students. This shows that technology is changing our reading habits, while traditional books still hold an important place.\nIn my opinion, digital reading
-    is fast and convenient, while paper books help us focus better and think more deeply. We should make good use of both. It''s wise to use digital tools to get information quickly, and read paper books
-    for a better reading experience. In this way, we can become better readers.", "keySteps": "", "score": 0},\'
+  type: 写作
+  score: 10
+  stem: '38.从下面两个题目中任选一题，根据所给的中文和英文提示，完成一篇不少于50词
+
+    的英语文段写作。文中已给出的内容不计入总词数。所给提示词语仅供选用。请
+
+    不要写出真实的校名、姓名和地名。
+
+    题目①
+
+    假设你是李华，你们班的英语课正在开展研究性学习，你选择研究同学们的课外
+
+    阅读方式，为此你对班里40名同学进行了问卷调查，下图是部分统计结果。请用英
+
+    语写一篇短文，简要说明图表内容，并谈谈你对这一现象的看法。
+
+    Which way of reading do you prefer?
+
+    12
+
+    10
+
+    digital reading
+
+    paper reading
+
+    both
+
+    18
+
+    提示词语:choose,popular,habit,convenient,make good use of
+
+    内容提示:●What can you learn from the results?
+
+    ● What do you think of this phenomenon(现象)?
+
+    I did a survey on my classmates'' ways of reading.
+
+    题目②
+
+    假设你是李华，你校正在创建“健康校园(Healthy Campus)”。学校英语校刊向
+
+    同学们征求建议。请你用英语给校刊编辑写一封邮件，推荐一个活动，并说明理由。
+
+    提示词语:running,join,stay healthy,relaxed,relationship
+
+    内容提示:●What activity would you like to suggest?
+
+    ● Why do you suggest this activity?
+
+    Dear Editor,
+
+    I''m glad to hear that our school is building a“Healthy Campus”.
+
+    I hope my suggestion will be helpful. Thank you!
+
+    Yours,
+
+    Li Hua'
+  answer: ''
+  solution: 'One possible version:
+
+    题目①
+
+    I did a survey on my classmates'' ways of reading. According to the
+
+    results,18 students prefer digital reading,12 students choose paper reading,
+
+    and 10 students like both. We can see that digital reading has become more
+
+    popular among students. This shows that technology is changing our reading
+
+    habits, while traditional books still hold an important place.
+
+    In my opinion, digital reading is fast and convenient, while paper books
+
+    help us focus better and think more deeply. We should make good use of both.
+
+    It''s wise to use digital tools to get information quickly, and read paper books for
+
+    a better reading experience. In this way, we can become better readers.
+
+    题目②
+
+    Dear Editor,
+
+    I''m glad to hear that our school is building a“Healthy Campus”. I would like
+
+    to suggest an activity called“Sunshine Hour”. In this activity, students can do
+
+    simple sports for about one hour every day, such as running, playing
+
+    badminton, or playing basketball. Teachers can also join us, so everyone can
+
+    take part.
+
+    I think this activity is very beneficial. First, it can help us stay healthy and
+
+    become stronger. Second, it can reduce stress and make us feel relaxed. What''s
+
+    more, doing exercise together can help students and teachers build closer
+
+    relationships.
+
+    I hope my suggestion will be helpful. Thank you!
+
+    Yours,
+
+    Li Hua
+
+    单项填空'
   knowledge_points:
-  - '词汇: 课标1600词的拼写与基本词义'
-  - '语法: 名词: 可数名词与不可数名词'
-  - '语法: 代词: 人称代词（主格/宾格）'
-  module: 语言技能
+  - 写作技能
+  - 图表描述
+  - 观点表达
+  module: writing
   difficulty: 中等
   recommended_for:
   - L1
   - L2
   - L3
+  qc_status: needs_review
+  qc_note: 选择题缺少 options（既无文本也无图片选项）；选择题 answer 为空
+structure: 38单选(60.0分)
