@@ -267,9 +267,11 @@ def parse_docx_chinese(md: str, figures_dir: Path) -> dict:
         if (mode == "answer" and q_m and "【" not in ln):
             n = int(q_m.group(1))
             if n > last_q_seen and n <= 30:
-                # 但要排除 答案里的 "1. xxx 2. yyy" 这种合并行（这种已经被 ANSWER_MARKER 后续行吃掉）
-                # 这里只 trigger 在独立题目行：行长 >= 15（短答案不太可能是题面）
-                if len(ln.strip()) >= 15:
+                # 排除答案里的 "N. <短内容>" 这种短答案。但 essay 题号锚常很短
+                # （朝阳 Q26 "26. 按要求作文。" 只 10 字符），所以在 essay section
+                # 内放宽门槛。
+                min_len = 6 if cur_typ == "essay" else 15
+                if len(ln.strip()) >= min_len:
                     mode = "question"
                     if cur_typ:
                         sections[cur_typ].append(ln)
@@ -341,11 +343,17 @@ def parse_docx_chinese(md: str, figures_dir: Path) -> dict:
     # 6. full_score
     full_score = sum(q.get("score", 0) or 0 for q in questions) or None
 
-    answers_list = [
-        {"number": n, "correct": a.get("correct",""),
-          "solution": a.get("solution",""), "score": a.get("score")}
-        for n, a in sorted(answers_map.items())
-    ]
+    # **关键**：answers_list 必须从 questions 取，因为 _assign_scores 可能改了
+    # questions[i].solution（如二选一作文加 [二选一备选] 前缀），如果走 answers_map
+    # 会丢失这些修改
+    q_by_num = {q["number"]: q for q in questions}
+    answers_list = []
+    for n, a in sorted(answers_map.items()):
+        q = q_by_num.get(n)
+        sol = (q.get("solution","") if q else a.get("solution","")) or a.get("solution","")
+        ans = (q.get("answer","")   if q else a.get("correct","")) or a.get("correct","")
+        score = (q.get("score") if q else a.get("score"))
+        answers_list.append({"number": n, "correct": ans, "solution": sol, "score": score})
     return {
         "passages": passages,
         "questions": questions,
@@ -371,12 +379,18 @@ def _parse_section(sec_typ: str, sec_lines: list[str],
             q_starts.append((i, int(q_m.group(1)), q_m.group(2)))
 
     # 给每个子段构 passage（base/classical/modern 有子段；book_review/essay 通常无）
-    if sub_starts:
-        # 多子段：每个子段一段 passage（含从子段头到下一子段头/下一题号前的"passage body"）
-        boundaries = [s[0] for s in sub_starts] + [len(sec_lines)]
-        for idx, (start_i, sub_name) in enumerate(sub_starts):
-            end_i = boundaries[idx + 1]
-            # passage body：sub_name 后到第一个 q anchor 前
+    # **passage 合并策略**：
+    #   - "资料一/(一)(二)(三)/后记" = 真子段 → 独立 passage
+    #   - "材料一/材料二/材料三" = 题面引文 → **合并到上一个真子段的 passage body**
+    # 这样 modern_（一）内的 材料一/二/三 不会变 3 个独立 passage
+    real_subs = [(i, name) for (i, name) in sub_starts if not name.startswith("材料")]
+    real_sub_idx = {s[0]: s[1] for s in real_subs}
+    if real_subs:
+        # 用 real_subs 切 passage 边界
+        real_boundaries = [s[0] for s in real_subs] + [len(sec_lines)]
+        for idx, (start_i, sub_name) in enumerate(real_subs):
+            end_i = real_boundaries[idx + 1]
+            # passage body：sub_name 后到第一个 q anchor 前（含 materials）
             first_q_in_sub = next((qs[0] for qs in q_starts
                                    if start_i < qs[0] < end_i), end_i)
             body = _join_lines(sec_lines[start_i+1:first_q_in_sub])
@@ -413,12 +427,16 @@ def _parse_section(sec_typ: str, sec_lines: list[str],
 
     # 题：每个 q anchor 到下一个 q anchor 前
     q_boundaries = [qs[0] for qs in q_starts] + [len(sec_lines)]
-    # 还要在子段头处截断（防 stem 越界到下一子段的 passage body）
-    sub_idx_set = {s[0] for s in sub_starts}
+    # **关键区分**：
+    #   - "资料一/二/三/后记 / (一)(二)(三)" = 真子段（多题共享 passage）→ 截 stem
+    #   - "材料一/二/三" = 题面引文（孟子/论语原文 / 非连续文本各材料）→ **不**截 stem
+    #     让 Q13 等"综合材料"题的 stem 完整含所有材料
+    real_sub_starts = [(i, name) for (i, name) in sub_starts
+                       if not name.startswith("材料")]
+    real_sub_idx_set = {s[0] for s in real_sub_starts}
     for idx, (li, num, rest) in enumerate(q_starts):
         end_i = q_boundaries[idx + 1]
-        # 截至下个子段头（若在中间）
-        for s_i in sub_idx_set:
+        for s_i in real_sub_idx_set:
             if li < s_i < end_i:
                 end_i = s_i; break
         chunk_lines = [rest] + sec_lines[li+1:end_i]
@@ -568,19 +586,28 @@ def _parse_answers(a_lines: list[str]) -> dict[int, dict]:
             detail_blocks[cur_detail].append(ln)
     _flush_answer_buf()
 
-    # 把 detail block 拼成 solution（追加策略：若 answer block 的 solution 是
-    # 单字母或很短"略"等→替换；否则追加进 "详解" 后缀）
+    # 把 detail block 拼成 solution（**总是追加详解**，除非详解与答案重复）
     for n, dl in detail_blocks.items():
         text = "\n".join(l for l in dl if l.strip()).strip()
         if not text: continue
         if n not in out:
             out[n] = {"correct": "", "solution": "", "score": None}
-        cur = out[n].get("solution", "") or ""
+        cur = (out[n].get("solution","") or "").strip()
         if not cur:
             out[n]["solution"] = text
-        elif len(cur) < 20 and len(text) > 20:
-            # 当前 solution 太短（如 "B" / "略"），用 detail 补充
-            out[n]["solution"] = f"{cur}\n\n详解：{text}" if cur not in ("略","",) else text
+            continue
+        if cur in ("略",):
+            out[n]["solution"] = text
+            continue
+        # 详解与答案完全重复（如 Q3 "·矗·（zhù）立——chù"）→ 不重复追加
+        if text == cur or text in cur:
+            continue
+        # 答案在详解里也含 → 直接用详解（详解更全）
+        if cur in text and len(text) > len(cur) * 1.5:
+            out[n]["solution"] = text
+            continue
+        # 否则：答案 + 详解 拼接
+        out[n]["solution"] = f"{cur}\n\n详解：{text}"
     return out
 
 
@@ -768,12 +795,23 @@ def _assign_types(questions: list[dict]) -> None:
         elif sec == "base":
             q["type"] = "handwriting" if n == 1 else "subjective_blank"
         elif sec == "classical":
-            if re.search(r"[①②③④⑤]", sol) and len(sol) < 100:
+            stem = q.get("stem","") or ""
+            # 严格识别 dictation：stem 含 "补写出空缺/默写" 关键词（朝阳 Q8）
+            if any(k in stem for k in ("补写出空缺","补写空缺","默写")):
                 q["type"] = "dictation"
-            elif sol and len(sol) < 30 and "示例" not in sol:
-                q["type"] = "dictation"
-            elif any(k in sol for k in ["手法","意境","情景交融","渲染","烘托","赏析"]):
+            # 赏析炼字：stem 含 "赏析/表达效果/妙处"
+            elif any(k in stem for k in ("赏析","表达效果","妙处","炼字")):
                 q["type"] = "appreciation"
+            # 古诗内容理解 / 文言文链接材料填空（朝阳 Q9 / Q13）
+            # 区分古诗 vs 文言文：passage 含 "节选"/"《...》" 多为文言文
+            elif any(k in stem for k in ("依据你的理解","结合材料","结合下面",
+                                          "横线上填写恰当","横线处填写恰当",
+                                          "在后面语段","对...的理解")):
+                # 试题关联的 passage 内容判断
+                if any(k in stem for k in ("文言文","古文","《孟子","《论语","曹刿")):
+                    q["type"] = "classical_comprehension"   # 文言文综合理解
+                else:
+                    q["type"] = "poem_comprehension"         # 古诗内容理解
             else:
                 q["type"] = "subjective_blank"
         elif sec == "modern":
@@ -925,6 +963,8 @@ def main():
     result["slug"] = slug
     result["source"] = "docx"
     result["subject"] = "chinese"
+    # 卷面元数据（让 enrich 写入 yaml 头部）
+    _populate_exam_meta(result, slug, src.stem)
     fj = structured_dir / "final.json"
     fj.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
     qs = result["questions"]
@@ -934,6 +974,32 @@ def main():
     print(f"   passages: {len(result['passages'])}  questions: {len(qs)}  "
           f"answers: {len(result['answers'])}  full_score: {result['full_score']}")
     return result
+
+
+def _populate_exam_meta(result: dict, slug: str, src_stem: str) -> None:
+    """从 slug + 源文件名抽 year / district / exam_type / duration_minutes，
+    写到 result 顶层。让 enrich 直接读用（避免 enrich 再走 NormalizedPaper
+    的 exam_name 解析路径）。"""
+    region_cn_map = {
+        "chaoyang":"朝阳区","haidian":"海淀区","xicheng":"西城区","dongcheng":"东城区",
+        "fengtai":"丰台区","shijingshan":"石景山区","mentougou":"门头沟区","fangshan":"房山区",
+        "tongzhou":"通州区","shunyi":"顺义区","changping":"昌平区","daxing":"大兴区",
+        "pinggu":"平谷区","yanqing":"延庆区","huairou":"怀柔区","miyun":"密云区",
+        "yanshan":"燕山区",
+    }
+    type_cn_map = {"yi": "一模", "er": "二模", "zhen": "中考", "qmo": "期末"}
+    parts = slug.split("-")
+    year = int(parts[0]) if parts and parts[0].isdigit() else None
+    region_en = parts[1] if len(parts) > 1 else ""
+    type_en = parts[2] if len(parts) > 2 else "yi"
+    district = region_cn_map.get(region_en, "")
+    exam_type = type_cn_map.get(type_en, "一模")
+    result["year"] = year
+    result["district"] = district
+    result["exam_type"] = exam_type
+    result["duration_minutes"] = 150   # 北京中考语文统一 150 分钟
+    # exam 名称（供 enrich NormalizedPaper.from_final 用）
+    result["exam"] = f"{year}年北京{district}中考{exam_type}{result.get('subject','语文')}"
 
 
 def _infer_slug(stem: str) -> str:

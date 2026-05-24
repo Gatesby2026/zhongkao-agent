@@ -47,11 +47,22 @@ TYPE_MAP = {
     "fill_blank":   "填空",
     "calculation":  "计算",
     "experiment":   "实验探究",
-    "essay":        "解答",
-    "problem_solving": "解答",  # 数学 docx 路线用此 type，归"解答"
+    "essay":        "作文",          # 语文 essay 作文（之前误标"解答"）
+    "problem_solving": "解答",       # 数学 docx 路线用此 type
+    # 语文专用 type（chinese_docx_paper.py 产出）
+    "handwriting":           "书写",
+    "subjective_blank":      "主观填空",
+    "dictation":             "默写",
+    "appreciation":          "古诗赏析",
+    "comprehension":         "现代文阅读",     # 现代文 section 专用
+    "poem_comprehension":    "古诗内容理解",    # 古诗 section 内容理解（区分现代文）
+    "classical_comprehension": "文言文综合理解",  # 文言文 section（区分现代文）
+    "book_review":           "名著阅读",
     # 兼容旧格式中文 key
     "单选": "单选", "多选": "多选", "填空": "填空",
     "计算": "计算", "实验探究": "实验探究", "解答": "解答",
+    "作文": "作文", "书写": "书写", "默写": "默写",
+    "古诗赏析": "古诗赏析", "现代文阅读": "现代文阅读", "名著阅读": "名著阅读",
 }
 
 EXAM_TYPE_MAP = {
@@ -132,9 +143,14 @@ class NormalizedPaper:
         # 卷面元数据（v2 流水线从 OCR 头部抽取写入 final.json）
         p.full_score = data.get("full_score")
         p.duration = data.get("duration_minutes")
+        # 优先用 final.json 已显式注入的 year/district/exam_type（chinese_docx_paper.py 已写）
+        if data.get("year") is not None:    p.year = data["year"]
+        if data.get("district"):            p.district = data["district"]
+        if data.get("exam_type"):           p.exam_type = data["exam_type"]
 
-        # 从 exam 名称解析元数据（如"2026 北京朝阳区初三一模 物理"）
-        _parse_exam_name(p)
+        # 兜底：从 exam 名称解析元数据
+        if not p.year or not p.district:
+            _parse_exam_name(p)
 
         for q in data.get("questions", []):
             num = q.get("number", 0)
@@ -316,12 +332,22 @@ ENRICH_USER_TEMPLATE = """\
 
 规则：
 - **knowledge_points 必须对应「大题归属」**：
-  - section=base（基础·运用）→ 字音字形/成语/病句/词语运用/连贯/书写
-  - section=classical（古诗文阅读）→ 默写/古诗赏析/文言文实词/文言文翻译/文言文理解
+  - section=base（基础·运用）→ 字音/字形/成语运用/病句/词语运用/连贯/书写
+  - section=classical（古诗文阅读）→ 默写/古诗赏析/古诗内容理解/文言文实词/文言文翻译/文言文理解
   - section=book_review（名著阅读）→ 名著情节/人物形象/主题理解
-  - section=modern（现代文阅读）→ 信息筛选/段落作用/论证分析/记叙文/议论文/说明文/散文
+  - section=modern（现代文阅读）→ 综合题型对应 KP：
+      * 选择"不符合文意"/判断 → 信息筛选
+      * 概括内容/梳理思路 → 信息提取/段落梳理
+      * 词语含义解释（解释某词在某段含义）→ 词语含义
+      * 句式赏析/修辞/表达效果 → 句式赏析/修辞手法/表达效果
+      * 段落作用/开头作用/结尾作用 → 段落作用
+      * 论证过程/论证方法 → 论证分析
+      * 写出启示/谈感悟 → 启示感悟
+      * 记叙文文体 → 记叙文阅读；议论文 → 议论文阅读；说明文 → 说明文阅读
   - section=essay（作文）→ 命题作文/材料作文/半命题作文
 - **严禁将现代文题标注成"文言文"知识点，反之亦然**
+- **严禁滥用"信息筛选"标签**：只用于"判断说法是否符合文意"类选择题；
+  词语含义/句式赏析/段落作用/启示题 不要标"信息筛选"
 - difficulty：基础=直接考概念/简单计算；中等=多步推理/公式应用；能力=综合/压轴
 - recommended_for：基础→[L0-L3]；中等→[L1-L3]；能力→[L2-L3]；压轴→[L3]
 """
@@ -511,7 +537,7 @@ def enrich_paper(paper: NormalizedPaper, cache_prefix: str) -> dict:
             answer=ak["correct"],
             modules=modules,
             curriculum=curriculum,
-            cache_key=f"{cache_prefix}-Q{num}-v2",   # v2: prompt 加 section_hint
+            cache_key=f"{cache_prefix}-Q{num}-v3",   # v3: KP 细化 + 防信息筛选滥用
             section=q.get("section",""),
         )
         return num, r
