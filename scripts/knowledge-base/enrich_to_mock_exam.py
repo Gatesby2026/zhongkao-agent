@@ -114,6 +114,11 @@ class NormalizedPaper:
         self.questions: list[dict] = []
         # {number: {correct, solution}}
         self.answers: dict[int, dict] = {}
+        # 阅读理解/古诗文/资料类共享文章。元素 schema：
+        #   {id, type, name?, q_range:[lo,hi], body, figure?, image_options?}
+        # 题级通过 question.passage_id 关联（按 q_range 自动推断或显式指定）。
+        # 语文/英语含 passage 二级模型；数学/物理通常为空 []
+        self.passages: list[dict] = []
 
     # ── 新格式：final.json ──
 
@@ -156,6 +161,10 @@ class NormalizedPaper:
                 "correct":  str(a.get("correct", "")),
                 "solution": str(a.get("solution", "")),
             }
+
+        # passages（语文/英语 二级模型；数学/物理通常无）
+        for ps in data.get("passages", []) or []:
+            p.passages.append(dict(ps))
 
         return p
 
@@ -531,6 +540,15 @@ def enrich_paper(paper: NormalizedPaper, cache_prefix: str) -> dict:
         })
         questions_out.append(item)
 
+    # 题级 passage_id：按 q_range 自动推断（若 final.json 未显式带）
+    # 语文/英语 二级模型：reading/cloze/资料 篇 + 题级 passage_id 关联
+    for q_item in questions_out:
+        for ps in paper.passages:
+            rng = ps.get("q_range")
+            if rng and rng[0] <= q_item["id"] <= rng[1]:
+                q_item.setdefault("passage_id", ps["id"])
+                break
+
     # 顶层
     header = {
         "year":             paper.year,
@@ -541,6 +559,7 @@ def enrich_paper(paper: NormalizedPaper, cache_prefix: str) -> dict:
         "duration_minutes": paper.duration,
         "total_questions":  len(questions_out),
         "structure":        _derive_structure(questions_out),
+        "passages":         paper.passages,
         "questions":        questions_out,
     }
     return header
@@ -576,13 +595,33 @@ def _write_yaml(result: dict, out_path: Path,
                 for v in opts.values():
                     for m in re.finditer(r"!\[\]\(figures/([^)]+)\)", str(v)):
                         all_rel.add(f"figures/{m.group(1)}")
+        # passage figure / image_options（语文非连续文本 / 英语 A 篇 image-match）
+        # chinese_paper.py 写入时已含 slug 前缀（"2026-xxx-yi/figures/yyy.png"），
+        # 其他来源可能只有 "figures/yyy.png"。规范化为相对 paper_dir 的 figures/yyy.png
+        def _norm_figure_rel(fig_str: str) -> str:
+            if fig_str.startswith(f"{exam_slug}/figures/"):
+                return fig_str[len(exam_slug)+1:]   # 剥 slug 前缀
+            if fig_str.startswith("figures/"):
+                return fig_str
+            return f"figures/{fig_str}"
+        for ps in result.get("passages") or []:
+            fig = ps.get("figure")
+            if fig:
+                all_rel.add(_norm_figure_rel(fig))
+            img_opts = ps.get("image_options") or {}
+            for v in img_opts.values():
+                if isinstance(v, str):
+                    all_rel.add(_norm_figure_rel(v))
 
         for fig_rel in sorted(all_rel):
             src = paper_dir / fig_rel
+            dst = fig_dest_base / fig_rel
+            # 若 dst 已存在（chinese_paper.py 直接写 mock 路径，paper_dir 不必有 src）→ skip
+            if dst.exists() and not src.exists():
+                continue
             if not src.exists():
                 print(f"  ⚠️ 图片源文件不存在，跳过: {src}", file=sys.stderr)
                 continue
-            dst = fig_dest_base / fig_rel
             dst.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(src, dst)
             copied += 1
@@ -591,6 +630,15 @@ def _write_yaml(result: dict, out_path: Path,
             fig_rel = q.get("figure")
             if fig_rel and not fig_rel.startswith(exam_slug):
                 q["figure"] = f"{exam_slug}/{fig_rel}"
+        for ps in result.get("passages") or []:
+            fig = ps.get("figure")
+            if fig and not fig.startswith(exam_slug):
+                ps["figure"] = f"{exam_slug}/" + (fig if fig.startswith("figures/") else f"figures/{fig}")
+            img_opts = ps.get("image_options")
+            if isinstance(img_opts, dict):
+                for k, v in list(img_opts.items()):
+                    if isinstance(v, str) and not v.startswith(exam_slug):
+                        img_opts[k] = f"{exam_slug}/" + (v if v.startswith("figures/") else f"figures/{v}")
         if copied:
             print(f"  📷 复制 {copied} 张图片 → {fig_dest_base}/figures/", file=sys.stderr)
 
