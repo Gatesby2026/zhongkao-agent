@@ -161,6 +161,11 @@ def _extract_image(drawing_el: ET.Element, rels: dict[str, str],
         out = figures_dir / src.name
         if not out.exists():
             shutil.copy(src, out)
+        # WMF/EMF 浏览器不显示。优先用同名 png 兄弟（由 batch_wmf_convert.sh 转出）
+        if out.suffix.lower() in (".wmf", ".emf"):
+            png_sibling = out.with_suffix(".png")
+            if png_sibling.exists():
+                return f"![](figures/{png_sibling.name})"
         return f"![](figures/{src.name})"
     return ""
 

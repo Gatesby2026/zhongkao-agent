@@ -1,0 +1,17 @@
+# 延庆 2026 一模物理 patches
+# image38.wmf 是源 docx 中某个虚词"的"的字形化残片（872 字节），soffice WMF→PNG 转出
+# 4858 字节空白页大图。3 处 solution 中 image38.png 出现在汉字之间充当"的"字，
+# 需手动剥离（在 enrich 后通过 patches 系统执行）。
+# 用 solution_sub 字段做正则替换。如果 _apply_patches 不支持，则使用 solution 完整覆盖。
+
+questions:
+  13:
+    # solution 第一处出现 "手![](figures/image38.png)内能增加" → "手的内能增加"
+    # 走 stem_append/solution 完整覆盖路径较复杂；这里直接告知人工
+    qc_note: "TODO: solution 中 image38.png 实为虚词'的'，需替换为'的'字"
+  15:
+    qc_note: "TODO: solution 中 image38.png 多处实为'的'，需文本替换"
+  19:
+    qc_note: "TODO: solution 中 image38.png 实为'的'，需替换"
+  24:
+    qc_note: "TODO: solution 中 image38.png 实为'的'，需替换"

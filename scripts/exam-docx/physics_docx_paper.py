@@ -60,9 +60,13 @@ def _extract_ole_object(obj_el: ET.Element, rels: dict[str, str],
         out = figures_dir / src.name
         if not out.exists():
             shutil.copy(src, out)
-        # WMF/EMF 浏览器不显示，输出 [公式] 占位（wmf 文件保留，后期可批量
-        # 用 LibreOffice 或 ImageMagick 转 png；运行时不转因为 soffice 慢）
+        # WMF/EMF 浏览器不显示。优先检查是否已有同名 png 兄弟文件
+        # （由 /tmp/batch_wmf_convert.sh 批量 soffice 转出）。
+        # 有 → 用 png；没有 → [公式] 占位。
         if out.suffix.lower() in (".wmf", ".emf"):
+            png_sibling = out.with_suffix(".png")
+            if png_sibling.exists():
+                return f"![](figures/{png_sibling.name})"
             return f"[公式]"
         return f"![](figures/{out.name})"
     return ""
@@ -257,7 +261,10 @@ NOISE_LINE_RE = re.compile(
     r"^\s*(?:学校[_\s]+班级|2026\.\d{1,2}|考生须知|\d+\s*年.*?试卷\s*$"
     r"|本试卷共\d+页|考试时间\d+\s*分钟"
     r"|语文试卷|声明.*?著作权|发布日期|菁优网"
-    r"|参考答案|答案及评分)\s*$")
+    r"|参考答案|答案及评分"
+    # 物理多区把 "第一/二/三/四部分" 写成单独一行的卷面分段标记，
+    # 会泄漏到 Q15 等的 solution 末尾。当作噪声过滤。
+    r"|第[一二三四五六]部分)\s*$")
 
 
 def _is_section_header(line: str) -> tuple[str, str] | None:
@@ -337,7 +344,9 @@ def parse_docx_chinese(md: str, figures_dir: Path) -> dict:
         # mode == question
         if q_m:
             n = int(q_m.group(1))
-            if n <= 30: last_q_seen = n
+            # **严格单调递增**：防止科普阅读题干里 "1．压缩 2．加热 3．膨胀 4．回收"
+            # 工艺流程数字把 last_q_seen 从 24 倒退到 4，导致后续【答案】块归错题
+            if n <= 30 and n > last_q_seen: last_q_seen = n
         if cur_typ:
             sections[cur_typ].append(ln)
 
@@ -348,7 +357,8 @@ def parse_docx_chinese(md: str, figures_dir: Path) -> dict:
         _parse_section(sec_typ, sec_lines, passages, questions, figures_dir)
 
     # 3. 解析答案 + 详解
-    answers_map = _parse_answers(a_lines)
+    valid_qs = {q["number"] for q in questions}
+    answers_map = _parse_answers(a_lines, valid_qs)
     poem_trans = _parse_dianjing_translations(a_lines)
     # 合并 answer 到 question
     for q in questions:
@@ -535,14 +545,21 @@ def _extract_stem_and_options(chunk: str) -> tuple[str, dict[str, str] | None]:
     opts_part = chunk[a_m.start():]
     # 优先用换行分隔（每行一个或多个选项）→ 拆出 A/B/C/D
     opts: dict[str, str] = {}
-    # 匹配 A. ... (B. ... | tab+B. | $)
+    # 匹配 A. ... 直到下一个 [A-D]\s*[.、．] 或子问题号 "（N）"/"(N)" 或 EOF
+    # 物理科普阅读题（pinggu/fangshan/shijingshan/yanqing Q24）有 3 选项 + 后接 (3)(4) 填空，
+    # 不加 (N) 边界会把 (3) 段塞进最后一个选项
     for m in re.finditer(
-        r"\b([A-D])\s*[.、．]\s*(.*?)(?=(?:\s+[A-D]\s*[.、．])|\Z)",
+        r"\b([A-D])\s*[.、．]\s*(.*?)"
+        r"(?=(?:\s+[A-D]\s*[.、．])|(?:\s+[（\(]\s*\d+\s*[）\)])|\Z)",
         opts_part, re.DOTALL):
         key = m.group(1)
         val = m.group(2).strip().replace("\n", " ").strip()
         if key not in opts:
             opts[key] = val
+    # 剩余 "(3) ..." 子问题文本回挂到 stem
+    tail_m = re.search(r"\s+([（\(]\s*\d+\s*[）\)].*)$", opts_part, re.DOTALL)
+    if tail_m and opts:
+        stem = (stem + "\n\n" + tail_m.group(1).strip()).strip()
     return stem, opts if opts else None
 
 
@@ -563,7 +580,8 @@ def _clean_noise(text: str) -> str:
 
 # ─── 答案 / 详解 解析 ──────────────────────────────────────────────────────
 
-def _parse_answers(a_lines: list[str]) -> dict[int, dict]:
+def _parse_answers(a_lines: list[str], valid_qs: set[int] | None = None) -> dict[int, dict]:
+    _ = valid_qs  # 暂保留接口；逻辑用 entered_qs（见下）
     """从 【答案】/【N题详解】块里抽 {N: {correct, solution, score}}。
     格式样例：
       【答案】1. 京城书香之旅    2. A    3. A
@@ -581,6 +599,8 @@ def _parse_answers(a_lines: list[str]) -> dict[int, dict]:
     cur_detail: int | None = None
     # 默认归属题号（来自 q_text 最后题号锚，由调用方在 a_lines 里以 __Q_CTX__:N 标记传入）
     default_q = 0
+    # 已"进入"过答案块的题号；防 Q17 三小问标 【17/18/19题详解】误识为 Q18/Q19 大题详解
+    entered_qs: set[int] = set()
 
     def _flush_answer_buf():
         if not answer_buf: return
@@ -589,7 +609,8 @@ def _parse_answers(a_lines: list[str]) -> dict[int, dict]:
         # 小数误识为题号——物理高频）。若整体无 "N." 前缀，归到 default_q
         parts = re.split(r"\s+(?=\d{1,2}\s*[.、．]\s*[^\d])", text)
         for part in parts:
-            m = re.match(r"\s*(\d{1,2})\s*[.、．]\s*(.+)$", part, re.DOTALL)
+            # 同样排除小数：N. 后必须跟非数字才算题号锚（防 "2.50" 被当 Q2+"50"）
+            m = re.match(r"\s*(\d{1,2})\s*[.、．]\s*(?=[^\d])(.+)$", part, re.DOTALL)
             if m:
                 n = int(m.group(1))
                 content = m.group(2).strip()
@@ -617,7 +638,9 @@ def _parse_answers(a_lines: list[str]) -> dict[int, dict]:
     for ln in a_lines:
         # 上下文标记（由 parse_docx_chinese 注入）
         if ln.startswith("__Q_CTX__:"):
-            try: default_q = int(ln.split(":",1)[1])
+            try:
+                default_q = int(ln.split(":",1)[1])
+                entered_qs.add(default_q)
             except: pass
             continue
         if ANSWER_MARKER_RE.match(ln):
@@ -635,7 +658,19 @@ def _parse_answers(a_lines: list[str]) -> dict[int, dict]:
         if dm:
             _flush_answer_buf()
             in_answer_block = False
-            cur_detail = int(dm.group(1))
+            n_detail = int(dm.group(1))
+            # **防误识** 解析版 quirk：Q17 三个小问标 【17/18/19题详解】，但真正
+            # 的 Q18/Q19 答案块还没进入（entered_qs 不含 18/19），且 N 离 default_q 很近。
+            # 视为 default_q 的子问详解，sub_n = N - default_q + 1。
+            if (n_detail not in entered_qs and default_q
+                and 0 < (n_detail - default_q) <= 5):
+                cur_detail = default_q
+                detail_blocks.setdefault(cur_detail, [])
+                sub_n = n_detail - default_q + 1
+                after = ln[dm.end():].strip()
+                detail_blocks[cur_detail].append(f"\n（{sub_n}）{after}".rstrip())
+                continue
+            cur_detail = n_detail
             detail_blocks.setdefault(cur_detail, [])
             # 同行内容也收（防 "【N题详解】内容..." 单行格式）
             after = ln[dm.end():].strip()
@@ -671,6 +706,9 @@ def _parse_answers(a_lines: list[str]) -> dict[int, dict]:
         if DAOYU_RE.match(ln) or DIANJING_RE.match(ln):
             cur_detail = None
             continue
+        if NOISE_LINE_RE.match(ln):
+            # 卷面分段噪声（"第二部分" 等）：不进 answer 也不进 detail
+            continue
         if in_answer_block:
             answer_buf.append(ln)
             continue
@@ -681,6 +719,10 @@ def _parse_answers(a_lines: list[str]) -> dict[int, dict]:
     # 把 detail block 拼成 solution（**总是追加详解**，除非详解与答案重复）
     for n, dl in detail_blocks.items():
         text = "\n".join(l for l in dl if l.strip()).strip()
+        # 清理行内残留的 【小问N详解】 / 【N题详解】 marker（行首已由 SUB_DETAIL_RE 处理，
+        # 但 image+marker 同行格式 ![](image.png)【小问2详解】 漏过；这里二次清洗）
+        text = re.sub(r"【小问\d+详解】", "", text)
+        text = re.sub(r"【\d{1,2}题详解】", "", text)
         if not text: continue
         if n not in out:
             out[n] = {"correct": "", "solution": "", "score": None}
@@ -727,15 +769,17 @@ STANDARD_SECTION_TOTAL = {
 # （共N分）/（N分）标记
 SCORE_BRACKET_RE = re.compile(r"[（\(]\s*共?\s*(\d+)\s*分\s*[）\)]")
 # 大题头里的总分（一/二/三/四/五 + 共N分）
+# 兼容头括号里继续写细节："（共11分，24题3分，26、27题各4分）"
 SECTION_TOTAL_RE = re.compile(
-    r"^\s*[一二三四五]\s*[、.]\s*[^（\(]*[（\(]\s*共?\s*(\d+)\s*分\s*[）\)]")
+    r"^\s*[一二三四五]\s*[、.]\s*[^（\(]*[（\(]\s*共?\s*(\d+)\s*分")
 # 子段总分（(一)/(二)/(三)  + 共?N分）
 SUB_TOTAL_RE = re.compile(
     r"^\s*[（\(][一二三四五][）\)][^（\(]*[（\(]\s*共?\s*(\d+)\s*分\s*[）\)]")
 
 
 _PER_Q_SCORE_RE = re.compile(
-    r"([0-9]+(?:[、,，][0-9]+)*)\s*题\s*各\s*(\d+)\s*分"
+    # 兼容 "16、17、19题各3分"（多题用 各） 和 "24题3分"（单题不带 各）
+    r"([0-9]+(?:[、,，][0-9]+)*)\s*题\s*各?\s*(\d+)\s*分"
 )
 
 
@@ -1141,7 +1185,7 @@ def _apply_patches(patches: dict, result: dict) -> int:
             q["stem"] = patch["stem"]; n_applied += 1
         if patch.get("stem_append"):
             q["stem"] = q.get("stem","") + patch["stem_append"]; n_applied += 1
-        if patch.get("options") is not None:
+        if "options" in patch:  # 含 null/None：显式清掉 options（如 tongzhou Q22 实验题）
             q["options"] = patch["options"]; n_applied += 1
         if patch.get("solution") is not None:
             q["solution"] = patch["solution"]; n_applied += 1
