@@ -1270,7 +1270,7 @@ def _populate_exam_meta(result: dict, slug: str, src_stem: str) -> None:
     result["year"] = year
     result["district"] = district
     result["exam_type"] = exam_type
-    result["duration_minutes"] = 150   # 北京中考语文统一 150 分钟
+    result["duration_minutes"] = 70   # 北京中考物理 70 分钟（chinese 路线遗留默认 150 已修）
     # exam 名称（供 enrich NormalizedPaper.from_final 用）
     result["exam"] = f"{year}年北京{district}中考{exam_type}{result.get('subject','物理')}"
 
