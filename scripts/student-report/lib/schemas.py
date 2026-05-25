@@ -143,8 +143,13 @@ def load_exam_view(kb_yaml: Path, student_dir: Path) -> ExamView:
         num = _qnum(q.get("id"))
         sc = sc_by_num.get(num, {})
         a = ac_by_num.get(num, {})
-        full = sc.get("fullScore", q.get("score", 0))
-        scored = sc.get("scored", 0)
+        # full 以 yaml 为权威（二选一作文等场景，xlsx 子题求和会超 yaml 满分）
+        full = float(q.get("score", 0) or 0)
+        if "scored" in sc:
+            scored = max(0.0, min(full, float(sc.get("scored", 0))))
+        else:
+            # 班小二惯例：未列出的题 = 学生满分（典型为选择题全对）
+            scored = full
         type_cn = q.get("type", "")
         module = q.get("module", "")
         filled = a.get("filled")

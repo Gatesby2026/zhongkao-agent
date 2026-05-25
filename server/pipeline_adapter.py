@@ -135,7 +135,9 @@ def report_json(student_dir: Path) -> dict:
             "knowledge_points": q.knowledge_points,
             "error_type": per.get("errorType", ""),
             "why_wrong": per.get("whyWrong", []),
-            "fix": per.get("howToFix") or per.get("fix") or [],
+            # 报告 LLM 实际用键 solveCorrectly（"正确该怎么做"），保留旧键作兜底
+            "fix": (per.get("solveCorrectly") or per.get("howToFix")
+                    or per.get("fix") or []),
         })
 
     return {

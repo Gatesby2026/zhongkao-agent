@@ -20,8 +20,12 @@ from pathlib import Path
 
 import openpyxl
 
-# 学科列样式：  总分(70_0)  /  12(2_0)  /  20(4_0)
-_PAREN = re.compile(r"^\s*(总分|\d+)\s*[\(（]\s*(\d+)_(\d+)\s*[\)）]\s*$")
+# 学科列样式：  总分(70_0)  /  12(2_0)  /  20(4_0)；
+# 班小二附加情况：
+#   - 括号后追加知识点描述："2(2_0)能理解并合理使用成语"
+#   - 主观题拆子小问："20_1(3_0)"、"23_1_1(2_0)"、作文"27_1(40_0)"
+# 第 1 组只捕"主题号"，子号(_\d+)* 吞掉；末尾允许描述（去 $）
+_PAREN = re.compile(r"^\s*(总分|\d+)(?:_\d+)*\s*[\(（]\s*(\d+)_(\d+)\s*[\)）]")
 
 
 def _num(v) -> float:
@@ -57,7 +61,8 @@ def parse_scores_xlsx(xlsx_path: Path) -> dict:
         name = m.group(1)
 
     exam_total = {"scored": 0.0, "fullScore": 0.0}
-    questions: list[dict] = []
+    # 主题号 → 累加 scored/fullScore；用 dict 合并子小问（20_1/20_2 → Q20）
+    agg: dict[int, dict] = {}
     for r in rows:
         label = str(r[0]).strip()
         scored = _num(r[1]) if len(r) > 1 else 0.0
@@ -68,12 +73,17 @@ def parse_scores_xlsx(xlsx_path: Path) -> dict:
         full = _full(ip, dp)
         if key == "总分":
             exam_total = {"scored": _i(scored), "fullScore": _i(full)}
-        else:
-            questions.append({
-                "qId": f"Q{int(key)}",
-                "scored": _i(scored),
-                "fullScore": _i(full),
-            })
+            continue
+        qid = int(key)
+        cur = agg.setdefault(qid, {"scored": 0.0, "fullScore": 0.0})
+        cur["scored"] += scored
+        cur["fullScore"] += full
+    questions = [
+        {"qId": f"Q{n}",
+         "scored": _i(agg[n]["scored"]),
+         "fullScore": _i(agg[n]["fullScore"])}
+        for n in sorted(agg)
+    ]
 
     if not questions:
         raise ValueError("未解析到任何小题分（格式不符？）")

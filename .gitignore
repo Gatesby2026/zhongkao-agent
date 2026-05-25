@@ -2,6 +2,9 @@ data/
 .DS_Store
 knowledge-original/
 
+# 端到端测试运行产物（test-data/_runs/<ts>/<case>/）
+test-data/_runs/
+
 # 教辅提取缓存
 knowledge-base/prep/question-banks/**/.cache/
 
