@@ -34,6 +34,36 @@ def _sub(s: str) -> str:
     return s.translate(_SUB) if all(c in "0123456789+-=()" for c in s) else f"_{s}"
 
 
+_LATEX_CMDS_AFTER_QUOTE = (
+    "text", "mathrm", "mathbf", "mathit", "operatorname", "boldsymbol",
+    "frac", "sqrt", "vec", "hat", "bar", "dot", "ddot", "tilde",
+    "times", "cdot", "div", "pm", "neq", "leq", "geq", "approx",
+    "alpha", "beta", "gamma", "delta", "theta", "lambda", "mu", "pi",
+    "rho", "sigma", "tau", "phi", "omega", "Delta", "Omega", "eta",
+)
+
+
+def fix_latex_escape(s: str) -> str:
+    """规范化 LLM 输出里的 LaTeX 转义，渲染前必经一道。
+
+    三类常见坑：
+      1. JSON 多重转义：`\\\\frac` → `\\frac`（≥2 反斜杠 + 命令前缀字符压回单反斜杠，
+         前缀含 [({%&_#$]）
+      2. `\\(` `\\)` 误用：LLM 拿它当普通括号；学情报告公式统一 `$...$`，一律还原
+      3. 引号替代反斜杠：LLM 偶把 `\\text{}` 写成 `"text{}`（`_{` 后误生成），
+         凡 `"<LaTeX 命令名>{` 模式还原 `\\<命令名>{`（白名单内）
+
+    幂等：已规范字符串再过一遍仍原样。
+    """
+    if not s:
+        return s
+    s = re.sub(r"\\{2,}(?=[A-Za-z(\[{%&_#$])", r"\\", s)
+    s = s.replace(r"\(", "(").replace(r"\)", ")")
+    pat = r'"(' + "|".join(_LATEX_CMDS_AFTER_QUOTE) + r')(?=[\s{])'
+    s = re.sub(pat, r"\\\1", s)
+    return s
+
+
 def _delatex(t: str) -> str:
     """对一段 LaTeX 片段（不含 $）做替换。"""
     # \mathrm{...} \text{...} \mathbf{...} → 内容

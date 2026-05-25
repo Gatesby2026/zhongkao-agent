@@ -65,23 +65,7 @@ def _bar(rate: float, width: int = 20) -> str:
     return "█" * n + "░" * (width - n)
 
 
-def _fix_tex(s: str) -> str:
-    """修 LLM 多重转义的 LaTeX：`\\\\frac`→`\\frac`、`\\\\eta`→`\\eta`。
-
-    LLM 在 JSON 里过度转义反斜杠，落到 MD 成 `\\\\frac`（双反斜杠），KaTeX
-    会把 `\\\\` 当换行 + `frac` 当文字 → 渲染成 "fracW有用W总"。
-    把「≥2 个反斜杠 + 字母/( /{ 」压成单反斜杠（=正确的 LaTeX 命令前缀）。
-    `\\\\` 后接空格/数字（真换行场景）不动——学生向报告基本不用。
-    """
-    if not s:
-        return s
-    # ≥2 反斜杠 + LaTeX 命令前缀字符（字母/( /{ /% /空格转义等）→ 单反斜杠
-    s = re.sub(r"\\{2,}(?=[A-Za-z({%&_#$])", r"\\", s)
-    # `\(` `\)` 是 md-to-pdf KaTeX 的行内公式定界符；LLM 常拿它误写单位括号
-    # （如 `$...0.3 \(m^2)$`），导致 KaTeX 解析错乱整段不渲染。学情报告公式
-    # 统一用 `$...$`，故 `\(`/`\)` 一律还原成普通括号。
-    s = s.replace(r"\(", "(").replace(r"\)", ")")
-    return s
+from lib.textfmt import fix_latex_escape as _fix_tex  # noqa: E402
 
 
 def _hl(s: str) -> str:

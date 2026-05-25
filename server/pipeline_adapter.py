@@ -110,6 +110,7 @@ def report_json(student_dir: Path) -> dict:
     from lib import aggregate as agg              # noqa
     from lib import analyze                        # noqa
     from lib.schemas import load_exam_view         # noqa
+    from lib.textfmt import fix_latex_escape      # noqa
     import build_report as br                      # noqa
 
     standard = br.infer_standard(student_dir)
@@ -134,10 +135,11 @@ def report_json(student_dir: Path) -> dict:
             "score": q.score,
             "knowledge_points": q.knowledge_points,
             "error_type": per.get("errorType", ""),
-            "why_wrong": per.get("whyWrong", []),
-            # 报告 LLM 实际用键 solveCorrectly（"正确该怎么做"），保留旧键作兜底
-            "fix": (per.get("solveCorrectly") or per.get("howToFix")
-                    or per.get("fix") or []),
+            # LLM 输出含 LaTeX，必经 fix_latex_escape 规范化转义
+            "why_wrong": [fix_latex_escape(x) for x in (per.get("whyWrong") or [])],
+            "fix": [fix_latex_escape(x) for x in (
+                per.get("solveCorrectly") or per.get("howToFix")
+                or per.get("fix") or [])],
         })
 
     return {
