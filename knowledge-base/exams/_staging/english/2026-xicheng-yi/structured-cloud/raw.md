@@ -1,0 +1,714 @@
+![](figures/image1.png)![](figures/image2.png)北京市西城区九年级统一测试试卷
+
+英语
+
+2026.4
+
+考生须知
+
+1. 本试卷共11页，共两部分，共38题。满分60分。考试时间90分钟。
+
+2. 在试卷和草稿纸上准确填写姓名、准考证号、考场号和座位号。
+
+3. 试题答案一律填涂或书写在答题卡上，在试卷上作答无效。
+
+4. 在答题卡上，选择题用2B铅笔作答，其他试题用黑色字迹签字笔作答。
+
+5. 考试结束，请将本试卷、答题卡和草稿纸一并交回。
+
+第一部分
+
+本部分共33题，共40分。在每题列出的四个选项中，选出最符合题目要求的一项。
+
+一、单项填空（每题0.5分，共6分）
+
+从下面各题所给的A、B、C、D四个选项中，选择可以填入空白处的最佳选项。
+
+1. Mrs. Zhang is very kind and helpful. We often ask ________ for advice.
+
+A. her B. she C. him D. he
+
+【答案】A
+
+【解析】
+
+【详解】句意：张太太非常善良且乐于助人。我们经常向她寻求建议。
+
+her她（宾格）；she她（主格）；him他（宾格）；he他（主格）。根据“Mrs. Zhang”可知指代女性，排除C、D；空处在动词ask后作宾语，需用宾格形式，排除B。
+
+2. The graduation celebration will be ________ the morning of July 10th, 2026.
+
+A. at B. in C. on D. for
+
+【答案】C
+
+【解析】
+
+【详解】句意：毕业典礼将于2026年7月10日上午举行。
+
+at用于具体时刻前；in用于年、月、泛指的上午/下午/晚上前；on用于具体某一天或其上午、下午、晚上前；for后接时间段。“the morning of July 10th,2026”是具体某一天的上午，应填on。
+
+3. —Must I finish the whole online course in two weeks?
+
+—No, you ________. Only the first three units are required.
+
+A. mustn’t B. shouldn’t C. can’t D. needn’t
+
+【答案】D
+
+【解析】
+
+【详解】句意：——我必须在两周内完成整个在线课程吗？——不，你不必。只要求前三个单元。
+
+mustn’t禁止；shouldn’t不应该；can’t不能；needn’t不必。以Must开头的一般疑问句，否定回答表示“不必”，应用needn’t或don’t have to，而mustn’t意为“禁止”。根据“No”及“Only the first three units are required.”可知，此处表示没有必要。
+
+4. Tom loves tennis ________ than any other sport.
+
+A. most B. more C. much D. the more
+
+【答案】B
+
+【解析】
+
+【详解】句意：汤姆比喜欢其他任何运动都更喜欢网球。
+
+most最；more更；much很多；the more更。根据句中的比较级标志词than，此处需要使用much的比较级more，且比较级前不加定冠词the。应填more。
+
+5. — ________should I water the plants?
+
+— Every four or five days. Too much water is not good for them.
+
+A. How many B. How soon C. How long D. How often
+
+【答案】D
+
+【解析】
+
+【详解】句意：—— 我应该多久给植物浇一次水？—— 每隔四五天。太多的水对它们不好。
+
+How many 提问数量；How soon 提问“多久以后”；How long 提问时长。How often 用于提问频率。根据答语“Every four or five days”可知，此处询问的是动作发生的频率。应填How often。
+
+6. We have to leave for the airport right now, ________ we will miss the flight.
+
+A. or B. but C. so D. and
+
+【答案】A
+
+【解析】
+
+【详解】句意：我们必须现在出发去机场，否则我们将错过航班。
+
+or或者，否则；but但是；so所以；and和。根据“We have to leave for the airport right now”与“we will miss the flight”可知，此处表示如果不现在出发就会错过航班，表示“否则”的逻辑关系，应用or。
+
+7. We will have more family outings when the weather ________ warmer.
+
+A. got B. will get C. gets D. was getting
+
+【答案】C
+
+【解析】
+
+【详解】句意：当天气变得更暖和时，我们将会有更多的家庭郊游。
+
+主句“We will have…”是一般将来时，when引导的时间状语从句需用一般现在时表将来，主语“the weather”是第三人称单数，谓语动词用gets。
+
+8. — Look! Students from the Greenlife Club ________ up new recycling bins.
+
+— Let’s go and help!
+
+A. set B. are setting C. will set D. have set
+
+【答案】B
+
+【解析】
+
+【详解】句意：——看！绿色生活俱乐部的学生们正在搭建新的回收箱。——我们去帮忙吧！
+
+set动词原形；are setting现在进行时；will set一般将来时；have set现在完成时。根据句首提示词“Look!”可知，动作此刻正在发生，应用现在进行时，结构为“be+现在分词”，故选are setting。
+
+9. In the past few years, more and more people ________ the importance of lifelong learning.
+
+A. realize B. were realizing C. have realized D. will realize
+
+【答案】C
+
+【解析】
+
+【详解】句意：在过去的几年里，越来越多的人已经意识到终身学习的重要性。
+
+根据时间状语“In the past few years”可知，此处表示过去发生的动作对现在造成的影响，应用现在完成时。应填have realized。
+
+10. —I saw you in the library yesterday, and you were very focused.
+
+—Yes. I ________ for my book review the whole afternoon.
+
+A. am preparing B. was preparing C. have prepared D. will prepare
+
+【答案】B
+
+【解析】
+
+【详解】句意：——昨天我在图书馆看到你了，你非常专注。——是的。我整个下午都在准备我的书评。
+
+am preparing正在准备（现在进行时）；was preparing正在准备（过去进行时）；have prepared已经准备（现在完成时）；will prepare将准备（一般将来时）。根据句中“yesterday”和“the whole afternoon”可知，表示“过去某一时间段一直在做某事”，应用过去进行时，主语是I，be动词用was，应填was preparing。
+
+11. A new teaching app ________ in different classrooms in the following two months.
+
+A. will test B. tested C. was tested D. will be tested
+
+【答案】D
+
+【解析】
+
+【详解】句意：一个新的教学应用程序将在接下来的两个月里在不同的教室被测试。
+
+根据时间状语“in the following two months”可知，句子时态为一般将来时；主语“A new teaching app”与动词“test”之间是被动关系，所以使用一般将来时的被动语态，结构为will be+过去分词。应填will be tested。
+
+12. — Do you remember ________ last term?
+
+— In the school garden.
+
+A. where the language corner was held B. where was the language corner held
+
+C. where the language corner is held D. where is the language corner held
+
+【答案】A
+
+【解析】
+
+【详解】句意：——你记得上学期语言角是在哪里举行的吗？——在学校花园里。
+
+宾语从句需用陈述语序，即引导词+主语+谓语；根据时间状语last term可知从句应用一般过去时，故选A。
+
+二、完形填空（每题1分，共8分）
+
+阅读下面的短文，掌握其大意，然后从短文后各题所给的A、B、C、D四个选项中，选择最佳选项。
+
+![](figures/image3.png)
+
+Lily believed real beauty was only found in bright things: golden sunsets, warm smiles … Armed with her digital camera, she chased (追求) only <u>____13____</u>. When her family moved to the Riverside neighborhood, she saw only old houses and too many shadows. She thought it completely boring.
+
+Her photography project for the school’s “My Community” competition felt like a certain <u>____14____</u>. One gray afternoon, filled with a sense of duty rather than inspiration, she went on a walk with her camera. As the setting sun hit the neighborhood, long shadows stretched (延伸) across the storefront of the flower shop. Out of boredom, she raised her camera and took a picture. The picture, which looked like a drawing, <u>____15____</u> her. The shadow of a woman planting flowers in window boxes was full of a quiet story.
+
+An idea came to her mind. What if she stopped <u>____16____</u> the shadows and instead looked at them? She gave up her old project and began a new one: “The Shadow Project.”
+
+This project required a <u>____17____</u> kind of sight. She photographed a joyful girl’s shadow as she jumped rope. She found unexpected beauty in the shadow of an apple tree, and love in the shadow of a mother and child holding hands...
+
+To record these shadows, she interacted with those who made them. She met Mrs. Garcia, the woman with the window boxes, who was a violin teacher and played a beautiful song for her. Lily began to realize that Riverside wasn’t <u>____18____</u>; it was full of stories.
+
+For the competition, she presented artistic photographs of shadows. Beside each, she placed a small card with a handwritten paragraph about the person, place, or moment that had made it. The energetic life was implied (蕴含), not shown, making the shadows feel full of presence and <u>____19____</u>.
+
+Her project won first prize. At the exhibition, an elderly woman stood for a long time before a photo of a long, lonely shadow made by an empty park bench. “That’s old Mr. Brown’s bench,” she said softly. “He sat there every day for twenty years. Your photo...it feels like he’s still there. You <u>____20____</u> him.”
+
+At that moment, Lily understood. She hadn’t been photographing the lack (缺失) of light. She had been photographing the memory of light and the shape of stories. She learned the truest beauty is not only in the light, but also in the shadows where history and heart quietly live.
+
+13. A. honor B. stories C. light D. colors
+
+14. A. discovery B. cheat C. chance D. failure
+
+15. A. surprised B. challenged C. pushed D. disappointed
+
+16. A. imagining B. avoiding C. shooting D. noticing
+
+17. A. different B. traditional C. simple D. usual
+
+18. A. boring B. familiar C. lively D. perfect
+
+19. A. dream B. pride C. brightness D. memory
+
+20. A. missed B. saw C. understood D. recognized
+
+【答案】13. C    14. D    15. A    16. B    17. A    18. A    19. D    20. B
+
+【解析】
+
+【导语】本文是一篇记叙文，讲述了Lily最初只追求明亮事物中的美，在社区摄影比赛中发现阴影里蕴含的故事与记忆，最终领悟到真正的美不仅在光明中，也在阴影里的故事。
+
+【13题详解】
+
+句意：Lily 认为真正的美只存在于明亮的事物中：金色日落、温暖的微笑…… 她拿着数码相机，只追求光明。
+
+文章开头点明“real beauty was only found in bright things”，说明Lily只追求光明，“light”与“bright things”直接对应，符合语境。
+
+【14题详解】
+
+句意：她为学校“我的社区”比赛准备的摄影项目，感觉像是某种失败。
+
+Lily觉得新社区“completely boring”，对项目毫无灵感，只带着责任感而非创作热情，因此认为这个项目注定会失败，“failure”符合她消极的预期，匹配语境。
+
+【15题详解】
+
+句意：这张看起来像画的照片让她惊讶。
+
+Lily原本只关注光明，却在这张阴影照片里看到了“full of quiet story”，这与她之前的认知完全不同，让她感到意外，“surprised”符合语境。
+
+【16题详解】
+
+句意：如果她停止避开阴影，转而认真观察它们会怎样？
+
+Lily之前觉得社区的阴影无聊又阴暗，一直刻意避开，现在决定转变态度，主动去观察阴影，“avoiding”符合她之前的行为，匹配语境。
+
+【17题详解】
+
+句意：这个项目需要一种不同的视角。
+
+Lily之前只追求光明中的美，现在要从阴影里发现美，这是一种全新的观察角度，“different”符合项目的核心要求，匹配语境。
+
+【18题详解】
+
+句意：Lily开始意识到Riverside社区并不枯燥；它充满了故事
+
+Lily最初觉得社区“completely boring”，但通过拍摄阴影、和居民交流，她发现了社区里的故事与温情，改变了之前的看法，“boring”与她最初的评价呼应，符合语境。
+
+【19题详解】
+
+句意：充满活力的生活是蕴含其中而非直接展示的，让这些阴影充满了存在感和记忆。
+
+后文提到Lily拍摄的是“the memory of light and the shape of stories”，老人也说照片让人感觉逝者仍在，说明阴影里承载着记忆，“memory”符合语境。
+
+【20题详解】
+
+句意：你看到了他。
+
+老人认为Lily的照片捕捉到了Mr. Brown的存在，仿佛让他“复活”了，就像亲眼看到了他一样，“saw”符合语境。
+
+三、阅读理解（每题2分，共26分）
+
+（一）
+
+A
+
+下面是四位教师开设的英语选修课简介。请根据三位学生的喜好及需求，匹配最适合他们的课程，并将其所对应的选项（ABCD）填在相应位置上。其中一个选项为多余选项。
+
+![](figures/image4.png)
+
+![](figures/image5.png)
+
+| <u>____21____</u> Harry | I’d like to make videos about my daily life and learn how to describe it in English. It’ll be a fun way to learn English words. |
+|---|---|
+| <u>____22____</u> Alice | I think my English reading is good, but my writing needs work. I hope to learn some ways to help with my writing. |
+| <u>____23____</u> Tony | All the courses are very useful, but I have football training during the week. I can only take a course on Wednesdays, the only weekday when the club doesn’t practice. |
+
+【答案】21. C    22. A    
+
+23. B
+
+【解析】
+
+【导语】本文介绍了三位学生的选课需求，并为他们匹配了合适的英语选修课。
+
+【21题详解】
+
+Harry想制作关于日常生活的视频，并学习用英语描述它，这是一种有趣的学习英语单词的方式。C选项《English in Your Everyday Life》课程会制作关于日常生活的视频，并学习描述这些时刻所需的词汇，符合他的需求。
+
+【22题详解】
+
+Alice认为自己的英语阅读不错，但写作需要提升，希望学习一些帮助写作的方法。A选项《The Magic of Writing》课程会通过阅读故事和其他材料教授如何提升写作，符合她的需求。
+
+【23题详解】
+
+Tony觉得所有课程都很有用，但每周有足球训练，只能在周三上课，这是俱乐部唯一不训练的工作日。B选项《Shorthand》课程时间为周三第7节，符合他的时间要求。
+
+（二）阅读下列短文，根据短文内容，从短文后各题所给的 A、B、C、D四个选项中，选择最佳选项。
+
+B
+
+The Dream Builder
+
+![](figures/image6.png)
+
+Finn’s younger brother, Leo, had a serious immune deficiency (免疫缺陷) disease, making the outside world a dangerous place. Finn saw the longing in Leo’s eyes when he talked about his own hikes or bike rides.
+
+Finn was a member of his school’s tech club. He’d built robots. One night, watching Leo get lost in a map, Finn had an idea: If Leo couldn’t go to the world, he would bring the world to Leo.
+
+He called this idea “The Dreamwalker.” It was about creating a personalized, sensory experience. Finn improved an old virtual reality (VR) headset, but the key was a pair of special gloves he engineered himself. They could simulate (模拟) the feeling of touching different things.
+
+Then came the hard part: building the “worlds”. For a week, Finn took a 360-degree camera on his hike. He didn’t just film; he recorded the sound of the river, the wind, and the birds. He reached out and touched hard stones, soft grass, and cold water, noting the exact sensation.
+
+Back in the lab, he synchronized (同步) the videos to the headset. He programmed the gloves: When Leo “touched” the river, some water produced by an improved computer cooling fan would hit his face, and the special gloves would help him feel the movement of the water.
+
+Then came the first test. Leo put on the headset and gloves, and started the program. He was silent for a minute. Then, “I can...feel the river!” he said. His smile widened behind the headset. For twenty minutes, Leo explored, reaching out, laughing as water hit his face by the “river”.
+
+Finn filmed Leo’s reaction, a joy he hadn’t seen in years. He realized that the highest purpose of technology and skill isn’t to win competitions or create new inventions. It’s to be a bridge. It’s to use your knowledge as a tool for understanding and to give someone you love the irreplaceable gift of an experience. He learned that the greatest engineering is the kind that connects one human heart to another.
+
+24. Why was the outside world a dangerous place for Leo?
+
+A. Because he was too young. B. Because he had poor eyesight.
+
+C. Because he got lost easily outside. D. Because he had a serious disease.
+
+25. What did Finn do for Leo?
+
+A. He created a set of sensory tools. B. He personalized a special robot.
+
+C. He recorded all of his bike rides. D. He bought a VR headset with nature programs.
+
+26. What did Finn learn from this experience?
+
+A. Human connections are based on the development of technology.
+
+B. Technology finds its true value in enriching the life of loved ones.
+
+C. Diseases cannot hold back the dreams of those who never give up.
+
+D. Engineering can help people win awards and prizes in competitions.
+
+【答案】24. D    25. A    26. B
+
+【解析】
+
+【导语】本文是记叙文，讲述Finn为患有严重免疫缺陷疾病、无法外出的弟弟Leo，利用VR技术和自制传感手套打造“造梦行者”系统，让Leo体验户外世界的故事，最终Finn领悟到技术的最高价值是连接人心、丰富所爱之人的生活。
+
+【24题详解】
+
+文中首句指出“Finn’s younger brother, Leo, had a serious immune deficiency disease, making the outside world a dangerous place”，说明 Leo 因患有严重疾病，外界对他而言很危险。 
+
+【25题详解】
+
+文中提到Finn改良了VR头显，还自制了特殊手套，打造了名为“The Dreamwalker”的个性化感官体验系统，这属于一套感官工具。
+
+【26题详解】
+
+最后一段Finn意识到“the highest purpose of technology and skill isn’t to win competitions or create new inventions. It’s to be a bridge...to give someone you love the irreplaceable gift of an experience”，说明技术的真正价值在于丰富所爱之人的生活，与选项 B 表述一致
+
+C
+
+![](figures/image7.png)
+
+From a young age, we are taught not to lie. But do people sometimes lie when it is to their advantage? If they do lie, how often do they do so? What kind of lies do people usually tell? These are the questions that interest researchers.
+
+To study lying behavior without influencing the behavior of a liar, researchers have developed some creative experiments. One is the die-under-the-cup experiment. Each participant (参与者) sits alone in a closed room. In front of the participant is a cup with a small hole and a die. Each participant is asked to cover the die with the cup, shake the die, peek through the hole, and report the number on the die. They are told that the higher the number they report, the more they get paid, which means if they report 2, they will receive $2, and 6 for $6. In this experiment, it is worthwhile for them to report a high number to receive more money. They know only they can see the true result.
+
+When people roll a die, the chance of rolling any number from 1 to 6 is the same — exactly 1/6 (about 16.67%). So, if a large number of participants roll a die and report the number they really see, then about 1/6 would report 1, 1/6 would report 2, and the like. However, if participants lie and report higher numbers to get more money, the percentage of participants reporting 1 or 2 would be lower than 1/6.
+
+Here is what the researchers found. Participants were more likely to report more high numbers (4,5,6) and fewer low numbers. However, instead of always reporting the highest number, participants usually reported slightly (稍微) higher numbers than what they rolled.
+
+Why do people lie only a little? Some studies note it is important for people to think of themselves as honest people, so they balance the longing to benefit from the lie with the longing to keep a positive self-image (自我形象). Also, the longing to keep a positive social image is another reason. The fear of being seen as a liar often reduces the possibility to lie.
+
+How is it possible to use these findings to reduce dishonesty? In a study in the UK, aimed at stopping people from stealing bicycles, researchers placed signs near the bicycle parking area with a photograph of eyes and the words “we are watching you.” After that, fewer bicycles were stolen in those areas. The image and words increased people’s social image concerns (担忧). That means the findings are useful in reducing dishonesty to some degree. Future experiments should test how these findings might help people be more honest in different real-life situations.
+
+27. Which of the following can best show the result of the die-under-the-cup experiment?
+
+A. ![](figures/image8.png) B. ![](figures/image9.png)
+
+C. ![](figures/image10.png) D. ![](figures/image11.png)
+
+28. What can we learn from the passage?
+
+A. The chance of rolling each number on a die shows how often people lie.
+
+B. Participants could choose to be honest because they want to get paid more.
+
+C. People lie only a little because they value a positive self-image over a social image.
+
+D. The UK study proves the longing for a positive social image reduces dishonesty.
+
+29. What is the writer’s main purpose in writing this passage?
+
+A. To explain why people sometimes lie to their advantage.
+
+B. To show that it is common for people to have lying behavior.
+
+C. To review some key findings on the degree to which people lie.
+
+D. To introduce some research on how to reduce people’s dishonesty.
+
+【答案】27. B    28. D    29. C
+
+【解析】
+
+【导语】这是一篇说明文。本文讲述了研究人员通过实验探究人们在何种情况下会说谎、说谎的程度，以及如何利用相关发现减少不诚实行为。  
+
+【27题详解】
+
+第4段第2句“Participants were more likely to report more high numbers (4,5,6) and fewer low numbers. However, instead of always reporting the highest number, participants usually reported slightly higher numbers than what they rolled.”可知，参与者倾向于报告偏高的数字（4、5、6），低数字（1、2、3）报告率低于理论值，且不会总是报告最高的数字6，因此选项B符合该分布特征的柱状图。
+
+【28题详解】
+
+第6段第4句“The image and words increased people's social image concerns. That means the findings are useful in reducing dishonesty to some degree.”可知，英国的研究表明，对积极社会形象的担忧减少了不诚实行为。 
+
+【29题详解】
+
+第1段第2句“But do people sometimes lie when it is to their advantage? If they do lie, how often do they do so? What kind of lies do people usually tell? These are the questions that interest researchers.”可知，文章围绕人们为何会在对自己有利时说谎展开介绍，核心是解释人们有时会为了自身利益说谎的现象及相关研究。
+
+D
+
+You’ve been there before: promising to finish that report by Thursday, telling your partner you’ll be ready in “just five minutes,” or confidently planning back-to-back meetings with zero buffer (缓冲) time. Then reality hits, deadlines rush by, and you’re left wondering why you’re so bad at estimating (估计) time. You’re not alone. Most people often underestimate the time, costs, and risks of future actions while overestimating their benefits. This is the “planning fallacy.”
+
+The planning fallacy is more than just poor time management. Imagine you are short on time but have to write an email. You quickly estimate it will not take too long, but it takes far longer than you thought. What has happened? Most likely, you pictured yourself writing the message, reviewing it once, and hitting send. The problem is, when you plan, you focus on the task itself while forgetting the countless small interruptions (干扰) and difficulties that unavoidably appear.
+
+The planning fallacy also explains why large projects always run over budget and take more time than planned. Part of the reason is that everyone makes optimistic (乐观的) estimates, which quickly produce wildly unrealistic expectations. The problem is often made worse by the “sunk cost fallacy.” We refuse to accept failure when too much effort has been made, and throw more time and money at the project instead.
+
+The planning fallacy can be very costly. Missed deadlines hurt your reputation (名声). Poor planning eats your time away and then other chances will pass you by. And when every task takes longer than expected, you keep playing catch-up, creating unnecessary stress and health problems.
+
+So what can you do? Instead of thinking about the task, use data (数据). Think back to when you last completed a similar task. How long did it take? This works best if you keep some actual notes. Adding buffers is also a good idea, but one rule to keep you realistic is to add percentages instead of fixed time buffers. For example, add 25% to your estimate instead of 10 minutes more. Break big projects into smaller, more predictable steps, and estimate the time of each one. Estimating a big project holds lots of unknowns. <u>Vague commitments</u> hardly work. Instead, create clear “if-then” plans: If I have a meeting at 9 a.m. on Monday, then I’ll add a 25% buffer (leave 30 minutes earlier than usual) to account for the rush hour traffic instead of just saying “I’ll go earlier.”
+
+When you learn to make more clear time estimates, you will experience less stress, achieve higher-quality work, and improve your reputation. You’ll also save time, make more space in your mind needed for creative work and have the time to chase other chances.
+
+30. Which of the following would probably lead to “planning fallacy”?
+
+A. Putting off a task until the last minute.
+
+B. Creating timetables based only on the best cases.
+
+C. Spending more time than planned to complete a task.
+
+D. Continuing a failing project because so much has been put into it.
+
+31. What do the words “vague commitments” in Paragraph 5 most probably mean?
+
+A. Goals that are difficult to achieve.
+
+B. Statements that hurt one’s reputation.
+
+C. Promises that are general and uncertain.
+
+D. Agreements that aren’t carefully considered.
+
+32. According to the passage, what can we do to avoid planning fallacy?
+
+A. Stay optimistic to achieve more higher-quality and creative work.
+
+B. Make clearer plans by building in a 15-minute buffer for each task.
+
+C. Break large tasks into smaller parts and decide which one to complete first.
+
+D. Record how long it takes to complete a task as a guide for the next time.
+
+33. Which of the following would the writer most probably agree with?
+
+A. Planning fallacy keeps you from falling behind where you should be.
+
+B. Avoiding sunk cost fallacy develops people’s ability to estimate time.
+
+C. Avoiding planning fallacy may improve people’s productivity and possibility.
+
+D. Planning fallacy probably results in forgetting to take every task into account.
+
+【答案】30. B    31. C    32. D    33. C
+
+【解析】
+
+【导语】本文是一篇说明文，主要介绍了“规划谬误”的概念、成因、影响及应对方法。  
+
+【30题详解】
+
+由第一段第四句“Most people often underestimate the time, costs, and risks of future actions while overestimating their benefits. This is the‘planning fallacy’.”可知，规划谬误是指低估未来行动的时间、成本与风险，同时高估回报的心理现象，仅凭理想情况制定计划、低估实际用时，都属于该范畴。
+
+【31题详解】
+
+由第五段“Instead, create clear‘if-then’plans ... instead of just saying ‘I’ll go earlier.’”可知，清晰明确的行动方案可以改善问题，反向推断，vague commitments指代模糊笼统、缺乏细节的口头承诺。
+
+【32题详解】
+
+由第五段第五句“This works best if you keep some actual notes.”可知，如实记录每项任务的实际耗时，是规避规划谬误的有效方式。
+
+【33题详解】
+
+由第六段“When you learn to make more clear time estimates, you will experience less stress, achieve higher-quality work, and improve your reputation. You’ll also save time, make more space in your mind needed for creative work and have the time to chase other chances.”可知，合理预估时间、摆脱规划谬误，能够减轻压力、提升工作质量、节省时间，还能腾出精力、把握更多发展机会。
+
+第二部分
+
+本部分共5题，共20分。根据题目要求，完成相应任务。
+
+四、阅读表达（第1-3题每题2分，第4题4分，共10分）
+
+阅读短文，根据短文内容回答问题。
+
+In any room, you can feel it before you see it—the person whose presence lights things up. It’s not about their titles or reputation. It’s energy, a kind of force that pulls people in, makes them want to help, stay, and believe. That’s the real force that moves things.
+
+The difference between energy and ability is that ability can be taught, while energy must be developed. You can copy someone’s skills, but not their heart. You copy their methods, but miss the thing that makes those methods work—their inner state.
+
+Energy is built through intention (意图), character, and the way we treat others. High-energy people don’t just work hard—they believe, they uplift, they inspire. That’s what people remember, and that’s what they follow.
+
+People, events, and environments are always interacting and influencing one another. You draw into your lives what mirrors your inner state. If you’re open-hearted, the world answers in kind, but if you’re self-doubting, life starts to mirror that back at you. The energy you carry is what you send out. And what you attract is not accidental. Everything you experience is related to the energy you carry. As your inner alignment (一致) is improved, you’ll notice that certain people or problems quietly fall away. The right ones will find you. Your outer reality will catch up with your inner state.
+
+Basically, energy is where action, clearness, and creativity come from. When your energy is full, wisdom follows. You don’t have to force your way forward—life begins to answer in kind.
+
+So how do you raise your personal energy? Not through willpower, but through deep self-tending (自我维护).
+
+Energy doesn’t come from a crowded to-do list—it comes from alignment. When your actions align with your values, when your rest matches your effort, when your environment feeds rather than drains (耗尽) you, that’s when energy increases.
+
+You raise your energy not by chasing more, but by throwing out what’s draining you. Are you always reacting to messages, or do you protect quiet time? Do your relationships make you more complete, or emptier?
+
+High-energy people are calm and quietly powerful. They build an inner life that’s energetic, stable (稳定的) and self-respecting.
+
+When you become a high-energy person, you stop chasing and start attracting. That quiet power is the force the world remembers.
+
+34. How are ability and energy different?
+
+________________________________
+
+35. What do people draw into their lives?
+
+________________________________
+
+36. What kind of inner life do high-energy people build?
+
+________________________________
+
+37. Read Amy’s words and answer the questions.
+
+Amy: I care a lot about my health, but I often stay up very late. I always think my classmates are better than me, so I’m afraid to express myself in class. In my mind, if I make mistakes, they’ll laugh at me.
+
+Do you think Amy is a low-energy or high-energy person? What advice can you give her to help raise her low energy or keep her high energy? Explain why this piece of advice is helpful.
+
+________________________________________________________________________________________________________________________________________________________________
+
+【答案】34. The difference between energy and ability is that ability can be taught, while energy must be developed.    
+
+35. People draw into their lives what mirrors their inner state.    
+
+36. They build an inner life that’s energetic, stable and self-respecting.    
+
+37. I think Amy is a low-energy person. I advise her to stop staying up late and protect her quiet time. Because the passage says energy comes from alignment, and when your rest matches your effort, your energy increases. Staying up late drains her energy, while quiet time helps her improve inner alignment and raise energy. Besides, I advise her to be confident and stop doubting herself, because self-doubt makes life mirror back negative things, and being open-hearted can attract positive energy.
+
+【解析】
+
+【导语】本文主要介绍了能量的含义、能量与能力的区别，阐述了能量的来源、能量与内在状态的关系，以及提升个人能量的方法，告诉人们成为高能量的人能拥有安静的力量，吸引想要的生活。
+
+【34题详解】
+
+文章第二段明确指出：“The difference between energy and ability is that ability can be taught, while energy must be developed.”，这是对能力和能量区别的直述，可直接提取。
+
+【35题详解】
+
+文章第四段明确写道：“You draw into your lives what mirrors your inner state.”，因此人们吸引到生活中的是能反映他们内在状态的东西。
+
+【36题详解】
+
+文章第九段明确指出：“They build an inner life that’s energetic, stable and self-respecting.”，这是高能量的人所建立的内在生活，可直接提取。
+
+【37题详解】
+
+本题要求结合短文内容给出建议，答案不唯一，合理即可。
+
+五、文段表达（10分）
+
+从下面两个题目中任选一题，根据所给的中文和英文提示，完成一篇不少于50词的英语文段写作。文中已给出内容不计入总词数。所给提示词语仅供选用。请不要写出真实的校名、姓名和地名。
+
+38. 你校正在举办主题为“Wisdom From Great Minds”的英文演讲比赛。假设你是李华，你参加了比赛并抽到初赛题目（如下图）。请你根据抽到的名人名言，用英文写一篇演讲稿，阐释你对它的理解以及它对你的影响。
+
+| Books are the ladder of human progress. — Maxim Gorky 书籍是人类进步的阶梯。——马克西姆·高尔基 |
+|---|
+
+
+提示词语： step, discovery, grow, wise, strength
+
+内容提示：●How do you understand the saying?
+
+●What influence does the saying have on you?
+
+The famous saying I’d like to talk about is from Maxim Gorky: “Books are the ladder of human progress.” ______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+Thank you for listening.
+
+【答案】
+
+例文
+
+The famous saying I’d like to talk about is from Maxim Gorky: “Books are the ladder of human progress.” I think books are like steps that help us reach higher and see further. Through reading, we make new discoveries and learn from great minds.
+
+This saying deeply influences me. I used to read little, but now I read every day. Reading not only brings me new discoveries, but also makes me wiser and stronger. Books give me knowledge and hope.
+
+I believe that as long as we keep reading, we will keep growing. Let’s climb the ladder of books together!
+
+Thank you for listening.
+
+【解析】
+
+【详解】写作步骤
+
+[第一步：审题立意]
+
+确定文体：英文演讲稿，以一般现在时为主
+
+明确要点：阐释高尔基名言“Books are the ladder of human progress”的含义、该名言对“我”（李华）的影响，需结合提示词语展开
+
+确定人称：第一人称（I/my）
+
+注意事项：贴合演讲比赛主题“Wisdom From Great Minds”，围绕名言展开，语言简洁有力，符合演讲的口语化（适度）与逻辑性要求，不得透露真实信息
+
+[第二步：构思布局]
+
+演讲稿结构： 
+
+开头段：引出演讲主题，点明所选择的名人名言及出处，开门见山，吸引听众注意力
+
+主体段：分两部分展开，先阐释对名言的理解，再说明名言对自己的影响，结合自身经历让内容更真实
+
+结尾段：总结升华，发出倡议，呼应演讲主题，结束演讲并表达感谢
+
+[第三步：要点展开]  
+
+要点一：阐释名言含义
+
+核心类比：books are like steps that help us reach higher and see further/books are like a bridge that connects us to a wider world/books are like a lamp that lights up our way of progress
+
+具体阐释：we make new discoveries and learn from great minds/we gain new knowledge and broaden our horizons/we understand the world better and learn valuable experiences from great people
+
+要点二：名言对“我”的影响
+
+阅读习惯改变：I used to read little, but now I read every day/I didn’t like reading before, but this saying made me start reading regularly/I used to spend much time on games, but now I spend an hour reading every day
+
+具体影响：brings me new discoveries, makes me wiser and stronger, gives me knowledge and hope/brings me joy and enlightenment, makes me more confident and knowledgeable, provides me with strength to face difficulties
+
+补充升华：as long as we keep reading, we will keep growing; let’s climb the ladder of books together/as long as we stick to reading, we will make progress; let’s read more books and pursue wisdom together/reading makes us better, let’s take books as our ladder to grow and progress together
+
+39. 根据所给的中文和英文提示，完成一篇不少于50词的英语文段写作。文中已给出内容不计入总词数。所给提示词语仅供选用。请不要写出真实的校名、姓名和地名。
+
+当第一双眼睛仰望星空，当第一只手掌伸向火焰，人类的探索便已悄然发生。好奇，始终是人类突破认知边界的原动力。某英文网站正在开展以“好奇”为主题的征文活动。假设你是李华，请你用英文写一篇短文投稿，讲述让你好奇的事物、你出于对它的好奇做过的事情以及你的收获。
+
+提示词语：wonder, join, interest, value, explore
+
+内容提示：●What are you curious about?
+
+●What did the curiosity drive you to do?
+
+●What have you learned from this experience?
+
+I’m curious about _____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+【答案】
+
+例文：
+
+    I’m curious about how plants grow. Last year, I planted sunflower seeds in my garden. I watered them every day and watched them carefully. To learn more, I joined a science club at school. We did experiments about plants and light. Now I know plants need sunlight, water, and soil to live. This experience taught me the value of patience. I believe curiosity helps us learn new things every day.
+
+【解析】
+
+【详解】[第一步：审题立意]
+
+确定文体：介绍性记叙文，用一般现在时、一般过去时为主
+
+明确要点：好奇的事物、因好奇所做的事、从经历中获得的收获
+
+确定人称：第一人称（I/my）
+
+注意事项：不得透露真实姓名、校名和地名
+
+[第二步：构思布局]
+
+开头：点明自己好奇的事物
+
+主体：描述因好奇而采取的具体行动
+
+结尾：讲述经历带来的收获与感悟
+
+[第三步：要点展开]
+
+要点一：好奇的事物
+
+好奇对象：how plants grow/how animals live/how the sky changes/how stars move/why the sea is blue/how machines work等
+
+要点二：因好奇做的事
+
+具体行动：planted sunflower seeds/watered them every day/watched them carefully/joined a science club/take photos of them/touch or feed animals/watch the clouds and stars等
+
+活动内容：did experiments about plants and light/asked the teacher questions/read books about plants/visited the museum/read science magazines/took notes every day等
+
+要点三：收获与感悟
+
+学到的知识：plants need sunlight, water, and soil to live/why the sky is blue in the daytime/their living habits and food等
+
+内心收获：learned the value of patience/curiosity helps us learn new things/learned to keep trying/understood the importance of hard work/curiosity leads us to explore the world等

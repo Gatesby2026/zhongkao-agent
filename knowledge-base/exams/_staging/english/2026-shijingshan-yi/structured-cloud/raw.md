@@ -1,0 +1,724 @@
+![](figures/image1.png)![](figures/image2.png)石景山区2026年初三统一练习
+
+英语试卷
+
+| 考生须知 | 1. 本试卷为闭卷考试，共10页，满分60分，考试时间为90分钟。 2. 请在试卷和答题卡上准确填写学校名称、姓名和准考证号。 3. 试题答案一律填涂或书写在答题卡上，在试卷上作答无效。答题卡上的选择题用2B 铅笔规范填涂，其他试题用黑色签字笔作答。 4. 考试结束后，请将试卷和答题卡一并交回。 |
+|---|---|
+
+
+第一部分
+
+本部分共33题，共40分。在每题列出的四个选项中，选出最符合题目要求的一项。
+
+一、单项填空 (每题0.5分，共6分) 
+
+从下列各题所给的A、B、C、D四个选项中，选择可以填入空白处的最佳选项。
+
+1. I do sports every day. It keeps ________ strong and healthy.
+
+A. you B. him C. me D. her
+
+【答案】C
+
+【解析】
+
+【详解】句意：我每天做运动。它使我保持强壮和健康。
+
+you你/你们；him他；me我；her她。根据前句“I do sports every day.”可知，主语是“I”，此处指运动使“我”保持健康，keep后应接宾格me。
+
+2. My brother and I often help water the plants ________ Grandma’s small garden.
+
+A. in B. to C. with D. on
+
+【答案】A
+
+【解析】
+
+【详解】句意：我和哥哥经常在奶奶的小花园里帮忙给植物浇水。
+
+in在……里面；to到，向；with和……一起；on在……上面。根据“Grandma’s small garden”可知，植物是在花园里面，用介词in。
+
+3. —________ you play the guitar? 
+
+—Yes, I can. I’m in the school band.
+
+A. Must B. Should C. Need D. Can
+
+【答案】D
+
+【解析】
+
+【详解】句意：——你会弹吉他吗？——是的，我会。我在学校乐队里。
+
+Must必须；Should应该；Need需要；Can能，会。根据答语“Yes, I can.”可知，一般疑问句用什么问就用什么答，此处询问能力，应用Can。
+
+4. Oh, Paul, you are growing so fast! You will be ________ than your dad soon.
+
+A. tall B. taller C. tallest D. the tallest
+
+【答案】B
+
+【解析】
+
+【详解】句意：哦，保罗，你长得真快！很快你就会比你爸爸更高了。
+
+根据句中的关键词than可知，此处表示两者之间的比较，应用形容词的比较级形式，应填taller。
+
+5. —________ is the red coat over there? 
+
+—100 yuan. You can try it on.
+
+A. How much B. How often C. How long D. How many
+
+【答案】A
+
+【解析】
+
+【详解】句意：——那边那件红色外套多少钱？——100元。你可以试穿一下。
+
+How much多少钱（询问价格）；How often多久一次（询问频率）；How long多长时间（询问时长）；How many多少（询问可数名词数量）。根据答句“100 yuan”可知，询问的是价格，应填How much。
+
+6. My uncle is a firefighter. It’s a dangerous job, ________ he is proud of it.
+
+A. so B. or C. but D. for
+
+【答案】C
+
+【解析】
+
+【详解】句意：我叔叔是一名消防员。这是一份危险的工作，但是他为此感到自豪。
+
+so所以；or或者；but但是；for因为。根据“It’s a dangerous job”与“he is proud of it”可知，前后句意存在转折关系，虽然工作危险，但他为此感到自豪，应用表示转折的连词。应填but。
+
+7. —What’s your plan for tomorrow? 
+
+—I ________ the museum to learn about the local history.
+
+A. visit B. will visit C. visited D. have visited
+
+【答案】B
+
+【解析】
+
+【详解】句意：——你明天的计划是什么？——我将参观博物馆去了解当地历史。
+
+根据问句中的时间状语“tomorrow”可知，答语描述的是明天将要发生的动作，应用一般将来时。应填will visit。
+
+8. Mr. Wang ________ us a new song yesterday and we all liked it very much.
+
+A. taught B. will teach C. teaches D. is teaching
+
+【答案】A
+
+【解析】
+
+【详解】句意：王先生昨天教了我们一首新歌，我们都非常喜欢它。
+
+taught“教”(过去式)；will teach“将教”(一般将来时)；teaches“教”(一般现在时)；is teaching“正在教”(现在进行时)。根据时间状语“yesterday”及后半句谓语“liked”可知，句子描述的是过去发生的事情，应用一般过去时。 
+
+9. —Who’s in the science room? 
+
+—It’s Lin Tao. He ________ his report for the space project.
+
+A. prepares B. prepared C. was preparing D. is preparing
+
+【答案】D
+
+【解析】
+
+【详解】句意：——谁在科学教室里？——是林涛。他正在为太空项目准备他的报告。
+
+prepares准备；prepared准备了；was preparing正在准备；is preparing正在准备。根据问句“Who’s in the science room?”可知询问的是当前的情况，表示此刻正在进行的动作，应用现在进行时。所以选D。
+
+10. Tom ________ Chinese for ten years and now he can speak it very well.
+
+A. is learning B. has been learning C. learned D. will learn
+
+【答案】B
+
+【解析】
+
+【详解】句意：汤姆学习汉语十年了，现在他能说得很好。
+
+根据时间状语for ten years表示动作持续了一段时间，且后半句now he can speak it very well表明对现在造成的影响，可知句子是现在完成进行时。故选B。
+
+11. That beautiful photo ________ by my dad during our trip to Beijing last year.
+
+A. take B. took C. was taken D. is taken
+
+【答案】C
+
+【解析】
+
+【详解】句意：那张漂亮的照片是去年我们去北京旅行时我爸爸拍的。
+
+主语“That beautiful photo”与动词“take”之间是动宾关系，且根据时间状语“last year”，此句用一般过去时的被动语态，结构为“was/were+过去分词”。主语为单数，用was构成补动语态。
+
+12. —Do you know ________? 
+
+—Next Sunday morning.
+
+A. when did the summer camp start B. when the summer camp started
+
+C. when will the summer camp start D. when the summer camp will start
+
+【答案】D
+
+【解析】
+
+【详解】句意：——你知道夏令营什么时候开始吗？——下周日早上。
+
+空处作know的宾语，所以是宾语从句，宾语从句需用陈述语序，即“引导词+主语+谓语”，排除A、C。根据答语“Next Sunday morning”可知从句动作发生在将来，应用一般将来时，即when the summer camp will start。
+
+二、完形填空 (每题1分，共8分) 
+
+阅读下面的短文，掌握其大意，然后从短文后各题所给的A、B、C、D四个选项中，选择最佳选项。
+
+When our teacher said we would create a class book corner, I felt very excited and thought it would be a wonderful way to share stories—though I knew it would take real teamwork to make it happen. 
+
+As the class monitor, I felt quite <u>____13____</u> on the first day. I’d never led a project like this and worried other students might not share my interest in books. Our teacher, Mrs. Liu, comforted me in a kind voice, “Every good thing starts with a small step. What <u>____14____</u> most is your true love for reading.”
+
+![](figures/image3.png)
+
+She then showed us how to organize books on the new shelves so everyone could find them <u>____15____</u>. Soon, everyone pitched in: some brought their favorite books from home, and others worked on eye-catching posters. After a week, the empty corner became a comfortable place where students could enjoy reading. 
+
+By the third week, however, only a handful of students were using it. Some of us grew discouraged, but Mrs. Liu reminded us, “<u>____16____</u> new habits takes time and patience. We must keep trying—and thinking of ways to make our corner even better.”
+
+So we held a class meeting to collect ideas. We decided to award small prizes to students who read often and also started a weekly story time. Through this, I learned to <u>____17____</u> my classmates’ creativity rather than just my own, and realized that teamwork goes beyond simply working together. 
+
+In the weeks that followed, I would say—I still had my <u>____18____</u>. Was all this effort really worth it? But then we began to notice more and more students spending their free time reading in the corner. The pride we felt then was quite sure—every bit of work had <u>____19____</u> off. 
+
+At the end of the term, our head teacher came to visit our book corner. He presented us with the “Best Creative Book Corner” award and told us that creating a class book corner had been a special school tradition for many years. 
+
+I finally understood the true <u>____20____</u> of what we’d done. It was not just about making a pretty corner, but about helping every student find joy in reading and learning.
+
+13. A. excited B. nervous C. angry D. lucky
+
+14. A. matters B. affords C. offers D. wonders
+
+15. A. patiently B. slowly C. quietly D. easily
+
+16. A. Canceling B. Building C. Describing D. Changing
+
+17. A. question B. avoid C. trust D. require
+
+18. A. doubts B. facts C. reasons D. wishes
+
+19. A. taken B. got C. put D. paid
+
+20. A. cost B. symbol C. value D. rule
+
+【答案】13. B    14. A    15. D    16. B    17. C    18. A    19. D    20. C
+
+【解析】
+
+【导语】本文讲述了班长在老师带领下与同学们一起创建班级图书角的过程，从一开始的紧张、怀疑，到后来通过团队合作克服困难，最终获得认可，并领悟到图书角的真正价值在于帮助每个学生找到阅读的乐趣。
+
+【13题详解】
+
+句意：作为班长，第一天我感到相当紧张。 
+
+根据下文“I’d never led a project like this and worried other students might not share my interest”可知，“我”从未领导过这样的项目，担心其他同学可能不像我一样对书感兴趣。由此可推测，“我”感到紧张不安，“nervous”符合语境。excited“兴奋”，angry“生气”，lucky“幸运”与本句语境不符。
+
+【14题详解】
+
+句意：每件好事都从一小步开始。最重要的是你对阅读的真正热爱。
+
+“What matters most”为固定表达，意为“最重要的是”，故“matters”符合搭配和语境。其余选项affords“提供”，offers“提供”，wonders“想知道”均不符合。
+
+【15题详解】
+
+句意：她向我们展示如何在新书架上整理书籍，以便每个人都能轻易地找到它们。
+
+根据“organize books on the new shelves”可推测，整理书籍的目的在于方便找到想要的书。easily意为“容易地”，符合逻辑。patiently“耐心地”，slowly“慢慢地”和quietly“安静地”均不符合语境。
+
+【16题详解】
+
+句意：培养新习惯需要时间和耐心。
+
+动名词作主语，“Building”，意为“建立，养成”，与后文“new habits”搭配意为“培养新习惯”，符合语境。Canceling“取消”，Describing“描述”，Changing“改变”均不符合本句语境。
+
+【17题详解】
+
+句意：通过这件事，我学会了信任同学们的创造力，而不仅仅是相信我自己的。
+
+根据“rather than just my own”可知，“我”很认同他们的创造力。“trust”意为“相信，信任”，符合语境。question“质疑”，avoid“避免”，require“要求”均不符合句意。
+
+【18题详解】
+
+句意：在接下来的几周里，我会说——我仍然心存怀疑。
+
+后文自问“Was all this effort really worth it?”表明“我”内心怀疑建议阅读角是否值得。“doubts”意为“怀疑”，符合语境。facts“事实”，reasons“理由”，wishes“愿望”均不符合语境。
+
+【19题详解】
+
+句意：我们感到非常自豪——所有努力都有了回报。
+
+固定短语“paid off”意为“得到回报”，符合本句语境。taken off“起飞，脱下”，got off“下车”，put off“推迟”均不符合句意。
+
+【20题详解】
+
+句意：我终于明白了我们所做之事的真正价值。 
+
+根据最后一句“It was not just about making a pretty corner, but about helping every student find joy in reading and learning”可知，建立图书角不只是做一个漂亮的角落，而是帮助每个学生找到阅读的乐趣，这就是这件事的价值。“value”意为“价值”，符合语境。cost“成本”，symbol“象征”，rule“规则”均不符合语境。
+
+三、阅读理解 (每题2分，共26分) 
+
+(一) 下列每个图片代表一个环保活动，请根据人物的行为和计划匹配最适合的图片，并将图片所对应的选项 (A、B、C、D) 填在相应位置上，其中一个选项为多余选项。
+
+A
+
+![](figures/image4.png)
+
+| <u>____21____</u> ![](figures/image5.png) | I care about saving water. At home, I always turn off the tap when brushing my teeth. I also take shorter showers. I want to make a poster to tell others why saving water is important. |
+|---|---|
+| <u>____22____</u> ![](figures/image6.png) | I want to help keep our city clean. This weekend, I will join my classmates to pick up rubbish in the park. We will put plastic bottles, paper and cans into different bins for recycling. Our teacher will go with us and help. |
+| <u>____23____</u> ![](figures/image7.png) | I love trees and want to protect them. Next Sunday, I will go to the hill near my school with my family. We are going to plant young trees there. I hope they can grow tall and strong. I will water them often. |
+
+【答案】21. B    22. A    
+
+23. C
+
+【解析】
+
+【导语】本文给出不同的图片，以匹配Lily、Kevin、Linda各自对于环保行为的理解。
+
+【21题详解】
+
+Lily的核心行为是节约用水，关键动作是“刷牙时关掉水龙头”。图片B中女孩一边刷牙一边伸手关水龙头，与文字描述完全对应。
+
+【22题详解】
+
+Kevin的核心行为是捡垃圾并分类回收。图片A中同学们正在公园捡垃圾，并将垃圾分类投入回收桶，与文字描述完全对应。
+
+【23题详解】
+
+Linda的核心行为是植树护绿。图片C中一家人正在挖坑、扶树苗、浇水，进行植树活动，与文字描述完全对应。
+
+(二) 阅读下列短文，根据短文内容，从短文后各题所给的A、B、C、D四个选项中，选择最佳选项。
+
+B
+
+Nilsa stared at the classroom clock, counting down the minutes until lunch. Her mom had packed her favorite meal— sancocho, a rich chicken soup from their hometown. 
+
+In the dining hall, she poured the warm soup into a bowl. Just as she was about to take a sip (一小口) , her classmates noticed it. 
+
+“What is that smell?” John asked, wrinkling (皱起) his nose. 
+
+“It’s sancocho. It’s a kind of chicken soup,” Nilsa replied. 
+
+“That doesn’t look like any soup I’ve ever seen,” said Codi. “Looks like something from a science lab.”
+
+“Why don’t you eat normal food, like pizza?” added Candice. 
+
+Nilsa took a quick look at the other lunches— pizza, fries, peanut butter and jelly sandwiches. Suddenly, she didn’t feel hungry anymore. Quietly, she closed her lunchbox. 
+
+When Nilsa got home, she cried out, “Why did you pack that strange food, Mom?”
+
+Her mother looked surprised. “Strange? That’s our traditional dish. It’s part of our hometown culture. Your great-grandmother used to make it.”
+
+“But everyone made fun of me,” Nilsa said sadly. 
+
+“Then maybe next time, you can help them understand,” her mom said gently. “Tell them where it comes from, or share some with them. People often think something is strange just because they’ve never tried it.”
+
+Nilsa thought for a moment. “Will you teach me how to make it?”
+
+Her mom smiled. “Of course. Let’s cook together tonight.”
+
+The next day at lunch, Nilsa opened her lunchbox confidently. The familiar smell spread through the room. She offered some to her classmates. 
+
+One by one, they tasted the soup. Some liked it, some didn’t, but nobody laughed. Instead, they asked questions about the ingredients (原料) and the cooking method. Nilsa smiled. “This is a traditional dish from my hometown. My great-grandmother used to make it. It’s part of my family’s story.” She realized that sharing her food was more than just about taste— it was sharing the culture, her hometown, her family, and a little part about herself. 
+
+She returned home that afternoon, feeling proud. Her mom asked, “How was the lunch?” Nilsa smiled. “Not everyone loved it, but they listened. And that’s the part that counts.”
+
+24. What did Nilsa’s classmates think of sancocho at first?
+
+A. It smelled and looked unusual. B. It seemed like a traditional soup.
+
+C. It was full of love from hometown. D. It had ingredients from a science lab.
+
+25. How did Nilsa feel when she shared the soup the next day?
+
+A. Unsure. B. Nervous. C. Lucky. D. Confident.
+
+26. What has Nilsa learnt from her experience?
+
+A. Be thoughtful when sharing things. B. Sharing food is also sharing culture.
+
+C. It takes time to accept something new. D. It’s important to take normal food for lunch.
+
+【答案】24. A    25. D    26. B
+
+【解析】
+
+【导语】本文讲述了Nilsa因带家乡传统美食sancocho去学校而被同学嘲笑，在妈妈的开导和帮助下，她第二天主动分享并讲解这道菜的文化背景，最终赢得尊重和理解的故事。
+
+【24题详解】
+
+第三段John说“What is that smell?”并皱起鼻子，第四段Codi说“Looks like something from a science lab.”，说明同学们起初认为sancocho的气味和外观都很奇怪。
+
+【25题详解】
+
+倒数第六段提到“The next day at lunch, Nilsa opened her lunchbox confidently.”，因此第二天分享汤时她感到自信。
+
+【26题详解】
+
+倒数第四段Nilsa意识到“sharing her food was more than just about taste— it was sharing the culture, her hometown, her family, and a little part about herself.”，因此她从这次经历中学到分享食物也是在分享文化。
+
+C
+
+Many kids find it hard to stay focused on their lessons for long. Research shows that movement breaks help students learn better—and it doesn’t take much. According to a study in Psychology of Sport & Exercise, just a few minutes of activity can improve classroom performance. 
+
+Lead scientist Eric Drollette, an exercise psychologist at the University of North Carolina, wanted to find a kind of exercise that could fit into a classroom setting with limited space. Early studies had tested 20 to 30 minutes of moderate-intensity (中等强度的) exercise, but they couldn’t be done in a classroom and would take too much time away from lessons. Drollette’s team designed a nine-minute high-intensity interval exercise (HIIE). Kids performed moves like jumping jacks (开合跳), squats and high knees—exercising for 30 seconds, resting for 30 seconds, and then repeating. 
+
+The study tested 25 children aged 9 to 12. Each child visited the lab three times, taking part in three different activities: doing the nine-minute HIIE, riding a stationary (静止的) bike, and watching an educational video. After each activity, the children completed tasks testing attention, language skills, and math. 
+
+Drollette’s team showed that after the high-intensity interval exercise (HIIE), children’s brains became more efficient at recognizing mistakes. Language performance also improved after the HIIE. However, for math, the kids performed a bit less than after less-intense exercise. “That could be because of tiredness.” Drollette says. Tasks that require higher-level thinking, such as math, seem to be the first ones affected by tiredness. 
+
+Experts find the results exciting. Lauren Raine, an exercise scientist at Northeastern University, noted that short, high-intensity exercise breaks in classrooms might improve learning performance and help students deal with mistakes more effectively. 
+
+Drollette also believes such exercise could benefit teens. An overactive mistake response is connected with mental (精神的) health problems, which have become more common in high school. By helping calm this response, high-intensity exercise may support mental well-being. 
+
+“Being active can help with a lot of things that are going on in society,” Drollette said, encouraging students to find chances to stand up and get moving.
+
+27. Why did Drollette’s team create the nine-minute HIIE?
+
+A. To find the most popular exercise for young kids.
+
+B. To make exercise fit limited classroom time and space.
+
+C. To replace the moderate exercise in students’ daily life.
+
+D. To compare moderate exercise with a high-intensity one.
+
+28. What is mentioned in Paragraph 4 about Drollette’s team’s study?
+
+A. Its results. B. Its process. C. Its challenges. D. Its limitations.
+
+29. What can we learn from the passage?
+
+A. 20-30 minutes’ exercise is out of date today.
+
+B. The kids did activities instead of tests in the lab.
+
+C. Tiredness may influence the kids’ math performance.
+
+D. The HIIE program mainly benefits the kids’ learning.
+
+【答案】27. B    28. A    29. C
+
+【解析】
+
+【导语】本文是一篇说明文，主要介绍了Drollette团队设计的一种9分钟高强度间歇运动（HIIE），这种运动能提高儿童的注意力、语言能力及错误识别效率，但对数学表现可能有暂时的疲劳影响。同时，高强度运动可能有助于心理健康。
+
+【27题详解】
+
+根据文章第二段“wanted to find a kind of exercise that could fit into a classroom setting with limited space... would take too much time away from lessons”以及“Drollette’s team designed a nine-minute high-intensity interval exercise (HIIE)”可知，设计9分钟HIIE是为了让运动适应有限的教室时间和空间。故选B。
+
+【28题详解】
+
+根据文章第四段“Drollette’s team showed that after the HIIE, children’s brains became more efficient at recognizing mistakes. Language performance also improved... however, for math, the kids performed a bit less...”可知，该段主要介绍了在进行九分钟HIIE后学生大脑和语言等方面发生的变化，是研究结果。故选A。
+
+【29题详解】
+
+根据文章第四段“That could be because of tiredness... math tasks seem to be the first ones affected by tiredness.”可知，疲劳可能影响孩子的数学表现，故选C。文中未提及“20-30分钟的运动如今过时了”，不选A。根据第三段“completed tasks testing attention, language skills, and math”可知，孩子们在实验室进行测试，选项B与原文不符。根据文章第四段“However, for math, the kids performed a bit less than after less-intense exercise.”可知，HIIE可能会导致数学表现下降，故选项D过于片面。
+
+D
+
+In the classic story The Little Engine That Could, a small train worked hard up a steep hill, repeating, “I think I can.” This story shows how much society values perseverance—sticking with something even when it’s hard. 
+
+But researchers suggest that sometimes, instead of always setting new goals, we should ask: “What do I no longer need?” Past goals may no longer fit our lives. They might be too hard, too expensive, or simply not what we want anymore. However, quitting (放弃) is often looked down upon, so letting go can be even harder than persevering. 
+
+Why We Stick with Past Goals
+
+Scientists are now studying why quitting is so difficult. One reason is the <u>“sunk-cost” bias</u>— we find it hard to give up something after we’ve spent time, money, or effort on it. 
+
+In one online game, researchers had over 3, 500 players push colored buttons to get points. Some buttons gave points more often than others, but players weren’t told which. They could turn to a new color at any time but couldn’t go back. Most players stuck with a color far longer than they should have, even though making a change would have been smarter. “Even in this unpaid game, people worked hard to move on,” said researcher Rachit Dubey. In real life, where emotions are involved, it’s even harder. 
+
+How to Quit in a Healthy Way
+
+So if quitting is sometimes the best choice, how do we do it? Studies show that why we quit is the key point. A 2022 study followed over 900 people who were giving up long-term goals. Those who quit because others pressured them often felt“stuck” (被困住的) and doubted their decision. But those who quit because the goal no longer fit found it easier to move on. 
+
+Psychologist Andreea Gavrila compares quitting to a breakup. “It’s very messy,” she says. Quitting a goal can take months or even years. But if there’s a moment you decide from your inner motivation (内在的动机) to do it, there’ll be the process of moving on. 
+
+A Different Kind of Courage
+
+We often think of perseverance as a strength. But sometimes, holding on does more harm than good. Letting go of a goal you’ve outgrown can free up mental space and energy for new dreams. Finding a new way forward may first require the courage to say, “I think I can’t.”
+
+30. Why does the writer use the story at the beginning of the passage?
+
+A. To explain how trains work. B. To show his love for classic stories.
+
+C. To prove that quitting is always bad. D. To lead into the topic of perseverance.
+
+31. What does the phrase “sunk-cost” bias in Paragraph 3 most probably mean?
+
+A. The habit of giving up when things get hard.
+
+B. The feeling of sticking with what you’ve put in.
+
+C. The idea about trying new things in a brave way.
+
+D. The worry about wasting money on something new.
+
+32. Which of the following would the researchers agree with?
+
+A. It’s easy for people to give up old goals quickly.
+
+B. People should stick with their long-held goals in life.
+
+C. Quitting based on inner drive helps people move on.
+
+D. Outer pressure is the best reason for people to quit a goal.
+
+33. Which of the following is the best title for this passage?
+
+A. The Importance of Persevering in Our Life Goals
+
+B. Different Ways to Realize Our Dreams Successfully
+
+C. How to Set New and Practical Goals for a Better Life
+
+D. Sometimes Letting Go of Unfit Goals Is the Best Choice
+
+【答案】30. D    31. B    32. C    33. D
+
+【解析】
+
+【导语】本文是一篇说明文，借助经典故事引出“坚持”这一话题，进而提出新观点：适时放弃不合时宜的旧目标同样重要。文章分析人们难以放弃的原因、健康放弃的方式，指出适时放手也是一种勇气。
+
+【30题详解】
+
+文章开头引用《小火车头》的故事，体现社会对毅力的看重，目的是引出下文关于坚持与放弃的话题，因此选To lead into the topic of perseverance。
+
+【31题详解】
+
+第三段解释“sunk-cost”bias：人们在一件事上投入时间、金钱、精力后，就很难放手，对应含义为执着于自己已经付出的事物。
+
+【32题详解】
+
+文中提到，因目标不再适合自己、出于内在动机主动放弃的人，更容易向前看。由此可知研究者认同：基于内在动机主动放弃，有助于人继续前行。
+
+【33题详解】
+
+全文打破“坚持一定正确”的固有想法，核心观点是：不合适的目标不必硬扛，适时放手才是更好的选择，因此最佳标题为Sometimes Letting Go of Unfit Goals Is the Best Choice。
+
+第二部分
+
+本部分共5题，共20分。根据题目要求，完成相应任务。
+
+四、阅读表达 (第34-36题每题2分，第37题4分，共10分) 
+
+阅读短文，根据短文内容回答问题。
+
+Today, traveling isn’t just about visiting new places—it’s about how you explore them. In recent years, two travel styles have become especially popular among young people: checklist tourism and city walks. Both attract curious minds and adventurous hearts, but their pace (节奏) and ways of experiencing a city are completely different. 
+
+Checklist tourism refers to a style of travel where travelers often rush from one attraction to the next. They just tick off names on a list rather than truly experiencing a place. Travelers who follow this style plan every minute of their day. They wake up before sunrise, take early trains, and try to visit as many famous spots as possible in a single day. A typical trip might include watching the sunrise on a mountain, rushing to a museum before lunch, visiting night markets, and catching a midnight bus. Every second counts. Travelers enjoy the challenges, the sense of pushing their limits, and the teamwork involved. However, this kind of travel can be tiring, and it often leaves little room for discovery, rest, or meaningful connection with local culture. 
+
+However, a city walk is slow, peaceful, and full of discovery. City walkers don’t follow strict checklists—they walk freely through neighborhoods, guided by curiosity. They might stop at a small café for coffee, listen to street musicians, or take photos of interesting street art. City walks help you experience a city through its sounds, smells, and people. You may meet friendly locals, discover hidden bookshops, or notice how sunlight falls on old buildings. The focus is less on sightseeing but more on feeling the spirit of a place. 
+
+So which is better? There’s no clear answer. Checklist tourism suits those who love excitement, speed, and adventure—especially if they only have a short holiday but want to see as much as possible. A city walk is perfect for those who prefer peaceful moments and want to connect deeply with a city’s culture. 
+
+Whether you’re rushing through sights or walking slowly through streets, both travel styles help you step out of your comfort zone and see the world with fresh eyes. In the end, the best journey isn’t just about where you go, but how you experience it.
+
+34. What does checklist tourism refer to? 
+
+__________________________________________________________
+
+35. How do city walks help you experience a city? 
+
+__________________________________________________________
+
+36. What can both travel styles help you do? 
+
+__________________________________________________________
+
+37. Which travel style do you prefer, checklist tourism or a city walk? Why? (Please give two reasons.) 
+
+__________________________________________________________
+
+【答案】34. It refers to a style of travel where travelers often rush from one attraction to the next. /They just tick off names on a list rather than truly experiencing a place. /Travelers who follow this style plan every minute of their day. (达意即可得分，允许语言表达方式多样化)    
+
+35. City walks help you experience a city through its sounds, smells, and people.    
+
+36. They can help you step out of your comfort zone and see the world with fresh eyes.    
+
+37. I prefer a city walk. First, it allows me to slow down and deeply connect with the local culture of a city, which can bring me more meaningful and unforgettable travel memories. Second, it is more relaxing and less tiring, so I can fully enjoy the trip without rushing to different attractions all the time.
+
+【解析】
+
+【导语】本文对比了打卡式旅游和城市漫步两种旅行方式的不同特点、适合人群，并指出没有优劣之分，旅行的关键不在于去哪里，而在于怎样去体验。
+
+【34题详解】
+
+第二段明确指出“refers to a style of travel where travelers often rush from one attraction to the next”，“just tick off names on a list rather than truly experiencing a place”，“plan every minute of their day”，这是原文的信息，答案直接提取。
+
+【35题详解】
+
+第三段明确指出“City walks help you experience a city through its sounds, smells, and people”，答案是原文直接信息。
+
+【36题详解】
+
+最后一段明确指出“step out of your comfort zone and see the world with fresh eyes”，这是原文的信息，答案直接提取。
+
+【37题详解】
+
+本题是开放性试题，答案不唯一，答出任何一种方式皆可。结合文章内容和自己的看法、理由，合理作答即可。
+
+五、文段表达 (10分) 
+
+38. 从下面两个题目中任选一题，根据所给的中文和英文提示，完成一篇不少于50词的英语文段写作。文中已给出的内容不计入总词数。所给提示词语仅供选用。请不要写出真实的校名、姓名和地名。
+
+题目①
+
+38. 假设你是李华，你校的英国交换生Peter对中国传统文化很感兴趣，计划周末在北京体验一下，他在校园论坛上发布了一则帖子，希望邀请一位中国同学同行。请你结合帖子内容，用英文回复一个愿意同行的帖子，请就具体的安排给出建议，并谈谈你能提供的帮助。
+
+| ![](figures/image8.png) |
+|---|---|---|
+| ![](figures/image9.png) 【Help】 Can you go with me?  ![](figures/image10.png) Post Time: 2026-04-25 14: 30 | ![](figures/image11.png) Views: 128 | ![](figures/image12.png) Replies: 30 Hey everyone! ![](figures/image13.png) I’m a huge fan of traditional Chinese culture and I’d love to explore Beijing this weekend. Is any Chinese friend free to join me and give some suggestions? ![](figures/image14.png) Your help and company would mean a lot to me. |
+
+提示词语：museum, watch, explain, introduce, communicate
+
+内容提示：●Where can you go and what can you do together? Give some advice. 
+
+●How can you help Peter during the cultural exploration? 
+
+| Hi, Peter. I’m Li Hua. I’d be happy to join you this weekend! __________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________ |
+|---|
+
+
+【答案】One possible version:
+
+     Hi, Peter. I’m Li Hua. I’d be happy to join you this weekend!
+
+     How about visiting a museum in the morning? We can see traditional Chinese paintings and learn about ancient history. In the afternoon, let’s go to a teahouse to watch a Peking Opera performance. I can explain the history and stories behind these activities in simple English so you can understand better. I can also introduce famous artists and explain the meanings of different mask colors in Peking Opera. If needed, I can help you communicate with local artists.
+
+     I’m sure we will have a great time together!
+
+【解析】
+
+【详解】[第一步：审题立意]
+
+确定文体：应用文（论坛回复/建议信），以一般现在时和一般将来时为主。
+
+明确要点：1.回复愿意同行；2.给出具体的周末活动建议（地点及做什么）；3.谈谈在文化探索中能提供的帮助（用简单英语解释历史/介绍艺术家/帮助沟通等）。
+
+确定人称：第一人称（I）和第二人称（you）。
+
+注意事项：不得出现真实信息（李华为设定姓名除外）；帖子内容及提示词语可供参考。
+
+[第二步：构思布局]
+
+三段式结构：
+
+第一段：表示愿意同行的意愿。
+
+第二段：提出具体的活动安排建议（上午参观博物馆/下午去茶馆看京剧）并说明能提供的帮助（用简单英语解释历史故事/介绍艺术家/帮助沟通）。
+
+第三段（结尾）：表达期待，相信会玩得开心。
+
+[第三步：要点展开]
+
+要点一：回应与意愿
+
+I’d be happy to join you/I’d love to go with you/It would be my pleasure to accompany you等
+
+要点二：建议地点1——博物馆
+
+visit a museum/go to an art museum/see traditional Chinese paintings/learn about ancient history/look at calligraphy works等
+
+要点三：建议活动1——博物馆内
+
+see traditional Chinese paintings/learn about ancient history/look at bronze ware/watch a short cultural film等
+
+要点四：建议地点2——茶馆/剧院
+
+go to a teahouse/watch a Peking Opera performance/enjoy a traditional Chinese opera/experience tea culture等
+
+要点五：建议活动2——京剧体验
+
+watch mask-changing/listen to the singing/learn about different roles(sheng, dan, jing, mo, chou)等
+
+要点六：帮助1——解释历史与故事
+
+explain the history and stories in simple English/introduce the background of each activity/make the culture easy to understand等
+
+要点七：帮助2——介绍艺术家
+
+introduce famous artists/share interesting stories about them/tell you their achievements等
+
+要点八：帮助3——解释京剧脸谱
+
+explain the meanings behind different mask colors/red means loyalty/black means bravery/white means cleverness etc等
+
+要点九：帮助4——沟通协助
+
+help you communicate with local artists/translate when needed/act as a bridge between you and the locals等
+
+要点十：其他可参观地点拓展
+
+the Great Wall/the Forbidden City/Temple of Heaven/Summer Palace/Hutong/Beihai Park等
+
+要点十一：其他可体验活动拓展
+
+try Chinese calligraphy/make traditional handicrafts/taste local snacks/learn a few words of Peking Opera等
+
+要点十二：结尾表达
+
+I’m sure we will have a great time/Hope we enjoy the day together/Looking forward to our weekend trip等
+
+题目②
+
+39. 生活中处处都有鼓励的力量。有时只是一句简单的话、一个肯定的眼神，但却能让人重拾信心，勇敢面对困难。某英文网站正在开展以“Encouragement”为主题的征文活动，假设你是李华，请用英文写一篇短文投稿，谈谈你在生活中得到的一次鼓励或给予他人鼓励的经历，以及这次经历给你带来的启示。
+
+提示词语：nervous, kind, prepare, support, confident
+
+内容提示：●What’s your experience of giving or receiving encouragement? 
+
+●What have you learned from this experience? 
+
+| Encouragement has an amazing power in our daily life.  __________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________ |
+|---|
+
+
+【答案】例文：
+
+Encouragement has an amazing power in our daily life. I remember one experience that has deeply moved me. 
+
+Last term, I felt nervous about an English speech competition. I was afraid that I might fail it. Then my English teacher, Mrs Lin, came over and encouraged me, “Believe in yourself. You have prepared well.” Her smile and kind words made me feel much more confident. 
+
+During the competition, I tried my best and finally won the second prize. At that moment, I realized how powerful encouragement could be. It not only gives people confidence, but also helps them face challenges bravely. Since then, I have learned to encourage others whenever they need support.
+
+【解析】
+
+【详解】[第一步：审题立意] 
+
+确定文体：叙事类记叙文，用一般过去时为主 
+
+明确要点：受到鼓励的经历 
+
+确定人称：第一人称（I） 
+
+注意事项：不得透露真实姓名和学校名称 
+
+[第二步：构思布局] 
+
+三段式结构： 
+
+开头段：铺垫背景，引出主题
+
+主体段：详细描述自己的经历
+
+结尾段：总结收获，升华主旨
+
+[第三步：要点展开] 
+
+要点一：受到鼓励的经历 
+
+背景说明：felt nervous about an English speech competition/felt stressed about a big exam/had trouble with my study/failed in my PE test…
+
+变化过程：Mrs Lin, came over and encouraged me/my teacher gave me warm advice/my friends cheered me up/received kind words…
+
+结果说明：won the second prize/made great progress in my study/did much better than before/got good grades…
+
+感悟说明：how powerful encouragement could be/encouragement is the best gift in life/kindness and encouragement can change a person/encouragement brings us strength…

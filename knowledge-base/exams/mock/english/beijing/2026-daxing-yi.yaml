@@ -1,195 +1,134 @@
+# ============================================================
+# 2026年北京大兴区一模english — 自动生成
+# ============================================================
+# OCR: Qwen-VL-OCR  Enrich: qwen-max
+# QC: draft=39  needs_review=0
+
 year: 2026
 district: 大兴区
 exam_type: 一模
 subject: english
 full_score: 60.0
 duration_minutes: 90
-total_questions: 38
+total_questions: 39
+structure: 12单选(6.0分) + 8cloze(8分) + 13reading(26分) + 4reading_express(10分) + 2作文(10分)
 passages:
-- body: 'Mom told me I had to stay with Grandpa for an hour and a half while she was out.
-
-    “I can''t stay with Grandpa that long! It’s just uncomfortable around him.” I complained.
-
-    But Mom said he was just sad since Grandma died. Besides, it wasn''t a big deal to stay with him for a couple of hours. After she said that, I knew the ___13___ was over.
-
-    We drove straight to Grandpa''s in an uncomfortable silence. The moment we got there, Mom opened the door and let us in. I saw Grandpa sitting close to the TV without even turning to look at us. Mom
-    got me settled and kissed us goodbye.
-
-    After Mom left, I worked on my homework while Grandpa ___14___ watching television. We looked up at each other now and then but said nothing.
-
-    Grandpa noticed me packing up when I finished my homework. He suggested we watch TV together, but nothing was to my taste. The silence ___15___ I sat on the sofa, trying to get comfortable, when my
-    foot nudged(碰) something under the sofa. Curious, I ___16___ and pulled out a wooden box.
-
-    “Oh, my chess set,” Grandpa said.“Do you play?”
-
-    “No.” I said.
-
-    “Well,” he said,“we’ve got some time. Maybe I can show you how to play.”
-
-    He opened the box and began explaining the pieces and how they moved on the board. We practiced many times. He just corrected me and let me try again.
-
-    I was surprised at how ___17___ he taught me.
-
-    Finally, we started our first game. Grandpa talked me through every move, explaining what might happen next. This was a big ___18___ because I could think carefully about every move. But I was still
-    new to the game, and he beat me in just nine moves. I was embarrassed(尴尬的) how easily he beat me.
-
-    We kept playing, and each game lasted a little longer before Grandpa won.
-
-    Even though I kept losing, I felt ___19___ of how far I had come.
-
-    When Mom came back, she was surprised to see us playing chess together.
-
-    Grandpa said I had learned a lot. I thanked him and asked if we could play again sometime.
-
-    He looked up and smiled-a smile that lit up the whole room. In that moment, chess was not just a game, but a bridge that ___20___ Grandpa and me.'
+- id: choice_intro
+  type: choice
+  name: ''
+  q_range:
+  - 1
+  - 12
+  body: 从下面各题所给的A、B、C、D四个选项中，选择可以填入空白处的最佳选项。
+- id: cloze_intro
   type: cloze
+  name: ''
   q_range:
   - 13
   - 20
-  id: cloze
-- id: reading_A
+  body: '阅读下面的短文，掌握其大意，然后从短文后各题所给的A、B、C、D四个选项中，选择最佳选项。
+
+    Mom told me I had to stay with Grandpa for an hour and a half while she was out.
+
+    “I can’t stay with Grandpa that long! It’s just uncomfortable around him.” I complained.
+
+    But Mom said he was just sad since Grandma died. Besides, it wasn’t a big deal to stay with him for a couple of hours.
+    After she said that, I knew the <u>____13____</u> was over.
+
+    We drove straight to Grandpa’s in an uncomfortable silence. The moment we got there, Mom opened the door and let us in.
+    I saw Grandpa sitting close to the TV without even turning to look at us. Mom got me settled and kissed us goodbye.
+
+    After Mom left, I worked on my homework while Grandpa <u>____14____</u> watching television. We looked up at each other
+    now and then but said nothing.
+
+    Grandpa noticed me packing up when I finished my homework. He suggested we watch TV together, but nothing was to my taste.
+    The silence <u>____15____</u>.
+
+    I sat on the sofa, trying to get comfortable, when my foot nudged (碰) something under the sofa. Curious, I <u>____16____</u>
+    and pulled out a wooden box.
+
+    “Oh, my chess set,” Grandpa said. “Do you play?”
+
+    “No.” I said.
+
+    “Well,” he said, “we’ve got some time. Maybe I can show you how to play.”
+
+    He opened the box and began explaining the pieces and how they moved on the board. We practiced many times. He just corrected
+    me and let me try again. I was surprised at how <u>____17____</u> he taught me.
+
+    Finally, we started our first game. Grandpa talked me through every move, explaining what might happen next. This was
+    a big <u>____18____</u> because I could think carefully about every move. But I was still new to the game, and he beat
+    me in just nine moves. I was embarrassed (尴尬的) by how easily he beat me.
+
+    We kept playing, and each game lasted a little longer before Grandpa won. Even though I kept losing, I felt <u>____19____</u>
+    of how far I had come.
+
+    When Mom came back, she was surprised to see us playing chess together. Grandpa said I had learned a lot. I thanked him
+    and asked if we could play again sometime.
+
+    He looked up and smiled — a smile that lit up the whole room. In that moment, chess was not just a game, but a bridge
+    that <u>____20____</u> Grandpa and me.'
+- id: reading_（一）
   type: reading
-  body: 以下四张图片分别展示了四个研学活动。请根据三位同学朋友圈 的文案，为他们每个人选择最匹配的研学活动，并将图片所对应的A、B、C、D 选项填在相应位置上，其中一个选项为多余选项。
+  name: （一）
   q_range:
   - 21
-  - 23
-  image_options:
-    A: 2026-daxing-yi/figures/passage-reading_A-opt-A.png
-    B: 2026-daxing-yi/figures/passage-reading_A-opt-B.png
-    C: 2026-daxing-yi/figures/passage-reading_A-opt-C.png
-    D: 2026-daxing-yi/figures/passage-reading_A-opt-D.png
-- id: reading_B
-  type: reading
-  body: '密 Jared sat unhappily, staring into space as he fanned himself with a napkin (餐巾纸).His grandma''s noodle stand was full of noise and people. Jared sighed (叹气) heavily. He had wanted to spend his
-    school holiday playing video games, not sitting in this hot food market at nine o''clock in the morning.
-
-    “Ugh, why are you still working at your age? You''re seventy-two!” Jared asked. Grandma just smiled and kept cooking, her hands moving quickly- pouring soup, adding toppings, passing bowls to customers
-    with a warm nod.
-
-    “Sit there and watch, boy,” Grandma said.“There are things books do not teach.” Jared didn''t understand. To him, it just looked like hard, turing work.
-
-    As the morning went on, Jared began to notice small things. Grandma knew every customer''s name and she remembered their small favorites-extra fish balls for one, no spring onions for another, less
-    salt for the third. When a little boy dropped his spoon, Grandma quietly handed him a new one before he even asked. When an old lady struggled with her tray, she came around and helped her take it to
-    her table.
-
-    “Don''t you get tired of all this?” Jared finally asked during a short break.
-
-    Grandma smiled. “Of course, I do. But without it, I was never able to pay for your father''s education. And when I see elderly people who might not get a good meal for the day, I know why I must continue.
-    Tiredness goes away. But the will to keep going, bowl after bowl, stays."
-
-    Jared didn''t say anything. He had thought his grandma''s job was just about making noodles. But watching her today, Jared saw how Grandma served each bowl with care. What he had thought was just cooking
-    turned out to be admirable work.
-
-    “You should enjoy life in your old age!” Jared asked as he helped clean up.
-
-    Grandma looked at him and said, “People remember how you make them feel. In 答题 fact, I enjoy spending my time this way." Jared laughed a little. Between playing video games and making someone smile,
-    he now knew which one counted more.'
-  q_range:
-  - 24
-  - 26
-- id: reading_C
-  type: reading
-  body: 'We often talk about “trusting our gut.” But the gut feelings people refer to can actually come from two very different sources: instinct and intuition. Because they feel so similar-fast, automatic(自动的),
-    sometimes emotional-we are likely to treat them the same, which can lead to poor decision-making in many situations.
-
-    Instinct refers to inborn behavioral responses(反应) shaped by evolution(进 化). These responses are fast and automatic because they come from brain systems such as the amygdala and brainstem, which process
-    threat and survival signals. When you jump back from something that looks dangerous or feel a sudden rush of fear, your brain focuses on speed rather than accuracy(准确性).
-
-    In evolutionary terms, reacting quickly to possible danger increased the chances of survival.
-
-    Intuition, by contrast, comes from experience-based pattern recognition.
-
-    Research on expert decision-making shows that people who have spent years in a field develop the ability to notice small details that others miss. Psychologist Gary Klein recorded this in studies of
-    firefighters and emergency workers: experienced professionals often sensed that something was wrong before they could explain why. Their intuition was not mysterious-it was the brain rapidly matching
-    present signs to patterns learned over time.
-
-    Next time you experience an automatic response such as fear, attraction, or confidence, take a moment to pause for a while and ask yourself the following two questions:(1) Is this instinct or intuition?(2)
-    Are you in immediate danger or is this a more complex(复杂的) situation?
-
-    THE GUT DECISION MATRIX Instinct Intuition Immediate danger Act immediately(a) Act then verify(c) Complex situation Slow down and question it(b) Treat it as a hypothesis(d) (a)If your response is instinct
-    in immediate danger, act right away.(b) However, instincts can go wrong in complex modern situations, so slow down and question them.(c)If you have experience in similar fast-moving situations, strong
-    intuition may be worth acting on quickly.(d)In slower-developing or more complex situations, treat intuitions as hypotheses(假设) and examine them through more thinking and evidence.
-
-    Instinct and intuition both act without our active mental processing, which is why they''re often put together as“gut feelings”, but they arise from different mechanisms and serve different purposes.
-
-    So instead of asking whether to trust your gut, a better question is: what kind of gut feeling is this? Once you know that, deciding what to do next becomes much easier.'
-  q_range:
-  - 27
-  - 29
-- id: reading_D
-  type: reading
-  body: 'The use of AI companions(伴侣) is growing quickly. Companies offer people AI friends, and many people now use chatbots as someone to talk to.
-
-    This is not surprising. AI companions offer something that no human relationship can-intimacy(亲密关系) without risk. They never blame you for a bad day. They don''t get angry. And they don''t judge you.
-    They listen patiently and seem to always understand you. This lack of friction(摩擦) is attractive, because real human relationships are hard. In real life, people often misunderstand each other. We may
-    argue, or even hurt each other. These experiences are not pleasant, but they are unavoidable. That is why many people are attracted to AI-it seems to offer all the good parts of a relationship without
-    the difficult ones.
-
-    However, this “perfect” experience may not be good for us. According to the psychoanalyst Donald Winnicott, a parent who always meets their child''s every need perfectly doesn''t produce a thriving
-    child; they produce a dependent one.
-
-    Children do not grow well in a perfectly frictionless environment. It is small, manageable failures that actually help children learn patience and become stronger.
-
-    Similarly, we also need imperfect relationships to grow. When we only choose easy and comfortable connections, we may stop developing important skills. For example, we may become less able to deal with
-    stress, accept different opinions, or control our emotions. AI provides a“perfect” relationship with no arguments or discomfort, but it removes the friction that helps us improve.
-
-    More importantly, new ideas and creativity often come from disagreement and challenge. When everything runs smoothly without any friction, people may not try to think deeper or do better. While AI can
-    be asked to challenge us, that''s friction on demand(需要)-friction we can control and we can always stop when we feel uncomfortable. Real creative friction is different. It''s from a mind that sees things
-    another way. We can''t control or stop it especially when an idea has its weakness exposed. It forces us to rethink.
-
-    So what meaningful steps can we take to protect the friction? First, we can start by noticing when you turn to AI just for comfort. Also, instead of avoiding difficult conversations, learn to stay with
-    them. Ask others for honest opinions and really listen. Finally, keep at least one relationship fully human.
-
-    题 AI can simulate(模拟) friendship, but it cannot replace real human relationships. Though imperfect, real human relationships are where growth 答 happens-through friction. To replace it with comfort would
-    be a great loss.'
-  q_range:
-  - 30
   - 33
-- id: express
+  body: 'A
+
+    以下四张图片分别展示了四个研学活动。请根据三位同学朋友圈的文案，为他们每个人选择最匹配的研学活动，并将图片所对应的A、B、C、D选项填在相应位置上，其中一个选项为多余选项。
+
+    | A ![](figures/image3.png) | B ![](figures/image4.png) |
+
+    |---|---|---|
+
+    | C ![](figures/image5.png) | D ![](figures/image6.png) |'
+  figure: 2026-daxing-yi/figures/image3.png
+- id: reading_express_intro
   type: reading_express
-  body: '阅读短文，根据短文内容回答问题。
-
-    Imagine you are at a birthday party. There are lots of candies laid out on the table and you can help yourself to whatever you want. You eat lots of chocolate!
-
-    Later that evening, you begin to feel sick. You think to yourself,“I wish I had 准考证号 stopped eating sooner”.
-
-    People often compare what actually happened in life to what could have 题 happened. When what actually happened is worse than what could have happened, then people can feel regret. Regret is something
-    that lots of people 答 experience. We can have big regrets, like not working harder at school or we can 题 have small regrets, like picking the longer queue at lunch. Regret is so common and unpleasant
-    that researchers have spent a lot of time trying to understand it.
-
-    不 In a famous study, researchers asked lots of people to describe a time when 姓名 内 they experienced regret. Interestingly, when people were asked about recent regrets, they often mentioned things they
-    did, like making an embarrassing joke.
-
-    内 But when people were asked what they regretted over their whole lives, they usually mentioned things they did not do, like not spending enough time with 封 friends and family.
-
-    密 Other studies also showed something special about regret: People seldom felt 班级 regret for things they could not change. This suggests that feeling responsible for an outcome is necessary to experience
-    regret. When people feel regret, they think “if only I had acted differently, things would be better!”. Researchers believe regret might play a special role in helping people to understand where a decision
-    went wrong and how they can do better next time.
-
-    In summary, regret often helps people make better decisions and learn from their mistakes. However, sometimes regret is not helpful. People who spend lots of time thinking about the things they regret
-    report feeling less satisfied with their lives. With this in mind, it is important to avoid getting too caught up in past regrets. Instead, focus on the present and try to make the best possible decisions
-    in the future!'
+  name: ''
   q_range:
   - 34
   - 37
+  body: '阅读短文，根据短文内容回答问题。
+
+    Imagine you are at a birthday party. There are lots of candies laid out on the table and you can help yourself to whatever
+    you want. You eat lots of chocolate! Later that evening, you begin to feel sick. You think to yourself, “I wish I had
+    stopped eating sooner.”
+
+    People often compare what actually happened in life to what could have happened. When what actually happened is worse
+    than what could have happened, then people can feel regret. Regret is something that lots of people experience. We can
+    have big regrets, like not working harder at school or we can have small regrets, like picking the longer queue at lunch.
+    Regret is so common and unpleasant that researchers have spent a lot of time trying to understand it.
+
+    In a famous study, researchers asked lots of people to describe a time when they experienced regret. Interestingly, when
+    people were asked about recent regrets, they often mentioned things they did, like making an embarrassing joke. But when
+    people were asked what they regretted over their whole lives, they usually mentioned things they did not do, like not
+    spending enough time with friends and family.
+
+    Other studies also showed something special about regret: People seldom felt regret for things they could not change.
+    This suggests that feeling responsible for an outcome is necessary to experience regret. When people feel regret, they
+    think “if only I had acted differently, things would be better!” Researchers believe regret might play a special role
+    in helping people to understand where a decision went wrong and how they can do better next time.
+
+    In summary, regret often helps people make better decisions and learn from their mistakes. However, sometimes regret is
+    not helpful. People who spend lots of time thinking about the things they regret report feeling less satisfied with their
+    lives. With this in mind, it is important to avoid getting too caught up in past regrets. Instead, focus on the present
+    and try to make the best possible decisions in the future!'
 questions:
 - id: 1
   type: 单选
   score: 0.5
-  stem: 'My uncle is a photographer. These photos show ___ love for the natural world.
-
-    线'
+  stem: My uncle is a photographer. These photos show ________ love for the natural world.
   options:
     A: his
     B: her
     C: your
-    D: 'its
-
-      封'
+    D: its
   answer: A
-  solution: A
+  solution: his他的；her她的；your你的；its它的。根据前句“My uncle”可知主语是男性，修饰名词love应用形容词性物主代词his，表示“他的”。
   knowledge_points:
-  - 代词的使用
+  - 代词运用
   module: grammar
   difficulty: 基础
   recommended_for:
@@ -199,19 +138,18 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
+  passage_id: choice_intro
 - id: 2
   type: 单选
   score: 0.5
-  stem: Janek and the team finally arrived at the South Pole ___ December 31st, 2004.
+  stem: Janek and the team finally arrived at the South Pole ________ December 31st, 2004.
   options:
     A: in
     B: 'on'
     C: at
-    D: 'for
-
-      密'
+    D: for
   answer: B
-  solution: B
+  solution: in在……期间（用于年份、季节、月份等较长时段）；on在具体某一天；at在具体时刻/小地点；for长达。空格后“December 31st, 2004”为具体的日期，应用介词on。
   knowledge_points:
   - 时间介词的使用
   module: grammar
@@ -223,21 +161,21 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
+  passage_id: choice_intro
 - id: 3
   type: 单选
   score: 0.5
-  stem: '-We''ll have a class show tomorrow. Can you sing an English song for us?
+  stem: '—We’ll have a class show tomorrow. Can you sing an English song for us?
 
-    班级
 
-    -Yes, I___. I practice every day.'
+    —Yes, I ________. I practice every day.'
   options:
     A: can
     B: must
     C: need
     D: shall
   answer: A
-  solution: A
+  solution: can能，可以；must必须；need需要；shall将要。根据问句“Can you sing an English song for us?”可知，问句是情态动词Can引导的一般疑问句，询问能力，答语应保持一致，用can回答。
   knowledge_points:
   - 情态动词的用法
   module: grammar
@@ -249,20 +187,21 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
+  passage_id: choice_intro
 - id: 4
   type: 单选
   score: 0.5
-  stem: Many teens are interested in traditional culture they think it is meaningful.
+  stem: Many teens are interested in traditional culture ________ they think it is meaningful.
   options:
     A: so
     B: or
     C: but
     D: because
   answer: D
-  solution: D
+  solution: so所以；or或者；but但是；because因为。根据前后句逻辑关系可知，后句“they think it is meaningful”是前句“Many teens are interested in traditional
+    culture”的原因，应用表示原因的连词because。
   knowledge_points:
   - 连词的使用
-  - 因果关系
   module: grammar
   difficulty: 基础
   recommended_for:
@@ -272,19 +211,20 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
+  passage_id: choice_intro
 - id: 5
   type: 单选
   score: 0.5
-  stem: Bamboo is one of subjects in Chinese paintings.
+  stem: Bamboo is one of ________ subjects in Chinese paintings.
   options:
     A: popular
     B: more popular
     C: most popular
     D: the most popular
   answer: D
-  solution: D
+  solution: “one of+the+形容词最高级+名词复数”是固定搭配，意为“最……之一”。popular是多音节形容词，其最高级形式为the most popular。
   knowledge_points:
-  - 形容词最高级的使用
+  - 形容词最高级
   module: grammar
   difficulty: 基础
   recommended_for:
@@ -294,24 +234,24 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
+  passage_id: choice_intro
 - id: 6
   type: 单选
   score: 0.5
-  stem: '-Hi, Emma.
+  stem: '— Hi, Emma. ________ do you take a walk in the park?
 
-    do you take a walk in the park?
 
-    -Twice a week.'
+    — Twice a week.'
   options:
     A: How long
     B: How often
     C: How much
     D: How soon
   answer: B
-  solution: B
+  solution: How long多长时间 (问时长)；How often多久一次 (问频率)；How much多少 (问价格或不可数名词数量)；How soon多久以后 (问将来时间点)。根据答句“Twice a week.” (每周两次。)
+    可知，问句询问的是频率，填How often。
   knowledge_points:
   - 频率副词的使用
-  - 特殊疑问句
   module: grammar
   difficulty: 基础
   recommended_for:
@@ -321,19 +261,20 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
+  passage_id: choice_intro
 - id: 7
   type: 单选
   score: 0.5
-  stem: a movie with her friend every weekend.
+  stem: Paula ________ a movie with her friend every weekend.
   options:
     A: is watching
     B: watches
     C: watched
     D: will watch
   answer: B
-  solution: B
+  solution: 根据时间状语“every weekend”可知，句子描述的是经常性、习惯性的动作，应用一般现在时。主语Paula是第三人称单数，谓语动词需用三单形式watches。
   knowledge_points:
-  - 一般现在时的用法
+  - 时态运用
   module: grammar
   difficulty: 基础
   recommended_for:
@@ -343,19 +284,20 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
+  passage_id: choice_intro
 - id: 8
   type: 单选
   score: 0.5
-  stem: As the teacher walked into the classroom, the students ___ at the top of their voices.
+  stem: As the teacher walked into the classroom, the students ________ at the top of their voices.
   options:
     A: read
     B: will read
     C: were reading
     D: have read
   answer: C
-  solution: C
+  solution: 根据“As the teacher walked into the classroom”可知，主句描述过去某一时刻正在进行的动作，应用过去进行时“were reading”。
   knowledge_points:
-  - 现在进行时的用法
+  - 时态运用
   module: grammar
   difficulty: 基础
   recommended_for:
@@ -365,19 +307,20 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
+  passage_id: choice_intro
 - id: 9
   type: 单选
   score: 0.5
-  stem: Eve and Lily ___ up rubbish in the park as volunteers last Saturday.
+  stem: Eve and Lily ________ up rubbish in the park as volunteers last Saturday.
   options:
     A: pick
     B: will pick
     C: picked
     D: are picking
   answer: C
-  solution: C
+  solution: 根据时间状语“last Saturday”可知，动作发生在过去，句子应用一般过去时，谓语动词用过去式。pick捡，是动词原形，其过去式是picked。
   knowledge_points:
-  - 时态-一般过去时
+  - 时态运用
   module: grammar
   difficulty: 基础
   recommended_for:
@@ -387,17 +330,18 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
+  passage_id: choice_intro
 - id: 10
   type: 单选
   score: 0.5
-  stem: Since 2020, China ___ great progress in its low-carbon development.
+  stem: Since 2020, China ________ great progress in its low-carbon development.
   options:
     A: achieves
     B: achieved
     C: has achieved
     D: is achieving
   answer: C
-  solution: C
+  solution: 根据时间状语“Since 2020”可知，句子应用现在完成时，其结构是“have/has+动词的过去分词”，主语是第三人称单数，用助动词has，achieve的过去分词是achieved。
   knowledge_points:
   - 现在完成时
   module: grammar
@@ -409,20 +353,21 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
+  passage_id: choice_intro
 - id: 11
   type: 单选
   score: 0.5
-  stem: A new modern library ___ in the center of our city next year.
+  stem: A new modern library ________ in the center of our city next year.
   options:
     A: builds
     B: built
     C: is built
     D: will be built
   answer: D
-  solution: D
+  solution: 根据时间状语“next year”可知，动作发生在将来，应使用一般将来时，排除选项ABC，主语library和动词build之间是被动关系，句子用一般将来时的被动语态，其结构是“will be+动词的过去分词”。
   knowledge_points:
+  - 时态
   - 被动语态
-  - 将来时
   module: grammar
   difficulty: 基础
   recommended_for:
@@ -432,21 +377,23 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
+  passage_id: choice_intro
 - id: 12
   type: 单选
   score: 0.5
-  stem: '-Excuse me, could you tell me_?
+  stem: '—Excuse me, could you tell me ________?
 
-    -On the second floor.'
+
+    —On the second floor.'
   options:
     A: where I can find books on AI
     B: where can I find books on AI
     C: why do I find books on AI
     D: why I find books on AI
   answer: A
-  solution: A
+  solution: 根据答语“On the second floor.”可知，此处询问地点，用where引导的宾语从句，排除选项C和D；宾语从句需用陈述语序，B选项为疑问语序，排除。A选项是陈述语序，且符合语境。
   knowledge_points:
-  - 宾语从句的使用
+  - 宾语从句
   module: grammar
   difficulty: 基础
   recommended_for:
@@ -456,8 +403,9 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
+  passage_id: choice_intro
 - id: 13
-  type: 完形
+  type: cloze
   score: 1
   stem: ''
   options:
@@ -466,9 +414,11 @@ questions:
     C: interview
     D: conversation
   answer: D
-  solution: D
+  solution: '句意：听完妈妈的话，我知道这场谈话已经结束。
+
+    上文提到我向妈妈抱怨不想陪爷爷，妈妈进行劝说，此处指代母子二人的交流对话，conversation“对话”契合上下文语境。speech“演讲”、report“报告”、interview“采访”都不符合日常母子交谈的场景。'
   knowledge_points:
-  - 词汇识别与应用
+  - 词汇运用
   module: vocabulary
   difficulty: 基础
   recommended_for:
@@ -478,8 +428,9 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
+  passage_id: cloze_intro
 - id: 14
-  type: 完形
+  type: cloze
   score: 1
   stem: ''
   options:
@@ -488,9 +439,11 @@ questions:
     C: missed
     D: considered
   answer: A
-  solution: A
+  solution: '句意：妈妈离开后，我写作业，爷爷依旧继续看着电视。
+
+    上文提到进门时看到爷爷独自坐在电视前，此处承接前文，指爷爷延续之前看电视的行为，continued“继续”贴合语境。minded“介意”、missed“错过；想念”、considered“考虑”和上下文逻辑不符。'
   knowledge_points:
-  - 词汇辨析
+  - 词汇运用
   module: vocabulary
   difficulty: 基础
   recommended_for:
@@ -500,8 +453,9 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
+  passage_id: cloze_intro
 - id: 15
-  type: 完形
+  type: cloze
   score: 1
   stem: ''
   options:
@@ -510,9 +464,11 @@ questions:
     C: returned
     D: reduced
   answer: C
-  solution: C
+  solution: '句意：这份沉默再一次出现了。
+
+    上文提到祖孙二人气氛尴尬、无话交流，一起看电视又不合心意，空后依旧维持无言的状态，returned“重现；返回”契合语境。changed“改变”、ended“结束”、reduced“减少”不符合语境。'
   knowledge_points:
-  - 词汇辨析
+  - 词汇运用
   module: vocabulary
   difficulty: 基础
   recommended_for:
@@ -522,8 +478,9 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
+  passage_id: cloze_intro
 - id: 16
-  type: 完形
+  type: cloze
   score: 1
   stem: ''
   options:
@@ -532,9 +489,11 @@ questions:
     C: slowed down
     D: sat down
   answer: B
-  solution: B
+  solution: '句意：我心生好奇，伸手向下摸索，拿出了一个木盒子。
+
+    上文写到脚碰到沙发底下的物品，想要取出物件需要俯身伸手，reached down“伸手向下”匹配动作语境。fell down“摔倒”、slowed down“减速”、sat down“坐下”都不符合从沙发下取物的动作逻辑。'
   knowledge_points:
-  - 词汇辨析
+  - 词汇运用
   module: vocabulary
   difficulty: 基础
   recommended_for:
@@ -544,8 +503,9 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
+  passage_id: cloze_intro
 - id: 17
-  type: 完形
+  type: cloze
   score: 1
   stem: ''
   options:
@@ -554,9 +514,11 @@ questions:
     C: patiently
     D: quietly
   answer: C
-  solution: C
+  solution: '句意：我很惊讶，他教我下棋时格外有耐心。
+
+    空后写到爷爷一次次纠正我的走法、允许我反复尝试，能体现出温和耐心的状态，patiently“耐心地”贴合语境。directly“直接地”、regularly“有规律地”、quietly“安静地”都体现不出反复教导的态度。'
   knowledge_points:
-  - 副词的使用
+  - 词语运用
   module: vocabulary
   difficulty: 基础
   recommended_for:
@@ -566,19 +528,22 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
+  passage_id: cloze_intro
 - id: 18
-  type: 完形
+  type: cloze
   score: 1
   stem: ''
   options:
     A: help
     B: problem
     C: difference
-    D: success
+    D: failure
   answer: A
-  solution: A
+  solution: '句意：这给了我很大帮助，因为我可以认真思考每一步怎么走。
+
+    空后说明我能仔细斟酌棋路，源于爷爷一步步讲解指点，help“帮助”契合语境。problem“问题”、difference“差异”、failure“失败”都无法体现爷爷指点带来的正向助力。'
   knowledge_points:
-  - 词汇辨析
+  - 词语运用
   module: vocabulary
   difficulty: 基础
   recommended_for:
@@ -588,8 +553,9 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
+  passage_id: cloze_intro
 - id: 19
-  type: 完形
+  type: cloze
   score: 1
   stem: ''
   options:
@@ -598,9 +564,11 @@ questions:
     C: tired
     D: afraid
   answer: B
-  solution: B
+  solution: '句意：尽管我一直输棋，但仍为自己的进步感到自豪。
+
+    上文提到每局对局我坚持的时间越来越久，能明显看到自身成长，固定搭配be proud of“为……自豪”贴合心境。relaxed“放松的”、tired“疲惫的”、afraid“害怕的”均和取得进步后的感受不匹配。'
   knowledge_points:
-  - 词汇理解与运用
+  - 词汇运用
   module: vocabulary
   difficulty: 基础
   recommended_for:
@@ -610,8 +578,9 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
+  passage_id: cloze_intro
 - id: 20
-  type: 完形
+  type: cloze
   score: 1
   stem: ''
   options:
@@ -620,7 +589,9 @@ questions:
     C: compared
     D: connected
   answer: D
-  solution: D
+  solution: '句意：那一刻，象棋不仅是游戏，更是联结我和爷爷的桥梁。
+
+    前文二人从沉默隔阂到相伴下棋，感情逐渐拉近，connected“联结”契合桥梁的比喻含义。discovered“发现”、controlled“控制”、compared“对比”都不能体现拉近祖孙情感的文意。'
   knowledge_points:
   - 词汇运用
   module: vocabulary
@@ -632,35 +603,37 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
+  passage_id: cloze_intro
 - id: 21
-  type: 阅读
+  type: reading
   score: 2
-  stem: For this term's study tour, I'd love to visit an old town. I really want to walk along its ancient streets, take lovely photos of the old buildings, and enjoy the warm spring. 题 I'm hoping to go
-    hiking in the mountains with my friends on our study tour. We can look for colorful 答 stones, enjoy the fresh air, and have a relaxing picnic on the top.
-  has_image_options: true
+  stem: '| <u>____21____</u> | ![](figures/image7.png) | For this term’s study tour, I’d love to visit an old town. I really
+    want to walk along its ancient streets, take lovely photos of the old buildings, and enjoy the warm spring. |'
   answer: D
-  solution: D
+  solution: 第1段Lily的描述：“I’d love to visit an old town. I really want to walk along its ancient streets, take lovely photos
+    of the old buildings...”，提及古街、古建筑，D项图片为古街场景，与Lily的需求匹配。
   knowledge_points:
-  - 阅读理解
-  - 词汇运用
+  - 信息提取
   module: reading
-  difficulty: 中等
+  difficulty: 基础
   recommended_for:
+  - L0
   - L1
   - L2
   - L3
   qc_status: draft
   qc_note: ''
+  passage_id: reading_（一）
 - id: 22
-  type: 阅读
+  type: reading
   score: 2
-  stem: 要 I'd choose to go to the city park with my classmates 不 for our study tour. We can enjoy the bright blooming flowers, play fun games on the soft grass, and feed the ducks by the lake. (Tom)
-  has_image_options: true
+  stem: '| <u>____22____</u> | ![](figures/image8.png) | I’m hoping to go hiking in the mountains with my friends on our study
+    tour. We can look for colorful stones, enjoy the fresh air, and have a relaxing picnic on the top. |'
   answer: B
-  solution: B
+  solution: 第2段Tom的描述：“I’m hoping to go hiking in the mountains with my friends... enjoy the fresh air, and have a relaxing
+    picnic on the top”，提及山间徒步，B项图片为登山场景，与Tom的需求匹配。
   knowledge_points:
-  - 阅读理解
-  - 词汇运用
+  - 信息提取/段落梳理
   module: reading
   difficulty: 基础
   recommended_for:
@@ -670,42 +643,47 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
+  passage_id: reading_（一）
 - id: 23
-  type: 阅读
+  type: reading
   score: 2
-  stem: 内 线 (Bob)
-  has_image_options: true
+  stem: '| <u>____23____</u> | ![](figures/image9.png) | I’d choose to go to the city park with my classmates for our study
+    tour. We can enjoy the bright blooming flowers, play fun games on the soft grass, and feed the ducks by the lake. |'
   answer: A
-  solution: A
-  knowledge_points:
-  - 词汇识别
-  module: vocabulary
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
-  qc_status: draft
-  qc_note: ''
-- id: 24
-  type: 阅读
-  score: 2
-  stem: 'How did Jared feel at his grandma''s noodle stand at first?
+  solution: '第3段Bob的描述：“I’d choose to go to the city park... enjoy the bright blooming flowers... and feed the ducks by the
+    lake”，提及公园喂鸭子，A项图片为湖边喂鸭场景，与Bob的需求匹配。
 
-    题'
-  options:
-    A: Excited and hopeful
-    B: Surprised and curious
-    C: Upset and afraid
-    D: 'Unhappy and bored.
+    （二）阅读下列短文，根据短文内容，从短文后各题所给的A、B、C、D四个选项中，选出最佳选项。
 
-      不'
-  answer: D
-  solution: D
+    B
+
+    Jared sat unhappily, staring into space as he fanned himself with a napkin (餐巾纸). His grandma’s noodle stand was full
+    of noise and people. Jared sighed (叹气) heavily. He had wanted to spend his school holiday playing video games, not sitting
+    in this hot food market at nine o’clock in the morning.
+
+    “Ugh, why are you still working at your age? You’re seventy-two!” Jared asked. Grandma just smiled and kept cooking, her
+    hands moving quickly — pouring soup, adding toppings, passing bowls to customers with a warm nod.
+
+    “Sit there and watch, boy,” Grandma said. “There are things books do not teach.” Jared didn’t understand. To him, it just
+    looked like hard, tiring work.
+
+    As the morning went on, Jared began to notice small things. Grandma knew every customer’s name and she remembered their
+    small favorites — extra fish balls for one, no spring onions for another, less salt for the third. When a little boy dropped
+    his spoon, Grandma quietly handed him a new one before he even asked. When an old lady struggled with her tray, she came
+    around and helped her take it to her table.
+
+    “Don’t you get tired of all this?” Jared finally asked during a short break. Grandma smiled. “Of course, I do. But without
+    it, I was never able to pay for your father’s education. And when I see elderly people who might not get a good meal for
+    the day, I know why I must continue. Tiredness goes away. But the will to keep going, bowl after bowl, stays.”
+
+    Jared didn’t say anything. He had thought his grandma’s job was just about making noodles. But watching her today, Jared
+    saw how Grandma served each bowl with care. What he had thought was just cooking turned out to be admirable work.
+
+    “You should enjoy life in your old age!” Jared asked as he helped clean up. Grandma looked at him and said, “People remember
+    how you make them feel. In fact, I enjoy spending my time this way.” Jared laughed a little. Between playing video games
+    and making someone smile, he now knew which one counted more.'
   knowledge_points:
-  - 阅读理解
-  - 情感态度识别
+  - 信息提取/段落梳理
   module: reading
   difficulty: 基础
   recommended_for:
@@ -715,72 +693,44 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
+  passage_id: reading_（一）
+- id: 24
+  type: reading
+  score: 2
+  stem: How did Jared feel at his grandma’s noodle stand at first?
+  options:
+    A: Excited and hopeful.
+    B: Surprised and curious.
+    C: Upset and afraid.
+    D: Unhappy and bored.
+  answer: D
+  solution: 第一段描写：“Jared sat unhappily, staring into space as he fanned himself with a napkin”，刻画出杰里德一开始心情低落、无所事事倍感无聊。
+  knowledge_points:
+  - 信息筛选
+  module: reading
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+  passage_id: reading_（一）
 - id: 25
-  type: 阅读
+  type: reading
   score: 2
   stem: What did Jared notice as the morning went on?
   options:
-    A: 'Grandma remembered customers'' likes and dislikes.
-
-      内'
-    B: Grandma often forgot to add toppings to the noodles
-    C: 'Grandma rested sometimes because she felt very tired.
-
-      封'
-    D: 'Grandma cared about how to make money quickly.
-
-      封'
+    A: Grandma remembered customers’ likes and dislikes.
+    B: Grandma often forgot to add toppings to the noodles.
+    C: Grandma rested sometimes because she felt very tired.
+    D: Grandma cared about how to make money quickly.
   answer: A
-  solution: A
+  solution: 第四段叙述：“Grandma knew every customer’s name and she remembered their small favorites”，表明杰里德慢慢发现奶奶记得每位顾客的喜好与忌口。
   knowledge_points:
-  - 阅读理解
-  - 细节理解
+  - 信息筛选
   module: reading
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
-  qc_status: draft
-  qc_note: ''
-- id: 26
-  type: 阅读
-  score: 2
-  stem: 'What can we learn from the story?
-
-    密'
-  options:
-    A: Making noodles is a good way to make money for a family
-    B: Young people should respect and understand their elders
-    C: Helping others and caring for people can bring true happiness
-    D: It is important to learn how to cook from your family members
-  answer: C
-  solution: C
-  knowledge_points:
-  - 阅读理解
-  - 主旨大意
-  module: reading
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
-  qc_status: draft
-  qc_note: ''
-- id: 27
-  type: 阅读
-  score: 2
-  stem: What is the difference between instinct and intuition?
-  options:
-    A: Instinct controls feelings; intuition controls actions
-    B: Instinct is inborn; intuition is from experience
-    C: Instinct is strong; intuition is weak
-    D: Instinct is slow; intuition is fast
-  answer: B
-  solution: B
-  knowledge_points:
-  - 词汇辨析
-  module: vocabulary
   difficulty: 基础
   recommended_for:
   - L0
@@ -789,19 +739,107 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
+  passage_id: reading_（一）
+- id: 26
+  type: reading
+  score: 2
+  stem: What can we learn from the story?
+  options:
+    A: Making noodles is a good way to make money for a family.
+    B: Young people should respect and understand their elders.
+    C: Helping others and caring for people can bring true happiness.
+    D: It is important to learn how to cook from your family members.
+  answer: C
+  solution: '文末升华主旨：“People remember how you make them feel. In fact, I enjoy spending my time this way”，借奶奶的话语点明真诚待人、关爱他人能收获真正的幸福感。
+
+    C
+
+    We often talk about “trusting our gut.” But the gut feelings people refer to can actually come from two very different
+    sources: instinct and intuition. Because they feel so similar—fast, automatic (自动的), sometimes emotional — we are likely
+    to treat them the same, which can lead to poor decision-making in many situations.
+
+    Instinct refers to inborn behavioral responses (反应) shaped by evolution (进化). These responses are fast and automatic because
+    they come from brain systems such as the amygdala and brainstem, which process threat and survival signals. When you jump
+    back from something that looks dangerous or feel a sudden rush of fear, your brain focuses on speed rather than accuracy
+    (准确性). In evolutionary terms, reacting quickly to possible danger increased the chances of survival.
+
+    Intuition, by contrast, comes from experience-based pattern recognition. Research on expert decision-making shows that
+    people who have spent years in a field develop the ability to notice small details that others miss. Psychologist Gary
+    Klein recorded this in studies of firefighters and emergency workers: experienced professionals often sensed that something
+    was wrong before they could explain why. Their intuition was not mysterious — it was the brain rapidly matching present
+    signs to patterns learned over time.
+
+    Next time you experience an automatic response, such as fear, attraction, or confidence, take a moment to pause for a
+    while and ask yourself the following two questions: (1) Is this instinct or intuition? (2) Are you in immediate danger,
+    or is this a more complex (复杂的) situation?
+
+    | THE GUT DECISION MATRIX | Instinct | Intuition |
+
+    |---|---|---|
+
+    | Immediate danger | Act immediately (a) | Act then verify (c) |
+
+    | Complex situation | Slow down and question it (b) | Treat it as a hypothesis (d) |
+
+    (a) If your response is instinct in immediate danger, act right away. (b) However, instincts can go wrong in complex modern
+    situations, so slow down and question them. (c) If you have experience in similar fast-moving situations, strong intuition
+    may be worth acting on quickly. (d) In slower-developing or more complex situations, treat intuitions as hypotheses (假设)
+    and examine them through more thinking and evidence.
+
+    Instinct and intuition both act without our active mental processing, which is why they’re often put together as “gut
+    feelings”, but they arise from different mechanisms and serve different purposes.
+
+    So instead of asking whether to trust your gut, a better question is: what kind of gut feeling is this? Once you know
+    that, deciding what to do next becomes much easier.'
+  knowledge_points:
+  - 启示感悟
+  module: reading
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+  passage_id: reading_（一）
+- id: 27
+  type: reading
+  score: 2
+  stem: What is the difference between instinct and intuition?
+  options:
+    A: Instinct controls feelings; intuition controls actions.
+    B: Instinct is inborn; intuition is from experience.
+    C: Instinct is strong; intuition is weak.
+    D: Instinct is slow; intuition is fast.
+  answer: B
+  solution: 第二段定义本能：“Instinct refers to inborn behavioral responses shaped by evolution”，说明本能是与生俱来的；第三段定义直觉：“Intuition, by
+    contrast, comes from experience-based pattern recognition”，说明直觉源于经验积累。
+  knowledge_points:
+  - 信息筛选
+  module: reading
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+  passage_id: reading_（一）
 - id: 28
-  type: 阅读
+  type: reading
   score: 2
   stem: What is the main idea of Paragraph 5?
   options:
-    A: How to tell instinct and intuition apart
-    B: When to act on instinct and intuition
-    C: How to stay away from danger
-    D: Why people have gut feelings
+    A: How to tell instinct and intuition apart.
+    B: When to act on instinct and intuition.
+    C: How to stay away from danger.
+    D: Why people have gut feelings.
   answer: B
-  solution: B
+  solution: '第四段引出问题：“take a moment to pause for a while and ask yourself the following two questions: (1) Is this instinct
+    or intuition? (2) Are you in immediate danger or is this a more complex situation?”，后续表格及说明具体阐述了在不同情境下，应如何处理本能与直觉，核心是指导何时采取行动。'
   knowledge_points:
-  - 阅读理解-主旨大意
+  - 信息提取/段落梳理
   module: reading
   difficulty: 中等
   recommended_for:
@@ -810,20 +848,56 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
+  passage_id: reading_（一）
 - id: 29
-  type: 阅读
+  type: reading
   score: 2
   stem: Which of the following would the writer most probably agree with?
   options:
-    A: Trusting our gut feelings can lead to poor decision-making
-    B: Instinct is more believable because it protects us from threats
-    C: Telling instinct from intuition helps make better decisions
-    D: Intuition is formed by noticing and analyzing small details
+    A: Trusting our gut feelings can lead to poor decision-making.
+    B: Instinct is more believable because it protects us from threats.
+    C: Telling instinct from intuition helps make better decisions.
+    D: Intuition is formed by noticing and analyzing small details.
   answer: C
-  solution: C
+  solution: '最后一段总结观点：“So instead of asking whether to trust your gut, a better question is: what kind of gut feeling is this?
+    Once you know that, deciding what to do next becomes much easier”，说明区分本能与直觉有助于做出更好的决定。
+
+    D
+
+    The use of AI companions (伴侣) is growing quickly. Companies offer people AI friends, and many people now use chatbots
+    as someone to talk to.
+
+    This is not surprising. AI companions offer something that no human relationship can—intimacy (亲密关系) without risk. They
+    never blame you for a bad day. They don’t get angry. And they don’t judge you. They listen patiently and seem to always
+    understand you. This lack of friction (摩擦) is attractive, because real human relationships are hard. In real life, people
+    often misunderstand each other. We may argue, or even hurt each other. These experiences are not pleasant, but they are
+    unavoidable. That is why many people are attracted to AI — it seems to offer all the good parts of a relationship without
+    the difficult ones.
+
+    However, this “perfect” experience may not be good for us. According to the psychoanalyst Donald Winnicott, a parent who
+    always meets their child’s every need perfectly doesn’t produce a <u>thriving</u> child; they produce a dependent one.
+    Children do not grow well in a perfectly frictionless environment. It is small, manageable failures that actually help
+    children learn patience and become stronger.
+
+    Similarly, we also need imperfect relationships to grow. When we only choose easy and comfortable connections, we may
+    stop developing important skills. For example, we may become less able to deal with stress, accept different opinions,
+    or control our emotions. AI provides a “perfect” relationship with no arguments or discomfort, but it removes the friction
+    that helps us improve.
+
+    More importantly, new ideas and creativity often come from disagreement and challenge. When everything runs smoothly without
+    any friction, people may not try to think deeper or do better. While AI can be asked to challenge us, that’s friction
+    on demand (需要)—friction we can control and we can always stop when we feel uncomfortable. Real creative friction is different.
+    It’s from a mind that sees things another way. We can’t control or stop it especially when an idea has its weakness exposed.
+    It forces us to rethink.
+
+    So what meaningful steps can we take to protect the friction? First, we can start by noticing when you turn to AI just
+    for comfort. Also, instead of avoiding difficult conversations, learn to stay with them. Ask others for honest opinions
+    and really listen. Finally, keep at least one relationship fully human.
+
+    AI can simulate (模拟) friendship, but it cannot replace real human relationships. Though imperfect, real human relationships
+    are where growth happens — through friction. To replace it with comfort would be a great loss.'
   knowledge_points:
-  - 阅读理解
-  - 词汇辨析
+  - 信息筛选
   module: reading
   difficulty: 中等
   recommended_for:
@@ -832,28 +906,20 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
+  passage_id: reading_（一）
 - id: 30
-  type: 阅读
+  type: reading
   score: 2
-  stem: 'How does the writer explain why many people are attracted to AI in Paragraph 2?
-
-    要'
+  stem: How does the writer explain why many people are attracted to AI in Paragraph 2?
   options:
-    A: 'By describing the pleasant experiences with AI.
-
-      不'
-    B: By comparing AI with real human relationships
-    C: 'By telling a story of using chatbots as friends.
-
-      内'
-    D: 'By introducing the popularity of AI companions.
-
-      内'
+    A: By describing the pleasant experiences with AI.
+    B: By comparing AI with real human relationships.
+    C: By telling a story of using chatbots as friends.
+    D: By introducing the popularity of AI companions.
   answer: B
-  solution: B
+  solution: 第二段说明：“AI companions offer something that no human relationship can — intimacy without risk”，作者先阐述人工智能伴侣无争执、善倾听、无矛盾的特点，再对比现实人际关系易误会、易争吵、易彼此伤害的现状，通过两者对比解释人们被人工智能吸引的缘由。
   knowledge_points:
-  - 阅读理解
-  - 推理判断
+  - 信息筛选
   module: reading
   difficulty: 中等
   recommended_for:
@@ -862,45 +928,44 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
+  passage_id: reading_（一）
 - id: 31
-  type: 阅读
+  type: reading
   score: 2
-  stem: The word“thriving” in Paragraph 3 most probably means
+  stem: The word “<u>thriving</u>” in Paragraph 3 most probably means ________.
   options:
     A: strictly following all rules
-    B: 'always depending on others
-
-      封'
+    B: always depending on others
     C: willing to try new things
-    D: able to stand on one's own feet
+    D: able to stand on one’s own feet
   answer: D
-  solution: D
+  solution: 第三段说明：“a parent who always meets their child’s every need perfectly doesn’t produce a thriving child; they produce
+    a dependent one”，句中把“thriving child”和“dependent one”形成正反对比，dependent表示“依赖他人的”，可推知thriving有“独立自强、能够自立”的含义。
   knowledge_points:
-  - 词汇理解与运用
-  module: vocabulary
-  difficulty: 中等
+  - 词语含义
+  module: reading
+  difficulty: 基础
   recommended_for:
+  - L0
   - L1
   - L2
   - L3
   qc_status: draft
   qc_note: ''
+  passage_id: reading_（一）
 - id: 32
-  type: 阅读
+  type: reading
   score: 2
-  stem: 'According to the passage, what is a good example of real creative friction?
-
-    密'
+  stem: According to the passage, what is a good example of real creative friction?
   options:
-    A: Ask AI for new ideas but stop when upset
-    B: Read articles that agree with you
-    C: Talk to a friend who finds your mistakes
-    D: Use chatbots to fix your ideas nicely
+    A: Ask AI for new ideas but stop when upset.
+    B: Read articles that agree with you.
+    C: Talk to a friend who finds your mistakes.
+    D: Use chatbots to fix your ideas nicely.
   answer: C
-  solution: C
+  solution: 第五段介绍：“Real creative friction is different. It’s from a mind that sees things another way...It forces us to rethink”，真正具有创造性的思想碰撞来自视角不同、能指出自身不足并促使人反思的真实人际交流。
   knowledge_points:
-  - 阅读理解
-  - 词汇运用
+  - 信息筛选
   module: reading
   difficulty: 中等
   recommended_for:
@@ -909,23 +974,26 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
+  passage_id: reading_（一）
 - id: 33
-  type: 阅读
+  type: reading
   score: 2
-  stem: What is the writer's main purpose in writing this passage?
+  stem: What is the writer’s main purpose in writing this passage?
   options:
-    A: To encourage people to develop real human relationships
-    B: To show the advantages of AI companions in daily life
-    C: To teach children how to become more independent
-    D: 'To advise people to use AI companions wisely.
-
-      第二部分
-
-      本部分共5题，共20分。根据题目要求，完成相应任务。'
+    A: To encourage people to develop real human relationships.
+    B: To show the advantages of AI companions in daily life.
+    C: To teach children how to become more independent.
+    D: To advise people to use AI companions wisely.
   answer: A
-  solution: A
+  solution: '最后一段归纳主旨：“AI can simulate friendship, but it cannot replace real human relationships. Though imperfect, real
+    human relationships are where growth happens — through friction”，作者全文论证人工智能伴侣无法替代真实人际关系，呼吁人们珍惜并用心经营真实的人际情感。
+
+    第二部分
+
+    本部分共5题，共20分。根据题目要求，完成相应任务。'
   knowledge_points:
-  - 阅读理解-作者意图
+  - 阅读理解
+  - 作者意图
   module: reading
   difficulty: 中等
   recommended_for:
@@ -934,208 +1002,264 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
+  passage_id: reading_（一）
 - id: 34
-  type: 阅读表达
-  score: 2.0
-  stem: When do people feel regret according to the passage?
-  answer: ''
-  solution: 'When what actually happened is worse than what could have happened, then people can
+  type: reading_express
+  score: 2
+  stem: 'When do people feel regret according to the passage?
 
-    feel regret.(2分)'
+
+    ____________________________________________'
+  answer: ''
+  solution: 'When what actually happened is worse than what could have happened.
+
+
+    详解：第二段说明“When what actually happened is worse than what could have happened, then people can feel regret”，介绍人们会感到遗憾的时刻，可直接提取原文信息作答。'
   knowledge_points:
-  - 阅读理解
-  - 细节理解
+  - 信息筛选
   module: reading
-  difficulty: 中等
+  difficulty: 基础
   recommended_for:
+  - L0
   - L1
   - L2
   - L3
-  qc_status: needs_review
-  qc_note: 选择题缺少 options（既无文本也无图片选项）；选择题 answer 为空
+  qc_status: draft
+  qc_note: ''
+  passage_id: reading_express_intro
 - id: 35
-  type: 阅读表达
-  score: 2.0
-  stem: What did people mention when being asked what they regretted over their whole lives?
-  answer: ''
-  solution: 'When people were asked what they regretted over their whole lives, they usually
+  type: reading_express
+  score: 2
+  stem: 'What did people mention when being asked what they regretted over their whole lives?
 
-    mentioned things they did not do.(2分)'
+
+    ____________________________________________'
+  answer: ''
+  solution: 'They usually mentioned things they did not do, like not spending enough time with friends and family.
+
+
+    详解：第三段讲到“But when people were asked what they regretted over their whole lives, they usually mentioned things they did
+    not do, like not spending enough time with friends and family”，指出被问及人生遗憾时人们多提及未曾做过的事，可整合原文内容作答。'
   knowledge_points:
-  - 阅读理解
-  - 词汇运用
+  - 信息提取
   module: reading
-  difficulty: 中等
+  difficulty: 基础
   recommended_for:
+  - L0
   - L1
   - L2
   - L3
-  qc_status: needs_review
-  qc_note: 选择题缺少 options（既无文本也无图片选项）；选择题 answer 为空
+  qc_status: draft
+  qc_note: ''
+  passage_id: reading_express_intro
 - id: 36
-  type: 阅读表达
-  score: 2.0
-  stem: What is necessary to experience regret?
+  type: reading_express
+  score: 2
+  stem: 'What is necessary to experience regret?
+
+
+    ____________________________________________'
   answer: ''
-  solution: Feeling responsible for an outcome is necessary to experience regret.(2分)
+  solution: 'Feeling responsible for an outcome.
+
+
+    详解：第四段提到“This suggests that feeling responsible for an outcome is necessary to experience regret”，介绍产生遗憾的必要条件，直接截取原文关键信息即可作答。'
   knowledge_points:
-  - 阅读理解
-  - 词汇运用
+  - 信息提取
   module: reading
   difficulty: 中等
   recommended_for:
   - L1
   - L2
   - L3
-  qc_status: needs_review
-  qc_note: 选择题缺少 options（既无文本也无图片选项）；选择题 answer 为空
+  qc_status: draft
+  qc_note: ''
+  passage_id: reading_express_intro
 - id: 37
-  type: 阅读表达
-  score: 4.0
-  stem: 'Share one thing you regret in your own life. How will you do better next time?
+  type: reading_express
+  score: 4
+  stem: 'Share one thing you regret in your own life. How will you do better next time? (List two ways.)
 
-    (List two ways.)'
+
+    ____________________________________________'
   answer: ''
-  solution: 略
+  solution: 'I regret not studying hard enough last term. I will make a study plan every day and review lessons on time.
+
+
+    详解：本题是开放性试题，答案不唯一，结合文中遗憾能助人吸取教训、优化决策的观点，结合自身真实经历作答，再列出两点改进方式，语意合理通顺即可。'
   knowledge_points:
-  - 写作表达
-  - 情感态度
+  - 启示感悟
   module: writing
   difficulty: 中等
   recommended_for:
   - L1
   - L2
   - L3
-  qc_status: needs_review
-  qc_note: 选择题缺少 options（既无文本也无图片选项）；选择题 answer 为空
+  qc_status: draft
+  qc_note: ''
+  passage_id: reading_express_intro
 - id: 38
-  type: 写作
+  type: 作文
   score: 10
-  stem: '38.从下面两个题目中任选一题，根据所给的中文和英文提示，完成一篇不
+  stem: '从下面两个题目中任选一题，根据所给的中文和英文提示，完成一篇不少于50词的英语文段写作。文中已给出的内容不计入总词数。所给提示词语仅供选用。·请不要写出真实的校名·、·姓名和地名·。
 
-    少于50词的英语文段写作。文中已给出的内容不计人总词数。所给提
-
-    示词语仅供选用。请不要写出真实的校名、姓名和地名。
 
     题目①
 
-    假设你是李华，你校将举办以“如何利用碎片化时间”为主题的英文
 
-    演讲比赛。请你用英语写一篇演讲稿，谈谈你对碎片化时间的看法，并
+    假设你是李华，你校将举办以“如何利用碎片化时间”为主题的英文演讲比赛。请你用英语写一篇演讲稿，谈谈你对碎片化时间的看法，并介绍你的做法及原因。
 
-    介绍你的做法及原因。
 
-    提示词语:meaningful,relax,improve,habit,progress
+    提示词语：meaningful, relax, improve, habit, progress
 
-    内容提示:● What do you think of pockets of time?
+
+    内容提示：
+
+
+    ● What do you think of pockets of time?
+
 
     ● What do you usually do in your pockets of time and why?
 
-    Hello, everyone!
 
-    Thank you for listening.
+    | Hello, everyone!  __________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+    Thank you for listening. |
 
-    题目②
-
-    假设你是李华，你校英语公众号发布了以“健康第一(Health First)”
-
-    为主题的征文活动。请你用英语写一篇短文投稿，介绍你的体育运动习
-
-    惯，并谈谈你的收获。
-
-    提示词语:run,do sit-ups,improve,physical health,energetic
-
-    内容提示:●Introduce your good exercise habits.
-
-    ● How can you benefit from these habits?
-
-    I'' m glad to share my good exercise habits with all of you.
-
-    2025-2026学年第二学期期中练习'
+    |---|'
   answer: ''
-  solution: '题目一:
+  solution: 'Hello, everyone! Today I’d like to talk about pockets of time. I think they are very meaningful and useful in
+    our daily life. We can make good use of them to relax, improve ourselves and form good habits.  For example, I often listen
+    to English words or read short stories on my way to school. This helps me improve my English little by little. I also
+    take deep breaths to relax when I wait in line. These small steps help me make progress every day.  Don’t look down on
+    these small moments. Let’s make full use of them!  Thank you for listening.
 
-    One possible version:
 
-    Hello, everyone! I think pockets of time are very meaningful for students. We can do
+    详解：[第一步：审题立意]
 
-    many small but useful things in our pockets of time.
+    确定文体：演讲稿，以一般现在时为主，围绕如何利用碎片化时间展开论述
 
-    In my pockets of time, I usually read English words or do some easy exercises. I also
+    明确要点：表达对碎片化时间的看法，介绍个人利用碎片化时间的做法及原因
 
-    listen to light music to relax myself. In this way, I can improve myself and make my life more
+    确定人称：第一人称（I）
 
-    colorful.
+    注意事项：语言流畅，书写规范，不得透露真实姓名和学校名称
 
-    I think it is important to make use of time wisely. If we form a good habit of saving time,
+    [第二步：构思布局]
 
-    we will learn more and make greater progress in the future.
+    三段式结构
 
-    Thank you for listening.
+    开头段：开篇点明碎片化时间的价值，表达自己对它的看法
 
-    题目二:
+    主体段：举例介绍自己利用碎片化时间的具体做法及原因
 
-    One possible version:
+    结尾段：发出倡议，呼吁大家珍惜并利用好碎片化时间
 
-    I''m glad to share my good exercise habits with all of you. I have kept exercising
+    [第三步：要点展开]
 
-    regularly for a long time. It not only makes me strong but also keeps me in good shape both
+    要点一：对碎片化时间的看法
 
-    physically and mentally.
+    核心观点：meaningful/very useful
 
-    Every day after school, I spend about 20 minutes running on the playground. On
+    重要作用：relax/improve ourselves/form good habits
 
-    weekends, I often do sit-ups with my family. I stick to these habits and never give up easily.
+    要点二：利用碎片化时间的具体做法及原因
 
-    These habits have brought me many benefits. First, they greatly improve my physical health
+    具体做法：listen to English words/read short stories/take deep breaths
 
-    and make me much stronger. Besides, I feel more energetic every day to deal with my
+    原因：improve my English little by little/help me relax/help me make progress every day
 
-    schoolwork. When I feel tired or stressed, exercise also helps me relax.
+    要点三：发出倡议与总结
 
-    Health is the foundation of study and growth. I will keep exercising all the time. Let''s
+    倡议内容：Don’t look down on these small moments/make full use of them
 
-    remember“Health First” and build up our bodies to enjoy a better teenage life.
+    核心态度：cherish every minute of time/make small but steady progress
 
-    文段表达评分标准:
-
-    第一档:(10-9分)
-
-    完全符合题目要求，观点正确，要点齐全。句式多样，词汇丰富。语言准确，
-
-    语意连贯，表达清楚，具有逻辑性。
-
-    第二档:(8-6分)
-
-    基本符合题目要求，观点正确，要点齐全。语法结构和词汇基本满足文章需要。
-
-    语言基本通顺，语意基本连贯，表达基本清楚。虽然有少量语言错误，但不影
-
-    响整体理解。
-
-    第三档:(5-4分)
-
-    部分内容符合题目要求，要点不齐全。语法结构和词汇错误较多，语言不通顺，
-
-    表达不够清楚，影响整体理解。
-
-    第四档:(3-0分)
-
-    与题目有关的内容不多，只是简单拼凑词语，所写内容难以理解。
-
-    2025-2026 学年第二学期期中练习
-
-    初三英语期末练习参考答案'
+    题目②'
   knowledge_points:
-  - 写作技能
-  - 词汇运用
-  - 表达观点
+  - 命题作文
   module: writing
   difficulty: 中等
   recommended_for:
   - L1
   - L2
   - L3
-  qc_status: needs_review
-  qc_note: 选择题缺少 options（既无文本也无图片选项）；选择题 answer 为空
-structure: 38单选(60.0分)
+  qc_status: draft
+  qc_note: ''
+- id: 39
+  type: 作文
+  score: 0
+  stem: '假设你是李华，你校英语公众号发布了以“健康第一 (Health First)”为主题的征文活动。请你用英语写一篇短文投稿，介绍你的体育运动习惯，并谈谈你的收获。
+
+
+    提示词语：run, do sit-ups, improve, physical health, energetic
+
+
+    内容提示：
+
+
+    ● Introduce your good exercise habits.
+
+
+    ● How can you benefit from these habits?
+
+
+    | I’m glad to share my good exercise habits with all of you.  ___________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+    |
+
+    |---|'
+  answer: ''
+  solution: '[二选一备选题目，与上一题任选其一作答；本题不重复计分]
+
+    I’m glad to share my good exercise habits with all of you. I usually run for half an hour in the morning and do sit-ups
+    before going to bed, no matter how busy I am with schoolwork.   These habits help me a lot. Firstly, they improve my physical
+    health. I seldom catch a cold now. Secondly, I feel more energetic every day, so I can focus better on my studies and
+    finish my homework more efficiently.  I believe that keeping exercising is the key to a healthy and happy life. Let’s
+    all put health first!
+
+
+    详解：确定文体：说明文 (介绍类短文，校园公众号征文投稿)，以一般现在时为主，描述日常习惯和客观收获
+
+    明确要点：介绍良好的运动习惯、说明运动带来的收获
+
+    确定人称：第一人称 (I/my)，身份为李华
+
+    注意事项：需覆盖所有提示词，语言贴合校园公众号投稿的积极、真诚风格
+
+    [第二步：构思布局]
+
+    三段式结构：
+
+    开头段：引出主题，介绍个人运动习惯
+
+    主体段：阐述运动带来的健康与学习上的双重收获
+
+    结尾段：总结观点，呼应“健康第一”主题并发出倡议
+
+    [第三步：要点展开]
+
+    要点一：介绍你的运动习惯
+
+    运动内容：run/do sit-ups/do rope skipping/take a walk after dinner等
+
+    细节描述：run for half an hour in the morning/do sit-ups before going to bed/run around the school playground/do sit-ups with
+    my classmates in PE class等
+
+    态度补充：no matter how busy I am with schoolwork/ keep the habit for over a year/never skip my exercise plan等
+
+    要点二：说明运动带来的收获
+
+    身体健康层面：improve my physical health/seldom catch a cold now/build up my body/make me stronger and less tired等
+
+    学习状态层面：feel more energetic every day/focus better on my studies/stay awake in class/have a clear mind when studying等
+
+    效果延伸：finish my homework more efficiently/get better grades in exams/handle school pressure more easily等'
+  knowledge_points:
+  - 命题作文
+  module: writing
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''

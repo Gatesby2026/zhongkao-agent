@@ -1,0 +1,694 @@
+![](figures/image1.png)![](figures/image2.png)海淀区九年级第二学期期中练习
+
+英 语
+
+2026.04
+
+学校 ________ 姓名 ________ 准考证号 ________
+
+考生须知：
+
+1. 本试卷共10页，共两部分，五道大题，38道小题，满分60分。考试时间90分钟。
+
+2. 在试卷和答题卡上准确填写学校名称、姓名和准考证号。
+
+3. 试题答案一律填涂或书写在答题卡上，在试卷上作答无效。
+
+4. 在答题卡上，选择题用2B铅笔作答，其他试题用黑色字迹签字笔作答。
+
+5. 考试结束，将本试卷、答题卡和草稿纸一并交回。
+
+第一部分
+
+本部分共33题，共40分。在每题列出的四个选项中，选出最符合题目要求的一项。
+
+一、单项填空（每题0.5分，共6分）
+
+从下面各题所给的A、B、C、D四个选项中，选择可以填入空白处的最佳选项。
+
+1. Li Bai was a great poet in Chinese history. ________ poems are full of imagination.
+
+A. He B. His C. Him D. Himself
+
+【答案】B
+
+【解析】
+
+【详解】句意：李白是中国历史上一位伟大的诗人。他的诗充满了想象力。
+
+He他，主格；His他的，形容词性物主代词；Him他，宾格；Himself他自己，反身代词。根据“ ________ poems are full of imagination.”可知，空格后是名词“poems”，此处需要形容词性物主代词作定语修饰名词，表示“他的诗”，应填His。
+
+2. We will listen to a lecture on science ________ the city library.
+
+A. in B. on C. with D. to
+
+【答案】A
+
+【解析】
+
+【详解】句意：我们将要在市图书馆里听一个关于科学的讲座。
+
+in在……里面；on在……上面；with和……一起；to到。根据“the city library”可知，是在图书馆内部听讲座，表示在某个空间内部用介词in。应填in。
+
+3. — Mom, ________ I go to the bookstore with my classmates after school today?
+
+— Sure, you can. But come back before 8:00 P.M.
+
+A. must B. need C. can D. should
+
+【答案】C
+
+【解析】
+
+【详解】句意：——妈妈，今天放学后我可以和同学一起去书店吗？——当然，你可以。但是晚上8点前回来。
+
+must必须；need需要；can可以；should应该。根据答语“Sure, you can.”可知，问句是在征求许可，can用于疑问句中表示请求或许可，符合语境。故选C。
+
+4. If you keep practicing, you’ll get ________ at English than before.
+
+A. good B. better C. best D. the best
+
+【答案】B
+
+【解析】
+
+【详解】句意：如果你坚持练习，你的英语将会比以前更好。
+
+good好的；better更好的；best最好的；the best最好的。根据“you’ll get ________ at English than before.”可知，句中表示现在与以前的比较，应用形容词的比较级，应填better。
+
+5. —________ do you prefer for your summer vacation, an art camp or a family trip?
+
+—Both of them, if possible.
+
+A. When B. How C. Why D. Which
+
+【答案】D
+
+【解析】
+
+【详解】句意：——对于暑假，你更喜欢哪一个，艺术营还是家庭旅行？——如果可能的话，两个都喜欢。
+
+When什么时候；How如何；Why为什么；Which哪一个。根据题干“an art camp or a family trip”可知，两者中选一个，应用Which表示“哪一个”，应填Which。
+
+6. ________ social media is fun, kids should not spend too much time on it.
+
+A. Until B. If C. Although D. Because
+
+【答案】C
+
+【解析】
+
+【详解】句意：虽然社交媒体很有趣，但孩子们不应该在上面花太多时间。
+
+Until直到；If如果；Although尽管；Because因为。根据前句“social media is fun”承认社交媒体有趣，后句“should not spend too much time”提出不应花费太多时间的建议，可知前后构成让步转折关系，Although符合语境。
+
+7. It ________ tomorrow, so I am afraid we have to cancel the picnic.
+
+A. rains B. rained C. was raining D. is going to rain
+
+【答案】D
+
+【解析】
+
+【详解】句意：明天将要下雨，所以我恐怕我们不得不取消野餐。
+
+rains为一般现在时；rained为一般过去时；was raining为过去进行时；is going to rain为一般将来时。根据时间标志词“tomorrow”可知，句子描述的是将来要发生的天气情况，需用将来时态。is going to rain可表示根据预测将要发生的天气变化，符合语境。        
+
+8. Every spring, our school ________ a tree-planting event in the park.
+
+A. holds B. held C. is holding D. has held
+
+【答案】A
+
+【解析】
+
+【详解】句意：每年春天，我们学校都会在公园举办植树活动。
+
+根据“Every spring”可知，句子描述的是每年春天都会发生的常规活动，应该使用一般现在时，主语“our school”是第三人称单数，谓语动词用第三人称单数形式holds。应填holds。
+
+9. Listen! Someone ________ the piano in the hallway.
+
+A. play B. will play C. is playing D. was playing
+
+【答案】C
+
+【解析】
+
+【详解】句意：听！有人正在走廊里弹钢琴。
+
+根据“Listen!”可知，动作此时此刻正在发生，应用现在进行时；主语Someone是不定代词，视作单数，be动词用is。应填is playing。
+
+10. Peter is my best friend. I ________ him for 3 years.
+
+A. know B. knew C. will know D. have known
+
+【答案】D
+
+【解析】
+
+【详解】句意：彼得是我最好的朋友。我认识他已经三年了。
+
+根据时间状语“for 3 years”可知，动作从过去持续到现在，应用现在完成时have/has done结构。应选have known。
+
+11. All the parents ________ to visit our school on School Day next week.
+
+A. invite B. will be invited C. have invited D. were invited
+
+【答案】B
+
+【解析】
+
+【详解】句意：下周校园日，所有家长都将被邀请来参观我们学校。
+
+根据时间状语“next week”可知，句子时态为一般将来时；主语“All the parents”与动词“invite”之间是被动关系，表示“被邀请”。一般将来时的被动语态结构为“will be+过去分词”。
+
+12. At the science fair, the astronauts told us ________ in the spaceship.
+
+A. what their life was like B. what their life is like
+
+C. what was their life like D. what is their life like
+
+【答案】A
+
+【解析】
+
+【详解】句意：在科学博览会上，宇航员告诉我们在宇宙飞船里的生活是什么样的。
+
+宾语从句需用陈述语序，即“引导词+主语+谓语”；主句谓语动词“told”为过去式，根据时态一致原则，从句使用过去时态。
+
+二、完形填空（每题1分，共8分）
+
+阅读下面的短文，掌握其大意，然后从短文后各题所给的A、B、C、D四个选项中，选择最佳选项。
+
+![](figures/image3.png)
+
+I begged Mom not to drop me at Grandpa’s. Every time I visited, I felt <u>____13____</u> and uneasy. It seemed there was a distance between grandpa and me. Mom explained that it was because of Grandma’s passing away, but I just felt he didn’t love me.
+
+Seeing him lost in TV, I started on homework after walking in. Soon, I finished. Wondering what to do next, I suddenly heard Grandpa’s voice, “Want to watch TV?” Unexpectedly, I sensed a touch of <u>____14____</u>.
+
+“O-OK.” I answered. While he changed channels, I moved a bit to sit closer to him. Then, my heel hit something hard. I pulled it out — a wooden box. Grandpa gently wiped off the dust on it and <u>____15____</u> opened it. “This pretty chess set is a gift from your Grandma,” he said with something in his throat. “She taught me to play and we played for 37 years until, until…” He seemed to try very hard to control the <u>____16____</u> welling up from his heart.
+
+“Want to learn?” he asked, much calmer.
+
+“Sure.” I agreed immediately.
+
+He explained the rules very patiently. But when we played, he didn’t go easy on me. He won in nine moves — then again, and again!
+
+“This merciless (心狠的) old guy!” I thought to myself. “Want me to give in? No way!” I started watching carefully and <u>____17____</u> his traps (陷阱) one after another. Grandpa’s eyebrows lifted and it took him long to think.
+
+At the seventh game, I set one trap. Though Grandpa paused, he still fell into it. My Knight took his Queen.
+
+Grandpa <u>____18____</u>. Then, he laughed — deep and warm. “You little fox! That was really clever!”
+
+I froze, too. I’d never seen him so happy and we’d never been so <u>____19____</u>.
+
+We kept playing until Mom came back. Before I left, I turned, and gave him a hug, “Thanks for the chess. I love you, grandpa.”
+
+He looked up, eyes wet, and smiled — a real, soft, happy smile. It was then that I knew how to <u>____20____</u> him, this lovely, lonely old man next time.
+
+13. A. excited B. relaxed C. unfair D. unwelcome
+
+14. A. strength B. pride C. warmth D. humor
+
+15. A. carefully B. quickly C. curiously D. secretly
+
+16. A. sadness B. happiness C. coldness D. kindness
+
+17. A. placed B. avoided C. corrected D. followed
+
+18. A. cried B. feared C. wondered D. froze
+
+19. A. busy B. brave C. close D. confident
+
+20. A. move B. protect C. reach D. surprise
+
+【答案】13. D    14. C    15. A    16. A    17. B    18. D    19. C    20. C
+
+【解析】
+
+【导语】本文主要介绍了“我”一开始觉得和爷爷有距离、不受欢迎，后来通过一起下棋，逐渐理解并亲近了爷爷，学会了如何走进他的内心。 
+
+【13题详解】
+
+句意：每次去，我都感到不受欢迎，心里很不安。 
+
+后文“there was a distance between grandpa and me”提到我和爷爷之间好像隔着一层距离以及“I just felt he didn’t love me”我只觉得他不爱我，说明“我”去爷爷家时感到“不受欢迎”，和uneasy并列。unwelcome“不受欢迎”符合。
+
+【14题详解】
+
+句意：意外的是，我感受到了一丝温暖。 
+
+前文“我”一直觉得爷爷冷漠，这次爷爷主动邀我看电视，让我感受到了一丝“温暖”。warmth“温暖”符合。
+
+【15题详解】
+
+句意：爷爷轻轻擦掉上面的灰尘，小心翼翼地打开了它。 
+
+盒子里是奶奶留下的象棋，对爷爷来说很珍贵，所以他擦去灰尘后“carefully”小心翼翼地打开。
+
+【16题详解】
+
+句意：他似乎在努力克制涌上心头的悲伤。 
+
+爷爷提到和奶奶的往事，情绪激动，所以在克制涌上心头的悲伤“sadness”。
+
+【17题详解】
+
+句意：我开始认真观察，躲过他一个又一个陷阱。 
+
+前文说爷爷赢了我很多次，我不想认输，所以开始观察并“avoided”避开他的陷阱。
+
+【18题详解】
+
+句意：爷爷愣住了。 
+
+爷爷一直赢，这次被我吃掉了后，及后文“I froze, too.”可知，此处用“froze”表示他愣住了。
+
+【19题详解】
+
+句意：我从没见过他这么开心，我们之间也从没这么亲近过。 
+
+前文说“我和爷爷之间有距离”，现在一起下棋、互动，关系变得“close”亲近了。
+
+【20题详解】
+
+句意：就在那一刻，我知道了下次该如何靠近他，这个可爱又孤独的老人。 
+
+通过这次相处，“我”学会了如何走进爷爷的内心，如何“reach”靠近他。
+
+三、阅读理解（每题2分，共26分）
+
+（一）
+
+A
+
+下面的饼状图展示了某校学生网络搜索常见主题的调查结果。根据以下三名同学的搜索内容，判断其所属主题类别，并将该主题对应的选项（A-D）填在相应位置上。
+
+Most Common Topic Search
+
+![](figures/image4.png)
+
+| ![](figures/image5.png) <u>____21____</u> | ![](figures/image6.png)I feel stressed and lonely after moving to a new school. I miss my old friends. I need someone patient to talk to.  ![](figures/image7.png) |
+|---|---|
+| ![](figures/image8.png) <u>____22____</u> | ![](figures/image6.png)I want to make a heartfelt birthday video for my mom. Which tool can I use and how can I make it?  ![](figures/image7.png) |
+| ![](figures/image9.png) <u>____23____</u> | ![](figures/image6.png)I’m working on a project-based learning activity about math and need some ideas for the activity design.  ![](figures/image7.png) |
+
+【答案】21. D    22. B    
+
+23. A
+
+【解析】
+
+【导语】本文是一篇新媒体语篇，讲述了不同学生在学习、情感、技术等方面的不同需求，说明学生最需要心理倾诉和学业帮助。
+
+【21题详解】
+
+根据Mary“转到新学校后感到压力大、孤独。想念老朋友。需要一个有耐心的倾诉对象。”可知，Mary在新学校感到孤独和压力，需要有人倾听她的情感困扰，这属于情感支持，对应主题D“Emotional Support”。
+
+【22题详解】
+
+根据Tony“想为妈妈做一个用心的生日视频。可以用什么工具？怎么做？”可知，Tony希望学习制作视频的工具和方法，以制作生日视频送给妈妈。这属于技术支持，对应主题B“Technology Aid”。
+
+【23题详解】
+
+根据Peter“我正在做一个关于数学的项目式学习活动，需要一些活动设计的点子。”可知，Peter在完成数学项目式学习任务，需要活动设计的创意或建议。这属于学科学习支持，对应主题A“Subject Learning”。
+
+（二）阅读下列短文，根据短文内容，从短文后各题所给的A、B、C、D四个选项中，选择最佳选项。
+
+B
+
+![](figures/image10.png)
+
+Matthew followed his dad and the bellman Mr. Colby up the narrow, shaky stairs of the old meetinghouse. When they reached the belfry (钟楼), 80 feet above the ground, the town below looked like a tiny toy village. Behind them hung the huge, 1,500-pound bell.
+
+The bell had worked for the town for almost 250 years. Matthew was there that day to take photos of the bell for his history fair project. When he touched one of the thick wooden beams holding the bell, his finger sank into soft, rotten wood. “Maybe it was just a small, harmless spot,” he thought to himself. So he didn’t say anything.
+
+Then it was time for Mr. Colby to ring the bell, so he went downstairs to pull the rope. As the huge bell swung back and forth, the rotten beam moved with it. At that moment, Matthew found that the wood around a bolt (螺栓) had broken and fallen apart. His heart raced: What if other beams were rotting too? What if one broke and the heavy bell fell down?
+
+He looked at dad, who was still admiring the view from above. “Dad, look!” he shouted, pointing at the broken beam. When dad turned around, his smile disappeared when he saw it. Matthew didn’t waste a second. He hurried down the stairs to stop Mr. Colby.
+
+Mr. Colby went up again and checked the beams with his screwdriver (螺丝刀). He shook his head sadly. Years of wind and rain had eaten away at the wood. The whole support structure needed to be replaced, and the bell shouldn’t be rung again until it was fixed.
+
+Days later, Matthew finished his project using the photos he had already taken. And the belfry was fixed just in time for the 250th anniversary of the town. He was glad he’d spoken up instead of staying quiet.
+
+At the celebration, Mr. Colby spoke in front of everyone. “If it weren’t for Matthew’s sharp eye and quick thinking, the damage could have been much worse.” Matthew felt proud but a little shy. Then Mr. Colby handed him the rope.
+
+Matthew rang the bell for the town’s 250th birthday.
+
+24. What did Matthew find when Mr. Colby rang the bell?
+
+A. The rope broke in half. B. One of the beams moved.
+
+C. The whole belfry shook. D. The bell fell to the ground.
+
+25. What was Matthew’s reaction (反应) after he found the problem?
+
+A. He felt nervous at first, then became calm and left.
+
+B. He felt scared at first, then became nervous and hid.
+
+C. He felt unsure at first, then became worried and took action.
+
+D. He felt worried at first, then became brave and rang the bell.
+
+26. What can we learn from Matthew’s experience?
+
+A. Hard work leads to good results. B. Good projects need creative ideas.
+
+C. Work together to make tasks easier. D. Speak up before small problems grow.
+
+【答案】24. B    25. C    26. D
+
+【解析】
+
+【导语】本文主要介绍了Matthew在钟楼发现支撑大钟的横梁有腐烂迹象，起初以为只是小问题未声张；在大钟被敲响、横梁松动加剧后，他果断阻止并上报，及时避免了事故，最终因他的敏锐与果断受到表彰。
+
+【24题详解】
+
+原文第三段“As the huge bell swung back and forth, the rotten beam…had broken and fallen apart”可知，敲钟时Matthew发现腐烂的横梁跟着钟移动了，对应B项“其中一根木梁晃动了”。
+
+【25题详解】
+
+Matthew一开始摸到腐烂木头时，心里安慰自己只是一小块无害的地方，此时他不确定问题的严重性；发现螺栓周边木材碎裂后，他开始担心横梁断裂钟坠落，之后立刻告诉父亲、下楼阻止Colby，采取了行动。符合描述的是C项“他一开始不确定，然后担心并采取了行动”。
+
+【26题详解】
+
+故事中Matthew一开始没有说木材腐烂的小问题，发现问题扩大后及时说出，避免了更严重的事故，原文也点明“He was glad he’d spoken up instead of staying quiet”，可知主旨对应D项“要在小问题变大之前及时说出来”。
+
+C
+
+In the deep dark waters of the Arctic and North Atlantic, Greenland sharks, which can live for centuries, have been found to have a few tricks for long-term survival.
+
+Recent studies suggest that some organs (器官) of Greenland sharks may not be easily harmed by aging, while others seem able to handle tissue damage (组织损伤) that builds up over time. The findings explain how these sharks live longer than any other vertebrate on Earth. Swiss biologist Lily Fogg says that the findings may one day help treat aging in human organs, calling it her “biggest dream goal”.
+
+People used to believe that the sharks either had seriously damaged eyesight or were completely blind. However, Fogg and her team studied eye tissue from 10 Greenland sharks, some of which were as old as 150 years, and published their findings in Nature Communications. Surprisingly, the sharks had all the basic tools needed to see in the dim light of the deep sea. Also, their eye tissue did not show the usual wear and tear of aging. Fogg also explains that this may be because their eyes have more active DNA repair tools. These tools can repair damage that would otherwise lead to cell death and tissue breakdown.
+
+However, the anti-aging (抗衰老) method in the eyes may not work in all organs of Greenland sharks. Italian researcher Cellerino examined the hearts of 6 Greenland sharks and found that they were full of hard scars formed with age. In humans, such scar tissue suggests heart disease, making the heart stiff (僵硬的) and less able to pump (泵送) blood. The sharks’ hearts also showed cell damage, yet Cellerino notes they still functioned — able to send blood despite damage that would fail other animals’ hearts. The reason is unclear, but sharks’ tissue may produce protective body chemicals to handle age-related heart damages.
+
+Ecologist Catherine Macdonald isn’t surprised by these findings. She notes, “Any animal that lives such a long life must have the ability to repair and maintain itself.” Still, Macdonald doesn’t see direct applications for human health in the near future. And she stresses, “The new findings certainly do not mean people should rush to follow anti-aging trends using shark products.”
+
+27. What is Fogg’s “biggest dream goal”?
+
+A. To discover how Greenland sharks survive.
+
+B. To find out why tissue damage builds up over time.
+
+C. To study the ways Greenland sharks protect their eyes.
+
+D. To use the findings to fight against aging of human organs.
+
+28. What can we learn about Greenland sharks?
+
+A. They are highly inactive in DNA repair.
+
+B. They have poor eyesight or totally blind.
+
+C. Their hearts still work even with damage.
+
+D. Their eye tissue shows typical aging signs.
+
+29. What is the passage mainly about?
+
+A. Research findings on Greenland sharks’ secrets to long life.
+
+B. Applications of shark research to treat aging human organs.
+
+C. Biological advantages of Greenland sharks over other animals.
+
+D. Scientific methods for DNA repair in Greenland sharks’ organs.
+
+【答案】27. D    28. C    29. A
+
+【解析】
+
+【导语】本文是一篇说明文，主要讲述了格陵兰鲨长寿的生物学秘密，介绍了其器官抗衰老、组织损伤修复的研究发现，以及这些发现对人类抗衰老研究的潜在影响与相关讨论。  
+
+【27题详解】
+
+第二段中提到“Swiss biologist Lily Fogg says that the findings may one day help treat aging in human organs, calling it her ‘biggest dream goal’. ”这直接说明她的“最大梦想目标”是利用这些发现来对抗人类器官的衰老。 
+
+【28题详解】
+
+第四段中提到“the sharks’ hearts also showed cell damage, yet Cellerino notes they still functioned — able to send blood despite damage that would fail other animals’ hearts.”这直接说明格陵兰鲨的心脏即使受损，仍然可以正常工作。 
+
+【29题详解】
+
+全文第一段开篇点明“Greenland sharks, which can live for centuries, have been found to have a few tricks for long-term survival”，后文围绕格陵兰鲨长寿的器官抗衰老、DNA修复、心脏损伤耐受等研究发现展开，因此本文主要是关于格陵兰鲨长寿秘密的研究成果。  
+
+D
+
+“Just be yourself” is among the most common pieces of advice we hear. We often think that what feels easy and comfortable must be our authentic (真实的) selves. When we try something new, we may feel like we are not being our true selves. For example, you stay quiet in discussions because you’ve accepted that you’re “not the forward-thinking type”. In this case, the so-called authenticity is actually the unchanging belief in your default patterns (默认模式), even if those patterns are keeping you stuck.
+
+Then, what does true authenticity mean? True authenticity is not just about staying stuck in your usual patterns, but about acting in line with what you care about most. You don’t lose yourself when you practice new ways of thinking and behaving. Instead, you become more <u>attuned to</u> what your goals require. And according to the latest Personality Science, it is believed that we can change our features purposefully to better match a life we value. Changing personality features actually means stepping out of your comfort zone (区域) and pushing you to grow beyond your limits, like bravely voicing your ideas in discussions. When you start to do so, you may feel untrue and uncomfortable, thinking that “This just isn’t me” or “I don’t want to be someone I’m not”. However, such discomfort doesn’t mean that you’re inauthentic, but it is a natural feeling when you step outside of your comfort zone.
+
+So, is it possible to stay authentic while actively trying to change? Of course. At first sight, accepting your true self and making a change may appear to be opposites. But they are not. Accepting yourself means getting clear about how you typically think, feel, and behave, while also understanding why those patterns may have developed. Change, on the other hand, is not about turning against yourself. Instead, it’s about reflecting (反思) on whether your present habits and patterns fit the life you truly want to live. Your story could be like this: It makes sense I’m guarded around others because I’ve been hurt before, but that could be another story: Even though being guarded has protected me, it is also keeping me from developing the close relationships I want, so I have to be more active in socializing.
+
+Remember: to be authentic is not to stay frozen in your old patterns. It’s to grow into the version of yourself that matters most. Be brave to push beyond your limits!
+
+30. What does the underlined phrase “attuned to” in Paragraph 2 most probably mean?
+
+A. Matched with. B. Dependent on. C. Interested in. D. Separate from.
+
+31. According to the writer, which behavior best shows “true authenticity”?
+
+A. Play basketball with support from parents.
+
+B. Refuse to lead a group for fear of mistakes.
+
+C. Stay quiet around strangers due to shyness.
+
+D. Share good ideas even when feeling nervous.
+
+32. Which idea would the writer most probably agree with?
+
+A. Natural changes follow self-understanding.
+
+B. Growth comes from breaking through limits.
+
+C. Reflection on oneself leads to self-acceptance.
+
+D. New ways of thinking matters more than behaving.
+
+33. What is the writer’s main purpose in writing this passage?
+
+A. To list views on leaving the comfort zone.
+
+B. To explain the importance of true authenticity.
+
+C. To encourage positive changes out of old patterns.
+
+D. To share personal experiences of self-improvement.
+
+【答案】30. A    31. D    32. B    33. C
+
+【解析】
+
+【导语】本文解读了“真实地做自己”的含义，指出真正的真实并非固守旧习惯，而是突破舒适区、做出积极改变，成长为自己想成为的人。 
+
+【30题详解】
+
+第二段提到“You don’t lose yourself when you practice new ways of thinking and behaving.”你尝试新的思维和行为方式时，并没有失去自我，中间“Instead”转折，后文要表达的是“你的行为会更契合目标的要求”，因此“attuned to”意为“与……匹配/贴合”，对应A项。
+
+【31题详解】
+
+文中第二段“True authenticity is not just about staying stuck in your usual patterns, ... Changing personality features actually means stepping out of your comfort zone and pushing you to grow beyond your limits, like bravely voicing your ideas in discussions. ”明确指出真正的真实是突破舒适区，为了在乎的事做出改变，比如在讨论中勇敢说出想法。D项“即使紧张也分享好想法”符合定义。
+
+【32题详解】
+
+文章反复强调“走出舒适区、突破极限、做出改变”的重要性，最后一段“Remember: to be authentic is not to stay frozen in your old patterns ... Be brave to push beyond your limits!”也号召勇敢地突破极限吧！B项“成长来自突破极限”直接对应这一核心观点。
+
+【33题详解】
+
+文章通过重新定义“真实自我”，打破“真实就是固守旧习惯”的误区，最终目的是鼓励读者突破舒适区、做出积极改变，成长为更好的自己。C项“鼓励突破旧模式的积极改变”准确概括了这一目的。
+
+第二部分
+
+本部分共5题，共20分。根据题目要求，完成相应任务。
+
+四、阅读表达（第1-3题每题2分，第4题4分，共10分）
+
+阅读短文，根据短文内容回答问题。
+
+![](figures/image11.png)
+
+Imagine you’re focusing on the screen, controller in hand. Your mom walks in. What might she say? But wait — what if you’re not sitting? You’re jumping, ducking, and punching (打拳) the air! You are not gaming — you’re actually exergaming!
+
+Traditional exercise like weightlifting or running is great for building strength, but it doesn’t attract everyone. Exergaming feels more like playing than exercising. That desire to play might help people take up physical activities without the pressure or boredom that sometimes comes with heading to the gym.
+
+So, what exactly is exergaming? It refers to video games that require physical movements. Exergames use motion-sensing (运动传感) technology, cameras, or specialized equipment to translate your real-world body movements into in-game actions. Exergaming can take place anywhere, such as in the gym, at school or even at home.
+
+According to the research from the University of Georgia, people who don’t want to hit the gym benefit from exergaming the most. The study shows that exergamers feel high levels of enjoyment and a sense of control over their exercise. “When you can choose what game to play and how hard to push yourself, you’re more likely to exercise on your own,” says Sami Yli-Piipari, the co-researcher of the study. “You feel like you are doing it for yourself, not because someone tells you to.”
+
+Another study followed 55 people who exercised less than 150 minutes a week. They were asked to have either exergames or traditional gym workouts. The results showed that the gym group worked harder. “That makes sense because you probably will push yourself harder if somebody is looking over your shoulder,” says Yli-Piipari. But the exergamers had a better time. The good feeling and a sense of ownership over their physical exercise make exergamers more likely to stick to it. And possibly, they will be more open to other physical activities in the future.
+
+“Sometimes it’s hard for the inactive people to take the first step,” according to Yli-Piipari, “Exergaming might be a chance for them.”
+
+34. Where can exergaming take place?
+
+______________________________________
+
+35. Who benefits from exergaming the most?
+
+______________________________________
+
+36. What makes exergamers more likely to stick to exergaming?
+
+______________________________________
+
+37. Which do you prefer, exergaming or traditional exercise? Why? (Please give two reasons.)
+
+______________________________________
+
+【答案】34. Exergaming can take place anywhere, such as in the gym, at school or even at home.    
+
+35. People who don’t want to hit the gym benefit from exergaming the most.    
+
+36. The good feeling and a sense of ownership over their physical exercise make exergamers more likely to stick to it.    
+
+37. I prefer exergaming. First, it feels more like playing than exercising, so it’s less boring than traditional exercise. Second, I can do it at home easily without feeling pressured, which makes me more likely to keep exercising.
+
+【解析】
+
+【导语】本文介绍了体感游戏的定义、特点及相关研究，指出它作为一种新型运动方式，能让不爱去健身房的人以更轻松有趣的方式进行锻炼，更易长期坚持。
+
+【34题详解】
+
+根据第三段最后一句“Exergaming can take place anywhere, such as in the gym, at school or even at home.”，直接说明了体感游戏的进行地点，提取原句信息即可作答。
+
+【35题详解】
+
+根据第四段第一句“According to the research from the University of Georgia, people who don’t want to hit the gym benefit from exergaming the most.”，可直接找到最受益的人群。
+
+【36题详解】
+
+根据第五段倒数第二句“The good feeling and a sense of ownership over their physical exercise make exergamers more likely to stick to it.”，直接提取原句中使人们坚持体感游戏的原因。
+
+【37题详解】
+
+本题是开放性试题，答案不唯一，但需先表明偏好，再结合文中观点给出两个理由。
+
+五、文段表达（10分）
+
+从下面两个题目中任选一题，根据所给的中文和英文提示，完成一篇不少于50词的英语文段写作。文中已给出的内容不计入总词数。所给提示词语仅供选用。请不要写出真实校名、姓名和地名。
+
+38. 假设你是李华。你校英语公众号正发起以“AI助力学习”为主题的讨论。请你用英文留言，谈谈你在学习中如何合理使用人工智能的，并就人工智能的使用发表你的观点。
+
+提示词语：convenient, search, independent, develop, self-control
+
+提示信息：• How do you use AI wisely in your study?
+
+• Express your views on the use of AI?
+
+Now AI is widely used in our study. ________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+【答案】
+
+例文
+
+Now AI is widely used in our study. I often use AI to search for useful information and solve difficult problems after class. It makes our study more convenient and saves lots of time.
+
+However, we should use AI wisely. We can’t depend on it too much or copy answers directly. We need to think independently and develop our own learning skills.
+
+In my opinion, self-control is important. AI is a good helper, but real progress comes from our hard work. We should make good use of it to improve ourselves.
+
+【解析】
+
+【详解】写作步骤
+
+[第一步：审题立意]
+
+确定文体：议论文，用一般现在时为主
+
+明确要点：如何合理使用人工智能（AI）助力学习；对人工智能使用的观点
+
+确定人称：第一人称（I/my）
+
+注意事项：使用提示词语，围绕主题展开讨论
+
+[第二步：构思布局]
+
+三段式结构：
+
+开头段：引入话题，说明AI在学习中的广泛应用
+
+主体段：分别阐述如何合理使用AI以及发表对AI使用的观点
+
+结尾段：总结观点，强调自我控制的重要性
+
+[第三步：要点展开]
+
+要点一：如何合理使用人工智能
+
+使用方式：I often use AI to search for useful information and solve difficult problems after class./I frequently utilize AI to look up relevant materials and tackle challenging questions when doing my homework.
+
+作用效果：It makes our study more convenient and saves lots of time./It brings great convenience to our study and enables us to save a large amount of time.
+
+要点二：对人工智能使用的观点
+
+依赖问题：We can’t depend on it too much or copy answers directly./We shouldn’t rely excessively on it or simply copy the answers without thinking.
+
+独立思考与技能发展：We need to think independently and develop our own learning skills./It is necessary for us to think on our own and cultivate our unique learning abilities.
+
+自我控制的重要性：In my opinion, self-control is important. AI is a good helper, but real progress comes from our hard work. We should make good use of it to improve ourselves./From my perspective, self-discipline is of great significance. Although AI serves as a helpful assistant, genuine progress stems from our diligent efforts. We ought to make the most of it to enhance ourselves.
+
+39. 假设你是李华。毕业将至，你校英语社团正在举办毕业季校园照片征集活动，定格初中美好时光。请你选择一张你最想分享的照片，用英语描述照片里的画面，并说明你选择这张照片的原因。
+
+提示词语：moment, enjoy, growth, proud, unforgettable
+
+提示信息：• Describe the picture you want to share.
+
+• Why do you choose it?
+
+Among all my photos, I’d like to share one that means the most to me. ____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+【答案】
+
+例文
+
+Among all my photos, I’d like to share one that means the most to me. It was taken on our sports meeting. In the picture, my classmates and I are smiling together after we finished a relay race. We looked tired but full of joy.
+
+I choose this photo because it records a warm and special moment. I truly enjoy staying with my kind classmates. It shows my growth in junior high school. I feel proud of our teamwork and friendship. This sweet memory will be unforgettable in my whole life.
+
+【解析】
+
+【详解】写作步骤
+
+[第一步：审题立意]
+
+确定文体：记叙文，结合一定议论抒情，用一般过去时和一般现在时
+
+明确要点：描述照片画面（时间、人物、事件、人物状态）、说明选择照片的原因（记录特殊时刻、享受相处、体现成长、为团队合作和友谊骄傲、记忆难忘）
+
+确定人称：第一人称（I/my）
+
+注意事项：使用提示词语“moment, enjoy, growth, proud, unforgettable”
+
+[第二步：构思布局]
+
+三段式结构：
+
+开头段：引出要分享的照片
+
+主体段：详细描述照片里的画面，并阐述选择这张照片的原因
+
+结尾段：总结强调这张照片的意义
+
+[第三步：要点展开]
+
+要点一：描述照片画面
+
+时间地点事件：It was taken on our sports meeting. In the picture, my classmates and I are smiling together after we finished a relay race./The photo was captured during our school sports meet. In it, my classmates and I are all beaming with smiles right after completing a thrilling relay race.
+
+人物状态：We looked tired but full of joy./We appeared exhausted yet brimming with happiness.
+
+要点二：说明选择照片的原因
+
+记录特殊时刻：I choose this photo because it records a warm and special moment./I pick this photo as it has preserved a heartwarming and unique moment.
+
+享受相处：I truly enjoy staying with my kind classmates./I genuinely relish spending time with my amiable classmates.
+
+体现成长：It shows my growth in junior high school./It reflects my personal development throughout my junior high school years.
+
+为团队合作和友谊骄傲：I feel proud of our teamwork and friendship./I take great pride in our teamwork and the deep friendship we share.
+
+记忆难忘：This sweet memory will be unforgettable in my whole life./This precious memory will remain etched in my mind forever.

@@ -1,0 +1,683 @@
+![](figures/image1.png)![](figures/image2.png)北京市平谷区2026年初中学业水平考试统一练习（一）
+
+英 语 试 卷
+
+| 注意事项 | 1．本试卷共10页，包括两部分，共38题，满分60分，考试时间90分钟。 2．在答题卡上准确填写学校名称、班级和姓名。 3．试题答案一律填涂或书写在答题卡上，在试卷上作答无效。 4．在答题卡上，选择题用2B铅笔作答，其他试题用黑色字迹签字笔作答。 5．考试结束，将本试卷和答题卡一并交回。 |
+|---|---|
+
+
+第一部分
+
+本部分共33题，共40分。在每题列出的四个选项中，选出最符合题目要求的一项。
+
+一、单项填空。（每题0.5分，共6分）
+
+从下面各题所给的A、B、C、D四个选项中,选择可以填入空白处的最佳选项。
+
+1. My sister is a teacher. ________ works in a middle school.
+
+A. He B. She C. It D. They
+
+【答案】B
+
+【解析】
+
+【详解】句意：我的姐姐是一名老师。她在一所中学工作。
+
+He他；She她；It它；They他们。根据“My sister”可知，主语是女性单数，应用She指代“My sister”。
+
+2. I plan to climb Yaji Mountain with my friends ________ May 2nd this year.
+
+A. at B. in C. on D. to
+
+【答案】C
+
+【解析】
+
+【详解】句意：我计划在今年5月2日和我的朋友们一起去爬丫髻山。
+
+at通常用于表示具体的时间点，如几点几分；in用于表示在某个较长的时间段内，如年、月、季节等；on用于表示具体某一天或某一天的上午、下午、晚上等；to通常不用于表示时间，而是表示方向、目的等。根据“May 2nd this year”可知，此处指的是具体的某一天，应填on。
+
+3. I must go right now, ________ I will miss the bus.
+
+A. and B. but C. so D. or
+
+【答案】D
+
+【解析】
+
+【详解】句意：我必须马上走，否则我会错过公交车。
+
+and和、并且，表并列或顺承关系；but但是，表转折关系；so所以，表因果关系；or或者、否则，表选择或条件关系。根据“I must go right now”和“I will miss the bus”可知，前后句存在条件关系，即如果不马上走就会错过公交车，“or”符合语境，应填or。
+
+4. —Which do you like ________, swimming or running?
+
+—Running.
+
+A. well B. better C. best D. the best
+
+【答案】B
+
+【解析】
+
+【详解】句意：——游泳和跑步，你更喜欢哪一个？——跑步。
+
+考查比较级。由“swimming or running”可知，在两者之间选择，故用比较级。故选B。
+
+5. — Anne, ________ do you go to the library?
+
+— Once a week.
+
+A. how long B. how often C. how soon D. how much
+
+【答案】B
+
+【解析】
+
+【详解】句意：——安妮，你多久去一次图书馆？——一周一次。
+
+how long多长，询问时间段或长度；how often 多久一次，询问频率；how soon多久以后；how much 多少，询问数量或价格。答语“Once a week.”提示，此处是对频率进行提问。
+
+6. —Peter, ________ you finish the poster in ten minutes?
+
+—Yes, of course I can.
+
+A. can B. must C. need D. should
+
+【答案】A
+
+【解析】
+
+【详解】句意：——彼得，你十分钟内能完成海报吗？——是的，我当然可以。
+
+can能/可以；must必须；need需要；should应该。根据答句“Yes, of course I can”可知，问句询问“能否”完成，应填can。
+
+7. David ________ a picture when his dad got home yesterday evening.
+
+A. draws B. will draw C. is drawing D. was drawing
+
+【答案】D
+
+【解析】
+
+【详解】句意：昨天晚上大卫的爸爸到家时，他正在画画。
+
+根据时间状语“when his dad got home yesterday evening”可知，这里描述的是过去某个时刻正在发生的动作，所以用过去进行时，应填was drawing。
+
+8. —What did you do last Sunday?
+
+—I ________ to enjoy the peach flowers with my family.
+
+A. go B. goes C. went D. will go
+
+【答案】C
+
+【解析】
+
+【详解】句意：——上周日你做了什么？——我和家人一起去赏桃花了。
+
+根据问句中的时间状语“last Sunday”以及助动词“did”可知，此处询问的是过去发生的动作，答语应用一般过去时。go的过去式为不规则变化went。因此，went符合语法要求。
+
+9. My uncle ________ in Beijing since he graduated from university.
+
+A. lives B. lived C. will live D. has lived
+
+【答案】D
+
+【解析】
+
+【详解】句意：我叔叔自从大学毕业以来就一直住在北京。
+
+结合句中时间状语“since he graduated from university”，说明动作从过去持续到现在，用现在完成时，结构为have/has+过去分词，主语“My uncle”属于第三人称单数，用has；“live”（居住）的过去分词为lived 。
+
+10. —Where is your little sister?
+
+—Oh, she ________ with water in the bathroom.
+
+A. plays B. played C. is playing D. will play
+
+【答案】C
+
+【解析】
+
+【详解】句意：——你的妹妹在哪里？——哦，她正在浴室玩水。
+
+根据问句“Where is your little sister?”可知，询问的是妹妹现在的位置，答句应描述妹妹正在进行的动作，所以用现在进行时，应填is playing。
+
+11. In this factory, most of the work ________ by robots now.
+
+A. does B. did C. is done D. was done
+
+【答案】C
+
+【解析】
+
+【详解】句意：在这家工厂，现在大部分工作都被机器人完成。
+
+主语most of the work与动词do之间是被动关系，且由by robots可知应用被动语态，根据时间状语now可知时态为一般现在时，结构为“am/is/are + 过去分词”，work是不可数名词，be动词用is，应填is done。
+
+12. —Could you tell me ________ the school trip to Beijing Science and Technology Museum?
+
+—Next Wednesday.
+
+A. when we will have B. when will we have C. when we had D. when did we have
+
+【答案】A
+
+【解析】
+
+【详解】句意：——你能告诉我我们什么时候去北京科技馆进行学校旅行吗？——下周三。
+
+根据答句“Next Wednesday.”可知，问句是在询问将来的时间，且宾语从句要用陈述语序，所以应填when we will have。
+
+二、完形填空。（每题1分，共8分）
+
+阅读下面的短文，掌握其大意，然后从短文后各题所给的A、B、C、D四个选项中，选择最佳选项。
+
+Making Another Kid’s Day
+
+It was the day after New Year’s. The air smelled of joy and laughter. My mom took me to Chuck E. Cheese’s, my favorite place to play games.
+
+I was really lucky that day. Every game I touched seemed to pour out tickets like a waterfall — red, blue, and yellow ones growing in my hands. I kept putting them into my pocket, and I felt like a(n) <u>____13____</u>.
+
+Then I saw a claw machine in the corner. A little boy, maybe seven years old, was pulling the joystick with all his strength. His dad stood behind him, cheering softly. The boy’s face was full of <u>____14____</u>, as if that toy was all he cared about. He put in a token and moved the joystick carefully. The claw dropped, catching a small toy bear. Yes! But just as it lifted, the claw let go, and the bear fell back down. The boy’s smile <u>____15____</u>.
+
+“That’s okay,” his dad encouraged him gently. “Try again.”
+
+The boy put in another token. This time, the claw missed completely. His shoulders dropped. One more token, and the claw caught a toy, but halfway up, it stopped and the toy fell. To make things <u>____16____</u>, his tickets got stuck inside the machine.
+
+The boy’s eyes filled with tears. His father tried to help, but there was nothing he could do. The boy looked so disappointed, as if his whole day was broken.
+
+I stood there watching him. At that moment, I realized I could use my own <u>____17____</u> to help him and give him a Kid’s Day. I walked over and said, “Hey!” He looked up. I counted out twenty of my own red tickets.
+
+“These are for you,” I said. “They’re for the tickets you lost.”
+
+The boy’s eyes <u>____18____</u> in surprise.
+
+“Really?” he asked quietly.
+
+“Really,” I answered. “Everyone has hard times, but you’re so brave and you deserve to(应得的) have a good time.” He took the tickets <u>____19____</u>, and his face lit up with a big smile. He turned to his dad and shouted, “Dad! Look!”
+
+He ran to the prize counter, holding the tickets high. His dad smiled and said, “Thank you. You made his holiday.”
+
+I watched him pick out a small toy car. He waved at me, and I waved back.
+
+My mom said, “That was very kind.”
+
+I smiled. Making others happy gave me more joy than any prize. A small act of <u>____20____</u> can brighten anyone’s day.
+
+![](figures/image3.png)
+
+13. A. artist B. owner C. player D. champion
+
+14. A. worry B. surprise C. excitement D. competition
+
+15. A. showed B. spread C. remained D. disappeared
+
+16. A. cooler B. worse C. easier D. faster
+
+17. A. toys B. tickets C. snacks D. cards
+
+18. A. widened B. softened C. brightened D. moved
+
+19. A. quietly B. luckily C. happily D. nervously
+
+20. A. fitness B. kindness C. shyness D. carelessness
+
+【答案】13. D    14. C    15. D    16. B    17. B    18. A    19. C    20. B
+
+【解析】
+
+【导语】本文讲述了作者在Chuck E. Cheese游乐场，用自己赢来的游戏票帮助一个小男孩，让他重拾快乐的暖心故事。
+
+【13题详解】
+
+句意：我不停地把票塞进口袋里，感觉自己像个冠军。
+
+前文提到作者玩的每台游戏机都像瀑布一样吐票，手里的票越来越多，这种“一路赢到底”的状态，让他感觉像个胜利者。artist（艺术家）、owner（主人）、player（玩家）均不符合语境，champion（冠军）能体现他“大获全胜”的得意心情。
+
+【14题详解】
+
+句意：男孩的脸上写满了兴奋，仿佛那个玩具就是他的全部。
+
+小男孩正全神贯注地玩抓娃娃机，把所有力气都用来拉操纵杆，此时他的心情是激动、兴奋的。worry（担忧）、surprise（惊讶）、competition（竞争）均不符合他专注投入的状态，excitement（兴奋）契合他对玩具的渴望。
+
+【15题详解】
+
+句意：但就在爪子把玩具举起来的瞬间，它停住了，玩具掉了下来。男孩的笑容消失了。
+
+男孩的玩具掉下来，抓娃娃失败，他脸上的笑容自然就没了。showed（展示）、spread（展开）、remained（保持）均与语境相反，disappeared（消失）完美体现了笑容从有到无的变化。
+
+【16题详解】
+
+句意：更糟的是，他的游戏票也卡在了机器里。
+
+男孩已经抓不到娃娃，现在连票也卡住了，情况变得更差了。cooler（更酷）、easier（更容易）、faster（更快）均不符合“雪上加霜”的逻辑，worse（更糟）符合固定搭配 to make things worse，意为“更糟糕的是”。
+
+【17题详解】
+
+句意：那一刻，我意识到我可以用自己的票来帮他，给他一个“儿童欢乐日”。 
+
+前文提到作者赢了很多票，而男孩因为票卡住了很失落，所以作者想用自己的票帮助他。toys（玩具）、snacks（零食）、cards（卡片）均不是作者能立刻拿出、且能解决男孩困境的东西，tickets（票）是符合上下文的关键物品。
+
+【18题详解】
+
+句意：男孩惊讶地睁大了眼睛。
+
+当作者说要把票送给他时，男孩的反应是惊喜的，眼睛会不自觉地睁大。softened（变柔和）、brightened（发亮）、moved（感动）均与“in surprise”不匹配，widened（睁大）是惊讶时的典型动作。
+
+【19题详解】
+
+句意：他开心地接过票，脸上露出了灿烂的笑容。 
+
+男孩收到票，解决了问题，心情是开心的。quietly（安静地）、luckily（幸运地）、nervously（紧张地）均不符合他此时的心情，happily（开心地）完美体现了他的喜悦。
+
+【20题详解】
+
+句意：一个小小的善举，就能点亮任何人的一天。
+
+作者通过送票这个善意的行为，让男孩重拾快乐，也让自己感受到了更多的快乐。fitness（健康）、shyness（害羞）、carelessness（粗心）均与文章主旨无关，kindness（善意 / 善举）点明了全文的主题。
+
+三、阅读理解。（每题2分，共26分）
+
+（一）阅读下列体育活动介绍，请根据人物需求选择最适合的运动项目，并将运动项目对应的A、B、C、D选项填在相应的位置上。选项中有一项为多余选项。
+
+A
+
+| <u>____21____</u>![](figures/image4.png) I chose volleyball passing because I think volleyball is easy to practice on the playground and fun. I practice it for 30 minutes every day after school. | A![](figures/image5.png) 
+ B![](figures/image6.png) 
+ C![](figures/image7.png) 
+ D![](figures/image8.png) |
+|---|---|
+| <u>____22____</u>![](figures/image9.png) I chose long jump. Because it is easy to practice. I can do it at home, in the park, or anywhere. My best record is 2.6 meters. My PE teacher said I did a great job. |  |
+| <u>____23____</u>![](figures/image10.png) I chose playing badminton because it’s my favourite sport. I have trained for three years, and this consistent practice has not only improved my skills but also taught me discipline and resilience (自律和坚韧). |  |
+
+【答案】21. C    22. B    
+
+23. D
+
+【解析】
+
+【导语】本文是三位学生对自己所选体育项目的介绍，包括排球、跳远和羽毛球。
+
+【21题详解】
+
+Xiaoyu在第一段第1句说“I chose volleyball passing…”，直接表明她选择的是排球传球。
+
+【22题详解】
+
+Jin Hao在第二段第1句说“I chose long jump”，明确他选择跳远。
+
+【23题详解】
+
+Lisa在第三段第1句说“I chose playing badminton”，说明她选择打羽毛球。
+
+（二）阅读下列短文，根据短文内容，从短文后各题所给的A、B、C、D四个选项中,选择最佳选项。
+
+B
+
+I grew up in a small town called Palmerston, Ontario. My parents had a small store, and we lived a simple life. In high school, I dreamed of working in TV. But when I talked to a school advisor, she told me I could only be a nurse, a teacher, or a hairdresser. I was too shy to tell anyone about my real dream — except my parents. They always said, “You can do anything you want.”
+
+With their support, I applied for (申请) the radio and TV program at Ryerson University in Toronto. I was accepted and graduated as the best student. But finding a job was not easy. CBC and CTV both said NO to me because I had no experience.
+
+Then I heard that Global Television was just starting. I made a brave decision. I found the name of the president and decided to call him directly. My heart was beating fast, but I practiced what I would say. When he answered the phone, I politely asked for a visit to the studio. He was surprised but agreed.
+
+I chose 11 o’clock for the visit, hoping he might ask me to lunch. Sure enough, after the tour, he did. During the lunch, he asked me directly, “What do you want?” I answered, “All I want is a chance. If there is a job on camera, I want a chance to try. I just want you to know me.”
+
+Three months later, his secretary called. There was a chance to try out for a new game show called Wintario. I went, and everything went well. I got the job at once. That was the start of a 22-year career. I went on to host hundreds of shows, appeared in ads, movies and celebrations, and built a life I had only dreamed of as a teenager.
+
+Looking back, I learned that dreams don’t come true by waiting. You have to be brave, take risks, and take the first step — even when you are afraid. One phone call changed my life. You never know where your courage will lead you.
+
+24. How did the writer feel when she called the president of Global Television?
+
+A. Relaxed. B. Nervous. C. Excited. D. Bored.
+
+25. What happened to the writer after she made the phone call?
+
+A. She got an on-camera job at once. B. She was invited to host a show that day.
+
+C. She had a tour and lunch with the president. D. She was told to come back three months later.
+
+26. What can we learn from the writer’s experience?
+
+A. Don’t take any risks in life. B. Don’t give up your dreams easily.
+
+C. Don’t blindly follow others’ advice. D. Don’t make friends with strict people.
+
+【答案】24. B    25. C    26. B
+
+【解析】
+
+【导语】本文讲述了作者从小梦想从事电视行业，在父母的支持下进入大学学习广播电视专业。文章告诉我们，梦想需要勇气和行动才能实现。
+
+【24题详解】
+
+根据第三段“My heart was beating fast”表明她当时非常紧张。选项B“Nervous”意为“紧张的”，符合文意。
+
+【25题详解】
+
+根据第三段“When he answered the phone, I politely asked for a visit to the studio. He was surprised but agreed.” 第四段原文：“I chose 11 o’clock for the visit...Sure enough, after the tour, he did.” 因此她得到了参观工作室并与总裁共进午餐的机会。
+
+【26题详解】
+
+根据最后一段“You have to be brave, take risks, and take the first step — even when you are afraid.” 作者通过自己的经历告诉读者，梦想不会通过等待实现，需要勇气和行动。这启示我们不要轻易放弃梦想。
+
+C
+
+When you think of fast animals, cheetahs and falcons may come to mind. But do you know some of the fastest living things on Earth are very small cells? If cells had their own Olympics, who would win the speed game?
+
+Manu Prakash, a scientist at Stanford University, says the “competitors” won’t show up ready to compete. “We have to go search in puddles and ponds and in the deep ocean,” he says. His team collected information on the speed of different cells to compare them.
+
+So how do these tiny speeders move? Some fast cells jump or slide across water. Others move by waving long, thin parts that look like whips (鞭子), or swim with the help of tiny, hair-like parts. There are also speedy cells that do not move from one place to another but grow bigger or become smaller very quickly, and this makes them special “speed players” too.
+
+Take Spirostomum, for example. In Liberia, Prakash saw many white spots in a pond. They were not spread out randomly. He took a sample (样本) and found this single-celled creature. It can shrink (缩小) its body faster than any other eukaryote (真核生物) — a living thing whose cells have a nucleus. Why does it shrink so fast? Prakash says it’s part of how it communicates. “It actually talks to other cells … using sound underwater.”
+
+Another amazing cell is Pyrocystis. These algae (水藻) do not swim, but they make a huge journey. Prakash found them deep in the ocean near Hawai’i. They need sunlight to live, but how do they get it? The algae can <u>inflate</u> like a balloon to five times their size and then shrink back down. This allows them to travel about one kilometer up to the sunlit surface. Compared to their size, that is the longest journey on Earth.
+
+Prakash has found many super-fast cells in different places. These unusual living things help us learn more about the secret of life. "This planet is full of amazing things," he says. "When we study and compare them, we will find how wonderful life is."
+
+![](figures/image11.png)
+
+27. Where did Manu Prakash find the fast cells?
+
+A. In rivers and cities. B. In space and on other planets.
+
+C. In high mountains and forests. D. In puddles, ponds and the deep ocean.
+
+28. What does the word “<u>inflate</u>” in Paragraph 5 most likely mean?
+
+A. blow up B. take off C. calm down D. break down
+
+29. What can we learn about the “speed” of cells from the passage?
+
+A. It is measured by how fast a cell moves from one place to another.
+
+B. It can be understood in different ways, including changes in a cell’s size.
+
+C. It mainly depends on a cell’s ability to swim using whips or hair-like parts.
+
+D. It has been fully studied by scientists like Manu Prakash around the world.
+
+【答案】27. D    28. A    29. B
+
+【解析】
+
+【导语】 本文是说明文，介绍了科学家Manu Prakash的研究发现，地球上除猎豹、猎鹰外，部分微小细胞也拥有惊人的“速度”，展现了生命的奇妙多样性。
+
+【27题详解】
+
+第二段“We have to go search in puddles and ponds and in the deep ocean”，直接说明了Prakash寻找快速细胞的地点。
+
+【28题详解】
+
+第五段“The algae can inflate like a balloon to five times their size and then shrink back down”，句中“像气球一样变大”直接对应“inflate”的含义，与选项A（blow up 膨胀）意思一致。
+
+【29题详解】
+
+第三段“There are also speedy cells that do not move from one place to another but grow bigger or become smaller very quickly, and this makes them special 'speed players' too”，说明细胞的“速度”不仅指移动速度，也包括体型快速变化，与选项B表述一致。
+
+D
+
+Imagine you just finished a hard hike to the top of a mountain. The view of the city below is beautiful, and you want to take a photo. But it’s already quite dark, and you’re not sure you’ll get a good shot. Luckily, your phone has an AI night mode. It can take great photos even after sunset.
+
+Here’s something you may not know: that night mode may have been trained on computer-made nighttime images—scenes that were never actually photographed. This kind of data is called synthetic data.
+
+Why use synthetic data?
+
+AI researchers use up all the real data on the internet, so they turn to synthetic data. But this creates a problem. In science, making up data is a very bad thing. So how can computer-made data be good? Is it just a nice word for lying?
+
+As a researcher, I think it comes down to why you do it and how open you are about it. Synthetic data is usually not made to cheat. In fact, using it can be the right thing to do. For example, showing real people’s faces can violate privacy, but computer-made faces offer the same benefits without that risk.
+
+There are other reasons. Some things are so rare that there isn’t enough real data. Instead of letting this become a big problem, researchers create those situations with computers. Also, collecting real data can be costly or dangerous. Imagine collecting data for a self-driving car during a storm. It’s much easier and safer to create such data with computers.
+
+How is synthetic data made?
+
+Researchers create synthetic data in two main ways. One method uses physics-based models—for example, using the laws of light to show how a scene would look. The other method uses AI that learns from real data and then creates new, realistic text, images, and videos.
+
+Is synthetic data perfect?
+
+Synthetic data is not perfect. It is only as good as the model it comes from. Researchers have to be careful about biases—unfair patterns in the data. It is also important to know the difference between computer-made data and the real world. Synthetic data is great for training AI, but the final system should be tested with real data before it is used.
+
+AI systems learn by finding patterns, but they cannot tell what is real or true. The desire for truth belongs to people, not machines. So next time you use a cool AI feature, remember: synthetic data may have helped train it. But reality is still the final judge of what we create.
+
+![](figures/image12.png)
+
+30. Why does the writer begin the passage with the example of taking a photo on a dark mountain top?
+
+A. To explain how AI night mode works in detail.
+
+B. To show that hiking is a popular outdoor activity.
+
+C. To lead into the topic of synthetic data used in AI training.
+
+D. To prove that phone cameras are better than professional ones.
+
+31. What is synthetic data according to the passage?
+
+A. Information is stored in AI night modes. B. Data collected from real-life situations.
+
+C. Man-made data was used to train AI systems. D. Real photos taken by phones in dark places.
+
+32. How does the writer mainly support his opinion about synthetic data?
+
+A. By arguing real data is bad. B. By showing its uses and limits.
+
+C. By listing AI models using it. D. By comparing it with real data.
+
+33. Which of the following is the best title for the passage?
+
+A. Why AI Will Soon Replace Human Judgment
+
+B. The Privacy Problems of Using Real Face Data
+
+C. How AI Night Mode Helps You Take Photos in the Dark
+
+D. Synthetic Data Is Useful but Still Needs Real-World Checks
+
+【答案】30. C    31. C    32. B    33. D
+
+【解析】
+
+【导语】本文主要介绍了什么是“合成数据”，为什么要使用它，以及它目前存在的局限性，旨在让读者客观认识这一人工智能领域的关键训练技术。
+
+【30题详解】
+
+第一段描述了在黑暗山顶拍照的场景，第二段紧接着指出：“This kind of data is called synthetic data.”。作者利用生活中常见的手机AI夜间拍照功能作为切入点，是为了引出下文关于“合成数据”及其在AI训练中应用的话题。
+
+【31题详解】
+
+第二段对该术语进行了定义：“…computer-made nighttime images—scenes that were never actually photographed. This kind of data is called synthetic data.”。这明确说明合成数据是由计算机生成的、用于训练AI系统的非真实拍摄数据。
+
+【32题详解】
+
+文章在“Why use synthetic data?”部分介绍了其在隐私保护、稀有数据模拟和安全性方面的优势，在“Is synthetic data perfect?”部分则指出了其偏见和局限性。通过展示其用途和局限，作者全面地支持了自己对合成数据的观点。
+
+【33题详解】
+
+文章大部分篇幅在讨论合成数据的必要性，但第七段强调：“Synthetic data is not perfect…the final system should be tested with real data before it is used.”。选项D“合成数据很有用但仍需现实检验”精准且高度概括了文章既肯定价值又指出不足的中心思想。
+
+第二部分
+
+本部分共5题，共20分。根据题目要求，完成相应任务。
+
+四、阅读表达。（34-36题每题2分，37题4分，共10分）
+
+阅读短文，根据短文内容回答问题。
+
+Can Sleeping Longer on Weekends Help Teens Feel Less Anxious?
+
+For many teens, Saturday mornings are a time to sleep longer. After a busy week, the weekend offers a chance to catch up on sleep. A new study finds that sleeping a little longer on weekends may help reduce anxiety (焦虑)—but only if teens get less than two extra hours of sleep.
+
+Sleep is important for the brain and body, especially for teenagers. However, 75 percent of American teens do not get the recommended 8 to 10 hours of sleep each night. School and other activities make them wake up early, and their body clocks make it hard to fall asleep before 11 p.m.
+
+Some past studies suggested that too much weekend sleep might be linked to depression (抑郁). But no one had carefully studied how it relates to anxiety. So researcher Sojeong Kim decided to find out.
+
+Kim used data from nearly 1, 900 teens aged 12 to 15. She looked at their sleep patterns (模式) and their feelings of anxiety. She found that teens who slept in for less than two extra hours on weekends reported the lowest anxiety symptoms. Teens who did not sleep in, or who lost sleep on weekends, had higher anxiety. Those who slept more than two extra hours had the highest anxiety symptoms of all.
+
+Kim shared her findings at a meeting in 2025. She thinks that big changes between weekday and weekend sleep schedules may cause a problem called “social jet lag”. This happens when the body’s clock does not match the sleep cycle. It can make people feel tired and unfocused.
+
+Kim did not find a clear link between weekend sleep and depression. That may be because depression usually starts later in adolescence (青春期). Anxiety, however, often begins earlier.
+
+For now, Kim’s advice for teens is simple: getting a little extra sleep on weekends may help you feel less anxious, but too much may have the opposite effect.
+
+34. What is important for teenagers’ brain and body according to the passage?
+
+_____________________________________________
+
+35. What problem may be caused by big changes between weekday and weekend sleep schedules?
+
+_____________________________________________
+
+36. Why did Kim not find a clear link between weekend sleep and depression?
+
+_____________________________________________
+
+37. Which sleep habit do you prefer on weekends — not sleeping in, sleeping in for less than two extra hours, or sleeping in for more than two extra hours? Why? (Please give two reasons.)
+
+_____________________________________________
+
+【答案】34. Sleep.    
+
+35. Social jet lag.    
+
+36. Because depression usually starts later in adolescence.    
+
+37. Sleeping in for less than two extra hours. Reason 1: It helps reduce teens’ anxiety. Reason 2: It may cause less social jet lag and help people stay energetic and focused. (答案不唯一，合理作答即可)
+
+【解析】
+
+【导语】本文围绕青少年周末补觉与焦虑情绪的关系展开，介绍了一项最新研究发现：周末多睡不到2小时，能够帮助青少年减轻焦虑；但补觉超过 2 小时，反而会加重焦虑。
+
+【34题详解】
+
+第二段提到“Sleep is important for the brain and body, especially for teenagers.”直接提取原文信息。
+
+【35题详解】
+
+第五段提到“big changes between weekday and weekend sleep schedules may cause a problem called ‘social jet lag’.”直接提取原文信息即可。
+
+【36题详解】
+
+第六段提到“That may be because depression usually starts later in adolescence.”直接说明了：这或许是因为抑郁症通常在青春期后期才会出现。
+
+【37题详解】
+
+本题为开放性题目，答案不唯一，言之有理即可。
+
+五、文段表达。（共10分）
+
+38. 根据中文和英文提示，完成一篇不少于50词的英语文段写作。文中已给出内容不计入总词数。所给提示词语仅供选用。请不要写出你的校名和姓名。
+
+假设你是李华，你们班的英语课正在开展研究性学习,你选择研究同学们周末活动的情况，为此你对班里40名同学进行了问卷调查，下图是部分统计结果。请用英语写一篇短文，简要说明图表内容，并对班级同学参与周末活动提出建议。
+
+![](figures/image13.png)
+
+提示词语：spend, interesting, knowledge, instructive, meaningful, make friends with
+
+提示问题：• What can you learn from the results?
+
+• What advice would you give to your classmates about their weekends?
+
+I did a survey on my classmates’ weekends. 
+
+____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+【答案】  I did a survey on my classmates’ weekends.
+
+  According to the results, 25 out of 40 students usually read books on weekends. 9 students choose to visit their grandparents, while only 6 students go on a trip. From the survey, I find that most students prefer quiet activities like reading. Reading helps us get more knowledge, but it’s also important to have more colorful weekends. 
+
+  I hope my classmates can spend more time on interesting and meaningful activities. For example, we can take short trips to enjoy nature, or join outdoor activities to make friends with others. This way, our weekends will be both fun and instructive.
+
+【解析】
+
+【详解】写作步骤：
+
+[第一步：审题立意] 
+
+确认文体：调查报告，以一般现在时为主
+
+核心要点： 说明图表内容、对周末活动提出建议 
+
+明确人称：第一人称（I/my）
+
+注意事项：不得出现真实姓名、校名
+
+[第二步：构思布局] 
+
+三段式结构： 
+
+开头段：引出主题，开门见山
+
+主体段：介绍图表数据
+
+ 结尾段：总结建议，升华主题，表达对更丰富周末生活的期待
+
+[第三步：要点展开]
+
+要点一：说明图表内容
+
+数据描述：according to the survey/25 out of 40 students usually read books on weekends/9 students choose to visit their grandparents, while only 6 students go on a trip/Based on the results, 62.5% of the students usually read books on weekends/22.5% choose to visit their grandparents, and 15% go on a trip等
+
+要点二：提出周末活动建议
+
+建议方向：take short trips to enjoy nature/join outdoor activities/do some exercise/help our parents with housework等
+
+39. 根据中文和英文提示，完成一篇不少于50词的英语文段写作。文中已给出内容不计入总词数。所给提示词语仅供选用。请不要写出你的校名和姓名。
+
+在平谷有一条“仁义胡同”，以邻里礼让的典故而闻名。“让一尺，敬一丈”的故事在这里传承。假设你是李华，你校正在开展“文明谦让，和谐校园”活动，英语社团公众号打算做一期以“Good Manners”为主题的推送，为此在校内征集故事。请你给公众号留言，分享你的文明校园故事；并简要说明这些行为能带来哪些好处。
+
+提示词语：kindness, respect, get on well, be polite, spread
+
+提示问题：• What good manners do you have?
+
+• How can students benefit from them?
+
+I’m Li Hua from Class 1, Grade 9. 
+
+________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+【答案】
+
+例文：
+
+I’m Li Hua from Class 1, Grade 9. I believe good manners are the key to a happy school life. 
+
+I always try to show kindness and respect to everyone. For example, I am always polite to my teachers and often help my classmates. These behaviors help us get on well with each other. As a result, we can build a harmonious campus. 
+
+Let’s work together to spread kindness to every corner of our school!
+
+【解析】
+
+【详解】[第一步：审题立意]
+
+确定文体：说明文。主要使用一般现在时陈述文明习惯与益处
+
+明确要点：个人拥有的文明礼仪行为、学生能从中获得的益处、总结与呼吁
+
+确定人称：第一人称（I/my/we）
+
+注意事项：词数不少于50词；不得出现真实姓名和校名
+
+[第二步：构思布局]
+
+三段式结构：
+
+开头段：点明文明礼仪在学校生活中的重要性
+
+主体段：分享具体的礼仪行为，并阐述这些行为对和谐校园及人际关系的益处
+
+结尾段：总结全文，发出呼吁，希望大家共同传播友善
+
+[第三步：要点展开]
+
+要点一：文明礼仪行为
+
+具体行为：show kindness and respect/be polite to teachers/help classmates with their studies/say “thank you”/wait in line/follow school rules等
+
+要点二：带来的益处
+
+具体益处：get on well with each other/make our school a better place/build a harmonious campus/benefit from/make friends easily/feel happy等
+
+要点三：总结与呼吁
+
+总结呼吁：spread kindness/work together/play an important part in/key to/in a word等

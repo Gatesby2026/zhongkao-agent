@@ -1,170 +1,123 @@
+# ============================================================
+# 2026年北京朝阳区一模english — 自动生成
+# ============================================================
+# OCR: Qwen-VL-OCR  Enrich: qwen-max
+# QC: draft=39  needs_review=0
+
 year: 2026
 district: 朝阳区
 exam_type: 一模
 subject: english
 full_score: 60.0
 duration_minutes: 90
-total_questions: 38
+total_questions: 39
+structure: 12单选(6.0分) + 8cloze(8分) + 13reading(26分) + 4reading_express(10分) + 2作文(10分)
 passages:
-- body: 'When I was in Grade 8, my mother suggested that I help a younger student named Riley who had trouble understanding fractions(分数). At first, I wondered whether I could really be helpful, but my
-    mother believed the experience would teach me something important as well.
-
-    The first time I visited her apartment, Riley sat at the kitchen table with her arms crossed and her head ___13___ away from me. I opened her math textbook and said, “Alright, Riley. Let''s try some
-    problems together.” Riley looked at me impatiently and said,“Why should I learn this? I''ll probably just work at my uncle''s restaurant someday."
-
-    Her words surprised me. In my family, education had always been considered very important. Still, I realized that simply telling her this would not ___14___ her mind. Maybe Riley needed something different
-    from the textbook.
-
-    That evening, I thought about Riley''s words. Maybe not everything we learn is very important. Still, I realized that simply telling her this would not ___14___ her to her home. Riley was sitting quietly,
-    holding a small notebook. I smiled ___15___ and asked her if she wanted to try a new way of learning.
-
-    She nodded. I took out some flour and other materials.“Today we’ll make cookies,” I told her.
-
-    “We need one and three-fourths cups of flour,” I explained. Riley looked ___16___.“How much is 888 flour three-fourths again?” I pointed to the cup and said,“It’s three parts out of four. Like cutting
-    a pizza into parts.” Riley laughed.“Oh, like the textbook!” She started working patiently, step by step, and she built more ___17___.
-
-    As the lessons continued, Riley started asking questions more often. I found she was beginning to ___18___ the learning way instead of avoiding it. Little by little, math no longer seemed impossible
-    to her.
-
-    ___19___ by Riley''s progress, I decided to help other younger students in my neighborhood as well. Watching them improve gave me a deep sense of achievement.
-
-    What began as a simple teaching task grew into a meaningful ___20___ far beyond the textbook, teaching me patience, creativity, and the true value of learning.'
+- id: choice_intro
+  type: choice
+  name: ''
+  q_range:
+  - 1
+  - 12
+  body: 从下面各题所给的A、B、C、D四个选项中，选择可以填入空白处的最佳选项。
+- id: cloze_intro
   type: cloze
+  name: ''
   q_range:
   - 13
   - 20
-  id: cloze
-- id: reading_A
-  type: reading
-  body: '下列每个图片代表一处科学实践活动场景，请根据人物意愿和喜好匹 配最适合的图片，并将图片所对应的选项(A、B、C、D)填在相应位置上。
+  body: '阅读下面的短文，掌握其大意，然后从短文后各题所给的A、B、C、D四个选项中，选择最佳选项。
 
-    其中一个选项为多余选项。'
+    When I was in Grade 8, my mother suggested that I help a younger student named Riley who had trouble understanding fractions
+    (分数). At first, I wondered whether I could really be helpful, but my mother believed the experience would teach me something
+    important as well.
+
+    The first time I visited her apartment, Riley sat at the kitchen table with her arms crossed and her head <u>____13____</u>
+    away from me. I opened her math textbook and said, “Alright, Riley. Let’s try some problems together.” Riley looked at
+    me impatiently and said, “Why should I learn this? I’ll probably just work at my uncle’s restaurant someday.”
+
+    Her words surprised me. In my family, education had always been considered very important. Still, I realized that simply
+    telling her this would not <u>____14____</u> her mind. Maybe Riley needed something different from the textbook.
+
+    That evening, I thought about Riley’s words. Maybe not everything we learn is useful later, but practicing could help
+    her in many ways. The next morning, I returned to her home. Riley was sitting quietly, holding a small notebook. I smiled
+    <u>____15____</u> and asked her if she wanted to try a new way of learning.
+
+    ![](figures/image3.png)
+
+    She nodded. I took out some flour and other materials. “Today we’ll make cookies,” I told her. “We need one and three-fourths
+    cups of flour,” I explained. Riley looked <u>____16____</u>. “How much is three-fourths again?” I pointed to the cup and
+    said, “It’s three parts out of four. Like cutting a pizza into parts.” Riley laughed. “Oh, like the textbook!” She started
+    working patiently, step by step, and she built more <u>____17____</u>.
+
+    As the lessons continued, Riley started asking questions more often. I found she was beginning to <u>____18____</u> the
+    learning way instead of avoiding it. Little by little, math no longer seemed impossible to her.
+
+    <u>____19____</u> by Riley’s progress, I decided to help other younger students in my neighborhood as well. Watching them
+    improve gave me a deep sense of achievement. What began as a simple teaching task grew into a meaningful <u>____20____</u>
+    far beyond the textbook, teaching me patience, creativity, and the true value of learning.'
+  figure: 2026-chaoyang-yi/figures/image3.png
+- id: reading_（一）
+  type: reading
+  name: （一）
   q_range:
   - 21
-  - 23
-  image_options:
-    A: 2026-chaoyang-yi/figures/passage-reading_A-opt-A.png
-    B: 2026-chaoyang-yi/figures/passage-reading_A-opt-B.png
-    C: 2026-chaoyang-yi/figures/passage-reading_A-opt-C.png
-    D: 2026-chaoyang-yi/figures/passage-reading_A-opt-D.png
-- id: reading_B
-  type: reading
-  body: '“Dear Daddy” Notes My father was the gentlest and most caring dad in the world. But when we argued, he became strict and never considered that there could be another side. My words seemed to reach
-    no one because his ears were closed. I could never win.
-
-    When my father refused to understand that I needed privacy for my phone, I felt frustrated(沮丧的) and even cried. When he noticed I was trying to explain my reason for not wearing uniforms to school in
-    junior high, he ended our“discussion” leaving me silently sad. Later, when he refused to let me go on my last-year class trip to Montreal, I could do nothing but run out of his room in great sadness.
-    I couldn''t get him to listen to my side, maybe he would read it.
-
-    Hoping his eyes would be more open than his ears, I wrote a note that began “Dear Daddy” and ended with how much I respected his opinion, hated to fight with him, valued our relationship, and loved
-    him. I put the note under his door and raced back to my room.
-
-    Minutes later, there was a knock at my door. Seeing my father''s face, I knew my note had softened his strictness and touched his heart.
-
-    Getting his agreement to go to Montreal was sweet. Even better was discovering a way to argue with him without tears, ending with a hug instead. My“Dear Daddy” notes became a way to follow up on many
-    of our arguments. During our most heated disagreements, I knew how to get through to him, but his firm(坚定的) final word left me speechless.
-
-    Years later, my father and I still share those sweet memories about my“Dear Daddy” notes. Whenever we look back on our heated disagreements and how those little notes helped him finally understand me,
-    we can''t help smiling. He never said he knew my little plan, but I could always tell he loved every note that helped him see my way. To this day, those notes remain one of my favorite stories between
-    us.'
-  q_range:
-  - 24
-  - 26
-- id: reading_C
-  type: reading
-  body: 'Many people think that eating a fruit in summer has the same effect on your body as eating it in winter. However, new research shows a different result.
-
-    Our bodies have body cycles, which are just like our body clocks. There''s a main clock in the brain and other clocks in ( different body parts. These clocks work together to control different ** cycle
-    body activities. For example, at night, our bodies produce chemical substances (物质) that make us sleepy.
-
-    The body knows what time it is mainly through light. Since the daylight changes with the seasons, our bodies adjust(调整) accordingly. There are two types of body cycles: daily cycles and yearly cycles.
-
-    Food also influences our body clocks. The idea suggests that parts in plants can let our bodies know about the place where the plants grow. So, eating fruits and vegetables when they''re in season can
-    help our bodies get used to the changing seasons. For example, apples are in season in autumn. Apples from this season have certain things that can help our bodies save energy and get stronger against
-    illness as the weather turns cold.
-
-    However, these days, we can eat all kinds of fruits and vegetables at any time of the year. According to the recent study, polyphenols (多酚) which are things in fruits and vegetables are good for our
-    health and can affect our body cycles. Different plants have different kinds of polyphenols because of their growing conditions. It is believed that eating out-of-season fruits might cause a difference
-    between our body clock and the real environment.
-
-    Let''s take bananas as an example. Bananas grow in areas with a hot climate. In the places where they come from, they come together at a certain time of the year. If people in mild-climate(气候温和的) areas
-    eat bananas when they''re not in season locally, it might mess up the body''s normal cycle. Our bodies may get “wrong” signals, which could possibly influence how our body processes(加工) food and our
-    general health.
-
-    So, it''s better to eat fruits in season to keep our body cycles in line with the environment. But remember, eating any fruit is better than not eating at all.'
-  q_range:
-  - 27
-  - 29
-- id: reading_D
-  type: reading
-  body: 'A large body of research has been developed in recent years to explain willpower. Most of the researchers exploring self-control do so with a clear goal in mind: How can willpower be improved?
-    If willpower is truly easily used up, as the research suggests, what can be done to keep it strong?
-
-    Avoiding temptation(诱惑) is an effective method for keeping self-control, so please follow“out of view, out of mind” rule. One recent study, for example, found office workers are less attracted to candy
-    in the desk drawer than that on top of their desks.
-
-    The research suggesting that we have a limited amount of self-control raises a troubling question. When we face too many temptations, are we to fail? Not necessarily. Researchers don''t believe that
-    one''s willpower is ever completely used up. Rather, people appear to hold some willpower in reserve(储备), saved for future needs. The right drive allows us to tap into those reserves, allowing us to
-    carry on even when our self-control strength has been run down. High drive might help deal with weakened willpower, at least to a point.
-
-    Willpower may also be made less easily exhausted(精疲力尽的) in the first place. Researchers compare self-control to a muscle(肌肉) that gets tired with heavy use. But there is another side to this comparison,
-    they say. While muscles become exhausted by exercise in the short term, they are strengthened by daily exercise in the long term.Similarly, we should take regular(有规律的) practices of self-control to
-    build willpower strength.
-
-    Studies on willpower exhaustion suggest that making a list of decisions on New Year''s Eve is the worst possible way. Being exhausted in one area can reduce willpower in other areas, so it makes more
-    sense to focus on a single goal at a time. In other words, don''t try to give up smoking, choose a healthy diet and start a new exercise plan at the same time. Taking goals one by one is a better way.
-    Once a good habit is in place, psychologist Baumeister says, you''ll no longer need willpower to keep the behavior. Finally, healthy habits will become routine(常规) and won''t require making decisions
-    at all.
-
-    Many questions about the nature of self-control remain to be answered by further research. Yet it seems likely that with clear goals, good self-control and a little practice, you can train your willpower
-    to stay strong in the face of temptation.'
-  q_range:
-  - 30
   - 33
-- id: express
+  body: 'A
+
+    下列每个图片代表一处科学实践活动场景，请根据人物意愿和喜好匹配最适合的图片，并将图片所对应的选项（A、B、C、D）填在相应位置上。其中一个选项为多余选项。
+
+    ![](figures/image4.png)'
+  figure: 2026-chaoyang-yi/figures/image4.png
+- id: reading_express_intro
   type: reading_express
-  body: '阅读短文，根据短文内容回答问题。
-
-    You don''t have to give up sugar or run a marathon to see real changes in your health and happiness. Instead, science supports a“start small” way. Small actions that are done regularly are what create
-    long-lasting changes.
-
-    The secret? It''s not willpower. It''s not even goals. The best way to turn a small change into a powerful habit is not to focus on your motivation(动力), your reasons for doing it, or your long-term
-    goals.
-
-    That is what everyone thinks, but research has shown that making small changes to the environment, the situation in which you perform the behavior, is far more powerful. Goals aren''t bad; they certainly
-    have a purpose, but“motivation” only lasts for so long. Habits need to be two things to stick to: easy and enjoyable.
-
-    For example, do you think your goal of getting back into the jeans you wore two years ago will encourage you to hit the gym every day? Probably not. What will, then?
-
-    Choosing a gym that is close to your house, preferably less than 5 kilometers away, is the most important consideration for keeping a regular exercise habit, according to our research. Even better if
-    you are doing an activity you really enjoy or meeting a good friend there.
-
-    The best part is that once these tiny changes take root(扎根), they add up to better sleep, stronger bodies, calmer feelings and a clearer mind.
-
-    Just as small drops make a big ocean, small, regular habits can lead to great health improvements. As a result, these changes are more likely to last because they come from doing the same things again
-    and again, not from a short time of hard work.
-
-    Start now by choosing one or two of these small habits that suit you. Once you feel confident with these, add similar habits for even greater benefits.
-
-    Instead of trying to change everything or forcing yourself to do something you hate, focus on two questions: How can I make it easy to do? And how can I make it enjoyable? That''s how you change your
-    life, one small change at a time.'
+  name: ''
   q_range:
   - 34
   - 37
+  body: '阅读短文，根据短文内容回答问题。
+
+    You don’t have to give up sugar or run a marathon to see real changes in your health and happiness. Instead, science supports
+    a “start small” way. Small actions that are done regularly are what create long-lasting changes.
+
+    The secret? It’s not willpower. It’s not even goals. The best way to turn a small change into a powerful habit is not
+    to focus on your motivation (动力), your reasons for doing it, or your long-term goals.
+
+    That is what everyone thinks, but research has shown that making small changes to the environment, the situation in which
+    you perform the behavior, is far more powerful. Goals aren’t bad; they certainly have a purpose, but “motivation” only
+    lasts for so long. Habits need to be two things to stick to: easy and enjoyable.
+
+    For example, do you think your goal of getting back into the jeans you wore two years ago will encourage you to hit the
+    gym every day? Probably not. What will, then? Choosing a gym that is close to your house, preferably less than 5 kilometers
+    away, is the most important consideration for keeping a regular exercise habit, according to our research. Even better
+    if you are doing an activity you really enjoy or meeting a good friend there.
+
+    The best part is that once these tiny changes take root (扎根), they add up to better sleep, stronger bodies, calmer feelings
+    and a clearer mind.
+
+    Just as small drops make a big ocean, small, regular habits can lead to great health improvements. As a result, these
+    changes are more likely to last because they come from doing the same things again and again, not from a short time of
+    hard work.
+
+    Start now by choosing one or two of these small habits that suit you. Once you feel confident with these, add similar
+    habits for even greater benefits.
+
+    Instead of trying to change everything or forcing yourself to do something you hate, focus on two questions: How can I
+    make it easy to do? And how can I make it enjoyable? That’s how you change your life, one small change at a time.'
 questions:
 - id: 1
   type: 单选
   score: 0.5
-  stem: My little sister loves reading very much and ___ favorite book is Alice's Adventures in Wonderland.
+  stem: My little sister loves reading very much and ________ favorite book is Alice’s Adventures in Wonderland.
   options:
     A: your
     B: his
     C: her
     D: their
   answer: C
-  solution: C
+  solution: your你的；his他的；her她的；their他们的。根据“My little sister”可知，主语为女性，应用形容词性物主代词her修饰“favorite book”。
   knowledge_points:
-  - 代词的使用
+  - 代词运用
   module: grammar
   difficulty: 基础
   recommended_for:
@@ -172,21 +125,22 @@ questions:
   - L1
   - L2
   - L3
-  qc_status: none
+  qc_status: draft
   qc_note: 大幅度发
+  passage_id: choice_intro
 - id: 2
   type: 单选
   score: 0.5
-  stem: My uncle bought a new bike ___ me as a present on my birthday.
+  stem: My uncle bought a new bike ________ me as a present on my birthday.
   options:
     A: in
     B: at
     C: 'on'
     D: for
   answer: D
-  solution: D
+  solution: in在……里面、在某时间段；at在某个地点/时刻；on在……上面；在具体某天；for为了、给、对于。句中buy sth. for sb.“给某人买某物”是固定搭配，应填for。
   knowledge_points:
-  - 介词的使用
+  - 介词运用
   module: grammar
   difficulty: 基础
   recommended_for:
@@ -196,19 +150,21 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
+  passage_id: choice_intro
 - id: 3
   type: 单选
   score: 0.5
-  stem: '-Mom, ___ I use your phone to look up some information about Chinese traditional festivals?
+  stem: '—Mom, ________ I use your phone to look up some information about Chinese traditional festivals?
 
-    -OK, but don''t use it for too long.'
+
+    —OK, but don’t use it for too long.'
   options:
     A: can
     B: must
     C: need
     D: should
   answer: A
-  solution: A
+  solution: can能、可以；must必须；need需要；should应该。根据“Mom...I use your phone”可知，此处是孩子向妈妈请求许可，应用can表示“可以”。
   knowledge_points:
   - 情态动词的用法
   module: grammar
@@ -220,19 +176,20 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
+  passage_id: choice_intro
 - id: 4
   type: 单选
   score: 0.5
-  stem: Practicing English speeches makes Jack ___ than before.
+  stem: Practicing English speeches makes Jack ________ than before.
   options:
     A: confident
     B: more confident
     C: most confident
     D: the most confident
   answer: B
-  solution: B
+  solution: 根据than可知，此处应用形容词的比较级，confident意为“自信的”，是多音节形容词，比较级为more confident。
   knowledge_points:
-  - 形容词比较级
+  - 比较级
   module: grammar
   difficulty: 基础
   recommended_for:
@@ -242,21 +199,23 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
+  passage_id: choice_intro
 - id: 5
   type: 单选
   score: 0.5
-  stem: '-Mike, ___ do you choose the drama club?
+  stem: '—Mike, ________ do you choose the drama club?
 
-    -Because it is a great way to express my feelings.'
+
+    —Because it is a great way to express my feelings.'
   options:
     A: how
     B: why
     C: when
     D: where
   answer: B
-  solution: B
+  solution: how如何；why为什么；when什么时候；where在哪里。根据答语“Because...”可知，询问的是原因，why符合语境。
   knowledge_points:
-  - 疑问词的使用
+  - 疑问词用法
   module: grammar
   difficulty: 基础
   recommended_for:
@@ -264,21 +223,22 @@ questions:
   - L1
   - L2
   - L3
-  qc_status: none
+  qc_status: draft
   qc_note: ''
+  passage_id: choice_intro
 - id: 6
   type: 单选
   score: 0.5
-  stem: Our class didn't win the school basketball competition, ___ we tried our best and never gave up.
+  stem: Our class didn’t win the school basketball competition, ________ we tried our best and never gave up.
   options:
     A: but
     B: and
     C: or
     D: so
   answer: A
-  solution: A
+  solution: but但是；and和/并且；or或者；so所以。根据“Our class didn’t win...we tried our best”可知，前句表示比赛没赢，后句表示大家尽力了，前后句意存在转折关系，应填but。
   knowledge_points:
-  - 连词的使用
+  - 连贯
   module: grammar
   difficulty: 基础
   recommended_for:
@@ -288,19 +248,20 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
+  passage_id: choice_intro
 - id: 7
   type: 单选
   score: 0.5
-  stem: Tina ___ to cook simple dishes when her father came back home yesterday.
+  stem: Tina ________ to cook simple dishes when her father came back home yesterday.
   options:
     A: learns
     B: learned
     C: is learning
     D: was learning
   answer: D
-  solution: D
+  solution: 根据“when her father came back home yesterday”可知，此处表示过去某个具体时刻正在进行的动作，应用过去进行时，应填was learning。
   knowledge_points:
-  - 过去进行时
+  - 时态运用
   module: grammar
   difficulty: 基础
   recommended_for:
@@ -310,19 +271,21 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
+  passage_id: choice_intro
 - id: 8
   type: 单选
   score: 0.5
-  stem: David and his friends ___ at a library as volunteers every Saturday.
+  stem: David and his friends ________ at a library as volunteers every Saturday.
   options:
     A: work
     B: worked
     C: are working
     D: will work
   answer: A
-  solution: A
+  solution: work工作（原形）；worked工作（过去式）；are working工作（现在进行时）；will work工作（一般将来时）。根据时间状语“every Saturday”可知，此处表示经常性、习惯性的动作，应用一般现在时。主语“David
+    and his friends”为复数，谓语动词用原形。应填work。
   knowledge_points:
-  - 时态-一般现在时
+  - 时态运用
   module: grammar
   difficulty: 基础
   recommended_for:
@@ -332,19 +295,20 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
+  passage_id: choice_intro
 - id: 9
   type: 单选
   score: 0.5
-  stem: Last month, we went to Ruijin, Jiangxi for the study trip and ___ the spirit of the Long March.
+  stem: Last month, we went to Ruijin, Jiangxi for the study trip and ________ the spirit of the Long March.
   options:
     A: experience
     B: experienced
     C: will experience
     D: are experiencing
   answer: B
-  solution: B
+  solution: 根据时间状语Last month可知句子时态为一般过去时；且空处与went由and连接，构成并列谓语，时态应保持一致，都用过去式，即experienced。
   knowledge_points:
-  - 时态-一般过去时
+  - 时态运用
   module: grammar
   difficulty: 基础
   recommended_for:
@@ -354,19 +318,21 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
+  passage_id: choice_intro
 - id: 10
   type: 单选
   score: 0.5
-  stem: Our life ___ greatly since the invention of AI technology.
+  stem: Our life ________ greatly since the invention of AI technology.
   options:
     A: changes
     B: changed
     C: has changed
     D: will change
   answer: C
-  solution: C
+  solution: changes改变（一般现在时，主语单数第三人称情况下）；changed改变（一般过去时）；has changed改变（现在完成时）；will change改变（一般将来时）。根据时间状语“since the invention
+    of AI technology”可知，since引导的时间状语通常与现在完成时连用，表示动作从过去持续到现在或对现在造成影响。应填has changed。
   knowledge_points:
-  - 现在完成时的用法
+  - 时态运用
   module: grammar
   difficulty: 基础
   recommended_for:
@@ -376,46 +342,24 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
+  passage_id: choice_intro
 - id: 11
   type: 单选
   score: 0.5
-  stem: '-Some nice paintings by our classmates ___ in the school hall last week.
+  stem: '—Some nice paintings by our classmates ________ in the school hall last week.
 
-    -Great! Art makes our school life more colorful.'
+
+    —Great! Art makes our school life more colorful.'
   options:
     A: show
     B: showed
     C: are shown
     D: were shown
   answer: D
-  solution: D
+  solution: 根据时间状语“last week”可知，句子时态为一般过去时，主语paintings是物，与动词show之间构成被动关系，需用被动语态，主语paintings为复数，be动词需用复数过去式were，show的过去分词为shown。
   knowledge_points:
   - 被动语态
-  - 一般过去时
-  module: grammar
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
-  qc_status: draft
-  qc_note: ''
-- id: 12
-  type: 单选
-  score: 0.5
-  stem: '-Peter, do you know ___ _?
-
-    -Yes. It will land on the southern area of the moon.'
-  options:
-    A: where will the Chang'e-7 land
-    B: when the Chang'e-7 will land
-    C: where the Chang'e-7 will land
-    D: when will the Chang'e-7 land
-  answer: C
-  solution: C
-  knowledge_points:
-  - 宾语从句
-  - 疑问词引导的宾语从句
+  - 时态
   module: grammar
   difficulty: 基础
   recommended_for:
@@ -425,8 +369,35 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
+  passage_id: choice_intro
+- id: 12
+  type: 单选
+  score: 0.5
+  stem: '—Peter, do you know ________?
+
+
+    —Yes. It will land on the southern area of the moon.'
+  options:
+    A: where will the Chang’e-7 land
+    B: when the Chang’e-7 will land
+    C: where the Chang’e-7 will land
+    D: when will the Chang’e-7 land
+  answer: C
+  solution: 宾语从句应用陈述语序，即“引导词+主语+谓语”，排除A、D两项；根据答语“on the southern area of the moon”可知，询问的是地点，应用where引导，排除B项。故选C。
+  knowledge_points:
+  - 宾语从句
+  module: grammar
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+  passage_id: choice_intro
 - id: 13
-  type: 完形
+  type: cloze
   score: 1
   stem: ''
   options:
@@ -435,9 +406,10 @@ questions:
     C: took
     D: gave
   answer: B
-  solution: B
+  solution: "句意：我第一次去她的公寓时，Riley坐在餐桌旁，双臂交叉，头转开不看我。 \n根据上下文，Riley一开始抵触学习，态度不耐烦，此处需表达“转头(不看我)”的含义，turned away from是固定搭配，意为“转过头不看”，符合语境；put\
+    \ away意为“收起”，took away意为“拿走”，gave away意为“赠送，泄露”，均与“抵触学习、不愿面对”的语境逻辑不符。"
   knowledge_points:
-  - 动词的使用
+  - 动词短语搭配
   module: vocabulary
   difficulty: 基础
   recommended_for:
@@ -445,10 +417,11 @@ questions:
   - L1
   - L2
   - L3
-  qc_status: none
+  qc_status: draft
   qc_note: ''
+  passage_id: cloze_intro
 - id: 14
-  type: 完形
+  type: cloze
   score: 1
   stem: ''
   options:
@@ -457,9 +430,9 @@ questions:
     C: lose
     D: open
   answer: A
-  solution: A
+  solution: "句意：不过，我意识到仅仅告诉她这个并不能改变她的想法。 \n根据上下文，Riley对学习有抵触情绪，此处需表达“改变她的想法”的含义，change her mind是固定搭配，意为“改变主意/想法”，符合语境；read意为“阅读”，lose意为“失去”，open意为“打开”，均与“想法”搭配逻辑不符。"
   knowledge_points:
-  - 词汇辨析
+  - 词语运用
   module: vocabulary
   difficulty: 基础
   recommended_for:
@@ -469,8 +442,9 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
+  passage_id: cloze_intro
 - id: 15
-  type: 完形
+  type: cloze
   score: 1
   stem: ''
   options:
@@ -479,7 +453,7 @@ questions:
     C: nervously
     D: softly
   answer: D
-  solution: D
+  solution: "句意：我温柔地笑了笑，问她是否想尝试一种新的学习方式。 \n根据上下文，“我”想换一种方式引导抵触学习的Riley，此处需表达“温柔地”微笑的含义，softly意为“温柔地”，符合语境；suddenly意为“突然地”，carefully意为“小心地”，nervously意为“紧张地”，均与“耐心引导”的语境不符。"
   knowledge_points:
   - 词汇运用
   module: vocabulary
@@ -491,8 +465,9 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
+  passage_id: cloze_intro
 - id: 16
-  type: 完形
+  type: cloze
   score: 1
   stem: ''
   options:
@@ -501,9 +476,9 @@ questions:
     C: fearful
     D: satisfied
   answer: B
-  solution: B
+  solution: "句意：Riley看起来不确定。 \n根据下文她的问题“How much is three-fourths again?”，说明她对分数的概念仍不清楚，此处需表达“不确定的”含义，uncertain意为“不确定的”，符合语境；hopeful意为“有希望的”，fearful意为“害怕的”，satisfied意为“满意的”，均与“对概念存疑”的语境不符。"
   knowledge_points:
-  - 词汇理解与运用
+  - 词汇运用
   module: vocabulary
   difficulty: 基础
   recommended_for:
@@ -513,8 +488,9 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
+  passage_id: cloze_intro
 - id: 17
-  type: 完形
+  type: cloze
   score: 1
   stem: ''
   options:
@@ -523,9 +499,9 @@ questions:
     C: confidence
     D: trust
   answer: C
-  solution: C
+  solution: "句意：她开始耐心地、一步步地操作，并且越来越有信心。 \n根据上下文，Riley通过制作饼干理解了分数，不再抵触学习，此处需表达“信心”的含义，confidence意为“信心”，符合语境；habits意为“习惯”，skills意为“技能”，trust意为“信任”，均与“学习状态改善”的语境不符。"
   knowledge_points:
-  - 词汇辨析
+  - 词汇运用
   module: vocabulary
   difficulty: 基础
   recommended_for:
@@ -535,8 +511,9 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
+  passage_id: cloze_intro
 - id: 18
-  type: 完形
+  type: cloze
   score: 1
   stem: ''
   options:
@@ -545,9 +522,9 @@ questions:
     C: accept
     D: forget
   answer: C
-  solution: C
+  solution: "句意：我发现她开始接受这种学习方式，而不是回避它。 \n根据上下文，Riley从抵触学习到主动提问，说明她对学习的态度发生了转变，此处需表达“接受”的含义，accept意为“接受”，符合语境；refuse意为“拒绝”，question意为“质疑”，forget意为“忘记”，均与“态度转变”的语境不符。"
   knowledge_points:
-  - 词汇辨析
+  - 词语运用
   module: vocabulary
   difficulty: 基础
   recommended_for:
@@ -557,8 +534,9 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
+  passage_id: cloze_intro
 - id: 19
-  type: 完形
+  type: cloze
   score: 1
   stem: ''
   options:
@@ -567,9 +545,9 @@ questions:
     C: Shocked
     D: Encouraged
   answer: D
-  solution: D
+  solution: "句意：受到Riley进步的鼓舞，我决定也帮助社区里的其他低年级学生。 \n根据上下文，Riley的进步激励了“我”去帮助更多人，此处需表达“受到鼓舞的”含义，Encouraged意为“受到鼓舞的”，符合语境；Bored意为“无聊的”，Moved意为“感动的”，Shocked意为“震惊的”，均与“被进步激励”的语境不符。"
   knowledge_points:
-  - 词汇理解与运用
+  - 词语运用
   module: vocabulary
   difficulty: 基础
   recommended_for:
@@ -579,8 +557,9 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
+  passage_id: cloze_intro
 - id: 20
-  type: 完形
+  type: cloze
   score: 1
   stem: ''
   options:
@@ -589,9 +568,9 @@ questions:
     C: story
     D: memory
   answer: A
-  solution: A
+  solution: "句意：一开始只是简单的教学任务，后来变成了一次远超课本的有意义的课程，教会了我耐心、创造力和学习的真正价值。 \n根据上下文，这次教学经历让“我”也学到了很多，此处需表达“课程/教训”的含义，lesson意为“课程，教训”，符合语境；example意为“例子”，story意为“故事”，memory意为“记忆”，均与“从经历中获得成长”的语境不符。"
   knowledge_points:
-  - 词汇识别与理解
+  - 词汇运用
   module: vocabulary
   difficulty: 基础
   recommended_for:
@@ -601,17 +580,19 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
+  passage_id: cloze_intro
 - id: 21
-  type: 阅读
+  type: reading
   score: 2
-  stem: I love the natural world! I want to join the School Plant Watch. I'll look at different flowers and leaves, take photos of special plants, and help our science teacher make a school plant guide.
-    (Liu Hao)
-  has_image_options: true
+  stem: '| <u>____21____</u> ![](figures/image5.png) | I love the natural world! I want to join the School Plant Watch. I’ll
+    look at different flowers and leaves, take photos of special plants, and help our science teacher make a school plant
+    guide. |
+
+    |---|---|'
   answer: A
-  solution: A
+  solution: 根据“I want to join the School Plant Watch…and help our science teacher make a school plant guide.”可知，Liu Hao喜欢观察各种各样的花朵和树叶，想加入学校植物观察社团。对应到图片A。
   knowledge_points:
-  - 阅读理解
-  - 词汇运用
+  - 信息提取
   module: reading
   difficulty: 基础
   recommended_for:
@@ -619,36 +600,19 @@ questions:
   - L1
   - L2
   - L3
-  qc_status: none
+  qc_status: draft
   qc_note: ''
+  passage_id: reading_（一）
 - id: 22
-  type: 阅读
+  type: reading
   score: 2
-  stem: I'd like to take part in the Star Watching Club. I'll learn to watch stars, recognize well-known star groups, and write reports about the different shapes of the moon for our class newspaper. (Lingling)
-  has_image_options: true
+  stem: '| <u>____22____</u> ![](figures/image6.png) | I’d like to take part in the Star Watching Club. I’ll learn to watch
+    stars, recognize well-known star groups, and write reports about the different shapes of the moon for our class newspaper.
+    |'
   answer: C
-  solution: C
+  solution: 根据“I’d like to take part in the Star Watching Club. I’ll learn to watch stars…the moon for our class newspaper.”可知，Lingling想要学习观测星星，加入观星社团。对应到图片C。
   knowledge_points:
-  - 阅读理解
-  - 词汇运用
-  module: reading
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
-  qc_status: none
-  qc_note: ''
-- id: 23
-  type: 阅读
-  score: 2
-  stem: I care about our planet! I want to join the River Protection Group. I'll check the water quality near our school, and send my information to scientists to help protect local water. (Li Wei)
-  has_image_options: true
-  answer: B
-  solution: B
-  knowledge_points:
-  - 阅读理解
-  - 环境保护相关词汇
+  - 信息提取/段落梳理
   module: reading
   difficulty: 基础
   recommended_for:
@@ -656,22 +620,73 @@ questions:
   - L1
   - L2
   - L3
-  qc_status: none
+  qc_status: draft
   qc_note: ''
+  passage_id: reading_（一）
+- id: 23
+  type: reading
+  score: 2
+  stem: '| <u>____23____</u> ![](figures/image7.png) | I care about our planet! I want to join the River Protection Group.
+    I’ll check the water quality near our school, and send my information to scientists to help protect local water. |'
+  answer: B
+  solution: '根据“I want to join the River Protection Group. I’ll check the water quality near our school, and send my information
+    to scientists to help protect local water.”可知，Li Wei想要检测学校周边的水质，加入河流保护小组。对应到图片B。
+
+    （二）阅读下列短文，根据短文内容，从短文后各题所给的A、B、C、D四个选项中，选择最佳选项。
+
+    B
+
+    “Dear Daddy” Notes
+
+    My father was the gentlest and most caring dad in the world. But when we argued, he became strict and never considered
+    that there could be another side. My words seemed to reach no one because his ears were closed. I could never win.
+
+    When my father refused to understand that I needed privacy for my phone, I felt frustrated (沮丧的) and even cried. When
+    he noticed I was trying to explain my reason for not wearing uniforms to school in junior high, he ended our “discussion”,
+    leaving me silently sad. Later, when he refused to let me go on my last-year class trip to Montreal, I could do nothing
+    but run out of his room in great sadness. I couldn’t get him to listen to my side, maybe he would read it.
+
+    Hoping his eyes would be more open than his ears, I wrote a note that began “Dear Daddy” and ended with how much I respected
+    his opinion, hated to fight with him, valued our relationship, and loved him. I put the note under his door and raced
+    back to my room.
+
+    Minutes later, there was a knock at my door. Seeing my father’s face, I knew my note had softened his strictness and touched
+    his heart.
+
+    Getting his agreement to go to Montreal was sweet. Even better was discovering a way to argue with him without tears,
+    ending with a hug instead. My “Dear Daddy” notes became a way to follow up on many of our arguments. During our most heated
+    disagreements, I knew how to get through to him, but his firm (坚定的) final word left me speechless.
+
+    Years later, my father and I still share those sweet memories about my “Dear Daddy” notes. Whenever we look back on our
+    heated disagreements and how those little notes helped him finally understand me, we can’t help smiling. He never said
+    he knew my little plan, but I could always tell he loved every note that helped him see my way. To this day, those notes
+    remain one of my favorite stories between us.'
+  knowledge_points:
+  - 信息提取/段落梳理
+  module: reading
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+  passage_id: reading_（一）
 - id: 24
-  type: 阅读
+  type: reading
   score: 2
   stem: How did the writer feel when her father refused her Montreal trip?
   options:
-    A: Nervous
-    B: Lonely
-    C: Disappointed
-    D: Calm
+    A: Nervous.
+    B: Lonely.
+    C: Disappointed.
+    D: Calm.
   answer: C
-  solution: C
+  solution: 根据原文第二段第3句“Later, when he refused to let me go on my last-year class trip to Montreal, I could do nothing but
+    run out of his room in great sadness.”，作者被拒绝后很难过，选项中“Disappointed”符合语境。
   knowledge_points:
-  - 阅读理解
-  - 情感词汇
+  - 信息筛选
   module: reading
   difficulty: 基础
   recommended_for:
@@ -679,22 +694,24 @@ questions:
   - L1
   - L2
   - L3
-  qc_status: none
+  qc_status: draft
   qc_note: ''
+  passage_id: reading_（一）
 - id: 25
-  type: 阅读
+  type: reading
   score: 2
-  stem: What could the“Dear Daddy” notes help the writer do?
+  stem: What could the “Dear Daddy” notes help the writer do?
   options:
-    A: Send messages faster
-    B: Avoid meeting her father
-    C: Improve her writing skills
-    D: Make her father understand her
+    A: Send messages faster.
+    B: Avoid meeting her father.
+    C: Improve her writing skills.
+    D: Make her father understand her.
   answer: D
-  solution: D
+  solution: 根据原文第三段第1句“Hoping his eyes would be more open than his ears, I wrote a note that began ‘Dear Daddy’...”、第四段第2句“Seeing
+    my father’s face, I knew my note had softened his strictness and touched his heart.”以及第六段第2句 “...how those little notes
+    helped him finally understand me”，可知便条的核心作用是帮助父亲理解作者的想法。
   knowledge_points:
-  - 阅读理解
-  - 文本细节理解
+  - 信息提取
   module: reading
   difficulty: 中等
   recommended_for:
@@ -703,20 +720,38 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
+  passage_id: reading_（一）
 - id: 26
-  type: 阅读
+  type: reading
   score: 2
   stem: What can we learn from the passage?
   options:
-    A: Understanding matters more than winning
-    B: Reaching agreement is important in argument
-    C: Sweet memories often come from heated fights
-    D: Children should consider their parents' opinions
+    A: Understanding matters more than winning.
+    B: Reaching agreement isn’t important in argument.
+    C: Sweet memories often come from heated fights.
+    D: Children should consider their parents’ opinions.
   answer: A
-  solution: A
+  solution: "全文围绕作者与父亲的争执展开，作者没有在争吵中追求“赢”，而是通过写便条的方式沟通，让父亲理解自己，最终收获了更好的亲子关系，点明了“理解比输赢更重要”的核心主旨。\nC\n![](figures/image8.png)\n\
+    Many people think that eating a fruit in summer has the same effect on your body as eating it in winter. However, new\
+    \ research shows a different result.\nOur bodies have body cycles, which are just like our body clocks. There’s a main\
+    \ clock in the brain and other clocks in different body parts. These clocks work together to control different body activities.\
+    \ For example, at night, our bodies produce chemical substances (化学物质) that make us sleepy. \nThe body knows what time\
+    \ it is mainly through light. Since the daylight changes with the seasons, our bodies adjust (调整) accordingly. There are\
+    \ two types of body cycles: daily cycles and yearly cycles.\nFood also influences our body clocks. The idea suggests that\
+    \ parts in plants can let our bodies know about the place where the plants grow. So, eating fruits and vegetables when\
+    \ they’re in season can help our bodies get used to the changing seasons. For example, apples are in season in autumn.\
+    \ Apples from this season have certain things that can help our bodies save energy and get stronger against illness as\
+    \ the weather turns cold.\nHowever, these days, we can eat all kinds of fruits and vegetables at any time of the year.\
+    \ According to the recent study, polyphenols (多酚) which are things in fruits and vegetables are good for our health and\
+    \ can affect our body cycles. Different plants have different kinds of polyphenols because of their growing conditions.\
+    \ It is believed that eating out-of-season fruits might cause a difference between our body clock and the real environment.\n\
+    Let’s take bananas as an example. Bananas grow in areas with a hot climate. In the places where they come from, they come\
+    \ together at a certain time of the year. If people in mild-climate (气候温和的) areas eat bananas when they’re not in season\
+    \ locally, it might mess up the body’s normal cycle. Our bodies may get “wrong” signals, which could possibly influence\
+    \ how our body processes (加工) food and our general health.\nSo, it’s better to eat fruits in season to keep our body cycles\
+    \ in line with the environment. But remember, eating any fruit is better than not eating at all."
   knowledge_points:
-  - 阅读理解
-  - 推理判断
+  - 启示感悟
   module: reading
   difficulty: 中等
   recommended_for:
@@ -725,42 +760,47 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
+  passage_id: reading_（一）
 - id: 27
-  type: 阅读
+  type: reading
   score: 2
   stem: According to the passage, what can we learn about body cycles?
   options:
-    A: They have nothing to do with food
-    B: They change as the daylight changes
-    C: They work together because of the main clock
-    D: They produce chemical substances to control sleep
+    A: They have nothing to do with food.
+    B: They change as the daylight changes.
+    C: They work together because of the main clock.
+    D: They produce chemical substances to control sleep.
   answer: B
-  solution: B
+  solution: 根据第一段“However, new research shows a different result”，新研究表明在不同季节食用相同的食物对我们的身体有着不同影响，A项认为身体循环与饮食无关，不符合句意；第三段明确指出“Since
+    the daylight changes with the seasons, our bodies adjust accordingly”，B项正确；第二段写道“There’s a main clock in the brain and
+    other clocks in different body parts. These clocks work together to control different body activities”，说明我们不同的身体部位有着不同的时钟，它们共同控制了我们的活动，C项说它们之所以能协同工作是因为大脑中的主时钟，不符合句意；由第二段“our
+    bodies produce chemical substances that make us sleepy”可知，身体产生的化学物质能让我们感觉到困意。D项认为可以控制睡眠，不准确，排除D项。
   knowledge_points:
-  - 阅读理解
-  - 细节理解
+  - 信息筛选
   module: reading
-  difficulty: 中等
+  difficulty: 基础
   recommended_for:
+  - L0
   - L1
   - L2
   - L3
   qc_status: draft
   qc_note: ''
+  passage_id: reading_（一）
 - id: 28
-  type: 阅读
+  type: reading
   score: 2
   stem: Why does the writer mention polyphenols in Paragraph 5?
   options:
-    A: To tell readers what polyphenols are in plants
-    B: To show all fruits are good for people's health
-    C: To advise people to eat more fruit in cold weather
-    D: To explain why out-of-season fruits influence body cycles
+    A: To tell readers what polyphenols are in plants.
+    B: To show all fruits are good for people’s health.
+    C: To advise people to eat more fruit in cold weather.
+    D: To explain why out-of-season fruits influence body cycles.
   answer: D
-  solution: D
+  solution: 由第五段“It is believed that eating out-of-season fruits might cause a difference between our body clock and the real
+    environment”，可知作者介绍多酚主要是为了解释为什么非季节水果会影响我们的身体循环。D项符合句意。
   knowledge_points:
-  - 阅读理解-推理判断
-  - 阅读理解-细节理解
+  - 信息筛选
   module: reading
   difficulty: 中等
   recommended_for:
@@ -769,20 +809,50 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
+  passage_id: reading_（一）
 - id: 29
-  type: 阅读
+  type: reading
   score: 2
   stem: What is the passage mainly about?
   options:
-    A: The differences between summer fruits and winter fruits
-    B: The ways to keep our body clocks working properly all year round
-    C: The relationship between eating seasonal fruits and our body cycles
-    D: The reasons why our bodies need different chemicals in different seasons
+    A: The differences between summer fruits and winter fruits.
+    B: The ways to keep our body clocks working properly all year round.
+    C: The relationship between eating seasonal fruits and our body cycles.
+    D: The reasons why our bodies need different chemicals in different seasons.
   answer: C
-  solution: C
+  solution: '本文主要介绍了食用应季水果和身体循环之间的关联，C项符合文章主旨。
+
+    D
+
+    A large body of research has been developed in recent years to explain willpower. Most of the researchers exploring self-control
+    do so with a clear goal in mind: How can willpower be improved? If willpower is truly easily used up, as the research
+    suggests, what can be done to keep it strong?
+
+    Avoiding temptation (诱惑) is an effective method for keeping self-control, so please follow “out of view, out of mind”
+    rule. One recent study, for example, found office workers are less attracted to candy in the desk drawer than that on
+    top of their desks.
+
+    The research suggesting that we have a limited amount of self-control raises a troubling question. When we face too many
+    temptations, are we to fail? Not necessarily. Researchers don’t believe that one’s willpower is ever completely used up.
+    Rather, people appear to hold some willpower in reserve (储备), saved for future needs. The right drive allows us to <u>tap
+    into</u> those reserves, allowing us to carry on even when our self-control strength has been run down. High drive might
+    help deal with weakened willpower, at least to a point.
+
+    Willpower may also be made less easily exhausted (精疲力尽的) in the first place. Researchers compare self-control to a muscle
+    (肌肉) that gets tired with heavy use. But there is another side to this comparison, they say. While muscles become exhausted
+    by exercise in the short term, they are strengthened by daily exercise in the long term. Similarly, we should take regular
+    (有规律的) practices of self-control to build willpower strength.
+
+    Studies on willpower exhaustion suggest that making a list of decisions on New Year’s Eve is the worst possible way. Being
+    exhausted in one area can reduce willpower in other areas, so it makes more sense to focus on a single goal at a time.
+    In other words, don’t try to give up smoking, choose a healthy diet and start a new exercise plan at the same time. Taking
+    goals one by one is a better way. Once a good habit is in place, psychologist Baumeister says, you’ll no longer need willpower
+    to keep the behavior. Finally, healthy habits will become routine (常规) and won’t require making decisions at all.
+
+    Many questions about the nature of self-control remain to be answered by further research. Yet it seems likely that with
+    clear goals, good self-control and a little practice, you can train your willpower to stay strong in the face of temptation.'
   knowledge_points:
-  - 阅读理解
-  - 主旨大意
+  - 信息提取/段落梳理
   module: reading
   difficulty: 中等
   recommended_for:
@@ -791,292 +861,287 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
+  passage_id: reading_（一）
 - id: 30
-  type: 阅读
+  type: reading
   score: 2
-  stem: From the studies, we can learn that
+  stem: From the studies, we can learn that ________.
   options:
-    A: daily activities can keep people's willpower active
+    A: daily activities can keep people’s willpower active
     B: willpower is not easily completely used up in daily life
     C: strong wishes are the key to solving willpower problems
     D: people can improve their willpower by controlling themselves less
   answer: B
-  solution: B
+  solution: 第三段明确指出：“Researchers don’t believe that one’s willpower is ever completely used up. Rather, ... in reserve.” 说明意志力在日常生活中不会完全耗尽，总有储备。  A项“日常活动保持意志力活跃”文中未直接支持；C项“强烈愿望是关键”文中提到“high
+    drive”但非关键；D项“通过减少自我控制来改善”与原文相反（需多练习）。
   knowledge_points:
-  - 阅读理解
-  - 推理判断
+  - 信息筛选
   module: reading
   difficulty: 中等
   recommended_for:
   - L1
   - L2
   - L3
-  qc_status: none
-  qc_note: (共10页) -- 对应Passage里多了。2、题干是怎么回事？应该
+  qc_status: draft
+  qc_note: ''
+  passage_id: reading_（一）
 - id: 31
-  type: 阅读
+  type: reading
   score: 2
-  stem: What does the phrase“tap into” in Paragraph 3 most probably mean?
+  stem: What does the phrase “tap into” in Paragraph 3 most probably mean?
   options:
-    A: Set up
-    B: Take up
-    C: Run out of
-    D: Make use of
+    A: Set up.
+    B: Take up.
+    C: Run out of.
+    D: Make use of.
   answer: D
-  solution: D
+  solution: 前文说人们有储备的意志力“hold some willpower in reserve”，后文说“让我们能继续下去(allowing us to carry on)”，所以此处应是利用那些储备。选项D符合。
   knowledge_points:
-  - 词汇理解
-  - 上下文推断
-  module: vocabulary
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
-  qc_status: draft
-  qc_note: ''
-- id: 32
-  type: 阅读
-  score: 2
-  stem: To form a good habit, which of the following does the writer prefer?
-  options:
-    A: Focusing on one goal before moving on to another
-    B: Preparing a long list of decisions on New Year's Eve
-    C: Trying different plans to develop healthy daily habits
-    D: Carrying out several lifestyle changes at the same time
-  answer: A
-  solution: A
-  knowledge_points:
-  - 阅读理解
-  - 细节理解
+  - 词语含义
   module: reading
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
-  qc_status: draft
-  qc_note: ''
-- id: 33
-  type: 阅读
-  score: 2
-  stem: What is the writer's main purpose in writing this passage?
-  options:
-    A: To offer advice on how to improve and keep willpower
-    B: To explain why people's willpower becomes weak easily
-    C: To show how to avoid different kinds of daily temptations
-    D: 'To discuss the problems caused by poor self-control in life.
-
-      第二部分
-
-      本部分共5题，共20分。根据题目要求，完成相应任务。'
-  answer: A
-  solution: A
-  knowledge_points:
-  - 阅读理解-主旨大意
-  module: reading
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
-  qc_status: draft
-  qc_note: ''
-- id: 34
-  type: 阅读表达
-  score: 2.0
-  stem: What can create long-lasting changes?
-  answer: ''
-  solution: Small actions that are done regularly.
-  knowledge_points:
-  - 语篇理解
-  - 词汇运用
-  module: reading
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
-  qc_status: needs_review
-  qc_note: 选择题缺少 options（既无文本也无图片选项）；选择题 answer 为空
-- id: 35
-  type: 阅读表达
-  score: 2.0
-  stem: What kind of habits are easy to stick to?
-  answer: ''
-  solution: Easy and enjoyable.
-  knowledge_points:
-  - vocabulary related to habits and routines
-  module: vocabulary
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
-  qc_status: needs_review
-  qc_note: 选择题缺少 options（既无文本也无图片选项）；选择题 answer 为空
-- id: 36
-  type: 阅读表达
-  score: 2.0
-  stem: Why are these changes likely to last?
-  answer: ''
-  solution: 'Because they come from doing the same things again and again, not from a short time of
-
-    hard work.'
+  qc_status: draft
+  qc_note: ''
+  passage_id: reading_（一）
+- id: 32
+  type: reading
+  score: 2
+  stem: To form a good habit, which of the following does the writer prefer?
+  options:
+    A: Focusing on one goal before moving on to another.
+    B: Preparing a long list of decisions on New Year’s Eve.
+    C: Trying different plans to develop healthy daily habits.
+    D: Carrying out several lifestyle changes at the same time.
+  answer: A
+  solution: 第五段明确说：“making a list of decisions ... is the worst possible way... it makes more sense to focus on a single goal
+    at a time... Taking goals one by one is a better way.” 因此作者偏好一次专注一个目标，完成后再进行下一个。  B、C、D均与原文相反。
   knowledge_points:
-  - 阅读理解
+  - 信息筛选
+  module: reading
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+  passage_id: reading_（一）
+- id: 33
+  type: reading
+  score: 2
+  stem: What is the writer’s main purpose in writing this passage?
+  options:
+    A: To offer advice on how to improve and keep willpower.
+    B: To explain why people’s willpower becomes weak easily.
+    C: To show how to avoid different kinds of daily temptations.
+    D: To discuss the problems caused by poor self-control in life.
+  answer: A
+  solution: '全文开篇问“How can willpower be improved?” 随后给出各种方法：避免诱惑、利用储备、像肌肉一样锻炼、一次一个目标等。结尾总结“you can train your willpower”。整体目的是提供改善和保持意志力的建议。选项B解释为何变弱（只是部分内容），选项C仅提避免诱惑（片面），D讨论自控差导致的问题（非重点）。
+
+    第二部分
+
+    本部分共5题，共20分。根据题目要求，完成相应任务。'
+  knowledge_points:
+  - 阅读理解-作者意图
   module: reading
   difficulty: 中等
   recommended_for:
   - L1
   - L2
   - L3
-  qc_status: needs_review
-  qc_note: 选择题缺少 options（既无文本也无图片选项）；选择题 answer 为空
-- id: 37
-  type: 阅读表达
-  score: 4.0
-  stem: 'What small habit do you have for better health or daily life, and why does it work
+  qc_status: draft
+  qc_note: ''
+  passage_id: reading_（一）
+- id: 34
+  type: reading_express
+  score: 2
+  stem: 'What can create long-lasting changes?
 
-    for you?(Please give two reasons.)'
+
+    ____________________________________________________'
   answer: ''
-  solution: 略
+  solution: 'Small actions that are done regularly.
+
+
+    详解：根据原文第一段第3句“Small actions that are done regularly are what create long-lasting changes.”，可知规律进行的小行动能带来长期改变，答案是原文直接信息。'
+  knowledge_points:
+  - 信息提取
+  module: reading
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+  passage_id: reading_express_intro
+- id: 35
+  type: reading_express
+  score: 2
+  stem: 'What kind of habits are easy to stick to?
+
+
+    ____________________________________________________'
+  answer: ''
+  solution: 'Habits that are easy and enjoyable.
+
+
+    详解：根据原文第三段第3句“Habits need to be two things to stick to: easy and enjoyable.”，可知容易坚持的习惯需要满足“简单”和“令人愉快”两个条件，答案是原文直接信息。'
+  knowledge_points:
+  - 信息提取
+  module: reading
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+  passage_id: reading_express_intro
+- id: 36
+  type: reading_express
+  score: 2
+  stem: 'Why are these changes likely to last?
+
+
+    ____________________________________________________'
+  answer: ''
+  solution: 'Because they come from doing the same things again and again, not from a short time of hard work.
+
+
+    详解：根据原文第六段第2句“As a result, these changes are more likely to last because they come from doing the same things again and
+    again, not from a short time of hard work.”，可知这些改变之所以可能持续，是因为它们来自反复进行的相同行为，而非短时间的努力，答案是原文直接信息。'
+  knowledge_points:
+  - 信息筛选
+  module: reading
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+  passage_id: reading_express_intro
+- id: 37
+  type: reading_express
+  score: 4
+  stem: 'What small habit do you have for better health or daily life, and why does it work for you? (Please give two reasons.)
+
+
+    ____________________________________________________'
+  answer: ''
+  solution: 'I have a habit of taking a 10-minute walk every night. First, it is easy to stick to because it doesn’t take
+    much time and I can walk in the park near my home. Second, I enjoy listening to light music while walking, which makes
+    the activity relaxing and fun for me.
+
+
+    详解：本题是开放性试题，答案不唯一，但观点需基于文中提到的习惯特点，如“简单易做”、“令人愉快”、“规律进行”等，结合自身生活经历作答即可。'
   knowledge_points:
   - 写作表达
-  - 健康与日常生活话题
   module: writing
   difficulty: 中等
   recommended_for:
   - L1
   - L2
   - L3
-  qc_status: none
-  qc_note: 选择题缺少 options（既无文本也无图片选项）；选择题 answer 为空
+  qc_status: draft
+  qc_note: ''
+  passage_id: reading_express_intro
 - id: 38
-  type: 写作
+  type: 作文
   score: 10
-  stem: '38.从下面两个题目中任选一题，根据所给的中文和英文提示，完成一篇不少
+  stem: '从下面两个题目中任选一题，根据所给的中文和英文提示，完成一篇不少于50词的英语文段写作。文中已给出内容不计入总词数。所给提示词语仅 供选用。·请不要写出真实的校名·、·姓名和地名·。
 
-    于50词的英语文段写作。文中已给出内容不计入总词数。所给提示词语仅
-
-    供选用。请不要写出真实的校名、姓名和地名。
 
     题目①
 
-    假设你是李华，你们学校正在征集主题为“多彩活动筑梦成长”的课后
 
-    活动方案。请你用英语写一篇短文，介绍一下你有哪些具体的校园课后活动提
+    假设你是李华，你们学校正在征集主题为“多彩活动筑梦成长”的课后活动方案。请你用英语写一篇短文，介绍一下你有哪些具体的校园课后活动提议并阐述理由。
 
-    议并阐述理由。
 
-    提示词语:set up,club,keep fit,colorful
+    提示词语：set up, club, keep fit, colorful
 
-    内容提示:● What after-class activities do you want to suggest?
 
-    ● Why do you suggest these activities?
+    内容提示：
 
-    I have some suggestions.
 
-    I hope my suggestions will be put into practice.
+    • What after-class activities do you want to suggest?
 
-    题目②
 
-    在学习和生活中，我们总会通过某些经历发现自己的进步。某英文网站在
+    • Why do you suggest these activities?
 
-    开展以“Better Me”为主题的征文活动。假设你是李华，请你用英语写一篇短
 
-    文投稿，分享一次让你变得更好的经历，以及你从中的收获。
+    | I have some suggestions.  ___________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+    I hope my suggestions will be put into practice. |
 
-    提示词语:worried,work harder,keep trying,success
-
-    内容提示:● Describe your experience of improving yourself.
-
-    ● What have you learned from the experience?
-
-    I''d like to share my experience of improving myself.'
+    |---|'
   answer: ''
-  solution: 'Possible versions:
-
-    题目①
-
-    I have some suggestions. First, I suggest setting up an English club which can offer
-
-    students a great chance to practice English and learn different cultures as well. Second, we
-
-    can hold weekly sports matches to strengthen our bodies. Third, a reading corner in the library can
-
-    open our minds and reduce stress. These activities can not only help us relax and keep fit but
-
-    also improve our creativity and teamwork spirit.They all make our school life more colorful
-
-    and help us become better teenagers.
-
-    I hope my suggestions will be put into practice.
-
-    题目
-
-    目②
-
-    I''d like to share my experience of improving myself. Last term, I found my English listening
-
-    and speaking were not good enough. I was worried and decided to work harder. Every day, I listened
-
-    to English dialogues from textbooks and read after them carefully. I also talked with my English
-
-    teacher and practiced with my classmates in the morning reading.
-
-    Thanks to my hard work, I have got full marks in the listening and speaking test. I have
-
-    learned that keeping trying is the key to success. As long as I never give up, I will become
-
-    better and better.
-
-    评分标准
-
-    容正确，结构不正确，给1分;内容不正确不给分。37题第一问内容1分，第二问内
-
-    容2分;整体语言质量1分。
-
-    该档次内评出分数，共10分。
-
-    具体评分标准如下:
-
-    第一档:(9-10分)
-
-    完全符合题目要求，观点正确，要点齐全。句式多样，词汇丰富。语言准确，语
-
-    意连贯，表达清楚，具有逻辑性。
-
-    第二档:(6-8分)
-
-    基本符合题目要求，观点正确，要点齐全。语法结构和词汇基本满足文章需要。
-
-    语言基本通顺，语意基本连贯，表达基本清楚。虽然有少量语言错误，但不影响整体
-
-    理解。
-
-    第三档:(3-5分)
-
-    部分内容符合题目要求，要点不齐全。语法结构和词汇错误较多，语言不通顺，
-
-    表达不够清楚，影响整体理解。
-
-    第四档:(0-2分)
-
-    与题目有关内容不多，只是简单拼凑词语，所写内容难以理解。
-
-    -、单项填空(每题0.5分，共6分)'
+  solution: "<u>I have some suggestions.</u>   First, we can set up sports clubs like basketball and swimming. They help us\
+    \ keep fit and learn teamwork. Second, an art club is a good idea. We can draw and make crafts, making school life more\
+    \ colorful. Third, as many students love music, we can set up music clubs. We can enjoy music and talk about our favourite\
+    \ music as well. These activities are not only fun but also useful for our growth.   <u>I hope my suggestions will be\
+    \ put into practice.</u>\n\n详解：［第一步：审题立意］ \n确定文体：介绍性说明文，用一般现在时为主 \n明确要点：校园课后活动提议及理由\n确定人称：第一人称（I/we）\n注意事项：运用所给提示词语\n\
+    ［第二步：构思布局］\n三段式结构： \n开头段：总起句，引出建议\n主体段：分别介绍校园课后活动提议及理由\n结尾段：总结与倡议\n［第三步：要点展开］\n要点一：校园课后活动提议及理由\n运动俱乐部：set up sports clubs\
+    \ like basketball and swimming/keep fit and learn teamwork/healthy\n美术俱乐部：an art club is a good idea/draw and make crafts/making\
+    \ school life more colorful/skills\n音乐俱乐部：as many students love music/music clubs/enjoy music/talk about our favourite\
+    \ music as well /sing songs\n要点二：总结\n总结：not only fun but also useful for our growth/meaningful/lively\n题目②"
   knowledge_points:
-  - 写作技能
-  - 表达个人观点
-  - 描述经历
+  - 命题作文
   module: writing
   difficulty: 中等
   recommended_for:
   - L1
   - L2
   - L3
-  qc_status: none
-  qc_note: 选择题缺少 options（既无文本也无图片选项）；选择题 answer 为空
-structure: 38单选(60.0分)
+  qc_status: draft
+  qc_note: ''
+- id: 39
+  type: 作文
+  score: 0
+  stem: '在学习和生活中，我们总会通过某些经历发现自己的进步。某英文网站在开展以“Better Me”为主题的征文活动。假设你是李华，请你用英语写一篇短文投稿，分享一次让你变得更好的经历，以及你从中的收获。
+
+
+    提示词语：worried, work harder, keep trying, success
+
+
+    内容提示：
+
+
+    • Describe your experience of improving yourself.
+
+
+    ·What have you learned from the experience?
+
+
+    | I’d like to share my experience of improving myself.  _______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+    |
+
+    |---|'
+  answer: ''
+  solution: "[二选一备选题目，与上一题任选其一作答；本题不重复计分]\n<u>I’d like to share my experience of improving myself.</u>       Last term, I\
+    \ was worried about my poor English. So I decided to work harder. I asked my English teacher for help. He advised me to\
+    \ listen to the English audio as much as possible. What’s more, I read English every morning and kept trying to speak\
+    \ more. Finally, I got a high score in the exam.       This success has made me confident. I learn that if we keep trying,\
+    \ we can become better. I believe I will do even better in the future.\n\n详解：［第一步：审题立意］ \n确定文体：介绍性记叙文，用一般过去时为主 \n明确要点：自己进步的经历、从中学到了什么\n\
+    确定人称：第一人称（I/my）\n注意事项：不得透露真实姓名和学校名称\n［第二步：构思布局］\n三段式结构： \n开头段：总起句，引出对自己经历的介绍\n主体段：分别介绍自己进步的经历\n结尾段：总结自己从中学到了什么，升华主题\n\
+    ［第三步：要点展开］\n要点一：自己进步的经历\n起因：was worried about my poor English/in bad condition\n经过：decided to work harder/asked my English\
+    \ teacher for help/advised me to listen to the English audio/as much as possible/What’s more/read English every morning/kept\
+    \ trying to speak more\n结果：Finally/got a high score in the exam/get better\n要点二： 从中学到了什么\n收获：made me confident/learned\
+    \ that if we keep trying/become better/do even better in the future/nothing is impossible"
+  knowledge_points:
+  - 命题作文
+  module: writing
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
