@@ -341,18 +341,22 @@ def parse_docx_chinese(md: str, figures_dir: Path) -> dict:
     md_lines = md.split("\n")
     for q in questions:
         n = q["number"]
-        # stem_head 取第一行非空内容前 6 字符（无换行干扰）
         stem_first_line = next((l for l in (q.get("stem","") or "").split("\n")
                                 if l.strip()), "")
         stem_head = stem_first_line.strip()[:8]
+        first_num_match_idx = -1
         for i, ln in enumerate(md_lines):
             m = NUM_HEAD_RE.match(ln)
             if not m or int(m.group(1)) != n: continue
+            if first_num_match_idx == -1:
+                first_num_match_idx = i  # 记录第一个 "N." 行 (兜底)
             if not stem_head or stem_head[:4] in ln:
                 q["_line_idx"] = i
                 break
         else:
-            q["_line_idx"] = 0
+            # **道法 stem 常是 markdown table (`|...`)**，与"N. "空行内容不匹配，
+            # stem_head check 失败但第一个 "N." 题号行已识别 — 用它兜底
+            q["_line_idx"] = first_num_match_idx if first_num_match_idx >= 0 else 0
     score_blocks = _parse_score_blocks(md, questions)
     _assign_scores(questions, score_blocks)
 
