@@ -604,7 +604,8 @@ questions:
 
     盐水密度
 
-    $\frac{\left(\right. I_{1} - I_{2} \left.\right) R_{0}}{I_{2}}$'
+    $\rho = \frac{m}{V} = \frac{66 \text{g}}{60 \text{cm}^{3}} = 1 . 1 \text{g} / \text{cm}^{3} =\text{1}.\text{1} \times
+    \text{10}^{\text{3}} \text{kg}/\text{cm}^{\text{3}}$'
   knowledge_points:
   - 实验方法
   - 数据处理
@@ -755,18 +756,17 @@ questions:
 
     ③则滑动变阻器的最大阻值RX为__________（用R0、I1、I2表示）。'
   answer: ''
-  solution: '①. 滑片P处于最右端    ②. $I_{2}$
+  solution: '①. 滑片P处于最右端    ②. $\frac{\left(\right. I_{1} - I_{2} \left.\right) R_{0}}{I_{2}}$
 
 
-    详解：[1][2]要测量滑动变阻器的最大阻值，当滑动变阻器接入电路的阻值最大时，即滑片P处于最右端时，记录此时的电流表示数$R_{0}$。当滑片P处于最左端时，滑动变阻器接入电路的电阻为0，此时电路中只有定值电阻$U = I R$​，根据欧姆定律$U
-    = I_{1} R_{0}$，可得电源电压$R_{\text{X}}$
+    详解：[1][2]要测量滑动变阻器的最大阻值，当滑动变阻器接入电路的阻值最大时，即滑片P处于最右端时，记录此时的电流表示数$I_{2}$。当滑片P处于最左端时，滑动变阻器接入电路的电阻为0，此时电路中只有定值电阻$R_{0}$​，根据欧姆定律$U
+    = I R$，可得电源电压$U = I_{1} R_{0}$
 
-    当滑片P处于最右端时，滑动变阻器接入最大阻值$R_{0}$，此时定值电阻$R_{\text{X}}$与滑动变阻器$U = I_{2} \left(R_{0},+,R_{\text{X}}\right)$​串联，根据欧姆定律可得电源电压$I_{1}
-    R_{0} = I_{2} \left(R_{0},+,R_{\text{X}}\right)$
+    当滑片P处于最右端时，滑动变阻器接入最大阻值$R_{\text{X}}$，此时定值电阻$R_{0}$与滑动变阻器$R_{\text{X}}$​串联，根据欧姆定律可得电源电压$U = I_{2} \left(R_{0},+,R_{\text{X}}\right)$
 
-    因为电源电压恒定不变，所以$R_{\text{X}} & = \frac{\left(I_{1},-,I_{2}\right) R_{0}}{I_{2}}$
+    因为电源电压恒定不变，所以$I_{1} R_{0} = I_{2} \left(R_{0},+,R_{\text{X}}\right)$
 
-    解得$\rho_{3} - \rho_{2} = \rho_{2} - \rho_{1}$'
+    解得$R_{\text{X}} & = \frac{\left(I_{1},-,I_{2}\right) R_{0}}{I_{2}}$'
   knowledge_points:
   - 实验方法
   - 数据处理
@@ -835,21 +835,20 @@ questions:
 - id: 23
   type: 实验探究
   score: 3
-  stem: '某同学在粗细均匀的木棒上缠绕一些细铜丝，制作简易密度计，如图甲所示。将它依次放入一系列密度已知的液体中，每次在液体中处于竖直漂浮状态时，在木棒上标出与液面位置相平的刻度线及相应密度值ρ，并测量木棒浸入液体的深度h，再利用收集的数据画出ρ-h图像，如图乙中图线所示。已知$\Delta
-    h_{23}$，铜丝的体积可以忽略。请你分析说明密度计上ρ3与ρ2刻度线的间距$\Delta h_{12}$和ρ2与ρ1刻度线的间距$G$关系。
+  stem: '某同学在粗细均匀的木棒上缠绕一些细铜丝，制作简易密度计，如图甲所示。将它依次放入一系列密度已知的液体中，每次在液体中处于竖直漂浮状态时，在木棒上标出与液面位置相平的刻度线及相应密度值ρ，并测量木棒浸入液体的深度h，再利用收集的数据画出ρ-h图像，如图乙中图线所示。已知$\rho_{3}
+    - \rho_{2} = \rho_{2} - \rho_{1}$，铜丝的体积可以忽略。请你分析说明密度计上ρ3与ρ2刻度线的间距$\Delta h_{23}$和ρ2与ρ1刻度线的间距$\Delta h_{12}$关系。
 
 
     ![](figures/image102.png)'
   answer: ''
-  solution: '因为密度计在不同液体中处于竖直漂浮状态，根据漂浮条件可知，密度计受到的浮力都等于其自身重力$F_{浮} = \rho_{液} g V_{排}$。  根据阿基米德原理$S$​，设木棒的横截面积为$\rho_{1}$，则密度计浸入密度为$h_{1}
-    = \frac{G}{\rho_{1} S g}$​的液体时，深度$\rho_{2}$  浸入密度为$h_{2} = \frac{G}{\rho_{2} S g}$的液体时，深度$\rho_{3}$  浸入密度为$h_{3} = \frac{G}{\rho_{3}
-    S g}$的液体时，深度$\rho_{2}$  那么$\rho_{1}$与$\Delta h_{12} = h_{1} - h_{2} = \frac{G}{\rho_{1} S g} - \frac{G}{\rho_{2} S g}
-    = \frac{G}{S g} \times \frac{\rho_{2} - \rho_{1}}{\rho_{1} \rho_{2}}$​刻度线的间距$\rho_{3}$  $\rho_{2}$​与$\Delta h_{23} = h_{2}
-    - h_{3} = \frac{G}{\rho_{2} S g} - \frac{G}{\rho_{3} S g} = \frac{G}{S g} \times \frac{\rho_{3} - \rho_{2}}{\rho_{2} \rho_{3}}$​刻度线的间距$\rho_{3}
-    - \rho_{2} = \rho_{2} - \rho_{1}$  已知$\rho - h$且由$\rho_{1} < \rho_{2} < \rho_{3}$图像可知$\frac{\Delta h_{23}}{\Delta h_{12}}
+  solution: '因为密度计在不同液体中处于竖直漂浮状态，根据漂浮条件可知，密度计受到的浮力都等于其自身重力$G$。  根据阿基米德原理$F_{浮} = \rho_{液} g V_{排}$​，设木棒的横截面积为$S$，则密度计浸入密度为$\rho_{1}$​的液体时，深度$h_{1}
+    = \frac{G}{\rho_{1} S g}$  浸入密度为$\rho_{2}$的液体时，深度$h_{2} = \frac{G}{\rho_{2} S g}$  浸入密度为$\rho_{3}$的液体时，深度$h_{3} = \frac{G}{\rho_{3}
+    S g}$  那么$\rho_{2}$与$\rho_{1}$​刻度线的间距$\Delta h_{12} = h_{1} - h_{2} = \frac{G}{\rho_{1} S g} - \frac{G}{\rho_{2} S g}
+    = \frac{G}{S g} \times \frac{\rho_{2} - \rho_{1}}{\rho_{1} \rho_{2}}$  $\rho_{3}$​与$\rho_{2}$​刻度线的间距$\Delta h_{23} = h_{2}
+    - h_{3} = \frac{G}{\rho_{2} S g} - \frac{G}{\rho_{3} S g} = \frac{G}{S g} \times \frac{\rho_{3} - \rho_{2}}{\rho_{2} \rho_{3}}$  已知$\rho_{3}
+    - \rho_{2} = \rho_{2} - \rho_{1}$且由$\rho - h$图像可知$\rho_{1} < \rho_{2} < \rho_{3}$  则$\frac{\Delta h_{23}}{\Delta h_{12}}
     = \frac{\frac{G}{S g} \times \frac{\rho_{3} - \rho_{2}}{\rho_{2} \rho_{3}}}{\frac{G}{S g} \times \frac{\rho_{2} - \rho_{1}}{\rho_{1}
-    \rho_{2}}} = \frac{\rho_{1}}{\rho_{3}} < 1$  则$\Delta h_{23} < \Delta h_{12}$  所以$\rho_{3}$  即密度计上$\rho_{2}$​与$\rho_{2}$​刻度线的间距小于$\rho_{1}$​与$G
-    = m g = 70 k g \times 10 \text{N} / k g = 700 \text{N}$刻度线的间距。
+    \rho_{2}}} = \frac{\rho_{1}}{\rho_{3}} < 1$  所以$\Delta h_{23} < \Delta h_{12}$  即密度计上$\rho_{3}$​与$\rho_{2}$​刻度线的间距小于$\rho_{2}$​与$\rho_{1}$刻度线的间距。
 
 
     详解：见答案。'
@@ -908,17 +907,16 @@ questions:
 
     （2）
 
-    成年人重力约为$M = F \cdot L$
+    成年人重力约为$G = m g = 70 k g \times 10 \text{N} / k g = 700 \text{N}$
 
     题目说明H2体重与成年人相近，因此选A。
 
 
     （3）
 
-    根据材料给出的扭矩定义：扭矩=力×力臂，即$F = \frac{M}{L}$，变形得力$F = \frac{M}{L} = \frac{120 \text{N} \cdot \text{m}}{0 . 25 \text{m}} = 480
-    \text{N}$
+    根据材料给出的扭矩定义：扭矩=力×力臂，即$M = F \cdot L$，变形得力$F = \frac{M}{L}$
 
-    腿部施加的力$5 \Omega$'
+    腿部施加的力$F = \frac{M}{L} = \frac{120 \text{N} \cdot \text{m}}{0 . 25 \text{m}} = 480 \text{N}$'
   knowledge_points:
   - 力学：力的概念
   - 力学：简单机械
@@ -947,30 +945,29 @@ questions:
 
     （3）求电路中最大的电功率。'
   answer: ''
-  solution: '（1）![](figures/image125.png)    （2）$0 . 9 W$      （3）$R_{\text{P}}$
+  solution: '（1）![](figures/image125.png)    （2）$5 \Omega$      （3）$0 . 9 W$
 
 
     详解：（1）
 
-    分析实物连接顺序，电流从电源正极流出，依次经过滑动变阻器$R_{0}$、定值电阻$R_{0}$、开关S，回到电源负极，电压表并联在$R_{0}$两端，按该连接顺序画出规范电路图即可。
+    分析实物连接顺序，电流从电源正极流出，依次经过滑动变阻器$R_{\text{P}}$、定值电阻$R_{0}$、开关S，回到电源负极，电压表并联在$R_{0}$两端，按该连接顺序画出规范电路图即可。
 
 
     （2）
 
-    由图可知，$R_{\text{P}}$与$R_{0}$串联，电压表测$I = I_{0} = \frac{U_{0}}{R_{0}} = \frac{2 \text{V}}{10 \Omega} = 0 . 2 \text{A}$两端电压，可得电路中的电流为$U_{\text{P}}
-    = U - U_{0} = 3 \text{V} - 2 \text{V} = 1 \text{V}$
+    由图可知，$R_{0}$与$R_{\text{P}}$串联，电压表测$R_{0}$两端电压，可得电路中的电流为$I = I_{0} = \frac{U_{0}}{R_{0}} = \frac{2 \text{V}}{10 \Omega}
+    = 0 . 2 \text{A}$
 
-    根据串联电路电压规律，滑动变阻器两端电压$R_{\text{P}}$
+    根据串联电路电压规律，滑动变阻器两端电压$U_{\text{P}} = U - U_{0} = 3 \text{V} - 2 \text{V} = 1 \text{V}$
 
-    可得$R_{\text{P}} = \frac{U_{\text{P}}}{I} = \frac{1 \text{V}}{0 . 2 \text{A}} = 5 \Omega$接入电路的阻值$U$
+    可得$R_{\text{P}}$接入电路的阻值$R_{\text{P}} = \frac{U_{\text{P}}}{I} = \frac{1 \text{V}}{0 . 2 \text{A}} = 5 \Omega$
 
 
     （3）
 
-    电源电压$P = \frac{U^{2}}{R_{总}}$保持不变，根据电功率公式$R_{总} = R_{0} = 10 \Omega$可知，电路总电阻越小，总功率越大。当滑动变阻器接入电路的阻值为0时，电路总电阻最小，最小总电阻为$P_{最大}
-    = \frac{U^{2}}{R_{0}} = \frac{\left(\left(3,\text{V}\right)\right)^{2}}{10 \Omega} = 0 . 9 \text{W}$
+    电源电压$U$保持不变，根据电功率公式$P = \frac{U^{2}}{R_{总}}$可知，电路总电阻越小，总功率越大。当滑动变阻器接入电路的阻值为0时，电路总电阻最小，最小总电阻为$R_{总} = R_{0} = 10 \Omega$
 
-    因此电路的最大电功率为$5 \times 10^{4} \text{Pa}$'
+    因此电路的最大电功率为$P_{最大} = \frac{U^{2}}{R_{0}} = \frac{\left(\left(3,\text{V}\right)\right)^{2}}{10 \Omega} = 0 . 9 \text{W}$'
   knowledge_points:
   - 欧姆定律
   - 电功率
@@ -996,31 +993,30 @@ questions:
 
     （2）若篮板和横梁支架的总质量为45 kg，为保证篮球架不会向左倾斜，底座的重力至少为多少N？'
   answer: ''
-  solution: '（1）$G_{总} = m_{总} g = 150 \text{kg} \times 10 \text{N}/\text{kg} = 1500 \text{N}$      （2）630N
+  solution: '（1）$5 \times 10^{4} \text{Pa}$      （2）630N
 
 
     详解：（1）
 
-    篮球架的总重力$F = G_{总} = 1500 \text{N}$
+    篮球架的总重力$G_{总} = m_{总} g = 150 \text{kg} \times 10 \text{N}/\text{kg} = 1500 \text{N}$
 
-    篮球架对水平地面的压力等于总重力，即$S = 300 \text{cm}^{\text{2}} = 0 . 03 \text{m}^{\text{2}}$
+    篮球架对水平地面的压力等于总重力，即$F = G_{总} = 1500 \text{N}$
 
-    底座四脚与水平地面的总接触面积为$p = \frac{F}{S} = \frac{1500 \text{N}}{0 . 03 \text{m}^{\text{2}}} = 5 \times 10^{4} \text{Pa}$
+    底座四脚与水平地面的总接触面积为$S = 300 \text{cm}^{\text{2}} = 0 . 03 \text{m}^{\text{2}}$
 
-    根据压强公式可得$G_{1} = m_{1} g = 45 \text{kg} \times 10 \text{N}/\text{kg} = 450 \text{N}$
+    根据压强公式可得$p = \frac{F}{S} = \frac{1500 \text{N}}{0 . 03 \text{m}^{\text{2}}} = 5 \times 10^{4} \text{Pa}$
 
 
     （2）
 
-    篮板和横梁支架的重力$L_{1} = A B = 140 \text{cm}$
+    篮板和横梁支架的重力$G_{1} = m_{1} g = 45 \text{kg} \times 10 \text{N}/\text{kg} = 450 \text{N}$
 
-    篮球架不向左倾斜的临界状态是以B点为支点，整体处于平衡状态；此时篮板和横梁支架的重力G1的力臂为$L_{2} = \frac{B C}{2} = \frac{200 \text{cm}}{2} = 100 \text{cm}$，底座重力G2的力臂为BC的一半，即$G_{1}
-    L_{1} = G_{2} L_{2}$
+    篮球架不向左倾斜的临界状态是以B点为支点，整体处于平衡状态；此时篮板和横梁支架的重力G1的力臂为$L_{1} = A B = 140 \text{cm}$，底座重力G2的力臂为BC的一半，即$L_{2} = \frac{B C}{2}
+    = \frac{200 \text{cm}}{2} = 100 \text{cm}$
 
-    根据杠杆平衡条件$450 \text{N} \times 140 \text{cm} = G_{2} \times 100 \text{cm}$，代入数据得$G_{2} = \frac{450 \text{N} \times 140 \text{cm}}{100
-    \text{cm}} = 630 \text{N}$
+    根据杠杆平衡条件$G_{1} L_{1} = G_{2} L_{2}$，代入数据得$450 \text{N} \times 140 \text{cm} = G_{2} \times 100 \text{cm}$
 
-    解得![](figures/image146.png)'
+    解得$G_{2} = \frac{450 \text{N} \times 140 \text{cm}}{100 \text{cm}} = 630 \text{N}$'
   knowledge_points:
   - 压强
   - 力的概念

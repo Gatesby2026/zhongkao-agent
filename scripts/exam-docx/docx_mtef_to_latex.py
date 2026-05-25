@@ -25,8 +25,13 @@ import tempfile
 from pathlib import Path
 
 D2T_HOME = Path(os.environ.get("D2T_HOME", "/tmp/d2t/docx2tex"))
-INLINE_EQ_RE = re.compile(
-    r'<inlineequation[^>]*>(.*?)</inlineequation>', re.DOTALL)
+# d2t 把 OLE 公式输出为两种 hub 元素：
+#   - <inlineequation role="mtef" condition="ole">  （行内公式，绝大多数）
+#   - <equation role="mtef" condition="ole">          （独占段落的 block 公式）
+# 必须两种都抓，否则 counter 会跟 walker 的 99 个 <w:object> 错位
+EQ_RE = re.compile(
+    r'<(?:inline)?equation[^>]*condition="ole"[^>]*>(.*?)</(?:inline)?equation>',
+    re.DOTALL)
 
 
 def _run_d2t(docx_path: Path, out_dir: Path) -> Path:
@@ -77,7 +82,7 @@ def extract_formulas(docx_path: Path, cache_dir: Path,
         hub_xml = _run_d2t(docx_path, Path(tmp))
         text = hub_xml.read_text(encoding="utf-8")
 
-    blocks = INLINE_EQ_RE.findall(text)
+    blocks = EQ_RE.findall(text)
     formulas = [_mathml_to_latex_block(b) for b in blocks]
     cache_file.write_text(
         json.dumps(formulas, ensure_ascii=False, indent=2), encoding="utf-8")
