@@ -208,7 +208,8 @@ NOISE_LINE_RE = re.compile(
     r"|语文试卷|英语试卷|声明.*?著作权|发布日期|菁优网"
     r"|参考答案|答案及评分"
     r"|第[一二三四五六]部分"  # 卷面分段标记，复用物理 fix
-    r"|本部分共\d+题.*$"     # 朝阳 "本部分共33题，共40分。..." 整行噪声
+    r"|本部分共\d+\s*(?:小)?题.*$"     # 朝阳 "本部分共33题..." / changping "本部分共5小题,共20分"
+    r"|题目[①②③\d]+[.\．。、:：]?\s*$"  # essay 二选一 anchor 残留 ("题目②"/"题目2."/"题目2")
     r")\s*$")
 
 
@@ -584,9 +585,12 @@ def _parse_answers(a_lines: list[str]) -> dict[int, dict]:
 
     def _flush_answer_buf():
         if not answer_buf: return
-        text = " ".join(answer_buf)
-        # 拆按 "N. " 题号锚；若整体无 "N." 前缀，归到 default_q
-        parts = re.split(r"\s+(?=\d{1,2}\s*[.、．])", text)
+        # **关键**：用 \n join 保留行边界，split 只在 **行首** 或 **4+ 空格 inline-summary**
+        # 前才切。防 essay 范文 "Class 1, Grade 9. I'm glad..." 被误切成 Q9 答案条目
+        # （shunyi/pinggu/yanshan Q9 sol 跨 section 混入 Q39 essay 范文的根因）。
+        text = "\n".join(ln.strip() for ln in answer_buf if ln.strip())
+        parts = re.split(r"(?:^|\n|\s{4,})(?=\d{1,2}\s*[.、．])", text)
+        parts = [p.strip() for p in parts if p.strip()]
         for part in parts:
             m = re.match(r"\s*(\d{1,2})\s*[.、．]\s*(.+)$", part, re.DOTALL)
             if m:
@@ -642,6 +646,10 @@ def _parse_answers(a_lines: list[str]) -> dict[int, dict]:
             if default_q:
                 cur_detail = default_q
                 detail_blocks.setdefault(cur_detail, [])
+                # 同行内容（如 "【详解】句意：xxx" 中的 "句意：xxx"）也要捕获
+                inline = re.sub(r"^\s*【详解】\s*", "", ln).strip()
+                if inline:
+                    detail_blocks[cur_detail].append(inline)
             continue
         if DAOYU_RE.match(ln) or DIANJING_RE.match(ln):
             cur_detail = None
