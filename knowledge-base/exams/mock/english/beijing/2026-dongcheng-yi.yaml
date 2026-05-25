@@ -63,15 +63,128 @@ passages:
     Leo influenced us in such a positive way. He taught us that, no matter how small a task might be, we can always find a
     / an <u>____20____</u> in it. Truly seeing others, even for a moment, can turn a seemingly unimportant job into a quiet
     light.'
-- id: reading_intro
+- id: reading_A
   type: reading
-  name: ''
+  name: A
   q_range:
   - 21
-  - 33
-  body: 'A
+  - 23
+  body: 下列每个图片代表一处就餐场所，请根据人物的用餐计划匹配最适合的场所，并将图片所对应的选项（A、B、C、D）填在相应位置上。其中一个选项为多余选项。
+- id: reading_B
+  type: reading
+  name: B
+  q_range:
+  - 24
+  - 26
+  body: '阅读下列短文，根据短文内容，从短文后各题所给的 A、B、C、D 四个选项中，选择最佳选项。
 
-    下列每个图片代表一处就餐场所，请根据人物的用餐计划匹配最适合的场所，并将图片所对应的选项（A、B、C、D）填在相应位置上。其中一个选项为多余选项。'
+    David felt no joy. It was his second week at the new school but he still had no friends. Every time he went up to his
+    classmates, he found a closed circle. The football team had enough players. The art club was full. Everyone had their
+    own groups.
+
+    During break, he saw some classmates throwing darts and counting the holes on a dartboard. David wondered what they were
+    doing but he couldn’t find the courage to ask.
+
+    ![](figures/image10.png)
+
+    The next day was the Class Fun Day. There were circles all around David. Big, bright hula hoops (呼啦圈).
+
+    Suddenly someone shouted, “Look at David’s hula hoop.” David had brought an old bicycle tyre (轮胎). He wanted to disappear.
+    Again, he could feel the circle closing, leaving him out. The other children ran out to play. David was left alone.
+
+    “Why are you in class, David?” Mr Wilson, his maths teacher, asked. “They laughed at my ugly circle,” David replied.
+
+    “Ah David,” the teacher said. “It’s not what’s on the outside that matters. It’s what’s inside. Just like pi (π).”
+
+    Mr Wilson picked up David’s tyre and a big, shiny hula hoop.
+
+    “Divide the length of the circumference (周长) of this hula hoop by its diameter (直径),” Mr Wilson said. David got 3.14768.
+    “Great! Now divide the circumference of your tyre by its diameter.” David got 3.1463.
+
+    Mr Wilson smiled. “When we divide the circumference of any circle by its diameter, the number we get is always about 3.14.
+    This is called pi. Whether it is a shiny hula hoop or an old tyre, you will find pi.”
+
+    David understood what Mr Wilson was trying to tell him. When it came to the laws of maths, his tyre was just as good as
+    a shiny hula hoop. He realised that circles may appear to be closed but they had an open mystery (奥秘) inside them. Then
+    he read a book about pi.
+
+    In the afternoon, he saw a younger group of children playing a game at the dartboard.
+
+    “I’m David,” he said. “I read about pi. I know what this is.” The children formed a circle around David. He counted the
+    holes and started doing the maths. The answer was 3.14159. There was a loud cheer. David was finally part of a circle.
+    He felt a sense of wonder.'
+  figure: 2026-dongcheng-yi/figures/image10.png
+- id: reading_C
+  type: reading
+  name: C
+  q_range:
+  - 27
+  - 29
+  body: 'Have you ever looked up at a beautiful rainbow when noticing your friend looking at it? At that moment, both of you
+    were focusing on the same object and aware of each other’s attention. This shared focus is called joint(共同的)attention.
+    It depends on social cues(提示)such as actions or words that help two people to focus on the same thing.
+
+    When completing tasks or solving problems, it is often said that two heads are better than one. But what does “better”
+    mean? In one study, researchers asked pairs of participants(参与者)to complete a search task alone and then together. They
+    found that when the participants worked together, they were faster at finding the goal, which researchers suggest is“better”performance.
+
+    You might be wondering why two heads are better. Is it simply because you have another pair of eyes or because you divide
+    the task? Well, the answer is both! Just having another pair of eyes can make a task easier and faster, so a group benefit
+    can be found even if two people do not talk about the division of work. By dividing the work, you are more likely to finish
+    the task faster, though one may work a little faster than the other.
+
+    Researchers have also been interested in whether joint attention improves memory. They asked participants to remember
+    pictures and found that when people believed another person was looking at the same picture and doing the same task, they
+    remembered the picture better. So, this suggests that even when people imagine social cues, like just thinking someone
+    else is focusing on the same task, joint attention can help people better remember things.
+
+    Today, however, many interactions(互动)take place online. It is important to understand whether online interactions with
+    others influence people’s attention. Researchers asked participants to complete a search task on their home computers,
+    with an imaginary partner. The results showed that people were more accurate(准确的)when they thought they were working together
+    with a partner, but faster when they thought they were competing with that partner. Interestingly, it did not matter how
+    realistic the imaginary partner’s image(形象)was.
+
+    All in all, joint attention is an important part of human interaction that shapes how people work together and how they
+    remember. By understanding this, we can better recognise the value of our interactions.'
+- id: reading_D
+  type: reading
+  name: D
+  q_range:
+  - 30
+  - 33
+  body: 'Artificial Intelligence (AI) has already become an important part of our daily lives. From answering our questions
+    to recommending movies, AI is no longer an idea of the future but a present-day reality. Yet behind this progress lies
+    a strange and sometimes troubling problem: hallucinations.
+
+    An AI hallucination happens when a generative (生成式的) model produces information that seems believable but does not match
+    reality. For example, if a model is asked to provide a source (来源) for a medical study, it might invent a paper with a
+    realistic title, believable writers, and even a journal listing, but the paper is not real. AI hallucinations result from
+    the way the models are trained: on a great deal of human-generated text, images, and other information. A model’s job
+    is to predict the most likely sequence (序列) of words or pixels to come next. But it does not understand facts the way
+    humans do. So sometimes, those predictions are untrue.
+
+    One cause of AI hallucinations is data limitations (局限). Even large datasets cannot cover every possible fact, and missing
+    or incorrect information may lead to mistakes. Also, a model might learn that some structures or patterns (模式) are common
+    — such as the organization of a scientific report — and copy them even when there is no real source. Finally, <u>the lack
+    of grounding</u> is key. AI models generate text only by probability. Without ways to check against real facts, the model
+    cannot decide whether it is true.
+
+    ![](figures/image15.png)
+
+    Researchers are exploring ways to reduce or prevent hallucinations. One promising method is to connect AI models to live
+    databases, scientific collections, or trusted knowledge networks. This allows the model to check its outputs (输出的内容) against
+    them. Some developers are also introducing testing steps, where models explain their reasoning or clearly show their sources,
+    making it easier for users to judge the truthfulness of answers. In addition, AI models can be used together with traditional
+    search engines or fact-checking tools to check the facts before giving the final output.
+
+    However, fixing hallucinations is not just a matter of improving models. Education is also important. Just as society
+    learned to question sources during the rise of the Internet, we must now develop the ability to wisely judge AI outputs.
+
+    In the end, the story of AI hallucinations is also the story of humanity’s relationship with its own creations. It is
+    a story of dreams, mistakes, correction, and growth. By facing the problem honestly, we can ensure that AI will be a tool
+    for knowledge, empowerment, and discovery — without letting the hallucinations of machines become hallucinations of our
+    own.'
+  figure: 2026-dongcheng-yi/figures/image15.png
 - id: reading_express_intro
   type: reading_express
   name: ''
@@ -143,7 +256,7 @@ questions:
   answer: A
   solution: in在（季节/年/月）；on在（具体某天）；at在（具体时刻）；for为了。根据“spring”可知此处表示在春天，季节前应用介词“in”。
   knowledge_points:
-  - 时间介词的使用
+  - 介词的使用
   module: grammar
   difficulty: 基础
   recommended_for:
@@ -243,7 +356,7 @@ questions:
   answer: A
   solution: or 或者，否则；and 和，并且；so 所以；but 但是。根据“Hurry up”这一祈使句可知，后句“we'll miss the beginning of the movie”是在描述不快点就会导致的负面结果，表示“否则”，应填or。
   knowledge_points:
-  - 连词的使用
+  - 连贯
   module: grammar
   difficulty: 基础
   recommended_for:
@@ -270,7 +383,7 @@ questions:
   solution: will volunteer为一般将来时；volunteers为一般现在时；is volunteering为现在进行时；has volunteered为现在完成时。根据问句中的时间状语“right now”可知，答语表示此刻正在进行的动作，应用现在进行时，应填is
     volunteering。
   knowledge_points:
-  - 现在进行时
+  - 时态运用
   module: grammar
   difficulty: 基础
   recommended_for:
@@ -626,7 +739,7 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: reading_intro
+  passage_id: reading_A
 - id: 22
   type: reading
   score: 2
@@ -650,7 +763,7 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: reading_intro
+  passage_id: reading_A
 - id: 23
   type: reading
   score: 2
@@ -663,50 +776,11 @@ questions:
 
     |---|---|'
   answer: B
-  solution: '“I’m very busy today and don’t have much time to eat, so I just want to get a hamburger from a fast-food restaurant
+  solution: “I’m very busy today and don’t have much time to eat, so I just want to get a hamburger from a fast-food restaurant
     and get back to work as soon as possible.”表明Robert时间紧张，想要去快餐店买汉堡，B图就是售卖汉堡薯条的快餐店，匹配该需求。
-
-    B
-
-    阅读下列短文，根据短文内容，从短文后各题所给的 A、B、C、D 四个选项中，选择最佳选项。
-
-    David felt no joy. It was his second week at the new school but he still had no friends. Every time he went up to his
-    classmates, he found a closed circle. The football team had enough players. The art club was full. Everyone had their
-    own groups.
-
-    During break, he saw some classmates throwing darts and counting the holes on a dartboard. David wondered what they were
-    doing but he couldn’t find the courage to ask.
-
-    ![](figures/image10.png)
-
-    The next day was the Class Fun Day. There were circles all around David. Big, bright hula hoops (呼啦圈).
-
-    Suddenly someone shouted, “Look at David’s hula hoop.” David had brought an old bicycle tyre (轮胎). He wanted to disappear.
-    Again, he could feel the circle closing, leaving him out. The other children ran out to play. David was left alone.
-
-    “Why are you in class, David?” Mr Wilson, his maths teacher, asked. “They laughed at my ugly circle,” David replied.
-
-    “Ah David,” the teacher said. “It’s not what’s on the outside that matters. It’s what’s inside. Just like pi (π).”
-
-    Mr Wilson picked up David’s tyre and a big, shiny hula hoop.
-
-    “Divide the length of the circumference (周长) of this hula hoop by its diameter (直径),” Mr Wilson said. David got 3.14768.
-    “Great! Now divide the circumference of your tyre by its diameter.” David got 3.1463.
-
-    Mr Wilson smiled. “When we divide the circumference of any circle by its diameter, the number we get is always about 3.14.
-    This is called pi. Whether it is a shiny hula hoop or an old tyre, you will find pi.”
-
-    David understood what Mr Wilson was trying to tell him. When it came to the laws of maths, his tyre was just as good as
-    a shiny hula hoop. He realised that circles may appear to be closed but they had an open mystery (奥秘) inside them. Then
-    he read a book about pi.
-
-    In the afternoon, he saw a younger group of children playing a game at the dartboard.
-
-    “I’m David,” he said. “I read about pi. I know what this is.” The children formed a circle around David. He counted the
-    holes and started doing the maths. The answer was 3.14159. There was a loud cheer. David was finally part of a circle.
-    He felt a sense of wonder.'
   knowledge_points:
-  - 信息筛选
+  - 阅读理解
+  - 信息提取
   module: reading
   difficulty: 基础
   recommended_for:
@@ -716,7 +790,7 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: reading_intro
+  passage_id: reading_A
 - id: 24
   type: reading
   score: 2
@@ -739,7 +813,7 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: reading_intro
+  passage_id: reading_B
 - id: 25
   type: reading
   score: 2
@@ -752,7 +826,7 @@ questions:
   answer: C
   solution: 文章后半部分讲述戴维读完关于pi(π)的书籍后，主动向低年级孩子讲解圆周率相关知识，凭借自身数学知识获得大家认可，从而融入了圈子。
   knowledge_points:
-  - 信息筛选
+  - 信息提取
   module: reading
   difficulty: 基础
   recommended_for:
@@ -762,7 +836,7 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: reading_intro
+  passage_id: reading_B
 - id: 26
   type: reading
   score: 2
@@ -773,36 +847,7 @@ questions:
     C: Happiness lies in small things.
     D: Learning is a lifelong journey.
   answer: B
-  solution: '全文以光鲜的呼啦圈和破旧自行车轮胎外表不同但圆周率数值相同为切入点，告诉读者不要只看重外在表象，内在本质才更为重要，点明了文章的主旨。
-
-    C
-
-    Have you ever looked up at a beautiful rainbow when noticing your friend looking at it? At that moment, both of you were
-    focusing on the same object and aware of each other’s attention. This shared focus is called joint(共同的)attention. It depends
-    on social cues(提示)such as actions or words that help two people to focus on the same thing.
-
-    When completing tasks or solving problems, it is often said that two heads are better than one. But what does “better”
-    mean? In one study, researchers asked pairs of participants(参与者)to complete a search task alone and then together. They
-    found that when the participants worked together, they were faster at finding the goal, which researchers suggest is“better”performance.
-
-    You might be wondering why two heads are better. Is it simply because you have another pair of eyes or because you divide
-    the task? Well, the answer is both! Just having another pair of eyes can make a task easier and faster, so a group benefit
-    can be found even if two people do not talk about the division of work. By dividing the work, you are more likely to finish
-    the task faster, though one may work a little faster than the other.
-
-    Researchers have also been interested in whether joint attention improves memory. They asked participants to remember
-    pictures and found that when people believed another person was looking at the same picture and doing the same task, they
-    remembered the picture better. So, this suggests that even when people imagine social cues, like just thinking someone
-    else is focusing on the same task, joint attention can help people better remember things.
-
-    Today, however, many interactions(互动)take place online. It is important to understand whether online interactions with
-    others influence people’s attention. Researchers asked participants to complete a search task on their home computers,
-    with an imaginary partner. The results showed that people were more accurate(准确的)when they thought they were working together
-    with a partner, but faster when they thought they were competing with that partner. Interestingly, it did not matter how
-    realistic the imaginary partner’s image(形象)was.
-
-    All in all, joint attention is an important part of human interaction that shapes how people work together and how they
-    remember. By understanding this, we can better recognise the value of our interactions.'
+  solution: 全文以光鲜的呼啦圈和破旧自行车轮胎外表不同但圆周率数值相同为切入点，告诉读者不要只看重外在表象，内在本质才更为重要，点明了文章的主旨。
   knowledge_points:
   - 启示感悟
   module: reading
@@ -813,7 +858,7 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: reading_intro
+  passage_id: reading_B
 - id: 27
   type: reading
   score: 2
@@ -835,7 +880,7 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: reading_intro
+  passage_id: reading_C
 - id: 28
   type: reading
   score: 2
@@ -848,7 +893,7 @@ questions:
   answer: C
   solution: 第五段提到，认为与虚拟伙伴合作时，参与者准确率更高；认为与其竞争时，速度更快，C项，想象与他人合作能带来更好的表现，符合文意。A项，共同注意在线上比现实中效果更好。文中未对比线上线下效果，无依据。B项，共同注意取决于人们记忆事物的好坏。逻辑颠倒，是共同注意提升记忆力，而非依赖记忆。D项，线上环境中合作比竞争更重要。文中只对比了合作与竞争的表现差异，未强调谁更重要。
   knowledge_points:
-  - 信息筛选
+  - 启示感悟
   module: reading
   difficulty: 中等
   recommended_for:
@@ -857,7 +902,7 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: reading_intro
+  passage_id: reading_C
 - id: 29
   type: reading
   score: 2
@@ -868,54 +913,18 @@ questions:
     C: From Social Cues to Connection
     D: The Key to Effective Interactions
   answer: B
-  solution: '全文围绕shared focus（共同注意/联合注意力）展开，介绍它对合作效率、记忆、线上互动的积极作用，核心是其影响力。B项，共同专注的力量。精准概括全文核心主题。A项，从注意到表现。片面，未涵盖记忆、互动等内容。C项，从社会提示到联结。仅为文中细节，非主旨。D项，有效互动的关键。范围过大，偏离共同注意这一核心。
-
-    D
-
-    Artificial Intelligence (AI) has already become an important part of our daily lives. From answering our questions to
-    recommending movies, AI is no longer an idea of the future but a present-day reality. Yet behind this progress lies a
-    strange and sometimes troubling problem: hallucinations.
-
-    An AI hallucination happens when a generative (生成式的) model produces information that seems believable but does not match
-    reality. For example, if a model is asked to provide a source (来源) for a medical study, it might invent a paper with a
-    realistic title, believable writers, and even a journal listing, but the paper is not real. AI hallucinations result from
-    the way the models are trained: on a great deal of human-generated text, images, and other information. A model’s job
-    is to predict the most likely sequence (序列) of words or pixels to come next. But it does not understand facts the way
-    humans do. So sometimes, those predictions are untrue.
-
-    One cause of AI hallucinations is data limitations (局限). Even large datasets cannot cover every possible fact, and missing
-    or incorrect information may lead to mistakes. Also, a model might learn that some structures or patterns (模式) are common
-    — such as the organization of a scientific report — and copy them even when there is no real source. Finally, <u>the lack
-    of grounding</u> is key. AI models generate text only by probability. Without ways to check against real facts, the model
-    cannot decide whether it is true.
-
-    ![](figures/image15.png)
-
-    Researchers are exploring ways to reduce or prevent hallucinations. One promising method is to connect AI models to live
-    databases, scientific collections, or trusted knowledge networks. This allows the model to check its outputs (输出的内容) against
-    them. Some developers are also introducing testing steps, where models explain their reasoning or clearly show their sources,
-    making it easier for users to judge the truthfulness of answers. In addition, AI models can be used together with traditional
-    search engines or fact-checking tools to check the facts before giving the final output.
-
-    However, fixing hallucinations is not just a matter of improving models. Education is also important. Just as society
-    learned to question sources during the rise of the Internet, we must now develop the ability to wisely judge AI outputs.
-
-    In the end, the story of AI hallucinations is also the story of humanity’s relationship with its own creations. It is
-    a story of dreams, mistakes, correction, and growth. By facing the problem honestly, we can ensure that AI will be a tool
-    for knowledge, empowerment, and discovery — without letting the hallucinations of machines become hallucinations of our
-    own.'
+  solution: 全文围绕shared focus（共同注意/联合注意力）展开，介绍它对合作效率、记忆、线上互动的积极作用，核心是其影响力。B项，共同专注的力量。精准概括全文核心主题。A项，从注意到表现。片面，未涵盖记忆、互动等内容。C项，从社会提示到联结。仅为文中细节，非主旨。D项，有效互动的关键。范围过大，偏离共同注意这一核心。
   knowledge_points:
   - 信息筛选
   module: reading
-  difficulty: 基础
+  difficulty: 中等
   recommended_for:
-  - L0
   - L1
   - L2
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: reading_intro
+  passage_id: reading_C
 - id: 30
   type: reading
   score: 2
@@ -939,7 +948,7 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: reading_intro
+  passage_id: reading_D
 - id: 31
   type: reading
   score: 2
@@ -962,7 +971,7 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: reading_intro
+  passage_id: reading_D
 - id: 32
   type: reading
   score: 2
@@ -985,7 +994,7 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: reading_intro
+  passage_id: reading_D
 - id: 33
   type: reading
   score: 2
@@ -996,14 +1005,9 @@ questions:
     C: To guide proper judgment of AI-generated information.
     D: To encourage people to build a closer relationship with AI.
   answer: C
-  solution: '文章最后强调，我们需要“develop the ability to wisely judge AI outputs”，因此作者的主要写作目的是引导人们正确判断AI生成的信息。
-
-    第二部分
-
-    本部分共5题，共20分。根据题目要求，完成相应任务。'
+  solution: 文章最后强调，我们需要“develop the ability to wisely judge AI outputs”，因此作者的主要写作目的是引导人们正确判断AI生成的信息。
   knowledge_points:
-  - 阅读理解
-  - 作者意图
+  - 信息筛选
   module: reading
   difficulty: 中等
   recommended_for:
@@ -1012,7 +1016,7 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: reading_intro
+  passage_id: reading_D
 - id: 34
   type: reading_express
   score: 2
@@ -1020,7 +1024,8 @@ questions:
 
 
     _____________________________'
-  answer: ''
+  answer: A time optimist is someone who usually underestimates how long something takes, and overestimates how much time
+    they actually have.
   solution: 'A time optimist is someone who usually underestimates how long something takes, and overestimates how much time
     they actually have.
 
@@ -1046,7 +1051,7 @@ questions:
 
 
     _____________________________'
-  answer: ''
+  answer: A time optimist often rushes through the days, leaves tasks unfinished, and feels regretful.
   solution: 'A time optimist often rushes through the days, leaves tasks unfinished, and feels regretful.
 
 
@@ -1069,7 +1074,7 @@ questions:
 
 
     _____________________________'
-  answer: ''
+  answer: Because our brains are good at forgetting boring, slow, or messy middle parts of tasks.
   solution: 'Because our brains are good at forgetting boring, slow, or messy middle parts of tasks.
 
 

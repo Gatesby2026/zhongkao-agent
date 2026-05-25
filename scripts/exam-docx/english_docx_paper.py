@@ -187,6 +187,9 @@ SUB_HEADER_RE = re.compile(
     r"^\s*(资料[一二三四五]|后记|卷首语|前言|序言|材料[一二三四五]"
     r"|[\(（][一二三四五][\)）])(?:\s|$|[\(（])"
 )
+# **英语 reading section 篇标记**：单字母 A/B/C/D 独立成行作 passage 切分
+# 朝阳/海淀/西城/东城等 reading_A/B/C/D 都用 `^A$/^B$/^C$/^D$` 标
+LETTER_PASSAGE_RE = re.compile(r"^\s*([ABCD])\s*$")
 # 题号
 NUM_HEAD_RE = re.compile(r"^\s*(\d{1,2})\s*[.、．,，]\s*(.*)$")
 # 选项行（A. X B. Y / A. X\nB. Y / A.X\tB.Y 等）
@@ -202,8 +205,11 @@ ANALYSIS_RE = re.compile(r"^\s*【解析】")
 NOISE_LINE_RE = re.compile(
     r"^\s*(?:学校[_\s]+班级|2026\.\d{1,2}|考生须知|\d+\s*年.*?试卷\s*$"
     r"|本试卷共\d+页|考试时间\d+\s*分钟"
-    r"|语文试卷|声明.*?著作权|发布日期|菁优网"
-    r"|参考答案|答案及评分)\s*$")
+    r"|语文试卷|英语试卷|声明.*?著作权|发布日期|菁优网"
+    r"|参考答案|答案及评分"
+    r"|第[一二三四五六]部分"  # 卷面分段标记，复用物理 fix
+    r"|本部分共\d+题.*$"     # 朝阳 "本部分共33题，共40分。..." 整行噪声
+    r")\s*$")
 
 
 def _is_section_header(line: str) -> tuple[str, str] | None:
@@ -256,10 +262,22 @@ def parse_docx_chinese(md: str, figures_dir: Path) -> dict:
             continue
         # **sub-header 在 answer 模式 → 切回 question 模式**
         # （古诗文 (二)(三) / 现代文 (一)(二)(三) 都是子段切换信号）
-        if SUB_HEADER_RE.match(ln) and mode == "answer":
+        # **英语 reading section**：`（一）/（二）` 是装饰头（A 篇 vs BCD 篇），
+        # 真正篇标记是 A/B/C/D。装饰头跳过避免污染 sol。
+        sub_m_here = SUB_HEADER_RE.match(ln)
+        if sub_m_here and mode == "answer":
+            if cur_typ == "reading" and re.match(r"^[\(（][一二三四五][\)）]", ln):
+                # reading 内 `（一）/（二）` 装饰头，跳过不进 sections
+                continue
             mode = "question"
             if cur_typ:
                 sections[cur_typ].append(ln)
+            continue
+        # **英语 reading 篇标记** A/B/C/D 独立行作 sub-header
+        if (cur_typ == "reading" and mode == "answer"
+            and LETTER_PASSAGE_RE.match(ln)):
+            mode = "question"
+            sections[cur_typ].append(ln)
             continue
         # **answer 模式里出现新题号锚（N > last_q_seen），且行不含【】标记 → 切回 question**
         # 用于解析版里 sub-header 缺失但题号跳过的情形
@@ -402,6 +420,12 @@ def _parse_section(sec_typ: str, sec_lines: list[str],
         if sub_m:
             sub_starts.append((i, sub_m.group(1)))
             continue
+        # **英语 reading 篇标记** A/B/C/D 独立行
+        if sec_typ == "reading":
+            letter_m = LETTER_PASSAGE_RE.match(ln)
+            if letter_m:
+                sub_starts.append((i, letter_m.group(1)))
+                continue
         q_m = NUM_HEAD_RE.match(ln)
         if q_m and 1 <= int(q_m.group(1)) <= 40:
             q_starts.append((i, int(q_m.group(1)), q_m.group(2)))
@@ -420,8 +444,13 @@ def _parse_section(sec_typ: str, sec_lines: list[str],
     # **passage 合并策略**：
     #   - "资料一/(一)(二)(三)/后记" = 真子段 → 独立 passage
     #   - "材料一/材料二/材料三" = 题面引文 → **合并到上一个真子段的 passage body**
-    # 这样 modern_（一）内的 材料一/二/三 不会变 3 个独立 passage
-    real_subs = [(i, name) for (i, name) in sub_starts if not name.startswith("材料")]
+    #   - **英语 reading**：A/B/C/D 是真子段，`（一）/（二）` 仅装饰（合并到 A/B/C/D）
+    if sec_typ == "reading":
+        # 只保留 A/B/C/D 单字母子段（4 篇），过滤 `（一）/（二）` 装饰头
+        real_subs = [(i, name) for (i, name) in sub_starts
+                      if name in ("A", "B", "C", "D")]
+    else:
+        real_subs = [(i, name) for (i, name) in sub_starts if not name.startswith("材料")]
     real_sub_idx = {s[0]: s[1] for s in real_subs}
     if real_subs:
         # 用 real_subs 切 passage 边界
@@ -616,6 +645,12 @@ def _parse_answers(a_lines: list[str]) -> dict[int, dict]:
             continue
         if DAOYU_RE.match(ln) or DIANJING_RE.match(ln):
             cur_detail = None
+            continue
+        # **过滤噪声**：第二部分 / 学科网 / 本部分共N题 等 NOISE 不进 answer/detail
+        if NOISE_LINE_RE.match(ln):
+            continue
+        # **英语 reading**：`（二）阅读下列短文...` 装饰头不进 detail
+        if re.match(r"^[\(（][一二三四五][\)）](?:阅读|根据)", ln):
             continue
         if in_answer_block:
             answer_buf.append(ln)
@@ -817,7 +852,7 @@ def _backfill_passage_qrange(passages: list[dict], questions: list[dict]) -> Non
 
 
 def _assign_types(questions: list[dict]) -> None:
-    """英语 5 种 type ← section 直接映射。"""
+    """英语 5 种 type ← section 直接映射；reading_express answer 从 sol 抽。"""
     for q in questions:
         sec = q.get("section", "")
         if sec == "choice":          q["type"] = "choice"
@@ -828,6 +863,16 @@ def _assign_types(questions: list[dict]) -> None:
         else:
             ans = q.get("answer", "") or ""
             q["type"] = "choice" if re.fullmatch(r"[A-D]", ans) else "reading_express"
+        # **reading_express answer 字段提取**：sol 首行（答案）→ answer 字段
+        # 道法/物理 主观题 answer 同样从 sol 首行/首块抽
+        if (q["type"] == "reading_express" and not (q.get("answer") or "").strip()):
+            sol = (q.get("solution", "") or "").strip()
+            if sol:
+                # 取第一行 或 第一段（详解前的简答）
+                first_para = sol.split("\n详解")[0].split("【解析】")[0].split("\n\n")[0].strip()
+                # 长度 < 200 才算 answer，否则可能是范文
+                if 0 < len(first_para) < 200:
+                    q["answer"] = first_para
 
 
 def _type_weight(qtype: str, n: int):
@@ -956,7 +1001,7 @@ def main():
     try:
         import yaml as Y
         patch_path = (Path(__file__).resolve().parent.parent.parent
-                      / "knowledge-base" / "exams" / "_patches" / "chinese"
+                      / "knowledge-base" / "exams" / "_patches" / "english"
                       / f"{slug}.yaml")
         if patch_path.exists():
             patches = Y.safe_load(patch_path.read_text(encoding="utf-8")) or {}

@@ -61,18 +61,109 @@ passages:
     while we were drinking hot chocolate.
 
     “And this unusual trip is the best birthday gift I got today,” I smiled to Mom.'
-- id: reading_intro
+- id: reading_A
   type: reading
-  name: ''
+  name: A
   q_range:
   - 21
-  - 33
-  body: '（一）下列每个图片代表一处社区志愿服务活动场景，请根据人物的志愿计划匹配最适合的图片，并将图片所对应的选项（A、B、C、D）填在相应位置上。其中一个选项为多余选项。
-
-    A
-
-    ![](figures/image3.png)'
+  - 23
+  body: '![](figures/image3.png)'
   figure: 2026-yanshan-yi/figures/image3.png
+- id: reading_B
+  type: reading
+  name: B
+  q_range:
+  - 24
+  - 26
+  body: 'It was a long night. Our dog Precious was having puppies. I stayed by her side. After six hours, the puppies finally
+    arrived. The first was black and white. The next two were tan (棕褐色的) and brown, and the last two were also black and white.
+    I counted five puppies and went to tell my wife, Judy, that everything was okay.
+
+    When we came back, we saw a sixth puppy alone in the cage. Judy noticed something was wrong. The puppy had a cleft lip
+    and palate (唇腭裂 ), which meant it couldn’t close its mouth or suckle (吸吮). The vet said it would cost a lot to fix, and
+    the puppy might not survive. We couldn’t afford it, but I decided to try my best to help the puppy. I fed it with a syringe
+    every two hours for over 10 days. The puppy slowly learned to eat soft food.
+
+    After five weeks, we found homes for all the puppies except the one with the cleft lip.
+
+    One day, our neighbor, a retired (退休的) teacher, asked if she could have a puppy for her grandson. When they arrived, I
+    told her all the puppies were taken. Just then, the little puppy with the cleft lip started to yelp (吠叫). The boy ran
+    to the puppy, calling it “my puppy”. He looked up at his grandmother and said, “Look, Grandma! They found homes for all
+    the puppies except the pretty one.”
+
+    The teacher asked if the puppy was available. I said yes. The boy hugged the puppy tightly (紧紧地).
+
+    The image of the boy and his puppy still stays with me. I think it must be a wonderful feeling to look at a small animal
+    and see nothing except “the pretty one”.
+
+    ![](figures/image7.png)'
+  figure: 2026-yanshan-yi/figures/image7.png
+- id: reading_C
+  type: reading
+  name: C
+  q_range:
+  - 27
+  - 29
+  body: 'Do you know that if a dolphin echolocates (进行回声定位) on you, it will see your lungs and your skeleton (骨骼)? Or that
+    cows can see in front, to the side, and behind them all at once?
+
+    While we humans are prisoners (囚犯) of our own senses, the animals experience the world in ways we can hardly imagine.
+    This is what Pulitzer Prize-winner Ed Yong explores in An Immense World: How Animal Senses Reveal the Hidden Realms Around
+    Us. With lively stories, Yong shows that the way we see the world isn’t the only way.
+
+    After reading the book, I was shocked by the fact that we can send satellites into space and use AI every day, yet still
+    hardly understand the creatures (生物) living right beside us. I especially valued how Yong respects different ways of perceiving
+    (感知) things. What lifts this book above dry science is Yong’s writing. His humor is frank (“I could go on. I’m going to
+    go on”), and his metaphors (比喻) are vivid: deep-sea creatures reacting to submarine (潜艇) lights as if attacked by glowing
+    figures. Reading this felt less like a textbook and more like an invitation to wonder.
+
+    The book’s last chapter is both sobering (发人深省的 ) and hopeful. Humans have changed the environment in ways that harm animal
+    senses: lights that confuse birds, flat surfaces that cause bats to crash. Yet we’ve also seen, during the quiet of the
+    pandemic, how quickly nature rebounds (复苏) when we step back. Restoration (修复) is not only possible, but a choice. A choice
+    that is ours to make.
+
+    Some people might be <u>put off</u> by how long and dense (难懂) this book is. But as a person who is not really into science
+    or biology, I still found myself drawn in. An Immense World will leave anyone with a new respect for the living world
+    around them. And for those who do have a passion for biology or the animal kingdom— buckle up (准备好). This is a ride well
+    worth the admission price.'
+- id: reading_D
+  type: reading
+  name: D
+  q_range:
+  - 30
+  - 33
+  body: 'Imagine a cute cat doll that chats with you while showing lively facial expressions, a smart globe that introduces
+    local cultures based on where you tap, or a small robot ready to play Go or Chinese chess.
+
+    These creative toys all use artificial intelligence (AI) technologies, and such interactive and responsive “smart companions
+    (伴侣)” are quickly becoming popular with consumers (消费者) around the world.
+
+    As new AI technologies develop rapidly, these smart toys are being produced and used in larger numbers. They have turned
+    from something unusual into common products in many families, bringing new experiences to both children and adult users.
+
+    Experts and business leaders say AI toys, created to provide emotional support and companionship, are well placed to drive
+    the next wave of consumer trends by using advanced technologies to build emotional links with consumers.
+
+    “Young consumers are increasingly paying for emotional value, and AI companionship is emerging (出现) as a key early use
+    case,” some industry experts have pointed out in recent reports.
+
+    Beyond emotional support, AI toys may also affect the way kids grow up. They promise every child a kind of upbringing
+    (养育) that was once only available to rich families, with private tutors (辅导), personalized learning activities and custom-made
+    entertainment.
+
+    However, there are risks. AI may influence vulnerable (易受伤害的) people and children to harm themselves. For example, some
+    AI toys told researchers where to find potentially dangerous objects.
+
+    Similar concerns have been raised about AI toys, which could potentially store personal data. According to some critics,
+    “AI toys feel like a wolf in sheep’s clothing, because when using them it’s hard to tell how much privacy you don’t have.”
+
+    AI may also reinforce echo chambers (信息茧房), where people see only content they agree with. A favorites-only diet means
+    a person never needs to learn to accept something unfamiliar. AI companions that never criticize or share their own feelings
+    may leave people unprepared for dealing with real human beings.
+
+    Because of this, some basic protective measures are urgently needed. These could include stricter age restrictions (限制)
+    on chat bots and tighter rules for AI companies. At the same time, parents should think carefully before trusting their
+    children to a machine that only tells them what they already agree with.'
 - id: reading_express_intro
   type: reading_express
   name: ''
@@ -189,6 +280,7 @@ questions:
   answer: B
   solution: How often提问频率；How long提问时长；How much提问不可数名词数量或价格；How many提问可数名词数量。根据答语“Two days”可知，回答的是一段时间，对时间段提问应用How long。
   knowledge_points:
+  - 时间表达
   - 疑问词用法
   module: grammar
   difficulty: 基础
@@ -414,7 +506,7 @@ questions:
 
     上文作者认为应该在家过生日收礼物，而不是出来观鸟，说明他“不高兴”，upset“沮丧的，不高兴的”符合。tired“疲倦的”、excited“兴奋的”、surprised“惊讶的”均与抱怨语气不符。'
   knowledge_points:
-  - 词汇运用
+  - 情感词汇运用
   module: vocabulary
   difficulty: 基础
   recommended_for:
@@ -611,7 +703,7 @@ questions:
   answer: D
   solution: Simon说想加入社区关爱团队，帮助老年邻居解决日常小事（如教老人用智能手机视频通话），图片D显示教老人用手机，因此匹配D。
   knowledge_points:
-  - 信息提取
+  - 信息筛选
   module: reading
   difficulty: 基础
   recommended_for:
@@ -621,7 +713,7 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: reading_intro
+  passage_id: reading_A
 - id: 22
   type: reading
   score: 2
@@ -640,29 +732,16 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: reading_intro
+  passage_id: reading_A
 - id: 23
   type: reading
   score: 2
   stem: '| <u>____23____</u> | ![](figures/image6.png) | I’ve decided to work as a volunteer guide at the local museum. I’d
     like to practice my speaking skills by introducing old books and historical items to visitors. |'
   answer: C
-  solution: "Jenny说想担任博物馆志愿者导游，向游客介绍旧书和历史物品，图片C显示在博物馆拿着扩音器讲解，因此匹配C。\n（二）阅读下列短文内容，从短文后各题所给的A、B、C、D四个选项中，选择最佳选项。\nB\nIt was\
-    \ a long night. Our dog Precious was having puppies. I stayed by her side. After six hours, the puppies finally arrived.\
-    \ The first was black and white. The next two were tan (棕褐色的) and brown, and the last two were also black and white. I\
-    \ counted five puppies and went to tell my wife, Judy, that everything was okay.\nWhen we came back, we saw a sixth puppy\
-    \ alone in the cage. Judy noticed something was wrong. The puppy had a cleft lip and palate (唇腭裂 ), which meant it couldn’t\
-    \ close its mouth or suckle (吸吮). The vet said it would cost a lot to fix, and the puppy might not survive. We couldn’t\
-    \ afford it, but I decided to try my best to help the puppy. I fed it with a syringe every two hours for over 10 days.\
-    \ The puppy slowly learned to eat soft food.\nAfter five weeks, we found homes for all the puppies except the one with\
-    \ the cleft lip.\nOne day, our neighbor, a retired (退休的) teacher, asked if she could have a puppy for her grandson. When\
-    \ they arrived, I told her all the puppies were taken. Just then, the little puppy with the cleft lip started to yelp\
-    \ (吠叫). The boy ran to the puppy, calling it “my puppy”. He looked up at his grandmother and said, “Look, Grandma! They\
-    \ found homes for all the puppies except the pretty one.” \nThe teacher asked if the puppy was available. I said yes.\
-    \ The boy hugged the puppy tightly (紧紧地).\nThe image of the boy and his puppy still stays with me. I think it must be\
-    \ a wonderful feeling to look at a small animal and see nothing except “the pretty one”.\n![](figures/image7.png)"
+  solution: Jenny说想担任博物馆志愿者导游，向游客介绍旧书和历史物品，图片C显示在博物馆拿着扩音器讲解，因此匹配C。
   knowledge_points:
-  - 信息筛选
+  - 信息提取/段落梳理
   module: reading
   difficulty: 基础
   recommended_for:
@@ -672,7 +751,7 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: reading_intro
+  passage_id: reading_A
 - id: 24
   type: reading
   score: 2
@@ -695,7 +774,7 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: reading_intro
+  passage_id: reading_B
 - id: 25
   type: reading
   score: 2
@@ -718,7 +797,7 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: reading_intro
+  passage_id: reading_B
 - id: 26
   type: reading
   score: 2
@@ -729,32 +808,7 @@ questions:
     C: We should accept and care for every life.
     D: We should make friends with pretty animals.
   answer: C
-  solution: '小男孩把有缺陷的小狗称为“the pretty one”，说明我们应该接纳和关爱每一个生命。
-
-    C
-
-    Do you know that if a dolphin echolocates (进行回声定位) on you, it will see your lungs and your skeleton (骨骼)? Or that cows
-    can see in front, to the side, and behind them all at once?
-
-    While we humans are prisoners (囚犯) of our own senses, the animals experience the world in ways we can hardly imagine.
-    This is what Pulitzer Prize-winner Ed Yong explores in An Immense World: How Animal Senses Reveal the Hidden Realms Around
-    Us. With lively stories, Yong shows that the way we see the world isn’t the only way.
-
-    After reading the book, I was shocked by the fact that we can send satellites into space and use AI every day, yet still
-    hardly understand the creatures (生物) living right beside us. I especially valued how Yong respects different ways of perceiving
-    (感知) things. What lifts this book above dry science is Yong’s writing. His humor is frank (“I could go on. I’m going to
-    go on”), and his metaphors (比喻) are vivid: deep-sea creatures reacting to submarine (潜艇) lights as if attacked by glowing
-    figures. Reading this felt less like a textbook and more like an invitation to wonder.
-
-    The book’s last chapter is both sobering (发人深省的 ) and hopeful. Humans have changed the environment in ways that harm animal
-    senses: lights that confuse birds, flat surfaces that cause bats to crash. Yet we’ve also seen, during the quiet of the
-    pandemic, how quickly nature rebounds (复苏) when we step back. Restoration (修复) is not only possible, but a choice. A choice
-    that is ours to make.
-
-    Some people might be <u>put off</u> by how long and dense (难懂) this book is. But as a person who is not really into science
-    or biology, I still found myself drawn in. An Immense World will leave anyone with a new respect for the living world
-    around them. And for those who do have a passion for biology or the animal kingdom— buckle up (准备好). This is a ride well
-    worth the admission price.'
+  solution: 小男孩把有缺陷的小狗称为“the pretty one”，说明我们应该接纳和关爱每一个生命。
   knowledge_points:
   - 启示感悟
   module: reading
@@ -765,7 +819,7 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: reading_intro
+  passage_id: reading_B
 - id: 27
   type: reading
   score: 2
@@ -789,7 +843,7 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: reading_intro
+  passage_id: reading_C
 - id: 28
   type: reading
   score: 2
@@ -803,7 +857,7 @@ questions:
   solution: 第四段提到“Restoration is not only possible, but a choice. A choice that is ours to make.”，意思是 “自然修复不仅是可能的，更是人类可以做出的选择”，对应选项A“It
     is up to humans to help restore nature.”。
   knowledge_points:
-  - 主题理解
+  - 启示感悟
   module: reading
   difficulty: 中等
   recommended_for:
@@ -812,7 +866,7 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: reading_intro
+  passage_id: reading_C
 - id: 29
   type: reading
   score: 2
@@ -823,42 +877,7 @@ questions:
     C: Inspired.
     D: Discouraged.
   answer: D
-  solution: '最后一段“Some people might be put off by how long and dense this book is.”，可推测出 “有些人可能会因为这本书篇幅长、内容难懂而望而却步/打退堂鼓”，与选项D“Discouraged（气馁的、打消念头的）”意思最接近。
-
-    D
-
-    Imagine a cute cat doll that chats with you while showing lively facial expressions, a smart globe that introduces local
-    cultures based on where you tap, or a small robot ready to play Go or Chinese chess.
-
-    These creative toys all use artificial intelligence (AI) technologies, and such interactive and responsive “smart companions
-    (伴侣)” are quickly becoming popular with consumers (消费者) around the world.
-
-    As new AI technologies develop rapidly, these smart toys are being produced and used in larger numbers. They have turned
-    from something unusual into common products in many families, bringing new experiences to both children and adult users.
-
-    Experts and business leaders say AI toys, created to provide emotional support and companionship, are well placed to drive
-    the next wave of consumer trends by using advanced technologies to build emotional links with consumers.
-
-    “Young consumers are increasingly paying for emotional value, and AI companionship is emerging (出现) as a key early use
-    case,” some industry experts have pointed out in recent reports.
-
-    Beyond emotional support, AI toys may also affect the way kids grow up. They promise every child a kind of upbringing
-    (养育) that was once only available to rich families, with private tutors (辅导), personalized learning activities and custom-made
-    entertainment.
-
-    However, there are risks. AI may influence vulnerable (易受伤害的) people and children to harm themselves. For example, some
-    AI toys told researchers where to find potentially dangerous objects.
-
-    Similar concerns have been raised about AI toys, which could potentially store personal data. According to some critics,
-    “AI toys feel like a wolf in sheep’s clothing, because when using them it’s hard to tell how much privacy you don’t have.”
-
-    AI may also reinforce echo chambers (信息茧房), where people see only content they agree with. A favorites-only diet means
-    a person never needs to learn to accept something unfamiliar. AI companions that never criticize or share their own feelings
-    may leave people unprepared for dealing with real human beings.
-
-    Because of this, some basic protective measures are urgently needed. These could include stricter age restrictions (限制)
-    on chat bots and tighter rules for AI companies. At the same time, parents should think carefully before trusting their
-    children to a machine that only tells them what they already agree with.'
+  solution: 最后一段“Some people might be put off by how long and dense this book is.”，可推测出 “有些人可能会因为这本书篇幅长、内容难懂而望而却步/打退堂鼓”，与选项D“Discouraged（气馁的、打消念头的）”意思最接近。
   knowledge_points:
   - 词语含义
   module: reading
@@ -870,7 +889,7 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: reading_intro
+  passage_id: reading_C
 - id: 30
   type: reading
   score: 2
@@ -893,7 +912,7 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: reading_intro
+  passage_id: reading_D
 - id: 31
   type: reading
   score: 2
@@ -917,7 +936,7 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: reading_intro
+  passage_id: reading_D
 - id: 32
   type: reading
   score: 2
@@ -940,7 +959,7 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: reading_intro
+  passage_id: reading_D
 - id: 33
   type: reading
   score: 2
@@ -951,23 +970,18 @@ questions:
     C: Stay with children when they play with AI toys.
     D: Do more research before putting AI toys on the market.
   answer: A
-  solution: '根据文章最后一段“These could include stricter age restrictions (限制) on chat bots and tighter rules for AI companies.”可知应对AI玩具风险的方法是加强年龄限制和相关监管规则。
-
-    第二部分
-
-    本部分共5题，共20分。根据题目要求，完成相应任务。'
+  solution: 根据文章最后一段“These could include stricter age restrictions (限制) on chat bots and tighter rules for AI companies.”可知应对AI玩具风险的方法是加强年龄限制和相关监管规则。
   knowledge_points:
   - 信息筛选
   module: reading
-  difficulty: 基础
+  difficulty: 中等
   recommended_for:
-  - L0
   - L1
   - L2
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: reading_intro
+  passage_id: reading_D
 - id: 34
   type: reading_express
   score: 2
@@ -975,7 +989,8 @@ questions:
 
 
     _____________________________________'
-  answer: ''
+  answer: Because she (just) realized how far away the writer was from home./Because she (just) realized the writer was far
+    from home.
   solution: 'Because she (just) realized how far away the writer was from home./Because she (just) realized the writer was
     far from home.
 
@@ -1000,7 +1015,7 @@ questions:
 
 
     _____________________________________'
-  answer: ''
+  answer: Living independently./Living independently has transformed the writer in many ways.
   solution: 'Living independently./Living independently has transformed the writer in many ways.
 
 
@@ -1024,13 +1039,13 @@ questions:
 
 
     _____________________________________'
-  answer: ''
+  answer: The writer is experiencing growth./They prove the writer is experiencing growth.
   solution: 'The writer is experiencing growth./They prove the writer is experiencing growth.
 
 
     详解：第四段提到强烈的思乡时刻证明了作者正在经历成长“just prove that I am experiencing growth”，答案是原文直接信息。'
   knowledge_points:
-  - 信息提取/段落梳理
+  - 启示感悟
   module: reading
   difficulty: 中等
   recommended_for:

@@ -73,15 +73,119 @@ passages:
 
     ![](figures/image3.png)'
   figure: 2026-pinggu-yi/figures/image3.png
-- id: reading_intro
+- id: reading_A
   type: reading
-  name: ''
+  name: A
   q_range:
   - 21
-  - 33
-  body: '（一）阅读下列体育活动介绍，请根据人物需求选择最适合的运动项目，并将运动项目对应的A、B、C、D选项填在相应的位置上。选项中有一项为多余选项。
+  - 23
+  body: ''
+- id: reading_B
+  type: reading
+  name: B
+  q_range:
+  - 24
+  - 26
+  body: 'I grew up in a small town called Palmerston, Ontario. My parents had a small store, and we lived a simple life. In
+    high school, I dreamed of working in TV. But when I talked to a school advisor, she told me I could only be a nurse, a
+    teacher, or a hairdresser. I was too shy to tell anyone about my real dream — except my parents. They always said, “You
+    can do anything you want.”
 
-    A'
+    With their support, I applied for (申请) the radio and TV program at Ryerson University in Toronto. I was accepted and graduated
+    as the best student. But finding a job was not easy. CBC and CTV both said NO to me because I had no experience.
+
+    Then I heard that Global Television was just starting. I made a brave decision. I found the name of the president and
+    decided to call him directly. My heart was beating fast, but I practiced what I would say. When he answered the phone,
+    I politely asked for a visit to the studio. He was surprised but agreed.
+
+    I chose 11 o’clock for the visit, hoping he might ask me to lunch. Sure enough, after the tour, he did. During the lunch,
+    he asked me directly, “What do you want?” I answered, “All I want is a chance. If there is a job on camera, I want a chance
+    to try. I just want you to know me.”
+
+    Three months later, his secretary called. There was a chance to try out for a new game show called Wintario. I went, and
+    everything went well. I got the job at once. That was the start of a 22-year career. I went on to host hundreds of shows,
+    appeared in ads, movies and celebrations, and built a life I had only dreamed of as a teenager.
+
+    Looking back, I learned that dreams don’t come true by waiting. You have to be brave, take risks, and take the first step
+    — even when you are afraid. One phone call changed my life. You never know where your courage will lead you.'
+- id: reading_C
+  type: reading
+  name: C
+  q_range:
+  - 27
+  - 29
+  body: 'When you think of fast animals, cheetahs and falcons may come to mind. But do you know some of the fastest living
+    things on Earth are very small cells? If cells had their own Olympics, who would win the speed game?
+
+    Manu Prakash, a scientist at Stanford University, says the “competitors” won’t show up ready to compete. “We have to go
+    search in puddles and ponds and in the deep ocean,” he says. His team collected information on the speed of different
+    cells to compare them.
+
+    So how do these tiny speeders move? Some fast cells jump or slide across water. Others move by waving long, thin parts
+    that look like whips (鞭子), or swim with the help of tiny, hair-like parts. There are also speedy cells that do not move
+    from one place to another but grow bigger or become smaller very quickly, and this makes them special “speed players”
+    too.
+
+    Take Spirostomum, for example. In Liberia, Prakash saw many white spots in a pond. They were not spread out randomly.
+    He took a sample (样本) and found this single-celled creature. It can shrink (缩小) its body faster than any other eukaryote
+    (真核生物) — a living thing whose cells have a nucleus. Why does it shrink so fast? Prakash says it’s part of how it communicates.
+    “It actually talks to other cells … using sound underwater.”
+
+    Another amazing cell is Pyrocystis. These algae (水藻) do not swim, but they make a huge journey. Prakash found them deep
+    in the ocean near Hawai’i. They need sunlight to live, but how do they get it? The algae can <u>inflate</u> like a balloon
+    to five times their size and then shrink back down. This allows them to travel about one kilometer up to the sunlit surface.
+    Compared to their size, that is the longest journey on Earth.
+
+    Prakash has found many super-fast cells in different places. These unusual living things help us learn more about the
+    secret of life. "This planet is full of amazing things," he says. "When we study and compare them, we will find how wonderful
+    life is."
+
+    ![](figures/image11.png)'
+  figure: 2026-pinggu-yi/figures/image11.png
+- id: reading_D
+  type: reading
+  name: D
+  q_range:
+  - 30
+  - 33
+  body: 'Imagine you just finished a hard hike to the top of a mountain. The view of the city below is beautiful, and you
+    want to take a photo. But it’s already quite dark, and you’re not sure you’ll get a good shot. Luckily, your phone has
+    an AI night mode. It can take great photos even after sunset.
+
+    Here’s something you may not know: that night mode may have been trained on computer-made nighttime images—scenes that
+    were never actually photographed. This kind of data is called synthetic data.
+
+    Why use synthetic data?
+
+    AI researchers use up all the real data on the internet, so they turn to synthetic data. But this creates a problem. In
+    science, making up data is a very bad thing. So how can computer-made data be good? Is it just a nice word for lying?
+
+    As a researcher, I think it comes down to why you do it and how open you are about it. Synthetic data is usually not made
+    to cheat. In fact, using it can be the right thing to do. For example, showing real people’s faces can violate privacy,
+    but computer-made faces offer the same benefits without that risk.
+
+    There are other reasons. Some things are so rare that there isn’t enough real data. Instead of letting this become a big
+    problem, researchers create those situations with computers. Also, collecting real data can be costly or dangerous. Imagine
+    collecting data for a self-driving car during a storm. It’s much easier and safer to create such data with computers.
+
+    How is synthetic data made?
+
+    Researchers create synthetic data in two main ways. One method uses physics-based models—for example, using the laws of
+    light to show how a scene would look. The other method uses AI that learns from real data and then creates new, realistic
+    text, images, and videos.
+
+    Is synthetic data perfect?
+
+    Synthetic data is not perfect. It is only as good as the model it comes from. Researchers have to be careful about biases—unfair
+    patterns in the data. It is also important to know the difference between computer-made data and the real world. Synthetic
+    data is great for training AI, but the final system should be tested with real data before it is used.
+
+    AI systems learn by finding patterns, but they cannot tell what is real or true. The desire for truth belongs to people,
+    not machines. So next time you use a cool AI feature, remember: synthetic data may have helped train it. But reality is
+    still the final judge of what we create.
+
+    ![](figures/image12.png)'
+  figure: 2026-pinggu-yi/figures/image12.png
 - id: reading_express_intro
   type: reading_express
   name: ''
@@ -177,7 +281,7 @@ questions:
   answer: D
   solution: and和、并且，表并列或顺承关系；but但是，表转折关系；so所以，表因果关系；or或者、否则，表选择或条件关系。根据“I must go right now”和“I will miss the bus”可知，前后句存在条件关系，即如果不马上走就会错过公交车，“or”符合语境，应填or。
   knowledge_points:
-  - 连词的使用
+  - 连词运用
   module: grammar
   difficulty: 基础
   recommended_for:
@@ -229,8 +333,8 @@ questions:
   answer: B
   solution: how long多长，询问时间段或长度；how often 多久一次，询问频率；how soon多久以后；how much 多少，询问数量或价格。答语“Once a week.”提示，此处是对频率进行提问。
   knowledge_points:
-  - 频率副词的使用
-  module: grammar
+  - 频率副词
+  module: vocabulary
   difficulty: 基础
   recommended_for:
   - L0
@@ -359,7 +463,7 @@ questions:
   answer: C
   solution: 根据问句“Where is your little sister?”可知，询问的是妹妹现在的位置，答句应描述妹妹正在进行的动作，所以用现在进行时，应填is playing。
   knowledge_points:
-  - 时态运用
+  - 现在进行时
   module: grammar
   difficulty: 基础
   recommended_for:
@@ -635,7 +739,7 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: reading_intro
+  passage_id: reading_A
 - id: 22
   type: reading
   score: 2
@@ -644,7 +748,7 @@ questions:
   answer: B
   solution: Jin Hao在第二段第1句说“I chose long jump”，明确他选择跳远。
   knowledge_points:
-  - 信息提取/段落梳理
+  - 信息提取
   module: reading
   difficulty: 基础
   recommended_for:
@@ -654,7 +758,7 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: reading_intro
+  passage_id: reading_A
 - id: 23
   type: reading
   score: 2
@@ -662,34 +766,7 @@ questions:
     for three years, and this consistent practice has not only improved my skills but also taught me discipline and resilience
     (自律和坚韧). |  |'
   answer: D
-  solution: 'Lisa在第三段第1句说“I chose playing badminton”，说明她选择打羽毛球。
-
-    （二）阅读下列短文，根据短文内容，从短文后各题所给的A、B、C、D四个选项中,选择最佳选项。
-
-    B
-
-    I grew up in a small town called Palmerston, Ontario. My parents had a small store, and we lived a simple life. In high
-    school, I dreamed of working in TV. But when I talked to a school advisor, she told me I could only be a nurse, a teacher,
-    or a hairdresser. I was too shy to tell anyone about my real dream — except my parents. They always said, “You can do
-    anything you want.”
-
-    With their support, I applied for (申请) the radio and TV program at Ryerson University in Toronto. I was accepted and graduated
-    as the best student. But finding a job was not easy. CBC and CTV both said NO to me because I had no experience.
-
-    Then I heard that Global Television was just starting. I made a brave decision. I found the name of the president and
-    decided to call him directly. My heart was beating fast, but I practiced what I would say. When he answered the phone,
-    I politely asked for a visit to the studio. He was surprised but agreed.
-
-    I chose 11 o’clock for the visit, hoping he might ask me to lunch. Sure enough, after the tour, he did. During the lunch,
-    he asked me directly, “What do you want?” I answered, “All I want is a chance. If there is a job on camera, I want a chance
-    to try. I just want you to know me.”
-
-    Three months later, his secretary called. There was a chance to try out for a new game show called Wintario. I went, and
-    everything went well. I got the job at once. That was the start of a 22-year career. I went on to host hundreds of shows,
-    appeared in ads, movies and celebrations, and built a life I had only dreamed of as a teenager.
-
-    Looking back, I learned that dreams don’t come true by waiting. You have to be brave, take risks, and take the first step
-    — even when you are afraid. One phone call changed my life. You never know where your courage will lead you.'
+  solution: Lisa在第三段第1句说“I chose playing badminton”，说明她选择打羽毛球。
   knowledge_points:
   - 信息提取/段落梳理
   module: reading
@@ -700,7 +777,7 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: reading_intro
+  passage_id: reading_A
 - id: 24
   type: reading
   score: 2
@@ -723,7 +800,7 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: reading_intro
+  passage_id: reading_B
 - id: 25
   type: reading
   score: 2
@@ -747,7 +824,7 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: reading_intro
+  passage_id: reading_B
 - id: 26
   type: reading
   score: 2
@@ -758,37 +835,7 @@ questions:
     C: Don’t blindly follow others’ advice.
     D: Don’t make friends with strict people.
   answer: B
-  solution: '根据最后一段“You have to be brave, take risks, and take the first step — even when you are afraid.” 作者通过自己的经历告诉读者，梦想不会通过等待实现，需要勇气和行动。这启示我们不要轻易放弃梦想。
-
-    C
-
-    When you think of fast animals, cheetahs and falcons may come to mind. But do you know some of the fastest living things
-    on Earth are very small cells? If cells had their own Olympics, who would win the speed game?
-
-    Manu Prakash, a scientist at Stanford University, says the “competitors” won’t show up ready to compete. “We have to go
-    search in puddles and ponds and in the deep ocean,” he says. His team collected information on the speed of different
-    cells to compare them.
-
-    So how do these tiny speeders move? Some fast cells jump or slide across water. Others move by waving long, thin parts
-    that look like whips (鞭子), or swim with the help of tiny, hair-like parts. There are also speedy cells that do not move
-    from one place to another but grow bigger or become smaller very quickly, and this makes them special “speed players”
-    too.
-
-    Take Spirostomum, for example. In Liberia, Prakash saw many white spots in a pond. They were not spread out randomly.
-    He took a sample (样本) and found this single-celled creature. It can shrink (缩小) its body faster than any other eukaryote
-    (真核生物) — a living thing whose cells have a nucleus. Why does it shrink so fast? Prakash says it’s part of how it communicates.
-    “It actually talks to other cells … using sound underwater.”
-
-    Another amazing cell is Pyrocystis. These algae (水藻) do not swim, but they make a huge journey. Prakash found them deep
-    in the ocean near Hawai’i. They need sunlight to live, but how do they get it? The algae can <u>inflate</u> like a balloon
-    to five times their size and then shrink back down. This allows them to travel about one kilometer up to the sunlit surface.
-    Compared to their size, that is the longest journey on Earth.
-
-    Prakash has found many super-fast cells in different places. These unusual living things help us learn more about the
-    secret of life. "This planet is full of amazing things," he says. "When we study and compare them, we will find how wonderful
-    life is."
-
-    ![](figures/image11.png)'
+  solution: 根据最后一段“You have to be brave, take risks, and take the first step — even when you are afraid.” 作者通过自己的经历告诉读者，梦想不会通过等待实现，需要勇气和行动。这启示我们不要轻易放弃梦想。
   knowledge_points:
   - 启示感悟
   module: reading
@@ -799,7 +846,7 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: reading_intro
+  passage_id: reading_B
 - id: 27
   type: reading
   score: 2
@@ -822,7 +869,7 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: reading_intro
+  passage_id: reading_C
 - id: 28
   type: reading
   score: 2
@@ -846,7 +893,7 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: reading_intro
+  passage_id: reading_C
 - id: 29
   type: reading
   score: 2
@@ -857,48 +904,8 @@ questions:
     C: It mainly depends on a cell’s ability to swim using whips or hair-like parts.
     D: It has been fully studied by scientists like Manu Prakash around the world.
   answer: B
-  solution: '第三段“There are also speedy cells that do not move from one place to another but grow bigger or become smaller
-    very quickly, and this makes them special ''speed players'' too”，说明细胞的“速度”不仅指移动速度，也包括体型快速变化，与选项B表述一致。
-
-    D
-
-    Imagine you just finished a hard hike to the top of a mountain. The view of the city below is beautiful, and you want
-    to take a photo. But it’s already quite dark, and you’re not sure you’ll get a good shot. Luckily, your phone has an AI
-    night mode. It can take great photos even after sunset.
-
-    Here’s something you may not know: that night mode may have been trained on computer-made nighttime images—scenes that
-    were never actually photographed. This kind of data is called synthetic data.
-
-    Why use synthetic data?
-
-    AI researchers use up all the real data on the internet, so they turn to synthetic data. But this creates a problem. In
-    science, making up data is a very bad thing. So how can computer-made data be good? Is it just a nice word for lying?
-
-    As a researcher, I think it comes down to why you do it and how open you are about it. Synthetic data is usually not made
-    to cheat. In fact, using it can be the right thing to do. For example, showing real people’s faces can violate privacy,
-    but computer-made faces offer the same benefits without that risk.
-
-    There are other reasons. Some things are so rare that there isn’t enough real data. Instead of letting this become a big
-    problem, researchers create those situations with computers. Also, collecting real data can be costly or dangerous. Imagine
-    collecting data for a self-driving car during a storm. It’s much easier and safer to create such data with computers.
-
-    How is synthetic data made?
-
-    Researchers create synthetic data in two main ways. One method uses physics-based models—for example, using the laws of
-    light to show how a scene would look. The other method uses AI that learns from real data and then creates new, realistic
-    text, images, and videos.
-
-    Is synthetic data perfect?
-
-    Synthetic data is not perfect. It is only as good as the model it comes from. Researchers have to be careful about biases—unfair
-    patterns in the data. It is also important to know the difference between computer-made data and the real world. Synthetic
-    data is great for training AI, but the final system should be tested with real data before it is used.
-
-    AI systems learn by finding patterns, but they cannot tell what is real or true. The desire for truth belongs to people,
-    not machines. So next time you use a cool AI feature, remember: synthetic data may have helped train it. But reality is
-    still the final judge of what we create.
-
-    ![](figures/image12.png)'
+  solution: 第三段“There are also speedy cells that do not move from one place to another but grow bigger or become smaller very
+    quickly, and this makes them special 'speed players' too”，说明细胞的“速度”不仅指移动速度，也包括体型快速变化，与选项B表述一致。
   knowledge_points:
   - 信息筛选
   module: reading
@@ -909,7 +916,7 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: reading_intro
+  passage_id: reading_C
 - id: 30
   type: reading
   score: 2
@@ -931,7 +938,7 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: reading_intro
+  passage_id: reading_D
 - id: 31
   type: reading
   score: 2
@@ -945,7 +952,7 @@ questions:
   solution: 第二段对该术语进行了定义：“…computer-made nighttime images—scenes that were never actually photographed. This kind of data
     is called synthetic data.”。这明确说明合成数据是由计算机生成的、用于训练AI系统的非真实拍摄数据。
   knowledge_points:
-  - 信息筛选
+  - 信息提取
   module: reading
   difficulty: 基础
   recommended_for:
@@ -955,7 +962,7 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: reading_intro
+  passage_id: reading_D
 - id: 32
   type: reading
   score: 2
@@ -977,7 +984,7 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: reading_intro
+  passage_id: reading_D
 - id: 33
   type: reading
   score: 2
@@ -988,24 +995,19 @@ questions:
     C: How AI Night Mode Helps You Take Photos in the Dark
     D: Synthetic Data Is Useful but Still Needs Real-World Checks
   answer: D
-  solution: '文章大部分篇幅在讨论合成数据的必要性，但第七段强调：“Synthetic data is not perfect…the final system should be tested with real data before
+  solution: 文章大部分篇幅在讨论合成数据的必要性，但第七段强调：“Synthetic data is not perfect…the final system should be tested with real data before
     it is used.”。选项D“合成数据很有用但仍需现实检验”精准且高度概括了文章既肯定价值又指出不足的中心思想。
-
-    第二部分
-
-    本部分共5题，共20分。根据题目要求，完成相应任务。'
   knowledge_points:
   - 信息筛选
   module: reading
-  difficulty: 基础
+  difficulty: 中等
   recommended_for:
-  - L0
   - L1
   - L2
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: reading_intro
+  passage_id: reading_D
 - id: 34
   type: reading_express
   score: 2
@@ -1013,7 +1015,7 @@ questions:
 
 
     _____________________________________________'
-  answer: ''
+  answer: Sleep.
   solution: 'Sleep.
 
 
@@ -1037,7 +1039,7 @@ questions:
 
 
     _____________________________________________'
-  answer: ''
+  answer: Social jet lag.
   solution: 'Social jet lag.
 
 
@@ -1061,13 +1063,13 @@ questions:
 
 
     _____________________________________________'
-  answer: ''
+  answer: Because depression usually starts later in adolescence.
   solution: 'Because depression usually starts later in adolescence.
 
 
     详解：第六段提到“That may be because depression usually starts later in adolescence.”直接说明了：这或许是因为抑郁症通常在青春期后期才会出现。'
   knowledge_points:
-  - 信息筛选
+  - 信息提取
   module: reading
   difficulty: 中等
   recommended_for:
@@ -1085,7 +1087,8 @@ questions:
 
 
     _____________________________________________'
-  answer: ''
+  answer: 'Sleeping in for less than two extra hours. Reason 1: It helps reduce teens’ anxiety. Reason 2: It may cause less
+    social jet lag and help people stay energetic and focused. (答案不唯一，合理作答即可)'
   solution: 'Sleeping in for less than two extra hours. Reason 1: It helps reduce teens’ anxiety. Reason 2: It may cause less
     social jet lag and help people stay energetic and focused. (答案不唯一，合理作答即可)
 
@@ -1093,7 +1096,7 @@ questions:
     详解：本题为开放性题目，答案不唯一，言之有理即可。'
   knowledge_points:
   - 表达观点
-  - 原因阐述
+  - 理由阐述
   module: writing
   difficulty: 中等
   recommended_for:
