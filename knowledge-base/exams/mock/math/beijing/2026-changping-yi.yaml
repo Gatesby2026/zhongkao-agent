@@ -157,7 +157,7 @@ questions:
 
     故选：A．'
   knowledge_points:
-  - 一元二次方程的根与系数的关系
+  - 一元二次方程的根的判别式
   module: equationsAndInequalities
   difficulty: 基础
   recommended_for:
@@ -338,8 +338,7 @@ questions:
 
     故答案为：x≥3．'
   knowledge_points:
-  - 实数及其运算
-  - 根式的意义
+  - 二次根式的定义与性质
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -410,7 +409,7 @@ questions:
     故答案为：﹣2；﹣1（答案不唯一）．'
   knowledge_points:
   - 不等式的性质
-  - 实数的运算
+  - 实数的平方
   module: equationsAndInequalities
   difficulty: 中等
   recommended_for:
@@ -464,7 +463,7 @@ questions:
   knowledge_points:
   - 反比例函数
   - 正比例函数
-  - 坐标系中的交点
+  - 函数图像交点
   module: functions
   difficulty: 中等
   recommended_for:
@@ -572,7 +571,7 @@ questions:
   - 正方形的性质
   - 旋转的性质
   - 中点和垂线的应用
-  module: quadrilaterals
+  module: geometryComprehensive
   difficulty: 中等
   recommended_for:
   - L1
@@ -666,7 +665,7 @@ questions:
     故答案为：4．'
   knowledge_points:
   - 概率计算
-  - 收益分析
+  - 期望值
   module: statisticsAndProbability
   difficulty: 中等
   recommended_for:
@@ -688,10 +687,10 @@ questions:
 
     $=3\sqrt{2}-1$．'
   knowledge_points:
-  - 实数的运算
-  - 三角函数的基本概念
-  - 绝对值的概念
-  - 二次根式的化简
+  - 实数运算
+  - 三角函数
+  - 绝对值
+  - 二次根式
   module: numbersAndExpressions
   difficulty: 中等
   recommended_for:
@@ -711,8 +710,7 @@ questions:
 
     所以不等式组的解集是﹣6＜x＜1．'
   knowledge_points:
-  - 解一元一次不等式
-  - 解不等式组
+  - 一元一次不等式组的解法
   module: equationsAndInequalities
   difficulty: 中等
   recommended_for:
@@ -737,7 +735,6 @@ questions:
     所以$-\frac{2}{a-b}=$$-\frac{2}{2}=-1$．'
   knowledge_points:
   - 代数式的化简与求值
-  - 方程的应用
   module: numbersAndExpressions
   difficulty: 中等
   recommended_for:
@@ -1159,7 +1156,7 @@ questions:
     故答案为：b＜c＜a．'
   knowledge_points:
   - 函数的应用
-  - 数据分析
+  - 数据处理与分析
   module: functions
   difficulty: 中等
   recommended_for:
@@ -1398,11 +1395,11 @@ questions:
     ∴AD＝AQ+QD＝AD+DF．'
   knowledge_points:
   - 全等三角形的性质与判定
-  - 角的性质与计算
+  - 角平分线的性质与判定
+  - 旋转的性质
   module: triangles
-  difficulty: 中等
+  difficulty: 能力
   recommended_for:
-  - L1
   - L2
   - L3
   qc_status: draft
@@ -1512,8 +1509,8 @@ questions:
     故$4-7\sqrt{2}≤b≤4+3\sqrt{2}$．'
   knowledge_points:
   - 圆的性质
-  - 旋转与变换
-  - 坐标系中的几何问题
+  - 旋转对称性
+  - 坐标几何
   module: circles
   difficulty: 能力
   recommended_for:

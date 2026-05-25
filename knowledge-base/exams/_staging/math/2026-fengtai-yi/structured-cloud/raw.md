@@ -371,11 +371,11 @@ A．①③ B．①④ C．②③ D．②④
 
 ![](figures/image19.png)
 
-∴由反比例函数的几何意义，S_{△}_{AOB}＝S_{△}_{AOE}﹣S_{△}_{BOE}，S_{△}_{AOC}＝S_{△}_{AOF}﹣S_{△}_{COF}，
+∴由反比例函数的几何意义，S_{△AOB}＝S_{△AOE}﹣S_{△BOE}，S_{△AOC}＝S_{△AOF}﹣S_{△COF}，
 
-∵S_{△}_{AOE}＝S_{△}_{AOF}＝2，S_{△}_{BOE}＝S_{△}_{COF}＝1，
+∵S_{△AOE}＝S_{△AOF}＝2，S_{△BOE}＝S_{△COF}＝1，
 
-∴S_{△}_{AOB}＝S_{△}_{AOC}＝1，故③正确，
+∴S_{△AOB}＝S_{△AOC}＝1，故③正确，
 
 综上，正确的是①③．
 

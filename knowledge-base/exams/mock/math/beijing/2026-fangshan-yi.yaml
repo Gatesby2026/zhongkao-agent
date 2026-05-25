@@ -220,9 +220,8 @@ questions:
   knowledge_points:
   - 一元二次方程的根的判别式
   module: equationsAndInequalities
-  difficulty: 基础
+  difficulty: 中等
   recommended_for:
-  - L0
   - L1
   - L2
   - L3
@@ -254,7 +253,8 @@ questions:
     故选：C．'
   knowledge_points:
   - 直角三角形的性质
-  - 圆的基本性质
+  - 圆的性质
+  - 角度计算
   module: triangles
   difficulty: 中等
   recommended_for:
@@ -272,7 +272,7 @@ questions:
 
     ②若A（2，1），OC＝4，则k_{2}＝﹣4；
 
-    ③S_{▱}_{OACB}＝|k_{1}|+|k_{2}|；
+    ③S_{▱OACB}＝|k_{1}|+|k_{2}|；
 
     ④当k_{1}+k_{2}＝0时，四边形OACB一定是正方形．
 
@@ -310,7 +310,7 @@ questions:
 
     ∴k_{2}＝﹣2×3＝﹣6，故②错误；
 
-    ③S_{四边形}_{OACB}＝2S_{△}_{OBA}＝2（S_{△}_{OBH}+S_{△}_{OAH}）＝2$×\frac{1}{2}×$$\frac{\frac{{k}_{1}}{m}-\frac{{k}_{2}}{m}}{2}×$2m＝k_{1}﹣k_{2}＝|k_{1}|+|k_{2}|，故③正确；
+    ③S_{四边形OACB}＝2S_{△OBA}＝2（S_{△OBH}+S_{△OAH}）＝2$×\frac{1}{2}×$$\frac{\frac{{k}_{1}}{m}-\frac{{k}_{2}}{m}}{2}×$2m＝k_{1}﹣k_{2}＝|k_{1}|+|k_{2}|，故③正确；
 
     ④由题意，∵k_{1}+k_{2}＝0，
 
@@ -424,7 +424,7 @@ questions:
     故答案为：108．'
   knowledge_points:
   - 样本估计总体
-  - 数据处理与分析
+  - 数据处理
   module: statisticsAndProbability
   difficulty: 基础
   recommended_for:
@@ -480,8 +480,8 @@ questions:
 
     故答案为：45．'
   knowledge_points:
-  - 圆的切线性质
-  - 圆周角与圆心角的关系
+  - 圆的基本性质
+  - 切线的性质
   module: circles
   difficulty: 中等
   recommended_for:
@@ -696,7 +696,7 @@ questions:
     故答案为：220．'
   knowledge_points:
   - 线性规划
-  - 不等式应用
+  - 不等式组的应用
   module: equationsAndInequalities
   difficulty: 中等
   recommended_for:
@@ -718,8 +718,8 @@ questions:
   knowledge_points:
   - 绝对值
   - 二次根式
-  - 负整数指数幂
-  - 特殊角的三角函数值
+  - 负指数幂
+  - 特殊角的三角函数
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -742,7 +742,8 @@ questions:
 
     ∴原不等式组的解集为﹣2＜x＜1．'
   knowledge_points:
-  - 不等式组的解法
+  - 解一元一次不等式
+  - 解不等式组
   module: equationsAndInequalities
   difficulty: 中等
   recommended_for:
@@ -1190,8 +1191,8 @@ questions:
     ∴从第5天起至少需要经过8天1号盆的株高超过2号盆．'
   knowledge_points:
   - 函数的概念
-  - 函数的图像
   - 函数的应用
+  - 数据处理与分析
   module: functions
   difficulty: 中等
   recommended_for:
@@ -1351,7 +1352,7 @@ questions:
   knowledge_points:
   - 等腰三角形的性质
   - 全等三角形的判定与性质
-  - 几何证明
+  - 对称点的性质
   module: triangles
   difficulty: 中等
   recommended_for:
@@ -1482,9 +1483,9 @@ questions:
 
     综上，t的取值范围为﹣1$+\sqrt{3}$t≤1或t≤﹣1$-\sqrt{3}$．'
   knowledge_points:
+  - 几何综合
   - 三角形的性质
-  - 圆的性质
-  module: triangles
+  module: geometryComprehensive
   difficulty: 能力
   recommended_for:
   - L2

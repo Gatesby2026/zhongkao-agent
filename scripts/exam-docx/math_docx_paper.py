@@ -110,6 +110,15 @@ def _walk_paragraph(p: ET.Element, rels: dict[str, str],
     # **源数据 sanitize**：出题人误输的 "▱△ABCD"（chaoyang Q20）— Cambria
     # Math 字体 ▱ 与新宋体 △ 重复，实际语义只是 ▱。删 ▱ 后跟的 △
     text = re.sub(r"▱△", "▱", text)
+    # **合并相邻同 vertAlign 下/上标**：源 docx 把 "S_{△ABE}" 拆成 3 个 run
+    # (S | △ subscript | ABE subscript)，v2 vertAlign 修复对每 run 独立包
+    # 产生 "S_{△}_{ABE}" — 渲染塌陷。post-process 合并连续 `_{...}_{...}`
+    # （haidian Q15 / dongcheng Q8 / yanshan Q8 R2 P1 跨区 bug）
+    prev = None
+    while prev != text:
+        prev = text
+        text = re.sub(r"_\{([^{}]+)\}_\{([^{}]+)\}", r"_{\1\2}", text)
+        text = re.sub(r"\^\{([^{}]+)\}\^\{([^{}]+)\}", r"^{\1\2}", text)
     return text
 
 

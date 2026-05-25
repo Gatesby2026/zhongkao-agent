@@ -97,7 +97,7 @@ questions:
 
     故选：B．'
   knowledge_points:
-  - 实数的比较
+  - 实数的大小比较
   - 数轴的应用
   module: numbersAndExpressions
   difficulty: 基础
@@ -291,7 +291,8 @@ questions:
   knowledge_points:
   - 正方形的性质
   - 旋转的性质
-  module: geometryComprehensive
+  - 坐标系中的几何变换
+  module: quadrilaterals
   difficulty: 中等
   recommended_for:
   - L1
@@ -312,8 +313,7 @@ questions:
 
     故答案为：x≥3．'
   knowledge_points:
-  - 二次根式的概念
-  - 不等式的解法
+  - 二次根式的定义与性质
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -388,7 +388,7 @@ questions:
     故答案为：1．'
   knowledge_points:
   - 反比例函数的性质
-  - 坐标与函数图像的关系
+  - 坐标与函数关系
   module: functions
   difficulty: 中等
   recommended_for:
@@ -417,7 +417,6 @@ questions:
     故答案为：630．'
   knowledge_points:
   - 样本估计总体
-  - 数据整理与分析
   module: statisticsAndProbability
   difficulty: 基础
   recommended_for:
@@ -471,8 +470,7 @@ questions:
 
     故答案为：68．'
   knowledge_points:
-  - 光的反射定律
-  - 几何作图与计算
+  - 光的反射
   module: geometryComprehensive
   difficulty: 中等
   recommended_for:
@@ -599,7 +597,7 @@ questions:
   knowledge_points:
   - 代数式的化简与求值
   - 方程的应用
-  module: equationsAndInequalities
+  module: numbersAndExpressions
   difficulty: 中等
   recommended_for:
   - L1
@@ -685,7 +683,7 @@ questions:
 
     答：A机器人分拣的包裹总量为0.9万件．'
   knowledge_points:
-  - 一元一次方程的应用
+  - 方程的应用
   module: equationsAndInequalities
   difficulty: 中等
   recommended_for:
@@ -729,8 +727,8 @@ questions:
 
     综上所述，m的取值范围为1≤m≤3．'
   knowledge_points:
-  - 一次函数的解析式
   - 一次函数的性质
+  - 不等式的应用
   module: functions
   difficulty: 中等
   recommended_for:
@@ -1099,6 +1097,7 @@ questions:
   knowledge_points:
   - 二次函数的性质
   - 二次函数与一元二次方程的关系
+  - 坐标系中的几何问题
   module: functions
   difficulty: 中等
   recommended_for:
@@ -1205,10 +1204,10 @@ questions:
   knowledge_points:
   - 三角形的性质
   - 旋转与对称
-  - 几何证明
   module: triangles
-  difficulty: 能力
+  difficulty: 中等
   recommended_for:
+  - L1
   - L2
   - L3
   qc_status: draft

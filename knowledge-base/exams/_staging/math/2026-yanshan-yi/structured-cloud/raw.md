@@ -362,9 +362,9 @@ A．①② B．①②③ C．②③④ D．①②③④
 
 ∵四边形OABC为矩形，
 
-∴S_{△}_{COB}＝S_{△}_{AOB}，
+∴S_{△COB}＝S_{△AOB}，
 
-∴S_{△}_{COB}﹣S_{△}_{COM}＝S_{△}_{AOB}﹣S_{△}_{AON}，即S_{△}_{BOM}＝S_{△}_{BON}，故①正确；
+∴S_{△COB}﹣S_{△COM}＝S_{△AOB}﹣S_{△AON}，即S_{△BOM}＝S_{△BON}，故①正确；
 
 ∵点M是边BC的中点，
 
@@ -372,7 +372,7 @@ A．①② B．①②③ C．②③④ D．①②③④
 
 ∴${S}_{△COM}=\frac{1}{2}×CM×OC=\frac{1}{4}×BC×OC$，
 
-∵${S}_{△COM}=\frac{1}{2}×AN×OA$，且S_{△}_{COM}＝S_{△}_{AON}，
+∵${S}_{△COM}=\frac{1}{2}×AN×OA$，且S_{△COM}＝S_{△AON}，
 
 ∴$\frac{1}{4}×BC×OC=\frac{1}{2}×AN×OA$，
 
@@ -1166,7 +1166,7 @@ d．甲、乙两款机器人评分统计表：
 
 ∴只考虑SP是⊙O的切线，SQ⊥PQ一种情况即可，
 
-∵S_{△}_{QPT}＝S_{△}_{QPS}，
+∵S_{△QPT}＝S_{△QPS}，
 
 ∴$\frac{1}{2}⋅ST⋅PQ=\frac{1}{2}$PS•PT，
 
@@ -1210,7 +1210,7 @@ d．甲、乙两款机器人评分统计表：
 
 ∵∠MPT＝∠MQP＝90°，
 
-∴S_{△}_{MPT}＝S_{△}_{MPT}，
+∴S_{△MPT}＝S_{△MPT}，
 
 ∴$\frac{1}{2}⋅MT⋅PQ=\frac{1}{2}⋅PM⋅PT$，
 

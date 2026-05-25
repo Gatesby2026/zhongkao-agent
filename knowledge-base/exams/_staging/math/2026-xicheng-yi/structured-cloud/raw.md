@@ -445,7 +445,7 @@ $\left\{\begin{matrix} ∠GEB=∠DFA \\ BE=AF \\ ∠GBE=∠DAF=90° \end{matrix}
 
 ∴${S}_{△OEB}=\frac{1}{2}BE⋅OB=\frac{1}{2}b×\frac{k}{b}=\frac{k}{2}$，
 
-S_{△}_{OED}＝S_{梯形}_{OECA}﹣S_{△}_{AOD}﹣S_{△}_{ECD}
+S_{△OED}＝S_{梯形OECA}﹣S_{△AOD}﹣S_{△ECD}
 
 $=\frac{1}{2}(EC+OA)⋅AC-\frac{1}{2}EC⋅DC-\frac{1}{2}OA⋅AD$
 
