@@ -323,7 +323,7 @@ def render_html(final: dict, out_html: Path, figures_dir: Path) -> Path:
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("final_json", type=Path,
-                    help="docx_paper 输出的 final.json")
+                    help="math_docx_paper 输出的 final.json")
     ap.add_argument("--out", type=Path, default=None)
     ap.add_argument("--no-open", action="store_true")
     a = ap.parse_args()

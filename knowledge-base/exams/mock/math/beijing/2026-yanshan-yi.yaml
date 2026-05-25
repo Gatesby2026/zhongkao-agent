@@ -9,21 +9,27 @@ district: 2026年北京市燕山区
 exam_type: 一模
 subject: math
 full_score: 100
-duration_minutes: null
+duration_minutes: 120
 total_questions: 28
 structure: 8单选(16分) + 8填空(16分) + 12解答(68分)
+passages: []
 questions:
 - id: 1
   type: 单选
   score: 2
   stem: 下列图形中，既是轴对称图形又是中心对称图形的是（　　）
   options:
-    A: '[图]'
-    B: '[图]'
-    C: '[图]'
-    D: '[图]'
+    A: '![](figures/image.png)'
+    B: '![](figures/image2.png)'
+    C: '![](figures/image3.png)'
+    D: '![](figures/image4.png)'
   has_image_options: true
   figure: 2026-yanshan-yi/figures/image.png
+  _figures_extra:
+  - image.png
+  - image2.png
+  - image3.png
+  - image4.png
   answer: B
   solution: '解：A．选项中的图形是轴对称图形形，但不是中心对称图，故不符合题意；
 
@@ -56,6 +62,8 @@ questions:
     C: 127°
     D: 153°
   figure: 2026-yanshan-yi/figures/image5.png
+  _figures_extra:
+  - image5.png
   answer: B
   solution: '解：∵∠EOC＝63°，∠EOD＝90°，
 
@@ -69,9 +77,8 @@ questions:
 
     故选：B．'
   knowledge_points:
-  - 角的概念
-  - 互余与互补
-  - 角度的计算
+  - 角的性质
+  - 角的计算
   module: geometryComprehensive
   difficulty: 中等
   recommended_for:
@@ -90,6 +97,8 @@ questions:
     C: mn＜0
     D: '|m|﹣|n|＞0'
   figure: 2026-yanshan-yi/figures/image6.png
+  _figures_extra:
+  - image6.png
   answer: C
   solution: '解：由所给数轴可知，
 
@@ -101,8 +110,8 @@ questions:
 
     故选：C．'
   knowledge_points:
-  - 实数与数轴的对应关系
-  - 有理数大小比较
+  - 实数的性质
+  - 数轴的应用
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -129,10 +138,10 @@ questions:
     故选：C．'
   knowledge_points:
   - 一元二次方程的根的判别式
-  - 一元二次方程的解法
   module: equationsAndInequalities
-  difficulty: 中等
+  difficulty: 基础
   recommended_for:
+  - L0
   - L1
   - L2
   - L3
@@ -182,10 +191,11 @@ questions:
 
     故选：D．'
   knowledge_points:
-  - 概率的计算
+  - 概率计算
   module: statisticsAndProbability
-  difficulty: 中等
+  difficulty: 基础
   recommended_for:
+  - L0
   - L1
   - L2
   - L3
@@ -201,6 +211,8 @@ questions:
     C: $\sqrt{5}$
     D: $2\sqrt{5}$
   figure: 2026-yanshan-yi/figures/image7.png
+  _figures_extra:
+  - image7.png
   answer: C
   solution: '解：由作图可得EF是AC的垂直平分线，
 
@@ -213,6 +225,7 @@ questions:
     故选：C．'
   knowledge_points:
   - 直角三角形的性质
+  - 圆的性质
   - 勾股定理
   module: triangles
   difficulty: 中等
@@ -242,6 +255,8 @@ questions:
     C: ②③④
     D: ①②③④
   figure: 2026-yanshan-yi/figures/image8.png
+  _figures_extra:
+  - image8.png
   answer: B
   solution: '解：∵反比例函数$y=\frac{k}{x}(k＞0)$的图象经过点M与点N，
 
@@ -287,11 +302,13 @@ questions:
 
     故选：B．'
   knowledge_points:
+  - 反比例函数的性质
   - 相似三角形的判定与性质
-  - 反比例函数的图象与性质
-  module: geometryComprehensive
-  difficulty: 能力
+  - 矩形的性质
+  module: functions
+  difficulty: 中等
   recommended_for:
+  - L1
   - L2
   - L3
   qc_status: draft
@@ -309,7 +326,8 @@ questions:
 
     故答案为：x≥1．'
   knowledge_points:
-  - 二次根式的概念
+  - 实数的性质
+  - 根号下的表达式
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -328,7 +346,7 @@ questions:
 
     故答案为：2（x+3）（x﹣3）'
   knowledge_points:
-  - 因式分解——公式法（平方差、完全平方）
+  - 因式分解
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -353,8 +371,7 @@ questions:
 
     故答案为：x＝2．'
   knowledge_points:
-  - 分式的加减乘除运算
-  - 解一元一次方程
+  - 分式方程的解法
   module: equationsAndInequalities
   difficulty: 中等
   recommended_for:
@@ -370,6 +387,8 @@ questions:
 
     这次抽样调查中，选择羽毛球人数是36%，样本中个体的数目是　     　 个，若该校有2500名学生，估计该校最喜爱篮球运动的学生有　      　 人．'
   figure: 2026-yanshan-yi/figures/image9.png
+  _figures_extra:
+  - image9.png
   answer: 50；800．
   solution: '解：选择羽毛球人数是36%，样本中个体的数目是$\frac{18}{36%}=$50个，
 
@@ -381,11 +400,12 @@ questions:
 
     故答案为：50；800．'
   knowledge_points:
-  - 样本数据的整理与分析
+  - 样本估计总体
   - 百分比的应用
   module: statisticsAndProbability
-  difficulty: 中等
+  difficulty: 基础
   recommended_for:
+  - L0
   - L1
   - L2
   - L3
@@ -400,9 +420,9 @@ questions:
 
     故答案为：﹣1；2．'
   knowledge_points:
-  - 有理数大小比较
-  - 实数的概念（有理数与无理数的统称）
-  module: numbersAndExpressions
+  - 不等式的性质
+  - 实数的运算
+  module: equationsAndInequalities
   difficulty: 中等
   recommended_for:
   - L1
@@ -416,6 +436,8 @@ questions:
   stem: 如图，⊙O是地球的示意图，其中MN表示赤道，点P表示北京位置，PQ，RS分别表示北纬40°纬线和南结40°纬线，∠PON＝∠SON＝40°．某一时刻，太阳光线AP所在直线经过地心O，此时点S处的太阳高度角∠TSU（即平行于AP的光线SU与⊙O的切线ST所成的锐角）的大小为　     　
     °．
   figure: 2026-yanshan-yi/figures/image10.png
+  _figures_extra:
+  - image10.png
   answer: 10．
   solution: '解：由题意可得：SU∥OA，ST是⊙O的切线，
 
@@ -450,6 +472,8 @@ questions:
   score: 2
   stem: 把图1中的菱形沿对角线分成四个全等的直角三角形，将这四个直角三角形分别拼成如图2，图3所示的正方形，则图1中菱形的面积为 　     　 ．
   figure: 2026-yanshan-yi/figures/image11.png
+  _figures_extra:
+  - image11.png
   answer: 12．
   solution: '解：如图1所示：
 
@@ -471,7 +495,7 @@ questions:
   knowledge_points:
   - 菱形的性质
   - 正方形的性质
-  - 图形的面积计算
+  - 图形的拼接与面积计算
   module: quadrilaterals
   difficulty: 中等
   recommended_for:
@@ -519,12 +543,11 @@ questions:
 
     故答案为：12．'
   knowledge_points:
-  - 有理数加减乘除运算
-  - 有理数混合运算（运算顺序与运算律）
+  - 统筹方法
+  - 时间优化
   module: numbersAndExpressions
-  difficulty: 基础
+  difficulty: 中等
   recommended_for:
-  - L0
   - L1
   - L2
   - L3
@@ -541,11 +564,14 @@ questions:
 
     $=\sqrt{3}$．'
   knowledge_points:
-  - 有理数混合运算（运算顺序与运算律）
-  - 二次根式的加减乘除运算
+  - 绝对值
+  - 三角函数
+  - 指数运算
+  - 根式运算
   module: numbersAndExpressions
-  difficulty: 中等
+  difficulty: 基础
   recommended_for:
+  - L0
   - L1
   - L2
   - L3
@@ -589,8 +615,8 @@ questions:
 
     $=\frac{2}{3}$．'
   knowledge_points:
-  - 整式的加减运算
-  - 乘法公式（平方差公式、完全平方公式）
+  - 代数式的化简与求值
+  - 方程的应用
   module: numbersAndExpressions
   difficulty: 中等
   recommended_for:
@@ -608,6 +634,8 @@ questions:
 
     （2）连接OF，若AB＝6，DE＝2，∠ADF＝45°，求OF的长．'
   figure: 2026-yanshan-yi/figures/image12.png
+  _figures_extra:
+  - image12.png
   answer: （1）∵四边形ABCD是平行四边形，
   solution: '（1）证明：∵四边形ABCD是平行四边形，
 
@@ -651,7 +679,7 @@ questions:
   knowledge_points:
   - 平行四边形的性质
   - 矩形的判定与性质
-  - 直角三角形的性质
+  - 勾股定理
   module: quadrilaterals
   difficulty: 中等
   recommended_for:
@@ -693,9 +721,8 @@ questions:
 
     ∴n的取值范围是1≤n$≤\frac{3}{2}$．'
   knowledge_points:
-  - 一次函数的概念与性质
-  - 一次函数的图象与性质
-  - 不等式的解法
+  - 一次函数的表达式
+  - 一次函数的图像与性质
   module: functions
   difficulty: 中等
   recommended_for:
@@ -709,6 +736,8 @@ questions:
   score: 6
   stem: 羽毛球运动深受大众喜爱，该运动的场地是一块中间设有球网的矩形区域，它既可以进行单打比赛，也可以进行双打比赛．如图是羽毛球场地的平面示意图，已知场地上各条分界线宽均为4cm，场地的长比宽的2倍还多120cm（包含分界线宽），球网同侧的单、双打后发球线间的距离与中线同侧的单、双打边线间的距离之比是12：7，根据图中所给数据，求中线同侧的单、双打边线间的距离．
   figure: 2026-yanshan-yi/figures/image13.png
+  _figures_extra:
+  - image13.png
   answer: 42cm．
   solution: '解：设球网同侧的单、双打后发球线间的距离是12xcm，则中线同侧的单、双打边线间的距离是7xcm，
 
@@ -720,9 +749,9 @@ questions:
 
     答：中线同侧的单、双打边线间的距离为42cm．'
   knowledge_points:
-  - 方程与一元一次方程的概念
-  - 解一元一次方程（去分母/去括号/移项/合并/系数化1）
-  module: equationsAndInequalities
+  - 几何综合
+  - 比例与相似
+  module: geometryComprehensive
   difficulty: 中等
   recommended_for:
   - L1
@@ -763,6 +792,8 @@ questions:
 
     （4）丙款AI机器人推出后引发广泛讨论．小明和小红各自从甲、乙、丙三款机器人中随机选择一款进行体验测评，则两人中至少有一人选择丙款机器人的概率是 　                　 ．'
   figure: 2026-yanshan-yi/figures/image14.png
+  _figures_extra:
+  - image14.png
   answer: （1）85，86.5；
   solution: '解：（1）甲款机器人评分数据中85分出现的次数最大，
 
@@ -802,9 +833,9 @@ questions:
 
     故答案为：$\frac{5}{9}$．'
   knowledge_points:
-  - 统计表的应用
-  - 扇形统计图的理解
-  - 概率的计算
+  - 数据整理与描述
+  - 统计图表分析
+  - 概率计算
   module: statisticsAndProbability
   difficulty: 中等
   recommended_for:
@@ -822,6 +853,8 @@ questions:
 
     （2）延长BP交CA的延长线于点E．若⊙O的半径为$\sqrt{2}$，$sinE=\frac{1}{3}$，求BC的长．'
   figure: 2026-yanshan-yi/figures/image15.png
+  _figures_extra:
+  - image15.png
   answer: 见试题解答内容
   solution: '（1）证明：连接OB，AB，
 
@@ -869,8 +902,9 @@ questions:
   - 圆周角定理
   - 解直角三角形
   module: circles
-  difficulty: 能力
+  difficulty: 中等
   recommended_for:
+  - L1
   - L2
   - L3
   qc_status: draft
@@ -909,6 +943,9 @@ questions:
 
     ②根据函数图象，若制作一个漏完150g沙子所用时间为50s的沙漏，其孔径约为　             　 mm（结果保留小数点后一位）．'
   figure: 2026-yanshan-yi/figures/image16.png
+  _figures_extra:
+  - image16.png
+  - image17.png
   answer: （1）179.9（答案不唯一）；
   solution: '解：（1）∵探究一中，t＝90s时，m＝150.0g，t＝120s时，m＝209.8g，
 
@@ -934,9 +971,8 @@ questions:
 
     故答案为：4.8（答案不唯一）．'
   knowledge_points:
-  - 函数的概念
-  - 函数的图象
   - 函数的应用
+  - 数据处理与分析
   module: functions
   difficulty: 中等
   recommended_for:
@@ -1009,7 +1045,7 @@ questions:
     综上所述，a的取值范围是a＞0或﹣4＜a＜﹣1．'
   knowledge_points:
   - 二次函数的性质
-  - 二次函数的图像与性质
+  - 二次函数的应用
   module: functions
   difficulty: 中等
   recommended_for:
@@ -1029,6 +1065,8 @@ questions:
 
     （3）用等式表示BE，AN的数量关系，并证明．'
   figure: 2026-yanshan-yi/figures/image18.png
+  _figures_extra:
+  - image18.png
   answer: （1）由题意，补全图形如图：
   solution: '解：（1）由题意，补全图形如图：
 
@@ -1090,10 +1128,11 @@ questions:
   knowledge_points:
   - 正方形的性质
   - 旋转的性质
-  - 几何证明
+  - 三角形的性质
   module: geometryComprehensive
-  difficulty: 能力
+  difficulty: 中等
   recommended_for:
+  - L1
   - L2
   - L3
   qc_status: draft
@@ -1112,6 +1151,8 @@ questions:
 
     （2）已知点$M(0，3)，N(\frac{6\sqrt{5}}{5}，0)$，对于线段MN上一点S，存在⊙O的弦PQ，使得点S为弦PQ的“垂联点”．设PQ的长为d，当点S在线段MN上运动时，直接写出d的取值范围．'
   figure: 2026-yanshan-yi/figures/image19.png
+  _figures_extra:
+  - image19.png
   answer: （1）①C1，C3；②线段OC的长为$\frac{\sqrt{21}}{3}$；
   solution: '解：（1）①∵点A（1，0），${B}_{1}(\frac{\sqrt{2}}{2}，\frac{\sqrt{2}}{2})$，${C}_{1}(1，2\sqrt{2}-2)$，
 
@@ -1267,7 +1308,7 @@ questions:
 
     则d的取值范围为$\frac{2\sqrt{21}}{7}≤d≤\frac{2\sqrt{6}}{3}$．'
   knowledge_points:
-  - 圆的切线性质
+  - 圆的性质
   - 直线与圆的位置关系
   - 坐标系中的几何问题
   module: circles

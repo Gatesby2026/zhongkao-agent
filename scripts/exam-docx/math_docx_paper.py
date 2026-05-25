@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""docx_paper — Word 数学试卷 → 结构化 final.json（v1 数学路线）。
+"""math_docx_paper — Word 数学试卷 → 结构化 final.json（v1 数学路线）。
 
-唯一入口（与物理 tencent_paper.py 对偶）：
-  python3 scripts/exam-docx/docx_paper.py <docx> --subject math [--force]
+唯一入口（与 chinese/english/physics/politics_docx_paper.py 命名对齐）：
+  python3 scripts/exam-docx/math_docx_paper.py <docx> --subject math [--force]
 
 流水线（无外部依赖，纯 Python）：
   1. 解 docx zip → 抽 word/document.xml + media/*.png
@@ -577,10 +577,14 @@ def main():
     full_score = sum(q["score"] for q in questions) or None
     # 元数据：从 stem 第一段头 / 文件名
     exam_name = f"{docx.stem.replace('.docx','').strip()}"
+    # 学科默认时长（北京中考一模）
+    DEFAULT_DURATION = {"math": 120, "chinese": 150, "english": 90,
+                          "physics": 70, "politics": 70}
     final = {
         "subject": a.subject,
         "exam": exam_name,
         "full_score": full_score,
+        "duration_minutes": DEFAULT_DURATION.get(a.subject, 120),
         "questions": [{
             "id": f"{a.subject}-q{q['number']:02d}",
             "number": q["number"],

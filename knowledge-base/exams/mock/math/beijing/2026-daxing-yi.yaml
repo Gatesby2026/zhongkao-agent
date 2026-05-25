@@ -9,21 +9,27 @@ district: 2026年北京市大兴区
 exam_type: 一模
 subject: math
 full_score: 100
-duration_minutes: null
+duration_minutes: 120
 total_questions: 28
 structure: 8单选(16分) + 8填空(16分) + 12解答(68分)
+passages: []
 questions:
 - id: 1
   type: 单选
   score: 2
   stem: 下列图形中，既是轴对称图形又是中心对称图形的为（　　）
   options:
-    A: '[图]'
-    B: '[图]'
-    C: '[图]'
-    D: '[图]'
+    A: '![](figures/image.png)'
+    B: '![](figures/image2.png)'
+    C: '![](figures/image3.png)'
+    D: '![](figures/image4.png)'
   has_image_options: true
   figure: 2026-daxing-yi/figures/image.png
+  _figures_extra:
+  - image.png
+  - image2.png
+  - image3.png
+  - image4.png
   answer: C
   solution: '解：A、该图形是轴对称图形，不是中心对称图形，本选项不符合题意；
 
@@ -35,7 +41,6 @@ questions:
 
     故选：C．'
   knowledge_points:
-  - 图形的对称性
   - 轴对称图形
   - 中心对称图形
   module: geometryComprehensive
@@ -57,6 +62,8 @@ questions:
     C: ab＞0
     D: '|a|＜2'
   figure: 2026-daxing-yi/figures/image5.png
+  _figures_extra:
+  - image5.png
   answer: D
   solution: '解：从数轴获取信息观察数轴上点a和点b的位置：
 
@@ -103,6 +110,8 @@ questions:
     C: 62°
     D: 72°
   figure: 2026-daxing-yi/figures/image6.png
+  _figures_extra:
+  - image6.png
   answer: C
   solution: '解：∵∠DOE＝∠AOB，∠AOB＝28°，
 
@@ -116,9 +125,9 @@ questions:
 
     故选：C．'
   knowledge_points:
-  - 垂直的性质
-  - 对顶角相等
-  module: triangles
+  - 垂直关系
+  - 角的计算
+  module: geometryComprehensive
   difficulty: 中等
   recommended_for:
   - L1
@@ -158,7 +167,7 @@ questions:
 
     故选：A．'
   knowledge_points:
-  - 概率的计算
+  - 概率计算
   module: statisticsAndProbability
   difficulty: 基础
   recommended_for:
@@ -187,10 +196,10 @@ questions:
     故选：B．'
   knowledge_points:
   - 一元二次方程的根的判别式
-  - 一元二次方程的解
   module: equationsAndInequalities
-  difficulty: 中等
+  difficulty: 基础
   recommended_for:
+  - L0
   - L1
   - L2
   - L3
@@ -219,7 +228,6 @@ questions:
     故选：B．'
   knowledge_points:
   - 科学记数法
-  - 倍数关系
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -239,6 +247,8 @@ questions:
     C: 40°
     D: 50°
   figure: 2026-daxing-yi/figures/image7.png
+  _figures_extra:
+  - image7.png
   answer: D
   solution: '解：如图，
 
@@ -259,7 +269,7 @@ questions:
     故选：D．'
   knowledge_points:
   - 直角三角形的性质
-  - 圆的基本性质
+  - 圆的性质
   module: triangles
   difficulty: 中等
   recommended_for:
@@ -286,6 +296,8 @@ questions:
     C: ②③
     D: ①②③
   figure: 2026-daxing-yi/figures/image8.png
+  _figures_extra:
+  - image8.png
   answer: D
   solution: '解：由题意，A（m，0），B（m，m2），
 
@@ -319,9 +331,9 @@ questions:
 
     故选：D．'
   knowledge_points:
-  - 二次函数的图像与性质
+  - 二次函数的性质
   - 矩形的性质
-  - 图形面积的计算
+  - 图形面积计算
   module: functions
   difficulty: 能力
   recommended_for:
@@ -339,7 +351,6 @@ questions:
     故答案为：2（x+3）（x﹣3）'
   knowledge_points:
   - 因式分解
-  - 平方差公式
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -360,8 +371,7 @@ questions:
 
     故答案为：x≥3．'
   knowledge_points:
-  - 实数的性质
-  - 根式的意义
+  - 二次根式的定义与性质
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -439,11 +449,12 @@ questions:
 
     故答案为：900．'
   knowledge_points:
-  - 统计与概率-数据的收集、整理与描述
-  - 统计与概率-数据分析
+  - 数据整理与分析
+  - 概率估计
   module: statisticsAndProbability
-  difficulty: 中等
+  difficulty: 基础
   recommended_for:
+  - L0
   - L1
   - L2
   - L3
@@ -455,6 +466,8 @@ questions:
   stem: 《弧矢算术》为明代数学家顾应祥所撰，该著作系统整理了“径矢求弦、径弦求矢、弦矢求径”等10余类问题，是中国古代切割圆形进行计算的重要方法，对当时的工程测量、历法计算具有重要实用价值．其中有一题目为：“圆径十寸，从旁截一弧，矢阔一寸．问：截弦？”．题意为：如图，AB是⊙O的直径，弦CD⊥AB于点E．若AB＝10，AE＝1，则CD的长为　   　
     ．
   figure: 2026-daxing-yi/figures/image9.png
+  _figures_extra:
+  - image9.png
   answer: 6．
   solution: '解：连接OC，
 
@@ -474,7 +487,7 @@ questions:
 
     故答案为：6．'
   knowledge_points:
-  - 圆的基本性质
+  - 圆的性质
   - 勾股定理
   module: circles
   difficulty: 中等
@@ -489,6 +502,8 @@ questions:
   score: 2
   stem: 如图，在正方形ABCD中，点E是CD中点，连接BE，点F为BE上一点，AF＝AB，若AB＝2，则△ABF的面积为　                　 ．
   figure: 2026-daxing-yi/figures/image10.png
+  _figures_extra:
+  - image10.png
   answer: $\frac{8}{5}$．
   solution: '解：在正方形ABCD中，AB＝2，
 
@@ -529,7 +544,7 @@ questions:
     ![](figures/image30.png)'
   knowledge_points:
   - 正方形的性质
-  - 三角形面积计算
+  - 三角形的面积计算
   module: quadrilaterals
   difficulty: 中等
   recommended_for:
@@ -608,12 +623,14 @@ questions:
 
     $=2\sqrt{2}+1$．'
   knowledge_points:
-  - 实数的运算
-  - 代数式的化简
+  - 绝对值
+  - 零指数幂
+  - 二次根式的化简
   - 特殊角的三角函数值
   module: numbersAndExpressions
-  difficulty: 中等
+  difficulty: 基础
   recommended_for:
+  - L0
   - L1
   - L2
   - L3
@@ -660,9 +677,9 @@ questions:
 
     ＝1．'
   knowledge_points:
-  - 代数式的化简
+  - 代数式的化简与求值
   - 方程的应用
-  module: numbersAndExpressions
+  module: equationsAndInequalities
   difficulty: 中等
   recommended_for:
   - L1
@@ -679,6 +696,8 @@ questions:
 
     （2）若∠ADC＝90°，EF＝2，求AD的长．'
   figure: 2026-daxing-yi/figures/image11.png
+  _figures_extra:
+  - image11.png
   answer: （1）∵点E，F分别为AC，BC的中点，
   solution: '（1）证明：∵点E，F分别为AC，BC的中点，
 
@@ -714,9 +733,8 @@ questions:
 
     在直角△ACD中，利用勾股定理知：AD$=\sqrt{A{C}^{2}-C{D}^{2}}=$$\sqrt{{4}^{2}-{2}^{2}}=$2$\sqrt{3}$．'
   knowledge_points:
-  - 四边形的性质
-  - 中点的应用
-  - 平行线的性质
+  - 菱形的性质与判定
+  - 中位线定理
   module: quadrilaterals
   difficulty: 中等
   recommended_for:
@@ -793,8 +811,8 @@ questions:
 
     故答案为：320．'
   knowledge_points:
-  - 一元一次方程的应用
-  - 代数式的化简与求值
+  - 方程的应用
+  - 一元一次方程
   module: equationsAndInequalities
   difficulty: 中等
   recommended_for:
@@ -873,6 +891,8 @@ questions:
 
     （2）若$\frac{BF}{EF}=\frac{5}{8}$，AE＝8，求BF的长．'
   figure: 2026-daxing-yi/figures/image12.png
+  _figures_extra:
+  - image12.png
   answer: （1）∵AE是⊙O的切线，AB为直径，
   solution: '（1）证明：∵AE是⊙O的切线，AB为直径，
 
@@ -930,7 +950,7 @@ questions:
 
     ∴$BF=\frac{5}{13}BE=\frac{5}{13}×2\sqrt{41}=\frac{10\sqrt{41}}{13}$．'
   knowledge_points:
-  - 圆的基本性质
+  - 圆的切线性质
   - 相似三角形的判定与性质
   module: circles
   difficulty: 中等
@@ -969,6 +989,9 @@ questions:
 
     （5）当t＝7.5秒时，yAC的值为　              　 ．'
   figure: 2026-daxing-yi/figures/image13.png
+  _figures_extra:
+  - image13.png
+  - image14.png
   answer: （1）![](figures/image37.png)
   solution: '解：（1）yBC与t之间关系的函数图象如图：
 
@@ -1019,8 +1042,8 @@ questions:
     ∴当 t＝7.5秒时，yAC的值为$\sqrt{34}$．'
   knowledge_points:
   - 函数的概念
-  - 周期函数
-  - 三角函数的应用
+  - 函数的图像
+  - 周期性
   module: functions
   difficulty: 中等
   recommended_for:
@@ -1107,10 +1130,11 @@ questions:
     综上，m＜﹣3或$\frac{3}{5}＜$m≤1．'
   knowledge_points:
   - 二次函数的性质
-  - 直线与抛物线的位置关系
+  - 二次函数的应用
   module: functions
-  difficulty: 能力
+  difficulty: 中等
   recommended_for:
+  - L1
   - L2
   - L3
   qc_status: draft
@@ -1124,6 +1148,8 @@ questions:
 
     （2）用等式表示DF与AE的数量关系，并证明．'
   figure: 2026-daxing-yi/figures/image15.png
+  _figures_extra:
+  - image15.png
   answer: （1）45°﹣α；
   solution: '解：（1）连接CE，
 
@@ -1187,8 +1213,9 @@ questions:
   - 旋转的性质
   - 中点的应用
   module: triangles
-  difficulty: 能力
+  difficulty: 中等
   recommended_for:
+  - L1
   - L2
   - L3
   qc_status: draft
@@ -1208,6 +1235,8 @@ questions:
 
     （3）当点M（t，0）（t＞0），B（4，0）时，N是以线段BM为半径的⊙B上一点，若⊙B上存在点P是点O的“（M，N）对应点”，直接写出t的取值范围．'
   figure: 2026-daxing-yi/figures/image16.png
+  _figures_extra:
+  - image16.png
   answer: （1）①![](figures/image48.png)；②（2，﹣1）；
   solution: '解：（1）①如图所示，
 
@@ -1291,8 +1320,9 @@ questions:
   - 点的平移
   - 圆的基本性质
   module: geometryComprehensive
-  difficulty: 能力
+  difficulty: 中等
   recommended_for:
+  - L1
   - L2
   - L3
   qc_status: draft

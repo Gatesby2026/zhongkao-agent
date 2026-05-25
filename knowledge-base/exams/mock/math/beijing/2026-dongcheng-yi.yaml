@@ -9,9 +9,10 @@ district: 2026年北京市东城区
 exam_type: 一模
 subject: math
 full_score: 100
-duration_minutes: null
+duration_minutes: 120
 total_questions: 28
 structure: 8单选(16分) + 8填空(16分) + 12解答(68分)
+passages: []
 questions:
 - id: 1
   type: 单选
@@ -23,6 +24,8 @@ questions:
     C: 圆锥
     D: 球
   figure: 2026-dongcheng-yi/figures/image.png
+  _figures_extra:
+  - image.png
   answer: A
   solution: '解：主视图和左视图均为矩形，说明该几何体是柱体（柱体的正视图和侧视图通常为矩形）；
 
@@ -33,7 +36,7 @@ questions:
     故选：A．'
   knowledge_points:
   - 三视图
-  - 几何体的识别
+  - 几何体识别
   module: geometryComprehensive
   difficulty: 基础
   recommended_for:
@@ -87,8 +90,7 @@ questions:
 
     故选：B．'
   knowledge_points:
-  - 概率的概念
-  - 等可能事件的概率
+  - 概率计算
   module: statisticsAndProbability
   difficulty: 基础
   recommended_for:
@@ -118,11 +120,11 @@ questions:
 
     故选：B．'
   knowledge_points:
-  - 有理数大小比较
   - 不等式的性质
   module: equationsAndInequalities
-  difficulty: 中等
+  difficulty: 基础
   recommended_for:
+  - L0
   - L1
   - L2
   - L3
@@ -138,6 +140,8 @@ questions:
     C: 135°
     D: 145°
   figure: 2026-dongcheng-yi/figures/image2.png
+  _figures_extra:
+  - image2.png
   answer: D
   solution: '解：由作图可知∠AEG＝∠FEG，
 
@@ -171,6 +175,8 @@ questions:
     C: 1.6m
     D: 1.8m
   figure: 2026-dongcheng-yi/figures/image3.png
+  _figures_extra:
+  - image3.png
   answer: C
   solution: '解：过点A作AD⊥BC于点D，
 
@@ -188,6 +194,7 @@ questions:
 
     故选：C．'
   knowledge_points:
+  - 解直角三角形
   - 三角函数的应用
   module: triangles
   difficulty: 中等
@@ -223,7 +230,7 @@ questions:
 
     故选：B．'
   knowledge_points:
-  - 二次函数的图象与性质
+  - 二次函数的图像与性质
   - 二次函数的平移
   module: functions
   difficulty: 中等
@@ -251,6 +258,8 @@ questions:
     C: ②③
     D: ①②③
   figure: 2026-dongcheng-yi/figures/image4.png
+  _figures_extra:
+  - image4.png
   answer: A
   solution: '解：如图所示，连接正方形对角交于点O，以点O为圆心，以OD为半径画圆，则点D，E，F，G在圆O上，连接OA，OB，OC，并延长，交圆O于点M，N，P，
 
@@ -351,7 +360,7 @@ questions:
 
     故答案为：x≠2．'
   knowledge_points:
-  - 分式有意义的条件（分母≠0）
+  - 分式的定义与性质
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -374,10 +383,11 @@ questions:
 
     故答案为：2（x﹣2y）2．'
   knowledge_points:
-  - 因式分解——公式法（平方差、完全平方）
+  - 因式分解
   module: numbersAndExpressions
-  difficulty: 中等
+  difficulty: 基础
   recommended_for:
+  - L0
   - L1
   - L2
   - L3
@@ -404,8 +414,7 @@ questions:
 
     故答案为：$x=\frac{1}{2}$．'
   knowledge_points:
-  - 分式的加减乘除运算
-  - 解一元一次方程
+  - 分式方程的解法
   module: equationsAndInequalities
   difficulty: 中等
   recommended_for:
@@ -459,7 +468,7 @@ questions:
 
     故答案为：240．'
   knowledge_points:
-  - 统计与概率-数据的收集、整理与描述-用样本估计总体
+  - 样本估计总体
   module: statisticsAndProbability
   difficulty: 基础
   recommended_for:
@@ -474,6 +483,8 @@ questions:
   score: 2
   stem: 如图，A，B，C是⊙O上的点，OC⊥AB，垂足为点D，且D为OC的中点，若OA＝5，则BC的长为　   　 ．
   figure: 2026-dongcheng-yi/figures/image5.png
+  _figures_extra:
+  - image5.png
   answer: 5．
   solution: '解：连接OB，如图，
 
@@ -508,6 +519,8 @@ questions:
   score: 2
   stem: 如图，在矩形ABCD中，AB＝6，BC＝9，点E，F分别在边AB，BC上，AE＝2，BD，EF交于点G，若G是EF的中点，则BG的长为　              　 ．
   figure: 2026-dongcheng-yi/figures/image6.png
+  _figures_extra:
+  - image6.png
   answer: $\sqrt{13}$．
   solution: '解：∵四边形ABCD是矩形，
 
@@ -541,10 +554,10 @@ questions:
 
     故答案为：$\sqrt{13}$．'
   knowledge_points:
-  - 矩形的性质
-  - 中点的性质
-  - 勾股定理
-  module: quadrilaterals
+  - 几何综合
+  - 矩形性质
+  - 中点性质
+  module: geometryComprehensive
   difficulty: 中等
   recommended_for:
   - L1
@@ -633,8 +646,8 @@ questions:
 
     故答案为：400．'
   knowledge_points:
-  - 有理数加减乘除运算
-  - 列一元一次方程解应用题
+  - 比例与应用
+  - 方程与不等式
   module: equationsAndInequalities
   difficulty: 中等
   recommended_for:
@@ -654,12 +667,14 @@ questions:
 
     $=2\sqrt{3}+1$．'
   knowledge_points:
-  - 平方根与算术平方根
-  - 绝对值的意义
-  - 实数的混合运算
+  - 二次根式的化简
+  - 特殊角的三角函数值
+  - 绝对值的性质
+  - 零指数幂
   module: numbersAndExpressions
-  difficulty: 中等
+  difficulty: 基础
   recommended_for:
+  - L0
   - L1
   - L2
   - L3
@@ -679,10 +694,11 @@ questions:
     ∴原不等式组的解集为﹣3≤x＜5．'
   knowledge_points:
   - 解一元一次不等式
-  - 不等式组的解集
+  - 解一元一次不等式组
   module: equationsAndInequalities
-  difficulty: 中等
+  difficulty: 基础
   recommended_for:
+  - L0
   - L1
   - L2
   - L3
@@ -701,8 +717,7 @@ questions:
 
     ＝3．'
   knowledge_points:
-  - 整式的加减运算
-  - 乘法公式（平方差公式、完全平方公式）
+  - 代数式的化简与求值
   module: numbersAndExpressions
   difficulty: 中等
   recommended_for:
@@ -720,6 +735,8 @@ questions:
 
     （2）若∠H＝30°，BH＝4，求CG的长．'
   figure: 2026-dongcheng-yi/figures/image7.png
+  _figures_extra:
+  - image7.png
   answer: （1）证明：∵E，F分别是AB，AD的中点，
   solution: '（1）证明：∵E，F分别是AB，AD的中点，
 
@@ -764,8 +781,7 @@ questions:
     ∴CG$=\frac{1}{2}$CH＝6．'
   knowledge_points:
   - 菱形的性质
-  - 三角形中位线定理
-  - 直角三角形的性质
+  - 中点四边形
   module: quadrilaterals
   difficulty: 中等
   recommended_for:
@@ -809,8 +825,8 @@ questions:
 
     答：用于兑换圆规的兑换券为2张．'
   knowledge_points:
-  - 解一元一次方程（去分母/去括号/移项/合并/系数化1）
-  - 列一元一次方程解应用题
+  - 方程组的应用
+  - 比例的应用
   module: equationsAndInequalities
   difficulty: 中等
   recommended_for:
@@ -864,9 +880,8 @@ questions:
 
     综上，m的取值范围为﹣2＜m≤1且m≠0．'
   knowledge_points:
-  - 一次函数的概念
-  - 一次函数的图象与性质
-  - 不等式的概念
+  - 一次函数的性质
+  - 不等式的应用
   module: functions
   difficulty: 中等
   recommended_for:
@@ -922,6 +937,8 @@ questions:
 
     若丙在甲、乙、丙三名选手中的排名居中，则表中整数t的最小值为　     　 ，最大值为　     　 ．'
   figure: 2026-dongcheng-yi/figures/image8.png
+  _figures_extra:
+  - image8.png
   answer: （1）81，83；
   solution: '解：（1）B队成绩中的数据83出现的次数最多，故众数n＝83；
 
@@ -979,9 +996,8 @@ questions:
 
     挂安慰：94，99．'
   knowledge_points:
-  - 频数分布直方图
-  - 平均数、众数、中位数
-  - 方差
+  - 统计量的计算
+  - 数据的分析与处理
   module: statisticsAndProbability
   difficulty: 中等
   recommended_for:
@@ -999,6 +1015,8 @@ questions:
 
     （2）连接BC交DE于点G．若$EF=8，sinE=\frac{3}{5}$，求CG的长．'
   figure: 2026-dongcheng-yi/figures/image9.png
+  _figures_extra:
+  - image9.png
   answer: （1）连接OC，
   solution: '（1）证明：连接OC，
 
@@ -1057,8 +1075,7 @@ questions:
     ∴$CG=\frac{4}{7}BC=\frac{12\sqrt{2}}{7}$．'
   knowledge_points:
   - 圆的切线性质
-  - 圆周角定理
-  - 三角函数的应用
+  - 解直角三角形
   module: circles
   difficulty: 中等
   recommended_for:
@@ -1092,6 +1109,8 @@ questions:
 
     这次测试中，该测试者运动25分钟时，手环显示的能量消耗值是　      　 千卡（保留整数）；运动60分钟时，手环显示的能量消耗值是　      　 千卡．'
   figure: 2026-dongcheng-yi/figures/image10.png
+  _figures_extra:
+  - image10.png
   answer: （1）y1＝5x；
   solution: '解：（1）观察表格得，y1＝5x；
 
@@ -1119,9 +1138,8 @@ questions:
 
     故答案为：117；280．'
   knowledge_points:
-  - 函数的概念
-  - 一次函数的图象与性质
-  - 绝对值的意义
+  - 一次函数的表示与应用
+  - 数据处理与分析
   module: functions
   difficulty: 中等
   recommended_for:
@@ -1189,11 +1207,12 @@ questions:
 
     综上所示，0＜a≤1或a≥4．'
   knowledge_points:
-  - 二次函数的图像与性质
-  - 一次函数的图像与性质
+  - 二次函数的性质
+  - 二次函数与一元二次方程的关系
   module: functions
-  difficulty: 能力
+  difficulty: 中等
   recommended_for:
+  - L1
   - L2
   - L3
   qc_status: draft
@@ -1209,6 +1228,8 @@ questions:
 
     （2）判断AF，BC之间的数量关系，并证明．'
   figure: 2026-dongcheng-yi/figures/image11.png
+  _figures_extra:
+  - image11.png
   answer: （1）①将AB绕点A逆时针旋转120°得到AD．过点D作DE∥BC，交AC的延长线于点E，点F为CE中点．补全图形如图即为所求；
   solution: '（1）①解：将AB绕点A逆时针旋转120°得到AD．过点D作DE∥BC，交AC的延长线于点E，点F为CE中点．补全图形如图即为所求；
 
@@ -1261,11 +1282,12 @@ questions:
     ∴BC＝2AF．'
   knowledge_points:
   - 三角形的性质
-  - 旋转的性质
+  - 旋转与对称
   - 平行线的性质
   module: triangles
-  difficulty: 能力
+  difficulty: 中等
   recommended_for:
+  - L1
   - L2
   - L3
   qc_status: draft
@@ -1283,6 +1305,8 @@ questions:
 
     （2）已知点T（t，0）（t＞0），⊙O经过点T，若存在一条长为$2\sqrt{7}$的线段，线段上的任意一点都是⊙O的长为t的弦的“锐切点”，直接写出t的取值范围．'
   figure: 2026-dongcheng-yi/figures/image12.png
+  _figures_extra:
+  - image12.png
   answer: （1）①C2，C3；
   solution: '解：（1）①如图，
 
@@ -1374,9 +1398,9 @@ questions:
 
     即$t＞2\sqrt{3}$．'
   knowledge_points:
-  - 圆的切线
-  - 锐角三角形的性质
-  - 圆中的弦长计算
+  - 圆的性质
+  - 三角形的性质
+  - 几何综合
   module: circles
   difficulty: 能力
   recommended_for:

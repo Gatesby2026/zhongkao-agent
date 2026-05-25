@@ -176,6 +176,7 @@ class NormalizedPaper:
                 "options":          opts,
                 "has_image_options": q.get("has_image_options", False),
                 "figure_path":      q.get("figure_path"),   # e.g. "figures/q06.png"
+                "figures_all":      q.get("figures_all") or [],  # 多图保留（数学图选项 A-D / 题目内嵌多图）
                 "source_pages":     [f"page-{q['source_page']:02d}"]
                                     if q.get("source_page") else [],
                 "section":          q.get("section", ""),
@@ -620,10 +621,21 @@ def enrich_paper(paper: NormalizedPaper, cache_prefix: str) -> dict:
         # 「选择题缺少 options 字段」）
         if q.get("has_image_options"):
             item["has_image_options"] = True
+            # 数学图选项题（Q1 类）：把 figures_all 4 张图按 A/B/C/D 顺序映射
+            # 替换 options 的 "[图]" 字面占位，让 yaml 自承载完整图引用
+            figs = q.get("figures_all") or []
+            if figs and len(figs) >= 4 and item.get("options"):
+                letters = ["A", "B", "C", "D"]
+                for idx, letter in enumerate(letters):
+                    if idx < len(figs) and item["options"].get(letter) == "[图]":
+                        item["options"][letter] = f"![](figures/{figs[idx]})"
 
         # figure：含图题目写入相对路径（相对于输出 YAML 所在目录）
         if q.get("figure_path"):
             item["figure"] = q["figure_path"]   # 由 _write_yaml 阶段实际复制
+        # 多图（如解答题 sol 内嵌补图）也要纳入 yaml 复制清单
+        if q.get("figures_all"):
+            item.setdefault("_figures_extra", q["figures_all"])
 
         item.update({
             "answer":           answer,

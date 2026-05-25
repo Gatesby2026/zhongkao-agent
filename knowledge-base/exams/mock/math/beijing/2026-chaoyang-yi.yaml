@@ -9,21 +9,27 @@ district: 2026年北京市朝阳区
 exam_type: 一模
 subject: math
 full_score: 100
-duration_minutes: null
+duration_minutes: 120
 total_questions: 28
 structure: 8单选(16分) + 8填空(16分) + 12解答(68分)
+passages: []
 questions:
 - id: 1
   type: 单选
   score: 2
   stem: 传统建筑中的窗格不仅具有实用功能，更承载着深厚的文化寓意与审美价值，下列图形中，既是轴对称图形，又是中心对称图形的是（　　）
   options:
-    A: '[图]'
-    B: '[图]'
-    C: '[图]'
-    D: '[图]'
+    A: '![](figures/image.png)'
+    B: '![](figures/image2.png)'
+    C: '![](figures/image3.png)'
+    D: '![](figures/image4.png)'
   has_image_options: true
   figure: 2026-chaoyang-yi/figures/image.png
+  _figures_extra:
+  - image.png
+  - image2.png
+  - image3.png
+  - image4.png
   answer: A
   solution: '解：A、该图形既是轴对称图形又是中心对称图形，本选项符合题意；
 
@@ -56,6 +62,8 @@ questions:
     C: ab＞0
     D: '|a|＞|b|'
   figure: 2026-chaoyang-yi/figures/image5.png
+  _figures_extra:
+  - image5.png
   answer: D
   solution: '解：A，a＞﹣2，数轴上右边的数大于左边的数，﹣2在a的右边，∴a＜﹣2，本项错误；
 
@@ -70,8 +78,9 @@ questions:
   - 实数的大小比较
   - 绝对值的概念
   module: numbersAndExpressions
-  difficulty: 中等
+  difficulty: 基础
   recommended_for:
+  - L0
   - L1
   - L2
   - L3
@@ -93,7 +102,7 @@ questions:
 
     故选：B．'
   knowledge_points:
-  - 多边形的内角和与外角和
+  - 多边形的外角和
   module: geometryComprehensive
   difficulty: 基础
   recommended_for:
@@ -121,7 +130,7 @@ questions:
 
     故选：B．'
   knowledge_points:
-  - 一元二次方程的根的判别式
+  - 一元二次方程的根与系数的关系
   module: equationsAndInequalities
   difficulty: 基础
   recommended_for:
@@ -147,8 +156,7 @@ questions:
 
     故选：C．'
   knowledge_points:
-  - 概率的基本概念
-  - 简单随机事件的概率计算
+  - 概率的计算
   module: statisticsAndProbability
   difficulty: 基础
   recommended_for:
@@ -179,7 +187,7 @@ questions:
     故选：C．'
   knowledge_points:
   - 科学记数法
-  - 基本运算
+  - 数值计算
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -199,6 +207,8 @@ questions:
     C: 50°
     D: 40°
   figure: 2026-chaoyang-yi/figures/image6.png
+  _figures_extra:
+  - image6.png
   answer: B
   solution: '解：如图，∵∠BAC＝40°，
 
@@ -238,6 +248,8 @@ questions:
     C: ①③④
     D: ②③④
   figure: 2026-chaoyang-yi/figures/image7.png
+  _figures_extra:
+  - image7.png
   answer: D
   solution: '解：由ax+3$=\frac{2}{x}$得，
 
@@ -335,8 +347,9 @@ questions:
   - 反比例函数的图象与性质
   - 三角形面积的计算
   module: functions
-  difficulty: 能力
+  difficulty: 中等
   recommended_for:
+  - L1
   - L2
   - L3
   qc_status: draft
@@ -354,8 +367,7 @@ questions:
 
     故答案为：x≥1．'
   knowledge_points:
-  - 实数的性质
-  - 根式的定义与性质
+  - 二次根式的定义与性质
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -375,10 +387,10 @@ questions:
     故答案为：3（a+b）2．'
   knowledge_points:
   - 因式分解
-  - 完全平方公式
   module: numbersAndExpressions
-  difficulty: 中等
+  difficulty: 基础
   recommended_for:
+  - L0
   - L1
   - L2
   - L3
@@ -403,8 +415,9 @@ questions:
   knowledge_points:
   - 分式方程的解法
   module: equationsAndInequalities
-  difficulty: 中等
+  difficulty: 基础
   recommended_for:
+  - L0
   - L1
   - L2
   - L3
@@ -422,7 +435,7 @@ questions:
     故答案为：﹣1；﹣2（答案不唯一）．'
   knowledge_points:
   - 不等式的性质
-  - 实数的平方
+  - 实数的运算
   module: equationsAndInequalities
   difficulty: 中等
   recommended_for:
@@ -452,8 +465,8 @@ questions:
 
     故答案为：13000．'
   knowledge_points:
-  - 统计与概率-数据的收集、整理与描述
-  - 统计与概率-样本估计总体
+  - 样本估计总体
+  - 数据整理与分析
   module: statisticsAndProbability
   difficulty: 基础
   recommended_for:
@@ -491,7 +504,6 @@ questions:
     故答案为：340．'
   knowledge_points:
   - 一次函数的应用
-  - 线性关系的确定
   module: functions
   difficulty: 中等
   recommended_for:
@@ -506,6 +518,8 @@ questions:
   stem: 如图，在平面直角坐标系xOy中，正方形ABCD的顶点A，B在x轴上，点D的坐标为（﹣1，5），CD与y轴交于点E，点F在CD边上，将△BCF沿直线BF翻折，得到△BGF．若点G恰好落在y轴上，则△EFG的面积为　                　
     ．
   figure: 2026-chaoyang-yi/figures/image8.png
+  _figures_extra:
+  - image8.png
   answer: $\frac{3}{2}$．
   solution: '解：∵点D的坐标为（﹣1，5），四边形ABCD是正方形，
 
@@ -533,12 +547,13 @@ questions:
 
     故答案为：$\frac{3}{2}$．'
   knowledge_points:
+  - 几何变换
+  - 坐标系与图形位置
   - 正方形的性质
-  - 坐标系中的几何变换
-  - 三角形面积计算
-  module: quadrilaterals
-  difficulty: 能力
+  module: geometryComprehensive
+  difficulty: 中等
   recommended_for:
+  - L1
   - L2
   - L3
   qc_status: draft
@@ -589,10 +604,9 @@ questions:
 
     $=\sqrt{3}$．'
   knowledge_points:
-  - 实数的运算
-  - 特殊角的三角函数值
-  - 绝对值的性质
-  - 根式的化简
+  - 实数运算
+  - 三角函数
+  - 绝对值
   module: numbersAndExpressions
   difficulty: 中等
   recommended_for:
@@ -616,7 +630,8 @@ questions:
 
     所以不等式组的解集为2＜x＜4．'
   knowledge_points:
-  - 一元一次不等式组的解法
+  - 解一元一次不等式
+  - 不等式组的解法
   module: equationsAndInequalities
   difficulty: 中等
   recommended_for:
@@ -642,9 +657,7 @@ questions:
 
     $=\frac{3}{2}$．'
   knowledge_points:
-  - 代数式的化简
-  - 因式分解
-  - 分式的运算
+  - 代数式的化简与求值
   module: numbersAndExpressions
   difficulty: 中等
   recommended_for:
@@ -662,6 +675,8 @@ questions:
 
     （2）连接EF，若AB＝6，DE＝2，∠A＝60°，求EF的长．'
   figure: 2026-chaoyang-yi/figures/image9.png
+  _figures_extra:
+  - image9.png
   answer: （1）∵四边形ABCD是平行四边形，
   solution: '（1）证明：∵四边形ABCD是平行四边形，
 
@@ -798,8 +813,7 @@ questions:
 
     答：甲种名著的单价是24元，乙种名著的单价是36元．'
   knowledge_points:
-  - 一元一次方程的应用
-  - 比例与方程
+  - 方程的应用
   module: equationsAndInequalities
   difficulty: 中等
   recommended_for:
@@ -849,6 +863,8 @@ questions:
     ②根据比赛成绩，学校对这六名学生进行最后的排序，排序标准为：平均数较大的优先；若平均数相等，则综合应用成绩较高的优先；若综合应用成绩也相等，则方差较小的优先．按上述标准排序后，这六名学生的排序由高到低依次为D，E，A，B，C，F，则表中t所有可能的值为　        　
     ．'
   figure: 2026-chaoyang-yi/figures/image10.png
+  _figures_extra:
+  - image10.png
   answer: （1）①89.5；②＜；
   solution: '解：（1）①七年级参赛学生基础知识比赛成绩的中位数m$=\frac{89+90}{2}=$89.5，
 
@@ -880,8 +896,9 @@ questions:
 
     故答案为：96，97．'
   knowledge_points:
-  - 统计量的计算与应用
-  - 数据的分析与比较
+  - 中位数
+  - 方差
+  - 平均数
   module: statisticsAndProbability
   difficulty: 中等
   recommended_for:
@@ -899,6 +916,8 @@ questions:
 
     （2）过点A作AM⊥BE，交BE的延长线于点M，AM交⊙O于点N，若$\frac{AO}{ME}=\frac{5}{4}$，AN＝6，求BC的长．'
   figure: 2026-chaoyang-yi/figures/image11.png
+  _figures_extra:
+  - image11.png
   answer: （1）连接OE，
   solution: '（1）证明：连接OE，
 
@@ -958,8 +977,7 @@ questions:
 
     ∴BC＝BE$=\frac{20}{3}$．'
   knowledge_points:
-  - 圆的基本性质
-  - 直角三角形的性质
+  - 圆的切线判定
   - 相似三角形的应用
   module: circles
   difficulty: 中等
@@ -997,6 +1015,8 @@ questions:
 
     ②可以推断，从第　   　 天开始，选择方案三的投资总回报超过同时选择方案一与方案二的投资总回报之和．'
   figure: 2026-chaoyang-yi/figures/image12.png
+  _figures_extra:
+  - image12.png
   answer: （1）6
   solution: '解：（1）由图象可得，y2是关于x的一次函数，
 
@@ -1139,6 +1159,8 @@ questions:
 
     （2）过点D作直线BC的垂线，垂足为G，用等式表示线段BC，FG之间的数量关系，并证明．'
   figure: 2026-chaoyang-yi/figures/image13.png
+  _figures_extra:
+  - image13.png
   answer: （1）图形如图所示：
   solution: '解：（1）图形如图所示：
 
@@ -1211,6 +1233,8 @@ questions:
 
     （2）已知线段CD平行于x轴，中点为（a﹣3，a﹣3），若线段CD为点A的旋转线段，直接写出a的取值范围及d的最大值．'
   figure: 2026-chaoyang-yi/figures/image14.png
+  _figures_extra:
+  - image14.png
   answer: （1）①C1D1，C2D2；
   solution: '解：（1）①逆向思维，将⊙B绕A（0，3）顺时针旋转90°得到⊙B′，其中B′（1，0），
 
@@ -1272,9 +1296,9 @@ questions:
 
     综上，$\frac{11}{4}≤a≤\frac{13}{4}$或$\frac{15}{4}≤a≤\frac{17}{4}$，d的最大值为$\frac{3\sqrt{17}}{4}$．'
   knowledge_points:
-  - 平面直角坐标系
-  - 旋转
+  - 几何变换
   - 圆的性质
+  - 坐标系与点的位置关系
   module: geometryComprehensive
   difficulty: 能力
   recommended_for:

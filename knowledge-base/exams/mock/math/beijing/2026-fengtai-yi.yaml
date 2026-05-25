@@ -9,9 +9,10 @@ district: 2026年北京市丰台区
 exam_type: 一模
 subject: math
 full_score: 100
-duration_minutes: null
+duration_minutes: 120
 total_questions: 28
 structure: 8单选(16分) + 8填空(16分) + 12解答(68分)
+passages: []
 questions:
 - id: 1
   type: 单选
@@ -23,6 +24,8 @@ questions:
     C: 圆锥
     D: 圆柱
   figure: 2026-fengtai-yi/figures/image.png
+  _figures_extra:
+  - image.png
   answer: D
   solution: '解：∵主视图和左视图是长方形，
 
@@ -34,8 +37,8 @@ questions:
 
     故选：D．'
   knowledge_points:
-  - 几何体的三视图
-  - 圆柱的性质
+  - 三视图
+  - 几何体识别
   module: geometryComprehensive
   difficulty: 基础
   recommended_for:
@@ -81,6 +84,8 @@ questions:
     C: a﹣b＞0
     D: ab＞0
   figure: 2026-fengtai-yi/figures/image2.png
+  _figures_extra:
+  - image2.png
   answer: B
   solution: '解：观察数轴可知：a＜﹣2＜0＜b＜1，
 
@@ -144,10 +149,10 @@ questions:
     故选：A．'
   knowledge_points:
   - 一元二次方程的根与系数的关系
-  - 判别式的应用
   module: equationsAndInequalities
-  difficulty: 中等
+  difficulty: 基础
   recommended_for:
+  - L0
   - L1
   - L2
   - L3
@@ -179,7 +184,7 @@ questions:
 
     故选：C．'
   knowledge_points:
-  - 概率的计算
+  - 概率计算
   module: statisticsAndProbability
   difficulty: 基础
   recommended_for:
@@ -199,6 +204,8 @@ questions:
     C: '2'
     D: $2\sqrt{3}$
   figure: 2026-fengtai-yi/figures/image3.png
+  _figures_extra:
+  - image3.png
   answer: D
   solution: '解：连接AC，AD，
 
@@ -244,6 +251,8 @@ questions:
     C: ②③
     D: ②④
   figure: 2026-fengtai-yi/figures/image4.png
+  _figures_extra:
+  - image4.png
   answer: A
   solution: '解：由题意，∵反比例函数y$=\frac{k}{x}$的图象关于y＝x对称，且点A是反比例函数$y=\frac{4}{x}(x＞0)$的图象上的动点，
 
@@ -264,7 +273,7 @@ questions:
     故选：A．'
   knowledge_points:
   - 反比例函数的性质
-  - 三角形面积公式
+  - 平面直角坐标系中的几何关系
   module: functions
   difficulty: 中等
   recommended_for:
@@ -284,7 +293,7 @@ questions:
 
     故答案为：x≥5．'
   knowledge_points:
-  - 实数的性质
+  - 实数及其运算
   - 根式的意义
   module: numbersAndExpressions
   difficulty: 基础
@@ -337,8 +346,9 @@ questions:
   knowledge_points:
   - 分式方程的解法
   module: equationsAndInequalities
-  difficulty: 中等
+  difficulty: 基础
   recommended_for:
+  - L0
   - L1
   - L2
   - L3
@@ -349,6 +359,8 @@ questions:
   score: 2
   stem: 如图，将一个直角三角板的直角顶点C放在直尺一边AB上．若∠1＝50°，则∠2的度数为　      　 ．
   figure: 2026-fengtai-yi/figures/image5.png
+  _figures_extra:
+  - image5.png
   answer: 40°．
   solution: '解：如图，
 
@@ -363,10 +375,11 @@ questions:
     故答案为：40°．'
   knowledge_points:
   - 三角形内角和定理
-  - 直角三角形的性质
+  - 直角三角形性质
   module: triangles
-  difficulty: 中等
+  difficulty: 基础
   recommended_for:
+  - L0
   - L1
   - L2
   - L3
@@ -384,7 +397,6 @@ questions:
     故答案为：﹣2（答案不唯一）．'
   knowledge_points:
   - 不等式的性质
-  - 实数的运算
   module: equationsAndInequalities
   difficulty: 中等
   recommended_for:
@@ -410,7 +422,8 @@ questions:
 
     故答案为：230．'
   knowledge_points:
-  - 统计与概率-用样本估计总体
+  - 样本估计总体
+  - 数据整理与分析
   module: statisticsAndProbability
   difficulty: 基础
   recommended_for:
@@ -425,6 +438,8 @@ questions:
   score: 2
   stem: 如图，在正方形ABCD中，E为AD的中点，CF⊥BE，垂足为F．若AB＝4，则△ABF的面积为　                　 ．
   figure: 2026-fengtai-yi/figures/image6.png
+  _figures_extra:
+  - image6.png
   answer: $\frac{8}{5}$．
   solution: '解：过A作AH⊥BE于H，
 
@@ -463,7 +478,7 @@ questions:
     ![](figures/image23.png)'
   knowledge_points:
   - 正方形的性质
-  - 三角形面积计算
+  - 三角形的面积计算
   module: quadrilaterals
   difficulty: 中等
   recommended_for:
@@ -529,8 +544,8 @@ questions:
 
     故答案为：15.5．'
   knowledge_points:
-  - 统计与概率-数据分析
-  - 统计与概率-数据处理
+  - 排列组合
+  - 最优化问题
   module: statisticsAndProbability
   difficulty: 中等
   recommended_for:
@@ -550,11 +565,14 @@ questions:
 
     ＝3$-\sqrt{2}$．'
   knowledge_points:
-  - 实数的运算
-  - 三角函数的基本概念
+  - 特殊角的三角函数值
+  - 绝对值
+  - 二次根式的化简
+  - 负指数幂
   module: numbersAndExpressions
-  difficulty: 中等
+  difficulty: 基础
   recommended_for:
+  - L0
   - L1
   - L2
   - L3
@@ -575,7 +593,8 @@ questions:
 
     所以不等式组的解集为﹣1≤x＜1．'
   knowledge_points:
-  - 一元一次不等式组的解法
+  - 解一元一次不等式
+  - 不等式组的解法
   module: equationsAndInequalities
   difficulty: 中等
   recommended_for:
@@ -597,7 +616,7 @@ questions:
 
     $=-\frac{2}{3}$．'
   knowledge_points:
-  - 代数式的化简
+  - 代数式的化简与求值
   - 方程的应用
   module: numbersAndExpressions
   difficulty: 中等
@@ -616,6 +635,8 @@ questions:
 
     （2）连接BF，若AB＝3，sin∠BAC$=\frac{2}{3}$，求BF的长．'
   figure: 2026-fengtai-yi/figures/image7.png
+  _figures_extra:
+  - image7.png
   answer: （1）∵DE＝AD，DF＝CD，
   solution: '（1）证明：∵DE＝AD，DF＝CD，
 
@@ -716,7 +737,7 @@ questions:
     综上：﹣2＜m≤3且m≠0．'
   knowledge_points:
   - 一次函数的性质
-  - 直线方程的应用
+  - 一次函数的应用
   module: functions
   difficulty: 中等
   recommended_for:
@@ -730,6 +751,8 @@ questions:
   score: 6
   stem: 用一张长为33cm，宽为30cm的矩形纸板制作长方体包装盒（纸板厚度忽略不计），图1为包装盒裁剪设计图，包含盒体、带有插舌的盒盖、翼盖，以及用于粘贴的粘口，其中插舌宽和粘口宽相等．沿图中实线剪开，按虚线折叠，经过粘贴制成如图2所示的包装盒，其上下底面均为正方形，高与底面边长的比为3：2．求包装盒的高．
   figure: 2026-fengtai-yi/figures/image8.png
+  _figures_extra:
+  - image8.png
   answer: 包装盒的高为12cm．
   solution: '解：∵高与底面边长的比为3：2，
 
@@ -749,8 +772,8 @@ questions:
 
     答：包装盒的高为12cm．'
   knowledge_points:
-  - 几何图形的认识
-  - 比例的应用
+  - 几何综合
+  - 长方体的性质
   module: geometryComprehensive
   difficulty: 中等
   recommended_for:
@@ -805,6 +828,9 @@ questions:
     （4）手机的夜间护眼模式可以通过网络、SIM卡获取位置信息，再接入专业网站获得所在地的日出、日落时刻数据，实现日落自动开启，日出自动关闭．若某学生利用假期从北京出发去广州旅游，到达广州后他的手机夜间护眼模式开启时间延后，关闭时间提前．据此判断该学生此次旅游在　     　
     期间（填“寒假”或“暑假”）．'
   figure: 2026-fengtai-yi/figures/image9.png
+  _figures_extra:
+  - image9.png
+  - image10.png
   answer: （1）12.15；
   solution: '解：（1）喀什二十四节气日白昼时长的数据排序后，第12个和第13个数据分别为12.1和12.2，
 
@@ -832,8 +858,9 @@ questions:
 
     故答案为：寒假．'
   knowledge_points:
-  - 统计量的理解与应用
-  - 数据分析与推断
+  - 数据的整理与描述
+  - 数据分析
+  - 统计量的理解
   module: statisticsAndProbability
   difficulty: 中等
   recommended_for:
@@ -851,6 +878,8 @@ questions:
 
     （2）连接CD交AB于点F．若$\frac{OF}{FB}=\frac{5}{6}，BE=4$，求AF的长．'
   figure: 2026-fengtai-yi/figures/image11.png
+  _figures_extra:
+  - image11.png
   answer: （1）连接OD，
   solution: '（1）证明：连接OD，
 
@@ -961,6 +990,8 @@ questions:
 
     判断上面实验所用餐具的防水剂用量为　      　 （填“6%”或“10%”）．当降解天数为4时，该餐具降解失重率要达到100℃条件下未添加防水剂的降解失重率，温度至少是　      　 ℃．'
   figure: 2026-fengtai-yi/figures/image12.png
+  _figures_extra:
+  - image12.png
   answer: （1）5.0；
   solution: '解：（1）∵实验测得防水剂用量10%的餐具在未降解时质量为30.0g，降解天数为1时质量为28.5g，
 
@@ -990,9 +1021,9 @@ questions:
 
     故答案为：10%，140．'
   knowledge_points:
-  - 函数的应用
-  - 数据的分析与处理
-  module: functions
+  - 数据处理
+  - 函数图像
+  module: statisticsAndProbability
   difficulty: 中等
   recommended_for:
   - L1
@@ -1134,10 +1165,11 @@ questions:
     综上所述：$-1＜a≤-\frac{1}{2}$或a＞4．'
   knowledge_points:
   - 二次函数的性质
-  - 坐标系中的几何问题
+  - 二次函数的应用
   module: functions
-  difficulty: 能力
+  difficulty: 中等
   recommended_for:
+  - L1
   - L2
   - L3
   qc_status: draft
@@ -1155,6 +1187,8 @@ questions:
 
     ②用等式表示EF，AF与CG之间的数量关系，并证明．'
   figure: 2026-fengtai-yi/figures/image13.png
+  _figures_extra:
+  - image13.png
   answer: （1）∵点D为AC的中点，
   solution: '（1）证明：∵点D为AC的中点，
 
@@ -1244,8 +1278,9 @@ questions:
   - 全等三角形的判定与性质
   - 旋转的性质
   module: triangles
-  difficulty: 能力
+  difficulty: 中等
   recommended_for:
+  - L1
   - L2
   - L3
   qc_status: draft
@@ -1333,7 +1368,7 @@ questions:
   knowledge_points:
   - 圆的性质
   - 直线与圆的位置关系
-  - 几何综合问题
+  - 几何综合
   module: circles
   difficulty: 能力
   recommended_for:

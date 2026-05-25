@@ -9,21 +9,27 @@ district: 2026年北京市海淀区
 exam_type: 一模
 subject: math
 full_score: 100
-duration_minutes: null
+duration_minutes: 120
 total_questions: 28
 structure: 8单选(16分) + 8填空(16分) + 12解答(68分)
+passages: []
 questions:
 - id: 1
   type: 单选
   score: 2
   stem: 下列图形中，既是轴对称图形又是中心对称图形的是（　　）
   options:
-    A: '[图]'
-    B: '[图]'
-    C: '[图]'
-    D: '[图]'
+    A: '![](figures/image.png)'
+    B: '![](figures/image2.png)'
+    C: '![](figures/image3.png)'
+    D: '![](figures/image4.png)'
   has_image_options: true
   figure: 2026-haidian-yi/figures/image.png
+  _figures_extra:
+  - image.png
+  - image2.png
+  - image3.png
+  - image4.png
   answer: D
   solution: '解：A是轴对称图形，但不是中心对称图形，不符合题意，
 
@@ -56,6 +62,8 @@ questions:
     C: ﹣a＞﹣1
     D: '|a|＞|b|'
   figure: 2026-haidian-yi/figures/image5.png
+  _figures_extra:
+  - image5.png
   answer: C
   solution: '解：由所给数轴可知，
 
@@ -67,11 +75,12 @@ questions:
 
     故选：C．'
   knowledge_points:
-  - 实数的大小比较
-  - 数轴上的点与实数的对应关系
+  - 实数的比较
+  - 数轴的应用
   module: numbersAndExpressions
-  difficulty: 中等
+  difficulty: 基础
   recommended_for:
+  - L0
   - L1
   - L2
   - L3
@@ -118,7 +127,6 @@ questions:
     故选：B．'
   knowledge_points:
   - 概率的基本概念
-  - 随机事件的概率计算
   module: statisticsAndProbability
   difficulty: 基础
   recommended_for:
@@ -145,10 +153,10 @@ questions:
     故选：A．'
   knowledge_points:
   - 一元二次方程的根的判别式
-  - 不等式的解法
   module: equationsAndInequalities
-  difficulty: 中等
+  difficulty: 基础
   recommended_for:
+  - L0
   - L1
   - L2
   - L3
@@ -189,6 +197,8 @@ questions:
     C: 105°
     D: 110°
   figure: 2026-haidian-yi/figures/image6.png
+  _figures_extra:
+  - image6.png
   answer: C
   solution: '解：如图，连接BC，BM．
 
@@ -245,6 +255,8 @@ questions:
     C: ②③
     D: ②④
   figure: 2026-haidian-yi/figures/image7.png
+  _figures_extra:
+  - image7.png
   answer: A
   solution: '解：①由题意，当MN与y轴重合时，MN的长取得最大值，最大值为$\sqrt{5}+1$，故①正确，排除选项C和D；
 
@@ -273,7 +285,7 @@ questions:
     故选：A．'
   knowledge_points:
   - 二次函数的图像与性质
-  - 圆的基本性质
+  - 圆的性质
   module: functions
   difficulty: 能力
   recommended_for:
@@ -294,8 +306,7 @@ questions:
 
     故答案为：x≥3．'
   knowledge_points:
-  - 实数及其运算
-  - 根式的意义
+  - 二次根式的定义与性质
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -365,10 +376,11 @@ questions:
 
     故答案为：2700．'
   knowledge_points:
-  - 统计与概率-样本估计总体
+  - 样本估计总体
   module: statisticsAndProbability
-  difficulty: 中等
+  difficulty: 基础
   recommended_for:
+  - L0
   - L1
   - L2
   - L3
@@ -386,7 +398,6 @@ questions:
     故答案为：1，﹣1．'
   knowledge_points:
   - 不等式的性质
-  - 实数的比较
   module: equationsAndInequalities
   difficulty: 中等
   recommended_for:
@@ -400,6 +411,8 @@ questions:
   score: 2
   stem: 如图，AB为⊙O的直径，点A为$\vec{CD}$的中点．若∠A＝65°，则∠B的大小为　      　 ．
   figure: 2026-haidian-yi/figures/image8.png
+  _figures_extra:
+  - image8.png
   answer: 25°．
   solution: '解：∵OA＝OD，
 
@@ -417,8 +430,8 @@ questions:
 
     故答案为：25°．'
   knowledge_points:
-  - 圆的基本性质
   - 圆周角定理
+  - 直径所对的圆周角
   module: circles
   difficulty: 中等
   recommended_for:
@@ -432,6 +445,8 @@ questions:
   score: 2
   stem: 如图，在矩形ABCD中，AB＝6，AD＝4．点E在BC的延长线上，连接AE，交CD于点F．若△ABE的面积为15，则△ADF的面积为　                 　 ．
   figure: 2026-haidian-yi/figures/image9.png
+  _figures_extra:
+  - image9.png
   answer: $\frac{48}{5}$．
   solution: '解：∵四边形ABCD是矩形，AB＝6，AD＝4，
 
@@ -463,9 +478,9 @@ questions:
 
     故答案为：$\frac{48}{5}$．'
   knowledge_points:
+  - 相似三角形的性质
   - 矩形的性质
-  - 三角形面积计算
-  module: quadrilaterals
+  module: triangles
   difficulty: 中等
   recommended_for:
   - L1
@@ -549,13 +564,14 @@ questions:
 
     ＝5．'
   knowledge_points:
-  - 实数的运算
-  - 三角函数的基本概念
-  - 指数运算
+  - 二次根式
+  - 特殊角的三角函数值
+  - 负整数指数幂
   - 绝对值
   module: numbersAndExpressions
-  difficulty: 中等
+  difficulty: 基础
   recommended_for:
+  - L0
   - L1
   - L2
   - L3
@@ -578,7 +594,8 @@ questions:
 
     故原不等式组的解集为﹣2＜x＜3．'
   knowledge_points:
-  - 一元一次不等式组的解法
+  - 解一元一次不等式
+  - 解不等式组
   module: equationsAndInequalities
   difficulty: 中等
   recommended_for:
@@ -608,7 +625,7 @@ questions:
 
     $=\frac{3}{2}$．'
   knowledge_points:
-  - 代数式的化简
+  - 代数式的化简与求值
   - 方程的应用
   module: numbersAndExpressions
   difficulty: 中等
@@ -627,6 +644,8 @@ questions:
 
     （2）若$∠CQN=30°，CN=2\sqrt{3}，MN=5$，求PA的长．'
   figure: 2026-haidian-yi/figures/image10.png
+  _figures_extra:
+  - image10.png
   answer: （1）∵M，N分别为AB，BC的中点，
   solution: '（1）证明：∵M，N分别为AB，BC的中点，
 
@@ -660,7 +679,7 @@ questions:
 
     ∴PA＝PC﹣AC＝11﹣10＝1．'
   knowledge_points:
-  - 三角形的性质
+  - 三角形中位线定理
   - 平行四边形的判定与性质
   module: triangles
   difficulty: 中等
@@ -679,6 +698,8 @@ questions:
 
     已知小明每次平移图案时，先水平向右平移，再竖直向上平移，并且水平方向平移距离是竖直方向平移距离的2倍．若图2中“骐骥驰骋纹”图案的横距是纵距的$\frac{5}{3}$倍，求小明每次平移图案时竖直方向的平移距离．'
   figure: 2026-haidian-yi/figures/image11.png
+  _figures_extra:
+  - image11.png
   answer: 小明每次平移图案时竖直向上平移3cm，
   solution: '解：设小明每次平移图案时竖直向上平移xcm，水平方向平移2xcm．
 
@@ -765,6 +786,8 @@ questions:
     （3）考虑到极端数据对结果的影响，学校先将每门课程的满意度评分中与平均数的差的绝对值最大的一个数据去掉，再计算剩余数据的平均数、方差和中位数，并按照如下方法评估这三门课程：首先比较平均数，平均数较大者学生更加满意；若平均数相等，则比较方差，方差较小者学生更加满意；若平均数、方差分别相等，则中位数较大者学生更加满意．按照这种评估方法，这三门课程中满意度最高的是　   　
     ，最低的是　   　 （填“甲”“乙”或“丙”）．'
   figure: 2026-haidian-yi/figures/image12.png
+  _figures_extra:
+  - image12.png
   answer: （1）8；
   solution: '解：（1）从折线统计图可以看出，10名学生对课程甲的满意度评分8分出现的次数最多，所以课程甲的满意度评分的众数为8．
 
@@ -805,8 +828,7 @@ questions:
     故答案为：丙，乙．'
   knowledge_points:
   - 统计量的计算与应用
-  - 数据的整理与描述
-  - 数据分析
+  - 数据的整理与分析
   module: statisticsAndProbability
   difficulty: 中等
   recommended_for:
@@ -824,6 +846,8 @@ questions:
 
     （2）取BD中点H，连接OH，并延长交$\vec{BD}$于点E，连接AE，交BD于点F．若$sinB=\frac{3}{5}，CA=5$，求DF的长．'
   figure: 2026-haidian-yi/figures/image13.png
+  _figures_extra:
+  - image13.png
   answer: （1）∵CA⊥AB，
   solution: '（1）证明：∵CA⊥AB，
 
@@ -901,12 +925,12 @@ questions:
 
     ∴$DF=\frac{3}{4}DH=4$．'
   knowledge_points:
-  - 圆的切线判定
+  - 圆的切线性质
   - 三角函数的应用
-  - 中点与垂径定理
   module: circles
-  difficulty: 能力
+  difficulty: 中等
   recommended_for:
+  - L1
   - L2
   - L3
   qc_status: draft
@@ -940,6 +964,8 @@ questions:
     ②该工厂接到一批补购订单，需要平编产品200件，绞编产品100件，且每件产品的面积都为12dm2．开始时机器人A编织平编产品，机器人B编织绞编产品，工作一段时间后，机器人B出现故障无法工作．机器人A完成所有平编产品后，调整为绞编程序接着机器人B的进度完成剩余的绞编产品．当编织完所有产品时，机器人A编织的总面积为3052dm2．若生产两件产品之间的时间间隔忽略不计，则机器人B出现故障前大约工作了　         　
     min（结果保留小数点后一位）．'
   figure: 2026-haidian-yi/figures/image14.png
+  _figures_extra:
+  - image14.png
   answer: （1）3.6；
   solution: '解：（1）∵S1与t的关系可以近似用正比例函数刻画，
 
@@ -981,8 +1007,8 @@ questions:
 
     故答案为：137.3．'
   knowledge_points:
-  - 函数的概念
   - 正比例函数
+  - 一次函数
   - 函数图象
   module: functions
   difficulty: 中等
@@ -1054,8 +1080,9 @@ questions:
   - 二次函数的性质
   - 一次函数与二次函数的交点问题
   module: functions
-  difficulty: 能力
+  difficulty: 中等
   recommended_for:
+  - L1
   - L2
   - L3
   qc_status: draft
@@ -1069,6 +1096,8 @@ questions:
 
     （2）如图2，用等式表示线段AB，CD和CE的数量关系，并证明．'
   figure: 2026-haidian-yi/figures/image15.png
+  _figures_extra:
+  - image15.png
   answer: （1）∵∠BAC＝α＝30°，
   solution: '（1）证明：∵∠BAC＝α＝30°，
 
@@ -1130,6 +1159,7 @@ questions:
   knowledge_points:
   - 直角三角形的性质
   - 旋转的性质
+  - 线段长度关系
   module: triangles
   difficulty: 中等
   recommended_for:

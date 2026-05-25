@@ -9,21 +9,27 @@ district: 2026年北京市石景山区
 exam_type: 一模
 subject: math
 full_score: 100
-duration_minutes: null
+duration_minutes: 120
 total_questions: 28
 structure: 8单选(16分) + 8填空(16分) + 12解答(68分)
+passages: []
 questions:
 - id: 1
   type: 单选
   score: 2
   stem: 刺绣是中华优秀传统文化的璀璨瑰宝．下列刺绣图案既是轴对称图形又是中心对称图形的是（　　）
   options:
-    A: '[图]'
-    B: '[图]'
-    C: '[图]'
-    D: '[图]'
+    A: '![](figures/image.png)'
+    B: '![](figures/image2.png)'
+    C: '![](figures/image3.png)'
+    D: '![](figures/image4.png)'
   has_image_options: true
   figure: 2026-shijingshan-yi/figures/image.png
+  _figures_extra:
+  - image.png
+  - image2.png
+  - image3.png
+  - image4.png
   answer: C
   solution: '解：A、该图形既不是轴对称图形，也不是中心对称图形，本选项不符合题意；
 
@@ -35,7 +41,6 @@ questions:
 
     故选：C．'
   knowledge_points:
-  - 图形的对称性
   - 轴对称图形
   - 中心对称图形
   module: geometryComprehensive
@@ -62,7 +67,6 @@ questions:
     故选：D．'
   knowledge_points:
   - 科学记数法
-  - 小数与分数的运算
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -82,6 +86,8 @@ questions:
     C: ab＞0
     D: a＞﹣1
   figure: 2026-shijingshan-yi/figures/image5.png
+  _figures_extra:
+  - image5.png
   answer: B
   solution: '解：观察数轴可知：﹣2＜a＜﹣1，2＜b＜3，|a|＜|b|，
 
@@ -94,8 +100,9 @@ questions:
   - 实数的大小比较
   - 数轴的应用
   module: numbersAndExpressions
-  difficulty: 中等
+  difficulty: 基础
   recommended_for:
+  - L0
   - L1
   - L2
   - L3
@@ -120,10 +127,10 @@ questions:
     故选：D．'
   knowledge_points:
   - 一元二次方程的根的判别式
-  - 一元二次方程的解法
   module: equationsAndInequalities
-  difficulty: 中等
+  difficulty: 基础
   recommended_for:
+  - L0
   - L1
   - L2
   - L3
@@ -184,7 +191,7 @@ questions:
 
     故选：A．'
   knowledge_points:
-  - 概率的计算
+  - 概率计算
   module: statisticsAndProbability
   difficulty: 基础
   recommended_for:
@@ -204,6 +211,8 @@ questions:
     C: 65°
     D: 50°
   figure: 2026-shijingshan-yi/figures/image6.png
+  _figures_extra:
+  - image6.png
   answer: A
   solution: '解：如图，
 
@@ -251,6 +260,8 @@ questions:
     C: ②③
     D: ②④
   figure: 2026-shijingshan-yi/figures/image7.png
+  _figures_extra:
+  - image7.png
   answer: B
   solution: '解：由题意，∵A（1，0），$B(5\sqrt{2}+1，0)$，
 
@@ -279,11 +290,12 @@ questions:
     故选：B．'
   knowledge_points:
   - 正方形的性质
-  - 旋转的几何变换
-  - 坐标系中的点的位置关系
+  - 旋转的性质
+  - 坐标系中的几何变换
   module: geometryComprehensive
-  difficulty: 能力
+  difficulty: 中等
   recommended_for:
+  - L1
   - L2
   - L3
   qc_status: draft
@@ -301,8 +313,8 @@ questions:
 
     故答案为：x≥3．'
   knowledge_points:
-  - 实数的性质
-  - 根式的意义
+  - 实数及其运算
+  - 根式
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -377,7 +389,7 @@ questions:
     故答案为：1．'
   knowledge_points:
   - 反比例函数的性质
-  - 坐标与函数图像的关系
+  - 坐标与函数的关系
   module: functions
   difficulty: 中等
   recommended_for:
@@ -405,8 +417,8 @@ questions:
 
     故答案为：630．'
   knowledge_points:
-  - 统计与概率-样本估计总体
-  - 统计与概率-数据的收集与整理
+  - 样本估计总体
+  - 数据的整理与分析
   module: statisticsAndProbability
   difficulty: 基础
   recommended_for:
@@ -428,7 +440,7 @@ questions:
     故答案为：﹣2；2（答案不唯一）．'
   knowledge_points:
   - 不等式的性质
-  - 实数的运算
+  - 实数的比较
   module: equationsAndInequalities
   difficulty: 中等
   recommended_for:
@@ -443,6 +455,8 @@ questions:
   stem: 中国古代重要文献《淮南万毕术》中记载了古人利用光的反射定律改变光路的方法．如图，为了将深井照亮，并口放置一平面镜MN，太阳光线AO与地面DE的夹角∠AOD＝46°，反射光线OB恰好垂直于地面DE（反射角∠BOC等于入射角∠AOC，OC⊥MN），则平面镜MN与地面DE的夹角∠MOD＝　     　
     °．
   figure: 2026-shijingshan-yi/figures/image8.png
+  _figures_extra:
+  - image8.png
   answer: 68．
   solution: '解：∵∠BOC＝90°﹣∠COD，
 
@@ -458,8 +472,7 @@ questions:
 
     故答案为：68．'
   knowledge_points:
-  - 光的反射定律
-  - 几何角度计算
+  - 光的反射
   module: geometryComprehensive
   difficulty: 中等
   recommended_for:
@@ -509,9 +522,9 @@ questions:
 
     因此甲除A以外，还需完成C，E，G．'
   knowledge_points:
-  - 逻辑推理
-  - 最优化问题
-  module: equationsAndInequalities
+  - 图论与网络流
+  - 最短路径问题
+  module: geometryComprehensive
   difficulty: 中等
   recommended_for:
   - L1
@@ -530,9 +543,9 @@ questions:
 
     ＝3+3$\sqrt{2}$．'
   knowledge_points:
-  - 实数的运算
-  - 三角函数的基本概念
-  - 绝对值的概念
+  - 实数运算
+  - 三角函数
+  - 二次根式
   module: numbersAndExpressions
   difficulty: 中等
   recommended_for:
@@ -554,7 +567,8 @@ questions:
 
     ∴不等式组的解集为2＜x＜4．'
   knowledge_points:
-  - 一元一次不等式组的解法
+  - 解一元一次不等式
+  - 不等式组的解法
   module: equationsAndInequalities
   difficulty: 中等
   recommended_for:
@@ -582,9 +596,9 @@ questions:
 
     ＝2．'
   knowledge_points:
-  - 代数式的化简
+  - 代数式的化简与求值
   - 方程的应用
-  module: numbersAndExpressions
+  module: equationsAndInequalities
   difficulty: 中等
   recommended_for:
   - L1
@@ -601,6 +615,8 @@ questions:
 
     （2）连接BF，若∠FBC＝30°，DE＝4，CG＝2，求BF的长．'
   figure: 2026-shijingshan-yi/figures/image9.png
+  _figures_extra:
+  - image9.png
   answer: （1）∵D，E分别为AB，AC的中点，
   solution: '（1）证明：∵D，E分别为AB，AC的中点，
 
@@ -669,7 +685,6 @@ questions:
     答：A机器人分拣的包裹总量为0.9万件．'
   knowledge_points:
   - 一元一次方程的应用
-  - 比例与比例方程
   module: equationsAndInequalities
   difficulty: 中等
   recommended_for:
@@ -713,8 +728,8 @@ questions:
 
     综上所述，m的取值范围为1≤m≤3．'
   knowledge_points:
+  - 一次函数的解析式
   - 一次函数的性质
-  - 不等式的应用
   module: functions
   difficulty: 中等
   recommended_for:
@@ -751,6 +766,8 @@ questions:
 
     评估结果：这三名员工按综合素质由高到低依次为　        　 ．'
   figure: 2026-shijingshan-yi/figures/image10.png
+  _figures_extra:
+  - image10.png
   answer: （1）8.5；8；
   solution: '解：（1）把甲的得分从小到大排列为6、7、7、8、8、9、9、10、10、10，排在中间的两个数分别是8，9，故中位数m$=\frac{8+9}{2}=$8.5，
 
@@ -786,8 +803,10 @@ questions:
 
     故答案为：乙、甲、丙．'
   knowledge_points:
-  - 统计量的计算与应用
-  - 数据的整理、描述和分析
+  - 中位数
+  - 众数
+  - 方差
+  - 加权平均数
   module: statisticsAndProbability
   difficulty: 中等
   recommended_for:
@@ -805,6 +824,8 @@ questions:
 
     （2）若tan∠BAD$=\frac{1}{3}$，OA＝3，求DE的长．'
   figure: 2026-shijingshan-yi/figures/image11.png
+  _figures_extra:
+  - image11.png
   answer: （1）连接OC，
   solution: '（1）证明：连接OC，
 
@@ -870,8 +891,7 @@ questions:
 
     ![](figures/image28.png)'
   knowledge_points:
-  - 圆的基本性质
-  - 切线的判定与性质
+  - 圆的切线性质
   - 三角函数的应用
   module: circles
   difficulty: 中等
@@ -902,6 +922,8 @@ questions:
 
     （3）小石和小京分别驾驶A，B两款车从甲地前往乙地，两地相距100km．两车都先以50km/h的速度行驶50km，随后立即切换至110km/h的速度继续行驶，直至到达乙地，则　   　 （填“A”或“B”）款车行驶这100km的能耗更低．'
   figure: 2026-shijingshan-yi/figures/image12.png
+  _figures_extra:
+  - image12.png
   answer: （1）![](figures/image30.png)；
   solution: '解：（1）在坐标系中描点，用平滑曲线连接即可，曲线为开口向上的抛物线形状；
 
@@ -1075,11 +1097,12 @@ questions:
     综上，$\frac{1}{2}≤$c≤2且c≠1．'
   knowledge_points:
   - 二次函数的性质
-  - 抛物线与坐标轴的交点
+  - 二次函数与坐标轴的交点
   - 直线与抛物线的交点
   module: functions
-  difficulty: 能力
+  difficulty: 中等
   recommended_for:
+  - L1
   - L2
   - L3
   qc_status: draft
@@ -1093,6 +1116,8 @@ questions:
 
     （2）作线段EF的垂直平分线，垂足为G，交AB于点P，交AC于点Q，依题意补全图形．用等式表示线段PQ与DF的数量关系，并证明．'
   figure: 2026-shijingshan-yi/figures/image13.png
+  _figures_extra:
+  - image13.png
   answer: （1）∠DAE＝2∠CAB．理由如下：
   solution: '解：（1）∠DAE＝2∠CAB．理由如下：
 
@@ -1182,8 +1207,9 @@ questions:
   - 旋转对称性
   - 垂直平分线的性质
   module: triangles
-  difficulty: 能力
+  difficulty: 中等
   recommended_for:
+  - L1
   - L2
   - L3
   qc_status: draft
@@ -1199,6 +1225,8 @@ questions:
 
     （3）已知A（1，0），⊙A的半径为r．若⊙A上存在点T，使线段OT关于直线y＝2x﹣10的纵影长与线段OT关于直线y＝﹣x﹣10的纵影长的和为6，直接写出r的取值范围．'
   figure: 2026-shijingshan-yi/figures/image14.png
+  _figures_extra:
+  - image14.png
   answer: （1）3；
   solution: '解：（1）∵过线段PQ的两个端点分别作直线l的平行线，交y轴于点P1和Q1，称线段P1Q1的长为线段PQ关于直线l：y＝x﹣5的纵影长，
 
@@ -1320,9 +1348,9 @@ questions:
 
     综上，1≤r＜5．'
   knowledge_points:
-  - 直线的方程
-  - 坐标系中的几何变换
-  - 圆的性质
+  - 直线与坐标系
+  - 线段的性质
+  - 几何综合
   module: geometryComprehensive
   difficulty: 能力
   recommended_for:

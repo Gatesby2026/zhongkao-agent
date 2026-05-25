@@ -9,21 +9,27 @@ district: 2026年北京市通州区
 exam_type: 一模
 subject: math
 full_score: 100
-duration_minutes: null
+duration_minutes: 120
 total_questions: 28
 structure: 8单选(16分) + 8填空(16分) + 12解答(68分)
+passages: []
 questions:
 - id: 1
   type: 单选
   score: 2
   stem: 下列图形中，既是轴对称又是中心对称图形的是（　　）
   options:
-    A: '[图]'
-    B: '[图]'
-    C: '[图]'
-    D: '[图]'
+    A: '![](figures/image.png)'
+    B: '![](figures/image2.png)'
+    C: '![](figures/image3.png)'
+    D: '![](figures/image4.png)'
   has_image_options: true
   figure: 2026-tongzhou-yi/figures/image.png
+  _figures_extra:
+  - image.png
+  - image2.png
+  - image3.png
+  - image4.png
   answer: D
   solution: '解：A．该图形是轴对称图形，不是中心对称图形，不符合题意；
 
@@ -56,6 +62,8 @@ questions:
     C: 50°
     D: 60°
   figure: 2026-tongzhou-yi/figures/image5.png
+  _figures_extra:
+  - image5.png
   answer: B
   solution: '解：∵OE⊥AB，
 
@@ -67,11 +75,12 @@ questions:
 
     故选：B．'
   knowledge_points:
-  - 相交线与垂线
-  - 角的计算
+  - 角的性质
+  - 垂直的性质
   module: geometryComprehensive
-  difficulty: 中等
+  difficulty: 基础
   recommended_for:
+  - L0
   - L1
   - L2
   - L3
@@ -97,11 +106,11 @@ questions:
 
     故选：A．'
   knowledge_points:
-  - 一元二次方程的根与系数的关系
-  - 判别式
+  - 一元二次方程的根的判别式
   module: equationsAndInequalities
-  difficulty: 中等
+  difficulty: 基础
   recommended_for:
+  - L0
   - L1
   - L2
   - L3
@@ -122,7 +131,7 @@ questions:
     故选：B．'
   knowledge_points:
   - 科学记数法
-  - 乘法运算
+  - 数量级估算
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -142,6 +151,8 @@ questions:
     C: ab＞0
     D: ﹣|a|＞b
   figure: 2026-tongzhou-yi/figures/image6.png
+  _figures_extra:
+  - image6.png
   answer: D
   solution: '解：由所给数轴可知，
 
@@ -153,11 +164,12 @@ questions:
 
     故选：D．'
   knowledge_points:
-  - 实数的大小比较
-  - 绝对值的概念
+  - 实数的性质
+  - 数轴的应用
   module: numbersAndExpressions
-  difficulty: 中等
+  difficulty: 基础
   recommended_for:
+  - L0
   - L1
   - L2
   - L3
@@ -189,7 +201,7 @@ questions:
 
     故选：C．'
   knowledge_points:
-  - 概率的计算
+  - 概率计算
   module: statisticsAndProbability
   difficulty: 基础
   recommended_for:
@@ -209,6 +221,8 @@ questions:
     C: 80°
     D: 90°
   figure: 2026-tongzhou-yi/figures/image7.png
+  _figures_extra:
+  - image7.png
   answer: C
   solution: '解：由作图过程可知，直线PQ为线段AB的垂直平分线，
 
@@ -250,6 +264,8 @@ questions:
     C: ①④
     D: ②③
   figure: 2026-tongzhou-yi/figures/image8.png
+  _figures_extra:
+  - image8.png
   answer: B
   solution: '解：①设点$A(m，\frac{k}{m})$，$M(n，\frac{k}{n})$，
 
@@ -331,7 +347,7 @@ questions:
   knowledge_points:
   - 反比例函数的性质
   - 三角形的性质
-  - 几何图形的面积计算
+  - 几何图形的面积
   module: functions
   difficulty: 能力
   recommended_for:
@@ -376,7 +392,6 @@ questions:
     故答案为：y（x+1）（x﹣1）．'
   knowledge_points:
   - 因式分解
-  - 代数表达式的简化
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -439,6 +454,8 @@ questions:
   stem: 抖空竹，这项集技巧、趣味与健身于一体的传统民族运动，深受大众喜爱．图1是某人抖空竹的瞬间的图示，将其抽象成图2所示的数学问题：在平面内，AB∥CD，E为平行线外一点，连结AE、CE．若∠A＝65°，∠E＝20°，则∠C的度数为　      　
     ．
   figure: 2026-tongzhou-yi/figures/image9.png
+  _figures_extra:
+  - image9.png
   answer: 45°．
   solution: '解：如图，
 
@@ -483,11 +500,12 @@ questions:
 
     故答案为：1900．'
   knowledge_points:
-  - 统计与概率-数据的收集、整理与描述
-  - 统计与概率-样本估计总体
+  - 样本估计总体
+  - 数据处理
   module: statisticsAndProbability
-  difficulty: 中等
+  difficulty: 基础
   recommended_for:
+  - L0
   - L1
   - L2
   - L3
@@ -498,6 +516,8 @@ questions:
   score: 2
   stem: 如图，在矩形ABCD中，AE平分∠BAD交CD于点E，连结BE，点F为BE的中点，连结CF，若AB＝3，AD＝2，则CF的长为　                  　 ．
   figure: 2026-tongzhou-yi/figures/image10.png
+  _figures_extra:
+  - image10.png
   answer: $\frac{\sqrt{5}}{2}$．
   solution: '解：∵四边形ABCD是矩形，
 
@@ -589,9 +609,9 @@ questions:
 
     故答案为：40．'
   knowledge_points:
-  - 统计与概率-数据分析
-  - 函数-实际应用
-  module: statisticsAndProbability
+  - 函数的应用
+  - 数据分析
+  module: functions
   difficulty: 中等
   recommended_for:
   - L1
@@ -617,8 +637,9 @@ questions:
   - 负整数指数幂
   - 零指数幂
   module: numbersAndExpressions
-  difficulty: 中等
+  difficulty: 基础
   recommended_for:
+  - L0
   - L1
   - L2
   - L3
@@ -635,7 +656,8 @@ questions:
 
     ∴不等式组的解集为x＞﹣1．'
   knowledge_points:
-  - 一元一次不等式组的解法
+  - 解一元一次不等式
+  - 不等式组的解法
   module: equationsAndInequalities
   difficulty: 中等
   recommended_for:
@@ -655,8 +677,7 @@ questions:
 
     则$\frac{6a-3(a-b)}{{a}^{2}+2ab+{b}^{2}}=$$\frac{6a-3a+3b}{(a+b{)}^{2}}=\frac{3(a+b)}{(a+b{)}^{2}}=$$\frac{3}{a+b}=\frac{3}{4}$．'
   knowledge_points:
-  - 代数式的化简
-  - 方程的应用
+  - 代数式的化简与求值
   module: numbersAndExpressions
   difficulty: 中等
   recommended_for:
@@ -674,6 +695,8 @@ questions:
 
     （2）若AB＝6，BC＝10，求DE的长．'
   figure: 2026-tongzhou-yi/figures/image11.png
+  _figures_extra:
+  - image11.png
   answer: （1）∵E，F分别是BC，AC的中点，
   solution: '（1）证明：∵E，F分别是BC，AC的中点，
 
@@ -707,7 +730,7 @@ questions:
 
     ∴DE＝2OD＝2$\sqrt{13}$．'
   knowledge_points:
-  - 三角形的中位线
+  - 三角形中位线定理
   - 平行四边形的判定与性质
   module: triangles
   difficulty: 中等
@@ -722,6 +745,8 @@ questions:
   score: 5
   stem: 北京城市副中心日新月异、蓬勃发展，这里既有古韵悠长的燃灯古塔，也有现代气派的“三大建筑”．为更好地宣传家乡，数学课堂上，教师组织学生为家乡设计长方形旅游宣传牌．如图1所示，该宣传牌长282cm，宽186cm，计划在牌面均匀绘制24幅大小相同的画作，内容可涵盖本地景点、美食、人文风貌等，以此展现城市魅力，讲好家乡故事．要求如下：图1中四周空白部分的宽度相等，宽度均为10cm；为了美观，将设计部分分成大小相等的上、中、下三个长方形栏目，如图2，栏目与栏目之间的中缝间距相等，相邻中缝间距均为5cm；在每个长方形栏目划出大小相同的正方形方格，如图3，中间有十字间隔，横向两行中间间隔和竖向中间间隔宽度比为2：3．求图3中小正方形的边长．
   figure: 2026-tongzhou-yi/figures/image12.png
+  _figures_extra:
+  - image12.png
   answer: 图3中小正方形的边长为40cm．
   solution: '解：如图2，根据题意得每个小矩形的长为186﹣2×10＝166（cm），宽为$\frac{1}{3}×$（282﹣2×10﹣2×5）＝84（cm），
 
@@ -735,9 +760,9 @@ questions:
 
     答：图3中小正方形的边长为40cm．'
   knowledge_points:
-  - 长方形的性质
-  - 方程的应用
-  module: equationsAndInequalities
+  - 几何综合应用
+  - 长方形与正方形的性质
+  module: geometryComprehensive
   difficulty: 中等
   recommended_for:
   - L1
@@ -830,6 +855,8 @@ questions:
 
     （3）该校准备推荐一名选手参加市级比赛，你认为应该推荐　   　 选手（填“甲”或“乙”或“丙”）．'
   figure: 2026-tongzhou-yi/figures/image13.png
+  _figures_extra:
+  - image13.png
   answer: （1）9.1，9.1；
   solution: '解：（1）选手甲的五轮成绩分别为8.3，9.1，9.3，8.4，9.4，选手乙的五轮成绩分别为9.2，8.8，9.3，8.7，9.5，
 
@@ -849,8 +876,9 @@ questions:
 
     故答案为：乙．'
   knowledge_points:
-  - 统计量的计算
-  - 数据的分析与比较
+  - 平均数
+  - 中位数
+  - 方差
   module: statisticsAndProbability
   difficulty: 中等
   recommended_for:
@@ -868,6 +896,8 @@ questions:
 
     （2）连结BD并延长交AE于F，若半圆O的直径为10，tan∠CAB$=\frac{3}{4}$，求AF的长．'
   figure: 2026-tongzhou-yi/figures/image14.png
+  _figures_extra:
+  - image14.png
   answer: （1）如图，连接OC，
   solution: '（1）证明：如图，连接OC，
 
@@ -986,6 +1016,8 @@ questions:
 
     （3）当5≤x≤15时，两种场景下试剂挥发过程中剩余质量的差值达到最大时，此时对应的时间是第　        　 分钟．'
   figure: 2026-tongzhou-yi/figures/image15.png
+  _figures_extra:
+  - image15.png
   answer: （1）6，
   solution: '解：（1）设yB与x的函数关系式为yB＝kx+b，
 
@@ -1055,12 +1087,12 @@ questions:
 
     故答案为：11.25．'
   knowledge_points:
-  - 一次函数的应用
-  - 二次函数的应用
-  - 数据分析
+  - 函数的应用
+  - 一次函数与二次函数的性质
   module: functions
-  difficulty: 能力
+  difficulty: 中等
   recommended_for:
+  - L1
   - L2
   - L3
   qc_status: draft
@@ -1123,10 +1155,11 @@ questions:
     综上所述，a的取值范围是：a＜0或$0＜a≤\frac{1}{8}$或$a＞\frac{1}{2}$．'
   knowledge_points:
   - 二次函数的性质
-  - 坐标系中的几何问题
+  - 二次函数的应用
   module: functions
-  difficulty: 能力
+  difficulty: 中等
   recommended_for:
+  - L1
   - L2
   - L3
   qc_status: draft
@@ -1140,6 +1173,8 @@ questions:
 
     （2）如图2，当BC＜AB时，如图，在BD上取一点F，使DF＝BC，连结AF交DG于点M．用等式表示线段MD和AC之间的数量关系，并证明．'
   figure: 2026-tongzhou-yi/figures/image16.png
+  _figures_extra:
+  - image16.png
   answer: （1）证明：∵将BA所在的射线绕点B顺时针旋转180°﹣α得到射线BP，
   solution: '（1）证明：∵将BA所在的射线绕点B顺时针旋转180°﹣α得到射线BP，
 
@@ -1207,12 +1242,13 @@ questions:
 
     ∴$MD=\frac{1}{2}AC$．'
   knowledge_points:
-  - 三角形的性质
   - 旋转的性质
   - 角平分线的性质
+  - 三角形全等
   module: triangles
-  difficulty: 能力
+  difficulty: 中等
   recommended_for:
+  - L1
   - L2
   - L3
   qc_status: draft
@@ -1230,6 +1266,8 @@ questions:
 
     （2）如图2，点F（﹣2，2），G（1，2），以点O为圆心的两个同心圆，其中一个圆的半径为1，另一个圆的半径为r．若线段FG与这两个同心圆具有“平等关系”，直接写出r的取值范围．'
   figure: 2026-tongzhou-yi/figures/image17.png
+  _figures_extra:
+  - image17.png
   answer: （1）①$(1，\sqrt{3})$或$(1，-\sqrt{3})$；②a＝2或0；
   solution: '解：（1）①∵点A，点B，点O具有“平等关系”，A（2，0），
 
@@ -1340,9 +1378,10 @@ questions:
   - 平面直角坐标系
   - 圆的性质
   - 等边三角形的性质
-  module: circles
-  difficulty: 能力
+  module: geometryComprehensive
+  difficulty: 中等
   recommended_for:
+  - L1
   - L2
   - L3
   qc_status: draft

@@ -9,21 +9,27 @@ district: 2026年北京市房山区
 exam_type: 一模
 subject: math
 full_score: 100
-duration_minutes: null
+duration_minutes: 120
 total_questions: 28
 structure: 8单选(16分) + 8填空(16分) + 12解答(68分)
+passages: []
 questions:
 - id: 1
   type: 单选
   score: 2
   stem: 下列图形中，既是轴对称图形又是中心对称图形的是（　　）
   options:
-    A: '[图]'
-    B: '[图]'
-    C: '[图]'
-    D: '[图]'
+    A: '![](figures/image.png)'
+    B: '![](figures/image2.png)'
+    C: '![](figures/image3.png)'
+    D: '![](figures/image4.png)'
   has_image_options: true
   figure: 2026-fangshan-yi/figures/image.png
+  _figures_extra:
+  - image.png
+  - image2.png
+  - image3.png
+  - image4.png
   answer: D
   solution: '解：A、该图形是轴对称图形，不是中心对称图形，不符合题意；
 
@@ -56,6 +62,8 @@ questions:
     C: a﹣b＜0
     D: a+b＜0
   figure: 2026-fangshan-yi/figures/image5.png
+  _figures_extra:
+  - image5.png
   answer: C
   solution: '解：选项A，从数轴上看出，a在﹣1与0之间，
 
@@ -96,8 +104,9 @@ questions:
   - 实数的大小比较
   - 数轴的应用
   module: numbersAndExpressions
-  difficulty: 中等
+  difficulty: 基础
   recommended_for:
+  - L0
   - L1
   - L2
   - L3
@@ -179,7 +188,7 @@ questions:
 
     故选：A．'
   knowledge_points:
-  - 概率的计算
+  - 概率计算
   module: statisticsAndProbability
   difficulty: 基础
   recommended_for:
@@ -211,8 +220,9 @@ questions:
   knowledge_points:
   - 一元二次方程的根的判别式
   module: equationsAndInequalities
-  difficulty: 中等
+  difficulty: 基础
   recommended_for:
+  - L0
   - L1
   - L2
   - L3
@@ -228,6 +238,8 @@ questions:
     C: 20°
     D: 15°
   figure: 2026-fangshan-yi/figures/image6.png
+  _figures_extra:
+  - image6.png
   answer: C
   solution: '解：由作图过程可知，直线MN为线段AB的垂直平分线，
 
@@ -242,7 +254,7 @@ questions:
     故选：C．'
   knowledge_points:
   - 直角三角形的性质
-  - 圆的基本性质
+  - 圆的性质
   - 角度计算
   module: triangles
   difficulty: 中等
@@ -272,6 +284,8 @@ questions:
     C: ②④
     D: ①④
   figure: 2026-fangshan-yi/figures/image7.png
+  _figures_extra:
+  - image7.png
   answer: A
   solution: '解：①∵四边形OACB是平行四边形，OC中点在y轴上，
 
@@ -335,7 +349,6 @@ questions:
     故答案为：x≥2．'
   knowledge_points:
   - 二次根式的定义与性质
-  - 不等式的解法
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -411,8 +424,8 @@ questions:
 
     故答案为：108．'
   knowledge_points:
-  - 统计与概率-数据的收集、整理与描述
-  - 统计与概率-样本估计总体
+  - 样本估计总体
+  - 数据处理与分析
   module: statisticsAndProbability
   difficulty: 基础
   recommended_for:
@@ -433,9 +446,9 @@ questions:
 
     故答案为：﹣1；﹣2（答案不唯一）．'
   knowledge_points:
-  - 实数的性质
   - 不等式的性质
-  module: numbersAndExpressions
+  - 实数的比较
+  module: equationsAndInequalities
   difficulty: 中等
   recommended_for:
   - L1
@@ -449,6 +462,8 @@ questions:
   stem: 我国是世界上最早制造使用水车的国家，筒车（如图1）是水车中的一种类型，是以水流作动力，取水灌田的农具．如图2是筒车的正投影示意图，筒车轮的辐条（圆的半径）将⊙O平均分为若干份，相邻辐条的夹角为15°，固定在轮缘点A处的取水筒，其筒身所在直线AC是⊙O的切线．当辐条OB与水面DE平行时，恰好取水筒的筒口C入水，则∠ACE（取水筒与水面的夹角）的大小为　     　
     °．
   figure: 2026-fangshan-yi/figures/image8.png
+  _figures_extra:
+  - image8.png
   answer: 45．
   solution: '解：延长OA交DE于点M，
 
@@ -466,8 +481,8 @@ questions:
 
     故答案为：45．'
   knowledge_points:
-  - 圆的基本性质
-  - 切线的性质
+  - 圆的切线性质
+  - 圆周角与圆心角的关系
   module: circles
   difficulty: 中等
   recommended_for:
@@ -481,6 +496,8 @@ questions:
   score: 2
   stem: 如图，△ABC中，AB＝AC，∠BAC＝90°，点D在AC边上，AE⊥BD于点E，若BE＝3DE，AD＝2，则△ABC的面积为　   　 ．
   figure: 2026-fangshan-yi/figures/image9.png
+  _figures_extra:
+  - image9.png
   answer: 6．
   solution: '解：设DE＝x，则BE＝3x，
 
@@ -524,7 +541,7 @@ questions:
 
     故答案为：6．'
   knowledge_points:
-  - 直角三角形的性质
+  - 等腰直角三角形的性质
   - 相似三角形的判定与性质
   module: triangles
   difficulty: 中等
@@ -679,8 +696,8 @@ questions:
 
     故答案为：220．'
   knowledge_points:
-  - 统计与概率-数据的收集、整理与描述
-  - 统计与概率-数据分析
+  - 数据处理
+  - 综合应用
   module: statisticsAndProbability
   difficulty: 中等
   recommended_for:
@@ -702,11 +719,12 @@ questions:
   knowledge_points:
   - 绝对值
   - 二次根式
-  - 负指数幂
-  - 特殊角的三角函数
+  - 负整数指数幂
+  - 特殊角的三角函数值
   module: numbersAndExpressions
-  difficulty: 中等
+  difficulty: 基础
   recommended_for:
+  - L0
   - L1
   - L2
   - L3
@@ -725,7 +743,8 @@ questions:
 
     ∴原不等式组的解集为﹣2＜x＜1．'
   knowledge_points:
-  - 一元一次不等式组的解法
+  - 解一元一次不等式
+  - 不等式组的解法
   module: equationsAndInequalities
   difficulty: 中等
   recommended_for:
@@ -755,7 +774,7 @@ questions:
 
     ∴原式$=\frac{2}{4}=\frac{1}{2}$．'
   knowledge_points:
-  - 代数式的化简
+  - 代数式的化简与求值
   - 方程的应用
   module: numbersAndExpressions
   difficulty: 中等
@@ -774,6 +793,8 @@ questions:
 
     （2）若DE＝3，DG＝2，求BD的长．'
   figure: 2026-fangshan-yi/figures/image10.png
+  _figures_extra:
+  - image10.png
   answer: （1）∵DE∥BC交BA于点E，DF∥BA交BC于点F，
   solution: '（1）证明：∵DE∥BC交BA于点E，DF∥BA交BC于点F，
 
@@ -862,6 +883,8 @@ questions:
   score: 6
   stem: 如图，“四条屏”是中国书画传统艺术中一种独特的表现形式，通常由四幅主题相关、风格统一的画作或书法作品组合而成，可单独欣赏，也可组合展示，小涵家要在沙发背景墙上悬挂一组“四条屏”装饰画，单幅画的水平宽与竖直高的比是1：3．已知“四条屏”的水平总长（含四幅画的水平宽与画间等距间隔）比单幅画的竖直高多55cm，沙发长比单幅画竖直高的2倍多10cm，“四条屏”的水平总长是沙发长的$\frac{7}{10}$，求单幅画的水平宽．
   figure: 2026-fangshan-yi/figures/image11.png
+  _figures_extra:
+  - image11.png
   answer: 单幅画的水平宽为40cm．
   solution: '解：设单幅画的水平宽为xcm，则单幅画的竖直高为3xcm，
 
@@ -939,6 +962,8 @@ questions:
     区域排名规则为：区域内5个片区得分的平均数越大，该区域排名越靠前；若平均数相同，则方差越小排名越靠前．若丙区域在甲、乙、丙三个区域中排名居中，则这三个区域的排名由前到后依次为　        　 ，此时表中a（a为整数）的值为　     　
     ．'
   figure: 2026-fangshan-yi/figures/image12.png
+  _figures_extra:
+  - image12.png
   answer: （1）①84；4；
   solution: '解：（1）①求m和n其中84出现次数最多，共5次，
 
@@ -1008,8 +1033,9 @@ questions:
 
     故答案为：甲、丙、乙；85．'
   knowledge_points:
-  - 统计量的计算
-  - 频数分布直方图的应用
+  - 平均数
+  - 中位数
+  - 众数
   module: statisticsAndProbability
   difficulty: 中等
   recommended_for:
@@ -1027,6 +1053,8 @@ questions:
 
     （2）连接CP交OA于点D，若⊙O的半径为$\sqrt{5}$，且$cos∠AOP=\frac{\sqrt{5}}{5}$，求PD的长．'
   figure: 2026-fangshan-yi/figures/image13.png
+  _figures_extra:
+  - image13.png
   answer: （1）证明：连结AB交OP于H点，如图，
   solution: '（1）证明：连结AB交OP于H点，如图，
 
@@ -1128,6 +1156,8 @@ questions:
 
     ②生物小组发现1号盆中的郁金香长势不理想，在第5天时仅有5.3cm，于是在这一天调整1号盆中营养液浓度，使1号盆与3号盆的株高后续每天增长量都相同，则从第5天起至少需要经过　   　 天，1号盆的株高超过2号盆．'
   figure: 2026-fangshan-yi/figures/image14.png
+  _figures_extra:
+  - image14.png
   answer: （1）3；
   solution: '解：（1）当x＝15时，从函数图象看，y2＞y1，y2＝32.5，y3＝40.6，
 
@@ -1162,8 +1192,8 @@ questions:
     ∴从第5天起至少需要经过8天1号盆的株高超过2号盆．'
   knowledge_points:
   - 函数的概念
-  - 函数的表示方法
-  - 函数的应用
+  - 函数的图像与性质
+  - 数据处理与分析
   module: functions
   difficulty: 中等
   recommended_for:
@@ -1236,11 +1266,11 @@ questions:
     综上，满足条件的a的取值范围是﹣1＜a＜1或a＞3．'
   knowledge_points:
   - 二次函数的性质
-  - 抛物线的对称轴
-  - 直线与抛物线的位置关系
+  - 二次函数与直线的关系
   module: functions
-  difficulty: 能力
+  difficulty: 中等
   recommended_for:
+  - L1
   - L2
   - L3
   qc_status: draft
@@ -1258,6 +1288,8 @@ questions:
 
     （2）如图2，点E不在AD的延长线上，用等式表示∠BCE与∠CBF的数量关系，并证明．'
   figure: 2026-fangshan-yi/figures/image15.png
+  _figures_extra:
+  - image15.png
   answer: （1）①补全图形如下：
   solution: '解：（1）①补全图形如下：
 
@@ -1321,10 +1353,11 @@ questions:
   knowledge_points:
   - 等腰三角形的性质
   - 全等三角形的判定与性质
-  - 对称变换
+  - 几何变换（对称）
   module: triangles
-  difficulty: 能力
+  difficulty: 中等
   recommended_for:
+  - L1
   - L2
   - L3
   qc_status: draft
@@ -1342,6 +1375,8 @@ questions:
 
     （2）已知点$D(0，\sqrt{3}t)，E(0，-\sqrt{3}t)，F(0，4-2t)，⊙O$经过点F，⊙O上存在线段DE的衔接点H，∠DHE的大小为点H与线段DE的衔接角度．直接写出t的取值范围．'
   figure: 2026-fangshan-yi/figures/image16.png
+  _figures_extra:
+  - image16.png
   answer: （1）①A1；120；②$\sqrt{2}$；（2）t的取值范围为﹣1$+\sqrt{3}$t≤1或t≤﹣1$-\sqrt{3}$．
   solution: '解：（1）①∵$B(-\sqrt{3}，0)$，$C(\sqrt{3}，0)$，
 
@@ -1451,8 +1486,7 @@ questions:
   knowledge_points:
   - 三角形的性质
   - 圆的性质
-  - 坐标系中的几何问题
-  module: geometryComprehensive
+  module: triangles
   difficulty: 能力
   recommended_for:
   - L2

@@ -9,27 +9,34 @@ district: 2026年北京市昌平区
 exam_type: 一模
 subject: math
 full_score: 100
-duration_minutes: null
+duration_minutes: 120
 total_questions: 28
 structure: 8单选(16分) + 8填空(16分) + 12解答(68分)
+passages: []
 questions:
 - id: 1
   type: 单选
   score: 2
   stem: 如图，下列图形中是如图空心圆柱的俯视图的是（　　）
   options:
-    A: '[图]'
-    B: '[图]'
-    C: '[图]'
-    D: '[图]'
+    A: '![](figures/image.png)'
+    B: '![](figures/image2.png)'
+    C: '![](figures/image3.png)'
+    D: '![](figures/image4.png)'
   has_image_options: true
   figure: 2026-changping-yi/figures/image.png
+  _figures_extra:
+  - image.png
+  - image2.png
+  - image3.png
+  - image4.png
+  - image5.png
   answer: A
   solution: '解：从上面看，是两个同心圆（里面的圆画成实线）．
 
     故选：A．'
   knowledge_points:
-  - 几何体的三视图
+  - 三视图
   module: geometryComprehensive
   difficulty: 基础
   recommended_for:
@@ -73,6 +80,8 @@ questions:
     C: a﹣b＞0
     D: '|a|＜|b|'
   figure: 2026-changping-yi/figures/image6.png
+  _figures_extra:
+  - image6.png
   answer: B
   solution: '解：由所给数轴可知，
 
@@ -87,8 +96,9 @@ questions:
   - 实数的大小比较
   - 数轴的应用
   module: numbersAndExpressions
-  difficulty: 中等
+  difficulty: 基础
   recommended_for:
+  - L0
   - L1
   - L2
   - L3
@@ -104,6 +114,8 @@ questions:
     C: 55°
     D: 65°
   figure: 2026-changping-yi/figures/image7.png
+  _figures_extra:
+  - image7.png
   answer: C
   solution: '解：∵AD⊥BC，
 
@@ -146,8 +158,7 @@ questions:
 
     故选：A．'
   knowledge_points:
-  - 一元二次方程的根的判别式
-  - 一元二次方程的解法
+  - 一元二次方程的根与系数的关系
   module: equationsAndInequalities
   difficulty: 基础
   recommended_for:
@@ -167,6 +178,8 @@ questions:
     C: $\frac{1}{4}$
     D: $\frac{1}{2}$
   figure: 2026-changping-yi/figures/image8.png
+  _figures_extra:
+  - image8.png
   answer: C
   solution: '解：列表如下：
 
@@ -188,7 +201,7 @@ questions:
 
     故选：C．'
   knowledge_points:
-  - 概率的计算
+  - 概率计算
   module: statisticsAndProbability
   difficulty: 基础
   recommended_for:
@@ -208,6 +221,8 @@ questions:
     C: ∠AOB＝∠BOC
     D: OD＞BD
   figure: 2026-changping-yi/figures/image9.png
+  _figures_extra:
+  - image9.png
   answer: D
   solution: '解：由题意可知，OA＝OC，BC＝BA，
 
@@ -264,6 +279,8 @@ questions:
     C: ②③
     D: ②④
   figure: 2026-changping-yi/figures/image10.png
+  _figures_extra:
+  - image10.png
   answer: D
   solution: '解：结论①：由题意可知八边形的边长受矩形ABCD长、宽关系的影响，
 
@@ -299,12 +316,12 @@ questions:
 
     故选：D．'
   knowledge_points:
-  - 图形的旋转
-  - 矩形的性质
-  - 正多边形的性质
+  - 几何变换
+  - 多边形性质
   module: geometryComprehensive
-  difficulty: 能力
+  difficulty: 中等
   recommended_for:
+  - L1
   - L2
   - L3
   qc_status: draft
@@ -322,8 +339,7 @@ questions:
 
     故答案为：x≥3．'
   knowledge_points:
-  - 实数的性质
-  - 根式的定义
+  - 二次根式的定义与性质
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -345,10 +361,10 @@ questions:
     ＝a（a+4）（a﹣4）．'
   knowledge_points:
   - 因式分解
-  - 公式应用
   module: numbersAndExpressions
-  difficulty: 中等
+  difficulty: 基础
   recommended_for:
+  - L0
   - L1
   - L2
   - L3
@@ -393,8 +409,8 @@ questions:
 
     故答案为：﹣2；﹣1（答案不唯一）．'
   knowledge_points:
-  - 实数的比较
   - 不等式的性质
+  - 实数的平方
   module: equationsAndInequalities
   difficulty: 中等
   recommended_for:
@@ -416,7 +432,7 @@ questions:
 
     故答案为：十二．'
   knowledge_points:
-  - 多边形的内角和
+  - 多边形内角和
   module: geometryComprehensive
   difficulty: 中等
   recommended_for:
@@ -446,9 +462,9 @@ questions:
 
     故答案为：（﹣1，﹣6）．'
   knowledge_points:
-  - 反比例函数的性质
-  - 正比例函数的性质
-  - 函数图像的交点
+  - 反比例函数
+  - 正比例函数
+  - 函数图像交点
   module: functions
   difficulty: 中等
   recommended_for:
@@ -462,6 +478,8 @@ questions:
   score: 2
   stem: 如图，正方形ABCD的边长为4，点E是对角线BD上一点，连接AE，将线段AE绕点A逆时针旋转90°得到AF，连接EF，点M为EF中点，MN⊥BD，垂足为N，若MN＝1，则DE＝
   figure: 2026-changping-yi/figures/image11.png
+  _figures_extra:
+  - image11.png
   answer: 4$\sqrt{2}-$2．
   solution: '解：连接DF，
 
@@ -554,9 +572,10 @@ questions:
   - 正方形的性质
   - 旋转的性质
   - 中点和垂线的应用
-  module: geometryComprehensive
-  difficulty: 能力
+  module: quadrilaterals
+  difficulty: 中等
   recommended_for:
+  - L1
   - L2
   - L3
   qc_status: draft
@@ -646,8 +665,8 @@ questions:
 
     故答案为：4．'
   knowledge_points:
-  - 统计与概率
-  - 代数表达式
+  - 概率计算
+  - 收益分析
   module: statisticsAndProbability
   difficulty: 中等
   recommended_for:
@@ -670,12 +689,13 @@ questions:
     $=3\sqrt{2}-1$．'
   knowledge_points:
   - 实数的运算
-  - 特殊角的三角函数值
-  - 绝对值的意义
+  - 三角函数的基本概念
+  - 绝对值的概念
   - 二次根式的化简
   module: numbersAndExpressions
-  difficulty: 中等
+  difficulty: 基础
   recommended_for:
+  - L0
   - L1
   - L2
   - L3
@@ -692,7 +712,8 @@ questions:
 
     所以不等式组的解集是﹣6＜x＜1．'
   knowledge_points:
-  - 一元一次不等式组的解法
+  - 解一元一次不等式
+  - 不等式组的解法
   module: equationsAndInequalities
   difficulty: 中等
   recommended_for:
@@ -716,8 +737,7 @@ questions:
 
     所以$-\frac{2}{a-b}=$$-\frac{2}{2}=-1$．'
   knowledge_points:
-  - 代数式的化简
-  - 方程的应用
+  - 代数式的化简与求值
   module: numbersAndExpressions
   difficulty: 中等
   recommended_for:
@@ -735,6 +755,8 @@ questions:
 
     （2）若$AD=5，tan∠ADE=\frac{3}{4}$，求AF的长．'
   figure: 2026-changping-yi/figures/image12.png
+  _figures_extra:
+  - image12.png
   answer: （1）∵AB＝BC，E为AC中点，
   solution: '（1）证明：∵AB＝BC，E为AC中点，
 
@@ -786,9 +808,8 @@ questions:
 
     ∴AF$=\sqrt{F{H}^{2}+A{H}^{2}}=$3$\sqrt{10}$．'
   knowledge_points:
-  - 全等三角形的性质与判定
+  - 三角形的性质
   - 矩形的性质与判定
-  - 解直角三角形
   module: triangles
   difficulty: 中等
   recommended_for:
@@ -802,6 +823,8 @@ questions:
   score: 5
   stem: 油纸伞制作技艺是中国国家级非物质文化遗产，凝聚着传统工匠的智慧．油纸伞的主要骨架是由短伞骨，长伞骨及伞柄构成，油纸伞完全撑开后，其示意图如图所示．已知短伞骨BC长度与长伞骨OA长度之比为2：5，短伞骨与长伞骨连接点B恰为长伞骨的三等分点（AB＞OB），伞柄OD长度是长伞骨OA长度的$\frac{5}{4}$倍，伞柄顶端到支撑点的距离OC等于OB，支撑点到伞柄底端的距离CD比短伞骨BC长度多3lcm．求这个油纸伞的伞柄长．
   figure: 2026-changping-yi/figures/image13.png
+  _figures_extra:
+  - image13.png
   answer: 75cm．
   solution: '解：设BC＝2x cm，则OA＝5xcm，OB$=\frac{1}{3}$OA$=\frac{5}{3}$xcm＝OC，OD$=\frac{5}{4}$OA$=\frac{25}{4}$xcm，
 
@@ -817,8 +840,8 @@ questions:
 
     即这个雨伞的伞柄OD的长为75cm．'
   knowledge_points:
-  - 相似三角形的性质
-  - 比例的应用
+  - 相似三角形
+  - 比例线段
   module: triangles
   difficulty: 中等
   recommended_for:
@@ -926,6 +949,8 @@ questions:
 
     评估结果：甲、乙、丙、丁四个区域按空气质量从高到低依次为　          　 ．'
   figure: 2026-changping-yi/figures/image14.png
+  _figures_extra:
+  - image14.png
   answer: （1）28.5；
   solution: '解：（1）丙区域12个月的PM2.5月均浓度从小到大排列：20，21，24，27，28，28，29，29，30，31，32，32，
 
@@ -957,12 +982,13 @@ questions:
 
     故答案为：乙、甲、丁、丙．'
   knowledge_points:
-  - 数据的整理与描述
-  - 平均数、中位数和方差的应用
-  - 数据分析与决策
+  - 平均数
+  - 中位数
+  - 方差
   module: statisticsAndProbability
-  difficulty: 能力
+  difficulty: 中等
   recommended_for:
+  - L1
   - L2
   - L3
   qc_status: draft
@@ -976,6 +1002,8 @@ questions:
 
     （2）作射线AD交BC，PB分别于点F，G，若$DF=\frac{1}{4}AD，DG=\sqrt{5}$，求⊙O的半径的长．'
   figure: 2026-changping-yi/figures/image15.png
+  _figures_extra:
+  - image15.png
   answer: （1）连接OC，如图1所示：
   solution: '（1）证明：连接OC，如图1所示：
 
@@ -1061,8 +1089,9 @@ questions:
 
     ∴⊙O的半径的长为5．'
   knowledge_points:
-  - 圆的切线性质
-  - 相似三角形的判定与性质
+  - 切线的性质
+  - 圆周角定理
+  - 相似三角形
   module: circles
   difficulty: 中等
   recommended_for:
@@ -1092,6 +1121,8 @@ questions:
 
     ②若M1，M2，M3同时开机，开机后的前5分钟内（包含5分钟）的累计分拣件数分别记为a，b，c，结合题目所给信息，将a，b，c进行排序　        　 （用“＜”连接）．'
   figure: 2026-changping-yi/figures/image16.png
+  _figures_extra:
+  - image16.png
   answer: （1）5；
   solution: '解：（1）由图可知，当第5个周期时，y首次超过35，
 
@@ -1127,9 +1158,8 @@ questions:
 
     故答案为：b＜c＜a．'
   knowledge_points:
-  - 函数的概念
-  - 函数的图像与性质
-  - 数据的分析
+  - 函数的应用
+  - 数据的分析与处理
   module: functions
   difficulty: 中等
   recommended_for:
@@ -1230,7 +1260,7 @@ questions:
     综上所述，a的取值范围是a＜0或$0＜a≤\frac{2}{3}$或$a≥\frac{8}{3}$．'
   knowledge_points:
   - 二次函数的性质
-  - 坐标系中的几何关系
+  - 二次函数的应用
   module: functions
   difficulty: 中等
   recommended_for:
@@ -1248,6 +1278,8 @@ questions:
 
     （2）连接DF，若∠DFE＝2∠B，用等式表示CP，AD，DF三者之间的数量关系，并证明．'
   figure: 2026-changping-yi/figures/image17.png
+  _figures_extra:
+  - image17.png
   answer: （1）∵点B关于直线CE的对称点为点F，
   solution: '（1）证明：∵点B关于直线CE的对称点为点F，
 
@@ -1366,11 +1398,12 @@ questions:
     ∴AD＝AQ+QD＝AD+DF．'
   knowledge_points:
   - 三角形的性质
-  - 对称与旋转
+  - 几何变换（对称）
   - 角的关系
   module: triangles
-  difficulty: 能力
+  difficulty: 中等
   recommended_for:
+  - L1
   - L2
   - L3
   qc_status: draft
@@ -1390,6 +1423,9 @@ questions:
 
     （2）若α＝45°，M（﹣4，0），N（0，4），点A在线段MN上，BC＝2，直线y＝x+b与线段BC有交点，且线段BC是⊙O的以点A为中心关于“45°”的“关联线段”，直接写出b的取值范围．'
   figure: 2026-changping-yi/figures/image18.png
+  _figures_extra:
+  - image18.png
+  - image19.png
   answer: （1）①B1C1，B3C3；②﹣3≤xB$≤-\frac{3}{2}$；
   solution: '解：（1）①根据题意，得A（﹣1，1），B1（﹣2，2），C1（﹣1，2），B2（﹣1，3），C2（0，2），B3（1，3），C3（1，1），B4（0，﹣2），C4（2，﹣1），
 
@@ -1476,8 +1512,8 @@ questions:
     故$4-7\sqrt{2}≤b≤4+3\sqrt{2}$．'
   knowledge_points:
   - 圆的性质
-  - 旋转对称性
-  - 坐标几何
+  - 旋转与变换
+  - 坐标系中的几何问题
   module: circles
   difficulty: 能力
   recommended_for:
