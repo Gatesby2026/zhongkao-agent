@@ -1,11 +1,11 @@
 # ============================================================
-# 2026年北京2026年北京市大兴区一模math — 自动生成
+# 2026年北京大兴区一模math — 自动生成
 # ============================================================
 # OCR: Qwen-VL-OCR  Enrich: qwen-max
 # QC: draft=28  needs_review=0
 
 year: 2026
-district: 2026年北京市大兴区
+district: 大兴区
 exam_type: 一模
 subject: math
 full_score: 100
@@ -89,8 +89,8 @@ questions:
 
     故选：D．'
   knowledge_points:
-  - 实数的大小比较
-  - 绝对值的概念
+  - 实数的概念
+  - 数轴的应用
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -125,8 +125,8 @@ questions:
 
     故选：C．'
   knowledge_points:
-  - 垂直关系
-  - 角的计算
+  - 垂直的性质
+  - 角的关系
   module: geometryComprehensive
   difficulty: 中等
   recommended_for:
@@ -180,16 +180,16 @@ questions:
 - id: 5
   type: 单选
   score: 2
-  stem: 若关于x的一元二次方程ax2﹣4x+4＝0有两个相等的实数根，则实数a的值为（　　）
+  stem: 若关于x的一元二次方程ax^{2}﹣4x+4＝0有两个相等的实数根，则实数a的值为（　　）
   options:
     A: '2'
     B: '1'
     C: ﹣2
     D: ﹣1
   answer: B
-  solution: '解：∵关于x的一元二次方程ax2﹣4x+4＝0有两个相等的实数根，
+  solution: '解：∵关于x的一元二次方程ax^{2}﹣4x+4＝0有两个相等的实数根，
 
-    ∴Δ＝（﹣4）2﹣4•a•4＝16﹣16a＝0，且a≠0，
+    ∴Δ＝（﹣4）^{2}﹣4•a•4＝16﹣16a＝0，且a≠0，
 
     ∴a＝1，
 
@@ -210,10 +210,10 @@ questions:
   score: 2
   stem: 在AI技术发展中，词元（Token）是大模型处理信息的基本单元，具有智能时代可计量、可定价、可交易的特征．据国家数据局发布信息：2024年初，我国日均词元调用量为1000亿；2026年3月，日均词元调用量已突破140万亿．若2026年3月日均词元调用量为2024年初日均词元调用量的n倍，则n用科学记数法可表示为（　　）
   options:
-    A: 1.4×102
-    B: 1.4×103
-    C: 1.4×104
-    D: 1.4×105
+    A: 1.4×10^{2}
+    B: 1.4×10^{3}
+    C: 1.4×10^{4}
+    D: 1.4×10^{5}
   answer: B
   solution: '解：由题意得，
 
@@ -223,7 +223,7 @@ questions:
 
     ＝1400
 
-    ＝1.4×103，
+    ＝1.4×10^{3}，
 
     故选：B．'
   knowledge_points:
@@ -281,13 +281,13 @@ questions:
 - id: 8
   type: 单选
   score: 2
-  stem: '如图，在平面直角坐标系xOy中，A是x轴正半轴上的动点，点D在x轴负半轴上，点B，C在抛物线y＝x2上，四边形ABCD是矩形，连接BD，设A的横坐标为m，给出下面三个结论：
+  stem: '如图，在平面直角坐标系xOy中，A是x轴正半轴上的动点，点D在x轴负半轴上，点B，C在抛物线y＝x^{2}上，四边形ABCD是矩形，连接BD，设A的横坐标为m，给出下面三个结论：
 
     ①当矩形ABCD为正方形时，m＝2；
 
     ②抛物线上O，B两点之间的部分与线段AB，OA围成的图形面积小于$\frac{1}{2}{m}^{3}$；
 
-    ③记抛物线上C，B两点之间的部分与线段CB围成的图形面积为S1，抛物线上O，B两点之间的部分与线段BD，OD围成的图形面积为S2，则S1＝2S2．
+    ③记抛物线上C，B两点之间的部分与线段CB围成的图形面积为S_{1}，抛物线上O，B两点之间的部分与线段BD，OD围成的图形面积为S_{2}，则S_{1}＝2S_{2}．
 
     上述结论中，所有正确结论的序号是（　　）'
   options:
@@ -299,17 +299,17 @@ questions:
   _figures_extra:
   - image8.png
   answer: D
-  solution: '解：由题意，A（m，0），B（m，m2），
+  solution: '解：由题意，A（m，0），B（m，m^{2}），
 
     ∵BC∥x轴，
 
     ∴B，C关于y轴对称，
 
-    ∴C（﹣m，m2），
+    ∴C（﹣m，m^{2}），
 
-    ∴AB＝m2，BC＝2m，
+    ∴AB＝m^{2}，BC＝2m，
 
-    当AB＝BC时，即m2＝2m时，矩形ABCD为正方形，
+    当AB＝BC时，即m^{2}＝2m时，矩形ABCD为正方形，
 
     解得m＝0（舍去）或m＝2；故①正确；
 
@@ -325,13 +325,13 @@ questions:
 
     ![](figures/image26.png)
 
-    ∵S1等于O，C两点之间的部分与线段OC组成的图形面积和O，B两点之间的部分与线段OB组成的图形面积以及△BOC的面积之和，S2等于O，B两点之间的部分与线段OB组成的图形面积与△BOD的面积之和，
+    ∵S_{1}等于O，C两点之间的部分与线段OC组成的图形面积和O，B两点之间的部分与线段OB组成的图形面积以及△BOC的面积之和，S_{2}等于O，B两点之间的部分与线段OB组成的图形面积与△BOD的面积之和，
 
-    ∴S1＝2S2，故③正确；
+    ∴S_{1}＝2S_{2}，故③正确；
 
     故选：D．'
   knowledge_points:
-  - 二次函数的性质
+  - 二次函数的图像与性质
   - 矩形的性质
   - 图形面积计算
   module: functions
@@ -344,9 +344,9 @@ questions:
 - id: 9
   type: 填空
   score: 2
-  stem: 分解因式：2x2﹣18＝　              　 ．
+  stem: 分解因式：2x^{2}﹣18＝　              　 ．
   answer: 2（x+3）（x﹣3）
-  solution: '解：原式＝2（x2﹣9）＝2（x+3）（x﹣3），
+  solution: '解：原式＝2（x^{2}﹣9）＝2（x+3）（x﹣3），
 
     故答案为：2（x+3）（x﹣3）'
   knowledge_points:
@@ -419,7 +419,7 @@ questions:
     故答案为：0．'
   knowledge_points:
   - 反比例函数的性质
-  - 坐标与函数图像的关系
+  - 坐标与函数关系
   module: functions
   difficulty: 中等
   recommended_for:
@@ -452,9 +452,8 @@ questions:
   - 数据整理与分析
   - 概率估计
   module: statisticsAndProbability
-  difficulty: 基础
+  difficulty: 中等
   recommended_for:
-  - L0
   - L1
   - L2
   - L3
@@ -626,7 +625,7 @@ questions:
   - 绝对值
   - 零指数幂
   - 二次根式的化简
-  - 特殊角的三角函数值
+  - 特殊角的三角函数
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -649,7 +648,8 @@ questions:
 
     ∴原不等式组的解集为：﹣2＜x＜6．'
   knowledge_points:
-  - 一元一次不等式组的解法
+  - 解一元一次不等式
+  - 不等式组的解法
   module: equationsAndInequalities
   difficulty: 中等
   recommended_for:
@@ -679,7 +679,7 @@ questions:
   knowledge_points:
   - 代数式的化简与求值
   - 方程的应用
-  module: equationsAndInequalities
+  module: numbersAndExpressions
   difficulty: 中等
   recommended_for:
   - L1
@@ -733,8 +733,9 @@ questions:
 
     在直角△ACD中，利用勾股定理知：AD$=\sqrt{A{C}^{2}-C{D}^{2}}=$$\sqrt{{4}^{2}-{2}^{2}}=$2$\sqrt{3}$．'
   knowledge_points:
-  - 菱形的性质与判定
-  - 中位线定理
+  - 四边形的性质
+  - 菱形的判定与性质
+  - 直角三角形的性质
   module: quadrilaterals
   difficulty: 中等
   recommended_for:
@@ -938,9 +939,9 @@ questions:
 
     ∴CG＝CE﹣EG＝8x﹣5x＝3x，
 
-    在Rt△BGC 中，由勾股定理得：BG2+CG2＝BC2，
+    在Rt△BGC 中，由勾股定理得：BG^{2}+CG^{2}＝BC^{2}，
 
-    即82+（3x）2＝（5x）2，解得 x＝2 （负值舍去），
+    即8^{2}+（3x）^{2}＝（5x）^{2}，解得 x＝2 （负值舍去），
 
     ∴EG＝5×2＝10．
 
@@ -950,7 +951,7 @@ questions:
 
     ∴$BF=\frac{5}{13}BE=\frac{5}{13}×2\sqrt{41}=\frac{10\sqrt{41}}{13}$．'
   knowledge_points:
-  - 圆的切线性质
+  - 圆的基本性质
   - 相似三角形的判定与性质
   module: circles
   difficulty: 中等
@@ -966,20 +967,20 @@ questions:
   stem: '旋转木马是每个孩子珍藏在童年里的梦幻乐园．某游乐场旋转木马的所有座位均匀分布在同一个圆上，绕圆心做匀速逆时针运动（如图1）．小瑞将旋转木马的其中两个相邻座位抽象为A，B两点，在旋转木马外设置固定观测点C，当起始位置点A与点C、圆心O在同一条直线上时（如图2）开始计时．
 
 
-    小瑞记录了不同时刻t（单位：秒）时，观测点C到A，B的距离分别为yAC，yBC（单位：米），部分数据如下：
+    小瑞记录了不同时刻t（单位：秒）时，观测点C到A，B的距离分别为y_{AC}，y_{BC}（单位：米），部分数据如下：
 
     | t | 0 | 5 | 10 | 15 | 20 | 25 | 30 | 35 | 40 | 45 | 50 | 55 | 60 | … |
 
     |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 
-    | yAC | 2.00 | 4.36 | 7.00 | 8.00 | 7.00 | 4.36 | 2.00 | 4.36 | 7.00 | 8.00 | 7.00 | 4.36 | 2.00 | … |
+    | y_{AC} | 2.00 | 4.36 | 7.00 | 8.00 | 7.00 | 4.36 | 2.00 | 4.36 | 7.00 | 8.00 | 7.00 | 4.36 | 2.00 | … |
 
-    | yBC | 4.36 | 7.00 | 8.00 | 7.00 | 4.36 | 2.00 | 4.36 | 7.00 | 8.00 | 7.00 | 4.36 | 2.00 | 4.36 | … |
+    | y_{BC} | 4.36 | 7.00 | 8.00 | 7.00 | 4.36 | 2.00 | 4.36 | 7.00 | 8.00 | 7.00 | 4.36 | 2.00 | 4.36 | … |
 
-    通过分析数据，发现可以用函数刻画yAC与t，yBC与t之间的关系，在平面直角坐标系中，画出yAC与t之间关系的函数图象．
+    通过分析数据，发现可以用函数刻画y_{AC}与t，y_{BC}与t之间的关系，在平面直角坐标系中，画出y_{AC}与t之间关系的函数图象．
 
 
-    （1）在平面直角坐标系中，画出yBC与t之间关系的函数图象；
+    （1）在平面直角坐标系中，画出y_{BC}与t之间关系的函数图象；
 
     （2）至少经过m秒，A点就会回到初始位置，则m＝　     　 ；
 
@@ -987,13 +988,13 @@ questions:
 
     （4）从t＝0开始，至少经过　       　 秒，点C到A，B的距离相等；
 
-    （5）当t＝7.5秒时，yAC的值为　              　 ．'
+    （5）当t＝7.5秒时，y_{AC}的值为　              　 ．'
   figure: 2026-daxing-yi/figures/image13.png
   _figures_extra:
   - image13.png
   - image14.png
   answer: （1）![](figures/image37.png)
-  solution: '解：（1）yBC与t之间关系的函数图象如图：
+  solution: '解：（1）y_{BC}与t之间关系的函数图象如图：
 
     ![](figures/image38.png)
 
@@ -1029,7 +1030,7 @@ questions:
 
     ![](figures/image40.png)
 
-    根据表格可知，当t＝15时，yAC有最大值为8，
+    根据表格可知，当t＝15时，y_{AC}有最大值为8，
 
     此时点A位于点D的位置，则有CD＝8，
 
@@ -1039,7 +1040,7 @@ questions:
 
     ∴$AC=\sqrt{O{A}^{2}+O{C}^{2}}=\sqrt{{3}^{2}+{5}^{2}}=\sqrt{34}$，
 
-    ∴当 t＝7.5秒时，yAC的值为$\sqrt{34}$．'
+    ∴当 t＝7.5秒时，y_{AC}的值为$\sqrt{34}$．'
   knowledge_points:
   - 函数的概念
   - 函数的图像
@@ -1055,45 +1056,45 @@ questions:
 - id: 26
   type: 解答
   score: 6
-  stem: '在平面直角坐标系xOy中，抛物线y＝x2﹣3mx+c经过点A（4m，0）（m≠0）．
+  stem: '在平面直角坐标系xOy中，抛物线y＝x^{2}﹣3mx+c经过点A（4m，0）（m≠0）．
 
     （1）求抛物线的对称轴和c的值（用含m的式子表示）；
 
-    （2）过点P（t，0）作x轴的垂线，交抛物线于点M，交直线y＝mx+m2于点N（M，N）不重合）．
+    （2）过点P（t，0）作x轴的垂线，交抛物线于点M，交直线y＝mx+m^{2}于点N（M，N）不重合）．
 
     ①若m＝1，t＝2，求MN的长；
 
     ②已知在点P从点（2，0）运动到点（3，0）的过程中，MN的长随t的增大而减小，求m的取值范围．'
-  answer: （1）对称轴为直线x$=-\frac{-3m}{2}=$$\frac{3}{2}$m，c＝﹣4m2；
+  answer: （1）对称轴为直线x$=-\frac{-3m}{2}=$$\frac{3}{2}$m，c＝﹣4m^{2}；
   solution: '解：（1）对称轴为直线x$=-\frac{-3m}{2}=$$\frac{3}{2}$m，
 
-    将点A（4m，0）代入y＝x2﹣3mx+c得，16m2﹣12m2+c＝0，
+    将点A（4m，0）代入y＝x^{2}﹣3mx+c得，16m^{2}﹣12m^{2}+c＝0，
 
-    解得c＝﹣4m2；
+    解得c＝﹣4m^{2}；
 
-    （2）①由（1）知抛物线解析式为y＝x2﹣3mx﹣4m2，
+    （2）①由（1）知抛物线解析式为y＝x^{2}﹣3mx﹣4m^{2}，
 
-    当m＝1时，抛物线解析式为y＝x2﹣3x﹣4，直线解析式为y＝x+1，
+    当m＝1时，抛物线解析式为y＝x^{2}﹣3x﹣4，直线解析式为y＝x+1，
 
     当t＝2时，则M（2，﹣6），N（2，3），
 
     ∴MN＝3﹣（﹣6）＝9；
 
-    ②∵抛物线解析式为y＝x2﹣3mx﹣4m2，直线解析式为y＝mx+m2，
+    ②∵抛物线解析式为y＝x^{2}﹣3mx﹣4m^{2}，直线解析式为y＝mx+m^{2}，
 
-    ∴M（t，t2﹣3mt﹣4m2），N（t，mt+m2），
+    ∴M（t，t^{2}﹣3mt﹣4m^{2}），N（t，mt+m^{2}），
 
-    ∴MN＝|t2﹣3mt﹣4m2﹣mt﹣m2|＝|t2﹣4mt﹣5m2|，
+    ∴MN＝|t^{2}﹣3mt﹣4m^{2}﹣mt﹣m^{2}|＝|t^{2}﹣4mt﹣5m^{2}|，
 
     对称轴为直线x＝2m，
 
-    令t2﹣4mt﹣5m2＝0，则有（t+m）（t﹣5m）＝0，
+    令t^{2}﹣4mt﹣5m^{2}＝0，则有（t+m）（t﹣5m）＝0，
 
     解得t＝﹣m或t＝5m；
 
     当m＞0时，﹣m＜5m，
 
-    则MN＝|t2﹣4mt﹣5m2|$=\left\{\begin{matrix} {t}^{2}-4mt-5{m}^{2}(t＜-m或t＞5m) \\ -{t}^{2}+4mt+5{m}^{2}(-m≤t≤5m) \end{matrix}\right.$，
+    则MN＝|t^{2}﹣4mt﹣5m^{2}|$=\left\{\begin{matrix} {t}^{2}-4mt-5{m}^{2}(t＜-m或t＞5m) \\ -{t}^{2}+4mt+5{m}^{2}(-m≤t≤5m) \end{matrix}\right.$，
 
     函数图象如图，
 
@@ -1111,7 +1112,7 @@ questions:
 
     当m＜0时，﹣m＞5m，
 
-    则MN＝|t2﹣4mt﹣5m2|$=\left\{\begin{matrix} {t}^{2}-4mt-5{m}^{2}(t＜5m或t＞-m) \\ -{t}^{2}+4mt+5{m}^{2}(5m≤t≤-m) \end{matrix}\right.$，
+    则MN＝|t^{2}﹣4mt﹣5m^{2}|$=\left\{\begin{matrix} {t}^{2}-4mt-5{m}^{2}(t＜5m或t＞-m) \\ -{t}^{2}+4mt+5{m}^{2}(5m≤t≤-m) \end{matrix}\right.$，
 
     函数图象如图，
 
@@ -1209,9 +1210,9 @@ questions:
 
     ∴$DF=\frac{1}{2}AE$，即AE＝2DF．'
   knowledge_points:
-  - 直角三角形的性质
-  - 旋转的性质
-  - 中点的应用
+  - 三角形的性质
+  - 旋转与变换
+  - 几何证明
   module: triangles
   difficulty: 中等
   recommended_for:
@@ -1223,13 +1224,13 @@ questions:
 - id: 28
   type: 解答
   score: 7
-  stem: '在平面直角坐标系xOy中，已知点M（x1，y1），N（x2，y2），对于坐标原点O和点P给出如下定义：将点O向右（x1+x2≥0）或向左（x1+x2＜0）平移|x1+x2|个单位长度，再向上（y1+y2≥0）或向下（y1+y2＜0）平移|y1+y2|个单位长度，得到点P，称点P是点O的“（M，N）对应点”．
+  stem: '在平面直角坐标系xOy中，已知点M（x_{1}，y_{1}），N（x_{2}，y_{2}），对于坐标原点O和点P给出如下定义：将点O向右（x_{1}+x_{2}≥0）或向左（x_{1}+x_{2}＜0）平移|x_{1}+x_{2}|个单位长度，再向上（y_{1}+y_{2}≥0）或向下（y_{1}+y_{2}＜0）平移|y_{1}+y_{2}|个单位长度，得到点P，称点P是点O的“（M，N）对应点”．
 
     （1）如图1，当点M（0，2），N（﹣4，0）时，
 
     ①画出点O的“（M，N）对应点”点P；
 
-    ②若点P1（2，1）是点O“（M，N1）对应点”，则N1的坐标是　         　 ；
+    ②若点P_{1}（2，1）是点O“（M，N_{1}）对应点”，则N_{1}的坐标是　         　 ；
 
     （2）当点M（0，3），A（3，0）时，N是半径为1的⊙A上一点，点P是点O的“（M，N）对应点”，则线段OP的最小值是　                　 ，最大值是　                　 ；
 
@@ -1246,21 +1247,21 @@ questions:
 
     ∴0﹣4＝﹣4＜0，2+0＝2＞0，
 
-    ∴|x1+x2|＝|0﹣4|＝4，|y1+y2|＝|2+0|＝2，
+    ∴|x_{1}+x_{2}|＝|0﹣4|＝4，|y_{1}+y_{2}|＝|2+0|＝2，
 
     将点O向左平移4个单位，向上平移2个单位得到P（﹣4，2）；
 
-    ②依题意，点P1（2，1）是点O的“（M，N1）对应点”，
+    ②依题意，点P_{1}（2，1）是点O的“（M，N_{1}）对应点”，
 
-    ∴从点O到P1，平移方式为向右平移2个单位向上平移1个单位，
+    ∴从点O到P_{1}，平移方式为向右平移2个单位向上平移1个单位，
 
-    设N1（x，y），
+    设N_{1}（x，y），
 
     ∴$\left\{\begin{matrix} 0+x=2 \\ 2+y=1 \end{matrix}\right.$，
 
     解得：$\left\{\begin{matrix} x=2 \\ y=-1 \end{matrix}\right.$，
 
-    ∴N1（2，﹣1），
+    ∴N_{1}（2，﹣1），
 
     故答案为：（2，﹣1）；
 
@@ -1286,7 +1287,7 @@ questions:
 
     ∵点P是点O的“（M，N）对应点”，
 
-    ∴P（t+xN，yN），
+    ∴P（t+x_{N}，y_{N}），
 
     如图，点P是以B′（4+t，0）为圆心，|t﹣4|为半径的圆上运动，
 
@@ -1318,11 +1319,10 @@ questions:
   knowledge_points:
   - 平面直角坐标系
   - 点的平移
-  - 圆的基本性质
+  - 圆的性质
   module: geometryComprehensive
-  difficulty: 中等
+  difficulty: 能力
   recommended_for:
-  - L1
   - L2
   - L3
   qc_status: draft

@@ -1,11 +1,11 @@
 # ============================================================
-# 2026年北京2026年北京市东城区一模math — 自动生成
+# 2026年北京东城区一模math — 自动生成
 # ============================================================
 # OCR: Qwen-VL-OCR  Enrich: qwen-max
 # QC: draft=28  needs_review=0
 
 year: 2026
-district: 2026年北京市东城区
+district: 东城区
 exam_type: 一模
 subject: math
 full_score: 100
@@ -51,12 +51,12 @@ questions:
   score: 2
   stem: 在今年全国两会上，政府工作报告明确提出，2026年发展主要预期目标之一是：城镇新增就业1200万人以上．将数字12000000用科学记数法表示应为（　　）
   options:
-    A: 12×106
-    B: 1.2×106
-    C: 1.2×107
-    D: 0.12×108
+    A: 12×10^{6}
+    B: 1.2×10^{6}
+    C: 1.2×10^{7}
+    D: 0.12×10^{8}
   answer: C
-  solution: '解：12000000＝1.2×107．
+  solution: '解：12000000＝1.2×10^{7}．
 
     故选：C．'
   knowledge_points:
@@ -121,6 +121,7 @@ questions:
     故选：B．'
   knowledge_points:
   - 不等式的性质
+  - 数的大小比较
   module: equationsAndInequalities
   difficulty: 基础
   recommended_for:
@@ -207,7 +208,7 @@ questions:
 - id: 7
   type: 单选
   score: 2
-  stem: 把二次函数y＝x2+4x+m的图象向上平移1个单位长度．如果平移后所得抛物线与x轴有且只有一个公共点，那么m的值为（　　）
+  stem: 把二次函数y＝x^{2}+4x+m的图象向上平移1个单位长度．如果平移后所得抛物线与x轴有且只有一个公共点，那么m的值为（　　）
   options:
     A: '4'
     B: '3'
@@ -216,13 +217,13 @@ questions:
   answer: B
   solution: '解：根据二次函数图象平移规则，向上平移1个单位长度后，
 
-    所得抛物线的解析式为：y＝x2+4x+m+1，
+    所得抛物线的解析式为：y＝x^{2}+4x+m+1，
 
     ∵平移后抛物线与x轴有且只有一个公共点，
 
-    ∴一元二次方程x2+4x+m+1＝0有两个相等的实数根，
+    ∴一元二次方程x^{2}+4x+m+1＝0有两个相等的实数根，
 
-    ∴Δ＝b2﹣4ac＝42﹣4×1×（m+1）＝0，
+    ∴Δ＝b^{2}﹣4ac＝4^{2}﹣4×1×（m+1）＝0，
 
     化简得12﹣4m＝0，
 
@@ -230,7 +231,7 @@ questions:
 
     故选：B．'
   knowledge_points:
-  - 二次函数的图像与性质
+  - 二次函数的图象与性质
   - 二次函数的平移
   module: functions
   difficulty: 中等
@@ -283,7 +284,7 @@ questions:
 
     ∴AM＝DE＝1，
 
-    ∵AB≥AM，且等边三角形的周长C△ABC＝3AB，
+    ∵AB≥AM，且等边三角形的周长C_{△}_{ABC}＝3AB，
 
     ∴AB最小值为1，
 
@@ -311,17 +312,17 @@ questions:
 
     设BD＝CF＝x（0＜x＜1），则BG＝CG＝1﹣x，
 
-    在Rt△ABD中，AB2＝AD2+BD2＝1+x2，
+    在Rt△ABD中，AB^{2}＝AD^{2}+BD^{2}＝1+x^{2}，
 
-    在Rt△BCG中，BC2＝2BG2＝2×（1﹣x）2＝2x2﹣4x+2，
+    在Rt△BCG中，BC^{2}＝2BG^{2}＝2×（1﹣x）^{2}＝2x^{2}﹣4x+2，
 
     ∵AB＝BC，
 
-    ∴AB2＝BC2
+    ∴AB^{2}＝BC^{2}
 
-    ∴1+x2＝2x2﹣4x+2，
+    ∴1+x^{2}＝2x^{2}﹣4x+2，
 
-    整理得，x2﹣4x+1＝0，
+    整理得，x^{2}﹣4x+1＝0，
 
     解得，${x}_{1}=2-\sqrt{3}$，${x}_{2}=2+\sqrt{3}$（舍去），
 
@@ -331,7 +332,7 @@ questions:
 
     根据上述计算可知，AB≥1，
 
-    ∴AB2的最大值为$(8-4\sqrt{3})$，
+    ∴AB^{2}的最大值为$(8-4\sqrt{3})$，
 
     ∴${S}_{△ABC}=\frac{\sqrt{3}}{4}×(8-4\sqrt{3})=2\sqrt{3}-3$，故③错误；
 
@@ -373,15 +374,15 @@ questions:
 - id: 10
   type: 填空
   score: 2
-  stem: 分解因式：2x2﹣8xy+8y2＝　           　 ．
-  answer: 2（x﹣2y）2
-  solution: '解：2x2﹣8xy+8y2
+  stem: 分解因式：2x^{2}﹣8xy+8y^{2}＝　           　 ．
+  answer: 2（x﹣2y）^{2}
+  solution: '解：2x^{2}﹣8xy+8y^{2}
 
-    ＝2（x2﹣4xy+4y2）
+    ＝2（x^{2}﹣4xy+4y^{2}）
 
-    ＝2（x﹣2y）2．
+    ＝2（x﹣2y）^{2}．
 
-    故答案为：2（x﹣2y）2．'
+    故答案为：2（x﹣2y）^{2}．'
   knowledge_points:
   - 因式分解
   module: numbersAndExpressions
@@ -426,19 +427,20 @@ questions:
 - id: 12
   type: 填空
   score: 2
-  stem: 若关于x的一元二次方程2x2﹣4x+m＝0有两个实数根，则m的取值范围是　      　 ．
+  stem: 若关于x的一元二次方程2x^{2}﹣4x+m＝0有两个实数根，则m的取值范围是　      　 ．
   answer: m≤2．
   solution: '解：由题知，
 
-    因为关于x的一元二次方程2x2﹣4x+m＝0有两个实数根，
+    因为关于x的一元二次方程2x^{2}﹣4x+m＝0有两个实数根，
 
-    所以Δ＝（﹣4）2﹣4×2×m≥0，
+    所以Δ＝（﹣4）^{2}﹣4×2×m≥0，
 
     解得m≤2．
 
     故答案为：m≤2．'
   knowledge_points:
-  - 一元二次方程的根的判别式
+  - 一元二次方程的根与系数的关系
+  - 判别式
   module: equationsAndInequalities
   difficulty: 中等
   recommended_for:
@@ -468,7 +470,7 @@ questions:
 
     故答案为：240．'
   knowledge_points:
-  - 样本估计总体
+  - 统计与概率-样本估计总体
   module: statisticsAndProbability
   difficulty: 基础
   recommended_for:
@@ -554,10 +556,10 @@ questions:
 
     故答案为：$\sqrt{13}$．'
   knowledge_points:
-  - 几何综合
-  - 矩形性质
-  - 中点性质
-  module: geometryComprehensive
+  - 矩形的性质
+  - 中点的应用
+  - 勾股定理
+  module: quadrilaterals
   difficulty: 中等
   recommended_for:
   - L1
@@ -647,8 +649,8 @@ questions:
     故答案为：400．'
   knowledge_points:
   - 比例与应用
-  - 方程与不等式
-  module: equationsAndInequalities
+  - 最优化问题
+  module: numbersAndExpressions
   difficulty: 中等
   recommended_for:
   - L1
@@ -669,7 +671,7 @@ questions:
   knowledge_points:
   - 二次根式的化简
   - 特殊角的三角函数值
-  - 绝对值的性质
+  - 绝对值的意义
   - 零指数幂
   module: numbersAndExpressions
   difficulty: 基础
@@ -696,9 +698,8 @@ questions:
   - 解一元一次不等式
   - 解一元一次不等式组
   module: equationsAndInequalities
-  difficulty: 基础
+  difficulty: 中等
   recommended_for:
-  - L0
   - L1
   - L2
   - L3
@@ -707,7 +708,7 @@ questions:
 - id: 19
   type: 解答
   score: 5
-  stem: 已知x+y﹣2＝0，求代数式x2﹣y2﹣2（x﹣y）+3的值．
+  stem: 已知x+y﹣2＝0，求代数式x^{2}﹣y^{2}﹣2（x﹣y）+3的值．
   answer: 3．
   solution: '解：原式＝（x+y）（x﹣y）﹣2（x﹣y）+3
 
@@ -996,8 +997,9 @@ questions:
 
     挂安慰：94，99．'
   knowledge_points:
-  - 统计量的计算
-  - 数据的分析与处理
+  - 频数分布直方图
+  - 平均数、众数、中位数
+  - 方差
   module: statisticsAndProbability
   difficulty: 中等
   recommended_for:
@@ -1075,7 +1077,7 @@ questions:
     ∴$CG=\frac{4}{7}BC=\frac{12\sqrt{2}}{7}$．'
   knowledge_points:
   - 圆的切线性质
-  - 解直角三角形
+  - 三角函数的应用
   module: circles
   difficulty: 中等
   recommended_for:
@@ -1093,11 +1095,11 @@ questions:
 
     |---|---|---|---|---|---|---|---|---|
 
-    | A算法y1（千卡） | 0 | 50 | 100 | 150 | 200 | 250 | 300 | 350 |
+    | A算法y_{1}（千卡） | 0 | 50 | 100 | 150 | 200 | 250 | 300 | 350 |
 
-    | B算法y2（千卡） | 0 | 52 | 95 | 138 | 172 | 200 | 220 | 230 |
+    | B算法y_{2}（千卡） | 0 | 52 | 95 | 138 | 172 | 200 | 220 | 230 |
 
-    （1）两种算法中，能量消耗值都可以看作关于运动时间的函数，观察数据，推测A种算法中y1与x的函数关系式为　        　 ；
+    （1）两种算法中，能量消耗值都可以看作关于运动时间的函数，观察数据，推测A种算法中y_{1}与x的函数关系式为　        　 ；
 
     （2）在同一平面直角坐标系中绘制出两种算法对应的函数图象；
 
@@ -1105,18 +1107,18 @@ questions:
 
     ①若两种算法计算的能量消耗值之差的绝对值小于25千卡，则手环显示B种算法的能量消耗值；
 
-    ②若两种算法计算的能量消耗值之差的绝对值大于或等于25千卡，则AI动态算法开始计算y1，y2的平均数，如果所得的平均数与y1的差的绝对值大于或等于25千卡，那么AI动态算法再次计算上一次所得的平均数与y1的平均数，重复上述操作，直到所得的平均数与y1的差的绝对值小于25千卡时，手环上显示的能量消耗值是最后一次所得的平均数（AI动态算法计算时间忽略不计）．
+    ②若两种算法计算的能量消耗值之差的绝对值大于或等于25千卡，则AI动态算法开始计算y_{1}，y_{2}的平均数，如果所得的平均数与y_{1}的差的绝对值大于或等于25千卡，那么AI动态算法再次计算上一次所得的平均数与y_{1}的平均数，重复上述操作，直到所得的平均数与y_{1}的差的绝对值小于25千卡时，手环上显示的能量消耗值是最后一次所得的平均数（AI动态算法计算时间忽略不计）．
 
     这次测试中，该测试者运动25分钟时，手环显示的能量消耗值是　      　 千卡（保留整数）；运动60分钟时，手环显示的能量消耗值是　      　 千卡．'
   figure: 2026-dongcheng-yi/figures/image10.png
   _figures_extra:
   - image10.png
-  answer: （1）y1＝5x；
-  solution: '解：（1）观察表格得，y1＝5x；
+  answer: （1）y_{1}＝5x；
+  solution: '解：（1）观察表格得，y_{1}＝5x；
 
-    故答案为：y1＝5x；
+    故答案为：y_{1}＝5x；
 
-    （2）重复上述操作，直到所得的平均数与y1的差的绝对值小于25千卡时，手环上显示的能量消耗值是最后一次所得的平均数（AI动态算法计算时间忽略不计）．函数图象如图所示：
+    （2）重复上述操作，直到所得的平均数与y_{1}的差的绝对值小于25千卡时，手环上显示的能量消耗值是最后一次所得的平均数（AI动态算法计算时间忽略不计）．函数图象如图所示：
 
     ![](figures/image33.png)
 
@@ -1124,21 +1126,22 @@ questions:
 
     ∴手环显示B种算法的能量消耗值为117千卡；
 
-    ∵运动60分钟时，y1＝300，y2＝220，
+    ∵运动60分钟时，y_{1}＝300，y_{2}＝220，
 
-    ∴y1﹣y2＝80＞25，
+    ∴y_{1}﹣y_{2}＝80＞25，
 
     ∴第一次计算平均数为：$\frac{{y}_{1}+{y}_{2}}{2}=260$，
 
-    ∵y1﹣260＝300﹣260＝40＞25，
+    ∵y_{1}﹣260＝300﹣260＝40＞25，
 
-    ∴第二次计算平均数为：$\frac{{y}_{1}+260}{2}=280$，且y1﹣280＝300﹣280＝20＜25，
+    ∴第二次计算平均数为：$\frac{{y}_{1}+260}{2}=280$，且y_{1}﹣280＝300﹣280＝20＜25，
 
     ∴手环显示的能量消耗值是280千卡．
 
     故答案为：117；280．'
   knowledge_points:
-  - 一次函数的表示与应用
+  - 一次函数的表示
+  - 一次函数的应用
   - 数据处理与分析
   module: functions
   difficulty: 中等
@@ -1151,7 +1154,7 @@ questions:
 - id: 26
   type: 解答
   score: 6
-  stem: '在平面直角坐标系xOy中，抛物线y＝ax2+（a﹣2a2）x+c（a＞0）与x轴交于O，A两点．
+  stem: '在平面直角坐标系xOy中，抛物线y＝ax^{2}+（a﹣2a^{2}）x+c（a＞0）与x轴交于O，A两点．
 
     （1）求c的值，并用含a的式子表示A点的横坐标；
 
@@ -1161,33 +1164,33 @@ questions:
 
     ②当2＜t＜4时，MN的长随t的增大而增大，直接写出a的取值范围．'
   answer: （1）c＝0，A点的横坐标为2a﹣1；
-  solution: '解：（1）抛物线y＝ax2+（a﹣2a2）x+c（a＞0）与x轴交于O（0，0），A两点，
+  solution: '解：（1）抛物线y＝ax^{2}+（a﹣2a^{2}）x+c（a＞0）与x轴交于O（0，0），A两点，
 
     ∴c＝0，抛物线的对称轴直线为$x=-\frac{a-2{a}^{2}}{2a}=\frac{2a-1}{2}$$\frac{0+{x}_{A}}{2}=\frac{2a-1}{2}$，
 
-    解得，xA＝2a﹣1，
+    解得，x_{A}＝2a﹣1，
 
     ∴A点的横坐标为2a﹣1；
 
-    （2）①当a＝1，t＝3时，二次函数解析式为y＝x2﹣x直线的解析式为y＝x，
+    （2）①当a＝1，t＝3时，二次函数解析式为y＝x^{2}﹣x直线的解析式为y＝x，
 
-    ∴当x＝t＝3时，点M的纵坐标为y＝32﹣3＝6，点N的纵坐标为y＝t＝3，
+    ∴当x＝t＝3时，点M的纵坐标为y＝3^{2}﹣3＝6，点N的纵坐标为y＝t＝3，
 
     ∴MN＝6﹣3＝3；
 
     ②∵a＞0，
 
-    ∴抛物线y＝ax2+（a﹣2a2）x的图象开口向上，对称轴直线为$x=\frac{2a-1}{2}$，A（2a﹣1，0），
+    ∴抛物线y＝ax^{2}+（a﹣2a^{2}）x的图象开口向上，对称轴直线为$x=\frac{2a-1}{2}$，A（2a﹣1，0），
 
     直线y＝ax的图象经过第一、三象限，
 
-    当x＝t时，点M的纵坐标为y＝at2+（a﹣2a2）t，点N的纵坐标为y＝at，
+    当x＝t时，点M的纵坐标为y＝at^{2}+（a﹣2a^{2}）t，点N的纵坐标为y＝at，
 
-    ∴MN＝|at2+（a﹣2a2）t﹣at|＝a|t2﹣2at|，
+    ∴MN＝|at^{2}+（a﹣2a^{2}）t﹣at|＝a|t^{2}﹣2at|，
 
     ∵t＞0，
 
-    ∴MN＝at|t﹣2a|，当t≥2a时，MN＝at（t﹣2a）＝at2﹣2a2t
+    ∴MN＝at|t﹣2a|，当t≥2a时，MN＝at（t﹣2a）＝at^{2}﹣2a^{2}t
 
     ∴MN关于t的二次函数图象开口向上，对称轴直线为t＝a，
 
@@ -1197,7 +1200,7 @@ questions:
 
     ∴a≤1；
 
-    当t＜2a时，MN＝at（2a﹣t）＝﹣at2+2a2t，
+    当t＜2a时，MN＝at（2a﹣t）＝﹣at^{2}+2a^{2}t，
 
     ∴MN关于t的二次函数图象开口向下，对称轴为直线t＝a，
 
@@ -1208,7 +1211,7 @@ questions:
     综上所示，0＜a≤1或a≥4．'
   knowledge_points:
   - 二次函数的性质
-  - 二次函数与一元二次方程的关系
+  - 二次函数与一次函数的综合应用
   module: functions
   difficulty: 中等
   recommended_for:
@@ -1282,7 +1285,7 @@ questions:
     ∴BC＝2AF．'
   knowledge_points:
   - 三角形的性质
-  - 旋转与对称
+  - 旋转与变换
   - 平行线的性质
   module: triangles
   difficulty: 中等
@@ -1307,18 +1310,18 @@ questions:
   figure: 2026-dongcheng-yi/figures/image12.png
   _figures_extra:
   - image12.png
-  answer: （1）①C2，C3；
+  answer: （1）①C_{2}，C_{3}；
   solution: '解：（1）①如图，
 
     ![](figures/image38.png)
 
-    △ABC1为钝角三角形，则C1（﹣1，1）不符合题意；
+    △ABC_{1}为钝角三角形，则C_{1}（﹣1，1）不符合题意；
 
-    △ABC2为锐角三角形，且BC2是⊙O的切线，则${C}_{2}(1，\sqrt{3})$符合题意；
+    △ABC_{2}为锐角三角形，且BC_{2}是⊙O的切线，则${C}_{2}(1，\sqrt{3})$符合题意；
 
-    △ABC3为锐角三角形，且AC3是⊙O的切线，则${C}_{3}(\sqrt{2}，1)$符合题意，
+    △ABC_{3}为锐角三角形，且AC_{3}是⊙O的切线，则${C}_{3}(\sqrt{2}，1)$符合题意，
 
-    故答案为：C2，C3；
+    故答案为：C_{2}，C_{3}；
 
     ②∵OC＝2，
 
@@ -1328,23 +1331,23 @@ questions:
 
     则此时AC一定是⊙O的切线，只需满足△ABC为锐角三角形，则△ABC为直角三角形即可找到临界值，
 
-    如图，当∠B1AC＝90°时，
+    如图，当∠B_{1}AC＝90°时，
 
     ![](figures/image39.png)
 
-    AB1为圆的直径，即AB1＝2，
+    AB_{1}为圆的直径，即AB_{1}＝2，
 
-    如图，当∠AB2C＝90°时，过点O作OD⊥AB于D，
+    如图，当∠AB_{2}C＝90°时，过点O作OD⊥AB于D，
 
     ![](figures/image40.png)
 
-    ∵OD⊥AB2，
+    ∵OD⊥AB_{2}，
 
-    ∴设AD＝B2D＝x，则AB2＝2x，
+    ∴设AD＝B_{2}D＝x，则AB_{2}＝2x，
 
-    ∵∠OAC＝∠AB2C＝90°，
+    ∵∠OAC＝∠AB_{2}C＝90°，
 
-    ∴∠OAD＝∠ACB2＝90°﹣∠CAB2，
+    ∴∠OAD＝∠ACB_{2}＝90°﹣∠CAB_{2}，
 
     ∴$sin∠OAD=sin∠AC{B}_{2}=\frac{OD}{OA}=\frac{A{B}_{2}}{AC}$，
 
@@ -1356,7 +1359,7 @@ questions:
 
     解得$x=\frac{\sqrt{21}}{7}$，x$=-\frac{\sqrt{21}}{7}$（不符题意，舍去），
 
-    则AB2＝2x$=\frac{2\sqrt{21}}{7}$，
+    则AB_{2}＝2x$=\frac{2\sqrt{21}}{7}$，
 
     则当$\frac{2\sqrt{21}}{7}＜AB＜2$时，△ABC为锐角三角形，即点C是⊙O的弦AB的“锐切点”，
 
@@ -1366,21 +1369,21 @@ questions:
 
     由题可知，AB＝t，则△ABO为等边三角形，
 
-    如图，过点B分别作BC1∥y轴，BC2⊥AB交过点A垂直于y轴的直线于点C1C2，
+    如图，过点B分别作BC_{1}∥y轴，BC_{2}⊥AB交过点A垂直于y轴的直线于点C_{1}C_{2}，
 
-    连接OC1OC2，
+    连接OC_{1}OC_{2}，
 
     ![](figures/image41.png)
 
     ∵∠OAB＝∠AOB＝∠ABO＝60°，
 
-    ∴∠BAC1＝30°，
+    ∴∠BAC_{1}＝30°，
 
     ∴$cos30°=\frac{A{C}_{1}}{AB}=\frac{AB}{A{C}_{2}}$，
 
     则$A{C}_{1}=\frac{\sqrt{3}}{2}t$，A${C}_{2}=\frac{2\sqrt{3}}{3}t$，
 
-    当点C位于C1，C2之间时，△ABC为锐角三角形，此时$O{C}_{1}=\frac{\sqrt{7}}{2}t$，$O{C}_{2}=\frac{\sqrt{21}}{3}t$，
+    当点C位于C_{1}，C_{2}之间时，△ABC为锐角三角形，此时$O{C}_{1}=\frac{\sqrt{7}}{2}t$，$O{C}_{2}=\frac{\sqrt{21}}{3}t$，
 
     以点O为圆心，分别以$O{C}_{1}=\frac{\sqrt{7}}{2}t$，O${C}_{2}=\frac{\sqrt{21}}{3}t$为半径画圆，长为$2\sqrt{7}$的线段在圆弧区域内时，线段上的任意一点都是⊙O的长为的弦的“锐切点”，
 

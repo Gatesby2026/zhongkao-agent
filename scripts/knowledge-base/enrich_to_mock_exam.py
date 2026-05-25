@@ -284,7 +284,13 @@ def _parse_exam_name(p: "NormalizedPaper") -> None:
     m = re.search(r"(\d{4})", name)
     if m:
         p.year = int(m.group(1))
-    m = re.search(r"([^\s]+区)", name)
+    # 只取 "XX区" 区名本体。北京 13 区名都是 2-3 中文字（朝阳/海淀/西城/
+    # 东城/丰台/石景山/房山/通州/顺义/大兴/昌平/平谷/燕山/门头沟/怀柔/密云/延庆）。
+    # 用锚定的 "北京市?" 前缀剥掉年份/省市前缀，否则
+    # "2026年北京市朝阳区中考..." 会被贪婪 [^\s]+区 捕成 "2026年北京市朝阳区"
+    m = re.search(r"北京市?([一-龥]{2,3}区)", name)
+    if not m:
+        m = re.search(r"([一-龥]{2,3}区)", name)
     if m:
         p.district = m.group(1)
     for k, v in EXAM_TYPE_MAP.items():

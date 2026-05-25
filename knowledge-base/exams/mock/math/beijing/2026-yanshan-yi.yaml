@@ -1,11 +1,11 @@
 # ============================================================
-# 2026年北京2026年北京市燕山区一模math — 自动生成
+# 2026年北京燕山区一模math — 自动生成
 # ============================================================
 # OCR: Qwen-VL-OCR  Enrich: qwen-max
 # QC: draft=28  needs_review=0
 
 year: 2026
-district: 2026年北京市燕山区
+district: 燕山区
 exam_type: 一模
 subject: math
 full_score: 100
@@ -124,14 +124,14 @@ questions:
 - id: 4
   type: 单选
   score: 2
-  stem: 若关于x的一元二次方程x2+x+m＝0有两个相等的实数根，则实数m的值为（　　）
+  stem: 若关于x的一元二次方程x^{2}+x+m＝0有两个相等的实数根，则实数m的值为（　　）
   options:
     A: ﹣4
     B: $-\frac{1}{4}$
     C: $\frac{1}{4}$
     D: '4'
   answer: C
-  solution: '解：根据题意得Δ＝12﹣4m＝0，
+  solution: '解：根据题意得Δ＝1^{2}﹣4m＝0，
 
     解得m$=\frac{1}{4}$．
 
@@ -152,12 +152,12 @@ questions:
   score: 2
   stem: 南水北调东中线一期工程已经成为优化水资源配置、保障群众饮水安全、复苏河湖生态环境、畅通南北经济循环的生命线．南水北调东中线一期工程已经累计调水突破800亿立方米，直接受益人口达到185000000．将185000000用科学记数法表示应为（　　）
   options:
-    A: 1.85×108
-    B: 1.85×109
-    C: 18.5×109
-    D: 0.185×1010
+    A: 1.85×10^{8}
+    B: 1.85×10^{9}
+    C: 18.5×10^{9}
+    D: 0.185×10^{10}
   answer: A
-  solution: '解：185000000＝1.85×108，
+  solution: '解：185000000＝1.85×10^{8}，
 
     故选：A．'
   knowledge_points:
@@ -226,7 +226,6 @@ questions:
   knowledge_points:
   - 直角三角形的性质
   - 圆的性质
-  - 勾股定理
   module: triangles
   difficulty: 中等
   recommended_for:
@@ -264,9 +263,9 @@ questions:
 
     ∵四边形OABC为矩形，
 
-    ∴S△COB＝S△AOB，
+    ∴S_{△}_{COB}＝S_{△}_{AOB}，
 
-    ∴S△COB﹣S△COM＝S△AOB﹣S△AON，即S△BOM＝S△BON，故①正确；
+    ∴S_{△}_{COB}﹣S_{△}_{COM}＝S_{△}_{AOB}﹣S_{△}_{AON}，即S_{△}_{BOM}＝S_{△}_{BON}，故①正确；
 
     ∵点M是边BC的中点，
 
@@ -274,7 +273,7 @@ questions:
 
     ∴${S}_{△COM}=\frac{1}{2}×CM×OC=\frac{1}{4}×BC×OC$，
 
-    ∵${S}_{△COM}=\frac{1}{2}×AN×OA$，且S△COM＝S△AON，
+    ∵${S}_{△COM}=\frac{1}{2}×AN×OA$，且S_{△}_{COM}＝S_{△}_{AON}，
 
     ∴$\frac{1}{4}×BC×OC=\frac{1}{2}×AN×OA$，
 
@@ -304,7 +303,6 @@ questions:
   knowledge_points:
   - 反比例函数的性质
   - 相似三角形的判定与性质
-  - 矩形的性质
   module: functions
   difficulty: 中等
   recommended_for:
@@ -326,8 +324,7 @@ questions:
 
     故答案为：x≥1．'
   knowledge_points:
-  - 实数的性质
-  - 根号下的表达式
+  - 二次根式的定义与性质
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -340,9 +337,9 @@ questions:
 - id: 10
   type: 填空
   score: 2
-  stem: 分解因式：2x2﹣18＝　              　 ．
+  stem: 分解因式：2x^{2}﹣18＝　              　 ．
   answer: 2（x+3）（x﹣3）
-  solution: '解：原式＝2（x2﹣9）＝2（x+3）（x﹣3），
+  solution: '解：原式＝2（x^{2}﹣9）＝2（x+3）（x﹣3），
 
     故答案为：2（x+3）（x﹣3）'
   knowledge_points:
@@ -403,9 +400,8 @@ questions:
   - 样本估计总体
   - 百分比的应用
   module: statisticsAndProbability
-  difficulty: 基础
+  difficulty: 中等
   recommended_for:
-  - L0
   - L1
   - L2
   - L3
@@ -414,14 +410,14 @@ questions:
 - id: 13
   type: 填空
   score: 2
-  stem: 能说明命题“若a＞b，则a2＞b2”是假命题的一组实数a，b的值为a＝　     　 ，b＝　   　 ．
+  stem: 能说明命题“若a＞b，则a^{2}＞b^{2}”是假命题的一组实数a，b的值为a＝　     　 ，b＝　   　 ．
   answer: ﹣1；2．
   solution: '解：当a＝﹣1，b＝2符合条件，不符合结论．
 
     故答案为：﹣1；2．'
   knowledge_points:
   - 不等式的性质
-  - 实数的运算
+  - 实数的平方
   module: equationsAndInequalities
   difficulty: 中等
   recommended_for:
@@ -458,7 +454,7 @@ questions:
     故答案为：10．'
   knowledge_points:
   - 圆的基本性质
-  - 圆周角与圆心角的关系
+  - 几何综合应用
   module: circles
   difficulty: 中等
   recommended_for:
@@ -493,9 +489,8 @@ questions:
 
     故答案为：12．'
   knowledge_points:
-  - 菱形的性质
-  - 正方形的性质
-  - 图形的拼接与面积计算
+  - 几何图形的性质
+  - 面积计算
   module: quadrilaterals
   difficulty: 中等
   recommended_for:
@@ -565,9 +560,9 @@ questions:
     $=\sqrt{3}$．'
   knowledge_points:
   - 绝对值
-  - 三角函数
-  - 指数运算
-  - 根式运算
+  - 特殊角的三角函数值
+  - 零指数幂
+  - 二次根式的化简
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -615,7 +610,7 @@ questions:
 
     $=\frac{2}{3}$．'
   knowledge_points:
-  - 代数式的化简与求值
+  - 代数式的化简
   - 方程的应用
   module: numbersAndExpressions
   difficulty: 中等
@@ -679,7 +674,7 @@ questions:
   knowledge_points:
   - 平行四边形的性质
   - 矩形的判定与性质
-  - 勾股定理
+  - 勾股定理的应用
   module: quadrilaterals
   difficulty: 中等
   recommended_for:
@@ -749,7 +744,7 @@ questions:
 
     答：中线同侧的单、双打边线间的距离为42cm．'
   knowledge_points:
-  - 几何综合
+  - 几何综合应用
   - 比例与相似
   module: geometryComprehensive
   difficulty: 中等
@@ -984,19 +979,19 @@ questions:
 - id: 26
   type: 解答
   score: 6
-  stem: '在平面直角坐标系xOy中，已知抛物线y＝ax2+2a2x（a≠0）．
+  stem: '在平面直角坐标系xOy中，已知抛物线y＝ax^{2}+2a^{2}x（a≠0）．
 
     （1）当a＝1时，求抛物线的对称轴和顶点坐标；
 
-    （2）已知A（2﹣a，y1）和B（b，y2）是抛物线上的两点，若对于2≤b≤3，都有y1＜y2，求a的取值范围．'
+    （2）已知A（2﹣a，y_{1}）和B（b，y_{2}）是抛物线上的两点，若对于2≤b≤3，都有y_{1}＜y_{2}，求a的取值范围．'
   answer: （1）抛物线的对称轴为x＝﹣1，顶点坐标为（﹣1，﹣1）；
-  solution: '解：（1）当a＝1时，抛物线为y＝x2+2x，
+  solution: '解：（1）当a＝1时，抛物线为y＝x^{2}+2x，
 
-    ∵y＝x2+2x＝（x+1）2﹣1，
+    ∵y＝x^{2}+2x＝（x+1）^{2}﹣1，
 
     ∴抛物线的对称轴为x＝﹣1，顶点坐标为（﹣1，﹣1）；
 
-    （2）∵抛物线y＝ax2+2a2x（a≠0）．
+    （2）∵抛物线y＝ax^{2}+2a^{2}x（a≠0）．
 
     ∴抛物线的对称轴为x$=-\frac{2{a}^{2}}{2a}=-$a，分两种情况：
 
@@ -1004,7 +999,7 @@ questions:
 
     ∵抛物线的对称轴为x＝﹣a，2﹣a＞﹣a
 
-    ∴点A（2﹣a，y1）在对称轴的右侧
+    ∴点A（2﹣a，y_{1}）在对称轴的右侧
 
     ∵抛物线开口向上，
 
@@ -1016,7 +1011,7 @@ questions:
 
     ∴点B在对称轴右侧，
 
-    ∵y1＜y2，
+    ∵y_{1}＜y_{2}，
 
     ∴﹣a＜2﹣a＜2，
 
@@ -1032,9 +1027,9 @@ questions:
 
     抛物线的对称轴为x＝﹣a，
 
-    点A（2﹣a，y1）关于对称轴x＝﹣a的对称点为A′（﹣a﹣2，y1），
+    点A（2﹣a，y_{1}）关于对称轴x＝﹣a的对称点为A′（﹣a﹣2，y_{1}），
 
-    ∵y1＜y2，
+    ∵y_{1}＜y_{2}，
 
     ∴﹣a﹣2＜b＜2﹣a，
 
@@ -1126,8 +1121,8 @@ questions:
 
     ∴$BE=HN=\sqrt{2}AN$．'
   knowledge_points:
-  - 正方形的性质
   - 旋转的性质
+  - 正方形的性质
   - 三角形的性质
   module: geometryComprehensive
   difficulty: 中等
@@ -1145,32 +1140,33 @@ questions:
     （1）已知点A（1，0），${B}_{1}(\frac{\sqrt{2}}{2}，\frac{\sqrt{2}}{2})，{B}_{2}(\frac{1}{2}，\frac{\sqrt{3}}{2})$．
 
 
-    ①如图1，在点${C}_{1}(1，2\sqrt{2}-2)$，C2（1，1），${C}_{3}(2-\frac{\sqrt{2}}{2}，\frac{3\sqrt{2}}{2}-2)$中，弦AB1的“垂联点”是　        　 ；
+    ①如图1，在点${C}_{1}(1，2\sqrt{2}-2)$，C_{2}（1，1），${C}_{3}(2-\frac{\sqrt{2}}{2}，\frac{3\sqrt{2}}{2}-2)$中，弦AB_{1}的“垂联点”是　        　
+    ；
 
-    ②如图2，若点C为弦AB2的“垂联点”，直接写出OC的长；
+    ②如图2，若点C为弦AB_{2}的“垂联点”，直接写出OC的长；
 
     （2）已知点$M(0，3)，N(\frac{6\sqrt{5}}{5}，0)$，对于线段MN上一点S，存在⊙O的弦PQ，使得点S为弦PQ的“垂联点”．设PQ的长为d，当点S在线段MN上运动时，直接写出d的取值范围．'
   figure: 2026-yanshan-yi/figures/image19.png
   _figures_extra:
   - image19.png
-  answer: （1）①C1，C3；②线段OC的长为$\frac{\sqrt{21}}{3}$；
+  answer: （1）①C_{1}，C_{3}；②线段OC的长为$\frac{\sqrt{21}}{3}$；
   solution: '解：（1）①∵点A（1，0），${B}_{1}(\frac{\sqrt{2}}{2}，\frac{\sqrt{2}}{2})$，${C}_{1}(1，2\sqrt{2}-2)$，
 
-    ∴C1A⊥OA，${C}_{1}{A}^{2}=(2\sqrt{2}-2{)}^{2}=12-8\sqrt{2}，{C}_{1}{B}_{1}^{2}+A{B}_{1}^{2}=(1-\frac{\sqrt{2}}{2}{)}^{2}+(2\sqrt{2}-2-\frac{\sqrt{2}}{2}{)}^{2}+(1-\frac{\sqrt{2}}{2}{)}^{2}+(0-\frac{\sqrt{2}}{2}{)}^{2}=12-8\sqrt{2}$，
+    ∴C_{1}A⊥OA，${C}_{1}{A}^{2}=(2\sqrt{2}-2{)}^{2}=12-8\sqrt{2}，{C}_{1}{B}_{1}^{2}+A{B}_{1}^{2}=(1-\frac{\sqrt{2}}{2}{)}^{2}+(2\sqrt{2}-2-\frac{\sqrt{2}}{2}{)}^{2}+(1-\frac{\sqrt{2}}{2}{)}^{2}+(0-\frac{\sqrt{2}}{2}{)}^{2}=12-8\sqrt{2}$，
 
     ∴${C}_{1}{A}^{2}={C}_{1}{B}_{1}^{2}+A{B}_{1}^{2}$，
 
-    ∴C1B1⊥AB1，
+    ∴C_{1}B_{1}⊥AB_{1}，
 
-    又∵C1A⊥OA，OA是⊙O的半径，
+    又∵C_{1}A⊥OA，OA是⊙O的半径，
 
-    ∴C1A是⊙O的切线，即点${C}_{1}(1，2\sqrt{2}-2)$是弦AB的“垂联点”；
+    ∴C_{1}A是⊙O的切线，即点${C}_{1}(1，2\sqrt{2}-2)$是弦AB的“垂联点”；
 
-    ∵点A（1，0），${B}_{1}(\frac{\sqrt{2}}{2}，\frac{\sqrt{2}}{2})$，C2（1，1），
+    ∵点A（1，0），${B}_{1}(\frac{\sqrt{2}}{2}，\frac{\sqrt{2}}{2})$，C_{2}（1，1），
 
-    ∴C2A⊥OA，${C}_{2}{A}^{2}=1$，${C}_{2}{B}_{1}^{2}+A{B}_{1}^{2}=(1-\frac{\sqrt{2}}{2}{)}^{2}+(1-\frac{\sqrt{2}}{2}{)}^{2}+(1-\frac{\sqrt{2}}{2}{)}^{2}+(0-\frac{\sqrt{2}}{2}{)}^{2}=5-3\sqrt{2}$，
+    ∴C_{2}A⊥OA，${C}_{2}{A}^{2}=1$，${C}_{2}{B}_{1}^{2}+A{B}_{1}^{2}=(1-\frac{\sqrt{2}}{2}{)}^{2}+(1-\frac{\sqrt{2}}{2}{)}^{2}+(1-\frac{\sqrt{2}}{2}{)}^{2}+(0-\frac{\sqrt{2}}{2}{)}^{2}=5-3\sqrt{2}$，
 
-    ∴C2B1与AB1不垂直，即点C2（1，1）不是弦AB的“垂联点”；
+    ∴C_{2}B_{1}与AB_{1}不垂直，即点C_{2}（1，1）不是弦AB的“垂联点”；
 
     ∵点A（1，0），${B}_{1}(\frac{\sqrt{2}}{2}，\frac{\sqrt{2}}{2})$，${C}_{3}(2-\frac{\sqrt{2}}{2}，\frac{3\sqrt{2}}{2}-2)$，
 
@@ -1178,23 +1174,23 @@ questions:
 
     ∵${C}_{3}{O}^{2}={C}_{3}{B}_{1}^{2}+O{B}_{1}^{2}$，
 
-    ∴C3B1⊥OB1，OB1是⊙O的半径，
+    ∴C_{3}B_{1}⊥OB_{1}，OB_{1}是⊙O的半径，
 
-    ∴C3B1是⊙O的切线，
+    ∴C_{3}B_{1}是⊙O的切线，
 
     ∴${C}_{3}{B}_{1}^{2}=(2-\frac{\sqrt{2}}{2}-\frac{\sqrt{2}}{2}{)}^{2}+(\frac{3}{2}\sqrt{2}-2-\frac{\sqrt{2}}{2}{)}^{2}=12-8\sqrt{2}$，${C}_{3}{A}^{2}+A{B}_{1}^{2}=(2-\frac{\sqrt{2}}{2}-1{)}^{2}+(\frac{3\sqrt{2}}{2}-2{)}^{2}+(1-\frac{\sqrt{2}}{2}{)}^{2}+(0-\frac{\sqrt{2}}{2}{)}^{2}=12-8\sqrt{2}$，
 
     ∴${C}_{3}{B}_{1}^{2}={C}_{3}{A}^{2}+A{B}_{1}^{2}$，
 
-    ∴C3A⊥AB1，即点${C}_{3}(2-\frac{\sqrt{2}}{2}，\frac{3\sqrt{2}}{2}-2)$是弦AB的“垂联点”；
+    ∴C_{3}A⊥AB_{1}，即点${C}_{3}(2-\frac{\sqrt{2}}{2}，\frac{3\sqrt{2}}{2}-2)$是弦AB的“垂联点”；
 
-    故答案为：C1，C3；
+    故答案为：C_{1}，C_{3}；
 
-    ②∵点A（1，0），${B}_{2}(\frac{1}{2}，\frac{\sqrt{3}}{2})$，点C为弦AB2的“垂联点”，
+    ②∵点A（1，0），${B}_{2}(\frac{1}{2}，\frac{\sqrt{3}}{2})$，点C为弦AB_{2}的“垂联点”，
 
     设点C（a，b），分两种情况讨论：
 
-    第一种情况，当CA是⊙O的切线，CB2⊥AB2，
+    第一种情况，当CA是⊙O的切线，CB_{2}⊥AB_{2}，
 
     ∴a＝1，$C{A}^{2}=C{B}_{2}^{2}+A{B}_{2}^{2}$，
 
@@ -1206,7 +1202,7 @@ questions:
 
     ∴$OC=(1-0{)}^{2}+(\frac{2\sqrt{3}}{3}-0{)}^{2}=\frac{\sqrt{21}}{3}$；
 
-    第二种情况，当CB2是⊙O的切线，CA⊥AB2，
+    第二种情况，当CB_{2}是⊙O的切线，CA⊥AB_{2}，
 
     ∴$C{O}^{2}=C{B}_{2}^{2}+O{B}_{2}^{2}$，$C{B}_{2}^{2}=C{A}^{2}+A{B}_{2}^{2}$，
 
@@ -1232,7 +1228,7 @@ questions:
 
     ∴只考虑SP是⊙O的切线，SQ⊥PQ一种情况即可，
 
-    ∵S△QPT＝S△QPS，
+    ∵S_{△}_{QPT}＝S_{△}_{QPS}，
 
     ∴$\frac{1}{2}⋅ST⋅PQ=\frac{1}{2}$PS•PT，
 
@@ -1276,7 +1272,7 @@ questions:
 
     ∵∠MPT＝∠MQP＝90°，
 
-    ∴S△MPT＝S△MPT，
+    ∴S_{△}_{MPT}＝S_{△}_{MPT}，
 
     ∴$\frac{1}{2}⋅MT⋅PQ=\frac{1}{2}⋅PM⋅PT$，
 

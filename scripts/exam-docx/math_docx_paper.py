@@ -106,12 +106,33 @@ def _walk_paragraph(p: ET.Element, rels: dict[str, str],
         elif tag in ("hyperlink",):
             # 超链接：递归处理子 run
             out.append(_walk_paragraph(child, rels, extract_dir, figures_dir))
-    return "".join(out).strip()
+    text = "".join(out).strip()
+    # **源数据 sanitize**：出题人误输的 "▱△ABCD"（chaoyang Q20）— Cambria
+    # Math 字体 ▱ 与新宋体 △ 重复，实际语义只是 ▱。删 ▱ 后跟的 △
+    text = re.sub(r"▱△", "▱", text)
+    return text
 
 
 def _walk_run(r: ET.Element, rels: dict[str, str],
               extract_dir: Path, figures_dir: Path) -> str:
-    """w:r 内可能含 w:t 文字 / w:drawing 图片 / m:oMath 公式。按顺序拼。"""
+    """w:r 内可能含 w:t 文字 / w:drawing 图片 / m:oMath 公式。按顺序拼。
+
+    **关键**：检测 w:rPr/w:vertAlign 上下标标签。zxxk 数学 docx 里大量
+    "x²"、"10⁵"、"a²+b²" 不走 OMML 而是普通 run + vertAlign，必须包成
+    `^{...}` / `_{...}` 否则 LaTeX 渲染丢上下标（R1 audit Q6/Q8/Q10/Q12/
+    Q15/Q26 stem 全中招）。
+    """
+    # 先扫 rPr 探测上下标
+    vert_align = None
+    for child in r:
+        if _local(child.tag) == "rPr":
+            for sub in child:
+                if _local(sub.tag) == "vertAlign":
+                    val = sub.get(f"{{{W_NS}}}val") or sub.get("val")
+                    if val in ("superscript", "subscript"):
+                        vert_align = val
+            break  # rPr 必为首子
+
     out: list[str] = []
     for child in r:
         tag = _local(child.tag)
@@ -134,7 +155,11 @@ def _walk_run(r: ET.Element, rels: dict[str, str],
         elif tag == "oMath" and ns == f"{{{M_NS}":
             # inline 公式嵌在 w:r 内（Word docx 常见结构）
             out.append(omml_to_latex(child))
-    return "".join(out)
+    text = "".join(out)
+    if vert_align and text.strip():
+        sep = "^" if vert_align == "superscript" else "_"
+        text = f"{sep}{{{text}}}"
+    return text
 
 
 def _extract_image(drawing_el: ET.Element, rels: dict[str, str],
