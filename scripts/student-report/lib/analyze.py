@@ -134,6 +134,9 @@ _DATA_BLOCK = """# 本次考试客观数据
 # 模块掌握度（弱→强）
 {module_block}
 
+# 提分 ROI（按失分降序——补谁挽回最多分一目了然）
+{roi_block}
+
 # 难度维度
 {difficulty_block}
 
@@ -170,17 +173,25 @@ _PLAN_USER = _DATA_BLOCK + """
   ],
   "nextTarget": "下次目标分 + 一句话怎么达成"
 }}
-**硬性要求**：actionPlan 恰好 3 条按 ROI 排序；weekPlan 恰好 4 条（week 1-4）；
-drills 是【分号分隔的字符串】不是数组；所有字段填满不留空；不空话。"""
+**硬性要求**：actionPlan 恰好 3 条按【提分 ROI 块】的失分降序对应——
+第 1 条对准失分最多的模块，expectedGain 数字从 ROI 块"可挽回 X 分"直接取
+（可保守取 60-80%），why 必须**点名具体模块名 + 引用真实失分数字**而非空话；
+weekPlan 恰好 4 条（week 1-4）；drills 是【分号分隔的字符串】不是数组；
+所有字段填满不留空。"""
 
 
 def analyze_overall(*, stats_block: str, module_block: str,
                     difficulty_block: str, kp_block: str,
-                    per_q_block: str, cache_key: str | None = None) -> dict:
-    """拆两次简单调用（诊断 + 计划），各自结构浅，规避深嵌套 JSON 漂移。"""
+                    per_q_block: str, roi_block: str = "（无）",
+                    cache_key: str | None = None) -> dict:
+    """拆两次简单调用（诊断 + 计划），各自结构浅，规避深嵌套 JSON 漂移。
+
+    roi_block：按失分降序的模块 ROI（含"补 X 模块可挽回 Y 分"硬数字），
+    用于让 actionPlan 引用具体数字而非空话（P1.2 单科增强）。
+    """
     fmt = dict(stats_block=stats_block, module_block=module_block,
                difficulty_block=difficulty_block, kp_block=kp_block,
-               per_q_block=per_q_block)
+               per_q_block=per_q_block, roi_block=roi_block)
     diag = llm.chat_json(system=_OVERALL_SYS, user=_DIAG_USER.format(**fmt),
                          cache_key=f"{cache_key}-diag" if cache_key else None,
                          temperature=0.3, max_tokens=2048)

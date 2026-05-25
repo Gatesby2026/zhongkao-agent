@@ -146,12 +146,32 @@ def _img_b64(path: Path, max_dim: int = 2000) -> str:
     return f"data:image/jpeg;base64,{base64.b64encode(buf.getvalue()).decode()}"
 
 
-def read_and_grade(stem: str, std_answer: str, solution: str,
-                    full_score: int, qtype: str,
-                    image_path: Path, *,
-                    client=None, model: str = "qwen-vl-max") -> dict:
-    """方案 B：大模型直接看图。"""
-    client = client or _client()
+_ESSAY_TYPE_KEYWORDS = ("作文", "essay", "composition", "写作")
+
+
+def _is_essay(qtype: str) -> bool:
+    if not qtype:
+        return False
+    low = qtype.lower()
+    return any(k in low or k in qtype for k in _ESSAY_TYPE_KEYWORDS)
+
+
+def _full_score_fallback(full_score: int, why: str) -> dict:
+    """作文/写作类 AI 评分失败 → 按满分占位，标待老师小分校准。
+    （口径：能评则评，不能评按满分计——不蒙数也不让总分被作文压低）"""
+    return {
+        "correctedText": "",
+        "matchedPoints": [],
+        "missedPoints": [],
+        "suggestedScore": full_score,
+        "scoreReason": f"作文 AI 暂未稳定评分（{why}），按满分占位等老师小分校准",
+        "needsTeacherReview": True,
+        "_essayFullFallback": True,
+    }
+
+
+def _call_grade_b(stem, std_answer, solution, full_score, qtype,
+                  image_path, client, model) -> dict:
     prompt = PROMPT_B.format(
         qtype=qtype, full_score=full_score, stem=stem[:600],
         answer=std_answer[:600], solution=(solution or "—")[:800],
@@ -170,6 +190,40 @@ def read_and_grade(stem: str, std_answer: str, solution: str,
     raw = resp.choices[0].message.content.strip()
     raw = re.sub(r"^```(?:json)?\s*|\s*```$", "", raw, flags=re.S).strip()
     return json.loads(raw)
+
+
+def read_and_grade(stem: str, std_answer: str, solution: str,
+                    full_score: int, qtype: str,
+                    image_path: Path, *,
+                    client=None, model: str = "qwen-vl-max") -> dict:
+    """方案 B：大模型直接看图。
+
+    作文/写作类（is_essay）走"能评则评，不能评按满分计"兜底：
+      - 模型抛错 / 返回不可解析 / suggestedScore 缺失或越界 → 满分占位 +
+        needsTeacherReview=True（口径见 _full_score_fallback）
+    非作文：按原行为（异常向上抛，由调用方处理）。
+    """
+    client = client or _client()
+    essay = _is_essay(qtype)
+    try:
+        r = _call_grade_b(stem, std_answer, solution, full_score, qtype,
+                          image_path, client, model)
+    except Exception as e:
+        if essay:
+            return _full_score_fallback(full_score, f"{type(e).__name__}")
+        raise
+
+    if essay:
+        sc = r.get("suggestedScore") if isinstance(r, dict) else None
+        try:
+            sc_f = float(sc)
+        except (TypeError, ValueError):
+            return _full_score_fallback(full_score, "返回无 suggestedScore")
+        if not (0 <= sc_f <= float(full_score)):
+            return _full_score_fallback(full_score, "返回分数越界")
+        # 作文 AI 能给出有效分 → 采用，但仍标 needsTeacherReview=True
+        r["needsTeacherReview"] = True
+    return r
 
 
 # ─── 加载试卷 yaml ───────────────────────────────────────────────────────────

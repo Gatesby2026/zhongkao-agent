@@ -17,6 +17,8 @@ from pathlib import Path
 
 import yaml
 
+from . import subject_profile
+
 
 # module 英文 → 中文（物理；其它学科按需扩展）
 MODULE_CN = {
@@ -154,7 +156,8 @@ def load_exam_view(kb_yaml: Path, student_dir: Path) -> ExamView:
             std_answer=str(q.get("answer", "")),
             solution=q.get("solution", "") or "",
             knowledge_points=q.get("knowledge_points") or [],
-            module=module, module_cn=MODULE_CN.get(module, module or "其它"),
+            module=module,
+            module_cn=subject_profile.module_cn(subject, module),
             difficulty=q.get("difficulty", ""), figure=q.get("figure"),
             student_filled=("".join(filled) if isinstance(filled, list) else filled),
             student_ocr_seen=a.get("ocrSeen"),

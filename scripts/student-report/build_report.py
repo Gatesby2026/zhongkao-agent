@@ -391,6 +391,7 @@ def build(student_dir: Path, standard: Path | None, skip_pdf: bool) -> Path:
     # 整卷综合
     print(f"\n🧠 整卷综合诊断 ...")
     mods = agg.module_mastery(exam)
+    rois = agg.module_roi(exam)
     diffs = agg.difficulty_breakdown(exam)
     kps = agg.lost_knowledge_points(exam)
     st = agg.overall_stats(exam)
@@ -403,6 +404,11 @@ def build(student_dir: Path, standard: Path | None, skip_pdf: bool) -> Path:
         f"- {m['module_cn']}：{m['scored']}/{m['full']}"
         f"（{m['rate']*100:.0f}%）失分题 {'、'.join(m['lost_qs']) or '无'}"
         for m in mods)
+    # 提分 ROI 排序（按失分降序）—— 给 actionPlan 量化"补哪个模块挽回多少分"
+    roi_block = "\n".join(
+        f"- {r['module_cn']}：失 {r['lost']} 分（满分 {r['full']}，{r['n_questions']} 题，"
+        f"得分率 {r['rate']*100:.0f}%）—— 补此模块预估可挽回最多 {r['lost']} 分"
+        for r in rois if r['lost'] > 0) or "（无可挽回失分）"
     difficulty_block = "\n".join(
         f"- {d['difficulty']}：{d['n']} 题，得分率 {d['rate']*100:.0f}%，"
         f"失分 {'、'.join(d['lost_qs']) or '无'}" for d in diffs)
@@ -418,7 +424,8 @@ def build(student_dir: Path, standard: Path | None, skip_pdf: bool) -> Path:
     overall = analyze.analyze_overall(
         stats_block=stats_block, module_block=module_block,
         difficulty_block=difficulty_block, kp_block=kp_block,
-        per_q_block=per_q_block, cache_key=f"{cache_prefix}-overall")
+        per_q_block=per_q_block, roi_block=roi_block,
+        cache_key=f"{cache_prefix}-overall")
 
     # 渲染 + 输出
     md = render_markdown(exam, per_q, overall)

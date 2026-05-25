@@ -23,6 +23,14 @@ ROOT = Path(__file__).resolve().parents[1]
 SR_DIR = ROOT / "scripts" / "answer-card-ocr"
 
 CHOICE_TYPES = {"单选", "多选", "选择", "判断", "choice", "multi_choice"}
+_ESSAY_KEYWORDS = ("作文", "essay", "composition", "写作")
+
+
+def _is_essay(qtype: str) -> bool:
+    if not qtype:
+        return False
+    low = qtype.lower()
+    return any(k in low or k in qtype for k in _ESSAY_KEYWORDS)
 
 
 def _norm(s) -> str:
@@ -70,17 +78,26 @@ def auto_grade(student_dir: Path, yaml_path: Path) -> dict:
         else:
             # 复用 Phase C（detect_card 看图阅卷）已产出的 grade
             g = a.get("grade") or {}
-            sc = g.get("suggestedScore", 0)
+            sc = g.get("suggestedScore")
             try:
-                scored = max(0.0, min(full, float(sc)))
+                sc_f = float(sc)
+                sc_valid = 0 <= sc_f <= full
             except (TypeError, ValueError):
-                scored = 0.0
-            if not g:
-                reason = "Phase C 未产出评分（裁切/看图失败），记 0 待复核"
-                review = True
-            else:
+                sc_valid = False
+            if sc_valid:
+                scored = sc_f
                 reason = g.get("scoreReason", "")
                 review = bool(g.get("needsTeacherReview", True))
+            elif _is_essay(qtype):
+                # 作文兜底口径：能评则评，不能评按满分占位（不蒙数也不压低总分）
+                scored = full
+                reason = (g.get("scoreReason")
+                          or "作文 AI 未评分，按满分占位等老师小分校准")
+                review = True
+            else:
+                scored = 0.0
+                reason = "Phase C 未产出评分（裁切/看图失败），记 0 待复核"
+                review = True
         total += scored
         questions.append({
             "qId": f"Q{num}", "scored": _i(scored), "fullScore": _i(full),

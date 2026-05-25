@@ -37,6 +37,39 @@ def module_mastery(exam: ExamView) -> list[dict]:
     return out
 
 
+def module_roi(exam: ExamView) -> list[dict]:
+    """提分边际：按模块失分降序——失分多的模块就是提分性价比最高的。
+
+    [{"module_cn","lost","scored","full","rate","n_questions","lost_qs"}]
+    供 analyze.analyze_overall 作为硬数字事实输入，让 actionPlan 引用
+    "补 X 模块预估可挽回 Y 分"而不是空话。
+    """
+    agg: dict[str, dict] = defaultdict(
+        lambda: {"scored": 0.0, "full": 0, "lost": 0.0, "n": 0, "lost_qs": []})
+    for q in exam.questions:
+        m = q.module_cn
+        agg[m]["scored"] += q.scored
+        agg[m]["full"] += q.score
+        agg[m]["lost"] += q.lost
+        agg[m]["n"] += 1
+        if q.is_lost:
+            agg[m]["lost_qs"].append(q.qid)
+    out = []
+    for m, d in agg.items():
+        rate = d["scored"] / d["full"] if d["full"] else 0
+        out.append({
+            "module_cn": m,
+            "lost": round(d["lost"], 1),
+            "scored": round(d["scored"], 1),
+            "full": d["full"],
+            "rate": round(rate, 3),
+            "n_questions": d["n"],
+            "lost_qs": d["lost_qs"],
+        })
+    out.sort(key=lambda x: -x["lost"])
+    return out
+
+
 def difficulty_breakdown(exam: ExamView) -> list[dict]:
     """难度维度：基础/中等/能力 各档得分率。基础题失分最该优先补。"""
     order = {"基础": 0, "中等": 1, "能力": 2}
