@@ -317,6 +317,16 @@ _NOISE_LINE_PATTERNS = [
                r"(?:练习|考试|测试)\s*[\(（]?[一二三四五六\d]{0,3}[\)）]?\s*$"),
     re.compile(r"^\s*语文试卷\s*$"),
     re.compile(r"^\s*20\d{2}[.\-/]\d{1,2}\s*$"),
+    # ZXXK / 北京高考在线 / 京考一点通 等水印（二模 xicheng/chaoyang R1
+    # 12+ 题 stem/options/passage 都中招；行内任意位置出现都剥掉）
+    re.compile(r"www\.gaokzx\.com|gaokzx\.com|bjgkzx"),
+    re.compile(r"学科网\s*\(\s*www[^\)）]*\s*\)?|学科网"),
+    re.compile(r"菁优网"),
+    re.compile(r"北京高考(?:在线)?(?:\s*官方微信)?"),
+    re.compile(r"京考一点通(?:[\(（][^\)）]*[\)）])?"),
+    re.compile(r"考在线(?:com)?"),  # OCR 噪 chaoyang Q15 "考在线com"
+    re.compile(r"获取更多试题资料及排名分析信息。?"),
+    re.compile(r"关注[一-龥]+(?:官方)?微信[^\n]*"),
 ]
 
 
@@ -675,11 +685,18 @@ def _insert_blank_marker(stem: str) -> str:
 
 
 # 子部分标题（资料一/资料二/.../后记/(一)/(二)等）— stem / option 切到这里就截断
+# 二模新增：行程式 sub-header "第一站航天科技体验中心" / "结语致未来探索者"
+# 整行作为 sub-section 标题（xicheng-er Q2/Q3/Q4 P0 跨题 bug 根因）。
 _SUB_HEADER_BOUNDARY_RE = re.compile(
-    r"(?m)^\s*(?:资料[一二三四五]|后记|卷首语|卷尾语|前言|序言"
+    r"(?m)^\s*(?:"
+    r"资料[一二三四五]"
+    r"|后记|卷首语|卷尾语|前言|序言"
     r"|[\(（][一二三四五][\)）]"
     r"|材料[一二三四五]"
-    r"|[甲乙丙丁]\s*[、.])\s*$")
+    r"|第[一二三四五六七八九十]\s*(?:站|章|部分|节|篇|关|幕)[一-龥A-Za-z0-9（）\(\)]{0,30}"
+    r"|(?:结语|导语)[一-龥A-Za-z0-9（）\(\)]{0,30}"
+    r"|[甲乙丙丁]\s*[、.]"
+    r")\s*$")
 
 
 def _trim_at_sub_boundary(text: str) -> str:
