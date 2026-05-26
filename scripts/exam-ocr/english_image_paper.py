@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""english_paper — 北京中考英语试卷 PNG → final.json（v1 passage 二级模型）。
+"""english_image_paper — 北京中考英语试卷 PNG → final.json（v1 passage 二级模型）。
 
 与物理 v2 / 数学 v1 路线对偶；但因英语含「篇章共享题」（完形 1 篇 + 8 题、
 阅读理解 4 篇 × 4-5 题、阅读表达 1 篇 + 4 题），引入 **passages** 二级数据
@@ -21,7 +21,7 @@
 用法:
   TENCENT_OCR_SECRET_ID=... TENCENT_OCR_SECRET_KEY=... \\
   DASHSCOPE_API_KEY=... \\
-    python3 scripts/exam-ocr/english_paper.py \\
+    python3 scripts/exam-ocr/english_image_paper.py \\
       knowledge-original/<series>/<round>/<region>/english --subject english
 """
 from __future__ import annotations
@@ -206,13 +206,13 @@ def _crop_image_options(page_img: Path, out_dir: Path, prefix: str) -> dict[str,
     """
     api_key = os.environ.get("DASHSCOPE_API_KEY", "")
     if not api_key:
-        print(f"[english_paper] ⚠ 无 DASHSCOPE_API_KEY 环境变量，跳过图选项裁剪 "
+        print(f"[english_image_paper] ⚠ 无 DASHSCOPE_API_KEY 环境变量，跳过图选项裁剪 "
               f"（图配对题 Q 仍可正常输出，但 options 字段为空）", flush=True)
         return {}
     try:
         import openai
     except ImportError:
-        print(f"[english_paper] ⚠ pip install openai 后才能裁图选项", flush=True)
+        print(f"[english_image_paper] ⚠ pip install openai 后才能裁图选项", flush=True)
         return {}
 
     client = openai.OpenAI(api_key=api_key,
@@ -232,7 +232,7 @@ def _crop_image_options(page_img: Path, out_dir: Path, prefix: str) -> dict[str,
         raw = re.sub(r"^```(?:json)?\s*|\s*```$", "", raw, flags=re.S).strip()
         data = json.loads(raw)
     except Exception as e:
-        print(f"[english_paper] ⚠ qwen-vl 定位失败: {e}", flush=True)
+        print(f"[english_image_paper] ⚠ qwen-vl 定位失败: {e}", flush=True)
         return {}
 
     img = Image.open(page_img)
@@ -252,7 +252,7 @@ def _crop_image_options(page_img: Path, out_dir: Path, prefix: str) -> dict[str,
         x1 = max(0, min(W, x1)); x2 = max(0, min(W, x2))
         y1 = max(0, min(H, y1)); y2 = max(0, min(H, y2))
         if x1 >= x2 or y1 >= y2 or (x2 - x1) < W * 0.05 or (y2 - y1) < H * 0.05:
-            print(f"[english_paper] ⚠ {label} bbox 退化 ({x1},{y1},{x2},{y2})", flush=True)
+            print(f"[english_image_paper] ⚠ {label} bbox 退化 ({x1},{y1},{x2},{y2})", flush=True)
             continue
         parsed[label] = (x1, y1, x2, y2)
 
@@ -269,7 +269,7 @@ def _crop_image_options(page_img: Path, out_dir: Path, prefix: str) -> dict[str,
     # 中位数检查 (line above) 仍能剔出真的歪掉的 bbox
     for l, (x1,y1,x2,y2) in parsed.items():
         if (x2-x1) < W * 0.08 or (y2-y1) < H * 0.05:
-            print(f"[english_paper] ⚠ 选项{l} bbox {x2-x1}x{y2-y1} 过小，剔除", flush=True)
+            print(f"[english_image_paper] ⚠ 选项{l} bbox {x2-x1}x{y2-y1} 过小，剔除", flush=True)
             bad.add(l)
     for l in bad:
         parsed.pop(l, None)
@@ -278,7 +278,7 @@ def _crop_image_options(page_img: Path, out_dir: Path, prefix: str) -> dict[str,
     missing = sorted({"A","B","C","D"} - set(parsed.keys()))
     if missing and len(parsed) == 3:
         for l, b in parsed.items():
-            print(f"[english_paper]   已识别 {l}: x1={b[0]} y1={b[1]} x2={b[2]} y2={b[3]} "
+            print(f"[english_image_paper]   已识别 {l}: x1={b[0]} y1={b[1]} x2={b[2]} y2={b[3]} "
                   f"({b[2]-b[0]}x{b[3]-b[1]})", flush=True)
         widths = [x2-x1 for x1,y1,x2,y2 in parsed.values()]
         heights = [y2-y1 for x1,y1,x2,y2 in parsed.values()]
@@ -291,7 +291,7 @@ def _crop_image_options(page_img: Path, out_dir: Path, prefix: str) -> dict[str,
             return out
         cols = _merge([x1 for x1,_,_,_ in parsed.values()], w_med * 0.4)
         rows = _merge([y1 for _,y1,_,_ in parsed.values()], h_med * 0.4)
-        print(f"[english_paper]   布局推断: {len(cols)} 列 x {len(rows)} 行", flush=True)
+        print(f"[english_image_paper]   布局推断: {len(cols)} 列 x {len(rows)} 行", flush=True)
         guess = None
         if len(cols) == 2 and len(rows) == 2:
             # 2x2 grid 缺哪个角
@@ -320,7 +320,7 @@ def _crop_image_options(page_img: Path, out_dir: Path, prefix: str) -> dict[str,
             mostly_contiguous = all(abs(g) < W * 0.05 for g in gaps)
             spans_full_width = span > W * 0.75 or x_right > W * 0.85
             if (mostly_contiguous or spans_full_width):
-                print(f"[english_paper] 🔧 检测到 ABC 接邻、跨度 {span}px → "
+                print(f"[english_image_paper] 🔧 检测到 ABC 接邻、跨度 {span}px → "
                       f"判定为 1x4 误识别，重新四等分", flush=True)
                 each_w = span // 4
                 y1_top = sorted_bb[0][1][1]; y2_bot = sorted_bb[0][1][3]
@@ -330,7 +330,7 @@ def _crop_image_options(page_img: Path, out_dir: Path, prefix: str) -> dict[str,
                 max_h = int(each_w * 1.1)
                 if (y2_bot - y1_top) > max_h:
                     y2_bot = y1_top + max_h
-                    print(f"[english_paper]   高度裁短至 {max_h}px（防混入正文）",
+                    print(f"[english_image_paper]   高度裁短至 {max_h}px（防混入正文）",
                           flush=True)
                 for i, label in enumerate("ABCD"):
                     nx1 = x_left + i * each_w
@@ -353,14 +353,14 @@ def _crop_image_options(page_img: Path, out_dir: Path, prefix: str) -> dict[str,
         if guess:
             for m in missing:
                 parsed[m] = guess
-                print(f"[english_paper] 🔧 推断 {m}: {guess}", flush=True)
+                print(f"[english_image_paper] 🔧 推断 {m}: {guess}", flush=True)
                 break
 
     missing_after = sorted({"A","B","C","D"} - set(parsed.keys()))
     if missing_after:
         # 用 ⚠ 而非 ❌：缺图选项不阻断流水线（self-check 已豁免
         # has_image_options=True 题的 options 检查），只是裁图不完整
-        print(f"[english_paper] ⚠ 推断后仍缺选项 {missing_after}", flush=True)
+        print(f"[english_image_paper] ⚠ 推断后仍缺选项 {missing_after}", flush=True)
 
     # 落盘
     rel: dict[str, str] = {}
@@ -407,7 +407,7 @@ def _ocr_page_basic_supplement(img: Path, cache_dir: Path, force=False) -> str:
         txt = _ocr_page_single(img, cache, "GeneralBasicOCR", force)
         return _strip_footers(txt)
     except Exception as e:
-        print(f"[english_paper] ⚠ Basic 补 OCR fail ({img.name}): {e}", flush=True)
+        print(f"[english_image_paper] ⚠ Basic 补 OCR fail ({img.name}): {e}", flush=True)
         return ""
 
 
@@ -1455,7 +1455,7 @@ def _write_yaml(result: dict, src: Path, out_dir: Path) -> None:
                     "qc_note":   q.get("qc_note", ""),
                 }
         except Exception as e:
-            print(f"[english_paper] ⚠ 读旧 yaml 合并 qc_* 失败: {e}", flush=True)
+            print(f"[english_image_paper] ⚠ 读旧 yaml 合并 qc_* 失败: {e}", flush=True)
     for q in result["questions"]:
         n = q["number"]
         a = answers_by_num.get(n, {})
@@ -1522,7 +1522,7 @@ def _write_yaml(result: dict, src: Path, out_dir: Path) -> None:
     yaml_path.write_text(
         Y.safe_dump(data, allow_unicode=True, sort_keys=False, width=200),
         encoding="utf-8")
-    print(f"[english_paper] ✅ yaml {yaml_path}", flush=True)
+    print(f"[english_image_paper] ✅ yaml {yaml_path}", flush=True)
 
 
 def main():
@@ -1544,7 +1544,7 @@ def main():
     fj.write_text(json.dumps(result, ensure_ascii=False, indent=2),
                   encoding="utf-8")
     qs = result["questions"]; ans = result["answers"]
-    print(f"[english_paper] ✅ {fj}", flush=True)
+    print(f"[english_image_paper] ✅ {fj}", flush=True)
     print(f"   题号: {sorted(set(q['number'] for q in qs))}", flush=True)
     print(f"   passages: {len(result['passages'])}  questions: {len(qs)}  "
           f"answers: {len(ans)}  full_score: {result['full_score']}", flush=True)

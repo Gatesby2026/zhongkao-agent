@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""chinese_paper — 北京中考语文试卷 PNG → final.json（v1 路线）。
+"""chinese_image_paper — 北京中考语文试卷 PNG → final.json（v1 路线）。
 
 学英语路线（dual-OCR + 5 层防御）+ 语文特化：
   - 5 大题：基础运用 / 古诗文 / 名著 / 现代文 / 作文
@@ -20,7 +20,7 @@
 
 用法:
   TENCENT_OCR_SECRET_ID=... TENCENT_OCR_SECRET_KEY=... \\
-    python3 scripts/exam-ocr/chinese_paper.py \\
+    python3 scripts/exam-ocr/chinese_image_paper.py \\
       knowledge-original/<series>/<round>/<region>/chinese --subject chinese
 """
 from __future__ import annotations
@@ -134,7 +134,7 @@ def _detect_figure_bbox_on_page(page_img: Path, hint: str = "") -> tuple[float,f
     """qwen-vl-max 定位页上的图表 bbox 百分比。返回 (x1,y1,x2,y2) 或 None。"""
     api_key = os.environ.get("DASHSCOPE_API_KEY", "")
     if not api_key:
-        print(f"[chinese_paper] ⚠ 无 DASHSCOPE_API_KEY，跳过自动图裁剪", flush=True)
+        print(f"[chinese_image_paper] ⚠ 无 DASHSCOPE_API_KEY，跳过自动图裁剪", flush=True)
         return None
     try:
         import openai
@@ -163,7 +163,7 @@ def _detect_figure_bbox_on_page(page_img: Path, hint: str = "") -> tuple[float,f
         return (float(bbox["x1"]), float(bbox["y1"]),
                 float(bbox["x2"]), float(bbox["y2"]))
     except Exception as e:
-        print(f"[chinese_paper] ⚠ qwen-vl 定位图失败 ({page_img.name}): {e}", flush=True)
+        print(f"[chinese_image_paper] ⚠ qwen-vl 定位图失败 ({page_img.name}): {e}", flush=True)
         return None
 
 
@@ -192,7 +192,7 @@ def _crop_figure_to_file(page_img: Path, bbox_pct: tuple, out_path: Path) -> boo
         ix2 = min(W, int(x2 * W))
         iy2 = min(H, int(y2 * H))
         if ix2 - ix1 < 50 or iy2 - iy1 < 50:
-            print(f"[chinese_paper]     bbox 退化: ({ix1},{iy1},{ix2},{iy2}) "
+            print(f"[chinese_image_paper]     bbox 退化: ({ix1},{iy1},{ix2},{iy2}) "
                   f"orig={bbox_pct} W={W} H={H}", flush=True)
             return False
         crop = img.crop((ix1, iy1, ix2, iy2))
@@ -200,7 +200,7 @@ def _crop_figure_to_file(page_img: Path, bbox_pct: tuple, out_path: Path) -> boo
         crop.save(out_path)
         return True
     except Exception as e:
-        print(f"[chinese_paper] ⚠ 裁图失败: {e}", flush=True)
+        print(f"[chinese_image_paper] ⚠ 裁图失败: {e}", flush=True)
         return False
 
 
@@ -232,41 +232,41 @@ def _auto_crop_figures_for_passages(passages: list, page_texts: list,
         pid = ps.get("id","?"); ptype = ps.get("type","?")
         # 跳过已有 figure 的（手工 patch 已配置）
         if ps.get("figure"):
-            print(f"[chinese_paper]   passage[{pid}] 已有 figure，跳过", flush=True)
+            print(f"[chinese_image_paper]   passage[{pid}] 已有 figure，跳过", flush=True)
             continue
         body = ps.get("body","") or ""
         # 触发条件：body 含"图1/2/.." 或 passage type 是 non_continuous
         if not (_has_figure_reference(body) or ptype == "non_continuous"):
-            print(f"[chinese_paper]   passage[{pid}] type={ptype} 无图引用 → skip", flush=True)
+            print(f"[chinese_image_paper]   passage[{pid}] type={ptype} 无图引用 → skip", flush=True)
             continue
-        print(f"[chinese_paper]   passage[{pid}] type={ptype} 触发裁图...", flush=True)
+        print(f"[chinese_image_paper]   passage[{pid}] type={ptype} 触发裁图...", flush=True)
         try:
             # 定位含此 passage 的页
             page = _find_page_for_passage(body, page_texts)
             if not page:
-                print(f"[chinese_paper]   passage[{pid}] 未找到对应页", flush=True)
+                print(f"[chinese_image_paper]   passage[{pid}] 未找到对应页", flush=True)
                 continue
-            print(f"[chinese_paper]     找到页: {page.name}", flush=True)
+            print(f"[chinese_image_paper]     找到页: {page.name}", flush=True)
             m = re.search(r"(图[1-5][^\n。]{0,30})", body)
             hint = m.group(1) if m else ""
-            print(f"[chinese_paper]     hint: {hint!r}, 调 qwen-vl...", flush=True)
+            print(f"[chinese_image_paper]     hint: {hint!r}, 调 qwen-vl...", flush=True)
             bbox = _detect_figure_bbox_on_page(page, hint)
             if not bbox:
-                print(f"[chinese_paper]   passage[{pid}] qwen 未返回有效 bbox",
+                print(f"[chinese_image_paper]   passage[{pid}] qwen 未返回有效 bbox",
                       flush=True)
                 continue
-            print(f"[chinese_paper]     qwen bbox: {bbox}", flush=True)
+            print(f"[chinese_image_paper]     qwen bbox: {bbox}", flush=True)
             out_path = figs_dir / f"passage-{pid}-figure.png"
             if _crop_figure_to_file(page, bbox, out_path):
                 ps["figure"] = f"{slug}/figures/passage-{pid}-figure.png"
                 n += 1
-                print(f"[chinese_paper]   🔧 自动裁图 passage[{pid}] from "
+                print(f"[chinese_image_paper]   🔧 自动裁图 passage[{pid}] from "
                       f"{page.name}, bbox={bbox}", flush=True)
             else:
-                print(f"[chinese_paper]   passage[{pid}] PIL 裁图失败", flush=True)
+                print(f"[chinese_image_paper]   passage[{pid}] PIL 裁图失败", flush=True)
         except Exception as e:
             import traceback
-            print(f"[chinese_paper]   passage[{pid}] 异常: {e}", flush=True)
+            print(f"[chinese_image_paper]   passage[{pid}] 异常: {e}", flush=True)
             traceback.print_exc()
     return n
 
@@ -295,7 +295,7 @@ def _ocr_page_basic_supplement(img: Path, cache_dir: Path, force=False) -> str:
         txt = _ocr_page_single(img, cache, "GeneralBasicOCR", force)
         return _strip_footers(txt)
     except Exception as e:
-        print(f"[chinese_paper] ⚠ Basic 补 OCR fail ({img.name}): {e}", flush=True)
+        print(f"[chinese_image_paper] ⚠ Basic 补 OCR fail ({img.name}): {e}", flush=True)
         return ""
 
 
@@ -957,7 +957,7 @@ def parse_paper(src: Path, out_dir: Path, force=False) -> dict:
         ans_heads = list(_ANSWER_HEAD_RE.finditer(full_text))
         if len(ans_heads) >= 3:
             answer_start = ans_heads[0].start()
-            print(f"[chinese_paper] ⚠ ANSWER_MARKER 未命中，"
+            print(f"[chinese_image_paper] ⚠ ANSWER_MARKER 未命中，"
                   f"fallback 用首个 N.答案 位置作为答案起点（共 {len(ans_heads)} 处）")
     if answer_start is not None:
         line_start = full_text.rfind("\n", 0, answer_start) + 1
@@ -1053,12 +1053,12 @@ def parse_paper(src: Path, out_dir: Path, force=False) -> dict:
 
     # 5. **自动图表裁剪**（对 non_continuous / 含"图N"的 passage）
     slug = out_dir.name
-    print(f"[chinese_paper] 🔍 auto_crop scan: {len(passages)} passages", flush=True)
+    print(f"[chinese_image_paper] 🔍 auto_crop scan: {len(passages)} passages", flush=True)
     n_cropped = _auto_crop_figures_for_passages(passages, page_texts, out_dir, slug)
     if n_cropped:
-        print(f"[chinese_paper] ✅ 自动裁出 {n_cropped} 张 passage 图表", flush=True)
+        print(f"[chinese_image_paper] ✅ 自动裁出 {n_cropped} 张 passage 图表", flush=True)
     else:
-        print(f"[chinese_paper]   （未触发自动裁图）", flush=True)
+        print(f"[chinese_image_paper]   （未触发自动裁图）", flush=True)
 
     result = {
         "subject": "chinese",
@@ -1290,7 +1290,7 @@ def _write_yaml(result: dict, src: Path, out_dir: Path) -> None:
                     "qc_note":   q.get("qc_note", ""),
                 }
         except Exception as e:
-            print(f"[chinese_paper] ⚠ 读旧 yaml 合并 qc_* 失败: {e}", flush=True)
+            print(f"[chinese_image_paper] ⚠ 读旧 yaml 合并 qc_* 失败: {e}", flush=True)
 
     yaml_questions = []
     for q in result["questions"]:
@@ -1332,10 +1332,10 @@ def _write_yaml(result: dict, src: Path, out_dir: Path) -> None:
             patches = Y.safe_load(patch_path.read_text(encoding="utf-8")) or {}
             applied = _apply_patches(patches, result, yaml_questions)
             if applied:
-                print(f"[chinese_paper] 🔧 应用 {applied} 处人工 patch（{patch_path.name}）",
+                print(f"[chinese_image_paper] 🔧 应用 {applied} 处人工 patch（{patch_path.name}）",
                       flush=True)
         except Exception as e:
-            print(f"[chinese_paper] ⚠ 加载 patch 失败: {e}", flush=True)
+            print(f"[chinese_image_paper] ⚠ 加载 patch 失败: {e}", flush=True)
 
     data = {
         "year": year,
@@ -1350,7 +1350,7 @@ def _write_yaml(result: dict, src: Path, out_dir: Path) -> None:
     yaml_path.write_text(
         Y.safe_dump(data, allow_unicode=True, sort_keys=False, width=200),
         encoding="utf-8")
-    print(f"[chinese_paper] ✅ yaml {yaml_path}", flush=True)
+    print(f"[chinese_image_paper] ✅ yaml {yaml_path}", flush=True)
 
 
 def main():
@@ -1379,14 +1379,14 @@ def main():
             patches = Y.safe_load(patch_path.read_text(encoding="utf-8")) or {}
             applied = _apply_patches_to_result(patches, result)
             if applied:
-                print(f"[chinese_paper] 🔧 final.json 应用 {applied} 处 patch", flush=True)
+                print(f"[chinese_image_paper] 🔧 final.json 应用 {applied} 处 patch", flush=True)
     except Exception as e:
-        print(f"[chinese_paper] ⚠ patch 进 final.json 失败: {e}", flush=True)
+        print(f"[chinese_image_paper] ⚠ patch 进 final.json 失败: {e}", flush=True)
     fj = structured / "final.json"
     fj.write_text(json.dumps(result, ensure_ascii=False, indent=2),
                   encoding="utf-8")
     qs = result["questions"]
-    print(f"[chinese_paper] ✅ {fj}", flush=True)
+    print(f"[chinese_image_paper] ✅ {fj}", flush=True)
     print(f"   题号: {sorted(q['number'] for q in qs)}", flush=True)
     print(f"   passages: {len(result['passages'])}  questions: {len(qs)}  "
           f"answers: {len(result['answers'])}  full_score: {result['full_score']}",

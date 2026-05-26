@@ -711,7 +711,7 @@ def _write_yaml(result: dict, out_path: Path,
                     for m in re.finditer(r"!\[\]\(figures/([^)]+)\)", str(v)):
                         all_rel.add(f"figures/{m.group(1)}")
         # passage figure / image_options（语文非连续文本 / 英语 A 篇 image-match）
-        # chinese_paper.py 写入时已含 slug 前缀（"2026-xxx-yi/figures/yyy.png"），
+        # chinese_image_paper.py 写入时已含 slug 前缀（"2026-xxx-yi/figures/yyy.png"），
         # 其他来源可能只有 "figures/yyy.png"。规范化为相对 paper_dir 的 figures/yyy.png
         def _norm_figure_rel(fig_str: str) -> str:
             if fig_str.startswith(f"{exam_slug}/figures/"):
@@ -731,7 +731,7 @@ def _write_yaml(result: dict, out_path: Path,
         for fig_rel in sorted(all_rel):
             src = paper_dir / fig_rel
             dst = fig_dest_base / fig_rel
-            # 若 dst 已存在（chinese_paper.py 直接写 mock 路径，paper_dir 不必有 src）→ skip
+            # 若 dst 已存在（chinese_image_paper.py 直接写 mock 路径，paper_dir 不必有 src）→ skip
             if dst.exists() and not src.exists():
                 continue
             if not src.exists():
