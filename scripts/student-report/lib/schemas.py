@@ -213,5 +213,12 @@ def load_exam_view(kb_yaml: Path, student_dir: Path) -> ExamView:
             "align_block_shared_qids": align_block_qids,    # 按比例分摊
             "align_miss_qids": align_miss_qids,             # 对齐失败按满分占位
             "assumed_full_qids": assumed_full_qids,         # xlsx 未列出按满分占位
+            # 答题卡侧识别覆盖（P0.1+P0.2，来自 answer-card.json._data_quality）
+            "card_missing_choice_qids":
+                (ac.get("_data_quality") or {}).get("missing_choice_qids") or [],
+            "card_missing_subjective_qids":
+                (ac.get("_data_quality") or {}).get("missing_subjective_qids") or [],
+            "card_skipped_non_card_pages":
+                (ac.get("_data_quality") or {}).get("skipped_non_card_pages") or [],
         },
     )

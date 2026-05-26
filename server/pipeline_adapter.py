@@ -182,6 +182,28 @@ def _summarize_data_quality(exam) -> dict:
     """
     dq = getattr(exam, "data_quality", {}) or {}
     notices: list[str] = []
+    # ── 答题卡侧（P0.4 扩展）──
+    miss_choice = dq.get("card_missing_choice_qids") or []
+    miss_subj = dq.get("card_missing_subjective_qids") or []
+    skipped_pages = dq.get("card_skipped_non_card_pages") or []
+    if miss_choice:
+        qs = "、".join(miss_choice[:8])
+        more = " 等" if len(miss_choice) > 8 else ""
+        notices.append(
+            f"⚠ 答题卡未识别到 {len(miss_choice)} 道选择题的涂卡"
+            f"（{qs}{more}），这些题按「未作答」记 0 分；"
+            "若孩子实际有作答，请重传更清晰的照片")
+    if miss_subj:
+        qs = "、".join(miss_subj[:6])
+        more = " 等" if len(miss_subj) > 6 else ""
+        notices.append(
+            f"⚠ 答题卡未识别到 {len(miss_subj)} 道主观题作答区"
+            f"（{qs}{more}），可能是该页缺拍或字迹太糊")
+    if skipped_pages:
+        notices.append(
+            f"ℹ 上传的 {len(skipped_pages)} 张图被判定为非答题卡内容已忽略"
+            f"（第 {'、'.join(str(i) for i in skipped_pages)} 张）")
+    # ── 小分表侧（原有）──
     n_assumed = len(dq.get("assumed_full_qids") or [])
     n_block = len(dq.get("align_block_shared_qids") or [])
     n_miss = len(dq.get("align_miss_qids") or [])
@@ -206,6 +228,9 @@ def _summarize_data_quality(exam) -> dict:
         "assumed_full_qids": dq.get("assumed_full_qids") or [],
         "align_block_shared_qids": dq.get("align_block_shared_qids") or [],
         "align_miss_qids": dq.get("align_miss_qids") or [],
+        "card_missing_choice_qids": miss_choice,
+        "card_missing_subjective_qids": miss_subj,
+        "card_skipped_non_card_pages": skipped_pages,
     }
 
 

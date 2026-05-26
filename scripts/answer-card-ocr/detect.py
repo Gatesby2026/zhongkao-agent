@@ -175,6 +175,9 @@ class CardDetectionResult:
     answers: list[dict]
     raw_ocr_lines: list[str]
     matched_questions: int
+    # 检测覆盖追踪（用于报告 data_quality.answer_card_missing_qids）
+    choice_qids_parsed: list[int] = None      # Phase A 真正识别到的 qids
+    subjective_qids_cropped: list[int] = None  # Phase B 真正裁切到的 qids
 
 
 def detect_card(
@@ -233,6 +236,10 @@ def detect_card(
             "ocrSeen": seen,
         })
 
+    # Phase A 识别到的选择题 qids（用于报告 missing 追踪）
+    choice_qids_parsed = sorted(choices_map.keys())
+    subjective_qids_cropped: list[int] = []
+
     # 主观题区裁切 + 手写 OCR（如果传入了 subjective_qnums）
     if subjective_qnums:
         pd = photos_dir or image_paths[0].parent
@@ -243,6 +250,7 @@ def detect_card(
             print(f"\n  🖼️  裁切主观题作答区（共 {len(subjective_qnums)} 题）...",
                   file=sys.stderr)
             crop_result = crop_subjective(image_paths, subjective_qnums, cropped_dir)
+            subjective_qids_cropped = sorted(crop_result.keys())
 
             # 对每张裁切好的图调讯飞手写识别（并发）
             print(f"\n  ✍️  讯飞手写 OCR 识别（并发）...", file=sys.stderr)
@@ -332,11 +340,22 @@ def detect_card(
             print(f"  ⚠️ 主观题流水线失败：{e}", file=sys.stderr)
             import traceback; traceback.print_exc(file=sys.stderr)
 
+        # P0.3 阈值：主观题裁切覆盖率过低（<30%）→ 让 _pipeline mark_failed
+        # 提示重传更清晰的主观题作答页（在 try/except 之外，绕过吞错）
+        if (len(subjective_qnums) >= 3
+                and len(subjective_qids_cropped) / len(subjective_qnums) < 0.30):
+            raise RuntimeError(
+                f"答题卡主观题作答区识别覆盖过低："
+                f"成功 {len(subjective_qids_cropped)}/{len(subjective_qnums)} 题"
+                "。请重新拍摄主观题作答页（光线均匀、整页入框、字迹清晰）")
+
     return CardDetectionResult(
         student={"name": student_name or "", "examId": student_id or ""},
         answers=answers,
         raw_ocr_lines=all_lines,
         matched_questions=len(choices_map),
+        choice_qids_parsed=choice_qids_parsed,
+        subjective_qids_cropped=subjective_qids_cropped,
     )
 
 

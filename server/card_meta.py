@@ -53,19 +53,30 @@ _PROMPT = """这是一名学生的中考模拟考试**答题卡**照片（可能
   "subjective_regions": 0,
   "missing": [],
   "pages_complete": true/false,
-  "completeness_note": "一句话总评"
+  "completeness_note": "一句话总评",
+  "per_page": [
+    {"i": 1, "is_answer_card": true, "role": "header"},
+    {"i": 2, "is_answer_card": true, "role": "choice"},
+    {"i": 3, "is_answer_card": false, "role": "other"}
+  ]
 }
 
 字段判定要求：
-- is_answer_card：这组图是否确为「学生作答的答题卡」。若是空白答题卡、
-  试卷题目页、标准答案、课本、随手拍的无关照片 → false。
-- has_header：是否含「考生须知页」（顶部印有考试名称标题行的那页）。
-- has_choice_grid：是否能看到选择题填涂区（成排的 A B C D 涂卡）。
-- subjective_regions：数一数能看到多少个**主观题学生作答方框/作答区**
-  （粉/黑框内含题号与学生手写的那种），给整数；看不到填 0。
-- missing：缺失项数组，元素用简短中文，如 "选择题填涂页"、"主观题作答页"、
+- is_answer_card（整组）：这组图整体是否构成「学生作答的答题卡」。
+  若没有任何一页是答题卡 → false。混拍场景（部分页是答题卡部分页是
+  无关图）→ true（依靠 per_page 逐张剔除）。
+- has_header：组内任一页含「考生须知页」（顶部印有考试名称标题行）。
+- has_choice_grid：组内任一页能看到选择题填涂区（A B C D 涂卡）。
+- subjective_regions：整组数一数主观题学生作答方框总数（粉/黑框内
+  含题号与学生手写），整数；看不到填 0。
+- missing：缺失项数组，简短中文如 "选择题填涂页"/"主观题作答页"/
   "考生须知表头页"；都齐全则空数组 []。
-- completeness_note：是否含表头/选择区/主观区，有无缺页/模糊/反光/拍歪，一句话。"""
+- per_page：**逐张照片**返回 {i: 第几张(1-based), is_answer_card: 是否答题卡页,
+  role: "header"|"choice"|"subjective"|"mixed"|"other"}。
+  - is_answer_card=false 的页会被剔除不参与后续 OCR
+  - role=other 表示非答题卡内容（随手拍 / 截图 / 课本等）
+  - 实在不确定就标 is_answer_card=true role=mixed（宁过勿杀）
+- completeness_note：一句话总评（含表头/选择区/主观区/明显缺页或模糊）。"""
 
 
 def _data_url(p: Path) -> str:
@@ -115,6 +126,22 @@ def extract_card_meta(image_paths: list[Path], max_imgs: int = 6) -> dict:
     data["missing"] = [str(x).strip() for x in ms] if isinstance(ms, list) else []
     data.setdefault("pages_complete", False)
     data["pages_complete"] = bool(data.get("pages_complete"))
+    # 规整：per_page 逐张判定
+    pp_raw = data.get("per_page")
+    per_page: list[dict] = []
+    if isinstance(pp_raw, list):
+        for item in pp_raw:
+            if not isinstance(item, dict): continue
+            try: i = int(item.get("i") or 0)
+            except (TypeError, ValueError): continue
+            if i <= 0: continue
+            is_card = item.get("is_answer_card")
+            per_page.append({
+                "i": i,
+                "is_answer_card": is_card if isinstance(is_card, bool) else True,
+                "role": str(item.get("role") or "mixed").strip(),
+            })
+    data["per_page"] = per_page
     return data
 
 

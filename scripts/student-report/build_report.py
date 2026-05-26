@@ -99,9 +99,30 @@ def render_markdown(exam: ExamView, per_q: dict[int, dict],
       f"{st['full_score']}**（得分率 {st['rate']*100:.0f}%）"
       f"　|　失分 {st['lost_total']} 分，{st['n_lost']} 题\n")
 
-    # 数据质量提示条（小分表缺数据 / 对齐失败 / 解析警告 → 报告顶部告知）
+    # 数据质量提示条（小分表 + 答题卡识别缺失 → 报告顶部告知）
     dq = getattr(exam, "data_quality", {}) or {}
     notices = []
+    # ── 答题卡侧（P0.4）──
+    miss_choice = dq.get("card_missing_choice_qids") or []
+    miss_subj = dq.get("card_missing_subjective_qids") or []
+    skipped_pages = dq.get("card_skipped_non_card_pages") or []
+    if miss_choice:
+        qs = "、".join(miss_choice[:6])
+        more = " 等" if len(miss_choice) > 6 else ""
+        notices.append(
+            f"答题卡未识别到 {len(miss_choice)} 道选择题涂卡（{qs}{more}），"
+            "按未作答记 0 分；若实际有作答，请重传更清晰照片")
+    if miss_subj:
+        qs = "、".join(miss_subj[:4])
+        more = " 等" if len(miss_subj) > 4 else ""
+        notices.append(
+            f"答题卡未识别到 {len(miss_subj)} 道主观题作答区（{qs}{more}），"
+            "可能该页缺拍或字迹太糊")
+    if skipped_pages:
+        notices.append(
+            f"上传的 {len(skipped_pages)} 张图被判为非答题卡内容已忽略"
+            f"（第 {'、'.join(str(i) for i in skipped_pages)} 张）")
+    # ── 小分表侧 ──
     n_assumed = len(dq.get("assumed_full_qids") or [])
     n_block = len(dq.get("align_block_shared_qids") or [])
     n_miss = len(dq.get("align_miss_qids") or [])

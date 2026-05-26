@@ -63,6 +63,36 @@ def _kb_expected(yaml_path: Path) -> dict:
     return {"choice": choice, "subjective": len(qs) - choice}
 
 
+def _kb_choice_qnums(yaml_path: Path) -> list[int]:
+    """KB 试卷中选择题的题号（用于 Phase A 漏识别交叉核对）。"""
+    import re as _re
+    import yaml as _yaml
+    d = _yaml.safe_load(yaml_path.read_text(encoding="utf-8"))
+    out: list[int] = []
+    for q in d.get("questions", []):
+        if q.get("type") not in _CHOICE_TYPES:
+            continue
+        m = _re.search(r"\d+", str(q.get("id", "")))
+        if m:
+            out.append(int(m.group()))
+    return sorted(set(out))
+
+
+def _filter_answer_card_pages(imgs: list[Path], per_page: list[dict]) -> tuple[list[Path], list[int]]:
+    """按 card_meta.per_page 剔除 is_answer_card=False 的页（P1.1 / B-选 1）。
+
+    返回：(剔除后的图片列表, 被忽略的页 i 列表)
+    """
+    if not per_page:
+        return imgs, []
+    skip_idx = {p["i"] for p in per_page
+                if isinstance(p, dict) and p.get("is_answer_card") is False}
+    if not skip_idx:
+        return imgs, []
+    kept = [img for i, img in enumerate(imgs, 1) if i not in skip_idx]
+    return kept, sorted(skip_idx)
+
+
 def _imgs(photos_dir: Path) -> list[Path]:
     return sorted(
         p for p in photos_dir.iterdir()
@@ -199,9 +229,25 @@ def _pipeline(aid: str, student_dir: Path):
             if not yaml_path:
                 raise RuntimeError(f"找不到试卷标准答案：{student_dir.name}")
             subj_qnums = _subjective_qnums(Path(yaml_path))
+            choice_qnums = _kb_choice_qnums(Path(yaml_path))
+
+            # P1.1：按 card_meta.per_page 剔除"非答题卡页"（混拍场景）
+            detected_raw = db.get_analysis(aid).get("detected") or "{}"
+            try:
+                _det = json.loads(detected_raw)
+            except json.JSONDecodeError:
+                _det = {}
+            per_page = (_det.get("per_page") if isinstance(_det, dict) else None) or []
+            imgs_filtered, skipped_pages = _filter_answer_card_pages(imgs, per_page)
+            if not imgs_filtered:
+                raise RuntimeError("剔除非答题卡页后无有效图片，请重新上传")
+            if skipped_pages:
+                print(f"[_pipeline {aid}] 剔除非答题卡页：{skipped_pages}",
+                      flush=True)
+
             db.update_stage(aid, 2, "识别答题卡作答（选择题+主观题裁切）")
             res = detect.detect_card(
-                imgs, photos_dir=photos_dir,
+                imgs_filtered, photos_dir=photos_dir,
                 subjective_qnums=subj_qnums,
                 standard_yaml=Path(yaml_path))
 
@@ -214,10 +260,21 @@ def _pipeline(aid: str, student_dir: Path):
                 stu["name"] = known["name"]
             if known.get("examId") and not stu.get("examId"):
                 stu["examId"] = known["examId"]
+            # 计算答题卡识别覆盖（P0.1 + P0.2 缺失追踪）
+            choice_parsed = set(getattr(res, "choice_qids_parsed", []) or [])
+            subj_cropped = set(getattr(res, "subjective_qids_cropped", []) or [])
+            missing_choice = sorted(set(choice_qnums) - choice_parsed)
+            missing_subj = sorted(set(subj_qnums) - subj_cropped)
             (student_dir / "answer-card.json").write_text(
-                json.dumps({"student": stu or known,
-                            "answers": getattr(res, "answers", [])},
-                           ensure_ascii=False, indent=2), encoding="utf-8")
+                json.dumps({
+                    "student": stu or known,
+                    "answers": getattr(res, "answers", []),
+                    "_data_quality": {
+                        "missing_choice_qids": [f"Q{n}" for n in missing_choice],
+                        "missing_subjective_qids": [f"Q{n}" for n in missing_subj],
+                        "skipped_non_card_pages": skipped_pages,
+                    },
+                }, ensure_ascii=False, indent=2), encoding="utf-8")
 
             db.update_stage(aid, 3, "对照标准答案")
             _ensure_scores(aid, student_dir)

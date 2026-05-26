@@ -53,19 +53,30 @@ def health():
 
 # ---------- 1. 创建分析（上传答题卡）----------
 
+MAX_PHOTOS = 12         # 上传张数上限（P1.2 / C-选 2）
+MAX_PHOTO_BYTES = 15 * 1024 * 1024   # 单张原始字节上限 15MB
+
+
 @app.post("/api/analyses")
 async def create_analysis(files: list[UploadFile] = File(default=[])):
     aid = uuid.uuid4().hex[:12]
 
     if files:
+        if len(files) > MAX_PHOTOS:
+            raise HTTPException(
+                413, f"一次最多上传 {MAX_PHOTOS} 张照片（你传了 {len(files)} 张），请删减")
         sdir = WEB_STUDENTS / aid / REF_EXAM_SLUG
         photos = sdir / "answer-card-photos"
         photos.mkdir(parents=True, exist_ok=True)
         saved = 0
         bad = 0
+        oversize = 0
         for f in files:
             data = await f.read()
             if len(data) < 1024:
+                continue
+            if len(data) > MAX_PHOTO_BYTES:
+                oversize += 1
                 continue
             saved += 1
             # 关键：手机照片带 EXIF 方向，必须先按 EXIF 旋转到位、
@@ -78,9 +89,11 @@ async def create_analysis(files: list[UploadFile] = File(default=[])):
                 saved -= 1
                 bad += 1
         if saved == 0:
-            raise HTTPException(
-                400, "未收到有效答题卡图片"
-                + ("（图片解码失败，请用 JPG/PNG 重拍）" if bad else ""))
+            reasons = []
+            if bad: reasons.append("图片解码失败")
+            if oversize: reasons.append(f"{oversize} 张单张 >15MB")
+            tail = ("（" + "；".join(reasons) + "）") if reasons else ""
+            raise HTTPException(400, "未收到有效答题卡图片" + tail)
         db.create_analysis(aid, "（识别中）", REF_EXAM_SLUG, str(sdir))
         # 仅做检测（card_meta 读表头），不跑重流水线；前端轮询 /detect
         tasks.submit_detect(aid, sdir)
