@@ -122,8 +122,8 @@ def report_json(student_dir: Path) -> dict:
     mods = agg.module_mastery(exam)
     lost = agg.lost_questions(exam)
 
-    # v3：prompt 收紧（禁通用空话/禁偏题）+ max_tokens 6144 + LaTeX \[\]→$$
-    cache_prefix = f"report-v3-{exam.student_name}-{student_dir.name}"
+    # v4：fix_latex_escape 扩 \[<cmd>{...}]→\<cmd>{...} + max_tokens 8192
+    cache_prefix = f"report-v4-{exam.student_name}-{student_dir.name}"
 
     wrong = []
     for q in lost:

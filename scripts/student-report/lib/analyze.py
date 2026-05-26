@@ -109,7 +109,7 @@ def analyze_question(q: QView, *, cache_key: str | None = None) -> dict:
     )
     r = llm.chat_json(system=PER_Q_SYSTEM, user=user,
                       cache_key=cache_key, temperature=0.2,
-                      max_tokens=6144)        # 防 LaTeX 长 fix 被截断
+                      max_tokens=8192)        # 防 LaTeX 长 fix 被截断（数学 5+ 步证明题）
     return _normalize_per_q(r, q)
 
 

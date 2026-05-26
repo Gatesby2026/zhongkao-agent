@@ -356,7 +356,7 @@ def build(student_dir: Path, standard: Path | None, skip_pdf: bool) -> Path:
           f"{exam.total_scored}/{exam.full_score}，失分题 {len(lost)} 道")
 
     slug = student_dir.name
-    cache_prefix = f"report-v3-{exam.student_name}-{slug}"  # v3 同步 pipeline_adapter
+    cache_prefix = f"report-v4-{exam.student_name}-{slug}"  # v4 同步 pipeline_adapter
 
     # 逐题归因（并发 + .cache）
     print(f"\n🧠 逐失分题归因（{len(lost)} 题，并发）...")

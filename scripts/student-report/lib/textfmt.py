@@ -62,6 +62,11 @@ def fix_latex_escape(s: str) -> str:
     # 模式但不识别 `\[/\]`。审核员也常把它当未闭合公式 → 统一换 $$
     s = re.sub(r"\\\[(.+?)\\\]", r"$$\1$$", s, flags=re.S)
     s = re.sub(r"\${3,}", "$$", s)              # 折叠 LLM 把 \[\] 嵌套在 $...$ 造成的 $$$
+    # LLM 偶把 `\text{V}` 错写成 `\[text{V}]`（`\[` 替代 `\`、`]` 替代 `}`）。
+    # 命中白名单命令名才转，避免误伤真正的 display math `\[...\]`（上面已先处理）
+    cmd_alt = "|".join(_LATEX_CMDS_AFTER_QUOTE)
+    s = re.sub(r"\\\[(" + cmd_alt + r")\{([^{}]*)\}\]", r"\\\1{\2}", s)
+    s = re.sub(r"\\\[(" + cmd_alt + r")\]", r"\\\1", s)
     # `\(` `\)` 误用：还原成普通括号（同一原因，避免与 KaTeX 行内定界混淆）
     s = s.replace(r"\(", "(").replace(r"\)", ")")
     pat = r'"(' + "|".join(_LATEX_CMDS_AFTER_QUOTE) + r')(?=[\s{])'
