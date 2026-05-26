@@ -188,15 +188,16 @@ onMounted(async () => {
 function renderMath() {
   const fn = (window as any).renderMathInElement
   if (!fn) return
-  const root = document.querySelector('.scroll-area')
-  if (!root) return
-  fn(root, {
-    delimiters: [
-      { left: '$$', right: '$$', display: true },
-      { left: '$', right: '$', display: false },
-    ],
-    throwOnError: false,
-    ignoredClasses: ['no-math'],
+  // 多个 step 各有自己的 .scroll-area，全部扫一遍（含 step4 报告页的 .wrong-q）
+  document.querySelectorAll<HTMLElement>('.scroll-area').forEach(el => {
+    fn(el, {
+      delimiters: [
+        { left: '$$', right: '$$', display: true },
+        { left: '$', right: '$', display: false },
+      ],
+      throwOnError: false,
+      ignoredClasses: ['no-math'],
+    })
   })
 }
 watch(() => report.value, async () => {
