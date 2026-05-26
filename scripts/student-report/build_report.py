@@ -402,11 +402,29 @@ def build(student_dir: Path, standard: Path | None, skip_pdf: bool) -> Path:
     slug = student_dir.name
     cache_prefix = f"report-v4-{exam.student_name}-{slug}"  # v4 同步 pipeline_adapter
 
-    # 逐题归因（并发 + .cache）
+    # 逐题归因（并发 + .cache）；答题卡未识别的题跳过 LLM 给固定文案
     print(f"\n🧠 逐失分题归因（{len(lost)} 题，并发）...")
     per_q: dict[int, dict] = {}
+    miss_subj = set(exam.data_quality.get("card_missing_subjective_qids") or [])
+    miss_choice = set(exam.data_quality.get("card_missing_choice_qids") or [])
+
+    def _canned(q: QView) -> dict:
+        kind = "选择题" if q.is_choice else "主观题"
+        return {
+            "errorType": "答题卡未读到作答",
+            "whyWrong": [
+                f"系统未能从答题卡照片中读到本题的{kind}作答"
+                "（该页可能缺拍、字迹太糊或被遮挡）"],
+            "solveCorrectly": ["具体作答情况以试卷原卷和老师小分为准；"
+                                "若确实没作答，重点回顾该题考点；"
+                                "若有作答，可重传更清晰的照片重新识别"],
+            "keyInsight": [],
+            "comparisonTable": [],
+        }
 
     def _one(q: QView):
+        if q.qid in miss_subj or q.qid in miss_choice:
+            return q.num, _canned(q)
         return q.num, analyze.analyze_question(
             q, cache_key=f"{cache_prefix}-{q.qid}")
 

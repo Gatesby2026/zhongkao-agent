@@ -125,8 +125,35 @@ def report_json(student_dir: Path) -> dict:
     # v4：fix_latex_escape 扩 \[<cmd>{...}]→\<cmd>{...} + max_tokens 8192
     cache_prefix = f"report-v4-{exam.student_name}-{student_dir.name}"
 
+    # 答题卡未识别到这些题（Phase B 漏裁），不调 LLM 归因——避免出现
+    # "scored>0 + error_type=未作答" 这种自相矛盾。直接给固定文案。
+    miss_subj_qids = set(
+        getattr(exam, "data_quality", {}).get("card_missing_subjective_qids")
+        or [])
+    miss_choice_qids = set(
+        getattr(exam, "data_quality", {}).get("card_missing_choice_qids")
+        or [])
+
     wrong = []
     for q in lost:
+        if q.qid in miss_subj_qids or q.qid in miss_choice_qids:
+            kind = "选择题" if q.is_choice else "主观题"
+            wrong.append({
+                "qid": q.qid,
+                "type_cn": q.type_cn,
+                "module_cn": q.module_cn,
+                "lost": q.lost,
+                "score": q.score,
+                "knowledge_points": q.knowledge_points,
+                "error_type": "答题卡未读到作答",
+                "why_wrong": [
+                    f"系统未能从答题卡照片中读到本题的{kind}作答"
+                    "（可能是该页缺拍、字迹太糊或被遮挡）"],
+                "fix": ["具体作答情况以试卷原卷和老师小分为准；"
+                        "如确实没作答，重点回顾该题考点；"
+                        "如有作答，可重传更清晰的照片重新识别"],
+            })
+            continue
         per = analyze.analyze_question(q, cache_key=f"{cache_prefix}-{q.qid}")
         wrong.append({
             "qid": q.qid,
