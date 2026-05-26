@@ -29,14 +29,14 @@ const STAGES = [
   '生成知识点提分建议',
 ]
 
-// 方案 B：答题卡（上传+确认合并单页）→ 小分 → 分析 → 报告
-const stepperSteps = ['答题卡', '小分', '分析', '报告']
+// 极简 3 节点：答题卡（含上传/识别/确认/判分方式）→ 分析 → 报告
+// 判分方式（step2）属"答题卡"环节的最后一步（数据准备），不单列节点
+const stepperSteps = ['答题卡', '分析', '报告']
 const journeyStage = computed(() => {
   if (step.value === 0) return 0
-  if (step.value === 1) return 1             // 上传/识别/确认 同属"答题卡"单页
-  if (step.value === 2) return 2             // 小分/判分方式
-  if (step.value === 3) return 3             // 分析中
-  return 4                                    // step 4 报告
+  if (step.value === 1 || step.value === 2) return 1   // 答题卡 阶段含判分方式
+  if (step.value === 3) return 2                       // 分析中
+  return 3                                              // step 4 报告
 })
 function stepState(n: number) {
   const j = journeyStage.value
@@ -234,7 +234,7 @@ const wrongByNum = computed(() => {
       <div class="hdr-back" v-if="step>=1" @click="prev">‹</div>
       <div class="hdr-back" v-else style="visibility:hidden">‹</div>
       <div class="hdr-title">北京中考一模试卷学情分析</div>
-      <div class="hdr-right">{{ step===0 ? '' : (journeyStage>=4 ? '完成' : journeyStage + '/4') }}</div>
+      <div class="hdr-right">{{ step===0 ? '' : (journeyStage>=3 ? '完成' : journeyStage + '/3') }}</div>
     </div>
 
     <div class="stepper" v-show="step>=1">
@@ -242,7 +242,7 @@ const wrongByNum = computed(() => {
         <div class="step" :class="stepState(i+1)">
           <div class="dot"><span v-if="stepState(i+1)!=='done'">{{ i+1 }}</span></div>{{ nm }}
         </div>
-        <div v-if="i < 3" class="step-line" :class="{ done: i+1 < journeyStage }"></div>
+        <div v-if="i < 2" class="step-line" :class="{ done: i+1 < journeyStage }"></div>
       </template>
     </div>
 
@@ -267,20 +267,6 @@ const wrongByNum = computed(() => {
             stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
             <path d="M3.5 9A2 2 0 0 1 5.5 7h1.6l1.1-1.7h7.6L17 7h1.5a2 2 0 0 1 2 2v8.5a2 2 0 0 1-2 2h-13a2 2 0 0 1-2-2z"/>
             <circle cx="12" cy="13" r="3.1"/></svg></span>拍答题卡
-        </div>
-        <div class="flow-link"></div>
-        <div class="flow-item">
-          <span class="flow-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-            stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M7.5 3.5h6l4.5 4.5v11a1.6 1.6 0 0 1-1.6 1.6H7.5A1.6 1.6 0 0 1 5.9 19V5.1A1.6 1.6 0 0 1 7.5 3.5z"/>
-            <path d="M13.5 3.5V8h4.5"/><path d="M9 14.3l2 2 3.8-4"/></svg></span>确认考试
-        </div>
-        <div class="flow-link"></div>
-        <div class="flow-item">
-          <span class="flow-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-            stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="4" y="5" width="16" height="14" rx="2"/>
-            <path d="M4 10h16M10 5v14"/></svg></span>上传小分
         </div>
         <div class="flow-link"></div>
         <div class="flow-item">
