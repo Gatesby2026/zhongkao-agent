@@ -61,4 +61,17 @@ export const api = {
   },
   reportPdfUrl(id: string) { return `/api/analyses/${id}/report.pdf` },
   paperPdfUrl(id: string) { return `/api/analyses/${id}/paper.pdf` },
+  async coverage(): Promise<{
+    city: string;
+    total_papers: number;
+    subjects: Array<{
+      subject_cn: string; subject_en: string;
+      by_exam_type: Array<{
+        exam_type_cn: string; exam_type_en: string;
+        n_districts: number; districts: string[]; years: string[];
+      }>;
+    }>;
+  }> {
+    return j(await fetch('/api/coverage'))
+  },
 }

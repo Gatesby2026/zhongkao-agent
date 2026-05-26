@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed, onUnmounted } from 'vue'
+import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { api, type ReportResp } from './api'
 
 const step = ref(0)                       // 0 首屏 1 上传 2 小分 3 分析 4 报告
@@ -11,6 +11,8 @@ const photos = ref<File[]>([])
 const photoUrls = ref<string[]>([])
 const detected = ref<any>(null)
 const studentName = ref('')               // 确认页可纠正（OCR 偶错）
+const coverage = ref<any>(null)           // 已支持范围（按需加载）
+const coverageOpen = ref(false)           // 首页"支持范围"卡折叠状态
 const scoreMode = ref<'teacher'|'auto'>('auto')   // 默认无小分→自动判分
 const scoreFile = ref<File | null>(null)
 const scoreInfo = ref<string>('')
@@ -178,6 +180,9 @@ function startPolling() {
   tick()
   pollTimer = window.setInterval(tick, 2500)
 }
+onMounted(async () => {
+  try { coverage.value = await api.coverage() } catch {}
+})
 onUnmounted(() => clearInterval(pollTimer))
 
 const NEXT_LABEL = computed(() => {
@@ -230,11 +235,10 @@ const wrongByNum = computed(() => {
 
 <template>
 <div class="app-shell">
-    <div class="hdr">
-      <div class="hdr-back" v-if="step>=1" @click="prev">‹</div>
-      <div class="hdr-back" v-else style="visibility:hidden">‹</div>
-      <div class="hdr-title">北京中考一模试卷学情分析</div>
-      <div class="hdr-right">{{ step===0 ? '' : (journeyStage>=3 ? '完成' : journeyStage + '/3') }}</div>
+    <div class="hdr" v-if="step>=1">
+      <div class="hdr-back" @click="prev">‹</div>
+      <div class="hdr-title">北京中考一模&amp;二模学情分析</div>
+      <div class="hdr-right">{{ journeyStage>=3 ? '完成' : journeyStage + '/3' }}</div>
     </div>
 
     <div class="stepper" v-show="step>=1">
@@ -257,7 +261,7 @@ const wrongByNum = computed(() => {
             <path d="M9 16.5v-3M12 16.5v-5.5M15 16.5v-2"/>
           </svg>
         </div>
-        <div class="home-h1">中考一模学情分析</div>
+        <div class="home-h1">北京中考一模&amp;二模学情分析</div>
         <div class="home-sub">拍下孩子的答题卡，AI 自动还原失分点，<br>给出每道错题的原因与提分建议</div>
       </div>
 
@@ -282,6 +286,34 @@ const wrongByNum = computed(() => {
             <path d="M4.5 19.5h15"/><rect x="6.2" y="12" width="3" height="5.5" rx="0.7"/>
             <rect x="10.8" y="8" width="3" height="9.5" rx="0.7"/>
             <rect x="15.4" y="4.5" width="3" height="13" rx="0.7"/></svg></span>看报告
+        </div>
+      </div>
+
+      <!-- 已支持范围（折叠展开）-->
+      <div class="card coverage-card" v-if="coverage">
+        <div class="coverage-head" @click="coverageOpen = !coverageOpen">
+          <span class="coverage-icon">📋</span>
+          <span class="coverage-summary">
+            已支持 {{ coverage.city }} {{ coverage.total_papers }} 卷
+            <span class="coverage-mini">
+              ({{ coverage.subjects.length }} 科 ·
+              <template v-for="(s, i) in coverage.subjects" :key="s.subject_en"><template v-if="i>0">/</template>{{ s.subject_cn }}</template>)
+            </span>
+          </span>
+          <span class="coverage-toggle">{{ coverageOpen ? '收起 ▴' : '展开 ▾' }}</span>
+        </div>
+        <div v-if="coverageOpen" class="coverage-body">
+          <div v-for="s in coverage.subjects" :key="s.subject_en" class="cov-subject">
+            <div class="cov-subj-name">{{ s.subject_cn }}</div>
+            <div v-for="t in s.by_exam_type" :key="t.exam_type_en" class="cov-type">
+              <span class="cov-type-label">{{ t.exam_type_cn }}({{ t.n_districts }} 区):</span>
+              <span class="cov-districts">{{ t.districts.join(' ') }}</span>
+            </div>
+          </div>
+          <div class="cov-note">
+            <div>⚠ 二模/三模、外省、2026 年以外暂未支持(陆续上新)</div>
+            <div>ℹ 你的考试不在列表里也可以传——系统会识别考试名,不在范围内会明确告知</div>
+          </div>
         </div>
       </div>
 
@@ -786,6 +818,25 @@ const wrongByNum = computed(() => {
 .flow-ico svg { width:21px; height:21px; }
 .flow-link { flex:0 0 14px; height:2px; margin-top:18px;
   background:repeating-linear-gradient(90deg,#C7D9F5 0 4px,transparent 4px 7px); }
+.coverage-card { padding:10px 14px; }
+.coverage-head { display:flex; align-items:center; gap:8px; cursor:pointer;
+  user-select:none; }
+.coverage-icon { font-size:16px; flex:none; }
+.coverage-summary { flex:1; font-size:13px; color:var(--gray-800);
+  font-weight:600; line-height:1.5; }
+.coverage-mini { font-weight:400; color:var(--gray-500); font-size:12px; }
+.coverage-toggle { font-size:12px; color:#5E8DEA; flex:none; }
+.coverage-body { margin-top:10px; padding-top:10px;
+  border-top:1px dashed var(--gray-200); }
+.cov-subject { margin-bottom:8px; }
+.cov-subj-name { font-size:13px; font-weight:700; color:var(--gray-900);
+  margin-bottom:3px; }
+.cov-type { font-size:12px; color:var(--gray-700); line-height:1.7;
+  padding-left:8px; }
+.cov-type-label { color:var(--gray-500); margin-right:4px; }
+.cov-districts { color:var(--gray-700); }
+.cov-note { margin-top:8px; padding-top:8px; border-top:1px dashed var(--gray-200);
+  font-size:11px; color:var(--gray-500); line-height:1.7; }
 .prep-li { display:flex; align-items:flex-start; gap:9px;
   font-size:13px; color:var(--gray-700); line-height:1.55; padding:6px 0; }
 .prep-ico { width:18px; height:18px; flex:none; color:#8FA9D8; margin-top:1px; }

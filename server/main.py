@@ -241,6 +241,98 @@ def report_pdf(aid: str):
                         filename=p.name)
 
 
+# ---------- 6a. KB 覆盖范围（首页展示已支持哪些卷）----------
+
+_COVERAGE_CACHE: dict | None = None
+_COVERAGE_CACHE_AT: float = 0
+KB_MOCK_ROOT = ROOT / "knowledge-base" / "exams" / "mock"
+
+# 科目展示顺序（按家长心智的"中考重要度"，非字母）
+SUBJECT_ORDER_CN = ["语文", "数学", "英语", "物理", "道法", "化学", "历史"]
+EN2CN_SUBJECT = {"chinese": "语文", "math": "数学", "english": "英语",
+                 "physics": "物理", "politics": "道法",
+                 "chemistry": "化学", "history": "历史"}
+# 区名展示顺序（城区→近郊→远郊，按家长习惯）
+DISTRICT_ORDER_CN = [
+    "海淀", "西城", "东城", "朝阳", "丰台", "石景山",
+    "顺义", "门头沟", "昌平", "房山", "通州", "大兴",
+    "延庆", "平谷", "怀柔", "密云", "燕山",
+]
+EN2CN_DISTRICT = {
+    "haidian": "海淀", "xicheng": "西城", "dongcheng": "东城", "chaoyang": "朝阳",
+    "fengtai": "丰台", "shijingshan": "石景山", "shunyi": "顺义",
+    "mentougou": "门头沟", "changping": "昌平", "fangshan": "房山",
+    "tongzhou": "通州", "daxing": "大兴", "yanqing": "延庆", "pinggu": "平谷",
+    "huairou": "怀柔", "miyun": "密云", "yanshan": "燕山",
+}
+EXAM_TYPE_CN = {"yi": "一模", "er": "二模", "san": "三模"}
+
+
+@app.get("/api/coverage")
+def coverage():
+    """扫 knowledge-base/exams/mock/<subject>/beijing/<year>-<district>-<type>.yaml
+    聚合"已支持的科目 × 区 × 模次"。1h 内存缓存。"""
+    global _COVERAGE_CACHE, _COVERAGE_CACHE_AT
+    if _COVERAGE_CACHE and time.time() - _COVERAGE_CACHE_AT < 3600:
+        return _COVERAGE_CACHE
+    import re
+    # subject_en → {exam_type_en → {year → [district_en, ...]}}
+    raw: dict = {}
+    for subj_dir in KB_MOCK_ROOT.iterdir() if KB_MOCK_ROOT.exists() else []:
+        if not subj_dir.is_dir(): continue
+        beijing = subj_dir / "beijing"
+        if not beijing.is_dir(): continue
+        for f in beijing.glob("*.yaml"):
+            m = re.match(r"^(\d{4})-([a-z]+)-(yi|er|san)\.yaml$", f.name)
+            if not m: continue
+            year, district_en, et = m.group(1), m.group(2), m.group(3)
+            (raw.setdefault(subj_dir.name, {})
+                .setdefault(et, {})
+                .setdefault(year, [])
+                .append(district_en))
+    # 输出 - 按学科顺序聚合
+    subjects_out = []
+    for cn in SUBJECT_ORDER_CN:
+        en = next((k for k, v in EN2CN_SUBJECT.items() if v == cn), None)
+        if not en or en not in raw: continue
+        type_blocks = []
+        for et_en in ("yi", "er", "san"):
+            et_data = raw[en].get(et_en, {})
+            if not et_data: continue
+            # 聚合各年份的区,目前只 2026
+            all_districts_en: set = set()
+            for yr, ds in et_data.items():
+                all_districts_en.update(ds)
+            # 区按 DISTRICT_ORDER_CN 排
+            districts_cn = [EN2CN_DISTRICT.get(d, d) for d in all_districts_en]
+            districts_cn.sort(key=lambda x: DISTRICT_ORDER_CN.index(x)
+                              if x in DISTRICT_ORDER_CN else 999)
+            type_blocks.append({
+                "exam_type_cn": EXAM_TYPE_CN.get(et_en, et_en),
+                "exam_type_en": et_en,
+                "n_districts": len(districts_cn),
+                "districts": districts_cn,
+                "years": sorted(et_data.keys()),
+            })
+        if type_blocks:
+            subjects_out.append({
+                "subject_cn": cn,
+                "subject_en": en,
+                "by_exam_type": type_blocks,
+            })
+    total_papers = sum(
+        b["n_districts"]
+        for s in subjects_out
+        for b in s["by_exam_type"])
+    _COVERAGE_CACHE = {
+        "subjects": subjects_out,
+        "total_papers": total_papers,
+        "city": "北京",
+    }
+    _COVERAGE_CACHE_AT = time.time()
+    return _COVERAGE_CACHE
+
+
 # ---------- 6. 试卷原卷 PDF ----------
 
 @app.get("/api/analyses/{aid}/paper.pdf")
