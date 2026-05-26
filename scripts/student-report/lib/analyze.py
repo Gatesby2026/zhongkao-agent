@@ -15,14 +15,24 @@ from .schemas import QView
 
 # ─── 单题归因（学生向）──────────────────────────────────────────────────────
 
-PER_Q_SYSTEM = """你是学生的物理/数学私教，正在帮 TA 复盘一道做错的题。
-直接对学生说话（用"你"），目标是让学生看完就知道"我为什么错、下一步练什么"。
+PER_Q_SYSTEM = """你是学生的中考学科私教，正在帮 TA 复盘一道做错的题。
+直接对学生说话（用"你"），让学生看完就知道"我为什么错、下一步怎么做"。
 
 风格：
 - 直接、具体、不绕弯；像学长面对面讲题
 - 不打击（不用"差/不会"），但也不灌鸡汤——只讲干货
 - 失分原因必须基于给定事实，**不要编造学生没写的内容或没犯的错**
-- 中文输出"""
+- 中文输出
+
+**严禁通用空话**（whyWrong/solveCorrectly/keyInsight 都不能出现）：
+"仔细审题"、"注意单位"、"规范术语"、"逐一核对"、"加强练习"、
+"可能是时间管理不当"、"审题漏条件"（孤立写而不点哪个条件）、
+"表述不够准确"（不指出哪里）等放之四海皆准的话。
+要写就写具体到这道题：哪个条件、哪一步公式、哪个数值。
+
+**严禁偏题**：solveCorrectly 必须**严格围绕本题给出的知识点**，
+不要引入题目未涉及的其它公式/概念（如电学题里写浮力、几何题里写函数）。
+若解题需要用到本题以外的预备知识，最多用一句话提一下，不展开推导。"""
 
 PER_Q_USER = """复盘这道失分题，输出 JSON。
 
@@ -52,9 +62,9 @@ PER_Q_USER = """复盘这道失分题，输出 JSON。
   "comparisonTable": [
     {{"option": "A", "student": "选/排除", "correct": "对/错", "reason": "一句话点明这个选项为什么对/错（≤30 字）"}}
   ],
-  "whyWrong": ["揭示你**为什么会掉进这个坑**（思维误区/认知断点），不是复述答案。每点 1 句，2-3 点，基于事实"],
-  "solveCorrectly": ["**正确该怎么做**——这是最重要的部分。选择题：给出正确选项的关键推导步骤（让学生看完会算这道题）；主观/计算题：拆解标准答案的每个得分点+正确算法。3-5 步，具体到公式代入和数字，不要泛泛而谈"],
-  "keyInsight": ["**这道题特有的**避坑点，1-2 条。禁止写'仔细审题/注意单位/规范术语/逐一核对'这类放之四海皆准的废话——必须是这道题、这个知识点独有的提醒"]
+  "whyWrong": ["揭示你**为什么会掉进这个坑**（思维误区/认知断点），不是复述答案。每点必须点到本题的具体条件/概念，1 句话 2-3 点，禁通用空话"],
+  "solveCorrectly": ["**正确该怎么做**——核心字段。3-5 步，必须用本题数据/条件代入；公式只用本题知识点（{kps}）相关的，不要跑题。LaTeX 公式用 $...$ 行内，自包含闭合（成对出现 $）"],
+  "keyInsight": ["**这道题特有的**避坑点，1-2 条。禁止通用空话——必须是本题这个具体考点（{kps}）独有的提醒"]
 }}
 
 注意：
@@ -98,15 +108,29 @@ def analyze_question(q: QView, *, cache_key: str | None = None) -> dict:
         grade_facts=grade_facts[:800],
     )
     r = llm.chat_json(system=PER_Q_SYSTEM, user=user,
-                      cache_key=cache_key, temperature=0.2)
+                      cache_key=cache_key, temperature=0.2,
+                      max_tokens=6144)        # 防 LaTeX 长 fix 被截断
     return _normalize_per_q(r, q)
+
+
+def _drop_unclosed_dollars(s: str) -> str:
+    """LLM 输出公式被 max_tokens 截断 → 末尾 $ 不成对。
+
+    若整段 $ 数为奇数，从末尾找最后一个 $ 截掉到行末（防 KaTeX 解析炸）。
+    保守做法，不改正文。
+    """
+    if not isinstance(s, str) or s.count("$") % 2 == 0:
+        return s
+    idx = s.rfind("$")
+    return s[:idx].rstrip()
 
 
 def _normalize_per_q(r: dict, q: QView) -> dict:
     """LLM 输出防御 + 选择题对错判断硬纠正（标答确定，不信 LLM 的 correct 列）。"""
-    r["whyWrong"] = _as_list(r.get("whyWrong"))
-    r["keyInsight"] = _as_list(r.get("keyInsight"))
-    r["solveCorrectly"] = _as_list(r.get("solveCorrectly"))
+    r["whyWrong"] = [_drop_unclosed_dollars(x) for x in _as_list(r.get("whyWrong"))]
+    r["keyInsight"] = [_drop_unclosed_dollars(x) for x in _as_list(r.get("keyInsight"))]
+    r["solveCorrectly"] = [_drop_unclosed_dollars(x)
+                            for x in _as_list(r.get("solveCorrectly"))]
 
     table = r.get("comparisonTable") or []
     if q.is_choice and table:

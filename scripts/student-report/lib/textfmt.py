@@ -58,6 +58,11 @@ def fix_latex_escape(s: str) -> str:
     if not s:
         return s
     s = re.sub(r"\\{2,}(?=[A-Za-z(\[{%&_#$])", r"\\", s)
+    # `\[ ... \]` 是 LaTeX 显示模式定界符；md-to-pdf KaTeX 支持 $$...$$ 显示
+    # 模式但不识别 `\[/\]`。审核员也常把它当未闭合公式 → 统一换 $$
+    s = re.sub(r"\\\[(.+?)\\\]", r"$$\1$$", s, flags=re.S)
+    s = re.sub(r"\${3,}", "$$", s)              # 折叠 LLM 把 \[\] 嵌套在 $...$ 造成的 $$$
+    # `\(` `\)` 误用：还原成普通括号（同一原因，避免与 KaTeX 行内定界混淆）
     s = s.replace(r"\(", "(").replace(r"\)", ")")
     pat = r'"(' + "|".join(_LATEX_CMDS_AFTER_QUOTE) + r')(?=[\s{])'
     s = re.sub(pat, r"\\\1", s)
