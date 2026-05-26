@@ -99,6 +99,29 @@ def render_markdown(exam: ExamView, per_q: dict[int, dict],
       f"{st['full_score']}**（得分率 {st['rate']*100:.0f}%）"
       f"　|　失分 {st['lost_total']} 分，{st['n_lost']} 题\n")
 
+    # 数据质量提示条（小分表缺数据 / 对齐失败 / 解析警告 → 报告顶部告知）
+    dq = getattr(exam, "data_quality", {}) or {}
+    notices = []
+    n_assumed = len(dq.get("assumed_full_qids") or [])
+    n_block = len(dq.get("align_block_shared_qids") or [])
+    n_miss = len(dq.get("align_miss_qids") or [])
+    if n_assumed:
+        qs = "、".join((dq.get("assumed_full_qids") or [])[:6])
+        more = " 等" if n_assumed > 6 else ""
+        notices.append(f"小分表未列出 {n_assumed} 道（{qs}{more}），按满分占位")
+    if n_block:
+        notices.append(f"小分表与试卷题号划分不同，{n_block} 道题按比例分摊")
+    if n_miss:
+        qs = "、".join((dq.get("align_miss_qids") or [])[:4])
+        notices.append(f"{n_miss} 道题对齐失败按满分占位（{qs}…）")
+    for w_ in (dq.get("parse_warnings") or [])[:2]:
+        notices.append(w_)
+    if notices:
+        w("\n> ⚠ **数据质量提示**\n>\n")
+        for nt in notices:
+            w(f"> - {nt}\n")
+        w("\n")
+
     # 逐题得分速览（开篇，一眼定位丢分题）
     w("\n## 逐题得分速览\n")
     w("> 🟢 满分　🟡 部分扣分　🔴 全失\n")

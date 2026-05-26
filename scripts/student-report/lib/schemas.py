@@ -104,6 +104,8 @@ class ExamView:
     raw_sections: list[dict] = field(default_factory=list)  # scores.json 原始 sections（人工填，准确）
     kb_yaml_path: Path = None
     student_dir: Path = None
+    # 数据质量（小分表解析+对齐+缺数据）汇总，给报告顶部提示用
+    data_quality: dict = field(default_factory=dict)
 
     def figure_abs(self, q: "QView") -> str | None:
         """试卷配图绝对 file:// 路径（yaml.figure 相对 kb_yaml 目录）。"""
@@ -133,11 +135,18 @@ def load_exam_view(kb_yaml: Path, student_dir: Path) -> ExamView:
             student.setdefault(k, v)
 
     ac_by_num = {_qnum(a.get("qId")): a for a in ac.get("answers", [])}
+    align_warn: list[str] = []
+    align_miss_qids: list[str] = []
+    align_block_qids: list[str] = []
     # 优先用 align：xlsx items + yaml.questions → yaml 题号索引的对齐结果
     # （处理：默写多空合并、二选一作文、中段题号漂移等 xlsx/yaml 体系差）
     if scores.get("items"):
-        sc_by_num, _align_warn = align_scores.align(
+        sc_by_num, align_warn = align_scores.align(
             scores["items"], paper.get("questions", []))
+        align_miss_qids = [f"Q{n}" for n, v in sc_by_num.items()
+                           if v.get("_alignmentMiss")]
+        align_block_qids = [f"Q{n}" for n, v in sc_by_num.items()
+                            if v.get("_blockShared")]
     else:
         # 兼容旧 scores.json（auto_grade 输出 / 不带 items 的历史数据）
         sc_by_num = {_qnum(s.get("qId")): s for s in scores.get("questions", [])}
@@ -145,6 +154,7 @@ def load_exam_view(kb_yaml: Path, student_dir: Path) -> ExamView:
     subject = paper.get("subject", "")
     exam_title = _title_from_slug(student_dir.name, subject)
 
+    assumed_full_qids: list[str] = []
     qviews: list[QView] = []
     for q in paper.get("questions", []):
         num = _qnum(q.get("id"))
@@ -157,6 +167,9 @@ def load_exam_view(kb_yaml: Path, student_dir: Path) -> ExamView:
         else:
             # 班小二惯例：未列出的题 = 学生满分（典型为选择题全对）
             scored = full
+            if full > 0 and scores.get("items"):
+                # 仅 items 模式（有 align）下记缺失；旧 questions 模式不记
+                assumed_full_qids.append(f"Q{num}")
         type_cn = q.get("type", "")
         module = q.get("module", "")
         filled = a.get("filled")
@@ -193,4 +206,12 @@ def load_exam_view(kb_yaml: Path, student_dir: Path) -> ExamView:
         raw_sections=scores.get("sections", []),
         kb_yaml_path=kb_yaml,
         student_dir=student_dir,
+        data_quality={
+            "score_source_file": scores.get("_source", "unknown"),
+            "parse_warnings": list(scores.get("_warnings") or []),
+            "align_warnings": align_warn,
+            "align_block_shared_qids": align_block_qids,    # 按比例分摊
+            "align_miss_qids": align_miss_qids,             # 对齐失败按满分占位
+            "assumed_full_qids": assumed_full_qids,         # xlsx 未列出按满分占位
+        },
     )

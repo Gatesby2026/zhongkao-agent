@@ -74,15 +74,26 @@ def find_cases() -> list[dict]:
         xlsx = next((p for p in d.iterdir()
                      if p.suffix.lower() in (".xlsx", ".xls")
                      and not p.name.startswith(".")), None)
+        # 可选：image-scores/ 子目录里第一张图作为"图片小分"场景输入
+        img_dir = d / "image-scores"
+        score_image = None
+        if img_dir.is_dir():
+            score_image = next(
+                (p for p in img_dir.iterdir()
+                 if p.is_file() and p.suffix.lower() in (".jpg", ".jpeg", ".png", ".heic")
+                 and not p.name.startswith(".")), None)
         if photos:
-            cases.append({"name": d.name, "photos": photos, "xlsx": xlsx})
+            cases.append({"name": d.name, "photos": photos,
+                          "xlsx": xlsx, "score_image": score_image})
     return cases
 
 
 # ─── 端到端流水线驱动 ─────────────────────────────────────────────────────
 def run_pipeline(case: dict, out_dir: Path, *,
-                 use_xlsx: bool) -> tuple[str | None, dict | None, str]:
-    tag = f"{case['name']}/{'teacher' if use_xlsx else 'auto'}"
+                 score_file: Path | None,
+                 scenario: str) -> tuple[str | None, dict | None, str]:
+    """跑一次完整流水线。score_file=None → auto 模式（不上传小分）。"""
+    tag = f"{case['name']}/{scenario}"
 
     def log(msg: str):
         print(f"  [{tag}] {msg}", flush=True)
@@ -115,16 +126,16 @@ def run_pipeline(case: dict, out_dir: Path, *,
     if d.get("status") != "ready_confirm":
         return aid, None, f"detect_failed: {d.get('error', '')[:200]}"
 
-    # 3. 上传小分（仅 teacher 场景且 xlsx 可用）
-    if use_xlsx and case["xlsx"]:
-        log(f"上传小分表 {case['xlsx'].name}")
-        with case["xlsx"].open("rb") as f:
+    # 3. 上传小分（teacher 系列场景；图片/xlsx 都走同 /scores 入口）
+    if score_file:
+        log(f"上传小分 {score_file.name}")
+        with score_file.open("rb") as f:
             sr = _post(
                 f"{API}/api/analyses/{aid}/scores",
-                files={"file": (case["xlsx"].name, f,
-                                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")},
-                timeout=60, expect_json=True).json()
-        log(f"  小分: {sr.get('exam_total')}  {sr.get('n_questions')}题")
+                files={"file": (score_file.name, f, "application/octet-stream")},
+                timeout=180, expect_json=True).json()
+        log(f"  小分 src={sr.get('source')}  {sr.get('exam_total')}  "
+            f"{sr.get('n_questions')}题  warnings={len(sr.get('warnings') or [])}")
 
     # 4. /start
     _post(f"{API}/api/analyses/{aid}/start",
@@ -294,15 +305,19 @@ def main():
         print(f" - {c['name']}: {len(c['photos'])} 张照片 + "
               f"{'小分' if c['xlsx'] else '无小分'}")
 
-    # 每份数据跑两场景：teacher（带小分表）+ auto（无小分→系统自动判分）
-    # 若 case 无 xlsx，跳过 teacher 场景
+    # 每份数据按可用资源生成场景：
+    #   teacher_xlsx  → 带 xlsx 小分表
+    #   teacher_image → 带图片小分（image-scores/ 目录里第一张图）
+    #   auto          → 不带小分（系统自动判分）
     summary = []
     for c in cases:
-        scenarios = []
+        scenarios: list[tuple[str, Path | None]] = []
         if c["xlsx"]:
-            scenarios.append("teacher")
-        scenarios.append("auto")
-        for sc in scenarios:
+            scenarios.append(("teacher_xlsx", c["xlsx"]))
+        if c["score_image"]:
+            scenarios.append(("teacher_image", c["score_image"]))
+        scenarios.append(("auto", None))
+        for sc, sf in scenarios:
             print(f"\n=== ▶ {c['name']} / {sc} ===")
             d = run_dir / c["name"] / sc
             d.mkdir(parents=True, exist_ok=True)
@@ -310,7 +325,7 @@ def main():
             aid, report, status = None, None, "?"
             try:
                 aid, report, status = run_pipeline(
-                    c, d, use_xlsx=(sc == "teacher"))
+                    c, d, score_file=sf, scenario=sc)
             except Exception as e:
                 import traceback
                 status = f"exception: {type(e).__name__}: {e}"
@@ -337,11 +352,11 @@ def main():
             })
 
     print("\n" + "=" * 78 + "\n汇总")
-    print(f"{'case':<22}{'场景':<8}{'状态':<8}{'耗时':<7}{'分级':<5}{'P0':<3}{'P1':<3}{'P2':<3}  评")
+    print(f"{'case':<22}{'场景':<15}{'状态':<8}{'耗时':<7}{'分级':<5}{'P0':<3}{'P1':<3}{'P2':<3}  评")
     for s in summary:
-        print(f"{s['case']:<22}{s['scenario']:<8}{s['status']:<8}"
+        print(f"{s['case']:<22}{s['scenario']:<15}{s['status']:<8}"
               f"{s['elapsed_s']:>4}s   {s['grade']:<5}"
-              f"{s['P0']:<3}{s['P1']:<3}{s['P2']:<3}  {s['summary'][:54]}")
+              f"{s['P0']:<3}{s['P1']:<3}{s['P2']:<3}  {s['summary'][:50]}")
     (run_dir / "_summary.json").write_text(
         json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"\n详情见 {run_dir}/<case>/<scenario>/audit.json")

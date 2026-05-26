@@ -162,6 +162,7 @@ def report_json(student_dir: Path) -> dict:
         ],
         "wrong_questions": wrong,
         "score_source": _score_source(student_dir),
+        "data_quality": _summarize_data_quality(exam),
     }
 
 
@@ -172,6 +173,40 @@ def _score_source(student_dir: Path) -> str:
     if m.exists():
         return m.read_text(encoding="utf-8").strip() or "teacher"
     return "teacher"
+
+
+def _summarize_data_quality(exam) -> dict:
+    """把 ExamView.data_quality 转成报告顶部可读提示。
+
+    给前端 / PDF 用，组成几条人话提示；缺则空数组。
+    """
+    dq = getattr(exam, "data_quality", {}) or {}
+    notices: list[str] = []
+    n_assumed = len(dq.get("assumed_full_qids") or [])
+    n_block = len(dq.get("align_block_shared_qids") or [])
+    n_miss = len(dq.get("align_miss_qids") or [])
+    if n_assumed:
+        qs = "、".join((dq.get("assumed_full_qids") or [])[:8])
+        more = "等" if n_assumed > 8 else ""
+        notices.append(
+            f"⚠ 小分表未列出 {n_assumed} 道题（{qs}{more}），按满分占位")
+    if n_block:
+        qs = "、".join((dq.get("align_block_shared_qids") or [])[:8])
+        notices.append(
+            f"ℹ 小分表与试卷题号划分不同，{n_block} 道题按比例分摊（{qs}…）")
+    if n_miss:
+        qs = "、".join((dq.get("align_miss_qids") or [])[:6])
+        notices.append(
+            f"⚠ {n_miss} 道题对齐失败按满分占位（{qs}…），模块数据偏乐观")
+    for w in (dq.get("parse_warnings") or [])[:3]:
+        notices.append(f"ℹ {w}")
+    return {
+        "score_source_file": dq.get("score_source_file", "unknown"),
+        "notices": notices,
+        "assumed_full_qids": dq.get("assumed_full_qids") or [],
+        "align_block_shared_qids": dq.get("align_block_shared_qids") or [],
+        "align_miss_qids": dq.get("align_miss_qids") or [],
+    }
 
 
 # ---------- 试卷原卷 PDF ----------

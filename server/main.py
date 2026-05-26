@@ -156,20 +156,28 @@ async def upload_scores(aid: str, file: UploadFile = File(...)):
     raw = updir / f"scores_raw{ext}"
     raw.write_bytes(await file.read())
 
-    # 班小二 xlsx → 解析为标准 scores.json，落到 aid 稳定位置
-    # （task 完成 OCR/识别/重命名后会取这份并放进学生目录）
+    # 按扩展名分流（xlsx / csv / image）；image 失败 → 422 让前端提示
+    # "换 xlsx 或转 AI 自动判分"（口径 A-选 1）
     import parse_scores
     try:
-        data = parse_scores.parse_scores_xlsx(raw)
+        data = parse_scores.parse_scores(raw)
+    except ValueError as e:
+        # image OCR 失败 / 格式不识别 / 数据全空 — 客户端可消化的失败
+        is_image = ext in (".jpg", ".jpeg", ".png", ".heic", ".webp")
+        raise HTTPException(422 if is_image else 400,
+                            f"小分表解析失败：{e}")
     except Exception as e:
-        raise HTTPException(400, f"小分表解析失败：{e}")
-    out = {k: v for k, v in data.items() if not k.startswith("_")}
+        raise HTTPException(400, f"小分表解析失败：{type(e).__name__}: {e}")
+    # 落盘：保留 _source / _warnings（schemas 后续暴露给报告 data_quality）
+    out = {k: v for k, v in data.items() if k != "_student_name"}
     (updir / "scores.json").write_text(
         __import__("json").dumps(out, ensure_ascii=False, indent=2),
         encoding="utf-8")
     return {
         "ok": True,
         "student_name": data.get("_student_name", ""),
+        "source": data.get("_source", "xlsx"),
+        "warnings": data.get("_warnings", []),
         "exam_total": out["examTotal"],
         "n_questions": len(out["questions"]),
     }
