@@ -110,12 +110,26 @@ def recognize_handwriting(image_path: Path, language: str = "cn|en",
         "X-CheckSum": x_checksum,
         "Content-Type": "application/x-www-form-urlencoded; charset=utf-8",
     }
-    resp = requests.post(url, headers=headers, data={"image": img_b64},
-                          timeout=60)
-    raw = resp.json()
-    if raw.get("code") not in (0, "0"):
-        raise RuntimeError(f"讯飞手写 OCR 失败: code={raw.get('code')} "
-                            f"desc={raw.get('desc')} sid={raw.get('sid')}")
+    # 讯飞 SSL 偶发抖动（WRONG_SIGNATURE_TYPE 等）→ 3 次退避重试。
+    # 一次性失败会让上层 Phase B 全部走几何 fallback，错位风险极高，
+    # 宁可重试到位也不要让任何一题"猜"出来。
+    last_exc = None
+    for attempt in range(3):
+        try:
+            resp = requests.post(url, headers=headers,
+                                  data={"image": img_b64}, timeout=60)
+            raw = resp.json()
+            if raw.get("code") not in (0, "0"):
+                raise RuntimeError(
+                    f"讯飞手写 OCR 失败: code={raw.get('code')} "
+                    f"desc={raw.get('desc')} sid={raw.get('sid')}")
+            break          # 成功
+        except (requests.exceptions.RequestException,
+                json.JSONDecodeError) as e:
+            last_exc = e
+            time.sleep(0.6 * (attempt + 1))   # 0.6s / 1.2s / 1.8s
+    else:
+        raise RuntimeError(f"讯飞手写 OCR 3 次重试均失败：{last_exc}")
 
     # 抽文本：data.block[*].line[*].word[*].content
     lines: list[str] = []

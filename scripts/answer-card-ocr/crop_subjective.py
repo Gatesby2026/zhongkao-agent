@@ -163,30 +163,32 @@ def crop_subjective(
             if y < old_y:
                 best_per_qid[qid] = (pi, ri)
 
-    # 3.5 Fallback：未识别题号的方框，按 y 升序填该图"位置缺口"的候选题号
-    # （讯飞 OCR 偶尔漏读印刷题号 "N.(M 分)"——靠几何位置推断）
+    # 3.5 Fallback：仅在"框数严格 ≤ 缺口数 + 相邻题号锁定"时才推断。
+    # 历史教训：讯飞 OCR 整体失败时，原本宽松的"按 y 升序填 candidate"会把
+    # 页头非答题方框（如"一、单项选择题"标题块）也填上题号，错位级联到全卷
+    # （Q20 装 Q17 内容、Q21 装 Q18 内容 …），评分模型据此判 0 分，差 21 分。
+    # 现策略：宁可标 missing 让 canned fallback 接管，不"猜"。
     sorted_candidates = sorted(subjective_qnums)
     for pi, page in enumerate(page_regions):
-        # 该图所有方框按 ri（已按 y 升序）
         ris_with_qid = [(ri, qid_per_region.get((pi, ri)))
                           for ri in range(len(page["regions"]))]
         for i, (ri, qid) in enumerate(ris_with_qid):
             if qid is not None:
                 continue
-            # 前一个已识别题号
             prev_qid = next((q for _, q in ris_with_qid[i-1::-1] if q), None)
-            # 后一个已识别题号
             next_qid = next((q for _, q in ris_with_qid[i+1:] if q), None)
-            lo = prev_qid if prev_qid is not None else 0
-            hi = next_qid if next_qid is not None else 999
-            fill = [q for q in sorted_candidates
-                    if lo < q < hi and q not in best_per_qid]
-            if fill:
-                target = fill[0]
+            # 严格条件：prev 和 next 都已识别 + 中间恰好缺 1 个连续题号
+            if prev_qid is None or next_qid is None:
+                continue
+            gap = [q for q in sorted_candidates
+                    if prev_qid < q < next_qid and q not in best_per_qid]
+            if len(gap) == 1:
+                target = gap[0]
                 qid_per_region[(pi, ri)] = target
                 best_per_qid[target] = (pi, ri)
-                print(f"     🔧 fallback: {page['orig_path'].name} #{ri} → Q{target}"
-                      f" (prev=Q{prev_qid} next=Q{next_qid})", file=sys.stderr)
+                print(f"     🔧 strict-fallback: {page['orig_path'].name} "
+                      f"#{ri} → Q{target} (prev=Q{prev_qid} next=Q{next_qid})",
+                      file=sys.stderr)
 
     # 4. 输出归属表
     print(f"\n  📋 题号归属:", file=sys.stderr)
