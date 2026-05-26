@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed, onMounted, onUnmounted } from 'vue'
+import { ref, computed, nextTick, onMounted, onUnmounted, watch } from 'vue'
 import { api, type ReportResp } from './api'
 
 const step = ref(0)                       // 0 首屏 1 上传 2 小分 3 分析 4 报告
@@ -182,6 +182,29 @@ function startPolling() {
 }
 onMounted(async () => {
   try { coverage.value = await api.coverage() } catch {}
+})
+
+// 报告里的 $...$ 公式让 KaTeX 渲染（CDN auto-render；脚本 defer 加载）
+function renderMath() {
+  const fn = (window as any).renderMathInElement
+  if (!fn) return
+  const root = document.querySelector('.scroll-area')
+  if (!root) return
+  fn(root, {
+    delimiters: [
+      { left: '$$', right: '$$', display: true },
+      { left: '$', right: '$', display: false },
+    ],
+    throwOnError: false,
+    ignoredClasses: ['no-math'],
+  })
+}
+watch(() => report.value, async () => {
+  if (!report.value) return
+  await nextTick()
+  renderMath()
+  // KaTeX script defer 可能尚未就绪 → 200ms 后再试一次
+  setTimeout(renderMath, 200)
 })
 onUnmounted(() => clearInterval(pollTimer))
 
