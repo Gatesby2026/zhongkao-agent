@@ -209,11 +209,24 @@ const progressPct = computed(() => {
   return Math.max(6, Math.round((done / n) * 100))   // 至少 6% 体现"已启动"
 })
 
-const pdfView = ref<{ url: string; title: string } | null>(null)
+// images 模式用于静态多页 PDF 的可滚动展示（如示例报告 12 页），
+// 解决移动端 iframe 嵌 PDF 滚动受限；url 模式仍用于真实报告/试卷
+const pdfView = ref<{
+  url?: string; images?: string[]; downloadUrl?: string; title: string
+} | null>(null)
 function openPdf(url: string, title: string) {
   pdfView.value = { url, title }
 }
+function openImages(images: string[], title: string, downloadUrl?: string) {
+  pdfView.value = { images, title, downloadUrl }
+}
 function closePdf() { pdfView.value = null }
+
+const SAMPLE_PAGES = Array.from({ length: 12 }, (_, i) =>
+  `/sample-report-pages/page-${String(i + 1).padStart(2, '0')}.png`)
+function openSampleReport() {
+  openImages(SAMPLE_PAGES, '示例学情报告（脱敏）', '/sample-report.pdf')
+}
 
 function openPaper() {
   if (analysisId.value)
@@ -363,7 +376,7 @@ const wrongByNum = computed(() => {
         </div>
       </div>
 
-      <div class="card sample-report" @click="openPdf('/sample-report.pdf','示例学情报告（脱敏）')">
+      <div class="card sample-report" @click="openSampleReport">
         <div class="sr-ico">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
             stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
@@ -615,9 +628,17 @@ const wrongByNum = computed(() => {
       <div class="pdf-bar">
         <div class="pdf-close" @click="closePdf">‹ 返回</div>
         <div class="pdf-title">{{ pdfView.title }}</div>
-        <a class="pdf-ext" :href="pdfView.url" target="_blank" rel="noopener">新窗口</a>
+        <a v-if="pdfView.url || pdfView.downloadUrl" class="pdf-ext"
+           :href="pdfView.url || pdfView.downloadUrl"
+           target="_blank" rel="noopener">{{ pdfView.images ? '下载 PDF' : '新窗口' }}</a>
       </div>
-      <iframe class="pdf-frame" :src="pdfView.url"></iframe>
+      <!-- 多页 PDF 预渲染为 PNG 栈（移动端可顺畅滚动）-->
+      <div v-if="pdfView.images" class="pdf-pages">
+        <img v-for="(src, i) in pdfView.images" :key="i"
+             :src="src" :alt="'第 ' + (i+1) + ' 页'" loading="lazy" />
+      </div>
+      <!-- 直接 PDF 走 iframe（真实报告/试卷）-->
+      <iframe v-else class="pdf-frame" :src="pdfView.url"></iframe>
     </div>
 </div>
 </template>
@@ -789,6 +810,11 @@ const wrongByNum = computed(() => {
   white-space:nowrap; }
 .pdf-ext { font-size:13px; color:var(--gray-500); text-decoration:none; }
 .pdf-frame { flex:1; width:100%; border:0; background:var(--gray-100); }
+.pdf-pages { flex:1; overflow-y:auto; background:var(--gray-200);
+  -webkit-overflow-scrolling:touch; padding:8px; }
+.pdf-pages img { display:block; width:100%; margin:0 auto 8px;
+  background:#fff; box-shadow:0 1px 4px rgba(0,0,0,0.08); }
+.pdf-pages img:last-child { margin-bottom:24px; }
 .state-card { text-align:center; padding:28px 16px; }
 .state-emoji { font-size:42px; line-height:1; }
 .state-fail { border:1px solid var(--warning); background:#fff8f0; }
