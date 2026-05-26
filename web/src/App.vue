@@ -312,7 +312,6 @@ const wrongByNum = computed(() => {
           </div>
           <div class="cov-note">
             <div>⚠ 二模/三模、外省、2026 年以外暂未支持(陆续上新)</div>
-            <div>ℹ 你的考试不在列表里也可以传——系统会识别考试名,不在范围内会明确告知</div>
           </div>
         </div>
       </div>
