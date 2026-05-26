@@ -248,7 +248,10 @@ def main():
     if p.is_file():
         files = [p]
     else:
-        files = sorted(p.glob("2026-*-yi.yaml"))
+        # 同时扫一模 (yi) 和二模 (er)；三模 (san) 也兼顾
+        files = sorted(set(p.glob("2026-*-yi.yaml"))
+                       | set(p.glob("2026-*-er.yaml"))
+                       | set(p.glob("2026-*-san.yaml")))
     if not files:
         sys.exit(f"no yaml found in {p}")
 

@@ -1063,6 +1063,7 @@ def parse_paper(src: Path, out_dir: Path, force=False) -> dict:
     result = {
         "subject": "chinese",
         "full_score": full_score,
+        "duration_minutes": 150,  # 北京中考语文标准时长（下游 enrich 透传到 yaml）
         "passages": passages,
         "questions": questions,
         "answers": answers,
