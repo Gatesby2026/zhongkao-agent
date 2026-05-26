@@ -67,6 +67,8 @@ def fix_latex_escape(s: str) -> str:
     cmd_alt = "|".join(_LATEX_CMDS_AFTER_QUOTE)
     s = re.sub(r"\\\[(" + cmd_alt + r")\{([^{}]*)\}\]", r"\\\1{\2}", s)
     s = re.sub(r"\\\[(" + cmd_alt + r")\]", r"\\\1", s)
+    # `\[times 10^{-3}` 这类后跟空格/数字（不带 {} 也无 ]）→ `\times`
+    s = re.sub(r"\\\[(" + cmd_alt + r")(?=[\s\d])", r"\\\1", s)
     # `\(` `\)` 误用：还原成普通括号（同一原因，避免与 KaTeX 行内定界混淆）
     s = s.replace(r"\(", "(").replace(r"\)", ")")
     pat = r'"(' + "|".join(_LATEX_CMDS_AFTER_QUOTE) + r')(?=[\s{])'
