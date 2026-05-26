@@ -272,19 +272,16 @@ const wrongByNum = computed(() => {
 
 <template>
 <div class="app-shell">
-    <div class="hdr" v-if="step>=1">
-      <div class="hdr-back" @click="prev">‹</div>
-      <div class="hdr-title">北京中考一模&amp;二模学情分析</div>
-      <div class="hdr-right">{{ journeyStage>=3 ? '完成' : journeyStage + '/3' }}</div>
-    </div>
-
+    <!-- 顶部蓝条已删；返回 + stepper + 计数 合并一行（方案 B）-->
     <div class="stepper" v-show="step>=1">
+      <div class="stepper-back" @click="prev" role="button" aria-label="返回">‹</div>
       <template v-for="(nm, i) in stepperSteps" :key="i">
         <div class="step" :class="stepState(i+1)">
           <div class="dot"><span v-if="stepState(i+1)!=='done'">{{ i+1 }}</span></div>{{ nm }}
         </div>
         <div v-if="i < 2" class="step-line" :class="{ done: i+1 < journeyStage }"></div>
       </template>
+      <div class="stepper-count">{{ journeyStage>=3 ? '完成' : journeyStage + '/3' }}</div>
     </div>
 
     <!-- Step 0 首屏引导 -->
@@ -681,17 +678,18 @@ const wrongByNum = computed(() => {
     box-shadow:0 0 24px rgba(0,0,0,0.08);
   }
 }
-.hdr { position:sticky; top:0; z-index:10; height:var(--header-h);
-  background:var(--brand-deeper); display:flex;
-  align-items:center; padding:0 14px; gap:10px; flex-shrink:0;
-  padding-top:env(safe-area-inset-top); box-sizing:content-box; }
-.hdr-back { width:30px; height:30px; border-radius:50%;
-  background:rgba(255,255,255,.12); display:flex; align-items:center;
-  justify-content:center; color:#fff; font-size:16px; }
-.hdr-title { color:#fff; font-size:16px; font-weight:600; flex:1; text-align:center; }
-.hdr-right { color:rgba(255,255,255,.85); font-size:12px; }
-.stepper { background:var(--surface); padding:10px 16px; display:flex;
-  align-items:center; border-bottom:1px solid var(--gray-100); flex-shrink:0; }
+/* 旧 .hdr 蓝条已弃用（方案 B：返回按钮合入 stepper 行） */
+.stepper { background:var(--surface); padding:8px 10px; display:flex;
+  align-items:center; gap:6px; border-bottom:1px solid var(--gray-100);
+  flex-shrink:0; position:sticky; top:0; z-index:10;
+  padding-top:calc(8px + env(safe-area-inset-top)); }
+.stepper-back { width:30px; height:30px; border-radius:50%;
+  background:var(--gray-100); color:var(--brand); font-size:18px;
+  font-weight:600; display:flex; align-items:center; justify-content:center;
+  flex-shrink:0; cursor:pointer; user-select:none; line-height:1; }
+.stepper-back:active { background:var(--gray-200); }
+.stepper-count { color:var(--gray-500); font-size:12px; flex-shrink:0;
+  padding-left:4px; }
 .step { display:flex; align-items:center; gap:6px; color:var(--gray-400); font-size:12px; }
 .step .dot { width:22px; height:22px; border-radius:50%; background:var(--gray-200);
   color:#fff; display:flex; align-items:center; justify-content:center;
