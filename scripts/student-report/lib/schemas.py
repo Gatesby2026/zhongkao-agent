@@ -17,7 +17,7 @@ from pathlib import Path
 
 import yaml
 
-from . import subject_profile
+from . import align_scores, subject_profile
 
 
 # module 英文 → 中文（物理；其它学科按需扩展）
@@ -133,7 +133,14 @@ def load_exam_view(kb_yaml: Path, student_dir: Path) -> ExamView:
             student.setdefault(k, v)
 
     ac_by_num = {_qnum(a.get("qId")): a for a in ac.get("answers", [])}
-    sc_by_num = {_qnum(s.get("qId")): s for s in scores.get("questions", [])}
+    # 优先用 align：xlsx items + yaml.questions → yaml 题号索引的对齐结果
+    # （处理：默写多空合并、二选一作文、中段题号漂移等 xlsx/yaml 体系差）
+    if scores.get("items"):
+        sc_by_num, _align_warn = align_scores.align(
+            scores["items"], paper.get("questions", []))
+    else:
+        # 兼容旧 scores.json（auto_grade 输出 / 不带 items 的历史数据）
+        sc_by_num = {_qnum(s.get("qId")): s for s in scores.get("questions", [])}
 
     subject = paper.get("subject", "")
     exam_title = _title_from_slug(student_dir.name, subject)

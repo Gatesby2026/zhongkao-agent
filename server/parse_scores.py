@@ -60,9 +60,11 @@ def parse_scores_xlsx(xlsx_path: Path) -> dict:
     if m:
         name = m.group(1)
 
+    # 完整 xlsx 题号正则（含子号），用于 items 的 xlsxQid 字段
+    _LABEL_QID = re.compile(r"^\s*(总分|\d+(?:_\d+)*)")
     exam_total = {"scored": 0.0, "fullScore": 0.0}
-    # 主题号 → 累加 scored/fullScore；用 dict 合并子小问（20_1/20_2 → Q20）
-    agg: dict[int, dict] = {}
+    items: list[dict] = []                   # 保留每行原貌（含子号），供 align
+    agg: dict[int, dict] = {}                # 主题号合并（向后兼容 questions）
     for r in rows:
         label = str(r[0]).strip()
         scored = _num(r[1]) if len(r) > 1 else 0.0
@@ -74,8 +76,17 @@ def parse_scores_xlsx(xlsx_path: Path) -> dict:
         if key == "总分":
             exam_total = {"scored": _i(scored), "fullScore": _i(full)}
             continue
-        qid = int(key)
-        cur = agg.setdefault(qid, {"scored": 0.0, "fullScore": 0.0})
+        # 取完整 xlsx 题号文本（如 "27_1" "23_1_1"，整数题保持 "27"）
+        qid_text = _LABEL_QID.match(label).group(1)
+        items.append({
+            "xlsxQid": qid_text,
+            "scored": _i(scored),
+            "fullScore": _i(full),
+            "desc": label[len(pm.group(0)):].strip(),
+        })
+        # 兼容旧 questions：主题号合并
+        qid_int = int(key)
+        cur = agg.setdefault(qid_int, {"scored": 0.0, "fullScore": 0.0})
         cur["scored"] += scored
         cur["fullScore"] += full
     questions = [
@@ -84,6 +95,12 @@ def parse_scores_xlsx(xlsx_path: Path) -> dict:
          "fullScore": _i(agg[n]["fullScore"])}
         for n in sorted(agg)
     ]
+    # items 一律按 xlsxQid (主+子号) 自然排序——班小二有时按知识点导出，
+    # 行序与卷面题号顺序不一致；align 算法假设同序，必须先 sort
+    def _sort_key(it):
+        parts = [int(p) for p in str(it["xlsxQid"]).split("_") if p.isdigit()]
+        return tuple(parts)
+    items.sort(key=_sort_key)
 
     if not questions:
         raise ValueError("未解析到任何小题分（格式不符？）")
@@ -97,9 +114,10 @@ def parse_scores_xlsx(xlsx_path: Path) -> dict:
 
     return {
         "examTotal": exam_total,
-        "questions": questions,
+        "items": items,          # 每行原貌（保 xlsxQid 子号）→ schemas 调 align 与 yaml 题号对齐
+        "questions": questions,  # 主题号合并；schemas 在 items 缺失时降级用
         "sections": [],          # 班小二无分段信息；build_report 容忍空
-        "_student_name": name,   # 供调用方校验/回填（非 build_report 字段）
+        "_student_name": name,
     }
 
 

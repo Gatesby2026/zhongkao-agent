@@ -56,9 +56,12 @@ def find_cases() -> list[dict]:
 
 
 # ─── 端到端流水线驱动 ─────────────────────────────────────────────────────
-def run_pipeline(case: dict, out_dir: Path) -> tuple[str | None, dict | None, str]:
+def run_pipeline(case: dict, out_dir: Path, *,
+                 use_xlsx: bool) -> tuple[str | None, dict | None, str]:
+    tag = f"{case['name']}/{'teacher' if use_xlsx else 'auto'}"
+
     def log(msg: str):
-        print(f"  [{case['name']}] {msg}", flush=True)
+        print(f"  [{tag}] {msg}", flush=True)
 
     # 1. 上传照片
     files = [("files", (p.name, p.open("rb"), "application/octet-stream"))
@@ -88,8 +91,8 @@ def run_pipeline(case: dict, out_dir: Path) -> tuple[str | None, dict | None, st
     if d.get("status") != "ready_confirm":
         return aid, None, f"detect_failed: {d.get('error', '')[:200]}"
 
-    # 3. 上传小分（若有）
-    if case["xlsx"]:
+    # 3. 上传小分（仅 teacher 场景且 xlsx 可用）
+    if use_xlsx and case["xlsx"]:
         log(f"上传小分表 {case['xlsx'].name}")
         with case["xlsx"].open("rb") as f:
             sr = requests.post(
@@ -220,40 +223,50 @@ def main():
         print(f" - {c['name']}: {len(c['photos'])} 张照片 + "
               f"{'小分' if c['xlsx'] else '无小分'}")
 
+    # 每份数据跑两场景：teacher（带小分表）+ auto（无小分→系统自动判分）
+    # 若 case 无 xlsx，跳过 teacher 场景
     summary = []
     for c in cases:
-        print(f"\n=== ▶ {c['name']} ===")
-        d = run_dir / c["name"]
-        d.mkdir(exist_ok=True)
-        t0 = time.time()
-        aid, report, status = run_pipeline(c, d)
-        elapsed = int(time.time() - t0)
-        print(f"  耗时 {elapsed}s")
-        au = audit_report(report) if status == "done" else {
-            "overall_grade": "D",
-            "issues": [{"severity": "P0", "area": "流水线",
-                        "detail": status, "evidence": ""}],
-            "summary": status,
-        }
-        (d / "audit.json").write_text(
-            json.dumps(au, ensure_ascii=False, indent=2), encoding="utf-8")
-        summary.append({
-            "case": c["name"], "aid": aid, "status": status,
-            "elapsed_s": elapsed, "grade": au.get("overall_grade"),
-            "P0": sum(1 for i in au.get("issues", []) if i.get("severity") == "P0"),
-            "P1": sum(1 for i in au.get("issues", []) if i.get("severity") == "P1"),
-            "P2": sum(1 for i in au.get("issues", []) if i.get("severity") == "P2"),
-            "summary": au.get("summary", ""),
-        })
+        scenarios = []
+        if c["xlsx"]:
+            scenarios.append("teacher")
+        scenarios.append("auto")
+        for sc in scenarios:
+            print(f"\n=== ▶ {c['name']} / {sc} ===")
+            d = run_dir / c["name"] / sc
+            d.mkdir(parents=True, exist_ok=True)
+            t0 = time.time()
+            aid, report, status = run_pipeline(
+                c, d, use_xlsx=(sc == "teacher"))
+            elapsed = int(time.time() - t0)
+            print(f"  耗时 {elapsed}s")
+            au = audit_report(report) if status == "done" else {
+                "overall_grade": "D",
+                "issues": [{"severity": "P0", "area": "流水线",
+                            "detail": status, "evidence": ""}],
+                "summary": status,
+            }
+            (d / "audit.json").write_text(
+                json.dumps(au, ensure_ascii=False, indent=2), encoding="utf-8")
+            summary.append({
+                "case": c["name"], "scenario": sc, "aid": aid,
+                "status": status, "elapsed_s": elapsed,
+                "grade": au.get("overall_grade"),
+                "P0": sum(1 for i in au.get("issues", []) if i.get("severity") == "P0"),
+                "P1": sum(1 for i in au.get("issues", []) if i.get("severity") == "P1"),
+                "P2": sum(1 for i in au.get("issues", []) if i.get("severity") == "P2"),
+                "summary": au.get("summary", ""),
+            })
 
-    print("\n" + "=" * 70 + "\n汇总")
-    print(f"{'case':<24} {'状态':<8} {'耗时':<7} {'分级':<5} {'P0':<3} {'P1':<3} {'P2':<3}  评")
+    print("\n" + "=" * 78 + "\n汇总")
+    print(f"{'case':<22}{'场景':<8}{'状态':<8}{'耗时':<7}{'分级':<5}{'P0':<3}{'P1':<3}{'P2':<3}  评")
     for s in summary:
-        print(f"{s['case']:<24} {s['status']:<8} {s['elapsed_s']:>4}s   "
-              f"{s['grade']:<5} {s['P0']:<3} {s['P1']:<3} {s['P2']:<3}  {s['summary'][:60]}")
+        print(f"{s['case']:<22}{s['scenario']:<8}{s['status']:<8}"
+              f"{s['elapsed_s']:>4}s   {s['grade']:<5}"
+              f"{s['P0']:<3}{s['P1']:<3}{s['P2']:<3}  {s['summary'][:54]}")
     (run_dir / "_summary.json").write_text(
         json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"\n详情见 {run_dir}/<case>/audit.json")
+    print(f"\n详情见 {run_dir}/<case>/<scenario>/audit.json")
 
 
 if __name__ == "__main__":
