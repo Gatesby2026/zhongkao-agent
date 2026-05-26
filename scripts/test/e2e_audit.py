@@ -27,14 +27,20 @@ import requests
 from requests.exceptions import RequestException
 
 
-def _req(method: str, url: str, **kw):
-    """HTTP 调用 + 简单重试（SSL/超时/网络抖动）。"""
+def _req(method: str, url: str, *, expect_json: bool = False, **kw):
+    """HTTP 调用 + 简单重试。
+
+    expect_json=True：同步检查响应能 json.loads；失败也算瞬时错走重试
+                     （Aliyun nginx 偶发 502/空 body，json() 否则会炸）。
+    """
     last = None
     for i in range(5):
         try:
             r = requests.request(method, url, **kw)
+            if expect_json:
+                _ = r.json()                 # 触发 JSONDecodeError 入重试
             return r
-        except RequestException as e:
+        except (RequestException, json.JSONDecodeError) as e:
             last = e
             time.sleep(1 + i * 2)
     raise last
@@ -86,7 +92,7 @@ def run_pipeline(case: dict, out_dir: Path, *,
              for p in case["photos"]]
     try:
         log(f"上传 {len(files)} 张照片 …")
-        r = _post(f"{API}/api/analyses", files=files, timeout=180).json()
+        r = _post(f"{API}/api/analyses", files=files, timeout=180, expect_json=True).json()
     finally:
         for _, (_, fh, _) in files:
             try: fh.close()
@@ -99,7 +105,7 @@ def run_pipeline(case: dict, out_dir: Path, *,
     # 2. 轮询 detect
     d = {}
     for _ in range(60):
-        d = _get(f"{API}/api/analyses/{aid}/detect", timeout=30).json()
+        d = _get(f"{API}/api/analyses/{aid}/detect", timeout=30, expect_json=True).json()
         if d.get("status") in ("ready_confirm", "failed"):
             break
         time.sleep(3)
@@ -117,7 +123,7 @@ def run_pipeline(case: dict, out_dir: Path, *,
                 f"{API}/api/analyses/{aid}/scores",
                 files={"file": (case["xlsx"].name, f,
                                 "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")},
-                timeout=60).json()
+                timeout=60, expect_json=True).json()
         log(f"  小分: {sr.get('exam_total')}  {sr.get('n_questions')}题")
 
     # 4. /start
@@ -128,7 +134,7 @@ def run_pipeline(case: dict, out_dir: Path, *,
     s = {}
     last_stage = None
     for _ in range(150):  # ~15min 上限
-        s = _get(f"{API}/api/analyses/{aid}/status", timeout=30).json()
+        s = _get(f"{API}/api/analyses/{aid}/status", timeout=30, expect_json=True).json()
         if (s.get("stage"), s.get("stage_name")) != last_stage:
             last_stage = (s.get("stage"), s.get("stage_name"))
             log(f"  stage {s.get('stage')} {s.get('stage_name', '')}")
@@ -142,7 +148,7 @@ def run_pipeline(case: dict, out_dir: Path, *,
         return aid, None, f"pipeline_failed: {s.get('error', '')[:200]}"
 
     # 6. 拉报告
-    rj = _get(f"{API}/api/analyses/{aid}/report", timeout=60).json()
+    rj = _get(f"{API}/api/analyses/{aid}/report", timeout=60, expect_json=True).json()
     (out_dir / "report.json").write_text(
         json.dumps(rj, ensure_ascii=False, indent=2), encoding="utf-8")
     pdf = _get(f"{API}/api/analyses/{aid}/report.pdf", timeout=60)
@@ -152,37 +158,79 @@ def run_pipeline(case: dict, out_dir: Path, *,
     return aid, rj, "done"
 
 
+# ─── 机械事实预校验（Python 准确算好，省得审核员 LLM 出错）─────────────
+def mechanical_facts(report: dict) -> dict:
+    """先把"会算的事"用 Python 算准——审核员只看结论，不再自己验算。
+    上一轮跑发现 qwen-max-latest 在 排序/求和/计数 上反复误判。"""
+    wq = report.get("wrong_questions", []) or []
+    n_lost = report.get("n_lost", 0)
+    lost_total = float(report.get("lost_total", 0) or 0)
+    sum_lost = round(sum(float(w.get("lost") or 0) for w in wq), 2)
+    qids = []
+    for w in wq:
+        m = re.search(r"\d+", w.get("qid", "") or "")
+        if m: qids.append(int(m.group(0)))
+    modules = report.get("modules", []) or []
+    mod_names = [m.get("name", "") for m in modules]
+    mod_has_english = any(re.search(r"[A-Za-z]", n or "") for n in mod_names)
+    mod_lost_qs_sum = sum(len(m.get("lost_qs") or []) for m in modules)
+    full_score = float(report.get("full_score", 0) or 0)
+    total_scored = float(report.get("total_scored", 0) or 0)
+    rate = float(report.get("rate", 0) or 0)
+    rate_ok = (abs(rate * full_score - total_scored) < 0.5) if full_score else False
+    # 乱码/异常字符扫描
+    full_text = json.dumps(report, ensure_ascii=False)
+    bad_chars = []
+    for ch in ("☒", "□", "▢"):
+        if ch in full_text: bad_chars.append(ch)
+    return {
+        "n_lost_matches_len_wq": n_lost == len(wq),
+        "n_lost": n_lost, "len_wq": len(wq),
+        "lost_total_matches_sum_wq_lost": abs(lost_total - sum_lost) < 0.05,
+        "lost_total": lost_total, "sum_wq_lost": sum_lost,
+        "qids_ascending": qids == sorted(qids),
+        "qid_sequence": qids,
+        "module_names": mod_names,
+        "modules_all_chinese": not mod_has_english,
+        "modules_cover_n_lost": mod_lost_qs_sum == n_lost,
+        "modules_lost_qs_total": mod_lost_qs_sum,
+        "rate_consistent": rate_ok,
+        "rate": rate, "total_scored": total_scored, "full_score": full_score,
+        "tofu_chars_found": bad_chars,
+        "score_source": report.get("score_source"),
+        "subject": report.get("subject"),
+        "essay_questions": [w["qid"] for w in wq
+                            if "作文" in (w.get("type_cn") or "")],
+    }
+
+
 # ─── 报告质量审核（qwen-max-latest）──────────────────────────────────────
-AUDIT_PROMPT = """你是一位资深中学教师 + 产品质量评审员，正在审核一份学生学情分析报告 JSON。
-逐项检查"明显问题"，按 P0/P1/P2 分级输出（P0=严重，数据自相矛盾/乱码/字段缺失 ；
-P1=质量差但可读，如空话/排序错/英文键泄露 ； P2=改进建议）。
+AUDIT_PROMPT = """你是中学教学产品的内容质量评审员。下面给你一份学生学情分析报告 JSON，
+**机械算术 / 排序 / 字段计数 已由 Python 预先校验通过**（见 mechanical_facts 块），
+**不要再质疑或重复校验这些**——你的工作是判**内容质量**。
 
-# 检查清单
-1. **数据自洽**：
-   - total_scored 是否 ≈ sum(wrong_questions[i].score - wrong_questions[i].lost) + 满分题的 score
-   - lost_total 是否 ≈ sum(wrong_questions[i].lost)
-   - n_lost 是否等于 len(wrong_questions)
-   - rate ≈ total_scored / full_score
-2. **模块映射**：modules[].name 必须**中文**——出现 "mechanics"/"writing"/"reading" 等
-   英文键 = P0；非"其它"模块应覆盖该卷绝大多数题
-3. **失分题列表**：wrong_questions 必须按 qid 升序（Q\\d+ 抽数字）；
-   每条 type_cn/module_cn 非空；why_wrong/fix 不应是"仔细审题/注意单位"这种通用空话
-4. **科目特异**：subject==chinese/english 且题型含"作文"应有合理处理
-   （AI 估分或满分占位 + 待教师复核标记，不应估出明显离谱的分）
-5. **乱码**：任何字段含 ☒/□/方框/连续 \\\\ 等 = P0
-6. **总览数字范围**：rate 应在 0-1，得分率 = 百分比；total_scored ≤ full_score
+按 P0/P1/P2 输出问题：
+  P0 = 真实错误：乱码（tofu_chars_found 非空才报）、明显事实错（如分数 >100 / 模块名是英文 / 作文 AI 估 80%+ 满分却没标待复核）
+  P1 = 内容质量：why_wrong / fix 空话（"仔细审题"、"注意单位"、"审题漏条件"）；
+       LaTeX 公式不完整或定界符错；表述冗长偏题；作文兜底逻辑可疑
+  P2 = 改进建议：表述可更精准 / 排版可更易读 等
 
-# 输出格式（严格 JSON，无 markdown 围栏）
+# **不要再报的（已 Python 验过；如 mechanical_facts 显示 False 才可报）**
+- "wrong_questions 未升序"——qids_ascending=True 就不要报
+- "n_lost 与 len(wq) 不一致"——n_lost_matches_len_wq=True 就不要报
+- "lost_total ≠ sum"——lost_total_matches_sum_wq_lost=True 就不要报
+- "total_scored 与公式不符"——你看不到满分题，别推断；rate_consistent 已校验
+- "模块英文键"——modules_all_chinese=True 就不要报
+
+输出严格 JSON：
 {
-  "overall_grade": "A=可发给用户 / B=有瑕疵但可读 / C=多处问题需修 / D=不可用",
+  "overall_grade": "A 可发给用户 / B 有内容瑕疵 / C 多处问题需修 / D 不可用",
   "issues": [
-    {"severity": "P0|P1|P2", "area": "数据自洽/模块/失分题/科目特异/乱码/总览",
-     "detail": "问题描述", "evidence": "字段名或数值"}
+    {"severity": "P0|P1|P2", "area": "内容/作文/LaTeX/乱码/其它",
+     "detail": "问题描述", "evidence": "具体字段或值"}
   ],
   "summary": "一句话总评"
 }
-
-# 报告 JSON
 """
 
 
@@ -207,7 +255,12 @@ def audit_report(report: dict | None) -> dict:
                 "summary": "环境变量缺失"}
     client = openai.OpenAI(api_key=key,
                            base_url="https://dashscope.aliyuncs.com/compatible-mode/v1")
-    payload = AUDIT_PROMPT + json.dumps(report, ensure_ascii=False, indent=2)[:30000]
+    facts = mechanical_facts(report)
+    payload = (AUDIT_PROMPT
+               + "\n# mechanical_facts（Python 预校验，结论可信）\n"
+               + json.dumps(facts, ensure_ascii=False, indent=2)
+               + "\n\n# 报告 JSON\n"
+               + json.dumps(report, ensure_ascii=False, indent=2)[:28000])
     resp = client.chat.completions.create(
         model="qwen-max-latest",
         messages=[{"role": "user", "content": payload}],
