@@ -571,9 +571,14 @@ _SCORE_RE = re.compile(r"[\(（]\s*(?:共\s*)?(\d+(?:\.\d+)?)\s*分(?:[。\.，,
 #   A
 # → {2:B, 3:A}（dongcheng 区）
 def _parse_answer_table(answer_text: str) -> dict[int, str]:
-    """OCR 把表格按列读成纵向时的兜底解析。返回 {n: letter}。"""
+    """OCR 把表格按列读成纵向时的兜底解析。返回 {n: letter_or_judge}。
+    **道法适配**：判断题答案是 √/X/对/错/正确/错误，同样按表格抽取。
+    """
     out: dict[int, str] = {}
     lines = [l.rstrip() for l in answer_text.split("\n")]
+    # 判断 / 选择 答案候选格式
+    judge_re = re.compile(r"^\s*([√✓XxХ×对错]|正确|错误)\s*$")
+    choice_re = re.compile(r"^\s*([A-D])\s*$")
     i = 0
     while i < len(lines):
         if lines[i].strip() == "题号":
@@ -581,14 +586,25 @@ def _parse_answer_table(answer_text: str) -> dict[int, str]:
             nums: list[int] = []
             while j < len(lines) and lines[j].strip().isdigit():
                 nums.append(int(lines[j].strip())); j += 1
-            if j < len(lines) and lines[j].strip() in ("答案", "答案:"):
+            if j < len(lines) and lines[j].strip() in ("答案", "答案:", "答案:"):
                 k = j + 1
                 ans: list[str] = []
-                while k < len(lines) and re.fullmatch(r"\s*[A-D]\s*", lines[k]):
-                    ans.append(lines[k].strip()); k += 1
+                # **关键改**：放宽答案 token — 既允许 A-D 也允许 √/X/正确 等
+                while k < len(lines):
+                    m_j = judge_re.match(lines[k])
+                    m_c = choice_re.match(lines[k])
+                    if m_j or m_c:
+                        ans.append((m_j or m_c).group(1))
+                        k += 1
+                    else:
+                        break
                 if nums and len(nums) == len(ans):
                     for n, a in zip(nums, ans):
-                        if 1 <= n <= 28: out[n] = a
+                        if 1 <= n <= 28:
+                            # √/X 归一化为"正确/错误"
+                            out[n] = {"√": "正确", "✓": "正确", "对": "正确",
+                                       "X": "错误", "x": "错误", "Х": "错误",
+                                       "×": "错误", "错": "错误"}.get(a, a)
             i = j
         i += 1
     return out
@@ -1088,7 +1104,7 @@ def parse_paper(src: Path, out_dir: Path, force=False) -> dict:
     result = {
         "subject": "politics",
         "full_score": full_score,
-        "duration_minutes": 150,  # 北京中考语文标准时长（下游 enrich 透传到 yaml）
+        "duration_minutes": 70,  # 道法 70 分钟
         "passages": passages,
         "questions": questions,
         "answers": answers,
@@ -1367,7 +1383,7 @@ def _write_yaml(result: dict, src: Path, out_dir: Path) -> None:
         "district": (region_cn + "区") if region_cn else "",
         "exam_type": type_cn, "subject": "politics",
         "full_score": result.get("full_score"),
-        "duration_minutes": 150,
+        "duration_minutes": 70,
         "total_questions": len(yaml_questions),
         "passages": result.get("passages", []),
         "questions": yaml_questions,

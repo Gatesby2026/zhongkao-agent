@@ -8,10 +8,10 @@ year: null
 district: ''
 exam_type: 真题
 subject: chinese
-full_score: 99.0
+full_score: 100.0
 duration_minutes: 150
 total_questions: 27
-structure: 7单选(14.0分) + 6主观填空(12.0分) + 4默写(8.0分) + 1名著阅读(5.0分) + 8现代文阅读(20.0分) + 1作文(40分)
+structure: 7单选(14.0分) + 6主观填空(12.0分) + 4默写(8.0分) + 1名著阅读(5.0分) + 8现代文阅读(21.0分) + 1作文(40分)
 passages:
 - id: base_资料一
   type: base
@@ -255,7 +255,7 @@ questions:
   answer: ''
   solution: 鲁迅
   knowledge_points:
-  - 名著阅读-作者
+  - 名著阅读
   module: reading
   difficulty: 基础
   recommended_for:
@@ -277,7 +277,7 @@ questions:
     ，语句通顺。超过50字扣1分。)'
   knowledge_points:
   - 词语运用
-  - 连贯
+  - 启示感悟
   module: writing
   difficulty: 中等
   recommended_for:
@@ -344,7 +344,7 @@ questions:
 
     (微信号:)，'
   knowledge_points:
-  - 古诗文默写
+  - 默写
   module: classical
   difficulty: 基础
   recommended_for:
@@ -469,7 +469,7 @@ questions:
     ③以不能践行道义为耻'
   knowledge_points:
   - 默写
-  - 文言文理解
+  - 古诗文内容理解
   module: classical
   difficulty: 中等
   recommended_for:
@@ -606,6 +606,7 @@ questions:
     ww.'
   knowledge_points:
   - 信息提取/段落梳理
+  - 记叙文阅读
   module: reading
   difficulty: 中等
   recommended_for:
@@ -617,7 +618,7 @@ questions:
   passage_id: narrative
 - id: 21
   type: 现代文阅读
-  score: 2.0
+  score: 3
   stem: 文中第②段画波浪线句“那些书里的故事，如今又从书里长了出来”，结合全文内容，说说“从书里长出来”的是什么。
   answer: ''
   solution: '①是小说《山乡巨变》中描绘的文学场景，在现实中转化为了作家书屋、珍藏馆等
@@ -740,7 +741,7 @@ questions:
   answer: B
   solution: B
   knowledge_points:
-  - 信息提取/段落梳理
+  - 信息筛选
   module: reading
   difficulty: 中等
   recommended_for:

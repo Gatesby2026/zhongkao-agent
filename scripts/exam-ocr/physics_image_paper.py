@@ -1497,6 +1497,7 @@ def main():
         "exam": meta["exam"],
         "page_count": n_pages,
         "full_score": full_score,
+        "duration_minutes": 70,  # 北京物理 70 分钟（下游 enrich 透传到 yaml）
         "questions": out_questions,
         "answers": answers,
     }

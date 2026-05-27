@@ -8,7 +8,7 @@ district: ''
 exam_type: 二模
 subject: physics
 full_score: 70
-duration_minutes: null
+duration_minutes: 70
 total_questions: 26
 structure: 12单选(24分) + 3多选(6分) + 8实验探究(28分) + 1作文(4分) + 2计算题(8分)
 passages: []
@@ -296,7 +296,7 @@ questions:
   solution: ''
   knowledge_points:
   - 电与磁
-  - 磁场
+  - 磁场对通电导体的作用
   module: electricity
   difficulty: 基础
   recommended_for:
@@ -363,8 +363,7 @@ questions:
 
     (2) 0.5 (4分)'
   knowledge_points:
-  - 实验方法
-  - 数据处理
+  - 实验方法/数据处理
   - 弹簧测力计的使用
   - 电流表的读数
   module: experiments
@@ -513,8 +512,8 @@ questions:
 
     (2)凹透镜 大于 (3分)'
   knowledge_points:
-  - 凸透镜成像
-  - 实验方法
+  - 凸透镜成像规律
+  - 实验方法与数据处理
   module: experiments
   difficulty: 中等
   recommended_for:
@@ -573,8 +572,7 @@ questions:
     考在线'
   knowledge_points:
   - 凸透镜成像
-  - 实验方法
-  - 数据处理
+  - 实验方法/数据处理
   module: experiments
   difficulty: 中等
   recommended_for:
@@ -595,6 +593,7 @@ questions:
   knowledge_points:
   - 电功率
   - 欧姆定律
+  - 实验方法
   module: electricity
   difficulty: 中等
   recommended_for:
@@ -633,7 +632,7 @@ questions:
 
     (3) 5x106 密度 (4分)'
   knowledge_points:
-  - 物质的性质
+  - 材料的物理性质
   - 实验方法
   - 比表面积的概念
   module: electricity
