@@ -616,15 +616,18 @@ def _parse_answers(answer_text: str) -> list[dict]:
     选择题 sol = "A"，主观题 sol = 大段文字。
     correct 字段仅当 sol 是 A-D 时填，其余为空（主观题无 correct）。
     """
-    # 0. 表格选择题答案（dongcheng）
+    # 0. 表格选择题答案（道法 判断/选择 表格 + dongcheng 语文表格）
     table_choices = _parse_answer_table(answer_text)
     # 找所有 N.答案 头位置 + 多种 fallback
     heads_main = list(_ANSWER_HEAD_RE.finditer(answer_text))
     heads_compact = list(_ANSWER_COMPACT_RE.finditer(answer_text))
     heads_scored = list(_ANSWER_SCORED_RE.finditer(answer_text))
     heads_plain = list(_ANSWER_PLAIN_RE.finditer(answer_text))
+    # **道法 P0**：判断/选择题答案在 table 中已抽到 → 这些题号不让 plain RE 兜底
+    # （a_text 末尾 basic OCR 含 page-01 考生须知 "1.本试卷..." 会被 plain RE 误吸进 Q1 sol）
+    table_qids = set(table_choices.keys())
     # 合并：去重，按位置排序。优先级 main > scored > compact > plain
-    seen_qids: set[int] = set()
+    seen_qids: set[int] = set(table_qids)  # 表格题号优先 占位，跳过所有 RE head
     heads: list[re.Match] = []
     for hlist in (heads_main, heads_scored, heads_compact, heads_plain):
         for h in hlist:
@@ -633,12 +636,20 @@ def _parse_answers(answer_text: str) -> list[dict]:
             if not (1 <= qid <= 28): continue
             heads.append(h); seen_qids.add(qid)
     heads.sort(key=lambda h: h.start())
+    # **boundary anchor**：含所有 RE 的 head（不去重），用于切 tail
+    # 解决 dual-OCR head 来自 basic 末尾时 body 吞所有后续题答案的 bug
+    all_boundary = sorted(
+        set(h.start() for hlist in (heads_main, heads_scored, heads_compact, heads_plain)
+            for h in hlist if 1 <= int(h.group(1)) <= 28),
+    )
     out: list[dict] = []
     for i, m in enumerate(heads):
         n = int(m.group(1))
-        # body = 首行剩余内容(group 2) + 后续行直到下一题号 OR 下一大题
+        # body = 首行剩余内容 + 后续行直到任何题号 anchor OR 下一大题
         first_line_rest = (m.group(2) or "").strip()
-        next_start = heads[i+1].start() if i+1 < len(heads) else len(answer_text)
+        next_boundary = next((b for b in all_boundary if b > m.end()), len(answer_text))
+        next_start = min(next_boundary,
+                          heads[i+1].start() if i+1 < len(heads) else len(answer_text))
         tail = answer_text[m.end():next_start]
         # **关键**：tail 含下一大题标题（"二、古诗文"）时截断，避免 bleed
         sec_m = _BIG_SECTION_RE.search(tail)
@@ -1101,8 +1112,24 @@ def parse_paper(src: Path, out_dir: Path, force=False) -> dict:
     else:
         print(f"[politics_image_paper]   （未触发自动裁图）", flush=True)
 
+    # **元数据从 slug 反推**（R2 P0：politics yaml year=null/district=''/exam_type=真题）
+    m_slug = re.match(r"(\d{4})-(.+?)-(\w+)", slug)
+    year = int(m_slug.group(1)) if m_slug else None
+    region_slug = m_slug.group(2) if m_slug else ""
+    typ_slug = m_slug.group(3) if m_slug else ""
+    region_cn = {"chaoyang":"朝阳","haidian":"海淀","mentougou":"门头沟",
+                  "fengtai":"丰台","xicheng":"西城","dongcheng":"东城",
+                  "shijingshan":"石景山","tongzhou":"通州","shunyi":"顺义",
+                  "changping":"昌平","daxing":"大兴","fangshan":"房山",
+                  "pinggu":"平谷","huairou":"怀柔","miyun":"密云",
+                  "yanqing":"延庆","yanshan":"燕山"}.get(region_slug, region_slug)
+    type_cn = {"yi":"一模","er":"二模","san":"三模","zhen":"真题"}.get(typ_slug, "一模")
+
     result = {
         "subject": "politics",
+        "year": year,
+        "district": (region_cn + "区") if region_cn else "",
+        "exam_type": type_cn,
         "full_score": full_score,
         "duration_minutes": 70,  # 道法 70 分钟
         "passages": passages,
@@ -1207,19 +1234,19 @@ def _apply_patches_to_result(patches: dict, result: dict) -> int:
             continue
         if target is None: continue
         q = target
-        if patch.get("stem") is not None:
+        if "stem" in patch:
             q["stem"] = patch["stem"]; n_applied += 1
         if patch.get("stem_append"):
             q["stem"] = q.get("stem","") + patch["stem_append"]; n_applied += 1
-        if patch.get("options") is not None:
+        if "options" in patch:
             q["options"] = patch["options"]; n_applied += 1
-        if patch.get("solution") is not None:
+        if "solution" in patch:
             q["solution"] = patch["solution"]; n_applied += 1
-        if patch.get("answer") is not None:
+        if "answer" in patch:
             q["answer"] = patch["answer"]; n_applied += 1
         if patch.get("type"):
             q["type"] = patch["type"]; n_applied += 1
-        if patch.get("score") is not None:
+        if "score" in patch:
             q["score"] = patch["score"]; n_applied += 1
     # 重算 full_score
     if n_applied:
@@ -1275,19 +1302,19 @@ def _apply_patches(patches: dict, result: dict, yaml_questions: list[dict]) -> i
             continue
         if target is None: continue
         q = target
-        if patch.get("stem") is not None:
+        if "stem" in patch:
             q["stem"] = patch["stem"]; n += 1
         if patch.get("stem_append"):
             q["stem"] = q.get("stem","") + patch["stem_append"]; n += 1
-        if patch.get("options") is not None:
+        if "options" in patch:
             q["options"] = patch["options"]; n += 1
-        if patch.get("solution") is not None:
+        if "solution" in patch:
             q["solution"] = patch["solution"]; n += 1
-        if patch.get("answer") is not None:
+        if "answer" in patch:
             q["answer"] = patch["answer"]; n += 1
         if patch.get("type"):
             q["type"] = patch["type"]; n += 1
-        if patch.get("score") is not None:
+        if "score" in patch:
             q["score"] = patch["score"]; n += 1
     return n
 

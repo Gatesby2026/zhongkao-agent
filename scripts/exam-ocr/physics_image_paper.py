@@ -1484,13 +1484,32 @@ def main():
     if full_score is None:
         full_score = sum(q.get("score", 0) for q in questions) or None
 
-    # 6) 输出 final.json（剥离内部 _ 字段）
+    # 6) 输出 final.json（剥离内部 _ 字段 + 修科学计数法上标）
     meta = _parse_exam_meta(src)
+
+    # **科学计数法 OCR 修**：OCR 把 "1.4×10^7 kg" 读成 "1.4x107kg" / "5x106" 等
+    # 上标完全丢。R2 报告 chaoyang Q15/Q24/Q26 共 12+ 处。
+    # 规则：`\d+(?:\.\d+)? [xX×] 10 \d` → `... \times 10^{N}`
+    _SCI_NOTATION_RE = re.compile(r"(\d+(?:\.\d+)?)\s*[xX×]\s*10(\d+)")
+    def _fix_sci(text: str) -> str:
+        if not text: return text
+        return _SCI_NOTATION_RE.sub(r"$\1 \\times 10^{\2}$", text)
+
     out_questions = []
     for q in questions:
         item = {k: v for k, v in q.items() if not k.startswith("_")}
         item["id"] = f"{a.subject}-q{q['number']:02d}"
+        for fld in ("stem", "solution"):
+            if isinstance(item.get(fld), str):
+                item[fld] = _fix_sci(item[fld])
+        if isinstance(item.get("options"), dict):
+            item["options"] = {k: _fix_sci(v) if isinstance(v, str) else v
+                                for k, v in item["options"].items()}
         out_questions.append(item)
+    # **关键**：answers[].solution 也修（enrich 真正读这里，questions 字段它不读）
+    for a_dict in answers:
+        if isinstance(a_dict.get("solution"), str):
+            a_dict["solution"] = _fix_sci(a_dict["solution"])
 
     final = {
         "subject": meta["subject"],
