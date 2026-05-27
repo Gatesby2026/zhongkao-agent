@@ -78,7 +78,7 @@ def get_detector() -> LayoutDetector:
 
 if __name__ == "__main__":
     # CLI：python3 paddle_layout.py <image.png> → stdout JSON
-    # 给 tencent_paper.py 的缺图兜底用 subprocess 调用本脚本（需 .venv-paddle）
+    # 给 physics_image_paper.py 的缺图兜底用 subprocess 调用本脚本（需 .venv-paddle）
     import sys
     import json as _json
     if len(sys.argv) < 2:

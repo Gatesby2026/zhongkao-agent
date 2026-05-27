@@ -36,7 +36,7 @@ TYPE=${3:-er}
 # 学科 → 脚本映射
 case "$SUBJECT" in
     chinese)  SCRIPT="scripts/exam-ocr/chinese_image_paper.py" ;;
-    physics)  SCRIPT="scripts/exam-ocr/tencent_paper.py" ;;
+    physics)  SCRIPT="scripts/exam-ocr/physics_image_paper.py" ;;
     politics) SCRIPT="scripts/exam-ocr/politics_image_paper.py" ;;
     *) echo "❌ 不支持 subject=$SUBJECT (仅 chinese/physics/politics)"; exit 1 ;;
 esac

@@ -6,7 +6,7 @@
 状态机 QUARANTINE / INCOMPLETE / NEEDS_REVIEW / DONE-auto；产出
 <staging>/status.json 供 batch 聚合。
 
-S1 = scripts/exam-ocr/tencent_paper.py（腾讯 QuestionSplitOCR + GeneralAccurate
+S1 = scripts/exam-ocr/physics_image_paper.py（腾讯 QuestionSplitOCR + GeneralAccurate
 OCR + RecognizeTableAccurateOCR + paddle layout 五层 fallback；细节见
 SKILL skill_exam_image_to_kb_yaml.md「v2 腾讯路线」节）。
 
@@ -176,7 +176,7 @@ def main() -> None:
 
     # ---- S1 腾讯切题（题号+stem+options+figures+answers+表格 markdown 一次出）
     if start <= 0 and not a.dry_run:
-        cmd = [PY, str(SELF_DIR / "tencent_paper.py"), str(src),
+        cmd = [PY, str(SELF_DIR / "physics_image_paper.py"), str(src),
                "--subject", a.subject]
         if a.force:
             cmd.append("--force")
@@ -184,7 +184,7 @@ def main() -> None:
         st["steps"]["s1"] = {"rc": rc, "tail": out.strip().splitlines()[-3:]}
         if rc != 0 or not (staging / "structured-cloud" / "final.json").exists():
             st["state"] = "INCOMPLETE"
-            st["reasons"].append(f"S1 tencent_paper 失败 rc={rc}")
+            st["reasons"].append(f"S1 physics_image_paper 失败 rc={rc}")
             _write_status(staging, st); print(json.dumps(st, ensure_ascii=False))
             sys.exit(3)
 

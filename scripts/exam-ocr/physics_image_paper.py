@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""tencent_paper — 用腾讯云 QuestionSplitOCR 单 API 替换整套 OCR+layout+图分配。
+"""physics_image_paper — 用腾讯云 QuestionSplitOCR 单 API 替换整套 OCR+layout+图分配。
 
 设计与决策依据见 docs/architecture/KB-LAYOUT 与 SKILL 「已决结论」。
 
@@ -25,7 +25,7 @@ API 返回的每题对象自带：
 
 用法：
   TENCENT_OCR_SECRET_ID=... TENCENT_OCR_SECRET_KEY=... \\
-    python3 scripts/exam-ocr/tencent_paper.py \\
+    python3 scripts/exam-ocr/physics_image_paper.py \\
       knowledge-original/<series>/<round>/<region>/<subject> --subject physics
   [--force]   清 API 缓存重跑
   [--no-crop] 跳过裁图（只产 final.json，调试用）
@@ -770,7 +770,7 @@ def _fill_gaps_via_general_ocr(api_results: dict[str, dict],
     missing = sorted(expected - set(got_numbers))
     if not missing:
         return []
-    print(f"[tencent_paper] 题号缺口 {missing}，用通用 OCR 补抽", flush=True)
+    print(f"[physics_image_paper] 题号缺口 {missing}，用通用 OCR 补抽", flush=True)
 
     # 猜哪页含 missing：腾讯每页第一个有题号的块的 page 是已知 anchor
     # missing 比"页 P 的最小题号"小 → 应在 page < P 的某页
@@ -1343,7 +1343,7 @@ def main():
     pages = sorted(images_dir.glob("page-*.png"))
     if not pages:
         sys.exit(f"无 page-*.png：{images_dir}")
-    print(f"[tencent_paper] {len(pages)} 页 → {out_dir}", flush=True)
+    print(f"[physics_image_paper] {len(pages)} 页 → {out_dir}", flush=True)
 
     # 1) 每页调 API（带缓存）
     api_results: dict[str, dict] = {}
@@ -1353,7 +1353,7 @@ def main():
         rl_n = len((api_results[p.name].get("QuestionInfo") or [{}])[0]
                    .get("ResultList", []))
         print(f"  {p.name}: {rl_n} 块", flush=True)
-    print(f"[tencent_paper] API 总耗时 {time.time()-t0:.1f}s", flush=True)
+    print(f"[physics_image_paper] API 总耗时 {time.time()-t0:.1f}s", flush=True)
 
     # 2) 第一遍组装识别答案页
     _, _, _, answer_pages = _assemble(api_results)
@@ -1400,7 +1400,7 @@ def main():
             if not entry["correct"]:
                 entry["correct"] = v
         answers = sorted(answers_by_num.values(), key=lambda x: x["number"])
-        print(f"[tencent_paper] qwen-vl 兜底补 {len(qd)} 个选择题答案，"
+        print(f"[physics_image_paper] qwen-vl 兜底补 {len(qd)} 个选择题答案，"
               f"correct 总数 {sum(1 for a in answers if a['correct'])}",
               flush=True)
 
@@ -1409,7 +1409,7 @@ def main():
                                 n_pages=len(pages),
                                 answer_pages=answer_pages, force=a.force)
     if rf:
-        print(f"[tencent_paper] 通用 OCR 补 {rf} 题 stem/子小题", flush=True)
+        print(f"[physics_image_paper] 通用 OCR 补 {rf} 题 stem/子小题", flush=True)
 
     # 4b) 题号缺口 fallback：通用 OCR 补抽（如 chaoyang page-01 漏切）
     got = [q["number"] for q in questions if q.get("number", 0) > 0]
@@ -1426,28 +1426,28 @@ def main():
                 q.setdefault("_stem_raw", q["stem"])
                 questions.append(q)
         questions.sort(key=lambda x: x["number"])
-        print(f"[tencent_paper] fallback 补抽 {len(fb)} 题 → 总 {len(questions)} 题",
+        print(f"[physics_image_paper] fallback 补抽 {len(fb)} 题 → 总 {len(questions)} 题",
               flush=True)
-    print(f"[tencent_paper] 解析出 {len(questions)} 题 / {len(answers)} 答案 "
+    print(f"[physics_image_paper] 解析出 {len(questions)} 题 / {len(answers)} 答案 "
           f"(其中 correct 非空 {sum(1 for a in answers if a['correct'])})",
           flush=True)
 
     # 4b-2) 含表题：表格 OCR 成 markdown 追加到 stem 末尾（与图剥离）
     rt = _refill_table_data(questions, cache_dir, images_dir, force=a.force)
     if rt:
-        print(f"[tencent_paper] OCR 表格补 {rt} 题 stem", flush=True)
+        print(f"[physics_image_paper] OCR 表格补 {rt} 题 stem", flush=True)
 
     # 4c-1) 图归属重分配：跨页/相邻题 figs 按 stem refs 数全局再分配
     #     场景：Q4 stem 在 p1 底，图被腾讯归到 p2 顶部的 Q5 → 把 Q5 多余的图转给 Q4
     nmoved = _redistribute_figures_by_stem_refs(questions)
     if nmoved:
-        print(f"[tencent_paper] 全局重分配转移 {nmoved} 张图", flush=True)
+        print(f"[physics_image_paper] 全局重分配转移 {nmoved} 张图", flush=True)
 
     # 4c-2) 缺图兜底：经过重分配仍 stem 引"图N"但 figs=0 → paddle 补
     layout_cache_dir = out_dir / "layout-cache"
     nfix = _fallback_missing_figures(questions, images_dir, layout_cache_dir, src)
     if nfix:
-        print(f"[tencent_paper] paddle 兜底 {nfix} 题 figures", flush=True)
+        print(f"[physics_image_paper] paddle 兜底 {nfix} 题 figures", flush=True)
 
     # 5) 裁图
     if not a.no_crop:
@@ -1460,7 +1460,7 @@ def main():
             fp = figure_paths.get(q["number"])
             if fp:
                 q["figure_path"] = fp
-        print(f"[tencent_paper] 裁切 {len(figure_paths)} 张 figures", flush=True)
+        print(f"[physics_image_paper] 裁切 {len(figure_paths)} 张 figures", flush=True)
 
     # 5b) 从答案页文本 + 卷首文本动态校正分值（覆盖 _default_score 兜底）
     full_answer_text = "\n".join(answer_text.values())
@@ -1469,7 +1469,7 @@ def main():
         for q in questions:
             if q["number"] in score_rules:
                 q["score"] = score_rules[q["number"]]
-        print(f"[tencent_paper] 答案页解析分值规则覆盖 {len(score_rules)} 题",
+        print(f"[physics_image_paper] 答案页解析分值规则覆盖 {len(score_rules)} 题",
               flush=True)
     # full_score：先尝试 page-01 卷首文本"满分N分"，否则用各题分值求和
     full_score = None
@@ -1505,7 +1505,7 @@ def main():
     fj = out_struct / "final.json"
     fj.write_text(json.dumps(final, ensure_ascii=False, indent=2),
                   encoding="utf-8")
-    print(f"[tencent_paper] ✅ {fj}", flush=True)
+    print(f"[physics_image_paper] ✅ {fj}", flush=True)
     print(f"   题号={[q['number'] for q in out_questions]}", flush=True)
 
 
