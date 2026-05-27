@@ -41,3 +41,20 @@ questions:
   # Q27 作文 sol 留空（清广告文案）
   27:
     solution: ""
+  # R2 新增：Q8 sol 焊 Q9/Q10 答案剧透
+  8:
+    score: 1.0
+    solution: "江春入旧年"
+  # Q16 stem 末尾水印残 "京考一点通()，" 清
+  16:
+    stem: "请你以名著中两个人物为例，结合具体内容，简要分析他们对友情的不同理解。(5分)"
+    solution: ""
+
+passages:
+  # classical_2 body 古诗水印焊入 → 重写《游山西村》干净版
+  classical_2:
+    body: "游山西村\n陆游\n莫笑农家腊酒浑，丰年留客足鸡豚。\n山重水复疑无路，柳暗花明又一村。\n箫鼓追随春社近，衣冠简朴古风存。\n从今若许闲乘月，拄杖无时夜叩门。"
+  # narrative 含水印 "京高考琢磨" 清
+  narrative:
+    body_replace:
+      - {from: "京高考琢磨", to: "琢磨"}

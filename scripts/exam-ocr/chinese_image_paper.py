@@ -620,12 +620,22 @@ def _parse_answers(answer_text: str) -> list[dict]:
             if not (1 <= qid <= 28): continue
             heads.append(h); seen_qids.add(qid)
     heads.sort(key=lambda h: h.start())
+    # **boundary anchor**：含所有 RE 的 head（不去重），用于切 tail
+    # 解决 dual-OCR Q8 head 来自 basic 末尾，body 吞所有后续题答案的 bug
+    # (chaoyang R2 Q8 sol 焊 Q9/Q10 答案剧透 P0 根因)
+    all_boundary = sorted(
+        set(h.start() for hlist in (heads_main, heads_scored, heads_compact, heads_plain)
+            for h in hlist if 1 <= int(h.group(1)) <= 28),
+    )
     out: list[dict] = []
     for i, m in enumerate(heads):
         n = int(m.group(1))
-        # body = 首行剩余内容(group 2) + 后续行直到下一题号 OR 下一大题
+        # body = 首行剩余内容(group 2) + 后续行直到任何题号 anchor OR 下一大题
         first_line_rest = (m.group(2) or "").strip()
-        next_start = heads[i+1].start() if i+1 < len(heads) else len(answer_text)
+        # 下一个 boundary：任何引擎抓到的题号位置（不含本 head 自己）
+        next_boundary = next((b for b in all_boundary if b > m.end()), len(answer_text))
+        next_start = min(next_boundary,
+                          heads[i+1].start() if i+1 < len(heads) else len(answer_text))
         tail = answer_text[m.end():next_start]
         # **关键**：tail 含下一大题标题（"二、古诗文"）时截断，避免 bleed
         sec_m = _BIG_SECTION_RE.search(tail)
@@ -1205,9 +1215,22 @@ def _apply_patches_to_result(patches: dict, result: dict) -> int:
     返回应用的 patch 数。
     """
     n_applied = 0
-    # passages
+    # passages（**bug 修**：支持 explicit body 覆盖 + q_range 修正）
     ps_patches = patches.get("passages") or {}
     for pid, patch in ps_patches.items():
+        # **create**: passage 不存在则新建（chaoyang R2 缺整篇 argument passage）
+        if patch.get("create"):
+            existing = next((ps for ps in result.get("passages", []) if ps["id"] == pid), None)
+            if existing is None:
+                result.setdefault("passages", []).append({
+                    "id": pid,
+                    "type": patch.get("type", pid),
+                    "q_range": patch.get("q_range") or [1, 1],
+                    "body": patch.get("body", ""),
+                    "figure": patch.get("figure"),
+                })
+                n_applied += 1
+                continue
         for ps in result.get("passages", []):
             if ps["id"] != pid: continue
             for rep in patch.get("body_replace") or []:
@@ -1216,10 +1239,14 @@ def _apply_patches_to_result(patches: dict, result: dict) -> int:
                     n_applied += 1
             if patch.get("body_append"):
                 ps["body"] = (ps.get("body","") + patch["body_append"]); n_applied += 1
-            if patch.get("figure"):
+            if "figure" in patch:
                 ps["figure"] = patch["figure"]; n_applied += 1
-            if patch.get("body"):
+            if "body" in patch:  # explicit body 覆盖（含空串清空）
                 ps["body"] = patch["body"]; n_applied += 1
+            if "q_range" in patch:  # 修正错的 q_range
+                ps["q_range"] = patch["q_range"]; n_applied += 1
+            if "type" in patch:
+                ps["type"] = patch["type"]; n_applied += 1
             break
     # questions（按 number 字段在 result["questions"] 找）
     q_patches = patches.get("questions") or {}
@@ -1244,19 +1271,28 @@ def _apply_patches_to_result(patches: dict, result: dict) -> int:
             continue
         if target is None: continue
         q = target
-        if patch.get("stem") is not None:
+        # **bug 修**：用 'in patch' 区分 missing vs explicit null/空串，
+        # 否则 'options: null' / 'solution: ""' 这种清空 patch 失效
+        if "stem" in patch:
             q["stem"] = patch["stem"]; n_applied += 1
         if patch.get("stem_append"):
             q["stem"] = q.get("stem","") + patch["stem_append"]; n_applied += 1
-        if patch.get("options") is not None:
+        if "options" in patch:
             q["options"] = patch["options"]; n_applied += 1
-        if patch.get("solution") is not None:
+        if "solution" in patch:
             q["solution"] = patch["solution"]; n_applied += 1
-        if patch.get("answer") is not None:
+            # **bug 修**：同步改 answers[].solution（enrich 真正读这里）
+            ans = next((a for a in result.get("answers", []) if a.get("number") == qid), None)
+            if ans is not None:
+                ans["solution"] = patch["solution"]
+        if "answer" in patch:
             q["answer"] = patch["answer"]; n_applied += 1
+            ans = next((a for a in result.get("answers", []) if a.get("number") == qid), None)
+            if ans is not None:
+                ans["correct"] = patch["answer"]
         if patch.get("type"):
             q["type"] = patch["type"]; n_applied += 1
-        if patch.get("score") is not None:
+        if "score" in patch:
             q["score"] = patch["score"]; n_applied += 1
     # 重算 full_score
     if n_applied:
@@ -1269,9 +1305,21 @@ def _apply_patches(patches: dict, result: dict, yaml_questions: list[dict]) -> i
     返回应用的 patch 数。
     """
     n = 0
-    # passage patches
+    # passage patches（**bug 修**：支持 create + q_range + explicit body 覆盖）
     ps_patches = patches.get("passages") or {}
     for pid, patch in ps_patches.items():
+        if patch.get("create"):
+            existing = next((ps for ps in result.get("passages", []) if ps["id"] == pid), None)
+            if existing is None:
+                result.setdefault("passages", []).append({
+                    "id": pid,
+                    "type": patch.get("type", pid),
+                    "q_range": patch.get("q_range") or [1, 1],
+                    "body": patch.get("body", ""),
+                    "figure": patch.get("figure"),
+                })
+                n += 1
+                continue
         for ps in result.get("passages", []):
             if ps["id"] != pid: continue
             for rep in patch.get("body_replace") or []:
@@ -1280,10 +1328,14 @@ def _apply_patches(patches: dict, result: dict, yaml_questions: list[dict]) -> i
                     n += 1
             if patch.get("body_append"):
                 ps["body"] = (ps.get("body","") + patch["body_append"]); n += 1
-            if patch.get("figure"):
+            if "figure" in patch:
                 ps["figure"] = patch["figure"]; n += 1
-            if patch.get("body"):  # 完全覆盖
+            if "body" in patch:  # explicit body 覆盖（含空串清空）
                 ps["body"] = patch["body"]; n += 1
+            if "q_range" in patch:
+                ps["q_range"] = patch["q_range"]; n += 1
+            if "type" in patch:
+                ps["type"] = patch["type"]; n += 1
             break
     # question patches（按 id 在 yaml_questions 中找）
     q_patches = patches.get("questions") or {}
@@ -1304,7 +1356,6 @@ def _apply_patches(patches: dict, result: dict, yaml_questions: list[dict]) -> i
                 "qc_status": "needs_review",
                 "qc_note": "patch-created（OCR 漏题，手动补入）",
             }
-            # 按 id 升序插入
             insert_at = next((i for i, q in enumerate(yaml_questions)
                               if q["id"] > qid), len(yaml_questions))
             yaml_questions.insert(insert_at, new_q)
@@ -1312,20 +1363,24 @@ def _apply_patches(patches: dict, result: dict, yaml_questions: list[dict]) -> i
             continue
         if target is None: continue
         q = target
-        if patch.get("stem") is not None:
+        # **bug 修**：用 'in patch' 区分 missing vs explicit null/空串
+        if "stem" in patch:
             q["stem"] = patch["stem"]; n += 1
         if patch.get("stem_append"):
             q["stem"] = q.get("stem","") + patch["stem_append"]; n += 1
-        if patch.get("options") is not None:
+        if "options" in patch:
             q["options"] = patch["options"]; n += 1
-        if patch.get("solution") is not None:
+        if "solution" in patch:
             q["solution"] = patch["solution"]; n += 1
-        if patch.get("answer") is not None:
+        if "answer" in patch:
             q["answer"] = patch["answer"]; n += 1
         if patch.get("type"):
             q["type"] = patch["type"]; n += 1
-        if patch.get("score") is not None:
+        if "score" in patch:
             q["score"] = patch["score"]; n += 1
+        # **bug 修**：passage_id 也要支持 patch
+        if "passage_id" in patch:
+            q["passage_id"] = patch["passage_id"]; n += 1
     return n
 
 

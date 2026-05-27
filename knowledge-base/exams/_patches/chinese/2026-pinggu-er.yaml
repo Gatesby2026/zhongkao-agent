@@ -1,13 +1,11 @@
-# 平谷区 2026 二模语文 patches —— image OCR 题号融合 (Q12 吞 Q13 / Q24 吞 Q25)
-# 来源：R1 Claude 大模型审核（agent: a33d496a25b88bf4d），核对源 PDF
+# 平谷区 2026 二模语文 patches —— R2 修正 R1 的错位 + 补 P0
+# R1 patch Q12 stem 错填陋室铭风格，实际 Q12 是登幽州台歌赏析
 
 questions:
-  # Q12 stem 末粘 Q13 整道题 → 截到真 Q12 stem 止；Q12 实际是简答无 options
+  # Q12 R2 修正：陈子昂《登幽州台歌》"念天地之悠悠"，请结合诗句分析情感
   12:
-    stem: "请结合具体内容，简要分析作者通过对'室主人'生活描写所传递的情感。(2分)"
-    options: null
-    answer: ""
-  # Q13 整题缺失（被吞入 Q12）：单选辨字义，B 答案
+    stem: "请结合画线诗句，简要分析作者通过它所传递的情感。(2分)"
+  # Q13 是新增的 R1 单选题
   13:
     create: true
     type: "choice"
@@ -20,10 +18,13 @@ questions:
       C: "惟手熟尔"
       D: "惟利是图"
     answer: "B"
-  # Q24 是简答题应无 options（options 实为 Q25 选项）
+  # Q21 score 2→3 (PDF 实际)
+  21:
+    score: 3
+  # Q24 删 options（实为简答题，options 是 Q25 选项串入）
   24:
     options: null
-  # Q25 整题缺失：单选填空，B 答案
+  # Q25 是 R1 新增单选
   25:
     create: true
     type: "choice"
@@ -31,9 +32,20 @@ questions:
     score: 2
     stem: "根据内容，在第⑤段横线处填写最恰当的一句话是(2分)"
     answer: "B"
-  # Q21 现代文 score OCR 抓 2 应 3（源 PDF 标 3 分）
-  21:
-    score: 3
+  # Q26 passage_id 应挂新建议论文 passage
+  26:
+    passage_id: "argument_quanmin"
   # Q27 作文 sol 留空
   27:
     solution: ""
+
+passages:
+  # narrative q_range 错 [20,26] → [20,23]（《清溪的灯》4 题）
+  narrative:
+    q_range: [20, 23]
+  # 新建议论文 passage《全民阅读，点亮心灵的灯塔》Q24-26
+  argument_quanmin:
+    create: true
+    type: "argument"
+    q_range: [24, 26]
+    body: "全民阅读，点亮心灵的灯塔（议论文正文 — 详细内容核 page-07~08）"

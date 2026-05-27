@@ -75,7 +75,7 @@ passages:
   type: narrative
   q_range:
   - 20
-  - 26
+  - 23
   body: '清溪的灯关仁山①傍晚时分，我们来到湖南益阳的清溪村。车子穿过田塍，远远就见那片荷塘。村口那块刻着“山乡巨变山河锦绣”的石碑仍在，夕阳斜照下，影子拉得长长的。
 
     ②清溪村的名声不在山水，而在文学。它是作家周立波的故乡，是小说《山乡巨变》的原型地。那些书里的故事，如今又从书里长了出来，长成了实实在在的景致这里有中国当代作家签名版图书珍藏馆，王蒙、莫言、迟子建等21位作家的书屋，还有清溪剧院、书香民宿。之前我来过3次清溪村，这一次，是专门为采访迟子建书屋的图书管理员孙桂英而来。
@@ -113,6 +113,13 @@ passages:
     灯亮着，就能照亮人心。同时，孙桂英自己，渐渐也亮成了一盏灯。
 
     (选自《人民日报》，有删改)'
+- id: argument_quanmin
+  type: argument
+  q_range:
+  - 24
+  - 26
+  body: 全民阅读，点亮心灵的灯塔（议论文正文 — 详细内容核 page-07~08）
+  figure: null
 questions:
 - id: 1
   type: 单选
@@ -124,10 +131,7 @@ questions:
     C: 震撼(zhèn hàn)
     D: 累累(leilei)
   answer: C
-  solution: 'C
-
-
-    2.D'
+  solution: C
   knowledge_points:
   - 字音
   - 字形
@@ -149,30 +153,7 @@ questions:
     A: 络绎不绝B.因地制宜C.身临其境
     D: 不二法门
   answer: D
-  solution: 'D
-
-
-
-    3. 答案示例:
-
-    指青少年通过全民阅读活动，既能理解文字表面的内容(“文字内”)，又能获得超越文字的思想启迪、
-
-    情感共鸣和生活体验(“文字外”的风景)。
-
-
-    4.答案示例:这不仅是阅读方式的创新，更是对经典阅读的深度挖掘。
-
-
-    5.c
-
-    6.鲁迅
-
-
-    7.答案示例:
-
-    这次活动，我深刻感悟到阅读的魅力，它不仅拓宽视野，更在心灵深处促进了我的成长。
-
-    ，语句通顺。超过50字扣1分。)'
+  solution: D
   knowledge_points:
   - 成语运用
   module: reading
@@ -257,7 +238,7 @@ questions:
   answer: ''
   solution: 鲁迅
   knowledge_points:
-  - 名著阅读-作者
+  - 名著情节
   module: reading
   difficulty: 基础
   recommended_for:
@@ -279,10 +260,11 @@ questions:
     ，语句通顺。超过50字扣1分。)'
   knowledge_points:
   - 词语运用
-  - 连贯
+  - 启示感悟
   module: writing
-  difficulty: 中等
+  difficulty: 基础
   recommended_for:
+  - L0
   - L1
   - L2
   - L3
@@ -341,6 +323,7 @@ questions:
     ()，'
   knowledge_points:
   - 默写
+  - 古诗内容理解
   module: classical
   difficulty: 基础
   recommended_for:
@@ -376,7 +359,7 @@ questions:
 - id: 12
   type: 主观填空
   score: 2.0
-  stem: 请结合具体内容，简要分析作者通过对'室主人'生活描写所传递的情感。(2分)
+  stem: 请结合画线诗句，简要分析作者通过它所传递的情感。(2分)
   options:
     A: 惟吾德馨
     B: 惟妙惟肖C.惟手熟尔
@@ -389,7 +372,8 @@ questions:
 
     叹之情。'
   knowledge_points:
-  - 文言文理解
+  - 古诗赏析
+  - 情感理解
   module: classical
   difficulty: 中等
   recommended_for:
@@ -436,7 +420,7 @@ questions:
   answer: C
   solution: C
   knowledge_points:
-  - 古诗内容理解
+  - 古诗文内容理解
   module: classical
   difficulty: 中等
   recommended_for:
@@ -692,13 +676,6 @@ questions:
   type: 现代文阅读
   score: 2.0
   stem: 请根据全文内容分析第①段的作用。(2分)
-  options:
-    A: '全民阅读重在参与，贵在坚持。
-
-      A.全民阅读重在参与，贵在坚持。'
-    B: 全民阅读需要质量并重与形
-    C: 书籍是人类进步的阶梯，全民阅读势在必行。
-    D: 全民阅读，应聚焦优质内容，提升阅读品质。
   answer: ''
   solution: '首先将书籍比作灯塔，突出书籍在人类文明中的重要作用，自然引出“全民阅读”这一话题。接着，提
 
@@ -716,7 +693,7 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: narrative
+  passage_id: argument_quanmin
 - id: 25
   type: 单选
   score: 2
@@ -733,7 +710,7 @@ questions:
   - L3
   qc_status: needs_review
   qc_note: 选择题缺少 options（既无文本也无图片选项）
-  passage_id: narrative
+  passage_id: argument_quanmin
 - id: 26
   type: 现代文阅读
   score: 3.0
@@ -751,7 +728,7 @@ questions:
 
     ww.g'
   knowledge_points:
-  - 段落梳理
+  - 段落作用
   module: reading
   difficulty: 中等
   recommended_for:
@@ -760,7 +737,7 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: narrative
+  passage_id: argument_quanmin
 - id: 27
   type: 作文
   score: 40
@@ -774,30 +751,7 @@ questions:
 
     ()，'
   answer: ''
-  solution: '从下面两个题目中任选一题，按要求写一篇作文。
-
-
-    (1)阅读不只是个人的精神旅行，更是与家国历史的对话。当我们翻开书页，那些文字背后跳动的，
-
-    是民族的精神脉搏，是时代的呼吸韵律。或许是描写长城的雄浑文字，让你感受中华文明的厚重;或许是抗
-
-    战时期的诗歌，让你触摸先辈的热血与担当;或许是记录乡村变迁的散文，让你看见国家发展的足迹......
-
-    那些印在纸上的文字是带着温度的家国记忆。请以“书页里的中国心跳”为题，写一篇作文。
-
-    (2)请以“顶压前行”为题，写一篇作文。
-
-    要求:将作文题目抄在答题卡上;文体不限(诗歌除外);字数600-800之间，不出现所在学校的校
-
-    名或师生姓名。
-
-    a
-
-    q
-
-    ),
-
-    参考答案'
+  solution: ''
   knowledge_points:
   - 命题作文
   module: writing
