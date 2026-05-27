@@ -1,0 +1,36 @@
+# 平谷区 2026 二模语文 patches —— image OCR 题号融合 (Q12 吞 Q13 / Q24 吞 Q25)
+# 来源：R1 Claude 大模型审核（agent: a33d496a25b88bf4d），核对源 PDF
+
+questions:
+  # Q12 stem 末粘 Q13 整道题 → 截到真 Q12 stem 止；Q12 实际是简答无 options
+  12:
+    stem: "请结合具体内容，简要分析作者通过对'室主人'生活描写所传递的情感。(2分)"
+    options: null
+    answer: ""
+  # Q13 整题缺失（被吞入 Q12）：单选辨字义，B 答案
+  13:
+    create: true
+    type: "choice"
+    section: "classical"
+    score: 2
+    stem: "下列加点字的意思与其他三项不同的一项是(2分)"
+    options:
+      A: "惟吾德馨"
+      B: "惟妙惟肖"
+      C: "惟手熟尔"
+      D: "惟利是图"
+    answer: "B"
+  # Q24 是简答题应无 options（options 实为 Q25 选项）
+  24:
+    options: null
+  # Q25 整题缺失：单选填空，B 答案
+  25:
+    create: true
+    type: "choice"
+    section: "modern"
+    score: 2
+    stem: "根据内容，在第⑤段横线处填写最恰当的一句话是(2分)"
+    answer: "B"
+  # Q27 作文 sol 留空
+  27:
+    solution: ""

@@ -1,0 +1,719 @@
+# ============================================================
+# 2026年北京二模physics — 自动生成
+# ============================================================
+# OCR: Qwen-VL-OCR  Enrich: qwen-max
+# QC: draft=26  needs_review=0
+year: 2026
+district: ''
+exam_type: 二模
+subject: physics
+full_score: 70
+duration_minutes: null
+total_questions: 26
+structure: 12单选(24分) + 3多选(6分) + 8实验探究(28分) + 1作文(4分) + 2计算题(8分)
+passages: []
+questions:
+- id: 1
+  type: 单选
+  score: 2
+  stem: 如图所示,由电池、灯泡、开关和导线组成的简单电路中,为电路提供电能的装置是
+  options:
+    A: 电池
+    B: 灯泡
+    C: 开关
+    D: 导线
+  figure: 2026-chaoyang-er/figures/q01.png
+  answer: A
+  solution: ''
+  knowledge_points:
+  - 电流
+  module: electricity
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 2
+  type: 单选
+  score: 2
+  stem: 如图所示的物态变化实例中，由于凝华形成的是
+  has_image_options: true
+  figure: 2026-chaoyang-er/figures/q02.png
+  answer: C
+  solution: ''
+  knowledge_points:
+  - 物态变化
+  module: soundLightHeat
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 3
+  type: 单选
+  score: 2
+  stem: 如图所示的光现象中，由于光的折射形成的是
+  has_image_options: true
+  figure: 2026-chaoyang-er/figures/q03.png
+  answer: C
+  solution: ''
+  knowledge_points:
+  - 光的折射
+  module: soundLightHeat
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 4
+  type: 单选
+  score: 2
+  stem: 下列四个实例中,能够使蒸发加快的是
+  options:
+    A: 将水果放在低温冷藏柜中
+    B: 将新鲜的蔬菜封装在保鲜袋中
+    C: 给播种后的农田覆盖地膜
+    D: 将新收获的小麦摊开晾晒在阳光下
+  answer: D
+  solution: ''
+  knowledge_points:
+  - 物态变化
+  module: soundLightHeat
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 5
+  type: 单选
+  score: 2
+  stem: 电给我们的生活带来了极大的便利,但不正确用电也会带来很大的危害,甚至会危及生命。安全用电是每一位公民的必备素养。下列做法中不符合安全用电原则的是
+  options:
+    A: 在家庭电路中安装总开关及保险装置
+    B: 在未断开电源开关的情况下更换灯泡
+    C: 控制电灯的开关连接在电灯与相线(火线)之间
+    D: 及时更换达到使用寿命的插座、导线和用电器
+  answer: B
+  solution: ''
+  knowledge_points:
+  - 安全用电原则
+  module: electricity
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 6
+  type: 单选
+  score: 2
+  stem: 为了观察光的直线传播,将一束单色光从玻璃槽的外侧由左侧射入盐水中,但光在盐水中并不是沿直线传播,而是发生了弯曲,如图所示。这是由于
+  options:
+    A: 盐水不均匀使光发生了弯曲
+    B: 光发生了色散
+    C: 光从空气到玻璃发生了折射
+    D: 光从玻璃到盐水发生了折射
+  figure: 2026-chaoyang-er/figures/q06.png
+  answer: A
+  solution: ''
+  knowledge_points:
+  - 光的折射
+  module: soundLightHeat
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 7
+  type: 单选
+  score: 2
+  stem: 中欧班列促进了“一带一路”沿线国家的经济与文化交流。如图所示,关于该列车下列说法正确的是
+  options:
+    A: 行驶中的列车受到的牵引力和阻力是一对相互作用力
+    B: 列车在平直轨道上匀速行驶时,列车受到的牵引力大于阻力
+    C: 列车在减速进站的过程中，由于不受力而逐渐停下来
+    D: 列车在平直轨道上静止时,列车受到的重力和铁轨对列车的支持力是一对平衡力
+  figure: 2026-chaoyang-er/figures/q07.png
+  answer: D
+  solution: ''
+  knowledge_points:
+  - 二力平衡
+  module: mechanics
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 8
+  type: 单选
+  score: 2
+  stem: 2025年11月在国际蹦床世界锦标赛上,我国运动员包揽男女网上项目个人金牌。如图所示是蹦床运动员在比赛中的情景,下列说法正确的是
+  options:
+    A: 运动员在空中上升过程中，她的动能越来越大
+    B: 运动员在空中加速下降过程中，重力做功越来越快
+    C: 运动员在蹦床上减速下降过程中，重力不再做功
+    D: 运动员下落到蹦床最低点时,蹦床的弹性势能最小
+  figure: 2026-chaoyang-er/figures/q08.png
+  answer: B
+  solution: ''
+  knowledge_points:
+  - 牛顿定律
+  - 能量转化
+  module: mechanics
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 9
+  type: 单选
+  score: 2
+  stem: 下列说法正确的是
+  options:
+    A: 运动的小球具有机械能,但不具有内能
+    B: 铁块很难被压缩，说明分子间只存在斥力
+    C: 晶体在熔化过程中内能增加，但温度不变
+    D: 内燃机通过做功冲程可以将机械能转化为内能
+  answer: C
+  solution: ''
+  knowledge_points:
+  - 物态变化
+  - 内能
+  module: soundLightHeat
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 10
+  type: 单选
+  score: 2
+  stem: 如图所示为轮胎式装载机，铲斗安装在大臂一端，大臂相当于杠杆，在大臂液压装置的作用下可绕支点O转动，实现铲斗的升降。关于该装载机下列说法正确的是
+  options:
+    A: 铲斗前端的尖齿是通过减小受力面积的方法增大压力
+    B: 该装载机的大臂可视为省力杠杆
+    C: 宽大的轮胎是通过增大受力面积的方法减小压强
+    D: 轮胎上有很深的花纹是通过增加表面粗糙程度的方法减小摩擦
+  figure: 2026-chaoyang-er/figures/q10.png
+  answer: C
+  solution: ''
+  knowledge_points:
+  - 压强
+  - 杠杆
+  module: mechanics
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 11
+  type: 单选
+  score: 2
+  stem: '在两个相同的烧杯中分别装有两种液体A、B,其质量$m_{A}<m_{B}$;用额定电压相同的甲、乙两个电加热器分别加热液体A、B,电加热器的额定功率P甲>P_{乙},它们均正常工作。液体A、B的温度随加热时间变化的关系如图所示。不考虑热量
+
+    损失，下列说法正确的是'
+  options:
+    A: 液体B比液体A更早沸腾
+    B: 液体A的比热容大于液体B的比热容
+    C: 电加热器甲的电热丝的电阻大于乙的电热丝的电阻
+    D: 相同时间内液体 A 吸收的热量等于液体 B 吸收的热量
+  figure: 2026-chaoyang-er/figures/q11.png
+  answer: B
+  solution: ''
+  knowledge_points:
+  - 比热容
+  - 热量计算
+  module: soundLightHeat
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 12
+  type: 单选
+  score: 2
+  stem: '港珠澳大桥是全世界最长的跨海大桥，其中一段由 33 根沉管拼接而成的海底隧道长5664m。沉管(如图所示，两端已封闭)由浅海区浮运到较深的指定海域，再精确沉放到指定位置。物理小组的同学们用一个体积为800cm³的密闭空箱A模拟封闭后
+
+    的沉管，结合盛有水的容器模拟研究沉管浮运和沉放的过程。当空箱A漂浮在水面上时，有1/4的体积露出水面，如图甲所示。向空箱A内注入一定量的水，此时需要施加竖直向上的拉力F才能使空箱A浸没在水中且不碰容器，如图乙所示。水的密度取1.0g/cm³，铁的密度取8.0g/cm³，g取10N/kg。下列说法正确的是'
+  options:
+    A: 空箱的密度与水的密度之比为1:4
+    B: 图甲中,若使空箱悬浮,可向其内注入400cm^3的水
+    C: 图甲中,若在空箱上表面放置一个质量为220g的实心铁块,可使空箱下沉到容器底部
+    D: 图乙中,空箱内的水受到的重力比拉力F大2N
+  figure: 2026-chaoyang-er/figures/q12.png
+  answer: D
+  solution: ''
+  knowledge_points:
+  - 浮力
+  - 二力平衡
+  module: mechanics
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 13
+  type: 多选
+  score: 2
+  stem: 下列说法正确的是
+  options:
+    A: 磁场看不见、摸不着,但它是真实存在的
+    B: 导体周围一定存在着由它产生的磁场
+    C: 电动机是利用磁场对通电导体有力的作用工作的
+    D: 发电机发电时将电能转化为机械能
+  answer: AC
+  solution: ''
+  knowledge_points:
+  - 电与磁
+  - 磁场
+  module: electricity
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 14
+  type: 多选
+  score: 2
+  stem: 工人用某滑轮组提升所受重力为1000N的物体,滑轮组绳子自由端在拉力F作用下竖直匀速移动了12m,同时物体被竖直匀速提升了4m,用时40s,拉力F是400N。下列说法正确的是
+  options:
+    A: 动滑轮所受的重力为200N
+    B: 滑轮组对物体做功4000J
+    C: 拉力F的功率是120W
+    D: 该滑轮组的机械效率是80%
+  answer: BC
+  solution: ''
+  knowledge_points:
+  - 简单机械
+  - 功和功率
+  module: mechanics
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 15
+  type: 多选
+  score: 2
+  stem: 2025年2月，我国“望宇”登月服进入初样研制阶段。该登月服主体采用多层结构设计，从内到外依次为内衣舒适层、保暖层、通风服和水冷服、气密限制层、隔热层和外保护层等。某科技小组为检测模拟登月服的气密性，设计了气压检测装置，其电路如图甲所示，定值电阻的电阻$R_0$为40Ω，恒流电源输出的电流恒为1.2A，当气压$p≤1.25×10^3Pa$时，气压传感器的电阻$R_0$随气压p的变化关系可近似为图乙所示。在某次测试时将充满气体的模拟登月服放入空腔中，将空腔抽成真空后密封，如图丙所示，启动气压检测装置并开始计时，登月服内的气压为1×$10^5Pa$,开始计时后4h电流表的示数为0.6A。已知登月服和空腔的容积之比为1:5，它们内部的气压与气体的密度均成正比，且比例系数相同。不计气压检测装置的体积、登月服容积的变化、登月服的厚度。下列说法正确的是
+  options:
+    A: 空腔为真空时，电流表的示数为0.8A
+    B: 登月服漏气过程中，电流表的示数越来越大
+    C: 该次检测，开始计时后4h空腔内的气压为1x103Pa
+    D: 该次检测，开始计时后4h登月服漏出气体的质量为充气质量的4%
+  figure: 2026-chaoyang-er/figures/q15.png
+  answer: ACD
+  solution: ''
+  knowledge_points:
+  - 欧姆定律
+  - 气体状态方程
+  module: electricity
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 16
+  type: 实验探究
+  score: 3
+  stem: '(1)图甲所示的弹簧测力计的示数是____N。
+
+    (2)图乙所示的电流表的示数是____A。'
+  figure: 2026-chaoyang-er/figures/q16.png
+  answer: ''
+  solution: '(1)2.2
+
+    (2) 0.5 (4分)'
+  knowledge_points:
+  - 实验方法
+  - 数据处理
+  - 弹簧测力计的使用
+  - 电流表的读数
+  module: experiments
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 17
+  type: 实验探究
+  score: 4
+  stem: '(1)在探究水沸腾前后温度变化特点时，某同学观察到如图甲、乙所示的实验现象，图
+
+    (选填“甲”或“乙”)是水沸腾时气泡上升过程大小变化的情况。
+
+    (2)如图丙所示，某同学用滴管向一个装有清水的烧杯中滴人一滴红墨水，可以看到红
+
+    墨水与烧杯内的清水逐渐混合，最后颜色变得均匀，这属于
+
+    _现象。'
+  answer: ''
+  solution: '(1)甲
+
+    (2) 扩散 (4分)'
+  knowledge_points:
+  - 物态变化
+  - 分子热运动
+  module: soundLightHeat
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 18
+  type: 实验探究
+  score: 3
+  stem: '(1)条形磁体周围的磁场情况如图甲所示，则条形磁体的左端是
+
+    极。
+
+    (2)小阳用图乙所示的装置进行实验，闭合开关的瞬间，观察到小磁针
+
+    的现象，
+
+    说明电流周围存在磁场。
+
+    10 20 30 40 50 60 70____gaokzx.com'
+  figure: 2026-chaoyang-er/figures/q18.png
+  answer: ''
+  solution: '(1)N
+
+    (2) 发生偏转 (4分)'
+  knowledge_points:
+  - 电与磁
+  - 实验方法
+  module: electricity
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 19
+  type: 实验探究
+  score: 4
+  stem: '小阳用如图所示的实验器材，测量小车在斜面上运动的平均速度。
+
+    (1)小车由静止开始从A位置运动到C位置，记录的运动时间为6s，小车运动的距离为____cm,小车在AC段运动的平均速度是____cm/s。
+
+    (2)将小车再次放置在A位置，并由静止开始运动到B位置，记录的运动时间为4s，则小
+
+    车在BC段的平均速度
+
+    在AC段的平均速度(选填“大于”或“小于”)。'
+  answer: ''
+  solution: '(1)90 15
+
+    (2)大于 (3分)'
+  knowledge_points:
+  - 实验方法
+  - 数据处理
+  - 平均速度
+  module: mechanics
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 20
+  type: 实验探究
+  score: 4
+  stem: '如图所示的电路中，两个滑动变阻器两端的电压分别用U1和U2表示，两个滑动变阻器
+
+    串联时两端的总电压用U表示，电阻为Ro的定值
+
+    电阻用来保护电路。利用该电路和电压表等器材
+
+    证明:U=U1+U2。
+
+    (1)用笔画线代替导线，将电压表连入电路，使其测
+
+    量两个滑动变阻器串联时两端的总电压U。
+
+    (2)画出实验数据记录表格。
+
+
+    关注北京高考在线官方微信:京考一点通(微信号:bjgkzx)，获取更多试题资料及排名分析信息。'
+  figure: 2026-chaoyang-er/figures/q20.png
+  answer: ''
+  solution: '(1)(见右图) 京高考在线 w.gaokzx.com
+
+    (2) U1/ V U2/ V (U1+U2)/V U/ V (3分)'
+  knowledge_points:
+  - 实验方法
+  - 欧姆定律
+  module: electricity
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 21
+  type: 实验探究
+  score: 4
+  stem: '实验器材如图所示，一个焦距为f的凸透镜、光屏、高度为3.0cm的F形光源、光具座和刻度尺。实验小组的实验数据如下表所示。
+
+    (1)由表中数据可知，实验小组的同学探究的问题是：凸透镜成实像时，_。
+
+    (2)当F形光源放在20cm刻度线处、光屏放在65cm刻度线处时，在光屏中央得到一个清晰的像。若把光屏移至70cm刻度线处，光屏上呈现一个模糊的“像”。为了使光屏上再次呈现清晰的像，可以在F形光源和凸透镜之间放置一个适当的_(选填“凸透镜”或“凹透镜”);也可以用焦距_(选填“大于”或“小于”)f的凸透镜替换图中的凸透镜。'
+  figure: 2026-chaoyang-er/figures/q21.png
+  answer: ''
+  solution: '(1)像高与物距的关系
+
+    (2)凹透镜 大于 (3分)'
+  knowledge_points:
+  - 凸透镜成像
+  - 实验方法
+  module: experiments
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 22
+  type: 实验探究
+  score: 3
+  stem: '(1)由表中数据可知，实验小组的同学探究的问题是:凸透镜成实像时，
+
+    (2)当F形光源放在20cm刻度线处、光屏放在65cm刻度线处时，在光屏中央得到一个
+
+    清晰的像。若把光屏移至70cm刻度线处，光屏上呈现一个模糊的“像”。为了使光
+
+    屏上再次呈现清晰的像，可以在F形光源和凸透镜之间放置一个适当的____(选填“凸透镜”或“凹透镜”);也可以用焦距____(选填“大于”或“小于”)f的
+
+    凸透镜替换图中的凸透镜。
+
+    22.小阳利用一个微小压强计、两个完全相同的圆柱形玻璃杯、水和盐水(p盐水>ρ水)，探究
+
+    液体内部某点的压强与液体的密度和该点在液体中的深度是否有关。他将微小压强计____gaokzx.com
+
+    的探头放入玻璃杯中并将其固定，向玻璃杯中缓慢倒入一定量的水，实验现象如图甲所
+
+    示;继续向玻璃杯中缓慢倒入适量的水，实验现象如图乙所示。
+
+    (1)实验中通过观察
+
+    反映液体内部某点的压强。
+
+    (2)由图甲和图乙所示的实验可得，液体内部某点的压强与
+
+    有关。
+
+    (3)为了探究液体内部某点的压强与液体密度是否有关，在保持探头位置不变的条件下____(如图丙所示)，可以向图丙中的玻璃杯里倒入____(填写选项前的字母),理由
+
+    A.与图甲中水的体积相等的盐水
+
+    B.与图甲中水的质量相等的盐水
+
+
+    关注北京高考在线官方微信:京考一点通(微信号:bjgkzx)，获取更多试题资料及排名分析信息。'
+  options:
+    A: 与图甲中水的体积相等的盐水
+    B: 与图甲中水的质量相等的盐水
+  figure: 2026-chaoyang-er/figures/q22.png
+  answer: ''
+  solution: '(1)U形管两侧液面的高度差
+
+    (2)该点在液体中的深度
+
+    (3)A 由V=sh可知，当液体的体积和底面积相等时，液体深度相等。 又因为探头的位置不变，所以该点在液体中的深度不变。 (4分) 九年级物理试卷答案及评分标准第1页(共2页) 关注北京高考在线官方微信:京考一点通(微信号:bjgkzx)，获取更多试题资料及排名分析信息。
+    考在线'
+  knowledge_points:
+  - 凸透镜成像
+  - 实验方法
+  - 数据处理
+  module: experiments
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 23
+  type: 实验探究
+  score: 3
+  stem: 小阳利用如图所示的电路分别测量两个小灯泡的实际功率,其中电源电压保持不变,灯$L_1$标有“3.8V0.4A”,灯$L_2$标有“2.5V0.2A”。他先将灯$L_1$接人电路中,闭合开关,调节滑动变阻器的电阻$R_p$,使电压表示数为3.8V,然后记录必要的数据。断开开关后,他用灯$L_2$替换灯$L_1$继续实验。请你分析说明在不移动滑动变阻器滑片的情况下,若直接闭合开关,电路能否安全工作。(忽略温度对灯丝电阻的影响)
+  figure: 2026-chaoyang-er/figures/q23.png
+  answer: ''
+  solution: 灯L1接入电路中，等效电路图如图甲所示。 R1 R9 www.gaokzx.com 灯L2接入电路中，等效电路图如图乙所示。 Up1 R1=Um1/Im1=3.8V/0.4A=9.5Ω R2=Um2/Im2=2.5V/0.2A=12.5Ω
+    甲 根据I1=U/(R1+Rp)和I2=U/(R2+Rp) R2 8 因为U、Rp相等，R1<R2，所以I1>I2 U2 由 Up1=I1Rp和 Up2=I2Rp可得 Up1>Up2 由U1=U-Up1和U2=U-Up2可得U2>U1
+    乙 因为U1=3.8V 所以U2>3.8V，超过灯L2的额定电压2.5V，电路不能安全工作。 (3分)
+  knowledge_points:
+  - 电功率
+  - 欧姆定律
+  module: electricity
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 24
+  type: 科普阅读
+  score: 4
+  stem: '二维金属
+
+    2025年3月，中国科学院物理研究所的科研团队成功为金属材料“重塑金身”，制备出多种单原子层金属——二维金属。该成果入选《物理世界》2025年度十大科学突破榜单。
+
+    因为二维金属由单原子层或几个原子层构成,所以其中的自由电子仅能在平面内自由运动,故称其为二维金属。二维金属的厚度在0.3nm~0.5nm之间,仅为头发丝直径的二十万分之一,比表面积可达1000m²/g以上,比表面积是二维金属具有的表面积与其质量的比值。如果把一块边长3m的正方体金属块压成单原子层的厚度,可以铺满整个北京市的地面。
+
+    二维金属具有高导电性,并且能通过电场调控电阻,为制造超低功耗芯片提供了全新思路。二维金属在具有较高强度的同时,部分二维金属还表现出很高的延展性,使得二维金属将在柔性电路、可穿戴设备等领域发挥独特优势。大部分二维金属兼具高导电性与高透光性，可用于透明电极、光学器件等领域。
+
+    由于金属原子之间通过强作用力紧密连接,且金属变薄后极易被氧化,破坏金属结构,制备二维金属面临巨大挑战。中国科学院物理研究所的科研团队以单层二硫化钼(一种二维材料)作为基底,对液态金属进行挤压,成功制备出多种二维金属,制备过程如图所示。
+
+    二维金属将推动下一阶段科技文明的发展,带来超微型低功耗晶体管、透明显示、超灵敏探测等众多领域的技术革新。
+
+    请根据上述材料,回答下列问题:
+
+    (1)二维金属具有_。(写出一种性质即可)
+
+    (2)科研团队将金属熔化,用单层二硫化钼作为基底,通过_的方式解决了二维的制备难题。
+
+    (3)某二维金属的比表面积为$1000m^{2}$/g,将5kg该金属制成上述比表面积的二维金属,其表面积为_m²。请举出一个与“比表面积”的定义方法相同的物理量_。'
+  figure: 2026-chaoyang-er/figures/q24.png
+  answer: ''
+  solution: '(1)高导电性
+
+    (2)对液态金属进行挤压
+
+    (3) 5x106 密度 (4分)'
+  knowledge_points:
+  - 物质的性质
+  - 实验方法
+  - 比表面积的概念
+  module: electricity
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 25
+  type: 计算题
+  score: 4
+  stem: '如图所示为某款家用电熨斗的电路原理图,两根电热丝的电阻分别为$R_1$和$R_2$且保持不变，$R_1$为110$\Omega$。开关都闭合时，该电熨斗的额定功率为1100W。求：
+
+    (1)只闭合开关$S_{1}$时，通过电阻为$R_{1}$的电热丝的电流。
+
+    (2)电阻$R_{2}$。(结果保留整数)'
+  figure: 2026-chaoyang-er/figures/q25.png
+  answer: ''
+  solution: '解:当只闭合S1时，等效电路图如图甲所示。 当S1和S2都闭合时，等效电路图如图乙所示。 R2 R1 北京高考在线 R1 I1 I1 www.gaokzx.com U 甲
+
+    (1)I1=U/R1=220V/110Ω=2A
+
+    (2) I=P/U=1100W/220V=5A I2=I-I1=5A-2A=3A R2=U/I2=220V/3A=73Q (4分)'
+  knowledge_points:
+  - 电功率
+  - 欧姆定律
+  module: electricity
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 26
+  type: 计算题
+  score: 4
+  stem: '如图所示，“雪龙2号”是我国自主建造的首艘极地科学考察破冰船，2026年4月圆满完
+
+    成第42次南极科考任务。该船满载时排开水的质量为1.4x107kg，它采用双向破冰技
+
+    术，能以一定的速度连续破开1.5m厚的冰层。当遇到较厚冰层时，它会利用船体的特
+
+    殊设计把船首冲到冰面之上，通过船首对冰面施加巨大的
+
+    压力，使冰层破碎。在某次破冰作业时，冰层的抗压强度____(即冰能承受的最大压强)达到了4x106Pa，若船首对冰面
+
+    施加的压力为满载时总重的0.1倍，船首与冰面的接触面
+
+    积为5m2。g取10N/kg。
+
+    (1)求满载的“雪龙2号”漂浮时受到的浮力。
+
+    (2)该船在本次破冰作业中，能否依靠压力直接压碎冰层?请通过计算说明。
+
+
+    关注北京高考在线官方微信:京考一点通(微信号:bjgkzx)，获取更多试题资料及排名分析信息。'
+  figure: 2026-chaoyang-er/figures/q26.png
+  answer: ''
+  solution: '解:
+
+    (1)根据阿基米德原理，Fn=G#=m#g=1.4x107kgx10N/kg=1.4x108N
+
+    (2)由于破冰船漂浮，Ga=Fn=1.4x108N F=0.1Gs=0.1x1.4x109N=1.4x107N p=F/S=1.4x107N/5m2=2.8x106Pa 因为2.8x106Pa<4x106Pa，所以不能依靠压力直接压碎冰层。
+    (4分) (答题卡中其他说法或解法正确均给分) 九年级物理试卷答案及评分标准第2页(共2页) 关注北京高考在线官方微信:京考一点通(微信号:bjgkzx)，获取更多试题资料及排名分析信息。 北京高考在线平台简介 北京高考在线平台创办于2014年，总部位于北京，是北京地区极具影响力的初高中升学咨询服务平台。
+    涵盖北京中高考、综合评价、强基计划、清北升学、港澳升学、生涯规划、志愿填报、学科竞赛、大学保 研留学等业务。 北京高考在线旗下拥有微信公众平台、网站门户、视频号、小红书、微博、社群、抖音等矩阵生态平 台。平台活跃用户达80万+量级，网站门户年度访问量超4500万+。用户群体涵盖海淀、西城、东城、
+    朝阳、丰台、石景山、顺义、大兴等北京所有城区，北京市超95%以上的重点中学校长老师、家长考生及 知名高校招办老师都在关注，在行业内影响力首屈一指。 北京高考在线平台一直秉承“深度、专业、有态度“的创办理念，不断探索“K12教育+互联网+
+    大数据”的运营模式，尝试基于AI大数据为广大中学和家长提供北京中高考、综合评价、强基计划、港澳 升学、生涯规划、志愿填报等升学咨询服务，为广大高校、教科研单位提供大学和中学“桥梁纽带”的衔 接服务工作。 平台自创办以来，为众多重点大学发现和推荐优秀生源，和北京近百所重点中学达成深度战略合作。
+    累计举办大学招办宣讲会、公益升学讲座千余场，累计帮助数十万考生成功考入重点大学。在家长考生、 中学和社会各界具有很好的品牌口碑影响力。 未来，北京高考在线将立足新高考改革，全面整合高校、中学及教科研机构等各方面资源，依托在线 教育模式，打造北京地区更加全面、专业的初高中贯通培养升学咨询服务平台。
+    北京 北京 北京 综合评价 京考一点通 京考圈 京考尖子生 自主选拔在线 名校综合评价 强基 学科 科 名校 阅读 强基在线 学科竞赛派 学在港澳 名校少年班 名校保研通'
+  knowledge_points:
+  - 浮力
+  - 压强
+  module: mechanics
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
