@@ -76,7 +76,7 @@ echo "[${REGION}_${SUBJECT}_${TYPE}] OCR+enrich done $((T1-T0))s"
 
 # Step 3: inspect
 echo "--- Step 3: inspect ---"
-INSPECT="scripts/exam-docx/${SUBJECT}_inspect.py"
+INSPECT="scripts/exam-inspect/${SUBJECT}_inspect.py"
 if [ -f "$INSPECT" ]; then
     python3 "$INSPECT" "$YAML" -v || true
 else
