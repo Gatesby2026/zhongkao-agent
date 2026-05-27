@@ -324,9 +324,20 @@ _NOISE_LINE_PATTERNS = [
     re.compile(r"菁优网"),
     re.compile(r"北京高考(?:在线)?(?:\s*官方微信)?"),
     re.compile(r"京考一点通(?:[\(（][^\)）]*[\)）])?"),
+    # OCR 把 "京考一点通" 误识成 "京者一点通"（chaoyang R1 narrative passage）
+    re.compile(r"京者一点通[^\n]{0,30}"),
     re.compile(r"考在线(?:com)?"),  # OCR 噪 chaoyang Q15 "考在线com"
     re.compile(r"获取更多试题资料及排名分析信息。?"),
     re.compile(r"关注[一-龥]+(?:官方)?微信[^\n]*"),
+    # **chaoyang R1 报告挖出的 14 处水印残字碎片**：OCR 把网址/小程序号切碎，
+    # 残字粘 stem/options/sol 末尾。这些是 ZXXK / gaokzx / 高考在线 / 微信
+    # 号品牌的细碎残片，无业务语义
+    re.compile(r"(?:www\.|aokz|okzx|okz|k2x|m\.co|mwww|mx\.co|gao)"
+               r"(?:\.com|x\.com|x|\.co|com)?"),
+    re.compile(r"^\s*高考(?:在)?线?\s*$"),  # 整行 "高考线" / "高考在" 残字
+    re.compile(r"^\s*关注\s*[:：]?\s*[，,]?\s*$"),  # 整行 "关注:，"
+    re.compile(r"^\s*(?:高|线|com)\s*$"),  # 单字残片
+    re.compile(r"微信号?\s*[:：]\s*\w*"),
 ]
 
 
@@ -375,6 +386,15 @@ def _parse_options_block(block: str) -> dict[str, str]:
     for i, (m, key) in enumerate(marks_uniq):
         end = marks_uniq[i+1][0].start() if i+1 < len(marks_uniq) else len(block)
         val = block[m.end():end].strip().rstrip(".").strip()
+        # **option 长度上限兜底**：中文单选 option 一般 ≤ 80 字，超 100 字几乎
+        # 一定吞了下段 passage 文字（chaoyang R1 Q1.D/Q3.D/Q14.D，约 200 字）
+        # 截到首个换行或全角句号（必须 D 选项本体已有内容才截）
+        if len(val) > 100:
+            m_break = re.search(r"[\n。！？]", val)
+            if m_break and m_break.start() > 0:
+                truncated = val[:m_break.start()].strip()
+                if truncated:
+                    val = truncated
         opts[key] = val
     return opts
 
@@ -684,6 +704,22 @@ def _insert_blank_marker(stem: str) -> str:
     return s
 
 
+# **passage q_range anchor 提取**：从 "(一)阅读...完成 N-M 题" 等明示题号
+# 范围的子段标题抽真实 q_range，替代靠 sub_text 内题号 min/max（OCR 切分错
+# 会把多个 sub 题号挤一起，致 q_range 跨度过大 → passage_id 全表错配）。
+# chaoyang R1 报告 P0：non_continuous q_range=[2,25] 错（应 [17,19]）的根因。
+_QRANGE_ANCHOR_RE = re.compile(
+    r"[\(（][一二三四五][\)）]?\s*(?:[^\n]{0,30})?完成\s*(\d{1,2})\s*[-－]\s*(\d{1,2})\s*题")
+
+
+def _extract_qrange_anchor(text: str) -> tuple[int, int] | None:
+    """从 text 头部抽 '完成 N-M 题' anchor，返回 (N, M)；找不到 None。"""
+    m = _QRANGE_ANCHOR_RE.search(text[:500])
+    if m:
+        return int(m.group(1)), int(m.group(2))
+    return None
+
+
 # 子部分标题（资料一/资料二/.../后记/(一)/(二)等）— stem / option 切到这里就截断
 # 二模新增：行程式 sub-header "第一站航天科技体验中心" / "结语致未来探索者"
 # 整行作为 sub-section 标题（xicheng-er Q2/Q3/Q4 P0 跨题 bug 根因）。
@@ -871,10 +907,13 @@ def _parse_classical_section(text: str, num_range: range,
         body = _join_paragraph_lines(_strip_footers(body))
         if body and len(body) > 10:
             q_nums = [int(a.group(1)) for a in sub_anchors]
+            # **优先用 "完成 N-M 题" anchor**（更稳；防 OCR 切错 sub 致跨度大）
+            anchor_range = _extract_qrange_anchor(sub_text)
+            qr = list(anchor_range) if anchor_range else [min(q_nums), max(q_nums)]
             pid = f"classical_{k+1}"
             passages.append({
                 "id": pid, "type": "classical",
-                "q_range": [min(q_nums), max(q_nums)],
+                "q_range": qr,
                 "body": body[:2000],
             })
         _parse_section_generic(sub_text, num_range, "subjective_blank",
@@ -911,9 +950,13 @@ def _parse_modern_section(text: str, num_range: range,
         if body:
             q_nums = [int(a.group(1)) for a in sub_anchors]
             pid_type = ["non_continuous", "narrative", "argument"][k] if k < 3 else f"modern_{k+1}"
+            # **优先用 "完成 N-M 题" anchor**（防 OCR 切错 sub 致跨度大；
+            # chaoyang R1 P0：non_continuous q_range=[2,25] 应 [17,19]）
+            anchor_range = _extract_qrange_anchor(sub_text)
+            qr = list(anchor_range) if anchor_range else [min(q_nums), max(q_nums)]
             passages.append({
                 "id": pid_type, "type": pid_type,
-                "q_range": [min(q_nums), max(q_nums)],
+                "q_range": qr,
                 "body": body[:5000],
             })
         _parse_section_generic(sub_text, num_range, "comprehension",
@@ -1077,8 +1120,26 @@ def parse_paper(src: Path, out_dir: Path, force=False) -> dict:
     else:
         print(f"[chinese_image_paper]   （未触发自动裁图）", flush=True)
 
+    # **元数据从 slug 反推 + 封面 OCR 校验**（chaoyang R1 P1：
+    # final.json 没 year/district/exam_type → enrich 写 yaml 是 null/''/真题）
+    slug = out_dir.name
+    m_slug = re.match(r"(\d{4})-(.+?)-(\w+)", slug)
+    year = int(m_slug.group(1)) if m_slug else None
+    region_slug = m_slug.group(2) if m_slug else ""
+    typ_slug = m_slug.group(3) if m_slug else ""
+    region_cn = {"chaoyang":"朝阳","haidian":"海淀","mentougou":"门头沟",
+                  "fengtai":"丰台","xicheng":"西城","dongcheng":"东城",
+                  "shijingshan":"石景山","tongzhou":"通州","shunyi":"顺义",
+                  "changping":"昌平","daxing":"大兴","fangshan":"房山",
+                  "pinggu":"平谷","huairou":"怀柔","miyun":"密云",
+                  "yanqing":"延庆","yanshan":"燕山"}.get(region_slug, region_slug)
+    type_cn = {"yi":"一模","er":"二模","san":"三模","zhen":"真题"}.get(typ_slug, "一模")
+
     result = {
         "subject": "chinese",
+        "year": year,
+        "district": (region_cn + "区") if region_cn else "",
+        "exam_type": type_cn,
         "full_score": full_score,
         "duration_minutes": 150,  # 北京中考语文标准时长（下游 enrich 透传到 yaml）
         "passages": passages,
