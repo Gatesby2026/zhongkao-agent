@@ -1,17 +1,10 @@
-# ============================================================
-# 2026年北京房山区二模chinese — 自动生成
-# ============================================================
-# OCR: Qwen-VL-OCR  Enrich: qwen-max
-# QC: draft=25  needs_review=0
-
 year: 2026
 district: 房山区
 exam_type: 二模
 subject: chinese
-full_score: 97
+full_score: 102
 duration_minutes: 150
 total_questions: 25
-structure: 10单选(20分) + 3主观填空(8分) + 2默写(4分) + 1古诗赏析(3分) + 1名著阅读(5分) + 7现代文阅读(17分) + 1作文(40分)
 passages:
 - id: base_intro
   type: base
@@ -148,15 +141,9 @@ questions:
 
 
     评分:本题2分。'
-  knowledge_points:
-  - 书写
-  module: writing
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: draft
   qc_note: ''
   passage_id: base_intro
@@ -171,15 +158,9 @@ questions:
 
 
     评分:本题2分。'
-  knowledge_points:
-  - 字音
-  module: chinese
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: draft
   qc_note: ''
   passage_id: base_intro
@@ -197,15 +178,9 @@ questions:
 
 
     评分:本题2分。'
-  knowledge_points:
-  - 标点符号运用
-  module: writing
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: draft
   qc_note: ''
   passage_id: base_intro
@@ -220,15 +195,9 @@ questions:
 
 
     评分:本题2分。'
-  knowledge_points:
-  - 词语运用
-  module: reading
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: draft
   qc_note: ''
   passage_id: base_intro
@@ -243,15 +212,9 @@ questions:
     历史文化。
 
     评分:本题2分。'
-  knowledge_points:
-  - 病句
-  module: writing
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: draft
   qc_note: ''
   passage_id: base_intro
@@ -268,15 +231,9 @@ questions:
 
 
     评分:本题2分。'
-  knowledge_points:
-  - 词语运用
-  module: reading
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: draft
   qc_note: ''
   passage_id: base_intro
@@ -293,15 +250,9 @@ questions:
     2分:贴合展览的内容，有推荐语，语言基本通顺。
 
     1分:未结合展览内容，但是有推荐语。'
-  knowledge_points:
-  - 词语运用
-  - 连贯
-  module: writing
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: draft
   qc_note: ''
   passage_id: base_intro
@@ -336,15 +287,9 @@ questions:
     浊酒一杯家万里，燕然未勒归无计(范仲淹《渔家傲·秋思》)
 
     评分:本题2分。每空1分，书写错误不得分。合理即可得分。'
-  knowledge_points:
-  - 古诗赏析
-  - 古诗内容理解
-  module: classical
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: draft
   qc_note: ''
 - id: 9
@@ -360,21 +305,15 @@ questions:
     ②为报君恩、誓死报国
 
     评分:本题2分。'
-  knowledge_points:
-  - 古诗内容理解
-  - 古诗赏析
-  module: classical
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: draft
   qc_note: ''
   passage_id: classical_2
 - id: 10
-  type: 古诗赏析
-  score: 3
+  type: 赏析
+  score: 4
   stem: “角声满天秋色里，塞上燕脂凝夜紫”两句中，“满”和“凝”极具表现力，请结合诗句内容简要分析其妙处。(4分)
   answer: ''
   solution: '“满”字写出号角声响彻整个秋天的战场，从听觉上渲染出战斗的紧张与浩大，突出战事的激
@@ -383,15 +322,9 @@ questions:
     烈;“凝”字形象地写出夜色中边塞将士的鲜血凝结成暗紫色，从视觉上表现战斗的惨烈悲壮，画面感极强。
 
     评分:本题4分。结合内容各1分，分析妙处各1分。'
-  knowledge_points:
-  - 古诗赏析
-  - 词语含义
-  module: classical
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: draft
   qc_note: ''
   passage_id: classical_2
@@ -406,15 +339,9 @@ questions:
 
 
     评分:本题2分。'
-  knowledge_points:
-  - 文言文实词
-  module: classical
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: draft
   qc_note: ''
   passage_id: classical_3
@@ -434,14 +361,9 @@ questions:
     评分:本题2分。
 
     ()，'
-  knowledge_points:
-  - 文言文理解
-  module: classical
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: draft
   qc_note: ''
   passage_id: classical_3
@@ -460,15 +382,9 @@ questions:
     或“人心调于马”)
 
     评分:本题共2分。每空1分。'
-  knowledge_points:
-  - 文言文理解
-  - 古诗文内容理解
-  module: classical
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: draft
   qc_note: ''
   passage_id: classical_3
@@ -489,16 +405,9 @@ questions:
     经》这部分时，我会圈出课本里学过的篇目出处，写下自己的学习感受。这样边读边画边写，打破了对经典
 
     书籍的畏惧感，轻松地走进传统文化的大门。'
-  knowledge_points:
-  - 名著情节
-  - 人物形象
-  - 主题理解
-  module: reading
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: draft
   qc_note: ''
 - id: 15
@@ -515,14 +424,9 @@ questions:
 
 
     评分:本题2分'
-  knowledge_points:
-  - 信息筛选
-  module: reading
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: draft
   qc_note: ''
   passage_id: non_continuous
@@ -546,21 +450,15 @@ questions:
 
 
     评分:本题2分。'
-  knowledge_points:
-  - 信息筛选
-  module: reading
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: draft
   qc_note: ''
   passage_id: non_continuous
 - id: 17
-  type: 现代文阅读
-  score: 2
+  type: 简答
+  score: 3
   stem: 围绕提升青少年阅读素养，以上三则材料分别从①③三kzx绍。(3分)
   answer: ''
   solution: '①重要意义(价值/作用)②指导标准(政策文件/顶层设计)③实践活动(具体行动/落实
@@ -571,19 +469,14 @@ questions:
     评分:本题共3分。①空需体现材料一“对个体和国家的深远意义”;②空需体现材料二“《中国青少
 
     年阅读素养框架》作为统一指导标准”;③空需体现材料三“全民阅读活动周及各地具体实践活动”。'
-  knowledge_points:
-  - 信息提取/段落梳理
-  module: reading
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: draft
   qc_note: ''
   passage_id: non_continuous
 - id: 18
-  type: 现代文阅读
+  type: 简答
   score: 2
   stem: 文章描摹了窗前洋槐四季不同的生命姿态:春日嫩芽隐绿、花香馥郁，让人陶醉;夏日①____，让人感动;秋日树叶金黄、落叶洒脱，让人②_;冬日疏枝挺拔、素裹银装，让人沉思。(2分)
   answer: ''
@@ -591,19 +484,14 @@ questions:
 
 
     评分:本题共2分。共2空，每空1分。有其他答法，视其合理程度给分'
-  knowledge_points:
-  - 信息提取/段落梳理
-  module: reading
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: draft
   qc_note: ''
   passage_id: narrative
 - id: 19
-  type: 现代文阅读
+  type: 简答
   score: 3
   stem: 从文中[甲][乙]两处画线句中任选一处，从词语运用或修辞手法的角度分析其表达效果。(3分)
   answer: ''
@@ -623,21 +511,14 @@ questions:
     评分:本题3分。点明所用的修辞手法或重点词语1分;结合语句具体分析其写出了洋槐的什么特点
 
     1分;点明表达效果或作者的情感态度1分。'
-  knowledge_points:
-  - 句式赏析
-  - 修辞手法
-  - 表达效果
-  module: reading
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: draft
   qc_note: ''
   passage_id: narrative
 - id: 20
-  type: 现代文阅读
+  type: 简答
   score: 3
   stem: 文中第13自然段写道“它是一棵新的老树”，请结合上下文内容，说说你对这句话的理解。(3分)
   answer: ''
@@ -647,20 +528,14 @@ questions:
     或“那棵老槐陪伴我时间长”;解释“新”需要结合原文第11段“清除衰老抛去陈旧”第13段“衰
 
     而复荣、败而复兴”，答出“每年落叶长新、完成生命更新、获得新的生命力”'
-  knowledge_points:
-  - 信息提取/段落梳理
-  - 词语含义
-  module: reading
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: draft
   qc_note: ''
   passage_id: narrative
 - id: 21
-  type: 现代文阅读
+  type: 简答
   score: 3
   stem: 作者借洋槐四季的生命姿态寄寓了丰富的人生思考。请你就其中任意一点，结合自身生活，谈谈带给你的成长启示。(3分)()，
   answer: ''
@@ -674,14 +549,9 @@ questions:
     评分:提炼感悟1分，结合生活体验1分，成长启示1分，
 
     考'
-  knowledge_points:
-  - 启示感悟
-  module: reading
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: draft
   qc_note: ''
   passage_id: narrative
@@ -697,53 +567,27 @@ questions:
 
 
     评分:本题2分'
-  knowledge_points:
-  - 议论文阅读
-  - 论证分析
-  module: reading
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: draft
   qc_note: ''
   passage_id: argument
 - id: 23
-  type: 现代文阅读
-  score: 2
+  type: 简答
+  score: 4
   stem: 第③段运用了举例论证，请结合内容分析其作用。(2分)()，
   answer: ''
-  solution: '第③段运用了举例论证的论证方法，列举了深圳快递小哥聂剑利用碎片时间坚持读书圆大
-
-
-    ga
-
-    学梦、北大保安张俊成通过自学考入北京大学法律系并返乡办学的事例。
-
-    w
-
-    这两个事例具体真实，有力地论证了“读书是青年积蓄力量、成长成才的必由之路”这一分论点，证明
-
-    了读书不仅能帮助青年打破出身局限、实现职业跃迁，更能拓宽人生格局、丰富精神世界，使论证更具说
-
-    服力。
-
-    评分:本题2分。概括事例1分;分析作用1分。'
-  knowledge_points:
-  - 论证分析
-  module: reading
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
+  solution: 第③段运用了举例论证的论证方法，列举了深圳快递小哥袁石剑利用碎片时间坚持读书圆大学梦、北大保安张俊成通过自学考入北京大学法律系并返乡办学的事例，具体有力地论证了"读书是青年积蓄力量、成长成才的必由之路"的观点，增强了文章的说服力。
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: draft
   qc_note: ''
   passage_id: argument
 - id: 24
-  type: 现代文阅读
-  score: 2
+  type: 简答
+  score: 3
   stem: 有同学认为:“现在已经是AI时代了，读书已经没有必要了，有问题找AI就行了。”请结合文中第4段的内容，谈谈你对这位同学观点的看法。(3分)
   answer: ''
   solution: '这种观点是错误的。正如文中第④段所说，当今时代，阅读的价值愈发凸显，所有颠覆性
@@ -756,14 +600,9 @@ questions:
     新能力。
 
     评分:本题共3分。结合第④段观点1分;结合内容说明看法2分。'
-  knowledge_points:
-  - 启示感悟
-  module: reading
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: draft
   qc_note: ''
   passage_id: argument
@@ -890,13 +729,8 @@ questions:
     得分。
 
     很多，格式不规范。'
-  knowledge_points:
-  - 命题作文
-  - 材料作文
-  module: writing
-  difficulty: 能力
-  recommended_for:
-  - L2
-  - L3
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: draft
   qc_note: ''
