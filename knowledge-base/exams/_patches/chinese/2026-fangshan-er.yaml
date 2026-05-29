@@ -5,13 +5,15 @@ questions:
   1: { score: 2 }   # yaml=1, src=2
   8: { score: 4 }   # yaml=1, src=4 (默写)
   9: { score: 2 }   # yaml=1, src=2
-  10: { score: 3 }  # yaml=1, src=3
+  10: { score: 4 }  # yaml=1, src=4 (R2 修: OCR page-10 line 42 "本题4分")
   12: { score: 2 }  # yaml=3, src=2
   14: { score: 5 }  # yaml=2, src=5 (名著)
   15: { score: 2 }  # yaml=3, src=2
   16: { score: 2 }  # yaml=5, src=2 (横线补)
-  17: { score: 2 }  # yaml=1, src=2
+  17: { score: 3 }  # yaml=1, src=3 (R2 修: OCR page-11 line 20 "本题共3分")
   20: { score: 3 }  # yaml=1, src=3
   22: { score: 2 }  # yaml=3, src=2
   23: { score: 2 }  # yaml=4, src=2 (论证)
-  24: { score: 2 }  # yaml=1, src=2
+  24: { score: 3 }  # yaml=1, src=3 (R2 修: OCR page-12 line 19 "本题共3分")
+  23:
+    solution: '第③段运用了举例论证的论证方法，列举了深圳快递小哥袁石剑利用碎片时间坚持读书圆大学梦、北大保安张俊成通过自学考入北京大学法律系并返乡办学的事例，具体有力地论证了"读书是青年积蓄力量、成长成才的必由之路"的观点，增强了文章的说服力。'  # R2 修: page-12 OCR "聂剑" 是答案页 OCR 损坏，源文章主体 page-8 是"袁石剑"
