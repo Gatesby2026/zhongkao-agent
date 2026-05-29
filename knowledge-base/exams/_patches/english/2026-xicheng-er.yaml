@@ -1,0 +1,83 @@
+# 西城区 2026 二模英语 patches —— R1 大模型审核 P0 收敛
+# 来源：R1 Claude 大模型审核（agent: a7ba0a96e02f7e08c），核对 tencent-cache OCR
+#
+# R1 P0 概览：
+# - 缺 Q15（cloze OCR 漏 B 选项 + strict 校验整题被 drop） → answer=D（flew）
+# - Q11 stem 残缺："We will send you an e-" 截断
+# - Q21 stem 覆盖为 "www." → 用 David 介绍兜底
+# - Q33 D 选项粘 "第二部分..." footer
+# - Q34-37 answer 空（标准答案在 sol，需复制到 answer）
+# - Q13 sol "C14.A" 串扰下题
+# - Q38 sol 范文 OCR 极烂（"qite tdenced spl..."）
+# - total_questions=37 → 应 38；structure 缺 Q15
+
+questions:
+  # ---- 缺题 Q15：creating + 完整四选项（B option OCR 漏；从语义"put them on and ___ out of the door"+ 答案 D=flew 推断，B 最常见为 rushed）
+  15:
+    create: true
+    type: cloze
+    score: 1
+    stem: ""  # cloze 题干在 passage body，本题为编号题
+    options:
+      A: looked
+      B: rushed
+      C: reached
+      D: flew
+    answer: D
+    solution: D
+    section: 二、完形填空
+    qc_note: "R1 OCR 漏读：B 选项 OCR cache 残缺，B='rushed' 为 cloze 常见选项推断；需对源 PDF 二校"
+
+  # ---- Q11：stem "We will send you an e-" 残缺 → 补全（OCR 截断，从语境+选项 will accept/accepts/will be accepted/is accepted 推 stem 通常是 "We will send you an e-mail as soon as your order ___."）
+  11:
+    stem: We will send you an e-mail as soon as your order ___.
+    qc_note: "R1 OCR 截断 stem，按选项语境补 'as soon as your order ___'，需对源 PDF 二校"
+
+  # ---- Q21：stem 被 "www." 覆盖 → 用 David 人物介绍兜底（image-match reading）
+  21:
+    type: reading
+    stem: 'David: I love to learn through exploration. Visiting museums has always been one of my hobbies. If I could become a museum guide one day, I''m sure I would be able to give visitors the best-ever experiences!'
+    knowledge_points:
+      - 信息提取/段落梳理
+    module: reading
+    difficulty: 基础
+    recommended_for:
+      - L0
+      - L1
+      - L2
+      - L3
+
+  # ---- Q22/Q23 type 修正：image-match reading 不是 单选
+  22:
+    type: reading
+    stem: 'Alice: Actually, I haven''t decided what I want to do in the future. But I''m very interested in doing scientific research. I like finding truth through experiments. I''m excited to have a chance to talk with a scientist.'
+  23:
+    type: reading
+
+  # ---- Q13 sol "C14.A" 串扰 → 还原 C
+  13:
+    solution: C
+
+  # ---- Q33 D 选项粘 "第二部分..." footer
+  33:
+    options:
+      A: Humans Evolved to Like Likes
+      B: The Evolution of Ways to Give Likes
+      C: The Like Button Evolved with the Times
+      D: 'Liked by Others: Human Evolution''s Driving Force'
+
+  # ---- Q34-37：answer 空，标准答案在 solution，复制过去
+  34:
+    answer: Tranquility.
+  35:
+    answer: The courage to bear boredom.
+    solution: The courage to bear boredom.
+  36:
+    answer: When we understand that change takes time and requires patience.
+  37:
+    answer: ""
+    solution: "略"
+
+  # ---- Q38：作文 sol OCR 严重糊化（"qite tdenced spl ofte ssests" 这种）→ 清空避免污染相似题推荐
+  38:
+    solution: ""

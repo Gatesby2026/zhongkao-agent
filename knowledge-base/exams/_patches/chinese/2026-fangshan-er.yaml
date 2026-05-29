@@ -1,0 +1,17 @@
+# 房山区 2026 二模语文 patches —— R1 13 题 score 错（按源 PDF 真值）
+# R1 src vs yaml diff: Q1(+1) Q8(+3) Q9(+1) Q10(+2) Q12(-1) Q14(+3) Q15(-1) Q16(-3) Q17(+1) Q20(+2) Q22(-1) Q23(-2) Q24(+1) = +6
+# patch = src 真值 (= yaml + delta)
+questions:
+  1: { score: 2 }   # yaml=1, src=2
+  8: { score: 4 }   # yaml=1, src=4 (默写)
+  9: { score: 2 }   # yaml=1, src=2
+  10: { score: 3 }  # yaml=1, src=3
+  12: { score: 2 }  # yaml=3, src=2
+  14: { score: 5 }  # yaml=2, src=5 (名著)
+  15: { score: 2 }  # yaml=3, src=2
+  16: { score: 2 }  # yaml=5, src=2 (横线补)
+  17: { score: 2 }  # yaml=1, src=2
+  20: { score: 3 }  # yaml=1, src=3
+  22: { score: 2 }  # yaml=3, src=2
+  23: { score: 2 }  # yaml=4, src=2 (论证)
+  24: { score: 2 }  # yaml=1, src=2

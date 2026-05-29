@@ -47,16 +47,19 @@ from paths import derive_out_dir  # noqa: E402
 # **SECTIONS range 仅默认参考**，_split_sections 按 SECTION_BY_CONTENT
 # 关键字识别真实 type。num_range 在 parse_paper 内按实际 section 起止题号动态推算。
 SECTIONS = [
-    (re.compile(r"^\s*[一二][、.]\s*判断\s*题?"),                     range(1, 11),  "judge",    10),
-    (re.compile(r"^\s*[一二][、.]\s*(?:单项)?\s*选择\s*题"),           range(11, 21), "choice",   20),
+    # **跨区**：朝阳卷面 OCR 无 "一二、" 前缀 ("判断题(共10题..." 直接打头) → 前缀可选
+    (re.compile(r"^\s*(?:[一二][、.])?\s*判断\s*题?\s*[\(（]"),         range(1, 11),  "judge",    10),
+    (re.compile(r"^\s*(?:[一二][、.])?\s*(?:单项)?\s*选择\s*题?\s*[\(（]"),
+                                                                    range(11, 21), "choice",   20),
     (re.compile(r"^\s*(?:[三四五]\s*[、.]\s*(?:材料分析|分析说明|简答|论述|综合探究|情境分析|探究与实践)|第二部分)"),
                                                                     range(21, 26), "material", 40),
 ]
 # **跨区通用**：按内容关键词识别 section type（忽略大题编号位置）。
 # 跨区可能 4-7 大题各异，但按关键字稳定识别。
 SECTION_BY_CONTENT = [
-    (re.compile(r"^\s*[一二三四五六七][、.]\s*(?:单项)?\s*选择\s*题"), "choice"),
-    (re.compile(r"^\s*[一二三四五六七][、.]\s*判断\s*题?"),            "judge"),
+    # 朝阳卷"判断题(共10题..."无前缀；西城"二、选择题(共..."有前缀。前缀可选+要求 "(共" anchor 防误命中题干
+    (re.compile(r"^\s*(?:[一二三四五六七][、.])?\s*(?:单项)?\s*选择\s*题?\s*[\(（]共"), "choice"),
+    (re.compile(r"^\s*(?:[一二三四五六七][、.])?\s*判断\s*题?\s*[\(（]共"),            "judge"),
     (re.compile(
         r"^\s*[一二三四五六七][、.]\s*"
         r"(?:材料分析|分析说明|简答|论述|综合探究|情境分析|探究与实践|实践探究)"
@@ -577,7 +580,8 @@ def _parse_answer_table(answer_text: str) -> dict[int, str]:
     out: dict[int, str] = {}
     lines = [l.rstrip() for l in answer_text.split("\n")]
     # 判断 / 选择 答案候选格式
-    judge_re = re.compile(r"^\s*([√✓XxХ×对错]|正确|错误)\s*$")
+    # **chaoyang R2 P0**：OCR 把 √ 识为 V（看体）→ 加 V/v
+    judge_re = re.compile(r"^\s*([√✓VvXxХ×对错]|正确|错误)\s*$")
     choice_re = re.compile(r"^\s*([A-D])\s*$")
     i = 0
     while i < len(lines):
@@ -589,7 +593,6 @@ def _parse_answer_table(answer_text: str) -> dict[int, str]:
             if j < len(lines) and lines[j].strip() in ("答案", "答案:", "答案:"):
                 k = j + 1
                 ans: list[str] = []
-                # **关键改**：放宽答案 token — 既允许 A-D 也允许 √/X/正确 等
                 while k < len(lines):
                     m_j = judge_re.match(lines[k])
                     m_c = choice_re.match(lines[k])
@@ -598,11 +601,13 @@ def _parse_answer_table(answer_text: str) -> dict[int, str]:
                         k += 1
                     else:
                         break
-                if nums and len(nums) == len(ans):
+                # **chaoyang R2 修**：允许部分 ans（OCR 漏几个时仍填能抓到的）
+                # 之前要求 len(nums) == len(ans) 严格匹配，OCR 漏 2 个就全 drop
+                if nums and len(ans) >= len(nums) * 0.5:  # 至少抓到一半
                     for n, a in zip(nums, ans):
                         if 1 <= n <= 28:
-                            # √/X 归一化为"正确/错误"
-                            out[n] = {"√": "正确", "✓": "正确", "对": "正确",
+                            out[n] = {"√": "正确", "✓": "正确", "V": "正确",
+                                       "v": "正确", "对": "正确",
                                        "X": "错误", "x": "错误", "Х": "错误",
                                        "×": "错误", "错": "错误"}.get(a, a)
             i = j
@@ -1242,8 +1247,16 @@ def _apply_patches_to_result(patches: dict, result: dict) -> int:
             q["options"] = patch["options"]; n_applied += 1
         if "solution" in patch:
             q["solution"] = patch["solution"]; n_applied += 1
+            ans = next((a for a in result.get("answers", []) if a.get("number") == qid), None)
+            if ans is not None:
+                ans["solution"] = patch["solution"]
         if "answer" in patch:
             q["answer"] = patch["answer"]; n_applied += 1
+            ans = next((a for a in result.get("answers", []) if a.get("number") == qid), None)
+            if ans is not None:
+                ans["correct"] = patch["answer"]
+            else:
+                result.setdefault("answers", []).append({"number": qid, "correct": patch["answer"], "solution": patch.get("solution", q.get("solution", "")), "score": q.get("score", 0)})
         if patch.get("type"):
             q["type"] = patch["type"]; n_applied += 1
         if "score" in patch:
@@ -1310,8 +1323,16 @@ def _apply_patches(patches: dict, result: dict, yaml_questions: list[dict]) -> i
             q["options"] = patch["options"]; n += 1
         if "solution" in patch:
             q["solution"] = patch["solution"]; n += 1
+            ans = next((a for a in result.get("answers", []) if a.get("number") == qid), None)
+            if ans is not None:
+                ans["solution"] = patch["solution"]
         if "answer" in patch:
             q["answer"] = patch["answer"]; n += 1
+            ans = next((a for a in result.get("answers", []) if a.get("number") == qid), None)
+            if ans is not None:
+                ans["correct"] = patch["answer"]
+            else:
+                result.setdefault("answers", []).append({"number": qid, "correct": patch["answer"], "solution": patch.get("solution", q.get("solution", "")), "score": q.get("score", 0)})
         if patch.get("type"):
             q["type"] = patch["type"]; n += 1
         if "score" in patch:

@@ -1,0 +1,785 @@
+# ============================================================
+# 2026年北京朝阳区二模math — 自动生成
+# ============================================================
+# OCR: Qwen-VL-OCR  Enrich: qwen-max
+# QC: draft=20  needs_review=8
+
+year: 2026
+district: 朝阳区
+exam_type: 二模
+subject: math
+full_score: 100
+duration_minutes: 120
+total_questions: 28
+structure: 8单选(16分) + 8填空(16分) + 12解答(68分)
+passages: []
+questions:
+- id: 1
+  type: 单选
+  score: 2
+  stem: 右图是某几何体的三视图,该几何体是
+  figure: 2026-chaoyang-er/figures/q01.png
+  answer: A
+  solution: ''
+  knowledge_points:
+  - 三视图
+  - 几何体识别
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 选择题缺少 options（既无文本也无图片选项）
+- id: 2
+  type: 单选
+  score: 2
+  stem: 实数 a在数轴上的对应点的位置如图所示,若实数 b满足  $a<b<-a$  ,则 b的值可以是
+  answer: C
+  solution: ''
+  knowledge_points:
+  - 实数的大小比较
+  - 数轴的应用
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 选择题缺少 options（既无文本也无图片选项）
+- id: 3
+  type: 单选
+  score: 2
+  stem: 若一个五边形的每个内角都是$x^{\circ}$,则x的值为
+  answer: C
+  solution: ''
+  knowledge_points:
+  - 多边形内角和
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 选择题缺少 options（既无文本也无图片选项）
+- id: 4
+  type: 单选
+  score: 2
+  stem: 如图,点 C在  $O A$  上,  $C D\perp O B$  于点 D,  $D E// O A$  ,若  $\angle A O B=35^{\circ}$  ,则  $\angle C D E$  的度数为
+  figure: 2026-chaoyang-er/figures/q04.png
+  answer: B
+  solution: ''
+  knowledge_points:
+  - 三角形内角和
+  - 平行线性质
+  module: triangles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 选择题缺少 options（既无文本也无图片选项）
+- id: 5
+  type: 单选
+  score: 2
+  stem: 一个质地均匀的正方体的六个面上分别标有数字 1,1,2,4,5,5,掷该正方体一次,朝上一面的数字是 5的概率为
+  answer: C
+  solution: ''
+  knowledge_points:
+  - 概率计算
+  module: statisticsAndProbability
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 选择题缺少 options（既无文本也无图片选项）
+- id: 6
+  type: 单选
+  score: 2
+  stem: '我国科研团队成功研制的半导体电荷存储器“破晓”，达到400皮秒实现一次擦或者写.已知1皮秒等于$10^{-12}秒$，则400皮秒为
+
+    (A)$4×10^{-10}$秒
+
+    (B)$4×10^{-11}$秒
+
+    (C)$4×10^{-12}$秒
+
+    (D)$40×10^{-10}$秒'
+  answer: A
+  solution: ''
+  knowledge_points:
+  - 科学记数法
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 选择题缺少 options（既无文本也无图片选项）
+- id: 7
+  type: 单选
+  score: 2
+  stem: '如图,点A,B分别在射线OM,ON上,以A为圆心,AB长为半径画弧,以O为圆心,OB长为半径画弧,两弧交于点C(点C,B不重合),连接BC,若∠MON=40°,则∠OBC的大小为
+
+    (A)40°
+
+    (B)50°
+
+    (C)$80^{\circ}$
+
+    (D)$100^{\circ}$'
+  figure: 2026-chaoyang-er/figures/q07.png
+  answer: B
+  solution: ''
+  knowledge_points:
+  - 圆的基本性质
+  - 角的计算
+  module: circles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 选择题缺少 options（既无文本也无图片选项）
+- id: 8
+  type: 单选
+  score: 2
+  stem: '如图,将正方形MNPQ绕其中心0逆时针旋转45°,得到正方形$M_1N_1P_1Q_1$,两个正方形的公共点为A,B,C,D,E,F,G,H,连接AC,BH,CG.给出下面四个结论:
+
+    ①MA=AB;
+
+    ②∠MAH=2∠ACB;
+
+    ③∠ACG+∠BAH=180°;
+
+    ④线段AC,BH,CG可以组成直角三角形.
+
+    上述结论中,所有正确结论的序号为'
+  figure: 2026-chaoyang-er/figures/q08.png
+  answer: D
+  solution: ''
+  knowledge_points:
+  - 旋转对称性
+  - 正方形的性质
+  module: quadrilaterals
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 选择题缺少 options（既无文本也无图片选项）
+- id: 9
+  type: 填空
+  score: 2
+  stem: 若分式$\frac{1}{x-5}$有意义,则实数x的取值范围是 _.
+  answer: x≠5
+  solution: ''
+  knowledge_points:
+  - 分式的概念与性质
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 10
+  type: 填空
+  score: 2
+  stem: 分解因式:$ma^{2}-4m$=_.
+  answer: m(a+2)(a-2)
+  solution: ''
+  knowledge_points:
+  - 因式分解
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 11
+  type: 填空
+  score: 2
+  stem: 关于x的一元二次方程$ax^{2}-4x+2=0$有两个相等的实数根,则实数a的值为_.
+  answer: '2'
+  solution: ''
+  knowledge_points:
+  - 一元二次方程的根与系数的关系
+  module: equationsAndInequalities
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 12
+  type: 填空
+  score: 2
+  stem: 直线y=x与双曲线y=$\frac{k}{x}$(k>0)的两个交点的横坐标分别为m,n,则m+n=_.
+  answer: '0'
+  solution: ''
+  knowledge_points:
+  - 一次函数与反比例函数的交点
+  - 代数方程的应用
+  module: functions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 13
+  type: 填空
+  score: 2
+  stem: '下表记录了某市一周的日最高气温和日最低气温。
+
+    这一周的日最高气温的方差为$s_{1}^{2}$，日最低气温的方差为$s_{2}^{2}$，则$s_{1}^{2}$
+
+    $_{2}^{2}$.(琪“>”“=”或“<”)
+
+
+    |  | 星期一 | 星期二 | 星期三 | 星期四 | 星期五 | 星期六 | 星期日 |  |
+
+    |---|---|---|---|---|---|---|---|---|
+
+    | 最高气温/℃ | 22 | 27 | 28 | 24 | 27 | 30 | 32 |  |
+
+    | 最低气温/℃ | 18 | 15 | 14 | 14 | 16 | 19 | 18 |  |
+
+    |  |  |  |  |  |  |  |  |  |'
+  answer: '>'
+  solution: ''
+  knowledge_points:
+  - 方差的概念与计算
+  - 数据的分析
+  module: statisticsAndProbability
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 14
+  type: 填空
+  score: 2
+  stem: 如图，四边形ABCD内接于O0，∠ABC=60°，∠DAB=90°，C为BD的中点，则∠ACD=____www.gaokzx.com
+  figure: 2026-chaoyang-er/figures/q14.png
+  answer: '15'
+  solution: ''
+  knowledge_points:
+  - 圆内接四边形的性质
+  - 圆周角定理
+  module: circles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 15
+  type: 填空
+  score: 2
+  stem: 如图,在矩形ABCD中,点E在BC边上,AE的延长线与DC的延长线相交于点F,连接DE.若AD=3,AB=$\sqrt{3}$,$\angle BAE=30°$,则$\triangle DEF$的面积为_.
+  answer: 3√3
+  solution: ''
+  knowledge_points:
+  - 三角形的面积计算
+  - 特殊角的三角函数
+  - 矩形的性质
+  module: triangles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 16
+  type: 填空
+  score: 2
+  stem: '某校举办的创新能力大赛共有5个环节.九年级代表队有A，B，C，D，E五名选手，每个
+
+    人完成一个环节后获得的积分如下表所示:
+
+    积分(单位:分)
+
+    现要求每个人只完成一个环节.
+
+    现要求每个人只完成一个环节.
+
+    分;
+
+    (2)若九年级代表队要获得最多积分，则选手B应完成环节
+
+    三、解答题(共68分，第17-19题，每题5分，第20题6分，第21题5分，第22题6分，第23
+
+    题5分，第24题6分，第25题5分，第26题6分，第27-28题，每题7分)
+
+
+    | 选手 | 积分(单位:分) |  |  |  |  |  |
+
+    |---|---|---|---|---|---|---|
+
+    |  | 环节1 | 环节2 | 环节3 | 环节4 | 环节5 |  |
+
+    | A | 16 | 17 | 17 | 19 | 19 |  |
+
+    | B | 23 | 24 | 22 | 25 | 22 |  |
+
+    | C | 16 | 11 | 12 | 15 | 14 |  |
+
+    | D | 13 | 9 | 13 | 11 | 11 |  |
+
+    | E | 16 | 15 | 13 | 17 | 17 |  |
+
+    |  |  |  |  |  |  |  |'
+  answer: 80;2
+  solution: ''
+  knowledge_points:
+  - 排列组合
+  - 最优化问题
+  module: statisticsAndProbability
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 17
+  type: 解答
+  score: 5
+  stem: 计算：$\sqrt{8} +（\frac{1}{4} ）^{-1}-2026°-2cos45°$
+  answer: 2√2+4-1-2×√2/2=√2+3
+  solution: 解：原式$=2\sqrt{2}+4-1-2×\frac{\sqrt{2}}{2}$$\longdots$$\longdots$4分 $=\sqrt{2}+3.$
+  knowledge_points:
+  - 实数运算
+  - 指数运算
+  - 三角函数
+  module: numbersAndExpressions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 18
+  type: 解答
+  score: 5
+  stem: 解不等式组:$\left\{\begin{matrix}2x+3≥x+6,\\2x+1\\3>x-1.\end{matrix}\right.$
+  answer: 解不等式①,得X≥3. 解不等式②,得X<4. ∴原不等式组的解集为3≤X<4.
+  solution: 解:原不等式组为 2x+1 >x-1. 解不等式①，得x≥3. ......2分 解不等式②，得x<4. ......4分 :原不等式组的解集为3≤x<4. .....5分
+  knowledge_points:
+  - 解一元一次不等式
+  - 不等式组的解法
+  module: equationsAndInequalities
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 19
+  type: 解答
+  score: 5
+  stem: '已知3m2-2m-7=0，求代数式(2m+1)(2m-1)-(m+1)2的值.
+
+    关注北京高考在线官方微信:京考一点通(微信号:bjgkzx)，获取更多试题资料及排名分析信息。'
+  answer: (2M+1)(2M-1)-(M+1)²=(4M²-1)-(M²+2M+1)=3M²-2M-2. ∵3M²-2M-7=0, ∴3M²-2M=7. ∴原式=5.
+  solution: 解:(2m+1)(2m-1)-(m+1) =(4m2-1) ...2分 =3m2-2m-2. ......3分 .3m2-2m-7=0, 3m2-2m=7. 4分 原式=5. 5分 数学试卷答案及评分参考第1页(共5页)
+    关注北京高考在线官方微信:京考一点通(微信号:bjgkzx)，获取更多试题资料及排名分析信息。
+  knowledge_points:
+  - 代数式的化简
+  - 方程的应用
+  module: numbersAndExpressions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 20
+  type: 解答
+  score: 6
+  stem: '如图，在$\triangle ABC$中，AB=BC,BD为AC边上的高，E为AB边的中点，EF$\perp $BC，垂足为F，点H在线段FC上，FH=DE.
+
+    (1)求证:四边形DEPH是矩形；
+
+    (2)若BC=10,sin∠ABC=$\frac{4}{5} $，求CD的长.'
+  figure: 2026-chaoyang-er/figures/q20.png
+  answer: ''
+  solution: '(1)证明:∵AB=BC,BD为AC边上的高， ∴AD=CD. 1分 kzx.com :E为AB边的中点， ∴DE//BC. ∴FH=DE, D ... ∴四边形DEFH是平行四边形. 2分 ∵EF⊥BC， ∴∠EFH=90°.
+    B H C ∴四边形DEFH是矩形. 3分
+
+    (2)解:BC=10， ∴AB=10. ∴DE=BE=5. ..4分 ∴FH=5. :sin∠ABC=5 ∴EF=BE·sin∠ABC=5x/5=4. ....................................................................................................
+    在Rt△BEF中，由勾股定理，得BF=√BE2-EF2=3. ∴HC=2. :四边形DEFH是矩形， ∴DH=EF=4,∠DHC=90°. 在Rt△DHC中，由勾股定理，得CD=√CH2+DH2=2√5. 6分 kzx.com'
+  knowledge_points:
+  - 全等三角形的性质与判定
+  - 直角三角形的性质
+  - 解直角三角形
+  module: triangles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 21
+  type: 解答
+  score: 5
+  stem: '在平面直角坐标系xOy中，函数y=kx+b(k≠0)的图象经过点A(1,3)和B(3,1).
+
+    (1)求该函数的表达式;
+
+    (2)当0<x<2时，对于x的每一个值，函数y=mx(m≠0)的值大于0且小于函数y=kx+b
+
+    的值，直接写出m的取值范围。
+
+    www.gaokzx.com'
+  answer: ''
+  solution: '解:(1):函数y=kx+b(k≠0)的图象经过点A(1,3)和B(3,1)， ∴(k+b=3, 1分 (3k+b=1. (k=-1, 解得 ....2分 b=4. 该函数的表达式为y=-x+4. ....3分
+
+    (2)0<m≤1. ......5分'
+  knowledge_points:
+  - 一次函数的表达式
+  - 一次函数的性质
+  module: functions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 22
+  type: 解答
+  score: 6
+  stem: '某公司为节能环保，购进了相同数量的A，B两种型号的节能灯.已知所有A型节能灯
+
+    一年共用电15000度，所有B型节能灯一年共用电9000度，一台A型节能灯的平均年
+
+    用电量比一台B型节能灯的平均年用电量的2倍少30度.求一台A型节能灯的平均
+
+    年用电量。
+
+    关注北京高考在线官方微信:京考一点通(微信号:bjgkzx)，获取更多试题资料及排名分析信息。'
+  answer: ''
+  solution: 解:设一台B型节能灯的平均年用电量为x度. ...1分 15 000 9 000 由题意，得 3分 2x-30 x 解得x=90. 4分 经检验，x=90是原分式方程的解，且符合题意. 5分 ..2x-30=150. 答:一台A型节能灯的平均年用电量为150度.
+    .6分 数学试卷答案及评分参考第2页(共5页) 关注北京高考在线官方微信:京考一点通(微信号:bjgkzx)，获取更多试题资料及排名分析信息。
+  knowledge_points:
+  - 方程的应用
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 23
+  type: 解答
+  score: 5
+  stem: '某公司共有男员工800名，女员工500名，公司为了解员工的身体质量指数(BMI)，从他
+
+    们的体检数据中，随机抽取了40名男员工、25名女员工的BMI数据，并对数据进行了描____ookzx.com
+
+    述、分析，部分信息如下。
+
+    a.男员工BMI数据x的频数分布表如下:
+
+    18.5≤x<23.2 23.2≤x<27.9____27.9≤x<32.6____b.男员工BMI数据在23.2≤x<27.9这一组的是:
+
+    23.3 23.4 24.1 25.2 25.6 26.3 26.4 27.3____c.女员工BMI数据是:
+
+    14.2 16.0 16.1 16.6 17.7 18.0 18.1____19.5 19.9 20.5 21.7 22.1 23.2 24.6 25.2____27.8 28.4 29.1 29.3 30.8____d.男、女员工BMI数据的平均数、中位数如下:
+
+    根据以上信息，回答下列问题:
+
+    (1)表中m的值为
+
+    _;
+
+    (2)如果BMI在18.5~23.9(含18.5和23.9)范围内，表明体重较好。记该公司男员工com
+
+    体重较好的人数占男员工总人数的百分比为p，女员工体重较好的人数占女员工总
+
+    人数的百分比为q，根据抽取的员工的BMI数据估计p____q(填“>”“=”或
+
+    “<”);
+
+    (3)公司把男、女员工BMI数据合并为一组数据，进行分析.
+
+    ①估计该公司1300名员工BMI数据的平均数约为
+
+    ②若公司计划对1300名员工中BMI数据较大的前20%的员工进行优先关注，那么估
+
+    计被优先关注的男员工约有
+
+    _人，被优先关注的女员工约有______人.
+
+
+    |  | 平均数 | 中位数 |  |
+
+    |---|---|---|---|
+
+    | 男员工 | 23.625 | 22.6 |  |
+
+    | 女员工 | 22 | m |  |
+
+    |  |  |  |  |'
+  answer: ''
+  solution: '(1) m=20.5（女员工 BMI 中位数；25 个数排序第 13 个 = 20.5）；
+
+    (2) p > q（男员工体重较好 26/40=65%，女员工 14/25=56%）；
+
+    (3) ① 约 23（男女合并加权平均）；② 优先关注约 140 名男员工、120 名女员工.
+
+    （注：a 段频数分布表数据 — x<18.5: 6 人；18.5≤x<23.2: 20 人；23.2≤x<27.9: 9 人；27.9≤x<32.6: 4 人；x≥32.6: 1 人。共 40 名男员工。）
+
+    '
+  knowledge_points:
+  - 频数分布
+  - 平均数与中位数
+  - 数据估计
+  module: statisticsAndProbability
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 24
+  type: 解答
+  score: 6
+  stem: '如图，AB，AC与OO分别相切于点B，C，连接CO并延长，交AB的延长线于点D，点E是____OC的中点，点F在AE的延长线上，DE=DF.
+
+    (1)求证:∠EDF=2∠CAE;
+
+    (2)若∠BAC=60°，OC=2，求EF的长.
+
+    关注北京高考在线官方微信:京考一点通(微信号:bjgkzx)，获取更多试题资料及排名分析信息。'
+  figure: 2026-chaoyang-er/figures/q24.png
+  answer: ''
+  solution: '(1)证明:如图，作DG⊥EF于点G. :DE=DF, ∴∠EDF=2∠EDG. 1分 :AC切O于点C， ∴∠ACO=90°. 2分 B 0 :∠AEC=∠DEG, m C E ∴ A C ∴∠EDF=2∠CAE.
+    3分
+
+    (2)解:如图，连接OA. ∵AB,AC与0分别相切于点B,C,∠BAC=60°, ∴∠OAC=1/2∠BAC=30°. 4分 D ∵OC=2, 在线 ∴AC=2√3. 在Rt△ACD中，CD=AC·tan60°=6. k2x.com
+    ..... :E为OC中点， E ∴EC=1. C www.g ∴DE=5. 在Rt△ACE中，由勾股定理，得AE=√13. ....................................................................................................
+    √13 ∴sin∠CAE= 13 ∴∠EDG=∠CAE, ∴EG=DE·sin 13 ∴EF=2EG=10√13 ....6分 13 数学试卷答案及评分参考第3页(共5页) 关注北京高考在线官方微信:京考一点通(微信号:bjgkzx)，获取更多试题资料及排名分析信息。
+    北京高考在线'
+  knowledge_points:
+  - 切线性质
+  - 圆周角定理
+  - 相似三角形
+  module: circles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 25
+  type: 解答
+  score: 5
+  stem: '小明探究琴弦振动频率与弦长的关系.他选取两根不同材质的琴弦(记为1号弦，2号
+
+    弦)，实验中保持两根琴弦的张力相同，并利用人工智能软件测量琴弦发出声音时的振
+
+    动频率，调整琴弦的弦长为L(单位:cm)时，1号弦的振动频率为f1(单位:Hz)，2号弦的
+
+    振动频率为f2(单位:Hz)，部分数据如下:
+
+    通过分析数据，发现可以用函数刻画与L，f2与L之间的关系。
+
+    (1)在给出的平面直角坐标系中，画出函数f2的图象;
+
+    www.gaokzx.com____10 20 30 40 50 60 70 80 90 100 L/cm
+
+    (2)当频率为450Hz时，对应2号弦长与1号弦长的差为____cm(结果保留整数);
+
+    (3)通过本次实验，小明对在实验条件下琴弦振动频率与弦长的一般关系作出如下推断:
+
+    ①同一根琴弦，弦长越大频率越低;
+
+    ②两根琴弦的弦长相同时，频率差应为定值;
+
+    ③两根琴弦的弦长相同时，频率比应为定值;
+
+    ④要使2号弦发出的声音比1号弦发出的声音高八度(2号弦的频率是1号弦的频
+
+    率的2倍)，两根琴弦的弦长比应为定值。
+
+    其中所有合理推断的序号是
+
+    关注北京高考在线官方微信:京考一点通(微信号:bjgkzx)，获取更多试题资料及排名分析信息。
+
+
+    | L/cm | 20 | 30 | 40 | 50 | 60 | 70 | 80 | 90 | 100 |  |
+
+    |---|---|---|---|---|---|---|---|---|---|---|
+
+    | fi/Hz | 900 | 600 | 450 | 360 | 300 | 257 | 225 | 200 | 180 |  |
+
+    | f2/Hz | 1200 | 800 | 600 | 480 | 400 | 343 | 300 | 267 | 240 |  |
+
+    |  |  |  |  |  |  |  |  |  |  |  |'
+  figure: 2026-chaoyang-er/figures/q25.png
+  answer: ''
+  solution: '解:(1) f/Hz www.gaokzx.com 1200 1100 1000 900 800 700 600 1分 500 400 300 200 100 0 10 20 30 40 50 60 70 80 90
+    100 L/cm
+
+    (2)答案不唯一，如13; ........ 2分
+
+    (3)①③④. ......5分'
+  knowledge_points:
+  - 函数的图象与性质
+  - 函数的应用
+  module: functions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 26
+  type: 解答
+  score: 6
+  stem: '在平面直角坐标系xOy中，过点P(p,0)作x轴的垂线与抛物线y=x^{2}-x交于点M，与 直线y=x交于点N(特殊地，当点M,N重合时，线段MN的长为0).
+
+    (1)若p=1,求线段MN的长;
+
+    (2)已知实数m(m>0),对于每一个确定的m的值,记0<p≤m时线段MN长度的最大值为t,若存在$m_{0}$,使得当m>m_{0}$时,都有t随m的增大而增大,求$m_{0}$的最小值.'
+  answer: ''
+  solution: '解:(1)p=1时，点M坐标为(1,0)，点N坐标为(1,1)， ∴MN 2分
+
+    (2)抛物线y=x2-x与直线y=x的交点为(0,0),(2,2). 设M(p,y1),N(p,y2), 北京高考在线 则y1=p2-p,y2=p. www.gaokzx.com 当0<p≤2时， y1-y2≤0. ∴MN=y2-y1=-p2+2p.
+    可知当p=1时，线段MN长度的最大值为1. 当p>2时， y1-y2>0. ∴MN=y1-y2=p2-2p. 可知MN的长度随p的增大而增大. 令p2-2p=1,解得p=1+√2或p=1-√2(舍). 分析线段MN长度的最大值的变化规律可知:
+    (i)当0<mo<1时，随着m的增大，t的值先增大，再保持不变，再增大; (ii)当1≤mo<1+√2时，随着m的增大，t的值先保持不变，再增大; (iii)只有当mo≥1+√2时，t随m增大而增大. ∴要使m>mo时，都有t随m的增大而增大，mo的最小值为1+√2.......6分
+    数学试卷答案及评分参考第4页(共5页) 关注北京高考在线官方微信:京考一点通(微信号:bjgkzx)，获取更多试题资料及排名分析信息。 北京高考'
+  knowledge_points:
+  - 二次函数的性质
+  - 一次函数的性质
+  - 坐标系中的几何问题
+  module: functions
+  difficulty: 能力
+  recommended_for:
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 27
+  type: 解答
+  score: 7
+  stem: '在△ABC中，∠ACB=90°，∠ABC=a，D是平面内的一点(不与点A重合)，连接AD，以____A为中心，将线段AD顺时针旋转180°-2a，得到线段AE，连接EC.
+
+    (1)如图1，点D在边AB上，用等式表示∠DAE与∠BAC之间的数量关系(直接写出
+
+    结果);
+
+    www.gaokzx.com
+
+    (2)如图2，点D在△ABC外，延长EC到点F，使CF=EC，连接BF，BD，用等式表示
+
+    ∠DAE与∠DBF之间的数量关系，并证明。
+
+    www.gaokzx.com
+
+    关注北京高考在线官方微信:京考一点通(微信号:bjgkzx)，获取更多试题资料及排名分析信息。'
+  figure: 2026-chaoyang-er/figures/q27.png
+  answer: ''
+  solution: '(1)∠DAE=2∠ 2分
+
+    (2)∠DAE+∠DBF= 3分 北京高考 证明:如图，将△AEC沿AC翻折得到△APC，连接BP. ∴△AEC△APC. AE=AP,CE=CP,∠EAC=∠PAC,∠ECA=∠PCA. 4分 ∴∠ACB=90°,CF=EC, ∴∠ECA+∠BCF=90°，∠PCA+∠BCP=90°，CF=CP.
+    ∴∠BCP=∠BCF. ∴ △ 5分 ∴∠CBF=∠CBP. m ... D ∴∠ABC=a, ∴∠CAB=90°-α. E P ∠DAE=180°-2α, B ∴∠EAC+∠DAB=∠PAC+∠PAB. ∴∠DAB=∠PAB. F ∴AE=AD,
+    ∴AP=AD. ∴△DAB△PAB. 6分 高考在线 ∴∠DBA=∠PBA. com ∴∠DBF=2∠ABC=2α. ∴∠DAE+∠DBF=180°. 7分'
+  knowledge_points:
+  - 三角形的性质
+  - 旋转的性质
+  module: triangles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 28
+  type: 解答
+  score: 7
+  stem: '在平面直角坐标系xOy中，P(x,y)是图形F上的任意一点，将点P向右(y≥0)或向左
+
+    (y<0)平移2|y|个单位长度，再向上(x≥0)或向下(x<0)平移2|x|个单位长度，得到
+
+    点P的对应点P''，所有的点P''组成的图形称为图形F的关联图形、能完全覆盖图形F和
+
+    它的关联图形的最小的圆称为图形F和它的关联图形的最小覆盖圆(图形F和它的关联
+
+    图形上的所有点都在圆上或内部，且该圆的半径最小).
+
+    (1)点(1,0)的关联图形的坐标为
+
+    ，点(-1,2)的关联图形的坐标为
+
+    (2)点(a，a+1)的关联图形的坐标为(m，n)，用含m的代数式表示n:
+
+    (3)已知点A(x,y)在直线y=x-2上，点B(x+1,y+1)，直接写出线段AB和它的关联
+
+    图形的最小覆盖圆的半径r的最小值，及此时点A的坐标.
+
+    www.gaokzx.com____www.gaokzx.com
+
+    关注北京高考在线官方微信:京考一点通(微信号:bjgkzx)，获取更多试题资料及排名分析信息。'
+  answer: ''
+  solution: '解:(1)(1,2),(3,0); ...2分
+
+    (2) ...4分
+
+    (3)√5,(1/2,-2). 7分 北京高考在线 www.gaokzx.com 关注北京高考在线官方微信:数学试卷答案及评分参考第5页(共5页)取更多试题资料及排名分析信息。 北京高考在线平台简介 北京高考在线平台创办于2014年，总部位于北京，是北京地区极具影响力的初高中升学咨询服务平台。
+    涵盖北京中高考、综合评价、强基计划、清北升学、港澳升学、生涯规划、志愿填报、学科竞赛、大学保 研留学等业务。 北京高考在线旗下拥有微信公众平台、网站门户、视频号、小红书、微博、社群、抖音等矩阵生态平 台。平台活跃用户达80万+量级，网站门户年度访问量超4500万+。用户群体涵盖海淀、西城、东城、
+    朝阳、丰台、石景山、顺义、大兴等北京所有城区，北京市超95%以上的重点中学校长老师、家长考生及 知名高校招办老师都在关注，在行业内影响力首屈一指。 北京高考在线平台一直秉承“深度、专业、有态度“的创办理念，不断探索“K12教育+互联网+
+    大数据”的运营模式，尝试基于AI大数据为广大中学和家长提供北京中高考、综合评价、强基计划、港澳 升学、生涯规划、志愿填报等升学咨询服务，为广大高校、教科研单位提供大学和中学“桥梁纽带”的衔 接服务工作。 平台自创办以来，为众多重点大学发现和推荐优秀生源，和北京近百所重点中学达成深度战略合作。
+    累计举办大学招办宣讲会、公益升学讲座千余场，累计帮助数十万考生成功考入重点大学。在家长考生、 中学和社会各界具有很好的品牌口碑影响力。 未来，北京高考在线将立足新高考改革，全面整合高校、中学及教科研机构等各方面资源，依托在线 教育模式，打造北京地区更加全面、专业的初高中贯通培养升学咨询服务平台。
+    北京 北京 北京 综合评价 京考一点通 京考圈 京考尖子生 自主选拔在线 名校综合评价 强基 学科 科 名校 阅读 强基在线 学科竞赛派 学在港澳 名校少年班 名校保研通'
+  knowledge_points:
+  - 坐标变换
+  - 图形变换
+  - 圆的性质
+  module: geometryComprehensive
+  difficulty: 能力
+  recommended_for:
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''

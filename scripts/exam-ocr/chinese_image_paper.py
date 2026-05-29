@@ -1372,8 +1372,16 @@ def _apply_patches(patches: dict, result: dict, yaml_questions: list[dict]) -> i
             q["options"] = patch["options"]; n += 1
         if "solution" in patch:
             q["solution"] = patch["solution"]; n += 1
+            ans = next((a for a in result.get("answers", []) if a.get("number") == qid), None)
+            if ans is not None:
+                ans["solution"] = patch["solution"]
         if "answer" in patch:
             q["answer"] = patch["answer"]; n += 1
+            ans = next((a for a in result.get("answers", []) if a.get("number") == qid), None)
+            if ans is not None:
+                ans["correct"] = patch["answer"]
+            else:
+                result.setdefault("answers", []).append({"number": qid, "correct": patch["answer"], "solution": patch.get("solution", q.get("solution", "")), "score": q.get("score", 0)})
         if patch.get("type"):
             q["type"] = patch["type"]; n += 1
         if "score" in patch:

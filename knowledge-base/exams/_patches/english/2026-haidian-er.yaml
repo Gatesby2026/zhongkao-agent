@@ -1,0 +1,75 @@
+# 海淀区 2026 二模英语 patches —— R1 大模型审核 P0 收敛
+# 来源：R1 Claude 大模型审核（agent: a1ba9308f575ee262），核对 tencent-cache OCR
+#
+# 真实卷面：38题 / 60分 / 90分钟（与卷面 "共两部分，五道大题，38道小题" 一致）
+# R1 P0 概览：
+# - Q10 answer 空：选项 C "has read"（since + 现在完成时）OCR 漏读答案行
+# - Q37 sol 灾难污染 130 行（吸 Q38 范文 + 平台广告）
+# - 3 处 sol 串扰下题：Q1 "C2.D" / Q11 "C12.A" / Q13 "C14.A"
+# - Q21/22/23 type 错（image-match reading 不是单选）
+# - Q31 KP/module 错为 vocabulary（实为 reading 信息推断）
+
+questions:
+  # ---- Q1：sol 串到下题 "C2.D" → 还原 "C"
+  1:
+    solution: C
+
+  # ---- Q10：since + 现在完成时 → "has read"
+  10:
+    answer: C
+    solution: C
+    qc_status: draft
+    qc_note: ""
+
+  # ---- Q11：sol "C12.A" 串扰
+  11:
+    solution: C
+
+  # ---- Q13：sol "C14.A" 串扰
+  13:
+    solution: C
+
+  # ---- Q21/22/23：成人礼 image-match reading，type 应为 reading 而非 单选
+  21:
+    type: reading
+  22:
+    type: reading
+  23:
+    type: reading
+
+  # ---- Q31：reading 推理题（"being reasonable" 例证选择），不是 vocabulary
+  31:
+    knowledge_points:
+      - 推理判断
+      - 信息筛选
+    module: reading
+
+  # ---- Q33：D 选项粘 "第二部分..." footer → 清理
+  33:
+    options:
+      A: What Does It Mean to Be Reasonable?
+      B: Where Does Reasonableness Come From?
+      C: Why Is Reasonableness Often Misunderstood?
+      D: How Is "Reasonable" Different From "Rational"?
+
+  # ---- Q37：sol 灾难污染（吸 Q38 范文 + 平台广告 130 行）→ 仅留 "略"
+  37:
+    solution: "略"
+
+  # ---- Q38 sol 也是空污染（结构中 ''）→ 补范文骨架（题目1 + 题目2）
+  38:
+    solution: |
+      Possible version (题目1):
+      Everyone has their own way to spend pocket money. As for me, 45% of my pocket money goes to study-related items, like stationery, books and learning materials. Entertainment comes second at 35%, for which I often buy snacks and play games. Besides, I spend 12% on socializing. For example, I buy gifts and eat out with friends. The remaining 8% covers savings and donations.
+      As for the reflection on my spending habits, I believe, generally speaking, I spend my pocket money reasonably since most of it is spent on necessities. However, it might be necessary for me to reduce my spending on games. How we spend money reflects our life values, so I'll turn to my parents for advice and try to manage my pocket money more wisely.
+
+      Possible version (题目2):
+      I'd like to observe and experience the job of a middle school teacher.
+      There are various activities I want to take part in. First, I want to watch how teachers prepare their lessons and manage their classrooms effectively, which can help me learn practical teaching skills. Besides, I hope to help teachers talk with students who run into difficulties so that I can gain experience in communicating with young people.
+      I choose to experience this job for several reasons. First, I believe teachers play an important role in students' growth. I admire them and desire to know more about them. In addition, I dream of being a teacher when I grow up, so this valuable experience is expected to prepare me better for my future career.
+
+# 备注：structure 字段错（25单选32分把单选12+阅读13合并）属 inspect 显示问题，
+#       enrich 重算 structure 时按 type 自动归类即可，不在 patch 修。
+#       Q21-23 image-match 的"单选"分类同时贡献了 32 分汇总，
+#       fix Q21/22/23 type → reading 后 structure 会自然变为
+#       "12单选(6分) + 8cloze(8分) + 13reading(26分) + 4reading_express(10分) + 1作文(10分)"。

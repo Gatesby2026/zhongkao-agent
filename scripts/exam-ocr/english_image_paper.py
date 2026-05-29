@@ -1252,9 +1252,27 @@ def parse_paper(src: Path, out_dir: Path, force=False) -> dict:
                     ps["_src_page_img"] = str(p)
                     break
 
+    # **元数据 final.json 写 year/district/exam_type**（R1 通病: yaml meta 全空）
+    slug = out_dir.name
+    m_slug = re.match(r"(\d{4})-(.+?)-(\w+)", slug)
+    year_val = int(m_slug.group(1)) if m_slug else None
+    region_slug = m_slug.group(2) if m_slug else ""
+    typ_slug = m_slug.group(3) if m_slug else ""
+    region_cn = {"chaoyang":"朝阳","haidian":"海淀","mentougou":"门头沟",
+                  "fengtai":"丰台","xicheng":"西城","dongcheng":"东城",
+                  "shijingshan":"石景山","tongzhou":"通州","shunyi":"顺义",
+                  "changping":"昌平","daxing":"大兴","fangshan":"房山",
+                  "pinggu":"平谷","huairou":"怀柔","miyun":"密云",
+                  "yanqing":"延庆","yanshan":"燕山"}.get(region_slug, region_slug)
+    type_cn = {"yi":"一模","er":"二模","san":"三模","zhen":"真题"}.get(typ_slug, "一模")
+
     result = {
         "subject": "english",
+        "year": year_val,
+        "district": (region_cn + "区") if region_cn else "",
+        "exam_type": type_cn,
         "full_score": full_score,
+        "duration_minutes": 90,  # 北京英语 90 分钟
         "passages": passages,
         "questions": questions,
         "answers": answers,
@@ -1540,6 +1558,17 @@ def main():
     structured.mkdir(parents=True, exist_ok=True)
 
     result = parse_paper(src, out_dir, force=a.force)
+    # **patch 应用**（_patches/english/<slug>.yaml）
+    slug = out_dir.name
+    from _patches_applier import load_and_apply_patches
+    repo_root = out_dir
+    while repo_root.parent != repo_root:
+        if (repo_root / "knowledge-base").is_dir(): break
+        repo_root = repo_root.parent
+    n_patch = load_and_apply_patches(slug, "english", result, repo_root)
+    if n_patch:
+        print(f"[english_image_paper] 🔧 应用 {n_patch} 处 patch", flush=True)
+
     fj = structured / "final.json"
     fj.write_text(json.dumps(result, ensure_ascii=False, indent=2),
                   encoding="utf-8")

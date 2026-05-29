@@ -1,0 +1,41 @@
+# 西城区 2026 二模物理 patches —— R1 22+ P0
+# 关键: 15 选择 ans 全空 + Q16 OCR i6 漏 + 8 题 score 错
+
+questions:
+  # 单选 Q1-12 答案 (源 PDF page-9 评分参考)
+  1: { answer: "B" }
+  2: { answer: "D" }
+  3: { answer: "C" }
+  4: { answer: "A" }
+  5: { answer: "B" }
+  6: { answer: "D" }
+  7: { answer: "B" }
+  8: { answer: "C" }
+  9: { answer: "B" }
+  10: { answer: "A" }
+  11: { answer: "C" }
+  12: { answer: "D" }
+  # 多选 Q13-15
+  13: { answer: "BD" }
+  14: { answer: "BC" }
+  15: { answer: "ABD" }
+  # Q16 整题缺 (OCR i6→16 误识)
+  16:
+    create: true
+    type: "实验探究"
+    section: "experiment"
+    score: 3
+    stem: "Q16 实验探究题 (待人工补全 stem，OCR i6 误识致缺题)"
+    answer: ""
+    solution: "同种电荷相互排斥；减小"
+  # 8 题 score 修 (R1 报告)
+  17: { score: 3 }
+  18: { score: 5 }
+  19: { score: 3 }
+  20: { score: 5 }
+  21: { score: 2 }
+  22: { score: 2 }
+  24:
+    type: "实验探究"
+    score: 3
+  27: { score: 4 }

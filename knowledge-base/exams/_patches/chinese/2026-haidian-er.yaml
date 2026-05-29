@@ -1,0 +1,42 @@
+# 海淀区 2026 二模语文 patches —— R1 8 P0 修
+# 来源: agent ae290eccc640707d3
+# 关键: Q4 整题缺 + Q1 吞 Q4 + Q10/Q8/Q9 分值错
+
+questions:
+  # Q1 实为书写题（无 options），把 Q4 内容吐回去
+  1:
+    type: "书写"
+    score: 1
+    stem: "请在封面上用正楷字书写标题。(1分)"
+    options: null
+    answer: ""
+    solution: "略"
+  # Q4 整题缺失（被 Q1 吞）— create 新题
+  4:
+    create: true
+    type: "choice"
+    section: "base"
+    score: 2
+    stem: "下列加点字成语使用不恰当的一项是(2分)"
+    answer: "B"
+    solution: "B（鳞次栉比形容房屋等密集排列，不能用于自然景观）"
+  # Q6.C 残缺（只剩"[甲]"），R2 待源图核对
+  # Q7.C 错文（"第②句"应"第③句"）
+  7:
+    options:
+      A: "第①句"
+      B: "第②句"
+      C: "第③句"
+      D: "第④句"
+  # Q8/Q9 score 1→2（默写一句 2 分）
+  8: { score: 2 }
+  9: { score: 2 }
+  # Q10 score 5→1（OCR 把(共5分)小计错赋给 Q10 单题）
+  10: { score: 1 }
+
+passages:
+  # narrative 第⑧段 "北京高kzx" 焊入正文 → 替换
+  narrative:
+    body_replace:
+      - {from: "北京高kzx", to: ""}
+      - {from: "ww.", to: ""}
