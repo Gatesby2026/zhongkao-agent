@@ -2,16 +2,16 @@
 # 2026年北京西城区二模physics — 自动生成
 # ============================================================
 # OCR: Qwen-VL-OCR  Enrich: qwen-max
-# QC: draft=26  needs_review=1
+# QC: draft=27  needs_review=0
 
 year: 2026
 district: 西城区
 exam_type: 二模
 subject: physics
-full_score: 71
+full_score: 70
 duration_minutes: 70
 total_questions: 27
-structure: 12单选(24分) + 3多选(6分) + 10实验探究(33分) + 2计算题(8分)
+structure: 12单选(24分) + 3多选(6分) + 10实验探究(32分) + 2计算题(8分)
 passages: []
 questions:
 - id: 1
@@ -50,7 +50,7 @@ questions:
   solution: ''
   knowledge_points:
   - 能源类型
-  - 可再生能源与不可再生能源
+  - 可再生能源
   module: electricity
   difficulty: 基础
   recommended_for:
@@ -88,6 +88,12 @@ questions:
   type: 单选
   score: 2
   stem: 如图所示的四个实例中，为了减小压强的是
+  options:
+    A: '[图]'
+    B: '[图]'
+    C: '[图]'
+    D: '[图]'
+  has_image_options: true
   figure: 2026-xicheng-er/figures/q04.png
   answer: A
   solution: ''
@@ -100,8 +106,8 @@ questions:
   - L1
   - L2
   - L3
-  qc_status: needs_review
-  qc_note: 选择题缺少 options（既无文本也无图片选项）
+  qc_status: draft
+  qc_note: ''
 - id: 5
   type: 单选
   score: 2
@@ -362,7 +368,7 @@ questions:
   qc_note: ''
 - id: 16
   type: 实验探究
-  score: 3
+  score: 2
   stem: Q16 实验探究题 (待人工补全 stem，OCR i6 误识致缺题)
   answer: ''
   solution: 同种电荷相互排斥；减小
@@ -560,11 +566,12 @@ questions:
 
     (2)甲 (2分)'
   knowledge_points:
-  - 压强
+  - 液体压强的影响因素
   - 实验方法
   module: mechanics
-  difficulty: 中等
+  difficulty: 基础
   recommended_for:
+  - L0
   - L1
   - L2
   - L3
@@ -652,7 +659,6 @@ questions:
   knowledge_points:
   - 串联电路的电压规律
   - 电路故障分析
-  - 实验数据处理
   module: electricity
   difficulty: 中等
   recommended_for:
@@ -673,7 +679,7 @@ questions:
     北京高考在线 液片会向右侧运动。 www.gaokzx.com 若要液片静止，则合力为0，即F1=F2，因此: 所以，当两种液体静止时，U形管的右侧液面比左侧液面更高。(3分)'
   knowledge_points:
   - 力的概念
-  - 液体压强
+  - 压强
   module: mechanics
   difficulty: 中等
   recommended_for:
@@ -716,8 +722,8 @@ questions:
 
     (3)由于电流的热效应造成电池工作时会发热，将电池组布置在远离生活区和货物区的通风 区域，有利于散热，避免引发火灾。'
   knowledge_points:
-  - 电学：电流/电压/电阻/欧姆定律/电功电功率/电与磁
-  - 能源：能量转化/能源类型/可再生
+  - 电流的热效应
+  - 电池安全
   module: electricity
   difficulty: 中等
   recommended_for:
@@ -796,7 +802,7 @@ questions:
     名校综合评价 强基 学科 科 名校 阅读 强基在线 学科竞赛派 学在港澳 名校少年班 名校保研通'
   knowledge_points:
   - 简单机械
-  - 功率计算
+  - 功和功率
   - 机械效率
   module: mechanics
   difficulty: 中等

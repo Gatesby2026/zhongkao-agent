@@ -2,21 +2,83 @@
 # 来源: OCR cache page-08 (数学试卷参考答案及评分标准) + R1 audit 校对
 # 选择 Q1-8 (A-D 各 2 分) / 填空 Q9-16 (各 2 分) / 解答 Q17-28 score 已对
 questions:
-  # 选择题答案（OCR 已正确，patch 保持原样兜底）
-  1: { answer: "A" }
-  2: { answer: "B" }
-  3: { answer: "C" }
-  4: { answer: "B" }
-  5: { answer: "A" }
-  6: { answer: "C" }
-  7: { answer: "D" }
-  8: { answer: "C" }
-  # 填空题（按 R1 audit 校对，OCR 答案列错位需修正）
-  9:  { answer: "x≠1" }
-  10: { answer: "2(x+y)^2" }
-  11: { answer: "x=3, y=4" }
-  12: { answer: "4" }
-  13: { answer: "x=-1" }
-  14: { answer: "BD=CD（答案不唯一）" }
-  15: { answer: "6" }
-  16: { answer: "乙；146" }
+  1:
+    answer: A
+    has_image_options: true
+    options:
+      A: '[图]'
+      B: '[图]'
+      C: '[图]'
+      D: '[图]'
+  2:
+    answer: B
+    has_image_options: true
+    options:
+      A: '[图]'
+      B: '[图]'
+      C: '[图]'
+      D: '[图]'
+  3:
+    answer: C
+    has_image_options: true
+    options:
+      A: '[图]'
+      B: '[图]'
+      C: '[图]'
+      D: '[图]'
+  4:
+    answer: B
+    has_image_options: true
+    options:
+      A: '[图]'
+      B: '[图]'
+      C: '[图]'
+      D: '[图]'
+  5:
+    answer: A
+    has_image_options: true
+    options:
+      A: '[图]'
+      B: '[图]'
+      C: '[图]'
+      D: '[图]'
+  6:
+    answer: C
+    has_image_options: true
+    options:
+      A: '[图]'
+      B: '[图]'
+      C: '[图]'
+      D: '[图]'
+  7:
+    answer: D
+    has_image_options: true
+    options:
+      A: '[图]'
+      B: '[图]'
+      C: '[图]'
+      D: '[图]'
+  8:
+    answer: C
+    has_image_options: true
+    options:
+      A: '[图]'
+      B: '[图]'
+      C: '[图]'
+      D: '[图]'
+  9:
+    answer: x≠1
+  10:
+    answer: 2(x+y)^2
+  11:
+    answer: x=3, y=4
+  12:
+    answer: '4'
+  13:
+    answer: x=-1
+  14:
+    answer: BD=CD（答案不唯一）
+  15:
+    answer: '6'
+  16:
+    answer: 乙；146

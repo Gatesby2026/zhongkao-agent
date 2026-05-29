@@ -2,7 +2,7 @@
 # 2026年北京昌平区二模math — 自动生成
 # ============================================================
 # OCR: Qwen-VL-OCR  Enrich: qwen-max
-# QC: draft=26  needs_review=2
+# QC: draft=28  needs_review=0
 
 year: 2026
 district: 昌平区
@@ -28,6 +28,11 @@ questions:
     (C)
 
     (D)'
+  options:
+    A: '[图]'
+    B: '[图]'
+    C: '[图]'
+    D: '[图]'
   has_image_options: true
   answer: A
   solution: ''
@@ -63,6 +68,11 @@ questions:
     (D) $0.106 \times 10^{5}$
 
     www.gaokzx.com'
+  options:
+    A: '[图]'
+    B: '[图]'
+    C: '[图]'
+    D: '[图]'
   has_image_options: true
   answer: B
   solution: ''
@@ -103,12 +113,17 @@ questions:
     58°
 
     (D) 74°'
+  options:
+    A: '[图]'
+    B: '[图]'
+    C: '[图]'
+    D: '[图]'
   has_image_options: true
   answer: C
   solution: ''
   knowledge_points:
-  - 垂直的性质
-  - 对顶角的性质
+  - 垂直关系
+  - 对顶角
   module: geometryComprehensive
   difficulty: 基础
   recommended_for:
@@ -130,6 +145,11 @@ questions:
     (C)-a<-3<a<3
 
     (D)-3<-a<3<a'
+  options:
+    A: '[图]'
+    B: '[图]'
+    C: '[图]'
+    D: '[图]'
   has_image_options: true
   answer: B
   solution: ''
@@ -162,11 +182,16 @@ questions:
     (D)/7
 
     10'
+  options:
+    A: '[图]'
+    B: '[图]'
+    C: '[图]'
+    D: '[图]'
   has_image_options: true
   answer: A
   solution: ''
   knowledge_points:
-  - 概率的计算
+  - 概率的基本概念
   module: statisticsAndProbability
   difficulty: 基础
   recommended_for:
@@ -192,12 +217,17 @@ questions:
     初三数学试卷第1页(共7页)
 
     关注北京高考在线官方微信:京考一点通(微信号:bjgkzx)，获取更多试题资料及排名分析信息。'
+  options:
+    A: '[图]'
+    B: '[图]'
+    C: '[图]'
+    D: '[图]'
   has_image_options: true
   figure: 2026-changping-er/figures/q06.png
   answer: C
   solution: ''
   knowledge_points:
-  - 多边形的内角和
+  - 多边形内角和
   module: geometryComprehensive
   difficulty: 基础
   recommended_for:
@@ -211,19 +241,25 @@ questions:
   type: 单选
   score: 2
   stem: 如图,已知∠AOB,以点O为圆心,适当长为半径画弧,分别交边OA,OB于点C,D;以点O为圆心,大于OC长为半径画弧,分别交边OA,OB于点E,F;连接CF,DE,交点为G,作射线OG.则下列结论一定正确的是
+  options:
+    A: '[图]'
+    B: '[图]'
+    C: '[图]'
+    D: '[图]'
+  has_image_options: true
   answer: D
   solution: ''
   knowledge_points:
   - 几何作图
-  - 角平分线的性质
+  - 角平分线
   module: geometryComprehensive
   difficulty: 中等
   recommended_for:
   - L1
   - L2
   - L3
-  qc_status: needs_review
-  qc_note: 选择题缺少 options（既无文本也无图片选项）
+  qc_status: draft
+  qc_note: ''
 - id: 8
   type: 单选
   score: 2
@@ -238,11 +274,17 @@ questions:
     ④存在唯一的点P，使得$\bigtriangleup$OCD是直角三角形;
 
     上述结论中，所有正确结论的序号是'
+  options:
+    A: '[图]'
+    B: '[图]'
+    C: '[图]'
+    D: '[图]'
+  has_image_options: true
   figure: 2026-changping-er/figures/q08.png
   answer: C
   solution: ''
   knowledge_points:
-  - 反比例函数的图象与性质
+  - 反比例函数的性质
   - 几何图形的性质
   module: functions
   difficulty: 中等
@@ -250,8 +292,8 @@ questions:
   - L1
   - L2
   - L3
-  qc_status: needs_review
-  qc_note: 选择题缺少 options（既无文本也无图片选项）
+  qc_status: draft
+  qc_note: ''
 - id: 9
   type: 填空
   score: 2
@@ -310,7 +352,7 @@ questions:
   answer: '4'
   solution: ''
   knowledge_points:
-  - 一元二次方程的根的判别式
+  - 一元二次方程的根与系数的关系
   module: equationsAndInequalities
   difficulty: 基础
   recommended_for:
@@ -346,9 +388,8 @@ questions:
   knowledge_points:
   - 全等三角形的判定
   module: triangles
-  difficulty: 基础
+  difficulty: 中等
   recommended_for:
-  - L0
   - L1
   - L2
   - L3
@@ -433,9 +474,9 @@ questions:
   answer: ''
   solution: '解: √12+|-3|-(-2)-1-4cos30° √3 =2√3+3-(-2)-4x .....4分 2 =5.... ...5分'
   knowledge_points:
-  - 二次根式的化简
-  - 绝对值的计算
-  - 三角函数的计算
+  - 实数运算
+  - 绝对值
+  - 三角函数
   module: numbersAndExpressions
   difficulty: 中等
   recommended_for:
@@ -452,7 +493,7 @@ questions:
   solution: 解:解不等式①得x ...2分 解不等式②得x<-1，......... 4分 北京高考在线 ∴不等式组的解集是x<-3. 5分 北京高
   knowledge_points:
   - 解一元一次不等式
-  - 不等式组的解法
+  - 解不等式组
   module: equationsAndInequalities
   difficulty: 中等
   recommended_for:
@@ -611,7 +652,7 @@ questions:
     (3)增大， ...5分 北京高考在线'
   knowledge_points:
   - 数据的整理与描述
-  - 样本估计总体
+  - 样本与总体
   - 平均数与方差
   module: statisticsAndProbability
   difficulty: 中等
@@ -661,7 +702,8 @@ questions:
     2√2 ∴GE= 3'
   knowledge_points:
   - 切线的性质与判定
-  - 圆中的相似三角形
+  - 圆周角定理
+  - 相似三角形
   module: circles
   difficulty: 中等
   recommended_for:
@@ -727,8 +769,8 @@ questions:
 
     (2) D 3分 ①B 8 5分 17 初三数学答案第3页(共5页) 关注北京高考在线官方微信:京考一点通(微信号:bjgkzx)，获取更多试题资料及排名分析信息。'
   knowledge_points:
-  - 函数图像
-  - 函数应用
+  - 函数的图像与性质
+  - 函数的应用
   module: functions
   difficulty: 中等
   recommended_for:

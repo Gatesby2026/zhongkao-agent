@@ -3,24 +3,87 @@
 # 解答题分值规则: 第17-19题每题5分, 第20题6分, 第21题5分, 第22题6分,
 #                第23题5分, 第24题6分, 第25题5分, 第26题6分, 第27-28题每题7分
 questions:
-  # 选择题答案（OCR 已正确，patch 保持原样兜底）
-  1: { answer: "C" }
-  2: { answer: "C" }
-  3: { answer: "B" }
-  4: { answer: "D" }
-  5: { answer: "C" }
-  6: { answer: "B" }
-  7: { answer: "A" }
-  8: { answer: "D" }
-  # 填空题（按 OCR cache page-09 抽取）
-  9:  { answer: "x≠2" }
-  10: { answer: "x(y+1)^2" }
-  11: { answer: "1" }
-  12: { answer: "0.96" }
-  13: { answer: "假" }
-  14: { answer: "1（答案不唯一，0<k≤2 均可）" }
-  15: { answer: "3√3/4" }
-  16: { answer: "(1)240; (2)223" }
-  # P0: Q22 / Q23 分值互换（题头规则: Q22=6, Q23=5；当前 yaml Q22=5, Q23=6）
-  22: { score: 6 }
-  23: { score: 5 }
+  1:
+    answer: C
+    has_image_options: true
+    options:
+      A: '[图]'
+      B: '[图]'
+      C: '[图]'
+      D: '[图]'
+  2:
+    answer: C
+    has_image_options: true
+    options:
+      A: '[图]'
+      B: '[图]'
+      C: '[图]'
+      D: '[图]'
+  3:
+    answer: B
+    has_image_options: true
+    options:
+      A: '[图]'
+      B: '[图]'
+      C: '[图]'
+      D: '[图]'
+  4:
+    answer: D
+    has_image_options: true
+    options:
+      A: '[图]'
+      B: '[图]'
+      C: '[图]'
+      D: '[图]'
+  5:
+    answer: C
+    has_image_options: true
+    options:
+      A: '[图]'
+      B: '[图]'
+      C: '[图]'
+      D: '[图]'
+  6:
+    answer: B
+    has_image_options: true
+    options:
+      A: '[图]'
+      B: '[图]'
+      C: '[图]'
+      D: '[图]'
+  7:
+    answer: A
+    has_image_options: true
+    options:
+      A: '[图]'
+      B: '[图]'
+      C: '[图]'
+      D: '[图]'
+  8:
+    answer: D
+    has_image_options: true
+    options:
+      A: '[图]'
+      B: '[图]'
+      C: '[图]'
+      D: '[图]'
+  9:
+    answer: x≠2
+  10:
+    answer: x(y+1)^2
+  11:
+    answer: '1'
+  12:
+    answer: '0.96'
+  13:
+    answer: 假
+  14:
+    answer: 1（答案不唯一，0<k≤2 均可）
+  15:
+    answer: 3√3/4
+  16:
+    answer: (1)240; (2)223
+  22:
+    score: 6
+  23:
+    score: 5

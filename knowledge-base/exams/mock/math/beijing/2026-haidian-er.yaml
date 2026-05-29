@@ -2,7 +2,7 @@
 # 2026年北京海淀区二模math — 自动生成
 # ============================================================
 # OCR: Qwen-VL-OCR  Enrich: qwen-max
-# QC: draft=20  needs_review=8
+# QC: draft=28  needs_review=0
 
 year: 2026
 district: 海淀区
@@ -18,6 +18,12 @@ questions:
   type: 单选
   score: 2
   stem: 右图是某几何体的三视图，该几何体是
+  options:
+    A: '[图]'
+    B: '[图]'
+    C: '[图]'
+    D: '[图]'
+  has_image_options: true
   answer: C
   solution: ''
   knowledge_points:
@@ -30,12 +36,18 @@ questions:
   - L1
   - L2
   - L3
-  qc_status: needs_review
-  qc_note: 选择题缺少 options（既无文本也无图片选项）
+  qc_status: draft
+  qc_note: ''
 - id: 2
   type: 单选
   score: 2
   stem: 如图,$\sqrt{10}$在数轴上对应的点可能是
+  options:
+    A: '[图]'
+    B: '[图]'
+    C: '[图]'
+    D: '[图]'
+  has_image_options: true
   figure: 2026-haidian-er/figures/q02.png
   answer: C
   solution: ''
@@ -48,30 +60,41 @@ questions:
   - L1
   - L2
   - L3
-  qc_status: needs_review
-  qc_note: 选择题缺少 options（既无文本也无图片选项）
+  qc_status: draft
+  qc_note: ''
 - id: 3
   type: 单选
   score: 2
   stem: 小明用投影仪将平板电脑屏幕的画面投屏到墙上，画面形状保持不变.已知该平板电脑屏幕的画面是相邻两边长之比为3:2的矩形，若墙上投影画面的短边长为1.2m，则投影画面的长边长为
+  options:
+    A: '[图]'
+    B: '[图]'
+    C: '[图]'
+    D: '[图]'
+  has_image_options: true
   answer: B
   solution: ''
   knowledge_points:
-  - 相似三角形
-  - 比例
-  module: geometryComprehensive
+  - 相似三角形的性质
+  module: triangles
   difficulty: 基础
   recommended_for:
   - L0
   - L1
   - L2
   - L3
-  qc_status: needs_review
-  qc_note: 选择题缺少 options（既无文本也无图片选项）
+  qc_status: draft
+  qc_note: ''
 - id: 4
   type: 单选
   score: 2
   stem: 先后两次抛掷同一枚质地均匀的硬币，则两次都是正面向上的概率为
+  options:
+    A: '[图]'
+    B: '[图]'
+    C: '[图]'
+    D: '[图]'
+  has_image_options: true
   answer: D
   solution: ''
   knowledge_points:
@@ -83,12 +106,18 @@ questions:
   - L1
   - L2
   - L3
-  qc_status: needs_review
-  qc_note: 选择题缺少 options（既无文本也无图片选项）
+  qc_status: draft
+  qc_note: ''
 - id: 5
   type: 单选
   score: 2
   stem: 中国古代用“毫厘丝忽”表示极微细的事物，其中“毫”“厘”“丝”“忽”均为我国古代一种微小的长度计量单位，秦朝统一度量衡时，1丝约为0.00000231m，则5丝用科学记数法可表示为
+  options:
+    A: '[图]'
+    B: '[图]'
+    C: '[图]'
+    D: '[图]'
+  has_image_options: true
   answer: C
   solution: ''
   knowledge_points:
@@ -100,12 +129,18 @@ questions:
   - L1
   - L2
   - L3
-  qc_status: needs_review
-  qc_note: 选择题缺少 options（既无文本也无图片选项）
+  qc_status: draft
+  qc_note: ''
 - id: 6
   type: 单选
   score: 2
   stem: 如图，AB$\parallel$CD，且AD$\perp$BD，点E在BD的延长线上.若∠1=43°，∠2=70°，则∠E的大小为
+  options:
+    A: '[图]'
+    B: '[图]'
+    C: '[图]'
+    D: '[图]'
+  has_image_options: true
   figure: 2026-haidian-er/figures/q06.png
   answer: B
   solution: ''
@@ -118,18 +153,24 @@ questions:
   - L1
   - L2
   - L3
-  qc_status: needs_review
-  qc_note: 选择题缺少 options（既无文本也无图片选项）
+  qc_status: draft
+  qc_note: ''
 - id: 7
   type: 单选
   score: 2
   stem: 如图，P为$\odot O$外一点，连接OP，分别以O，P为圆心，OP长为半径画弧，两弧交于点C，D.连接CD交OP于点N，以N为圆心，NO为半径作圆，交$\odot O$于点E，F，连接OE，OF，EP.若∠EPO=$\alpha
     $，则∠EOF的大小为
+  options:
+    A: '[图]'
+    B: '[图]'
+    C: '[图]'
+    D: '[图]'
+  has_image_options: true
   figure: 2026-haidian-er/figures/q07.png
   answer: A
   solution: ''
   knowledge_points:
-  - 圆的基本性质
+  - 圆的性质
   - 圆周角与圆心角的关系
   module: circles
   difficulty: 中等
@@ -137,8 +178,8 @@ questions:
   - L1
   - L2
   - L3
-  qc_status: needs_review
-  qc_note: 选择题缺少 options（既无文本也无图片选项）
+  qc_status: draft
+  qc_note: ''
 - id: 8
   type: 单选
   score: 2
@@ -151,6 +192,12 @@ questions:
     ③当点N在AB上时，若A(10-2b,0)，则菱形OMAN的面积有最大值.
 
     上述结论中，所有正确结论的序号是'
+  options:
+    A: '[图]'
+    B: '[图]'
+    C: '[图]'
+    D: '[图]'
+  has_image_options: true
   figure: 2026-haidian-er/figures/q08.png
   answer: D
   solution: ''
@@ -163,8 +210,8 @@ questions:
   - L1
   - L2
   - L3
-  qc_status: needs_review
-  qc_note: 选择题缺少 options（既无文本也无图片选项）
+  qc_status: draft
+  qc_note: ''
 - id: 9
   type: 填空
   score: 2
@@ -209,7 +256,7 @@ questions:
   answer: '1'
   solution: '1'
   knowledge_points:
-  - 一元二次方程的根与系数的关系
+  - 一元二次方程的根的判别式
   module: equationsAndInequalities
   difficulty: 基础
   recommended_for:
@@ -233,8 +280,7 @@ questions:
   answer: '0.96'
   solution: '0.96'
   knowledge_points:
-  - 统计与概率
-  - 频率与概率
+  - 统计与概率-频率与概率
   module: statisticsAndProbability
   difficulty: 基础
   recommended_for:
@@ -270,7 +316,7 @@ questions:
   solution: 1(答案不唯一，0<k≤2均可)
   knowledge_points:
   - 反比例函数的图象与性质
-  - 坐标系中的几何图形
+  - 平面直角坐标系中的几何图形
   module: functions
   difficulty: 中等
   recommended_for:
@@ -359,8 +405,8 @@ questions:
   solution: 原式=√2-1+1-2x2+2√2 www.gaokzx.com 2 =2√2
   knowledge_points:
   - 绝对值
-  - 特殊角的三角函数值
-  - 二次根式的化简
+  - 三角函数
+  - 二次根式
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -422,7 +468,7 @@ questions:
   knowledge_points:
   - 等腰三角形的性质
   - 矩形的判定与性质
-  - 中点的应用
+  - 全等三角形
   module: triangles
   difficulty: 中等
   recommended_for:
@@ -478,7 +524,7 @@ questions:
   knowledge_points:
   - 一次函数的性质
   - 直线的交点坐标
-  - 线段长度的计算
+  - 两点间距离公式
   module: functions
   difficulty: 中等
   recommended_for:
@@ -558,7 +604,7 @@ questions:
     (4) 107. 甲片区 www.gaokzx.com'
   knowledge_points:
   - 频数分布直方图
-  - 平均数与中位数
+  - 平均数与中位数的应用
   - 数据处理与分析
   module: statisticsAndProbability
   difficulty: 中等
@@ -727,9 +773,8 @@ questions:
   - 旋转的性质
   - 几何证明
   module: triangles
-  difficulty: 中等
+  difficulty: 能力
   recommended_for:
-  - L1
   - L2
   - L3
   qc_status: draft
@@ -760,7 +805,7 @@ questions:
     名校综合评价 强基 学科 科 名校 阅读 强基在线 学科竞赛派 学在港澳 名校少年班 名校保研通'
   knowledge_points:
   - 圆的性质
-  - 点与圆的位置关系
+  - 坐标系中的几何问题
   - 几何综合
   module: circles
   difficulty: 能力

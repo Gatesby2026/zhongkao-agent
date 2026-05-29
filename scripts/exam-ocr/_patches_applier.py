@@ -98,6 +98,16 @@ def apply_patches_to_final(patches: dict, result: dict) -> int:
             q["type"] = patch["type"]; n += 1
         if "score" in patch:
             q["score"] = patch["score"]; n += 1
+        # has_image_options（physics/math Q1/Q4 等图选项题，enrich 需此 flag
+        # 否则误标 'needs_review: 选择题缺少 options'）
+        if "has_image_options" in patch:
+            q["has_image_options"] = patch["has_image_options"]; n += 1
+        # 通用兜底：透传 patch 任意其他字段
+        for k in patch:
+            if k in ("stem","stem_append","options","solution","answer","type","score",
+                      "has_image_options","create","section","passage_id"):
+                continue
+            q[k] = patch[k]; n += 1
     # 重算 full_score
     if n:
         result["full_score"] = sum(q.get("score", 0) or 0 for q in result.get("questions", []))

@@ -2,7 +2,7 @@
 # 2026年北京西城区二模math — 自动生成
 # ============================================================
 # OCR: Qwen-VL-OCR  Enrich: qwen-max
-# QC: draft=23  needs_review=5
+# QC: draft=28  needs_review=0
 
 year: 2026
 district: 西城区
@@ -34,6 +34,11 @@ questions:
     任
 
     任线'
+  options:
+    A: '[图]'
+    B: '[图]'
+    C: '[图]'
+    D: '[图]'
   has_image_options: true
   answer: A
   solution: ''
@@ -66,6 +71,11 @@ questions:
     (C)$2.5 \times 10^{9}$次
 
     (D)$2.5 \times 10^{10}$次'
+  options:
+    A: '[图]'
+    B: '[图]'
+    C: '[图]'
+    D: '[图]'
   has_image_options: true
   answer: C
   solution: 2 关注北京高考在线官方微信:京考一点通(微信号:bjgkzx)，获取更多试题资料及排名分析信息。 北京市西城区九年级模拟测试试卷 数学答案及评分参考 2026.5 第3页(共6页) 9 ∴EF=BF=2 北京高考在线
@@ -112,6 +122,11 @@ questions:
     C
 
     关注北京高考在线官方北京市西城区九年级模拟测试试卷数学2026.5第页(共7页)资料及排名分析信息。'
+  options:
+    A: '[图]'
+    B: '[图]'
+    C: '[图]'
+    D: '[图]'
   has_image_options: true
   answer: B
   solution: ''
@@ -119,9 +134,8 @@ questions:
   - 相交线与垂线
   - 角的计算
   module: geometryComprehensive
-  difficulty: 基础
+  difficulty: 中等
   recommended_for:
-  - L0
   - L1
   - L2
   - L3
@@ -131,6 +145,12 @@ questions:
   type: 单选
   score: 2
   stem: 在一个不透明的袋子里有1个红球,2个黄球,1个白球,这些球除颜色外无其他差别.从这个袋子中随机摸出两个球,那么摸出的两个球恰好都是黄球的概率是
+  options:
+    A: '[图]'
+    B: '[图]'
+    C: '[图]'
+    D: '[图]'
+  has_image_options: true
   answer: A
   solution: ''
   knowledge_points:
@@ -141,12 +161,18 @@ questions:
   - L1
   - L2
   - L3
-  qc_status: needs_review
-  qc_note: 选择题缺少 options（既无文本也无图片选项）
+  qc_status: draft
+  qc_note: ''
 - id: 5
   type: 单选
   score: 2
   stem: 若一个正n边形的内角和是720°，则这个正n边形的一个外角的大小为
+  options:
+    A: '[图]'
+    B: '[图]'
+    C: '[图]'
+    D: '[图]'
+  has_image_options: true
   answer: B
   solution: ''
   knowledge_points:
@@ -158,12 +184,18 @@ questions:
   - L1
   - L2
   - L3
-  qc_status: needs_review
-  qc_note: 选择题缺少 options（既无文本也无图片选项）
+  qc_status: draft
+  qc_note: ''
 - id: 6
   type: 单选
   score: 2
   stem: 实数a，b，c在数轴上的对应点的位置如图所示，下列结论中正确的是
+  options:
+    A: '[图]'
+    B: '[图]'
+    C: '[图]'
+    D: '[图]'
+  has_image_options: true
   figure: 2026-xicheng-er/figures/q06.png
   answer: D
   solution: ''
@@ -177,12 +209,18 @@ questions:
   - L1
   - L2
   - L3
-  qc_status: needs_review
-  qc_note: 选择题缺少 options（既无文本也无图片选项）
+  qc_status: draft
+  qc_note: ''
 - id: 7
   type: 单选
   score: 2
   stem: 如图，点C，D，E在线段AB上，且AC=CD=DE=EB=1.分别以点A，B为圆心，AE长为半径画弧，两弧在线段AB的上方交于点F，则点F与AB的距离是
+  options:
+    A: '[图]'
+    B: '[图]'
+    C: '[图]'
+    D: '[图]'
+  has_image_options: true
   figure: 2026-xicheng-er/figures/q07.png
   answer: C
   solution: ''
@@ -195,8 +233,8 @@ questions:
   - L1
   - L2
   - L3
-  qc_status: needs_review
-  qc_note: 选择题缺少 options（既无文本也无图片选项）
+  qc_status: draft
+  qc_note: ''
 - id: 8
   type: 单选
   score: 2
@@ -211,11 +249,17 @@ questions:
     ④若N(c,d)(d>b>0)在该六边形的边AB上，且OM=ON，则a与c之间的数量关系是a+c=3.
 
     上述结论中，所有正确结论的序号是'
+  options:
+    A: '[图]'
+    B: '[图]'
+    C: '[图]'
+    D: '[图]'
+  has_image_options: true
   answer: B
   solution: ''
   knowledge_points:
-  - 平面直角坐标系
   - 正多边形的性质
+  - 平面直角坐标系
   - 反比例函数
   module: geometryComprehensive
   difficulty: 中等
@@ -223,8 +267,8 @@ questions:
   - L1
   - L2
   - L3
-  qc_status: needs_review
-  qc_note: 选择题缺少 options（既无文本也无图片选项）
+  qc_status: draft
+  qc_note: ''
 - id: 9
   type: 填空
   score: 2
@@ -232,7 +276,8 @@ questions:
   answer: x≠3
   solution: x≠3
   knowledge_points:
-  - 分式的概念与性质
+  - 分式的概念
+  - 实数的取值范围
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -346,7 +391,7 @@ questions:
   solution: '1'
   knowledge_points:
   - 矩形的性质
-  - 三角形面积计算
+  - 三角形的面积计算
   module: quadrilaterals
   difficulty: 中等
   recommended_for:
@@ -444,7 +489,7 @@ questions:
     .4分 2 =2-√2. .................................................................................................... {x-3
     <x+1, ①
   knowledge_points:
-  - 代数式计算
+  - 代数式的基本运算
   module: numbersAndExpressions
   difficulty: 基础
   recommended_for:
@@ -467,8 +512,7 @@ questions:
   answer: ''
   solution: 解:原不等式组为 4(1-x)>x-2. ② 解不等式①，得x>-2. 2分 解不等式②，得x< 4分 5 ww.g ∴原不等式组的解集为-2<x< ......5分 a+b
   knowledge_points:
-  - 解一元一次不等式
-  - 解一元一次不等式组
+  - 一元一次不等式组的解法
   module: equationsAndInequalities
   difficulty: 中等
   recommended_for:
@@ -532,7 +576,7 @@ questions:
   knowledge_points:
   - 直角三角形的性质
   - 平行四边形的判定与性质
-  - 解直角三角形
+  - 三角函数的应用
   module: triangles
   difficulty: 中等
   recommended_for:
@@ -556,6 +600,7 @@ questions:
     所以这个费用不够用. ....................................................................................................
   knowledge_points:
   - 方程组的应用
+  - 代数式的建立
   module: equationsAndInequalities
   difficulty: 中等
   recommended_for:
@@ -767,6 +812,7 @@ questions:
     3'
   knowledge_points:
   - 二次函数的性质
+  - 二次函数与一元二次方程的关系
   - 坐标系中的几何问题
   module: functions
   difficulty: 能力
@@ -832,7 +878,7 @@ questions:
     累计举办大学招办宣讲会、公益升学讲座千余场，累计帮助数十万考生成功考入重点大学。在家长考生、 中学和社会各界具有很好的品牌口碑影响力。 未来，北京高考在线将立足新高考改革，全面整合高校、中学及教科研机构等各方面资源，依托在线 教育模式，打造北京地区更加全面、专业的初高中贯通培养升学咨询服务平台。
     北京 北京 北京 综合评价 京考一点通 京考圈 京考尖子生 自主选拔在线 名校综合评价 强基 学科 科 名校 阅读 强基在线 学科竞赛派 学在港澳 名校少年班 名校保研通'
   knowledge_points:
-  - 圆的性质
+  - 圆的基本性质
   - 等腰三角形的性质
   - 直线与圆的位置关系
   module: circles

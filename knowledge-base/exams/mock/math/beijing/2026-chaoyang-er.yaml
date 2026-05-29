@@ -2,7 +2,7 @@
 # 2026年北京朝阳区二模math — 自动生成
 # ============================================================
 # OCR: Qwen-VL-OCR  Enrich: qwen-max
-# QC: draft=20  needs_review=8
+# QC: draft=28  needs_review=0
 
 year: 2026
 district: 朝阳区
@@ -18,6 +18,12 @@ questions:
   type: 单选
   score: 2
   stem: 右图是某几何体的三视图,该几何体是
+  options:
+    A: '[图]'
+    B: '[图]'
+    C: '[图]'
+    D: '[图]'
+  has_image_options: true
   figure: 2026-chaoyang-er/figures/q01.png
   answer: A
   solution: ''
@@ -31,16 +37,22 @@ questions:
   - L1
   - L2
   - L3
-  qc_status: needs_review
-  qc_note: 选择题缺少 options（既无文本也无图片选项）
+  qc_status: draft
+  qc_note: ''
 - id: 2
   type: 单选
   score: 2
   stem: 实数 a在数轴上的对应点的位置如图所示,若实数 b满足  $a<b<-a$  ,则 b的值可以是
+  options:
+    A: '[图]'
+    B: '[图]'
+    C: '[图]'
+    D: '[图]'
+  has_image_options: true
   answer: C
   solution: ''
   knowledge_points:
-  - 实数的大小比较
+  - 实数的比较
   - 数轴的应用
   module: numbersAndExpressions
   difficulty: 基础
@@ -49,16 +61,22 @@ questions:
   - L1
   - L2
   - L3
-  qc_status: needs_review
-  qc_note: 选择题缺少 options（既无文本也无图片选项）
+  qc_status: draft
+  qc_note: ''
 - id: 3
   type: 单选
   score: 2
   stem: 若一个五边形的每个内角都是$x^{\circ}$,则x的值为
+  options:
+    A: '[图]'
+    B: '[图]'
+    C: '[图]'
+    D: '[图]'
+  has_image_options: true
   answer: C
   solution: ''
   knowledge_points:
-  - 多边形内角和
+  - 多边形的内角和
   module: geometryComprehensive
   difficulty: 基础
   recommended_for:
@@ -66,12 +84,18 @@ questions:
   - L1
   - L2
   - L3
-  qc_status: needs_review
-  qc_note: 选择题缺少 options（既无文本也无图片选项）
+  qc_status: draft
+  qc_note: ''
 - id: 4
   type: 单选
   score: 2
   stem: 如图,点 C在  $O A$  上,  $C D\perp O B$  于点 D,  $D E// O A$  ,若  $\angle A O B=35^{\circ}$  ,则  $\angle C D E$  的度数为
+  options:
+    A: '[图]'
+    B: '[图]'
+    C: '[图]'
+    D: '[图]'
+  has_image_options: true
   figure: 2026-chaoyang-er/figures/q04.png
   answer: B
   solution: ''
@@ -84,12 +108,18 @@ questions:
   - L1
   - L2
   - L3
-  qc_status: needs_review
-  qc_note: 选择题缺少 options（既无文本也无图片选项）
+  qc_status: draft
+  qc_note: ''
 - id: 5
   type: 单选
   score: 2
   stem: 一个质地均匀的正方体的六个面上分别标有数字 1,1,2,4,5,5,掷该正方体一次,朝上一面的数字是 5的概率为
+  options:
+    A: '[图]'
+    B: '[图]'
+    C: '[图]'
+    D: '[图]'
+  has_image_options: true
   answer: C
   solution: ''
   knowledge_points:
@@ -101,8 +131,8 @@ questions:
   - L1
   - L2
   - L3
-  qc_status: needs_review
-  qc_note: 选择题缺少 options（既无文本也无图片选项）
+  qc_status: draft
+  qc_note: ''
 - id: 6
   type: 单选
   score: 2
@@ -115,6 +145,12 @@ questions:
     (C)$4×10^{-12}$秒
 
     (D)$40×10^{-10}$秒'
+  options:
+    A: '[图]'
+    B: '[图]'
+    C: '[图]'
+    D: '[图]'
+  has_image_options: true
   answer: A
   solution: ''
   knowledge_points:
@@ -126,8 +162,8 @@ questions:
   - L1
   - L2
   - L3
-  qc_status: needs_review
-  qc_note: 选择题缺少 options（既无文本也无图片选项）
+  qc_status: draft
+  qc_note: ''
 - id: 7
   type: 单选
   score: 2
@@ -140,6 +176,12 @@ questions:
     (C)$80^{\circ}$
 
     (D)$100^{\circ}$'
+  options:
+    A: '[图]'
+    B: '[图]'
+    C: '[图]'
+    D: '[图]'
+  has_image_options: true
   figure: 2026-chaoyang-er/figures/q07.png
   answer: B
   solution: ''
@@ -152,8 +194,8 @@ questions:
   - L1
   - L2
   - L3
-  qc_status: needs_review
-  qc_note: 选择题缺少 options（既无文本也无图片选项）
+  qc_status: draft
+  qc_note: ''
 - id: 8
   type: 单选
   score: 2
@@ -168,20 +210,27 @@ questions:
     ④线段AC,BH,CG可以组成直角三角形.
 
     上述结论中,所有正确结论的序号为'
+  options:
+    A: '[图]'
+    B: '[图]'
+    C: '[图]'
+    D: '[图]'
+  has_image_options: true
   figure: 2026-chaoyang-er/figures/q08.png
   answer: D
   solution: ''
   knowledge_points:
-  - 旋转对称性
+  - 旋转的性质
   - 正方形的性质
-  module: quadrilaterals
+  - 角度关系
+  module: geometryComprehensive
   difficulty: 中等
   recommended_for:
   - L1
   - L2
   - L3
-  qc_status: needs_review
-  qc_note: 选择题缺少 options（既无文本也无图片选项）
+  qc_status: draft
+  qc_note: ''
 - id: 9
   type: 填空
   score: 2
@@ -223,7 +272,7 @@ questions:
   answer: '2'
   solution: ''
   knowledge_points:
-  - 一元二次方程的根与系数的关系
+  - 一元二次方程的根的判别式
   module: equationsAndInequalities
   difficulty: 基础
   recommended_for:
@@ -241,7 +290,7 @@ questions:
   solution: ''
   knowledge_points:
   - 一次函数与反比例函数的交点
-  - 代数方程的应用
+  - 方程组的解
   module: functions
   difficulty: 中等
   recommended_for:
@@ -307,9 +356,9 @@ questions:
   answer: 3√3
   solution: ''
   knowledge_points:
-  - 三角形的面积计算
-  - 特殊角的三角函数
+  - 三角形的性质
   - 矩形的性质
+  - 解直角三角形
   module: triangles
   difficulty: 中等
   recommended_for:
@@ -396,7 +445,7 @@ questions:
   solution: 解:原不等式组为 2x+1 >x-1. 解不等式①，得x≥3. ......2分 解不等式②，得x<4. ......4分 :原不等式组的解集为3≤x<4. .....5分
   knowledge_points:
   - 解一元一次不等式
-  - 不等式组的解法
+  - 不等式组的解集
   module: equationsAndInequalities
   difficulty: 基础
   recommended_for:
@@ -417,7 +466,7 @@ questions:
     关注北京高考在线官方微信:京考一点通(微信号:bjgkzx)，获取更多试题资料及排名分析信息。
   knowledge_points:
   - 代数式的化简
-  - 方程的应用
+  - 一元二次方程的应用
   module: numbersAndExpressions
   difficulty: 中等
   recommended_for:
@@ -470,8 +519,8 @@ questions:
 
     (2)0<m≤1. ......5分'
   knowledge_points:
-  - 一次函数的表达式
   - 一次函数的性质
+  - 不等式的应用
   module: functions
   difficulty: 中等
   recommended_for:
@@ -598,9 +647,8 @@ questions:
     √13 ∴sin∠CAE= 13 ∴∠EDG=∠CAE, ∴EG=DE·sin 13 ∴EF=2EG=10√13 ....6分 13 数学试卷答案及评分参考第3页(共5页) 关注北京高考在线官方微信:京考一点通(微信号:bjgkzx)，获取更多试题资料及排名分析信息。
     北京高考在线'
   knowledge_points:
-  - 切线性质
-  - 圆周角定理
-  - 相似三角形
+  - 圆的切线性质
+  - 三角形的角关系
   module: circles
   difficulty: 中等
   recommended_for:
@@ -663,8 +711,8 @@ questions:
 
     (3)①③④. ......5分'
   knowledge_points:
-  - 函数的图象与性质
-  - 函数的应用
+  - 函数图像
+  - 函数关系的应用
   module: functions
   difficulty: 中等
   recommended_for:
@@ -726,7 +774,7 @@ questions:
     ∴AP=AD. ∴△DAB△PAB. 6分 高考在线 ∴∠DBA=∠PBA. com ∴∠DBF=2∠ABC=2α. ∴∠DAE+∠DBF=180°. 7分'
   knowledge_points:
   - 三角形的性质
-  - 旋转的性质
+  - 旋转对称性
   module: triangles
   difficulty: 中等
   recommended_for:

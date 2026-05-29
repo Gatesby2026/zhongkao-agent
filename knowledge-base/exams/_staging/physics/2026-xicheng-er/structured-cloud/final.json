@@ -5,7 +5,7 @@
   "district": "西城区",
   "exam_type": "二模",
   "page_count": 11,
-  "full_score": 71,
+  "full_score": 70,
   "duration_minutes": 70,
   "questions": [
     {
@@ -63,8 +63,13 @@
       "type": "choice",
       "score": 2,
       "stem": "如图所示的四个实例中，为了减小压强的是",
-      "options": null,
-      "has_image_options": false,
+      "options": {
+        "A": "[图]",
+        "B": "[图]",
+        "C": "[图]",
+        "D": "[图]"
+      },
+      "has_image_options": true,
       "source_page": 1,
       "figure_path": "figures/q04.png",
       "id": "physics-q04",
@@ -260,7 +265,7 @@
       "options": null,
       "answer": "",
       "solution": "同种电荷相互排斥；减小",
-      "score": 3,
+      "score": 2,
       "section": "experiment"
     },
     {
@@ -399,7 +404,7 @@
       "number": 16,
       "correct": "",
       "solution": "同种电荷相互排斥；减小",
-      "score": 3
+      "score": 2
     },
     {
       "number": 17,
