@@ -170,7 +170,7 @@ questions:
   solution: ''
   knowledge_points:
   - 力的概念
-  - 二力平衡
+  - 牛顿定律
   module: mechanics
   difficulty: 中等
   recommended_for:
@@ -369,15 +369,17 @@ questions:
 - id: 16
   type: 实验探究
   score: 2
-  stem: Q16 实验探究题 (待人工补全 stem，OCR i6 误识致缺题)
+  stem: 如图所示，用毛皮摩擦过的橡胶棒接触验电器的金属球，金属箔片张开一定角度。再用丝绸摩擦过的玻璃棒接触该验电器的金属球，金属箔片张开的角度会先减小，再增大。这一现象说明：(1) 摩擦起电时电荷不是创造的，而是发生了 ___ ；(2)
+    异种电荷相互 ___ 。(2分)
   answer: ''
-  solution: 同种电荷相互排斥；减小
+  solution: 同种电荷；减小
   knowledge_points:
-  - 实验方法
-  - 数据处理
-  module: experiments
-  difficulty: 中等
+  - 电荷的转移
+  - 电荷间的相互作用
+  module: electricity
+  difficulty: 基础
   recommended_for:
+  - L0
   - L1
   - L2
   - L3
@@ -447,7 +449,7 @@ questions:
   - 光的反射
   - 实验方法
   - 数据处理
-  module: experiments
+  module: soundLightHeat
   difficulty: 中等
   recommended_for:
   - L1
@@ -566,7 +568,7 @@ questions:
 
     (2)甲 (2分)'
   knowledge_points:
-  - 液体压强的影响因素
+  - 压强
   - 实验方法
   module: mechanics
   difficulty: 基础
@@ -678,8 +680,8 @@ questions:
     液片 则:F1=p1S=ρ水gh1S,F2=p2S=ρ水gh2S，已知ρ水>ρ油， F1 F2 若h1=h2,则F1>F2,合力不为0，且合力方向向右，因此液片不会静止， 关注北京高考在线官方微信:京考一点通(微信号:bjgkzx)，获取更多试题资料及排名分析信息。
     北京高考在线 液片会向右侧运动。 www.gaokzx.com 若要液片静止，则合力为0，即F1=F2，因此: 所以，当两种液体静止时，U形管的右侧液面比左侧液面更高。(3分)'
   knowledge_points:
-  - 力的概念
-  - 压强
+  - 液体压强
+  - 密度
   module: mechanics
   difficulty: 中等
   recommended_for:
@@ -722,8 +724,8 @@ questions:
 
     (3)由于电流的热效应造成电池工作时会发热，将电池组布置在远离生活区和货物区的通风 区域，有利于散热，避免引发火灾。'
   knowledge_points:
-  - 电流的热效应
-  - 电池安全
+  - 电与磁
+  - 能量转化
   module: electricity
   difficulty: 中等
   recommended_for:
