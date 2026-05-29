@@ -644,6 +644,13 @@ _NOISE_LINE_PATTERNS = [
     re.compile(r"^\s*英语试卷\s*$"),
     # ⑥ "2026.4" 之类纯日期行
     re.compile(r"^\s*20\d{2}[.\-/]\d{1,2}\s*$"),
+    # ⑦ R3: gaokzx.com / 北京高考在线 / 京考一点通 等水印（2026 二模 gaokzx PDF
+    #    源 51 处水印，cloze/reading body 内嵌；用 sub("") 保留行内 real text）
+    re.compile(r"www\.?gaokzx\.com|gaokzx\.com|bjgkzx|kzx\.com|gao\s?kzx"),
+    re.compile(r"北京高考在线|京考一点通|关注\s*北京高考|微信公众号"),
+    # ⑧ R3: 残字粘 stem/options/sol 末尾（chinese parser 已有类似，移植）
+    re.compile(r"(?:aokz|okzx|okz|k2x|m\.co|mwww|mx\.co|m\.gao|m\.kzx)"
+               r"[^一-龥\sA-Za-z]{0,3}"),
 ]
 # 兼容别处保留的引用（exam-review 检测和 reading sub-section 内部过滤）
 _PAGE_FOOTER_RE = _NOISE_LINE_PATTERNS[0]

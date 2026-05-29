@@ -2,3 +2,30 @@
 questions:
   24:
     type: "科普阅读"
+
+  # R3 ——————————————————————————————————————————————
+  # Q15 Option D 双 $$ 致 KaTeX 渲染崩溃
+  # 源: page-05.json QInfo[0].ResultList[0].Option[D].Text
+  #     = "D.一段时间后，若电流表的示数为1A，则此时M内气压为$7.5×104Pa$"
+  # 当前 yaml: "$$7.5 \\times 10^{4}$Pa$"（双 $$ 不合法）
+  # 修复: 用单 $...$ 包整个 7.5×10^4 Pa 表达式
+  15:
+    options:
+      D: "一段时间后，若电流表的示数为1A，则此时M内气压为$7.5 \\times 10^{4}\\text{Pa}$"
+
+  # Q16 score: yaml=3 → 4
+  # 源: page-11.json QInfo[0].ResultList[2].Question[0].Text
+  #     = "16.(1) 3.4(2分)"
+  # 源: page-11.json QInfo[0].ResultList[3].Question[0].Text
+  #     = "(2)同种电荷相互排斥(2分)"
+  # 合计 (1)(2) 各 2 分 = 4 分
+  16:
+    score: 4
+
+  # Q18 score: yaml=3 → 2
+  # 源: page-11.json QInfo[0].ResultList[8].Question[0].Text
+  #     = "18. B(1分) A(1分)"
+  # 题面 page-05.json: 仅 "蜡烛_的高度及蜡烛_到玻璃板的距离" 2 个空，
+  # 对应答案 B、A 共 2 分
+  18:
+    score: 2

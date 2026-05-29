@@ -1,10 +1,13 @@
-# 昌平区 2026 二模数学 patches —— R1 audit: Q9-16 答案全缺
-# 来源: OCR cache page-08 (数学试卷参考答案及评分标准) + R1 audit 校对
-# 选择 Q1-8 (A-D 各 2 分) / 填空 Q9-16 (各 2 分) / 解答 Q17-28 score 已对
+# 昌平区 2026 二模数学 patches
+# R1: Q9-16 答案补全
+# R3: Q2-Q7 选项 [图] 误标修复 — PDF 实际为文本选项（科学记数法/角度/不等式/分数/边数/几何结论）
+#     仅 Q1 是真图形选项（轴对称/中心对称几何图形 A/B/C/D）；Q8 序号组（①②③④）保留 [图]→改文本
+# 来源: tencent OCR cache page-01.txt / page-02.txt + page-01.json / page-02.json
 questions:
   1:
     answer: A
     has_image_options: true
+    # R3: page-01.txt line 10-15 "下列图形中，既是轴对称图形又是中心对称图形" — 真图形选项
     options:
       A: '[图]'
       B: '[图]'
@@ -12,60 +15,61 @@ questions:
       D: '[图]'
   2:
     answer: B
-    has_image_options: true
+    # R3: page-01.json line 235/259/283/307 (page-01.txt line 20-23) — 科学记数法文本选项
     options:
-      A: '[图]'
-      B: '[图]'
-      C: '[图]'
-      D: '[图]'
+      A: 1.06×10^3
+      B: 1.06×10^4
+      C: 10.6×10^3
+      D: 0.106×10^5
   3:
     answer: C
-    has_image_options: true
+    # R3: page-01.json line 385/409/433/457 (page-01.txt line 32-36) — 角度数文本选项
     options:
-      A: '[图]'
-      B: '[图]'
-      C: '[图]'
-      D: '[图]'
+      A: 32°
+      B: 64°
+      C: 58°
+      D: 74°
   4:
     answer: B
-    has_image_options: true
+    # R3: page-01.json line 535/559/583/607 (page-01.txt line 38-41) — 不等式文本选项
     options:
-      A: '[图]'
-      B: '[图]'
-      C: '[图]'
-      D: '[图]'
+      A: -3<-a<a<3
+      B: -a<-3<3<a
+      C: -a<-3<a<3
+      D: -3<-a<3<a
   5:
     answer: A
-    has_image_options: true
+    # R3: page-01.json line 685/709/733/757 — 分数文本选项 (page-01.txt line 44-49 OCR 损坏，json 干净)
     options:
-      A: '[图]'
-      B: '[图]'
-      C: '[图]'
-      D: '[图]'
+      A: 3/10
+      B: 1/3
+      C: 1/7
+      D: 3/7
   6:
     answer: C
-    has_image_options: true
+    # R3: page-01.json line 835/859/883/907 (page-01.txt line 51-54) — 多边形名称文本选项
     options:
-      A: '[图]'
-      B: '[图]'
-      C: '[图]'
-      D: '[图]'
+      A: 五边形
+      B: 六边形
+      C: 七边形
+      D: 八边形
   7:
     answer: D
-    has_image_options: true
+    # R3: page-02.txt line 11-15 — 几何结论文本选项
+    # (A) page-02.json line 37 "$E=EG$" 系 OCR 漏 C，page-02.txt line 11 "EC=EG" 正确（弧 EC, ED 上下文）
     options:
-      A: '[图]'
-      B: '[图]'
-      C: '[图]'
-      D: '[图]'
+      A: EC=EG
+      B: CF⊥OA
+      C: OG=EG
+      D: ∠AOG=∠BOG
   8:
     answer: C
-    has_image_options: true
+    # R3: page-02.json line 212/236/260/284 (page-02.txt line 34-37) — 序号组合文本选项
     options:
-      A: '[图]'
-      B: '[图]'
-      C: '[图]'
-      D: '[图]'
+      A: ①③
+      B: ①④
+      C: ②③
+      D: ②④
   9:
     answer: x≠1
   10:
