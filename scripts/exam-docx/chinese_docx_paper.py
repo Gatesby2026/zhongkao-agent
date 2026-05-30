@@ -571,6 +571,53 @@ def _parse_section(sec_typ: str, sec_lines: list[str],
         })
 
 
+# ─── 选项截断锚（passage 子段标题）──────────────────────────────────────────
+# R4 修：4 卷 7 处 P0 — 选项末尾把下段裸标题 passage 整段吞入。
+# 命中规则（行级）：
+#   - 手记/材料/资料 + [一二三四五六七八九十数字]
+#   - 第[一二三四五六七八九十数字]部分 / 第N组[：:]...
+#   - 后记/结语/前言/序言/引言/卷首语
+#   - 含 【甲】【乙】【丙】【丁】 的标题行（haidian "东美园城市艺术空间·【甲】"）
+#   - 纯中文短标题（2-8 字，无标点，无 A/B/C/D/数字前缀）— chaoyang "胜日寻芳"/
+#     "公益巡河" / fangshan "结语"
+PASSAGE_ANCHOR_LINE_RES = [
+    # "手记二" / "手记二 亲子共读暖时光"（带副标题也兜住）
+    re.compile(r"^\s*(?:手记|材料|资料)[一二三四五六七八九十\d]+(?:\s+\S.*)?\s*$"),
+    re.compile(r"^\s*第[一二三四五六七八九十\d]+部分\b"),
+    re.compile(r"^\s*第[一二三四五六七八九十\d]+组\s*[：:]"),
+    re.compile(r"^\s*(?:后记|结语|前言|序言|引言|卷首语|开篇语)\s*$"),
+    re.compile(r"^\s*[一-鿿·\s]{0,30}[【][甲乙丙丁][】]"),
+    re.compile(r"^\s*[一-鿿]{2,8}\s*$"),  # 纯中文短标题
+]
+
+
+def _is_passage_anchor_line(line: str) -> bool:
+    s = line.strip()
+    if not s:
+        return False
+    # 排除选项行（A./B./C./D.）和题号行（N./N．）
+    if re.match(r"^[A-D]\s*[.、．]", s) or re.match(r"^\d{1,2}\s*[.、．]", s):
+        return False
+    for pat in PASSAGE_ANCHOR_LINE_RES:
+        if pat.match(s):
+            return True
+    return False
+
+
+def _truncate_at_passage_anchor(opts_part: str) -> str:
+    """选项段从首行扫到首个 passage anchor 行（含），截断之前。"""
+    lines = opts_part.split("\n")
+    cut_idx = None
+    # 至少保留首行（A. 行）
+    for i in range(1, len(lines)):
+        if _is_passage_anchor_line(lines[i]):
+            cut_idx = i
+            break
+    if cut_idx is None:
+        return opts_part
+    return "\n".join(lines[:cut_idx])
+
+
 def _extract_stem_and_options(chunk: str) -> tuple[str, dict[str, str] | None]:
     """从题块抽 stem + options（A./B./C./D.）。
     多选项格式：
@@ -584,6 +631,9 @@ def _extract_stem_and_options(chunk: str) -> tuple[str, dict[str, str] | None]:
         return chunk.strip(), None
     stem = chunk[:a_m.start()].strip()
     opts_part = chunk[a_m.start():]
+    # **R4 P0 修**：选项段在 passage 子段 anchor 行（手记二/胜日寻芳/【甲】等）
+    # 之前截断，避免末选项把下段 passage 整段吞入。
+    opts_part = _truncate_at_passage_anchor(opts_part)
     # 优先用换行分隔（每行一个或多个选项）→ 拆出 A/B/C/D
     opts: dict[str, str] = {}
     # 匹配 A. ... (B. ... | tab+B. | $)

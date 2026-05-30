@@ -28,7 +28,7 @@ A. ![](figures/image4.png) B. ![](figures/image5.png) C. ![](figures/image6.png)
 
 2. 2025年中国科研团队成功研制出全球首款“破晓”半导体电荷存储器，把存储速度推向了新高度．已知传统存储器每秒最多可以擦写1000次，“破晓”半导体电荷存储器的擦写速度约为传统存储器擦写速度的$2 . 5 \times 10^{6}$倍，则“破晓”半导体电荷存储器的擦写速度每秒最多约为（     ）
 
-A. $2 . 5 \times 10^{7}$次 B. $2 . 5 \times 10^{8}$次 C. $2 . 5 \times 10^{9}$次 D. $2 . 5 \times 10^{10}$次
+A. $2 . 5 \times 1 0^{7}$次 B. $2 . 5 \times 10^{8}$次 C. $2 . 5 \times 1 0^{9}$次 D. $2 . 5 \times 1 0^{1 0}$次
 
 【答案】C
 
@@ -36,29 +36,29 @@ A. $2 . 5 \times 10^{7}$次 B. $2 . 5 \times 10^{8}$次 C. $2 . 5 \times 10^{9}$
 
 【分析】先将传统存储器的擦写次数转化为科学记数法形式，再列式即可计算出“破晓”存储器的擦写速度．
 
-【详解】解：依题意，$1000 \times 2 . 5 \times 10^{6} = 2 . 5 \times 10^{9}$．
+【详解】解：依题意，$1 0 0 0 \times 2 . 5 \times 1 0^{6} = 2 . 5 \times 1 0^{9}$．
 
-3. 如图，直线$A B$与直线$C D$相交于点$O$，$O E \bot C D$，若$\angle B O C = 125 \circ$，则$\angle A O E$的大小为（     ）
+3. 如图，直线$A B$与直线$C D$相交于点$O$，$O E \bot C D$，若$\angle B O C = 1 2 5 \circ$，则$\angle A O E$的大小为（     ）
 
 ![](figures/image20.png)
 
-A. $25 \circ$ B. $35 \circ$ C. $45 \circ$ D. $55 \circ$
+A. $2 5 \circ$ B. $3 5 \circ$ C. $4 5 \circ$ D. $5 5 \circ$
 
 【答案】B
 
 【解析】
 
-【分析】先结合对顶角相等得$\angle A O D = 125 \circ$，再结合$O E \bot C D$，得$\angle E O D = 90 \circ$，最后把数值代入$\angle A O E = \angle A O D - \angle E O D$计算，即可作答．
+【分析】先结合对顶角相等得$\angle A O D = 1 2 5 \circ$，再结合$O E \bot C D$，得$\angle E O D = 9 0 \circ$，最后把数值代入$\angle A O E = \angle A O D - \angle E O D$计算，即可作答．
 
-【详解】解：∵$\angle B O C = 125 \circ$，$\angle B O C = \angle A O D$，
+【详解】解：∵$\angle B O C = 1 2 5 \circ$，$\angle B O C = \angle A O D$，
 
-∴$\angle A O D = 125 \circ$，
+∴$\angle A O D = 1 2 5 \circ$，
 
 ∵$O E \bot C D$，
 
-∴$\angle E O D = 90 \circ$，
+∴$\angle E O D = 9 0 \circ$，
 
-∴$\angle A O E = \angle A O D - \angle E O D = 125 \circ - 90 \circ = 35 \circ$．
+∴$\angle A O E = \angle A O D - \angle E O D = 1 2 5 \circ - 9 0 \circ = 3 5 \circ$．
 
 4. 在一个不透明的袋子里有1个红球，2个黄球，1个白球，这些球除颜色外无其他差别．从这个袋子中随机摸出两个球，那么摸出的两个球恰好都是黄球的概率是（     ）
 
@@ -81,11 +81,11 @@ A. $\frac{1}{6}$ B. $\frac{1}{4}$ C. $\frac{1}{3}$ D. $\frac{1}{2}$
 
 共有12种等可能的结果，其中摸出的两个球恰好都是黄球的结果有2种，
 
-∴摸出的两个球恰好都是黄球的概率是$\frac{2}{12} = \frac{1}{6}$．
+∴摸出的两个球恰好都是黄球的概率是$\frac{2}{1 2} = \frac{1}{6}$．
 
 5. 若一个正多边形的内角和为$720 \circ$，则这个正多边形的一个外角为（   ）
 
-A. $90 \circ$ B. $60 \circ$ C. $45 \circ$ D. $30 \circ$
+A. $9 0 \circ$ B. $6 0 \circ$ C. $4 5 \circ$ D. $3 0 \circ$
 
 【答案】B
 
@@ -95,13 +95,13 @@ A. $90 \circ$ B. $60 \circ$ C. $45 \circ$ D. $30 \circ$
 
 【详解】解：设正多边形的边数为$n$，
 
-∴$\left(n,-,2\right) \times 180 \circ = 720 \circ$，
+∴$\left(\right. n - 2 \left.\right) \times 1 8 0 \circ = 7 2 0 \circ$，
 
 解得$n = 6$，
 
-又∵多边形的外角和为$360 \circ$，
+又∵多边形的外角和为$3 6 0 \circ$，
 
-∴一个外角的度数为$360 \circ \div 6 = 60 \circ$．
+∴一个外角的度数为$3 6 0 \circ \div 6 = 6 0 \circ$．
 
 故选：B．
 
@@ -111,17 +111,17 @@ A. $90 \circ$ B. $60 \circ$ C. $45 \circ$ D. $30 \circ$
 
 A. $c > a$ B. $b + c > 0$
 
-C. $\left|a,-,b\right| = b - a$ D. $a + b - c > 0$
+C. $\left|\right. a - b \left|\right. = b - a$ D. $a + b - c > 0$
 
 【答案】D
 
 【解析】
 
-【分析】先理解题意，结合数轴得出$c < b < 0 < a$，且$\left|b\right| < \left|a\right| < \left|c\right|$，再得出$b + c < 0$，$\left|a,-,b\right| = a - b$，$a + b - c > 0$，最后与每个选项的式子进行分析，即可作答．
+【分析】先理解题意，结合数轴得出$c < b < 0 < a$，且$\left|\right. b \left|\right. < \left|\right. a \left|\right. < \left|\right. c \left|\right.$，再得出$b + c < 0$，$\left|\right. a - b \left|\right. = a - b$，$a + b - c > 0$，最后与每个选项的式子进行分析，即可作答．
 
-【详解】解：观察数轴的信息，得出$c < b < 0 < a$，且$\left|b\right| < \left|a\right| < \left|c\right|$，
+【详解】解：观察数轴的信息，得出$c < b < 0 < a$，且$\left|\right. b \left|\right. < \left|\right. a \left|\right. < \left|\right. c \left|\right.$，
 
-∴$b + c < 0$，$\left|a,-,b\right| = a - b$，$a + b > 0 > c$
+∴$b + c < 0$，$\left|\right. a - b \left|\right. = a - b$，$a + b > 0 > c$
 
 ∴$a + b - c > 0$
 
@@ -129,7 +129,7 @@ C. $\left|a,-,b\right| = b - a$ D. $a + b - c > 0$
 
 ∴B选项中的$b + c > 0$是错误的，不符合题意；
 
-∴C选项中的$\left|a,-,b\right| = b - a$是错误的，不符合题意；
+∴C选项中的$\left|\right. a - b \left|\right. = b - a$是错误的，不符合题意；
 
 ∴D选项中的$a + b - c > 0$是正确的，符合题意；
 
@@ -137,7 +137,7 @@ C. $\left|a,-,b\right| = b - a$ D. $a + b - c > 0$
 
 ![](figures/image57.png)
 
-A. $\sqrt{13}$ B. $\frac{12}{5}$ C. $\sqrt{5}$ D. 2
+A. $$ B. $\frac{1 2}{5}$ C. $\sqrt{5}$ D. 2
 
 【答案】C
 
@@ -161,9 +161,9 @@ A. $\sqrt{13}$ B. $\frac{12}{5}$ C. $\sqrt{5}$ D. 2
 
 ∴$D F \bot A B$（等腰三角形的三线合一），
 
-∴$D F = \sqrt{A F^{2} - A D^{2}} = \sqrt{9 - 4} = \sqrt{5}$．
+∴$D F = = =$．
 
-8. 如图，在平面直角坐标系$x O y$中，正六边形$A B C D E F$是以点$O$为中心的正六边形，点$M \left(a,,,b\right)$在正六边形的边上，且点$M$在第一象限．若$A \left(2,0\right)$，给出下面四个结论：（     ）
+8. 如图，在平面直角坐标系$x O y$中，正六边形$A B C D E F$是以点$O$为中心的正六边形，点$M \left(\right. a , b \left.\right)$在正六边形的边上，且点$M$在第一象限．若$A \left(\right. 2 , 0 \left.\right)$，给出下面四个结论：（     ）
 
 ![](figures/image73.png)
 
@@ -171,9 +171,9 @@ A. $\sqrt{13}$ B. $\frac{12}{5}$ C. $\sqrt{5}$ D. 2
 
 ②若点$M$关于原点的对称点为$M^{'}$，则当$M M^{'} \bot D E$时，$\triangle M M^{'} F$的面积取得最小值；
 
-③若点$M$在反比例函数$y = \frac{k}{x} \left(\right. k > 0 \left.\right)$的图象上，则$0 < k < \sqrt{3}$；
+③若点$M$在反比例函数$y = \frac{k}{x} \left(\right. k > 0 \left.\right)$的图象上，则$0 < k <$；
 
-④若$N \left(c,,,d\right) \left(\right. d > b > 0 \left.\right)$在该六边形的边$A B$上，且$O M = O N$，则$a$与$c$之间的数量关系是$a + c = 3$．
+④若$N \left(\right. c , d \left.\right) \left(\right. d > b > 0 \left.\right)$在该六边形的边$A B$上，且$O M = O N$，则$a$与$c$之间的数量关系是$a + c = 3$．
 
 上述结论中，所有正确结论的序号是（）
 
@@ -197,9 +197,9 @@ A. ①③ B. ①④ C. ②③ D. ②④
 
 ∴$O$为线段$M M^{'}$的中点，可得$S_{\triangle M M^{'} F} = 2 S_{\triangle O M F}$．
 
-由已知得$F \left(\right. 1, - \sqrt{3} \left.\right)$，直线$O F$解析式为$y = - \sqrt{3} x$，
+由已知得$F \left(\right. 1 , - \left.\right)$，直线$O F$解析式为$y = - x$，
 
-直线$A B$解析式为$y = - \sqrt{3} x + 2 \sqrt{3}$，故$A B \parallel O F$．
+直线$A B$解析式为$y = - x + 2$，故$A B \parallel O F$．
 
 根据平行线性质，$A B$上所有点到直线$O F$的距离为定值，因此$M$在$A B$上时，$S_{\triangle O M F}$大小不变．
 
@@ -215,9 +215,9 @@ A. ①③ B. ①④ C. ②③ D. ②④
 
 点$M$在正六边形第一象限的边上，当$M$与顶点$B \left(\right. 1, \sqrt{3} \left.\right)$重合时，
 
-$k = 1 \times \sqrt{3} = \sqrt{3}$，即$k$可以取到$\sqrt{3}$．
+$k = 1 \times =$，即$k$可以取到$\sqrt{3}$．
 
-因此$k$的取值范围是$0 < k \leq \sqrt{3}$，与题干$0 < k < \sqrt{3}$不符．
+因此$k$的取值范围是$0 < k \leq$，与题干$0 < k <$不符．
 
 故此结论错误．
 
@@ -241,7 +241,7 @@ $k = 1 \times \sqrt{3} = \sqrt{3}$，即$k$可以取到$\sqrt{3}$．
 
 10. 分解因式：$3 a b^{2} - 6 a b + 3 a =$____．
 
-【答案】$3 a \left(\left(b,-,1\right)\right)^{2}$
+【答案】$3 a \left(\right. b - 1 \left.\right)^{2}$
 
 【解析】
 
@@ -249,11 +249,11 @@ $k = 1 \times \sqrt{3} = \sqrt{3}$，即$k$可以取到$\sqrt{3}$．
 
 【详解】解：$3 a b^{2} - 6 a b + 3 a$
 
-$= 3 a \left(b^{2},-,2,b,+,1\right)$
+$= 3 a \left(\right. b^{2} - 2 b + 1 \left.\right)$
 
-$= 3 a \left(\left(b,-,1\right)\right)^{2}$，
+$= 3 a \left(\right. b - 1 \left.\right)^{2}$，
 
-故答案为：$3 a \left(\left(b,-,1\right)\right)^{2}$．
+故答案为：$3 a \left(\right. b - 1 \left.\right)^{2}$．
 
 11. 方程$\frac{1}{x - 4} + \frac{1}{5 x} = 0$的解为________．
 
@@ -265,13 +265,13 @@ $= 3 a \left(\left(b,-,1\right)\right)^{2}$，
 
 【详解】解：∵$\frac{1}{x - 4} + \frac{1}{5 x} = 0$，
 
-∴去分母得 $5 x + \left(x,-,4\right) = 0$ ，
+∴去分母得 $5 x + \left(\right. x - 4 \left.\right) = 0$ ，
 
 移项，合并同类项，得 $6 x = 4$，
 
 解得 $x = \frac{2}{3}$，
 
-检验：当$x = \frac{2}{3}$时，$5 x \left(x,-,4\right) \neq 0$ ，
+检验：当$x = \frac{2}{3}$时，$5 x \left(\right. x - 4 \left.\right) \neq 0$ ，
 
 ∴原分式方程的解是$x = \frac{2}{3}$．
 
@@ -285,21 +285,21 @@ $= 3 a \left(\left(b,-,1\right)\right)^{2}$，
 
 【详解】解：∵$2^{2} = 4$，$3^{2} = 9$，
 
-∴$2 = \sqrt{4}$，$3 = \sqrt{9}$，
+∴$2 =$，$3 =$，
 
-∵$\sqrt{5}$是无理数，且$\sqrt{4} < \sqrt{5} < \sqrt{9}$，
+∵$\sqrt{5}$是无理数，且$< <$，
 
 ∴$a$的值可以是$\sqrt{5}$（答案不唯一）．
 
-13. 若关于$x$的一元二次方程$\left(m,-,1\right) x^{2} - 4 x + 1 = 0$有两个相等的实数根，则实数$m$的值是________．
+13. 若关于$x$的一元二次方程$\left(\right. m - 1 \left.\right) x^{2} - 4 x + 1 = 0$有两个相等的实数根，则实数$m$的值是________．
 
 【答案】$5$
 
 【解析】
 
-【详解】解：$\because$方程$\left(m,-,1\right) x^{2} - 4 x + 1 = 0$ 是关于$x$的一元二次方程，且有两个相等的实数根，
+【详解】解：$\because$方程$\left(\right. m - 1 \left.\right) x^{2} - 4 x + 1 = 0$ 是关于$x$的一元二次方程，且有两个相等的实数根，
 
-∴$\Delta = \left(\right. - 4 \left.\right)^{2} - 4 \times \left(m,-,1\right) \times 1 = 0$且$m - 1 \neq 0$，
+∴$\Delta = \left(\left(\right. - 4 \left.\right)\right)^{2} - 4 \times \left(\right. m - 1 \left.\right) \times 1 = 0$且$m - 1 \neq 0$，
 
 解得$m = 5$．
 
@@ -311,15 +311,15 @@ $= 3 a \left(\left(b,-,1\right)\right)^{2}$，
 
 根据以上信息，估计该社区1200户居民对垃圾分类“非常了解”的户数是________户．
 
-【答案】$720$
+【答案】$7 2 0$
 
 【解析】
 
 【分析】先求出样本中“非常了解”的居民户数占样本的频率，再用总体总户数乘以该频率，得到总体中“非常了解”户数的估计值．
 
-【详解】解：由题意得，样本中“非常了解”的频率为：$\frac{60}{100} = 0 . 6$，
+【详解】解：由题意得，样本中“非常了解”的频率为：$\frac{6 0}{1 0 0} = 0 . 6$，
 
-估计该社区1200户居民中“非常了解”的户数为：$1200 \times 0 . 6 = 720$．
+估计该社区1200户居民中“非常了解”的户数为：$1 2 0 0 \times 0 . 6 = 7 2 0$．
 
 15. 如图，在矩形$A B C D$中，过点$A$作对角线$B D$的垂线交$B D$于点$F$，交$B C$于点$E$．若$A B = 2$，$A D = 4$，则$\triangle B E F$的面积为________．
 
@@ -329,101 +329,101 @@ $= 3 a \left(\left(b,-,1\right)\right)^{2}$，
 
 【解析】
 
-【分析】首先根据矩形性质和垂直定义证明$\triangle A B E ∽ \triangle D A B$，求出$B E$的长，然后在$\text{Rt}\triangle A B D$中利用勾股定理求出$B D$，再利用相似三角形性质求出$B F$的长，最后在$\text{Rt}\triangle B E F$中，利用勾股定理求出$E F$，利用三角形面积公式求解．
+【分析】首先根据矩形性质和垂直定义证明$\triangle A B E \sim \triangle D A B$，求出$B E$的长，然后在$\triangle A B D$中利用勾股定理求出$B D$，再利用相似三角形性质求出$B F$的长，最后在$\triangle B E F$中，利用勾股定理求出$E F$，利用三角形面积公式求解．
 
 【详解】解：∵四边形$A B C D$是矩形，
 
-∴$\angle B A D = \angle A B C = 90^{@}$，$A D = B C = 4$，
+∴$\angle B A D = \angle A B C = 9 0^{\circ}$，$A D = B C = 4$，
 
 ∵$A E \bot B D$，
 
-∴$\angle A F B = 90^{@}$，
+∴$\angle A F B = 9 0^{\circ}$，
 
-∴$\angle B A E + \angle A B D = 90^{@}$，
+∴$\angle B A E + \angle A B D = 9 0^{\circ}$，
 
-∵$\angle A D B + \angle A B D = 90^{@}$，
+∵$\angle A D B + \angle A B D = 9 0^{\circ}$，
 
 ∴$\angle B A E = \angle A D B$，
 
-∴$\triangle A B E ∽\triangle D A B$，
+∴$\triangle A B E \sim \triangle D A B$，
 
 ∴$\frac{A B}{D A} = \frac{B E}{A B}$，
 
 ∴$B E = \frac{A B^{2}}{D A} = \frac{2^{2}}{4} = 1$，
 
-在$\text{Rt}\triangle A B D$中，
+在$\triangle A B D$中，
 
-$B D = \sqrt{A B^{2} + A D^{2}} = \sqrt{2^{2} + 4^{2}} = 2 \sqrt{5}$，
+$B D = = = 2$，
 
-.∵$\angle A F B = \angle B A D = 90^{@}$，$\angle A B F = \angle D B A$，
+.∵$\angle A F B = \angle B A D = 9 0^{\circ}$，$\angle A B F = \angle D B A$，
 
-∴$\triangle A B F ∽ \triangle D B A$，
+∴$\triangle A B F \sim \triangle D B A$，
 
 ∴$\frac{B F}{A B} = \frac{A B}{D B}$，
 
-∴$B F = \frac{A B^{2}}{D B} = \frac{4}{2 \sqrt{5}} = \frac{2 \sqrt{5}}{5}$，
+∴$B F = \frac{A B^{2}}{D B} = \frac{4}{2} = \frac{2}{5}$，
 
-在$\text{Rt}\triangle B E F$中，
+在$\triangle B E F$中，
 
-$E F = \sqrt{B E^{2} - B F^{2}} = \frac{\sqrt{5}}{5}$，
+$E F = = \frac{}{5}$，
 
-∴$S_{\triangle B E F} = \frac{1}{2} B F \cdot E F = \frac{1}{2} \times \frac{2 \sqrt{5}}{5} \times \frac{\sqrt{5}}{5} = \frac{1}{5}$．
+∴$S_{\triangle B E F} = \frac{1}{2} B F \cdot E F = \frac{1}{2} \times \frac{2}{5} \times \frac{}{5} = \frac{1}{5}$．
 
-16. 某商店共有$a$种不同型号的口罩，每种型号的口罩都有红、白、蓝三种颜色，每种型号的红色口罩价格均为每包50元，白色口罩价格均为每包$m$元，蓝色口罩价格均为每包$n$元（$66 \leq m < n \leq 74$，且$m$，$n$均为整数）．甲、乙、丙三家公司各买一包每种型号的口罩，且对于同种型号的口罩，三家公司选择的颜色各不相同．结账时，甲、乙各自花费了1200元，丙花费了1400元．
+16. 某商店共有$a$种不同型号的口罩，每种型号的口罩都有红、白、蓝三种颜色，每种型号的红色口罩价格均为每包50元，白色口罩价格均为每包$m$元，蓝色口罩价格均为每包$n$元（$6 6 \leq m < n \leq 7 4$，且$m$，$n$均为整数）．甲、乙、丙三家公司各买一包每种型号的口罩，且对于同种型号的口罩，三家公司选择的颜色各不相同．结账时，甲、乙各自花费了1200元，丙花费了1400元．
 
-（1）若$m = 69$，$n = 71$，则$a$的值为________；
+（1）若$m = 6 9$，$n = 71$，则$a$的值为________；
 
 （2）若丙购买的口罩包含三种颜色，则丙用于购买白色和蓝色的口罩最多一共花费________元．
 
-【答案】    ①. $20$    ②. $1350$
+【答案】    ①. $2 0$    ②. $1 3 5 0$
 
 【解析】
 
-【分析】根据题意，三家总花费等于所有口罩的总价，可得核心等式$a \left(50,+,m,+,n\right) = 3800$ ，结合$m , n$的取值范围分析求解，第一问直接代入计算即可，第二问根据丙包含三种颜色的条件，将所求目标转化为找最小的正整数$x$，结合整数性质验证得到最大值．
+【分析】根据题意，三家总花费等于所有口罩的总价，可得核心等式$a \left(\right. 5 0 + m + n \left.\right) = 3 8 0 0$ ，结合$m , n$的取值范围分析求解，第一问直接代入计算即可，第二问根据丙包含三种颜色的条件，将所求目标转化为找最小的正整数$x$，结合整数性质验证得到最大值．
 
-【详解】解：由题意，每个型号的三种颜色被甲、乙、丙各购买一包，因此所有口罩总售价等于三家总花费，即$a \left(50,+,m,+,n\right) = 1200 \times 2 + 1400 = 3800$．
+【详解】解：由题意，每个型号的三种颜色被甲、乙、丙各购买一包，因此所有口罩总售价等于三家总花费，即$a \left(\right. 5 0 + m + n \left.\right) = 1 2 0 0 \times 2 + 1 4 0 0 = 3 8 0 0$．
 
-（1）将$m = 69$，$n = 71$代入等式得：$a \left(50,+,69,+,71\right) = 3800$，
+（1）将$m = 6 9$，$n = 71$代入等式得：$a \left(\right. 5 0 + 6 9 + 7 1 \left.\right) = 3 8 0 0$，
 
-解得$a = 20$．
+解得$a = 2 0$．
 
-（2）由$66 \leq m < n \leq 74$，且$m , n$为整数，可得：$183 \leq 50 + m + n \leq 197$，
+（2）由$6 6 \leq m < n \leq 7 4$，且$m , n$为整数，可得：$1 8 3 \leq 5 0 + m + n \leq 1 9 7$，
 
-∵$a = \frac{3800}{50 + m + n}$是正整数，
+∵$a = \frac{3 8 0 0}{5 0 + m + n}$是正整数，
 
-∴$50 + m + n = 190$，即$n = 140 - m$，$a = 20$，
+∴$5 0 + m + n = 1 9 0$，即$n = 1 4 0 - m$，$a = 2 0$，
 
 设丙购买红色口罩$x$包，白色口罩$y$包，蓝色口罩$z$包，
 
-由题意得：$\left{\begin{matrix} x + y + z = 20 \\ 50 x + m y + n z = 1400 \end{matrix}\right$，且$x \geq 1, y \geq 1, z \geq 1$，均为正整数，
+由题意得：$\left{\right. x + y + z = 2 0 & 5 0 x + m y + n z = 1 4 0 0$，且$x \geq 1 , y \geq 1 , z \geq 1$，均为正整数，
 
-∴$m y + n z = 1400 - 50 x$，
+∴$m y + n z = 1 4 0 0 - 5 0 x$，
 
 ∴要使$m y + n z$最大，需取最小的$x$，即$x = 1$，
 
-当$x = 1$时，$y + z = 19$，即$z = 19 - y$，
+当$x = 1$时，$y + z = 1 9$，即$z = 1 9 - y$，
 
-将$x = 1$，$z = 19 - y$代入$m y + n z = 1400 - 50 x$得$m y + n \left(19,-,y\right) = 1350$，
+将$x = 1$，$z = 1 9 - y$代入$m y + n z = 1 4 0 0 - 5 0 x$得$m y + n \left(\right. 1 9 - y \left.\right) = 1 3 5 0$，
 
-将$n = 140 - m$代入得$m y + \left(140,-,m\right) \left(19,-,y\right) = 1350$，
+将$n = 1 4 0 - m$代入得$m y + \left(\right. 1 4 0 - m \left.\right) \left(\right. 1 9 - y \left.\right) = 1 3 5 0$，
 
-∴$y = \frac{19 m - 1310}{2 m - 140} = \frac{\frac{19}{2} \left(2,m,-,140\right) + 20}{2 m - 140} = \frac{19}{2} + \frac{10}{m - 70} = \frac{1}{2} \left(19,+,\frac{20}{m - 70}\right)$，
+∴$y = \frac{1 9 m - 1 3 1 0}{2 m - 1 4 0} = \frac{\frac{1 9}{2} \left(\right. 2 m - 1 4 0 \left.\right) + 2 0}{2 m - 1 4 0} = \frac{1 9}{2} + \frac{1 0}{m - 7 0} = \frac{1}{2} \left(\right. 1 9 + \frac{2 0}{m - 7 0} \left.\right)$，
 
 ∵$y$为正整数，
 
-∴$19 + \frac{20}{m - 70}$须为偶数，
+∴$1 9 + \frac{2 0}{m - 7 0}$须为偶数，
 
-∴$\frac{20}{m - 70}$须是奇数，
+∴$\frac{2 0}{m - 7 0}$须是奇数，
 
-∴$m - 70 = \pm 4$，或$m - 70 = \pm 20$，
+∴$m - 7 0 = \pm 4$，或$m - 7 0 = \pm 2 0$，
 
-∵$66 \leq m < n \leq 74$，
+∵$6 6 \leq m < n \leq 7 4$，
 
-∴$m - 70 = - 4$，
+∴$m - 7 0 = - 4$，
 
-∴$m = 66$，
+∴$m = 6 6$，
 
-当$m = 66$时，$n = 140 - m = 74$，此时$y = \frac{1}{2} \left(19,+,\frac{20}{66 - 70}\right) = 7$，则$z = 19 - y = 12$，均为正整数，满足条件，此时$m y + n z = 66 \times 7 + 74 \times 12 = 1350$（元）；
+当$m = 6 6$时，$n = 1 4 0 - m = 7 4$，此时$y = \frac{1}{2} \left(\right. 1 9 + \frac{2 0}{6 6 - 7 0} \left.\right) = 7$，则$z = 1 9 - y = 1 2$，均为正整数，满足条件，此时$m y + n z = 6 6 \times 7 + 7 4 \times 1 2 = 1 3 5 0$（元）；
 
 ∴丙用于购买白色和蓝色的口罩最多一共花费1350元．
 
@@ -431,21 +431,21 @@ $E F = \sqrt{B E^{2} - B F^{2}} = \frac{\sqrt{5}}{5}$，
 
 解答应写出文字说明、演算步骤或证明过程．
 
-17. 计算：$\left(\frac{1}{3}\right)^{- 1} + 4 \text{sin} 45 \circ - \sqrt{18} - \left(\left(\pi,-,2026\right)\right)^{0}$．
+17. 计算：$\left(\right. \frac{1}{3} \left.\right)^{- 1} + 4 4 5 \circ - - \left(\right. - 2 0 2 6 \left.\right)^{0}$．
 
-【答案】$2 - \sqrt{2}$
+【答案】$2 -$
 
 【解析】
 
-【详解】解：$\left(\frac{1}{3}\right)^{- 1} + 4 \text{sin} 45 \circ - \sqrt{18} - \left(\left(\pi,-,2026\right)\right)^{0}$
+【详解】解：$\left(\right. \frac{1}{3} \left.\right)^{- 1} + 4 4 5 \circ - - \left(\right. - 2 0 2 6 \left.\right)^{0}$
 
-$= 2 - \sqrt{2}$
+$= 3 + 4 \times \frac{}{2} - 3 - 1$
 
-$\left{\begin{matrix} \frac{x - 3}{5} < x + 1 \\ 4 \left(1,-,x\right) > x - 2 \end{matrix}\right$
+$= 3 + 2 - 3 - 1$
 
-$- 2 < x < \frac{6}{5}$．
+$= 2 -$．
 
-18. 解不等式组：$\left{\begin{matrix} \frac{x - 3}{5} < x + 1 \textcircled{1} \\ 4 \left(1,-,x\right) > x - 2 \textcircled{2} \end{matrix}\right$
+18. 解不等式组：$\left{\right. \frac{x - 3}{5} < x + 1 & 4 \left(\right. 1 - x \left.\right) > x - 2$
 
 【答案】$\textcircled{1}$
 
@@ -453,97 +453,97 @@ $- 2 < x < \frac{6}{5}$．
 
 【分析】先分别解出每个不等式的解集，再得出不等式组的解集，即可作答．
 
-【详解】解：∵$x > - 2$，
+【详解】解：∵$\left{\right. \frac{x - 3}{5} < x + 1 \textcircled{1} & 4 \left(\right. 1 - x \left.\right) > x - 2 \textcircled{2}$，
+
+∴由$\textcircled{1}$得$x > - 2$，
 
 ∴由$\textcircled{2}$得$x < \frac{6}{5}$，
 
-∴由$- 2 < x < \frac{6}{5}$得$a - b - 4 = 0$，
-
 ∴不等式组的解集为$a + b \neq 0$．
 
-19. 已知$\frac{a + b}{2 a^{2} + a b - b \left(a,+,2,b\right)}$且$\frac{1}{8}$，求代数式$= \frac{1}{2 \left(a,-,b\right)}$的值．
+19. 已知$a - b - 4 = 0$且$a + b \neq 0$，求代数式$\frac{a + b}{2 a^{2} + a b - b \left(\right. a + 2 b \left.\right)}$的值．
 
 【答案】
 
-$a - b - 4 = 0$
+$\frac{1}{8}$
 
 【解析】
 
-【分析】首先把分式化简，可得：原式$a - b = 4$，根据$a - b = 4$，可得：$\frac{a + b}{2 a^{2} + a b - b \left(a,+,2,b\right)}$，把$= \frac{1}{2 \left(a,-,b\right)}$代入化简后的代数式求值即可．
+【分析】首先把分式化简，可得：原式$= \frac{1}{2 \left(\right. a - b \left.\right)}$，根据$a - b - 4 = 0$，可得：$a - b = 4$，把$a - b = 4$代入化简后的代数式求值即可．
 
-【详解】解：$\because a - b - 4 = 0$
+【详解】解：$\frac{a + b}{2 a^{2} + a b - b \left(\right. a + 2 b \left.\right)}$
 
-$\therefore a - b = 4$
+$= \frac{a + b}{2 a^{2} + a b - a b - 2 b^{2}}$
 
-$= \frac{1}{2 \left(a,-,b\right)} = \frac{1}{2 \times 4} = \frac{1}{8}$
+$= \frac{a + b}{2 \left(\right. a^{2} - b^{2} \left.\right)}$
 
-$\text{Rt} \triangle A B C$
+$= \frac{a + b}{2 \left(\right. a - b \left.\right) \left(\right. a + b \left.\right)}$
 
-$\angle A C B = 90 \circ$，
+$= \frac{1}{2 \left(\right. a - b \left.\right)}$，
 
-$D$，
+$\because a - b - 4 = 0$，
 
-$B C$，
+$\therefore a - b = 4$，
 
-原式$A D$．
+原式$= \frac{1}{2 \left(\right. a - b \left.\right)} = \frac{1}{2 \times 4} = \frac{1}{8}$．
 
-20. 如图，在$A$中，$A E \bot A C$，$A D$是$B E$的中点，连接$E$，过点$A E B D$作$B E = 2$交$tan \angle A B C = \frac{1}{2}$的平行线$A B$于点$\sqrt{10}$．
+20. 如图，在$\triangle A B C$中，$\angle A C B = 9 0 \circ$，$D$是$B C$的中点，连接$A D$，过点$A$作$A E \bot A C$交$A D$的平行线$A B$于点$E$．
 
 ![](figures/image237.png)
 
-（1）求证：四边形$B E \parallel A D$是平行四边形；
+（1）求证：四边形$A E B D$是平行四边形；
 
-（2）若$A E \bot A C$，$\angle A C B = 90^{@}$，求$A E \parallel B C$的长．
+（2）若$B E = 2$，$t a n \angle A B C = \frac{1}{2}$，求$A B$的长．
 
-【答案】（1）见解析    （2）$A D = B E$
+【答案】（1）见解析    （2）$$
 
 【解析】
 
-【分析】（1）首先根据$D$，再结合$B C$、$B C = 2 C D$，可推出$tan \angle A B C = \frac{1}{2}$，依据平行四边形判定定理即可证明．
+【分析】（1）首先根据$B E \parallel A D$，再结合$A E \bot A C$、$\angle A C B = 9 0^{\circ}$，可推出$A E \parallel B C$，依据平行四边形判定定理即可证明．
 
-（2）首先利用平行四边形的性质，得到$\text{Rt}\triangle A B C$，结合$B C = 2 A C$是$C D = A C$中点的条件，求出$A C = \sqrt{2}$；再根据$A B$，在$\angle A C B = 90^{@}$中利用正切的定义求出$A E \bot A C$，得$\angle E A C = \angle A C B = 90^{@}$。由勾股定理求得 $A E \parallel B C$，最后用勾股定理计算$A E \parallel B D$的长．
+（2）首先利用平行四边形的性质，得到$A D = B E$，结合$D$是$B C$中点的条件，求出$B C = 2 C D$；再根据$t a n \angle A B C = \frac{1}{2}$，在$\triangle A B C$中利用正切的定义求出$B C = 2 A C$，得$C D = A C$。由勾股定理求得 $A C =$，最后用勾股定理计算$A B$的长．
 
 【小问1详解】
 
-证明：∵ $B E \parallel A D$，$A E B D$，
+证明：∵ $\angle A C B = 9 0^{\circ}$，$A E \bot A C$，
 
-∴ $A E B D$，
+∴ $\angle E A C = \angle A C B = 9 0^{\circ}$，
 
-∴ $\therefore A D = B E = 2$，
+∴ $A E \parallel B C$，
 
-即 $B C$．
+即 $A E \parallel B D$．
 
-又 $\therefore B C = 2 C D$，
+又 $B E \parallel A D$，
 
-∴四边形$\text{Rt}\triangle A B C$是平行四边形．
+∴四边形$A E B D$是平行四边形．
 
 ![](figures/image237.png)【小问2详解】
 
-解：∵ 四边形$tan \angle A B C = \frac{A C}{B C} = \frac{1}{2}$是平行四边形，
+解：∵ 四边形$A E B D$是平行四边形，
 
-$B C = 2 A C$．
+$\therefore A D = B E = 2$．
 
-∵D是$C D = A C$中点，
+∵D是$B C$中点，
 
-$\text{Rt}\triangle A C D$．
+$\therefore B C = 2 C D$．
 
-∵在$A C^{2} + C D^{2} = A D^{2}$中，$C D = A C$，
+∵在$\triangle A B C$中，$t a n \angle A B C = \frac{A C}{B C} = \frac{1}{2}$，
 
-即 $A D = 2$，
+即 $B C = 2 A C$，
 
-∴ $A C^{2} + A C^{2} = 2^{2}$．
+∴ $C D = A C$．
 
-∵在$A C = \sqrt{2}$中， $B C = 2 A C = 2 \sqrt{2}$，
+∵在$\triangle A C D$中， $A C^{2} + C D^{2} = A D^{2}$，
 
-代入$\text{Rt}\triangle A B C$，$A B = \sqrt{A C^{2} + B C^{2}} = \sqrt{\left(\right. \sqrt{2} \left.\right)^{2} + \left(\right. 2 \sqrt{2} \left.\right)^{2}} = \sqrt{10}$，
+代入$C D = A C$，$A D = 2$，
 
-得 $x$ ，
+得 $A C^{2} + A C^{2} = 2^{2}$ ，
 
-解得 $y$（边长为正，舍去负根），
+解得 $A C =$（边长为正，舍去负根），
 
-∴$x$
+∴$B C = 2 A C = 2$
 
-在$y$中，由勾股定理： $\left{\begin{matrix} 2 x - y = 10 \\ 4 x = 3 y \end{matrix}\right$．
+在$\triangle A B C$中，由勾股定理： $A B = = =$．
 
 21. 某研学小组计划在暑假期间参加“非遗传承，研学之旅”活动．已知该活动有画糖人和剪纸两个体验项目，据了解体验2次画糖人的费用比1次剪纸的费用多10元，体验4次画糖人的费用和3次剪纸的费用相同．若体验画糖人的总次数是5人次，剪纸总次数是4人次，且用于这次活动的总预算为150元，请判断这个费用是否够用，并说明理由．
 
@@ -551,132 +551,132 @@ $\text{Rt}\triangle A C D$．
 
 【解析】
 
-【分析】先设体验1次画糖人的费用为$\left{\begin{matrix} x = 15 \\ y = 20 \end{matrix}\right$元，体验1次剪纸的费用为$5 \times 15 + 4 \times 20 = 155$元，根据题干给出的等量关系列出二元一次方程组，求解得到单次费用后，计算本次活动所需总费用，再与总预算150元比较大小，即可得出结论．
+【分析】先设体验1次画糖人的费用为$x$元，体验1次剪纸的费用为$y$元，根据题干给出的等量关系列出二元一次方程组，求解得到单次费用后，计算本次活动所需总费用，再与总预算150元比较大小，即可得出结论．
 
-【详解】解：设体验1次画糖人的费用为$\because$元，体验1次剪纸的费用为$155 > 150$元，
+【详解】解：设体验1次画糖人的费用为$x$元，体验1次剪纸的费用为$y$元，
 
-根据题意可得方程组$\therefore$，
+根据题意可得方程组$\left{\right. 2 x - y = 1 0 & 4 x = 3 y$，
 
-解得$x O y$，
+解得$\left{\right. x = 1 5 \\ y = 2 0$，
 
-∴所需总费用：$y = k x + b \left(k,\neq,0\right)$（元），
+∴所需总费用：$5 \times 1 5 + 4 \times 2 0 = 1 5 5$（元），
 
-$y = 2 x$用于这次活动的总预算为150元，且$\left(-,1,2\right)$
+$\because$用于这次活动的总预算为150元，且$1 5 5 > 1 5 0$
 
-$k$这个费用不够用．
+$\therefore$这个费用不够用．
 
-22. 在平面直角坐标系$b$中，函数$x > 1$的图象是由函数$x$的图象平移得到，且经过点$y = m x + 2 \left(m,\neq,0\right)$．
+22. 在平面直角坐标系$x O y$中，函数$y = k x + b \left(\right. k \neq 0 \left.\right)$的图象是由函数$y = 2 x$的图象平移得到，且经过点$\left(\right. - 1 , 2 \left.\right)$．
 
-（1）求$y = k x + b$，$y = - x + 3 m$的值；
+（1）求$k$，$b$的值；
 
-（2）当$m$时，对于$k = 2$的每一个值，函数$b = 4$的值小于函数$- 1 \leq m \leq \frac{3}{2}$的值，且大于函数$m \neq 0$的值，直接写出$k = 2$的取值范围．
+（2）当$x > 1$时，对于$x$的每一个值，函数$y = m x + 2 \left(\right. m \neq 0 \left.\right)$的值小于函数$y = k x + b$的值，且大于函数$y = - x + 3 m$的值，直接写出$m$的取值范围．
 
-【答案】（1）$\left(-,1,2\right)$，$y = 2 x + b$
+【答案】（1）$k = 2$，$b = 4$
 
-（2）$b$且$y = k x + b$
+（2）$- 1 \leq m \leq \frac{3}{2}$且$m \neq 0$
 
 【解析】
 
-【分析】（1）根据平移的性质可知$y = 2 x + 4$，把点$x > 1$的坐标代入$m x + 2 < 2 x + 4$，即可求出$m \leq 2$；
+【分析】（1）根据平移的性质可知$k = 2$，把点$\left(\right. - 1 , 2 \left.\right)$的坐标代入$y = 2 x + b$，即可求出$b$；
 
-（2）由（1）可知函数$- x + 3 m < m x + 2$的解析式为$- 1 < m \leq \frac{3}{2}$，由当$m$时$- 1 < m \leq \frac{3}{2}$，可得：$y = k x + b \left(k,\neq,0\right)$；当$y = 2 x$时，可得：$\therefore k = 2$，所以$\therefore$的取值范围为$y = 2 x + b$.
+（2）由（1）可知函数$y = k x + b$的解析式为$y = 2 x + 4$，由当$x > 1$时$m x + 2 < 2 x + 4$，可得：$m \leq 2$；当$- x + 3 m < m x + 2$时，可得：$- 1 < m \leq \frac{3}{2}$，所以$m$的取值范围为$- 1 < m \leq \frac{3}{2}$.
 
 【小问1详解】
 
-解：函数$\left(-,1,2\right)$的图象是由函数$y = 2 x + b$的图象平移得到，
+解：函数$y = k x + b \left(\right. k \neq 0 \left.\right)$的图象是由函数$y = 2 x$的图象平移得到，
 
-$2 \times \left(-,1\right) + b = 2$，
+$\therefore k = 2$，
 
-$b = 4$一次函数的解析式是$y = k x + b$，
+$\therefore$一次函数的解析式是$y = 2 x + b$，
 
-把点$y = 2 x + 4$的坐标代入$\because m x + 2 < 2 x + 4$，
+把点$\left(\right. - 1 , 2 \left.\right)$的坐标代入$y = 2 x + b$，
 
-可得：$\therefore \left(m,-,2\right) x < 2$，
+可得：$2 \times \left(\right. - 1 \left.\right) + b = 2$，
 
-解得：$m < 2$；
+解得：$b = 4$；
 
 【小问2详解】
 
-解：由（1）可知函数$m - 2 < 0$的解析式为$x > \frac{2}{m - 2} > 0$，
+解：由（1）可知函数$y = k x + b$的解析式为$y = 2 x + 4$，
 
-$\therefore x > 1$，
+$\because m x + 2 < 2 x + 4$，
 
-$y = m x + 2 \left(m,\neq,0\right)$，
+$\therefore \left(\right. m - 2 \left.\right) x < 2$，
 
-当$y = k x + b$时，$m = 2$，
+当$m < 2$时，$m - 2 < 0$，
 
-可得：$y = m x + 2 \left(m,\neq,0\right)$，
+可得：$x > \frac{2}{m - 2} > 0$，
 
-$y = 2 x + 2$时，函数$x > 1$的值小于函数$2 x + 2 < 2 x + 4$的值恒成立，
+$\therefore x > 1$时，函数$y = m x + 2 \left(\right. m \neq 0 \left.\right)$的值小于函数$y = k x + b$的值恒成立，
 
-当$m > 2$时，函数$m - 2 > 0$的关系式为$x < \frac{2}{m - 2}$，
+当$m = 2$时，函数$y = m x + 2 \left(\right. m \neq 0 \left.\right)$的关系式为$y = 2 x + 2$，
 
-当$\therefore x > 1$时，$\therefore$恒成立，
+当$x > 1$时，$2 x + 2 < 2 x + 4$恒成立，
 
-当$y = m x + 2 \left(m,\neq,0\right)$时，$y = k x + b$，
+当$m > 2$时，$m - 2 > 0$，
 
-可得：$m \leq 2$，
+可得：$x < \frac{2}{m - 2}$，
 
-$- x + 3 m < m x + 2$不成立，
+$\therefore x > 1$不成立，
 
-$\left(m,+,1\right) x > 3 m - 2$函数$m + 1 > 0$的值小于函数$m > - 1$时，$x > \frac{3 m - 2}{m + 1}$；
+$\therefore$函数$y = m x + 2 \left(\right. m \neq 0 \left.\right)$的值小于函数$y = k x + b$时，$m \leq 2$；
 
-当$\because x > 1$时，
+当$- x + 3 m < m x + 2$时，
 
-整理可得：$\therefore \frac{3 m - 2}{m + 1} \leq 1$，
+整理可得：$\left(\right. m + 1 \left.\right) x > 3 m - 2$，
 
-当$m \leq \frac{3}{2}$，即$m + 1 = 0$时，
+当$m + 1 > 0$，即$m > - 1$时，
 
-可得：$m = - 1$，
+可得：$x > \frac{3 m - 2}{m + 1}$，
 
-$0 > - 5$，
+$\because x > 1$，
 
-$\therefore m = - 1$，
+$\therefore \frac{3 m - 2}{m + 1} \leq 1$，
 
-解得：$\left(m,+,1\right) x > 3 m - 2$，
+解得：$m \leq \frac{3}{2}$，
 
-当$m + 1 < 0$，即$x < \frac{3 m - 2}{m + 1}$时，
+当$m + 1 = 0$，即$m = - 1$时，
 
-可得：$\therefore x > 1$，
+可得：$0 > - 5$，
 
-$- 1 \leq m \leq \frac{3}{2}$时，$m \neq 0$成立，
+$\therefore m = - 1$时，$\left(\right. m + 1 \left.\right) x > 3 m - 2$成立，
 
-当$0 \leq x < 10$时，
+当$m + 1 < 0$时，
 
-可得：$10 \leq x < 20$，
+可得：$x < \frac{3 m - 2}{m + 1}$，
 
-$20 \leq x < 30$不成立；
+$\therefore x > 1$不成立；
 
-综上所述，$30 \leq x < 40$且$40 \leq x < 50$．
+综上所述，$- 1 \leq m \leq \frac{3}{2}$且$m \neq 0$．
 
 23. 某学校为了调查该校学生早上从家到校所需的时长，从中随机抽查了100名学生，记录了他们早上从家到校的时长（单位：分钟）（整数），并对这100个数据进行整理、描述和分析．下面给出了部分信息．
 
-a．100个数据频数分布直方图（数据分成5组：$20 \leq x < 30$，$m$，$10 \leq x < 20$，$n$，$n$）
+a．100个数据频数分布直方图（数据分成5组：$0 \leq x < 1 0$，$1 0 \leq x < 2 0$，$2 0 \leq x < 3 0$，$3 0 \leq x < 4 0$，$4 0 \leq x < 5 0$）
 
 ![](figures/image323.png)
 
-b．时长在$23$这一组的是：
+b．时长在$2 0 \leq x < 3 0$这一组的是：
 
 20   20   21   21   23   23   23   24   24   24   25   25   25   26   26
 
 26   26   27   27   27   27   27   28   28   28   29   29   29   29   29
 
-（1）$m = 100 - 8 - 38 - 30 - 10 = 14$的值为________，100个数据的中位数是________，平均数约为________（用各组的组中值代表各组的数据）；
+（1）$m$的值为________，100个数据的中位数是________，平均数约为________（用各组的组中值代表各组的数据）；
 
-（2）从$50$中随机选取15个数据分成A，B，C三组，每组5个数据，信息如下：
+（2）从$1 0 \leq x < 2 0$中随机选取15个数据分成A，B，C三组，每组5个数据，信息如下：
 
-| A组 | 15 | 15 | 15 | 17 | $51$ |
+| A组 | 15 | 15 | 15 | 17 | $n$ |
 |---|---|---|---|---|---|
 | B组 | 14 | 15 | 16 | 16 | 18 |
 | C组 | 13 | 17 | 18 | 18 | 19 |
 
 已知A组与B组的平均数相等．
 
-①$8 + 38 = 46$的值为________；
+①$n$的值为________；
 
 ②学校从A，B，C三组中选出一组到校从事晨检工作，要求：先比较平均数，平均数较小的组排序靠前；若平均数相等，再比较方差，方差较小的组排序靠前．在A，B，C三组的排序中，排序最靠前的是________组．
 
-【答案】（1）14；22；$8 + 38 + 30 = 76$；
+【答案】（1）14；22；$2 3$；
 
 （2）①17；②A．
 
@@ -688,162 +688,162 @@ b．时长在$23$这一组的是：
 
 【小问1详解】
 
-解：$\frac{21 + 23}{2} = 22$
+解：$m = 1 0 0 - 8 - 3 8 - 3 0 - 1 0 = 1 4$
 
-100个数据的中位数为第$= 23$和$\bar{x_{A}} = \frac{1}{5} \times \left(15,+,15,+,15,+,17,+,n\right) = \frac{62 + n}{5}$位的平均数，
+100个数据的中位数为第$5 0$和$5 1$位的平均数，
 
-∵$\bar{x_{B}} = \frac{1}{5} \times \left(14,+,15,+,16,+,16,+,18\right) = \frac{79}{5}$，$\frac{62 + n}{5} = \frac{79}{5}$，
+∵$8 + 3 8 = 4 6$，$8 + 3 8 + 3 0 = 7 6$，
 
-∴100个数据的中位数为$n = 17$，
+∴100个数据的中位数为$\frac{2 1 + 2 3}{2} = 2 2$，
 
-$\bar{x_{C}} = \frac{1}{5} \times \left(13,+,17,+,18,+,18,+,19\right) = \frac{85}{5} = 17$
+$\bar{x} = \frac{1}{1 0 0} \times \left(\right. 8 \times \frac{0 + 1 0}{2} + 3 8 \times \frac{1 0 + 2 0}{2} + 3 0 \times \frac{2 0 + 3 0}{2} + 1 4 \times \frac{3 0 + 4 0}{2} + 1 0 \times \frac{4 0 + 5 0}{2} \left.\right)$
 
-$\bar{x_{A}} = \bar{x_{B}} < \bar{x_{C}}$
+$= \frac{1}{1 0 0} \times \left(\right. 4 0 + 5 7 0 + 7 5 0 + 4 9 0 + 4 5 0 \left.\right)$
 
-$A B$
+$= \frac{1}{1 0 0} \times 2 3 0 0$
 
-$\bigodot O$；
+$= 2 3$；
 
 【小问2详解】
 
-解：①$\bigodot O$，
+解：①$\bar{x_{A}} = \frac{1}{5} \times \left(\right. 1 5 + 1 5 + 1 5 + 1 7 + n \left.\right) = \frac{6 2 + n}{5}$，
 
-$C$，
+$\bar{x_{B}} = \frac{1}{5} \times \left(\right. 1 4 + 1 5 + 1 6 + 1 6 + 1 8 \left.\right) = \frac{7 9}{5}$，
 
-$E F$，
+$\frac{6 2 + n}{5} = \frac{7 9}{5}$，
 
-解得$B D$；
+解得$n = 1 7$；
 
-②$B A$，
+②$\bar{x_{C}} = \frac{1}{5} \times \left(\right. 1 3 + 1 7 + 1 8 + 1 8 + 1 9 \left.\right) = \frac{8 5}{5} = 1 7$，
 
-$E F = B F$，
+$\bar{x_{A}} = \bar{x_{B}} < \bar{x_{C}}$，
 
-$B C$
+$s_{A}^{2} = \frac{1}{5} \times \left[\right. \left(\right. 1 5 - \frac{7 9}{5} \left.\right)^{2} + \left(\right. 1 5 - \frac{7 9}{5} \left.\right)^{2} + \left(\right. 1 5 - \frac{7 9}{5} \left.\right)^{2} + \left(\right. 1 7 - \frac{7 9}{5} \left.\right)^{2} + \left(\right. 1 7 - \frac{7 9}{5} \left.\right)^{2} \left]\right.$
 
-$\angle C B E = 45 \circ$
+$= \frac{1}{5} \times \left(\right. 0 . 6 4 + 0 . 6 4 + 0 . 6 4 + 1 . 4 4 + 1 . 4 4 \left.\right)$
 
-$E F$
+$= \frac{1}{5} \times 4 . 8$
 
-$\bigodot O$
+$= 0 . 9 6$
 
-$D$
+$s_{B}^{2} = \frac{1}{5} \times \left[\right. \left(\right. 1 4 - \frac{7 9}{5} \left.\right)^{2} + \left(\right. 1 5 - \frac{7 9}{5} \left.\right)^{2} + \left(\right. 1 6 - \frac{7 9}{5} \left.\right)^{2} + \left(\right. 1 6 - \frac{7 9}{5} \left.\right)^{2} + \left(\right. 1 8 - \frac{7 9}{5} \left.\right)^{2} \left]\right.$
 
-$M N \bot E F$
+$= \frac{1}{5} \times \left(\right. 3 . 2 4 + 0 . 6 4 + 0 . 0 4 + 0 . 0 4 + 4 . 8 4 \left.\right)$
 
-$M$
+$= \frac{1}{5} \times 8 . 8$
 
-$A B$
+$= 1 . 7 6$
 
-$N$
+$s_{A}^{2} < s_{B}^{2}$
 
 ∴排序最靠前的是A组．
 
-24. 如图，$C F = 3 A F$是$A B = 4$的直径，点C，D在$B N$上，过点$\frac{4}{3}$作直线$O C$分别交$O D$和$\angle C O D = 2 \angle C B E = 90 \circ$的延长线于点E，F，且$E F = B F$．连接$\angle E = \angle F B E$，$O B = O D$．
+24. 如图，$A B$是$\bigodot O$的直径，点C，D在$\bigodot O$上，过点$C$作直线$E F$分别交$B D$和$B A$的延长线于点E，F，且$E F = B F$．连接$B C$，$\angle C B E = 4 5 \circ$．
 
 ![](figures/image354.png)
 
-（1）求证：$\angle O D B = \angle F B E$是$\angle O D B = \angle E$的切线；
+（1）求证：$E F$是$\bigodot O$的切线；
 
-（2）过点$O D \parallel E F$作$\angle O C F = \angle C O D = 90 \circ$于点$O C \bot E F$，交$O C$延长线于点$\bigodot O$，若$\bigodot O$，$A F = x$，求$C F = 3 x$的长．
+（2）过点$D$作$M N \bot E F$于点$M$，交$A B$延长线于点$N$，若$C F = 3 A F$，$A B = 4$，求$B N$的长．
 
 【答案】（1）证明见解析
 
-（2）$O F = 2 + x$
+（2）$\frac{4}{3}$
 
 【解析】
 
-【分析】（1）连接$\text{Rt}\triangle O C F$，$A F$，先由圆周角定理得$C F$，由$O C M D$得$C M$，由$F M$得$B N = y$，即可得$y$，可证$O N$，进而得$F N$即$O D \parallel E F$，结合$\triangle O D N ∽\triangle F M N$是$O C$的半径即可证明；
+【分析】（1）连接$O C$，$O D$，先由圆周角定理得$\angle C O D = 2 \angle C B E = 9 0 \circ$，由$E F = B F$得$\angle E = \angle F B E$，由$O B = O D$得$\angle O D B = \angle F B E$，即可得$\angle O D B = \angle E$，可证$O D \parallel E F$，进而得$\angle O C F = \angle C O D = 9 0 \circ$即$O C \bot E F$，结合$O C$是$\bigodot O$的半径即可证明；
 
-（2）先$O D$的半径是2，设$\angle C B E = 45 \circ$，则$\angle C O D = 2 \angle C B E = 90 \circ$，$E F = B F$，在$\angle E = \angle F B E$中利用勾股定理列方程求解可得$O B = O D$、$\angle O D B = \angle F B E$，通过“三个角是直角的四边形是矩形”证得四边形$\angle O D B = \angle E$是矩形求出$O D \parallel E F$，进而得$\angle O C F = \angle C O D = 90 \circ$，设$O C \bot E F$，用含$O C$的式子表示$\bigodot O$、$E F$，由$\bigodot O$得$D$，利用相似比列方程求解即可．
+（2）先$\bigodot O$的半径是2，设$A F = x$，则$C F = 3 x$，$O F = 2 + x$，在$\triangle O C F$中利用勾股定理列方程求解可得$A F$、$C F$，通过“三个角是直角的四边形是矩形”证得四边形$O C M D$是矩形求出$C M$，进而得$F M$，设$B N = y$，用含$y$的式子表示$O N$、$F N$，由$O D \parallel E F$得$\triangle O D N \sim \triangle F M N$，利用相似比列方程求解即可．
 
 【小问1详解】
 
-解：如图，连接$M N \bot E F$，$M$，
+解：如图，连接$O C$，$O D$，
 
 ![](figures/image385.png)
 
-∵$A B$，
+∵$\angle C B E = 4 5 \circ$，
 
-∴$N$，
+∴$\angle C O D = 2 \angle C B E = 9 0 \circ$，
 
-∵$A B$，
+∵$E F = B F$，
 
-∴$\bigodot O$，
+∴$\angle E = \angle F B E$，
 
-∵$A B = 4$，
+∵$O B = O D$，
 
-∴$O C = O D = O A = O B = 2$，
+∴$\angle O D B = \angle F B E$，
 
-∴$A F = x$，
+∴$\angle O D B = \angle E$，
 
-∴$C F = 3 x$，
+∴$O D \parallel E F$，
 
-∴$O F = O A + A F = 2 + x$，
+∴$\angle O C F = \angle C O D = 9 0 \circ$，
 
-∴$\text{Rt}\triangle O C F$，
+∴$O C \bot E F$，
 
-又∵$O C^{2} + C F^{2} = O F^{2}$是$2^{2} + \left(\left(3,x\right)\right)^{2} = \left(\left(2,+,x\right)\right)^{2}$的半径，
+又∵$O C$是$\bigodot O$的半径，
 
-∴$x = \frac{1}{2}$是$x = 0$的切线；
+∴$E F$是$\bigodot O$的切线；
 
 【小问2详解】
 
-解：如图，过点$A F = \frac{1}{2}$作$C F = \frac{3}{2}$于点$O C \bot E F$，交$M N \bot E F$延长线于点$\angle O C M = \angle C M D = 90 \circ$，
+解：如图，过点$D$作$M N \bot E F$于点$M$，交$A B$延长线于点$N$，
 
 ![](figures/image386.png)
 
-∵$\angle C O D = 90 \circ$是$O C M D$的直径，$C M = O D = 2$，
+∵$A B$是$\bigodot O$的直径，$A B = 4$，
 
-∴半径$F M = C F + C M = \frac{3}{2} + 2 = \frac{7}{2}$，
+∴半径$O C = O D = O A = O B = 2$，
+
+设$A F = x$，则$C F = 3 x$，$O F = O A + A F = 2 + x$，
+
+在$\triangle O C F$中，由勾股定理得$O C^{2} + C F^{2} = O F^{2}$，
+
+∴$2^{2} + \left(\right. 3 x \left.\right)^{2} = \left(\right. 2 + x \left.\right)^{2}$，
+
+解得$x = \frac{1}{2}$或$x = 0$（舍去），
+
+∴$A F = \frac{1}{2}$，$C F = \frac{3}{2}$，
+
+∵$O C \bot E F$，$M N \bot E F$，
+
+∴$\angle O C M = \angle C M D = 9 0 \circ$，
+
+又∵$\angle C O D = 9 0 \circ$，
+
+∴四边形$O C M D$是矩形，
+
+∴$C M = O D = 2$，
+
+∴$F M = C F + C M = \frac{3}{2} + 2 = \frac{7}{2}$，
 
 设$B N = y$，则$O N = O B + B N = 2 + y$，$F N = A F + A B + B N = \frac{1}{2} + 4 + y = \frac{9}{2} + y$，
 
-在$O D \parallel E F$中，由勾股定理得$\triangle O D N ∽\triangle F M N$，
+∵$O D \parallel E F$，
 
-∴$\frac{O D}{F M} = \frac{O N}{F N}$，
+∴$\triangle O D N \sim \triangle F M N$，
 
-解得$\frac{2}{\frac{7}{2}} = \frac{2 + y}{\frac{9}{2} + y}$或$y = \frac{4}{3}$（舍去），
+∴$\frac{O D}{F M} = \frac{O N}{F N}$，即$\frac{2}{\frac{7}{2}} = \frac{2 + y}{\frac{9}{2} + y}$，
 
-∴$B N = \frac{4}{3}$，$\text{AI}$，
+解得$y = \frac{4}{3}$，即$B N = \frac{4}{3}$．
 
-∵$x$，$y_{1} \%$，
+25. 某芯片公司设计了两个方案用以提升某类$$芯片的产量和性能．将第$x$批次芯片按方案一和方案二生产、优化后的成品率（合格芯片占比）分别记为$y_{1}$和$y_{2}$，对于给定的方案，可以认为$y$是$x$的函数．部分数据如下：
 
-∴$y_{2} \%$，
-
-又∵$y$，
-
-∴四边形$x$是矩形，
-
-∴$x$，
-
-∴$y_{1}$，
-
-设$y_{2}$，则$m$，$x O y$，
-
-∵$\left(x,,,y\right)$，
-
-∴$C_{1}$，
-
-∴$C_{2}$，即$C_{1}$，
-
-解得$x$，即$85 \%$．
-
-25. 某芯片公司设计了两个方案用以提升某类$m$芯片的产量和性能．将第$m$批次芯片按方案一和方案二生产、优化后的成品率（合格芯片占比）分别记为$C_{2}$和$90 \%$，对于给定的方案，可以认为$m$是$x = 3$的函数．部分数据如下：
-
-| $y_{1} \% = 84 \% < 85 \%$ | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | … |
+| $x$ | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | … |
 |---|---|---|---|---|---|---|---|---|---|
-| $x = 4$ | 70 | 78 | 84 | 88 | 90 | 91 | 92 | 93 | … |
-| $y_{1} \% = 88 \% > 85 \%$ | 74 | 81 | 87 | 91 | $x$ | 95 | 97 | 98 | … |
+| $y_{1}$ | 70 | 78 | 84 | 88 | 90 | 91 | 92 | 93 | … |
+| $y_{2}$ | 74 | 81 | 87 | 91 | $m$ | 95 | 97 | 98 | … |
 
-对于方案二，从第二批次起，每一批次比前一批次增加的成品率逐渐减少或保持不变．对于给定的方案，在平面直角坐标系$85 \%$中描出各数对$97 - 95 \leq 95 - m \leq m - 91 \leq 91 - 87$所对应的点，并根据变化趋势用平滑曲线连接，得到曲线$m = 93$和$x \geq 5$，曲线$y_{1} \% \geq 90 \%$如图所示．
+对于方案二，从第二批次起，每一批次比前一批次增加的成品率逐渐减少或保持不变．对于给定的方案，在平面直角坐标系$x O y$中描出各数对$\left(\right. x , y \left.\right)$所对应的点，并根据变化趋势用平滑曲线连接，得到曲线$C_{1}$和$x \geq 5$，曲线$C_{1}$如图所示．
 
 ![](figures/image417.png)
 
-（1）当整数$x \geq 4$的值为________时，按方案一优化后的成品率首次超过$y_{2} \% > 90 \%$；
+（1）当整数$x$的值为________时，按方案一优化后的成品率首次超过$8 5 %$；
 
-（2）写出表中的$5 \times 2 = 10$值（$4 \times 3 = 12$为整数），并在给出的平面直角坐标系中画出曲线$10 < 12$；
+（2）写出表中的$m$值（$m$为整数），并在给出的平面直角坐标系中画出曲线$10 < 12$；
 
-（3）按方案一和方案二生产、优化每个批次的芯片用时分别是2天和3天，且每批次芯片只按一种方案生产、优化，将成品率不低于$4 + 20 = 24$的批次称为合格批次．
+（3）按方案一和方案二生产、优化每个批次的芯片用时分别是2天和3天，且每批次芯片只按一种方案生产、优化，将成品率不低于$9 0 %$的批次称为合格批次．
 
 ①根据上述函数关系，该公司最早在第________天（整数）开始生产合格批次的芯片；
 
@@ -855,334 +855,334 @@ $N$
 
 【分析】（1）直接根据表格中的数据进行作答即可；
 
-（2）根据从第二批次起，每一批次比前一批次增加的成品率逐渐减少或保持不变，求出$24 \times 2 = 48$的值，描点，连线画出函数图象即可；
+（2）根据从第二批次起，每一批次比前一批次增加的成品率逐渐减少或保持不变，求出$m$的值，描点，连线画出函数图象即可；
 
 （3）①根据按方案一和方案二生产、优化每个批次的芯片用时分别是2天和3天，结合表格数据，求出两个方案最早开始生产合格批次的芯片的天数，比较大小即可；②分别求出两种方案所需天数，比较大小即可.
 
 【小问1详解】
 
-解：由表格可知：当$x = 6$时，$y_{2} \% = 95 \% > 90 \%$；当$20 \times 3 = 60$时，$48 < 60$；
+解：由表格可知：当$x = 3$时，$y_{1} % = 8 4 % < 8 5 %$；当$x = 4$时，$y_{1} % = 8 8 % > 8 5 %$；
 
-故当整数$48$的值为4时，按方案一优化后的成品率首次超过$x O y$；
+故当整数$x$的值为4时，按方案一优化后的成品率首次超过$8 5 %$；
 
 【小问2详解】
 
 解：∵对于方案二，从第二批次起，每一批次比前一批次增加的成品率逐渐减少或保持不变，
 
-∴$y = x^{2} + \left(1,-,3,a\right) x - 3 a \left(\right. a > 0 \left.\right)$，
+∴$9 7 - 9 5 \leq 9 5 - m \leq m - 9 1 \leq 9 1 - 8 7$，
 
-∴$x$，
+∴$m = 9 3$，
 
 描点，连线，画出函数图象如图：
 
 ![](figures/image426.png)【小问3详解】
 
-解：①按照方案一，由表格数据可知，当$A$时，$B$，
+解：①按照方案一，由表格数据可知，当$x \geq 5$时，$y_{1} % \geq 9 0 %$，
 
-按照方案二，由表格数据可知，当$A$时，$B$，
+按照方案二，由表格数据可知，当$x \geq 4$时，$y_{2} % > 9 0 %$，
 
 又∵按方案一和方案二生产、优化每个批次的芯片用时分别是2天和3天，
 
-∴按照方案一最早在第$y$天（整数）开始生产合格批次的芯片；
+∴按照方案一最早在第$5 \times 2 = 1 0$天（整数）开始生产合格批次的芯片；
 
-按照方案二，最早在第$D$天（整数）开始生产合格批次的芯片；
+按照方案二，最早在第$4 \times 3 = 1 2$天（整数）开始生产合格批次的芯片；
 
-∵$a = 1$，
+∵$1 0 < 1 2$，
 
 故该公司最早在第10天（整数）开始生产合格批次的芯片；
 
-②若选方案一：前4个批次不合格，共需要生产$A B$个批次，总用时$E \left(t,,0\right)$天；
+②若选方案一：前4个批次不合格，共需要生产$4 + 2 0 = 2 4$个批次，总用时$2 4 \times 2 = 4 8$天；
 
-若选方案二：公司采用方案二对此类芯片生产、优化了18天时，此时$x$，$M$，
+若选方案二：公司采用方案二对此类芯片生产、优化了18天时，此时$x = 6$，$y_{2} % = 9 5 % > 9 0 %$，
 
-已经可以生产合格的批次，故总用时$B D$天；
+已经可以生产合格的批次，故总用时$2 0 \times 3 = 6 0$天；
 
-∵$N$，
+∵$4 8 < 6 0$，
 
-∴最快经过$E$天（整数）完成这个订单．
+∴最快经过$4 8$天（整数）完成这个订单．
 
-26. 在平面直角坐标系$\left(2,0\right)$中，抛物线$x$与$B E$轴交于点$M$和点$N$（点$B E$在点$a$的左边），与$4$轴交于点$a \geq \frac{4}{3}$．
+26. 在平面直角坐标系$x O y$中，抛物线$y = x^{2} + \left(\right. 1 - 3 a \left.\right) x - 3 a \left(\right. a > 0 \left.\right)$与$x$轴交于点$A$和点$B$（点$A$在点$B$的左边），与$y$轴交于点$D$．
 
 （1）当$a = 1$时，求$A B$的长；
 
-（2）过点$B D$作$B D$轴的垂线交该抛物线于点$M N$，交直线$B E$于点$M N$．当点$y = = x^{2} + \left(1,-,3,a\right) x - 3 a = \left(x,+,1\right) \left(x,-,3,a\right)$从点$y = 0$出发沿$\left(x,+,1\right) \left(x,-,3,a\right) = 0$轴的某个方向运动时，若$x_{1} = - 1$的长度逐渐增大，且$x_{2} = 3 a$点与$a = 1$点的距离随$x_{2} = 3 a = 3 \times 1 = 3$长度的增大先变小后变大，求$A \left(-,1,0\right)$的取值范围．
+（2）过点$E \left(\right. t , 0 \left.\right)$作$x$轴的垂线交该抛物线于点$M$，交直线$B D$于点$N$．当点$E$从点$\left(\right. 2 , 0 \left.\right)$出发沿$x$轴的某个方向运动时，若$x_{1} = - 1$的长度逐渐增大，且$M$点与$N$点的距离随$x_{2} = 3 a = 3 \times 1 = 3$长度的增大先变小后变大，求$a$的取值范围．
 
 【答案】（1）
 
-$B \left(3,0\right)$
+$4$
 
 （2）
 
-$A B = 3 - \left(-,1\right) = 4$
+$a \geq \frac{4}{3}$
 
 【解析】
 
-【分析】（1）将$y$代入A、B的横坐标表达式，得到两点具体坐标，根据x轴上两点距离公式计算$D \left(\right. 0, - 3 a \left.\right)$长度；
+【分析】（1）将$a = 1$代入A、B的横坐标表达式，得到两点具体坐标，根据x轴上两点距离公式计算$A B$长度；
 
-（2）先求抛物线与y轴交点D的坐标，再结合点B坐标，用待定系数法得到直线$B \left(\right. 3 a ,0 \left.\right)$的表达式，根据点E的横坐标t，分别代入抛物线和直线$A \left(-,1,0\right)$解析式得到M、N的纵坐标，作差得到$B D$关于t的函数表达式，结合点B的坐标，确定当$y = x - 3 a$长度逐渐增大时t的取值范围，$E \left(\right. t ,0 \left.\right)$关于t的函数为二次函数，进而求解a的取值范围．
+（2）先求抛物线与y轴交点D的坐标，再结合点B坐标，用待定系数法得到直线$B D$的表达式，根据点E的横坐标t，分别代入抛物线和直线$B D$解析式得到M、N的纵坐标，作差得到$M N$关于t的函数表达式，结合点B的坐标，确定当$B E$长度逐渐增大时t的取值范围，$M N$关于t的函数为二次函数，进而求解a的取值范围．
 
 【小问1详解】
 
-解：由题意可得，$M \left(\right. t , t^{2} + \left(\right. 1 - 3 a \left.\right) t - 3 a \left.\right)$，
+解：由题意可得，$y = = x^{2} + \left(\right. 1 - 3 a \left.\right) x - 3 a = \left(\right. x + 1 \left.\right) \left(\right. x - 3 a \left.\right)$，
 
-令$N \left(\right. t , t - 3 a \left.\right)$，$y_{M} - y_{N} = t^{2} + \left(\right. 1 - 3 a \left.\right) t - 3 a - \left(\right. t - 3 a \left.\right) = t^{2} - 3 a t$，
+令$y = 0$，$\left(\right. x + 1 \left.\right) \left(\right. x - 3 a \left.\right) = 0$，
 
-解得$M N = \mid t^{2} - 3 a t \mid = \left|t,\left(t,-,3,a\right)\right|$，$3 a \leq 2$，
+解得$x_{1} = - 1$，$x_{2} = 3 a$，
 
-∵$a \leq \frac{2}{3}$，
+∵$a = 1$，
 
-∴$B \left(\right. 3 a ,0 \left.\right)$，
+∴$x_{2} = 3 a = 3 \times 1 = 3$，
 
-∴$\left(2,0\right)$，$E \left(\right. t ,0 \left.\right)$，
+∴$A \left(\right. - 1 , 0 \left.\right)$，$B \left(\right. 3 , 0 \left.\right)$，
 
-∴$\left(2,0\right)$．
+∴$A B = 3 - \left(\right. - 1 \left.\right) = 4$．
 
 【小问2详解】
 
-抛物线与$B E$轴交点$E \left(\right. t ,0 \left.\right)$，
+抛物线与$y$轴交点$D \left(\right. 0 , - 3 a \left.\right)$，
 
-且由（1）得，$B E$，$t \geq 2$，
+且由（1）得，$B \left(\right. 3 a , 0 \left.\right)$，$A \left(\right. - 1 , 0 \left.\right)$，
 
-∴$M N$解析式为$t$，
+∴$B D$解析式为$y = x - 3 a$，
 
-∵$t \geq 2$，
+∵$E \left(\right. t , 0 \left.\right)$，
 
-∴$M N$，$t$，
+∴$M \left(\right. t , t^{2} + \left(\right. 1 - 3 a \left.\right) t - 3 a \left.\right)$，$N \left(\right. t , t - 3 a \left.\right)$，
 
-∴$3 a > 2$，
+∴$y_{M} - y_{N} = t^{2} + \left(\right. 1 - 3 a \left.\right) t - 3 a - \left(\right. t - 3 a \left.\right) = t^{2} - 3 a t$，
 
-∴$a > \frac{2}{3}$，
+∴$M N = \mid t^{2} - 3 a t \mid = \left|\right. t \left(\right. t - 3 a \left.\right) \left|\right.$，
 
-①当$B \left(\right. 3 a ,0 \left.\right)$时，即$\left(2,0\right)$，
+①当$3 a \leq 2$时，即$a \leq \frac{2}{3}$，
 
-此时点$E \left(\right. t ,0 \left.\right)$在$\left(2,0\right)$左侧，
+此时点$B \left(\right. 3 a , 0 \left.\right)$在$\left(\right. 2 , 0 \left.\right)$左侧，
 
-∵点$B E$从$E \left(\right. t ,0 \left.\right)$出发，沿某个方向运动时，$B E$逐渐增大，
+∵点$E \left(\right. t , 0 \left.\right)$从$\left(\right. 2 , 0 \left.\right)$出发，沿某个方向运动时，$B E$逐渐增大，
 
-∴点$t < 2$向右侧运动时，满足$M N$逐渐增大，
+∴点$E \left(\right. t , 0 \left.\right)$向右侧运动时，满足$B E$逐渐增大，
 
-∴$t$，
+∴$t \geq 2$，
 
-且$t = \frac{3 a}{2}$关于$M N$的函数图像如图所示：
+且$M N$关于$t$的函数图像如图所示：
 
 ![](figures/image475.png)
 
-∴当$B E$时，$\frac{3 a}{2} \geq 2$随$a \geq \frac{4}{3}$的增大而增大，不合题意，舍去；
+∴当$t \geq 2$时，$M N$随$t$的增大而增大，不合题意，舍去；
 
-②当$a$时，即$a \geq \frac{4}{3}$，
+②当$3 a > 2$时，即$a > \frac{2}{3}$，
 
-此时点$\triangle A B C$在$A B = A C$右侧，
+此时点$B \left(\right. 3 a , 0 \left.\right)$在$\left(\right. 2 , 0 \left.\right)$右侧，
 
-∵点$\angle B = \alpha \left(0,\circ,<,\alpha,<,45,\circ\right)$从$D$出发，沿某个方向运动时，$B A$逐渐增大，
+∵点$E \left(\right. t , 0 \left.\right)$从$\left(\right. 2 , 0 \left.\right)$出发，沿某个方向运动时，$B E$逐渐增大，
 
-∴点$C D$向左侧运动时，满足$C D$逐渐增大，
+∴点$E \left(\right. t , 0 \left.\right)$向左侧运动时，满足$B E$逐渐增大，
 
-∴$C$，
+∴$t < 2$，
 
-且$2 \alpha$关于$C E$的函数图像如图所示：
+且$M N$关于$t$的函数图像如图所示：
 
 ![](figures/image479.png)
 
-∴对称轴为$E$，
+∴对称轴为$t = \frac{3 a}{2}$，
 
-∵$A B$随$A$的增大先变小后增大，
+∵$M N$随$B E$的增大先变小后增大，
 
-∴$B D$，
+∴$\frac{3 a}{2} \geq 2$，
 
-解得$E$，
+解得$a \geq \frac{4}{3}$，
 
-综上所述，$B D$的取值范围是$F$．
+综上所述，$a$的取值范围是$a \geq \frac{4}{3}$．
 
-27. 在$A B$中，$\angle B F E = 2 \alpha$，$A C$，$B D$为$E F$延长线上一点，连接$B D + E F = 2 A C$，将线段$\angle B = \angle B C A = \alpha$绕点$\angle C A D = \angle B + \angle B C A = 2 \alpha$逆时针旋转$C D = C E$得到线段$\angle D C E = 2 \alpha$．
+27. 在$\triangle A B C$中，$A B = A C$，$\angle B = \alpha \left(\right. 0 \circ < \alpha < 4 5 \circ \left.\right)$，$D$为$B A$延长线上一点，连接$C D$，将线段$C D$绕点$C$逆时针旋转$2 \alpha$得到线段$C E$．
 
 ![](figures/image487.png)
 
-（1）如图1，当点$\angle D = 90 \circ - \alpha$在$\angle D C A = 90 \circ - \alpha = \angle D$上时，求证：点$A C = A D$是$A$的中点；
+（1）如图1，当点$E$在$A B$上时，求证：点$A$是$B D$的中点；
 
-（2）如图2，当点$B D$在$A D$下方时，点$D G = E F$在$C G$上，若$C F$，用等式表示$\triangle C E F ≌\triangle C D G$，$C F = C G , \angle E C F = \angle D C G$与$\angle C G F = 90 \circ - a$之间的数量关系，并证明．
+（2）如图2，当点$E$在$B D$下方时，点$F$在$A B$上，若$\angle B F E = 2 \alpha$，用等式表示$A C$，$B D$与$E F$之间的数量关系，并证明．
 
-【答案】（1）见解析    （2）$\angle D A C = 2 \angle B = 2 a$
+【答案】（1）见解析    （2）$B D + E F = 2 A C$
 
 【解析】
 
-【分析】（1）根据等边对等角得到$\angle A C G = 90 \circ - a$，根据三角形外角的性质得到$\angle A C G = \angle C G D$，根据旋转的性质得到$A C = A G$，$B G = 2 A C$，根据等边对等角得到$B D + E F = B D + D G = B G = 2 A C$，进而得到$A B = A C$，可知$\angle B = \alpha$，即可证明点$\angle B = \angle B C A = \alpha$是$\angle C A D = \angle B + \angle B C A = 2 \alpha$的中点；
+【分析】（1）根据等边对等角得到$\angle B = \angle B C A = \alpha$，根据三角形外角的性质得到$\angle C A D = \angle B + \angle B C A = 2 \alpha$，根据旋转的性质得到$C D = C E$，$\angle D C E = 2 \alpha$，根据等边对等角得到$\angle D = 9 0 \circ - \alpha$，进而得到$\angle D C A = 9 0 \circ - \alpha = \angle D$，可知$A C = A D$，即可证明点$A$是$B D$的中点；
 
-（2）延长$C D$至G，使得$C$，连接$2 \alpha$，$C E$，证明$C D = C E$，得到$\angle D C E = 2 \alpha$，进而求出$\angle D = \angle C E D = \frac{180 \circ - 2 \alpha}{2} = 90 \circ - \alpha$，根据三角形外角的性质得到$\angle D C A = 180 \circ - \angle D - \angle C A D = 180 \circ - \left(90,\circ,-,\alpha\right) - 2 \alpha = 90 \circ - \alpha = \angle D$，根据三角形内角和得到$A C = A D$，可知$A B = A C = A D$，即$A$，可知$B D$，则$B D + E F = 2 A C$．
+（2）延长$A D$至G，使得$D G = E F$，连接$2 \alpha$，$C F$，证明$\triangle C E F \approx \triangle C D G$，得到$C F = C G , \angle E C F = \angle D C G$，进而求出$\angle C G F = 9 0 \circ - a$，根据三角形外角的性质得到$\angle D A C = 2 \angle B = 2 a$，根据三角形内角和得到$\angle A C G = 9 0 \circ - a$，可知$\angle A C G = \angle C G D$，即$A C = A G$，可知$B G = 2 A C$，则$B D + E F = B D + D G = B G = 2 A C$．
 
 【小问1详解】
 
-证明：∵$A D$，$D G = E F$，
+证明：∵$A B = A C$，$\angle B = \alpha$，
 
-∴$C G$，
+∴$\angle B = \angle B C A = \alpha$，
 
-∴$C F$
+∴$\angle C A D = \angle B + \angle B C A = 2 \alpha$
 
 ∵将线段$C D$绕点$C$逆时针旋转$2 \alpha$得到线段$C E$，
 
-∴$C D = C E$，$C F = C G$，
+∴$C D = C E$，$\angle D C E = 2 \alpha$，
 
-∴$\angle C F G = \angle C G F = 90 \circ - a$，
+∴$\angle D = \angle C E D = \frac{1 8 0 \circ - 2 \alpha}{2} = 9 0 \circ - \alpha$，
 
-∴$\angle D A C = 2 \angle B = 2 a$，
+∴$\angle D C A = 1 8 0 \circ - \angle D - \angle C A D = 1 8 0 \circ - \left(\right. 9 0 \circ - \alpha \left.\right) - 2 \alpha = 9 0 \circ - \alpha = \angle D$，
 
-∴$\angle A C G = 90 \circ - a$，
+∴$A C = A D$，
 
-∴$\angle A C G = \angle C G D$，
+∴$A B = A C = A D$，
 
-即点$\therefore A C = A G$是$A B = A C$的中点；
+即点$A$是$B D$的中点；
 
 【小问2详解】
 
-解：$B G = 2 A C$，证明如下：
+解：$B D + E F = 2 A C$，证明如下：
 
-如图，延长$B D + E F = B D + D G = B G = 2 A C$至G，使得$x O y$，连接$\bigodot O$，$A B$，
+如图，延长$A D$至G，使得$D G = E F$，连接$\bigodot O$，$C F$，
 
 ![](figures/image514.png)
 
-$P$
+$\because \angle B F E = 2 a , \angle D C E = 2 a ,$
 
-$\triangle A B P$
+$\therefore \angle B F E = \angle D C E ,$
 
-$A B$
+$\because \angle B F E + \angle D F E = 1 8 0 \circ ,$
 
-$A B$
+$\therefore \angle D C E + \angle D F E = 1 8 0 \circ ,$
 
-$\triangle A B P$
+$\therefore \angle E + \angle C D F = 1 8 0 \circ ,$
 
-$P$
+$\because \angle C D F + \angle C D G = 1 8 0 \circ ,$
 
-$A B$
+$\therefore \angle E = \angle C D G ,$
 
-∵将线段$D \left(-,1,0\right)$绕点$E \left(1,0\right)$逆时针旋转$F \left(\frac{1}{2},,,\frac{\sqrt{3}}{2}\right)$得到线段$\bigodot O$，
+∵将线段$C D$绕点$C$逆时针旋转$2 \alpha$得到线段$C E$，
 
-∴$D E$，
+∴$C D = C E$，
 
-$D F$
+$\therefore \triangle C E F \approx \triangle C D G \left(\right. \left.\right) ,$
 
-$E F$
+$\therefore C F = C G , \angle E C F = \angle D C G ,$
 
-$y = x + b \left(b,>,0\right)$
+$\therefore \angle E C F + \angle D C F = \angle D C G + \angle D C F ,$
 
-$x$
+$\therefore \angle G C F = \angle D C E = 2 a ,$
 
-∵$y$，
+∵$C F = C G$，
 
-∴$G$，
+∴$\angle C F G = \angle C G F = 9 0 \circ - a$，
 
-∵$H$，
+∵$\angle D A C = 2 \angle B = 2 a$，
 
-∴$G H$，
+∴$\angle A C G = 9 0 \circ - a$，
 
-∴$\bigodot O$，
+∴$\angle A C G = \angle C G D$，
 
-$\sqrt{2}$，
+$\therefore A C = A G$，
 
-∵$b$，
+∵$A B = A C$，
 
-∴$M N$，
+∴$B G = 2 A C$，
 
-∴$\bigodot O$．
+∴$B D + E F = B D + D G = B G = 2 A C$．
 
-28. 在平面直角坐标系$M N = 1$中，对于半径为1的$K$和它的一条弦$M N$，若点$y = 1$满足$M N$是以$K$为腰的等腰三角形，且劣弧$k$上的所有点均在$D F , E F$上及其内部，则称$\sqrt{3} \leq b \leq \sqrt{10}$点为弦$\frac{\sqrt{3}}{4} \leq k < \frac{1}{2}$的关联点．
+28. 在平面直角坐标系$x O y$中，对于半径为1的$\bigodot O$和它的一条弦$A B$，若点$P$满足$\triangle A B P$是以$A B$为腰的等腰三角形，且劣弧$A B$上的所有点均在$\triangle A B P$上及其内部，则称$P$点为弦$A B$的关联点．
 
-（1）已知点$\frac{1}{2} < k \leq \frac{3}{4}$，$D E$，$D E$，则在$\bigodot O$的弦$D E$，$\triangle D E P$，$D E$中，存在关联点的弦是________；
+（1）已知点$D \left(\right. - 1 , 0 \left.\right)$，$E \left(\right. 1 , 0 \left.\right)$，$F \left(\right. \frac{1}{2} , \frac{}{2} \left.\right)$，则在$\bigodot O$的弦$D E$，$D F$，$E F$中，存在关联点的弦是________；
 
-（2）直线：$P$与$D E$轴，$E F$轴交于点$E F$，$60 \circ$，若线段$E F$上存在$D F$的某条长度为$120 \circ$的弦的关联点，直接写出$D F$的取值范围；
+（2）直线：$y = x + b \left(\right. b > 0 \left.\right)$与$x$轴，$y$轴交于点$G$，$60 \circ$，若线段$G H$上存在$\bigodot O$的某条长度为$$的弦的关联点，直接写出$b$的取值范围；
 
-（3）$D F$是$\triangle D F P$的一条弦，$D F$，点$D F$是$y = x + b \left(\left(b,>,0\right)\right)$的中点，若直线$O$上有且仅有两个弦$x - y + b = 0$的关联点，直接写出$d = \frac{\left|b\right|}{\sqrt{2}}$点的纵坐标$b = \sqrt{3}$的取值范围．
+（3）$M N$是$\bigodot O$的一条弦，$M N = 1$，点$K$是$M N$的中点，若直线$y = 1$上有且仅有两个弦$M N$的关联点，直接写出$K$点的纵坐标$k$的取值范围．
 
 【答案】（1）
 
-$b = \sqrt{10}$
+$D F , E F$
 
 （2）
 
-$b > 0$
+$\leq b \leq$
 
 （3）
 
-$b$或$\sqrt{3} \leq b \leq \sqrt{10}$
+$\frac{}{4} \leq k < \frac{1}{2}$或$\frac{1}{2} < k \leq \frac{3}{4}$
 
 【解析】
 
-【分析】（1）弦$k = \frac{\sqrt{3}}{4}$：$y = 1$为$k = \frac{1}{2}$直径，劣弧$k = \frac{3}{4}$为直径，若$y = 1$以$k$为腰，则顶点$\frac{\sqrt{3}}{4} \leq k < \frac{1}{2}$无法作出能完整包含整个半圆的三角形，因此弦$\frac{1}{2} < k \leq \frac{3}{4}$不存在关联点．
+【分析】（1）弦$D E$：$D E$为$\bigodot O$直径，劣弧$D E$为直径，若$\triangle D E P$以$D E$为腰，则顶点$P$无法作出能完整包含整个半圆的三角形，因此弦$D E$不存在关联点．
 
-弦$D E$：由坐标可得劣弧$D \left(-,1,0\right)$所对圆心角$E \left(1,0\right)$，同理可作出符合条件的等腰三角形，因此弦$D E$存在关联点．
+弦$E F$：由坐标可得劣弧$E F$所对圆心角$6 0 \circ$，同理可作出符合条件的等腰三角形，因此弦$E F$存在关联点．
 
-弦$\bigodot O$：圆心角$D E = 2$，可在劣弧$D E$另一侧作以$\triangle D E P$为腰的等腰$D E$，使劣弧$P$全部落在三角形内部，因此弦$P D = D E = 2$存在关联点．
+弦$D F$：圆心角$1 2 0 \circ$，可在劣弧$D F$另一侧作以$D F$为腰的等腰$\triangle D F P$，使劣弧$D F$全部落在三角形内部，因此弦$D F$存在关联点．
 
-（2）结合关联点定义，此类弦的关联点分布在固定环形区域内；直线$P E = D E = 2$与该区域有交点，利用圆心到直线的距离求临界值；原点$D E$到直线$\triangle D E P$的距离$D E$；结合图形临界位置，直线与关联点区域下边界相切时，$D E$；直线触及关联点区域最远边界时，$x$；又$x$，故$\therefore D E$的取值范围$D F$；
+（2）结合关联点定义，此类弦的关联点分布在固定环形区域内；直线$y = x + b \left(\right. \left(\right. b > 0 \left.\right) \left.\right)$与该区域有交点，利用圆心到直线的距离求临界值；原点$O$到直线$x - y + b = 0$的距离$d = \frac{\left|\right. b \left|\right.}{}$；结合图形临界位置，直线与关联点区域下边界相切时，$D E$；直线触及关联点区域最远边界时，$b =$；又$x$，故$b$的取值范围$\leq b \leq$；
 
-（3）当$D \left(-,1,0\right)$时，关联点边界与直线$F \left(\frac{1}{2},,,\frac{\sqrt{3}}{2}\right)$相切，开始出现交点；当$\angle D O F$时，直线上两个关联点重合，仅有1个点，不符合题意，舍去；当$D F$时，关联点边界再次与直线$P$相切，交点消失．综上，满足条件的$D F$的取值范围：$D F$或$\therefore D F$．
+（3）当$k = \frac{}{4}$时，关联点边界与直线$y = 1$相切，开始出现交点；当$k = \frac{1}{2}$时，直线上两个关联点重合，仅有1个点，不符合题意，舍去；当$k = \frac{3}{4}$时，关联点边界再次与直线$y = 1$相切，交点消失．综上，满足条件的$k$的取值范围：$\frac{}{4} \leq k < \frac{1}{2}$或$\frac{1}{2} < k \leq \frac{3}{4}$．
 
 【小问1详解】
 
-解：①弦$E F$
+解：①弦$D E$
 
-$E \left(1,0\right)$，$F \left(\frac{1}{2},,,\frac{\sqrt{3}}{2}\right)$，$\angle E O F = 60^{\circ}$为$E F$直径，$60 \circ$，劣弧$E F$为半圆， 若$P$是以$E F$为腰，则$E F$满足$\therefore E F$或$\therefore$；劣弧$D F , E F$上的点要在$A B$内部，但$\sqrt{2}$是直径，任何以$\bigodot O$为腰的等腰三角形，要么在$r = 1$轴下方，要么顶点在$\angle A O B = 90 \circ$轴上，都无法包含半圆上所有点．
+$D \left(\right. - 1 , 0 \left.\right)$，$E \left(\right. 1 , 0 \left.\right)$，$D E$为$\bigodot O$直径，$D E = 2$，劣弧$D E$为半圆， 若$\triangle D E P$是以$D E$为腰，则$P$满足$P D = D E = 2$或$P E = D E = 2$；劣弧$D E$上的点要在$\triangle D E P$内部，但$D E$是直径，任何以$D E$为腰的等腰三角形，要么在$x$轴下方，要么顶点在$x$轴上，都无法包含半圆上所有点．
 
 $90 \circ$不存在关联点．
 
-②弦$A B$
+②弦$D F$
 
-$P$，$A B$，计算圆心角$A B$，以$P$为腰作等腰三角形，顶点$A B$可在$A B$下方，使劣弧$A B$上的点都在三角形内部．
+$D \left(\right. - 1 , 0 \left.\right)$，$F \left(\right. \frac{1}{2} , \frac{}{2} \left.\right)$，计算圆心角$\angle D O F$，以$D F$为腰作等腰三角形，顶点$P$可在$D F$下方，使劣弧$D F$上的点都在三角形内部．
 
-$M$存在关联点．
+$\therefore D F$存在关联点．
 
-③弦$O M \bot A B$
+③弦$E F$
 
-$O M = \sqrt{O A^{2} - A M^{2}} = \sqrt{1 - \left(\frac{\sqrt{2}}{2}\right)^{2}} = \frac{\sqrt{2}}{2}$，$\triangle A B P$圆心角$A B$，劣弧$P A = A B = \sqrt{2}$圆心角为$P B = A B = \sqrt{2}$，同理以$P M = \frac{3 \sqrt{2}}{2}$为腰的作等腰三角形，顶点$\therefore O P = O M + M P = \frac{\sqrt{2}}{2} + \frac{3 \sqrt{2}}{2} = 2 \sqrt{2}$可在$y = x + b$下方，包含劣弧$x$上所有点．
+$E \left(\right. 1 , 0 \left.\right)$，$F \left(\right. \frac{1}{2} , \frac{}{2} \left.\right)$圆心角$\angle E O F = 6 0^{\circ}$，劣弧$E F$圆心角为$6 0 \circ$，同理以$E F$为腰的作等腰三角形，顶点$P$可在$E F$下方，包含劣弧$E F$上所有点．
 
-$y$存在关联点．
+$\therefore E F$存在关联点．
 
-$G \left(-,b,,0\right) , H \left(0,,b\right)$存在关联点的弦为$G H$．
+$\therefore$存在关联点的弦为$D F , E F$．
 
 【小问2详解】
 
-解：设弦$G H$长为$\sqrt{2}$，$d = \frac{\left|b\right|}{\sqrt{2}} = \sqrt{2}$半径$\therefore b = 2$，则$90 \circ$，
+解：设弦$A B$长为$$，$\bigodot O$半径$r = 1$，则$\angle A O B = 9 0 \circ$，
 
-对任意一条圆心角为$b = \sqrt{3}$的弦$\sqrt{10}$，设其关联点为$b = \sqrt{10}$，以$\sqrt{3} \leq b \leq \sqrt{10}$为腰的等腰三角形，且劣弧$M N = 1$上的点都在三角形内部，因此$K$必须在$O K \bot M N$的垂直平分线上，且位于劣弧$O K ＝ \sqrt{1^{2} - \left(\frac{1}{2}\right)^{2}} ＝ \frac{\sqrt{3}}{2}$的对侧，设$K$的中点为$O$，则$\frac{\sqrt{3}}{2}$，
+对任意一条圆心角为$9 0 \circ$的弦$A B$，设其关联点为$P$，以$A B$为腰的等腰三角形，且劣弧$A B$上的点都在三角形内部，因此$P$必须在$A B$的垂直平分线上，且位于劣弧$A B$的对侧，设$A B$的中点为$M$，则$O M \bot A B$，
 
-$K$，
+$O M = = = \frac{}{2}$，
 
-等腰$k$以$K$为腰，故$\left(x,,,k\right)$，或$x^{2} + k^{2} = \left(\frac{\sqrt{3}}{2}\right)^{2}$，可得$\triangle M N P$，
+等腰$\triangle A B P$以$A B$为腰，故$P A = A B =$，或$x^{2} + k^{2} = \left(\frac{\sqrt{3}}{2}\right)^{2}$，可得$P M = \frac{3}{2}$，
 
-$M N$；
+$\therefore O P = O M + M P = \frac{}{2} + \frac{3}{2} = 2$；
 
-直线$M N$与$P$轴，$y = 1$轴交于$M N$，线段$P$上存在关联点，即线段$M N$与上述区域有交点．
+直线$y = x + b$与$x$轴，$y$轴交于$G \left(\right. - b , 0 \left.\right) , H \left(\right. 0 , b \left.\right)$，线段$G H$上存在关联点，即线段$G H$与上述区域有交点．
 
-当直线与半径为$P M = M N = 1$的圆相切，圆心到直线的距离$P N = M N = 1$，
+当直线与半径为$$的圆相切，圆心到直线的距离$d = \frac{\left|\right. b \left|\right.}{} =$，
 
-$P$（但实际更严格的边界由弦的位置决定，结合圆心角$M N$的弦，最小$P M = M N = 1$）．
+$\therefore b = 2$（但实际更严格的边界由弦的位置决定，结合圆心角$9 0 \circ$的弦，最小$P M = M N = 1$）．
 
-当直线过最远的关联点，最远的关联点到原点距离为$P N = M N = 1$，对应$y = 1$，
+当直线过最远的关联点，最远的关联点到原点距离为$$，对应$b =$，
 
-综上，$k = \frac{1}{2}$．
+综上，$\leq b \leq$．
 
 【小问3详解】
 
-解：$k = \frac{\sqrt{3}}{4}$，半径为１，$y = 1$为中点，则$k = \frac{1}{2}$：
+解：$M N = 1$，半径为１，$K$为中点，则$O K \bot M N$：
 
-$k = \frac{3}{4}$，
+$O K ＝ ＝ \frac{}{2}$，
 
-即中点$y = 1$始终在以$\therefore k$为圆心，$\frac{\sqrt{3}}{4} \leq k < \frac{1}{2}$为半径的圆上，
+即中点$K$始终在以$O$为圆心，$\frac{}{2}$为半径的圆上，
 
-设$\frac{1}{2} < k \leq \frac{3}{4}$纵坐标为[公式]，则[公式]的坐标为[公式]，满足[公式]，
+设$K$纵坐标为$k$，则$K$的坐标为$\left(\right. x , k \left.\right)$，满足$x^{2} + k^{2} = \left(\right. \frac{}{2} \left.\right)^{2}$，
 
-[公式]以[公式]为腰，且劣弧[公式]上的点都在三角形内部；
+$\triangle M N P$以$M N$为腰，且劣弧$M N$上的点都在三角形内部；
 
-[公式]在直线[公式]上，对弦[公式]有两种情况的关联点：
+$P$在直线$y = 1$上，对弦$M N$有两种情况的关联点：
 
-顶点[公式]在[公式]上方，[公式]或[公式]；
+顶点$P$在$M N$上方，$P M = M N = 1$或$P N = M N = 1$；
 
-顶点[公式]在[公式]下方，[公式]或[公式]；
+顶点$P$在$M N$下方，$P M = M N = 1$或$P N = M N = 1$；
 
-直线[公式]上有且仅有两个关联点：意味着一种情况有２个交点，另一种情况无交点，或两种情况各有１个交点（需排除[公式]时的重合情况），
+直线$y = 1$上有且仅有两个关联点：意味着一种情况有２个交点，另一种情况无交点，或两种情况各有１个交点（需排除$k = \frac{1}{2}$时的重合情况），
 
-当[公式]时，关联点轨迹与[公式]相切，开始出现交点；
+当$k = \frac{}{4}$时，关联点轨迹与$y = 1$相切，开始出现交点；
 
-当[公式]时，两个关联点重合，不符合有且仅有两个的条件；
+当$k = \frac{1}{2}$时，两个关联点重合，不符合有且仅有两个的条件；
 
-当[公式]时，关联点轨迹再次与直线[公式]相切，交点消失．
+当$k = \frac{3}{4}$时，关联点轨迹再次与直线$y = 1$相切，交点消失．
 
-[公式]的取值范围：[公式]或[公式]．
+$\therefore k$的取值范围：$\frac{}{4} \leq k < \frac{1}{2}$或$\frac{1}{2} < k \leq \frac{3}{4}$．

@@ -62,15 +62,97 @@ def _local(tag: str) -> str:
 # _extract_ole_object 每被调用一次 idx+1，按文档出现顺序匹配 d2t 抽出的公式
 _FORMULA_STATE: dict = {"formulas": [], "idx": 0}
 
+# ─── R4 修复：rId 对齐的 fallback map（绕过 d2t 静默丢公式的 counter 错位）─
+# d2t 在 mid-paper 偶尔静默丢 OLE（haidian -4, xicheng -28, mentougou -12），
+# 导致后续所有 OLE 的 idx 错位 → 题干/解题里 `$xOy$` 变 `$k$` / `$b$` 等。
+# 启用条件：cache_size < 源 OLE 数 时，预跑 Ruby per-OLE → MathML → LaTeX，
+# 按 r:id 直查映射，绝对对齐。
+_FORMULA_BY_RID: dict[str, str] = {}
+
+
+def _ole_obj_rid(obj_el: ET.Element) -> str | None:
+    """从 <w:object> 内的 <o:OLEObject> 抽 r:id（指向 oleObjectN.bin）。"""
+    for sub in obj_el.iter():
+        if _local(sub.tag) == "OLEObject":
+            return sub.get(f"{{{R_NS}}}id")
+    return None
+
+
+def _build_formula_by_rid(extract_dir: Path, rels: dict[str, str]) -> dict[str, str]:
+    """Ruby per-OLE → MathML → Python mathml-to-latex → {rId: latex} 完整映射。
+    用 mtef_extract.rb (mathtype_to_mathml gem)，按 oleObject*.bin 逐个抽。
+    失败的 bin 不进 map（_extract_ole_object 会落回 PNG fallback）。
+    """
+    embed_dir = extract_dir / "word" / "embeddings"
+    if not embed_dir.is_dir():
+        return {}
+    import subprocess, json
+    bins = sorted(embed_dir.glob("oleObject*.bin"))
+    if not bins:
+        return {}
+    rb = Path(__file__).resolve().parent / "mtef_extract.rb"
+    if not rb.exists():
+        print(f"[math_docx_paper] ⚠ mtef_extract.rb 不存在，跳过 rId 对齐", flush=True)
+        return {}
+    try:
+        r = subprocess.run(
+            ["ruby", str(rb)] + [str(b) for b in bins],
+            capture_output=True, text=True, timeout=300)
+        if r.returncode != 0:
+            print(f"[math_docx_paper] ⚠ ruby mtef_extract 失败: {r.stderr[:200]}",
+                  flush=True)
+            return {}
+        rows = json.loads(r.stdout)
+    except Exception as e:
+        print(f"[math_docx_paper] ⚠ ruby per-OLE 失败 ({e})，跳过 rId 对齐",
+              flush=True)
+        return {}
+    # bin_filename → mathml
+    mml_by_bin: dict[str, str] = {}
+    for row in rows:
+        if "mathml" in row:
+            mml_by_bin[row["file"]] = row["mathml"]
+    # bin_filename → latex
+    try:
+        from docx_mtef_to_latex import _mathml_to_latex_block
+    except Exception as e:
+        print(f"[math_docx_paper] ⚠ 导入 _mathml_to_latex_block 失败: {e}",
+              flush=True)
+        return {}
+    latex_by_bin: dict[str, str] = {}
+    for fn, mml in mml_by_bin.items():
+        try:
+            latex_by_bin[fn] = _mathml_to_latex_block(mml)
+        except Exception:
+            pass
+    # rels: rId → "embeddings/oleObjectN.bin"（也可能 ../embeddings/...）
+    rid_to_latex: dict[str, str] = {}
+    for rid, target in rels.items():
+        bin_name = Path(target).name  # 抓尾文件名
+        if bin_name in latex_by_bin:
+            rid_to_latex[rid] = latex_by_bin[bin_name]
+    return rid_to_latex
+
 
 def _extract_ole_object(obj_el: ET.Element, rels: dict[str, str],
                           extract_dir: Path, figures_dir: Path,
                           formula_state: dict | None = None) -> str:
-    """OLE 嵌入对象（MathType 公式）。三层 fallback：
-      1. **优先**：docx2tex 预跑的 LaTeX cache（formula_state["formulas"]）→ $LaTeX$
+    """OLE 嵌入对象（MathType 公式）。四层 fallback：
+      0. **R4 对齐 fallback**：_FORMULA_BY_RID[rId]（cache 短于 OLE 时启用）
+      1. **默认**：docx2tex 预跑的 LaTeX cache（formula_state["formulas"]）→ $LaTeX$
       2. PNG 兄弟（soffice 转的）→ ![](figures/xxx.png)
       3. WMF 没转 → [公式] 占位
     """
+    # 路线 0: rId 直查（R4 — d2t 漏 OLE 时绝对对齐）
+    if _FORMULA_BY_RID:
+        rid = _ole_obj_rid(obj_el)
+        if rid and rid in _FORMULA_BY_RID:
+            latex = _FORMULA_BY_RID[rid]
+            # 仍然推进 d2t cache idx（保持后续 OLE 走 d2t 路径时一致）
+            if formula_state is not None and formula_state.get("formulas"):
+                formula_state["idx"] = formula_state.get("idx", 0) + 1
+            return f"${latex}$"
+
     # 路线 1: docx2tex LaTeX cache（按出现顺序匹配）
     if formula_state is not None and formula_state.get("formulas"):
         idx = formula_state["idx"]
@@ -945,6 +1027,25 @@ def main():
               flush=True)
         _FORMULA_STATE = {"formulas": [], "idx": 0}
 
+    # ── R4 修复：d2t cache 比源 OLE 短 → 启 Ruby per-OLE rId 对齐 fallback ──
+    # haidian/xicheng/mentougou 跨区共性：d2t 静默丢 OLE 致 counter 错位
+    global _FORMULA_BY_RID
+    _FORMULA_BY_RID = {}
+    ole_src = stats.get("ole_source", 0)
+    if ole_src and len(_FORMULA_STATE.get("formulas", [])) < ole_src:
+        gap = ole_src - len(_FORMULA_STATE["formulas"])
+        print(f"[math_docx_paper] 🛟 d2t cache 短缺 {gap} 个 OLE → "
+              f"启 Ruby per-OLE rId 对齐 fallback", flush=True)
+        try:
+            # 先加载 rels 用于映射 rId → bin
+            _root, _rels = _load_docx(docx, extract_dir)
+            _FORMULA_BY_RID = _build_formula_by_rid(extract_dir, _rels)
+            print(f"[math_docx_paper] 🛟 Ruby 对齐 map 大小: "
+                  f"{len(_FORMULA_BY_RID)} rId → LaTeX", flush=True)
+        except Exception as e:
+            print(f"[math_docx_paper] ⚠ Ruby 对齐 fallback 失败: {e}", flush=True)
+            _FORMULA_BY_RID = {}
+
     # ── 第 2 遍 walk：用 cache 替换 OLE 为 $LaTeX$ ──
     # 重新 extract（避免 figures 重复拷贝；用同一 extract_dir 即可）
     md, stats = docx_to_markdown(docx, extract_dir, figures_dir)
@@ -964,6 +1065,22 @@ def main():
         except Exception as e:
             print(f"[math_docx_paper] ⚠ (ans) MTEF cache 失败: {e}", flush=True)
             _FORMULA_STATE = {"formulas": [], "idx": 0}
+        # (ans docx) Ruby per-OLE rId 对齐 fallback（先做一次 ans walk 拿 ole_source）
+        _ans_root, _ans_rels = _load_docx(ans_only_docx, ans_extract_dir)
+        _ans_ole = sum(1 for o in _ans_root.iter()
+                       if _local(o.tag) == "object"
+                       and o.tag.startswith(f"{{{W_NS}}}"))
+        if _ans_ole and len(_FORMULA_STATE.get("formulas", [])) < _ans_ole:
+            try:
+                _FORMULA_BY_RID = _build_formula_by_rid(ans_extract_dir, _ans_rels)
+                print(f"[math_docx_paper] 🛟 (ans) Ruby 对齐 map: "
+                      f"{len(_FORMULA_BY_RID)} rId → LaTeX", flush=True)
+            except Exception as e:
+                print(f"[math_docx_paper] ⚠ (ans) Ruby 对齐 fallback 失败: {e}",
+                      flush=True)
+                _FORMULA_BY_RID = {}
+        else:
+            _FORMULA_BY_RID = {}
         ans_md, _ans_stats = docx_to_markdown(ans_only_docx, ans_extract_dir,
                                                 figures_dir)
         # 追加触发 anchor，确保 in_answer_page 分支被激活

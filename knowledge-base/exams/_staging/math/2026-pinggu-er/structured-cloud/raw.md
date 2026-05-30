@@ -249,19 +249,19 @@ $A_{1} \left(-,4,,-,5\right)$，$A_{2} \left(-,1,,\sqrt{3}\right)$，$A_{3} \lef
 
 二、填空题（本题共16分，每小题2分）
 
-9．$x \geq 1$；10．$a \left(b,+,3\right) \left(b,-,3\right)$； 11．$x = - \frac{1}{3}$； 12．$m = 4$； 13．2；14．960；
+9．$x \geq 1$；10．$a \left(\right. b + 3 \left.\right) \left(\right. b - 3 \left.\right)$； 11．$x = - \frac{1}{3}$； 12．$m = 4$； 13．2；14．960；
 
-15．$\frac{64}{5}$；16．37，乙，丁，甲，丙．
+15．$\frac{6 4}{5}$；16．37，乙，丁，甲，丙．
 
 三、解答题（共68分，第17-19题，每题5分，第20-21题，6分，第22题，5分，第23题，6分，第24-25题，每题5分，第26题6分；第27-28题，每题7分）解答应写出文字说明、演算步骤或证明过程．
 
-17．解：$\left|1,-,\sqrt{3}\right| - 3 tan 30 \circ + \left(\frac{1}{2}\right)^{- 1} - \left(\left(\pi,-,2026\right)\right)^{0}$
+17．解：$\left|\right. 1 - \left|\right. - 3 t a n 3 0 \circ + \left(\right. \frac{1}{2} \left.\right)^{- 1} - \left(\right. \pi - 2 0 2 6 \left.\right)^{0}$
 
-$= \sqrt{3} - 1 - 3 \times \frac{\sqrt{3}}{3} + 2 - 1$  4
+$= - 1 - 3 \times \frac{}{3} + 2 - 1$  4
 
 $= 0$  5
 
-18．解不等式组：$\left{\begin{matrix} x - 3 \left(x,-,2\right) \geq 4, \textcircled{1} \\ \frac{1 + 2 x}{3} > x - 1, \textcircled{2} \end{matrix}\right$
+18．解不等式组：$\left{\right. x - 3 \left(\right. x - 2 \left.\right) \geq 4 , \textcircled{1} & \frac{1 + 2 x}{3} > x - 1 , \textcircled{2}$
 
 解：解不等式①，得$x \leq 1$．2
 
@@ -271,292 +271,292 @@ $= 0$  5
 
 19．先化简，再求值：
 
-$\frac{3 \left(x,-,2,y\right) + 3 y}{x^{2} - 2 x y + y^{2}}$
+$\frac{3 \left(\right. x - 2 y \left.\right) + 3 y}{x^{2} - 2 x y + y^{2}}$
 
-$= \frac{3 x - 6 y + 3 y}{\left(\left(x,-,y\right)\right)^{2}}$  2
+$= \frac{3 x - 6 y + 3 y}{\left(\right. x - y \left.\right)^{2}}$  2
 
-$= \frac{3 \left(x,-,y\right)}{\left(\left(x,-,y\right)\right)^{2}}$  3
+$= \frac{3 \left(\right. x - y \left.\right)}{\left(\right. x - y \left.\right)^{2}}$  3
 
 $= \frac{3}{x - y}$  4
 
-$= 3$
+$\because x - y - 1 = 0$
 
-$D$
+$\therefore x - y = 1$
 
-∴原式$E$．5
+∴原式$= 3$．5
 
-20．（1）∵点$A B$，$B C$分别是$\therefore D E \parallel A C$，$C E = B E$的中点
+20．（1）∵点$D$，$E$分别是$A B$，$B C$的中点
 
 ![](figures/image25.png)
 
-$A C = 2 D E$，$C D B F$，$\therefore \square C D B F$
+$\therefore D E \parallel A C$，$C E = B E$，$A C = 2 D E$
 
-$D E = x$
+$\therefore \angle A C B = \angle D E B = 9 0 \circ$
 
-$\because \angle A C B = 90 \circ$
+$\because A B \parallel C F$
 
-$\angle C A E = 45 \circ$
+$\therefore \angle F C B = \angle C B D$
 
-$\therefore A C = C E = 2 x$
+$\because \angle C E F = \angle B E D$
 
-$A E = \sqrt{2} x$
+$\therefore \triangle C E F \approx \triangle D E B$
 
-$C D B F$
+$C F = B D$
 
-$\therefore D E = E F = x$
+$\because A B \parallel C F$
 
-∴四边形$\because \angle C E F = 90 \circ$是平行四边形  2分
+∴四边形$C D B F$是平行四边形  2分
 
-$C F = \sqrt{10}$
+$\because \angle D E B = 9 0 \circ$
 
-$\therefore x = \sqrt{2}$
+$\therefore B C \bot D F$
 
-$\therefore A C = C E = 2 \sqrt{2}$是菱形．3分
+$\therefore \square C D B F$是菱形．3分
 
-（2）设$A E = 4$，
+（2）设$D E = x$，
 
 ![](figures/image41.png)
 
-$\therefore E H = \frac{4}{3}$，$4 x$
+$\because \angle A C B = 9 0 \circ$，$\angle C A E = 4 5 \circ$
 
-$3 x$，$\left(\right. 4 x + 9 \left.\right)$
+$\therefore A C = C E = 2 x$，$A E = x$
 
-∵菱形$\left(1,+,20,\%\right) 3 x$
+∵菱形$C D B F$
 
-$4 x + 9 + 3 x \left(1,+,20,\%\right) = 123$
+$\therefore D E = E F = x$
 
-$x = 15$，$4 \times 15 + 9 = 69$
+$\because \angle C E F = 9 0 \circ$，$C F =$
 
-$123 - 69 = 54$  4分
+$\therefore x =$  4分
 
-$\because 123 > 110$，$69 > 69$  5分
+$\therefore A C = C E = 2$，$A E = 4$  5分
 
-$\because y = k x + b \left(k,\neq,0\right)$
+$\because D E \parallel A C$
 
-$\left(1,3\right)$
+$\therefore \triangle A C H \sim \triangle D E H$
 
-$\left(0,1\right)$
+$\therefore \frac{D E}{A C} = \frac{E H}{A H}$
 
-$\therefore \left{\begin{matrix} k + b = 3, \\ b = 1, \end{matrix}\right$
+$\therefore \frac{E H}{A H} = \frac{1}{2}$
 
-$\therefore \left{\begin{matrix} k = 2, \\ b = 1, \end{matrix}\right$  6分
+$\therefore E H = \frac{4}{3}$  6分
 
 21．解：金奖  1
 
-设体验时编程挑战得$\therefore y = 2 x + 1$分，手工创作得$1 \leq m \leq 2$分，则正式计分时编程挑战得$D$分，手工创作得$\overset{⌢}{C B}$分．2
+设体验时编程挑战得$4 x$分，手工创作得$3 x$分，则正式计分时编程挑战得$\left(\right. 4 x + 9 \left.\right)$分，手工创作得$\left(\right. 1 + 2 0 \left.\right) 3 x$分．2
 
 根据题意可列方程为：
 
-$\therefore O D \bot B C$．4
+$4 x + 9 + 3 x \left(\right. 1 + 2 0 \left.\right) = 1 2 3$．4
 
-$\because D E \parallel B C$  5
+$x = 1 5$  5
 
-∴编程得分：$\therefore O D \bot D E$，
+∴编程得分：$4 \times 1 5 + 9 = 6 9$，
 
-手工创作得$\because D E$分，
+手工创作得$1 2 3 - 6 9 = 5 4$分，
 
-$\bigodot O$，$D$
+$\because 1 2 3 > 1 1 0$，$6 9 > 6 9$
 
 ∴给这个同学颁发金奖  6
 
 答：给这个同学颁发金奖．
 
-22．（1）$\therefore D E$的图象经过点$\bigodot O$，$O D$．
+22．（1）$\because y = k x + b \left(\right. k \neq 0 \left.\right)$的图象经过点$\left(\right. 1 , 3 \left.\right)$，$\left(\right. 0 , 1 \left.\right)$．
 
-$B C$  1
+$\therefore \left{\right. k + b = 3 , & b = 1 ,$  1
 
-$M$  3
+$\therefore \left{\right. k = 2 , & b = 1 ,$  3
 
-$B D$
+$\therefore y = 2 x + 1$
 
-（2）$D$  5
+（2）$1 \leq m \leq 2$  5
 
 23．（1）证明：连结
 
 ![](figures/image75.png)
 
-∵点$\overset{⌢}{C B}$是$\therefore \overset{⌢}{C D} = \overset{⌢}{B D}$的中点
+∵点$D$是$\overset{⌢}{C B}$的中点
 
-$\therefore C D = B D = 12$  1
+$\therefore O D \bot B C$  1
 
-$\angle C A D = \angle C B D = \angle D A B$
+$\because D E \parallel B C$
 
-$\therefore cos \angle C A D = cos \angle B A D = \frac{4}{5}$  2
+$\therefore O D \bot D E$  2
 
-$\because A B$过$\bigodot O$半径的外端点$\therefore \angle A D B = 90 \circ$
+$\because D E$过$\bigodot O$半径的外端点$D$
 
-$\text{Rt}\triangle A B D$是$cos \angle B A D = \frac{A D}{A B} = \frac{4}{5}$的切线  3
+$\therefore D E$是$\bigodot O$的切线  3
 
-（2）设$A D = 4 x$与$A B = 5 x$交于点$\therefore A B = 20$，连接$A D = 16$
+（2）设$O D$与$B C$交于点$M$，连接$B D$
 
-∵点$\text{Rt}\triangle B M D$是$cos \angle C B D = \frac{B M}{B D} = \frac{4}{5}$的中点
+∵点$D$是$\overset{⌢}{C B}$的中点
 
-$\therefore B M = \frac{48}{5}$
+$\therefore \overset{⌢}{C D} = \overset{⌢}{B D}$
 
-$D M = \frac{36}{5}$，$\therefore D E = \frac{240}{7}$  4
+$\therefore C D = B D = 1 2$，$\angle C A D = \angle C B D = \angle D A B$  4
 
-$5 . 5 \text{mm}$
+$\therefore c o s \angle C A D = c o s \angle B A D = \frac{4}{5}$
 
-$6 \text{g}$为$9 . 6 \text{s}$的直径
+$\because A B$为$\bigodot O$的直径
 
-$a = 12$
+$\therefore \angle A D B = 9 0 \circ$
 
-在$c$中，$c$
+在$\triangle A B D$中，$c o s \angle B A D = \frac{A D}{A B} = \frac{4}{5}$
 
 ![](figures/image101.png)
 
-设$x = 1$，$\therefore x = - \frac{b}{2 a} = - \frac{2 - m}{2 \times \left(-,1\right)} = 1$，
+设$A D = 4 x$，$A B = 5 x$，
 
-$\therefore m = 0$
+$\therefore B D = 3 x = 1 2$
 
-$y = - x^{2} + 2 x$
+$\therefore x = 4$
 
-$y < 4$，$y = 0$  5
+$\therefore A B = 2 0$，$A D = 1 6$  5
 
-$- x^{2} + \left(2,-,m\right) x + 2 m = 0$
+$\therefore O D = O B = 1 0$
 
-$x = 2$
+$\because O D \bot D E$
 
-$x = - m$
+$\therefore \angle B M D = 9 0 \circ$
 
-在$\because - 1 < x_{0} < 0$中，$\therefore 0 < m < 1$
+在$\triangle B M D$中，$c o s \angle C B D = \frac{B M}{B D} = \frac{4}{5}$
 
-$\therefore \frac{1}{2} < t < 1$，$\therefore \frac{3}{2} < t + 1 < 2$
+$\therefore B M = \frac{4 8}{5}$，$D M = \frac{3 6}{5}$
 
-$A \left(-,2,t,,,y_{1}\right)$
+$\therefore O M = \frac{1 4}{5}$
 
-$A \left(-,2,t,,,y_{1}\right)$
+$\because B C \parallel D E$
 
-$x = t$
+$\therefore \triangle O B M \sim \triangle O D E$
 
-$A^{'} \left(4,t,,,y_{1}\right)$
+$\therefore \frac{B M}{D E} = \frac{O M}{O D}$
 
-$y = - x^{2} + \left(2,-,m\right) x + 2 m$
+$\therefore \frac{\frac{4 8}{5}}{D E} = \frac{\frac{1 4}{5}}{1 0}$
 
-$x \geq t$  6
+$\therefore D E = \frac{2 4 0}{7}$  6
 
 24．（1）甲组挤出头出料25 s时的出料量为10 g  2
 
 （2）在给出的平面直角坐标系中，画出乙组实验的函数图象  3
 
-（3）①孔径为$y$的挤出头出料$A \left(-,2,t,,,y_{1}\right)$耗材所用的时间为$B \left(t,,,y_{2}\right)$（结果保留小数点后一位）；4
+（3）①孔径为$5 . 5$的挤出头出料$6$耗材所用的时间为$9 . 6$（结果保留小数点后一位）；4
 
 ②推断甲组同学实验中所用挤出头的孔径为4.3 mm（结果保留小数点后一位）．
 
-25．（1）$C \left(t,+,1,,y_{3}\right)$，1
+25．（1）$a = 1 2$，1
 
 （2）补全频数分布直方图  2
 
 （3）随机抽取的50名学生参加志愿活动次数的中位是23  3
 
-（4）乙、丙、甲；$\therefore y_{2} > y_{3} > y_{1}$（$\because C E \bot A P$为整数）的值为25．  5
+（4）乙、丙、甲；$c$（$c$为整数）的值为25．  5
 
-26．（1）①由题意得对称轴为$\therefore \angle A E C = 90 \circ$．1
+26．（1）①由题意得对称轴为$x = 1$．1
 
-$\because A B = A C = 7$
+$\therefore x = - \frac{b}{2 a} = - \frac{2 - m}{2 \times \left(\right. - 1 \left.\right)} = 1$
 
-$tan \alpha = \frac{\sqrt{13}}{6}$  2
+$\therefore m = 0$  2
 
-∴二次函数的解析式为$\therefore A E = E F = 6$
+∴二次函数的解析式为$y = - x^{2} + 2 x$
 
-②$C E = \sqrt{2} M N$  3
+②$y < 4$  3
 
-（2）令$B$则$B Q \bot A P$
+（2）令$y = 0$则$- x^{2} + \left(\right. 2 - m \left.\right) x + 2 m = 0$
 
-解得$Q$或$C$
+解得$x = 2$或$x = - m$
 
-$C K \parallel M N$
+$\because - 1 < x_{0} < 0$
 
-$A P$  4
+$\therefore 0 < m < 1$  4
 
-$K$
+$\because x = - \frac{b}{2 a} = \frac{2 - m}{2}$
 
-$\because C E \bot A P$
+$\therefore \frac{1}{2} < \frac{2 - m}{2} < 1$
 
-$B Q \bot A P$  5
+$\therefore \frac{1}{2} < t < 1$  5
 
-$\therefore E F = A E = B Q$
+$\therefore \frac{3}{2} < t + 1 < 2$
 
-∵点$C E = A Q$在该抛物线上
+∵点$A \left(\right. - 2 t , y_{1} \left.\right)$在该抛物线上
 
-∴点$\because \angle A E F = \angle E Q B = 90 \circ$关于$\angle E N F = \angle B N Q$的对称点$\therefore \triangle E N F ≌\triangle B N Q$也在该抛物线上．
+∴点$A \left(\right. - 2 t , y_{1} \left.\right)$关于$x = t$的对称点$A^{'} \left(\right. 4 t , y_{1} \left.\right)$也在该抛物线上．
 
-$\therefore E N = Q N$
+$\therefore 2 < 4 t < 4$
 
-$\because M$
+$\therefore t < t + 1 < 4 t$
 
-抛物线的解析式为$A C$
+抛物线的解析式为$y = - x^{2} + \left(\right. 2 - m \left.\right) x + 2 m$
 
 抛物线开口向下．
 
-∴当$C K \parallel M N$时$\because A N = K N$随的增大而减小
+∴当$x \geq t$时$y$随的增大而减小
 
-∵点$E N = Q N$，$\therefore C E = \sqrt{2} M N$，$A_{2}$在该抛物线上
+∵点$A \left(\right. - 2 t , y_{1} \left.\right)$，$B \left(\right. t , y_{2} \left.\right)$，$C \left(\right. t + 1 , y_{3} \left.\right)$在该抛物线上
 
-$A_{3}$  6
+$\therefore y_{2} > y_{3} > y_{1}$  6
 
-27．（1）解：$- 4 \sqrt{5} \leq b \leq 4 \sqrt{5}$
+27．（1）解：$\because C E \bot A P$
 
-$\frac{4 \sqrt{5}}{5} \leq r \leq \frac{12}{5}$
+$\therefore \angle A E C = 9 0 \circ$
 
-[公式]，[公式]，
+$\because A B = A C = 7$，$t a n \alpha = \frac{}{6}$，
 
-[公式]．  2
+$\therefore A E = E F = 6$．  2
 
 （2）①依题意补全图形  3
 
-②[公式]  4
+②$C E = M N$  4
 
-过点[公式]作[公式]于[公式]
+过点$B$作$B Q \bot A P$于$Q$
 
-过点[公式]作[公式]交[公式]于[公式]
+过点$C$作$C K \parallel M N$交$A P$于$K$
 
 ![](figures/image168.png)
 
-[公式]，[公式]
+$\because C E \bot A P$，$B Q \bot A P$
 
-[公式]
+$\therefore \angle A E C = \angle A Q B = 9 0 \circ$
 
-[公式]
+$\therefore \angle 2 + \angle 3 = 9 0 \circ$
 
-[公式]
+$\because \angle B A C = 9 0 \circ$
 
-[公式]
+$\therefore \angle 1 + \angle 2 = 9 0 \circ$
 
-[公式]
+$\therefore \angle 1 = \angle 3$
 
-[公式]
+$\because A B = A C$
 
-[公式]
+$\therefore \triangle A C E \approx \triangle A B Q$
 
-![](figures/image178.png)
+$\therefore B Q = A E$
 
-[公式]
+$\because E F = A E$
 
-[公式]，[公式]
+$\therefore E F = A E = B Q$，$C E = A Q$
 
-[公式]，[公式]
+$\because \angle A E F = \angle E Q B = 9 0 \circ$，$\angle E N F = \angle B N Q$
 
-[公式]  6
+$\therefore \triangle E N F \approx \triangle B N Q$  6
 
-[公式]
+$\therefore E N = Q N$
 
-[公式]为![](figures/image187.png)的中点，[公式]
+$\because M$为$A C$的中点，$C K \parallel M N$
 
-[公式]
+$\therefore A N = K N$
 
-[公式]
+$\therefore C K = 2 M N$
 
-[公式]，[公式]
+$\because A N = K N$，$E N = Q N$
 
-[公式]
+$\therefore E K = A Q = C E$
 
-[公式]
+$\therefore C K = C E$
 
-[公式]  7
+$\therefore C E = M N$  7
 
-28．（1）[公式]，[公式]  2
+28．（1）$A_{2}$，$A_{3}$  2
 
-（2）[公式]  4
+（2）$- 4 \leq b \leq 4$  4
 
-（3）[公式]  7
+（3）$\frac{4}{5} \leq r \leq \frac{1 2}{5}$  7

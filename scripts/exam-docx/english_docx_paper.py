@@ -232,7 +232,33 @@ NOISE_LINE_RE = re.compile(
     r"|第[一二三四五六]部分"  # 卷面分段标记，复用物理 fix
     r"|本部分共\d+\s*(?:小)?题.*$"     # 朝阳 "本部分共33题..." / changping "本部分共5小题,共20分"
     r"|题目[①②③\d]+[.\．。、:：]?\s*$"  # essay 二选一 anchor 残留 ("题目②"/"题目2."/"题目2")
+    r"|.*在线官方微信.*"                # R4 P0: 海淀水印行 "在线官方微信:(微信号:)，获取更多..."
+    r"|.*关注北京高考在线.*"             # R4 P0: "关注北京高考在线官方微信:京考一点通..."
+    r"|.*京考一点通.*微信号.*"
     r")\s*$")
+
+# **R4 P0 修**：inline 水印片段（embedded in stem/option/passage）需要切除而不是整行删
+# 海淀 reading_A Q21 stem 头部混入 "B. D. 在线官方微信:京考..." → 整段切掉
+INLINE_WATERMARK_PATTERNS = [
+    re.compile(r"\s*在线官方微信[^\n]*?(?:排名分析信息[。.]?|微信号[^\n]*?[。.])"),
+    re.compile(r"\s*关注北京高考在线[^\n]*?(?:排名分析信息[。.]?|微信号[^\n]*?[）)])"),
+    re.compile(r"\s*kzx\.com\s+"),       # cloze passage 里 "in her life. kzx.com chocolates?!"
+    re.compile(r"\s*者在线\s*"),          # cloze passage 里 "Something 者在线 CHOCOLATEY?"
+    re.compile(r"\s*\(微信号[:：][^)）]*\)"),
+    re.compile(r"\s*（微信号[:：][^)）]*）"),
+]
+
+
+def _strip_inline_watermark(text: str) -> str:
+    """剥离嵌入正文里的水印片段（"在线官方微信..."等）。
+    保留前后正文，仅删水印段。多次调用幂等。"""
+    if not text:
+        return text
+    for pat in INLINE_WATERMARK_PATTERNS:
+        text = pat.sub(" ", text)
+    # 折叠多余空白
+    text = re.sub(r"  +", " ", text)
+    return text.strip()
 
 
 def _is_section_header(line: str) -> tuple[str, str] | None:
@@ -416,6 +442,20 @@ def parse_docx_chinese(md: str, figures_dir: Path) -> dict:
 
     # 6. full_score
     full_score = sum(q.get("score", 0) or 0 for q in questions) or None
+
+    # **R4 P0 修**：终末水印清洗（兜底 stem/solution/options 内残留 inline 水印）
+    for q in questions:
+        if q.get("stem"):
+            q["stem"] = _strip_inline_watermark(q["stem"])
+        if q.get("solution"):
+            q["solution"] = _strip_inline_watermark(q["solution"])
+        if q.get("options"):
+            q["options"] = {
+                k: _strip_inline_watermark(str(v)) for k, v in q["options"].items()
+            }
+    for ps in passages:
+        if ps.get("body"):
+            ps["body"] = _strip_inline_watermark(ps["body"])
 
     # **关键**：answers_list 必须从 questions 取，因为 _assign_scores 可能改了
     # questions[i].solution（如二选一作文加 [二选一备选] 前缀），如果走 answers_map
@@ -603,13 +643,17 @@ def _join_lines(lines: list[str]) -> str:
         ln = ln.rstrip()
         if not ln: continue
         if NOISE_LINE_RE.match(ln): continue
+        ln = _strip_inline_watermark(ln)  # R4 P0: 剥嵌入水印
+        if not ln: continue
         out.append(ln)
     return "\n".join(out)
 
 
 def _clean_noise(text: str) -> str:
     lines = [ln for ln in text.split("\n") if not NOISE_LINE_RE.match(ln)]
-    return "\n".join(lines).strip()
+    cleaned = [_strip_inline_watermark(ln) for ln in lines]  # R4 P0
+    cleaned = [ln for ln in cleaned if ln]
+    return "\n".join(cleaned).strip()
 
 
 # ─── 答案 / 详解 解析 ──────────────────────────────────────────────────────
