@@ -233,11 +233,19 @@ def _unzip_to(zip_path: Path, dest: Path) -> list[Path]:
 
 
 def _pick_jiexi_docx(docx_paths: list[Path]) -> Path:
-    """优先解析版（含'解析'字样），其次原卷版。"""
+    """选 docx 优先级：解析版 > 试卷版 > 最大文件。
+
+    zxxk 2026 二模有部分区是「试卷.docx + 答案.docx」双文件格式（无'解析'
+    字样），原 fallback docx_paths[0] 会拿到答案文件导致 0 题。
+    """
     for p in docx_paths:
         if "解析" in p.stem and "原卷" not in p.stem:
             return p
-    if docx_paths: return docx_paths[0]
+    for p in docx_paths:
+        if "试卷" in p.stem and "答案" not in p.stem:
+            return p
+    if docx_paths:
+        return max(docx_paths, key=lambda d: d.stat().st_size)
     raise FileNotFoundError("zip 内未找到 docx")
 
 

@@ -431,15 +431,19 @@ def _infer_type(num: int, options: dict | None) -> str:
 
 
 def _default_score(num: int) -> int:
-    """北京中考数学默认分值（兜底）。"""
-    if 1 <= num <= 8:   return 2
-    if 9 <= num <= 16:  return 3
+    """北京中考数学默认分值（兜底）。28 题/100 分梯度（与 image OCR 路线一致）。
+    一模 docx 多带 explicit score 故旧值能跑通；二模 docx 缺 score 暴露此 bug
+    （+11 跨 12 区一致，定位到此函数）。
+    """
+    if 1 <= num <= 16:  return 2  # 单选 + 填空各 2 分
     if 17 <= num <= 19: return 5
-    if 20 <= num <= 22: return 6
-    if 23 <= num <= 26: return 6
-    if num == 27:       return 7
-    if num == 28:       return 7
-    return 6
+    if num == 20:       return 6
+    if 21 <= num <= 22: return 5
+    if 23 <= num <= 24: return 6
+    if num == 25:       return 5
+    if num == 26:       return 6
+    if 27 <= num <= 28: return 7
+    return 5
 
 
 # ─── 校验器 ─────────────────────────────────────────────────────────────────
