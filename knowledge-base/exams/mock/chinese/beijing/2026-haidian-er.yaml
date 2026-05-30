@@ -1,9 +1,3 @@
-# ============================================================
-# 2026年北京海淀区二模chinese — 自动生成
-# ============================================================
-# OCR: Qwen-VL-OCR  Enrich: qwen-max
-# QC: draft=26  needs_review=1
-
 year: 2026
 district: 海淀区
 exam_type: 二模
@@ -73,13 +67,19 @@ passages:
 
     从传统技艺到现代科技，从剧场演出到科普课堂，我国传统木偶戏以创新赓续文脉，用作品传播文化，在守正创新中展现出蓬勃生机。'
   figure: 2026-haidian-er/figures/image2.png
+- id: narrative
+  body_replace:
+  - from: 北京高kzx
+    to: ''
+  - from: ww.
+    to: ''
 questions:
 - id: 1
   type: 书写
   score: 1
   stem: 请在封面上用正楷字书写标题。(1分)
   answer: ''
-  solution: ''
+  solution: 略
   knowledge_points:
   - 书写
   module: writing
@@ -92,6 +92,7 @@ questions:
   qc_status: draft
   qc_note: ''
   passage_id: base_intro
+  options: null
 - id: 2
   type: 主观填空
   score: 2
@@ -138,7 +139,7 @@ questions:
   qc_note: ''
   passage_id: base_intro
 - id: 4
-  type: 单选
+  type: choice
   score: 2
   stem: 下列加点字成语使用不恰当的一项是(2分)
   options:
@@ -146,8 +147,8 @@ questions:
     B: 鳞次栉比
     C: 浑然一体
     D: 悠然自得
-  answer: ''
-  solution: ''
+  answer: B
+  solution: B（鳞次栉比形容房屋等密集排列，不能用于自然景观）
   knowledge_points:
   - 成语运用
   module: chinese
@@ -160,6 +161,8 @@ questions:
   qc_status: needs_review
   qc_note: 选择题 answer 为空
   passage_id: base_intro
+  create: true
+  section: base
 - id: 5
   type: 主观填空
   score: 2

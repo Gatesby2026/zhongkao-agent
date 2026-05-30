@@ -1,9 +1,3 @@
-# ============================================================
-# 2025年北京海淀区二模math — 自动生成
-# ============================================================
-# OCR: Qwen-VL-OCR  Enrich: qwen-max
-# QC: draft=28  needs_review=0
-
 year: 2025
 district: 海淀区
 exam_type: 二模
@@ -19,10 +13,10 @@ questions:
   score: 2
   stem: 图是某几何体的三视图，该几何体是（     ）
   options:
-    A: 圆柱
-    B: 圆锥
-    C: 三棱柱
-    D: 长方体
+    A: '[图]'
+    B: '[图]'
+    C: '[图]'
+    D: '[图]'
   figure: 2026-haidian-er/figures/image3.png
   _figures_extra:
   - image3.png
@@ -48,15 +42,16 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
+  has_image_options: true
 - id: 2
   type: 单选
   score: 2
   stem: 如图，$$在数轴上对应的点可能是（     ）
   options:
-    A: $M$
-    B: $N$
-    C: $P$
-    D: $Q$
+    A: '[图]'
+    B: '[图]'
+    C: '[图]'
+    D: '[图]'
   figure: 2026-haidian-er/figures/image7.png
   _figures_extra:
   - image7.png
@@ -79,15 +74,16 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
+  has_image_options: true
 - id: 3
   type: 单选
   score: 2
   stem: 小明用投影仪将平板电脑屏幕的画面投屏到墙上，画面形状保持不变．已知该平板电脑屏幕的画面是相邻两边长之比为$3$∶$2$的矩形．若墙上投影画面的短边长为$1 . 2$，则投影画面的长边长为（     ）
   options:
-    A: $0 . 8$
-    B: $1 . 8$
-    C: $2$
-    D: $2 . 4$
+    A: '[图]'
+    B: '[图]'
+    C: '[图]'
+    D: '[图]'
   answer: B
   solution: '投屏后形状不变，投影矩形与原屏幕矩形是相似图形，对应边成比例，根据原矩形边长比列比例式即可求出投影长边长．
 
@@ -113,16 +109,17 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
+  has_image_options: true
 - id: 4
   type: 单选
   score: 2
   stem: 先后两次抛掷同一枚质地均匀的硬币，则两次都正面向上的概率是（）
   options:
-    A: $\frac{1}{2}$
-    B: $\frac{1}{3}$
-    C: $\frac{1}{4}$
-    D: $\frac{3}{4}$
-  answer: C
+    A: '[图]'
+    B: '[图]'
+    C: '[图]'
+    D: '[图]'
+  answer: D
   solution: '本题考查列表法与树状图法，熟练掌握列表法与树状图法以及概率公式是解答本题的关键．列表可得出所有等可能的结果数以及两次都是正面向上的结果数，再利用概率公式可得出答案．
 
     解：列表如下：
@@ -151,15 +148,16 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
+  has_image_options: true
 - id: 5
   type: 单选
   score: 2
   stem: 中国古代用“毫厘丝忽”表示极微细的事物，其中“毫”“厘”“丝”“忽”均为我国古代一种微小的长度计量单位．秦朝统一度量衡时，$1$丝约为$0 . 0 0 0 0 0 2 3 1$，则$5$丝用科学记数法可表示为（     ）
   options:
-    A: $0 . 2 3 1 \times 1 0^{- 5}$
-    B: $2 . 3 1 \times 1 0^{- 6}$
-    C: $1 . 1 5 5 \times 1 0^{- 5}$
-    D: $1 1 . 5 5 \times 1 0^{- 6}$
+    A: '[图]'
+    B: '[图]'
+    C: '[图]'
+    D: '[图]'
   answer: C
   solution: '先计算出5丝的长度，再按照科学记数法的规则改写即可，科学记数法表示较小数的形式为$a \times 1 0^{n}$，需满足$1 \leq \left|\right. a \left|\right. < 1 0$，$n$为整数．
 
@@ -181,15 +179,16 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
+  has_image_options: true
 - id: 6
   type: 单选
   score: 2
   stem: 如图，$A B \parallel C D$，且$A D \bot B D$，点$E$在$B D$的延长线上．若$\angle 1 = 4 3 \circ$，$\angle 2 = 7 0 \circ$，则$\angle E$的大小为（     ）
   options:
-    A: $1 3 \circ$
-    B: $2 3 \circ$
-    C: $2 5 \circ$
-    D: $2 7 \circ$
+    A: '[图]'
+    B: '[图]'
+    C: '[图]'
+    D: '[图]'
   figure: 2026-haidian-er/figures/image53.png
   _figures_extra:
   - image53.png
@@ -218,16 +217,16 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
+  has_image_options: true
 - id: 7
   type: 单选
   score: 2
-  stem: 如图，$P$为$\bigodot O$外一点，连接$O P$，分别以$O$，$P$为圆心，$O P$长为半径画弧，两弧交于点$C$，$D ．$连接$C D$交$O P$于点$N$，以$N$为圆心，$N O$为半径作圆，交$\bigodot
-    O$于点$E$，$F$，连接$O E$，$O F$，$E P$．若$\angle E P O = \alpha$，则$\angle E O F$的大小为（     ）
+  stem: 如图，$P$为$\bigodot O$外一点，连接$O P$，分别以$O$，$P$为圆心，$O P$长为半径画弧，两弧交于点$C$，$D ．$连接$C D$交$O P$于点$N$，以$N$为圆心，$N O$为半径作圆，交$\bigodot O$于点$E$，$F$，连接$O E$，$O F$，$E P$．若$\angle E P O = \alpha$，则$\angle E O F$的大小为（     ）
   options:
-    A: $1 8 0 \circ - 2 \alpha$
-    B: $9 0 \circ - \alpha$
-    C: $2 \alpha$
-    D: $3 \alpha$
+    A: '[图]'
+    B: '[图]'
+    C: '[图]'
+    D: '[图]'
   figure: 2026-haidian-er/figures/image76.png
   _figures_extra:
   - image76.png
@@ -259,11 +258,11 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
+  has_image_options: true
 - id: 8
   type: 单选
   score: 2
-  stem: '如图，直线$y = k x + b \left(\right. k \langle 0 , b \rangle 0 \left.\right)$与$x$轴、$y$轴分别交于点$A$，$B$，以$O A$为对角线作菱形$O M
-    A N$，且点$N$在第一象限，给出下面三个结论：
+  stem: '如图，直线$y = k x + b \left(\right. k \langle 0 , b \rangle 0 \left.\right)$与$x$轴、$y$轴分别交于点$A$，$B$，以$O A$为对角线作菱形$O M A N$，且点$N$在第一象限，给出下面三个结论：
 
 
     ①当$k = - \frac{1}{2}$，$b = 2$时，菱形$O M A N$有无数个；
@@ -274,17 +273,17 @@ questions:
 
     上述结论中，所有正确结论的序号是（     ）'
   options:
-    A: ①②
-    B: ①③
-    C: ②③
-    D: ①②③
+    A: '[图]'
+    B: '[图]'
+    C: '[图]'
+    D: '[图]'
   figure: 2026-haidian-er/figures/image95.png
   _figures_extra:
   - image95.png
   - image113.png
   answer: D
-  solution: '①根据菱形的性质判断即可；②求得$\triangle A O B$的周长$l_{1}$：$2 - \frac{4}{k} < l_{1} < 4 - \frac{4}{k}$，菱形的周长$l_{2}$：$l_{2} =
-    4 O M < 4 O H = - \frac{4}{k}$，比较即可判断；③求得菱形$O M A N$的面积为$- b^{2} + 5 b$即可得到菱形$O M A N$的面积有最大值．
+  solution: '①根据菱形的性质判断即可；②求得$\triangle A O B$的周长$l_{1}$：$2 - \frac{4}{k} < l_{1} < 4 - \frac{4}{k}$，菱形的周长$l_{2}$：$l_{2} = 4 O M < 4 O H = - \frac{4}{k}$，比较即可判断；③求得菱形$O M A N$的面积为$- b^{2} + 5 b$即可得到菱形$O
+    M A N$的面积有最大值．
 
     解：①当$k = - \frac{1}{2}$，$b = 2$时，$y = - \frac{1}{2} x + 2$，
 
@@ -308,8 +307,7 @@ questions:
 
     ∴$- \frac{2}{k} < A B < 2 - \frac{2}{k}$，
 
-    ∴$\triangle A O B$的周长$l_{1}$：$2 - \frac{2}{k} - \frac{2}{k} < l_{1} < 2 - \frac{2}{k} + 2 - \frac{2}{k}$，即$2 - \frac{4}{k}
-    < l_{1} < 4 - \frac{4}{k}$，
+    ∴$\triangle A O B$的周长$l_{1}$：$2 - \frac{2}{k} - \frac{2}{k} < l_{1} < 2 - \frac{2}{k} + 2 - \frac{2}{k}$，即$2 - \frac{4}{k} < l_{1} < 4 - \frac{4}{k}$，
 
     菱形的周长$l_{2}$：$l_{2} = 4 O M < 4 O H = - \frac{4}{k}$，
 
@@ -335,11 +333,12 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
+  has_image_options: true
 - id: 9
   type: 填空
   score: 2
   stem: 若分式$\frac{1}{x - 2}$有意义，则实数$x$的取值范围是__________．
-  answer: $x \neq 2$
+  answer: x≠2
   solution: '本题考查分式有意义的条件，分式有意义的条件是分母不为零，因此只需解分母不等于零的不等式即可．
 
     要使分式$\frac{1}{x - 2}$有意义，则分母$x - 2 \neq 0$，解得$x \neq 2$．
@@ -360,7 +359,7 @@ questions:
   type: 填空
   score: 2
   stem: 分解因式：$x y^{2} + 2 x y + x =$______．
-  answer: $x \left(\right. y + 1 \left.\right)^{2}$
+  answer: x(y+1)^2
   solution: '先提取公因式，再利用完全平方公式进行二次分解．
 
     解：$x y^{2} + 2 x y + x = x \left(\right. y^{2} + 2 y + 1 \left.\right) = x \left(\left(\right. y + 1 \left.\right)\right)^{2}$．'
@@ -379,7 +378,7 @@ questions:
   type: 填空
   score: 2
   stem: 关于$x$的一元二次方程$x^{2} - x + c = 0$有两个相等的实数根，则$c$的值为__________．
-  answer: $\frac{1}{4}$##$0 . 2 5$
+  answer: 1/4
   solution: '本题考查了一元二次方程根的个数与根的判别式的关系．根据题意得$= 1^{2} - 4 = 0$，进行计算即可得．
 
     解：若关于$x$的一元二次方程$x^{2} - x + c = 0$有两个相等的实数根，
@@ -410,7 +409,7 @@ questions:
   figure: 2026-haidian-er/figures/image137.png
   _figures_extra:
   - image137.png
-  answer: $0 . 9 6$
+  answer: '0.96'
   solution: '由统计图可知，随着发球次数的增加，发球合格的频率越来越接近$0 . 9 6$，利用频率估计概率，估计这台发球机发球合格的概率为$0 . 9 6$.
 
     解：由统计图可知，随着发球次数的增加，发球合格的频率越来越接近$0 . 9 6$，
@@ -453,12 +452,11 @@ questions:
 - id: 14
   type: 填空
   score: 2
-  stem: 如图，在平面直角坐标系$x O y$中，$A \left(\right. 2 , 0 \left.\right)$，$B \left(\right. 0 , 1 \left.\right)$．若函数$y = \frac{k}{x}
-    \left(\right. k > 0 \left.\right)$的图象与矩形$O A C B$有公共点，则$k$的值可以是________（写出一个即可）．
+  stem: 如图，在平面直角坐标系$x O y$中，$A \left(\right. 2 , 0 \left.\right)$，$B \left(\right. 0 , 1 \left.\right)$．若函数$y = \frac{k}{x} \left(\right. k > 0 \left.\right)$的图象与矩形$O A C B$有公共点，则$k$的值可以是________（写出一个即可）．
   figure: 2026-haidian-er/figures/image152.png
   _figures_extra:
   - image152.png
-  answer: $1$
+  answer: 1（答案不唯一，0<k≤2 均可）
   solution: '解：∵矩形$O A C B$，$A \left(\right. 2 , 0 \left.\right)$，$B \left(\right. 0 , 1 \left.\right)$，
 
     ∴$C \left(\right. 2 , 1 \left.\right)$，
@@ -487,7 +485,7 @@ questions:
   _figures_extra:
   - image164.png
   - image177.png
-  answer: $\frac{3 \sqrt{3}}{4}$
+  answer: 3√3/4
   solution: '先证明$\triangle D A F$是等边三角形，求得$D E =$，点$F$到$C D$的距离为$\frac{1}{2} D F = \frac{3}{2}$，再根据三角形的面积公式求解即可．
 
     解：由折叠的性质得$A D = A B = 3$，$\angle F A E = \angle D A E = 3 0 \circ$，
@@ -535,7 +533,7 @@ questions:
     （1）若每箱只装同一种农产品，则一箱农产品的总价值最大是________元；
 
     （2）若每箱中每种农产品最多装$2$包，则一箱农产品的总价值最大是________元．'
-  answer: ①. $2 4 0$    ②. $2 2 3$
+  answer: (1)240; (2)223
   solution: '第一问，分别计算只装同一种农产品时，每箱最多可装的包数，计算对应总价值，比较得到最大值；第二问，根据每种农产品最多装2包的限制，列举所有符合总重量要求的组合，计算总价值后比较得到最大值．
 
     解：（1）对于每箱只装同一种农产品的情况：
@@ -556,13 +554,11 @@ questions:
 
     总价值$V = 6 0 a + 1 0 0 b + 5 8 c + 4 5 d$，计算得：
 
-    当$a = 2$，$b = 0$，$c = 1$，$d = 1$时，$7 \times 2 + 8 \times 1 + 5 \times 1 = 2 7 \leq 2 8$，$V = 2 \times 6 0 + 5 8 + 4 5
-    = 2 2 3$；
+    当$a = 2$，$b = 0$，$c = 1$，$d = 1$时，$7 \times 2 + 8 \times 1 + 5 \times 1 = 2 7 \leq 2 8$，$V = 2 \times 6 0 + 5 8 + 4 5 = 2 2 3$；
 
     当$a = 2$，$b = 1$，$c = 0$，$d = 0$时，$7 \times 2 + 1 2 \times 1 = 2 6 \leq 2 8$，$V = 2 \times 6 0 + 1 0 0 = 2 2 0$；
 
-    当$a = 1$，$b = 0$，$c = 2$，$d = 1$时，$7 \times 1 + 8 \times 2 + 5 \times 1 = 2 8 \leq 2 8$，$V = 6 0 + 2 \times 5 8 + 4 5
-    = 2 2 1$；
+    当$a = 1$，$b = 0$，$c = 2$，$d = 1$时，$7 \times 1 + 8 \times 2 + 5 \times 1 = 2 8 \leq 2 8$，$V = 6 0 + 2 \times 5 8 + 4 5 = 2 2 1$；
 
     当$a = 2$，$b = 0$，$c = 0$，$d = 2$时，$7 \times 2 + 5 \times 2 = 2 4 \leq 2 8$，$V = 2 \times 6 0 + 2 \times 4 5 = 2 1 0$；
 
@@ -759,7 +755,7 @@ questions:
   qc_note: ''
 - id: 22
   type: 解答
-  score: 5
+  score: 6
   stem: '在平面直角坐标系$x O y$中，函数$y = k x \left(\right. k \neq 0 \left.\right)$与$y = x + 2$的图象交于点$A \left(\right. 2 , m \left.\right)$．
 
     （1）求$k$，$m$的值；
@@ -774,8 +770,7 @@ questions:
 
     （2）①当$n = - 2$时，求得$M \left(\right. - 2 , - 4 \left.\right)$，$N \left(\right. - 2 , 0 \left.\right)$，再计算$M N$的长即可；
 
-    ②由题意得$M \left(\right. n , 2 n \left.\right)$，$N \left(\right. n , n + 2 \left.\right)$，得到$\left|\right. n - 2 \left|\right.
-    \geq 2$，据此求解即可．
+    ②由题意得$M \left(\right. n , 2 n \left.\right)$，$N \left(\right. n , n + 2 \left.\right)$，得到$\left|\right. n - 2 \left|\right. \geq 2$，据此求解即可．
 
     （1）
 
@@ -805,8 +800,8 @@ questions:
 
     ∴$M N = 0 - \left(\right. - 4 \left.\right) = 4$，
 
-    ②由题意得$M \left(\right. n , 2 n \left.\right)$，$N \left(\right. n , n + 2 \left.\right)$，$M N = \left|\right. 2 n - \left(\right.
-    n + 2 \left.\right) \left|\right. = \left|\right. n - 2 \left|\right. \geq 2$，
+    ②由题意得$M \left(\right. n , 2 n \left.\right)$，$N \left(\right. n , n + 2 \left.\right)$，$M N = \left|\right. 2 n - \left(\right. n + 2 \left.\right) \left|\right. = \left|\right. n - 2 \left|\right.
+    \geq 2$，
 
     当$n - 2 \geq 0$即$n \geq 2$时，$n - 2 \geq 2$，解得$n \geq 4$；
 
@@ -827,11 +822,11 @@ questions:
   qc_note: ''
 - id: 23
   type: 解答
-  score: 6
+  score: 5
   stem: '沙漠治理工程通过围沙、固沙和治沙等环节，可改善生态环境，促进可持续发展．为监测某区域沙漠治理工程的效果，某科研小组分别从甲、乙两个片区各随机抽取$2 0$个监测点作为采样点，记录了每个采样点的单位面积固沙量（以下简称“固沙量”，用$t$表示，单位：$^{}$），并对数据进行整理、描述和分析．下面给出了部分信息：
 
-    $a$．甲、乙两个片区采样点的固沙量的频数分布直方图如下（数据分成$7$组：第$1$组$4 0 \leq t < 5 0$，第$2$组$5 0 \leq t < 6 0$，第$3$组$6 0 \leq t < 7 0$，第$4$组$7
-    0 \leq t < 8 0$，第$5$组$8 0 \leq t < 9 0$，第$6$组$9 0 \leq t < 1 0 0$，第$7$组$1 0 0 \leq t < 1 1 0$）；
+    $a$．甲、乙两个片区采样点的固沙量的频数分布直方图如下（数据分成$7$组：第$1$组$4 0 \leq t < 5 0$，第$2$组$5 0 \leq t < 6 0$，第$3$组$6 0 \leq t < 7 0$，第$4$组$7 0 \leq t < 8 0$，第$5$组$8 0 \leq t < 9 0$，第$6$组$9 0 \leq t < 1 0 0$，第$7$组$1 0 0 \leq
+    t < 1 1 0$）；
 
 
     $b$．甲片区采样点的固沙量在$7 0 \leq t < 8 0$这一组的数据是：
@@ -858,8 +853,7 @@ questions:
 
     （3）将每个片区采样点的固沙量按从大到小排序，固沙量越大，排名越靠前．已知采样点$$，$$不在同一个片区且固沙量都是$7 5 ^{}$．若$$在其所在片区采样点中的排名比$$在其所在片区采样点中的排名更靠前，则$$是________片区的采样点（填“甲”或“乙”）；
 
-    （4）为降低异常值对统计结果造成的偏差，科研团队采用剔除极值法：先剔除一组数据中的一个最大值和一个最小值，再对剩余数据计算平均值，以保障监测结果的稳定性．记乙片区采样点的固沙量的最大值为${t}_{1}{kg/m}^{2}$，最小值为${t}_{2}{kg/m}^{2}$，剔除极值后，乙片区采样点的固沙量的平均值为$76.5{kg/m}^{2}$．若$t_{2}
-    = 4 2$，则$t_{1}$的值为________．'
+    （4）为降低异常值对统计结果造成的偏差，科研团队采用剔除极值法：先剔除一组数据中的一个最大值和一个最小值，再对剩余数据计算平均值，以保障监测结果的稳定性．记乙片区采样点的固沙量的最大值为${t}_{1}{kg/m}^{2}$，最小值为${t}_{2}{kg/m}^{2}$，剔除极值后，乙片区采样点的固沙量的平均值为$76.5{kg/m}^{2}$．若$t_{2} = 4 2$，则$t_{1}$的值为________．'
   figure: 2026-haidian-er/figures/image314.png
   _figures_extra:
   - image314.png
@@ -1009,8 +1003,7 @@ questions:
 
     |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 
-    | 其它支出费用累计额（万元） | $0$ | $1 8$ | $2 5$ | $3 0$ | $4 2$ | $5 5$ | $6 8$ | $8 0$ | $9 2$ | $1 0 2$ | $1 1 3$ | $1 2 5$ |
-    $1 3 7$ |
+    | 其它支出费用累计额（万元） | $0$ | $1 8$ | $2 5$ | $3 0$ | $4 2$ | $5 5$ | $6 8$ | $8 0$ | $9 2$ | $1 0 2$ | $1 1 3$ | $1 2 5$ | $1 3 7$ |
 
     结合上述信息和图象，回答下列问题：
 
@@ -1091,8 +1084,7 @@ questions:
 - id: 26
   type: 解答
   score: 6
-  stem: '在平面直角坐标系$x O y$中，$A \left(\right. - a , m \left.\right)$，$B\left(3a−6,n\right)$是抛物线$y = a x^{2} - 2 a^{2} x \left(\right.
-    a \neq 0 \left.\right)$上不重合的两点．
+  stem: '在平面直角坐标系$x O y$中，$A \left(\right. - a , m \left.\right)$，$B\left(3a−6,n\right)$是抛物线$y = a x^{2} - 2 a^{2} x \left(\right. a \neq 0 \left.\right)$上不重合的两点．
 
     （1）当$a = 1$时，比较$m$和$n$的大小，并说明理由；
 
@@ -1207,8 +1199,7 @@ questions:
 - id: 27
   type: 解答
   score: 7
-  stem: '在$\triangle A B C$中，$\angle B A C = 9 0 \circ$，$\angle A B C = \alpha$，点$D$在$B C$的延长线上，$E$是$C D$的中点，连接$E A$，将线段$E
-    A$绕点$E$逆时针旋转$1 8 0 \circ - 2 \alpha$得到线段$E F$．
+  stem: '在$\triangle A B C$中，$\angle B A C = 9 0 \circ$，$\angle A B C = \alpha$，点$D$在$B C$的延长线上，$E$是$C D$的中点，连接$E A$，将线段$E A$绕点$E$逆时针旋转$1 8 0 \circ - 2 \alpha$得到线段$E F$．
 
 
     （1）如图$1$，$\alpha = 4 5 \circ$，$C D = B C$，连接$C F$，求证：$C F \bot B C$；
@@ -1220,12 +1211,10 @@ questions:
   - image488.png
   - image503.png
   answer: （1）见详解    （2）$9 0 \circ$；见详解
-  solution: '（1）过点$A$作$A H \bot B C$,由$\alpha = 4 5 \circ$可知$\triangle A B C$是等腰直角三角形，$\triangle A B H$是等腰直角三角形，进而可知$C E =
-    A H$，证明$\triangle A H E \approx \triangle E C F$，即可求解；
+  solution: '（1）过点$A$作$A H \bot B C$,由$\alpha = 4 5 \circ$可知$\triangle A B C$是等腰直角三角形，$\triangle A B H$是等腰直角三角形，进而可知$C E = A H$，证明$\triangle A H E \approx \triangle E C F$，即可求解；
 
-    （2）取$B C$的中点$G$,连接$A G$,$B G = m , C E = n$,根据两角对应相等可证$\triangle A B G \sim \triangle A F E$，根据相似三角形的性质可知$\frac{A B}{A
-    G} = \frac{A F}{A E}$，进而根据两边对应成比例以及夹角相等可证$\triangle B A F \sim \triangle G A E$，设$B G = m , C E = n$，进而可知$\frac{A B}{B
-    F} = \frac{B C}{B D} = \frac{m}{m + n}$,证明$\triangle A B C \sim \triangle F B D$，根据相似三角形的性质即可求解．
+    （2）取$B C$的中点$G$,连接$A G$,$B G = m , C E = n$,根据两角对应相等可证$\triangle A B G \sim \triangle A F E$，根据相似三角形的性质可知$\frac{A B}{A G} = \frac{A F}{A E}$，进而根据两边对应成比例以及夹角相等可证$\triangle B A F \sim \triangle G A E$，设$B
+    G = m , C E = n$，进而可知$\frac{A B}{B F} = \frac{B C}{B D} = \frac{m}{m + n}$,证明$\triangle A B C \sim \triangle F B D$，根据相似三角形的性质即可求解．
 
     （1）
 
@@ -1332,21 +1321,18 @@ questions:
 - id: 28
   type: 解答
   score: 7
-  stem: '在平面直角坐标系$x O y$中，对于$\bigodot C$和$\bigodot C$外一点P，给出如下定义：若$\bigodot C$上存在两个不同的点A，B，使得$\angle A P B = \theta \left(\right.
-    0 \circ < \theta < 1 8 0 \circ \left.\right)$且$P A = k P B \left(\right. k > 0 \left.\right)$，则称点P是$\bigodot C$的“$\theta
-    - k$关联点”．
+  stem: '在平面直角坐标系$x O y$中，对于$\bigodot C$和$\bigodot C$外一点P，给出如下定义：若$\bigodot C$上存在两个不同的点A，B，使得$\angle A P B = \theta \left(\right. 0 \circ < \theta < 1 8 0 \circ \left.\right)$且$P A = k P B \left(\right.
+    k > 0 \left.\right)$，则称点P是$\bigodot C$的“$\theta - k$关联点”．
 
 
     （1）如图，$\bigodot O$的半径为2．
 
-    ①在点$P_{1} \left(\right. - 4 , 0 \left.\right)$，$P_{2} \left(\right. 0 , 5 \left.\right)$，$P_{3} \left(\right. 2 , 2 \left.\right)$中，$\bigodot
-    O$的“$6 0 \circ - 1$关联点”是________；
+    ①在点$P_{1} \left(\right. - 4 , 0 \left.\right)$，$P_{2} \left(\right. 0 , 5 \left.\right)$，$P_{3} \left(\right. 2 , 2 \left.\right)$中，$\bigodot O$的“$6 0 \circ - 1$关联点”是________；
 
     ②点P在直线$y = x$上，记点P的横坐标为$x_{P}$．若点P是$\bigodot O$的“$6 0 \circ - 2$关联点”，则$x_{P}$的取值范围是________；
 
-    （2）已知点$M \left(\right. 0 , 2 \left.\right)$，$N \left(\right. 3 , 2 \left.\right)$，$T \left(\right. t , t \left.\right)
-    \left(\right. t \neq 0 \left.\right)$，$\bigodot T$的半径为$\left|\right. t \left|\right.$．若线段$M N$上至少存在两个$\bigodot T$的“$1
-    2 0 \circ - 2$关联点”，直接写出t的取值范围．'
+    （2）已知点$M \left(\right. 0 , 2 \left.\right)$，$N \left(\right. 3 , 2 \left.\right)$，$T \left(\right. t , t \left.\right) \left(\right. t \neq 0 \left.\right)$，$\bigodot T$的半径为$\left|\right. t \left|\right.$．若线段$M
+    N$上至少存在两个$\bigodot T$的“$1 2 0 \circ - 2$关联点”，直接写出t的取值范围．'
   figure: 2026-haidian-er/figures/image519.png
   _figures_extra:
   - image519.png
@@ -1356,8 +1342,7 @@ questions:
   - image582.png
   - image585.png
   - image586.png
-  answer: （1）①$P_{1}$，$P_{3}$；②$- \leq x_{P} < -$或$< x_{P} \leq$ （2）$\frac{- 5 - 3}{5} < t < \frac{- 2 - 4}{7}$或$\frac{1}{2}
-    < t < \frac{- 5 + 3}{5}$
+  answer: （1）①$P_{1}$，$P_{3}$；②$- \leq x_{P} < -$或$< x_{P} \leq$ （2）$\frac{- 5 - 3}{5} < t < \frac{- 2 - 4}{7}$或$\frac{1}{2} < t < \frac{- 5 + 3}{5}$
   solution: '（1）①根据“$\theta - k$关联点”的定义结合图象即可判断；
 
     ②根据题意作出对应的图形，利用解直角三角形，相似三角形的判定与性质得出点P的运动轨迹为圆环，并求出圆环的半径范围，最后根据点P在直线$y = x$上求出点P横坐标取值范围；
@@ -1380,8 +1365,7 @@ questions:
 
     ∴$\angle A B P = 9 0 \circ$，
 
-    如图，在$\bigodot O$上任取两点A、B，作$\triangle A B P$，使得$\angle A P B = 6 0 \circ$，取$B \left(\right. 2 , 0 \left.\right)$，作$\triangle
-    O B C$，使$\angle O B C = 9 0 \circ$，$\angle O C B = 6 0 \circ$，
+    如图，在$\bigodot O$上任取两点A、B，作$\triangle A B P$，使得$\angle A P B = 6 0 \circ$，取$B \left(\right. 2 , 0 \left.\right)$，作$\triangle O B C$，使$\angle O B C = 9 0 \circ$，$\angle O C B = 6 0 \circ$，
 
     ![](figures/image551.png)
 
@@ -1457,8 +1441,7 @@ questions:
 
     即点P的运动轨迹是一个圆环，
 
-    ∵$M \left(\right. 0 , 2 \left.\right)$，$N \left(\right. 3 , 2 \left.\right)$，$T \left(\right. t , t \left.\right) \left(\right.
-    t \neq 0 \left.\right)$，$\bigodot T$的半径为$\left|\right. t \left|\right.$，
+    ∵$M \left(\right. 0 , 2 \left.\right)$，$N \left(\right. 3 , 2 \left.\right)$，$T \left(\right. t , t \left.\right) \left(\right. t \neq 0 \left.\right)$，$\bigodot T$的半径为$\left|\right. t \left|\right.$，
 
     设点T沿$y = x$从上向下运动，
 
