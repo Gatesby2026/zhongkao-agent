@@ -53,7 +53,15 @@ ROOT = Path(__file__).resolve().parents[2]
 TEST_ROOT = ROOT / "test-data"
 RUN_ROOT = TEST_ROOT / "_runs"
 API = os.environ.get("API_BASE", "https://zhongkao.gatesby.xyz").rstrip("/")
-STUDENT_NAME = os.environ.get("STUDENT_NAME", "贾小淇")
+# 每 case 真实学生名（用于 e2e 测试覆盖），缺省=不覆盖，让 card_meta OCR
+# 结果保留。早期默认 "贾小淇" 把所有 case 都强改成贾小淇名，污染报告抬头。
+PER_CASE_NAME = {
+    "guanlihan-haidian-physics-er": "关丽涵",
+    "jiaxiaoqi-physics": "贾小淇",
+    "jiaxiaoqi-math": "贾小淇",
+    "jiaxiaoqi-chinese": "贾小淇",
+}
+STUDENT_NAME_GLOBAL = os.environ.get("STUDENT_NAME", "")  # 不再硬编码默认
 IMG_EXTS = {".jpg", ".jpeg", ".png", ".heic"}
 
 
@@ -138,8 +146,11 @@ def run_pipeline(case: dict, out_dir: Path, *,
             f"{sr.get('n_questions')}题  warnings={len(sr.get('warnings') or [])}")
 
     # 4. /start
-    _post(f"{API}/api/analyses/{aid}/start",
-                  params={"student_name": STUDENT_NAME}, timeout=30)
+    # 学生名优先级：环境变量 > 每 case 映射 > 不覆盖（card_meta OCR 结果保留）
+    name_override = (STUDENT_NAME_GLOBAL
+                      or PER_CASE_NAME.get(case["name"], ""))
+    params = {"student_name": name_override} if name_override else {}
+    _post(f"{API}/api/analyses/{aid}/start", params=params, timeout=30)
 
     # 5. 轮询完成（Phase B/C + analyze + PDF）
     s = {}
