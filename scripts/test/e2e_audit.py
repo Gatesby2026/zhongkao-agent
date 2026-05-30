@@ -56,10 +56,16 @@ API = os.environ.get("API_BASE", "https://zhongkao.gatesby.xyz").rstrip("/")
 # 每 case 真实学生名（用于 e2e 测试覆盖），缺省=不覆盖，让 card_meta OCR
 # 结果保留。早期默认 "贾小淇" 把所有 case 都强改成贾小淇名，污染报告抬头。
 PER_CASE_NAME = {
-    "guanlihan-haidian-physics-er": "关丽涵",
+    # 开发基线
     "jiaxiaoqi-physics": "贾小淇",
     "jiaxiaoqi-math": "贾小淇",
     "jiaxiaoqi-chinese": "贾小淇",
+    # 生产真实 case（从 39.103.70.47 拉取）
+    "guanlihan-haidian-physics-er": "关丽涵",
+    "jiaxiaoqi-haidian-physics-er": "贾小淇",
+    "zhangjingqi-haidian-physics-er": "张靖奇",
+    "zhangyiran-shijingshan-chinese-yi": "张伊冉",
+    "tuominde-chaoyang-physics-yi": "脱敏的",
 }
 STUDENT_NAME_GLOBAL = os.environ.get("STUDENT_NAME", "")  # 不再硬编码默认
 IMG_EXTS = {".jpg", ".jpeg", ".png", ".heic"}
