@@ -68,8 +68,14 @@ def run_report(student_dir: Path, on_stage=None) -> Path:
                             env=env, cwd=str(ROOT), bufsize=1)
     pdf_path = None
     md_path = None
+    tail_lines: list[str] = []
     for line in proc.stdout:
         line = line.rstrip()
+        # 把子进程输出直透 stderr，方便 journalctl 看 build_report 失败原因
+        print(f"[build_report] {line}", file=sys.stderr, flush=True)
+        tail_lines.append(line)
+        if len(tail_lines) > 50:
+            tail_lines.pop(0)
         for marker, (idx, name) in STAGE_MARKERS:
             if marker in line and on_stage:
                 on_stage(idx, name)
@@ -81,7 +87,9 @@ def run_report(student_dir: Path, on_stage=None) -> Path:
             pdf_path = Path(m.group(1).strip())
     proc.wait()
     if proc.returncode != 0:
-        raise RuntimeError(f"build_report 退出码 {proc.returncode}")
+        tail = "\n".join(tail_lines[-20:])
+        raise RuntimeError(
+            f"build_report 退出码 {proc.returncode}\n--- 子进程最后输出 ---\n{tail}")
 
     slug = student_dir.name
     ls_dir = ROOT / "learning situation"
@@ -154,7 +162,13 @@ def report_json(student_dir: Path) -> dict:
                         "如有作答，可重传更清晰的照片重新识别"],
             })
             continue
-        per = analyze.analyze_question(q, cache_key=f"{cache_prefix}-{q.qid}")
+        # 缓存 key 必须含 student_filled+std_answer 摘要：否则学生作答
+        # 改变（如答题卡 OCR 改进重跑）后还命中旧缓存，报告就用旧 LLM
+        # 分析 → 出"概念不清/未作答"内容错位（关丽涵 Q8/10/12 踩坑教训）
+        import hashlib as _hl
+        _sig = f"{q.student_filled or ''}|{q.std_answer or ''}"
+        _qkey = f"{q.qid}-{_hl.md5(_sig.encode()).hexdigest()[:8]}"
+        per = analyze.analyze_question(q, cache_key=f"{cache_prefix}-{_qkey}")
         wrong.append({
             "qid": q.qid,
             "type_cn": q.type_cn,

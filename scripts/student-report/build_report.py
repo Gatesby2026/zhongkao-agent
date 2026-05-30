@@ -422,11 +422,18 @@ def build(student_dir: Path, standard: Path | None, skip_pdf: bool) -> Path:
             "comparisonTable": [],
         }
 
+    import hashlib as _hl
+
+    def _qkey(q: QView) -> str:
+        # 含 student_filled + std_answer 摘要：作答变化必命中新缓存
+        sig = f"{q.student_filled or ''}|{q.std_answer or ''}"
+        return f"{q.qid}-{_hl.md5(sig.encode()).hexdigest()[:8]}"
+
     def _one(q: QView):
         if q.qid in miss_subj or q.qid in miss_choice:
             return q.num, _canned(q)
         return q.num, analyze.analyze_question(
-            q, cache_key=f"{cache_prefix}-{q.qid}")
+            q, cache_key=f"{cache_prefix}-{_qkey(q)}")
 
     with ThreadPoolExecutor(max_workers=6) as ex:
         for fut in as_completed([ex.submit(_one, q) for q in lost]):
