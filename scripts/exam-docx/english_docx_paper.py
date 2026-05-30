@@ -176,6 +176,20 @@ def _pick_jiexi_docx(docx_paths: list[Path]) -> Path:
     raise FileNotFoundError("zip 内未找到 docx")
 
 
+def _pick_answer_docx(docx_paths: list[Path], main: Path) -> Path | None:
+    """**双文件 zip** 找伴随的"答案"docx。
+    场景：zip 内是「试卷.docx + 答案.docx」双文件格式（非「解析版+原卷版」），
+    主走试卷 docx 拿题面，再读答案 docx 抽 【答案】/【详解】 合并到 result。
+    返回 None 表示无独立答案文件（最常见，单 docx 或 解析版 已含答案）。
+    """
+    for p in docx_paths:
+        if p == main:
+            continue
+        if "答案" in p.stem and "原卷" not in p.stem and "试卷" not in p.stem:
+            return p
+    return None
+
+
 # ─── section / 题号 切分 ────────────────────────────────────────────────────
 
 # **跨区通用**：按**内容关键词**识别 section type（忽略大题编号位置）。
@@ -290,7 +304,10 @@ def parse_docx_chinese(md: str, figures_dir: Path) -> dict:
             continue
         # **answer 模式里出现新题号锚（N > last_q_seen），且行不含【】标记 → 切回 question**
         # 用于解析版里 sub-header 缺失但题号跳过的情形
-        q_m = NUM_HEAD_RE.match(ln)
+        # **pinggu 兜底**：markdown table 行 `| 21. ___ |` 题号被 `|` 挡住，
+        # 在匹配时 strip 行首 `|`+空白 让 NUM_HEAD_RE 能 match
+        ln_for_q = re.sub(r"^\s*\|+\s*", "", ln).strip() if ln.lstrip().startswith("|") else ln
+        q_m = NUM_HEAD_RE.match(ln_for_q)
         if (mode == "answer" and q_m and "【" not in ln):
             n = int(q_m.group(1))
             if n > last_q_seen and n <= 40:
@@ -373,7 +390,9 @@ def parse_docx_chinese(md: str, figures_dir: Path) -> dict:
         stem_head = stem_first_line.strip()[:8]
         first_num_match_idx = -1
         for i, ln in enumerate(md_lines):
-            m = NUM_HEAD_RE.match(ln)
+            # 兼容 markdown table 行首 `|`（pinggu Q21-23）
+            ln_match = re.sub(r"^\s*\|+\s*", "", ln).strip() if ln.lstrip().startswith("|") else ln
+            m = NUM_HEAD_RE.match(ln_match)
             if m and int(m.group(1)) == n:
                 if first_num_match_idx == -1:
                     first_num_match_idx = i
@@ -425,19 +444,35 @@ def _parse_section(sec_typ: str, sec_lines: list[str],
     sub_starts: list[tuple[int, str]] = []   # (line_idx, sub_name)
     q_starts: list[tuple[int, int, str]] = []  # (line_idx, num, rest)
     for i, ln in enumerate(sec_lines):
-        sub_m = SUB_HEADER_RE.match(ln)
+        # **markdown table `|` 前缀题号兼容**（pinggu Q21-23 image-match）
+        # 源 docx 在 reading_A 把图片匹配题排成 3 列 markdown table：
+        #   | 21. ___________ | ![](figures/image3.png) | I think AI... |
+        # 行首的 `|` 让 NUM_HEAD_RE / SUB_HEADER_RE 全部失效，主路径丢题。
+        # 在所有匹配前 strip 行首 `|` + 空白，**只用于匹配判定**，不改 sec_lines
+        # （保留原行让 stem 仍能拿到 image 引用 + 后续文本）。
+        ln_for_match = re.sub(r"^\s*\|+\s*", "", ln).strip() if ln.lstrip().startswith("|") else ln
+        sub_m = SUB_HEADER_RE.match(ln_for_match)
         if sub_m:
             sub_starts.append((i, sub_m.group(1)))
             continue
         # **英语 reading 篇标记** A/B/C/D 独立行
         if sec_typ == "reading":
-            letter_m = LETTER_PASSAGE_RE.match(ln)
+            letter_m = LETTER_PASSAGE_RE.match(ln_for_match)
             if letter_m:
                 sub_starts.append((i, letter_m.group(1)))
                 continue
-        q_m = NUM_HEAD_RE.match(ln)
+        q_m = NUM_HEAD_RE.match(ln_for_match)
         if q_m and 1 <= int(q_m.group(1)) <= 40:
-            q_starts.append((i, int(q_m.group(1)), q_m.group(2)))
+            n_match = int(q_m.group(1))
+            # **section 题号范围约束**（防 reading_express 把 passage 内 "1. Simile"
+            # 误识别为 Q1 重复进 questions 列表）。北京中考英语 38 题固定段：
+            #   choice 1-12 / cloze 13-20 / reading 21-33 / reading_express 34-37 / essay 38-39
+            # 严格按 section 拒绝越界题号；choice 不限（首段 1 起）。
+            _MIN_BY_SEC = {"cloze": 13, "reading": 21, "reading_express": 34, "essay": 38}
+            min_n = _MIN_BY_SEC.get(sec_typ, 1)
+            if n_match < min_n:
+                continue
+            q_starts.append((i, n_match, q_m.group(2)))
             continue
         # **英语 image-match 题号**：reading_A 题号嵌入 `____21____` 形式
         # 朝阳：markdown table cell | <u>____21____</u> ![](img) | passage |
@@ -1001,6 +1036,19 @@ def main():
 
     # docx → markdown
     md = docx_to_markdown_chinese(docx, docx_tmp, figures_dir)
+
+    # **双 docx 答案合并**（试卷.docx + 答案.docx 格式）
+    # 若 zip 内含独立"答案"docx（非"解析版"也非"原卷版"），把它转 md 后
+    # **追加**到主 md 末尾。下游 parse_docx_chinese 状态机会按 【答案】/【N题详解】
+    # 自然抽答案，与单一解析版完全一致的处理路径。
+    ans_docx = _pick_answer_docx(docx_paths, docx) if len(docx_paths) >= 2 else None
+    if ans_docx is not None:
+        print(f"[english_docx_paper] 合并答案: {ans_docx.name}", flush=True)
+        ans_md = docx_to_markdown_chinese(ans_docx, docx_tmp, figures_dir)
+        if ans_md.strip():
+            # 用"参考答案"hint 触发 NOISE filter，但不阻止 【答案】 marker 走 answer 模式
+            md = md.rstrip() + "\n\n参考答案\n\n" + ans_md
+
     # 保存 markdown 备查
     (structured_dir / "raw.md").write_text(md, encoding="utf-8")
 
@@ -1026,6 +1074,22 @@ def main():
                 print(f"[english_docx_paper] 🔧 应用 {applied} 处 patch ({patch_path.name})", flush=True)
     except Exception as e:
         print(f"[english_docx_paper] ⚠ patch 加载失败: {e}", flush=True)
+
+    # **post-patch type 矫正**（R2 fix：chaoyang 旧 patch 把 Q24-33 type 硬写"单选"，
+    # 但 section=reading（reading_B/C/D 三独立 passage 各 3-4 题）；patch 是 R1
+    # 兜底产物，现在 parser 已能正确抽 Q24-33 + 三 passage，patch 的 type 是 stale。
+    # section ∈ {reading, reading_express, cloze} 时强制 type 与 section 对齐，
+    # essay/choice 不动（essay 二选一 + choice 单选都正常）。
+    _SECTION_TYPE_LOCK = {"reading", "reading_express", "cloze"}
+    _STALE_TYPES = {"单选", "choice", "subjective_blank"}
+    fixed = 0
+    for q in result.get("questions", []):
+        sec = q.get("section", "")
+        if sec in _SECTION_TYPE_LOCK and q.get("type") in _STALE_TYPES:
+            q["type"] = sec
+            fixed += 1
+    if fixed:
+        print(f"[english_docx_paper] 🔧 post-patch type 矫正 {fixed} 题（section→type 强制对齐）", flush=True)
     fj = structured_dir / "final.json"
     fj.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
     qs = result["questions"]

@@ -232,6 +232,18 @@ def _unzip_to(zip_path: Path, dest: Path) -> list[Path]:
     return out
 
 
+def _count_ole_objects(docx_path: Path) -> int:
+    """统计 docx body 内 <w:object> 数量（即 MathType OLE 公式总数），
+    用于和 docx2tex 抽出的 LaTeX cache 比覆盖率，及早发现 d2t hub regex bug。
+    """
+    try:
+        with zipfile.ZipFile(docx_path) as zf:
+            doc = zf.read("word/document.xml").decode("utf-8", "ignore")
+        return doc.count("<w:object")
+    except Exception:
+        return 0
+
+
 def _pick_jiexi_docx(docx_paths: list[Path]) -> Path:
     """选 docx 优先级：解析版 > 试卷版 > 最大文件。
 
@@ -244,9 +256,32 @@ def _pick_jiexi_docx(docx_paths: list[Path]) -> Path:
     for p in docx_paths:
         if "试卷" in p.stem and "答案" not in p.stem:
             return p
+    # 仅"答案"独立 docx（如石景山 "石景山--xxx-初三物理答案定稿.docx"）也算"试卷"模式时
+    # 排除掉，避免被 max(size) 选成主文档
+    non_answer = [p for p in docx_paths if "答案" not in p.stem]
+    if non_answer:
+        return max(non_answer, key=lambda d: d.stat().st_size)
     if docx_paths:
         return max(docx_paths, key=lambda d: d.stat().st_size)
     raise FileNotFoundError("zip 内未找到 docx")
+
+
+def _pick_answer_only_docx(docx_paths: list[Path], jiexi: Path) -> Path | None:
+    """挑独立答案 docx（试卷+答案双文件格式专用）。
+    判定：jiexi 不是「解析」版（即只是试卷） + 存在含「答案」字样的兄弟 docx。
+    返回 None 时不进入双文件 merge 流程（视作单 docx，按"精品解析"格式处理）。
+
+    样例：
+      - changping: 【试卷】xxx.docx + 【答案】xxx.docx
+      - shijingshan: 【试卷】xxx.docx + 石景山--xxx-初三物理答案定稿(1).docx
+    """
+    if "解析" in jiexi.stem and "原卷" not in jiexi.stem:
+        return None  # 主文档是精品解析版，已含答案
+    for p in docx_paths:
+        if p == jiexi: continue
+        if "答案" in p.stem:
+            return p
+    return None
 
 
 # ─── section / 题号 切分 ────────────────────────────────────────────────────
@@ -274,6 +309,9 @@ SUB_HEADER_RE = re.compile(
 )
 # 题号
 NUM_HEAD_RE = re.compile(r"^\s*(\d{1,2})\s*[.、．,，]\s*(.*)$")
+# 子问号（实验题 "（1）/（2）/(1)/(2)" 等）。用于探测"题头独立段+紧随子问"的跨段格式
+# 海淀 Q17 案例：题头单独一段 `17. ` 仅 3 字符，紧接 `（1）...`（小问题 body）
+SUBQ_FOLLOW_RE = re.compile(r"^\s*[（(][1-9一二三四五][)）]")
 # 选项行（A. X B. Y / A. X\nB. Y / A.X\tB.Y 等）
 OPT_LINE_RE = re.compile(r"(?:^|\s)([A-D])\s*[.、．]\s*([^\sA-D].*?)(?=\s+[A-D]\s*[.、．]|$)")
 # 答案 / 详解 marker
@@ -324,7 +362,7 @@ def parse_docx_chinese(md: str, figures_dir: Path) -> dict:
     # 里插入 __Q_CTX__:N 标记让 _parse_answers 知道默认归属。
     last_q_before_answer = 0
 
-    for ln in lines:
+    for i, ln in enumerate(lines):
         sec_m = _is_section_header(ln)
         if sec_m:
             cur_typ = sec_m[0]
@@ -360,8 +398,15 @@ def parse_docx_chinese(md: str, figures_dir: Path) -> dict:
                 # 排除答案里的 "N. <短内容>" 这种短答案。但 essay 题号锚常很短
                 # （朝阳 Q26 "26. 按要求作文。" 只 10 字符），所以在 essay section
                 # 内放宽门槛。
+                # **物理实验题 "题头-体跨段" 兜底**：海淀 Q17 题头独立段 `17. `
+                # 只 3 字符 < 15 被 min_len 守卫挡掉。若紧随其后 ≤5 行内出现 `(N)`
+                # 子问号，认定为实验题头跨段，bypass min_len 直接切回 question。
+                has_subq = any(
+                    SUBQ_FOLLOW_RE.match(lines[j])
+                    for j in range(i+1, min(len(lines), i+6))
+                )
                 min_len = 6 if cur_typ == "essay" else 15
-                if len(ln.strip()) >= min_len:
+                if has_subq or len(ln.strip()) >= min_len:
                     mode = "question"
                     if cur_typ:
                         sections[cur_typ].append(ln)
@@ -605,6 +650,89 @@ def _join_lines(lines: list[str]) -> str:
 def _clean_noise(text: str) -> str:
     lines = [ln for ln in text.split("\n") if not NOISE_LINE_RE.match(ln)]
     return "\n".join(lines).strip()
+
+
+# ─── 双文件 (试卷+答案) merge ────────────────────────────────────────────
+# 用于 zxxk 把试卷和答案拆成两份 docx 的区（changping/shijingshan 等）。
+# 把答案 docx 的 markdown 转成 "【答案】...【N题详解】..." 等价的合成行，
+# 追加到主 markdown 末尾，让 parse_docx_chinese 状态机正常工作。
+
+# 答案表格行：| 题号 | 1 | 2 | ... |  + | 答案 | C | D | ... |
+_ANS_TABLE_HEADER_RE = re.compile(r"^\|\s*题号\s*\|")
+_ANS_TABLE_ANS_RE = re.compile(r"^\|\s*答案\s*\|")
+# 题号行（如 "16．（1）2.2（2分）" / "17．（1）20（1分）"）
+_ANS_Q_HEAD_RE = re.compile(r"^\s*(\d{1,2})\s*[.、．]\s*(.+)$")
+
+
+def _extract_answers_from_ans_docx_md(ans_md: str) -> list[str]:
+    """从「答案」docx markdown 抽出每题 answer / sol，
+    返回追加到主 md 末尾的合成行（含【答案】+【N题详解】 marker）。
+
+    答案 docx 结构（changping/shijingshan 通用）：
+      [section header  →  | 题号 | ... |  →  | 答案 | C | D | ... |]
+        ↓ 选择题对照表
+      [section header  →  N．（1）xxx（2分）...]
+        ↓ 主观题正文（题号开头）
+    """
+    lines = ans_md.split("\n")
+    selected: dict[int, str] = {}   # {N: "C"} 选择题答案表
+    subjective: dict[int, list[str]] = {}   # {N: [...lines]} 主观题答案文本
+    cur_subj: int | None = None
+
+    i = 0
+    while i < len(lines):
+        ln = lines[i].strip()
+        # 检测 "| 题号 | 1 | 2 | ... |" → 找下一个 "| 答案 | C | D | ... |"
+        if _ANS_TABLE_HEADER_RE.match(ln):
+            nums = [c.strip() for c in ln.strip("|").split("|") if c.strip()][1:]
+            # 找紧邻的答案行（跳过 separator "|---|---|"）
+            for j in range(i+1, min(i+5, len(lines))):
+                ln2 = lines[j].strip()
+                if _ANS_TABLE_ANS_RE.match(ln2):
+                    ans_cells = [c.strip() for c in ln2.strip("|").split("|") if c.strip()][1:]
+                    for k, n_str in enumerate(nums):
+                        if k < len(ans_cells) and n_str.isdigit():
+                            n = int(n_str)
+                            ans = ans_cells[k]
+                            if re.fullmatch(r"[A-D]{1,4}", ans):
+                                selected[n] = ans
+                    i = j + 1
+                    break
+            else:
+                i += 1
+            continue
+        # 检测题号锚 "N．..."（不在选择题表内）
+        m = _ANS_Q_HEAD_RE.match(ln)
+        if m:
+            n = int(m.group(1))
+            if 1 <= n <= 30 and n not in selected:
+                cur_subj = n
+                subjective.setdefault(n, []).append(m.group(2).strip())
+                i += 1
+                continue
+        # 续行：归到 cur_subj
+        if cur_subj is not None and ln and not ln.startswith("|"):
+            # 跳过明显的 section header（"三、实验探究题..."）
+            if not _is_section_header(ln):
+                # 也跳过 "题号" 表残行
+                if not ln.startswith("题号") and not ln.startswith("答案"):
+                    subjective[cur_subj].append(ln)
+        i += 1
+
+    # 生成合成 markdown 行
+    out: list[str] = []
+    # 选择题：每条 "【答案】N. X" 单行，便于 _parse_answers 的 N. 锚解析
+    for n in sorted(selected):
+        out.append(f"【答案】{n}. {selected[n]}")
+    # 主观题：每题 "【N题详解】<sol>" 单段，_parse_answers 的 DETAIL_TITLE_RE 会处理
+    for n in sorted(subjective):
+        chunks = [l for l in subjective[n] if l.strip()]
+        if not chunks: continue
+        body = " ".join(chunks)
+        # 去掉行内残留 "（N分）" 评分括号（让 sol 干净点；评分仍由 _parse_per_question_scores 抓）
+        body_clean = re.sub(r"[（\(]\s*\d+\s*分\s*[）\)]", "", body).strip()
+        out.append(f"【{n}题详解】{body_clean}")
+    return out
 
 
 # ─── 答案 / 详解 解析 ──────────────────────────────────────────────────────
@@ -1124,30 +1252,55 @@ def main():
     else:
         sys.exit(f"不支持的输入: {src}")
     docx = _pick_jiexi_docx(docx_paths)
-    print(f"[physics_docx_paper] 用解析版: {docx.name}", flush=True)
+    print(f"[physics_docx_paper] 用主 docx: {docx.name}", flush=True)
+    ans_only_docx = _pick_answer_only_docx(docx_paths, docx)
+    if ans_only_docx:
+        print(f"[physics_docx_paper] 📎 双文件模式，附加答案 docx: {ans_only_docx.name}",
+              flush=True)
 
     # docx → markdown（同时把 docx unzip 到 docx_tmp/，下面会用 word/embeddings/）
     md = docx_to_markdown_chinese(docx, docx_tmp, figures_dir)
 
     # ── 抽 OLE 公式 LaTeX cache（按出现顺序）──
-    # 走纯 Ruby+Python 链路：MTEF binary → MathML (Ruby gem) → LaTeX (Python)
+    # 走 docx2tex (Java XSLT) 主链路：OLE MathType → MathML → LaTeX
     # _FORMULA_STATE 内容用于 _walk_run_chinese 里 OLE→LaTeX 替换（**第二次**调用）
     global _FORMULA_STATE
     _FORMULA_STATE = {"formulas": [], "idx": 0}
+    # 统计源 docx 的 <w:object> 数量（用于 cache 覆盖率诊断）
+    ole_count_main = _count_ole_objects(docx)
     try:
         from docx_mtef_to_latex import extract_formulas
         cache_dir = structured_dir / "mtef-cache"
         # 新签名：传 docx 文件路径（不是 unzip 后的目录），d2t 内部自己 unzip
         formulas = extract_formulas(docx, cache_dir)
         _FORMULA_STATE["formulas"] = formulas
-        print(f"[physics_docx_paper] 🧮 MTEF→LaTeX cache: {len(formulas)} 个公式",
-              flush=True)
+        cov = (len(formulas) / ole_count_main * 100) if ole_count_main else 0.0
+        print(f"[physics_docx_paper] 🧮 MTEF→LaTeX cache: {len(formulas)} 个公式 "
+              f"(源 OLE {ole_count_main}, 覆盖率 {cov:.1f}%)",
+              flush=True, file=sys.stderr)
+        if ole_count_main and len(formulas) < ole_count_main:
+            print(f"[physics_docx_paper] ⚠ OLE→LaTeX 不全 ({ole_count_main - len(formulas)} "
+                  f"个 OLE 未抓取，将渲染为 [公式])，检查 d2t hub regex / cache 链路",
+                  flush=True, file=sys.stderr)
     except Exception as e:
-        print(f"[physics_docx_paper] ⚠ MTEF cache 生成失败，OLE 会 fallback 到 WMF/PNG: {e}",
-              flush=True)
+        print(f"[physics_docx_paper] ⚠ MTEF cache 生成失败 ({ole_count_main} 个 OLE 全部 fallback "
+              f"到 WMF/PNG/[公式]): {e}",
+              flush=True, file=sys.stderr)
 
     # **第二次 docx → markdown**：这次 _FORMULA_STATE 有内容，OLE 会替换为 $LaTeX$
     md = docx_to_markdown_chinese(docx, docx_tmp, figures_dir)
+
+    # 双文件模式：抽答案 docx 的合成行追加到主 md 末尾
+    if ans_only_docx:
+        ans_extract = out_dir / "docx-extract-ans"
+        # 复用主 figures_dir（避免散落两套图）
+        ans_md = docx_to_markdown_chinese(ans_only_docx, ans_extract, figures_dir)
+        synth_lines = _extract_answers_from_ans_docx_md(ans_md)
+        if synth_lines:
+            md = md + "\n\n" + "\n\n".join(synth_lines) + "\n"
+            print(f"[physics_docx_paper] 📎 合成 {len(synth_lines)} 行 answer marker "
+                  f"追加到主 md", flush=True, file=sys.stderr)
+
     # 保存 markdown 备查
     (structured_dir / "raw.md").write_text(md, encoding="utf-8")
 

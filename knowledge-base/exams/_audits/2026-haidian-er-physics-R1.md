@@ -1,193 +1,99 @@
-# 2026 北京海淀区物理二模 yaml 审核报告（R1）
+# 2026 北京海淀区 物理二模 R1（docx 路线复审）
 
-- yaml: `knowledge-base/exams/mock/physics/beijing/2026-haidian-er.yaml`
-- 源 PDF（扫描版）: `knowledge-original/gaokzx-downloads/2026-ermu-physics/haidian_physics.pdf`
-- 源 PNG: `knowledge-original/beijing-mock-2026/ermo/haidian/physics/images/page-NN.png`（13 页）
-- OCR 中间产物: `knowledge-base/exams/_staging/physics/2026-haidian-er/tencent-cache/`
-- 走线: image OCR 路线（`physics_image_paper.py` + 5 层 fallback；非 docx OLE-MathType 路线）
-- 现有 patches: 无（首跑）
-- 本次审核：首轮 R1，逐题 26 题 + 元数据 + 公式 + 跨题模式
+**yaml**: `knowledge-base/exams/mock/physics/beijing/2026-haidian-er.yaml`
+**源 docx**: `knowledge-base/exams/_staging/physics/2026-haidian-er/src-unzip/精品解析：2026年北京市海淀区中考二模考试物理（解析版）.docx`
+**已知**: 25 题 / 65 分 → 应 26 题 / 70 分（差 1 题 / 5 分）
+
+## OVERALL: NEEDS_FIX（缺 Q17 / 5 分）
 
 ---
 
-## 卷面元数据
+## 1. 缺哪题？
 
-| 项目 | yaml | 卷面规范 | 一致 |
-|---|---|---|---|
-| 题数 | 26 | 26 | OK |
-| 满分 | 70 | 70 | OK |
-| 时长 | 70 分钟 | 70 分钟 | OK |
-| year | 2026 | 2026 | OK |
-| district | `''`（空） | 海淀 | **P1：缺失** |
-| exam_type | 二模 | 二模 | OK |
-| subject | physics | physics | OK |
-| structure | `12单选(24分) + 3多选(6分) + 8实验探究(28分) + 1作文(4分) + 2计算题(8分)` | 一(24) + 二(6) + 三 实验探究(28) + 四 科普阅读(4) + 五 计算(8) | **P0：把 Q24 写成"作文"**（与 朝阳 R1 同款 bug） |
-| passages | `[]` | 一篇科普阅读《太空中的"重力侦探"——中国重力卫星》 | **P1：应作为 passage 实体抽出**（与 24 题挂图） |
+**Q17（实验探究，5 分，沸腾 + 二氧化氮扩散）**
 
-**分值核算**：单选 12×2=24 + 多选 3×2=6 + 实验探究 28 + 科普阅读 4 + 计算 8 = **70 ✓**。
+源 docx 段落实测（解析版 document.xml）：
+- 段 235 三、实验探究题（共28分，**16题4分，17、22题各5分**，18题2分，19、20、21、23题各3分）
+- 段 236 `16. `（题头单独一段，body 在 237/239）
+- 段 247 `17. `（题头单独一段，body 在 248/250）
+- 段 261 `18. 小明利用如图所示的装置...`
+- …
+- 段 434 `26. ...`
 
-**实验探究 8 题内部分配（16–23）**：源答案表给 16=3 / 17=5 / 18=3 / 19=3 / 20=3 / 21=3 / 22=5 / 23=3，总 28。yaml 当前 16=3、17=5、18=3、19=3、20=3、21=3、22=5、23=3 ✓ **本卷得分分配正确**（与朝阳本题分配错位的情况不同）。
+源 docx 共 **26 题（1-26）**，yaml ids 1..16, 18..26 = **25 题，缺 Q17**。
 
----
+Q17 题面（确认存在）：
+- (1) 沸腾前后温度随吸热变化（图甲/乙/丙）
+- (2) 二氧化氮扩散实验（图丁）
+- 答案 (1) 乙 / 加热时间 / 温度不变；(2) 铅柱拉不开 / 分子间引力
 
-## 逐题问题清单
+## 2. parser 哪里漏识别
 
-注：`严重` = P0 阻塞 / P1 影响学情 / P2 影响阅读。
+定位：`scripts/exam-docx/physics_docx_paper.py` 主状态机 **354-369 行**。
 
-### 元数据层
+**根因**：Q16 题面后紧接 `【答案】… 【16题详解】… 【17题详解】…`，parser 进入 `mode=answer`。然后遇到 `17. `（独立一行、题头空、body 在后续段），落入 "answer→question 切换"：
 
-| 字段 | 严重 | 维度 | 诊断 | 建议 patch |
-|---|---|---|---|---|
-| district | P1 | meta | `district: ''`，源卷"北京市海淀区九年级第二学期适应性练习" | 顶层 `district: 海淀` |
-| structure | P0 | meta | 把 Q24 写成"1作文(4分)"，应是科普阅读 | 顶层 `structure: "12单选(24分) + 3多选(6分) + 8实验探究(28分) + 1科普阅读(4分) + 2计算题(8分)"` |
-| passages | P1 | meta | 阅读材料《太空中的"重力侦探"——中国重力卫星》整段错误地拼到 Q24 stem 内（连同 Q23 串题），应抽到顶层 passages |（见 Q24/Q23） |
+```python
+# L357-369
+if (mode == "answer" and q_m and "【" not in ln):
+    n = int(q_m.group(1))
+    if n > last_q_seen and n <= 30:
+        min_len = 6 if cur_typ == "essay" else 15
+        if len(ln.strip()) >= min_len:   # ← `17. ` len=3 → 失败
+            mode = "question"; ...
+```
 
-### 单选 12 题（Q1–Q12）
+`17. ` 整行长度 3 < 15 → 不切回 question → Q17 头与 (1)(2) body 全留 a_lines，不进 sections，`_parse_section` 自然不生成 Q17 question。
 
-| Q | 严重 | 维度 | 诊断 | 建议 patch |
-|---|---|---|---|---|
-| Q1 | — | — | OCR/答案/KP 均 OK | — |
-| Q2 | — | — | 图选题，has_image_options=true，figure ok | — |
-| Q3 | — | — | 同上 | — |
-| Q4 | — | — | OK | — |
-| Q5 | P2 | stem | yaml 块换行造成"以\n\n工业供热为主"中间空段，不影响语义但渲染断行 | stem 单行化 |
-| Q5 | P2 | KP | module=electricity 偏，本质考核能/能源属性，建议 module=mechanics→sound 否则保 electricity 也勉强；KP `能源类型/能量转化` 已 OK | — |
-| Q6 | — | — | OK | — |
-| Q7 | — | — | LaTeX `$f_{1}>f_{2}>f_{3}$` 配对 OK；KP/answer OK | — |
-| Q8 | — | — | OK | — |
-| Q9 | — | — | OK | — |
-| Q10 | — | — | OK | — |
-| Q11 | **P0** | stem LaTeX | 题干内 `R_{1}、R_{2}` 出现两处裸 LaTeX 未加 `$`（line 248 整段裸跑）；选项 A/B/C 是裸 `R1/R2`，选项 D 是 `$R_1$`，**单题内 4 种写法**不一致 | 整题统一 `$R_1$`、`$R_2$`；stem 把"电阻丝R_{1}、R_{2}"改为"电阻丝$R_1$、$R_2$" |
-| Q12 | **P0** | stem 串题 | stem 末尾尾巴混入了第二大题段头：`二、多项选择题(下列每题均有四个选项，其中符合题意的选项均多于一个。共 6 分，每题 2 分。每题选项全选对的得 2 分，选对但不全的得 1 分，有错选的不得分)` —— 这是 13 题前的大题说明，被错并入 Q12 | 12 stem 截到"下列说法正确的是" |
-| Q12 | P1 | options LaTeX | A 选项 `\frac{F}{gV}` 应为 `\frac{F-G}{\rho_? gV}` 量纲不对（依题"测力计读数减去桶重再算体积")；但若 OCR 抓到的就是原题写法（原题简化），保留 — 但下方建议人工对源图复核 | 复核源图 page-04 |
-| Q12 | P1 | options | D 选项被截断："石块不接触小" 后断；源应是"石块不接触小桶内壁…" | 复核 page-04 补完整 |
-| Q12 | P2 | options | C 选项 `$G_{\pi}$` 显然 OCR 把 "石" 误识为 π；应是 `$G_石$` 或 `$G_{石}$` | 修 `G_{石}` |
+对比 Q16 没事：Q16 之前由 section header "三、实验探究题..." 在 332 行触发 `mode=question`，所以空头 `16. ` 在 question 模式下作为普通题号锚（`_parse_section` 不检查 rest 长度，head+body 跨段 OK）。
 
-### 多选 3 题（Q13–Q15）
+物理实验题"题头-body 跨段"极常见（Q16/17/18），但只有 Q17 命中"夹在前一题 answer 块之后"这一组合而触发该 bug。本地 import parser 运行验证：`nums=[1..16, 18..26]`，缺 17 复现。
 
-| Q | 严重 | 维度 | 诊断 | 建议 patch |
-|---|---|---|---|---|
-| Q13 | — | — | answer=BD 合规 `[A-D]{1,4}` ✓ | — |
-| Q14 | P2 | stem table | md 表格 header 行末尾有空列（`...所用时间t/s |  |`），分隔行 6 段、数据 6 段、末尾空行 6 段——会被 Markdown 解析为额外空列，渲染异常 | 删末尾空列与空行；建议规范化为 5 列 |
-| Q14 | — | answer | ACD ✓ | — |
-| Q15 | **P0** | stem 串题 | stem 末尾混入了第三大题（实验探究）的题干尾"记录数据。(选填"A"或"B")"——这是后续 Q16/Q17 区域的碎片，被错并入 Q15 | 截到"下列说法正确的是" |
-| Q15 | **P0** | options LaTeX | D 选项 `$$7.5 \times 10^{4}$Pa$` 双美元符号 + 嵌套破损；C 选项 `$2.5×10^4Pa$` 用了全角 `×` 又混进 `$` 但 `10^4` 无大括号（虽 KaTeX 容忍单字符上标）；stem 中 `$R_{0}$是阻值为$40\Omega$` 后接 `1.0\times 10^{5}` 又把"和R是气压敏感电阻"裸排——不一致 | C: `$2.5\times 10^{4}\text{Pa}$`；D: `$7.5\times 10^{4}\text{Pa}$`；stem 内所有 `10^N` 统一 `10^{N}` |
-| Q15 | P1 | stem | `0.06$m^{3}$、$0.12m^{3}$` 单位与公式混排（前者括号外 m^3、后者括号内 0.12），格式不一致 | 统一 `0.06\,\text{m}^{3}` `0.12\,\text{m}^{3}` |
+## 3. 精确 fix 路径
 
-### 实验探究 8 题（Q16–Q23）—— OCR 重灾区
+**File**: `scripts/exam-docx/physics_docx_paper.py`
+**Line**: 354-369
 
-| Q | 严重 | 维度 | 诊断 | 建议 patch |
-|---|---|---|---|---|
-| Q16 | **P0** | stem 碎裂 | stem 严重碎片化：`(1)...弹簧测力计的示数是\n\n_N。\n\nw\n\n(2)...金属箔张开是由于\n\n金属球\n\n北京高考\n\n1\n\n金属杆\n\nwww.gaokz\n\n23\n\n3\n\n3\n\n4\n\n乙` —— `金属球/金属杆/乙` 是配图标注，`23/3/3/4` 是测力计刻度数字，`北京高考/www.gaokz` 是页脚水印，全被并入 stem | 重写 stem："(1) 图甲所示的弹簧测力计的示数是 ___ N。(2) 如图乙所示，用丝绸摩擦过的玻璃棒接触验电器的金属球时，验电器的金属箔张开是由于 ___。"；加 figure |
-| Q16 | P1 | figure | 无 figure 字段，但题干涉及甲乙两图（测力计+验电器） | 加 `figure: 2026-haidian-er/figures/q16.png`（需 crop） |
-| Q17 | **P0** | stem 碎裂 | stem 把图丙坐标轴 `102/100/98/96/94/92/90` 与 `温度/℃ / 123456789时间/min` 全部当文字混入；同时图甲乙的"空气/玻璃板/二氧化氮"标注亦入 stem；`实验中观察到如图甲、乙\n\n所示...` 等被坐标轴数字打断 | 重写 stem，去坐标数字、去图标注、保留三个填空：图甲/乙选填 + 热量反映 + 温度不变 + 例子 |
-| Q17 | P1 | figure | 无 figure 字段 | 加 `figure: 2026-haidian-er/figures/q17.png` |
-| Q17 | P2 | KP | `热学：温度/比热容/热量计算/物态变化` + `实验方法/数据处理 + 熔化` 两个 KP 都含 `+`/`/`，非标准短语，且本题不考"熔化" | 改为 `[沸腾, 分子动理论]` |
-| Q18 | **P0** | stem 截断+页脚 | stem 在"用刻度尺测量蜡烛\n\n的高度及蜡烛\n\n到玻璃板的距离，并" 处断；接着混入"第5页/共12页\n关注北京高考在线官方微信:京考一点通\n(微信号:bjgkzx)..." 页脚 | 重写 stem，补完整步骤；剔除页脚 |
-| Q18 | P1 | figure | 无 figure 字段（"如图所示的装置"） | 加 `figure: 2026-haidian-er/figures/q18.png` |
-| Q18 | P1 | solution | `B(1分) A(1分)` 过简，且无小题号 (1)(2) 对应 | 补 `(1) B(1分) (2) A(1分)`（或按源答案校正） |
-| Q19 | P2 | stem | 表格 OCR 已 OK，但 stem 中段"灵敏电流计指针偏转方向"无前置"观察"动词，可能 OCR 漏字 | 复核 page-08；可忽略 |
-| Q19 | P2 | solution | sol 末尾混入"北京高考在线 w.gaokzx.com" 水印 | 删尾部水印 |
-| Q19 | P2 | KP | `电磁感应现象` OK；新增 `感应电流方向判定` 更准 | — |
-| Q20 | **P0** | stem 页脚 | stem 末段："关注北京高考在线官方微信:京考一点通____(微信号:bjgkzx)..." 整行水印混入 stem | 截到"待测苹果的密度ρ\n。(用已知量和测量量表示)" |
-| Q20 | P1 | solution | sol "(2) h2-h1 (2分) h3-h1" 缺 LaTeX：应是 `\rho_{果}=\dfrac{h_2-h_1}{h_3-h_1}\rho_水`，当前格式无除号、无下标语义 | sol 改为 LaTeX |
-| Q21 | P1 | stem 表格 | 表格 header `R/Q` 应为 `R/Ω`（OCR 把 Ω 误识 Q） | 改 `R/Ω` |
-| Q21 | P2 | stem table | 表格末尾空列空行（同 Q14） | 删 |
-| Q21 | — | answer/sol | OK | — |
-| Q22 | **P0** | solution 碎裂 | sol 含 `(2 高考在线 分) okzx.com ④F(1分)` —— "(2 分)" 被水印"高考在线"切开；末尾 `(2)=(1分) R2` 中 `R2` 是页脚 OCR 残留 | 重写 sol，去水印、补完整公式 `f=F` |
-| Q22 | P1 | stem | `f_1、f_2` 与 `f_{1}、f_{2}` 混用，应统一 `$f_1$、$f_2$`；填空 `f_2 _f_1` 应为 `f_2\ \_\ f_1`（保留空格） | 统一 LaTeX |
-| Q23 | **P0** | stem 串题 + 截断 | stem 在"已知压力越大，R1阻值"处断；接下来插入"关注北京高考在线..."水印；接 "越小。当R2两端的电压较小时..."；再后接 "请阅读《太空中的"重力侦探"\n中国重力卫星》并回答24题。\n太空中的"重力侦探"中国重力卫星" —— 即 Q23 stem **包含 Q24 阅读材料的标题引导段**，明显跨题污染 | 截到"…分析说明应如何调节R2的阻值。"；去水印；去 Q24 引导段 |
-| Q23 | **P0** | stem LaTeX | stem 全部用裸 `R1/R2/Uo/U1` 无 `$`，与 Q11/Q12/Q15 风格不一致；`Uo` 显然是 `U_0` | 整段 LaTeX 化：`$R_1$/$R_2$/$U_0$/$U_1$` |
-| Q23 | **P0** | solution 碎裂 | sol 极度凌乱："等效电路图如答图1所示，依据串联电路的电压关系 R2 R1两端的电压U1=U-Uo U U6 依据欧姆定律，电流I= U1=U-U0 ，电阻R2= Uo 答图1 R1 R1 I 当进入..." —— 公式行被图注 `答图1` 切开，`U/U6/U0/Uo` 写法不统一，`R1/R2` 全裸，末尾"关注北京高考在线..."水印 | 重写 sol，给出完整 LaTeX 公式链 + 结论"减小 $R_2$ 阻值"(3分) |
+### 方案 A（推荐 / 物理特异，跨区长期）
+在 min_len 检查处加例外：若题号锚行后 ≤5 行内出现 `（1）` 等中文括号子问号，认定 "实验题头-体跨段"，直接切回 question，不卡 min_len。
 
-### 科普阅读 1 题（Q24）
+```python
+# 外层循环改 enumerate(lines)
+SUBQ_FOLLOW_RE = re.compile(r"^\s*[（(][1-9一二三四五][)）]")
+...
+if (mode == "answer" and q_m and "【" not in ln):
+    n = int(q_m.group(1))
+    if n > last_q_seen and n <= 30:
+        has_subq = any(
+            SUBQ_FOLLOW_RE.match(lines[j])
+            for j in range(i+1, min(len(lines), i+6))
+        )
+        min_len = 6 if cur_typ == "essay" else 15
+        if has_subq or len(ln.strip()) >= min_len:
+            mode = "question"
+            if cur_typ: sections[cur_typ].append(ln)
+            last_q_seen = n
+            continue
+```
 
-| Q | 严重 | 维度 | 诊断 | 建议 patch |
-|---|---|---|---|---|
-| Q24 | **P0** | type | `type: 作文`，应为 `科普阅读`（与朝阳同款 parser bug：image OCR `_infer_qtype` 默认尾题=作文） | `24: { type: 科普阅读 }` |
-| Q24 | **P0** | stem 串题 | stem 开头是 Q23 的电学题尾："越小。当$R_2$两端的电压较小时…应如何调节$R_2$的阻值。" —— 应整段移除；中间才是阅读材料《太空中的"重力侦探"——中国重力卫星》 + 三个小问 | 重写 stem，只保留阅读材料 + (1)(2)(3) 三个填空 |
-| Q24 | **P0** | options 不全 | 当前 options 只有 `B/C`，**A 选项整段缺失**（A 在 stem 末尾"(2) 下列关于中国重力卫星的说法正确的是____\nA.两颗卫星在不同轨道上飞行..." 被并入 stem）；同时 D 选项缺失 | 重建 options A/B/C/D 四项 |
-| Q24 | P1 | stem | 阅读材料文本中 `g\n\n值较小的区域` 被换行切开（"g 值") | stem 单行化 |
-| Q24 | P1 | passages | 整篇材料应抽到顶层 `passages: [{id: p1, title: "太空中的'重力侦探'——中国重力卫星", body: "..."}]`，Q24 用 `passage_id: p1` 引用，模型可复用 | 同 chinese/english 路线 |
-| Q24 | P1 | answer | yaml 当前 answer=`''`，sol 明确 (2) B —— answer 应填 `B`（仅小问 (2) 多选）；但 (1) 是填空、(3) 是计算，类型混合不适合放 answer 字段 | answer 留空 OK，但 sol 已含三问答案 |
-| Q24 | — | sol | sol "(1) 微米级精度星间测距系统 / (2) B / (3) 6370km" 答案正确 ✓ | — |
-| Q24 | P2 | KP | `电学：电流/电压/电阻/欧姆定律` + `综合应用 + 材料涉及考点` 含 `+`/`/`，且本题完全不考电学（考速度/周期/圆周运动） | 改为 `[速度/路程/时间计算, 信息提取]` |
+### 方案 B（通用 / 备选）
+为实验/探究类 section 单独设 `min_len=3`（与 essay 区别开），需新增 typ 白名单。
 
-### 计算 2 题（Q25–Q26）
+### 方案 C（patch 救火 / 不修底层）
+`_patches/physics/2026-haidian-er.yaml` 强插 Q17 完整 create。一次性救火；A/B 才是长期方案。
 
-| Q | 严重 | 维度 | 诊断 | 建议 patch |
-|---|---|---|---|---|
-| Q25 | P1 | stem | `电源两端电压为 3V且保持不变,闭合开关 S,调节滑动变阻器 R p`：`R p` 是 OCR 切碎的 `$R_P$`（滑动变阻器符号） | 改 `滑动变阻器$R_P$` |
-| Q25 | **P0** | solution 碎裂 | sol 多处错位：`(4分) U0 =1V` 与 `(1)由图乙可得，Ro= =10Ω(1分) I 0.1A`（两个等号、I 与 0.1A 错位）、`(2)…Up=U-Uo=3V-1V=2V` 中 `Uo/Up/U0` 三种写法、`Ro` 应 `$R_0$` | 重写 sol：LaTeX 化所有变量；统一 $R_0/R_P/U_0/U_P$；分式用 `\dfrac` |
-| Q25 | P1 | sol 分值 | sol 标"(4分)"在最前，与 score=4 重复但位置异常 | 删开头 `(4分)` |
-| Q26 | **P0** | stem 截断 | stem 缺第三问 **(3)** —— 源题应有"(3) 在此条件下，杆 BD 对杆 AB 的拉力"或类似第三问；当前 stem 只到 (2) 然后接两段页脚 | 复核 page-12/13 补 (3) |
-| Q26 | **P0** | stem 页脚 | stem 末尾整段是 `关注北京高考在线... www.gaokzx.com____www.gaokzx.com____www.gaokzx.com____www.gaokzx.com\n\n关注北京高考...` 水印重复 4+ 段 | 全删 |
-| Q26 | **P0** | solution 碎裂 + 广告 | sol 极度凌乱：`者在线`、`okzx.com`、`okzx.com 关注…` 切碎；末尾整 5 段是"北京高考在线平台简介"广告（"平台创办于2014年…名校少年班 名校保研通"）—— 与试题完全无关 | 重写 sol：LaTeX 化所有变量；删广告段；保留 F1=375N / F2=250N 结论 |
-| Q26 | P1 | sol LaTeX | sol 全裸 `F1xO1A=FB1xO1B` 等公式，应 `$F_1\cdot O_1A=F_{B1}\cdot O_1B$`；`O1B:O1A=1:4` OK；下标体系混乱（`FB1/FD1/Fc1/FC1` 大小写不一） | 统一 |
-| Q26 | P1 | stem LaTeX | `O_2C/杆BD/杆O_2C` 全裸；`g取10N/kg` OK；`60kg/15kg` OK | LaTeX 化主要变量 |
+## 4. 修后一致性
 
----
+- `total_questions: 25 → 26`
+- `full_score: 65 → 70`
+- `structure` "7实验探究(23分)" → "8实验探究(28分)"
 
-## 跨题模式（13/26 题受影响）
+`_parse_per_question_scores` 已能识别 "16题4分，17、22题各5分..."，Q17 一旦被识别即自动分 5 分。
 
-### Pattern 1：页脚水印混入 stem/sol（P0，高发）
-**触发**：`关注北京高考在线官方微信:京考一点通` / `(微信号:bjgkzx)` / `www.gaokzx.com` / `北京高考在线` / `第N页/共12页` / `okzx.com` 切碎残留。
-**受影响**：Q16 stem、Q17 stem、Q18 stem、Q19 sol、Q20 stem、Q22 sol、Q23 stem+sol、Q26 stem+sol（**8 题**）。
-**根因**：`physics_image_paper.py` 的 NOISE 过滤规则未覆盖 gaokzx 系列水印，且 OCR 把水印切到字符级（`www.gaokz` / `okzx.com` / `北京高考` 三段断开），简单正则匹配不上。
-**修复建议**：
-1. patcher 阶段加 NOISE 正则集合：`r'关注北京高考在线.*?bjgkzx\)'`, `r'www\.gaokz[a-z]*'`, `r'okzx\.com'`, `r'第\d+页/共\d+页'`, `r'北京高考(在线|平台)'`。
-2. 因 OCR 把水印切碎，需要在 reflow 后扫一次，逐行（而非整段）match。
-3. **当前 R1 建议**：先在 patches 文件里手工 patch 8 题 stem/sol；R2 把 NOISE 规则固化进 parser。
+## 5. 其他抽查（无 P0）
 
-### Pattern 2：跨题串题（P0）
-**触发**：Q12（大题 header 入 Q12 stem）、Q15（Q16 碎片入 Q15 stem）、Q23（Q24 引导段入 Q23 stem）、Q24（Q23 题干入 Q24 stem 开头）。
-**根因**：题号锚点检测在多列/换页/小字号大题 header 处失效。
-**修复建议**：parser 加 "大题 header" 锚点（`一、|二、|三、|四、|五、` + `(共 N 分|每题 N 分)`）切分；本卷 4 处手工 patch。
+- Q26 yaml 在，结构正常。
+- LaTeX 1901 公式块未逐一抽查（任务限缺题诊断，跳过）。
+- 答案归属：Q17 丢失期间 `【17题详解】` 可能被错附邻题；修后 `__Q_CTX__:17` 自动归位，需 spot-check Q16/Q18 solution 末尾是否净化。
 
-### Pattern 3：实验题 figure 缺失（P1）
-**触发**：Q16/Q17/Q18 三题在 stem 中明显引用"图甲/图乙/图丙/图丁/如图所示"，但 yaml 无 `figure:` 字段（Q19/Q20/Q21/Q22/Q23/Q24/Q25/Q26 都有，反差明显）。
-**根因**：parser figure 抽取对小图聚合题（多张并列子图）漏检。
-**修复建议**：手 crop 三张图加入 `figures/q16.png`、`q17.png`、`q18.png`；R2 parser 加 "图甲/图乙/图丙 + 无 figure" 触发自动抽图。
-
-### Pattern 4：科学计数法 `10^{N}` 上标丢失/破损（P0，物理特有）
-**触发**：Q15 D 选项 `$$7.5 \times 10^{4}$Pa$`（双 `$$` + 嵌套破损）、Q15 C `$2.5×10^4Pa$`（无大括号 + 全角 `×`）、Q15 stem `1.0\times 10^{5}` 后接裸文本、Q24 stem 卫星距离 `470km/200km` 未受影响（无科学计数法）但若有就会丢。
-**根因**：OCR 把 `10^{4}` 偶尔识为 `10^4` 或 `10\\^4`，patcher 再把已有 `$` 重新包一层造成双 `$$`。
-**修复建议**：parcher 统一规则——所有"数字 × 10^N" 强制规范化为 `$N\times 10^{M}\,\text{单位}$`，**单 `$` 包裹**；本卷 Q15 必修 4 处。
-
-### Pattern 5：LaTeX 变量风格不统一（P1，全卷高发）
-**触发**：Q11/Q15/Q23/Q25/Q26 中 `R_1` / `R1` / `$R_1$` / `R_{1}` / `R p` / `Ro` / `R0` 5+ 种写法混用；下标 `_{1}` vs `_1` 混用；`U0` vs `U_0` vs `Uo` 三种写法。
-**根因**：image OCR + patcher 各自补 LaTeX，互相不通。
-**修复建议**：物理科目固化 "下标 ≥ 2 字符强制用 `{}`、单字符可裸；所有变量必加 `$`" 规则；本轮 patch 文件统一全部 13 处。
-
-### Pattern 6：表格末尾空列空行（P2）
-**触发**：Q14 / Q19 / Q21 三表格末尾都有多余空列（`...| 2 |  |`）+ 空数据行（`|  |  |  |  |  |  |`），来自 OCR 表格识别误判列数。
-**修复建议**：patcher 加 "末尾空列 = 全空就删 / 末尾空行 = 全空就删" 规则；本轮手 patch 3 处。
-
-### Pattern 7：科普阅读类型误判为"作文"（P0，物理科特有）
-**触发**：Q24（与朝阳二模 Q24 同款 bug）。
-**根因**：`physics_image_paper.py::_infer_qtype` 把倒数第 3 题（计算题前）默认归为 `作文`，对物理科属错配（物理无作文题，只有科普阅读）。
-**修复建议**：物理 parser 把 `作文` 候选直接禁掉，改默认 `科普阅读`；2026 二模 14 区批 patch（朝阳 R1 已经手 patch、海淀本卷待 patch）。
-
-### Pattern 8：KP 字段含 `+` / `/` / `：` 非标准（P2）
-**触发**：Q17 `热学：温度/比热容/热量计算/物态变化`、`实验方法/数据处理 + 熔化`；Q24 `电学：电流/电压/电阻/欧姆定律`、`综合应用 + 材料涉及考点`。
-**根因**：enrich prompt 偶尔把模块描述当 KP 输出。
-**修复建议**：enrich 加后处理 split + 过滤 `/`/`：`/`+`；本卷手 patch 2 处。
-
----
-
-## OVERALL: NEEDS_FIX
-
-**计**：26 题，P0 = **15 处**（8 题）、P1 = **18 处**、P2 = **9 处**，跨题模式 **8 类**。
-
-**判定理由**：
-- Q16/Q17/Q18/Q20/Q23/Q24/Q26 等 7 题 stem/sol 严重碎裂（水印混入 + 跨题串题 + 字段缺失），无法直接用于学情分析或相似题推荐——必须重写。
-- Q24 type 误判 + options 缺 A、D 项 + Q23 题干串入，是阻塞级（学生看到无效选项无法答题）。
-- Q15 LaTeX 双 `$$` 嵌套破损会在前端渲染崩溃。
-- Q26 sol 含 5 段广告 + 缺第 (3) 问，影响考点完整性。
-
-**与朝阳 R2 对比**：海淀本卷比朝阳更严重——朝阳是 5 处大坑、海淀是 15 处 P0，主要因为海淀源 PDF 页脚水印密度更高（每页 2 处 vs 朝阳每页 1 处），且海淀 26 题分布 13 页（朝阳 11 页），跨页串题概率更大。
-
-**建议下一步**：
-1. **R1 patches**（本轮，人工）：在 `knowledge-base/exams/_patches/physics/2026-haidian-er.yaml` 写 18+ 处 patch（含 structure / district / Q11 / Q12 / Q14 / Q15 / Q16 / Q17 / Q18 / Q19 / Q20 / Q21 / Q22 / Q23 / Q24 / Q25 / Q26），重点恢复 Q16-Q18-Q20-Q23-Q24-Q26 的 stem/sol/figure。
-2. **R2 parser 固化**（下一轮）：把 Pattern 1（gaokzx 水印 NOISE）、Pattern 2（大题 header 锚点）、Pattern 4（10^N 规范化）、Pattern 7（物理无作文）、Pattern 6（空列空行清理）五条固化进 `physics_image_paper.py` + `physics_inspect.py`，避免后续 11 区批跑重蹈覆辙。
-3. **建议拉 docx 路线**：海淀本卷若 zxxk/学科网有解析 docx，应优先走 `physics_docx_paper.py` + d2t OLE→LaTeX 链路（与一模 14 区 1901 LaTeX 块 + 0 水印的成绩对比，docx 路线对物理是绝对碾压）。本轮 image OCR 走法在物理科目可视为 fallback，不能作为主管道。
+**优先级**：方案 A → 重跑 → diff 出 Q17 → spot-check Q16/Q18 solution。

@@ -124,17 +124,86 @@ def _walk_table_chinese(tbl: ET.Element, rels: dict[str, str],
     return rows[0] + "\n" + sep + "\n" + "\n".join(rows[1:])
 
 
+def _para_numid(p: ET.Element) -> str | None:
+    """读段落的 <w:numPr><w:numId w:val="K"/>。无则返回 None。
+    pPr/numPr/numId 路径。
+    """
+    pPr = p.find(f"{{{W_NS}}}pPr")
+    if pPr is None: return None
+    numPr = pPr.find(f"{{{W_NS}}}numPr")
+    if numPr is None: return None
+    numId = numPr.find(f"{{{W_NS}}}numId")
+    if numId is None: return None
+    val = numId.get(f"{{{W_NS}}}val") or numId.get("val")
+    if val in (None, "0"): return None
+    return val
+
+
+def _para_is_option(text: str) -> bool:
+    """识别 A./B./C./D. 选项行（避免 numId 全局题号 counter 把选项也算进去）。"""
+    return bool(re.match(r"^\s*[A-D]\s*[.、．]\s*", text))
+
+
 def docx_to_markdown_chinese(docx_path: Path, extract_dir: Path,
                                 figures_dir: Path) -> str:
-    """完整 docx → markdown 字符串。返回 markdown。"""
+    """完整 docx → markdown 字符串。返回 markdown。
+
+    **R2 修复（fangshan numPr 自动编号）**：fangshan 二模 docx 用 Word
+    自动列表编号（`<w:numPr><w:numId/>`），题号 1-27 不在 `<w:t>` 文本里。
+    解决方案：维护**全局题号 counter**，对所有非 0 numId 段落（排除 A/B/C/D
+    选项行）前缀 "N. "。sanity check：注入后题号必须递增 ≤ 30，否则放弃注入
+    （回退到正则路径）。
+    """
     root, rels = dp._load_docx(docx_path, extract_dir)
     body = root.find(f"{{{W_NS}}}body")
     if body is None: return ""
+    # Pass 1：收集所有 numId≠0 非选项段落，决定是否要全局 counter 注入
+    # 同时记录所有手敲题号锚（"N. " 行）用于 counter 对齐避免冲突
+    numid_paras: list[tuple[int, str, str]] = []  # (body_index, numId, raw_text)
+    manual_anchors: dict[int, int] = {}  # body_index → 手敲题号 N
+    for idx, child in enumerate(body):
+        if _local(child.tag) != "p": continue
+        text = "".join(t.text or "" for t in child.iter(f"{{{W_NS}}}t"))
+        nid = _para_numid(child)
+        if nid and not _para_is_option(text) and not NUM_HEAD_RE.match(text):
+            numid_paras.append((idx, nid, text))
+        # 手敲 "N. " 锚（无 numId 或 numId=0）
+        m_manual = NUM_HEAD_RE.match(text)
+        if m_manual and not nid:
+            n = int(m_manual.group(1))
+            if 1 <= n <= 30:
+                manual_anchors[idx] = n
+    # 是否启用 numPr 注入：≥10 个段落
+    inject_numbering = len(numid_paras) >= 10
+    numid_to_qnum: dict[int, int] = {}  # body_index → assigned qnum
+    if inject_numbering:
+        # 按 body order 走，遇到手敲锚 N → counter 跳到 N+1，避免冲突
+        counter = 1
+        # 合并所有"事件"（numid_paras + manual_anchors）按 body_index 排序
+        events: list[tuple[int, str, int]] = []
+        for bi, _, _ in numid_paras:
+            events.append((bi, "num", 0))
+        for bi, n in manual_anchors.items():
+            events.append((bi, "manual", n))
+        events.sort()
+        for bi, kind, n in events:
+            if kind == "manual":
+                # 手敲题号 → counter 同步到 n+1
+                counter = max(counter, n + 1)
+            else:
+                if counter > 30:
+                    inject_numbering = False; break
+                numid_to_qnum[bi] = counter
+                counter += 1
     md_lines: list[str] = []
-    for child in body:
+    for idx, child in enumerate(body):
         tag = _local(child.tag)
         if tag == "p":
             line = _walk_paragraph_chinese(child, rels, extract_dir, figures_dir)
+            if inject_numbering and idx in numid_to_qnum and line.strip():
+                # 若行首已有数字前缀（如 "7. ..."）就不再注入
+                if not NUM_HEAD_RE.match(line):
+                    line = f"{numid_to_qnum[idx]}. {line.lstrip()}"
             if line.strip():
                 md_lines.append(line)
         elif tag == "tbl":
@@ -195,9 +264,20 @@ SECTION_HEADERS = [
 # 子段标题（资料一/二/三/后记 / 材料一/二/三 / (一)(二)(三)）
 # 子段标题：行首关键字 + 可选 "(共?N分)" 或描述（如 "（一）默写。（共4分）"
 # **不**严格要求 \s*$，允许后跟分值标注或描述（大兴 "（一）（4分）" / 朝阳 "（一）默写。（共4分）"）
+# **R2 ermu 修复**：daxing/fengtai/haidian/shunyi 二模卷有 4 类自定义 sub-header
+# "情别/志别/义别/悟别"（"古都别蕴"主题），需识别为 base section sub-header，
+# 否则 Q4/Q6 option D 会吞掉这些 header 后整段 passage。
 SUB_HEADER_RE = re.compile(
     r"^\s*(资料[一二三四五]|后记|卷首语|前言|序言|材料[一二三四五]"
-    r"|[\(（][一二三四五][\)）])(?:\s|$|[\(（])"
+    r"|[\(（][一二三四五][\)）]"
+    r"|情别|志别|义别|悟别|爱别|忆别)(?:\s|$|[\(（])"
+)
+# 整卷尾部"参考答案"独占段：之后所有内容一次性归 answer 模式
+# pinggu/changping 等区无 【答案】/【详解】 markers，全靠 "参考答案" 独段切换
+GLOBAL_ANSWER_HEADER_RE = re.compile(
+    r"^\s*(?:参考答案(?:[与及]评分(?:标准|参考|建议))?"
+    r"|答案及评分(?:标准|参考|建议)?"
+    r"|答案与解析|试题答案|参考解析|试卷答案)\s*$"
 )
 # 题号
 NUM_HEAD_RE = re.compile(r"^\s*(\d{1,2})\s*[.、．,，]\s*(.*)$")
@@ -211,11 +291,12 @@ DAOYU_RE = re.compile(r"^\s*【导语】(.*)$")  # 文章导语
 DIANJING_RE = re.compile(r"^\s*【点睛】(.*)$")  # 多含 古诗文译文
 ANALYSIS_RE = re.compile(r"^\s*【解析】")
 # Cover/noise
+# 注意：**不**把 "参考答案 / 答案及评分" 算 noise（pinggu/changping 用作全局
+# 答案区切换 marker，见 GLOBAL_ANSWER_HEADER_RE）。
 NOISE_LINE_RE = re.compile(
     r"^\s*(?:学校[_\s]+班级|2026\.\d{1,2}|考生须知|\d+\s*年.*?试卷\s*$"
     r"|本试卷共\d+页|考试时间\d+\s*分钟"
-    r"|语文试卷|声明.*?著作权|发布日期|菁优网"
-    r"|参考答案|答案及评分)\s*$")
+    r"|语文试卷|声明.*?著作权|发布日期|菁优网)\s*$")
 
 
 def _is_section_header(line: str) -> tuple[str, str] | None:
@@ -245,8 +326,33 @@ def parse_docx_chinese(md: str, figures_dir: Path) -> dict:
     # **关键**：【答案】 行如果不带 "N." 前缀，content 归属上一题。在 a_lines
     # 里插入 __Q_CTX__:N 标记让 _parse_answers 知道默认归属。
     last_q_before_answer = 0
+    # **R2 sticky 状态**：一旦命中 "参考答案" 独段，整卷剩余进 answer_global，
+    # 永不回 question；section/SUB/NUM_HEAD 全部归 a_lines。
+    # pinggu/changping 的答案区会复出 "一、基础·运用" 大题头，必须用此 flag
+    # 拦住 SECTION_HEADERS 重置 mode。
+    in_answer_block = False
 
     for ln in lines:
+        # **R2**：全局答案区 marker（"参考答案" 独段）→ 永久 sticky answer 模式
+        if GLOBAL_ANSWER_HEADER_RE.match(ln):
+            if mode == "question":
+                a_lines.append(f"__Q_CTX__:{last_q_seen}")
+            in_answer_block = True
+            mode = "answer"
+            a_lines.append(ln)
+            continue
+        # sticky：进入全局答案区后，所有行都进 a_lines（不切 section/不开新题）
+        # **但**过滤掉答案区的 section/sub-header 复出（pinggu 答案区会重排
+        # "一、基础·运用 / (一)/(二)" 等结构标题）以及考试说明类纯噪声
+        if in_answer_block:
+            # 复出的 section/sub header → drop
+            if _is_section_header(ln) or SUB_HEADER_RE.match(ln):
+                continue
+            # 作文评分细则（"25.作文评分标准 / 1．题目未写..."）→ drop
+            if re.match(r"^\s*\d{1,2}\s*[.、．]\s*作文评分", ln):
+                continue
+            a_lines.append(ln)
+            continue
         sec_m = _is_section_header(ln)
         if sec_m:
             cur_typ = sec_m[0]
@@ -529,13 +635,31 @@ def _parse_answers(a_lines: list[str]) -> dict[int, dict]:
 
     def _flush_answer_buf():
         if not answer_buf: return
-        text = " ".join(answer_buf)
-        # 拆按 "N. " 题号锚；若整体无 "N." 前缀，归到 default_q
-        parts = re.split(r"\s+(?=\d{1,2}\s*[.、．])", text)
+        text = "\n".join(answer_buf)
+        # 拆按 "N. " 题号锚；先按空白前缀拆（朝阳/海淀风格），再按 changping
+        # 紧凑风格拆（"1.D2.C3.修改：..."）
+        # 紧凑拆：在 (字母|结句|分值括号) 后紧跟数字+. 处下刀
+        parts: list[str] = re.split(r"(?=(?:^|\n|\s)\d{1,2}\s*[.、．])", text)
+        # 进一步：每个 part 内若仍含紧凑多题（如 "1.D2.C3.修改"），按
+        # "字母/汉字/符号" 后紧跟数字+. 切（限定 1-2 位数 + .，且后接非空白）
+        # 谨慎规则：前一字符必须是 [A-D]/汉字/）/。/分 等"句尾感"字符；
+        # 后跟 2 位数字时上限 ≤30。
+        new_parts: list[str] = []
+        for p in parts:
+            # 在 [A-D]/】 紧跟数字+. 处再切
+            subs = re.split(
+                r"(?<=[A-D])(?=\d{1,2}\s*[.、．])",
+                p,
+            )
+            new_parts.extend(subs)
+        parts = new_parts
         for part in parts:
-            m = re.match(r"\s*(\d{1,2})\s*[.、．]\s*(.+)$", part, re.DOTALL)
+            m = re.match(r"\s*(\d{1,2})\s*[.、．]\s*(.+?)\s*$",
+                         part, re.DOTALL)
             if m:
                 n = int(m.group(1))
+                if n < 1 or n > 30:
+                    continue
                 content = m.group(2).strip()
             elif default_q:
                 # 整段【答案】没 "N." 前缀，归 default_q（如朝阳 Q8 默写、Q14 名著、Q25 作文）
@@ -543,17 +667,29 @@ def _parse_answers(a_lines: list[str]) -> dict[int, dict]:
                 content = part.strip()
             else:
                 continue
+            if not content: continue
             if n not in out:
                 out[n] = {"correct": "", "solution": "", "score": None}
-            # choice 单字母答案
-            m_letter = re.match(r"^([A-D])(?:\s|$)", content)
-            if m_letter and len(content) <= 3:
+            # 去前缀（"答案:"/"答案要点:"/"示例:"/"参考:" 等）便于 letter check
+            stripped = re.sub(
+                r"^(?:答案[:：]?|答案要点[:：]?|答案示例[:：]?|示例[:：]?"
+                r"|参考[:：]?|例文[:：]?|要点[:：]?|修改[:：]?)\s*",
+                "", content)
+            # choice 单字母答案（也兼容 "C（共2分）" / "C\n(2分)" 这类带尾标）
+            m_letter = re.match(r"^([A-D])(?:\s|$|[（\(])", stripped)
+            if m_letter and (len(stripped) <= 3
+                             or re.match(r"^[A-D]\s*[（\(\n]", stripped)
+                             or re.match(r"^[A-D]\s*$", stripped, re.MULTILINE)):
                 out[n]["correct"] = m_letter.group(1)
-            else:
-                sol = re.sub(r"^(?:示例[:：]|参考[:：]|例文[:：]?)\s*", "", content)
-                # 防覆盖：若已有更长 solution，跳过
-                if not out[n]["solution"] or len(sol) > len(out[n]["solution"]):
-                    out[n]["solution"] = sol
+                continue
+            # 多选答案 "AC" / "BD" 之类（北京语文极少，但兼容）
+            m_multi = re.match(r"^([A-D]{2,4})(?:\s|$|[（\(])", stripped)
+            if m_multi and len(m_multi.group(1)) <= 4:
+                out[n]["correct"] = m_multi.group(1)
+                continue
+            # 防覆盖：若已有更长 solution，跳过
+            if not out[n]["solution"] or len(stripped) > len(out[n]["solution"]):
+                out[n]["solution"] = stripped
         answer_buf.clear()
 
     for ln in a_lines:
@@ -561,6 +697,12 @@ def _parse_answers(a_lines: list[str]) -> dict[int, dict]:
         if ln.startswith("__Q_CTX__:"):
             try: default_q = int(ln.split(":",1)[1])
             except: pass
+            continue
+        # **R2**：整卷 "参考答案" 全局 marker → 进入 sticky answer 模式
+        if GLOBAL_ANSWER_HEADER_RE.match(ln):
+            _flush_answer_buf()
+            in_answer_block = True
+            cur_detail = None
             continue
         if ANSWER_MARKER_RE.match(ln):
             _flush_answer_buf()

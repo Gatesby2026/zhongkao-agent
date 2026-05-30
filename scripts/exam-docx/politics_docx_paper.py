@@ -234,6 +234,14 @@ def parse_docx_chinese(md: str, figures_dir: Path) -> dict:
     然后下一大题题面再答案……需用状态机切分。
     """
     lines = md.split("\n")
+    # **P0 答案哨兵**（shunyi 二模教训）：试卷答案 / 参考答案 / 试题答案 / 答案及评分
+    # 这些 marker 之后通常是"一、判断题（每题1分，共10分）"类 section header 复述，
+    # 会让 SECTION_HEADERS 二次匹配产生幽灵题（shunyi: 25→32 题, 70→80 分）。
+    # 修复：进入 sentinel 后，**禁用 section header 二次匹配**，state machine
+    # 维持当前 section 继续吃答案行（让 N. ABCD 等行经 _parse_answers 解析）。
+    _ANSWER_SENTINEL = re.compile(
+        r"^\s*(?:试卷答案|试题答案|参考答案|答案及评分(?:参考|标准)?)\s*$")
+    seen_answer_sentinel = False
     # 1. 用状态机分别收集 q_lines（按 section）和 a_lines（全局）
     # **关键**：解析版结构是 题面+【答案】+【详解】+ sub-header (一)/(二) + 下一组题面
     # +【答案】... 反复交替。所以 sub-header 也要触发 answer→question 切换。
@@ -248,7 +256,16 @@ def parse_docx_chinese(md: str, figures_dir: Path) -> dict:
     last_q_before_answer = 0
 
     for ln in lines:
-        sec_m = _is_section_header(ln)
+        # 进入"试卷答案" sentinel 后，禁用 SECTION_HEADERS 二次匹配，强制进入
+        # answer mode（剩余行直接交 _parse_answers 抽 N. ABCD / 答案表格 / N. (N分) 示例 等）
+        if _ANSWER_SENTINEL.match(ln):
+            seen_answer_sentinel = True
+            if mode == "question":
+                last_q_before_answer = last_q_seen
+                a_lines.append(f"__Q_CTX__:{last_q_before_answer}")
+            mode = "answer"
+            continue
+        sec_m = None if seen_answer_sentinel else _is_section_header(ln)
         if sec_m:
             cur_typ = sec_m[0]
             sections.setdefault(cur_typ, [])
@@ -269,7 +286,7 @@ def parse_docx_chinese(md: str, figures_dir: Path) -> dict:
             continue
         # **sub-header 在 answer 模式 → 切回 question 模式**
         # （古诗文 (二)(三) / 现代文 (一)(二)(三) 都是子段切换信号）
-        if SUB_HEADER_RE.match(ln) and mode == "answer":
+        if SUB_HEADER_RE.match(ln) and mode == "answer" and not seen_answer_sentinel:
             mode = "question"
             if cur_typ:
                 sections[cur_typ].append(ln)
@@ -281,7 +298,7 @@ def parse_docx_chinese(md: str, figures_dir: Path) -> dict:
         # 改为精确排除 answer/detail marker 开头
         is_marker = (ANSWER_MARKER_RE.match(ln) or DETAIL_TITLE_RE.match(ln)
                      or GENERIC_DETAIL_RE.match(ln) or ANALYSIS_RE.match(ln))
-        if (mode == "answer" and q_m and not is_marker):
+        if (mode == "answer" and q_m and not is_marker and not seen_answer_sentinel):
             n = int(q_m.group(1))
             if n > last_q_seen and n <= 30:
                 content = ln.strip()
@@ -546,8 +563,13 @@ def _parse_answers(a_lines: list[str]) -> dict[int, dict]:
     def _flush_answer_buf():
         if not answer_buf: return
         text = " ".join(answer_buf)
-        # 拆按 "N. " 题号锚；若整体无 "N." 前缀，归到 default_q
-        parts = re.split(r"\s+(?=\d{1,2}\s*[.、．])", text)
+        # **P0 范文不切**（changping 二模教训 R1）：default_q ≥ 21 (essay/material 上下文)
+        # 范文/倡议书内部常含 "1./2./3." 分条编号 → 不能按 N. 拆，否则被错切给 Q1-Q3
+        if default_q >= 21:
+            parts = [text]
+        else:
+            # 拆按 "N. " 题号锚；若整体无 "N." 前缀，归到 default_q
+            parts = re.split(r"\s+(?=\d{1,2}\s*[.、．])", text)
         for part in parts:
             m = re.match(r"\s*(\d{1,2})\s*[.、．]\s*(.+)$", part, re.DOTALL)
             if m:
