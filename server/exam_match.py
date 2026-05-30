@@ -124,8 +124,10 @@ EXAMTYPE_EN = {
     "第一学期期末练习": "yi", "九上期末": "yi",
     "第二学期期末练习": "er", "九下期末": "er",
 }
-# KB 当前只 2026，year 识别不出时默认补 2026（避免 detect_failed）
+# KB 当前覆盖年份；超出范围的 year（多数是 qwen-vl-max 把准考证号里
+# 的数字误当年份，例如准考证 ...20106... 被读成 "2021"）按未识别处理
 DEFAULT_YEAR = "2026"
+ALLOWED_YEARS = {"2024", "2025", "2026"}
 
 
 def slug_from_meta(meta: dict) -> dict:
@@ -138,9 +140,9 @@ def slug_from_meta(meta: dict) -> dict:
     district_en = DISTRICT_EN.get(district, "")
     subject_en = SUBJECT_EN.get(subject_cn, "")
     et_en = EXAMTYPE_EN.get(et_cn, "")
-    # year 兜底：标题行没印"2026/2025"等显式年份时（海淀二模常见）
-    # 默认按 KB 当前最新年份处理
-    year_used = year or DEFAULT_YEAR
+    # year 兜底：标题没印年份（海淀二模常见）或被准考证号误读为越界年份
+    # → 默认按 KB 当前覆盖年份(2026)处理
+    year_used = year if year in ALLOWED_YEARS else DEFAULT_YEAR
 
     slug = ""
     if year_used and district_en and et_en and subject_en:
@@ -150,7 +152,8 @@ def slug_from_meta(meta: dict) -> dict:
         "exam_slug": slug, "matched": bool(y), "yaml": str(y) if y else "",
         "district": district, "district_en": district_en,
         "subject": subject_cn, "subject_en": subject_en,
-        "year": year_used, "year_inferred": not year and bool(year_used),
+        "year": year_used,
+        "year_inferred": year != year_used,
         "exam_type": et_cn, "exam_type_en": et_en,
         "student_name": (meta.get("student_name") or "").strip(),
         "student_id": (meta.get("student_id") or "").strip(),
