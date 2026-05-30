@@ -228,6 +228,103 @@ def read_and_grade(stem: str, std_answer: str, solution: str,
 
 # ─── 加载试卷 yaml ───────────────────────────────────────────────────────────
 
+# ─── 兜底：整页 vl-max 看图给一组主观题评分 ─────────────────────────────
+# 用途：Phase B 腾讯云方框 + 严格 fallback 命中率 < 50% 时触发
+# 不依赖框检测/讯飞印刷题号 OCR，跨区稳定
+
+_BATCH_PROMPT = """这是一名学生中考答题卡的多张照片。请逐题在图中**找到该题
+的学生作答**（按题号定位，作答区通常是黑色方框包围的区域），结合标准答案评分。
+
+**忠实学生原作**：没写就 0 分、写错不美化；评分仅供老师参考；
+**只输出本任务给的题号**，不要输出其它题。
+
+# 需评分的主观题
+{qlist}
+
+严格输出 JSON（不要 markdown 围栏）：
+{{
+  "grades": [
+    {{"qnum": 16, "studentAnswer": "学生作答原文（抄读，潦草也尽量原样）",
+      "matchedPoints": ["对的要点1","对的要点2"],
+      "missedPoints":  ["没答出的要点1"],
+      "suggestedScore": 2, "scoreReason": "得分依据 30-80 字",
+      "needsTeacherReview": false}},
+    ...
+  ]
+}}
+
+每题都要给。完全没找到学生作答 → suggestedScore=0、needsTeacherReview=true、
+studentAnswer="（系统未找到该题作答区）"。"""
+
+
+def batch_grade_full_pages(image_paths: list[Path],
+                            subj_qs: list[dict],
+                            *, model: str = "qwen-vl-max",
+                            max_imgs: int = 6) -> dict[int, dict]:
+    """整页看 N 张照片，给 subj_qs 列表里每题一份 grade。
+
+    Args:
+        subj_qs: [{id, type, stem, answer, solution, score}, ...]
+                 (来自 load_paper_questions 的 dict.values() 子集)
+    Returns: {qid_int: grade_dict}  与 read_and_grade 同 schema
+    """
+    client = _client()
+    qlist_lines = []
+    for q in subj_qs:
+        qid = q.get("id")
+        if isinstance(qid, str):
+            m = re.match(r"Q?(\d+)", qid)
+            if m: qid = int(m.group(1))
+        if not isinstance(qid, int): continue
+        qlist_lines.append(
+            f"- 题号{qid}（{q.get('type','')}，{q.get('score',0)} 分）\n"
+            f"  题干：{str(q.get('stem',''))[:300]}\n"
+            f"  标答：{str(q.get('answer',''))[:300]}\n"
+            f"  解析：{str(q.get('solution',''))[:200]}\n"
+        )
+    qlist_txt = "\n".join(qlist_lines)
+    content = []
+    for p in image_paths[:max_imgs]:
+        content.append({
+            "type": "image_url",
+            "image_url": {"url": _img_b64(p)},
+        })
+    content.append({
+        "type": "text",
+        "text": _BATCH_PROMPT.format(qlist=qlist_txt),
+    })
+    resp = client.chat.completions.create(
+        model=model,
+        messages=[{"role": "user", "content": content}],
+        temperature=0.0, max_tokens=6144,
+        response_format={"type": "json_object"}, timeout=240,
+    )
+    raw = resp.choices[0].message.content.strip()
+    raw = re.sub(r"^```(?:json)?\s*|\s*```$", "", raw, flags=re.S).strip()
+    try:
+        data = json.loads(raw)
+    except json.JSONDecodeError:
+        return {}
+    out: dict[int, dict] = {}
+    for g in (data.get("grades") or []):
+        if not isinstance(g, dict): continue
+        try:
+            qn = int(g.get("qnum") or g.get("qid") or 0)
+        except (TypeError, ValueError):
+            continue
+        # 与 read_and_grade 一致的 schema
+        out[qn] = {
+            "correctedText": str(g.get("studentAnswer") or ""),
+            "matchedPoints": list(g.get("matchedPoints") or []),
+            "missedPoints":  list(g.get("missedPoints") or []),
+            "suggestedScore": g.get("suggestedScore"),
+            "scoreReason":   str(g.get("scoreReason") or ""),
+            "needsTeacherReview": bool(g.get("needsTeacherReview", True)),
+            "_source": "vlmax_full_page_fallback",
+        }
+    return out
+
+
 def load_paper_questions(yaml_path: Path) -> dict[int, dict]:
     """从知识库 yaml 加载题目信息。返回 {qid_int: question_dict}"""
     data = yaml.safe_load(yaml_path.read_text(encoding="utf-8"))

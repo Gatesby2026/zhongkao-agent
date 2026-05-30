@@ -111,6 +111,94 @@ def _client():
     )
 
 
+# ============== Phase A 主路径：整页 vl-max 直接看图给答案 ==============
+# 缺字母法只在「学生规范涂黑 + 题号印 `1. A B C D`」时稳定。海淀等区用
+# 方括号 `1.[A][B][C][D]` + 学生用划线/勾选，缺字母法 0% 命中。
+# vl-max 看图判定不依赖作答方式 / 题号印刷格式，跨区稳定。
+
+_VLMAX_CHOICE_PROMPT = """这是一名学生中考答题卡的照片（可能多张，选择题
+填涂区通常在第一张）。请逐题识别**学生实际作答**的字母。
+
+候选题号：{qid_range}（按答题卡上印刷的题号顺序）
+选项：A B C D（部分题为多选，可能选 2-4 个字母）
+
+判定规则：
+- 任何形式的作答标记都算"已选"：涂黑、打勾√、打叉×、划线、方框、圈选 …
+- 多个标记时取**最显著、最完整**的那个
+- 完全没有任何标记 → filled=""
+- 题号必须从题目板**抄读**，宁可漏一题也不要题号错位
+- 多选题选了多个字母 → 字母按 A→D 顺序拼接，如 "ABD"
+- 单选题学生涂了 2 个 → 仍按多选 "AB"（评分时按 0 分处理）
+
+严格输出 JSON（不要 markdown 围栏，不要解释）：
+{{
+  "answers": [
+    {{"qid": 1, "filled": "C", "confidence": 0.95}},
+    {{"qid": 2, "filled": "AB", "confidence": 0.9}},
+    {{"qid": 13, "filled": "", "confidence": 0.5}}
+  ]
+}}
+
+confidence 给 0-1 之间的数值，自评对识别结果的信心。"""
+
+
+def read_choices_vlmax(image_paths: list[Path],
+                       qid_range: tuple[int, int],
+                       model: str = "qwen-vl-max",
+                       max_imgs: int = 6) -> dict[int, dict]:
+    """整页 vl-max 看图判定每题学生作答。
+
+    Args:
+        qid_range: (min_qid, max_qid)，如 (1, 15)
+    Returns:
+        {qid: {"filled": "C"|"AB"|"", "confidence": 0.95}}
+    """
+    client = _client()
+    content = []
+    for p in image_paths[:max_imgs]:
+        content.append({
+            "type": "image_url",
+            "image_url": {"url": f"data:image/jpeg;base64,"
+                          f"{base64.b64encode(_upright_jpeg_bytes(p)).decode()}"},
+        })
+    content.append({
+        "type": "text",
+        "text": _VLMAX_CHOICE_PROMPT.format(
+            qid_range=f"Q{qid_range[0]}-Q{qid_range[1]}"),
+    })
+    resp = client.chat.completions.create(
+        model=model,
+        messages=[{"role": "user", "content": content}],
+        temperature=0.0, max_tokens=2048,
+        response_format={"type": "json_object"}, timeout=120,
+    )
+    raw = resp.choices[0].message.content.strip()
+    raw = re.sub(r"^```(?:json)?\s*|\s*```$", "", raw, flags=re.S).strip()
+    try:
+        data = json.loads(raw)
+    except json.JSONDecodeError:
+        return {}
+    out: dict[int, dict] = {}
+    for it in (data.get("answers") or []):
+        if not isinstance(it, dict):
+            continue
+        try:
+            qid = int(it.get("qid") or it.get("qId") or 0)
+        except (TypeError, ValueError):
+            continue
+        if qid < qid_range[0] or qid > qid_range[1]:
+            continue
+        filled = str(it.get("filled") or "").strip().upper()
+        # 只保留 ABCDE
+        filled = "".join(c for c in filled if c in "ABCDE")
+        try:
+            conf = float(it.get("confidence") or 0)
+        except (TypeError, ValueError):
+            conf = 0.0
+        out[qid] = {"filled": filled, "confidence": round(conf, 2)}
+    return out
+
+
 def ocr_one_image(image_path: Path, model: str = "qwen-vl-ocr-latest") -> list[str]:
     """单张图 OCR，返回行列表。"""
     client = _client()
@@ -215,29 +303,63 @@ def detect_card(
         lines = ocr_one_image(img)
         all_lines.extend(lines)
 
+    # Phase A 双引擎：缺字母法 + 整页 vl-max。vl-max 不依赖学生涂黑/题号格式
+    # （朝阳卡两者一致；海淀卡缺字母法 0% 命中、vl-max 95%+），矛盾时取 vl-max。
     choices_map = parse_choices(all_lines)
+    # subjective_qnums 推断选择题号范围：1 ~ (min(subj)-1)；没有主观题则 1-30
+    if subjective_qnums:
+        max_choice_qid = max(min(subjective_qnums) - 1, 15)
+    else:
+        max_choice_qid = 30
+    vlmax_choices: dict[int, dict] = {}
+    try:
+        print(f"\n  🔎 Phase A2: 整页 vl-max 看选择题（Q1-Q{max_choice_qid}）...",
+              file=sys.stderr)
+        vlmax_choices = read_choices_vlmax(image_paths, (1, max_choice_qid))
+        print(f"     vl-max 识别 {len(vlmax_choices)} 题",
+              file=sys.stderr)
+    except Exception as e:
+        print(f"  ⚠️ vl-max 选择题识别失败: {e}", file=sys.stderr)
+
+    # 合并：vl-max 为主，缺字母法为补充（vl-max 漏的，缺字母法补）
+    merged_qids = set(vlmax_choices.keys()) | set(choices_map.keys())
     answers = []
-    for qid in sorted(choices_map.keys()):
-        seen = choices_map[qid]
-        inf = infer_filled(seen, options)
-        filled = inf["filled"]
-        # 标准 schema 输出
-        if inf["type"] == "choice":
-            filled_val: str | list[str] = filled[0]
-        elif inf["type"] in ("multi_choice", "no_answer", "unknown"):
-            filled_val = filled
+    for qid in sorted(merged_qids):
+        vlm = vlmax_choices.get(qid)
+        seen = choices_map.get(qid, "")
+        if vlm and vlm.get("filled"):
+            # vl-max 给了具体作答（含多选）
+            filled_val: str | list[str] = (
+                list(vlm["filled"]) if len(vlm["filled"]) > 1
+                else vlm["filled"])
+            atype = "multi_choice" if len(vlm["filled"]) > 1 else "choice"
+            conf = vlm.get("confidence", 0.85)
+        elif vlm is not None and not vlm.get("filled"):
+            # vl-max 明确判定"未作答"
+            filled_val = []
+            atype = "choice"
+            conf = vlm.get("confidence", 0.5)
         else:
-            filled_val = filled
+            # vl-max 没识别到，回落缺字母法
+            inf = infer_filled(seen, options)
+            filled = inf["filled"]
+            if inf["type"] == "choice":
+                filled_val = filled[0] if filled else ""
+            else:
+                filled_val = filled
+            atype = "multi_choice" if inf["type"] == "multi_choice" else "choice"
+            conf = inf["confidence"]
         answers.append({
             "qId": f"Q{qid}",
-            "type": "multi_choice" if inf["type"] == "multi_choice" else "choice",
+            "type": atype,
             "filled": filled_val,
-            "confidence": inf["confidence"],
+            "confidence": conf,
             "ocrSeen": seen,
         })
 
     # Phase A 识别到的选择题 qids（用于报告 missing 追踪）
-    choice_qids_parsed = sorted(choices_map.keys())
+    # 双引擎下：以 vl-max ∪ 缺字母法的并集为准
+    choice_qids_parsed = sorted(set(choices_map.keys()) | set(vlmax_choices.keys()))
     subjective_qids_cropped: list[int] = []
 
     # 主观题区裁切 + 手写 OCR（如果传入了 subjective_qnums）
@@ -319,6 +441,34 @@ def detect_card(
                             grade_b_results[qid] = g
                         print(f"    Q{qid}: 建议 {(g or {}).get('suggestedScore','—')} 分",
                               file=sys.stderr)
+
+                # 兜底：腾讯云方框 + 严格 fallback 命中率 < 50% → 整页 vl-max
+                # 看剩余题（不依赖框检测/印刷题号 OCR，跨区稳定）
+                cropped_n = len(subjective_qids_cropped)
+                need = len(subjective_qnums)
+                if need >= 3 and cropped_n / need < 0.5:
+                    missing_qids = sorted(
+                        set(subjective_qnums) - set(subjective_qids_cropped))
+                    miss_qs = [paper[q] for q in missing_qids if q in paper]
+                    print(f"\n  🛟 Phase B 兜底：整页 vl-max 看 {len(miss_qs)} 道"
+                          f"未识别主观题（cropped {cropped_n}/{need}）...",
+                          file=sys.stderr)
+                    try:
+                        from subjective_grade import batch_grade_full_pages
+                        fb = batch_grade_full_pages(image_paths, miss_qs)
+                        for q, g in fb.items():
+                            if q not in grade_b_results and g:
+                                grade_b_results[q] = g
+                                if q not in subjective_qids_cropped:
+                                    subjective_qids_cropped.append(q)
+                                sug = g.get('suggestedScore')
+                                print(f"    Q{q}(兜底): 建议 {sug} 分",
+                                      file=sys.stderr)
+                        subjective_qids_cropped = sorted(set(subjective_qids_cropped))
+                    except Exception as e:
+                        print(f"  ⚠️ vl-max 整页兜底失败: {e}",
+                              file=sys.stderr)
+                        import traceback; traceback.print_exc(file=sys.stderr)
 
             # 加到 answers
             for qid in subjective_qnums:
