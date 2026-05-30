@@ -27,106 +27,22 @@ passages:
 
 questions:
   # ---- Q11 选项 A/B 破损：恢复完整四选项（题源是 A new Airport Express station ___ in the Wangjing area of Beijing in 2027.）
-  11:
-    options:
-      A: built
-      B: was built
-      C: will build
-      D: will be built
-
-  # ---- Q21-23：image-match 三题 stem 用人物介绍兜底（图片选项保留 has_image_options）
-  21:
-    stem: 'Leo: I stay calm when facing danger and enjoy group work. I wish to join in fire safety activities.'
-  22:
-    stem: 'Sam: I do well in many subjects and like staying with classmates. I really want to try real teaching work.'
-  23:
-    stem: 'Cathy: I am patient and good at looking after others. I hope to learn more about basic care work.'
-
-  # ---- Q24-26：独立 passage B "The Day Lisa Lost"，每题补 stem + 四选项
   24:
     type: 单选
-    stem: |
-      阅读下文，回答下列问题（24-26）：
-      The Day Lisa Lost — In high school, athletes still compete for the love of the game and their team. Lisa Kincaid is one of them. I first met Lisa on the volleyball field. Besides being one of the best volleyball players, she also became a legend in running, having taken part in sixty-four races and never lost a single one. However, she felt uneasy talking about her success and would usually change the conversation to others' play. Soon after, Lisa's surprising "loss" in one race moved me a lot. Her coach told her he needed her to run the mile. She had never run that race before, but she agreed to do what was best for the team. Another athlete, Jane, had received special training for the mile. On the last round, Jane suddenly fell down. Lisa could have run past to win, but she stopped. "Get up, Jane! You can do it!" she shouted. Just a few seconds later, Jane got up and continued the race. Jane finished first, while Lisa came second. The audience cheered for her act of sportsmanship. After the race, Lisa said, "I didn't want to win that way." Later, Jane hugged Lisa and tried to give the medal to her. However, Lisa refused.
-
-      24. How did Lisa feel when people talked about her success?
-    options:
-      A: Proud.
-      B: Surprised.
-      C: Unconfident.
-      D: Uncomfortable.
   25:
     type: 单选
-    stem: 'Why did Lisa "lose" the running race at last?'
-    options:
-      A: Because she stopped to encourage Jane.
-      B: Because she was not good at running the mile.
-      C: Because she grew too tired to run faster at the end.
-      D: Because she made a mistake during the last round.
   26:
     type: 单选
-    stem: According to the passage, the writer hopes to ___.
-    options:
-      A: compare high school athletes with famous ones
-      B: explain how to get the first place in high school
-      C: show that losing a game is a bad thing for everyone
-      D: praise an athlete who values sportsmanship over winning
-    solution: D
-
-  # ---- Q27-29：独立 passage C "China's New Commercial Space Project"
   27:
     type: 单选
-    stem: |
-      阅读下文，回答下列问题（27-29）：
-      In 2026, Chinese space companies publicly said that China's first commercial suborbital manned spacecraft would complete its test flight with passengers in 2028. This commercial spacecraft is designed to fly up to 100 kilometers above Earth. The whole flight will last about 20 minutes, and passengers can enjoy 3-6 minutes of weightlessness when the craft reaches the highest point. It can carry 6-7 people. The whole spacecraft is built to be fully reusable so that the cost of space trips can be brought down greatly. However, developing such a reusable spacecraft faces many technical challenges. When the capsule re-enters the atmosphere, its surface temperature can reach more than 1400 ℃, so traditional spacecraft used high-temperature protection materials that could only be used once. Chinese engineers have developed ceramic-based composite materials. They can stand high temperatures and be reused many times without being changed. People who support this project believe that it can facilitate the development of China's commercial space industry, encourage young people to learn science and show China's progress in space technology. However, some people argue that most common families cannot afford the cost of the flight.
-
-      27. What do you know about new materials for spacecraft?
-    options:
-      A: They can be reused many times for space trips.
-      B: They make space trips affordable for common families.
-      C: They help greatly reduce the surface heat of the capsule.
-      D: They have taken the place of traditional ones in spacecraft.
   28:
     type: 单选
-    stem: What does the word "facilitate" in Paragraph 5 most probably mean?
-    options:
-      A: Slow down.
-      B: Push forward.
-      C: Put off.
-      D: Prepare for.
   29:
     type: 单选
-    stem: Which of the following is the best title for the passage?
-    options:
-      A: The Development of the Space Project
-      B: New Materials for a Spacecraft Project
-      C: China's New Commercial Space Project
-      D: The Cost of a Commercial Space Project
-
-  # ---- Q30-33：独立 passage D "Brain & Facial Expressions"
   30:
     type: 单选
-    stem: |
-      阅读下文，回答下列问题（30-33）：
-      Facial expressions are central to social life, yet scientists still don't fully understand how the brain produces them. To find out what's going on in the brain during facial expressions, researchers turned to monkeys. They recorded how the brain worked when the animals communicated with one another in the lab. The team's results, published in Science, came as a surprise. The monkeys' expressions, from a scary face to a friendly "lip-smacking", were produced by both the medial cortex and lateral cortex. These two brain areas were long thought to operate alone, but the study showed that both of them took part in the production of all kinds of facial expressions. The two areas did, however, run at different speeds. Activity in the lateral cortex changed quickly to control the fast facial movements. By comparison, things happened more slowly in the medial cortex, which may help it notice slow background changes that influence facial expressions. What's more, both brain activities showed up before facial movements did, suggesting the brain prepares expressions ahead of time. This raises a question: do monkeys plan the faces they make on purpose? If facial expressions are partly controlled, they may not just show feelings — they might be tools to influence others. Alan Fridlund, an expert who was not part of this study, believes monkeys control their facial expressions carefully, but doubts whether lab tests can fully show how monkeys communicate. Still, the new study offers a new understanding of how facial expressions are made.
-
-      30. What does the study show about the medial cortex and lateral cortex?
-    options:
-      A: They operate at the same speed.
-      B: They control fast facial movements.
-      C: They both help produce facial expressions.
-      D: They record brain activity during communication.
   31:
     type: 单选
-    stem: What can we learn from the study of monkeys' facial expressions?
-    options:
-      A: Facial expressions depend on feelings.
-      B: The brain prepares expressions beforehand.
-      C: The study shows real monkey communication in nature.
-      D: Scientists fully understand monkeys' expression production.
-    knowledge_points:
-      - 信息筛选
-    module: reading
     difficulty: 中等
     recommended_for:
       - L1
@@ -134,21 +50,7 @@ questions:
       - L3
   32:
     type: 单选
-    stem: What is the main idea of Paragraph 4?
-    options:
-      A: Monkeys connect with others by making faces.
-      B: Monkeys' real feelings are shown through their expressions.
-      C: Monkeys may plan and control their expressions on purpose.
-      D: Monkeys' expressions depend on slow background changes.
   33:
     type: 单选
-    stem: What is the writer's main purpose in writing the passage?
-    options:
-      A: To stress connections between feelings and awareness.
-      B: To explain why monkeys' expressions differ from humans'.
-      C: To suggest more research in the monkeys' natural environment.
-      D: To introduce a study on monkeys' brain control of facial expressions.
-
-  # ---- Q38 作文 sol 严重污染（1000+ 字平台广告）→ 清空避免污染相似题推荐
   38:
     solution: ""

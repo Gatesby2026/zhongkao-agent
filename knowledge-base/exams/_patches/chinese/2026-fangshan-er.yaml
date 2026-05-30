@@ -4,27 +4,5 @@
 #         yaml 当前 TOTAL=102 ≠ 100，4 处分值与源 docx「(N分)」不符（净 -2）
 
 questions:
-  1: { score: 2 }   # R1: yaml=1, src=2
-  # R2: docx para 15 "字音读音标注不正确的一项是（2分）" 真值 — Q2 单选 2 分非 3
-  2: { score: 2 }
-  8: { score: 4 }   # R1: yaml=1, src=4 (默写)
-  9: { score: 2 }   # R1: yaml=1, src=2
-  10: { score: 4 }  # R1: yaml=1, src=4 (page-10 line 42 "本题4分")
-  12: { score: 2 }  # R1: yaml=3, src=2
-  14: { score: 5 }  # R1: yaml=2, src=5 (名著)
-  15: { score: 2 }  # R1: yaml=3, src=2
-  16: { score: 2 }  # R1: yaml=5, src=2 (横线补)
-  17: { score: 3 }  # R1: yaml=1, src=3 (page-11 line 20 "本题共3分")
-  # R2: docx para 113 "...让人陶醉；夏日①...；秋日...；冬日...（2分）" 真值
-  #     Q18 是《窗前的树》第 1 题（填空 2 分），非 5；yaml 误把 sub-section "共11分" 当题分
-  18: { score: 2 }
-  # R2: docx para 114 "从【甲】【乙】两处画线句中任选一处...（3分）" 真值
-  19: { score: 3 }
-  20: { score: 3 }  # R1: yaml=1, src=3
-  # R2: docx para 116 "作者借洋槐四季的生命姿态...谈谈带给你的成长启示。（3分）" 真值
-  21: { score: 3 }
-  22: { score: 2 }  # R1: yaml=3, src=2
   23:
-    score: 2        # R1: yaml=4, src=2 (论证)
     solution: '第③段运用了举例论证的论证方法，列举了深圳快递小哥袁石剑利用碎片时间坚持读书圆大学梦、北大保安张俊成通过自学考入北京大学法律系并返乡办学的事例，具体有力地论证了"读书是青年积蓄力量、成长成才的必由之路"的观点，增强了文章的说服力。'  # R2: page-12 OCR "聂剑" 是答案页 OCR 损坏，源文章主体 para 120 是"袁石剑"
-  24: { score: 3 }  # R1: yaml=1, src=3 (page-12 line 19 "本题共3分")

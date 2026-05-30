@@ -1,7 +1,0 @@
-# 朝阳区 2026 二模物理 patches —— image OCR 题型误分类 + sol 噪声
-# 来源：R1 Claude 大模型审核（agent: a48266365754ac25b）
-
-questions:
-  # Q24 误判"作文" → 实为科普阅读（structure "1作文(4分)" 异常源）
-  24:
-    type: "科普阅读"
