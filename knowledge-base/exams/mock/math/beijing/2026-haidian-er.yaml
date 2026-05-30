@@ -13,10 +13,10 @@ questions:
   score: 2
   stem: 图是某几何体的三视图，该几何体是（     ）
   options:
-    A: '[图]'
-    B: '[图]'
-    C: '[图]'
-    D: '[图]'
+    A: 圆柱
+    B: 圆锥
+    C: 三棱柱
+    D: 长方体
   figure: 2026-haidian-er/figures/image3.png
   _figures_extra:
   - image3.png
@@ -48,10 +48,10 @@ questions:
   score: 2
   stem: 如图，$$在数轴上对应的点可能是（     ）
   options:
-    A: '[图]'
-    B: '[图]'
-    C: '[图]'
-    D: '[图]'
+    A: $M$
+    B: $N$
+    C: $P$
+    D: $Q$
   figure: 2026-haidian-er/figures/image7.png
   _figures_extra:
   - image7.png
@@ -80,10 +80,10 @@ questions:
   score: 2
   stem: 小明用投影仪将平板电脑屏幕的画面投屏到墙上，画面形状保持不变．已知该平板电脑屏幕的画面是相邻两边长之比为$3$∶$2$的矩形．若墙上投影画面的短边长为$1 . 2$，则投影画面的长边长为（     ）
   options:
-    A: '[图]'
-    B: '[图]'
-    C: '[图]'
-    D: '[图]'
+    A: $0 . 8$
+    B: $1 . 8$
+    C: $2$
+    D: $2 . 4$
   answer: B
   solution: '投屏后形状不变，投影矩形与原屏幕矩形是相似图形，对应边成比例，根据原矩形边长比列比例式即可求出投影长边长．
 
@@ -115,10 +115,10 @@ questions:
   score: 2
   stem: 先后两次抛掷同一枚质地均匀的硬币，则两次都正面向上的概率是（）
   options:
-    A: '[图]'
-    B: '[图]'
-    C: '[图]'
-    D: '[图]'
+    A: $\frac{1}{2}$
+    B: $\frac{1}{3}$
+    C: $\frac{1}{4}$
+    D: $\frac{3}{4}$
   answer: D
   solution: '本题考查列表法与树状图法，熟练掌握列表法与树状图法以及概率公式是解答本题的关键．列表可得出所有等可能的结果数以及两次都是正面向上的结果数，再利用概率公式可得出答案．
 
@@ -154,10 +154,10 @@ questions:
   score: 2
   stem: 中国古代用“毫厘丝忽”表示极微细的事物，其中“毫”“厘”“丝”“忽”均为我国古代一种微小的长度计量单位．秦朝统一度量衡时，$1$丝约为$0 . 0 0 0 0 0 2 3 1$，则$5$丝用科学记数法可表示为（     ）
   options:
-    A: '[图]'
-    B: '[图]'
-    C: '[图]'
-    D: '[图]'
+    A: $0 . 2 3 1 \times 1 0^{- 5}$
+    B: $2 . 3 1 \times 1 0^{- 6}$
+    C: $1 . 1 5 5 \times 1 0^{- 5}$
+    D: $1 1 . 5 5 \times 1 0^{- 6}$
   answer: C
   solution: '先计算出5丝的长度，再按照科学记数法的规则改写即可，科学记数法表示较小数的形式为$a \times 1 0^{n}$，需满足$1 \leq \left|\right. a \left|\right. < 1 0$，$n$为整数．
 
@@ -185,10 +185,10 @@ questions:
   score: 2
   stem: 如图，$A B \parallel C D$，且$A D \bot B D$，点$E$在$B D$的延长线上．若$\angle 1 = 4 3 \circ$，$\angle 2 = 7 0 \circ$，则$\angle E$的大小为（     ）
   options:
-    A: '[图]'
-    B: '[图]'
-    C: '[图]'
-    D: '[图]'
+    A: $1 3 \circ$
+    B: $2 3 \circ$
+    C: $2 5 \circ$
+    D: $2 7 \circ$
   figure: 2026-haidian-er/figures/image53.png
   _figures_extra:
   - image53.png
@@ -223,10 +223,10 @@ questions:
   score: 2
   stem: 如图，$P$为$\bigodot O$外一点，连接$O P$，分别以$O$，$P$为圆心，$O P$长为半径画弧，两弧交于点$C$，$D ．$连接$C D$交$O P$于点$N$，以$N$为圆心，$N O$为半径作圆，交$\bigodot O$于点$E$，$F$，连接$O E$，$O F$，$E P$．若$\angle E P O = \alpha$，则$\angle E O F$的大小为（     ）
   options:
-    A: '[图]'
-    B: '[图]'
-    C: '[图]'
-    D: '[图]'
+    A: $1 8 0 \circ - 2 \alpha$
+    B: $9 0 \circ - \alpha$
+    C: $2 \alpha$
+    D: $3 \alpha$
   figure: 2026-haidian-er/figures/image76.png
   _figures_extra:
   - image76.png
@@ -273,10 +273,10 @@ questions:
 
     上述结论中，所有正确结论的序号是（     ）'
   options:
-    A: '[图]'
-    B: '[图]'
-    C: '[图]'
-    D: '[图]'
+    A: ①②
+    B: ①③
+    C: ②③
+    D: ①②③
   figure: 2026-haidian-er/figures/image95.png
   _figures_extra:
   - image95.png
@@ -338,7 +338,7 @@ questions:
   type: 填空
   score: 2
   stem: 若分式$\frac{1}{x - 2}$有意义，则实数$x$的取值范围是__________．
-  answer: x≠2
+  answer: $x \neq 2$
   solution: '本题考查分式有意义的条件，分式有意义的条件是分母不为零，因此只需解分母不等于零的不等式即可．
 
     要使分式$\frac{1}{x - 2}$有意义，则分母$x - 2 \neq 0$，解得$x \neq 2$．
@@ -359,7 +359,7 @@ questions:
   type: 填空
   score: 2
   stem: 分解因式：$x y^{2} + 2 x y + x =$______．
-  answer: x(y+1)^2
+  answer: $x \left(\right. y + 1 \left.\right)^{2}$
   solution: '先提取公因式，再利用完全平方公式进行二次分解．
 
     解：$x y^{2} + 2 x y + x = x \left(\right. y^{2} + 2 y + 1 \left.\right) = x \left(\left(\right. y + 1 \left.\right)\right)^{2}$．'
@@ -378,7 +378,7 @@ questions:
   type: 填空
   score: 2
   stem: 关于$x$的一元二次方程$x^{2} - x + c = 0$有两个相等的实数根，则$c$的值为__________．
-  answer: 1/4
+  answer: $\frac{1}{4}$##$0 . 2 5$
   solution: '本题考查了一元二次方程根的个数与根的判别式的关系．根据题意得$= 1^{2} - 4 = 0$，进行计算即可得．
 
     解：若关于$x$的一元二次方程$x^{2} - x + c = 0$有两个相等的实数根，
@@ -409,7 +409,7 @@ questions:
   figure: 2026-haidian-er/figures/image137.png
   _figures_extra:
   - image137.png
-  answer: '0.96'
+  answer: $0 . 9 6$
   solution: '由统计图可知，随着发球次数的增加，发球合格的频率越来越接近$0 . 9 6$，利用频率估计概率，估计这台发球机发球合格的概率为$0 . 9 6$.
 
     解：由统计图可知，随着发球次数的增加，发球合格的频率越来越接近$0 . 9 6$，
@@ -456,7 +456,7 @@ questions:
   figure: 2026-haidian-er/figures/image152.png
   _figures_extra:
   - image152.png
-  answer: 1（答案不唯一，0<k≤2 均可）
+  answer: $1$
   solution: '解：∵矩形$O A C B$，$A \left(\right. 2 , 0 \left.\right)$，$B \left(\right. 0 , 1 \left.\right)$，
 
     ∴$C \left(\right. 2 , 1 \left.\right)$，
@@ -485,7 +485,7 @@ questions:
   _figures_extra:
   - image164.png
   - image177.png
-  answer: 3√3/4
+  answer: $\frac{3 \sqrt{3}}{4}$
   solution: '先证明$\triangle D A F$是等边三角形，求得$D E =$，点$F$到$C D$的距离为$\frac{1}{2} D F = \frac{3}{2}$，再根据三角形的面积公式求解即可．
 
     解：由折叠的性质得$A D = A B = 3$，$\angle F A E = \angle D A E = 3 0 \circ$，
@@ -533,7 +533,7 @@ questions:
     （1）若每箱只装同一种农产品，则一箱农产品的总价值最大是________元；
 
     （2）若每箱中每种农产品最多装$2$包，则一箱农产品的总价值最大是________元．'
-  answer: (1)240; (2)223
+  answer: ①. $2 4 0$    ②. $2 2 3$
   solution: '第一问，分别计算只装同一种农产品时，每箱最多可装的包数，计算对应总价值，比较得到最大值；第二问，根据每种农产品最多装2包的限制，列举所有符合总重量要求的组合，计算总价值后比较得到最大值．
 
     解：（1）对于每箱只装同一种农产品的情况：

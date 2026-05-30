@@ -1,3 +1,9 @@
+# ============================================================
+# 2026年北京通州区一模physics — 自动生成
+# ============================================================
+# OCR: Qwen-VL-OCR  Enrich: qwen-max
+# QC: draft=26  needs_review=0
+
 year: 2026
 district: 通州区
 exam_type: 一模
@@ -228,8 +234,9 @@ questions:
     C: 图乙中，正在过弯的运动员所受合力不为零
     D: 图丙中，运动员受到的重力和地面对他的支持力是一对相互作用力
   answer: C
-  solution: "A．运动员对冰面的压力等于自身重力，同一运动员重力不变，因此甲、丙中运动员对冰面的压力相等；图甲运动员单脚着地，受力面积$S_{甲}$小于图丙双脚着地的受力面积$S_{丙}$，根据压强公式$p = \\frac{F}{S}$，压力$F$相同时，受力面积$S$不同，因此二者对冰面的压强不相等，故A错误； \nB．惯性是物体本身固有的性质，不是力，不能说“受到惯性的作用”，只能说物体“具有惯性”，故B错误；\
-    \ \nC．正在过弯的运动员运动方向不断改变，运动状态发生改变，因此所受合力不为零，故C正确； \nD．图丙中，运动员受到的重力和地面对他的支持力作用在同一物体上，不是一对相互作用力，故D错误。\n故选C。"
+  solution: "A．运动员对冰面的压力等于自身重力，同一运动员重力不变，因此甲、丙中运动员对冰面的压力相等；图甲运动员单脚着地，受力面积$S_{甲}$小于图丙双脚着地的受力面积$S_{丙}$，根据压强公式$p = \\frac{F}{S}$，压力$F$相同时，受力面积$S$不同，因此二者对冰面的压强不相等，故A错误； \n\
+    B．惯性是物体本身固有的性质，不是力，不能说“受到惯性的作用”，只能说物体“具有惯性”，故B错误； \nC．正在过弯的运动员运动方向不断改变，运动状态发生改变，因此所受合力不为零，故C正确； \nD．图丙中，运动员受到的重力和地面对他的支持力作用在同一物体上，不是一对相互作用力，故D错误。\n\
+    故选C。"
   knowledge_points:
   - 牛顿定律
   - 力的概念
@@ -312,7 +319,8 @@ questions:
 - id: 11
   type: 单选
   score: 2
-  stem: '如图所示，质量为$70 \text{kg}$的工人站在水平台上，用竖直向上$500 \text{N}$的拉力$F$将质量为$80 \text{kg}$的重物匀速竖直提升$4 \text{m}$，用时$40 \text{s}$。绳重不计，$g$取$10 \text{N} / \text{kg}$。关于此过程，下列说法正确的是（     ）
+  stem: '如图所示，质量为$70 \text{kg}$的工人站在水平台上，用竖直向上$500 \text{N}$的拉力$F$将质量为$80 \text{kg}$的重物匀速竖直提升$4 \text{m}$，用时$40 \text{s}$。绳重不计，$g$取$10
+    \text{N} / \text{kg}$。关于此过程，下列说法正确的是（     ）
 
 
     ![](figures/image25.png)'
@@ -340,7 +348,8 @@ questions:
 
     故B正确，C错误；
 
-    D．工人受到重力、绳的拉力和工作台的支持力，工作台的支持力$F_{支持} = G_{人} + F = m_{人} g + F = 70 \text{kg} \times 10 \text{N}/\text{kg} + 500 \text{N} = 1200 \text{N}$
+    D．工人受到重力、绳的拉力和工作台的支持力，工作台的支持力$F_{支持} = G_{人} + F = m_{人} g + F = 70 \text{kg} \times 10 \text{N}/\text{kg} + 500 \text{N}
+    = 1200 \text{N}$
 
     工人对平台的压力与支持力是相互作用力，大小相等，工人对平台的压力是1200N，故D错误。
 
@@ -379,7 +388,8 @@ questions:
 
     R1阻值为$R_{1} = R - R_{a b} = 6 \Omega - 5 \Omega = 1 \Omega$，故A错误；
 
-    B．滑片在中点时，电压表在电路中看作断路，电阻棒整个电阻连入电路，电路中的电流不变，为1A，电压表示数为$\left(U^{''}\right)_{\text{V}} = I \left(R^{''}\right)_{a p} = 1 \text{A} \times \frac{1}{2} \times 5 \Omega = 2 . 5 \text{V}$，故B错误；
+    B．滑片在中点时，电压表在电路中看作断路，电阻棒整个电阻连入电路，电路中的电流不变，为1A，电压表示数为$\left(U^{''}\right)_{\text{V}} = I \left(R^{''}\right)_{a p} = 1
+    \text{A} \times \frac{1}{2} \times 5 \Omega = 2 . 5 \text{V}$，故B错误；
 
     C．图乙中，整个电阻棒全部接入电路，当滑片P从a端向下滑动3cm时，电阻棒的阻值$R_{P b} = 5 \Omega - 3 \Omega = 2 \Omega$
 
@@ -444,7 +454,8 @@ questions:
 - id: 14
   type: 多选
   score: 2
-  stem: '小芳用图中所示的装置比较液体比热容大小。烧瓶的规格、液体$\text{A}$与$\text{B}$的质量和初温均相同。通电相同时间，液体$\text{A}$与$\text{B}$升高的温度分别为$\Delta t_{\text{A}}$和$\Delta t_{\text{B}}$，吸收的热量为$Q_{\textit{A}}$和$Q_{\text{B}}$，比热容为$c_{\text{A}}$和$c_{\text{B}}$。不计热量损失，下列说法正确的有（     ）
+  stem: '小芳用图中所示的装置比较液体比热容大小。烧瓶的规格、液体$\text{A}$与$\text{B}$的质量和初温均相同。通电相同时间，液体$\text{A}$与$\text{B}$升高的温度分别为$\Delta t_{\text{A}}$和$\Delta
+    t_{\text{B}}$，吸收的热量为$Q_{\textit{A}}$和$Q_{\text{B}}$，比热容为$c_{\text{A}}$和$c_{\text{B}}$。不计热量损失，下列说法正确的有（     ）
 
 
     ![](figures/image60.png)'
@@ -454,14 +465,17 @@ questions:
     C: 若$R_{甲} ＝ R_{乙}$、$\Delta t_{\text{A}} ＞ \Delta t_{\text{B}}$，则$c_{\text{A}} ＜ c_{\text{B}}$
     D: 若$R_{甲} > R_{乙}$、$\Delta t_{\text{A}} < \Delta t_{\text{B}}$，则$c_{\text{A}} > c_{\text{B}}$
   answer: BCD
-  solution: 'A．根据$Q = c m \Delta t$可知，吸收热量的多少不但与升高的温度有关，还和比热容有关，当$\Delta t_{\text{A}} ＞\Delta t_{\text{B}}$时， $Q_{\text{A}}$ 不一定大于$Q_{\text{B}}$，故A错误；
+  solution: 'A．根据$Q = c m \Delta t$可知，吸收热量的多少不但与升高的温度有关，还和比热容有关，当$\Delta t_{\text{A}} ＞\Delta t_{\text{B}}$时， $Q_{\text{A}}$
+    不一定大于$Q_{\text{B}}$，故A错误；
 
     B．由图可知，甲乙两电阻串联在电路中，根据串联电路电流的特点可知，通过电阻的电流相等，由$Q = I^{2} R t$得，电阻大的，产生的热量多，即液体吸收的热量多，当$R_{甲} < R_{乙}$时，$Q_{\text{A}} < Q_{\text{B}}$，故B正确；
 
-    C．当$R_{甲} = R_{乙}$时，由$Q = I^{2} R t$得，$Q_{\text{A}} = Q_{\text{B}}$，由$\text{c} = \frac{Q}{m \Delta t}$可知，$Q$、$m$相同时，$c$与$\Delta t$成反比，当$\Delta t_{\text{A}} > \Delta t_{\text{B}}$时，$c_{\text{A}} < c_{\text{B}}$，故C正确；
+    C．当$R_{甲} = R_{乙}$时，由$Q = I^{2} R t$得，$Q_{\text{A}} = Q_{\text{B}}$，由$\text{c} = \frac{Q}{m \Delta t}$可知，$Q$、$m$相同时，$c$与$\Delta
+    t$成反比，当$\Delta t_{\text{A}} > \Delta t_{\text{B}}$时，$c_{\text{A}} < c_{\text{B}}$，故C正确；
 
-    D．当$R_{甲} > R_{乙}$时，由$Q = I^{2} R t$得，$Q_{\text{A}} > Q_{\text{B}}$，由$\text{c} = \frac{Q}{m \Delta t}$可知，当$m$相同，且$\Delta t_{\text{A}} < \Delta t_{\text{B}}$时，$\frac{Q_{\text{A}}}{m \Delta t_{\text{A}}}
-    > \frac{Q_{\text{B}}}{m \Delta t_{\text{B}}}$，即$c_{\text{A}} > c_{\text{B}}$，故D正确。
+    D．当$R_{甲} > R_{乙}$时，由$Q = I^{2} R t$得，$Q_{\text{A}} > Q_{\text{B}}$，由$\text{c} = \frac{Q}{m \Delta t}$可知，当$m$相同，且$\Delta
+    t_{\text{A}} < \Delta t_{\text{B}}$时，$\frac{Q_{\text{A}}}{m \Delta t_{\text{A}}} > \frac{Q_{\text{B}}}{m \Delta t_{\text{B}}}$，即$c_{\text{A}}
+    > c_{\text{B}}$，故D正确。
 
     故选BCD。'
   knowledge_points:
@@ -489,15 +503,18 @@ questions:
     C: B点到桶底的距离为7cm
     D: 水面在A时打开出水管，经过5min，直尺40cm刻度线与桶口上沿齐平
   answer: BC
-  solution: 'A．由$\rho = \frac{m}{V}$可得木块密度$\rho_{木} = \frac{m_{木}}{V_{木}} = \frac{40 \text{g}}{10 \text{cm}^{2} \times 8 \text{cm}} = 0 . 5 \text{g}/\text{cm}^{3}$，故A错误。
+  solution: 'A．由$\rho = \frac{m}{V}$可得木块密度$\rho_{木} = \frac{m_{木}}{V_{木}} = \frac{40 \text{g}}{10 \text{cm}^{2} \times 8 \text{cm}}
+    = 0 . 5 \text{g}/\text{cm}^{3}$，故A错误。
 
     B．从A点降到B点直尺下降距离$\Delta h = 50 \text{cm} - 30 \text{cm} = 20 \text{cm}$
 
     由图可知木块和直尺组成的整体漂浮在水中。液面从A点降到B点总重力不变，则受到的浮力不变，排开水的体积也不变。则B点与A点的高度差等于直尺下降距离20cm，故B正确。
 
-    C．木块和直尺组成的整体漂浮在水中，所受浮力$F_{浮} = \rho_{水} g V_{排} = G_{总} = m_{总} g = \left(0,.,04,\text{g},+,0,.,02,\text{g}\right) \times 10 \text{N}/\text{kg} = 0 . 6 \text{N}$
+    C．木块和直尺组成的整体漂浮在水中，所受浮力$F_{浮} = \rho_{水} g V_{排} = G_{总} = m_{总} g = \left(0,.,04,\text{g},+,0,.,02,\text{g}\right) \times
+    10 \text{N}/\text{kg} = 0 . 6 \text{N}$
 
-    则$V_{排} = \frac{F_{浮}}{\rho_{水} g} = \frac{0 . 6 \text{N}}{1 . 0 \times 10^{3} \text{kg}/\text{m}^{3} \times 10 \text{N}/\text{kg}} = 0 . 6 \times 10^{- 4} \text{m}^{\text{3}} = 60 \text{cm}^{3}$
+    则$V_{排} = \frac{F_{浮}}{\rho_{水} g} = \frac{0 . 6 \text{N}}{1 . 0 \times 10^{3} \text{kg}/\text{m}^{3} \times 10 \text{N}/\text{kg}}
+    = 0 . 6 \times 10^{- 4} \text{m}^{\text{3}} = 60 \text{cm}^{3}$
 
     木块浸入的深度$\Delta h = \frac{V_{排}}{S_{木}} = \frac{60 \text{cm}^{3}}{10 \text{cm}^{2}} = 6 \text{cm}$
 
@@ -617,7 +634,8 @@ questions:
 
     （4）画出实验数据记录表。'
   answer: ''
-  solution: '（1）垂直    （2）替代蜡烛A，便于比较像与物的高度关系      （3）蜡烛A的高度    （4）  | 实验次数 | 蜡烛A的高度h物（cm） | 蜡烛B的高度h像（cm） | |---|---|---| | 1 |  |  | | 2 |  |  | | 3 |  |  |
+  solution: '（1）垂直    （2）替代蜡烛A，便于比较像与物的高度关系      （3）蜡烛A的高度    （4）  | 实验次数 | 蜡烛A的高度h物（cm） | 蜡烛B的高度h像（cm） | |---|---|---| |
+    1 |  |  | | 2 |  |  | | 3 |  |  |
 
 
     详解：（1）
@@ -699,8 +717,8 @@ questions:
 - id: 20
   type: 实验探究
   score: 3
-  stem: '小芳用下面的方法测量某种液体的密度。她先用调好的天平测出烧杯A和所盛水的总质量为50g，然后用细线拴着一个小球，将其浸没在烧杯A内的水中，不触碰烧杯，天平平衡后如图甲所示，此时天平的测量值为________g。接着她用天平测出烧杯B和所盛待测液体的总质量为50g，再用细线拴着擦干后的同一个小球浸没在烧杯B内的液体中，不触碰烧杯，天平平衡后如图乙所示。已知$\rho_{水} ＝ 1 \times
-    10^{3} \text{kg}/\text{m}^{\text{3}}$，则待测液体的密度为________$\text{kg}/\text{m}^{\text{3}}$。
+  stem: '小芳用下面的方法测量某种液体的密度。她先用调好的天平测出烧杯A和所盛水的总质量为50g，然后用细线拴着一个小球，将其浸没在烧杯A内的水中，不触碰烧杯，天平平衡后如图甲所示，此时天平的测量值为________g。接着她用天平测出烧杯B和所盛待测液体的总质量为50g，再用细线拴着擦干后的同一个小球浸没在烧杯B内的液体中，不触碰烧杯，天平平衡后如图乙所示。已知$\rho_{水}
+    ＝ 1 \times 10^{3} \text{kg}/\text{m}^{\text{3}}$，则待测液体的密度为________$\text{kg}/\text{m}^{\text{3}}$。
 
 
     ![](figures/image120.png)'
@@ -710,14 +728,15 @@ questions:
 
     详解：甲图中砝码总质量为$50 \text{g} + 10 \text{g} = 60 \text{g}$，游码对应刻度为$2 \text{g}$，因此总测量值为$60 \text{g} + 2 \text{g} = 62 \text{g}$
 
-    小球浸没不接触烧杯时，根据力的作用是相互的，小球对液体向下的压力等于小球受到的浮力，大小等于天平增加的重力，即$F_{浮} = \Delta m g$；水中：增加的质量$\Delta m_{水} = 62 \text{g} - 50 \text{g} = 12 \text{g}$
+    小球浸没不接触烧杯时，根据力的作用是相互的，小球对液体向下的压力等于小球受到的浮力，大小等于天平增加的重力，即$F_{浮} = \Delta m g$；水中：增加的质量$\Delta m_{水} = 62 \text{g} - 50 \text{g}
+    = 12 \text{g}$
 
     由阿基米德原理，得$\rho_{水} g V_{球} = \Delta m_{水} g$，即$V_{球} = \frac{\Delta m_{水}}{\rho_{水}}$​​
 
     根据乙图天平读数可得总质量为$64 . 4 \text{g}$，增加的质量$\Delta m_{液} = 64 . 4 \text{g} - 50 \text{g} = 14 . 4 \text{g}$
 
-    同理可得$\rho_{液} g V_{球} = \Delta m_{液} g$，代入$V_{球}$​整理可得$\rho_{液} = \frac{\Delta m_{液}}{\Delta m_{水}} \rho_{水} = \frac{14 . 4 \text{g}}{12 \text{g}} \times 1 \times 10^{3} \text{kg}/\text{m}^{3} = 1 .
-    2 \times 10^{3} \text{kg}/\text{m}^{3}$'
+    同理可得$\rho_{液} g V_{球} = \Delta m_{液} g$，代入$V_{球}$​整理可得$\rho_{液} = \frac{\Delta m_{液}}{\Delta m_{水}} \rho_{水} = \frac{14
+    . 4 \text{g}}{12 \text{g}} \times 1 \times 10^{3} \text{kg}/\text{m}^{3} = 1 . 2 \times 10^{3} \text{kg}/\text{m}^{3}$'
   knowledge_points:
   - 实验方法
   - 数据处理
@@ -812,7 +831,6 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
-  options: null
 - id: 23
   type: 实验探究
   score: 7
@@ -937,12 +955,14 @@ questions:
 
     由图甲可知，小灯泡与滑动变阻器串联，小灯泡正常发光时两端电压等于额定电压，即$U_{\text{L}} = U_{额} = 2 . 5 \text{V}$
 
-    由图乙$I_{\text{L}} - U_{\text{L}}$关系图像可得，此时小灯泡的额定电流$I_{额} = 0 . 25 \text{A}$。小灯泡的额定功率$P_{额} = U_{额} I_{额} = 2 . 5 \text{V} \times 0 . 25 \text{A}=\text{0}.\text{625W}$
+    由图乙$I_{\text{L}} - U_{\text{L}}$关系图像可得，此时小灯泡的额定电流$I_{额} = 0 . 25 \text{A}$。小灯泡的额定功率$P_{额} = U_{额} I_{额} = 2 . 5 \text{V}
+    \times 0 . 25 \text{A}=\text{0}.\text{625W}$
 
 
     （2）
 
-    当电路电流$I = 0 . 1 \text{A}$时，串联电路电流处处相等，因此通过滑动变阻器的电流也为0.1A，由图乙可得，此时小灯泡两端电压$U_{\text{L}} = 0 . 5 \text{V}$。根据串联电路的电压规律，总电压等于各部分电压之和，可得滑动变阻器两端电压$U_{滑} = U - U_{\text{L}} = 3 \text{V} - 0 . \text{5V}=\text{2}.\text{5V}$
+    当电路电流$I = 0 . 1 \text{A}$时，串联电路电流处处相等，因此通过滑动变阻器的电流也为0.1A，由图乙可得，此时小灯泡两端电压$U_{\text{L}} = 0 . 5 \text{V}$。根据串联电路的电压规律，总电压等于各部分电压之和，可得滑动变阻器两端电压$U_{滑}
+    = U - U_{\text{L}} = 3 \text{V} - 0 . \text{5V}=\text{2}.\text{5V}$
 
     滑动变阻器消耗的电能$W = U_{滑} I t = 2 . 5 \text{V} \times 0 . 1 \text{A} \times 60 \text{s}=\text{15J}$'
   knowledge_points:
@@ -985,7 +1005,8 @@ questions:
 
     飞艇总重力$G_{飞艇} = m_{飞艇} g = 3480 \text{kg} \times 10 \text{N}/\text{kg} = 34800 \text{N}$
 
-    由表中数据可知，海拔1200m处空气密度为$1 . 070 \text{kg}/\text{m}^{3}$，飞艇受到的浮力$F_{浮} = \rho_{空} g V_{排} = 1 . 070 \text{kg}/\text{m}^{3} \times 10 \text{N}/\text{kg} \times 3000 \text{m}^{\text{3}} =\text{32100N}$
+    由表中数据可知，海拔1200m处空气密度为$1 . 070 \text{kg}/\text{m}^{3}$，飞艇受到的浮力$F_{浮} = \rho_{空} g V_{排} = 1 . 070 \text{kg}/\text{m}^{3}
+    \times 10 \text{N}/\text{kg} \times 3000 \text{m}^{\text{3}} =\text{32100N}$
 
     在海拔1200m高空中悬停时，飞艇受到竖直向下的重力、竖直向上的浮力和竖直向上的推力，发动机提供的推力$F = G_{飞艇} - F_{浮} = 34800 \text{N} - 32100 \text{N}=\text{2700N}$
 
