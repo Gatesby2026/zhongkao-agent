@@ -116,8 +116,16 @@ def kb_yaml_for_slug(slug: str) -> Path | None:
     return None
 
 
-EXAMTYPE_EN = {"一模": "yi", "二模": "er", "三模": "san",
-               "中考": "zhenti", "中考真题": "zhenti"}
+EXAMTYPE_EN = {
+    "一模": "yi", "二模": "er", "三模": "san",
+    "中考": "zhenti", "中考真题": "zhenti",
+    # 海淀等区把"综合练习（一/二）"叫"第一/第二学期期末练习"
+    # qwen-vl-max 在 prompt 已加映射，这里再兜一层别名
+    "第一学期期末练习": "yi", "九上期末": "yi",
+    "第二学期期末练习": "er", "九下期末": "er",
+}
+# KB 当前只 2026，year 识别不出时默认补 2026（避免 detect_failed）
+DEFAULT_YEAR = "2026"
 
 
 def slug_from_meta(meta: dict) -> dict:
@@ -130,16 +138,20 @@ def slug_from_meta(meta: dict) -> dict:
     district_en = DISTRICT_EN.get(district, "")
     subject_en = SUBJECT_EN.get(subject_cn, "")
     et_en = EXAMTYPE_EN.get(et_cn, "")
+    # year 兜底：标题行没印"2026/2025"等显式年份时（海淀二模常见）
+    # 默认按 KB 当前最新年份处理
+    year_used = year or DEFAULT_YEAR
 
     slug = ""
-    if year and district_en and et_en and subject_en:
-        slug = f"{year}-{district_en}-{et_en}-{subject_en}"
+    if year_used and district_en and et_en and subject_en:
+        slug = f"{year_used}-{district_en}-{et_en}-{subject_en}"
     y = kb_yaml_for_slug(slug) if slug else None
     return {
         "exam_slug": slug, "matched": bool(y), "yaml": str(y) if y else "",
         "district": district, "district_en": district_en,
         "subject": subject_cn, "subject_en": subject_en,
-        "year": year, "exam_type": et_cn, "exam_type_en": et_en,
+        "year": year_used, "year_inferred": not year and bool(year_used),
+        "exam_type": et_cn, "exam_type_en": et_en,
         "student_name": (meta.get("student_name") or "").strip(),
         "student_id": (meta.get("student_id") or "").strip(),
     }
