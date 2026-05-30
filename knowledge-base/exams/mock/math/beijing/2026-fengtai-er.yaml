@@ -1,28 +1,47 @@
-year: 2026
-district: 丰台区
-exam_type: 二模
+# ============================================================
+# None年北京真题math — 自动生成
+# ============================================================
+# OCR: Qwen-VL-OCR  Enrich: qwen-max
+# QC: draft=28  needs_review=0
+
+year: null
+district: ''
+exam_type: 真题
 subject: math
 full_score: 100
 duration_minutes: 120
 total_questions: 28
 structure: 8单选(16分) + 8填空(16分) + 12解答(68分)
+passages: []
 questions:
 - id: 1
   type: 单选
   score: 2
   stem: 下面图形中，既是轴对称图形又是中心对称图形的是（   ）
   options:
-    A: '[图]'
-    B: '[图]'
-    C: '[图]'
-    D: '[图]'
+    A: '![](figures/image4.png)'
+    B: '![](figures/image5.png)'
+    C: '![](figures/image6.png)'
+    D: '![](figures/image7.png)'
   has_image_options: true
   figure: 2026-fengtai-er/figures/image4.png
+  _figures_extra:
+  - image4.png
+  - image5.png
+  - image6.png
+  - image7.png
   answer: D
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 轴对称图形
+  - 中心对称图形
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 2
@@ -36,9 +55,15 @@ questions:
     D: $2 . 5 \times 10^{- 7}$
   answer: B
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 科学记数法
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 3
@@ -52,9 +77,15 @@ questions:
     D: $\left(\right. - 2 x \left.\right)^{2} = - 4 x^{2}$
   answer: C
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 幂的运算
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 4
@@ -68,9 +99,16 @@ questions:
     D: $a b < 0$
   answer: C
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 实数的性质
+  - 绝对值
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 5
@@ -83,11 +121,19 @@ questions:
     C: $120 \circ$
     D: $150 \circ$
   figure: 2026-fengtai-er/figures/image27.jpeg
+  _figures_extra:
+  - image27.jpeg
   answer: B
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 圆的基本性质
+  - 圆周角定理
+  module: circles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 6
@@ -101,33 +147,48 @@ questions:
     D: '1'
   answer: C
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 概率的计算
+  module: statisticsAndProbability
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 7
   type: 单选
   score: 2
-  stem: 在平面直角坐标系$x O y$中，点$A \left(3,0\right)$，点$B \left(0,4\right)$，记点A，B之间的距离为a．将$\triangle A O B$沿x轴翻折$180 \circ$，再沿射线$A B$的方向平移a个单位长度后，点B的对应点$B^{'}$的坐标为（   ）
+  stem: 在平面直角坐标系$x O y$中，点$A \left(3,0\right)$，点$B \left(0,4\right)$，记点A，B之间的距离为a．将$\triangle A O B$沿x轴翻折$180 \circ$，再沿射线$A
+    B$的方向平移a个单位长度后，点B的对应点$B^{'}$的坐标为（   ）
   options:
     A: $\left(-,3,0\right)$
     B: $\left(0,,-,3\right)$
     C: $\left(-,4,0\right)$
     D: $\left(0,,-,4\right)$
   figure: 2026-fengtai-er/figures/image42.jpeg
+  _figures_extra:
+  - image42.jpeg
   answer: A
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 平面直角坐标系
+  - 图形的平移与翻折
+  module: geometryComprehensive
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 8
   type: 单选
   score: 2
-  stem: '如图，正方形$A B C D$的边长为2，将边$A B$，$B C$，$C D$，$D A$分别绕点A，B，C，D顺时针旋转$\alpha$（$0 \circ < \alpha < 180 \circ$），得到$A B^{''}$，$B C^{''}$，$C D^{''}$，$D A^{''}$，连接$A^{''} B^{''}$，$B^{''} C^{''}$，$C^{''} D^{''}$，$D^{''}
-    A^{''}$．给出下面四个结论：（   ）
+  stem: '如图，正方形$A B C D$的边长为2，将边$A B$，$B C$，$C D$，$D A$分别绕点A，B，C，D顺时针旋转$\alpha$（$0 \circ < \alpha < 180 \circ$），得到$A B^{''}$，$B
+    C^{''}$，$C D^{''}$，$D A^{''}$，连接$A^{''} B^{''}$，$B^{''} C^{''}$，$C^{''} D^{''}$，$D^{''} A^{''}$．给出下面四个结论：（   ）
 
 
     ①对于任意$\alpha$都有$C^{''} B \bot A B^{''}$；
@@ -145,11 +206,20 @@ questions:
     C: ①③④
     D: ②③④
   figure: 2026-fengtai-er/figures/image62.jpeg
+  _figures_extra:
+  - image62.jpeg
   answer: B
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 正方形的性质
+  - 旋转的性质
+  - 几何图形的面积和周长
+  module: quadrilaterals
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 9
@@ -158,9 +228,15 @@ questions:
   stem: 分解因式：$a b^{2} + 2 a b + a =$________．
   answer: $a \left(\right. b + 1 \left.\right)^{2}$
   solution: $a \left(\right. b + 1 \left.\right)^{2}$
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 因式分解
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 10
@@ -169,20 +245,32 @@ questions:
   stem: 写出一个比$\sqrt{3}$大且比$\sqrt{10}$小的整数：________．
   answer: 答案不唯一，如：2
   solution: 答案不唯一，如：2
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 实数的大小比较
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 11
   type: 填空
   score: 2
-  stem: 在平面直角坐标系$x O y$中，点$\left(x_{1},,,y_{1}\right)$，$\left(x_{2},,,y_{2}\right)$在反比例函数$y = - \frac{1}{x}$的图象上，当$x_{1} < 0 < x_{2}$时，$y_{1}$________$y_{2}$（填“＞”“＝”或“＜”）．
+  stem: 在平面直角坐标系$x O y$中，点$\left(x_{1},,,y_{1}\right)$，$\left(x_{2},,,y_{2}\right)$在反比例函数$y = - \frac{1}{x}$的图象上，当$x_{1} <
+    0 < x_{2}$时，$y_{1}$________$y_{2}$（填“＞”“＝”或“＜”）．
   answer: '>'
   solution: '>'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 反比例函数的性质
+  module: functions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 12
@@ -201,21 +289,37 @@ questions:
     为提高客房的出租率，该民宿今年暑期最应该多设置床位数量是________的客房．'
   answer: '3'
   solution: '3'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 数据分析
+  - 统计与概率
+  module: statisticsAndProbability
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 13
   type: 填空
   score: 2
-  stem: 图1是中国园林建筑中的爬山廊（连接山坡上下两组建筑的廊子），某学习小组在此开展乐学公园实践活动——使用自制测坡仪测量爬山廊的倾斜角度．图2是该小组实践报告中的测量示意图及操作说明．若测得细绳$O E$与$0 \circ$刻度线的夹角$\angle D O E = 68 \circ$，则爬山廊的倾斜角度$\alpha$＝________°．
+  stem: 图1是中国园林建筑中的爬山廊（连接山坡上下两组建筑的廊子），某学习小组在此开展乐学公园实践活动——使用自制测坡仪测量爬山廊的倾斜角度．图2是该小组实践报告中的测量示意图及操作说明．若测得细绳$O E$与$0 \circ$刻度线的夹角$\angle
+    D O E = 68 \circ$，则爬山廊的倾斜角度$\alpha$＝________°．
   figure: 2026-fengtai-er/figures/image80.jpeg
+  _figures_extra:
+  - image80.jpeg
+  - image81.png
   answer: '22'
   solution: '22'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 三角函数的应用
+  module: triangles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 14
@@ -226,23 +330,41 @@ questions:
 
     根据以上信息，判断他离开的时刻可能是________（写出一个即可）．'
   figure: 2026-fengtai-er/figures/image82.png
+  _figures_extra:
+  - image82.png
   answer: 答案不唯一，如：7:30
   solution: 答案不唯一，如：7:30
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 时间计算
+  - 费用计算
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 15
   type: 填空
   score: 2
-  stem: 如图，矩形$A B C D$中，$A B = 2$，$B C = 6$，E是边$C D$延长线上一点，且$D E = 1$，$A F \bot B E$，垂足为F，则$\triangle B C F$和$\triangle E C F$的面积比为________．
+  stem: 如图，矩形$A B C D$中，$A B = 2$，$B C = 6$，E是边$C D$延长线上一点，且$D E = 1$，$A F \bot B E$，垂足为F，则$\triangle B C F$和$\triangle E
+    C F$的面积比为________．
   figure: 2026-fengtai-er/figures/image91.jpeg
+  _figures_extra:
+  - image91.jpeg
   answer: $\frac{2}{13}$
   solution: $\frac{2}{13}$
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 相似三角形的性质
+  - 矩形的性质
+  module: triangles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 16
@@ -261,9 +383,15 @@ questions:
     若四条流水线都开通，1天最多生产该产品________个，5天最多生产该产品________个．'
   answer: 87；460
   solution: 87；460
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 信息提取/段落梳理
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 17
@@ -274,9 +402,18 @@ questions:
   solution: '解：原式$= 3 + 2 \times \frac{1}{2} - 2 - 1$，
 
     $= 1$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 绝对值
+  - 三角函数
+  - 立方根
+  - 零指数幂
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 18
@@ -284,17 +421,22 @@ questions:
   score: 5
   stem: 解方程：$\frac{x}{x + 1} - \frac{1}{x - 1} = 1$．
   answer: ''
-  solution: '解：方程两边乘$\left(\right. x + 1 \left.\right) \left(\right. x - 1 \left.\right)$，得$x \left(\right. x - 1 \left.\right) - \left(\right. x + 1 \left.\right) = \left(\right. x + 1 \left.\right) \left(\right.
-    x - 1 \left.\right)$．
+  solution: '解：方程两边乘$\left(\right. x + 1 \left.\right) \left(\right. x - 1 \left.\right)$，得$x \left(\right. x - 1 \left.\right)
+    - \left(\right. x + 1 \left.\right) = \left(\right. x + 1 \left.\right) \left(\right. x - 1 \left.\right)$．
 
     解得$x = 0$．
 
     检验：当$x = 0$时，$\left(\right. x + 1 \left.\right) \left(\right. x - 1 \left.\right) \neq 0$．
 
     ∴原分式方程的解是$x = 0$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 分式方程的解法
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 19
@@ -302,16 +444,23 @@ questions:
   score: 5
   stem: '下面给出了勾股定理的逆定理及其证明方法，请根据证明中辅助线的作法用尺规完成作图，并将证明过程补充完整．
 
-    | 勾股定理的逆定理：如果三角形的三边长$a$，$b$，$c$满足$a^{2} + b^{2} = c^{2}$，那么这个三角形是直角三角形． 已知：在$\triangle A B C$中，$B C = a$，$A C = b$，$A B = c$，且$a^{2} + b^{2} = c^{2}$． 求证：$\triangle A B C$是直角三角形．      证明：作$\angle M
-    C^{''} N = 90 \circ$，在$C^{''} M$上截取$C^{''} B^{''} = a$，$C^{''} N$上截取$C^{''} A^{''} = b$，连接$A^{''} B^{''}$． $\therefore A^{''} \left(B^{''}\right)^{2} = B^{''} \left(C^{''}\right)^{2} + A^{''} \left(C^{''}\right)^{2}$（________）（填推理的依据），
-    即$A^{''} \left(B^{''}\right)^{2} = a^{2} + b^{2}$． $\because$________（已知）， $\therefore A^{''} B^{''} = c$． 在$\triangle A B C$和$\triangle A^{''} B^{''} C^{''}$中， $\because B C = a = B^{''} C^{''}$，$A
-    C = b = A^{''} C^{''}$，________， $\therefore \triangle A B C ≌ \triangle A^{''} B^{''} C^{''}$（________）（填推理的依据）． $\therefore \angle C = \angle C '' = 90 \circ$，即$\triangle A B C$是直角三角形． |
+    | 勾股定理的逆定理：如果三角形的三边长$a$，$b$，$c$满足$a^{2} + b^{2} = c^{2}$，那么这个三角形是直角三角形． 已知：在$\triangle A B C$中，$B C = a$，$A C = b$，$A
+    B = c$，且$a^{2} + b^{2} = c^{2}$． 求证：$\triangle A B C$是直角三角形．      证明：作$\angle M C^{''} N = 90 \circ$，在$C^{''} M$上截取$C^{''}
+    B^{''} = a$，$C^{''} N$上截取$C^{''} A^{''} = b$，连接$A^{''} B^{''}$． $\therefore A^{''} \left(B^{''}\right)^{2} = B^{''} \left(C^{''}\right)^{2}
+    + A^{''} \left(C^{''}\right)^{2}$（________）（填推理的依据）， 即$A^{''} \left(B^{''}\right)^{2} = a^{2} + b^{2}$． $\because$________（已知），
+    $\therefore A^{''} B^{''} = c$． 在$\triangle A B C$和$\triangle A^{''} B^{''} C^{''}$中， $\because B C = a = B^{''} C^{''}$，$A
+    C = b = A^{''} C^{''}$，________， $\therefore \triangle A B C ≌ \triangle A^{''} B^{''} C^{''}$（________）（填推理的依据）． $\therefore
+    \angle C = \angle C '' = 90 \circ$，即$\triangle A B C$是直角三角形． |
 
     |---|'
   figure: 2026-fengtai-er/figures/image104.jpeg
+  _figures_extra:
+  - image104.jpeg
+  - image105.jpeg
   answer: ''
   solution: '解：如图
 
+    ![](figures/image304.png)
 
     勾股定理；
 
@@ -320,9 +469,15 @@ questions:
     $A B = c = A^{''} B^{''}$；
 
     SSS．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 勾股定理
+  - 三角形全等
+  module: triangles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 20
@@ -343,9 +498,15 @@ questions:
     $\because$123 g不低于120 g，且不高于130 g，
 
     ∴这周午餐蛋白质摄入总量在建议范围内，'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 方程组的应用
+  - 不等式的应用
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 21
@@ -358,6 +519,8 @@ questions:
 
     （2）若$\angle A C B = 90 \circ$，$\angle B = 30 \circ$，$A B = 6$，$A D = B D$，求$D F$的长．'
   figure: 2026-fengtai-er/figures/image130.jpeg
+  _figures_extra:
+  - image130.jpeg
   answer: ''
   solution: '（1）证明：
 
@@ -398,9 +561,15 @@ questions:
     $\because$四边形ADCF是平行四边形，
 
     $\therefore D F = 2 D E = \sqrt{21}$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 平行四边形的判定
+  - 直角三角形的性质
+  module: triangles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 22
@@ -421,19 +590,31 @@ questions:
     $\therefore$一次函数的表达式为$y = x - 2$．
 
     （2）$- 2 < m < 0$或$0 < m < 1$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 一次函数的性质
+  - 一次函数与正比例函数的关系
+  module: functions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 23
   type: 解答
   score: 6
-  stem: "某校开展了校园AI创新大赛，比赛分为知识竞答和实践成果两个板块，每个板块评分均采用100分制（分值为整数），每名选手的个人综合得分由知识竞答和实践成果两个板块的分数按照$4 : 6$计算得到．七年级和八年级各选派了10名选手参加．下面给出了部分信息．\na．七、八年级各10名选手的知识竞答和实践成果两个板块得分情况统计图：\n    \nb．七、八年级各10名选手的个人综合得分频数分布直方图（数据分7组：第1组$60\
-    \ \\leq x < 65$，第2组$65 \\leq x < 70$，第3组$70 \\leq x < 75$，第4组$75 \\leq x < 80$，第5组$80 \\leq x < 85$，第6组$85 \\leq x < 90$，第7组$90 \\leq x \\leq 95$）：\n    \n根据以上信息，回答下列问题：\n（1）七年级知识竞答得分最高的选手，在本年级的实践成果得分中排名是第________名；\n\
-    （2）八年级选手中个人综合得分的最高分是________；\n（3）在两个年级各10名选手中，记七、八年级选手知识竞答得分的中位数分别是$m_{1}$，$m_{2}$，则$m_{1}$________$m_{2}$（填“$>$”“$=$”或“$<$”），记七、八年级选手实践成果得分的方差分别是$s_{1}^{2}$，$s_{2}^{2}$，则$s_{1}^{2}$________$s_{2}^{2}$（填“$>$”“$=$”或“$<$”）；\n\
+  stem: "某校开展了校园AI创新大赛，比赛分为知识竞答和实践成果两个板块，每个板块评分均采用100分制（分值为整数），每名选手的个人综合得分由知识竞答和实践成果两个板块的分数按照$4 : 6$计算得到．七年级和八年级各选派了10名选手参加．下面给出了部分信息．\n\
+    a．七、八年级各10名选手的知识竞答和实践成果两个板块得分情况统计图：\n    \nb．七、八年级各10名选手的个人综合得分频数分布直方图（数据分7组：第1组$60 \\leq x < 65$，第2组$65 \\leq x < 70$，第3组$70\
+    \ \\leq x < 75$，第4组$75 \\leq x < 80$，第5组$80 \\leq x < 85$，第6组$85 \\leq x < 90$，第7组$90 \\leq x \\leq 95$）：\n    \n根据以上信息，回答下列问题：\n\
+    （1）七年级知识竞答得分最高的选手，在本年级的实践成果得分中排名是第________名；\n（2）八年级选手中个人综合得分的最高分是________；\n（3）在两个年级各10名选手中，记七、八年级选手知识竞答得分的中位数分别是$m_{1}$，$m_{2}$，则$m_{1}$________$m_{2}$（填“$>$”“$=$”或“$<$”），记七、八年级选手实践成果得分的方差分别是$s_{1}^{2}$，$s_{2}^{2}$，则$s_{1}^{2}$________$s_{2}^{2}$（填“$>$”“$=$”或“$<$”）；\n\
     （4）经计算所有选手的个人综合得分均不相同，在个人综合得分前十名的选手中，七年级人数________八年级人数（填“多于”“等于”或“少于”）．"
   figure: 2026-fengtai-er/figures/image147.jpeg
+  _figures_extra:
+  - image147.jpeg
+  - image148.jpeg
+  - image156.jpeg
+  - image157.jpeg
   answer: ''
   solution: '解：（1）3；
 
@@ -442,9 +623,16 @@ questions:
     （3）<，>；
 
     （4）多于．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 数据的收集与整理
+  - 数据的表示
+  - 数据的分析
+  module: statisticsAndProbability
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 24
@@ -457,9 +645,12 @@ questions:
 
     （2）连接$D F$，交$B E$于点G．若$O E = 3$，$\text{tan} A = \frac{1}{2}$，求$B G$的长．'
   figure: 2026-fengtai-er/figures/image176.jpeg
+  _figures_extra:
+  - image176.jpeg
   answer: ''
   solution: '（1）证明：连接OC，OD．
 
+    ![](figures/image337.png)
 
     $\because \overset{⌢}{B C} = \overset{⌢}{B D}$，
 
@@ -516,9 +707,16 @@ questions:
     $\therefore \frac{B G}{E G} = \frac{B F}{D E} = \frac{5}{4}$．
 
     $\therefore B G = \frac{5}{9} B E = \frac{10}{9}$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 圆的基本性质
+  - 切线的性质与判定
+  - 三角函数的应用
+  module: circles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 25
@@ -542,22 +740,33 @@ questions:
 
     ①当液体的密度$\rho$为$0 . 8 \text{g} \cdot \text{cm}^{- 3}$时，$h_{1}$约为________cm，$h_{2}$约为________cm（结果精确到0.1）；
 
-    ②现有密度为$\rho_{1}$，$\rho_{2}$，$\rho_{3}$的三种液体，其中$\rho_{1} < \rho_{2} < \rho_{3}$，且$\rho_{2} - \rho_{1} = \rho_{3} - \rho_{2}$，选择一个密度计依次放入三种液体中，其露出液面的高度分别为$a$，$b$，$c$，则$c - b$________$b - a$（填“$>$”“$=$”或“$<$”）；
+    ②现有密度为$\rho_{1}$，$\rho_{2}$，$\rho_{3}$的三种液体，其中$\rho_{1} < \rho_{2} < \rho_{3}$，且$\rho_{2} - \rho_{1} = \rho_{3} - \rho_{2}$，选择一个密度计依次放入三种液体中，其露出液面的高度分别为$a$，$b$，$c$，则$c
+    - b$________$b - a$（填“$>$”“$=$”或“$<$”）；
 
     ③将一个密度计依次放入密度为$\rho_{1}$，$\rho_{2}$（$\rho_{1} \neq \rho_{2}$）的两种液体中，记露出液面的高度差为$l$，不同的密度计对应的$l$的值越大越容易读取数据，因此更容易读取数据的是密度计________（填“A”或“B”）．'
   figure: 2026-fengtai-er/figures/image190.jpeg
+  _figures_extra:
+  - image190.jpeg
+  - image201.jpeg
   answer: ''
   solution: '（1）如图
 
+    ![](figures/image369.png)
 
     （2）①6.9，5.0；
 
     ②<；
 
     ③B．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 函数的应用
+  - 数据处理与分析
+  module: functions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 26
@@ -567,7 +776,8 @@ questions:
 
     （1）用含$a$的式子表示$b$，并求$c$的值；
 
-    （2）过点$P \left(t,,0\right)$作$x$轴的垂线，交抛物线于点$M$，过点$M$作$y$轴的垂线，交直线$y = a x + 4 a + 1$于点$N$．记点$M$，$N$之间的距离为$d$，当点$M$，$N$重合时，$d = 0$．
+    （2）过点$P \left(t,,0\right)$作$x$轴的垂线，交抛物线于点$M$，过点$M$作$y$轴的垂线，交直线$y = a x + 4 a + 1$于点$N$．记点$M$，$N$之间的距离为$d$，当点$M$，$N$重合时，$d
+    = 0$．
 
     ①当$d = 14$时，直接写出$t$的值；
 
@@ -595,7 +805,8 @@ questions:
 
     $\therefore N \left(t^{2},-,2,t,-,4,,a,t^{2},-,2,a,t,+,1\right)$．
 
-    $\therefore x_{1} - x_{2} = t - \left(t^{2},-,2,t,-,4\right) = - \left(\right. t - 4 \left.\right) \left(\right. t + 1 \left.\right)$．
+    $\therefore x_{1} - x_{2} = t - \left(t^{2},-,2,t,-,4\right) = - \left(\right. t - 4 \left.\right) \left(\right. t + 1
+    \left.\right)$．
 
     $\therefore$当$- 1 < t < 4$时，$x_{1} - x_{2} > 0$，
 
@@ -676,21 +887,29 @@ questions:
     ∴不合题意．
 
     综上所述：$0 < a < \frac{5}{2}$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 二次函数的性质
+  - 二次函数的应用
+  module: functions
+  difficulty: 能力
+  recommended_for:
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 27
   type: 解答
   score: 7
-  stem: '如图，在$\triangle A B C$中，$A B = A C$，$\angle B A C = \alpha$（$0 \circ < \alpha < 90 \circ$），将线段$C A$绕点C逆时针旋转$90 \circ - \alpha$得到线段$C D$，$C D$交$A B$于点E，作射线$A D$与$C B$的延长线交于点F．
+  stem: '如图，在$\triangle A B C$中，$A B = A C$，$\angle B A C = \alpha$（$0 \circ < \alpha < 90 \circ$），将线段$C A$绕点C逆时针旋转$90 \circ
+    - \alpha$得到线段$C D$，$C D$交$A B$于点E，作射线$A D$与$C B$的延长线交于点F．
 
 
     （1）求$\angle A F C$的大小；
 
     （2）点G是线段$C F$中点，在线段$G C$上截取$G H = \frac{1}{2} B F$，连接$E H$．补全图形，用等式表示线段$D F$与$E H$的数量关系，并证明．'
   figure: 2026-fengtai-er/figures/image262.jpeg
+  _figures_extra:
+  - image262.jpeg
   answer: ''
   solution: '（1）证明：
 
@@ -708,9 +927,11 @@ questions:
 
     $\therefore \angle A F C = \angle C D A - \angle 1 = 45 \circ$．
 
+    ![](figures/image449.png)
 
     （2）①补全图形
 
+    ![](figures/image450.png)
 
     数量关系：$D F = \sqrt{2} E H$．
 
@@ -718,6 +939,7 @@ questions:
 
     连接CM，DM，FM．
 
+    ![](figures/image452.png)
 
     $\therefore$CF垂直平分DM．
 
@@ -762,15 +984,22 @@ questions:
     $\because B C = \sqrt{2} D F$，
 
     $\therefore D F = \sqrt{2} E H$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 等腰三角形的性质
+  - 旋转的性质
+  - 线段中点的应用
+  module: triangles
+  difficulty: 能力
+  recommended_for:
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 28
   type: 解答
   score: 7
-  stem: '在平面直角坐标系$x O y$中，$\bigodot O$的半径为2，对于$\bigodot O$的弦$A B$和线段$C D$，给出如下定义：若弦$A B$上存在点T，使线段$C D$关于点T中心对称的线段$C^{''} D^{''}$是$\bigodot O$的弦（点$C^{''}$，$D^{''}$分别是点C，D的对应点），则称线段$C D$是弦$A B$的关联线段．
+  stem: '在平面直角坐标系$x O y$中，$\bigodot O$的半径为2，对于$\bigodot O$的弦$A B$和线段$C D$，给出如下定义：若弦$A B$上存在点T，使线段$C D$关于点T中心对称的线段$C^{''} D^{''}$是$\bigodot
+    O$的弦（点$C^{''}$，$D^{''}$分别是点C，D的对应点），则称线段$C D$是弦$A B$的关联线段．
 
     （1）$\bigodot O$与x轴的正半轴交于点A，与y轴的正半轴交于点B．
 
@@ -789,8 +1018,14 @@ questions:
     （2）$- \sqrt{7} - 1 \leq t \leq - \sqrt{3} - 1$或$\sqrt{3} - 1 \leq t \leq \sqrt{7} - 1$．
 
     其它解法请参照评分标准酌情给分'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 圆的性质
+  - 直线与圆的位置关系
+  - 坐标系中的几何问题
+  module: circles
+  difficulty: 能力
+  recommended_for:
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''

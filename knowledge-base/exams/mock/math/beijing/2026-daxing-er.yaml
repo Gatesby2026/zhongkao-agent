@@ -1,11 +1,18 @@
-year: 2026
-district: 大兴区
-exam_type: 二模
+# ============================================================
+# None年北京真题math — 自动生成
+# ============================================================
+# OCR: Qwen-VL-OCR  Enrich: qwen-max
+# QC: draft=8  needs_review=20
+
+year: null
+district: ''
+exam_type: 真题
 subject: math
 full_score: 100
 duration_minutes: 120
 total_questions: 28
 structure: 8单选(16分) + 8填空(16分) + 12解答(68分)
+passages: []
 questions:
 - id: 1
   type: 单选
@@ -17,13 +24,22 @@ questions:
     C: 三棱柱
     D: 圆锥
   figure: 2026-daxing-er/figures/image2.jpeg
+  _figures_extra:
+  - image2.jpeg
   answer: ''
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
-  qc_status: draft
-  qc_note: ''
+  knowledge_points:
+  - 三视图
+  - 几何体识别
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 选择题 answer 为空
 - id: 2
   type: 单选
   score: 2
@@ -34,13 +50,22 @@ questions:
     C: $- a < 3$
     D: $a + b > 0$
   figure: 2026-daxing-er/figures/image5.jpeg
+  _figures_extra:
+  - image5.jpeg
   answer: ''
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
-  qc_status: draft
-  qc_note: ''
+  knowledge_points:
+  - 实数的大小比较
+  - 绝对值的概念
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 选择题 answer 为空
 - id: 3
   type: 单选
   score: 2
@@ -52,11 +77,17 @@ questions:
     D: 正十边形
   answer: ''
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
-  qc_status: draft
-  qc_note: ''
+  knowledge_points:
+  - 多边形的性质
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 选择题 answer 为空
 - id: 4
   type: 单选
   score: 2
@@ -68,11 +99,17 @@ questions:
     D: $\frac{2}{3}$
   answer: ''
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
-  qc_status: draft
-  qc_note: ''
+  knowledge_points:
+  - 概率的计算
+  module: statisticsAndProbability
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 选择题 answer 为空
 - id: 5
   type: 单选
   score: 2
@@ -84,15 +121,22 @@ questions:
     D: $- 1$
   answer: ''
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
-  qc_status: draft
-  qc_note: ''
+  knowledge_points:
+  - 一元二次方程的根的判别式
+  module: equationsAndInequalities
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 选择题 answer 为空
 - id: 6
   type: 单选
   score: 2
-  stem: 1970年4月24日，中国第一颗人造卫星“东方红一号”成功发射．自2016年起，将每年4月24日设立为“中国航天日”．我国首个目标飞行器天宫一号向地球发射无线电信号，信号单向传输到地面测控站所用时间约为$1 . 14 \times 10^{- 3} \text{s}$，传播速度为$3 \times 10^{8} \text{m}/\text{s}$，则天宫一号与地面测控站的距离约为
+  stem: 1970年4月24日，中国第一颗人造卫星“东方红一号”成功发射．自2016年起，将每年4月24日设立为“中国航天日”．我国首个目标飞行器天宫一号向地球发射无线电信号，信号单向传输到地面测控站所用时间约为$1 . 14 \times
+    10^{- 3} \text{s}$，传播速度为$3 \times 10^{8} \text{m}/\text{s}$，则天宫一号与地面测控站的距离约为
   options:
     A: $3 . 42 \times 10^{8} \text{m}$
     B: $3 . 42 \times 10^{7} \text{m}$
@@ -100,32 +144,49 @@ questions:
     D: $3 . 42 \times 10^{5} \text{m}$
   answer: ''
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
-  qc_status: draft
-  qc_note: ''
+  knowledge_points:
+  - 科学记数法
+  - 速度与距离的关系
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 选择题 answer 为空
 - id: 7
   type: 单选
   score: 2
-  stem: 如图，在$\triangle A B C$中，$A B = A C$，$\angle A = 40 \circ$，分别以A，C为圆心，$A C$长为半径作弧，两弧交于M，N，直线$M N$与$A B$交于点D，连接$C D$，则$\angle B C D$的大小为
+  stem: 如图，在$\triangle A B C$中，$A B = A C$，$\angle A = 40 \circ$，分别以A，C为圆心，$A C$长为半径作弧，两弧交于M，N，直线$M N$与$A B$交于点D，连接$C D$，则$\angle
+    B C D$的大小为
   options:
     A: $40 \circ$
     B: $35 \circ$
     C: $30 \circ$
     D: $20 \circ$
   figure: 2026-daxing-er/figures/image34.jpeg
+  _figures_extra:
+  - image34.jpeg
   answer: ''
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
-  qc_status: draft
-  qc_note: ''
+  knowledge_points:
+  - 等腰三角形的性质
+  - 圆的基本性质
+  module: triangles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 选择题 answer 为空
 - id: 8
   type: 单选
   score: 2
-  stem: '如图，在平面直角坐标系$x O y$中，点A，点B是函数$y = \frac{4}{x} \left(\right. x > 0 \left.\right)$图象上的动点（A，B不重合），点A是$O C$的中点，点B是$O D$的中点，作$C E$垂直x轴于点E，交图象于点G，作$D F$垂直y轴于点F，交图象于点H．给出下面四个结论：
+  stem: '如图，在平面直角坐标系$x O y$中，点A，点B是函数$y = \frac{4}{x} \left(\right. x > 0 \left.\right)$图象上的动点（A，B不重合），点A是$O C$的中点，点B是$O D$的中点，作$C
+    E$垂直x轴于点E，交图象于点G，作$D F$垂直y轴于点F，交图象于点H．给出下面四个结论：
 
 
     ①$\triangle C O E$与$\triangle D O F$的面积一定相等；
@@ -143,22 +204,36 @@ questions:
     C: ②③
     D: ①④
   figure: 2026-daxing-er/figures/image45.jpeg
+  _figures_extra:
+  - image45.jpeg
   answer: ''
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
-  qc_status: draft
-  qc_note: ''
+  knowledge_points:
+  - 反比例函数的性质
+  - 三角形面积计算
+  module: functions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 选择题 answer 为空
 - id: 9
   type: 填空
   score: 2
   stem: 分解因式：$m n^{2} - m =$________．
   answer: ''
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 因式分解
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 10
@@ -167,9 +242,16 @@ questions:
   stem: 若代数式$\frac{3}{x + 2}$有意义，则实数x的取值范围是________．
   answer: ''
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 分式的概念
+  - 实数的取值范围
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 11
@@ -178,9 +260,14 @@ questions:
   stem: 方程$\frac{1}{x - 4} + \frac{1}{2 x} = 0$的解为$x =$________．
   answer: ''
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 分式方程的解法
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 12
@@ -189,9 +276,15 @@ questions:
   stem: 能说明命题“若$a > b$，则$\left|a\right| > \left|b\right|$”是假命题的一组实数a，b的值为$a =$________，$b =$________．
   answer: ''
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 绝对值的概念
+  - 不等式的性质
+  module: numbersAndExpressions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 13
@@ -208,33 +301,58 @@ questions:
     根据方差越小，数据的波动越小，发挥越稳定这一统计意义，据此推断，________同学发挥更稳定．'
   answer: ''
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 方差的意义
+  - 数据的波动性
+  module: statisticsAndProbability
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 14
   type: 填空
   score: 2
-  stem: 如图，四边形$A B C D$内接于$\bigodot O$，$A B$是$\bigodot O$的直径，点$E$是$A B$下方$\bigodot O$上一点．若$\angle C = 130 \circ$，则$\angle A E D$的大小为________．
+  stem: 如图，四边形$A B C D$内接于$\bigodot O$，$A B$是$\bigodot O$的直径，点$E$是$A B$下方$\bigodot O$上一点．若$\angle C = 130 \circ$，则$\angle
+    A E D$的大小为________．
   figure: 2026-daxing-er/figures/image76.jpeg
+  _figures_extra:
+  - image76.jpeg
   answer: ''
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 圆内接四边形的性质
+  - 圆周角定理
+  module: circles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 15
   type: 填空
   score: 2
-  stem: 如图，在矩形$A B C D$中，点$E$为$B C$中点，连接$A E$，点$F$为$B C$的延长线上一点，连接$A F$交$C D$于$G$．若$C F = \frac{1}{3} B C$，$\triangle C F G$的面积为$1$，则四边形$A E C G$的面积为________．
+  stem: 如图，在矩形$A B C D$中，点$E$为$B C$中点，连接$A E$，点$F$为$B C$的延长线上一点，连接$A F$交$C D$于$G$．若$C F = \frac{1}{3} B C$，$\triangle C F
+    G$的面积为$1$，则四边形$A E C G$的面积为________．
   figure: 2026-daxing-er/figures/image90.jpeg
+  _figures_extra:
+  - image90.jpeg
   answer: ''
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 相似三角形
+  - 面积计算
+  module: triangles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 16
@@ -258,11 +376,19 @@ questions:
 
     （2）要完成这3件模型的制作，最少需要________分钟．'
   figure: 2026-daxing-er/figures/image92.png
+  _figures_extra:
+  - image92.png
   answer: ''
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 统筹规划
+  - 时间管理
+  module: geometryComprehensive
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 17
@@ -270,51 +396,81 @@ questions:
   score: 5
   stem: 计算：$\left|-,2\right| - \sqrt{12} + \left(\frac{1}{3}\right)^{- 1} + 2 \text{sin} 60 \circ$．
   answer: ''
-  solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
-  qc_status: draft
-  qc_note: ''
+  solution: __MISSING__
+  knowledge_points:
+  - 绝对值
+  - 二次根式
+  - 负指数幂
+  - 特殊角的三角函数
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 解题步骤未提取，需补全 solution
 - id: 18
   type: 解答
   score: 5
   stem: 解不等式组：$\left{\begin{matrix} 3 \left(x,-,2\right) > x - 4 \\ \frac{1 + 2 x}{3} > x - 1 \end{matrix}\right$
   answer: ''
-  solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
-  qc_status: draft
-  qc_note: ''
+  solution: __MISSING__
+  knowledge_points:
+  - 解一元一次不等式
+  - 解不等式组
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 解题步骤未提取，需补全 solution
 - id: 19
   type: 解答
   score: 5
   stem: 已知$2 a + b - 3 = 0$，求代数式$\frac{4 \left(2,a,-,b\right) + 8 b}{4 a^{2} + 4 a b + b^{2}}$的值．
   answer: ''
-  solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
-  qc_status: draft
-  qc_note: ''
+  solution: __MISSING__
+  knowledge_points:
+  - 代数式的化简与求值
+  module: numbersAndExpressions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 解题步骤未提取，需补全 solution
 - id: 20
   type: 解答
   score: 6
-  stem: '如图，在$\triangle A B C$中，$A B = B C$，$O$为$A C$中点，过点$A$作$A E \bot B C$于点$E$，连接$E O$，并延长到点$D$，使$O D = O E$，连接$A D$，$C D$．
+  stem: '如图，在$\triangle A B C$中，$A B = B C$，$O$为$A C$中点，过点$A$作$A E \bot B C$于点$E$，连接$E O$，并延长到点$D$，使$O D = O E$，连接$A D$，$C
+    D$．
 
 
     （1）求证：四边形$A E C D$是矩形；
 
     （2）连接$O B$，若$\text{sin} \angle A C D = \frac{1}{3}$，$A D = 2$，求$O B$的长．'
   figure: 2026-daxing-er/figures/image109.jpeg
+  _figures_extra:
+  - image109.jpeg
   answer: ''
-  solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
-  qc_status: draft
-  qc_note: ''
+  solution: __MISSING__
+  knowledge_points:
+  - 等腰三角形的性质
+  - 矩形的判定与性质
+  - 解直角三角形
+  module: triangles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 解题步骤未提取，需补全 solution
 - id: 21
   type: 解答
   score: 5
@@ -324,12 +480,18 @@ questions:
 
     （2）当$x < 2$时，对于$x$的每一个值，函数$y = m x + 3 \left(m,\neq,0\right)$的值大于函数$y = k x + b$的值且大于1，直接写出$m$的取值范围．'
   answer: ''
-  solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
-  qc_status: draft
-  qc_note: ''
+  solution: __MISSING__
+  knowledge_points:
+  - 一次函数的解析式
+  - 一次函数的性质
+  module: functions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 解题步骤未提取，需补全 solution
 - id: 22
   type: 解答
   score: 5
@@ -337,13 +499,22 @@ questions:
 
     如图2，已知某筒车的转轮圆心为$O$，吃水深度（转轮最低点到水位线的距离）与转轮半径的比为$1 : 3$，转轮圆心$O$到水槽底部的距离为0.9米，提水高度（水槽底部到水位线的竖直高度）是吃水深度的3.5倍．求这个筒车的转轮半径．'
   figure: 2026-daxing-er/figures/image129.jpeg
+  _figures_extra:
+  - image129.jpeg
+  - image130.jpeg
   answer: ''
-  solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
-  qc_status: draft
-  qc_note: ''
+  solution: __MISSING__
+  knowledge_points:
+  - 圆的性质
+  - 比例与相似
+  module: circles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 解题步骤未提取，需补全 solution
 - id: 23
   type: 解答
   score: 6
@@ -383,34 +554,53 @@ questions:
 
       （2）已知当天该高峰时段从南检票口进入景区的游客约为6000人，从北检票口进入景区的游客约为8000人，估计从两个检票口进入景区的等候时间超过30分钟的游客有________人'
   figure: 2026-daxing-er/figures/image136.jpeg
+  _figures_extra:
+  - image136.jpeg
   answer: ''
-  solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
-  qc_status: draft
-  qc_note: ''
+  solution: __MISSING__
+  knowledge_points:
+  - 数据的整理与描述
+  - 统计量的计算与应用
+  module: statisticsAndProbability
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 解题步骤未提取，需补全 solution
 - id: 24
   type: 解答
   score: 6
-  stem: '如图，在$\triangle A O B$中，$A O = B O$，点$C$是$A B$中点，以$O$为圆心，$O C$的长为半径作$\bigodot O$交$B O$延长线于点$D$，交$O A$于点$E$，交$O B$于点$F$，过点$D$作$\bigodot O$的切线$D G$交$B A$延长线于点$C$．
+  stem: '如图，在$\triangle A O B$中，$A O = B O$，点$C$是$A B$中点，以$O$为圆心，$O C$的长为半径作$\bigodot O$交$B O$延长线于点$D$，交$O A$于点$E$，交$O B$于点$F$，过点$D$作$\bigodot
+    O$的切线$D G$交$B A$延长线于点$C$．
 
 
     （1）求证：$D G = C G$；
 
     （2）连接$D E$并延长交$A B$于点$H$，若$\frac{E H}{D E} = \frac{1}{3}$，$C G = 10$，求$\bigodot O$的半径．'
   figure: 2026-daxing-er/figures/image163.jpeg
+  _figures_extra:
+  - image163.jpeg
   answer: ''
-  solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
-  qc_status: draft
-  qc_note: ''
+  solution: __MISSING__
+  knowledge_points:
+  - 圆的基本性质
+  - 等腰三角形的性质
+  - 相似三角形
+  module: circles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 解题步骤未提取，需补全 solution
 - id: 25
   type: 解答
   score: 5
-  stem: '为营造家庭亲子阅读氛围，A、B两个家庭分别制定了每周七天循环阅读计划，并以10天为一个结算单元设立积分奖励，每读一页书，奖励0.2积分，积分达到一定数值可以兑换相应礼品．每周七天可用星期$x$表示，其中$x = 1$，$2$，$3$，$4$，$5$，$6$，$7$，$x = 1$至6依次表示星期一至星期六，$x = 7$表示星期日．
+  stem: '为营造家庭亲子阅读氛围，A、B两个家庭分别制定了每周七天循环阅读计划，并以10天为一个结算单元设立积分奖励，每读一页书，奖励0.2积分，积分达到一定数值可以兑换相应礼品．每周七天可用星期$x$表示，其中$x = 1$，$2$，$3$，$4$，$5$，$6$，$7$，$x
+    = 1$至6依次表示星期一至星期六，$x = 7$表示星期日．
 
     A家庭制定的每周循环阅读计划：星期$x$读书的页数记为$y_{\text{A}}$，从星期$x$当天开始连续阅读10天后的总积分记为$p_{\text{A}}$，可以认为$y_{\text{A}}$，$p_{\text{A}}$分别是$x$的函数，部分数据如下：
 
@@ -445,13 +635,21 @@ questions:
 
     （5）若$p_{\text{B}}$随$x$的增大而增大，则整数$k =$________．'
   figure: 2026-daxing-er/figures/image205.jpeg
+  _figures_extra:
+  - image205.jpeg
   answer: ''
-  solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
-  qc_status: draft
-  qc_note: ''
+  solution: __MISSING__
+  knowledge_points:
+  - 函数的概念
+  - 函数的应用
+  module: functions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 解题步骤未提取，需补全 solution
 - id: 26
   type: 解答
   score: 6
@@ -465,46 +663,70 @@ questions:
 
     ②已知$E \left(\frac{1}{4},a,,0\right)$，$F \left(\frac{3}{4},a,,0\right)$，点$P$从线段$E F$左端点运动到右端点的过程中，随$t$的增大，$M N$的长是先增大后减小，求$a$的取值范围．'
   answer: ''
-  solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
-  qc_status: draft
-  qc_note: ''
+  solution: __MISSING__
+  knowledge_points:
+  - 二次函数的性质
+  - 二次函数与直线的关系
+  module: functions
+  difficulty: 能力
+  recommended_for:
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 解题步骤未提取，需补全 solution
 - id: 27
   type: 解答
   score: 7
-  stem: '在$\triangle A B C$中，$\angle A C B = 90 \circ$，$\angle B = \alpha \left(\right. 0 \circ < \alpha < 30 \circ \left.\right)$，点$D$是$A B$的中点，点$E$为$A B$下方一点，满足$\angle A E D = 2 \alpha$，将线段$E D$绕点$E$顺时针旋转$2
-    \alpha$，得到线段$E F$，点$F$恰好落在$A B$上．连接$F C$，延长$E D$交$C F$于点$G$．
+  stem: '在$\triangle A B C$中，$\angle A C B = 90 \circ$，$\angle B = \alpha \left(\right. 0 \circ < \alpha < 30 \circ \left.\right)$，点$D$是$A
+    B$的中点，点$E$为$A B$下方一点，满足$\angle A E D = 2 \alpha$，将线段$E D$绕点$E$顺时针旋转$2 \alpha$，得到线段$E F$，点$F$恰好落在$A B$上．连接$F C$，延长$E D$交$C
+    F$于点$G$．
 
 
     （1）连接$C D$，求证：$\angle C D G = \angle D A E$；
 
     （2）用等式表示$A E$，$E F$，$D G$之间的数量关系，并证明．'
   figure: 2026-daxing-er/figures/image252.jpeg
+  _figures_extra:
+  - image252.jpeg
   answer: ''
-  solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
-  qc_status: draft
-  qc_note: ''
+  solution: __MISSING__
+  knowledge_points:
+  - 直角三角形的性质
+  - 旋转的性质
+  - 几何证明
+  module: triangles
+  difficulty: 能力
+  recommended_for:
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 解题步骤未提取，需补全 solution
 - id: 28
   type: 解答
   score: 7
-  stem: '在平面直角坐标系$x O y$中，对于不重合的点$A$和点$B$以及正实数$m$有如下定义：过$B$点的任意一条直线上都存在点$C$，$D$（$B$，$C$，$D$互不重合），满足$A C = A D = m$，称点$B$是点$A$的“$m$－区域点”，线段$C D$的长度的最小值叫做点$B$关于点$A$的“$m$－区域距离”．
+  stem: '在平面直角坐标系$x O y$中，对于不重合的点$A$和点$B$以及正实数$m$有如下定义：过$B$点的任意一条直线上都存在点$C$，$D$（$B$，$C$，$D$互不重合），满足$A C = A D = m$，称点$B$是点$A$的“$m$－区域点”，线段$C
+    D$的长度的最小值叫做点$B$关于点$A$的“$m$－区域距离”．
 
 
     （1）若点$A$坐标为$\left(2,0\right)$，在$B_{1} \left(1,2\right)$，$B_{2} \left(2,,-,1\right)$，$B_{3} \left(2,,-,2\right)$这三个点中________是点$A$的“$2$－区域点”，此时这个点关于点$A$的“$2$－区域距离”是________；
 
     （2）若点$A$是直线$y = x + 1$上一动点，记点$A$的横坐标为$t$，则使得坐标原点$O$是点$A$的“$5$－区域点”的$t$的取值范围是________，点$O$关于点$A$的“$5$－区域距离”的最大值是________；
 
-    （3）若点$A_{1}$，$A_{2}$是半径为$2 \sqrt{5}$的$\bigodot O$上的两动点，且$A_{1} A_{2} = 4$，$E \left(t,,0\right)$，$F \left(2,t,,0\right)$，若对于线段$E F$上的任意一点$M$，都存在$A_{1}$，$A_{2}$，使得$M$既是$A_{1}$的“$\frac{5}{2}$－区域点”也是$A_{2}$的“$\frac{5}{2}$－区域点”，直接写出$t$的取值范围是________．'
+    （3）若点$A_{1}$，$A_{2}$是半径为$2 \sqrt{5}$的$\bigodot O$上的两动点，且$A_{1} A_{2} = 4$，$E \left(t,,0\right)$，$F \left(2,t,,0\right)$，若对于线段$E
+    F$上的任意一点$M$，都存在$A_{1}$，$A_{2}$，使得$M$既是$A_{1}$的“$\frac{5}{2}$－区域点”也是$A_{2}$的“$\frac{5}{2}$－区域点”，直接写出$t$的取值范围是________．'
   figure: 2026-daxing-er/figures/image276.jpeg
+  _figures_extra:
+  - image276.jpeg
   answer: ''
-  solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
-  qc_status: draft
-  qc_note: ''
+  solution: __MISSING__
+  knowledge_points:
+  - 平面直角坐标系
+  - 圆的性质
+  - 距离公式
+  module: geometryComprehensive
+  difficulty: 能力
+  recommended_for:
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 解题步骤未提取，需补全 solution

@@ -1,3 +1,9 @@
+# ============================================================
+# 2026年北京朝阳区二模math — 自动生成
+# ============================================================
+# OCR: Qwen-VL-OCR  Enrich: qwen-max
+# QC: draft=28  needs_review=0
+
 year: 2026
 district: 朝阳区
 exam_type: 二模
@@ -6,6 +12,7 @@ full_score: 100
 duration_minutes: 120
 total_questions: 28
 structure: 8单选(16分) + 8填空(16分) + 12解答(68分)
+passages: []
 questions:
 - id: 1
   type: 单选
@@ -17,11 +24,20 @@ questions:
     C: 圆锥
     D: 球
   figure: 2026-chaoyang-er/figures/image2.jpeg
+  _figures_extra:
+  - image2.jpeg
   answer: A
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 三视图
+  - 几何体识别
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 2
@@ -34,11 +50,20 @@ questions:
     C: '0'
     D: '2'
   figure: 2026-chaoyang-er/figures/image7.png
+  _figures_extra:
+  - image7.png
   answer: C
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 实数的比较
+  - 数轴的应用
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 3
@@ -52,9 +77,15 @@ questions:
     D: '144'
   answer: C
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 多边形的内角和
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 4
@@ -67,11 +98,19 @@ questions:
     C: $65 \circ$
     D: $125 \circ$
   figure: 2026-chaoyang-er/figures/image19.jpeg
+  _figures_extra:
+  - image19.jpeg
   answer: B
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 三角形内角和
+  - 平行线性质
+  module: triangles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 5
@@ -85,9 +124,15 @@ questions:
     D: $\frac{5}{6}$
   answer: C
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 概率计算
+  module: statisticsAndProbability
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 6
@@ -101,32 +146,48 @@ questions:
     D: $40 \times 10^{- 10}$秒
   answer: A
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 科学记数法
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 7
   type: 单选
   score: 2
-  stem: 如图，点$A$，$B$分别在射线$O M$，$O N$上，以$A$为圆心，$A B$长为半径画弧，以$O$为圆心，$O B$长为半径画弧，两弧交于点$C$（点$C$，$B$不重合），连接$B C$，若$\angle M O N = 40 \circ$，则$\angle O B C$的大小为
+  stem: 如图，点$A$，$B$分别在射线$O M$，$O N$上，以$A$为圆心，$A B$长为半径画弧，以$O$为圆心，$O B$长为半径画弧，两弧交于点$C$（点$C$，$B$不重合），连接$B C$，若$\angle M O N
+    = 40 \circ$，则$\angle O B C$的大小为
   options:
     A: $40 \circ$
     B: $50 \circ$
     C: $80 \circ$
     D: $100 \circ$
   figure: 2026-chaoyang-er/figures/image46.jpeg
+  _figures_extra:
+  - image46.jpeg
   answer: B
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 圆的基本性质
+  - 角的计算
+  module: circles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 8
   type: 单选
   score: 2
-  stem: '如图，将正方形$M N P Q$绕其中心$O$逆时针旋转$45 \circ$，得到正方形$M_{1} N_{1} P_{1} Q_{1}$，两个正方形的公共点为$A$，B，C，D，E，F，G，H，连接$A C$，$B H$，$C G$．给出下面四个结论：
+  stem: '如图，将正方形$M N P Q$绕其中心$O$逆时针旋转$45 \circ$，得到正方形$M_{1} N_{1} P_{1} Q_{1}$，两个正方形的公共点为$A$，B，C，D，E，F，G，H，连接$A C$，$B H$，$C
+    G$．给出下面四个结论：
 
     ①$M A = A B$；
 
@@ -143,11 +204,20 @@ questions:
     C: ③④
     D: ②③④
   figure: 2026-chaoyang-er/figures/image65.jpeg
+  _figures_extra:
+  - image65.jpeg
   answer: D
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 旋转的性质
+  - 正方形的性质
+  - 角度关系
+  module: geometryComprehensive
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 9
@@ -156,9 +226,15 @@ questions:
   stem: 若分式$\frac{1}{x - 5}$有意义，则实数$x$的取值范围是________．
   answer: $x \neq 5$
   solution: $x \neq 5$
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 分式的概念与性质
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 10
@@ -167,9 +243,15 @@ questions:
   stem: 分解因式：$m a^{2} - 4 m =$________．
   answer: $m \left(a,+,2\right) \left(a,-,2\right)$
   solution: $m \left(a,+,2\right) \left(a,-,2\right)$
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 因式分解
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 11
@@ -178,9 +260,15 @@ questions:
   stem: 关于$x$的一元二次方程$a x^{2} - 4 x + 2 = 0$有两个相等的实数根，则实数$a$的值为________．
   answer: '2'
   solution: '2'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 一元二次方程的根的判别式
+  module: equationsAndInequalities
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 12
@@ -189,9 +277,15 @@ questions:
   stem: 直线$y = x$与双曲线$y = \frac{k}{x} \left(\right. k > 0 \left.\right)$的两个交点的横坐标分别为$m$，$n$，则$m + n =$________．
   answer: '0'
   solution: '0'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 一次函数与反比例函数的交点
+  - 方程组的解
+  module: functions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 13
@@ -210,33 +304,58 @@ questions:
     这一周的日最高气温的方差为$s_{1}^{2}$，日最低气温的方差为$s_{2}^{2}$，则$s_{1}^{2}$________$s_{2}^{2}$．（填“>”“=”或“<”）'
   answer: $>$
   solution: $>$
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 方差的概念与计算
+  - 数据的分析
+  module: statisticsAndProbability
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 14
   type: 填空
   score: 2
-  stem: 如图，四边形$A B C D$内接于$\bigodot O$，$\angle A B C = 60 \circ$，$\angle D A B = 90 \circ$，$C$为$\overset{⌢}{B D}$的中点，则$\angle A C D =$________$\circ$．
+  stem: 如图，四边形$A B C D$内接于$\bigodot O$，$\angle A B C = 60 \circ$，$\angle D A B = 90 \circ$，$C$为$\overset{⌢}{B D}$的中点，则$\angle
+    A C D =$________$\circ$．
   figure: 2026-chaoyang-er/figures/image89.png
+  _figures_extra:
+  - image89.png
   answer: '15'
   solution: '15'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 圆内接四边形的性质
+  - 圆周角定理
+  module: circles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 15
   type: 填空
   score: 2
-  stem: 如图，在矩形$A B C D$中，点$E$在$B C$边上，$A E$的延长线与$D C$的延长线相交于点$F$，连接$D E$．若$A D = 3$，$A B = \sqrt{3}$，$\angle B A E = 30 \circ$，则$\triangle D E F$的面积为________．
+  stem: 如图，在矩形$A B C D$中，点$E$在$B C$边上，$A E$的延长线与$D C$的延长线相交于点$F$，连接$D E$．若$A D = 3$，$A B = \sqrt{3}$，$\angle B A E = 30 \circ$，则$\triangle
+    D E F$的面积为________．
   figure: 2026-chaoyang-er/figures/image101.png
+  _figures_extra:
+  - image101.png
   answer: $3 \sqrt{3}$
   solution: $3 \sqrt{3}$
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 三角形的性质
+  - 矩形的性质
+  - 解直角三角形
+  module: triangles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 16
@@ -267,9 +386,15 @@ questions:
     （2）若九年级代表队要获得最多积分，则选手$B$应完成环节________．'
   answer: 80；2
   solution: 80；2
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 排列组合
+  - 最优化问题
+  module: statisticsAndProbability
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 17
@@ -280,9 +405,16 @@ questions:
   solution: '解：原式$= 2 \sqrt{2} + 4 - 1 - 2 \times \frac{\sqrt{2}}{2}$
 
     $= \sqrt{2} + 3$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 实数运算
+  - 指数运算
+  - 三角函数
+  module: numbersAndExpressions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 18
@@ -290,16 +422,24 @@ questions:
   score: 5
   stem: 解不等式组：$\left{\begin{matrix} 2 x + 3 \geq x + 6, \\ \frac{2 x + 1}{3} > x - 1 . \end{matrix}\right$
   answer: ''
-  solution: '解：原不等式组为$\left{\begin{matrix} 2 x + 3 \geq x + 6, \textcircled{1} \\ \frac{2 x + 1}{3} > x - 1 . \textcircled{2} \end{matrix}\right$
+  solution: '解：原不等式组为$\left{\begin{matrix} 2 x + 3 \geq x + 6, \textcircled{1} \\ \frac{2 x + 1}{3} > x - 1 . \textcircled{2}
+    \end{matrix}\right$
 
     解不等式①，得$x \geq 3$．
 
     解不等式②，得$x < 4$．
 
     ∴原不等式组的解集为$3 \leq x < 4$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 解一元一次不等式
+  - 不等式组的解集
+  module: equationsAndInequalities
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 19
@@ -318,9 +458,15 @@ questions:
     $. \therefore 3 m^{2} - 2 m = 7$．
 
     ∴原式$= 5$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 代数式的化简
+  - 一元二次方程的应用
+  module: numbersAndExpressions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 20
@@ -333,6 +479,8 @@ questions:
 
     （2）若$B C = 10$，$\text{sin} \angle A B C = \frac{4}{5}$，求$C D$的长．'
   figure: 2026-chaoyang-er/figures/image128.jpeg
+  _figures_extra:
+  - image128.jpeg
   answer: ''
   solution: '（1）证明：$\because$$A B = B C$，$B D$为$A C$边上的高，
 
@@ -352,6 +500,7 @@ questions:
 
     ∴四边形$D E F H$是矩形．
 
+    ![](figures/image36.jpeg)
 
     （2）解：$\because$$B C = 10$，
 
@@ -374,15 +523,23 @@ questions:
     $\therefore$$D H = E F = 4$，$\angle D H C = 90 \circ$．
 
     在$\text{Rt} \triangle D H C$中，由勾股定理，得$C D = \sqrt{C H^{2} + D H^{2}} = 2 \sqrt{5}$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 全等三角形的性质与判定
+  - 直角三角形的性质
+  - 解直角三角形
+  module: triangles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 21
   type: 解答
   score: 5
-  stem: '在平面直角坐标系$x O y$中，函数$y = k x + b \left(k,\neq,0\right)$的图象经过点$A \left(\right. 1,3 \left.\right)$和$B \left(\right. 3,1 \left.\right)$．
+  stem: '在平面直角坐标系$x O y$中，函数$y = k x + b \left(k,\neq,0\right)$的图象经过点$A \left(\right. 1,3 \left.\right)$和$B \left(\right.
+    3,1 \left.\right)$．
 
     （1）求该函数的表达式；
 
@@ -397,9 +554,15 @@ questions:
     ∴该函数的表达式为$y = - x + 4$．
 
     （2）$0 < m \leq 1$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 一次函数的性质
+  - 不等式的应用
+  module: functions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 22
@@ -418,9 +581,14 @@ questions:
     $\therefore$$2 x - 30 = 150$．
 
     答：一台$A$型节能灯的平均年用电量为150度．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 方程的应用
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 23
@@ -477,9 +645,16 @@ questions:
     （3）①23；
 
     ②140，120．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 频数分布
+  - 平均数与中位数
+  - 数据估计
+  module: statisticsAndProbability
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 24
@@ -492,6 +667,8 @@ questions:
 
     （2）若$\angle B A C = 60 \circ$，$O C = 2$，求$E F$的长．'
   figure: 2026-chaoyang-er/figures/image175.jpeg
+  _figures_extra:
+  - image175.jpeg
   answer: ''
   solution: '（1）证明：如图，作$D G \bot E F$于点$G$．
 
@@ -509,6 +686,7 @@ questions:
 
     $\therefore \angle E D F = 2 \angle C A E$．
 
+    ![](figures/image85.jpeg)
 
     （2）解：如图，连接$O A$．
 
@@ -536,10 +714,18 @@ questions:
 
     $\therefore E G = D E \cdot \text{sin} \angle E D G = \frac{5 \sqrt{13}}{13}$．
 
-    $\therefore E F = 2 E G = \frac{10 \sqrt{13}}{13}$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+    $\therefore E F = 2 E G = \frac{10 \sqrt{13}}{13}$．
+
+    ![](figures/image108.jpeg)'
+  knowledge_points:
+  - 圆的切线性质
+  - 三角形的角关系
+  module: circles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 25
@@ -574,21 +760,30 @@ questions:
 
     其中所有合理推断的序号是________．'
   figure: 2026-chaoyang-er/figures/image193.jpeg
+  _figures_extra:
+  - image193.jpeg
   answer: ''
-  solution: '解：（1）
+  solution: '解：（1）![](figures/image109.jpeg)
 
     （2）答案不唯一，如13；
 
     （3）①③④'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 函数图像
+  - 函数关系的应用
+  module: functions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 26
   type: 解答
   score: 6
-  stem: '在平面直角坐标系$x O y$中，过点$P \left(p,,0\right)$作$x$轴的垂线与抛物线$y = x^{2} - x$交于点$M$，与直线$y = x$交于点$N$（特殊地，当点$M$，$N$重合时，线段$M N$的长为$0$）．
+  stem: '在平面直角坐标系$x O y$中，过点$P \left(p,,0\right)$作$x$轴的垂线与抛物线$y = x^{2} - x$交于点$M$，与直线$y = x$交于点$N$（特殊地，当点$M$，$N$重合时，线段$M
+    N$的长为$0$）．
 
     （1）若$p = 1$，求线段$M N$的长；
 
@@ -631,21 +826,30 @@ questions:
     （ⅲ）只有当$m_{0} \geq 1 + \sqrt{2}$时，$t$随$m$增大而增大．
 
     $\therefore$要使$m > m_{0}$时，都有$t$随$m$的增大而增大，$m_{0}$的最小值为$1 + \sqrt{2}$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 二次函数的性质
+  - 一次函数的性质
+  - 坐标系中的几何问题
+  module: functions
+  difficulty: 能力
+  recommended_for:
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 27
   type: 解答
   score: 7
-  stem: '在$\triangle A B C$中，$\angle A C B = 90 \circ$，$\angle A B C = \alpha$，$D$是平面内的一点（不与点$A$重合），连接$A D$，以$A$为中心，将线段$A D$顺时针旋转$180 \circ - 2 \alpha$，得到线段$A E$，连接$E C$．
+  stem: '在$\triangle A B C$中，$\angle A C B = 90 \circ$，$\angle A B C = \alpha$，$D$是平面内的一点（不与点$A$重合），连接$A D$，以$A$为中心，将线段$A
+    D$顺时针旋转$180 \circ - 2 \alpha$，得到线段$A E$，连接$E C$．
 
 
     （1）如图1，点$D$在边$A B$上，用等式表示$\angle D A E$与$\angle B A C$之间的数量关系（直接写出结果）；
 
     （2）如图2，点$D$在$\triangle A B C$外，延长$E C$到点$F$，使$C F = E C$，连接$B F$，$B D$，用等式表示$\angle D A E$与$\angle D B F$之间的数量关系，并证明．'
   figure: 2026-chaoyang-er/figures/image230.png
+  _figures_extra:
+  - image230.png
   answer: ''
   solution: '（1）$\angle D A E = 2 \angle B A C$；
 
@@ -687,17 +891,25 @@ questions:
 
     $\therefore \angle D B F = 2 \angle A B C = 2 \alpha$．
 
-    $\therefore \angle D A E + \angle D B F = 180 \circ$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+    $\therefore \angle D A E + \angle D B F = 180 \circ$．
+
+    ![](figures/image177.jpeg)'
+  knowledge_points:
+  - 三角形的性质
+  - 旋转对称性
+  module: triangles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 28
   type: 解答
   score: 7
-  stem: '在平面直角坐标系$x O y$中，$P \left(x,,,y\right)$是图形$F$上的任意一点，将点$P$向右$\left(y,\geq,0\right)$或向左$\left(\right. y < 0 \left.\right)$平移$2 \left|y\right|$个单位长度，再向上$\left(x,\geq,0\right)$或向下$\left(\right. x <
-    0 \left.\right)$平移$2 \left|x\right|$个单位长度，得到点$P$的对应点$P^{''}$，所有的点$P^{''}$组成的图形称为图形$F$的关联图形．能完全覆盖图形$F$和它的关联图形的最小的圆称为图形$F$和它的关联图形的最小覆盖圆（图形$F$和它的关联图形上的所有点都在圆上或内部，且该圆的半径最小）．
+  stem: '在平面直角坐标系$x O y$中，$P \left(x,,,y\right)$是图形$F$上的任意一点，将点$P$向右$\left(y,\geq,0\right)$或向左$\left(\right. y < 0 \left.\right)$平移$2
+    \left|y\right|$个单位长度，再向上$\left(x,\geq,0\right)$或向下$\left(\right. x < 0 \left.\right)$平移$2 \left|x\right|$个单位长度，得到点$P$的对应点$P^{''}$，所有的点$P^{''}$组成的图形称为图形$F$的关联图形．能完全覆盖图形$F$和它的关联图形的最小的圆称为图形$F$和它的关联图形的最小覆盖圆（图形$F$和它的关联图形上的所有点都在圆上或内部，且该圆的半径最小）．
 
     （1）点$\left(1,0\right)$的关联图形的坐标为________，点$\left(-,1,2\right)$的关联图形的坐标为________；
 
@@ -710,8 +922,14 @@ questions:
     （2）$n = m - 1$；
 
     （3）$\sqrt{5}$，$\left(\frac{1}{2},,,-,\frac{3}{2}\right)$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 坐标变换
+  - 图形变换
+  - 圆的性质
+  module: geometryComprehensive
+  difficulty: 能力
+  recommended_for:
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''

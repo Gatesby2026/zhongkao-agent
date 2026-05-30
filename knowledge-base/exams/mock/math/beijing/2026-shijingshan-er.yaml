@@ -1,30 +1,49 @@
-year: 2026
-district: 石景山区
-exam_type: 二模
+# ============================================================
+# None年北京真题math — 自动生成
+# ============================================================
+# OCR: Qwen-VL-OCR  Enrich: qwen-max
+# QC: draft=8  needs_review=20
+
+year: null
+district: ''
+exam_type: 真题
 subject: math
 full_score: 100
 duration_minutes: 120
 total_questions: 28
 structure: 8单选(16分) + 8填空(16分) + 12解答(68分)
+passages: []
 questions:
 - id: 1
   type: 单选
   score: 2
   stem: 下图所示正三棱柱的主视图是
   options:
-    A: '[图]'
-    B: '[图]'
-    C: '[图]'
-    D: '[图]'
+    A: '![](figures/image2.png)'
+    B: '![](figures/image3.png)'
+    C: '![](figures/image4.png)'
+    D: '![](figures/image5.png)'
   has_image_options: true
   figure: 2026-shijingshan-er/figures/image2.png
+  _figures_extra:
+  - image2.png
+  - image3.png
+  - image4.png
+  - image5.png
+  - image6.png
   answer: ''
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
-  qc_status: draft
-  qc_note: ''
+  knowledge_points:
+  - 三视图
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 选择题 answer 为空
 - id: 2
   type: 单选
   score: 2
@@ -36,11 +55,18 @@ questions:
     D: $1 . 60 \times 10^{21}$
   answer: ''
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
-  qc_status: draft
-  qc_note: ''
+  knowledge_points:
+  - 科学记数法
+  - 乘法运算
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 选择题 answer 为空
 - id: 3
   type: 单选
   score: 2
@@ -52,11 +78,20 @@ questions:
     D: $\left(m,-,n\right) \left(-,n,-,m\right) = n^{2} - m^{2}$
   answer: ''
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
-  qc_status: draft
-  qc_note: ''
+  knowledge_points:
+  - 幂的运算
+  - 完全平方公式
+  - 二次根式的化简
+  - 平方差公式
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 选择题 answer 为空
 - id: 4
   type: 单选
   score: 2
@@ -67,13 +102,22 @@ questions:
     C: $\left|a\right| < c$
     D: $a + c < 0$
   figure: 2026-shijingshan-er/figures/image21.jpeg
+  _figures_extra:
+  - image21.jpeg
   answer: ''
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
-  qc_status: draft
-  qc_note: ''
+  knowledge_points:
+  - 实数的大小比较
+  - 绝对值的概念
+  - 不等式的性质
+  module: numbersAndExpressions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 选择题 answer 为空
 - id: 5
   type: 单选
   score: 2
@@ -85,11 +129,17 @@ questions:
     D: '5'
   answer: ''
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
-  qc_status: draft
-  qc_note: ''
+  knowledge_points:
+  - 概率与频率
+  module: statisticsAndProbability
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 选择题 answer 为空
 - id: 6
   type: 单选
   score: 2
@@ -101,11 +151,17 @@ questions:
     D: '4'
   answer: ''
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
-  qc_status: draft
-  qc_note: ''
+  knowledge_points:
+  - 代数式的化简与求值
+  - 分式的运算
+  module: numbersAndExpressions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 选择题 answer 为空
 - id: 7
   type: 单选
   score: 2
@@ -124,13 +180,22 @@ questions:
     C: $\angle C P Q = \frac{1}{2} \angle P O D$
     D: $P Q = 3 E F$
   figure: 2026-shijingshan-er/figures/image51.jpeg
+  _figures_extra:
+  - image51.jpeg
   answer: ''
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
-  qc_status: draft
-  qc_note: ''
+  knowledge_points:
+  - 圆的基本性质
+  - 圆周角与圆心角的关系
+  - 弧、弦、圆心角的关系
+  module: circles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 选择题 answer 为空
 - id: 8
   type: 单选
   score: 2
@@ -151,22 +216,36 @@ questions:
     C: ①③
     D: ①②③
   figure: 2026-shijingshan-er/figures/image75.jpeg
+  _figures_extra:
+  - image75.jpeg
   answer: ''
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
-  qc_status: draft
-  qc_note: ''
+  knowledge_points:
+  - 平行线的性质
+  - 角平分线的性质
+  module: triangles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 选择题 answer 为空
 - id: 9
   type: 填空
   score: 2
   stem: 若代数式$\frac{x}{x - 3}$有意义，则实数$x$的取值范围是________．
   answer: ''
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 分式的定义与性质
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 10
@@ -175,9 +254,15 @@ questions:
   stem: 分解因式：$x y^{2} - 6 x y + 9 x =$________．
   answer: ''
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 因式分解
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 11
@@ -186,9 +271,14 @@ questions:
   stem: 方程$\frac{3}{2 x + 1} + \frac{1}{x} = 0$的解为________．
   answer: ''
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 分式方程的解法
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 12
@@ -197,9 +287,14 @@ questions:
   stem: 在平面直角坐标系$x O y$中，若点$A \left(1,,y_{1}\right)$，$B \left(3,,y_{2}\right)$在反比例函数$y = \frac{k}{x} \left(\right. k < 0 \left.\right)$的图象上，则$y_{1}$________$y_{2}$（填“$>$”，“$=$”或“$<$”）．
   answer: ''
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 反比例函数的性质
+  module: functions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 13
@@ -208,33 +303,57 @@ questions:
   stem: 能说明命题“若$a < b$，则$\left|a\right| > \left|b\right|$”是假命题的一组实数$a$，$b$的值为$a =$________，$b =$________．
   answer: ''
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 绝对值的概念
+  - 不等式的性质
+  module: numbersAndExpressions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 14
   type: 填空
   score: 2
-  stem: 如图，在平面直角坐标系$x O y$中，点$A$的坐标为$\left(1,3\right)$，点$B$在$x$轴上，将$\triangle O A B$沿$x$轴向右平移得到$\triangle C D E$，若四边形$A B E D$的面积为$6$，则点$D$的坐标为________．
+  stem: 如图，在平面直角坐标系$x O y$中，点$A$的坐标为$\left(1,3\right)$，点$B$在$x$轴上，将$\triangle O A B$沿$x$轴向右平移得到$\triangle C D E$，若四边形$A B
+    E D$的面积为$6$，则点$D$的坐标为________．
   figure: 2026-shijingshan-er/figures/image106.jpeg
+  _figures_extra:
+  - image106.jpeg
   answer: ''
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 平移变换
+  - 坐标系中的几何图形
+  module: geometryComprehensive
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 15
   type: 填空
   score: 2
-  stem: 如图，矩形$A B C D$中，$E$在$B C$上，连接$A E$，$D E$，将$\triangle A B E$沿$A E$翻折，点$B$的对应点$F$恰好落在$D E$上．若$A B = 6$，$A D = 10$，则$B E =$________，$B$，$F$两点间的距离为________．
+  stem: 如图，矩形$A B C D$中，$E$在$B C$上，连接$A E$，$D E$，将$\triangle A B E$沿$A E$翻折，点$B$的对应点$F$恰好落在$D E$上．若$A B = 6$，$A D = 10$，则$B
+    E =$________，$B$，$F$两点间的距离为________．
   figure: 2026-shijingshan-er/figures/image122.jpeg
+  _figures_extra:
+  - image122.jpeg
   answer: ''
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 矩形的性质
+  - 三角形全等
+  module: quadrilaterals
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 16
@@ -247,9 +366,14 @@ questions:
     （2）总分第二名的运动员，在实心球项目中的得分为________分．'
   answer: ''
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 统计与概率
+  module: statisticsAndProbability
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 17
@@ -257,23 +381,38 @@ questions:
   score: 5
   stem: 计算：$3 \text{tan} 30 \circ + \left(\frac{1}{2}\right)^{- 2} - \sqrt{12} + \left|1,-,\sqrt{3}\right|$．
   answer: ''
-  solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
-  qc_status: draft
-  qc_note: ''
+  solution: __MISSING__
+  knowledge_points:
+  - 特殊角的三角函数值
+  - 负整数指数幂
+  - 二次根式的化简
+  - 绝对值
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 解题步骤未提取，需补全 solution
 - id: 18
   type: 解答
   score: 5
   stem: 解不等式组：$\left{\begin{matrix} 3 \left(2,+,x\right) > x \\ \frac{x + 5}{2} < 4 x - 1 \end{matrix}\right$．
   answer: ''
-  solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
-  qc_status: draft
-  qc_note: ''
+  solution: __MISSING__
+  knowledge_points:
+  - 解一元一次不等式
+  - 解一元一次不等式组
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 解题步骤未提取，需补全 solution
 - id: 19
   type: 解答
   score: 5
@@ -283,29 +422,45 @@ questions:
 
     （2）若$k$为负整数，求此时方程的根．'
   answer: ''
-  solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
-  qc_status: draft
-  qc_note: ''
+  solution: __MISSING__
+  knowledge_points:
+  - 一元二次方程的根的判别式
+  - 一元二次方程的解法
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 解题步骤未提取，需补全 solution
 - id: 20
   type: 解答
   score: 6
-  stem: '在$\text{Rt} \triangle A B C$中，$\angle A C B = 90 \circ$，$D$是$A B$的中点，点$E$在边$B C$上，作线段$B E$的垂直平分线，交$A B$于点$F$，交$E B$于点$G$，连接$F E$并延长到点$M$，使得$F M = D C$，连接$C M$．
+  stem: '在$\text{Rt} \triangle A B C$中，$\angle A C B = 90 \circ$，$D$是$A B$的中点，点$E$在边$B C$上，作线段$B E$的垂直平分线，交$A B$于点$F$，交$E
+    B$于点$G$，连接$F E$并延长到点$M$，使得$F M = D C$，连接$C M$．
 
 
     （1）求证：四边形$C M F D$为平行四边形；
 
     （2）若$\text{sin} B = \frac{2}{3}$，$A C = 4$，$C M = 1$，求$F G$的长．'
   figure: 2026-shijingshan-er/figures/image167.jpeg
+  _figures_extra:
+  - image167.jpeg
   answer: ''
-  solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
-  qc_status: draft
-  qc_note: ''
+  solution: __MISSING__
+  knowledge_points:
+  - 直角三角形的性质
+  - 平行四边形的判定与性质
+  - 三角函数的应用
+  module: triangles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 解题步骤未提取，需补全 solution
 - id: 21
   type: 解答
   score: 5
@@ -319,15 +474,24 @@ questions:
 
     书中记载：栌斗的长度为$32$份，高度为$20$份；华栱的长度为$72$份，高度为$21$份；散斗的长度为$16$份，高度为$10$份．图$1$为斗拱结构示意图，标注了栌斗、散斗、华栱等构件在整体斗拱结构中的具体位置与形态．
 
-    某考古队在一处建筑群遗址中，发现了两座采用不同材等建造的建筑遗存，出土了栌斗、华栱、散斗三种构件的完整标本．经精密测量，采用第一种材等制作的栌斗实际长度与采用第二种材等制作的华栱实际高度之和为$24 . 4$寸；采用第一种材等制作的散斗实际高度与采用第二种材等制作的散斗实际高度之比为$5 : 4$．判断该建筑群所用的两种材等分别对应几等材，并说明理由．'
+    某考古队在一处建筑群遗址中，发现了两座采用不同材等建造的建筑遗存，出土了栌斗、华栱、散斗三种构件的完整标本．经精密测量，采用第一种材等制作的栌斗实际长度与采用第二种材等制作的华栱实际高度之和为$24 . 4$寸；采用第一种材等制作的散斗实际高度与采用第二种材等制作的散斗实际高度之比为$5
+    : 4$．判断该建筑群所用的两种材等分别对应几等材，并说明理由．'
   figure: 2026-shijingshan-er/figures/image190.jpeg
+  _figures_extra:
+  - image190.jpeg
   answer: ''
-  solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
-  qc_status: draft
-  qc_note: ''
+  solution: __MISSING__
+  knowledge_points:
+  - 比例的应用
+  - 方程的建立与求解
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 解题步骤未提取，需补全 solution
 - id: 22
   type: 解答
   score: 5
@@ -337,12 +501,18 @@ questions:
 
     （2）当$x \leq 2$时，对于$x$的每一个值，函数$y = m x - 1 \left(m,\neq,0\right)$的值既小于函数$y = k x + 1$的值，又小于函数$y = x + b$的值，直接写出$m$的取值范围．'
   answer: ''
-  solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
-  qc_status: draft
-  qc_note: ''
+  solution: __MISSING__
+  knowledge_points:
+  - 一次函数的性质
+  - 一次函数的应用
+  module: functions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 解题步骤未提取，需补全 solution
 - id: 23
   type: 解答
   score: 6
@@ -386,12 +556,21 @@ questions:
 
     已知只有两套系统的准确性达标，则p的最大整数值是________．'
   answer: ''
-  solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
-  qc_status: draft
-  qc_note: ''
+  solution: __MISSING__
+  knowledge_points:
+  - 平均数
+  - 众数
+  - 方差
+  - 数据分布特点
+  - 中位数
+  module: statisticsAndProbability
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 解题步骤未提取，需补全 solution
 - id: 24
   type: 解答
   score: 6
@@ -402,18 +581,27 @@ questions:
 
     （2）若$\frac{P E}{E A} = \frac{1}{3}$，$C D = 8$，求$P B$的长．'
   figure: 2026-shijingshan-er/figures/image208.jpeg
+  _figures_extra:
+  - image208.jpeg
   answer: ''
-  solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
-  qc_status: draft
-  qc_note: ''
+  solution: __MISSING__
+  knowledge_points:
+  - 切线的性质
+  - 圆周角定理
+  - 相似三角形
+  module: circles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 解题步骤未提取，需补全 solution
 - id: 25
   type: 解答
   score: 5
-  stem: '为探究不同材质保温材料的保温性能，某物理兴趣小组选取甲、乙两种保温材料，制作了除保温层材质外，其余结构、容量均完全相同的两个保温杯进行实验．他们向两个保温杯中装入质量相同的水，用电加热器同时将两杯水加热至相同的初始温度后停止加热，并立即盖紧杯盖．记以甲材料为保温层的为1号杯，以乙材料为保温层的为2号杯，将两个保温杯置于恒定的相同室温环境中．在实验的第$t \text{min}$（从停止加热开始计时），记录1号、2号杯中水的温度分别为$T_{1}$，$T_{2}$（单位：$\circ
-    \text{C}$），实验所得部分数据如下：
+  stem: '为探究不同材质保温材料的保温性能，某物理兴趣小组选取甲、乙两种保温材料，制作了除保温层材质外，其余结构、容量均完全相同的两个保温杯进行实验．他们向两个保温杯中装入质量相同的水，用电加热器同时将两杯水加热至相同的初始温度后停止加热，并立即盖紧杯盖．记以甲材料为保温层的为1号杯，以乙材料为保温层的为2号杯，将两个保温杯置于恒定的相同室温环境中．在实验的第$t
+    \text{min}$（从停止加热开始计时），记录1号、2号杯中水的温度分别为$T_{1}$，$T_{2}$（单位：$\circ \text{C}$），实验所得部分数据如下：
 
     | $t / \text{min}$ | 0 | 5 | 10 | 15 | 20 | 25 | 35 | 45 | 55 | 65 | 80 |
 
@@ -435,13 +623,22 @@ questions:
     ②某种茶叶用$80 \circ \text{C}$的水冲泡，待茶水温度降至$55 \circ \text{C}$时饮用口感最佳．小石直接向1号杯和2号杯中分别倒入$80 \circ \text{C}$的水冲泡该茶叶（忽略冲泡过程中的热量损失）．从盖紧杯盖开始计时，1号杯茶水经过约________$\text{min}$（精确到个位）后饮用口感最佳，此时2号杯中茶水的温度为________$\circ
     \text{C}$（精确到个位）．'
   figure: 2026-shijingshan-er/figures/image224.jpeg
+  _figures_extra:
+  - image224.jpeg
   answer: ''
-  solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
-  qc_status: draft
-  qc_note: ''
+  solution: __MISSING__
+  knowledge_points:
+  - 实验方法
+  - 数据处理
+  - 热学
+  module: functions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 解题步骤未提取，需补全 solution
 - id: 26
   type: 解答
   score: 6
@@ -449,35 +646,51 @@ questions:
 
     （1）求该抛物线的对称轴；
 
-    （2）$B \left(t,,,y_{1}\right)$，$C \left(a,+,2,,y_{2}\right)$是抛物线$y = a x^{2} + b x \left(\right. a > 0 \left.\right)$上两点．过点$B$作$y$轴的垂线，交直线$y = a x$于点$D$．
+    （2）$B \left(t,,,y_{1}\right)$，$C \left(a,+,2,,y_{2}\right)$是抛物线$y = a x^{2} + b x \left(\right. a > 0 \left.\right)$上两点．过点$B$作$y$轴的垂线，交直线$y
+    = a x$于点$D$．
 
     ①当$a = 3$，$t = - 1$时，比较$y_{1}$，$y_{2}$的大小；
 
     ②当$y_{1} < y_{2}$时，线段$B D$的长随$t$的增大而增大，求$a$的取值范围．'
   answer: ''
-  solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
-  qc_status: draft
-  qc_note: ''
+  solution: __MISSING__
+  knowledge_points:
+  - 二次函数的性质
+  - 二次函数的应用
+  module: functions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 解题步骤未提取，需补全 solution
 - id: 27
   type: 解答
   score: 7
-  stem: '在$\triangle A B C$中，$\angle A C B = 90 \circ$，$\angle B A C = 30 \circ$，$D$为直线$B C$上一点，连接$A D$，将线段$D A$绕点$D$顺时针旋转$60 \circ$，得到线段$D E$，连接$B E$．
+  stem: '在$\triangle A B C$中，$\angle A C B = 90 \circ$，$\angle B A C = 30 \circ$，$D$为直线$B C$上一点，连接$A D$，将线段$D A$绕点$D$顺时针旋转$60
+    \circ$，得到线段$D E$，连接$B E$．
 
 
     （1）如图1，当点$D$在$B C$的延长线上且$D C = B C$时，记$B E$，$A D$的交点为$M$，连接$C M$．求证：$D E = 2 C M$；
 
     （2）如图2，当点$D$在$C B$的延长线上时，取$B E$的中点$F$，连接$C F$．用等式表示线段$B D$与$C F$的数量关系，并证明．'
   figure: 2026-shijingshan-er/figures/image265.png
+  _figures_extra:
+  - image265.png
   answer: ''
-  solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
-  qc_status: draft
-  qc_note: ''
+  solution: __MISSING__
+  knowledge_points:
+  - 三角形的性质
+  - 旋转与变换
+  - 几何证明
+  module: triangles
+  difficulty: 能力
+  recommended_for:
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 解题步骤未提取，需补全 solution
 - id: 28
   type: 解答
   score: 7
@@ -490,12 +703,21 @@ questions:
 
     （2）若点$T$是$\triangle A B C$的边上一点，且点$T$与点$H \left(1,0\right)$关于线段$B C$双向合，求点$T$的坐标；
 
-    （3）点$K$是直线$y = x + 2$上一动点，以$K$为圆心作半径为$1$的$\bigodot K$．当点$K$运动时，对于$\bigodot K$上任意一点$P$，都能在$\triangle A B C$的边上找到一点$Q$，使得$P$，$Q$两点关于$\bigodot K$双向合，直接写出点$K$的纵坐标$k$的取值范围．'
+    （3）点$K$是直线$y = x + 2$上一动点，以$K$为圆心作半径为$1$的$\bigodot K$．当点$K$运动时，对于$\bigodot K$上任意一点$P$，都能在$\triangle A B C$的边上找到一点$Q$，使得$P$，$Q$两点关于$\bigodot
+    K$双向合，直接写出点$K$的纵坐标$k$的取值范围．'
   figure: 2026-shijingshan-er/figures/image300.jpeg
+  _figures_extra:
+  - image300.jpeg
   answer: ''
-  solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
-  qc_status: draft
-  qc_note: ''
+  solution: __MISSING__
+  knowledge_points:
+  - 平面直角坐标系
+  - 图形变换
+  - 几何综合
+  module: geometryComprehensive
+  difficulty: 能力
+  recommended_for:
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 解题步骤未提取，需补全 solution

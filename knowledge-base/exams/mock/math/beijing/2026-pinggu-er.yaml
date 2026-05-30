@@ -1,3 +1,9 @@
+# ============================================================
+# 2026年北京平谷区二模math — 自动生成
+# ============================================================
+# OCR: Qwen-VL-OCR  Enrich: qwen-max
+# QC: draft=28  needs_review=0
+
 year: 2026
 district: 平谷区
 exam_type: 二模
@@ -6,23 +12,35 @@ full_score: 100
 duration_minutes: 120
 total_questions: 28
 structure: 8单选(16分) + 8填空(16分) + 12解答(68分)
+passages: []
 questions:
 - id: 1
   type: 单选
   score: 2
   stem: 我国一些银行的行标设计都融入了对称的知识，下面四个行标中是中心对称图形的是
   options:
-    A: '[图]'
-    B: '[图]'
-    C: '[图]'
-    D: '[图]'
+    A: '![](figures/image2.png)'
+    B: '![](figures/image3.png)'
+    C: '![](figures/image4.png)'
+    D: '![](figures/image5.png)'
   has_image_options: true
   figure: 2026-pinggu-er/figures/image2.png
+  _figures_extra:
+  - image2.png
+  - image3.png
+  - image4.png
+  - image5.png
   answer: B
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 中心对称图形
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 2
@@ -35,11 +53,20 @@ questions:
     C: $\left|b\right| > \left|c\right|$
     D: $a > b$
   figure: 2026-pinggu-er/figures/image9.png
+  _figures_extra:
+  - image9.png
   answer: C
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 实数的大小比较
+  - 绝对值的概念
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 3
@@ -53,9 +80,14 @@ questions:
     D: '8'
   answer: D
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 多边形的内角和
+  module: geometryComprehensive
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 4
@@ -69,9 +101,15 @@ questions:
     D: $\frac{1}{4}$
   answer: D
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 概率计算
+  module: statisticsAndProbability
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 5
@@ -85,9 +123,15 @@ questions:
     D: 只有一个实数根
   answer: C
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 一元二次方程的根的判别式
+  module: equationsAndInequalities
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 6
@@ -101,33 +145,48 @@ questions:
     D: $4 . 2 \times 10^{7}$米
   answer: D
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 科学记数法
+  - 单位换算
+  module: numbersAndExpressions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 7
   type: 单选
   score: 2
-  stem: 如图$\angle A O B$，$C$为射线$O B$上一点，用尺规按如下步骤作图：①以点$O$为圆心，任意长为半径作弧，交$O A$于点$D$，交$O B$于点$E$；②以点$C$为圆心，$O D$为半径作弧，交$O C$于点$F$；③以点$F$为圆心，$D E$为半径作弧，交上一步作的弧于点$G$；④连接$C G$并延长，交$O A$于点$H$．若$\angle A H C =
-    108 \circ$，则$\angle A O B$的度数为
+  stem: 如图$\angle A O B$，$C$为射线$O B$上一点，用尺规按如下步骤作图：①以点$O$为圆心，任意长为半径作弧，交$O A$于点$D$，交$O B$于点$E$；②以点$C$为圆心，$O D$为半径作弧，交$O C$于点$F$；③以点$F$为圆心，$D
+    E$为半径作弧，交上一步作的弧于点$G$；④连接$C G$并延长，交$O A$于点$H$．若$\angle A H C = 108 \circ$，则$\angle A O B$的度数为
   options:
     A: 54°
     B: 64°
     C: 61°
     D: 72°
   figure: 2026-pinggu-er/figures/image46.png
+  _figures_extra:
+  - image46.png
   answer: A
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 尺规作图
+  - 角的度量
+  module: geometryComprehensive
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 8
   type: 单选
   score: 2
-  stem: '如图，在平面直角坐标系$x O y$中，点$A$是直线$y = 2 x$与函数$y = \frac{m - 1}{x}$（$x > 0$，$m$为常数）的图象的交点，过点$A$作$x$轴的垂线，垂足为点$B$，且$O B = 2$．给出下面四个结论：
+  stem: '如图，在平面直角坐标系$x O y$中，点$A$是直线$y = 2 x$与函数$y = \frac{m - 1}{x}$（$x > 0$，$m$为常数）的图象的交点，过点$A$作$x$轴的垂线，垂足为点$B$，且$O B =
+    2$．给出下面四个结论：
 
 
     ①$m = 9$；
@@ -136,7 +195,8 @@ questions:
 
     ③已知点$P \left(n,,0\right)$，过点$P$作$y$轴的平行线交直线$y = 2 x$于点$M$，交函数$y = \frac{m - 1}{x}$于点$N$，当$n > 2$时，点$M$在点$N$的上方；
 
-    ④已知点$P \left(0,,p\right)$，过点$P$作平行于$x$轴的直线，交直线$y = 2 x$于点$C \left(x_{1},,,y_{1}\right)$，交函数$y = \frac{m - 1}{x}$于点$D \left(x_{2},,,y_{2}\right)$，若$x_{2} < x_{1}$，则$p > 4$．
+    ④已知点$P \left(0,,p\right)$，过点$P$作平行于$x$轴的直线，交直线$y = 2 x$于点$C \left(x_{1},,,y_{1}\right)$，交函数$y = \frac{m - 1}{x}$于点$D \left(x_{2},,,y_{2}\right)$，若$x_{2}
+    < x_{1}$，则$p > 4$．
 
     上述结论中，所有正确结论的序号是'
   options:
@@ -145,11 +205,18 @@ questions:
     C: ①③
     D: ①②③④
   figure: 2026-pinggu-er/figures/image57.png
+  _figures_extra:
+  - image57.png
   answer: D
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 函数的图象与性质
+  - 一次函数与反比例函数的综合应用
+  module: functions
+  difficulty: 能力
+  recommended_for:
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 9
@@ -158,9 +225,15 @@ questions:
   stem: 若代数式$\sqrt{x - 1}$有意义，则实数$x$的取值范围是__________．
   answer: $x \geq 1$
   solution: $x \geq 1$
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 二次根式的定义与性质
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 10
@@ -169,9 +242,15 @@ questions:
   stem: 分解因式：$a b^{2} - 9 a =$__________．
   answer: $a \left(\right. b + 3 \left.\right) \left(\right. b - 3 \left.\right)$
   solution: $a \left(\right. b + 3 \left.\right) \left(\right. b - 3 \left.\right)$
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 因式分解
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 11
@@ -180,9 +259,14 @@ questions:
   stem: 方程$\frac{x - 1}{x + 3} - \frac{2}{x - 1} = 1$的解为__________．
   answer: $x = - \frac{1}{3}$
   solution: $x = - \frac{1}{3}$
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 分式方程的解法
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 12
@@ -191,9 +275,15 @@ questions:
   stem: '在平面直角坐标系$x O y$中，将直线$l_{1} : y = - x + m$向左平移1个单位长度，得到直线$l_{2}$：$y = - x + 3$，则$m =$__________．'
   answer: $m = 4$
   solution: $m = 4$
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 函数的平移
+  module: functions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 13
@@ -201,11 +291,19 @@ questions:
   score: 2
   stem: 如图，面积为8的正方形$A B C D$内接于$\bigodot O$，则$\bigodot O$的半径为__________．
   figure: 2026-pinggu-er/figures/image99.png
+  _figures_extra:
+  - image99.png
   answer: '2'
   solution: '2'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 正方形的性质
+  - 圆的性质
+  module: circles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 14
@@ -216,11 +314,19 @@ questions:
 
     若该校有3000名学生，请你根据以上信息估计该校最喜爱篮球运动的学生有__________人．'
   figure: 2026-pinggu-er/figures/image100.png
+  _figures_extra:
+  - image100.png
   answer: '960'
   solution: '960'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 统计图表的应用
+  - 样本估计总体
+  module: statisticsAndProbability
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 15
@@ -228,11 +334,19 @@ questions:
   score: 2
   stem: 如图，在矩形$A B C D$中，$B E \bot A C$，垂足为点$E$．若$A B = 8$，$A D = 4$，则$\triangle A B E$的面积为__________．
   figure: 2026-pinggu-er/figures/image107.png
+  _figures_extra:
+  - image107.png
   answer: $\frac{6 4}{5}$
   solution: $\frac{6 4}{5}$
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 矩形的性质
+  - 直角三角形的面积计算
+  module: quadrilaterals
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 16
@@ -253,9 +367,15 @@ questions:
     （2）若要使全部零部件完成两道工序的总时间最短，则加工工序上的处理顺序应为__________（写出一种即可）．'
   answer: 37，乙，丁，甲，丙
   solution: 37，乙，丁，甲，丙
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 统筹方法
+  - 时间优化
+  module: functions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 17
@@ -263,14 +383,24 @@ questions:
   score: 5
   stem: 计算：$\left|1,-,\sqrt{3}\right| - 3 tan 30 \circ + \left(\frac{1}{2}\right)^{- 1} - \left(\left(\pi,-,2026\right)\right)^{0}$．
   answer: ''
-  solution: '解：$\left|\right. 1 - \left|\right. - 3 t a n 3 0 \circ + \left(\right. \frac{1}{2} \left.\right)^{- 1} - \left(\right. \pi - 2 0 2 6 \left.\right)^{0}$
+  solution: '解：$\left|\right. 1 - \left|\right. - 3 t a n 3 0 \circ + \left(\right. \frac{1}{2} \left.\right)^{- 1} - \left(\right.
+    \pi - 2 0 2 6 \left.\right)^{0}$
 
     $= - 1 - 3 \times \frac{}{3} + 2 - 1$  4
 
     $= 0$  5'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 绝对值
+  - 特殊角的三角函数
+  - 负指数幂
+  - 零指数幂
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 18
@@ -278,16 +408,23 @@ questions:
   score: 5
   stem: 解不等式组：$\left{\begin{matrix} x - 3 \left(x,-,2\right) \geq 4 \\ \frac{1 + 2 x}{3} > x - 1 \end{matrix}\right$
   answer: ''
-  solution: '解不等式组：$\left{\right. x - 3 \left(\right. x - 2 \left.\right) \geq 4 , \textcircled{1} & \frac{1 + 2 x}{3} > x - 1 , \textcircled{2}$
+  solution: '解不等式组：$\left{\right. x - 3 \left(\right. x - 2 \left.\right) \geq 4 , \textcircled{1} & \frac{1 + 2 x}{3} > x
+    - 1 , \textcircled{2}$
 
     解：解不等式①，得$x \leq 1$．2
 
     解不等式②，得$x < 4$．4
 
     ∴原不等式组的解集为$x \leq 1$．5'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 解一元一次不等式
+  - 解不等式组
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 19
@@ -310,9 +447,15 @@ questions:
     $\therefore x - y = 1$
 
     ∴原式$= 3$．5'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 代数式的化简与求值
+  - 方程的应用
+  module: numbersAndExpressions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 20
@@ -325,9 +468,12 @@ questions:
 
     （2）连接$A E$交$C D$于点$H$，若$\angle C A E = 45 \circ$，$C F = \sqrt{10}$，求$E H$的长．'
   figure: 2026-pinggu-er/figures/image123.png
+  _figures_extra:
+  - image123.png
   answer: ''
   solution: '（1）∵点$D$，$E$分别是$A B$，$B C$的中点
 
+    ![](figures/image25.png)
 
     $\therefore D E \parallel A C$，$C E = B E$，$A C = 2 D E$
 
@@ -355,6 +501,7 @@ questions:
 
     （2）设$D E = x$，
 
+    ![](figures/image41.png)
 
     $\because \angle A C B = 9 0 \circ$，$\angle C A E = 4 5 \circ$
 
@@ -379,9 +526,16 @@ questions:
     $\therefore \frac{E H}{A H} = \frac{1}{2}$
 
     $\therefore E H = \frac{4}{3}$'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 直角三角形的性质
+  - 中点四边形
+  - 菱形的判定与性质
+  module: triangles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 21
@@ -403,7 +557,8 @@ questions:
   answer: ''
   solution: '解：金奖  1
 
-    设体验时编程挑战得$4 x$分，手工创作得$3 x$分，则正式计分时编程挑战得$\left(\right. 4 x + 9 \left.\right)$分，手工创作得$\left(\right. 1 + 2 0 \left.\right) 3 x$分．2
+    设体验时编程挑战得$4 x$分，手工创作得$3 x$分，则正式计分时编程挑战得$\left(\right. 4 x + 9 \left.\right)$分，手工创作得$\left(\right. 1 + 2 0 \left.\right)
+    3 x$分．2
 
     根据题意可列方程为：
 
@@ -420,9 +575,15 @@ questions:
     ∴给这个同学颁发金奖  6
 
     答：给这个同学颁发金奖．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 方程的应用
+  - 比例与百分比
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 22
@@ -434,7 +595,8 @@ questions:
 
     （2）当$x > 1$时，对于$x$的每一个值，函数$y = m x - 2 \left(m,\neq,0\right)$的值既小于函数$y = k x + b$的值，也大于$- 1$，直接写出$m$的取值范围．'
   answer: ''
-  solution: '（1）$\because y = k x + b \left(\right. k \neq 0 \left.\right)$的图象经过点$\left(\right. 1 , 3 \left.\right)$，$\left(\right. 0 , 1 \left.\right)$．
+  solution: '（1）$\because y = k x + b \left(\right. k \neq 0 \left.\right)$的图象经过点$\left(\right. 1 , 3 \left.\right)$，$\left(\right.
+    0 , 1 \left.\right)$．
 
     $\therefore \left{\right. k + b = 3 , & b = 1 ,$  1
 
@@ -443,24 +605,34 @@ questions:
     $\therefore y = 2 x + 1$
 
     （2）$1 \leq m \leq 2$  5'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 一次函数的性质
+  - 不等式的应用
+  module: functions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 23
   type: 解答
   score: 6
-  stem: '如图，$A B$为$\bigodot O$的直径，点$C$为圆上一点，点$D$是$\overset{⌢}{C B}$的中点，过点$D$作$D E \parallel B C$交$A B$延长线于点$E$，连结$A C$、$C D$．
+  stem: '如图，$A B$为$\bigodot O$的直径，点$C$为圆上一点，点$D$是$\overset{⌢}{C B}$的中点，过点$D$作$D E \parallel B C$交$A B$延长线于点$E$，连结$A C$、$C
+    D$．
 
 
     （1）求证：$D E$是$\bigodot O$的切线；
 
     （2）连结$A D$，若$C D = 12$，$cos \angle C A D = \frac{4}{5}$，求$D E$的长．'
   figure: 2026-pinggu-er/figures/image154.png
+  _figures_extra:
+  - image154.png
   answer: ''
   solution: '（1）证明：连结
 
+    ![](figures/image75.png)
 
     ∵点$D$是$\overset{⌢}{C B}$的中点
 
@@ -490,6 +662,7 @@ questions:
 
     在$\triangle A B D$中，$c o s \angle B A D = \frac{A D}{A B} = \frac{4}{5}$
 
+    ![](figures/image101.png)
 
     设$A D = 4 x$，$A B = 5 x$，
 
@@ -520,9 +693,15 @@ questions:
     $\therefore \frac{\frac{4 8}{5}}{D E} = \frac{\frac{1 4}{5}}{1 0}$
 
     $\therefore D E = \frac{2 4 0}{7}$  6'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 圆的切线
+  - 三角函数的应用
+  module: circles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 24
@@ -557,6 +736,8 @@ questions:
 
     ②推断甲组同学实验中所用挤出头的孔径为__________$\text{mm}$（结果保留小数点后一位）．'
   figure: 2026-pinggu-er/figures/image178.png
+  _figures_extra:
+  - image178.png
   answer: ''
   solution: '（1）甲组挤出头出料25 s时的出料量为10 g  2
 
@@ -565,9 +746,16 @@ questions:
     （3）①孔径为$5 . 5$的挤出头出料$6$耗材所用的时间为$9 . 6$（结果保留小数点后一位）；4
 
     ②推断甲组同学实验中所用挤出头的孔径为4.3 mm（结果保留小数点后一位）．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 正比例函数
+  - 函数图像
+  - 数据处理
+  module: functions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 25
@@ -620,6 +808,8 @@ questions:
 
     若丙班在三个班级中活跃度排名居中，则这三个班级的排名由前到后依次为__________，此时表中$c$（$c$为整数）的值为__________．'
   figure: 2026-pinggu-er/figures/image187.png
+  _figures_extra:
+  - image187.png
   answer: ''
   solution: '（1）$a = 1 2$，1
 
@@ -628,9 +818,16 @@ questions:
     （3）随机抽取的50名学生参加志愿活动次数的中位是23  3
 
     （4）乙、丙、甲；$c$（$c$为整数）的值为25．  5'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 频数分布表
+  - 中位数
+  - 数据整理与分析
+  module: statisticsAndProbability
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 26
@@ -644,7 +841,8 @@ questions:
 
     ②当$x \neq 1$时，函数值$y$__________4（填“$>$”，“$<$””、“$\geq$”或“$\leq$”）；
 
-    （2）点$A \left(-,2,t,,,y_{1}\right)$，$B \left(t,,,y_{2}\right)$，$C \left(t,+,1,,y_{3}\right)$在该抛物线上，若抛物与$x$轴的一个交点为$\left(x_{0},,,y_{0}\right)$，其中$- 1 < x_{0} < 0$，比较$y_{1}$，$y_{2}$，$y_{3}$的大小，并说明理由．'
+    （2）点$A \left(-,2,t,,,y_{1}\right)$，$B \left(t,,,y_{2}\right)$，$C \left(t,+,1,,y_{3}\right)$在该抛物线上，若抛物与$x$轴的一个交点为$\left(x_{0},,,y_{0}\right)$，其中$-
+    1 < x_{0} < 0$，比较$y_{1}$，$y_{2}$，$y_{3}$的大小，并说明理由．'
   answer: ''
   solution: '（1）①由题意得对称轴为$x = 1$．1
 
@@ -686,19 +884,26 @@ questions:
 
     ∴当$x \geq t$时$y$随的增大而减小
 
-    ∵点$A \left(\right. - 2 t , y_{1} \left.\right)$，$B \left(\right. t , y_{2} \left.\right)$，$C \left(\right. t + 1 , y_{3} \left.\right)$在该抛物线上
+    ∵点$A \left(\right. - 2 t , y_{1} \left.\right)$，$B \left(\right. t , y_{2} \left.\right)$，$C \left(\right. t + 1 , y_{3}
+    \left.\right)$在该抛物线上
 
     $\therefore y_{2} > y_{3} > y_{1}$  6'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 二次函数的性质
+  - 二次函数的图像
+  module: functions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 27
   type: 解答
   score: 7
-  stem: '如图，在$\triangle A B C$中，$A B = A C$，$\angle B A C = 90 \circ$，过点$A$作射线$A P$，交线段$B C$于$D$，$\angle C A P = \alpha \left(0,\circ,<,\alpha,<,45,\circ\right)$，过点$C$作$C E \bot A P$于点$E$，延长$E C$到点$F$，使$E
-    F = A E$．
+  stem: '如图，在$\triangle A B C$中，$A B = A C$，$\angle B A C = 90 \circ$，过点$A$作射线$A P$，交线段$B C$于$D$，$\angle C A P = \alpha \left(0,\circ,<,\alpha,<,45,\circ\right)$，过点$C$作$C
+    E \bot A P$于点$E$，延长$E C$到点$F$，使$E F = A E$．
 
 
     （1）若$A B = 7$，$tan \alpha = \frac{\sqrt{13}}{6}$，求$E F$的长；
@@ -709,6 +914,8 @@ questions:
 
     ②猜想$M N$与$C E$的数量关系，并证明．'
   figure: 2026-pinggu-er/figures/image232.png
+  _figures_extra:
+  - image232.png
   answer: ''
   solution: '（1）解：$\because C E \bot A P$
 
@@ -726,6 +933,7 @@ questions:
 
     过点$C$作$C K \parallel M N$交$A P$于$K$
 
+    ![](figures/image168.png)
 
     $\because C E \bot A P$，$B Q \bot A P$
 
@@ -768,9 +976,16 @@ questions:
     $\therefore C K = C E$
 
     $\therefore C E = M N$  7'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 直角三角形的性质
+  - 解直角三角形
+  - 相似三角形
+  module: triangles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 28
@@ -785,16 +1000,27 @@ questions:
 
     （2）在（1）的条件下，若直线$y = \sqrt{3} x + b$上存在$\bigodot O$的“切端点”，则$b$的取值范围为__________；
 
-    （3）在平面直角坐标系$x O y$中，$\bigodot O$的半径为$r$，直线$y = \frac{3}{4} x + 3$分别与$x$轴，$y$轴交于点$E$，$F$，若线段$E F$上的所有点都是$\bigodot O$的“切端点”，则$\bigodot O$的半径$r$的取值范围为__________．'
+    （3）在平面直角坐标系$x O y$中，$\bigodot O$的半径为$r$，直线$y = \frac{3}{4} x + 3$分别与$x$轴，$y$轴交于点$E$，$F$，若线段$E F$上的所有点都是$\bigodot O$的“切端点”，则$\bigodot
+    O$的半径$r$的取值范围为__________．'
   figure: 2026-pinggu-er/figures/image252.png
+  _figures_extra:
+  - image252.png
+  - image273.png
   answer: ''
   solution: '（1）$A_{2}$，$A_{3}$  2
 
     （2）$- 4 \leq b \leq 4$  4
 
     （3）$\frac{4}{5} \leq r \leq \frac{1 2}{5}$  7'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 圆的切线
+  - 直线与圆的位置关系
+  - 坐标系中的几何问题
+  module: circles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''

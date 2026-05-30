@@ -1,3 +1,9 @@
+# ============================================================
+# 2026年北京门头沟区二模math — 自动生成
+# ============================================================
+# OCR: Qwen-VL-OCR  Enrich: qwen-max
+# QC: draft=28  needs_review=0
+
 year: 2026
 district: 门头沟区
 exam_type: 二模
@@ -6,18 +12,24 @@ full_score: 100
 duration_minutes: 120
 total_questions: 28
 structure: 8单选(16分) + 8填空(16分) + 12解答(68分)
+passages: []
 questions:
 - id: 1
   type: 单选
   score: 2
   stem: 下列图形中，既是轴对称图形，又是中心对称图形的是（    ）
   options:
-    A: '[图]'
-    B: '[图]'
-    C: '[图]'
-    D: '[图]'
+    A: '![](figures/image3.png)'
+    B: '![](figures/image4.png)'
+    C: '![](figures/image5.png)'
+    D: '![](figures/image6.png)'
   has_image_options: true
   figure: 2026-mentougou-er/figures/image3.png
+  _figures_extra:
+  - image3.png
+  - image4.png
+  - image5.png
+  - image6.png
   answer: B
   solution: '解：A、是轴对称图形，不是中心对称图形，不符合题意；
 
@@ -26,9 +38,16 @@ questions:
     C、是轴对称图形，不是中心对称图形，不符合题意；
 
     D、是轴对称图形，不是中心对称图形，不符合题意．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 轴对称图形
+  - 中心对称图形
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 2
@@ -41,6 +60,8 @@ questions:
     C: $a + b > 0$
     D: $\frac{a}{b} < - 1$
   figure: 2026-mentougou-er/figures/image8.png
+  _figures_extra:
+  - image8.png
   answer: D
   solution: '根据数轴得到$- 4 < a < - 3 < 0 < 2 < b < 3$，进而根据不等式的性质逐一判断即可．
 
@@ -53,9 +74,17 @@ questions:
     $\because b > 0$，
 
     $\therefore \frac{a}{b} < - 1$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 实数的大小比较
+  - 绝对值的概念
+  - 有理数的加法
+  - 有理数的除法
+  module: numbersAndExpressions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 3
@@ -68,6 +97,8 @@ questions:
     C: $3 5 \circ$
     D: $4 0 \circ$
   figure: 2026-mentougou-er/figures/image27.png
+  _figures_extra:
+  - image27.png
   answer: A
   solution: '先由三角形内角和定理求出$\angle B O D$的度数，再由对顶角相等可得$\angle A O C$的度数，然后根据垂直的定义得到$\angle A = 9 0 \circ$，最后根据余角的性质求解即可．
 
@@ -80,9 +111,15 @@ questions:
     $\therefore \angle A = 9 0 \circ$，
 
     $\therefore \angle C = 9 0 \circ - \angle A O C = 2 5 \circ$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 三角形内角和定理
+  - 垂直的性质
+  module: triangles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 4
@@ -100,9 +137,15 @@ questions:
     $\therefore$红球的个数为$2 0 - 1 0 - 8 = 2$，
 
     ∴从袋子中随机摸出一个小球，摸出的球是红球的概率$P = \frac{2}{2 0} = \frac{1}{1 0}$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 概率计算
+  module: statisticsAndProbability
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 5
@@ -119,12 +162,19 @@ questions:
 
     解：$\because$关于$x$的一元二次方程$\left(\right. m - 2 \left.\right) x^{2} - 4 x + 1 = 0$有实数根，
 
-    $\therefore \Delta = \left(\right. - 4 \left.\right)^{2} - 4 \times \left(\right. m - 2 \left.\right) \times 1 = 1 6 - 4 m + 8 = 2 4 - 4 m \geq 0$，且$m - 2 \neq 0$，
+    $\therefore \Delta = \left(\right. - 4 \left.\right)^{2} - 4 \times \left(\right. m - 2 \left.\right) \times 1 = 1 6 -
+    4 m + 8 = 2 4 - 4 m \geq 0$，且$m - 2 \neq 0$，
 
     $\therefore m \leq 6$且$m \neq 2$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 一元二次方程的根的判别式
+  - 一元二次方程的定义
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 6
@@ -142,41 +192,60 @@ questions:
     解：根据题意，2025年全年全国粮食总产量为$7 0 6 5 0 + 8 3 8 = 7 1 4 8 8$（万吨），
 
     71488万$= 7 1 4 8 8 0 0 0 0 = 7 . 1 4 8 8 \times 1 0^{8}$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 科学记数法
+  - 加减运算
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 7
   type: 单选
   score: 2
-  stem: 如图，在$\triangle A B C$中，$A C = 2 , B C = 6$，以点$C$为圆心，$A C$长为半径画弧交$A C$的延长线于点$D$，分别以点$B$，$D$为圆心，大于$\frac{1}{2} B D$长为半径画弧，两弧分别交于点$P , Q$，连接$P Q$交$B C$于点$E$，连接$D E$，则$\triangle C D E$的周长为（    ）
+  stem: 如图，在$\triangle A B C$中，$A C = 2 , B C = 6$，以点$C$为圆心，$A C$长为半径画弧交$A C$的延长线于点$D$，分别以点$B$，$D$为圆心，大于$\frac{1}{2} B D$长为半径画弧，两弧分别交于点$P
+    , Q$，连接$P Q$交$B C$于点$E$，连接$D E$，则$\triangle C D E$的周长为（    ）
   options:
     A: '8'
     B: '7'
     C: '6'
     D: '5'
   figure: 2026-mentougou-er/figures/image80.png
+  _figures_extra:
+  - image80.png
+  - image83.png
   answer: A
   solution: '连接$B D$，由作图可得$C D = A C = 2 , D E = B E$，由$C D + C E + D E = A C + B E + C E$即可得出结果．
 
     解：如图，连接$B D$，
 
+    ![](figures/image83.png)
 
     由作图可知$C D = A C = 2 , P Q$是$B D$的垂直平分线，
 
     $\therefore B E = D E$，
 
     $\therefore \triangle C D E$的周长为$C D + D E + C E = C D + B E + C E = C D + B C = 2 + 6 = 8$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 三角形的性质
+  - 圆的基本性质
+  module: triangles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 8
   type: 单选
   score: 2
-  stem: '如图，$B D$是正方形$A B C D$的对角线，$E , F$分别是$B C , C D$边的中点，作点$E$关于$C D$的对称点$G$，连接$D E$，$A F , C G , D G , A F$交$B D$于点$P$，延长$A F$交$D G$于点$Q$．
+  stem: '如图，$B D$是正方形$A B C D$的对角线，$E , F$分别是$B C , C D$边的中点，作点$E$关于$C D$的对称点$G$，连接$D E$，$A F , C G , D G , A F$交$B D$于点$P$，延长$A
+    F$交$D G$于点$Q$．
 
     给出下面四个结论：
 
@@ -190,9 +259,13 @@ questions:
     C: ①②④
     D: ②③④
   figure: 2026-mentougou-er/figures/image97.png
+  _figures_extra:
+  - image97.png
+  - image119.png
   answer: C
-  solution: '证明$\triangle A D F \approx \triangle D C E \left(\right. \left.\right)$，得$A F = D E ,$由对称性得$D E = D G$，可判断①正确；记$A F$交$D E$于点$H$，由三角形内角和定理得$\angle D H F = 9 0 \circ ,$可判断②正确；证明$\triangle D P
-    F \sim \triangle B P A ,$可得$B G = \frac{9}{8} B P$，可判断③；分别证明$\triangle A D P \approx \triangle C D P$，$\triangle D F Q \approx \triangle C F P$，可判断④
+  solution: '证明$\triangle A D F \approx \triangle D C E \left(\right. \left.\right)$，得$A F = D E ,$由对称性得$D E = D G$，可判断①正确；记$A
+    F$交$D E$于点$H$，由三角形内角和定理得$\angle D H F = 9 0 \circ ,$可判断②正确；证明$\triangle D P F \sim \triangle B P A ,$可得$B G = \frac{9}{8}
+    B P$，可判断③；分别证明$\triangle A D P \approx \triangle C D P$，$\triangle D F Q \approx \triangle C F P$，可判断④
 
     解：①$\because$四边形$A B C D$是正方形，
 
@@ -214,6 +287,7 @@ questions:
 
     ②如图，记$A F$交$D E$于点$H$，
 
+    ![](figures/image119.png)
 
     由①知$\triangle A D F \approx \triangle D C E ,$
 
@@ -292,9 +366,16 @@ questions:
     $\therefore D Q = A P$，故④正确，
 
     综上所述，正确的结论序号为①②④．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 正方形的性质
+  - 对称性
+  - 线段长度关系
+  module: quadrilaterals
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 9
@@ -303,9 +384,16 @@ questions:
   stem: 若$$在实数范围内有意义，则实数$x$的取值范围是_____．
   answer: $x \geq 2$
   solution: 解：根据二次根式有意义的条件，可知$3 x - 6 \geq 0$，解得$x \geq 2$．
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 实数的性质
+  - 不等式的解法
+  module: equationsAndInequalities
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 10
@@ -313,10 +401,17 @@ questions:
   score: 2
   stem: 分解因式：$4 x^{3} - 1 6 x =$_____．
   answer: $4 x \left(\right. x + 2 \left.\right) \left(\right. x - 2 \left.\right)$
-  solution: 解：$4 x^{3} - 1 6 x = 4 x \left(\right. x^{2} - 4 \left.\right) = 4 x \left(\right. x + 2 \left.\right) \left(\right. x - 2 \left.\right)$．
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  solution: 解：$4 x^{3} - 1 6 x = 4 x \left(\right. x^{2} - 4 \left.\right) = 4 x \left(\right. x + 2 \left.\right) \left(\right.
+    x - 2 \left.\right)$．
+  knowledge_points:
+  - 因式分解
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 11
@@ -331,16 +426,21 @@ questions:
     检验：当$x = - 3$时，$x \left(\right. x + 4 \left.\right) \neq 0$
 
     $\therefore x = - 3$是分式方程的解．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 分式方程的解法
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 12
   type: 填空
   score: 2
-  stem: 在平面直角坐标系$x O y$中，点$A \left(\right. x_{1} , y_{1} \left.\right) , B \left(\right. x_{2} , y_{2} \left.\right) , C \left(\right. - 2 , 3 \left.\right)$均在函数$y = \frac{k}{x} \left(\right. k \neq 0 \left.\right)$的图象上，且$x_{1}
-    > x_{2} >$0，则$y_{1}$_____$y_{2}$（填“＞”“＝”或“＜”）．
+  stem: 在平面直角坐标系$x O y$中，点$A \left(\right. x_{1} , y_{1} \left.\right) , B \left(\right. x_{2} , y_{2} \left.\right) , C \left(\right.
+    - 2 , 3 \left.\right)$均在函数$y = \frac{k}{x} \left(\right. k \neq 0 \left.\right)$的图象上，且$x_{1} > x_{2} >$0，则$y_{1}$_____$y_{2}$（填“＞”“＝”或“＜”）．
   answer: $>$
   solution: '先根据$C \left(\right. - 2 , 3 \left.\right)$确定k的值，得出函数图像的增减性，即可求解．
 
@@ -355,9 +455,15 @@ questions:
     $\because x_{1} > x_{2} > 0$，
 
     $\therefore$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 反比例函数的性质
+  - 坐标系中的点与函数关系
+  module: functions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 13
@@ -380,18 +486,30 @@ questions:
     其中每周课外阅读时间不超过$2$小时的学生人数为$2 8 + 4 0 = 6 8$（名），
 
     $\therefore$估计该校$2 0 0 0$名学生中每周课外阅读时间不超过$2$小时的学生人数为$2 0 0 0 \times \frac{6 8}{2 0 0} = 6 8 0$（名）．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 统计与概率
+  - 样本估计总体
+  module: statisticsAndProbability
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 14
   type: 填空
   score: 2
-  stem: 如图，$\triangle A B C$内接于$\bigodot O , A D$是$\bigodot O$的直径，过点$D$的切线与$A C$的延长线交于点$E$．若$\angle E = 6 5 \circ$，则$\angle B$的度数为_____．
+  stem: 如图，$\triangle A B C$内接于$\bigodot O , A D$是$\bigodot O$的直径，过点$D$的切线与$A C$的延长线交于点$E$．若$\angle E = 6 5 \circ$，则$\angle
+    B$的度数为_____．
   figure: 2026-mentougou-er/figures/image195.png
+  _figures_extra:
+  - image195.png
+  - image205.png
   answer: $1 1 5 \circ$##115度
-  solution: '连接$D C$，由$D E$是$\bigodot O$的切线，可得$\angle A D E = 9 0 \circ$，可得$\angle D A C = 2 5 \circ$，再可得$\angle A D C = 6 5 \circ$，由四边形$A B C D$是$\bigodot O$的内接四边形，即可得$\angle B$的度数．
+  solution: '连接$D C$，由$D E$是$\bigodot O$的切线，可得$\angle A D E = 9 0 \circ$，可得$\angle D A C = 2 5 \circ$，再可得$\angle A D C = 6
+    5 \circ$，由四边形$A B C D$是$\bigodot O$的内接四边形，即可得$\angle B$的度数．
 
     解：如图，连接$D C$，
 
@@ -411,17 +529,28 @@ questions:
 
     ∵四边形$A B C D$是$\bigodot O$的内接四边形，
 
-    ∴$\angle B = 1 8 0 \circ - \angle A D C = 1 1 5 \circ$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+    ∴$\angle B = 1 8 0 \circ - \angle A D C = 1 1 5 \circ$．
+
+    ![](figures/image205.png)'
+  knowledge_points:
+  - 圆周角定理
+  - 切线性质
+  module: circles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 15
   type: 填空
   score: 2
-  stem: 如图，在矩形$A B C D$中，$E$是$C B$延长线上一点，$A F \bot D E$交$B C$于点$F$，$F$是$C E$的中点．若$A D = 6$，$B F = 2$，则$C F = B C - B F = 6 - 2 = 4$的长为_____．
+  stem: 如图，在矩形$A B C D$中，$E$是$C B$延长线上一点，$A F \bot D E$交$B C$于点$F$，$F$是$C E$的中点．若$A D = 6$，$B F = 2$，则$C F = B C - B F = 6
+    - 2 = 4$的长为_____．
   figure: 2026-mentougou-er/figures/image211.png
+  _figures_extra:
+  - image211.png
   answer: $F$
   solution: '证明$\triangle E C D \sim \triangle A B F$得$\frac{C D}{B F} = \frac{C E}{B A}$，求出$A B = 4$，再根据勾股定理得$A F =$即可．
 
@@ -458,15 +587,22 @@ questions:
     解得：$A B = 4$或$A B = - 4$（负值不符合题意，舍去），
 
     在$\triangle A B F$中，$A F = = = 2$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 矩形的性质
+  - 直角三角形的性质
+  module: quadrilaterals
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 16
   type: 填空
   score: 2
-  stem: '某公司有七台办公电脑，编号依次为①～⑦号，工作期间，这七台电脑突然出现故障，处于待机状态，立即安排对这七台电脑进行维修．已知维修①～⑦号电脑所需时间依次为$1 3$分钟，$1 7$分钟，$9$分钟，$2 0$分钟，$2 6$分钟，$3 0$分钟，$1 4$分钟，工作日，每台电脑待机$1$分钟，会造成$5$元的经济损失．
+  stem: '某公司有七台办公电脑，编号依次为①～⑦号，工作期间，这七台电脑突然出现故障，处于待机状态，立即安排对这七台电脑进行维修．已知维修①～⑦号电脑所需时间依次为$1 3$分钟，$1 7$分钟，$9$分钟，$2 0$分钟，$2 6$分钟，$3
+    0$分钟，$1 4$分钟，工作日，每台电脑待机$1$分钟，会造成$5$元的经济损失．
 
     （1）若安排一名维修人员，当这七台电脑全部维修完成且总经济损失最小，则维修的顺序是_____．（填写编号）；
 
@@ -474,7 +610,8 @@ questions:
   answer: ①. ③①⑦②④⑤⑥    ②. $9 5 5$
   solution: '（1）安排一名维修人员时，当这七台电脑全部维修完成且总经济损失最小，需要先维修所需时间较短的电脑，根据每台电脑维修所需要的时间确定维修顺序；
 
-    （2）要使经济损失最小，则需要维修所需时间最短，根据七台电脑维修所需要的总时长为$1 2 9$分钟，可知平均每人维修的时间为$4 3$分钟，所以一人可以维修①⑥号，维修顺序为①⑥，最小损失为$2 8 0$元；第二人可以维修②⑤号，维修顺序为②⑤，此时损失最小，为$3 0 0$元；第三人可以维修③④⑦号，维修顺序为③⑦④，此时损失最小，为$3 7 5$元；把三个损失加起来即为总经济损失的最小值．
+    （2）要使经济损失最小，则需要维修所需时间最短，根据七台电脑维修所需要的总时长为$1 2 9$分钟，可知平均每人维修的时间为$4 3$分钟，所以一人可以维修①⑥号，维修顺序为①⑥，最小损失为$2 8 0$元；第二人可以维修②⑤号，维修顺序为②⑤，此时损失最小，为$3
+    0 0$元；第三人可以维修③④⑦号，维修顺序为③⑦④，此时损失最小，为$3 7 5$元；把三个损失加起来即为总经济损失的最小值．
 
     （1）解：若安排一名维修人员，当这七台电脑全部维修完成且总经济损失最小，需要先维修所需时间较短的电脑，
 
@@ -502,14 +639,21 @@ questions:
 
     ②号从故障到修好的时间为其维修时间，⑤号从故障到修好的时间是②号维修时间＋其维修时间；
 
-    第三人可以维修③④⑦号，维修时间是$9 + 2 0 + 1 4 = 4 3$（分钟），维修顺序为③⑦④，此时损失最小，为$\left(\right. 9 \times 3 + 1 4 \times 2 + 2 0 \left.\right) \times 5 = 3 7 5$（元）；
+    第三人可以维修③④⑦号，维修时间是$9 + 2 0 + 1 4 = 4 3$（分钟），维修顺序为③⑦④，此时损失最小，为$\left(\right. 9 \times 3 + 1 4 \times 2 + 2 0 \left.\right)
+    \times 5 = 3 7 5$（元）；
 
     ③号从故障到修好的时间为其维修时间，⑦号从故障到修好的时间是③号维修时间＋其维修时间，④号从故障到修好的时间是③，⑦号维修时间之和＋其维修时间；
 
     $\therefore$当这七台电脑在最短时间内全部维修完时，总经济损失最小为$2 8 0 + 3 0 0 + 3 7 5 = 9 5 5$（元）．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 排序与优化
+  - 最小化问题
+  module: numbersAndExpressions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 17
@@ -520,9 +664,17 @@ questions:
   solution: '先根据零指数幂、绝对值、二次根式和特殊角的三角函数值进行计算，再进行乘法运算，最后计算加减即可求解．
 
     解：原式$= 2 - 2 \times \frac{}{2} + 8 - 1 = 2 - + 8 - 1 = + 7$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 有理数的运算
+  - 绝对值
+  - 零指数幂
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 18
@@ -539,9 +691,15 @@ questions:
     解不等式②，得$x > - 2$，
 
     $\therefore$该不等式组的解集为$- 2 < x < 2$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 解一元一次不等式
+  - 不等式组的解法
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 19
@@ -562,25 +720,34 @@ questions:
     ∴$m - 2 n = - 1$，
 
     ∴原式$= - \frac{1}{2 \times \left(\right. - 1 \left.\right)} = \frac{1}{2}$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 代数式的化简与求值
+  module: numbersAndExpressions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 20
   type: 解答
   score: 6
-  stem: '如图，在四边形$A B C D$中，$A B C D$，过点$D$作$D E \bot B C$于点$E$，$F$是$C D$的中点，连接$\angle A G D = 90 \circ$交$D E$于点$G$，连接$E F , E F = A B$．
+  stem: '如图，在四边形$A B C D$中，$A B C D$，过点$D$作$D E \bot B C$于点$E$，$F$是$C D$的中点，连接$\angle A G D = 90 \circ$交$D E$于点$G$，连接$E F
+    , E F = A B$．
 
 
     （1）求证：四边形$A B C F$是平行四边形；
 
     （2）若$A G = D G , \angle A D F = 7 5 \circ , C E = 2$，求$A D$的长．'
   figure: 2026-mentougou-er/figures/image279.png
+  _figures_extra:
+  - image279.png
   answer: （1）见解析    （2）$$
   solution: '（1）根据直角三角形斜边上的中线等于斜边的一半得到$E F = F C = \frac{1}{2} D C$，进而得到$A B = F C$，即可证明四边形$A B C F$是平行四边形；
 
-    （2）根据平行四边形的性质得到$A F B C$，进而求出$\angle A G D = 9 0 \circ$，由等边对等角得到$\angle D A G = \angle A D G = 4 5 \circ$，进而得到$\angle G D F = 3 0 \circ$，根据30度角的性质求出$C D = 2 C E = 4$，进而根据三角函数计算即可．
+    （2）根据平行四边形的性质得到$A F B C$，进而求出$\angle A G D = 9 0 \circ$，由等边对等角得到$\angle D A G = \angle A D G = 4 5 \circ$，进而得到$\angle
+    G D F = 3 0 \circ$，根据30度角的性质求出$C D = 2 C E = 4$，进而根据三角函数计算即可．
 
     （1）
 
@@ -633,9 +800,15 @@ questions:
     在$\triangle A D G$中，$\angle A D G = 4 5 \circ , D G =$，
 
     $\therefore A D = \frac{D G}{\angle A D G} =$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 平行四边形的性质与判定
+  - 直角三角形的性质
+  module: quadrilaterals
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 21
@@ -643,11 +816,13 @@ questions:
   score: 5
   stem: 为推动城市公交车电动化替代，2026年继续支持新能源城市公交车及动力电池更新，根据更新新能源公交车及更换动力电池补贴政策，报废符合条件的旧车并购买补贴范围内的新能源公交车，每辆车可获得8万元补贴，对符合条件并更换动力电池的，每辆车补贴4.2万元．某公交公司计划将20辆符合补贴政策的老旧燃油公交车更新为新能源公交车，同时对现有符合补贴政策的10辆新能源公交车更换动力电池，总预算不超过1950万元．经过咨询，补贴前，更换1辆新能源公交车的动力电池所需的费用比购买1辆新能源公交车的费用低85%，补贴后，更换5辆新能源公交车的动力电池和购买1辆新能源公交车的总费用为146万元．则该公交公司能否按计划完成老旧燃油公交车的更新和现有新能源公交车的动力电池更换？
   answer: 能
-  solution: '设补贴前购买1辆新能源公交车的费用为$x$万元，则更换1辆新能源公交车的动力电池所需的费用为$\left(\right. 1 - 8 5 \left.\right) x$万元，根据更换5辆新能源公交车的动力电池和购买1辆新能源公交车的总费用为146万元列方程求出$x = 1 0 0$，再进一步计算判断即可．
+  solution: '设补贴前购买1辆新能源公交车的费用为$x$万元，则更换1辆新能源公交车的动力电池所需的费用为$\left(\right. 1 - 8 5 \left.\right) x$万元，根据更换5辆新能源公交车的动力电池和购买1辆新能源公交车的总费用为146万元列方程求出$x
+    = 1 0 0$，再进一步计算判断即可．
 
     解：设补贴前购买1辆新能源公交车的费用为$x$万元，则更换1辆新能源公交车的动力电池所需的费用为$\left(\right. 1 - 8 5 \left.\right) x$万元，
 
-    根据题意，可得$5 \times \left[\right. \left(\right. 1 - 8 5 \left.\right) x - 4 . 2 \left]\right. + \left(\right. x - 8 \left.\right) = 1 4 6$，
+    根据题意，可得$5 \times \left[\right. \left(\right. 1 - 8 5 \left.\right) x - 4 . 2 \left]\right. + \left(\right. x - 8 \left.\right)
+    = 1 4 6$，
 
     解得$x = 1 0 0$，
 
@@ -662,20 +837,30 @@ questions:
     $\because 1 9 4 8 < 1 9 5 0$，
 
     $\therefore$该公交公司能按计划完成老旧燃油公交车的更新和现有新能源公交车的动力电池更换．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 方程与不等式的应用
+  - 实际问题的数学建模
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 22
   type: 解答
   score: 5
-  stem: '在平面直角坐标系$x O y$中，函数$y = k x + b \left(\right. k \neq 0 \left.\right)$的图象经过点$\left(\right. 1 , 5 \left.\right)$和点$\left(\right. 3 , 1 1 \left.\right)$．
+  stem: '在平面直角坐标系$x O y$中，函数$y = k x + b \left(\right. k \neq 0 \left.\right)$的图象经过点$\left(\right. 1 , 5 \left.\right)$和点$\left(\right.
+    3 , 1 1 \left.\right)$．
 
     （1）求$k$，$b$的值；
 
-    （2）当$x > - \frac{5}{2}$时，对于$x$的每一个值，函数$y = m x \left(\right. m \neq 0 \left.\right)$的值既小于函数$y = k x + b$的值，又大于函数$y = x - k$的值，直接写出$m$的值．'
+    （2）当$x > - \frac{5}{2}$时，对于$x$的每一个值，函数$y = m x \left(\right. m \neq 0 \left.\right)$的值既小于函数$y = k x + b$的值，又大于函数$y = x
+    - k$的值，直接写出$m$的值．'
   figure: 2026-mentougou-er/figures/image344.png
+  _figures_extra:
+  - image344.png
   answer: （1）$\left{\right. k = 3 & b = 2$ （2）$m = \frac{1 1}{5}$
   solution: '（1）将已知两点代入解析式，列方程组求解即可；
 
@@ -701,15 +886,23 @@ questions:
 
     如图，
 
+    ![](figures/image344.png)
 
-    ∵当$x > - \frac{5}{2}$时，对于$x$的每一个值，函数$y = m x \left(\right. m \neq 0 \left.\right)$的值既小于函数$y = 3 x + 2$的值，又大于函数$y = x - 3$的值，
+    ∵当$x > - \frac{5}{2}$时，对于$x$的每一个值，函数$y = m x \left(\right. m \neq 0 \left.\right)$的值既小于函数$y = 3 x + 2$的值，又大于函数$y = x -
+    3$的值，
 
     ∴函数$y = m x$的图象经过点$\left(\right. - \frac{5}{2} , - \frac{1 1}{2} \left.\right)$，
 
     ∴$- \frac{1 1}{2} = - \frac{5}{2} m$，解得$m = \frac{1 1}{5}$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 一次函数的性质
+  - 一次函数的应用
+  module: functions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 23
@@ -742,6 +935,8 @@ questions:
 
     （3）根据这五轮比赛成绩，排名规则按照平均数大的排名靠前，若平均数相同，方差小的排名靠前，现已知丁选手其中三轮的成绩分别为$8$环、$9$环、$1 0$环，经过最后的核算，丁选手获得第二名，则丁选手其余两轮的成绩分别为_____环、_____环、（成绩均为整数）'
   figure: 2026-mentougou-er/figures/image348.png
+  _figures_extra:
+  - image348.png
   answer: （1）$8 . 6$，$2 . 2 4$ （2）$1$ （3）$9$，$7$
   solution: '（1）根据平均数和方差的定义计算出结果即可；
 
@@ -757,8 +952,9 @@ questions:
 
     由统计图可得乙选手五轮成绩为$1 0$，$8$，$9$，$1 0$，$6$，由统计表可知其平均成绩为$8 . 6$环，
 
-    $\therefore$方差为$n = \frac{1}{5} \times \left[\right. \left(\right. 1 0 - 8 . 6 \left.\right)^{2} + \left(\right. 8 - 8 . 6 \left.\right)^{2} + \left(\right. 9 - 8 . 6 \left.\right)^{2} + \left(\right.
-    1 0 - 8 . 6 \left.\right) ^{2} + \left(\right. 6 - 8 . 6 \left.\right)^{2} \left]\right. = 2 . 2 4$；
+    $\therefore$方差为$n = \frac{1}{5} \times \left[\right. \left(\right. 1 0 - 8 . 6 \left.\right)^{2} + \left(\right. 8 - 8
+    . 6 \left.\right)^{2} + \left(\right. 9 - 8 . 6 \left.\right)^{2} + \left(\right. 1 0 - 8 . 6 \left.\right) ^{2} + \left(\right.
+    6 - 8 . 6 \left.\right)^{2} \left]\right. = 2 . 2 4$；
 
     （2）
 
@@ -800,32 +996,46 @@ questions:
 
     当丁选手的成绩为$8$环和$8$环时，
 
-    方差为$\frac{1}{5} \times \left[\right. \left(\right. 8 - 8 . 6 \left.\right)^{2} + \left(\right. 8 - 8 . 6 \left.\right)^{2} + \left(\right. 8 - 8 . 6 \left.\right)^{2} + \left(\right. 9 - 8 . 6 \left.\right)^{2}
-    + \left(\right. 1 0 - 8 . 6 \left.\right)^{2} \left]\right. = 0 . 6 4$，不符合题意；
+    方差为$\frac{1}{5} \times \left[\right. \left(\right. 8 - 8 . 6 \left.\right)^{2} + \left(\right. 8 - 8 . 6 \left.\right)^{2}
+    + \left(\right. 8 - 8 . 6 \left.\right)^{2} + \left(\right. 9 - 8 . 6 \left.\right)^{2} + \left(\right. 1 0 - 8 . 6 \left.\right)^{2}
+    \left]\right. = 0 . 6 4$，不符合题意；
 
     当丁选手的成绩为$9$环和$7$环时，
 
-    方差为$\frac{1}{5} \times \left[\right. \left(\right. 9 - 8 . 6 \left.\right)^{2} + \left(\right. 7 - 8 . 6 \left.\right) ^{2} + \left(\right. 8 - 8 . 6 \left.\right)^{2} + \left(\right. 9 - 8 . 6 \left.\right)^{2}
-    + \left(\right. 1 0 - 8 . 6 \left.\right)^{2} \left]\right. = 1 . 0 4$，符合题意，
+    方差为$\frac{1}{5} \times \left[\right. \left(\right. 9 - 8 . 6 \left.\right)^{2} + \left(\right. 7 - 8 . 6 \left.\right)
+    ^{2} + \left(\right. 8 - 8 . 6 \left.\right)^{2} + \left(\right. 9 - 8 . 6 \left.\right)^{2} + \left(\right. 1 0 - 8 .
+    6 \left.\right)^{2} \left]\right. = 1 . 0 4$，符合题意，
 
     $\therefore$丁选手其余两轮的成绩分别为$9$环和$7$环．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 平均数
+  - 中位数
+  - 方差
+  module: statisticsAndProbability
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 24
   type: 解答
   score: 6
-  stem: '如图，在$\triangle A B C$中，$A B = A C$，$C D \bot A B$于点$D$，在$C D$上取一点$O$，以点$O$为圆心作圆，$\bigodot O$经过$B$，$C$两点，交$A B$于点$E$，连接$A O$并延长，交$B C$于点$F$．
+  stem: '如图，在$\triangle A B C$中，$A B = A C$，$C D \bot A B$于点$D$，在$C D$上取一点$O$，以点$O$为圆心作圆，$\bigodot O$经过$B$，$C$两点，交$A B$于点$E$，连接$A
+    O$并延长，交$B C$于点$F$．
 
 
     （1）求证：$A F \bot B C$；
 
     （2）过点$B$作$B G A C$交$B D = x$的延长线于点$G$．若$G = \frac{1}{2} , O D = 3$，求$B G$的长．'
   figure: 2026-mentougou-er/figures/image372.png
+  _figures_extra:
+  - image372.png
+  - image395.png
   answer: （1）见详解； （2）$1 0$
-  solution: '（1）连接$O B$，先证明$\triangle A O B \approx \triangle A O C$，则$\angle B A O = \angle C A O$，由条件可知$\triangle A B C$是等腰三角形，利用“三线合一”的性质即可证明$A F \bot B C$；
+  solution: '（1）连接$O B$，先证明$\triangle A O B \approx \triangle A O C$，则$\angle B A O = \angle C A O$，由条件可知$\triangle A B C$是等腰三角形，利用“三线合一”的性质即可证明$A
+    F \bot B C$；
 
     （2）结合已知条件，先证明$A B = B G$，$\angle G = \angle B A O = \angle B C D$．设$B D = x$，在Rt$\triangle B O D$中，根据勾股定理列方程可求出$B D$的长，继而求解．
 
@@ -849,6 +1059,7 @@ questions:
 
     $\therefore A F \bot B C$；
 
+    ![](figures/image395.png)
 
     补全图形，如图所示．
 
@@ -887,24 +1098,34 @@ questions:
     $\therefore A B = A D + B D = 6 + 4 = 1 0$，
 
     $\therefore B G = A B = 1 0$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 等腰三角形的性质
+  - 圆的基本性质
+  - 相似三角形
+  module: triangles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 25
   type: 解答
   score: 5
-  stem: '某物理实验室研究物体平抛运动时水平射程$s = v t$（单位：$$）与平台高度$\text{m}$（单位：$$）的函数关系．已知物体从高度为$v$的平台水平抛出，初速度不变，均为$v$（单位：$$，$v > 0$），忽略空气阻力，重力加速度$g$取$1 0 ^{}$．平抛运动可分解为竖直方向的自由落体运动和水平方向的匀速直线运动，竖直方向满足$H = \frac{1}{2} g t^{2}$（$t$为运动时间），水平射程$s
-    = v t$．实验中改变平台高度$2$（单位：$$，$H > 0$），对于给定的初速度$v$，可以认为$10$是$12 . 5$的函数．当$v = 3$和$v = 5$时，部分数据如下表．（$$取$3 . 1 6 2$）
+  stem: '某物理实验室研究物体平抛运动时水平射程$s = v t$（单位：$$）与平台高度$\text{m}$（单位：$$）的函数关系．已知物体从高度为$v$的平台水平抛出，初速度不变，均为$v$（单位：$$，$v > 0$），忽略空气阻力，重力加速度$g$取$1
+    0 ^{}$．平抛运动可分解为竖直方向的自由落体运动和水平方向的匀速直线运动，竖直方向满足$H = \frac{1}{2} g t^{2}$（$t$为运动时间），水平射程$s = v t$．实验中改变平台高度$2$（单位：$$，$H >
+    0$），对于给定的初速度$v$，可以认为$10$是$12 . 5$的函数．当$v = 3$和$v = 5$时，部分数据如下表．（$$取$3 . 1 6 2$）
 
     | $H \left(\right. \left.\right)$ | $0 . 5$ | $2$ | $4 . 5$ | $6$ | $8$ | $1 0$ | $1 2 . 5$ | $1 4$ | $1 6$ | $1 8$ |
 
     |---|---|---|---|---|---|---|---|---|---|---|
 
-    | 当$v = 3$时的$s \left(\right. \left.\right)$ | $0 . 9 5$ | $1 . 9 0$ | $a$ | $3 . 2 9$ | $3 . 7 9$ | $4 . 2 4$ | $4 . 7 4$ | $5 . 0 2$ | $5 . 3 7$ | $5 . 6 9$ |
+    | 当$v = 3$时的$s \left(\right. \left.\right)$ | $0 . 9 5$ | $1 . 9 0$ | $a$ | $3 . 2 9$ | $3 . 7 9$ | $4 . 2 4$ | $4 . 7
+    4$ | $5 . 0 2$ | $5 . 3 7$ | $5 . 6 9$ |
 
-    | 当$v = 5$时的$s \left(\right. \left.\right)$ | $1 . 5 8$ | $3 . 1 6$ | $4 . 7 4$ | $5 . 4 8$ | $6 . 3 2$ | $7 . 0 7$ | $b$ | $8 . 3 7$ | $8 . 9 4$ | $9 . 4 9$ |
+    | 当$v = 5$时的$s \left(\right. \left.\right)$ | $1 . 5 8$ | $3 . 1 6$ | $4 . 7 4$ | $5 . 4 8$ | $6 . 3 2$ | $7 . 0 7$ |
+    $b$ | $8 . 3 7$ | $8 . 9 4$ | $9 . 4 9$ |
 
 
     请根据实验背景和数据，完成以下探究：
@@ -919,6 +1140,9 @@ questions:
 
     ②小明在实验中提出猜想：在一次平抛运动过程中，是否存在某一时刻，物体的下落高度与水平射程的数值相等的情况？若存在，直接写出满足该情况时运动时间$t$与初速度$v$之间需满足的数量关系；若不存在，请说明理由．'
   figure: 2026-mentougou-er/figures/image457.png
+  _figures_extra:
+  - image457.png
+  - image482.png
   answer: （1）$2 . 8 5$，$7 . 9 1$ （2）见解析    （3）①$s_{2} = s_{1}$；②存在，$t = \frac{v}{5}$
   solution: '（1）根据题意可得$t =$，分别将$H = 4 . 5$、$H = 1 2 . 5$代入求出$t$的值，即可代入求出$t = \sqrt{\frac{2 H}{g}}$的值；
 
@@ -946,6 +1170,7 @@ questions:
 
     描点，画出函数图象，如图：
 
+    ![](figures/image482.png)
 
     ①$s_{2} = s_{1}$；
 
@@ -966,9 +1191,15 @@ questions:
     重力加速度$g$取$1 0 ^{}$，故$v = 5 t$，
 
     ∴$t = \frac{v}{5}$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 平抛运动
+  - 函数关系
+  module: functions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 26
@@ -978,11 +1209,15 @@ questions:
 
     （1）用含$a$的式子表示$b$；
 
-    （2）若$a = 2$，点$M \left(\right. x_{1} , 1 0 \left.\right)$，$N \left(\right. x_{2} , 1 0 \left.\right)$（$x_{2} > x_{1}$）在该抛物线上，求$M N$的长；
+    （2）若$a = 2$，点$M \left(\right. x_{1} , 1 0 \left.\right)$，$N \left(\right. x_{2} , 1 0 \left.\right)$（$x_{2} > x_{1}$）在该抛物线上，求$M
+    N$的长；
 
-    （3）记抛物线与$y$轴的交点为$B$，点$P \left(\right. m , y_{P} \left.\right)$在抛物线上，分别过点$P$作$x$轴、直线$A B$的垂线，交直线$A B$于点$C$，$Q$，$E$是$0 < a \leq \frac{3}{2}$上一点，且$P Q = 4 P E$，过点$E$作$E F A B$交$P C$于点$F$．已知当$0 < m \leq
-    a + \frac{1}{2}$时，$E F$的长随$m$的增大而增大，求$a$的取值范围．'
+    （3）记抛物线与$y$轴的交点为$B$，点$P \left(\right. m , y_{P} \left.\right)$在抛物线上，分别过点$P$作$x$轴、直线$A B$的垂线，交直线$A B$于点$C$，$Q$，$E$是$0 <
+    a \leq \frac{3}{2}$上一点，且$P Q = 4 P E$，过点$E$作$E F A B$交$P C$于点$F$．已知当$0 < m \leq a + \frac{1}{2}$时，$E F$的长随$m$的增大而增大，求$a$的取值范围．'
   figure: 2026-mentougou-er/figures/image532.png
+  _figures_extra:
+  - image532.png
+  - image565.png
   answer: （1）$45 \circ$ （2）$\frac{1 1}{2}$ （3）$0 < a \leq \frac{3}{2}$
   solution: '（1）将点$A \left(\right. 4 , 5 \left.\right)$代入抛物线解析式，通过移项化简直接用含$a$的式子表示出$b$；
 
@@ -1034,6 +1269,7 @@ questions:
 
     如图①，过点$A$作$A G \bot y$轴于点$G$，则$A G = 4$，$O G = 5$，$O B = 1$，
 
+    ![](figures/image532.png)
 
     ∴$B G = O G - O B = 4$，
 
@@ -1109,6 +1345,7 @@ questions:
 
     当$m > 4$时，如解图②，
 
+    ![](figures/image565.png)
 
     同理可得$E F = \frac{}{8} P C$，
 
@@ -1131,29 +1368,39 @@ questions:
     ∴$0 < m \leq a + \frac{1}{2}$不能满足全部在$m > 4$的范围内，故此情况不存在，
 
     综上所述，$a$的取值范围为$0 < a \leq \frac{3}{2}$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 二次函数的性质
+  - 二次函数的应用
+  - 坐标系中的几何问题
+  module: functions
+  difficulty: 能力
+  recommended_for:
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 27
   type: 解答
   score: 7
-  stem: '在$\triangle A B C$中，$\angle B A C = 9 0 \circ , \angle A C B = \alpha , D$是射线$B C$上一点，连接$A D , A D = A B , E$是$B C$上的动点，连接$A E$，将线段$A E$绕点$A$逆时针旋转$1 8 0 \circ - 2 \alpha$得到线段$C D , C F$，连接$E F
-    , C F$．
+  stem: '在$\triangle A B C$中，$\angle B A C = 9 0 \circ , \angle A C B = \alpha , D$是射线$B C$上一点，连接$A D , A D = A B , E$是$B
+    C$上的动点，连接$A E$，将线段$A E$绕点$A$逆时针旋转$1 8 0 \circ - 2 \alpha$得到线段$C D , C F$，连接$E F , C F$．
 
 
     （1）如图1，当点$D$在线段$B C$上，$E$是$B D$的中点时，求证：$E F A B$；
 
     （2）如图2，当点$D$在$B C$的延长线上，点$F$在$B C$下方时，用等式表示$A M ,$，$C D , C F$之间的数量关系，并证明．'
   figure: 2026-mentougou-er/figures/image580.png
+  _figures_extra:
+  - image580.png
+  - image612.png
   answer: （1）见解析    （2）$C D = B E + C F$，见解析
-  solution: '（1）根据等腰三角形三线合一得到$A E \bot B C$，求出$A E = A F , \angle E A F = 180 \circ - 2 \alpha$，进而求出$\angle B A E = \alpha$，由旋转的性质知$\angle E A M = \angle F A C$，根据等边对等角得到$\angle A E F = \angle A F E = \alpha$，进而得到$\angle
-    B A E = \angle A E F$，即可证明$E F A B$；
+  solution: '（1）根据等腰三角形三线合一得到$A E \bot B C$，求出$A E = A F , \angle E A F = 180 \circ - 2 \alpha$，进而求出$\angle B A E = \alpha$，由旋转的性质知$\angle
+    E A M = \angle F A C$，根据等边对等角得到$\angle A E F = \angle A F E = \alpha$，进而得到$\angle B A E = \angle A E F$，即可证明$E F A B$；
 
-    （2）在$B C$上取一点$M$，连接$A M ,$使得$A M = A C$，根据等边对等角得到$\angle A M C = \angle A C M = \alpha$，进而求出$\angle M A C = 1 8 0 \circ - 2 \alpha$，由旋转的性质知$A E = A F , \angle E A F = 1 8 0 \circ - 2 \alpha$，可知$\angle
-    E A F = \angle M A C$，进而得到$\angle E A M = \angle F A C$，证明$\triangle A E M \approx \triangle A F C$，得到$E M = C F$，证明$\triangle A B M \approx \triangle A D C$，得到$B M = C D$，根据$B M = B E + E M$即可得到$C
-    D = B E + C F$．
+    （2）在$B C$上取一点$M$，连接$A M ,$使得$A M = A C$，根据等边对等角得到$\angle A M C = \angle A C M = \alpha$，进而求出$\angle M A C = 1 8 0 \circ
+    - 2 \alpha$，由旋转的性质知$A E = A F , \angle E A F = 1 8 0 \circ - 2 \alpha$，可知$\angle E A F = \angle M A C$，进而得到$\angle E A
+    M = \angle F A C$，证明$\triangle A E M \approx \triangle A F C$，得到$E M = C F$，证明$\triangle A B M \approx \triangle A D C$，得到$B
+    M = C D$，根据$B M = B E + E M$即可得到$C D = B E + C F$．
 
     （1）
 
@@ -1171,7 +1418,8 @@ questions:
 
     由旋转的性质知$= 180 \circ - 2 \alpha$，
 
-    $\therefore \angle A E F = \angle A F E = \frac{1 8 0 \circ - \left(\right. 1 8 0 \circ - 2 \alpha \left.\right)}{2} = \alpha$，
+    $\therefore \angle A E F = \angle A F E = \frac{1 8 0 \circ - \left(\right. 1 8 0 \circ - 2 \alpha \left.\right)}{2} =
+    \alpha$，
 
     $\therefore \angle E A F = \angle M A C$，
 
@@ -1183,6 +1431,7 @@ questions:
 
     如图，在$B C$上取一点$M$，连接$A M ,$使得$A M = A C$，
 
+    ![](figures/image612.png)
 
     $\because \angle A C B = \alpha$，
 
@@ -1221,18 +1470,25 @@ questions:
     $\because B M = B E + E M$，
 
     $\therefore C D = B E + C F$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 三角形的性质
+  - 旋转对称性
+  module: triangles
+  difficulty: 能力
+  recommended_for:
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 28
   type: 解答
   score: 7
-  stem: '在平面直角坐标系$x O y$中，给定$\angle M O N = 6 0 \circ$（$O$为顶点，$O M$在$x$轴正半轴上，点$N$在第一象限），对于点$P$，若存在点$A$在$O M$上、点$B$在射线$O N$上，使得$\triangle P A B$为等边三角形，则称点$P$为$\angle M O N$的“含角点”，称等边$\triangle P A B$的边长为点$P$的“含角边长”．（本定义中的点均不与原点$O$重合，边长为正数）
+  stem: '在平面直角坐标系$x O y$中，给定$\angle M O N = 6 0 \circ$（$O$为顶点，$O M$在$x$轴正半轴上，点$N$在第一象限），对于点$P$，若存在点$A$在$O M$上、点$B$在射线$O N$上，使得$\triangle
+    P A B$为等边三角形，则称点$P$为$\angle M O N$的“含角点”，称等边$\triangle P A B$的边长为点$P$的“含角边长”．（本定义中的点均不与原点$O$重合，边长为正数）
 
 
-    （1）如图，在点$P_{1} \left(\right. , 1 \left.\right)$，$P_{2} \left(\right. 2 , 0 \left.\right)$，$P_{3} \left(\right. 3 , \left.\right)$中，是$\triangle M O N$的“含角点”的有_____，请直接写出其中一个“含角点”的“含角边长”；
+    （1）如图，在点$P_{1} \left(\right. , 1 \left.\right)$，$P_{2} \left(\right. 2 , 0 \left.\right)$，$P_{3} \left(\right. 3 , \left.\right)$中，是$\triangle
+    M O N$的“含角点”的有_____，请直接写出其中一个“含角点”的“含角边长”；
 
     （2）已知点$Q \left(\right. t , \left.\right)$在第一象限，且为$\angle M O N$的“含角点”．
 
@@ -1240,6 +1496,14 @@ questions:
 
     ②当$t$改变时，直接写出$\triangle Q A B$面积的最小值．'
   figure: 2026-mentougou-er/figures/image636.png
+  _figures_extra:
+  - image636.png
+  - image675.png
+  - image686.png
+  - image721.png
+  - image743.png
+  - image749.png
+  - image757.png
   answer: （1）$P_{1}$，$P_{3}$；点$P_{1}$的“含角边长”为$\triangle M O N$，点$P_{3}$的“含角边长”为$2$ （2）①$t > 1$；②$H$
   solution: '（1）根据“含角点”的定义可知点$P_{2}$和点$A$均在$x$轴上，以线段$P_{2} A$为边构造等边三角形时，有一边与$O N$平行，即点$B$不在$O N$上，所以是$\triangle M O N$的“含角点”的有点$P_{1}$和$P_{3}$；根据等边三角形的性质求出“含角边长”；
 
@@ -1279,6 +1543,7 @@ questions:
 
     过点$P_{1}$作$P_{1} D \bot A C$于点$D$，
 
+    ![](figures/image675.png)
 
     则$P_{1} D = 1$，$O D =$，
 
@@ -1296,6 +1561,7 @@ questions:
 
     如下图所示，过点$P_{3}$作$P_{3} H \parallel x$轴，作$P_{3} E \bot x$轴于点$E$，
 
+    ![](figures/image686.png)
 
     $\because$点$P_{3}$的坐标为$\left(\right. 3 , \left.\right)$，
 
@@ -1353,6 +1619,7 @@ questions:
 
     设直线$y =$与$y$轴的交点为$G$，与$O N$的交点为$\therefore \triangle H O A$，连接$A H$，
 
+    ![](figures/image721.png)
 
     则$G Q = t$，$O G =$，
 
@@ -1386,6 +1653,7 @@ questions:
 
     $\therefore$点$B$与点$O$重合，不符合题意，故$t \neq 1$；
 
+    ![](figures/image743.png)
 
     如解图④，当点$Q$在点$G$，$0 < t < 1$之间时，$0 < t < 1$，$\angle Q A O < \angle Q C O$，即$\angle Q A O < 6 0 \circ$，
 
@@ -1393,6 +1661,7 @@ questions:
 
     $\therefore$当$0 < t < 1$时，点$Q$不是$\angle M O N$的“含角点”；
 
+    ![](figures/image749.png)
 
     如解图②，当点$Q$在点$t > 1$的右侧时，$t > 1$，始终存在$\triangle Q A B$是等边三角形，且点$B$在射线$O N$上，
 
@@ -1414,9 +1683,17 @@ questions:
 
     此时$t$的值为$2$，符合题意，
 
-    $\therefore \triangle Q A B$面积的最小值为$\frac{}{4} \times \left(\right. \left.\right)^{2} = \frac{3}{4}$．'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+    $\therefore \triangle Q A B$面积的最小值为$\frac{}{4} \times \left(\right. \left.\right)^{2} = \frac{3}{4}$．
+
+    ![](figures/image757.png)'
+  knowledge_points:
+  - 等边三角形的性质
+  - 坐标系中的几何问题
+  module: triangles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
