@@ -11,7 +11,7 @@ subject: english
 full_score: 60.0
 duration_minutes: 90
 total_questions: 38
-structure: 12单选(6.0分) + 8cloze(8分) + 10reading(20分) + 7reading_express(16分) + 1作文(10分)
+structure: 12单选(6.0分) + 8cloze(8分) + 13reading(26分) + 4reading_express(10分) + 1作文(10分)
 passages:
 - id: choice_intro
   type: choice
@@ -49,6 +49,8 @@ passages:
     to her mind. She picked up her tool and began to carve (雕刻). The first letter came out terrible. She <u>   16   </u> it
     and tried again.
 
+    ![](figures/image2.jpeg)
+
     Mr. Rami tapped a small bell. “Artists, one more thing. Clay is honest. If you press too hard, it shows. If you rush,
     it cracks (裂开). That’s not bad—it’s just <u>   17   </u> You can always make it smooth again, but it helps to know what
     you did.”
@@ -65,6 +67,7 @@ passages:
     When Maya got home, she asked her mom, “Could you help me make a plan for math?” Her mom looked up, surprised and pleased.
     “Of course,” she said. “Let’s do it.” Maya sat down, feeling calm. She was not <u>   20   </u>, but honest and ready to
     try again.'
+  figure: 2026-daxing-er/figures/image2.jpeg
 - id: reading_B
   type: reading
   name: B
@@ -78,6 +81,8 @@ passages:
     He put his shirt on inside out and walked backward down the hall. In the kitchen, he said to his mom, “Good night. Have
     a bad day at work!” When Dad offered pancakes, Sammy held out his plate and said, “No, thanks. They look terrible.” His
     parents looked confused, but Sammy just said, “Opposite Day!”
+
+    ![](figures/image24.jpeg)
 
     At school, kids entered through the door marked “EXIT”. In the classroom, they stood at their desks instead of sitting
     down. During math, they added when the sign said to subtract and subtracted when the sign said to add. “What is going
@@ -97,6 +102,7 @@ passages:
 
     After hearing that, Sammy let out a breath and felt much better. He walked back to his seat with a smile. It was strange
     how a day all about opposites could make things feel so right. Thanks to Ms. Trix, a playful boy’s worry went away.'
+  figure: 2026-daxing-er/figures/image24.jpeg
 - id: reading_C
   type: reading
   name: C
@@ -122,6 +128,8 @@ passages:
     Besides doing morning workouts, early risers are also advised to add small strength training at home in the evening, like
     chair squats and leg moves.
 
+    ![](figures/image25.jpeg)
+
     Owls can save strength training for the evening because most sports science studies suggest that muscle performance peaks
     (达到高峰) in the afternoon or evening. However, evening types should still spend a little time outdoors in the morning. A
     short walk of just a few minutes can fix their body clock and keep their daily sleep routine regular.
@@ -129,6 +137,7 @@ passages:
     There is no one-size-fits-all best time of day to exercise but you should pay attention to how you feel and how well you
     recover at different times of the day. Alignment with biological preference is more important than the exact clock time.
     So, do what feels right for you.'
+  figure: 2026-daxing-er/figures/image25.jpeg
 - id: reading_D
   type: reading
   name: D
@@ -170,13 +179,56 @@ passages:
   type: reading_express
   name: ''
   q_range:
-  - 1
+  - 34
   - 37
   body: '阅读短文，根据短文内容回答问题。
 
     Rhetorical devices (修辞手法) are special writing and speaking skills that help express ideas better, persuade readers, or
     arouse feelings. They help people organize their arguments, make statements easy to remember, and connect with their audience.
-    Here are three types of rhetorical devices.'
+    Here are three types of rhetorical devices.
+
+    1. Simile
+
+    Have you ever wanted to paint a picture with words? That’s where simile comes in. It’s a powerful tool to create vivid
+    (生动的) imagery and make their writing more engaging (引人入胜的). At its heart, a simile is a comparises between two different
+    things using the words “like” or “as” to show a shared quality. Here are a few quick examples to get you started:
+
+    ◆ He eats like a horse.
+
+    ◆ Her smile was bright like the sun.
+
+    ◆ The lake was as smooth as a mirror.
+
+    Writers use similes to paint a picture in the reader’s mind and to make their writing more interesting and memorable.
+
+    2. Personification
+
+    Personification is a figure of speech where human qualities or characteristics are given to inanimate objects, animals,
+    ideas, or forces of nature. It’s not simply describing something; it’s giving it a personality. It’s a way to make descriptions
+    more vivid, relatable, and engaging. Here are a few quick examples:
+
+    ◆ The wind hugs the trees softly.
+
+    ◆ The sun smiled down on us.
+
+    ◆ Opportunity knocked at her door.
+
+    Personification helps readers picture scenes and ideas more clearly by presenting them in a more human and understandable
+    way.
+
+    3. Parallelism
+
+    Parallelism is a powerful tool to create rhythm, stress ideas, and make the writing more memorable. It is the use of similar
+    grammatical structures to express related ideas. The key is that all parts are presented in a balanced and symmetrical
+    (对称的) way. Here are a few quick examples:
+
+    ◆ She likes hiking, biking, and swimming.
+
+    ◆ Believe in yourself, believe in your effort, believe in your future.
+
+    ◆ She was a woman of courage, a woman of strength, and a woman of vision.
+
+    Repetition draws attention to important ideas; balanced and symmetrical phrases are easier to remember.'
 questions:
 - id: 1
   type: 单选
@@ -189,11 +241,11 @@ questions:
     D: they
   answer: ''
   solution: ''
-  knowledge_points: &id001
+  knowledge_points:
   - 代词运用
   module: grammar
   difficulty: 基础
-  recommended_for: &id002
+  recommended_for:
   - L0
   - L1
   - L2
@@ -212,11 +264,11 @@ questions:
     D: for
   answer: ''
   solution: ''
-  knowledge_points: &id003
+  knowledge_points:
   - 介词的使用
   module: grammar
   difficulty: 基础
-  recommended_for: &id004
+  recommended_for:
   - L0
   - L1
   - L2
@@ -238,11 +290,11 @@ questions:
     D: Can
   answer: ''
   solution: ''
-  knowledge_points: &id005
+  knowledge_points:
   - 情态动词的用法
   module: grammar
   difficulty: 基础
-  recommended_for: &id006
+  recommended_for:
   - L0
   - L1
   - L2
@@ -652,6 +704,65 @@ questions:
   qc_status: draft
   qc_note: ''
   passage_id: cloze_intro
+- id: 21
+  type: reading
+  score: 2
+  stem: '| ![](figures/image21.png) Lily | I like beautiful butterflies with bright and colorful wings. I also love natural
+    sounds like the singing of birds and the calls of insects around us. |
+
+    |---|---|---|'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 信息提取
+  module: reading
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 22
+  type: reading
+  score: 2
+  stem: '| ![](figures/image22.png) Tom | I am deeply fond of whales and various sea creatures. I feel like watching a documentary
+    that shows the amazing life living in the ocean. |'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 信息提取
+  module: reading
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 23
+  type: reading
+  score: 2
+  stem: '| ![](figures/image23.png) Bob | I have a strong interest in dinosaurs. I really wish to take part in an interesting
+    activity to dig out ancient dinosaur bones buried deep underground. |
+
+
+    （二）阅读下列短文，根据短文内容，从短文后各题所给的A、B、C、D四个选项中，选出最佳选项。'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 信息筛选
+  module: reading
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
 - id: 24
   type: reading
   score: 2
@@ -879,97 +990,6 @@ questions:
   qc_status: draft
   qc_note: ''
   passage_id: reading_D
-- id: 1
-  type: reading_express
-  score: 2
-  stem: 'Simile
-
-
-    Have you ever wanted to paint a picture with words? That’s where simile comes in. It’s a powerful tool to create vivid
-    (生动的) imagery and make their writing more engaging (引人入胜的). At its heart, a simile is a comparises between two different
-    things using the words “like” or “as” to show a shared quality. Here are a few quick examples to get you started:
-
-
-    ◆ He eats like a horse.
-
-
-    ◆ Her smile was bright like the sun.
-
-
-    ◆ The lake was as smooth as a mirror.
-
-
-    Writers use similes to paint a picture in the reader’s mind and to make their writing more interesting and memorable.'
-  answer: ''
-  solution: ''
-  knowledge_points: *id001
-  module: grammar
-  difficulty: 基础
-  recommended_for: *id002
-  qc_status: draft
-  qc_note: ''
-  passage_id: choice_intro
-- id: 2
-  type: reading_express
-  score: 2
-  stem: 'Personification
-
-
-    Personification is a figure of speech where human qualities or characteristics are given to inanimate objects, animals,
-    ideas, or forces of nature. It’s not simply describing something; it’s giving it a personality. It’s a way to make descriptions
-    more vivid, relatable, and engaging. Here are a few quick examples:
-
-
-    ◆ The wind hugs the trees softly.
-
-
-    ◆ The sun smiled down on us.
-
-
-    ◆ Opportunity knocked at her door.
-
-
-    Personification helps readers picture scenes and ideas more clearly by presenting them in a more human and understandable
-    way.'
-  answer: ''
-  solution: ''
-  knowledge_points: *id003
-  module: grammar
-  difficulty: 基础
-  recommended_for: *id004
-  qc_status: draft
-  qc_note: ''
-  passage_id: choice_intro
-- id: 3
-  type: reading_express
-  score: 2
-  stem: 'Parallelism
-
-
-    Parallelism is a powerful tool to create rhythm, stress ideas, and make the writing more memorable. It is the use of similar
-    grammatical structures to express related ideas. The key is that all parts are presented in a balanced and symmetrical
-    (对称的) way. Here are a few quick examples:
-
-
-    ◆ She likes hiking, biking, and swimming.
-
-
-    ◆ Believe in yourself, believe in your effort, believe in your future.
-
-
-    ◆ She was a woman of courage, a woman of strength, and a woman of vision.
-
-
-    Repetition draws attention to important ideas; balanced and symmetrical phrases are easier to remember.'
-  answer: ''
-  solution: ''
-  knowledge_points: *id005
-  module: grammar
-  difficulty: 基础
-  recommended_for: *id006
-  qc_status: draft
-  qc_note: ''
-  passage_id: choice_intro
 - id: 34
   type: reading_express
   score: 2

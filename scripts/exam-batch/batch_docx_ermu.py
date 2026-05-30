@@ -99,10 +99,12 @@ def run_one(subject: str, region: str) -> Tuple[str, str, str]:
     return (subject, region, f"OK {score_line.strip()}")
 
 def main():
-    jobs = [(s, r) for s, rs in REGIONS.items() for r in rs]
+    import sys as _sys
+    only = _sys.argv[1] if len(_sys.argv) > 1 else None
+    jobs = [(s, r) for s, rs in REGIONS.items() for r in rs if (only is None or s == only)]
     print(f"# {len(jobs)} 卷批跑（并发 6）", flush=True)
     results = []
-    with ThreadPoolExecutor(max_workers=6) as ex:
+    with ThreadPoolExecutor(max_workers=2) as ex:
         futs = {ex.submit(run_one, s, r): (s, r) for s, r in jobs}
         for fut in as_completed(futs):
             s, r = futs[fut]

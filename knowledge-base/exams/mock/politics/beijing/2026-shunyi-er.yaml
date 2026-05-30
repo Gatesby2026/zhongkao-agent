@@ -2,16 +2,16 @@
 # 2026年北京顺义区二模politics — 自动生成
 # ============================================================
 # OCR: Qwen-VL-OCR  Enrich: qwen-max
-# QC: draft=17  needs_review=15
+# QC: draft=15  needs_review=10
 
 year: 2026
 district: 顺义区
 exam_type: 二模
 subject: politics
-full_score: 80
+full_score: 70
 duration_minutes: 70
-total_questions: 32
-structure: 12判断(20分) + 15单选(30分) + 2材料分析(12分) + 3作文(18分)
+total_questions: 25
+structure: 10判断(10分) + 10单选(20分) + 2材料分析(16分) + 3作文(24分)
 passages:
 - id: material_intro
   type: material
@@ -27,11 +27,11 @@ questions:
   stem: 中国共产党领导是中国特色社会主义最本质的特征。
   answer: ''
   solution: ''
-  knowledge_points: &id001
+  knowledge_points:
   - 教材基本观点
   module: politics
   difficulty: 基础
-  recommended_for: &id002
+  recommended_for:
   - L0
   - L1
   - L2
@@ -113,11 +113,11 @@ questions:
   stem: 教育是民族振兴、社会进步的基石，是提高国民素质、培养创新型人才、促进人的全面发展的根本途径。
   answer: ''
   solution: ''
-  knowledge_points: &id003
+  knowledge_points:
   - 教育的重要性
   module: politics
   difficulty: 基础
-  recommended_for: &id004
+  recommended_for:
   - L0
   - L1
   - L2
@@ -191,30 +191,6 @@ questions:
   - L1
   - L2
   - L3
-  qc_status: draft
-  qc_note: ''
-- id: 1
-  type: 判断
-  score: 1
-  stem: √ 2. √ 3. √ 4. √ 5. ×
-  answer: ''
-  solution: ''
-  knowledge_points: *id001
-  module: politics
-  difficulty: 基础
-  recommended_for: *id002
-  qc_status: draft
-  qc_note: ''
-- id: 6
-  type: 判断
-  score: 9
-  stem: √ 7. √ 8. √ 9. √ 10. ×
-  answer: ''
-  solution: ''
-  knowledge_points: *id003
-  module: politics
-  difficulty: 基础
-  recommended_for: *id004
   qc_status: draft
   qc_note: ''
 - id: 11
@@ -518,8 +494,7 @@ questions:
     A: ①③
     B: ①④
     C: ②③
-    D: ②④   | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | |---|---|---|---|---|---|---|---|---|---| | A | D | C | D
-      | B | B | D | A | C | B |  三、非选择题
+    D: ②④
   answer: ''
   solution: ''
   knowledge_points:
@@ -535,122 +510,8 @@ questions:
   qc_status: needs_review
   qc_note: 选择题 answer 为空
 - id: 21
-  type: 单选
-  score: 2
-  stem: '（6分）
-
-
-    示例一（选择画面一）：①暖在学生对老师的关爱与尊重，传承了尊师重教的中华民族传统美德，彰显了平等、相互尊重的新型师生关系（2分）；②暖在师生之间的双向奔赴，老师的悉心教导得到学生的正向反馈，体现了良好的师生交往状态，传递了美好情感（2分）；③暖在整个事件传递的社会正能量，有助于营造友善和谐的社会氛围，引导人们践行关爱他人的亲社会行为（2分）。
-
-
-    示例二（选择画面二）：①暖在我国坚持以人民为中心的发展思想，天山胜利隧道的修建立足人民需求，保障民生福祉，让人民共享发展成果（2分）；②暖在我国社会主义制度具有集中力量办大事的显著优势，能够调动各方资源完成超级工程，彰显了国家治理能力的优越性（2分）；③暖在网友的爱国情感共鸣，大家为祖国的发展成就感到自豪，厚植了家国情怀，凝聚了民族向心力（2分）。'
-  answer: ''
-  solution: ''
-  knowledge_points: &id005
-  - 道德教育
-  - 社会责任
-  module: politics
-  difficulty: 中等
-  recommended_for: &id006
-  - L1
-  - L2
-  - L3
-  qc_status: needs_review
-  qc_note: 选择题缺少 options（既无文本也无图片选项）；选择题 answer 为空
-  passage_id: material_intro
-- id: 22
-  type: 单选
-  score: 2
-  stem: '（6分）
-
-
-    ①唐某在长城刻字的行为是行政违法行为，扰乱了公共场所秩序，损害了文化古迹，违反了治安管理处罚法，理应受到行政处罚（2分）；②法律是最刚性的社会规则，对全体社会成员具有普遍约束力，任何人违反法律都要承担相应的法律责任，警方的处罚体现了严格执法，维护了法律的权威和公共利益（2分）；③我们要增强法治观念，提升道德修养，自觉遵守社会规则，爱护公共财物和文化遗产，依法规范自身行为，同时要敢于同违法行为作斗争，维护公共秩序（2分）。'
-  answer: ''
-  solution: ''
-  knowledge_points: &id007
-  - 法治教育
-  - 公民基本义务
-  - 法律的作用
-  module: politics
-  difficulty: 中等
-  recommended_for: &id008
-  - L1
-  - L2
-  - L3
-  qc_status: needs_review
-  qc_note: 选择题缺少 options（既无文本也无图片选项）；选择题 answer 为空
-  passage_id: material_intro
-- id: 23
-  type: 单选
-  score: 2
-  stem: '（8分）
-
-
-    ①人民代表大会制度是我国的根本政治制度，人大代表是人民行使国家权力的代表，由人民选举产生，权力来自人民，必须依照宪法和法律赋予的职权行使国家权力，对人民负责，受人民监督（2分）；②人大代表要密切联系群众，倾听群众呼声，反映群众诉求，积极履职，推动解决民生问题，同时加强自身学习，提升履职能力，发挥好桥梁纽带作用（2分）；③人大代表依法享有提案权、审议权、表决权等职权，推动相关法律和政策的完善，将为人民服务落实到实际行动中，践行“人民选我当代表，我当代表为人民”的理念（2分）；④人民代表大会制度保障了人民当家作主，彰显了我国社会主义民主是最广泛、最真实、最管用的民主，我们要坚持和完善人民代表大会制度，坚定制度自信（2分）。'
-  answer: ''
-  solution: ''
-  knowledge_points: &id009
-  - 人民代表大会制度
-  - 公民参与
-  - 法治教育
-  module: politics
-  difficulty: 中等
-  recommended_for: &id010
-  - L1
-  - L2
-  - L3
-  qc_status: needs_review
-  qc_note: 选择题缺少 options（既无文本也无图片选项）；选择题 answer 为空
-  passage_id: material_intro
-- id: 24
-  type: 单选
-  score: 2
-  stem: '（10分）
-
-
-    （1） （8分）《中华人民共和国生态环境法典》是我国生态法治建设的里程碑，它坚持民主立法，广泛征集民意，立足民生需求解决群众身边的生态问题（2分）；它以最严格的制度、最严密的法治打击生态违法行为，提高违法成本，为生态环境保护提供坚强法治保障（2分）；它创新性设置绿色低碳发展专编，推动我国经济社会绿色转型，也为全球生态治理贡献了中国智慧和中国方案（2分）。我们要自觉遵守生态环境相关法律，主动参与生态保护，共同建设美丽中国（2分）。
-
-
-    （2） （2分）示例：①守护生态家园，法治保驾护航；②爱绿植绿护绿，共筑美丽中国。（每条1分，言之有理即可）'
-  answer: ''
-  solution: ''
-  knowledge_points: &id011
-  - 法治教育
-  - 国家与社会
-  module: politics
-  difficulty: 基础
-  recommended_for: &id012
-  - L0
-  - L1
-  - L2
-  - L3
-  qc_status: needs_review
-  qc_note: 选择题缺少 options（既无文本也无图片选项）；选择题 answer 为空
-  passage_id: material_intro
-- id: 25
-  type: 单选
-  score: 2
-  stem: '（10分）
-
-
-    长征是中国共产党领导人民创造的伟大奇迹，长征精神是中华民族宝贵的精神财富。“半条被子”的故事深刻诠释了中国共产党始终坚持全心全意为人民服务的根本宗旨，始终同人民群众生死相依、患难与共，这是党取得一切胜利的力量源泉（3分）。如今长征系列运载火箭的成就，是新时代我们传承长征精神，坚持自力更生、自主创新的成果，彰显了中国特色社会主义制度集中力量办大事的显著优势，也展现了中国人民自强不息、勇攀高峰的奋斗精神（3分）。作为新时代的青少年，我们要传承和弘扬长征精神，坚定理想信念，听党话跟党走，努力学习科学文化知识，提升自身本领，勇于担当时代责任，在新的长征路上攻坚克难，为实现中华民族伟大复兴的中国梦贡献自己的力量，走好我们这一代人的长征路（4分）。'
-  answer: ''
-  solution: ''
-  knowledge_points: &id013
-  - 中国梦
-  - 民族精神
-  - 爱国主义
-  module: politics
-  difficulty: 能力
-  recommended_for: &id014
-  - L2
-  - L3
-  qc_status: needs_review
-  qc_note: 选择题缺少 options（既无文本也无图片选项）；选择题 answer 为空
-  passage_id: material_intro
-- id: 21
   type: 材料分析
-  score: 6
+  score: 8
   stem: '（6分）感人画面暖人心。
 
 
@@ -660,30 +521,41 @@ questions:
     上述感人画面____任选其一，说说“暖”在何处。'
   answer: ''
   solution: ''
-  knowledge_points: *id005
+  knowledge_points:
+  - 道德教育
+  - 社会责任
   module: politics
   difficulty: 中等
-  recommended_for: *id006
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
   passage_id: material_intro
 - id: 22
   type: 材料分析
-  score: 6
+  score: 8
   stem: "（6分）尊法笃行，守护正义\n\n案例 \n\n唐某在八达岭长城游览时，用钥匙在城墙上刻下自己的名字，被其他游客发现并举报。北京市延庆公安分局八达岭派出所根据举报人拍摄的视频和照片，反向追踪唐某的游览轨迹并将其查获。最终，警方依据《中华人民共和国治安管理处罚法》规定，对唐某处以行政拘留5天、罚款200元的处罚。唐某也被列入八达岭景区的黑名单以示惩戒。\n\
     \n结合案例，运用所学，写一则短评。"
   answer: ''
   solution: ''
-  knowledge_points: *id007
+  knowledge_points:
+  - 法治教育
+  - 公民基本义务
+  - 法律的作用
   module: politics
   difficulty: 中等
-  recommended_for: *id008
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
   passage_id: material_intro
 - id: 23
   type: 作文
-  score: 6
+  score: 8
   stem: '（8分）某校举行“人大代表为人民”主题研究性学习，请你参与其中。
 
 
@@ -744,16 +616,22 @@ questions:
     要求：观点明确，逻辑清晰，不少于80字。'
   answer: ''
   solution: ''
-  knowledge_points: *id009
+  knowledge_points:
+  - 人民代表大会制度
+  - 公民参与
+  - 法治教育
   module: politics
   difficulty: 中等
-  recommended_for: *id010
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
   passage_id: material_intro
 - id: 24
   type: 作文
-  score: 6
+  score: 8
   stem: '（10分）某校开展“‘典’亮美丽家园”主题宣传活动，请你参与。
 
 
@@ -802,16 +680,22 @@ questions:
     （2）将宣传标语补充完整。（2分）'
   answer: ''
   solution: ''
-  knowledge_points: *id011
+  knowledge_points:
+  - 法治教育
+  - 国家与社会
   module: politics
   difficulty: 基础
-  recommended_for: *id012
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
   passage_id: material_intro
 - id: 25
   type: 作文
-  score: 6
+  score: 8
   stem: '（10分）某校围绕长征胜利90周年举办“承先辈之志，启时代新程”主题教育展览。
 
 
@@ -845,16 +729,18 @@ questions:
     结合展览内容，运用所学，写一篇观后感。
 
 
-    要求：观点明确，逻辑清晰，不少于100字。
-
-
-    试卷答案'
+    要求：观点明确，逻辑清晰，不少于100字。'
   answer: ''
   solution: ''
-  knowledge_points: *id013
+  knowledge_points:
+  - 中国梦
+  - 民族精神
+  - 爱国主义
   module: politics
   difficulty: 能力
-  recommended_for: *id014
+  recommended_for:
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
   passage_id: material_intro

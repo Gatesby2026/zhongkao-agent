@@ -25,10 +25,10 @@
       "type": "reading",
       "name": "A",
       "q_range": [
-        21,
-        23
+        24,
+        26
       ],
-      "body": "一家宠物店迎来了三位顾客。请阅读每位顾客的需求，从A、B、C、D四种宠物中为他们匹配最合适的一项，并将答案填到相应位置上。其中一个选项为多余选项。\n![](figures/image3.png)",
+      "body": "一家宠物店迎来了三位顾客。请阅读每位顾客的需求，从A、B、C、D四种宠物中为他们匹配最合适的一项，并将答案填到相应位置上。其中一个选项为多余选项。\n![](figures/image3.png)\n| 1. <u>____21____</u>  ![](figures/image4.png) | I’m interested in water-living pets. I want something quiet to watch at home when I’m tired. I plan to keep it in a small bowl. |\n|---|---|\n| 2. <u>____22____</u> ![](figures/image5.png) | Most of my classmates like cute pets, but I don’t want to choose the same as they do. I’m more interested in cold-blooded animals that are calm and don’t make much noise. |\n| 3. <u>____23____</u> ![](figures/image6.png) | I like active and smart pets. It’s fun if the pet can copy my voice and make me laugh. I want an animal friend that I can play with every day. |",
       "figure": "figures/image3.png"
     },
     {
@@ -374,36 +374,6 @@
       "score": 1
     },
     {
-      "number": 21,
-      "stem": "| 1. <u>____21____</u>  ![](figures/image4.png) | I’m interested in water-living pets. I want something quiet to watch at home when I’m tired. I plan to keep it in a small bowl. |\n|---|---|",
-      "options": null,
-      "section": "reading",
-      "answer": "A",
-      "solution": "根据Emma的需求“water-living pets”“quiet”“keep it in a small bowl”可知，A选项的鱼完全符合水生、安静、可养在鱼缸/小碗里的特点。",
-      "type": "reading",
-      "score": 2
-    },
-    {
-      "number": 22,
-      "stem": "| 2. <u>____22____</u> ![](figures/image5.png) | Most of my classmates like cute pets, but I don’t want to choose the same as they do. I’m more interested in cold-blooded animals that are calm and don’t make much noise. |",
-      "options": null,
-      "section": "reading",
-      "answer": "C",
-      "solution": "根据Lily的需求“don’t want to choose the same as they do”“cold-blooded animals”“calm and don’t make much noise”可知，C选项的蜥蜴是冷血动物，安静不吵闹，且相对小众，符合她的需求。",
-      "type": "reading",
-      "score": 2
-    },
-    {
-      "number": 23,
-      "stem": "| 3. <u>____23____</u> ![](figures/image6.png) | I like active and smart pets. It’s fun if the pet can copy my voice and make me laugh. I want an animal friend that I can play with every day. |",
-      "options": null,
-      "section": "reading",
-      "answer": "D",
-      "solution": "根据David的需求“active and smart pets”“copy my voice”“play with every day”可知，D选项的鹦鹉能模仿人类说话，聪明活泼，符合他的需求。",
-      "type": "reading",
-      "score": 2
-    },
-    {
       "number": 24,
       "stem": "What does the shop lend to people?",
       "options": {
@@ -739,19 +709,19 @@
       "number": 21,
       "correct": "A",
       "solution": "根据Emma的需求“water-living pets”“quiet”“keep it in a small bowl”可知，A选项的鱼完全符合水生、安静、可养在鱼缸/小碗里的特点。",
-      "score": 2
+      "score": null
     },
     {
       "number": 22,
       "correct": "C",
       "solution": "根据Lily的需求“don’t want to choose the same as they do”“cold-blooded animals”“calm and don’t make much noise”可知，C选项的蜥蜴是冷血动物，安静不吵闹，且相对小众，符合她的需求。",
-      "score": 2
+      "score": null
     },
     {
       "number": 23,
       "correct": "D",
       "solution": "根据David的需求“active and smart pets”“copy my voice”“play with every day”可知，D选项的鹦鹉能模仿人类说话，聪明活泼，符合他的需求。",
-      "score": 2
+      "score": null
     },
     {
       "number": 24,
@@ -850,7 +820,7 @@
       "score": 0
     }
   ],
-  "full_score": 60.0,
+  "full_score": 54.0,
   "slug": "2026-changping-er",
   "source": "docx",
   "subject": "english",

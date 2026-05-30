@@ -2,16 +2,16 @@
 # 2026年北京昌平区二模chinese — 自动生成
 # ============================================================
 # OCR: Qwen-VL-OCR  Enrich: qwen-max
-# QC: draft=52  needs_review=0
+# QC: draft=26  needs_review=0
 
 year: 2026
 district: 昌平区
 exam_type: 二模
 subject: chinese
-full_score: 135
+full_score: 100
 duration_minutes: 150
-total_questions: 52
-structure: 1书写(1分) + 12主观填空(25分) + 1古诗内容理解(2分) + 1名著阅读(5分) + 10现代文阅读(26分) + 27作文(80分)
+total_questions: 26
+structure: 9单选(18分) + 8主观填空(16分) + 1古诗内容理解(3分) + 1名著阅读(5分) + 6现代文阅读(18分) + 1作文(40分)
 passages:
 - id: base_资料一
   type: base
@@ -71,22 +71,22 @@ passages:
     “健康第一”的教育理念得到了社会的广泛关注与响应。有的社区利用周末、寒暑假开设公益运动营，进行兼顾趣味性与身体协调性的运动训练，旨在增强青少年体质。有的社区还联合心理机构，定期开设心理健康小讲堂等，引导青少年正视情绪。除了社区积极发力，卫生健康与体育等相关部门也协同行动，为青少年健康保驾护航。卫生健康部门带动各级医疗机构主动走进校园，开展义务视力筛查、口腔检查、健康科普等活动。在体育部门的推动下，公共体育场馆面向青少年免费或低收费开放，为他们提供充足的校外锻炼空间。多方力量各尽其责、同向发力，共同为青少年健康成长助力。'
 questions:
 - id: 1
-  type: 书写
-  score: 1
+  type: 单选
+  score: 2
   stem: 你审核资料中的字音和字形。下列加点字读音标注或字形书写不正确的一项是(2分)
   options:
     A: 根茎(jīng)
     B: 过渡
     C: 屋舍(shè)
     D: 辩识
-  answer: ''
+  answer: D
   solution: ''
-  knowledge_points: &id001
+  knowledge_points:
   - 字音
   - 字形
   module: writing
   difficulty: 基础
-  recommended_for: &id002
+  recommended_for:
   - L0
   - L1
   - L2
@@ -95,21 +95,21 @@ questions:
   qc_note: ''
   passage_id: base_资料一
 - id: 2
-  type: 主观填空
-  score: 3
+  type: 单选
+  score: 2
   stem: 请你在文段横线处依次填入词语，最恰当的一项是(2分)
   options:
     A: ①淡泊名利 ②刚正不阿 ③顽强不屈 ④洁身自好
     B: ①洁身自好 ②顽强不屈 ③淡泊名利 ④刚正不阿
     C: ①淡泊名利 ②顽强不屈 ③洁身自好 ④刚正不阿
     D: ①顽强不屈 ②刚正不阿 ③洁身自好 ④淡泊名利
-  answer: ''
+  answer: C
   solution: ''
-  knowledge_points: &id003
+  knowledge_points:
   - 成语运用
   module: reading
   difficulty: 基础
-  recommended_for: &id004
+  recommended_for:
   - L0
   - L1
   - L2
@@ -122,12 +122,12 @@ questions:
   score: 2
   stem: 文段中的画线句存在问题，请你修改。(2分)
   answer: ''
-  solution: ''
-  knowledge_points: &id005
+  solution: 人们依据草木的特点，赋予其丰富的精神内涵。
+  knowledge_points:
   - 病句
   module: writing
   difficulty: 基础
-  recommended_for: &id006
+  recommended_for:
   - L0
   - L1
   - L2
@@ -140,13 +140,13 @@ questions:
   score: 2
   stem: 请你在文段横线处补写恰当内容。(2分)
   answer: ''
-  solution: ''
-  knowledge_points: &id007
+  solution: ①东晋 ②杜甫
+  knowledge_points:
   - 词语运用
   - 连贯
   module: writing
   difficulty: 基础
-  recommended_for: &id008
+  recommended_for:
   - L0
   - L1
   - L2
@@ -155,7 +155,7 @@ questions:
   qc_note: ''
   passage_id: base_资料三
 - id: 5
-  type: 主观填空
+  type: 单选
   score: 2
   stem: 同学们讨论应如何理解文段中的“扎根”。你根据语境判断，下列不恰当的一项是(2分)
   options:
@@ -163,13 +163,13 @@ questions:
     B: 融入民俗仪式
     C: 相伴日常起居
     D: 装饰日常器物
-  answer: ''
+  answer: A
   solution: ''
-  knowledge_points: &id009
+  knowledge_points:
   - 词语运用
   module: reading
   difficulty: 基础
-  recommended_for: &id010
+  recommended_for:
   - L0
   - L1
   - L2
@@ -182,13 +182,13 @@ questions:
   score: 2
   stem: 根据语境，请你在文段中的横线处补写语句。(2分)
   answer: ''
-  solution: ''
-  knowledge_points: &id011
+  solution: 它承载着民族的品格与气节，是精神文化的重要符号。
+  knowledge_points:
   - 词语运用
   - 连贯
   module: writing
   difficulty: 基础
-  recommended_for: &id012
+  recommended_for:
   - L0
   - L1
   - L2
@@ -201,12 +201,12 @@ questions:
   score: 3
   stem: 忽如一夜春风来，      。(岑参《白雪歌送武判官归京》)(1分)
   answer: ''
-  solution: ''
-  knowledge_points: &id013
+  solution: 千树万树梨花开
+  knowledge_points:
   - 默写
   module: classical
   difficulty: 基础
-  recommended_for: &id014
+  recommended_for:
   - L0
   - L1
   - L2
@@ -219,12 +219,12 @@ questions:
   score: 1
   stem: 晓雾将歇,      ;夕日欲颓,       。(陶弘景《答谢中书书》) (2分)
   answer: ''
-  solution: ''
-  knowledge_points: &id015
+  solution: 猿鸟乱鸣     沉鳞竞跃
+  knowledge_points:
   - 默写
   module: classical
   difficulty: 基础
-  recommended_for: &id016
+  recommended_for:
   - L0
   - L1
   - L2
@@ -252,13 +252,13 @@ questions:
 
     念天地之悠悠，独怆然而涕下！'
   answer: ''
-  solution: ''
-  knowledge_points: &id017
+  solution: 报君黄金台上意    提携玉龙为君死
+  knowledge_points:
   - 古诗文默写
   - 家国情怀
   module: classical
   difficulty: 基础
-  recommended_for: &id018
+  recommended_for:
   - L0
   - L1
   - L2
@@ -268,16 +268,18 @@ questions:
   passage_id: classical_intro
 - id: 10
   type: 主观填空
-  score: 2
+  score: 3
   stem: 诗人先通过“前”与“后”、<u>① </u>的两组对比，表明时间流逝，一去不返。继而发“悠悠”之叹，抒个人境遇之慨。整首诗营造了<u> ② </u>的意境。(2分)
   answer: ''
-  solution: ''
-  knowledge_points: &id019
+  solution: '①古人和来者
+
+    ②苍凉雄浑、孤寂悲凉'
+  knowledge_points:
   - 古诗内容理解
   - 意境赏析
   module: classical
   difficulty: 中等
-  recommended_for: &id020
+  recommended_for:
   - L1
   - L2
   - L3
@@ -291,13 +293,13 @@ questions:
     《战国策》\n\n邹忌修八尺有余，而形貌昳丽。朝服衣冠，窥镜，谓其妻曰：“我孰与城北徐公美?”其妻曰：“君美甚，徐公何能及君也?”城北徐公，齐国之美丽者也。忌不自信，而复问其妾曰：“吾孰与徐公美?”妾曰：“徐公何能及君也?”旦日，客从外来，与坐谈，问之客曰：“吾与徐公孰美?”客曰：“徐公不若君之美也。”明日徐公来，孰视之，自以为不如；窥镜而自视，又弗如远甚。暮寝而思之，曰：“吾妻之美我者，私我也；妾之美我者，畏我也；客之美我者，欲有求于我也。”\n\
     \n于是入朝见威王，曰：“臣诚知不如徐公美。臣之妻私臣，臣之妾畏臣，臣之客欲有求于臣，皆以美于徐公。今齐地方千里，百二十城，宫妇左右莫不私王，朝廷之臣莫不畏王，四境之内莫不有求于王：由此观之，王之蔽甚矣。”\n\n王曰：“善。”乃下令：“群臣吏民能面刺寡人之过者，受上赏；上书谏寡人者，受中赏；能谤讥于市朝，闻寡人之耳者，受下赏。”令初下，群臣进谏，门庭若市；数月之后，时时而间进；期年之后，虽欲言，无可进者。燕、赵、韩、魏闻之，皆朝于齐。此所谓战胜于朝廷。"
   answer: ''
-  solution: ''
-  knowledge_points: &id021
+  solution: “悠悠”写出天地广阔无垠、时光绵延无尽的特点；“独”写出诗人孤身一人、无人理解的状态。宏大永恒的天地与孤单渺小的自我形成鲜明对比，抒发了诗人怀才不遇、壮志难酬的悲愤，以及孤独寂寞、知音难觅的惆怅之情。
+  knowledge_points:
   - 古诗内容理解
   - 情感表达
   module: classical
   difficulty: 中等
-  recommended_for: &id022
+  recommended_for:
   - L1
   - L2
   - L3
@@ -305,21 +307,21 @@ questions:
   qc_note: ''
   passage_id: classical_intro
 - id: 12
-  type: 主观填空
-  score: 3
+  type: 单选
+  score: 2
   stem: 下列各组语句中加点词的意思不相同的一项是(2分)
   options:
     A: 徐公何能·及·君也/不·及·汪伦送我情
     B: ·皆·以美于徐公/·皆·朝于齐
     C: 面·刺·寡人之过者/寒风·刺·骨
     D: 燕、赵、韩、魏·闻·之/·闻·之，欣然规往
-  answer: ''
+  answer: C
   solution: ''
-  knowledge_points: &id023
+  knowledge_points:
   - 文言文实词
   module: classical
   difficulty: 基础
-  recommended_for: &id024
+  recommended_for:
   - L0
   - L1
   - L2
@@ -328,7 +330,7 @@ questions:
   qc_note: ''
   passage_id: classical_intro
 - id: 13
-  type: 主观填空
+  type: 单选
   score: 2
   stem: 下列对“期年之后，虽欲言，无可进者”的理解，不正确的一项是(2分)
   options:
@@ -336,13 +338,13 @@ questions:
     B: 一年后臣民想进谏但不敢，此后不再进谏献策。
     C: 一年后朝政弊病渐除，可见威王纳谏卓有成效。
     D: 一年后国家政治清明，群臣吏民没有谏言要说。
-  answer: ''
+  answer: B
   solution: ''
-  knowledge_points: &id025
+  knowledge_points:
   - 命题作文
   module: writing
   difficulty: 能力
-  recommended_for: &id026
+  recommended_for:
   - L2
   - L3
   qc_status: draft
@@ -350,7 +352,7 @@ questions:
   passage_id: classical_intro
 - id: 14
   type: 古诗内容理解
-  score: 2
+  score: 3
   stem: '联系上面的《邹忌讽齐王纳谏》及下面的材料，在后面语段的横线处填写恰当的内容。(3分)
 
 
@@ -365,13 +367,13 @@ questions:
 
     邹忌由家事推及国事，讽谏威王。威王接受邹忌谏言，从而<u>   ①   </u>，最终战胜于朝廷。晏子引古代贤君做法，劝谏景公。景公从善如流，于是“<u>    ②    </u>”。两文既展现了邹忌与晏子的劝谏智慧，也塑造出威王与景公<u>    ③     </u>的贤君形象。'
   answer: ''
-  solution: ''
-  knowledge_points: &id027
+  solution: ①广开言路，修明政治 ②出裘发粟以与饥寒者 ③善于纳谏、知错能改
+  knowledge_points:
   - 古诗内容理解
   - 文言文理解
   module: classical
   difficulty: 中等
-  recommended_for: &id028
+  recommended_for:
   - L1
   - L2
   - L3
@@ -383,35 +385,39 @@ questions:
   score: 5
   stem: 小说可以通过情节的不断推进来展现人物性格、揭示主题。请从《西游记》《骆驼祥子》《钢铁是怎样炼成的》《水浒传》中任选一部进行分析。(100字左右)
   answer: ''
-  solution: ''
-  knowledge_points: &id029
+  solution: '一：《钢铁是怎样炼成的》。小说通过保尔的成长情节推进展现人物、揭示主题。从少年反抗压迫，到战场浴血奋战，再到病痛缠身仍坚持创作，情节层层递进，凸显保尔顽强不屈、无私奉献的性格，揭示了人要在磨难中坚守理想、实现人生价值的主题。
+
+    示例二：《骆驼祥子》。祥子从勤劳上进的青年，到买车三起三落，再到小福子死后彻底堕落。情节一步步推进，展现他从坚韧淳朴到麻木自私的性格变化，揭露旧社会对底层劳动者的压迫，批判黑暗社会摧残人性的主题。
+
+    示例三：《西游记》。师徒四人历经九九八十一难，情节不断推进。取经路上，悟空嫉恶如仇、唐僧坚定执着的性格愈发鲜明，最终修成正果，体现不畏艰险、坚守初心终能成功的主题。'
+  knowledge_points:
   - 名著情节
   - 人物形象
   - 主题理解
   module: reading
   difficulty: 中等
-  recommended_for: &id030
+  recommended_for:
   - L1
   - L2
   - L3
   qc_status: draft
   qc_note: ''
 - id: 16
-  type: 现代文阅读
-  score: 3
+  type: 单选
+  score: 2
   stem: 根据以上三则材料，下列说法不符合文意的一项是(2分)
   options:
     A: “健康第一”作为我国教育领域的重要理念，源于教育实践。
     B: 学校在保障青少年身体健康方面主要抓体育活动与健康饮食。
     C: 社区联合医疗机构主动走进校园，开展视力筛查等义务活动。
     D: 公共体育场馆免费或低收费为青少年提供校外体育锻炼空间。
-  answer: ''
+  answer: C
   solution: ''
-  knowledge_points: &id031
+  knowledge_points:
   - 信息筛选
   module: reading
   difficulty: 中等
-  recommended_for: &id032
+  recommended_for:
   - L1
   - L2
   - L3
@@ -419,7 +425,7 @@ questions:
   qc_note: ''
   passage_id: modern_intro
 - id: 17
-  type: 现代文阅读
+  type: 单选
   score: 2
   stem: 根据材料二，在文段结尾横线处补写相关内容。下列不恰当的一项是(2分)
   options:
@@ -427,13 +433,13 @@ questions:
     B: 学校正全方位积极落实“健康第一”的教育理念
     C: 学校正从身心两方面着手，保障青少年健康成长
     D: 学校多方宣传“健康第一”的教育理念已见成效
-  answer: ''
+  answer: D
   solution: ''
-  knowledge_points: &id033
+  knowledge_points:
   - 信息筛选
   module: reading
   difficulty: 中等
-  recommended_for: &id034
+  recommended_for:
   - L1
   - L2
   - L3
@@ -442,7 +448,7 @@ questions:
   passage_id: modern_intro
 - id: 18
   type: 现代文阅读
-  score: 2
+  score: 3
   stem: "从上述三则材料可以看出，我国正通过<u> ① </u>、<u>  ②  </u>、<u> ③  </u>的举措，促进青少年健康成长。(每空8个字以内)(3分)\n\n(二)阅读《修表匠》,完成19-22题。(共11分)\n\n\
     修表匠\n\n①胡同深处，一间不足十平米的修表铺静静伫立。斑驳的木门刻满岁月痕迹，那块褪色的“老李修表”招牌沉淀着旧日时光。<u>这间小小的修表铺在尘世喧嚣中沉静安然，如磐石一般</u>，任凭商业<u>浪潮冲刷，始终守着自己的本色，也见证了老李四十年的坚守。\
     \ </u>\n\n②老李今年五十八，干修表这行整整四十年了。从师傅手中接下这间铺子时，他还是眉眼清亮的毛头小子，如今已年近花甲、脊背微驼。右眼眶常年嵌着的修表寸镜，在午后阳光下闪过柔和的光。工作台上铺着磨得发亮的绒布，镊子、改锥整齐排列。锃亮的铁盒子里，装着五十年攒下的细小零件，每一件都被他擦拭得干干净净。\n\
@@ -453,13 +459,17 @@ questions:
     \n⑨寒来暑往，四季轮回。微风吹过胡同，行人来来往往，老李依然坐在无影灯下，始终守着方寸工作台，动作依旧从容，神情依旧专注。他只管沉下心做好手中的活计，不敷衍，不将就。唯有钟表的滴答声，仿佛在一遍遍诉说着那句朴素的承诺——时间在里头走，你得对得起它。\n\
     \n注：①[退火]一种金属热处理工艺。"
   answer: ''
-  solution: ''
-  knowledge_points: &id035
+  solution: '①出台相关政策
+
+    ②学校全面落实
+
+    ③社会多方助力'
+  knowledge_points:
   - 信息提取
   - 段落梳理
   module: reading
   difficulty: 中等
-  recommended_for: &id036
+  recommended_for:
   - L1
   - L2
   - L3
@@ -471,13 +481,15 @@ questions:
   score: 5
   stem: 文章以胡同深处的修表铺为背景，重点叙写了修表匠老李的三次修表经历<u>：①</u>；用心拆洗调休，为张奶奶修复老伴留下的手表；  <u>② </u>。这些经历不仅勾勒出老李的匠人形象，也层层递进地深化了文章的主旨。(2分)
   answer: ''
-  solution: ''
-  knowledge_points: &id037
+  solution: '①亲手锻造发条，用心修复老旧手表
+
+    ②一丝不苟调校齿轮，认真修理年轻人临时佩戴的进口手表'
+  knowledge_points:
   - 信息提取/段落梳理
   - 记叙文阅读
   module: reading
   difficulty: 中等
-  recommended_for: &id038
+  recommended_for:
   - L1
   - L2
   - L3
@@ -489,12 +501,12 @@ questions:
   score: 2
   stem: 阅读文章，请你分析第①段画线句的表达效果。(3分)
   answer: ''
-  solution: ''
-  knowledge_points: &id039
+  solution: 运用比喻的修辞手法，把修表铺比作磐石，生动形象地写出修表铺在时代潮流中安稳不变的状态，既烘托出铺子沉静的氛围，也体现出老李数十年坚守本心、不改初心的可贵品质，奠定全文温情沉稳的基调。
+  knowledge_points:
   - 表达效果
   module: reading
   difficulty: 中等
-  recommended_for: &id040
+  recommended_for:
   - L1
   - L2
   - L3
@@ -506,12 +518,12 @@ questions:
   score: 2
   stem: 阅读第④段画线句，结合内容分析此处环境描写的作用。(3分)
   answer: ''
-  solution: ''
-  knowledge_points: &id041
+  solution: 描写了室外光影变化、人声与鸟鸣交织的热闹环境，以外界的喧闹反衬室内老李修表时的专心致志、心无旁骛，突出他做事细致认真、专注敬业的匠人品格。
+  knowledge_points:
   - 段落作用
   module: reading
   difficulty: 中等
-  recommended_for: &id042
+  recommended_for:
   - L1
   - L2
   - L3
@@ -528,40 +540,40 @@ questions:
     \n⑥在更大的舞台历练，在攻坚克难中锤炼，也是青年提升韧性，增强抗压能力的有效方式。这几年，一些青年走出自己的一方天地，有的前往西部支教，在帕米尔高原砥砺成长；有的成为一名社工，在解决群众所需、所盼及复杂问题中长本领、增韧性。实践证明，把小我融入大我，在“急、难、险、重、新”中经受摔打，成长的步履会更加坚定从容，韧性更强，后劲更足。\n\
     \n⑦青年有韧性，社会有力量。秉持韧性，遇到困难不退缩，面对变化能适应，拥抱机遇和创新，去大胆探索，去勇敢逐梦，才能书写属于自己的精彩人生。\n\n(取材于《人民日报》)"
   answer: ''
-  solution: ''
-  knowledge_points: &id043
+  solution: 这句话表层指修表要精工细作、严谨细致，用心修好每一块表，保证计时精准；深层是老李的人生信条，手表承载着人们的回忆与情感，修表不仅是修缮物件，更是尊重时光、敬畏他人的过往与心意，做人做事都要秉持真诚、负责、不敷衍的态度，坚守本心与底线。
+  knowledge_points:
   - 命题作文
   module: writing
   difficulty: 能力
-  recommended_for: &id044
+  recommended_for:
   - L2
   - L3
   qc_status: draft
   qc_note: ''
   passage_id: modern_intro
 - id: 23
-  type: 现代文阅读
-  score: 4
+  type: 单选
+  score: 2
   stem: 根据全文内容所表达的主要观点，给文章拟写标题，最恰当的一项是(2分)
   options:
     A: 韧性可锤炼青年抗压力
     B: 韧性乃青年生存的智慧
     C: 青年当凭韧性安身破局
     D: 历经磨砺方显青年韧性
-  answer: ''
+  answer: C
   solution: ''
-  knowledge_points: &id045
+  knowledge_points:
   - 命题作文
   module: writing
   difficulty: 能力
-  recommended_for: &id046
+  recommended_for:
   - L2
   - L3
   qc_status: draft
   qc_note: ''
   passage_id: modern_intro
 - id: 24
-  type: 现代文阅读
+  type: 单选
   score: 2
   stem: 下列分析，不恰当的一项是(2分)
   options:
@@ -569,13 +581,13 @@ questions:
     B: 第④段举汪小楠的例子，证明韧性是将挑战转化为机遇的行动力。
     C: 第⑤段举青年的例子，证明了青年人处在机遇与挑战并存的时代。
     D: 第⑥段举一些青年例子，证明了历练可提升青年韧性与抗压能力。
-  answer: ''
+  answer: C
   solution: ''
-  knowledge_points: &id047
+  knowledge_points:
   - 命题作文
   module: writing
   difficulty: 能力
-  recommended_for: &id048
+  recommended_for:
   - L2
   - L3
   qc_status: draft
@@ -583,15 +595,15 @@ questions:
   passage_id: modern_intro
 - id: 25
   type: 现代文阅读
-  score: 2
+  score: 4
   stem: 阅读文章，写出第③段的行文思路。(4分)
   answer: ''
-  solution: ''
-  knowledge_points: &id049
+  solution: 首先点明韧性是青年拒绝内耗、灵活调适的生存智慧，接着解释韧性本义并说明其具体内涵，点明灵活调整是当下年轻人的处事方式，再列举不同青年应对压力的做法，最后总结韧性是青年稳步前行的坚实支撑。
+  knowledge_points:
   - 命题作文
   module: writing
   difficulty: 中等
-  recommended_for: &id050
+  recommended_for:
   - L1
   - L2
   - L3
@@ -601,365 +613,24 @@ questions:
 - id: 26
   type: 作文
   score: 40
-  stem: "从下面两个题目中任选一题，按要求写一篇作文。\n\n(1)人生的许多成长与蜕变，从来不会凭空而至。有时源于眼前所见，一场偶遇触动心灵；有时源于耳畔所闻，一句良言点醒迷茫；有时源于内心所感，一瞬体悟照亮前路。正是这些平凡又不经意的瞬间，促成人生转折，开启全新征程，成为我们成长路上珍贵的契机。请以“契机”为题目写一篇文章。文体不限，诗歌除外。\n\
-    \n(2)请以“不妨慢一点”为题目，写一篇文章。文体不限，诗歌除外。\n\n要求：将作文题目写在答题卡上，作文内容积极向上，字数在600-800之间，不出现真实的学校名称、师生姓名等。\n\n                     \
-    \                          参考答案"
+  stem: '从下面两个题目中任选一题，按要求写一篇作文。
+
+
+    (1)人生的许多成长与蜕变，从来不会凭空而至。有时源于眼前所见，一场偶遇触动心灵；有时源于耳畔所闻，一句良言点醒迷茫；有时源于内心所感，一瞬体悟照亮前路。正是这些平凡又不经意的瞬间，促成人生转折，开启全新征程，成为我们成长路上珍贵的契机。请以“契机”为题目写一篇文章。文体不限，诗歌除外。
+
+
+    (2)请以“不妨慢一点”为题目，写一篇文章。文体不限，诗歌除外。
+
+
+    要求：将作文题目写在答题卡上，作文内容积极向上，字数在600-800之间，不出现真实的学校名称、师生姓名等。'
   answer: ''
-  solution: ''
-  knowledge_points: &id051
+  solution: 略
+  knowledge_points:
   - 命题作文
   module: writing
   difficulty: 能力
-  recommended_for: &id052
+  recommended_for:
   - L2
   - L3
-  qc_status: draft
-  qc_note: ''
-- id: 1
-  type: 作文
-  score: 0
-  stem: D
-  answer: ''
-  solution: ''
-  knowledge_points: *id001
-  module: writing
-  difficulty: 基础
-  recommended_for: *id002
-  qc_status: draft
-  qc_note: ''
-  passage_id: base_资料一
-- id: 2
-  type: 作文
-  score: 0
-  stem: C
-  answer: ''
-  solution: ''
-  knowledge_points: *id003
-  module: reading
-  difficulty: 基础
-  recommended_for: *id004
-  qc_status: draft
-  qc_note: ''
-  passage_id: base_资料二
-- id: 3
-  type: 作文
-  score: 0
-  stem: 修改：人们依据草木的特点，赋予其丰富的精神内涵。
-  answer: ''
-  solution: ''
-  knowledge_points: *id005
-  module: writing
-  difficulty: 基础
-  recommended_for: *id006
-  qc_status: draft
-  qc_note: ''
-  passage_id: base_资料二
-- id: 4
-  type: 作文
-  score: 0
-  stem: ①东晋 ②杜甫
-  answer: ''
-  solution: ''
-  knowledge_points: *id007
-  module: writing
-  difficulty: 基础
-  recommended_for: *id008
-  qc_status: draft
-  qc_note: ''
-  passage_id: base_资料三
-- id: 5
-  type: 作文
-  score: 0
-  stem: A
-  answer: ''
-  solution: ''
-  knowledge_points: *id009
-  module: reading
-  difficulty: 基础
-  recommended_for: *id010
-  qc_status: draft
-  qc_note: ''
-  passage_id: base_资料三
-- id: 6
-  type: 作文
-  score: 0
-  stem: 示例：它承载着民族的品格与气节，是精神文化的重要符号。
-  answer: ''
-  solution: ''
-  knowledge_points: *id011
-  module: writing
-  difficulty: 基础
-  recommended_for: *id012
-  qc_status: draft
-  qc_note: ''
-  passage_id: base_后记
-- id: 7
-  type: 作文
-  score: 0
-  stem: 千树万树梨花开
-  answer: ''
-  solution: ''
-  knowledge_points: *id013
-  module: classical
-  difficulty: 基础
-  recommended_for: *id014
-  qc_status: draft
-  qc_note: ''
-  passage_id: classical_intro
-- id: 8
-  type: 作文
-  score: 0
-  stem: 猿鸟乱鸣     沉鳞竞跃
-  answer: ''
-  solution: ''
-  knowledge_points: *id015
-  module: classical
-  difficulty: 基础
-  recommended_for: *id016
-  qc_status: draft
-  qc_note: ''
-  passage_id: classical_intro
-- id: 9
-  type: 作文
-  score: 0
-  stem: 示例：报君黄金台上意    提携玉龙为君死
-  answer: ''
-  solution: ''
-  knowledge_points: *id017
-  module: classical
-  difficulty: 基础
-  recommended_for: *id018
-  qc_status: draft
-  qc_note: ''
-  passage_id: classical_intro
-- id: 10
-  type: 作文
-  score: 0
-  stem: '①古人和来者
-
-    ②苍凉雄浑、孤寂悲凉'
-  answer: ''
-  solution: ''
-  knowledge_points: *id019
-  module: classical
-  difficulty: 中等
-  recommended_for: *id020
-  qc_status: draft
-  qc_note: ''
-  passage_id: classical_intro
-- id: 11
-  type: 作文
-  score: 40
-  stem: “悠悠”写出天地广阔无垠、时光绵延无尽的特点；“独”写出诗人孤身一人、无人理解的状态。宏大永恒的天地与孤单渺小的自我形成鲜明对比，抒发了诗人怀才不遇、壮志难酬的悲愤，以及孤独寂寞、知音难觅的惆怅之情。
-  answer: ''
-  solution: ''
-  knowledge_points: *id021
-  module: classical
-  difficulty: 中等
-  recommended_for: *id022
-  qc_status: draft
-  qc_note: ''
-  passage_id: classical_intro
-- id: 12
-  type: 作文
-  score: 0
-  stem: C
-  answer: ''
-  solution: ''
-  knowledge_points: *id023
-  module: classical
-  difficulty: 基础
-  recommended_for: *id024
-  qc_status: draft
-  qc_note: ''
-  passage_id: classical_intro
-- id: 13
-  type: 作文
-  score: 0
-  stem: B
-  answer: ''
-  solution: ''
-  knowledge_points: *id025
-  module: writing
-  difficulty: 能力
-  recommended_for: *id026
-  qc_status: draft
-  qc_note: ''
-  passage_id: classical_intro
-- id: 14
-  type: 作文
-  score: 0
-  stem: ①广开言路，修明政治 ②出裘发粟以与饥寒者 ③善于纳谏、知错能改
-  answer: ''
-  solution: ''
-  knowledge_points: *id027
-  module: classical
-  difficulty: 中等
-  recommended_for: *id028
-  qc_status: draft
-  qc_note: ''
-  passage_id: classical_intro
-- id: 15
-  type: 作文
-  score: 0
-  stem: '示例一：《钢铁是怎样炼成的》。小说通过保尔的成长情节推进展现人物、揭示主题。从少年反抗压迫，到战场浴血奋战，再到病痛缠身仍坚持创作，情节层层递进，凸显保尔顽强不屈、无私奉献的性格，揭示了人要在磨难中坚守理想、实现人生价值的主题。
-
-    示例二：《骆驼祥子》。祥子从勤劳上进的青年，到买车三起三落，再到小福子死后彻底堕落。情节一步步推进，展现他从坚韧淳朴到麻木自私的性格变化，揭露旧社会对底层劳动者的压迫，批判黑暗社会摧残人性的主题。
-
-    示例三：《西游记》。师徒四人历经九九八十一难，情节不断推进。取经路上，悟空嫉恶如仇、唐僧坚定执着的性格愈发鲜明，最终修成正果，体现不畏艰险、坚守初心终能成功的主题。'
-  answer: ''
-  solution: ''
-  knowledge_points: *id029
-  module: reading
-  difficulty: 中等
-  recommended_for: *id030
-  qc_status: draft
-  qc_note: ''
-- id: 16
-  type: 作文
-  score: 0
-  stem: C
-  answer: ''
-  solution: ''
-  knowledge_points: *id031
-  module: reading
-  difficulty: 中等
-  recommended_for: *id032
-  qc_status: draft
-  qc_note: ''
-  passage_id: modern_intro
-- id: 17
-  type: 作文
-  score: 0
-  stem: D
-  answer: ''
-  solution: ''
-  knowledge_points: *id033
-  module: reading
-  difficulty: 中等
-  recommended_for: *id034
-  qc_status: draft
-  qc_note: ''
-  passage_id: modern_intro
-- id: 18
-  type: 作文
-  score: 0
-  stem: '①出台相关政策
-
-    ②学校全面落实
-
-    ③社会多方助力'
-  answer: ''
-  solution: ''
-  knowledge_points: *id035
-  module: reading
-  difficulty: 中等
-  recommended_for: *id036
-  qc_status: draft
-  qc_note: ''
-  passage_id: modern_intro
-- id: 19
-  type: 作文
-  score: 0
-  stem: '①亲手锻造发条，用心修复老旧手表
-
-    ②一丝不苟调校齿轮，认真修理年轻人临时佩戴的进口手表'
-  answer: ''
-  solution: ''
-  knowledge_points: *id037
-  module: reading
-  difficulty: 中等
-  recommended_for: *id038
-  qc_status: draft
-  qc_note: ''
-  passage_id: modern_intro
-- id: 20
-  type: 作文
-  score: 0
-  stem: 运用比喻的修辞手法，把修表铺比作磐石，生动形象地写出修表铺在时代潮流中安稳不变的状态，既烘托出铺子沉静的氛围，也体现出老李数十年坚守本心、不改初心的可贵品质，奠定全文温情沉稳的基调。
-  answer: ''
-  solution: ''
-  knowledge_points: *id039
-  module: reading
-  difficulty: 中等
-  recommended_for: *id040
-  qc_status: draft
-  qc_note: ''
-  passage_id: modern_intro
-- id: 21
-  type: 作文
-  score: 0
-  stem: 描写了室外光影变化、人声与鸟鸣交织的热闹环境，以外界的喧闹反衬室内老李修表时的专心致志、心无旁骛，突出他做事细致认真、专注敬业的匠人品格。
-  answer: ''
-  solution: ''
-  knowledge_points: *id041
-  module: reading
-  difficulty: 中等
-  recommended_for: *id042
-  qc_status: draft
-  qc_note: ''
-  passage_id: modern_intro
-- id: 22
-  type: 作文
-  score: 0
-  stem: 这句话表层指修表要精工细作、严谨细致，用心修好每一块表，保证计时精准；深层是老李的人生信条，手表承载着人们的回忆与情感，修表不仅是修缮物件，更是尊重时光、敬畏他人的过往与心意，做人做事都要秉持真诚、负责、不敷衍的态度，坚守本心与底线。
-  answer: ''
-  solution: ''
-  knowledge_points: *id043
-  module: writing
-  difficulty: 能力
-  recommended_for: *id044
-  qc_status: draft
-  qc_note: ''
-  passage_id: modern_intro
-- id: 23
-  type: 作文
-  score: 0
-  stem: C
-  answer: ''
-  solution: ''
-  knowledge_points: *id045
-  module: writing
-  difficulty: 能力
-  recommended_for: *id046
-  qc_status: draft
-  qc_note: ''
-  passage_id: modern_intro
-- id: 24
-  type: 作文
-  score: 0
-  stem: C
-  answer: ''
-  solution: ''
-  knowledge_points: *id047
-  module: writing
-  difficulty: 能力
-  recommended_for: *id048
-  qc_status: draft
-  qc_note: ''
-  passage_id: modern_intro
-- id: 25
-  type: 作文
-  score: 0
-  stem: 首先点明韧性是青年拒绝内耗、灵活调适的生存智慧，接着解释韧性本义并说明其具体内涵，点明灵活调整是当下年轻人的处事方式，再列举不同青年应对压力的做法，最后总结韧性是青年稳步前行的坚实支撑。
-  answer: ''
-  solution: ''
-  knowledge_points: *id049
-  module: writing
-  difficulty: 中等
-  recommended_for: *id050
-  qc_status: draft
-  qc_note: ''
-  passage_id: modern_intro
-- id: 26
-  type: 作文
-  score: 0
-  stem: 略
-  answer: ''
-  solution: ''
-  knowledge_points: *id051
-  module: writing
-  difficulty: 能力
-  recommended_for: *id052
   qc_status: draft
   qc_note: ''

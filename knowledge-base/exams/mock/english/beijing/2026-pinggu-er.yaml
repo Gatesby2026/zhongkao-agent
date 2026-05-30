@@ -2,16 +2,16 @@
 # 2026年北京平谷区二模english — 自动生成
 # ============================================================
 # OCR: Qwen-VL-OCR  Enrich: qwen-max
-# QC: draft=23  needs_review=12
+# QC: draft=26  needs_review=12
 
 year: 2026
 district: 平谷区
 exam_type: 二模
 subject: english
-full_score: 54.0
+full_score: 60.0
 duration_minutes: 90
-total_questions: 35
-structure: 12单选(6.0分) + 8cloze(8分) + 10reading(20分) + 4reading_express(10分) + 1作文(10分)
+total_questions: 38
+structure: 12单选(6.0分) + 8cloze(8分) + 13reading(26分) + 4reading_express(10分) + 1作文(10分)
 passages:
 - id: choice_intro
   type: choice
@@ -58,22 +58,9 @@ passages:
   type: reading
   name: A
   q_range:
-  - 24
-  - 26
-  body: '![](figures/image2.png)
-
-    | 21. ___________ | ![](figures/image3.png) | I think AI makes our daily life easier. For example, I use a smart speaker
-    to control the lights and play music simply with my voice. |
-
-    |---|---|---|
-
-    | 22. ___________ | ![](figures/image4.png) | That’s true. For studying, AI helps me a lot too. AI can help us practice
-    spoken English, and I also use it to check my writing and correct grammar mistakes, which saves me a lot of time. |
-
-    | 23. ___________ | ![](figures/image5.png) | Yes! When I don’t understand a math problem, I can take a photo and the
-    AI app shows me the steps to solve it. I think although AI can do a lot, we should use it wisely. |
-
-    （二）阅读下列短文，根据短文内容，从短文后各题所给的A、B、C、D四个选项中，选择最佳选项。'
+  - 21
+  - 23
+  body: '![](figures/image2.png)'
   figure: 2026-pinggu-er/figures/image2.png
 - id: reading_B
   type: reading
@@ -708,6 +695,67 @@ questions:
   qc_status: draft
   qc_note: ''
   passage_id: cloze_intro
+- id: 21
+  type: reading
+  score: 2
+  stem: '___________ | ![](figures/image3.png) | I think AI makes our daily life easier. For example, I use a smart speaker
+    to control the lights and play music simply with my voice. |
+
+    |---|---|---|'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 信息提取/段落梳理
+  module: reading
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+  passage_id: reading_A
+- id: 22
+  type: reading
+  score: 2
+  stem: ___________ | ![](figures/image4.png) | That’s true. For studying, AI helps me a lot too. AI can help us practice
+    spoken English, and I also use it to check my writing and correct grammar mistakes, which saves me a lot of time. |
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 信息提取/段落梳理
+  module: reading
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+  passage_id: reading_A
+- id: 23
+  type: reading
+  score: 2
+  stem: '___________ | ![](figures/image5.png) | Yes! When I don’t understand a math problem, I can take a photo and the AI
+    app shows me the steps to solve it. I think although AI can do a lot, we should use it wisely. |
+
+
+    （二）阅读下列短文，根据短文内容，从短文后各题所给的A、B、C、D四个选项中，选择最佳选项。'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 信息提取/段落梳理
+  module: reading
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+  passage_id: reading_A
 - id: 24
   type: reading
   score: 2
@@ -730,7 +778,7 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: reading_A
+  passage_id: reading_B
 - id: 25
   type: reading
   score: 2
@@ -753,7 +801,7 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: reading_A
+  passage_id: reading_B
 - id: 26
   type: reading
   score: 2
@@ -775,7 +823,7 @@ questions:
   - L3
   qc_status: draft
   qc_note: ''
-  passage_id: reading_A
+  passage_id: reading_B
 - id: 27
   type: reading
   score: 2

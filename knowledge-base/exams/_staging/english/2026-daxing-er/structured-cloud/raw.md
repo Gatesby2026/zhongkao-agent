@@ -95,6 +95,8 @@ When the bell rang, she closed her notebook <u>   15   </u>, as if the erased sc
 
 Maya thought of a dozen words: SMART, COOL, FUNNY… But when she remembered her erased test score, the word TRUST came to her mind. She picked up her tool and began to carve (雕刻). The first letter came out terrible. She <u>   16   </u> it and tried again.
 
+![](figures/image2.jpeg)
+
 Mr. Rami tapped a small bell. “Artists, one more thing. Clay is honest. If you press too hard, it shows. If you rush, it cracks (裂开). That’s not bad—it’s just <u>   17   </u> You can always make it smooth again, but it helps to know what you did.”
 
 Maya looked at her half-carved word. Clay is honest. The sentence landed in her mind and stayed there. Slowly she finished the carving: TRUST.
@@ -125,18 +127,18 @@ When Maya got home, she asked her mom, “Could you help me make a plan for math
 
 （一）以下是某自然博物馆的楼层导览图。请根据三位学生的需求，为他们指引应去的楼层，并将楼层所对应的A、B、C、D选项填在相应位置上，其中一个选项为多余选项。
 
-| Natural History Museum Floor Guide — B1 to L3 |
+| ![](figures/image3.png) Natural History Museum Floor Guide — B1 to L3 |
 |---|---|---|
-| A | L3 | Birds Insects  Kids workshop 15:00 · Butterfly garden   Drawing corner · Bird sound listening room |
-| B | L2 | Ocean World  Last show 16:30 · Big whale model   VR deep sea · 4D ocean movie |
-| C | L1 | Forest Area  Wi-Fi at front desk · Animal models and plants   Wheelchair friendly · Touchscreen games |
-| D | B1 | Fossil Dig Zone  Open until 17:00 · Fossil digging activity   Free guide · Dinosaur bone models |
+| A | L3 | ![](figures/image4.png) Birds Insects ![](figures/image5.png) Kids workshop 15:00 · Butterfly garden ![](figures/image6.png) ![](figures/image7.png) Drawing corner · Bird sound listening room ![](figures/image8.png) |
+| B | L2 | ![](figures/image9.png) Ocean World ![](figures/image5.png) Last show 16:30 · Big whale model ![](figures/image10.png) ![](figures/image11.png) VR deep sea · 4D ocean movie ![](figures/image12.png) |
+| C | L1 | ![](figures/image13.png) Forest Area ![](figures/image5.png) Wi-Fi at front desk · Animal models and plants ![](figures/image14.png) ![](figures/image15.png) Wheelchair friendly · Touchscreen games ![](figures/image16.png) |
+| D | B1 | ![](figures/image17.png)Fossil Dig Zone ![](figures/image5.png) Open until 17:00 · Fossil digging activity ![](figures/image18.png) ![](figures/image19.png) Free guide · Dinosaur bone models ![](figures/image20.png) |
 | ※ Information desk on each floor ※ Please do not touch exhibits (except hands-on areas) |
 
-| 21. | Lily | I like beautiful butterflies with bright and colorful wings. I also love natural sounds like the singing of birds and the calls of insects around us. |
+| 21. | ![](figures/image21.png) Lily | I like beautiful butterflies with bright and colorful wings. I also love natural sounds like the singing of birds and the calls of insects around us. |
 |---|---|---|
-| 22. | Tom | I am deeply fond of whales and various sea creatures. I feel like watching a documentary that shows the amazing life living in the ocean. |
-| 23. | Bob | I have a strong interest in dinosaurs. I really wish to take part in an interesting activity to dig out ancient dinosaur bones buried deep underground. |
+| 22. | ![](figures/image22.png) Tom | I am deeply fond of whales and various sea creatures. I feel like watching a documentary that shows the amazing life living in the ocean. |
+| 23. | ![](figures/image23.png) Bob | I have a strong interest in dinosaurs. I really wish to take part in an interesting activity to dig out ancient dinosaur bones buried deep underground. |
 
 （二）阅读下列短文，根据短文内容，从短文后各题所给的A、B、C、D四个选项中，选出最佳选项。
 
@@ -147,6 +149,8 @@ Opposite Day
 Sammy checked his calendar. “Yes!” he cried, jumping out of bed. “I mean NO! It’s Opposite Day!” 
 
 He put his shirt on inside out and walked backward down the hall. In the kitchen, he said to his mom, “Good night. Have a bad day at work!” When Dad offered pancakes, Sammy held out his plate and said, “No, thanks. They look terrible.” His parents looked confused, but Sammy just said, “Opposite Day!”
+
+![](figures/image24.jpeg)
 
 At school, kids entered through the door marked “EXIT”. In the classroom, they stood at their desks instead of sitting down. During math, they added when the sign said to subtract and subtracted when the sign said to add. “What is going on here?” cried Ms. Trix, their teacher. “It’s Opposite Day!” said the class. “That’s right,” Ms. Trix said. “In that case, there’s no homework tonight.” The kids cheered before remembering what day it was. Then Ms. Trix wrote their homework on the blackboard.
 
@@ -185,6 +189,8 @@ Whether you are a “lark” who wakes up early full of energy, or a “night ow
 But how do you know if you are a morning or evening person? Here is a simple test. After a long holiday over two weeks, do you still feel tired and hard to get up every morning? If yes, you are probably a night owl. Otherwise, you may be a lark. “A longer holiday gives us time to relax, catch up on sleep and return to natural sleep and wake times, so it can tell us a lot about our natural sleep-wake habits.” Dr Jeffrey Kelu says.
 
 If you are someone who wakes at 6 am ready to run, the best exercise time is between 7 am and 8 am. A study shows morning exercisers were 30 percent less likely to have type 2 diabetes (糖尿病) and 31 percent less likely to have heart disease. Besides doing morning workouts, early risers are also advised to add small strength training at home in the evening, like chair squats and leg moves.
+
+![](figures/image25.jpeg)
 
 Owls can save strength training for the evening because most sports science studies suggest that muscle performance peaks (达到高峰) in the afternoon or evening. However, evening types should still spend a little time outdoors in the morning. A short walk of just a few minutes can fix their body clock and keep their daily sleep routine regular.
 

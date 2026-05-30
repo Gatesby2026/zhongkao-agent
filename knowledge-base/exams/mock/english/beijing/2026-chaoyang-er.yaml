@@ -11,7 +11,7 @@ subject: english
 full_score: 60.0
 duration_minutes: 90
 total_questions: 39
-structure: 22单选(26.0分) + 8cloze(8分) + 3reading(6分) + 4reading_express(10分) + 2作文(10分)
+structure: 12单选(6.0分) + 8cloze(8分) + 13reading(26分) + 4reading_express(10分) + 2作文(10分)
 passages:
 - id: choice_intro
   type: choice
@@ -782,7 +782,7 @@ questions:
   qc_note: ''
   passage_id: reading_A
 - id: 24
-  type: 单选
+  type: reading
   score: 2
   stem: '阅读下文，回答下列问题（24-26）：
 
@@ -821,7 +821,7 @@ questions:
   qc_note: ''
   passage_id: reading_B
 - id: 25
-  type: 单选
+  type: reading
   score: 2
   stem: Why did Lisa "lose" the running race at last?
   options:
@@ -845,7 +845,7 @@ questions:
   qc_note: ''
   passage_id: reading_B
 - id: 26
-  type: 单选
+  type: reading
   score: 2
   stem: According to the passage, the writer hopes to ___.
   options:
@@ -868,7 +868,7 @@ questions:
   qc_note: ''
   passage_id: reading_B
 - id: 27
-  type: 单选
+  type: reading
   score: 2
   stem: '阅读下文，回答下列问题（27-29）：
 
@@ -907,7 +907,7 @@ questions:
   qc_note: ''
   passage_id: reading_C
 - id: 28
-  type: 单选
+  type: reading
   score: 2
   stem: What does the word "facilitate" in Paragraph 5 most probably mean?
   options:
@@ -931,7 +931,7 @@ questions:
   qc_note: ''
   passage_id: reading_C
 - id: 29
-  type: 单选
+  type: reading
   score: 2
   stem: Which of the following is the best title for the passage?
   options:
@@ -954,7 +954,7 @@ questions:
   qc_note: ''
   passage_id: reading_C
 - id: 30
-  type: 单选
+  type: reading
   score: 2
   stem: '阅读下文，回答下列问题（30-33）：
 
@@ -995,7 +995,7 @@ questions:
   qc_note: ''
   passage_id: reading_D
 - id: 31
-  type: 单选
+  type: reading
   score: 2
   stem: What can we learn from the study of monkeys' facial expressions?
   options:
@@ -1019,7 +1019,7 @@ questions:
   qc_note: ''
   passage_id: reading_D
 - id: 32
-  type: 单选
+  type: reading
   score: 2
   stem: What is the main idea of Paragraph 4?
   options:
@@ -1041,7 +1041,7 @@ questions:
   qc_note: ''
   passage_id: reading_D
 - id: 33
-  type: 单选
+  type: reading
   score: 2
   stem: What is the writer's main purpose in writing the passage?
   options:
