@@ -8,10 +8,10 @@ year: 2026
 district: 朝阳区
 exam_type: 二模
 subject: chinese
-full_score: 99.0
+full_score: 100.0
 duration_minutes: 150
 total_questions: 27
-structure: 1书写(1分) + 11主观填空(21.0分) + 2古诗内容理解(5分) + 1古诗赏析(2分) + 1名著阅读(5分) + 2单选(5分) + 8现代文阅读(20分) + 1作文(40分)
+structure: 1书写(2分) + 11主观填空(20.0分) + 2古诗内容理解(5分) + 1古诗赏析(3分) + 1名著阅读(5分) + 2单选(4分) + 8现代文阅读(21分) + 1作文(40分)
 passages:
 - id: base_intro
   type: base
@@ -75,7 +75,7 @@ passages:
 questions:
 - id: 1
   type: 书写
-  score: 1
+  score: 2
   stem: 文段是对观鸟活动的描述。你从修辞的角度判断，下列·没有·使用修辞手法的一项是（2分）
   options:
     A: 第①句
@@ -98,7 +98,7 @@ questions:
   passage_id: base_intro
 - id: 2
   type: 主观填空
-  score: 3
+  score: 2
   stem: 你审核文段中的字形。根据词义判断，下列说法正确的一项是（2分）
   options:
     A: 因为表达的是“弯弯曲曲延伸的样子”，所以“蜿蜒”的“蜒”书写有误。
@@ -268,7 +268,7 @@ questions:
   passage_id: classical_intro
 - id: 10
   type: 主观填空
-  score: 1
+  score: 2
   stem: '游览名胜古迹，总有与之相关的古诗文名句涌上心头。你印象深刻的两句是“    <u>①</u>    ，    <u>②</u>    ”。（本试卷中出现的句子除外）（2分）
 
 
@@ -307,7 +307,7 @@ questions:
   passage_id: classical_intro
 - id: 11
   type: 古诗内容理解
-  score: 3
+  score: 2
   stem: '依据你的理解，在下面的横线上填写恰当的内容。（2分）
 
 
@@ -329,7 +329,7 @@ questions:
   passage_id: classical_intro
 - id: 12
   type: 古诗赏析
-  score: 2
+  score: 3
   stem: '画线诗句对仗工整，展现了风俗之美。结合具体内容，分析这一联的表达效果。（3分）
 
 
@@ -359,7 +359,7 @@ questions:
   passage_id: classical_intro
 - id: 13
   type: 主观填空
-  score: 3
+  score: 2
   stem: “·晓·雾将歇”中的“晓”，与下列词句中的“晓”，意思相同的一项是（2分）
   options:
     A: ·晓·畅军事
@@ -404,7 +404,7 @@ questions:
   passage_id: classical_intro
 - id: 15
   type: 古诗内容理解
-  score: 2
+  score: 3
   stem: '根据《答谢中书书》及下面两则材料，在后面语段中的横线上填写恰当的内容。（3分）
 
 
@@ -463,7 +463,7 @@ questions:
   qc_note: ''
 - id: 17
   type: 单选
-  score: 3
+  score: 2
   stem: '根据材料一的文字内容和表1的信息，在横线处补写一句话。下列恰当的一项是（2分）
 
 
@@ -516,7 +516,7 @@ questions:
   passage_id: modern_intro
 - id: 19
   type: 现代文阅读
-  score: 2
+  score: 3
   stem: 从上述三则材料可以看出，建设美丽中国的重要举措有①___，②___，③___。(3分)
   answer: ''
   solution: ''
@@ -534,7 +534,7 @@ questions:
   passage_id: modern_intro
 - id: 20
   type: 现代文阅读
-  score: 5
+  score: 2
   stem: 文章主要记叙了“我”带儿子回故乡的经历。因为   <u>①</u>   ，“我”带儿子回故乡；初到故乡，  <u> ②</u>   ；随着儿子沉浸式感受故乡，他与隔壁男孩结下情谊；离开故乡时，隔壁男孩为儿子放炮仗。（2分）
   answer: ''
   solution: ''
@@ -570,7 +570,7 @@ questions:
   passage_id: modern_intro
 - id: 22
   type: 现代文阅读
-  score: 2
+  score: 3
   stem: 文中动词的运用生动传神。请从三处画线句中任选一句，结合内容，简要分析加点词的表达效果。（3分）
   answer: ''
   solution: ''
@@ -589,7 +589,7 @@ questions:
   passage_id: modern_intro
 - id: 23
   type: 现代文阅读
-  score: 2
+  score: 4
   stem: '文章结尾写道：“砰——声音之大，飞驰的高铁都抖了一下。”结合文章内容，说说你从中读出了什么。（4分）
 
 
@@ -633,7 +633,7 @@ questions:
   passage_id: modern_intro
 - id: 24
   type: 现代文阅读
-  score: 3
+  score: 2
   stem: 文章启示我们：因为   <u>① </u>  ，所以阅读文学作品时，我们要   <u>②</u>   。（2分）
   answer: ''
   solution: ''
@@ -650,7 +650,7 @@ questions:
   passage_id: modern_intro
 - id: 25
   type: 现代文阅读
-  score: 2
+  score: 3
   stem: 简要分析第④段的画线句是如何推进本文论证的。(3分)
   answer: ''
   solution: ''

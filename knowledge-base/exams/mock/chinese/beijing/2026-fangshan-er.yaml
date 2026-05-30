@@ -8,10 +8,10 @@ year: 2026
 district: 房山区
 exam_type: 二模
 subject: chinese
-full_score: 102
+full_score: 100
 duration_minutes: 150
 total_questions: 25
-structure: 1书写(2分) + 10主观填空(23分) + 1古诗赏析(4分) + 1古诗内容理解(2分) + 1名著阅读(5分) + 10现代文阅读(26分) + 1作文(40分)
+structure: 1书写(2分) + 10主观填空(22分) + 1古诗赏析(4分) + 1古诗内容理解(2分) + 1名著阅读(5分) + 10现代文阅读(25分) + 1作文(40分)
 passages:
 - id: base_intro
   type: base
@@ -81,7 +81,7 @@ questions:
   passage_id: base_intro
 - id: 2
   type: 主观填空
-  score: 3
+  score: 2
   stem: 你审核手记中标注的字音，其中读音标注不正确的一项是（2分）
   options:
     A: 生肖
@@ -522,7 +522,7 @@ questions:
   passage_id: modern_intro
 - id: 18
   type: 现代文阅读
-  score: 5
+  score: 2
   stem: 文章描摹了窗前洋槐四季不同的生命姿态：春日嫩芽隐绿、花香馥郁，让人陶醉；夏日①  ，让人感动；秋日树叶金黄、落叶洒脱，让人②  ；冬日疏枝挺拔、素裹银装，让人沉思。（2分）
   answer: ''
   solution: ''
@@ -539,7 +539,7 @@ questions:
   passage_id: modern_intro
 - id: 19
   type: 现代文阅读
-  score: 2
+  score: 3
   stem: 从文中【甲】【乙】两处画线句中任选一处，从词语运用或修辞手法的角度分析其表达效果。（3分）
   answer: ''
   solution: ''
@@ -576,7 +576,7 @@ questions:
   passage_id: modern_intro
 - id: 21
   type: 现代文阅读
-  score: 2
+  score: 3
   stem: '作者借洋槐四季的生命姿态寄寓了丰富的人生思考。请你就其中任意一点，结合自身生活，谈谈带给你的成长启示。（3分）
 
 

@@ -408,6 +408,10 @@ def split_by_questions(md: str) -> tuple[list[dict], list[dict]]:
     mode = "stem"                 # stem | answer
     in_answer_page = False        # 见过"参考答案"标题后，不再 create 新题
     last_q_seen = 0
+    # 答案页内容缓冲（fengtai 评分参考模板：选择题表 + "9．X 10．Y ..." 一行多题 + "N．解：...N 分"）
+    # 见 _is_answer_page_title 触发后所有行进这里，主管道不创建 Q29 phantom；
+    # 末尾由 _parse_answer_page_block 抽答案合并回 answers
+    answer_page_buf: list[str] = []
 
     def _flush():
         """把 cur 落到 questions + answers。"""
@@ -469,11 +473,14 @@ def split_by_questions(md: str) -> tuple[list[dict], list[dict]]:
             in_answer_page = True
             continue
 
-        # ─── 4. 答案页模式：把内容当 answer block 累积到对应题
-        #     由于答案页解析复杂（fengtai 类表格答案、yanshan 类 N. 段）已被
-        #     P0-1 解析版优先策略覆盖（解析版同 docx 已带 inline marker），
-        #     这里**直接 drop** 答案页内容（避免 fengtai 把 28． 当 Q29）。
+        # ─── 4. 答案页模式：累积到 answer_page_buf，主管道不创建新题
+        #     fengtai/chaoyang/pinggu「评分参考」模板：
+        #       - "| 题号 | 1..8 | / | 答案 | A..X |" 选择题横表
+        #       - "9．X     10．Y    11．Z..." 一行多题填空
+        #       - "N．解：...N 分..." 主观题逐题
+        #     主管道 drop 行避免 28． 被当 Q29，末尾走 _parse_answer_page_block
         if in_answer_page:
+            answer_page_buf.append(line)
             continue
 
         # ─── 5. marker 触发 mode 切换 ─────────────────────────────
@@ -562,7 +569,151 @@ def split_by_questions(md: str) -> tuple[list[dict], list[dict]]:
     if cur and cur.get("number"):
         _flush()
 
+    # 答案页缓冲解析：把 in_answer_page 期间累积的内容拆成 per-Q answer/sol，
+    # 合并回 answers（仅补已存在的题，不创建新题号 → 不会引入 Q29 phantom）
+    if answer_page_buf:
+        ap_map = _parse_answer_page_block(answer_page_buf)
+        existing_qnums = {a["number"] for a in answers}
+        for n, info in ap_map.items():
+            if n not in existing_qnums:
+                continue  # 只补已存在题；防 Q29 phantom
+            # 找对应 answer entry
+            for a in answers:
+                if a["number"] != n: continue
+                # correct 字段：只补缺
+                if not a.get("correct") and info.get("correct"):
+                    a["correct"] = info["correct"]
+                # solution 字段：只补缺（已有则保留主管道版本）
+                if (not a.get("solution") or a.get("solution") == a.get("correct")) \
+                   and info.get("solution"):
+                    a["solution"] = info["solution"]
+                break
+
     return questions, answers
+
+
+# ─── 答案页解析 (评分参考模板：fengtai/chaoyang/pinggu) ───────────────────
+
+_AP_CHOICE_HDR_RE = re.compile(r"^\|\s*题号\s*\|")
+_AP_CHOICE_ANS_RE = re.compile(r"^\|\s*答案\s*\|")
+# 一行多题填空：N．content    N+1．content    ...
+# 分隔符：(a) 4+ 空格 (fengtai)；(b) "；" 后零或多空格 (pinggu)；(c) Unicode 全角空格
+# 用 lookahead 切：找下个 "<sep>(?=\d{1,2}[.、．])" 作分隔
+_AP_MULTI_FILL_SPLIT_RE = re.compile(
+    r"(?:\s{2,}|[；;]\s*)(?=\d{1,2}\s*[.、．])")
+_AP_Q_HEAD_RE = re.compile(r"^\s*(\d{1,2})\s*[.、．]\s*(.+)$")
+# "X 分" 评分点（行尾出现，可重复多个；区分末尾标记 vs 数学公式里的中文"分"）
+# 评分点常以 4+ 空格 + 数字 + 分 + 行尾 形式出现
+_AP_SCORE_TAIL_RE = re.compile(r"\s{2,}(\d+)\s*分[,，。.]?\s*$")
+
+
+def _parse_answer_page_block(lines: list[str]) -> dict[int, dict]:
+    """从答案页缓冲行抽 {N: {correct, solution}}。
+
+    覆盖三种格式：
+      (a) 选择题横表 `| 题号 | 1..N | / | 答案 | A..X |` → correct
+      (b) 一行多题填空 "9．X     10．Y    11．>    12．3" → correct/solution
+      (c) "N．解：...    N 分..." 主观题 → solution（末尾 [A-D]+ / 数字 → correct）
+    """
+    out: dict[int, dict] = {}
+    # subjective buffer：cur_q → list[str]
+    cur_q: int | None = None
+    subj_buf: dict[int, list[str]] = {}
+
+    i = 0
+    while i < len(lines):
+        ln = lines[i].strip()
+        if not ln:
+            i += 1; continue
+        # (a) 横表答案：`| 题号 | N1..Nk |` + `| 答案 | A1..Ak |`
+        # 选择题（A-D 单/多字母）+ 填空题（公式/数字/区间，朝阳/平谷格式）
+        if _AP_CHOICE_HDR_RE.match(ln):
+            nums = [c.strip() for c in ln.strip("|").split("|") if c.strip()][1:]
+            for j in range(i+1, min(i+5, len(lines))):
+                ln2 = lines[j].strip()
+                if _AP_CHOICE_ANS_RE.match(ln2):
+                    ans_cells = [c.strip() for c in ln2.strip("|").split("|")
+                                 if c.strip()][1:]
+                    for k, n_str in enumerate(nums):
+                        if k < len(ans_cells) and n_str.isdigit():
+                            n = int(n_str)
+                            ans = ans_cells[k]
+                            if not ans: continue
+                            entry = out.setdefault(n, {})
+                            if re.fullmatch(r"[A-D]{1,4}", ans):
+                                # 选择题
+                                entry["correct"] = ans
+                            else:
+                                # 填空题（公式/数字/区间）→ correct + solution
+                                entry["correct"] = ans
+                                entry["solution"] = ans
+                    i = j + 1
+                    break
+            else:
+                i += 1
+            cur_q = None
+            continue
+        # 段标 / section header / "答案" 单字  → 不进 cur_q buf
+        if SECTION_HEAD_RE.match(ln) or ln in ("答案", "题号"):
+            cur_q = None
+            i += 1; continue
+        # (b) 一行多题填空：含 2+ 个 "N．" 锚（用 4+ 空格切）
+        # 朝阳/丰台/平谷：填空区一行写 4 道
+        parts = _AP_MULTI_FILL_SPLIT_RE.split(ln)
+        if len(parts) >= 2:
+            # 验证每段都以 "N．" 开头
+            heads = [_AP_Q_HEAD_RE.match(p) for p in parts]
+            if all(h for h in heads):
+                for h in heads:
+                    n = int(h.group(1))
+                    body = h.group(2).strip()
+                    # 去尾部分值 "（N分）"
+                    body = re.sub(r"[（\(]\s*\d+\s*分\s*[）\)]\s*$", "", body).strip()
+                    # 去尾标点 "；" / ";" / "．" / "." (一行多题填空末项)
+                    body = re.sub(r"[；;．.]+\s*$", "", body).strip()
+                    if not body: continue
+                    entry = out.setdefault(n, {})
+                    m_letter = re.match(r"^([A-D]{1,4})$", body)
+                    if m_letter:
+                        entry["correct"] = m_letter.group(1)
+                    else:
+                        # 填空答案：当作 correct（短）+ solution（同）
+                        entry["correct"] = body
+                        entry["solution"] = body
+                cur_q = None
+                i += 1; continue
+        # (c) 主观题题号锚 "N．解：..." → 进 cur_q buf
+        m = _AP_Q_HEAD_RE.match(ln)
+        if m:
+            n = int(m.group(1))
+            if 1 <= n <= 30:
+                cur_q = n
+                subj_buf.setdefault(n, []).append(m.group(2).strip())
+                i += 1; continue
+        # 续行：归 cur_q buf（仅主观题）
+        if cur_q is not None:
+            subj_buf[cur_q].append(ln)
+        i += 1
+
+    # subj_buf → solution（先把"X 分"评分点压扁，保留正文）
+    for n, buf in subj_buf.items():
+        text_lines = []
+        for l in buf:
+            # 行尾 "  N 分" 评分点去掉但保正文
+            cleaned = _AP_SCORE_TAIL_RE.sub("", l).rstrip()
+            if cleaned:
+                text_lines.append(cleaned)
+        if not text_lines: continue
+        sol = "\n".join(text_lines).strip()
+        if not sol: continue
+        entry = out.setdefault(n, {})
+        entry["solution"] = sol
+        # 末尾若是单字母 [A-D]+ → 也补到 correct（罕见）
+        last = text_lines[-1].strip()
+        m_letter = re.fullmatch(r"[A-D]{1,4}", last)
+        if m_letter and not entry.get("correct"):
+            entry["correct"] = last
+    return out
 
 
 # ─── 类型推断 ─────────────────────────────────────────────────────────────
@@ -657,6 +808,24 @@ def _pick_jiexi_docx(docx_paths: list[Path]) -> Path:
     raise FileNotFoundError("未找到 docx")
 
 
+def _pick_answer_only_docx(docx_paths: list[Path], jiexi: Path) -> Path | None:
+    """挑独立答案 docx（试卷+答案双文件格式专用）。
+    判定：jiexi 不是「解析」版（即只是试卷） + 存在含「答案」字样的兄弟 docx。
+    返回 None 时不进入双文件 merge 流程（视作单 docx）。
+
+    样例：
+      - chaoyang: 【试卷】xxx.docx + 【答案】xxx.docx
+      - pinggu:  【试卷】xxx.docx + 【答案】xxx.docx
+    """
+    if "解析" in jiexi.stem and "原卷" not in jiexi.stem:
+        return None  # 主文档是精品解析版，已含答案
+    for p in docx_paths:
+        if p == jiexi: continue
+        if "答案" in p.stem:
+            return p
+    return None
+
+
 def _unzip_to(zip_path: Path, dest: Path) -> list[Path]:
     """解压（cp437→gbk 修正），返回 docx 文件列表。"""
     dest.mkdir(parents=True, exist_ok=True)
@@ -743,15 +912,20 @@ def main():
             if p.is_dir(): shutil.rmtree(p)
 
     # ── 确定要解析的 docx：若 src 是 zip 先 unzip 选解析版 ──
+    ans_only_docx: Path | None = None
     if src.suffix.lower() == ".zip":
         unzip_dir = out_dir / "src-unzip"
         docx_paths = _unzip_to(src, unzip_dir)
         docx = _pick_jiexi_docx(docx_paths)
+        ans_only_docx = _pick_answer_only_docx(docx_paths, docx)
     elif src.suffix.lower() == ".docx":
         docx = src
     else:
         sys.exit(f"不支持的输入: {src}")
     print(f"[math_docx_paper] 用 docx: {docx.name}", flush=True)
+    if ans_only_docx:
+        print(f"[math_docx_paper] 📎 双文件模式，附加答案 docx: {ans_only_docx.name}",
+              flush=True)
 
     # ── 第 1 遍 walk：占位 OLE（_FORMULA_STATE 空 → fallback 到 WMF/PNG/[公式]）
     global _FORMULA_STATE
@@ -774,6 +948,32 @@ def main():
     # ── 第 2 遍 walk：用 cache 替换 OLE 为 $LaTeX$ ──
     # 重新 extract（避免 figures 重复拷贝；用同一 extract_dir 即可）
     md, stats = docx_to_markdown(docx, extract_dir, figures_dir)
+
+    # ── 双文件模式：抽答案 docx，把内容追加到主 md，让 split_by_questions
+    # 的 in_answer_page 分支接管（chaoyang/pinggu 评分参考模板）──
+    if ans_only_docx:
+        ans_extract_dir = out_dir / "docx-extracted-ans"
+        # 答案 docx 也单独建 OLE cache（公式题号可能不同）
+        try:
+            from docx_mtef_to_latex import extract_formulas
+            ans_cache_dir = structured / "mtef-cache-ans"
+            ans_formulas = extract_formulas(ans_only_docx, ans_cache_dir)
+            _FORMULA_STATE = {"formulas": ans_formulas, "idx": 0}
+            print(f"[math_docx_paper] 🧮 (ans) MTEF→LaTeX cache: "
+                  f"{len(ans_formulas)} 个公式", flush=True)
+        except Exception as e:
+            print(f"[math_docx_paper] ⚠ (ans) MTEF cache 失败: {e}", flush=True)
+            _FORMULA_STATE = {"formulas": [], "idx": 0}
+        ans_md, _ans_stats = docx_to_markdown(ans_only_docx, ans_extract_dir,
+                                                figures_dir)
+        # 追加触发 anchor，确保 in_answer_page 分支被激活
+        if not _is_answer_page_title(ans_md.split("\n", 1)[0].strip()):
+            md = md + "\n\n数学参考答案\n\n" + ans_md
+        else:
+            md = md + "\n\n" + ans_md
+        print(f"[math_docx_paper] 📎 合成 ans md ({len(ans_md)} chars) 追加到主 md",
+              flush=True)
+
     (structured / "raw.md").write_text(md, encoding="utf-8")
     print(f"[math_docx_paper] 段落 {stats['paragraphs']} | "
           f"OMML {stats['omath_source']} / OLE {stats.get('ole_source', 0)} "

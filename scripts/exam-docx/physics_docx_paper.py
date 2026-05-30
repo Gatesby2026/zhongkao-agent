@@ -660,6 +660,10 @@ def _clean_noise(text: str) -> str:
 # 答案表格行：| 题号 | 1 | 2 | ... |  + | 答案 | C | D | ... |
 _ANS_TABLE_HEADER_RE = re.compile(r"^\|\s*题号\s*\|")
 _ANS_TABLE_ANS_RE = re.compile(r"^\|\s*答案\s*\|")
+# 3 列竖排答案表头：| 题号 | 答案 | 得分 |  （shijingshan 主观题）
+_ANS_TABLE_3COL_HEADER_RE = re.compile(r"^\|\s*题号\s*\|\s*答案\s*\|\s*得分\s*\|")
+# 3 列表数据行：| 16 | （1）3.6 (2) ... | 6分 |
+_ANS_TABLE_3COL_ROW_RE = re.compile(r"^\|\s*(\d{1,2})\s*\|(.+?)\|([^|]*)\|\s*$")
 # 题号行（如 "16．（1）2.2（2分）" / "17．（1）20（1分）"）
 _ANS_Q_HEAD_RE = re.compile(r"^\s*(\d{1,2})\s*[.、．]\s*(.+)$")
 
@@ -682,6 +686,35 @@ def _extract_answers_from_ans_docx_md(ans_md: str) -> list[str]:
     i = 0
     while i < len(lines):
         ln = lines[i].strip()
+        # 检测 3 列竖排表 "| 题号 | 答案 | 得分 |" → 每行 "| N | <ans> | <score> |"
+        # （shijingshan 主观题 Q16-Q26 格式）
+        if _ANS_TABLE_3COL_HEADER_RE.match(ln):
+            # 跳过分隔符行 "|---|---|---|"
+            j = i + 1
+            while j < len(lines) and lines[j].strip().startswith("|---"):
+                j += 1
+            # 逐行抓数据
+            while j < len(lines):
+                row = lines[j].strip()
+                m_row = _ANS_TABLE_3COL_ROW_RE.match(row)
+                if not m_row:
+                    # 空行 / section header / 下一个表 → 结束
+                    if row == "" or row.startswith("|"):
+                        # "|" 开头但不符合 3 列格式（如其他表）→ 退出
+                        break
+                    # 非 "|" 开头（如 section header）→ 结束
+                    break
+                n = int(m_row.group(1))
+                ans_body = m_row.group(2).strip()
+                # 跳过空答案（如 Q20 仅图片占位 已被 docx_to_md 转为图占位符）
+                if 1 <= n <= 30:
+                    # 去掉行内残留图标记 ![](xxx) 让 sol 干净
+                    ans_clean = re.sub(r"!\[[^\]]*\]\([^\)]*\)", "", ans_body).strip()
+                    if ans_clean:
+                        subjective.setdefault(n, []).append(ans_clean)
+                j += 1
+            i = j
+            continue
         # 检测 "| 题号 | 1 | 2 | ... |" → 找下一个 "| 答案 | C | D | ... |"
         if _ANS_TABLE_HEADER_RE.match(ln):
             nums = [c.strip() for c in ln.strip("|").split("|") if c.strip()][1:]

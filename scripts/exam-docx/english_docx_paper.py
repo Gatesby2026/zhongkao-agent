@@ -470,10 +470,17 @@ def _parse_section(sec_typ: str, sec_lines: list[str],
             # 严格按 section 拒绝越界题号；choice 不限（首段 1 起）。
             _MIN_BY_SEC = {"cloze": 13, "reading": 21, "reading_express": 34, "essay": 38}
             min_n = _MIN_BY_SEC.get(sec_typ, 1)
-            if n_match < min_n:
+            if n_match >= min_n:
+                q_starts.append((i, n_match, q_m.group(2)))
                 continue
-            q_starts.append((i, n_match, q_m.group(2)))
-            continue
+            # **越界 fallthrough**（changping reading_A image-match）
+            # 源 docx 表格行 `| 1. <u>____21____</u> ...` 行首伪题号 1./2./3.
+            # 不属于本 section，但同行内 `____21____` 才是真题号。
+            # 不 continue，让下面 image-match 分支用 `_+N_+` 抽 21/22/23。
+            # 非 reading section 仍然拒绝越界题号（保留原有 daxing Q1-3 防护）。
+            if sec_typ != "reading":
+                continue
+            # reading: fall through to image-match scan below
         # **英语 image-match 题号**：reading_A 题号嵌入 `____21____` 形式
         # 朝阳：markdown table cell | <u>____21____</u> ![](img) | passage |
         # 昌平/房山/顺义：独立段落 <u>____21____</u> I'm going to...
