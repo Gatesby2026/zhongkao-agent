@@ -1,0 +1,719 @@
+# ============================================================
+# 2026年北京顺义区二模physics — 自动生成
+# ============================================================
+# OCR: Qwen-VL-OCR  Enrich: qwen-max
+# QC: draft=3  needs_review=23
+
+year: 2026
+district: 顺义区
+exam_type: 二模
+subject: physics
+full_score: 70
+duration_minutes: 70
+total_questions: 26
+structure: 12单选(24分) + 3多选(6分) + 8实验探究(28分) + 1科普阅读(4分) + 2计算题(8分)
+passages:
+- id: comprehensive_intro
+  type: comprehensive
+  name: ''
+  q_range:
+  - 24
+  - 24
+  body: '请阅读《温差发电》回答24题。
+
+    温差发电
+
+    1821年物理学家通过实验发现，在两种不同的金属A和B组成的回路中，若它们两端的温度[公式]与[公式]不同，则会在此回路中形成一个温差电压，如图21所示，这就是塞贝克效应。研究发现金属导体作为温差发电材料的效果并不好，热电转换效率低，而利用半导体可以大幅提升转换效率。将多个小半导体串联形成集成化结构，即使在小温差下也能产生明显的电压，这样的集成化结构称为温差发电结构。
+
+    有人做了这样的实验，如图22甲所示，将温差发电结构的热端与数显电热板紧密接触，数显电热板的温度可自由设定，水冷头散热器的温度恒为18℃，即测试中温差发电结构冷端温度恒为18℃，通过设定数显电热板温度值，改变热端温度从而改变温差，用电子负载仪测量出温差发电结构的电压。实验数据记录在下表中，根据数据描绘出电压随温差的变化图像，如图22乙所示。
+
+    ![](figures/image54.jpeg)![](figures/image55.jpeg)
+
+    | 热端温度/℃ | 18 | 20 | 22 | 24 | 26 | 28 | 30 | 32 | 34 | 36 | 38 |
+
+    |---|---|---|---|---|---|---|---|---|---|---|---|
+
+    | 温差/℃ | 0 | 2 | 4 | 6 | 8 | 10 | 12 | 14 | 16 | 18 | 20 |
+
+    | 电压/mV | 0 | 30.6 | 60.2 | 95.8 | 120.0 | 144.2 | 180.6 | 208.9 | 239.3 | 265.3 | 291.7 |'
+  figure: 2026-shunyi-er/figures/image54.jpeg
+questions:
+- id: 1
+  type: 单选
+  score: 2
+  stem: 下列用电器中，利用电流热效应工作的是
+  options:
+    A: 扫地机器人
+    B: 电热水壶
+    C: 电视机
+    D: 电冰箱
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 电与磁
+  - 电流热效应
+  module: electricity
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 选择题 answer 为空
+- id: 2
+  type: 单选
+  score: 2
+  stem: 如图所示的光现象，由于光的折射形成的是
+  options:
+    A: 幕布上形成的影子![](figures/image2.png)
+    B: 景物在水中形成的像![](figures/image3.png)
+    C: 放大镜放大的字![](figures/image4.png)
+    D: 路口镜中形成的像![](figures/image5.png)
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 光的折射
+  module: soundLightHeat
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 选择题 answer 为空
+- id: 3
+  type: 单选
+  score: 2
+  stem: 如图所示的实例中，为了增大摩擦的是
+  options:
+    A: 用力捏自行车的车闸![](figures/image6.png)
+    B: 给车轴加润滑油![](figures/image7.png)
+    C: 户外滑梯做得很光滑![](figures/image8.png)
+    D: 储物箱下装有滚轮![](figures/image9.png)
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 力的概念
+  - 摩擦力
+  module: mechanics
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 选择题 answer 为空
+- id: 4
+  type: 单选
+  score: 2
+  stem: 如图所示的实例中，为了减小压强的是
+  options:
+    A: 载重车装有很多车轮![](figures/image10.png)
+    B: 压路机装有很重的钢轮![](figures/image11.png)
+    C: 逃生锤的锤头很尖![](figures/image12.png)
+    D: 切蛋器装有很细的钢丝![](figures/image13.png)
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 压强
+  module: mechanics
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 选择题 answer 为空
+- id: 5
+  type: 单选
+  score: 2
+  stem: '图4是《天工开物》中描绘的造纸时“透火焙干”的情景。在夹巷中生火，将湿纸膜贴在烤火的砖墙上，干透后揭下来就是成品纸。关于在夹巷中生火能加快纸中水蒸发的方法，下列说法正确的是
+
+
+    ![](figures/image14.jpeg)'
+  options:
+    A: 升高水的温度
+    B: 减少水的体积
+    C: 增加水的表面积
+    D: 升高水的沸点
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 物态变化
+  module: soundLightHeat
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 选择题 answer 为空
+- id: 6
+  type: 单选
+  score: 2
+  stem: '在图5所示的实例中，关于力对物体做功的叙述，下列说法正确的是
+
+
+    ![](figures/image15.jpeg)'
+  options:
+    A: 甲图中，举重运动员举着杠铃不动，运动员的支持力对杠铃做了功
+    B: 乙图中，人用力推汽车但没有推动，人的推力对汽车做了功
+    C: 丙图中，起重机吊起重物竖直上升，钢丝绳的拉力对重物做了功
+    D: 丁图中，足球在水平地面上滚动，足球受到的重力对足球做了功
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 力的概念
+  - 功的定义
+  module: mechanics
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 选择题 answer 为空
+- id: 7
+  type: 单选
+  score: 2
+  stem: 水是人类生存环境的重要组成部分，下列有关水循环中的现象，属于液化的是
+  options:
+    A: 太阳光直射海洋，海水变成水蒸气
+    B: 水蒸气上升到高空遇冷凝结成小水滴
+    C: 水蒸气在寒冷的高空急剧降温成为小冰晶
+    D: 雪花落到地面变成水
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 物态变化
+  module: soundLightHeat
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 选择题 answer 为空
+- id: 8
+  type: 单选
+  score: 2
+  stem: '图6是某同学眼睛的成像示意图。如图所示为光经过四个透镜的光路图，选择其中一个透镜制成眼镜为该同学进行矫正，应选择的是
+
+
+    ![](figures/image16.png)'
+  options:
+    A: '![](figures/image17.png)'
+    B: '![](figures/image18.png)'
+    C: '![](figures/image19.png)'
+    D: '![](figures/image20.png)'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 光的折射
+  - 凸透镜成像
+  module: soundLightHeat
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 选择题 answer 为空
+- id: 9
+  type: 单选
+  score: 2
+  stem: '踢毽子起源于汉代，盛行于南北朝与隋唐，是一项历史悠久的民间体育活动。图8为同学们踢毽子的情景，毽子离开脚后在空中上下翻飞，下列说法正确的是
+
+
+    ![](figures/image21.jpeg)'
+  options:
+    A: 毽子在上升过程中受到向上的力的作用
+    B: 毽子运动到最高点时受平衡力作用
+    C: 毽子在上升过程中动能不断增加
+    D: 毽子在下降过程中重力势能不断减小
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 力的概念
+  - 能量转化
+  module: mechanics
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 选择题 answer 为空
+- id: 10
+  type: 单选
+  score: 2
+  stem: '2026年的春晚舞台上，人形机器人再度登场，在《武BOT》中化身“武林高手”，耍双节棍、打醉拳、空中翻转，图9所示为节目结束时机器人在水平舞台上站立拱手行礼，中国智造的硬核实力与中华武术的千年神韵相互交融。分析机器人的表演过程，下列说法正确的是
+
+
+    ![](figures/image22.jpeg)'
+  options:
+    A: 蹬地起跳时机器人受到的重力和地面对它的支持力是一对平衡力
+    B: 蹬地起跳时机器人对地面的压力和地面对它的支持力是一对平衡力
+    C: 站立静止时机器人受到的重力和地面对它的支持力是一对平衡力
+    D: 站立静止时机器人受到的重力和它对地面的压力是一对相互作用力
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 二力平衡
+  module: mechanics
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 选择题 answer 为空
+- id: 11
+  type: 单选
+  score: 2
+  stem: '如图10所示，站在水平地面上的人通过滑轮组提升重物，该重物的重力[公式]，重物在拉力作用下以v=0.1 m/s的速度竖直匀速上升。已知动滑轮所受的重力[公式]，人的重力[公式]，滑轮组绳重及摩擦均可忽略不计，g取10 N/kg。则下列判断正确的是
+
+
+    ![](figures/image26.jpeg)'
+  options:
+    A: 人对绳竖直向下的拉力大小为600 N
+    B: 滑轮组提升重物的机械效率为60%
+    C: 人竖直向下的拉力做功的功率为100 W
+    D: 人对地面的压力大小为600 N
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 简单机械
+  - 力的概念
+  module: mechanics
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 选择题 answer 为空
+- id: 12
+  type: 单选
+  score: 2
+  stem: '在课外实践制作活动中，某同学将量程为0～3 V的电压表改装成一个测量质量的电子秤，原理如图11甲所示。电源两端电压为18 V且保持不变，定值电阻[公式]的阻值为100 Ω，托盘固定在力敏电阻R上，R的阻值随压力的变化关系如图11乙所示。托盘及组件的质量忽略不计，g取10
+    N/kg。下列说法正确的是
+
+
+    ![](figures/image28.jpeg)'
+  options:
+    A: 被测物体质量越大，电路中电流越小
+    B: 该电子秤能测量的最大质量为20 kg
+    C: 若只将[公式]换成阻值更大的定值电阻，则电子秤能称量的最大质量变大
+    D: 若只增大电源两端电压，则电子秤能称量的最大质量变小
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 欧姆定律
+  - 电与磁
+  module: electricity
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 选择题 answer 为空
+- id: 13
+  type: 多选
+  score: 2
+  stem: 用气筒给气球打气时，气筒壁温度升高，内能增大，下列实例中改变物体内能的方式与其相同的是
+  options:
+    A: 将冰块放入常温饮料中，饮料的温度降低
+    B: 钻木取火时，在木棍的摩擦处温度升高
+    C: 在阳光的照射下，公园里石凳的温度升高
+    D: 用手反复弯折铁丝，铁丝弯折处的温度升高
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 物态变化
+  - 能量转化
+  module: soundLightHeat
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 选择题 answer 为空
+- id: 14
+  type: 多选
+  score: 2
+  stem: '如图12所示，取两个相同的验电器A和B，使A带负电，B不带电，可以看到A的金属箔张开，B的金属箔完全闭合，用带有绝缘柄的金属棒MN把A和B的金属球连接起来。下列说法正确的是
+
+
+    ![](figures/image29.jpeg)'
+  options:
+    A: 连接前，A的金属箔张开是由于同种电荷相互排斥
+    B: 连接后，B的金属箔会张开
+    C: 连接后，A中的电荷全部移动到B
+    D: 连接后，金属棒中会形成由M到N的电流
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 电荷的性质
+  - 电流的方向
+  module: electricity
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 选择题 answer 为空
+- id: 15
+  type: 多选
+  score: 2
+  stem: '有一款U形水上机器人，它被誉为“会跑的救生圈”，可远距离、快速、精准实现对落水人员的救援。图13所示为被救援的人趴在这款机器人上驶向岸边，已知这款机器人的质量为18 kg，体积为0.12 m3，被救援的人质量为60 kg。假设人的密度与水的密度相等，被救援的人至少要有[公式]的体积露出水面，g取10
+    N/kg。下列说法正确的是
+
+
+    ![](figures/image31.jpeg)'
+  options:
+    A: 被救援的人和机器人受到的浮力为120 N
+    B: 被救援的人和机器人排开水的总体积为[公式]
+    C: 救援前后，机器人浸入水中的体积之差为[公式]
+    D: 该机器人所能救援的人的最大质量为180 kg  第二部分
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 浮力
+  - 密度
+  - 体积与质量的关系
+  module: mechanics
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 选择题 answer 为空
+- id: 16
+  type: 实验探究
+  score: 4
+  stem: '在小瓶里装满带颜色的酒精，在橡皮塞上插进一根细玻璃管后塞住瓶口，就做成了一个简易温度计。将简易温度计分别放入温度不同的水中，观察到细玻璃管中液面的位置如图14甲、乙所示，则图______反映的是放入温度较低的水中的情况。若想使该简易温度计对所测温度的反应更灵敏，可将玻璃管换成更______（选填“粗”或“细”）的玻璃管。
+
+
+    ![](figures/image34.jpeg)'
+  answer: ''
+  solution: __MISSING__
+  knowledge_points:
+  - 温度的概念
+  - 实验方法
+  module: soundLightHeat
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 解题步骤未提取，需补全 solution
+- id: 17
+  type: 实验探究
+  score: 2
+  stem: '在探究通电螺线管内部磁场分布情况时，通电后小磁针静止时的指向如图15甲所示，小磁针黑色一端为N极，碎铁屑的排布情况如图15乙所示。请在图15丙中用磁感线描绘出通电螺线管内部磁场分布情况。（至少画三条磁感线）
+
+
+    ![](figures/image35.jpeg)'
+  answer: ''
+  solution: __MISSING__
+  knowledge_points:
+  - 电与磁
+  - 实验方法
+  module: electricity
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 解题步骤未提取，需补全 solution
+- id: 18
+  type: 实验探究
+  score: 3
+  stem: '为了测量某种液体的密度，取适量这种液体的样品进行了如下实验：
+
+
+    （1）将天平、量筒放在水平台面上。将盛有适量液体的烧杯放在调节好的天平左盘内，改变右盘中砝码的个数和游码的位置，使天平横梁在水平位置重新平衡，此时砝码质量和游码在标尺上的位置如图16甲所示，则烧杯及杯内液体的总质量为______g。
+
+
+    （2）将烧杯中的一部分液体倒入量筒，如图16乙所示，则量筒中液体的体积为______cm3；再用天平测出烧杯和剩余液体的总质量为108 g。
+
+
+    （3）根据上述实验数据计算此种液体的密度为______kg/m3。
+
+
+    ![](figures/image36.jpeg)![](figures/image37.jpeg)'
+  answer: ''
+  solution: __MISSING__
+  knowledge_points:
+  - 实验方法
+  - 数据处理
+  - 测密度
+  module: experiments
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 解题步骤未提取，需补全 solution
+- id: 19
+  type: 实验探究
+  score: 3
+  stem: '用图17所示器材进行实验探究。主要实验步骤如下：
+
+
+    ①闭合开关，通电导体AB在磁场中运动，记录其运动方向和电流方向，断开开关。
+
+
+    ②只将电源的正负极对调，闭合开关，通电导体AB在磁场中运动，记录其运动方向和电流方向，断开开关。
+
+
+    ![](figures/image38.jpeg)
+
+
+    请根据以上叙述回答下列问题。
+
+
+    （1）该实验探究的科学问题是：____________。
+
+
+    （2）若进行①操作时，闭合开关，通电导体AB静止不动，猜想其原因是：__________________，检验猜想是否正确的方法为__________________。'
+  answer: ''
+  solution: __MISSING__
+  knowledge_points:
+  - 电与磁
+  - 实验方法
+  module: electricity
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 解题步骤未提取，需补全 solution
+- id: 20
+  type: 实验探究
+  score: 5
+  stem: '水平实验桌面上有微小压强计、刻度尺和装有适量水的烧杯。利用上述器材设计实验探究水内部任意一点的压强与该点到容器底的距离是否有关。
+
+
+    ![](figures/image39.jpeg)
+
+
+    （1）设计实验步骤如下，请补充完整。
+
+
+    ①将微小压强计的探头放入水中，测量出探头距水面5 cm、距容器底7 cm，如图18所示，读出U形管两端液面高度差[公式]，将数据记录到表格中。
+
+
+    ②____________，读出U形管两端液面高度差[公式]，将数据记录到表格中。
+
+
+    （2）分析论证，用U形管两端液面高度差[公式]的大小反映____________的大小，若[公式]不变，可得出结论：________________________________________________。'
+  answer: ''
+  solution: __MISSING__
+  knowledge_points:
+  - 实验方法
+  - 数据处理
+  - 压强
+  module: mechanics
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 解题步骤未提取，需补全 solution
+- id: 21
+  type: 实验探究
+  score: 4
+  stem: '实验桌上有光具座、凸透镜A和B（焦距分别为5 cm，10 cm）、电子蜡烛、光屏、刻度尺。现利用上述器材探究物距一定时，物体经凸透镜所成实像的高度h与凸透镜焦距f是否有关。
+
+
+    （1）实验步骤如下，请补充完整。
+
+
+    ①将电子蜡烛、凸透镜A和光屏从左到右依次固定在光具座的滑块上，使三者的中心____________。
+
+
+    ②将A放在光具座上50 cm刻度线处，将点亮的电子蜡烛固定在20 cm刻度线处，移动光屏直至在屏上呈现烛焰清晰的像，用刻度尺测量像的高度h，将焦距f与h记录在表格中。
+
+
+    ③____________，移动光屏直至在屏上呈现烛焰清晰的像，用刻度尺测量像的高度h，将焦距f与h记录在表格中。
+
+
+    （2）画出实验数据记录表格。'
+  answer: ''
+  solution: __MISSING__
+  knowledge_points:
+  - 实验方法
+  - 凸透镜成像
+  module: experiments
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 解题步骤未提取，需补全 solution
+- id: 22
+  type: 实验探究
+  score: 4
+  stem: '用图19所示的装置探究电流通过导体时产生的热量与导体中的电流是否有关，其中甲、乙两个烧瓶内盛有质量和初温都相同的煤油，煤油中各浸泡着一段阻值均为10 Ω的电阻丝R1和R2，两电阻丝并联后接入电路，用温度计示数变化量[公式]反映电阻丝产生热量的多少，实验时记录初温和末温，计算出[公式]。
+
+
+    ![](figures/image42.jpeg)
+
+
+    （1）该实验存在的问题是：________________________。
+
+
+    （2）请画出正确的实验电路图。'
+  answer: ''
+  solution: __MISSING__
+  knowledge_points:
+  - 实验方法
+  - 数据处理
+  - 焦耳定律
+  module: electricity
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 解题步骤未提取，需补全 solution
+- id: 23
+  type: 实验探究
+  score: 3
+  stem: '现利用一块电流表和阻值已知的定值电阻[公式]测量电阻[公式]的阻值。选择了满足实验要求的电源（电压保持不变），并连接了实验电路，如图20所示。
+
+
+    ![](figures/image45.jpeg)
+
+
+    （1）请将下列实验步骤补充完整。
+
+
+    ①闭合开关[公式]、断开开关[公式]，记录电流表的示数[公式]，断开开关。
+
+
+    ②___________，记录电流表的示数[公式]，断开开关。
+
+
+    （2）用[公式]，[公式]和[公式]表示[公式]，则[公式]___________。'
+  answer: ''
+  solution: __MISSING__
+  knowledge_points:
+  - 实验方法
+  - 数据处理
+  - 测电阻
+  module: electricity
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 解题步骤未提取，需补全 solution
+- id: 24
+  type: 科普阅读
+  score: 4
+  stem: '阅读上述材料，回答下列问题。
+
+
+    （1）图21中，若[公式]，回路中________（选填“会”或“不会”）形成温差电压。
+
+
+    （2）由图22乙的图像可知，当温差为19℃时，电压为________mV。
+
+
+    （3）实验中，当热、冷两端的温差为8℃时，产生的温差电压为120 mV，当热、冷两端产生的温差电压为1200 mV时，热端的温度为________℃。
+
+
+    （4）请你展开想象，写出一种温差发电的应用场景。'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 温差发电原理
+  - 图像分析
+  - 温差与电压关系
+  module: electricity
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+  passage_id: comprehensive_intro
+- id: 25
+  type: 计算题
+  score: 4
+  stem: '有一款加热鼠标垫，内有一根电热丝，其规格为“5 V  5 W”。忽略温度对电阻的影响，回答下列问题：
+
+
+    （1）求鼠标垫的电阻；
+
+
+    （2）现改装此款鼠标垫用以调节发热功率，提供的器材有15 V的电源（电源两端电压保持不变）、规格为“20 Ω 1 A”的滑动变阻器，请计算改装后电路消耗的功率范围。'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 电功率
+  - 欧姆定律
+  module: electricity
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 26
+  type: 计算题
+  score: 4
+  stem: '某同学做了一个衣架，如图23甲所示。衣架的圆底盘半径为15 cm，底盘圆心C到A点所在竖直线的距离为25 cm，衣架总质量为3 kg，其重心在衣架竖直杆的B点上，且与底盘的圆心C在同一竖直线上，若在衣架A点所挂物体过重，衣架倾倒时，底盘边缘与地面接触的点为O，将衣架看作杠杆，O为支点，如图23乙所示。现把质量为m的书包挂在A点，衣架刚好要倾倒，g取10
+    N/kg。完成下列问题：
+
+
+    ![](figures/image57.jpeg)
+
+
+    （1）计算A点所挂书包的质量m；
+
+
+    （2）改变底盘半径可以使A点挂不同质量的书包。当底盘半径为[公式]，A点所挂书包质量为[公式]时，衣架刚好要倾倒；当底盘半径为[公式]，A点所挂书包质量为[公式]时，衣架刚好要倾倒。若[公式]，比较[公式]与[公式]的大小关系，写出推理过程。'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 简单机械
+  - 力的概念
+  - 二力平衡
+  module: mechanics
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''

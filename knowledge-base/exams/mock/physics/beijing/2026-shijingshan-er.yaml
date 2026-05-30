@@ -1,0 +1,725 @@
+# ============================================================
+# 2026年北京石景山区二模physics — 自动生成
+# ============================================================
+# OCR: Qwen-VL-OCR  Enrich: qwen-max
+# QC: draft=3  needs_review=23
+
+year: 2026
+district: 石景山区
+exam_type: 二模
+subject: physics
+full_score: 70
+duration_minutes: 70
+total_questions: 26
+structure: 12单选(24分) + 3多选(6分) + 8实验探究(28分) + 1科普阅读(4分) + 2计算题(8分)
+passages:
+- id: comprehensive_intro
+  type: comprehensive
+  name: ''
+  q_range:
+  - 24
+  - 24
+  body: '请阅读《深空探秘的能量之翼》并回答24题。
+
+    深空探秘的能量之翼
+
+    从月球到行星及小行星，中国的深空探测正在走向更远、更深的新阶段。2025年5月，“天问二号”探测器成功发射，计划对小行星实施系列任务，并对主带彗星311P进行伴飞探测。
+
+    “天问二号”探测器远离地球，无法长期依赖燃料供给，需通过太阳翼将光能转化为电能，但深空中太阳辐射十分微弱。通常采用“太阳常数”来描述地球大气层上方的太阳辐射强度，它是指当太阳与地球之间距离处于1个天文单位时，在地球大气层上界，垂直于太阳光线的单位面积上每秒接收到的太阳辐射能量。太阳常数的标准值约为[公式]。1个天文单位用[公式]表示，在数值上等于地球和太阳的平均距离，约1.5亿千米。然而，太阳辐射强度会随着距离的增加而迅速减弱。理想情况下，某一点的辐射强度与它到辐射源的距离的平方成反比。据此推算，探测器在2个天文单位处接收到的太阳辐射强度，约为地球大气上界处的1/4。
+
+    为了在低太阳辐射强度下应对能源供给的挑战，“天问二号”探测器首次采用了圆形柔性太阳翼。该太阳翼具有双翼对称结构，单翼面积约17平方米，翼面铺设砷化镓（GaAs）柔性三结太阳能电池片。三结结构可吸收不同波段的太阳光谱，使其在3个天文单位处仍能保持34%的光电转换效率。传统方形刚性太阳翼的基板通常采用铝合金蜂窝板，而圆形柔性太阳翼的基板则选用厚度小于0．5毫米的超轻聚酰亚胺柔性复合材料，在相同的收纳体积下，后者能够提供更大的受光面积。在发射阶段，太阳翼沿径向以扇形方式收拢折叠；入轨后，通过单向多级展开机构完成解锁与展开，避免了多关节机械臂易出现的铰链卡滞或同步失效问题。正是凭借高效率、大受光面积及高收纳比的圆形柔性太阳翼，“天问二号”探测器才具备了在小行星带稳定供电的能力，为未来开展深空探测奠定了坚实的能源基础。
+
+    ![](figures/image132.jpeg)'
+  figure: 2026-shijingshan-er/figures/image132.jpeg
+questions:
+- id: 1
+  type: 单选
+  score: 2
+  stem: 下列物品中，通常情况下属于导体的是
+  options:
+    A: 铁锅
+    B: 塑料绳
+    C: 木梳
+    D: 陶瓷碗
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 导体绝缘体
+  module: electricity
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 选择题 answer 为空
+- id: 2
+  type: 单选
+  score: 2
+  stem: 图中所示的实例中，目的为了减小压强的是
+  options:
+    A: 刻刀的刀口薄而尖细![](figures/image2.jpeg)
+    B: 火车轨道下铺放枕木![](figures/image3.jpeg)
+    C: 破窗锤的锥状敲击端![](figures/image4.jpeg)
+    D: 压路机的碾子质量很大![](figures/image5.jpeg)
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 压强
+  module: mechanics
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 选择题 answer 为空
+- id: 3
+  type: 单选
+  score: 2
+  stem: 图中所示的四种工具中，所使用的杠杆属于费力杠杆的是
+  options:
+    A: 羊角锤![](figures/image6.jpeg)
+    B: 核桃夹![](figures/image7.jpeg)
+    C: 裁纸刀![](figures/image8.jpeg)
+    D: 食品夹![](figures/image9.jpeg)
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 简单机械
+  module: mechanics
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 选择题 answer 为空
+- id: 4
+  type: 单选
+  score: 2
+  stem: 下列过程中，人施加在物体上的力对物体做功的是
+  options:
+    A: 运动员举着重物保持静止不动
+    B: 人用力推车没有推动
+    C: 某同学把重物从地面上竖直提起
+    D: 人用力拉箱子没拉动
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 力的概念
+  - 功的定义
+  module: mechanics
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 选择题 answer 为空
+- id: 5
+  type: 单选
+  score: 2
+  stem: 我国成功研制出全球首台月壤制砖机。该设备通过加热使月壤颗粒迅速熔融成高温熔体（类似岩浆），后再经冷却制成结实的砖块。此过程中主要发生的物态变化是
+  options:
+    A: 熔化、凝华
+    B: 液化、凝固
+    C: 汽化、液化
+    D: 熔化、凝固
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 物态变化
+  module: soundLightHeat
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 选择题 answer 为空
+- id: 6
+  type: 单选
+  score: 2
+  stem: 估测在生活实际中应用广泛，下列估测的数据中最接近实际的是
+  options:
+    A: 教室里课桌的高度约为[公式]
+    B: 中学生的脉搏每秒钟约跳动90次
+    C: 一个鸡蛋的质量约为[公式]
+    D: 健康中学生的正常体温约为[公式]
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 物质:质量密度
+  - 热学:温度
+  module: mechanics
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 选择题 answer 为空
+- id: 7
+  type: 单选
+  score: 2
+  stem: 能源的利用和科技的进步，有力推动了人类文明的发展进程。下列说法正确的是
+  options:
+    A: 太阳能、风能和天然气都是可再生能源
+    B: “奋斗号”潜水器下潜越深，外壳受到海水的压强越大
+    C: 空间站中的航天员通过超声波与地面控制中心传递信息
+    D: “4G”和“5G”通信信号的电磁波在真空中传播的速度不等
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 能源类型
+  - 压强
+  module: soundLightHeat
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 选择题 answer 为空
+- id: 8
+  type: 单选
+  score: 2
+  stem: 关于下面的运动情景，说法正确的是
+  options:
+    A: 高铁列车减速进站的过程中，列车运动状态发生改变
+    B: 跑步运动员冲过终点时不能立刻停下来，是因为他受到了惯性作用
+    C: 飞机的机翼利用了流体中流速越大的地方压强越大的原理设计的
+    D: 击出去的冰球在水平冰面上滑行时，其重力和对地面的压力是平衡力
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 力的概念
+  - 牛顿定律
+  - 二力平衡
+  module: mechanics
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 选择题 answer 为空
+- id: 9
+  type: 单选
+  score: 2
+  stem: '如图所示，两个相同的圆柱形容器甲和乙放在水平桌面上，两容器内液面相平。实验中，将同一微小压强计的探头分别放入液体内[公式]、B两点处，且[公式]点到容器底部距离比B到容器底部距离小，此时[公式]型管内的液面高度差相等。下列正确的是
+
+
+    ![](figures/image15.jpeg)'
+  options:
+    A: A点受到的液体压强小于B点
+    B: 两容器底部受到的液体压强相等
+    C: 甲容器中液体的密度小于乙容器中液体的密度
+    D: 若将乙容器内的探头缓慢向下移动，[公式]型管内的液面高度差变小
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 压强
+  module: mechanics
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 选择题 answer 为空
+- id: 10
+  type: 单选
+  score: 2
+  stem: '在探究得出凸透镜成像的规律后，小石又进行了如下实验。把蜡烛、凸透镜和光屏置于光具座上，将点燃的蜡烛和光屏固定不动，移动凸透镜，光屏上先后两次呈现烛焰清晰的像，记录数据如下表所示。下列正确的是
+
+
+    | 实验序号 | 1 | 2 |
+
+    |---|---|---|
+
+    | 物距/cm | 20 | 30 |
+
+    | 像距/cm | 30 | 20 |'
+  options:
+    A: 第一次的像是正立的
+    B: 第二次的像比第一次小
+    C: 蜡烛和光屏间的距离大于[公式]
+    D: 凸透镜的焦距可能是[公式]
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 凸透镜成像
+  module: soundLightHeat
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 选择题 answer 为空
+- id: 11
+  type: 单选
+  score: 2
+  stem: '操场上，被小石同学垫起的排球竖直向上运动到最高点后又落回的过程中，排球先后经过[公式]点和[公式]点时，其动能和重力势能的大小关系如下图所示。结合图中所示，下列关于排球的判断正确的是
+
+
+    ![](figures/image21.jpeg)'
+  options:
+    A: '[公式]点动能大于[公式]点动能'
+    B: '[公式]点比[公式]点离地面的高度大'
+    C: 在[公式]点时机械能等于在[公式]点的机械能
+    D: 经过[公式]点继续运动过程中，重力做功越来越慢
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 动能与势能的转化
+  - 机械能守恒
+  module: mechanics
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 选择题 answer 为空
+- id: 12
+  type: 单选
+  score: 2
+  stem: '科创小组设计利用电流表测量质量的装置。如图甲所示，托盘与圆柱形实心塑料浮筒[公式]通过硬质绝缘细杆固定连接，整体漂浮在装有足够深水的柱形薄壁容器中，且只能竖直移动，托盘通过滑杆带动滑片[公式]上下移动。托盘的质量为[公式]，浮筒[公式]高[公式]，底面积为[公式]，质量[公式]，容器的底面积为[公式]。电源电压恒为[公式]不变，电流表量程为[公式]，定值电阻为[公式]，滑动变阻器[公式]的阻值随长度[公式]的变化图像如图乙所示。托盘中未放物体时，滑片[公式]正刚好位于[公式]最上端。托盘中放入物体时，浮筒[公式]带动滑杆向下运动，水面上升。托盘中放入物体[公式]时，[公式]刚好完全浸没，滑片[公式]刚好位于[公式]最下端，此时电流表示数为[公式]。（[公式]取[公式]、[公式]，不计滑片、滑杆、细杆的质量，忽略摩擦阻力，工作中水不溢出）。正确的是
+
+
+    ![](figures/image46.png)'
+  options:
+    A: '[公式]的阻值[公式]'
+    B: 物体[公式]的质量为[公式]
+    C: 托盘中未放物体时，电流表的示数为[公式]
+    D: 滑片[公式]从变阻器顶端移动到底端的过程中，水对容器底的压强变化[公式]
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 欧姆定律
+  - 浮力
+  - 电流表的使用
+  module: electricity
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 选择题 answer 为空
+- id: 13
+  type: 多选
+  score: 2
+  stem: 下列说法中正确的是
+  options:
+    A: 冰在熔化的过程中吸收热量，但温度不变
+    B: 花香四溢，是扩散现象，表明分子在不停地做无规则运动
+    C: 在热传递过程中，热量只能从内能大的物体传给内能小的物体
+    D: 用高压锅炖煮食物熟得快，是因为锅内水的沸点会随其上方气体压强增大而降低
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 物态变化
+  - 分子热运动
+  - 热量传递
+  module: soundLightHeat
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 选择题 answer 为空
+- id: 14
+  type: 多选
+  score: 2
+  stem: '如图所示是研究物理规律的四个实验，下列相关叙述正确的是
+
+
+    ![](figures/image54.png)'
+  options:
+    A: ①的实验结论可应用在磁悬浮列车中
+    B: 动圈式扬声器应用了②的实验原理
+    C: 电动自行车的电动机应用了③的实验原理
+    D: 物理实验室中的滑动变阻器的原理与实验④相同
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 电与磁
+  - 电磁感应
+  - 电动机原理
+  module: electricity
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 选择题 answer 为空
+- id: 15
+  type: 多选
+  score: 2
+  stem: '为了将放置在水平地面上重为[公式]的重物提升到高处，小石设计了如图所示的滑轮组装置。小石用竖直向下拉力[公式]拉绳，拉力[公式]随时间的变化关系图像如图甲所示，物体的速度[公式]和物体上升的高度[公式]随时间[公式]变化的关系图像分别如图乙和丙所示。若物体与地面的接触面积[公式]，不计绳重和摩擦。下列说法中正确的是
+
+
+    ![](figures/image62.png)'
+  options:
+    A: 在[公式]内，重物对地面的压强为[公式]
+    B: 在[公式]内，拉力[公式]做的功是[公式]
+    C: 在[公式]内，滑轮组对物体做功的功率为[公式]
+    D: 在[公式]内，滑轮组的机械效率约为[公式]  第二部分
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 简单机械
+  - 压强
+  - 功和功率
+  - 机械效率
+  module: mechanics
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 选择题 answer 为空
+- id: 16
+  type: 实验探究
+  score: 3
+  stem: '（1）如图甲所示，物体长度的测量值为__________cm。（2分）
+
+
+    ![](figures/image72.png)
+
+
+    （2）如图乙所示，用丝绸摩擦过的玻璃棒接触验电器的金属球时，验电器的两片金属箔由于带__________（选填“同种”或“异种”）电荷而张开。（2分）
+
+
+    ![](figures/image73.png)
+
+
+    （3）如图丙所示，表示的是远视眼和近视眼成因的光路图，图__________（选填：“[公式]”或“[公式]”）可以佩戴凹透镜矫正。（2分）
+
+
+    ![](figures/image76.png)'
+  answer: ''
+  solution: __MISSING__
+  knowledge_points:
+  - 实验方法
+  - 数据处理
+  - 凸透镜成像
+  module: experiments
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 解题步骤未提取，需补全 solution
+- id: 17
+  type: 实验探究
+  score: 3
+  stem: '小石利用如图甲所示的装置探究杠杆平衡条件，该装置中每个钩码的质量均相等，且杠杆上相邻刻度线间的距离相等。
+
+
+    ![](figures/image77.png)
+
+
+    （1）要使杠杆在水平位置平衡，需将杠杆左端的平衡螺母向__________（选填“左”或“右”）调节。（2分）
+
+
+    （2）杠杆平衡后，在杠杆左侧A点挂一定数量的钩码如图乙所示。为使杠杆在水平位置重新平衡，可以使用弹簧测力计在__________（选填“B”或“C”）点向上拉杠杆。（2分）'
+  answer: ''
+  solution: __MISSING__
+  knowledge_points:
+  - 实验方法
+  - 杠杆平衡条件
+  module: mechanics
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 解题步骤未提取，需补全 solution
+- id: 18
+  type: 实验探究
+  score: 3
+  stem: '小石探究“平面镜所成像的高度[公式]与物体到平面镜的距离[公式]是否有关”，利用了如图所示的装置及形状、粗细相同且高度可调节的电子蜡烛A、B等器材。主要操作如下：
+
+
+    ![](figures/image80.png)
+
+
+    （1）将白纸铺在水平桌面上，薄透明玻璃竖直立放在白纸上，电子蜡烛A作为物体竖立放在薄透明玻璃前的适当位置，打开电子蜡烛[公式]的电源，观察到薄透明玻璃中出现蜡烛A清晰的像。将电子蜡烛B放在薄透明玻璃另一侧，调整电子蜡烛B的位置和高度，从不同角度观察，当蜡烛B与蜡烛__________（选填“A”或“A的像”）完全重合时，用刻度尺测量此时物体到平面镜的距离[公式]和蜡烛[公式]的高度[公式]，将实验数据记录在表格中。
+
+
+    （2）改变__________（选填“蜡烛A的高度”，或“蜡烛A到薄透明玻璃的距离”），保持其它不变，仿照步骤（1）再做1次实验，将数据记录在表格中。'
+  answer: ''
+  solution: __MISSING__
+  knowledge_points:
+  - 实验方法
+  - 平面镜成像
+  module: experiments
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 解题步骤未提取，需补全 solution
+- id: 19
+  type: 实验探究
+  score: 3
+  stem: '小石探究“浸在液体中的物体所受浮力大小与排开液体体积的关系”，利用符合实验要求的弹簧测力计（已调零）、正方体合金块A、烧杯、水，进行了以下实验。
+
+
+    ![](figures/image85.png)
+
+
+    （1）用弹簧测力计测出合金块[公式]的重力为[公式]，将合金块[公式]部分浸入水中，此时弹簧测力计示数如图甲所示，则合金块[公式]所受浮力为__________[公式]。
+
+
+    （2）在图甲实验的基础上，手提弹簧测力计将合金块[公式]缓缓竖直向下浸入水中，随着浸入体积的增加，弹簧测力计示数[公式]随合金块[公式]下降高度[公式]的变化如图乙所示，可以推得整个过程中，合金块A所受浮力的变化情况是__________。
+
+
+    （3）小石认为不能根据当合金块[公式]下降的高度大于[公式]（不接触容器底）时的现象来说明“浸在液体中的物体所受浮力大小与排开液体体积的关系”，理由是__________。'
+  answer: ''
+  solution: __MISSING__
+  knowledge_points:
+  - 实验方法
+  - 浮力
+  module: mechanics
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 解题步骤未提取，需补全 solution
+- id: 20
+  type: 实验探究
+  score: 3
+  stem: '小石用量筒测量橡皮泥的密度。
+
+
+    ![](figures/image97.png)
+
+
+    （1）进行了如图所示操作：
+
+
+    ①如图甲，在量筒中加入适量水，记录水的体积为[公式]；
+
+
+    ②如图乙，将橡皮泥捏成碗状，轻放入量筒中，使其漂浮在水面上，记录液面示数为[公式]；
+
+
+    ③如图丙，将橡皮泥用细长针压入水中，记录此时液面示数为[公式]。
+
+
+    （2）橡皮泥的密度[公式]__________（用[公式]、[公式]、[公式]、[公式]表示）。（2分）'
+  answer: ''
+  solution: __MISSING__
+  knowledge_points:
+  - 实验方法
+  - 数据处理
+  - 测密度
+  module: experiments
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 解题步骤未提取，需补全 solution
+- id: 21
+  type: 实验探究
+  score: 3
+  stem: '小石在探究“电流与电阻的关系”的实验中，选择了如下器材：学生电源、电压表、电流表、滑动变阻器、电阻箱、开关和导线等，连接的实验电路如图所示。请按要求完成下列问题。
+
+
+    ![](figures/image106.jpeg)
+
+
+    （1）请用笔画线代替导线，将如图所示电路补充完整。
+
+
+    （2）实验时，闭合开关[公式]前，滑动变阻器的滑片[公式]应调到最__________端（选填：“左”或“右”）。改变电阻箱接入电路的阻值时，移动滑动变阻器的滑片[公式]使电阻箱两端的电压始终保持2V不变。
+
+
+    （3）当接入电路的电阻箱为某阻值时，小石发现无论怎样移动滑动变阻器的滑片[公式]，电压表的示数始终大于2V，则需要更换最大阻值更__________的滑动变阻器。
+
+
+    （4）下表是小石实验时记录的数据，发现________，由此可初步得到实验结论：__________。
+
+
+    | 实验序号 | 1 | 2 | 3 | 4 | 5 | 6 |
+
+    |---|---|---|---|---|---|---|
+
+    | 电阻[公式] | 5 | 10 | 15 | 20 | 25 | 40 |
+
+    | 电流[公式] | 0.4 | 0.2 | 0.14 | 0.10 | 0.08 | 0.05 |'
+  answer: ''
+  solution: __MISSING__
+  knowledge_points:
+  - 实验方法
+  - 欧姆定律
+  module: electricity
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 解题步骤未提取，需补全 solution
+- id: 22
+  type: 实验探究
+  score: 7
+  stem: 在探究串联电路电压特点的实验中，小石提出猜想：“两个用电器串联后，两端的总电压等于各用电器两端的电压之和”，为了验证猜想，他选用了如下器材：符合要求的可连续调节电压值的电源和三个电压表、一个开关、若干阻值不同的定值电阻和导线进行实验。请选用上述器材设计实验，并完成：（1）画出电路图；（2）设计实验记录表（2分）。
+  answer: ''
+  solution: __MISSING__
+  knowledge_points:
+  - 实验方法
+  - 数据处理
+  - 欧姆定律
+  module: electricity
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 解题步骤未提取，需补全 solution
+- id: 23
+  type: 实验探究
+  score: 3
+  stem: '科技小组同学设计了机械臂角度采集装置，图甲为可完成抓取动作的简易机械臂模型，图乙是机械臂“关节”处安装的变阻器，接线柱E与连杆A固定，与圆弧形电阻丝的一端连接；金属滑片P与连杆B固定，接触圆弧形电阻丝并通过金属杆连接接线柱[公式]。将[公式]与[公式]、[公式]与[公式]连接接入如图丙电路，可利用电流表示数反映关节角度，[公式]为定值电阻，电源电压[公式]恒定。变阻器接入电路中的阻值[公式]，其中[公式]为常量，[公式]为转动角度，即连杆[公式]与连杆[公式]的夹角。当转动角度为[公式]时，电流表的示数达到最大值[公式]，若转动角度小于[公式]时，仍需完成数据采集，试分析需要将定值电阻[公式]更换为阻值更大还是更小的电阻，并写出推理过程。
+
+
+    ![](figures/image129.png)'
+  answer: ''
+  solution: __MISSING__
+  knowledge_points:
+  - 实验方法
+  - 数据处理
+  - 欧姆定律
+  module: electricity
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: needs_review
+  qc_note: 解题步骤未提取，需补全 solution
+- id: 24
+  type: 科普阅读
+  score: 4
+  stem: '请根据上述材料，回答下列问题
+
+
+    （1）太阳翼在工作时，它在电路中相当于________（选填“电源”或“用电器”）。
+
+
+    （2）主带彗星运行至距太阳[公式]，约合________亿千米。
+
+
+    （3）在3个天文单位处正对太阳光线的太阳翼，其表面每平方米电池片可输出的功率是__________W。
+
+
+    （4）与传统方形刚性太阳翼相比，“天问二号”探测器使用的圆形柔性太阳翼具有的优势为__________（写出一条即可）。'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 电学：电源与用电器
+  - 综合应用：天文学知识
+  - 综合应用：功率计算
+  module: electricity
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+  passage_id: comprehensive_intro
+- id: 25
+  type: 计算题
+  score: 4
+  stem: '某科技小组同学设计的一款具有加热、保温两档的烧水壶，其内部的简化电路图如图甲所示，[公式]和[公式]为发热丝，[公式]为总开关，[公式]为温控开关，1、2分别为开关的两个接触点。图乙为某次将满壶水从[公式]加热至沸腾并保温的过程中，电路总功率[公式]与加热时间[公式]的关系图像。
+
+
+    ![](figures/image141.png)
+
+
+    （1）画出图甲电路，保温档的等效电路图。
+
+
+    （2）计算烧水壶在[公式]内消耗的电能。
+
+
+    （3）计算[公式]的阻值。
+
+
+    （4）图丙是采用发热丝[公式]和[公式]设计的另一款烧水壶内部简化电路，将满壶等量清水从[公式]加热至沸腾，甲、丙两种电路设计相比，写出丙图设计的一个主要优点。'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 电功率
+  - 欧姆定律
+  - 电路分析
+  module: electricity
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
+- id: 26
+  type: 计算题
+  score: 4
+  stem: '某同学用如图甲所示的装置模拟潜水艇的浮沉实验。装置能在水中完全浸没，通过注射器改变内部储水舱的水量来调节自身重力（注射器及软管内仅装空气，内部气压始终等于外界大气压，水舱内的水足量）。已知水的密度[公式]，[公式]。调整活塞位置，装置从水底上浮至[公式]位置并稳定悬浮，如图乙所示，此时注射器活塞稳定在[公式]刻度处。现用细线将一个[公式]、体积[公式]的重物[公式]挂在装置正下方（细线质量和体积不计，忽略软管对潜水艇的作用力），从水底打捞，使装置带着重物一起上浮到[公式]位置并稳定悬浮，如图丙所示。
+
+
+    ![](figures/image155.png)
+
+
+    （1）画出图丙中重物M的受力示意图。
+
+
+    （2）计算重物M受到的浮力。
+
+
+    （3）潜水艇位于图丙所示位置时，注射器活塞需要稳定在多少毫升刻度处。'
+  answer: ''
+  solution: ''
+  knowledge_points:
+  - 浮力
+  - 受力分析
+  - 公式综合应用
+  module: mechanics
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
+  qc_status: draft
+  qc_note: ''
