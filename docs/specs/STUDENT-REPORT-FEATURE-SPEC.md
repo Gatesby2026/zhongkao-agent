@@ -1,532 +1,357 @@
 # 学情报告生成 — 产品功能标准化规格
 
-> **版本**：v0.1 草案 | **更新日期**：2026-05-13
-> **关联文档**：[`../product/PRD.md`](../product/PRD.md) v5.0 · [`../../scripts/README.md`](../../scripts/README.md)
-> **目标**：把目前"手工 + 半自动"的学情报告流程固化为家长用户可一键触发的产品功能
+> **版本**：v1.1（生产框架版）| **更新日期**：2026-05-30
+> **关联文档**：[`../product/PRD.md`](../product/PRD.md) · [`EXAM-SLUG-SPEC.md`](EXAM-SLUG-SPEC.md) · [`STUDENT-PROFILE-SPEC.md`](STUDENT-PROFILE-SPEC.md)
+> **变更**：v0.1（2026-05-13 草案，五步流水线纸面方案）→ v1.1：生产已上线 https://zhongkao.gatesby.xyz，本文档刻画**已经稳定运行的方案框架**。后续在框架基础上完善细节，不再做架构级的大改动。
 
 ---
 
-## 一、产品愿景
+## 0. 规格使用约定
 
-### 1.1 用户故事
+本规格是「**生产架构的锚点**」，目的是终结"功能实现方案反复横跳"。
 
-**家长视角**（主要用户）：
-```
-家长扫码进入「李同学的私人教研组」小程序
-→ 班主任主动推送："这次朝阳一模成绩出来了，要不要做个详细分析？"
-→ 家长点"分析"，进入流程：
-   1) 选择考试（朝阳 2026 一模 · 物理）— 系统自动识别科目
-   2) 上传 / 拍照学生答题卡（4 张物理答题卡）
-   3) 输入或上传小分（自动 OCR 表格 / 手工输入每题分数）
-→ 系统 30 秒内生成《学情分析与提分建议》PDF
-→ 班主任在群里发分析卡片：「我看了子涵的卷子，重点要补电学综合，详细看这里 ↗」
-→ 点开 = 完整 PDF 报告
-```
-
-**老师视角**（运营侧）：
-```
-管理后台批量处理一个班级的小分 + 答题卡 → 一次产出 30 份个性化报告
-```
-
-### 1.2 已实现的 MVP 案例
-
-已成功手工生成 **3 份**学情报告（贾小淇 · 2026 朝阳一模）：
-- 数学 79/100（[贾小淇 学情报告样例](../../out/student-reports/jiaxiaoqi/_legacy/)）
-- 语文（同上目录）
-- 物理 60/70（[贾小淇 物理失分分析样例](../../out/student-reports/jiaxiaoqi/_legacy/)）
-
-**手工耗时**：每份约 1-2 小时（含人工核对）。**目标自动化后**：≤ 5 分钟。
+- **Locked（🔒）** 标记的章节 = 经过生产验证的稳定方案，**改动需明确理由+回归**
+- **Iterating（🔄）** 标记 = 内部参数/阈值在持续调优，但接口/总体策略不变
+- **Open（⏳）** 标记 = 已识别的产品缺口，待迭代决策
 
 ---
 
-## 二、五步流水线 — 现状盘点
+## 1. 产品视图
 
-| 步骤 | 自动化程度 | 现有产物 | 主要缺口 |
-|------|-----------|---------|---------|
-| 1. 试卷下载 | 🟡 半自动 | `RECIPE-beijing-exam-fetch.md` + `paper-scout.js` | gaokzx adapter 未做，需人工找 URL |
-| 2. 试卷结构化 | 🟢 已就绪 | `cloud-ocr-exam.py` + `structure-exam-*.py` | 答案页（题目 vs 答案）切分手工 |
-| 3. 答题卡识别 | 🟡 半自动 | `qwen-answer-card-ocr.py` | **涂卡 OCR 不可靠**（核心痛点） |
-| 4. 小分解析 | 🔴 无 | 临时 openpyxl | 表格格式百花齐放，无标准 schema |
-| 5. 报告生成 | 🟡 半自动 | `build-student-analysis-report.py` 框架 + 手工 LLM | 错题分析 prompt 未固化 |
+### 1.1 当前形态 🔒
 
----
+- **入口**：https://zhongkao.gatesby.xyz （Vue SPA，无小程序版本）
+- **用户**：家长直接 Web 上传答题卡，5 分钟内拿到 PDF 报告
+- **后端**：阿里云 ECS（39.103.70.47）+ FastAPI + SQLite + 工作线程；详见 §4
+- **覆盖**：北京 13 区 · 6 计分科目 · 一模/二模/真题，KB 共 82+ 卷（首页 `/api/coverage` 实时展示）
 
-## 三、各步详细规格（含数据契约）
-
-### 步骤 1：试卷下载
-
-#### 输入（用户提供）
-
-```typescript
-interface ExamIdentifier {
-  city: '北京'              // 目前只支持北京
-  district: string         // '朝阳' | '海淀' | ...
-  grade: '初三'
-  examType: '一模' | '二模' | '期中' | '期末' | '中考真题'
-  year: number             // 2026
-  subject: '语文' | '数学' | '英语' | '物理' | '化学' | '道法' | '历史' | '生物' | '地理'
-}
-```
-
-#### 输出（系统产出）
+### 1.2 用户流程 🔒
 
 ```
-data/<exam-slug>/
-├── manifest.json                # 数据来源 + 文件清单
-├── <subject>-pages/
-│   ├── page-01.png              # 试卷扫描页
-│   ├── ...
-│   └── page-NN.png              # 含答案页
-└── source.html                  # 源页 HTML 备份
-```
-
-`manifest.json` 标准 schema：
-```json
-{
-  "exam": { "city": "北京", "district": "朝阳", "grade": "初三",
-            "examType": "一模", "year": 2026, "subject": "物理" },
-  "source": {
-    "name": "北京高考在线",
-    "url": "https://www.gaokzx.com/gk/zhongkao/154733.html",
-    "fetchedAt": "2026-05-13T10:00:00Z"
-  },
-  "pages": {
-    "questions": ["page-01.png", "..., "page-08.png"],
-    "answers":   ["page-09.png", "page-10.png"]
-  }
-}
-```
-
-#### 实现路径
-
-**阶段 1（短期，1 周）**：扩展 `admin/scripts/paper-scout.js` 加 `gaokzx` adapter：
-
-```js
-// admin/scripts/scouts/gaokzx.js  (新)
-async function discover({ year, examType, district, subject }) {
-  // 1. 抓 gaokzx 一模二模汇总页
-  // 2. 在表格里 grep 出 <district> 行 + <subject> 列的详情页 URL
-  // 3. 返回 { sourceUrl, ... }
-}
-async function fetch(sourceUrl, outDir) {
-  // 1. curl 详情页 HTML → out/source.html
-  // 2. 从 HTML 解析所有 cdn.gaokzx.com/zixunzhan/*.png
-  // 3. 按顺序下载 → out/<subject>-pages/page-NN.png
-  // 4. 写 manifest.json
-}
-```
-
-**阶段 2（中期）**：加更多源（教习网+人工滑块、夸克网盘公开链）。
-
-**阶段 3（长期）**：监控类、定时全量抓取（一模 5 月、二模 6 月、期中/期末 11-1 月）。
-
-#### 已知风险
-
-- ⚠️ gaokzx 短链可能失效 — manifest 中记录 fetchedAt，本地永久缓存
-- ⚠️ 某些区某些科目缺失 — 兜底走"上传 PDF" 路径
-- ⚠️ 法律边界 — 只爬公开页面，不绕付费墙；用户上传的家长版图片永远合法
-
----
-
-### 步骤 2：试卷结构化
-
-#### 输入
-
-`data/<exam-slug>/<subject>-pages/*.png` + `manifest.json`
-
-#### 输出
-
-```
-data/<exam-slug>/processed/<subject>/
-├── structured-cloud/
-│   ├── final.json                ⭐ 主要产物
-│   ├── final.md                  调试用人类可读版
-│   └── validation-report.json
-├── cloud-ocr/                    原始 OCR 结果
-└── answer-key.json               ⭐ 新增 — 答案与评分参考
-```
-
-`final.json` schema（已实现）：
-```json
-{
-  "questions": [
-    {
-      "id": "Q12",
-      "type": "choice" | "multi_choice" | "fill_blank" | "calculation" | "experiment" | "essay",
-      "section": "一、单项选择题",
-      "score": 2,
-      "stem": "如图所示，是小阳设计的测量液体密度的装置图...",
-      "options": [
-        { "label": "A", "text": "可将电流表改装为测量液体密度的仪表" },
-        { "label": "B", "text": "..." },
-        { "label": "C", "text": "..." },
-        { "label": "D", "text": "..." }
-      ],
-      "figures": ["fig-q12-a.png"],
-      "sourcePages": ["page-03"]
-    }
-  ],
-  "metadata": {
-    "totalScore": 70,
-    "questionCount": 26,
-    "sectionStructure": [
-      { "section": "一、单项选择题", "qRange": [1, 12], "totalScore": 24 },
-      { "section": "二、多项选择题", "qRange": [13, 15], "totalScore": 6 },
-      ...
-    ]
-  }
-}
-```
-
-`answer-key.json` schema（**新增，待开发**）：
-```json
-{
-  "answers": [
-    { "id": "Q1", "correct": "C" },
-    { "id": "Q12", "correct": "C" },
-    { "id": "Q15", "correct": ["A", "B", "D"], "partialCreditRule": "选对但不全得1分,错选0分" },
-    { "id": "Q16", "correct": ["不变", "晶体", "引力"], "score": 3 },
-    { "id": "Q25", "correctSolution": "...完整解题过程...", "keySteps": ["...", "..."], "score": 4 },
-    ...
-  ]
-}
-```
-
-#### 实现路径
-
-**已就绪**：试卷题目部分。
-
-**待开发**：
-1. **答案页自动识别**：每张 PNG 扫一遍，识别"答案及评分标准"标题 → 划分 questions / answers 页
-2. **答案结构化**：把答案页 OCR 结果 → 标准 `answer-key.json`
-   - 选择题：直接读答案表格 ABCD
-   - 填空题：抽取每空标准答案
-   - 大题：抽取每步给分要点
-3. **题目与答案匹配**：按题号映射 questions[i].id ↔ answers[j].id
-
-预估工作量：3-5 天。
-
----
-
-### 步骤 3：答题卡识别
-
-#### 输入（用户提供）
-
-- 学生答题卡照片（HEIC / JPG / PNG，1-N 张）
-- 关联的试卷标识（哪个考试的答题卡）
-
-#### 输出
-
-`data/<exam-slug>/students/<student-id>/answer-card.json`：
-```json
-{
-  "student": { "name": "贾小淇", "examId": "17020950" },
-  "rawImages": ["IMG_1929.jpg", "IMG_1930.jpg", ...],
-  "answers": [
-    { "qId": "Q1",  "type": "choice",    "filled": "C", "confidence": 0.95 },
-    { "qId": "Q12", "type": "choice",    "filled": "B", "confidence": 0.91 },
-    { "qId": "Q15", "type": "multi_choice", "filled": ["A","B"], "confidence": 0.88 },
-    { "qId": "Q16", "type": "fill_blank", "rawText": "(1) 不变 (2) 引力", "ocrConfidence": 0.85 },
-    { "qId": "Q25", "type": "calculation", "rawText": "R = U/I = 2V/10mA = 200Ω ...", "ocrConfidence": 0.80 }
-  ]
-}
-```
-
-#### 实现路径
-
-**关键技术挑战**：涂卡 OCR 不可靠（Qwen-VL 多次把已涂格识别错）。
-
-详细调研见 [archive/2026-05-14-ANSWER-CARD-OCR-RESEARCH.md](../archive/2026-05-14-ANSWER-CARD-OCR-RESEARCH.md)。
-
-**决策（2026-05-14）**：选 **B 路线 — 兼容任意答题卡**（牺牲准确率换零摩擦）：
-
-| | A. 标准答题卡 | **B. 任意答题卡** ✅ |
-|---|---|---|
-| 准确率 | 98%+ | ~90% |
-| 用户体验 | 家长需打印 PDF | **零摩擦** |
-| 周期 | 3-4 周 | 6-8 周 |
-
-**架构**：
-```
-家长拍照 → 模糊度检测 → 透视矫正
+首页 → 拍/选 4 张答题卡 → 上传
+   ↓ (后端识别考试 + 学生姓名，5-10 秒)
+确认考试页（含 PDF 卷面预览，家长可纠正姓名）→ 点"开始分析"
    ↓
-   ├─ 涂卡区：OpenCV CV pipeline（基于 OMRChecker 改）
-   └─ 手写区：Qwen-VL-Max（保留）
+(可选) 上传老师小分 Excel /  跳过让系统自动判分
+   ↓ (后端 3-5 分钟)
+处理进度页（5 阶段实时推进）
    ↓
-[置信度]
-   - 高置信 → 直接出结果
-   - 低置信（10% 题） → 小程序内 UI 让家长 1 秒确认
+报告页（PDF 下载 + 在线浏览）
 ```
 
-**关键事实（防止重复研究）**：
-- 国内三大云的"教育 OCR"全是切印刷试卷，**没有商业涂卡 OMR API**
-- LLM 视觉模型对涂卡 fill ratio 判断天生不擅长，换模型解决不了
-- C 端"手机拍 + 任意答题卡"自动批改在中国市场**没有先例**——技术上必须自建
+**已经停止支持**的早期设计（v0.1 提过但未实现 / 已弃）：
+- ❌ 小程序入口（改 Web SPA，触达更快、迭代更快）
+- ❌ 班主任群聊触发（独立产品，与学情分析解耦）
+- ❌ 一次性签名 token（暂用 analysis_id URL 隔离，强隔离待商业化阶段做）
+
+### 1.3 实测案例
+
+| 学生 | 考试 | 分数 | 备注 |
+|------|------|------|------|
+| 关丽涵 | 2026 海淀二模 物理 | 57.5/70 | Path B 选择题零误判，含 Q11/12/13/14/15 难判全对 |
+| 贾小淇 | 2026 朝阳一模 物理 | 60/70 | 缺字母法基线，无回归 |
 
 ---
 
-### 步骤 4：小分解析
+## 2. 五阶段流水线（State Machine） 🔒
 
-#### 输入（用户提供）
+每个 analysis 在 SQLite `analyses` 表中按以下状态机演化：
 
-任意之一：
-- **A. 上传 xlsx**：班级小分表（如 `6班一模物理小分.xlsx`）
-- **B. 上传截图**：手机拍的小分通知截图
-- **C. 手工录入**：小程序里逐题输入分数
-
-#### 输出
-
-`data/<exam-slug>/students/<student-id>/scores.json`：
-```json
-{
-  "examTotal": { "scored": 60, "fullScore": 70 },
-  "questions": [
-    { "qId": "Q1",  "scored": 2, "fullScore": 2 },
-    { "qId": "Q12", "scored": 0, "fullScore": 2, "isWrong": true },
-    { "qId": "Q15", "scored": 1, "fullScore": 2, "isPartial": true },
-    { "qId": "Q20", "scored": 2, "fullScore": 4, "isPartial": true },
-    ...
-  ],
-  "lostPoints": { "total": 10, "byQuestion": [{"qId":"Q12","lost":2}, ...] }
-}
+```
+detecting          ─→ ready_confirm ─→ running ─→ done | failed
+(L0 上传识别考试)    (家长确认页)      (L2-L5)     (终态)
 ```
 
-#### 实现路径
+后端推进阶段：
 
-**A. xlsx 解析（最快）**：
-- 不同学校的 xlsx 格式有差异，但**列基本固定**：题号 + 满分 + 得分
-- 用规则匹配题号格式（"12(2_0)" → qId=Q12, fullScore=2）
+| stage | name | 主要动作 | 耗时 | 实现文件 |
+|-------|------|----------|------|----------|
+| 1 | 识别考试信息 | 上传 4 张照片 → vl-max card_meta 抽考试名+学生名 → exam_match 命中 KB yaml | 5-10s | `server/tasks.py::_L0_detect` |
+| 2 | 识别答题卡作答 | **Path B → 缺字母法 → Path A → vl-max** 四引擎选择题（§3.1）+ 腾讯云方框检测裁主观题 | 15-30s | `scripts/answer-card-ocr/detect.py` |
+| 3 | 对照标准答案 / 系统自动判分 | 若有老师 xlsx → parse_scores；否则 vl-max 并发逐题判 + 整页兜底 | 30-60s | `server/parse_scores.py` / `server/auto_grade.py` |
+| 4 | AI 分析失分主因 | 失分题并发归因 LLM（qwen-max，带 cache）+ 模块掌握度统计 | 30-60s | `scripts/student-report/lib/analyze.py` |
+| 5 | 生成提分建议 | 整卷诊断 + 行动计划 LLM → MD → KaTeX HTML → Chrome PDF | 30-60s | `scripts/student-report/build_report.py` |
 
-**B. 截图 OCR**：
-- 调 Aliyun 教育 OCR `recognize-edu-paper-structed` 提表格
-- 或用 PaddleOCR + 表格识别模型
+**总耗时目标**：3-5 分钟（含网络 + LLM 调用）。
 
-**C. 手工录入**：
-- 小程序里展示题号列表，每题一个数字输入框
-- 默认值 = 满分（家长改"丢分"题即可）
-
-预估工作量：A + C 两天，B 加 3 天。
+**子进程边界**：1-2 在主进程跑（共享内存大模型），3 调 LLM API，4-5 是独立 build_report 子进程（stdout 通过 STAGE_MARKERS 推进度，stderr 直透 journalctl）。
 
 ---
 
-### 步骤 5：综合分析生成报告
+## 3. 答题卡识别（核心难题，最复杂）
 
-#### 输入
+### 3.1 选择题：四引擎合并 🔒
 
-来自前 4 步的：
-- `final.json`（试卷题目）
-- `answer-key.json`（标准答案）
-- `answer-card.json`（学生答案）
-- `scores.json`（学生小分）
-- 学生历史档案（如果有）
+**这是 v1.1 vs v0.1 最大变化**。v0.1 设想"OpenCV CV pipeline 兜底"，实际经过 8 周迭代收敛到**四引擎按优先级合并**。
 
-#### 输出
+#### 引擎清单
 
-`learning situation/<student>_<exam-slug>_分析报告.pdf` + `.md`
+| 序号 | 引擎 | 实现 | API 成本 | 适用 | 关丽涵卡命中 |
+|------|------|------|---------|------|--------------|
+| **0** | **Path B 纯像素 blob** 🆕 v1.1 | y 直方图找涂卡行 → 行内 x 扫黑块 → 反推 base_x + 字母 | **0** | 海淀方括号 `1.[A][B][C][D]` | **15/15** |
+| 1 | 缺字母法 | qwen-vl-ocr 读字母，涂黑 → OCR 读不到 → 推断填充 | qwen-vl-ocr 1 call | 朝阳裸字母 `1. A B C D` | 8/15（多选） |
+| 2 | Path A bbox + 像素 | qwen-vl-max 接地返回 `[X]` bbox → 本地 numpy 密度 | qwen-vl-max 1 call | 海淀（备用） | 9/15 |
+| 3 | qwen-vl-max 直接判 | 看图直接给字母 | qwen-vl-max 1 call | 兜底（不稳定） | 不稳 |
 
-#### 算法/Prompt 设计
+#### 合并优先级 🔒
 
-**1. 失分聚焦**：
 ```python
-focused_questions = [
-    q for q in scores.questions
-    if q.isWrong or q.isPartial
-]
+# detect.py:detect_card 中合并逻辑
+if blob_choices[qid].filled and conf >= 0.9:   # Path B 强信号
+    use blob
+elif qid in real_hits:                         # 缺字母法真识别（filled 非空）
+    use 缺字母法
+elif density_choices[qid].filled and conf >= 0.85:  # Path A 强信号
+    use density
+elif density_choices[qid].filled:               # Path A 弱
+    use density
+elif vlmax_choices[qid].filled:                 # vl-max 兜底
+    use vl-max
+else:                                            # 全空 → no_answer
+    use 缺字母法 no_answer 推断
 ```
 
-**2. 每题错因分析 — 标准 Prompt**：
+每个 answer 记录 `source` 字段（`blob`/`缺字母`/`density`/`vl-max`/`no_answer`）方便事后审计。
+
+#### Path B 原理 🔒
+
 ```
-角色：你是该学科教师。
+1. y 直方图：每行扫 300-2250 列 x 范围内黑像素数
+   - 100 < n < 800 → 涂卡行候选
+   - 连续 ≥ 24 px 高 → 涂卡行 band（过滤 banner 边缘）
+2. 行内 x 直方图：每列扫 band 高度内黑像素数 → 平滑 → 找连续高密度区间
+   - 宽 20-80 px → 涂卡 blob 中心
+3. 反推 base_x：每个 blob 假设是某列某字母 → 候选 = blob - col*345 - letter*70
+   - bin=5 直方图投票最高峰 → 真 base_x
+4. blob 中心 → 反推 (qi, letter)：(blob.x - base_x) mod 345 → 字母偏移 70-step
+```
 
-输入数据：
-- 题目: {q.stem}（含选项/图）
-- 标准答案: {answer_key.correct}
-- 学生答案: {student.filled}
-- 学生扣分: -{lost}/{full}
+**关键参数**（关丽涵卡校准）🔄：
+- `COL_STEP_INTER = 345` 题间距
+- `LETTER_STEP = 70` 字母间距
+- `CELL_W = 75, CELL_H = 50` 计 density 时
+- `tol = 18` blob 中心到 letter 位置容差
 
-请输出 JSON：
-{
-  "knowledgePoint": "电学综合 / 串联分压",
-  "errorType": "概念错 | 计算错 | 审题漏 | 表述不规范 | 读图错 | 其他",
-  "rootCause": "(50-100 字)",
-  "improvement": "(50-100 字，具体可执行)",
-  "similarQuestions": ["...知识库里同知识点题目 ID..."]
+**Layout 假设** 🔒：海淀/朝阳标准物理答题卡 5×3 单选 + 1 多选行：
+```python
+_LAYOUT_5x3 = {
+    "rows": [{1-5, multi=F}, {6-10, multi=F}, {11-12, multi=F}, {13-15, multi=T}],
+    "n_pos_per_row": 5,
 }
 ```
+其他学科/区如不匹配 → Path B 返回空 → 自动 fallback。**朝阳卡 Path B 找不到 4 个 row band → 缺字母法接管**（实测无回归）。
 
-**3. 整卷综合分析 — Prompt**：
-```
-学生失分分布：{各题失分汇总}
-请输出：
-- 三大失分主因（聚类）
-- 知识点掌握情况按板块评分（声光热/力学/电学/...）
-- 提分优先级（按ROI排序）
-- 4 周备战清单
-- 本次考试的肯定面（避免打击）
-```
+#### 已被否决的方案
 
-**4. 报告渲染**：
-- MD 模板（已有 v1）→ HTML（用 KaTeX 渲染公式）→ Chrome --headless=new → PDF
+| 方案 | 否决原因 |
+|------|----------|
+| 标准答题卡（家长打印 PDF） | 用户摩擦太大，B 端独立产品 |
+| 模板匹配 | 海淀/朝阳/西城每区印版略不同，模板维护成本高 |
+| qwen-vl-max 主路径直接判 | 模型 prior 把涂黑当 token 噪声补全字母，朝阳卡 -15 分回归 |
+| 单一 OCR 引擎 | 任意单引擎都有死角，多引擎按 source 区分置信度才稳 |
 
-#### 实现路径
+### 3.2 主观题：裁切 + 手写 OCR + AI 评分 🔒
 
-主要工作：
-1. 把已生成的 3 份报告的**模板**抽取出来 → `report-template.md.j2`
-2. 把 LLM prompt 固化到代码里（不再每次手写）
-3. 把 `build-student-analysis-report.py` 改造成完整流水线
-
-预估工作量：4-6 天。
-
----
-
-## 四、用户侧 UI 流程（小程序）
+#### 流程
 
 ```
-┌──────────────────────────────────────┐
-│ [李同学的私人教研组] 群聊 UI         │
-├──────────────────────────────────────┤
-│ 张老师·班主任                          │
-│ 朝阳一模成绩出来了 📊                  │
-│ 要不要做个详细分析？我让科任老师看看   │
-│                                       │
-│ [✨ 生成学情分析] ← 点击触发           │
-└──────────────────────────────────────┘
-        ↓ 跳转分析创建页
-┌──────────────────────────────────────┐
-│ 第 1 步：选考试                        │
-│   2026 朝阳一模 · 物理  ✅            │
-│                                       │
-│ 第 2 步：上传答题卡                    │
-│   [+ 拍照] [+ 从相册]                  │
-│   预览 4 张 ✅                         │
-│                                       │
-│ 第 3 步：录入小分                      │
-│   [上传 Excel] [手动输入]              │
-│   总分 60/70 ✅                        │
-│                                       │
-│ [开始分析] →                           │
-└──────────────────────────────────────┘
-        ↓ 后端处理（~30秒）
-┌──────────────────────────────────────┐
-│ 处理中... ✨                          │
-│  ✓ 识别答题卡                          │
-│  ✓ 对照标准答案                        │
-│  ⏳ AI 老师分析每道错题                │
-│  ⏳ 生成报告...                        │
-└──────────────────────────────────────┘
-        ↓
-┌──────────────────────────────────────┐
-│ 学情分析已生成 🎯                      │
-│                                       │
-│ [📄 查看 PDF 报告]                     │
-│ [💬 让王老师在群里讲讲]                │
-│ [📌 加到学习计划]                      │
-└──────────────────────────────────────┘
+1. 腾讯云 GeneralAccurateOCR 检测每页方框（粉色/黑色框）
+2. 框内题号文本 (qwen-vl-ocr) 识别 → 框 → qid 映射
+3. 严格几何 fallback：prev+next qid 都已知且只缺 1 个 → 补中间
+4. 框图 → 讯飞手写 OCR 识别学生作答文字
+5. 切图 + 文字 → qwen-vl-max 单题打分（带 cropped 图 + 标答 + 步骤 prompt）
+6. 兜底：腾讯云裁切失败的题号 → qwen-vl-max 看整页打分
 ```
 
----
+**关键文件**：
+- `scripts/answer-card-ocr/crop_subjective.py` — 腾讯云方框检测 + 严格 fallback
+- `scripts/answer-card-ocr/xfyun_ocr.py` — 讯飞手写
+- `scripts/answer-card-ocr/subjective_grade.py` — vl-max 单题/整页打分
 
-## 五、实施路线图
+#### 评分稳定性 ⏳
 
-按"先打通端到端、再优化各环节"原则：
-
-### 第 1 周（脚手架）— Pipeline MVP
-
-| 任务 | 产物 |
-|------|------|
-| 定义标准 schema 文件 | `schemas/{manifest,final,answer-key,answer-card,scores}.schema.json` |
-| 串联现有脚本成 CLI | `scripts/student-report/pipeline.py <exam-slug> <student-id>` |
-| 测试：复现贾小淇物理报告 | 端到端跑通 |
-
-### 第 2 周（最大风险点 1）— 涂卡 CV 流水线
-
-| 任务 | 产物 |
-|------|------|
-| 答题卡边界检测 + 透视矫正 | `scripts/answer-card-ocr/bubble-detect.py` |
-| 单选/多选格子定位（模板法） | 同上 |
-| 填涂度阈值 | 用贾小淇 4 张卡 + 至少 5 张其他学生卡校准 |
-
-### 第 3 周（最大风险点 2）— 答案页结构化
-
-| 任务 | 产物 |
-|------|------|
-| 答案页自动识别 | `scripts/exam-ocr/extract-answer-key.py` |
-| 选择题 ABCD 表格 OCR | 同上 |
-| 大题给分要点抽取 | LLM 辅助 |
-
-### 第 4 周（产品化）— 试卷检索 + 报告渲染
-
-| 任务 | 产物 |
-|------|------|
-| gaokzx adapter | `admin/scripts/scouts/gaokzx.js` |
-| 报告 LLM prompt 固化 | `scripts/student-report/prompts.py` |
-| 报告模板（J2） | `scripts/student-report/report-template.md.j2` |
-
-### 第 5-6 周（小程序集成）
-
-| 任务 | 产物 |
-|------|------|
-| 后端 API（4 个端点） | `backend/api/student-report/` |
-| 小程序 UI（3 步表单 + 报告查看页） | `miniprogram/pages/student-report/` |
-| 班主任群聊触发 | 联动现有群聊 UI |
+主观题 vl-max 评分波动 ±5 分（同一卡跑多次结果不同）。已识别的改善方向（未实施）：
+1. 切分质量提升（用户提议：先切分准再上大模型）
+2. 多次评分取中位数
+3. 教师人工抽查机制
 
 ---
 
-## 六、4 个 API 设计（前后端契约）
+## 4. 后端架构 🔒
 
-### POST `/api/exam/discover`
-请求：`ExamIdentifier` → 返回：`{ examSlug, paperReady: bool, manifest? }`
-（已有缓存就直接返回；没有就触发抓取任务，返回 task_id 让前端轮询）
+### 4.1 服务部署
 
-### POST `/api/student-report/upload-card`
-请求：multipart files + `{ examSlug, studentId }` → 返回：`{ answerCardId, ocrPreview }`
-（前端展示 OCR 结果让家长核对涂卡题）
-
-### POST `/api/student-report/score`
-请求：multipart xlsx 或 JSON 直接录入 → 返回：`{ scoresId, lostPointsPreview }`
-
-### POST `/api/student-report/generate`
-请求：`{ examSlug, studentId, answerCardId, scoresId }` → 返回：`{ taskId }`
-SSE / WebSocket 实时推送进度 → 完成时返回 `{ pdfUrl, mdUrl }`
-
----
-
-## 七、数据隐私
-
-- 学生姓名、答题卡、报告等 **不进入公共仓库** 已 gitignore（`learning situation/`、`students/`）
-- 后端存储：学生数据按 `unionid` 隔离，单租户
-- 报告 PDF 仅家长本人可访问，**链接含一次性签名 token**，1 小时过期
-
----
-
-## 八、已知关键风险
-
-| 风险 | 影响 | 缓解 |
+| 组件 | 位置 | 配置 |
 |------|------|------|
-| 🔴 涂卡 OCR 准确率低 | 选择题失分判断错误 | UI 让家长二次确认；阶段 B CV pipeline |
-| 🟡 试卷源不稳定 | gaokzx 短链 / 政策变化 | 多源 fallback + 用户上传兜底 |
-| 🟡 答案页结构化失败 | 报告缺标答对照 | 关键失分题用 LLM 补 + 人工备份 |
-| 🟢 小分表格百花齐放 | xlsx 解析失败 | 多种 fallback（截图 OCR、手工录入） |
-| 🟡 LLM 错题分析质量不稳 | 报告内容生硬/不准 | 固化高质量 prompt，对照已有 3 份案例做回归测试 |
+| FastAPI app | `/opt/zhongkao-agent/server/main.py` | systemd `zhongkao.service`，uvicorn :8200 |
+| Web SPA | `/opt/zhongkao-agent/web/dist` | Nginx 反代 |
+| HTTPS | https://zhongkao.gatesby.xyz | Let's Encrypt 证书 |
+| 知识库 | `/opt/zhongkao-agent/knowledge-base/exams/` | git pull 同步 |
+| 存储 | `students/_web/<aid>/` + `out/student-reports/<aid>/` | 本地文件 |
+| DB | `server/data.sqlite3` | SQLite，`analyses` 表 |
+
+### 4.2 API 端点 🔒
+
+| Method | Path | 用途 |
+|--------|------|------|
+| GET | `/api/health` | 健康检查 |
+| POST | `/api/analyses` | L0：multipart 上传 1-N 张照片 → 返回 `aid` |
+| GET | `/api/analyses/{aid}/detect` | 拉考试识别结果（轮询用） |
+| POST | `/api/analyses/{aid}/start` | 家长确认页"开始分析"，可传 `student_name` 覆盖 |
+| POST | `/api/analyses/{aid}/scores` | 上传老师小分 xlsx；不传则系统自动判分 |
+| GET | `/api/analyses/{aid}/status` | 轮询当前 stage |
+| GET | `/api/analyses/{aid}/report` | 返回 report.json |
+| GET | `/api/analyses/{aid}/report.pdf` | 下载 PDF |
+| GET | `/api/analyses/{aid}/paper.pdf` | 下载试卷原卷（家长核对用） |
+| GET | `/api/coverage` | 首页 KB 覆盖范围（1h 内存缓存） |
+| GET | `/api/analyses` | 后台分析列表 |
+
+### 4.3 数据契约（核心 JSON 文件）
+
+学生分析目录 `students/_web/<aid>/<exam_slug>/`：
+
+| 文件 | 由谁产出 | 内容 |
+|------|---------|------|
+| `student.json` | L0 card_meta | `{name, examId}` |
+| `answer-card.json` | L2 detect_card | `{student, answers: [{qId, type, filled, confidence, ocrSeen, source, ...}]}` |
+| `scores.json` | L3 parse_scores 或 auto_grade | `{examTotal, questions: [{qId, scored, fullScore, ...}]}` |
+| `answer-card-photos/` | L0 | 原始照片 + cropped/q{NN}.png 主观题裁切 |
+| `.score_source` | L3 | `teacher_xlsx` 或 `auto_grade` 标记 |
+
+报告输出 `out/student-reports/<aid>/<exam_slug>/`：
+
+| 文件 | 内容 |
+|------|------|
+| `report.md` | Markdown 源 |
+| `report.pdf` | 最终 PDF（KaTeX 渲染数学/物理公式） |
+
+### 4.4 LLM 缓存策略 🔒
+
+**Cache key 必含 `student_filled + std_answer` md5**：
+
+```python
+sig = f"{q.student_filled or ''}|{q.std_answer or ''}"
+qkey = f"{q.qid}-{hashlib.md5(sig.encode()).hexdigest()[:8]}"
+cache_key = f"report-v4-{student_name}-{slug}-{qkey}"
+```
+
+**v0.1 教训**：早期 cache key 仅 `student_name + slug + qid` 不含作答。当答题卡 OCR 修复重跑后，旧 cache 命中 → 报告还用旧"未作答"分析 → 报告内容与实际作答错位（关丽涵 Q8/10/12 踩坑）。v1.1 修复后，作答任意改动 → cache miss → 自动重算。
+
+### 4.5 容量与故障
+
+**已知问题** ⏳：
+- 阿里云 ECS 内存有限，并发跑多份分析 → OOM kill（systemd 自动重启，但当前任务僵死）
+- 应对：单 worker 串行执行，或加内存监控提前拒绝
 
 ---
 
-## 九、与 PRD 主线的关系
+## 5. 知识库（exam yaml） 🔒
 
-本功能是 [PRD v5.0](../product/PRD.md) **「私人教研组」**模型中**最高频、最有价值**的一项：
+**结构**（详见 [`KB-LAYOUT.md`](../architecture/KB-LAYOUT.md) + [`EXAM-FORMAT-SPEC.md`](EXAM-FORMAT-SPEC.md)）：
 
-- **频次**：每年至少 6 次（开学摸底 + 期中 + 期末 + 一模 + 二模 + 中考）
-- **价值**：直接回答家长五问中的 Q2「差的这些分从哪里补」+ Q4「这周做了没进步了没」
-- **触达**：与"小程序群聊 UI" + "服务号订阅消息推送"天然结合
+```
+knowledge-base/exams/mock/<subject>/beijing/<year>-<district>-<exam_type>.yaml
+                  zhenti/<subject>/beijing/...
+```
+
+**当前覆盖**（2026-05-30）：
+- 13 区 × 6 科目 × 一模 ≈ 60 卷已就绪
+- 二模 13 区物理/数学/英语完成；语文道法部分区进行中
+- 真题：2024-2025 北京中考 6 科
+
+**yaml 必备字段**：
+- `meta`：district / subject / year / examType / duration / fullScore
+- `questions`：每题 `{qId, type, score, stem, options?, answer, solution, knowledgePoints, module}`
+- `figures`：题面图片（PNG）
+
+**新增卷的生产路径** 🔒：
+- docx 路线（首选）：`scripts/exam-docx/{chinese,math,english,physics,politics}_docx_paper.py` + `*_inspect.py`
+- 图片路线（无 docx 时）：`scripts/exam-ocr/*_image_paper.py`
 
 ---
 
-## 十、术语表
+## 6. 错误预算与回归门控 🔄
+
+### 6.1 选择题识别 SLA 目标
+
+| 指标 | 当前 | 目标 |
+|------|------|------|
+| 海淀方括号格式准确率 | 100%（关丽涵 15/15） | ≥ 99% |
+| 朝阳裸字母准确率 | 100%（贾小淇 baseline） | ≥ 99% |
+| 其他区（西城/东城/...） | 未充分测试 | ≥ 95% |
+
+### 6.2 主观题切分 SLA 目标
+
+| 指标 | 当前 | 目标 |
+|------|------|------|
+| 腾讯云方框命中率 | 4-11/11（不稳定） | ≥ 80% |
+| 严格 fallback 触发率 | <20% | <30% |
+| vl-max 整页兜底触发 | 0-7/11（与命中率反相关） | < 50% |
+
+### 6.3 回归测试套件
+
+`scripts/test/e2e_audit.py` 跑端到端：
+- `CASES=guanlihan-haidian-physics-er` → 海淀二模 物理
+- `CASES=jiaxiaoqi-physics` → 朝阳一模 物理
+- `SCENARIOS=auto` 或 `teacher_xlsx`
+
+**部署后 must run**：双 case 跑通且分数稳定（±2 分）才能合并到 main。
+
+---
+
+## 7. 安全 / 隐私 🔒
+
+- `learning situation/`、`students/`、`test-data/_runs/` 全部 gitignore
+- 学生数据按 `aid`（随机 12 字节十六进制）隔离，无认证（当前 alpha 阶段）
+- API key（DashScope/腾讯云/讯飞）systemd 环境变量注入，不落代码
+- GitHub 已开 push protection，禁止 secret 入仓
+
+**待商业化时增加** ⏳：
+- 微信 OAuth 登录 + `unionid` 绑定
+- 报告 URL 一次性签名 token（1h 过期）
+- 学生数据 60 天自动归档
+
+---
+
+## 8. 待办与缺口 ⏳
+
+按优先级：
+
+| 优先级 | 项 | 说明 |
+|-------|----|----|
+| P0 | 主观题切分质量 | 切分→大模型链路："先切准"，参考 §3.2 改善方向 |
+| P1 | KB 覆盖到全 13 区 6 科二模 | 4 类 docx parser 已就绪，按区批跑 |
+| P1 | OOM 防御 | 服务并发限流 + 内存监控 |
+| P2 | 多卷综合学情（多次考试对比） | PRD 已规划，需要历史数据积累 |
+| P2 | 教师后台批量生成 | B 端需求，单租户暂不做 |
+
+---
+
+## 9. 与早期版本（v0.1）的关键差异
+
+| 维度 | v0.1（2026-05-13 草案） | v1.1（2026-05-30 生产） |
+|------|------------------------|-----------------------|
+| 入口 | 小程序 | Web SPA |
+| 涂卡方案 | OpenCV bubble detect（设想） | **4 引擎合并，Path B 像素 blob 首选**（实证） |
+| 答案匹配 | answer-key.json（待开发） | KB exam yaml `answer` 字段（已落 80+ 卷） |
+| 报告渲染 | MD → HTML → PDF（设想） | MD → KaTeX HTML → Chrome --headless=new（已部署） |
+| LLM 缓存 | 未提及 | student_filled+std_answer md5 hash 入 key |
+| API | 4 个端点设想 | 12+ 端点已上线 |
+| 部署 | 未明确 | 阿里云 ECS + Nginx + HTTPS |
+
+**核心 insight**：v0.1 推断"涂卡 OCR 是最大风险"是对的，但解决路径预测错了 —— **不是 OpenCV bubble detect，而是 4 引擎按 source 区分置信度合并**。Path B 这一招直到 v1.1 才被发明，把海淀格式从 0% 拉到 100%。
+
+---
+
+## 10. 术语表
 
 | 术语 | 含义 |
 |------|------|
-| exam-slug | 考试唯一标识，格式 `<year>-<district>-<exam-type>-<subject>`，如 `2026-chaoyang-yi-physics` |
-| 试卷结构化 | 把扫描页 OCR + 题号识别 + 题型分类 + 选项/题干分离 → 标准 JSON |
-| 涂卡 | 选择题答题卡的黑色填涂格 |
-| 失分主因 | 同一类错误的聚类标签（如"电学综合分析能力不足"） |
-| 五问 | 家长最关心的 5 个问题（见 PRD §1.3） |
+| exam_slug | `<year>-<district_en>-<exam_type_en>-<subject_en>`，如 `2026-haidian-er-physics` |
+| aid | analysis_id，12 位十六进制，本次分析的唯一标识 |
+| Phase A / B | A=选择题识别（§3.1）；B=主观题切分+评分（§3.2） |
+| Path A / B | 选择题识别的两条像素技术路线：A=vl-max bbox + density；B=纯 blob 检测 |
+| 缺字母法 | qwen-vl-ocr 读字母，涂黑 → 看不到字母 → 推断填充 |
+| real_hit | 缺字母法识别到非空填充（type=choice/multi_choice），区别于 no_answer |
+| KB | knowledge-base/exams 下的标准答案 yaml |
+| 五问 | 家长 5 大关切，见 [`PRD.md`](../product/PRD.md) §1.3 |
