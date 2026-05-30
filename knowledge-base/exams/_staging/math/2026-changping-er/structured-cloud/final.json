@@ -37,20 +37,18 @@
     {
       "number": 25,
       "correct": "",
-      "solution": ""
+      "solution": "当开关$\\text{S}_{1}$、$\\text{S}_{2}$同时闭合时为加热档，等效电路如图甲所示；当只有开关$\\text{S}_{1}$闭合时为保温档，等效电路如图乙所示\n![](figures/image13.png)\n（1）电热器在处于加热挡时的电流$I = \\frac{P_{加热}}{U} = \\frac{1210 \\text{W}}{220 \\text{V}} = 5 . 5 \\text{A}$（2分）\n（2）当电路处于加热档时，$R_{1} = \\frac{U^{2}}{P_{加热}} = \\frac{\\left(\\left(220,\\text{V}\\right)\\right)^{2}}{1210 \\text{W}} = 40 \\Omega$\n当电路处于保温档时，$R_{总} = \\frac{U^{2}}{P_{保温}} = \\frac{\\left(\\left(220,\\text{V}\\right)\\right)^{2}}{100 \\text{W}} = 484 \\Omega$\n$R_{2} = R_{总} - R_{1} = 484 \\Omega - 40 \\Omega = 444 \\Omega$（2分）"
     },
     {
       "number": 26,
       "correct": "",
-      "solution": ""
+      "solution": "（1）水对水桶底的压力\n$p_{水对桶} = \\rho_{水} g h = 1 . 0 \\times 10^{3} \\text{kg} / \\text{m}^{3} \\times 10 \\text{N} / \\text{kg} \\times 0 . 28 \\text{m} = 2 . 8 \\times 10^{3} \\text{Pa}$\n$F = p_{水对桶} S = 2 . 8 \\times 10^{3} \\text{Pa} \\times 0 . 03 \\text{m}^{2} = 84 \\text{N}$（2分）\n（2）水桶放在水平地面上\n$p = \\frac{F_{总}}{S} = \\frac{720 \\text{N}}{0 . 04 \\text{m}^{2}} = 18000 \\text{Pa}$\n[公式]\n人站在水平地面上\n![](figures/image22.png)\n[公式]\n[公式]\n[公式]（2分）"
     }
   ],
   "validation": {
-    "errors": [
-      "answer/solution 全空率 2/2 >50%"
-    ],
+    "errors": [],
     "warnings": [
-      "figures/ 下未引用图 38 张: ['image1.png', 'image100.png', 'image101.png', 'image104.png', 'image107.png']..."
+      "figures/ 下未引用图 36 张: ['image1.png', 'image100.png', 'image101.png', 'image104.png', 'image107.png']..."
     ]
   },
   "stats": {

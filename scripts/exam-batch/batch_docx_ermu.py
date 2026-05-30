@@ -48,30 +48,11 @@ def run_one(subject: str, region: str) -> Tuple[str, str, str]:
 
     # Step 1: docx_paper → final.json (math 用 --out-dir，其余 --slug)
     if subject == "math":
-        # math 不接 zip，需先解压找解析版 docx
-        if src.suffix.lower() == ".zip":
-            import zipfile
-            tmp_unzip = STAGING / "math" / slug / "src-unzip"
-            tmp_unzip.mkdir(parents=True, exist_ok=True)
-            with zipfile.ZipFile(src) as z:
-                z.extractall(tmp_unzip)
-            docxs = list(tmp_unzip.rglob("*.docx"))
-            if not docxs:
-                return (subject, region, "FAIL zip 内无 docx (可能 PDF only)")
-            # 优先级：解析版 > 试卷版（无答案字样）> 最大文件
-            jiexi = [d for d in docxs if "解析" in d.name and "原卷" not in d.name]
-            shijuan = [d for d in docxs if "试卷" in d.name and "答案" not in d.name]
-            if jiexi:
-                docx_path = jiexi[0]
-            elif shijuan:
-                docx_path = shijuan[0]
-            else:
-                docx_path = max(docxs, key=lambda d: d.stat().st_size)
-        else:
-            docx_path = src
+        # math 现支持 zip 输入（自带 _pick_jiexi_docx + 双 docx merge），
+        # 直接传 zip 触发 merge fix（chaoyang/pinggu Q17-28 sol 填）
         out_dir = STAGING / "math" / slug
         cmd1 = ["python3", str(ROOT / "scripts/exam-docx/math_docx_paper.py"),
-                str(docx_path), "--out-dir", str(out_dir)]
+                str(src), "--out-dir", str(out_dir)]
     else:
         cmd1 = ["python3", str(ROOT / f"scripts/exam-docx/{subject}_docx_paper.py"),
                 str(src), "--slug", slug]

@@ -227,3 +227,263 @@ d．男、女员工$\text{BMI}$数据的平均数、中位数如下：
 （2）点$\left(a,,,a,+,1\right)$的关联图形的坐标为$\left(m,,,n\right)$，用含$m$的代数式表示$n$：________；
 
 （3）已知点$A \left(x,,,y\right)$在直线$y = x - 2$上，点$B \left(x,+,1,,y,+,1\right)$，直接写出线段$A B$和它的关联图形的最小覆盖圆的半径$r$的最小值，及此时点$A$的坐标．
+
+数学参考答案
+
+![](figures/image1.png)北京市朝阳区九年级综合练习（二）
+
+数学试卷答案及评分参考
+
+一、选择题（共16分，每题2分）
+
+| 题号 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
+|---|---|---|---|---|---|---|---|---|
+| 答案 | A | C | C | B | C | A | B | D |
+
+二、填空题（共16分，每题2分）
+
+| 题号 | 9 | 10 | 11 | 12 |
+|---|---|---|---|---|
+| 答案 | $x \neq 5$ | $m \left(a,+,2\right) \left(a,-,2\right)$ | 2 | 0 |
+| 题号 | 13 | 14 | 15 | 16 |
+| 答案 | $>$ | 15 | $3 \sqrt{3}$ | 80；2 |
+
+三、解答题（共68分，第17-19题，每题5分，第20题6分，第21题5分，第22题6分，第23题5分，第24题6分，第25题5分，第26题6分，第27-28题，每题7分）
+
+17．解：原式$= 2 \sqrt{2} + 4 - 1 - 2 \times \frac{\sqrt{2}}{2}$    4分
+
+$= \sqrt{2} + 3$．    5分
+
+18．解：原不等式组为$\left{\begin{matrix} 2 x + 3 \geq x + 6, \textcircled{1} \\ \frac{2 x + 1}{3} > x - 1 . \textcircled{2} \end{matrix}\right$
+
+解不等式①，得$x \geq 3$．    2分
+
+解不等式②，得$x < 4$．    4分
+
+∴原不等式组的解集为$3 \leq x < 4$．    5分
+
+19．解：$\left(2,m,+,1\right) \left(2,m,-,1\right) - \left(\right. m + 1 \left.\right)^{2}$
+
+$= \left(4,m^{2},-,1\right) - \left(m^{2},+,2,m,+,1\right)$    2分
+
+$= 3 m^{2} - 2 m - 2$．    3分
+
+$\because 3 m^{2} - 2 m - 7 = 0$，
+
+$. \therefore 3 m^{2} - 2 m = 7$．    4分
+
+∴原式$= 5$．    5分
+
+20．（1）证明：$\because$$A B = B C$，$B D$为$A C$边上的高，
+
+$\therefore$$A D = C D$．    1分
+
+$\because$$E$为$A B$边的中点，
+
+$\therefore D E \parallel B C$．
+
+$\because$$F H = D E$，
+
+∴四边形$D E F H$是平行四边形．    2分
+
+$\because$$E F \bot B C$，
+
+$\therefore$$\angle E F H = 90 \circ$．
+
+∴四边形$D E F H$是矩形．    3分
+
+![](figures/image36.jpeg)
+
+（2）解：$\because$$B C = 10$，
+
+$\therefore$$A B = 10$．
+
+$\therefore$$D E = B E = 5$．    4分
+
+$\therefore$$F H = 5$．
+
+$\because$$\text{sin} \angle A B C = \frac{4}{5}$，
+
+$\therefore$$E F = B E \cdot \text{sin} \angle A B C = 5 \times \frac{4}{5} = 4$．    5分
+
+在$\text{Rt} \triangle B E F$中，由勾股定理，得$B F = \sqrt{B E^{2} - E F^{2}} = 3$．
+
+$\therefore$$H C = 2$．
+
+∵四边形$D E F H$是矩形，
+
+$\therefore$$D H = E F = 4$，$\angle D H C = 90 \circ$．
+
+在$\text{Rt} \triangle D H C$中，由勾股定理，得$C D = \sqrt{C H^{2} + D H^{2}} = 2 \sqrt{5}$．    6分
+
+21．解：（1）∵函数$y = k x + b \left(k,\neq,0\right)$的图象经过点$A \left(1,3\right)$和$B \left(3,1\right)$，
+
+∴$\left{\begin{matrix} k + b = 3, \\ 3 k + b = 1 . \end{matrix}\right$    1分
+
+解得$\left{\begin{matrix} k = - 1, \\ b = 4 . \end{matrix}\right$    2分
+
+∴该函数的表达式为$y = - x + 4$．    3分
+
+（2）$0 < m \leq 1$．    5分
+
+22．解：设一台$B$型节能灯的平均年用电量为$x$度．    1分
+
+由题意，得$\frac{15000}{2 x - 30} = \frac{9000}{x}$．    3分
+
+解得$x = 90$．    4分
+
+经检验，$x = 90$是原分式方程的解，且符合题意．    5分
+
+$\therefore$$2 x - 30 = 150$．
+
+答：一台$A$型节能灯的平均年用电量为150度．    6分
+
+23．解：（1）20.5；    1分
+
+（2）>；    2分
+
+（3）①23；    3分
+
+②140，120．    5分
+
+24．（1）证明：如图，作$D G \bot E F$于点$G$．
+
+$\because D E = D F$，
+
+$\therefore \angle E D F = 2 \angle E D G$．    1分
+
+$\because A C$切$\bigodot O$于点$C$，
+
+$\therefore \angle A C O = 90 \circ$．    2分
+
+$\because \angle A E C = \angle D E G$，
+
+$\therefore \angle C A E = \angle E D G$．
+
+$\therefore \angle E D F = 2 \angle C A E$．    3分
+
+![](figures/image85.jpeg)
+
+（2）解：如图，连接$O A$．
+
+$\because A B$，$A C$与$\bigodot O$分别相切于点$B$，$C$，$\angle B A C = 60 \circ$，
+
+$\therefore \angle O A C = \frac{1}{2} \angle B A C = 30 \circ$．    4分
+
+$\because O C = 2$，
+
+$\therefore A C = 2 \sqrt{3} .$
+
+在$\text{Rt} \triangle A C D$中，$C D = A C \cdot \text{tan} 60 \circ = 6 .$
+
+$\because E$为$O C$中点，
+
+$\therefore E C = 1$．
+
+$\therefore D E = 5$．
+
+在$\text{Rt} \triangle A C E$中，由勾股定理，得$A E = \sqrt{13}$．    5分
+
+$\therefore \text{sin} \angle C A E = \frac{\sqrt{13}}{13}$．
+
+$\because \angle E D G = \angle C A E$，
+
+$\therefore E G = D E \cdot \text{sin} \angle E D G = \frac{5 \sqrt{13}}{13}$．
+
+$\therefore E F = 2 E G = \frac{10 \sqrt{13}}{13}$．    6分
+
+![](figures/image108.jpeg)
+
+25．解：（1）![](figures/image109.jpeg)    1分
+
+（2）答案不唯一，如13；    2分
+
+（3）①③④    5分
+
+26．解：（1）$p = 1$时，点$M$坐标为$\left(1,0\right)$，点$N$坐标为$\left(1,1\right)$，
+
+$\therefore M N = 1 - 0 = 1$．    2分
+
+（2）抛物线$y = x^{2} - x$与直线$y = x$的交点为$\left(0,0\right)$，$\left(2,2\right)$．
+
+设$M \left(p,,,y_{1}\right)$，$N \left(p,,,y_{2}\right)$，
+
+则$y_{1} = p^{2} - p$，$y_{2} = p$．
+
+当$0 < p \leq 2$时，
+
+$y_{1} - y_{2} \leq 0$．
+
+$\therefore M N = y_{2} - y_{1} = - p^{2} + 2 p$．
+
+可知当$p = 1$时，线段$M N$长度的最大值为1．
+
+当$p > 2$时，
+
+$y_{1} - y_{2} > 0$．
+
+$\therefore M N = y_{1} - y_{2} = p^{2} - 2 p$．
+
+可知$M N$的长度随$p$的增大而增大．
+
+令$p^{2} - 2 p = 1$，解得$p = 1 + \sqrt{2}$或$p = 1 - \sqrt{2}$（舍）．
+
+分析线段$M N$长度的最大值的变化规律可知：
+
+（ⅰ）当$0 < m_{0} < 1$时，随着$m$的增大，$t$的值先增大，再保持不变，再增大；
+
+（ⅱ）当$1 \leq m_{0} < 1 + \sqrt{2}$时，随着$m$的增大，$t$的值先保持不变，再增大；
+
+（ⅲ）只有当$m_{0} \geq 1 + \sqrt{2}$时，$t$随$m$增大而增大．
+
+$\therefore$要使$m > m_{0}$时，都有$t$随$m$的增大而增大，$m_{0}$的最小值为$1 + \sqrt{2}$．    6分
+
+27．（1）$\angle D A E = 2 \angle B A C$；    2分
+
+（2）$\angle D A E + \angle D B F = 180 \circ$    3分
+
+证明：如图，将$\triangle A E C$沿$A C$翻折得到$\triangle A P C$，连接$B P$．
+
+$\therefore \triangle A E C ≌ \triangle A P C$．
+
+$\therefore A E = A P$，$C E = C P$，$\angle E A C = \angle P A C$，$\angle E C A = \angle P C A$．    4分
+
+$\because \angle A C B = 90 \circ$，$C F = E C$，
+
+$\therefore \angle E C A + \angle B C F = 90 \circ$，$\angle P C A + \angle B C P = 90 \circ$，$C F = C P$．
+
+$\therefore \angle B C P = \angle B C F$．
+
+$\therefore \triangle B C F ≌ \triangle B C P$．    5分
+
+$\therefore \angle C B F = \angle C B P$．
+
+$\because \angle A B C = \alpha$，
+
+$\therefore \angle C A B = 90 \circ - \alpha$．
+
+$\because \angle D A E = 180 \circ - 2 \alpha$，
+
+$\therefore \angle E A C + \angle D A B = \angle P A C + \angle P A B$．
+
+$\therefore \angle D A B = \angle P A B$．
+
+$\because A E = A D$，
+
+$\therefore A P = A D$．
+
+$\therefore \triangle D A B ≌ \triangle P A B$．    6分
+
+$\therefore \angle D B A = \angle P B A$．
+
+$\therefore \angle D B F = 2 \angle A B C = 2 \alpha$．
+
+$\therefore \angle D A E + \angle D B F = 180 \circ$．    7分
+
+![](figures/image177.jpeg)
+
+28．解：（1）$\left(\right. 1,2 \left.\right)$，$\left(\right. 3,0 \left.\right)$；    2分
+
+（2）$n = m - 1$；    4分
+
+（3）$\sqrt{5}$，$\left(\frac{1}{2},,,-,\frac{3}{2}\right)$．    7分

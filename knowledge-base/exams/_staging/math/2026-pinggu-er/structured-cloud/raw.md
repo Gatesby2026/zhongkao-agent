@@ -234,3 +234,329 @@ $A_{1} \left(-,4,,-,5\right)$，$A_{2} \left(-,1,,\sqrt{3}\right)$，$A_{3} \lef
 （3）在平面直角坐标系$x O y$中，$\bigodot O$的半径为$r$，直线$y = \frac{3}{4} x + 3$分别与$x$轴，$y$轴交于点$E$，$F$，若线段$E F$上的所有点都是$\bigodot O$的“切端点”，则$\bigodot O$的半径$r$的取值范围为__________．
 
 ![](figures/image273.png)
+
+数学参考答案
+
+![](figures/image1.png)北京市平谷区2026年二模考试评分标准
+
+2026.5
+
+一、选择题（本题共16分，每小题2分）
+
+| 题号 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
+|---|---|---|---|---|---|---|---|---|
+| 答案 | B | C | D | D | C | D | A | D |
+
+二、填空题（本题共16分，每小题2分）
+
+9．$x \geq 1$；10．$a \left(b,+,3\right) \left(b,-,3\right)$； 11．$x = - \frac{1}{3}$； 12．$m = 4$； 13．2；14．960；
+
+15．$\frac{64}{5}$；16．37，乙，丁，甲，丙．
+
+三、解答题（共68分，第17-19题，每题5分，第20-21题，6分，第22题，5分，第23题，6分，第24-25题，每题5分，第26题6分；第27-28题，每题7分）解答应写出文字说明、演算步骤或证明过程．
+
+17．解：$\left|1,-,\sqrt{3}\right| - 3 tan 30 \circ + \left(\frac{1}{2}\right)^{- 1} - \left(\left(\pi,-,2026\right)\right)^{0}$
+
+$= \sqrt{3} - 1 - 3 \times \frac{\sqrt{3}}{3} + 2 - 1$  4
+
+$= 0$  5
+
+18．解不等式组：$\left{\begin{matrix} x - 3 \left(x,-,2\right) \geq 4, \textcircled{1} \\ \frac{1 + 2 x}{3} > x - 1, \textcircled{2} \end{matrix}\right$
+
+解：解不等式①，得$x \leq 1$．2
+
+解不等式②，得$x < 4$．4
+
+∴原不等式组的解集为$x \leq 1$．5
+
+19．先化简，再求值：
+
+$\frac{3 \left(x,-,2,y\right) + 3 y}{x^{2} - 2 x y + y^{2}}$
+
+$= \frac{3 x - 6 y + 3 y}{\left(\left(x,-,y\right)\right)^{2}}$  2
+
+$= \frac{3 \left(x,-,y\right)}{\left(\left(x,-,y\right)\right)^{2}}$  3
+
+$= \frac{3}{x - y}$  4
+
+$= 3$
+
+$D$
+
+∴原式$E$．5
+
+20．（1）∵点$A B$，$B C$分别是$\therefore D E \parallel A C$，$C E = B E$的中点
+
+![](figures/image25.png)
+
+$A C = 2 D E$，$C D B F$，$\therefore \square C D B F$
+
+$D E = x$
+
+$\because \angle A C B = 90 \circ$
+
+$\angle C A E = 45 \circ$
+
+$\therefore A C = C E = 2 x$
+
+$A E = \sqrt{2} x$
+
+$C D B F$
+
+$\therefore D E = E F = x$
+
+∴四边形$\because \angle C E F = 90 \circ$是平行四边形  2分
+
+$C F = \sqrt{10}$
+
+$\therefore x = \sqrt{2}$
+
+$\therefore A C = C E = 2 \sqrt{2}$是菱形．3分
+
+（2）设$A E = 4$，
+
+![](figures/image41.png)
+
+$\therefore E H = \frac{4}{3}$，$4 x$
+
+$3 x$，$\left(\right. 4 x + 9 \left.\right)$
+
+∵菱形$\left(1,+,20,\%\right) 3 x$
+
+$4 x + 9 + 3 x \left(1,+,20,\%\right) = 123$
+
+$x = 15$，$4 \times 15 + 9 = 69$
+
+$123 - 69 = 54$  4分
+
+$\because 123 > 110$，$69 > 69$  5分
+
+$\because y = k x + b \left(k,\neq,0\right)$
+
+$\left(1,3\right)$
+
+$\left(0,1\right)$
+
+$\therefore \left{\begin{matrix} k + b = 3, \\ b = 1, \end{matrix}\right$
+
+$\therefore \left{\begin{matrix} k = 2, \\ b = 1, \end{matrix}\right$  6分
+
+21．解：金奖  1
+
+设体验时编程挑战得$\therefore y = 2 x + 1$分，手工创作得$1 \leq m \leq 2$分，则正式计分时编程挑战得$D$分，手工创作得$\overset{⌢}{C B}$分．2
+
+根据题意可列方程为：
+
+$\therefore O D \bot B C$．4
+
+$\because D E \parallel B C$  5
+
+∴编程得分：$\therefore O D \bot D E$，
+
+手工创作得$\because D E$分，
+
+$\bigodot O$，$D$
+
+∴给这个同学颁发金奖  6
+
+答：给这个同学颁发金奖．
+
+22．（1）$\therefore D E$的图象经过点$\bigodot O$，$O D$．
+
+$B C$  1
+
+$M$  3
+
+$B D$
+
+（2）$D$  5
+
+23．（1）证明：连结
+
+![](figures/image75.png)
+
+∵点$\overset{⌢}{C B}$是$\therefore \overset{⌢}{C D} = \overset{⌢}{B D}$的中点
+
+$\therefore C D = B D = 12$  1
+
+$\angle C A D = \angle C B D = \angle D A B$
+
+$\therefore cos \angle C A D = cos \angle B A D = \frac{4}{5}$  2
+
+$\because A B$过$\bigodot O$半径的外端点$\therefore \angle A D B = 90 \circ$
+
+$\text{Rt}\triangle A B D$是$cos \angle B A D = \frac{A D}{A B} = \frac{4}{5}$的切线  3
+
+（2）设$A D = 4 x$与$A B = 5 x$交于点$\therefore A B = 20$，连接$A D = 16$
+
+∵点$\text{Rt}\triangle B M D$是$cos \angle C B D = \frac{B M}{B D} = \frac{4}{5}$的中点
+
+$\therefore B M = \frac{48}{5}$
+
+$D M = \frac{36}{5}$，$\therefore D E = \frac{240}{7}$  4
+
+$5 . 5 \text{mm}$
+
+$6 \text{g}$为$9 . 6 \text{s}$的直径
+
+$a = 12$
+
+在$c$中，$c$
+
+![](figures/image101.png)
+
+设$x = 1$，$\therefore x = - \frac{b}{2 a} = - \frac{2 - m}{2 \times \left(-,1\right)} = 1$，
+
+$\therefore m = 0$
+
+$y = - x^{2} + 2 x$
+
+$y < 4$，$y = 0$  5
+
+$- x^{2} + \left(2,-,m\right) x + 2 m = 0$
+
+$x = 2$
+
+$x = - m$
+
+在$\because - 1 < x_{0} < 0$中，$\therefore 0 < m < 1$
+
+$\therefore \frac{1}{2} < t < 1$，$\therefore \frac{3}{2} < t + 1 < 2$
+
+$A \left(-,2,t,,,y_{1}\right)$
+
+$A \left(-,2,t,,,y_{1}\right)$
+
+$x = t$
+
+$A^{'} \left(4,t,,,y_{1}\right)$
+
+$y = - x^{2} + \left(2,-,m\right) x + 2 m$
+
+$x \geq t$  6
+
+24．（1）甲组挤出头出料25 s时的出料量为10 g  2
+
+（2）在给出的平面直角坐标系中，画出乙组实验的函数图象  3
+
+（3）①孔径为$y$的挤出头出料$A \left(-,2,t,,,y_{1}\right)$耗材所用的时间为$B \left(t,,,y_{2}\right)$（结果保留小数点后一位）；4
+
+②推断甲组同学实验中所用挤出头的孔径为4.3 mm（结果保留小数点后一位）．
+
+25．（1）$C \left(t,+,1,,y_{3}\right)$，1
+
+（2）补全频数分布直方图  2
+
+（3）随机抽取的50名学生参加志愿活动次数的中位是23  3
+
+（4）乙、丙、甲；$\therefore y_{2} > y_{3} > y_{1}$（$\because C E \bot A P$为整数）的值为25．  5
+
+26．（1）①由题意得对称轴为$\therefore \angle A E C = 90 \circ$．1
+
+$\because A B = A C = 7$
+
+$tan \alpha = \frac{\sqrt{13}}{6}$  2
+
+∴二次函数的解析式为$\therefore A E = E F = 6$
+
+②$C E = \sqrt{2} M N$  3
+
+（2）令$B$则$B Q \bot A P$
+
+解得$Q$或$C$
+
+$C K \parallel M N$
+
+$A P$  4
+
+$K$
+
+$\because C E \bot A P$
+
+$B Q \bot A P$  5
+
+$\therefore E F = A E = B Q$
+
+∵点$C E = A Q$在该抛物线上
+
+∴点$\because \angle A E F = \angle E Q B = 90 \circ$关于$\angle E N F = \angle B N Q$的对称点$\therefore \triangle E N F ≌\triangle B N Q$也在该抛物线上．
+
+$\therefore E N = Q N$
+
+$\because M$
+
+抛物线的解析式为$A C$
+
+抛物线开口向下．
+
+∴当$C K \parallel M N$时$\because A N = K N$随的增大而减小
+
+∵点$E N = Q N$，$\therefore C E = \sqrt{2} M N$，$A_{2}$在该抛物线上
+
+$A_{3}$  6
+
+27．（1）解：$- 4 \sqrt{5} \leq b \leq 4 \sqrt{5}$
+
+$\frac{4 \sqrt{5}}{5} \leq r \leq \frac{12}{5}$
+
+[公式]，[公式]，
+
+[公式]．  2
+
+（2）①依题意补全图形  3
+
+②[公式]  4
+
+过点[公式]作[公式]于[公式]
+
+过点[公式]作[公式]交[公式]于[公式]
+
+![](figures/image168.png)
+
+[公式]，[公式]
+
+[公式]
+
+[公式]
+
+[公式]
+
+[公式]
+
+[公式]
+
+[公式]
+
+[公式]
+
+![](figures/image178.png)
+
+[公式]
+
+[公式]，[公式]
+
+[公式]，[公式]
+
+[公式]  6
+
+[公式]
+
+[公式]为![](figures/image187.png)的中点，[公式]
+
+[公式]
+
+[公式]
+
+[公式]，[公式]
+
+[公式]
+
+[公式]
+
+[公式]  7
+
+28．（1）[公式]，[公式]  2
+
+（2）[公式]  4
+
+（3）[公式]  7
