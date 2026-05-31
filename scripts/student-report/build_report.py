@@ -232,13 +232,31 @@ def render_markdown(exam: ExamView, per_q: dict[int, dict],
             sf = q.student_filled or "（未作答）"
             w(f"**{sf}** ❌\n")
         else:
+            # 主观题：answer 字段通常空，参考答案/解析在 solution 字段
+            # 优先 answer（如默写有明确答案），其次 solution
+            std_text = (q.std_answer or "").strip() or (q.solution or "").strip()
             w("#### 标准答案\n")
-            w("> " + _hl(_fix_tex(q.std_answer.strip())).replace("\n", "\n> ")
-              + "\n")
+            if std_text:
+                w("> " + _hl(_fix_tex(std_text)).replace("\n", "\n> ") + "\n")
+            else:
+                w("> （mock yaml 缺标准答案，无法展示）\n")
             w("#### 你的答案\n")
             ans_fig = _fig_abs(exam, q)         # 答题卡裁切原图
+            # 优先：题框裁切图（最准）→ vl-max 看图识别文本 → 讯飞手写 OCR → 缺
+            hw_text = (q.student_handwriting or "").strip()
+            corr_text = ((q.grade or {}).get("correctedText") or "").strip()
             if ans_fig:
                 w(f"![{q.qid}答题卡作答原图]({ans_fig})\n")
+                if corr_text:
+                    w(f"\n> AI 识别文本：{_fix_tex(corr_text)}\n")
+                elif hw_text:
+                    w(f"\n> 手写 OCR：{_fix_tex(hw_text)}\n")
+            elif corr_text:
+                # vl-max 全页兜底识别到的学生作答
+                w("> " + _hl(_fix_tex(corr_text)).replace("\n", "\n> ") + "\n")
+            elif hw_text:
+                # 讯飞手写 OCR 文本
+                w("> " + _hl(_fix_tex(hw_text)).replace("\n", "\n> ") + "\n")
             else:
                 w("> （未识别到答题卡作答区，建议人工核对原卷）\n")
 
