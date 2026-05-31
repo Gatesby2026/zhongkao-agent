@@ -66,8 +66,20 @@ def _ocr_with_angle(image_path: Path) -> tuple[list[dict], float]:
     return letters, angle
 
 
-def _ocr_on_image(im: Image.Image) -> list[dict]:
-    """对已加载 PIL 图（已旋正）跑 OCR 取字母。"""
+import re as _re
+
+# 题号匹配 "1." "12." "1．" "1、" 等
+_QID_RE = _re.compile(r"^(\d{1,3})[.．、]\s*$")
+# 题号+字母合并 token "1.A" "12.[A]"
+_QID_LETTER_RE = _re.compile(r"^(\d{1,3})[.．、]\s*\[?\s*([A-D])\s*\]?")
+
+
+def _ocr_on_image(im: Image.Image) -> tuple[list[dict], list[dict]]:
+    """对已加载 PIL 图（已旋正）跑 OCR，返回 (letters, qid_markers)。
+
+    letters: A/B/C/D 字符 token（含 bbox）
+    qid_markers: 题号 "N." token（含 bbox），作为更稳的定位锚点
+    """
     from tencentcloud.ocr.v20181119 import models
     if im.mode != "RGB":
         im = im.convert("RGB")
@@ -79,17 +91,31 @@ def _ocr_on_image(im: Image.Image) -> list[dict]:
     req.ImageBase64 = b64
     resp = client.GeneralAccurateOCR(req)
     letters = []
+    qid_markers = []
     for det in resp.TextDetections:
         text = (det.DetectedText or "").strip()
+        poly = det.ItemPolygon
+        x1, y1 = poly.X, poly.Y
+        x2, y2 = poly.X + poly.Width, poly.Y + poly.Height
+
+        # 1. 题号 marker (如 "1.")
+        m = _QID_RE.match(text)
+        if m:
+            qid_markers.append({
+                "qid": int(m.group(1)),
+                "x1": x1, "y1": y1, "x2": x2, "y2": y2,
+                "cx": (x1 + x2) // 2, "cy": (y1 + y2) // 2,
+                "text": text,
+            })
+            continue
+
+        # 2. 字母 (含 "[A]" "1.A" "8.[A][B][C]" 等)
         if not _LETTER_CHAR_RE.search(text):
             continue
         if len(text) > 16 or any(c in text for c in "=∵∴∠△⌐≠≡"):
             continue
-        poly = det.ItemPolygon
-        x1, y1 = poly.X, poly.Y
-        x2, y2 = poly.X + poly.Width, poly.Y + poly.Height
         letters.extend(_split_compound_token(text, x1, y1, x2, y2))
-    return letters
+    return letters, qid_markers
 
 
 def _round_angle_to_quarter(angle: float) -> int:
@@ -137,10 +163,10 @@ def locate_choice_region(image_path: Path) -> dict:
     else:
         im_upright = im
 
-    # Step 3: 在旋正图上重新 OCR
-    letters = _ocr_on_image(im_upright)
-    if not letters:
-        return {"found": False, "reason": "no A/B/C/D letters detected",
+    # Step 3: 在旋正图上重新 OCR (拿 letters + qid_markers)
+    letters, qid_markers = _ocr_on_image(im_upright)
+    if not letters and not qid_markers:
+        return {"found": False, "reason": "no letters/qid markers detected",
                 "angle": angle, "uplifted_image": im_upright}
 
     rows = _cluster_rows(letters)
@@ -149,11 +175,40 @@ def locate_choice_region(image_path: Path) -> dict:
         return {"found": False, "reason": "no row contains 4+ choice letters",
                 "angle": angle, "uplifted_image": im_upright}
 
+    # 用字母 bbox 算 letter 范围
     all_x = [L["x1"] for r in choice_rows for L in r] + \
             [L["x2"] for r in choice_rows for L in r]
     all_y = [L["y1"] for r in choice_rows for L in r] + \
             [L["y2"] for r in choice_rows for L in r]
-    bbox = (min(all_x), min(all_y), max(all_x), max(all_y))
+    letter_x1, letter_y1 = min(all_x), min(all_y)
+    letter_x2, letter_y2 = max(all_x), max(all_y)
+
+    # 用题号 marker 扩 bbox：题号在每行行首，应跟字母大致同行
+    # 多选行可能在单选行下方 200+ px（如朝阳物理）
+    # 策略：取 qid ∈ [1, 30] 且形成连续序列的 markers，包络其 y 范围
+    valid_qids = [q for q in qid_markers if 1 <= q["qid"] <= 30]
+    relevant_qids = []
+    if valid_qids:
+        # 按 cy 排序 + 找跟 letter bbox 最近的"主簇"
+        # 简化：取所有 qid≤30 markers 在 letter_y 上下 ±400 内的
+        relevant_qids = [q for q in valid_qids
+                         if letter_y1 - 200 <= q["cy"] <= letter_y2 + 400]
+
+    if relevant_qids:
+        qid_x1 = min(q["x1"] for q in relevant_qids)
+        qid_y1 = min(q["y1"] for q in relevant_qids)
+        qid_y2 = max(q["y2"] for q in relevant_qids)
+        # 用 marker + letter 包络
+        bbox_x1 = min(letter_x1, qid_x1)
+        bbox_y1 = min(letter_y1, qid_y1)
+        bbox_y2 = max(letter_y2, qid_y2)
+    else:
+        bbox_x1, bbox_y1, bbox_y2 = letter_x1, letter_y1, letter_y2
+
+    # 右边 bbox：letters 是基线，但多选行可能宽 + 题号 markers 右侧
+    letter_x2_final = max(letter_x2,
+                           max((q["x2"] for q in relevant_qids), default=letter_x2))
+    bbox = (bbox_x1, bbox_y1, letter_x2_final, bbox_y2)
 
     row_bands = []
     for r in choice_rows:
@@ -175,11 +230,20 @@ def locate_choice_region(image_path: Path) -> dict:
                             for r in choice_rows),
         "row_bands": row_bands,
         "n_letters_total": sum(len(r) for r in choice_rows),
+        "n_qid_markers": len(relevant_qids) if qid_markers else 0,
+        "letter_bbox": (letter_x1, letter_y1, letter_x2, letter_y2),
     }
 
 
-def crop_choice_region(image_path: Path, margin: int = 50) -> tuple[Image.Image, dict]:
+def crop_choice_region(image_path: Path,
+                        margin_left: int = 180,   # 题号在 [A] 左 ~150 px
+                        margin_right: int = 150,  # 多选/涂框 + D 字母末尾 + 涂卡可能超出
+                        margin_top: int = 60,
+                        margin_bottom: int = 60,
+                        ) -> tuple[Image.Image, dict]:
     """根据 locate_choice_region 返回的 bbox 裁切**旋正后**的图。
+
+    margin 非对称：左边大（包题号 1./2./.. 进来）、其他正常。
 
     Returns:
         (cropped_image, info)  # info 含 uplifted_image (旋正后整张) + bbox 等
@@ -191,10 +255,10 @@ def crop_choice_region(image_path: Path, margin: int = 50) -> tuple[Image.Image,
     im = info["uplifted_image"]
     x1, y1, x2, y2 = info["bbox"]
     W, H = im.size
-    crop_x1 = max(0, x1 - margin)
-    crop_y1 = max(0, y1 - margin)
-    crop_x2 = min(W, x2 + margin)
-    crop_y2 = min(H, y2 + margin)
+    crop_x1 = max(0, x1 - margin_left)
+    crop_y1 = max(0, y1 - margin_top)
+    crop_x2 = min(W, x2 + margin_right)
+    crop_y2 = min(H, y2 + margin_bottom)
     cropped = im.crop((crop_x1, crop_y1, crop_x2, crop_y2))
     info["crop_bbox"] = (crop_x1, crop_y1, crop_x2, crop_y2)
     return cropped, info
