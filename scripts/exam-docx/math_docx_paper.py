@@ -95,9 +95,11 @@ def _build_formula_by_rid(extract_dir: Path, rels: dict[str, str]) -> dict[str, 
         print(f"[math_docx_paper] ⚠ mtef_extract.rb 不存在，跳过 rId 对齐", flush=True)
         return {}
     try:
+        # mentougou 1196 个 OLE 把 argv 撑爆 → 改 STDIN 一行一文件
+        file_list = "\n".join(str(b) for b in bins) + "\n"
         r = subprocess.run(
-            ["ruby", str(rb)] + [str(b) for b in bins],
-            capture_output=True, text=True, timeout=300)
+            ["ruby", str(rb), "-"],
+            input=file_list, capture_output=True, text=True, timeout=600)
         if r.returncode != 0:
             print(f"[math_docx_paper] ⚠ ruby mtef_extract 失败: {r.stderr[:200]}",
                   flush=True)

@@ -1,290 +1,367 @@
-# ============================================================
-# None年北京真题math — 自动生成
-# ============================================================
-# OCR: Qwen-VL-OCR  Enrich: qwen-max
-# QC: draft=8  needs_review=20
-
-year: null
-district: ''
-exam_type: 真题
+year: 2026
+district: 大兴区
+exam_type: 二模
 subject: math
 full_score: 100
 duration_minutes: 120
 total_questions: 28
 structure: 8单选(16分) + 8填空(16分) + 12解答(68分)
-passages: []
 questions:
 - id: 1
   type: 单选
   score: 2
-  stem: 下图是某几何体的三视图，该几何体是
+  stem: 如图是某几何体的三视图，该几何体是（　　）
   options:
     A: 长方体
-    B: 圆柱
-    C: 三棱柱
+    B: 三棱柱
+    C: 圆柱
     D: 圆锥
-  figure: 2026-daxing-er/figures/image2.jpeg
-  _figures_extra:
-  - image2.jpeg
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 三视图
-  - 几何体识别
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
+  figure: 2026-daxing-er/figures/image3.png
+  answer: C
+  solution: '根据几何体的三视图进行一一判断即可．
+
+    解：∵主视图和左视图为长方形
+
+    ∴几何体不是三棱柱和圆锥
+
+    ∵俯视图为圆
+
+    ∴几何体不是长方体
+
+    ∴该几何体为圆柱
+
+    故选C．
+
+    本题考查了几何体的三视图．解题的关键在于熟练掌握几何体从前面，左面，上面看到的分别为主视图，左视图，俯视图．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: needs_review
   qc_note: 选择题 answer 为空
 - id: 2
   type: 单选
   score: 2
-  stem: 实数$a$，$b$在数轴上的对应点的位置如图所示，下列结论正确的是
+  stem: 实数a，b在数轴上的对应点的位置如图所示，下列结论正确的是（     ）
   options:
-    A: $\left|a\right| < \left|b\right|$
+    A: $\left|\right. a \left|\right. < \left|\right. b \left|\right.$
     B: $a - b > 0$
     C: $- a < 3$
     D: $a + b > 0$
-  figure: 2026-daxing-er/figures/image5.jpeg
-  _figures_extra:
-  - image5.jpeg
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 实数的大小比较
-  - 绝对值的概念
-  module: numbersAndExpressions
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
+  figure: 2026-daxing-er/figures/image4.png
+  answer: C
+  solution: '根据数轴确定a、b的取值范围，结合绝对值、相反数及有理数运算法则进行判断．
+
+    由数轴可知：$- 3 < a < - 2$，$1 < b < 2$，
+
+    ∴$2<|a|<3$ ，$1 < \left|\right. b \left|\right. < 2$，即$\left|\right. a \left|\right. > \left|\right. b \left|\right.$，A错误；
+
+    ∵$a < 0$，$b > 0$，
+
+    ∴$a - b < 0$，B错误；
+
+    ∵ $- 3 < a < - 2$，不等式两边同乘$- 1$得$2<−a<3$ ，
+
+    ∴$- a < 3$，C正确；
+
+    ∵ $a < 0$，$b > 0$且$\left|\right. a \left|\right. > \left|\right. b \left|\right.$，
+
+    ∴$a + b < 0$，D错误．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: needs_review
   qc_note: 选择题 answer 为空
 - id: 3
   type: 单选
   score: 2
-  stem: 若正多边形的一个外角是$36 \circ$，则这个正多边形是
+  stem: 若正多边形的一个外角是$3 6 \circ$，则这个正多边形是（     ）
   options:
     A: 正五边形
     B: 正六边形
     C: 正八边形
     D: 正十边形
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 多边形的性质
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
+  answer: D
+  solution: '利用多边形外角和定理，以及正多边形各外角相等的性质求解，直接计算边数即可得到结果．
+
+    ∵任意多边形的外角和为$3 6 0 \circ$，正多边形的每个外角都相等，
+
+    ∴设该正多边形的边数为n，
+
+    则$n = \frac{3 6 0 \circ}{3 6 \circ} = 1 0$，
+
+    ∴这个正多边形是正十边形．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: needs_review
   qc_note: 选择题 answer 为空
 - id: 4
   type: 单选
   score: 2
-  stem: 一个不透明的袋子中仅有5个红球、3个绿球和2个蓝球，这些球除颜色外无其他差别．从袋子中随机摸出一个球，摸出的球为蓝球的概率为
+  stem: 一个不透明的袋子中仅有5个红球、3个绿球和2个蓝球，这些球除颜色外无其他差别．从袋子中随机摸出一个球，摸出的球为蓝球的概率为（     ）
   options:
     A: $\frac{1}{5}$
     B: $\frac{1}{3}$
     C: $\frac{1}{2}$
     D: $\frac{2}{3}$
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 概率的计算
-  module: statisticsAndProbability
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
+  answer: A
+  solution: '先计算出球的总个数，再用蓝球个数除以总个数得到概率即可．
+
+    由题意可得，袋子中球的总个数为$5 + 3 + 2 = 1 0$（个），其中蓝球的个数为 2，
+
+    ∴随机摸出一个球，摸出蓝球的概率为$\frac{2}{1 0} = \frac{1}{5}$．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: needs_review
   qc_note: 选择题 answer 为空
 - id: 5
   type: 单选
   score: 2
-  stem: 若关于$x$的一元二次方程$x^{2} - 2 x + c = 0$有两个相等的实数根，则实数$c$的值为
+  stem: 若关于$x$的一元二次方程$x^{2} - 2 x + m = 0$有两个相等的实数根，则实数$m$的值是（   ）
   options:
-    A: '4'
-    B: '1'
-    C: $- 4$
-    D: $- 1$
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 一元二次方程的根的判别式
-  module: equationsAndInequalities
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
+    A: '1'
+    B: '4'
+    C: $-$
+    D: $-$
+  answer: A
+  solution: '本题主要考查了一元二次方程根的判别式，掌握一元二次方程有两个相等的实数根则根的判别式$\Delta = b^{2} - 4 a c = 0$是解题的关键．
+
+    根据题意以及根的判别式列出关于m的方程求解即可．
+
+    解：∵关于$x$的一元二次方程$x^{2} - 2 x + m = 0$有两个相等的实数根，
+
+    ∴$\Delta = b^{2} - 4 a c = \left(\right. - 2 \left.\right)^{2} - 4 \times 1 \times m = 0$，解得：$m = 1$．
+
+    故选A．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: needs_review
   qc_note: 选择题 answer 为空
 - id: 6
   type: 单选
   score: 2
-  stem: 1970年4月24日，中国第一颗人造卫星“东方红一号”成功发射．自2016年起，将每年4月24日设立为“中国航天日”．我国首个目标飞行器天宫一号向地球发射无线电信号，信号单向传输到地面测控站所用时间约为$1 . 14 \times
-    10^{- 3} \text{s}$，传播速度为$3 \times 10^{8} \text{m}/\text{s}$，则天宫一号与地面测控站的距离约为
+  stem: 1970年4月24日，中国第一颗人造卫星“东方红一号”成功发射．自2016年起，将每年4月24日设立为“中国航天日”．我国首个目标飞行器天宫一号向地球发射无线电信号，信号单向传输到地面测控站所用时间约为$1 . 1 4 \times 1 0^{- 3}$，传播速度为$3 \times 1 0^{8}$，则天宫一号与地面测控站的距离约为（     ）
   options:
-    A: $3 . 42 \times 10^{8} \text{m}$
-    B: $3 . 42 \times 10^{7} \text{m}$
-    C: $3 . 42 \times 10^{6} \text{m}$
-    D: $3 . 42 \times 10^{5} \text{m}$
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 科学记数法
-  - 速度与距离的关系
-  module: numbersAndExpressions
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
+    A: $3 . 4 2 \times 1 0^{8}$
+    B: $3 . 4 2 \times 1 0^{7}$
+    C: $3 . 4 2 \times 1 0^{6}$
+    D: $3 . 4 2 \times 1 0^{5}$
+  answer: D
+  solution: '根据路程公式$s = v t$，结合科学记数法的运算规则计算即可得到结果．
+
+    $s=\left(1.14×{10}^{−3}\right)×\left(3×{10}^{8}\right)=\left(1.14×3\right)×\left({10}^{−3}×{10}^{8}\right)=3.42×{10}^{5}\left(m\right)$．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: needs_review
   qc_note: 选择题 answer 为空
 - id: 7
   type: 单选
   score: 2
-  stem: 如图，在$\triangle A B C$中，$A B = A C$，$\angle A = 40 \circ$，分别以A，C为圆心，$A C$长为半径作弧，两弧交于M，N，直线$M N$与$A B$交于点D，连接$C D$，则$\angle
-    B C D$的大小为
+  stem: 如图，在$\triangle A B C$中，$A B = A C$，$\angle A = 4 0 \circ$，分别以A，C为圆心，$A C$长为半径作弧，两弧交于M，N，直线$M N$与$A B$交于点D，连接$C D$，则$\angle B C D$的大小为（     ）
   options:
-    A: $40 \circ$
-    B: $35 \circ$
-    C: $30 \circ$
-    D: $20 \circ$
-  figure: 2026-daxing-er/figures/image34.jpeg
-  _figures_extra:
-  - image34.jpeg
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 等腰三角形的性质
-  - 圆的基本性质
-  module: triangles
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
+    A: $4 0 \circ$
+    B: $3 5 \circ$
+    C: $3 0 \circ$
+    D: $2 0 \circ$
+  figure: 2026-daxing-er/figures/image51.png
+  answer: C
+  solution: '先根据等腰三角形的性质求出$\angle A C B$的度数，再根据作图方法判断出$M N$是线段$A C$的垂直平分线，利用垂直平分线的性质得出$D A = D C$，进而求出$\angle A C D$的度数，最后利用角的和差关系求解即可．
+
+    解：如图，连接$A M$，$A N$，$C M$，$C N$，$C D$，
+
+
+    ∵$A B = A C$，$\angle A = 4 0 \circ$，
+
+    ∴$\angle A B C = \angle A C B = \frac{1}{2} \times \left(\right. 1 8 0 \circ - 4 0 \circ \left.\right) = 7 0 \circ$，
+
+    由作图可知，$A M = C M = A C$，$A N = C N = A C$，
+
+    ∴点M，N都在线段$A C$的垂直平分线上，
+
+    ∴直线$M N$是线段$A C$的垂直平分线，
+
+    ∵点D在直线$M N$上，
+
+    ∴$D A = D C$，
+
+    ∴$\angle A C D = \angle A = 4 0 \circ$，
+
+    ∴$\angle B C D = \angle A C B - \angle A C D = 7 0 \circ - 4 0 \circ = 3 0 \circ$．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: needs_review
   qc_note: 选择题 answer 为空
 - id: 8
   type: 单选
   score: 2
-  stem: '如图，在平面直角坐标系$x O y$中，点A，点B是函数$y = \frac{4}{x} \left(\right. x > 0 \left.\right)$图象上的动点（A，B不重合），点A是$O C$的中点，点B是$O D$的中点，作$C
-    E$垂直x轴于点E，交图象于点G，作$D F$垂直y轴于点F，交图象于点H．给出下面四个结论：
+  stem: '如图，在平面直角坐标系$x O y$中，点A，点B是函数$y = \frac{4}{x} \left(\right. x > 0 \left.\right)$图象上的动点（A，B不重合），点A是$O C$的中点，点B是$O D$的中点，作$C E$垂直x轴于点E，交图象于点G，作$D F$垂直y轴于点F，交图象于点H．给出下面四个结论：
 
 
-    ①$\triangle C O E$与$\triangle D O F$的面积一定相等；
+    ①$\Delta C O E$与$\Delta D O F$的面积一定相等；
 
-    ②连接$O H$，$O G$，则$\triangle D O H$的面积是$\triangle G O E$面积的2倍；
+    ②连接$O H$，$O G$，则$\Delta D O H$的面积是$\Delta G O E$面积的2倍；
 
-    ③连接$O G$，$A G$，$O H$，$B H$，则$\triangle O A G$与$\triangle O B H$的面积一定相等；
+    ③连接$O G$，$A G$，$O H$，$B H$，则$\Delta O A G$与$\Delta O B H$的面积一定相等；
 
-    ④连接$G H$，$C D$．则$G H$，$C D$不一定平行．
+    ④连接$G H$，$C D$，则$G H$，$C D$不一定平行．
 
-    上述结论中，所有正确结论的序号是'
+    上述结论中，所有正确结论的序号是（     ）'
   options:
     A: ①②
     B: ①③
     C: ②③
     D: ①④
-  figure: 2026-daxing-er/figures/image45.jpeg
-  _figures_extra:
-  - image45.jpeg
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 反比例函数的性质
-  - 三角形面积计算
-  module: functions
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
+  figure: 2026-daxing-er/figures/image75.png
+  answer: B
+  solution: '设点A、点B坐标推出点C、点D、点G、点H坐标，利用图像和坐标得出三角形的面积，分析①②③结论，利用$G H$，$C D$所在直线的解析式进行切入，假设$G H \parallel C D$，分析④结论．
+
+    解：过点A作$A M \bot C E$，过点B作$B K \bot D F$，如图所示：
+
+
+    设点A坐标为$\left(\right. x_{1} , y_{1} \left.\right)$，点B坐标为$\left(\right. x_{2} , y_{2} \left.\right)$，
+
+    ∵点A是$O C$的中点，点B是$O D$的中点，
+
+    ∴点C坐标为$\left(2{x}_{1},2{y}_{1}\right)$，点D坐标为$\left(2{x}_{2},2{y}_{2}\right)$，点G坐标为$\left(2{x}_{1},\frac{2}{{x}_{1}}\right)$，点H坐标为$\left(\frac{2}{{y}_{2}},2{y}_{2}\right)$，
+
+    ∵点A，点B是函数$y = \frac{4}{x} \left(\right. x > 0 \left.\right)$图象上的点，
+
+    ∴$x_{1} y_{1} = 4$，$x_{2} y_{2} = 4$，
+
+    根据图象可知：${S}_{ΔCOE}=\frac{1}{2}OE·CE=\frac{1}{2}×2{x}_{1}×2{y}_{1}=2×4=8$ ，
+
+    ${S}_{ΔDOF}=\frac{1}{2}DF·OF=\frac{1}{2}×2{x}_{2}×2{y}_{2}=2×4=8$ ，
+
+    ∴$S_{\Delta C O E} = S_{\Delta D O F}$，故①正确；
+
+    ∵${S}_{ΔFOH}=\frac{1}{2}HF·OF=\frac{1}{2}×\frac{2}{{y}_{2}}×2{y}_{2}=2$ ，
+
+    ∴$S_{\Delta D O H} = S_{\Delta D O F} - S_{\Delta F O H} = 8 - 2 = 6$，
+
+    ∵${S}_{ΔGOE}=\frac{1}{2}EG·OE=\frac{1}{2}×\frac{2}{{x}_{1}}×2{x}_{1}=2$ ，
+
+    ∴$S_{\Delta D O H} = 3 S_{\Delta G O E}$，故②不正确；
+
+    ∵${S}_{ΔACG}=\frac{1}{2}AM·CG=\frac{1}{2}×{x}_{1}×\left(2{y}_{1}-\frac{2}{{x}_{1}}\right)=\frac{1}{2}×{x}_{1}×\left(\frac{8}{{x}_{1}}-\frac{2}{{x}_{1}}\right)=3$ ，
+
+    ${S}_{ΔBHD}=\frac{1}{2}BK·DH=\frac{1}{2}×{y}_{2}×\left(2x-_{2}^{}\frac{2}{{y}_{2}}\right)=\frac{1}{2}×{y}_{2}×\left(\frac{8}{{y}_{2}}-\frac{2}{{y}_{2}}\right)=3$
+
+    ∴$S_{\Delta O A G} = S_{\Delta C O E} - S_{\Delta G O E} - S_{\Delta A C G} = 8 - 2 - 3 = 3$，
+
+    $S_{\Delta O B H} = S_{\Delta D O F} - S_{\Delta F O H} - S_{\Delta B H D} = 8 - 2 - 3 = 3$，
+
+    ∴$S_{\Delta O B H} = S_{\Delta O A G}$，故③正确，
+
+    ∵设$C D$所在直线的函数表达式为$y_{3} = k_{1} x + b_{1}$，
+
+    将C$\left(2{x}_{1},2{y}_{1}\right)$，D$\left(2{x}_{2},2{y}_{2}\right)$代入$y_{3} = k_{1} x + b_{1}$得：$\left\{2{k}_{1}{x}_{1}+{b}_{1}=2{y}_{1}2{k}_{1}{x}_{2}+{b}_{1}=2{y}_{2}\right$，
+
+    解得：$k_{1} = \frac{y_{2} - y_{1}}{x_{2} - x_{1}}$，
+
+    设$G H$所在直线的函数表达式为$y_{4} = k_{2} x + b_{2}$，
+
+    将点G坐标为$\left(2{x}_{1},\frac{2}{{x}_{1}}\right)$，点H坐标为$\left(\frac{2}{{y}_{2}},2{y}_{2}\right)$，代入$y_{4} = k_{2} x + b_{2}$得：$\left\{2{k}_{2}{x}_{1}+{b}_{2}=\frac{2}{{x}_{1}}\frac{2{k}_{2}}{{y}_{2}}+{b}_{2}=2{y}_{2}\right$，
+
+    解得：$k_{2} = - \frac{y_{2}}{x_{1}}$，
+
+    若$G H \parallel C D$，则$k_{1} = k_{2}$，
+
+    即：$\frac{y_{2} - y_{1}}{x_{2} - x_{1}} = - \frac{y_{2}}{x_{1}}$，
+
+    整理得：$x_{1} y_{2} - x_{1} y_{1} = - x_{2} y_{2} + x_{1} y_{2}$，
+
+    所以$x_{1} y_{1} = x_{2} y_{2}$，
+
+    因为$x_{1} y_{1} = 4$，$x_{2} y_{2} = 4$，所以等式恒成立，
+
+    即$G H \parallel C D$，所以④不正确．
+
+    本题考查了反比例函数的图象与性质、坐标与图形的面积关系、中点坐标公式以及平行线的判定，重难点在于利用点的坐标得出线段的长度，进而计算三角形面积，以及通过坐标关系判断直线的平行关系，解题核心是设点A、点B坐标推出点C、点D、点G、点H坐标．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: needs_review
   qc_note: 选择题 answer 为空
 - id: 9
   type: 填空
   score: 2
-  stem: 分解因式：$m n^{2} - m =$________．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 因式分解
-  module: numbersAndExpressions
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
+  stem: 分解因式：mn^{2}﹣m=__________．
+  answer: m（n+1）（n﹣1）
+  solution: '先提取公因式m，再利用平方差公式a^{2}﹣b^{2}=（a+b）（a﹣b）进行二次分解．
+
+    mn^{2}﹣m=m（n^{2}﹣1）=（n+1）（n﹣1）
+
+    考点：提公因式法与公式法的综合运用'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: draft
   qc_note: ''
 - id: 10
   type: 填空
   score: 2
-  stem: 若代数式$\frac{3}{x + 2}$有意义，则实数x的取值范围是________．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 分式的概念
-  - 实数的取值范围
-  module: numbersAndExpressions
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
+  stem: 若代数式$\frac{3}{x + 2}$有意义，则实数$x$的取值范围是_____．
+  answer: $x \neq - 2$##$- 2 \neq x$
+  solution: '本题考查分式有意义的条件，解题的关键是熟记分式的分母不能为0．根据分式的分母不能为0，可知$x + 2 \neq 0$，由此可解．
+
+    解：$\because$代数式$\frac{3}{x + 2}$有意义，
+
+    $\therefore$$x + 2 \neq 0$，
+
+    $\therefore$$x \neq - 2$，
+
+    故答案为：$x \neq - 2$．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: draft
   qc_note: ''
 - id: 11
   type: 填空
   score: 2
   stem: 方程$\frac{1}{x - 4} + \frac{1}{2 x} = 0$的解为$x =$________．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 分式方程的解法
-  module: equationsAndInequalities
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
+  answer: $\frac{4}{3}$
+  solution: '先将分式方程去分母转化为整式方程，求解整式方程后，检验得到原方程的解．
+
+    解：$\frac{1}{x-4}+\frac{1}{2x}=0$ ，
+
+    $2x+\left(x-4\right)=0$ ，
+
+    $2x+x-4=0$ ，
+
+    $3 x - 4 = 0$，
+
+    $3 x = 4$，
+
+    $x=\frac{4}{3}$，
+
+    经检验：当$x=\frac{4}{3}$时，$2x(x-4)≠0$ ，
+
+    ∴$x=\frac{4}{3}$是原分式方程的解．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: draft
   qc_note: ''
 - id: 12
   type: 填空
   score: 2
-  stem: 能说明命题“若$a > b$，则$\left|a\right| > \left|b\right|$”是假命题的一组实数a，b的值为$a =$________，$b =$________．
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 绝对值的概念
-  - 不等式的性质
-  module: numbersAndExpressions
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
+  stem: 能说明命题“若$a > b$，则$\left|\right. a \left|\right. > \left|\right. b \left|\right.$”是假命题的一组实数a，b的值为$a =$________，$b =$________．
+  answer: ①. $1$    ②. $- 2$
+  solution: '只需找到满足命题条件$a > b$，但不满足命题结论$\left|\right. a \left|\right. > \left|\right. b \left|\right.$的一组实数即可．
+
+    解：当$a = 1$，$b = - 2$时，$a = 1 > - 2 = b$，满足条件$a > b$，
+
+    ∵$\left|\right. a \left|\right. = \left|\right. 1 \left|\right. = 1$，$\left|\right. b \left|\right. = \left|\right. - 2 \left|\right. = 2$，
+
+    ∴$\left|\right. a \left|\right. = 1 < 2 = \left|\right. b \left|\right.$，不满足结论$\left|\right. a \left|\right. > \left|\right. b \left|\right.$．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: draft
   qc_note: ''
 - id: 13
@@ -299,66 +376,107 @@ questions:
     丙：3，3，4，4，4．
 
     根据方差越小，数据的波动越小，发挥越稳定这一统计意义，据此推断，________同学发挥更稳定．'
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 方差的意义
-  - 数据的波动性
-  module: statisticsAndProbability
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
+  answer: 丙
+  solution: '先计算三组数据的平均数，再根据方差公式计算三组数据的方差，比较方差大小，根据方差越小数据波动越小发挥越稳定的性质，得到结论．
+
+    解：$\bar{x}_{甲} = \frac{2 + 2 + 4 + 5 + 5}{5} = 3 . 6$，$\bar{x}_{乙} = \frac{2 + 3 + 4 + 4 + 5}{5} = 3 . 6$，$\bar{x}_{丙} = \frac{3 + 3 + 4 + 4 + 4}{5} = 3 . 6$，
+
+    ∴${s}_{甲}^{2}=\frac{1}{5}\left[{\left(2−3.6\right)}^{2}+{\left(2-3.6\right)}^{2}+{\left(4−3.6\right)}^{2}+{\left(5−3.6\right)}^{2}+{\left(5−3.6\right)}^{2}\right]=1.84$ ，${s}_{乙}^{2}=\frac{1}{5}\left[{\left(2−3.6\right)}^{2}+{\left(3−3.6\right)}^{2}+{\left(4−3.6\right)}^{2}+{\left(4−3.6\right)}^{2}+{\left(5−3.6\right)}^{2}\right]=1.04$
+    ，${s}_{丙}^{2}=\frac{1}{5}\left[{\left(3−3.6\right)}^{2}+{\left(3−3.6\right)}^{2}+{\left(4−3.6\right)}^{2}+{\left(4−3.6\right)}^{2}+{\left(4−3.6\right)}^{2}\right]=0.24$ ，
+
+    ∵$s_{丙}^{2} < s_{乙}^{2} < s_{甲}^{2}$，
+
+    ∴丙同学的方差最小，发挥更稳定．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: draft
   qc_note: ''
 - id: 14
   type: 填空
   score: 2
-  stem: 如图，四边形$A B C D$内接于$\bigodot O$，$A B$是$\bigodot O$的直径，点$E$是$A B$下方$\bigodot O$上一点．若$\angle C = 130 \circ$，则$\angle
-    A E D$的大小为________．
-  figure: 2026-daxing-er/figures/image76.jpeg
-  _figures_extra:
-  - image76.jpeg
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 圆内接四边形的性质
-  - 圆周角定理
-  module: circles
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
+  stem: 如图，四边形$A B C D$内接于$\bigodot O$，$A B$是$\bigodot O$的直径，点E是$A B$下方$\bigodot O$上一点．若$\angle C = 1 3 0 \circ$，则$\angle A E D$的大小为________．
+  figure: 2026-daxing-er/figures/image140.png
+  answer: $4 0 \circ$##40度
+  solution: '根据圆内接四边形对角互补的性质求出$\angle D A B$的度数，利用直径所对的圆周角是直角得出$\angle A D B = 9 0 \circ$，在直角三角形中求出$\angle A B D$的度数，最后根据同弧所对的圆周角相等求解．
+
+    如图，连接$B D$，
+
+
+    ∵四边形$A B C D$内接于$\bigodot O$ ，
+
+    ∴$\angle D A B + \angle C = 1 8 0 \circ$，
+
+    ∵ $\angle C = 1 3 0 \circ$，
+
+    ∴$\angle D A B = 1 8 0 \circ - 1 3 0 \circ = 5 0 \circ$，
+
+    ∵$A B$是$\bigodot O$的直径 ，
+
+    ∴$\angle A D B = 9 0 \circ$，
+
+    在$\triangle A B D$中，$\angle A B D = 9 0 \circ - \angle D A B = 9 0 \circ - 5 0 \circ = 4 0 \circ$，
+
+    ∵$\angle A E D$与$\angle A B D$都是$\overset{⌢}{A D}$所对的圆周角，
+
+    ∴$\angle A E D = \angle A B D = 4 0 \circ$．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: draft
   qc_note: ''
 - id: 15
   type: 填空
   score: 2
-  stem: 如图，在矩形$A B C D$中，点$E$为$B C$中点，连接$A E$，点$F$为$B C$的延长线上一点，连接$A F$交$C D$于$G$．若$C F = \frac{1}{3} B C$，$\triangle C F
-    G$的面积为$1$，则四边形$A E C G$的面积为________．
-  figure: 2026-daxing-er/figures/image90.jpeg
-  _figures_extra:
-  - image90.jpeg
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 相似三角形
-  - 面积计算
-  module: triangles
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
+  stem: 如图，在矩形$A B C D$中，点$E$为$B C$中点，连接$A E$，点$F$为$B C$的延长线上一点，连接$A F$交$C D$于$G$．若$C F = \frac{1}{3} B C$，$\triangle C F G$的面积为$1$，则四边形$A E C G$的面积为________．
+  figure: 2026-daxing-er/figures/image162.png
+  answer: '9'
+  solution: '本题主要考查了矩形的性质，相似三角形的判定与性质等知识．
+
+    根据线段之间的关系先求出$\frac{B F}{C F}$，再利用矩形的性质证明$\triangle A B F \sim \triangle G C F$，即可求出$S_{\triangle A B F}$，再求出$\frac{E F}{B F}$，问题随之得解．
+
+    解：∵$C F = \frac{1}{3} B C$，
+
+    ∴$3 C F = B C$，
+
+    ∴$3 C F + C F = B C + C F = B F$，即$\frac{B F}{C F} = 4$，
+
+    ∵在矩形$A B C D$中，$A B \parallel C D$，
+
+    ∴$\angle B = \angle G C F$，
+
+    又∵$\angle F = \angle F$，
+
+    ∴$\triangle A B F \sim \triangle G C F$，
+
+    ∴$\frac{{S}_{△ABF}}{{S}_{△GCF}}={\left(\frac{BF}{CF}\right)}^{2}=16$ ，
+
+    ∵$\triangle C F G$的面积为$1$，
+
+    ∴$S_{\triangle A B F} = 1 6 S_{\triangle G C F} = 1 6$，
+
+    ∵点$E$为$B C$中点，
+
+    ∴$E C = B E = \frac{1}{2} B C$，
+
+    ∵$C F = \frac{1}{3} B C$，
+
+    ∴$B E = \frac{1}{2} B C = \frac{3}{2} C F$，$E F = E C + C F = \frac{3}{2} C F + C F = \frac{5}{2} C F$，
+
+    ∴$\frac{B E}{E F} = \frac{3}{5}$，即$\frac{E F}{B F} = \frac{5}{8}$，
+
+    ∴$S_{\triangle A E F} = \frac{5}{8} S_{\triangle A B F} = 1 0$，
+
+    ∴$S_{\triangle A E F} - S_{\triangle G C F} = 1 0 - 1 = 9$．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: draft
   qc_note: ''
 - id: 16
   type: 填空
   score: 2
-  stem: '某兴趣小组有3件3D打印模型需要制作，每个模型都要按$\text{A} \rightarrow \text{B} \rightarrow \text{C} \rightarrow \text{D}$四道工序的顺序完成．现安排甲、乙、丙3名同学来做，甲只负责A、D工序，乙只负责B工序，丙只负责C工序．同一模型同一时间只能进行一道工序，完成一道工序后才能开始下一道工序．一个人只有完成一个模型的一道工序后，才能进行下一个模型的工序．各工序耗时（单位：分钟）如下表：
+  stem: '某兴趣小组有3件$3$打印模型需要制作，每个模型都要按$\rightarrow \rightarrow \rightarrow$四道工序的顺序完成．现安排甲、乙、丙3名同学来做，甲只负责A、D工序，乙只负责B工序，丙只负责C工序．同一模型同一时间只能进行一道工序，完成一道工序后才能开始下一道工序．一个人只有完成一个模型的一道工序后，才能进行下一个模型的工序．各工序耗时（单位：分钟）如下表：
 
     |  | 模型1 | 模型2 | 模型3 |
 
@@ -375,144 +493,334 @@ questions:
     （1）只完成模型1和模型3的制作，最少需要________分钟；
 
     （2）要完成这3件模型的制作，最少需要________分钟．'
-  figure: 2026-daxing-er/figures/image92.png
-  _figures_extra:
-  - image92.png
-  answer: ''
-  solution: ''
-  knowledge_points:
-  - 统筹规划
-  - 时间管理
-  module: geometryComprehensive
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
+  figure: 2026-daxing-er/figures/image183.png
+  answer: ①. 19    ②. 30
+  solution: '（1）分别计算先制作模型1后制作模型3，以及先制作模型3后制作模型1的总耗时，比较得出最小值；
+
+    （2）根据工序先后顺序及人员分工，依次分析关键路径，计算各工序完成时刻得出总耗时，通过比较即可得出结果．
+
+    解：（1）由题意知，
+
+    若先制作模型1，后制作模型3：
+
+    甲完成A工序时间：$3 + 4 = 7$，
+
+    乙完成B工序时间：模型1为$3 + 5 = 8$，模型3为${\left(7,8\right)}_{max}+4=12$ ，
+
+    丙完成C工序时间：模型1为$8 + 4 = 1 2$，模型3为${\left(12,12\right)}_{max}+5=17$ ，
+
+    甲完成D工序时间：模型1为${\left(7,12\right)}_{max}+2=14$ ，模型3为${\left(14,17\right)}_{max}+3=20$ ，
+
+    ∴总耗时20分钟；
+
+    若先制作模型3，后制作模型1：
+
+    甲完成A工序时间：$4 + 3 = 7$，
+
+    乙完成B工序时间：模型3为$4 + 4 = 8$，模型1为${\left(7,8\right)}_{max}+5=13$ ，
+
+    丙完成C工序时间：模型3为$8 + 5 = 1 3$，模型1为${\left(13,13\right)}_{max}+4=17$ ，
+
+    甲完成D工序时间：模型3为${\left(7,13\right)}_{max}+3=16$ ，模型1为${\left(16,17\right)}_{max}+2=19$ ，
+
+    ∴总耗时19分钟，
+
+    ∵$1 9 < 2 0$，
+
+    ∴最少需要19分钟；
+
+    （2）要完成3件模型的制作，则有“模型1-模型2-模型3”、“模型1-模型3-模型2”、“模型2-模型1-模型3”、“模型2-模型3-模型1”、“模型3-模型1-模型2”“模型3-模型2-模型1”共六种顺序制作：
+
+    ①模型1-模型2-模型3：
+
+    甲完成A工序时间：$3 + 6 + 4 = 1 3$，
+
+    乙完成B工序时间：模型1为$3 + 5 = 8$，模型2为${\left(8,9\right)}_{max}+3=12$ ，模型3为${\left(12,13\right)}_{max}+4=17$ ，
+
+    丙完成C工序时间：模型1为$8 + 4 = 1 2$，模型2为${\left(12,12\right)}_{max}+7=19$ ，模型3为${\left(19,17\right)}_{max}+5=24$ ，
+
+    甲完成D工序时间：模型1为${\left(13,12\right)}_{max}+2=15$ ，模型2为${\left(15,19\right)}_{max}+9=28$ ，模型3为${\left(28,24\right)}_{max}+3=31$ ，
+
+    ∴总耗时31分钟；
+
+    ②模型1-模型3-模型2：
+
+    甲完成A工序时间：$3 + 4 + 6 = 1 3$，
+
+    乙完成B工序时间：模型1为$3 + 5 = 8$，模型3为${\left(7,8\right)}_{max}+4=12$ ，模型2为${\left(12,13\right)}_{max}+3=16$ ，
+
+    丙完成C工序时间：模型1为$8 + 4 = 1 2$，模型3为${\left(12,12\right)}_{max}+5=17$ ，模型2为${\left(17,16\right)}_{max}+7=24$ ，
+
+    甲完成D工序时间：模型1为${\left(13,12\right)}_{max}+2=15$ ，模型3为${\left(15,17\right)}_{max}+3=20$ ，模型2为${\left(20,24\right)}_{max}+9=33$ ，
+
+    ∴总耗时33分钟；
+
+    ③模型2-模型1-模型3：
+
+    甲完成A工序时间：$6 + 3 + 4 = 1 3$，
+
+    乙完成B工序时间：模型2为$6 + 3 = 9$，模型1为${\left(9,9\right)}_{max}+5=14$ ，模型3为${\left(14,13\right)}_{max}+4=18$ ，
+
+    丙完成C工序时间：模型2为$9 + 7 = 1 6$，模型1为${\left(14,16\right)}_{max}+4=20$ ，模型3为${\left(18,20\right)}_{max}+5=25$ ，
+
+    甲完成D工序时间：模型2为${\left(13,16\right)}_{max}+9=25$ ，模型1为${\left(25,20\right)}_{max}+2=27$ ，模型3为${\left(27,25\right)}_{max}+3=30$ ，
+
+    ∴总耗时30分钟；
+
+    ④模型2-模型3-模型1：
+
+    甲完成A工序时间：$6 + 4 + 3 = 1 3$，
+
+    乙完成B工序时间：模型2为$6 + 3 = 9$，模型3为${\left(9,10\right)}_{max}+4=14$ ，模型1为${\left(14,13\right)}_{max}+5=19$ ，
+
+    丙完成C工序时间：模型2为$9 + 7 = 1 6$，模型3为${\left(14,16\right)}_{max}+5=21$ ，模型1为${\left(19,21\right)}_{max}+4=25$ ，
+
+    甲完成D工序时间：模型2为${\left(13,16\right)}_{max}+9=25$ ，模型3为${\left(21,25\right)}_{max}+3=28$ ，模型1为${\left(28,25\right)}_{max}+2=30$ ，
+
+    ∴总耗时30分钟；
+
+    ⑤模型3-模型1-模型2：
+
+    甲完成A工序时间：$4 + 3 + 6 = 1 3$，
+
+    乙完成B工序时刻：模型3为$4 + 4 = 8$，模型1为${\left(8,7\right)}_{max}+5=13$ ，模型2为${\left(13,13\right)}_{max}+3=16$ ，
+
+    丙完成C工序时间：模型3为$8 + 5 = 1 3$，模型1为${\left(13,13\right)}_{max}+4=17$ ，模型2为${\left(17,16\right)}_{max}+7=24$ ，
+
+    甲完成D工序时间：模型3为${\left(13,13\right)}_{max}+3=16$ ，模型1为${\left(17,16\right)}_{max}+2=19$ ，模型2为${\left(24,19\right)}_{max}+9=33$ ，
+
+    ∴总耗时33分钟；
+
+    ⑥模型3-模型2-模型1：
+
+    甲完成A工序时间：$4 + 6 + 3 = 1 3$，
+
+    乙完成B工序时间：模型3为$4 + 4 = 8$，模型2为${\left(8,10\right)}_{max}+3=13$ ，模型1为${\left(13,13\right)}_{max}+5=18$ ，
+
+    丙完成C工序时间：模型3为$8 + 5 = 1 3$，模型2为${\left(13,13\right)}_{max}+7=20$ ，模型1为${\left(18,20\right)}_{max}+4=24$ ，
+
+    甲完成D工序时间：模型3为${\left(13,13\right)}_{max}+3=16$ ，模型2为${\left(20,16\right)}_{max}+9=29$ ，模型1为${\left(29,24\right)}_{max}+2=31$ ，
+
+    ∴总耗时31分钟，
+
+    综上所述，要完成这3件模型的制作，最少需要30分钟．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: draft
   qc_note: ''
 - id: 17
   type: 解答
   score: 5
-  stem: 计算：$\left|-,2\right| - \sqrt{12} + \left(\frac{1}{3}\right)^{- 1} + 2 \text{sin} 60 \circ$．
-  answer: ''
-  solution: __MISSING__
-  knowledge_points:
-  - 绝对值
-  - 二次根式
-  - 负指数幂
-  - 特殊角的三角函数
-  module: numbersAndExpressions
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
+  stem: 计算：$\left|-2\right|−\sqrt{12}+{\left(\frac{1}{3}\right)}^{−1}+2sin60°$ ．
+  answer: $5 -$
+  solution: '分别通过绝对值计算、二次根式化简、负整数指数幂运算和特殊角的三角函数值的计算逐一计算各项，再依次加减即可得到结果．
+
+    解：原式$=2-2\sqrt{3}+3+2×\frac{\sqrt{3}}{2}$
+
+    $=2-2\sqrt{3}+3+\sqrt{3}$
+
+    $= 5 -$．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: needs_review
   qc_note: 解题步骤未提取，需补全 solution
 - id: 18
   type: 解答
   score: 5
-  stem: 解不等式组：$\left{\begin{matrix} 3 \left(x,-,2\right) > x - 4 \\ \frac{1 + 2 x}{3} > x - 1 \end{matrix}\right$
-  answer: ''
-  solution: __MISSING__
-  knowledge_points:
-  - 解一元一次不等式
-  - 解不等式组
-  module: equationsAndInequalities
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
+  stem: 解不等式组：$\left\{3\left(x−2\right)>x−4\frac{1+2x}{3}>x−1\right.$
+  answer: $1 < x < 4$
+  solution: '分别求解两个一元一次不等式的解集，再取两个解集的公共部分即可．
+
+    解：$\left\{3\left(x−2\right)>x−4①\frac{1+2x}{3}>x−1②\right.$，
+
+    由不等式①得：$x > 1$，
+
+    由不等式②得：$x < 4$，
+
+    ∴不等式组的解集为$1 < x < 4$．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: needs_review
   qc_note: 解题步骤未提取，需补全 solution
 - id: 19
   type: 解答
   score: 5
-  stem: 已知$2 a + b - 3 = 0$，求代数式$\frac{4 \left(2,a,-,b\right) + 8 b}{4 a^{2} + 4 a b + b^{2}}$的值．
-  answer: ''
-  solution: __MISSING__
-  knowledge_points:
-  - 代数式的化简与求值
-  module: numbersAndExpressions
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
+  stem: 已知$2 a + b - 3 = 0$，求代数式$\frac{4 \left(\right. 2 a - b \left.\right) + 8 b}{4 a^{2} + 4 a b + b^{2}}$的值．
+  answer: $\frac{4}{3}$
+  solution: '分别计算分子、因式分解分母，约分得到化简结果，再由已知条件得到$2 a + b = 3$，整体代入化简结果即可得到答案．
+
+    解：$\frac{4 \left(\right. 2 a - b \left.\right) + 8 b}{4 a^{2} + 4 a b + b^{2}}$
+
+    $= \frac{8 a - 4 b + 8 b}{\left(\right. 2 a + b \left.\right)^{2}}$
+
+    $= \frac{8 a + 4 b}{\left(\right. 2 a + b \left.\right)^{2}}$
+
+    $= \frac{4 \left(\right. 2 a + b \left.\right)}{\left(\right. 2 a + b \left.\right)^{2}}$
+
+    $= \frac{4}{2 a + b}$，
+
+    由$2 a + b - 3 = 0$可得$2 a + b = 3$，则原式$= \frac{4}{3}$．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: needs_review
   qc_note: 解题步骤未提取，需补全 solution
 - id: 20
   type: 解答
   score: 6
-  stem: '如图，在$\triangle A B C$中，$A B = B C$，$O$为$A C$中点，过点$A$作$A E \bot B C$于点$E$，连接$E O$，并延长到点$D$，使$O D = O E$，连接$A D$，$C
-    D$．
+  stem: '如图，在$\triangle A B C$中，$A B = B C$，O为$A C$中点，过点A作$A E \bot B C$于点E，连接$E O$，并延长到点D，使$O D = O E$，连接$A D$，$C D$．
 
 
     （1）求证：四边形$A E C D$是矩形；
 
-    （2）连接$O B$，若$\text{sin} \angle A C D = \frac{1}{3}$，$A D = 2$，求$O B$的长．'
-  figure: 2026-daxing-er/figures/image109.jpeg
-  _figures_extra:
-  - image109.jpeg
-  answer: ''
-  solution: __MISSING__
-  knowledge_points:
-  - 等腰三角形的性质
-  - 矩形的判定与性质
-  - 解直角三角形
-  module: triangles
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
+    （2）连接$O B$，若$\angle A C D = \frac{1}{3}$，$A D = 2$，求$O B$的长．'
+  figure: 2026-daxing-er/figures/image218.png
+  answer: （1）证明：∵O为$A C$中点， ∴$O A = O C$， 又∵$O D = O E$， ∴四边形$A E C D$是平行四边形， ∵$A E \bot B C$， ∴$\angle A E C = 9 0 \circ$， ∴四边形$A E C D$是矩形． （2）$6$
+  solution: '（1）利用平行四边形对角线互相平分的判定定理证得四边形$A E C D$是平行四边形，再由$\angle A E C = 9 0 \circ$得证结论；
+
+    （2）利用正弦的定义可求得$A C$的长度，再根据等腰三角形三线合一的性质证得$O B \bot A C$，利用矩形的性质证出$\triangle A C E \sim \triangle B C O$，从而得到$\angle C A E = \angle C B O$，即$s i n \angle C B O = \frac{1}{3}$，求得$B C$的长度，最后通过勾股定理即可得解．
+
+    （1）
+
+    略
+
+    （2）
+
+    解：如图，连接$O B$，
+
+
+    在$\triangle A C D$中，$A D = 2$，$s i n \angle A C D = \frac{1}{3}$，
+
+    ∴$A C = \frac{A D}{s i n \angle A C D} = 6$，
+
+    ∵$A B = B C$，O为$A C$的中点，
+
+    ∴$O A = O C = \frac{1}{2} A C = 3$，$O B \bot A C$，
+
+    ∵四边形$A E C D$是矩形，
+
+    ∴$A E C D$，
+
+    ∴$\angle A C D = \angle C A E$，
+
+    ∵$\angle A E C = \angle B O C = 9 0 \circ$，$\angle A C E = \angle B C O$，
+
+    ∴$\triangle A C E \sim \triangle B C O$，
+
+    ∴$\angle C A E = \angle C B O$，
+
+    ∵$s i n \angle C A E = s i n \angle A C D = \frac{1}{3}$，
+
+    ∴$s i n \angle C B O = \frac{1}{3}$，即$\frac{O C}{B C} = \frac{1}{3}$，
+
+    ∴$B C = 9$，
+
+    在$\triangle C B O$中，$O B = = = 6$．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: needs_review
   qc_note: 解题步骤未提取，需补全 solution
 - id: 21
   type: 解答
   score: 5
-  stem: '在平面直角坐标系$x O y$中，函数$y = k x + b \left(k,\neq,0\right)$的图象过点$\left(2,2\right)$和$\left(0,,-,1\right)$．
+  stem: '在平面直角坐标系$x O y$中，函数$y = k x + b \left(\right. k \neq 0 \left.\right)$的图象过点$\left(\right. 2 , 2 \left.\right)$和$\left(\right. 0 , - 1 \left.\right)$．
 
     （1）求$k$和$b$的值；
 
-    （2）当$x < 2$时，对于$x$的每一个值，函数$y = m x + 3 \left(m,\neq,0\right)$的值大于函数$y = k x + b$的值且大于1，直接写出$m$的取值范围．'
-  answer: ''
-  solution: __MISSING__
-  knowledge_points:
-  - 一次函数的解析式
-  - 一次函数的性质
-  module: functions
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
+    （2）当$x < 2$时，对于$x$的每一个值，函数$y = m x + 3 \left(\right. m \neq 0 \left.\right)$的值大于函数$y = k x + b$的值且大于1，直接写出$m$的取值范围．'
+  answer: （1）$\left\{k=\frac{3}{2}b=−1\right$ （2）$- \frac{1}{2} \leq m < 0$
+  solution: '（1）将两个已知点的坐标代入一次函数解析式，得到关于k和b的二元一次方程组，解方程组即可得到结果；
+
+    （2）根据题意列出$x < 2$时恒成立的两个不等式，分情况讨论不等式恒成立的条件，结合$x < 2$的范围推导得到m的取值范围．
+
+    （1）
+
+    解：将点$\left(\right. 2 , 2 \left.\right)$和$\left(\right. 0 , - 1 \left.\right)$代入$y = k x + b \left(\right. k \neq 0 \left.\right)$，
+
+    得$\left\{2k+b=2b=−1\right$，
+
+    解得$\left\{k=\frac{3}{2}b=−1\right$；
+
+    （2）
+
+    解：由（1）得$y = k x + b = \frac{3}{2} x - 1$，
+
+    根据题意得，当$x < 2$时，$m x + 3 > \frac{3}{2} x - 1$且$m x + 3 > 1$恒成立，
+
+    ∴$\left(\right. m - \frac{3}{2} \left.\right) x > - 4$且$m x > - 2$，
+
+    对于$\left(\right. m - \frac{3}{2} \left.\right) x > - 4$，若$m > \frac{3}{2}$，则$x > \frac{- 4}{m - \frac{3}{2}}$，
+
+    当$x < 2$时，x可取任意小于2的数，无法满足$x >$常数，
+
+    ∴无解，舍去；
+
+    若$m = \frac{3}{2}$，可得$0 > - 4$，不等式恒成立；
+
+    若$m < \frac{3}{2}$，则$x < \frac{8}{3 - 2 m}$，
+
+    ∵对所有$x < 2$恒成立，
+
+    ∴$2 \leq \frac{8}{3 - 2 m}$
+
+    $2 \left(\right. 3 - 2 m \left.\right) \leq 8$
+
+    解得$m \geq - \frac{1}{2}$；
+
+    ∴第一个不等式要求$- \frac{1}{2} \leq m \leq \frac{3}{2}$；
+
+    对于$m x > - 2$，若$m > 0$，则当$x > 0$时，满足$m x > - 2$，
+
+    又∵在$x < 2$中，不可能都满足$m x > - 2$，
+
+    ∴舍去；
+
+    若$m = 0$，可得$0 > - 2$，不等式恒成立；
+
+    若$m < 0$，则$x < \frac{- 2}{m}$，
+
+    ∵对所有$x < 2$恒成立，
+
+    ∴$2 \leq \frac{- 2}{m}$
+
+    $2 m \geq - 2$
+
+    解得$m \geq - 1$；
+
+    ∴第二个不等式成立的条件是 $- 1 \leq m \leq 0$．
+
+    又∵$m \neq 0$，
+
+    ∴m的取值范围为$- \frac{1}{2} \leq m < 0$．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: needs_review
   qc_note: 解题步骤未提取，需补全 solution
 - id: 22
   type: 解答
   score: 5
-  stem: '如图1，筒车是明代科学家宋应星所著《天工开物》中记载的经典水利灌溉工具，它利用流水冲击圆形转轮带动筒车转动，通过遍布圆周的竹筒舀水至顶部，并倾倒在水槽中，实现将低处河水提升至高处水槽中，再引流至农田，达到自流灌溉的目的，是我国古代劳动人民智慧的结晶．
+  stem: '如图1，筒车是明代科学家宋应星所著《天工开物》中记载的经典水利灌溉工具，它利用流水冲击圆形转轮带动筒车转动，通过遍布圆周的竹筒舀水至顶部，并倾倒在水槽中，实现将低处河水提升至高处水槽中，再引流至农田，达到自流灌溉的目的，是我国古代劳动人民智慧的结晶．如图2，已知某筒车的转轮圆心为O，吃水深度（转轮最低点到水位线的距离）与转轮半径的比为$1 : 3$，转轮圆心O到水槽底部的距离为0.9米，提水高度（水槽底部到水位线的竖直高度）是吃水深度的3.5倍．求这个筒车的转轮半径．'
+  figure: 2026-daxing-er/figures/image281.png
+  answer: 1.8米
+  solution: '根据题意设吃水深度为x米，则筒车的转轮半径为$3 x$米，列出一元一次方程求解x的值即可得出筒车的转轮半径．
 
-    如图2，已知某筒车的转轮圆心为$O$，吃水深度（转轮最低点到水位线的距离）与转轮半径的比为$1 : 3$，转轮圆心$O$到水槽底部的距离为0.9米，提水高度（水槽底部到水位线的竖直高度）是吃水深度的3.5倍．求这个筒车的转轮半径．'
-  figure: 2026-daxing-er/figures/image129.jpeg
-  _figures_extra:
-  - image129.jpeg
-  - image130.jpeg
-  answer: ''
-  solution: __MISSING__
-  knowledge_points:
-  - 圆的性质
-  - 比例与相似
-  module: circles
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
+    解：设吃水深度为x米，则筒车的转轮半径为$3 x$米，
+
+    由题意得：$0 . 9 + 2 x = 3 . 5 x$，
+
+    解得：$x = 0 . 6$，
+
+    ∴$3 x = 3 \times 0 . 6 = 1 . 8$（米），
+
+    ∴筒车的转轮半径为1.8米．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: needs_review
   qc_note: 解题步骤未提取，需补全 solution
 - id: 23
@@ -520,12 +828,12 @@ questions:
   score: 6
   stem: '五一假期，某景区为调查游客通行效率，某高峰时段工作人员在景区南、北两个检票口各随机抽取20名游客，记录他们从入园开始排队到通过检票口进入景区的等候时间（单位：分钟）．将数据整理，描述和分析，给出下面信息：
 
-    a．将南、北两个检票口各20名游客等候时间$t$分别分成四组：'
+    a．将南、北两个检票口各20名游客等候时间t分别分成四组：'
   options:
-    A: $0 < t \leq 15$，
-    B: $15 < t \leq 30$，
-    C: $30 < t \leq 45$，
-    D: '$45 < t \leq 60$
+    A: $0 < t \leq 1 5$，
+    B: $1 5 < t \leq 3 0$，
+    C: $3 0 < t \leq 4 5$，
+    D: '$4 5 < t \leq 6 0$
 
       b．南检票口20名游客等候时间数据：
 
@@ -546,187 +854,511 @@ questions:
 
       | 平均数 | 27.9 | 27.9 |
 
-      | 众数 | $n$ | 32 |
+      | 众数 | n | 32 |
 
-      | 中位数 | 30 | $p$ |
+      | 中位数 | 30 | p |
 
-      （1）写出图表中$m$，$n$，$p$的值：$m =$________，$n =$________，$p =$________；
+      （1）写出图表中m，n，p的值：$m =$________，$n =$________，$p =$________；
 
       （2）已知当天该高峰时段从南检票口进入景区的游客约为6000人，从北检票口进入景区的游客约为8000人，估计从两个检票口进入景区的等候时间超过30分钟的游客有________人'
-  figure: 2026-daxing-er/figures/image136.jpeg
-  _figures_extra:
-  - image136.jpeg
-  answer: ''
-  solution: __MISSING__
-  knowledge_points:
-  - 数据的整理与描述
-  - 统计量的计算与应用
-  module: statisticsAndProbability
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
+  figure: 2026-daxing-er/figures/image290.png
+  answer: （1）25，30，31.5 （2）6800
+  solution: '（1）利用扇形统计图的数据可求得A组所占百分比，再通过北检票口20名游客中C组占8个求得该组所占百分比，进而求得B组所占百分比，即m的值，观察南检票口20名游客等候时间数据出现次数最多的即为众数，求得n的值，再通过计算求出北检票口20名游客等候时间中第10、11名游客等候时间之和的平均数即为中位数，求得p的值；
+
+    （2）利用样本估计总体，分别求出北检票口超过30分钟的游客所占频率和南检票口超过30分钟的游客所占频率，再用各自的总数分别乘以对应的频率再相加即可得出结果．
+
+    （1）
+
+    解：由扇形统计图可知，北检票口A组的圆心角度数为$7 2 \circ$，
+
+    ∴所占百分比为：$\frac{7 2 \circ}{3 6 0 \circ} \times 1 0 0 % = 2 0 %$，
+
+    ∵北检票口20名游客等候时间在C组内的数据共有8个，
+
+    ∴所占百分比为：$\frac{8}{2 0} \times 1 0 0 % = 4 0 %$，
+
+    ∴B组所占百分比为：$1 - 1 5 % - 4 0 % - 2 0 % = 2 5 %$，即$m = 2 5$，
+
+    在南检票口20名游客等候时间数据中，出现次数最多的为30，共出现3次，
+
+    ∴$n = 3 0$，
+
+    在北检票口的20名游客等候时间数据中，中位数为第10、11名游客等候时间数据之和的平均数，
+
+    而第10、11名游客等候时间为31、32，
+
+    ∴$p = \frac{3 1 + 3 2}{2} = 3 1 . 5$．
+
+    （2）
+
+    解：由题可知，在南检票口20名游客等候时间数据中，超过30分钟的游客有8名，
+
+    ∴频率为$\frac{8}{2 0} = 0 . 4$，
+
+    在北检票口20名游客等候时间数据中，超过30分钟的游客占比为$1 5 % + 4 0 % = 5 5 %$，
+
+    ∴$6 0 0 0 \times 0 . 4 + 8 0 0 0 \times 5 5 % = 2 4 0 0 + 4 4 0 0 = 6 8 0 0$（人），
+
+    ∴估计从两个检票口进入景区的等候时间超过30分钟的游客有6800人．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: needs_review
   qc_note: 解题步骤未提取，需补全 solution
 - id: 24
   type: 解答
   score: 6
-  stem: '如图，在$\triangle A O B$中，$A O = B O$，点$C$是$A B$中点，以$O$为圆心，$O C$的长为半径作$\bigodot O$交$B O$延长线于点$D$，交$O A$于点$E$，交$O B$于点$F$，过点$D$作$\bigodot
-    O$的切线$D G$交$B A$延长线于点$C$．
+  stem: '如图，在$\triangle A O B$中，$A O = B O$，点$C$是$A B$中点，以$O$为圆心，$O C$的长为半径作$\bigodot O$交$B O$延长线于点$D$，交$O A$于点$E$，交$O B$于点$F$，过点$D$作$\bigodot O$的切线$D G$交$B A$延长线于点$C$．
 
 
     （1）求证：$D G = C G$；
 
-    （2）连接$D E$并延长交$A B$于点$H$，若$\frac{E H}{D E} = \frac{1}{3}$，$C G = 10$，求$\bigodot O$的半径．'
-  figure: 2026-daxing-er/figures/image163.jpeg
-  _figures_extra:
-  - image163.jpeg
-  answer: ''
-  solution: __MISSING__
-  knowledge_points:
-  - 圆的基本性质
-  - 等腰三角形的性质
-  - 相似三角形
-  module: circles
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
+    （2）连接$D E$并延长交$A B$于点$H$，若$\frac{E H}{D E} = \frac{1}{3}$，$C G = 1 0$，求$\bigodot O$的半径．'
+  figure: 2026-daxing-er/figures/image313.png
+  answer: （1）证明：连接$O C$，如图： ![](figures/image319.png) ∵$O A = O B$，$C$为$A B$的中点， ∴$O C \bot A B$， 又∵$O C$是$\bigodot O$的半径， ∴$C G$是$\bigodot O$的切线， 又∵$D G$是$\bigodot O$的切线， ∴$D G = C G$； （2）$\bigodot O$的半径为$5$．
+  solution: '（1）证明$C G$是$\bigodot O$的切线，再根据切线长定理可得结论；
+
+    （2）连接$D E$并延长交$A B$于点$H$，过点$O$作$O G \bot D H$于点$G$，连接$E F$，根据题意得到$\frac{E H}{G H} = \frac{2}{5}$，设$\bigodot O$的半径为$3 x$，则$O D = O E = O C = 3 x$，分别求出$A E = 2 x$，$O B = 5 x$，$B D = 8 x$，$A H = \frac{8}{5}
+    x$，再根据直角三角形得到$t a n \angle B = t a n \angle O A B = \frac{D G}{B D} = \frac{3}{4}$，即$8 x = \frac{4 0}{3}$，即可求解．
+
+    （1）
+
+    略
+
+    （2）
+
+    解：连接$D E$并延长交$A B$于点$H$，过点$O$作$O G \bot D H$于点$G$，连接$E F$，如图：
+
+
+    ∵$A O = B O$，点$C$是$A B$中点，
+
+    ∴$O C \bot A B$，$O C$平分$\angle A O B$，即$O C$平分$\angle E O F$，
+
+    又∵$O E = O F$，
+
+    ∴$O C \bot E F$，
+
+    ∵$\angle D E F = 9 0 \circ$，
+
+    ∴$O C \parallel D H$，
+
+    ∵$O C \bot A B$，
+
+    ∴$D H \bot A B$，
+
+    ∵$O D = O E$，$O G \bot D E$，
+
+    ∴$G E = \frac{1}{2} D E$，
+
+    ∵$\frac{E H}{D E} = \frac{1}{3}$，
+
+    ∴$\frac{E H}{G E} = \frac{2}{3}$，
+
+    ∴$\frac{E H}{G H} = \frac{2}{5}$，
+
+    设$\bigodot O$的半径为$3 x$，则$O D = O E = O C = 3 x$，
+
+    ∵$O G \bot D E$，$D H \bot A B$，$O C \bot A B$，即$\angle O G H = \angle G H C = \angle O C H = 9 0 \circ$，
+
+    ∴四边形$O G H C$是矩形，
+
+    ∴$G H = O C = 3 x$，
+
+    ∴$\frac{E H}{3 x} = \frac{2}{5}$，
+
+    ∴$E H = \frac{6}{5} x$，
+
+    ∵$\angle A H E = \angle O G E = 9 0 \circ$，$\angle A E H = \angle O E G$，
+
+    ∴$\triangle A E H \sim \triangle O E G$，
+
+    ∴$\frac{A E}{O E} = \frac{E H}{G E} = \frac{2}{3}$，即$\frac{A E}{3 x} = \frac{2}{3}$，
+
+    ∴$A E = 2 x$，
+
+    ∴$O B = O A = O E + A E = 3 x + 2 x = 5 x$，
+
+    ∴$B D = O D + O B = 3 x + 5 x = 8 x$，
+
+    在$\triangle A H E$中，$AH=\sqrt{A{E}^{2}−E{H}^{2}}=\sqrt{{\left(2x\right)}^{2}−{\left(\frac{6}{5}x\right)}^{2}}=\frac{8}{5}x$ ，
+
+    ∴$t a n \angle E A H = \frac{E H}{A H} = \frac{\frac{6}{5} x}{\frac{8}{5} x} = \frac{3}{4}$，即$t a n \angle O A B = \frac{3}{4}$，
+
+    ∵$O A = O B$，
+
+    ∴$\angle B = \angle O A B$，
+
+    在$\triangle B D G$中，$t a n \angle B = t a n \angle O A B = \frac{D G}{B D} = \frac{3}{4}$，
+
+    由（1）知，$D G = C G = 1 0$，
+
+    ∴$\frac{1 0}{B D} = \frac{3}{4}$，
+
+    ∴$B D = \frac{4 0}{3}$，即$8 x = \frac{4 0}{3}$，
+
+    ∴$x = \frac{5}{3}$，
+
+    ∴$\bigodot O$的半径为$3 \times \frac{5}{3} = 5$．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: needs_review
   qc_note: 解题步骤未提取，需补全 solution
 - id: 25
   type: 解答
   score: 5
-  stem: '为营造家庭亲子阅读氛围，A、B两个家庭分别制定了每周七天循环阅读计划，并以10天为一个结算单元设立积分奖励，每读一页书，奖励0.2积分，积分达到一定数值可以兑换相应礼品．每周七天可用星期$x$表示，其中$x = 1$，$2$，$3$，$4$，$5$，$6$，$7$，$x
-    = 1$至6依次表示星期一至星期六，$x = 7$表示星期日．
+  stem: '为营造家庭亲子阅读氛围，A、B两个家庭分别制定了每周七天循环阅读计划，并以10天为一个结算单元设立积分奖励，每读一页书，奖励0.2积分，积分达到一定数值可以兑换相应礼品．每周七天可用星期$x$表示，其中$x = 1$，$2$，$3$，$4$，$5$，$6$，$7$，$x = 1$至6依次表示星期一至星期六，$x = 7$表示星期日．
 
-    A家庭制定的每周循环阅读计划：星期$x$读书的页数记为$y_{\text{A}}$，从星期$x$当天开始连续阅读10天后的总积分记为$p_{\text{A}}$，可以认为$y_{\text{A}}$，$p_{\text{A}}$分别是$x$的函数，部分数据如下：
-
-    | 星期$x$ | 1 | 2 | 3 | 4 | 5 | 6 | 7 |
-
-    |---|---|---|---|---|---|---|---|
-
-    | $y_{\text{A}}$ | 12 | 14 | 16 | 18 | 20 | 22 | 24 |
-
-    | $p_{\text{A}}$ | $m$ | 34.8 | 36 | 37.2 | $n$ | 36.8 | 35.2 |
-
-    B家庭制定的每周循环阅读计划：星期$x$读书的页数记为$y_{\text{B}}$，从星期$x$当天开始连续阅读10天后的总积分记为$p_{\text{B}}$，可以认为$y_{\text{B}}$，$p_{\text{B}}$分别是$x$的函数，部分数据如下：
+    A家庭制定的每周循环阅读计划：星期$x$读书的页数记为$y_{}$，从星期$x$当天开始连续阅读10天后的总积分记为$p_{}$，可以认为$y_{}$，$p_{}$分别是$x$的函数，部分数据如下：
 
     | 星期$x$ | 1 | 2 | 3 | 4 | 5 | 6 | 7 |
 
     |---|---|---|---|---|---|---|---|
 
-    | $y_{\text{B}}$ | 20 | 18 | 13 | 22 | $k$ | 15 | 23 |
+    | $y_{}$ | 12 | 14 | 16 | 18 | 20 | 22 | 24 |
 
-    | $p_{\text{B}}$ | $a$ | $b$ | $c$ | $d$ | $e$ | $f$ | $g$ |
+    | $p_{}$ | $m$ | 34.8 | 36 | 37.2 | $n$ | 36.8 | 35.2 |
 
-    通过分析数据，在平面直角坐标中，分别描出部分数对$\left(x,,,y_{\text{A}}\right)$，$\left(x,,,p_{\text{A}}\right)$所对应的点．
+    B家庭制定的每周循环阅读计划：星期$x$读书的页数记为$y_{}$，从星期$x$当天开始连续阅读10天后的总积分记为$p_{}$，可以认为$y_{}$，$p_{}$分别是$x$的函数，部分数据如下：
+
+    | 星期$x$ | 1 | 2 | 3 | 4 | 5 | 6 | 7 |
+
+    |---|---|---|---|---|---|---|---|
+
+    | $y_{}$ | 20 | 18 | 13 | 22 | $k$ | 15 | 23 |
+
+    | $p_{}$ | $a$ | $b$ | $c$ | $d$ | $e$ | $f$ | $g$ |
+
+    通过分析数据，在平面直角坐标中，分别描出部分数对$\left(x,{y}_{A}\right)$，$\left(x,{p}_{A}\right)$所对应的点．
 
 
     （1）A家庭从星期一当天开始，连续阅读10天后的读书总页数为________；
 
-    （2）在给出的坐标系中，描出表示$\left(1,,m\right)$的点；
+    （2）在给出的坐标系中，描出表示$\left(\right. 1 , m \left.\right)$的点；
 
     （3）按照A家庭的积分兑换办法，兑换一本新书需要37积分．若连续阅读10天后的总积分满足这次兑换要求，且要尽早完成兑换，则应从星期________当天开始阅读；
 
     （4）A家庭从星期________当天开始阅读，连续阅读10天后所能获得的积分最大；
 
-    （5）若$p_{\text{B}}$随$x$的增大而增大，则整数$k =$________．'
-  figure: 2026-daxing-er/figures/image205.jpeg
-  _figures_extra:
-  - image205.jpeg
-  answer: ''
-  solution: __MISSING__
-  knowledge_points:
-  - 函数的概念
-  - 函数的应用
-  module: functions
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
+    （5）若$p_{}$随$x$的增大而增大，则整数$k =$________．'
+  figure: 2026-daxing-er/figures/image385.png
+  answer: （1）168页 （2）![](figures/image388.png)    （3）四 （4）五    （5）19
+  solution: '（1）根据题意，将A家庭从星期一当天开始，连续10天每日阅读量相加即可；
+
+    （2）根据“A家庭从星期一当天开始连续10天阅读总量$\times 0 . 2$”求得$m$的值，然后描点即可；
+
+    （3）比较一周积分数值，并结合尽早完成兑换，即可获得答案；
+
+    （4）首先求得$n$的值，然后比较一周积分数值大小，即可获得答案；
+
+    （5）分别计算B家庭每日连续10天阅读总量，且$p_{}$随$x$的增大而增大，即每日连续10天阅读总量随$x$的增大而增大，据此建立关于$k$的不等式组并求解，即可获得答案．
+
+    （1）
+
+    解：$1 2 + 1 4 + 1 6 + 1 8 + 2 0 + 2 2 + 2 4 + 1 2 + 1 4 + 1 6 = 1 6 8$，
+
+    即A家庭从星期一当天开始，连续阅读10天后的读书总页数为168页；
+
+    （2）
+
+    解：$m = 1 6 8 \times 0 . 2 = 3 3 . 6$，描点略；
+
+    （3）
+
+    解：∵$m = 3 3 . 6 < 3 7$，$3 4 . 8 < 3 7 , 3 6 < 3 7 , 3 7 . 2 > 3 7$，
+
+    ∴连续阅读10天后的总积分满足这次兑换要求，且要尽早完成兑换，则应从星期四当天开始阅读；
+
+    （4）
+
+    解：根据题意，$n=\left(20+22+24+12+14+16+18+20+22+24\right)×0.2=38.4$ ，
+
+    ∵$3 8 . 4 > 3 7 . 2 > 3 6 . 8 > 3 6 > 3 5 . 2 > 3 4 . 8 > 3 3 . 6$，
+
+    ∴A家庭从星期五当天开始阅读，连续阅读10天后所能获得的积分最大；
+
+    （5）
+
+    解：根据题意，B家庭从星期一当天开始，连续阅读10天后的读书总页数为$2 0 + 1 8 + 1 3 + 2 2 + k + 1 5 + 2 3 + 2 0 + 1 8 + 1 3 = 1 6 2 + k$，
+
+    B家庭从星期二当天开始，连续阅读10天后的读书总页数为$1 8 + 1 3 + 2 2 + k + 1 5 + 2 3 + 2 0 + 1 8 + 1 3 + 2 2 = 1 6 4 + k$，
+
+    B家庭从星期三当天开始，连续阅读10天后的读书总页数为$1 3 + 2 2 + k + 1 5 + 2 3 + 2 0 + 1 8 + 1 3 + 2 2 + k = 1 4 6 + 2 k$，
+
+    B家庭从星期四当天开始，连续阅读10天后的读书总页数为$2 2 + k + 1 5 + 2 3 + 2 0 + 1 8 + 1 3 + 2 2 + k + 1 5 = 1 4 8 + 2 k$，
+
+    B家庭从星期五当天开始，连续阅读10天后的读书总页数为$k + 1 5 + 2 3 + 2 0 + 1 8 + 1 3 + 2 2 + k + 1 5 + 2 3 = 1 4 9 + 2 k$，
+
+    B家庭从星期六当天开始，连续阅读10天后的读书总页数为$1 5 + 2 3 + 2 0 + 1 8 + 1 3 + 2 2 + k + 1 5 + 2 3 + 2 0 = 1 6 9 + k$，
+
+    B家庭从星期日当天开始，连续阅读10天后的读书总页数为$2 3 + 2 0 + 1 8 + 1 3 + 2 2 + k + 1 5 + 2 3 + 2 0 + 1 8 = 1 7 2 + k$，
+
+    ∵$p_{}$随$x$的增大而增大，
+
+    ∴$\left\{146+2k>164+k169+k>149+2k\right$，解得$1 8 < k < 2 0$，
+
+    ∵$k$为整数，
+
+    ∴$k = 1 9$．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: needs_review
   qc_note: 解题步骤未提取，需补全 solution
 - id: 26
   type: 解答
   score: 6
-  stem: '在平面直角坐标系$x O y$中，抛物线$y = a x^{2} + b x + c \left(a,\neq,0\right) \left.\right)$经过点$O$和点$A \left(1,0\right)$．
+  stem: '在平面直角坐标系$x O y$中，抛物线$y=a{x}^{2}+bx+c\left(a≠0\right))$ 经过点$O$和点$A \left(\right. 1 , 0 \left.\right)$．
 
     （1）求$c$的值，并用含$a$的式子表示$b$．
 
-    （2）直线$y = a^{2} x$与抛物线交于点$O$和点$B$（$O , B$不重合$\left.\right)$，过点$P \left(t,,0\right)$作$x$轴的垂线，交抛物线于点$M$，交直线于点$N$．
+    （2）直线$y = a^{2} x$与抛物线交于点$O$和点$B$（$O$、$B$不重合），过点$P \left(\right. t , 0 \left.\right)$作$x$轴的垂线，交抛物线于点$M$，交直线于点$N$．
 
     ①用含$a$的式子表示点$B$的横坐标；
 
-    ②已知$E \left(\frac{1}{4},a,,0\right)$，$F \left(\frac{3}{4},a,,0\right)$，点$P$从线段$E F$左端点运动到右端点的过程中，随$t$的增大，$M N$的长是先增大后减小，求$a$的取值范围．'
-  answer: ''
-  solution: __MISSING__
-  knowledge_points:
-  - 二次函数的性质
-  - 二次函数与直线的关系
-  module: functions
-  difficulty: 能力
-  recommended_for:
-  - L2
-  - L3
+    ②已知$E\left(\frac{1}{4}a,0\right)$，$F\left(\frac{3}{4}a,0\right)$，点$P$从线段$E F$左端点运动到右端点的过程中，随$t$的增大，$M N$的长是先增大后减小，求$a$的取值范围．'
+  figure: 2026-daxing-er/figures/image427.png
+  answer: （1）$c = 0$，$b = - a$ （2）①$a + 1$，②$a \leq - 4$或$a > 2$
+  solution: '（1）将点$O \left(\right. 0 ， 0 \left.\right)$和点$A \left(\right. 1 , 0 \left.\right)$代入二次函数即可作答；
+
+    （2）①根据（1）的结果，联立一次函数、二次函数即可作答；②将一次函数、二次函数相减，结果的绝对值即为$M N$的长度，将其配方，再分类讨论：当$a < 0$时，即$E\left(\frac{a}{4},0\right)$、$F\left(\frac{3}{4}a,0\right)$同在y轴的左侧，即确定$M N$取最大值时x的值，再确定此种情况下点$B$的位置，数形结合即可求解；当$x =
+    \frac{a + 1}{2}$时，再确定$M N$取最大值时x的值，数形结合即可列出关于a的不等式组，问题随之得解．
+
+    （1）
+
+    解：将点$O \left(\right. 0 ， 0 \left.\right)$和点$A \left(\right. 1 , 0 \left.\right)$代入二次函数关系式有：$c = 0$，$a + b = 0$，
+
+    即：$b = - a$；
+
+    （2）
+
+    解：∵$b = - a$，$c = 0$，
+
+    ∴二次函数为$y = a x^{2} - a x$，
+
+    ①联立：$\left\{y=a{x}^{2}−axy={a}^{2}x\right$，解得：$\left{\right. x = 0 & y = 0$，或$\left\{x=a+1y={a}^{3}+{a}^{2}\right$，
+
+    即点B的坐标为：$B\left(a+1,{a}^{3}+{a}^{2}\right)$，
+
+    ∵$O$、$B$不重合，
+
+    ∴$a + 1 \neq 0$，即$a \neq - 1$，
+
+    则点B的横坐标为$a + 1$；
+
+    ②根据题意可知$M N$的长度为：${y}_{MN}=\left|a{x}^{2}−ax−{a}^{2}x\right|=\left|−\frac{a{\left(a+1\right)}^{2}}{4}+a{\left(x−\frac{a+1}{2}\right)}^{2}\right|$，
+
+    当$a < 0$时，即$E\left(\frac{a}{4},0\right)$、$F\left(\frac{3}{4}a,0\right)$同在y轴的左侧，
+
+    ∵$a < 0$，
+
+    ∴$−\frac{a{\left(a+1\right)}^{2}}{4}>0$ ，$a{\left(x−\frac{a+1}{2}\right)}^{2}<0$ ，
+
+    ∴当$x = \frac{a + 1}{2}$时，$M N$的最大值为：${y}_{MN}=−\frac{a{\left(a+1\right)}^{2}}{4}$，
+
+    ∵直线$y = a^{2} x$与抛物线交于点$O$和点$B$（$O$、$B$不重合），点B的横坐标为：$a + 1$，
+
+    若点$B$在y轴的右侧，结合$E\left(\frac{a}{4},0\right)$、$F\left(\frac{3}{4}a,0\right)$同在y轴的左侧，
+
+    如图，
+
+
+    即在$\frac{3}{4} a < x < \frac{1}{4} a$范围内，$y = a^{2} x$的函数值大于$y = a x^{2} - a x$的函数值，
+
+    ∴此时的$M N$的值将随着x的变大逐渐变大，此时与题意不符，
+
+    ∴点$B$在y轴的左侧，
+
+    如图，
+
+
+    ∵当$x = \frac{a + 1}{2}$时，$M N$的最大值为：${y}_{MN}=−\frac{a{\left(a+1\right)}^{2}}{4}$，
+
+    又∵点$P$从线段$E F$左端点运动到右端点的过程中，随$t$的增大，$M N$的长是先增大后减小，
+
+    ∴$\left\{\frac{3}{4}a<\frac{a+1}{2}<\frac{1}{4}a\frac{3}{4}a≥a+1\right$，解得：$a \leq - 4$；
+
+    当$a > 0$时，即$E\left(\frac{a}{4},0\right)$、$F\left(\frac{3}{4}a,0\right)$同在y轴的右侧，
+
+    ∵$a > 0$，${y}_{MN}=\left|a{x}^{2}−ax−{a}^{2}x\right|=\left|−\frac{a{\left(a+1\right)}^{2}}{4}+a{\left(x−\frac{a+1}{2}\right)}^{2}\right|=\left|\frac{a{\left(a+1\right)}^{2}}{4}−a{\left(x−\frac{a+1}{2}\right)}^{2}\right|$，
+
+    ∴$\frac{a{\left(a+1\right)}^{2}}{4}>0$ ，$−a{\left(x−\frac{a+1}{2}\right)}^{2}<0$ ，
+
+    ∴当$x = \frac{a + 1}{2}$时，$M N$的最大值为：${y}_{MN}=\frac{a{\left(a+1\right)}^{2}}{4}$，
+
+    如图，
+
+
+    要满足：点$P$从线段$E F$左端点运动到右端点的过程中，随$t$的增大，$M N$的长是先增大后减小，
+
+    ∴$\left\{\frac{1}{4}a<\frac{a+1}{2}<\frac{3}{4}a\frac{3}{4}a≤a+1\right$，解得：$a > 2$；
+
+    综上：$a$的取值范围$a \leq - 4$或$a > 2$．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: needs_review
   qc_note: 解题步骤未提取，需补全 solution
 - id: 27
   type: 解答
   score: 7
-  stem: '在$\triangle A B C$中，$\angle A C B = 90 \circ$，$\angle B = \alpha \left(\right. 0 \circ < \alpha < 30 \circ \left.\right)$，点$D$是$A
-    B$的中点，点$E$为$A B$下方一点，满足$\angle A E D = 2 \alpha$，将线段$E D$绕点$E$顺时针旋转$2 \alpha$，得到线段$E F$，点$F$恰好落在$A B$上．连接$F C$，延长$E D$交$C
-    F$于点$G$．
+  stem: '在$\triangle A B C$中，$\angle A C B = 9 0 \circ$，$∠B=α\left(0°<α<30°\right)$ ，点$D$是$A B$的中点，点$E$为$A B$下方一点，满足$\angle A E D = 2 \alpha$，将线段$E D$绕点$E$顺时针旋转$2 \alpha$，得到线段$E F$，点$F$恰好落在$A B$上．连接$F C$，延长$E
+    D$交$C F$于点$G$．
 
 
     （1）连接$C D$，求证：$\angle C D G = \angle D A E$；
 
     （2）用等式表示$A E$，$E F$，$D G$之间的数量关系，并证明．'
-  figure: 2026-daxing-er/figures/image252.jpeg
-  _figures_extra:
-  - image252.jpeg
-  answer: ''
-  solution: __MISSING__
-  knowledge_points:
-  - 直角三角形的性质
-  - 旋转的性质
-  - 几何证明
-  module: triangles
-  difficulty: 能力
-  recommended_for:
-  - L2
-  - L3
+  figure: 2026-daxing-er/figures/image438.png
+  answer: （1）证明：如图，连接$C D$ ![](figures/image440.png) ∵在$\triangle A B C$中，$\angle A C B = 9 0 \circ$，点$D$是$A B$的中点， ∴$C D = A D = B D$， ∴$∠BCD=∠B=α$ ， ∴$\angle A D C = \angle B C D + \angle B = 2 \alpha$，
+    ∴$\angle A D G = \angle A D C + \angle C D G = 2 \alpha + \angle C D G$， 又∵$\angle A D G = \angle A E D + \angle D A E$，$\angle A E D = 2 \alpha$， ∴$\angle A D G = 2 \alpha + \angle D A E$， ∴$\angle
+    C D G = \angle D A E$． （2）解：$A E = E F + 2 D G$，证明如下： 如图，延长$E G$至点$H$，使得$E H = A E$，连接$C D , C H , F H$， ![](figures/image450.png) 由旋转的性质得：$E F = E D$，$\angle D E F = 2 \alpha$， 在$\triangle E F H$和$\triangle
+    E D A$中， $\left\{EF=ED∠HEF=∠AED=2αEH=EA\right$， ∴$△EFH≌△EDA\left(SAS\right)$， ∴$H F = A D , \angle F H E = \angle D A E$， 由（1）已得：$C D = A D , \angle C D G = \angle D A E$， ∴$H F = C D , \angle F H E
+    = \angle C D G$， ∴$H F \parallel C D$， ∴四边形$C D F H$是平行四边形， ∴$H G = D G$， ∴$E H = D E + D G + H G = E F + 2 D G$， ∴$A E = E F + 2 D G$．
+  solution: '（1）连接$C D$，先得出$C D = A D = B D$，再得出$∠BCD=∠B=α$ ，则$\angle A D C = 2 \alpha$，然后根据三角形的外角性质即可得证；
+
+    （2）延长$E G$至点$H$，使得$E H = A E$，连接$C D , C H , F H$，先证出$\triangle E F H \approx \triangle E D A$，则$H F = A D , \angle F H E = \angle D A E$，再证出四边形$C D F H$是平行四边形，则$H G = D G$，据此即可得出结论．
+
+    （1）
+
+    证明：略．
+
+    （2）
+
+    解：略．
+
+    本题难点在于通过作辅助线，构造全等三角形和平行四边形．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: needs_review
   qc_note: 解题步骤未提取，需补全 solution
 - id: 28
   type: 解答
   score: 7
-  stem: '在平面直角坐标系$x O y$中，对于不重合的点$A$和点$B$以及正实数$m$有如下定义：过$B$点的任意一条直线上都存在点$C$，$D$（$B$，$C$，$D$互不重合），满足$A C = A D = m$，称点$B$是点$A$的“$m$－区域点”，线段$C
-    D$的长度的最小值叫做点$B$关于点$A$的“$m$－区域距离”．
+  stem: '在平面直角坐标系$x O y$中，对于不重合的点A和点B以及正实数m有如下定义：过B点的任意一条直线上都存在点C，D（B，C，D互不重合），满足$A C = A D = m$，称点B是点A的“m－区域点”，线段$C D$的长度的最小值叫做点B关于点A的“m－区域距离”．
 
 
-    （1）若点$A$坐标为$\left(2,0\right)$，在$B_{1} \left(1,2\right)$，$B_{2} \left(2,,-,1\right)$，$B_{3} \left(2,,-,2\right)$这三个点中________是点$A$的“$2$－区域点”，此时这个点关于点$A$的“$2$－区域距离”是________；
+    （1）若点A坐标为$\left(\right. 2 , 0 \left.\right)$，在$B_{1} \left(\right. 1 , 2 \left.\right)$，$B_{2} \left(\right. 2 , - 1 \left.\right)$，$B_{3} \left(\right. 2 , - 2 \left.\right)$这三个点中________是点A的“2－区域点”，此时这个点关于点A的“2－区域距离”是________；
 
-    （2）若点$A$是直线$y = x + 1$上一动点，记点$A$的横坐标为$t$，则使得坐标原点$O$是点$A$的“$5$－区域点”的$t$的取值范围是________，点$O$关于点$A$的“$5$－区域距离”的最大值是________；
+    （2）若点A是直线$y = x + 1$上一动点，记点A的横坐标为t，则使得坐标原点O是点A的“5－区域点”的t的取值范围是________，点O关于点A的“5－区域距离”的最大值是________；
 
-    （3）若点$A_{1}$，$A_{2}$是半径为$2 \sqrt{5}$的$\bigodot O$上的两动点，且$A_{1} A_{2} = 4$，$E \left(t,,0\right)$，$F \left(2,t,,0\right)$，若对于线段$E
-    F$上的任意一点$M$，都存在$A_{1}$，$A_{2}$，使得$M$既是$A_{1}$的“$\frac{5}{2}$－区域点”也是$A_{2}$的“$\frac{5}{2}$－区域点”，直接写出$t$的取值范围是________．'
-  figure: 2026-daxing-er/figures/image276.jpeg
-  _figures_extra:
-  - image276.jpeg
-  answer: ''
-  solution: __MISSING__
-  knowledge_points:
-  - 平面直角坐标系
-  - 圆的性质
-  - 距离公式
-  module: geometryComprehensive
-  difficulty: 能力
-  recommended_for:
-  - L2
-  - L3
+    （3）若点$A_{1}$，$A_{2}$是半径为$2$的$\bigodot O$上的两动点，且$A_{1} A_{2} = 4$，$E \left(\right. t , 0 \left.\right)$，$F \left(\right. 2 t , 0 \left.\right)$，若对于线段$E F$上的任意一点M，都存在$A_{1}$，$A_{2}$，使得M既是$A_{1}$的“$\frac{5}{2}$－区域点”也是$A_{2}$的“$\frac{5}{2}$－区域点”，直接写出t的取值范围是________．'
+  figure: 2026-daxing-er/figures/image465.png
+  answer: （1）$B_{2}$，$2$ （2）$- 4 < t < 3$，$7$ （3）$- \frac{1 1}{4} < t < - \frac{5}{2}$或$\frac{5}{2} < t < \frac{1 1}{4}$
+  solution: '（1）根据“m－区域点”和“m－区域距离”的定义即可求解；
+
+    （2）根据“m－区域点”的定义结合图象可得出$\sqrt{{t}^{2}+{\left(t+1\right)}^{2}}=5$ ，求得t的临界值并得出范围，再根据“m－区域距离”的定义可得出点O关于点A的“5－区域距离”存在最大值，则点O到点A的距离须为最小，即当$O A \bot C D$时，$O A$存在最小值，利用勾股定理求得最大值即弦长最大值；
+
+    （3）由题意可得，点M既在以$A_{1}$为圆心，$\frac{5}{2}$为半径的圆内，又在以$A_{2}$为圆心，$\frac{5}{2}$为半径的圆内，点M是线段$E F$上的动点，可得出线段$E F$均在如图所示的阴影部分内，结合图象并根据定义可得出$\bigodot A_{1}$与$\bigodot A_{2}$，$\bigodot A_{1}^{''}$与$\bigodot A_{2}^{''}$的交点坐标，从而得出t的临界值并得出范围．
+
+    （1）
+
+    解：由题意知，点A的“m－区域点”是对过点B的任意直线与以A为圆心，m为半径的$\bigodot A$都有两个交点，点A的“m－区域距离”是与过点B的直径垂直的弦长，
+
+    如图，作以点A为圆心，半径为2的$\bigodot A$，
+
+
+    观察图象可知，点$B_{2}$在$\bigodot A$内部，点$B_{1}$在$\bigodot A$外部，点$B_{3}$在$\bigodot A$上，
+
+    ∴符合题意的点为$B_{2} \left(\right. 2 , - 1 \left.\right)$，即点$B_{2}$是点A的“2－区域点”，
+
+    过点$B_{2}$作$C D \parallel x$轴，交$\bigodot A$于点C，D，连接$A B_{2}$，
+
+    ∴$A B_{2} = 1$，$A C = A D = 2$，
+
+    在$\triangle A C B_{2}$中，$C B_{2} = =$，
+
+    同理可得：$B_{2} D =$，
+
+    ∴$C D = C B_{2} + B_{2} D = 2$，即点$B_{2}$关于点A的“2－区域距离”是$2$．
+
+    （2）
+
+    解：由题意知，点A是直线$y = x + 1$上一动点，且横坐标为t，
+
+    ∴纵坐标为$t + 1$，
+
+    要使得坐标原点O是点A的“5－区域点”，
+
+    如图，分别作半径为5，且过点O的$\bigodot A_{1}$，$\bigodot A_{2}$，连接$O A_{1}$，$O A_{2}$，
+
+
+    ∴$O A_{1} = O A_{2} = 5$，
+
+    ∴$\sqrt{{t}^{2}+{\left(t+1\right)}^{2}}=5$ ，
+
+    解得：$t_{1} = - 4$，$t_{2} = 3$，
+
+    ∴t的取值范围是$- 4 < t < 3$，
+
+    要使点O关于点A的“5－区域距离”存在最大值，则点O到点A的弦心距必为最小，
+
+    ∴当$O A \bot C D$时，$O A$存在最小值，
+
+    如图，作$y = x + 1$的平行线$C D$，连接$A C$，$A D$，设$y = x + 1$分别交x轴，y轴于点G，H，
+
+
+    ∴$A D = A C = 5$，
+
+    易得$G \left(\right. - 1 , 0 \left.\right)$，$H \left(\right. 0 , 1 \left.\right)$，
+
+    ∴$O G = O H = 1$，$H G = =$，
+
+    ∴$\angle H G O = \angle G H O = 4 5 \circ$，
+
+    ∵$G H \parallel C D$，$O A \bot C D$，
+
+    ∴$O A \bot G H$，
+
+    ∴$O A = A G = A H = \frac{1}{2} G H = \frac{}{2}$，
+
+    在$\triangle A O C$中，$CO=\sqrt{A{C}^{2}−A{O}^{2}}=\sqrt{{5}^{2}−{\left(\frac{\sqrt{2}}{2}\right)}^{2}}=\frac{7}{2}\sqrt{2}$，
+
+    同理可得：$O D = \frac{7}{2}$，
+
+    ∴$C D = C O + O D = \frac{7}{2} + \frac{7}{2} = 7$，
+
+    即点O关于点A的“5－区域距离”的最大值是$7$．
+
+    （3）
+
+    解：由题意可得，点M既在以$A_{1}$为圆心，$\frac{5}{2}$为半径的圆内，又在以$A_{2}$为圆心，$\frac{5}{2}$为半径的圆内，
+
+    ∵点M是线段$E F$上的动点，
+
+    ∴线段$E F$均在如图所示的阴影部分内，
+
+    如图，作半径为$2$的$\bigodot O$，作直线$x = 4$交$\bigodot O$于点$A_{1}$，$A_{2}$，使得$A_{1} A_{2} = 4$，$A_{1} A_{2}$交x轴于点P，分别以点$A_{1}$，$A_{2}$为圆心，$\frac{5}{2}$为半径作$\bigodot A_{1}$，$\bigodot A_{2}$，两圆分别交$K_{1}$，$K_{2}$，连接$K_{1}
+    A_{1}$，$K_{2} A_{2}$，
+
+
+    ∴$A_{1} P = A_{2} P = \frac{1}{2} A_{1} A_{2} = 2$，
+
+    在$\triangle A_{1} K_{1} P$中，${K}_{1}P=\sqrt{{A}_{1}{K}_{1}^{2}−{A}_{1}{P}^{2}}=\sqrt{{\left(\frac{5}{2}\right)}^{2}−{2}^{2}}=\frac{3}{2}$，
+
+    同理可得：$K_{2} P = \frac{3}{2}$，
+
+    ∴$O K_{1} = O P - K_{1} P = 4 - \frac{3}{2} = \frac{5}{2}$，$O{K}_{2}=OP+{K}_{1}P=4+\frac{3}{2}=\frac{11}{2}$，
+
+    ∴${K}_{1}\left(\frac{5}{2},0\right)$，${K}_{2}\left(\frac{11}{2},0\right)$，
+
+    ∵$E \left(\right. t , 0 \left.\right)$，$F\left(2t,0\right)$在阴影区域内，且不与边界重合，
+
+    ∴$\left\{t>\frac{5}{2}2t<\frac{11}{2}\right$，解得：$\frac{5}{2} < t < \frac{1 1}{4}$，
+
+    同理，作$x = - 4$交$\bigodot O$于点$A_{1}^{''}$，$A_{2}^{''}$，使得${{A}_{1}}^{′}{{A}_{2}}^{′}=4$ ，$A_{1}^{''} A_{2}^{''}$交x轴于点$P^{''}$，分别以点$A_{1}^{''}$，$A_{2}^{''}$为圆心，$\frac{5}{2}$为半径作$\bigodot A_{1}^{''}$，$\bigodot
+    A_{2}^{''}$，两圆分别交$K_{1}^{''}$，$K_{2}^{''}$，连接${{K}_{1}}^{′}{{A}_{1}}^{′}$，${{K}_{2}}^{′}{{A}_{2}}^{′}$，
+
+    ∴${{K}_{1}}^{′}\left(−\frac{11}{2},0\right)$，${{K}_{2}}^{′}\left(−\frac{5}{2},0\right)$，
+
+    ∵$E \left(\right. t , 0 \left.\right)$，$F\left(2t,0\right)$在阴影区域内，且不与边界重合，
+
+    ∴$\left\{2t>−\frac{11}{2}t<−\frac{5}{2}\right$，解得：$- \frac{1 1}{4} < t < - \frac{5}{2}$，
+
+    综上所述，t的取值范围是$- \frac{1 1}{4} < t < - \frac{5}{2}$或$\frac{5}{2} < t < \frac{1 1}{4}$．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: needs_review
   qc_note: 解题步骤未提取，需补全 solution

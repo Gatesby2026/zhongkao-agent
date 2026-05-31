@@ -1,35 +1,23 @@
-# ============================================================
-# 2026年北京真题math — 自动生成
-# ============================================================
-# OCR: Qwen-VL-OCR  Enrich: qwen-max
-# QC: draft=28  needs_review=0
-
 year: 2026
-district: ''
-exam_type: 真题
+district: 燕山区
+exam_type: 二模
 subject: math
 full_score: 100
 duration_minutes: 120
 total_questions: 28
 structure: 8单选(16分) + 8填空(16分) + 12解答(68分)
-passages: []
 questions:
 - id: 1
   type: 单选
   score: 2
   stem: 下列图形中，既是轴对称图形又是中心对称图形的是（     ）
   options:
-    A: '![](figures/image3.png)'
-    B: '![](figures/image4.png)'
-    C: '![](figures/image5.png)'
-    D: '![](figures/image6.png)'
+    A: '[图]'
+    B: '[图]'
+    C: '[图]'
+    D: '[图]'
   has_image_options: true
   figure: 2026-yanshan-er/figures/image3.png
-  _figures_extra:
-  - image3.png
-  - image4.png
-  - image5.png
-  - image6.png
   answer: C
   solution: '根据轴对称图形和中心对称图形的定义进行判断． 轴对称图形是指沿一条直线折叠，直线两旁的部分能够完全重合的图形；中心对称图形是指绕某一点旋转$180 \circ$后能与自身重合的图形．
 
@@ -40,16 +28,9 @@ questions:
     $\text{C}$．既是轴对称图形也是中心对称图形，故该选项符合题意；
 
     $\text{D}$．是轴对称图形不是中心对称图形，故该选项不符合题意；'
-  knowledge_points:
-  - 轴对称图形
-  - 中心对称图形
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: draft
   qc_note: ''
 - id: 2
@@ -62,8 +43,6 @@ questions:
     C: $\angle N O P$比$\angle M O Q$大
     D: $\angle M O Q$与$\angle M O P$互补
   figure: 2026-yanshan-er/figures/image16.png
-  _figures_extra:
-  - image16.png
   answer: D
   solution: '分别求出$\angle N O Q$、$\angle N O P$、$\angle M O Q$、$\angle M O P$的大小，即可进行判断．
 
@@ -76,16 +55,9 @@ questions:
     故选：D
 
     此题考查了角的大小和计算，正确求解角的度数是解题的关键．'
-  knowledge_points:
-  - 角的性质
-  - 互补角
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: draft
   qc_note: ''
 - id: 3
@@ -109,15 +81,9 @@ questions:
     D选项：$\because b > 0$，根据不等式的基本性质一，可得：$b - a > - a$，故D选项错误．
 
     故选：B．'
-  knowledge_points:
-  - 不等式的性质
-  module: equationsAndInequalities
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: draft
   qc_note: ''
 - id: 4
@@ -137,15 +103,9 @@ questions:
     $\left(6,-,2\right) \times 180 \circ = 720 \circ$．
 
     故选：$\text{C}$．'
-  knowledge_points:
-  - 多边形的内角和
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: draft
   qc_note: ''
 - id: 5
@@ -167,15 +127,9 @@ questions:
     解得：$m \leq 1$．
 
     故选∶B．'
-  knowledge_points:
-  - 一元二次方程的根的判别式
-  module: equationsAndInequalities
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: draft
   qc_note: ''
 - id: 6
@@ -188,27 +142,18 @@ questions:
     C: $\frac{1}{6}$
     D: $\frac{1}{9}$
   figure: 2026-yanshan-er/figures/image58.png
-  _figures_extra:
-  - image58.png
   answer: B
   solution: '此题考查了树状图法与列表法求概率，用到的知识点为：$概率 = 所求情况数 \div 总情况数$；首先根据题意画出树状图，然后由树状图求得所有等可能的结果与两次摸出的小球标号相同的情况，再利用概率公式即可求得答案．
 
     根据题意，画树状图如下：
 
-    ![](figures/image58.png)
 
     共有9种等可能结果，其中两次摸出的小球标号相同的有3种结果，所以两次摸出的小球标号相同的概率是$\frac{3}{9} = \frac{1}{3}$，
 
     故选：B．'
-  knowledge_points:
-  - 概率计算
-  module: statisticsAndProbability
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: draft
   qc_note: ''
 - id: 7
@@ -221,11 +166,8 @@ questions:
     C: $\sqrt{3}$
     D: $\sqrt{5}$
   figure: 2026-yanshan-er/figures/image69.png
-  _figures_extra:
-  - image69.png
   answer: A
-  solution: '由正方形的性质得出$A B = A D = C D = 1, \angle B A D = 90 \circ$，$A B \parallel C D$，由勾股定理求出$B D$，根据等腰三角形的判定和性质得出$B F
-    = A B = 1$，最后根据线段的和差关系即可得出答案.
+  solution: '由正方形的性质得出$A B = A D = C D = 1, \angle B A D = 90 \circ$，$A B \parallel C D$，由勾股定理求出$B D$，根据等腰三角形的判定和性质得出$B F = A B = 1$，最后根据线段的和差关系即可得出答案.
 
     解：在正方形$A B C D$中，$A B = 1$，
 
@@ -250,15 +192,9 @@ questions:
     ∴$D E = \sqrt{2} - 1$，
 
     ∴$C E = C D - D E = 2 - \sqrt{2}$．'
-  knowledge_points:
-  - 正方形的性质
-  - 相似三角形
-  module: quadrilaterals
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: draft
   qc_note: ''
 - id: 8
@@ -284,19 +220,14 @@ questions:
     C: ①②④
     D: ②③④
   figure: 2026-yanshan-er/figures/image96.png
-  _figures_extra:
-  - image96.png
-  - image112.png
   answer: C
   solution: '本题考查正五边形性质、圆周角定理、全等三角形判定与性质、三角形内角和及外角性质；解题关键是熟练运用上述知识，结合正五边形的对称性，通过角度和线段关系的推导来判断结论正误．
 
-    对于①：利用正五边形内角和公式求出内角，再依据圆周角定理计算$\angle C A D$度数判断对错；对于②：截取$G H = O G$，根据正五边形轴对称性找全等条件证$\triangle B G H ≌\triangle B G O$，$\triangle
-    B H A ≌\triangle B O F$推导线段关系判断；对于③：用三角形外角性质和五边形的性质即可求得$\angle C F D$与$\angle C O D$关；对于④：由圆周角定理求角，结合三角形内角和求$\angle B
-    F C$，依等角对等边判断．
+    对于①：利用正五边形内角和公式求出内角，再依据圆周角定理计算$\angle C A D$度数判断对错；对于②：截取$G H = O G$，根据正五边形轴对称性找全等条件证$\triangle B G H ≌\triangle B G O$，$\triangle B H A ≌\triangle B O F$推导线段关系判断；对于③：用三角形外角性质和五边形的性质即可求得$\angle C F
+    D$与$\angle C O D$关；对于④：由圆周角定理求角，结合三角形内角和求$\angle B F C$，依等角对等边判断．
 
     解：如图：在$G A$上截取$G H = O G$，连接$B H$，$AB，CD，DE，AE$ ，
 
-    ![](figures/image112.png)
 
     ∵正五边形内角和为$\left(\right. 5 - 2 \left.\right) \times 180 \circ = 540 \circ$，
 
@@ -310,11 +241,9 @@ questions:
 
     ∵五边形$A B C D E$是正五边形，
 
-    ∴$O A$平分$\angle B A E$，$O B$平分$\angle A B C$，$\angle O A B = \angle O B A = \frac{1}{2} \angle B A E = 54 \circ$，$O A
-    = O B$，$A B = A E$，
+    ∴$O A$平分$\angle B A E$，$O B$平分$\angle A B C$，$\angle O A B = \angle O B A = \frac{1}{2} \angle B A E = 54 \circ$，$O A = O B$，$A B = A E$，
 
-    在$\triangle A B E$中，根据三角形内角和定理，$\angle A B E = \angle A E B = \frac{180 \circ - \angle B A E}{2} = \frac{180 - 108}{2}
-    = 36 \circ$．
+    在$\triangle A B E$中，根据三角形内角和定理，$\angle A B E = \angle A E B = \frac{180 \circ - \angle B A E}{2} = \frac{180 - 108}{2} = 36 \circ$．
 
     $∠AGB=180°−∠OAB−∠ABE=180°−54°−36°=90°$ ，
 
@@ -328,8 +257,7 @@ questions:
 
     ∴$B H = B O$，$\angle H B G = \angle O B G$，$\angle B H G = \angle B O G$．
 
-    由正五边形性质可知，$\angle A O B = \angle B O C = \angle C O D = \angle D O E = \angle E O A = 72 \circ$，$\angle O B C = 54 \circ$，$∠BCF=180°−∠BAE=180°−108°=72°$
-    ，$\angle C B D = 36 \circ$．
+    由正五边形性质可知，$\angle A O B = \angle B O C = \angle C O D = \angle D O E = \angle E O A = 72 \circ$，$\angle O B C = 54 \circ$，$∠BCF=180°−∠BAE=180°−108°=72°$ ，$\angle C B D = 36 \circ$．
 
     ∵$\angle A O B = 72 \circ$，$\angle O A B = \angle O B A = 54 \circ$，$\angle O B C = 54 \circ$，
 
@@ -361,8 +289,7 @@ questions:
 
     ∴$O G + O F = A G$；故②正确．
 
-    ∵$\angle C F D$是$\triangle B C F$的外角，$\angle C F D = \angle C B D + \angle B C E = \angle C B D + \angle B C F = 36 \circ
-    + 72 \circ = 108 \circ$，
+    ∵$\angle C F D$是$\triangle B C F$的外角，$\angle C F D = \angle C B D + \angle B C E = \angle C B D + \angle B C F = 36 \circ + 72 \circ = 108 \circ$，
 
     ∵$\angle C O D = 72 \circ$，
 
@@ -381,16 +308,9 @@ questions:
     ∴$B C = B F$，故④正确．
 
     综上①②④正确．'
-  knowledge_points:
-  - 正多边形的性质
-  - 圆的基本性质
-  - 几何推理
-  module: geometryComprehensive
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: draft
   qc_note: ''
 - id: 9
@@ -409,15 +329,9 @@ questions:
     故答案为：$x \neq - 1$．
 
     本题考查分式有意义的条件，解题的关键是熟记分式的分母不能为0．'
-  knowledge_points:
-  - 分式的定义与性质
-  module: numbersAndExpressions
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: draft
   qc_note: ''
 - id: 10
@@ -432,16 +346,9 @@ questions:
     解：点$\left(2,1\right)$关于x轴对称的点的坐标是$\left(2,,-,1\right)$，
 
     故答案为：$\left(2,,-,1\right)$．'
-  knowledge_points:
-  - 平面直角坐标系
-  - 点的对称
-  module: geometryComprehensive
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: draft
   qc_note: ''
 - id: 11
@@ -460,15 +367,9 @@ questions:
     故答案为：3（答案不唯一）．
 
     本题主要考查了实数的大小比较，也考查了无理数的估算的知识，分别求出$\sqrt{5}$与$\sqrt{17}$在哪两个相邻的整数之间是解答此题的关键．'
-  knowledge_points:
-  - 实数的大小比较
-  module: numbersAndExpressions
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: draft
   qc_note: ''
 - id: 12
@@ -476,13 +377,9 @@ questions:
   score: 2
   stem: 如图，$A E$平分$\angle C A D$，点B在射线$A E$上，若使$\triangle A B C \approx \triangle A B D$，则还需添加的一个条件是_______（只填一个即可）．
   figure: 2026-yanshan-er/figures/image165.png
-  _figures_extra:
-  - image165.png
-  - image165.png
   answer: AC=AD或$\angle C = \angle D$或$\angle C B A = \angle D B A$．
-  solution: '由AE平分∠CAD，可得∠CAB=∠DAB，由AB共用从边上考虑，只能添加AC=AD，可证$\triangle A B C \approx \triangle A B D \left(S,A,S\right)$，从角上考虑，可添加$\angle
-    C = \angle D$或$\angle C B A = \angle D B A$$\triangle A B C \approx \triangle A B D \left(A,A,S\right)$，$\triangle A B
-    C \approx \triangle A B D \left(A,S,A\right)$即可．
+  solution: '由AE平分∠CAD，可得∠CAB=∠DAB，由AB共用从边上考虑，只能添加AC=AD，可证$\triangle A B C \approx \triangle A B D \left(S,A,S\right)$，从角上考虑，可添加$\angle C = \angle D$或$\angle C B A = \angle D B A$$\triangle A B C \approx
+    \triangle A B D \left(A,A,S\right)$，$\triangle A B C \approx \triangle A B D \left(A,S,A\right)$即可．
 
     解：因为AE平分∠CAD，
 
@@ -520,17 +417,11 @@ questions:
 
     故答案为：AC=AD或$\angle C = \angle D$或$\angle C B A = \angle D B A$．
 
-    ![](figures/image165.png)
 
     本题考查三角形全等的判定，掌握三角形全等判定定理是解题关键．'
-  knowledge_points:
-  - 三角形全等的判定
-  module: triangles
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: draft
   qc_note: ''
 - id: 13
@@ -538,15 +429,11 @@ questions:
   score: 2
   stem: 如图，在矩形$A B C D$中，$M$，$N$分别为$B C$，$C D$的中点， 则$\frac{M N}{A C}$的值为__________．
   figure: 2026-yanshan-er/figures/image176.png
-  _figures_extra:
-  - image176.png
-  - image179.png
   answer: $\frac{1}{2}$##$0 . 5$
   solution: '此题考查矩形的性质，三角形中位线定理．连接$B D$，利用三角形中位线定理得出$\frac{M N}{B D} = \frac{1}{2}$，进而利用矩形的性质解答即可．
 
     解：连接$B D$，
 
-    ![](figures/image179.png)
 
     $\because$四边形$A B C D$是矩形，
 
@@ -561,16 +448,9 @@ questions:
     $\therefore$$\frac{M N}{A C} = \frac{1}{2}$，
 
     故答案为：$\frac{1}{2}$．'
-  knowledge_points:
-  - 矩形的性质
-  - 中点的应用
-  - 相似三角形
-  module: quadrilaterals
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: draft
   qc_note: ''
 - id: 14
@@ -582,8 +462,7 @@ questions:
 
     |---|---|---|---|---|---|
 
-    |  | $1 . 0 \leq x < 4 . 2$ | $4 . 2 \leq x < 4 . 5$ | $4 . 5 \leq x < 4 . 8$ | $4 . 8 \leq x < 5 . 1$ | $5 . 1 \leq x
-    \leq 5 . 3$ |
+    |  | $1 . 0 \leq x < 4 . 2$ | $4 . 2 \leq x < 4 . 5$ | $4 . 5 \leq x < 4 . 8$ | $4 . 8 \leq x < 5 . 1$ | $5 . 1 \leq x \leq 5 . 3$ |
 
     | 人数（频数） | 2 | 8 | 14 | 12 | 4 |
 
@@ -594,16 +473,9 @@ questions:
     解：由题意可得，样本中视力在$4 . 8 \leq x \leq 5 . 3$范围内的频数为$12 + 4 = 16$，
 
     估计$600$名八年级学生中视力在该范围的人数为：$600 \times \frac{16}{40} = 240$（人）．'
-  knowledge_points:
-  - 频数分布表的应用
-  - 样本估计总体
-  module: statisticsAndProbability
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: draft
   qc_note: ''
 - id: 15
@@ -636,15 +508,9 @@ questions:
     当$x = - 6$时，$y = 1$，符合要求。
 
     综上，符合要求的点共有$8$个.'
-  knowledge_points:
-  - 反比例函数的性质
-  - 整数点的确定
-  module: functions
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: draft
   qc_note: ''
 - id: 16
@@ -689,15 +555,9 @@ questions:
     ∴$n - x = 15 - x$
 
     解得$n = 15$．'
-  knowledge_points:
-  - 逻辑推理
-  - 组合与排列
-  module: numbersAndExpressions
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: draft
   qc_note: ''
 - id: 17
@@ -714,18 +574,9 @@ questions:
     $= 3 \sqrt{2} + 2 + 3 - 3 \sqrt{2}$
 
     $= 5$．'
-  knowledge_points:
-  - 特殊角的三角函数值
-  - 负指数幂
-  - 绝对值
-  - 二次根式的化简
-  module: numbersAndExpressions
-  difficulty: 基础
-  recommended_for:
-  - L0
-  - L1
-  - L2
-  - L3
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: draft
   qc_note: ''
 - id: 18
@@ -742,15 +593,9 @@ questions:
     解不等式②，得$x < 5$．
 
     ∴原不等式组的解集为$2 < x < 5$．'
-  knowledge_points:
-  - 解一元一次不等式
-  - 不等式组的解法
-  module: equationsAndInequalities
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: draft
   qc_note: ''
 - id: 19
@@ -771,15 +616,9 @@ questions:
     ∴$x - y = 3$．
 
     ∴原式$= \frac{x - y}{2} = \frac{3}{2}$．'
-  knowledge_points:
-  - 代数式的化简
-  - 方程的应用
-  module: equationsAndInequalities
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: draft
   qc_note: ''
 - id: 20
@@ -792,12 +631,8 @@ questions:
 
     （2）若$A B = 2$，$\angle B =\text{60} \circ$，求$A E$的长．'
   figure: 2026-yanshan-er/figures/image253.png
-  _figures_extra:
-  - image253.png
-  - image267.png
   answer: （1）见解析    （2）$\sqrt{3}$
-  solution: '（1）根据已知条件得出$B D = \frac{1}{2} B C$，$E D \parallel A B$，$E D = \frac{1}{2} A B$，可得四边形$A B D F$是平行四边形．进而根据已知条件得出$A
-    B = B D$，即可得出结论；
+  solution: '（1）根据已知条件得出$B D = \frac{1}{2} B C$，$E D \parallel A B$，$E D = \frac{1}{2} A B$，可得四边形$A B D F$是平行四边形．进而根据已知条件得出$A B = B D$，即可得出结论；
 
     （2）连接$A D$，得出$\triangle A D F$是等边三角形．在$\text{Rt}\triangle A E F$中，解直角三角形即可求解．
 
@@ -827,7 +662,6 @@ questions:
 
     ∴$\angle F = \angle B = 60 \circ$，$A F = D F = A B = 2$．
 
-    ![](figures/image267.png)
 
     ∴$\triangle A D F$是等边三角形．
 
@@ -842,16 +676,9 @@ questions:
     ∴$A E = A F \cdot sin F = 2 \times \frac{\sqrt{3}}{2} = \sqrt{3}$．
 
     本题考查了中位线的性质，菱形的性质与判定，解直角三角形，熟练掌握菱形的性质与判定是解题的关键．'
-  knowledge_points:
-  - 三角形的性质
-  - 菱形的判定与性质
-  - 勾股定理
-  module: triangles
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: draft
   qc_note: ''
 - id: 21
@@ -863,17 +690,13 @@ questions:
 
     （2）当$x > 1$时，对于x的每一个值，函数$y = m x \left(m,\neq,0\right)$的值大于函数$y = k x + b$的值且小于函数$y = 3 x + b$的值，直接写出m的取值范围．'
   figure: 2026-yanshan-er/figures/image297.png
-  _figures_extra:
-  - image297.png
   answer: （1）$k = 1$；$b = 1$ （2）$2 \leq m \leq 3$
   solution: '本题主要考查了一次函数图象与几何变换、一次函数图象与系数的关系，解题时要熟练掌握并能灵活运用一次函数的性质是关键．
 
-    （1）依据题意，由函数$y = k x + b \left(\right. k \neq 0 \left.\right)$的图象由函数$y = x$的图象平移得到，从而$k = 1$，结合函数过$\left(\right. 1,2 \left.\right)$，可得$1
-    + b = 2$，进而计算可以得解；
+    （1）依据题意，由函数$y = k x + b \left(\right. k \neq 0 \left.\right)$的图象由函数$y = x$的图象平移得到，从而$k = 1$，结合函数过$\left(\right. 1,2 \left.\right)$，可得$1 + b = 2$，进而计算可以得解；
 
-    （2）依据题意，结合（1）可得$y = k x + b$为$y = x + 1$，$y = 3 x + b$为$y = 3 x + 1$，然后在同一坐标系中画出$y = x + 1$，$y = 3 x + 1$的图象，又当$x = 1$时，$y
-    = x + 1 = 2$，则$m = 2$，且当$x > 1$时，对于$x$的每一个值，函数$y = m x \left(\right. m \neq 0 \left.\right)$的值大于函数$y = x + 1$的值且小于函数$y
-    = 3 x + 1$的值，进而可以判断得解．
+    （2）依据题意，结合（1）可得$y = k x + b$为$y = x + 1$，$y = 3 x + b$为$y = 3 x + 1$，然后在同一坐标系中画出$y = x + 1$，$y = 3 x + 1$的图象，又当$x = 1$时，$y = x + 1 = 2$，则$m = 2$，且当$x > 1$时，对于$x$的每一个值，函数$y = m x \left(\right. m \neq
+    0 \left.\right)$的值大于函数$y = x + 1$的值且小于函数$y = 3 x + 1$的值，进而可以判断得解．
 
     （1）
 
@@ -895,7 +718,6 @@ questions:
 
     在同一坐标系中画出$y = x + 1$，$y = 3 x + 1$的图象如下．
 
-    ![](figures/image297.png)
 
     当$x = 1$时，$y = x + 1 = 2$，
 
@@ -908,15 +730,9 @@ questions:
     则$m \leq 3$，
 
     $\therefore$结合图象可得，$2 \leq m \leq 3$．'
-  knowledge_points:
-  - 一次函数的性质
-  - 一次函数的应用
-  module: functions
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: draft
   qc_note: ''
 - id: 22
@@ -924,8 +740,7 @@ questions:
   score: 5
   stem: '列方程解应用题
 
-    小华一家驾驶某款新能源汽车外出游玩，去时选择普通公路，返回时选择高速公路．走普通公路比高速公路的路程多60公里，这款新能源汽车在普通公路上行驶平均每百公里耗电20度，在高速公路上行驶比普通公路上行驶平均每百公里耗电增加$20 \%$，该车选择的充电站充电综合电费均为$1
-    . 5$元/度．最终发现走普通公路的电费比高速公路的电费少15元，求返回时所走高速公路的路程．'
+    小华一家驾驶某款新能源汽车外出游玩，去时选择普通公路，返回时选择高速公路．走普通公路比高速公路的路程多60公里，这款新能源汽车在普通公路上行驶平均每百公里耗电20度，在高速公路上行驶比普通公路上行驶平均每百公里耗电增加$20 \%$，该车选择的充电站充电综合电费均为$1 . 5$元/度．最终发现走普通公路的电费比高速公路的电费少15元，求返回时所走高速公路的路程．'
   answer: 所走高速公路的路程为550公里
   solution: '题目主要考查一元一次方程的应用，理解题意，列出方程是解题关键
 
@@ -933,21 +748,14 @@ questions:
 
     解：设所走高速公路的路程为x公里，则普通公路的路程为$\left(x,+,60\right)$公里，
 
-    根据题意得：$\frac{x}{100} \times 20 \times \left(1,+,20,\%\right) \times 1 . 5 - \frac{x + 60}{100} \times 20 \times 1 . 5
-    = 15$，
+    根据题意得：$\frac{x}{100} \times 20 \times \left(1,+,20,\%\right) \times 1 . 5 - \frac{x + 60}{100} \times 20 \times 1 . 5 = 15$，
 
     解得$x = 550$，
 
     ∴所走高速公路的路程为550公里．'
-  knowledge_points:
-  - 列方程解应用题
-  - 一元一次方程的应用
-  module: equationsAndInequalities
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: draft
   qc_note: ''
 - id: 23
@@ -988,8 +796,6 @@ questions:
 
     （4）假设该年级200名学生都参加此次测试，估计A课程成绩不低于80分的学生有__________人．'
   figure: 2026-yanshan-er/figures/image310.png
-  _figures_extra:
-  - image310.png
   answer: （1）82    （2）A （3）①    （4）120
   solution: '本题考查考查频数分布直方图，中位数，用样本估计总体等知识，熟练掌握中位数的计算方法和意义是解题的关键．
 
@@ -1036,16 +842,9 @@ questions:
     解：由题意可得，$200 \times \frac{7 + 5}{20} = 120$人，
 
     即估计A课程成绩不低于80分的学生有$120$人．'
-  knowledge_points:
-  - 频数分布直方图
-  - 平均数、中位数、众数
-  - 数据的整理与分析
-  module: statisticsAndProbability
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: draft
   qc_note: ''
 - id: 24
@@ -1058,20 +857,15 @@ questions:
 
     （2）若$\frac{O B}{A P} = \frac{1}{2}$，$P B = \sqrt{10}$，求$\bigodot O$直径的长．'
   figure: 2026-yanshan-er/figures/image322.png
-  _figures_extra:
-  - image322.png
-  - image333.png
   answer: （1）见详解    （2）2
   solution: '（1）先利用圆周角定理证得$\angle A O B = 90 \circ$，再根据平行线的性质，求得$\angle P A O = 90 \circ$，然后利用切线的判定得出结论；
 
-    （2）先证明$\triangle O B D ∽ \triangle A P D$，再根据相似三角形的性质，列出比例式，设$O D = k$，接着用$k$表示出$O B$，然后利用勾股定理求得$B D$，代入比例式中，求得$P D$，再利用线段的和求得$B
-    P$，得到关于$k$的方程，求出$k$，最后求出$O B$．
+    （2）先证明$\triangle O B D ∽ \triangle A P D$，再根据相似三角形的性质，列出比例式，设$O D = k$，接着用$k$表示出$O B$，然后利用勾股定理求得$B D$，代入比例式中，求得$P D$，再利用线段的和求得$B P$，得到关于$k$的方程，求出$k$，最后求出$O B$．
 
     （1）
 
     证明：如图，连接$O A$．
 
-    ![](figures/image333.png)
 
     $\because \angle A C B = 45 \circ$，
 
@@ -1128,15 +922,9 @@ questions:
     则$\bigodot O$的直径为2.
 
     本题考查了切线的判定，相似三角形的判定与性质，勾股定理，利用平行线的性质求角度，解题的关键是证明三角形相似，列出比例式求出待求线段的长．'
-  knowledge_points:
-  - 圆的切线判定
-  - 相似三角形的应用
-  module: circles
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: draft
   qc_note: ''
 - id: 25
@@ -1146,8 +934,7 @@ questions:
 
     a．探究活动在同一社团活动室进行，室温$25 \text{\textdegree C}$；
 
-    b．经查阅资料得知，茶水口感与茶叶类型及水的温度有关．某种普洱茶用$95 \text{\textdegree C}$的水冲泡，等茶水温度降至$60 \text{\textdegree C}$饮用，口感最佳；某种绿茶用$85 \text{\textdegree
-    C}$的水冲泡，等茶水温度降至$60 \text{\textdegree C}$饮用，口感最佳；
+    b．经查阅资料得知，茶水口感与茶叶类型及水的温度有关．某种普洱茶用$95 \text{\textdegree C}$的水冲泡，等茶水温度降至$60 \text{\textdegree C}$饮用，口感最佳；某种绿茶用$85 \text{\textdegree C}$的水冲泡，等茶水温度降至$60 \text{\textdegree C}$饮用，口感最佳；
 
     c．同时用不同温度的热水冲泡茶叶，记放置时间为x（单位：$min$），普洱茶茶水的温度为$y_{1}$（单位：$\text{\textdegree C}$），绿茶茶水的温度为$y_{2}$（单位：$\text{\textdegree C}$）．记录的部分数据如下：
 
@@ -1166,12 +953,8 @@ questions:
 
     （2）探究活动中，当绿茶茶水的放置时间约为______$min$时，其饮用口感最佳，此时普洱茶茶水的温度约为_______$\text{\textdegree C}$（结果保留小数点后一位）；
 
-    （3）在探究普洱茶茶水温度与放置时间函数关系的活动中选取了三个时刻$t_{1}$、$t_{2}$、$t_{3}$，$t_{1}$、$t_{2}$、$t_{3}$对应的温度分别为$s_{1}$、$s_{2}$、$s_{3}$，若$t_{1}
-    - t_{2} = t_{2} - t_{3}$，则$s_{1} - s_{2}$_______$s_{2} - s_{3}$（填“$>$”“$=$”或“$<$”）．'
+    （3）在探究普洱茶茶水温度与放置时间函数关系的活动中选取了三个时刻$t_{1}$、$t_{2}$、$t_{3}$，$t_{1}$、$t_{2}$、$t_{3}$对应的温度分别为$s_{1}$、$s_{2}$、$s_{3}$，若$t_{1} - t_{2} = t_{2} - t_{3}$，则$s_{1} - s_{2}$_______$s_{2} - s_{3}$（填“$>$”“$=$”或“$<$”）．'
   figure: 2026-yanshan-er/figures/image367.png
-  _figures_extra:
-  - image367.png
-  - image383.png
   answer: （1）见解析    （2）$5 . 5$，$66 . 0$（答案不唯一） （3）$>$
   solution: '本题考考查了画函数图象，根据图象获取信息，利用数形结合的思想解决问题是关键．
 
@@ -1185,7 +968,6 @@ questions:
 
     解：如下图，即为$y_{2}$与x的函数图象；
 
-    ![](figures/image383.png)
 
     解：由题意可知，绿茶茶水温度降至$60 \text{\textdegree C}$饮用时口感最佳，
 
@@ -1202,15 +984,9 @@ questions:
     即若$t_{1} - t_{2} = t_{2} - t_{3}$，则$s_{1} - s_{2} > s_{2} - s_{3}$，
 
     故答案为：$>$'
-  knowledge_points:
-  - 函数的概念
-  - 函数的应用
-  module: functions
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: draft
   qc_note: ''
 - id: 26
@@ -1226,8 +1002,6 @@ questions:
 
     ②在①的条件下，过点$B$作$x$轴的垂线交抛物线于点$C$，若线段$B C$的长随$t$的增大而减小，求$t$的取值范围．'
   figure: 2026-yanshan-er/figures/image418.png
-  _figures_extra:
-  - image418.png
   answer: （1）顶点坐标为$\left(t,,,-,t^{2}\right)$；对称轴为直线$x = t$， （2）①$t \leq 1$且$t \neq - 2$或$t > 4$．②$t < - 2$
   solution: '（1）根据二次函数对称轴的求解方法和顶点坐标求解即可．
 
@@ -1289,34 +1063,22 @@ questions:
 
     ∵在①的条件下，则$t \leq 1$且$t \neq - 2$或$t > 4$．
 
-    ∴$t < - 2$时，线段$B C$的长随$t$的增大而减小．
-
-    ![](figures/image418.png)'
-  knowledge_points:
-  - 二次函数的性质
-  - 二次函数与直线的位置关系
-  module: functions
-  difficulty: 能力
-  recommended_for:
-  - L2
-  - L3
+    ∴$t < - 2$时，线段$B C$的长随$t$的增大而减小．'
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: draft
   qc_note: ''
 - id: 27
   type: 解答
   score: 7
-  stem: '已知$\angle M A N = \alpha \left(\right. 0 \circ < \alpha < 60 \circ \left.\right)$，点B，C分别在射线$A M$，$A N$上，将线段$C B$绕点C顺时针旋转$180
-    \circ - \alpha$得到线段$C D$，点D在射线$A N$上，连接$B D$．
+  stem: '已知$\angle M A N = \alpha \left(\right. 0 \circ < \alpha < 60 \circ \left.\right)$，点B，C分别在射线$A M$，$A N$上，将线段$C B$绕点C顺时针旋转$180 \circ - \alpha$得到线段$C D$，点D在射线$A N$上，连接$B D$．
 
 
     （1）如图1，用等式表示$A B$与$C D$的数量关系，并证明；
 
     （2）如图2，当$\alpha = 45 \circ$时，过点D作$A N$的垂线交射线$A M$于点E．连接$C E$，用等式表示线段$C E$与$B D$的数量关系，并证明．'
   figure: 2026-yanshan-er/figures/image424.png
-  _figures_extra:
-  - image424.png
-  - image432.png
-  - image441.png
   answer: （1）$A B = C D$，见解析 （2）$C E$与$B D$的数量关系是$C E = \sqrt{2} B D$，见解析
   solution: '（1）根据旋转的全等性质，补角的性质，等腰三角形的判定，等量代换解答即可．
 
@@ -1326,7 +1088,6 @@ questions:
 
     解：$A B$与$C D$的数量关系是$A B = C D$．
 
-    ![](figures/image432.png)
 
     证明：∵A，C，D共线，
 
@@ -1356,7 +1117,6 @@ questions:
 
     连接$B Q$，$E Q$．
 
-    ![](figures/image441.png)
 
     ∵$\angle B A C = 45 \circ$，
 
@@ -1401,15 +1161,9 @@ questions:
     $\therefore C E = \sqrt{2} B D$．
 
     本题考查了旋转的性质，三角形全等的判定和性质，等腰三角形的判定和性质，等腰直角三角形的性质，等量代换，熟练掌握相关图形的性质和等量代换思想是解题的关键．'
-  knowledge_points:
-  - 三角形的性质
-  - 旋转的性质
-  module: triangles
-  difficulty: 中等
-  recommended_for:
-  - L1
-  - L2
-  - L3
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: draft
   qc_note: ''
 - id: 28
@@ -1423,16 +1177,10 @@ questions:
 
     （3）设$\bigodot T$的半径为$3 \sqrt{2}$，圆心T是x轴上的动点，直线$y = - 2 x + 4$与x轴，y轴分别交于点G、H，若线段GH上存在$\bigodot T$的“直盖点”，直接写出圆心T的横坐标$x_{T}$的取值范围．'
   figure: 2026-yanshan-er/figures/image476.png
-  _figures_extra:
-  - image476.png
-  - image482.png
-  - image489.png
-  - image497.png
   answer: （1）B、C；（2）$x < \frac{6}{5}$或$x > 2$；（3）$x_{T} < - 4$或$x_{T} > 2 \sqrt{5}$．
   solution: '（1）根据“直盖点”的定义解答即可；
 
-    （2）根据定义可得$\bigodot O$在其“直盖点”E为直角顶点的直角内部，引$\bigodot O$两条切线相交于点P，可求得$\bigodot O$的直盖点在以O为圆心，以2为半径的圆外，作以O为圆心，2为半径的圆与直线$y =
-    - 2 x + 4$交于$E_{1}$、$E_{2}$两点，求出两点的坐标即可求解；
+    （2）根据定义可得$\bigodot O$在其“直盖点”E为直角顶点的直角内部，引$\bigodot O$两条切线相交于点P，可求得$\bigodot O$的直盖点在以O为圆心，以2为半径的圆外，作以O为圆心，2为半径的圆与直线$y = - 2 x + 4$交于$E_{1}$、$E_{2}$两点，求出两点的坐标即可求解；
 
     （3）由（2）得$\bigodot T$的“直盖点”在以6为半径的圆外，可得当线段GH全部在半径为6的圆内时不能满足题意，分两种情况讨论①当圆心T在线段GH左侧时； ②当圆心T在线段GH右侧时.
 
@@ -1440,7 +1188,6 @@ questions:
 
     故答案为：B、C
 
-    ![](figures/image482.png)
 
     （2）根据定义可得$\bigodot O$在其“直盖点”E为直角顶点的直角内部，如图，引$\bigodot O$两条切线相交于点P，
 
@@ -1458,7 +1205,6 @@ questions:
 
     ∴点E的横坐标的取值范围为$x < \frac{6}{5}$或$x > 2$；
 
-    ![](figures/image489.png)
 
     （3）∵$\sqrt{\left(\left(3,\sqrt{2}\right)\right)^{2} + \left(\left(3,\sqrt{2}\right)\right)^{2}} = 6$，
 
@@ -1468,24 +1214,16 @@ questions:
 
     ①当圆心T在线段GH左侧时，如图，作以T为圆心，6为半径的圆，当线段GH全部在大圆内时，设此时的圆心为$T_{1}$，此时大圆过点G，易得圆心$T_{1}$的坐标为$\left(-,4,0\right)$；
 
-    ②当圆心T在线段GH右侧时，如图，作以T为圆心，6为半径的圆，当线段GH全部被大圆包含时，设此时的圆心为$T_{2}$，此时大圆过点H，在$\text{Rt} \triangle O H T_{2}$中，由勾股定理得$O T_{2} =
-    \sqrt{H T_{2}^{2} - O H^{2}} = \sqrt{6^{2} - 4^{2}} = 2 \sqrt{5}$，则$T_{2}$的坐标为$\left(2,\sqrt{5},,0\right)$；
+    ②当圆心T在线段GH右侧时，如图，作以T为圆心，6为半径的圆，当线段GH全部被大圆包含时，设此时的圆心为$T_{2}$，此时大圆过点H，在$\text{Rt} \triangle O H T_{2}$中，由勾股定理得$O T_{2} = \sqrt{H T_{2}^{2} - O H^{2}} = \sqrt{6^{2} - 4^{2}} = 2 \sqrt{5}$，则$T_{2}$的坐标为$\left(2,\sqrt{5},,0\right)$；
 
     综上所述，观察图象可得圆心T的横坐标$x_{T}$的取值范围是$x_{T} < - 4$或$x_{T} > 2 \sqrt{5}$．
 
-    ![](figures/image497.png)
 
     本题考查的是新定义问题，理解新定义并正确的画出图形是关键.
 
     错因分析：较难题．失分原因：第（1）问：不能由定义得出线段的“直盖点”均在以该线段为直径的圆外；第（2）问：①不能由定义想到引出切线，从而得到$\bigodot O$的“直盖点”是在以2为半径的圆外；②不能正确求点$E_{1}$、$E_{2}$的坐标；第（3）问：①不能正确画出图象，找到线段GH全部被以T为圆心，6为半径的圆包含的两种极限情况；②不能正确观察图象，找到满足题意的情形'
-  knowledge_points:
-  - 几何综合
-  - 圆的性质
-  - 直线与圆的位置关系
-  module: geometryComprehensive
-  difficulty: 能力
-  recommended_for:
-  - L2
-  - L3
+  knowledge_points: []
+  module: ''
+  difficulty: ''
   qc_status: draft
   qc_note: ''
