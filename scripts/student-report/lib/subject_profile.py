@@ -24,6 +24,7 @@ MODULE_CN_BY_SUBJECT: dict[str, dict[str, str]] = {
         "statisticsAndProbability": "统计与概率",
     },
     "chinese": {
+        "base": "基础运用",
         "writing": "作文",
         "reading": "现代文/名著阅读",
         "classical": "古诗文",

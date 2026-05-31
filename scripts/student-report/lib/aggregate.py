@@ -95,8 +95,8 @@ def difficulty_breakdown(exam: ExamView) -> list[dict]:
 
 
 def section_breakdown(exam: ExamView) -> list[dict]:
-    """大题维度。**用 scores.json 的 sections**（人工填，准确）按 section 名
-    合并同名多行——不用 yaml.type（enrich 时 LLM 会误标，如把科普阅读标成解答）。
+    """大题维度。**优先用 scores.json 的 sections**（人工填，准确）。
+    auto 模式无 sections 时 fallback 按 type_cn 聚合所有题（保证表非空）。
     """
     seen_order: list[str] = []
     agg: dict[str, dict] = defaultdict(lambda: {"scored": 0.0, "full": 0})
@@ -108,6 +108,16 @@ def section_breakdown(exam: ExamView) -> list[dict]:
             seen_order.append(name)
         agg[name]["scored"] += s.get("scored", 0)
         agg[name]["full"] += s.get("fullScore", 0)
+
+    # Fallback：raw_sections 空 → 按 type_cn 聚合 questions
+    if not seen_order:
+        for q in exam.questions:
+            name = q.type_cn or "未分类"
+            if name not in seen_order:
+                seen_order.append(name)
+            agg[name]["scored"] += q.scored
+            agg[name]["full"] += q.score
+
     out = []
     for name in seen_order:
         v = agg[name]
