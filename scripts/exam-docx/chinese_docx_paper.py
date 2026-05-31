@@ -288,9 +288,12 @@ SECTION_HEADERS = [
 SUB_HEADER_RE = re.compile(
     r"^\s*(资料[一二三四五]|后记|卷首语|前言|序言|材料[一二三四五]"
     r"|[\(（][一二三四五][\)）]"
-    r"|情别|志别|义别|悟别|爱别|忆别)(?:\s|$|[\(（]|[一-鿿])"
+    r"|情别|志别|义别|悟别|爱别|忆别)"
     #  R3 加 [一-龥] 兜底：fengtai 答案 docx 内 "（一）默写（4分）"（"（一）" 后跟
     #  中文 "默" 而非空白/括号），不加则 sub-header 漏过滤粘进上一题 sol。
+    #  R4 (2026-05-31)：去掉 lookahead 完全开放——之前 (?:\s|$|[\(（]|[一-鿿]) 没覆盖
+    #  fengtai/shunyi "（三）《爱莲说》（7分）" 的 "《"（U+300A 不在 [一-鿿]）；
+    #  考虑到 "（一）" 行首在答案区只可能是 sub-header，不再要求 lookahead。
 )
 # 整卷尾部"参考答案"独占段：之后所有内容一次性归 answer 模式
 # pinggu/changping 等区无 【答案】/【详解】 markers，全靠 "参考答案" 独段切换
@@ -351,6 +354,10 @@ def parse_docx_chinese(md: str, figures_dir: Path) -> dict:
     # pinggu/changping 的答案区会复出 "一、基础·运用" 大题头，必须用此 flag
     # 拦住 SECTION_HEADERS 重置 mode。
     in_answer_block = False
+    # **R4 (2026-05-31)**：作文评分标准状态——见到 "评分标准" 或 "X 类卷"
+    # 行后，后续 essay 评分细则 ("赋分范围"/"基准分"/分数段等) 全部 drop。
+    # fengtai dual-docx merge 把答案 docx 整段评分标准粘进 Q26 sol 的修复。
+    in_essay_rubric = False
 
     for ln in lines:
         # **R2**：全局答案区 marker（"参考答案" 独段）→ 永久 sticky answer 模式
@@ -371,6 +378,41 @@ def parse_docx_chinese(md: str, figures_dir: Path) -> dict:
             # 作文评分细则（"25.作文评分标准 / 1．题目未写..."）→ drop
             if re.match(r"^\s*\d{1,2}\s*[.、．]\s*作文评分", ln):
                 continue
+            # **R4**：dual-docx merge 答案 docx 首图 + 大标题 → drop
+            # 例：fengtai "![image1.png]![image2.png]丰台区2026...试卷答案"
+            # 例：纯 image refs 行 "![](figures/xxx.png)"
+            if re.match(r"^\s*(?:!\[[^\]]*\]\([^)]*\)\s*)+$", ln):
+                continue
+            # **R4** image refs + 紧跟的试卷大标题（区年级 / 综合练习 / 语文试卷）
+            # 剥光 image refs 后剩余的短文本若含 区/年级/综合练习/语文 → 视作标题 drop
+            stripped_imgs = re.sub(r"!\[[^\]]*\]\([^)]*\)", "", ln).strip()
+            if stripped_imgs and stripped_imgs != ln.strip() and len(stripped_imgs) < 80:
+                if re.search(r"(区|年级|综合练习|语文|试卷|学年|学期).*$", stripped_imgs):
+                    continue
+            # 答案 docx 大标题（"XX区...试卷答案/参考答案/语文试卷答案"，全行末尾）
+            if re.search(r"(试卷答案|参考答案|答案及评分)\s*$", ln) and len(ln) < 100:
+                continue
+            if re.match(r"^\s*语文试卷答案\s*$", ln):
+                continue
+            # **R4**：作文评分标准 + 后续 essay 评分梯次（一类卷/二类卷/...）→ drop
+            if re.match(r"^\s*(?:作文)?评分(标准|参考|建议)?\s*$", ln):
+                in_essay_rubric = True
+                continue
+            if in_essay_rubric:
+                # essay rubric 内：drop X类卷/赋分范围/基准分/N-N分等
+                if re.match(r"^\s*[一二三四五]\s*类卷", ln) or \
+                   re.match(r"^\s*[（\(][一二三四五]\s*类", ln) or \
+                   "赋分范围" in ln or "基准分" in ln or \
+                   re.match(r"^\s*\([0-9一二三四五]+[-—].+\)?\s*$", ln) or \
+                   re.match(r"^\s*\d+\s*[-—]\s*\d+\s*分", ln) or \
+                   "书写正确" in ln or "书写错误" in ln or "符合题意" in ln or \
+                   "字数不足" in ln or "扣分" in ln:
+                    continue
+                # 遇到下一个明确题号锚（"N. xxx"）才退出 rubric
+                if NUM_HEAD_RE.match(ln):
+                    in_essay_rubric = False
+                else:
+                    continue
             a_lines.append(ln)
             continue
         sec_m = _is_section_header(ln)
@@ -1060,10 +1102,14 @@ def _type_weight(qtype: str, n: int) -> int:
 
 def _allocate_scores_in_block(qs_in_block: list[dict], total: int) -> None:
     """把 block 总分分配到 block 内每题。
-    策略：先给固定项（choice=2、handwriting=1），余额平摊到主观题；
+    策略：
+    **R4 (2026-05-31)**：优先读 stem 末尾 "(N分)" 直接定分（每题自标），
+    解决 6 区跨区 P0「单题分值错配（section 总分对但题间分布错）」。
+    其余无 (N分) 题落 type-weight 兜底（先 choice=2 / handwriting=1，
+    主观题余额平摊）。
     最后差额调到末题确保 sum == total。
     """
-    if not qs_in_block or total <= 0: return
+    if not qs_in_block: return
     # essay 单独：可能是 二选一 / 三选一 题目（海淀 Q24+Q25 / 西城 Q26+Q27）
     # 实际只计一次 40 分；第一题 40，后续标 0 + 在 solution 注明
     if any(q["type"] == "essay" for q in qs_in_block):
@@ -1077,9 +1123,35 @@ def _allocate_scores_in_block(qs_in_block: list[dict], total: int) -> None:
                 if "二选一" not in cur_sol and "任选" not in cur_sol:
                     q["solution"] = f"[二选一备选题目，与上一题任选其一作答；本题不重复计分]\n{cur_sol}".strip()
         return
-    fixed_score = {}
+    # **R4** stem (N分) 直读：扫每题 stem 末尾的 "(N分)" 标签
+    STEM_SCORE_RE = re.compile(r"[（\(]\s*(\d+)\s*分\s*[）\)]\s*$")
+    stem_scores: dict[int, int] = {}
+    for i, q in enumerate(qs_in_block):
+        stem = (q.get("stem", "") or "").strip()
+        m = STEM_SCORE_RE.search(stem)
+        if not m:
+            # 也试 stem 内任意位置的 "(N分)"（部分题号在 stem 中间）
+            mm = re.search(r"[（\(]\s*(\d+)\s*分\s*[）\)]", stem)
+            if mm:
+                m = mm
+        if m:
+            s = int(m.group(1))
+            if 1 <= s <= 40:  # 合理范围
+                stem_scores[i] = s
+    # 校验：若 stem 分值合计 == total，直接用
+    if total > 0 and len(stem_scores) == len(qs_in_block) and \
+       sum(stem_scores.values()) == total:
+        for i, q in enumerate(qs_in_block):
+            q["score"] = stem_scores[i]
+        return
+    # 部分有 stem 分 — 固定它们，剩余按类型兜底
+    if total <= 0: return  # 无 block total 也无 stem 全标 → 跳过
+
+    fixed_score = dict(stem_scores)
     flex_idx = []
     for i, q in enumerate(qs_in_block):
+        if i in fixed_score:
+            continue
         if q["type"] == "handwriting":
             fixed_score[i] = 1
         elif q["type"] == "choice":

@@ -16,6 +16,12 @@ questions:
   3:
     type: "单选"
     answer: "B"
+    # R4: 源 PDF p1 末尾被 page-break 截断，D 选项缺失。已知正确答案 B 仍可判分。
+    options:
+      A: "街道的古建风貌"
+      B: "街道的功能定位"
+      C: "街道的空间布局"
+      D: "[源 PDF D 项缺失，待补]"
   # Q4 整题缺失（被 Q1 吞）— create 新题
   4:
     create: true
