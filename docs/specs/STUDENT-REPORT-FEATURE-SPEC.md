@@ -288,14 +288,27 @@ knowledge-base/exams/mock/<subject>/beijing/<year>-<district>-<exam_type>.yaml
 | 严格 fallback 触发率 | <20% | <30% |
 | vl-max 整页兜底触发 | 0-7/11（与命中率反相关） | < 50% |
 
-### 6.3 回归测试套件
+### 6.3 回归测试套件 🔒
+
+**测试 case 命名规范**（对齐 `exam_slug` 后缀）：
+
+```
+<拼音>-<区>-<场次>-<学科>
+       │     │      │
+       │     │      └─ math / physics / chinese / english / politics
+       │     └────── yi（一模）/ er（二模）/ zhenti（中考真题）
+       └─────────── haidian / chaoyang / xicheng / ...
+```
+
+例：`guanlihan-haidian-er-physics`（关丽涵 海淀二模 物理）
 
 `scripts/test/e2e_audit.py` 跑端到端：
-- `CASES=guanlihan-haidian-physics-er` → 海淀二模 物理
-- `CASES=jiaxiaoqi-physics` → 朝阳一模 物理
+- `CASES=guanlihan-haidian-er-physics` → 海淀二模 物理（Path B 标准回归）
+- `CASES=jiaxiaoqi-chaoyang-yi-physics` → 朝阳一模 物理（缺字母法基线）
 - `SCENARIOS=auto` 或 `teacher_xlsx`
 
 **部署后 must run**：双 case 跑通且分数稳定（±2 分）才能合并到 main。
+完整 case 清单见 [`test-data/README.md`](../../test-data/README.md)。
 
 ---
 
