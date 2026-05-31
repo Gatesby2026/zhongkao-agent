@@ -113,18 +113,19 @@ def _client():
 
 # ============== Path B：纯像素 blob 检测（无 API） ==============
 # 选择题填涂区是规则网格。学生涂卡 = 黑色实心矩形 50×30 px、密度 ~50%。
-#   1. y 直方图找涂卡行：每行黑像素 100-800（< 100=空白；> 800=印刷 banner/线）
-#   2. 每行内 x 直方图找连续黑块（涂卡 blob，宽 20-80）
-#   3. blob 中心 x → 反推 qid + 字母（列步长 345、字母步长 70）
-# 不依赖 OCR/视觉模型，对 海淀方括号格式 + 朝阳裸字母格式 都准。
-# 关丽涵 海淀二模卡 13/13 命中已知真实作答（包括 Q11/12/13/14/15 难判）。
-#
-# 当前 hardcode 海淀/朝阳布局（5×3 单选 + 1 多选行）；后续可探测自适应。
+#   1. 4 旋转 try：手机横拍 EXIF 不全时（数学卡常见），照片可能旋转 0/90/180/270
+#   2. 多 layout try：物理 5×3 / 数学 8 单列 / 数学 2×4 等
+#   3. y 直方图找涂卡行：每行黑像素 100-800（< 100=空白；> 800=印刷 banner/线）
+#   4. 每行内 x 直方图找连续黑块（涂卡 blob，宽 20-80）
+#   5. blob 中心 x → 反推 qid + 字母
+# 不依赖 OCR/视觉模型，对 海淀方括号 + 朝阳裸字母都准。
+# 关丽涵 海淀二模物理卡 15/15 命中。
 
-# 海淀/朝阳标准物理答题卡布局
-_LAYOUT_5x3 = {
-    "col_step": 345,    # 题间距（Q1→Q2）
-    "letter_step": 70,  # 字母间距（A→B）
+# 物理标准答题卡布局：5×3 单选 + 1 多选行
+_LAYOUT_PHY_5x3 = {
+    "name": "physics-5x3",
+    "col_step": 345, "letter_step": 70,
+    "base_x_lo": 400, "base_x_hi": 700,
     "rows": [
         {"qids": [1, 2, 3, 4, 5], "multi": False},
         {"qids": [6, 7, 8, 9, 10], "multi": False},
@@ -134,43 +135,71 @@ _LAYOUT_5x3 = {
     "n_pos_per_row": 5,
 }
 
+# 数学海淀二模：4 题 × 2 行（共 8 单选）
+_LAYOUT_MATH_4x2 = {
+    "name": "math-4x2",
+    "col_step": 700, "letter_step": 70,
+    "base_x_lo": 100, "base_x_hi": 500,
+    "y_start_ratio": 0.05, "y_end_ratio": 0.30,
+    "rows": [
+        {"qids": [1, 2, 3, 4], "multi": False},
+        {"qids": [5, 6, 7, 8], "multi": False},
+    ],
+    "n_pos_per_row": 4,
+}
 
-def detect_choices_by_blob(image_paths: list[Path],
-                            layout: dict | None = None
-                            ) -> dict[int, dict]:
-    """纯像素 blob 检测：找黑色填涂块 + 反推字母。
+# 数学 2 列 × 4 行
+_LAYOUT_MATH_2x4 = {
+    "name": "math-2x4",
+    "col_step": 600, "letter_step": 70,
+    "base_x_lo": 200, "base_x_hi": 900,
+    "y_start_ratio": 0.05, "y_end_ratio": 0.50,
+    "rows": [
+        {"qids": [1, 2], "multi": False},
+        {"qids": [3, 4], "multi": False},
+        {"qids": [5, 6], "multi": False},
+        {"qids": [7, 8], "multi": False},
+    ],
+    "n_pos_per_row": 2,
+}
 
-    无 API 调用。对学生涂卡的位置/形状极宽容。
+# 数学单列：8 行 × 1 题
+_LAYOUT_MATH_1x8 = {
+    "name": "math-1x8",
+    "col_step": 999, "letter_step": 70,
+    "base_x_lo": 200, "base_x_hi": 1500,
+    "y_start_ratio": 0.05, "y_end_ratio": 0.60,
+    "rows": [
+        {"qids": [i], "multi": False} for i in range(1, 9)
+    ],
+    "n_pos_per_row": 1,
+}
 
-    Returns:
-        {qid: {"filled": "B"|"AC"|"", "confidence": 0.95}}
+# 待尝试布局清单（按命中可能性排）
+_LAYOUTS_TO_TRY = [_LAYOUT_PHY_5x3, _LAYOUT_MATH_4x2, _LAYOUT_MATH_2x4,
+                   _LAYOUT_MATH_1x8]
+
+
+def _find_bands_and_blobs(arr, scan_x1=300, scan_x2=None,
+                           y_start_ratio=0.30, y_end_ratio=0.50):
+    """y 直方图找涂卡 band + 每个 band 内 blob 中心列表。
+    返回 [(y1, y2, [blob_cx, ...]), ...]，已按 y 升序。
     """
     try:
-        import numpy as np  # type: ignore
-        from PIL import Image as _Image
-        import io as _io
+        import numpy as np
     except ImportError:
-        return {}
-
-    layout = layout or _LAYOUT_5x3
-    col_step = layout["col_step"]
-    letter_step = layout["letter_step"]
-    rows_spec = layout["rows"]
-    n_pos = layout["n_pos_per_row"]
-
-    img_bytes = _upright_jpeg_bytes(image_paths[0])
-    arr = np.array(_Image.open(_io.BytesIO(img_bytes)).convert("L"))
+        return []
     H, W = arr.shape
+    if scan_x2 is None:
+        scan_x2 = min(W, 2250)
 
-    # 步骤 1：扫 y 找涂卡行 band
-    SCAN_X1, SCAN_X2 = 300, min(W, 2250)
-    Y_START, Y_END = int(H * 0.30), int(H * 0.50)
-    bands: list[tuple[int, int]] = []
+    bands = []
     in_band = False
     s = 0
+    Y_START, Y_END = int(H * y_start_ratio), int(H * y_end_ratio)
     for y in range(Y_START, Y_END):
-        n = (arr[y, SCAN_X1:SCAN_X2] < 100).sum()
-        is_choice = 100 < n < 800
+        n = (arr[y, scan_x1:scan_x2] < 100).sum()
+        is_choice = 100 < n < min(800, (scan_x2 - scan_x1) * 0.4)
         if is_choice and not in_band:
             in_band = True
             s = y
@@ -181,17 +210,14 @@ def detect_choices_by_blob(image_paths: list[Path],
     if in_band and Y_END - s >= 24:
         bands.append((s, Y_END))
 
-    # 期望 4 个 band，对应 layout 的 4 行；少了则跳过
-    if len(bands) < len(rows_spec):
-        return {}
-
-    # 步骤 2：每行内扫 x 找 blob
-    def _row_blobs(y1: int, y2: int) -> list[int]:
-        strip = arr[y1:y2, SCAN_X1:SCAN_X2]
+    out = []
+    for y1, y2 in bands:
+        strip = arr[y1:y2, scan_x1:scan_x2]
         col_black = (strip < 100).sum(axis=0).astype(float)
         smooth = np.convolve(col_black, np.ones(15) / 15, mode="same")
-        threshold = (y2 - y1) * 0.5
-        out = []
+        # 阈值 0.4 比 0.5 更宽容：数学卡涂卡密度接近 50% 时正好卡在边界
+        threshold = (y2 - y1) * 0.4
+        blobs = []
         in_p = False
         start = 0
         for x, v in enumerate(smooth):
@@ -202,42 +228,56 @@ def detect_choices_by_blob(image_paths: list[Path],
                 in_p = False
                 w = x - start
                 if 20 <= w <= 80:
-                    out.append(start + SCAN_X1 + w // 2)
-        return out
+                    blobs.append(start + scan_x1 + w // 2)
+        out.append((y1, y2, blobs))
+    return out
 
-    # 步骤 3：用第一行（单选 5 题，最规则）反推 base_x
-    row0_y1, row0_y2 = bands[0]
-    row0_blobs = sorted(_row_blobs(row0_y1, row0_y2))
-    if len(row0_blobs) < 3:
-        return {}
 
-    # 反推 base_x：每个 blob 假设是某列某字母 → 候选 = blob - col*345 - letter*70
-    # 字母步长 70 是因子，多 blob 反推会聚集到真 base_x 附近 ± 5 px。
-    # 用 bin=10 直方图找最高峰（聚类），避开 median 撞到伪峰。
-    candidates: list[int] = []
+def _try_layout(arr, bands_blobs: list, layout: dict) -> tuple[dict, int]:
+    """用指定 layout 把 blob 映射到题号字母。返回 (result, n_filled)。"""
+    try:
+        import numpy as np
+    except ImportError:
+        return {}, 0
+
+    rows_spec = layout["rows"]
+    col_step = layout["col_step"]
+    letter_step = layout["letter_step"]
+    n_pos = layout["n_pos_per_row"]
+
+    # 只取 layout 期望的前 N 行（band 数 >= 行数）
+    if len(bands_blobs) < len(rows_spec):
+        return {}, 0
+
+    # 用第一行 blob 反推 base_x
+    row0_blobs = sorted(bands_blobs[0][2])
+    if len(row0_blobs) < 1:
+        return {}, 0
+
+    # base_x 候选范围按 layout 给定（物理 ~566 在 [400,700]；数学 1q/row 可能更左）
+    base_x_lo = layout.get("base_x_lo", 400)
+    base_x_hi = layout.get("base_x_hi", 700)
+    candidates = []
     for bx in row0_blobs:
         for col in range(n_pos):
             for li in range(4):
-                bx_candidate = bx - col * col_step - li * letter_step
-                if 400 < bx_candidate < 700:
-                    candidates.append(bx_candidate)
+                bx_c = bx - col * col_step - li * letter_step
+                if base_x_lo < bx_c < base_x_hi:
+                    candidates.append(bx_c)
     if not candidates:
-        return {}
-    # 投票：每个候选给 ±10 px 邻域 +1
+        return {}, 0
     BIN = 5
-    hist: dict[int, int] = {}
+    hist = {}
     for c in candidates:
-        for off in range(-15, 16, 1):
+        for off in range(-15, 16):
             hist[(c + off) // BIN] = hist.get((c + off) // BIN, 0) + 1
     best_bin = max(hist, key=hist.get)
     base_x = best_bin * BIN
-    # 用基准 ± 25 内的候选取均值精炼
     refined = [c for c in candidates if abs(c - base_x) < 25]
     if refined:
         base_x = int(round(sum(refined) / len(refined)))
 
-    # 步骤 4：每行按 base_x 反推 blob → (qi, letter)
-    def _blob_to_letter(cx: int) -> tuple[int, str] | None:
+    def _blob_to_letter(cx):
         for qi in range(n_pos):
             qx = base_x + qi * col_step
             for li, L in enumerate("ABCD"):
@@ -246,14 +286,13 @@ def detect_choices_by_blob(image_paths: list[Path],
                     return qi, L
         return None
 
-    out: dict[int, dict] = {}
+    out = {}
     for ri, row in enumerate(rows_spec):
-        if ri >= len(bands):
+        if ri >= len(bands_blobs):
             continue
-        y1, y2 = bands[ri]
+        blobs = bands_blobs[ri][2]
         qids = row["qids"]
-        blobs = _row_blobs(y1, y2)
-        by_q: dict[int, list[str]] = {q: [] for q in qids}
+        by_q = {q: [] for q in qids}
         for cx in blobs:
             r = _blob_to_letter(cx)
             if r is None:
@@ -264,13 +303,63 @@ def detect_choices_by_blob(image_paths: list[Path],
         for qid in qids:
             letters = sorted(set(by_q[qid]))
             filled = "".join(letters)
-            if filled:
-                # 单选 vs 多选根据 row.multi
-                conf = 0.95 if not row["multi"] else 0.92
-            else:
-                conf = 0.4
+            conf = 0.95 if filled and not row["multi"] else (0.92 if filled else 0.4)
             out[qid] = {"filled": filled, "confidence": conf}
-    return out
+
+    n_filled = sum(1 for v in out.values() if v.get("filled"))
+    return out, n_filled
+
+
+def detect_choices_by_blob(image_paths: list[Path],
+                            layout: dict | None = None
+                            ) -> dict[int, dict]:
+    """纯像素 blob 检测：找黑色填涂块 + 反推字母。
+
+    自适应 4 旋转 + 3 layout（物理 5×3 / 数学 2×4 / 数学 1×8），挑命中
+    数最高的组合。无 API 调用。
+
+    Returns:
+        {qid: {"filled": "B"|"AC"|"", "confidence": 0.95}}
+    """
+    try:
+        import numpy as np
+        from PIL import Image as _Image
+        import io as _io
+    except ImportError:
+        return {}
+
+    img_bytes = _upright_jpeg_bytes(image_paths[0])
+    im = _Image.open(_io.BytesIO(img_bytes)).convert("L")
+
+    # 单 layout 强制模式（向后兼容）
+    layouts_to_try = [layout] if layout else _LAYOUTS_TO_TRY
+
+    best = None  # (n_filled, result, rot, layout_name)
+    for rot in (0, 90, 180, 270):
+        arr_im = im.rotate(rot, expand=True) if rot else im
+        arr = np.array(arr_im)
+        for lay in layouts_to_try:
+            # 不同 layout 可以扫不同 y 范围（数学卡涂卡区可能不在物理位置）
+            y_lo = lay.get("y_start_ratio", 0.30)
+            y_hi = lay.get("y_end_ratio", 0.50)
+            bands_blobs = _find_bands_and_blobs(arr, y_start_ratio=y_lo,
+                                                  y_end_ratio=y_hi)
+            if not bands_blobs:
+                continue
+            rich = sum(1 for _, _, b in bands_blobs if b)
+            if rich == 0:
+                continue
+            result, n_filled = _try_layout(arr, bands_blobs, lay)
+            if not result:
+                continue
+            if best is None or n_filled > best[0]:
+                best = (n_filled, result, rot, lay.get("name", "?"))
+
+    if best and best[0] >= 1:
+        print(f"  Path B 选 rot={best[2]}° + layout={best[3]} → "
+              f"{best[0]} 题识别", file=sys.stderr)
+        return best[1]
+    return {}
 
 
 # ============== Path A：vl-max 给 bbox + 本地像素密度 ==============
