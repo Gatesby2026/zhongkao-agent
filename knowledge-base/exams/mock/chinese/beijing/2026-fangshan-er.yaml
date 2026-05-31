@@ -1,3 +1,9 @@
+# ============================================================
+# 2026年北京房山区二模chinese — 自动生成
+# ============================================================
+# OCR: Qwen-VL-OCR  Enrich: qwen-max
+# QC: draft=25  needs_review=0
+
 year: 2026
 district: 房山区
 exam_type: 二模
@@ -5,7 +11,7 @@ subject: chinese
 full_score: 100
 duration_minutes: 150
 total_questions: 25
-structure: 1书写(2分) + 10主观填空(22分) + 1古诗赏析(4分) + 1古诗内容理解(2分) + 1名著阅读(5分) + 10现代文阅读(25分) + 1作文(40分)
+structure: 10单选(22分) + 4主观填空(11分) + 1古诗赏析(3分) + 1古诗内容理解(2分) + 1名著阅读(5分) + 7现代文阅读(17分) + 1作文(40分)
 passages:
 - id: base_intro
   type: base
@@ -51,15 +57,15 @@ passages:
     各地依托书香校园建设，开展班级读书会、名著导读讲堂等校园阅读活动；通过青春领读行动，邀请作家、学者走进校园分享阅读经验；借助亲子共读及书香家庭创建等举措，推动阅读从校园延伸至家庭。这些活动将框架中的三维要求转化为可操作的具体实践，依托家校社联动机制，让阅读素养培育真正融入青少年的学习与生活，为青少年阅读素养的全面提升提供了坚实的实践支撑。'
 questions:
 - id: 1
-  type: 书写
-  score: 2
+  type: 单选
+  score: 1
   stem: 小组成员对于宣传海报上“垌野彭彭”的评价鉴赏正确的一项是（2分）
   options:
     A: 这四个字采用正楷笔法，既体现出《鲁颂》的庄重，又呼应骏马奔腾的动感。
     B: 这四个字采用行书笔法，刚柔相济，让笔墨形态与主题的文化内涵高度统一。
     C: “野”字采用隶书的笔法，行笔一波三折，既显大地的沉稳，又见原野的无垠。
     D: “彭彭”二字采用草书笔法，两个“彭”字形态各异，展现出群马奔腾的状态。
-  answer: ''
+  answer: B
   solution: ''
   knowledge_points:
   - 书写
@@ -74,15 +80,15 @@ questions:
   qc_note: ''
   passage_id: base_intro
 - id: 2
-  type: 主观填空
-  score: 2
+  type: 单选
+  score: 3
   stem: 你审核手记中标注的字音，其中读音标注不正确的一项是（2分）
   options:
     A: 生肖
     B: 坚韧不拔
     C: 窥见
     D: 天人相应
-  answer: ''
+  answer: D
   solution: ''
   knowledge_points:
   - 字音
@@ -97,7 +103,7 @@ questions:
   qc_note: ''
   passage_id: base_intro
 - id: 3
-  type: 主观填空
+  type: 单选
   score: 2
   stem: 【甲】【乙】两处标点的使用，你认为正确的一项是（2分）
   options:
@@ -105,7 +111,7 @@ questions:
     B: 【甲】，【乙】、
     C: 【甲】，【乙】。
     D: 【甲】、【乙】、
-  answer: ''
+  answer: C
   solution: ''
   knowledge_points:
   - 标点符号运用
@@ -120,7 +126,7 @@ questions:
   qc_note: ''
   passage_id: base_intro
 - id: 4
-  type: 主观填空
+  type: 单选
   score: 2
   stem: “浸润”在物理学领域指液体与固体接触时，液体附着在固体表面并沿表面自发扩展，或渗透到固体内部的现象。你根据语境判断文段中的“浸润”的意思，下列不正确的一项是（2分）
   options:
@@ -128,7 +134,7 @@ questions:
     B: 认知融入
     C: 内涵渗透
     D: 文化熏陶
-  answer: ''
+  answer: A
   solution: ''
   knowledge_points:
   - 词语运用
@@ -153,7 +159,7 @@ questions:
 
     “马韵新生”展区展出了大量与马相关的玉器、瓷器、绘画等。“青玉马上封侯坠”利用局部沁色的青玉，巧妙雕成一只伏于马背的猴子，巧借动物形象寄寓美好愿景。“青花狩猎图盘”盘心绘制三人策马行猎，动感十足，展现出当时的尚武精神。“马晋八骏图镜心”中八匹骏马膘肥体壮，骨肉匀亭，尽显皇家贡马之神韵。马，镌刻在中华文脉的精神图腾中，它  、  、  ，凝结着中华民族的审美智慧与精神风骨。'
   answer: ''
-  solution: ''
+  solution: 示例：在趣味互动中，我们不仅感受到马在古代战争中举足轻重的地位，还了解了诸多与马相关的历史文化。
   knowledge_points:
   - 病句
   module: writing
@@ -167,7 +173,7 @@ questions:
   qc_note: ''
   passage_id: base_intro
 - id: 6
-  type: 主观填空
+  type: 单选
   score: 2
   stem: 根据文段内容，你将一组词语填在句中的横线处。下列恰当的一项是（2分）
   options:
@@ -175,7 +181,7 @@ questions:
     B: 精巧 传神 刚健
     C: 刚健 精巧 传神
     D: 刚健 传神 精巧
-  answer: ''
+  answer: A
   solution: ''
   knowledge_points:
   - 词语运用
@@ -194,7 +200,7 @@ questions:
   score: 2
   stem: 请你结合手记的内容，在结语横线处撰写一句推荐语，向更多同学推荐这个展览。（2分）
   answer: ''
-  solution: ''
+  solution: 示例：这场展览既有文物现实，也有互动体验，让我们走进博物馆，共赴这场跨越千年的文化之约吧！
   knowledge_points:
   - 词语运用
   - 连贯
@@ -244,7 +250,7 @@ questions:
 
     报君黄金台上意，提携玉龙为君死。'
   answer: ''
-  solution: ''
+  solution: ①随君直到夜郎西 ②征蓬出汉塞 ③示例：劝君更尽一杯酒，西出阳关无故人(王维《送元二使安西》)/金樽清酒斗十千，玉盘珍羞直万钱(李白《行路难》)/明月几时有？把酒问青天(苏轼《水调歌头》)/醉翁之意不在酒，在乎山水之间也(欧阳修《醉翁亭记》)/浊酒一杯家万里，燕然未勒归无计(范仲淹《渔家傲·秋思》)
   knowledge_points:
   - 古诗赏析
   - 古诗内容理解
@@ -259,10 +265,10 @@ questions:
   passage_id: classical_intro
 - id: 9
   type: 主观填空
-  score: 2
+  score: 3
   stem: 本诗既有对战斗进程的叙写，又有情感的抒发。开篇两句渲染了兵临城下的危急形势，三、四句侧面展现出战争的激烈悲壮，五、六句描绘①  的场面，最后运用典故表明将士们②  的情怀。（2分）
   answer: ''
-  solution: ''
+  solution: 示例：①夜袭苦战 ②为报君恩、誓死报国
   knowledge_points:
   - 古诗内容理解
   - 古诗赏析
@@ -277,7 +283,7 @@ questions:
   passage_id: classical_intro
 - id: 10
   type: 古诗赏析
-  score: 4
+  score: 3
   stem: '“角声满天秋色里，塞上燕脂凝夜紫”两句中，“满”和“凝”极具表现力，请结合诗句内容简要分析其妙处。（4分）
 
 
@@ -295,7 +301,7 @@ questions:
 
     操蛇之神闻之，惧其不已也，告之于帝。帝感其诚，命夸娥氏二子负二山，一厝朔东，一厝雍南。自此，冀之南，汉之阴，无陇断焉。'
   answer: ''
-  solution: ''
+  solution: 示例："满"字写出号角声响彻整个秋天的战场，从听觉上渲染出战斗的紧张与浩大，突出战事的激烈；"凝"字形象地写出血色中边塞将士的鲜血凝结成暗紫色，从视觉上表现战斗的惨烈悲壮，画面感极强。
   knowledge_points:
   - 古诗赏析
   - 词语含义
@@ -309,7 +315,7 @@ questions:
   qc_note: ''
   passage_id: classical_intro
 - id: 11
-  type: 主观填空
+  type: 单选
   score: 2
   stem: “汝心之固”中的“固”与下列加点字中意思相同的一项是（2分）
   options:
@@ -317,7 +323,7 @@ questions:
     B: ·固·若金汤
     C: 君子·固·穷
     D: 根深蒂·固·
-  answer: ''
+  answer: A
   solution: ''
   knowledge_points:
   - 文言文实词
@@ -332,7 +338,7 @@ questions:
   qc_note: ''
   passage_id: classical_intro
 - id: 12
-  type: 主观填空
+  type: 单选
   score: 2
   stem: 对“帝感其诚”中“诚”的理解·不恰当·的一项是（2分）
   options:
@@ -340,7 +346,7 @@ questions:
     B: 愚公艰苦奋斗、誓要铲平大山的恒心。
     C: 愚公为造福后代，甘愿付出的无私之心。
     D: 愚公答应他人之事必定践行的守信之心。
-  answer: ''
+  answer: D
   solution: ''
   knowledge_points:
   - 文言文理解
@@ -370,7 +376,7 @@ questions:
 
     面对目标，内心状态往往影响成败走向。愚公面对太行、王屋二山的阻隔，最终感动天帝成功移山，是因为他秉持①  的精神，带领子孙寒暑不辍地移山；赵襄主虽已从王子期处学全驾车技艺，却三战三败，原因在于他没有做到“②  ”，被输赢杂念干扰，无法“进速致远”。'
   answer: ''
-  solution: ''
+  solution: 示例：①坚持不懈/持之以恒/永不言弃/矢志不渝 ②调于马（或"人心调于马"）
   knowledge_points:
   - 文言文理解
   - 古诗文内容理解
@@ -388,7 +394,10 @@ questions:
   score: 5
   stem: 运用恰当的阅读方法能够帮助我们更好地理解书中内容。如圈点批注、选择性阅读、精读与跳读相结合等方法。请从《朝花夕拾》《红星照耀中国》《昆虫记》《艾青诗选》《经典常谈》中任选一部，说说你运用的阅读方法，以及这一方法是如何帮你理解书中内容的。（100字左右）
   answer: ''
-  solution: ''
+  solution: '示例一：我读《红星照耀中国》时用了精读与跳读相结合的方法。我重点读了毛泽东、周恩来等领导人的生活故事，跳过了红军帮助农民军队解决的一些有关一针一线的有趣词跳过，跳过了一些我不懂的军事术语。这样我真切感受到红军是真心为人民的队伍，也明白了红军能得到老百姓拥护的原因。
+
+
+    示例二：我读《经典常谈》时用了圈点批注法。我会圈出每篇介绍经典的核心句子，比如读《诗经》这部分时，我会从课本里学过的篇目出发，写下自己的学习感受。这样边读边画法，打破了对经典书籍的畏惧感，轻松地走进传统文化的大门。'
   knowledge_points:
   - 名著情节
   - 人物形象
@@ -402,15 +411,15 @@ questions:
   qc_status: draft
   qc_note: ''
 - id: 15
-  type: 现代文阅读
-  score: 2
+  type: 单选
+  score: 3
   stem: 根据以上三则材料，下列说法不符合文意的一项是（2分）
   options:
     A: 提升青少年阅读素养既能促进个体全面发展，也能助力国家文化软实力的提升。
     B: 《中国青少年阅读素养框架》为不同学段的阅读教育活动提出了目标与要求。
     C: 首届全民阅读活动周以青少年阅读为重中之重，开展了家校社协同的特色活动。
     D: 青少年阅读素养的高低是决定中华优秀传统文化能否赓续发展的唯一因素。
-  answer: ''
+  answer: D
   solution: ''
   knowledge_points:
   - 信息筛选
@@ -424,7 +433,7 @@ questions:
   qc_note: ''
   passage_id: modern_intro
 - id: 16
-  type: 现代文阅读
+  type: 单选
   score: 2
   stem: 根据材料二的内容，在文中横线处补写一句话，下列最恰当的一项是（2分）
   options:
@@ -432,7 +441,7 @@ questions:
     B: 该框架重点关注青少年阅读能力的培养与提升。
     C: 该框架将指导各地开展丰富多彩的阅读实践活动。
     D: 该框架的发布将有力推动中华优秀传统文化的传承。
-  answer: ''
+  answer: A
   solution: ''
   knowledge_points:
   - 信息筛选
@@ -448,7 +457,7 @@ questions:
   passage_id: modern_intro
 - id: 17
   type: 现代文阅读
-  score: 3
+  score: 2
   stem: '围绕提升青少年阅读素养，以上三则材料分别从①  、②  、③  三个角度进行了介绍。（3分）
 
 
@@ -502,7 +511,7 @@ questions:
 
     （取材于张抗抗的同名文章）'
   answer: ''
-  solution: ''
+  solution: 答案要点：①重要意义（价值/作用） ②指导标准（政策文件/顶层设计） ③实践活动（具体行动/落实路径）
   knowledge_points:
   - 信息提取/段落梳理
   module: reading
@@ -516,10 +525,10 @@ questions:
   passage_id: modern_intro
 - id: 18
   type: 现代文阅读
-  score: 2
+  score: 5
   stem: 文章描摹了窗前洋槐四季不同的生命姿态：春日嫩芽隐绿、花香馥郁，让人陶醉；夏日①  ，让人感动；秋日树叶金黄、落叶洒脱，让人②  ；冬日疏枝挺拔、素裹银装，让人沉思。（2分）
   answer: ''
-  solution: ''
+  solution: 示例：郁郁葱葱、坚韧勇敢（或生机勃发、顽强不屈） 平静（坦然，释然）
   knowledge_points:
   - 信息提取/段落梳理
   module: reading
@@ -533,10 +542,13 @@ questions:
   passage_id: modern_intro
 - id: 19
   type: 现代文阅读
-  score: 3
+  score: 2
   stem: 从文中【甲】【乙】两处画线句中任选一处，从词语运用或修辞手法的角度分析其表达效果。（3分）
   answer: ''
-  solution: ''
+  solution: '示例一：我选【甲】，这句运用比喻的修辞手法，将满树洋槐花比作倾泻的瀑布，将花酿比作银珠，生动形象地写出洋槐盛开时的繁茂洁白、轻盈灵动，以及花香浓郁的特点，表达了作者对洋槐的喜爱与陶醉之情。
+
+
+    示例二：我选【乙】，这句运用拟人的修辞手法，赋予洋槐"挺拔""骄傲""昂着头"等人的情态与动作，生动传神地写出了冬天洋槐在凛冬中赤裸枝干、坚强不屈的姿态，表达了作者对洋槐自信潇洒品格的赞美之情。'
   knowledge_points:
   - 句式赏析
   - 修辞手法
@@ -552,10 +564,10 @@ questions:
   passage_id: modern_intro
 - id: 20
   type: 现代文阅读
-  score: 3
+  score: 2
   stem: 文中第⑬自然段写道“它是一棵新的老树”，请结合上下文内容，说说你对这句话的理解。（3分）
   answer: ''
-  solution: ''
+  solution: 示例："老"能否生"树鳞长、外形还是原来那棵熟悉的树"，能揭示"作者搬来前就存在"或"那棵老槐陪伴我时间长"；解释"新"需要结合原文第11段"清除衰老抛去陈旧"第13段"衰而复荣、败而复兴"，答出"每年苗叶长新，完成生命更新、获得新的生命力"。
   knowledge_points:
   - 信息提取/段落梳理
   - 词语含义
@@ -570,7 +582,7 @@ questions:
   passage_id: modern_intro
 - id: 21
   type: 现代文阅读
-  score: 3
+  score: 2
   stem: '作者借洋槐四季的生命姿态寄寓了丰富的人生思考。请你就其中任意一点，结合自身生活，谈谈带给你的成长启示。（3分）
 
 
@@ -597,7 +609,7 @@ questions:
 
     （取材于黄超的文章）'
   answer: ''
-  solution: ''
+  solution: 示例：秋天洋槐落叶飘洒，不缠绵绵绵，启示我要担然面对生活中的失去与告别。比如上次我参加比赛失利，一度沉沉沮丧，后来想到洋槐落叶是为了来年更好地生长，便放下了遗憾，总结经验重新出发，最终在下次比赛中取得了进步。
   knowledge_points:
   - 启示感悟
   module: reading
@@ -610,15 +622,15 @@ questions:
   qc_note: ''
   passage_id: modern_intro
 - id: 22
-  type: 现代文阅读
-  score: 2
+  type: 单选
+  score: 3
   stem: 下列词语中，可以作为本文论题的是（2分）
   options:
     A: 读书的智慧
     B: 青春与奋斗
     C: 青年与读书
     D: 成才的途径
-  answer: ''
+  answer: C
   solution: ''
   knowledge_points:
   - 议论文阅读
@@ -651,10 +663,10 @@ questions:
   passage_id: modern_intro
 - id: 24
   type: 现代文阅读
-  score: 3
+  score: 2
   stem: 有同学认为：“现在已经是AI时代了，读书已经没有必要了，有问题找AI就行了。”请结合文中第4段的内容，谈谈你对这位同学观点的看法。（3分）
   answer: ''
-  solution: ''
+  solution: 示例：这种观点是错误的。正如文中第④段所说，当今时代，阅读的价值愈发凸显，所有颠覆性创新都建立在对前人知识的系统吸收与深度整合之上。AI 只能提供零散的信息和答案，却无法代替我们进行系统的知识学习和深度阅读思考。我们只有坚持阅读，才能更新知识结构，保持核心竞争力，真正具备新能力。
   knowledge_points:
   - 启示感悟
   module: reading

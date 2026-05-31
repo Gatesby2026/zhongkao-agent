@@ -2,7 +2,7 @@
 # 2026年北京丰台区二模chinese — 自动生成
 # ============================================================
 # OCR: Qwen-VL-OCR  Enrich: qwen-max
-# QC: draft=27  needs_review=0
+# QC: draft=26  needs_review=1
 
 year: 2026
 district: 丰台区
@@ -11,7 +11,7 @@ subject: chinese
 full_score: 100
 duration_minutes: 150
 total_questions: 27
-structure: 1书写(1分) + 13主观填空(28分) + 1古诗内容理解(2分) + 1名著阅读(5分) + 10现代文阅读(24分) + 1作文(40分)
+structure: 1书写(1分) + 8单选(16分) + 8主观填空(17分) + 1古诗内容理解(3分) + 1名著阅读(5分) + 7现代文阅读(18分) + 1作文(40分)
 passages:
 - id: base_intro
   type: base
@@ -58,7 +58,7 @@ questions:
 
     春风拂过校园，书香四溢的阅读嘉年华如火如荼地展开。“经典诵读”随处可见，紫藤架下、操场旁边，同学们诵读名篇，吟咏诗文。他们或轻吟浅诵如莺啼婉转；或慷慨激昂似江河奔涌，琅琅书声萦绕校园，成为最动听的旋律。“经典荐书官”展台前，同学们手持精心设计的推荐卡，或讲述书中动人情节，或·剖·（pōu）析人物精神品格，或畅谈阅读心得体会，声情并茂，真诚恳切。大家在细细品读中领会作品的精·髓·（suí），在交流分享中传递经典的力量。最火爆的是“经典猜盲盒”，大家踮脚·翘·（qiáo）首、兴味索然，随机抽取印有诗文名句、人物描写、经典情节的卡片，快速判断，踊跃抢答，专注投入的·模·（mú）样格外动人。诵读传雅韵，分享润心灵，竞猜添趣味，浓郁书香为校园添上了最美的色彩。'
   answer: ''
-  solution: ''
+  solution: 书写：书香京城观察手记（正楷工整书写即可）
   knowledge_points:
   - 书写
   module: writing
@@ -72,7 +72,7 @@ questions:
   qc_note: ''
   passage_id: base_intro
 - id: 2
-  type: 主观填空
+  type: 单选
   score: 2
   stem: 请你确认文段中加点字读音标注·不正确·的一项是（2分）
   options:
@@ -80,7 +80,7 @@ questions:
     B: 精髓
     C: 翘首
     D: 模样
-  answer: ''
+  answer: B
   solution: ''
   knowledge_points:
   - 字音/字形
@@ -95,7 +95,7 @@ questions:
   qc_note: ''
   passage_id: base_intro
 - id: 3
-  type: 主观填空
+  type: 单选
   score: 2
   stem: 你检查了文段中成语的使用情况。下列成语使用·不恰当·的一项是（2分）
   options:
@@ -103,7 +103,7 @@ questions:
     B: 慷慨激昂
     C: 声情并茂
     D: 兴味索然
-  answer: ''
+  answer: D
   solution: ''
   knowledge_points:
   - 字音/字形/成语运用/病句/词语运用/连贯/书写
@@ -128,7 +128,7 @@ questions:
 
     这个春天，京城书香格外浓郁。2026年4月18日北京书市启幕，四大展场各具风采。①<u>朝阳公园主展场人流如织，各专区热闹非凡</u>。阅读新场景区复原四种特色阅读空间，尽显书市年轻态与文艺范儿；②<u>旧书新知专区数万种图书包揽数千年文史，浸润了万卷书香</u>。首钢园展场将工业风骨与书香气息巧妙交织。大跳台旁，钢铁线条与书市景致相融，③<u>硬朗厚重的工业钢架静静伫立，聆听着书页翻动的温柔絮语，营造出别样的氛围</u>。南苑森林湿地公园展场主打“自然+亲子阅读”，以露营帐篷为载体，打造“围坐静读”沉浸阅读区。每个家庭都能在绿意环绕中静静品读，孩子们的精神世界进行着独特的光合作用。圆明园展场突出“三山五园”的深厚底蕴，④<u>漫步皇家园林，可赏湖光山色之秀美，可品文史典籍之厚重，可感古今交融之和谐。书香氤氲，浸润着京城的每一个角落</u>。'
   answer: ''
-  solution: ''
+  solution: 亲子共读，潜移默化培养了阅读习惯，拉近了亲子间的距离。
   knowledge_points:
   - 病句
   module: writing
@@ -142,7 +142,7 @@ questions:
   qc_note: ''
   passage_id: base_intro
 - id: 5
-  type: 主观填空
+  type: 单选
   score: 2
   stem: 你从修辞的角度分析文段中画线的四处语句，下列说法·不恰当·的一项是（2分）
   options:
@@ -150,7 +150,7 @@ questions:
     B: ②处运用夸张，极言旧书新知专区藏书的种类繁多、品相上乘，极具收藏价值。
     C: ③处运用拟人，赋予钢架人的情态与动作，凸显工业风骨与书香气息的巧妙交融。
     D: ④处运用排比，句式整齐，节奏明快，层层递进写出圆明园展场的独特韵味。
-  answer: ''
+  answer: B
   solution: ''
   knowledge_points:
   - 字音/字形
@@ -175,7 +175,7 @@ questions:
 
     书香浸润校园，阅读点亮京城。从校园的声声诵读，到家庭的温情共读，再到书市的多元阅读，全民阅读周期间，京城处处弥漫着浓郁的书香。这些丰富多彩的活动，让阅读从课堂走向生活，从独享走向共享，展现了北京深厚的文化底蕴，让全民阅读焕发出蓬勃生机。'
   answer: ''
-  solution: ''
+  solution: 意思：孩子在阅读中汲取知识、滋养精神，获得成长与进步。
   knowledge_points:
   - 词语运用
   module: reading
@@ -193,7 +193,11 @@ questions:
   score: 2
   stem: 你在文段结尾处补写一句话，围绕“全民阅读”，用上“参与”“传承”两个词，向同学们发出倡议。（2分）
   answer: ''
-  solution: ''
+  solution: '倡议：让我们积极参与全民阅读，传承优秀文化，让书香伴随成长！
+
+
+
+    （一）默写（4分）'
   knowledge_points:
   - 词语运用
   module: writing
@@ -211,7 +215,7 @@ questions:
   score: 2
   stem: ，江春入旧年。（王湾《次北固山下》）（1分）
   answer: ''
-  solution: ''
+  solution: 海日生残夜
   knowledge_points:
   - 默写
   module: classical
@@ -229,7 +233,7 @@ questions:
   score: 1
   stem: 学而不思则罔，               。（《论语·为政》）（1分）
   answer: ''
-  solution: ''
+  solution: 思而不学则殆
   knowledge_points:
   - 默写
   module: classical
@@ -268,7 +272,10 @@ questions:
 
     从今若许闲乘月，拄杖无时夜叩门。'
   answer: ''
-  solution: ''
+  solution: '长风破浪会有时，直挂云帆济沧海
+
+
+    （二）《游山西村》（7分）'
   knowledge_points:
   - 古诗默写
   module: classical
@@ -286,7 +293,7 @@ questions:
   score: 4
   stem: 本诗章法严谨，完美契合律诗“起承转合”的结构。首联以“莫笑”起笔，写农家待客情景和诗人做客感受；颔联承接“留客”之意，描绘途中所见山村风光，“      <u>①</u>      ”字写出诗人的欣喜之情；颈联笔锋一转，写热闹的      <u>②</u>      活动，展现了农村的淳朴民风；尾联收束全诗，“无时”二字打破时间限制，表达了诗人对田园生活的      <u>③</u>      。（3分）
   answer: ''
-  solution: ''
+  solution: ①又 ②春社 ③喜爱与向往
   knowledge_points:
   - 古诗内容理解
   - 文言文实词
@@ -319,7 +326,10 @@ questions:
 
     予谓菊，花之隐逸者也；牡丹，花之富贵者也；莲，花之君子者也。噫！菊之爱，陶后鲜有闻。莲之爱，同予者何人？牡丹之爱，宜乎众矣。'
   answer: ''
-  solution: ''
+  solution: '陆游借农家“浑酒”，表现农家淳朴热情、丰收喜悦，表达对田园生活的喜爱；李白借“清酒”的名贵，反衬内心苦闷、怀才不遇的愤懑。
+
+
+    （三）《爱莲说》（7分）'
   knowledge_points:
   - 古诗内容理解
   - 文言文理解
@@ -333,15 +343,15 @@ questions:
   qc_note: ''
   passage_id: classical_intro
 - id: 13
-  type: 主观填空
-  score: 3
+  type: 单选
+  score: 2
   stem: “香远益清”中的“益”与下列词语中加点的“益”，意思相同的一项是（2分）
   options:
     A: 精·益·求精
     B: 良师·益·友
     C: 延年·益·寿
     D: 开卷有·益·
-  answer: ''
+  answer: A
   solution: ''
   knowledge_points:
   - 古诗文默写
@@ -356,7 +366,7 @@ questions:
   qc_note: ''
   passage_id: classical_intro
 - id: 14
-  type: 主观填空
+  type: 单选
   score: 2
   stem: '下列对“可远观而不可亵玩焉”的理解，·不正确·的一项是（2分）
 
@@ -371,7 +381,7 @@ questions:
 
 
     D．莲正直端方，品性高洁，不容侵犯。'
-  answer: ''
+  answer: C
   solution: ''
   knowledge_points:
   - 古诗赏析
@@ -381,12 +391,12 @@ questions:
   - L1
   - L2
   - L3
-  qc_status: draft
-  qc_note: ''
+  qc_status: needs_review
+  qc_note: 选择题缺少 options（既无文本也无图片选项）
   passage_id: classical_intro
 - id: 15
   type: 古诗内容理解
-  score: 2
+  score: 3
   stem: '根据《爱莲说》及下面两则材料，在后面语段中的横线上填写恰当的内容。（3分）
 
 
@@ -420,7 +430,7 @@ questions:
     君子人格，是中国古代文人历久弥新的精神追求。《爱莲说》中，周敦颐以莲喻君子，文末感慨“莲之爱，同予者何人”，与前文的“   <u>①</u>   ” 字相呼应，道出君子独善其身的孤寂和知音难觅的心境；陆游的《卜算子·咏梅》中，梅花 “零落成泥碾作尘，只有香如故”，恰如君子   <u>②
     </u>  ；《看松庵记》中，宋濂以松喻君子，“   <u>③</u>   ”一句，赞美君子坚贞不屈的风骨。'
   answer: ''
-  solution: ''
+  solution: ①鲜 ②高洁不屈、坚守本心 ③能凌岁而不易行改度
   knowledge_points:
   - 古诗内容理解
   - 文言文实词
@@ -439,7 +449,11 @@ questions:
   score: 5
   stem: 问题导向式阅读，是指阅读者带着一个明确的问题去书中寻找答案或依据的阅读方法。它既能提高阅读效率，也能加深对特定问题的理解。请你从《朝花夕拾》《昆虫记》《经典常谈》《红星照耀中国》中任选一部，结合该书的具体内容，说说你是怎样进行问题导向式阅读的。（100字左右）
   answer: ''
-  solution: ''
+  solution: '读《红星照耀中国》时，带着“红军为何能取得胜利”的问题阅读。重点读红军长征、军民关系、革命理想相关内容，找到答案：红军有坚定信念、顽强意志，依靠人民群众，因此能克服困难取得胜利。
+
+
+
+    （一）材料阅读（7分）'
   knowledge_points:
   - 名著情节
   - 主题理解
@@ -452,15 +466,15 @@ questions:
   qc_status: draft
   qc_note: ''
 - id: 17
-  type: 现代文阅读
-  score: 3
+  type: 单选
+  score: 2
   stem: 根据材料二，在文段结尾横线处补写恰当的一项是（2分）
   options:
     A: 全社会共同参与、多层级赛事联动、多项目全年龄覆盖、线上线下深度结合
     B: 全社会共同参与、多项目全年龄覆盖、多层级赛事联动、线上线下深度结合
     C: 多层级赛事联动、线上线下深度结合、全社会共同参与、多项目全年龄覆盖
     D: 线上线下深度结合、全社会共同参与、多项目全年龄覆盖、多层级赛事联动
-  answer: ''
+  answer: A
   solution: ''
   knowledge_points:
   - 信息筛选
@@ -475,7 +489,7 @@ questions:
   qc_note: ''
   passage_id: modern_intro
 - id: 18
-  type: 现代文阅读
+  type: 单选
   score: 2
   stem: 根据以上三则材料，下列说法·不恰当·的一项是（2分）
   options:
@@ -483,7 +497,7 @@ questions:
     B: 北京打造丰富多样的主题赛事活动，持续举办品牌赛事促进全民健身发展。
     C: 线上云健身、虚拟马拉松、VR趣味运动、数字体育公开赛能监测国民体质。
     D: 城市公园增设的AI智能健身器材，可生成满足个性化需求的科学运动处方。
-  answer: ''
+  answer: C
   solution: ''
   knowledge_points:
   - 信息筛选
@@ -499,7 +513,7 @@ questions:
   passage_id: modern_intro
 - id: 19
   type: 现代文阅读
-  score: 2
+  score: 3
   stem: '根据以上三则材料，我们了解到北京市从    <u>①</u>    、<u>    ②   </u> 、 <u>    ③   </u> 三个方面促进全民健身活动的发展。
 
 
@@ -541,7 +555,10 @@ questions:
 
     （取材于季羡林同名文章）'
   answer: ''
-  solution: ''
+  solution: '①完善场地设施 ②丰富赛事活动 ③运用科技创新
+
+
+    （二）《富春江上》（10分）'
   knowledge_points:
   - 信息筛选
   module: reading
@@ -559,7 +576,7 @@ questions:
   score: 4
   stem: 作者记叙了自己游览富春江的所见所想。坐在游艇上，看富春江景，联想吴越争雄、钱塘江潮；    <u>①</u>   ，远眺富春江，想象燕子飞掠；游览严子陵钓台，看东坡题字，<u>    ②   </u>；即将返程，望桐庐方向，幻想未见美景。（2分）
   answer: ''
-  solution: ''
+  solution: ①登上鹳山 ②感慨隐士情怀与自然之美
   knowledge_points:
   - 记叙文阅读
   - 启示感悟
@@ -577,7 +594,7 @@ questions:
   score: 2
   stem: 本文语言极富表现力。请你说说第②段画线语句的表达效果。（3分）
   answer: ''
-  solution: ''
+  solution: 运用比喻，将青山比作青螺，生动写出富春江山水清秀迷蒙的特点，语言优美，画面感强，表达作者喜爱之情。
   knowledge_points:
   - 句式赏析
   - 修辞手法
@@ -596,7 +613,7 @@ questions:
   score: 2
   stem: 作者描绘富春江的景色，却在第⑧段提及黄山。请你结合文章内容推测作者这样写的用意。（2分）
   answer: ''
-  solution: ''
+  solution: 以黄山阳刚之美衬托富春江阴柔之美，突出祖国江山多样之美，表达自豪之情。
   knowledge_points:
   - 表达效果
   - 段落作用
@@ -644,7 +661,10 @@ questions:
 
     （取材自于文岗的文章）'
   answer: ''
-  solution: ''
+  solution: '富春江景色秀美，是祖国大好河山的代表；生于这样的国土，能感受山河之美、文化底蕴，内心幸福自豪，所以说“吾土”是幸福根源。
+
+
+    （三）议论文阅读（7分）'
   knowledge_points:
   - 议论文阅读
   - 论证分析
@@ -662,7 +682,7 @@ questions:
   score: 3
   stem: 结合第①段的具体内容，说明本段在全文中的作用。（2分）
   answer: ''
-  solution: ''
+  solution: 开篇引用郑板桥楹联，引出“咬定几句有用书”的读书话题，点明文章核心，激发阅读兴趣，总领全文。
   knowledge_points:
   - 段落作用
   module: reading
@@ -676,7 +696,7 @@ questions:
   qc_note: ''
   passage_id: modern_intro
 - id: 25
-  type: 现代文阅读
+  type: 单选
   score: 2
   stem: 根据全文内容，下列最能概括本文中心论点的一项是（2分）
   options:
@@ -684,7 +704,7 @@ questions:
     B: 郑板桥的读书方法，精辟透彻，对后世的影响极为深远。
     C: 读书要择有用、求精要、读熟透，三者兼具，方为善读。
     D: 修身做人是读书的第一要义，所以此类书乃择书之首选。
-  answer: ''
+  answer: C
   solution: ''
   knowledge_points:
   - 信息筛选
@@ -703,7 +723,26 @@ questions:
   score: 2
   stem: 分析第③段的论证思路。（3分）
   answer: ''
-  solution: ''
+  solution: '先提出选书首选修身做人的有用之书；再引用高攀龙、陶行知名言论证修身重要性；最后从反面说明做人偏差的危害，论证修身类书籍是首选。
+
+
+
+    评分标准
+
+
+    一类卷（36-40分）：立意深刻，中心明确，内容充实，情感真挚，结构严谨，语言流畅，600-800字。
+
+
+    二类卷（32-35分）：立意明确，中心突出，内容较充实，情感真实，结构完整，语言通顺。
+
+
+    三类卷（28-31分）：立意基本明确，中心基本突出，内容单薄，结构基本完整，语言基本通顺。
+
+
+    四类卷（24-27分）：立意模糊，中心不明确，内容空洞，结构松散，语言不通顺。
+
+
+    五类卷（23分以下）：偏离题意，字数不足600字，内容杂乱，泄露信息。'
   knowledge_points:
   - 论证分析
   - 议论文阅读
@@ -730,7 +769,10 @@ questions:
 
     要求：将作文题目写在答题卡上，作文内容积极向上，字数在600-800之间，不出现学校的真实名称、师生姓名等。'
   answer: ''
-  solution: ''
+  solution: '![](figures/image1.png)![](figures/image2.png)丰台区2026年九年级学业水平考试综合练习（二）
+
+
+    语文试卷答案'
   knowledge_points:
   - 命题作文
   - 材料作文

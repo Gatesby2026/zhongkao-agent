@@ -11,7 +11,7 @@ subject: chinese
 full_score: 100
 duration_minutes: 150
 total_questions: 27
-structure: 1书写(1分) + 13主观填空(26分) + 1文言文综合理解(2分) + 1名著阅读(5分) + 10现代文阅读(26分) + 1作文(40分)
+structure: 1书写(1分) + 9单选(21分) + 7主观填空(13分) + 1文言文综合理解(2分) + 1名著阅读(5分) + 7现代文阅读(18分) + 1作文(40分)
 passages:
 - id: base_情别
   type: base
@@ -107,7 +107,7 @@ questions:
   score: 1
   stem: 请用正楷字在封面上书写标题：“古都别蕴”活动成果集。（1分）
   answer: ''
-  solution: ''
+  solution: '"古都别蕴"活动成果集'
   knowledge_points:
   - 书写
   module: writing
@@ -120,7 +120,7 @@ questions:
   qc_status: draft
   qc_note: ''
 - id: 2
-  type: 主观填空
+  type: 单选
   score: 2
   stem: 有同学对加点字的读音和字体加粗的字形有疑问。下列判断正确的一项是（2分）
   options:
@@ -128,7 +128,7 @@ questions:
     B: 因为表达的是“周围的气氛和情调”的意思，所以“氛”应读“fèn”。
     C: 因为表达的是“使明显突出”的意思，所以“烘托”一词中有错字。
     D: 因为表达的是“出于本心”的意思，所以“由衷”一词中没有错字。
-  answer: ''
+  answer: D
   solution: ''
   knowledge_points:
   - 字音
@@ -148,7 +148,7 @@ questions:
   score: 2
   stem: 文段中的画线句存在问题，请你修改。（2分）
   answer: ''
-  solution: ''
+  solution: 示例：卢沟桥曾是西出北京的要道，自古便是折柳送别的胜地。
   knowledge_points:
   - 成语运用
   module: reading
@@ -161,7 +161,7 @@ questions:
   qc_note: ''
   passage_id: base_情别
 - id: 4
-  type: 主观填空
+  type: 单选
   score: 2
   stem: 你检查了文段中四字词语的使用情况。下列词语使用正确的一项是（2分）
   options:
@@ -169,7 +169,7 @@ questions:
     B: 首当其冲
     C: 高谈阔论
     D: 处心积虑
-  answer: ''
+  answer: A
   solution: ''
   knowledge_points:
   - 成语运用
@@ -184,7 +184,7 @@ questions:
   qc_note: ''
   passage_id: base_志别
 - id: 5
-  type: 主观填空
+  type: 单选
   score: 2
   stem: 有同学对文段【甲】【乙】处的标点符号有疑问。下列判断正确的一项是（2分）
   options:
@@ -192,7 +192,7 @@ questions:
     B: 【甲】，【乙】。”
     C: 【甲】、【乙】。”
     D: 【甲】，【乙】”。
-  answer: ''
+  answer: C
   solution: ''
   knowledge_points:
   - 标点符号运用
@@ -207,7 +207,7 @@ questions:
   qc_note: ''
   passage_id: base_义别
 - id: 6
-  type: 主观填空
+  type: 单选
   score: 2
   stem: "阅读材料后，一位同学想为文丞相祠拟写一副对联。你认为在上下联横线处填入文字，最恰当的一项是（2分）\n\n上联：    <u>①</u>    ，    <u>②</u>    \n\n下联：古树抱精诚，    <u>③</u>"
   options:
@@ -215,7 +215,7 @@ questions:
     B: ①土牢存浩气 ②忠魂正义垂万世 ③赤志清名照千秋
     C: ①浩气土牢存 ②忠魂正义垂万世 ③赤志清名千秋照
     D: ①土牢存浩气 ②赤志清名千秋照 ③忠魂正气垂万世
-  answer: ''
+  answer: B
   solution: ''
   knowledge_points:
   - 对联运用
@@ -233,7 +233,7 @@ questions:
   score: 2
   stem: 根据语境，你在文段中的横线处补写一个分句。（2分）
   answer: ''
-  solution: ''
+  solution: 示例：别是亲友桥头折柳的平安祝愿
   knowledge_points:
   - 词语运用
   - 连贯
@@ -251,7 +251,7 @@ questions:
   score: 2
   stem: ________，千树万树梨花开。（岑参《白雪歌送武判官归京》）（1分）
   answer: ''
-  solution: ''
+  solution: 忽如一夜春风来
   knowledge_points:
   - 默写
   module: classical
@@ -269,7 +269,7 @@ questions:
   score: 1
   stem: 复行数十步，________。（陶渊明《桃花源记》）（1分）
   answer: ''
-  solution: ''
+  solution: 豁然开朗
   knowledge_points:
   - 默写
   module: classical
@@ -320,7 +320,7 @@ questions:
 
     年少万兜鍪，坐断东南战未休。天下英雄谁敌手？曹刘。生子当如孙仲谋。'
   answer: ''
-  solution: ''
+  solution: 山重水复疑无路 / 柳暗花明又一村
   knowledge_points:
   - 古诗文默写
   - 古诗内容理解
@@ -339,7 +339,7 @@ questions:
   score: 3
   stem: 《满江红（小住京华）》中词人寓居京华，触景感怀。上阕用“  <u>①</u>  ”“强”二字，写出被世俗身份束缚的不甘与无奈；下阕直抒胸臆，其中“算平生肝胆，因人常热”写出了词人  <u>②</u>  的情怀。（2分）
   answer: ''
-  solution: ''
+  solution: ①苦/徒 ②报国济世/心怀天下
   knowledge_points:
   - 古诗内容理解
   - 古诗赏析
@@ -369,7 +369,7 @@ questions:
 
     今诸生学于太学，县官日有廪稍之供，父母岁有裘葛之遗，无冻馁之患矣；坐大厦之下而诵诗书，无奔走之劳矣；有司业、博士为之师，未有问而不告、求而不得者也；凡所宜有之书，皆集于此，不必若余之手录，假诸人而后见也。其业有不精、德有不成者，非天质之卑，则心不若余之专耳，岂他人之过哉？'
   answer: ''
-  solution: ''
+  solution: 示例：两处以"何处"发问，都抒发了壮志难酬的苦闷与迷茫。"何处望神州"，抒发了土沦陷、中原难收的家国之痛与报国无门的悲愤；"莽红尘何处觅知音"，抒发了理想不被理解、身世孤苦、知音难寻的孤寂与怅惘。
   knowledge_points:
   - 古诗内容理解
   - 情感分析
@@ -383,7 +383,7 @@ questions:
   qc_note: ''
   passage_id: classical_intro
 - id: 13
-  type: 主观填空
+  type: 单选
   score: 3
   stem: 下列选项中加点字的意思都相同的一项是（2分）
   options:
@@ -391,7 +391,7 @@ questions:
     B: ·计·日以还 千方百·计· 斤斤·计·较
     C: 稍降辞·色· 面不改·色· 声·色·俱厉
     D: 久而乃·和· 春·和·景明 随声附·和·
-  answer: ''
+  answer: C
   solution: ''
   knowledge_points:
   - 文言文实词
@@ -406,7 +406,7 @@ questions:
   qc_note: ''
   passage_id: classical_intro
 - id: 14
-  type: 主观填空
+  type: 单选
   score: 2
   stem: 下列对“盖余之勤且艰若此”的理解与分析，·不正确·的一项是（2分）
   options:
@@ -414,7 +414,7 @@ questions:
     B: “艰”指宋濂饥寒奔走、粗食敝衣的境遇，体现他求学过程的困苦艰辛。
     C: 宋濂虽“勤且艰若此”但他仍然心向圣贤，凸显他安贫乐道的文人形象。
     D: 宋濂出身寒门但终成功名，“勤且艰若此”暗含对自我砥砺的骄傲自夸。
-  answer: ''
+  answer: D
   solution: ''
   knowledge_points:
   - 文言文理解
@@ -462,7 +462,7 @@ questions:
 
     先贤劝学各有其道。宋濂以自身艰苦求学的经历勉励马生，争做《论语》中“  <u>①</u>  ”的人；吕蒙以“军中多务”推脱学习，孙权现身说法，提到“  <u>②</u>  ”，点明读书的价值，劝吕蒙读书向学；诸葛亮在《诫子书》中直接告诫晚辈，要做到  <u>③</u>  ，这是学有所成的前提。'
   answer: ''
-  solution: ''
+  solution: 示例：①"乐之" ②"自以为大有所益" ③宁静致远/淡泊明志/志存高远
   knowledge_points:
   - 文言文理解
   - 古诗文内容理解
@@ -480,7 +480,7 @@ questions:
   score: 5
   stem: “以人为镜，可以明得失。”请从你所阅读过的名著中，选取·一个人物·，结合相关情节，谈谈你对这句话的理解与启示。（100字左右）
   answer: ''
-  solution: ''
+  solution: 示例：我对这句话的理解是，以他人为镜，能比照自我，看清自身得失。《钢铁是怎样炼成的》中保尔因伤病缠身，一度萌生轻生想法。但他意志坚韧、理想坚定，依旧坚持文学创作。以他为镜启示我，纵使在人生低谷，仍要坚守初心，在逆境中顽强奋进，不断成长。
   knowledge_points:
   - 名著情节
   - 人物形象
@@ -494,7 +494,7 @@ questions:
   qc_status: draft
   qc_note: ''
 - id: 17
-  type: 现代文阅读
+  type: 单选
   score: 3
   stem: 下列对三则材料内容的理解，恰当的一项是（2分）
   options:
@@ -502,7 +502,7 @@ questions:
     B: 王阳明“心即理”主张向外求取是非准则，与《黄帝内经》的智慧相通。
     C: 以消极的心态做事，会额外消耗大脑的认知资源，产生“疲惫”的感受。
     D: 长期高强度超负荷运动能分泌强啡肽，可有效抑制疼痛并缓解内心焦虑。
-  answer: ''
+  answer: C
   solution: ''
   knowledge_points:
   - 信息筛选
@@ -520,7 +520,7 @@ questions:
   score: 2
   stem: 根据材料二的文字及图表信息，在材料二横线处补写恰当的内容。（2分）
   answer: ''
-  solution: ''
+  solution: 示例：大脑不同状态下的脑能量消耗差异极小/基本一致
   knowledge_points:
   - 信息提取/段落梳理
   module: reading
@@ -597,7 +597,7 @@ questions:
 
     （取材于《人民周刊》作者张耘睿的文章，有删改）'
   answer: ''
-  solution: ''
+  solution: 示例：①摒除杂念，关注自我 ②摆脱抵触情绪，积极做事 ③做适度的有氧运动
   knowledge_points:
   - 信息提取/段落梳理
   module: reading
@@ -627,7 +627,7 @@ questions:
 
     | 家中 | 照片中的流凌 | 安宁 |'
   answer: ''
-  solution: ''
+  solution: 示例：①好奇/向往 ②夕阳下的流凌 ③岸边大石上
   knowledge_points:
   - 信息提取/段落梳理
   module: reading
@@ -645,7 +645,10 @@ questions:
   score: 3
   stem: 请结合上下文，赏析文中第⑪段画线语句的表达效果。（3分）
   answer: ''
-  solution: ''
+  solution: '示例一：这句话运用拟人的修辞，从"未屈服""倔强"把河水人格化，生动写出了黄河在严冬冰封之下依然坚持流淌的状态。表达了作者对黄河坚韧顽强，永不屈服的赞美。
+
+
+    示例二："如同大地深沉的叹息"运用比喻的修辞，生动写出了水声的低沉、浑厚。表达了作者对黄河顽强生命力的赞美。'
   knowledge_points:
   - 句式赏析/修辞手法/表达效果
   module: reading
@@ -662,7 +665,7 @@ questions:
   score: 3
   stem: 第⑬段“冰封、何尝不是另一种奔流”一句中，“冰封”与“奔流”是否矛盾？请结合文章内容谈谈你的理解。（3分）
   answer: ''
-  solution: ''
+  solution: 示例：不矛盾。"冰封"指黄河表面被冰层覆盖，看似静止凝固，实则在默默积蓄力量；而"奔流"则指冰层下河水在"倔强地涌动"。因此，"冰封"是外在形态，"奔流"是内在精神。表现了黄河在严寒中内敛坚韧、蓄势待发的品格，也象征着民族不屈不挠、心怀希望的精神。
   knowledge_points:
   - 句式赏析
   - 表达效果
@@ -704,7 +707,10 @@ questions:
 
     （取材于《中国教育报》作者梁瑞哲，有删改）'
   answer: ''
-  solution: ''
+  solution: '示例一：我认为"黄河流凌"这个题目好。"黄河流凌"点明了写作对象。表达了作者对黄河及中华民族坚贞不屈、自强不息精神的赞美。标题贯穿全文。标题中的"黄河"与文中"母亲河""故乡的黄河"相照应。标题平实直白，与文章沉稳朴实的行文风格契合。
+
+
+    示例二：我认为"流凌之歌"这个题目好。题目不仅点明了写作对象，而且与结尾"低沉而永恒的水声""奋进的战歌"相呼应。"歌"字赞美了流凌顽强的生命力，民族不屈不挠、自强不息的精神，点明了文章主旨。'
   knowledge_points:
   - 启示感悟
   - 议论文阅读
@@ -718,14 +724,14 @@ questions:
   qc_note: ''
   passage_id: modern_intro
 - id: 24
-  type: 现代文阅读
+  type: 单选
   score: 3
   stem: 下列关于文章①-⑥段结构关系的图示，正确的一项是（2分）
   options:
     A: '![](figures/image2.png)'
     B: '![](figures/image3.png)'
     C: '![](figures/image4.png)'
-  answer: ''
+  answer: A
   solution: ''
   knowledge_points:
   - 段落梳理
@@ -739,7 +745,7 @@ questions:
   qc_note: ''
   passage_id: modern_intro
 - id: 25
-  type: 现代文阅读
+  type: 单选
   score: 2
   stem: 下列对文中加点词语的分析，说法·不恰当·的一项是（2分）
   options:
@@ -747,7 +753,7 @@ questions:
     B: 第②段中的“往往”，起限定作用，表示通常情况，体现议论文语言的严谨性。
     C: 第③段中“唯有……才……”，表条件，凸显内在觉醒是心灵成长的必备前提。
     D: 第④段中的“但是”，表示转折关系，意在强调深度阅读具有不可替代的特质。
-  answer: ''
+  answer: D
   solution: ''
   knowledge_points:
   - 词语含义
@@ -766,7 +772,7 @@ questions:
   score: 2
   stem: 阅读文章，写出第⑤段的论证过程。（3分）
   answer: ''
-  solution: ''
+  solution: 示例：该段首先提出"唤醒真实发生的深度阅读，需要做到读用结合"的分论点；其次，列举鲁迅读《天演论》以思想救国、华罗庚研读统筹方法并落地重大工程实践的事例进行举例论证；最后总结得出以读促行、以行证读的论断，告诉人们让深度阅读赋能自身成长的结论，论证逻辑完整清晰，具有说服力。
   knowledge_points:
   - 论证分析
   module: reading

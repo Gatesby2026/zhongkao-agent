@@ -11,7 +11,7 @@ subject: chinese
 full_score: 100
 duration_minutes: 150
 total_questions: 27
-structure: 1书写(1分) + 12主观填空(25分) + 1古诗赏析(2分) + 1古诗内容理解(2分) + 1名著阅读(5分) + 10现代文阅读(25分) + 1作文(40分)
+structure: 10单选(20分) + 6主观填空(11分) + 1古诗赏析(2分) + 1古诗内容理解(3分) + 1名著阅读(5分) + 7现代文阅读(19分) + 1作文(40分)
 passages:
 - id: base_intro
   type: base
@@ -62,14 +62,14 @@ passages:
     人工智能时代的教育不再是单向的知识传授，而是一种多维的学习体验，能够跨越时空的界限为学生提供多样的工具与资源。学生可以根据自己的兴趣和需求，制定个性化学习方案，通过教学辅助工具和智能体等应用，享受教育服务与支持，成为一个跨学科、跨领域、跨层次的个性化教育时代的学习者。'
 questions:
 - id: 1
-  type: 书写
-  score: 1
+  type: 单选
+  score: 2
   stem: 下列加点字读音标注不正确的一项是(2分)
   options:
     A: ·模·型
     B: 不·禁· 0  静·谧·
     D: ·契·合
-  answer: ''
+  answer: A
   solution: ''
   knowledge_points:
   - 书写
@@ -85,7 +85,7 @@ questions:
   passage_id: base_intro
 - id: 2
   type: 主观填空
-  score: 3
+  score: 2
   stem: '在《现代汉语词典》中，“细胞”的意思是“生物体结构和功能的基本单位”。请你根据词典义及文义，解释“细胞”在文段中的意思。(2分)
 
 
@@ -97,7 +97,7 @@ questions:
 
     乙同学：我同意，不过我觉得这种“变化”在植物身上体现得更生动。国槐、海棠、石榴、丁香、·相映成趣·，以各异的姿态柔化了建筑硬朗的线条，为规整的院落格局注入灵动气息。四季流转，树叶由鹅黄转浓绿，再染金黄霜红；即便冬日枯枝，也以遒劲身姿点缀庭院。<u>草木四时景致各异，与四合院建筑相得益彰，尽显古院的岁月。</u>'
   answer: ''
-  solution: ''
+  solution: “细胞”在这里比喻构成北京城文化的基本单位，体现四合院承载北京历史文化、是城市文化根基的特点（2分）
   knowledge_points:
   - 词语运用
   - 连贯
@@ -111,7 +111,7 @@ questions:
   qc_note: ''
   passage_id: base_intro
 - id: 3
-  type: 主观填空
+  type: 单选
   score: 2
   stem: 你检查了记录中使用的成语，发现下列成语使用不恰当的一项是(2分)
   options:
@@ -119,7 +119,7 @@ questions:
     B: 鳞次栉比
     C: 巧夺天工
     D: 相映成趣
-  answer: ''
+  answer: C
   solution: ''
   knowledge_points:
   - 字音/字形
@@ -147,7 +147,7 @@ questions:
 
     乙同学：北京的四合院，更是老北京市井文化的摇篮。街坊四邻围着一个院儿住，谁家有事都互相照应，这种亲近的氛围让“人情味儿”成了北京最浓的色彩。在这种环境里长大的北京人，自然也带上了院子的脾性【乙】待人接物有里有面儿，做事不慌不忙，还特别懂得怎么把日子过得有滋有味。所以你看，一方小小庭院，        ，        ，         。'
   answer: ''
-  solution: ''
+  solution: 尽显古院的岁月韵味（2分）
   knowledge_points:
   - 词语运用
   module: chinese
@@ -161,7 +161,7 @@ questions:
   qc_note: ''
   passage_id: base_intro
 - id: 5
-  type: 主观填空
+  type: 单选
   score: 2
   stem: 记录中需要确认【甲】【乙】两处标点，你认为下列正确的一项是(2分)
   options:
@@ -169,7 +169,7 @@ questions:
     B: '【甲】、【乙】:'
     C: '【甲】,【乙】:'
     D: 【甲】,【乙】。
-  answer: ''
+  answer: B
   solution: ''
   knowledge_points:
   - 字音/字形
@@ -184,7 +184,7 @@ questions:
   qc_note: ''
   passage_id: base_intro
 - id: 6
-  type: 主观填空
+  type: 单选
   score: 2
   stem: '在乙同学发言记录的横线处依次填入语句，最恰当的一项是(2分)
 
@@ -201,7 +201,7 @@ questions:
     B: ②①③
     C: ①③②
     D: ③②①
-  answer: ''
+  answer: C
   solution: ''
   knowledge_points:
   - 字音/字形/成语运用/病句/词语运用/连贯/书写
@@ -216,7 +216,7 @@ questions:
   qc_note: ''
   passage_id: base_intro
 - id: 7
-  type: 主观填空
+  type: 单选
   score: 2
   stem: '有同学根据三位同学的对话写了一则上联，请你选择最恰当的下联。(2分)
 
@@ -230,7 +230,7 @@ questions:
     B: 高楼兴都市，谱写京城发展新篇
     C: 诗书描市井，珍藏京华四季风光
     D: 街巷藏岁月，承载古都生活智慧
-  answer: ''
+  answer: A
   solution: ''
   knowledge_points:
   - 字音
@@ -250,7 +250,7 @@ questions:
   score: 2
   stem: 关关雎鸠，在河之洲。        ，君子好逑。(《诗经·关雎》)(1分)
   answer: ''
-  solution: ''
+  solution: 窈窕淑女（1分）
   knowledge_points:
   - 默写
   module: classical
@@ -268,7 +268,7 @@ questions:
   score: 1
   stem: ，浅草才能没马蹄。(白居易《钱塘湖春行》)(1分)
   answer: ''
-  solution: ''
+  solution: 乱花渐欲迷人眼（1分）
   knowledge_points:
   - 默写
   module: classical
@@ -307,7 +307,10 @@ questions:
 
     <u>从今若许闲乘月，拄杖无时夜叩门。</u>'
   answer: ''
-  solution: ''
+  solution: '长风破浪会有时，直挂云帆济沧海（2分）
+
+
+    （二）《游山西村》（5分）'
   knowledge_points:
   - 默写
   module: classical
@@ -325,7 +328,7 @@ questions:
   score: 3
   stem: 本诗先记事，写<u>  ①  </u>；再写景，绘山村别样美景；继而<u> ② </u>，描乡间淳朴风情；最后抒怀。(2分)
   answer: ''
-  solution: ''
+  solution: ①农家热情待客 ②写景绘色（2分）
   knowledge_points:
   - 古诗内容理解
   - 古诗赏析
@@ -355,7 +358,10 @@ questions:
 
     一箪食，一豆羹，得之则生，弗得则死。呼尔而与之，行道之人弗受；蹴尔而与之，乞人不屑也。万钟则不辩礼义而受之，万钟于我何加焉！为宫室之美、妻妾之奉、所识穷乏者得我与?乡为身死而不受，今为宫室之美为之；乡为身死而不受，今为妻妾之奉为之；乡为身死而不受，今为所识穷乏者得我而为之：是亦不可以已乎?<u>此</u><u>之</u><u>谓失其本心</u>。'
   answer: ''
-  solution: ''
+  solution: '“闲”字写出诗人游赏山村后的闲适愉悦，体现对淳朴田园生活的喜爱与向往；暗含诗人摆脱官场纷扰、追求自在心境的豁达；也凸显乡村宁静恬淡的氛围，收束全诗，余味悠长（3分）
+
+
+    （三）《鱼我所欲也》（7分）'
   knowledge_points:
   - 古诗内容理解
   - 文言文理解
@@ -369,15 +375,15 @@ questions:
   qc_note: ''
   passage_id: classical_intro
 - id: 13
-  type: 主观填空
-  score: 3
+  type: 单选
+  score: 2
   stem: 下列选项中加点字的意思都相同的一项是(2分)
   options:
     A: ·舍·生而取义者也 屋·舍·俨然
     B: 非·独·贤者有是心也 ·独·往湖心亭看雪
     C: 故·患·有所不辟也 ·患·得患失
     D: 是亦不可以·已·乎 鞠躬尽瘁，死而后·已·
-  answer: ''
+  answer: D
   solution: ''
   knowledge_points:
   - 古诗文理解
@@ -391,7 +397,7 @@ questions:
   qc_note: ''
   passage_id: classical_intro
 - id: 14
-  type: 主观填空
+  type: 单选
   score: 2
   stem: 下列对“此之谓失其本心”一句的理解，不正确的一项是(2分)
   options:
@@ -399,7 +405,7 @@ questions:
     B: 行道之人和乞人的行为就是丧失了羞恶之心。
     C: 孟子坚守礼义拒受万钟是保持了羞恶之心。
     D: 为私欲而接受万钟的人就是丧失了羞恶之心。
-  answer: ''
+  answer: B
   solution: ''
   knowledge_points:
   - 古诗文阅读
@@ -415,7 +421,7 @@ questions:
   passage_id: classical_intro
 - id: 15
   type: 古诗内容理解
-  score: 2
+  score: 3
   stem: '根据《鱼我所欲也》及下面的材料，在后面语段中的横线上填写恰当的内容。(3分)
 
 
@@ -430,7 +436,7 @@ questions:
 
     孟子和陈文龙都认为人要坚守“<u> ①  </u>”，在关键时刻才能做出正确的选择。材料中陈文龙面对元军及叛将的劝降，他斩使拒降<u>、② </u>；城破被俘后，面对威逼凌辱，他指腹明志，称“<u>  ③  </u>”宁死不屈；在押送杭州途中，他绝食殉国，以死明志。'
   answer: ''
-  solution: ''
+  solution: ①本心（礼义、气节） ②坚守城池、顽强抵抗 ③此皆节义文章也（3分）
   knowledge_points:
   - 文言文理解
   - 古诗内容理解
@@ -451,7 +457,11 @@ questions:
 
     读书方法：精读、跳读、快速阅读、选择性阅读、圈点批注、对比阅读等'
   answer: ''
-  solution: ''
+  solution: '读《朝花夕拾》，选用圈点批注法。标注关键语句，梳理作者对童年、师友、社会的回忆与批判，能清晰把握作品温情与批判并存的情感，理解鲁迅对旧制度的反思和对美好人性的怀念（5分）
+
+
+
+    （一）材料阅读（7分）'
   knowledge_points:
   - 名著情节
   - 人物形象
@@ -465,15 +475,15 @@ questions:
   qc_status: draft
   qc_note: ''
 - id: 17
-  type: 现代文阅读
-  score: 3
+  type: 单选
+  score: 2
   stem: 根据以上三则材料的内容，下列选项中符合文意的一项<u>是</u>(2分)
   options:
     A: 在智能时代，基础教育学校要推动形成产教融合的新机制。
     B: 未来五年，人工智能将帮助教师彻底从教学事务中解放出来。
     C: 未来五年，教师角色将实现“育人”向“教书”的核心转变。
     D: 课间机器人的应用为学生提供了更多的教育服务与支持。
-  answer: ''
+  answer: D
   solution: ''
   knowledge_points:
   - 信息筛选
@@ -488,7 +498,7 @@ questions:
   qc_note: ''
   passage_id: modern_intro
 - id: 18
-  type: 现代文阅读
+  type: 单选
   score: 2
   stem: 结合材料一的内容，在文中横线处补写语句，恰当的一项是(2分)
   options:
@@ -496,7 +506,7 @@ questions:
     B: 从功能清晰的单一系统，走向模糊多变的复杂系统
     C: 从封闭单一的独立系统，走向复杂多变的合作系统
     D: 从边界清晰的封闭系统，走向开放共享的生态系统
-  answer: ''
+  answer: D
   solution: ''
   knowledge_points:
   - 信息筛选
@@ -512,7 +522,7 @@ questions:
   passage_id: modern_intro
 - id: 19
   type: 现代文阅读
-  score: 2
+  score: 3
   stem: '综合以上三则材料，可以从<u>①   </u>、<u>② </u>、<u>③ </u>等方面了解到“人工智能+教育”带给我国教育的深刻变革。(3分)
 
 
@@ -566,7 +576,10 @@ questions:
 
     (取材于《光明日报》有删改)'
   answer: ''
-  solution: ''
+  solution: '①办学模式 ②教师角色 ③学生学习方式（3分）
+
+
+    （二）《无尽灯》（11分）'
   knowledge_points:
   - 信息筛选
   module: reading
@@ -584,7 +597,7 @@ questions:
   score: 5
   stem: 文章叙写了作者在漩门湾灯会的所见所感：深夜返乡归来，偶遇绚烂灯景<u>；①</u>，见证家乡变迁；闲谈往昔旧事，<u> ② </u>；援引古灯典故，升华家国情怀。(2分)
   answer: ''
-  solution: ''
+  solution: ①驻足特色灯组 ②感念岁月温情（2分）
   knowledge_points:
   - 信息提取/段落梳理
   module: reading
@@ -601,7 +614,7 @@ questions:
   score: 2
   stem: 本文以观灯忆乡为行文脉络，第(5)段却穿插同学年少往事。结合文章内容，说明作者这样安排的用意。(3分)
   answer: ''
-  solution: ''
+  solution: 插叙年少清贫往事，与如今家乡繁华、灯景璀璨形成对比；突出家乡“沧海桑田”的巨变；体现岁月艰辛与当下幸福，深化乡愁主题，为后文升华情感铺垫（3分）
   knowledge_points:
   - 段落作用
   module: reading
@@ -618,7 +631,7 @@ questions:
   score: 2
   stem: 结合文章内容，赏析第(8)段画线句。(3分)
   answer: ''
-  solution: ''
+  solution: “偷菜”加引号，写出乡邻间亲密无拘的温情；“沾满泥巴”细节真实，体现故乡烟火气；“打卡印章”比喻生动，将泥土印记化作故乡的专属印记，表达对故乡的眷恋（3分）
   knowledge_points:
   - 句式赏析
   - 修辞手法
@@ -664,7 +677,10 @@ questions:
 
     (取材于向贤彪同名文章)'
   answer: ''
-  solution: ''
+  solution: '①指漩门湾灯会的灯火，璀璨无尽，照亮归途；②象征家乡人坚韧拼搏、代代相传的精神；③喻指华夏大地万家灯火，联结游子与家国，传递温暖与希望（3分）
+
+
+    （三）《韧字当头破万难》（7分）'
   knowledge_points:
   - 信息提取/段落梳理
   - 启示感悟
@@ -682,7 +698,7 @@ questions:
   score: 3
   stem: 结合第(1)段具体内容，说明本段在全文中的作用。(2分)
   answer: ''
-  solution: ''
+  solution: 开篇阐释“韧”的内涵，引用名言引出中心论点“韧字当头，方能破万难而行远”；奠定全文论述基调，引出下文举例论证（2分）
   knowledge_points:
   - 论证分析
   - 议论文阅读
@@ -696,7 +712,7 @@ questions:
   qc_note: ''
   passage_id: modern_intro
 - id: 25
-  type: 现代文阅读
+  type: 单选
   score: 2
   stem: 结合文章内容，下列说法不恰当的一项是(2分)
   options:
@@ -704,7 +720,7 @@ questions:
     B: 第(2)段将常人与勾践面对屈辱的不同态度进行对比，只为了突出勾践具有坚韧不拔的精神品质。
     C: 第(3)段中“然而”表示转折关系，强调张骞在极端环境中仍能坚守使命的韧性精神。
     D: 第(4)段中“更”表示递进，由个人事例推进到民族层面，拓宽论证范围、深化了“韧”的精神内涵。
-  answer: ''
+  answer: B
   solution: ''
   knowledge_points:
   - 信息筛选
@@ -723,7 +739,7 @@ questions:
   score: 2
   stem: 阅读文章，写出第(2)—(4)段的论证思路。(3分)
   answer: ''
-  solution: ''
+  solution: 第2段举勾践卧薪尝胆事例，论证韧性是生存智慧；第3段举张骞出使西域事例，论证韧性是使命必达的精神；第4段举红军长征事例，论证韧性是民族精神的迸发，层层递进，从个人到民族，论证中心论点（3分）
   knowledge_points:
   - 论证分析
   module: reading
@@ -749,7 +765,19 @@ questions:
 
     要求：将作文题目写在答题卡上，作文内容积极向上，字数在600—800字之间，不出现真实校名、师生姓名等。'
   answer: ''
-  solution: ''
+  solution: '评分标准
+
+
+    - 一类文（36-40分）：立意深刻，内容充实，情感真挚；结构严谨，语言流畅优美；符合文体要求，书写工整。
+
+
+    - 二类文（30-35分）：立意明确，内容较充实，情感真实；结构完整，语言通顺；符合文体要求，书写清楚。
+
+
+    - 三类文（24-29分）：立意基本明确，内容单薄；结构基本完整，语言基本通顺；书写较潦草。
+
+
+    - 四类文（23分以下）：立意模糊，内容空洞；结构混乱，语言不通顺；书写潦草，字数不足。'
   knowledge_points:
   - 命题作文
   module: writing

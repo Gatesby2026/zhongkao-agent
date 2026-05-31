@@ -1,3 +1,9 @@
+# ============================================================
+# 2026年北京海淀区二模chinese — 自动生成
+# ============================================================
+# OCR: Qwen-VL-OCR  Enrich: qwen-max
+# QC: draft=27  needs_review=0
+
 year: 2026
 district: 海淀区
 exam_type: 二模
@@ -5,7 +11,7 @@ subject: chinese
 full_score: 100
 duration_minutes: 150
 total_questions: 27
-structure: 1书写(1分) + 12主观填空(25分) + 1单选(2分) + 1古诗内容理解(2分) + 1名著阅读(5分) + 10现代文阅读(25分) + 1作文(40分)
+structure: 1书写(1分) + 9单选(20分) + 6主观填空(12分) + 1古诗内容理解(2分) + 1名著阅读(5分) + 8现代文阅读(20分) + 1作文(40分)
 passages:
 - id: base_intro
   type: base
@@ -67,17 +73,29 @@ passages:
 
     从传统技艺到现代科技，从剧场演出到科普课堂，我国传统木偶戏以创新赓续文脉，用作品传播文化，在守正创新中展现出蓬勃生机。'
   figure: 2026-haidian-er/figures/image2.png
-- id: narrative
-  body_replace:
-  - from: 北京高kzx
-    to: ''
-  - from: ww.
-    to: ''
 questions:
 - id: 1
   type: 书写
   score: 1
-  stem: 请在封面上用正楷字书写标题。(1分)
+  stem: '在封面上用正楷字书写标题：“艺术赋能城市微更新”调查报告。（1分）
+
+
+    第一部分  调查目标
+
+
+    调研艺术赋能城市微更新的优秀案例，总结可借鉴的做法，为校园微更新提供参考。
+
+
+    第二部分  调查内容
+
+
+    同庆街主题艺术装置·布景出新意
+
+
+    漫步海淀同庆街，你会看到以清代传世名作《十骏图》为灵感的艺术装置沿街布设。驻足·端详·，这十匹骏马风姿各异：大宛骝缀满牡丹纹样，神采飞扬；赤花鹰以剪纸工艺打造，气韵灵动；红玉座用金属线条勾勒，赤彩如丹；阚虎骝通体机械风，·蓄势待发·……
+
+
+    这些艺术装置与古街的青砖灰瓦、廊檐花灯·相应成趣·，形成了独特的老街风貌。艺术赋能让传统艺术与城市肌理完美融合，这条百年老街因此容光·焕发·。'
   answer: ''
   solution: 略
   knowledge_points:
@@ -93,7 +111,7 @@ questions:
   qc_note: ''
   passage_id: base_intro
 - id: 2
-  type: 主观填空
+  type: 单选
   score: 2
   stem: 小组成员请你确认文段中加点词语是否有错字。你根据词义判断，下列说法·不正确·的一项是（2分）
   options:
@@ -101,7 +119,7 @@ questions:
     B: 因为表达的是“积蓄势力，等待发作”的意思，所以“蓄势待发”中没有错字。
     C: 因为表达的是“互相衬托，很有情趣”的意思，所以“相应成趣”中没有错字。
     D: 因为表达的是“光彩四射”的意思，所以“焕发”中没有错字。
-  answer: ''
+  answer: C
   solution: ''
   knowledge_points:
   - 字形
@@ -116,14 +134,14 @@ questions:
   qc_note: ''
   passage_id: base_intro
 - id: 3
-  type: 主观填空
+  type: 单选
   score: 2
   stem: 同学们讨论应如何理解文段中“城市肌理”的意思。查《现代汉语词典》，“肌理”的解释为“皮肤的纹理”。根据词典的解释，下面对文段中“城市肌理”的理解·不正确·的一项是（2分）
   options:
     A: 街道的古建风貌
     B: 街道的功能定位
     C: 街道的空间布局
-  answer: ''
+  answer: B
   solution: ''
   knowledge_points:
   - 词语运用
@@ -138,14 +156,14 @@ questions:
   qc_note: ''
   passage_id: base_intro
 - id: 4
-  type: choice
+  type: 单选
   score: 2
-  stem: 下列加点字成语使用不恰当的一项是(2分)
+  stem: 你检查了资料中成语的使用情况。下列成语使用·不恰当·的一项是（2分）
   options:
     A: 别具一格
     B: 鳞次栉比
     C: 浑然一体
-    D: 悠然自得
+    D: 悠然自得  北太平庄“城市画廊”·【乙】  北太平庄街道联动高校、社区，对辖区内10处枯裂树洞进行艺术修复与创意改造。高校专业团队根据树洞的受损状况制定方案，完成功能性修复；社区居民与高校师生组成共创小组，将北太平庄地区的特色资源——“中国电影文化元素”融入创作，对修复后的树洞进行彩绘。  小兔躺在荷叶上，小鸟眺望璀璨星空，小猴齐心协力捞月亮……<u>通过一幅幅微型画作的童趣盎然，将一个个枯裂的树洞变为具有梦幻色彩的露天画廊。</u>艺术参与让树木的自然伤痕转化为点亮社区的创意景观。
   answer: B
   solution: B（鳞次栉比形容房屋等密集排列，不能用于自然景观）
   knowledge_points:
@@ -157,17 +175,15 @@ questions:
   - L1
   - L2
   - L3
-  qc_status: needs_review
-  qc_note: 选择题 answer 为空
+  qc_status: draft
+  qc_note: ''
   passage_id: base_intro
-  create: true
-  section: base
 - id: 5
   type: 主观填空
   score: 2
   stem: 文段中的画线句存在问题，请你修改。（2分）
   answer: ''
-  solution: ''
+  solution: 示例：一幅幅童趣盎然的微型画作，将一个个枯裂的树洞变为具有梦幻色彩的露天画廊。
   knowledge_points:
   - 病句
   module: writing
@@ -181,7 +197,7 @@ questions:
   qc_note: ''
   passage_id: base_intro
 - id: 6
-  type: 主观填空
+  type: 单选
   score: 2
   stem: '根据调查内容，在【甲】【乙】处填写文字，最恰当的一项是（2分）
 
@@ -192,7 +208,7 @@ questions:
     B: 【甲】① 【乙】③
     C: 【甲】② 【乙】④
     D: 【甲】② 【乙】③
-  answer: ''
+  answer: A
   solution: ''
   knowledge_points:
   - 词语运用
@@ -207,7 +223,7 @@ questions:
   qc_note: ''
   passage_id: base_intro
 - id: 7
-  type: 主观填空
+  type: 单选
   score: 2
   stem: 文段是小组成员对艺术赋能城市微更新的调查结论。下列使用了修辞手法的一项是（2分）
   options:
@@ -215,7 +231,7 @@ questions:
     B: 第②句
     C: 第③句
     D: 第④句
-  answer: ''
+  answer: C
   solution: ''
   knowledge_points:
   - 修辞手法
@@ -231,10 +247,10 @@ questions:
   passage_id: base_intro
 - id: 8
   type: 主观填空
-  score: 2
+  score: 3
   stem: <u>①</u>   ，   <u>②</u>   !风雨不动安如山。（杜甫《茅屋为秋风所破歌》）（2分）
   answer: ''
-  solution: ''
+  solution: 安得广厦千万间，大庇天下寒士俱欢颜。
   knowledge_points:
   - 默写
   module: classical
@@ -249,10 +265,10 @@ questions:
   passage_id: classical_intro
 - id: 9
   type: 主观填空
-  score: 2
+  score: 1
   stem: 晓雾将歇，   <u>①</u>   ；夕日欲颓，   <u>②</u>   。（陶弘景《答谢中书书》）（2分）
   answer: ''
-  solution: ''
+  solution: 猿鸟乱鸣 沉鳞竞跃
   knowledge_points:
   - 默写
   module: classical
@@ -285,7 +301,7 @@ questions:
 
     我报路长嗟日暮，学诗谩有惊人句。九万里风鹏正举。风休住，蓬舟吹取三山去！'
   answer: ''
-  solution: ''
+  solution: 示例：蒹葭苍苍 / 晴川历历汉阳树 / 嘤嘤成韵
   knowledge_points:
   - 古诗赏析
   - 文言文实词
@@ -304,7 +320,7 @@ questions:
   score: 3
   stem: 词人开篇描绘了一幅水天相接晓雾弥漫、   <u>①</u>   的壮阔景象，营造出空灵奇幻的意境。再写与天帝对话，运用“   <u>②</u>   ”一词，突出天帝的温情。这一关心百姓疾苦的天帝形象，寄寓了词人美好的理想。（2分）
   answer: ''
-  solution: ''
+  solution: ①星河流转千帆舞动 ②殷勤
   knowledge_points:
   - 古诗内容理解
   - 文言文理解
@@ -331,7 +347,7 @@ questions:
 
     伯牙鼓琴，锺子期听之。方鼓琴而志在太山，锺子期曰：“善哉乎鼓琴，巍巍乎若太山。”少选之间而志在流水，锺子期又曰：“善哉乎鼓琴，汤汤乎若流水。”锺子期死，伯牙破琴绝弦，终身不复鼓琴，以为世无足复为鼓琴者。'
   answer: ''
-  solution: ''
+  solution: 示例：这句是词人的直接呼告，让大风将自己的小船吹到海外仙山上去。表达了词人对现实的厌弃和对美好境界的追求，抒发了自己高远的理想抱负，情感强烈。与感叹号直接抒情语气强烈相符合，所以使用感叹号。
   knowledge_points:
   - 古诗内容理解
   - 标点符号运用
@@ -345,7 +361,7 @@ questions:
   qc_note: ''
   passage_id: classical_intro
 - id: 13
-  type: 主观填空
+  type: 单选
   score: 3
   stem: “伯牙破琴绝弦”中的“绝”与下列词语中加点的字，意思相同的一项是（2分）
   options:
@@ -353,7 +369,7 @@ questions:
     B: ·绝·处逢生
     C: 精美·绝·伦
     D: 韦编三·绝·
-  answer: ''
+  answer: D
   solution: ''
   knowledge_points:
   - 文言文实词
@@ -368,7 +384,7 @@ questions:
   qc_note: ''
   passage_id: classical_intro
 - id: 14
-  type: 主观填空
+  type: 单选
   score: 2
   stem: 下列对“终身不复鼓琴”的理解，·不正确·的一项是（2分）
   options:
@@ -376,7 +392,7 @@ questions:
     B: 在失去知音后，伯牙内心极度悲痛与孤寂。
     C: 世上再无锺子期那样能真正理解伯牙琴意的人。
     D: 伯牙、锺子期相互理解与欣赏，情谊深厚。
-  answer: ''
+  answer: A
   solution: ''
   knowledge_points:
   - 古诗内容理解
@@ -418,7 +434,7 @@ questions:
 
     世间知己，贵在彼此相知、心意相通。伯牙鼓琴，锺子期能从琴声中听出他志在   <u>①</u>   ，这份懂，是灵魂的相契；管仲行事屡遭非议，鲍叔牙始终洞悉其本心，管仲亦直言感慨“   <u>②</u>   ”，这份知，是心意的相知；范式与张劭相约两年后相见，虽然二人相隔千里，但张劭坚信范式乃“   <u>③</u>   ”，一定不会爽约，这份信，是知己的相许。'
   answer: ''
-  solution: ''
+  solution: ①示例：高山流水 ②生我者父母，知我者鲍子也。 ③信士
   knowledge_points:
   - 默写
   - 古诗文内容理解
@@ -446,7 +462,7 @@ questions:
 
     | 信仰与坚守 | 《西游记》《红星照耀中国》《钢铁是怎样炼成的》 |'
   answer: ''
-  solution: ''
+  solution: 示例：保尔·柯察金为了共产主义信仰，在战场上浴血奋战，在和平建设时期艰苦工作。后来他全身瘫痪，双目失明，仍以笔为武器继续战斗。正是这份对信仰的坚守，让他成长为钢铁般的战士，诠释了生命的价值与意义。
   knowledge_points:
   - 名著情节
   - 人物形象
@@ -460,7 +476,7 @@ questions:
   qc_status: draft
   qc_note: ''
 - id: 17
-  type: 现代文阅读
+  type: 单选
   score: 3
   stem: 根据以上三则材料，下列说法·不符合·文意的一项是（2分）
   options:
@@ -468,7 +484,7 @@ questions:
     B: 我国艺术家以巧手赋予木偶生命，使体型巨大的川北大木偶，也不失细节处的灵活生动。
     C: 因为泉州提线木偶戏被誉为闽南文化的“活化石”，所以至今保留着700余出传统剧目。
     D: 上海自然博物馆开设的科普课程，将艺术与科学教育紧密结合，推动非遗艺术走进校园。
-  answer: ''
+  answer: C
   solution: ''
   knowledge_points:
   - 信息筛选
@@ -486,7 +502,7 @@ questions:
   score: 2
   stem: 某校开展“非遗进校园”活动，小艺同学计划在班级中独立表演木偶戏《武松打虎》，展现武松与猛虎激烈搏斗的场景。请你为小艺推荐最适合该活动的木偶戏类型，并结合材料说明理由。（2分）
   answer: ''
-  solution: ''
+  solution: 示例：推荐布袋木偶戏。布袋木偶戏可以双手执双偶同时表演"对手戏"，正适合小艺独立表演《武松打虎》，展现武松与猛虎激烈搏斗的场景。
   knowledge_points:
   - 信息提取/段落梳理
   - 启示感悟
@@ -597,7 +613,7 @@ questions:
 
     （有改动）'
   answer: ''
-  solution: ''
+  solution: 示例：①发展历程 ②表演形式 ③创新发展
   knowledge_points:
   - 信息提取/段落梳理
   module: reading
@@ -614,7 +630,7 @@ questions:
   score: 5
   stem: 文章记叙了松花江“开江”日子里的一场惊心动魄的救援：先写   <u>①</u>   ；再写黑衣汉子冒险救人；接着写   <u>②</u>   ；最后写险情化解，黑衣汉子夫妇悄然离开。（2分）
   answer: ''
-  solution: ''
+  solution: 示例：①江面开裂，人和车遇险 ②一群人扑向冰排合力救人
   knowledge_points:
   - 记叙文阅读
   - 信息提取/段落梳理
@@ -632,7 +648,7 @@ questions:
   score: 2
   stem: 联系上下文，分析第⑰段中三个“一下”的表达效果。（3分）
   answer: ''
-  solution: ''
+  solution: 示例：三个"一下"，节奏紧凑，简洁有力。从"陡然壁立"到"飞起来"再到"跌下去"，生动描绘出冰排撞击、崩裂、翻腾的状态，渲染出开江场面迅猛与壮阔，表达作者对大自然力量的感叹与敬畏，同时也衬托出黑衣汉子在险境中救人的英勇无畏。
   knowledge_points:
   - 句式赏析/修辞手法/表达效果
   module: reading
@@ -649,7 +665,7 @@ questions:
   score: 2
   stem: “渺小”在第⑤段和第⑱段两次出现，分别表达了作者怎样的情感。（2分）
   answer: ''
-  solution: ''
+  solution: 示例：第⑤段"渺小"这里指冰排上的人影车影形体微小，与疯狂暴虐的辽阔江面形成对比，体现出作者对身处险境人车的担忧，以及对大自然的敬畏之情。第⑱段"渺小"这里指人虽然在自然面前显得弱小，却能挑战自然，表达了作者对人敢于挑战自然的赞美。
   knowledge_points:
   - 词语含义
   module: reading
@@ -693,7 +709,7 @@ questions:
 
     （取材于魏饴、刘海涛主编《文艺鉴赏概论》）'
   answer: ''
-  solution: ''
+  solution: 示例：黑衣汉子不顾冰排凶险，纵身跳上冰排救人，直面狂暴自然毫不退缩，体现了他的英勇无畏；救人成功后，黑衣汉子默默离开，不张扬、不求回报，尽显淳朴本色；小冰排被大冰排摽往下游时，众人扑向冰排合力救助体现了人们的团结互助。
   knowledge_points:
   - 信息提取/段落梳理
   - 启示感悟
@@ -711,7 +727,7 @@ questions:
   score: 3
   stem: 根据文章，在第④段横线处填写恰当的文字，建立第②③段与第⑤⑥段之间的联系。（2分）
   answer: ''
-  solution: ''
+  solution: 示例：文艺鉴赏时，"共鸣""净化""领悟"等审美享受的获得，需要运用形象思维，更要伴随着丰富的情感体验。
   knowledge_points:
   - 段落梳理
   module: reading
@@ -724,7 +740,7 @@ questions:
   qc_note: ''
   passage_id: modern_intro
 - id: 25
-  type: 现代文阅读
+  type: 单选
   score: 2
   stem: 阅读全文，下列分析·不恰当·的一项是（2分）
   options:
@@ -732,7 +748,7 @@ questions:
     B: 第③段“共鸣”“净化”“领悟”这三种文艺鉴赏心理，其审美境界是逐层提升的。
     C: 第⑥段引用别林斯基批评某些人时所说的话，意在表明文艺鉴赏不是一种理智的活动。
     D: 第⑦段总结全文，强调了鉴赏者需要运用形象思维与情感体验来获得审美享受。
-  answer: ''
+  answer: C
   solution: ''
   knowledge_points:
   - 信息筛选
@@ -750,7 +766,7 @@ questions:
   score: 2
   stem: 说出第⑤段画线处使用的一种论证方法，并分析其论证效果。（3分）
   answer: ''
-  solution: ''
+  solution: 示例：画线处使用了举例论证，举出鉴赏齐白石画作时，通过山泉和蝌蚪的画面能联想到山村生活的例子，证明了联想可以帮助鉴赏者建立起艺术形象与生活的关系，从而更深切地感受艺术形象的观点。
   knowledge_points:
   - 论证分析
   module: reading

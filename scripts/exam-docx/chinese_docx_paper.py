@@ -250,6 +250,24 @@ def _pick_jiexi_docx(docx_paths: list[Path]) -> Path:
     raise FileNotFoundError("zip 内未找到 docx")
 
 
+def _pick_answer_only_docx(docx_paths: list[Path], jiexi: Path) -> Path | None:
+    """挑独立答案 docx（试卷+答案双 docx 格式专用，与 math 同逻辑）。
+    判定：jiexi 不是「解析」版（即只是试卷）+ 存在含「答案」字样的兄弟 docx。
+    返回 None 时单 docx 模式。
+
+    样例 zxxk 2026 二模：
+      - fengtai: 【试卷】xxx.docx + xxx答案.docx
+      - shunyi : xxx试卷.docx + xxx试卷答案.docx
+    """
+    if "解析" in jiexi.stem and "原卷" not in jiexi.stem:
+        return None  # 主文档是精品解析版，已含答案
+    for p in docx_paths:
+        if p == jiexi: continue
+        if "答案" in p.stem:
+            return p
+    return None
+
+
 # ─── section / 题号 切分 ────────────────────────────────────────────────────
 
 # **跨区通用**：按**内容关键词**识别 section type（忽略大题编号位置）。
@@ -1155,10 +1173,27 @@ def main():
     else:
         sys.exit(f"不支持的输入: {src}")
     docx = _pick_jiexi_docx(docx_paths)
+    ans_only_docx = _pick_answer_only_docx(docx_paths, docx)
     print(f"[chinese_docx_paper] 用解析版: {docx.name}", flush=True)
+    if ans_only_docx:
+        print(f"[chinese_docx_paper] 📎 双文件模式，附加答案 docx: {ans_only_docx.name}",
+              flush=True)
 
     # docx → markdown
     md = docx_to_markdown_chinese(docx, docx_tmp, figures_dir)
+
+    # 双文件模式：抽答案 docx 的 md 追加到主 md，靠 "参考答案" anchor 让
+    # parse_docx_chinese 的 GLOBAL_ANSWER_HEADER sticky 模式接管。
+    # 跨区已知：fengtai 答案.docx 首行 "丰台区...语文试卷答案" 含"试卷答案"
+    # 但有前缀文字，不匹配 GLOBAL_ANSWER_HEADER_RE 的 ^...$ 锚定，必须显式
+    # 注入独占的 "参考答案" 行。
+    if ans_only_docx:
+        ans_extract = out_dir / "docx-extract-ans"
+        ans_md = docx_to_markdown_chinese(ans_only_docx, ans_extract, figures_dir)
+        md = md + "\n\n参考答案\n\n" + ans_md
+        print(f"[chinese_docx_paper] 📎 合成 ans md ({len(ans_md)} chars) 追加到主 md",
+              flush=True)
+
     # 保存 markdown 备查
     (structured_dir / "raw.md").write_text(md, encoding="utf-8")
 
@@ -1255,6 +1290,19 @@ def _apply_patches(patches: dict, result: dict) -> int:
             q["type"] = patch["type"]; n_applied += 1
         if patch.get("score") is not None:
             q["score"] = patch["score"]; n_applied += 1
+        # P0：enrich 从 result["answers"] 读单选 correct + 主观 solution，
+        # 不读 questions[i].answer/solution。patch 必须同步写入 answers 列表，
+        # 否则 yaml 里答案空白（朝阳 R3 教训）。
+        if patch.get("answer") is not None or patch.get("solution") is not None:
+            ans_entry = next((a for a in result.get("answers", [])
+                              if a.get("number") == qid), None)
+            if ans_entry is None:
+                ans_entry = {"number": qid, "correct": "", "solution": ""}
+                result.setdefault("answers", []).append(ans_entry)
+            if patch.get("answer") is not None:
+                ans_entry["correct"] = patch["answer"]
+            if patch.get("solution") is not None:
+                ans_entry["solution"] = patch["solution"]
     # 同步 answer/solution 到 answers 列表
     if n_applied:
         q_by_num = {q["number"]: q for q in result.get("questions", [])}
