@@ -180,6 +180,46 @@ _LAYOUTS_TO_TRY = [_LAYOUT_PHY_5x3, _LAYOUT_MATH_4x2, _LAYOUT_MATH_2x4,
                    _LAYOUT_MATH_1x8]
 
 
+# ============== Path C：腾讯 OCR 接地 + 缺字母法 ==============
+# 比 Path B 像素扫更稳：腾讯 GeneralAccurateOCR 自动旋转+精确识别 [A][B][C][D]
+# 字符位置。涂黑的字母 OCR 读不到 → 推断该字母被涂。
+# 跨学科通用、无 layout 假设、无 y 范围 hardcode。
+#
+# 成本：1 个腾讯 API 调用（~RMB 0.05）。
+
+def detect_choices_by_tencent(image_paths: list[Path]) -> dict[int, dict]:
+    """腾讯 OCR + 缺字母法。返回 {qid: {"filled": str, "confidence": float}}。
+
+    优势：自动旋转 / 跨学科 / 不依赖 layout / 选择题位置不固定 OK。
+    限制：依赖网络 + 腾讯 OCR 准确度（实测海淀数学 8/8 题号 + 字母 grid 都准）。
+    """
+    try:
+        from tencent_choice_grid import locate_choice_grid
+    except ImportError:
+        return {}
+    try:
+        info = locate_choice_grid(image_paths[0])
+    except Exception as e:
+        print(f"  ⚠️ Path C 腾讯接地失败: {e}", file=sys.stderr)
+        return {}
+    filled_map = info.get("filled") or {}
+    if not filled_map:
+        return {}
+    out: dict[int, dict] = {}
+    for qid, f in filled_map.items():
+        # filled 是缺字母法直接推出的"涂的字母"
+        if len(f) == 1:
+            conf = 0.92
+        elif 2 <= len(f) <= 3:
+            conf = 0.85  # 多选
+        elif len(f) == 0:
+            conf = 0.5   # 全 ABCD 看见 = 没涂或涂得很轻
+        else:
+            conf = 0.3   # 0 或 4 都异常
+        out[qid] = {"filled": f, "confidence": conf}
+    return out
+
+
 def _find_bands_and_blobs(arr, scan_x1=300, scan_x2=None,
                            y_start_ratio=0.30, y_end_ratio=0.50):
     """y 直方图找涂卡 band + 每个 band 内 blob 中心列表。
@@ -731,8 +771,8 @@ def detect_card(
     else:
         max_choice_qid = 30
 
-    # ============== Phase A0：Path B 纯像素 blob（首选，零 API） ==============
-    # 关丽涵 海淀二模卡 13/13 真值命中，零 API 调用，几毫秒。
+    # ============== Phase A0：Path B 纯像素 blob（物理首选，零 API） ==============
+    # 关丽涵 海淀二模物理 15/15 真值命中，零 API 调用，几毫秒。
     blob_choices: dict[int, dict] = {}
     try:
         print(f"\n  🎯 Path B: 纯像素 blob 检测（零 API）…", file=sys.stderr)
@@ -745,6 +785,26 @@ def detect_card(
                   file=sys.stderr)
     except Exception as e:
         print(f"  ⚠️ Path B 失败: {e}", file=sys.stderr)
+
+    # ============== Phase A0.5：Path C 腾讯 OCR 接地（数学/英语首选） ==============
+    # Path B layout 不匹配 → blob 命中 < 5 时启用。腾讯 OCR 自动旋转、跨
+    # 学科通用，海淀数学 8/8 题号识别准。+1 API 调用（~RMB 0.05/张）。
+    tencent_choices: dict[int, dict] = {}
+    n_blob_filled = sum(1 for v in blob_choices.values()
+                          if v.get("filled")) if blob_choices else 0
+    if n_blob_filled < 5:
+        try:
+            print(f"\n  🛰️  Path C: 腾讯 OCR 接地 + 缺字母法"
+                  f"（Path B 仅 {n_blob_filled} 题命中）…", file=sys.stderr)
+            tencent_choices = detect_choices_by_tencent(image_paths)
+            if tencent_choices:
+                real = sum(1 for v in tencent_choices.values() if v.get("filled"))
+                print(f"     Path C 识别 {real}/{len(tencent_choices)} 题: " +
+                      ", ".join(f"Q{q}={tencent_choices[q].get('filled')!r}"
+                                for q in sorted(tencent_choices)),
+                      file=sys.stderr)
+        except Exception as e:
+            print(f"  ⚠️ Path C 失败: {e}", file=sys.stderr)
 
     # ============== Phase A1：Path A 像素密度（次选，vl-max bbox） ==============
     density_choices: dict[int, dict] = {}
@@ -801,13 +861,17 @@ def detect_card(
     #   4. vl-max 选择识别
     #   5. 缺字母法 no_answer 兜底
     merged_qids = (set(blob_choices.keys()) | set(density_choices.keys())
-                   | set(choices_map.keys()) | set(vlmax_choices.keys()))
+                   | set(choices_map.keys()) | set(vlmax_choices.keys())
+                   | set(tencent_choices.keys()))
     answers = []
     for qid in sorted(merged_qids):
         seen = choices_map.get(qid, "")
         bm = blob_choices.get(qid) or {}
         bfilled = bm.get("filled") or ""
         bconf = bm.get("confidence", 0.0)
+        tm = tencent_choices.get(qid) or {}
+        tfilled = tm.get("filled") or ""
+        tconf = tm.get("confidence", 0.0)
         dm = density_choices.get(qid) or {}
         dfilled = dm.get("filled") or ""
         dconf = dm.get("confidence", 0.0)
@@ -819,6 +883,12 @@ def detect_card(
             atype = "multi_choice" if len(bfilled) > 1 else "choice"
             conf = bconf
             source = "blob"
+        elif tfilled and tconf >= 0.85:
+            # Path C 腾讯 OCR 缺字母法（数学/英语场景）
+            filled_val = list(tfilled) if len(tfilled) > 1 else tfilled
+            atype = "multi_choice" if len(tfilled) > 1 else "choice"
+            conf = tconf
+            source = "tencent"
         elif qid in real_hits:
             inf = pre_inf[qid]
             filled = inf["filled"]

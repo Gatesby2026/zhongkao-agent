@@ -16,7 +16,22 @@ import yaml
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "scripts" / "answer-card-ocr"))
-from detect import detect_choices_by_blob
+from detect import detect_choices_by_blob, detect_choices_by_tencent
+
+
+def _detect_combined(image_paths):
+    """模拟 detect_card 的 Path B → Path C fallback。"""
+    r = detect_choices_by_blob(image_paths)
+    n_filled = sum(1 for v in r.values() if v.get("filled"))
+    if n_filled >= 5:
+        return r, "blob"
+    try:
+        t = detect_choices_by_tencent(image_paths)
+        if t:
+            return t, "tencent"
+    except Exception as e:
+        print(f"  [warn] tencent path failed: {e}", file=sys.stderr)
+    return r, "blob-fallback"
 
 CASES_ROOT = Path(__file__).resolve().parent / "cases"
 
@@ -44,7 +59,9 @@ def bench_one(case_dir: Path, verbose: bool = False) -> tuple[int, int, dict]:
     if not photos:
         return 0, 0, {"error": "no photos"}
 
-    pred = detect_choices_by_blob(photos)
+    pred, used = _detect_combined(photos)
+    if verbose:
+        print(f"  [{case_dir.name}] engine={used}", file=sys.stderr)
     pred_clean = {}
     for q, v in pred.items():
         f = v.get("filled") or ""

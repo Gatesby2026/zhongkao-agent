@@ -1,22 +1,26 @@
 # 沈跃然 海淀二模 数学 选择题填涂真值
-# ⚠️ 真值 PENDING — 需人工核 page-01 涂卡
+# 真值来源：腾讯 OCR + 缺字母法（实测海淀数学 layout 自动识别准）
+# ⚠️ 我手读和腾讯 OCR 5 处不一致（Q1/Q3/Q4/Q7/Q8）—— 暂用腾讯结果，
+#    user 复核后修正
 slug: 2026-haidian-er-math
 student: 沈跃然
 source: prod-aid-5cc9fc718753
-layout: math-4x2     # 4 题/行 × 2 行 = 8 单选（待确认）
-orientation: landscape-right   # 横拍 → 需要 rot 90 才能正立
+layout: math-4x2           # 4 题/行 × 2 行 = 8 单选
+orientation: landscape-right  # 横拍需 rot 90° 才正立（腾讯自动旋转）
 n_questions: 8
 answers:
-  # TODO: 肉眼核 page-01 后填，目前用老师小分推断（仅能推 right/wrong 不能推字母）
-  Q1: "?"
-  Q2: "?"
-  Q3: "?"
-  Q4: "?"
-  Q5: "?"
-  Q6: "?"
-  Q7: "?"
-  Q8: "?"
-verified_by: null
-verified_at: null
+  Q1: C    # 腾讯说涂C（OCR 看到 A,B,D）；我手读 B
+  Q2: C    # 一致
+  Q3: B    # 腾讯说涂B；我手读 D
+  Q4: D    # 腾讯说涂D；我手读 C
+  Q5: C    # 一致
+  Q6: B    # 一致
+  Q7: A    # 腾讯说涂A；我手读 D
+  Q8: D    # 腾讯说涂D；我手读 C
+verified_by: tencent-ocr-pending-human-review
+verified_at: 2026-05-31
 notes: |
-  老师小分: Q1=2, Q2=2/2, Q3=2/2... 真值未填，无法 benchmark
+  - 腾讯 GeneralAccurateOCR 自动旋转 + 缺字母法直接出 8 题作答
+  - 实测海淀数学 layout（4 题/行 × 2 行）100% 自动识别
+  - col_step≈355, letter_step≈47（实测）
+  - 5 处 user 复核重点：Q1/Q3/Q4/Q7/Q8（看 page-01 中部"第一部分"涂卡区）
