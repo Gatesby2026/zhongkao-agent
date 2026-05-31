@@ -1,7 +1,5 @@
 # 沈跃然 海淀二模 数学 选择题填涂真值
-# 真值来源：腾讯 OCR + 缺字母法（实测海淀数学 layout 自动识别准）
-# ⚠️ 我手读和腾讯 OCR 5 处不一致（Q1/Q3/Q4/Q7/Q8）—— 暂用腾讯结果，
-#    user 复核后修正
+# user 确认值: Q1-Q8 = CCBD CBAD
 slug: 2026-haidian-er-math
 student: 沈跃然
 source: prod-aid-5cc9fc718753
@@ -9,18 +7,20 @@ layout: math-4x2           # 4 题/行 × 2 行 = 8 单选
 orientation: landscape-right  # 横拍需 rot 90° 才正立（腾讯自动旋转）
 n_questions: 8
 answers:
-  Q1: C    # 腾讯说涂C（OCR 看到 A,B,D）；我手读 B
-  Q2: C    # 一致
-  Q3: B    # 腾讯说涂B；我手读 D
-  Q4: D    # 腾讯说涂D；我手读 C
-  Q5: C    # 一致
-  Q6: B    # 一致
-  Q7: A    # 腾讯说涂A；我手读 D
-  Q8: D    # 腾讯说涂D；我手读 C
-verified_by: tencent-ocr-pending-human-review
+  Q1: C
+  Q2: C
+  Q3: B
+  Q4: D
+  Q5: C
+  Q6: B
+  Q7: A
+  Q8: D
+verified_by: user
 verified_at: 2026-05-31
 notes: |
-  - 腾讯 GeneralAccurateOCR 自动旋转 + 缺字母法直接出 8 题作答
-  - 实测海淀数学 layout（4 题/行 × 2 行）100% 自动识别
-  - col_step≈355, letter_step≈47（实测）
-  - 5 处 user 复核重点：Q1/Q3/Q4/Q7/Q8（看 page-01 中部"第一部分"涂卡区）
+  - 真值: CCBD CBAD（user 直接告知）
+  - 我手读全错（5/8 处），证明肉眼读涂卡照片不可靠
+  - 腾讯 GeneralAccurateOCR + 缺字母法 自动识别 8/8 中 7 题正确，
+    仅 Q5 边缘 case：腾讯读到 A,D 缺 B,C → 推断"BC"（单选误判多选）
+    真值 Q5=C → 涂 C 时墨水延伸覆盖了印刷 [B] 字符
+  - 此 case 用于研究"单选涂卡覆盖相邻字母"的启发式纠正
