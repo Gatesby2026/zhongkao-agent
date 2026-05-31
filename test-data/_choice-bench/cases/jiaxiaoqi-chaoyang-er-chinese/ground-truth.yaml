@@ -1,0 +1,21 @@
+# 贾小淇 朝阳二模 语文 选择题填涂真值
+# 真值来源：user 给的错题清单反推（不在清单里的题 = 学生答对 = 学生作答 = 标答）
+slug: 2026-chaoyang-er-chinese
+student: 贾小淇
+layout: chinese-chaoyang-er (Q1-Q3 row + Q4-Q5 row + Q13-Q14 row, all single B)
+n_questions: 7  # 仅选择题
+answers:
+  Q1: B   # 学生 ✓
+  Q2: B   # 学生 ✓（之前一直没确认，按用户 反推）
+  Q3: B   # 学生 ✓
+  Q4: B   # 学生 ✓ user 确认
+  Q5: B   # 学生 ✓
+  Q13: B  # 学生 ✓
+  Q14: B  # 学生 ✓ user 确认
+verified_by: user-via-错题清单
+verified_at: 2026-05-31
+notes: |
+  - 错题清单 12 题 (Q6/9/11.2/12/15.2/16/17/23/24.2/25/26/27)，扣 20 分
+  - 满分 100，真实得分 80（一致：选择题 14 分全得）
+  - 选择题 Q1-Q5, Q13-Q14 全涂 B（一致涂卡风格）
+  - 实测 vl-max 看 cropped: Q1=B Q4=B Q14=B ✓

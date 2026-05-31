@@ -187,6 +187,85 @@ _LAYOUTS_TO_TRY = [_LAYOUT_PHY_5x3, _LAYOUT_MATH_4x2, _LAYOUT_MATH_2x4,
 #
 # 成本：1 个腾讯 API 调用（~RMB 0.05）。
 
+_VLMAX_CROPPED_PROMPT = """这是答题卡选择题填涂区裁切图，共 {n_q} 道题，
+题号清单：{qids}。
+
+⚠️ 注意：部分答题卡涂卡较轻，黑色方框可能没完全盖住印刷字母。
+找有**黑色覆盖痕迹**的 [A][B][C][D] 方框（哪怕字母还看得见）= 学生涂的。
+
+逐题输出学生作答（多选题输出多个字母，如 'BD'；未涂留空）：
+{{"answers": {{"Q1": "B", "Q2": "AD", ...}}}}"""
+
+
+def detect_choices_by_cropped_vlmax(image_paths: list[Path],
+                                      qids: list[int] | None = None
+                                      ) -> dict[int, dict]:
+    """Path D：先裁切涂卡区 → qwen-vl-max 看 cropped 小图直接判涂卡。
+
+    适用：朝阳裸字母+涂卡不密 / 语文 layout 不规则 / Path B/C 都失败时。
+    实测：朝阳二模语文 jiaxiaoqi cropped 后 vl-max Q1=B Q4=B Q14=B 全对
+         （之前用整页 vl-max 是 Q1=C Q4=CD Q14=BC 全错）。
+
+    成本：1 个腾讯接地（裁切）+ 1 个 vl-max 调用（~RMB 0.1/张）
+    """
+    import base64 as _b64
+    import io as _io
+    try:
+        from choice_region_locate import crop_choice_region
+    except ImportError:
+        return {}
+    try:
+        cropped, info = crop_choice_region(image_paths[0])
+        if not info.get("found"):
+            return {}
+    except Exception as e:
+        print(f"  ⚠️ Path D 裁切失败: {e}", file=sys.stderr)
+        return {}
+
+    client = _client()
+    buf = _io.BytesIO()
+    cropped.save(buf, "JPEG", quality=90)
+    b64 = _b64.b64encode(buf.getvalue()).decode()
+
+    qids_list = qids or list(range(1, 21))
+    prompt_text = _VLMAX_CROPPED_PROMPT.format(
+        n_q=len(qids_list),
+        qids=", ".join(f"Q{q}" for q in qids_list),
+    )
+    try:
+        resp = client.chat.completions.create(
+            model="qwen-vl-max",
+            messages=[{"role": "user", "content": [
+                {"type": "image_url",
+                 "image_url": {"url": f"data:image/jpeg;base64,{b64}"}},
+                {"type": "text", "text": prompt_text},
+            ]}],
+            temperature=0.0, max_tokens=800,
+            response_format={"type": "json_object"},
+            timeout=120,
+        )
+    except Exception as e:
+        print(f"  ⚠️ Path D vl-max 调用失败: {e}", file=sys.stderr)
+        return {}
+    raw = resp.choices[0].message.content.strip()
+    raw = re.sub(r"^```(?:json)?\s*|\s*```$", "", raw, flags=re.S).strip()
+    try:
+        data = json.loads(raw)
+    except json.JSONDecodeError:
+        return {}
+    ans = data.get("answers") or {}
+    out: dict[int, dict] = {}
+    for k, v in ans.items():
+        try:
+            qid = int(str(k).strip().upper().lstrip("Q"))
+        except ValueError:
+            continue
+        f = str(v).strip().upper()
+        f = "".join(c for c in f if c in "ABCDE")
+        out[qid] = {"filled": f, "confidence": 0.85 if f else 0.4}
+    return out
+
+
 def detect_choices_by_tencent(image_paths: list[Path]) -> dict[int, dict]:
     """腾讯 OCR + 缺字母法。返回 {qid: {"filled": str, "confidence": float}}。
 
@@ -806,6 +885,36 @@ def detect_card(
         except Exception as e:
             print(f"  ⚠️ Path C 失败: {e}", file=sys.stderr)
 
+    # ============== Phase A0.7：Path D 裁切 + vl-max 看图（涂卡轻的卡型兜底） ==============
+    # 当 Path B 没命中时启用（即使 Path C 命中也启用 — Path C 在朝阳裸字母
+    # 涂卡未盖住字母时会大量误报 "no_answer"，Path D 看 cropped 小图更准）
+    cropped_choices: dict[int, dict] = {}
+    if n_blob_filled < 10:
+        try:
+            # 推断要识别的 qids（看 mock yaml 里 type 是单选/多选的）
+            choice_qids = None
+            if standard_yaml:
+                try:
+                    import yaml as _yaml
+                    yd = _yaml.safe_load(Path(standard_yaml).read_text(encoding="utf-8"))
+                    choice_qids = [q["id"] for q in (yd.get("questions") or [])
+                                    if q.get("type") in ("单选", "多选", "choice",
+                                                          "multi_choice")]
+                except Exception:
+                    pass
+            print(f"\n  🖼️  Path D: 裁切 + vl-max 看图（Path B/C 都未命中）…",
+                  file=sys.stderr)
+            cropped_choices = detect_choices_by_cropped_vlmax(image_paths,
+                                                                qids=choice_qids)
+            if cropped_choices:
+                real = sum(1 for v in cropped_choices.values() if v.get("filled"))
+                print(f"     Path D 识别 {real}/{len(cropped_choices)} 题: " +
+                      ", ".join(f"Q{q}={cropped_choices[q].get('filled')!r}"
+                                for q in sorted(cropped_choices)),
+                      file=sys.stderr)
+        except Exception as e:
+            print(f"  ⚠️ Path D 失败: {e}", file=sys.stderr)
+
     # ============== Phase A1：Path A 像素密度（次选，vl-max bbox） ==============
     density_choices: dict[int, dict] = {}
     if not blob_choices or sum(1 for v in blob_choices.values()
@@ -862,7 +971,7 @@ def detect_card(
     #   5. 缺字母法 no_answer 兜底
     merged_qids = (set(blob_choices.keys()) | set(density_choices.keys())
                    | set(choices_map.keys()) | set(vlmax_choices.keys())
-                   | set(tencent_choices.keys()))
+                   | set(tencent_choices.keys()) | set(cropped_choices.keys()))
     answers = []
     for qid in sorted(merged_qids):
         seen = choices_map.get(qid, "")
@@ -872,6 +981,9 @@ def detect_card(
         tm = tencent_choices.get(qid) or {}
         tfilled = tm.get("filled") or ""
         tconf = tm.get("confidence", 0.0)
+        cm = cropped_choices.get(qid) or {}
+        cfilled = cm.get("filled") or ""
+        cconf = cm.get("confidence", 0.0)
         dm = density_choices.get(qid) or {}
         dfilled = dm.get("filled") or ""
         dconf = dm.get("confidence", 0.0)
@@ -883,6 +995,12 @@ def detect_card(
             atype = "multi_choice" if len(bfilled) > 1 else "choice"
             conf = bconf
             source = "blob"
+        elif cfilled and cconf >= 0.8:
+            # Path D 裁切 + vl-max（朝阳裸字母 / 涂卡轻 场景，优于 Path C）
+            filled_val = list(cfilled) if len(cfilled) > 1 else cfilled
+            atype = "multi_choice" if len(cfilled) > 1 else "choice"
+            conf = cconf
+            source = "cropped-vlmax"
         elif tfilled and tconf >= 0.85:
             # Path C 腾讯 OCR 缺字母法（数学/英语场景）
             filled_val = list(tfilled) if len(tfilled) > 1 else tfilled
