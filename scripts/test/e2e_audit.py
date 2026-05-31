@@ -56,21 +56,29 @@ API = os.environ.get("API_BASE", "https://zhongkao.gatesby.xyz").rstrip("/")
 # 每 case 真实学生名（用于 e2e 测试覆盖），缺省=不覆盖，让 card_meta OCR
 # 结果保留。早期默认 "贾小淇" 把所有 case 都强改成贾小淇名，污染报告抬头。
 PER_CASE_NAME = {
-    # 开发基线
-    "jiaxiaoqi-physics": "贾小淇",
-    "jiaxiaoqi-math": "贾小淇",
-    "jiaxiaoqi-chinese": "贾小淇",
-    # 生产真实 case（从 39.103.70.47 拉取）
-    "guanlihan-haidian-physics-er": "关丽涵",
-    "jiaxiaoqi-haidian-physics-er": "贾小淇",
-    "zhangjingqi-haidian-physics-er": "张靖奇",
-    "zhangyiran-shijingshan-chinese-yi": "张伊冉",
-    "tuominde-chaoyang-physics-yi": "脱敏的",
+    # 命名规范：<pinyin>-<district>-<examtype>-<subject>
+    #   district = haidian / chaoyang / xicheng / shijingshan / ...
+    #   examtype = yi（一模） / er（二模） / zhenti（中考真题）
+    #   subject  = math / physics / chinese / english / politics / chemistry / history
+    # 开发基线（贾小淇 朝阳一模/二模 全 5 科）
+    "jiaxiaoqi-chaoyang-yi-physics": "贾小淇",
+    "jiaxiaoqi-chaoyang-yi-math": "贾小淇",
+    "jiaxiaoqi-chaoyang-yi-chinese": "贾小淇",
+    "jiaxiaoqi-chaoyang-er-physics": "贾小淇",
+    "jiaxiaoqi-chaoyang-er-math": "贾小淇",
+    "jiaxiaoqi-chaoyang-er-chinese": "贾小淇",
+    "jiaxiaoqi-chaoyang-er-english": "贾小淇",
+    "jiaxiaoqi-chaoyang-er-politics": "贾小淇",
+    # 生产真实 case
+    "guanlihan-haidian-er-physics": "关丽涵",
+    "zhangjingqi-haidian-er-physics": "张靖奇",
+    "zhangyiran-shijingshan-yi-chinese": "张伊冉",
+    "tuominde-chaoyang-yi-physics": "脱敏的",
     # 2026-05-31 当日新增
-    "shixinran-xicheng-math-yi": "史欣然",
-    "zhangyizhang-haidian-math-er": "张益彰",
-    "fangshiyao-xicheng-math-yi": "房诗尧",
-    "shenyueran-haidian-math-er": "沈跃然",
+    "shixinran-xicheng-yi-math": "史欣然",
+    "zhangyizhang-haidian-er-math": "张益彰",
+    "fangshiyao-xicheng-yi-math": "房诗尧",
+    "shenyueran-haidian-er-math": "沈跃然",
 }
 STUDENT_NAME_GLOBAL = os.environ.get("STUDENT_NAME", "")  # 不再硬编码默认
 IMG_EXTS = {".jpg", ".jpeg", ".png", ".heic"}
