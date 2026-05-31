@@ -66,6 +66,11 @@ PER_CASE_NAME = {
     "zhangjingqi-haidian-physics-er": "张靖奇",
     "zhangyiran-shijingshan-chinese-yi": "张伊冉",
     "tuominde-chaoyang-physics-yi": "脱敏的",
+    # 2026-05-31 当日新增
+    "shixinran-xicheng-math-yi": "史欣然",
+    "zhangyizhang-haidian-math-er": "张益彰",
+    "fangshiyao-xicheng-math-yi": "房诗尧",
+    "shenyueran-haidian-math-er": "沈跃然",
 }
 STUDENT_NAME_GLOBAL = os.environ.get("STUDENT_NAME", "")  # 不再硬编码默认
 IMG_EXTS = {".jpg", ".jpeg", ".png", ".heic"}
