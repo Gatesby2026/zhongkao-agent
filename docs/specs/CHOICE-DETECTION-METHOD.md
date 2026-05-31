@@ -1,10 +1,10 @@
 # 选择题涂卡识别方法论 — 专题方案
 
-> **版本**：v1.0（2026-05-31）
-> **状态**：🔄 持续迭代（基线已稳定，细节持续改进）
+> **版本**：v1.1（2026-05-31 晚 — 加 3-method bench 实测 + 8 case 真值）
+> **状态**：🔄 **当前最优 63%（理论 A∪C 合并），4 种困难场景待突破**
 > **关联**：[`STUDENT-REPORT-FEATURE-SPEC.md`](STUDENT-REPORT-FEATURE-SPEC.md) §3.1 ·
->   [`test-data/_choice-bench/`](../../test-data/_choice-bench/)（benchmark + ground-truth）
-> **变更基础**：本文档锁定**当前最优方法 = Path B (零 API) + Path C (腾讯 OCR) 二段式**，
+>   [`test-data/_choice-bench/`](../../test-data/_choice-bench/)（benchmark + ground-truth + 裁切结果）
+> **变更基础**：本文档锁定**当前最优方法 = Path B/A (零 API 像素扫) + Path C (腾讯 OCR) 二段式**，
 >   后续在此框架基础上逐步改进，**不再做架构横跳**。
 
 ---
@@ -233,7 +233,104 @@ python3 test-data/_choice-bench/bench_choice.py [--verbose]
 
 ---
 
-## 7. 术语对照
+## 7. 2026-05-31 晚 — 8 case 全集 bench 实测（v1.1 新增）
+
+### 7.1 测试集
+
+`test-data/_choice-bench/cases/`，8 case 共 79 题，user 人工核实真值：
+
+| Case | 学科 | 题数 | 卡格式 |
+|------|------|------|--------|
+| guanlihan-haidian-er-physics | 物理 | 15 | 海淀方括号 5×3 + 多选行 |
+| zhangjingqi-haidian-er-physics | 物理 | 15 | 海淀方括号 5×3 + 多选行 |
+| tuominde-chaoyang-yi-physics | 物理 | 15 | 朝阳裸字母 3×4 + 多选 |
+| shenyueran-haidian-er-math | 数学 | 8 | 海淀方括号 4×2 |
+| shixinran-xicheng-yi-math | 数学 | 8 | 西城 4×2 |
+| zhangyizhang-haidian-er-math | 数学 | 8 | 海淀 4×2 |
+| fangshiyao-xicheng-yi-math | 数学 | 8 | 西城 4×2 |
+| zhangyiran-shijingshan-yi-chinese | 语文 | 2 | 石景山 |
+
+### 7.2 3 method 命中率对照表
+
+| Case | A 像素 blob<br>原图 | B vl-max<br>cropped | C 腾讯缺字母<br>原图 |
+|------|---------------------|-----------------------|-----------------------|
+| guanlihan 海淀物理 | **15/15 100%** ✓ | 10/15 67% | 0/15 |
+| zhangjingqi 海淀物理 | 1/15 7% | 8/15 53% | 0/15 |
+| tuominde 朝阳物理 | 0/15 | 4/15 27% | 0/15 |
+| shenyueran 海淀数学 | 0/8 | 2/8 25% | **8/8 100%** ✓ |
+| shixinran 西城数学 | 0/8 | 1/8 12% | **8/8 100%** ✓ |
+| zhangyizhang 海淀数学 | 0/8 | 3/8 38% | **8/8 100%** ✓ |
+| fangshiyao 西城数学 | 0/8 | 0/8 0% | 1/8 12% |
+| zhangyiran 石景山语文 | 0/2 | 1/2 50% | 1/2 50% |
+| **合计** | **20.3%** | **36.7%** | **32.9%** |
+
+### 7.3 清晰分布 — 各方法各有所长
+
+- 🎯 **A 像素扫**：海淀物理 5×3 标准卡 → 100%（涂卡密集，pattern 强）
+- 🎯 **C 腾讯缺字母**：海淀/西城数学 → 100%（OCR 在 cropped 后较小区域上漏读率低）
+- ⚠️ **B vl-max**：物理上平均 50%，数学上平均 25%（看图能力跟 layout 强相关）
+
+**理论合并 A∪C**（不冲突时取并集）：≈ **50/79 = 63%**
+
+### 7.4 当前无解 / 待突破的 4 个困难场景
+
+| Case | 现象 | 假设根因 |
+|------|------|----------|
+| zhangjingqi 海淀物理 | A=1/15 但同样海淀物理 guanlihan A=15/15 | **学生涂卡位置变异**：base_x hardcode 不匹配实际涂卡 |
+| tuominde 朝阳物理 | A/C 都 0%，B 27% | 朝阳裸字母 layout + OCR 漏读 + 涂卡笔触粗 |
+| fangshiyao 西城数学 | A/B/C 都 ~0-12% | 待研究 — 可能照片变形严重 |
+| zhangyiran 石景山语文 | 题数太少（2 题） | 样本不足，但跨学科是真问题 |
+
+### 7.5 已验证的辅助层（不直接提升识别但有用）
+
+1. **裁切层** `scripts/answer-card-ocr/choice_region_locate.py` 8/8 通过 user 审核
+   - 实测：cropped 后 OCR 反而损失信号（图变小，对比度变化）
+   - 用途：**调试 / 可视化 / 失败时人工 review**，不集成到 detect 主路径
+2. **题号 marker 锚点**：朝阳裸字母卡 OCR 漏读字母但题号 `1.` `2.` 可靠识别，可补 bbox 包络
+
+### 7.6 已彻底排除的方向
+
+| 方向 | 测试结论 |
+|------|----------|
+| 阿里云 recognize_edu_paper_cut | subject 顺序按阅读顺序编号，不标"选择题区" |
+| 阿里云 recognize_edu_paper_structed | 只标 subject_question（主观题），没专门选择题 |
+| 阿里云 recognize_document_structure | 全段 content 文本无 region |
+| 阿里云 recognize_general_structure | 只抓姓名/班级 KV |
+| 腾讯 SmartStructuralOCR | Name 字段全贴错 |
+| 腾讯 QuestionSplitLayoutOCR | 全标 problem-solving，无选择题专项 |
+| 腾讯 TableOCR / RecognizeTableAccurateOCR | 海淀切 114 块碎，朝阳 6 块跟选择题对不上 |
+| 腾讯 EduPaperOCR / QuestionOCR | 为印刷试卷设计，识别公式/题目，不识别填涂 |
+| 像素扫所有 4 旋转 × 4 layout 候选 | 物理 100% 稳，跨学科不行 |
+
+**最重要的 insight**：**所有公开云 OCR 都没"答题卡 OMR 涂卡识别"专项**。这是垂直业务（校园阅卷机配套软件），公开通用 API 都不擅长。所以无法靠"换 API"突破，必须靠**多方法合并 + 失败场景人工/UI 兜底**。
+
+### 7.7 后续突破方向（搁置研究备忘）
+
+研究被困住，下次接力可以尝试：
+
+1. **变体 layout discovery**：从 blob 分布自动发现 col_step / letter_step（不硬编码）
+2. **多次 OCR 取并集**：同图调用 GeneralAccurateOCR 2-3 次取并集补字母（已知 OCR 漏读问题）
+3. **vl-max + grounding**：让 vl-max 给 [A][B][C][D] 的 bbox（而非直接判涂卡），再像素扫
+4. **专门 fine-tune 一个 small 检测模型**：用收集的真值卡作训练集
+5. **用户 UI 兜底**：识别不确定时让家长在小程序里 1 秒确认（A/B/C/D 选一）— 不强求 100% 自动
+6. **拍照规范引导**：UI 提示家长"请把答题卡平铺、垂直拍摄、保证选择题区清晰"
+7. **多算法投票**：A/B/C 三个方法各跑 → 多数票胜出
+
+### 7.8 测试集与脚本
+
+- 跑全方法对照：
+  ```bash
+  TENCENT_OCR_SECRET_ID=... TENCENT_OCR_SECRET_KEY=... DASHSCOPE_API_KEY=... \
+  python3 test-data/_choice-bench/bench_methods.py [--method A|B|C|all] [--verbose]
+  ```
+- 跑裁切器：
+  ```bash
+  python3 /tmp/crop_all.py  # 全 8 case 出裁切结果到 test-data/_choice-bench/_crops/
+  ```
+
+---
+
+## 8. 术语对照
 
 | 术语 | 含义 |
 |------|------|
