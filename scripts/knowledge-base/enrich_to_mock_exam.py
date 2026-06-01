@@ -91,6 +91,9 @@ SUBJECT_MODULES: dict[str, list[str]] = {
         "numbersAndExpressions", "equationsAndInequalities", "functions",
         "triangles", "quadrilaterals", "circles", "geometryComprehensive",
         "statisticsAndProbability",
+        # **R5.2**：北京中考 Q28 压轴必为「新定义」题（创新概念 + 抽象推理），
+        # 之前 module list 缺 → Q28 落到 geometryComprehensive 错档。
+        "newDefinition",
     ],
     "chinese":  ["reading", "writing", "classical", "chinese"],
     "english":  ["vocabulary", "grammar", "reading", "listening", "writing"],
@@ -383,6 +386,12 @@ ENRICH_USER_TEMPLATE = """\
     - 公民参与：民主形式/基层群众自治/人民代表大会制度/政治参与
     - 经济发展：创新驱动/对外开放/共同富裕/乡村振兴/科技强国
     - 中华文化：传承创新/文化自信/中华优秀传统文化/民族精神
+  - **数学 module 题号约定**（北京中考二模卷固定结构）：
+    - Q1-Q16 按内容选 module（数与式/方程不等式/函数/三角形/四边形/圆/统计与概率）
+    - Q17-Q25 中档解答，按主考点选 module
+    - **Q26 二次函数综合** → module = functions（"二次函数综合"/"函数与几何结合" 类 KP）
+    - **Q27 几何综合** → module = geometryComprehensive（"旋转"/"图形变换"/"几何证明" 类 KP）
+    - **Q28 新定义题** → module = newDefinition（题干会给出新概念定义如"含角点"/"关联图形"/"m-区域点"等，必须选此 module；KP 用"新定义"+涉及的具体考点）
 - **严禁将现代文题标注成"文言文"知识点，反之亦然**
 - **严禁滥用"信息筛选"标签**：只用于"判断说法是否符合文意"类选择题；
   词语含义/句式赏析/段落作用/启示题 不要标"信息筛选"
@@ -509,6 +518,27 @@ def enrich_question(
     result = json.loads(resp.choices[0].message.content)
     if modules and result.get("module") not in modules:
         result["module"] = modules[0]
+
+    # **R5.2** 数学 Q28 硬规则：北京中考 Q28 必为新定义题（"称…为…"/"定义…为…"
+    # 结构）。LLM 偶尔被「关联点 / ⊙O」字眼带偏到 circles/geometryComprehensive，
+    # 用 stem 关键词检测兜底强制改回 newDefinition。
+    if _subject_en(subject) == "math":
+        try:
+            qnum = int(re.sub(r"\D", "", qid))
+        except (ValueError, TypeError):
+            qnum = 0
+        if qnum == 28:
+            # 含 "称…为…/叫做…/定义…为…/我们规定…/记作…" 等新定义 marker
+            if re.search(r"称[^。]{0,40}[为是]|叫\s*做|定义[^。]{0,30}为|"
+                         r"我们规定|记作|记为|"
+                         r"则称[^。]{0,40}点", stem):
+                if "newDefinition" in modules:
+                    result["module"] = "newDefinition"
+                    # KP 补 "新定义" 标签（保留 LLM 已选的具体知识点）
+                    kps = result.get("knowledge_points") or []
+                    if "新定义" not in kps:
+                        result["knowledge_points"] = ["新定义"] + kps[:2]
+
     if cache_key:
         (cache_dir / f"{cache_key}.json").write_text(
             json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8"
