@@ -383,20 +383,100 @@ def docx_to_markdown(docx_path: Path, extract_dir: Path,
 
 def _walk_table(tbl: ET.Element, rels: dict[str, str],
                  extract_dir: Path, figures_dir: Path) -> str:
-    """表格转 markdown 表格。"""
-    rows = []
+    """表格转 markdown 表格。
+    **R5 (2026-05-31)**：支持 gridSpan（横向合并单元格），原版每行 cell 数不
+    一致会出现 markdown sep 与数据行错位（chaoyang Q16 "积分（单位：分）"
+    跨 5 列表头损坏案例）。识别 `<w:gridSpan val="N"/>` 后用空 cell 占位。
+    """
+    rows_expanded: list[list[str]] = []
     for tr in tbl.findall(f"{{{W_NS}}}tr"):
-        cells = []
+        row: list[str] = []
         for tc in tr.findall(f"{{{W_NS}}}tc"):
-            cell = " ".join(_walk_paragraph(p, rels, extract_dir, figures_dir)
-                            for p in tc.findall(f"{{{W_NS}}}p"))
-            cells.append(cell.strip())
-        rows.append("| " + " | ".join(cells) + " |")
-    if not rows:
+            text = " ".join(_walk_paragraph(p, rels, extract_dir, figures_dir)
+                            for p in tc.findall(f"{{{W_NS}}}p")).strip()
+            # 检测 gridSpan（横向合并）
+            gridspan = 1
+            tcPr = tc.find(f"{{{W_NS}}}tcPr")
+            if tcPr is not None:
+                gs = tcPr.find(f"{{{W_NS}}}gridSpan")
+                if gs is not None:
+                    try:
+                        gridspan = max(1, int(gs.get(f"{{{W_NS}}}val", "1")))
+                    except ValueError:
+                        gridspan = 1
+            row.append(text)
+            # 把剩余跨列用空 cell 占位
+            for _ in range(gridspan - 1):
+                row.append("")
+        rows_expanded.append(row)
+    if not rows_expanded:
         return ""
-    n_cols = max(r.count("|") - 1 for r in rows) if rows else 0
-    sep = "|" + "|".join(["---"] * n_cols) + "|"
-    return rows[0] + "\n" + sep + "\n" + "\n".join(rows[1:])
+    n_cols = max(len(r) for r in rows_expanded)
+    # pad short rows
+    rows_padded = [r + [""] * (n_cols - len(r)) for r in rows_expanded]
+    out = ["| " + " | ".join(rows_padded[0]) + " |"]
+    out.append("|" + "|".join(["---"] * n_cols) + "|")
+    for r in rows_padded[1:]:
+        out.append("| " + " | ".join(r) + " |")
+    return "\n".join(out)
+
+
+# ─── R5: LaTeX 后处理规范化 ────────────────────────────────────────────────
+
+# 把 \text{} 里包的「数学运算符」改成 LaTeX 标准运算符（\sin/\cos/...），
+# 否则 \text{sin} 渲染成正体 "sin"，间距错。
+# 注意：不动 \text{cm}/\text{Hz}/\text{V}/\text{BMI} 等真正单位文本。
+_MATH_OP_TEXT_RE = re.compile(
+    r"\\text\{(sin|cos|tan|sec|csc|cot|log|ln|lim|max|min|sup|inf|"
+    r"arcsin|arccos|arctan|sinh|cosh|tanh)\}")
+
+# Unicode 数学符号 → LaTeX 命令（math mode 渲染间距对，跨区统一）
+_UNI_TO_LATEX = {
+    "∴": r"\therefore",   "∵": r"\because",
+    "≌": r"\cong",         "∽": r"\sim",
+    "⊥": r"\bot",          "∥": r"\parallel",
+    "⊙": r"\odot",
+}
+
+
+def _normalize_latex(md: str) -> str:
+    """全 md latex 规范化。
+    1. \\text{cos|sin|tan|...} → \\cos|\\sin|\\tan|...
+    2. \\text{Rt} → Rt
+    3. Unicode ∴∵≌∽⊥∥⊙：text 上下文中用 $...$ 包裹成 math 命令；
+       math ($...$) 内部直接 Unicode→LaTeX。
+    4. 相邻 $$（如 $\\because$$AB=BC$）→ $ $（插入空格，避免渲染挤一起）。
+    """
+    # 1. trig / log / lim 等 — 全局替换（这些函数只在 math 上下文出现）
+    md = _MATH_OP_TEXT_RE.sub(r"\\\1", md)
+
+    # 2. \text{Rt} → Rt
+    md = md.replace(r"\text{Rt}", "Rt")
+
+    # 3. Unicode math symbols — 区分 text/math 上下文
+    DOLLAR_BLOCK = re.compile(r"\$[^$]*\$")
+    def _wrap_uni_in_text(s: str) -> str:
+        # text 上下文：Unicode 符号包成 $...$ 单独 math block
+        for u, l in _UNI_TO_LATEX.items():
+            s = s.replace(u, f"${l}$")
+        return s
+    def _replace_uni_in_math(s: str) -> str:
+        for u, l in _UNI_TO_LATEX.items():
+            s = s.replace(u, l)
+        return s
+    out: list[str] = []
+    last = 0
+    for m in DOLLAR_BLOCK.finditer(md):
+        out.append(_wrap_uni_in_text(md[last:m.start()]))
+        out.append(_replace_uni_in_math(m.group()))
+        last = m.end()
+    out.append(_wrap_uni_in_text(md[last:]))
+    md = "".join(out)
+
+    # 4. 相邻 $$ → $ $（一次替换，不递归——只处理直接 abut 的情况）
+    md = md.replace("$$", "$ $")
+
+    return md
 
 
 # ─── 切题（v2：带 marker 状态机）─────────────────────────────────────────
@@ -1092,6 +1172,10 @@ def main():
             md = md + "\n\n" + ans_md
         print(f"[math_docx_paper] 📎 合成 ans md ({len(ans_md)} chars) 追加到主 md",
               flush=True)
+
+    # **R5 (2026-05-31)**：LaTeX 后处理规范化（\text{trig}→\trig / Unicode
+    # ∴∵≌→LaTeX / $$→$ $）。跨区统一渲染观感。
+    md = _normalize_latex(md)
 
     (structured / "raw.md").write_text(md, encoding="utf-8")
     print(f"[math_docx_paper] 段落 {stats['paragraphs']} | "

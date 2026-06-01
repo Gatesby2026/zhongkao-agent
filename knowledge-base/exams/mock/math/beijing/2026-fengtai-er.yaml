@@ -269,7 +269,7 @@ questions:
 - id: 17
   type: 解答
   score: 5
-  stem: 计算：$\left|-,3\right| + 2 \text{sin} 30 \circ - \sqrt[3]{8} - \left(\right. 1 - \pi \left.\right)^{0}$．
+  stem: 计算：$\left|-,3\right| + 2 \sin 30 \circ - \sqrt[3]{8} - \left(\right. 1 - \pi \left.\right)^{0}$．
   answer: ''
   solution: '解：原式$= 3 + 2 \times \frac{1}{2} - 2 - 1$，
 
@@ -291,7 +291,7 @@ questions:
 
     检验：当$x = 0$时，$\left(\right. x + 1 \left.\right) \left(\right. x - 1 \left.\right) \neq 0$．
 
-    ∴原分式方程的解是$x = 0$．'
+    $\therefore$原分式方程的解是$x = 0$．'
   knowledge_points: []
   module: ''
   difficulty: ''
@@ -305,7 +305,7 @@ questions:
     | 勾股定理的逆定理：如果三角形的三边长$a$，$b$，$c$满足$a^{2} + b^{2} = c^{2}$，那么这个三角形是直角三角形． 已知：在$\triangle A B C$中，$B C = a$，$A C = b$，$A B = c$，且$a^{2} + b^{2} = c^{2}$． 求证：$\triangle A B C$是直角三角形．      证明：作$\angle M
     C^{''} N = 90 \circ$，在$C^{''} M$上截取$C^{''} B^{''} = a$，$C^{''} N$上截取$C^{''} A^{''} = b$，连接$A^{''} B^{''}$． $\therefore A^{''} \left(B^{''}\right)^{2} = B^{''} \left(C^{''}\right)^{2} + A^{''} \left(C^{''}\right)^{2}$（________）（填推理的依据），
     即$A^{''} \left(B^{''}\right)^{2} = a^{2} + b^{2}$． $\because$________（已知）， $\therefore A^{''} B^{''} = c$． 在$\triangle A B C$和$\triangle A^{''} B^{''} C^{''}$中， $\because B C = a = B^{''} C^{''}$，$A
-    C = b = A^{''} C^{''}$，________， $\therefore \triangle A B C ≌ \triangle A^{''} B^{''} C^{''}$（________）（填推理的依据）． $\therefore \angle C = \angle C '' = 90 \circ$，即$\triangle A B C$是直角三角形． |
+    C = b = A^{''} C^{''}$，________， $\therefore \triangle A B C \cong \triangle A^{''} B^{''} C^{''}$（________）（填推理的依据）． $\therefore \angle C = \angle C '' = 90 \circ$，即$\triangle A B C$是直角三角形． |
 
     |---|'
   figure: 2026-fengtai-er/figures/image104.jpeg
@@ -342,7 +342,7 @@ questions:
 
     $\because$123 g不低于120 g，且不高于130 g，
 
-    ∴这周午餐蛋白质摄入总量在建议范围内，'
+    $\therefore$这周午餐蛋白质摄入总量在建议范围内，'
   knowledge_points: []
   module: ''
   difficulty: ''
@@ -455,7 +455,7 @@ questions:
 
     （1）求证：$B F \parallel C D$；
 
-    （2）连接$D F$，交$B E$于点G．若$O E = 3$，$\text{tan} A = \frac{1}{2}$，求$B G$的长．'
+    （2）连接$D F$，交$B E$于点G．若$O E = 3$，$\tan A = \frac{1}{2}$，求$B G$的长．'
   figure: 2026-fengtai-er/figures/image176.jpeg
   answer: ''
   solution: '（1）证明：连接OC，OD．
@@ -511,7 +511,7 @@ questions:
 
     $\therefore \angle F B G = \angle D E G , \angle B F G = \angle E D G$．
 
-    $\therefore \triangle B F G ∽\triangle E D G$．
+    $\therefore \triangle B F G \sim\triangle E D G$．
 
     $\therefore \frac{B G}{E G} = \frac{B F}{D E} = \frac{5}{4}$．
 
@@ -631,7 +631,7 @@ questions:
 
     $\therefore$点P从点A运动到点B的过程中，对于d的每一个值，t都有一个值与之对应．
 
-    $\therefore$$0 < a \leq \frac{1}{2}$
+    $\therefore$ $0 < a \leq \frac{1}{2}$
 
     Ⅱ．当$a > \frac{1}{2}$时，有$1 < t \leq 2 a$，
 
@@ -639,7 +639,7 @@ questions:
 
     $\because$当$1 < t \leq \frac{3}{2}$时，d随t的增大而增大，
 
-    ∴点P从点A运动到点B的过程中，对于d的每一个值，t都有一个值与之对应．
+    $\therefore$点P从点A运动到点B的过程中，对于d的每一个值，t都有一个值与之对应．
 
     $\therefore \frac{1}{2} < a \leq \frac{3}{4}$．
 
@@ -673,7 +673,7 @@ questions:
 
     $\because$点P从点A运动到点B的过程中，存在d的值，t有三个值与之对应，
 
-    ∴不合题意．
+    $\therefore$不合题意．
 
     综上所述：$0 < a < \frac{5}{2}$．'
   knowledge_points: []
