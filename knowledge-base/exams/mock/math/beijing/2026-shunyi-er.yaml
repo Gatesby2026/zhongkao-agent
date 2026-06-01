@@ -1,3 +1,9 @@
+# ============================================================
+# 2026年北京顺义区二模math — 自动生成
+# ============================================================
+# OCR: Qwen-VL-OCR  Enrich: qwen-max
+# QC: draft=8  needs_review=20
+
 year: 2026
 district: 顺义区
 exam_type: 二模
@@ -6,6 +12,7 @@ full_score: 100
 duration_minutes: 120
 total_questions: 28
 structure: 8单选(16分) + 8填空(16分) + 12解答(68分)
+passages: []
 questions:
 - id: 1
   type: 单选
@@ -18,9 +25,15 @@ questions:
     D: $6 . 02 \times 10^{9}$
   answer: ''
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 科学记数法
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: needs_review
   qc_note: 选择题 answer 为空
 - id: 2
@@ -33,11 +46,20 @@ questions:
     C: 长方体
     D: 三棱柱
   figure: 2026-shunyi-er/figures/image7.jpeg
+  _figures_extra:
+  - image7.jpeg
   answer: ''
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 三视图
+  - 几何体识别
+  module: geometryComprehensive
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: needs_review
   qc_note: 选择题 answer 为空
 - id: 3
@@ -50,11 +72,20 @@ questions:
     C: $b - 2 > 0$
     D: $a + b < 0$
   figure: 2026-shunyi-er/figures/image10.jpeg
+  _figures_extra:
+  - image10.jpeg
   answer: ''
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 实数的性质
+  - 绝对值的概念
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: needs_review
   qc_note: 选择题 answer 为空
 - id: 4
@@ -67,11 +98,20 @@ questions:
     C: 52°
     D: 54°
   figure: 2026-shunyi-er/figures/image21.jpeg
+  _figures_extra:
+  - image21.jpeg
   answer: ''
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 角平分线
+  - 垂直关系
+  - 角度计算
+  module: geometryComprehensive
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: needs_review
   qc_note: 选择题 answer 为空
 - id: 5
@@ -85,9 +125,15 @@ questions:
     D: $\frac{2}{3}$
   answer: ''
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 概率计算
+  module: statisticsAndProbability
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: needs_review
   qc_note: 选择题 answer 为空
 - id: 6
@@ -101,9 +147,15 @@ questions:
     D: $c < \frac{9}{4}$
   answer: ''
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 一元二次方程的根的判别式
+  module: equationsAndInequalities
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: needs_review
   qc_note: 选择题 answer 为空
 - id: 7
@@ -116,18 +168,26 @@ questions:
     C: '10'
     D: '11'
   figure: 2026-shunyi-er/figures/image42.jpeg
+  _figures_extra:
+  - image42.jpeg
   answer: ''
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 圆的性质
+  - 正多边形的性质
+  module: circles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: needs_review
   qc_note: 选择题 answer 为空
 - id: 8
   type: 单选
   score: 2
-  stem: '如图，在平面直角坐标系$x O y$中，点$M \left(a,,,b\right)$（$a b > 1$）在第一象限，过点$M$分别作$x$轴，$y$轴的垂线，垂足分别为$A$，$B$，函数$y = \frac{1}{x}$（$x > 0$）的图象交$A M$于点$C$，交$B M$于点$D$，连接$C D$，将$\triangle M C D$沿$C D$翻折得到$\triangle
-    M^{''} C D$．给出下面四个结论：
+  stem: '如图，在平面直角坐标系$x O y$中，点$M \left(a,,,b\right)$（$a b > 1$）在第一象限，过点$M$分别作$x$轴，$y$轴的垂线，垂足分别为$A$，$B$，函数$y = \frac{1}{x}$（$x
+    > 0$）的图象交$A M$于点$C$，交$B M$于点$D$，连接$C D$，将$\triangle M C D$沿$C D$翻折得到$\triangle M^{''} C D$．给出下面四个结论：
 
     ①连接$O C$，$O D$，则$\triangle O C D$与$\triangle M^{''} C D$的面积可能相等；
 
@@ -145,11 +205,19 @@ questions:
     C: ②④
     D: ③④
   figure: 2026-shunyi-er/figures/image72.jpeg
+  _figures_extra:
+  - image72.jpeg
   answer: ''
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 反比例函数的性质
+  - 图形变换
+  - 相似三角形
+  module: functions
+  difficulty: 能力
+  recommended_for:
+  - L2
+  - L3
   qc_status: needs_review
   qc_note: 选择题 answer 为空
 - id: 9
@@ -158,9 +226,15 @@ questions:
   stem: 若代数式$\frac{x}{x - 2}$有意义，则实数$x$的取值范围是_________．
   answer: ''
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 分式的定义与性质
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 10
@@ -169,9 +243,15 @@ questions:
   stem: 分解因式：$x^{3} - 9 x =$_________．
   answer: ''
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 因式分解
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 11
@@ -180,9 +260,14 @@ questions:
   stem: 方程$\frac{2}{3 x + 2} = \frac{1}{x}$的解为_________．
   answer: ''
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 分式方程的解法
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 12
@@ -199,9 +284,15 @@ questions:
     如果学生的身高的方差越小，则认为该队学生的身高越整齐．按照这个标准，学生的身高更整齐的是_________队（填“甲”或“乙”）．'
   answer: ''
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 方差
+  - 数据的集中趋势
+  module: statisticsAndProbability
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 13
@@ -210,21 +301,36 @@ questions:
   stem: 能说明命题“若$\frac{b}{a} > 1$，则$b > a$”是假命题的一组实数$a$，$b$的值为$a =$_________，$b =$_________．
   answer: ''
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 不等式的性质
+  - 实数的比较
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 14
   type: 填空
   score: 2
-  stem: 如图，$A B$是$\bigodot O$的直径，$C$，$D$，$E$是$\bigodot O$上的点，$\overset{⌢}{B C} = \overset{⌢}{D E}$，$C E$交$A B$于点$F$．若$\angle A = 43 \circ$，则$\angle B F C$的大小为_________°．
+  stem: 如图，$A B$是$\bigodot O$的直径，$C$，$D$，$E$是$\bigodot O$上的点，$\overset{⌢}{B C} = \overset{⌢}{D E}$，$C E$交$A B$于点$F$．若$\angle
+    A = 43 \circ$，则$\angle B F C$的大小为_________°．
   figure: 2026-shunyi-er/figures/image95.jpeg
+  _figures_extra:
+  - image95.jpeg
   answer: ''
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 圆周角定理
+  - 圆的性质
+  module: circles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 15
@@ -232,11 +338,19 @@ questions:
   score: 2
   stem: 如图所示的网格是正方形网格，则$\angle A B C - \angle A C B =$_________°（点$A$，$B$，$C$是网格线交点）．
   figure: 2026-shunyi-er/figures/image100.jpeg
+  _figures_extra:
+  - image100.jpeg
   answer: ''
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 三角形内角和定理
+  - 角度计算
+  module: triangles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 16
@@ -259,9 +373,14 @@ questions:
     （2）如果一共有28颗棋子，两名同学约定每次最多取走4颗，先手的同学为了确保获胜，首次应该取走_________颗棋子．'
   answer: ''
   solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 策略与推理
+  module: numbersAndExpressions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 17
@@ -269,10 +388,19 @@ questions:
   score: 5
   stem: 计算：$\left(\left(\pi,-,3\right)\right)^{0} + \left|-,\sqrt{3}\right| + 2 cos 60 \circ - \sqrt{12}$．
   answer: ''
-  solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  solution: __MISSING__
+  knowledge_points:
+  - 实数的运算
+  - 绝对值
+  - 三角函数
+  - 二次根式
+  module: numbersAndExpressions
+  difficulty: 基础
+  recommended_for:
+  - L0
+  - L1
+  - L2
+  - L3
   qc_status: needs_review
   qc_note: 解题步骤未提取，需补全 solution
 - id: 18
@@ -280,10 +408,16 @@ questions:
   score: 5
   stem: 解不等式组：$\left\{\begin{matrix} 3 x - 1 < 2 \left(x,+,2\right) \\ x > \frac{3 - x}{2} \end{matrix}\right.$．
   answer: ''
-  solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  solution: __MISSING__
+  knowledge_points:
+  - 解一元一次不等式
+  - 不等式组的解法
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: needs_review
   qc_note: 解题步骤未提取，需补全 solution
 - id: 19
@@ -291,10 +425,15 @@ questions:
   score: 5
   stem: 已知$2 a - b - 3 = 0$，求代数式$\frac{3 \left(2,a,+,b\right) - 6 b}{4 a^{2} - 4 a b + b^{2}}$的值．
   answer: ''
-  solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  solution: __MISSING__
+  knowledge_points:
+  - 代数式的化简与求值
+  module: numbersAndExpressions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: needs_review
   qc_note: 解题步骤未提取，需补全 solution
 - id: 20
@@ -307,11 +446,19 @@ questions:
 
     （2）若$tan \angle C D F = 2$，$O E = 1$，求$A D$的长．'
   figure: 2026-shunyi-er/figures/image114.jpeg
+  _figures_extra:
+  - image114.jpeg
   answer: ''
-  solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  solution: __MISSING__
+  knowledge_points:
+  - 四边形的性质
+  - 三角函数的应用
+  module: quadrilaterals
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: needs_review
   qc_note: 解题步骤未提取，需补全 solution
 - id: 21
@@ -319,10 +466,15 @@ questions:
   score: 5
   stem: 用某类充电桩充电时，充电过程分为快速和慢速两个阶段，给A型新能源汽车在电量为20%的情况下充电．技术改进前，充满电需用时80分钟；技术改进后，充满电需用时52分钟，其中快速充电阶段用时减少了40%，慢速充电阶段用时减少了30%，求快速充电阶段用时减少了几分钟．
   answer: ''
-  solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  solution: __MISSING__
+  knowledge_points:
+  - 方程的应用
+  module: equationsAndInequalities
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: needs_review
   qc_note: 解题步骤未提取，需补全 solution
 - id: 22
@@ -334,10 +486,16 @@ questions:
 
     （2）当$x > 1$时，对于$x$的每一个值，函数$y = 3 x + n$的值大于函数$y = b x$的值，且小于函数$y = k x + b$的值，直接写出$n$的取值范围．'
   answer: ''
-  solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  solution: __MISSING__
+  knowledge_points:
+  - 一次函数的解析式
+  - 一次函数的性质
+  module: functions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: needs_review
   qc_note: 解题步骤未提取，需补全 solution
 - id: 23
@@ -384,28 +542,47 @@ questions:
 
     根据两项内容的成绩计算加权成绩，计算方式如下：加权成绩=理论知识成绩×0.3+实操技能成绩×0.7．则这四位学生中加权成绩最高的是___________（填“甲”“乙”或“丙”）．'
   figure: 2026-shunyi-er/figures/image137.jpeg
+  _figures_extra:
+  - image137.jpeg
   answer: ''
-  solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  solution: __MISSING__
+  knowledge_points:
+  - 数据的整理与描述
+  - 平均数与中位数的理解
+  - 加权成绩的计算
+  module: statisticsAndProbability
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: needs_review
   qc_note: 解题步骤未提取，需补全 solution
 - id: 24
   type: 解答
   score: 6
-  stem: '如图，$A B$是$\bigodot O$的弦，$C$是$A B$的中点，连接$O C$并延长交$\bigodot O$于点$D$，过点$D$作$\bigodot O$的切线$D E$，过点$B$作$B E \bot D E$于点$E$，交$\bigodot O$于点$F$．
+  stem: '如图，$A B$是$\bigodot O$的弦，$C$是$A B$的中点，连接$O C$并延长交$\bigodot O$于点$D$，过点$D$作$\bigodot O$的切线$D E$，过点$B$作$B E \bot D E$于点$E$，交$\bigodot
+    O$于点$F$．
 
 
     （1）求证：$\angle A B F = 90 \circ$；
 
     （2）连接$A D$，$F D$，$F D$交$A B$于点$H$．若$\frac{C H}{B H} = \frac{1}{4}$，$A D = \sqrt{6}$，求$\bigodot O$的半径．'
   figure: 2026-shunyi-er/figures/image157.jpeg
+  _figures_extra:
+  - image157.jpeg
   answer: ''
-  solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  solution: __MISSING__
+  knowledge_points:
+  - 圆的基本性质
+  - 圆的切线性质
+  - 相似三角形
+  module: circles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: needs_review
   qc_note: 解题步骤未提取，需补全 solution
 - id: 25
@@ -432,11 +609,19 @@ questions:
 
     ②已知该燃气灶旋钮旋转的角度为90度时，火力最大，壶中的水烧开用时最少．综合考虑壶中的水烧开所用的燃气量和时间，我们认为，壶中的水烧开所用的燃气量比火力最大时所用的燃气量至少低$0 . 08 \text{m}^{3}$时，对应的旋转角度$\alpha_{0}$为理想旋转角度，则$\alpha_{0}$的取值范围约是___________．'
   figure: 2026-shunyi-er/figures/image174.jpeg
+  _figures_extra:
+  - image174.jpeg
   answer: ''
-  solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  solution: __MISSING__
+  knowledge_points:
+  - 函数的应用
+  - 数据分析
+  module: functions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: needs_review
   qc_note: 解题步骤未提取，需补全 solution
 - id: 26
@@ -448,45 +633,73 @@ questions:
 
     （2）已知点$P \left(-,1,0\right)$，$Q \left(1,,a,-,2\right)$．若抛物线与线段$P Q$恰有一个公共点，求$a$的取值范围．'
   answer: ''
-  solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  solution: __MISSING__
+  knowledge_points:
+  - 二次函数的性质
+  - 二次函数与直线的位置关系
+  module: functions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: needs_review
   qc_note: 解题步骤未提取，需补全 solution
 - id: 27
   type: 解答
   score: 7
-  stem: '在$\triangle A B C$中，$\angle A C B = 90 \circ$，$\angle C A B = \alpha$，点$P$在射线$A C$上，连结$B P$，将线段$B P$绕点$B$顺时针旋转$180 \circ - 2 \alpha$得到线段$B Q$（点$Q$与点$A$不重合），过点$Q$作$Q M \parallel A B$交直线$C A$于点$M$．
+  stem: '在$\triangle A B C$中，$\angle A C B = 90 \circ$，$\angle C A B = \alpha$，点$P$在射线$A C$上，连结$B P$，将线段$B P$绕点$B$顺时针旋转$180
+    \circ - 2 \alpha$得到线段$B Q$（点$Q$与点$A$不重合），过点$Q$作$Q M \parallel A B$交直线$C A$于点$M$．
 
 
     （1）如图1，点$P$与点$C$重合，求证：$\angle B A C = \angle B A Q$；
 
     （2）如图2，点$M$在$C A$的延长线上，用等式表示$P M$与$A C$的数量关系，并证明．'
   figure: 2026-shunyi-er/figures/image205.jpeg
+  _figures_extra:
+  - image205.jpeg
+  - image206.jpeg
   answer: ''
-  solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  solution: __MISSING__
+  knowledge_points:
+  - 直角三角形的性质
+  - 旋转的性质
+  - 平行线的性质
+  module: triangles
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: needs_review
   qc_note: 解题步骤未提取，需补全 solution
 - id: 28
   type: 解答
   score: 7
-  stem: '在平面直角坐标系$x O y$中，$\bigodot O$的半径为1．对于点$C$和$\bigodot O$给出如下定义：若存在$\bigodot O$的弦$A B$，使得点$C$关于直线$A B$的对称点$C^{''}$在$\bigodot O$上，则称点$C$是$\bigodot O$的关联点，称弦$A B$是点$C$与$\bigodot O$的关联线段．
+  stem: '在平面直角坐标系$x O y$中，$\bigodot O$的半径为1．对于点$C$和$\bigodot O$给出如下定义：若存在$\bigodot O$的弦$A B$，使得点$C$关于直线$A B$的对称点$C^{''}$在$\bigodot
+    O$上，则称点$C$是$\bigodot O$的关联点，称弦$A B$是点$C$与$\bigodot O$的关联线段．
 
 
-    （1）如图，在点$C_{1} \left(0,,\frac{1}{2}\right)$，$C_{2} \left(3,1\right)$，$C_{3} \left(-,1,,-,\sqrt{3}\right)$中，点____________是$\bigodot O$的关联点；
+    （1）如图，在点$C_{1} \left(0,,\frac{1}{2}\right)$，$C_{2} \left(3,1\right)$，$C_{3} \left(-,1,,-,\sqrt{3}\right)$中，点____________是$\bigodot
+    O$的关联点；
 
     （2）已知点$A \left(0,1\right)$，$B \left(1,0\right)$，若弦$A B$是点$D$与$\bigodot O$的关联线段，则线段$O D$长的取值范围是_________；
 
-    （3）直线$y = - 2 x + b$（$b > 0$）分别与$x$轴，$y$轴交于$M$，$N$两点，当线段$M N$上存在$\bigodot O$的关联点时，记这些点与$\bigodot O$的关联线段长的最大值为$m$，若$0 < m \leq \frac{4 \sqrt{3}}{3}$，直接写出$b$的取值范围．'
+    （3）直线$y = - 2 x + b$（$b > 0$）分别与$x$轴，$y$轴交于$M$，$N$两点，当线段$M N$上存在$\bigodot O$的关联点时，记这些点与$\bigodot O$的关联线段长的最大值为$m$，若$0
+    < m \leq \frac{4 \sqrt{3}}{3}$，直接写出$b$的取值范围．'
   figure: 2026-shunyi-er/figures/image225.jpeg
+  _figures_extra:
+  - image225.jpeg
   answer: ''
-  solution: ''
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  solution: __MISSING__
+  knowledge_points:
+  - 圆的性质
+  - 点与圆的位置关系
+  - 直线与圆的位置关系
+  module: circles
+  difficulty: 能力
+  recommended_for:
+  - L2
+  - L3
   qc_status: needs_review
   qc_note: 解题步骤未提取，需补全 solution

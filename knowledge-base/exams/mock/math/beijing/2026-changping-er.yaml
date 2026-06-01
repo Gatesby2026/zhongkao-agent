@@ -1,11 +1,18 @@
+# ============================================================
+# 2026年北京昌平区真题math — 自动生成
+# ============================================================
+# OCR: Qwen-VL-OCR  Enrich: qwen-max
+# QC: draft=2  needs_review=0
+
 year: 2026
 district: 昌平区
-exam_type: 二模
+exam_type: 真题
 subject: math
 full_score: 11
 duration_minutes: 120
 total_questions: 2
 structure: 2解答(11分)
+passages: []
 questions:
 - id: 25
   type: 解答
@@ -17,9 +24,12 @@ questions:
 
     （2）电热丝$R_{2}$的阻值。'
   figure: 2026-changping-er/figures/image129.png
+  _figures_extra:
+  - image129.png
   answer: ''
   solution: '当开关$_{1}$、$_{2}$同时闭合时为加热档，等效电路如图甲所示；当只有开关$_{1}$闭合时为保温档，等效电路如图乙所示
 
+    ![](figures/image13.png)
 
     （1）电热器在处于加热挡时的电流$I = \frac{P_{加 热}}{U} = \frac{1 2 1 0 }{2 2 0 } = 5 . 5$（2分）
 
@@ -28,22 +38,31 @@ questions:
     当电路处于保温档时，$R_{总} = \frac{U^{2}}{P_{保 温}} = \frac{\left(\right. 2 2 0 \left.\right)^{2}}{1 0 0 } = 4 8 4$
 
     $R_{2} = R_{总} - R_{1} = 4 8 4 - 4 0 = 4 4 4$（2分）'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 函数的图像与性质
+  - 函数的应用
+  module: functions
+  difficulty: 中等
+  recommended_for:
+  - L1
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''
 - id: 26
   type: 解答
   score: 6
-  stem: '如图甲所示，某同学在学校组织的“绿色校园，从我做起”的环保实践活动中，主动承担了为校园新栽种的树苗浇水的任务。该同学质量为$60 \text{kg}$，双脚与地面的总接触面积为$0 . 04 \text{m}^{2}$。他用图乙所示的平底水桶装水，水桶底面积为$0 . 03 \text{m}^{2}$（不计桶壁的厚度），水桶内装有深度为$0 . 28 \text{m}$、质量为11
-    kg的水，水桶放在水平地面上时水对水桶底的压力为$F$，水桶对水平地面的压强为$4000 \text{Pa}$，该同学提起这桶水时对水平地面的压强为$p$。已知水的密度为$1 . 0 \times 10^{3} \text{kg} / \text{m}^{3}$，$g$取$10 \text{N} / \text{kg}$。求：
+  stem: '如图甲所示，某同学在学校组织的“绿色校园，从我做起”的环保实践活动中，主动承担了为校园新栽种的树苗浇水的任务。该同学质量为$60 \text{kg}$，双脚与地面的总接触面积为$0 . 04 \text{m}^{2}$。他用图乙所示的平底水桶装水，水桶底面积为$0
+    . 03 \text{m}^{2}$（不计桶壁的厚度），水桶内装有深度为$0 . 28 \text{m}$、质量为11 kg的水，水桶放在水平地面上时水对水桶底的压力为$F$，水桶对水平地面的压强为$4000 \text{Pa}$，该同学提起这桶水时对水平地面的压强为$p$。已知水的密度为$1
+    . 0 \times 10^{3} \text{kg} / \text{m}^{3}$，$g$取$10 \text{N} / \text{kg}$。求：
 
 
     （1）水对水桶底的压力$F$。
 
     （2）该同学提起这桶水时对水平地面的压强$p$。'
   figure: 2026-changping-er/figures/image141.png
+  _figures_extra:
+  - image141.png
   answer: ''
   solution: '（1）水对水桶底的压力
 
@@ -66,8 +85,13 @@ questions:
     $F_{总} = G_{总} = 7 2 0$
 
     $p = \frac{F_{总}}{S} = \frac{7 2 0 }{0 . 0 4 ^{2}} = 1 8 0 0 0$（2分）'
-  knowledge_points: []
-  module: ''
-  difficulty: ''
+  knowledge_points:
+  - 二次函数的性质
+  - 二次函数的应用
+  module: functions
+  difficulty: 能力
+  recommended_for:
+  - L2
+  - L3
   qc_status: draft
   qc_note: ''

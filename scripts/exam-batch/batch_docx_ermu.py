@@ -60,9 +60,9 @@ def run_one(subject: str, region: str) -> Tuple[str, str, str]:
     if p1.returncode != 0:
         return (subject, region, f"FAIL docx_paper: {p1.stderr.strip()[-200:]}")
 
-    # math 自己写 mock yaml，无需 enrich
-    if subject == "math":
-        return (subject, region, "OK math direct")
+    # **R5 修复（2026-05-31）**：math 也必须过 enrich，否则 KP / module /
+    # difficulty / recommended_for 全空，下游学情分析推荐失效。
+    # （之前误标注释 "math 自己写 mock yaml，无需 enrich" 已删除）
 
     # Step 2: enrich → mock yaml
     fj = STAGING / subject / slug / "structured-cloud" / "final.json"
