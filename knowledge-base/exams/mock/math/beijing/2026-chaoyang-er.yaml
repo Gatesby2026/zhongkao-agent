@@ -288,9 +288,9 @@ questions:
 - id: 18
   type: 解答
   score: 5
-  stem: 解不等式组：$\left{\begin{matrix} 2 x + 3 \geq x + 6, \\ \frac{2 x + 1}{3} > x - 1 . \end{matrix}\right$
+  stem: 解不等式组：$\left\{\begin{matrix} 2 x + 3 \geq x + 6, \\ \frac{2 x + 1}{3} > x - 1 . \end{matrix}\right.$
   answer: ''
-  solution: '解：原不等式组为$\left{\begin{matrix} 2 x + 3 \geq x + 6, \textcircled{1} \\ \frac{2 x + 1}{3} > x - 1 . \textcircled{2} \end{matrix}\right$
+  solution: '解：原不等式组为$\left\{\begin{matrix} 2 x + 3 \geq x + 6, \textcircled{1} \\ \frac{2 x + 1}{3} > x - 1 . \textcircled{2} \end{matrix}\right.$
 
     解不等式①，得$x \geq 3$．
 
@@ -390,9 +390,9 @@ questions:
   answer: ''
   solution: '解：（1）$\because$函数$y = k x + b \left(k,\neq,0\right)$的图象经过点$A \left(1,3\right)$和$B \left(3,1\right)$，
 
-    $\therefore$ $\left{\begin{matrix} k + b = 3, \\ 3 k + b = 1 . \end{matrix}\right$
+    $\therefore$ $\left\{\begin{matrix} k + b = 3, \\ 3 k + b = 1 . \end{matrix}\right.$
 
-    解得$\left{\begin{matrix} k = - 1, \\ b = 4 . \end{matrix}\right$
+    解得$\left\{\begin{matrix} k = - 1, \\ b = 4 . \end{matrix}\right.$
 
     $\therefore$该函数的表达式为$y = - x + 4$．
 
@@ -400,8 +400,8 @@ questions:
   knowledge_points: []
   module: ''
   difficulty: ''
-  qc_status: draft
-  qc_note: ''
+  qc_status: flag
+  qc_note: '解析里还哟类似：$\left{\begin{matrix} '
 - id: 22
   type: 解答
   score: 5

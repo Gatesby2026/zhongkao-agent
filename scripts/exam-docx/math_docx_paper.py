@@ -476,6 +476,15 @@ def _normalize_latex(md: str) -> str:
     # 4. 相邻 $$ → $ $（一次替换，不递归——只处理直接 abut 的情况）
     md = md.replace("$$", "$ $")
 
+    # 5. **R5.1**：\left{ / \right} / \right$ 修复（d2t OLE→LaTeX 链路通病
+    #    11/12 区都有 — chaoyang/yanshan Q21 类方程组、定义域 piecewise 公式）
+    # \left{ → \left\{  （LaTeX 里 { 需 escape，否则 KaTeX 报 Expected '\}'）
+    md = md.replace(r"\left{", r"\left\{")
+    md = md.replace(r"\right}", r"\right\}")
+    # \right<close-math>$ → \right.$ （\right 必须跟 delim，. 是不可见 delim）
+    md = re.sub(r"\\right(?=\$)", r"\\right.", md)
+    md = re.sub(r"\\left(?=\$)", r"\\left.", md)
+
     return md
 
 
