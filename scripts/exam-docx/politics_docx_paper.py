@@ -1055,6 +1055,20 @@ def _apply_patches(patches: dict, result: dict) -> int:
             insert_at = next((i for i, q in enumerate(result["questions"])
                               if q["number"] > qid), len(result["questions"]))
             result["questions"].insert(insert_at, new_q)
+            # **R5.3**：create 出来的新题也要进 result["answers"] 列表，否则
+            # enrich 读 answers 时找不到这题，stem/sol 在 questions 但 enrich
+            # 输出 yaml 时 solution 为空（朝阳道法 Q25 教训）
+            new_ans = {
+                "number": qid,
+                "correct": patch.get("answer", ""),
+                "solution": patch.get("solution", ""),
+            }
+            ans_insert = next(
+                (i for i, a in enumerate(result.get("answers", []))
+                 if a.get("number", 0) > qid),
+                len(result.get("answers", []))
+            )
+            result.setdefault("answers", []).insert(ans_insert, new_ans)
             n_applied += 1
             continue
         if target is None: continue
