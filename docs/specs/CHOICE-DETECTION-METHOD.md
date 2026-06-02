@@ -321,12 +321,87 @@ python3 test-data/_choice-bench/bench_choice.py [--verbose]
 - 跑全方法对照：
   ```bash
   TENCENT_OCR_SECRET_ID=... TENCENT_OCR_SECRET_KEY=... DASHSCOPE_API_KEY=... \
-  python3 test-data/_choice-bench/bench_methods.py [--method A|B|C|all] [--verbose]
+  python3 test-data/_choice-bench/bench_methods.py [--method A|B|C|D|all] [--verbose]
   ```
 - 跑裁切器：
   ```bash
   python3 /tmp/crop_all.py  # 全 8 case 出裁切结果到 test-data/_choice-bench/_crops/
   ```
+
+---
+
+## 7.9 Path D — 紧致 band + 单选约束 VLM（朝阳数学 0/8 → 8/8）
+
+**触发 case**：`jiaxiaoqi-chaoyang-er-math`（Q1-8 真值 = ACCB CABD），
+A/B/C 三法全 0/8，note 记 "cropped-vlmax 8/8 全错（输出多选 BD/AC/CD）"。
+
+### 根因（三法各自的失败点）
+
+| 法 | 输出 | 根因 |
+|----|------|------|
+| A 像素 blob | 全空 | layout 候选无朝阳 4×2 括号卡；blob 阈值抓不到笔触 |
+| B vl-max(crop) | B/AD/BD/ACD/…/**ABCD** | crop 过高（含填空+解答区），选择题行仅占顶部 ~60px，VLM 看不清 → 逐题越报越多 |
+| C 腾讯缺字母 | 全空 | **分组坍缩**：`_group_questions` 硬编码 `max_intra_q_gap=200`，朝阳题间距仅 ~140px < 200 → 整行 4 题合并成 1 组 → 每字母都在 → 缺=∅ |
+
+**关键发现**：C 法的腾讯 OCR **字母级是对的**（2B 铅笔实涂下印刷字母读不到，正合缺字母法），
+0/8 纯粹是分组 bug。按 ~140px 间距正确分组后，**C 法即 6/8**
+（Q1/2/3/5/6/7 全对；Q4/Q8 是最右列 OCR 漏读尾字母 C/D → 过报，属另一类残留问题）。
+但分组阈值若改绝对像素，与 海淀/西城卡（题间距 ~210-258px、题内缺字母步距可达 ~120px）冲突，
+窗口仅 (122,136) px 极窄且随分辨率漂移 → **绝对像素阈值本身是设计缺陷**，
+正解是 `threshold = 3 × letter_step`（按行内 gap 分布自适应；三卡比值 between/letter≈3.9-4.7、
+within-doubled/letter≈2.0-2.4，×3 干净分开）。
+
+### Path D 方案 = 精确 locate + 单选约束 read（两段解耦）
+
+```
+locate（取紧致 band）→ read（qwen-vl-max 单选约束逐题判实心涂黑，按印刷题号输出）
+```
+
+实现：`vlm_choice.py::detect_choices_vlm`（read）+ `bench_methods.py::detect_vlmax_band`（Method D）。
+read prompt：「实心涂黑才算 / 仅印刷字母不算 / 绝大多数单选 / 按印刷题号输出」。
+
+### 核心结论：read 已解决，瓶颈在 locate 精度
+
+**read 半边稳了**（裁得准就读得对）：
+
+| 输入给 qwen-vl-max | 朝阳数学命中 | 结论 |
+|--------------------|--------------|------|
+| 整页（不裁切） | 3/8 | 选择题区在大图里太小，模型看不清 |
+| 粗裁上半区（固定比例 25-55%） | 6-7/8 | 偏松，丢精度 |
+| **腾讯字母 bbox 紧致 band** | **8/8** ✓ | 裁得准 = 读得全对 |
+
+→ **裁切精度是唯一瓶颈，不是模型能力问题**。
+
+### ❌ 关键负结论：qwen 无法做精确 locate（本次验证）
+
+用户要求"把 locate 换成 qwen-vl-ocr 去腾讯化"，实测此路不通：
+
+1. **qwen-vl-ocr 只回文本、无坐标**：`ocr_result.processed_text` 给出
+   "1. A B C D / 2. A B D / …"（缺字母法信号都在，5/8），但**没有任何 bbox**，
+   无法据此裁图。
+2. **qwen-vl-max 空间输出不稳**（致命）：
+   - region grounding 求 `[A][B][C][D]` 方框 bbox → 落到填空区（y745-908）
+   - 标题行锚点求「选择题」「填空题」行 y → **同图同 prompt，y 从 512 跳到 757**
+     （"选择题"字样在《注意事项》里也出现，模型锚点漂移）
+   一次侥幸 8/8，复跑就锚到填空区 → JSON 截断 / 全空。
+3. **本地 numpy 信号**（无 API）：segment-count 与 periodicity 都无法把选择题
+   band 从表头/手写里分出来（表头、解答手写得分更高）。
+
+**全 bench Method D（粗裁 fallback，纯 DashScope）= 37/94 ≈ 39%**：
+朝阳数学 6/8 · 西城 shixinran 5/8 · tuominde 物理 11/15 · 多数 0-3/8（band 太松）。
+
+### ✅ 当前 Path D 实现（精确优先 + 粗裁兜底）
+
+`detect_choices_vlm`：① 优先腾讯字母 bbox 精确裁（`crop_choice_band`）→ read 8/8；
+② 腾讯额度耗尽 / 无 key 时降级粗裁 → ~39%。**精确 locate 仍需"带坐标的 OCR"**。
+
+### ⚠️ 待办（locate 精度，按推荐度）
+
+1. **腾讯精确 locate 已是最优且已建好**，唯一问题是 2026-05-31 月度免费包耗尽
+   （`ResourcePackageRunOut`，6/1 重置）。**不建议**用 qwen 替换 locate（本次已证不稳）。
+2. **阿里云 OCR**（用户有 RAM AK，独立于腾讯额度）：`recognize-handwriting --output-char-info`
+   回字符级 bbox，可平替腾讯做精确 locate；代价是走 OSS 上传+签名 URL 流程（较重）。
+3. **多选卡（物理）**：read 单选 prompt 对 Q13-15 多选不适用，需保留"可多选"分支。
 
 ---
 

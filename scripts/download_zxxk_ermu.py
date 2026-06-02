@@ -131,6 +131,69 @@ def already_done(district_en: str, subject_en: str) -> bool:
     return False
 
 
+def verify_page(soft_id: str) -> dict:
+    """Pre-download checks: confirm page exists, is 精品解析, has answers.
+    Returns dict with keys: ok(bool), boutique(bool), title(str), warning(str).
+    """
+    import zipfile
+    title_js = "document.title"
+    body_js = "document.body ? document.body.innerText.slice(0,800) : ''"
+    title = run_js(title_js)
+    body  = run_js(body_js)
+
+    # Check resource exists (page not redirected to homepage)
+    no_btns = run_js("document.querySelectorAll('#btnSoftDownload').length") == "0"
+    default_title = "学科网-海量中小学教育资源共享平台" in title
+    if default_title or no_btns:
+        return {"ok": False, "boutique": False, "title": title,
+                "warning": "资源不存在或已下架（页面无下载按钮）"}
+
+    # Check 精品解析 (guaranteed to have answers)
+    is_boutique_page = "精品解析" in title or "精品解析" in body
+    # Also accept if body clearly mentions 答案/解析
+    has_answer_hint = any(kw in body for kw in ["【答案】", "答案解析", "解题过程", "参考答案"])
+
+    if not is_boutique_page and not has_answer_hint:
+        return {"ok": True, "boutique": False, "title": title,
+                "warning": "⚠️  非精品解析 且页面无答案迹象 — 可能缺答案"}
+
+    return {"ok": True, "boutique": is_boutique_page, "title": title, "warning": ""}
+
+
+def verify_downloaded_file(dl_file: Path) -> dict:
+    """Post-download checks: confirm real DOC format (not bare PDF).
+    Returns dict: ok(bool), ext(str), has_docx(bool), warning(str).
+    """
+    import zipfile
+    ext = dl_file.suffix.lower()
+    if not ext:
+        ext = ".zip"
+
+    if ext == ".pdf":
+        return {"ok": False, "ext": ext, "has_docx": False,
+                "warning": "❌ 文件是 PDF 格式，不是 DOC/DOCX"}
+
+    if ext in (".docx", ".doc"):
+        return {"ok": True, "ext": ext, "has_docx": True, "warning": ""}
+
+    if ext == ".zip":
+        try:
+            with zipfile.ZipFile(dl_file) as zf:
+                names = zf.namelist()
+            has_docx = any(n.lower().endswith((".docx", ".doc")) for n in names)
+            if not has_docx:
+                return {"ok": False, "ext": ext, "has_docx": False,
+                        "warning": f"❌ ZIP 内无 docx/doc（内含: {names[:3]}）"}
+            return {"ok": True, "ext": ext, "has_docx": True, "warning": ""}
+        except Exception as e:
+            return {"ok": False, "ext": ext, "has_docx": False,
+                    "warning": f"❌ ZIP 解析失败: {e}"}
+
+    # Unknown extension — warn but allow
+    return {"ok": True, "ext": ext, "has_docx": False,
+            "warning": f"⚠️  未知格式 {ext}，请人工核查"}
+
+
 def download_one(district_en: str, subject_en: str, subject_cn: str,
                  soft_id: str, is_boutique: bool) -> bool:
     url = f"https://www.zxxk.com/soft/{soft_id}.html"
@@ -145,6 +208,19 @@ def download_one(district_en: str, subject_en: str, subject_cn: str,
     # Navigate
     navigate(url)
     time.sleep(2)  # additional settle time after navigation
+
+    # ── 验证 1：下载前核查（精品解析 + 有答案）──────────────────────────
+    page_check = verify_page(soft_id)
+    print(f"     📋 页面: {page_check['title'][:60]}")
+    if not page_check["ok"]:
+        print(f"     ❌ 跳过: {page_check['warning']}")
+        return False
+    if page_check["warning"]:
+        print(f"     {page_check['warning']}")
+        # Continue but flag it (non-boutique may still have answers)
+    elif page_check["boutique"]:
+        print(f"     ✅ 精品解析确认")
+    # ──────────────────────────────────────────────────────────────────────
 
     # Find and click the VIP储值 button
     btn_js = """
@@ -183,11 +259,16 @@ if(dlg && dlg.contentDocument){
         print(f"     ❌ No download appeared within 45s")
         return False
 
-    # Determine extension
-    ext = dl_file.suffix.lower()
-    if not ext:
-        ext = ".zip"
+    # ── 验证 2：下载后核查（真 DOC 格式）────────────────────────────────
+    file_check = verify_downloaded_file(dl_file)
+    if file_check["warning"]:
+        print(f"     {file_check['warning']}")
+    if not file_check["ok"]:
+        print(f"     ❌ 文件格式不合格，跳过移动（保留在 Downloads: {dl_file.name}）")
+        return False
+    # ──────────────────────────────────────────────────────────────────────
 
+    ext = file_check["ext"]
     # Move to destination
     out_dir = OUT_BASE / f"2026-ermu-{subject_en}"
     out_dir.mkdir(parents=True, exist_ok=True)

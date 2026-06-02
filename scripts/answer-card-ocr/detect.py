@@ -189,16 +189,23 @@ _LAYOUTS_TO_TRY = [_LAYOUT_PHY_5x3, _LAYOUT_MATH_4x2, _LAYOUT_MATH_2x4,
 
 _VLMAX_CROPPED_PROMPT = """这是答题卡选择题填涂区裁切图，共 {n_q} 道题，
 题号清单：{qids}。
+题型清单：{type_hint}
 
-⚠️ 注意：部分答题卡涂卡较轻，黑色方框可能没完全盖住印刷字母。
-找有**黑色覆盖痕迹**的 [A][B][C][D] 方框（哪怕字母还看得见）= 学生涂的。
+⚠️ 学生用**黑色铅笔/marker**涂卡，盖住 [A][B][C][D] 中的某个字母方框。
+{multi_note}
 
-逐题输出学生作答（多选题输出多个字母，如 'BD'；未涂留空）：
-{{"answers": {{"Q1": "B", "Q2": "AD", ...}}}}"""
+⚠️ **干扰排除**：
+- 答题卡上的**红色对勾✓**是阅卷老师批改痕迹，不是学生作答，必须忽略
+- 涂卡可能很轻（没完全盖住印刷字母）—— 找**有黑色覆盖痕迹**的字母方框
+- 红笔/红墨水写的任何东西都跟"学生涂卡"无关
+
+逐题输出学生作答（单选题只输出 1 个字母；未涂留空）：
+{{"answers": {{"Q1": "B", "Q2": "C", ...}}}}"""
 
 
 def detect_choices_by_cropped_vlmax(image_paths: list[Path],
-                                      qids: list[int] | None = None
+                                      qids: list[int] | None = None,
+                                      qid_types: dict[int, str] | None = None
                                       ) -> dict[int, dict]:
     """Path D：先裁切涂卡区 → qwen-vl-max 看 cropped 小图直接判涂卡。
 
@@ -228,9 +235,26 @@ def detect_choices_by_cropped_vlmax(image_paths: list[Path],
     b64 = _b64.b64encode(buf.getvalue()).decode()
 
     qids_list = qids or list(range(1, 21))
+    # 题型标注（单选 / 多选 / 未知）
+    type_hint_parts = []
+    has_multi = False
+    for q in qids_list:
+        t = (qid_types or {}).get(q, "")
+        if t in ("多选", "multi_choice"):
+            type_hint_parts.append(f"Q{q}=多选")
+            has_multi = True
+        elif t in ("单选", "choice"):
+            type_hint_parts.append(f"Q{q}=单选")
+        else:
+            type_hint_parts.append(f"Q{q}=?")
+    type_hint = "、".join(type_hint_parts)
+    multi_note = ("**多选题**才能输出多个字母（如 'BD' / 'ACD'），**单选题严格只输出 1 个字母**。"
+                   if has_multi else "**全部是单选题**，每题严格只输出 1 个字母，不要输出多个。")
     prompt_text = _VLMAX_CROPPED_PROMPT.format(
         n_q=len(qids_list),
         qids=", ".join(f"Q{q}" for q in qids_list),
+        type_hint=type_hint,
+        multi_note=multi_note,
     )
     try:
         resp = client.chat.completions.create(
@@ -891,21 +915,24 @@ def detect_card(
     cropped_choices: dict[int, dict] = {}
     if n_blob_filled < 10:
         try:
-            # 推断要识别的 qids（看 mock yaml 里 type 是单选/多选的）
+            # 推断要识别的 qids + 题型 (单选/多选)
             choice_qids = None
+            qid_types: dict[int, str] = {}
             if standard_yaml:
                 try:
                     import yaml as _yaml
                     yd = _yaml.safe_load(Path(standard_yaml).read_text(encoding="utf-8"))
-                    choice_qids = [q["id"] for q in (yd.get("questions") or [])
-                                    if q.get("type") in ("单选", "多选", "choice",
-                                                          "multi_choice")]
+                    for q in (yd.get("questions") or []):
+                        if q.get("type") in ("单选", "多选", "choice",
+                                              "multi_choice"):
+                            qid_types[q["id"]] = q["type"]
+                    choice_qids = sorted(qid_types.keys())
                 except Exception:
                     pass
-            print(f"\n  🖼️  Path D: 裁切 + vl-max 看图（Path B/C 都未命中）…",
-                  file=sys.stderr)
-            cropped_choices = detect_choices_by_cropped_vlmax(image_paths,
-                                                                qids=choice_qids)
+            print(f"\n  🖼️  Path D: 裁切 + vl-max 看图（Path B 仅"
+                  f" {n_blob_filled} 题命中）…", file=sys.stderr)
+            cropped_choices = detect_choices_by_cropped_vlmax(
+                image_paths, qids=choice_qids, qid_types=qid_types)
             if cropped_choices:
                 real = sum(1 for v in cropped_choices.values() if v.get("filled"))
                 print(f"     Path D 识别 {real}/{len(cropped_choices)} 题: " +

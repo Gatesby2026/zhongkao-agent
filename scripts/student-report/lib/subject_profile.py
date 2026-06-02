@@ -66,6 +66,40 @@ def module_cn(subject: str, key: str) -> str:
     return m.get(key, key)
 
 
+# 题型英文键 → 中文大题展示名（各科通用兜底；英语大题分法见 section_name）
+_TYPE_CN = {
+    "cloze": "完形填空", "完形": "完形填空",
+    "reading": "阅读理解", "reading_express": "阅读表达",
+    "单选": "单项选择", "多选": "多项选择", "判断": "判断题",
+    "材料分析": "材料分析", "作文": "书面表达", "填空": "填空题",
+    "解答": "解答题",
+}
+
+
+def section_name(subject: str, q) -> str:
+    """一道题归到哪个「大题」（中文展示名）。subject 专属分法收敛在此。
+
+    英语：单项选择 / 完形填空 / 阅读理解(A/B篇) / 阅读理解(C/D篇) / 阅读表达 / 书面表达。
+    其它科：按题型中文名兜底（_TYPE_CN）。
+    """
+    t = (getattr(q, "type_cn", "") or "").strip()
+    mod = (getattr(q, "module", "") or "").strip()
+    pid = (getattr(q, "passage_id", "") or "").strip().lower()
+    if subject == "english":
+        if t == "cloze" or mod == "vocabulary":
+            return "完形填空"
+        if mod == "grammar":
+            return "单项选择"
+        if mod == "reading" and t in ("单选", "reading", "多选"):
+            return "阅读理解（A/B篇）" if pid in ("reading_a", "reading_b") \
+                else "阅读理解（C/D篇）"
+        if t == "reading_express":
+            return "阅读表达"
+        if "作文" in t or is_essay(t):
+            return "书面表达"
+    return _TYPE_CN.get(t, t or "未分类")
+
+
 def is_essay(qtype: str) -> bool:
     """题型是否为作文/写作类（决定是否走 AI 评分 + 满分兜底）。"""
     if not qtype:

@@ -146,17 +146,21 @@ def render_markdown(exam: ExamView, per_q: dict[int, dict],
     # 逐题得分速览（开篇，一眼定位丢分题）
     w("\n## 逐题得分速览\n")
     w("> 🟢 满分　🟡 部分扣分　🔴 全失\n")
-    w("\n| 题 | 得分 | 题 | 得分 | 题 | 得分 | 题 | 得分 | 题 | 得分 |")
-    w("|--|--|--|--|--|--|--|--|--|--|")
-    qs_sorted = sorted(exam.questions, key=lambda x: x.num)
+    # 题号与得分放同一单元格，更直观（如「Q20 🔴0/1」）
+    NCOL = 5
+    w("\n|" + " 　 |" * NCOL)
+    w("|" + "---|" * NCOL)
+    # 跳过满分=0 的占位题（如二选一作文的备选项）
+    qs_sorted = sorted((q for q in exam.questions if q.score > 0),
+                       key=lambda x: x.num)
     cells = []
     for q in qs_sorted:
         mark = "🟢" if q.lost <= 0 else ("🔴" if q.scored <= 0 else "🟡")
-        cells.append(f"{q.qid} | {mark}{q.scored:g}/{q.score}")
-    for i in range(0, len(cells), 5):
-        row = cells[i:i + 5]
-        while len(row) < 5:
-            row.append(" | ")
+        cells.append(f"{q.qid} {mark}{q.scored:g}/{q.score:g}")
+    for i in range(0, len(cells), NCOL):
+        row = cells[i:i + NCOL]
+        while len(row) < NCOL:
+            row.append("")
         w("| " + " | ".join(row) + " |")
 
     # 一、总览
@@ -202,8 +206,14 @@ def render_markdown(exam: ExamView, per_q: dict[int, dict],
         # 清 OCR 残留的 markdown 代码围栏（```text / ```）——在 blockquote 内会破坏渲染
         stem = re.sub(r"^\s*```[a-zA-Z]*\s*$", "", q.stem,
                       flags=re.MULTILINE).strip()
-        if len(stem) > 460:
-            stem = stem[:460] + " ……"
+        # 清行内材料配图引用（![](figures/..)）——试卷素材图在报告里取不到，
+        # 会渲染成破图/空白；题目自身配图走下面 paper_fig 通道
+        stem = re.sub(r"!\[[^\]]*\]\([^)]*\)", "", stem)
+        # 含 markdown 表格的题干不在 460 处截断（否则表格被切断），放宽上限
+        _has_tbl = bool(re.search(r"(?m)^\s*\|", stem))
+        _limit = 1600 if _has_tbl else 460
+        if len(stem) > _limit:
+            stem = stem[:_limit] + " ……"
         paper_fig = exam.figure_abs(q)
         qlines: list[str] = []
         if paper_fig and "[图]" in stem:
@@ -221,7 +231,46 @@ def render_markdown(exam: ExamView, per_q: dict[int, dict],
         if q.options:
             qlines.append("")
             qlines += [f"- {k}. {v}" for k, v in q.options.items()]
-        w("\n".join(("> " + ln) if ln.strip() else ">" for ln in qlines))
+        # 表格处理（按块）：
+        #   - 数据表（单元格短，如频数分布表）→ 脱离 blockquote 原样渲染成表格
+        #   - 材料表（单元格长，如作文素材的并列段落）→ 摊平成 blockquote 段落，
+        #     否则超长单元格的表格行无法跨页，会撑出整页空白
+        def _is_sep(row: str) -> bool:
+            return bool(re.fullmatch(r"[\s|:\-]+", row.strip()))
+
+        _out: list[str] = []
+        i, nL = 0, len(qlines)
+        while i < nL:
+            ln = qlines[i]
+            if ln.lstrip().startswith("|"):
+                j = i
+                while j < nL and qlines[j].lstrip().startswith("|"):
+                    j += 1
+                block = qlines[i:j]
+                cells = []
+                for row in block:
+                    if _is_sep(row):
+                        continue
+                    cells += [c.strip() for c in row.strip().strip("|").split("|")]
+                maxlen = max((len(c) for c in cells), default=0)
+                if maxlen > 50:  # 材料表 → 摊平
+                    _out.append(">")
+                    for row in block:
+                        if _is_sep(row):
+                            continue
+                        for c in [c.strip() for c in row.strip().strip("|").split("|")]:
+                            if c:
+                                _out.append("> " + c)
+                                _out.append(">")
+                else:            # 数据表 → 保留表格
+                    _out.append("")
+                    _out += block
+                    _out.append("")
+                i = j
+            else:
+                _out.append(("> " + ln) if ln.strip() else ">")
+                i += 1
+        w("\n".join(_out))
         w("")
 
         # —— 标准答案 / 你的答案 ——
@@ -347,7 +396,13 @@ def render_markdown(exam: ExamView, per_q: dict[int, dict],
         w("|---|---|---|")
         for x in wp:
             w(f"| 第{x.get('week','?')}周 | {x.get('focus','')} | {x.get('target','')} |")
-    w(f"\n**下次目标**：{overall.get('nextTarget','')}\n")
+    # 下次目标：把任何"NN分"目标封顶在满分内（防 70 分卷写出 75 分目标）
+    _nt = overall.get("nextTarget", "") or ""
+    _full = int(exam.full_score or 0)
+    if _full:
+        _nt = re.sub(r"(\d{2,3})\s*分",
+                     lambda m: f"{min(int(m.group(1)), _full)}分", _nt)
+    w(f"\n**下次目标**：{_nt}\n")
 
     # 肯定面（放最后，正向收尾）
     pos = overall.get("positives", [])
@@ -392,12 +447,13 @@ def _extract_habits(per_q: dict, exam: ExamView) -> list[str]:
     if len(expr) >= 2:
         out.append(f"**结论不写到「点」上**：{('、'.join(expr))} 都因表述差关键词"
                    f"丢分——背standard结论模板，答主观题对照采分点逐条写")
-    # 4. 兜底：errorType 高频
+    # 4. 兜底：errorType 高频。排除「未作答」——主观题用裁图展示作答时
+    #    student_handwriting 为空会被误判未作答，这里不当习惯统计
     if not out:
         for et, n in Counter(
                 (per_q.get(q.num) or {}).get("errorType", "")
                 for q in lost).most_common():
-            if et and n >= 2:
+            if et and et != "未作答" and n >= 2:
                 out.append(f"「{et}」出现 {n} 次，是本次最该改的习惯")
     return out
 

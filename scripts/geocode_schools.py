@@ -59,7 +59,7 @@ def format_address(result: dict) -> str:
 
 def main():
     # Load school list
-    with open(BASE_DIR / 'schools_2025.json', encoding='utf-8') as f:
+    with open(BASE_DIR / 'schools_2026.json', encoding='utf-8') as f:
         data = json.load(f)
     schools = data.get('schools', data) if isinstance(data, dict) else data
 

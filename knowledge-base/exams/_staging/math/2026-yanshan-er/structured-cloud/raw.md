@@ -54,9 +54,9 @@ A. $\angle N O Q = 40 \circ$ B. $\angle N O P = 140 \circ$ C. $\angle N O P$比$
 
 【详解】解：由题意可得，$\angle N O Q = 140 \circ$，$\angle N O P = 40 \circ$，$\angle M O Q = 40 \circ$，$\angle M O P = 140 \circ$，
 
-∴选项A、B、C都不正确，$\angle M O Q + \angle M O P = 40 \circ + 140 \circ = 180 \circ$，
+$\therefore$选项A、B、C都不正确，$\angle M O Q + \angle M O P = 40 \circ + 140 \circ = 180 \circ$，
 
-∴选项D正确，
+$\therefore$选项D正确，
 
 故选：D
 
@@ -72,9 +72,9 @@ A. $- b < - a < 0$ B. $- a < - b < 0$ C. $a - b < 0$ D. $b - a < - a$
 
 【分析】本题考查了不等式的基本性质，解决本题的关键是根据不等式的基本性质把$a > b > 0$进行判断．
 
-【详解】解：A选项：$\because$$a > b > 0$，根据不等式的基本性质三，可知$- a < - b < 0$，故A选项错误；
+【详解】解：A选项：$\because$ $a > b > 0$，根据不等式的基本性质三，可知$- a < - b < 0$，故A选项错误；
 
-B选项：$\because$$a > b > 0$，根据不等式的基本性质三，可知$- a < - b < 0$，故B选项正确；
+B选项：$\because$ $a > b > 0$，根据不等式的基本性质三，可知$- a < - b < 0$，故B选项正确；
 
 C选项：$\because a > b$，根据不等式的基本性质一，可得：$a - b > 0$，故C选项错误；
 
@@ -108,9 +108,9 @@ A. $m < 1$ B. $m \leq 1$ C. $m > 1$ D. $m \geq 1$
 
 【分析】本题主要考查了根据一元二次方程有实数根求参数以及解一元一次不等式，根据$\Delta \geq 0$即可求出m的取值范围．
 
-【详解】解：∵一元二次方程$x^{2} + 2 x + m = 0$有实数根，
+【详解】解：$\because$一元二次方程$x^{2} + 2 x + m = 0$有实数根，
 
-∴$\Delta = b^{2} - 4 a c = 2^{2} - 4 \times 1 \times m = 4 - 4 m \geq 0$，
+$\therefore$ $\Delta = b^{2} - 4 a c = 2^{2} - 4 \times 1 \times m = 4 - 4 m \geq 0$，
 
 解得：$m \leq 1$．
 
@@ -148,27 +148,27 @@ A. $2 - \sqrt{2}$ B. $\sqrt{2} - 1$ C. $\sqrt{3}$ D. $\sqrt{5}$
 
 【详解】解：在正方形$A B C D$中，$A B = 1$，
 
-∴$A B = A D = C D = 1, \angle B A D = 90 \circ$，$A B \parallel C D$，
+$\therefore$ $A B = A D = C D = 1, \angle B A D = 90 \circ$，$A B \parallel C D$，
 
-∴$B D = \sqrt{A B^{2} + A D^{2}} = \sqrt{2}$，$\angle D E F = \angle B A F$，
+$\therefore$ $B D = \sqrt{A B^{2} + A D^{2}} = \sqrt{2}$，$\angle D E F = \angle B A F$，
 
-∵$D F = D E$，
+$\because$ $D F = D E$，
 
-∴$\angle D E F = \angle D F E$，
+$\therefore$ $\angle D E F = \angle D F E$，
 
-∴$\angle B A F = \angle D F E$，
+$\therefore$ $\angle B A F = \angle D F E$，
 
-∵$\angle D F E = \angle A F B$，
+$\because$ $\angle D F E = \angle A F B$，
 
-∴$\angle A F B = \angle B A F$，
+$\therefore$ $\angle A F B = \angle B A F$，
 
-∴$B F = A B = 1$，
+$\therefore$ $B F = A B = 1$，
 
-∴$D F = B D - F B = \sqrt{2} - 1$，
+$\therefore$ $D F = B D - F B = \sqrt{2} - 1$，
 
-∴$D E = \sqrt{2} - 1$，
+$\therefore$ $D E = \sqrt{2} - 1$，
 
-∴$C E = C D - D E = 2 - \sqrt{2}$．
+$\therefore$ $C E = C D - D E = 2 - \sqrt{2}$．
 
 8. 连接正五边形$A B C D E$的对角线，得到如右图所示图形，中心为点$O$，$B D$与$C E$交于点$F$．连接$O A$与$B E$交于点$G$，连接$O B$，$O C$，$O D$，$O E$．
 
@@ -194,25 +194,25 @@ A. ①②③ B. ①③④ C. ①②④ D. ②③④
 
 【分析】本题考查正五边形性质、圆周角定理、全等三角形判定与性质、三角形内角和及外角性质；解题关键是熟练运用上述知识，结合正五边形的对称性，通过角度和线段关系的推导来判断结论正误．
 
-对于①：利用正五边形内角和公式求出内角，再依据圆周角定理计算$\angle C A D$度数判断对错；对于②：截取$G H = O G$，根据正五边形轴对称性找全等条件证$\triangle B G H ≌\triangle B G O$，$\triangle B H A ≌\triangle B O F$推导线段关系判断；对于③：用三角形外角性质和五边形的性质即可求得$\angle C F D$与$\angle C O D$关；对于④：由圆周角定理求角，结合三角形内角和求$\angle B F C$，依等角对等边判断．
+对于①：利用正五边形内角和公式求出内角，再依据圆周角定理计算$\angle C A D$度数判断对错；对于②：截取$G H = O G$，根据正五边形轴对称性找全等条件证$\triangle B G H \cong\triangle B G O$，$\triangle B H A \cong\triangle B O F$推导线段关系判断；对于③：用三角形外角性质和五边形的性质即可求得$\angle C F D$与$\angle C O D$关；对于④：由圆周角定理求角，结合三角形内角和求$\angle B F C$，依等角对等边判断．
 
 【详解】解：如图：在$G A$上截取$G H = O G$，连接$B H$，$AB，CD，DE，AE$ ，
 
 ![](figures/image112.png)
 
-∵正五边形内角和为$\left(\right. 5 - 2 \left.\right) \times 180 \circ = 540 \circ$，
+$\because$正五边形内角和为$\left(\right. 5 - 2 \left.\right) \times 180 \circ = 540 \circ$，
 
-∴$\angle B A E = \angle A B C = \angle B C D = \angle C D E = \angle D E A = \frac{540 \circ}{5} = 108 \circ$．
+$\therefore$ $\angle B A E = \angle A B C = \angle B C D = \angle C D E = \angle D E A = \frac{540 \circ}{5} = 108 \circ$．
 
-∵$A B C D E$是正五边形，
+$\because$ $A B C D E$是正五边形，
 
-∴$CD^{⏜}=DE^{⏜}=EA^{⏜}=AB^{⏜}=BC^{⏜}$，$\angle C A D = \frac{1}{2} \angle C O D$，
+$\therefore$ $CD^{⏜}=DE^{⏜}=EA^{⏜}=AB^{⏜}=BC^{⏜}$，$\angle C A D = \frac{1}{2} \angle C O D$，
 
-∴正五边形中心角$\angle C O D = \frac{360 \circ}{5} = 72 \circ$，$\angle C A D = \frac{1}{2} \angle C O D = 36 \circ$，故①正确；．
+$\therefore$正五边形中心角$\angle C O D = \frac{360 \circ}{5} = 72 \circ$，$\angle C A D = \frac{1}{2} \angle C O D = 36 \circ$，故①正确；．
 
-∵五边形$A B C D E$是正五边形，
+$\because$五边形$A B C D E$是正五边形，
 
-∴$O A$平分$\angle B A E$，$O B$平分$\angle A B C$，$\angle O A B = \angle O B A = \frac{1}{2} \angle B A E = 54 \circ$，$O A = O B$，$A B = A E$，
+$\therefore$ $O A$平分$\angle B A E$，$O B$平分$\angle A B C$，$\angle O A B = \angle O B A = \frac{1}{2} \angle B A E = 54 \circ$，$O A = O B$，$A B = A E$，
 
 在$\triangle A B E$中，根据三角形内角和定理，$\angle A B E = \angle A E B = \frac{180 \circ - \angle B A E}{2} = \frac{180 - 108}{2} = 36 \circ$．
 
@@ -222,61 +222,61 @@ $∠AGB=180°−∠OAB−∠ABE=180°−54°−36°=90°$ ，
 
 在$\triangle B G H$和$\triangle B G O$中：
 
-$\left\{GH=OG∠BGH=∠BGO=90°BG=BG\right$
+$\left\{GH=OG∠BGH=∠BGO=90°BG=BG\right.$
 
-∴$△BGH≌△BGO\left(SAS\right)$，
+$\therefore$ $△BGH\cong△BGO\left(SAS\right)$，
 
-∴$B H = B O$，$\angle H B G = \angle O B G$，$\angle B H G = \angle B O G$．
+$\therefore$ $B H = B O$，$\angle H B G = \angle O B G$，$\angle B H G = \angle B O G$．
 
 由正五边形性质可知，$\angle A O B = \angle B O C = \angle C O D = \angle D O E = \angle E O A = 72 \circ$，$\angle O B C = 54 \circ$，$∠BCF=180°−∠BAE=180°−108°=72°$ ，$\angle C B D = 36 \circ$．
 
-∵$\angle A O B = 72 \circ$，$\angle O A B = \angle O B A = 54 \circ$，$\angle O B C = 54 \circ$，
+$\because$ $\angle A O B = 72 \circ$，$\angle O A B = \angle O B A = 54 \circ$，$\angle O B C = 54 \circ$，
 
-∴$\angle A B O = \angle O B C$．
+$\therefore$ $\angle A B O = \angle O B C$．
 
 已证$B H = B O$，
 
-∵$O A = O B$，
+$\because$ $O A = O B$，
 
-∴$B H = O A$．
+$\therefore$ $B H = O A$．
 
-∵$\angle B H G = \angle B O G$，
+$\because$ $\angle B H G = \angle B O G$，
 
-∴$\angle B H A = \angle B O F$．
+$\therefore$ $\angle B H A = \angle B O F$．
 
-又∵$∠BFO=∠BDA+∠DAF=∠BDA+\frac{1}{2}∠DAC=36°+18°=54°$ ，$\angle B A H = 54 \circ$．
+又$\because$ $∠BFO=∠BDA+∠DAF=∠BDA+\frac{1}{2}∠DAC=36°+18°=54°$ ，$\angle B A H = 54 \circ$．
 
-∴$\angle B F O = \angle B A H$，
+$\therefore$ $\angle B F O = \angle B A H$，
 
 在$\triangle B H A$和$\triangle B O F$中：
 
-$\left\{∠BHA=∠BOF∠BAH=∠BFOBH=BO\right$．
+$\left\{∠BHA=∠BOF∠BAH=∠BFOBH=BO\right.$．
 
-∴$△BHA≌△BOF\left(AAS\right)$，
+$\therefore$ $△BHA\cong△BOF\left(AAS\right)$，
 
-∴$A H = O F$．
+$\therefore$ $A H = O F$．
 
-∵$A G = O G + A H$，
+$\because$ $A G = O G + A H$，
 
-∴$O G + O F = A G$；故②正确．
+$\therefore$ $O G + O F = A G$；故②正确．
 
-∵$\angle C F D$是$\triangle B C F$的外角，$\angle C F D = \angle C B D + \angle B C E = \angle C B D + \angle B C F = 36 \circ + 72 \circ = 108 \circ$，
+$\because$ $\angle C F D$是$\triangle B C F$的外角，$\angle C F D = \angle C B D + \angle B C E = \angle C B D + \angle B C F = 36 \circ + 72 \circ = 108 \circ$，
 
-∵$\angle C O D = 72 \circ$，
+$\because$ $\angle C O D = 72 \circ$，
 
-∴$2 \angle C O D = 2 \times 72 \circ = 144 \circ$，
+$\therefore$ $2 \angle C O D = 2 \times 72 \circ = 144 \circ$，
 
-∴$\angle C F D \neq 2 \angle C O D$，故③错误．
+$\therefore$ $\angle C F D \neq 2 \angle C O D$，故③错误．
 
-∵$\angle C B D = \frac{1}{2} \angle C O D = 36 \circ$，$\angle B C D = 108 \circ$，
+$\because$ $\angle C B D = \frac{1}{2} \angle C O D = 36 \circ$，$\angle B C D = 108 \circ$，
 
 在$\triangle B C F$中，$\angle B F C = 180 \circ - \angle C B D - \angle B C E$，$∠BCE=∠BCF=72°$ ，
 
-∴$∠BFC=180°-36°-72°=72°$ ．
+$\therefore$ $∠BFC=180°-36°-72°=72°$ ．
 
 则$\angle B C F = \angle B F C$，
 
-∴$B C = B F$，故④正确．
+$\therefore$ $B C = B F$，故④正确．
 
 综上①②④正确．
 
@@ -294,9 +294,9 @@ $\left\{∠BHA=∠BOF∠BAH=∠BFOBH=BO\right$．
 
 【详解】解：$\because$代数式$\frac{3}{x + 1}$有意义，
 
-$\therefore$$x + 1 \neq 0$，
+$\therefore$ $x + 1 \neq 0$，
 
-$\therefore$$x \neq - 1$，
+$\therefore$ $x \neq - 1$，
 
 故答案为：$x \neq - 1$．
 
@@ -324,11 +324,11 @@ $\therefore$$x \neq - 1$，
 
 【分析】先分别求出$\sqrt{5}$与$\sqrt{17}$在哪两个相邻的整数之间，依此即可得到答案．
 
-【详解】解：∵2＜$\sqrt{5}$＜3，4＜$\sqrt{17}$＜5，
+【详解】解：$\because$2＜$\sqrt{5}$＜3，4＜$\sqrt{17}$＜5，
 
-∴所有比$\sqrt{17}$小且比$\sqrt{5}$大的整数有3，4，
+$\therefore$所有比$\sqrt{17}$小且比$\sqrt{5}$大的整数有3，4，
 
-∴这个整数可以是3，
+$\therefore$这个整数可以是3，
 
 故答案为：3（答案不唯一）．
 
@@ -342,13 +342,13 @@ $\therefore$$x \neq - 1$，
 
 【解析】
 
-【分析】由AE平分∠CAD，可得∠CAB=∠DAB，由AB共用从边上考虑，只能添加AC=AD，可证$\triangle A B C \approx \triangle A B D \left(S,A,S\right)$，从角上考虑，可添加$\angle C = \angle D$或$\angle C B A = \angle D B A$$\triangle A B C \approx \triangle A B D \left(A,A,S\right)$，$\triangle A B C \approx \triangle A B D \left(A,S,A\right)$即可．
+【分析】由AE平分∠CAD，可得∠CAB=∠DAB，由AB共用从边上考虑，只能添加AC=AD，可证$\triangle A B C \approx \triangle A B D \left(S,A,S\right)$，从角上考虑，可添加$\angle C = \angle D$或$\angle C B A = \angle D B A$ $\triangle A B C \approx \triangle A B D \left(A,A,S\right)$，$\triangle A B C \approx \triangle A B D \left(A,S,A\right)$即可．
 
 【详解】解：因为AE平分∠CAD，
 
 所以∠CAB=∠DAB，
 
-又∵AB=AB，
+又$\because$AB=AB，
 
 已具备一边一角，
 
@@ -356,7 +356,7 @@ $\therefore$$x \neq - 1$，
 
 在△ABC和△ABD中，
 
-$\left{\begin{matrix} A C = A D \\ \angle C A B = \angle D A B \\ A B = A B \end{matrix}\right$，
+$\left\{\begin{matrix} A C = A D \\ \angle C A B = \angle D A B \\ A B = A B \end{matrix}\right.$，
 
 $\triangle A B C \approx \triangle A B D \left(S,A,S\right)$，
 
@@ -366,7 +366,7 @@ $\triangle A B C \approx \triangle A B D \left(S,A,S\right)$，
 
 在△ABC和△ABD中，
 
-$\left{\begin{matrix} \angle C = \angle D \\ \angle C A B = \angle D A B \\ A B = A B \end{matrix}\right$，
+$\left\{\begin{matrix} \angle C = \angle D \\ \angle C A B = \angle D A B \\ A B = A B \end{matrix}\right.$，
 
 $\triangle A B C \approx \triangle A B D \left(A,A,S\right)$，
 
@@ -374,7 +374,7 @@ $\triangle A B C \approx \triangle A B D \left(A,A,S\right)$，
 
 在△ABC和△ABD中，
 
-$\left{\begin{matrix} \angle C B A = \angle D B A \\ A B = A B \\ \angle C A B = \angle D A B \end{matrix}\right$，
+$\left\{\begin{matrix} \angle C B A = \angle D B A \\ A B = A B \\ \angle C A B = \angle D A B \end{matrix}\right.$，
 
 $\triangle A B C \approx \triangle A B D \left(A,S,A\right)$，
 
@@ -406,9 +406,9 @@ $\because M$，$N$分别为$B C$，$C D$的中点，
 
 $\therefore M N$是$\triangle C D B$是中位线，
 
-$\therefore$$\frac{M N}{B D} = \frac{1}{2}$，
+$\therefore$ $\frac{M N}{B D} = \frac{1}{2}$，
 
-$\therefore$$\frac{M N}{A C} = \frac{1}{2}$，
+$\therefore$ $\frac{M N}{A C} = \frac{1}{2}$，
 
 故答案为：$\frac{1}{2}$．
 
@@ -479,23 +479,23 @@ $8$
 
 （2）设选出的$n$盏灯中原有$x$盏亮灯，表示出拍灯前选出的组和另一组中亮灯的数量，进而表示出拍灯后选出的组和另一组中亮灯的数量，根据拍灯规则得到拍完后两组的亮灯数，根据相等条件列等式，消去变量得到$n$的值．
 
-【详解】解：（1）∵一共有40盏小灯，
+【详解】解：（1）$\because$一共有40盏小灯，
 
-∴每组有$40 \div 2 = 20$盏小灯
+$\therefore$每组有$40 \div 2 = 20$盏小灯
 
-∵一共有15盏灯亮，第一组有$5$盏灯亮，
+$\because$一共有15盏灯亮，第一组有$5$盏灯亮，
 
-∴第一组有$20 - 5 = 15$盏灯暗，第二组有$15 - 5 = 10$盏灯亮，
+$\therefore$第一组有$20 - 5 = 15$盏灯暗，第二组有$15 - 5 = 10$盏灯亮，
 
-∵只拍第一组灯，第二组亮灯数不变，且要使两组中亮着的小灯数一样多，
+$\because$只拍第一组灯，第二组亮灯数不变，且要使两组中亮着的小灯数一样多，
 
-∴拍完灯后第一组有10盏灯亮，
+$\therefore$拍完灯后第一组有10盏灯亮，
 
-∵要使拍灯盏数最少，
+$\because$要使拍灯盏数最少，
 
-∴所拍的灯都是暗的灯，使它们都变亮后满足第一组有10盏灯亮，
+$\therefore$所拍的灯都是暗的灯，使它们都变亮后满足第一组有10盏灯亮，
 
-∴最少需拍$10 - 5 = 5$盏灯；
+$\therefore$最少需拍$10 - 5 = 5$盏灯；
 
 （2）设选出的$n$盏灯中原有$x$盏亮灯，则剩余一组的原有亮灯数为$\left(15,-,x\right)$，
 
@@ -503,9 +503,9 @@ $8$
 
 因此拍完后选出组的亮灯数为$\left(n,-,x\right)$，
 
-∵拍完后两组中亮着的小灯数一样多
+$\because$拍完后两组中亮着的小灯数一样多
 
-∴$n - x = 15 - x$
+$\therefore$ $n - x = 15 - x$
 
 解得$n = 15$．
 
@@ -527,7 +527,7 @@ $= 3 \sqrt{2} + 2 + 3 - 3 \sqrt{2}$
 
 $= 5$．
 
-18. 解不等式组：$\left{\begin{matrix} 4 x - 7 > x - 1 \\ \frac{3 x - 5}{2} < x \end{matrix}\right$
+18. 解不等式组：$\left\{\begin{matrix} 4 x - 7 > x - 1 \\ \frac{3 x - 5}{2} < x \end{matrix}\right.$
 
 【答案】$2 < x < 5$
 
@@ -535,13 +535,13 @@ $= 5$．
 
 【分析】本题考查的是解一元一次不等式组，正确求出每一个不等式解集是基础，熟知“同大取大；同小取小；大小小大中间找；大大小小找不到”的原则是解答此题的关键．分别求出每一个不等式的解集，根据口诀：同大取大、同小取小、大小小大中间找、大大小小找不到确定不等式组的解集．
 
-【详解】解：原不等式组为$\left{\begin{matrix} 4 x - 7 > x - 1 \textcircled{1} \\ \frac{3 x - 5}{2} < x \textcircled{2} \end{matrix}\right$，
+【详解】解：原不等式组为$\left\{\begin{matrix} 4 x - 7 > x - 1 \textcircled{1} \\ \frac{3 x - 5}{2} < x \textcircled{2} \end{matrix}\right.$，
 
 解不等式①，得$x > 2$．
 
 解不等式②，得$x < 5$．
 
-∴原不等式组的解集为$2 < x < 5$．
+$\therefore$原不等式组的解集为$2 < x < 5$．
 
 19. 已知$x - y - 3 = 0$，求分式$\frac{x^{2} - 2 x y + y^{2}}{2 x - 2 y}$的值．
 
@@ -557,11 +557,11 @@ $= \frac{\left(\right. x - y \left.\right)^{2}}{2 \left(\right. x - y \left.\rig
 
 $= \frac{x - y}{2}$．
 
-∵$x - y - 3 = 0$，
+$\because$ $x - y - 3 = 0$，
 
-∴$x - y = 3$．
+$\therefore$ $x - y = 3$．
 
-∴原式$= \frac{x - y}{2} = \frac{3}{2}$．
+$\therefore$原式$= \frac{x - y}{2} = \frac{3}{2}$．
 
 20. 如图，在$\triangle A B C$中，$B C = 2 A B$，$D$，$E$分别为$B C$，$A C$的中点，过点$A$作$A F \parallel B C$交$D E$的延长线于点$F$．
 
@@ -577,47 +577,47 @@ $= \frac{x - y}{2}$．
 
 【分析】（1）根据已知条件得出$B D = \frac{1}{2} B C$，$E D \parallel A B$，$E D = \frac{1}{2} A B$，可得四边形$A B D F$是平行四边形．进而根据已知条件得出$A B = B D$，即可得出结论；
 
-（2）连接$A D$，得出$\triangle A D F$是等边三角形．在$\text{Rt}\triangle A E F$中，解直角三角形即可求解．
+（2）连接$A D$，得出$\triangle A D F$是等边三角形．在$Rt\triangle A E F$中，解直角三角形即可求解．
 
 【小问1详解】
 
-证明：∵$D$，$E$分别为$B C$，$A C$的中点，
+证明：$\because$ $D$，$E$分别为$B C$，$A C$的中点，
 
-∴$B D = \frac{1}{2} B C$，$E D \parallel A B$，$E D = \frac{1}{2} A B$．
+$\therefore$ $B D = \frac{1}{2} B C$，$E D \parallel A B$，$E D = \frac{1}{2} A B$．
 
-又∵$A F \parallel B C$，
+又$\because$ $A F \parallel B C$，
 
-∴四边形$A B D F$是平行四边形．
+$\therefore$四边形$A B D F$是平行四边形．
 
-∵$B C = 2 A B$，
+$\because$ $B C = 2 A B$，
 
-∴$A B = \frac{1}{2} B C$．
+$\therefore$ $A B = \frac{1}{2} B C$．
 
-∴$A B = B D$．
+$\therefore$ $A B = B D$．
 
-∴四边形$A B D F$是菱形．
+$\therefore$四边形$A B D F$是菱形．
 
 【小问2详解】
 
 解：连接$A D$，如图．
 
-∵四边形$A B D F$是菱形，
+$\because$四边形$A B D F$是菱形，
 
-∴$\angle F = \angle B = 60 \circ$，$A F = D F = A B = 2$．
+$\therefore$ $\angle F = \angle B = 60 \circ$，$A F = D F = A B = 2$．
 
 ![](figures/image267.png)
 
-∴$\triangle A D F$是等边三角形．
+$\therefore$ $\triangle A D F$是等边三角形．
 
-∵$E D = \frac{1}{2} A B = \frac{1}{2} D F$，
+$\because$ $E D = \frac{1}{2} A B = \frac{1}{2} D F$，
 
-∴$E F = E D$．
+$\therefore$ $E F = E D$．
 
-∴$A E \bot D F$．
+$\therefore$ $A E \bot D F$．
 
-在$\text{Rt}\triangle A E F$中，$\angle F = 60 \circ$，$A F = 2$，
+在$Rt\triangle A E F$中，$\angle F = 60 \circ$，$A F = 2$，
 
-∴$A E = A F \cdot sin F = 2 \times \frac{\sqrt{3}}{2} = \sqrt{3}$．
+$\therefore$ $A E = A F \cdot sin F = 2 \times \frac{\sqrt{3}}{2} = \sqrt{3}$．
 
 【点睛】本题考查了中位线的性质，菱形的性质与判定，解直角三角形，熟练掌握菱形的性质与判定是解题的关键．
 
@@ -691,7 +691,7 @@ $\therefore$结合图象可得，$2 \leq m \leq 3$．
 
 解得$x = 550$，
 
-∴所走高速公路的路程为550公里．
+$\therefore$所走高速公路的路程为550公里．
 
 23. 为了解某年级200名学生A，B两门课程的学习情况，从中随机抽取20名学生进行测试，获得了他们的成绩（百分制），并对数据（成绩）进行整理描述和分析．下面给出了部分信息．
 
@@ -744,21 +744,21 @@ c．A，B两门课程成绩的平均数、中位数、众数如下：
 
 【小问1详解】
 
-解：∵A课程总人数为20，
+解：$\because$A课程总人数为20，
 
-∴中位数为第10、11个数据的平均数，而第10、11个数据均在$80 \leq x < 90$这一组，
+$\therefore$中位数为第10、11个数据的平均数，而第10、11个数据均在$80 \leq x < 90$这一组，
 
-∴中位数在$80 \leq x < 90$这一组，
+$\therefore$中位数在$80 \leq x < 90$这一组，
 
-∵$80 \leq x < 90$这一组的是：80，81，83，84，85，85，85，前三组共$1 + 3 + 4 = 8$个数据，
+$\because$ $80 \leq x < 90$这一组的是：80，81，83，84，85，85，85，前三组共$1 + 3 + 4 = 8$个数据，
 
-∴A课程的中位数为$\frac{\text{81}+\text{83}}{2} = 82$ ，即$m = 82$；
+$\therefore$A课程的中位数为$\frac{\text{81}+\text{83}}{2} = 82$ ，即$m = 82$；
 
 【小问2详解】
 
-解：∵该学生的成绩大于A课程的中位数，而小于B课程的中位数，
+解：$\because$该学生的成绩大于A课程的中位数，而小于B课程的中位数，
 
-∴这名学生成绩排名更靠前的课程是A，
+$\therefore$这名学生成绩排名更靠前的课程是A，
 
 故答案为：A．
 
@@ -792,7 +792,7 @@ c．A，B两门课程成绩的平均数、中位数、众数如下：
 
 【分析】（1）先利用圆周角定理证得$\angle A O B = 90 \circ$，再根据平行线的性质，求得$\angle P A O = 90 \circ$，然后利用切线的判定得出结论；
 
-（2）先证明$\triangle O B D ∽ \triangle A P D$，再根据相似三角形的性质，列出比例式，设$O D = k$，接着用$k$表示出$O B$，然后利用勾股定理求得$B D$，代入比例式中，求得$P D$，再利用线段的和求得$B P$，得到关于$k$的方程，求出$k$，最后求出$O B$．
+（2）先证明$\triangle O B D \sim \triangle A P D$，再根据相似三角形的性质，列出比例式，设$O D = k$，接着用$k$表示出$O B$，然后利用勾股定理求得$B D$，代入比例式中，求得$P D$，再利用线段的和求得$B P$，得到关于$k$的方程，求出$k$，最后求出$O B$．
 
 【小问1详解】
 
@@ -808,7 +808,7 @@ $\because P A \parallel O B$，
 
 $\therefore \angle P A O = \angle A O B = 90 \circ$，
 
-∵$A O$是半径，
+$\because$ $A O$是半径，
 
 $\therefore P A$是$\bigodot O$的切线．
 
@@ -820,9 +820,9 @@ $\because P A \parallel O B$，
 
 $\therefore \angle O B P = \angle P$，
 
-∵$\angle B D O = \angle A D P$，
+$\because$ $\angle B D O = \angle A D P$，
 
-$\therefore \triangle O B D ∽ \triangle A P D$．
+$\therefore \triangle O B D \sim \triangle A P D$．
 
 $\therefore \frac{O D}{A D} = \frac{B D}{P D} = \frac{O B}{A P}$，
 
@@ -836,7 +836,7 @@ $\therefore \frac{O D}{O A} = \frac{O D}{O B} = \frac{1}{3}$，
 
 设$O D = k$，则$O B = 3 k$，
 
-∴在$\text{Rt}\triangle O B D$中，$B D = \sqrt{O B^{2} + O D^{2}} = \sqrt{10} k$，
+$\therefore$在$Rt\triangle O B D$中，$B D = \sqrt{O B^{2} + O D^{2}} = \sqrt{10} k$，
 
 $\because \frac{B D}{P D} = \frac{1}{2}$，
 
@@ -939,27 +939,27 @@ $\therefore$当绿茶茶水的放置时间约为$5 . 5 min$时，其饮用口感
 
 【小问1详解】
 
-解：∵抛物线$y = x^{2} - 2 t x$，
+解：$\because$抛物线$y = x^{2} - 2 t x$，
 
-∴抛物线的对称轴为直线$x = - \frac{- 2 t}{2} = t$，
+$\therefore$抛物线的对称轴为直线$x = - \frac{- 2 t}{2} = t$，
 
 当$x = t$时，$y = t^{2} - 2 t^{2} = - t^{2}$，
 
-∴顶点坐标为$\left(t,,,-,t^{2}\right)$．
+$\therefore$顶点坐标为$\left(t,,,-,t^{2}\right)$．
 
 【小问2详解】
 
-解：①∵点$A \left(1,,y\right)$，点$B$坐标为$\left(t+3,y\right)$，
+解：①$\because$点$A \left(1,,y\right)$，点$B$坐标为$\left(t+3,y\right)$，
 
-∴$A B \parallel x$，$t + 3 \neq 1$，即$t \neq - 2$，
+$\therefore$ $A B \parallel x$，$t + 3 \neq 1$，即$t \neq - 2$，
 
-∵点$A \left(1,,y\right)$为抛物线$y = x^{2} - 2 t x$上一点，
+$\because$点$A \left(1,,y\right)$为抛物线$y = x^{2} - 2 t x$上一点，
 
-∴点$A \left(1,,y\right)$关于抛物线的对称点为$\left(2t−1,{y}_{1}\right)$，
+$\therefore$点$A \left(1,,y\right)$关于抛物线的对称点为$\left(2t−1,{y}_{1}\right)$，
 
-∵线段$A B$与抛物线有且只有1个公共点，
+$\because$线段$A B$与抛物线有且只有1个公共点，
 
-∴$2 t - 1 > t + 3$或$2 t - 1 \leq 1$，
+$\therefore$ $2 t - 1 > t + 3$或$2 t - 1 \leq 1$，
 
 解得$t > 4$或$t \leq 1$，
 
@@ -967,19 +967,19 @@ $\therefore$当绿茶茶水的放置时间约为$5 . 5 min$时，其饮用口感
 
 ②把点$A \left(1,,y\right)$代入抛物线得出$y = 1^{2} - 2 t = 1 - 2 t$，
 
-∴$A\left(1,1−2t\right)$，
+$\therefore$ $A\left(1,1−2t\right)$，
 
-∴$B\left(t+3,1−2t\right)$，
+$\therefore$ $B\left(t+3,1−2t\right)$，
 
-∵过点$B$作$x$轴的垂线交抛物线于点$C$，
+$\because$过点$B$作$x$轴的垂线交抛物线于点$C$，
 
-∴点C的横坐标为$t + 3$，
+$\therefore$点C的横坐标为$t + 3$，
 
 把$t + 3$代入$y = x^{2} - 2 t x$，得：$y={\left(t+3\right)}^{2}−2t\left(t+3\right)=−{t}^{2}+9$ ，
 
-∴$C\left(t+3,−{t}^{2}+9\right)$，
+$\therefore$ $C\left(t+3,−{t}^{2}+9\right)$，
 
-∴$BC=\left|−{t}^{2}+9−\left(1−2t\right)\right|=\left|−{t}^{2}+9−1+2t\right|=\left|−{t}^{2}+2t+8\right|$，
+$\therefore$ $BC=\left|−{t}^{2}+9−\left(1−2t\right)\right|=\left|−{t}^{2}+9−1+2t\right|=\left|−{t}^{2}+2t+8\right|$，
 
 $y=\left|−{t}^{2}+2t+8\right|=\left|−\left(t+2\right)\left(t−4\right)\right|$，该函数与x轴的交点坐标为$\left(-,2,0\right)$和$\left(4,0\right)$，
 
@@ -989,9 +989,9 @@ $y=\left|−{t}^{2}+2t+8\right|=\left|−\left(t+2\right)\left(t−4\right)\righ
 
 当$t < - 2$时和$1 < t < 4$时，线段$B C$的长随$t$的增大而减小．
 
-∵在①的条件下，则$t \leq 1$且$t \neq - 2$或$t > 4$．
+$\because$在①的条件下，则$t \leq 1$且$t \neq - 2$或$t > 4$．
 
-∴$t < - 2$时，线段$B C$的长随$t$的增大而减小．
+$\therefore$ $t < - 2$时，线段$B C$的长随$t$的增大而减小．
 
 ![](figures/image418.png)
 
@@ -1019,7 +1019,7 @@ $y=\left|−{t}^{2}+2t+8\right|=\left|−\left(t+2\right)\left(t−4\right)\righ
 
 ![](figures/image432.png)
 
-证明：∵A，C，D共线，
+证明：$\because$A，C，D共线，
 
 $\therefore \angle B C A = 180 \circ - \left(180,\circ,-,\alpha\right) = \alpha$．
 
@@ -1027,7 +1027,7 @@ $\therefore \angle B C A = \angle B A C$，
 
 $\therefore A B = B C$．
 
-∵线段$B C$绕点C旋转得到线段$C D$，
+$\because$线段$B C$绕点C旋转得到线段$C D$，
 
 $\therefore B C = C D$．
 
@@ -1049,7 +1049,7 @@ $\therefore A D = D E$．
 
 ![](figures/image441.png)
 
-∵$\angle B A C = 45 \circ$，
+$\because$ $\angle B A C = 45 \circ$，
 
 $\therefore \angle B C D = 135 \circ$．
 
@@ -1065,9 +1065,9 @@ $\therefore \angle 1 = \angle 2$．
 
 在$\triangle A D B$和$\triangle E D Q$中，
 
-$\left{\begin{matrix} A D = E D \\ \angle 1 = \angle 2 \\ B D = D Q \end{matrix}\right$，
+$\left\{\begin{matrix} A D = E D \\ \angle 1 = \angle 2 \\ B D = D Q \end{matrix}\right.$，
 
-$\therefore \triangle A D B ≌\triangle E D Q \left(S,A,S\right)$．
+$\therefore \triangle A D B \cong\triangle E D Q \left(S,A,S\right)$．
 
 $\therefore A B = E Q$，$\angle D E Q = \angle A = 45 \circ$．
 
@@ -1079,13 +1079,13 @@ $\therefore \angle B E Q = 90 \circ$，
 
 在$\triangle E B C$和$\triangle B E Q$中，
 
-$\left{\begin{matrix} B E = E B \\ \angle B E Q = \angle E B C \\ E Q = B C \end{matrix}\right$，
+$\left\{\begin{matrix} B E = E B \\ \angle B E Q = \angle E B C \\ E Q = B C \end{matrix}\right.$，
 
-$\therefore \triangle E B C ≌\triangle B E Q \left(S,A,S\right)$，
+$\therefore \triangle E B C \cong\triangle B E Q \left(S,A,S\right)$，
 
 $\therefore B Q = E C$，
 
-∵在$\text{Rt}\triangle B Q D$中，$B D = D Q$，
+$\because$在$Rt\triangle B Q D$中，$B D = D Q$，
 
 $\therefore B Q = \sqrt{2} B D$．
 
@@ -1121,11 +1121,11 @@ $\therefore C E = \sqrt{2} B D$．
 
 （2）根据定义可得$\bigodot O$在其“直盖点”E为直角顶点的直角内部，如图，引$\bigodot O$两条切线相交于点P，
 
-∵$\bigodot O$的半径为$\sqrt{2}$，
+$\because$ $\bigodot O$的半径为$\sqrt{2}$，
 
-∴当两条切线夹角为90°时，$O P = \sqrt{\left(\sqrt{2}\right)^{2} + \left(\sqrt{2}\right)^{2}} = 2$．
+$\therefore$当两条切线夹角为90°时，$O P = \sqrt{\left(\sqrt{2}\right)^{2} + \left(\sqrt{2}\right)^{2}} = 2$．
 
-∴$\bigodot O$的直盖点在以O为圆心，以2为半径的圆外．
+$\therefore$ $\bigodot O$的直盖点在以O为圆心，以2为半径的圆外．
 
 作以O为圆心，2为半径的圆与直线$y = - 2 x + 4$交于$E_{1}$、$E_{2}$两点，
 
@@ -1133,19 +1133,19 @@ $\therefore C E = \sqrt{2} B D$．
 
 由勾股定理得$x_{2} + \left(\left(-,2,x,+,4\right)\right)^{2} = 2^{2}$，解得$x_{1} = \frac{6}{5}$，$x_{2} = 2$，
 
-∴点E的横坐标的取值范围为$x < \frac{6}{5}$或$x > 2$；
+$\therefore$点E的横坐标的取值范围为$x < \frac{6}{5}$或$x > 2$；
 
 ![](figures/image489.png)
 
-（3）∵$\sqrt{\left(\left(3,\sqrt{2}\right)\right)^{2} + \left(\left(3,\sqrt{2}\right)\right)^{2}} = 6$，
+（3）$\because$ $\sqrt{\left(\left(3,\sqrt{2}\right)\right)^{2} + \left(\left(3,\sqrt{2}\right)\right)^{2}} = 6$，
 
-∴由（2）得$\bigodot T$的“直盖点”在以6为半径的圆外，
+$\therefore$由（2）得$\bigodot T$的“直盖点”在以6为半径的圆外，
 
-∴当线段GH全部在半径为6的圆内时不能满足题意，
+$\therefore$当线段GH全部在半径为6的圆内时不能满足题意，
 
 ①当圆心T在线段GH左侧时，如图，作以T为圆心，6为半径的圆，当线段GH全部在大圆内时，设此时的圆心为$T_{1}$，此时大圆过点G，易得圆心$T_{1}$的坐标为$\left(-,4,0\right)$；
 
-②当圆心T在线段GH右侧时，如图，作以T为圆心，6为半径的圆，当线段GH全部被大圆包含时，设此时的圆心为$T_{2}$，此时大圆过点H，在$\text{Rt} \triangle O H T_{2}$中，由勾股定理得$O T_{2} = \sqrt{H T_{2}^{2} - O H^{2}} = \sqrt{6^{2} - 4^{2}} = 2 \sqrt{5}$，则$T_{2}$的坐标为$\left(2,\sqrt{5},,0\right)$；
+②当圆心T在线段GH右侧时，如图，作以T为圆心，6为半径的圆，当线段GH全部被大圆包含时，设此时的圆心为$T_{2}$，此时大圆过点H，在$Rt \triangle O H T_{2}$中，由勾股定理得$O T_{2} = \sqrt{H T_{2}^{2} - O H^{2}} = \sqrt{6^{2} - 4^{2}} = 2 \sqrt{5}$，则$T_{2}$的坐标为$\left(2,\sqrt{5},,0\right)$；
 
 综上所述，观察图象可得圆心T的横坐标$x_{T}$的取值范围是$x_{T} < - 4$或$x_{T} > 2 \sqrt{5}$．
 

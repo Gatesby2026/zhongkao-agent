@@ -243,7 +243,7 @@
       "number": 16,
       "type": "fill_blank",
       "score": 2,
-      "stem": "某校举办的创新能力大赛共有5个环节．九年级代表队有$A$，$B$，$C$，$D$，$E$五名选手，每个人完成一个环节后获得的积分如下表所示：\n| 选手 | 积分（单位：分） |\n|---|---|---|---|---|---|\n|  | 环节1 | 环节2 | 环节3 | 环节4 | 环节5 |\n| A | 16 | 17 | 17 | 19 | 19 |\n| B | 23 | 24 | 22 | 25 | 22 |\n| C | 16 | 11 | 12 | 15 | 14 |\n| D | 13 | 9 | 13 | 11 | 11 |\n| E | 16 | 15 | 13 | 17 | 17 |\n现要求每个人只完成一个环节．\n（1）若$A$，$B$，$C$，$D$，$E$五名选手分别完成环节1，环节2，环节3，环节4，环节5，则九年级代表队共获得________分；\n（2）若九年级代表队要获得最多积分，则选手$B$应完成环节________．",
+      "stem": "某校举办的创新能力大赛共有5个环节．九年级代表队有$A$，$B$，$C$，$D$，$E$五名选手，每个人完成一个环节后获得的积分如下表所示：\n| 选手 | 积分（单位：分） |  |  |  |  |\n|---|---|---|---|---|---|\n|  | 环节1 | 环节2 | 环节3 | 环节4 | 环节5 |\n| A | 16 | 17 | 17 | 19 | 19 |\n| B | 23 | 24 | 22 | 25 | 22 |\n| C | 16 | 11 | 12 | 15 | 14 |\n| D | 13 | 9 | 13 | 11 | 11 |\n| E | 16 | 15 | 13 | 17 | 17 |\n现要求每个人只完成一个环节．\n（1）若$A$，$B$，$C$，$D$，$E$五名选手分别完成环节1，环节2，环节3，环节4，环节5，则九年级代表队共获得________分；\n（2）若九年级代表队要获得最多积分，则选手$B$应完成环节________．",
       "options": null,
       "has_image_options": false,
       "source_page": 1,
@@ -255,7 +255,7 @@
       "number": 17,
       "type": "problem_solving",
       "score": 5,
-      "stem": "计算：$\\sqrt{8} + \\left(\\frac{1}{4}\\right)^{- 1} - 2026^{0} - 2 \\text{cos} 45 \\circ$．",
+      "stem": "计算：$\\sqrt{8} + \\left(\\frac{1}{4}\\right)^{- 1} - 2026^{0} - 2 \\cos 45 \\circ$．",
       "options": null,
       "has_image_options": false,
       "source_page": 1,
@@ -267,7 +267,7 @@
       "number": 18,
       "type": "problem_solving",
       "score": 5,
-      "stem": "解不等式组：$\\left{\\begin{matrix} 2 x + 3 \\geq x + 6, \\\\ \\frac{2 x + 1}{3} > x - 1 . \\end{matrix}\\right$",
+      "stem": "解不等式组：$\\left\\{\\begin{matrix} 2 x + 3 \\geq x + 6, \\\\ \\frac{2 x + 1}{3} > x - 1 . \\end{matrix}\\right.$",
       "options": null,
       "has_image_options": false,
       "source_page": 1,
@@ -291,7 +291,7 @@
       "number": 20,
       "type": "problem_solving",
       "score": 6,
-      "stem": "如图，在$\\triangle A B C$中，$A B = B C$，$B D$为$A C$边上的高，$E$为$A B$边的中点，$E F \\bot B C$，垂足为$F$，点$H$在线段$F C$上，$F H = D E$．\n\n（1）求证：四边形$D E F H$是矩形；\n（2）若$B C = 10$，$\\text{sin} \\angle A B C = \\frac{4}{5}$，求$C D$的长．",
+      "stem": "如图，在$\\triangle A B C$中，$A B = B C$，$B D$为$A C$边上的高，$E$为$A B$边的中点，$E F \\bot B C$，垂足为$F$，点$H$在线段$F C$上，$F H = D E$．\n\n（1）求证：四边形$D E F H$是矩形；\n（2）若$B C = 10$，$\\sin \\angle A B C = \\frac{4}{5}$，求$C D$的长．",
       "options": null,
       "has_image_options": false,
       "source_page": 1,
@@ -492,27 +492,27 @@
     {
       "number": 18,
       "correct": "",
-      "solution": "解：原不等式组为$\\left{\\begin{matrix} 2 x + 3 \\geq x + 6, \\textcircled{1} \\\\ \\frac{2 x + 1}{3} > x - 1 . \\textcircled{2} \\end{matrix}\\right$\n解不等式①，得$x \\geq 3$．\n解不等式②，得$x < 4$．\n∴原不等式组的解集为$3 \\leq x < 4$．"
+      "solution": "解：原不等式组为$\\left\\{\\begin{matrix} 2 x + 3 \\geq x + 6, \\textcircled{1} \\\\ \\frac{2 x + 1}{3} > x - 1 . \\textcircled{2} \\end{matrix}\\right.$\n解不等式①，得$x \\geq 3$．\n解不等式②，得$x < 4$．\n$\\therefore$原不等式组的解集为$3 \\leq x < 4$．"
     },
     {
       "number": 19,
       "correct": "",
-      "solution": "解：$\\left(2,m,+,1\\right) \\left(2,m,-,1\\right) - \\left(\\right. m + 1 \\left.\\right)^{2}$\n$= \\left(4,m^{2},-,1\\right) - \\left(m^{2},+,2,m,+,1\\right)$\n$= 3 m^{2} - 2 m - 2$．\n$\\because 3 m^{2} - 2 m - 7 = 0$，\n$. \\therefore 3 m^{2} - 2 m = 7$．\n∴原式$= 5$．"
+      "solution": "解：$\\left(2,m,+,1\\right) \\left(2,m,-,1\\right) - \\left(\\right. m + 1 \\left.\\right)^{2}$\n$= \\left(4,m^{2},-,1\\right) - \\left(m^{2},+,2,m,+,1\\right)$\n$= 3 m^{2} - 2 m - 2$．\n$\\because 3 m^{2} - 2 m - 7 = 0$，\n$. \\therefore 3 m^{2} - 2 m = 7$．\n$\\therefore$原式$= 5$．"
     },
     {
       "number": 20,
       "correct": "",
-      "solution": "（1）证明：$\\because$$A B = B C$，$B D$为$A C$边上的高，\n$\\therefore$$A D = C D$．\n$\\because$$E$为$A B$边的中点，\n$\\therefore D E \\parallel B C$．\n$\\because$$F H = D E$，\n∴四边形$D E F H$是平行四边形．\n$\\because$$E F \\bot B C$，\n$\\therefore$$\\angle E F H = 90 \\circ$．\n∴四边形$D E F H$是矩形．\n![](figures/image36.jpeg)\n（2）解：$\\because$$B C = 10$，\n$\\therefore$$A B = 10$．\n$\\therefore$$D E = B E = 5$．\n$\\therefore$$F H = 5$．\n$\\because$$\\text{sin} \\angle A B C = \\frac{4}{5}$，\n$\\therefore$$E F = B E \\cdot \\text{sin} \\angle A B C = 5 \\times \\frac{4}{5} = 4$．\n在$\\text{Rt} \\triangle B E F$中，由勾股定理，得$B F = \\sqrt{B E^{2} - E F^{2}} = 3$．\n$\\therefore$$H C = 2$．\n∵四边形$D E F H$是矩形，\n$\\therefore$$D H = E F = 4$，$\\angle D H C = 90 \\circ$．\n在$\\text{Rt} \\triangle D H C$中，由勾股定理，得$C D = \\sqrt{C H^{2} + D H^{2}} = 2 \\sqrt{5}$．"
+      "solution": "（1）证明：$\\because$ $A B = B C$，$B D$为$A C$边上的高，\n$\\therefore$ $A D = C D$．\n$\\because$ $E$为$A B$边的中点，\n$\\therefore D E \\parallel B C$．\n$\\because$ $F H = D E$，\n$\\therefore$四边形$D E F H$是平行四边形．\n$\\because$ $E F \\bot B C$，\n$\\therefore$ $\\angle E F H = 90 \\circ$．\n$\\therefore$四边形$D E F H$是矩形．\n![](figures/image36.jpeg)\n（2）解：$\\because$ $B C = 10$，\n$\\therefore$ $A B = 10$．\n$\\therefore$ $D E = B E = 5$．\n$\\therefore$ $F H = 5$．\n$\\because$ $\\sin \\angle A B C = \\frac{4}{5}$，\n$\\therefore$ $E F = B E \\cdot \\sin \\angle A B C = 5 \\times \\frac{4}{5} = 4$．\n在$Rt \\triangle B E F$中，由勾股定理，得$B F = \\sqrt{B E^{2} - E F^{2}} = 3$．\n$\\therefore$ $H C = 2$．\n$\\because$四边形$D E F H$是矩形，\n$\\therefore$ $D H = E F = 4$，$\\angle D H C = 90 \\circ$．\n在$Rt \\triangle D H C$中，由勾股定理，得$C D = \\sqrt{C H^{2} + D H^{2}} = 2 \\sqrt{5}$．"
     },
     {
       "number": 21,
       "correct": "",
-      "solution": "解：（1）∵函数$y = k x + b \\left(k,\\neq,0\\right)$的图象经过点$A \\left(1,3\\right)$和$B \\left(3,1\\right)$，\n∴$\\left{\\begin{matrix} k + b = 3, \\\\ 3 k + b = 1 . \\end{matrix}\\right$\n解得$\\left{\\begin{matrix} k = - 1, \\\\ b = 4 . \\end{matrix}\\right$\n∴该函数的表达式为$y = - x + 4$．\n（2）$0 < m \\leq 1$．"
+      "solution": "解：（1）$\\because$函数$y = k x + b \\left(k,\\neq,0\\right)$的图象经过点$A \\left(1,3\\right)$和$B \\left(3,1\\right)$，\n$\\therefore$ $\\left\\{\\begin{matrix} k + b = 3, \\\\ 3 k + b = 1 . \\end{matrix}\\right.$\n解得$\\left\\{\\begin{matrix} k = - 1, \\\\ b = 4 . \\end{matrix}\\right.$\n$\\therefore$该函数的表达式为$y = - x + 4$．\n（2）$0 < m \\leq 1$．"
     },
     {
       "number": 22,
       "correct": "",
-      "solution": "解：设一台$B$型节能灯的平均年用电量为$x$度．\n由题意，得$\\frac{15000}{2 x - 30} = \\frac{9000}{x}$．\n解得$x = 90$．\n经检验，$x = 90$是原分式方程的解，且符合题意．\n$\\therefore$$2 x - 30 = 150$．\n答：一台$A$型节能灯的平均年用电量为150度．"
+      "solution": "解：设一台$B$型节能灯的平均年用电量为$x$度．\n由题意，得$\\frac{15000}{2 x - 30} = \\frac{9000}{x}$．\n解得$x = 90$．\n经检验，$x = 90$是原分式方程的解，且符合题意．\n$\\therefore$ $2 x - 30 = 150$．\n答：一台$A$型节能灯的平均年用电量为150度．"
     },
     {
       "number": 23,
@@ -522,7 +522,7 @@
     {
       "number": 24,
       "correct": "",
-      "solution": "（1）证明：如图，作$D G \\bot E F$于点$G$．\n$\\because D E = D F$，\n$\\therefore \\angle E D F = 2 \\angle E D G$．\n$\\because A C$切$\\bigodot O$于点$C$，\n$\\therefore \\angle A C O = 90 \\circ$．\n$\\because \\angle A E C = \\angle D E G$，\n$\\therefore \\angle C A E = \\angle E D G$．\n$\\therefore \\angle E D F = 2 \\angle C A E$．\n![](figures/image85.jpeg)\n（2）解：如图，连接$O A$．\n$\\because A B$，$A C$与$\\bigodot O$分别相切于点$B$，$C$，$\\angle B A C = 60 \\circ$，\n$\\therefore \\angle O A C = \\frac{1}{2} \\angle B A C = 30 \\circ$．\n$\\because O C = 2$，\n$\\therefore A C = 2 \\sqrt{3} .$\n在$\\text{Rt} \\triangle A C D$中，$C D = A C \\cdot \\text{tan} 60 \\circ = 6 .$\n$\\because E$为$O C$中点，\n$\\therefore E C = 1$．\n$\\therefore D E = 5$．\n在$\\text{Rt} \\triangle A C E$中，由勾股定理，得$A E = \\sqrt{13}$．\n$\\therefore \\text{sin} \\angle C A E = \\frac{\\sqrt{13}}{13}$．\n$\\because \\angle E D G = \\angle C A E$，\n$\\therefore E G = D E \\cdot \\text{sin} \\angle E D G = \\frac{5 \\sqrt{13}}{13}$．\n$\\therefore E F = 2 E G = \\frac{10 \\sqrt{13}}{13}$．\n![](figures/image108.jpeg)"
+      "solution": "（1）证明：如图，作$D G \\bot E F$于点$G$．\n$\\because D E = D F$，\n$\\therefore \\angle E D F = 2 \\angle E D G$．\n$\\because A C$切$\\bigodot O$于点$C$，\n$\\therefore \\angle A C O = 90 \\circ$．\n$\\because \\angle A E C = \\angle D E G$，\n$\\therefore \\angle C A E = \\angle E D G$．\n$\\therefore \\angle E D F = 2 \\angle C A E$．\n![](figures/image85.jpeg)\n（2）解：如图，连接$O A$．\n$\\because A B$，$A C$与$\\bigodot O$分别相切于点$B$，$C$，$\\angle B A C = 60 \\circ$，\n$\\therefore \\angle O A C = \\frac{1}{2} \\angle B A C = 30 \\circ$．\n$\\because O C = 2$，\n$\\therefore A C = 2 \\sqrt{3} .$\n在$Rt \\triangle A C D$中，$C D = A C \\cdot \\tan 60 \\circ = 6 .$\n$\\because E$为$O C$中点，\n$\\therefore E C = 1$．\n$\\therefore D E = 5$．\n在$Rt \\triangle A C E$中，由勾股定理，得$A E = \\sqrt{13}$．\n$\\therefore \\sin \\angle C A E = \\frac{\\sqrt{13}}{13}$．\n$\\because \\angle E D G = \\angle C A E$，\n$\\therefore E G = D E \\cdot \\sin \\angle E D G = \\frac{5 \\sqrt{13}}{13}$．\n$\\therefore E F = 2 E G = \\frac{10 \\sqrt{13}}{13}$．\n![](figures/image108.jpeg)"
     },
     {
       "number": 25,
@@ -537,7 +537,7 @@
     {
       "number": 27,
       "correct": "",
-      "solution": "（1）$\\angle D A E = 2 \\angle B A C$；\n（2）$\\angle D A E + \\angle D B F = 180 \\circ$\n证明：如图，将$\\triangle A E C$沿$A C$翻折得到$\\triangle A P C$，连接$B P$．\n$\\therefore \\triangle A E C ≌ \\triangle A P C$．\n$\\therefore A E = A P$，$C E = C P$，$\\angle E A C = \\angle P A C$，$\\angle E C A = \\angle P C A$．\n$\\because \\angle A C B = 90 \\circ$，$C F = E C$，\n$\\therefore \\angle E C A + \\angle B C F = 90 \\circ$，$\\angle P C A + \\angle B C P = 90 \\circ$，$C F = C P$．\n$\\therefore \\angle B C P = \\angle B C F$．\n$\\therefore \\triangle B C F ≌ \\triangle B C P$．\n$\\therefore \\angle C B F = \\angle C B P$．\n$\\because \\angle A B C = \\alpha$，\n$\\therefore \\angle C A B = 90 \\circ - \\alpha$．\n$\\because \\angle D A E = 180 \\circ - 2 \\alpha$，\n$\\therefore \\angle E A C + \\angle D A B = \\angle P A C + \\angle P A B$．\n$\\therefore \\angle D A B = \\angle P A B$．\n$\\because A E = A D$，\n$\\therefore A P = A D$．\n$\\therefore \\triangle D A B ≌ \\triangle P A B$．\n$\\therefore \\angle D B A = \\angle P B A$．\n$\\therefore \\angle D B F = 2 \\angle A B C = 2 \\alpha$．\n$\\therefore \\angle D A E + \\angle D B F = 180 \\circ$．\n![](figures/image177.jpeg)"
+      "solution": "（1）$\\angle D A E = 2 \\angle B A C$；\n（2）$\\angle D A E + \\angle D B F = 180 \\circ$\n证明：如图，将$\\triangle A E C$沿$A C$翻折得到$\\triangle A P C$，连接$B P$．\n$\\therefore \\triangle A E C \\cong \\triangle A P C$．\n$\\therefore A E = A P$，$C E = C P$，$\\angle E A C = \\angle P A C$，$\\angle E C A = \\angle P C A$．\n$\\because \\angle A C B = 90 \\circ$，$C F = E C$，\n$\\therefore \\angle E C A + \\angle B C F = 90 \\circ$，$\\angle P C A + \\angle B C P = 90 \\circ$，$C F = C P$．\n$\\therefore \\angle B C P = \\angle B C F$．\n$\\therefore \\triangle B C F \\cong \\triangle B C P$．\n$\\therefore \\angle C B F = \\angle C B P$．\n$\\because \\angle A B C = \\alpha$，\n$\\therefore \\angle C A B = 90 \\circ - \\alpha$．\n$\\because \\angle D A E = 180 \\circ - 2 \\alpha$，\n$\\therefore \\angle E A C + \\angle D A B = \\angle P A C + \\angle P A B$．\n$\\therefore \\angle D A B = \\angle P A B$．\n$\\because A E = A D$，\n$\\therefore A P = A D$．\n$\\therefore \\triangle D A B \\cong \\triangle P A B$．\n$\\therefore \\angle D B A = \\angle P B A$．\n$\\therefore \\angle D B F = 2 \\angle A B C = 2 \\alpha$．\n$\\therefore \\angle D A E + \\angle D B F = 180 \\circ$．\n![](figures/image177.jpeg)"
     },
     {
       "number": 28,

@@ -118,6 +118,24 @@ def detect_pixel_blob(original_path: Path, n_questions: int) -> dict[int, str]:
     return out
 
 
+# ============== Method D: 纯 DashScope 两段式（locate + read）==============
+
+def detect_vlmax_band(image_path: Path, n_questions: int) -> dict[int, str]:
+    """D method: 纯 DashScope 两段式（vlm_choice.detect_choices_vlm）。
+
+    Stage 1 (locate)：qwen-vl-max 读「选择题」/下一区域标题行 y → band y 范围
+    Stage 2 (read)  ：裁 band + upscale → qwen-vl-max 单选约束逐题判实心涂黑
+
+    跟 Method B 的区别：
+      - B 用 crop_choice_region（bbox 被 qid marker 下拉，圈进填空题 → 选择
+        题行只占顶部 ~60px，VLM 看不清 → 过度多选 Q8=ABCD）
+      - D 标题行锚点定位 → 紧致 band + 单选约束 prompt + upscale
+    零腾讯依赖（B/C 的 crop 定位靠腾讯 OCR，月度免费包会耗尽）。
+    """
+    from vlm_choice import detect_choices_vlm
+    return detect_choices_vlm(image_path)
+
+
 # ============== Bench 主流程 ==============
 
 def _qid_int(q):
@@ -142,13 +160,15 @@ def bench_case(case_dir: Path, methods: list[str]) -> dict:
     if not photos:
         return {"error": "no photos"}
 
-    # Step 1: 裁切
-    try:
-        cropped, info = crop_choice_region(photos[0])
-        if not info.get("found"):
-            return {"error": f"crop failed: {info.get('reason')}"}
-    except Exception as e:
-        return {"error": f"crop exception: {e}"}
+    # Step 1: 裁切（仅 B/C 需要 crop_choice_region；A 用原图，D 用 crop_choice_band）
+    cropped, info = None, {}
+    if any(m in ("B", "C") for m in methods):
+        try:
+            cropped, info = crop_choice_region(photos[0])
+            if not info.get("found"):
+                return {"error": f"crop failed: {info.get('reason')}"}
+        except Exception as e:
+            return {"error": f"crop exception: {e}"}
 
     results = {"cropped": cropped, "info": info, "truth": truth, "methods": {}}
     n_q = gt.get("n_questions", len(truth))
@@ -161,6 +181,8 @@ def bench_case(case_dir: Path, methods: list[str]) -> dict:
                 pred = detect_vlmax(cropped, n_q)
             elif m == "C":
                 pred = detect_tencent_on_crop(cropped, n_q, original_path=photos[0])
+            elif m == "D":
+                pred = detect_vlmax_band(photos[0], n_q)
             else:
                 continue
             hits = 0
@@ -179,21 +201,26 @@ def bench_case(case_dir: Path, methods: list[str]) -> dict:
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--method", choices=["A", "B", "C", "all"], default="all")
+    ap.add_argument("--method", choices=["A", "B", "C", "D", "all"], default="all")
     ap.add_argument("--verbose", "-v", action="store_true")
     ap.add_argument("--case", help="只跑指定 case")
     args = ap.parse_args()
 
-    methods = ["A", "B", "C"] if args.method == "all" else [args.method]
+    methods = ["A", "B", "C", "D"] if args.method == "all" else [args.method]
 
     targets = sorted(d for d in CASES_ROOT.iterdir() if d.is_dir())
     if args.case:
         targets = [d for d in targets if d.name == args.case]
 
-    print(f"{'case':<40s}  {'A(像素)':>11s}  {'B(vlmax)':>11s}  {'C(tencent)':>11s}")
-    print("-" * 80)
-    tot_a = tot_b = tot_c = tot_n = 0
-    misses = {"A": {}, "B": {}, "C": {}}
+    col_labels = {"A": "A(像素)", "B": "B(vlmax)",
+                  "C": "C(tencent)", "D": "D(band-vlm)"}
+    header = f"{'case':<40s}  " + "  ".join(
+        f"{col_labels[m]:>11s}" for m in methods)
+    print(header)
+    print("-" * len(header))
+    tot = {m: 0 for m in methods}
+    tot_n = 0
+    misses = {m: {} for m in methods}
     for d in targets:
         r = bench_case(d, methods)
         if "error" in r:
@@ -202,28 +229,27 @@ def main():
         n = len(r["truth"])
         tot_n += n
         results_str = []
-        for m, tot_var in [("A", "a"), ("B", "b"), ("C", "c")]:
+        for m in methods:
             res = r["methods"].get(m)
             if res:
-                s = f"{res[0]}/{res[1]} ({100*res[0]/res[1]:.0f}%)"
-                results_str.append(s)
+                results_str.append(f"{res[0]}/{res[1]} ({100*res[0]/res[1]:.0f}%)")
                 misses[m][d.name] = res[2]
-                if m == "A": tot_a += res[0]
-                elif m == "B": tot_b += res[0]
-                else: tot_c += res[0]
+                tot[m] += res[0]
             else:
                 results_str.append("-")
-        print(f"{d.name:<40s}  {results_str[0]:>11s}  {results_str[1]:>11s}  {results_str[2]:>11s}")
+        print(f"{d.name:<40s}  " +
+              "  ".join(f"{s:>11s}" for s in results_str))
 
-    print("-" * 80)
-    rates = [f"{t}/{tot_n} ({100*t/tot_n:.1f}%)" if tot_n else "-"
-             for t in (tot_a, tot_b, tot_c)]
-    print(f"{'合计':<40s}  {rates[0]:>11s}  {rates[1]:>11s}  {rates[2]:>11s}")
+    print("-" * len(header))
+    rates = [f"{tot[m]}/{tot_n} ({100*tot[m]/tot_n:.1f}%)" if tot_n else "-"
+             for m in methods]
+    print(f"{'合计':<40s}  " + "  ".join(f"{s:>11s}" for s in rates))
 
     if args.verbose:
-        for m_label, m_data in [("A (像素 blob)", misses["A"]),
-                                  ("B (vl-max)", misses["B"]),
-                                  ("C (tencent 缺字母)", misses["C"])]:
+        verbose_labels = {"A": "A (像素 blob)", "B": "B (vl-max)",
+                          "C": "C (tencent 缺字母)", "D": "D (band 单选 vlm)"}
+        for m in methods:
+            m_label, m_data = verbose_labels[m], misses[m]
             print(f"\n=== {m_label} 失误详情 ===")
             for case, ms in m_data.items():
                 if ms:

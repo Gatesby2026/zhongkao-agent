@@ -5,7 +5,6 @@
 | 注 意 事项 | 1．本试卷共8页，共28题，满分100分，考试时间120分钟． 2．在答题卡上准确填写学校名称、班级和姓名． 3．试题答案一律填涂或书写在答题卡上，在试卷上作答无效． 4．在答题卡上，选择题、作图题用2B铅笔作答，其他试题用黑色字迹签字笔作答． 5．考试结束，将本试卷和答题卡一并交回． |
 |---|---|
 
-
 一、选择题（共16分，每题2分）
 
 第1-8题均有四个选项，符合题意的选项只有一个．
@@ -99,7 +98,7 @@ A．①②③ B．②④ C．①③ D．①②③④
 
 17．计算：$\left|1,-,\sqrt{3}\right| - 3 tan 30 \circ + \left(\frac{1}{2}\right)^{- 1} - \left(\left(\pi,-,2026\right)\right)^{0}$．
 
-18．解不等式组：$\left{\begin{matrix} x - 3 \left(x,-,2\right) \geq 4 \\ \frac{1 + 2 x}{3} > x - 1 \end{matrix}\right$
+18．解不等式组：$\left\{\begin{matrix} x - 3 \left(x,-,2\right) \geq 4 \\ \frac{1 + 2 x}{3} > x - 1 \end{matrix}\right.$
 
 19．已知$x - y - 1 = 0$，求代数式$\frac{3 \left(x,-,2,y\right) + 3 y}{x^{2} - 2 x y + y^{2}}$的值．
 
@@ -179,7 +178,6 @@ A．①②③ B．②④ C．①③ D．①②③④
 
 | 20 | 20 | 21 | 22 | 23 | 23 | 23 | 23 | 25 | 26 | 26 | 26 | 27 | 28 | 28 | 29 |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-
 
 请根据所给信息，解答下列问题：
 
@@ -261,13 +259,13 @@ $= - 1 - 3 \times \frac{}{3} + 2 - 1$  4
 
 $= 0$  5
 
-18．解不等式组：$\left{\right. x - 3 \left(\right. x - 2 \left.\right) \geq 4 , \textcircled{1} & \frac{1 + 2 x}{3} > x - 1 , \textcircled{2}$
+18．解不等式组：$\left\{\right. x - 3 \left(\right. x - 2 \left.\right) \geq 4 , \textcircled{1} & \frac{1 + 2 x}{3} > x - 1 , \textcircled{2}$
 
 解：解不等式①，得$x \leq 1$．2
 
 解不等式②，得$x < 4$．4
 
-∴原不等式组的解集为$x \leq 1$．5
+$\therefore$原不等式组的解集为$x \leq 1$．5
 
 19．先化简，再求值：
 
@@ -283,9 +281,9 @@ $\because x - y - 1 = 0$
 
 $\therefore x - y = 1$
 
-∴原式$= 3$．5
+$\therefore$原式$= 3$．5
 
-20．（1）∵点$D$，$E$分别是$A B$，$B C$的中点
+20．（1）$\because$点$D$，$E$分别是$A B$，$B C$的中点
 
 ![](figures/image25.png)
 
@@ -305,7 +303,7 @@ $C F = B D$
 
 $\because A B \parallel C F$
 
-∴四边形$C D B F$是平行四边形  2分
+$\therefore$四边形$C D B F$是平行四边形  2分
 
 $\because \angle D E B = 9 0 \circ$
 
@@ -321,7 +319,7 @@ $\because \angle A C B = 9 0 \circ$，$\angle C A E = 4 5 \circ$
 
 $\therefore A C = C E = 2 x$，$A E = x$
 
-∵菱形$C D B F$
+$\because$菱形$C D B F$
 
 $\therefore D E = E F = x$
 
@@ -351,21 +349,21 @@ $4 x + 9 + 3 x \left(\right. 1 + 2 0 \left.\right) = 1 2 3$．4
 
 $x = 1 5$  5
 
-∴编程得分：$4 \times 1 5 + 9 = 6 9$，
+$\therefore$编程得分：$4 \times 1 5 + 9 = 6 9$，
 
 手工创作得$1 2 3 - 6 9 = 5 4$分，
 
 $\because 1 2 3 > 1 1 0$，$6 9 > 6 9$
 
-∴给这个同学颁发金奖  6
+$\therefore$给这个同学颁发金奖  6
 
 答：给这个同学颁发金奖．
 
 22．（1）$\because y = k x + b \left(\right. k \neq 0 \left.\right)$的图象经过点$\left(\right. 1 , 3 \left.\right)$，$\left(\right. 0 , 1 \left.\right)$．
 
-$\therefore \left{\right. k + b = 3 , & b = 1 ,$  1
+$\therefore \left\{\right. k + b = 3 , & b = 1 ,$  1
 
-$\therefore \left{\right. k = 2 , & b = 1 ,$  3
+$\therefore \left\{\right. k = 2 , & b = 1 ,$  3
 
 $\therefore y = 2 x + 1$
 
@@ -375,7 +373,7 @@ $\therefore y = 2 x + 1$
 
 ![](figures/image75.png)
 
-∵点$D$是$\overset{⌢}{C B}$的中点
+$\because$点$D$是$\overset{⌢}{C B}$的中点
 
 $\therefore O D \bot B C$  1
 
@@ -389,7 +387,7 @@ $\therefore D E$是$\bigodot O$的切线  3
 
 （2）设$O D$与$B C$交于点$M$，连接$B D$
 
-∵点$D$是$\overset{⌢}{C B}$的中点
+$\because$点$D$是$\overset{⌢}{C B}$的中点
 
 $\therefore \overset{⌢}{C D} = \overset{⌢}{B D}$
 
@@ -457,7 +455,7 @@ $\therefore x = - \frac{b}{2 a} = - \frac{2 - m}{2 \times \left(\right. - 1 \lef
 
 $\therefore m = 0$  2
 
-∴二次函数的解析式为$y = - x^{2} + 2 x$
+$\therefore$二次函数的解析式为$y = - x^{2} + 2 x$
 
 ②$y < 4$  3
 
@@ -477,9 +475,9 @@ $\therefore \frac{1}{2} < t < 1$  5
 
 $\therefore \frac{3}{2} < t + 1 < 2$
 
-∵点$A \left(\right. - 2 t , y_{1} \left.\right)$在该抛物线上
+$\because$点$A \left(\right. - 2 t , y_{1} \left.\right)$在该抛物线上
 
-∴点$A \left(\right. - 2 t , y_{1} \left.\right)$关于$x = t$的对称点$A^{'} \left(\right. 4 t , y_{1} \left.\right)$也在该抛物线上．
+$\therefore$点$A \left(\right. - 2 t , y_{1} \left.\right)$关于$x = t$的对称点$A^{'} \left(\right. 4 t , y_{1} \left.\right)$也在该抛物线上．
 
 $\therefore 2 < 4 t < 4$
 
@@ -489,9 +487,9 @@ $\therefore t < t + 1 < 4 t$
 
 抛物线开口向下．
 
-∴当$x \geq t$时$y$随的增大而减小
+$\therefore$当$x \geq t$时$y$随的增大而减小
 
-∵点$A \left(\right. - 2 t , y_{1} \left.\right)$，$B \left(\right. t , y_{2} \left.\right)$，$C \left(\right. t + 1 , y_{3} \left.\right)$在该抛物线上
+$\because$点$A \left(\right. - 2 t , y_{1} \left.\right)$，$B \left(\right. t , y_{2} \left.\right)$，$C \left(\right. t + 1 , y_{3} \left.\right)$在该抛物线上
 
 $\therefore y_{2} > y_{3} > y_{1}$  6
 

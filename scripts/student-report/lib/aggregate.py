@@ -109,10 +109,12 @@ def section_breakdown(exam: ExamView) -> list[dict]:
         agg[name]["scored"] += s.get("scored", 0)
         agg[name]["full"] += s.get("fullScore", 0)
 
-    # Fallback：raw_sections 空 → 按 type_cn 聚合 questions
+    # Fallback：raw_sections 空 → 按「大题」聚合（subject 专属中文分法，
+    # 英语阅读还会分 A/B 篇与 C/D 篇）
     if not seen_order:
+        from . import subject_profile
         for q in exam.questions:
-            name = q.type_cn or "未分类"
+            name = subject_profile.section_name(exam.subject, q)
             if name not in seen_order:
                 seen_order.append(name)
             agg[name]["scored"] += q.scored

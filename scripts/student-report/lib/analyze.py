@@ -80,7 +80,14 @@ def analyze_question(q: QView, *, cache_key: str | None = None) -> dict:
         student_answer = q.student_filled or "（未作答）"
         grade_facts = ""
     else:
-        student_answer = (q.student_handwriting or "（未识别到作答）").strip()
+        if q.student_handwriting and q.student_handwriting.strip():
+            student_answer = q.student_handwriting.strip()
+        elif q.region_image:
+            # 主观题用答题卡裁图展示作答（不转写文本）——绝不能判成「未作答」
+            student_answer = ("（学生已作答；作答内容见答题卡裁切原图，未转写为文本。"
+                              "请依据下方阅卷要点判断，errorType 不得选「未作答」）")
+        else:
+            student_answer = "（未识别到作答）"
         gf = []
         if q.grade:
             g = q.grade

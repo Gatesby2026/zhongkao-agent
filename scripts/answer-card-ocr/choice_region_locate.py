@@ -264,6 +264,38 @@ def crop_choice_region(image_path: Path,
     return cropped, info
 
 
+def crop_choice_band(image_path: Path,
+                     qid_left_pad: int = 175,
+                     side_pad: int = 70,
+                     vpad: int = 18,
+                     ) -> tuple[Image.Image, dict]:
+    """裁切**仅选择题行**的紧致 band（不含填空/解答区）。
+
+    跟 crop_choice_region 的区别：用 letter_bbox（选择题字母包络）而非
+    bbox。bbox 会被 qid marker 的 `letter_y2 + 400` 容差下拉，把填空题
+    题号 9./10./.. 圈进来，导致 crop 过高、选择题行只占顶部 ~60px（VLM
+    看不清）。letter_bbox 严格等于选择题字母行的包络，band 干净。
+
+    左侧多留 qid_left_pad 把题号 1./2. 带进来，方便 VLM 按印刷题号输出。
+
+    Returns:
+        (cropped_image, info)  # info 含 band_bbox
+    """
+    info = locate_choice_region(image_path)
+    if not info.get("found"):
+        return None, info
+    im = info["uplifted_image"]
+    lx1, ly1, lx2, ly2 = info["letter_bbox"]
+    W, H = im.size
+    cx1 = max(0, lx1 - qid_left_pad)
+    cy1 = max(0, ly1 - vpad)
+    cx2 = min(W, lx2 + side_pad)
+    cy2 = min(H, ly2 + vpad)
+    cropped = im.crop((cx1, cy1, cx2, cy2))
+    info["band_bbox"] = (cx1, cy1, cx2, cy2)
+    return cropped, info
+
+
 def _main():
     if len(sys.argv) < 2:
         print("用法: python3 choice_region_locate.py <image.jpg> [out.png]",

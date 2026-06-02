@@ -36,7 +36,7 @@ MODULE_CN = {
     "statisticsAndProbability": "统计与概率",
 }
 
-CHOICE_TYPES = {"单选", "多选", "choice", "multi_choice"}
+CHOICE_TYPES = {"单选", "多选", "choice", "multi_choice", "cloze", "完形", "完形填空"}
 
 SUBJECT_CN = {"physics": "物理", "chinese": "语文", "math": "数学",
               "english": "英语", "politics": "道法", "history": "历史",
@@ -85,6 +85,7 @@ class QView:
     region_image: str | None
     page_image: str | None
     grade: dict | None
+    passage_id: str = ""   # 英语阅读分篇用（reading_A/B/C/D 等）
 
     @property
     def is_lost(self) -> bool:
@@ -190,6 +191,7 @@ def load_exam_view(kb_yaml: Path, student_dir: Path) -> ExamView:
             region_image=a.get("regionImage"),
             page_image=a.get("pageImage"),
             grade=a.get("grade"),
+            passage_id=str(q.get("passage_id") or q.get("passage") or ""),
         ))
 
     qviews.sort(key=lambda v: v.num)
