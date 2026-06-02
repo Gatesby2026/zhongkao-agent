@@ -39,6 +39,10 @@ schools:
   - name: 北京中学
     level: 市级示范性高中
     note: 2023年朝阳区第一，近年与八十中交替领先
+    features:
+      style: 朝阳区头部校，行知项目、实践育人、国际化办学，氛围自由、注重综合素养
+      tags: [综合均衡, 课程改革, 国际方向]
+      source: 百度百科 / 北京市政府门户网（东坝校区报道）
     scores:
       2025: { total: 510, score: 488, rank: 282 }
       2024: { total: 670, score: 644, rank: 902 }
@@ -47,6 +51,10 @@ schools:
   - name: 中国传媒大学附属中学
     level: 区级示范性高中
     note: 2025年以"北京中学传媒分校"招生，排名大幅上升
+    features:
+      style: 传媒艺术特色完中，开设播音主持/编导/影视表演课程，2023加入北京中学集团混合编班
+      tags: [艺术特长, 课程改革]
+      source: 学校官网 / 北京中考信息网校情介绍
     scores:
       2025: { total: 510, score: 484, rank: 541 }
       2024: { total: 670, score: 637, rank: 1836 }
@@ -55,6 +63,14 @@ schools:
   - name: 北京市第八十中学
     level: 市级示范性高中
     note: 朝阳区传统强校，创新班为全区最高录取线
+    features:
+      style: 朝阳第一梯队，科技创新+人文底蕴，王选/强基/科技人才等多类实验班，清北录取居朝阳前列
+      tags: [综合均衡, 科技创新, 学科竞赛]
+      source: 北京高考在线 / 北京中考信息网校情介绍
+    gaokao:
+      note: 网传喜报·非官方
+      "2024": 690分以上17人、680分以上30人、670分以上49人，朝阳区前30名占18人，屏蔽生3人
+      source: gaokzx.com/gk/gaokao/124276.html
     scores:
       2025: { total: 510, score: 482, rank: 685 }
       2024: { total: 670, score: 646, rank: 678 }
@@ -63,6 +79,14 @@ schools:
   - name: 人大附中朝阳学校
     level: 市级示范性高中
     note: 人大附中朝阳分校
+    features:
+      style: 与人大附中本部同步教学、尖子生赴本部"留学"，分层分类课程体系，朝阳头部校
+      tags: [综合均衡, 学科竞赛]
+      source: 学校官网 rdfzcy.cn / 北京中考信息网
+    gaokao:
+      note: 网传喜报·非官方
+      "2024": 毕业258人，最高690分，650分以上占25%，600分以上占60%，年级均分603，一本率近100%
+      source: zhongkaobj.cn/.../202412206643.html
     scores:
       2025: { total: 510, score: 477, rank: 1221 }
       2024: { total: 670, score: 639, rank: 1553 }
@@ -71,6 +95,14 @@ schools:
   - name: 清华附中朝阳学校
     level: 市级示范性高中
     note: 清华附中朝阳分校
+    features:
+      style: 传承清华附中美术与排球特色，重学科竞赛与艺体科技活动，朝阳"清华系"之一
+      tags: [艺术特长, 体育特长, 学科竞赛]
+      source: 学校官网 / 北京中考信息网
+    gaokao:
+      note: 网传喜报·非官方（与望京学校同址混编，数据或重叠）
+      "2024": 680分以上6人，第一实验班均分661，统招生均分600+，一本率约95%，本科率100%，清北约7-8人
+      source: gaokzx.com/gk/gaokao/135890.html
     scores:
       2025: { total: 510, score: 476, rank: 1357 }
       2024: { total: 670, score: 638, rank: 1682 }
@@ -79,6 +111,14 @@ schools:
   - name: 八十中睿德分校
     level: 区级示范性高中
     note: 八十中体系，近年上升趋势明显
+    features:
+      style: 与八十中望京/白家庄校区一体化办学，设创新实验班，依托八十中优质资源
+      tags: [综合均衡, 科技创新]
+      source: 北京中考信息网校情介绍 / 北京高考在线
+    gaokao:
+      note: 网传·非官方（数值精确但来源含糊，疑媒体测算，谨慎参考）
+      "2024": 一本上线率约92.3%
+      source: zhongkaobj.cn/.../202412267154.html
     scores:
       2025: { total: 510, score: 476, rank: 1357 }
       2024: { total: 670, score: 637, rank: 1836 }
@@ -87,12 +127,28 @@ schools:
   - name: 朝阳外国语学校
     level: 区级示范性高中
     note: 外语特色校
+    features:
+      style: 突出外语优势（英日德等多语种），"品格"办学文化，国际班海外名校录取多
+      tags: [外语特色, 国际方向]
+      source: 学校官网 cyfls.bjchyedu.cn / 北京中考信息网
+    gaokao:
+      note: 网传喜报·非官方
+      "2024": 高考209人，700分以上2人、650分以上35人、600分以上129人，年级均分608，实验一班均分667，清北约9人
+      source: zhongkaobj.cn/.../202411255089.html
     scores:
       2025: { total: 510, score: 474, rank: 1623 }
       2024: { total: 670, score: 635, rank: 2108 }
 
   - name: 清华附中望京学校
     level: 区级示范性高中
+    features:
+      style: 清华附中"四小龙"之一，与清朝同址混编，2023设拔尖学生实验班、奥赛金牌教练任教
+      tags: [学科竞赛, 综合均衡]
+      source: 北京中考信息网校情介绍 / 知乎梯队整理
+    gaokao:
+      note: 网传·非官方（与清朝同址数据重叠，无独立分项）
+      "近年": 每年约6人考入清北，一批被复旦浙大等录取
+      source: 媒体描述性整理
     scores:
       2025: { total: 510, score: 471, rank: 2070 }
       2024: { total: 670, score: 632, rank: 2569 }
@@ -100,6 +156,14 @@ schools:
   - name: 陈经纶中学
     level: 市级示范性高中
     note: 老牌名校，实验班与普通班分差较大
+    features:
+      style: “阳光七彩”课程群、十二年贯通课程，骨干师资雄厚，朝阳老牌优质校
+      tags: [综合均衡, 课程改革]
+      source: 北京高考在线 / 维基百科 / 知乎
+    gaokao:
+      note: 网传喜报·非官方
+      "2024": 最高分688，680分以上4人，670分以上9人，650分以上27人
+      source: gaokzx.com/gk/gaokao/124276.html
     scores:
       2025: { total: 510, score: 469, rank: 2376 }
       2024: { total: 670, score: 630, rank: 2902 }
@@ -108,17 +172,33 @@ schools:
   - name: 北京中学科技分校
     level: 区级
     note: 2025年新增招生
+    features:
+      style: 2024年9月开学新校，朝阳+5所高校共建，以工程为核心的跨学科/AI+课程，培养科技创新人才
+      tags: [科技创新, 课程改革]
+      source: 北京市政府门户网 / 百度百科 / 朝阳区教委
     scores:
       2025: { total: 510, score: 468, rank: 2533 }
 
   - name: 清华附中广华学校
     level: 区级
+    features:
+      style: 2019年成立的十二年制公办校，科技教育+体育特色，2023起设清华附中创新实验班
+      tags: [科技创新, 体育特长]
+      source: 百度百科 / 学校官网 qhfzgh.bjchyedu.cn / 北京中考信息网
     scores:
       2025: { total: 510, score: 466, rank: 2830 }
       2024: { total: 670, score: 624, rank: 3797 }
 
   - name: 首师大附中朝阳学校
     level: 区级
+    features:
+      style: 2023年首师大附中与朝阳合作创办，棒垒球体育特长+美术培养特色，强基培训校本课程
+      tags: [体育特长, 艺术特长]
+      source: 北京小升初信息网 / 北京高考在线
+    gaokao:
+      note: 网传·非官方（首届为原华师一附中学生，描述性）
+      "2024": 最高分680多分
+      source: xschu.com/gongbanzhongxue/72369.html
     scores:
       2025: { total: 510, score: 465, rank: 2966 }
       2024: { total: 670, score: 622, rank: 4071 }
@@ -126,6 +206,14 @@ schools:
 
   - name: 二中朝阳学校
     level: 区级
+    features:
+      style: 北京二中教育集团成员，与本部集体备课/特级教师示范授课，重自主学习能力培养
+      tags: [综合均衡]
+      source: 北京中考信息网校情介绍 / 北京高考在线
+    gaokao:
+      note: 网传喜报·非官方
+      "2024": 一本率83.6%，本科上线率98.7%
+      source: gaokzx.com/gk/gaokao/136648.html
     scores:
       2025: { total: 510, score: 463, rank: 3301 }
       2024: { total: 670, score: 624, rank: 3797 }
@@ -133,6 +221,14 @@ schools:
   - name: 北京工业大学附属中学
     level: 市级示范性高中
     note: 简称工大附中
+    features:
+      style: “人文奠基、科技领航”课程体系，与北工大合作办学，数学/科技两大特色，重创新人才培养
+      tags: [理科见长, 科技创新]
+      source: 学校官网 bjgdfz.com / 北京高考在线
+    gaokao:
+      note: 网传·非官方（描述性，非特定年份精确数）
+      "近年": 一本率约85%以上、重点率约90%左右
+      source: gaokzx.com/gk/gaokao/136039.html
     scores:
       2025: { total: 510, score: 460, rank: 3741 }
       2024: { total: 670, score: 619, rank: 4487 }
@@ -140,6 +236,14 @@ schools:
   - name: 日坛中学
     level: 市级示范性高中
     note: 老牌校，近年排名有所下滑
+    features:
+      style: 1963年建校的北京市示范高中，金帆书画院，艺术教育特色突出（管弦/钢鼓/合唱等艺术团）
+      tags: [艺术特长, 综合均衡]
+      source: 百度百科 / 北京中考信息网校情介绍
+    gaokao:
+      note: 网传喜报·非官方
+      "2024": 最高分675，一本率约85%，线上录取600分以上占78%
+      source: gaokzx.com/gk/gaokao/135892.html
     scores:
       2025: { total: 510, score: 455, rank: 4487 }
       2024: { total: 670, score: 613, rank: 5233 }
@@ -147,6 +251,17 @@ schools:
 
   - name: 和平街一中
     level: 区级示范性高中
+    features:
+      style: “阳光自信”理念、“和合”五育并举课程体系，一校多址，科技/艺术/足球多特色市级示范校
+      tags: [综合均衡, 科技创新]
+      source: 学校官网 phs.bj.cn / 北京中考信息网校情介绍
+    gaokao:
+      note: 网传喜报·非官方（多为相对增幅，缺绝对值）
+      "2024": 600分以上较2023增78.6%，一梯队实验班600分以上占62.5%，特控上线人数较2023增6个百分点
+      source: gaokzx.com/gk/gaokao/136038.html
+    campuses:
+      - { name: 和平街本部, lat: 39.963963, lon: 116.421125 }
+      - { name: 朝来校区, lat: 40.035330, lon: 116.434252 }
     scores:
       2025: { total: 510, score: 454, rank: 4635 }
       2024: { total: 670, score: 608, rank: 5766 }
@@ -154,6 +269,11 @@ schools:
 
   - name: 莲葩园中学
     level: 区级
+    note: 据公开资料疑为和平街一中北苑莲葩园高中校区（非独立学校），待核实；保留独立条目因录取线不同
+    features:
+      style: 依托和平街一中办学（北苑莲葩园校区）
+      tags: [综合均衡]
+      source: 北京12345服务导图 / 和平街一中中招问答（待核实）
     scores:
       2025: { total: 510, score: 453, rank: 4762 }
       2024: { total: 670, score: 602, rank: 6420 }
@@ -161,6 +281,14 @@ schools:
   - name: 对外经济贸易大学附属中学
     level: 区级
     note: 简称贸大附中
+    features:
+      style: 1956年建校的北京市示范高中，与贸大合作，财经/外语特色（商务英语、西班牙语、法语等）
+      tags: [外语特色, 综合均衡]
+      source: 学校官网 bj94zhong.cn / 百度百科 / 北京中考信息网
+    gaokao:
+      note: 网传·非官方（描述性，非特定年份精确分项）
+      "近年": 本科率100%，超80%学生过特控线
+      source: zhongkaobj.cn/.../202412246982.html
     scores:
       2025: { total: 510, score: 452, rank: 4914 }
       2024: { total: 670, score: 603, rank: 6304 }
@@ -168,6 +296,10 @@ schools:
   - name: 东北师大附中朝阳学校
     level: 区级
     note: 原华东师范大学附属中学朝阳学校
+    features:
+      style: 2012年与东北师大附中合作的全寄宿制完中，"五自"教育、小班化、严格管理，篮球传统校
+      tags: [寄宿制, 综合均衡]
+      source: 百度百科 / 北京中考信息网校情介绍
     scores:
       2025: { total: 510, score: 451, rank: 5061 }
       2024: { total: 670, score: 604, rank: 6218 }
@@ -175,6 +307,14 @@ schools:
 
   - name: 中科院附属实验学校
     level: 区级
+    features:
+      style: 全国唯一冠名"中国科学院"的十二年制公办校，毗邻中科院，科学家系列课程+美术特色班
+      tags: [科技创新, 艺术特长]
+      source: 自主选拔在线招生简章 / 北京中考信息网校情介绍
+    gaokao:
+      note: 网传·非官方（第二届高考）
+      "2024": 普通班一本率接近40%，本科率接近95%，美术班更优
+      source: zhongkaobj.cn/.../202412247049.html
     scores:
       2025: { total: 510, score: 448, rank: 5438 }
       2024: { total: 670, score: 599, rank: 6696 }
@@ -182,6 +322,14 @@ schools:
 
   - name: 三里屯一中
     level: 区级
+    features:
+      style: 1963年建校、首批区级示范校，一校三址十二年一贯，“爱与求真求善求美”校训，市优质高中
+      tags: [综合均衡]
+      source: 学校官网 sltyz.bjchyedu.cn / 北京中考信息网校情介绍
+    gaokao:
+      note: 网传·非官方
+      "2024": 本科率约100%，一本率约40%-50%
+      source: zhongkaobj.cn/.../202412247047.html
     scores:
       2025: { total: 510, score: 444, rank: 5964 }
       2024: { total: 670, score: 594, rank: 7149 }
@@ -189,6 +337,14 @@ schools:
 
   - name: 北京十七中
     level: 区级
+    features:
+      style: 1946年建校的市级示范校，陶行知教育思想实验校、传媒特色实验校，设传媒特色班
+      tags: [艺术特长, 课程改革]
+      source: 百度百科 / 北京中考信息网
+    gaokao:
+      note: 网传·非官方（描述性）
+      "2024": 一本率50%以上
+      source: gaokzx.com/gk/gaokao/124276.html
     scores:
       2025: { total: 510, score: 438, rank: 6617 }
       2024: { total: 670, score: 588, rank: 7695 }
@@ -196,11 +352,27 @@ schools:
   - name: 北京化工大学附属中学
     level: 区级
     note: 简称化工附中
+    features:
+      style: 1983年建校十二年一贯制，"美的教育"办学思想，国家级足球特色校，与北化工合作办学
+      tags: [体育特长, 综合均衡]
+      source: 百度百科 / 北京中考信息网校情介绍
+    gaokao:
+      note: 网传·非官方（"历年数据参考"，非当年官方喜报，低权重）
+      "历年": 本科率90%以上、一本率约40%
+      source: zhongkaobj.cn/.../202412257085.html
     scores:
       2025: { total: 510, score: 434, rank: 7077 }
 
   - name: 东方德才学校
     level: 区级
+    features:
+      style: 一校五址十二年制区级示范校，科技（无线电测向）/篮球/冰雪体育特色突出
+      tags: [科技创新, 体育特长]
+      source: 百度百科 / 北京中考信息网校情介绍
+    gaokao:
+      note: 网传·非官方
+      "2024": 一本率约30%，本科率90%以上
+      source: zhongkaobj.cn/.../202412267165.html
     scores:
       2025: { total: 510, score: 432, rank: 7272 }
       2024: { total: 670, score: 582, rank: 8175 }
@@ -208,17 +380,37 @@ schools:
   - name: 北京第二外国语学院附属中学
     level: 区级
     note: 简称二外附中
+    features:
+      style: 1956年建校，外语特色（13门外语课、中法合作1+3项目）+AI STEAM 十二年一贯课程
+      tags: [外语特色, 科技创新]
+      source: 学校官网 ewfz.bjchyedu.cn / 百度百科 / 北京中考信息网
     scores:
       2025: { total: 510, score: 430, rank: 7479 }
       2024: { total: 670, score: 577, rank: 8491 }
 
   - name: 陈经纶中学团结湖分校
     level: 区级
+    features:
+      style: 陈经纶集团"四个一"一体化办学，地处CBD核心，经纶实验班学生在本部上课、与本部混编选科
+      tags: [综合均衡]
+      source: 北京中考信息网校情介绍 / 维基百科
+    gaokao:
+      note: 网传·非官方
+      "2024": 一本率约20%，本科率约80%
+      source: zhongkaobj.cn/.../202412257093.html
     scores:
       2025: { total: 510, score: 424, rank: 7951 }
 
   - name: 汇文中学垂杨柳分校
     level: 区级
+    features:
+      style: 原垂杨柳中学，2018三方共建，汇文"智仁勇"校训+全人教育，体育社团丰富、国际交流多
+      tags: [体育特长, 国际方向]
+      source: 百度百科 / 北京中考信息网校情介绍
+    gaokao:
+      note: 网传·非官方（非特定年份）
+      "近年": 整体一本率约30%、本科率约90%，艺术生一本率约49%
+      source: zhongkaobj.cn/.../202412257103.html
     scores:
       2025: { total: 510, score: 420, rank: 8229 }
 

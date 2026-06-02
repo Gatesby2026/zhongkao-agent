@@ -182,22 +182,56 @@ def route(origin, dest, mode: str, route_cache: dict):
     return res
 
 
-def attach_distances(schools, home_addr, district_cn, mode="driving"):
-    """算各校到家的路网距离。返回 (home坐标, {校名:(米,秒)}, {校名:(lat,lon)})。"""
+def get_campuses(school: dict, district_cn: str, coords_idx: dict, geo_cache: dict):
+    """返回 [(校区名, (lat,lon)), ...]。yaml 有 campuses 用之，否则按校名定位单点。"""
+    if school.get("campuses"):
+        return [(c.get("name", ""), (c["lat"], c["lon"])) for c in school["campuses"]]
+    c = lookup_school_coords(school["name"], district_cn, coords_idx, geo_cache)
+    return [("", c)] if c else []
+
+
+def compute_distances(schools, home_addr, district_cn, mode="driving"):
+    """算各校（含多校区）到家的路网距离。
+    返回 (home坐标, {校名: [(校区名, (lat,lon), (米,秒)|None), ...]})。"""
     geo_cache = _load_cache(GEO_CACHE)
     route_cache = _load_cache(ROUTE_CACHE)
     coords_idx = build_coords_index()
 
     home = geocode_home(home_addr, geo_cache)
     if home is None:
-        return None, {}, {}
+        return None, {}
 
-    dists, coords = {}, {}
-    for name in schools:
-        sc = lookup_school_coords(name, district_cn, coords_idx, geo_cache)
-        coords[name] = sc
-        dists[name] = route(home, sc, mode, route_cache) if sc else None
-    return home, dists, coords
+    out = {}
+    for s in schools:
+        rows = []
+        for cname, ccoord in get_campuses(s, district_cn, coords_idx, geo_cache):
+            rd = route(home, ccoord, mode, route_cache) if ccoord else None
+            rows.append((cname, ccoord, rd))
+        out[s["name"]] = rows
+    return home, out
+
+
+def private_schools(district_cn: str, public_names: set):
+    """坐标库里属于该区、但不在统招公办名单里的学校（民办/国际等）。
+    返回 [{name, lat, lon}, ...]。"""
+    pub_norm = {_norm(n) for n in public_names}
+    out, seen = [], set()
+    for fn in ["highschools_final.json", "school_addresses.json"]:
+        p = HS_DIR / fn
+        if not p.exists():
+            continue
+        for a in json.loads(p.read_text(encoding="utf-8")):
+            if a.get("district") != district_cn or not a.get("lat"):
+                continue
+            key = _norm(a["name"])
+            if key in pub_norm or key in seen:
+                continue
+            # 跳过明显的分校区重复（子串命中已收录的）
+            if any(key in s or s in key for s in pub_norm if s):
+                continue
+            seen.add(key)
+            out.append({"name": a["name"], "lat": a["lat"], "lon": a["lon"]})
+    return out
 
 
 if __name__ == "__main__":

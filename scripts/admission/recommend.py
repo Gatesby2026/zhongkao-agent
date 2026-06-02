@@ -77,15 +77,27 @@ def classify(student_rank: int, school: dict):
     return band, margin, ref_rank, history, volatility
 
 
-def fmt_dist(rd, mode_label: str, max_km) -> str:
-    """rd = (距离米, 时长秒) 或 None。"""
-    if rd is None:
+def nearest_campus(rows):
+    """从 [(校区名, 坐标, rd), ...] 取距离最近（rd 非空）的一项；全空返回 None。"""
+    valid = [r for r in rows if r[2] is not None]
+    if not valid:
+        return None
+    return min(valid, key=lambda r: r[2][0])
+
+
+def fmt_dist(rows, mode_label: str, max_km) -> str:
+    """rows = 某校各校区 [(校区名, 坐标, (米,秒)|None), ...]。文本显示最近校区。"""
+    if not rows:
         return "  📍距离未知"
-    dist_m, dur_s = rd
-    km = dist_m / 1000
-    mins = round(dur_s / 60)
-    far = "  ⚠️偏远" if (max_km is not None and km > max_km) else ""
-    return f"  📍{mode_label}{km:.1f}km/{mins}分钟{far}"
+    best = nearest_campus(rows)
+    if best is None:
+        return "  📍距离未知"
+    cname, _, (dist_m, dur_s) = best
+    km, mins = dist_m / 1000, round(dur_s / 60)
+    multi = len([r for r in rows if r[2] is not None]) > 1
+    campus_tag = f"（{cname}最近）" if (multi and cname) else ""
+    far = "  ⚠️偏远/超通勤上限" if (max_km is not None and km > max_km) else ""
+    return f"  📍{mode_label}{km:.1f}km/{mins}分钟{campus_tag}{far}"
 
 
 def fmt_history(history: list[tuple[int, int]], school: dict) -> str:
@@ -99,29 +111,121 @@ def fmt_history(history: list[tuple[int, int]], school: dict) -> str:
 BAND_COLOR = {"冲": "#e74c3c", "稳": "#f1c40f", "保": "#2ecc71"}
 
 
+SMALL_COLOR = {"够不上": "#9aa0a6", "太远": "#e67e22", "民办": "#3498db"}
+
+
+def _dist_txt(rd, mode_label):
+    return f"{mode_label} {rd[0]/1000:.1f}km / {round(rd[1]/60)}分钟" if rd else "距离未知"
+
+
+# 兴趣标签词表（与学校 features.tags 对齐；--interests 可传任意词，子串双向匹配）
+INTEREST_TAGS = [
+    "理科见长", "科技创新", "外语特色", "文科人文", "艺术特长",
+    "体育特长", "国际方向", "课程改革", "学科竞赛", "综合均衡", "寄宿制",
+]
+
+
+def match_interests(school: dict, interests: list) -> list:
+    """返回学校 tags 中与用户兴趣命中的标签（子串双向匹配，宽松）。"""
+    if not interests:
+        return []
+    tags = ((school.get("features") or {}).get("tags")) or []
+    hit = []
+    for t in tags:
+        if any(it and (it in t or t in it) for it in interests):
+            hit.append(t)
+    return hit
+
+
+def _gaokao_years_str(school: dict) -> str:
+    """学校 gaokao 逐年自由文本拼成一行（不含 note/source）；无数据返回空串。"""
+    g = school.get("gaokao") or {}
+    years = {k: v for k, v in g.items() if k not in ("note", "source")}
+    if not years:
+        return ""
+    return "；".join(f"{y} {v}" for y, v in sorted(years.items(), reverse=True))
+
+
+def features_txt(school: dict) -> str:
+    f = school.get("features") or {}
+    style, tags = f.get("style"), f.get("tags") or []
+    if not style and not tags:
+        return ""
+    parts = [style] if style else []
+    if tags:
+        parts.append("  ".join(f"#{t}" for t in tags))
+    return "        🏫特色：" + "  ".join(parts)
+
+
+def gaokao_txt(school: dict) -> str:
+    s = _gaokao_years_str(school)
+    return f"        🎓高考(民间·非官方仅参考)：{s}" if s else ""
+
+
 def generate_map(out_path, district_name, student_rank, home_addr, home_coord,
-                 mode_label, buckets, coord_map, dist_map):
-    """生成自包含交互式地图 HTML（Leaflet + 高德底图，GCJ-02 坐标一致）。"""
+                 mode_label, buckets, dist_campus, priv, priv_dist, max_km, interests=None):
+    """生成自包含交互式地图 HTML（Leaflet + 高德底图，GCJ-02 坐标一致）。
+
+    - 全部统招校都打点：冲稳保=大彩色pin；够不上/超通勤=小图标（不在报名范围）
+    - 多校区每校区各一个marker、各自距离
+    - 民办/国际作为可切换图层（默认关）
+    """
     import json as _json
 
-    points = []
-    for band in ("冲", "稳", "保"):
+    points = []   # 统招公办（全部，含够不上）
+
+    def hist_of(s, history):
+        return "  ".join(
+            f"{y}年:{(s.get('scores') or {}).get(y, {}).get('score','?')}分(位次{r})"
+            for y, r in history)
+
+    for band in ("冲", "稳", "保", "够不上"):
         for s, margin, ref_rank, history, vol in buckets[band]:
-            c = coord_map.get(s["name"])
-            if not c:
+            rows = dist_campus.get(s["name"], [])
+            if not rows:
                 continue
-            rd = dist_map.get(s["name"])
-            dist_txt = (f"{mode_label} {rd[0]/1000:.1f}km / {round(rd[1]/60)}分钟"
-                        if rd else "距离未知")
-            hist_txt = "  ".join(
-                f"{y}年:{(s.get('scores') or {}).get(y, {}).get('score','?')}分(位次{r})"
-                for y, r in history)
-            points.append({
-                "name": s["name"], "lat": c[0], "lon": c[1], "band": band,
-                "color": BAND_COLOR[band], "level": s.get("level", ""),
-                "rank": ref_rank, "margin": f"{margin:+.0%}",
-                "dist": dist_txt, "hist": hist_txt, "note": s.get("note", ""),
-            })
+            multi = len(rows) > 1
+            for cname, ccoord, rd in rows:
+                if not ccoord:
+                    continue
+                km = rd[0] / 1000 if rd else None
+                too_far = max_km is not None and km is not None and km > max_km
+                if band == "够不上":
+                    kind, color, reason = "small", SMALL_COLOR["够不上"], "位次够不上（录取线远高于孩子）"
+                elif too_far:
+                    kind, color, reason = "small", SMALL_COLOR["太远"], f"超通勤上限（>{max_km}km）"
+                else:
+                    kind, color, reason = "full", BAND_COLOR[band], ""
+                disp = f"{s['name']}·{cname}" if (multi and cname) else s["name"]
+                feat = s.get("features") or {}
+                points.append({
+                    "name": disp, "lat": ccoord[0], "lon": ccoord[1],
+                    "kind": kind, "color": color, "band": band,
+                    "level": s.get("level", ""), "rank": ref_rank,
+                    "margin": f"{margin:+.0%}", "dist": _dist_txt(rd, mode_label),
+                    "hist": hist_of(s, history), "note": s.get("note", ""),
+                    "reason": reason,
+                    "style": feat.get("style", ""), "tags": feat.get("tags") or [],
+                    "gaokao": _gaokao_years_str(s),
+                    "matched": match_interests(s, interests or []),
+                })
+
+    priv_points = []
+    for p in priv:
+        rows = priv_dist.get(p["name"], [])
+        rd = rows[0][2] if rows else None
+        km = rd[0] / 1000 if rd else None
+        reason = "民办/国际，不参加统招志愿"
+        if max_km is not None and km is not None and km > max_km:
+            reason += f"；且超通勤上限（>{max_km}km）"
+        priv_points.append({
+            "name": p["name"], "lat": p["lat"], "lon": p["lon"],
+            "kind": "small", "color": SMALL_COLOR["民办"], "band": "民办",
+            "level": "民办/国际", "rank": "—", "margin": "—",
+            "dist": _dist_txt(rd, mode_label), "hist": "", "note": "",
+            "reason": reason,
+            "style": "", "tags": [], "gaokao": "", "matched": [],
+        })
 
     html = """<!DOCTYPE html>
 <html lang="zh-CN"><head><meta charset="utf-8">
@@ -138,6 +242,7 @@ def generate_map(out_path, district_name, student_rank, home_addr, home_coord,
   .legend{position:absolute;bottom:18px;left:10px;z-index:1000;background:#fff;
           padding:8px 12px;border-radius:8px;box-shadow:0 1px 6px rgba(0,0,0,.3);font-size:13px}
   .dot{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:6px;vertical-align:middle}
+  .sm{display:inline-block;width:9px;height:9px;border-radius:50%;margin:0 7px 0 2px;vertical-align:middle}
   .lbl{font-size:11px;font-weight:bold;color:#fff;text-align:center;line-height:1.1;
        text-shadow:0 0 2px rgba(0,0,0,.6)}
   .pop b{font-size:14px} .pop .meta{color:#555;font-size:12px;margin-top:4px}
@@ -148,33 +253,61 @@ def generate_map(out_path, district_name, student_rank, home_addr, home_coord,
   <div><span class="dot" style="background:#e74c3c"></span>冲（略低于录取线）</div>
   <div><span class="dot" style="background:#f1c40f"></span>稳（略高于录取线）</div>
   <div><span class="dot" style="background:#2ecc71"></span>保（明显高于录取线）</div>
+  <hr style="margin:5px 0;border:none;border-top:1px solid #eee">
+  <div style="color:#666">下面为不在报名范围（小图标）：</div>
+  <div><span class="sm" style="background:#9aa0a6"></span>位次够不上</div>
+  <div><span class="sm" style="background:#e67e22"></span>超通勤上限</div>
+  <div><span class="sm" style="background:#3498db"></span>民办/国际（右上角勾选显示）</div>
   <div><span class="dot" style="background:#2c3e50"></span>家</div>
 </div>
 <div id="map"></div>
 <script>
-var HOME=__HOME_COORD__, PTS=__POINTS__;
+var HOME=__HOME_COORD__, PTS=__POINTS__, PRIV=__PRIV__;
 var map=L.map('map',{zoomControl:false}).setView(HOME,12);
 L.control.zoom({position:'topright'}).addTo(map);
 L.tileLayer('https://wprd0{s}.is.autonavi.com/appmaptile?lang=zh_cn&size=1&style=7&x={x}&y={y}&z={z}',
   {subdomains:['1','2','3','4'],maxZoom:18,attribution:'高德地图'}).addTo(map);
 
-function pin(color,txt){return L.divIcon({className:'',iconSize:[34,34],
+function pin(color,txt){return L.divIcon({className:'',iconSize:[34,34],iconAnchor:[17,34],
   html:'<div style="background:'+color+';width:34px;height:34px;border-radius:50% 50% 50% 0;'+
   'transform:rotate(-45deg);border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.4);'+
   'display:flex;align-items:center;justify-content:center;">'+
   '<span class="lbl" style="transform:rotate(45deg)">'+txt+'</span></div>'});}
+function smallIcon(color){return L.divIcon({className:'',iconSize:[14,14],iconAnchor:[7,7],
+  html:'<div style="background:'+color+';width:14px;height:14px;border-radius:50%;'+
+  'border:2px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9"></div>'});}
+
+function popup(p){
+  var head='<div class="pop"><b>'+p.name+'</b> <span style="color:'+p.color+'">['+p.band+']</span>';
+  if(p.matched&&p.matched.length) head+=' <span style="color:#16a085">🎯'+p.matched.join('·')+'</span>';
+  var meta='<div class="meta">'+p.level;
+  if(p.rank!=='—') meta+=' ｜ 录取位次≈'+p.rank+'名 (margin '+p.margin+')';
+  meta+='<br>通勤 '+p.dist;
+  if(p.style) meta+='<br>🏫 '+p.style;
+  if(p.tags&&p.tags.length) meta+='<br>'+p.tags.map(function(t){return '#'+t;}).join(' ');
+  if(p.gaokao) meta+='<br>🎓 高考(民间·非官方)：'+p.gaokao;
+  if(p.hist) meta+='<br>'+p.hist;
+  if(p.note) meta+='<br>'+p.note;
+  if(p.reason) meta+='<br>🚫 <b style="color:#c0392b">不在报名范围：</b>'+p.reason;
+  return head+meta+'</div></div>';
+}
 
 L.marker(HOME,{icon:pin('#2c3e50','家'),zIndexOffset:1000}).addTo(map)
   .bindPopup('<div class="pop"><b>家</b><br>__HOME__</div>');
 
 var bounds=[HOME];
+var publicLayer=L.layerGroup().addTo(map);
 PTS.forEach(function(p){
   bounds.push([p.lat,p.lon]);
-  var html='<div class="pop"><b>'+p.name+'</b> <span style="color:'+p.color+'">['+p.band+']</span>'+
-    '<div class="meta">'+p.level+' ｜ 录取位次≈'+p.rank+'名 (margin '+p.margin+')<br>'+
-    '通勤 '+p.dist+'<br>'+p.hist+(p.note?'<br>'+p.note:'')+'</div></div>';
-  L.marker([p.lat,p.lon],{icon:pin(p.color,p.band)}).addTo(map).bindPopup(html);
+  var icon=(p.kind==='full')?pin(p.color,p.band):smallIcon(p.color);
+  L.marker([p.lat,p.lon],{icon:icon}).addTo(publicLayer).bindPopup(popup(p));
 });
+var privateLayer=L.layerGroup();   // 默认不加到 map（关）
+PRIV.forEach(function(p){
+  L.marker([p.lat,p.lon],{icon:smallIcon(p.color)}).addTo(privateLayer).bindPopup(popup(p));
+});
+L.control.layers(null,{'统招公办（含够不上/超通勤）':publicLayer,
+  '民办/国际校':privateLayer},{position:'topright',collapsed:false}).addTo(map);
 map.fitBounds(bounds,{padding:[50,50]});
 </script></body></html>"""
 
@@ -186,11 +319,12 @@ map.fitBounds(bounds,{padding:[50,50]});
         "__MODE__": mode_label,
         "__HOME_COORD__": _json.dumps([home_coord[0], home_coord[1]]),
         "__POINTS__": _json.dumps(points, ensure_ascii=False),
+        "__PRIV__": _json.dumps(priv_points, ensure_ascii=False),
     }
     for k, v in repl.items():
         html = html.replace(k, v)
     Path(out_path).write_text(html, encoding="utf-8")
-    return len(points)
+    return len(points), len(priv_points)
 
 
 def main():
@@ -202,25 +336,37 @@ def main():
     ap.add_argument("--mode", default="driving", choices=list(dist_mod.MODES),
                     help="通勤方式：driving驾车/walking步行/bicycling骑行/transit公交（默认driving）")
     ap.add_argument("--max-distance", type=float, metavar="KM",
-                    help="超过该公里数的学校标注为'偏远'")
+                    help="超过该公里数（按最近校区）的学校标注为'偏远/不在报名范围'")
     ap.add_argument("--map", metavar="OUT.html", help="同时生成交互式地图 HTML（需配合 --home）")
+    ap.add_argument("--include-private", action="store_true",
+                    help="文本里也列出民办/国际校（地图默认作为可切换图层，无需此参数）")
+    ap.add_argument("--interests", metavar="兴趣",
+                    help="孩子兴趣偏好(逗号分隔)做软匹配排序，如：外语,科技。可用标签：" + "/".join(INTEREST_TAGS))
     args = ap.parse_args()
+
+    interests = [x.strip() for x in (args.interests or "").split(",") if x.strip()]
 
     data = load_district(args.district)
     district_name = data.get("district", args.district)
     schools = data.get("schools", [])
 
-    # 通勤距离（路网，非直线）
-    dist_map = {}
-    coord_map = {}
+    # 民办/国际校（不参加统招）
+    priv = dist_mod.private_schools(district_name, {s["name"] for s in schools})
+
+    # 通勤距离（路网，非直线，按校区分别算）
+    dist_campus = {}     # 校名 -> [(校区名, (lat,lon), (米,秒)|None), ...]
+    priv_dist = {}
     home_coord = None
     if args.home:
         mode_label = dist_mod.MODES[args.mode][1]
         print(f"\n正在用高德算 [{mode_label}] 路网距离：{args.home} → 各校 …", file=sys.stderr)
-        home_coord, dist_map, coord_map = dist_mod.attach_distances(
-            [s["name"] for s in schools], args.home, district_name, args.mode)
+        home_coord, dist_campus = dist_mod.compute_distances(
+            schools, args.home, district_name, args.mode)
         if home_coord is None:
             sys.exit(f"无法定位家庭住址：{args.home}（换个更具体的小区名/地铁站试试）")
+        _, priv_dist = dist_mod.compute_distances(
+            [{"name": p["name"], "campuses": [{"name": "", "lat": p["lat"], "lon": p["lon"]}]}
+             for p in priv], args.home, district_name, args.mode)
 
     buckets = {"冲": [], "稳": [], "保": [], "够不上": []}
     for s in schools:
@@ -230,9 +376,9 @@ def main():
         band, margin, ref_rank, history, vol = res
         buckets[band].append((s, margin, ref_rank, history, vol))
 
-    # 每档内按录取位次升序（更好的学校在前）
+    # 每档内：先按兴趣匹配数降序（软匹配，命中的往前提），再按录取位次升序
     for band in buckets:
-        buckets[band].sort(key=lambda t: t[2])
+        buckets[band].sort(key=lambda t: (-len(match_interests(t[0], interests)), t[2]))
 
     print(f"\n{'='*60}")
     print(f"  {district_name} · 中考志愿推荐  |  孩子区排名：第 {args.rank} 名")
@@ -261,9 +407,17 @@ def main():
             note = s.get("note", "")
             vol_flag = "  ⚠️录取位次年际波动大" if vol > VOLATILITY_THRESHOLD else ""
             mode_label = dist_mod.MODES[args.mode][1]
-            dist_str = fmt_dist(dist_map.get(s["name"]), mode_label, args.max_distance) if args.home else ""
-            print(f"    • {s['name']}  [{level}]  录取位次≈{ref_rank}名 (margin {margin:+.0%}){dist_str}{vol_flag}")
+            dist_str = fmt_dist(dist_campus.get(s["name"], []), mode_label, args.max_distance) if args.home else ""
+            matched = match_interests(s, interests)
+            match_str = f"  🎯兴趣匹配：{'·'.join(matched)}" if matched else ""
+            print(f"    • {s['name']}  [{level}]  录取位次≈{ref_rank}名 (margin {margin:+.0%}){dist_str}{vol_flag}{match_str}")
             print(f"        历年：{fmt_history(history, s)}")
+            ft = features_txt(s)
+            if ft:
+                print(ft)
+            gt = gaokao_txt(s)
+            if gt:
+                print(gt)
             if note:
                 print(f"        备注：{note}")
         print()
@@ -288,9 +442,10 @@ def main():
     if args.map:
         if not args.home:
             sys.exit("生成地图需要 --home（家庭住址）")
-        n = generate_map(args.map, district_name, args.rank, args.home, home_coord,
-                         dist_mod.MODES[args.mode][1], buckets, coord_map, dist_map)
-        print(f"🗺️  地图已生成：{args.map}（{n} 所学校 + 家）")
+        n, npv = generate_map(args.map, district_name, args.rank, args.home, home_coord,
+                              dist_mod.MODES[args.mode][1], buckets, dist_campus, priv, priv_dist,
+                              args.max_distance, interests)
+        print(f"🗺️  地图已生成：{args.map}（{n} 个统招点位 + {npv} 民办 + 家）")
 
 
 if __name__ == "__main__":
