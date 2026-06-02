@@ -10,12 +10,13 @@
 被 recommend.py import；也可单独跑自测：python scripts/admission/distance.py
 """
 import json
+import os
 import re
 import subprocess
 import urllib.parse
 from pathlib import Path
 
-AMAP_KEY = "25725f95f093bed58bf739e1fa289ad4"
+AMAP_KEY = os.environ.get("AMAP_KEY", "25725f95f093bed58bf739e1fa289ad4")
 HS_DIR = Path(__file__).resolve().parents[2] / "knowledge-original" / "beijing-highschools"
 CACHE_DIR = Path(__file__).resolve().parent / ".cache"
 CACHE_DIR.mkdir(exist_ok=True)

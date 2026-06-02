@@ -162,23 +162,15 @@ def gaokao_txt(school: dict) -> str:
     return f"        🎓高考(民间·非官方仅参考)：{s}" if s else ""
 
 
-def generate_map(out_path, district_name, student_rank, home_addr, home_coord,
-                 mode_label, buckets, dist_campus, priv, priv_dist, max_km, interests=None):
-    """生成自包含交互式地图 HTML（Leaflet + 高德底图，GCJ-02 坐标一致）。
+def _hist_of(s, history):
+    return "  ".join(
+        f"{y}年:{(s.get('scores') or {}).get(y, {}).get('score','?')}分(位次{r})"
+        for y, r in history)
 
-    - 全部统招校都打点：冲稳保=大彩色pin；够不上/超通勤=小图标（不在报名范围）
-    - 多校区每校区各一个marker、各自距离
-    - 民办/国际作为可切换图层（默认关）
-    """
-    import json as _json
 
-    points = []   # 统招公办（全部，含够不上）
-
-    def hist_of(s, history):
-        return "  ".join(
-            f"{y}年:{(s.get('scores') or {}).get(y, {}).get('score','?')}分(位次{r})"
-            for y, r in history)
-
+def build_public_points(buckets, dist_campus, mode_label, max_km, interests=None):
+    """统招公办全部点位（含够不上/超通勤的小图标）；多校区每校区一个点。"""
+    points = []
     for band in ("冲", "稳", "保", "够不上"):
         for s, margin, ref_rank, history, vol in buckets[band]:
             rows = dist_campus.get(s["name"], [])
@@ -203,14 +195,18 @@ def generate_map(out_path, district_name, student_rank, home_addr, home_coord,
                     "kind": kind, "color": color, "band": band,
                     "level": s.get("level", ""), "rank": ref_rank,
                     "margin": f"{margin:+.0%}", "dist": _dist_txt(rd, mode_label),
-                    "hist": hist_of(s, history), "note": s.get("note", ""),
+                    "hist": _hist_of(s, history), "note": s.get("note", ""),
                     "reason": reason,
                     "style": feat.get("style", ""), "tags": feat.get("tags") or [],
                     "gaokao": _gaokao_years_str(s),
                     "matched": match_interests(s, interests or []),
                 })
+    return points
 
-    priv_points = []
+
+def build_private_points(priv, priv_dist, mode_label, max_km):
+    """民办/国际校点位（统一小蓝图标，不参加统招）。"""
+    out = []
     for p in priv:
         rows = priv_dist.get(p["name"], [])
         rd = rows[0][2] if rows else None
@@ -218,7 +214,7 @@ def generate_map(out_path, district_name, student_rank, home_addr, home_coord,
         reason = "民办/国际，不参加统招志愿"
         if max_km is not None and km is not None and km > max_km:
             reason += f"；且超通勤上限（>{max_km}km）"
-        priv_points.append({
+        out.append({
             "name": p["name"], "lat": p["lat"], "lon": p["lon"],
             "kind": "small", "color": SMALL_COLOR["民办"], "band": "民办",
             "level": "民办/国际", "rank": "—", "margin": "—",
@@ -226,6 +222,87 @@ def generate_map(out_path, district_name, student_rank, home_addr, home_coord,
             "reason": reason,
             "style": "", "tags": [], "gaokao": "", "matched": [],
         })
+    return out
+
+
+def _school_card(s, margin, ref_rank, history, vol, dist_campus, mode_label, max_km, interests):
+    """单校结构化卡片（文本/前端共用）。nearest 取最近校区。"""
+    best = nearest_campus(dist_campus.get(s["name"], []))
+    nearest = None
+    if best:
+        cname, _, (m, sec) = best
+        nearest = {"campus": cname, "km": round(m / 1000, 1), "mins": round(sec / 60),
+                   "over_max": bool(max_km is not None and m / 1000 > max_km)}
+    feat = s.get("features") or {}
+    return {
+        "name": s["name"], "level": s.get("level", ""), "note": s.get("note", ""),
+        "ref_rank": ref_rank, "margin": round(margin, 3), "margin_pct": f"{margin:+.0%}",
+        "volatility": round(vol, 2), "history": [[y, r] for y, r in history],
+        "nearest": nearest,
+        "style": feat.get("style", ""), "tags": feat.get("tags") or [],
+        "gaokao": _gaokao_years_str(s),
+        "matched": match_interests(s, interests or []),
+    }
+
+
+def build_result(rank, home=None, mode="driving", max_km=None, interests=None, district="chaoyang"):
+    """纯函数：返回结构化推荐结果（CLI 文本 / 地图 / Web API 共用）。
+    home 为空则不算距离；home 无法定位时抛 ValueError。"""
+    interests = interests or []
+    data = load_district(district)
+    district_name = data.get("district", district)
+    schools = data.get("schools", [])
+    priv = dist_mod.private_schools(district_name, {s["name"] for s in schools})
+    mode_label = dist_mod.MODES[mode][1]
+
+    dist_campus, priv_dist, home_coord = {}, {}, None
+    if home:
+        home_coord, dist_campus = dist_mod.compute_distances(schools, home, district_name, mode)
+        if home_coord is None:
+            raise ValueError(f"无法定位家庭住址：{home}")
+        _, priv_dist = dist_mod.compute_distances(
+            [{"name": p["name"], "campuses": [{"name": "", "lat": p["lat"], "lon": p["lon"]}]}
+             for p in priv], home, district_name, mode)
+
+    buckets = {"冲": [], "稳": [], "保": [], "够不上": []}
+    for s in schools:
+        res = classify(rank, s)
+        if res is None:
+            continue
+        band, margin, ref_rank, history, vol = res
+        buckets[band].append((s, margin, ref_rank, history, vol))
+    for band in buckets:
+        buckets[band].sort(key=lambda t: (-len(match_interests(t[0], interests)), t[2]))
+
+    bands = {band: [_school_card(*t, dist_campus, mode_label, max_km, interests)
+                    for t in buckets[band]] for band in buckets}
+
+    return {
+        "district": district_name, "rank": rank, "home": home,
+        "home_coord": list(home_coord) if home_coord else None,
+        "mode": mode, "mode_label": mode_label, "max_km": max_km,
+        "interests": interests,
+        "bands": bands,
+        "points": build_public_points(buckets, dist_campus, mode_label, max_km, interests),
+        "private": build_private_points(priv, priv_dist, mode_label, max_km),
+        "quota_allocation": data.get("quota_allocation"),
+        "_buckets": buckets, "_dist_campus": dist_campus,
+        "_priv": priv, "_priv_dist": priv_dist, "_home_coord": home_coord,
+    }
+
+
+def generate_map(out_path, district_name, student_rank, home_addr, home_coord,
+                 mode_label, buckets, dist_campus, priv, priv_dist, max_km, interests=None):
+    """生成自包含交互式地图 HTML（Leaflet + 高德底图，GCJ-02 坐标一致）。
+
+    - 全部统招校都打点：冲稳保=大彩色pin；够不上/超通勤=小图标（不在报名范围）
+    - 多校区每校区各一个marker、各自距离
+    - 民办/国际作为可切换图层（默认关）
+    """
+    import json as _json
+
+    points = build_public_points(buckets, dist_campus, mode_label, max_km, interests)
+    priv_points = build_private_points(priv, priv_dist, mode_label, max_km)
 
     html = """<!DOCTYPE html>
 <html lang="zh-CN"><head><meta charset="utf-8">

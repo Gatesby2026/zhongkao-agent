@@ -354,6 +354,35 @@ def list_all():
     return {"items": db.list_analyses()}
 
 
+# ---------- 志愿填报推荐（冲稳保）----------
+
+sys.path.insert(0, str(ROOT / "scripts" / "admission"))
+import recommend as zhiyuan   # noqa: E402
+from typing import List, Optional   # noqa: E402
+from pydantic import BaseModel   # noqa: E402
+
+
+class ZhiyuanReq(BaseModel):
+    rank: int
+    home: Optional[str] = None
+    mode: str = "driving"
+    max_km: Optional[float] = None
+    interests: Optional[List[str]] = None
+
+
+@app.post("/api/zhiyuan/recommend")
+def zhiyuan_recommend(req: ZhiyuanReq):
+    try:
+        result = zhiyuan.build_result(
+            rank=req.rank, home=req.home, mode=req.mode,
+            max_km=req.max_km, interests=req.interests, district="chaoyang",
+        )
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+    # 去掉给 CLI/地图复用的内部字段（下划线开头）
+    return {k: v for k, v in result.items() if not k.startswith("_")}
+
+
 # ---------- 静态前端（web 构建产物）----------
 
 WEB_DIST = ROOT / "web" / "dist"

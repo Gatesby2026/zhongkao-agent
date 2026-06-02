@@ -3,6 +3,14 @@ import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
   plugins: [vue()],
+  build: {
+    rollupOptions: {
+      input: {
+        main: 'index.html',
+        zhiyuan: 'zhiyuan.html',
+      },
+    },
+  },
   server: {
     port: 5173,
     proxy: {
