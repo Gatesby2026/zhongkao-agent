@@ -60,8 +60,12 @@ out/papers/
 # TypeScript 增量编译缓存（派生产物，可重生）
 *.tsbuildinfo
 
-# docx 解压中间产物（chinese_docx_paper.py）
-knowledge-base/exams/_staging/**/docx-extract/
+# docx 解压中间产物（*_docx_paper.py）+ OCR 缓存 — 派生可重生，不入库
+# 仅 structured-cloud/（final.json+md）+ figures/ 作为派生真相入库
+knowledge-base/exams/_staging/**/docx-extracted/
+knowledge-base/exams/_staging/**/docx-extracted-ans/
+knowledge-base/exams/_staging/**/docx-extract-ans/
+knowledge-base/exams/_staging/**/tencent-cache/
 knowledge-base/exams/_staging/**/src-unzip/
 
 # 学生答题卡照片（含隐私）
