@@ -36,9 +36,17 @@ MODULE_CN_BY_SUBJECT: dict[str, dict[str, str]] = {
         "writing": "写作",
     },
     "politics": {
-        # 当前 KB 全部题目标"politics"单模块；待 KB 细化为
-        # 心理/道德/法治/国情等 8 模块时此表对应扩
-        "politics": "道法综合",
+        # **R5.5 (2026-06-01)**：KB 已细化为 8 模块
+        "ideology":           "思想理论",
+        "ruleOfLaw":          "法治教育",
+        "morality":           "道德教育",
+        "mentalHealth":       "心理健康",
+        "nationSociety":      "国家与社会",
+        "civicParticipation": "公民参与",
+        "economy":            "经济发展",
+        "chineseCulture":     "中华文化",
+        # 旧"politics"占位兼容（已 enrich 全部细化后可删）
+        "politics":           "道法综合",
     },
 }
 

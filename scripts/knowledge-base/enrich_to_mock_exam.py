@@ -97,7 +97,18 @@ SUBJECT_MODULES: dict[str, list[str]] = {
     ],
     "chinese":  ["reading", "writing", "classical", "chinese"],
     "english":  ["vocabulary", "grammar", "reading", "listening", "writing"],
-    "politics": ["politics"],
+    # **R5.5**：道法 8 模块（按教材划分），替换之前的单 "politics" 占位。
+    # 之前所有题落"道法综合"，模块级聚合无信息量。
+    "politics": [
+        "ideology",            # 思想理论（中国梦/中国特色社会主义/强国建设）
+        "ruleOfLaw",           # 法治教育（宪法/法治/公民权利义务/法律作用）
+        "morality",            # 道德教育（诚信/友善/责任/爱国/集体/家庭美德）
+        "mentalHealth",        # 心理健康（自我认识/情绪/抗挫/批判性思维）
+        "nationSociety",       # 国家与社会（民族团结/国家安全/生态文明）
+        "civicParticipation",  # 公民参与（民主/人大/基层自治/政治参与）
+        "economy",             # 经济发展（创新/对外开放/共同富裕/乡村振兴）
+        "chineseCulture",      # 中华文化（传承/文化自信/民族精神）
+    ],
     "history":  ["history"],
     "geography": ["geography"],
     "biology":  ["biology"],
@@ -377,15 +388,17 @@ ENRICH_USER_TEMPLATE = """\
       （测密度/测电阻/欧姆定律/平面镜成像/熔化/凸透镜）
     - section=comprehensive（科普阅读）→ 综合应用 + 材料涉及考点
     - section=calculation（计算题）→ 公式综合应用（如 电功率+欧姆定律 / 压强+浮力）
-  - **道法 section 专用 KP 范围**（按教材模块）：
-    - 思想理论：中国梦/中国特色社会主义新时代/强国建设/十四五十五五/全面建成小康社会
-    - 法治教育：宪法地位/依法治国/公民基本权利/公民基本义务/法律的作用/法治社会
-    - 道德教育：诚信/友善/责任意识/爱国主义/集体主义/社会公德/家庭美德
-    - 心理健康：自我认识/情绪调节/抗挫折/独立思考/批判性思维/人际交往
-    - 国家与社会：民族团结/国家安全/生态文明/总体国家安全观/人类命运共同体
-    - 公民参与：民主形式/基层群众自治/人民代表大会制度/政治参与
-    - 经济发展：创新驱动/对外开放/共同富裕/乡村振兴/科技强国
-    - 中华文化：传承创新/文化自信/中华优秀传统文化/民族精神
+  - **道法 section 专用 KP 范围 + module 映射**（按教材 8 模块，KP 决定 module）：
+    - 思想理论 (module=ideology)：中国梦/中国特色社会主义新时代/强国建设/十四五十五五/全面建成小康社会
+    - 法治教育 (module=ruleOfLaw)：宪法地位/依法治国/公民基本权利/公民基本义务/法律的作用/法治社会
+    - 道德教育 (module=morality)：诚信/友善/责任意识/爱国主义/集体主义/社会公德/家庭美德
+    - 心理健康 (module=mentalHealth)：自我认识/情绪调节/抗挫折/独立思考/批判性思维/人际交往
+    - 国家与社会 (module=nationSociety)：民族团结/国家安全/生态文明/总体国家安全观/人类命运共同体
+    - 公民参与 (module=civicParticipation)：民主形式/基层群众自治/人民代表大会制度/政治参与
+    - 经济发展 (module=economy)：创新驱动/对外开放/共同富裕/乡村振兴/科技强国
+    - 中华文化 (module=chineseCulture)：传承创新/文化自信/中华优秀传统文化/民族精神
+    - **R5.5**：道法每题 module 必须从 8 个里选 1 个（与该题主要 KP 对应），
+      严禁退化为旧的单一 "politics" — 否则模块级聚合失去信息量。
   - **数学 module 题号约定**（北京中考二模卷固定结构）：
     - Q1-Q16 按内容选 module（数与式/方程不等式/函数/三角形/四边形/圆/统计与概率）
     - Q17-Q25 中档解答，按主考点选 module
