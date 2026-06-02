@@ -386,6 +386,16 @@ def zhiyuan_recommend(req: ZhiyuanReq):
 # ---------- 静态前端（web 构建产物）----------
 
 WEB_DIST = ROOT / "web" / "dist"
+
+
+@app.get("/zhiyuan")
+def zhiyuan_page():
+    f = WEB_DIST / "zhiyuan.html"
+    if not f.exists():
+        raise HTTPException(status_code=404, detail="zhiyuan page not built")
+    return FileResponse(str(f))
+
+
 if WEB_DIST.exists():
     app.mount("/", StaticFiles(directory=str(WEB_DIST), html=True),
               name="web")
