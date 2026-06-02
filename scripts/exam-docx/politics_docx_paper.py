@@ -848,11 +848,11 @@ def _assign_types(questions: list[dict]) -> None:
         elif sec == "choice" or (ans and re.fullmatch(r"[A-D]", ans)):
             q["type"] = "choice"
         elif sec == "material":
-            # 写作/感悟题判别：stem 含 "写一篇" / "以...为题" / "不少于N字"
-            if (re.search(r"写一篇|以.{0,15}为题|不少于\s*\d+\s*字|微访谈感悟|题目.{0,5}：", stem)):
-                q["type"] = "essay"
-            else:
-                q["type"] = "material"
+            # **R5.4**：道法没有"作文"题型，所有材料 section 内的写作/感悟/
+            # 述评/学习心得 题都归 material（"材料分析"）。原代码把"写一篇/
+            # 以...为题/不少于N字"误判为 essay → enrich TYPE_MAP 把 essay 映
+            # 成"作文"，导致道法 yaml 出现"作文"题型（朝阳 Q23/Q24 教训）。
+            q["type"] = "material"
         else:
             # 兜底：判断题答案匹配 → judge
             if ans in ("正确","错误","√","×","对","错"):
