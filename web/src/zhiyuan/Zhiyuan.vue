@@ -376,7 +376,7 @@ const copyHint = ref('')
           <span><i class="d" style="background:#e74c3c"></i>冲</span>
           <span><i class="d" style="background:#f1c40f"></i>稳</span>
           <span><i class="d" style="background:#2ecc71"></i>保</span>
-          <span><i class="s" style="background:#9aa0a6"></i>位次够不上</span>
+          <span><i class="s" style="background:#9b59b6"></i>位次够不上</span>
           <span><i class="s" style="background:#e67e22"></i>超通勤</span>
           <span><i class="s" style="background:#3498db"></i>民办/国际</span>
           <span><i class="bd-leg">宿</i>可寄宿</span>

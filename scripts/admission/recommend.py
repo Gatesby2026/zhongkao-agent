@@ -134,7 +134,7 @@ def fmt_history(history: list[tuple[int, int]], school: dict) -> str:
 BAND_COLOR = {"冲": "#e74c3c", "稳": "#f1c40f", "保": "#2ecc71"}
 
 
-SMALL_COLOR = {"够不上": "#9aa0a6", "太远": "#e67e22", "民办": "#3498db"}
+SMALL_COLOR = {"够不上": "#9b59b6", "太远": "#e67e22", "民办": "#3498db"}
 
 
 def _dist_txt(rd, mode_label):
@@ -403,7 +403,7 @@ def generate_map(out_path, district_name, student_rank, home_addr, home_coord,
   <div><span class="dot" style="background:#2ecc71"></span>保（明显高于录取线）</div>
   <hr style="margin:5px 0;border:none;border-top:1px solid #eee">
   <div style="color:#666">下面为不在报名范围（小图标）：</div>
-  <div><span class="sm" style="background:#9aa0a6"></span>位次够不上</div>
+  <div><span class="sm" style="background:#9b59b6"></span>位次够不上</div>
   <div><span class="sm" style="background:#e67e22"></span>超通勤上限</div>
   <div><span class="sm" style="background:#3498db"></span>民办/国际（右上角勾选显示）</div>
   <div><span class="dot" style="background:#2c3e50"></span>家</div>
