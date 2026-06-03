@@ -15,7 +15,14 @@
 
 generated: 2026-06-03
 district: chaoyang
+method: ../ADDRESS-VERIFICATION.md   # 核查与交叉验证 SOP，其他区照此流程做
 note: 坐标尚未基于本表重新生成；当前 highschools_final.json 里的旧坐标多为"校名裸geocode"，不可信，待本表定稿后重做。
+evidence_policy: |
+  按 SOP §5，每校应有 evidence 列表（逐信源 source/tier/url/accessed/claim/agree + resolution）。
+  本轮(朝阳)局限：研究工具只有 WebSearch，证据仅留到 schools[].source 列表粒度 +
+  note/flag 里的冲突裁决文字（如朝阳外国语排除慧忠里本部、二外附中排除"管庄路63号"地图描述），
+  未逐字留 claim/url/date。下一区起按 SOP §5 全量留存；原始页面/截图存 _evidence/<district>/。
+  本表 source + note/flag 即本轮"过程数据"，可溯源、可在拿到 bjeea 简章后增量升级 confidence。
 
 schools:
   # ===== Tier: 可直接用（high, 门牌到位）=====
