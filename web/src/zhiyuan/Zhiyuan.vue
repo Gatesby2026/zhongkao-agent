@@ -29,6 +29,7 @@ interface Card {
   name: string; level: string; note: string; ref_rank: number | string
   margin: number; margin_pct: string; volatility: number
   history: [number, number][]
+  score_lines?: { year: number; score: number | null; rank: number | null }[]
   nearest: { campus: string; km: number; mins: number; over_max: boolean } | null
   style: string; tags: string[]; gaokao: string; matched: string[]
   school_code?: string; majors?: Major[]; campus_major?: string
@@ -109,19 +110,24 @@ async function submit() {
 }
 
 /* ---------------- 地图 ---------------- */
-function popupHtml(p: Point): string {
-  let h = `<div class="pop"><b>${cleanName(p.name)}</b> <span style="color:${p.color}">[${p.band}]</span>`
-  if (p.matched && p.matched.length) h += ` <span style="color:#16a085">🎯${p.matched.join('·')}</span>`
-  let m = `<div class="meta">${p.level}`
-  if (p.rank !== '—') m += ` ｜ 录取位次≈${p.rank}名 (margin ${p.margin})`
-  if (p.dist && p.dist !== '距离未知') m += `<br>通勤 ${p.dist}`
-  if (p.style) m += `<br>🏫 ${p.style}`
-  if (p.tags && p.tags.length) m += '<br>' + p.tags.map(t => '#' + t).join(' ')
-  if (p.gaokao) m += `<br>🎓 高考(民间·非官方)：${p.gaokao}`
-  if (p.hist) m += `<br>${p.hist}`
-  if (p.note) m += `<br>${p.note}`
-  if (p.reason) m += `<br>🚫 <b style="color:#c0392b">不在报名范围：</b>${p.reason}`
-  return h + m + '</div></div>'
+// 选中学校 → 右侧详情面板（替代地图气泡）
+const selectedPoint = ref<Point | null>(null)
+function selectPoint(p: Point) { selectedPoint.value = p }
+// 由点位反查冲稳保卡片：多校区点名形如 "和平街一中·和平街校区(...)"，取 · 前主名匹配
+function cardOfPoint(p: Point | null): Card | null {
+  if (!p) return null
+  const base = p.name.split('·')[0]
+  return findCard(base) || findCard(p.name)
+}
+const selCard = computed<Card | null>(() => cardOfPoint(selectedPoint.value))
+// 点击下方冲稳保卡片 → 在面板选中并把地图平移过去
+function selectByName(name: string) {
+  const pts = result.value?.points || []
+  const p = pts.find(pt => pt.name.split('·')[0] === name) || pts.find(pt => pt.name === name)
+  if (p) {
+    selectedPoint.value = p
+    if (mapInst) mapInst.panTo([p.lat, p.lon])
+  }
 }
 const boardBadge = '<span class="bd-badge" title="可寄宿/有住宿">宿</span>'
 function pin(color: string, txt: string, boarding = false) {
@@ -164,9 +170,9 @@ function renderMarkers() {
     if (!layers.gongban && !(coop && layers.coop)) return
     if (coop && !layers.coop && !layers.gongban) return
     bounds.push([p.lat, p.lon])
-    const boarding = !!findCard(p.name)?.boarding
+    const boarding = !!cardOfPoint(p)?.boarding
     const icon = p.kind === 'full' ? pin(p.color, p.band, boarding) : smallIcon(p.color, boarding)
-    const mk = L.marker([p.lat, p.lon], { icon }).addTo(publicLayer).bindPopup(popupHtml(p))
+    const mk = L.marker([p.lat, p.lon], { icon }).addTo(publicLayer).on('click', () => selectPoint(p))
     // 缺省常驻显示学校名：重点推荐校(冲/稳/保)常驻，其余小点悬停显示，避免拥挤
     if (p.kind === 'full') {
       mk.bindTooltip(shortName(p.name), { permanent: true, direction: 'bottom', offset: [0, 2], className: 'map-lbl' })
@@ -180,7 +186,7 @@ function renderMarkers() {
   res.private.forEach((p) => {
     bounds.push([p.lat, p.lon])
     L.marker([p.lat, p.lon], { icon: smallIcon(p.color) }).addTo(privateLayer)
-      .bindPopup(popupHtml(p))
+      .on('click', () => selectPoint(p))
       .bindTooltip(shortName(p.name), { direction: 'top', offset: [0, -6], className: 'map-lbl' })
   })
   if (layers.minban) privateLayer.addTo(mapInst)
@@ -190,6 +196,7 @@ function renderMarkers() {
 function renderMap() {
   const res = result.value
   if (!res) return
+  selectedPoint.value = null
   if (mapInst) { mapInst.remove(); mapInst = null; publicLayer = null; privateLayer = null }
   // 默认中心：有住址用住址，否则用全部点位中心（朝阳）
   let center: [number, number] = res.home_coord || [39.95, 116.47]
@@ -371,16 +378,86 @@ const copyHint = ref('')
             <button class="lchip" :class="{ on: layers.minban }" @click="layers.minban = !layers.minban">民办·国际校</button>
           </div>
         </div>
-        <div id="zmap"></div>
-        <div class="legend">
-          <span><i class="d" style="background:#e74c3c"></i>冲</span>
-          <span><i class="d" style="background:#f1c40f"></i>稳</span>
-          <span><i class="d" style="background:#2ecc71"></i>保</span>
-          <span><i class="s" style="background:#9b59b6"></i>位次够不上</span>
-          <span><i class="s" style="background:#e67e22"></i>超通勤</span>
-          <span><i class="s" style="background:#3498db"></i>民办/国际</span>
-          <span><i class="bd-leg">宿</i>可寄宿</span>
-          <span v-if="result.home_coord"><i class="d" style="background:#2c3e50"></i>家</span>
+        <div class="map-detail">
+          <div class="map-col">
+            <div id="zmap"></div>
+            <div class="legend">
+              <span><i class="d" style="background:#e74c3c"></i>冲</span>
+              <span><i class="d" style="background:#f1c40f"></i>稳</span>
+              <span><i class="d" style="background:#2ecc71"></i>保</span>
+              <span><i class="s" style="background:#9b59b6"></i>位次够不上</span>
+              <span><i class="s" style="background:#e67e22"></i>超通勤</span>
+              <span><i class="s" style="background:#3498db"></i>民办/国际</span>
+              <span><i class="bd-leg">宿</i>可寄宿</span>
+              <span v-if="result.home_coord"><i class="d" style="background:#2c3e50"></i>家</span>
+            </div>
+          </div>
+
+          <!-- 右侧：选中学校详情面板（替代地图气泡） -->
+          <aside class="detail-panel">
+            <template v-if="selectedPoint">
+              <div class="dp-head">
+                <span class="dp-band" :style="{ background: selectedPoint.color }">{{ selectedPoint.band }}</span>
+                <h3>{{ cleanName(selectedPoint.name) }}</h3>
+              </div>
+              <div class="dp-sub">
+                {{ selectedPoint.level }}
+                <span v-if="selCard?.school_code" class="dp-code">招生码 {{ selCard.school_code }}</span>
+              </div>
+              <div class="dp-badges">
+                <span v-if="selCard?.boarding" class="bdg b-board">🛏 有住宿</span>
+                <span v-if="selCard?.coop" class="bdg b-coop">🌐 中外合作班</span>
+                <span v-if="selectedPoint.matched && selectedPoint.matched.length" class="bdg b-match">🎯{{ selectedPoint.matched.join('·') }}</span>
+              </div>
+
+              <dl class="dp-kv">
+                <div v-if="selectedPoint.rank !== '—'">
+                  <dt>录取参考位次</dt>
+                  <dd>≈ {{ selectedPoint.rank }} 名<span class="dp-mg">margin {{ selectedPoint.margin }}</span>
+                    <span v-if="selCard && selCard.volatility >= 0.4" class="dp-vol">⚠️波动大</span></dd>
+                </div>
+                <div v-if="selectedPoint.dist && selectedPoint.dist !== '距离未知'">
+                  <dt>通勤</dt>
+                  <dd>{{ selectedPoint.dist }}
+                    <span v-if="selCard?.nearest?.over_max" class="dp-vol">⚠️超通勤上限</span></dd>
+                </div>
+              </dl>
+
+              <!-- 历年录取分数线：2025 → 2024 → 2023 -->
+              <div v-if="selCard?.score_lines && selCard.score_lines.length" class="dp-block">
+                <div class="dp-title">历年录取分数线</div>
+                <table class="dp-table">
+                  <thead><tr><th>年份</th><th>分数线</th><th>区排名</th></tr></thead>
+                  <tbody>
+                    <tr v-for="sl in selCard.score_lines" :key="sl.year">
+                      <td>{{ sl.year }}</td>
+                      <td>{{ sl.score != null ? sl.score + '分' : '—' }}</td>
+                      <td>{{ sl.rank != null ? sl.rank + '名' : '—' }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p class="dp-tip">分数跨年口径不同（2025 起总分调整），<b>区排名</b>才是跨年可比的录取参考。</p>
+              </div>
+
+              <!-- 招生专业(班) -->
+              <div v-if="selCard?.majors && selCard.majors.length" class="dp-block">
+                <div class="dp-title">招生专业(班)</div>
+                <div v-for="m in selCard.majors" :key="m.major_code" class="dp-mj">
+                  <b>{{ m.major_code }}</b> {{ cleanName(m.major_name) }}
+                  <em v-if="m.plan_chaoyang">· 朝阳{{ m.plan_chaoyang }}</em>
+                </div>
+              </div>
+
+              <div v-if="selectedPoint.style" class="dp-line">🏫 {{ selectedPoint.style }}</div>
+              <div v-if="selectedPoint.gaokao" class="dp-line dp-muted">🎓 高考(民间·非官方)：{{ selectedPoint.gaokao }}</div>
+              <div v-if="selectedPoint.note" class="dp-line dp-muted">{{ selectedPoint.note }}</div>
+              <div v-if="selectedPoint.reason" class="dp-warn">🚫 不在报名范围：{{ selectedPoint.reason }}</div>
+            </template>
+            <div v-else class="dp-empty">
+              <div class="dp-empty-ic">🏫</div>
+              点击地图上的学校查看详细信息
+            </div>
+          </aside>
         </div>
       </div>
 
@@ -394,7 +471,8 @@ const copyHint = ref('')
           </h2>
           <p v-if="!(result.bands[band] || []).length" class="empty">该档暂无匹配学校</p>
           <div class="school-grid">
-            <div v-for="c in result.bands[band]" :key="c.name" class="school">
+            <div v-for="c in result.bands[band]" :key="c.name" class="school"
+              :class="{ active: selCard && selCard.name === c.name }" @click="selectByName(c.name)">
               <div class="sname">
                 {{ cleanName(c.name) }}
                 <span class="lvl">{{ c.level }}</span>
@@ -467,7 +545,7 @@ const copyHint = ref('')
 </template>
 
 <style scoped>
-.page { max-width: 1080px; margin: 0 auto; padding: 16px; background: var(--bg); min-height: 100%; }
+.page { max-width: 1180px; margin: 0 auto; padding: 16px; background: var(--bg); min-height: 100%; }
 .hero h1 { font-size: 20px; color: var(--brand-deeper); }
 .hero .sub { color: var(--gray-600); font-size: 13px; margin-top: 4px; }
 .disclaimer { background: var(--warning-bg); border: 1px solid var(--accent);
@@ -511,6 +589,45 @@ const copyHint = ref('')
 .lchip { font-size: 12px; padding: 4px 10px; border: 1px solid var(--gray-300); background: #fff;
   border-radius: var(--radius-full); color: var(--gray-500); }
 .lchip.on { background: var(--brand-50); color: var(--brand-dark); border-color: var(--brand); }
+/* 地图 + 详情面板：左图右栏 */
+.map-detail { display: flex; gap: 12px; align-items: stretch; }
+.map-col { flex: 1; min-width: 0; }
+.detail-panel { width: 320px; flex-shrink: 0; height: 460px; overflow-y: auto;
+  background: var(--surface); border: 1px solid var(--gray-100); border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm); padding: 14px; }
+.dp-empty { height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 8px; color: var(--gray-400); font-size: 13px; text-align: center; }
+.dp-empty-ic { font-size: 32px; opacity: .5; }
+.dp-head { display: flex; align-items: center; gap: 8px; }
+.dp-head h3 { font-size: 16px; font-weight: 700; color: var(--gray-900); margin: 0; line-height: 1.3; }
+.dp-band { flex-shrink: 0; width: 22px; height: 22px; border-radius: 50%; color: #fff;
+  font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+.dp-sub { font-size: 12.5px; color: var(--gray-600); margin-top: 6px; }
+.dp-code { background: var(--gray-100); color: var(--gray-500); font-size: 11px;
+  padding: 1px 6px; border-radius: var(--radius-xs); margin-left: 6px; }
+.dp-badges { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 5px; }
+.dp-kv { margin: 12px 0 0; display: flex; flex-direction: column; gap: 8px; }
+.dp-kv > div { display: flex; flex-direction: column; gap: 2px; }
+.dp-kv dt { font-size: 11px; color: var(--gray-400); }
+.dp-kv dd { margin: 0; font-size: 13px; color: var(--gray-800); font-weight: 600; }
+.dp-mg { font-size: 11px; color: var(--gray-400); font-weight: 400; margin-left: 8px; }
+.dp-vol { font-size: 11px; color: var(--accent); font-weight: 400; margin-left: 6px; }
+.dp-block { margin-top: 14px; }
+.dp-title { font-size: 12px; font-weight: 700; color: var(--brand-dark); margin-bottom: 6px;
+  padding-left: 7px; border-left: 3px solid var(--brand); }
+.dp-table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+.dp-table th { text-align: left; color: var(--gray-400); font-weight: 500; font-size: 11px;
+  padding: 3px 6px; border-bottom: 1px solid var(--gray-100); }
+.dp-table td { padding: 4px 6px; color: var(--gray-800); border-bottom: 1px solid var(--gray-50); }
+.dp-table tbody tr:first-child td { font-weight: 700; color: var(--gray-900); }
+.dp-tip { font-size: 11px; color: var(--gray-400); margin-top: 6px; line-height: 1.5; }
+.dp-mj { font-size: 12.5px; color: var(--gray-700); padding: 3px 0; line-height: 1.4; }
+.dp-mj b { color: var(--brand-dark); }
+.dp-mj em { color: var(--gray-400); font-style: normal; font-size: 11px; }
+.dp-line { font-size: 12.5px; color: var(--gray-700); margin-top: 10px; line-height: 1.5; }
+.dp-muted { color: var(--gray-500); }
+.dp-warn { font-size: 12.5px; color: #c0392b; background: #fef2f2; border-radius: var(--radius-xs);
+  padding: 7px 9px; margin-top: 12px; line-height: 1.5; }
 /* 底色用页面同色：瓦片降透明度后由它透上来，实现"洗白"而不碰标记 */
 #zmap { height: 460px; border-radius: var(--radius-sm); overflow: hidden;
   box-shadow: var(--shadow-sm); background: var(--bg); }
@@ -554,7 +671,9 @@ const copyHint = ref('')
 .empty { color: var(--gray-400); font-size: 13px; }
 .school-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 10px; }
 .school { background: var(--surface); border: 1px solid var(--gray-100); border-radius: var(--radius-sm);
-  box-shadow: var(--shadow-sm); padding: 12px 14px; }
+  box-shadow: var(--shadow-sm); padding: 12px 14px; cursor: pointer; transition: border-color .15s, box-shadow .15s; }
+.school:hover { border-color: var(--brand); }
+.school.active { border-color: var(--brand); box-shadow: 0 0 0 2px var(--brand-50); }
 .sname { font-size: 15px; font-weight: 600; color: var(--gray-900); }
 .sname .lvl { font-size: 11px; font-weight: 400; color: var(--brand); background: var(--brand-50);
   padding: 1px 6px; border-radius: var(--radius-xs); margin-left: 6px; }
@@ -603,6 +722,10 @@ const copyHint = ref('')
 .src { font-size: 11px; color: var(--gray-400); margin-top: 12px; }
 
 /* 移动端 */
+@media (max-width: 860px) {
+  .map-detail { flex-direction: column; }
+  .detail-panel { width: auto; height: auto; max-height: 420px; }
+}
 @media (max-width: 640px) {
   .page { padding: 12px; }
   #zmap { height: 340px; }

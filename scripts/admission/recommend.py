@@ -263,10 +263,19 @@ def _school_card(s, margin, ref_rank, history, vol, dist_campus, mode_label, max
         nearest = {"campus": cname, "km": round(m / 1000, 1), "mins": round(sec / 60),
                    "over_max": bool(max_km is not None and m / 1000 > max_km)}
     feat = s.get("features") or {}
+    # 历年分数线（含分数+位次），按年份降序（2025→2024→2023…）供前端结构化展示
+    scores = s.get("scores") or {}
+    score_lines = []
+    for y in sorted(scores.keys(), reverse=True):
+        rec = scores[y]
+        if not isinstance(rec, dict):
+            continue
+        score_lines.append({"year": int(y), "score": rec.get("score"), "rank": rec.get("rank")})
     card = {
         "name": s["name"], "level": s.get("level", ""), "note": s.get("note", ""),
         "ref_rank": ref_rank, "margin": round(margin, 3), "margin_pct": f"{margin:+.0%}",
         "volatility": round(vol, 2), "history": [[y, r] for y, r in history],
+        "score_lines": score_lines,
         "nearest": nearest,
         "style": feat.get("style", ""), "tags": feat.get("tags") or [],
         "gaokao": _gaokao_years_str(s),
