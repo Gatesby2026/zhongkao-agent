@@ -49,10 +49,10 @@ interface Result {
 }
 
 const form = reactive({
-  rank: 5000,
-  home: '',
-  mode: 'driving',
-  max_km: '' as number | string,
+  rank: 4500,
+  home: '朝阳区大屯路金泉花园小区',
+  mode: 'bicycling',
+  max_km: 8 as number | string,
   boarding: false,
   interests: [] as string[],
 })

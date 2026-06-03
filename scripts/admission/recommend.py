@@ -191,8 +191,11 @@ def _hist_of(s, history):
         for y, r in history)
 
 
-def build_public_points(buckets, dist_campus, mode_label, max_km, interests=None):
-    """统招公办全部点位（含够不上/超通勤的小图标）；多校区每校区一个点。"""
+def build_public_points(buckets, dist_campus, mode_label, max_km, interests=None,
+                         boarding_names=None):
+    """统招公办全部点位（含够不上/超通勤的小图标）；多校区每校区一个点。
+    boarding_names：可寄宿校名集合——远但可寄宿仍按正常 pin 展示（不标"太远"）。"""
+    boarding_names = boarding_names or set()
     points = []
     for band in ("冲", "稳", "保", "够不上"):
         for s, margin, ref_rank, history, vol in buckets[band]:
@@ -204,7 +207,8 @@ def build_public_points(buckets, dist_campus, mode_label, max_km, interests=None
                 if not ccoord:
                     continue
                 km = rd[0] / 1000 if rd else None
-                too_far = max_km is not None and km is not None and km > max_km
+                too_far = (max_km is not None and km is not None and km > max_km
+                           and s["name"] not in boarding_names)
                 if band == "够不上":
                     kind, color, reason = "small", SMALL_COLOR["够不上"], "位次够不上（录取线远高于孩子）"
                 elif too_far:
@@ -340,9 +344,23 @@ def build_result(rank, home=None, mode="driving", max_km=None, interests=None,
         buckets[band].sort(key=lambda t: (-len(match_interests(t[0], interests)), t[2]))
 
     admission_codes = load_admission_codes(district)
-    bands = {band: [_school_card(*t, dist_campus, mode_label, effective_max_km, interests,
-                                 admission_codes)
-                    for t in buckets[band]] for band in buckets}
+    # 先全量构卡（含 boarding 派生），再剔除"超通勤上限且不可寄宿"的冲稳保学校。
+    # 可寄宿的远校保留（住宿可解决通勤）；够不上不受距离影响照常展示。
+    raw_bands = {band: [_school_card(*t, dist_campus, mode_label, effective_max_km, interests,
+                                     admission_codes)
+                        for t in buckets[band]] for band in buckets}
+    # 可寄宿校名集合（供地图判定：远但可寄宿→正常 pin，不标"太远"）
+    boarding_names = {c["name"] for cards in raw_bands.values()
+                      for c in cards if c.get("boarding")}
+
+    def _reachable(c):
+        n = c.get("nearest")
+        # 超通勤上限 且 不可寄宿 → 不可达，剔出冲稳保
+        return not (n and n.get("over_max") and not c.get("boarding"))
+
+    bands = {}
+    for band, cards in raw_bands.items():
+        bands[band] = [c for c in cards if _reachable(c)] if band in ("冲", "稳", "保") else cards
 
     return {
         "district": district_name, "rank": rank, "home": home,
@@ -354,7 +372,8 @@ def build_result(rank, home=None, mode="driving", max_km=None, interests=None,
             "学校代码/专业(班)派生自 bjeea 2025 官方计划册（人工核对映射）；"
             "2026 计划 7 月初发布后须刷新" if admission_codes else None),
         "bands": bands,
-        "points": build_public_points(buckets, dist_campus, mode_label, effective_max_km, interests),
+        "points": build_public_points(buckets, dist_campus, mode_label, effective_max_km,
+                                      interests, boarding_names),
         "private": build_private_points(priv, priv_dist, mode_label, effective_max_km),
         "quota_allocation": data.get("quota_allocation"),
         "_buckets": buckets, "_dist_campus": dist_campus,
