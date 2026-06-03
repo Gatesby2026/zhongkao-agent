@@ -173,6 +173,18 @@ def geocode_home(address: str, geo_cache: dict):
     return (res["lat"], res["lon"]) if res else None
 
 
+_last_amap_call = [0.0]      # 模块级节流时间戳（高德个人 key QPS 很低）
+_AMAP_MIN_INTERVAL = 0.35    # 两次实时算路最小间隔（秒），稳住 QPS
+
+
+def _amap_throttle():
+    """全局节流：保证相邻实时算路间隔 ≥ _AMAP_MIN_INTERVAL，避免 CUQPS 限流。"""
+    wait = _AMAP_MIN_INTERVAL - (time.monotonic() - _last_amap_call[0])
+    if wait > 0:
+        time.sleep(wait)
+    _last_amap_call[0] = time.monotonic()
+
+
 def route(origin, dest, mode: str, route_cache: dict):
     """返回 (距离米, 时长秒) 或 None。origin/dest = (lat, lon)。"""
     o = f"{origin[1]:.6f},{origin[0]:.6f}"   # 高德要 lon,lat
@@ -194,6 +206,7 @@ def route(origin, dest, mode: str, route_cache: dict):
     # 仅当拿到 status==1 的确定性结果（含"确无路线"）才落缓存。
     res, ok = None, False
     for attempt in range(4):
+        _amap_throttle()
         data = _curl_json(url)
         if not data:                       # 网络/解析失败 → 重试，不缓存
             time.sleep(0.4 * (attempt + 1))
