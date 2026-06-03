@@ -123,20 +123,25 @@ function popupHtml(p: Point): string {
   if (p.reason) m += `<br>🚫 <b style="color:#c0392b">不在报名范围：</b>${p.reason}`
   return h + m + '</div></div>'
 }
-function pin(color: string, txt: string) {
+const boardBadge = '<span class="bd-badge" title="可寄宿/有住宿">宿</span>'
+function pin(color: string, txt: string, boarding = false) {
   return L.divIcon({
     className: '', iconSize: [24, 24], iconAnchor: [12, 24],
-    html: `<div style="background:${color};width:24px;height:24px;border-radius:50% 50% 50% 0;`
+    html: `<div style="position:relative;width:24px;height:24px">`
+      + `<div style="background:${color};width:24px;height:24px;border-radius:50% 50% 50% 0;`
       + `transform:rotate(-45deg);border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.4);`
       + `display:flex;align-items:center;justify-content:center;">`
-      + `<span class="lbl" style="transform:rotate(45deg);font-size:11px">${txt}</span></div>`,
+      + `<span class="lbl" style="transform:rotate(45deg);font-size:11px">${txt}</span></div>`
+      + (boarding ? boardBadge : '') + `</div>`,
   })
 }
-function smallIcon(color: string) {
+function smallIcon(color: string, boarding = false) {
   return L.divIcon({
     className: '', iconSize: [16, 16], iconAnchor: [8, 8],
-    html: `<div style="background:${color};width:16px;height:16px;border-radius:50%;`
-      + `border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.45)"></div>`,
+    html: `<div style="position:relative;width:16px;height:16px">`
+      + `<div style="background:${color};width:16px;height:16px;border-radius:50%;`
+      + `border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.45)"></div>`
+      + (boarding ? boardBadge : '') + `</div>`,
   })
 }
 // 该点是不是中外合作/国际班学校（用于 coop 图层过滤）
@@ -159,7 +164,8 @@ function renderMarkers() {
     if (!layers.gongban && !(coop && layers.coop)) return
     if (coop && !layers.coop && !layers.gongban) return
     bounds.push([p.lat, p.lon])
-    const icon = p.kind === 'full' ? pin(p.color, p.band) : smallIcon(p.color)
+    const boarding = !!findCard(p.name)?.boarding
+    const icon = p.kind === 'full' ? pin(p.color, p.band, boarding) : smallIcon(p.color, boarding)
     const mk = L.marker([p.lat, p.lon], { icon }).addTo(publicLayer).bindPopup(popupHtml(p))
     // 缺省常驻显示学校名：重点推荐校(冲/稳/保)常驻，其余小点悬停显示，避免拥挤
     if (p.kind === 'full') {
@@ -373,6 +379,7 @@ const copyHint = ref('')
           <span><i class="s" style="background:#9aa0a6"></i>位次够不上</span>
           <span><i class="s" style="background:#e67e22"></i>超通勤</span>
           <span><i class="s" style="background:#3498db"></i>民办/国际</span>
+          <span><i class="bd-leg">宿</i>可寄宿</span>
           <span v-if="result.home_coord"><i class="d" style="background:#2c3e50"></i>家</span>
         </div>
       </div>
@@ -522,10 +529,20 @@ const copyHint = ref('')
   padding: 1px 5px; border-radius: 4px; white-space: nowrap;
 }
 #zmap :deep(.map-lbl::before) { display: none; } /* 去掉小三角箭头 */
+/* 寄宿角标：图标右上角"宿"字标记 */
+#zmap :deep(.bd-badge) {
+  position: absolute; top: -7px; right: -7px; z-index: 5;
+  width: 15px; height: 15px; border-radius: 50%;
+  background: #0d9488; color: #fff; border: 1.5px solid #fff;
+  font-size: 9px; font-weight: 700; line-height: 12px; text-align: center;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+}
 .legend { display: flex; flex-wrap: wrap; gap: 12px; font-size: 12px; color: var(--gray-600); margin-top: 8px; }
 .legend i { display: inline-block; vertical-align: middle; margin-right: 4px; }
 .legend i.d { width: 11px; height: 11px; border-radius: 50%; }
 .legend i.s { width: 8px; height: 8px; border-radius: 50%; }
+.legend i.bd-leg { width: 14px; height: 14px; border-radius: 50%; background: #0d9488;
+  color: #fff; font-size: 9px; font-weight: 700; line-height: 14px; text-align: center; font-style: normal; }
 
 /* 冲稳保 */
 .bands { margin-bottom: 18px; }
