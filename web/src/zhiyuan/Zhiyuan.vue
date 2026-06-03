@@ -125,11 +125,11 @@ function popupHtml(p: Point): string {
 }
 function pin(color: string, txt: string) {
   return L.divIcon({
-    className: '', iconSize: [34, 34], iconAnchor: [17, 34],
-    html: `<div style="background:${color};width:34px;height:34px;border-radius:50% 50% 50% 0;`
+    className: '', iconSize: [24, 24], iconAnchor: [12, 24],
+    html: `<div style="background:${color};width:24px;height:24px;border-radius:50% 50% 50% 0;`
       + `transform:rotate(-45deg);border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.4);`
       + `display:flex;align-items:center;justify-content:center;">`
-      + `<span class="lbl" style="transform:rotate(45deg)">${txt}</span></div>`,
+      + `<span class="lbl" style="transform:rotate(45deg);font-size:11px">${txt}</span></div>`,
   })
 }
 function smallIcon(color: string) {
@@ -163,7 +163,7 @@ function renderMarkers() {
     const mk = L.marker([p.lat, p.lon], { icon }).addTo(publicLayer).bindPopup(popupHtml(p))
     // 缺省常驻显示学校名：重点推荐校(冲/稳/保)常驻，其余小点悬停显示，避免拥挤
     if (p.kind === 'full') {
-      mk.bindTooltip(shortName(p.name), { permanent: true, direction: 'right', offset: [10, -12], className: 'map-lbl' })
+      mk.bindTooltip(shortName(p.name), { permanent: true, direction: 'bottom', offset: [0, 2], className: 'map-lbl' })
     } else {
       mk.bindTooltip(shortName(p.name), { direction: 'top', offset: [0, -6], className: 'map-lbl' })
     }
@@ -511,8 +511,8 @@ const copyHint = ref('')
    再降透明度让页面底色透上来，街道注记后退、彩色学校标记凸显，色调与界面统一。
    filter/opacity 只作用于瓦片层，markerPane 不受影响，标记仍清晰。 */
 #zmap :deep(.leaflet-tile-pane) {
-  filter: grayscale(0.85) brightness(1.22) contrast(0.85) saturate(0.62);
-  opacity: 0.9;
+  filter: grayscale(0.85) brightness(1.34) contrast(0.88) saturate(0.64);
+  opacity: 0.97;
 }
 /* 学校名常驻标签：紧凑、用界面字体，半透明白底，无箭头 */
 #zmap :deep(.map-lbl) {
