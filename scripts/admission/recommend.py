@@ -269,22 +269,49 @@ def _school_card(s, margin, ref_rank, history, vol, dist_campus, mode_label, max
     }
     adm = (admission_codes or {}).get(s["name"])
     if adm:
+        majors = adm.get("majors") or []
         card["school_code"] = adm.get("school_code")
-        card["majors"] = adm.get("majors") or []
+        card["majors"] = majors
         if adm.get("campus_major"):
             card["campus_major"] = adm["campus_major"]
+        # 官方计划派生标签：是否有住宿名额 / 是否含中外合作(国际)班
+        blob = " ".join((m.get("plan_chaoyang", "") or "") + (m.get("note", "") or "")
+                        for m in majors)
+        card["boarding"] = "住" in blob
+        names = " ".join(m.get("major_name", "") or "" for m in majors)
+        card["coop"] = any(k in names for k in ("中外", "国际", "合作", "AP", "课程班"))
     return card
 
 
-def build_result(rank, home=None, mode="driving", max_km=None, interests=None, district="chaoyang"):
+def _campus_coords_only(schools, district_cn):
+    """仅取各校（含多校区）坐标，不算到家距离。
+    用于地图优先布局——没填住址也能展示全区学校分布。
+    返回 {校名: [(校区名, (lat,lon)), ...]}。"""
+    geo_cache = dist_mod._load_cache(dist_mod.GEO_CACHE)
+    coords_idx = dist_mod.build_coords_index()
+    kb_coords = dist_mod.load_kb_coords(district_cn)
+    out = {}
+    for s in schools:
+        out[s["name"]] = dist_mod.get_campuses(
+            s, district_cn, coords_idx, geo_cache, kb_coords)
+    return out
+
+
+def build_result(rank, home=None, mode="driving", max_km=None, interests=None,
+                 district="chaoyang", boarding=False):
     """纯函数：返回结构化推荐结果（CLI 文本 / 地图 / Web API 共用）。
-    home 为空则不算距离；home 无法定位时抛 ValueError。"""
+    home 为空则不算距离（但仍返回学校坐标，供地图展示）；home 无法定位时抛 ValueError。
+    boarding=True（孩子接受住宿）时，距离不再参与筛选/排序——超通勤上限不标记、
+    范围放开（距离仍照常展示作参考）。"""
     interests = interests or []
     data = load_district(district)
     district_name = data.get("district", district)
     schools = data.get("schools", [])
     priv = dist_mod.private_schools(district_name, {s["name"] for s in schools})
     mode_label = dist_mod.MODES[mode][1]
+
+    # 寄宿模式：距离不参与筛选 → 超通勤上限失效（距离仍展示）
+    effective_max_km = None if boarding else max_km
 
     dist_campus, priv_dist, home_coord = {}, {}, None
     if home:
@@ -294,6 +321,11 @@ def build_result(rank, home=None, mode="driving", max_km=None, interests=None, d
         _, priv_dist = dist_mod.compute_distances(
             [{"name": p["name"], "campuses": [{"name": "", "lat": p["lat"], "lon": p["lon"]}]}
              for p in priv], home, district_name, mode)
+    else:
+        # 无住址：只取坐标（rd=None），让地图仍能展示全区学校分布（地图优先布局）
+        coords = _campus_coords_only(schools, district_name)
+        dist_campus = {n: [(cn, cc, None) for cn, cc in rows] for n, rows in coords.items()}
+        priv_dist = {p["name"]: [("", (p["lat"], p["lon"]), None)] for p in priv}
 
     buckets = {"冲": [], "稳": [], "保": [], "够不上": []}
     for s in schools:
@@ -306,7 +338,7 @@ def build_result(rank, home=None, mode="driving", max_km=None, interests=None, d
         buckets[band].sort(key=lambda t: (-len(match_interests(t[0], interests)), t[2]))
 
     admission_codes = load_admission_codes(district)
-    bands = {band: [_school_card(*t, dist_campus, mode_label, max_km, interests,
+    bands = {band: [_school_card(*t, dist_campus, mode_label, effective_max_km, interests,
                                  admission_codes)
                     for t in buckets[band]] for band in buckets}
 
@@ -314,13 +346,14 @@ def build_result(rank, home=None, mode="driving", max_km=None, interests=None, d
         "district": district_name, "rank": rank, "home": home,
         "home_coord": list(home_coord) if home_coord else None,
         "mode": mode, "mode_label": mode_label, "max_km": max_km,
+        "boarding": boarding,
         "interests": interests,
         "admission_source": (
             "学校代码/专业(班)派生自 bjeea 2025 官方计划册（人工核对映射）；"
             "2026 计划 7 月初发布后须刷新" if admission_codes else None),
         "bands": bands,
-        "points": build_public_points(buckets, dist_campus, mode_label, max_km, interests),
-        "private": build_private_points(priv, priv_dist, mode_label, max_km),
+        "points": build_public_points(buckets, dist_campus, mode_label, effective_max_km, interests),
+        "private": build_private_points(priv, priv_dist, mode_label, effective_max_km),
         "quota_allocation": data.get("quota_allocation"),
         "_buckets": buckets, "_dist_campus": dist_campus,
         "_priv": priv, "_priv_dist": priv_dist, "_home_coord": home_coord,
