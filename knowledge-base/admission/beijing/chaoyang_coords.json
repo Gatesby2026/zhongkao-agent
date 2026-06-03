@@ -1,0 +1,523 @@
+{
+  "generated": "2026-06-03",
+  "district": "chaoyang",
+  "source": "amap v3 geocode + place/text 名称交叉校验",
+  "coord_system": "GCJ-02",
+  "note": "派生产物，可由 geocode_addresses.py 重生；地址源见 chaoyang.yaml location；方法见 ADDRESS-VERIFICATION.md",
+  "schools": {
+    "北京中学": {
+      "campuses": [
+        {
+          "campus": "东坝北校区（2025.8启用，高中部）",
+          "address": "朝阳区东坝（东坝国际航空商务区）",
+          "lat": 39.960127,
+          "lon": 116.540826,
+          "source": "amap/geocode",
+          "level": "住宅区",
+          "formatted": "北京市朝阳区东坝",
+          "name_xcheck_km": 7.96,
+          "geo_status": "coarse",
+          "addr_confidence": "low",
+          "approx": true,
+          "flags": [
+            "name_poi_far(8.0km,POI=北京中学西坝河校区)"
+          ]
+        }
+      ]
+    },
+    "中国传媒大学附属中学": {
+      "campuses": [
+        {
+          "campus": "本部（定福庄）",
+          "address": "北京市朝阳区大黄庄西里1号",
+          "lat": 39.914786,
+          "lon": 116.548005,
+          "source": "amap/geocode",
+          "level": "门址",
+          "formatted": "北京市朝阳区大黄庄西里1号",
+          "name_xcheck_km": 0.07,
+          "geo_status": "ok",
+          "addr_confidence": "medium",
+          "approx": false,
+          "flags": []
+        }
+      ]
+    },
+    "北京市第八十中学": {
+      "campuses": [
+        {
+          "campus": "望京校区（高中本部）",
+          "address": "北京市朝阳区望京北路甲16号",
+          "lat": 40.009829,
+          "lon": 116.476564,
+          "source": "amap/geocode",
+          "level": "门址",
+          "formatted": "北京市朝阳区望京北路甲16号",
+          "name_xcheck_km": 0.07,
+          "geo_status": "ok",
+          "addr_confidence": "high",
+          "approx": false,
+          "flags": []
+        }
+      ]
+    },
+    "人大附中朝阳学校": {
+      "campuses": [
+        {
+          "campus": "高一高二安华桥 / 高三太阳宫南街8号（分年级）",
+          "address": "北京市朝阳区太阳宫南街8号",
+          "lat": 39.977256,
+          "lon": 116.441553,
+          "source": "amap/geocode",
+          "level": "门址",
+          "formatted": "北京市朝阳区太阳宫南街8号",
+          "name_xcheck_km": 2.4,
+          "geo_status": "ok",
+          "addr_confidence": "low",
+          "approx": false,
+          "flags": [
+            "name_poi_far(2.4km,POI=中国人民大学附属中学朝阳学校)"
+          ]
+        }
+      ]
+    },
+    "清华附中朝阳学校": {
+      "campuses": [
+        {
+          "campus": "高一与望京柳芳校区混编 / 主校区柳芳南里20号",
+          "address": "北京市朝阳区柳芳南里20号",
+          "lat": 39.952809,
+          "lon": 116.436423,
+          "source": "amap/geocode",
+          "level": "门址",
+          "formatted": "北京市朝阳区柳芳南里20楼",
+          "name_xcheck_km": null,
+          "geo_status": "ok",
+          "addr_confidence": "low",
+          "approx": false,
+          "flags": [
+            "name_poi_not_found"
+          ]
+        }
+      ]
+    },
+    "八十中睿德分校": {
+      "campuses": [
+        {
+          "campus": "高一借址八十中本部（睿德本部小红门未完工）",
+          "address": "北京市朝阳区望京北路甲16号",
+          "lat": 40.009829,
+          "lon": 116.476564,
+          "source": "amap/geocode",
+          "level": "门址",
+          "formatted": "北京市朝阳区望京北路甲16号",
+          "name_xcheck_km": 19.52,
+          "geo_status": "ok",
+          "addr_confidence": "low",
+          "approx": false,
+          "flags": [
+            "name_poi_far(19.5km,POI=北京市第八十中学(睿德分校))"
+          ]
+        }
+      ]
+    },
+    "朝阳外国语学校": {
+      "campuses": [
+        {
+          "campus": "来广营校区高中部",
+          "address": "北京市朝阳区来广营清河营中街东口148-1",
+          "lat": 40.046389,
+          "lon": 116.441836,
+          "source": "amap/geocode",
+          "level": "公交地铁站点",
+          "formatted": "北京市朝阳区来广营清河营中街东口(公交站)",
+          "name_xcheck_km": 6.09,
+          "geo_status": "ok",
+          "addr_confidence": "medium",
+          "approx": false,
+          "flags": [
+            "name_poi_far(6.1km,POI=北京市朝阳外国语学校)"
+          ]
+        }
+      ]
+    },
+    "清华附中望京学校": {
+      "campuses": [
+        {
+          "campus": "本部（大望京）",
+          "address": "北京市朝阳区宏泰东街10号",
+          "lat": 39.999164,
+          "lon": 116.486674,
+          "source": "amap/geocode",
+          "level": "道路",
+          "formatted": "北京市朝阳区宏泰东街",
+          "name_xcheck_km": 0.32,
+          "geo_status": "ok",
+          "addr_confidence": "medium",
+          "approx": false,
+          "flags": []
+        }
+      ]
+    },
+    "陈经纶中学": {
+      "campuses": [
+        {
+          "campus": "本部高中（呼家楼以西）",
+          "address": "北京市朝阳区朝外大街38号",
+          "lat": 39.92187,
+          "lon": 116.447771,
+          "source": "amap/geocode",
+          "level": "门址",
+          "formatted": "北京市朝阳区朝外大街38号",
+          "name_xcheck_km": 0.06,
+          "geo_status": "ok",
+          "addr_confidence": "high",
+          "approx": false,
+          "flags": []
+        }
+      ]
+    },
+    "北京中学科技分校": {
+      "campuses": [
+        {
+          "campus": "高中部（借原化工大附中高中部校址）",
+          "address": "北京市朝阳区惠新里38号",
+          "lat": 39.980116,
+          "lon": 116.421417,
+          "source": "amap/geocode",
+          "level": "门址",
+          "formatted": "北京市朝阳区惠新里38号",
+          "name_xcheck_km": 0.0,
+          "geo_status": "ok",
+          "addr_confidence": "medium",
+          "approx": false,
+          "flags": []
+        }
+      ]
+    },
+    "清华附中广华学校": {
+      "campuses": [
+        {
+          "campus": "广信南街校区（十二年一贯同址）",
+          "address": "北京市朝阳区广信南街1号",
+          "lat": 39.886486,
+          "lon": 116.498589,
+          "source": "amap/geocode",
+          "level": "道路",
+          "formatted": "北京市朝阳区广信南街",
+          "name_xcheck_km": 0.2,
+          "geo_status": "ok",
+          "addr_confidence": "high",
+          "approx": false,
+          "flags": []
+        }
+      ]
+    },
+    "首师大附中朝阳学校": {
+      "campuses": [
+        {
+          "campus": "辛庄二街本部（高中部）",
+          "address": "北京市朝阳区辛庄二街",
+          "lat": 39.936613,
+          "lon": 116.494064,
+          "source": "amap/geocode",
+          "level": "道路",
+          "formatted": "北京市朝阳区辛庄二街",
+          "name_xcheck_km": 0.23,
+          "geo_status": "ok",
+          "addr_confidence": "low",
+          "approx": false,
+          "flags": []
+        }
+      ]
+    },
+    "二中朝阳学校": {
+      "campuses": [
+        {
+          "campus": "姚家园西里校区（完全中学同址）",
+          "address": "北京市朝阳区姚家园西里6号",
+          "lat": 39.949025,
+          "lon": 116.513625,
+          "source": "amap/geocode",
+          "level": "门牌号",
+          "formatted": "北京市朝阳区姚家园北二路2号院",
+          "name_xcheck_km": 0.63,
+          "geo_status": "ok",
+          "addr_confidence": "high",
+          "approx": false,
+          "flags": []
+        }
+      ]
+    },
+    "北京工业大学附属中学": {
+      "campuses": [
+        {
+          "campus": "富力城校区（高中部）",
+          "address": "北京市朝阳区双井富力城",
+          "lat": 39.896457,
+          "lon": 116.455466,
+          "source": "amap/geocode",
+          "level": "住宅区",
+          "formatted": "北京市朝阳区双井富力城",
+          "name_xcheck_km": 0.62,
+          "geo_status": "coarse",
+          "addr_confidence": "medium",
+          "approx": false,
+          "flags": []
+        }
+      ]
+    },
+    "日坛中学": {
+      "campuses": [
+        {
+          "campus": "光华西里本部",
+          "address": "北京市朝阳区建外光华西里4号",
+          "lat": 39.910242,
+          "lon": 116.451895,
+          "source": "amap/geocode",
+          "level": "门址",
+          "formatted": "北京市朝阳区建外光华西里4号",
+          "name_xcheck_km": 0.06,
+          "geo_status": "ok",
+          "addr_confidence": "high",
+          "approx": false,
+          "flags": []
+        }
+      ]
+    },
+    "和平街一中": {
+      "campuses": [
+        {
+          "campus": "和平街校区（高中部，统招主体223人）",
+          "address": "北京市朝阳区和平街8区16楼",
+          "lat": 39.964036,
+          "lon": 116.420714,
+          "source": "amap/geocode",
+          "level": "小巷",
+          "formatted": "北京市朝阳区和平街8区16楼",
+          "name_xcheck_km": 0.04,
+          "geo_status": "coarse",
+          "addr_confidence": "high",
+          "approx": false,
+          "flags": []
+        },
+        {
+          "campus": "北苑莲葩园校区（约103统招+校额到校53，可住宿）",
+          "address": "北京市朝阳区北苑家园莲葩园1号",
+          "lat": 40.046475,
+          "lon": 116.42259,
+          "source": "amap/geocode",
+          "level": "门址",
+          "formatted": "北京市朝阳区北苑家园(公交站)莲葩园1号",
+          "name_xcheck_km": 9.18,
+          "geo_status": "ok",
+          "addr_confidence": "high",
+          "approx": false,
+          "flags": [
+            "name_poi_far(9.2km,POI=北京市和平街第一中学(和平街校区))"
+          ]
+        }
+      ]
+    },
+    "莲葩园中学": {
+      "campuses": [
+        {
+          "campus": "即\"和平街一中北苑莲葩园校区\"（非独立办学）",
+          "address": "北京市朝阳区北苑家园莲葩园1号",
+          "lat": 40.046475,
+          "lon": 116.42259,
+          "source": "amap/geocode",
+          "level": "门址",
+          "formatted": "北京市朝阳区北苑家园(公交站)莲葩园1号",
+          "name_xcheck_km": 0.0,
+          "geo_status": "ok",
+          "addr_confidence": "high",
+          "approx": false,
+          "flags": []
+        }
+      ]
+    },
+    "对外经济贸易大学附属中学": {
+      "campuses": [
+        {
+          "campus": "南湖中园高中部",
+          "address": "北京市朝阳区南湖中园315号",
+          "lat": 39.995382,
+          "lon": 116.457842,
+          "source": "amap/geocode",
+          "level": "门址",
+          "formatted": "北京市朝阳区慧谷金色家园1期315号",
+          "name_xcheck_km": 0.1,
+          "geo_status": "ok",
+          "addr_confidence": "high",
+          "approx": false,
+          "flags": []
+        }
+      ]
+    },
+    "东北师大附中朝阳学校": {
+      "campuses": [
+        {
+          "campus": "金盏校区（全寄宿完全中学，初高同址）",
+          "address": "北京市朝阳区金盏金融服务园区1112-14号",
+          "lat": 39.976547,
+          "lon": 116.586118,
+          "source": "amap/geocode",
+          "level": "门址",
+          "formatted": "北京市朝阳区金盏金融服务园区1112-14号",
+          "name_xcheck_km": 0.0,
+          "geo_status": "ok",
+          "addr_confidence": "high",
+          "approx": false,
+          "flags": []
+        }
+      ]
+    },
+    "中科院附属实验学校": {
+      "campuses": [
+        {
+          "campus": "高中部（南沙滩校区）",
+          "address": "北京市朝阳区南沙滩6号",
+          "lat": 40.001159,
+          "lon": 116.376395,
+          "source": "amap/geocode",
+          "level": "住宅区",
+          "formatted": "北京市朝阳区南沙滩",
+          "name_xcheck_km": 0.87,
+          "geo_status": "coarse",
+          "addr_confidence": "high",
+          "approx": false,
+          "flags": []
+        }
+      ]
+    },
+    "三里屯一中": {
+      "campuses": [
+        {
+          "campus": "三里屯校区（高中部，工体北侧）",
+          "address": "北京市朝阳区北三里屯5号",
+          "lat": 39.935469,
+          "lon": 116.450963,
+          "source": "amap/geocode",
+          "level": "村庄",
+          "formatted": "北京市朝阳区北三里屯",
+          "name_xcheck_km": 0.28,
+          "geo_status": "coarse",
+          "addr_confidence": "high",
+          "approx": false,
+          "flags": []
+        }
+      ]
+    },
+    "北京十七中": {
+      "campuses": [
+        {
+          "campus": "高碑店校区（本部/高中，市级示范）",
+          "address": "北京市朝阳区西店村甲1号",
+          "lat": 39.906257,
+          "lon": 116.53344,
+          "source": "amap/geocode",
+          "level": "门址",
+          "formatted": "北京市朝阳区西店村甲1号",
+          "name_xcheck_km": 2.31,
+          "geo_status": "ok",
+          "addr_confidence": "medium",
+          "approx": false,
+          "flags": [
+            "name_poi_far(2.3km,POI=北京市第十七中学(南校区))"
+          ]
+        }
+      ]
+    },
+    "北京化工大学附属中学": {
+      "campuses": [
+        {
+          "campus": "安苑北里校区（高中部）",
+          "address": "北京市朝阳区安苑北里7号楼",
+          "lat": 39.986913,
+          "lon": 116.40874,
+          "source": "amap/geocode",
+          "level": "门址",
+          "formatted": "北京市朝阳区安苑北里7号",
+          "name_xcheck_km": 0.04,
+          "geo_status": "ok",
+          "addr_confidence": "medium",
+          "approx": false,
+          "flags": []
+        }
+      ]
+    },
+    "东方德才学校": {
+      "campuses": [
+        {
+          "campus": "小庄校区高中部",
+          "address": "北京市朝阳区小庄东里38号",
+          "lat": 39.918734,
+          "lon": 116.481752,
+          "source": "amap/geocode",
+          "level": "门址",
+          "formatted": "北京市朝阳区小庄东里38号",
+          "name_xcheck_km": 0.09,
+          "geo_status": "ok",
+          "addr_confidence": "medium",
+          "approx": false,
+          "flags": []
+        }
+      ]
+    },
+    "北京第二外国语学院附属中学": {
+      "campuses": [
+        {
+          "campus": "管庄本部校区（高中部）",
+          "address": "北京市朝阳区管庄东里1号楼",
+          "lat": 39.918727,
+          "lon": 116.597265,
+          "source": "amap/geocode",
+          "level": "兴趣点",
+          "formatted": "北京市朝阳区管庄东里1号楼",
+          "name_xcheck_km": 1.76,
+          "geo_status": "ok",
+          "addr_confidence": "medium",
+          "approx": false,
+          "flags": []
+        }
+      ]
+    },
+    "陈经纶中学团结湖分校": {
+      "campuses": [
+        {
+          "campus": "团结湖校区（高中部，初高分址）",
+          "address": "北京市朝阳区团结湖中路8号",
+          "lat": 39.927706,
+          "lon": 116.471468,
+          "source": "amap/geocode",
+          "level": "门址",
+          "formatted": "北京市朝阳区团结湖中路8号",
+          "name_xcheck_km": 0.01,
+          "geo_status": "ok",
+          "addr_confidence": "medium",
+          "approx": false,
+          "flags": []
+        }
+      ]
+    },
+    "汇文中学垂杨柳分校": {
+      "campuses": [
+        {
+          "campus": "松榆里校区（初高同址）",
+          "address": "北京市朝阳区松榆里20号",
+          "lat": 39.874558,
+          "lon": 116.469436,
+          "source": "amap/geocode",
+          "level": "住宅区",
+          "formatted": "北京市朝阳区松榆里",
+          "name_xcheck_km": 0.23,
+          "geo_status": "coarse",
+          "addr_confidence": "high",
+          "approx": false,
+          "flags": []
+        }
+      ]
+    }
+  }
+}

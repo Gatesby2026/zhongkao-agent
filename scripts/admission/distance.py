@@ -18,6 +18,10 @@ from pathlib import Path
 
 AMAP_KEY = os.environ.get("AMAP_KEY", "25725f95f093bed58bf739e1fa289ad4")
 HS_DIR = Path(__file__).resolve().parents[2] / "knowledge-original" / "beijing-highschools"
+KB_BJ_DIR = Path(__file__).resolve().parents[2] / "knowledge-base" / "admission" / "beijing"
+# 区中文名 → 拼音（定位 <pinyin>_coords.json 这份"核实地址 geocode"坐标，优先于旧坐标库）
+DISTRICT_PINYIN = {"朝阳区": "chaoyang", "海淀区": "haidian",
+                   "西城区": "xicheng", "东城区": "dongcheng"}
 CACHE_DIR = Path(__file__).resolve().parent / ".cache"
 CACHE_DIR.mkdir(exist_ok=True)
 ROUTE_CACHE = CACHE_DIR / "route_cache.json"
@@ -82,6 +86,27 @@ def _norm(name: str) -> str:
            .replace("第", "")
            .replace("中学", "中"))
     return re.sub(r"\s+", "", n)
+
+
+def load_kb_coords(district_cn: str) -> dict:
+    """读 <pinyin>_coords.json（geocode_addresses.py 产出的核实地址坐标）。
+    返回 {校名: [(校区名, (lat,lon)), ...]}，只含成功 geocode 的校区。优先于旧坐标库。"""
+    pinyin = DISTRICT_PINYIN.get(district_cn)
+    if not pinyin:
+        return {}
+    p = KB_BJ_DIR / f"{pinyin}_coords.json"
+    if not p.exists():
+        return {}
+    data = json.loads(p.read_text(encoding="utf-8"))
+    out = {}
+    for name, info in (data.get("schools") or {}).items():
+        rows = []
+        for c in info.get("campuses", []):
+            if c.get("lat") and c.get("lon"):
+                rows.append((c.get("campus", ""), (c["lat"], c["lon"])))
+        if rows:
+            out[name] = rows
+    return out
 
 
 def build_coords_index() -> dict:
@@ -183,8 +208,14 @@ def route(origin, dest, mode: str, route_cache: dict):
     return res
 
 
-def get_campuses(school: dict, district_cn: str, coords_idx: dict, geo_cache: dict):
-    """返回 [(校区名, (lat,lon)), ...]。yaml 有 campuses 用之，否则按校名定位单点。"""
+def get_campuses(school: dict, district_cn: str, coords_idx: dict, geo_cache: dict,
+                 kb_coords: dict = None):
+    """返回 [(校区名, (lat,lon)), ...]。优先级：
+    1) KB <district>_coords.json（核实地址 geocode，含多校区）—— 首选，杜绝裸校名错源
+    2) 调用方显式传入的 campuses（如民办校 {name,lat,lon}）
+    3) 旧坐标库 + 裸校名 geocode 兜底（仅 KB 未覆盖时）"""
+    if kb_coords and school["name"] in kb_coords:
+        return kb_coords[school["name"]]
     if school.get("campuses"):
         return [(c.get("name", ""), (c["lat"], c["lon"])) for c in school["campuses"]]
     c = lookup_school_coords(school["name"], district_cn, coords_idx, geo_cache)
@@ -197,6 +228,7 @@ def compute_distances(schools, home_addr, district_cn, mode="driving"):
     geo_cache = _load_cache(GEO_CACHE)
     route_cache = _load_cache(ROUTE_CACHE)
     coords_idx = build_coords_index()
+    kb_coords = load_kb_coords(district_cn)
 
     home = geocode_home(home_addr, geo_cache)
     if home is None:
@@ -205,7 +237,7 @@ def compute_distances(schools, home_addr, district_cn, mode="driving"):
     out = {}
     for s in schools:
         rows = []
-        for cname, ccoord in get_campuses(s, district_cn, coords_idx, geo_cache):
+        for cname, ccoord in get_campuses(s, district_cn, coords_idx, geo_cache, kb_coords):
             rd = route(home, ccoord, mode, route_cache) if ccoord else None
             rows.append((cname, ccoord, rd))
         out[s["name"]] = rows
