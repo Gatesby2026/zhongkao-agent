@@ -134,9 +134,9 @@ function pin(color: string, txt: string) {
 }
 function smallIcon(color: string) {
   return L.divIcon({
-    className: '', iconSize: [14, 14], iconAnchor: [7, 7],
-    html: `<div style="background:${color};width:14px;height:14px;border-radius:50%;`
-      + `border:2px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);opacity:.9"></div>`,
+    className: '', iconSize: [16, 16], iconAnchor: [8, 8],
+    html: `<div style="background:${color};width:16px;height:16px;border-radius:50%;`
+      + `border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.45)"></div>`,
   })
 }
 // 该点是不是中外合作/国际班学校（用于 coop 图层过滤）
