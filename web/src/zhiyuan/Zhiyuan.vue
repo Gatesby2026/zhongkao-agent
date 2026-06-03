@@ -182,8 +182,10 @@ function renderMap() {
   const map = L.map('zmap', { zoomControl: false, scrollWheelZoom: false }).setView(center, 11)
   mapInst = map
   L.control.zoom({ position: 'topright' }).addTo(map)
+  // tileSize:128 让 Leaflet 取深一级 zoom 的瓦片再缩到 128px 格子显示，
+  // 高德街道注记随之整体缩小变细（注记是烤进瓦片像素的，只能用此法变小）
   L.tileLayer('https://wprd0{s}.is.autonavi.com/appmaptile?lang=zh_cn&size=1&style=7&x={x}&y={y}&z={z}',
-    { subdomains: ['1', '2', '3', '4'], maxZoom: 18, attribution: '高德地图' }).addTo(map)
+    { subdomains: ['1', '2', '3', '4'], tileSize: 128, zoomOffset: 1, maxZoom: 18, attribution: '高德地图' }).addTo(map)
   if (res.home_coord) {
     L.marker(res.home_coord, { icon: pin('#2c3e50', '家'), zIndexOffset: 1000 }).addTo(map)
       .bindPopup(`<div class="pop"><b>家</b><br>${res.home || ''}</div>`)
