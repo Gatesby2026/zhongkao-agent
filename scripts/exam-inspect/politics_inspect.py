@@ -124,6 +124,7 @@ def inspect(yaml_path: Path, verbose=False) -> dict:
         "short_sol": [], "no_kp": [], "cross_subj_kp": [],
         "noise_footer": [], "noise_other": [], "inline_marker": [],
         "liye": [], "md_table_broken": [],
+        "dup_sol": [], "topic_mismatch": [],
         "n_judge": 0, "n_choice": 0, "n_material": 0, "n_essay": 0,
         "warnings": [],
     }
@@ -186,6 +187,26 @@ def inspect(yaml_path: Path, verbose=False) -> dict:
             s["liye"].append(qid)
         if md_table_columns_mismatch(stem) or md_table_columns_mismatch(sol):
             s["md_table_broken"].append(qid)
+        # 题干-答案主题一致性（材料/作文题）：答案里的中文词几乎不在题干里
+        # → 多半答非所问 / 答案错配（如肖像权题挂了民主的答案）
+        if t in ("材料分析", "作文", "写作", "material", "essay") \
+                and len(sol.strip()) >= 30:
+            sk = set(re.findall(r"[一-鿿]{2,4}", stem))
+            ak = set(re.findall(r"[一-鿿]{2,4}", sol))
+            if sk and ak and len(sk & ak) / len(ak) < 0.06:
+                s["topic_mismatch"].append((qid, round(len(sk & ak) / len(ak), 2)))
+
+    # 重复 solution 检测：两道主观题答案指纹一致 → 答案错位漂移/题号合并
+    _sol_fp: dict[str, list] = {}
+    for q in qs:
+        if q.get("type") not in ("材料分析", "作文", "写作", "material", "essay"):
+            continue
+        _sol = (q.get("solution") or "").strip()
+        if len(_sol) >= 30:
+            # 指纹只取中文字（去标点/空白），避免 ，/、 之类差异漏判近似重复
+            _fp = "".join(re.findall(r"[一-鿿]", _sol))[:80]
+            _sol_fp.setdefault(_fp, []).append(q.get("id"))
+    s["dup_sol"] = [tuple(v) for v in _sol_fp.values() if len(v) > 1]
 
     # 卷级告警
     if s["sum_score"] != s["full_score"]:
@@ -204,6 +225,10 @@ def inspect(yaml_path: Path, verbose=False) -> dict:
         s["warnings"].append(f"判断题 {s['n_judge']} ≠ 10")
     if s["n_choice"] != 10:
         s["warnings"].append(f"单选题 {s['n_choice']} ≠ 10")
+    for qids in s["dup_sol"]:
+        s["warnings"].append(f"题 {qids} 的 solution 完全相同（疑似答案错位/题号合并）")
+    for qid, ov in s["topic_mismatch"]:
+        s["warnings"].append(f"Q{qid} 题干与答案主题重叠率仅 {ov}（疑似答非所问/答案错配）")
     return s
 
 
