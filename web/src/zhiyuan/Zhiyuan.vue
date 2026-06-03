@@ -13,12 +13,6 @@ const MODES = [
   { v: 'bicycling', label: '骑行' },
   { v: 'walking', label: '步行' },
 ]
-const BAND_COLOR: Record<string, string> = { 冲: '#e74c3c', 稳: '#f1c40f', 保: '#2ecc71' }
-const BAND_DESC: Record<string, string> = {
-  冲: '略低于录取线，冲一冲',
-  稳: '略高于录取线，比较稳',
-  保: '明显高于录取线，保底',
-}
 const ZHIYUAN_SLOTS = 12   // 统一招生志愿数（每志愿 2 专业）
 
 interface Major {
@@ -59,6 +53,7 @@ const form = reactive({
 })
 // 学校类型图层开关（地图上显示哪些点）
 const layers = reactive({ gongban: true, coop: true, minban: false })
+const tab = ref<'map' | 'draft'>('map')   // 地图 / 志愿草表 两个并列页
 const loading = ref(false)
 const errMsg = ref('')
 const result = ref<Result | null>(null)
@@ -99,6 +94,7 @@ async function submit() {
     if (!r.ok) throw new Error(`${r.status} ${await r.text()}`)
     result.value = await r.json()
     resetDraft()
+    tab.value = 'map'        // 生成后回到地图页，保证地图在可见状态下初始化
     await nextTick()
     renderMap()
   } catch (e: any) {
@@ -119,15 +115,6 @@ function cardOfPoint(p: Point | null): Card | null {
   return findCard(base) || findCard(p.name)
 }
 const selCard = computed<Card | null>(() => cardOfPoint(selectedPoint.value))
-// 点击下方冲稳保卡片 → 在面板选中并把地图平移过去
-function selectByName(name: string) {
-  const pts = result.value?.points || []
-  const p = pts.find(pt => pt.name.split('·')[0] === name) || pts.find(pt => pt.name === name)
-  if (p) {
-    selectedPoint.value = p
-    if (mapInst) mapInst.panTo([p.lat, p.lon])
-  }
-}
 const boardBadge = '<span class="bd-badge" title="可寄宿/有住宿">宿</span>'
 function pin(color: string, txt: string, boarding = false) {
   return L.divIcon({
@@ -218,15 +205,10 @@ function renderMap() {
   renderMarkers()
 }
 watch(layers, () => { if (mapInst) renderMarkers() }, { deep: true })
+// 切回地图页时重算尺寸（v-show 隐藏期间容器宽高为 0，会导致瓦片错位）
+watch(tab, (t) => { if (t === 'map' && mapInst) nextTick(() => mapInst.invalidateSize()) })
 
 /* ---------------- 列表辅助 ---------------- */
-function distTxt(c: Card): string {
-  if (!c.nearest) return ''
-  const n = c.nearest
-  const campus = n.campus ? `${n.campus} ` : ''
-  const over = n.over_max ? ' ⚠️超通勤上限' : ''
-  return `📍${campus}${result.value?.mode_label || ''}${n.km}km/${n.mins}分钟${over}`
-}
 function findCard(name: string): Card | null {
   const res = result.value
   if (!res) return null
@@ -363,10 +345,18 @@ const copyHint = ref('')
     </section>
 
     <section v-if="result" class="results">
-      <!-- 1) 地图优先：先看全局 -->
-      <div class="mapwrap">
+      <!-- 地图 / 志愿草表 两个并列 TAB -->
+      <div class="tabs">
+        <button class="tab" :class="{ on: tab === 'map' }" @click="tab = 'map'">📍 志愿地图</button>
+        <button class="tab" :class="{ on: tab === 'draft' }" @click="tab = 'draft'">
+          📝 志愿草表<span class="tab-cnt">{{ filledSlots }}/{{ ZHIYUAN_SLOTS }}</span>
+        </button>
+      </div>
+
+      <!-- TAB 1：地图 -->
+      <div class="mapwrap" v-show="tab === 'map'">
         <div class="map-head">
-          <h2>📍 志愿地图 · 全{{ result.district }}学校分布</h2>
+          <h2>全{{ result.district }}学校分布</h2>
           <div class="layer-chips">
             <button class="lchip" :class="{ on: layers.gongban }" @click="layers.gongban = !layers.gongban">公办普高</button>
             <button class="lchip" :class="{ on: layers.coop }" @click="layers.coop = !layers.coop">中外合作/国际班</button>
@@ -456,49 +446,8 @@ const copyHint = ref('')
         </div>
       </div>
 
-      <!-- 2) 冲稳保列表 -->
-      <div class="bands">
-        <div v-for="band in ['冲', '稳', '保']" :key="band" class="band">
-          <h2 :style="{ color: BAND_COLOR[band] }">
-            <span class="dot" :style="{ background: BAND_COLOR[band] }"></span>
-            {{ band }} <small>{{ BAND_DESC[band] }}</small>
-            <span class="cnt">{{ (result.bands[band] || []).length }} 所</span>
-          </h2>
-          <p v-if="!(result.bands[band] || []).length" class="empty">该档暂无匹配学校</p>
-          <div class="school-grid">
-            <div v-for="c in result.bands[band]" :key="c.name" class="school"
-              :class="{ active: selCard && selCard.name === c.name }" @click="selectByName(c.name)">
-              <div class="sname">
-                {{ cleanName(c.name) }}
-                <span class="lvl">{{ c.level }}</span>
-                <span v-if="c.school_code" class="code">码{{ c.school_code }}</span>
-              </div>
-              <div class="badges">
-                <span v-if="c.boarding" class="bdg b-board">🛏 有住宿</span>
-                <span v-if="c.coop" class="bdg b-coop">🌐 中外合作班</span>
-                <span v-if="c.matched && c.matched.length" class="bdg b-match">🎯{{ c.matched.join('·') }}</span>
-              </div>
-              <div class="meta">
-                录取位次≈<b>{{ c.ref_rank }}</b>名 · margin {{ c.margin_pct }}
-                <span v-if="c.volatility >= 0.4" class="vol">⚠️波动大</span>
-              </div>
-              <div v-if="distTxt(c)" class="meta">{{ distTxt(c) }}</div>
-              <div v-if="c.majors && c.majors.length" class="majors">
-                <span v-for="m in c.majors" :key="m.major_code" class="mj">
-                  <b>{{ m.major_code }}</b> {{ cleanName(m.major_name) }}
-                  <em v-if="m.plan_chaoyang">· 朝阳{{ m.plan_chaoyang }}</em>
-                </span>
-              </div>
-              <div v-if="c.style" class="meta sub2">🏫 {{ c.style }}</div>
-              <div v-if="c.gaokao" class="meta gk">🎓 高考(民间·非官方)：{{ c.gaokao }}</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 3) 志愿草表（统招 12×2）：最后输出，镜像官方填报 -->
-      <div class="draftwrap">
-        <h2>📝 统一招生 · 志愿草表（{{ ZHIYUAN_SLOTS }}志愿 × 每志愿2专业）</h2>
+      <!-- TAB 2：志愿草表（统招 12×2），镜像官方填报 -->
+      <div class="draftwrap" v-show="tab === 'draft'">
         <p class="draft-note">
           已按 <b>冲→稳→保</b> 顺序自动预填 {{ filledSlots }}/{{ ZHIYUAN_SLOTS }} 个志愿；可改学校、改专业(班，每志愿最多 2 个)。
           这就是中考网报系统里统招批次的样子（学校代码 + 专业代码）。
@@ -510,26 +459,24 @@ const copyHint = ref('')
           <span v-if="copyHint" class="copyhint">{{ copyHint }}</span>
         </div>
         <div class="slots">
-          <div v-for="(s, i) in draft" :key="i" class="slot" :class="{ empty: !s.name }">
-            <div class="slot-no">志愿{{ i + 1 }}</div>
-            <div class="slot-body">
-              <div class="slot-row1">
-                <select v-model="s.name" @change="onSlotSchool(i)" class="school-sel">
-                  <option :value="null">（空 / 选择学校）</option>
-                  <option v-for="c in reportable" :key="c.name" :value="c.name">
-                    {{ cleanName(c.name) }}（{{ c.school_code }}）· {{ bandOf(c.name) }}
-                  </option>
-                </select>
-                <button v-if="s.name" class="x" @click="clearSlot(i)">清空</button>
-              </div>
-              <div v-if="s.name" class="slot-majors">
-                <button v-for="m in majorsOf(s.name)" :key="m.major_code" type="button"
-                  class="mchip" :class="{ on: s.picks.includes(m.major_code) }"
-                  @click="togglePick(i, m.major_code)">
-                  <b>{{ m.major_code }}</b> {{ cleanName(m.major_name) }}
-                </button>
-                <span v-if="!majorsOf(s.name).length" class="nomajor">该校暂无官方专业代码数据</span>
-              </div>
+          <div v-for="(s, i) in draft" :key="i" class="slot" :class="{ empty: !s.name, filled: s.name }">
+            <div class="slot-top">
+              <span class="slot-no" :class="{ on: s.name }">{{ i + 1 }}</span>
+              <select v-model="s.name" @change="onSlotSchool(i)" class="school-sel">
+                <option :value="null">＋ 选择学校（空）</option>
+                <option v-for="c in reportable" :key="c.name" :value="c.name">
+                  [{{ bandOf(c.name) }}] {{ cleanName(c.name) }}（{{ c.school_code }}）
+                </option>
+              </select>
+              <button v-if="s.name" class="x" title="清空" @click="clearSlot(i)">✕</button>
+            </div>
+            <div v-if="s.name" class="slot-majors">
+              <button v-for="m in majorsOf(s.name)" :key="m.major_code" type="button"
+                class="mchip" :class="{ on: s.picks.includes(m.major_code) }"
+                @click="togglePick(i, m.major_code)">
+                <b>{{ m.major_code }}</b> {{ cleanName(m.major_name) }}
+              </button>
+              <span v-if="!majorsOf(s.name).length" class="nomajor">该校暂无官方专业代码数据</span>
             </div>
           </div>
         </div>
@@ -659,78 +606,66 @@ const copyHint = ref('')
 .legend i.bd-leg { width: 14px; height: 14px; border-radius: 50%; background: #0d9488;
   color: #fff; font-size: 9px; font-weight: 700; line-height: 14px; text-align: center; font-style: normal; }
 
-/* 冲稳保 */
-.bands { margin-bottom: 18px; }
-.band { margin-bottom: 18px; }
-.band h2 { font-size: 16px; display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
-.band h2 small { color: var(--gray-500); font-weight: 400; font-size: 12px; }
-.band h2 .cnt { margin-left: auto; font-size: 12px; color: var(--gray-500); font-weight: 400; }
-.dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
-.empty { color: var(--gray-400); font-size: 13px; }
-.school-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 10px; }
-.school { background: var(--surface); border: 1px solid var(--gray-100); border-radius: var(--radius-sm);
-  box-shadow: var(--shadow-sm); padding: 12px 14px; cursor: pointer; transition: border-color .15s, box-shadow .15s; }
-.school:hover { border-color: var(--brand); }
-.school.active { border-color: var(--brand); box-shadow: 0 0 0 2px var(--brand-50); }
-.sname { font-size: 15px; font-weight: 600; color: var(--gray-900); }
-.sname .lvl { font-size: 11px; font-weight: 400; color: var(--brand); background: var(--brand-50);
-  padding: 1px 6px; border-radius: var(--radius-xs); margin-left: 6px; }
-.sname .code { font-size: 11px; font-weight: 400; color: var(--gray-500); background: var(--gray-100);
-  padding: 1px 6px; border-radius: var(--radius-xs); margin-left: 4px; }
-.badges { margin-top: 6px; display: flex; flex-wrap: wrap; gap: 5px; }
+/* 地图 / 草表 Tab 切换 */
+.tabs { display: flex; gap: 6px; margin-bottom: 12px; }
+.tab { font-size: 14px; font-weight: 600; padding: 9px 18px; border: 1px solid var(--gray-200);
+  background: var(--surface); color: var(--gray-500); border-radius: var(--radius-sm); cursor: pointer;
+  display: flex; align-items: center; gap: 6px; transition: all .15s; }
+.tab:hover { color: var(--gray-700); }
+.tab.on { background: var(--brand); color: #fff; border-color: var(--brand); box-shadow: var(--shadow-sm); }
+.tab-cnt { font-size: 11px; font-weight: 600; padding: 1px 6px; border-radius: var(--radius-full);
+  background: rgba(0, 0, 0, .12); }
+.tab.on .tab-cnt { background: rgba(255, 255, 255, .25); }
+
+/* 徽标颜色复用 */
 .bdg { font-size: 11px; padding: 1px 7px; border-radius: var(--radius-full); }
 .b-board { background: #ede9fe; color: #6d28d9; }
 .b-coop { background: #e0f2fe; color: #0369a1; }
 .b-match { background: #d1fae5; color: #047857; }
-.meta { font-size: 12.5px; color: var(--gray-600); margin-top: 5px; }
-.meta .vol { color: var(--accent); margin-left: 6px; }
-.meta.gk { color: var(--gray-500); }
-.meta.sub2 { color: var(--gray-500); }
-.majors { margin-top: 6px; display: flex; flex-direction: column; gap: 2px; }
-.mj { font-size: 12px; color: var(--gray-700); }
-.mj b { color: var(--brand-dark); }
-.mj em { color: var(--gray-400); font-style: normal; font-size: 11px; }
 
 /* 志愿草表 */
 .draftwrap { background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow-sm); padding: 16px; }
-.draftwrap h2 { font-size: 16px; margin-bottom: 8px; }
 .draft-note { font-size: 12.5px; color: var(--gray-600); margin-bottom: 10px; line-height: 1.6; }
-.draft-actions { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+.draft-actions { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
 .ghost { font-size: 12.5px; padding: 6px 12px; border: 1px solid var(--gray-300); background: #fff;
-  border-radius: var(--radius-xs); color: var(--gray-700); }
+  border-radius: var(--radius-xs); color: var(--gray-700); cursor: pointer; }
 .copyhint { font-size: 12px; color: var(--success); }
-.slots { display: flex; flex-direction: column; gap: 8px; }
-.slot { display: flex; gap: 10px; align-items: flex-start; padding: 8px 10px;
-  border: 1px solid var(--gray-100); border-radius: var(--radius-sm); background: var(--gray-50); }
-.slot.empty { opacity: .7; }
-.slot-no { font-size: 12px; font-weight: 600; color: var(--brand-dark); min-width: 44px; padding-top: 8px; }
-.slot-body { flex: 1; min-width: 0; }
-.slot-row1 { display: flex; gap: 8px; align-items: center; min-width: 0; }
+/* 12 志愿用两列网格铺开，消除单列下拉右侧大段空白 */
+.slots { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+.slot { padding: 10px 12px; border: 1px solid var(--gray-100); border-radius: var(--radius-sm);
+  background: var(--gray-50); transition: border-color .15s, background .15s; }
+.slot.filled { background: var(--surface); border-color: var(--brand-50); }
+.slot.empty { opacity: .85; }
+.slot-top { display: flex; gap: 8px; align-items: center; min-width: 0; }
+.slot-no { flex-shrink: 0; width: 22px; height: 22px; border-radius: 50%; font-size: 12px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--gray-200); color: var(--gray-500); }
+.slot-no.on { background: var(--brand); color: #fff; }
 .school-sel { flex: 1; min-width: 0; padding: 7px 9px; border: 1px solid var(--gray-300);
-  border-radius: var(--radius-xs); font-size: 13px; background: #fff; }
-.x { font-size: 12px; padding: 6px 10px; border: 1px solid var(--gray-200); background: #fff;
-  border-radius: var(--radius-xs); color: var(--gray-500); }
-.slot-majors { margin-top: 7px; display: flex; flex-wrap: wrap; gap: 6px; }
+  border-radius: var(--radius-xs); font-size: 13px; background: #fff; cursor: pointer; }
+.x { flex-shrink: 0; width: 26px; height: 30px; font-size: 12px; border: 1px solid var(--gray-200);
+  background: #fff; border-radius: var(--radius-xs); color: var(--gray-400); cursor: pointer; }
+.x:hover { color: var(--error); border-color: var(--error); }
+.slot-majors { margin-top: 8px; padding-left: 30px; display: flex; flex-wrap: wrap; gap: 6px; }
 .mchip { font-size: 12px; padding: 4px 9px; border: 1px solid var(--gray-300); background: #fff;
-  border-radius: var(--radius-full); color: var(--gray-600); }
+  border-radius: var(--radius-full); color: var(--gray-600); cursor: pointer; }
 .mchip.on { background: var(--brand); color: #fff; border-color: var(--brand); }
 .mchip.on b { color: #fff; }
 .mchip b { color: var(--brand-dark); }
 .nomajor { font-size: 12px; color: var(--gray-400); }
-.src { font-size: 11px; color: var(--gray-400); margin-top: 12px; }
+.src { font-size: 11px; color: var(--gray-400); margin-top: 14px; }
 
 /* 移动端 */
 @media (max-width: 860px) {
   .map-detail { flex-direction: column; }
   .detail-panel { width: auto; height: auto; max-height: 420px; }
+  .slots { grid-template-columns: 1fr; }
 }
 @media (max-width: 640px) {
   .page { padding: 12px; }
   #zmap { height: 340px; }
-  .school-grid { grid-template-columns: 1fr; }
   .form .fields { gap: 10px; }
   .f-rank, .f-home, .f-mode, .f-km { flex: 1 1 100%; width: auto; }
   .go { flex: 1 1 100%; width: 100%; }
-  .slot-no { min-width: 38px; }
 }
 </style>
