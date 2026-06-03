@@ -23,6 +23,28 @@ import distance as dist_mod
 
 ADMISSION_DIR = Path(__file__).resolve().parents[2] / "knowledge-base" / "admission" / "beijing"
 
+# 官方学校代码 + 专业(班)列表（派生自 bjeea 计划册 OCR，经人工核对）。
+# 按区缓存；缺失则返回空 dict（学校卡片不带 admission 字段，前端按无码处理）。
+_ADMISSION_CODES_CACHE: dict = {}
+
+
+def load_admission_codes(district: str) -> dict:
+    """返回 {yaml校名: {school_code, plan_school_name, majors[], campus_major?}}。
+    文件：<district>_admission_codes.json（无则空）。"""
+    if district in _ADMISSION_CODES_CACHE:
+        return _ADMISSION_CODES_CACHE[district]
+    import json as _json
+    path = ADMISSION_DIR / f"{district}_admission_codes.json"
+    schools = {}
+    if path.exists():
+        try:
+            schools = (_json.loads(path.read_text(encoding="utf-8"))
+                       or {}).get("schools", {}) or {}
+        except Exception:
+            schools = {}
+    _ADMISSION_CODES_CACHE[district] = schools
+    return schools
+
 # 分档阈值（基于 margin = (录取位次 - 学生位次) / 录取位次，正值=学生比录取线更靠前）
 SAFETY_MARGIN = 0.15   # 比录取线靠前 15%+ → 保底
 REACH_MARGIN = -0.12   # 比录取线落后 12% 以内 → 可冲
@@ -225,8 +247,10 @@ def build_private_points(priv, priv_dist, mode_label, max_km):
     return out
 
 
-def _school_card(s, margin, ref_rank, history, vol, dist_campus, mode_label, max_km, interests):
-    """单校结构化卡片（文本/前端共用）。nearest 取最近校区。"""
+def _school_card(s, margin, ref_rank, history, vol, dist_campus, mode_label, max_km,
+                 interests, admission_codes=None):
+    """单校结构化卡片（文本/前端共用）。nearest 取最近校区。
+    admission_codes 命中则带 school_code + majors[]（官方计划册派生），供志愿草表用。"""
     best = nearest_campus(dist_campus.get(s["name"], []))
     nearest = None
     if best:
@@ -234,7 +258,7 @@ def _school_card(s, margin, ref_rank, history, vol, dist_campus, mode_label, max
         nearest = {"campus": cname, "km": round(m / 1000, 1), "mins": round(sec / 60),
                    "over_max": bool(max_km is not None and m / 1000 > max_km)}
     feat = s.get("features") or {}
-    return {
+    card = {
         "name": s["name"], "level": s.get("level", ""), "note": s.get("note", ""),
         "ref_rank": ref_rank, "margin": round(margin, 3), "margin_pct": f"{margin:+.0%}",
         "volatility": round(vol, 2), "history": [[y, r] for y, r in history],
@@ -243,6 +267,13 @@ def _school_card(s, margin, ref_rank, history, vol, dist_campus, mode_label, max
         "gaokao": _gaokao_years_str(s),
         "matched": match_interests(s, interests or []),
     }
+    adm = (admission_codes or {}).get(s["name"])
+    if adm:
+        card["school_code"] = adm.get("school_code")
+        card["majors"] = adm.get("majors") or []
+        if adm.get("campus_major"):
+            card["campus_major"] = adm["campus_major"]
+    return card
 
 
 def build_result(rank, home=None, mode="driving", max_km=None, interests=None, district="chaoyang"):
@@ -274,7 +305,9 @@ def build_result(rank, home=None, mode="driving", max_km=None, interests=None, d
     for band in buckets:
         buckets[band].sort(key=lambda t: (-len(match_interests(t[0], interests)), t[2]))
 
-    bands = {band: [_school_card(*t, dist_campus, mode_label, max_km, interests)
+    admission_codes = load_admission_codes(district)
+    bands = {band: [_school_card(*t, dist_campus, mode_label, max_km, interests,
+                                 admission_codes)
                     for t in buckets[band]] for band in buckets}
 
     return {
@@ -282,6 +315,9 @@ def build_result(rank, home=None, mode="driving", max_km=None, interests=None, d
         "home_coord": list(home_coord) if home_coord else None,
         "mode": mode, "mode_label": mode_label, "max_km": max_km,
         "interests": interests,
+        "admission_source": (
+            "学校代码/专业(班)派生自 bjeea 2025 官方计划册（人工核对映射）；"
+            "2026 计划 7 月初发布后须刷新" if admission_codes else None),
         "bands": bands,
         "points": build_public_points(buckets, dist_campus, mode_label, max_km, interests),
         "private": build_private_points(priv, priv_dist, mode_label, max_km),
