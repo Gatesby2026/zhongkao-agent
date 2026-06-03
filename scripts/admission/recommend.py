@@ -14,6 +14,7 @@
   python scripts/admission/recommend.py --district chaoyang --rank 2500 --all
 """
 import argparse
+import re
 import sys
 from pathlib import Path
 
@@ -278,8 +279,9 @@ def _school_card(s, margin, ref_rank, history, vol, dist_campus, mode_label, max
         blob = " ".join((m.get("plan_chaoyang", "") or "") + (m.get("note", "") or "")
                         for m in majors)
         card["boarding"] = "住" in blob
-        names = " ".join(m.get("major_name", "") or "" for m in majors)
-        card["coop"] = any(k in names for k in ("中外", "国际", "合作", "AP", "课程班"))
+        # 去 OCR 空格伪影后匹配中外合作/国际班关键词（"中美高中课程合 作项目班" 等）
+        names = re.sub(r"\s+", "", " ".join(m.get("major_name", "") or "" for m in majors))
+        card["coop"] = any(k in names for k in ("中外", "中美", "中英", "国际", "合作", "AP"))
     return card
 
 
