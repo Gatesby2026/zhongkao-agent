@@ -13,6 +13,7 @@ import json
 import os
 import re
 import subprocess
+import time
 import urllib.parse
 from pathlib import Path
 
@@ -187,24 +188,46 @@ def route(origin, dest, mode: str, route_cache: dict):
                f"&city={urllib.parse.quote('北京')}&key={AMAP_KEY}")
     else:
         url = f"https://restapi.amap.com/{path}?origin={o}&destination={d}&key={AMAP_KEY}"
-    data = _curl_json(url)
 
-    res = None
-    if data:
+    # 高德有 QPS 限制：批量算路时易被限流，限流响应不含 paths。
+    # 关键：限流/网络失败时绝不写缓存 None（否则毒化缓存，下次直接返回 None 不重算）；
+    # 仅当拿到 status==1 的确定性结果（含"确无路线"）才落缓存。
+    res, ok = None, False
+    for attempt in range(4):
+        data = _curl_json(url)
+        if not data:                       # 网络/解析失败 → 重试，不缓存
+            time.sleep(0.4 * (attempt + 1))
+            continue
+        # bicycling(v4) 用 errcode；其余(v3) 用 status
+        # 限流/配额类 infocode（10003 日限/10004 QPS/1001x-1002x 并发），需退避重试；
+        # status==0 也视作限流或参数错误，统一重试（参数错最多浪费 4 次重试）。
+        info = str(data.get("infocode", ""))
+        throttled = (str(data.get("status")) == "0"
+                     or info in ("10003", "10004", "10005", "10019", "10020", "10021", "10022")
+                     or data.get("errcode") not in (None, 0))
         if mode == "bicycling":
             paths = data.get("data", {}).get("paths") or []
-            if paths:
-                res = (int(paths[0]["distance"]), int(paths[0]["duration"]))
+            ok = data.get("errcode") in (None, 0)
         elif mode == "transit":
-            transits = data.get("route", {}).get("transits") or []
-            if transits:
-                res = (int(transits[0]["distance"]), int(transits[0]["duration"]))
+            paths = data.get("route", {}).get("transits") or []
+            ok = str(data.get("status")) == "1"
         else:
             paths = data.get("route", {}).get("paths") or []
-            if paths:
-                res = (int(paths[0]["distance"]), int(paths[0]["duration"]))
-    route_cache[ck] = res
-    _save_cache(ROUTE_CACHE, route_cache)
+            ok = str(data.get("status")) == "1"
+        if paths:
+            key_d = "duration"
+            res = (int(paths[0]["distance"]), int(paths[0][key_d]))
+            ok = True
+            break
+        if throttled or not ok:            # 被限流/出错 → 退避重试，不缓存
+            time.sleep(0.4 * (attempt + 1))
+            ok = False
+            continue
+        break                              # status==1 且确无路线 → 落缓存 None
+
+    if ok:
+        route_cache[ck] = res
+        _save_cache(ROUTE_CACHE, route_cache)
     return res
 
 
