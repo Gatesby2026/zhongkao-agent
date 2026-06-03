@@ -49,7 +49,8 @@ HEADER_KEYS = {  # 表头关键字 → 内部字段名
     "学校代码": "school_code", "学校名称": "school_name",
     "专业代码": "major_code", "专业名称": "major_name",
     "学制": "xuezhi", "是否加试": "jiashi", "加试": "jiashi",
-    "合计": "total", "特殊学生": "special_student", "特殊说明": "special_note",
+    "合计": "total", "招生人数": "total",
+    "招生地区": "area", "特殊学生": "special_student", "特殊说明": "special_note",
 }
 SCHOOL_CODE_RE = re.compile(r"^\d{6}$")
 MAJOR_CODE_RE = re.compile(r"^0?\d{1,2}$")
@@ -139,9 +140,11 @@ def map_columns(grid):
     field_col, dist_col = {}, {}
     for cc, txt in header_text.items():
         t = re.sub(r"\s|\(.*?\)|（.*?）|\d", "", txt)
-        for d in DISTRICT_COLS:
-            if d in t:
-                dist_col[cc] = d
+        # 区列表头是纯区名(短)；地址/数据单元格含路/号/电话且很长，不算区列
+        if len(t) <= 6 and not re.search(r"路|号|电话|镇|街|里", t):
+            for d in DISTRICT_COLS:
+                if d in t:
+                    dist_col[cc] = d
         for k, f in HEADER_KEYS.items():
             if k in txt and f not in field_col:
                 field_col[f] = cc
