@@ -489,9 +489,16 @@ const copyHint = ref('')
 .lchip { font-size: 12px; padding: 4px 10px; border: 1px solid var(--gray-300); background: #fff;
   border-radius: var(--radius-full); color: var(--gray-500); }
 .lchip.on { background: var(--brand-50); color: var(--brand-dark); border-color: var(--brand); }
-#zmap { height: 460px; border-radius: var(--radius-sm); overflow: hidden; box-shadow: var(--shadow-sm); }
-/* 柔和底图：去饱和 + 提亮，避免高德彩色喧宾夺主 */
-#zmap :deep(.leaflet-tile-pane) { filter: grayscale(0.55) brightness(1.06) contrast(0.92); }
+/* 底色用页面同色：瓦片降透明度后由它透上来，实现"洗白"而不碰标记 */
+#zmap { height: 460px; border-radius: var(--radius-sm); overflow: hidden;
+  box-shadow: var(--shadow-sm); background: var(--bg); }
+/* 柔和底图：去饱和 + 提亮 + 降对比把高德又黑又粗的注记压成浅灰细字；
+   再降透明度让页面底色透上来，街道注记后退、彩色学校标记凸显，色调与界面统一。
+   filter/opacity 只作用于瓦片层，markerPane 不受影响，标记仍清晰。 */
+#zmap :deep(.leaflet-tile-pane) {
+  filter: grayscale(0.85) brightness(1.12) contrast(0.82) saturate(0.6);
+  opacity: 0.78;
+}
 .legend { display: flex; flex-wrap: wrap; gap: 12px; font-size: 12px; color: var(--gray-600); margin-top: 8px; }
 .legend i { display: inline-block; vertical-align: middle; margin-right: 4px; }
 .legend i.d { width: 11px; height: 11px; border-radius: 50%; }
