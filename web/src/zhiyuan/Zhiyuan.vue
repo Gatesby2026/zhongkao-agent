@@ -179,7 +179,7 @@ function renderMap() {
     const lo = res.points.reduce((s, p) => s + p.lon, 0) / res.points.length
     center = [la, lo]
   }
-  const map = L.map('zmap', { zoomControl: false }).setView(center, 11)
+  const map = L.map('zmap', { zoomControl: false, scrollWheelZoom: false }).setView(center, 11)
   mapInst = map
   L.control.zoom({ position: 'topright' }).addTo(map)
   L.tileLayer('https://wprd0{s}.is.autonavi.com/appmaptile?lang=zh_cn&size=1&style=7&x={x}&y={y}&z={z}',
