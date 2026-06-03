@@ -59,7 +59,6 @@ const form = reactive({
 })
 // 学校类型图层开关（地图上显示哪些点）
 const layers = reactive({ gongban: true, coop: true, minban: false })
-const showMore = ref(false)
 const loading = ref(false)
 const errMsg = ref('')
 const result = ref<Result | null>(null)
@@ -327,43 +326,39 @@ const copyHint = ref('')
       ⚠️ 学校代码 / 专业(班)代码派生自 <b>bjeea 2025 官方招生计划册</b>（人工核对映射），<b>2026 计划 7 月初发布后须刷新</b>；高考成绩为<b>民间·非官方</b>数据，仅作补充参考，请勿据此直接决策。
     </div>
 
-    <!-- 输入区：排名必填，其余收进“更多条件” -->
+    <!-- 输入区：全部条件常驻显示，方便反复改条件对比 -->
     <section class="card form">
-      <div class="primary">
-        <label class="big">孩子区排名（一模/二模）
-          <input type="number" v-model.number="form.rank" min="1" placeholder="如 5000" />
+      <div class="fields">
+        <label class="f-rank">区排名<small>一模/二模</small>
+          <input type="number" v-model.number="form.rank" min="1" placeholder="如 4500" />
+        </label>
+        <label class="f-home">家庭住址<small>留空只看全区分布</small>
+          <input type="text" v-model="form.home" placeholder="如 朝阳区大屯金泉家园" />
+        </label>
+        <label class="f-mode">通勤方式
+          <select v-model="form.mode">
+            <option v-for="m in MODES" :key="m.v" :value="m.v">{{ m.label }}</option>
+          </select>
+        </label>
+        <label class="f-km">通勤上限<small>km</small>
+          <input type="number" v-model="form.max_km" min="1" placeholder="8" :disabled="form.boarding" />
+        </label>
+        <label class="f-board switch">接受住宿
+          <span class="sw-line">
+            <input type="checkbox" v-model="form.boarding" />
+            <span class="sw-hint">开启后不限距离</span>
+          </span>
         </label>
         <button class="go" :disabled="loading" @click="submit">
           {{ loading ? '匹配中…' : '生成志愿建议' }}
         </button>
       </div>
-      <button class="more-toggle" type="button" @click="showMore = !showMore">
-        {{ showMore ? '▲ 收起更多条件' : '▼ 更多条件（住址 / 寄宿 / 通勤 / 兴趣）' }}
-      </button>
-      <div v-show="showMore" class="more">
-        <div class="row">
-          <label class="grow">家庭住址（填了才算通勤距离；不填也能看全区分布）
-            <input type="text" v-model="form.home" placeholder="如 朝阳区大屯金泉家园" />
-          </label>
-          <label>通勤方式
-            <select v-model="form.mode">
-              <option v-for="m in MODES" :key="m.v" :value="m.v">{{ m.label }}</option>
-            </select>
-          </label>
-          <label>通勤上限(km)
-            <input type="number" v-model="form.max_km" min="1" placeholder="如 8" :disabled="form.boarding" />
-          </label>
-        </div>
-        <label class="switch">
-          <input type="checkbox" v-model="form.boarding" />
-          <span>孩子接受<b>住宿</b>（开启后距离不再参与筛选，范围放开到全朝阳；距离仍展示作参考）</span>
-        </label>
-        <div class="interests">
-          <span class="il">兴趣偏好（软匹配，命中置顶不硬筛）：</span>
-          <button v-for="t in INTEREST_TAGS" :key="t" type="button"
-            class="chip" :class="{ on: form.interests.includes(t) }" @click="toggleInterest(t)">{{ t }}</button>
-        </div>
+      <div class="interests">
+        <span class="il">兴趣偏好<small>（软匹配，命中置顶不硬筛）</small></span>
+        <button v-for="t in INTEREST_TAGS" :key="t" type="button"
+          class="chip" :class="{ on: form.interests.includes(t) }" @click="toggleInterest(t)">{{ t }}</button>
       </div>
+      <p v-if="form.boarding" class="board-note">🛏 已开启住宿：距离不再参与筛选，范围放开到全朝阳（距离仍展示作参考）。</p>
       <p v-if="errMsg" class="err">{{ errMsg }}</p>
     </section>
 
@@ -553,29 +548,32 @@ const copyHint = ref('')
   border-radius: var(--radius-sm); margin: 12px 0; }
 .card { background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow-sm); padding: 16px; }
 
-/* 输入区 */
-.form .primary { display: flex; gap: 12px; align-items: flex-end; flex-wrap: wrap; }
-.form label { display: flex; flex-direction: column; font-size: 12px; color: var(--gray-600); gap: 4px; }
-.form label.big { flex: 1; min-width: 180px; font-size: 13px; font-weight: 600; color: var(--gray-800); }
+/* 输入区：全部条件常驻，一行紧凑排开 */
+.form .fields { display: flex; gap: 12px; align-items: flex-end; flex-wrap: wrap; }
+.form label { display: flex; flex-direction: column; font-size: 12px; font-weight: 600;
+  color: var(--gray-700); gap: 4px; }
+.form label small { font-weight: 400; color: var(--gray-400); font-size: 11px; margin-left: 4px; }
 .form input, .form select { padding: 9px 10px; border: 1px solid var(--gray-300);
-  border-radius: var(--radius-xs); font-size: 14px; background: #fff; }
+  border-radius: var(--radius-xs); font-size: 14px; background: #fff; height: 38px; box-sizing: border-box; }
 .form input:disabled { background: var(--gray-100); color: var(--gray-400); }
-.go { padding: 11px 22px; background: var(--brand); color: #fff; border: none;
-  border-radius: var(--radius-sm); font-size: 15px; font-weight: 600; white-space: nowrap; }
+.f-rank { width: 110px; }
+.f-home { flex: 1; min-width: 200px; }
+.f-mode { width: 100px; }
+.f-km { width: 90px; }
+.f-board .sw-line { display: flex; align-items: center; gap: 6px; height: 38px; }
+.f-board .sw-line input { width: 17px; height: 17px; }
+.sw-hint { font-size: 11px; font-weight: 400; color: var(--gray-500); }
+.go { padding: 0 22px; height: 38px; background: var(--brand); color: #fff; border: none;
+  border-radius: var(--radius-sm); font-size: 15px; font-weight: 600; white-space: nowrap; cursor: pointer; }
 .go:disabled { opacity: .6; }
-.more-toggle { margin-top: 12px; background: none; border: none; color: var(--brand);
-  font-size: 13px; padding: 0; }
-.more { margin-top: 12px; border-top: 1px dashed var(--gray-200); padding-top: 12px; }
-.more .row { display: flex; gap: 12px; margin-bottom: 12px; flex-wrap: wrap; }
-.more label { flex: 1; min-width: 130px; }
-.more label.grow { flex: 2; min-width: 220px; }
-.switch { flex-direction: row !important; align-items: center; gap: 8px !important;
-  font-size: 13px !important; color: var(--gray-700) !important; margin-bottom: 12px; cursor: pointer; }
-.switch input { width: 16px; height: 16px; }
-.interests .il { font-size: 12px; color: var(--gray-600); display: block; margin-bottom: 6px; }
+.interests { margin-top: 14px; }
+.interests .il { font-size: 12px; font-weight: 600; color: var(--gray-700); display: block; margin-bottom: 6px; }
+.interests .il small { font-weight: 400; color: var(--gray-400); }
 .chip { font-size: 12px; padding: 5px 10px; border: 1px solid var(--gray-300);
-  background: #fff; border-radius: var(--radius-full); margin: 0 6px 6px 0; color: var(--gray-700); }
+  background: #fff; border-radius: var(--radius-full); margin: 0 6px 6px 0; color: var(--gray-700); cursor: pointer; }
 .chip.on { background: var(--brand); color: #fff; border-color: var(--brand); }
+.board-note { font-size: 12px; color: var(--brand-dark); background: var(--brand-50);
+  border-radius: var(--radius-xs); padding: 7px 10px; margin-top: 10px; }
 .err { color: var(--error); font-size: 13px; margin-top: 8px; }
 
 .results { margin-top: 16px; }
@@ -730,8 +728,9 @@ const copyHint = ref('')
   .page { padding: 12px; }
   #zmap { height: 340px; }
   .school-grid { grid-template-columns: 1fr; }
-  .form .primary { flex-direction: column; align-items: stretch; }
-  .go { width: 100%; }
+  .form .fields { gap: 10px; }
+  .f-rank, .f-home, .f-mode, .f-km { flex: 1 1 100%; width: auto; }
+  .go { flex: 1 1 100%; width: 100%; }
   .slot-no { min-width: 38px; }
 }
 </style>
