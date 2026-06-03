@@ -72,6 +72,11 @@ function toggleInterest(t: string) {
   else form.interests.push(t)
 }
 function cleanName(s: string): string { return (s || '').replace(/\s+/g, '') }
+// 地图标签只取学校主名（空格 / 中点 / 括号前截断），避免把校区+计划说明全挤一起
+function shortName(s: string): string {
+  const n = (s || '').trim()
+  return n.split(/[\s（(·]/)[0] || n
+}
 
 async function submit() {
   errMsg.value = ''
@@ -155,14 +160,22 @@ function renderMarkers() {
     if (coop && !layers.coop && !layers.gongban) return
     bounds.push([p.lat, p.lon])
     const icon = p.kind === 'full' ? pin(p.color, p.band) : smallIcon(p.color)
-    L.marker([p.lat, p.lon], { icon }).addTo(publicLayer).bindPopup(popupHtml(p))
+    const mk = L.marker([p.lat, p.lon], { icon }).addTo(publicLayer).bindPopup(popupHtml(p))
+    // 缺省常驻显示学校名：重点推荐校(冲/稳/保)常驻，其余小点悬停显示，避免拥挤
+    if (p.kind === 'full') {
+      mk.bindTooltip(shortName(p.name), { permanent: true, direction: 'right', offset: [10, -12], className: 'map-lbl' })
+    } else {
+      mk.bindTooltip(shortName(p.name), { direction: 'top', offset: [0, -6], className: 'map-lbl' })
+    }
   })
   if (layers.gongban || layers.coop) publicLayer.addTo(mapInst)
 
   privateLayer = L.layerGroup()
   res.private.forEach((p) => {
     bounds.push([p.lat, p.lon])
-    L.marker([p.lat, p.lon], { icon: smallIcon(p.color) }).addTo(privateLayer).bindPopup(popupHtml(p))
+    L.marker([p.lat, p.lon], { icon: smallIcon(p.color) }).addTo(privateLayer)
+      .bindPopup(popupHtml(p))
+      .bindTooltip(shortName(p.name), { direction: 'top', offset: [0, -6], className: 'map-lbl' })
   })
   if (layers.minban) privateLayer.addTo(mapInst)
 
@@ -501,6 +514,14 @@ const copyHint = ref('')
   filter: grayscale(0.85) brightness(1.12) contrast(0.82) saturate(0.6);
   opacity: 0.78;
 }
+/* 学校名常驻标签：紧凑、用界面字体，半透明白底，无箭头 */
+#zmap :deep(.map-lbl) {
+  background: rgba(255, 255, 255, 0.86); color: var(--gray-700);
+  border: none; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
+  font-size: 11px; line-height: 1.2; font-weight: 600;
+  padding: 1px 5px; border-radius: 4px; white-space: nowrap;
+}
+#zmap :deep(.map-lbl::before) { display: none; } /* 去掉小三角箭头 */
 .legend { display: flex; flex-wrap: wrap; gap: 12px; font-size: 12px; color: var(--gray-600); margin-top: 8px; }
 .legend i { display: inline-block; vertical-align: middle; margin-right: 4px; }
 .legend i.d { width: 11px; height: 11px; border-radius: 50%; }
