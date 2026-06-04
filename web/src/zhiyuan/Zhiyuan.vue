@@ -958,12 +958,12 @@ const copyHint = ref('')
 /* 底色用页面同色：瓦片降透明度后由它透上来，实现"洗白"而不碰标记 */
 #zmap { height: 460px; border-radius: var(--radius-sm); overflow: hidden;
   box-shadow: var(--shadow-sm); background: var(--bg); }
-/* 柔和底图：去饱和 + 提亮 + 降对比把高德又黑又粗的注记压成浅灰细字；
-   再降透明度让页面底色透上来，街道注记后退、彩色学校标记凸显，色调与界面统一。
-   filter/opacity 只作用于瓦片层，markerPane 不受影响，标记仍清晰。 */
+/* 底图保持清晰可读：注记已用 tileSize:128 缩小不再扎眼，故不再做大幅洗白。
+   仅轻微降饱和让色调与界面协调，全对比、全透明保证街道/注记清楚。
+   filter 只作用瓦片层，markerPane 不受影响，彩色学校标记照常凸显。 */
 #zmap :deep(.leaflet-tile-pane) {
-  filter: grayscale(0.88) brightness(1.85) contrast(0.75) saturate(0.55);
-  opacity: 0.82;
+  filter: saturate(0.92);
+  opacity: 1;
 }
 /* 学校名常驻标签：紧凑、用界面字体，半透明白底，无箭头 */
 #zmap :deep(.map-lbl) {
