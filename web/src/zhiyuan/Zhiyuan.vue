@@ -35,12 +35,22 @@ interface Point {
   hist: string; note: string; reason: string; style: string
   tags: string[]; gaokao: string; matched: string[]
 }
+interface PubSchool {
+  name: string; level: string; band: string; ref_rank: number | string
+  margin_pct: string; score_lines?: { year: number; score: number | null; rank: number | null }[]
+  campus: string; address: string; address_exact: boolean
+  address_confidence: string; address_flag: string
+  boarding?: boolean; coop?: boolean
+  nearest: { campus: string; km: number; mins: number; over_max: boolean } | null
+  over_max: boolean; reportable: boolean
+}
 interface Result {
   district: string; rank: number; home: string | null
   home_coord: [number, number] | null; mode: string; mode_label: string
   max_km: number | null; boarding: boolean; interests: string[] | null
   admission_source: string | null
-  bands: Record<string, Card[]>; points: Point[]; private: Point[]
+  bands: Record<string, Card[]>; public_list: PubSchool[]
+  points: Point[]; private: Point[]
 }
 
 const form = reactive({
@@ -53,7 +63,7 @@ const form = reactive({
 })
 // 学校类型图层开关（地图上显示哪些点）
 const layers = reactive({ gongban: true, coop: true, minban: false })
-const tab = ref<'map' | 'draft'>('map')   // 地图 / 志愿草表 两个并列页
+const tab = ref<'map' | 'list' | 'draft'>('map')   // 地图 / 普高清单 / 志愿草表
 const loading = ref(false)
 const errMsg = ref('')
 const result = ref<Result | null>(null)
@@ -117,15 +127,24 @@ function cardOfPoint(p: Point | null): Card | null {
 const selCard = computed<Card | null>(() => cardOfPoint(selectedPoint.value))
 const boardBadge = '<span class="bd-badge" title="可寄宿/有住宿">宿</span>'
 function pin(color: string, txt: string, boarding = false) {
+  const fg = contrastText(color)
   return L.divIcon({
     className: '', iconSize: [24, 24], iconAnchor: [12, 24],
     html: `<div style="position:relative;width:24px;height:24px">`
       + `<div style="background:${color};width:24px;height:24px;border-radius:50% 50% 50% 0;`
       + `transform:rotate(-45deg);border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.4);`
       + `display:flex;align-items:center;justify-content:center;">`
-      + `<span class="lbl" style="transform:rotate(45deg);font-size:11px">${txt}</span></div>`
+      + `<span class="lbl" style="transform:rotate(45deg);font-size:11px;font-weight:700;color:${fg}">${txt}</span></div>`
       + (boarding ? boardBadge : '') + `</div>`,
   })
+}
+// 按背景亮度自动取对比文字色（深色 pin 用白字、浅色 pin 用深字），避免“家”等字看不见
+function contrastText(hex: string): string {
+  const c = hex.replace('#', '')
+  if (c.length < 6) return '#fff'
+  const r = parseInt(c.slice(0, 2), 16), g = parseInt(c.slice(2, 4), 16), b = parseInt(c.slice(4, 6), 16)
+  const lum = (0.299 * r + 0.587 * g + 0.114 * b) / 255
+  return lum > 0.6 ? '#1f2937' : '#fff'
 }
 function smallIcon(color: string, boarding = false) {
   return L.divIcon({
@@ -345,11 +364,16 @@ const copyHint = ref('')
     </section>
 
     <section v-if="result" class="results">
-      <!-- 地图 / 志愿草表 两个并列 TAB -->
-      <div class="tabs">
-        <button class="tab" :class="{ on: tab === 'map' }" @click="tab = 'map'">📍 志愿地图</button>
+      <!-- 标签页：地图 / 普高清单 / 志愿草表 -->
+      <div class="tabs" role="tablist">
+        <button class="tab" :class="{ on: tab === 'map' }" @click="tab = 'map'">
+          <span class="tab-ic">📍</span>志愿地图
+        </button>
+        <button class="tab" :class="{ on: tab === 'list' }" @click="tab = 'list'">
+          <span class="tab-ic">🏫</span>普高清单<span class="tab-cnt">{{ result.public_list.length }}</span>
+        </button>
         <button class="tab" :class="{ on: tab === 'draft' }" @click="tab = 'draft'">
-          📝 志愿草表<span class="tab-cnt">{{ filledSlots }}/{{ ZHIYUAN_SLOTS }}</span>
+          <span class="tab-ic">📝</span>志愿草表<span class="tab-cnt">{{ filledSlots }}/{{ ZHIYUAN_SLOTS }}</span>
         </button>
       </div>
 
@@ -446,7 +470,56 @@ const copyHint = ref('')
         </div>
       </div>
 
-      <!-- TAB 2：志愿草表（统招 12×2），镜像官方填报 -->
+      <!-- TAB 2：普高（统招公办）清单 -->
+      <div class="listwrap" v-show="tab === 'list'">
+        <p class="list-note">
+          全{{ result.district }}统招公办普高{{ result.public_list.length }}所，按 2025 录取位次升序。
+          <b>录取位次</b>跨年可比（分数因总分调整不可比）；<b>住宿</b>派生自 bjeea 2025 计划册；
+          <b>地址</b>低可信/有提示的请以学校官方/电话为准。
+        </p>
+        <div class="table-scroll">
+          <table class="list-table">
+            <thead>
+              <tr>
+                <th>学校</th><th>层次</th><th>档位</th>
+                <th class="num">录取位次<small>2025</small></th>
+                <th>住宿</th><th>通勤</th><th>地址</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="p in result.public_list" :key="p.name" :class="{ unreach: !p.reportable }">
+                <td class="t-name">
+                  {{ cleanName(p.name) }}
+                  <span v-if="p.coop" class="mini-bdg b-coop">国际/合作</span>
+                </td>
+                <td class="t-lvl">{{ p.level }}</td>
+                <td><span class="t-band" :class="'band-' + p.band">{{ p.band }}</span></td>
+                <td class="num"><b>{{ p.ref_rank }}</b></td>
+                <td>
+                  <span v-if="p.boarding" class="t-yes">🛏 可住</span>
+                  <span v-else class="t-no">—</span>
+                </td>
+                <td class="t-dist">
+                  <template v-if="p.nearest">
+                    {{ p.nearest.km }}km
+                    <span v-if="p.over_max && !p.boarding" class="t-over">超上限</span>
+                  </template>
+                  <span v-else class="t-no">—</span>
+                </td>
+                <td class="t-addr">
+                  {{ p.address || '—' }}
+                  <span v-if="p.address && !p.address_exact" class="addr-tag" title="非精确门牌，需核验">概址</span>
+                  <span v-if="p.address_confidence === 'low'" class="addr-tag warn" title="低可信，请以官方为准">待核</span>
+                  <span v-if="p.address_flag" class="addr-flag" :title="p.address_flag">⚠️</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="list-tip">⚠️ 标「待核 / 概址 / ⚠️」的地址来自非权威或迁址提示，报到校区请以招生简章与学校电话确认。</p>
+      </div>
+
+      <!-- TAB 3：志愿草表（统招 12×2），镜像官方填报 -->
       <div class="draftwrap" v-show="tab === 'draft'">
         <p class="draft-note">
           已按 <b>冲→稳→保</b> 顺序自动预填 {{ filledSlots }}/{{ ZHIYUAN_SLOTS }} 个志愿；可改学校、改专业(班，每志愿最多 2 个)。
@@ -606,22 +679,69 @@ const copyHint = ref('')
 .legend i.bd-leg { width: 14px; height: 14px; border-radius: 50%; background: #0d9488;
   color: #fff; font-size: 9px; font-weight: 700; line-height: 14px; text-align: center; font-style: normal; }
 
-/* 地图 / 草表 Tab 切换 */
-.tabs { display: flex; gap: 6px; margin-bottom: 12px; }
-.tab { font-size: 14px; font-weight: 600; padding: 9px 18px; border: 1px solid var(--gray-200);
-  background: var(--surface); color: var(--gray-500); border-radius: var(--radius-sm); cursor: pointer;
-  display: flex; align-items: center; gap: 6px; transition: all .15s; }
-.tab:hover { color: var(--gray-700); }
-.tab.on { background: var(--brand); color: #fff; border-color: var(--brand); box-shadow: var(--shadow-sm); }
-.tab-cnt { font-size: 11px; font-weight: 600; padding: 1px 6px; border-radius: var(--radius-full);
-  background: rgba(0, 0, 0, .12); }
-.tab.on .tab-cnt { background: rgba(255, 255, 255, .25); }
+/* 标签页：贴着内容卡片的页签条（活动页签连到内容区，强化“翻页”感）*/
+.tabs { display: flex; gap: 4px; padding: 0 4px; }
+.tab { position: relative; font-size: 14px; font-weight: 600; padding: 10px 18px 12px;
+  border: 1px solid transparent; border-bottom: none; background: transparent; color: var(--gray-500);
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0; cursor: pointer;
+  display: flex; align-items: center; gap: 6px; transition: color .15s, background .15s; }
+.tab .tab-ic { font-size: 15px; }
+.tab:hover { color: var(--gray-800); background: var(--gray-50); }
+.tab.on { color: var(--brand-dark); background: var(--surface);
+  border-color: var(--gray-100); box-shadow: 0 -2px 6px rgba(0, 0, 0, .04); }
+/* 活动页签底部色条 + 用一条白线盖住下方边框，形成与内容连为一体的效果 */
+.tab.on::after { content: ''; position: absolute; left: 0; right: 0; top: 0; height: 3px;
+  background: var(--brand); border-radius: 3px 3px 0 0; }
+.tab.on::before { content: ''; position: absolute; left: 0; right: 0; bottom: -1px; height: 2px;
+  background: var(--surface); }
+.tab-cnt { font-size: 11px; font-weight: 700; padding: 1px 7px; border-radius: var(--radius-full);
+  background: var(--gray-100); color: var(--gray-500); }
+.tab.on .tab-cnt { background: var(--brand-50); color: var(--brand-dark); }
+/* 内容卡片统一顶边，跟页签条衔接 */
+.results .mapwrap, .results .listwrap, .results .draftwrap {
+  border: 1px solid var(--gray-100); border-radius: 0 var(--radius) var(--radius) var(--radius); }
 
 /* 徽标颜色复用 */
 .bdg { font-size: 11px; padding: 1px 7px; border-radius: var(--radius-full); }
 .b-board { background: #ede9fe; color: #6d28d9; }
 .b-coop { background: #e0f2fe; color: #0369a1; }
 .b-match { background: #d1fae5; color: #047857; }
+
+/* 普高清单表格 */
+.listwrap { background: var(--surface); box-shadow: var(--shadow-sm); padding: 16px; }
+.list-note { font-size: 12.5px; color: var(--gray-600); margin-bottom: 12px; line-height: 1.6; }
+.table-scroll { overflow-x: auto; border: 1px solid var(--gray-100); border-radius: var(--radius-sm); }
+.list-table { width: 100%; border-collapse: collapse; font-size: 13px; min-width: 640px; }
+.list-table thead th { position: sticky; top: 0; background: var(--gray-50); text-align: left;
+  font-size: 11.5px; font-weight: 700; color: var(--gray-500); padding: 9px 12px;
+  border-bottom: 1px solid var(--gray-200); white-space: nowrap; }
+.list-table th small { font-weight: 400; color: var(--gray-400); margin-left: 3px; }
+.list-table th.num, .list-table td.num { text-align: right; }
+.list-table td { padding: 9px 12px; border-bottom: 1px solid var(--gray-50); color: var(--gray-700);
+  vertical-align: top; }
+.list-table tbody tr:hover { background: var(--brand-50); }
+.list-table tr.unreach { color: var(--gray-400); }
+.list-table tr.unreach .t-name { color: var(--gray-500); }
+.t-name { font-weight: 600; color: var(--gray-900); white-space: nowrap; }
+.t-lvl { font-size: 12px; color: var(--gray-500); white-space: nowrap; }
+.list-table td:nth-child(3) { white-space: nowrap; }
+.t-band { display: inline-block; min-width: 20px; text-align: center; font-size: 11px; font-weight: 700;
+  padding: 1px 6px; border-radius: var(--radius-xs); white-space: nowrap; }
+.band-冲 { background: #fde8e6; color: #c0392b; }
+.band-稳 { background: #fdf3d4; color: #9a7d0a; }
+.band-保 { background: #d8f5e3; color: #1e8e4e; }
+.band-够不上 { background: var(--gray-100); color: var(--gray-400); }
+.t-yes { color: #6d28d9; font-size: 12px; white-space: nowrap; }
+.t-no { color: var(--gray-300); }
+.t-dist { white-space: nowrap; font-size: 12.5px; }
+.t-over { color: var(--accent); font-size: 11px; margin-left: 4px; }
+.t-addr { font-size: 12px; color: var(--gray-600); line-height: 1.5; min-width: 180px; }
+.mini-bdg { font-size: 10px; padding: 0 5px; border-radius: var(--radius-xs); margin-left: 4px; }
+.addr-tag { font-size: 10px; padding: 0 5px; border-radius: var(--radius-xs); margin-left: 4px;
+  background: var(--gray-100); color: var(--gray-500); }
+.addr-tag.warn { background: var(--warning-bg); color: #b45309; }
+.addr-flag { margin-left: 3px; cursor: help; }
+.list-tip { font-size: 11px; color: var(--gray-400); margin-top: 10px; line-height: 1.5; }
 
 /* 志愿草表 */
 .draftwrap { background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow-sm); padding: 16px; }

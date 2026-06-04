@@ -48,8 +48,8 @@ def load_admission_codes(district: str) -> dict:
 
 # 分档阈值（基于 margin = (录取位次 - 学生位次) / 录取位次，正值=学生比录取线更靠前）
 SAFETY_MARGIN = 0.15   # 比录取线靠前 15%+ → 保底
-REACH_MARGIN = -0.12   # 比录取线落后 12% 以内 → 可冲
-# 介于两者之间(0 ~ -0.12 不含、0~0.15) → 稳；落后超 12% → 够不上
+REACH_MARGIN = -0.25   # 比录取线落后 25% 以内 → 可冲（放宽自 -0.12，让冲档不至于落空）
+# 介于两者之间(0 ~ -0.25 不含、0~0.15) → 稳；落后超 25% → 够不上
 
 # 录取位次三年极差 / 均值 超过此比例 → 标注"波动大"
 VOLATILITY_THRESHOLD = 0.40
@@ -271,12 +271,19 @@ def _school_card(s, margin, ref_rank, history, vol, dist_campus, mode_label, max
         if not isinstance(rec, dict):
             continue
         score_lines.append({"year": int(y), "score": rec.get("score"), "rank": rec.get("rank")})
+    # 地址（含核验提示）：address 优先，缺则用 address_rough；附 confidence/flag 让前端如实标注
+    loc = s.get("location") or {}
     card = {
         "name": s["name"], "level": s.get("level", ""), "note": s.get("note", ""),
         "ref_rank": ref_rank, "margin": round(margin, 3), "margin_pct": f"{margin:+.0%}",
         "volatility": round(vol, 2), "history": [[y, r] for y, r in history],
         "score_lines": score_lines,
         "nearest": nearest,
+        "campus": loc.get("campus") or "",
+        "address": loc.get("address") or loc.get("address_rough") or "",
+        "address_exact": bool(loc.get("address")),
+        "address_confidence": loc.get("confidence") or "",
+        "address_flag": loc.get("flag") or "",
         "style": feat.get("style", ""), "tags": feat.get("tags") or [],
         "gaokao": _gaokao_years_str(s),
         "matched": match_interests(s, interests or []),
@@ -371,6 +378,19 @@ def build_result(rank, home=None, mode="driving", max_km=None, interests=None,
     for band, cards in raw_bands.items():
         bands[band] = [c for c in cards if _reachable(c)] if band in ("冲", "稳", "保") else cards
 
+    # 普高（统招公办）全量清单：含所有档位，按录取位次升序；标注档位/是否可达
+    public_list = []
+    for band in ("冲", "稳", "保", "够不上"):
+        for c in raw_bands[band]:
+            item = dict(c)
+            item["band"] = band
+            n = c.get("nearest")
+            item["over_max"] = bool(n and n.get("over_max"))
+            # 不在报名范围 = 够不上 或（超通勤上限且不可寄宿）
+            item["reportable"] = band != "够不上" and _reachable(c)
+            public_list.append(item)
+    public_list.sort(key=lambda x: x["ref_rank"])
+
     return {
         "district": district_name, "rank": rank, "home": home,
         "home_coord": list(home_coord) if home_coord else None,
@@ -381,6 +401,7 @@ def build_result(rank, home=None, mode="driving", max_km=None, interests=None,
             "学校代码/专业(班)派生自 bjeea 2025 官方计划册（人工核对映射）；"
             "2026 计划 7 月初发布后须刷新" if admission_codes else None),
         "bands": bands,
+        "public_list": public_list,
         "points": build_public_points(buckets, dist_campus, mode_label, effective_max_km,
                                       interests, boarding_names),
         "private": build_private_points(priv, priv_dist, mode_label, effective_max_km),
