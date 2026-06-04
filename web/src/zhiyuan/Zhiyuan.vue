@@ -15,6 +15,50 @@ const MODES = [
 ]
 const ZHIYUAN_SLOTS = 12   // 统一招生志愿数（每志愿 2 专业）
 
+// 升学渠道科普（来源：bjeea.cn / 北京市教委 / 首都之窗 T1 原文交叉核验，2025现状+2026已知变化）
+const GUIDE = [
+  { t: '总览：3 个批次，顺序录取', h:
+    '中考总分 <b>510 分</b>（2024 是 670，2025 改革后降为 510）。录取分三批次按先后进行，<b>被前一批次录取就锁定、不再参加后面的批次</b>：<br>' +
+    '<span class="g-flow">① 提前招生 → ② 指标分配 → ③ 统一招生</span>' +
+    '2025 一个考生最多可填 <b>28 个志愿</b>（提招贯通 8 + 指标分配 8×2专业 + 统招 12×2专业）。' },
+  { t: '① 提前招生（提招）', h:
+    '<ul><li><b>贯通培养</b>：380 分门槛，8 个志愿（详见"贯通 vs 五年制"）</li>' +
+    '<li><b>中外合作办学班</b></li>' +
+    '<li><b>特长生</b>：体育/艺术各 ≤ 招生计划 4%，科技 ≤ 2%</li>' +
+    '<li><b>中职自主招生</b>（专业测试录取，中考分只记合格/不合格）</li>' +
+    '<li><b>登记入学、自主招生</b>也在这一阶段处理</li></ul>' },
+  { t: '② 指标分配（校额到校 + 市级统筹）', h:
+    '中间批次，8 志愿×2 专业。<br>' +
+    '<b>校额到校</b>：优质高中名额<b>定向分到每所初中，校内竞争</b>（同校学生比，不是全区比）。门槛＝<b>连续三年本校学籍 + 综合素质 B + 中考总分达线</b>（2025 = 430/510 ≈ 84%）。' +
+    '<span class="g-warn">往届生、外省回京、回户籍报考者不能报。</span><br>' +
+    '<b>市级统筹（一/二/三）</b>：优质资源跨区招生（统筹一不在东西海招、统筹二名校郊区分校面向全市、统筹三高校与普高联合培养）。' },
+  { t: '③ 统一招生（统招，本系统核心）', h:
+    '最后批次，按总分从高到低、依志愿录取。<b>12 个志愿 × 每志愿 2 专业</b>——<b>这就是本系统的"志愿草表"</b>。' },
+  { t: '贯通培养 vs 五年制高职（易混）', h:
+    '<table class="g-tbl"><thead><tr><th></th><th>学制</th><th>出口文凭</th><th>门槛</th><th>户籍</th></tr></thead><tbody>' +
+    '<tr><td><b>贯通培养</b><br>(中本/高本贯通)</td><td>7 年</td><td><b>本科</b></td><td>统一 380 分</td><td><b>仅限京籍</b></td></tr>' +
+    '<tr><td><b>五年制高职</b><br>(3+2)</td><td>5 年</td><td><b>大专</b></td><td>按中考分</td><td>京籍+非京籍均可</td></tr>' +
+    '</tbody></table><span class="g-warn">名字像、层级与户籍门槛不同：随迁子女能报 5 年制大专，不能报 7 年贯通本科。</span>' },
+  { t: '职业教育（中专 / 职高 / 技校 / 综合高中班）', h:
+    '<ul><li><b>中专</b>(代码 4，市教委+发改委，全市招生)</li>' +
+    '<li><b>职高</b>(代码 6，区教委)</li>' +
+    '<li><b>技校</b>(代码 5，<b>归人社部门</b>，但仍走中考统一平台填志愿)</li>' +
+    '<li><b>五年制高职/3+2</b>(代码 8，5 年→大专)</li>' +
+    '<li><b>综合高中班</b>：职普融通试点，按普高标准收费，2026 适度扩招</li></ul>' +
+    '升学出口：单考单招("三校生高考")、高职单招(专科)、五年制/3+2 直升、贯通转段升本科。' },
+  { t: '登记入学（免试登记普高）', h:
+    '2025：<b>东城、西城</b>试点；2026：<b>加平谷</b>（4 校 555 个计划）。' +
+    '<span class="g-warn">网传"海淀/朝阳登记入学"经核实没有——朝阳考生用不上。</span>' },
+  { t: '京籍 vs 非京籍（随迁子女）', h:
+    '<b>非京籍随迁子女不能报普通高中</b>（统招/校额到校/统筹/登记入学/贯通都不行），<b>只能报中职</b>（中专/职高/技校/五年制/3+2），且要满足"五条件"：居住证 + 稳定住所 + 在京职业满 3 年 + 社保满 3 年 + 本市学籍连续就读初中 3 年。' },
+  { t: '📌 2026 两条硬变化', h:
+    '<ul><li><b>贯通从"提招"移入"统一招生"批次</b>（380 分门槛不变）→ 28 志愿结构会变</li>' +
+    '<li><b>登记入学扩到平谷</b></li></ul>' +
+    '<span class="g-src">来源：北京教育考试院 bjeea.cn / 北京市教委 / 首都之窗（2025政策原文+2026已知变化）。市级统筹各年校数名额、贯通各项目精确学制、2026 完整时间表等以当年 bjeea 正式简章为准。</span>' },
+]
+const showGuide = ref(false)
+const openG = ref<number | null>(null)
+
 interface Major {
   major_code: string; major_name: string; xuezhi: string; jiashi: string
   plan_total: string | number; plan_chaoyang: string; note: string
@@ -350,6 +394,22 @@ const copyHint = ref('')
       ⚠️ 学校代码 / 专业(班)代码派生自 <b>bjeea 2025 官方招生计划册</b>（人工核对映射），<b>2026 计划 7 月初发布后须刷新</b>；高考成绩为<b>民间·非官方</b>数据，仅作补充参考，请勿据此直接决策。
     </div>
 
+    <!-- 升学渠道科普（折叠） -->
+    <section class="guide">
+      <button class="guide-head" type="button" @click="showGuide = !showGuide">
+        <span>📖 北京中考升学有哪些渠道？（提招 / 校额到校 / 统招 / 贯通 / 中职…）</span>
+        <span class="guide-toggle">{{ showGuide ? '收起 ▲' : '展开 ▼' }}</span>
+      </button>
+      <div v-show="showGuide" class="guide-body">
+        <div v-for="(g, i) in GUIDE" :key="i" class="g-item" :class="{ open: openG === i }">
+          <button class="g-q" type="button" @click="openG = openG === i ? null : i">
+            <span>{{ g.t }}</span><span class="g-chev">{{ openG === i ? '−' : '+' }}</span>
+          </button>
+          <div v-show="openG === i" class="g-a" v-html="g.h"></div>
+        </div>
+      </div>
+    </section>
+
     <!-- 输入区：全部条件常驻显示，方便反复改条件对比 -->
     <section class="card form">
       <div class="fields">
@@ -656,6 +716,37 @@ const copyHint = ref('')
   color: var(--gray-800); font-size: 12.5px; padding: 10px 12px;
   border-radius: var(--radius-sm); margin: 12px 0; }
 .card { background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow-sm); padding: 16px; }
+
+/* 升学渠道科普折叠 */
+.guide { margin-bottom: 12px; }
+.guide-head { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 8px;
+  background: var(--surface); border: 1px solid var(--gray-200); border-radius: var(--radius-sm);
+  padding: 11px 14px; font-size: 13.5px; font-weight: 600; color: var(--brand-dark); cursor: pointer;
+  text-align: left; box-shadow: var(--shadow-sm); }
+.guide-head:hover { border-color: var(--brand); }
+.guide-toggle { flex-shrink: 0; font-size: 12px; color: var(--gray-500); font-weight: 400; }
+.guide-body { margin-top: 8px; background: var(--surface); border: 1px solid var(--gray-100);
+  border-radius: var(--radius-sm); overflow: hidden; }
+.g-item { border-bottom: 1px solid var(--gray-100); }
+.g-item:last-child { border-bottom: none; }
+.g-q { width: 100%; display: flex; align-items: center; justify-content: space-between;
+  background: none; border: none; padding: 11px 14px; font-size: 13px; font-weight: 600;
+  color: var(--gray-800); cursor: pointer; text-align: left; }
+.g-q:hover { background: var(--gray-50); }
+.g-item.open .g-q { color: var(--brand-dark); }
+.g-chev { flex-shrink: 0; font-size: 16px; color: var(--gray-400); width: 18px; text-align: center; }
+.g-a { padding: 2px 14px 14px; font-size: 12.5px; color: var(--gray-700); line-height: 1.7; }
+.g-a :deep(ul) { margin: 4px 0; padding-left: 18px; }
+.g-a :deep(li) { margin: 2px 0; }
+.g-a :deep(b) { color: var(--gray-900); }
+.g-a :deep(.g-flow) { display: block; margin: 8px 0; padding: 7px 10px; background: var(--brand-50);
+  color: var(--brand-dark); border-radius: var(--radius-xs); font-weight: 700; text-align: center; }
+.g-a :deep(.g-warn) { display: block; margin-top: 6px; color: #b45309; background: var(--warning-bg);
+  padding: 6px 9px; border-radius: var(--radius-xs); }
+.g-a :deep(.g-src) { display: block; margin-top: 8px; font-size: 11px; color: var(--gray-400); }
+.g-a :deep(.g-tbl) { width: 100%; border-collapse: collapse; margin: 6px 0; font-size: 12px; }
+.g-a :deep(.g-tbl th), .g-a :deep(.g-tbl td) { border: 1px solid var(--gray-200); padding: 5px 8px; text-align: left; }
+.g-a :deep(.g-tbl th) { background: var(--gray-50); color: var(--gray-500); font-weight: 600; }
 
 /* 输入区：全部条件常驻，一行紧凑排开 */
 .form .fields { display: flex; gap: 12px; align-items: flex-end; flex-wrap: wrap; }
