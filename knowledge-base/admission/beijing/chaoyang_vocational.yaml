@@ -1,0 +1,117 @@
+district: 朝阳区
+category: 中职/职业教育(校址在朝阳区)
+count: 6
+data_warning: 中职数据：职高名单(求实/劲松/电气/安华)取自北京市教委2025具招生资格职业高中名单(朝阳区，T1，完整)；中专(对外贸易/自动化工程)取自教委2025普通中专名单(T1)并人工核址——中专名单按办学主体非按区编排，朝阳中专可能有少量遗漏；技工学校因名单简称指向不清未纳入；安华为特殊教育校。一切以学校官方与当年招生简章为准。
+coverage_note: 职高=朝阳完整4所(含特教1所)；中专=已确认2所(可能漏1-2)；技工/五年制未穷尽。
+guantong_note: 贯通培养(7年→本科,380分门槛,仅限京籍)与五年制高职(5年→大专)多为全市招生、不分区，朝阳考生均可报，详见页面顶部「升学渠道说明」，本表只列校址在朝阳的中职。
+source_T1: 北京市教委《2025年具有招生资格的高级中等学校名单》(jw.beijing.gov.cn 2025-05-26)
+collected: 2026-06 WebSearch 交叉核验
+schools:
+- name: 北京市求实职业学校
+  type: 职高
+  address: 北京市朝阳区团结湖北三条10号
+  addr_conf: high
+  addr_src: bjeea 2025统招计划册(T1)
+  specialties:
+  - 航空服务
+  - 学前教育
+  - 金融事务
+  - 商务外语
+  - 信息技术
+  boarding: true
+  admission: 中考统招
+  website: bjqszx.bjchyedu.cn
+  five_year: null
+  note: 民航/航空服务、金融事务为朝阳区重点建设专业；另有望京/机场校区，报到校区以简章为准
+  lat: 39.931877
+  lon: 116.46903
+  geo_level: 门址
+- name: 北京市劲松职业高中
+  type: 职高
+  address: 北京市朝阳区三源里街14号楼
+  addr_conf: high
+  addr_src: bjeea 2025统招计划册(T1)
+  specialties:
+  - 中餐烹饪
+  - 西餐烹饪
+  - 旅游服务与管理
+  - 酒店管理
+  - 学前教育
+  - 老年服务
+  boarding: null
+  admission: 中考统招
+  website: www.jszg.com.cn
+  five_year: null
+  note: 北京市第一所独立设校职高；烹饪为全国餐饮职教示范核心专业；一校多区(新源里/常营/劲松)
+  lat: 39.953095
+  lon: 116.455588
+  geo_level: 门址
+- name: 北京市电气工程学校
+  type: 职高
+  address: 北京市朝阳区将台路4号
+  addr_conf: high
+  addr_src: bjeea 2025统招计划册(T1)
+  specialties:
+  - 电梯运用与维修
+  - 电气运行与控制
+  - 供用电技术
+  - 楼宇自动控制
+  - 轨道交通
+  boarding: true
+  admission: 中考统招
+  website: dqgcxx.bjchyedu.cn
+  five_year: true
+  note: 国家级重点中职、国家中职改革发展示范校；电梯/电气王牌；有3+2五年制直升大专；将台/管庄/甘露园多校区
+  lat: 39.972917
+  lon: 116.487347
+  geo_level: 门址
+- name: 北京市对外贸易学校
+  type: 中专
+  address: 北京市朝阳区来广营水岸南街1号院
+  addr_conf: medium
+  addr_src: 教委2025中专名单(T1)+核址(T2)
+  specialties:
+  - 电子商务
+  - 国际商务/外贸
+  - 会计
+  - 物流
+  boarding: null
+  admission: 中考统招
+  website: www.bfts.org.cn
+  five_year: null
+  note: 公办中专，2025普通中专名单在册；专业以外贸/商科为主(特色专业待官网核实)
+  lat: 40.053782
+  lon: 116.441666
+  geo_level: 兴趣点
+- name: 北京市自动化工程学校
+  type: 中专
+  address: 北京市朝阳区科荟路甲2号
+  addr_conf: medium
+  addr_src: 教委2025中专名单(T1)+核址(T2)
+  specialties:
+  - 电气自动化/工业机器人
+  - 数控
+  - 汽车
+  - 机电
+  boarding: null
+  admission: 中考统招
+  website: www.zdhschool.com.cn
+  five_year: null
+  note: 公办中专，2025普通中专名单在册(专业列表为推断，待官网核实)
+  lat: 40.009421
+  lon: 116.370085
+  geo_level: 门址
+- name: 北京市朝阳区安华学校
+  type: 职高(特教)
+  address: 北京市朝阳区安华西里二区12号
+  addr_conf: medium
+  addr_src: 教委2025职高名单(T1)+核址(T2)
+  specialties: []
+  boarding: null
+  admission: 特殊教育
+  website: null
+  five_year: null
+  note: ⚠️特殊教育学校(面向智力障碍学生的中等职业教育)，非面向普通中考生的常规职高，择校请注意
+  lat: 39.965033
+  lon: 116.397203
+  geo_level: 住宅区

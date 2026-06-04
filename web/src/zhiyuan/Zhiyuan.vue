@@ -99,6 +99,14 @@ interface PrivSchool {
   dist: { km: number; mins: number; over_max: boolean; label: string } | null
 }
 interface PrivBlock { meta: Record<string, any>; schools: PrivSchool[] }
+interface VocSchool {
+  name: string; type: string; address: string; addr_conf: string
+  specialties: string[]; boarding: boolean | null; admission: string
+  website: string | null; five_year: boolean | null; note: string
+  lat?: number; lon?: number
+  dist: { km: number; mins: number; over_max: boolean; label: string } | null
+}
+interface VocBlock { meta: Record<string, any>; schools: VocSchool[] }
 interface Result {
   district: string; rank: number; home: string | null
   home_coord: [number, number] | null; mode: string; mode_label: string
@@ -106,6 +114,7 @@ interface Result {
   admission_source: string | null
   bands: Record<string, Card[]>; public_list: PubSchool[]
   private_schools: PrivBlock | null
+  vocational: VocBlock | null
   points: Point[]; private: Point[]
 }
 
@@ -119,7 +128,7 @@ const form = reactive({
 })
 // 学校类型图层开关（地图上显示哪些点）
 const layers = reactive({ gongban: true, coop: true, minban: false })
-const tab = ref<'map' | 'list' | 'minban' | 'intl' | 'draft'>('map')   // 地图/普高/民办/国际/草表
+const tab = ref<'map' | 'list' | 'minban' | 'intl' | 'voc' | 'draft'>('map')   // 地图/普高/民办/国际/中职/草表
 const loading = ref(false)
 const errMsg = ref('')
 const result = ref<Result | null>(null)
@@ -358,6 +367,7 @@ const minbanList = computed<PrivSchool[]>(() => privAll.value.filter(s => s.in_m
 const intlList = computed<PrivSchool[]>(() => privAll.value.filter(s => s.in_intl_list))
 // 当前展示的民办/国际清单（按激活的 Tab）
 const privView = computed<PrivSchool[]>(() => tab.value === 'intl' ? intlList.value : minbanList.value)
+const vocList = computed<VocSchool[]>(() => result.value?.vocational?.schools || [])
 function shortCampusName(name: string): string {
   // 去掉"北京市朝阳区"前缀让表格更紧凑
   return (name || '').replace(/^北京市朝阳区/, '').replace(/^北京市/, '')
@@ -460,6 +470,9 @@ const copyHint = ref('')
         </button>
         <button v-if="intlList.length" class="tab" :class="{ on: tab === 'intl' }" @click="tab = 'intl'">
           <span class="tab-ic">🌐</span>国际学校<span class="tab-cnt">{{ intlList.length }}</span>
+        </button>
+        <button v-if="vocList.length" class="tab" :class="{ on: tab === 'voc' }" @click="tab = 'voc'">
+          <span class="tab-ic">🛠️</span>中职/职教<span class="tab-cnt">{{ vocList.length }}</span>
         </button>
         <button class="tab" :class="{ on: tab === 'draft' }" @click="tab = 'draft'">
           <span class="tab-ic">📝</span>志愿草表<span class="tab-cnt">{{ filledSlots }}/{{ ZHIYUAN_SLOTS }}</span>
@@ -668,7 +681,53 @@ const copyHint = ref('')
         </p>
       </div>
 
-      <!-- TAB 5：志愿草表（统招 12×2），镜像官方填报 -->
+      <!-- TAB 6：中职 / 职教（校址在朝阳）-->
+      <div class="listwrap" v-show="tab === 'voc'" v-if="result.vocational">
+        <p class="list-note">
+          校址在<b>朝阳区</b>的中职 {{ vocList.length }} 所（中专 / 职高，含 1 所特教校）。
+          名单取自<b>北京市教委 2025 具招生资格中等职业学校名单</b>。
+          <span class="g-warn" style="display:inline-block;margin-top:6px">{{ result.vocational.meta.guantong_note }}</span>
+        </p>
+        <div class="table-scroll">
+          <table class="list-table">
+            <thead>
+              <tr><th>学校</th><th>类型</th><th>特色专业</th><th>3+2</th><th>住宿</th><th>通勤</th><th>地址</th></tr>
+            </thead>
+            <tbody>
+              <tr v-for="v in vocList" :key="v.name">
+                <td class="t-name">{{ shortCampusName(v.name) }}</td>
+                <td><span class="t-dir" :class="v.type.includes('中专') ? 'dir-国内' : 'dir-双轨'">{{ v.type }}</span></td>
+                <td class="t-curr">
+                  <span v-if="v.specialties.length">{{ v.specialties.join('·') }}</span>
+                  <span v-else class="t-no">—</span>
+                </td>
+                <td>
+                  <span v-if="v.five_year === true" class="t-yes">有</span>
+                  <span v-else class="t-no">—</span>
+                </td>
+                <td>
+                  <span v-if="v.boarding === true" class="t-yes">🛏 可住</span>
+                  <span v-else class="addr-tag" title="未核实">待核</span>
+                </td>
+                <td class="t-dist">
+                  <template v-if="v.dist">{{ v.dist.km }}km<span v-if="v.dist.over_max" class="t-over">超上限</span></template>
+                  <span v-else class="t-no">—</span>
+                </td>
+                <td class="t-addr">
+                  {{ v.address }}
+                  <span v-if="v.addr_conf !== 'high'" class="addr-tag" title="需核验">概址</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="list-tip">
+          ⚠️ {{ result.vocational.meta.coverage_note }} 数据来源：{{ result.vocational.meta.source_T1 }}。
+          中职升学出口：单考单招 / 高职单招 / 3+2 直升大专 / 贯通转段升本科（详见顶部「升学渠道说明」）。
+        </p>
+      </div>
+
+      <!-- TAB 7：志愿草表（统招 12×2），镜像官方填报 -->
       <div class="draftwrap" v-show="tab === 'draft'">
         <p class="draft-note">
           已按 <b>冲→稳→保</b> 顺序自动预填 {{ filledSlots }}/{{ ZHIYUAN_SLOTS }} 个志愿；可改学校、改专业(班，每志愿最多 2 个)。
