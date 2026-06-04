@@ -44,12 +44,24 @@ interface PubSchool {
   nearest: { campus: string; km: number; mins: number; over_max: boolean } | null
   over_max: boolean; reportable: boolean
 }
+interface PrivSchool {
+  name: string; code: string; nature: string; aliases: string[]
+  direction: string; in_minban_list: boolean; in_intl_list: boolean
+  curriculum: string[]; tuition: string | null; tuition_confidence: string
+  admission: string; admission_note: string; score_2025: number | null
+  boarding: boolean | null; phone: string | null; postcode: string | null; website: string | null
+  location: { address: string | null; confidence: string; action: string; flag?: string; lat?: number; lon?: number }
+  note: string
+  dist: { km: number; mins: number; over_max: boolean; label: string } | null
+}
+interface PrivBlock { meta: Record<string, any>; schools: PrivSchool[] }
 interface Result {
   district: string; rank: number; home: string | null
   home_coord: [number, number] | null; mode: string; mode_label: string
   max_km: number | null; boarding: boolean; interests: string[] | null
   admission_source: string | null
   bands: Record<string, Card[]>; public_list: PubSchool[]
+  private_schools: PrivBlock | null
   points: Point[]; private: Point[]
 }
 
@@ -63,7 +75,7 @@ const form = reactive({
 })
 // 学校类型图层开关（地图上显示哪些点）
 const layers = reactive({ gongban: true, coop: true, minban: false })
-const tab = ref<'map' | 'list' | 'draft'>('map')   // 地图 / 普高清单 / 志愿草表
+const tab = ref<'map' | 'list' | 'minban' | 'intl' | 'draft'>('map')   // 地图/普高/民办/国际/草表
 const loading = ref(false)
 const errMsg = ref('')
 const result = ref<Result | null>(null)
@@ -296,6 +308,17 @@ function togglePick(i: number, code: string) {
 function clearSlot(i: number) { draft.value[i] = { name: null, picks: [] } }
 const filledSlots = computed(() => draft.value.filter(s => s.name).length)
 
+/* ---------------- 民办 / 国际清单 ---------------- */
+const privAll = computed<PrivSchool[]>(() => result.value?.private_schools?.schools || [])
+const minbanList = computed<PrivSchool[]>(() => privAll.value.filter(s => s.in_minban_list))
+const intlList = computed<PrivSchool[]>(() => privAll.value.filter(s => s.in_intl_list))
+// 当前展示的民办/国际清单（按激活的 Tab）
+const privView = computed<PrivSchool[]>(() => tab.value === 'intl' ? intlList.value : minbanList.value)
+function shortCampusName(name: string): string {
+  // 去掉"北京市朝阳区"前缀让表格更紧凑
+  return (name || '').replace(/^北京市朝阳区/, '').replace(/^北京市/, '')
+}
+
 function copyDraft() {
   const res = result.value
   if (!res) return
@@ -371,6 +394,12 @@ const copyHint = ref('')
         </button>
         <button class="tab" :class="{ on: tab === 'list' }" @click="tab = 'list'">
           <span class="tab-ic">🏫</span>普高清单<span class="tab-cnt">{{ result.public_list.length }}</span>
+        </button>
+        <button v-if="minbanList.length" class="tab" :class="{ on: tab === 'minban' }" @click="tab = 'minban'">
+          <span class="tab-ic">🏛️</span>民办普高<span class="tab-cnt">{{ minbanList.length }}</span>
+        </button>
+        <button v-if="intlList.length" class="tab" :class="{ on: tab === 'intl' }" @click="tab = 'intl'">
+          <span class="tab-ic">🌐</span>国际学校<span class="tab-cnt">{{ intlList.length }}</span>
         </button>
         <button class="tab" :class="{ on: tab === 'draft' }" @click="tab = 'draft'">
           <span class="tab-ic">📝</span>志愿草表<span class="tab-cnt">{{ filledSlots }}/{{ ZHIYUAN_SLOTS }}</span>
@@ -519,7 +548,67 @@ const copyHint = ref('')
         <p class="list-tip">⚠️ 标「待核 / 概址 / ⚠️」的地址来自非权威或迁址提示，报到校区请以招生简章与学校电话确认。</p>
       </div>
 
-      <!-- TAB 3：志愿草表（统招 12×2），镜像官方填报 -->
+      <!-- TAB 3/4：民办普高 / 国际学校 清单（共用表格，按 Tab 过滤）-->
+      <div class="listwrap" v-show="tab === 'minban' || tab === 'intl'">
+        <p class="list-note" v-if="result.private_schools">
+          <template v-if="tab === 'minban'">朝阳区<b>民办</b>高中（含国内高考方向 / 双轨）{{ minbanList.length }} 所。</template>
+          <template v-else>朝阳区<b>国际 / 双语</b>高中（国际课程 / 出国方向）{{ intlList.length }} 所。</template>
+          地址/电话/住宿来自 <b>bjeea 2025 官方统招计划册</b>；<b>办学性质 / 方向 / 课程 / 学费</b>为公开网络交叉核验
+          （多为升学平台口径，约 2024–2025，<b>仅供参考</b>）；民办校无公开统一中考录取分数线，多为<b>自主招生 / 面试</b>。
+        </p>
+        <div class="table-scroll">
+          <table class="list-table">
+            <thead>
+              <tr>
+                <th>学校</th><th>方向</th><th>课程体系</th>
+                <th>学费<small>万/年·参考</small></th>
+                <th>住宿</th><th>通勤</th><th>地址</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="p in privView" :key="p.code">
+                <td class="t-name">{{ shortCampusName(p.name) }}</td>
+                <td>
+                  <span class="t-dir" :class="'dir-' + p.direction">{{ p.direction === 'unknown' ? '待核' : p.direction }}</span>
+                </td>
+                <td class="t-curr">
+                  <span v-if="p.curriculum.length">{{ p.curriculum.join('·') }}</span>
+                  <span v-else class="t-no">—</span>
+                </td>
+                <td class="t-fee">
+                  <template v-if="p.tuition">{{ p.tuition }}
+                    <span v-if="p.tuition_confidence === 'low'" class="addr-tag warn" title="可信度低，请向招生办核实">待核</span>
+                  </template>
+                  <span v-else class="t-no">—</span>
+                </td>
+                <td>
+                  <span v-if="p.boarding === true" class="t-yes">🛏 可住</span>
+                  <span v-else-if="p.boarding === false" class="t-no">不住</span>
+                  <span v-else class="addr-tag" title="未核实">待核</span>
+                </td>
+                <td class="t-dist">
+                  <template v-if="p.dist">
+                    {{ p.dist.km }}km
+                    <span v-if="p.dist.over_max" class="t-over">超上限</span>
+                  </template>
+                  <span v-else class="t-no">—</span>
+                </td>
+                <td class="t-addr">
+                  {{ p.location.address || '—' }}
+                  <span v-if="p.location.confidence !== 'high'" class="addr-tag" title="地址仅到路/片区，需核验">概址</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="list-tip">
+          ⚠️ <b>学费仅供参考</b>：随学年/班型/课程方向变动，且多为升学平台口径而非学校官网逐字，务必以学校招生办当年公布为准。
+          「双轨」校在<b>民办普高</b>与<b>国际学校</b>两个清单中都会出现（分别对应其国内 / 国际方向）。
+          数据来源：{{ result.private_schools?.meta?.source_T1 }}（{{ result.private_schools?.meta?.collected }}）。
+        </p>
+      </div>
+
+      <!-- TAB 5：志愿草表（统招 12×2），镜像官方填报 -->
       <div class="draftwrap" v-show="tab === 'draft'">
         <p class="draft-note">
           已按 <b>冲→稳→保</b> 顺序自动预填 {{ filledSlots }}/{{ ZHIYUAN_SLOTS }} 个志愿；可改学校、改专业(班，每志愿最多 2 个)。
@@ -680,8 +769,8 @@ const copyHint = ref('')
   color: #fff; font-size: 9px; font-weight: 700; line-height: 14px; text-align: center; font-style: normal; }
 
 /* 标签页：贴着内容卡片的页签条（活动页签连到内容区，强化“翻页”感）*/
-.tabs { display: flex; gap: 4px; padding: 0 4px; }
-.tab { position: relative; font-size: 14px; font-weight: 600; padding: 10px 18px 12px;
+.tabs { display: flex; flex-wrap: wrap; gap: 4px; padding: 0 4px; }
+.tab { position: relative; font-size: 14px; font-weight: 600; padding: 10px 16px 12px; white-space: nowrap;
   border: 1px solid transparent; border-bottom: none; background: transparent; color: var(--gray-500);
   border-radius: var(--radius-sm) var(--radius-sm) 0 0; cursor: pointer;
   display: flex; align-items: center; gap: 6px; transition: color .15s, background .15s; }
@@ -736,6 +825,13 @@ const copyHint = ref('')
 .t-dist { white-space: nowrap; font-size: 12.5px; }
 .t-over { color: var(--accent); font-size: 11px; margin-left: 4px; }
 .t-addr { font-size: 12px; color: var(--gray-600); line-height: 1.5; min-width: 180px; }
+.t-dir { display: inline-block; font-size: 11px; font-weight: 700; padding: 1px 7px; border-radius: var(--radius-xs); white-space: nowrap; }
+.dir-国内 { background: #d8f5e3; color: #1e8e4e; }
+.dir-双轨 { background: #e0e7ff; color: #4338ca; }
+.dir-国际 { background: #e0f2fe; color: #0369a1; }
+.dir-unknown { background: var(--gray-100); color: var(--gray-400); }
+.t-curr { font-size: 12px; color: var(--gray-600); line-height: 1.5; min-width: 150px; }
+.t-fee { font-size: 12px; color: var(--gray-800); line-height: 1.5; min-width: 140px; white-space: normal; }
 .mini-bdg { font-size: 10px; padding: 0 5px; border-radius: var(--radius-xs); margin-left: 4px; }
 .addr-tag { font-size: 10px; padding: 0 5px; border-radius: var(--radius-xs); margin-left: 4px;
   background: var(--gray-100); color: var(--gray-500); }

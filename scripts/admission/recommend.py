@@ -46,6 +46,50 @@ def load_admission_codes(district: str) -> dict:
     _ADMISSION_CODES_CACHE[district] = schools
     return schools
 
+
+_PRIVATE_CACHE: dict = {}
+
+
+def load_private_schools(district: str):
+    """民办/国际校结构化数据（<district>_private.yaml；无则 None）。"""
+    if district in _PRIVATE_CACHE:
+        return _PRIVATE_CACHE[district]
+    path = ADMISSION_DIR / f"{district}_private.yaml"
+    data = None
+    if path.exists():
+        with open(path, encoding="utf-8") as f:
+            data = yaml.safe_load(f)
+    _PRIVATE_CACHE[district] = data
+    return data
+
+
+def build_private_list(district, district_cn, home, mode, mode_label, max_km, boarding):
+    """民办/国际校清单（含到家通勤距离）。返回 {meta, schools[]} 或 None。"""
+    data = load_private_schools(district)
+    if not data:
+        return None
+    schools = data.get("schools", [])
+    dist_map = {}
+    if home:
+        pseudo = [{"name": s["name"], "campuses": [{"name": "",
+                  "lat": s["location"]["lat"], "lon": s["location"]["lon"]}]}
+                  for s in schools if s.get("location", {}).get("lat")]
+        _, dist_map = dist_mod.compute_distances(pseudo, home, district_cn, mode)
+    out = []
+    for s in schools:
+        rows = dist_map.get(s["name"], [])
+        rd = rows[0][2] if rows else None
+        km = round(rd[0] / 1000, 1) if rd else None
+        mins = round(rd[1] / 60) if rd else None
+        # 寄宿模式不卡距离；非寄宿超上限标记（与公办一致口径）
+        over = bool(max_km is not None and not boarding and km is not None and km > max_km)
+        item = dict(s)
+        item["dist"] = ({"km": km, "mins": mins, "over_max": over, "label": mode_label}
+                        if km is not None else None)
+        out.append(item)
+    meta = {k: data.get(k) for k in ("data_warning", "source_T1", "collected", "count")}
+    return {"meta": meta, "schools": out}
+
 # 分档阈值（基于 margin = (录取位次 - 学生位次) / 录取位次，正值=学生比录取线更靠前）
 SAFETY_MARGIN = 0.15   # 比录取线靠前 15%+ → 保底
 REACH_MARGIN = -0.25   # 比录取线落后 25% 以内 → 可冲（放宽自 -0.12，让冲档不至于落空）
@@ -402,6 +446,8 @@ def build_result(rank, home=None, mode="driving", max_km=None, interests=None,
             "2026 计划 7 月初发布后须刷新" if admission_codes else None),
         "bands": bands,
         "public_list": public_list,
+        "private_schools": build_private_list(district, district_name, home, mode,
+                                              mode_label, max_km, boarding),
         "points": build_public_points(buckets, dist_campus, mode_label, effective_max_km,
                                       interests, boarding_names),
         "private": build_private_points(priv, priv_dist, mode_label, effective_max_km),
