@@ -962,8 +962,8 @@ const copyHint = ref('')
    再降透明度让页面底色透上来，街道注记后退、彩色学校标记凸显，色调与界面统一。
    filter/opacity 只作用于瓦片层，markerPane 不受影响，标记仍清晰。 */
 #zmap :deep(.leaflet-tile-pane) {
-  filter: grayscale(0.85) brightness(1.5) contrast(0.82) saturate(0.6);
-  opacity: 0.97;
+  filter: grayscale(0.88) brightness(1.85) contrast(0.75) saturate(0.55);
+  opacity: 0.82;
 }
 /* 学校名常驻标签：紧凑、用界面字体，半透明白底，无箭头 */
 #zmap :deep(.map-lbl) {
