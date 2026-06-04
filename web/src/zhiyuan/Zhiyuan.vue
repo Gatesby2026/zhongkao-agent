@@ -108,6 +108,11 @@ interface VocSchool {
   dist: { km: number; mins: number; over_max: boolean; label: string } | null
 }
 interface VocBlock { meta: Record<string, any>; schools: VocSchool[] }
+interface GtProject { school: string; type: string; major: string; benke: string; plan: number; district: string }
+interface GuantongBlock {
+  overall: { year: number; xuezhi: string; min_score: number; huji: string; batch: string; total_plan: number }
+  projects: GtProject[]; data_warning: string; source_T1: string; official_url: string
+}
 interface Result {
   district: string; rank: number; home: string | null
   home_coord: [number, number] | null; mode: string; mode_label: string
@@ -116,6 +121,7 @@ interface Result {
   bands: Record<string, Card[]>; public_list: PubSchool[]
   private_schools: PrivBlock | null
   vocational: VocBlock | null
+  guantong: GuantongBlock | null
   points: Point[]; private: Point[]
 }
 
@@ -129,7 +135,7 @@ const form = reactive({
 })
 // 学校类型图层开关（地图上显示哪些点）
 const layers = reactive({ gongban: true, coop: true, minban: false })
-const tab = ref<'map' | 'list' | 'minban' | 'intl' | 'voc' | 'xed' | 'draft'>('map')   // +校额到校
+const tab = ref<'map' | 'list' | 'minban' | 'intl' | 'voc' | 'gt' | 'xed' | 'draft'>('map')   // +贯通+校额到校
 const loading = ref(false)
 const errMsg = ref('')
 const result = ref<Result | null>(null)
@@ -369,6 +375,7 @@ const intlList = computed<PrivSchool[]>(() => privAll.value.filter(s => s.in_int
 // 当前展示的民办/国际清单（按激活的 Tab）
 const privView = computed<PrivSchool[]>(() => tab.value === 'intl' ? intlList.value : minbanList.value)
 const vocList = computed<VocSchool[]>(() => result.value?.vocational?.schools || [])
+const gtBlock = computed<GuantongBlock | null>(() => result.value?.guantong || null)
 function shortCampusName(name: string): string {
   // 去掉"北京市朝阳区"前缀让表格更紧凑
   return (name || '').replace(/^北京市朝阳区/, '').replace(/^北京市/, '')
@@ -474,6 +481,9 @@ const copyHint = ref('')
         </button>
         <button v-if="vocList.length" class="tab" :class="{ on: tab === 'voc' }" @click="tab = 'voc'">
           <span class="tab-ic">🛠️</span>中职/职教<span class="tab-cnt">{{ vocList.length }}</span>
+        </button>
+        <button v-if="gtBlock" class="tab" :class="{ on: tab === 'gt' }" @click="tab = 'gt'">
+          <span class="tab-ic">🎓</span>贯通培养<span class="tab-cnt">{{ gtBlock.projects.length }}</span>
         </button>
         <button class="tab" :class="{ on: tab === 'xed' }" @click="tab = 'xed'">
           <span class="tab-ic">🎯</span>校额到校
@@ -731,7 +741,39 @@ const copyHint = ref('')
         </p>
       </div>
 
-      <!-- TAB 7：校额到校（指标分配批次）-->
+      <!-- TAB 7：贯通培养（全市招生）-->
+      <div class="listwrap" v-show="tab === 'gt'" v-if="gtBlock">
+        <p class="list-note">
+          <b>贯通培养</b>＝<b>7 年学制 → 本科</b>（中职/高职段 + 本科段，专升本性质）。{{ gtBlock.overall.year }} 年全市
+          <b>{{ gtBlock.projects.length }}</b> 个项目 / 8 所承办院校，计划合计 <b>{{ gtBlock.overall.total_plan }}</b> 人。
+          <span class="g-warn" style="display:inline-block;margin-top:6px">
+            ⚠️ 报考门槛：中考总分 ≥ <b>{{ gtBlock.overall.min_score }}</b> 分；<b>{{ gtBlock.overall.huji }}</b>；在<b>{{ gtBlock.overall.batch }}</b>录取。全市招生不分区，朝阳京籍考生均可报。
+          </span>
+        </p>
+        <div class="table-scroll">
+          <table class="list-table">
+            <thead>
+              <tr><th>承办院校</th><th>类型</th><th>中职/高职专业</th><th>对接本科（高校·专业）</th><th class="num">计划</th><th>校区(区)</th></tr>
+            </thead>
+            <tbody>
+              <tr v-for="(p, i) in gtBlock.projects" :key="i">
+                <td class="t-name">{{ shortCampusName(p.school) }}</td>
+                <td><span class="t-dir" :class="p.type === '中本贯通' ? 'dir-双轨' : 'dir-国际'">{{ p.type }}</span></td>
+                <td class="t-curr">{{ p.major }}</td>
+                <td class="t-curr">{{ p.benke }}</td>
+                <td class="num"><b>{{ p.plan }}</b></td>
+                <td class="t-dist">{{ p.district }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="list-tip">
+          数据来源：{{ gtBlock.source_T1 }}（<a :href="gtBlock.official_url" target="_blank" rel="noopener">官方通知</a>，计划合计 {{ gtBlock.overall.total_plan }} 人逐项核验一致）。
+          中本贯通=中职校+本科高校；高本贯通=高职院校+本科高校。各专业代码/对接本科以官方简章为准；2026 计划发布后须刷新。
+        </p>
+      </div>
+
+      <!-- TAB 8：校额到校（指标分配批次）-->
       <div class="listwrap" v-show="tab === 'xed'">
         <div class="xed-intro">
           <h3>🎯 校额到校（指标分配批次）</h3>

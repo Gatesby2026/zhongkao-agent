@@ -132,6 +132,23 @@ def build_vocational_list(district, district_cn, home, mode, mode_label, max_km,
                                      "source_T1", "collected", "count")}
     return {"meta": meta, "schools": out}
 
+
+_GUANTONG_CACHE: list = [None, False]
+
+
+def load_guantong():
+    """贯通培养项目（全市，非分区）。文件 beijing_guantong.yaml。"""
+    if _GUANTONG_CACHE[1]:
+        return _GUANTONG_CACHE[0]
+    path = ADMISSION_DIR / "beijing_guantong.yaml"
+    data = None
+    if path.exists():
+        with open(path, encoding="utf-8") as f:
+            data = yaml.safe_load(f)
+    _GUANTONG_CACHE[0] = data
+    _GUANTONG_CACHE[1] = True
+    return data
+
 # 分档阈值（基于 margin = (录取位次 - 学生位次) / 录取位次，正值=学生比录取线更靠前）
 SAFETY_MARGIN = 0.15   # 比录取线靠前 15%+ → 保底
 REACH_MARGIN = -0.25   # 比录取线落后 25% 以内 → 可冲（放宽自 -0.12，让冲档不至于落空）
@@ -492,6 +509,7 @@ def build_result(rank, home=None, mode="driving", max_km=None, interests=None,
                                               mode_label, max_km, boarding),
         "vocational": build_vocational_list(district, district_name, home, mode,
                                             mode_label, max_km, boarding),
+        "guantong": load_guantong(),
         "points": build_public_points(buckets, dist_campus, mode_label, effective_max_km,
                                       interests, boarding_names),
         "private": build_private_points(priv, priv_dist, mode_label, effective_max_km),
