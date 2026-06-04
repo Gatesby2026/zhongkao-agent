@@ -58,6 +58,7 @@ const GUIDE = [
 ]
 const showGuide = ref(false)
 const openG = ref<number | null>(null)
+const XED_OFFICIAL = 'https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87193.html'
 
 interface Major {
   major_code: string; major_name: string; xuezhi: string; jiashi: string
@@ -128,7 +129,7 @@ const form = reactive({
 })
 // 学校类型图层开关（地图上显示哪些点）
 const layers = reactive({ gongban: true, coop: true, minban: false })
-const tab = ref<'map' | 'list' | 'minban' | 'intl' | 'voc' | 'draft'>('map')   // 地图/普高/民办/国际/中职/草表
+const tab = ref<'map' | 'list' | 'minban' | 'intl' | 'voc' | 'xed' | 'draft'>('map')   // +校额到校
 const loading = ref(false)
 const errMsg = ref('')
 const result = ref<Result | null>(null)
@@ -474,6 +475,9 @@ const copyHint = ref('')
         <button v-if="vocList.length" class="tab" :class="{ on: tab === 'voc' }" @click="tab = 'voc'">
           <span class="tab-ic">🛠️</span>中职/职教<span class="tab-cnt">{{ vocList.length }}</span>
         </button>
+        <button class="tab" :class="{ on: tab === 'xed' }" @click="tab = 'xed'">
+          <span class="tab-ic">🎯</span>校额到校
+        </button>
         <button class="tab" :class="{ on: tab === 'draft' }" @click="tab = 'draft'">
           <span class="tab-ic">📝</span>志愿草表<span class="tab-cnt">{{ filledSlots }}/{{ ZHIYUAN_SLOTS }}</span>
         </button>
@@ -727,7 +731,31 @@ const copyHint = ref('')
         </p>
       </div>
 
-      <!-- TAB 7：志愿草表（统招 12×2），镜像官方填报 -->
+      <!-- TAB 7：校额到校（指标分配批次）-->
+      <div class="listwrap" v-show="tab === 'xed'">
+        <div class="xed-intro">
+          <h3>🎯 校额到校（指标分配批次）</h3>
+          <p>优质高中拿出名额<b>定向分配到每所初中校、校内竞争</b>录取——同校学生之间按中考总分从高到低排名，<b>不是全区竞争</b>。所以"普通初中"的孩子，反而更可能用相对低的分数进入优质高中。</p>
+          <div class="xed-rules">
+            <div class="xed-rule"><span class="xed-k">报考门槛(2025)</span>中考总分 ≥ <b>430/510</b> + 综合素质评价 ≥ <b>B</b> 等</div>
+            <div class="xed-rule"><span class="xed-k">学籍要求</span>具普高升学资格 + <b>同一初中连续三年学籍</b>的应届生</div>
+            <div class="xed-rule"><span class="xed-k">不能报</span>往届生 / 回户籍 / 外省回京 考生</div>
+            <div class="xed-rule"><span class="xed-k">录取分</span>无官方"各初中录取线"——按本校内排名事后形成，逐校逐年不同；430 仅是统一资格门槛</div>
+          </div>
+          <p class="xed-hl">📋 下方为<b>北京教育考试院官方</b>《2025 年初中学校校额到校分配名额》中的<b>朝阳区</b>页：在表中找到孩子的<b>初中校</b>那一行，对应各优质高中列的数字＝该校能分到的名额数。</p>
+        </div>
+        <div class="xed-imgs">
+          <a :href="XED_OFFICIAL" target="_blank" rel="noopener"><img src="/xed/chaoyang-xeddx-2025-p1.jpg" alt="朝阳校额到校分配名额 第1页" loading="lazy" /></a>
+          <a :href="XED_OFFICIAL" target="_blank" rel="noopener"><img src="/xed/chaoyang-xeddx-2025-p2.jpg" alt="朝阳校额到校分配名额 第2页（上半部分为朝阳）" loading="lazy" /></a>
+        </div>
+        <p class="list-tip">
+          ⚠️ 上图为官方原图（朝阳区；第 2 页上半部分为朝阳、下半为丰台）。名额数字<b>请以官方原图为准</b>，本系统不另行转录以免出错。
+          原始来源：<a :href="XED_OFFICIAL" target="_blank" rel="noopener">北京教育考试院《2025年初中学校校额到校分配名额》</a>（2025-07-01，每年 7 月初更新）。
+          录取按校内总分排名 + 志愿顺序；2026 计划发布后须刷新。
+        </p>
+      </div>
+
+      <!-- TAB 8：志愿草表（统招 12×2），镜像官方填报 -->
       <div class="draftwrap" v-show="tab === 'draft'">
         <p class="draft-note">
           已按 <b>冲→稳→保</b> 顺序自动预填 {{ filledSlots }}/{{ ZHIYUAN_SLOTS }} 个志愿；可改学校、改专业(班，每志愿最多 2 个)。
@@ -988,6 +1016,20 @@ const copyHint = ref('')
 .addr-tag.warn { background: var(--warning-bg); color: #b45309; }
 .addr-flag { margin-left: 3px; cursor: help; }
 .list-tip { font-size: 11px; color: var(--gray-400); margin-top: 10px; line-height: 1.5; }
+
+/* 校额到校 */
+.xed-intro h3 { font-size: 16px; color: var(--brand-deeper); margin: 0 0 8px; }
+.xed-intro > p { font-size: 13px; color: var(--gray-700); line-height: 1.7; margin: 0 0 10px; }
+.xed-rules { display: flex; flex-direction: column; gap: 6px; margin-bottom: 10px; }
+.xed-rule { font-size: 12.5px; color: var(--gray-700); line-height: 1.5; background: var(--gray-50);
+  border-radius: var(--radius-xs); padding: 7px 10px; }
+.xed-k { display: inline-block; min-width: 92px; font-weight: 700; color: var(--brand-dark); }
+.xed-hl { font-size: 12.5px; color: var(--brand-dark); background: var(--brand-50);
+  border-radius: var(--radius-xs); padding: 9px 11px; line-height: 1.6; margin: 0 0 12px; }
+.xed-imgs { display: flex; flex-direction: column; gap: 10px; }
+.xed-imgs img { width: 100%; height: auto; border: 1px solid var(--gray-200); border-radius: var(--radius-xs);
+  display: block; }
+.list-tip a { color: var(--brand-dark); }
 
 /* 志愿草表 */
 .draftwrap { background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow-sm); padding: 16px; }
