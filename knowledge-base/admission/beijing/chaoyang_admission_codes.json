@@ -1,512 +1,494 @@
 {
-  "source": "派生自 2025_tongzhao_plan.json（bjeea 2025 官方计划 OCR）",
-  "warning": "2025 代码/计划；2026 计划 7 月初发布后须刷新。专业数据为官方，name→code 映射经人工核对(CODE_MAP)。",
-  "schools": {
-    "北京中学": {
-      "school_code": "205001",
-      "plan_school_name": "北京中学",
-      "majors": [
-        {
-          "major_code": "01",
-          "major_name": "普通班",
-          "xuezhi": "",
-          "jiashi": "",
-          "plan_total": "122",
-          "plan_chaoyang": "122 住: 男60 女60",
-          "note": ""
-        },
-        {
-          "major_code": "02",
-          "major_name": "中美高中课程合 作项目班",
-          "xuezhi": "",
-          "jiashi": "是",
-          "plan_total": "100",
-          "plan_chaoyang": "72",
-          "note": "02专业:100000元/学年; 考生入学后可申请住宿。"
-        }
-      ]
+ "source": "派生自 2025_tongzhao_plan.json（bjeea 2025 官方计划 OCR）",
+ "warning": "2025 代码/计划；2026 计划 7 月初发布后须刷新。专业数据为官方，name→code 映射经人工核对(CODE_MAP)。",
+ "schools": {
+  "北京中学": {
+   "school_code": "205001",
+   "plan_school_name": "北京中学",
+   "majors": [
+    {
+     "major_code": "01",
+     "major_name": "普通班",
+     "xuezhi": "",
+     "jiashi": "",
+     "plan_total": "122",
+     "plan_chaoyang": "122 住: 男60 女60",
+     "note": ""
     },
-    "中国传媒大学附属中学": {
-      "school_code": "205019",
-      "plan_school_name": "中国传媒大学附属中学",
-      "majors": [
-        {
-          "major_code": "01",
-          "major_name": "普通班",
-          "xuezhi": "三",
-          "jiashi": "",
-          "plan_total": "80",
-          "plan_chaoyang": "80",
-          "note": "因本校高中办学的硬件建设 尚未完成,高一年级在北京 中学借址上课。"
-        }
-      ]
-    },
-    "北京市第八十中学": {
-      "school_code": "105001",
-      "plan_school_name": "北京市第八十中学",
-      "majors": [
-        {
-          "major_code": "01",
-          "major_name": "普通班",
-          "xuezhi": "",
-          "jiashi": "",
-          "plan_total": "164",
-          "plan_chaoyang": "164",
-          "note": ""
-        },
-        {
-          "major_code": "02",
-          "major_name": "科学创新实验班",
-          "xuezhi": "",
-          "jiashi": "",
-          "plan_total": "30",
-          "plan_chaoyang": "30 住15",
-          "note": ""
-        },
-        {
-          "major_code": "03",
-          "major_name": "中英项目班",
-          "xuezhi": "",
-          "jiashi": "是",
-          "plan_total": "40",
-          "plan_chaoyang": "35",
-          "note": "03、04专业:100000元/学年: 加试时间:7月10日。"
-        },
-        {
-          "major_code": "04",
-          "major_name": "中美项目班",
-          "xuezhi": "",
-          "jiashi": "是",
-          "plan_total": "60",
-          "plan_chaoyang": "56",
-          "note": ""
-        }
-      ]
-    },
-    "人大附中朝阳学校": {
-      "school_code": "205002",
-      "plan_school_name": "中国人民大学附属中学朝阳学校",
-      "majors": [
-        {
-          "major_code": "01",
-          "major_name": "普通班",
-          "xuezhi": "三",
-          "jiashi": "",
-          "plan_total": "239",
-          "plan_chaoyang": "239 住90",
-          "note": ""
-        }
-      ]
-    },
-    "清华附中朝阳学校": {
-      "school_code": "205009",
-      "plan_school_name": "清华大学附属中学朝阳学校",
-      "majors": [
-        {
-          "major_code": "01",
-          "major_name": "普通班",
-          "xuezhi": "",
-          "jiashi": "",
-          "plan_total": "208",
-          "plan_chaoyang": "208 住: 男50 女60",
-          "note": ""
-        },
-        {
-          "major_code": "02",
-          "major_name": "普通班",
-          "xuezhi": "",
-          "jiashi": "",
-          "plan_total": "8",
-          "plan_chaoyang": "",
-          "note": ""
-        }
-      ]
-    },
-    "八十中睿德分校": {
-      "school_code": "205020",
-      "plan_school_name": "北京市第八十中学睿德分校",
-      "majors": [
-        {
-          "major_code": "01",
-          "major_name": "普通班",
-          "xuezhi": "三",
-          "jiashi": "",
-          "plan_total": "102",
-          "plan_chaoyang": "102 住20",
-          "note": "因本校高中办学的硬件建设 尚未完成,高一年级在北京 市第八十中学借址上课。"
-        }
-      ]
-    },
-    "朝阳外国语学校": {
-      "school_code": "205012",
-      "plan_school_name": "北京市朝阳外国语学校",
-      "majors": [
-        {
-          "major_code": "01",
-          "major_name": "普通班",
-          "xuezhi": "三",
-          "jiashi": "",
-          "plan_total": "82",
-          "plan_chaoyang": "82",
-          "note": ""
-        }
-      ]
-    },
-    "清华附中望京学校": {
-      "school_code": "205010",
-      "plan_school_name": "清华大学附属中学望京学校",
-      "majors": [
-        {
-          "major_code": "01",
-          "major_name": "普通班",
-          "xuezhi": "三",
-          "jiashi": "",
-          "plan_total": "285",
-          "plan_chaoyang": "285",
-          "note": ""
-        }
-      ]
-    },
-    "陈经纶中学": {
-      "school_code": "105002",
-      "plan_school_name": "北京市陈经纶中学",
-      "majors": [
-        {
-          "major_code": "01",
-          "major_name": "普通班",
-          "xuezhi": "",
-          "jiashi": "",
-          "plan_total": "205",
-          "plan_chaoyang": "205 住: 男15 女15",
-          "note": ""
-        },
-        {
-          "major_code": "02",
-          "major_name": "经纶科技人才班",
-          "xuezhi": "",
-          "jiashi": "",
-          "plan_total": "30",
-          "plan_chaoyang": "30 住: 男10 女10",
-          "note": ""
-        }
-      ]
-    },
-    "北京中学科技分校": {
-      "school_code": "205016",
-      "plan_school_name": "北京中学科技分校",
-      "majors": [
-        {
-          "major_code": "01",
-          "major_name": "普通班",
-          "xuezhi": "三",
-          "jiashi": "",
-          "plan_total": "80",
-          "plan_chaoyang": "80",
-          "note": ""
-        }
-      ]
-    },
-    "清华附中广华学校": {
-      "school_code": "205017",
-      "plan_school_name": "清华大学附属中学广华学校",
-      "majors": [
-        {
-          "major_code": "01",
-          "major_name": "普通班",
-          "xuezhi": "",
-          "jiashi": "",
-          "plan_total": "143",
-          "plan_chaoyang": "143 住: 男30 女30",
-          "note": ""
-        },
-        {
-          "major_code": "02",
-          "major_name": "中英项目班",
-          "xuezhi": "",
-          "jiashi": "是",
-          "plan_total": "60",
-          "plan_chaoyang": "42 (住)",
-          "note": "02专业120000元/学年。"
-        }
-      ]
-    },
-    "首师大附中朝阳学校": {
-      "school_code": "205018",
-      "plan_school_name": "首都师范大学附属中学朝阳学校",
-      "majors": [
-        {
-          "major_code": "01",
-          "major_name": "普通班",
-          "xuezhi": "三",
-          "jiashi": "",
-          "plan_total": "76",
-          "plan_chaoyang": "76",
-          "note": "考生入学后可申请住宿。"
-        }
-      ]
-    },
-    "二中朝阳学校": {
-      "school_code": "205005",
-      "plan_school_name": "北京市第二中学朝阳学校",
-      "majors": [
-        {
-          "major_code": "01",
-          "major_name": "普通班",
-          "xuezhi": "三",
-          "jiashi": "",
-          "plan_total": "256",
-          "plan_chaoyang": "256",
-          "note": ""
-        }
-      ]
-    },
-    "北京工业大学附属中学": {
-      "school_code": "105007",
-      "plan_school_name": "北京工业大学附属中学",
-      "majors": [
-        {
-          "major_code": "01",
-          "major_name": "普通班",
-          "xuezhi": "三",
-          "jiashi": "",
-          "plan_total": "332",
-          "plan_chaoyang": "324 住50",
-          "note": "大学子女8人。"
-        }
-      ]
-    },
-    "日坛中学": {
-      "school_code": "105003",
-      "plan_school_name": "北京市日坛中学",
-      "majors": [
-        {
-          "major_code": "01",
-          "major_name": "普通班",
-          "xuezhi": "三",
-          "jiashi": "",
-          "plan_total": "349",
-          "plan_chaoyang": "349",
-          "note": ""
-        }
-      ]
-    },
-    "和平街一中": {
-      "school_code": "105004",
-      "plan_school_name": "北京市和平街第一中学",
-      "majors": [
-        {
-          "major_code": "01",
-          "major_name": "普通班",
-          "xuezhi": "",
-          "jiashi": "",
-          "plan_total": "125",
-          "plan_chaoyang": "125",
-          "note": ""
-        },
-        {
-          "major_code": "02",
-          "major_name": "普通班",
-          "xuezhi": "",
-          "jiashi": "",
-          "plan_total": "117",
-          "plan_chaoyang": "117 住: 男30 女30",
-          "note": ""
-        }
-      ],
-      "campus_major": "01"
-    },
-    "莲葩园中学": {
-      "school_code": "105004",
-      "plan_school_name": "北京市和平街第一中学",
-      "majors": [
-        {
-          "major_code": "01",
-          "major_name": "普通班",
-          "xuezhi": "",
-          "jiashi": "",
-          "plan_total": "125",
-          "plan_chaoyang": "125",
-          "note": ""
-        },
-        {
-          "major_code": "02",
-          "major_name": "普通班",
-          "xuezhi": "",
-          "jiashi": "",
-          "plan_total": "117",
-          "plan_chaoyang": "117 住: 男30 女30",
-          "note": ""
-        }
-      ],
-      "campus_major": "02"
-    },
-    "对外经济贸易大学附属中学": {
-      "school_code": "105005",
-      "plan_school_name": "对外经济贸易大学附属中学",
-      "majors": [
-        {
-          "major_code": "01",
-          "major_name": "普通班",
-          "xuezhi": "三",
-          "jiashi": "",
-          "plan_total": "295",
-          "plan_chaoyang": "285 住: 男24 女28",
-          "note": "大学子女10人。"
-        }
-      ]
-    },
-    "东北师大附中朝阳学校": {
-      "school_code": "205008",
-      "plan_school_name": "东北师范大学附属中学朝阳学校",
-      "majors": [
-        {
-          "major_code": "01",
-          "major_name": "普通班",
-          "xuezhi": "三",
-          "jiashi": "",
-          "plan_total": "280",
-          "plan_chaoyang": "280 (住)",
-          "note": ""
-        }
-      ]
-    },
-    "中科院附属实验学校": {
-      "school_code": "205004",
-      "plan_school_name": "中国科学院附属实验学校",
-      "majors": [
-        {
-          "major_code": "01",
-          "major_name": "普通班",
-          "xuezhi": "三",
-          "jiashi": "",
-          "plan_total": "125",
-          "plan_chaoyang": "125 住: 男10 女10",
-          "note": ""
-        }
-      ]
-    },
-    "三里屯一中": {
-      "school_code": "205007",
-      "plan_school_name": "北京市三里屯一中",
-      "majors": [
-        {
-          "major_code": "01",
-          "major_name": "普通班",
-          "xuezhi": "三",
-          "jiashi": "",
-          "plan_total": "270",
-          "plan_chaoyang": "270",
-          "note": ""
-        }
-      ]
-    },
-    "北京十七中": {
-      "school_code": "105006",
-      "plan_school_name": "北京市第十七中学",
-      "majors": [
-        {
-          "major_code": "01",
-          "major_name": "普通班",
-          "xuezhi": "",
-          "jiashi": "",
-          "plan_total": "274",
-          "plan_chaoyang": "274 住50",
-          "note": ""
-        },
-        {
-          "major_code": "02",
-          "major_name": "传媒特色班",
-          "xuezhi": "",
-          "jiashi": "",
-          "plan_total": "40",
-          "plan_chaoyang": "40 住30",
-          "note": ""
-        }
-      ]
-    },
-    "北京化工大学附属中学": {
-      "school_code": "205011",
-      "plan_school_name": "北京化工大学附属中学",
-      "majors": [
-        {
-          "major_code": "01",
-          "major_name": "普通班",
-          "xuezhi": "三",
-          "jiashi": "",
-          "plan_total": "180",
-          "plan_chaoyang": "180",
-          "note": ""
-        }
-      ]
-    },
-    "东方德才学校": {
-      "school_code": "205006",
-      "plan_school_name": "北京市东方德才学校",
-      "majors": [
-        {
-          "major_code": "01",
-          "major_name": "普通班",
-          "xuezhi": "三",
-          "jiashi": "",
-          "plan_total": "304",
-          "plan_chaoyang": "304",
-          "note": ""
-        }
-      ]
-    },
-    "北京第二外国语学院附属中学": {
-      "school_code": "205014",
-      "plan_school_name": "北京第二外国语学院附属中学",
-      "majors": [
-        {
-          "major_code": "01",
-          "major_name": "普通班",
-          "xuezhi": "",
-          "jiashi": "",
-          "plan_total": "240",
-          "plan_chaoyang": "240",
-          "note": ""
-        },
-        {
-          "major_code": "02",
-          "major_name": "外语特色课程实 验班",
-          "xuezhi": "",
-          "jiashi": "",
-          "plan_total": "30",
-          "plan_chaoyang": "30",
-          "note": ""
-        }
-      ]
-    },
-    "陈经纶中学团结湖分校": {
-      "school_code": "205015",
-      "plan_school_name": "北京市陈经纶中学团结湖分校",
-      "majors": [
-        {
-          "major_code": "01",
-          "major_name": "普通班",
-          "xuezhi": "三",
-          "jiashi": "",
-          "plan_total": "305",
-          "plan_chaoyang": "305",
-          "note": ""
-        }
-      ]
-    },
-    "汇文中学垂杨柳分校": {
-      "school_code": "205003",
-      "plan_school_name": "北京汇文中学朝阳垂杨柳分校",
-      "majors": [
-        {
-          "major_code": "01",
-          "major_name": "普通班",
-          "xuezhi": "三",
-          "jiashi": "",
-          "plan_total": "270",
-          "plan_chaoyang": "270",
-          "note": ""
-        }
-      ]
+    {
+     "major_code": "02",
+     "major_name": "中美高中课程合 作项目班",
+     "xuezhi": "",
+     "jiashi": "是",
+     "plan_total": "100",
+     "plan_chaoyang": "72",
+     "note": "02专业:100000元/学年; 考生入学后可申请住宿。"
     }
+   ]
+  },
+  "中国传媒大学附属中学": {
+   "school_code": "205019",
+   "plan_school_name": "中国传媒大学附属中学",
+   "majors": [
+    {
+     "major_code": "01",
+     "major_name": "普通班",
+     "xuezhi": "三",
+     "jiashi": "",
+     "plan_total": "80",
+     "plan_chaoyang": "80",
+     "note": "因本校高中办学的硬件建设 尚未完成,高一年级在北京 中学借址上课。"
+    }
+   ]
+  },
+  "北京市第八十中学": {
+   "school_code": "105001",
+   "plan_school_name": "北京市第八十中学",
+   "majors": [
+    {
+     "major_code": "01",
+     "major_name": "普通班",
+     "xuezhi": "",
+     "jiashi": "",
+     "plan_total": "164",
+     "plan_chaoyang": "164",
+     "note": ""
+    },
+    {
+     "major_code": "02",
+     "major_name": "科学创新实验班",
+     "xuezhi": "",
+     "jiashi": "",
+     "plan_total": "30",
+     "plan_chaoyang": "30 住15",
+     "note": ""
+    },
+    {
+     "major_code": "03",
+     "major_name": "中英项目班",
+     "xuezhi": "",
+     "jiashi": "是",
+     "plan_total": "40",
+     "plan_chaoyang": "35",
+     "note": "03、04专业:100000元/学年: 加试时间:7月10日。"
+    },
+    {
+     "major_code": "04",
+     "major_name": "中美项目班",
+     "xuezhi": "",
+     "jiashi": "是",
+     "plan_total": "60",
+     "plan_chaoyang": "56",
+     "note": ""
+    }
+   ]
+  },
+  "人大附中朝阳学校": {
+   "school_code": "205002",
+   "plan_school_name": "中国人民大学附属中学朝阳学校",
+   "majors": [
+    {
+     "major_code": "01",
+     "major_name": "普通班",
+     "xuezhi": "三",
+     "jiashi": "",
+     "plan_total": "239",
+     "plan_chaoyang": "239 住90",
+     "note": ""
+    }
+   ]
+  },
+  "清华附中朝阳学校": {
+   "school_code": "205009",
+   "plan_school_name": "清华大学附属中学朝阳学校",
+   "majors": [
+    {
+     "major_code": "01",
+     "major_name": "普通班",
+     "xuezhi": "",
+     "jiashi": "",
+     "plan_total": "208",
+     "plan_chaoyang": "208 住: 男50 女60",
+     "note": ""
+    },
+    {
+     "major_code": "02",
+     "major_name": "普通班",
+     "xuezhi": "",
+     "jiashi": "",
+     "plan_total": "8",
+     "plan_chaoyang": "",
+     "note": ""
+    }
+   ]
+  },
+  "八十中睿德分校": {
+   "school_code": "205020",
+   "plan_school_name": "北京市第八十中学睿德分校",
+   "majors": [
+    {
+     "major_code": "01",
+     "major_name": "普通班",
+     "xuezhi": "三",
+     "jiashi": "",
+     "plan_total": "102",
+     "plan_chaoyang": "102 住20",
+     "note": "因本校高中办学的硬件建设 尚未完成,高一年级在北京 市第八十中学借址上课。"
+    }
+   ]
+  },
+  "朝阳外国语学校": {
+   "school_code": "205012",
+   "plan_school_name": "北京市朝阳外国语学校",
+   "majors": [
+    {
+     "major_code": "01",
+     "major_name": "普通班",
+     "xuezhi": "三",
+     "jiashi": "",
+     "plan_total": "82",
+     "plan_chaoyang": "82",
+     "note": ""
+    }
+   ]
+  },
+  "清华附中望京学校": {
+   "school_code": "205010",
+   "plan_school_name": "清华大学附属中学望京学校",
+   "majors": [
+    {
+     "major_code": "01",
+     "major_name": "普通班",
+     "xuezhi": "三",
+     "jiashi": "",
+     "plan_total": "285",
+     "plan_chaoyang": "285",
+     "note": ""
+    }
+   ]
+  },
+  "陈经纶中学": {
+   "school_code": "105002",
+   "plan_school_name": "北京市陈经纶中学",
+   "majors": [
+    {
+     "major_code": "01",
+     "major_name": "普通班",
+     "xuezhi": "",
+     "jiashi": "",
+     "plan_total": "205",
+     "plan_chaoyang": "205 住: 男15 女15",
+     "note": ""
+    },
+    {
+     "major_code": "02",
+     "major_name": "经纶科技人才班",
+     "xuezhi": "",
+     "jiashi": "",
+     "plan_total": "30",
+     "plan_chaoyang": "30 住: 男10 女10",
+     "note": ""
+    }
+   ]
+  },
+  "北京中学科技分校": {
+   "school_code": "205016",
+   "plan_school_name": "北京中学科技分校",
+   "majors": [
+    {
+     "major_code": "01",
+     "major_name": "普通班",
+     "xuezhi": "三",
+     "jiashi": "",
+     "plan_total": "80",
+     "plan_chaoyang": "80",
+     "note": ""
+    }
+   ]
+  },
+  "清华附中广华学校": {
+   "school_code": "205017",
+   "plan_school_name": "清华大学附属中学广华学校",
+   "majors": [
+    {
+     "major_code": "01",
+     "major_name": "普通班",
+     "xuezhi": "",
+     "jiashi": "",
+     "plan_total": "143",
+     "plan_chaoyang": "143 住: 男30 女30",
+     "note": ""
+    },
+    {
+     "major_code": "02",
+     "major_name": "中英项目班",
+     "xuezhi": "",
+     "jiashi": "是",
+     "plan_total": "60",
+     "plan_chaoyang": "42 (住)",
+     "note": "02专业120000元/学年。"
+    }
+   ]
+  },
+  "首师大附中朝阳学校": {
+   "school_code": "205018",
+   "plan_school_name": "首都师范大学附属中学朝阳学校",
+   "majors": [
+    {
+     "major_code": "01",
+     "major_name": "普通班",
+     "xuezhi": "三",
+     "jiashi": "",
+     "plan_total": "76",
+     "plan_chaoyang": "76",
+     "note": "考生入学后可申请住宿。"
+    }
+   ]
+  },
+  "二中朝阳学校": {
+   "school_code": "205005",
+   "plan_school_name": "北京市第二中学朝阳学校",
+   "majors": [
+    {
+     "major_code": "01",
+     "major_name": "普通班",
+     "xuezhi": "三",
+     "jiashi": "",
+     "plan_total": "256",
+     "plan_chaoyang": "256",
+     "note": ""
+    }
+   ]
+  },
+  "北京工业大学附属中学": {
+   "school_code": "105007",
+   "plan_school_name": "北京工业大学附属中学",
+   "majors": [
+    {
+     "major_code": "01",
+     "major_name": "普通班",
+     "xuezhi": "三",
+     "jiashi": "",
+     "plan_total": "332",
+     "plan_chaoyang": "324 住50",
+     "note": "大学子女8人。"
+    }
+   ]
+  },
+  "日坛中学": {
+   "school_code": "105003",
+   "plan_school_name": "北京市日坛中学",
+   "majors": [
+    {
+     "major_code": "01",
+     "major_name": "普通班",
+     "xuezhi": "三",
+     "jiashi": "",
+     "plan_total": "349",
+     "plan_chaoyang": "349",
+     "note": ""
+    }
+   ]
+  },
+  "和平街一中": {
+   "school_code": "105004",
+   "plan_school_name": "北京市和平街第一中学",
+   "majors": [
+    {
+     "major_code": "01",
+     "major_name": "普通班",
+     "xuezhi": "",
+     "jiashi": "",
+     "plan_total": "125",
+     "plan_chaoyang": "125",
+     "note": ""
+    }
+   ],
+   "campus_major": "01"
+  },
+  "对外经济贸易大学附属中学": {
+   "school_code": "105005",
+   "plan_school_name": "对外经济贸易大学附属中学",
+   "majors": [
+    {
+     "major_code": "01",
+     "major_name": "普通班",
+     "xuezhi": "三",
+     "jiashi": "",
+     "plan_total": "295",
+     "plan_chaoyang": "285 住: 男24 女28",
+     "note": "大学子女10人。"
+    }
+   ]
+  },
+  "东北师大附中朝阳学校": {
+   "school_code": "205008",
+   "plan_school_name": "东北师范大学附属中学朝阳学校",
+   "majors": [
+    {
+     "major_code": "01",
+     "major_name": "普通班",
+     "xuezhi": "三",
+     "jiashi": "",
+     "plan_total": "280",
+     "plan_chaoyang": "280 (住)",
+     "note": ""
+    }
+   ]
+  },
+  "中科院附属实验学校": {
+   "school_code": "205004",
+   "plan_school_name": "中国科学院附属实验学校",
+   "majors": [
+    {
+     "major_code": "01",
+     "major_name": "普通班",
+     "xuezhi": "三",
+     "jiashi": "",
+     "plan_total": "125",
+     "plan_chaoyang": "125 住: 男10 女10",
+     "note": ""
+    }
+   ]
+  },
+  "三里屯一中": {
+   "school_code": "205007",
+   "plan_school_name": "北京市三里屯一中",
+   "majors": [
+    {
+     "major_code": "01",
+     "major_name": "普通班",
+     "xuezhi": "三",
+     "jiashi": "",
+     "plan_total": "270",
+     "plan_chaoyang": "270",
+     "note": ""
+    }
+   ]
+  },
+  "北京十七中": {
+   "school_code": "105006",
+   "plan_school_name": "北京市第十七中学",
+   "majors": [
+    {
+     "major_code": "01",
+     "major_name": "普通班",
+     "xuezhi": "",
+     "jiashi": "",
+     "plan_total": "274",
+     "plan_chaoyang": "274 住50",
+     "note": ""
+    },
+    {
+     "major_code": "02",
+     "major_name": "传媒特色班",
+     "xuezhi": "",
+     "jiashi": "",
+     "plan_total": "40",
+     "plan_chaoyang": "40 住30",
+     "note": ""
+    }
+   ]
+  },
+  "北京化工大学附属中学": {
+   "school_code": "205011",
+   "plan_school_name": "北京化工大学附属中学",
+   "majors": [
+    {
+     "major_code": "01",
+     "major_name": "普通班",
+     "xuezhi": "三",
+     "jiashi": "",
+     "plan_total": "180",
+     "plan_chaoyang": "180",
+     "note": ""
+    }
+   ]
+  },
+  "东方德才学校": {
+   "school_code": "205006",
+   "plan_school_name": "北京市东方德才学校",
+   "majors": [
+    {
+     "major_code": "01",
+     "major_name": "普通班",
+     "xuezhi": "三",
+     "jiashi": "",
+     "plan_total": "304",
+     "plan_chaoyang": "304",
+     "note": ""
+    }
+   ]
+  },
+  "北京第二外国语学院附属中学": {
+   "school_code": "205014",
+   "plan_school_name": "北京第二外国语学院附属中学",
+   "majors": [
+    {
+     "major_code": "01",
+     "major_name": "普通班",
+     "xuezhi": "",
+     "jiashi": "",
+     "plan_total": "240",
+     "plan_chaoyang": "240",
+     "note": ""
+    },
+    {
+     "major_code": "02",
+     "major_name": "外语特色课程实 验班",
+     "xuezhi": "",
+     "jiashi": "",
+     "plan_total": "30",
+     "plan_chaoyang": "30",
+     "note": ""
+    }
+   ]
+  },
+  "陈经纶中学团结湖分校": {
+   "school_code": "205015",
+   "plan_school_name": "北京市陈经纶中学团结湖分校",
+   "majors": [
+    {
+     "major_code": "01",
+     "major_name": "普通班",
+     "xuezhi": "三",
+     "jiashi": "",
+     "plan_total": "305",
+     "plan_chaoyang": "305",
+     "note": ""
+    }
+   ]
+  },
+  "汇文中学垂杨柳分校": {
+   "school_code": "205003",
+   "plan_school_name": "北京汇文中学朝阳垂杨柳分校",
+   "majors": [
+    {
+     "major_code": "01",
+     "major_name": "普通班",
+     "xuezhi": "三",
+     "jiashi": "",
+     "plan_total": "270",
+     "plan_chaoyang": "270",
+     "note": ""
+    }
+   ]
+  },
+  "和平街一中（北苑莲葩园校区）": {
+   "school_code": "105004",
+   "plan_school_name": "北京市和平街第一中学",
+   "majors": [
+    {
+     "major_code": "02",
+     "major_name": "普通班",
+     "xuezhi": "",
+     "jiashi": "",
+     "plan_total": "117",
+     "plan_chaoyang": "117 住: 男30 女30",
+     "note": ""
+    }
+   ],
+   "campus_major": "02"
   }
+ }
 }

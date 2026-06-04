@@ -300,40 +300,6 @@
           "addr_confidence": "high",
           "approx": false,
           "flags": []
-        },
-        {
-          "campus": "北苑莲葩园校区（约103统招+校额到校53，可住宿）",
-          "address": "北京市朝阳区北苑家园莲葩园1号",
-          "lat": 40.046475,
-          "lon": 116.42259,
-          "source": "amap/geocode",
-          "level": "门址",
-          "formatted": "北京市朝阳区北苑家园(公交站)莲葩园1号",
-          "name_xcheck_km": 9.18,
-          "geo_status": "ok",
-          "addr_confidence": "high",
-          "approx": false,
-          "flags": [
-            "name_poi_far(9.2km,POI=北京市和平街第一中学(和平街校区))"
-          ]
-        }
-      ]
-    },
-    "莲葩园中学": {
-      "campuses": [
-        {
-          "campus": "即\"和平街一中北苑莲葩园校区\"（非独立办学）",
-          "address": "北京市朝阳区北苑家园莲葩园1号",
-          "lat": 40.046475,
-          "lon": 116.42259,
-          "source": "amap/geocode",
-          "level": "门址",
-          "formatted": "北京市朝阳区北苑家园(公交站)莲葩园1号",
-          "name_xcheck_km": 0.0,
-          "geo_status": "ok",
-          "addr_confidence": "high",
-          "approx": false,
-          "flags": []
         }
       ]
     },
@@ -513,6 +479,24 @@
           "formatted": "北京市朝阳区松榆里",
           "name_xcheck_km": 0.23,
           "geo_status": "coarse",
+          "addr_confidence": "high",
+          "approx": false,
+          "flags": []
+        }
+      ]
+    },
+    "和平街一中（北苑莲葩园校区）": {
+      "campuses": [
+        {
+          "campus": "北苑莲葩园高中校区（和平街一中02专业·住宿）",
+          "address": "北京市朝阳区北苑家园莲葩园1号",
+          "lat": 40.046475,
+          "lon": 116.42259,
+          "source": "amap/geocode",
+          "level": "门址",
+          "formatted": "北京市朝阳区北苑家园(公交站)莲葩园1号",
+          "name_xcheck_km": 0.0,
+          "geo_status": "ok",
           "addr_confidence": "high",
           "approx": false,
           "flags": []
