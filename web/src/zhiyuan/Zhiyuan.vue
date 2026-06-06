@@ -369,7 +369,7 @@ function renderMarkers() {
 
   // 市级统筹（默认关）—— 26 校按研判着色，点击走右侧详情
   tcLayer = L.layerGroup()
-  const tcColor: Record<string, string> = { 'tj-wen': '#2ecc71', 'tj-chong': '#e74c3c', 'tj-no': '#95a5a6', 'tj-unk': '#2980b9' }
+  const tcColor: Record<string, string> = { 'tj-wen': '#2ecc71', 'tj-chong': '#e74c3c', 'tj-bo': '#e67e22', 'tj-no': '#95a5a6', 'tj-unk': '#2980b9' }
   const tcAll = [...(tongchou.value?.tongchou_er || []), ...(tongchou.value?.tongchou_yi || [])]
   tcAll.forEach((s: any) => {
     if (!s.lat || !s.lon || !s.faces_chaoyang) return
@@ -382,7 +382,7 @@ function renderMarkers() {
       dist: '距离未知', hist: '', style: '', note: '', reason: '', tags: [], gaokao: '', matched: [],
     }
     // 参照普高：可冲/稳 用大 pin（带研判档），够不上/待核 用小图标
-    const big = j.cls === 'tj-wen' || j.cls === 'tj-chong'
+    const big = j.cls === 'tj-wen' || j.cls === 'tj-chong' || j.cls === 'tj-bo'
     const icon = big ? pin(color, j.label) : smallIcon(color)
     L.marker([s.lat, s.lon], { icon }).addTo(tcLayer)
       .on('click', () => { selectPoint(tp); selectedTc.value = { ...s, _tier: tier } })
@@ -527,9 +527,9 @@ const tcEr = computed<any[]>(() => (tongchou.value?.tongchou_er || [])
   .filter((x: any) => x.faces_chaoyang).sort((a: any, b: any) => (b.quota_chaoyang || 0) - (a.quota_chaoyang || 0)))
 // 你孩子区排→估中考分（后端按本区一分一段插值）
 const estScore = computed<number | null>(() => result.value ? (result.value as any).est_score : null)
-// 统筹校研判：估分 vs 该校统招线，套普高式档位（够不上/冲/稳）。
-// 线优先用 2025 双源确认(score_2025_tongzhao)，缺则退用历年参考(score_ref，单源/历史，标"历年线")。
-// 统招线非统筹线、统筹线通常更低 → 偏保守（"冲"档放宽到线下 10 分）。
+// 统筹校研判：估分 vs 该校统招线。因统筹实际线通常比统招线低（最多约20-30分），
+// 故可够范围按"统招线下"放宽：稳/冲/搏(有机会)/够不上。
+// 线优先用 2025 双源确认(score_2025_tongzhao)，缺则退用历年参考(score_ref，标"历年线")。
 function tcJudge(s: any): { label: string; cls: string; d: number | null; line: number | null; ref: boolean } {
   const conf = typeof s.score_2025_tongzhao === 'number' ? s.score_2025_tongzhao : null
   const ref = typeof s.score_ref === 'number' ? s.score_ref : null
@@ -537,7 +537,10 @@ function tcJudge(s: any): { label: string; cls: string; d: number | null; line: 
   const isRef = conf == null && ref != null
   if (line == null || estScore.value == null) return { label: '线待核', cls: 'tj-unk', d: null, line: null, ref: false }
   const d = Math.round(estScore.value - line)
-  const band = d >= 10 ? { label: '稳', cls: 'tj-wen' } : d >= -10 ? { label: '冲', cls: 'tj-chong' } : { label: '够不上', cls: 'tj-no' }
+  const band = d >= 10 ? { label: '稳', cls: 'tj-wen' }
+    : d >= -10 ? { label: '冲', cls: 'tj-chong' }
+    : d >= -30 ? { label: '搏', cls: 'tj-bo' }     // 统招线下10~30：靠统筹降分,有机会但长线
+    : { label: '够不上', cls: 'tj-no' }
   return { ...band, d, line, ref: isRef }
 }
 
@@ -1261,7 +1264,8 @@ const tcOptions: string[] = []
           </details>
           <p class="tc-judge-note">
             <b>研判口径</b>：你区排 <b>{{ form.rank }}</b> 名 → 按本区一分一段估中考分 <b>≈{{ estScore }}</b> 分，与各校 <b>2025 统招线</b>比（Δ=估分−线）。
-            <span class="tj tj-wen">稳</span>Δ≥+10　<span class="tj tj-chong">冲</span>−10~+10　<span class="tj tj-no">够不上</span>Δ&lt;−10　<span class="tj tj-unk">线待核</span>无公开线。
+            <span class="tj tj-wen">稳</span>Δ≥+10　<span class="tj tj-chong">冲</span>−10~+10　<span class="tj tj-bo">搏</span>−30~−10　<span class="tj tj-no">够不上</span>Δ&lt;−30　<span class="tj tj-unk">线待核</span>无公开线。
+            「搏」=估分虽低于统招线 10–30 分，但<b>统筹线通常更低、仍有机会</b>（长线，依赖该校统筹降分幅度，热门校未必降这么多）。
             <b>估分随你填的区排名动态变化</b>（不是写死）。⚠️ 比的是各校<b>统招线（非统筹实际线）</b>，<b>统筹线通常更低</b>，故偏保守——"够不上"才基本无望，"冲"档实际机会更大。估分为一分一段插值近似。<b>「历年线」</b>=单源/历年参考(可信度低于 2025 双源确认的"线")；新校无历史则保持"线待核"。
           </p>
         </template>
@@ -1522,6 +1526,7 @@ const tcOptions: string[] = []
 /* 统筹研判标 */
 .tj { display: inline-block; font-size: 11px; font-weight: 700; padding: 1px 6px; border-radius: var(--radius-full); white-space: nowrap; }
 .tj-wen { background: #eafaf1; color: #1e8449; }     /* 稳(绿) */
+.tj-bo { background: #fef5e7; color: #b9770e; }      /* 搏·有机会(橙) */
 .tj-chong { background: #fdecea; color: #c0392b; }   /* 冲(红=拼一下) */
 .tj-no { background: var(--gray-100); color: var(--gray-500); }  /* 够不上(灰) */
 .tj-unk { background: #eaf2f8; color: #2471a3; }     /* 线待核(蓝) */
