@@ -1090,7 +1090,8 @@ const copyHint = ref('')
 .dir-双轨 { background: #e0e7ff; color: #4338ca; }
 .dir-国际 { background: #e0f2fe; color: #0369a1; }
 .dir-unknown { background: var(--gray-100); color: var(--gray-400); }
-.t-curr { font-size: 12px; color: var(--gray-600); line-height: 1.5; min-width: 150px; }
+.t-curr { font-size: 12px; color: var(--gray-600); line-height: 1.5;
+  min-width: 110px; max-width: 190px; white-space: normal; overflow-wrap: anywhere; word-break: break-word; }
 .t-fee { font-size: 12px; color: var(--gray-800); line-height: 1.5; min-width: 140px; white-space: normal; }
 .mini-bdg { font-size: 10px; padding: 0 5px; border-radius: var(--radius-xs); margin-left: 4px; }
 .addr-tag { font-size: 10px; padding: 0 5px; border-radius: var(--radius-xs); margin-left: 4px;
