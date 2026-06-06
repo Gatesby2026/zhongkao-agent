@@ -494,6 +494,46 @@ function copyAll() {
     () => { copyHint.value = '复制失败，请手动选择' },
   )
 }
+
+// 校额到校：按推荐(值得冲→相当，排除浪费，最好的在前)缺省填入志愿
+function prefillXed() {
+  const rec = xedRecommend.value.filter(e => e.tag === 'worth' || e.tag === 'similar' || e.tag === 'unknown')
+  draftXed.value = Array.from({ length: 8 }, (_, i) =>
+    rec[i] ? { school: rec[i].school, majors: '' } : { school: null, majors: '' })
+}
+// 初中校变化时自动按推荐预填（有明细时）
+watch(() => (xedSel.value ? xedSel.value.code : ''), () => {
+  if (xedSel.value && xedSel.value.by_school) prefillXed()
+}, { immediate: true })
+
+// 统一招生：上移/下移/在上方插入（用于在中间或最前插入志愿）
+function moveUni(i: number, dir: number) {
+  const j = i + dir
+  if (j < 0 || j >= draft.value.length) return
+  const a = draft.value
+  ;[a[i], a[j]] = [a[j], a[i]]
+}
+function insertUniAbove(i: number) {
+  // 在第 i 个志愿上方插入一个空志愿，其余顺延（末位若已填则提示溢出）
+  const a = draft.value
+  const last = a[a.length - 1]
+  a.splice(i, 0, { name: null, picks: [] })
+  const dropped = a.pop()   // 维持 12 个槽
+  if (dropped && dropped.name) {
+    copyHint.value = `已在第${i + 1}位插入；末位「${cleanName(dropped.name)}」被挤出，请检查`
+    setTimeout(() => copyHint.value = '', 3500)
+  }
+  // 触发响应式
+  draft.value = a.slice()
+}
+
+// 市级统筹（朝阳考生可报，参考名单，来源：2026白皮书/bjeea，含统筹一/二/三）
+const TONGCHOU_REF = [
+  { tier: '统筹一', desc: '城区优质高中跨区招生（不在东西海招）', schools: ['北京市第八十中学', '北京大学附属中学'] },
+  { tier: '统筹二', desc: '优质高中郊区分校/新校面向全市', schools: ['清华附中(中央台路校区)', '人大附中朝阳学校', '清华附中望京学校', '对外经贸大学附属中学(94中)', '东北师大附中朝阳学校'] },
+  { tier: '统筹三', desc: '高校与普高联合培养实验班', schools: ['（按当年 bjeea 统筹三计划，名额少，多为高校实验班）'] },
+]
+const tcOptions = TONGCHOU_REF.flatMap(t => t.schools).filter(s => !s.startsWith('（'))
 </script>
 
 <template>
@@ -969,6 +1009,10 @@ function copyAll() {
               <p class="xed-src">推荐依据：各优质高中“统招录取位次”对比你的区排名 <b>{{ form.rank }}</b>。✅=统招够不上、校额到校才有机会；⚠️=统招本可达、占名额意义小。校额到校实际按本初中<b>校内排名</b>录取、无官方各校线，仅作策略参考。</p>
             </div>
 
+            <div v-if="xedEligible.length" class="draft-actions" style="margin:10px 0 6px">
+              <button class="ghost" @click="prefillXed">↻ 按推荐重填校额到校志愿</button>
+              <span class="xed-src" style="margin:0">已按"值得冲→相当"自动填入（可手动改/清空；专业请手填）</span>
+            </div>
             <div class="slots">
               <div v-for="(s, i) in draftXed" :key="i" class="slot" :class="{ filled: s.school, empty: !s.school }">
                 <div class="slot-top">
@@ -984,13 +1028,23 @@ function copyAll() {
                 </div>
               </div>
             </div>
-            <h4 class="batch-sub">市级统筹（统筹一/二/三，手填）</h4>
-            <div class="early-rows">
-              <div v-for="(s, i) in draftTongchou" :key="i" class="early-row">
-                <span class="slot-no">{{ i + 1 }}</span>
-                <input v-model="s.text" class="early-input" placeholder="如：清华附中(统筹二) 某专业(班) …" />
+            <h4 class="batch-sub">市级统筹（统筹一/二/三）</h4>
+            <div class="tc-ref">
+              <p class="xed-src" style="margin:0 0 6px">朝阳考生<b>可报的统筹学校（参考）</b>——完整名单以 bjeea 当年《市级统筹招生计划》为准：</p>
+              <div v-for="t in TONGCHOU_REF" :key="t.tier" class="tc-tier">
+                <span class="tc-tag">{{ t.tier }}</span><span class="tc-desc">{{ t.desc }}</span>
+                <span class="tc-schools">{{ t.schools.join('、') }}</span>
               </div>
             </div>
+            <div class="early-rows" style="margin-top:8px">
+              <div v-for="(s, i) in draftTongchou" :key="i" class="early-row">
+                <span class="slot-no">{{ i + 1 }}</span>
+                <input v-model="s.text" list="tcList" class="early-input" placeholder="输入/选择统筹学校 + 专业(班) …" />
+              </div>
+            </div>
+            <datalist id="tcList">
+              <option v-for="s in tcOptions" :key="s" :value="s" />
+            </datalist>
           </template>
           <p v-else class="xed-note warn">当前「{{ (IDENTITIES.find(x => x.v === form.identity) || {}).label }}」身份不可报指标分配（校额到校 / 市级统筹）。</p>
         </section>
@@ -1018,7 +1072,12 @@ function copyAll() {
                   <span v-if="!majorsOf(s.name).length" class="nomajor">该校暂无官方专业代码数据</span>
                 </div>
                 <span v-else class="uni-empty">未选</span>
-                <button v-if="s.name" class="x" title="清空" @click="clearSlot(i)">✕</button>
+                <span class="urow-ops">
+                  <button class="op" title="上移" :disabled="i === 0" @click="moveUni(i, -1)">↑</button>
+                  <button class="op" title="下移" :disabled="i === draft.length - 1" @click="moveUni(i, 1)">↓</button>
+                  <button class="op" title="在此上方插入一个空志愿（其余顺延）" @click="insertUniAbove(i)">插入</button>
+                  <button v-if="s.name" class="op x-op" title="清空" @click="clearSlot(i)">✕</button>
+                </span>
               </div>
             </div>
             <div v-if="canGuantong && gtBlock" class="gt-ref">
@@ -1358,7 +1417,20 @@ function copyAll() {
 .uni-sel { flex: 0 0 300px; width: 300px; }
 .uni-majors { flex: 1; min-width: 0; display: flex; flex-wrap: wrap; gap: 6px; }
 .uni-empty { flex: 1; color: var(--gray-300); font-size: 12px; }
-@media (max-width: 640px) { .uni-sel { flex-basis: 150px; width: 150px; } }
+.urow-ops { flex: 0 0 auto; display: flex; gap: 3px; }
+.op { height: 26px; min-width: 26px; padding: 0 6px; font-size: 12px; border: 1px solid var(--gray-200);
+  background: #fff; border-radius: var(--radius-xs); color: var(--gray-500); cursor: pointer; }
+.op:hover:not(:disabled) { border-color: var(--brand); color: var(--brand-dark); }
+.op:disabled { opacity: .35; cursor: default; }
+.op.x-op:hover { color: var(--error); border-color: var(--error); }
+@media (max-width: 640px) { .uni-sel { flex-basis: 130px; width: 130px; } }
+/* 市级统筹参考 */
+.tc-ref { background: var(--gray-50); border-radius: var(--radius-xs); padding: 9px 11px; margin-bottom: 4px; }
+.tc-tier { font-size: 12px; line-height: 1.7; }
+.tc-tag { display: inline-block; font-weight: 700; color: var(--brand-dark); background: var(--brand-50);
+  border-radius: var(--radius-xs); padding: 0 6px; margin-right: 6px; }
+.tc-desc { color: var(--gray-500); margin-right: 6px; }
+.tc-schools { color: var(--gray-800); }
 
 /* 移动端 */
 @media (max-width: 860px) {
