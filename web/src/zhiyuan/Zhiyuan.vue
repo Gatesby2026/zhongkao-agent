@@ -59,6 +59,7 @@ const XED_OFFICIAL = 'https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87193.html'
 // 校额到校：按初中查名额
 const showXedImg = ref(false)
 const xedQuery = ref(USER_DEFAULTS.chuzhong)
+const batchOpen = reactive({ early: true, ind: true, uni: true })   // 三批次折叠
 const xedBlock = computed<XeddxBlock | null>(() => result.value?.xeddx || null)
 const xedSel = computed<XeddxRow | null>(() => {
   const b = xedBlock.value; const q = xedQuery.value.trim()
@@ -975,8 +976,11 @@ const tcOptions = TONGCHOU_REF.flatMap(t => t.schools).filter(s => !s.startsWith
 
         <!-- 批次① 提前招生 -->
         <section class="batch">
-          <h3 class="batch-h">① 提前招生 <small>2026 不含贯通；特长生 / 中外合作班 / 中职自主——无官方结构化代码，<b>手填</b></small></h3>
-          <div class="early-rows">
+          <button class="batch-h" type="button" @click="batchOpen.early = !batchOpen.early">
+            <span class="bc">{{ batchOpen.early ? '▾' : '▸' }}</span>① 提前招生
+            <small>2026 不含贯通；特长生 / 中外合作班 / 中职自主——无官方结构化代码，<b>手填</b></small>
+          </button>
+          <div v-show="batchOpen.early" class="early-rows">
             <div v-for="(s, i) in draftEarly" :key="i" class="early-row">
               <span class="slot-no">{{ i + 1 }}</span>
               <input v-model="s.text" class="early-input" placeholder="如：XX中学 美术特长 / XX学校 中外合作班 / XX中职 自主招生 …" />
@@ -986,8 +990,11 @@ const tcOptions = TONGCHOU_REF.flatMap(t => t.schools).filter(s => !s.startsWith
 
         <!-- 批次② 指标分配 -->
         <section class="batch">
-          <h3 class="batch-h">② 指标分配（校额到校 + 市级统筹）<small>门槛 总分≥430 + 综合素质B + 同一初中连续三年学籍</small></h3>
-          <template v-if="canIndicator">
+          <button class="batch-h" type="button" @click="batchOpen.ind = !batchOpen.ind">
+            <span class="bc">{{ batchOpen.ind ? '▾' : '▸' }}</span>② 指标分配（校额到校 + 市级统筹）
+            <small>门槛 总分≥430 + 综合素质B + 同一初中连续三年学籍</small>
+          </button>
+          <template v-if="batchOpen.ind && canIndicator">
             <label class="xed-qlabel" style="max-width:440px">孩子初中校（与「校额到校」页共用）
               <input list="xedSchoolList2" v-model="xedQuery" class="xed-input" placeholder="输入/选择，如 朝阳外国语学校" />
             </label>
@@ -1013,19 +1020,17 @@ const tcOptions = TONGCHOU_REF.flatMap(t => t.schools).filter(s => !s.startsWith
               <button class="ghost" @click="prefillXed">↻ 按推荐重填校额到校志愿</button>
               <span class="xed-src" style="margin:0">已按"值得冲→相当"自动填入（可手动改/清空；专业请手填）</span>
             </div>
-            <div class="slots">
-              <div v-for="(s, i) in draftXed" :key="i" class="slot" :class="{ filled: s.school, empty: !s.school }">
-                <div class="slot-top">
-                  <span class="slot-no" :class="{ on: s.school }">{{ i + 1 }}</span>
-                  <select v-model="s.school" class="school-sel" :disabled="!xedEligible.length">
-                    <option :value="null">＋ 选优质高中（校额到校）</option>
-                    <option v-for="e in xedEligible" :key="e.school" :value="e.school">{{ e.school }}（名额{{ e.n }}）</option>
-                  </select>
-                  <button v-if="s.school" class="x" title="清空" @click="s.school = null; s.majors = ''">✕</button>
-                </div>
-                <div v-if="s.school" class="slot-majors">
-                  <input v-model="s.majors" class="early-input" placeholder="专业(班)手填——校额到校专业代码待核，可沿用该校统招专业，仅参考" />
-                </div>
+            <div class="uni-list">
+              <div v-for="(s, i) in draftXed" :key="i" class="urow" :class="{ filled: s.school }">
+                <span class="slot-no" :class="{ on: s.school }">{{ i + 1 }}</span>
+                <select v-model="s.school" class="school-sel uni-sel" :disabled="!xedEligible.length">
+                  <option :value="null">＋ 选优质高中（校额到校）</option>
+                  <option v-for="e in xedEligible" :key="e.school" :value="e.school">{{ e.school }}（名额{{ e.n }}）</option>
+                </select>
+                <input v-if="s.school" v-model="s.majors" class="early-input" style="flex:1;min-width:0"
+                  placeholder="专业(班)手填——专业代码待核，可沿用该校统招专业" />
+                <span v-else class="uni-empty">未选</span>
+                <button v-if="s.school" class="op x-op" title="清空" @click="s.school = null; s.majors = ''">✕</button>
               </div>
             </div>
             <h4 class="batch-sub">市级统筹（统筹一/二/三）</h4>
@@ -1046,13 +1051,16 @@ const tcOptions = TONGCHOU_REF.flatMap(t => t.schools).filter(s => !s.startsWith
               <option v-for="s in tcOptions" :key="s" :value="s" />
             </datalist>
           </template>
-          <p v-else class="xed-note warn">当前「{{ (IDENTITIES.find(x => x.v === form.identity) || {}).label }}」身份不可报指标分配（校额到校 / 市级统筹）。</p>
+          <p v-else-if="batchOpen.ind && !canIndicator" class="xed-note warn">当前「{{ (IDENTITIES.find(x => x.v === form.identity) || {}).label }}」身份不可报指标分配（校额到校 / 市级统筹）。</p>
         </section>
 
         <!-- 批次③ 统一招生 -->
         <section class="batch">
-          <h3 class="batch-h">③ 统一招生 <small>2026 含贯通；{{ ZHIYUAN_SLOTS }} 志愿 ×2 专业，已按冲→稳→保预填 {{ filledSlots }}/{{ ZHIYUAN_SLOTS }}</small></h3>
-          <template v-if="canPuhao">
+          <button class="batch-h" type="button" @click="batchOpen.uni = !batchOpen.uni">
+            <span class="bc">{{ batchOpen.uni ? '▾' : '▸' }}</span>③ 统一招生
+            <small>2026 含贯通；{{ ZHIYUAN_SLOTS }} 志愿 ×2 专业，已按冲→稳→保预填 {{ filledSlots }}/{{ ZHIYUAN_SLOTS }}</small>
+          </button>
+          <template v-if="batchOpen.uni && canPuhao">
             <div class="draft-actions"><button class="ghost" @click="resetDraft">重置为推荐顺序</button></div>
             <div class="uni-list">
               <div v-for="(s, i) in draft" :key="i" class="urow" :class="{ filled: s.name }">
@@ -1373,13 +1381,17 @@ const tcOptions = TONGCHOU_REF.flatMap(t => t.schools).filter(s => !s.startsWith
 .ghost { font-size: 12.5px; padding: 6px 12px; border: 1px solid var(--gray-300); background: #fff;
   border-radius: var(--radius-xs); color: var(--gray-700); cursor: pointer; }
 .copyhint { font-size: 12px; color: var(--success); }
-/* 三批次分区 */
-.batch { border-top: 2px solid var(--gray-100); padding-top: 14px; margin-top: 16px; }
-.batch:first-of-type { border-top: none; padding-top: 0; margin-top: 8px; }
-.batch-h { font-size: 15px; color: var(--brand-deeper); margin: 0 0 10px; }
+/* 三批次分区（可折叠）*/
+.batch { margin-top: 10px; }
+.batch-h { width: 100%; text-align: left; display: block; cursor: pointer;
+  font-size: 15px; font-weight: 700; color: var(--brand-deeper);
+  background: var(--gray-50); border: 1px solid var(--gray-100); border-radius: var(--radius-sm);
+  padding: 10px 12px; margin: 0 0 10px; }
+.batch-h:hover { border-color: var(--brand); }
+.batch-h .bc { display: inline-block; width: 16px; color: var(--gray-400); font-weight: 400; }
 .batch-h small { font-weight: 400; font-size: 12px; color: var(--gray-500); margin-left: 6px; }
 .batch-sub { font-size: 13px; color: var(--gray-700); margin: 14px 0 8px; }
-.early-rows { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+.early-rows { display: flex; flex-direction: column; gap: 6px; }
 .early-row { display: flex; align-items: center; gap: 8px; }
 .early-input { flex: 1; min-width: 0; padding: 7px 9px; border: 1px solid var(--gray-300);
   border-radius: var(--radius-xs); font-size: 12.5px; background: #fff; }
