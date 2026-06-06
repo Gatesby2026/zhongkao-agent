@@ -133,6 +133,22 @@ def build_vocational_list(district, district_cn, home, mode, mode_label, max_km,
     return {"meta": meta, "schools": out}
 
 
+_XEDDX_CACHE: dict = {}
+
+
+def load_xeddx(district: str):
+    """校额到校 初中→优质高中 名额分配表（<district>_xeddx.yaml；无则 None）。"""
+    if district in _XEDDX_CACHE:
+        return _XEDDX_CACHE[district]
+    path = ADMISSION_DIR / f"{district}_xeddx.yaml"
+    data = None
+    if path.exists():
+        with open(path, encoding="utf-8") as f:
+            data = yaml.safe_load(f)
+    _XEDDX_CACHE[district] = data
+    return data
+
+
 _GUANTONG_CACHE: list = [None, False]
 
 
@@ -510,6 +526,7 @@ def build_result(rank, home=None, mode="driving", max_km=None, interests=None,
         "vocational": build_vocational_list(district, district_name, home, mode,
                                             mode_label, max_km, boarding),
         "guantong": load_guantong(),
+        "xeddx": load_xeddx(district),
         "points": build_public_points(buckets, dist_campus, mode_label, effective_max_km,
                                       interests, boarding_names),
         "private": build_private_points(priv, priv_dist, mode_label, effective_max_km),

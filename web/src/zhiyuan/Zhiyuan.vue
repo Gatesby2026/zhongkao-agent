@@ -59,6 +59,14 @@ const GUIDE = [
 const showGuide = ref(false)
 const openG = ref<number | null>(null)
 const XED_OFFICIAL = 'https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87193.html'
+// 校额到校：按初中查名额
+const xedQuery = ref('')
+const xedBlock = computed<XeddxBlock | null>(() => result.value?.xeddx || null)
+const xedSel = computed<XeddxRow | null>(() => {
+  const b = xedBlock.value; const q = xedQuery.value.trim()
+  if (!b || !q) return null
+  return b.rows.find(r => r.name === q) || b.rows.find(r => cleanName(r.name).includes(cleanName(q))) || null
+})
 
 interface Major {
   major_code: string; major_name: string; xuezhi: string; jiashi: string
@@ -113,6 +121,11 @@ interface GuantongBlock {
   overall: { year: number; xuezhi: string; min_score: number; huji: string; batch: string; total_plan: number }
   projects: GtProject[]; data_warning: string; source_T1: string; official_url: string
 }
+interface XeddxRow { code: string; name: string; total: number; by_school: Record<string, number> | null; verified: boolean }
+interface XeddxBlock {
+  columns: string[]; source_T1: string; official_url: string; data_warning: string
+  verified_count: number; total_count: number; rows: XeddxRow[]
+}
 interface Result {
   district: string; rank: number; home: string | null
   home_coord: [number, number] | null; mode: string; mode_label: string
@@ -122,6 +135,7 @@ interface Result {
   private_schools: PrivBlock | null
   vocational: VocBlock | null
   guantong: GuantongBlock | null
+  xeddx: XeddxBlock | null
   points: Point[]; private: Point[]
 }
 
@@ -784,8 +798,34 @@ const copyHint = ref('')
             <div class="xed-rule"><span class="xed-k">不能报</span>往届生 / 回户籍 / 外省回京 考生</div>
             <div class="xed-rule"><span class="xed-k">录取分</span>无官方"各初中录取线"——按本校内排名事后形成，逐校逐年不同；430 仅是统一资格门槛</div>
           </div>
-          <p class="xed-hl">📋 下方为<b>北京教育考试院官方</b>《2025 年初中学校校额到校分配名额》中的<b>朝阳区</b>页：在表中找到孩子的<b>初中校</b>那一行，对应各优质高中列的数字＝该校能分到的名额数。</p>
+          <p class="xed-hl">📋 输入孩子的<b>初中校</b>即可查该校 2025 年校额到校名额（数据读自下方官方原图）。也可直接在官方原图里按行核对。</p>
         </div>
+
+        <!-- 按初中查名额 -->
+        <div v-if="xedBlock" class="xed-query">
+          <label class="xed-qlabel">孩子初中校
+            <input list="xedSchoolList" v-model="xedQuery" placeholder="输入/选择，如 朝阳外国语学校" class="xed-input" />
+          </label>
+          <datalist id="xedSchoolList">
+            <option v-for="r in xedBlock.rows" :key="r.code" :value="r.name" />
+          </datalist>
+          <div v-if="xedQuery && !xedSel" class="xed-miss">未匹配到该初中（试试更短的关键词，或在下方官方原图核对）</div>
+          <div v-if="xedSel" class="xed-card">
+            <div class="xed-card-head">
+              <b>{{ cleanName(xedSel.name) }}</b>
+              <span class="xed-total">校额到校共 <b>{{ xedSel.total }}</b> 个名额</span>
+            </div>
+            <template v-if="xedSel.by_school">
+              <div class="xed-grid">
+                <span v-for="(n, sch) in xedSel.by_school" :key="sch" class="xed-cell"><i>{{ sch }}</i>{{ n }}</span>
+              </div>
+              <p class="xed-note">＝该校分到各优质高中的名额数（已与“合计”自检一致）。能否录取＝在本初中校内按中考总分排名 + 志愿顺序，门槛 总分≥430、综合素质B、连续三年学籍。</p>
+            </template>
+            <p v-else class="xed-note warn">本行明细未通过自检，仅“合计 {{ xedSel.total }}”可靠；各优质高中明细请在下方官方原图中按行核对（避免转录出错）。</p>
+          </div>
+          <p class="xed-src">数据：{{ xedBlock.source_T1 }}；明细自检通过 {{ xedBlock.verified_count }}/{{ xedBlock.total_count }} 校，其余仅给合计、明细以原图为准。</p>
+        </div>
+
         <div class="xed-imgs">
           <a :href="XED_OFFICIAL" target="_blank" rel="noopener"><img src="/xed/chaoyang-xeddx-2025-p1.jpg" alt="朝阳校额到校分配名额 第1页" loading="lazy" /></a>
           <a :href="XED_OFFICIAL" target="_blank" rel="noopener"><img src="/xed/chaoyang-xeddx-2025-p2.jpg" alt="朝阳校额到校分配名额 第2页（上半部分为朝阳）" loading="lazy" /></a>
@@ -1068,6 +1108,23 @@ const copyHint = ref('')
 .xed-k { display: inline-block; min-width: 92px; font-weight: 700; color: var(--brand-dark); }
 .xed-hl { font-size: 12.5px; color: var(--brand-dark); background: var(--brand-50);
   border-radius: var(--radius-xs); padding: 9px 11px; line-height: 1.6; margin: 0 0 12px; }
+/* 校额到校：按初中查名额 */
+.xed-query { margin: 0 0 14px; }
+.xed-qlabel { display: flex; flex-direction: column; gap: 5px; font-size: 12.5px; font-weight: 600; color: var(--gray-700); max-width: 420px; }
+.xed-input { padding: 9px 11px; border: 1px solid var(--gray-300); border-radius: var(--radius-xs); font-size: 14px; background: #fff; }
+.xed-miss { font-size: 12.5px; color: var(--gray-500); margin-top: 8px; }
+.xed-card { margin-top: 10px; border: 1px solid var(--brand-50); background: var(--surface); border-radius: var(--radius-sm); box-shadow: var(--shadow-sm); padding: 12px 14px; }
+.xed-card-head { display: flex; align-items: baseline; flex-wrap: wrap; gap: 10px; }
+.xed-card-head b { font-size: 15px; color: var(--gray-900); }
+.xed-total { font-size: 13px; color: var(--brand-dark); background: var(--brand-50); padding: 2px 9px; border-radius: var(--radius-full); }
+.xed-total b { font-size: 15px; color: var(--brand-dark); }
+.xed-grid { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+.xed-cell { font-size: 12.5px; color: var(--gray-800); background: var(--gray-50); border: 1px solid var(--gray-100); border-radius: var(--radius-xs); padding: 4px 9px; }
+.xed-cell i { color: var(--gray-500); font-style: normal; margin-right: 5px; }
+.xed-cell b { color: var(--brand-dark); }
+.xed-note { font-size: 11.5px; color: var(--gray-500); margin-top: 9px; line-height: 1.6; }
+.xed-note.warn { color: #b45309; background: var(--warning-bg); padding: 7px 9px; border-radius: var(--radius-xs); }
+.xed-src { font-size: 11px; color: var(--gray-400); margin-top: 8px; }
 .xed-imgs { display: flex; flex-direction: column; gap: 10px; }
 .xed-imgs img { width: 100%; height: auto; border: 1px solid var(--gray-200); border-radius: var(--radius-xs);
   display: block; }
