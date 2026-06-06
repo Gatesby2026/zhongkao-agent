@@ -16,9 +16,10 @@ columns:
 - 清华朝阳
 source_T1: 北京教育考试院《2025年初中学校校额到校分配名额》(官方原图)
 official_url: https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87193.html
-method: 官方原图逐行读取 + 合计列自检(12所高中名额之和==合计)；通过自检的附完整明细，未通过的仅给合计、明细以官方原图为准
-data_warning: 各初中“合计”=该校校额到校投放优质高中的总名额，可靠；55/69行明细已自检通过，14行明细待核(以官方原图为准)。门槛：中考总分≥430/510+综合素质B+同一初中连续三年学籍；往届/回户籍/外省回京不可报；录取按校内排名+志愿顺序。2026计划发布后须刷新。
-verified_count: 55
+method: 官方原图逐行读取 + 合计列自检(12所高中名额之和==合计)；69/69行明细均通过自检。其中先期55行+后补14行(2026-06据中招大报纸官方简章p57-58逐单元格OCR+合计自检+列归属人工目检，14行PDF合计与原存合计100%一致)
+data_warning:
+  各初中“合计”=该校校额到校投放优质高中的总名额，可靠；69/69行明细已自检通过(0待核)。门槛：中考总分≥430/510+综合素质B+同一初中连续三年学籍；往届/回户籍/外省回京不可报；录取按校内排名+志愿顺序。2026计划发布后须刷新。
+verified_count: 69
 total_count: 69
 rows:
 - code: '0501'
@@ -157,8 +158,20 @@ rows:
 - code: '0513'
   name: 北京工业大学附属中学劲松分校
   total: 27
-  by_school: null
-  verified: false
+  by_school:
+    八十中: 4
+    陈经纶: 3
+    日坛: 2
+    和平街(和平街): 1
+    和平街(莲葩园): 1
+    对外经贸94中: 3
+    十七中: 3
+    工大附中: 3
+    人朝: 2
+    东方德才: 2
+    东师朝: 2
+    清华朝阳: 1
+  verified: true
 - code: '0516'
   name: 北京工业大学实验学校
   total: 19
@@ -196,8 +209,10 @@ rows:
 - code: 0518
   name: 北京市第五中学朝阳双合分校
   total: 2
-  by_school: null
-  verified: false
+  by_school:
+    八十中: 1
+    和平街(和平街): 1
+  verified: true
 - code: '0520'
   name: 北京市朝阳区芳草地国际学校甘露园分校
   total: 12
@@ -317,8 +332,10 @@ rows:
 - code: '0530'
   name: 北京市朝阳区未来实验学校
   total: 2
-  by_school: null
-  verified: false
+  by_school:
+    十七中: 1
+    人朝: 1
+  verified: true
 - code: '0534'
   name: 首都师范大学附属中学朝阳学校
   total: 5
@@ -366,8 +383,12 @@ rows:
 - code: '0537'
   name: 北京市三里屯一中
   total: 4
-  by_school: null
-  verified: false
+  by_school:
+    对外经贸94中: 1
+    十七中: 1
+    工大附中: 1
+    清华朝阳: 1
+  verified: true
 - code: 0539
   name: 北京市朝阳区明诚外国语学校
   total: 2
@@ -575,8 +596,15 @@ rows:
 - code: '0561'
   name: 北京师范大学三帆中学朝阳学校
   total: 7
-  by_school: null
-  verified: false
+  by_school:
+    日坛: 1
+    和平街(莲葩园): 1
+    对外经贸94中: 1
+    十七中: 1
+    工大附中: 1
+    东方德才: 1
+    东师朝: 1
+  verified: true
 - code: '0562'
   name: 中央美术学院附属实验学校
   total: 10
@@ -676,13 +704,23 @@ rows:
 - code: '0571'
   name: 北京市朝阳区爱迪外国语学校
   total: 1
-  by_school: null
-  verified: false
+  by_school:
+    东师朝: 1
+  verified: true
 - code: '0572'
   name: 北京中学三分校
   total: 11
-  by_school: null
-  verified: false
+  by_school:
+    八十中: 1
+    日坛: 1
+    和平街(和平街): 1
+    和平街(莲葩园): 1
+    对外经贸94中: 2
+    十七中: 2
+    工大附中: 1
+    东方德才: 1
+    东师朝: 1
+  verified: true
 - code: '0573'
   name: 北京中学一分校
   total: 22
@@ -713,8 +751,18 @@ rows:
 - code: '0575'
   name: 东北师范大学附属中学朝阳学校
   total: 12
-  by_school: null
-  verified: false
+  by_school:
+    八十中: 1
+    陈经纶: 1
+    日坛: 1
+    和平街(和平街): 1
+    和平街(莲葩园): 1
+    对外经贸94中: 2
+    十七中: 2
+    工大附中: 1
+    东方德才: 1
+    东师朝: 1
+  verified: true
 - code: '0577'
   name: 北京市第八十中学惠新分校
   total: 23
@@ -769,8 +817,10 @@ rows:
 - code: 0582
   name: 北京拔萃双语学校
   total: 2
-  by_school: null
-  verified: false
+  by_school:
+    对外经贸94中: 1
+    人朝: 1
+  verified: true
 - code: 0583
   name: 北京市朝阳区人朝分东坝学校
   total: 10
@@ -788,13 +838,34 @@ rows:
 - code: 0584
   name: 北京市第十七中学
   total: 12
-  by_school: null
-  verified: false
+  by_school:
+    八十中: 1
+    陈经纶: 1
+    日坛: 1
+    和平街(和平街): 1
+    和平街(莲葩园): 1
+    对外经贸94中: 2
+    十七中: 2
+    工大附中: 1
+    东方德才: 1
+    东师朝: 1
+  verified: true
 - code: 0585
   name: 北京市第八十中学管庄分校
   total: 19
-  by_school: null
-  verified: false
+  by_school:
+    八十中: 1
+    陈经纶: 1
+    日坛: 2
+    和平街(和平街): 1
+    和平街(莲葩园): 1
+    对外经贸94中: 3
+    十七中: 3
+    工大附中: 2
+    东方德才: 2
+    东师朝: 2
+    清华朝阳: 1
+  verified: true
 - code: 0586
   name: 北京市陈经纶中学民族分校
   total: 14
@@ -815,8 +886,10 @@ rows:
 - code: 0589
   name: 北京市第八十中学小红门分校
   total: 2
-  by_school: null
-  verified: false
+  by_school:
+    八十中: 1
+    和平街(和平街): 1
+  verified: true
 - code: 0591
   name: 北京市第十七中学辰阳分校
   total: 14
@@ -837,8 +910,17 @@ rows:
 - code: 0592
   name: 北京市第一七一中学朝阳豆各庄分校
   total: 9
-  by_school: null
-  verified: false
+  by_school:
+    八十中: 1
+    陈经纶: 1
+    日坛: 1
+    对外经贸94中: 1
+    十七中: 1
+    工大附中: 1
+    人朝: 1
+    东方德才: 1
+    东师朝: 1
+  verified: true
 - code: 0593
   name: 中国传媒大学附属中学(北京中学传媒分校)
   total: 14
@@ -876,8 +958,10 @@ rows:
 - code: 0595
   name: 北京市朝阳区忠德学校
   total: 2
-  by_school: null
-  verified: false
+  by_school:
+    十七中: 1
+    人朝: 1
+  verified: true
 - code: 0596
   name: 北京市朝阳区芳草地国际学校富力分校
   total: 19

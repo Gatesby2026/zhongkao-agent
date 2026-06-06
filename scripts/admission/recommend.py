@@ -149,6 +149,24 @@ def load_xeddx(district: str):
     return data
 
 
+_TONGCHOU_CACHE: dict = {}
+
+
+def load_tongchou(district: str):
+    """市级统筹（统筹一/二）面向本区招生清单。文件 2025_sjtongchou_<district>.json。
+    含校名/校区/区/地址/朝阳名额/住宿/是否面向朝阳（据 bjeea 2025 官方简章逐格核 + 合计对账）。"""
+    if district in _TONGCHOU_CACHE:
+        return _TONGCHOU_CACHE[district]
+    import json as _json
+    path = ADMISSION_DIR / f"2025_sjtongchou_{district}.json"
+    data = None
+    if path.exists():
+        with open(path, encoding="utf-8") as f:
+            data = _json.load(f)
+    _TONGCHOU_CACHE[district] = data
+    return data
+
+
 _GUANTONG_CACHE: list = [None, False]
 
 
@@ -550,6 +568,7 @@ def build_result(rank, home=None, mode="driving", max_km=None, interests=None,
         "vocational": build_vocational_list(district, district_name, home, mode,
                                             mode_label, max_km, boarding),
         "guantong": load_guantong(),
+        "tongchou": load_tongchou(district),
         "xeddx": load_xeddx(district),
         "points": build_public_points(buckets, dist_campus, mode_label, effective_max_km,
                                       interests, boarding_names),

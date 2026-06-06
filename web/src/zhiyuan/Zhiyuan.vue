@@ -152,14 +152,24 @@ const IDENTITIES = [
   { v: 'wangjie', label: '往届/回京' },
 ]
 // 学校类型图层开关（地图上显示哪些点）
-const layers = reactive({ gongban: true, coop: true, minban: false })
+const layers = reactive({ gongban: true, coop: true, minban: false, intl: false, voc: false, gt: false })
 const tab = ref<'map' | 'list' | 'minban' | 'intl' | 'voc' | 'gt' | 'xed' | 'tc' | 'draft'>('map')   // +贯通+校额到校+统筹
 const loading = ref(false)
 const errMsg = ref('')
 const result = ref<Result | null>(null)
 let mapInst: any = null
 let publicLayer: any = null
-let privateLayer: any = null
+let minbanLayer: any = null
+let intlLayer: any = null
+let vocLayer: any = null
+let gtLayer: any = null
+// 民办校名 → {民办?, 国际?} 标记（用于地图拆层）
+const privFlags = computed<Record<string, { minban: boolean; intl: boolean }>>(() => {
+  const m: Record<string, { minban: boolean; intl: boolean }> = {}
+  for (const s of (result.value?.private_schools?.schools || []))
+    m[s.name] = { minban: !!s.in_minban_list, intl: !!s.in_intl_list }
+  return m
+})
 
 function cleanName(s: string): string { return (s || '').replace(/\s+/g, '') }
 // 地图标签只取学校主名（空格 / 中点 / 括号前截断），避免把校区+计划说明全挤一起
@@ -240,6 +250,25 @@ function smallIcon(color: string, boarding = false) {
       + (boarding ? boardBadge : '') + `</div>`,
   })
 }
+// 校额到校简称 → 我方数据全名（取统招位次用）
+const XED_FULLNAME: Record<string, string> = {
+  '八十中': '北京市第八十中学', '陈经纶': '陈经纶中学', '日坛': '日坛中学',
+  '和平街(和平街)': '和平街一中', '和平街(莲葩园)': '和平街一中（北苑莲葩园校区）',
+  '对外经贸94中': '对外经济贸易大学附属中学', '十七中': '北京十七中', '工大附中': '北京工业大学附属中学',
+  '人朝': '人大附中朝阳学校', '东方德才': '东方德才学校', '东师朝': '东北师大附中朝阳学校', '清华朝阳': '清华附中朝阳学校',
+}
+// 选定初中(xedQuery，缺省朝外)分到各优质高中的校额到校名额：全名→名额。
+// 供地图 pin 徽标 + 学校详情卡展示（校额到校目标校全在朝阳，已是图上已有 pin）。
+const xedQuotaByName = computed<Record<string, number>>(() => {
+  const r = xedSel.value
+  if (!r || !r.by_school) return {}
+  const out: Record<string, number> = {}
+  for (const [abbr, n] of Object.entries(r.by_school)) {
+    const full = XED_FULLNAME[abbr]
+    if (full) out[full] = (out[full] || 0) + (n as number)
+  }
+  return out
+})
 // 该点是不是中外合作/国际班学校（用于 coop 图层过滤）
 function isCoopPoint(p: Point): boolean {
   const c = findCard(p.name)
@@ -248,8 +277,9 @@ function isCoopPoint(p: Point): boolean {
 function renderMarkers() {
   const res = result.value
   if (!res || !mapInst) return
-  if (publicLayer) { mapInst.removeLayer(publicLayer); publicLayer = null }
-  if (privateLayer) { mapInst.removeLayer(privateLayer); privateLayer = null }
+  for (const lyr of [publicLayer, minbanLayer, intlLayer, vocLayer, gtLayer])
+    if (lyr) mapInst.removeLayer(lyr)
+  publicLayer = minbanLayer = intlLayer = vocLayer = gtLayer = null
   const bounds: any[] = []
   if (res.home_coord) bounds.push(res.home_coord)
 
@@ -264,22 +294,55 @@ function renderMarkers() {
     const icon = p.kind === 'full' ? pin(p.color, p.band, boarding) : smallIcon(p.color, boarding)
     const mk = L.marker([p.lat, p.lon], { icon }).addTo(publicLayer).on('click', () => selectPoint(p))
     // 缺省常驻显示学校名：重点推荐校(冲/稳/保)常驻，其余小点悬停显示，避免拥挤
+    // 校额到校徽标：选定初中分到该校名额时，名字后挂"🎯N"
+    const q = xedQuotaByName.value[p.name]
+    const lbl = shortName(p.name) + (q ? ` <span class="map-xed">🎯${q}</span>` : '')
     if (p.kind === 'full') {
-      mk.bindTooltip(shortName(p.name), { permanent: true, direction: 'bottom', offset: [0, 2], className: 'map-lbl' })
+      mk.bindTooltip(lbl, { permanent: true, direction: 'bottom', offset: [0, 2], className: 'map-lbl' })
     } else {
-      mk.bindTooltip(shortName(p.name), { direction: 'top', offset: [0, -6], className: 'map-lbl' })
+      mk.bindTooltip(lbl, { direction: 'top', offset: [0, -6], className: 'map-lbl' })
     }
   })
   if (layers.gongban || layers.coop) publicLayer.addTo(mapInst)
 
-  privateLayer = L.layerGroup()
+  // 民办/国际：按标拆两层（同一所若既民办又国际，两层都画）
+  minbanLayer = L.layerGroup()
+  intlLayer = L.layerGroup()
+  const flags = privFlags.value
   res.private.forEach((p) => {
-    bounds.push([p.lat, p.lon])
-    L.marker([p.lat, p.lon], { icon: smallIcon(p.color) }).addTo(privateLayer)
+    const f = flags[p.name] || { minban: true, intl: false }
+    const mk = (color: string) => L.marker([p.lat, p.lon], { icon: smallIcon(color) })
       .on('click', () => selectPoint(p))
       .bindTooltip(shortName(p.name), { direction: 'top', offset: [0, -6], className: 'map-lbl' })
+    if (f.intl) mk('#9b59b6').addTo(intlLayer)
+    if (f.minban || (!f.minban && !f.intl)) mk('#e67e22').addTo(minbanLayer)
+    if (layers.minban || layers.intl) bounds.push([p.lat, p.lon])
   })
-  if (layers.minban) privateLayer.addTo(mapInst)
+  if (layers.minban) minbanLayer.addTo(mapInst)
+  if (layers.intl) intlLayer.addTo(mapInst)
+
+  // 中职/职教（默认关）
+  vocLayer = L.layerGroup()
+  ;(res.vocational?.schools || []).forEach((s: any) => {
+    if (!s.lat || !s.lon) return
+    L.marker([s.lat, s.lon], { icon: smallIcon('#16a085') }).addTo(vocLayer)
+      .bindTooltip(shortName(s.name), { direction: 'top', offset: [0, -6], className: 'map-lbl' })
+      .bindPopup(`<div class="pop"><b>${cleanName(s.name)}</b><br>${s.type || '中职'}<br>${s.address || ''}</div>`)
+    if (layers.voc) bounds.push([s.lat, s.lon])
+  })
+  if (layers.voc) vocLayer.addTo(mapInst)
+
+  // 贯通承办院校（全市·默认关）
+  gtLayer = L.layerGroup()
+  Object.entries((res.guantong as any)?.school_coords || {}).forEach(([nm, c]: any) => {
+    if (!c?.lat || !c?.lon) return
+    const approx = c.geo === 'approx' ? '（近似）' : ''
+    L.marker([c.lat, c.lon], { icon: smallIcon('#2980b9') }).addTo(gtLayer)
+      .bindTooltip(shortName(nm), { direction: 'top', offset: [0, -6], className: 'map-lbl' })
+      .bindPopup(`<div class="pop"><b>${nm}</b><br>贯通承办院校 · ${c.district || ''}${approx}<br>${c.note || ''}</div>`)
+    if (layers.gt) bounds.push([c.lat, c.lon])
+  })
+  if (layers.gt) gtLayer.addTo(mapInst)
 
   if (bounds.length) mapInst.fitBounds(bounds, { padding: [40, 40], maxZoom: 14 })
 }
@@ -287,7 +350,7 @@ function renderMap() {
   const res = result.value
   if (!res) return
   selectedPoint.value = null
-  if (mapInst) { mapInst.remove(); mapInst = null; publicLayer = null; privateLayer = null }
+  if (mapInst) { mapInst.remove(); mapInst = null; publicLayer = minbanLayer = intlLayer = vocLayer = gtLayer = null }
   // 默认中心：有住址用住址，否则用全部点位中心（朝阳）
   let center: [number, number] = res.home_coord || [39.95, 116.47]
   if (!res.home_coord && res.points.length) {
@@ -309,6 +372,8 @@ function renderMap() {
   renderMarkers()
 }
 watch(layers, () => { if (mapInst) renderMarkers() }, { deep: true })
+// 初中变更 → 校额到校名额变 → 重绘 pin 徽标
+watch(xedQuotaByName, () => { if (mapInst) renderMarkers() })
 // 切回地图页时重算尺寸（v-show 隐藏期间容器宽高为 0，会导致瓦片错位）
 watch(tab, (t) => { if (t === 'map' && mapInst) nextTick(() => mapInst.invalidateSize()) })
 
@@ -394,11 +459,39 @@ function clearSlot(i: number) { draft.value[i] = { name: null, picks: [] } }
 const filledSlots = computed(() => draft.value.filter(s => s.name).length)
 
 /* ---------------- 民办 / 国际清单 ---------------- */
+// 市级统筹官方清单（据 2025 简章逐格核 + 合计对账）
+const tongchou = computed<any>(() => result.value ? (result.value as any).tongchou : null)
+const tcYi = computed<any[]>(() => (tongchou.value?.tongchou_yi || [])
+  .filter((x: any) => x.faces_chaoyang).sort((a: any, b: any) => (b.quota_chaoyang || 0) - (a.quota_chaoyang || 0)))
+const tcEr = computed<any[]>(() => (tongchou.value?.tongchou_er || [])
+  .filter((x: any) => x.faces_chaoyang).sort((a: any, b: any) => (b.quota_chaoyang || 0) - (a.quota_chaoyang || 0)))
+
 const privAll = computed<PrivSchool[]>(() => result.value?.private_schools?.schools || [])
 const minbanList = computed<PrivSchool[]>(() => privAll.value.filter(s => s.in_minban_list))
 const intlList = computed<PrivSchool[]>(() => privAll.value.filter(s => s.in_intl_list))
 // 当前展示的民办/国际清单（按激活的 Tab）
-const privView = computed<PrivSchool[]>(() => tab.value === 'intl' ? intlList.value : minbanList.value)
+// 学费筛选：从"15.8万/年"、"8-16.8万"、"22.7-26.2万"等串里取最大数字作上限分档
+const tuitionBand = ref<'all' | 'le10' | 'mid' | 'gt20'>('all')
+function tuitionMax(s: any): number | null {
+  const t = s?.tuition
+  if (!t) return null
+  const nums = String(t).match(/\d+(\.\d+)?/g)
+  if (!nums) return null
+  return Math.max(...nums.map(Number))
+}
+const privView = computed<PrivSchool[]>(() => {
+  let list = tab.value === 'intl' ? intlList.value : minbanList.value
+  if (tuitionBand.value !== 'all') {
+    list = list.filter(s => {
+      const m = tuitionMax(s)
+      if (m == null) return false   // 无标价不进档位筛选
+      if (tuitionBand.value === 'le10') return m <= 10
+      if (tuitionBand.value === 'mid') return m > 10 && m <= 20
+      return m > 20
+    })
+  }
+  return list
+})
 const vocList = computed<VocSchool[]>(() => result.value?.vocational?.schools || [])
 const gtBlock = computed<GuantongBlock | null>(() => result.value?.guantong || null)
 function shortCampusName(name: string): string {
@@ -449,13 +542,6 @@ const xedEligible = computed<{ school: string; n: number }[]>(() => {
   if (!r || !r.by_school) return []
   return Object.entries(r.by_school).map(([school, n]) => ({ school, n: n as number }))
 })
-// 校额到校简称 → 我方数据全名（取统招位次用）
-const XED_FULLNAME: Record<string, string> = {
-  '八十中': '北京市第八十中学', '陈经纶': '陈经纶中学', '日坛': '日坛中学',
-  '和平街(和平街)': '和平街一中', '和平街(莲葩园)': '和平街一中（北苑莲葩园校区）',
-  '对外经贸94中': '对外经济贸易大学附属中学', '十七中': '北京十七中', '工大附中': '北京工业大学附属中学',
-  '人朝': '人大附中朝阳学校', '东方德才': '东方德才学校', '东师朝': '东北师大附中朝阳学校', '清华朝阳': '清华附中朝阳学校',
-}
 // 按孩子位次给校额到校推荐：高中统招位次 vs 孩子rank → 值得冲/相当/统招本可达
 const xedRecommend = computed(() => {
   const rank = Number(form.rank) || 0
@@ -661,7 +747,10 @@ const tcOptions: string[] = []
           <div class="layer-chips">
             <button class="lchip" :class="{ on: layers.gongban }" @click="layers.gongban = !layers.gongban">公办普高</button>
             <button class="lchip" :class="{ on: layers.coop }" @click="layers.coop = !layers.coop">中外合作/国际班</button>
-            <button class="lchip" :class="{ on: layers.minban }" @click="layers.minban = !layers.minban">民办·国际校</button>
+            <button class="lchip lc-minban" :class="{ on: layers.minban }" @click="layers.minban = !layers.minban">民办普高</button>
+            <button class="lchip lc-intl" :class="{ on: layers.intl }" @click="layers.intl = !layers.intl">国际/双语</button>
+            <button class="lchip lc-voc" :class="{ on: layers.voc }" @click="layers.voc = !layers.voc">中职/职教</button>
+            <button class="lchip lc-gt" :class="{ on: layers.gt }" @click="layers.gt = !layers.gt">贯通(全市)</button>
           </div>
         </div>
         <div class="map-detail">
@@ -706,6 +795,11 @@ const tcOptions: string[] = []
                   <dt>通勤</dt>
                   <dd>{{ selectedPoint.dist }}
                     <span v-if="selCard?.nearest?.over_max" class="dp-vol">⚠️超通勤上限</span></dd>
+                </div>
+                <div v-if="xedQuotaByName[selectedPoint.name]">
+                  <dt>🎯 校额到校</dt>
+                  <dd><b>{{ cleanName(xedSel?.name || '') }}</b> 分到本校 <b>{{ xedQuotaByName[selectedPoint.name] }}</b> 个名额
+                    <span class="dp-muted">（校内竞争·录取即锁定，详见校额到校页）</span></dd>
                 </div>
               </dl>
 
@@ -803,8 +897,17 @@ const tcOptions: string[] = []
           <template v-if="tab === 'minban'">朝阳区<b>民办</b>高中（含国内高考方向 / 双轨）{{ minbanList.length }} 所。</template>
           <template v-else>朝阳区<b>国际 / 双语</b>高中（国际课程 / 出国方向）{{ intlList.length }} 所。</template>
           地址/电话/住宿来自 <b>bjeea 2025 官方统招计划册</b>；<b>办学性质 / 方向 / 课程 / 学费</b>为公开网络交叉核验
-          （多为升学平台口径，约 2024–2025，<b>仅供参考</b>）；民办校无公开统一中考录取分数线，多为<b>自主招生 / 面试</b>。
+          （多为升学平台口径，约 2024–2025，<b>仅供参考</b>）。
         </p>
+        <div class="priv-filter" v-if="result.private_schools">
+          <span class="pf-k">学费</span>
+          <button class="pf-b" :class="{ on: tuitionBand === 'all' }" @click="tuitionBand = 'all'">全部</button>
+          <button class="pf-b" :class="{ on: tuitionBand === 'le10' }" @click="tuitionBand = 'le10'">≤10万</button>
+          <button class="pf-b" :class="{ on: tuitionBand === 'mid' }" @click="tuitionBand = 'mid'">10–20万</button>
+          <button class="pf-b" :class="{ on: tuitionBand === 'gt20' }" @click="tuitionBand = 'gt20'">&gt;20万</button>
+          <span class="pf-n">{{ privView.length }} 所</span>
+          <span class="pf-note">本区民办/国际校<b>均在中考统招计划内</b>填报；<b>无公开统一录取线</b>（按分/自主），故不设"录取分/计划内外"筛选。</span>
+        </div>
         <div class="table-scroll">
           <table class="list-table">
             <thead>
@@ -1003,7 +1106,7 @@ const tcOptions: string[] = []
             <div class="xed-rule"><span class="xed-k">方向</span>市级统筹是优质资源<b>跨区/向郊区·新城均衡</b>的机制——朝阳考生用它能填的是<b>外区/郊区</b>的统筹校；<b>朝阳本区的好学校（人朝、清华附中朝阳·望京、东师朝、对外经贸94中 等）请走【统招/校额到校】去够，不是统筹</b></div>
             <div class="xed-rule"><span class="xed-k">报名策略</span>① 与校额到校同批次、共用门槛、<b>录取即锁定、后续作废</b>；② 统筹是<b>全市按分竞争</b>（不像校额到校是校内竞争），更看绝对分数/区位次，去外区/郊区前先掂量是否真比本区统招更好，把握不大别盲填把自己锁低；③ 通常和校额到校一起在指标分配批次填报</div>
           </div>
-          <p class="xed-hl">⚠️ 朝阳考生<b>具体能填哪几所统筹校</b>，须按<b>「你所在初中（如朝外）在《招生简章》里分到的市级统筹名额」</b>逐校核对——本系统暂无该向权威数据，下表仅为<b>三档方向说明（待核）</b>，不作可报名单。</p>
+          <p class="xed-hl">下方三档为机制说明；再下方<b>「朝阳可报统筹校」清单</b>已据 bjeea 2025 官方简章逐格核出（含投朝阳名额/地址）。⚠️ 但<b>能否录取</b>仍取决于<b>朝外在简章里分到的名额 + 报该校统筹的同学名次</b>，须向初中部核实。</p>
         </div>
         <div class="tc-ref">
           <div v-for="t in TONGCHOU_REF" :key="t.tier" class="tc-tier">
@@ -1011,9 +1114,51 @@ const tcOptions: string[] = []
             <span class="tc-schools">{{ t.schools.join('、') }}</span>
           </div>
         </div>
+
+        <!-- 官方清单（据 2025 简章逐格核 + 合计对账）-->
+        <template v-if="tongchou">
+          <h4 class="batch-sub">📋 朝阳可报统筹校（2025 官方简章·朝阳列名额）</h4>
+          <p class="tc-verdict">
+            对<b>朝外约 4000 名</b>：<b>统筹一</b>（{{ tcYi.length }} 所名校本部）统招线多对应区排 500–2900，门槛太高、<b>基本陪跑</b>；
+            真正有意义的是<b>统筹二</b>——尤其 <b>清华附中将台路校区（学籍在朝阳·28 名额）</b>、央民大附（20）。
+            <b>统筹三 2025 已取消</b>。⚠️ 录取在统招<b>之前、录取即锁定</b>，志愿顺序别把远郊校排在你统招能上的好校前。
+          </p>
+          <div class="table-scroll">
+            <table class="list-table tc-tbl">
+              <thead><tr><th>统筹二·学校(校区)</th><th class="num">投朝阳</th><th>区</th><th>住宿</th><th>地址</th></tr></thead>
+              <tbody>
+                <tr v-for="s in tcEr" :key="s.name + s.campus">
+                  <td class="t-name">{{ s.name }}<small v-if="s.campus" class="tc-campus">{{ s.campus }}</small></td>
+                  <td class="num"><b>{{ s.quota_chaoyang }}</b></td>
+                  <td>{{ s.district }}</td>
+                  <td><span v-if="s.boarding === true" class="t-yes">🛏</span><span v-else-if="s.boarding === false" class="t-no">—</span><span v-else class="addr-tag">待核</span></td>
+                  <td class="t-addr">{{ s.address }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <details class="tc-yi">
+            <summary>展开统筹一 {{ tcYi.length }} 所（名校本部·门槛高，4000 名陪跑）</summary>
+            <div class="table-scroll">
+              <table class="list-table tc-tbl">
+                <thead><tr><th>统筹一·学校</th><th class="num">投朝阳</th><th>区</th><th>地址</th></tr></thead>
+                <tbody>
+                  <tr v-for="s in tcYi" :key="s.name">
+                    <td class="t-name">{{ s.name }}</td>
+                    <td class="num">{{ s.quota_chaoyang }}</td>
+                    <td>{{ s.district }}</td>
+                    <td class="t-addr">{{ s.address }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </details>
+        </template>
+
         <p class="list-tip">
-          ⚠️ 统筹一/二/三 的可报学校与名额<b>每年随 bjeea 计划变</b>，且<b>因初中校而异</b>；上表只是三档方向说明，<b>不是朝阳可报名单</b>。报名前务必以当年官方《招生简章》中“本初中分配的市级统筹名额”核对。
-          市级统筹与校额到校同批次：<b>被录即锁定、后续批次作废</b>。在「志愿草表 → 批次② 指标分配」里可填写统筹志愿。
+          ✓ 上方清单据 <b>bjeea 2025 官方简章</b>逐格核 + 合计对账（统筹一各校合计=405 与官方一致）；“投朝阳”=该校 2025 投放朝阳区的名额。
+          ⚠️ <b>统筹实际录取线官方不公开</b>（故无分数列）；能否录取取决于<b>朝外当年报该校统筹的同学名次</b>，须查简章「本初中分配名额」+ 问初中部。各年随计划变。
+          市级统筹与校额到校同批次：<b>被录即锁定、后续批次作废</b>；在「志愿草表 → 批次② 指标分配」里填写。
         </p>
       </div>
 
@@ -1240,6 +1385,25 @@ const tcOptions: string[] = []
 .lchip { font-size: 12px; padding: 4px 10px; border: 1px solid var(--gray-300); background: #fff;
   border-radius: var(--radius-full); color: var(--gray-500); }
 .lchip.on { background: var(--brand-50); color: var(--brand-dark); border-color: var(--brand); }
+/* 图层 chip 按类着色（与地图小图标同色系，开启时实心）*/
+.lchip.lc-minban.on { background: #fdf0e3; color: #b9601a; border-color: #e67e22; }
+.lchip.lc-intl.on { background: #f4ecf7; color: #76448a; border-color: #9b59b6; }
+.lchip.lc-voc.on { background: #e8f6f3; color: #117a65; border-color: #16a085; }
+.lchip.lc-gt.on { background: #eaf2f8; color: #1f618d; border-color: #2980b9; }
+/* 民办/国际 学费筛选条 */
+.priv-filter { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; margin: 0 0 8px; }
+.priv-filter .pf-k { font-size: 12.5px; color: var(--gray-600); font-weight: 600; }
+.pf-b { font-size: 12px; padding: 3px 9px; border: 1px solid var(--gray-300); background: #fff;
+  border-radius: var(--radius-full); color: var(--gray-600); cursor: pointer; }
+.pf-b.on { background: var(--brand-50); color: var(--brand-dark); border-color: var(--brand); }
+.priv-filter .pf-n { font-size: 12px; color: var(--gray-500); margin-left: 2px; }
+.priv-filter .pf-note { flex: 1 1 100%; font-size: 11.5px; color: var(--gray-500); line-height: 1.4; }
+/* 市级统筹清单 */
+.tc-verdict { font-size: 12.5px; line-height: 1.55; background: #fff8e1; border: 1px solid #ffe082;
+  border-radius: var(--radius-xs); padding: 8px 10px; margin: 4px 0 8px; }
+.tc-tbl .tc-campus { display: block; font-size: 11px; color: var(--gray-500); font-weight: 400; }
+.tc-yi { margin: 6px 0; }
+.tc-yi > summary { font-size: 12.5px; color: var(--brand-dark); cursor: pointer; padding: 4px 0; }
 /* 地图 + 详情面板：左图右栏 */
 .map-detail { display: flex; gap: 12px; align-items: stretch; }
 .map-col { flex: 1; min-width: 0; }
@@ -1297,6 +1461,7 @@ const tcOptions: string[] = []
   padding: 1px 5px; border-radius: 4px; white-space: nowrap;
 }
 #zmap :deep(.map-lbl::before) { display: none; } /* 去掉小三角箭头 */
+#zmap :deep(.map-lbl .map-xed) { color: #c0392b; font-weight: 700; margin-left: 2px; }
 /* 寄宿角标：图标右上角"宿"字标记 */
 #zmap :deep(.bd-badge) {
   position: absolute; top: -7px; right: -7px; z-index: 5;
