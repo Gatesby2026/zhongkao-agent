@@ -368,7 +368,7 @@ function renderMarkers() {
 
   // 市级统筹（默认关）—— 26 校按研判着色，点击走右侧详情
   tcLayer = L.layerGroup()
-  const tcColor: Record<string, string> = { 'tj-reach': '#c0392b', 'tj-hard': '#e67e22', 'tj-no': '#95a5a6', 'tj-unk': '#2980b9' }
+  const tcColor: Record<string, string> = { 'tj-wen': '#2ecc71', 'tj-chong': '#e74c3c', 'tj-no': '#95a5a6', 'tj-unk': '#2980b9' }
   const tcAll = [...(tongchou.value?.tongchou_er || []), ...(tongchou.value?.tongchou_yi || [])]
   tcAll.forEach((s: any) => {
     if (!s.lat || !s.lon || !s.faces_chaoyang) return
@@ -523,14 +523,15 @@ const tcEr = computed<any[]>(() => (tongchou.value?.tongchou_er || [])
   .filter((x: any) => x.faces_chaoyang).sort((a: any, b: any) => (b.quota_chaoyang || 0) - (a.quota_chaoyang || 0)))
 // 你孩子区排→估中考分（后端按本区一分一段插值）
 const estScore = computed<number | null>(() => result.value ? (result.value as any).est_score : null)
-// 统筹校研判：估分 vs 该校统招线（注意：统招线非统筹线，统筹线通常更低，故偏保守）
+// 统筹校研判：估分 vs 该校统招线，套普高式档位（够不上/冲/稳）。
+// 统招线非统筹线、统筹线通常更低 → 偏保守（"冲"档放宽到线下 10 分）。
 function tcJudge(s: any): { label: string; cls: string; d: number | null } {
   const line = s.score_2025_tongzhao
   if (!line || estScore.value == null) return { label: '线待核', cls: 'tj-unk', d: null }
   const d = Math.round(estScore.value - line)
-  if (d >= -10) return { label: '可冲', cls: 'tj-reach', d }
-  if (d >= -25) return { label: '偏难·搏', cls: 'tj-hard', d }
-  return { label: '够呛', cls: 'tj-no', d }
+  if (d >= 10) return { label: '稳', cls: 'tj-wen', d }
+  if (d >= -10) return { label: '冲', cls: 'tj-chong', d }
+  return { label: '够不上', cls: 'tj-no', d }
 }
 
 const privAll = computed<PrivSchool[]>(() => result.value?.private_schools?.schools || [])
@@ -1194,7 +1195,7 @@ const tcOptions: string[] = []
           </p>
           <div class="table-scroll">
             <table class="list-table tc-tbl">
-              <thead><tr><th>统筹二·学校(校区)</th><th class="num">投朝阳</th><th>区</th><th>研判<small v-if="estScore">估{{ estScore }}分</small></th><th>住宿</th><th>地址</th></tr></thead>
+              <thead><tr><th>统筹二·学校(校区)</th><th class="num">投朝阳</th><th>区</th><th>研判<small v-if="estScore">你估≈{{ estScore }}</small></th><th>住宿</th><th>地址</th></tr></thead>
               <tbody>
                 <tr v-for="s in tcEr" :key="s.name + s.campus">
                   <td class="t-name">{{ s.name }}<small v-if="s.campus" class="tc-campus">{{ s.campus }}</small></td>
@@ -1212,7 +1213,7 @@ const tcOptions: string[] = []
             <summary>展开统筹一 {{ tcYi.length }} 所（名校本部·门槛高，4000 名陪跑）</summary>
             <div class="table-scroll">
               <table class="list-table tc-tbl">
-                <thead><tr><th>统筹一·学校</th><th class="num">投朝阳</th><th>区</th><th>研判<small v-if="estScore">估{{ estScore }}分</small></th><th>地址</th></tr></thead>
+                <thead><tr><th>统筹一·学校</th><th class="num">投朝阳</th><th>区</th><th>研判<small v-if="estScore">你估≈{{ estScore }}</small></th><th>地址</th></tr></thead>
                 <tbody>
                   <tr v-for="s in tcYi" :key="s.name">
                     <td class="t-name">{{ s.name }}</td>
@@ -1228,8 +1229,8 @@ const tcOptions: string[] = []
           </details>
           <p class="tc-judge-note">
             <b>研判口径</b>：你区排 <b>{{ form.rank }}</b> 名 → 按本区一分一段估中考分 <b>≈{{ estScore }}</b> 分，与各校 <b>2025 统招线</b>比（Δ=估分−线）。
-            <span class="tj tj-reach">可冲</span>Δ≥−10　<span class="tj tj-hard">偏难·搏</span>−25~−10　<span class="tj tj-no">够呛</span>Δ&lt;−25　<span class="tj tj-unk">线待核</span>无公开线。
-            ⚠️ 这里用的是<b>统招线（非统筹实际线）</b>；<b>统筹线通常更低</b>，所以"偏难"的也可能有机会、"够呛"才是基本无望——偏保守。估分仅插值近似。
+            <span class="tj tj-wen">稳</span>Δ≥+10　<span class="tj tj-chong">冲</span>−10~+10　<span class="tj tj-no">够不上</span>Δ&lt;−10　<span class="tj tj-unk">线待核</span>无公开线。
+            <b>估分随你填的区排名动态变化</b>（不是写死）。⚠️ 比的是各校<b>统招线（非统筹实际线）</b>，<b>统筹线通常更低</b>，故偏保守——"够不上"才基本无望，"冲"档实际机会更大。估分为一分一段插值近似。
           </p>
         </template>
 
@@ -1488,10 +1489,10 @@ const tcOptions: string[] = []
 .tc-tbl .tc-campus { display: block; font-size: 11px; color: var(--gray-500); font-weight: 400; }
 /* 统筹研判标 */
 .tj { display: inline-block; font-size: 11px; font-weight: 700; padding: 1px 6px; border-radius: var(--radius-full); white-space: nowrap; }
-.tj-reach { background: #fdecea; color: #c0392b; }   /* 可冲(红=值得拼) */
-.tj-hard { background: #fef5e7; color: #b9770e; }    /* 偏难 */
-.tj-no { background: var(--gray-100); color: var(--gray-500); }  /* 够呛 */
-.tj-unk { background: #eaf2f8; color: #2471a3; }     /* 线待核 */
+.tj-wen { background: #eafaf1; color: #1e8449; }     /* 稳(绿) */
+.tj-chong { background: #fdecea; color: #c0392b; }   /* 冲(红=拼一下) */
+.tj-no { background: var(--gray-100); color: var(--gray-500); }  /* 够不上(灰) */
+.tj-unk { background: #eaf2f8; color: #2471a3; }     /* 线待核(蓝) */
 .tj-d { display: block; font-size: 10.5px; color: var(--gray-500); font-weight: 400; margin-top: 1px; }
 .tc-judge-note { font-size: 11.5px; line-height: 1.6; color: var(--gray-600); background: var(--gray-50);
   border-radius: var(--radius-xs); padding: 7px 10px; margin: 8px 0 0; }
