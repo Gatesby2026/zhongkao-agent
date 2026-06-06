@@ -142,7 +142,13 @@ const form = reactive({
   mode: 'bicycling',
   max_km: 8 as number | string,
   boarding: false,
+  identity: 'jjyj' as 'jjyj' | 'feijing' | 'wangjie',   // 京籍应届/非京籍/往届
 })
+const IDENTITIES = [
+  { v: 'jjyj', label: '京籍应届' },
+  { v: 'feijing', label: '非京籍' },
+  { v: 'wangjie', label: '往届/回京' },
+]
 // 学校类型图层开关（地图上显示哪些点）
 const layers = reactive({ gongban: true, coop: true, minban: false })
 const tab = ref<'map' | 'list' | 'minban' | 'intl' | 'voc' | 'gt' | 'xed' | 'draft'>('map')   // +贯通+校额到校
@@ -403,6 +409,58 @@ function copyDraft() {
   )
 }
 const copyHint = ref('')
+
+/* ---------------- 志愿草表 v2：三批次（2026 口径）---------------- */
+// 批次资格（按考生身份灰掉）
+const canIndicator = computed(() => form.identity === 'jjyj')   // 指标分配=校额到校/统筹：京籍应届
+const canGuantong = computed(() => form.identity === 'jjyj')    // 贯通：京籍应届
+const canPuhao = computed(() => form.identity !== 'feijing')    // 普高统招：非京籍不可
+const identityNote = computed(() => {
+  if (form.identity === 'feijing') return '非京籍随迁子女不能报普通高中（统招/指标分配/贯通），只能报中职类；下列普高批次仅供了解。'
+  if (form.identity === 'wangjie') return '往届/回户籍/外省回京考生不能报指标分配(校额到校/统筹)与贯通；普高统招可报。'
+  return ''
+})
+// ① 提前招生：自由填写（2026 不含贯通；特长/中外合作/中职自主无官方结构化代码）
+const draftEarly = ref<{ text: string }[]>(Array.from({ length: 8 }, () => ({ text: '' })))
+// ② 指标分配-市级统筹：自由填写
+const draftTongchou = ref<{ text: string }[]>(Array.from({ length: 4 }, () => ({ text: '' })))
+// ② 指标分配-校额到校：选优质高中(来自孩子初中的名额) + 专业手填
+interface XedSlot { school: string | null; majors: string }
+const draftXed = ref<XedSlot[]>(Array.from({ length: 8 }, () => ({ school: null, majors: '' })))
+// 当前初中(复用 xedQuery)可报的优质高中 + 名额；待核校(无明细)返回空并由模板提示
+const xedEligible = computed<{ school: string; n: number }[]>(() => {
+  const r = xedSel.value
+  if (!r || !r.by_school) return []
+  return Object.entries(r.by_school).map(([school, n]) => ({ school, n: n as number }))
+})
+
+function copyAll() {
+  const res = result.value
+  if (!res) return
+  const L: string[] = [`中考志愿草表（${res.district} · 三批次 · 2026口径 · 仅参考，以官方网报为准）`,
+    `考生身份：${(IDENTITIES.find(i => i.v === form.identity) || {}).label}`, '']
+  L.push('【批次① 提前招生】(2026不含贯通；手填)')
+  draftEarly.value.forEach((s, i) => { if (s.text.trim()) L.push(`  提招${i + 1}　${s.text.trim()}`) })
+  L.push('', '【批次② 指标分配】校额到校 + 市级统筹')
+  draftXed.value.forEach((s, i) => {
+    if (!s.school) return
+    const n = xedEligible.value.find(e => e.school === s.school)?.n
+    L.push(`  校额到校${i + 1}　${s.school}${n ? `(本校名额${n})` : ''}　专业:${s.majors.trim() || '(手填)'}`)
+  })
+  draftTongchou.value.forEach((s, i) => { if (s.text.trim()) L.push(`  统筹${i + 1}　${s.text.trim()}`) })
+  L.push('', `【批次③ 统一招生】(2026含贯通) 共${ZHIYUAN_SLOTS}志愿×2专业`)
+  draft.value.forEach((s, i) => {
+    if (!s.name) { L.push(`  志愿${i + 1}　（空）`); return }
+    const c = findCard(s.name)
+    const ms = majorsOf(s.name).filter(m => s.picks.includes(m.major_code))
+    const mtxt = ms.map(m => `${m.major_code} ${cleanName(m.major_name)}`).join('　')
+    L.push(`  志愿${i + 1}　${cleanName(s.name)}(${c?.school_code || ''})　${mtxt}`)
+  })
+  navigator.clipboard?.writeText(L.join('\n')).then(
+    () => { copyHint.value = '已复制全部三批次到剪贴板'; setTimeout(() => copyHint.value = '', 2500) },
+    () => { copyHint.value = '复制失败，请手动选择' },
+  )
+}
 </script>
 
 <template>
@@ -448,6 +506,11 @@ const copyHint = ref('')
         </label>
         <label class="f-km">通勤上限<small>km</small>
           <input type="number" v-model="form.max_km" min="1" placeholder="8" :disabled="form.boarding" />
+        </label>
+        <label class="f-mode">考生身份
+          <select v-model="form.identity">
+            <option v-for="x in IDENTITIES" :key="x.v" :value="x.v">{{ x.label }}</option>
+          </select>
         </label>
         <label class="f-board switch">接受住宿
           <span class="sw-line">
@@ -825,41 +888,104 @@ const copyHint = ref('')
         </p>
       </div>
 
-      <!-- TAB 8：志愿草表（统招 12×2），镜像官方填报 -->
+      <!-- TAB 8：志愿草表 v2（三批次 · 2026 口径）-->
       <div class="draftwrap" v-show="tab === 'draft'">
         <p class="draft-note">
-          已按 <b>冲→稳→保</b> 顺序自动预填 {{ filledSlots }}/{{ ZHIYUAN_SLOTS }} 个志愿；可改学校、改专业(班，每志愿最多 2 个)。
-          这就是中考网报系统里统招批次的样子（学校代码 + 专业代码）。
-          <br>提示：<b>提前招生</b>（特长/特色等）与<b>校额到校/指标分配</b>是单独批次、单独填报，本表只覆盖<b>统一招生</b>；贯通培养 2026 起并入统招批次。
+          三批次按 <b>①提前招生 → ②指标分配 → ③统一招生</b> 顺序录取，<b>被前一批次录取即锁定，后批次作废</b>。
+          下表镜像官方网报，<b>2026 口径</b>（贯通已并入统招）；志愿数/代码以当年官方网报系统为准。
         </p>
+        <p v-if="identityNote" class="board-note">⚠️ {{ identityNote }}</p>
         <div class="draft-actions">
-          <button class="ghost" @click="resetDraft">重置为推荐顺序</button>
-          <button class="ghost" @click="copyDraft">复制草表文本</button>
+          <button class="ghost" @click="copyAll">📋 复制全部三批次</button>
           <span v-if="copyHint" class="copyhint">{{ copyHint }}</span>
         </div>
-        <div class="slots">
-          <div v-for="(s, i) in draft" :key="i" class="slot" :class="{ empty: !s.name, filled: s.name }">
-            <div class="slot-top">
-              <span class="slot-no" :class="{ on: s.name }">{{ i + 1 }}</span>
-              <select v-model="s.name" @change="onSlotSchool(i)" class="school-sel">
-                <option :value="null">＋ 选择学校（空）</option>
-                <option v-for="c in reportable" :key="c.name" :value="c.name">
-                  [{{ bandOf(c.name) }}] {{ cleanName(c.name) }}（{{ c.school_code }}）
-                </option>
-              </select>
-              <button v-if="s.name" class="x" title="清空" @click="clearSlot(i)">✕</button>
-            </div>
-            <div v-if="s.name" class="slot-majors">
-              <button v-for="m in majorsOf(s.name)" :key="m.major_code" type="button"
-                class="mchip" :class="{ on: s.picks.includes(m.major_code) }"
-                @click="togglePick(i, m.major_code)">
-                <b>{{ m.major_code }}</b> {{ cleanName(m.major_name) }}
-              </button>
-              <span v-if="!majorsOf(s.name).length" class="nomajor">该校暂无官方专业代码数据</span>
+
+        <!-- 批次① 提前招生 -->
+        <section class="batch">
+          <h3 class="batch-h">① 提前招生 <small>2026 不含贯通；特长生 / 中外合作班 / 中职自主——无官方结构化代码，<b>手填</b></small></h3>
+          <div class="early-rows">
+            <div v-for="(s, i) in draftEarly" :key="i" class="early-row">
+              <span class="slot-no">{{ i + 1 }}</span>
+              <input v-model="s.text" class="early-input" placeholder="如：XX中学 美术特长 / XX学校 中外合作班 / XX中职 自主招生 …" />
             </div>
           </div>
-        </div>
-        <p v-if="result.admission_source" class="src">数据来源：{{ result.admission_source }}</p>
+        </section>
+
+        <!-- 批次② 指标分配 -->
+        <section class="batch">
+          <h3 class="batch-h">② 指标分配（校额到校 + 市级统筹）<small>门槛 总分≥430 + 综合素质B + 同一初中连续三年学籍</small></h3>
+          <template v-if="canIndicator">
+            <label class="xed-qlabel" style="max-width:440px">孩子初中校（与「校额到校」页共用）
+              <input list="xedSchoolList2" v-model="xedQuery" class="xed-input" placeholder="输入/选择，如 朝阳外国语学校" />
+            </label>
+            <datalist id="xedSchoolList2"><option v-for="r in (xedBlock ? xedBlock.rows : [])" :key="r.code" :value="r.name" /></datalist>
+            <p v-if="xedSel && xedSel.by_school" class="xed-src">{{ cleanName(xedSel.name) }}：校额到校共 {{ xedSel.total }} 个，下面按名额选优质高中（括号为本校名额）。</p>
+            <p v-else-if="xedSel" class="xed-note warn">{{ cleanName(xedSel.name) }}：合计 {{ xedSel.total }}，明细待核——优质高中与专业请对照官方原图手填。</p>
+            <p v-else class="xed-src">先填上面的初中校，下面才能按名额选优质高中。</p>
+            <div class="slots">
+              <div v-for="(s, i) in draftXed" :key="i" class="slot" :class="{ filled: s.school, empty: !s.school }">
+                <div class="slot-top">
+                  <span class="slot-no" :class="{ on: s.school }">{{ i + 1 }}</span>
+                  <select v-model="s.school" class="school-sel" :disabled="!xedEligible.length">
+                    <option :value="null">＋ 选优质高中（校额到校）</option>
+                    <option v-for="e in xedEligible" :key="e.school" :value="e.school">{{ e.school }}（名额{{ e.n }}）</option>
+                  </select>
+                  <button v-if="s.school" class="x" title="清空" @click="s.school = null; s.majors = ''">✕</button>
+                </div>
+                <div v-if="s.school" class="slot-majors">
+                  <input v-model="s.majors" class="early-input" placeholder="专业(班)手填——校额到校专业代码待核，可沿用该校统招专业，仅参考" />
+                </div>
+              </div>
+            </div>
+            <h4 class="batch-sub">市级统筹（统筹一/二/三，手填）</h4>
+            <div class="early-rows">
+              <div v-for="(s, i) in draftTongchou" :key="i" class="early-row">
+                <span class="slot-no">{{ i + 1 }}</span>
+                <input v-model="s.text" class="early-input" placeholder="如：清华附中(统筹二) 某专业(班) …" />
+              </div>
+            </div>
+          </template>
+          <p v-else class="xed-note warn">当前「{{ (IDENTITIES.find(x => x.v === form.identity) || {}).label }}」身份不可报指标分配（校额到校 / 市级统筹）。</p>
+        </section>
+
+        <!-- 批次③ 统一招生 -->
+        <section class="batch">
+          <h3 class="batch-h">③ 统一招生 <small>2026 含贯通；{{ ZHIYUAN_SLOTS }} 志愿 ×2 专业，已按冲→稳→保预填 {{ filledSlots }}/{{ ZHIYUAN_SLOTS }}</small></h3>
+          <template v-if="canPuhao">
+            <div class="draft-actions"><button class="ghost" @click="resetDraft">重置为推荐顺序</button></div>
+            <div class="slots">
+              <div v-for="(s, i) in draft" :key="i" class="slot" :class="{ empty: !s.name, filled: s.name }">
+                <div class="slot-top">
+                  <span class="slot-no" :class="{ on: s.name }">{{ i + 1 }}</span>
+                  <select v-model="s.name" @change="onSlotSchool(i)" class="school-sel">
+                    <option :value="null">＋ 选择学校（空）</option>
+                    <option v-for="c in reportable" :key="c.name" :value="c.name">
+                      [{{ bandOf(c.name) }}] {{ cleanName(c.name) }}（{{ c.school_code }}）
+                    </option>
+                  </select>
+                  <button v-if="s.name" class="x" title="清空" @click="clearSlot(i)">✕</button>
+                </div>
+                <div v-if="s.name" class="slot-majors">
+                  <button v-for="m in majorsOf(s.name)" :key="m.major_code" type="button"
+                    class="mchip" :class="{ on: s.picks.includes(m.major_code) }"
+                    @click="togglePick(i, m.major_code)">
+                    <b>{{ m.major_code }}</b> {{ cleanName(m.major_name) }}
+                  </button>
+                  <span v-if="!majorsOf(s.name).length" class="nomajor">该校暂无官方专业代码数据</span>
+                </div>
+              </div>
+            </div>
+            <div v-if="canGuantong && gtBlock" class="gt-ref">
+              <h4 class="batch-sub">贯通培养可选项（2026 并入统招；380 分·仅限京籍；具体填报位以官方网报为准）</h4>
+              <div class="gt-ref-list">
+                <span v-for="(p, i) in gtBlock.projects" :key="i" class="xed-cell">{{ shortCampusName(p.school) }}·{{ p.major }}</span>
+              </div>
+            </div>
+          </template>
+          <p v-else class="xed-note warn">非京籍随迁子女不能报普通高中统招（只能报中职类）；上方仅供了解。</p>
+        </section>
+
+        <p v-if="result.admission_source" class="src">数据来源：{{ result.admission_source }}（统招）。提招/统筹/校额到校专业为手填占位，三批次为 2026 口径推断，一切以当年官方网报系统与简章为准。</p>
       </div>
     </section>
   </div>
@@ -1130,6 +1256,18 @@ const copyHint = ref('')
 .ghost { font-size: 12.5px; padding: 6px 12px; border: 1px solid var(--gray-300); background: #fff;
   border-radius: var(--radius-xs); color: var(--gray-700); cursor: pointer; }
 .copyhint { font-size: 12px; color: var(--success); }
+/* 三批次分区 */
+.batch { border-top: 2px solid var(--gray-100); padding-top: 14px; margin-top: 16px; }
+.batch:first-of-type { border-top: none; padding-top: 0; margin-top: 8px; }
+.batch-h { font-size: 15px; color: var(--brand-deeper); margin: 0 0 10px; }
+.batch-h small { font-weight: 400; font-size: 12px; color: var(--gray-500); margin-left: 6px; }
+.batch-sub { font-size: 13px; color: var(--gray-700); margin: 14px 0 8px; }
+.early-rows { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+.early-row { display: flex; align-items: center; gap: 8px; }
+.early-input { flex: 1; min-width: 0; padding: 7px 9px; border: 1px solid var(--gray-300);
+  border-radius: var(--radius-xs); font-size: 12.5px; background: #fff; }
+.gt-ref { margin-top: 14px; }
+.gt-ref-list { display: flex; flex-wrap: wrap; gap: 6px; }
 /* 12 志愿用两列网格铺开，消除单列下拉右侧大段空白 */
 .slots { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
 .slot { padding: 10px 12px; border: 1px solid var(--gray-100); border-radius: var(--radius-sm);
