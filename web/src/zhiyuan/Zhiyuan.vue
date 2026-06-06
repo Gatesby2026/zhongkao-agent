@@ -321,25 +321,45 @@ function renderMarkers() {
   if (layers.minban) minbanLayer.addTo(mapInst)
   if (layers.intl) intlLayer.addTo(mapInst)
 
-  // 中职/职教（默认关）
+  // 中职/职教（默认关）—— 点击走右侧详情面板（同普高）
   vocLayer = L.layerGroup()
   ;(res.vocational?.schools || []).forEach((s: any) => {
     if (!s.lat || !s.lon) return
+    const vp: Point = {
+      name: s.name, lat: s.lat, lon: s.lon, kind: 'small', color: '#16a085',
+      band: '中职', level: s.type || '中职/职教', rank: '—', margin: '—',
+      dist: s.dist ? `${s.dist.km}km · ${s.dist.mins}分钟（${s.dist.label}）${s.dist.over_max ? ' ⚠️超通勤上限' : ''}` : '距离未知',
+      hist: '',
+      style: (s.specialties && s.specialties.length) ? '专业：' + s.specialties.join('·') : '',
+      note: [s.address, s.five_year ? '含五年制(3+2)→大专' : '', s.note].filter(Boolean).join(' · '),
+      reason: '', tags: [], gaokao: '', matched: [],
+    }
     L.marker([s.lat, s.lon], { icon: smallIcon('#16a085') }).addTo(vocLayer)
+      .on('click', () => selectPoint(vp))
       .bindTooltip(shortName(s.name), { direction: 'top', offset: [0, -6], className: 'map-lbl' })
-      .bindPopup(`<div class="pop"><b>${cleanName(s.name)}</b><br>${s.type || '中职'}<br>${s.address || ''}</div>`)
     if (layers.voc) bounds.push([s.lat, s.lon])
   })
   if (layers.voc) vocLayer.addTo(mapInst)
 
-  // 贯通承办院校（全市·默认关）
+  // 贯通承办院校（全市·默认关）—— 点击走右侧详情面板（同普高）
   gtLayer = L.layerGroup()
+  const gtProjects = (res.guantong as any)?.projects || []
   Object.entries((res.guantong as any)?.school_coords || {}).forEach(([nm, c]: any) => {
     if (!c?.lat || !c?.lon) return
-    const approx = c.geo === 'approx' ? '（近似）' : ''
+    const approx = c.geo === 'approx' ? '（坐标近似）' : ''
+    const projs = gtProjects.filter((p: any) => p.school === nm)
+    const projTxt = projs.map((p: any) => `${p.type}：${p.major}→${p.benke}（${p.plan}人）`).join('；')
+    const gp: Point = {
+      name: nm, lat: c.lat, lon: c.lon, kind: 'small', color: '#2980b9',
+      band: '贯通', level: '贯通承办院校（全市招生·7年→本科）', rank: '—', margin: '—',
+      dist: '距离未知', hist: '',
+      style: `承办院校 · ${c.district || ''}${approx}`,
+      note: [projTxt, c.note].filter(Boolean).join('　|　'),
+      reason: '', tags: [], gaokao: '', matched: [],
+    }
     L.marker([c.lat, c.lon], { icon: smallIcon('#2980b9') }).addTo(gtLayer)
+      .on('click', () => selectPoint(gp))
       .bindTooltip(shortName(nm), { direction: 'top', offset: [0, -6], className: 'map-lbl' })
-      .bindPopup(`<div class="pop"><b>${nm}</b><br>贯通承办院校 · ${c.district || ''}${approx}<br>${c.note || ''}</div>`)
     if (layers.gt) bounds.push([c.lat, c.lon])
   })
   if (layers.gt) gtLayer.addTo(mapInst)
