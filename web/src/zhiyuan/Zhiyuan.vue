@@ -152,7 +152,7 @@ const IDENTITIES = [
   { v: 'wangjie', label: '往届/回京' },
 ]
 // 学校类型图层开关（地图上显示哪些点）
-const layers = reactive({ gongban: true, coop: true, minban: false, intl: false, voc: false, gt: false })
+const layers = reactive({ gongban: true, coop: true, minban: false, intl: false, voc: false, gt: false, tc: false, xed: false })
 const tab = ref<'map' | 'list' | 'minban' | 'intl' | 'voc' | 'gt' | 'xed' | 'tc' | 'draft'>('map')   // +贯通+校额到校+统筹
 const loading = ref(false)
 const errMsg = ref('')
@@ -163,6 +163,8 @@ let minbanLayer: any = null
 let intlLayer: any = null
 let vocLayer: any = null
 let gtLayer: any = null
+let tcLayer: any = null
+let xedLayer: any = null
 // 民办校名 → {民办?, 国际?} 标记（用于地图拆层）
 const privFlags = computed<Record<string, { minban: boolean; intl: boolean }>>(() => {
   const m: Record<string, { minban: boolean; intl: boolean }> = {}
@@ -277,9 +279,9 @@ function isCoopPoint(p: Point): boolean {
 function renderMarkers() {
   const res = result.value
   if (!res || !mapInst) return
-  for (const lyr of [publicLayer, minbanLayer, intlLayer, vocLayer, gtLayer])
+  for (const lyr of [publicLayer, minbanLayer, intlLayer, vocLayer, gtLayer, tcLayer, xedLayer])
     if (lyr) mapInst.removeLayer(lyr)
-  publicLayer = minbanLayer = intlLayer = vocLayer = gtLayer = null
+  publicLayer = minbanLayer = intlLayer = vocLayer = gtLayer = tcLayer = xedLayer = null
   const bounds: any[] = []
   if (res.home_coord) bounds.push(res.home_coord)
 
@@ -364,13 +366,47 @@ function renderMarkers() {
   })
   if (layers.gt) gtLayer.addTo(mapInst)
 
+  // 市级统筹（默认关）—— 26 校按研判着色，点击走右侧详情
+  tcLayer = L.layerGroup()
+  const tcColor: Record<string, string> = { 'tj-reach': '#c0392b', 'tj-hard': '#e67e22', 'tj-no': '#95a5a6', 'tj-unk': '#2980b9' }
+  const tcAll = [...(tongchou.value?.tongchou_er || []), ...(tongchou.value?.tongchou_yi || [])]
+  tcAll.forEach((s: any) => {
+    if (!s.lat || !s.lon || !s.faces_chaoyang) return
+    const j = tcJudge(s)
+    const tier = (tongchou.value?.tongchou_er || []).includes(s) ? '统筹二' : '统筹一'
+    const tp: Point = {
+      name: s.name, lat: s.lat, lon: s.lon, kind: 'small', color: tcColor[j.cls] || '#2980b9',
+      band: tier, level: `市级统筹 · ${tier}${s.campus ? '（' + s.campus + '）' : ''}`, rank: '—', margin: '—',
+      dist: '距离未知', hist: '',
+      style: `投朝阳 ${s.quota_chaoyang} 名 · ${s.district}　研判：${j.label}${j.d != null ? `（估${estScore.value}/统招线${s.score_2025_tongzhao}·Δ${j.d > 0 ? '+' : ''}${j.d}）` : '（统招线待核）'}`,
+      note: [s.address, '⚠️研判按统招线、统筹线通常更低；录取看朝外名次，以简章为准'].filter(Boolean).join(' · '),
+      reason: '', tags: [], gaokao: '', matched: [],
+    }
+    L.marker([s.lat, s.lon], { icon: smallIcon(tcColor[j.cls] || '#2980b9') }).addTo(tcLayer)
+      .on('click', () => selectPoint(tp))
+      .bindTooltip(shortName(s.name), { direction: 'top', offset: [0, -6], className: 'map-lbl' })
+    if (layers.tc) bounds.push([s.lat, s.lon])
+  })
+  if (layers.tc) tcLayer.addTo(mapInst)
+
+  // 校额到校（默认关）—— 在有名额的朝阳优质高中(已是公办 pin)上叠加 🎯 高亮环
+  xedLayer = L.layerGroup()
+  res.points.forEach((p) => {
+    const q = xedQuotaByName.value[p.name]
+    if (!q) return
+    L.marker([p.lat, p.lon], { icon: L.divIcon({ className: 'xed-ring', html: `<div class="xr">🎯${q}</div>`, iconSize: [0, 0] }) })
+      .addTo(xedLayer).on('click', () => selectPoint(p))
+    if (layers.xed) bounds.push([p.lat, p.lon])
+  })
+  if (layers.xed) xedLayer.addTo(mapInst)
+
   if (bounds.length) mapInst.fitBounds(bounds, { padding: [40, 40], maxZoom: 14 })
 }
 function renderMap() {
   const res = result.value
   if (!res) return
   selectedPoint.value = null
-  if (mapInst) { mapInst.remove(); mapInst = null; publicLayer = minbanLayer = intlLayer = vocLayer = gtLayer = null }
+  if (mapInst) { mapInst.remove(); mapInst = null; publicLayer = minbanLayer = intlLayer = vocLayer = gtLayer = tcLayer = xedLayer = null }
   // 默认中心：有住址用住址，否则用全部点位中心（朝阳）
   let center: [number, number] = res.home_coord || [39.95, 116.47]
   if (!res.home_coord && res.points.length) {
@@ -485,6 +521,17 @@ const tcYi = computed<any[]>(() => (tongchou.value?.tongchou_yi || [])
   .filter((x: any) => x.faces_chaoyang).sort((a: any, b: any) => (b.quota_chaoyang || 0) - (a.quota_chaoyang || 0)))
 const tcEr = computed<any[]>(() => (tongchou.value?.tongchou_er || [])
   .filter((x: any) => x.faces_chaoyang).sort((a: any, b: any) => (b.quota_chaoyang || 0) - (a.quota_chaoyang || 0)))
+// 你孩子区排→估中考分（后端按本区一分一段插值）
+const estScore = computed<number | null>(() => result.value ? (result.value as any).est_score : null)
+// 统筹校研判：估分 vs 该校统招线（注意：统招线非统筹线，统筹线通常更低，故偏保守）
+function tcJudge(s: any): { label: string; cls: string; d: number | null } {
+  const line = s.score_2025_tongzhao
+  if (!line || estScore.value == null) return { label: '线待核', cls: 'tj-unk', d: null }
+  const d = Math.round(estScore.value - line)
+  if (d >= -10) return { label: '可冲', cls: 'tj-reach', d }
+  if (d >= -25) return { label: '偏难·搏', cls: 'tj-hard', d }
+  return { label: '够呛', cls: 'tj-no', d }
+}
 
 const privAll = computed<PrivSchool[]>(() => result.value?.private_schools?.schools || [])
 const minbanList = computed<PrivSchool[]>(() => privAll.value.filter(s => s.in_minban_list))
@@ -771,6 +818,8 @@ const tcOptions: string[] = []
             <button class="lchip lc-intl" :class="{ on: layers.intl }" @click="layers.intl = !layers.intl">国际/双语</button>
             <button class="lchip lc-voc" :class="{ on: layers.voc }" @click="layers.voc = !layers.voc">中职/职教</button>
             <button class="lchip lc-gt" :class="{ on: layers.gt }" @click="layers.gt = !layers.gt">贯通(全市)</button>
+            <button v-if="tongchou" class="lchip lc-tc" :class="{ on: layers.tc }" @click="layers.tc = !layers.tc">市级统筹</button>
+            <button class="lchip lc-xed" :class="{ on: layers.xed }" @click="layers.xed = !layers.xed">🎯校额到校</button>
           </div>
         </div>
         <div class="map-detail">
@@ -1145,12 +1194,14 @@ const tcOptions: string[] = []
           </p>
           <div class="table-scroll">
             <table class="list-table tc-tbl">
-              <thead><tr><th>统筹二·学校(校区)</th><th class="num">投朝阳</th><th>区</th><th>住宿</th><th>地址</th></tr></thead>
+              <thead><tr><th>统筹二·学校(校区)</th><th class="num">投朝阳</th><th>区</th><th>研判<small v-if="estScore">估{{ estScore }}分</small></th><th>住宿</th><th>地址</th></tr></thead>
               <tbody>
                 <tr v-for="s in tcEr" :key="s.name + s.campus">
                   <td class="t-name">{{ s.name }}<small v-if="s.campus" class="tc-campus">{{ s.campus }}</small></td>
                   <td class="num"><b>{{ s.quota_chaoyang }}</b></td>
                   <td>{{ s.district }}</td>
+                  <td><span class="tj" :class="tcJudge(s).cls">{{ tcJudge(s).label }}</span>
+                    <small v-if="tcJudge(s).d != null" class="tj-d">线{{ s.score_2025_tongzhao }}·Δ{{ (tcJudge(s).d ?? 0) > 0 ? '+' : '' }}{{ tcJudge(s).d }}</small></td>
                   <td><span v-if="s.boarding === true" class="t-yes">🛏</span><span v-else-if="s.boarding === false" class="t-no">—</span><span v-else class="addr-tag">待核</span></td>
                   <td class="t-addr">{{ s.address }}</td>
                 </tr>
@@ -1161,23 +1212,30 @@ const tcOptions: string[] = []
             <summary>展开统筹一 {{ tcYi.length }} 所（名校本部·门槛高，4000 名陪跑）</summary>
             <div class="table-scroll">
               <table class="list-table tc-tbl">
-                <thead><tr><th>统筹一·学校</th><th class="num">投朝阳</th><th>区</th><th>地址</th></tr></thead>
+                <thead><tr><th>统筹一·学校</th><th class="num">投朝阳</th><th>区</th><th>研判<small v-if="estScore">估{{ estScore }}分</small></th><th>地址</th></tr></thead>
                 <tbody>
                   <tr v-for="s in tcYi" :key="s.name">
                     <td class="t-name">{{ s.name }}</td>
                     <td class="num">{{ s.quota_chaoyang }}</td>
                     <td>{{ s.district }}</td>
+                    <td><span class="tj" :class="tcJudge(s).cls">{{ tcJudge(s).label }}</span>
+                      <small v-if="tcJudge(s).d != null" class="tj-d">线{{ s.score_2025_tongzhao }}·Δ{{ (tcJudge(s).d ?? 0) > 0 ? '+' : '' }}{{ tcJudge(s).d }}</small></td>
                     <td class="t-addr">{{ s.address }}</td>
                   </tr>
                 </tbody>
               </table>
             </div>
           </details>
+          <p class="tc-judge-note">
+            <b>研判口径</b>：你区排 <b>{{ form.rank }}</b> 名 → 按本区一分一段估中考分 <b>≈{{ estScore }}</b> 分，与各校 <b>2025 统招线</b>比（Δ=估分−线）。
+            <span class="tj tj-reach">可冲</span>Δ≥−10　<span class="tj tj-hard">偏难·搏</span>−25~−10　<span class="tj tj-no">够呛</span>Δ&lt;−25　<span class="tj tj-unk">线待核</span>无公开线。
+            ⚠️ 这里用的是<b>统招线（非统筹实际线）</b>；<b>统筹线通常更低</b>，所以"偏难"的也可能有机会、"够呛"才是基本无望——偏保守。估分仅插值近似。
+          </p>
         </template>
 
         <p class="list-tip">
           ✓ 上方清单据 <b>bjeea 2025 官方简章</b>逐格核 + 合计对账（统筹一各校合计=405 与官方一致）；“投朝阳”=该校 2025 投放朝阳区的名额。
-          ⚠️ <b>统筹实际录取线官方不公开</b>（故无分数列）；能否录取取决于<b>朝外当年报该校统筹的同学名次</b>，须查简章「本初中分配名额」+ 问初中部。各年随计划变。
+          ⚠️ 研判用的是各校<b>统招线</b>（全市可比的强度参考），<b>统筹实际录取线官方不公开、通常更低</b>；最终能否录取取决于<b>朝外当年报该校统筹的同学名次</b>，须查简章「本初中分配名额」+ 问初中部。各年随计划变。
           市级统筹与校额到校同批次：<b>被录即锁定、后续批次作废</b>；在「志愿草表 → 批次② 指标分配」里填写。
         </p>
       </div>
@@ -1410,6 +1468,12 @@ const tcOptions: string[] = []
 .lchip.lc-intl.on { background: #f4ecf7; color: #76448a; border-color: #9b59b6; }
 .lchip.lc-voc.on { background: #e8f6f3; color: #117a65; border-color: #16a085; }
 .lchip.lc-gt.on { background: #eaf2f8; color: #1f618d; border-color: #2980b9; }
+.lchip.lc-tc.on { background: #fdecea; color: #a93226; border-color: #c0392b; }
+.lchip.lc-xed.on { background: #fef9e7; color: #b9770e; border-color: #f1c40f; }
+/* 校额到校 🎯 高亮环（叠加在公办 pin 上）*/
+#zmap :deep(.xed-ring .xr) { transform: translate(-50%, -120%); background: #fff3cd; color: #b9770e;
+  border: 1.5px solid #f1c40f; border-radius: var(--radius-full); font-size: 11px; font-weight: 700;
+  padding: 0 5px; white-space: nowrap; box-shadow: 0 1px 3px rgba(0,0,0,.2); }
 /* 民办/国际 学费筛选条 */
 .priv-filter { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; margin: 0 0 8px; }
 .priv-filter .pf-k { font-size: 12.5px; color: var(--gray-600); font-weight: 600; }
@@ -1422,6 +1486,16 @@ const tcOptions: string[] = []
 .tc-verdict { font-size: 12.5px; line-height: 1.55; background: #fff8e1; border: 1px solid #ffe082;
   border-radius: var(--radius-xs); padding: 8px 10px; margin: 4px 0 8px; }
 .tc-tbl .tc-campus { display: block; font-size: 11px; color: var(--gray-500); font-weight: 400; }
+/* 统筹研判标 */
+.tj { display: inline-block; font-size: 11px; font-weight: 700; padding: 1px 6px; border-radius: var(--radius-full); white-space: nowrap; }
+.tj-reach { background: #fdecea; color: #c0392b; }   /* 可冲(红=值得拼) */
+.tj-hard { background: #fef5e7; color: #b9770e; }    /* 偏难 */
+.tj-no { background: var(--gray-100); color: var(--gray-500); }  /* 够呛 */
+.tj-unk { background: #eaf2f8; color: #2471a3; }     /* 线待核 */
+.tj-d { display: block; font-size: 10.5px; color: var(--gray-500); font-weight: 400; margin-top: 1px; }
+.tc-judge-note { font-size: 11.5px; line-height: 1.6; color: var(--gray-600); background: var(--gray-50);
+  border-radius: var(--radius-xs); padding: 7px 10px; margin: 8px 0 0; }
+.tc-judge-note .tj { margin: 0 1px; }
 .tc-yi { margin: 6px 0; }
 .tc-yi > summary { font-size: 12.5px; color: var(--brand-dark); cursor: pointer; padding: 4px 0; }
 /* 地图 + 详情面板：左图右栏 */

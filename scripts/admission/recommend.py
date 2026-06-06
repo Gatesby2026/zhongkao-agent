@@ -237,6 +237,43 @@ def classify(student_rank: int, school: dict):
     return band, margin, ref_rank, history, volatility
 
 
+def rank_to_score(district: str, rank):
+    """用本区各校最近一年的 (区排名, 中考分) 锚点，线性插值把"区排名→估中考分"。
+    中考分全市可比，可用于和外区(市级统筹)学校的统招分数线对比。
+    数据不足或 rank 非法时返回 None。"""
+    try:
+        rank = int(rank)
+    except (TypeError, ValueError):
+        return None
+    if rank <= 0:
+        return None
+    data = load_district(district)
+    anchors = []
+    for s in data.get("schools", []):
+        scores = s.get("scores") or {}
+        # 取最近一年同时有 score+rank 的
+        for y in sorted(scores.keys(), reverse=True):
+            rec = scores[y]
+            if isinstance(rec, dict) and rec.get("score") and rec.get("rank"):
+                anchors.append((int(rec["rank"]), float(rec["score"])))
+                break
+    if len(anchors) < 2:
+        return None
+    anchors.sort()
+    # 边界外用最近端点；区间内线性插值
+    if rank <= anchors[0][0]:
+        return round(anchors[0][1], 1)
+    if rank >= anchors[-1][0]:
+        return round(anchors[-1][1], 1)
+    for i in range(1, len(anchors)):
+        r0, s0 = anchors[i - 1]
+        r1, s1 = anchors[i]
+        if r0 <= rank <= r1:
+            t = (rank - r0) / (r1 - r0) if r1 != r0 else 0
+            return round(s0 + (s1 - s0) * t, 1)
+    return None
+
+
 def nearest_campus(rows):
     """从 [(校区名, 坐标, rd), ...] 取距离最近（rd 非空）的一项；全空返回 None。"""
     valid = [r for r in rows if r[2] is not None]
@@ -557,6 +594,7 @@ def build_result(rank, home=None, mode="driving", max_km=None, interests=None,
         "boarding": boarding,
         "identity": identity,
         "eligibility": eligibility_for(identity),
+        "est_score": rank_to_score(district, rank),
         "interests": interests,
         "admission_source": (
             "学校代码/专业(班)派生自 bjeea 2025 官方计划册（人工核对映射）；"

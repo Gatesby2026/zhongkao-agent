@@ -8,34 +8,502 @@
   ],
   "verification_method": "bjeea 官方图片表为唯一权威源（公开无第三方文字转录）。每个朝阳格做双读 + 整行各列求和必须等于该校合计，作为独立算术自检；逐校均已对账成功。",
   "tongchou_yi": [
-    {"name":"北京市第五中学","campus":"本部","district":"东城","address":"东城区细管胡同13号","quota_chaoyang":4,"boarding":true,"approx_score":null,"faces_chaoyang":true,"confidence":"high(官方图+合计对账)","sources":["https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87197.html"],"disagreement":""},
-    {"name":"北京汇文中学","campus":"本部","district":"东城","address":"东城区培新街6号","quota_chaoyang":4,"boarding":false,"approx_score":null,"faces_chaoyang":true,"confidence":"high(官方图+合计对账)","sources":["https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87197.html"],"disagreement":""},
-    {"name":"北京市第四中学","campus":"本部","district":"西城","address":"西城区西黄城根北街甲2号","quota_chaoyang":3,"boarding":false,"approx_score":null,"faces_chaoyang":true,"confidence":"high(官方图+合计对账)","sources":["https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87197.html"],"disagreement":""},
-    {"name":"北京市第八中学","campus":"本部","district":"西城","address":"西城区学院小街2号","quota_chaoyang":4,"boarding":false,"approx_score":null,"faces_chaoyang":true,"confidence":"high(官方图+合计对账)","sources":["https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87197.html"],"disagreement":""},
-    {"name":"北京师范大学附属中学","campus":"本部","district":"西城","address":"西城区南新华街18号","quota_chaoyang":4,"boarding":true,"approx_score":null,"faces_chaoyang":true,"confidence":"high(官方图+合计对账)","sources":["https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87197.html"],"disagreement":"住宿标注为'外区考生入学后可申请住宿'"},
-    {"name":"北京师范大学第二附属中学","campus":"本部","district":"西城","address":"西城区新街口外大街12号","quota_chaoyang":4,"boarding":false,"approx_score":null,"faces_chaoyang":true,"confidence":"high(官方图+合计对账)","sources":["https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87197.html"],"disagreement":""},
-    {"name":"北京师范大学附属实验中学","campus":"本部","district":"西城","address":"西城区二龙路甲14号","quota_chaoyang":5,"boarding":true,"approx_score":null,"faces_chaoyang":true,"confidence":"high(官方图+合计对账)","sources":["https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87197.html"],"disagreement":"住宿标注为'外区考生入学后可申请住宿'"},
-    {"name":"北京市第八十中学","campus":"本部(望京)","district":"朝阳","address":"朝阳区望京北路甲16号","quota_chaoyang":5,"boarding":false,"approx_score":null,"faces_chaoyang":true,"confidence":"high(官方图+合计对账)","sources":["https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87197.html"],"disagreement":"朝阳本区校在统筹一仍投朝阳5个名额(推翻'本区不向本区投'假设)"},
-    {"name":"北京市陈经纶中学","campus":"本部","district":"朝阳","address":"朝阳区朝外大街38号","quota_chaoyang":3,"boarding":false,"approx_score":null,"faces_chaoyang":true,"confidence":"high(官方图+合计对账)","sources":["https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87197.html"],"disagreement":"朝阳本区校在统筹一仍投朝阳3个名额(推翻'本区不向本区投'假设)"},
-    {"name":"北京市第十二中学","campus":"本部","district":"丰台","address":"丰台区益泽路15号","quota_chaoyang":3,"boarding":false,"approx_score":null,"faces_chaoyang":true,"confidence":"high(官方图+合计对账)","sources":["https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87197.html"],"disagreement":""},
-    {"name":"中国人民大学附属中学","campus":"本部","district":"海淀","address":"海淀区中关村大街37号","quota_chaoyang":5,"boarding":false,"approx_score":null,"faces_chaoyang":true,"confidence":"high(官方图+合计对账)","sources":["https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87197.html"],"disagreement":""},
-    {"name":"北京大学附属中学","campus":"本部","district":"海淀","address":"海淀区黄庄(中关村大街)","quota_chaoyang":5,"boarding":false,"approx_score":null,"faces_chaoyang":true,"confidence":"high(官方图+合计对账)","sources":["https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87197.html"],"disagreement":""},
-    {"name":"清华大学附属中学","campus":"本部","district":"海淀","address":"海淀区中关村北大街","quota_chaoyang":5,"boarding":false,"approx_score":null,"faces_chaoyang":true,"confidence":"high(官方图+合计对账)","sources":["https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87197.html"],"disagreement":""},
-    {"name":"北京市第一〇一中学","campus":"本部","district":"海淀","address":"海淀区颐和园路11号","quota_chaoyang":5,"boarding":false,"approx_score":null,"faces_chaoyang":true,"confidence":"high(官方图+合计对账)","sources":["https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87197.html"],"disagreement":""},
-    {"name":"北京市顺义牛栏山第一中学","campus":"本部","district":"顺义","address":"顺义区牛栏山镇育才大街1号","quota_chaoyang":3,"boarding":false,"approx_score":null,"faces_chaoyang":true,"confidence":"high(官方图+合计对账)","sources":["https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87197.html"],"disagreement":""}
+    {
+      "name": "北京市第五中学",
+      "campus": "本部",
+      "district": "东城",
+      "address": "东城区细管胡同13号",
+      "quota_chaoyang": 4,
+      "boarding": true,
+      "approx_score": null,
+      "faces_chaoyang": true,
+      "confidence": "high(官方图+合计对账)",
+      "sources": [
+        "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87197.html"
+      ],
+      "disagreement": "",
+      "lat": 39.937846,
+      "lon": 116.414411,
+      "score_2025_tongzhao": 475,
+      "score_conf": "high"
+    },
+    {
+      "name": "北京汇文中学",
+      "campus": "本部",
+      "district": "东城",
+      "address": "东城区培新街6号",
+      "quota_chaoyang": 4,
+      "boarding": false,
+      "approx_score": null,
+      "faces_chaoyang": true,
+      "confidence": "high(官方图+合计对账)",
+      "sources": [
+        "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87197.html"
+      ],
+      "disagreement": "",
+      "lat": 39.891717,
+      "lon": 116.433245,
+      "score_2025_tongzhao": 476,
+      "score_conf": "high"
+    },
+    {
+      "name": "北京市第四中学",
+      "campus": "本部",
+      "district": "西城",
+      "address": "西城区西黄城根北街甲2号",
+      "quota_chaoyang": 3,
+      "boarding": false,
+      "approx_score": null,
+      "faces_chaoyang": true,
+      "confidence": "high(官方图+合计对账)",
+      "sources": [
+        "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87197.html"
+      ],
+      "disagreement": "",
+      "lat": 39.93126,
+      "lon": 116.37829,
+      "score_2025_tongzhao": 487,
+      "score_conf": "high"
+    },
+    {
+      "name": "北京市第八中学",
+      "campus": "本部",
+      "district": "西城",
+      "address": "西城区学院小街2号",
+      "quota_chaoyang": 4,
+      "boarding": false,
+      "approx_score": null,
+      "faces_chaoyang": true,
+      "confidence": "high(官方图+合计对账)",
+      "sources": [
+        "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87197.html"
+      ],
+      "disagreement": "",
+      "lat": 39.910504,
+      "lon": 116.361704,
+      "score_2025_tongzhao": 481,
+      "score_conf": "high"
+    },
+    {
+      "name": "北京师范大学附属中学",
+      "campus": "本部",
+      "district": "西城",
+      "address": "西城区南新华街18号",
+      "quota_chaoyang": 4,
+      "boarding": true,
+      "approx_score": null,
+      "faces_chaoyang": true,
+      "confidence": "high(官方图+合计对账)",
+      "sources": [
+        "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87197.html"
+      ],
+      "disagreement": "住宿标注为'外区考生入学后可申请住宿'",
+      "lat": 39.897673,
+      "lon": 116.384916,
+      "score_2025_tongzhao": 478,
+      "score_conf": "high"
+    },
+    {
+      "name": "北京师范大学第二附属中学",
+      "campus": "本部",
+      "district": "西城",
+      "address": "西城区新街口外大街12号",
+      "quota_chaoyang": 4,
+      "boarding": false,
+      "approx_score": null,
+      "faces_chaoyang": true,
+      "confidence": "high(官方图+合计对账)",
+      "sources": [
+        "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87197.html"
+      ],
+      "disagreement": "",
+      "lat": 39.960187,
+      "lon": 116.371239,
+      "score_2025_tongzhao": 478,
+      "score_conf": "high"
+    },
+    {
+      "name": "北京师范大学附属实验中学",
+      "campus": "本部",
+      "district": "西城",
+      "address": "西城区二龙路甲14号",
+      "quota_chaoyang": 5,
+      "boarding": true,
+      "approx_score": null,
+      "faces_chaoyang": true,
+      "confidence": "high(官方图+合计对账)",
+      "sources": [
+        "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87197.html"
+      ],
+      "disagreement": "住宿标注为'外区考生入学后可申请住宿'",
+      "lat": 39.913275,
+      "lon": 116.366967,
+      "score_2025_tongzhao": 481,
+      "score_conf": "high"
+    },
+    {
+      "name": "北京市第八十中学",
+      "campus": "本部(望京)",
+      "district": "朝阳",
+      "address": "朝阳区望京北路甲16号",
+      "quota_chaoyang": 5,
+      "boarding": false,
+      "approx_score": null,
+      "faces_chaoyang": true,
+      "confidence": "high(官方图+合计对账)",
+      "sources": [
+        "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87197.html"
+      ],
+      "disagreement": "朝阳本区校在统筹一仍投朝阳5个名额(推翻'本区不向本区投'假设)",
+      "lat": 40.009829,
+      "lon": 116.476564,
+      "score_2025_tongzhao": 482,
+      "score_conf": "high"
+    },
+    {
+      "name": "北京市陈经纶中学",
+      "campus": "本部",
+      "district": "朝阳",
+      "address": "朝阳区朝外大街38号",
+      "quota_chaoyang": 3,
+      "boarding": false,
+      "approx_score": null,
+      "faces_chaoyang": true,
+      "confidence": "high(官方图+合计对账)",
+      "sources": [
+        "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87197.html"
+      ],
+      "disagreement": "朝阳本区校在统筹一仍投朝阳3个名额(推翻'本区不向本区投'假设)",
+      "lat": 39.92187,
+      "lon": 116.447771,
+      "score_2025_tongzhao": 469,
+      "score_conf": "high"
+    },
+    {
+      "name": "北京市第十二中学",
+      "campus": "本部",
+      "district": "丰台",
+      "address": "丰台区益泽路15号",
+      "quota_chaoyang": 3,
+      "boarding": false,
+      "approx_score": null,
+      "faces_chaoyang": true,
+      "confidence": "high(官方图+合计对账)",
+      "sources": [
+        "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87197.html"
+      ],
+      "disagreement": "",
+      "lat": 39.863136,
+      "lon": 116.307763,
+      "score_2025_tongzhao": null,
+      "score_conf": "待核"
+    },
+    {
+      "name": "中国人民大学附属中学",
+      "campus": "本部",
+      "district": "海淀",
+      "address": "海淀区中关村大街37号",
+      "quota_chaoyang": 5,
+      "boarding": false,
+      "approx_score": null,
+      "faces_chaoyang": true,
+      "confidence": "high(官方图+合计对账)",
+      "sources": [
+        "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87197.html"
+      ],
+      "disagreement": "",
+      "lat": 39.974598,
+      "lon": 116.314475,
+      "score_2025_tongzhao": null,
+      "score_conf": "待核"
+    },
+    {
+      "name": "北京大学附属中学",
+      "campus": "本部",
+      "district": "海淀",
+      "address": "海淀区黄庄(中关村大街)",
+      "quota_chaoyang": 5,
+      "boarding": false,
+      "approx_score": null,
+      "faces_chaoyang": true,
+      "confidence": "high(官方图+合计对账)",
+      "sources": [
+        "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87197.html"
+      ],
+      "disagreement": "",
+      "lat": 39.977542,
+      "lon": 116.315578,
+      "score_2025_tongzhao": null,
+      "score_conf": "待核"
+    },
+    {
+      "name": "清华大学附属中学",
+      "campus": "本部",
+      "district": "海淀",
+      "address": "海淀区中关村北大街",
+      "quota_chaoyang": 5,
+      "boarding": false,
+      "approx_score": null,
+      "faces_chaoyang": true,
+      "confidence": "high(官方图+合计对账)",
+      "sources": [
+        "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87197.html"
+      ],
+      "disagreement": "",
+      "lat": 40.002386,
+      "lon": 116.315197,
+      "score_2025_tongzhao": 487,
+      "score_conf": "high"
+    },
+    {
+      "name": "北京市第一〇一中学",
+      "campus": "本部",
+      "district": "海淀",
+      "address": "海淀区颐和园路11号",
+      "quota_chaoyang": 5,
+      "boarding": false,
+      "approx_score": null,
+      "faces_chaoyang": true,
+      "confidence": "high(官方图+合计对账)",
+      "sources": [
+        "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87197.html"
+      ],
+      "disagreement": "",
+      "lat": 39.997827,
+      "lon": 116.304351,
+      "score_2025_tongzhao": null,
+      "score_conf": "待核"
+    },
+    {
+      "name": "北京市顺义牛栏山第一中学",
+      "campus": "本部",
+      "district": "顺义",
+      "address": "顺义区牛栏山镇育才大街1号",
+      "quota_chaoyang": 3,
+      "boarding": false,
+      "approx_score": null,
+      "faces_chaoyang": true,
+      "confidence": "high(官方图+合计对账)",
+      "sources": [
+        "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87197.html"
+      ],
+      "disagreement": "",
+      "lat": 40.225625,
+      "lon": 116.664533,
+      "score_2025_tongzhao": 461,
+      "score_conf": "high"
+    }
   ],
   "tongchou_er": [
-    {"name":"中国人民大学附属中学丰台学校","campus":"丰台校区","district":"丰台","address":"丰台区王佐镇民族苑路9号","quota_chaoyang":2,"boarding":true,"approx_score":null,"faces_chaoyang":true,"confidence":"high(官方图+合计对账)","sources":["https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87196.html"],"disagreement":""},
-    {"name":"人大附中石景山学校","campus":"石景山校区","district":"石景山","address":"石景山区五里坨地区隆恩寺路(邮编100042)","quota_chaoyang":4,"boarding":false,"approx_score":null,"faces_chaoyang":true,"confidence":"high(官方图+合计对账)","sources":["https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87196.html"],"disagreement":""},
-    {"name":"中国人民大学附属中学","campus":"通州校区(学籍在通州校区)","district":"海淀","address":"海淀区中关村大街37号(上课/招生主体);学籍在通州校区,通州区潞城镇","quota_chaoyang":11,"boarding":true,"approx_score":null,"faces_chaoyang":true,"confidence":"high(官方图+合计对账,160=各列和)","sources":["https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87196.html"],"disagreement":"特殊说明:考生入学后学籍在通州校区;可申请住宿"},
-    {"name":"清华大学附属中学","campus":"将台路校区(学籍在将台路校区,朝阳)","district":"海淀","address":"海淀区中关村北大街(招生主体);学籍在将台路校区,朝阳区将台路","quota_chaoyang":28,"boarding":true,"approx_score":null,"faces_chaoyang":true,"confidence":"high(官方图+合计对账,150=各列和)","sources":["https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87196.html"],"disagreement":"特殊说明:考生入学后学籍在将台路校区;朝阳投放28人为统筹二最大单校朝阳名额"},
-    {"name":"中央民族大学附属中学","campus":"本部","district":"海淀","address":"海淀区法华寺路甲5号(邮编100081)","quota_chaoyang":20,"boarding":false,"approx_score":null,"faces_chaoyang":true,"confidence":"high(官方图+合计对账,102=各列和)","sources":["https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87196.html"],"disagreement":""},
-    {"name":"北京市第八中学京西校区","campus":"京西校区","district":"门头沟","address":"门头沟区永定镇玉带西街15号(邮编102308)","quota_chaoyang":6,"boarding":true,"approx_score":null,"faces_chaoyang":true,"confidence":"high(官方图+合计对账,100=各列和)","sources":["https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87196.html"],"disagreement":"早期粗读曾误为8,经整行求和(100)校正为6"},
-    {"name":"北京第一实验中学","campus":"通州/宋庄校区","district":"通州","address":"通州区宋庄镇汇才南街(邮编101100)","quota_chaoyang":4,"boarding":true,"approx_score":null,"faces_chaoyang":true,"confidence":"high(官方图+合计对账,40=各列和)","sources":["https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87196.html"],"disagreement":"特殊说明:考生入学后可提供住宿"},
-    {"name":"北京学校","campus":"本部","district":"通州","address":"通州区潞阳大街35号(邮编101117)","quota_chaoyang":3,"boarding":true,"approx_score":null,"faces_chaoyang":true,"confidence":"high(官方图+合计对账,20=各列和)","sources":["https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87196.html"],"disagreement":""},
-    {"name":"北京师范大学第二附属中学未来科学城学校","campus":"未来科学城校区","district":"昌平","address":"昌平区北七家镇未来科学城南区(C77地块)(邮编102209)","quota_chaoyang":12,"boarding":"待核","approx_score":null,"faces_chaoyang":true,"confidence":"high(官方图+合计对账,60=各列和)","sources":["https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87196.html"],"disagreement":"特殊说明为'与中央戏剧学院联合培养',无住宿标注故boarding待核"},
-    {"name":"北京实验学校","campus":"平谷校区","district":"平谷","address":"平谷区建设街204号(邮编101200)","quota_chaoyang":0,"boarding":"待核","approx_score":null,"faces_chaoyang":false,"confidence":"high(官方图+合计对账,50=各列和,朝阳列空白)","sources":["https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87196.html"],"disagreement":"朝阳列空白,不投朝阳"},
-    {"name":"北京市平谷区马坊实验中学","campus":"本部","district":"平谷","address":"平谷区马坊镇金河北街101号院(邮编101204)","quota_chaoyang":1,"boarding":"待核","approx_score":null,"faces_chaoyang":true,"confidence":"high(官方图+合计对账,30=各列和)","sources":["https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87196.html"],"disagreement":""}
+    {
+      "name": "中国人民大学附属中学丰台学校",
+      "campus": "丰台校区",
+      "district": "丰台",
+      "address": "丰台区王佐镇民族苑路9号",
+      "quota_chaoyang": 2,
+      "boarding": true,
+      "approx_score": null,
+      "faces_chaoyang": true,
+      "confidence": "high(官方图+合计对账)",
+      "sources": [
+        "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87196.html"
+      ],
+      "disagreement": "",
+      "lat": 39.815403,
+      "lon": 116.113772,
+      "score_2025_tongzhao": null,
+      "score_conf": "待核"
+    },
+    {
+      "name": "人大附中石景山学校",
+      "campus": "石景山校区",
+      "district": "石景山",
+      "address": "石景山区五里坨地区隆恩寺路(邮编100042)",
+      "quota_chaoyang": 4,
+      "boarding": false,
+      "approx_score": null,
+      "faces_chaoyang": true,
+      "confidence": "high(官方图+合计对账)",
+      "sources": [
+        "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87196.html"
+      ],
+      "disagreement": "",
+      "lat": 39.964737,
+      "lon": 116.125715,
+      "score_2025_tongzhao": null,
+      "score_conf": "待核"
+    },
+    {
+      "name": "中国人民大学附属中学",
+      "campus": "通州校区(学籍在通州校区)",
+      "district": "海淀",
+      "address": "海淀区中关村大街37号(上课/招生主体);学籍在通州校区,通州区潞城镇",
+      "quota_chaoyang": 11,
+      "boarding": true,
+      "approx_score": null,
+      "faces_chaoyang": true,
+      "confidence": "high(官方图+合计对账,160=各列和)",
+      "sources": [
+        "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87196.html"
+      ],
+      "disagreement": "特殊说明:考生入学后学籍在通州校区;可申请住宿",
+      "lat": 39.91269,
+      "lon": 116.702171,
+      "score_2025_tongzhao": 465,
+      "score_conf": "high"
+    },
+    {
+      "name": "清华大学附属中学",
+      "campus": "将台路校区(学籍在将台路校区,朝阳)",
+      "district": "海淀",
+      "address": "海淀区中关村北大街(招生主体);学籍在将台路校区,朝阳区将台路",
+      "quota_chaoyang": 28,
+      "boarding": true,
+      "approx_score": null,
+      "faces_chaoyang": true,
+      "confidence": "high(官方图+合计对账,150=各列和)",
+      "sources": [
+        "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87196.html"
+      ],
+      "disagreement": "特殊说明:考生入学后学籍在将台路校区;朝阳投放28人为统筹二最大单校朝阳名额",
+      "lat": 39.973652,
+      "lon": 116.488017,
+      "score_2025_tongzhao": null,
+      "score_conf": "待核"
+    },
+    {
+      "name": "中央民族大学附属中学",
+      "campus": "本部",
+      "district": "海淀",
+      "address": "海淀区法华寺路甲5号(邮编100081)",
+      "quota_chaoyang": 20,
+      "boarding": false,
+      "approx_score": null,
+      "faces_chaoyang": true,
+      "confidence": "high(官方图+合计对账,102=各列和)",
+      "sources": [
+        "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87196.html"
+      ],
+      "disagreement": "",
+      "lat": 39.950937,
+      "lon": 116.315824,
+      "score_2025_tongzhao": null,
+      "score_conf": "待核"
+    },
+    {
+      "name": "北京市第八中学京西校区",
+      "campus": "京西校区",
+      "district": "门头沟",
+      "address": "门头沟区永定镇玉带西街15号(邮编102308)",
+      "quota_chaoyang": 6,
+      "boarding": true,
+      "approx_score": null,
+      "faces_chaoyang": true,
+      "confidence": "high(官方图+合计对账,100=各列和)",
+      "sources": [
+        "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87196.html"
+      ],
+      "disagreement": "早期粗读曾误为8,经整行求和(100)校正为6",
+      "lat": 39.897631,
+      "lon": 116.142453,
+      "score_2025_tongzhao": null,
+      "score_conf": "待核"
+    },
+    {
+      "name": "北京第一实验中学",
+      "campus": "通州/宋庄校区",
+      "district": "通州",
+      "address": "通州区宋庄镇汇才南街(邮编101100)",
+      "quota_chaoyang": 4,
+      "boarding": true,
+      "approx_score": null,
+      "faces_chaoyang": true,
+      "confidence": "high(官方图+合计对账,40=各列和)",
+      "sources": [
+        "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87196.html"
+      ],
+      "disagreement": "特殊说明:考生入学后可提供住宿",
+      "lat": 39.928388,
+      "lon": 116.714789,
+      "score_2025_tongzhao": null,
+      "score_conf": "待核"
+    },
+    {
+      "name": "北京学校",
+      "campus": "本部",
+      "district": "通州",
+      "address": "通州区潞阳大街35号(邮编101117)",
+      "quota_chaoyang": 3,
+      "boarding": true,
+      "approx_score": null,
+      "faces_chaoyang": true,
+      "confidence": "high(官方图+合计对账,20=各列和)",
+      "sources": [
+        "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87196.html"
+      ],
+      "disagreement": "",
+      "lat": 39.893977,
+      "lon": 116.73716,
+      "score_2025_tongzhao": null,
+      "score_conf": "待核"
+    },
+    {
+      "name": "北京师范大学第二附属中学未来科学城学校",
+      "campus": "未来科学城校区",
+      "district": "昌平",
+      "address": "昌平区北七家镇未来科学城南区(C77地块)(邮编102209)",
+      "quota_chaoyang": 12,
+      "boarding": "待核",
+      "approx_score": null,
+      "faces_chaoyang": true,
+      "confidence": "high(官方图+合计对账,60=各列和)",
+      "sources": [
+        "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87196.html"
+      ],
+      "disagreement": "特殊说明为'与中央戏剧学院联合培养',无住宿标注故boarding待核",
+      "lat": 40.105847,
+      "lon": 116.458674,
+      "score_2025_tongzhao": null,
+      "score_conf": "待核"
+    },
+    {
+      "name": "北京实验学校",
+      "campus": "平谷校区",
+      "district": "平谷",
+      "address": "平谷区建设街204号(邮编101200)",
+      "quota_chaoyang": 0,
+      "boarding": "待核",
+      "approx_score": null,
+      "faces_chaoyang": false,
+      "confidence": "high(官方图+合计对账,50=各列和,朝阳列空白)",
+      "sources": [
+        "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87196.html"
+      ],
+      "disagreement": "朝阳列空白,不投朝阳",
+      "lat": 40.135735,
+      "lon": 117.117669,
+      "score_2025_tongzhao": null,
+      "score_conf": "待核"
+    },
+    {
+      "name": "北京市平谷区马坊实验中学",
+      "campus": "本部",
+      "district": "平谷",
+      "address": "平谷区马坊镇金河北街101号院(邮编101204)",
+      "quota_chaoyang": 1,
+      "boarding": "待核",
+      "approx_score": null,
+      "faces_chaoyang": true,
+      "confidence": "high(官方图+合计对账,30=各列和)",
+      "sources": [
+        "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87196.html"
+      ],
+      "disagreement": "",
+      "lat": 40.063566,
+      "lon": 117.006565,
+      "score_2025_tongzhao": null,
+      "score_conf": "待核"
+    }
   ],
   "totals": {
     "tongchou_yi_schools": 15,
