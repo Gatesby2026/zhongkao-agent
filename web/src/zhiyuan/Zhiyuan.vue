@@ -524,14 +524,17 @@ const tcEr = computed<any[]>(() => (tongchou.value?.tongchou_er || [])
 // 你孩子区排→估中考分（后端按本区一分一段插值）
 const estScore = computed<number | null>(() => result.value ? (result.value as any).est_score : null)
 // 统筹校研判：估分 vs 该校统招线，套普高式档位（够不上/冲/稳）。
+// 线优先用 2025 双源确认(score_2025_tongzhao)，缺则退用历年参考(score_ref，单源/历史，标"历年线")。
 // 统招线非统筹线、统筹线通常更低 → 偏保守（"冲"档放宽到线下 10 分）。
-function tcJudge(s: any): { label: string; cls: string; d: number | null } {
-  const line = s.score_2025_tongzhao
-  if (!line || estScore.value == null) return { label: '线待核', cls: 'tj-unk', d: null }
+function tcJudge(s: any): { label: string; cls: string; d: number | null; line: number | null; ref: boolean } {
+  const conf = typeof s.score_2025_tongzhao === 'number' ? s.score_2025_tongzhao : null
+  const ref = typeof s.score_ref === 'number' ? s.score_ref : null
+  const line = conf ?? ref
+  const isRef = conf == null && ref != null
+  if (line == null || estScore.value == null) return { label: '线待核', cls: 'tj-unk', d: null, line: null, ref: false }
   const d = Math.round(estScore.value - line)
-  if (d >= 10) return { label: '稳', cls: 'tj-wen', d }
-  if (d >= -10) return { label: '冲', cls: 'tj-chong', d }
-  return { label: '够不上', cls: 'tj-no', d }
+  const band = d >= 10 ? { label: '稳', cls: 'tj-wen' } : d >= -10 ? { label: '冲', cls: 'tj-chong' } : { label: '够不上', cls: 'tj-no' }
+  return { ...band, d, line, ref: isRef }
 }
 
 const privAll = computed<PrivSchool[]>(() => result.value?.private_schools?.schools || [])
@@ -1202,7 +1205,7 @@ const tcOptions: string[] = []
                   <td class="num"><b>{{ s.quota_chaoyang }}</b></td>
                   <td>{{ s.district }}</td>
                   <td><span class="tj" :class="tcJudge(s).cls">{{ tcJudge(s).label }}</span>
-                    <small v-if="tcJudge(s).d != null" class="tj-d">线{{ s.score_2025_tongzhao }}·Δ{{ (tcJudge(s).d ?? 0) > 0 ? '+' : '' }}{{ tcJudge(s).d }}</small></td>
+                    <small v-if="tcJudge(s).d != null" class="tj-d">{{ tcJudge(s).ref ? "历年线" : "线" }}{{ tcJudge(s).line }}·Δ{{ (tcJudge(s).d ?? 0) > 0 ? "+" : "" }}{{ tcJudge(s).d }}</small></td>
                   <td><span v-if="s.boarding === true" class="t-yes">🛏</span><span v-else-if="s.boarding === false" class="t-no">—</span><span v-else class="addr-tag">待核</span></td>
                   <td class="t-addr">{{ s.address }}</td>
                 </tr>
@@ -1220,7 +1223,7 @@ const tcOptions: string[] = []
                     <td class="num">{{ s.quota_chaoyang }}</td>
                     <td>{{ s.district }}</td>
                     <td><span class="tj" :class="tcJudge(s).cls">{{ tcJudge(s).label }}</span>
-                      <small v-if="tcJudge(s).d != null" class="tj-d">线{{ s.score_2025_tongzhao }}·Δ{{ (tcJudge(s).d ?? 0) > 0 ? '+' : '' }}{{ tcJudge(s).d }}</small></td>
+                      <small v-if="tcJudge(s).d != null" class="tj-d">{{ tcJudge(s).ref ? "历年线" : "线" }}{{ tcJudge(s).line }}·Δ{{ (tcJudge(s).d ?? 0) > 0 ? "+" : "" }}{{ tcJudge(s).d }}</small></td>
                     <td class="t-addr">{{ s.address }}</td>
                   </tr>
                 </tbody>
@@ -1230,7 +1233,7 @@ const tcOptions: string[] = []
           <p class="tc-judge-note">
             <b>研判口径</b>：你区排 <b>{{ form.rank }}</b> 名 → 按本区一分一段估中考分 <b>≈{{ estScore }}</b> 分，与各校 <b>2025 统招线</b>比（Δ=估分−线）。
             <span class="tj tj-wen">稳</span>Δ≥+10　<span class="tj tj-chong">冲</span>−10~+10　<span class="tj tj-no">够不上</span>Δ&lt;−10　<span class="tj tj-unk">线待核</span>无公开线。
-            <b>估分随你填的区排名动态变化</b>（不是写死）。⚠️ 比的是各校<b>统招线（非统筹实际线）</b>，<b>统筹线通常更低</b>，故偏保守——"够不上"才基本无望，"冲"档实际机会更大。估分为一分一段插值近似。
+            <b>估分随你填的区排名动态变化</b>（不是写死）。⚠️ 比的是各校<b>统招线（非统筹实际线）</b>，<b>统筹线通常更低</b>，故偏保守——"够不上"才基本无望，"冲"档实际机会更大。估分为一分一段插值近似。<b>「历年线」</b>=单源/历年参考(可信度低于 2025 双源确认的"线")；新校无历史则保持"线待核"。
           </p>
         </template>
 
