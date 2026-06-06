@@ -3,10 +3,6 @@ import { ref, reactive, computed, nextTick, watch } from 'vue'
 
 declare const L: any
 
-const INTEREST_TAGS = [
-  '理科见长', '科技创新', '外语特色', '文科人文', '艺术特长',
-  '体育特长', '国际方向', '课程改革', '学科竞赛', '综合均衡', '寄宿制',
-]
 const MODES = [
   { v: 'driving', label: '驾车' },
   { v: 'transit', label: '公交' },
@@ -60,6 +56,7 @@ const showGuide = ref(false)
 const openG = ref<number | null>(null)
 const XED_OFFICIAL = 'https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87193.html'
 // 校额到校：按初中查名额
+const showXedImg = ref(false)
 const xedQuery = ref('')
 const xedBlock = computed<XeddxBlock | null>(() => result.value?.xeddx || null)
 const xedSel = computed<XeddxRow | null>(() => {
@@ -145,7 +142,6 @@ const form = reactive({
   mode: 'bicycling',
   max_km: 8 as number | string,
   boarding: false,
-  interests: [] as string[],
 })
 // 学校类型图层开关（地图上显示哪些点）
 const layers = reactive({ gongban: true, coop: true, minban: false })
@@ -157,11 +153,6 @@ let mapInst: any = null
 let publicLayer: any = null
 let privateLayer: any = null
 
-function toggleInterest(t: string) {
-  const i = form.interests.indexOf(t)
-  if (i >= 0) form.interests.splice(i, 1)
-  else form.interests.push(t)
-}
 function cleanName(s: string): string { return (s || '').replace(/\s+/g, '') }
 // 地图标签只取学校主名（空格 / 中点 / 括号前截断），避免把校区+计划说明全挤一起
 function shortName(s: string): string {
@@ -178,7 +169,6 @@ async function submit() {
       rank: Number(form.rank),
       mode: form.mode,
       boarding: form.boarding,
-      interests: form.interests.length ? form.interests : null,
     }
     if (form.home.trim()) body.home = form.home.trim()
     if (form.max_km !== '' && Number(form.max_km) > 0) body.max_km = Number(form.max_km)
@@ -468,11 +458,6 @@ const copyHint = ref('')
         <button class="go" :disabled="loading" @click="submit">
           {{ loading ? '匹配中…' : '生成志愿建议' }}
         </button>
-      </div>
-      <div class="interests">
-        <span class="il">兴趣偏好<small>（软匹配，命中置顶不硬筛）</small></span>
-        <button v-for="t in INTEREST_TAGS" :key="t" type="button"
-          class="chip" :class="{ on: form.interests.includes(t) }" @click="toggleInterest(t)">{{ t }}</button>
       </div>
       <p v-if="form.boarding" class="board-note">🛏 已开启住宿：距离不再参与筛选，范围放开到全朝阳（距离仍展示作参考）。</p>
       <p v-if="errMsg" class="err">{{ errMsg }}</p>
@@ -798,7 +783,7 @@ const copyHint = ref('')
             <div class="xed-rule"><span class="xed-k">不能报</span>往届生 / 回户籍 / 外省回京 考生</div>
             <div class="xed-rule"><span class="xed-k">录取分</span>无官方"各初中录取线"——按本校内排名事后形成，逐校逐年不同；430 仅是统一资格门槛</div>
           </div>
-          <p class="xed-hl">📋 输入孩子的<b>初中校</b>即可查该校 2025 年校额到校名额（数据读自下方官方原图）。也可直接在官方原图里按行核对。</p>
+          <p class="xed-hl">📋 输入孩子的<b>初中校</b>即可查该校 2025 年校额到校名额。需逐格核对时，再展开下方官方原图。</p>
         </div>
 
         <!-- 按初中查名额 -->
@@ -826,11 +811,14 @@ const copyHint = ref('')
           <p class="xed-src">数据：{{ xedBlock.source_T1 }}；明细自检通过 {{ xedBlock.verified_count }}/{{ xedBlock.total_count }} 校，其余仅给合计、明细以原图为准。</p>
         </div>
 
-        <div class="xed-imgs">
+        <button class="xed-imgtoggle" type="button" @click="showXedImg = !showXedImg">
+          {{ showXedImg ? '▲ 收起官方原图' : '▼ 展开官方原图（逐格核对用）' }}
+        </button>
+        <div v-show="showXedImg" class="xed-imgs">
           <a :href="XED_OFFICIAL" target="_blank" rel="noopener"><img src="/xed/chaoyang-xeddx-2025-p1.jpg" alt="朝阳校额到校分配名额 第1页" loading="lazy" /></a>
           <a :href="XED_OFFICIAL" target="_blank" rel="noopener"><img src="/xed/chaoyang-xeddx-2025-p2.jpg" alt="朝阳校额到校分配名额 第2页（上半部分为朝阳）" loading="lazy" /></a>
         </div>
-        <p class="list-tip">
+        <p v-show="showXedImg" class="list-tip">
           ⚠️ 上图为官方原图（朝阳区；第 2 页上半部分为朝阳、下半为丰台）。名额数字<b>请以官方原图为准</b>，本系统不另行转录以免出错。
           原始来源：<a :href="XED_OFFICIAL" target="_blank" rel="noopener">北京教育考试院《2025年初中学校校额到校分配名额》</a>（2025-07-01，每年 7 月初更新）。
           录取按校内总分排名 + 志愿顺序；2026 计划发布后须刷新。
@@ -1126,6 +1114,10 @@ const copyHint = ref('')
 .xed-note { font-size: 11.5px; color: var(--gray-500); margin-top: 9px; line-height: 1.6; }
 .xed-note.warn { color: #b45309; background: var(--warning-bg); padding: 7px 9px; border-radius: var(--radius-xs); }
 .xed-src { font-size: 11px; color: var(--gray-400); margin-top: 8px; }
+.xed-imgtoggle { margin: 4px 0 10px; background: var(--gray-50); border: 1px solid var(--gray-200);
+  border-radius: var(--radius-sm); padding: 9px 14px; font-size: 13px; font-weight: 600;
+  color: var(--brand-dark); cursor: pointer; }
+.xed-imgtoggle:hover { border-color: var(--brand); }
 .xed-imgs { display: flex; flex-direction: column; gap: 10px; }
 .xed-imgs img { width: 100%; height: auto; border: 1px solid var(--gray-200); border-radius: var(--radius-xs);
   display: block; }
