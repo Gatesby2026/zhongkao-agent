@@ -923,6 +923,13 @@ const tcOptions: string[] = []
                     <dd><span class="tj" :class="tcJudge(selectedTc).cls">{{ tcJudge(selectedTc).label }}</span>
                       <span v-if="tcJudge(selectedTc).d != null" class="dp-mg">
                         {{ tcJudge(selectedTc).ref ? '历年线' : '线' }}{{ tcJudge(selectedTc).line }}·Δ{{ (tcJudge(selectedTc).d ?? 0) > 0 ? '+' : '' }}{{ tcJudge(selectedTc).d }}</span></dd></div>
+                  <div><dt>通勤（到家）</dt>
+                    <dd v-if="selectedTc.dist">{{ selectedTc.dist.km }}km · {{ selectedTc.dist.mins }}分钟<small>（{{ selectedTc.dist.label }}）</small></dd>
+                    <dd v-else class="dp-muted">填家庭住址后显示</dd></div>
+                  <div><dt>住宿</dt>
+                    <dd><span v-if="selectedTc.boarding === true" class="t-yes">🛏 可住宿</span>
+                      <span v-else-if="selectedTc.boarding === false">不提供（{{ selectedTc.district }}，需走读/自理）</span>
+                      <span v-else class="dp-muted">待核</span></dd></div>
                 </dl>
                 <table v-if="selectedTc.score_lines && selectedTc.score_lines.length" class="dp-table">
                   <thead><tr><th>年</th><th>统招线</th><th>口径</th></tr></thead>
@@ -1230,7 +1237,7 @@ const tcOptions: string[] = []
           </p>
           <div class="table-scroll">
             <table class="list-table tc-tbl">
-              <thead><tr><th>统筹二·学校(校区)</th><th class="num">投朝阳</th><th>区</th><th>研判<small v-if="estScore">你估≈{{ estScore }}</small></th><th>住宿</th><th>地址</th></tr></thead>
+              <thead><tr><th>统筹二·学校(校区)</th><th class="num">投朝阳</th><th>区</th><th>研判<small v-if="estScore">你估≈{{ estScore }}</small></th><th>通勤</th><th>住宿</th><th>地址</th></tr></thead>
               <tbody>
                 <tr v-for="s in tcEr" :key="s.name + s.campus">
                   <td class="t-name">{{ s.name }}<small v-if="s.campus" class="tc-campus">{{ s.campus }}</small></td>
@@ -1238,6 +1245,7 @@ const tcOptions: string[] = []
                   <td>{{ s.district }}</td>
                   <td><span class="tj" :class="tcJudge(s).cls">{{ tcJudge(s).label }}</span>
                     <small v-if="tcJudge(s).d != null" class="tj-d">{{ tcJudge(s).ref ? "历年线" : "线" }}{{ tcJudge(s).line }}·Δ{{ (tcJudge(s).d ?? 0) > 0 ? "+" : "" }}{{ tcJudge(s).d }}</small></td>
+                  <td class="t-dist">{{ s.dist ? s.dist.km + 'km' : '—' }}</td>
                   <td><span v-if="s.boarding === true" class="t-yes">🛏</span><span v-else-if="s.boarding === false" class="t-no">—</span><span v-else class="addr-tag">待核</span></td>
                   <td class="t-addr">{{ s.address }}</td>
                 </tr>
@@ -1248,7 +1256,7 @@ const tcOptions: string[] = []
             <summary>展开统筹一 {{ tcYi.length }} 所（名校本部·门槛高，4000 名陪跑）</summary>
             <div class="table-scroll">
               <table class="list-table tc-tbl">
-                <thead><tr><th>统筹一·学校</th><th class="num">投朝阳</th><th>区</th><th>研判<small v-if="estScore">你估≈{{ estScore }}</small></th><th>地址</th></tr></thead>
+                <thead><tr><th>统筹一·学校</th><th class="num">投朝阳</th><th>区</th><th>研判<small v-if="estScore">你估≈{{ estScore }}</small></th><th>通勤</th><th>住宿</th><th>地址</th></tr></thead>
                 <tbody>
                   <tr v-for="s in tcYi" :key="s.name">
                     <td class="t-name">{{ s.name }}</td>
@@ -1256,6 +1264,8 @@ const tcOptions: string[] = []
                     <td>{{ s.district }}</td>
                     <td><span class="tj" :class="tcJudge(s).cls">{{ tcJudge(s).label }}</span>
                       <small v-if="tcJudge(s).d != null" class="tj-d">{{ tcJudge(s).ref ? "历年线" : "线" }}{{ tcJudge(s).line }}·Δ{{ (tcJudge(s).d ?? 0) > 0 ? "+" : "" }}{{ tcJudge(s).d }}</small></td>
+                    <td class="t-dist">{{ s.dist ? s.dist.km + 'km' : '—' }}</td>
+                    <td><span v-if="s.boarding === true" class="t-yes">🛏</span><span v-else-if="s.boarding === false" class="t-no">—</span><span v-else class="addr-tag">待核</span></td>
                     <td class="t-addr">{{ s.address }}</td>
                   </tr>
                 </tbody>

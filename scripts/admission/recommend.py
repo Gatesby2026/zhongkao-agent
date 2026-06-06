@@ -167,6 +167,30 @@ def load_tongchou(district: str):
     return data
 
 
+def tongchou_with_dist(district, home, district_cn, mode, mode_label, max_km):
+    """加载统筹清单，home 非空时按各校坐标算到家通勤距离并附 dist 字段（不缓存到原始数据）。
+    统筹校多在外区，距离仅作展示参考，不参与筛选。"""
+    import copy
+    data = load_tongchou(district)
+    if not data:
+        return data
+    data = copy.deepcopy(data)
+    rows = [s for tier in ("tongchou_yi", "tongchou_er") for s in data.get(tier, [])]
+    if home:
+        # 用唯一伪名避免同名（人大附本部/通州校区）距离串味
+        pseudo = [{"name": f"__tc{i}", "campuses": [{"name": "", "lat": s["lat"], "lon": s["lon"]}]}
+                  for i, s in enumerate(rows) if s.get("lat") and s.get("lon")]
+        _, dist_map = dist_mod.compute_distances(pseudo, home, district_cn, mode)
+        for i, s in enumerate(rows):
+            r = dist_map.get(f"__tc{i}", [])
+            rd = r[0][2] if r else None
+            if rd:
+                km = round(rd[0] / 1000, 1)
+                s["dist"] = {"km": km, "mins": round(rd[1] / 60), "label": mode_label,
+                             "over_max": bool(max_km is not None and km > max_km)}
+    return data
+
+
 _GUANTONG_CACHE: list = [None, False]
 
 
@@ -606,7 +630,7 @@ def build_result(rank, home=None, mode="driving", max_km=None, interests=None,
         "vocational": build_vocational_list(district, district_name, home, mode,
                                             mode_label, max_km, boarding),
         "guantong": load_guantong(),
-        "tongchou": load_tongchou(district),
+        "tongchou": tongchou_with_dist(district, home, district_name, mode, mode_label, max_km),
         "xeddx": load_xeddx(district),
         "points": build_public_points(buckets, dist_campus, mode_label, effective_max_km,
                                       interests, boarding_names),
