@@ -623,28 +623,28 @@ const tcOptions = TONGCHOU_REF.flatMap(t => t.schools).filter(s => !s.startsWith
           <span class="tab-ic">📍</span>志愿地图
         </button>
         <button class="tab" :class="{ on: tab === 'list' }" @click="tab = 'list'">
-          <span class="tab-ic">🏫</span>普高清单<span class="tab-cnt">{{ result.public_list.length }}</span>
+          普高清单<span class="tab-cnt">{{ result.public_list.length }}</span>
         </button>
         <button v-if="minbanList.length" class="tab" :class="{ on: tab === 'minban' }" @click="tab = 'minban'">
-          <span class="tab-ic">🏛️</span>民办普高<span class="tab-cnt">{{ minbanList.length }}</span>
+          民办普高<span class="tab-cnt">{{ minbanList.length }}</span>
         </button>
         <button v-if="intlList.length" class="tab" :class="{ on: tab === 'intl' }" @click="tab = 'intl'">
-          <span class="tab-ic">🌐</span>国际学校<span class="tab-cnt">{{ intlList.length }}</span>
+          国际学校<span class="tab-cnt">{{ intlList.length }}</span>
         </button>
         <button v-if="vocList.length" class="tab" :class="{ on: tab === 'voc' }" @click="tab = 'voc'">
-          <span class="tab-ic">🛠️</span>中职/职教<span class="tab-cnt">{{ vocList.length }}</span>
+          中职/职教<span class="tab-cnt">{{ vocList.length }}</span>
         </button>
         <button v-if="gtBlock" class="tab" :class="{ on: tab === 'gt' }" @click="tab = 'gt'">
-          <span class="tab-ic">🎓</span>贯通培养<span class="tab-cnt">{{ gtBlock.projects.length }}</span>
+          贯通培养<span class="tab-cnt">{{ gtBlock.projects.length }}</span>
         </button>
         <button class="tab" :class="{ on: tab === 'xed' }" @click="tab = 'xed'">
-          <span class="tab-ic">🎯</span>校额到校
+          校额到校
         </button>
         <button class="tab" :class="{ on: tab === 'tc' }" @click="tab = 'tc'">
-          <span class="tab-ic">🌆</span>市级统筹
+          市级统筹
         </button>
         <button class="tab" :class="{ on: tab === 'draft' }" @click="tab = 'draft'">
-          <span class="tab-ic">📝</span>志愿草表<span class="tab-cnt">{{ filledSlots }}/{{ ZHIYUAN_SLOTS }}</span>
+          志愿草表<span class="tab-cnt">{{ filledSlots }}/{{ ZHIYUAN_SLOTS }}</span>
         </button>
       </div>
 
@@ -1303,10 +1303,10 @@ const tcOptions = TONGCHOU_REF.flatMap(t => t.schools).filter(s => !s.startsWith
 
 /* 标签页：贴着内容卡片的页签条（活动页签连到内容区，强化“翻页”感）*/
 .tabs { display: flex; flex-wrap: wrap; gap: 4px; padding: 0 4px; }
-.tab { position: relative; font-size: 14px; font-weight: 600; padding: 10px 16px 12px; white-space: nowrap;
+.tab { position: relative; font-size: 13.5px; font-weight: 600; padding: 9px 11px 11px; white-space: nowrap;
   border: 1px solid transparent; border-bottom: none; background: transparent; color: var(--gray-500);
   border-radius: var(--radius-sm) var(--radius-sm) 0 0; cursor: pointer;
-  display: flex; align-items: center; gap: 6px; transition: color .15s, background .15s; }
+  display: flex; align-items: center; gap: 5px; transition: color .15s, background .15s; }
 .tab .tab-ic { font-size: 15px; }
 .tab:hover { color: var(--gray-800); background: var(--gray-50); }
 .tab.on { color: var(--brand-dark); background: var(--surface);
