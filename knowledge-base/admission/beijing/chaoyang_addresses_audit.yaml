@@ -1,295 +1,559 @@
-# 朝阳区统招高中部 —— 地址核查表（地址层，坐标层在此之后）
-# 目的：给志愿系统算通勤距离用。涉及孩子升学，地址必须扎实，禁止编造。
-# 方法：北京中考信息网"朝阳区公办高中校情介绍"(zhongkaobj.cn) + 学校官网 + bjeea + 政府公示，多源核对。
-# 局限：本轮研究工具只能用 WebSearch（WebFetch 多被拒/超时），引用原文来自页面摘录，
-#       最高权威源 bjeea《2025招生简章》PDF 未逐字读取。门牌级精度按 confidence 标注。
-# 校区原则：取"中考统招生实际去上高中的那个校区"，不是本部/初中部/注册地。
-#
-# confidence:
-#   high   = ≥2 权威源一致 + 高中部明确 + 门牌到位，可直接进下一步地理编码
-#   medium = 单一权威源，或门牌只到路名/楼号，或多校区高中部判断靠推断 → 入库前再核门牌
-#   low    = 高中部校区会因年份变（借址/分年级/新校启用），地图无法解决 → 必须当年招生简章或电话确认
-# action: ready | verify_doornumber | confirm_by_phone
-#
-# 更新日期: 2026-06-03  来源年份: 2024–2025 招生季
-
-generated: 2026-06-03
-district: chaoyang
-method: ../ADDRESS-VERIFICATION.md   # 核查与交叉验证 SOP，其他区照此流程做
-note: 坐标尚未基于本表重新生成；当前 highschools_final.json 里的旧坐标多为"校名裸geocode"，不可信，待本表定稿后重做。
-evidence_policy: |
-  按 SOP §5，每校应有 evidence 列表（逐信源 source/tier/url/accessed/claim/agree + resolution）。
-  本轮(朝阳)局限：研究工具只有 WebSearch，证据仅留到 schools[].source 列表粒度 +
-  note/flag 里的冲突裁决文字（如朝阳外国语排除慧忠里本部、二外附中排除"管庄路63号"地图描述），
-  未逐字留 claim/url/date。下一区起按 SOP §5 全量留存；原始页面/截图存 _evidence/<district>/。
-  本表 source + note/flag 即本轮"过程数据"，可溯源、可在拿到 bjeea 简章后增量升级 confidence。
-
-schools:
-  # ===== Tier: 可直接用（high, 门牌到位）=====
-  - name: 北京市第八十中学
-    yaml_name: 北京市第八十中学
-    campus: 望京校区（高中本部）
-    address: 北京市朝阳区望京北路甲16号
-    postcode: "100102"
-    source: [bj80.com 官网联系方式, zhongkaobj.cn 校情]
-    confidence: high
-    action: ready
-    note: 初高分址，高中部=望京北路甲16号；白家庄/温榆河为初中部。最干净的一所。
-
-  - name: 北京市陈经纶中学
-    yaml_name: 陈经纶中学
-    campus: 本部高中（呼家楼以西）
-    address: 北京市朝阳区朝外大街38号
-    postcode: "100020"
-    source: [bjcjl.net 官网, 百科]
-    confidence: high
-    action: ready
-    note: 本部高中=朝外大街38号；本部初中=东大桥路甲15号。别把初中地址当高中。
-
-  - name: 清华大学附属中学广华学校
-    yaml_name: 清华附中广华学校
-    campus: 广信南街校区（十二年一贯同址）
-    address: 北京市朝阳区广信南街1号
-    source: [zhongkaobj.cn 校情]
-    confidence: high
-    action: ready
-
-  - name: 北京市第二中学朝阳学校
-    yaml_name: 二中朝阳学校
-    campus: 姚家园西里校区（完全中学同址）
-    address: 北京市朝阳区姚家园西里6号
-    source: [zhongkaobj.cn 校情]
-    confidence: high
-    action: ready
-    note: 01专业(朝阳统招)在本校读三年；仅02专业(东城15人)去东城本部。
-
-  - name: 北京市日坛中学
-    yaml_name: 日坛中学
-    campus: 光华西里本部
-    address: 北京市朝阳区建外光华西里4号
-    source: [zhongkaobj.cn 校情]
-    confidence: high
-    action: ready
-    note: CBD一校五址，统招高中在光华西里本部。
-
-  - name: 北京市和平街第一中学
-    yaml_name: 和平街一中
-    campus: 和平街校区（高中部，统招主体223人，不住宿）
-    address: 北京市朝阳区和平街8区16楼
-    source: [zhongkaobj.cn 校情]
-    confidence: high
-    action: ready
-    multi_campus:
-      - campus: 北苑莲葩园校区（约103人统招+校额到校53人，可住宿）
-        address: 北京市朝阳区北苑家园莲葩园1号
-    note: 两个高中校区都招统招生，系统须按校区分别算距离。
-
-  - name: 和平街一中（北苑莲葩园校区）
-    yaml_name: 和平街一中（北苑莲葩园校区）
-    former_name: 莲葩园中学（已更正——非官方名称）
-    campus: 北苑莲葩园高中校区（和平街一中 02 专业，在2址上课，含住宿）
-    address: 北京市朝阳区北苑家园莲葩园1号
-    source: [bjeea 2025 统招计划册(T1), zhongkaobj.cn 校情]
-    confidence: high
-    action: ready
-    resolution: |
-      经 bjeea 2025 统招计划册(T1)核实：不存在独立"莲葩园中学"。该校区系
-      北京市和平街第一中学(统招代码 105004) 02 专业「北苑莲葩园高中校区」
-      (在2址上课、含住宿 男30女30)；本部为 01 专业(和平街8区16楼·走读)。
-      处理：① 数据条目改名为"和平街一中（北苑莲葩园校区）"；
-      ② admission_codes 02专业归本校区、01专业归本部；
-      ③ 因录取线/上课地址/住宿不同，仍单列一行便于家长区分。
-
-  - name: 对外经济贸易大学附属中学（北京市第九十四中学）
-    yaml_name: 对外经济贸易大学附属中学
-    campus: 南湖中园高中部
-    address: 北京市朝阳区南湖中园315号
-    source: [mdfz.bjchyedu.cn 官网高中部联系页, zhongkaobj.cn]
-    confidence: high
-    action: ready
-    note: 一校两址，高中=南湖中园315号；初中=花家地北里18、19号楼。
-
-  - name: 东北师范大学附属中学朝阳学校
-    yaml_name: 东北师大附中朝阳学校
-    campus: 金盏校区（全寄宿完全中学，初高同址）
-    address: 北京市朝阳区金盏金融服务园区1112-14号
-    landmark: 机场二高速楼梓庄出口东行100米
-    source: [msannucy.com 官网, zhongkaobj.cn]
-    confidence: high
-    action: ready
-
-  - name: 中国科学院附属实验学校
-    yaml_name: 中科院附属实验学校
-    campus: 高中部（南沙滩校区）
-    address: 北京市朝阳区南沙滩6号
-    aka: 德外南沙滩6号
-    source: [esacas.com 官网, zizzs.com 2025高中招简, zhongkaobj.cn]
-    confidence: high
-    action: ready
-
-  - name: 北京市三里屯一中
-    yaml_name: 三里屯一中
-    campus: 三里屯校区（高中部，工体北侧）
-    address: 北京市朝阳区北三里屯5号
-    source: [sltyz.bjchyedu.cn 官网]
-    confidence: high
-    action: ready
-    note: 一校三址；高中部确认在三里屯校区，已排除幸福村/百子园（初中/十二年一贯）。
-
-  - name: 北京汇文中学朝阳垂杨柳分校
-    yaml_name: 汇文中学垂杨柳分校
-    campus: 松榆里校区（初高同址）
-    address: 北京市朝阳区松榆里20号
-    landmark: 地铁10号线十里河站向北
-    source: [hwcyl.bjchyedu.cn 官网, zhongkaobj.cn]
-    confidence: high
-    action: ready
-    note: 原北京市垂杨柳中学。
-
-  # ===== Tier: 入库前再核门牌（medium）=====
-  - name: 中国传媒大学附属中学（北京中学传媒分校）
-    yaml_name: 中国传媒大学附属中学
-    campus: 本部（定福庄）
-    address: 北京市朝阳区大黄庄西里1号
-    source: [cmdxfz.com 官网, zhongkaobj.cn]
-    confidence: medium
-    action: verify_doornumber
-    note: 2023恢复高中并挂"北京中学传媒分校"。单校区。
-
-  - name: 北京市朝阳外国语学校
-    yaml_name: 朝阳外国语学校
-    campus: 来广营校区高中部
-    address: 北京市朝阳区来广营清河营中街东口148-1
-    source: [zhongkaobj.cn 校情, 百科]
-    confidence: medium
-    action: verify_doornumber
-    note: ⚠️旧坐标(慧忠里216号本部)错了6.2km。高中部因慧忠北里203号抗震加固借址来广营并已固定。慧忠里/慧忠北里为初中本部，勿用。门牌"148-1"建议官网二次确认。
-
-  - name: 清华大学附属中学望京学校
-    yaml_name: 清华附中望京学校
-    campus: 本部（大望京）
-    address: 北京市朝阳区宏泰东街10号
-    source: [qhfzwjxx.bjchyedu.cn 官网, city8]
-    confidence: medium
-    action: verify_doornumber
-    note: 完全中学含高中；可确认年份为2024，建议确认2025仍此址。
-
-  - name: 北京中学科技分校
-    yaml_name: 北京中学科技分校
-    campus: 高中部（借原化工大附中高中部校址）
-    address: 北京市朝阳区惠新里38号
-    source: [wikipedia 带引注, 百科]
-    confidence: medium
-    action: verify_doornumber
-    note: 2024年9月新办完全中学。缺bjeea/官网一手原文。
-
-  - name: 北京工业大学附属中学
-    yaml_name: 北京工业大学附属中学
-    campus: 富力城校区（高中部）
-    address: 北京市朝阳区双井富力城（富力城校区）
-    landmark: 广和里中街与天力街交口西
-    source: [bjgdfz.com 官网, zhongkaobj.cn]
-    confidence: medium
-    action: verify_doornumber
-    note: 校区high(官网明文高中在富力城)；门牌不规范("大路园零号"疑录入瑕疵)。定位可用"双井富力城"，精确门牌电话核(010-58768322)。
-
-  - name: 北京市第十七中学
-    yaml_name: 北京十七中
-    campus: 高碑店校区（本部/高中，市级示范）
-    address: 北京市朝阳区西店村甲1号
-    source: [baike, zhongkaobj.cn, bj17z.com 官网]
-    confidence: medium
-    action: confirm_by_phone
-    note: 一校四址(高碑店/陶家湾/赛洛城/百子湾家园)。高碑店为本部及示范高中所在，但无逐字"统招高中报到在高碑店"权威表述，建议电话(010-87517307)确认是否分年级分校区。
-
-  - name: 北京化工大学附属中学
-    yaml_name: 北京化工大学附属中学
-    campus: 安苑北里校区（高中部）
-    address: 北京市朝阳区安苑北里7号楼
-    source: [hgdxfszx.bjchyedu.cn 官网, zhongkaobj.cn]
-    confidence: medium
-    action: verify_doornumber
-    note: 门牌到"7号楼"(小区内)；电话核(64936840)。
-
-  - name: 北京市东方德才学校
-    yaml_name: 东方德才学校
-    campus: 小庄校区高中部（东门在延静里西街方向）
-    address: 北京市朝阳区小庄东里38号
-    source: [dfdc.bjchyedu.cn 官网, zhongkaobj.cn]
-    confidence: medium
-    action: verify_doornumber
-    note: 一校五址；38号为学校总址，高中部单独门牌未单列。
-
-  - name: 北京第二外国语学院附属中学（北京中学外语分校）
-    yaml_name: 北京第二外国语学院附属中学
-    campus: 管庄本部校区（高中部）
-    address: 北京市朝阳区管庄东里1号楼
-    postcode: "100024"
-    source: [ewfz.bjchyedu.cn 官网, zhongkaobj.cn]
-    confidence: medium
-    action: verify_doornumber
-    note: 一校四址(管庄/杨闸/八里桥/瑞祥)，高中在管庄本部。"管庄路63号"系地图坐标描述非门牌，已排除。
-
-  - name: 北京市陈经纶中学团结湖分校
-    yaml_name: 陈经纶中学团结湖分校
-    campus: 团结湖校区（高中部，初高分址）
-    address: 北京市朝阳区团结湖中路8号
-    source: [百科, 上哪学/地图库（非考试院文件）]
-    confidence: medium
-    action: verify_doornumber
-    note: 公办完中初高分址，高中部明确在团结湖中路8号，但权威源偏弱。
-
-  # ===== Tier: 地图救不了，必须当年招生简章/电话（low / confirm_by_phone）=====
-  - name: 北京中学
-    yaml_name: 北京中学
-    campus: 东坝北校区（新本部，2025年8月启用，高中部+国际部）
-    address: null  # 门牌 NOT FOUND
-    address_rough: 朝阳区东坝（东坝国际航空商务区，临第四/第五使馆区）
-    old_campus_do_not_use: 东坝南校区 康源路10号（现为初中/小学）
-    source: [bjchy.gov.cn 政府稿, 新华网, xscxx]
-    confidence: low
-    action: confirm_by_phone
-    phone: "010-50951285"
-    note: ⚠️高中部2025.8整体迁入新校区，全网无权威门牌。算距离前务必拿确切门牌；切勿用康源路10号(那是初中)。
-
-  - name: 中国人民大学附属中学朝阳学校
-    yaml_name: 人大附中朝阳学校
-    campus: 高一高二在安华桥校区 / 高三在太阳宫南街8号（按年级分校区）
-    address: 北京市朝阳区太阳宫南街8号  # 高三/初中部；地铁10号线芍药居站F口东200米
-    address_grade1_2: 安华西里一区11号楼附近（安华桥校区，门牌靠地图非官方）
-    source: [rdfzcy.cn 官网地理位置, zhongkaobj.cn]
-    confidence: low
-    action: confirm_by_phone
-    note: ⚠️高中分年级不同地点。通勤应以高一报到校区(安华桥)为准，但其门牌不权威。需电话确认入学第一年上课地址，别简单用太阳宫南街8号。
-
-  - name: 清华大学附属中学朝阳学校
-    yaml_name: 清华附中朝阳学校
-    campus: 高一与清华附中望京学校柳芳校区同址混编 / 主校区柳芳南里20号
-    address: 北京市朝阳区柳芳南里20号  # 主校区
-    address_alt: 新源里校区 新源街31号（另一说法）
-    source: [qhfzcyxx.bjchyedu.cn 官网, zhongkaobj.cn]
-    confidence: low
-    action: confirm_by_phone
-    note: ⚠️高一分年级换址/混编，门牌来源非招生简章。需确认高一实际上课点。
-
-  - name: 北京市第八十中学睿德分校
-    yaml_name: 八十中睿德分校
-    campus: 高一借址八十中本部上课（睿德本部小红门硬件未完工）
-    address: 北京市朝阳区望京北路甲16号  # 推断=八十中本部高中；来源只写"八十中本部"
-    registered_address: 北京市朝阳区小红门路5号（注册地，非高一上课地）
-    source: [80rd.bjchyedu.cn 官网, zhongkaobj.cn, xscxx]
-    confidence: low
-    action: confirm_by_phone
-    phone: "010-52593456"
-    note: ⚠️典型借址，距离误差风险最高。"本部"是否=望京校区为推断，务必电话确认当年借址地点。
-
-  - name: 首都师范大学附属中学朝阳学校
-    yaml_name: 首师大附中朝阳学校
-    campus: 辛庄二街本部（高中部）
-    address: 北京市朝阳区辛庄二街  # 仅到路名，无门牌
-    address_rough: 东四环外姚家园路北 泛海国际小区内
-    do_not_use: 金盏路6号（那是慈云分校九年一贯初中，非高中部）
-    source: [zhongkaobj.cn 校情]
-    confidence: low
-    action: verify_doornumber
-    note: ⚠️官方只给到"辛庄二街+小区名"无门牌；定位用"辛庄二街/泛海国际"并标"仅粗略"。务必别用金盏路6号。
+district: 朝阳区
+about: 公办普高 高中统招报到校区地址核查档（SOP §5/§6 全证据留存，便于持续交叉验证）
+method: T1=bjeea 2025统招计划册官方报到地址(权威基线)；T2=学校官网；T3=北京中考信息网校情；T4=百科/地图(旁证)。定案需≥2独立信源一致，校区归属优先T1。
+updated: 2026-06 全量核查 + 10校WebSearch交叉验证
+count: 27
+audit:
+- name: 北京中学
+  yaml_name: 北京中学
+  final_address: 北京市朝阳区东坝北校区（御马苑街一带，街道拟更名北中街；高中部2025.9启用，确切门牌未公开）
+  confidence: low
+  action: confirm_by_phone
+  campus_note: ⚠️康源路10号=初中部，勿用作高中报到！高中各年级2025.9全部搬入东坝北校区(A区为高中部)。新校周边道路拟更名，官方未公开高中门牌。bjeea2025/zhongkaobj仍登记旧址康源路10号(编制早于搬迁)。
+  evidence:
+  - source: bjeea 2025统招计划册
+    tier: T1
+    url: bjeea.cn
+    claim: 东坝康源路10号 tel50951283(实为初中旧址,编制早于搬迁)
+    agree: 'no'
+  - source: 首都之窗
+    tier: T1
+    url: beijing.gov.cn/fuwu/bmfw/sy/jrts/202508/t20250819_4176062.html
+    claim: 一批新校园9月启用含北京中学东坝北校区
+    agree: 'yes'
+  - source: 朝阳区政府
+    tier: T2
+    url: bjchy.gov.cn/affair/domain/jy/...c9090a26.html
+    claim: 东坝北校区含高中54班2025交付；2025.9高中各年级搬入北校区
+    agree: 'yes'
+  - source: zhongkaobj 北京中学校情
+    tier: T3
+    url: zhongkaobj.cn/zhongkao/zhongxue/202412196591.html
+    claim: 东坝康源路10号(2024.12未更新)
+    agree: 'no'
+  resolution: 高中部已迁东坝北校区(非康源路10号初中部)；确切门牌无官方公开+街道更名中→不编门牌，low，电话50951285核。务必勿用康源路10号。
+  verified: web-cross 2026-06
+- name: 中国传媒大学附属中学
+  yaml_name: 中国传媒大学附属中学
+  final_address: 北京市朝阳区大黄庄西里1号
+  confidence: medium
+  action: verify_doornumber
+  campus_note: 2023恢复高中并挂"北京中学传媒分校"，单校区。
+  evidence:
+  - source: bjeea 2025统招计划册
+    tier: T1
+    url: bjeea.cn
+    claim: 北京市朝阳区大黄庄西里1号 tel65793775
+    agree: 'yes'
+  - source: 既有KB信源(cmdxfz.com,zhongkaobj.cn)
+    tier: T3
+    url: ''
+    claim: 北京市朝阳区大黄庄西里1号
+    agree: 'yes'
+  resolution: T1计划册与既有KB一致
+  verified: T1+KB 2026-06
+- name: 北京市第八十中学
+  yaml_name: 北京市第八十中学
+  final_address: 北京市朝阳区望京北路甲16号
+  confidence: high
+  action: ready
+  campus_note: 白家庄/温榆河为初中部。
+  evidence:
+  - source: bjeea 2025统招计划册
+    tier: T1
+    url: bjeea.cn
+    claim: 北京市朝阳区望京北路甲16号 tel58047023
+    agree: 'yes'
+  - source: 既有KB信源(bj80.com,zhongkaobj.cn)
+    tier: T3
+    url: ''
+    claim: 北京市朝阳区望京北路甲16号
+    agree: 'yes'
+  resolution: T1计划册与既有KB一致
+  verified: T1+KB 2026-06
+- name: 人大附中朝阳学校
+  yaml_name: 人大附中朝阳学校
+  final_address: 北京市朝阳区曙光里2号院1号楼（凤凰城校区·高中部）
+  confidence: high
+  action: ready
+  campus_note: 高中部=凤凰城校区(曙光里2号院1号楼)，高一高三同址；太阳宫南街8号为学校总部/初中部。
+  evidence:
+  - source: bjeea 2025统招计划册
+    tier: T1
+    url: bjeea.cn
+    claim: 曙光里2号院1号楼 tel84158116
+    agree: 'yes'
+  - source: 北京中考信息网 人朝校情
+    tier: T3
+    url: zhongkaobj.cn/zhongkao/zhongxue/202412206643.html
+    claim: 地址曙光里2号院1号楼 tel84158116 高中部凤凰城校区
+    agree: 'yes'
+  - source: 人朝官网 地理位置
+    tier: T2
+    url: rdfzcy.cn/linkus/Pages/dlwz.aspx
+    claim: 太阳宫南街8号=总部/初中部
+    agree: partial
+  resolution: T1+T3一致且tel同；太阳宫南街8号是初中总部(旧数据误用)。高中=曙光里2号院1号楼，high。
+  verified: web-cross 2026-06
+- name: 清华附中朝阳学校
+  yaml_name: 清华附中朝阳学校
+  final_address: 北京市朝阳区柳芳南里20号（高中部·柳芳校区，高一高二；高三新源西里）
+  confidence: high
+  action: ready
+  campus_note: 柳芳南里20号=高中部(与望京学校高中合署，高一高二)；高三在新源西里校区。
+  evidence:
+  - source: bjeea 2025统招计划册
+    tier: T1
+    url: bjeea.cn
+    claim: 柳芳南里20号 tel64686990
+    agree: 'yes'
+  - source: 清华附中朝阳学校官网招生问答
+    tier: T2
+    url: qhfzcyxx.bjchyedu.cn/shtml/2/news/202207/6043.shtml
+    claim: 高中部柳芳校区(柳芳南里20号)，高一高二在柳芳、高三新源西里
+    agree: 'yes'
+  - source: 百度百科
+    tier: T4
+    url: baike.baidu.com
+    claim: 柳芳南里20号
+    agree: 'yes'
+  resolution: T1+T2一致：高中=柳芳南里20号。high。
+  verified: web-cross 2026-06
+- name: 八十中睿德分校
+  yaml_name: 八十中睿德分校
+  final_address: 北京市朝阳区小红门路5号（本部；但高一近年借址八十中望京校区上课，逐年变，需电话核）
+  confidence: low
+  action: confirm_by_phone
+  campus_note: 睿德本部=小红门路5号(南四环小红门桥北)；T3指高一在八十中望京借址上课、按年份变动。旧数据'望京北路甲16号'实为八十中本部。
+  evidence:
+  - source: bjeea 2025统招计划册
+    tier: T1
+    url: bjeea.cn
+    claim: 小红门路5号 tel52592689
+    agree: 'yes'
+  - source: 睿德分校官网
+    tier: T2
+    url: 80rd.bjchyedu.cn
+    claim: 校区在小红门路5号
+    agree: 'yes'
+  - source: 北京中考信息网 睿德校情
+    tier: T3
+    url: zhongkaobj.cn/zhongkao/zhongxue/202412267154.html
+    claim: 地址小红门路5号；但高一在八十中望京借址上课
+    agree: partial
+  resolution: 本部=小红门路5号(T1+T2+T3一致)，纠正旧数据；但高一借址、逐年变→报到/上课点标low，提示电话核当年高一校区。
+  verified: web-cross 2026-06
+- name: 朝阳外国语学校
+  yaml_name: 朝阳外国语学校
+  final_address: 北京市朝阳区来广营清河营中街东口148-1（高中部；bjeea登记'清河营中街1号院'同址）
+  confidence: medium
+  action: verify_doornumber
+  campus_note: 高中部=来广营清河营中街校区(2013借址至今)；慧忠里216号/慧忠北里为初中部，勿用。bjeea作'清河营中街1号院'、多源作'东口148-1'，指同一来广营校区。
+  evidence:
+  - source: bjeea 2025统招计划册
+    tier: T1
+    url: bjeea.cn
+    claim: 清河营中街1号院 tel84870601
+    agree: 'yes'
+  - source: 朝外官网 历史沿革
+    tier: T2
+    url: cyfls.bjchyedu.cn/xxgk_4191/lsyg/202105/t20210508_65580.html
+    claim: 高中部来广营清河营中街校区
+    agree: 'yes'
+  - source: 百度百科 朝外沿革
+    tier: T4
+    url: baike.baidu.com
+    claim: 高中部借址来广营清河营中街东口148-1(2013起)
+    agree: 'yes'
+  resolution: 高中部=来广营清河营中街(非慧忠里初中)；门牌'1号院'(T1)与'148-1'(T2/T4)指同址写法不同→medium，电话84870601核。
+  verified: web-cross 2026-06
+- name: 清华附中望京学校
+  yaml_name: 清华附中望京学校
+  final_address: 北京市朝阳区柳芳南里20号（高中部，与清华附中朝阳学校高中合署混编）；本部/初中：宏泰东街10号(大望京)
+  confidence: medium
+  action: verify_doornumber
+  campus_note: 望京学校注册地/初中本部在宏泰东街10号；高中部与朝阳学校高中同在柳芳南里20号柳芳校区合署混编。旧数据'宏泰东街10号'是本部(初中)，非高中报到点。
+  evidence:
+  - source: bjeea 2025统招计划册
+    tier: T1
+    url: bjeea.cn
+    claim: 望京学校与朝阳学校均列柳芳南里20号
+    agree: 'yes'
+  - source: 知乎 清华附中四校区别
+    tier: T4
+    url: zhuanlan.zhihu.com/p/585468356
+    claim: 望京与朝阳高中同在柳芳校区(柳芳南里20号)混班
+    agree: 'yes'
+  - source: 望京学校官网
+    tier: T2
+    url: qhfzwjxx.bjchyedu.cn
+    claim: 地址宏泰东街10号(大望京)
+    agree: partial
+  resolution: bjeea两校同列柳芳南里20号非OCR重复——高中确合署同址。高中报到=柳芳南里20号；宏泰东街10号是本部/初中。合署安排或随建校调整→medium。
+  verified: web-cross 2026-06
+- name: 陈经纶中学
+  yaml_name: 陈经纶中学
+  final_address: 北京市朝阳区朝外大街38号
+  confidence: high
+  action: ready
+  campus_note: 本部初中=东大桥路甲15号，勿混。
+  evidence:
+  - source: bjeea 2025统招计划册
+    tier: T1
+    url: bjeea.cn
+    claim: 北京市朝阳区朝外大街38号 tel85632559
+    agree: 'yes'
+  - source: 既有KB信源(bjcjl.net)
+    tier: T3
+    url: ''
+    claim: 北京市朝阳区朝外大街38号
+    agree: 'yes'
+  resolution: T1计划册与既有KB一致
+  verified: T1+KB 2026-06
+- name: 北京中学科技分校
+  yaml_name: 北京中学科技分校
+  final_address: 北京市朝阳区惠新里38号
+  confidence: medium
+  action: verify_doornumber
+  campus_note: 2024.9新办完全中学，缺一手原文。
+  evidence:
+  - source: bjeea 2025统招计划册
+    tier: T1
+    url: bjeea.cn
+    claim: 北京市朝阳区惠新里38号 tel64928818
+    agree: 'yes'
+  - source: 既有KB信源(wikipedia,百科)
+    tier: T3
+    url: ''
+    claim: 北京市朝阳区惠新里38号
+    agree: 'yes'
+  resolution: T1计划册与既有KB一致
+  verified: T1+KB 2026-06
+- name: 清华附中广华学校
+  yaml_name: 清华附中广华学校
+  final_address: 北京市朝阳区广信南街1号
+  confidence: high
+  action: ready
+  campus_note: ''
+  evidence:
+  - source: bjeea 2025统招计划册
+    tier: T1
+    url: bjeea.cn
+    claim: 北京市朝阳区广信南街1号 tel67790133
+    agree: 'yes'
+  - source: 既有KB信源(zhongkaobj.cn)
+    tier: T3
+    url: ''
+    claim: 北京市朝阳区广信南街1号
+    agree: 'yes'
+  resolution: T1计划册与既有KB一致
+  verified: T1+KB 2026-06
+- name: 首师大附中朝阳学校
+  yaml_name: 首师大附中朝阳学校
+  final_address: 北京市朝阳区辛庄二街(东四环外姚家园路北泛海国际小区内)
+  confidence: low
+  action: verify_doornumber
+  campus_note: ''
+  evidence:
+  - source: bjeea 2025统招计划册
+    tier: T1
+    url: bjeea.cn
+    claim: 北京市朝阳区辛庄二街(东四环外姚家园路北泛海国际小区内) tel85854107
+    agree: 'yes'
+  - source: 既有KB信源(zhongkaobj.cn)
+    tier: T3
+    url: ''
+    claim: 北京市朝阳区辛庄二街
+    agree: partial
+  resolution: T1作“北京市朝阳区辛庄二街(东四环外姚家园路北泛海国际小区内)”、既有KB作“北京市朝阳区辛庄二街”，取T1官方报到口径(差异多为门牌写法)
+  verified: T1+KB 2026-06
+- name: 二中朝阳学校
+  yaml_name: 二中朝阳学校
+  final_address: 北京市朝阳区姚家园西里6号
+  confidence: high
+  action: ready
+  campus_note: 单校区完全中学，初高中同校园；近6号线青年路站。
+  evidence:
+  - source: bjeea 2025统招计划册
+    tier: T1
+    url: bjeea.cn
+    claim: 姚家园西里6号 tel85818275
+    agree: 'yes'
+  - source: zhongkaobj 二中朝阳校情
+    tier: T3
+    url: zhongkaobj.cn/zhaosheng/tyzs/202412247057.html
+    claim: 姚家园西里6号 tel85818275 单校区 初高中同楼
+    agree: 'yes'
+  resolution: T1+T3一致(门牌+电话吻合)，单校区。high。
+  verified: web-cross 2026-06
+- name: 北京工业大学附属中学
+  yaml_name: 北京工业大学附属中学
+  final_address: 北京市朝阳区双井富力城（富力城校区·高中部，校方述：广和里中街与天力街交叉路口向西）
+  confidence: medium
+  action: verify_doornumber
+  campus_note: 一校多址；高中部=富力城校区。另有垂杨柳/首城国际/东校区。官方仅给小区+路口方位，未公布确切门牌。
+  evidence:
+  - source: bjeea 2025统招计划册
+    tier: T1
+    url: bjeea.cn
+    claim: 双井…富力城校区(门牌OCR残'双井大路园零号') tel58768366 邮编100022
+    agree: partial
+  - source: 工大附中官网 各校区
+    tier: T2
+    url: bjgdfz.com/?a=web.article&id=48089
+    claim: 富力城校区(高中部):双井富力城 广和里中街和天力街交叉路口向西; tel 58768322/58768366
+    agree: partial
+  resolution: 高中部=富力城校区(T1+T2一致)；准确门牌无独立信源印证、不编门牌→medium，建议电话58768366核。
+  verified: web-cross 2026-06
+- name: 日坛中学
+  yaml_name: 日坛中学
+  final_address: 北京市朝阳区建外光华西里4号
+  confidence: high
+  action: ready
+  campus_note: CBD一校五址，统招高中在光华西里本部。
+  evidence:
+  - source: bjeea 2025统招计划册
+    tier: T1
+    url: bjeea.cn
+    claim: 北京市朝阳区建外光华西里4号 tel65914540
+    agree: 'yes'
+  - source: 既有KB信源(zhongkaobj.cn)
+    tier: T3
+    url: ''
+    claim: 北京市朝阳区建外光华西里4号
+    agree: 'yes'
+  resolution: T1计划册与既有KB一致
+  verified: T1+KB 2026-06
+- name: 和平街一中
+  yaml_name: 和平街一中
+  final_address: 北京市朝阳区和平街8区16楼
+  confidence: high
+  action: ready
+  campus_note: 北京市和平街第一中学(105004)。本行＝本部 01 专业(走读)；北苑莲葩园高中校区(02专业·住宿)见“和平街一中（北苑莲葩园校区）”行。
+  evidence:
+  - source: bjeea 2025统招计划册
+    tier: T1
+    url: bjeea.cn
+    claim: 北京市朝阳区和平街8区16楼 tel64215780
+    agree: 'yes'
+  - source: 既有KB信源(bjeea 2025 统招计划册(T1),zhongkaobj.cn)
+    tier: T3
+    url: ''
+    claim: 北京市朝阳区和平街8区16楼
+    agree: 'yes'
+  resolution: T1计划册与既有KB一致
+  verified: T1+KB 2026-06
+- name: 和平街一中（北苑莲葩园校区）
+  yaml_name: 和平街一中（北苑莲葩园校区）
+  final_address: 北京市朝阳区北苑家园莲葩园1号(和平街一中02专业)
+  confidence: high
+  action: ready
+  campus_note: ''
+  evidence:
+  - source: bjeea 2025统招计划册
+    tier: T1
+    url: bjeea.cn
+    claim: 北京市朝阳区北苑家园莲葩园1号(和平街一中02专业) tel84957152
+    agree: 'yes'
+  - source: 既有KB信源(bjeea 2025 统招计划册(T1),学校官网 phs.bj.cn)
+    tier: T3
+    url: ''
+    claim: 北京市朝阳区北苑家园莲葩园1号
+    agree: partial
+  resolution: T1作“北京市朝阳区北苑家园莲葩园1号(和平街一中02专业)”、既有KB作“北京市朝阳区北苑家园莲葩园1号”，取T1官方报到口径(差异多为门牌写法)
+  verified: T1+KB 2026-06
+- name: 对外经济贸易大学附属中学
+  yaml_name: 对外经济贸易大学附属中学
+  final_address: 北京市朝阳区南湖中园315号
+  confidence: high
+  action: ready
+  campus_note: 初中=花家地北里18、19号楼。
+  evidence:
+  - source: bjeea 2025统招计划册
+    tier: T1
+    url: bjeea.cn
+    claim: 北京市朝阳区南湖中园315号 tel64729318
+    agree: 'yes'
+  - source: 既有KB信源(mdfz.bjchyedu.cn,zhongkaobj.cn)
+    tier: T3
+    url: ''
+    claim: 北京市朝阳区南湖中园315号
+    agree: 'yes'
+  resolution: T1计划册与既有KB一致
+  verified: T1+KB 2026-06
+- name: 东北师大附中朝阳学校
+  yaml_name: 东北师大附中朝阳学校
+  final_address: 北京市朝阳区金盏金融服务园区1112-14号
+  confidence: high
+  action: ready
+  campus_note: ''
+  evidence:
+  - source: bjeea 2025统招计划册
+    tier: T1
+    url: bjeea.cn
+    claim: 北京市朝阳区金盏金融服务园区1112-14号 tel52060143
+    agree: 'yes'
+  - source: 既有KB信源(msannucy.com,zhongkaobj.cn)
+    tier: T3
+    url: ''
+    claim: 北京市朝阳区金盏金融服务园区1112-14号
+    agree: 'yes'
+  resolution: T1计划册与既有KB一致
+  verified: T1+KB 2026-06
+- name: 中科院附属实验学校
+  yaml_name: 中科院附属实验学校
+  final_address: 北京市朝阳区德外南沙滩6号
+  confidence: high
+  action: ready
+  campus_note: ''
+  evidence:
+  - source: bjeea 2025统招计划册
+    tier: T1
+    url: bjeea.cn
+    claim: 北京市朝阳区德外南沙滩6号 tel64875352
+    agree: 'yes'
+  - source: 既有KB信源(esacas.com,zhongkaobj.cn)
+    tier: T3
+    url: ''
+    claim: 北京市朝阳区南沙滩6号
+    agree: partial
+  resolution: T1作“北京市朝阳区德外南沙滩6号”、既有KB作“北京市朝阳区南沙滩6号”，取T1官方报到口径(差异多为门牌写法)
+  verified: T1+KB 2026-06
+- name: 三里屯一中
+  yaml_name: 三里屯一中
+  final_address: 北京市朝阳区北三里屯甲5号（高中部·三里屯校区，工体北侧）
+  confidence: high
+  action: ready
+  campus_note: 一校三址(三里屯/幸福村/百子园)；高中部=三里屯校区(工人体育场北侧)。'甲5号'(T1)与'5号'(简写)同址。
+  evidence:
+  - source: bjeea 2025统招计划册
+    tier: T1
+    url: bjeea.cn
+    claim: 北三里屯甲5号 tel64172628
+    agree: 'yes'
+  - source: gaokzx 三里屯一中高中部
+    tier: T4
+    url: gaokzx.com/gk/gaokao/124564.html
+    claim: 高中部(三里屯校区)北三里屯5号
+    agree: 'yes'
+  resolution: 高中部=三里屯校区；门牌以T1'甲5号'为准，'5号'为简写同址。high。
+  verified: web-cross 2026-06
+- name: 北京十七中
+  yaml_name: 北京十七中
+  final_address: 北京市朝阳区百子湾家园404号
+  confidence: high
+  action: ready
+  campus_note: 一校多址(高碑店/陶家湾/赛洛城/百子湾)；高中部=百子湾校区。旧址'西店村甲1号'实为高碑店校区，非高中报到点。
+  evidence:
+  - source: bjeea 2025统招计划册
+    tier: T1
+    url: bjeea.cn
+    claim: 百子湾家园404号 tel87210164
+    agree: 'yes'
+  - source: 北京小升初网 十七中高中部开放日
+    tier: T3
+    url: xschu.com/zhengcezixun/71804.html
+    claim: 高中部=百子湾校区
+    agree: 'yes'
+  - source: 本地宝校区地图
+    tier: T4
+    url: map.bj.bendibao.com/hotmap/1018072.html
+    claim: 百子湾校区=百子湾家园404号；西店村甲1号为高碑店校区
+    agree: 'yes'
+  resolution: T1+T3+T4一致：高中部=百子湾家园404号；纠正旧数据'西店村甲1号'(高碑店校区)。high。
+  verified: web-cross 2026-06
+- name: 北京化工大学附属中学
+  yaml_name: 北京化工大学附属中学
+  final_address: 北京市朝阳区安苑北里7号楼
+  confidence: medium
+  action: verify_doornumber
+  campus_note: 门牌到"7号楼"(小区内)；电话64936840核。
+  evidence:
+  - source: bjeea 2025统招计划册
+    tier: T1
+    url: bjeea.cn
+    claim: 北京市朝阳区安苑北里7号楼 tel64919179
+    agree: 'yes'
+  - source: 既有KB信源(hgdxfszx.bjchyedu.cn,zhongkaobj.cn)
+    tier: T3
+    url: ''
+    claim: 北京市朝阳区安苑北里7号楼
+    agree: 'yes'
+  resolution: T1计划册与既有KB一致
+  verified: T1+KB 2026-06
+- name: 东方德才学校
+  yaml_name: 东方德才学校
+  final_address: 北京市朝阳区小庄东里38号
+  confidence: medium
+  action: verify_doornumber
+  campus_note: 一校五址；38号为总址，高中部单独门牌未单列。
+  evidence:
+  - source: bjeea 2025统招计划册
+    tier: T1
+    url: bjeea.cn
+    claim: 北京市朝阳区小庄东里38号 tel85961300
+    agree: 'yes'
+  - source: 既有KB信源(dfdc.bjchyedu.cn,zhongkaobj.cn)
+    tier: T3
+    url: ''
+    claim: 北京市朝阳区小庄东里38号
+    agree: 'yes'
+  resolution: T1计划册与既有KB一致
+  verified: T1+KB 2026-06
+- name: 北京第二外国语学院附属中学
+  yaml_name: 北京第二外国语学院附属中学
+  final_address: 北京市朝阳区管庄东里
+  confidence: medium
+  action: verify_doornumber
+  campus_note: 一校四址，高中在管庄本部；"管庄路63号"是地图描述非门牌，已排除。
+  evidence:
+  - source: bjeea 2025统招计划册
+    tier: T1
+    url: bjeea.cn
+    claim: 北京市朝阳区管庄东里 tel85094974
+    agree: 'yes'
+  - source: 既有KB信源(ewfz.bjchyedu.cn,zhongkaobj.cn)
+    tier: T3
+    url: ''
+    claim: 北京市朝阳区管庄东里1号楼
+    agree: partial
+  resolution: T1作“北京市朝阳区管庄东里”、既有KB作“北京市朝阳区管庄东里1号楼”，取T1官方报到口径(差异多为门牌写法)
+  verified: T1+KB 2026-06
+- name: 陈经纶中学团结湖分校
+  yaml_name: 陈经纶中学团结湖分校
+  final_address: 北京市朝阳区团结湖中路8号
+  confidence: medium
+  action: verify_doornumber
+  campus_note: 高中部明确在团结湖中路8号，但权威源偏弱。
+  evidence:
+  - source: bjeea 2025统招计划册
+    tier: T1
+    url: bjeea.cn
+    claim: 北京市朝阳区团结湖中路8号 tel85983518
+    agree: 'yes'
+  - source: 既有KB信源(百科,地图库)
+    tier: T3
+    url: ''
+    claim: 北京市朝阳区团结湖中路8号
+    agree: 'yes'
+  resolution: T1计划册与既有KB一致
+  verified: T1+KB 2026-06
+- name: 汇文中学垂杨柳分校
+  yaml_name: 汇文中学垂杨柳分校
+  final_address: 北京市朝阳区松榆里20号
+  confidence: high
+  action: ready
+  campus_note: 原北京市垂杨柳中学。
+  evidence:
+  - source: bjeea 2025统招计划册
+    tier: T1
+    url: bjeea.cn
+    claim: 北京市朝阳区松榆里20号 tel67319031
+    agree: 'yes'
+  - source: 既有KB信源(hwcyl.bjchyedu.cn,zhongkaobj.cn)
+    tier: T3
+    url: ''
+    claim: 北京市朝阳区松榆里20号
+    agree: 'yes'
+  resolution: T1计划册与既有KB一致
+  verified: T1+KB 2026-06
