@@ -544,13 +544,17 @@ function deleteUni(i: number) {
   draft.value = draft.value.slice(0, i).concat(draft.value.slice(i + 1))
 }
 
-// 市级统筹（朝阳考生可报，参考名单，来源：2026白皮书/bjeea，含统筹一/二/三）
+// 市级统筹（统筹一/二/三）方向说明。
+// ⚠️ 重要订正：曾用《朝阳指标分配计划·高中侧》里本区校（人朝/对外经贸/东师朝/清华附中朝阳·望京）的统筹名额数反推“朝阳可报统筹校”——这是把“高中对外供给的名额”误当成“朝阳考生可报”。
+// 那些名额按全市各初中校分配、多流向外区；它们是朝阳本区优质高中，朝阳考生应走【统招/校额到校】去够，而非市级统筹。
+// 朝阳考生“市级统筹”能填的，是外区/郊区的统筹校；权威逐校名单只在《招生简章》按“朝外这所初中分到的统筹名额”里查，本系统暂无可靠该向数据，统一标“待核”。
 const TONGCHOU_REF = [
-  { tier: '统筹一', desc: '城区优质高中跨区招生（不在东西海招）', schools: ['北京市第八十中学', '北京大学附属中学'] },
-  { tier: '统筹二', desc: '优质高中郊区分校/新校面向全市', schools: ['清华附中(中央台路校区)', '人大附中朝阳学校', '清华附中望京学校', '对外经贸大学附属中学(94中)', '东北师大附中朝阳学校'] },
-  { tier: '统筹三', desc: '高校与普高联合培养实验班', schools: ['（按当年 bjeea 统筹三计划，名额少，多为高校实验班）'] },
+  { tier: '统筹一', desc: '城区顶尖名校本部跨区招生（明确“不在东西海招”，面向朝阳等区；门槛高、名额少）', schools: ['具体校与名额以当年 bjeea《市级统筹招生计划》为准（待核）'] },
+  { tier: '统筹二', desc: '名校在郊区/新城的分校或城乡一体化校，面向全市分配', schools: ['方向示例：人大附中通州、首师大附中通州、人朝丰台/石景山学校等外区分校（仅示意方向，非确定可报名单，以简章为准）'] },
+  { tier: '统筹三', desc: '高校与普高联合培养实验班（名额少；部分年份已调整/取消）', schools: ['以当年 bjeea 计划为准（待核）'] },
 ]
-const tcOptions = TONGCHOU_REF.flatMap(t => t.schools).filter(s => !s.startsWith('（'))
+// 不再从高中侧供给表反推“可报名单”，datalist 不预置具体校名，避免误导。
+const tcOptions: string[] = []
 </script>
 
 <template>
@@ -990,9 +994,10 @@ const tcOptions = TONGCHOU_REF.flatMap(t => t.schools).filter(s => !s.startsWith
             <div class="xed-rule"><span class="xed-k">统筹一</span>中心城区优质高中跨区招生（不在东西海招）——给其他区考生进城区名校的机会</div>
             <div class="xed-rule"><span class="xed-k">统筹二</span>优质高中的郊区分校 / 新建校面向全市招生</div>
             <div class="xed-rule"><span class="xed-k">统筹三</span>高校与普通高中联合培养实验班（名额较少）</div>
-            <div class="xed-rule"><span class="xed-k">报名策略</span>① 与校额到校同批次、共用门槛、录取即锁定，<b>优先填比你统招更够得着的好学校</b>，别填统招本可达的；② 统筹是<b>全市按分竞争</b>（不像校额到校是校内竞争），更看你的绝对分数/区位次，把握不大别盲填把自己锁低；③ 通常和校额到校一起在指标分配批次填报</div>
+            <div class="xed-rule"><span class="xed-k">方向</span>市级统筹是优质资源<b>跨区/向郊区·新城均衡</b>的机制——朝阳考生用它能填的是<b>外区/郊区</b>的统筹校；<b>朝阳本区的好学校（人朝、清华附中朝阳·望京、东师朝、对外经贸94中 等）请走【统招/校额到校】去够，不是统筹</b></div>
+            <div class="xed-rule"><span class="xed-k">报名策略</span>① 与校额到校同批次、共用门槛、<b>录取即锁定、后续作废</b>；② 统筹是<b>全市按分竞争</b>（不像校额到校是校内竞争），更看绝对分数/区位次，去外区/郊区前先掂量是否真比本区统招更好，把握不大别盲填把自己锁低；③ 通常和校额到校一起在指标分配批次填报</div>
           </div>
-          <p class="xed-hl">📋 下面是朝阳考生可报的统筹学校参考；各校名额与完整名单以 bjeea 当年《市级统筹招生计划》为准。</p>
+          <p class="xed-hl">⚠️ 朝阳考生<b>具体能填哪几所统筹校</b>，须按<b>「你所在初中（如朝外）在《招生简章》里分到的市级统筹名额」</b>逐校核对——本系统暂无该向权威数据，下表仅为<b>三档方向说明（待核）</b>，不作可报名单。</p>
         </div>
         <div class="tc-ref">
           <div v-for="t in TONGCHOU_REF" :key="t.tier" class="tc-tier">
@@ -1001,7 +1006,7 @@ const tcOptions = TONGCHOU_REF.flatMap(t => t.schools).filter(s => !s.startsWith
           </div>
         </div>
         <p class="list-tip">
-          ⚠️ 统筹一/二/三 的可报学校与名额<b>每年随 bjeea 计划变</b>；上表为朝阳相关参考（来源 2026 白皮书 / bjeea，民间整理），报名前务必以当年官方《市级统筹招生计划》核对。
+          ⚠️ 统筹一/二/三 的可报学校与名额<b>每年随 bjeea 计划变</b>，且<b>因初中校而异</b>；上表只是三档方向说明，<b>不是朝阳可报名单</b>。报名前务必以当年官方《招生简章》中“本初中分配的市级统筹名额”核对。
           市级统筹与校额到校同批次：<b>被录即锁定、后续批次作废</b>。在「志愿草表 → 批次② 指标分配」里可填写统筹志愿。
         </p>
       </div>
@@ -1079,7 +1084,7 @@ const tcOptions = TONGCHOU_REF.flatMap(t => t.schools).filter(s => !s.startsWith
             </div>
             <h4 class="batch-sub">市级统筹（统筹一/二/三）</h4>
             <div class="tc-ref">
-              <p class="xed-src" style="margin:0 0 6px">朝阳考生<b>可报的统筹学校（参考）</b>——完整名单以 bjeea 当年《市级统筹招生计划》为准：</p>
+              <p class="xed-src" style="margin:0 0 6px">⚠️ 下表仅为<b>三档方向说明（待核）</b>，<b>不是朝阳可报名单</b>；本区好校（人朝/清华附中朝阳·望京/东师朝/对外经贸94中）请走统招·校额到校。具体可填统筹校须按<b>朝外在《招生简章》分到的名额</b>逐校核对：</p>
               <div v-for="t in TONGCHOU_REF" :key="t.tier" class="tc-tier">
                 <span class="tc-tag">{{ t.tier }}</span><span class="tc-desc">{{ t.desc }}</span>
                 <span class="tc-schools">{{ t.schools.join('、') }}</span>
