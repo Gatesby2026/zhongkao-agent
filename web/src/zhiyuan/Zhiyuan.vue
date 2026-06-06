@@ -214,7 +214,8 @@ async function submit() {
 /* ---------------- 地图 ---------------- */
 // 选中学校 → 右侧详情面板（替代地图气泡）
 const selectedPoint = ref<Point | null>(null)
-function selectPoint(p: Point) { selectedPoint.value = p }
+const selectedTc = ref<any>(null)   // 选中统筹校时的结构化数据（右侧详情用）
+function selectPoint(p: Point) { selectedPoint.value = p; selectedTc.value = null }
 // 由点位反查冲稳保卡片：多校区点名形如 "和平街一中·和平街校区(...)"，取 · 前主名匹配
 function cardOfPoint(p: Point | null): Card | null {
   if (!p) return null
@@ -374,17 +375,20 @@ function renderMarkers() {
     if (!s.lat || !s.lon || !s.faces_chaoyang) return
     const j = tcJudge(s)
     const tier = (tongchou.value?.tongchou_er || []).includes(s) ? '统筹二' : '统筹一'
+    const color = tcColor[j.cls] || '#2980b9'
     const tp: Point = {
-      name: s.name, lat: s.lat, lon: s.lon, kind: 'small', color: tcColor[j.cls] || '#2980b9',
-      band: tier, level: `市级统筹 · ${tier}${s.campus ? '（' + s.campus + '）' : ''}`, rank: '—', margin: '—',
-      dist: '距离未知', hist: '',
-      style: `投朝阳 ${s.quota_chaoyang} 名 · ${s.district}　研判：${j.label}${j.d != null ? `（估${estScore.value}/统招线${s.score_2025_tongzhao}·Δ${j.d > 0 ? '+' : ''}${j.d}）` : '（统招线待核）'}`,
-      note: [s.address, '⚠️研判按统招线、统筹线通常更低；录取看朝外名次，以简章为准'].filter(Boolean).join(' · '),
-      reason: '', tags: [], gaokao: '', matched: [],
+      name: s.name, lat: s.lat, lon: s.lon, kind: 'small', color,
+      band: j.label, level: `市级统筹·${tier}${s.campus ? '（' + s.campus + '）' : ''}`, rank: '—', margin: '—',
+      dist: '距离未知', hist: '', style: '', note: '', reason: '', tags: [], gaokao: '', matched: [],
     }
-    L.marker([s.lat, s.lon], { icon: smallIcon(tcColor[j.cls] || '#2980b9') }).addTo(tcLayer)
-      .on('click', () => selectPoint(tp))
-      .bindTooltip(shortName(s.name), { direction: 'top', offset: [0, -6], className: 'map-lbl' })
+    // 参照普高：可冲/稳 用大 pin（带研判档），够不上/待核 用小图标
+    const big = j.cls === 'tj-wen' || j.cls === 'tj-chong'
+    const icon = big ? pin(color, j.label) : smallIcon(color)
+    L.marker([s.lat, s.lon], { icon }).addTo(tcLayer)
+      .on('click', () => { selectPoint(tp); selectedTc.value = { ...s, _tier: tier } })
+      .bindTooltip(shortName(s.name), big
+        ? { permanent: true, direction: 'bottom', offset: [0, 2], className: 'map-lbl' }
+        : { direction: 'top', offset: [0, -6], className: 'map-lbl' })
     if (layers.tc) bounds.push([s.lat, s.lon])
   })
   if (layers.tc) tcLayer.addTo(mapInst)
@@ -905,6 +909,31 @@ const tcOptions: string[] = []
               <div v-if="selectedPoint.gaokao" class="dp-line dp-muted">🎓 高考(民间·非官方)：{{ selectedPoint.gaokao }}</div>
               <div v-if="selectedPoint.note" class="dp-line dp-muted">{{ selectedPoint.note }}</div>
               <div v-if="selectedPoint.reason" class="dp-warn">🚫 不在报名范围：{{ selectedPoint.reason }}</div>
+
+              <!-- 市级统筹结构化信息 -->
+              <div v-if="selectedTc" class="dp-block dp-tc">
+                <div class="dp-title">市级统筹信息</div>
+                <dl class="dp-kv">
+                  <div><dt>类别 · 投朝阳名额</dt><dd>{{ selectedTc._tier }} · 投朝阳 <b>{{ selectedTc.quota_chaoyang }}</b> 名</dd></div>
+                  <div><dt>办学层次</dt><dd>{{ selectedTc.level || '待核' }}</dd></div>
+                  <div><dt>研判（你估≈{{ estScore }}）</dt>
+                    <dd><span class="tj" :class="tcJudge(selectedTc).cls">{{ tcJudge(selectedTc).label }}</span>
+                      <span v-if="tcJudge(selectedTc).d != null" class="dp-mg">
+                        {{ tcJudge(selectedTc).ref ? '历年线' : '线' }}{{ tcJudge(selectedTc).line }}·Δ{{ (tcJudge(selectedTc).d ?? 0) > 0 ? '+' : '' }}{{ tcJudge(selectedTc).d }}</span></dd></div>
+                </dl>
+                <table v-if="selectedTc.score_lines && selectedTc.score_lines.length" class="dp-table">
+                  <thead><tr><th>年</th><th>统招线</th><th>口径</th></tr></thead>
+                  <tbody>
+                    <tr v-for="sl in selectedTc.score_lines" :key="sl.year">
+                      <td>{{ sl.year }}</td><td>{{ sl.score }}<small>（{{ sl.scale }}制）</small></td><td>{{ sl.conf }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div v-if="selectedTc.style" class="dp-line">🏫 {{ selectedTc.style }}</div>
+                <div v-if="selectedTc.gaokao" class="dp-line dp-muted">🎓 高考(民间·非官方)：{{ selectedTc.gaokao }}</div>
+                <div class="dp-line dp-muted">📍 {{ selectedTc.address }}</div>
+                <div class="dp-line dp-warn">⚠️ 比的是<b>统招线</b>(非统筹实际线，统筹线通常更低、偏保守)；能否录取看朝外当年报该校统筹的名次，以《简章》为准。</div>
+              </div>
             </template>
             <div v-else class="dp-empty">
               <div class="dp-empty-ic">🏫</div>
@@ -1526,6 +1555,8 @@ const tcOptions: string[] = []
 .dp-mg { font-size: 11px; color: var(--gray-400); font-weight: 400; margin-left: 8px; }
 .dp-vol { font-size: 11px; color: var(--accent); font-weight: 400; margin-left: 6px; }
 .dp-block { margin-top: 14px; }
+.dp-tc { border-top: 2px solid var(--brand-50); padding-top: 10px; }
+.dp-tc .dp-title { color: #a93226; }
 .dp-title { font-size: 12px; font-weight: 700; color: var(--brand-dark); margin-bottom: 6px;
   padding-left: 7px; border-left: 3px solid var(--brand); }
 .dp-table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
