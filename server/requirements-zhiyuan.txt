@@ -1,0 +1,5 @@
+# 志愿填报服务（zhiyuan_app.py）专用依赖 — 远比学情服务轻
+# 学情服务(main.py)需要的 OCR / 图像 / 评分等重依赖，志愿服务都不需要。
+fastapi
+uvicorn[standard]
+pyyaml

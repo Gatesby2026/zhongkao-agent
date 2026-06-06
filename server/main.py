@@ -354,49 +354,13 @@ def list_all():
     return {"items": db.list_analyses()}
 
 
-# ---------- 志愿填报推荐（冲稳保）----------
-
-sys.path.insert(0, str(ROOT / "scripts" / "admission"))
-import recommend as zhiyuan   # noqa: E402
-from typing import List, Optional   # noqa: E402
-from pydantic import BaseModel   # noqa: E402
+# 注：志愿填报功能已拆为独立服务 server/zhiyuan_app.py（B 档·同仓双服务）。
+# 本服务（学情分析）不再承载 /api/zhiyuan/recommend 与 /zhiyuan 页；nginx 按路径分流。
 
 
-class ZhiyuanReq(BaseModel):
-    rank: int
-    home: Optional[str] = None
-    mode: str = "driving"
-    max_km: Optional[float] = None
-    interests: Optional[List[str]] = None
-    boarding: bool = False
-    identity: str = "jjyj"   # 京籍应届 jjyj / 非京籍 feijing / 往届回京 wangjie
-
-
-@app.post("/api/zhiyuan/recommend")
-def zhiyuan_recommend(req: ZhiyuanReq):
-    try:
-        result = zhiyuan.build_result(
-            rank=req.rank, home=req.home, mode=req.mode,
-            max_km=req.max_km, interests=req.interests, district="chaoyang",
-            boarding=req.boarding, identity=req.identity,
-        )
-    except ValueError as e:
-        raise HTTPException(status_code=400, detail=str(e))
-    # 去掉给 CLI/地图复用的内部字段（下划线开头）
-    return {k: v for k, v in result.items() if not k.startswith("_")}
-
-
-# ---------- 静态前端（web 构建产物）----------
+# ---------- 静态前端（web 构建产物：学情 index.html）----------
 
 WEB_DIST = ROOT / "web" / "dist"
-
-
-@app.get("/zhiyuan")
-def zhiyuan_page():
-    f = WEB_DIST / "zhiyuan.html"
-    if not f.exists():
-        raise HTTPException(status_code=404, detail="zhiyuan page not built")
-    return FileResponse(str(f))
 
 
 if WEB_DIST.exists():

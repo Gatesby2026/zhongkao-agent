@@ -1,0 +1,16 @@
+[Unit]
+Description=中考志愿填报推荐服务 (zhiyuan, 与学情分析解耦)
+After=network.target
+
+[Service]
+Type=simple
+# WorkingDirectory / ExecStart 的 python 路径需与现有 zhongkao.service 对齐（同一 venv）
+WorkingDirectory=/opt/zhongkao-agent/server
+# AMAP_KEY 复用现有机制（如 zhongkao.service 用 EnvironmentFile，则这里也用同一个）
+Environment=AMAP_KEY=__与_zhongkao_service_一致__
+ExecStart=/opt/zhongkao-agent/.venv/bin/uvicorn zhiyuan_app:app --host 127.0.0.1 --port 8201
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
