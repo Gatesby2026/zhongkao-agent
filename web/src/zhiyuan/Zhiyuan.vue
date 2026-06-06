@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref, reactive, computed, nextTick, watch } from 'vue'
+import { USER_DEFAULTS } from './user-defaults'
 
 declare const L: any
 
@@ -57,7 +58,7 @@ const openG = ref<number | null>(null)
 const XED_OFFICIAL = 'https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87193.html'
 // 校额到校：按初中查名额
 const showXedImg = ref(false)
-const xedQuery = ref('')
+const xedQuery = ref(USER_DEFAULTS.chuzhong)
 const xedBlock = computed<XeddxBlock | null>(() => result.value?.xeddx || null)
 const xedSel = computed<XeddxRow | null>(() => {
   const b = xedBlock.value; const q = xedQuery.value.trim()
@@ -137,12 +138,12 @@ interface Result {
 }
 
 const form = reactive({
-  rank: 4500,
-  home: '朝阳区大屯路金泉花园小区',
-  mode: 'bicycling',
-  max_km: 8 as number | string,
-  boarding: false,
-  identity: 'jjyj' as 'jjyj' | 'feijing' | 'wangjie',   // 京籍应届/非京籍/往届
+  rank: USER_DEFAULTS.rank,
+  home: USER_DEFAULTS.home,
+  mode: USER_DEFAULTS.mode,
+  max_km: USER_DEFAULTS.max_km,
+  boarding: USER_DEFAULTS.boarding,
+  identity: USER_DEFAULTS.identity,   // 京籍应届/非京籍/往届
 })
 const IDENTITIES = [
   { v: 'jjyj', label: '京籍应届' },
@@ -433,6 +434,38 @@ const xedEligible = computed<{ school: string; n: number }[]>(() => {
   if (!r || !r.by_school) return []
   return Object.entries(r.by_school).map(([school, n]) => ({ school, n: n as number }))
 })
+// 校额到校简称 → 我方数据全名（取统招位次用）
+const XED_FULLNAME: Record<string, string> = {
+  '八十中': '北京市第八十中学', '陈经纶': '陈经纶中学', '日坛': '日坛中学',
+  '和平街(和平街)': '和平街一中', '和平街(莲葩园)': '和平街一中（北苑莲葩园校区）',
+  '对外经贸94中': '对外经济贸易大学附属中学', '十七中': '北京十七中', '工大附中': '北京工业大学附属中学',
+  '人朝': '人大附中朝阳学校', '东方德才': '东方德才学校', '东师朝': '东北师大附中朝阳学校', '清华朝阳': '清华附中朝阳学校',
+}
+// 按孩子位次给校额到校推荐：高中统招位次 vs 孩子rank → 值得冲/相当/统招本可达
+const xedRecommend = computed(() => {
+  const rank = Number(form.rank) || 0
+  const pl = result.value?.public_list || []
+  const byName: Record<string, PubSchool> = {}
+  pl.forEach(p => { byName[p.name] = p })
+  return xedEligible.value.map(e => {
+    const full = XED_FULLNAME[e.school]
+    const card = full ? byName[full] : null
+    const ref = card && typeof card.ref_rank === 'number' ? card.ref_rank as number : null
+    let tag = 'unknown'
+    if (ref != null && rank) {
+      if (ref <= rank * 0.95) tag = 'worth'        // 统招位次比孩子靠前→统招够不上→校额到校是机会
+      else if (ref >= rank * 1.1) tag = 'waste'    // 统招位次比孩子靠后→统招本可达→校额占用意义小
+      else tag = 'similar'
+    }
+    return { ...e, full, ref, tag }
+  }).sort((a, b) => (a.ref ?? 9e9) - (b.ref ?? 9e9))
+})
+const XED_TAG: Record<string, { label: string; cls: string }> = {
+  worth: { label: '✅值得冲(统招够不上)', cls: 'rt-worth' },
+  similar: { label: '≈与统招相当', cls: 'rt-similar' },
+  waste: { label: '⚠️统招本可达·占用浪费', cls: 'rt-waste' },
+  unknown: { label: '—', cls: 'rt-unknown' },
+}
 
 function copyAll() {
   const res = result.value
@@ -922,6 +955,20 @@ function copyAll() {
             <p v-if="xedSel && xedSel.by_school" class="xed-src">{{ cleanName(xedSel.name) }}：校额到校共 {{ xedSel.total }} 个，下面按名额选优质高中（括号为本校名额）。</p>
             <p v-else-if="xedSel" class="xed-note warn">{{ cleanName(xedSel.name) }}：合计 {{ xedSel.total }}，明细待核——优质高中与专业请对照官方原图手填。</p>
             <p v-else class="xed-src">先填上面的初中校，下面才能按名额选优质高中。</p>
+
+            <!-- 按分数的报名方案推荐 + 风险 -->
+            <div v-if="xedRecommend.length" class="xed-rec">
+              <p class="xed-rec-warn">⚠️ <b>风险</b>：校额到校在统招<b>之前</b>录取、<b>一旦录取就锁定、后续批次作废</b>。建议<b>只填比你统招更够得着的好学校</b>（下方 ✅），<b>别填你统招本来就能上的</b>（⚠️），否则等于用校额到校把自己锁进更差的结果。</p>
+              <div class="xed-rec-list">
+                <div v-for="e in xedRecommend" :key="e.school" class="xed-rec-row">
+                  <span class="rt" :class="XED_TAG[e.tag].cls">{{ XED_TAG[e.tag].label }}</span>
+                  <b class="rt-name">{{ e.school }}</b>
+                  <span class="rt-meta">名额{{ e.n }}<template v-if="e.ref"> · 统招位次≈{{ e.ref }}</template></span>
+                </div>
+              </div>
+              <p class="xed-src">推荐依据：各优质高中“统招录取位次”对比你的区排名 <b>{{ form.rank }}</b>。✅=统招够不上、校额到校才有机会；⚠️=统招本可达、占名额意义小。校额到校实际按本初中<b>校内排名</b>录取、无官方各校线，仅作策略参考。</p>
+            </div>
+
             <div class="slots">
               <div v-for="(s, i) in draftXed" :key="i" class="slot" :class="{ filled: s.school, empty: !s.school }">
                 <div class="slot-top">
@@ -953,19 +1000,16 @@ function copyAll() {
           <h3 class="batch-h">③ 统一招生 <small>2026 含贯通；{{ ZHIYUAN_SLOTS }} 志愿 ×2 专业，已按冲→稳→保预填 {{ filledSlots }}/{{ ZHIYUAN_SLOTS }}</small></h3>
           <template v-if="canPuhao">
             <div class="draft-actions"><button class="ghost" @click="resetDraft">重置为推荐顺序</button></div>
-            <div class="slots">
-              <div v-for="(s, i) in draft" :key="i" class="slot" :class="{ empty: !s.name, filled: s.name }">
-                <div class="slot-top">
-                  <span class="slot-no" :class="{ on: s.name }">{{ i + 1 }}</span>
-                  <select v-model="s.name" @change="onSlotSchool(i)" class="school-sel">
-                    <option :value="null">＋ 选择学校（空）</option>
-                    <option v-for="c in reportable" :key="c.name" :value="c.name">
-                      [{{ bandOf(c.name) }}] {{ cleanName(c.name) }}（{{ c.school_code }}）
-                    </option>
-                  </select>
-                  <button v-if="s.name" class="x" title="清空" @click="clearSlot(i)">✕</button>
-                </div>
-                <div v-if="s.name" class="slot-majors">
+            <div class="uni-list">
+              <div v-for="(s, i) in draft" :key="i" class="urow" :class="{ filled: s.name }">
+                <span class="slot-no" :class="{ on: s.name }">{{ i + 1 }}</span>
+                <select v-model="s.name" @change="onSlotSchool(i)" class="school-sel uni-sel">
+                  <option :value="null">＋ 选择学校（空）</option>
+                  <option v-for="c in reportable" :key="c.name" :value="c.name">
+                    [{{ bandOf(c.name) }}] {{ cleanName(c.name) }}（{{ c.school_code }}）
+                  </option>
+                </select>
+                <div v-if="s.name" class="uni-majors">
                   <button v-for="m in majorsOf(s.name)" :key="m.major_code" type="button"
                     class="mchip" :class="{ on: s.picks.includes(m.major_code) }"
                     @click="togglePick(i, m.major_code)">
@@ -973,6 +1017,8 @@ function copyAll() {
                   </button>
                   <span v-if="!majorsOf(s.name).length" class="nomajor">该校暂无官方专业代码数据</span>
                 </div>
+                <span v-else class="uni-empty">未选</span>
+                <button v-if="s.name" class="x" title="清空" @click="clearSlot(i)">✕</button>
               </div>
             </div>
             <div v-if="canGuantong && gtBlock" class="gt-ref">
@@ -1031,23 +1077,24 @@ function copyAll() {
 .g-a :deep(.g-tbl th), .g-a :deep(.g-tbl td) { border: 1px solid var(--gray-200); padding: 5px 8px; text-align: left; }
 .g-a :deep(.g-tbl th) { background: var(--gray-50); color: var(--gray-500); font-weight: 600; }
 
-/* 输入区：全部条件常驻，一行紧凑排开 */
-.form .fields { display: flex; gap: 12px; align-items: flex-end; flex-wrap: wrap; }
-.form label { display: flex; flex-direction: column; font-size: 12px; font-weight: 600;
-  color: var(--gray-700); gap: 4px; }
-.form label small { font-weight: 400; color: var(--gray-400); font-size: 11px; margin-left: 4px; }
-.form input, .form select { padding: 9px 10px; border: 1px solid var(--gray-300);
-  border-radius: var(--radius-xs); font-size: 14px; background: #fff; height: 38px; box-sizing: border-box; }
+/* 输入区：全部条件常驻，紧凑排开 */
+.form.card { padding: 12px 14px; }
+.form .fields { display: flex; gap: 8px 10px; align-items: flex-end; flex-wrap: wrap; }
+.form label { display: flex; flex-direction: column; font-size: 11.5px; font-weight: 600;
+  color: var(--gray-700); gap: 3px; }
+.form label small { font-weight: 400; color: var(--gray-400); font-size: 10.5px; margin-left: 3px; }
+.form input, .form select { padding: 0 9px; border: 1px solid var(--gray-300);
+  border-radius: var(--radius-xs); font-size: 13px; background: #fff; height: 34px; box-sizing: border-box; }
 .form input:disabled { background: var(--gray-100); color: var(--gray-400); }
-.f-rank { width: 110px; }
-.f-home { flex: 1; min-width: 200px; }
-.f-mode { width: 100px; }
-.f-km { width: 90px; }
-.f-board .sw-line { display: flex; align-items: center; gap: 6px; height: 38px; }
-.f-board .sw-line input { width: 17px; height: 17px; }
-.sw-hint { font-size: 11px; font-weight: 400; color: var(--gray-500); }
-.go { padding: 0 22px; height: 38px; background: var(--brand); color: #fff; border: none;
-  border-radius: var(--radius-sm); font-size: 15px; font-weight: 600; white-space: nowrap; cursor: pointer; }
+.f-rank { width: 84px; }
+.f-home { flex: 1; min-width: 150px; }
+.f-mode { width: 88px; }
+.f-km { width: 70px; }
+.f-board .sw-line { display: flex; align-items: center; gap: 5px; height: 34px; }
+.f-board .sw-line input { width: 16px; height: 16px; }
+.sw-hint { font-size: 10.5px; font-weight: 400; color: var(--gray-500); }
+.go { padding: 0 20px; height: 34px; background: var(--brand); color: #fff; border: none;
+  border-radius: var(--radius-sm); font-size: 14px; font-weight: 600; white-space: nowrap; cursor: pointer; }
 .go:disabled { opacity: .6; }
 .interests { margin-top: 14px; }
 .interests .il { font-size: 12px; font-weight: 600; color: var(--gray-700); display: block; margin-bottom: 6px; }
@@ -1187,7 +1234,6 @@ function copyAll() {
 .list-table tr.unreach .t-name { color: var(--gray-500); }
 .t-name { font-weight: 600; color: var(--gray-900); white-space: nowrap; }
 .t-lvl { font-size: 12px; color: var(--gray-500); white-space: nowrap; }
-.list-table td:nth-child(3) { white-space: nowrap; }
 .t-band { display: inline-block; min-width: 20px; text-align: center; font-size: 11px; font-weight: 700;
   padding: 1px 6px; border-radius: var(--radius-xs); white-space: nowrap; }
 .band-冲 { background: #fde8e6; color: #c0392b; }
@@ -1205,7 +1251,7 @@ function copyAll() {
 .dir-国际 { background: #e0f2fe; color: #0369a1; }
 .dir-unknown { background: var(--gray-100); color: var(--gray-400); }
 .t-curr { font-size: 12px; color: var(--gray-600); line-height: 1.5;
-  min-width: 110px; max-width: 190px; white-space: normal; overflow-wrap: anywhere; word-break: break-word; }
+  width: 175px; min-width: 150px; max-width: 200px; white-space: normal; overflow-wrap: break-word; }
 .t-fee { font-size: 12px; color: var(--gray-800); line-height: 1.5; min-width: 140px; white-space: normal; }
 .mini-bdg { font-size: 10px; padding: 0 5px; border-radius: var(--radius-xs); margin-left: 4px; }
 .addr-tag { font-size: 10px; padding: 0 5px; border-radius: var(--radius-xs); margin-left: 4px;
@@ -1240,6 +1286,18 @@ function copyAll() {
 .xed-note { font-size: 11.5px; color: var(--gray-500); margin-top: 9px; line-height: 1.6; }
 .xed-note.warn { color: #b45309; background: var(--warning-bg); padding: 7px 9px; border-radius: var(--radius-xs); }
 .xed-src { font-size: 11px; color: var(--gray-400); margin-top: 8px; }
+/* 校额到校 报名方案推荐 */
+.xed-rec { margin: 10px 0 14px; border: 1px solid var(--gray-100); border-radius: var(--radius-sm); padding: 12px 14px; background: var(--surface); }
+.xed-rec-warn { font-size: 12.5px; color: #b45309; background: var(--warning-bg); border-radius: var(--radius-xs); padding: 9px 11px; line-height: 1.6; margin: 0 0 10px; }
+.xed-rec-list { display: flex; flex-direction: column; gap: 5px; }
+.xed-rec-row { display: flex; align-items: center; gap: 8px; font-size: 12.5px; }
+.rt { flex: 0 0 auto; font-size: 11px; font-weight: 700; padding: 1px 7px; border-radius: var(--radius-xs); white-space: nowrap; }
+.rt-worth { background: #d8f5e3; color: #1e8e4e; }
+.rt-similar { background: #fdf3d4; color: #9a7d0a; }
+.rt-waste { background: var(--warning-bg); color: #b45309; }
+.rt-unknown { background: var(--gray-100); color: var(--gray-400); }
+.rt-name { color: var(--gray-900); }
+.rt-meta { color: var(--gray-500); font-size: 11.5px; }
 .xed-imgtoggle { margin: 4px 0 10px; background: var(--gray-50); border: 1px solid var(--gray-200);
   border-radius: var(--radius-sm); padding: 9px 14px; font-size: 13px; font-weight: 600;
   color: var(--brand-dark); cursor: pointer; }
@@ -1292,6 +1350,15 @@ function copyAll() {
 .mchip b { color: var(--brand-dark); }
 .nomajor { font-size: 12px; color: var(--gray-400); }
 .src { font-size: 11px; color: var(--gray-400); margin-top: 14px; }
+/* 统招：学校+专业同一行，去空白 */
+.uni-list { display: flex; flex-direction: column; gap: 6px; }
+.urow { display: flex; align-items: center; gap: 8px; padding: 6px 10px; min-width: 0;
+  border: 1px solid var(--gray-100); border-radius: var(--radius-xs); background: var(--gray-50); }
+.urow.filled { background: var(--surface); border-color: var(--brand-50); }
+.uni-sel { flex: 0 0 300px; width: 300px; }
+.uni-majors { flex: 1; min-width: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.uni-empty { flex: 1; color: var(--gray-300); font-size: 12px; }
+@media (max-width: 640px) { .uni-sel { flex-basis: 150px; width: 150px; } }
 
 /* 移动端 */
 @media (max-width: 860px) {
