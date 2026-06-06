@@ -153,7 +153,7 @@ const IDENTITIES = [
 ]
 // 学校类型图层开关（地图上显示哪些点）
 const layers = reactive({ gongban: true, coop: true, minban: false })
-const tab = ref<'map' | 'list' | 'minban' | 'intl' | 'voc' | 'gt' | 'xed' | 'draft'>('map')   // +贯通+校额到校
+const tab = ref<'map' | 'list' | 'minban' | 'intl' | 'voc' | 'gt' | 'xed' | 'tc' | 'draft'>('map')   // +贯通+校额到校+统筹
 const loading = ref(false)
 const errMsg = ref('')
 const result = ref<Result | null>(null)
@@ -340,6 +340,18 @@ const reportable = computed<Card[]>(() => {
   }
   return out
 })
+// 下拉可选学校：冲→稳→保→够不上 全部有官方代码的（够不上也列出，供手动冲刺）
+const selectable = computed<Card[]>(() => {
+  const res = result.value
+  if (!res) return []
+  const out: Card[] = []
+  for (const band of ['冲', '稳', '保', '够不上']) {
+    for (const c of (res.bands[band] || [])) {
+      if (c.school_code) out.push(c)
+    }
+  }
+  return out
+})
 function bandOf(name: string | null): string {
   const res = result.value
   if (!res || !name) return ''
@@ -515,17 +527,21 @@ function moveUni(i: number, dir: number) {
   ;[a[i], a[j]] = [a[j], a[i]]
 }
 function insertUniAbove(i: number) {
-  // 在第 i 个志愿上方插入一个空志愿，其余顺延（末位若已填则提示溢出）
-  const a = draft.value
-  const last = a[a.length - 1]
+  // 在第 i 个志愿上方插入一个空志愿，其余顺延；超过 12 个则挤出末位
+  const a = draft.value.slice()
   a.splice(i, 0, { name: null, picks: [] })
-  const dropped = a.pop()   // 维持 12 个槽
-  if (dropped && dropped.name) {
-    copyHint.value = `已在第${i + 1}位插入；末位「${cleanName(dropped.name)}」被挤出，请检查`
-    setTimeout(() => copyHint.value = '', 3500)
+  if (a.length > ZHIYUAN_SLOTS) {
+    const dropped = a.pop()
+    if (dropped && dropped.name) {
+      copyHint.value = `已在第${i + 1}位插入；超出12个，末位「${cleanName(dropped.name)}」被挤出`
+      setTimeout(() => copyHint.value = '', 3500)
+    }
   }
-  // 触发响应式
-  draft.value = a.slice()
+  draft.value = a
+}
+function deleteUni(i: number) {
+  // 直接删除整行（想再加用"插入"）
+  draft.value = draft.value.slice(0, i).concat(draft.value.slice(i + 1))
 }
 
 // 市级统筹（朝阳考生可报，参考名单，来源：2026白皮书/bjeea，含统筹一/二/三）
@@ -566,13 +582,15 @@ const tcOptions = TONGCHOU_REF.flatMap(t => t.schools).filter(s => !s.startsWith
 
     <!-- 输入区：全部条件常驻显示，方便反复改条件对比 -->
     <section class="card form">
-      <div class="fields">
+      <div class="fields frow">
         <label class="f-rank">区排名<small>一模/二模</small>
           <input type="number" v-model.number="form.rank" min="1" placeholder="如 4500" />
         </label>
         <label class="f-home">家庭住址<small>留空只看全区分布</small>
           <input type="text" v-model="form.home" placeholder="如 朝阳区大屯金泉家园" />
         </label>
+      </div>
+      <div class="fields frow">
         <label class="f-mode">通勤方式
           <select v-model="form.mode">
             <option v-for="m in MODES" :key="m.v" :value="m.v">{{ m.label }}</option>
@@ -623,6 +641,9 @@ const tcOptions = TONGCHOU_REF.flatMap(t => t.schools).filter(s => !s.startsWith
         </button>
         <button class="tab" :class="{ on: tab === 'xed' }" @click="tab = 'xed'">
           <span class="tab-ic">🎯</span>校额到校
+        </button>
+        <button class="tab" :class="{ on: tab === 'tc' }" @click="tab = 'tc'">
+          <span class="tab-ic">🌆</span>市级统筹
         </button>
         <button class="tab" :class="{ on: tab === 'draft' }" @click="tab = 'draft'">
           <span class="tab-ic">📝</span>志愿草表<span class="tab-cnt">{{ filledSlots }}/{{ ZHIYUAN_SLOTS }}</span>
@@ -962,6 +983,31 @@ const tcOptions = TONGCHOU_REF.flatMap(t => t.schools).filter(s => !s.startsWith
         </p>
       </div>
 
+      <!-- TAB：市级统筹（指标分配批次）-->
+      <div class="listwrap" v-show="tab === 'tc'">
+        <div class="xed-intro">
+          <h3>🌆 市级统筹（指标分配批次）</h3>
+          <p>市级统筹＝优质高中拿名额<b>跨区 / 面向全市</b>分配，和校额到校<b>同属指标分配批次</b>（在统招之前、<b>录取即锁定、后续作废</b>）。门槛同：中考总分 ≥ 430 + 综合素质 B + 同一初中连续三年学籍（往届/回京不可）。</p>
+          <div class="xed-rules">
+            <div class="xed-rule"><span class="xed-k">统筹一</span>中心城区优质高中跨区招生（不在东西海招）——给其他区考生进城区名校的机会</div>
+            <div class="xed-rule"><span class="xed-k">统筹二</span>优质高中的郊区分校 / 新建校面向全市招生</div>
+            <div class="xed-rule"><span class="xed-k">统筹三</span>高校与普通高中联合培养实验班（名额较少）</div>
+            <div class="xed-rule"><span class="xed-k">报名策略</span>① 与校额到校同批次、共用门槛、录取即锁定，<b>优先填比你统招更够得着的好学校</b>，别填统招本可达的；② 统筹是<b>全市按分竞争</b>（不像校额到校是校内竞争），更看你的绝对分数/区位次，把握不大别盲填把自己锁低；③ 通常和校额到校一起在指标分配批次填报</div>
+          </div>
+          <p class="xed-hl">📋 下面是朝阳考生可报的统筹学校参考；各校名额与完整名单以 bjeea 当年《市级统筹招生计划》为准。</p>
+        </div>
+        <div class="tc-ref">
+          <div v-for="t in TONGCHOU_REF" :key="t.tier" class="tc-tier">
+            <span class="tc-tag">{{ t.tier }}</span><span class="tc-desc">{{ t.desc }}</span>
+            <span class="tc-schools">{{ t.schools.join('、') }}</span>
+          </div>
+        </div>
+        <p class="list-tip">
+          ⚠️ 统筹一/二/三 的可报学校与名额<b>每年随 bjeea 计划变</b>；上表为朝阳相关参考（来源 2026 白皮书 / bjeea，民间整理），报名前务必以当年官方《市级统筹招生计划》核对。
+          市级统筹与校额到校同批次：<b>被录即锁定、后续批次作废</b>。在「志愿草表 → 批次② 指标分配」里可填写统筹志愿。
+        </p>
+      </div>
+
       <!-- TAB 8：志愿草表 v2（三批次 · 2026 口径）-->
       <div class="draftwrap" v-show="tab === 'draft'">
         <p class="draft-note">
@@ -1067,7 +1113,7 @@ const tcOptions = TONGCHOU_REF.flatMap(t => t.schools).filter(s => !s.startsWith
                 <span class="slot-no" :class="{ on: s.name }">{{ i + 1 }}</span>
                 <select v-model="s.name" @change="onSlotSchool(i)" class="school-sel uni-sel">
                   <option :value="null">＋ 选择学校（空）</option>
-                  <option v-for="c in reportable" :key="c.name" :value="c.name">
+                  <option v-for="c in selectable" :key="c.name" :value="c.name">
                     [{{ bandOf(c.name) }}] {{ cleanName(c.name) }}（{{ c.school_code }}）
                   </option>
                 </select>
@@ -1084,7 +1130,7 @@ const tcOptions = TONGCHOU_REF.flatMap(t => t.schools).filter(s => !s.startsWith
                   <button class="op" title="上移" :disabled="i === 0" @click="moveUni(i, -1)">↑</button>
                   <button class="op" title="下移" :disabled="i === draft.length - 1" @click="moveUni(i, 1)">↓</button>
                   <button class="op" title="在此上方插入一个空志愿（其余顺延）" @click="insertUniAbove(i)">插入</button>
-                  <button v-if="s.name" class="op x-op" title="清空" @click="clearSlot(i)">✕</button>
+                  <button class="op x-op" title="删除整行" @click="deleteUni(i)">✕</button>
                 </span>
               </div>
             </div>
@@ -1147,6 +1193,7 @@ const tcOptions = TONGCHOU_REF.flatMap(t => t.schools).filter(s => !s.startsWith
 /* 输入区：全部条件常驻，紧凑排开 */
 .form.card { padding: 12px 14px; }
 .form .fields { display: flex; gap: 8px 10px; align-items: flex-end; flex-wrap: wrap; }
+.form .frow + .frow { margin-top: 8px; }
 .form label { display: flex; flex-direction: column; font-size: 11.5px; font-weight: 600;
   color: var(--gray-700); gap: 3px; }
 .form label small { font-weight: 400; color: var(--gray-400); font-size: 10.5px; margin-left: 3px; }
