@@ -97,28 +97,33 @@ audit:
   verified: web-cross 2026-06
 - name: 清华附中朝阳学校
   yaml_name: 清华附中朝阳学校
-  final_address: 北京市朝阳区柳芳南里20号（高中部·柳芳校区，高一高二；高三新源西里）
+  final_address: 北京市朝阳区柳芳南里20号（柳芳校区·高中部）
   confidence: high
   action: ready
-  campus_note: 柳芳南里20号=高中部(与望京学校高中合署，高一高二)；高三在新源西里校区。
-  evidence:
+  campus_note: 高中报到/上课=柳芳南里20号，与望京学校(205010)高中同址混合编班·统一师资。非官方称高一初期/高三曾分用新源里/新源西里，以当年报到通知为准。
+  evidence: &id001
+  - source: 清华附中朝阳学校官网2022中招问答
+    tier: T2
+    url: qhfzcyxx.bjchyedu.cn/shtml/2/news/202207/6043.shtml
+    claim: 清华附中朝阳学校(205009)与望京学校(205010)高中部均在柳芳校区(柳芳南里20号)、同址·统一师资·混合编班
+    agree: 'yes'
+  - source: 清华附中望京学校官网2020中招问答
+    tier: T2
+    url: qhfzwjxx.bjchyedu.cn/zszl/csgrxzx/202011/t20201105_57521.html
+    claim: 望京学校2020首年招生即与朝阳学校同址上课(柳芳南里20号)、统一师资、混合编班
+    agree: 'yes'
+  - source: 北京中考信息网 2024-12 朝阳校情
+    tier: T3
+    url: zhongkaobj.cn/zhongkao/zxdt/202412206641.html
+    claim: 两校同址(柳芳校区)、混合编班；望京官网页脚法人地址为大望京(初中/注册地)
+    agree: 'yes'
   - source: bjeea 2025统招计划册
     tier: T1
     url: bjeea.cn
-    claim: 柳芳南里20号 tel64686990
+    claim: 两校地址均列柳芳南里20号、电话同64686990；邮编朝阳100027/望京100103
     agree: 'yes'
-  - source: 清华附中朝阳学校官网招生问答
-    tier: T2
-    url: qhfzcyxx.bjchyedu.cn/shtml/2/news/202207/6043.shtml
-    claim: 高中部柳芳校区(柳芳南里20号)，高一高二在柳芳、高三新源西里
-    agree: 'yes'
-  - source: 百度百科
-    tier: T4
-    url: baike.baidu.com
-    claim: 柳芳南里20号
-    agree: 'yes'
-  resolution: T1+T2一致：高中=柳芳南里20号。high。
-  verified: web-cross 2026-06
+  resolution: 两校官网(2020/2022)+zhongkaobj(2024)+bjeea(2025)一致：高中=柳芳南里20号合署。high。
+  verified: web-cross 2026-06(复核)
 - name: 八十中睿德分校
   yaml_name: 八十中睿德分校
   final_address: 北京市朝阳区小红门路5号（本部；但高一近年借址八十中望京校区上课，逐年变，需电话核）
@@ -169,28 +174,13 @@ audit:
   verified: web-cross 2026-06
 - name: 清华附中望京学校
   yaml_name: 清华附中望京学校
-  final_address: 北京市朝阳区柳芳南里20号（高中部，与清华附中朝阳学校高中合署混编）；本部/初中：宏泰东街10号(大望京)
-  confidence: medium
-  action: verify_doornumber
-  campus_note: 望京学校注册地/初中本部在宏泰东街10号；高中部与朝阳学校高中同在柳芳南里20号柳芳校区合署混编。旧数据'宏泰东街10号'是本部(初中)，非高中报到点。
-  evidence:
-  - source: bjeea 2025统招计划册
-    tier: T1
-    url: bjeea.cn
-    claim: 望京学校与朝阳学校均列柳芳南里20号
-    agree: 'yes'
-  - source: 知乎 清华附中四校区别
-    tier: T4
-    url: zhuanlan.zhihu.com/p/585468356
-    claim: 望京与朝阳高中同在柳芳校区(柳芳南里20号)混班
-    agree: 'yes'
-  - source: 望京学校官网
-    tier: T2
-    url: qhfzwjxx.bjchyedu.cn
-    claim: 地址宏泰东街10号(大望京)
-    agree: partial
-  resolution: bjeea两校同列柳芳南里20号非OCR重复——高中确合署同址。高中报到=柳芳南里20号；宏泰东街10号是本部/初中。合署安排或随建校调整→medium。
-  verified: web-cross 2026-06
+  final_address: 北京市朝阳区柳芳南里20号（与朝阳学校高中同址·混合编班）
+  confidence: high
+  action: ready
+  campus_note: 高中部与清华附中朝阳学校同址(柳芳南里20号)·混合编班·统一师资(自2020首年招生)。大望京(崔各庄·宏泰东街,邮编100103)为其初中部/法人注册地,非高中报到。bjeea两校同址同电话为真实情况、非录入重复;邮编差异仅因法人注册地不同。
+  evidence: *id001
+  resolution: 高中报到=柳芳南里20号(与朝阳学校合署),勿用大望京(初中/注册地)。多源一致, high。
+  verified: web-cross 2026-06(复核)
 - name: 陈经纶中学
   yaml_name: 陈经纶中学
   final_address: 北京市朝阳区朝外大街38号

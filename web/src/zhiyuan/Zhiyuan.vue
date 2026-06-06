@@ -582,15 +582,13 @@ const tcOptions = TONGCHOU_REF.flatMap(t => t.schools).filter(s => !s.startsWith
 
     <!-- 输入区：全部条件常驻显示，方便反复改条件对比 -->
     <section class="card form">
-      <div class="fields frow">
+      <div class="fields">
         <label class="f-rank">区排名<small>一模/二模</small>
           <input type="number" v-model.number="form.rank" min="1" placeholder="如 4500" />
         </label>
         <label class="f-home">家庭住址<small>留空只看全区分布</small>
           <input type="text" v-model="form.home" placeholder="如 朝阳区大屯金泉家园" />
         </label>
-      </div>
-      <div class="fields frow">
         <label class="f-mode">通勤方式
           <select v-model="form.mode">
             <option v-for="m in MODES" :key="m.v" :value="m.v">{{ m.label }}</option>
