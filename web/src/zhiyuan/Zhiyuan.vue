@@ -272,6 +272,27 @@ const xedQuotaByName = computed<Record<string, number>>(() => {
   }
   return out
 })
+// 校额到校研判（按统筹方式）：高中统招位次 vs 孩子区排 → worth(值得冲)/similar(相当)/waste(统招可达)。
+// 全名→{tag,color}，供地图 pin 着色 + 详情卡显示。自包含(不依赖后置的 xedRecommend)。
+const XED_TAG_COLOR: Record<string, string> = { worth: '#e74c3c', similar: '#e67e22', waste: '#95a5a6', unknown: '#2980b9' }
+const xedJudgeByName = computed<Record<string, { tag: string; color: string; ref: number | null }>>(() => {
+  const r = xedSel.value
+  const m: Record<string, { tag: string; color: string; ref: number | null }> = {}
+  if (!r || !r.by_school) return m
+  const rank = Number(form.rank) || 0
+  const byName: Record<string, any> = {}
+  ;(result.value?.public_list || []).forEach((p: any) => { byName[p.name] = p })
+  for (const abbr of Object.keys(r.by_school)) {
+    const full = XED_FULLNAME[abbr]
+    if (!full) continue
+    const card = byName[full]
+    const ref = card && typeof card.ref_rank === 'number' ? card.ref_rank : null
+    let tag = 'unknown'
+    if (ref != null && rank) tag = ref <= rank * 0.95 ? 'worth' : ref >= rank * 1.1 ? 'waste' : 'similar'
+    m[full] = { tag, color: XED_TAG_COLOR[tag], ref }
+  }
+  return m
+})
 // 该点是不是中外合作/国际班学校（用于 coop 图层过滤）
 function isCoopPoint(p: Point): boolean {
   const c = findCard(p.name)
@@ -393,13 +414,16 @@ function renderMarkers() {
   })
   if (layers.tc) tcLayer.addTo(mapInst)
 
-  // 校额到校（默认关）—— 在有名额的朝阳优质高中(已是公办 pin)上叠加 🎯 高亮环
+  // 校额到校（默认关，按统筹方式）—— 有名额的朝阳优质高中用大 pin，按研判着色，标"🎯名额"
   xedLayer = L.layerGroup()
   res.points.forEach((p) => {
     const q = xedQuotaByName.value[p.name]
     if (!q) return
-    L.marker([p.lat, p.lon], { icon: L.divIcon({ className: 'xed-ring', html: `<div class="xr">🎯${q}</div>`, iconSize: [0, 0] }) })
-      .addTo(xedLayer).on('click', () => selectPoint(p))
+    const j = xedJudgeByName.value[p.name]
+    const color = j ? j.color : '#b9770e'
+    L.marker([p.lat, p.lon], { icon: pin(color, `🎯${q}`) }).addTo(xedLayer)
+      .on('click', () => selectPoint(p))
+      .bindTooltip(shortName(p.name), { permanent: true, direction: 'bottom', offset: [0, 2], className: 'map-lbl' })
     if (layers.xed) bounds.push([p.lat, p.lon])
   })
   if (layers.xed) xedLayer.addTo(mapInst)
@@ -877,9 +901,10 @@ const tcOptions: string[] = []
                     <span v-if="selCard?.nearest?.over_max" class="dp-vol">⚠️超通勤上限</span></dd>
                 </div>
                 <div v-if="xedQuotaByName[selectedPoint.name]">
-                  <dt>🎯 校额到校</dt>
-                  <dd><b>{{ cleanName(xedSel?.name || '') }}</b> 分到本校 <b>{{ xedQuotaByName[selectedPoint.name] }}</b> 个名额
-                    <span class="dp-muted">（校内竞争·录取即锁定，详见校额到校页）</span></dd>
+                  <dt>🎯 校额到校（{{ cleanName(xedSel?.name || '') }}）</dt>
+                  <dd>分到本校 <b>{{ xedQuotaByName[selectedPoint.name] }}</b> 个名额
+                    <span v-if="xedJudgeByName[selectedPoint.name]" class="tj" :class="'rt-' + xedJudgeByName[selectedPoint.name].tag">{{ XED_TAG[xedJudgeByName[selectedPoint.name].tag].label }}</span>
+                    <span class="dp-muted">（校内竞争·录取即锁定）</span></dd>
                 </div>
               </dl>
 
