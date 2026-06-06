@@ -369,6 +369,7 @@ class ZhiyuanReq(BaseModel):
     max_km: Optional[float] = None
     interests: Optional[List[str]] = None
     boarding: bool = False
+    identity: str = "jjyj"   # 京籍应届 jjyj / 非京籍 feijing / 往届回京 wangjie
 
 
 @app.post("/api/zhiyuan/recommend")
@@ -377,7 +378,7 @@ def zhiyuan_recommend(req: ZhiyuanReq):
         result = zhiyuan.build_result(
             rank=req.rank, home=req.home, mode=req.mode,
             max_km=req.max_km, interests=req.interests, district="chaoyang",
-            boarding=req.boarding,
+            boarding=req.boarding, identity=req.identity,
         )
     except ValueError as e:
         raise HTTPException(status_code=400, detail=str(e))

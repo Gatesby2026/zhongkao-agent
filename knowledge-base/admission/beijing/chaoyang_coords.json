@@ -88,10 +88,10 @@
           "formatted": "北京市朝阳区柳芳南里20楼",
           "name_xcheck_km": null,
           "geo_status": "ok",
-          "addr_confidence": "low",
+          "addr_confidence": "high",
           "approx": false,
           "flags": [
-            "name_poi_not_found"
+            "addr_high_2026-06: 柳芳南里20号经两校官网2020/2022+zhongkaobj2024+bjeea四源交叉, 与望京学校合署同址; amap按校名查不到(name_poi_not_found)但门址geocode落点正确"
           ]
         }
       ]
@@ -105,8 +105,12 @@
           "lon": 116.458356,
           "source": "amap/geocode",
           "level": "门牌号",
-          "geo_status": "ok",
-          "addr_confidence": "verified-2026-06"
+          "geo_status": "coarse",
+          "addr_confidence": "low",
+          "approx": true,
+          "flags": [
+            "low_借址: 本部小红门路5号已核, 但高一近年借址八十中望京校区上课、逐年变, 实际报到点须电话确认; 距离按本部计算可能偏差大"
+          ]
         }
       ]
     },

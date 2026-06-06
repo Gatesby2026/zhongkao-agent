@@ -438,12 +438,34 @@ def _campus_coords_only(schools, district_cn):
     return out
 
 
+def eligibility_for(identity: str) -> dict:
+    """按考生身份返回各升学渠道的可报资格（与前端 canIndicator/canGuantong/canPuhao 一致）。
+    identity: jjyj=京籍应届 / feijing=非京籍随迁 / wangjie=往届·回户籍·外省回京。"""
+    identity = identity or "jjyj"
+    can_puhao = identity != "feijing"          # 非京籍随迁不能报普通高中
+    can_indicator = identity == "jjyj"         # 校额到校/市级统筹：仅京籍应届
+    can_guantong = identity == "jjyj"          # 贯通：仅京籍应届
+    notes = {
+        "feijing": "非京籍随迁子女不能报普通高中（统招/校额到校/统筹/贯通），只能报中职类。",
+        "wangjie": "往届/回户籍/外省回京考生不能报指标分配(校额到校/统筹)与贯通；普高统招可报。",
+    }
+    return {
+        "identity": identity,
+        "puhao_tongzhao": can_puhao,   # 普高统一招生
+        "indicator": can_indicator,    # 指标分配=校额到校+市级统筹
+        "guantong": can_guantong,      # 贯通培养
+        "vocational": True,            # 中职各身份均可报
+        "note": notes.get(identity, ""),
+    }
+
+
 def build_result(rank, home=None, mode="driving", max_km=None, interests=None,
-                 district="chaoyang", boarding=False):
+                 district="chaoyang", boarding=False, identity="jjyj"):
     """纯函数：返回结构化推荐结果（CLI 文本 / 地图 / Web API 共用）。
     home 为空则不算距离（但仍返回学校坐标，供地图展示）；home 无法定位时抛 ValueError。
     boarding=True（孩子接受住宿）时，距离不再参与筛选/排序——超通勤上限不标记、
-    范围放开（距离仍照常展示作参考）。"""
+    范围放开（距离仍照常展示作参考）。
+    identity 决定各渠道可报资格（见 eligibility_for），随结果返回，供前端按身份提示/过滤。"""
     interests = interests or []
     data = load_district(district)
     district_name = data.get("district", district)
@@ -515,6 +537,8 @@ def build_result(rank, home=None, mode="driving", max_km=None, interests=None,
         "home_coord": list(home_coord) if home_coord else None,
         "mode": mode, "mode_label": mode_label, "max_km": max_km,
         "boarding": boarding,
+        "identity": identity,
+        "eligibility": eligibility_for(identity),
         "interests": interests,
         "admission_source": (
             "学校代码/专业(班)派生自 bjeea 2025 官方计划册（人工核对映射）；"

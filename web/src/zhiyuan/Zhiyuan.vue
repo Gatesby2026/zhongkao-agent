@@ -19,8 +19,7 @@ const GUIDE = [
     '<span class="g-flow">① 提前招生 → ② 指标分配 → ③ 统一招生</span>' +
     '2025 一个考生最多可填 <b>28 个志愿</b>（提招贯通 8 + 指标分配 8×2专业 + 统招 12×2专业）。' },
   { t: '① 提前招生（提招）', h:
-    '<ul><li><b>贯通培养</b>：380 分门槛，8 个志愿（详见"贯通 vs 五年制"）</li>' +
-    '<li><b>中外合作办学班</b></li>' +
+    '<ul><li><b>贯通培养</b>：380 分门槛，8 个志愿（详见"贯通 vs 五年制"；<b>2026 起并入统一招生</b>）</li>' +
     '<li><b>特长生</b>：体育/艺术各 ≤ 招生计划 4%，科技 ≤ 2%</li>' +
     '<li><b>中职自主招生</b>（专业测试录取，中考分只记合格/不合格）</li>' +
     '<li><b>登记入学、自主招生</b>也在这一阶段处理</li></ul>' },
@@ -30,7 +29,8 @@ const GUIDE = [
     '<span class="g-warn">往届生、外省回京、回户籍报考者不能报。</span><br>' +
     '<b>市级统筹（一/二/三）</b>：优质资源跨区招生（统筹一不在东西海招、统筹二名校郊区分校面向全市、统筹三高校与普高联合培养）。' },
   { t: '③ 统一招生（统招，本系统核心）', h:
-    '最后批次，按总分从高到低、依志愿录取。<b>12 个志愿 × 每志愿 2 专业</b>——<b>这就是本系统的"志愿草表"</b>。' },
+    '最后批次，按总分从高到低、依志愿录取。<b>12 个志愿 × 每志愿 2 专业</b>——<b>这就是本系统的"志愿草表"</b>。<br>' +
+    '<b>中外合作办学项目</b>自 2025 年起<b>按统一招生模式录取</b>（不在提前招生）：填志愿前先做外语资格性测试，合格后在统招批次按志愿+分数录取。' },
   { t: '贯通培养 vs 五年制高职（易混）', h:
     '<table class="g-tbl"><thead><tr><th></th><th>学制</th><th>出口文凭</th><th>门槛</th><th>户籍</th></tr></thead><tbody>' +
     '<tr><td><b>贯通培养</b><br>(中本/高本贯通)</td><td>7 年</td><td><b>本科</b></td><td>统一 380 分</td><td><b>仅限京籍</b></td></tr>' +
@@ -177,6 +177,7 @@ async function submit() {
       rank: Number(form.rank),
       mode: form.mode,
       boarding: form.boarding,
+      identity: form.identity,
     }
     if (form.home.trim()) body.home = form.home.trim()
     if (form.max_km !== '' && Number(form.max_km) > 0) body.max_km = Number(form.max_km)
@@ -426,6 +427,7 @@ const copyHint = ref('')
 
 /* ---------------- 志愿草表 v2：三批次（2026 口径）---------------- */
 // 批次资格（按考生身份灰掉）
+const identityLabel = computed(() => (IDENTITIES.find(i => i.v === form.identity) || {}).label || '')
 const canIndicator = computed(() => form.identity === 'jjyj')   // 指标分配=校额到校/统筹：京籍应届
 const canGuantong = computed(() => form.identity === 'jjyj')    // 贯通：京籍应届
 const canPuhao = computed(() => form.identity !== 'feijing')    // 普高统招：非京籍不可
@@ -434,7 +436,7 @@ const identityNote = computed(() => {
   if (form.identity === 'wangjie') return '往届/回户籍/外省回京考生不能报指标分配(校额到校/统筹)与贯通；普高统招可报。'
   return ''
 })
-// ① 提前招生：自由填写（2026 不含贯通；特长/中外合作/中职自主无官方结构化代码）
+// ① 提前招生：自由填写（2026 不含贯通、不含中外合作；特长/中职自主/登记入学无官方结构化代码）
 const draftEarly = ref<{ text: string }[]>(Array.from({ length: 8 }, () => ({ text: '' })))
 // ② 指标分配-市级统筹：自由填写
 const draftTongchou = ref<{ text: string }[]>(Array.from({ length: 4 }, () => ({ text: '' })))
@@ -747,6 +749,7 @@ const tcOptions: string[] = []
 
       <!-- TAB 2：普高（统招公办）清单 -->
       <div class="listwrap" v-show="tab === 'list'">
+        <p v-if="!canPuhao" class="board-note">⚠️ 非京籍随迁子女<b>不能报普通高中统招</b>，以下普高清单<b>仅供了解</b>（你可报中职：中专/职高/技校/五年制）。</p>
         <p class="list-note">
           全{{ result.district }}统招公办普高{{ result.public_list.length }}所，按 2025 录取位次升序。
           <b>录取位次</b>跨年可比（分数因总分调整不可比）；<b>住宿</b>派生自 bjeea 2025 计划册；
@@ -902,11 +905,12 @@ const tcOptions: string[] = []
 
       <!-- TAB 7：贯通培养（全市招生）-->
       <div class="listwrap" v-show="tab === 'gt'" v-if="gtBlock">
+        <p v-if="!canGuantong" class="board-note">⚠️ 贯通培养<b>仅限京籍考生</b>；当前「{{ identityLabel }}」身份不可报，以下<b>仅供了解</b>。</p>
         <p class="list-note">
           <b>贯通培养</b>＝<b>7 年学制 → 本科</b>（中职/高职段 + 本科段，专升本性质）。{{ gtBlock.overall.year }} 年全市
           <b>{{ gtBlock.projects.length }}</b> 个项目 / 8 所承办院校，计划合计 <b>{{ gtBlock.overall.total_plan }}</b> 人。
           <span class="g-warn" style="display:inline-block;margin-top:6px">
-            ⚠️ 报考门槛：中考总分 ≥ <b>{{ gtBlock.overall.min_score }}</b> 分；<b>{{ gtBlock.overall.huji }}</b>；在<b>{{ gtBlock.overall.batch }}</b>录取。全市招生不分区，朝阳京籍考生均可报。
+            ⚠️ 报考门槛：中考总分 ≥ <b>{{ gtBlock.overall.min_score }}</b> 分；<b>{{ gtBlock.overall.huji }}</b>；2025 在<b>{{ gtBlock.overall.batch }}</b>录取，<b>2026 起并入统一招生批次</b>（380 分门槛不变）。全市招生不分区，朝阳京籍考生均可报。
           </span>
         </p>
         <div class="table-scroll">
@@ -934,6 +938,7 @@ const tcOptions: string[] = []
 
       <!-- TAB 8：校额到校（指标分配批次）-->
       <div class="listwrap" v-show="tab === 'xed'">
+        <p v-if="!canIndicator" class="board-note">⚠️ 指标分配（校额到校）<b>仅京籍应届可报</b>；往届/回户籍/外省回京/非京籍<b>不可报</b>，以下<b>仅供了解</b>。</p>
         <div class="xed-intro">
           <h3>🎯 校额到校（指标分配批次）</h3>
           <p>优质高中拿出名额<b>定向分配到每所初中校、校内竞争</b>录取——同校学生之间按中考总分从高到低排名，<b>不是全区竞争</b>。所以"普通初中"的孩子，反而更可能用相对低的分数进入优质高中。</p>
@@ -987,6 +992,7 @@ const tcOptions: string[] = []
 
       <!-- TAB：市级统筹（指标分配批次）-->
       <div class="listwrap" v-show="tab === 'tc'">
+        <p v-if="!canIndicator" class="board-note">⚠️ 市级统筹与校额到校同属指标分配批次，<b>仅京籍应届可报</b>；往届/回户籍/外省回京/非京籍<b>不可报</b>，以下<b>仅供了解</b>。</p>
         <div class="xed-intro">
           <h3>🌆 市级统筹（指标分配批次）</h3>
           <p>市级统筹＝优质高中拿名额<b>跨区 / 面向全市</b>分配，和校额到校<b>同属指标分配批次</b>（在统招之前、<b>录取即锁定、后续作废</b>）。门槛同：中考总分 ≥ 430 + 综合素质 B + 同一初中连续三年学籍（往届/回京不可）。</p>
@@ -1027,12 +1033,12 @@ const tcOptions: string[] = []
         <section class="batch">
           <button class="batch-h" type="button" @click="batchOpen.early = !batchOpen.early">
             <span class="bc">{{ batchOpen.early ? '▾' : '▸' }}</span>① 提前招生
-            <small>2026 不含贯通；特长生 / 中外合作班 / 中职自主——无官方结构化代码，<b>手填</b></small>
+            <small>2026 不含贯通、不含中外合作（均按统一招生录取）；特长生 / 中职自主 / 登记入学——无官方结构化代码，<b>手填</b></small>
           </button>
           <div v-show="batchOpen.early" class="early-rows">
             <div v-for="(s, i) in draftEarly" :key="i" class="early-row">
               <span class="slot-no">{{ i + 1 }}</span>
-              <input v-model="s.text" class="early-input" placeholder="如：XX中学 美术特长 / XX学校 中外合作班 / XX中职 自主招生 …" />
+              <input v-model="s.text" class="early-input" placeholder="如：XX中学 美术特长 / XX中职 自主招生 / XX校 登记入学 …" />
             </div>
           </div>
         </section>

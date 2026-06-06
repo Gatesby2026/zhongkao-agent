@@ -128,10 +128,14 @@ def lookup_school_coords(name: str, district_cn: str, coords_idx: dict, geo_cach
     key = _norm(name)
     if key in coords_idx:
         return coords_idx[key]
-    # 子串双向匹配（处理"科技分校"等附加成分）
+    # 子串双向匹配（处理"科技分校"等附加成分）——仅当唯一解析到一个坐标时采用，
+    # 避免"八十中"误命中"八十中实验"等同前缀异校（多义则跳过、走 geocode）。
+    sub_coords = []
     for k, v in coords_idx.items():
-        if key and (key in k or k in key):
-            return v
+        if key and (key in k or k in key) and v not in sub_coords:
+            sub_coords.append(v)
+    if len(sub_coords) == 1:
+        return sub_coords[0]
     # geocode 兜底
     cache_key = f"{district_cn}|{name}"
     if cache_key in geo_cache:
@@ -293,10 +297,10 @@ def private_schools(district_cn: str, public_names: set):
             if a.get("district") != district_cn or not a.get("lat"):
                 continue
             key = _norm(a["name"])
+            # 仅按规范化全名去重（与公办精确同名 / 已收录）。
+            # 不再用裸双向子串排除：那会把"八十中实验学校""陈经纶中嘉铭分校"等
+            # 名字含公办简称的独立民办校静默丢弃。
             if key in pub_norm or key in seen:
-                continue
-            # 跳过明显的分校区重复（子串命中已收录的）
-            if any(key in s or s in key for s in pub_norm if s):
                 continue
             seen.add(key)
             out.append({"name": a["name"], "lat": a["lat"], "lon": a["lon"]})

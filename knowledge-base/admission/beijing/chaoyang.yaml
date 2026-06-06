@@ -102,9 +102,9 @@ schools:
     location:
       campus: 凤凰城校区（高中部，曙光里2号院1号楼）
       address: 北京市朝阳区曙光里2号院1号楼
-      confidence: medium
-      action: verify_doornumber
-      flag: ⚠️ bjeea计划册(T1)+校情(T3)作高中部=曙光里2号院1号楼(凤凰城)、太阳宫南街8号=初中总部；另有旧资料称高一在安华桥校区，请电话84158116核当年高一上课点。
+      confidence: high
+      action: none
+      flag: ✓ 2026-06 交叉验证定案：高中部=曙光里2号院1号楼(凤凰城)、太阳宫南街8号=初中总部；旧资料"高一在安华桥"已排除。注：地图坐标按"凤凰城"片区coarse定位（按门牌直接geocode落点偏东，误）。
       source: [bjeea_2025统招计划册, zhongkaobj.cn, rdfzcy.cn]
     level: 市级示范性高中
     note: 人大附中朝阳分校
