@@ -1830,13 +1830,21 @@ const tcOptions: string[] = []
 .ex-n { font-size: 12px; color: var(--gray-500); margin-left: auto; font-weight: 600; }
 .ex-main { display: flex; gap: 12px; align-items: stretch; }
 .ex-listcol { flex: 1; min-width: 0; }
-.ex-table { min-width: 560px; }
+/* 查学校表格：固定布局占满宽度、所有列默认显示、单元格内容换行(不横向滚动) */
+.ex-table { min-width: 0; width: 100%; table-layout: fixed; font-size: 12px; }
+.ex-table th, .ex-table td { padding: 6px 7px; white-space: normal; word-break: break-word; vertical-align: top; }
+.ex-table th:nth-child(1), .ex-table td:nth-child(1) { width: 23%; }  /* 学校 */
+.ex-table th:nth-child(2), .ex-table td:nth-child(2) { width: 12%; }  /* 类型 */
+.ex-table th:nth-child(3), .ex-table td:nth-child(3) { width: 12%; }  /* 层次 */
+.ex-table th:nth-child(4), .ex-table td:nth-child(4) { width: 8%; }   /* 档位 */
+.ex-table th:nth-child(5), .ex-table td:nth-child(5) { width: 9%; }   /* 渠道 */
+.ex-table th:nth-child(6), .ex-table td:nth-child(6) { width: 18%; }  /* 关键 */
+.ex-table th:nth-child(7), .ex-table td:nth-child(7) { width: 10%; }  /* 通勤 */
+.ex-table th:nth-child(8), .ex-table td:nth-child(8) { width: 8%; }   /* 住 */
 .ex-table tbody tr { cursor: pointer; }
 .ex-tr.on { background: var(--brand-50) !important; box-shadow: inset 3px 0 0 var(--brand); }
-.ex-ty { font-size: 11.5px; color: var(--gray-500); white-space: nowrap; }
-.ex-cht { white-space: nowrap; }
+.ex-ty { font-size: 11.5px; color: var(--gray-500); }
 .ex-cbg { display: inline-block; min-width: 16px; text-align: center; font-size: 10.5px; font-weight: 700; padding: 1px 4px; margin-right: 2px; border-radius: 3px; background: var(--brand-50); color: var(--brand-dark); }
-.ex-keycol { white-space: nowrap; }
 .ex-keycol small { color: var(--gray-400); font-size: 10.5px; margin-right: 2px; }
 /* ── 渠道科普 ── */
 .chwrap { background: var(--surface); box-shadow: var(--shadow-sm); }
