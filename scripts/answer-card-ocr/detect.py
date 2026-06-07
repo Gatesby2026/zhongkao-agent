@@ -829,6 +829,56 @@ class CardDetectionResult:
     subjective_qids_cropped: list[int] = None  # Phase B 真正裁切到的 qids
 
 
+def choice_reliability(answers: list, single_choice_qnums: list,
+                       options_per_q: int = 4) -> dict:
+    """涂卡识别可信度门禁。
+
+    confidence 不可信（识别器常"自信地错"），改用物理上不可能的硬信号判定：
+      - 单选题被识别成多个字母（AC / ABCD）——单选物理上不可能
+      - 四个选项全涂——多半是过检测/污点
+      - 覆盖率过低（识别到的单选 < 期望的 80%）
+      - 大面积空（真实学生几乎都会涂满）
+    任一命中即判"不可信"，上层应转人工录入，而不是输出大面积错误的报告。
+
+    Returns: {reliable: bool, reasons: [str], need_manual_qids: [Qn], stats: {...}}
+    """
+    sc = set(int(n) for n in single_choice_qnums)
+    by_q: dict[int, str] = {}
+    for a in answers:
+        m = re.match(r"Q?(\d+)", str(a.get("qId", "")))
+        if not m:
+            continue
+        n = int(m.group(1))
+        if n in sc:
+            f = a.get("filled")
+            by_q[n] = "".join(f) if isinstance(f, list) else (str(f) if f else "")
+    n_exp = len(sc)
+    if n_exp == 0:
+        return {"reliable": True, "reasons": [], "need_manual_qids": [], "stats": {}}
+    detected = [n for n in sc if by_q.get(n)]
+    multi = [n for n in sc if len(set(by_q.get(n, ""))) > 1]
+    allfour = [n for n in sc if len(set(by_q.get(n, ""))) >= options_per_q]
+    blank = [n for n in sc if not by_q.get(n)]
+    cov = len(detected) / n_exp
+    reasons = []
+    if len(multi) / n_exp > 0.10:
+        reasons.append(f"{len(multi)} 道单选被识别为多个答案（单选不可能涂多个）")
+    if allfour:
+        reasons.append(f"{len(allfour)} 道被识别为四个选项全涂")
+    if cov < 0.80:
+        reasons.append(f"仅识别到 {len(detected)}/{n_exp} 道单选（覆盖率 {cov:.0%}）")
+    if len(blank) / n_exp > 0.25:
+        reasons.append(f"{len(blank)} 道未识别到作答")
+    reliable = not reasons
+    return {
+        "reliable": reliable,
+        "reasons": reasons,
+        "need_manual_qids": [f"Q{n}" for n in sorted(sc)] if not reliable else [],
+        "stats": {"expected": n_exp, "detected": len(detected),
+                  "multi": len(multi), "allfour": len(allfour), "blank": len(blank)},
+    }
+
+
 def detect_card(
     image_paths: list[Path],
     student_name: Optional[str] = None,
