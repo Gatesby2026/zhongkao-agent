@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, reactive, computed, nextTick, watch } from 'vue'
 import { USER_DEFAULTS } from './user-defaults'
+import JudgeLegend from './JudgeLegend.vue'
 
 declare const L: any
 
@@ -24,10 +25,10 @@ const GUIDE = [
     '<li><b>中职自主招生</b>（专业测试录取，中考分只记合格/不合格）</li>' +
     '<li><b>登记入学、自主招生</b>也在这一阶段处理</li></ul>' },
   { t: '② 指标分配（校额到校 + 市级统筹）', h:
-    '中间批次，8 志愿×2 专业。<br>' +
-    '<b>校额到校</b>：优质高中名额<b>定向分到每所初中，校内竞争</b>（同校学生比，不是全区比）。门槛＝<b>连续三年本校学籍 + 综合素质 B + 中考总分达线</b>（2025 = 430/510 ≈ 84%）。' +
-    '<span class="g-warn">往届生、外省回京、回户籍报考者不能报。</span><br>' +
-    '<b>市级统筹（一/二/三）</b>：优质资源跨区招生（统筹一不在东西海招、统筹二名校郊区分校面向全市、统筹三高校与普高联合培养）。' },
+    '中间批次，8 志愿×2 专业；<b>在统招之前录取，一旦被录即锁定、后续批次作废</b>——务必把"想冲的好校"放前面，别把"统招本来就能上的校"填进来锁低自己。<br>' +
+    '门槛二者相同：<b>连续三年本校学籍 + 综合素质 B + 中考总分达线</b>（2025 = 430/510）；<span class="g-warn">往届生 / 外省回京 / 回户籍 不能报。</span><br>' +
+    '<b>校额到校</b>：优质高中名额<b>定向分到每所初中、校内竞争</b>（只和同校同学比、不是全区比）——所以普通初中的孩子反而可能用相对低的分进名校。无官方"各初中线"，按校内排名 + 志愿顺序事后形成。<br>' +
+    '<b>市级统筹</b>：优质资源<b>跨区 / 面向全市</b>分配、<b>全市按分竞争</b>。统筹一＝中心城区名校跨区招（不在东西海招）；统筹二＝名校郊区分校 / 新建校面向全市；统筹三＝高校与普高联合实验班（<b>2025 已取消</b>）。朝阳考生用统筹填的是<b>外区 / 郊区</b>校；本区好校（人朝、清华附中朝阳、东师朝、对外经贸 94 中 等）走【统招 / 校额到校】去够、不是统筹。' },
   { t: '③ 统一招生（统招，本系统核心）', h:
     '最后批次，按总分从高到低、依志愿录取。<b>12 个志愿 × 每志愿 2 专业</b>——<b>这就是本系统的"志愿草表"</b>。<br>' +
     '<b>中外合作办学项目</b>自 2025 年起<b>按统一招生模式录取</b>（不在提前招生）：填志愿前先做外语资格性测试，合格后在统招批次按志愿+分数录取。' },
@@ -35,14 +36,16 @@ const GUIDE = [
     '<table class="g-tbl"><thead><tr><th></th><th>学制</th><th>出口文凭</th><th>门槛</th><th>户籍</th></tr></thead><tbody>' +
     '<tr><td><b>贯通培养</b><br>(中本/高本贯通)</td><td>7 年</td><td><b>本科</b></td><td>统一 380 分</td><td><b>仅限京籍</b></td></tr>' +
     '<tr><td><b>五年制高职</b><br>(3+2)</td><td>5 年</td><td><b>大专</b></td><td>按中考分</td><td>京籍+非京籍均可</td></tr>' +
-    '</tbody></table><span class="g-warn">名字像、层级与户籍门槛不同：随迁子女能报 5 年制大专，不能报 7 年贯通本科。</span>' },
+    '</tbody></table><span class="g-warn">名字像、层级与户籍门槛不同：随迁子女能报 5 年制大专，不能报 7 年贯通本科。</span>' +
+    '<span class="g-src">具体贯通承办院校 / 专业 / 对接本科 → 在【🔎 查学校】筛"贯通"查看。</span>' },
   { t: '职业教育（中专 / 职高 / 技校 / 综合高中班）', h:
     '<ul><li><b>中专</b>(代码 4，市教委+发改委，全市招生)</li>' +
     '<li><b>职高</b>(代码 6，区教委)</li>' +
     '<li><b>技校</b>(代码 5，<b>归人社部门</b>，但仍走中考统一平台填志愿)</li>' +
     '<li><b>五年制高职/3+2</b>(代码 8，5 年→大专)</li>' +
     '<li><b>综合高中班</b>：职普融通试点，按普高标准收费，2026 适度扩招</li></ul>' +
-    '升学出口：单考单招("三校生高考")、高职单招(专科)、五年制/3+2 直升、贯通转段升本科。' },
+    '升学出口：单考单招("三校生高考")、高职单招(专科)、五年制/3+2 直升、贯通转段升本科。' +
+    '<span class="g-src">校址在朝阳的中职校 → 在【🔎 查学校】筛"中职/职教"查看。</span>' },
   { t: '登记入学（免试登记普高）', h:
     '2025：<b>东城、西城</b>试点；2026：<b>加平谷</b>（4 校 555 个计划）。' +
     '<span class="g-warn">网传"海淀/朝阳登记入学"经核实没有——朝阳考生用不上。</span>' },
@@ -1111,6 +1114,7 @@ const tcOptions: string[] = []
             </template>
             <span class="ex-n">命中 {{ exploreView.length }} 所</span>
           </div>
+          <JudgeLegend compact :rank="form.rank" :est="estScore" />
         </div>
         <div class="ex-main">
           <div class="ex-listcol">
@@ -1207,12 +1211,18 @@ const tcOptions: string[] = []
       <!-- 渠道科普：科普总览 + 校额到校 + 市级统筹（数据工具内嵌） -->
       <div class="chwrap" v-show="tab === 'channels'">
         <div class="ch-subnav">
-          <button class="ch-sb" :class="{ on: chSub === 'guide' }" @click="chSub = 'guide'">📖 升学渠道科普</button>
+          <button class="ch-sb" :class="{ on: chSub === 'guide' }" @click="chSub = 'guide'">📖 升学全景</button>
           <button class="ch-sb" :class="{ on: chSub === 'xed' }" @click="chSub = 'xed'">🎯 校额到校</button>
           <button class="ch-sb" :class="{ on: chSub === 'tc' }" @click="chSub = 'tc'">🌆 市级统筹</button>
         </div>
         <div class="listwrap ch-guide" v-show="chSub === 'guide'">
-          <p class="list-note">北京中考升学的批次与渠道全景（提招 / 指标分配 / 统招 / 贯通 / 中职）。点条目展开。具体校额名额、统筹投朝阳名额与逐校研判见上方「校额到校 / 市级统筹」子页。</p>
+          <div class="batch-flow">
+            <span class="bf-step">① 提前招生</span><span class="bf-lock">录取即锁定 ▸</span>
+            <span class="bf-step">② 指标分配</span><span class="bf-lock">录取即锁定 ▸</span>
+            <span class="bf-step bf-core">③ 统一招生</span>
+          </div>
+          <p class="bf-note">三批次<b>按顺序录取，被前一批次录取就锁定、不再参加后面批次</b>。<b>校额到校 / 市级统筹</b>都在 ② 指标分配（在统招之前）——填报顺序很关键，别把"统招本可达的校"排在前面把自己锁低。这是制度的<b>唯一权威说明处</b>；具体名额 / 研判见上方「🎯校额到校 / 🌆市级统筹」子页。</p>
+          <p class="list-note">点下列条目展开：批次顺序 / 各渠道是什么 / 门槛与户籍 / 贯通 vs 五年制 / 京籍 vs 非京籍 / 2026 变化。</p>
           <div v-for="(g, i) in GUIDE" :key="i" class="g-item" :class="{ open: openG === i }">
             <button class="g-q" type="button" @click="openG = openG === i ? null : i"><span>{{ g.t }}</span><span class="g-chev">{{ openG === i ? '−' : '+' }}</span></button>
             <div v-show="openG === i" class="g-a" v-html="g.h"></div>
@@ -1221,16 +1231,9 @@ const tcOptions: string[] = []
         <!-- 校额到校 -->
         <div class="listwrap" v-show="chSub === 'xed'">
         <p v-if="!canIndicator" class="board-note">⚠️ 指标分配（校额到校）<b>仅京籍应届可报</b>；往届/回户籍/外省回京/非京籍<b>不可报</b>，以下<b>仅供了解</b>。</p>
-        <div class="xed-intro">
-          <h3>🎯 校额到校（指标分配批次）</h3>
-          <p>优质高中拿出名额<b>定向分配到每所初中校、校内竞争</b>录取——同校学生之间按中考总分从高到低排名，<b>不是全区竞争</b>。所以"普通初中"的孩子，反而更可能用相对低的分数进入优质高中。</p>
-          <div class="xed-rules">
-            <div class="xed-rule"><span class="xed-k">报考门槛(2025)</span>中考总分 ≥ <b>430/510</b> + 综合素质评价 ≥ <b>B</b> 等</div>
-            <div class="xed-rule"><span class="xed-k">学籍要求</span>具普高升学资格 + <b>同一初中连续三年学籍</b>的应届生</div>
-            <div class="xed-rule"><span class="xed-k">不能报</span>往届生 / 回户籍 / 外省回京 考生</div>
-            <div class="xed-rule"><span class="xed-k">录取分</span>无官方"各初中录取线"——按本校内排名事后形成，逐校逐年不同；430 仅是统一资格门槛</div>
-          </div>
-          <p class="xed-hl">📋 输入孩子的<b>初中校</b>即可查该校 2025 年校额到校名额。需逐格核对时，再展开下方官方原图。</p>
+        <div class="ch-anchor">
+          <h3>🎯 校额到校 · 查你的名额</h3>
+          <p>名额<b>定向分到每所初中、校内竞争</b>——普通初中反而可能用较低分进名校。机制 / 门槛(430+综合B+三年学籍) / 风险见 <a class="lnk" @click="chSub = 'guide'">📖 升学全景 → ② 指标分配</a>。本页只看<b>你初中的名额</b>与<b>研判</b>，需逐格核对再展开下方官方原图。</p>
         </div>
 
         <!-- 按初中查名额 -->
@@ -1286,23 +1289,9 @@ const tcOptions: string[] = []
       <!-- TAB：市级统筹（指标分配批次）-->
         <div class="listwrap" v-show="chSub === 'tc'">
         <p v-if="!canIndicator" class="board-note">⚠️ 市级统筹与校额到校同属指标分配批次，<b>仅京籍应届可报</b>；往届/回户籍/外省回京/非京籍<b>不可报</b>，以下<b>仅供了解</b>。</p>
-        <div class="xed-intro">
-          <h3>🌆 市级统筹（指标分配批次）</h3>
-          <p>市级统筹＝优质高中拿名额<b>跨区 / 面向全市</b>分配，和校额到校<b>同属指标分配批次</b>（在统招之前、<b>录取即锁定、后续作废</b>）。门槛同：中考总分 ≥ 430 + 综合素质 B + 同一初中连续三年学籍（往届/回京不可）。</p>
-          <div class="xed-rules">
-            <div class="xed-rule"><span class="xed-k">统筹一</span>中心城区优质高中跨区招生（不在东西海招）——给其他区考生进城区名校的机会</div>
-            <div class="xed-rule"><span class="xed-k">统筹二</span>优质高中的郊区分校 / 新建校面向全市招生</div>
-            <div class="xed-rule"><span class="xed-k">统筹三</span>高校与普通高中联合培养实验班（名额较少）</div>
-            <div class="xed-rule"><span class="xed-k">方向</span>市级统筹是优质资源<b>跨区/向郊区·新城均衡</b>的机制——朝阳考生用它能填的是<b>外区/郊区</b>的统筹校；<b>朝阳本区的好学校（人朝、清华附中朝阳·望京、东师朝、对外经贸94中 等）请走【统招/校额到校】去够，不是统筹</b></div>
-            <div class="xed-rule"><span class="xed-k">报名策略</span>① 与校额到校同批次、共用门槛、<b>录取即锁定、后续作废</b>；② 统筹是<b>全市按分竞争</b>（不像校额到校是校内竞争），更看绝对分数/区位次，去外区/郊区前先掂量是否真比本区统招更好，把握不大别盲填把自己锁低；③ 通常和校额到校一起在指标分配批次填报</div>
-          </div>
-          <p class="xed-hl">下方三档为机制说明；再下方<b>「朝阳可报统筹校」清单</b>已据 bjeea 2025 官方简章逐格核出（含投朝阳名额/地址）。⚠️ 但<b>能否录取</b>仍取决于<b>朝外在简章里分到的名额 + 报该校统筹的同学名次</b>，须向初中部核实。</p>
-        </div>
-        <div class="tc-ref">
-          <div v-for="t in TONGCHOU_REF" :key="t.tier" class="tc-tier">
-            <span class="tc-tag">{{ t.tier }}</span><span class="tc-desc">{{ t.desc }}</span>
-            <span class="tc-schools">{{ t.schools.join('、') }}</span>
-          </div>
+        <div class="ch-anchor">
+          <h3>🌆 市级统筹 · 你能报的外区校</h3>
+          <p>优质资源<b>跨区 / 面向全市</b>分配、<b>全市按分竞争</b>；朝阳考生用它填的是<b>外区 / 郊区</b>校（本区好校走统招 / 校额）。统筹一/二/三的区别、门槛、风险见 <a class="lnk" @click="chSub = 'guide'">📖 升学全景 → ② 指标分配</a>。本页只看<b>朝阳可报的统筹校 + 研判</b>；下表已据 bjeea 2025 官方简章逐格核出（含投朝阳名额 / 地址），但<b>能否录取</b>仍取决于朝外当年分到的名额 + 报该校同学名次，须向初中部核实。</p>
         </div>
 
         <!-- 官方清单（据 2025 简章逐格核 + 合计对账）-->
@@ -1350,18 +1339,12 @@ const tcOptions: string[] = []
               </table>
             </div>
           </details>
-          <p class="tc-judge-note">
-            <b>研判口径</b>：你区排 <b>{{ form.rank }}</b> 名 → 按本区一分一段估中考分 <b>≈{{ estScore }}</b> 分，与各校 <b>2025 统招线</b>比（Δ=估分−线）。
-            <span class="tj tj-wen">稳</span>Δ≥+10　<span class="tj tj-chong">冲</span>−10~+10　<span class="tj tj-bo">搏</span>−20~−10　<span class="tj tj-no">够不上</span>Δ&lt;−20　<span class="tj tj-unk">线待核</span>无公开线。
-            「搏」=估分虽低于统招线 10–20 分，但<b>统筹线通常更低、仍有机会</b>（长线，依赖该校统筹降分幅度，热门校未必降这么多）。
-            <b>估分随你填的区排名动态变化</b>（不是写死）。⚠️ 比的是各校<b>统招线（非统筹实际线）</b>，<b>统筹线通常更低</b>，故偏保守——"够不上"才基本无望，"冲"档实际机会更大。估分为一分一段插值近似。<b>「历年线」</b>=单源/历年参考(可信度低于 2025 双源确认的"线")；新校无历史则保持"线待核"。
-          </p>
+          <JudgeLegend :rank="form.rank" :est="estScore" />
         </template>
 
         <p class="list-tip">
-          ✓ 上方清单据 <b>bjeea 2025 官方简章</b>逐格核 + 合计对账（统筹一各校合计=405 与官方一致）；“投朝阳”=该校 2025 投放朝阳区的名额。
-          ⚠️ 研判用的是各校<b>统招线</b>（全市可比的强度参考），<b>统筹实际录取线官方不公开、通常更低</b>；最终能否录取取决于<b>朝外当年报该校统筹的同学名次</b>，须查简章「本初中分配名额」+ 问初中部。各年随计划变。
-          市级统筹与校额到校同批次：<b>被录即锁定、后续批次作废</b>；在「志愿草表 → 批次② 指标分配」里填写。
+          ✓ 上方清单据 <b>bjeea 2025 官方简章</b>逐格核 + 合计对账（统筹一各校合计=405 与官方一致）；"投朝阳"=该校 2025 投放朝阳区的名额。最终能否录取取决于<b>朝外当年报该校统筹的同学名次</b>，须查简章「本初中分配名额」+ 问初中部。
+          📝 统筹填报在「<a class="lnk" @click="goTab('draft')">志愿草表 → ② 指标分配</a>」。
         </p>
       </div>
 
@@ -1652,6 +1635,16 @@ const tcOptions: string[] = []
 .ch-sb.on { color: var(--brand-dark); border-bottom-color: var(--brand); }
 .chwrap .listwrap { box-shadow: none; }
 .ch-guide .g-item { border-bottom: 1px solid var(--gray-100); }
+
+/* ── 升学全景：批次流程条 + 子页锚定 ── */
+.batch-flow { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; margin: 2px 0 8px; }
+.bf-step { font-size: 13px; font-weight: 700; color: var(--brand-dark); background: var(--brand-50); border: 1px solid var(--brand); border-radius: var(--radius-full); padding: 4px 12px; }
+.bf-step.bf-core { background: var(--brand); color: #fff; }
+.bf-lock { font-size: 11px; color: #b45309; font-weight: 600; }
+.bf-note { font-size: 12.5px; line-height: 1.7; color: var(--gray-700); background: #fff8e1; border: 1px solid #ffe082; border-radius: var(--radius-xs); padding: 9px 11px; margin: 0 0 10px; }
+.ch-anchor { margin: 0 0 12px; }
+.ch-anchor h3 { font-size: 16px; color: var(--brand-deeper); margin: 0 0 6px; }
+.ch-anchor > p { font-size: 12.5px; color: var(--gray-700); line-height: 1.65; margin: 0; }
 @media (max-width: 720px) { .ex-main { flex-direction: column; } }
 
 .detail-panel { width: 320px; flex-shrink: 0; height: 460px; overflow-y: auto;
