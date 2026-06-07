@@ -418,8 +418,13 @@ function renderMarkers(fit = false) {
     const j = tcJudge(s)
     const tier = (tongchou.value?.tongchou_er || []).includes(s) ? '统筹二' : '统筹一'
     const color = tcColor[j.cls] || '#2980b9'
+    // 解析到 schools_unified 的实际键：外区=name·校区；本区已并入公办(名字可能差"北京市")→归一化匹配
+    const _n = (x: string) => (x || '').replace('北京市', '').replace('（', '(').replace('）', ')')
+    const full = s.name + (s.campus ? '·' + s.campus : '')
+    let ukey = uByName.value[full] ? full : (uByName.value[s.name] ? s.name : '')
+    if (!ukey) { const t = _n(s.name); for (const k in uByName.value) if (_n(k) === t) { ukey = k; break } }
     const tp: Point = {
-      name: s.name, lat: s.lat, lon: s.lon, kind: 'small', color,
+      name: ukey || full, lat: s.lat, lon: s.lon, kind: 'small', color,
       band: j.label, level: `市级统筹·${tier}${s.campus ? '（' + s.campus + '）' : ''}`, rank: '—', margin: '—',
       dist: '距离未知', hist: '', style: '', note: '', reason: '', tags: [], gaokao: '', matched: [],
     }
