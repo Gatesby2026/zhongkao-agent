@@ -154,6 +154,14 @@ const IDENTITIES = [
 // 学校类型图层开关（地图上显示哪些点）
 const layers = reactive({ gongban: true, coop: true, minban: false, intl: false, voc: false, gt: false, tc: false, xed: false })
 const tab = ref<'map' | 'list' | 'minban' | 'intl' | 'voc' | 'gt' | 'xed' | 'tc' | 'draft'>('map')   // +贯通+校额到校+统筹
+// 二级导航：主入口只留地图/草表，其余清单/渠道收进"查学校"菜单
+const moreOpen = ref(false)
+const SECONDARY_LABELS: Record<string, string> = {
+  list: '普高清单', minban: '民办普高', intl: '国际学校', voc: '中职/职教',
+  gt: '贯通培养', xed: '校额到校', tc: '市级统筹',
+}
+const isSecondaryTab = computed(() => !!SECONDARY_LABELS[tab.value])
+function goTab(t: typeof tab.value) { tab.value = t; moreOpen.value = false }
 const loading = ref(false)
 const errMsg = ref('')
 const result = ref<Result | null>(null)
@@ -830,33 +838,35 @@ const tcOptions: string[] = []
     <section v-if="result" class="results">
       <!-- 标签页：地图 / 普高清单 / 志愿草表 -->
       <div class="tabs" role="tablist">
-        <button class="tab" :class="{ on: tab === 'map' }" @click="tab = 'map'">
+        <!-- 主入口：地图 / 草表 -->
+        <button class="tab tab-main" :class="{ on: tab === 'map' }" @click="goTab('map')">
           <span class="tab-ic">📍</span>志愿地图
         </button>
-        <button class="tab" :class="{ on: tab === 'list' }" @click="tab = 'list'">
-          普高清单<span class="tab-cnt">{{ result.public_list.length }}</span>
+        <button class="tab tab-main" :class="{ on: tab === 'draft' }" @click="goTab('draft')">
+          <span class="tab-ic">📝</span>志愿草表<span class="tab-cnt">{{ filledSlots }}/{{ ZHIYUAN_SLOTS }}</span>
         </button>
-        <button v-if="minbanList.length" class="tab" :class="{ on: tab === 'minban' }" @click="tab = 'minban'">
-          民办普高<span class="tab-cnt">{{ minbanList.length }}</span>
+        <!-- 二级聚合：查学校 / 渠道 -->
+        <button class="tab tab-more" :class="{ on: isSecondaryTab || moreOpen }" @click="moreOpen = !moreOpen">
+          {{ isSecondaryTab ? SECONDARY_LABELS[tab] : '查学校 / 渠道' }}
+          <span class="more-caret">{{ moreOpen ? '▴' : '▾' }}</span>
         </button>
-        <button v-if="intlList.length" class="tab" :class="{ on: tab === 'intl' }" @click="tab = 'intl'">
-          国际学校<span class="tab-cnt">{{ intlList.length }}</span>
-        </button>
-        <button v-if="vocList.length" class="tab" :class="{ on: tab === 'voc' }" @click="tab = 'voc'">
-          中职/职教<span class="tab-cnt">{{ vocList.length }}</span>
-        </button>
-        <button v-if="gtBlock" class="tab" :class="{ on: tab === 'gt' }" @click="tab = 'gt'">
-          贯通培养<span class="tab-cnt">{{ gtBlock.projects.length }}</span>
-        </button>
-        <button class="tab" :class="{ on: tab === 'xed' }" @click="tab = 'xed'">
-          校额到校
-        </button>
-        <button class="tab" :class="{ on: tab === 'tc' }" @click="tab = 'tc'">
-          市级统筹
-        </button>
-        <button class="tab" :class="{ on: tab === 'draft' }" @click="tab = 'draft'">
-          志愿草表<span class="tab-cnt">{{ filledSlots }}/{{ ZHIYUAN_SLOTS }}</span>
-        </button>
+      </div>
+      <!-- 二级菜单（展开） -->
+      <div v-if="moreOpen" class="more-menu">
+        <div class="mm-group">
+          <span class="mm-k">按学校类型</span>
+          <button class="mchip" :class="{ on: tab === 'list' }" @click="goTab('list')">普高<i>{{ result.public_list.length }}</i></button>
+          <button v-if="minbanList.length" class="mchip" :class="{ on: tab === 'minban' }" @click="goTab('minban')">民办<i>{{ minbanList.length }}</i></button>
+          <button v-if="intlList.length" class="mchip" :class="{ on: tab === 'intl' }" @click="goTab('intl')">国际<i>{{ intlList.length }}</i></button>
+          <button v-if="vocList.length" class="mchip" :class="{ on: tab === 'voc' }" @click="goTab('voc')">中职<i>{{ vocList.length }}</i></button>
+          <button v-if="gtBlock" class="mchip" :class="{ on: tab === 'gt' }" @click="goTab('gt')">贯通<i>{{ gtBlock.projects.length }}</i></button>
+        </div>
+        <div class="mm-group">
+          <span class="mm-k">录取渠道(指标分配)</span>
+          <button class="mchip" :class="{ on: tab === 'xed' }" @click="goTab('xed')">🎯校额到校</button>
+          <button class="mchip" :class="{ on: tab === 'tc' }" @click="goTab('tc')">市级统筹</button>
+        </div>
+        <p class="mm-tip">这些清单与地图图层对应——也可直接在「志愿地图」按图层查看。</p>
       </div>
 
       <!-- TAB 1：地图 -->
@@ -1728,6 +1738,24 @@ const tcOptions: string[] = []
 .tab-cnt { font-size: 11px; font-weight: 700; padding: 1px 7px; border-radius: var(--radius-full);
   background: var(--gray-100); color: var(--gray-500); }
 .tab.on .tab-cnt { background: var(--brand-50); color: var(--brand-dark); }
+/* 主入口(地图/草表)更突出 */
+.tab-main { font-size: 14.5px; }
+.tab-main .tab-ic { font-size: 16px; }
+/* 二级聚合入口 */
+.tab-more { color: var(--gray-500); margin-left: auto; }
+.tab-more.on { color: var(--brand-dark); }
+.more-caret { font-size: 10px; margin-left: 2px; }
+/* 二级菜单浮层 */
+.more-menu { background: var(--surface); border: 1px solid var(--gray-200); border-radius: var(--radius-sm);
+  margin: 4px 4px 0; padding: 10px 12px; box-shadow: 0 4px 14px rgba(0,0,0,.08); }
+.mm-group { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+.mm-k { font-size: 12px; color: var(--gray-500); font-weight: 600; margin-right: 2px; }
+.mchip { font-size: 13px; padding: 5px 11px; border: 1px solid var(--gray-300); background: #fff;
+  border-radius: var(--radius-full); color: var(--gray-700); cursor: pointer; display: inline-flex; align-items: center; gap: 4px; }
+.mchip.on { background: var(--brand-50); color: var(--brand-dark); border-color: var(--brand); }
+.mchip i { font-style: normal; font-size: 11px; font-weight: 700; color: var(--gray-400); }
+.mchip.on i { color: var(--brand-dark); }
+.mm-tip { font-size: 11.5px; color: var(--gray-400); margin: 2px 0 0; }
 /* 内容卡片统一顶边，跟页签条衔接 */
 .results .mapwrap, .results .listwrap, .results .draftwrap {
   border: 1px solid var(--gray-100); border-radius: 0 var(--radius) var(--radius) var(--radius); }
