@@ -153,15 +153,11 @@ const IDENTITIES = [
 ]
 // 学校类型图层开关（地图上显示哪些点）
 const layers = reactive({ gongban: true, coop: true, minban: false, intl: false, voc: false, gt: false, tc: false, xed: false })
-const tab = ref<'map' | 'list' | 'minban' | 'intl' | 'voc' | 'gt' | 'xed' | 'tc' | 'draft'>('map')   // +贯通+校额到校+统筹
-// 二级导航：主入口只留地图/草表，其余清单/渠道收进"查学校"菜单
-const moreOpen = ref(false)
-const SECONDARY_LABELS: Record<string, string> = {
-  list: '普高清单', minban: '民办普高', intl: '国际学校', voc: '中职/职教',
-  gt: '贯通培养', xed: '校额到校', tc: '市级统筹',
-}
-const isSecondaryTab = computed(() => !!SECONDARY_LABELS[tab.value])
-function goTab(t: typeof tab.value) { tab.value = t; moreOpen.value = false }
+// 一级导航：地图 / 草表 / 查学校(统一浏览器) / 渠道科普
+type TabKey = 'map' | 'draft' | 'explore' | 'channels'
+const tab = ref<TabKey>('map')
+function goTab(t: TabKey) { tab.value = t }
+const chSub = ref<'guide' | 'xed' | 'tc'>('guide')   // 渠道科普子页
 const loading = ref(false)
 const errMsg = ref('')
 const result = ref<Result | null>(null)
@@ -658,29 +654,105 @@ const newSchools = computed<any[]>(() => (result.value as any)?.new_schools?.sch
 const privAll = computed<PrivSchool[]>(() => result.value?.private_schools?.schools || [])
 const minbanList = computed<PrivSchool[]>(() => privAll.value.filter(s => s.in_minban_list))
 const intlList = computed<PrivSchool[]>(() => privAll.value.filter(s => s.in_intl_list))
-// 当前展示的民办/国际清单（按激活的 Tab）
-// 学费筛选：从"15.8万/年"、"8-16.8万"、"22.7-26.2万"等串里取最大数字作上限分档
-const tuitionBand = ref<'all' | 'le10' | 'mid' | 'gt20'>('all')
-function tuitionMax(s: any): number | null {
-  const t = s?.tuition
+// ───── 查学校：统一浏览器（§12·步骤3）。唯一数据源 = schools_unified ─────
+const uList = computed<any[]>(() => ((result.value as any)?.schools_unified) || [])
+const EX_TYPES = [
+  { v: 'all', label: '全部' }, { v: '公办', label: '公办普高' }, { v: '民办', label: '民办' },
+  { v: '国际', label: '国际/双语' }, { v: '中职', label: '中职/职教' }, { v: '贯通', label: '贯通' },
+  { v: '新校', label: '2026新校' }, { v: '统筹', label: '外区统筹' },
+]
+const exType = ref('all')
+const exChannel = ref<'all' | 'tc' | 'xed'>('all')   // 渠道：全部 / 可走统筹 / 可走校额
+const exBand = ref<'all' | '稳' | '冲' | '搏'>('all')
+const exBoarding = ref(false)
+const exCommute = ref(false)
+const exFee = ref<'all' | 'le10' | 'mid' | 'gt20'>('all')
+function exTypeMatch(rec: any, t: string): boolean {
+  const ty = rec.type || ''
+  if (t === 'all') return true
+  if (t === '公办') return ty === '公办普高'
+  if (t === '民办') return ty.includes('民办')
+  if (t === '国际') return ty.includes('国际') || ty.includes('双语')
+  if (t === '中职') return ty.includes('中职') || ty.includes('职教')
+  if (t === '贯通') return ty === '贯通'
+  if (t === '新校') return ty.includes('新校')
+  if (t === '统筹') return ty === '市级统筹'
+  return true
+}
+// 该校"主档位"：公办取统招渠道，统筹/外区统筹取 city_score
+function exBandOf(rec: any): { label: string; cls: string } | null {
+  for (const ch of (rec.channels || [])) {
+    if (ch.metric?.kind === 'district_rank') return { label: ch.band || '—', cls: PUB_BAND_CLS[ch.band] || 'tj-unk' }
+    if (ch.metric?.kind === 'city_score') { const b = scoreBand(ch.metric.refLine ?? null); return { label: b.label, cls: b.cls } }
+  }
+  return null
+}
+// 渠道短标：统/筹/校
+function exChannelTags(rec: any): string[] {
+  const tags: string[] = []
+  for (const ch of (rec.channels || [])) {
+    if (ch.metric?.kind === 'district_rank') tags.push('统')
+    if (ch.metric?.kind === 'city_score') tags.push('筹')
+  }
+  if (rec.type === '公办普高' && xedQuotaByName.value[rec.name]) tags.push('校')
+  return tags
+}
+function exHasTc(rec: any): boolean {
+  return rec.type === '市级统筹' || (rec.channels || []).some((c: any) => c.metric?.kind === 'city_score')
+}
+function exHasXed(rec: any): boolean {
+  return rec.type === '公办普高' && !!xedQuotaByName.value[rec.name]
+}
+function exFeeMax(rec: any): number | null {
+  const t = rec.extra?.tuition
   if (!t) return null
   const nums = String(t).match(/\d+(\.\d+)?/g)
-  if (!nums) return null
-  return Math.max(...nums.map(Number))
+  return nums ? Math.max(...nums.map(Number)) : null
 }
-const privView = computed<PrivSchool[]>(() => {
-  let list = tab.value === 'intl' ? intlList.value : minbanList.value
-  if (tuitionBand.value !== 'all') {
-    list = list.filter(s => {
-      const m = tuitionMax(s)
-      if (m == null) return false   // 无标价不进档位筛选
-      if (tuitionBand.value === 'le10') return m <= 10
-      if (tuitionBand.value === 'mid') return m > 10 && m <= 20
-      return m > 20
-    })
+// 关键数（随类型自适应）
+function exKey(rec: any): { k: string; v: string } {
+  const ty = rec.type || ''
+  if (ty === '公办普高') {
+    const ch = (rec.channels || []).find((c: any) => c.metric?.kind === 'district_rank')
+    const r = ch?.metric?.refRank
+    return { k: '位次', v: r != null ? String(r) : '—' }
   }
-  return list
+  if (ty === '市级统筹') return { k: '投朝阳', v: rec.extra?.quota_chaoyang != null ? rec.extra.quota_chaoyang + '名' : '—' }
+  if (ty.includes('民办') || ty.includes('国际') || ty.includes('双语')) return { k: '学费', v: rec.extra?.tuition || '—' }
+  if (ty.includes('中职') || ty.includes('职教')) { const sp = rec.extra?.specialties; return { k: '专业', v: sp && sp.length ? sp.slice(0, 2).join('·') : '—' } }
+  if (ty === '贯通') { const ps = rec.extra?.projects; return { k: '对接本科', v: ps && ps.length ? ps.length + '个项目' : '—' } }
+  if (ty.includes('新校')) { const a = rec.extra?.analog; return { k: '可类比', v: a && a.length ? a[0] : '待核' } }
+  return { k: '', v: '' }
+}
+const TYPE_ORDER: Record<string, number> = {
+  '公办普高': 0, '市级统筹': 1, '民办普高': 2, '国际/双语': 2, '民办普高/国际/双语': 2,
+  '贯通': 3, '中职/职教': 4, '2026新校': 5,
+}
+const exFeeApplies = computed(() => exType.value === '民办' || exType.value === '国际' || exType.value === 'all')
+const exploreView = computed<any[]>(() => {
+  let list = uList.value.filter(r => exTypeMatch(r, exType.value))
+  if (exChannel.value === 'tc') list = list.filter(exHasTc)
+  if (exChannel.value === 'xed') list = list.filter(exHasXed)
+  if (exBand.value !== 'all') list = list.filter(r => (exBandOf(r) || {}).label === exBand.value)
+  if (exBoarding.value) list = list.filter(r => r.boarding === true)
+  if (exCommute.value) list = list.filter(r => r.commute && !r.commute.over_max)
+  if (exFee.value !== 'all') list = list.filter(r => {
+    const m = exFeeMax(r); if (m == null) return false
+    if (exFee.value === 'le10') return m <= 10
+    if (exFee.value === 'mid') return m > 10 && m <= 20
+    return m > 20
+  })
+  return [...list].sort((a, b) => {
+    const ta = TYPE_ORDER[a.type] ?? 9, tb = TYPE_ORDER[b.type] ?? 9
+    if (ta !== tb) return ta - tb
+    if (a.type === '公办普高' && b.type === '公办普高') {
+      const na = Number(exKey(a).v) || 9e9, nb = Number(exKey(b).v) || 9e9
+      return na - nb
+    }
+    return (a.name || '').localeCompare(b.name || '')
+  })
 })
+function exSelect(rec: any) { selectPoint({ name: rec.name } as any) }
 const vocList = computed<VocSchool[]>(() => result.value?.vocational?.schools || [])
 const gtBlock = computed<GuantongBlock | null>(() => result.value?.guantong || null)
 function shortCampusName(name: string): string {
@@ -855,22 +927,6 @@ const tcOptions: string[] = []
       ⚠️ 学校代码 / 专业(班)代码派生自 <b>bjeea 2025 官方招生计划册</b>（人工核对映射），<b>2026 计划 7 月初发布后须刷新</b>；高考成绩为<b>民间·非官方</b>数据，仅作补充参考，请勿据此直接决策。
     </div>
 
-    <!-- 升学渠道科普（折叠） -->
-    <section class="guide">
-      <button class="guide-head" type="button" @click="showGuide = !showGuide">
-        <span>📖 北京中考升学有哪些渠道？（提招 / 校额到校 / 统招 / 贯通 / 中职…）</span>
-        <span class="guide-toggle">{{ showGuide ? '收起 ▲' : '展开 ▼' }}</span>
-      </button>
-      <div v-show="showGuide" class="guide-body">
-        <div v-for="(g, i) in GUIDE" :key="i" class="g-item" :class="{ open: openG === i }">
-          <button class="g-q" type="button" @click="openG = openG === i ? null : i">
-            <span>{{ g.t }}</span><span class="g-chev">{{ openG === i ? '−' : '+' }}</span>
-          </button>
-          <div v-show="openG === i" class="g-a" v-html="g.h"></div>
-        </div>
-      </div>
-    </section>
-
     <!-- 输入区：全部条件常驻显示，方便反复改条件对比 -->
     <section class="card form">
       <div class="fields">
@@ -912,39 +968,14 @@ const tcOptions: string[] = []
     </section>
 
     <section v-if="result" class="results">
-      <!-- 标签页：地图 / 草表 + 查学校菜单 -->
+      <!-- 一级导航：地图 / 草表 / 查学校 / 渠道科普 -->
       <div class="tabbar">
-      <div class="tabs" role="tablist">
-        <!-- 主入口：地图 / 草表 -->
-        <button class="tab tab-main" :class="{ on: tab === 'map' }" @click="goTab('map')">
-          <span class="tab-ic">📍</span>志愿地图
-        </button>
-        <button class="tab tab-main" :class="{ on: tab === 'draft' }" @click="goTab('draft')">
-          <span class="tab-ic">📝</span>志愿草表<span class="tab-cnt">{{ filledSlots }}/{{ ZHIYUAN_SLOTS }}</span>
-        </button>
-        <!-- 二级聚合：查学校 / 渠道 -->
-        <button class="tab tab-more" :class="{ on: isSecondaryTab || moreOpen }" @click="moreOpen = !moreOpen">
-          {{ isSecondaryTab ? SECONDARY_LABELS[tab] : '查学校 / 渠道' }}
-          <span class="more-caret">{{ moreOpen ? '▴' : '▾' }}</span>
-        </button>
-      </div>
-      <!-- 二级菜单（展开） -->
-      <div v-if="moreOpen" class="more-menu">
-        <div class="mm-group">
-          <span class="mm-k">录取渠道(指标分配)</span>
-          <button class="mchip" :class="{ on: tab === 'tc' }" @click="goTab('tc')">市级统筹</button>
-          <button class="mchip" :class="{ on: tab === 'xed' }" @click="goTab('xed')">校额到校</button>
+        <div class="tabs" role="tablist">
+          <button class="tab" :class="{ on: tab === 'map' }" @click="goTab('map')"><span class="tab-ic">📍</span>志愿地图</button>
+          <button class="tab" :class="{ on: tab === 'draft' }" @click="goTab('draft')"><span class="tab-ic">📝</span>志愿草表<span class="tab-cnt">{{ filledSlots }}/{{ ZHIYUAN_SLOTS }}</span></button>
+          <button class="tab" :class="{ on: tab === 'explore' }" @click="goTab('explore')"><span class="tab-ic">🔎</span>查学校<span class="tab-cnt">{{ uList.length }}</span></button>
+          <button class="tab" :class="{ on: tab === 'channels' }" @click="goTab('channels')"><span class="tab-ic">📖</span>渠道科普</button>
         </div>
-        <div class="mm-group">
-          <span class="mm-k">按学校类型</span>
-          <button class="mchip" :class="{ on: tab === 'list' }" @click="goTab('list')">公办普高<i>{{ result.public_list.length }}</i></button>
-          <button v-if="minbanList.length" class="mchip" :class="{ on: tab === 'minban' }" @click="goTab('minban')">民办普高<i>{{ minbanList.length }}</i></button>
-          <button v-if="intlList.length" class="mchip" :class="{ on: tab === 'intl' }" @click="goTab('intl')">国际/双语<i>{{ intlList.length }}</i></button>
-          <button v-if="gtBlock" class="mchip" :class="{ on: tab === 'gt' }" @click="goTab('gt')">贯通(全市)<i>{{ gtBlock.projects.length }}</i></button>
-          <button v-if="vocList.length" class="mchip" :class="{ on: tab === 'voc' }" @click="goTab('voc')">中职/职教<i>{{ vocList.length }}</i></button>
-        </div>
-        <p class="mm-tip">这些清单与地图图层对应——也可直接在「志愿地图」按图层查看。</p>
-      </div>
       </div><!-- /tabbar -->
 
       <!-- TAB 1：地图 -->
@@ -1049,231 +1080,146 @@ const tcOptions: string[] = []
         </div>
       </div>
 
-      <!-- TAB 2：普高（统招公办）清单 -->
-      <div class="listwrap" v-show="tab === 'list'">
-        <p v-if="!canPuhao" class="board-note">⚠️ 非京籍随迁子女<b>不能报普通高中统招</b>，以下普高清单<b>仅供了解</b>（你可报中职：中专/职高/技校/五年制）。</p>
-        <p class="list-note">
-          全{{ result.district }}统招公办普高{{ result.public_list.length }}所，按 2025 录取位次升序。
-          <b>录取位次</b>跨年可比（分数因总分调整不可比）；<b>住宿</b>派生自 bjeea 2025 计划册；
-          <b>地址</b>低可信/有提示的请以学校官方/电话为准。
-        </p>
-        <div class="table-scroll">
-          <table class="list-table">
-            <thead>
-              <tr>
-                <th>学校</th><th>层次</th><th>档位</th>
-                <th class="num">录取位次<small>2025</small></th>
-                <th>住宿</th><th>通勤</th><th>地址</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr v-for="p in result.public_list" :key="p.name" :class="{ unreach: !p.reportable }">
-                <td class="t-name">
-                  {{ cleanName(p.name) }}
-                  <span v-if="p.coop" class="mini-bdg b-coop">国际/合作</span>
-                </td>
-                <td class="t-lvl">{{ p.level }}</td>
-                <td><span class="t-band" :class="'band-' + p.band">{{ p.band }}</span></td>
-                <td class="num"><b>{{ p.ref_rank }}</b></td>
-                <td>
-                  <span v-if="p.boarding" class="t-yes">🛏 可住</span>
-                  <span v-else class="t-no">—</span>
-                </td>
-                <td class="t-dist">
-                  <template v-if="p.nearest">
-                    {{ p.nearest.km }}km
-                    <span v-if="p.over_max && !p.boarding" class="t-over">超上限</span>
-                  </template>
-                  <span v-else class="t-no">—</span>
-                </td>
-                <td class="t-addr">
-                  {{ p.address || '—' }}
-                  <span v-if="p.address && !p.address_exact" class="addr-tag" title="非精确门牌，需核验">概址</span>
-                  <span v-if="p.address_confidence === 'low'" class="addr-tag warn" title="低可信，请以官方为准">待核</span>
-                  <span v-if="p.address_flag" class="addr-flag" :title="p.address_flag">⚠️</span>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <p class="list-tip">⚠️ 标「待核 / 概址 / ⚠️」的地址来自非权威或迁址提示，报到校区请以招生简章与学校电话确认。</p>
-
-        <!-- 2026 新增公办普高（无历史线） -->
-        <template v-if="newSchools.length">
-          <h4 class="batch-sub">🆕 2026 新增公办普高（{{ newSchools.length }} 所·无历史线，仅供了解）</h4>
-          <p class="list-note">这些是 2026 新取得招生资格的新校 / 新高中，<b>无往年录取线、不做冲/稳/保研判</b>。
-            招生计划官方约 <b>6 月</b>发布（网传数未采）。判断主要看 <b>办学体系 + 可类比的母体/同体系校</b>，并参加学校招生说明会。</p>
-          <div class="table-scroll">
-            <table class="list-table">
-              <thead><tr><th>学校</th><th>办学体系</th><th>可类比参考</th><th>方向</th><th>通勤</th><th>住宿</th><th>地址</th></tr></thead>
-              <tbody>
-                <tr v-for="s in newSchools" :key="s.name">
-                  <td class="t-name">{{ cleanName(s.name) }} <span class="addr-tag warn">新校</span></td>
-                  <td class="t-curr">{{ s.system }}</td>
-                  <td class="t-curr"><span v-if="s.analog && s.analog.length">{{ s.analog.join('、') }}</span><span v-else class="t-no">待核</span></td>
-                  <td>{{ s.direction }}</td>
-                  <td class="t-dist">{{ s.dist ? s.dist.km + 'km' : '—' }}</td>
-                  <td><span v-if="s.boarding === true" class="t-yes">🛏</span><span v-else-if="s.boarding === false" class="t-no">—</span><span v-else class="addr-tag">待核</span></td>
-                  <td class="t-addr">{{ s.address }}<span v-if="!s.lat" class="addr-tag">概址</span></td>
-                </tr>
-              </tbody>
-            </table>
+      <!-- 查学校：统一浏览器（schools_unified 驱动·学校唯一·渠道多个） -->
+      <div class="explorewrap" v-show="tab === 'explore'">
+        <p v-if="identityNote" class="board-note">⚠️ {{ identityNote }}</p>
+        <div class="ex-filters">
+          <div class="ex-row">
+            <span class="ex-k">类型</span>
+            <button v-for="t in EX_TYPES" :key="t.v" class="ex-chip" :class="{ on: exType === t.v }" @click="exType = t.v">{{ t.label }}</button>
           </div>
-          <p class="list-tip">来源：北京市教委 2026-05-16《具有招生资格的高级中等学校名单》（朝阳 #28/29/30/48）。
-            <b>各校 2026 招生计划/班数官方未发布</b>；报考前以 6 月官方简章 + 学校招生说明会为准。新校首届有磨合风险、出口（高考）3 年后才有。</p>
-        </template>
-      </div>
-
-      <!-- TAB 3/4：民办普高 / 国际学校 清单（共用表格，按 Tab 过滤）-->
-      <div class="listwrap" v-show="tab === 'minban' || tab === 'intl'">
-        <p class="list-note" v-if="result.private_schools">
-          <template v-if="tab === 'minban'">朝阳区<b>民办</b>高中（含国内高考方向 / 双轨）{{ minbanList.length }} 所。</template>
-          <template v-else>朝阳区<b>国际 / 双语</b>高中（国际课程 / 出国方向）{{ intlList.length }} 所。</template>
-          地址/电话/住宿来自 <b>bjeea 2025 官方统招计划册</b>；<b>办学性质 / 方向 / 课程 / 学费</b>为公开网络交叉核验
-          （多为升学平台口径，约 2024–2025，<b>仅供参考</b>）。
-        </p>
-        <div class="priv-filter" v-if="result.private_schools">
-          <span class="pf-k">学费</span>
-          <button class="pf-b" :class="{ on: tuitionBand === 'all' }" @click="tuitionBand = 'all'">全部</button>
-          <button class="pf-b" :class="{ on: tuitionBand === 'le10' }" @click="tuitionBand = 'le10'">≤10万</button>
-          <button class="pf-b" :class="{ on: tuitionBand === 'mid' }" @click="tuitionBand = 'mid'">10–20万</button>
-          <button class="pf-b" :class="{ on: tuitionBand === 'gt20' }" @click="tuitionBand = 'gt20'">&gt;20万</button>
-          <span class="pf-n">{{ privView.length }} 所</span>
-          <span class="pf-note">本区民办/国际校<b>均在中考统招计划内</b>填报；<b>无公开统一录取线</b>（按分/自主），故不设"录取分/计划内外"筛选。</span>
+          <div class="ex-row">
+            <span class="ex-k">渠道</span>
+            <button class="ex-chip" :class="{ on: exChannel === 'all' }" @click="exChannel = 'all'">全部</button>
+            <button class="ex-chip" :class="{ on: exChannel === 'tc' }" @click="exChannel = 'tc'">可走统筹</button>
+            <button class="ex-chip" :class="{ on: exChannel === 'xed' }" @click="exChannel = 'xed'">可走校额</button>
+            <span class="ex-k ex-k2">档位</span>
+            <button class="ex-chip" :class="{ on: exBand === 'all' }" @click="exBand = 'all'">全部</button>
+            <button class="ex-chip" :class="{ on: exBand === '稳' }" @click="exBand = '稳'">稳</button>
+            <button class="ex-chip" :class="{ on: exBand === '冲' }" @click="exBand = '冲'">冲</button>
+            <button class="ex-chip" :class="{ on: exBand === '搏' }" @click="exBand = '搏'">搏</button>
+          </div>
+          <div class="ex-row">
+            <label class="ex-sw"><input type="checkbox" v-model="exBoarding" />可住宿</label>
+            <label class="ex-sw"><input type="checkbox" v-model="exCommute" />通勤≤上限</label>
+            <template v-if="exFeeApplies">
+              <span class="ex-k ex-k2">学费</span>
+              <button class="ex-chip" :class="{ on: exFee === 'all' }" @click="exFee = 'all'">全部</button>
+              <button class="ex-chip" :class="{ on: exFee === 'le10' }" @click="exFee = 'le10'">≤10万</button>
+              <button class="ex-chip" :class="{ on: exFee === 'mid' }" @click="exFee = 'mid'">10–20万</button>
+              <button class="ex-chip" :class="{ on: exFee === 'gt20' }" @click="exFee = 'gt20'">&gt;20万</button>
+            </template>
+            <span class="ex-n">命中 {{ exploreView.length }} 所</span>
+          </div>
         </div>
-        <div class="table-scroll">
-          <table class="list-table">
-            <thead>
-              <tr>
-                <th>学校</th><th>方向</th><th>课程体系</th>
-                <th>学费<small>万/年·参考</small></th>
-                <th>住宿</th><th>通勤</th><th>地址</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr v-for="p in privView" :key="p.code">
-                <td class="t-name">{{ shortCampusName(p.name) }}</td>
-                <td>
-                  <span class="t-dir" :class="'dir-' + p.direction">{{ p.direction === 'unknown' ? '待核' : p.direction }}</span>
-                </td>
-                <td class="t-curr">
-                  <span v-if="p.curriculum.length">{{ p.curriculum.join('·') }}</span>
-                  <span v-else class="t-no">—</span>
-                </td>
-                <td class="t-fee">
-                  <template v-if="p.tuition">{{ p.tuition }}
-                    <span v-if="p.tuition_confidence === 'low'" class="addr-tag warn" title="可信度低，请向招生办核实">待核</span>
-                  </template>
-                  <span v-else class="t-no">—</span>
-                </td>
-                <td>
-                  <span v-if="p.boarding === true" class="t-yes">🛏 可住</span>
-                  <span v-else-if="p.boarding === false" class="t-no">不住</span>
-                  <span v-else class="addr-tag" title="未核实">待核</span>
-                </td>
-                <td class="t-dist">
-                  <template v-if="p.dist">
-                    {{ p.dist.km }}km
-                    <span v-if="p.dist.over_max" class="t-over">超上限</span>
-                  </template>
-                  <span v-else class="t-no">—</span>
-                </td>
-                <td class="t-addr">
-                  {{ p.location.address || '—' }}
-                  <span v-if="p.location.confidence !== 'high'" class="addr-tag" title="地址仅到路/片区，需核验">概址</span>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <p class="list-tip">
-          ⚠️ <b>学费仅供参考</b>：随学年/班型/课程方向变动，且多为升学平台口径而非学校官网逐字，务必以学校招生办当年公布为准。
-          「双轨」校在<b>民办普高</b>与<b>国际学校</b>两个清单中都会出现（分别对应其国内 / 国际方向）。
-          数据来源：{{ result.private_schools?.meta?.source_T1 }}（{{ result.private_schools?.meta?.collected }}）。
-        </p>
-      </div>
+        <div class="ex-main">
+          <div class="ex-listcol">
+            <div class="table-scroll">
+              <table class="list-table ex-table">
+                <thead><tr><th>学校</th><th>类型</th><th>层次</th><th>档位</th><th>渠道</th><th>关键</th><th>通勤</th><th>住</th></tr></thead>
+                <tbody>
+                  <tr v-for="r in exploreView" :key="r.id || r.name" class="ex-tr" :class="{ on: selectedPoint && selectedPoint.name === r.name }" @click="exSelect(r)">
+                    <td class="t-name">{{ cleanName(r.name) }}<span v-if="r.type === '2026新校'" class="addr-tag warn">新</span></td>
+                    <td class="ex-ty">{{ r.type }}</td>
+                    <td class="t-lvl">{{ r.level || '—' }}</td>
+                    <td><span v-if="exBandOf(r)" class="t-band" :class="exBandOf(r)?.cls">{{ exBandOf(r)?.label }}</span><span v-else class="t-no">—</span></td>
+                    <td class="ex-cht"><span v-for="(g, gi) in exChannelTags(r)" :key="gi" class="ex-cbg">{{ g }}</span><span v-if="!exChannelTags(r).length" class="t-no">—</span></td>
+                    <td class="ex-keycol"><small>{{ exKey(r).k }}</small> <b>{{ exKey(r).v }}</b></td>
+                    <td class="t-dist">{{ r.commute && r.commute.km != null ? r.commute.km + 'km' : '—' }}<span v-if="r.commute && r.commute.over_max" class="t-over">超</span></td>
+                    <td><span v-if="r.boarding === true" class="t-yes">🛏</span><span v-else class="t-no">—</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="list-tip">点任意行看右侧详情与逐渠道研判。<b>渠道标</b>：统=统招 / 筹=市级统筹 / 校=校额到校。<b>关键数</b>随类型变（公办=录取位次 · 统筹=投朝阳名额 · 民办/国际=学费 · 中职=专业 · 贯通=对接本科）。机制与门槛见「渠道科普」。</p>
+          </div>
+          <aside class="detail-panel">
+            <template v-if="selectedPoint">
+              <template v-if="selSchool">
+                <div class="dp-head">
+                  <span class="dp-type">{{ selSchool.type }}</span>
+                  <h3>{{ cleanName(selSchool.name) }}</h3>
+                </div>
+                <div class="dp-sub">
+                  {{ selSchool.level || '' }}
+                  <span v-if="selSchool.extra.coop" class="bdg b-coop">🌐中外合作班</span>
+                </div>
 
-      <!-- TAB 6：中职 / 职教（校址在朝阳）-->
-      <div class="listwrap" v-show="tab === 'voc'" v-if="result.vocational">
-        <p class="list-note">
-          校址在<b>朝阳区</b>的中职 {{ vocList.length }} 所（中专 / 职高，含 1 所特教校）。
-          名单取自<b>北京市教委 2025 具招生资格中等职业学校名单</b>。
-          <span class="g-warn" style="display:inline-block;margin-top:6px">{{ result.vocational.meta.guantong_note }}</span>
-        </p>
-        <div class="table-scroll">
-          <table class="list-table">
-            <thead>
-              <tr><th>学校</th><th>类型</th><th>特色专业</th><th>3+2</th><th>住宿</th><th>通勤</th><th>地址</th></tr>
-            </thead>
-            <tbody>
-              <tr v-for="v in vocList" :key="v.name">
-                <td class="t-name">{{ shortCampusName(v.name) }}</td>
-                <td><span class="t-dir" :class="v.type.includes('中专') ? 'dir-国内' : 'dir-双轨'">{{ v.type }}</span></td>
-                <td class="t-curr">
-                  <span v-if="v.specialties.length">{{ v.specialties.join('·') }}</span>
-                  <span v-else class="t-no">—</span>
-                </td>
-                <td>
-                  <span v-if="v.five_year === true" class="t-yes">有</span>
-                  <span v-else class="t-no">—</span>
-                </td>
-                <td>
-                  <span v-if="v.boarding === true" class="t-yes">🛏 可住</span>
-                  <span v-else class="addr-tag" title="未核实">待核</span>
-                </td>
-                <td class="t-dist">
-                  <template v-if="v.dist">{{ v.dist.km }}km<span v-if="v.dist.over_max" class="t-over">超上限</span></template>
-                  <span v-else class="t-no">—</span>
-                </td>
-                <td class="t-addr">
-                  {{ v.address }}
-                  <span v-if="v.addr_conf !== 'high'" class="addr-tag" title="需核验">概址</span>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <p class="list-tip">
-          ⚠️ {{ result.vocational.meta.coverage_note }} 数据来源：{{ result.vocational.meta.source_T1 }}。
-          中职升学出口：单考单招 / 高职单招 / 3+2 直升大专 / 贯通转段升本科（详见顶部「升学渠道说明」）。
-        </p>
-      </div>
+                <div class="dp-block">
+                  <div class="dp-title">录取研判<small v-if="estScore"> 你估≈{{ estScore }}</small></div>
+                  <div v-for="(v, ci) in channelViews" :key="ci" class="dp-ch">
+                    <span class="dp-ch-name">{{ v.name }}</span>
+                    <span class="tj" :class="v.cls">{{ v.band }}</span>
+                    <span class="dp-ch-detail">{{ v.detail }}</span>
+                  </div>
+                  <p v-for="(c, idx) in caveats" :key="idx" class="dp-tip">⚠️ {{ c }}</p>
+                </div>
 
-      <!-- TAB 7：贯通培养（全市招生）-->
-      <div class="listwrap" v-show="tab === 'gt'" v-if="gtBlock">
-        <p v-if="!canGuantong" class="board-note">⚠️ 贯通培养<b>仅限京籍考生</b>；当前「{{ identityLabel }}」身份不可报，以下<b>仅供了解</b>。</p>
-        <p class="list-note">
-          <b>贯通培养</b>＝<b>7 年学制 → 本科</b>（中职/高职段 + 本科段，专升本性质）。{{ gtBlock.overall.year }} 年全市
-          <b>{{ gtBlock.projects.length }}</b> 个项目 / 8 所承办院校，计划合计 <b>{{ gtBlock.overall.total_plan }}</b> 人。
-          <span class="g-warn" style="display:inline-block;margin-top:6px">
-            ⚠️ 报考门槛：中考总分 ≥ <b>{{ gtBlock.overall.min_score }}</b> 分；<b>{{ gtBlock.overall.huji }}</b>；2025 在<b>{{ gtBlock.overall.batch }}</b>录取，<b>2026 起并入统一招生批次</b>（380 分门槛不变）。全市招生不分区，朝阳京籍考生均可报。
-          </span>
-        </p>
-        <div class="table-scroll">
-          <table class="list-table">
-            <thead>
-              <tr><th>承办院校</th><th>类型</th><th>中职/高职专业</th><th>对接本科（高校·专业）</th><th class="num">计划</th><th>校区(区)</th></tr>
-            </thead>
-            <tbody>
-              <tr v-for="(p, i) in gtBlock.projects" :key="i">
-                <td class="t-name">{{ shortCampusName(p.school) }}</td>
-                <td><span class="t-dir" :class="p.type === '中本贯通' ? 'dir-双轨' : 'dir-国际'">{{ p.type }}</span></td>
-                <td class="t-curr">{{ p.major }}</td>
-                <td class="t-curr">{{ p.benke }}</td>
-                <td class="num"><b>{{ p.plan }}</b></td>
-                <td class="t-dist">{{ p.district }}</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <p class="list-tip">
-          数据来源：{{ gtBlock.source_T1 }}（<a :href="gtBlock.official_url" target="_blank" rel="noopener">官方通知</a>，计划合计 {{ gtBlock.overall.total_plan }} 人逐项核验一致）。
-          中本贯通=中职校+本科高校；高本贯通=高职院校+本科高校。各专业代码/对接本科以官方简章为准；2026 计划发布后须刷新。
-        </p>
-      </div>
+                <div v-if="schoolLines.length" class="dp-block">
+                  <div class="dp-title">历年录取线</div>
+                  <table class="dp-table">
+                    <thead><tr><th>年</th><th>线</th><th>口径/区排</th></tr></thead>
+                    <tbody>
+                      <tr v-for="sl in schoolLines" :key="sl.year">
+                        <td>{{ sl.year }}</td>
+                        <td>{{ sl.score != null ? sl.score + (sl.scale ? '(' + sl.scale + '制)' : '分') : '—' }}</td>
+                        <td>{{ sl.rank != null ? sl.rank + '名' : (sl.conf || '') }}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p class="dp-tip">分数跨年口径不同(2025起510制)；同年/区排名才可比。</p>
+                </div>
 
-      <!-- TAB 8：校额到校（指标分配批次）-->
-      <div class="listwrap" v-show="tab === 'xed'">
+                <dl class="dp-kv">
+                  <div v-if="selSchool.commute"><dt>通勤(到家)</dt>
+                    <dd>{{ selSchool.commute.km }}km · {{ selSchool.commute.mins }}分钟
+                      <span v-if="selSchool.commute.over_max" class="dp-vol">⚠️超上限</span></dd></div>
+                  <div><dt>住宿</dt><dd>
+                    <span v-if="selSchool.boarding === true" class="t-yes">🛏 可住宿</span>
+                    <span v-else-if="selSchool.boarding === false">不提供</span>
+                    <span v-else class="dp-muted">待核</span></dd></div>
+                </dl>
+
+                <div v-if="selSchool.extra.tuition" class="dp-line">💰 学费：{{ selSchool.extra.tuition }}</div>
+                <div v-if="selSchool.extra.curriculum && selSchool.extra.curriculum.length" class="dp-line">📚 课程：{{ selSchool.extra.curriculum.join('·') }}<template v-if="selSchool.extra.direction"> · {{ selSchool.extra.direction }}</template></div>
+                <div v-if="selSchool.extra.specialties && selSchool.extra.specialties.length" class="dp-line">🛠 专业：{{ selSchool.extra.specialties.join('·') }}</div>
+                <div v-if="selSchool.extra.projects && selSchool.extra.projects.length" class="dp-block">
+                  <div class="dp-title">贯通项目（→本科）</div>
+                  <div v-for="(pj, pi) in selSchool.extra.projects" :key="pi" class="dp-mj">{{ pj.type }}：{{ pj.major }} → {{ pj.benke }}<em v-if="pj.plan"> · {{ pj.plan }}人</em></div>
+                </div>
+                <div v-if="selSchool.extra.system" class="dp-line">🏛 体系：{{ selSchool.extra.system }}</div>
+                <div v-if="selSchool.extra.analog && selSchool.extra.analog.length" class="dp-line dp-muted">↔ 可类比：{{ selSchool.extra.analog.join('、') }}</div>
+                <div v-if="selSchool.extra.direction && !(selSchool.extra.curriculum && selSchool.extra.curriculum.length)" class="dp-line dp-muted">方向：{{ selSchool.extra.direction }}</div>
+
+                <div v-if="selSchool.features.style" class="dp-line">🏫 {{ selSchool.features.style }}</div>
+                <div v-if="selSchool.features.gaokao" class="dp-line dp-muted">🎓 高考(民间·非官方)：{{ selSchool.features.gaokao }}</div>
+                <div v-if="selSchool.geo.address" class="dp-line dp-muted">📍 {{ selSchool.geo.address }}<span v-if="selSchool.geo.confidence === 'low' || !selSchool.geo.lat" class="addr-tag">待核</span></div>
+              </template>
+              <div v-else class="dp-line dp-muted">{{ cleanName(selectedPoint.name) }}（暂无结构化信息）</div>
+            </template>
+            <div v-else class="dp-empty">
+              <div class="dp-empty-ic">🏫</div>
+              点击地图上的学校查看详细信息
+            </div>
+          </aside>
+        </div>
+      </div>
+      <!-- 渠道科普：科普总览 + 校额到校 + 市级统筹（数据工具内嵌） -->
+      <div class="chwrap" v-show="tab === 'channels'">
+        <div class="ch-subnav">
+          <button class="ch-sb" :class="{ on: chSub === 'guide' }" @click="chSub = 'guide'">📖 升学渠道科普</button>
+          <button class="ch-sb" :class="{ on: chSub === 'xed' }" @click="chSub = 'xed'">🎯 校额到校</button>
+          <button class="ch-sb" :class="{ on: chSub === 'tc' }" @click="chSub = 'tc'">🌆 市级统筹</button>
+        </div>
+        <div class="listwrap ch-guide" v-show="chSub === 'guide'">
+          <p class="list-note">北京中考升学的批次与渠道全景（提招 / 指标分配 / 统招 / 贯通 / 中职）。点条目展开。具体校额名额、统筹投朝阳名额与逐校研判见上方「校额到校 / 市级统筹」子页。</p>
+          <div v-for="(g, i) in GUIDE" :key="i" class="g-item" :class="{ open: openG === i }">
+            <button class="g-q" type="button" @click="openG = openG === i ? null : i"><span>{{ g.t }}</span><span class="g-chev">{{ openG === i ? '−' : '+' }}</span></button>
+            <div v-show="openG === i" class="g-a" v-html="g.h"></div>
+          </div>
+        </div>
+        <!-- 校额到校 -->
+        <div class="listwrap" v-show="chSub === 'xed'">
         <p v-if="!canIndicator" class="board-note">⚠️ 指标分配（校额到校）<b>仅京籍应届可报</b>；往届/回户籍/外省回京/非京籍<b>不可报</b>，以下<b>仅供了解</b>。</p>
         <div class="xed-intro">
           <h3>🎯 校额到校（指标分配批次）</h3>
@@ -1338,7 +1284,7 @@ const tcOptions: string[] = []
       </div>
 
       <!-- TAB：市级统筹（指标分配批次）-->
-      <div class="listwrap" v-show="tab === 'tc'">
+        <div class="listwrap" v-show="chSub === 'tc'">
         <p v-if="!canIndicator" class="board-note">⚠️ 市级统筹与校额到校同属指标分配批次，<b>仅京籍应届可报</b>；往届/回户籍/外省回京/非京籍<b>不可报</b>，以下<b>仅供了解</b>。</p>
         <div class="xed-intro">
           <h3>🌆 市级统筹（指标分配批次）</h3>
@@ -1419,6 +1365,8 @@ const tcOptions: string[] = []
         </p>
       </div>
 
+      </div><!-- /chwrap 渠道科普 -->
+
       <!-- TAB 8：志愿草表 v2（三批次 · 2026 口径）-->
       <div class="draftwrap" v-show="tab === 'draft'">
         <p class="draft-note">
@@ -1459,7 +1407,7 @@ const tcOptions: string[] = []
           </button>
           <template v-if="batchOpen.ind && canIndicator">
             <!-- 校额到校填报（名额/研判在校额到校页看） -->
-            <h4 class="batch-sub">校额到校志愿<small style="font-weight:400;color:var(--gray-500)">（名额·研判见「<a class="lnk" @click="goTab('xed')">校额到校</a>」页）</small></h4>
+            <h4 class="batch-sub">校额到校志愿<small style="font-weight:400;color:var(--gray-500)">（名额·研判见「<a class="lnk" @click="chSub = 'xed'; goTab('channels')">校额到校</a>」页）</small></h4>
             <div v-if="xedEligible.length" class="draft-actions" style="margin:6px 0">
               <button class="ghost" @click="prefillXed">↻ 按推荐重填</button>
               <span class="xed-src" style="margin:0">已按"值得冲→相当"自动填入（可改/清空；专业手填）</span>
@@ -1486,7 +1434,7 @@ const tcOptions: string[] = []
 
             <h4 class="batch-sub">市级统筹（统筹一/二）</h4>
             <div class="tc-ref">
-              <p class="xed-src" style="margin:0 0 6px">⚠️ 可填统筹校以「<a class="lnk" @click="goTab('tc')">市级统筹</a>」页清单为准（含研判/名额/通勤）；这里手填"学校 + 专业(班)"。</p>
+              <p class="xed-src" style="margin:0 0 6px">⚠️ 可填统筹校以「<a class="lnk" @click="chSub = 'tc'; goTab('channels')">市级统筹</a>」页清单为准（含研判/名额/通勤）；这里手填"学校 + 专业(班)"。</p>
             </div>
             <div class="early-rows" style="margin-top:8px">
               <div v-for="(s, i) in draftTongchou" :key="i" class="early-row">
@@ -1674,6 +1622,38 @@ const tcOptions: string[] = []
 /* 地图 + 详情面板：左图右栏 */
 .map-detail { display: flex; gap: 12px; align-items: stretch; }
 .map-col { flex: 1; min-width: 0; }
+
+/* ── 查学校：统一浏览器 ── */
+.explorewrap { background: var(--surface); box-shadow: var(--shadow-sm); padding: 14px 16px; }
+.ex-filters { display: flex; flex-direction: column; gap: 7px; margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid var(--gray-100); }
+.ex-row { display: flex; align-items: center; gap: 5px; flex-wrap: wrap; }
+.ex-k { font-size: 12px; font-weight: 700; color: var(--gray-600); margin-right: 2px; }
+.ex-k.ex-k2 { margin-left: 10px; }
+.ex-chip { font-size: 12px; padding: 3px 10px; border: 1px solid var(--gray-300); background: #fff; border-radius: var(--radius-full); cursor: pointer; color: var(--gray-700); }
+.ex-chip:hover { border-color: var(--brand); }
+.ex-chip.on { background: var(--brand-50); color: var(--brand-dark); border-color: var(--brand); font-weight: 700; }
+.ex-sw { font-size: 12.5px; color: var(--gray-700); display: inline-flex; align-items: center; gap: 4px; cursor: pointer; margin-right: 6px; }
+.ex-n { font-size: 12px; color: var(--gray-500); margin-left: auto; font-weight: 600; }
+.ex-main { display: flex; gap: 12px; align-items: stretch; }
+.ex-listcol { flex: 1; min-width: 0; }
+.ex-table { min-width: 560px; }
+.ex-table tbody tr { cursor: pointer; }
+.ex-tr.on { background: var(--brand-50) !important; box-shadow: inset 3px 0 0 var(--brand); }
+.ex-ty { font-size: 11.5px; color: var(--gray-500); white-space: nowrap; }
+.ex-cht { white-space: nowrap; }
+.ex-cbg { display: inline-block; min-width: 16px; text-align: center; font-size: 10.5px; font-weight: 700; padding: 1px 4px; margin-right: 2px; border-radius: 3px; background: var(--brand-50); color: var(--brand-dark); }
+.ex-keycol { white-space: nowrap; }
+.ex-keycol small { color: var(--gray-400); font-size: 10.5px; margin-right: 2px; }
+/* ── 渠道科普 ── */
+.chwrap { background: var(--surface); box-shadow: var(--shadow-sm); }
+.ch-subnav { display: flex; gap: 4px; padding: 8px 12px 0; border-bottom: 1px solid var(--gray-100); flex-wrap: wrap; }
+.ch-sb { font-size: 13px; font-weight: 600; padding: 8px 12px; border: 0; background: none; cursor: pointer; color: var(--gray-500); border-bottom: 2px solid transparent; }
+.ch-sb:hover { color: var(--gray-800); }
+.ch-sb.on { color: var(--brand-dark); border-bottom-color: var(--brand); }
+.chwrap .listwrap { box-shadow: none; }
+.ch-guide .g-item { border-bottom: 1px solid var(--gray-100); }
+@media (max-width: 720px) { .ex-main { flex-direction: column; } }
+
 .detail-panel { width: 320px; flex-shrink: 0; height: 460px; overflow-y: auto;
   background: var(--surface); border: 1px solid var(--gray-100); border-radius: var(--radius-sm);
   box-shadow: var(--shadow-sm); padding: 14px; }
