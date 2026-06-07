@@ -140,13 +140,16 @@
 - 范围:**仅草表**(③/校额);查学校/地图仍分校区显示(便于家长区分校址/住宿)。
 - 案例:和平街一中(105004)本部01走读 + 北苑莲葩园02住宿 = 一个志愿、两专业。
 
-### 6.2 通勤过滤(gated on 住宿)
-- `commuteOK(c) = form.boarding || !(c.nearest && c.nearest.over_max)`。
-- 未选住宿:③`bandPool`、③`够不上`回填、校额`prefillXed` **均只用 ≤通勤上限** 的校。
-- 选住宿:`effective_max_km=None`(后端),距离放开(远校靠住宿够到)。
+### 6.2 通勤过滤(自动填报层施加,前端 `reachByCommute`)
+正确规则(单一口径):
+`reachByCommute(km, schoolBoarding) = (km ≤ max_km) || (form.boarding && schoolBoarding)`
+- ≤通勤上限 → 可达。
+- 超上限 → **只有"你接受住宿 ∧ 该校确实提供住宿"才可达**;远校不提供住宿 = 没法住校 = 照样每天通勤 → 排除。
+- 用**原始 km**(`c.nearest.km`),不依赖 `over_max`——后端在 `boarding=true` 时 `effective_max_km=None` 会把所有校 `over_max` 清成 false,故 over_max 不可作为住宿模式下的判据。
+- 应用于:③`bandPool`(含够不上回填)、校额`prefillXed`。
 - **下拉永远列全**(`selectable`/校额下拉不过滤,可手动选远校)。
 - **市级统筹不受此约束**(外区性质;`tcReason` 显示 🚌距离作参考)。
-- 后端 `bands` 中"超通勤但有住宿"的远校仍保留(供清单/地图展示);通勤约束由前端在**自动填报**层施加。
+- ⚠️ 历史 bug(已修):曾用 `form.boarding || !over_max`,导致勾住宿时**不提供住宿的远校**(东方德才13.9km/二外23.3km/团结湖12.2km,boarding=False)也混进保底。
 
 ### 6.3 身份资格
 `identity ∈ {jjyj 京籍应届, feijing 非京籍, wangjie 往届/回京}`

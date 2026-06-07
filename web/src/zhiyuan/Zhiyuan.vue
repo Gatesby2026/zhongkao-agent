@@ -575,12 +575,18 @@ function dedupeByCode(cards: Card[]): Card[] {
 }
 // 12 志愿缺省冲稳保配比（均衡）。每档内部按 2025 录取位次升序（够得着的最好校在前）
 const STRAT: Record<string, number> = { 冲: 3, 稳: 5, 保: 4 }
+// 通勤可达：≤通勤上限即可；超上限的学校，只有"你接受住宿 且 该校确实提供住宿"才算可达
+// （远校不提供住宿=没法住校=照样每天通勤，应排除）。用原始 km，不依赖住宿模式下被清零的 over_max。
+function reachByCommute(km: number | null | undefined, schoolBoarding: boolean): boolean {
+  if (km == null) return true
+  const maxKm = Number(form.max_km) || Infinity
+  if (km <= maxKm) return true
+  return !!(form.boarding && schoolBoarding)
+}
 function bandPool(band: string): Card[] {
   const res = result.value
   if (!res) return []
-  // 未选住宿时：自动填报严格只用 ≤通勤上限 的学校（超通勤即便有住宿也不进推荐）；选了住宿则放开
-  const commuteOK = (c: Card) => form.boarding || !(c.nearest && c.nearest.over_max)
-  return dedupeByCode((res.bands[band] || []).filter(c => c.school_code && commuteOK(c)))
+  return dedupeByCode((res.bands[band] || []).filter(c => c.school_code && reachByCommute(c.nearest?.km, !!c.boarding)))
     .slice().sort((a, b) => (Number(a.ref_rank) || 9e9) - (Number(b.ref_rank) || 9e9))
 }
 function isReachableCard(c: Card): boolean {
@@ -953,7 +959,7 @@ const xedRecommend = computed(() => {
       else if (ref >= rank * 1.1) tag = 'waste'    // 统招位次比孩子靠后→统招本可达→校额占用意义小
       else tag = 'similar'
     }
-    return { ...e, full, ref, tag, over_max: !!(card && card.over_max) }
+    return { ...e, full, ref, tag, km: card?.nearest?.km ?? null, boarding: !!(card && card.boarding) }
   }).sort((a, b) => (a.ref ?? 9e9) - (b.ref ?? 9e9))
 })
 const XED_TAG: Record<string, { label: string; cls: string }> = {
@@ -1089,8 +1095,8 @@ function copyAll() {
 // 校额到校：按推荐(值得冲→相当，排除浪费，最好的在前)缺省填入志愿
 function prefillXed() {
   // ②指标分配在统招前·录取即锁定：只填"统招够不上"的 upgrade（✅值得冲），不填≈相当/统招本可达（避免锁进同级或更低校）
-  // 未选住宿时同样排除超通勤的（下拉仍可手动选）
-  const rec = xedRecommend.value.filter(e => e.tag === 'worth' && (form.boarding || !e.over_max))
+  // 通勤同口径：超上限的只有"接受住宿且该校提供住宿"才进自动填（下拉仍可手动选）
+  const rec = xedRecommend.value.filter(e => e.tag === 'worth' && reachByCommute(e.km, e.boarding))
   draftXed.value = Array.from({ length: 8 }, (_, i) =>
     rec[i] ? { school: rec[i].school, majors: '' } : { school: null, majors: '' })
 }
