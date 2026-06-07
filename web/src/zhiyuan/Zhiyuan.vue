@@ -568,6 +568,8 @@ function tcJudge(s: any): { label: string; cls: string; d: number | null; line: 
   return { ...band, d, line, ref: isRef }
 }
 
+const newSchools = computed<any[]>(() => (result.value as any)?.new_schools?.schools || [])
+
 const privAll = computed<PrivSchool[]>(() => result.value?.private_schools?.schools || [])
 const minbanList = computed<PrivSchool[]>(() => privAll.value.filter(s => s.in_minban_list))
 const intlList = computed<PrivSchool[]>(() => privAll.value.filter(s => s.in_intl_list))
@@ -1026,6 +1028,31 @@ const tcOptions: string[] = []
           </table>
         </div>
         <p class="list-tip">⚠️ 标「待核 / 概址 / ⚠️」的地址来自非权威或迁址提示，报到校区请以招生简章与学校电话确认。</p>
+
+        <!-- 2026 新增公办普高（无历史线） -->
+        <template v-if="newSchools.length">
+          <h4 class="batch-sub">🆕 2026 新增公办普高（{{ newSchools.length }} 所·无历史线，仅供了解）</h4>
+          <p class="list-note">这些是 2026 新取得招生资格的新校 / 新高中，<b>无往年录取线、不做冲/稳/保研判</b>。
+            招生计划官方约 <b>6 月</b>发布（网传数未采）。判断主要看 <b>办学体系 + 可类比的母体/同体系校</b>，并参加学校招生说明会。</p>
+          <div class="table-scroll">
+            <table class="list-table">
+              <thead><tr><th>学校</th><th>办学体系</th><th>可类比参考</th><th>方向</th><th>通勤</th><th>住宿</th><th>地址</th></tr></thead>
+              <tbody>
+                <tr v-for="s in newSchools" :key="s.name">
+                  <td class="t-name">{{ cleanName(s.name) }} <span class="addr-tag warn">新校</span></td>
+                  <td class="t-curr">{{ s.system }}</td>
+                  <td class="t-curr"><span v-if="s.analog && s.analog.length">{{ s.analog.join('、') }}</span><span v-else class="t-no">待核</span></td>
+                  <td>{{ s.direction }}</td>
+                  <td class="t-dist">{{ s.dist ? s.dist.km + 'km' : '—' }}</td>
+                  <td><span v-if="s.boarding === true" class="t-yes">🛏</span><span v-else-if="s.boarding === false" class="t-no">—</span><span v-else class="addr-tag">待核</span></td>
+                  <td class="t-addr">{{ s.address }}<span v-if="!s.lat" class="addr-tag">概址</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="list-tip">来源：北京市教委 2026-05-16《具有招生资格的高级中等学校名单》（朝阳 #28/29/30/48）。
+            <b>各校 2026 招生计划/班数官方未发布</b>；报考前以 6 月官方简章 + 学校招生说明会为准。新校首届有磨合风险、出口（高考）3 年后才有。</p>
+        </template>
       </div>
 
       <!-- TAB 3/4：民办普高 / 国际学校 清单（共用表格，按 Tab 过滤）-->

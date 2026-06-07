@@ -191,6 +191,47 @@ def tongchou_with_dist(district, home, district_cn, mode, mode_label, max_km):
     return data
 
 
+_NEW2026_CACHE: dict = {}
+
+
+def load_new2026(district: str):
+    """2026 新增公办普高（无历史线）。文件 <district>_new2026.yaml；无则 None。"""
+    if district in _NEW2026_CACHE:
+        return _NEW2026_CACHE[district]
+    path = ADMISSION_DIR / f"{district}_new2026.yaml"
+    data = None
+    if path.exists():
+        with open(path, encoding="utf-8") as f:
+            data = yaml.safe_load(f)
+    _NEW2026_CACHE[district] = data
+    return data
+
+
+def build_new_schools(district, home, district_cn, mode, mode_label, max_km):
+    """2026 新增普高清单（无历史线、不做研判，只给体系/类比/选址等代理参考 + 到家通勤）。"""
+    data = load_new2026(district)
+    if not data:
+        return None
+    schools = data.get("schools", [])
+    dist_map = {}
+    if home:
+        pseudo = [{"name": s["name"], "campuses": [{"name": "", "lat": s["lat"], "lon": s["lon"]}]}
+                  for s in schools if s.get("lat") and s.get("lon")]
+        _, dist_map = dist_mod.compute_distances(pseudo, home, district_cn, mode)
+    out = []
+    for s in schools:
+        rows = dist_map.get(s["name"], [])
+        rd = rows[0][2] if rows else None
+        km = round(rd[0] / 1000, 1) if rd else None
+        item = dict(s)
+        item["dist"] = ({"km": km, "mins": round(rd[1] / 60), "label": mode_label,
+                         "over_max": bool(max_km is not None and km is not None and km > max_km)}
+                        if km is not None else None)
+        out.append(item)
+    meta = {k: data.get(k) for k in ("data_warning", "source_T1", "collected", "category")}
+    return {"meta": meta, "schools": out}
+
+
 _GUANTONG_CACHE: list = [None, False]
 
 
@@ -631,6 +672,7 @@ def build_result(rank, home=None, mode="driving", max_km=None, interests=None,
                                             mode_label, max_km, boarding),
         "guantong": load_guantong(),
         "tongchou": tongchou_with_dist(district, home, district_name, mode, mode_label, max_km),
+        "new_schools": build_new_schools(district, home, district_name, mode, mode_label, max_km),
         "xeddx": load_xeddx(district),
         "points": build_public_points(buckets, dist_campus, mode_label, effective_max_km,
                                       interests, boarding_names),
