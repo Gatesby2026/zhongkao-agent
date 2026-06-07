@@ -1190,19 +1190,19 @@ const tcOptions: string[] = []
           </select>
         </label>
         <label class="f-km">通勤上限<small>km</small>
-          <input type="number" v-model="form.max_km" min="1" placeholder="8" :disabled="form.boarding" />
+          <input type="number" v-model="form.max_km" min="1" placeholder="8" />
         </label>
         <label class="f-board switch">接受住宿
           <span class="sw-line">
             <input type="checkbox" v-model="form.boarding" />
-            <span class="sw-hint">开启后不限距离</span>
+            <span class="sw-hint">远校可住校(通勤上限仍生效)</span>
           </span>
         </label>
         <button class="go" :disabled="loading" @click="submit">
           {{ loading ? '匹配中…' : '生成志愿建议' }}
         </button>
       </div>
-      <p v-if="form.boarding" class="board-note">🛏 已开启住宿：距离不再参与筛选，范围放开到全朝阳（距离仍展示作参考）。</p>
+      <p v-if="form.boarding" class="board-note">🛏 已开启住宿：≤通勤上限的就近走读 + 超上限但<b>提供住宿</b>的远校都纳入推荐；调"通勤上限"仍然生效。</p>
       <p v-if="errMsg" class="err">{{ errMsg }}</p>
     </section>
 
