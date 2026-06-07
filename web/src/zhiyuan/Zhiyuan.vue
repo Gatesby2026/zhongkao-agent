@@ -1785,8 +1785,8 @@ const tcOptions: string[] = []
 .tab-more.on { color: var(--brand-dark); }
 .more-caret { font-size: 10px; margin-left: 2px; }
 /* 二级菜单浮层：就地下拉，锚在"查学校"按钮一侧，不再跳到最左 */
-.tabbar { position: relative; }
-.more-menu { position: absolute; top: 100%; right: 4px; z-index: 50;
+.tabbar { position: relative; z-index: 1000; }
+.more-menu { position: absolute; top: 100%; right: 4px; z-index: 2000;
   min-width: 260px; max-width: min(94vw, 420px);
   background: var(--surface); border: 1px solid var(--gray-200); border-radius: var(--radius-sm);
   margin-top: 2px; padding: 10px 12px; box-shadow: 0 6px 18px rgba(0,0,0,.14); }
