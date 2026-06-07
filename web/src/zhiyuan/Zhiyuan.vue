@@ -1315,7 +1315,13 @@ const tcOptions: string[] = []
                 <div v-if="selSchool.features.gaokao" class="dp-line dp-muted">🎓 高考(民间·非官方)：{{ selSchool.features.gaokao }}</div>
                 <div v-if="selSchool.geo.address" class="dp-line dp-muted">📍 {{ selSchool.geo.address }}<span v-if="selSchool.geo.confidence === 'low' || !selSchool.geo.lat" class="addr-tag">待核</span></div>
               </template>
-              <div v-else class="dp-line dp-muted">{{ cleanName(selectedPoint.name) }}（暂无结构化信息）</div>
+              <div v-else class="dp-fallback">
+                <div class="dp-head"><h3>{{ cleanName(selectedPoint.name) }}</h3></div>
+                <div class="dp-sub">{{ selectedPoint.level || '民办 / 国际' }}</div>
+                <p v-if="selectedPoint.reason" class="dp-line dp-muted">{{ selectedPoint.reason }}</p>
+                <div v-if="selectedPoint.dist && selectedPoint.dist !== '距离未知' && selectedPoint.dist !== '—'" class="dp-line dp-muted">🚌 {{ selectedPoint.dist }}</div>
+                <p class="dp-tip">📋 该校暂未收录结构化详情（学费 / 课程 / 方向 / 地址等）；已收录的民办 / 国际校见「🔎 查学校」筛民办 / 国际。</p>
+              </div>
             </template>
             <div v-else class="dp-empty">
               <div class="dp-empty-ic">🏫</div>
@@ -1441,7 +1447,13 @@ const tcOptions: string[] = []
                 <div v-if="selSchool.features.gaokao" class="dp-line dp-muted">🎓 高考(民间·非官方)：{{ selSchool.features.gaokao }}</div>
                 <div v-if="selSchool.geo.address" class="dp-line dp-muted">📍 {{ selSchool.geo.address }}<span v-if="selSchool.geo.confidence === 'low' || !selSchool.geo.lat" class="addr-tag">待核</span></div>
               </template>
-              <div v-else class="dp-line dp-muted">{{ cleanName(selectedPoint.name) }}（暂无结构化信息）</div>
+              <div v-else class="dp-fallback">
+                <div class="dp-head"><h3>{{ cleanName(selectedPoint.name) }}</h3></div>
+                <div class="dp-sub">{{ selectedPoint.level || '民办 / 国际' }}</div>
+                <p v-if="selectedPoint.reason" class="dp-line dp-muted">{{ selectedPoint.reason }}</p>
+                <div v-if="selectedPoint.dist && selectedPoint.dist !== '距离未知' && selectedPoint.dist !== '—'" class="dp-line dp-muted">🚌 {{ selectedPoint.dist }}</div>
+                <p class="dp-tip">📋 该校暂未收录结构化详情（学费 / 课程 / 方向 / 地址等）；已收录的民办 / 国际校见「🔎 查学校」筛民办 / 国际。</p>
+              </div>
             </template>
             <div v-else class="dp-empty">
               <div class="dp-empty-ic">🏫</div>
