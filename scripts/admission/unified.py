@@ -71,10 +71,13 @@ def build_unified(result: dict) -> list:
             if host and t.get("district") == "朝阳":      # 本区校：并入公办记录
                 host["channels"].append(ch)
             else:                                          # 外区/郊区校：独立记录
-                s = _school(t["name"], "市级统筹", t.get("district"), t.get("lat"), t.get("lon"),
+                # 同一校名多校区(如人大附本部+通州校区、清华附本部+将台路校区)须带校区区分，否则 name/id 撞键
+                campus = t.get("campus")
+                disp = t["name"] + (f"·{campus}" if campus else "")
+                s = _school(disp, "市级统筹", t.get("district"), t.get("lat"), t.get("lon"),
                             t.get("address"), None, t.get("boarding"), t.get("level"),
                             t.get("style"), t.get("tags"), t.get("gaokao"), t.get("dist"))
-                s["extra"] = {"campus": t.get("campus"), "quota_chaoyang": t.get("quota_chaoyang")}
+                s["extra"] = {"campus": campus, "quota_chaoyang": t.get("quota_chaoyang")}
                 s["channels"].append(ch)
                 out.append(s)
 
