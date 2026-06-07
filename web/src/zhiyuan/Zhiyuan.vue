@@ -537,19 +537,38 @@ function majorsOf(name: string | null): Major[] {
   if (!name) return []
   return findCard(name)?.majors || []
 }
-function resetDraft() {
-  const rep = reportable.value
-  const slots: Slot[] = []
-  for (let i = 0; i < ZHIYUAN_SLOTS; i++) {
-    const c = rep[i]
-    if (c) {
-      const codes = (c.majors || []).slice(0, 2).map(m => m.major_code)
-      slots.push({ name: c.name, picks: codes })
-    } else {
-      slots.push({ name: null, picks: [] })
-    }
+// 12 志愿缺省冲稳保配比（均衡）。每档内部按 2025 录取位次升序（够得着的最好校在前）
+const STRAT: Record<string, number> = { 冲: 3, 稳: 5, 保: 4 }
+function bandPool(band: string): Card[] {
+  const res = result.value
+  if (!res) return []
+  return (res.bands[band] || []).filter(c => c.school_code)
+    .slice().sort((a, b) => (Number(a.ref_rank) || 9e9) - (Number(b.ref_rank) || 9e9))
+}
+// 生成 3冲/5稳/4保 顺序志愿；某档不足则按 稳→保→冲 补足到 12，并始终把保底排在末尾
+function buildUniPlan(): Card[] {
+  const chong = bandPool('冲'), wen = bandPool('稳'), bao = bandPool('保')
+  let nc = Math.min(STRAT['冲'], chong.length)
+  let nw = Math.min(STRAT['稳'], wen.length)
+  let nb = Math.min(STRAT['保'], bao.length)
+  let total = nc + nw + nb
+  while (total < ZHIYUAN_SLOTS) {
+    if (nw < wen.length) nw++
+    else if (nb < bao.length) nb++
+    else if (nc < chong.length) nc++
+    else break
+    total++
   }
-  draft.value = slots
+  return [...chong.slice(0, nc), ...wen.slice(0, nw), ...bao.slice(0, nb)].slice(0, ZHIYUAN_SLOTS)
+}
+function resetDraft() {
+  const plan = buildUniPlan()
+  draft.value = Array.from({ length: ZHIYUAN_SLOTS }, (_, i) => {
+    const c = plan[i]
+    return c
+      ? { name: c.name, picks: (c.majors || []).slice(0, 2).map(m => m.major_code) }
+      : { name: null, picks: [] }
+  })
 }
 function onSlotSchool(i: number) {
   // 切换学校后，默认勾选前 2 个专业
@@ -564,6 +583,58 @@ function togglePick(i: number, code: string) {
 }
 function clearSlot(i: number) { draft.value[i] = { name: null, picks: [] } }
 const filledSlots = computed(() => draft.value.filter(s => s.name).length)
+
+// 单个志愿的"理由"——全部来自真实字段，缺数据则省略，绝不编造
+function slotReason(name: string | null): { band: string; cls: string; headline: string; factors: string[]; risk: string } | null {
+  if (!name) return null
+  const c = findCard(name)
+  if (!c) return null
+  const band = bandOf(name)
+  const rank = Number(form.rank) || 0
+  const ref = typeof c.ref_rank === 'number' ? c.ref_rank : null
+  const est = estScore.value
+  const sl = (c.score_lines || []).find(x => x.year === 2025) || (c.score_lines || []).slice(-1)[0]
+  const lineScore = sl && sl.score != null ? sl.score : null
+  const aheadPos = (ref != null && rank) ? ref - rank : null              // >0 你领先；<0 你落后
+  const scoreDiff = (lineScore != null && est != null) ? Math.round(est - lineScore) : null  // >0 高出；<0 差
+  const refTxt = ref != null ? '≈' + ref : '待核'
+  const factors: string[] = []
+  if (c.nearest) factors.push('🚌' + c.nearest.km + 'km' + (c.nearest.over_max ? '·超上限' : ''))
+  if (c.boarding) factors.push('🛏可住宿')
+  if (c.style) factors.push('🏫' + c.style.slice(0, 14))
+  if (c.gaokao) factors.push('🎓高考(民间)')
+  let risk = ''
+  if (typeof c.volatility === 'number' && c.volatility >= 0.25) risk = '近年录取线波动较大、线不稳，谨慎'
+  const cls = ({ 冲: 'band-冲', 稳: 'band-稳', 保: 'band-保', 够不上: 'band-够不上' } as Record<string, string>)[band] || 'band-稳'
+  let headline = ''
+  if (band === '冲')
+    headline = `冲一冲——该校 2025 录取位次${refTxt}，你估区排≈${rank}`
+      + (aheadPos != null ? `，落后约 ${Math.abs(aheadPos)} 位` : '')
+      + (scoreDiff != null && scoreDiff < 0 ? `、约差 ${-scoreDiff} 分` : '') + '，够一够有机会'
+  else if (band === '稳')
+    headline = `稳——录取位次${refTxt}与你接近`
+      + (aheadPos != null ? `（你${aheadPos >= 0 ? '领先' : '落后'}约 ${Math.abs(aheadPos)} 位）` : '')
+      + '，大概率录取，主力志愿'
+  else if (band === '保')
+    headline = `保底——录取线明显低于你`
+      + (aheadPos != null ? `（领先约 ${aheadPos} 位` : '（')
+      + (scoreDiff != null && scoreDiff > 0 ? `、约高 ${scoreDiff} 分` : '') + '），基本稳妥'
+  else
+    headline = '线高于你较多，作手动冲刺 / 了解用'
+  return { band, cls, headline, factors, risk }
+}
+// 草表 ③ 顶部策略总览
+const uniSummary = computed(() => {
+  const cnt: Record<string, number> = { 冲: 0, 稳: 0, 保: 0 }
+  let lastName = ''
+  for (const s of draft.value) {
+    if (!s.name) continue
+    const b = bandOf(s.name)
+    if (cnt[b] != null) cnt[b]++
+    lastName = s.name
+  }
+  return { cnt, lastName, filled: draft.value.filter(s => s.name).length }
+})
 
 /* ---------------- 民办 / 国际清单 ---------------- */
 // 市级统筹官方清单（据 2025 简章逐格核 + 合计对账）
@@ -846,12 +917,16 @@ function copyAll() {
   })
   draftTongchou.value.forEach((s, i) => { if (s.text.trim()) L.push(`  统筹${i + 1}　${s.text.trim()}`) })
   L.push('', `【批次③ 统一招生】(2026含贯通) 共${ZHIYUAN_SLOTS}志愿×2专业`)
+  const su = uniSummary.value
+  L.push(`  （策略：${su.cnt['冲']}冲 / ${su.cnt['稳']}稳 / ${su.cnt['保']}保${su.lastName ? '；末位保底=' + cleanName(su.lastName) : ''}）`)
   draft.value.forEach((s, i) => {
     if (!s.name) { L.push(`  志愿${i + 1}　（空）`); return }
     const c = findCard(s.name)
     const ms = majorsOf(s.name).filter(m => s.picks.includes(m.major_code))
     const mtxt = ms.map(m => `${m.major_code} ${cleanName(m.major_name)}`).join('　')
+    const r = slotReason(s.name)
     L.push(`  志愿${i + 1}　${cleanName(s.name)}(${c?.school_code || ''})　${mtxt}`)
+    if (r) L.push(`        理由：${r.headline}${r.factors.length ? '　' + r.factors.join(' ') : ''}${r.risk ? '　⚠️' + r.risk : ''}`)
   })
   navigator.clipboard?.writeText(L.join('\n')).then(
     () => { copyHint.value = '已复制全部三批次到剪贴板'; setTimeout(() => copyHint.value = '', 2500) },
@@ -1355,34 +1430,52 @@ const tcOptions: string[] = []
         <section class="batch">
           <button class="batch-h" type="button" @click="batchOpen.uni = !batchOpen.uni">
             <span class="bc">{{ batchOpen.uni ? '▾' : '▸' }}</span>③ 统一招生
-            <small>2026 含贯通；{{ ZHIYUAN_SLOTS }} 志愿 ×2 专业，已按冲→稳→保预填 {{ filledSlots }}/{{ ZHIYUAN_SLOTS }}</small>
+            <small>2026 含贯通；{{ ZHIYUAN_SLOTS }} 志愿 ×2 专业，已按 3冲/5稳/4保 梯度预填 {{ filledSlots }}/{{ ZHIYUAN_SLOTS }}</small>
           </button>
           <template v-if="batchOpen.uni && canPuhao">
-            <div class="draft-actions"><button class="ghost" @click="resetDraft">重置为推荐顺序</button></div>
+            <div class="uni-summary">
+              <div class="us-line">
+                <b>已为你预填 {{ uniSummary.filled }} 个统招志愿</b>：
+                <span class="us-b band-冲">{{ uniSummary.cnt['冲'] }} 冲</span>
+                <span class="us-b band-稳">{{ uniSummary.cnt['稳'] }} 稳</span>
+                <span class="us-b band-保">{{ uniSummary.cnt['保'] }} 保</span>
+                <span v-if="uniSummary.lastName" class="us-bottom">末位保底＝<b>{{ cleanName(uniSummary.lastName) }}</b></span>
+              </div>
+              <p class="us-tip">按总分从高到低、依志愿录取：<b>冲档排前面（够一够），稳档主力，末尾保底托底</b>。可上下移 / 插入 / 删除自由调整；每条下方为<b>填报理由</b>（随你改校实时更新）。</p>
+            </div>
+            <div class="draft-actions"><button class="ghost" @click="resetDraft">↻ 重置为推荐梯度</button></div>
             <div class="uni-list">
-              <div v-for="(s, i) in draft" :key="i" class="urow" :class="{ filled: s.name }">
-                <span class="slot-no" :class="{ on: s.name }">{{ i + 1 }}</span>
-                <select v-model="s.name" @change="onSlotSchool(i)" class="school-sel uni-sel">
-                  <option :value="null">＋ 选择学校（空）</option>
-                  <option v-for="c in selectable" :key="c.name" :value="c.name">
-                    [{{ bandOf(c.name) }}] {{ cleanName(c.name) }}（{{ c.school_code }}）
-                  </option>
-                </select>
-                <div v-if="s.name" class="uni-majors">
-                  <button v-for="m in majorsOf(s.name)" :key="m.major_code" type="button"
-                    class="mchip" :class="{ on: s.picks.includes(m.major_code) }"
-                    @click="togglePick(i, m.major_code)">
-                    <b>{{ m.major_code }}</b> {{ cleanName(m.major_name) }}
-                  </button>
-                  <span v-if="!majorsOf(s.name).length" class="nomajor">该校暂无官方专业代码数据</span>
+              <div v-for="(s, i) in draft" :key="i" class="uslot" :class="{ filled: s.name }">
+                <div class="urow">
+                  <span class="slot-no" :class="{ on: s.name }">{{ i + 1 }}</span>
+                  <select v-model="s.name" @change="onSlotSchool(i)" class="school-sel uni-sel">
+                    <option :value="null">＋ 选择学校（空）</option>
+                    <option v-for="c in selectable" :key="c.name" :value="c.name">
+                      [{{ bandOf(c.name) }}] {{ cleanName(c.name) }}（{{ c.school_code }}）
+                    </option>
+                  </select>
+                  <div v-if="s.name" class="uni-majors">
+                    <button v-for="m in majorsOf(s.name)" :key="m.major_code" type="button"
+                      class="mchip" :class="{ on: s.picks.includes(m.major_code) }"
+                      @click="togglePick(i, m.major_code)">
+                      <b>{{ m.major_code }}</b> {{ cleanName(m.major_name) }}
+                    </button>
+                    <span v-if="!majorsOf(s.name).length" class="nomajor">该校暂无官方专业代码数据</span>
+                  </div>
+                  <span v-else class="uni-empty">未选</span>
+                  <span class="urow-ops">
+                    <button class="op" title="上移" :disabled="i === 0" @click="moveUni(i, -1)">↑</button>
+                    <button class="op" title="下移" :disabled="i === draft.length - 1" @click="moveUni(i, 1)">↓</button>
+                    <button class="op" title="在此上方插入一个空志愿（其余顺延）" @click="insertUniAbove(i)">插入</button>
+                    <button class="op x-op" title="删除整行" @click="deleteUni(i)">✕</button>
+                  </span>
                 </div>
-                <span v-else class="uni-empty">未选</span>
-                <span class="urow-ops">
-                  <button class="op" title="上移" :disabled="i === 0" @click="moveUni(i, -1)">↑</button>
-                  <button class="op" title="下移" :disabled="i === draft.length - 1" @click="moveUni(i, 1)">↓</button>
-                  <button class="op" title="在此上方插入一个空志愿（其余顺延）" @click="insertUniAbove(i)">插入</button>
-                  <button class="op x-op" title="删除整行" @click="deleteUni(i)">✕</button>
-                </span>
+                <div v-if="s.name && slotReason(s.name)" class="ureason">
+                  <span class="ur-band" :class="slotReason(s.name)!.cls">{{ slotReason(s.name)!.band }}</span>
+                  <span class="ur-head">{{ slotReason(s.name)!.headline }}</span>
+                  <span v-for="(f, fi) in slotReason(s.name)!.factors" :key="fi" class="ur-f">{{ f }}</span>
+                  <span v-if="slotReason(s.name)!.risk" class="ur-risk">⚠️ {{ slotReason(s.name)!.risk }}</span>
+                </div>
               </div>
             </div>
             <div v-if="canGuantong && gtBlock" class="gt-ref">
@@ -1839,6 +1932,21 @@ const tcOptions: string[] = []
 .src { font-size: 11px; color: var(--gray-400); margin-top: 14px; }
 /* 统招：学校+专业同一行，去空白 */
 .uni-list { display: flex; flex-direction: column; gap: 6px; }
+
+/* ── 统招③ 策略总览 + 志愿理由 ── */
+.uni-summary { background: var(--brand-50); border: 1px solid var(--brand); border-radius: var(--radius-sm); padding: 10px 12px; margin: 4px 0 12px; }
+.us-line { font-size: 13px; color: var(--gray-800); display: flex; align-items: center; flex-wrap: wrap; gap: 6px; }
+.us-b { display: inline-block; font-size: 12px; font-weight: 700; padding: 1px 8px; border-radius: var(--radius-full); }
+.us-bottom { font-size: 12.5px; color: var(--gray-700); margin-left: 4px; }
+.us-tip { font-size: 12px; color: var(--gray-600); line-height: 1.6; margin: 6px 0 0; }
+.uslot { border: 1px solid var(--gray-100); border-radius: var(--radius-sm); background: var(--gray-50); overflow: hidden; }
+.uslot.filled { background: var(--surface); border-color: var(--brand-50); }
+.uslot .urow { border: 0; background: none; }
+.ureason { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; padding: 6px 10px 8px 40px; font-size: 12px; color: var(--gray-700); line-height: 1.5; }
+.ur-band { flex: 0 0 auto; font-size: 11px; font-weight: 700; padding: 1px 7px; border-radius: var(--radius-full); }
+.ur-head { color: var(--gray-700); }
+.ur-f { font-size: 11px; color: var(--gray-600); background: var(--gray-100); border-radius: var(--radius-xs); padding: 1px 6px; }
+.ur-risk { font-size: 11px; color: #b45309; background: var(--warning-bg); border-radius: var(--radius-xs); padding: 1px 6px; }
 .urow { display: flex; align-items: center; gap: 8px; padding: 6px 10px; min-width: 0;
   border: 1px solid var(--gray-100); border-radius: var(--radius-xs); background: var(--gray-50); }
 .urow.filled { background: var(--surface); border-color: var(--brand-50); }
