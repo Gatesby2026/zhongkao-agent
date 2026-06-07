@@ -576,22 +576,82 @@ const tcEr = computed<any[]>(() => (tongchou.value?.tongchou_er || [])
   .filter((x: any) => x.faces_chaoyang).sort((a: any, b: any) => (b.quota_chaoyang || 0) - (a.quota_chaoyang || 0)))
 // 你孩子区排→估中考分（后端按本区一分一段插值）
 const estScore = computed<number | null>(() => result.value ? (result.value as any).est_score : null)
-// 统筹校研判：估分 vs 该校统招线。因统筹实际线通常比统招线低（最多约20-30分），
-// 故可够范围按"统招线下"放宽：稳/冲/搏(有机会)/够不上。
-// 线优先用 2025 双源确认(score_2025_tongzhao)，缺则退用历年参考(score_ref，标"历年线")。
+// 分数→档位（估分 vs 某条统招线）。统筹实际线通常比统招线低(约20-30)，故"可够"放宽到线下20。
+// 稳 Δ≥+10 / 冲 −10~+10 / 搏 −20~−10 / 够不上 <−20 / 线待核(无线)。统筹/校额共用。
+function scoreBand(line: number | null): { label: string; cls: string; d: number | null } {
+  if (line == null || estScore.value == null) return { label: '线待核', cls: 'tj-unk', d: null }
+  const d = Math.round(estScore.value - line)
+  if (d >= 10) return { label: '稳', cls: 'tj-wen', d }
+  if (d >= -10) return { label: '冲', cls: 'tj-chong', d }
+  if (d >= -20) return { label: '搏', cls: 'tj-bo', d }
+  return { label: '够不上', cls: 'tj-no', d }
+}
 function tcJudge(s: any): { label: string; cls: string; d: number | null; line: number | null; ref: boolean } {
   const conf = typeof s.score_2025_tongzhao === 'number' ? s.score_2025_tongzhao : null
   const ref = typeof s.score_ref === 'number' ? s.score_ref : null
   const line = conf ?? ref
   const isRef = conf == null && ref != null
   if (line == null || estScore.value == null) return { label: '线待核', cls: 'tj-unk', d: null, line: null, ref: false }
-  const d = Math.round(estScore.value - line)
-  const band = d >= 10 ? { label: '稳', cls: 'tj-wen' }
-    : d >= -10 ? { label: '冲', cls: 'tj-chong' }
-    : d >= -20 ? { label: '搏', cls: 'tj-bo' }     // 统招线下10~20：靠统筹降分,有机会但长线(范围已收窄)
-    : { label: '够不上', cls: 'tj-no' }
+  const band = scoreBand(line)
+  const d = band.d
   return { ...band, d, line, ref: isRef }
 }
+
+// ───── 统一详情面板（§12）：把 schools_unified 记录声明式渲染 ─────
+const uByName = computed<Record<string, any>>(() => {
+  const m: Record<string, any> = {}
+  for (const s of ((result.value as any)?.schools_unified || [])) m[s.name] = s
+  return m
+})
+// 选中校的统一记录；公办校再按选定初中补"校额到校"渠道（依赖前端 xedQuery）
+const selSchool = computed<any>(() => {
+  const p = selectedPoint.value
+  if (!p) return null
+  const base = uByName.value[p.name]
+  if (!base) return null
+  const s = { ...base, channels: [...(base.channels || [])] }
+  const q = xedQuotaByName.value[p.name]
+  if (q && s.type === '公办普高') {
+    s.channels.push({ channel: '校额到校', metric: { kind: 'in_school_rank' }, quota: q,
+      _xedtag: (xedJudgeByName.value[p.name] || {}).tag || 'unknown' })
+  }
+  return s
+})
+const PUB_BAND_CLS: Record<string, string> = { 冲: 'tj-chong', 稳: 'tj-wen', 保: 'tj-wen', 够不上: 'tj-no' }
+// 单渠道 → 展示对象
+function chDisp(ch: any): { name: string; band: string; cls: string; detail: string; caveat?: string } {
+  const k = ch.metric?.kind
+  if (k === 'district_rank') return {
+    name: '统招', band: ch.band || '—', cls: PUB_BAND_CLS[ch.band] || 'tj-unk',
+    detail: ch.metric.refRank != null ? `录取位次≈${ch.metric.refRank}` : '', caveat: ch.caveat }
+  if (k === 'city_score') {
+    const b = scoreBand(ch.metric.refLine ?? null)
+    return { name: '市级统筹' + (ch.tier ? '·' + ch.tier : ''), band: b.label, cls: b.cls,
+      detail: (b.d != null ? `统招线${ch.metric.refLine}·Δ${b.d > 0 ? '+' : ''}${b.d}` : '统招线待核')
+        + (ch.quota ? ` · 投朝阳${ch.quota}名` : ''), caveat: ch.caveat }
+  }
+  if (k === 'in_school_rank') {
+    const tag = ch._xedtag || 'unknown'
+    return { name: '校额到校', band: (XED_TAG[tag] || {}).label || '—', cls: 'rt-' + tag,
+      detail: (ch.quota ? `本校名额${ch.quota} · ` : '') + '校内竞争', caveat: '按本初中校内排名+志愿录取' }
+  }
+  if (k === 'threshold') return {
+    name: ch.channel, band: '门槛', cls: 'tj-unk',
+    detail: ch.metric.refLine ? `≥${ch.metric.refLine}分` : '按分填报', caveat: ch.caveat }
+  if (k === 'route_choice') return {
+    name: '自主', band: '路线选择', cls: 'tj-unk', detail: '无统一录取线', caveat: ch.caveat }
+  return { name: ch.channel || '研判', band: ch.band || '待核', cls: 'tj-unk', detail: '', caveat: ch.caveat }
+}
+const channelViews = computed(() => (selSchool.value?.channels || []).map(chDisp))
+const schoolLines = computed<any[]>(() => {
+  for (const ch of (selSchool.value?.channels || [])) if (ch.lines && ch.lines.length) return ch.lines
+  return []
+})
+const caveats = computed<string[]>(() => {
+  const set = new Set<string>()
+  channelViews.value.forEach((v: any) => { if (v.caveat) set.add(v.caveat) })
+  return [...set]
+})
 
 const newSchools = computed<any[]>(() => (result.value as any)?.new_schools?.schools || [])
 
@@ -919,121 +979,67 @@ const tcOptions: string[] = []
           <!-- 右侧：选中学校详情面板（替代地图气泡） -->
           <aside class="detail-panel">
             <template v-if="selectedPoint">
-              <div class="dp-head">
-                <span class="dp-band" :style="{ background: selectedPoint.color }">{{ selectedPoint.band }}</span>
-                <h3>{{ cleanName(selectedPoint.name) }}</h3>
-              </div>
-              <div class="dp-sub">
-                {{ selectedPoint.level }}
-                <span v-if="selCard?.school_code" class="dp-code">招生码 {{ selCard.school_code }}</span>
-              </div>
-              <div class="dp-badges">
-                <span v-if="selCard?.boarding" class="bdg b-board">🛏 有住宿</span>
-                <span v-if="selCard?.coop" class="bdg b-coop">🌐 中外合作班</span>
-                <span v-if="selectedPoint.matched && selectedPoint.matched.length" class="bdg b-match">🎯{{ selectedPoint.matched.join('·') }}</span>
-              </div>
-
-              <dl class="dp-kv">
-                <div v-if="selectedPoint.rank !== '—'">
-                  <dt>录取参考位次</dt>
-                  <dd>≈ {{ selectedPoint.rank }} 名<span class="dp-mg">margin {{ selectedPoint.margin }}</span>
-                    <span v-if="selCard && selCard.volatility >= 0.4" class="dp-vol">⚠️波动大</span></dd>
+              <template v-if="selSchool">
+                <div class="dp-head">
+                  <span class="dp-type">{{ selSchool.type }}</span>
+                  <h3>{{ cleanName(selSchool.name) }}</h3>
                 </div>
-                <div v-if="selectedPoint.dist && selectedPoint.dist !== '距离未知'">
-                  <dt>通勤</dt>
-                  <dd>{{ selectedPoint.dist }}
-                    <span v-if="selCard?.nearest?.over_max" class="dp-vol">⚠️超通勤上限</span></dd>
+                <div class="dp-sub">
+                  {{ selSchool.level || '' }}
+                  <span v-if="selSchool.extra.coop" class="bdg b-coop">🌐中外合作班</span>
                 </div>
-                <div v-if="xedQuotaByName[selectedPoint.name]">
-                  <dt>🎯 校额到校（{{ cleanName(xedSel?.name || '') }}）</dt>
-                  <dd>分到本校 <b>{{ xedQuotaByName[selectedPoint.name] }}</b> 个名额
-                    <span v-if="xedJudgeByName[selectedPoint.name]" class="tj" :class="'rt-' + xedJudgeByName[selectedPoint.name].tag">{{ XED_TAG[xedJudgeByName[selectedPoint.name].tag].label }}</span>
-                    <span class="dp-muted">（校内竞争·录取即锁定）</span></dd>
+
+                <div class="dp-block">
+                  <div class="dp-title">录取研判<small v-if="estScore"> 你估≈{{ estScore }}</small></div>
+                  <div v-for="(v, ci) in channelViews" :key="ci" class="dp-ch">
+                    <span class="dp-ch-name">{{ v.name }}</span>
+                    <span class="tj" :class="v.cls">{{ v.band }}</span>
+                    <span class="dp-ch-detail">{{ v.detail }}</span>
+                  </div>
+                  <p v-for="(c, idx) in caveats" :key="idx" class="dp-tip">⚠️ {{ c }}</p>
                 </div>
-              </dl>
 
-              <!-- 历年录取分数线：2025 → 2024 → 2023 -->
-              <div v-if="selCard?.score_lines && selCard.score_lines.length" class="dp-block">
-                <div class="dp-title">历年录取分数线</div>
-                <table class="dp-table">
-                  <thead><tr><th>年份</th><th>分数线</th><th>区排名</th></tr></thead>
-                  <tbody>
-                    <tr v-for="sl in selCard.score_lines" :key="sl.year">
-                      <td>{{ sl.year }}</td>
-                      <td>{{ sl.score != null ? sl.score + '分' : '—' }}</td>
-                      <td>{{ sl.rank != null ? sl.rank + '名' : '—' }}</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <p class="dp-tip">分数跨年口径不同（2025 起总分调整），<b>区排名</b>才是跨年可比的录取参考。</p>
-              </div>
-
-              <!-- 招生专业(班) -->
-              <div v-if="selCard?.majors && selCard.majors.length" class="dp-block">
-                <div class="dp-title">招生专业(班)</div>
-                <div v-for="m in selCard.majors" :key="m.major_code" class="dp-mj">
-                  <b>{{ m.major_code }}</b> {{ cleanName(m.major_name) }}
-                  <em v-if="m.plan_chaoyang">· 朝阳{{ m.plan_chaoyang }}</em>
+                <div v-if="schoolLines.length" class="dp-block">
+                  <div class="dp-title">历年录取线</div>
+                  <table class="dp-table">
+                    <thead><tr><th>年</th><th>线</th><th>口径/区排</th></tr></thead>
+                    <tbody>
+                      <tr v-for="sl in schoolLines" :key="sl.year">
+                        <td>{{ sl.year }}</td>
+                        <td>{{ sl.score != null ? sl.score + (sl.scale ? '(' + sl.scale + '制)' : '分') : '—' }}</td>
+                        <td>{{ sl.rank != null ? sl.rank + '名' : (sl.conf || '') }}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p class="dp-tip">分数跨年口径不同(2025起510制)；同年/区排名才可比。</p>
                 </div>
-              </div>
 
-              <div v-if="selectedPoint.style" class="dp-line">🏫 {{ selectedPoint.style }}</div>
-              <div v-if="selectedPoint.gaokao" class="dp-line dp-muted">🎓 高考(民间·非官方)：{{ selectedPoint.gaokao }}</div>
-              <div v-if="selectedPoint.note" class="dp-line dp-muted">{{ selectedPoint.note }}</div>
-              <div v-if="selectedPoint.reason" class="dp-warn">🚫 不在报名范围：{{ selectedPoint.reason }}</div>
-
-              <!-- 市级统筹结构化信息 -->
-              <div v-if="selectedTc" class="dp-block dp-tc">
-                <div class="dp-title">市级统筹信息</div>
                 <dl class="dp-kv">
-                  <div><dt>类别 · 投朝阳名额</dt><dd>{{ selectedTc._tier }} · 投朝阳 <b>{{ selectedTc.quota_chaoyang }}</b> 名</dd></div>
-                  <div><dt>办学层次</dt><dd>{{ selectedTc.level || '待核' }}</dd></div>
-                  <div><dt>研判（你估≈{{ estScore }}）</dt>
-                    <dd><span class="tj" :class="tcJudge(selectedTc).cls">{{ tcJudge(selectedTc).label }}</span>
-                      <span v-if="tcJudge(selectedTc).d != null" class="dp-mg">
-                        {{ tcJudge(selectedTc).ref ? '历年线' : '线' }}{{ tcJudge(selectedTc).line }}·Δ{{ (tcJudge(selectedTc).d ?? 0) > 0 ? '+' : '' }}{{ tcJudge(selectedTc).d }}</span></dd></div>
-                  <div><dt>通勤（到家）</dt>
-                    <dd v-if="selectedTc.dist">{{ selectedTc.dist.km }}km · {{ selectedTc.dist.mins }}分钟<small>（{{ selectedTc.dist.label }}）</small></dd>
-                    <dd v-else class="dp-muted">填家庭住址后显示</dd></div>
-                  <div><dt>住宿</dt>
-                    <dd><span v-if="selectedTc.boarding === true" class="t-yes">🛏 可住宿</span>
-                      <span v-else-if="selectedTc.boarding === false">不提供（{{ selectedTc.district }}，需走读/自理）</span>
-                      <span v-else class="dp-muted">待核</span></dd></div>
+                  <div v-if="selSchool.commute"><dt>通勤(到家)</dt>
+                    <dd>{{ selSchool.commute.km }}km · {{ selSchool.commute.mins }}分钟
+                      <span v-if="selSchool.commute.over_max" class="dp-vol">⚠️超上限</span></dd></div>
+                  <div><dt>住宿</dt><dd>
+                    <span v-if="selSchool.boarding === true" class="t-yes">🛏 可住宿</span>
+                    <span v-else-if="selSchool.boarding === false">不提供</span>
+                    <span v-else class="dp-muted">待核</span></dd></div>
                 </dl>
-                <table v-if="selectedTc.score_lines && selectedTc.score_lines.length" class="dp-table">
-                  <thead><tr><th>年</th><th>统招线</th><th>口径</th></tr></thead>
-                  <tbody>
-                    <tr v-for="sl in selectedTc.score_lines" :key="sl.year">
-                      <td>{{ sl.year }}</td><td>{{ sl.score }}<small>（{{ sl.scale }}制）</small></td><td>{{ sl.conf }}</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <div v-if="selectedTc.style" class="dp-line">🏫 {{ selectedTc.style }}</div>
-                <div v-if="selectedTc.gaokao" class="dp-line dp-muted">🎓 高考(民间·非官方)：{{ selectedTc.gaokao }}</div>
-                <div class="dp-line dp-muted">📍 {{ selectedTc.address }}</div>
-                <div class="dp-line dp-warn">⚠️ 比的是<b>统招线</b>(非统筹实际线，统筹线通常更低、偏保守)；能否录取看朝外当年报该校统筹的名次，以《简章》为准。</div>
-              </div>
 
-              <!-- 2026 新校信息（无历史线，代理参考） -->
-              <div v-if="selectedNew" class="dp-block dp-tc">
-                <div class="dp-title">🆕 2026 新增公办普高（无历史线）</div>
-                <dl class="dp-kv">
-                  <div><dt>办学体系</dt><dd>{{ selectedNew.system }}</dd></div>
-                  <div><dt>办学层次</dt><dd>{{ selectedNew.level || '待核' }}</dd></div>
-                  <div><dt>招生方向</dt><dd>{{ selectedNew.direction || '待核' }}</dd></div>
-                  <div v-if="selectedNew.analog && selectedNew.analog.length"><dt>可类比参考</dt><dd>{{ selectedNew.analog.join('、') }}</dd></div>
-                  <div><dt>通勤（到家）</dt>
-                    <dd v-if="selectedNew.dist">{{ selectedNew.dist.km }}km · {{ selectedNew.dist.mins }}分钟<small>（{{ selectedNew.dist.label }}）</small></dd>
-                    <dd v-else class="dp-muted">填家庭住址后显示</dd></div>
-                  <div><dt>住宿</dt>
-                    <dd><span v-if="selectedNew.boarding === true" class="t-yes">🛏 可住宿</span>
-                      <span v-else-if="selectedNew.boarding === false">不提供</span>
-                      <span v-else class="dp-muted">待核</span></dd></div>
-                </dl>
-                <div v-if="selectedNew.style" class="dp-line">🏫 {{ selectedNew.style }}</div>
-                <div class="dp-line dp-muted">📍 {{ selectedNew.address }}</div>
-                <div class="dp-line dp-warn">⚠️ 新校<b>无往年录取线</b>、不做冲/稳/保研判；招生计划官方约 6 月发布。判断看<b>办学体系 + 可类比校</b>，并参加学校招生说明会。</div>
-              </div>
+                <div v-if="selSchool.extra.tuition" class="dp-line">💰 学费：{{ selSchool.extra.tuition }}</div>
+                <div v-if="selSchool.extra.curriculum && selSchool.extra.curriculum.length" class="dp-line">📚 课程：{{ selSchool.extra.curriculum.join('·') }}<template v-if="selSchool.extra.direction"> · {{ selSchool.extra.direction }}</template></div>
+                <div v-if="selSchool.extra.specialties && selSchool.extra.specialties.length" class="dp-line">🛠 专业：{{ selSchool.extra.specialties.join('·') }}</div>
+                <div v-if="selSchool.extra.projects && selSchool.extra.projects.length" class="dp-block">
+                  <div class="dp-title">贯通项目（→本科）</div>
+                  <div v-for="(pj, pi) in selSchool.extra.projects" :key="pi" class="dp-mj">{{ pj.type }}：{{ pj.major }} → {{ pj.benke }}<em v-if="pj.plan"> · {{ pj.plan }}人</em></div>
+                </div>
+                <div v-if="selSchool.extra.system" class="dp-line">🏛 体系：{{ selSchool.extra.system }}</div>
+                <div v-if="selSchool.extra.analog && selSchool.extra.analog.length" class="dp-line dp-muted">↔ 可类比：{{ selSchool.extra.analog.join('、') }}</div>
+                <div v-if="selSchool.extra.direction && !(selSchool.extra.curriculum && selSchool.extra.curriculum.length)" class="dp-line dp-muted">方向：{{ selSchool.extra.direction }}</div>
+
+                <div v-if="selSchool.features.style" class="dp-line">🏫 {{ selSchool.features.style }}</div>
+                <div v-if="selSchool.features.gaokao" class="dp-line dp-muted">🎓 高考(民间·非官方)：{{ selSchool.features.gaokao }}</div>
+                <div v-if="selSchool.geo.address" class="dp-line dp-muted">📍 {{ selSchool.geo.address }}<span v-if="selSchool.geo.confidence === 'low' || !selSchool.geo.lat" class="addr-tag">待核</span></div>
+              </template>
+              <div v-else class="dp-line dp-muted">{{ cleanName(selectedPoint.name) }}（暂无结构化信息）</div>
             </template>
             <div v-else class="dp-empty">
               <div class="dp-empty-ic">🏫</div>
@@ -1676,6 +1682,10 @@ const tcOptions: string[] = []
 .dp-empty-ic { font-size: 32px; opacity: .5; }
 .dp-head { display: flex; align-items: center; gap: 8px; }
 .dp-head h3 { font-size: 16px; font-weight: 700; color: var(--gray-900); margin: 0; line-height: 1.3; }
+.dp-type { flex-shrink: 0; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: var(--radius-full); background: var(--brand-50); color: var(--brand-dark); }
+.dp-ch { display: flex; align-items: baseline; gap: 8px; padding: 4px 0; flex-wrap: wrap; }
+.dp-ch-name { font-size: 12.5px; font-weight: 700; color: var(--gray-700); min-width: 62px; }
+.dp-ch-detail { font-size: 12px; color: var(--gray-600); }
 .dp-band { flex-shrink: 0; width: 22px; height: 22px; border-radius: 50%; color: #fff;
   font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center; }
 .dp-sub { font-size: 12.5px; color: var(--gray-600); margin-top: 6px; }
