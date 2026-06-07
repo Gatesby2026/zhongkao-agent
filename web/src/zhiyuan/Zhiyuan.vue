@@ -84,7 +84,7 @@ interface Card {
   boarding?: boolean; coop?: boolean
 }
 interface Point {
-  name: string; lat: number; lon: number; kind: string; color: string
+  name: string; uid?: string; lat: number; lon: number; kind: string; color: string
   band: string; level: string; rank: string; margin: string; dist: string
   hist: string; note: string; reason: string; style: string
   tags: string[]; gaokao: string; matched: string[]
@@ -314,48 +314,69 @@ function renderMarkers(fit = false) {
   if (!res || !mapInst) return
   for (const lyr of [publicLayer, minbanLayer, intlLayer, vocLayer, gtLayer, tcLayer, xedLayer])
     if (lyr) mapInst.removeLayer(lyr)
-  publicLayer = minbanLayer = intlLayer = vocLayer = gtLayer = tcLayer = xedLayer = null
+  publicLayer = L.layerGroup(); minbanLayer = L.layerGroup(); intlLayer = L.layerGroup()
+  vocLayer = L.layerGroup(); gtLayer = L.layerGroup(); tcLayer = L.layerGroup(); xedLayer = L.layerGroup()
   const bounds: any[] = []
   if (res.home_coord) bounds.push(res.home_coord)
+  const tcColor: Record<string, string> = { 'tj-wen': '#2ecc71', 'tj-chong': '#e74c3c', 'tj-bo': '#e67e22', 'tj-no': '#95a5a6', 'tj-unk': '#2980b9' }
 
-  publicLayer = L.layerGroup()
-  res.points.forEach((p) => {
-    // 公办普高图层（中外合作校并入其中，不再单独图层；详情仍标“🌐中外合作班”）
-    if (!layers.gongban) return
-    bounds.push([p.lat, p.lon])
-    const boarding = !!cardOfPoint(p)?.boarding
-    const icon = p.kind === 'full' ? pin(p.color, p.band, boarding) : smallIcon(p.color, boarding)
-    const mk = L.marker([p.lat, p.lon], { icon }).addTo(publicLayer).on('click', () => selectPoint(p))
-    // 缺省常驻显示学校名：重点推荐校(冲/稳/保)常驻，其余小点悬停显示，避免拥挤
-    const lbl = shortName(p.name)
-    if (p.kind === 'full') {
-      mk.bindTooltip(lbl, { permanent: true, direction: 'bottom', offset: [0, 2], className: 'map-lbl' })
-    } else {
-      mk.bindTooltip(lbl, { direction: 'top', offset: [0, -6], className: 'map-lbl' })
-    }
-  })
-  // 2026 新增公办普高：随"公办普高"图层显示，用"新"pin（有住宿带"宿"角标），无研判
-  ;((res as any).new_schools?.schools || []).forEach((s: any) => {
-    if (!s.lat || !s.lon) return
-    const np: Point = {
-      name: s.name, lat: s.lat, lon: s.lon, kind: 'small', color: '#8e44ad',
-      band: '新', level: '2026 新增·无历史线', rank: '—', margin: '—',
-      dist: s.dist ? `${s.dist.km}km · ${s.dist.mins}分钟（${s.dist.label}）` : '距离未知',
-      hist: '', style: '', note: '', reason: '', tags: [], gaokao: '', matched: [],
-    }
-    L.marker([s.lat, s.lon], { icon: pin('#8e44ad', '新', s.boarding === true) }).addTo(publicLayer)
-      .on('click', () => { selectPoint(np); selectedNew.value = s })
-      .bindTooltip(shortName(s.name), { permanent: true, direction: 'bottom', offset: [0, 2], className: 'map-lbl' })
-    if (layers.gongban) bounds.push([s.lat, s.lon])
-  })
-  if (layers.gongban) publicLayer.addTo(mapInst)
+  // 地图唯一数据源 = schools_unified（每条带 uid；点击按 uid 解析详情，不再做名字匹配）
+  for (const r of uList.value) {
+    const lat = r.geo?.lat, lon = r.geo?.lon
+    if (lat == null || lon == null) continue
+    const pt: any = { name: r.name, uid: r.uid, lat, lon }
+    const ty = r.type as string
+    const lbl = shortName(r.name)
+    const tipB = (mk: any) => mk.bindTooltip(lbl, { permanent: true, direction: 'bottom', offset: [0, 2], className: 'map-lbl' })
+    const tipS = (mk: any) => mk.bindTooltip(lbl, { direction: 'top', offset: [0, -6], className: 'map-lbl' })
 
-  // 民办/国际：按标拆两层（同一所若既民办又国际，两层都画）
-  minbanLayer = L.layerGroup()
-  intlLayer = L.layerGroup()
-  const flags = privFlags.value
-  res.private.forEach((p) => {
-    const f = flags[p.name] || { minban: true, intl: false }
+    if (ty === '公办普高') {
+      const m = r.map || {}
+      const full = m.kind === 'full'
+      const icon = full ? pin(m.color || '#7f8c8d', m.band || '', !!r.boarding) : smallIcon(m.color || '#7f8c8d', !!r.boarding)
+      const mk = L.marker([lat, lon], { icon }).addTo(publicLayer).on('click', () => selectPoint(pt))
+      full ? tipB(mk) : tipS(mk)
+      if (layers.gongban) bounds.push([lat, lon])
+      const q = xedQuotaByName.value[r.name]      // 校额到校图层：该公办校在选定初中的名额
+      if (q) {
+        const j = xedJudgeByName.value[r.name]
+        L.marker([lat, lon], { icon: pin(j ? j.color : '#95a5a6', j ? XED_BAND[j.tag] : '校', !!r.boarding, String(q)) })
+          .addTo(xedLayer).on('click', () => selectPoint(pt))
+          .bindTooltip(lbl, { permanent: true, direction: 'bottom', offset: [0, 2], className: 'map-lbl' })
+        if (layers.xed) bounds.push([lat, lon])
+      }
+    } else if (ty === '2026新校') {
+      tipB(L.marker([lat, lon], { icon: pin('#8e44ad', '新', !!r.boarding) }).addTo(publicLayer).on('click', () => selectPoint(pt)))
+      if (layers.gongban) bounds.push([lat, lon])
+    } else if (ty === '市级统筹') {
+      const ch = (r.channels || []).find((c: any) => c.metric?.kind === 'city_score')
+      const b = scoreBand(ch?.metric?.refLine ?? null)
+      const color = tcColor[b.cls] || '#2980b9'
+      const big = b.cls === 'tj-wen' || b.cls === 'tj-chong' || b.cls === 'tj-bo'
+      const mk = L.marker([lat, lon], { icon: big ? pin(color, b.label, !!r.boarding) : smallIcon(color, !!r.boarding) })
+        .addTo(tcLayer).on('click', () => selectPoint(pt))
+      big ? tipB(mk) : tipS(mk)
+      if (layers.tc) bounds.push([lat, lon])
+    } else if (ty.includes('民办') || ty.includes('国际') || ty.includes('双语')) {
+      const isIntl = !!r.extra?.in_intl || ty.includes('国际') || ty.includes('双语')
+      const isMin = !!r.extra?.in_minban || ty.includes('民办')
+      if (isIntl) tipS(L.marker([lat, lon], { icon: smallIcon('#9b59b6') }).addTo(intlLayer).on('click', () => selectPoint(pt)))
+      if (isMin || (!isMin && !isIntl)) tipS(L.marker([lat, lon], { icon: smallIcon('#e67e22') }).addTo(minbanLayer).on('click', () => selectPoint(pt)))
+      if (layers.minban || layers.intl) bounds.push([lat, lon])
+    } else if (ty.includes('中职') || ty.includes('职教')) {
+      tipS(L.marker([lat, lon], { icon: smallIcon('#16a085') }).addTo(vocLayer).on('click', () => selectPoint(pt)))
+      if (layers.voc) bounds.push([lat, lon])
+    } else if (ty === '贯通') {
+      tipS(L.marker([lat, lon], { icon: smallIcon('#2980b9') }).addTo(gtLayer).on('click', () => selectPoint(pt)))
+      if (layers.gt) bounds.push([lat, lon])
+    }
+  }
+
+  // 仅有坐标、无结构化记录的民办/国际：补画兜底点(点击走"暂无详情"友好文案)
+  const uNames = uByName.value
+  ;(res.private || []).forEach((p) => {
+    if (uNames[p.name]) return
+    const f = privFlags.value[p.name] || { minban: true, intl: false }
     const mk = (color: string) => L.marker([p.lat, p.lon], { icon: smallIcon(color) })
       .on('click', () => selectPoint(p))
       .bindTooltip(shortName(p.name), { direction: 'top', offset: [0, -6], className: 'map-lbl' })
@@ -363,101 +384,16 @@ function renderMarkers(fit = false) {
     if (f.minban || (!f.minban && !f.intl)) mk('#e67e22').addTo(minbanLayer)
     if (layers.minban || layers.intl) bounds.push([p.lat, p.lon])
   })
+
+  if (layers.gongban) publicLayer.addTo(mapInst)
   if (layers.minban) minbanLayer.addTo(mapInst)
   if (layers.intl) intlLayer.addTo(mapInst)
-
-  // 中职/职教（默认关）—— 点击走右侧详情面板（同普高）
-  vocLayer = L.layerGroup()
-  ;(res.vocational?.schools || []).forEach((s: any) => {
-    if (!s.lat || !s.lon) return
-    const vp: Point = {
-      name: s.name, lat: s.lat, lon: s.lon, kind: 'small', color: '#16a085',
-      band: '中职', level: s.type || '中职/职教', rank: '—', margin: '—',
-      dist: s.dist ? `${s.dist.km}km · ${s.dist.mins}分钟（${s.dist.label}）${s.dist.over_max ? ' ⚠️超通勤上限' : ''}` : '距离未知',
-      hist: '',
-      style: (s.specialties && s.specialties.length) ? '专业：' + s.specialties.join('·') : '',
-      note: [s.address, s.five_year ? '含五年制(3+2)→大专' : '', s.note].filter(Boolean).join(' · '),
-      reason: '', tags: [], gaokao: '', matched: [],
-    }
-    L.marker([s.lat, s.lon], { icon: smallIcon('#16a085') }).addTo(vocLayer)
-      .on('click', () => selectPoint(vp))
-      .bindTooltip(shortName(s.name), { direction: 'top', offset: [0, -6], className: 'map-lbl' })
-    if (layers.voc) bounds.push([s.lat, s.lon])
-  })
   if (layers.voc) vocLayer.addTo(mapInst)
-
-  // 贯通承办院校（全市·默认关）—— 点击走右侧详情面板（同普高）
-  gtLayer = L.layerGroup()
-  const gtProjects = (res.guantong as any)?.projects || []
-  Object.entries((res.guantong as any)?.school_coords || {}).forEach(([nm, c]: any) => {
-    if (!c?.lat || !c?.lon) return
-    const approx = c.geo === 'approx' ? '（坐标近似）' : ''
-    const projs = gtProjects.filter((p: any) => p.school === nm)
-    const projTxt = projs.map((p: any) => `${p.type}：${p.major}→${p.benke}（${p.plan}人）`).join('；')
-    const gp: Point = {
-      name: nm, lat: c.lat, lon: c.lon, kind: 'small', color: '#2980b9',
-      band: '贯通', level: '贯通承办院校（全市招生·7年→本科）', rank: '—', margin: '—',
-      dist: '距离未知', hist: '',
-      style: `承办院校 · ${c.district || ''}${approx}`,
-      note: [projTxt, c.note].filter(Boolean).join('　|　'),
-      reason: '', tags: [], gaokao: '', matched: [],
-    }
-    L.marker([c.lat, c.lon], { icon: smallIcon('#2980b9') }).addTo(gtLayer)
-      .on('click', () => selectPoint(gp))
-      .bindTooltip(shortName(nm), { direction: 'top', offset: [0, -6], className: 'map-lbl' })
-    if (layers.gt) bounds.push([c.lat, c.lon])
-  })
   if (layers.gt) gtLayer.addTo(mapInst)
-
-  // 市级统筹（默认关）—— 26 校按研判着色，点击走右侧详情
-  tcLayer = L.layerGroup()
-  const tcColor: Record<string, string> = { 'tj-wen': '#2ecc71', 'tj-chong': '#e74c3c', 'tj-bo': '#e67e22', 'tj-no': '#95a5a6', 'tj-unk': '#2980b9' }
-  const tcAll = [...(tongchou.value?.tongchou_er || []), ...(tongchou.value?.tongchou_yi || [])]
-  tcAll.forEach((s: any) => {
-    if (!s.lat || !s.lon || !s.faces_chaoyang) return
-    const j = tcJudge(s)
-    const tier = (tongchou.value?.tongchou_er || []).includes(s) ? '统筹二' : '统筹一'
-    const color = tcColor[j.cls] || '#2980b9'
-    // 解析到 schools_unified 的实际键：外区=name·校区；本区已并入公办(名字可能差"北京市")→归一化匹配
-    const _n = (x: string) => (x || '').replace('北京市', '').replace('（', '(').replace('）', ')')
-    const full = s.name + (s.campus ? '·' + s.campus : '')
-    let ukey = uByName.value[full] ? full : (uByName.value[s.name] ? s.name : '')
-    if (!ukey) { const t = _n(s.name); for (const k in uByName.value) if (_n(k) === t) { ukey = k; break } }
-    const tp: Point = {
-      name: ukey || full, lat: s.lat, lon: s.lon, kind: 'small', color,
-      band: j.label, level: `市级统筹·${tier}${s.campus ? '（' + s.campus + '）' : ''}`, rank: '—', margin: '—',
-      dist: '距离未知', hist: '', style: '', note: '', reason: '', tags: [], gaokao: '', matched: [],
-    }
-    // 参照普高：可冲/稳 用大 pin（带研判档），够不上/待核 用小图标
-    const big = j.cls === 'tj-wen' || j.cls === 'tj-chong' || j.cls === 'tj-bo'
-    const icon = big ? pin(color, j.label, s.boarding === true) : smallIcon(color, s.boarding === true)
-    L.marker([s.lat, s.lon], { icon }).addTo(tcLayer)
-      .on('click', () => { selectPoint(tp); selectedTc.value = { ...s, _tier: tier } })
-      .bindTooltip(shortName(s.name), big
-        ? { permanent: true, direction: 'bottom', offset: [0, 2], className: 'map-lbl' }
-        : { direction: 'top', offset: [0, -6], className: 'map-lbl' })
-    if (layers.tc) bounds.push([s.lat, s.lon])
-  })
   if (layers.tc) tcLayer.addTo(mapInst)
-
-  // 校额到校（默认关，按统筹方式）—— 有名额的朝阳优质高中用大 pin，按研判着色，标"🎯名额"
-  xedLayer = L.layerGroup()
-  res.points.forEach((p) => {
-    const q = xedQuotaByName.value[p.name]
-    if (!q) return
-    const j = xedJudgeByName.value[p.name]
-    const color = j ? j.color : '#95a5a6'
-    const lbl = j ? XED_BAND[j.tag] : '校'
-    const sboard = !!cardOfPoint(p)?.boarding
-    // 参照统筹：研判作主标(冲/稳/达),名额作左上角标,住宿"宿"右上角
-    L.marker([p.lat, p.lon], { icon: pin(color, lbl, sboard, String(q)) }).addTo(xedLayer)
-      .on('click', () => selectPoint(p))
-      .bindTooltip(shortName(p.name), { permanent: true, direction: 'bottom', offset: [0, 2], className: 'map-lbl' })
-    if (layers.xed) bounds.push([p.lat, p.lon])
-  })
   if (layers.xed) xedLayer.addTo(mapInst)
 
-  // 仅首次渲染自动定位；切换图层只增减标记，保持用户当前视野(中心+缩放)不动
+  // 仅首次渲染自动定位；切换图层只增减标记，保持用户当前视野不动
   if (fit && bounds.length) mapInst.fitBounds(bounds, { padding: [40, 40], maxZoom: 14 })
 }
 function renderMap() {
@@ -744,11 +680,17 @@ const uByName = computed<Record<string, any>>(() => {
   for (const s of ((result.value as any)?.schools_unified || [])) m[s.name] = s
   return m
 })
+// 以 uid 为主键索引(地图标记/详情面板统一按 uid 解析，不再做名字匹配)
+const uByUid = computed<Record<string, any>>(() => {
+  const m: Record<string, any> = {}
+  for (const s of ((result.value as any)?.schools_unified || [])) if (s.uid) m[s.uid] = s
+  return m
+})
 // 选中校的统一记录；公办校再按选定初中补"校额到校"渠道（依赖前端 xedQuery）
 const selSchool = computed<any>(() => {
   const p = selectedPoint.value
   if (!p) return null
-  const base = uByName.value[p.name]
+  const base = (p.uid && uByUid.value[p.uid]) || uByName.value[p.name]   // uid 优先，名字兜底
   if (!base) return null
   const s = { ...base, channels: [...(base.channels || [])] }
   const q = xedQuotaByName.value[p.name]
@@ -897,7 +839,7 @@ const exploreView = computed<any[]>(() => {
     return (a.name || '').localeCompare(b.name || '')
   })
 })
-function exSelect(rec: any) { selectPoint({ name: rec.name } as any) }
+function exSelect(rec: any) { selectPoint({ name: rec.name, uid: rec.uid } as any) }
 const vocList = computed<VocSchool[]>(() => result.value?.vocational?.schools || [])
 const gtBlock = computed<GuantongBlock | null>(() => result.value?.guantong || null)
 function shortCampusName(name: string): string {
