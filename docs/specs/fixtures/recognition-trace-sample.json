@@ -1,0 +1,208 @@
+{
+  "questions": [
+    {
+      "qid": 1,
+      "final": "A",
+      "conf": 0.97,
+      "status": "green",
+      "reason": "像素 + 缺字母一致",
+      "probe": {
+        "pred": "A",
+        "margin": 0.275,
+        "dens": {
+          "A": 0.319,
+          "B": 0.043,
+          "C": 0.027,
+          "D": 0.044
+        }
+      },
+      "reader": {
+        "method": "缺字母",
+        "pred": "A",
+        "missing": [
+          "A"
+        ]
+      }
+    },
+    {
+      "qid": 2,
+      "final": "C",
+      "conf": 0.95,
+      "status": "green",
+      "reason": "像素 + 缺字母一致",
+      "probe": {
+        "pred": "C",
+        "margin": 0.25,
+        "dens": {
+          "A": 0.027,
+          "B": 0.045,
+          "C": 0.314,
+          "D": 0.064
+        }
+      },
+      "reader": {
+        "method": "缺字母",
+        "pred": "C",
+        "missing": [
+          "C"
+        ]
+      }
+    },
+    {
+      "qid": 3,
+      "final": "C",
+      "conf": 0.89,
+      "status": "green",
+      "reason": "像素 + 缺字母一致",
+      "probe": {
+        "pred": "C",
+        "margin": 0.192,
+        "dens": {
+          "A": 0.028,
+          "B": 0.056,
+          "C": 0.248,
+          "D": 0.044
+        }
+      },
+      "reader": {
+        "method": "缺字母",
+        "pred": "C",
+        "missing": [
+          "C"
+        ]
+      }
+    },
+    {
+      "qid": 4,
+      "final": "B",
+      "conf": 0.85,
+      "status": "green",
+      "reason": "像素高置信（margin 0.25）",
+      "probe": {
+        "pred": "B",
+        "margin": 0.248,
+        "dens": {
+          "A": 0.02,
+          "B": 0.268,
+          "C": 0.014,
+          "D": 0.007
+        }
+      },
+      "reader": {
+        "method": "缺字母",
+        "pred": null,
+        "missing": [
+          "B",
+          "C",
+          "D"
+        ]
+      }
+    },
+    {
+      "qid": 5,
+      "final": "B",
+      "conf": 0.54,
+      "status": "yellow",
+      "reason": "像素判 B 但缺字母指向 C，两源分歧",
+      "probe": {
+        "pred": "B",
+        "margin": 0.242,
+        "dens": {
+          "A": 0.042,
+          "B": 0.298,
+          "C": 0.056,
+          "D": 0.0
+        }
+      },
+      "reader": {
+        "method": "缺字母",
+        "pred": "C",
+        "missing": [
+          "C"
+        ]
+      }
+    },
+    {
+      "qid": 6,
+      "final": "A",
+      "conf": 0.98,
+      "status": "green",
+      "reason": "像素 + 缺字母一致",
+      "probe": {
+        "pred": "A",
+        "margin": 0.281,
+        "dens": {
+          "A": 0.343,
+          "B": 0.055,
+          "C": 0.035,
+          "D": 0.062
+        }
+      },
+      "reader": {
+        "method": "缺字母",
+        "pred": "A",
+        "missing": [
+          "A"
+        ]
+      }
+    },
+    {
+      "qid": 7,
+      "final": "B",
+      "conf": 0.94,
+      "status": "green",
+      "reason": "像素 + 缺字母一致",
+      "probe": {
+        "pred": "B",
+        "margin": 0.236,
+        "dens": {
+          "A": 0.023,
+          "B": 0.28,
+          "C": 0.028,
+          "D": 0.044
+        }
+      },
+      "reader": {
+        "method": "缺字母",
+        "pred": "B",
+        "missing": [
+          "B"
+        ]
+      }
+    },
+    {
+      "qid": 8,
+      "final": "D",
+      "conf": 0.83,
+      "status": "green",
+      "reason": "像素高置信（margin 0.23）",
+      "probe": {
+        "pred": "D",
+        "margin": 0.233,
+        "dens": {
+          "A": 0.025,
+          "B": 0.05,
+          "C": 0.023,
+          "D": 0.283
+        }
+      },
+      "reader": {
+        "method": "缺字母",
+        "pred": null,
+        "missing": [
+          "C",
+          "D"
+        ]
+      }
+    }
+  ],
+  "summary": {
+    "total": 8,
+    "green": 7,
+    "yellow": 1,
+    "red": 0,
+    "need_review": [
+      5
+    ]
+  }
+}
