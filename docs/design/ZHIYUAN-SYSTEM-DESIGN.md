@@ -214,3 +214,33 @@
 ### 11.6 UI 现状 vs 计划
 - **现状**：普高清单"🆕2026新增"区块——列 体系/可类比/方向/通勤/住宿/地址，明确"无历史线·不做研判"。
 - **计划（6 月并入时做）**："新校评估卡"——详情页用代理参考代替研判：办学体系 + 可类比母体/同体系校（带其线）+ 选址/通勤/住宿 + 方向 + 政策 + 风险指引（即 §11.1 的可视化）。
+
+---
+
+## 12. 统一学校数据模型 & 统一详情面板（规范，落地中）
+
+目标：各类型学校（公办/统筹/民办/国际/中职/贯通/新校；校额到校=渠道）用**同一套结构化模型**，公共字段所有类型都有、专属字段按类型加；右侧详情面板**声明式分区**，加新类型不再堆 if 分支。
+
+### 12.1 规范化 School 记录（三层）
+- **公共层（所有类型必有）**：`id, name, type, district, geo{lat,lon,address,confidence,geo_status}, boarding, level, features{style,tags,gaokao}, source{tier,conf,note}`；运行时附 `commute{km,mins,mode,over_max}`。
+- **录取层 `channels[]`（核心）**：一校可多渠道。每渠道：
+  `{ channel(统招|校额到校|市级统筹|自主|贯通|中职|直升|新校待定), band(冲|稳|保|搏|够不上|待核|不适用), metric{kind,...}, lines[{year,score,scale,conf}], quota?, caveat }`
+  > 核心洞见：**学校身份唯一、渠道多个**。八十中 = 统招(稳)+校额到校(冲)+统筹(够不上)，挂 3 个 channel，不再三处重复建。地图图层=按 channel 过滤；面板=列该校全部 channel。
+- **专属层 `extra{}`**：tuition(民办/国际) / curriculum,direction(国际) / majors(中职) / benke,xuezhi(贯通) / system,analog(新校) / quota_chaoyang(统筹) …
+
+### 12.2 研判口径统一 `metric.kind`
+`district_rank`(公办统招:朝阳区排vs录取位次) / `city_score`(统筹:估分vs统招线·偏保守) / `in_school_rank`(校额:高中位次vs孩子区排·校内竞争) / `threshold`(贯通380/中职430) / `route_choice`(国际/民办·非分数) / `none`(新校·无线只给代理参考)。
+
+### 12.3 统一详情面板（声明式分区，有数据才渲染）
+有序分区：`头部(名+类型徽标+研判band+层次)` → `研判(逐channel:band+metric说明+历年线表)` → `通勤` → `住宿` → `名额` → `学费` → `课程/方向` → `专业` → `对接本科/学制` → `体系·可类比(新校)` → `高考(民间)` → `地址` → `资格/身份提示` → `来源·口径脚注`。面板只遍历分区；加类型=补 extra 字段(+必要时加一个分区)。
+
+### 12.4 落地步骤（增量，不大爆改）
+1. **后端适配层**：保留现有各数据文件，`to_school(raw,type)` 映射成统一 School；`build_result` 增 `schools_unified[]`（数据文件不动，零风险）。← 当前在做
+2. **前端统一面板**：用 `schools_unified` 跑声明式面板，逐步替换 selCard/selectedTc/selectedNew 分支。
+3. **地图改 channel 过滤**：图层=channel，pin 的 band/色由 channel 决定。
+4. （可选，最后）零散数据文件并成统一 schema。
+
+### 12.5 已定决策
+- 校额到校=**渠道**(挂公办校)，非独立类型。
+- band 枚举：`冲/稳/保/搏/够不上/待核/不适用`。
+- 顺序：**先后端适配层 → 再统一面板 → 再 channel 图层**。

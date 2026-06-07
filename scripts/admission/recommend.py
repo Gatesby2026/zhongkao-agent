@@ -652,7 +652,7 @@ def build_result(rank, home=None, mode="driving", max_km=None, interests=None,
             public_list.append(item)
     public_list.sort(key=lambda x: x["ref_rank"])
 
-    return {
+    result = {
         "district": district_name, "rank": rank, "home": home,
         "home_coord": list(home_coord) if home_coord else None,
         "mode": mode, "mode_label": mode_label, "max_km": max_km,
@@ -681,6 +681,14 @@ def build_result(rank, home=None, mode="driving", max_km=None, interests=None,
         "_buckets": buckets, "_dist_campus": dist_campus,
         "_priv": priv, "_priv_dist": priv_dist, "_home_coord": home_coord,
     }
+    # §12 统一模型：规范化适配层（增量，前端逐步迁移；school_额到校 channel 由前端按初中追加）
+    try:
+        import unified
+        result["schools_unified"] = unified.build_unified(result)
+    except Exception as e:  # 适配层不可因异常拖垮主推荐
+        result["schools_unified"] = None
+        result["_unified_err"] = str(e)
+    return result
 
 
 def generate_map(out_path, district_name, student_rank, home_addr, home_coord,
