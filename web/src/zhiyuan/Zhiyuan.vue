@@ -997,8 +997,15 @@ const tcEligible = computed<any[]>(() => {
 function prefillTongchou() {
   // 统筹在统招前·录取即锁定：只填"你估分≤其统招线"的 reach（够一够的 upgrade；没中自动落到统招、无损失）；
   // 排除稳/保（你高于其线=会被锁进比你弱的外区校=陷阱）与线待核。排序从高到低：够不上→搏→冲。
+  // 入选优先级：搏(更值得拼)→冲→够不上(仅兜底回填空位)；展示按从高到低（够不上→搏→冲）
+  const tier = (d: number) => (d < -20 ? 2 : d < -10 ? 0 : 1)
   const cand = tcEligible.value
     .filter(e => e.j.d != null && (e.j.d as number) <= 0)
+    .sort((a, b) => {
+      const ta = tier(a.j.d as number), tb = tier(b.j.d as number)
+      return ta !== tb ? ta - tb : (a.j.d as number) - (b.j.d as number)
+    })
+    .slice(0, 4)
     .sort((a, b) => (a.j.d as number) - (b.j.d as number))
   draftTongchou.value = Array.from({ length: 4 }, (_, i) =>
     cand[i] ? { school: cand[i].key, majors: '' } : { school: null, majors: '' })
