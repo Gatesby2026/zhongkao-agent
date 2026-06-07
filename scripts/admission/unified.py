@@ -37,18 +37,29 @@ def _norm(n: str) -> str:
     return (n or "").replace("北京市", "").replace("（", "(").replace("）", ")").strip()
 
 
+def _uid(code, type_, name) -> str:
+    """稳定唯一键：有招生编码用编码(+校名兜底唯一,如同码多校区)，无编码用 type:name。"""
+    return f"{code}:{name}" if code else f"{type_}:{name}"
+
+
 def build_unified(result: dict) -> list:
     """从 build_result 的结果片段拼出 schools_unified[]。"""
     out, by_name = [], {}
+    # 公办坐标/地图显示属性(颜色/档位/full|small)在 result.points 里，按名取出补进 unified，
+    # 使 schools_unified 成为地图的唯一数据源。
+    pts = {p.get("name"): p for p in (result.get("points") or [])}
 
     # ① 公办普高（统招渠道；后续可能再挂 统筹/校额）
     for c in result.get("public_list", []):
         n = c.get("nearest") or {}
+        pt = pts.get(c["name"]) or {}
         s = _school(c["name"], "公办普高", result.get("district"),
-                    None, None, c.get("address"), c.get("address_confidence"),
+                    pt.get("lat"), pt.get("lon"), c.get("address"), c.get("address_confidence"),
                     c.get("boarding"), c.get("level"), c.get("style"),
                     c.get("tags"), c.get("gaokao"),
                     {"km": n.get("km"), "mins": n.get("mins"), "over_max": c.get("over_max")} if n else None)
+        s["school_code"] = c.get("school_code")
+        s["map"] = {"color": pt.get("color"), "band": pt.get("band"), "kind": pt.get("kind")}
         s["channels"].append(_ch("统招", c.get("band"), "district_rank",
                                  refRank=c.get("ref_rank"), lines=c.get("score_lines"),
                                  caveat=("不在报名范围" if not c.get("reportable") else None)))
@@ -92,6 +103,7 @@ def build_unified(result: dict) -> list:
         s = _school(p["name"], "/".join(types) or "民办/国际", result.get("district"),
                     loc.get("lat"), loc.get("lon"), loc.get("address"), loc.get("confidence"),
                     p.get("boarding"), p.get("nature"), None, None, None, p.get("dist"))
+        s["school_code"] = p.get("code")
         s["extra"] = {"tuition": p.get("tuition"), "curriculum": p.get("curriculum"),
                       "direction": p.get("direction"), "in_minban": p.get("in_minban_list"),
                       "in_intl": p.get("in_intl_list")}
@@ -134,4 +146,7 @@ def build_unified(result: dict) -> list:
                                  caveat="新校无历史线,不做研判;看体系+可类比校+说明会"))
         out.append(s)
 
+    # 统一打 uid(有编码用编码,无则 type:name)；地图标记与详情面板均以此为键
+    for s in out:
+        s["uid"] = _uid(s.get("school_code"), s["type"], s["name"])
     return out
