@@ -1645,9 +1645,10 @@ const tcOptions: string[] = []
 /* 底图保持清晰可读：注记已用 tileSize:128 缩小不再扎眼，故不再做大幅洗白。
    仅轻微降饱和让色调与界面协调，全对比、全透明保证街道/注记清楚。
    filter 只作用瓦片层，markerPane 不受影响，彩色学校标记照常凸显。 */
+/* 底图压低调：大幅去饱和 + 提亮 + 微降对比，让彩色学校 pin 跳出来 */
 #zmap :deep(.leaflet-tile-pane) {
-  filter: saturate(0.92);
-  opacity: 1;
+  filter: saturate(0.4) brightness(1.08) contrast(0.93);
+  opacity: 0.92;
 }
 /* 学校名常驻标签：紧凑、用界面字体，半透明白底，无箭头 */
 #zmap :deep(.map-lbl) {
