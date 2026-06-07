@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, computed, nextTick, onMounted, onUnmounted, watch } from 'vue'
-import { api, type ReportResp } from './api'
+import { api, type ReportResp, type ManualChoicesResp, type TraceQuestion } from './api'
 
 const step = ref(0)                       // 0 首屏 1 上传 2 小分 3 分析 4 报告
 // step1 子阶段：pick 选图 / detecting 识别中 / confirm 确认 / failed 识别失败
@@ -22,6 +22,12 @@ const report = ref<ReportResp | null>(null)
 const errorMsg = ref('')
 let pollTimer: number | undefined
 
+// step5 选择题人工确认
+const manual = ref<ManualChoicesResp | null>(null)
+const manualChoices = ref<Record<string, string>>({})   // 可编辑：Qx → 字母
+const manualBusy = ref(false)
+const showAllChoices = ref(false)
+
 
 const STAGES = [
   '识别考试信息（区/科目/年份）',
@@ -37,7 +43,8 @@ const stepperSteps = ['答题卡', '分析', '报告']
 const journeyStage = computed(() => {
   if (step.value === 0) return 0
   if (step.value === 1 || step.value === 2) return 1   // 答题卡 阶段含判分方式
-  if (step.value === 3) return 2                       // 分析中
+  if (step.value === 5) return 1                        // 选择题人工确认 仍属答题卡
+  if (step.value === 3) return 2                        // 分析中
   return 3                                              // step 4 报告
 })
 function stepState(n: number) {
@@ -156,6 +163,7 @@ function resetToStart() {
   analysisId.value = null; report.value = null
   photos.value = []; photoUrls.value = []
   detected.value = null; scoreFile.value = null; stageIdx.value = 0
+  manual.value = null; manualChoices.value = {}; showAllChoices.value = false
   errorMsg.value = ''
 }
 
@@ -171,6 +179,9 @@ function startPolling() {
         clearInterval(pollTimer)
         report.value = await api.report(id)
         step.value = 4
+      } else if (s.status === 'need_manual') {
+        clearInterval(pollTimer)
+        await enterManual(id)
       } else if (s.status === 'failed') {
         clearInterval(pollTimer)
         errorMsg.value = '分析失败：' + s.error
@@ -180,6 +191,54 @@ function startPolling() {
   tick()
   pollTimer = window.setInterval(tick, 2500)
 }
+// need_manual → 拉取识别 trace，进入选择题人工确认页（step5）
+async function enterManual(id: string) {
+  try {
+    const m = await api.getManualChoices(id)
+    manual.value = m
+    // 编辑态初始化：以识别值为底，逐题可改
+    const init: Record<string, string> = { ...(m.current || {}) }
+    for (const q of m.recognition_trace?.questions || [])
+      if (!init['Q' + q.qid]) init['Q' + q.qid] = q.final || ''
+    manualChoices.value = init
+    showAllChoices.value = false
+    step.value = 5
+  } catch (e: any) {
+    errorMsg.value = '加载待确认选择题失败：' + e.message
+  }
+}
+// 已对齐则按 trace 逐题展示；先列待确认（黄/红），高置信题折叠
+const traceQs = computed<TraceQuestion[]>(() =>
+  (manual.value?.recognition_trace?.aligned &&
+    manual.value?.recognition_trace?.questions) || [])
+const reviewQs = computed(() => traceQs.value.filter(q => q.status !== 'green'))
+const greenQs = computed(() => traceQs.value.filter(q => q.status === 'green'))
+// 未对齐兜底：直接列 current 的所有选择题
+const plainQids = computed(() =>
+  traceQs.value.length ? [] :
+    Object.keys(manual.value?.current || {})
+      .sort((a, b) => (+a.slice(1)) - (+b.slice(1))))
+function setManual(qid: string, letter: string) {
+  manualChoices.value = { ...manualChoices.value, [qid]: letter }
+}
+function densPct(q: TraceQuestion, L: string) {
+  return Math.round((q.probe?.dens?.[L] || 0) * 100)
+}
+function statusLabel(s: string) {
+  return s === 'red' ? '未识别' : s === 'yellow' ? '请确认' : '高置信'
+}
+async function submitManual() {
+  if (!analysisId.value) return
+  manualBusy.value = true; errorMsg.value = ''
+  try {
+    await api.submitManualChoices(analysisId.value, manualChoices.value)
+    step.value = 3
+    startPolling()
+  } catch (e: any) {
+    errorMsg.value = '提交失败：' + e.message
+  } finally { manualBusy.value = false }
+}
+
 onMounted(async () => {
   try { coverage.value = await api.coverage() } catch {}
 })
@@ -634,8 +693,83 @@ const wrongByNum = computed(() => {
       </template>
     </div>
 
-    <!-- 底部按钮 -->
-    <div v-show="step!==0 && step!==3" class="action-bar">
+    <!-- Step 5 选择题人工确认 -->
+    <div v-show="step===5" class="scroll-area">
+      <div class="card mc-intro">
+        <div class="section-title" style="margin-bottom:4px">✋ 请核对选择题识别结果</div>
+        <div class="section-desc">系统对部分选择题把握不足。请确认或修改后再继续，避免报告大面积判错。</div>
+        <ul v-if="manual?.reliability?.reasons?.length" class="mc-reasons">
+          <li v-for="(r,i) in manual.reliability.reasons" :key="i">{{ r }}</li>
+        </ul>
+        <div v-if="manual?.recognition_trace?.summary" class="mc-tally">
+          <span class="t-red">🔴 未识别 {{ manual.recognition_trace.summary.red }}</span>
+          <span class="t-yellow">🟡 请确认 {{ manual.recognition_trace.summary.yellow }}</span>
+          <span class="t-green">🟢 高置信 {{ manual.recognition_trace.summary.green }}</span>
+        </div>
+      </div>
+
+      <!-- 对齐：先列需确认（黄/红），高置信题折叠 -->
+      <template v-if="traceQs.length">
+        <div class="section-title" v-if="reviewQs.length">需你确认（{{ reviewQs.length }} 题）</div>
+        <div v-for="q in reviewQs" :key="q.qid" class="card mc-q" :class="q.status">
+          <div class="mc-q-head">
+            <span class="mc-num">第 {{ q.qid }} 题</span>
+            <span class="mc-flag" :class="q.status">{{ statusLabel(q.status) }}</span>
+          </div>
+          <div class="mc-reason">{{ q.reason }}</div>
+          <div class="mc-dens">
+            <div v-for="L in ['A','B','C','D']" :key="L" class="mc-dens-row">
+              <span class="mc-dens-l">{{ L }}</span>
+              <div class="mc-dens-track"><div class="mc-dens-fill" :style="{ width: densPct(q,L) + '%' }"></div></div>
+            </div>
+          </div>
+          <div class="mc-pick">
+            <button v-for="L in ['A','B','C','D']" :key="L"
+                    class="mc-opt" :class="{ on: manualChoices['Q'+q.qid]===L }"
+                    @click="setManual('Q'+q.qid, L)">{{ L }}</button>
+          </div>
+        </div>
+
+        <button v-if="greenQs.length" class="btn btn-ghost btn-sm mc-toggle"
+                @click="showAllChoices = !showAllChoices">
+          {{ showAllChoices ? '收起' : ('其余 ' + greenQs.length + ' 题已高置信，点此核对') }}
+        </button>
+        <div v-if="showAllChoices">
+          <div v-for="q in greenQs" :key="q.qid" class="card mc-q green compact">
+            <div class="mc-q-head">
+              <span class="mc-num">第 {{ q.qid }} 题</span>
+              <span class="mc-flag green">高置信</span>
+            </div>
+            <div class="mc-pick">
+              <button v-for="L in ['A','B','C','D']" :key="L"
+                      class="mc-opt" :class="{ on: manualChoices['Q'+q.qid]===L }"
+                      @click="setManual('Q'+q.qid, L)">{{ L }}</button>
+            </div>
+          </div>
+        </div>
+      </template>
+
+      <!-- 未对齐兜底：直接列所有选择题 -->
+      <template v-else>
+        <div class="section-title">请逐题核对选择题（{{ plainQids.length }} 题）</div>
+        <div v-for="qid in plainQids" :key="qid" class="card mc-q compact">
+          <div class="mc-q-head"><span class="mc-num">{{ qid }}</span></div>
+          <div class="mc-pick">
+            <button v-for="L in ['A','B','C','D']" :key="L"
+                    class="mc-opt" :class="{ on: manualChoices[qid]===L }"
+                    @click="setManual(qid, L)">{{ L }}</button>
+          </div>
+        </div>
+      </template>
+
+      <button class="btn btn-primary mc-submit" :disabled="manualBusy" @click="submitManual">
+        {{ manualBusy ? '提交中…' : '确认并继续分析' }}
+      </button>
+      <div v-if="errorMsg" class="mc-err">{{ errorMsg }}</div>
+    </div>
+
+    <!-- 底部按钮（step5 选择题确认页用页内按钮，不走通用底栏）-->
+    <div v-show="step!==0 && step!==3 && step!==5" class="action-bar">
       <button v-if="step===4 || step===2" class="btn btn-ghost btn-sm btn-secondary" @click="prev">
         {{ step===4 ? '重新开始' : '上一步' }}
       </button>
@@ -960,4 +1094,40 @@ const wrongByNum = computed(() => {
 .wrong-q .reason { font-size:13px; color:var(--gray-800); background:var(--accent-bg);
   padding:8px 10px; border-radius:6px; margin-top:6px; }
 .wrong-q .reason b { color:#B45309; }
+
+/* ---- step5 选择题人工确认 ---- */
+.mc-intro { background:var(--warning-bg); border:1px solid var(--warning); }
+.mc-reasons { margin:8px 0 0; padding-left:18px; font-size:12.5px; color:var(--gray-700); }
+.mc-reasons li { margin:2px 0; }
+.mc-tally { display:flex; gap:12px; margin-top:10px; font-size:12.5px; font-weight:600; }
+.mc-tally .t-red { color:var(--error); }
+.mc-tally .t-yellow { color:#B45309; }
+.mc-tally .t-green { color:var(--success); }
+.mc-q { border-left:3px solid var(--gray-200); }
+.mc-q.yellow { border-left-color:var(--warning); }
+.mc-q.red { border-left-color:var(--error); }
+.mc-q.green { border-left-color:var(--success); }
+.mc-q.compact { padding:10px 14px; }
+.mc-q-head { display:flex; align-items:center; gap:8px; }
+.mc-num { font-size:14px; font-weight:600; }
+.mc-flag { font-size:11px; padding:1px 7px; border-radius:10px; font-weight:600; }
+.mc-flag.yellow { background:var(--warning-bg); color:#B45309; }
+.mc-flag.red { background:#FEE2E2; color:var(--error); }
+.mc-flag.green { background:#DCFCE7; color:var(--success); }
+.mc-reason { font-size:12.5px; color:var(--gray-600); margin:6px 0 8px; line-height:1.6; }
+.mc-dens { margin:8px 0; }
+.mc-dens-row { display:flex; align-items:center; gap:8px; margin:3px 0; }
+.mc-dens-l { width:14px; font-size:12px; color:var(--gray-500); font-weight:600; }
+.mc-dens-track { flex:1; height:8px; background:var(--gray-100); border-radius:4px; overflow:hidden; }
+.mc-dens-fill { height:100%; background:var(--brand); border-radius:4px; transition:width .2s; }
+.mc-pick { display:flex; gap:8px; margin-top:8px; }
+.mc-opt { flex:1; height:42px; border:1.5px solid var(--gray-200); background:var(--surface);
+  border-radius:10px; font-size:16px; font-weight:600; color:var(--gray-700);
+  cursor:pointer; user-select:none; transition:all .12s; }
+.mc-opt:active { transform:scale(0.96); }
+.mc-opt.on { background:var(--brand); border-color:var(--brand); color:#fff;
+  box-shadow:0 2px 8px rgba(37,99,235,0.25); }
+.mc-toggle { width:100%; margin:2px 0 10px; }
+.mc-submit { width:100%; margin-top:8px; }
+.mc-err { color:var(--error); font-size:13px; text-align:center; margin-top:10px; }
 </style>

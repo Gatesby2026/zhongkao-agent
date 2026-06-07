@@ -20,6 +20,26 @@ export interface ReportResp {
   score_source: 'teacher' | 'auto';
 }
 
+export interface TraceQuestion {
+  qid: number; final: string; conf: number;
+  status: 'green' | 'yellow' | 'red'; reason: string;
+  probe: {
+    pred: string; margin: number; dens: Record<string, number>;
+    cells?: Record<string, [number, number]>; h?: number; page?: string;
+  };
+  reader: { method: string; pred: string | null; missing: string[] };
+  tiebreak: { vlm: string; result: string } | null;
+}
+export interface ManualChoicesResp {
+  id: string; status: string;
+  reliability: { reliable?: boolean; reasons?: string[]; need_manual_qids?: number[] };
+  current: Record<string, string>;
+  recognition_trace: {
+    questions?: TraceQuestion[]; aligned?: boolean;
+    summary?: { total: number; green: number; yellow: number; red: number; need_review: number[] };
+  };
+}
+
 async function j<T>(r: Response): Promise<T> {
   if (!r.ok) throw new Error(`${r.status} ${await r.text()}`)
   return r.json()
@@ -55,6 +75,15 @@ export const api = {
   },
   async status(id: string): Promise<StatusResp> {
     return j(await fetch(`/api/analyses/${id}/status`))
+  },
+  async getManualChoices(id: string): Promise<ManualChoicesResp> {
+    return j(await fetch(`/api/analyses/${id}/manual-choices`))
+  },
+  async submitManualChoices(id: string, choices: Record<string, string>) {
+    return j(await fetch(`/api/analyses/${id}/manual-choices`, {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ choices }),
+    }))
   },
   async report(id: string): Promise<ReportResp> {
     return j(await fetch(`/api/analyses/${id}/report`))
