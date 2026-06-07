@@ -1006,9 +1006,10 @@ function prefillTongchou() {
   // 统筹在统招前·录取即锁定：只填"你估分≤其统招线"的 reach（够一够的 upgrade；没中自动落到统招、无损失）；
   // 排除稳/保（你高于其线=会被锁进比你弱的外区校=陷阱）与线待核。排序从高到低：够不上→搏→冲。
   // 入选优先级：搏(更值得拼)→冲→够不上(仅兜底回填空位)；展示按从高到低（够不上→搏→冲）
+  // 通勤同口径(跟随住宿勾选)：≤上限 或 (接受住宿 且 该校提供住宿)；远校无住宿=没法住校又通勤不了→排除
   const tier = (d: number) => (d < -20 ? 2 : d < -10 ? 0 : 1)
   const cand = tcEligible.value
-    .filter(e => e.j.d != null && (e.j.d as number) <= 0)
+    .filter(e => e.j.d != null && (e.j.d as number) <= 0 && reachByCommute(e.s.dist?.km, !!e.s.boarding))
     .sort((a, b) => {
       const ta = tier(a.j.d as number), tb = tier(b.j.d as number)
       return ta !== tb ? ta - tb : (a.j.d as number) - (b.j.d as number)
@@ -1589,7 +1590,7 @@ const tcOptions: string[] = []
                 <span class="us-b band-冲">{{ tcSummary.cnt['搏'] }} 搏</span>
                 <span class="us-b band-稳">{{ tcSummary.cnt['冲'] }} 冲</span>
               </div>
-              <p class="us-tip">⚠️ 统筹在<b>统招之前录取、录取即锁定</b>：<b>只自动填"你估分≤其统招线、统招够不上的外区 upgrade"</b>（没中自动落到统招、无损失）；<b>你已高于其线的（稳/保）一律不填</b>——否则会锁进比朝阳统招更差的外区校。从高到低排（够不上→搏→冲）。完整名单（含被排除的）见「<a class="lnk" @click="goTab('explore')">🔎 查学校</a>」筛"可走统筹"，可手动添加。</p>
+              <p class="us-tip">⚠️ 统筹在<b>统招之前录取、录取即锁定</b>：<b>只自动填"你估分≤其统招线、统招够不上的外区 upgrade"</b>（没中自动落到统招、无损失）；<b>你已高于其线的（稳/保）一律不填</b>——否则会锁进比朝阳统招更差的外区校。从高到低排（够不上→搏→冲）。<b>统筹多为外区/郊区远校，按通勤口径过滤(跟随住宿勾选)：≤上限 或 该校提供住宿；远校无住宿(没法住校又通勤不了)已排除——未勾住宿时统筹可能几乎为空。</b>完整名单（含被排除的）见「<a class="lnk" @click="goTab('explore')">🔎 查学校</a>」筛"可走统筹"，可手动添加。</p>
             </div>
             <div v-if="tcEligible.length" class="draft-actions" style="margin:6px 0">
               <button class="ghost" @click="prefillTongchou">↻ 按研判重填</button>
@@ -1601,7 +1602,7 @@ const tcOptions: string[] = []
                   <span class="slot-no" :class="{ on: s.school }">{{ i + 1 }}</span>
                   <select v-model="s.school" class="school-sel uni-sel">
                     <option :value="null">＋ 选统筹校</option>
-                    <option v-for="e in tcEligible" :key="e.key" :value="e.key">[{{ e.j.label }}] {{ e.tier }}·{{ cleanName(e.s.name) }}{{ e.s.campus ? '·' + e.s.campus : '' }}（投朝阳{{ e.s.quota_chaoyang }}）</option>
+                    <option v-for="e in tcEligible" :key="e.key" :value="e.key">[{{ e.j.label }}] {{ e.tier }}·{{ cleanName(e.s.name) }}{{ e.s.campus ? '·' + e.s.campus : '' }}（投朝阳{{ e.s.quota_chaoyang }}{{ e.s.dist ? ' · ' + e.s.dist.km + 'km' : '' }}{{ e.s.boarding ? ' · 🛏' : ' · 无住宿' }}）</option>
                   </select>
                   <input v-if="s.school" v-model="s.majors" class="early-input" style="flex:1;min-width:0" placeholder="专业(班)手填" />
                   <span v-else class="uni-empty">未选</span>
