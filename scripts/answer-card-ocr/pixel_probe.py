@@ -66,7 +66,10 @@ def probe(image_path, n_expected=8):
             top, second = ranked[0], ranked[1]
             margin = round(top[1] - second[1], 3)
             res[qid] = {'pred': top[0], 'margin': margin, 'dens': dens,
-                        'ocr_missing': g['ocr_missing']}
+                        'ocr_missing': g['ocr_missing'],
+                        'cells': {L: [int(cx), int(cy)]
+                                  for L, (cx, cy) in g['cells'].items()},
+                        'h': int(g['h'])}
             qid += 1
     return res
 

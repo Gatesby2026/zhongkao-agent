@@ -68,8 +68,11 @@ def build_trace(image_path):
             'conf': conf,
             'status': status,
             'reason': reason,
-            'probe': {'pred': pred, 'margin': margin, 'dens': dens},
+            'probe': {'pred': pred, 'margin': margin, 'dens': dens,
+                      'cells': v.get('cells', {}), 'h': v.get('h', 0),
+                      'page': Path(image_path).name},
             'reader': {'method': '缺字母', 'pred': reader, 'missing': missing},
+            'tiebreak': None,
         })
     summ = {'total': len(questions),
             'green': sum(q['status'] == 'green' for q in questions),
@@ -77,6 +80,86 @@ def build_trace(image_path):
             'red': sum(q['status'] == 'red' for q in questions)}
     summ['need_review'] = [q['qid'] for q in questions if q['status'] != 'green']
     return {'questions': questions, 'summary': summ}
+
+
+_TIEBREAK_PROMPT = (
+    "这是一道单选题的填涂区，水平排列着 A、B、C、D 四个选项框。"
+    "请判断学生用铅笔或黑笔涂黑(填涂)了哪一个选项。"
+    "只看哪个被明显涂黑，不要根据对错猜测。"
+    "若无法确定或四个都没涂，输出空字符串。"
+    '严格返回 JSON：{"filled":"A"} 或 {"filled":""}。'
+)
+
+
+def vlm_tiebreak(trace, detect_map, photos_dir, single_choice_qnums, cap=12):
+    """对"探针 vs 识别分歧"的单选题做 VLM 逐题放大打平局。
+
+    detect_map: {qnum:int -> letter:str}（识别/Method D 给的单字母答案）
+    保守纠正：仅当 **探针 与 VLM 放大两源一致且 != 识别** 才覆盖识别。
+    返回 (corrections:{qnum->letter}, n_disagree:int)。
+    """
+    from PIL import Image, ImageOps
+    import vlm_choice
+
+    sc = set(single_choice_qnums)
+    cand = []
+    if trace.get('aligned'):
+        for q in trace['questions']:
+            qn = q['qid']
+            d = detect_map.get(qn, '')
+            p = q['final']
+            if qn in sc and d and p and d != p and q['status'] != 'red':
+                cand.append(q)
+    corrections = {}
+    if not cand or len(cand) > cap:   # 无分歧 / 大面积崩盘(交门禁兜底)
+        return corrections, len(cand)
+
+    client = vlm_choice._client()
+    cache = {}
+    for q in cand:
+        cells = q['probe'].get('cells') or {}
+        page = q['probe'].get('page')
+        if len(cells) < 4 or not page:
+            continue
+        if page not in cache:
+            cache[page] = ImageOps.exif_transpose(
+                Image.open(Path(photos_dir) / page)).convert('RGB')
+        im = cache[page]
+        xs = [c[0] for c in cells.values()]
+        cy = cells['A'][1]
+        h = q['probe'].get('h') or 30
+        step = (max(xs) - min(xs)) / 3 if len(xs) > 1 else 40
+        box = (max(0, int(min(xs) - step)), max(0, int(cy - h * 1.6)),
+               min(im.width, int(max(xs) + step)), min(im.height, int(cy + h * 1.6)))
+        crop = im.crop(box)
+        crop = crop.resize((crop.width * 3, crop.height * 3), Image.LANCZOS)
+        try:
+            data = vlm_choice._call(client, crop, _TIEBREAK_PROMPT, max_tokens=64)
+        except Exception:
+            continue
+        v = str(data.get('filled', '')).strip().upper()[:1]
+        d, p = detect_map.get(q['qid'], ''), q['probe']['pred']
+        if v == p and v != d:                      # 探针+VLM 两源压识别 → 纠正
+            q['final'], q['status'], q['conf'] = v, 'green', 0.9
+            q['reason'] = f'探针+VLM放大一致({v})，纠正识别({d})'
+            q['tiebreak'] = {'vlm': v, 'result': 'override'}
+            corrections[q['qid']] = v
+        elif v == d:                                # VLM 支持识别 → 维持
+            q['final'], q['status'], q['conf'] = d, 'green', 0.85
+            q['reason'] = f'VLM放大支持识别({d})'
+            q['tiebreak'] = {'vlm': v, 'result': 'confirm'}
+        else:                                       # 三方各执一词 → 留人工
+            q['reason'] = f'三方分歧(探针{p}/识别{d}/VLM{v or "?"})，建议人工'
+            q['tiebreak'] = {'vlm': v, 'result': 'unresolved'}
+
+    qs = trace['questions']
+    trace['summary'] = {
+        'total': len(qs),
+        'green': sum(x['status'] == 'green' for x in qs),
+        'yellow': sum(x['status'] == 'yellow' for x in qs),
+        'red': sum(x['status'] == 'red' for x in qs),
+        'need_review': [x['qid'] for x in qs if x['status'] != 'green']}
+    return corrections, len(cand)
 
 
 def build_trace_pages(image_paths):

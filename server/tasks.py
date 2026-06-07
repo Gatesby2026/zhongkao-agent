@@ -301,11 +301,38 @@ def _pipeline(aid: str, student_dir: Path):
                 import recognition_trace as _rt  # noqa
                 rtrace = _rt.build_trace_pages([str(p) for p in imgs_filtered])
                 _rt.align_to_qnums(rtrace, choice_qnums)
+                # VLM 逐题放大打平局：探针 vs 识别分歧的单选题，放大重读定夺；
+                # 仅"探针+VLM 两源一致且 != 识别"才纠正（保守），其余维持识别。
+                sc_qnums = _kb_single_choice_qnums(Path(yaml_path))
+                det_map = {}
+                for a in getattr(res, "answers", []):
+                    if a.get("type") in ("choice", "multi_choice"):
+                        f = a.get("filled")
+                        n = int(str(a["qId"]).lstrip("Q") or 0)
+                        det_map[n] = (f[0] if isinstance(f, list) and f
+                                      else (f or ""))
+                corrections, _nd = _rt.vlm_tiebreak(
+                    rtrace, det_map, photos_dir, sc_qnums)
                 ac_path = student_dir / "answer-card.json"
                 _ac = json.loads(ac_path.read_text(encoding="utf-8"))
+                for a in _ac.get("answers", []):
+                    n = int(str(a.get("qId", "")).lstrip("Q") or 0)
+                    if n in corrections:
+                        a["filled"] = corrections[n]
+                        a["confidence"] = 0.9
+                        a["source"] = "vlm_tiebreak"
+                # 同步内存中的 res.answers，让后续门禁用纠正后的值
+                for a in getattr(res, "answers", []):
+                    n = int(str(a.get("qId", "")).lstrip("Q") or 0)
+                    if n in corrections:
+                        a["filled"] = corrections[n]
+                        a["confidence"] = 0.9
+                        a["source"] = "vlm_tiebreak"
                 _ac.setdefault("_data_quality", {})["recognition_trace"] = rtrace
                 ac_path.write_text(
                     json.dumps(_ac, ensure_ascii=False, indent=2), encoding="utf-8")
+                if corrections:
+                    print(f"[_pipeline {aid}] VLM打平局纠正 {corrections}", flush=True)
             except Exception as _e:  # noqa
                 print(f"[_pipeline {aid}] recognition_trace 失败(忽略): {_e}",
                       flush=True)
