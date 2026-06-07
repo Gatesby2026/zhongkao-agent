@@ -523,7 +523,7 @@ const selectable = computed<Card[]>(() => {
       if (c.school_code) out.push(c)
     }
   }
-  return out
+  return dedupeByCode(out)
 })
 function bandOf(name: string | null): string {
   const res = result.value
@@ -535,14 +535,49 @@ function bandOf(name: string | null): string {
 }
 function majorsOf(name: string | null): Major[] {
   if (!name) return []
-  return findCard(name)?.majors || []
+  const c = findCard(name)
+  if (!c) return []
+  return (c.school_code && mergedMajorsByCode.value[c.school_code]) || c.majors || []
+}
+// 同一录取代码 = 同一志愿单位：把各校区/专业合并；02 等校区专业名后标注校区便于区分
+const mergedMajorsByCode = computed<Record<string, Major[]>>(() => {
+  const res = result.value
+  const m: Record<string, Major[]> = {}
+  if (!res) return m
+  for (const band of ['冲', '稳', '保', '够不上']) {
+    for (const c of (res.bands[band] || [])) {
+      const code = c.school_code
+      if (!code) continue
+      const mm = c.name.match(/（(.+?)）/)
+      const campus = mm ? mm[1].replace('校区', '').replace('高中', '') : ''
+      if (!m[code]) m[code] = []
+      const have = new Set(m[code].map(x => x.major_code))
+      for (const mj of (c.majors || [])) {
+        if (have.has(mj.major_code)) continue
+        m[code].push(campus ? { ...mj, major_name: mj.major_name + '（' + campus + '）' } : mj)
+        have.add(mj.major_code)
+      }
+    }
+  }
+  return m
+})
+// 按录取代码去重（保留本部：名称不含"校区/（"者优先）
+function dedupeByCode(cards: Card[]): Card[] {
+  const best: Record<string, Card> = {}
+  const order: string[] = []
+  for (const c of cards) {
+    const code = c.school_code || c.name
+    if (!best[code]) { best[code] = c; order.push(code) }
+    else if (/校区|（/.test(best[code].name) && !/校区|（/.test(c.name)) best[code] = c
+  }
+  return order.map(code => best[code])
 }
 // 12 志愿缺省冲稳保配比（均衡）。每档内部按 2025 录取位次升序（够得着的最好校在前）
 const STRAT: Record<string, number> = { 冲: 3, 稳: 5, 保: 4 }
 function bandPool(band: string): Card[] {
   const res = result.value
   if (!res) return []
-  return (res.bands[band] || []).filter(c => c.school_code)
+  return dedupeByCode((res.bands[band] || []).filter(c => c.school_code))
     .slice().sort((a, b) => (Number(a.ref_rank) || 9e9) - (Number(b.ref_rank) || 9e9))
 }
 function isReachableCard(c: Card): boolean {
@@ -580,8 +615,9 @@ function resetDraft() {
   const plan = buildUniPlan()
   draft.value = Array.from({ length: ZHIYUAN_SLOTS }, (_, i) => {
     const c = plan[i]
+    const mj = c ? (mergedMajorsByCode.value[c.school_code || ''] || c.majors || []) : []
     return c
-      ? { name: c.name, picks: (c.majors || []).slice(0, 2).map(m => m.major_code) }
+      ? { name: c.name, picks: mj.slice(0, 2).map(m => m.major_code) }
       : { name: null, picks: [] }
   })
 }
