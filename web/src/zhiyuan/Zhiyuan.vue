@@ -215,7 +215,8 @@ async function submit() {
 // 选中学校 → 右侧详情面板（替代地图气泡）
 const selectedPoint = ref<Point | null>(null)
 const selectedTc = ref<any>(null)   // 选中统筹校时的结构化数据（右侧详情用）
-function selectPoint(p: Point) { selectedPoint.value = p; selectedTc.value = null }
+const selectedNew = ref<any>(null)  // 选中 2026 新校时的结构化数据
+function selectPoint(p: Point) { selectedPoint.value = p; selectedTc.value = null; selectedNew.value = null }
 // 由点位反查冲稳保卡片：多校区点名形如 "和平街一中·和平街校区(...)"，取 · 前主名匹配
 function cardOfPoint(p: Point | null): Card | null {
   if (!p) return null
@@ -326,6 +327,20 @@ function renderMarkers() {
     } else {
       mk.bindTooltip(lbl, { direction: 'top', offset: [0, -6], className: 'map-lbl' })
     }
+  })
+  // 2026 新增公办普高：随"公办普高"图层显示，用"新"pin（有住宿带"宿"角标），无研判
+  ;((res as any).new_schools?.schools || []).forEach((s: any) => {
+    if (!s.lat || !s.lon) return
+    const np: Point = {
+      name: s.name, lat: s.lat, lon: s.lon, kind: 'small', color: '#8e44ad',
+      band: '新', level: '2026 新增·无历史线', rank: '—', margin: '—',
+      dist: s.dist ? `${s.dist.km}km · ${s.dist.mins}分钟（${s.dist.label}）` : '距离未知',
+      hist: '', style: '', note: '', reason: '', tags: [], gaokao: '', matched: [],
+    }
+    L.marker([s.lat, s.lon], { icon: pin('#8e44ad', '新', s.boarding === true) }).addTo(publicLayer)
+      .on('click', () => { selectPoint(np); selectedNew.value = s })
+      .bindTooltip(shortName(s.name), { permanent: true, direction: 'bottom', offset: [0, 2], className: 'map-lbl' })
+    if (layers.gongban) bounds.push([s.lat, s.lon])
   })
   if (layers.gongban || layers.coop) publicLayer.addTo(mapInst)
 
@@ -970,6 +985,27 @@ const tcOptions: string[] = []
                 <div v-if="selectedTc.gaokao" class="dp-line dp-muted">🎓 高考(民间·非官方)：{{ selectedTc.gaokao }}</div>
                 <div class="dp-line dp-muted">📍 {{ selectedTc.address }}</div>
                 <div class="dp-line dp-warn">⚠️ 比的是<b>统招线</b>(非统筹实际线，统筹线通常更低、偏保守)；能否录取看朝外当年报该校统筹的名次，以《简章》为准。</div>
+              </div>
+
+              <!-- 2026 新校信息（无历史线，代理参考） -->
+              <div v-if="selectedNew" class="dp-block dp-tc">
+                <div class="dp-title">🆕 2026 新增公办普高（无历史线）</div>
+                <dl class="dp-kv">
+                  <div><dt>办学体系</dt><dd>{{ selectedNew.system }}</dd></div>
+                  <div><dt>办学层次</dt><dd>{{ selectedNew.level || '待核' }}</dd></div>
+                  <div><dt>招生方向</dt><dd>{{ selectedNew.direction || '待核' }}</dd></div>
+                  <div v-if="selectedNew.analog && selectedNew.analog.length"><dt>可类比参考</dt><dd>{{ selectedNew.analog.join('、') }}</dd></div>
+                  <div><dt>通勤（到家）</dt>
+                    <dd v-if="selectedNew.dist">{{ selectedNew.dist.km }}km · {{ selectedNew.dist.mins }}分钟<small>（{{ selectedNew.dist.label }}）</small></dd>
+                    <dd v-else class="dp-muted">填家庭住址后显示</dd></div>
+                  <div><dt>住宿</dt>
+                    <dd><span v-if="selectedNew.boarding === true" class="t-yes">🛏 可住宿</span>
+                      <span v-else-if="selectedNew.boarding === false">不提供</span>
+                      <span v-else class="dp-muted">待核</span></dd></div>
+                </dl>
+                <div v-if="selectedNew.style" class="dp-line">🏫 {{ selectedNew.style }}</div>
+                <div class="dp-line dp-muted">📍 {{ selectedNew.address }}</div>
+                <div class="dp-line dp-warn">⚠️ 新校<b>无往年录取线</b>、不做冲/稳/保研判；招生计划官方约 6 月发布。判断看<b>办学体系 + 可类比校</b>，并参加学校招生说明会。</div>
               </div>
             </template>
             <div v-else class="dp-empty">
