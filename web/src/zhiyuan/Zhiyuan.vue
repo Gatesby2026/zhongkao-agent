@@ -995,10 +995,11 @@ const tcEligible = computed<any[]>(() => {
   return all.map(o => ({ key: tcKey(o.s), tier: o.tier, s: o.s, j: tcJudge(o.s) }))
 })
 function prefillTongchou() {
-  const order: Record<string, number> = { 稳: 0, 冲: 1, 搏: 2 }
+  // 统筹在统招前·录取即锁定：只填"你估分≤其统招线"的 reach（够一够的 upgrade；没中自动落到统招、无损失）；
+  // 排除稳/保（你高于其线=会被锁进比你弱的外区校=陷阱）与线待核。排序从高到低：够不上→搏→冲。
   const cand = tcEligible.value
-    .filter(e => order[e.j.label] != null)
-    .sort((a, b) => (order[a.j.label] - order[b.j.label]) || ((b.j.d ?? -99) - (a.j.d ?? -99)))
+    .filter(e => e.j.d != null && (e.j.d as number) <= 0)
+    .sort((a, b) => (a.j.d as number) - (b.j.d as number))
   draftTongchou.value = Array.from({ length: 4 }, (_, i) =>
     cand[i] ? { school: cand[i].key, majors: '' } : { school: null, majors: '' })
 }
@@ -1012,16 +1013,24 @@ function tcReason(key: string | null): { label: string; cls: string; headline: s
   if (s.boarding === true) factors.push('🛏可住宿')
   const lineTxt = j.line != null ? `统招线${j.line}·Δ${(j.d ?? 0) > 0 ? '+' : ''}${j.d}（你估≈${estScore.value}）` : '统招线待核'
   const headline = `${e.tier} · ${s.district} · 投朝阳 ${s.quota_chaoyang} 名 · ${lineTxt}`
-  let caveat = '统筹按全市分数竞争；比的是统招线、统筹实际线通常更低（偏保守）；⚠️朝外能否报该校 / 分到名额须查简章'
-  if (e.tier === '统筹一') caveat = '统筹一=名校本部、门槛高，对约 4000 名多为陪跑；' + caveat
-  return { label: j.label, cls: j.cls, headline, factors, caveat }
+  const isReach = j.d != null && (j.d as number) <= 0
+  const label = j.label === '够不上' ? '冲刺' : j.label
+  const cls = j.label === '够不上' ? 'band-刺' : j.cls
+  let caveat = isReach
+    ? '够一够外区名校的尝试：没中不影响统招（自动落到统招）；⚠️一旦录取即锁定、放弃统招——确认你确实更想去这所外区校再保留。'
+    : '⚠️你估分已高于其线，几乎必被录取并锁定、放弃统招——通常不如直接走朝阳统招，慎填。'
+  caveat += '统筹全市按分竞争（比的是统招线、统筹实际线通常更低）；朝外能否报该校 / 分到名额须查简章。'
+  if (e.tier === '统筹一') caveat = '统筹一=名校本部、门槛高；' + caveat
+  return { label, cls, headline, factors, caveat }
 }
 const tcSummary = computed(() => {
-  const cnt: Record<string, number> = { 稳: 0, 冲: 0, 搏: 0 }
+  const cnt: Record<string, number> = { 冲刺: 0, 搏: 0, 冲: 0 }
   for (const sl of draftTongchou.value) {
     if (!sl.school) continue
     const e = tcEligible.value.find(x => x.key === sl.school)
-    if (e && cnt[e.j.label] != null) cnt[e.j.label]++
+    if (!e) continue
+    const lab = e.j.label === '够不上' ? '冲刺' : e.j.label
+    if (cnt[lab] != null) cnt[lab]++
   }
   return { cnt, filled: draftTongchou.value.filter(sl => sl.school).length }
 })
@@ -1070,7 +1079,8 @@ function copyAll() {
 
 // 校额到校：按推荐(值得冲→相当，排除浪费，最好的在前)缺省填入志愿
 function prefillXed() {
-  const rec = xedRecommend.value.filter(e => e.tag === 'worth' || e.tag === 'similar' || e.tag === 'unknown')
+  // ②指标分配在统招前·录取即锁定：只填"统招够不上"的 upgrade（✅值得冲），不填≈相当/统招本可达（避免锁进同级或更低校）
+  const rec = xedRecommend.value.filter(e => e.tag === 'worth')
   draftXed.value = Array.from({ length: 8 }, (_, i) =>
     rec[i] ? { school: rec[i].school, majors: '' } : { school: null, majors: '' })
 }
@@ -1522,7 +1532,7 @@ const tcOptions: string[] = []
                 <span class="us-b band-冲">{{ xedSummary.cnt.worth }} 值得冲</span>
                 <span class="us-b band-稳">{{ xedSummary.cnt.similar }} 相当</span>
               </div>
-              <p class="us-tip">⚠️ 录取即锁定、后续作废：只填"统招够不上、校额才够得着"的好校（✅值得冲）；别填统招本可达的（占名额）。按本初中<b>校内排名 + 志愿顺序</b>录取，无官方各校线。</p>
+              <p class="us-tip">⚠️ 录取即锁定、后续作废：<b>只自动填 ✅值得冲（统招够不上的 upgrade）</b>；≈相当 / 统招本可达 不自动填（避免锁进同级或更低校，仍可在下拉手动加）。按本初中<b>校内排名 + 志愿顺序</b>录取，无官方各校线。</p>
             </div>
             <div v-if="xedEligible.length" class="draft-actions" style="margin:6px 0">
               <button class="ghost" @click="prefillXed">↻ 按推荐重填</button>
@@ -1558,12 +1568,12 @@ const tcOptions: string[] = []
             <!-- 市级统筹：结构化选择 + 缺省填报 + 逐志愿理由 -->
             <h4 class="batch-sub">市级统筹志愿<small style="font-weight:400;color:var(--gray-500)">（下拉=朝阳可报统筹校；机制见「<a class="lnk" @click="chSub = 'tc'; goTab('channels')">市级统筹</a>」页）</small></h4>
             <div v-if="tcEligible.length && tcSummary.filled" class="uni-summary">
-              <div class="us-line"><b>已填市级统筹 {{ tcSummary.filled }} 志愿</b>：
-                <span class="us-b band-稳">{{ tcSummary.cnt['稳'] }} 稳</span>
-                <span class="us-b band-冲">{{ tcSummary.cnt['冲'] }} 冲</span>
-                <span class="us-b band-刺">{{ tcSummary.cnt['搏'] }} 搏</span>
+              <div class="us-line"><b>已填市级统筹 {{ tcSummary.filled }} 志愿</b>（都是"够一够"的外区 upgrade）：
+                <span class="us-b band-刺">{{ tcSummary.cnt['冲刺'] }} 冲刺</span>
+                <span class="us-b band-冲">{{ tcSummary.cnt['搏'] }} 搏</span>
+                <span class="us-b band-稳">{{ tcSummary.cnt['冲'] }} 冲</span>
               </div>
-              <p class="us-tip">统筹按<b>全市分数竞争</b>（比的是统招线、统筹实际线通常更低、偏保守）。⚠️ <b>朝外能否报某统筹校 / 分到名额须查简章</b>；统筹一多为名校本部、对约 4000 名基本陪跑。完整名单+研判见「<a class="lnk" @click="goTab('explore')">🔎 查学校</a>」筛"可走统筹"。</p>
+              <p class="us-tip">⚠️ 统筹在<b>统招之前录取、录取即锁定</b>：<b>只自动填"你估分≤其统招线、统招够不上的外区 upgrade"</b>（没中自动落到统招、无损失）；<b>你已高于其线的（稳/保）一律不填</b>——否则会锁进比朝阳统招更差的外区校。从高到低排（够不上→搏→冲）。完整名单（含被排除的）见「<a class="lnk" @click="goTab('explore')">🔎 查学校</a>」筛"可走统筹"，可手动添加。</p>
             </div>
             <div v-if="tcEligible.length" class="draft-actions" style="margin:6px 0">
               <button class="ghost" @click="prefillTongchou">↻ 按研判重填</button>
