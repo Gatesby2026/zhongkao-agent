@@ -59,7 +59,7 @@ const XED_OFFICIAL = 'https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87193.html'
 // 校额到校：按初中查名额
 const showXedImg = ref(false)
 const xedQuery = ref(USER_DEFAULTS.chuzhong)
-const batchOpen = reactive({ early: true, ind: true, uni: true })   // 三批次折叠
+const batchOpen = reactive({ early: false, ind: false, uni: false })   // 三批次默认折叠
 const xedBlock = computed<XeddxBlock | null>(() => result.value?.xeddx || null)
 const xedSel = computed<XeddxRow | null>(() => {
   const b = xedBlock.value; const q = xedQuery.value.trim()
@@ -318,10 +318,8 @@ function renderMarkers() {
 
   publicLayer = L.layerGroup()
   res.points.forEach((p) => {
-    const coop = isCoopPoint(p)
-    // 图层过滤：gongban 控普通公办点，coop 控中外合作校
-    if (!layers.gongban && !(coop && layers.coop)) return
-    if (coop && !layers.coop && !layers.gongban) return
+    // 公办普高图层（中外合作校并入其中，不再单独图层；详情仍标“🌐中外合作班”）
+    if (!layers.gongban) return
     bounds.push([p.lat, p.lon])
     const boarding = !!cardOfPoint(p)?.boarding
     const icon = p.kind === 'full' ? pin(p.color, p.band, boarding) : smallIcon(p.color, boarding)
@@ -350,7 +348,7 @@ function renderMarkers() {
       .bindTooltip(shortName(s.name), { permanent: true, direction: 'bottom', offset: [0, 2], className: 'map-lbl' })
     if (layers.gongban) bounds.push([s.lat, s.lon])
   })
-  if (layers.gongban || layers.coop) publicLayer.addTo(mapInst)
+  if (layers.gongban) publicLayer.addTo(mapInst)
 
   // 民办/国际：按标拆两层（同一所若既民办又国际，两层都画）
   minbanLayer = L.layerGroup()
@@ -758,6 +756,16 @@ function deleteUni(i: number) {
   // 直接删除整行（想再加用"插入"）
   draft.value = draft.value.slice(0, i).concat(draft.value.slice(i + 1))
 }
+// 通用志愿行操作（提前招生 / 市级统筹 / 校额到校 都用这套，跟统招一致）：上移/下移/上方插入/删除
+function moveRow(a: any[], i: number, dir: number) {
+  const j = i + dir
+  if (j < 0 || j >= a.length) return
+  ;[a[i], a[j]] = [a[j], a[i]]
+}
+function insertRow(a: any[], i: number, make: () => any) { a.splice(i, 0, make()); a.pop() }
+function deleteRow(a: any[], i: number, make: () => any) { a.splice(i, 1); a.push(make()) }
+const mkText = () => ({ text: '' })
+const mkXed = () => ({ school: null, majors: '' })
 
 // 市级统筹（统筹一/二/三）方向说明。
 // ⚠️ 重要订正：曾用《朝阳指标分配计划·高中侧》里本区校（人朝/对外经贸/东师朝/清华附中朝阳·望京）的统筹名额数反推“朝阳可报统筹校”——这是把“高中对外供给的名额”误当成“朝阳考生可报”。
@@ -802,9 +810,18 @@ const tcOptions: string[] = []
     <!-- 输入区：全部条件常驻显示，方便反复改条件对比 -->
     <section class="card form">
       <div class="fields">
+        <label class="f-mode">考生身份
+          <select v-model="form.identity">
+            <option v-for="x in IDENTITIES" :key="x.v" :value="x.v">{{ x.label }}</option>
+          </select>
+        </label>
         <label class="f-rank">区排名<small>一模/二模</small>
           <input type="number" v-model.number="form.rank" min="1" placeholder="如 4500" />
         </label>
+        <label class="f-home">初中学校<small>校额/统筹用</small>
+          <input list="xedSchoolListMain" v-model="xedQuery" placeholder="如 朝阳外国语学校" />
+        </label>
+        <datalist id="xedSchoolListMain"><option v-for="r in (xedBlock ? xedBlock.rows : [])" :key="r.code" :value="r.name" /></datalist>
         <label class="f-home">家庭住址<small>留空只看全区分布</small>
           <input type="text" v-model="form.home" placeholder="如 朝阳区大屯金泉家园" />
         </label>
@@ -815,11 +832,6 @@ const tcOptions: string[] = []
         </label>
         <label class="f-km">通勤上限<small>km</small>
           <input type="number" v-model="form.max_km" min="1" placeholder="8" :disabled="form.boarding" />
-        </label>
-        <label class="f-mode">考生身份
-          <select v-model="form.identity">
-            <option v-for="x in IDENTITIES" :key="x.v" :value="x.v">{{ x.label }}</option>
-          </select>
         </label>
         <label class="f-board switch">接受住宿
           <span class="sw-line">
@@ -836,7 +848,8 @@ const tcOptions: string[] = []
     </section>
 
     <section v-if="result" class="results">
-      <!-- 标签页：地图 / 普高清单 / 志愿草表 -->
+      <!-- 标签页：地图 / 草表 + 查学校菜单 -->
+      <div class="tabbar">
       <div class="tabs" role="tablist">
         <!-- 主入口：地图 / 草表 -->
         <button class="tab tab-main" :class="{ on: tab === 'map' }" @click="goTab('map')">
@@ -854,34 +867,34 @@ const tcOptions: string[] = []
       <!-- 二级菜单（展开） -->
       <div v-if="moreOpen" class="more-menu">
         <div class="mm-group">
-          <span class="mm-k">按学校类型</span>
-          <button class="mchip" :class="{ on: tab === 'list' }" @click="goTab('list')">普高<i>{{ result.public_list.length }}</i></button>
-          <button v-if="minbanList.length" class="mchip" :class="{ on: tab === 'minban' }" @click="goTab('minban')">民办<i>{{ minbanList.length }}</i></button>
-          <button v-if="intlList.length" class="mchip" :class="{ on: tab === 'intl' }" @click="goTab('intl')">国际<i>{{ intlList.length }}</i></button>
-          <button v-if="vocList.length" class="mchip" :class="{ on: tab === 'voc' }" @click="goTab('voc')">中职<i>{{ vocList.length }}</i></button>
-          <button v-if="gtBlock" class="mchip" :class="{ on: tab === 'gt' }" @click="goTab('gt')">贯通<i>{{ gtBlock.projects.length }}</i></button>
+          <span class="mm-k">录取渠道(指标分配)</span>
+          <button class="mchip" :class="{ on: tab === 'tc' }" @click="goTab('tc')">市级统筹</button>
+          <button class="mchip" :class="{ on: tab === 'xed' }" @click="goTab('xed')">🎯校额到校</button>
         </div>
         <div class="mm-group">
-          <span class="mm-k">录取渠道(指标分配)</span>
-          <button class="mchip" :class="{ on: tab === 'xed' }" @click="goTab('xed')">🎯校额到校</button>
-          <button class="mchip" :class="{ on: tab === 'tc' }" @click="goTab('tc')">市级统筹</button>
+          <span class="mm-k">按学校类型</span>
+          <button class="mchip" :class="{ on: tab === 'list' }" @click="goTab('list')">公办普高<i>{{ result.public_list.length }}</i></button>
+          <button v-if="minbanList.length" class="mchip" :class="{ on: tab === 'minban' }" @click="goTab('minban')">民办普高<i>{{ minbanList.length }}</i></button>
+          <button v-if="intlList.length" class="mchip" :class="{ on: tab === 'intl' }" @click="goTab('intl')">国际/双语<i>{{ intlList.length }}</i></button>
+          <button v-if="gtBlock" class="mchip" :class="{ on: tab === 'gt' }" @click="goTab('gt')">贯通(全市)<i>{{ gtBlock.projects.length }}</i></button>
+          <button v-if="vocList.length" class="mchip" :class="{ on: tab === 'voc' }" @click="goTab('voc')">中职/职教<i>{{ vocList.length }}</i></button>
         </div>
         <p class="mm-tip">这些清单与地图图层对应——也可直接在「志愿地图」按图层查看。</p>
       </div>
+      </div><!-- /tabbar -->
 
       <!-- TAB 1：地图 -->
       <div class="mapwrap" v-show="tab === 'map'">
         <div class="map-head">
           <h2>全{{ result.district }}学校分布</h2>
           <div class="layer-chips">
-            <button class="lchip" :class="{ on: layers.gongban }" @click="layers.gongban = !layers.gongban">公办普高</button>
-            <button class="lchip" :class="{ on: layers.coop }" @click="layers.coop = !layers.coop">中外合作/国际班</button>
-            <button class="lchip lc-minban" :class="{ on: layers.minban }" @click="layers.minban = !layers.minban">民办普高</button>
-            <button class="lchip lc-intl" :class="{ on: layers.intl }" @click="layers.intl = !layers.intl">国际/双语</button>
-            <button class="lchip lc-voc" :class="{ on: layers.voc }" @click="layers.voc = !layers.voc">中职/职教</button>
-            <button class="lchip lc-gt" :class="{ on: layers.gt }" @click="layers.gt = !layers.gt">贯通(全市)</button>
             <button v-if="tongchou" class="lchip lc-tc" :class="{ on: layers.tc }" @click="layers.tc = !layers.tc">市级统筹</button>
             <button class="lchip lc-xed" :class="{ on: layers.xed }" @click="layers.xed = !layers.xed">🎯校额到校</button>
+            <button class="lchip" :class="{ on: layers.gongban }" @click="layers.gongban = !layers.gongban">公办普高</button>
+            <button class="lchip lc-minban" :class="{ on: layers.minban }" @click="layers.minban = !layers.minban">民办普高</button>
+            <button class="lchip lc-intl" :class="{ on: layers.intl }" @click="layers.intl = !layers.intl">国际/双语</button>
+            <button class="lchip lc-gt" :class="{ on: layers.gt }" @click="layers.gt = !layers.gt">贯通(全市)</button>
+            <button class="lchip lc-voc" :class="{ on: layers.voc }" @click="layers.voc = !layers.voc">中职/职教</button>
           </div>
         </div>
         <div class="map-detail">
@@ -1266,13 +1279,8 @@ const tcOptions: string[] = []
 
         <!-- 按初中查名额 -->
         <div v-if="xedBlock" class="xed-query">
-          <label class="xed-qlabel">孩子初中校
-            <input list="xedSchoolList" v-model="xedQuery" placeholder="输入/选择，如 朝阳外国语学校" class="xed-input" />
-          </label>
-          <datalist id="xedSchoolList">
-            <option v-for="r in xedBlock.rows" :key="r.code" :value="r.name" />
-          </datalist>
-          <div v-if="xedQuery && !xedSel" class="xed-miss">未匹配到该初中（试试更短的关键词，或在下方官方原图核对）</div>
+          <p class="xed-qlabel">孩子初中校：<b>{{ xedQuery || '（未填）' }}</b>　<span class="xed-src" style="margin:0">— 在<b>首页"初中学校"</b>修改</span></p>
+          <div v-if="xedQuery && !xedSel" class="xed-miss">未匹配到该初中（在首页换更短的关键词，或在下方官方原图核对）</div>
           <div v-if="xedSel" class="xed-card">
             <div class="xed-card-head">
               <b>{{ cleanName(xedSel.name) }}</b>
@@ -1288,6 +1296,46 @@ const tcOptions: string[] = []
           </div>
           <p class="xed-src">数据：{{ xedBlock.source_T1 }}；明细自检通过 {{ xedBlock.verified_count }}/{{ xedBlock.total_count }} 校，其余仅给合计、明细以原图为准。</p>
         </div>
+
+        <!-- 研判 + 填报（从志愿草表移来）：仅京籍应届可报 -->
+        <template v-if="canIndicator">
+          <div v-if="xedRecommend.length" class="xed-rec">
+            <p class="xed-rec-warn">⚠️ <b>风险</b>：校额到校在统招<b>之前</b>录取、<b>一旦录取就锁定、后续批次作废</b>。建议<b>只填比你统招更够得着的好学校</b>（✅），<b>别填你统招本来就能上的</b>（⚠️），否则等于把自己锁进更差的结果。</p>
+            <div class="xed-rec-list">
+              <div v-for="e in xedRecommend" :key="e.school" class="xed-rec-row">
+                <span class="rt" :class="XED_TAG[e.tag].cls">{{ XED_TAG[e.tag].label }}</span>
+                <b class="rt-name">{{ e.school }}</b>
+                <span class="rt-meta">名额{{ e.n }}<template v-if="e.ref"> · 统招位次≈{{ e.ref }}</template></span>
+              </div>
+            </div>
+            <p class="xed-src">研判依据：各优质高中“统招录取位次”对比你的区排名 <b>{{ form.rank }}</b>。✅=统招够不上、校额才有机会；⚠️=统招本可达、占名额意义小。实际按本初中<b>校内排名</b>录取、无官方各校线，仅作策略参考。</p>
+          </div>
+          <template v-if="xedEligible.length">
+            <h4 class="batch-sub">校额到校志愿填报（支持插入/上下移）</h4>
+            <div class="draft-actions" style="margin:6px 0">
+              <button class="ghost" @click="prefillXed">↻ 按推荐重填</button>
+              <span class="xed-src" style="margin:0">已按"值得冲→相当"自动填入（可手动改/清空；专业请手填）</span>
+            </div>
+            <div class="uni-list">
+              <div v-for="(s, i) in draftXed" :key="i" class="urow" :class="{ filled: s.school }">
+                <span class="slot-no" :class="{ on: s.school }">{{ i + 1 }}</span>
+                <select v-model="s.school" class="school-sel uni-sel">
+                  <option :value="null">＋ 选优质高中（校额到校）</option>
+                  <option v-for="e in xedEligible" :key="e.school" :value="e.school">{{ e.school }}（名额{{ e.n }}）</option>
+                </select>
+                <input v-if="s.school" v-model="s.majors" class="early-input" style="flex:1;min-width:0"
+                  placeholder="专业(班)手填——专业代码待核，可沿用该校统招专业" />
+                <span v-else class="uni-empty">未选</span>
+                <span class="urow-ops">
+                  <button class="op" title="上移" :disabled="i === 0" @click="moveRow(draftXed, i, -1)">↑</button>
+                  <button class="op" title="下移" :disabled="i === draftXed.length - 1" @click="moveRow(draftXed, i, 1)">↓</button>
+                  <button class="op" title="上方插入" @click="insertRow(draftXed, i, mkXed)">插入</button>
+                  <button class="op x-op" title="删除整行" @click="deleteRow(draftXed, i, mkXed)">✕</button>
+                </span>
+              </div>
+            </div>
+          </template>
+        </template>
 
         <button class="xed-imgtoggle" type="button" @click="showXedImg = !showXedImg">
           {{ showXedImg ? '▲ 收起官方原图' : '▼ 展开官方原图（逐格核对用）' }}
@@ -1407,6 +1455,12 @@ const tcOptions: string[] = []
             <div v-for="(s, i) in draftEarly" :key="i" class="early-row">
               <span class="slot-no">{{ i + 1 }}</span>
               <input v-model="s.text" class="early-input" placeholder="如：XX中学 美术特长 / XX中职 自主招生 / XX校 登记入学 …" />
+              <span class="urow-ops">
+                <button class="op" title="上移" :disabled="i === 0" @click="moveRow(draftEarly, i, -1)">↑</button>
+                <button class="op" title="下移" :disabled="i === draftEarly.length - 1" @click="moveRow(draftEarly, i, 1)">↓</button>
+                <button class="op" title="上方插入" @click="insertRow(draftEarly, i, mkText)">插入</button>
+                <button class="op x-op" title="删除整行" @click="deleteRow(draftEarly, i, mkText)">✕</button>
+              </span>
             </div>
           </div>
         </section>
@@ -1418,61 +1472,23 @@ const tcOptions: string[] = []
             <small>门槛 总分≥430 + 综合素质B + 同一初中连续三年学籍</small>
           </button>
           <template v-if="batchOpen.ind && canIndicator">
-            <label class="xed-qlabel" style="max-width:440px">孩子初中校（与「校额到校」页共用）
-              <input list="xedSchoolList2" v-model="xedQuery" class="xed-input" placeholder="输入/选择，如 朝阳外国语学校" />
-            </label>
-            <datalist id="xedSchoolList2"><option v-for="r in (xedBlock ? xedBlock.rows : [])" :key="r.code" :value="r.name" /></datalist>
-            <p v-if="xedSel && xedSel.by_school" class="xed-src">{{ cleanName(xedSel.name) }}：校额到校共 {{ xedSel.total }} 个，下面按名额选优质高中（括号为本校名额）。</p>
-            <p v-else-if="xedSel" class="xed-note warn">{{ cleanName(xedSel.name) }}：合计 {{ xedSel.total }}，明细待核——优质高中与专业请对照官方原图手填。</p>
-            <p v-else class="xed-src">先填上面的初中校，下面才能按名额选优质高中。</p>
-
-            <!-- 按分数的报名方案推荐 + 风险 -->
-            <div v-if="xedRecommend.length" class="xed-rec">
-              <p class="xed-rec-warn">⚠️ <b>风险</b>：校额到校在统招<b>之前</b>录取、<b>一旦录取就锁定、后续批次作废</b>。建议<b>只填比你统招更够得着的好学校</b>（下方 ✅），<b>别填你统招本来就能上的</b>（⚠️），否则等于用校额到校把自己锁进更差的结果。</p>
-              <div class="xed-rec-list">
-                <div v-for="e in xedRecommend" :key="e.school" class="xed-rec-row">
-                  <span class="rt" :class="XED_TAG[e.tag].cls">{{ XED_TAG[e.tag].label }}</span>
-                  <b class="rt-name">{{ e.school }}</b>
-                  <span class="rt-meta">名额{{ e.n }}<template v-if="e.ref"> · 统招位次≈{{ e.ref }}</template></span>
-                </div>
-              </div>
-              <p class="xed-src">推荐依据：各优质高中“统招录取位次”对比你的区排名 <b>{{ form.rank }}</b>。✅=统招够不上、校额到校才有机会；⚠️=统招本可达、占名额意义小。校额到校实际按本初中<b>校内排名</b>录取、无官方各校线，仅作策略参考。</p>
-            </div>
-
-            <div v-if="xedEligible.length" class="draft-actions" style="margin:10px 0 6px">
-              <button class="ghost" @click="prefillXed">↻ 按推荐重填校额到校志愿</button>
-              <span class="xed-src" style="margin:0">已按"值得冲→相当"自动填入（可手动改/清空；专业请手填）</span>
-            </div>
-            <div class="uni-list">
-              <div v-for="(s, i) in draftXed" :key="i" class="urow" :class="{ filled: s.school }">
-                <span class="slot-no" :class="{ on: s.school }">{{ i + 1 }}</span>
-                <select v-model="s.school" class="school-sel uni-sel" :disabled="!xedEligible.length">
-                  <option :value="null">＋ 选优质高中（校额到校）</option>
-                  <option v-for="e in xedEligible" :key="e.school" :value="e.school">{{ e.school }}（名额{{ e.n }}）</option>
-                </select>
-                <input v-if="s.school" v-model="s.majors" class="early-input" style="flex:1;min-width:0"
-                  placeholder="专业(班)手填——专业代码待核，可沿用该校统招专业" />
-                <span v-else class="uni-empty">未选</span>
-                <button v-if="s.school" class="op x-op" title="清空" @click="s.school = null; s.majors = ''">✕</button>
-              </div>
-            </div>
-            <h4 class="batch-sub">市级统筹（统筹一/二/三）</h4>
+            <p class="xed-src">🎯 <b>校额到校</b>志愿请到「<a class="lnk" @click="goTab('xed')">校额到校</a>」页：那里有按初中的名额、研判(值得冲/相当/统招可达)和填报。本处只填<b>市级统筹</b>。</p>
+            <h4 class="batch-sub">市级统筹（统筹一/二）</h4>
             <div class="tc-ref">
-              <p class="xed-src" style="margin:0 0 6px">⚠️ 下表仅为<b>三档方向说明（待核）</b>，<b>不是朝阳可报名单</b>；本区好校（人朝/清华附中朝阳·望京/东师朝/对外经贸94中）请走统招·校额到校。具体可填统筹校须按<b>朝外在《招生简章》分到的名额</b>逐校核对：</p>
-              <div v-for="t in TONGCHOU_REF" :key="t.tier" class="tc-tier">
-                <span class="tc-tag">{{ t.tier }}</span><span class="tc-desc">{{ t.desc }}</span>
-                <span class="tc-schools">{{ t.schools.join('、') }}</span>
-              </div>
+              <p class="xed-src" style="margin:0 0 6px">⚠️ 可填统筹校以「<a class="lnk" @click="goTab('tc')">市级统筹</a>」页清单为准（含研判/名额/通勤）；这里手填"学校 + 专业(班)"。</p>
             </div>
             <div class="early-rows" style="margin-top:8px">
               <div v-for="(s, i) in draftTongchou" :key="i" class="early-row">
                 <span class="slot-no">{{ i + 1 }}</span>
-                <input v-model="s.text" list="tcList" class="early-input" placeholder="输入/选择统筹学校 + 专业(班) …" />
+                <input v-model="s.text" class="early-input" placeholder="输入统筹学校 + 专业(班) …" />
+                <span class="urow-ops">
+                  <button class="op" title="上移" :disabled="i === 0" @click="moveRow(draftTongchou, i, -1)">↑</button>
+                  <button class="op" title="下移" :disabled="i === draftTongchou.length - 1" @click="moveRow(draftTongchou, i, 1)">↓</button>
+                  <button class="op" title="上方插入" @click="insertRow(draftTongchou, i, mkText)">插入</button>
+                  <button class="op x-op" title="删除整行" @click="deleteRow(draftTongchou, i, mkText)">✕</button>
+                </span>
               </div>
             </div>
-            <datalist id="tcList">
-              <option v-for="s in tcOptions" :key="s" :value="s" />
-            </datalist>
           </template>
           <p v-else-if="batchOpen.ind && !canIndicator" class="xed-note warn">当前「{{ (IDENTITIES.find(x => x.v === form.identity) || {}).label }}」身份不可报指标分配（校额到校 / 市级统筹）。</p>
         </section>
@@ -1745,9 +1761,12 @@ const tcOptions: string[] = []
 .tab-more { color: var(--gray-500); margin-left: auto; }
 .tab-more.on { color: var(--brand-dark); }
 .more-caret { font-size: 10px; margin-left: 2px; }
-/* 二级菜单浮层 */
-.more-menu { background: var(--surface); border: 1px solid var(--gray-200); border-radius: var(--radius-sm);
-  margin: 4px 4px 0; padding: 10px 12px; box-shadow: 0 4px 14px rgba(0,0,0,.08); }
+/* 二级菜单浮层：就地下拉，锚在"查学校"按钮一侧，不再跳到最左 */
+.tabbar { position: relative; }
+.more-menu { position: absolute; top: 100%; right: 4px; z-index: 50;
+  min-width: 260px; max-width: min(94vw, 420px);
+  background: var(--surface); border: 1px solid var(--gray-200); border-radius: var(--radius-sm);
+  margin-top: 2px; padding: 10px 12px; box-shadow: 0 6px 18px rgba(0,0,0,.14); }
 .mm-group { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
 .mm-k { font-size: 12px; color: var(--gray-500); font-weight: 600; margin-right: 2px; }
 .mchip { font-size: 13px; padding: 5px 11px; border: 1px solid var(--gray-300); background: #fff;
@@ -1756,6 +1775,7 @@ const tcOptions: string[] = []
 .mchip i { font-style: normal; font-size: 11px; font-weight: 700; color: var(--gray-400); }
 .mchip.on i { color: var(--brand-dark); }
 .mm-tip { font-size: 11.5px; color: var(--gray-400); margin: 2px 0 0; }
+.lnk { color: var(--brand-dark); font-weight: 700; cursor: pointer; text-decoration: underline; }
 /* 内容卡片统一顶边，跟页签条衔接 */
 .results .mapwrap, .results .listwrap, .results .draftwrap {
   border: 1px solid var(--gray-100); border-radius: 0 var(--radius) var(--radius) var(--radius); }
