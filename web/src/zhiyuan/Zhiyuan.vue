@@ -545,7 +545,12 @@ function bandPool(band: string): Card[] {
   return (res.bands[band] || []).filter(c => c.school_code)
     .slice().sort((a, b) => (Number(a.ref_rank) || 9e9) - (Number(b.ref_rank) || 9e9))
 }
-// 生成 3冲/5稳/4保 顺序志愿；某档不足则按 稳→保→冲 补足到 12，并始终把保底排在末尾
+function isReachableCard(c: Card): boolean {
+  if (!c.nearest) return true
+  return !c.nearest.over_max || !!c.boarding
+}
+// 生成 3冲/5稳/4保；某档不足先按 稳→保→冲 补足，仍不足 12 则用"够不上"回填冲刺
+// （可通勤优先→位次最接近你）。最终整体按录取位次升序：最硬冲刺在前、保底在末。
 function buildUniPlan(): Card[] {
   const chong = bandPool('冲'), wen = bandPool('稳'), bao = bandPool('保')
   let nc = Math.min(STRAT['冲'], chong.length)
@@ -559,7 +564,17 @@ function buildUniPlan(): Card[] {
     else break
     total++
   }
-  return [...chong.slice(0, nc), ...wen.slice(0, nw), ...bao.slice(0, nb)].slice(0, ZHIYUAN_SLOTS)
+  let pick = [...chong.slice(0, nc), ...wen.slice(0, nw), ...bao.slice(0, nb)]
+  if (pick.length < ZHIYUAN_SLOTS) {
+    const need = ZHIYUAN_SLOTS - pick.length
+    const reach = bandPool('够不上').slice().sort((a, b) => {
+      const ra = isReachableCard(a) ? 0 : 1, rb = isReachableCard(b) ? 0 : 1
+      if (ra !== rb) return ra - rb
+      return (Number(b.ref_rank) || 0) - (Number(a.ref_rank) || 0)
+    }).slice(0, need)
+    pick = pick.concat(reach)
+  }
+  return pick.slice(0, ZHIYUAN_SLOTS).sort((a, b) => (Number(a.ref_rank) || 9e9) - (Number(b.ref_rank) || 9e9))
 }
 function resetDraft() {
   const plan = buildUniPlan()
@@ -605,7 +620,9 @@ function slotReason(name: string | null): { band: string; cls: string; headline:
   if (c.gaokao) factors.push('🎓高考(民间)')
   let risk = ''
   if (typeof c.volatility === 'number' && c.volatility >= 0.25) risk = '近年录取线波动较大、线不稳，谨慎'
-  const cls = ({ 冲: 'band-冲', 稳: 'band-稳', 保: 'band-保', 够不上: 'band-够不上' } as Record<string, string>)[band] || 'band-稳'
+  const isReach = band === '够不上'
+  const dispBand = isReach ? '冲刺' : band
+  const cls = ({ 冲: 'band-冲', 稳: 'band-稳', 保: 'band-保', 够不上: 'band-刺' } as Record<string, string>)[band] || 'band-稳'
   let headline = ''
   if (band === '冲')
     headline = `冲一冲——该校 2025 录取位次${refTxt}，你估区排≈${rank}`
@@ -620,17 +637,21 @@ function slotReason(name: string | null): { band: string; cls: string; headline:
       + (aheadPos != null ? `（领先约 ${aheadPos} 位` : '（')
       + (scoreDiff != null && scoreDiff > 0 ? `、约高 ${scoreDiff} 分` : '') + '），基本稳妥'
   else
-    headline = '线高于你较多，作手动冲刺 / 了解用'
-  return { band, cls, headline, factors, risk }
+    headline = `冲刺——该校 2025 录取位次${refTxt}，你估区排≈${rank}`
+      + (aheadPos != null ? `，落后约 ${Math.abs(aheadPos)} 位` : '')
+      + (scoreDiff != null && scoreDiff < 0 ? `、约差 ${-scoreDiff} 分` : '')
+      + '，线明显高于你，搏一搏（风险高）'
+  return { band: dispBand, cls, headline, factors, risk }
 }
 // 草表 ③ 顶部策略总览
 const uniSummary = computed(() => {
-  const cnt: Record<string, number> = { 冲: 0, 稳: 0, 保: 0 }
+  const cnt: Record<string, number> = { 刺: 0, 冲: 0, 稳: 0, 保: 0 }
   let lastName = ''
   for (const s of draft.value) {
     if (!s.name) continue
     const b = bandOf(s.name)
-    if (cnt[b] != null) cnt[b]++
+    if (b === '够不上') cnt['刺']++
+    else if (cnt[b] != null) cnt[b]++
     lastName = s.name
   }
   return { cnt, lastName, filled: draft.value.filter(s => s.name).length }
@@ -918,7 +939,7 @@ function copyAll() {
   draftTongchou.value.forEach((s, i) => { if (s.text.trim()) L.push(`  统筹${i + 1}　${s.text.trim()}`) })
   L.push('', `【批次③ 统一招生】(2026含贯通) 共${ZHIYUAN_SLOTS}志愿×2专业`)
   const su = uniSummary.value
-  L.push(`  （策略：${su.cnt['冲']}冲 / ${su.cnt['稳']}稳 / ${su.cnt['保']}保${su.lastName ? '；末位保底=' + cleanName(su.lastName) : ''}）`)
+  L.push(`  （策略：${su.cnt['刺'] ? su.cnt['刺'] + '冲刺 / ' : ''}${su.cnt['冲']}冲 / ${su.cnt['稳']}稳 / ${su.cnt['保']}保${su.lastName ? '；末位保底=' + cleanName(su.lastName) : ''}）`)
   draft.value.forEach((s, i) => {
     if (!s.name) { L.push(`  志愿${i + 1}　（空）`); return }
     const c = findCard(s.name)
@@ -1436,12 +1457,13 @@ const tcOptions: string[] = []
             <div class="uni-summary">
               <div class="us-line">
                 <b>已为你预填 {{ uniSummary.filled }} 个统招志愿</b>：
+                <span v-if="uniSummary.cnt['刺']" class="us-b band-刺">{{ uniSummary.cnt['刺'] }} 冲刺</span>
                 <span class="us-b band-冲">{{ uniSummary.cnt['冲'] }} 冲</span>
                 <span class="us-b band-稳">{{ uniSummary.cnt['稳'] }} 稳</span>
                 <span class="us-b band-保">{{ uniSummary.cnt['保'] }} 保</span>
                 <span v-if="uniSummary.lastName" class="us-bottom">末位保底＝<b>{{ cleanName(uniSummary.lastName) }}</b></span>
               </div>
-              <p class="us-tip">按总分从高到低、依志愿录取：<b>冲档排前面（够一够），稳档主力，末尾保底托底</b>。可上下移 / 插入 / 删除自由调整；每条下方为<b>填报理由</b>（随你改校实时更新）。</p>
+              <p class="us-tip">按总分从高到低、依志愿录取：<b>冲刺/冲档排前面，稳档主力，末尾保底托底</b>（够档位的不足 12 所时，用"够不上"的名校回填到前面冲刺，已标⚠️线高于你）。可上下移 / 插入 / 删除自由调整；每条下方为<b>填报理由</b>（随你改校实时更新）。</p>
             </div>
             <div class="draft-actions"><button class="ghost" @click="resetDraft">↻ 重置为推荐梯度</button></div>
             <div class="uni-list">
@@ -1944,6 +1966,7 @@ const tcOptions: string[] = []
 .uslot .urow { border: 0; background: none; }
 .ureason { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; padding: 6px 10px 8px 40px; font-size: 12px; color: var(--gray-700); line-height: 1.5; }
 .ur-band { flex: 0 0 auto; font-size: 11px; font-weight: 700; padding: 1px 7px; border-radius: var(--radius-full); }
+.band-刺 { background: #ede7f6; color: #6a1b9a; }
 .ur-head { color: var(--gray-700); }
 .ur-f { font-size: 11px; color: var(--gray-600); background: var(--gray-100); border-radius: var(--radius-xs); padding: 1px 6px; }
 .ur-risk { font-size: 11px; color: #b45309; background: var(--warning-bg); border-radius: var(--radius-xs); padding: 1px 6px; }
