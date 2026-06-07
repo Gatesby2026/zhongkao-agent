@@ -309,7 +309,7 @@ function isCoopPoint(p: Point): boolean {
   const c = findCard(p.name)
   return !!(c && c.coop)
 }
-function renderMarkers() {
+function renderMarkers(fit = false) {
   const res = result.value
   if (!res || !mapInst) return
   for (const lyr of [publicLayer, minbanLayer, intlLayer, vocLayer, gtLayer, tcLayer, xedLayer])
@@ -452,7 +452,8 @@ function renderMarkers() {
   })
   if (layers.xed) xedLayer.addTo(mapInst)
 
-  if (bounds.length) mapInst.fitBounds(bounds, { padding: [40, 40], maxZoom: 14 })
+  // 仅首次渲染自动定位；切换图层只增减标记，保持用户当前视野(中心+缩放)不动
+  if (fit && bounds.length) mapInst.fitBounds(bounds, { padding: [40, 40], maxZoom: 14 })
 }
 function renderMap() {
   const res = result.value
@@ -477,7 +478,7 @@ function renderMap() {
     L.marker(res.home_coord, { icon: pin('#2c3e50', '家'), zIndexOffset: 1000 }).addTo(map)
       .bindPopup(`<div class="pop"><b>家</b><br>${res.home || ''}</div>`)
   }
-  renderMarkers()
+  renderMarkers(true)   // 首次：自动定位到所有点
 }
 watch(layers, () => { if (mapInst) renderMarkers() }, { deep: true })
 // 初中变更 → 校额到校名额变 → 重绘 pin 徽标
