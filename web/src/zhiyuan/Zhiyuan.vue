@@ -233,7 +233,7 @@ function cardOfPoint(p: Point | null): Card | null {
 }
 const selCard = computed<Card | null>(() => cardOfPoint(selectedPoint.value))
 const boardBadge = '<span class="bd-badge" title="可寄宿/有住宿">宿</span>'
-function pin(color: string, txt: string, boarding = false) {
+function pin(color: string, txt: string, boarding = false, corner = '') {
   const fg = contrastText(color)
   return L.divIcon({
     className: '', iconSize: [24, 24], iconAnchor: [12, 24],
@@ -242,7 +242,9 @@ function pin(color: string, txt: string, boarding = false) {
       + `transform:rotate(-45deg);border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.4);`
       + `display:flex;align-items:center;justify-content:center;">`
       + `<span class="lbl" style="transform:rotate(45deg);font-size:11px;font-weight:700;color:${fg}">${txt}</span></div>`
-      + (boarding ? boardBadge : '') + `</div>`,
+      + (boarding ? boardBadge : '')
+      + (corner ? `<span class="qt-badge" title="校额到校名额">${corner}</span>` : '')
+      + `</div>`,
   })
 }
 // 按背景亮度自动取对比文字色（深色 pin 用白字、浅色 pin 用深字），避免“家”等字看不见
@@ -283,7 +285,8 @@ const xedQuotaByName = computed<Record<string, number>>(() => {
 })
 // 校额到校研判（按统筹方式）：高中统招位次 vs 孩子区排 → worth(值得冲)/similar(相当)/waste(统招可达)。
 // 全名→{tag,color}，供地图 pin 着色 + 详情卡显示。自包含(不依赖后置的 xedRecommend)。
-const XED_TAG_COLOR: Record<string, string> = { worth: '#e74c3c', similar: '#e67e22', waste: '#95a5a6', unknown: '#2980b9' }
+const XED_TAG_COLOR: Record<string, string> = { worth: '#e74c3c', similar: '#2ecc71', waste: '#95a5a6', unknown: '#2980b9' }
+const XED_BAND: Record<string, string> = { worth: '冲', similar: '稳', waste: '达', unknown: '?' }  // 地图 pin 简标(达=统招可达)
 const xedJudgeByName = computed<Record<string, { tag: string; color: string; ref: number | null }>>(() => {
   const r = xedSel.value
   const m: Record<string, { tag: string; color: string; ref: number | null }> = {}
@@ -325,9 +328,7 @@ function renderMarkers() {
     const icon = p.kind === 'full' ? pin(p.color, p.band, boarding) : smallIcon(p.color, boarding)
     const mk = L.marker([p.lat, p.lon], { icon }).addTo(publicLayer).on('click', () => selectPoint(p))
     // 缺省常驻显示学校名：重点推荐校(冲/稳/保)常驻，其余小点悬停显示，避免拥挤
-    // 校额到校徽标：选定初中分到该校名额时，名字后挂"🎯N"
-    const q = xedQuotaByName.value[p.name]
-    const lbl = shortName(p.name) + (q ? ` <span class="map-xed">🎯${q}</span>` : '')
+    const lbl = shortName(p.name)
     if (p.kind === 'full') {
       mk.bindTooltip(lbl, { permanent: true, direction: 'bottom', offset: [0, 2], className: 'map-lbl' })
     } else {
@@ -441,8 +442,11 @@ function renderMarkers() {
     const q = xedQuotaByName.value[p.name]
     if (!q) return
     const j = xedJudgeByName.value[p.name]
-    const color = j ? j.color : '#b9770e'
-    L.marker([p.lat, p.lon], { icon: pin(color, `🎯${q}`) }).addTo(xedLayer)
+    const color = j ? j.color : '#95a5a6'
+    const lbl = j ? XED_BAND[j.tag] : '校'
+    const sboard = !!cardOfPoint(p)?.boarding
+    // 参照统筹：研判作主标(冲/稳/达),名额作左上角标,住宿"宿"右上角
+    L.marker([p.lat, p.lon], { icon: pin(color, lbl, sboard, String(q)) }).addTo(xedLayer)
       .on('click', () => selectPoint(p))
       .bindTooltip(shortName(p.name), { permanent: true, direction: 'bottom', offset: [0, 2], className: 'map-lbl' })
     if (layers.xed) bounds.push([p.lat, p.lon])
@@ -869,7 +873,7 @@ const tcOptions: string[] = []
         <div class="mm-group">
           <span class="mm-k">录取渠道(指标分配)</span>
           <button class="mchip" :class="{ on: tab === 'tc' }" @click="goTab('tc')">市级统筹</button>
-          <button class="mchip" :class="{ on: tab === 'xed' }" @click="goTab('xed')">🎯校额到校</button>
+          <button class="mchip" :class="{ on: tab === 'xed' }" @click="goTab('xed')">校额到校</button>
         </div>
         <div class="mm-group">
           <span class="mm-k">按学校类型</span>
@@ -889,7 +893,7 @@ const tcOptions: string[] = []
           <h2>全{{ result.district }}学校分布</h2>
           <div class="layer-chips">
             <button v-if="tongchou" class="lchip lc-tc" :class="{ on: layers.tc }" @click="layers.tc = !layers.tc">市级统筹</button>
-            <button class="lchip lc-xed" :class="{ on: layers.xed }" @click="layers.xed = !layers.xed">🎯校额到校</button>
+            <button class="lchip lc-xed" :class="{ on: layers.xed }" @click="layers.xed = !layers.xed">校额到校</button>
             <button class="lchip" :class="{ on: layers.gongban }" @click="layers.gongban = !layers.gongban">公办普高</button>
             <button class="lchip lc-minban" :class="{ on: layers.minban }" @click="layers.minban = !layers.minban">民办普高</button>
             <button class="lchip lc-intl" :class="{ on: layers.intl }" @click="layers.intl = !layers.intl">国际/双语</button>
@@ -1310,31 +1314,7 @@ const tcOptions: string[] = []
             </div>
             <p class="xed-src">研判依据：各优质高中“统招录取位次”对比你的区排名 <b>{{ form.rank }}</b>。✅=统招够不上、校额才有机会；⚠️=统招本可达、占名额意义小。实际按本初中<b>校内排名</b>录取、无官方各校线，仅作策略参考。</p>
           </div>
-          <template v-if="xedEligible.length">
-            <h4 class="batch-sub">校额到校志愿填报（支持插入/上下移）</h4>
-            <div class="draft-actions" style="margin:6px 0">
-              <button class="ghost" @click="prefillXed">↻ 按推荐重填</button>
-              <span class="xed-src" style="margin:0">已按"值得冲→相当"自动填入（可手动改/清空；专业请手填）</span>
-            </div>
-            <div class="uni-list">
-              <div v-for="(s, i) in draftXed" :key="i" class="urow" :class="{ filled: s.school }">
-                <span class="slot-no" :class="{ on: s.school }">{{ i + 1 }}</span>
-                <select v-model="s.school" class="school-sel uni-sel">
-                  <option :value="null">＋ 选优质高中（校额到校）</option>
-                  <option v-for="e in xedEligible" :key="e.school" :value="e.school">{{ e.school }}（名额{{ e.n }}）</option>
-                </select>
-                <input v-if="s.school" v-model="s.majors" class="early-input" style="flex:1;min-width:0"
-                  placeholder="专业(班)手填——专业代码待核，可沿用该校统招专业" />
-                <span v-else class="uni-empty">未选</span>
-                <span class="urow-ops">
-                  <button class="op" title="上移" :disabled="i === 0" @click="moveRow(draftXed, i, -1)">↑</button>
-                  <button class="op" title="下移" :disabled="i === draftXed.length - 1" @click="moveRow(draftXed, i, 1)">↓</button>
-                  <button class="op" title="上方插入" @click="insertRow(draftXed, i, mkXed)">插入</button>
-                  <button class="op x-op" title="删除整行" @click="deleteRow(draftXed, i, mkXed)">✕</button>
-                </span>
-              </div>
-            </div>
-          </template>
+          <p v-if="xedEligible.length" class="xed-src">📝 校额到校<b>志愿填报</b>在「<a class="lnk" @click="goTab('draft')">志愿草表 → ②指标分配</a>」里（支持插入/上下移）。本页负责看名额与研判。</p>
         </template>
 
         <button class="xed-imgtoggle" type="button" @click="showXedImg = !showXedImg">
@@ -1472,7 +1452,32 @@ const tcOptions: string[] = []
             <small>门槛 总分≥430 + 综合素质B + 同一初中连续三年学籍</small>
           </button>
           <template v-if="batchOpen.ind && canIndicator">
-            <p class="xed-src">🎯 <b>校额到校</b>志愿请到「<a class="lnk" @click="goTab('xed')">校额到校</a>」页：那里有按初中的名额、研判(值得冲/相当/统招可达)和填报。本处只填<b>市级统筹</b>。</p>
+            <!-- 校额到校填报（名额/研判在校额到校页看） -->
+            <h4 class="batch-sub">校额到校志愿<small style="font-weight:400;color:var(--gray-500)">（名额·研判见「<a class="lnk" @click="goTab('xed')">校额到校</a>」页）</small></h4>
+            <div v-if="xedEligible.length" class="draft-actions" style="margin:6px 0">
+              <button class="ghost" @click="prefillXed">↻ 按推荐重填</button>
+              <span class="xed-src" style="margin:0">已按"值得冲→相当"自动填入（可改/清空；专业手填）</span>
+            </div>
+            <div v-if="xedEligible.length" class="uni-list">
+              <div v-for="(s, i) in draftXed" :key="i" class="urow" :class="{ filled: s.school }">
+                <span class="slot-no" :class="{ on: s.school }">{{ i + 1 }}</span>
+                <select v-model="s.school" class="school-sel uni-sel">
+                  <option :value="null">＋ 选优质高中（校额到校）</option>
+                  <option v-for="e in xedEligible" :key="e.school" :value="e.school">{{ e.school }}（名额{{ e.n }}）</option>
+                </select>
+                <input v-if="s.school" v-model="s.majors" class="early-input" style="flex:1;min-width:0"
+                  placeholder="专业(班)手填——专业代码待核，可沿用该校统招专业" />
+                <span v-else class="uni-empty">未选</span>
+                <span class="urow-ops">
+                  <button class="op" title="上移" :disabled="i === 0" @click="moveRow(draftXed, i, -1)">↑</button>
+                  <button class="op" title="下移" :disabled="i === draftXed.length - 1" @click="moveRow(draftXed, i, 1)">↓</button>
+                  <button class="op" title="上方插入" @click="insertRow(draftXed, i, mkXed)">插入</button>
+                  <button class="op x-op" title="删除整行" @click="deleteRow(draftXed, i, mkXed)">✕</button>
+                </span>
+              </div>
+            </div>
+            <p v-else class="xed-src">先在<b>首页填初中学校</b>，这里才能按名额选校额到校志愿。</p>
+
             <h4 class="batch-sub">市级统筹（统筹一/二）</h4>
             <div class="tc-ref">
               <p class="xed-src" style="margin:0 0 6px">⚠️ 可填统筹校以「<a class="lnk" @click="goTab('tc')">市级统筹</a>」页清单为准（含研判/名额/通勤）；这里手填"学校 + 专业(班)"。</p>
@@ -1727,6 +1732,14 @@ const tcOptions: string[] = []
   width: 15px; height: 15px; border-radius: 50%;
   background: #0d9488; color: #fff; border: 1.5px solid #fff;
   font-size: 9px; font-weight: 700; line-height: 12px; text-align: center;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+}
+/* 校额到校名额角标(左上,区别于右上的"宿") */
+#zmap :deep(.qt-badge) {
+  position: absolute; top: -7px; left: -7px; z-index: 5;
+  min-width: 15px; height: 15px; padding: 0 2px; border-radius: 8px;
+  background: #f1c40f; color: #5b4708; border: 1.5px solid #fff;
+  font-size: 9px; font-weight: 800; line-height: 12px; text-align: center;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
 }
 .legend { display: flex; flex-wrap: wrap; gap: 12px; font-size: 12px; color: var(--gray-600); margin-top: 8px; }
