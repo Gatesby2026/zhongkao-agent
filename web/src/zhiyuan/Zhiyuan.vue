@@ -207,6 +207,7 @@ async function submit() {
     if (!r.ok) throw new Error(`${r.status} ${await r.text()}`)
     result.value = await r.json()
     resetDraft()
+    prefillTongchou()
     tab.value = 'map'        // 生成后回到地图页，保证地图在可见状态下初始化
     await nextTick()
     renderMap()
@@ -923,7 +924,8 @@ const identityNote = computed(() => {
 // ① 提前招生：自由填写（2026 不含贯通、不含中外合作；特长/中职自主/登记入学无官方结构化代码）
 const draftEarly = ref<{ text: string }[]>(Array.from({ length: 8 }, () => ({ text: '' })))
 // ② 指标分配-市级统筹：自由填写
-const draftTongchou = ref<{ text: string }[]>(Array.from({ length: 4 }, () => ({ text: '' })))
+interface TcSlot { school: string | null; majors: string }
+const draftTongchou = ref<TcSlot[]>(Array.from({ length: 4 }, () => ({ school: null, majors: '' })))
 // ② 指标分配-校额到校：选优质高中(来自孩子初中的名额) + 专业手填
 interface XedSlot { school: string | null; majors: string }
 const draftXed = ref<XedSlot[]>(Array.from({ length: 8 }, () => ({ school: null, majors: '' })))
@@ -958,6 +960,71 @@ const XED_TAG: Record<string, { label: string; cls: string }> = {
   waste: { label: '⚠️统招本可达·占用浪费', cls: 'rt-waste' },
   unknown: { label: '—', cls: 'rt-unknown' },
 }
+const XED_TAG_BAND: Record<string, string> = { worth: 'band-冲', similar: 'band-稳', waste: 'band-够不上', unknown: 'band-稳' }
+// 校额到校：单行理由（基于 xedRecommend 的 tag/ref/名额）
+function xedReason(school: string | null): { label: string; cls: string; headline: string; caveat: string } | null {
+  if (!school) return null
+  const e = xedRecommend.value.find(x => x.school === school)
+  if (!e) return null
+  const rank = Number(form.rank) || 0
+  const refTxt = e.ref != null ? '≈' + e.ref : '待核'
+  let headline = ''
+  if (e.tag === 'worth') headline = `统招位次${refTxt}比你(≈${rank})靠前 → 统招够不上、校额(校内排名)才有机会`
+  else if (e.tag === 'similar') headline = `统招位次${refTxt}与你相当 → 校额可作多一条进名校通道`
+  else if (e.tag === 'waste') headline = `统招位次${refTxt}比你靠后 → 统招本可达，占校额名额意义小`
+  else headline = '该校统招位次未知，按本校名额参考'
+  return { label: (XED_TAG[e.tag] || XED_TAG.unknown).label, cls: XED_TAG_BAND[e.tag] || 'band-稳',
+    headline, caveat: `本校名额 ${e.n}；按本初中校内排名 + 志愿顺序录取、无官方各校线；录取即锁定` }
+}
+const xedSummary = computed(() => {
+  const cnt: Record<string, number> = { worth: 0, similar: 0, waste: 0, unknown: 0 }
+  for (const sl of draftXed.value) {
+    if (!sl.school) continue
+    const e = xedRecommend.value.find(x => x.school === sl.school)
+    if (e) cnt[e.tag]++
+  }
+  return { cnt, filled: draftXed.value.filter(sl => sl.school).length }
+})
+// 市级统筹：可报校（统筹二+统筹一）+ 缺省填报 + 单行理由
+function tcKey(s: any): string { return s.name + (s.campus ? '·' + s.campus : '') }
+const tcEligible = computed<any[]>(() => {
+  const all = [
+    ...(tcEr.value || []).map((s: any) => ({ s, tier: '统筹二' })),
+    ...(tcYi.value || []).map((s: any) => ({ s, tier: '统筹一' })),
+  ]
+  return all.map(o => ({ key: tcKey(o.s), tier: o.tier, s: o.s, j: tcJudge(o.s) }))
+})
+function prefillTongchou() {
+  const order: Record<string, number> = { 稳: 0, 冲: 1, 搏: 2 }
+  const cand = tcEligible.value
+    .filter(e => order[e.j.label] != null)
+    .sort((a, b) => (order[a.j.label] - order[b.j.label]) || ((b.j.d ?? -99) - (a.j.d ?? -99)))
+  draftTongchou.value = Array.from({ length: 4 }, (_, i) =>
+    cand[i] ? { school: cand[i].key, majors: '' } : { school: null, majors: '' })
+}
+function tcReason(key: string | null): { label: string; cls: string; headline: string; factors: string[]; caveat: string } | null {
+  if (!key) return null
+  const e = tcEligible.value.find(x => x.key === key)
+  if (!e) return null
+  const j = e.j, s = e.s
+  const factors: string[] = []
+  if (s.dist) factors.push('🚌' + s.dist.km + 'km')
+  if (s.boarding === true) factors.push('🛏可住宿')
+  const lineTxt = j.line != null ? `统招线${j.line}·Δ${(j.d ?? 0) > 0 ? '+' : ''}${j.d}（你估≈${estScore.value}）` : '统招线待核'
+  const headline = `${e.tier} · ${s.district} · 投朝阳 ${s.quota_chaoyang} 名 · ${lineTxt}`
+  let caveat = '统筹按全市分数竞争；比的是统招线、统筹实际线通常更低（偏保守）；⚠️朝外能否报该校 / 分到名额须查简章'
+  if (e.tier === '统筹一') caveat = '统筹一=名校本部、门槛高，对约 4000 名多为陪跑；' + caveat
+  return { label: j.label, cls: j.cls, headline, factors, caveat }
+}
+const tcSummary = computed(() => {
+  const cnt: Record<string, number> = { 稳: 0, 冲: 0, 搏: 0 }
+  for (const sl of draftTongchou.value) {
+    if (!sl.school) continue
+    const e = tcEligible.value.find(x => x.key === sl.school)
+    if (e && cnt[e.j.label] != null) cnt[e.j.label]++
+  }
+  return { cnt, filled: draftTongchou.value.filter(sl => sl.school).length }
+})
 
 function copyAll() {
   const res = result.value
@@ -967,12 +1034,22 @@ function copyAll() {
   L.push('【批次① 提前招生】(2026不含贯通；手填)')
   draftEarly.value.forEach((s, i) => { if (s.text.trim()) L.push(`  提招${i + 1}　${s.text.trim()}`) })
   L.push('', '【批次② 指标分配】校额到校 + 市级统筹')
+  const xs = xedSummary.value
+  if (xs.filled) L.push(`  校额到校（${xs.cnt.worth}值得冲 / ${xs.cnt.similar}相当）：`)
   draftXed.value.forEach((s, i) => {
     if (!s.school) return
-    const n = xedEligible.value.find(e => e.school === s.school)?.n
-    L.push(`  校额到校${i + 1}　${s.school}${n ? `(本校名额${n})` : ''}　专业:${s.majors.trim() || '(手填)'}`)
+    const r = xedReason(s.school)
+    L.push(`  校额到校${i + 1}　${s.school}　专业:${s.majors.trim() || '(手填)'}`)
+    if (r) L.push(`        理由：${r.label}　${r.headline}（${r.caveat}）`)
   })
-  draftTongchou.value.forEach((s, i) => { if (s.text.trim()) L.push(`  统筹${i + 1}　${s.text.trim()}`) })
+  const ts = tcSummary.value
+  if (ts.filled) L.push(`  市级统筹（${ts.cnt['稳']}稳 / ${ts.cnt['冲']}冲 / ${ts.cnt['搏']}搏）：`)
+  draftTongchou.value.forEach((s, i) => {
+    if (!s.school) return
+    const r = tcReason(s.school)
+    L.push(`  统筹${i + 1}　${s.school}　专业:${s.majors.trim() || '(手填)'}`)
+    if (r) L.push(`        理由：${r.label}　${r.headline}（${r.caveat}）`)
+  })
   L.push('', `【批次③ 统一招生】(2026含贯通) 共${ZHIYUAN_SLOTS}志愿×2专业`)
   const su = uniSummary.value
   L.push(`  （策略：${su.cnt['刺'] ? su.cnt['刺'] + '冲刺 / ' : ''}${su.cnt['冲']}冲 / ${su.cnt['稳']}稳 / ${su.cnt['保']}保${su.lastName ? '；末位保底=' + cleanName(su.lastName) : ''}）`)
@@ -1035,6 +1112,7 @@ function moveRow(a: any[], i: number, dir: number) {
 function insertRow(a: any[], i: number, make: () => any) { a.splice(i, 0, make()); a.pop() }
 function deleteRow(a: any[], i: number, make: () => any) { a.splice(i, 1); a.push(make()) }
 const mkText = () => ({ text: '' })
+const mkTongchou = () => ({ school: null, majors: '' })
 const mkXed = () => ({ school: null, majors: '' })
 
 // 市级统筹（统筹一/二/三）方向说明。
@@ -1437,48 +1515,87 @@ const tcOptions: string[] = []
             <small>门槛 总分≥430 + 综合素质B + 同一初中连续三年学籍</small>
           </button>
           <template v-if="batchOpen.ind && canIndicator">
-            <!-- 校额到校填报（名额/研判在校额到校页看） -->
+            <!-- 校额到校：缺省填报 + 逐志愿理由 -->
             <h4 class="batch-sub">校额到校志愿<small style="font-weight:400;color:var(--gray-500)">（下拉按你初中名额列出；机制见「<a class="lnk" @click="chSub = 'xed'; goTab('channels')">校额到校</a>」页）</small></h4>
+            <div v-if="xedEligible.length && xedSummary.filled" class="uni-summary">
+              <div class="us-line"><b>已填校额到校 {{ xedSummary.filled }} 志愿</b>：
+                <span class="us-b band-冲">{{ xedSummary.cnt.worth }} 值得冲</span>
+                <span class="us-b band-稳">{{ xedSummary.cnt.similar }} 相当</span>
+              </div>
+              <p class="us-tip">⚠️ 录取即锁定、后续作废：只填"统招够不上、校额才够得着"的好校（✅值得冲）；别填统招本可达的（占名额）。按本初中<b>校内排名 + 志愿顺序</b>录取，无官方各校线。</p>
+            </div>
             <div v-if="xedEligible.length" class="draft-actions" style="margin:6px 0">
               <button class="ghost" @click="prefillXed">↻ 按推荐重填</button>
               <span class="xed-src" style="margin:0">已按"值得冲→相当"自动填入（可改/清空；专业手填）</span>
             </div>
             <div v-if="xedEligible.length" class="uni-list">
-              <div v-for="(s, i) in draftXed" :key="i" class="urow" :class="{ filled: s.school }">
-                <span class="slot-no" :class="{ on: s.school }">{{ i + 1 }}</span>
-                <select v-model="s.school" class="school-sel uni-sel">
-                  <option :value="null">＋ 选优质高中（校额到校）</option>
-                  <option v-for="e in xedEligible" :key="e.school" :value="e.school">{{ e.school }}（名额{{ e.n }}）</option>
-                </select>
-                <input v-if="s.school" v-model="s.majors" class="early-input" style="flex:1;min-width:0"
-                  placeholder="专业(班)手填——专业代码待核，可沿用该校统招专业" />
-                <span v-else class="uni-empty">未选</span>
-                <span class="urow-ops">
-                  <button class="op" title="上移" :disabled="i === 0" @click="moveRow(draftXed, i, -1)">↑</button>
-                  <button class="op" title="下移" :disabled="i === draftXed.length - 1" @click="moveRow(draftXed, i, 1)">↓</button>
-                  <button class="op" title="上方插入" @click="insertRow(draftXed, i, mkXed)">插入</button>
-                  <button class="op x-op" title="删除整行" @click="deleteRow(draftXed, i, mkXed)">✕</button>
-                </span>
+              <div v-for="(s, i) in draftXed" :key="i" class="uslot" :class="{ filled: s.school }">
+                <div class="urow">
+                  <span class="slot-no" :class="{ on: s.school }">{{ i + 1 }}</span>
+                  <select v-model="s.school" class="school-sel uni-sel">
+                    <option :value="null">＋ 选优质高中（校额到校）</option>
+                    <option v-for="e in xedEligible" :key="e.school" :value="e.school">{{ e.school }}（名额{{ e.n }}）</option>
+                  </select>
+                  <input v-if="s.school" v-model="s.majors" class="early-input" style="flex:1;min-width:0"
+                    placeholder="专业(班)手填——可沿用该校统招专业" />
+                  <span v-else class="uni-empty">未选</span>
+                  <span class="urow-ops">
+                    <button class="op" title="上移" :disabled="i === 0" @click="moveRow(draftXed, i, -1)">↑</button>
+                    <button class="op" title="下移" :disabled="i === draftXed.length - 1" @click="moveRow(draftXed, i, 1)">↓</button>
+                    <button class="op" title="上方插入" @click="insertRow(draftXed, i, mkXed)">插入</button>
+                    <button class="op x-op" title="删除整行" @click="deleteRow(draftXed, i, mkXed)">✕</button>
+                  </span>
+                </div>
+                <div v-if="s.school && xedReason(s.school)" class="ureason">
+                  <span class="ur-band" :class="xedReason(s.school)!.cls">{{ xedReason(s.school)!.label }}</span>
+                  <span class="ur-head">{{ xedReason(s.school)!.headline }}</span>
+                  <span class="ur-risk">⚠️ {{ xedReason(s.school)!.caveat }}</span>
+                </div>
               </div>
             </div>
             <p v-else class="xed-src">先在<b>首页填初中学校</b>，这里才能按名额选校额到校志愿。</p>
 
-            <h4 class="batch-sub">市级统筹（统筹一/二）</h4>
-            <div class="tc-ref">
-              <p class="xed-src" style="margin:0 0 6px">⚠️ 朝阳可报的具体统筹校 + 研判见「<a class="lnk" @click="goTab('explore')">🔎 查学校</a>」筛"可走统筹"；这里手填"学校 + 专业(班)"。</p>
+            <!-- 市级统筹：结构化选择 + 缺省填报 + 逐志愿理由 -->
+            <h4 class="batch-sub">市级统筹志愿<small style="font-weight:400;color:var(--gray-500)">（下拉=朝阳可报统筹校；机制见「<a class="lnk" @click="chSub = 'tc'; goTab('channels')">市级统筹</a>」页）</small></h4>
+            <div v-if="tcEligible.length && tcSummary.filled" class="uni-summary">
+              <div class="us-line"><b>已填市级统筹 {{ tcSummary.filled }} 志愿</b>：
+                <span class="us-b band-稳">{{ tcSummary.cnt['稳'] }} 稳</span>
+                <span class="us-b band-冲">{{ tcSummary.cnt['冲'] }} 冲</span>
+                <span class="us-b band-刺">{{ tcSummary.cnt['搏'] }} 搏</span>
+              </div>
+              <p class="us-tip">统筹按<b>全市分数竞争</b>（比的是统招线、统筹实际线通常更低、偏保守）。⚠️ <b>朝外能否报某统筹校 / 分到名额须查简章</b>；统筹一多为名校本部、对约 4000 名基本陪跑。完整名单+研判见「<a class="lnk" @click="goTab('explore')">🔎 查学校</a>」筛"可走统筹"。</p>
             </div>
-            <div class="early-rows" style="margin-top:8px">
-              <div v-for="(s, i) in draftTongchou" :key="i" class="early-row">
-                <span class="slot-no">{{ i + 1 }}</span>
-                <input v-model="s.text" class="early-input" placeholder="输入统筹学校 + 专业(班) …" />
-                <span class="urow-ops">
-                  <button class="op" title="上移" :disabled="i === 0" @click="moveRow(draftTongchou, i, -1)">↑</button>
-                  <button class="op" title="下移" :disabled="i === draftTongchou.length - 1" @click="moveRow(draftTongchou, i, 1)">↓</button>
-                  <button class="op" title="上方插入" @click="insertRow(draftTongchou, i, mkText)">插入</button>
-                  <button class="op x-op" title="删除整行" @click="deleteRow(draftTongchou, i, mkText)">✕</button>
-                </span>
+            <div v-if="tcEligible.length" class="draft-actions" style="margin:6px 0">
+              <button class="ghost" @click="prefillTongchou">↻ 按研判重填</button>
+              <span class="xed-src" style="margin:0">已按 稳→冲→搏 自动填入（可改/清空；专业手填）</span>
+            </div>
+            <div v-if="tcEligible.length" class="uni-list">
+              <div v-for="(s, i) in draftTongchou" :key="i" class="uslot" :class="{ filled: s.school }">
+                <div class="urow">
+                  <span class="slot-no" :class="{ on: s.school }">{{ i + 1 }}</span>
+                  <select v-model="s.school" class="school-sel uni-sel">
+                    <option :value="null">＋ 选统筹校</option>
+                    <option v-for="e in tcEligible" :key="e.key" :value="e.key">[{{ e.j.label }}] {{ e.tier }}·{{ cleanName(e.s.name) }}{{ e.s.campus ? '·' + e.s.campus : '' }}（投朝阳{{ e.s.quota_chaoyang }}）</option>
+                  </select>
+                  <input v-if="s.school" v-model="s.majors" class="early-input" style="flex:1;min-width:0" placeholder="专业(班)手填" />
+                  <span v-else class="uni-empty">未选</span>
+                  <span class="urow-ops">
+                    <button class="op" title="上移" :disabled="i === 0" @click="moveRow(draftTongchou, i, -1)">↑</button>
+                    <button class="op" title="下移" :disabled="i === draftTongchou.length - 1" @click="moveRow(draftTongchou, i, 1)">↓</button>
+                    <button class="op" title="上方插入" @click="insertRow(draftTongchou, i, mkTongchou)">插入</button>
+                    <button class="op x-op" title="删除整行" @click="deleteRow(draftTongchou, i, mkTongchou)">✕</button>
+                  </span>
+                </div>
+                <div v-if="s.school && tcReason(s.school)" class="ureason">
+                  <span class="ur-band" :class="tcReason(s.school)!.cls">{{ tcReason(s.school)!.label }}</span>
+                  <span class="ur-head">{{ tcReason(s.school)!.headline }}</span>
+                  <span v-for="(f, fi) in tcReason(s.school)!.factors" :key="fi" class="ur-f">{{ f }}</span>
+                  <span class="ur-risk">⚠️ {{ tcReason(s.school)!.caveat }}</span>
+                </div>
               </div>
             </div>
+            <JudgeLegend v-if="tcEligible.length" :rank="form.rank" :est="estScore" />
+            <p v-else class="xed-src">暂无可报统筹校结构化数据；可在「查学校」筛"可走统筹"查看。</p>
           </template>
           <p v-else-if="batchOpen.ind && !canIndicator" class="xed-note warn">当前「{{ (IDENTITIES.find(x => x.v === form.identity) || {}).label }}」身份不可报指标分配（校额到校 / 市级统筹）。</p>
         </section>
