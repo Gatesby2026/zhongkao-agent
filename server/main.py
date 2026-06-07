@@ -14,7 +14,9 @@ import time
 import uuid
 from pathlib import Path
 
-from fastapi import FastAPI, UploadFile, File, HTTPException
+import json
+
+from fastapi import FastAPI, UploadFile, File, HTTPException, Body
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
@@ -153,6 +155,67 @@ def start_pipeline(aid: str, student_name: str = ""):
 
     db.update_stage(aid, 2, "识别答题卡作答", status="running")
     tasks.submit_pipeline(aid, Path(a["student_dir"]))
+    return {"id": aid, "status": "running"}
+
+
+# ---------- 1d. 选择题识别不可信 → 手工录入 ----------
+
+@app.get("/api/analyses/{aid}/manual-choices")
+def get_manual_choices(aid: str):
+    """need_manual 时给前端：不可信原因 + 当前识别值（供家长在此基础上改）。"""
+    a = db.get_analysis(aid)
+    if not a:
+        raise HTTPException(404, "analysis not found")
+    sdir = Path(a["student_dir"])
+    try:
+        ac = json.loads((sdir / "answer-card.json").read_text(encoding="utf-8"))
+    except Exception:
+        ac = {"answers": []}
+    dq = ac.get("_data_quality") or {}
+    rel = dq.get("choice_reliability") or {}
+    trace = dq.get("recognition_trace") or {}
+    cur = {x["qId"]: (("".join(x["filled"]) if isinstance(x.get("filled"), list)
+                       else x.get("filled")) or "")
+           for x in ac.get("answers", [])
+           if x.get("type") in ("choice", "multi_choice")}
+    return {"id": aid, "status": a["status"], "reliability": rel,
+            "current": cur, "recognition_trace": trace}
+
+
+@app.post("/api/analyses/{aid}/manual-choices")
+def submit_manual_choices(aid: str, payload: dict = Body(...)):
+    """家长手工录入/核对选择题答案 → 覆盖答题卡 → 跳过涂卡识别，直接评分出报告。
+
+    payload: {"choices": {"Q1":"A","Q2":"C",...}}（单选单字母，多选可 "AC"）
+    """
+    a = db.get_analysis(aid)
+    if not a:
+        raise HTTPException(404, "analysis not found")
+    if a["status"] not in ("need_manual", "ready_confirm"):
+        raise HTTPException(409, f"当前状态 {a['status']} 不可手工录入")
+    choices = (payload or {}).get("choices") or {}
+    if not choices:
+        raise HTTPException(400, "choices 为空")
+    sdir = Path(a["student_dir"])
+    ac_path = sdir / "answer-card.json"
+    ac = json.loads(ac_path.read_text(encoding="utf-8"))
+    by_qid = {x["qId"]: x for x in ac.get("answers", [])}
+    for qid, letter in choices.items():
+        qid = qid if str(qid).startswith("Q") else f"Q{qid}"
+        letter = (letter or "").strip().upper()
+        if qid in by_qid:
+            by_qid[qid]["filled"] = letter
+            by_qid[qid]["confidence"] = 1.0
+            by_qid[qid]["source"] = "manual"
+        else:
+            ac.setdefault("answers", []).append(
+                {"qId": qid, "type": "choice", "filled": letter,
+                 "confidence": 1.0, "source": "manual"})
+    (ac.get("_data_quality") or {}).pop("choice_reliability", None)
+    ac_path.write_text(json.dumps(ac, ensure_ascii=False, indent=2),
+                       encoding="utf-8")
+    db.update_stage(aid, 3, "对照标准答案", status="running")
+    tasks.submit_resume(aid, sdir)
     return {"id": aid, "status": "running"}
 
 

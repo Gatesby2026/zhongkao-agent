@@ -78,6 +78,24 @@ def _kb_choice_qnums(yaml_path: Path) -> list[int]:
     return sorted(set(out))
 
 
+# 单选类（含完形/阅读单选，排除多选）——可信度门禁用：这些题涂多个字母即识别错
+_SINGLE_CHOICE_TYPES = {"单选", "choice", "cloze", "完形", "完形填空"}
+
+
+def _kb_single_choice_qnums(yaml_path: Path) -> list[int]:
+    import re as _re
+    import yaml as _yaml
+    d = _yaml.safe_load(yaml_path.read_text(encoding="utf-8"))
+    out: list[int] = []
+    for q in d.get("questions", []):
+        if q.get("type") not in _SINGLE_CHOICE_TYPES:
+            continue
+        m = _re.search(r"\d+", str(q.get("id", "")))
+        if m:
+            out.append(int(m.group()))
+    return sorted(set(out))
+
+
 def _filter_answer_card_pages(imgs: list[Path], per_page: list[dict]) -> tuple[list[Path], list[int]]:
     """按 card_meta.per_page 剔除 is_answer_card=False 的页（P1.1 / B-选 1）。
 
@@ -276,6 +294,85 @@ def _pipeline(aid: str, student_dir: Path):
                     },
                 }, ensure_ascii=False, indent=2), encoding="utf-8")
 
+            # 识别 trace（像素探针 ⇄ 识别 共识）：始终落库，供界面叠标注 + 升级门禁。
+            # 整段 fail-open——任何异常都退回原门禁行为，绝不拖垮判分。
+            rtrace = None
+            try:
+                import recognition_trace as _rt  # noqa
+                rtrace = _rt.build_trace_pages([str(p) for p in imgs_filtered])
+                _rt.align_to_qnums(rtrace, choice_qnums)
+                ac_path = student_dir / "answer-card.json"
+                _ac = json.loads(ac_path.read_text(encoding="utf-8"))
+                _ac.setdefault("_data_quality", {})["recognition_trace"] = rtrace
+                ac_path.write_text(
+                    json.dumps(_ac, ensure_ascii=False, indent=2), encoding="utf-8")
+            except Exception as _e:  # noqa
+                print(f"[_pipeline {aid}] recognition_trace 失败(忽略): {_e}",
+                      flush=True)
+
+            # 涂卡识别可信度门禁：不可信 → 不输出大面积错误的报告，转人工录入
+            rel = detect.choice_reliability(
+                getattr(res, "answers", []),
+                _kb_single_choice_qnums(Path(yaml_path)))
+            # 像素探针二次门禁：红题(疑似漏检涂卡) / 探针与识别大面积分歧(系统性崩盘)
+            trace_reasons = []
+            if rtrace and rtrace.get("aligned"):
+                sc = set(_kb_single_choice_qnums(Path(yaml_path)))
+                det = {}
+                for a in getattr(res, "answers", []):
+                    if a.get("type") in ("choice", "multi_choice"):
+                        f = a.get("filled")
+                        det[a["qId"]] = (f[0] if isinstance(f, list) and f
+                                         else (f or ""))
+                reds = [q for q in rtrace["questions"] if q["status"] == "red"]
+                sc_qs = [q for q in rtrace["questions"] if q["qid"] in sc]
+                disagree = [q for q in sc_qs
+                            if det.get(f"Q{q['qid']}", "")
+                            and det[f"Q{q['qid']}"] != q["final"]]
+                if reds:
+                    trace_reasons.append(f"{len(reds)}题疑似未识别到涂卡")
+                if sc_qs and len(disagree) / len(sc_qs) > 0.5:
+                    trace_reasons.append(
+                        f"像素探针与识别在{len(disagree)}题大面积分歧")
+            if (not rel["reliable"]) or trace_reasons:
+                rel = dict(rel)
+                rel["reasons"] = list(rel.get("reasons") or []) + trace_reasons
+                rel["reliable"] = False
+                ac_path = student_dir / "answer-card.json"
+                _ac = json.loads(ac_path.read_text(encoding="utf-8"))
+                _ac.setdefault("_data_quality", {})["choice_reliability"] = rel
+                ac_path.write_text(
+                    json.dumps(_ac, ensure_ascii=False, indent=2), encoding="utf-8")
+                db.update_stage(
+                    aid, 2, "选择题识别不可信，请手工核对/录入选择题答案",
+                    status="need_manual")
+                print(f"[_pipeline {aid}] 涂卡不可信 → need_manual: "
+                      f"{rel['reasons']}", flush=True)
+                return
+
+            db.update_stage(aid, 3, "对照标准答案")
+            _ensure_scores(aid, student_dir)
+
+            def on_stage(idx, n):
+                db.update_stage(aid, idx, n)
+
+            pdf = pa.run_report(student_dir, on_stage=on_stage)
+            db.mark_done(aid, str(pdf))
+        except Exception as e:
+            traceback.print_exc()
+            db.mark_failed(aid, f"{type(e).__name__}: {e}")
+
+
+# ---- 手工录入选择题后续：跳过涂卡识别，直接对照标准答案 + 出报告 ----
+
+def submit_resume(aid: str, student_dir: Path):
+    threading.Thread(target=_resume_grade_report,
+                     args=(aid, student_dir), daemon=True).start()
+
+
+def _resume_grade_report(aid: str, student_dir: Path):
+    with _lock:
+        try:
             db.update_stage(aid, 3, "对照标准答案")
             _ensure_scores(aid, student_dir)
 

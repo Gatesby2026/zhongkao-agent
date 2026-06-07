@@ -79,6 +79,42 @@ def build_trace(image_path):
     return {'questions': questions, 'summary': summ}
 
 
+def build_trace_pages(image_paths):
+    """多页：逐页跑探针（页级 try/except 容错），题号跨页连续 1..N。"""
+    questions = []
+    for p in image_paths:
+        try:
+            sub = build_trace(p)['questions']
+        except Exception as e:  # 单页失败不拖垮整卷
+            print(f"[recognition_trace] 跳过 {p}: {e}", file=sys.stderr)
+            continue
+        for q in sub:
+            q = dict(q); q['qid'] = len(questions) + 1
+            questions.append(q)
+    summ = {'total': len(questions),
+            'green': sum(q['status'] == 'green' for q in questions),
+            'yellow': sum(q['status'] == 'yellow' for q in questions),
+            'red': sum(q['status'] == 'red' for q in questions)}
+    summ['need_review'] = [q['qid'] for q in questions if q['status'] != 'green']
+    return {'questions': questions, 'summary': summ, 'aligned': False}
+
+
+def align_to_qnums(trace, qnums):
+    """把探针顺序题号(1..N)重映射到真实题号。仅当数量相等才映射，否则标 aligned=False。"""
+    qs = trace.get('questions', [])
+    qnums = sorted(qnums)
+    if len(qs) == len(qnums) and qnums:
+        for q, n in zip(qs, qnums):
+            q['qid'] = n
+        trace['aligned'] = True
+    else:
+        trace['aligned'] = False
+    # need_review 用映射后题号
+    trace.setdefault('summary', {})['need_review'] = [
+        q['qid'] for q in qs if q['status'] != 'green']
+    return trace
+
+
 if __name__ == '__main__':
     path = sys.argv[1]
     out = build_trace(path)
