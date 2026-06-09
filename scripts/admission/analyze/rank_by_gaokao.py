@@ -24,9 +24,14 @@ def main():
     by_school = defaultdict(dict)   # uid -> {metric: (value, year, qual, note)}
     for r in gk:
         m = by_school[r["uid"]]
+        q = r.get("qualifier", "=")
+        cand = (r["value"], r["year"], q, r.get("note", ""))
         prev = m.get(r["metric"])
-        if prev is None or r["year"] >= prev[1]:
-            m[r["metric"]] = (r["value"], r["year"], r.get("qualifier", "="), r.get("note", ""))
+        # 优先非存疑(qual!='?'),再取最新年——避免东师朝2024"100%(存疑)"盖掉2023可信值
+        def score(v):
+            return (0 if v[2] == "?" else 1, v[1])
+        if prev is None or score(cand) > score(prev):
+            m[r["metric"]] = cand
 
     # 2025 录取位次(本部 T1)
     rk = {}
