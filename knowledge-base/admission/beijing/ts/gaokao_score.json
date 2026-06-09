@@ -2,7 +2,7 @@
  "_meta": {
   "warning": "T3民间·非官方·低置信;U=一本率底+清北/高分段加成;无采集值的校用位次回归估算(very_low);供审核与产品弱化展示",
   "count": 27,
-  "anchors": 16
+  "anchors": 15
  },
  "scores": {
   "205001:北京中学": {
@@ -202,16 +202,16 @@
   },
   "105007:北京工业大学附属中学": {
    "name": "北京工业大学附属中学",
-   "gaokao_score": 26,
-   "tier": "一般",
-   "yiben": 0.3,
+   "gaokao_score": 75,
+   "tier": "中上",
+   "yiben": 0.85,
    "yiben_est": null,
    "qingbei": null,
    "n685": null,
    "n700": null,
    "benke": 1.0,
    "confidence": "medium",
-   "basis": "一本率30%(2024)",
+   "basis": "一本率85%(2024)",
    "source_tier": "T3",
    "note": "民间·非官方·多源/多年交叉;仅参考"
   },
@@ -405,8 +405,8 @@
    "n685": null,
    "n700": null,
    "benke": null,
-   "confidence": "low",
-   "basis": "一本率30%(2024)",
+   "confidence": "very_low",
+   "basis": "一本率30%(2024)·存疑改用旧年",
    "source_tier": "T3",
    "note": "民间·非官方·多源/多年交叉;仅参考"
   }
