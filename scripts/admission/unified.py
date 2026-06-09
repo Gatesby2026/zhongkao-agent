@@ -170,6 +170,7 @@ def build_unified(result: dict) -> list:
         g = gk.get(s["uid"])
         if g:
             s["gaokao"] = {"score": g.get("gaokao_score"), "tier": g.get("tier"),
-                           "yiben": g.get("yiben"), "qingbei": g.get("qingbei"),
+                           "yiben": g.get("yiben"), "yiben_est": g.get("yiben_est"),
+                           "qingbei": g.get("qingbei"),
                            "basis": g.get("basis"), "confidence": g.get("confidence")}
     return out

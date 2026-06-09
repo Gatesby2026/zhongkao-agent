@@ -1,14 +1,8 @@
 # 不在 chaoyang.yaml 27 校里、但出现在高考/录取数据中的公办校,手工补进主表
 # (uid=招生编码;别名供各源映射)
-- uid: "205003"
-  name: 北京汇文中学朝阳垂杨柳分校
-  school_code: "205003"
-  type: 公办普高
-  district: 朝阳
-  campus: 垂杨柳分校
-  lat: null
-  lon: null
-  aliases: [汇文中学垂杨柳分校, 汇文垂杨柳, 北京汇文中学垂杨柳分校]
+# 注:汇文中学垂杨柳分校(205003)已在 chaoyang.yaml 27 校内,勿在此重复(否则同校裂成两条 uid,
+#    真实高考数据被引到产品查不到的幻影 uid)。各源若用"北京汇文中学朝阳垂杨柳分校"等异名,
+#    应在对应 extract 的 alias_to_name 里改指 chaoyang 正名"汇文中学垂杨柳分校"。
 - uid: "民办:中央美术学院附属实验学校"
   name: 中央美术学院附属实验学校
   school_code: null
