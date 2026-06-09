@@ -108,6 +108,8 @@ def main():
         e = json.load(open(ex, encoding="utf-8"))
         alias = e.get("alias_to_name", {})
         for row in e.get("rows", []):
+            if "abbr" not in row:        # 非本 schema 的 *lines* 文件(如白皮书录取线)跳过
+                continue
             cn = alias.get(row["abbr"])
             uid = name2uid.get(cn)
             if not uid:
@@ -131,10 +133,12 @@ def main():
                  "top": "最高分", "n600": "600分以上人数", "n680": "680分以上人数",
                  "n700": "700分以上人数", "n685": "685分以上人数(裸分清北线)",
                  "qb": "清北人数", "np": "参加高考人数"}
-    gaokao = []
+    # (uid,year,metric) → (priority, row);高 priority 覆盖低(白皮书 priority=3 > 旧源默认1)
+    gk_best = {}
     for ex in sorted((KB / "raw_extracts").glob("*gaokao*.json")) if (KB / "raw_extracts").exists() else []:
         e = json.load(open(ex, encoding="utf-8"))
         alias, yr = e.get("alias_to_name", {}), e.get("year")
+        prio = e.get("priority", 1)
         for row in e.get("rows", []):
             cn = alias.get(row["abbr"]); uid = name2uid.get(cn)
             if not uid:
@@ -142,13 +146,18 @@ def main():
             for mk, mname in GK_METRIC.items():
                 if row.get(mk) is None:
                     continue
-                gaokao.append({
+                key = (uid, yr, mname)
+                if key in gk_best and gk_best[key][0] >= prio:
+                    continue
+                gk_best[key] = (prio, {
                     "uid": uid, "name": cn, "year": yr, "metric": mname,
                     "value": row[mk], "qualifier": row.get(mk + "_qual", "="),
                     "source_url": e.get("source_url"), "source_tier": e.get("source_tier", "T3"),
                     "collected": e.get("collected"), "confidence": "low",
-                    "note": "民间·非官方·喜报口径不一" + (("；" + row["note"]) if row.get("note") else ""),
+                    "note": ("白皮书·学校公布/机构汇编" if prio >= 3 else "民间·非官方·喜报口径不一")
+                            + (("；" + row["note"]) if row.get("note") else ""),
                 })
+    gaokao = [v[1] for v in gk_best.values()]
     gaokao.sort(key=lambda r: (r["uid"], r["year"], r["metric"]))
     with open(TS / "gaokao.jsonl", "w", encoding="utf-8") as f:
         for r in gaokao:
