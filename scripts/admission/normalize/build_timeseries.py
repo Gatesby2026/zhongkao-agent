@@ -28,7 +28,8 @@ def load():
 
 
 def uid_of(name, code):
-    return code if code else f"统招:{name}"
+    # 与 unified.py._uid 对齐:有码用"码:名",无码用"统招:名"。否则两套uid对不上、产品join不到高考分。
+    return f"{code}:{name}" if code else f"统招:{name}"
 
 
 def first_coord(coords, name):
