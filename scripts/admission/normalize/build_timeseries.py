@@ -69,7 +69,37 @@ def main():
                 "note": "原始 bjeea 录取线，项目已结构化",
             })
 
-    name2uid = {s["name"]: s["uid"] for s in schools_master}
+    # 民办/国际并入主表(来自 chaoyang_private.yaml),uid=招生编码 → 其高考/录取数据可映射
+    priv_path = KB / "chaoyang_private.yaml"
+    if priv_path.exists():
+        pv = yaml.safe_load(open(priv_path, encoding="utf-8"))
+        for p in (pv.get("schools") or []):
+            name, code = p.get("name"), p.get("code")
+            if not name:
+                continue
+            loc = p.get("location") or {}
+            types = []
+            if p.get("in_minban_list"):
+                types.append("民办普高")
+            if p.get("in_intl_list"):
+                types.append("国际/双语")
+            schools_master.append({
+                "uid": uid_of(name, code), "name": name, "school_code": code,
+                "type": "/".join(types) or "民办/国际", "district": "朝阳", "campus": None,
+                "lat": loc.get("lat"), "lon": loc.get("lon"), "aliases": p.get("aliases") or [],
+            })
+    # 补漏:不在 chaoyang.yaml 27 校里的公办(如汇文垂杨柳分校)— 手工补于 raw_extracts/schools_extra.yaml
+    extra_path = KB / "raw_extracts/schools_extra.yaml"
+    if extra_path.exists():
+        for s in (yaml.safe_load(open(extra_path, encoding="utf-8")) or []):
+            schools_master.append(s)
+
+    # name→uid:正名 + 别名都登记
+    name2uid = {}
+    for s in schools_master:
+        name2uid[s["name"]] = s["uid"]
+        for a in (s.get("aliases") or []):
+            name2uid.setdefault(a, s["uid"])
 
     # ② 多源录取线:raw_extracts/*lines*.json(T3 平台抽取)— 与 T1 并存,供对账/趋势,不覆盖 T1
     TOTALS = {2022: 660, 2023: 660, 2024: 670}
