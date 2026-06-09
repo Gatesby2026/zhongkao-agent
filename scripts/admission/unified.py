@@ -10,6 +10,23 @@ guantong/tongchou/new_schools）规范化成同一个 School 记录：
 """
 from __future__ import annotations
 
+import json
+from pathlib import Path
+
+_GK_SCORE = None
+
+
+def _gaokao_scores() -> dict:
+    """读 ts/gaokao_score.json(uid→高考U分),缓存。无则空。"""
+    global _GK_SCORE
+    if _GK_SCORE is None:
+        p = Path(__file__).resolve().parents[2] / "knowledge-base/admission/beijing/ts/gaokao_score.json"
+        try:
+            _GK_SCORE = json.load(open(p, encoding="utf-8")).get("scores", {})
+        except Exception:
+            _GK_SCORE = {}
+    return _GK_SCORE
+
 
 def _school(name, type_, district, lat, lon, address, conf, boarding,
             level=None, style=None, tags=None, gaokao=None, dist=None):
@@ -147,6 +164,12 @@ def build_unified(result: dict) -> list:
         out.append(s)
 
     # 统一打 uid(有编码用编码,无则 type:name)；地图标记与详情面板均以此为键
+    gk = _gaokao_scores()
     for s in out:
         s["uid"] = _uid(s.get("school_code"), s["type"], s["name"])
+        g = gk.get(s["uid"])
+        if g:
+            s["gaokao"] = {"score": g.get("gaokao_score"), "tier": g.get("tier"),
+                           "yiben": g.get("yiben"), "qingbei": g.get("qingbei"),
+                           "basis": g.get("basis"), "confidence": g.get("confidence")}
     return out

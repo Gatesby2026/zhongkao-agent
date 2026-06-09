@@ -1254,6 +1254,8 @@ const tcOptions: string[] = []
                 <div v-if="selSchool.extra.direction && !(selSchool.extra.curriculum && selSchool.extra.curriculum.length)" class="dp-line dp-muted">方向：{{ selSchool.extra.direction }}</div>
 
                 <div v-if="selSchool.features.style" class="dp-line">🏫 {{ selSchool.features.style }}</div>
+                <div v-if="selSchool.gaokao" class="dp-line">🎓 高考评分 <b>{{ selSchool.gaokao.score }}</b>/100 · {{ selSchool.gaokao.tier }}
+                  <span class="dp-muted">（{{ selSchool.gaokao.yiben != null ? '一本' + Math.round(selSchool.gaokao.yiben * 100) + '%' : '' }}{{ selSchool.gaokao.qingbei ? ' 清北' + selSchool.gaokao.qingbei : '' }} · 民间·{{ selSchool.gaokao.confidence }}）</span></div>
                 <div v-if="selSchool.features.gaokao" class="dp-line dp-muted">🎓 高考(民间·非官方)：{{ selSchool.features.gaokao }}</div>
                 <div v-if="selSchool.geo.address" class="dp-line dp-muted">📍 {{ selSchool.geo.address }}<span v-if="selSchool.geo.confidence === 'low' || !selSchool.geo.lat" class="addr-tag">待核</span></div>
               </template>
@@ -1386,6 +1388,8 @@ const tcOptions: string[] = []
                 <div v-if="selSchool.extra.direction && !(selSchool.extra.curriculum && selSchool.extra.curriculum.length)" class="dp-line dp-muted">方向：{{ selSchool.extra.direction }}</div>
 
                 <div v-if="selSchool.features.style" class="dp-line">🏫 {{ selSchool.features.style }}</div>
+                <div v-if="selSchool.gaokao" class="dp-line">🎓 高考评分 <b>{{ selSchool.gaokao.score }}</b>/100 · {{ selSchool.gaokao.tier }}
+                  <span class="dp-muted">（{{ selSchool.gaokao.yiben != null ? '一本' + Math.round(selSchool.gaokao.yiben * 100) + '%' : '' }}{{ selSchool.gaokao.qingbei ? ' 清北' + selSchool.gaokao.qingbei : '' }} · 民间·{{ selSchool.gaokao.confidence }}）</span></div>
                 <div v-if="selSchool.features.gaokao" class="dp-line dp-muted">🎓 高考(民间·非官方)：{{ selSchool.features.gaokao }}</div>
                 <div v-if="selSchool.geo.address" class="dp-line dp-muted">📍 {{ selSchool.geo.address }}<span v-if="selSchool.geo.confidence === 'low' || !selSchool.geo.lat" class="addr-tag">待核</span></div>
               </template>
