@@ -127,7 +127,9 @@ def main():
 
     # ③ 高考出口(U 轴):raw_extracts/*gaokao*.json → gaokao.jsonl(均 T3·民间·低置信)
     GK_METRIC = {"tk": "特控率(一本)", "bk": "本科率", "avg": "年级平均分",
-                 "top": "最高分", "n600": "600分以上人数", "n680": "680分以上人数", "np": "参加高考人数"}
+                 "top": "最高分", "n600": "600分以上人数", "n680": "680分以上人数",
+                 "n700": "700分以上人数", "n685": "685分以上人数(裸分清北线)",
+                 "qb": "清北人数", "np": "参加高考人数"}
     gaokao = []
     for ex in sorted((KB / "raw_extracts").glob("*gaokao*.json")) if (KB / "raw_extracts").exists() else []:
         e = json.load(open(ex, encoding="utf-8"))

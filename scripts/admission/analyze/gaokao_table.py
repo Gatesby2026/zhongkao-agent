@@ -47,12 +47,6 @@ for uid, mm in M.items():
     tk = mm.get("特控率(一本)", {})
     best = tk_best(tk)
     name = schools.get(uid, {}).get("name", uid)
-    # 清北/985 线索从 note 里捞
-    qb = ""
-    for md in mm.values():
-        for (_v, _q, note) in md.values():
-            if "清北" in note or "北大" in note or "清华" in note:
-                qb = note.split("；")[-1][:18]; break
     rows.append({
         "uid": uid, "name": name,
         "tk_best": best[0] if best else None, "tk_year": best[1] if best else None, "susp": best[2] if best else False,
@@ -61,22 +55,27 @@ for uid, mm in M.items():
                     for (v, q, n) in [mm.get("本科率", {}).get(y, (None, "", ""))] if v is not None), ""),
         "top": next((str(int(v)) + f"({y})" for y in (2025, 2024, 2023)
                      for (v, _q, _n) in [mm.get("最高分", {}).get(y, (None, "", ""))] if v is not None), ""),
-        "n600": next((str(int(v)) for y in (2024, 2023) for (v, _q, _n) in [mm.get("600分以上人数", {}).get(y, (None, "", ""))] if v is not None), ""),
+        "qb": next((f"{int(v)}{q if q in '+~' else ''}({y})" for y in (2025, 2024, 2023, 2022) for (v, q, _n) in [mm.get("清北人数", {}).get(y, (None, "", ""))] if v is not None), ""),
+        "n700": next((f"{int(v)}({y})" for y in (2025, 2024, 2023) for (v, _q, _n) in [mm.get("700分以上人数", {}).get(y, (None, "", ""))] if v is not None), ""),
+        "n685": next((f"{int(v)}({y})" for y in (2025, 2024, 2023, 2022) for (v, _q, _n) in [mm.get("685分以上人数(裸分清北线)", {}).get(y, (None, "", ""))] if v is not None), ""),
+        "n600": next((str(int(v)) for y in (2025, 2024, 2023) for (v, _q, _n) in [mm.get("600分以上人数", {}).get(y, (None, "", ""))] if v is not None), ""),
         "avg": next((str(v) for y in (2024, 2023) for (v, _q, _n) in [mm.get("年级平均分", {}).get(y, (None, "", ""))] if v is not None), ""),
         "rk25": rk25.get(uid),
-        "qb": qb,
     })
 
-withtk = sorted([r for r in rows if r["tk_best"] is not None], key=lambda r: -r["tk_best"])
-notk = sorted([r for r in rows if r["tk_best"] is None], key=lambda r: (r["rk25"] or 9e9))
+def qbnum(r):
+    return int(r["qb"].split("(")[0].rstrip("+~")) if r["qb"] else -1
 
-H = f"{'#':>2} {'学校':<16}{'一本23':>7}{'一本24':>7}{'一本25':>7}{'本科':>6}{'最高分':>9}{'均分':>6}{'2025位次':>9}  备注"
-print("=== 朝阳高中 按高考(特控率/一本率)排名 · 历年明细 [T3·民间·非官方·低置信] ===")
+withtk = sorted([r for r in rows if r["tk_best"] is not None], key=lambda r: -r["tk_best"])
+notk = sorted([r for r in rows if r["tk_best"] is None], key=lambda r: (-qbnum(r), r["rk25"] or 9e9))
+
+H = f"{'#':>2} {'学校':<14}{'一本23':>7}{'一本24':>7}{'本科':>6}{'清北':>9}{'700+':>8}{'最高分':>9}{'25位次':>7}  备注"
+print("=== 朝阳高中 按高考排名 · 历年明细 [T3·民间·非官方·低置信] ===")
 print(H)
 for i, r in enumerate(withtk, 1):
-    note = ("⚠️存疑(用" + str(r["tk_year"]) + "年值)" if r["susp"] else "") + (r["qb"] or "")
-    print(f"{i:>2} {r['name'][:16]:<16}{r['tk23']:>7}{r['tk24']:>7}{r['tk25']:>7}{r['bk']:>6}{r['top']:>9}{r['avg']:>6}{str(r['rk25'] or '—'):>9}  {note}")
-print("\n=== 头部校:缺一本率、按高分段/口碑置顶(需人工核) ===")
+    note = ("⚠️存疑(用" + str(r["tk_year"]) + "年值)" if r["susp"] else "")
+    print(f"{i:>2} {r['name'][:14]:<14}{r['tk23']:>7}{r['tk24']:>7}{r['bk']:>6}{(r['qb'] or ''):>9}{(r['n700'] or r['n685'] or ''):>8}{r['top']:>9}{str(r['rk25'] or '—'):>7}  {note}")
+print("\n=== 头部校:不报一本率(均≈100%),按 清北/高分段 置顶 ===")
 print(H)
 for r in notk:
-    print(f" * {r['name'][:16]:<16}{r['tk23']:>7}{r['tk24']:>7}{r['tk25']:>7}{r['bk']:>6}{r['top']:>9}{r['avg']:>6}{str(r['rk25'] or '—'):>9}  {(r['qb'] or '')}{('600+'+r['n600']+'人') if r['n600'] else ''}")
+    print(f" * {r['name'][:14]:<14}{r['tk23']:>7}{r['tk24']:>7}{r['bk']:>6}{(r['qb'] or ''):>9}{(r['n700'] or r['n685'] or ''):>8}{r['top']:>9}{str(r['rk25'] or '—'):>7}  {('600+'+r['n600']+'人') if r['n600'] else ''}")
