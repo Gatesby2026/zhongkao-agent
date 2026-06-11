@@ -1,0 +1,164 @@
+{
+  "ErrorCode": "",
+  "ErrorMessage": "",
+  "JobStatus": "DONE",
+  "Angle": 0,
+  "MarkInfos": [
+    {
+      "MarkItemTitle": "26. 解答：(1) 求MN的长度相关；(2) 求参数p的相关值",
+      "AnswerInfos": [],
+      "MarkInfos": [
+        {
+          "MarkItemTitle": "(1) 计算MN的长度",
+          "AnswerInfos": [
+            {
+              "HandwriteInfo": "$MN=|p^2-p-p|=|p^2|$",
+              "IsCorrect": false,
+              "AnswerAnalysis": "合并同类项错误，$-p-p$应为$-2p$，化简结果错误",
+              "HandwriteInfoPositions": [
+                207,
+                11,
+                533,
+                11,
+                533,
+                128,
+                207,
+                128
+              ],
+              "RightAnswer": "",
+              "KnowledgePoints": []
+            },
+            {
+              "HandwriteInfo": "当$p=1$时，$M(1,0)$，$N=(1,1)$，$MN=1$",
+              "IsCorrect": true,
+              "AnswerAnalysis": "代入p=1后坐标计算正确，长度计算结果正确",
+              "HandwriteInfoPositions": [
+                276,
+                148,
+                692,
+                148,
+                692,
+                245,
+                276,
+                245
+              ],
+              "RightAnswer": "",
+              "KnowledgePoints": []
+            }
+          ],
+          "MarkInfos": [],
+          "QuestionPositions": [
+            98,
+            11,
+            705,
+            11,
+            705,
+            252,
+            98,
+            252
+          ],
+          "QuestionImagePositions": [],
+          "RightAnswer": ""
+        },
+        {
+          "MarkItemTitle": "(2) 根据函数关系求p的取值/最值",
+          "AnswerInfos": [
+            {
+              "HandwriteInfo": "$x^2-x=x$时，$x^2=2x$，$x_1=0$，$x_2=2$",
+              "IsCorrect": true,
+              "AnswerAnalysis": "解方程过程正确，结果正确",
+              "HandwriteInfoPositions": [
+                449,
+                557,
+                704,
+                557,
+                704,
+                755,
+                449,
+                755
+              ],
+              "RightAnswer": "",
+              "KnowledgePoints": []
+            },
+            {
+              "HandwriteInfo": "当$0<p \\leqslant 2$时，$t=(p-p^2+p)_{max}=(2p-p^2)_{max}$，对称轴$\\frac{b}{-2a}=\\frac{2}{2}=1$，当$p=1$时$t=1$",
+              "IsCorrect": true,
+              "AnswerAnalysis": "表达式化简正确，对称轴计算正确，最值计算正确",
+              "HandwriteInfoPositions": [
+                456,
+                789,
+                795,
+                789,
+                795,
+                1071,
+                456,
+                1071
+              ],
+              "RightAnswer": "",
+              "KnowledgePoints": []
+            },
+            {
+              "HandwriteInfo": "当$2<p$时，$t=p^2-p-p=p^2-2p$，当$t=1$时$p^2-2p=1$，配方得$p=1\\pm\\sqrt{2}$，因为$p>2$，所以$p=1+\\sqrt{2}$",
+              "IsCorrect": true,
+              "AnswerAnalysis": "表达式化简正确，解方程过程正确，根的取舍正确",
+              "HandwriteInfoPositions": [
+                458,
+                1075,
+                834,
+                1075,
+                834,
+                1364,
+                458,
+                1364
+              ],
+              "RightAnswer": "",
+              "KnowledgePoints": []
+            }
+          ],
+          "MarkInfos": [],
+          "QuestionPositions": [
+            64,
+            268,
+            1063,
+            268,
+            1063,
+            1372,
+            64,
+            1372
+          ],
+          "QuestionImagePositions": [],
+          "RightAnswer": ""
+        }
+      ],
+      "QuestionPositions": [],
+      "QuestionImagePositions": [
+        {
+          "Position": [
+            178,
+            293,
+            457,
+            293,
+            457,
+            582,
+            178,
+            582
+          ]
+        },
+        {
+          "Position": [
+            76,
+            547,
+            371,
+            547,
+            371,
+            861,
+            76,
+            861
+          ]
+        }
+      ],
+      "RightAnswer": ""
+    }
+  ],
+  "RequestId": "144ad260-4493-4307-84f3-5a3d9e5a33e6"
+}
