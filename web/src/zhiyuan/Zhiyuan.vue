@@ -1158,10 +1158,10 @@ const tcOptions: string[] = []
       <!-- 一级导航：地图 / 草表 / 查学校 / 渠道科普 -->
       <div class="tabbar">
         <div class="tabs" role="tablist">
-          <button class="tab" :class="{ on: tab === 'map' }" @click="goTab('map')"><span class="tab-ic">📍</span>志愿地图</button>
-          <button class="tab" :class="{ on: tab === 'draft' }" @click="goTab('draft')"><span class="tab-ic">📝</span>志愿草表<span class="tab-cnt">{{ filledSlots }}/{{ ZHIYUAN_SLOTS }}</span></button>
-          <button class="tab" :class="{ on: tab === 'explore' }" @click="goTab('explore')"><span class="tab-ic">🔎</span>查学校<span class="tab-cnt">{{ uList.length }}</span></button>
-          <button class="tab" :class="{ on: tab === 'channels' }" @click="goTab('channels')"><span class="tab-ic">📖</span>渠道科普</button>
+          <button class="tab" :class="{ on: tab === 'map' }" @click="goTab('map')"><span class="tab-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18.5 3 21V6l6-2.5 6 2.5 6-2.5V21l-6-2.5-6 2.5Z"/><path d="M9 3.5v15"/><path d="M15 5.5v15"/></svg></span>志愿地图</button>
+          <button class="tab" :class="{ on: tab === 'draft' }" @click="goTab('draft')"><span class="tab-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6a1 1 0 0 1 1 1v1h1.5A1.5 1.5 0 0 1 19 6.5v13A1.5 1.5 0 0 1 17.5 21h-11A1.5 1.5 0 0 1 5 19.5v-13A1.5 1.5 0 0 1 6.5 5H8V4a1 1 0 0 1 1-1Z"/><path d="M9 5h6"/><path d="M8.5 11h7"/><path d="M8.5 15h4.5"/></svg></span>志愿草表<span class="tab-cnt">{{ filledSlots }}/{{ ZHIYUAN_SLOTS }}</span></button>
+          <button class="tab" :class="{ on: tab === 'explore' }" @click="goTab('explore')"><span class="tab-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20.5 20.5-4-4"/></svg></span>查学校<span class="tab-cnt">{{ uList.length }}</span></button>
+          <button class="tab" :class="{ on: tab === 'channels' }" @click="goTab('channels')"><span class="tab-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.5v13"/><path d="M12 6.5C10.7 5.2 8.9 4.5 7 4.5H4a1 1 0 0 0-1 1v11.5a1 1 0 0 0 1 1h3.5c1.6 0 3.2.6 4.5 1.5 1.3-.9 2.9-1.5 4.5-1.5H20a1 1 0 0 0 1-1V5.5a1 1 0 0 0-1-1h-3c-1.9 0-3.7.7-5 2Z"/></svg></span>渠道科普</button>
         </div>
       </div><!-- /tabbar -->
 
@@ -1925,7 +1925,10 @@ const tcOptions: string[] = []
   border: 1px solid transparent; border-bottom: none; background: transparent; color: var(--gray-500);
   border-radius: var(--radius-sm) var(--radius-sm) 0 0; cursor: pointer;
   display: flex; align-items: center; gap: 5px; transition: color .15s, background .15s; }
-.tab .tab-ic { font-size: 15px; }
+.tab .tab-ic { display: inline-flex; align-items: center; justify-content: center; color: var(--gray-400); transition: color .15s, transform .15s; }
+.tab .tab-ic svg { width: 17px; height: 17px; display: block; }
+.tab:hover .tab-ic { color: var(--gray-600); }
+.tab.on .tab-ic { color: var(--brand); transform: translateY(-0.5px); }
 .tab:hover { color: var(--gray-800); background: var(--gray-50); }
 .tab.on { color: var(--brand-dark); background: var(--surface);
   border-color: var(--gray-100); box-shadow: 0 -2px 6px rgba(0, 0, 0, .04); }
