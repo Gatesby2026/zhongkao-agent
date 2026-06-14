@@ -163,6 +163,8 @@ const chSub = ref<'guide' | 'xed' | 'tc'>('guide')   // 渠道科普子页
 const loading = ref(false)
 const errMsg = ref('')
 const result = ref<Result | null>(null)
+const formOpen = ref(true)        // 表单展开/折叠：生成后自动折叠成一行摘要
+const formDirty = ref(false)      // 折叠态下条件被改、尚未重新生成
 let mapInst: any = null
 let publicLayer: any = null
 let minbanLayer: any = null
@@ -208,6 +210,8 @@ async function submit() {
     result.value = await r.json()
     resetDraft()
     prefillTongchou()
+    formOpen.value = false   // 生成后折叠表单，把空间让给结果
+    formDirty.value = false
     tab.value = 'map'        // 生成后回到地图页，保证地图在可见状态下初始化
     await nextTick()
     renderMap()
@@ -869,6 +873,16 @@ const copyHint = ref('')
 /* ---------------- 志愿草表 v2：三批次（2026 口径）---------------- */
 // 批次资格（按考生身份灰掉）
 const identityLabel = computed(() => (IDENTITIES.find(i => i.v === form.identity) || {}).label || '')
+const modeLabel = computed(() => (MODES.find(m => m.v === form.mode) || {}).label || '')
+const formSummary = computed(() => {
+  const p: string[] = [identityLabel.value, '区排名 ' + (form.rank || '—')]
+  if (xedQuery.value) p.push(xedQuery.value.replace('北京市', ''))
+  p.push(modeLabel.value + '≤' + (form.max_km || '?') + 'km')
+  if (form.boarding) p.push('可住宿')
+  return p.join(' · ')
+})
+// 折叠态下改了条件 → 标记 dirty，提示重新生成
+watch([form, xedQuery], () => { if (result.value && !formOpen.value) formDirty.value = true }, { deep: true })
 const canIndicator = computed(() => form.identity === 'jjyj')   // 指标分配=校额到校/统筹：京籍应届
 const canGuantong = computed(() => form.identity === 'jjyj')    // 贯通：京籍应届
 const canPuhao = computed(() => form.identity !== 'feijing')    // 普高统招：非京籍不可
@@ -1114,9 +1128,17 @@ const tcOptions: string[] = []
       ⚠️ 学校代码 / 专业(班)代码派生自 <b>bjeea 2025 官方招生计划册</b>（人工核对映射），<b>2026 计划 7 月初发布后须刷新</b>；高考成绩为<b>民间·非官方</b>数据，仅作补充参考，请勿据此直接决策。
     </div>
 
-    <!-- 输入区：全部条件常驻显示，方便反复改条件对比 -->
-    <section class="card form">
-      <div class="fields">
+    <!-- 输入区：生成前完整表单；生成后折叠成一行摘要(很少再改) -->
+    <section class="card form" :class="{ collapsed: result && !formOpen }">
+      <!-- 折叠摘要条 -->
+      <button v-if="result && !formOpen" class="form-bar" @click="formOpen = true">
+        <svg class="fb-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M6 12h12M10 18h4"/></svg>
+        <span class="fb-sum">{{ formSummary }}</span>
+        <span v-if="formDirty" class="fb-dirty">条件已改，点此重新生成</span>
+        <span class="fb-edit">修改条件 ▾</span>
+      </button>
+      <!-- 完整表单 -->
+      <div v-show="!result || formOpen" class="fields">
         <label class="fld fld-id">考生身份
           <select v-model="form.identity">
             <option v-for="x in IDENTITIES" :key="x.v" :value="x.v">{{ x.label }}</option>
@@ -1154,7 +1176,7 @@ const tcOptions: string[] = []
           </button>
         </div>
       </div>
-      <p v-if="form.boarding" class="board-note">🛏 已开启住宿：≤通勤上限的就近走读 + 超上限但<b>提供住宿</b>的远校都纳入推荐；调"通勤上限"仍然生效。</p>
+      <div v-if="result && formOpen" class="form-collapse"><button class="fb-edit" @click="formOpen = false">收起 ▴</button></div>
       <p v-if="errMsg" class="err">{{ errMsg }}</p>
     </section>
 
@@ -1706,11 +1728,23 @@ const tcOptions: string[] = []
 .g-a :deep(.g-tbl th), .g-a :deep(.g-tbl td) { border: 1px solid var(--gray-200); padding: 5px 8px; text-align: left; }
 .g-a :deep(.g-tbl th) { background: var(--gray-50); color: var(--gray-500); font-weight: 600; }
 
-/* 输入区：现代化网格布局 —— 12 列对齐、柔边圆角、焦点高亮环 */
-.form.card { padding: 18px 20px; }
-.form .fields { display: grid; grid-template-columns: repeat(12, 1fr); gap: 15px 14px; align-items: end; }
-.fld { display: flex; flex-direction: column; gap: 6px; font-size: 12px; font-weight: 600; color: var(--gray-600); }
+/* 输入区：现代化网格布局 —— 12 列对齐、柔边圆角、焦点高亮环；紧凑 */
+.form.card { padding: 12px 14px; }
+.form.card.collapsed { padding: 0; }
+.form .fields { display: grid; grid-template-columns: repeat(12, 1fr); gap: 9px 12px; align-items: end; }
+.fld { display: flex; flex-direction: column; gap: 4px; font-size: 11.5px; font-weight: 600; color: var(--gray-600); }
 .fld small { font-weight: 400; color: var(--gray-400); }
+/* 折叠摘要条 */
+.form-bar { display: flex; align-items: center; gap: 10px; width: 100%; padding: 9px 14px;
+  background: none; border: none; cursor: pointer; text-align: left; font: inherit; }
+.form-bar .fb-ic { width: 16px; height: 16px; color: var(--brand); flex-shrink: 0; }
+.fb-sum { font-size: 13px; font-weight: 600; color: var(--gray-800); white-space: nowrap;
+  overflow: hidden; text-overflow: ellipsis; }
+.fb-dirty { font-size: 11.5px; font-weight: 600; color: #b45309; background: var(--warning-bg);
+  padding: 2px 8px; border-radius: var(--radius-full); white-space: nowrap; }
+.fb-edit { margin-left: auto; flex-shrink: 0; font-size: 12px; font-weight: 600; color: var(--brand);
+  background: none; border: none; cursor: pointer; padding: 2px 4px; }
+.form-collapse { text-align: right; margin-top: 8px; }
 .fld-id { grid-column: span 2; }
 .fld-rank { grid-column: span 2; }
 .fld-jr { grid-column: span 4; }
@@ -1719,8 +1753,8 @@ const tcOptions: string[] = []
 .fld-km { grid-column: span 2; }
 .fld-board { grid-column: span 4; }
 .fld-go { grid-column: span 4; justify-content: flex-end; }
-.form input, .form select { width: 100%; box-sizing: border-box; height: 40px; padding: 0 12px;
-  border: 1px solid var(--gray-200); border-radius: 10px; font-size: 13.5px; color: var(--gray-900);
+.form input, .form select { width: 100%; box-sizing: border-box; height: 34px; padding: 0 11px;
+  border: 1px solid var(--gray-200); border-radius: 8px; font-size: 13px; color: var(--gray-900);
   background: var(--gray-50); transition: border-color .15s, box-shadow .15s, background .15s; -webkit-appearance: none; appearance: none; }
 .form select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
   background-repeat: no-repeat; background-position: right 11px center; padding-right: 30px; cursor: pointer; }
@@ -1729,7 +1763,7 @@ const tcOptions: string[] = []
   box-shadow: 0 0 0 3px var(--brand-50); }
 .form input:disabled { background: var(--gray-100); color: var(--gray-400); }
 /* iOS 风格住宿开关 */
-.fld-board .switch { display: flex; align-items: center; gap: 9px; height: 40px; cursor: pointer; font-weight: 400; }
+.fld-board .switch { display: flex; align-items: center; gap: 9px; height: 34px; cursor: pointer; font-weight: 400; }
 .sw-input { position: absolute; opacity: 0; width: 0; height: 0; }
 .sw-track { flex-shrink: 0; width: 38px; height: 22px; background: var(--gray-300); border-radius: 999px;
   position: relative; transition: background .2s; }
@@ -1739,7 +1773,7 @@ const tcOptions: string[] = []
 .sw-input:checked + .sw-track .sw-thumb { transform: translateX(16px); }
 .sw-input:focus-visible + .sw-track { box-shadow: 0 0 0 3px var(--brand-50); }
 .sw-txt { font-size: 12px; color: var(--gray-600); }
-.go { width: 100%; height: 40px; display: inline-flex; align-items: center; justify-content: center; gap: 7px;
+.go { width: 100%; height: 34px; display: inline-flex; align-items: center; justify-content: center; gap: 7px;
   background: var(--brand); color: #fff; border: none; border-radius: 10px; font-size: 14px; font-weight: 600;
   white-space: nowrap; cursor: pointer; box-shadow: 0 1px 2px rgba(37, 99, 235, .25);
   transition: background .15s, box-shadow .15s, transform .05s; }
