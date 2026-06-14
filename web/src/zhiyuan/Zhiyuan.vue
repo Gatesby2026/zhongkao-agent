@@ -1274,10 +1274,23 @@ const tcOptions: string[] = []
                 <div v-if="selSchool.extra.projects && selSchool.extra.projects.length" class="dp-block">
                   <div class="dp-title">贯通项目（→本科）</div>
                   <div v-for="(pj, pi) in selSchool.extra.projects" :key="pi" class="dp-mj">{{ pj.type }}：{{ pj.major }} → {{ pj.benke }}<em v-if="pj.plan"> · {{ pj.plan }}人</em></div>
+                  <div v-if="selSchool.extra.projects[0].threshold" class="dp-line dp-muted">🎯 门槛：中考≥{{ selSchool.extra.projects[0].threshold }}分 · 学制{{ selSchool.extra.projects[0].years }}年 · 京籍应届 · 提前批</div>
+                  <template v-for="(tm, tk) in (selSchool.extra.type_meta || {})" :key="tk"><div v-if="tm" class="dp-line dp-muted">🔁 {{ tk }}：{{ tm.transfer }}；{{ tm.tuition }}</div></template>
                 </div>
                 <div v-if="selSchool.extra.system" class="dp-line">🏛 体系：{{ selSchool.extra.system }}</div>
                 <div v-if="selSchool.extra.analog && selSchool.extra.analog.length" class="dp-line dp-muted">↔ 可类比：{{ selSchool.extra.analog.join('、') }}</div>
                 <div v-if="selSchool.extra.direction && !(selSchool.extra.curriculum && selSchool.extra.curriculum.length)" class="dp-line dp-muted">方向：{{ selSchool.extra.direction }}</div>
+                <!-- 升学出口/班型/录取(白皮书补充·T3待核) -->
+                <div v-if="selSchool.extra.study_abroad" class="dp-line">🎓 留学走向：{{ selSchool.extra.study_abroad }}</div>
+                <div v-else-if="selSchool.extra.exit_domestic" class="dp-line">🎓 高考出口：{{ selSchool.extra.exit_domestic }}</div>
+                <div v-else-if="selSchool.extra.exit_type === '暂无毕业生'" class="dp-line dp-muted">🎓 新建高中部·首届未毕业，暂无升学出口</div>
+                <div v-else-if="selSchool.extra.exit_type === '未公布'" class="dp-line dp-muted">🎓 升学出口：学校未公布</div>
+                <div v-if="selSchool.extra.comp_high_note" class="dp-line">🎓 综合高中班：{{ selSchool.extra.comp_high_note }}</div>
+                <div v-if="selSchool.extra.exit_paths" class="dp-line">🚀 升学路径：{{ selSchool.extra.exit_paths }}</div>
+                <div v-if="selSchool.extra.voc_line_note" class="dp-line dp-muted">📈 录取线：{{ selSchool.extra.voc_line_note }}</div>
+                <div v-if="selSchool.extra.campuses && selSchool.extra.campuses.length" class="dp-line dp-muted">🏫 校区：{{ selSchool.extra.campuses.join(' / ') }}</div>
+                <div v-if="selSchool.extra.class_info" class="dp-line dp-muted">👥 {{ selSchool.extra.class_info }}<template v-if="selSchool.extra.enroll_2025"> · 2025招{{ selSchool.extra.enroll_2025 }}人</template></div>
+                <div v-if="selSchool.extra.line_note && (selSchool.extra.in_minban || selSchool.extra.in_intl)" class="dp-line dp-muted">📈 录取：{{ selSchool.extra.line_note }}</div>
 
                 <div v-if="selSchool.features.style" class="dp-line">🏫 {{ selSchool.features.style }}</div>
                 <div v-if="selSchool.gaokao && selSchool.gaokao.score != null" class="dp-line">🎓 高考评分 <b>{{ selSchool.gaokao.score }}</b>/100 · {{ selSchool.gaokao.tier }}
@@ -1409,10 +1422,23 @@ const tcOptions: string[] = []
                 <div v-if="selSchool.extra.projects && selSchool.extra.projects.length" class="dp-block">
                   <div class="dp-title">贯通项目（→本科）</div>
                   <div v-for="(pj, pi) in selSchool.extra.projects" :key="pi" class="dp-mj">{{ pj.type }}：{{ pj.major }} → {{ pj.benke }}<em v-if="pj.plan"> · {{ pj.plan }}人</em></div>
+                  <div v-if="selSchool.extra.projects[0].threshold" class="dp-line dp-muted">🎯 门槛：中考≥{{ selSchool.extra.projects[0].threshold }}分 · 学制{{ selSchool.extra.projects[0].years }}年 · 京籍应届 · 提前批</div>
+                  <template v-for="(tm, tk) in (selSchool.extra.type_meta || {})" :key="tk"><div v-if="tm" class="dp-line dp-muted">🔁 {{ tk }}：{{ tm.transfer }}；{{ tm.tuition }}</div></template>
                 </div>
                 <div v-if="selSchool.extra.system" class="dp-line">🏛 体系：{{ selSchool.extra.system }}</div>
                 <div v-if="selSchool.extra.analog && selSchool.extra.analog.length" class="dp-line dp-muted">↔ 可类比：{{ selSchool.extra.analog.join('、') }}</div>
                 <div v-if="selSchool.extra.direction && !(selSchool.extra.curriculum && selSchool.extra.curriculum.length)" class="dp-line dp-muted">方向：{{ selSchool.extra.direction }}</div>
+                <!-- 升学出口/班型/录取(白皮书补充·T3待核) -->
+                <div v-if="selSchool.extra.study_abroad" class="dp-line">🎓 留学走向：{{ selSchool.extra.study_abroad }}</div>
+                <div v-else-if="selSchool.extra.exit_domestic" class="dp-line">🎓 高考出口：{{ selSchool.extra.exit_domestic }}</div>
+                <div v-else-if="selSchool.extra.exit_type === '暂无毕业生'" class="dp-line dp-muted">🎓 新建高中部·首届未毕业，暂无升学出口</div>
+                <div v-else-if="selSchool.extra.exit_type === '未公布'" class="dp-line dp-muted">🎓 升学出口：学校未公布</div>
+                <div v-if="selSchool.extra.comp_high_note" class="dp-line">🎓 综合高中班：{{ selSchool.extra.comp_high_note }}</div>
+                <div v-if="selSchool.extra.exit_paths" class="dp-line">🚀 升学路径：{{ selSchool.extra.exit_paths }}</div>
+                <div v-if="selSchool.extra.voc_line_note" class="dp-line dp-muted">📈 录取线：{{ selSchool.extra.voc_line_note }}</div>
+                <div v-if="selSchool.extra.campuses && selSchool.extra.campuses.length" class="dp-line dp-muted">🏫 校区：{{ selSchool.extra.campuses.join(' / ') }}</div>
+                <div v-if="selSchool.extra.class_info" class="dp-line dp-muted">👥 {{ selSchool.extra.class_info }}<template v-if="selSchool.extra.enroll_2025"> · 2025招{{ selSchool.extra.enroll_2025 }}人</template></div>
+                <div v-if="selSchool.extra.line_note && (selSchool.extra.in_minban || selSchool.extra.in_intl)" class="dp-line dp-muted">📈 录取：{{ selSchool.extra.line_note }}</div>
 
                 <div v-if="selSchool.features.style" class="dp-line">🏫 {{ selSchool.features.style }}</div>
                 <div v-if="selSchool.gaokao && selSchool.gaokao.score != null" class="dp-line">🎓 高考评分 <b>{{ selSchool.gaokao.score }}</b>/100 · {{ selSchool.gaokao.tier }}

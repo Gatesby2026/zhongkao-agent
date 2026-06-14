@@ -15,7 +15,8 @@ import fitz
 ROOT = Path(__file__).resolve().parents[3]
 PDF = ROOT / "knowledge-original/zhiyuan/2026 高中指南白皮书 朝阳区.pdf"
 CACHE = ROOT / ".cache/whitepaper_ocr.json"
-OUT = ROOT / "knowledge-base/admission/beijing/raw_extracts/whitepaper_ocr_raw.json"
+RAW = ROOT / "knowledge-base/admission/beijing/raw_extracts"
+OUT = RAW / "whitepaper_ocr_raw.json"
 KEY = os.environ.get("DASHSCOPE_API_KEY", "")
 
 # 校名 → 档案首页(印刷页);PDF 1-based = 印刷 + 10。和平街校区并入和平街一中。
@@ -29,6 +30,25 @@ SCHOOLS = {
     "陈经纶中学团结湖分校": 179, "首师大附中朝阳学校": 182, "汇文中学垂杨柳分校": 185,
     "清华附中广华学校": 191, "中国传媒大学附属中学": 194, "八十中睿德分校": 197,
     "北京十七中": 200, "东方德才学校": 203, "北京中学科技分校": 206,
+}
+# 第三章第二节 朝阳民办高中(印刷页);PDF 1-based = 印刷 + 10
+MINBAN = {
+    "北京拔萃双语学校": 217, "北京市朝阳区人朝分实验学校": 219, "北京市实验外国语学校": 222,
+    "北京市朝阳区世青学校": 225, "北京市朝阳区爱迪外国语学校": 227, "北京爱迪学校": 230,
+    "北京市朝阳区力迈学校": 233, "北京市朝阳区探月学校": 236, "北京市朝阳区北外同文外国语学校": 239,
+    "北京市朝阳区启明星学校": 242, "北京市朝阳区青苗学校": 244, "北京市朝阳区凯文学校": 246,
+    "北京市朝阳区明诚外国语学校": 249, "北京市朝阳区博雅学校": 252, "北京市朝阳区致知学校": 254,
+    "北京市朝阳区赫德学校": 257, "北京市朝阳区未来实验学校": 260, "北京市朝阳区礼德学校": 262,
+    "北京市朝阳区燕京实验中学": 264, "北京市朝阳区新亚学校": 267, "北京市朝阳区乐成学校": 270,
+}
+# 职高/中职(印刷页)
+VOC = {
+    "北京市劲松职业高中": 209, "北京市求实职业学校": 212, "北京市电气工程学校": 214,
+}
+GROUPS = {
+    "gongban": (SCHOOLS, "whitepaper_ocr_raw.json"),
+    "minban": (MINBAN, "whitepaper_minban_ocr.json"),
+    "voc": (VOC, "whitepaper_voc_ocr.json"),
 }
 # 每校 OCR 的 PDF 页偏移(相对印刷页+10):概况(0)+数据页(1)+备份(2)。数据多在 +1。
 OFFSETS = [0, 1, 2]
@@ -50,12 +70,17 @@ def ocr_page(doc, idx):
 
 
 def main():
+    import sys
     assert KEY, "需 DASHSCOPE_API_KEY"
+    group = sys.argv[1] if len(sys.argv) > 1 else "gongban"
+    schools, out_name = GROUPS[group]
+    out_path = RAW / out_name
+    print(f"组={group} 校数={len(schools)} → {out_name}")
     doc = fitz.open(PDF)
     cache = load_cache()
     # 收集所有要 OCR 的 PDF 0-based 页号
     pages = {}   # idx -> None
-    for name, printed in SCHOOLS.items():
+    for name, printed in schools.items():
         base = printed + 10 - 1   # 0-based
         for off in OFFSETS:
             pages[base + off] = True
@@ -79,16 +104,16 @@ def main():
 
     # 按校汇总 OCR 文本(拼 3 页)→ raw json,供解析步骤
     per_school = {}
-    for name, printed in SCHOOLS.items():
+    for name, printed in schools.items():
         base = printed + 10 - 1
         texts = []
         for off in OFFSETS:
             t = cache.get(str(base + off), "")
             texts.append({"pdf_page": base + off + 1, "text": t})
         per_school[name] = {"printed_start": printed, "pages": texts}
-    json.dump(per_school, open(OUT, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    json.dump(per_school, open(out_path, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     errs = sum(1 for v in cache.values() if v.startswith("__ERR__"))
-    print(f"写 {OUT.name}: {len(per_school)} 校 (OCR 错误页 {errs})")
+    print(f"写 {out_name}: {len(per_school)} 校 (OCR 错误页 {errs})")
 
 
 if __name__ == "__main__":

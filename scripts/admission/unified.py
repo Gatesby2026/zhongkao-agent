@@ -123,7 +123,12 @@ def build_unified(result: dict) -> list:
         s["school_code"] = p.get("code")
         s["extra"] = {"tuition": p.get("tuition"), "curriculum": p.get("curriculum"),
                       "direction": p.get("direction"), "in_minban": p.get("in_minban_list"),
-                      "in_intl": p.get("in_intl_list")}
+                      "in_intl": p.get("in_intl_list"),
+                      # 白皮书补充：升学出口(留学走向/高考/暂无)+课程+招生规模
+                      "exit_type": p.get("exit_type"), "study_abroad": p.get("study_abroad"),
+                      "exit_domestic": p.get("exit_domestic"), "enroll_2025": p.get("enroll_2025"),
+                      "class_info": p.get("class_info"), "wp_curriculum": p.get("wp_curriculum"),
+                      "line_note": p.get("wp_line_note")}
         s["channels"].append(_ch("自主", "不适用", "route_choice",
                                  caveat="多为自主招生/面试,无公开统一录取线;路线(出国/双轨)选择为主"))
         out.append(s)
@@ -133,7 +138,11 @@ def build_unified(result: dict) -> list:
         s = _school(v["name"], "中职/职教", result.get("district"), v.get("lat"), v.get("lon"),
                     v.get("address"), v.get("addr_conf"), v.get("boarding"), v.get("type"),
                     None, None, None, v.get("dist"))
-        s["extra"] = {"specialties": v.get("specialties"), "five_year": v.get("five_year")}
+        s["extra"] = {"specialties": v.get("specialties"), "five_year": v.get("five_year"),
+                      # 白皮书补充：综合高中班(职普融通)+录取线+升学路径+校区
+                      "comp_high_2025": v.get("comp_high_2025"), "comp_high_note": v.get("comp_high_note"),
+                      "voc_line_note": v.get("line_note"), "exit_paths": v.get("exit_paths"),
+                      "campuses": v.get("campuses")}
         s["channels"].append(_ch("中职", "不适用", "threshold", caveat="统一招生中职类,按分填报"))
         out.append(s)
 
@@ -145,9 +154,13 @@ def build_unified(result: dict) -> list:
         s = _school(nm, "贯通", c.get("district"), c.get("lat"), c.get("lon"),
                     None, ("approx" if c.get("geo") == "approx" else None), None,
                     "贯通承办院校", None, None, None, None)
+        ptypes = {p.get("type") for p in projs if p.get("type")}
         s["extra"] = {"projects": [{"type": p.get("type"), "major": p.get("major"),
-                                    "benke": p.get("benke"), "plan": p.get("plan")} for p in projs],
-                      "note": c.get("note")}
+                                    "benke": p.get("benke"), "plan": p.get("plan"),
+                                    "years": p.get("years"), "threshold": p.get("threshold")} for p in projs],
+                      "note": c.get("note"),
+                      "type_meta": {t: (gt.get("type_meta") or {}).get(t) for t in ptypes},
+                      "policy_note": gt.get("policy_note")}
         s["channels"].append(_ch("贯通", "不适用", "threshold", refLine=gt.get("overall", {}).get("min_score"),
                                  caveat="7年→本科,380门槛,仅限京籍,2026并入统招"))
         out.append(s)
