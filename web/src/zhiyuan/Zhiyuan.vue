@@ -1117,38 +1117,42 @@ const tcOptions: string[] = []
     <!-- 输入区：全部条件常驻显示，方便反复改条件对比 -->
     <section class="card form">
       <div class="fields">
-        <label class="f-mode">考生身份
+        <label class="fld fld-id">考生身份
           <select v-model="form.identity">
             <option v-for="x in IDENTITIES" :key="x.v" :value="x.v">{{ x.label }}</option>
           </select>
         </label>
-        <label class="f-rank">区排名<small>一模/二模</small>
+        <label class="fld fld-rank">区排名 <small>一模/二模</small>
           <input type="number" v-model.number="form.rank" min="1" placeholder="如 4500" />
         </label>
-        <label class="f-home">初中学校<small>校额/统筹用</small>
+        <label class="fld fld-jr">初中学校 <small>校额/统筹用</small>
           <input list="xedSchoolListMain" v-model="xedQuery" placeholder="如 朝阳外国语学校" />
         </label>
         <datalist id="xedSchoolListMain"><option v-for="r in (xedBlock ? xedBlock.rows : [])" :key="r.code" :value="r.name" /></datalist>
-        <label class="f-home">家庭住址<small>留空只看全区分布</small>
+        <label class="fld fld-home">家庭住址 <small>留空只看全区分布</small>
           <input type="text" v-model="form.home" placeholder="如 朝阳区大屯金泉家园" />
         </label>
-        <label class="f-mode">通勤方式
+        <label class="fld fld-mode">通勤方式
           <select v-model="form.mode">
             <option v-for="m in MODES" :key="m.v" :value="m.v">{{ m.label }}</option>
           </select>
         </label>
-        <label class="f-km">通勤上限<small>km</small>
+        <label class="fld fld-km">通勤上限 <small>km</small>
           <input type="number" v-model="form.max_km" min="1" placeholder="8" />
         </label>
-        <label class="f-board switch">接受住宿
-          <span class="sw-line">
-            <input type="checkbox" v-model="form.boarding" />
-            <span class="sw-hint">远校可住校(通勤上限仍生效)</span>
-          </span>
-        </label>
-        <button class="go" :disabled="loading" @click="submit">
-          {{ loading ? '匹配中…' : '生成志愿建议' }}
-        </button>
+        <div class="fld fld-board">接受住宿
+          <label class="switch">
+            <input class="sw-input" type="checkbox" v-model="form.boarding" />
+            <span class="sw-track"><span class="sw-thumb"></span></span>
+            <span class="sw-txt">远校可住校（通勤上限仍生效）</span>
+          </label>
+        </div>
+        <div class="fld fld-go">
+          <button class="go" :disabled="loading" @click="submit">
+            <svg v-if="!loading" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20.5 20.5-4-4"/></svg>
+            {{ loading ? '匹配中…' : '生成志愿建议' }}
+          </button>
+        </div>
       </div>
       <p v-if="form.boarding" class="board-note">🛏 已开启住宿：≤通勤上限的就近走读 + 超上限但<b>提供住宿</b>的远校都纳入推荐；调"通勤上限"仍然生效。</p>
       <p v-if="errMsg" class="err">{{ errMsg }}</p>
@@ -1702,26 +1706,52 @@ const tcOptions: string[] = []
 .g-a :deep(.g-tbl th), .g-a :deep(.g-tbl td) { border: 1px solid var(--gray-200); padding: 5px 8px; text-align: left; }
 .g-a :deep(.g-tbl th) { background: var(--gray-50); color: var(--gray-500); font-weight: 600; }
 
-/* 输入区：全部条件常驻，紧凑排开 */
-.form.card { padding: 12px 14px; }
-.form .fields { display: flex; gap: 8px 10px; align-items: flex-end; flex-wrap: wrap; }
-.form .frow + .frow { margin-top: 8px; }
-.form label { display: flex; flex-direction: column; font-size: 11.5px; font-weight: 600;
-  color: var(--gray-700); gap: 3px; }
-.form label small { font-weight: 400; color: var(--gray-400); font-size: 10.5px; margin-left: 3px; }
-.form input, .form select { padding: 0 9px; border: 1px solid var(--gray-300);
-  border-radius: var(--radius-xs); font-size: 13px; background: #fff; height: 34px; box-sizing: border-box; }
+/* 输入区：现代化网格布局 —— 12 列对齐、柔边圆角、焦点高亮环 */
+.form.card { padding: 18px 20px; }
+.form .fields { display: grid; grid-template-columns: repeat(12, 1fr); gap: 15px 14px; align-items: end; }
+.fld { display: flex; flex-direction: column; gap: 6px; font-size: 12px; font-weight: 600; color: var(--gray-600); }
+.fld small { font-weight: 400; color: var(--gray-400); }
+.fld-id { grid-column: span 2; }
+.fld-rank { grid-column: span 2; }
+.fld-jr { grid-column: span 4; }
+.fld-home { grid-column: span 4; }
+.fld-mode { grid-column: span 2; }
+.fld-km { grid-column: span 2; }
+.fld-board { grid-column: span 4; }
+.fld-go { grid-column: span 4; justify-content: flex-end; }
+.form input, .form select { width: 100%; box-sizing: border-box; height: 40px; padding: 0 12px;
+  border: 1px solid var(--gray-200); border-radius: 10px; font-size: 13.5px; color: var(--gray-900);
+  background: var(--gray-50); transition: border-color .15s, box-shadow .15s, background .15s; -webkit-appearance: none; appearance: none; }
+.form select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 11px center; padding-right: 30px; cursor: pointer; }
+.form input::placeholder { color: var(--gray-400); }
+.form input:focus, .form select:focus { outline: none; border-color: var(--brand); background: #fff;
+  box-shadow: 0 0 0 3px var(--brand-50); }
 .form input:disabled { background: var(--gray-100); color: var(--gray-400); }
-.f-rank { width: 84px; }
-.f-home { flex: 1; min-width: 150px; }
-.f-mode { width: 88px; }
-.f-km { width: 70px; }
-.f-board .sw-line { display: flex; align-items: center; gap: 5px; height: 34px; }
-.f-board .sw-line input { width: 16px; height: 16px; }
-.sw-hint { font-size: 10.5px; font-weight: 400; color: var(--gray-500); }
-.go { padding: 0 20px; height: 34px; background: var(--brand); color: #fff; border: none;
-  border-radius: var(--radius-sm); font-size: 14px; font-weight: 600; white-space: nowrap; cursor: pointer; }
-.go:disabled { opacity: .6; }
+/* iOS 风格住宿开关 */
+.fld-board .switch { display: flex; align-items: center; gap: 9px; height: 40px; cursor: pointer; font-weight: 400; }
+.sw-input { position: absolute; opacity: 0; width: 0; height: 0; }
+.sw-track { flex-shrink: 0; width: 38px; height: 22px; background: var(--gray-300); border-radius: 999px;
+  position: relative; transition: background .2s; }
+.sw-thumb { position: absolute; top: 2px; left: 2px; width: 18px; height: 18px; background: #fff;
+  border-radius: 50%; box-shadow: 0 1px 3px rgba(0, 0, 0, .25); transition: transform .2s; }
+.sw-input:checked + .sw-track { background: var(--brand); }
+.sw-input:checked + .sw-track .sw-thumb { transform: translateX(16px); }
+.sw-input:focus-visible + .sw-track { box-shadow: 0 0 0 3px var(--brand-50); }
+.sw-txt { font-size: 12px; color: var(--gray-600); }
+.go { width: 100%; height: 40px; display: inline-flex; align-items: center; justify-content: center; gap: 7px;
+  background: var(--brand); color: #fff; border: none; border-radius: 10px; font-size: 14px; font-weight: 600;
+  white-space: nowrap; cursor: pointer; box-shadow: 0 1px 2px rgba(37, 99, 235, .25);
+  transition: background .15s, box-shadow .15s, transform .05s; }
+.go svg { width: 16px; height: 16px; }
+.go:hover { background: var(--brand-dark); box-shadow: 0 4px 12px rgba(37, 99, 235, .3); }
+.go:active { transform: translateY(1px); }
+.go:disabled { opacity: .55; box-shadow: none; cursor: default; }
+@media (max-width: 760px) {
+  .form .fields { grid-template-columns: repeat(2, 1fr); }
+  .fld-id, .fld-rank, .fld-mode, .fld-km { grid-column: span 1; }
+  .fld-jr, .fld-home, .fld-board, .fld-go { grid-column: span 2; }
+}
 .interests { margin-top: 14px; }
 .interests .il { font-size: 12px; font-weight: 600; color: var(--gray-700); display: block; margin-bottom: 6px; }
 .interests .il small { font-weight: 400; color: var(--gray-400); }
