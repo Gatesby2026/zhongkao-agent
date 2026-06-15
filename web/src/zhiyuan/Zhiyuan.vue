@@ -659,7 +659,23 @@ const uniSummary = computed(() => {
     else if (cnt[b] != null) cnt[b]++
     lastName = s.name
   }
-  return { cnt, lastName, filled: draft.value.filter(s => s.name).length }
+  const filled = draft.value.filter(s => s.name).length
+  // 无保底预警:0 保(或 0 稳0保) → 位次低于所列各校近年线,均冲刺
+  const noSafety = filled > 0 && cnt['保'] === 0
+  const allReach = filled > 0 && (cnt['刺'] + cnt['冲']) === filled
+  // 候选受通勤约束:8km 内可报的公办数(冲/稳/保/够不上池去重并集)
+  const res: any = result.value
+  let reachPool = 0
+  if (res?.bands) {
+    const seen = new Set<string>()
+    for (const band of ['冲', '稳', '保', '够不上']) {
+      for (const c of (res.bands[band] || [])) {
+        if (c.school_code && reachByCommute(c.nearest?.km, !!c.boarding)) seen.add(c.school_code)
+      }
+    }
+    reachPool = seen.size
+  }
+  return { cnt, lastName, filled, noSafety, allReach, reachPool }
 })
 
 /* ---------------- 民办 / 国际清单 ---------------- */
@@ -1753,9 +1769,10 @@ const tcOptions: string[] = []
                 <span class="us-b band-冲">{{ uniSummary.cnt['冲'] }} 冲</span>
                 <span class="us-b band-稳">{{ uniSummary.cnt['稳'] }} 稳</span>
                 <span class="us-b band-保">{{ uniSummary.cnt['保'] }} 保</span>
-                <span v-if="uniSummary.lastName" class="us-bottom">末位保底＝<b>{{ cleanName(uniSummary.lastName) }}</b></span>
+                <span v-if="uniSummary.lastName && !uniSummary.noSafety" class="us-bottom">末位保底＝<b>{{ cleanName(uniSummary.lastName) }}</b></span>
               </div>
-              <p class="us-tip">按总分从高到低、依志愿录取：<b>冲刺/冲档排前面，稳档主力，末尾保底托底</b>（够档位的不足 12 所时，用"够不上"的名校回填到前面冲刺，已标⚠️线高于你）。可上下移 / 插入 / 删除自由调整；每条下方为<b>填报理由</b>（随你改校实时更新）。</p>
+              <p v-if="uniSummary.noSafety" class="us-warn">⚠️ <b>无稳妥保底</b>：你的区位次低于所列各校近年录取线，{{ uniSummary.allReach ? '12 个志愿全是冲刺/冲' : '没有"保"档' }}，落榜风险高。建议：①放宽「通勤上限」纳入更多（更易录取的）学校；②用<b>民办 / 中职 / 贯通</b>做保底（见查学校筛选）；③核实你的位次是否偏低。</p>
+              <p class="us-tip">📍 草表候选受<b>通勤上限约束</b>：当前家庭住址 {{ form.max_km }}km 内可报公办约 <b>{{ uniSummary.reachPool }}</b> 所<template v-if="uniSummary.reachPool <= 12">，已全部纳入</template><template v-else>，按录取位次取其中 12 所填满</template>——<b>改位次主要改变"冲/稳/保"判定</b>，要换一批候选学校请调通勤上限。按总分从高到低依志愿录取，冲在前、保在后；可自由增删调序，每条下方为<b>实时填报理由</b>。</p>
             </div>
             <div class="draft-actions"><button class="ghost" @click="resetDraft">↻ 重置为推荐梯度</button></div>
             <div class="uni-list">
@@ -2319,6 +2336,7 @@ const tcOptions: string[] = []
 .us-b { display: inline-block; font-size: 12px; font-weight: 700; padding: 1px 8px; border-radius: var(--radius-full); }
 .us-bottom { font-size: 12.5px; color: var(--gray-700); margin-left: 4px; }
 .us-tip { font-size: 12px; color: var(--gray-600); line-height: 1.6; margin: 6px 0 0; }
+.us-warn { font-size: 12.5px; color: #b45309; background: var(--warning-bg); border-radius: var(--radius-xs); padding: 8px 11px; margin: 8px 0 0; line-height: 1.6; }
 .uslot { border: 1px solid var(--gray-100); border-radius: var(--radius-sm); background: var(--gray-50); overflow: hidden; }
 .uslot.filled { background: var(--surface); border-color: var(--brand-50); }
 .uslot .urow { border: 0; background: none; }
