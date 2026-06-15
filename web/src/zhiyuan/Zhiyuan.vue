@@ -1663,6 +1663,14 @@ const tcOptions: string[] = []
         </p>
         <p v-if="identityNote" class="board-note">⚠️ {{ identityNote }}</p>
 
+        <!-- 填报三铁律(始终可见) -->
+        <div class="rules-strip">
+          <span class="rs-t">填报铁律</span>
+          <span class="rs-i" :class="{ bad: xedSummary.cnt.waste > 0 }">① ②指标分配不锁低{{ xedSummary.cnt.waste > 0 ? '（有'+xedSummary.cnt.waste+'所统招本可达，建议移除）' : '✓' }}</span>
+          <span class="rs-i">② 冲在前·零成本（平行志愿）</span>
+          <span class="rs-i" :class="{ bad: uniSummary.noSafety }">③ 统招末位必有铁保底{{ uniSummary.noSafety ? '（当前无保底！）' : '✓' }}</span>
+        </div>
+
         <!-- 低位次专属方案:统招进不了公办时,把非统招路径按优先级摆出来 -->
         <section v-if="uniSummary.noSafety" class="lowplan">
           <div class="lp-head">🧭 低位次升学方案
@@ -1723,6 +1731,7 @@ const tcOptions: string[] = []
                 <span class="us-b band-稳">{{ xedSummary.cnt.similar }} 相当</span>
               </div>
               <p class="us-tip">⚠️ 录取即锁定、后续作废：<b>只自动填 ✅值得冲（统招够不上的 upgrade）</b>；≈相当 / 统招本可达 不自动填（避免锁进同级或更低校，仍可在下拉手动加）。按本初中<b>校内排名 + 志愿顺序</b>录取，无官方各校线。</p>
+              <p v-if="xedSummary.cnt.waste > 0" class="us-warn">🔒 <b>锁低风险</b>：你填的校额到校里有 <b>{{ xedSummary.cnt.waste }}</b> 所"统招本来就能上"——校额在统招前录取、录取即锁定，等于<b>主动锁进比统招更差或同级的校</b>、放弃统招更好机会。建议把这些移除，校额只填"统招够不上、靠校额能上够"的。</p>
             </div>
             <div v-if="xedEligible.length" class="draft-actions" style="margin:6px 0">
               <button class="ghost" @click="prefillXed">↻ 按推荐重填</button>
@@ -2391,6 +2400,11 @@ const tcOptions: string[] = []
 .lp-list b { color: var(--gray-900); }
 .lp-list .lnk { margin-left: 4px; white-space: nowrap; }
 .lp-foot { font-size: 11.5px; color: var(--gray-500); margin: 10px 0 0; line-height: 1.6; }
+/* 填报三铁律条 */
+.rules-strip { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; padding: 8px 12px; margin: 8px 0 12px; background: var(--gray-50); border: 1px solid var(--gray-100); border-radius: 10px; font-size: 12px; }
+.rules-strip .rs-t { font-weight: 700; color: var(--gray-700); }
+.rules-strip .rs-i { color: var(--gray-600); }
+.rules-strip .rs-i.bad { color: #dc2626; font-weight: 600; }
 .uslot { border: 1px solid var(--gray-100); border-radius: var(--radius-sm); background: var(--gray-50); overflow: hidden; }
 .uslot.filled { background: var(--surface); border-color: var(--brand-50); }
 .uslot .urow { border: 0; background: none; }
