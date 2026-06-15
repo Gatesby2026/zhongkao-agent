@@ -678,6 +678,30 @@ const uniSummary = computed(() => {
   return { cnt, lastName, filled, noSafety, allReach, reachPool }
 })
 
+// 朝阳中考报名人数(约·估;出分后接一分一段表精化)。用于位次→百分位。
+const CHAOYANG_TOTAL = 12000
+const rankPct = computed(() => {
+  const r = Number(form.rank) || 0
+  return r ? Math.min(99, Math.round(r / CHAOYANG_TOTAL * 100)) : null
+})
+// 公办统招覆盖最低位次(最大的 latest):低于它=统招基本无戏
+const publicFloorRank = computed(() => {
+  let mx = 0
+  for (const s of uList.value) {
+    if (s.type === '公办普高' && s.line_trend?.latest) mx = Math.max(mx, s.line_trend.latest)
+  }
+  return mx || null
+})
+// 低位次专属方案的具体候选(从已有数据取)
+const lowPlan = computed(() => {
+  const voc = vocList.value.filter((v: any) => v.comp_high_2025).map(v => shortCampusName(v.name))
+  const priv = ((result.value as any)?.private_schools?.schools || [])
+    .filter((p: any) => (p.exit_type === '高考' || p.exit_type === '混合') && p.tuition)
+    .map((p: any) => shortCampusName(p.name) + '(' + String(p.tuition).slice(0, 12) + ')').slice(0, 3)
+  const gt = gtBlock.value?.projects?.length || 0
+  return { voc, priv, gt }
+})
+
 /* ---------------- 民办 / 国际清单 ---------------- */
 // 市级统筹官方清单（据 2025 简章逐格核 + 合计对账）
 const tongchou = computed<any>(() => result.value ? (result.value as any).tongchou : null)
@@ -1638,6 +1662,27 @@ const tcOptions: string[] = []
           下表镜像官方网报，<b>2026 口径</b>（贯通已并入统招）；志愿数/代码以当年官方网报系统为准。
         </p>
         <p v-if="identityNote" class="board-note">⚠️ {{ identityNote }}</p>
+
+        <!-- 低位次专属方案:统招进不了公办时,把非统招路径按优先级摆出来 -->
+        <section v-if="uniSummary.noSafety" class="lowplan">
+          <div class="lp-head">🧭 低位次升学方案
+            <span class="lp-sub">你的区位次 ≈ {{ form.rank }}<template v-if="rankPct">（约后 {{ rankPct }}%·朝阳约 1.2 万考生·估）</template>，<template v-if="publicFloorRank">低于公办统招最低线(≈{{ publicFloorRank }} 位)</template>，统招批难录取。以下按优先级给出非统招路径：</span>
+          </div>
+          <ol class="lp-list">
+            <li><b>🎯 校额到校（最该争取·公办）</b>：名额按<b>你的初中</b>分配、只过普高线(远低于统招线)，校内排名靠前即可进好公办——中低位次最大逆袭通道。
+              <a class="lnk" @click="batchOpen.ind = true">→ 看「② 指标分配」</a></li>
+            <li><b>🌆 市级统筹（公办·外区）</b>：同属指标分配批、统招前录取，线更低；多为外区远校需配合住宿。
+              <a class="lnk" @click="batchOpen.ind = true">→ 看「② 指标分配」</a></li>
+            <li><b>🎓 贯通培养（≥380分·7年到本科·京籍·中职段免学费）</b>：朝阳可报 {{ lowPlan.gt }} 个项目。
+              <a class="lnk" @click="exType = '贯通'; goTab('explore')">→ 查学校筛「贯通」</a></li>
+            <li><b>🏫 中职·综合高中班（门槛最低·办普高学籍可高考·保底）</b>：<template v-if="lowPlan.voc.length">{{ lowPlan.voc.join(' / ') }}（劲松线≈区9485，{{ form.rank }}可进）</template>
+              <a class="lnk" @click="exType = '中职'; goTab('explore')">→ 查学校筛「中职」</a></li>
+            <li><b>💰 民办普高（留京高考·学费亲民）</b>：<template v-if="lowPlan.priv.length">{{ lowPlan.priv.join('、') }}</template>；出国路线见国际校(学费15-33万)。
+              <a class="lnk" @click="exType = '民办'; goTab('explore')">→ 查学校筛「民办」</a></li>
+          </ol>
+          <p class="lp-foot">⚠️ 校额到校 / 市级统筹 / 贯通 需<b>京籍应届</b>；民办 / 中职无此限制。具体名额与门槛以当年官方简章为准。</p>
+        </section>
+
         <div class="draft-actions">
           <button class="ghost" @click="copyAll">📋 复制全部三批次</button>
           <span v-if="copyHint" class="copyhint">{{ copyHint }}</span>
@@ -2337,6 +2382,15 @@ const tcOptions: string[] = []
 .us-bottom { font-size: 12.5px; color: var(--gray-700); margin-left: 4px; }
 .us-tip { font-size: 12px; color: var(--gray-600); line-height: 1.6; margin: 6px 0 0; }
 .us-warn { font-size: 12.5px; color: #b45309; background: var(--warning-bg); border-radius: var(--radius-xs); padding: 8px 11px; margin: 8px 0 0; line-height: 1.6; }
+/* 低位次专属方案 */
+.lowplan { border: 1px solid var(--brand-100, #dbeafe); background: linear-gradient(180deg, var(--brand-50), #fff); border-radius: 12px; padding: 14px 16px; margin: 10px 0 14px; }
+.lp-head { font-size: 15px; font-weight: 700; color: var(--brand-dark); }
+.lp-sub { display: block; font-size: 12px; font-weight: 400; color: var(--gray-600); margin-top: 4px; line-height: 1.6; }
+.lp-list { margin: 10px 0 0; padding-left: 20px; font-size: 13px; color: var(--gray-800); line-height: 1.75; }
+.lp-list li { margin: 7px 0; }
+.lp-list b { color: var(--gray-900); }
+.lp-list .lnk { margin-left: 4px; white-space: nowrap; }
+.lp-foot { font-size: 11.5px; color: var(--gray-500); margin: 10px 0 0; line-height: 1.6; }
 .uslot { border: 1px solid var(--gray-100); border-radius: var(--radius-sm); background: var(--gray-50); overflow: hidden; }
 .uslot.filled { background: var(--surface); border-color: var(--brand-50); }
 .uslot .urow { border: 0; background: none; }
