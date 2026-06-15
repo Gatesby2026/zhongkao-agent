@@ -1,0 +1,191 @@
+{
+ "_meta": {
+  "warning": "增值=入口位次→出口一本率的residual·T3·仅辅助",
+  "count": 20,
+  "fit": "一本率 ≈ 7.462 + (-0.804)·ln(位次)",
+  "hi": 0.08,
+  "lo": -0.08
+ },
+ "value_added": {
+  "105001:北京市第八十中学": {
+   "entrance_rank": 685,
+   "yiben_real": 0.99,
+   "yiben_expected": null,
+   "residual": null,
+   "label": "顶部饱和",
+   "basis": "一本率99%已近满,一本率不再区分;高端增值看清北/高分段",
+   "note": "T3·一本率饱和区·增值参考清北而非一本率"
+  },
+  "105002:陈经纶中学": {
+   "entrance_rank": 2376,
+   "yiben_real": 0.97,
+   "yiben_expected": null,
+   "residual": null,
+   "label": "顶部饱和",
+   "basis": "一本率97%已近满,一本率不再区分;高端增值看清北/高分段",
+   "note": "T3·一本率饱和区·增值参考清北而非一本率"
+  },
+  "105003:日坛中学": {
+   "entrance_rank": 4487,
+   "yiben_real": 0.8,
+   "yiben_expected": 0.703,
+   "residual": 0.097,
+   "label": "高增值",
+   "basis": "入口位次≈4487→同档期望一本率70%,实际80%,+10pp",
+   "note": "T3·民间一本率+网传位次·log拟合residual·仅辅助(捡漏/性价比参考)"
+  },
+  "105004:和平街一中": {
+   "entrance_rank": 4635,
+   "yiben_real": 0.8,
+   "yiben_expected": 0.677,
+   "residual": 0.123,
+   "label": "高增值",
+   "basis": "入口位次≈4635→同档期望一本率68%,实际80%,+12pp",
+   "note": "T3·民间一本率+网传位次·log拟合residual·仅辅助(捡漏/性价比参考)"
+  },
+  "105005:对外经济贸易大学附属中学": {
+   "entrance_rank": 4914,
+   "yiben_real": 0.6,
+   "yiben_expected": 0.63,
+   "residual": -0.03,
+   "label": "符合预期",
+   "basis": "入口位次≈4914→同档期望一本率63%,实际60%,-3pp",
+   "note": "T3·民间一本率+网传位次·log拟合residual·仅辅助(捡漏/性价比参考)"
+  },
+  "105006:北京十七中": {
+   "entrance_rank": 6617,
+   "yiben_real": 0.3,
+   "yiben_expected": 0.391,
+   "residual": -0.091,
+   "label": "偏低",
+   "basis": "入口位次≈6617→同档期望一本率39%,实际30%,-9pp",
+   "note": "T3·民间一本率+网传位次·log拟合residual·仅辅助(捡漏/性价比参考)"
+  },
+  "105007:北京工业大学附属中学": {
+   "entrance_rank": 3741,
+   "yiben_real": 0.9,
+   "yiben_expected": 0.849,
+   "residual": 0.051,
+   "label": "符合预期",
+   "basis": "入口位次≈3741→同档期望一本率85%,实际90%,+5pp",
+   "note": "T3·民间一本率+网传位次·log拟合residual·仅辅助(捡漏/性价比参考)"
+  },
+  "205001:北京中学": {
+   "entrance_rank": 282,
+   "yiben_real": 0.98,
+   "yiben_expected": null,
+   "residual": null,
+   "label": "顶部饱和",
+   "basis": "一本率98%已近满,一本率不再区分;高端增值看清北/高分段",
+   "note": "T3·一本率饱和区·增值参考清北而非一本率"
+  },
+  "205002:人大附中朝阳学校": {
+   "entrance_rank": 1221,
+   "yiben_real": 0.97,
+   "yiben_expected": null,
+   "residual": null,
+   "label": "顶部饱和",
+   "basis": "一本率97%已近满,一本率不再区分;高端增值看清北/高分段",
+   "note": "T3·一本率饱和区·增值参考清北而非一本率"
+  },
+  "205003:汇文中学垂杨柳分校": {
+   "entrance_rank": 8229,
+   "yiben_real": 0.3,
+   "yiben_expected": 0.216,
+   "residual": 0.084,
+   "label": "高增值",
+   "basis": "入口位次≈8229→同档期望一本率22%,实际30%,+8pp",
+   "note": "T3·民间一本率+网传位次·log拟合residual·仅辅助(捡漏/性价比参考)"
+  },
+  "205004:中科院附属实验学校": {
+   "entrance_rank": 5438,
+   "yiben_real": 0.4,
+   "yiben_expected": 0.549,
+   "residual": -0.149,
+   "label": "偏低",
+   "basis": "入口位次≈5438→同档期望一本率55%,实际40%,-15pp",
+   "note": "T3·民间一本率+网传位次·log拟合residual·仅辅助(捡漏/性价比参考)"
+  },
+  "205005:二中朝阳学校": {
+   "entrance_rank": 3301,
+   "yiben_real": 0.84,
+   "yiben_expected": 0.95,
+   "residual": -0.11,
+   "label": "偏低",
+   "basis": "入口位次≈3301→同档期望一本率95%,实际84%,-11pp",
+   "note": "T3·民间一本率+网传位次·log拟合residual·仅辅助(捡漏/性价比参考)"
+  },
+  "205006:东方德才学校": {
+   "entrance_rank": 7272,
+   "yiben_real": 0.3,
+   "yiben_expected": 0.315,
+   "residual": -0.015,
+   "label": "符合预期",
+   "basis": "入口位次≈7272→同档期望一本率31%,实际30%,-1pp",
+   "note": "T3·民间一本率+网传位次·log拟合residual·仅辅助(捡漏/性价比参考)"
+  },
+  "205007:三里屯一中": {
+   "entrance_rank": 5964,
+   "yiben_real": 0.4,
+   "yiben_expected": 0.474,
+   "residual": -0.074,
+   "label": "符合预期",
+   "basis": "入口位次≈5964→同档期望一本率47%,实际40%,-7pp",
+   "note": "T3·民间一本率+网传位次·log拟合residual·仅辅助(捡漏/性价比参考)"
+  },
+  "205008:东北师大附中朝阳学校": {
+   "entrance_rank": 5061,
+   "yiben_real": 0.7,
+   "yiben_expected": 0.606,
+   "residual": 0.094,
+   "label": "高增值",
+   "basis": "入口位次≈5061→同档期望一本率61%,实际70%,+9pp",
+   "note": "T3·民间一本率+网传位次·log拟合residual·仅辅助(捡漏/性价比参考)"
+  },
+  "205009:清华附中朝阳学校": {
+   "entrance_rank": 1357,
+   "yiben_real": 0.95,
+   "yiben_expected": null,
+   "residual": null,
+   "label": "顶部饱和",
+   "basis": "一本率95%已近满,一本率不再区分;高端增值看清北/高分段",
+   "note": "T3·一本率饱和区·增值参考清北而非一本率"
+  },
+  "205010:清华附中望京学校": {
+   "entrance_rank": 2070,
+   "yiben_real": 1.0,
+   "yiben_expected": null,
+   "residual": null,
+   "label": "顶部饱和",
+   "basis": "一本率100%已近满,一本率不再区分;高端增值看清北/高分段",
+   "note": "T3·一本率饱和区·增值参考清北而非一本率"
+  },
+  "205011:北京化工大学附属中学": {
+   "entrance_rank": 7077,
+   "yiben_real": 0.4,
+   "yiben_expected": 0.337,
+   "residual": 0.063,
+   "label": "符合预期",
+   "basis": "入口位次≈7077→同档期望一本率34%,实际40%,+6pp",
+   "note": "T3·民间一本率+网传位次·log拟合residual·仅辅助(捡漏/性价比参考)"
+  },
+  "205012:朝阳外国语学校": {
+   "entrance_rank": 1623,
+   "yiben_real": 0.97,
+   "yiben_expected": null,
+   "residual": null,
+   "label": "顶部饱和",
+   "basis": "一本率97%已近满,一本率不再区分;高端增值看清北/高分段",
+   "note": "T3·一本率饱和区·增值参考清北而非一本率"
+  },
+  "205015:陈经纶中学团结湖分校": {
+   "entrance_rank": 7951,
+   "yiben_real": 0.2,
+   "yiben_expected": 0.243,
+   "residual": -0.043,
+   "label": "符合预期",
+   "basis": "入口位次≈7951→同档期望一本率24%,实际20%,-4pp",
+   "note": "T3·民间一本率+网传位次·log拟合residual·仅辅助(捡漏/性价比参考)"
+  }
+ }
+}
