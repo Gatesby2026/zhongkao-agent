@@ -758,6 +758,17 @@ const exBand = ref<'all' | '稳' | '冲' | '搏'>('all')
 const exBoarding = ref(false)
 const exCommute = ref(false)
 const exFee = ref<'all' | 'le10' | 'mid' | 'gt20'>('all')
+const exFeat = ref('all')   // 特色筛选(标准标签)
+const FEAT_TAGS = ['科技创新', '学科竞赛', '外语特色', '文科人文', '艺术特长', '体育特长', '国际方向', '课程改革', '综合均衡']
+const exSort = ref<'default' | 'va'>('default')   // default=按档位/位次; va=捡漏(按增值residual)
+const compareSel = ref<any[]>([])                 // 横向对比集(最多4)
+const showCompare = ref(false)
+function isCompared(r: any): boolean { return compareSel.value.some(x => x.uid === r.uid) }
+function toggleCompare(r: any) {
+  const i = compareSel.value.findIndex(x => x.uid === r.uid)
+  if (i >= 0) compareSel.value.splice(i, 1)
+  else if (compareSel.value.length < 4) compareSel.value.push(r)
+}
 function exTypeMatch(rec: any, t: string): boolean {
   const ty = rec.type || ''
   if (t === 'all') return true
@@ -827,12 +838,23 @@ const exploreView = computed<any[]>(() => {
   if (exBand.value !== 'all') list = list.filter(r => (exBandOf(r) || {}).label === exBand.value)
   if (exBoarding.value) list = list.filter(r => r.boarding === true)
   if (exCommute.value) list = list.filter(r => r.commute && !r.commute.over_max)
+  if (exFeat.value !== 'all') list = list.filter(r => (r.features_std?.tags || []).includes(exFeat.value))
   if (exFee.value !== 'all') list = list.filter(r => {
     const m = exFeeMax(r); if (m == null) return false
     if (exFee.value === 'le10') return m <= 10
     if (exFee.value === 'mid') return m > 10 && m <= 20
     return m > 20
   })
+  if (exSort.value === 'va') {
+    // 捡漏:按增值 residual 降序(高增值在前);无增值的沉底
+    return [...list].sort((a, b) => {
+      const ra = a.value_added?.residual, rb = b.value_added?.residual
+      if (ra == null && rb == null) return 0
+      if (ra == null) return 1
+      if (rb == null) return -1
+      return rb - ra
+    })
+  }
   return [...list].sort((a, b) => {
     const ta = TYPE_ORDER[a.type] ?? 9, tb = TYPE_ORDER[b.type] ?? 9
     if (ta !== tb) return ta - tb
@@ -1297,7 +1319,9 @@ const tcOptions: string[] = []
                 <div v-if="selSchool.gaokao && selSchool.gaokao.score != null" class="dp-line">🎓 高考评分 <b>{{ selSchool.gaokao.score }}</b>/100 · {{ selSchool.gaokao.tier }}
                   <span class="dp-muted">（{{ selSchool.gaokao.yiben != null ? '一本' + Math.round(selSchool.gaokao.yiben * 100) + '%' : (selSchool.gaokao.yiben_est != null ? '一本≈' + Math.round(selSchool.gaokao.yiben_est * 100) + '%(估)' : '') }}{{ selSchool.gaokao.qingbei ? ' 清北' + selSchool.gaokao.qingbei : '' }} · {{ selSchool.gaokao.confidence === 'very_low' ? '估算·待核' : selSchool.gaokao.confidence === 'low' ? '民间·低置信' : '民间·中置信' }}）</span></div>
                 <div v-else-if="selSchool.gaokao" class="dp-line dp-muted">🎓 高考 新建高中部·首届未毕业,暂无出口数据（入口位次可参考）</div>
+                <div v-if="selSchool.value_added" class="dp-line">📊 增值：<b :class="'va-' + selSchool.value_added.label">{{ selSchool.value_added.label }}</b><span class="dp-muted"> · {{ selSchool.value_added.basis }}</span></div>
                 <div v-if="selSchool.features.gaokao" class="dp-line dp-muted">🎓 高考(民间·非官方)：{{ selSchool.features.gaokao }}</div>
+                <div v-if="selSchool.features_std" class="dp-line">⭐ 特色：<span v-for="(tg, ti) in selSchool.features_std.tags" :key="ti" class="feat-chip">{{ tg }}</span><span v-if="selSchool.features_std.highlight" class="dp-muted"> · {{ selSchool.features_std.highlight }}</span></div>
                 <div v-if="selSchool.campus_life" class="dp-block">
                   <div class="dp-title">🏫 校园生活 <span class="dp-muted">· 白皮书·机构汇编·待核</span></div>
                   <div v-if="selSchool.campus_life.class_system" class="dp-line dp-muted">🎒 班型：{{ selSchool.campus_life.class_system }}</div>
@@ -1346,6 +1370,11 @@ const tcOptions: string[] = []
             <button class="ex-chip" :class="{ on: exBand === '搏' }" @click="exBand = '搏'">搏</button>
           </div>
           <div class="ex-row">
+            <span class="ex-k">特色</span>
+            <button class="ex-chip" :class="{ on: exFeat === 'all' }" @click="exFeat = 'all'">全部</button>
+            <button v-for="f in FEAT_TAGS" :key="f" class="ex-chip" :class="{ on: exFeat === f }" @click="exFeat = f">{{ f }}</button>
+          </div>
+          <div class="ex-row">
             <label class="ex-sw"><input type="checkbox" v-model="exBoarding" />可住宿</label>
             <label class="ex-sw"><input type="checkbox" v-model="exCommute" />通勤≤上限</label>
             <template v-if="exFeeApplies">
@@ -1355,9 +1384,36 @@ const tcOptions: string[] = []
               <button class="ex-chip" :class="{ on: exFee === 'mid' }" @click="exFee = 'mid'">10–20万</button>
               <button class="ex-chip" :class="{ on: exFee === 'gt20' }" @click="exFee = 'gt20'">&gt;20万</button>
             </template>
+            <span class="ex-k ex-k2">排序</span>
+            <button class="ex-chip" :class="{ on: exSort === 'default' }" @click="exSort = 'default'">默认</button>
+            <button class="ex-chip" :class="{ on: exSort === 'va' }" @click="exSort = 'va'">🔥捡漏(增值)</button>
             <span class="ex-n">命中 {{ exploreView.length }} 所</span>
+            <button v-if="compareSel.length" class="ex-cmpbtn" @click="showCompare = true">对比 {{ compareSel.length }} 所 →</button>
           </div>
           <JudgeLegend compact :rank="form.rank" :est="estScore" />
+        </div>
+        <!-- 横向对比浮层 -->
+        <div v-if="showCompare && compareSel.length" class="cmp-mask" @click.self="showCompare = false">
+          <div class="cmp-box">
+            <div class="cmp-head"><b>横向对比（{{ compareSel.length }} 所）</b><button class="cmp-x" @click="showCompare = false">✕</button></div>
+            <div class="cmp-scroll">
+              <table class="cmp-table">
+                <tr><th>维度</th><th v-for="c in compareSel" :key="c.uid">{{ cleanName(c.name) }}<button class="cmp-rm" @click="toggleCompare(c)">移除</button></th></tr>
+                <tr><td>类型</td><td v-for="c in compareSel" :key="c.uid">{{ c.type }}</td></tr>
+                <tr><td>层次</td><td v-for="c in compareSel" :key="c.uid">{{ c.level || '—' }}</td></tr>
+                <tr><td>档位(对你)</td><td v-for="c in compareSel" :key="c.uid"><span v-if="exBandOf(c)" class="t-band" :class="exBandOf(c)?.cls">{{ exBandOf(c)?.label }}</span><span v-else>—</span></td></tr>
+                <tr><td>录取位次(25)</td><td v-for="c in compareSel" :key="c.uid">{{ c.line_trend ? c.line_trend.latest : '—' }}</td></tr>
+                <tr><td>2026参考</td><td v-for="c in compareSel" :key="c.uid">{{ c.line_trend ? c.line_trend.ref_2026_lo + '~' + c.line_trend.ref_2026_hi : '—' }}<span v-if="c.line_trend && c.line_trend.volatile" class="addr-tag warn">波动</span></td></tr>
+                <tr><td>高考U分</td><td v-for="c in compareSel" :key="c.uid">{{ c.gaokao && c.gaokao.score != null ? c.gaokao.score + ' ' + c.gaokao.tier : (c.gaokao ? c.gaokao.tier : '—') }}</td></tr>
+                <tr><td>增值</td><td v-for="c in compareSel" :key="c.uid"><span v-if="c.value_added" :class="'va-' + c.value_added.label">{{ c.value_added.label }}</span><span v-else>—</span></td></tr>
+                <tr><td>升学出口</td><td v-for="c in compareSel" :key="c.uid">{{ (c.extra && (c.extra.study_abroad || c.extra.exit_domestic || c.extra.exit_paths)) || '—' }}</td></tr>
+                <tr><td>学费</td><td v-for="c in compareSel" :key="c.uid">{{ (c.extra && c.extra.tuition) || '—' }}</td></tr>
+                <tr><td>通勤</td><td v-for="c in compareSel" :key="c.uid">{{ c.commute && c.commute.km != null ? c.commute.km + 'km' : '—' }}</td></tr>
+                <tr><td>住宿</td><td v-for="c in compareSel" :key="c.uid">{{ c.boarding === true ? '✓' : '—' }}</td></tr>
+                <tr><td>特色</td><td v-for="c in compareSel" :key="c.uid">{{ c.features_std ? (c.features_std.tags || []).join('·') : '—' }}</td></tr>
+              </table>
+            </div>
+          </div>
         </div>
         <div class="ex-main">
           <div class="ex-listcol">
@@ -1366,7 +1422,7 @@ const tcOptions: string[] = []
                 <thead><tr><th>学校</th><th>类型</th><th>层次</th><th>档位</th><th>渠道</th><th>关键</th><th>通勤</th><th>住</th></tr></thead>
                 <tbody>
                   <tr v-for="r in exploreView" :key="r.id || r.name" class="ex-tr" :class="{ on: selectedPoint && selectedPoint.name === r.name }" @click="exSelect(r)">
-                    <td class="t-name">{{ cleanName(r.name) }}<span v-if="r.type === '2026新校'" class="addr-tag warn">新</span></td>
+                    <td class="t-name"><input type="checkbox" class="cmp-cb" :checked="isCompared(r)" :disabled="!isCompared(r) && compareSel.length >= 4" @click.stop="toggleCompare(r)" title="加入对比(最多4所)" />{{ cleanName(r.name) }}<span v-if="r.type === '2026新校'" class="addr-tag warn">新</span><span v-if="r.value_added && r.value_added.label === '高增值'" class="addr-tag va-tag">捡漏</span></td>
                     <td class="ex-ty">{{ r.type }}</td>
                     <td class="t-lvl">{{ r.level || '—' }}</td>
                     <td><span v-if="exBandOf(r)" class="t-band" :class="exBandOf(r)?.cls">{{ exBandOf(r)?.label }}</span><span v-else class="t-no">—</span></td>
@@ -1456,7 +1512,9 @@ const tcOptions: string[] = []
                 <div v-if="selSchool.gaokao && selSchool.gaokao.score != null" class="dp-line">🎓 高考评分 <b>{{ selSchool.gaokao.score }}</b>/100 · {{ selSchool.gaokao.tier }}
                   <span class="dp-muted">（{{ selSchool.gaokao.yiben != null ? '一本' + Math.round(selSchool.gaokao.yiben * 100) + '%' : (selSchool.gaokao.yiben_est != null ? '一本≈' + Math.round(selSchool.gaokao.yiben_est * 100) + '%(估)' : '') }}{{ selSchool.gaokao.qingbei ? ' 清北' + selSchool.gaokao.qingbei : '' }} · {{ selSchool.gaokao.confidence === 'very_low' ? '估算·待核' : selSchool.gaokao.confidence === 'low' ? '民间·低置信' : '民间·中置信' }}）</span></div>
                 <div v-else-if="selSchool.gaokao" class="dp-line dp-muted">🎓 高考 新建高中部·首届未毕业,暂无出口数据（入口位次可参考）</div>
+                <div v-if="selSchool.value_added" class="dp-line">📊 增值：<b :class="'va-' + selSchool.value_added.label">{{ selSchool.value_added.label }}</b><span class="dp-muted"> · {{ selSchool.value_added.basis }}</span></div>
                 <div v-if="selSchool.features.gaokao" class="dp-line dp-muted">🎓 高考(民间·非官方)：{{ selSchool.features.gaokao }}</div>
+                <div v-if="selSchool.features_std" class="dp-line">⭐ 特色：<span v-for="(tg, ti) in selSchool.features_std.tags" :key="ti" class="feat-chip">{{ tg }}</span><span v-if="selSchool.features_std.highlight" class="dp-muted"> · {{ selSchool.features_std.highlight }}</span></div>
                 <div v-if="selSchool.campus_life" class="dp-block">
                   <div class="dp-title">🏫 校园生活 <span class="dp-muted">· 白皮书·机构汇编·待核</span></div>
                   <div v-if="selSchool.campus_life.class_system" class="dp-line dp-muted">🎒 班型：{{ selSchool.campus_life.class_system }}</div>
@@ -2124,6 +2182,23 @@ const tcOptions: string[] = []
 .addr-tag { font-size: 10px; padding: 0 5px; border-radius: var(--radius-xs); margin-left: 4px;
   background: var(--gray-100); color: var(--gray-500); }
 .addr-tag.warn { background: var(--warning-bg); color: #b45309; }
+.va-高增值 { color: #16a34a; }
+.va-偏低 { color: #dc2626; }
+.va-顶部饱和 { color: var(--brand-dark); }
+.feat-chip { display: inline-block; font-size: 11px; padding: 1px 7px; margin: 0 4px 2px 0; border-radius: var(--radius-full); background: var(--brand-50); color: var(--brand-dark); }
+.va-tag { background: #dcfce7 !important; color: #16a34a !important; }
+.cmp-cb { margin-right: 6px; vertical-align: middle; cursor: pointer; }
+.ex-cmpbtn { margin-left: 8px; font-size: 12px; font-weight: 600; padding: 3px 10px; border: none; border-radius: var(--radius-full); background: var(--brand); color: #fff; cursor: pointer; }
+.cmp-mask { position: fixed; inset: 0; background: rgba(0,0,0,.4); z-index: 3000; display: flex; align-items: center; justify-content: center; padding: 20px; }
+.cmp-box { background: #fff; border-radius: 12px; max-width: 920px; width: 100%; max-height: 84vh; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 12px 40px rgba(0,0,0,.25); }
+.cmp-head { display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; border-bottom: 1px solid var(--gray-100); }
+.cmp-x { border: none; background: none; font-size: 16px; cursor: pointer; color: var(--gray-500); }
+.cmp-scroll { overflow: auto; }
+.cmp-table { border-collapse: collapse; width: 100%; font-size: 12.5px; }
+.cmp-table th, .cmp-table td { border: 1px solid var(--gray-100); padding: 7px 10px; text-align: left; vertical-align: top; }
+.cmp-table th { background: var(--gray-50); position: sticky; top: 0; }
+.cmp-table td:first-child, .cmp-table th:first-child { background: var(--gray-50); font-weight: 600; color: var(--gray-600); white-space: nowrap; position: sticky; left: 0; }
+.cmp-rm { display: block; margin-top: 3px; font-size: 10px; font-weight: 400; color: var(--gray-400); border: none; background: none; cursor: pointer; padding: 0; }
 .addr-flag { margin-left: 3px; cursor: help; }
 .list-tip { font-size: 11px; color: var(--gray-400); margin-top: 10px; line-height: 1.5; }
 

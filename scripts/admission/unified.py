@@ -41,6 +41,36 @@ def _campus_life() -> dict:
     return _CAMPUS_LIFE
 
 
+_VALUE_ADDED = None
+
+
+def _value_added() -> dict:
+    """读 ts/value_added.json(uid→增值residual,T3),缓存。无则空。"""
+    global _VALUE_ADDED
+    if _VALUE_ADDED is None:
+        p = Path(__file__).resolve().parents[2] / "knowledge-base/admission/beijing/ts/value_added.json"
+        try:
+            _VALUE_ADDED = json.load(open(p, encoding="utf-8")).get("value_added", {})
+        except Exception:
+            _VALUE_ADDED = {}
+    return _VALUE_ADDED
+
+
+_FEAT_STD = None
+
+
+def _features_std() -> dict:
+    """读 features_std.json(校名→标准特色标签/亮点,白皮书 T3),缓存。无则空。"""
+    global _FEAT_STD
+    if _FEAT_STD is None:
+        p = Path(__file__).resolve().parents[2] / "knowledge-base/admission/beijing/features_std.json"
+        try:
+            _FEAT_STD = json.load(open(p, encoding="utf-8"))
+        except Exception:
+            _FEAT_STD = {}
+    return _FEAT_STD
+
+
 _LINE_TREND = None
 
 
@@ -207,12 +237,17 @@ def build_unified(result: dict) -> list:
     # 统一打 uid(有编码用编码,无则 type:name)；地图标记与详情面板均以此为键
     gk = _gaokao_scores()
     cl = _campus_life()
+    fstd = _features_std()
     lt = _line_trends()
+    va = _value_added()
     for s in out:
         s["uid"] = _uid(s.get("school_code"), s["type"], s["name"])
         t = lt.get(s["uid"])
         if t:
             s["line_trend"] = t      # 录取位次趋势/2026区间(T3),按 uid 挂载
+        v = va.get(s["uid"])
+        if v:
+            s["value_added"] = v     # 增值residual(T3),按 uid 挂载
         g = gk.get(s["uid"])
         if g:
             s["gaokao"] = {"score": g.get("gaokao_score"), "tier": g.get("tier"),
@@ -222,4 +257,7 @@ def build_unified(result: dict) -> list:
         life = cl.get(s["name"]) or cl.get(_norm(s["name"]))
         if life:
             s["campus_life"] = life      # 校园生活/班型(白皮书 T3),按校名挂载
+        fs = fstd.get(s["name"]) or fstd.get(_norm(s["name"]))
+        if fs:
+            s["features_std"] = fs       # 标准特色标签+亮点(白皮书 T3),按校名挂载
     return out
