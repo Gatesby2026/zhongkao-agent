@@ -14,6 +14,7 @@ import json
 from pathlib import Path
 
 _GK_SCORE = None
+_CAMPUS_LIFE = None
 
 
 def _gaokao_scores() -> dict:
@@ -26,6 +27,33 @@ def _gaokao_scores() -> dict:
         except Exception:
             _GK_SCORE = {}
     return _GK_SCORE
+
+
+def _campus_life() -> dict:
+    """读 campus_life.json(校名→校园生活/班型,白皮书 T3),缓存。无则空。"""
+    global _CAMPUS_LIFE
+    if _CAMPUS_LIFE is None:
+        p = Path(__file__).resolve().parents[2] / "knowledge-base/admission/beijing/campus_life.json"
+        try:
+            _CAMPUS_LIFE = json.load(open(p, encoding="utf-8"))
+        except Exception:
+            _CAMPUS_LIFE = {}
+    return _CAMPUS_LIFE
+
+
+_LINE_TREND = None
+
+
+def _line_trends() -> dict:
+    """读 ts/line_trend.json(uid→录取位次趋势/2026区间,T3),缓存。无则空。"""
+    global _LINE_TREND
+    if _LINE_TREND is None:
+        p = Path(__file__).resolve().parents[2] / "knowledge-base/admission/beijing/ts/line_trend.json"
+        try:
+            _LINE_TREND = json.load(open(p, encoding="utf-8")).get("trend", {})
+        except Exception:
+            _LINE_TREND = {}
+    return _LINE_TREND
 
 
 def _school(name, type_, district, lat, lon, address, conf, boarding,
@@ -178,12 +206,20 @@ def build_unified(result: dict) -> list:
 
     # 统一打 uid(有编码用编码,无则 type:name)；地图标记与详情面板均以此为键
     gk = _gaokao_scores()
+    cl = _campus_life()
+    lt = _line_trends()
     for s in out:
         s["uid"] = _uid(s.get("school_code"), s["type"], s["name"])
+        t = lt.get(s["uid"])
+        if t:
+            s["line_trend"] = t      # 录取位次趋势/2026区间(T3),按 uid 挂载
         g = gk.get(s["uid"])
         if g:
             s["gaokao"] = {"score": g.get("gaokao_score"), "tier": g.get("tier"),
                            "yiben": g.get("yiben"), "yiben_est": g.get("yiben_est"),
                            "qingbei": g.get("qingbei"),
                            "basis": g.get("basis"), "confidence": g.get("confidence")}
+        life = cl.get(s["name"]) or cl.get(_norm(s["name"]))
+        if life:
+            s["campus_life"] = life      # 校园生活/班型(白皮书 T3),按校名挂载
     return out

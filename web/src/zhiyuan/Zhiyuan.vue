@@ -1293,10 +1293,21 @@ const tcOptions: string[] = []
                 <div v-if="selSchool.extra.line_note && (selSchool.extra.in_minban || selSchool.extra.in_intl)" class="dp-line dp-muted">📈 录取：{{ selSchool.extra.line_note }}</div>
 
                 <div v-if="selSchool.features.style" class="dp-line">🏫 {{ selSchool.features.style }}</div>
+                <div v-if="selSchool.line_trend" class="dp-line">📈 录取位次(区)：{{ selSchool.line_trend.ranks['2023'] || '—' }} → {{ selSchool.line_trend.ranks['2024'] || '—' }} → <b>{{ selSchool.line_trend.ranks['2025'] || '—' }}</b><span class="dp-muted">（23/24/25）· 2026参考 {{ selSchool.line_trend.ref_2026 }}（{{ selSchool.line_trend.ref_2026_lo }}~{{ selSchool.line_trend.ref_2026_hi }}）</span><span v-if="selSchool.line_trend.volatile" class="addr-tag">波动大</span></div>
                 <div v-if="selSchool.gaokao && selSchool.gaokao.score != null" class="dp-line">🎓 高考评分 <b>{{ selSchool.gaokao.score }}</b>/100 · {{ selSchool.gaokao.tier }}
                   <span class="dp-muted">（{{ selSchool.gaokao.yiben != null ? '一本' + Math.round(selSchool.gaokao.yiben * 100) + '%' : (selSchool.gaokao.yiben_est != null ? '一本≈' + Math.round(selSchool.gaokao.yiben_est * 100) + '%(估)' : '') }}{{ selSchool.gaokao.qingbei ? ' 清北' + selSchool.gaokao.qingbei : '' }} · {{ selSchool.gaokao.confidence === 'very_low' ? '估算·待核' : selSchool.gaokao.confidence === 'low' ? '民间·低置信' : '民间·中置信' }}）</span></div>
                 <div v-else-if="selSchool.gaokao" class="dp-line dp-muted">🎓 高考 新建高中部·首届未毕业,暂无出口数据（入口位次可参考）</div>
                 <div v-if="selSchool.features.gaokao" class="dp-line dp-muted">🎓 高考(民间·非官方)：{{ selSchool.features.gaokao }}</div>
+                <div v-if="selSchool.campus_life" class="dp-block">
+                  <div class="dp-title">🏫 校园生活 <span class="dp-muted">· 白皮书·机构汇编·待核</span></div>
+                  <div v-if="selSchool.campus_life.class_system" class="dp-line dp-muted">🎒 班型：{{ selSchool.campus_life.class_system }}</div>
+                  <div v-if="selSchool.campus_life.schedule" class="dp-line dp-muted">⏰ 作息：{{ selSchool.campus_life.schedule }}</div>
+                  <div v-if="selSchool.campus_life.management" class="dp-line dp-muted">🧭 管理：{{ selSchool.campus_life.management }}</div>
+                  <div v-if="selSchool.campus_life.boarding_detail" class="dp-line dp-muted">🛏 住宿：{{ selSchool.campus_life.boarding_detail }}</div>
+                  <div v-if="selSchool.campus_life.dining" class="dp-line dp-muted">🍚 餐饮：{{ selSchool.campus_life.dining }}</div>
+                  <div v-if="selSchool.campus_life.activities" class="dp-line dp-muted">🎨 活动：{{ selSchool.campus_life.activities }}</div>
+                  <div v-if="selSchool.campus_life.voices" class="dp-line dp-muted">💬 学生说：{{ selSchool.campus_life.voices }}</div>
+                </div>
                 <div v-if="selSchool.geo.address" class="dp-line dp-muted">📍 {{ selSchool.geo.address }}<span v-if="selSchool.geo.confidence === 'low' || !selSchool.geo.lat" class="addr-tag">待核</span></div>
               </template>
               <div v-else class="dp-fallback">
@@ -1441,10 +1452,21 @@ const tcOptions: string[] = []
                 <div v-if="selSchool.extra.line_note && (selSchool.extra.in_minban || selSchool.extra.in_intl)" class="dp-line dp-muted">📈 录取：{{ selSchool.extra.line_note }}</div>
 
                 <div v-if="selSchool.features.style" class="dp-line">🏫 {{ selSchool.features.style }}</div>
+                <div v-if="selSchool.line_trend" class="dp-line">📈 录取位次(区)：{{ selSchool.line_trend.ranks['2023'] || '—' }} → {{ selSchool.line_trend.ranks['2024'] || '—' }} → <b>{{ selSchool.line_trend.ranks['2025'] || '—' }}</b><span class="dp-muted">（23/24/25）· 2026参考 {{ selSchool.line_trend.ref_2026 }}（{{ selSchool.line_trend.ref_2026_lo }}~{{ selSchool.line_trend.ref_2026_hi }}）</span><span v-if="selSchool.line_trend.volatile" class="addr-tag">波动大</span></div>
                 <div v-if="selSchool.gaokao && selSchool.gaokao.score != null" class="dp-line">🎓 高考评分 <b>{{ selSchool.gaokao.score }}</b>/100 · {{ selSchool.gaokao.tier }}
                   <span class="dp-muted">（{{ selSchool.gaokao.yiben != null ? '一本' + Math.round(selSchool.gaokao.yiben * 100) + '%' : (selSchool.gaokao.yiben_est != null ? '一本≈' + Math.round(selSchool.gaokao.yiben_est * 100) + '%(估)' : '') }}{{ selSchool.gaokao.qingbei ? ' 清北' + selSchool.gaokao.qingbei : '' }} · {{ selSchool.gaokao.confidence === 'very_low' ? '估算·待核' : selSchool.gaokao.confidence === 'low' ? '民间·低置信' : '民间·中置信' }}）</span></div>
                 <div v-else-if="selSchool.gaokao" class="dp-line dp-muted">🎓 高考 新建高中部·首届未毕业,暂无出口数据（入口位次可参考）</div>
                 <div v-if="selSchool.features.gaokao" class="dp-line dp-muted">🎓 高考(民间·非官方)：{{ selSchool.features.gaokao }}</div>
+                <div v-if="selSchool.campus_life" class="dp-block">
+                  <div class="dp-title">🏫 校园生活 <span class="dp-muted">· 白皮书·机构汇编·待核</span></div>
+                  <div v-if="selSchool.campus_life.class_system" class="dp-line dp-muted">🎒 班型：{{ selSchool.campus_life.class_system }}</div>
+                  <div v-if="selSchool.campus_life.schedule" class="dp-line dp-muted">⏰ 作息：{{ selSchool.campus_life.schedule }}</div>
+                  <div v-if="selSchool.campus_life.management" class="dp-line dp-muted">🧭 管理：{{ selSchool.campus_life.management }}</div>
+                  <div v-if="selSchool.campus_life.boarding_detail" class="dp-line dp-muted">🛏 住宿：{{ selSchool.campus_life.boarding_detail }}</div>
+                  <div v-if="selSchool.campus_life.dining" class="dp-line dp-muted">🍚 餐饮：{{ selSchool.campus_life.dining }}</div>
+                  <div v-if="selSchool.campus_life.activities" class="dp-line dp-muted">🎨 活动：{{ selSchool.campus_life.activities }}</div>
+                  <div v-if="selSchool.campus_life.voices" class="dp-line dp-muted">💬 学生说：{{ selSchool.campus_life.voices }}</div>
+                </div>
                 <div v-if="selSchool.geo.address" class="dp-line dp-muted">📍 {{ selSchool.geo.address }}<span v-if="selSchool.geo.confidence === 'low' || !selSchool.geo.lat" class="addr-tag">待核</span></div>
               </template>
               <div v-else class="dp-fallback">

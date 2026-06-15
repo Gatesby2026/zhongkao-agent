@@ -128,6 +128,29 @@ def main():
                     "confidence": "low", "note": e.get("source_name", ""),
                 })
 
+    # ②b 白皮书逐校×专业 录取线(网传版,2023-2025):raw_extracts/whitepaper_luxian_raw.json
+    #    schema: rows[{name, major, y2025:[线,排名], y2024, y2023}]。T3·与 T1 并存,供趋势/预测。
+    TOTALS_LX = {2023: 660, 2024: 670, 2025: 670}
+    lx = KB / "raw_extracts/whitepaper_luxian_raw.json"
+    if lx.exists():
+        e = json.load(open(lx, encoding="utf-8"))
+        for row in e.get("rows", []):
+            uid = name2uid.get(row.get("name"))
+            if not uid:
+                print(f"  ⚠️ 白皮书线未映射: {row.get('name')}(跳过)"); continue
+            for yk, yr in (("y2023", 2023), ("y2024", 2024), ("y2025", 2025)):
+                v = row.get(yk) or [None, None]
+                if not v or v[1] is None:
+                    continue
+                lines.append({
+                    "uid": uid, "name": row["name"], "year": yr, "batch": "统招",
+                    "campus": None, "major_code": None, "major_name": row.get("major"),
+                    "score": v[0], "score_total": TOTALS_LX.get(yr), "rank": v[1], "rank_scope": "区",
+                    "plan": None, "source_url": e.get("source_url"),
+                    "source_tier": "T3", "collected": e.get("collected"),
+                    "confidence": "low", "note": "白皮书·往年录取线(网传版)",
+                })
+
     # ③ 高考出口(U 轴):raw_extracts/*gaokao*.json → gaokao.jsonl(均 T3·民间·低置信)
     GK_METRIC = {"tk": "特控率(一本)", "bk": "本科率", "avg": "年级平均分",
                  "top": "最高分", "n600": "600分以上人数", "n680": "680分以上人数",
