@@ -23,6 +23,10 @@
 | `features` | object | `{ style, tags[], gaokao }`。`tags` 取自固定特色词表；`features.gaokao` 是**旧的自由文本**字段（新高考分在顶层 `gaokao`）。 |
 | `map` | object | 地图渲染属性 `{ color, band, kind }`（主要公办填充）。 |
 | `gaokao` | object/null | **高考出口 U 分**，见 §4。仅当 `uid` 命中 `ts/gaokao_score.json` 时挂载（主要公办）。 |
+| `line_trend` | object/null | **录取位次趋势**（uid 命中 `ts/line_trend.json`）`{ ranks{23,24,25}, latest, volatility, volatile, ref_2026, ref_2026_lo/hi }`。T3·中央取最近年、区间取三年包络、不外推。 |
+| `value_added` | object/null | **增值**（uid 命中 `ts/value_added.json`）`{ entrance_rank, yiben_real, yiben_expected, residual, label(高增值/符合预期/偏低/顶部饱和), basis }`。入口位次→出口一本率 residual；顶部饱和=一本率近满不区分(看清北)。 |
+| `campus_life` | object/null | **校园生活/班型**（按校名命中 `campus_life.json`）`{ class_system, schedule, management, boarding_detail, dining, activities, voices }`。白皮书 T3。 |
+| `features_std` | object/null | **标准特色**（按校名命中 `features_std.json`）`{ tags[](闭集9类:科技创新/学科竞赛/外语特色/文科人文/艺术特长/体育特长/国际方向/课程改革/综合均衡), highlight }`。供"按特长选校"筛选。 |
 | `channels` | array | **录取渠道列表**，见 §3。 |
 | `extra` | object | **类型专属字段**，见 §5。 |
 
