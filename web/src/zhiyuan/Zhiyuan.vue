@@ -529,11 +529,21 @@ function reachByCommute(km: number | null | undefined, schoolBoarding: boolean):
   if (km <= maxKm) return true
   return !!(form.boarding && schoolBoarding)
 }
+// 增值档(捡漏优先):高增值=0 / 其他=1 / 偏低=2。同档内据此优先入选。
+function vaRank(c: Card): number {
+  const lab = uByName.value[c.name]?.value_added?.label
+  return lab === '高增值' ? 0 : lab === '偏低' ? 2 : 1
+}
 function bandPool(band: string): Card[] {
   const res = result.value
   if (!res) return []
+  // 同档内:捡漏(高增值)优先,其次录取位次升序(更硬在前)
   return dedupeByCode((res.bands[band] || []).filter(c => c.school_code && reachByCommute(c.nearest?.km, !!c.boarding)))
-    .slice().sort((a, b) => (Number(a.ref_rank) || 9e9) - (Number(b.ref_rank) || 9e9))
+    .slice().sort((a, b) => {
+      const va = vaRank(a) - vaRank(b)
+      if (va !== 0) return va
+      return (Number(a.ref_rank) || 9e9) - (Number(b.ref_rank) || 9e9)
+    })
 }
 function isReachableCard(c: Card): boolean {
   if (!c.nearest) return true
@@ -604,13 +614,17 @@ function slotReason(name: string | null): { band: string; cls: string; headline:
   const aheadPos = (ref != null && rank) ? ref - rank : null              // >0 你领先；<0 你落后
   const scoreDiff = (lineScore != null && est != null) ? Math.round(est - lineScore) : null  // >0 高出；<0 差
   const refTxt = ref != null ? '≈' + ref : '待核'
+  const u = uByName.value[name]            // 统一记录:增值/特色/三年位次波动
   const factors: string[] = []
+  if (u?.value_added?.label === '高增值') factors.push('✨捡漏·同档产出更高')
+  if (u?.gaokao?.score != null) factors.push('🎓高考U' + u.gaokao.score)
+  if (u?.features_std?.tags?.length) factors.push('⭐' + u.features_std.tags[0])
   if (c.nearest) factors.push('🚌' + c.nearest.km + 'km' + (c.nearest.over_max ? '·超上限' : ''))
   if (c.boarding) factors.push('🛏可住宿')
-  if (c.style) factors.push('🏫' + c.style.slice(0, 14))
-  if (c.gaokao) factors.push('🎓高考(民间)')
+  if (c.style && !u?.features_std?.tags?.length) factors.push('🏫' + c.style.slice(0, 14))
   let risk = ''
   if (typeof c.volatility === 'number' && c.volatility >= 0.25) risk = '近年录取线波动较大、线不稳，谨慎'
+  if (u?.line_trend?.volatile) risk = '近年录取位次波动大(' + (u.line_trend.ranks?.['2023'] ?? '—') + '→' + (u.line_trend.ranks?.['2024'] ?? '—') + '→' + (u.line_trend.ranks?.['2025'] ?? '—') + ')、线不稳，建议留余量'
   const isReach = band === '够不上'
   const dispBand = isReach ? '冲刺' : band
   const cls = ({ 冲: 'band-冲', 稳: 'band-稳', 保: 'band-保', 够不上: 'band-刺' } as Record<string, string>)[band] || 'band-稳'
