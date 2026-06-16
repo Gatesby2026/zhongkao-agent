@@ -1958,12 +1958,6 @@ const tcOptions: string[] = []
                 </div>
               </div>
             </div>
-            <div v-if="canGuantong && gtBlock" class="gt-ref">
-              <h4 class="batch-sub">贯通培养可选项（2026 并入统招；380 分·仅限京籍；具体填报位以官方网报为准）</h4>
-              <div class="gt-ref-list">
-                <span v-for="(p, i) in gtBlock.projects" :key="i" class="xed-cell">{{ shortCampusName(p.school) }}·{{ p.major }}</span>
-              </div>
-            </div>
           </template>
           <p v-else class="xed-note warn">非京籍随迁子女不能报普通高中统招（只能报中职类）；上方仅供了解。</p>
         </section>
