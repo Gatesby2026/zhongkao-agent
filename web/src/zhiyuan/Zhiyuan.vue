@@ -461,7 +461,7 @@ const reportable = computed<Card[]>(() => {
   return out
 })
 // 下拉可选学校：冲→稳→保→够不上 全部有官方代码的（够不上也列出，供手动冲刺）
-const selectable = computed<Card[]>(() => {
+const selectable = computed<any[]>(() => {
   const res = result.value
   if (!res) return []
   const out: Card[] = []
@@ -470,7 +470,8 @@ const selectable = computed<Card[]>(() => {
       if (c.school_code) out.push(c)
     }
   }
-  return dedupeByCode(out)
+  // 全渠道:公办之后追加 贯通/民办/中职综高(可手动选)
+  return [...dedupeByCode(out), ...nonPubCands.value]
 })
 function bandOf(name: string | null): string {
   const res = result.value
@@ -478,7 +479,8 @@ function bandOf(name: string | null): string {
   for (const band of ['冲', '稳', '保', '够不上']) {
     if ((res.bands[band] || []).some(c => c.name === name)) return band
   }
-  return ''
+  const np = nonPubByName.value[name]   // 非公办:本科(贯通)/路线(民办)/保底(中职)
+  return np ? np.band : ''
 }
 function majorsOf(name: string | null): Major[] {
   if (!name) return []
@@ -549,41 +551,36 @@ function isReachableCard(c: Card): boolean {
   if (!c.nearest) return true
   return !c.nearest.over_max || !!c.boarding
 }
-// 生成 3冲/5稳/4保；某档不足先按 稳→保→冲 补足，仍不足 12 则用"够不上"回填冲刺
-// （可通勤优先→位次最接近你）。最终整体按录取位次升序：最硬冲刺在前、保底在末。
-function buildUniPlan(): Card[] {
+// 全渠道草表:公办(冲限额+全部稳/保,按位次升序) → 非公办回填(贯通→民办→中职综高保底)。
+// 位次越低,公办稳/保越少,空位越多自动让给非公办;末位锁定一所"必进"(中职综高/民办)铁保底。
+const MAX_CHONG_PUB = 3   // 公办冲刺最多占 3 位(低位次别用 12 格全填够不上的公办)
+function buildUniPlan(): any[] {
   const chong = bandPool('冲'), wen = bandPool('稳'), bao = bandPool('保')
-  let nc = Math.min(STRAT['冲'], chong.length)
-  let nw = Math.min(STRAT['稳'], wen.length)
-  let nb = Math.min(STRAT['保'], bao.length)
-  let total = nc + nw + nb
-  while (total < ZHIYUAN_SLOTS) {
-    if (nw < wen.length) nw++
-    else if (nb < bao.length) nb++
-    else if (nc < chong.length) nc++
-    else break
-    total++
+  // 公办:冲限额 + 全部稳/保,按录取位次升序(硬在前、保在后)
+  const pub = dedupeByCode([...chong.slice(0, MAX_CHONG_PUB), ...wen, ...bao])
+    .sort((a, b) => (Number(a.ref_rank) || 9e9) - (Number(b.ref_rank) || 9e9))
+  let plan: any[] = pub.slice(0, ZHIYUAN_SLOTS)
+  if (plan.length < ZHIYUAN_SLOTS) {
+    // 非公办回填:贯通+民办混(各限额,避免单一渠道刷屏) + 末位锁定中职综高铁保底
+    const gt = nonPubCands.value.filter(c => c.chan === '贯通').slice(0, 4)
+    const mb = nonPubCands.value.filter(c => c.chan === '民办').slice(0, 4)
+    const vc = nonPubCands.value.filter(c => c.chan === '中职')
+    const floor = vc[0] || mb[0]   // 铁保底:中职综高优先,无则民办
+    const mid = [...gt, ...mb]
+    const midTake = floor ? Math.max(0, ZHIYUAN_SLOTS - plan.length - 1) : ZHIYUAN_SLOTS - plan.length
+    plan = plan.concat(mid.slice(0, midTake))
+    if (floor && plan.length < ZHIYUAN_SLOTS && !plan.some(c => c.name === floor.name)) plan.push(floor)
+    if (plan.length < ZHIYUAN_SLOTS) plan = plan.concat(vc.slice(0, ZHIYUAN_SLOTS - plan.length))
   }
-  let pick = [...chong.slice(0, nc), ...wen.slice(0, nw), ...bao.slice(0, nb)]
-  if (pick.length < ZHIYUAN_SLOTS) {
-    const need = ZHIYUAN_SLOTS - pick.length
-    const reach = bandPool('够不上').slice().sort((a, b) => {
-      const ra = isReachableCard(a) ? 0 : 1, rb = isReachableCard(b) ? 0 : 1
-      if (ra !== rb) return ra - rb
-      return (Number(b.ref_rank) || 0) - (Number(a.ref_rank) || 0)
-    }).slice(0, need)
-    pick = pick.concat(reach)
-  }
-  return pick.slice(0, ZHIYUAN_SLOTS).sort((a, b) => (Number(a.ref_rank) || 9e9) - (Number(b.ref_rank) || 9e9))
+  return plan.slice(0, ZHIYUAN_SLOTS)
 }
 function resetDraft() {
   const plan = buildUniPlan()
   draft.value = Array.from({ length: ZHIYUAN_SLOTS }, (_, i) => {
     const c = plan[i]
-    const mj = c ? (mergedMajorsByCode.value[c.school_code || ''] || c.majors || []) : []
-    return c
-      ? { name: c.name, picks: mj.slice(0, 2).map(m => m.major_code) }
-      : { name: null, picks: [] }
+    if (!c) return { name: null, picks: [] }
+    const mj = c.school_code ? (mergedMajorsByCode.value[c.school_code] || c.majors || []) : []
+    return { name: c.name, picks: mj.slice(0, 2).map((m: any) => m.major_code) }
   })
 }
 function onSlotSchool(i: number) {
@@ -603,6 +600,23 @@ const filledSlots = computed(() => draft.value.filter(s => s.name).length)
 // 单个志愿的"理由"——全部来自真实字段，缺数据则省略，绝不编造
 function slotReason(name: string | null): { band: string; cls: string; headline: string; factors: string[]; risk: string } | null {
   if (!name) return null
+  // 非公办(贯通/民办/中职综高):走专属研判文案
+  const np = nonPubByName.value[name]
+  if (np) {
+    const u = uByName.value[name]
+    const factors: string[] = []
+    if (u?.gaokao?.score != null) factors.push('🎓高考U' + u.gaokao.score)
+    if (u?.extra?.study_abroad) factors.push('🌍留学走向')
+    else if (u?.extra?.exit_paths) factors.push('🚀' + String(u.extra.exit_paths).slice(0, 12))
+    if (u?.commute?.km != null) factors.push('🚌' + u.commute.km + 'km')
+    const M: Record<string, { band: string; cls: string; head: string }> = {
+      贯通: { band: '贯通·本科', cls: 'band-稳', head: '贯通培养——中考≥380 即可报、7 年直通本科（京籍专属）；2026 在统招批内填' },
+      民办: { band: '民办', cls: 'band-保', head: '民办普高——门槛低、基本可入；' + (np.note.includes('留学') ? '留学方向' : '可留京高考') + '，注意学费' },
+      中职: { band: '保底·可高考', cls: 'band-保', head: '中职综合高中班——门槛最低、办普高学籍可参加高考；作为一定有学上的铁保底' },
+    }
+    const m = M[np.chan] || M['中职']
+    return { band: m.band, cls: m.cls, headline: m.head, factors, risk: '' }
+  }
   const c = findCard(name)
   if (!c) return null
   const band = bandOf(name)
@@ -650,18 +664,23 @@ function slotReason(name: string | null): { band: string; cls: string; headline:
 }
 // 草表 ③ 顶部策略总览
 const uniSummary = computed(() => {
-  const cnt: Record<string, number> = { 刺: 0, 冲: 0, 稳: 0, 保: 0 }
+  const cnt: Record<string, number> = { 刺: 0, 冲: 0, 稳: 0, 保: 0, 贯通: 0, 民办: 0, 中职: 0 }
   let lastName = ''
   for (const s of draft.value) {
     if (!s.name) continue
-    const b = bandOf(s.name)
-    if (b === '够不上') cnt['刺']++
-    else if (cnt[b] != null) cnt[b]++
+    const np = nonPubByName.value[s.name]
+    if (np) { cnt[np.chan] = (cnt[np.chan] || 0) + 1 }   // 非公办按渠道计
+    else {
+      const b = bandOf(s.name)
+      if (b === '够不上') cnt['刺']++
+      else if (cnt[b] != null) cnt[b]++
+    }
     lastName = s.name
   }
   const filled = draft.value.filter(s => s.name).length
-  // 无保底预警:0 保(或 0 稳0保) → 位次低于所列各校近年线,均冲刺
-  const noSafety = filled > 0 && cnt['保'] === 0
+  // 铁保底:公办"保" 或 中职/民办(必进)。三者全无才算无保底。
+  const hasFloor = cnt['保'] > 0 || cnt['中职'] > 0 || cnt['民办'] > 0
+  const noSafety = filled > 0 && !hasFloor
   const allReach = filled > 0 && (cnt['刺'] + cnt['冲']) === filled
   // 候选受通勤约束:8km 内可报的公办数(冲/稳/保/够不上池去重并集)
   const res: any = result.value
@@ -962,6 +981,36 @@ watch([form, xedQuery], () => { if (result.value && !formOpen.value) formDirty.v
 const canIndicator = computed(() => form.identity === 'jjyj')   // 指标分配=校额到校/统筹：京籍应届
 const canGuantong = computed(() => form.identity === 'jjyj')    // 贯通：京籍应届
 const canPuhao = computed(() => form.identity !== 'feijing')    // 普高统招：非京籍不可
+// 全渠道草表:统招批内除公办,还可纳入 民办普高/中职综合高中班/(2026)贯通 作为志愿+保底
+const inclAbroad = ref(false)   // 是否纳入"留学向"民办(默认只排高考向)
+const nonPubCands = computed<any[]>(() => {
+  const res: any = result.value
+  if (!res) return []
+  const out: any[] = []
+  if (canGuantong.value) {            // 贯通(京籍·≥380·2026并入统招)
+    const seen = new Set<string>()
+    for (const p of (res.guantong?.projects || [])) {
+      if (seen.has(p.school)) continue; seen.add(p.school)
+      out.push({ name: p.school, chan: '贯通', band: '本科', school_code: '',
+                 note: '贯通·中考≥380·7年到本科·' + (p.type || '') })
+    }
+  }
+  for (const p of (res.private_schools?.schools || [])) {   // 民办普高
+    const ex = p.exit_type
+    if (ex === '高考' || ex === '混合' || (inclAbroad.value && ex === '留学')) {
+      out.push({ name: p.name, chan: '民办', band: '路线', school_code: p.code || '',
+                 note: '民办·' + (ex === '留学' ? '留学向·' : '') + (p.tuition || '门槛低·多可入') })
+    }
+  }
+  for (const v of (res.vocational?.schools || [])) {        // 中职综合高中班(保底)
+    if (v.comp_high_2025) out.push({ name: v.name, chan: '中职', band: '保底', school_code: '',
+                 note: '中职综合高中班·普高学籍可高考·门槛最低(' + (v.line_note ? '劲松线≈9485' : '稳进') + ')' })
+  }
+  return out
+})
+const nonPubByName = computed<Record<string, any>>(() => {
+  const m: Record<string, any> = {}; for (const c of nonPubCands.value) m[c.name] = c; return m
+})
 const identityNote = computed(() => {
   if (form.identity === 'feijing') return '非京籍随迁子女不能报普通高中（统招/指标分配/贯通），只能报中职类；下列普高批次仅供了解。'
   if (form.identity === 'wangjie') return '往届/回户籍/外省回京考生不能报指标分配(校额到校/统筹)与贯通；普高统招可报。'
@@ -1855,16 +1904,20 @@ const tcOptions: string[] = []
         <section class="batch">
           <button class="batch-h" type="button" @click="batchOpen.uni = !batchOpen.uni">
             <span class="bc">{{ batchOpen.uni ? '▾' : '▸' }}</span>③ 统一招生
-            <small>2026 含贯通；{{ ZHIYUAN_SLOTS }} 志愿 ×2 专业，已按 3冲/5稳/4保 梯度预填 {{ filledSlots }}/{{ ZHIYUAN_SLOTS }}</small>
+            <small>全渠道：公办+民办+中职综高+(2026)贯通；{{ ZHIYUAN_SLOTS }} 志愿，位次越低非公办占越多，预填 {{ filledSlots }}/{{ ZHIYUAN_SLOTS }}</small>
           </button>
           <template v-if="batchOpen.uni && canPuhao">
+            <label class="abroad-sw"><input type="checkbox" v-model="inclAbroad" @change="resetDraft" />纳入留学向民办（出国路线）</label>
             <div class="uni-summary">
               <div class="us-line">
-                <b>已为你预填 {{ uniSummary.filled }} 个统招志愿</b>：
+                <b>已为你预填 {{ uniSummary.filled }} 个统招志愿</b>（全渠道）：
                 <span v-if="uniSummary.cnt['刺']" class="us-b band-刺">{{ uniSummary.cnt['刺'] }} 冲刺</span>
-                <span class="us-b band-冲">{{ uniSummary.cnt['冲'] }} 冲</span>
-                <span class="us-b band-稳">{{ uniSummary.cnt['稳'] }} 稳</span>
-                <span class="us-b band-保">{{ uniSummary.cnt['保'] }} 保</span>
+                <span v-if="uniSummary.cnt['冲']" class="us-b band-冲">{{ uniSummary.cnt['冲'] }} 冲</span>
+                <span v-if="uniSummary.cnt['稳']" class="us-b band-稳">{{ uniSummary.cnt['稳'] }} 稳</span>
+                <span v-if="uniSummary.cnt['保']" class="us-b band-保">{{ uniSummary.cnt['保'] }} 公办保</span>
+                <span v-if="uniSummary.cnt['贯通']" class="us-b band-稳">{{ uniSummary.cnt['贯通'] }} 贯通</span>
+                <span v-if="uniSummary.cnt['民办']" class="us-b band-保">{{ uniSummary.cnt['民办'] }} 民办</span>
+                <span v-if="uniSummary.cnt['中职']" class="us-b band-保">{{ uniSummary.cnt['中职'] }} 中职保底</span>
                 <span v-if="uniSummary.lastName && !uniSummary.noSafety" class="us-bottom">末位保底＝<b>{{ cleanName(uniSummary.lastName) }}</b></span>
               </div>
               <p v-if="uniSummary.noSafety" class="us-warn">⚠️ <b>无稳妥保底</b>：你的区位次低于所列各校近年录取线，{{ uniSummary.allReach ? '12 个志愿全是冲刺/冲' : '没有"保"档' }}，落榜风险高。建议：①放宽「通勤上限」纳入更多（更易录取的）学校；②用<b>民办 / 中职 / 贯通</b>做保底（见查学校筛选）；③核实你的位次是否偏低。</p>
@@ -1878,7 +1931,7 @@ const tcOptions: string[] = []
                   <select v-model="s.name" @change="onSlotSchool(i)" class="school-sel uni-sel">
                     <option :value="null">＋ 选择学校（空）</option>
                     <option v-for="c in selectable" :key="c.name" :value="c.name">
-                      [{{ bandOf(c.name) }}] {{ cleanName(c.name) }}（{{ c.school_code }}）
+                      [{{ bandOf(c.name) }}] {{ cleanName(c.name) }}{{ c.chan ? '·' + c.chan : '（' + c.school_code + '）' }}
                     </option>
                   </select>
                   <div v-if="s.name" class="uni-majors">
@@ -2458,6 +2511,7 @@ const tcOptions: string[] = []
 .rd-card p { font-size: 12.5px; color: var(--gray-700); line-height: 1.7; margin: 6px 0 0; }
 .rd-mini { font-size: 11.5px !important; color: var(--gray-500) !important; }
 .rd-2026 { background: var(--warning-bg); border-color: #fde68a; }
+.abroad-sw { display: inline-flex; align-items: center; gap: 5px; font-size: 12px; color: var(--gray-600); margin: 4px 0 8px; cursor: pointer; }
 @media (max-width: 720px) { .rules-doc { grid-template-columns: 1fr; } }
 .uslot { border: 1px solid var(--gray-100); border-radius: var(--radius-sm); background: var(--gray-50); overflow: hidden; }
 .uslot.filled { background: var(--surface); border-color: var(--brand-50); }
