@@ -13,51 +13,47 @@ const MODES = [
 ]
 const ZHIYUAN_SLOTS = 12   // 统一招生志愿数（每志愿 2 专业）
 
-// 升学渠道科普（来源：bjeea.cn / 北京市教委 / 首都之窗 T1 原文交叉核验，2025现状+2026已知变化）
-const GUIDE = [
-  { t: '总览：3 个批次，顺序录取', h:
-    '中考总分 <b>510 分</b>（2024 是 670，2025 改革后降为 510）。录取分三批次按先后进行，<b>被前一批次录取就锁定、不再参加后面的批次</b>：<br>' +
-    '<span class="g-flow">① 提前招生 → ② 指标分配 → ③ 统一招生</span>' +
-    '2025 一个考生最多可填 <b>28 个志愿</b>（提招贯通 8 + 指标分配 8×2专业 + 统招 12×2专业）。' },
-  { t: '① 提前招生（提招）', h:
-    '<ul><li><b>贯通培养</b>：380 分门槛，8 个志愿（详见"贯通 vs 五年制"；<b>2026 起并入统一招生</b>）</li>' +
-    '<li><b>特长生</b>：体育/艺术各 ≤ 招生计划 4%，科技 ≤ 2%</li>' +
-    '<li><b>中职自主招生</b>（专业测试录取，中考分只记合格/不合格）</li>' +
-    '<li><b>登记入学、自主招生</b>也在这一阶段处理</li></ul>' },
-  { t: '② 指标分配（校额到校 + 市级统筹）', h:
-    '中间批次，8 志愿×2 专业；<b>在统招之前录取，一旦被录即锁定、后续批次作废</b>——务必把"想冲的好校"放前面，别把"统招本来就能上的校"填进来锁低自己。<br>' +
-    '门槛二者相同：<b>连续三年本校学籍 + 综合素质 B + 中考总分达线</b>（2025 = 430/510）；<span class="g-warn">往届生 / 外省回京 / 回户籍 不能报。</span><br>' +
-    '含两个渠道：<b>校额到校</b>（名额定向到初中、校内竞争）和<b>市级统筹</b>（跨区 / 全市、按分竞争）——各自的详细说明见上方「🎯 校额到校 / 🌆 市级统筹」子页。' },
-  { t: '③ 统一招生（统招，本系统核心）', h:
-    '最后批次，按总分从高到低、依志愿录取。<b>12 个志愿 × 每志愿 2 专业</b>——<b>这就是本系统的"志愿草表"</b>。<br>' +
-    '<b>中外合作办学项目</b>自 2025 年起<b>按统一招生模式录取</b>（不在提前招生）：填志愿前先做外语资格性测试，合格后在统招批次按志愿+分数录取。' },
-  { t: '贯通培养 vs 五年制高职（易混）', h:
-    '<table class="g-tbl"><thead><tr><th></th><th>学制</th><th>出口文凭</th><th>门槛</th><th>户籍</th></tr></thead><tbody>' +
-    '<tr><td><b>贯通培养</b><br>(中本/高本贯通)</td><td>7 年</td><td><b>本科</b></td><td>统一 380 分</td><td><b>仅限京籍</b></td></tr>' +
-    '<tr><td><b>五年制高职</b><br>(3+2)</td><td>5 年</td><td><b>大专</b></td><td>按中考分</td><td>京籍+非京籍均可</td></tr>' +
-    '</tbody></table><span class="g-warn">名字像、层级与户籍门槛不同：随迁子女能报 5 年制大专，不能报 7 年贯通本科。</span>' +
-    '<span class="g-src">具体贯通承办院校 / 专业 / 对接本科 → 在【🔎 查学校】筛"贯通"查看。</span>' },
-  { t: '职业教育（中专 / 职高 / 技校 / 综合高中班）', h:
-    '<ul><li><b>中专</b>(代码 4，市教委+发改委，全市招生)</li>' +
-    '<li><b>职高</b>(代码 6，区教委)</li>' +
-    '<li><b>技校</b>(代码 5，<b>归人社部门</b>，但仍走中考统一平台填志愿)</li>' +
-    '<li><b>五年制高职/3+2</b>(代码 8，5 年→大专)</li>' +
-    '<li><b>综合高中班</b>：职普融通试点，按普高标准收费，2026 适度扩招</li></ul>' +
-    '升学出口：单考单招("三校生高考")、高职单招(专科)、五年制/3+2 直升、贯通转段升本科。' +
-    '<span class="g-src">校址在朝阳的中职校 → 在【🔎 查学校】筛"中职/职教"查看。</span>' },
-  { t: '登记入学（免试登记普高）', h:
-    '2025：<b>东城、西城</b>试点；2026：<b>加平谷</b>（4 校 555 个计划）。' +
-    '<span class="g-warn">网传"海淀/朝阳登记入学"经核实没有——朝阳考生用不上。</span>' },
-  { t: '京籍 vs 非京籍（随迁子女）', h:
-    '<b>非京籍随迁子女不能报普通高中</b>（统招/校额到校/统筹/登记入学/贯通都不行），<b>只能报中职</b>（中专/职高/技校/五年制/3+2），且要满足"五条件"：居住证 + 稳定住所 + 在京职业满 3 年 + 社保满 3 年 + 本市学籍连续就读初中 3 年。' },
-  { t: '📌 2026 两条硬变化', h:
-    '<ul><li><b>贯通从"提招"移入"统一招生"批次</b>（380 分门槛不变）→ 28 志愿结构会变</li>' +
-    '<li><b>登记入学扩到平谷</b></li></ul>' +
-    '<span class="g-src">来源：北京教育考试院 bjeea.cn / 北京市教委 / 首都之窗（2025政策原文+2026已知变化）。市级统筹各年校数名额、贯通各项目精确学制、2026 完整时间表等以当年 bjeea 正式简章为准。</span>' },
-]
-const showGuide = ref(false)
-const openG = ref<number | null>(null)
+// 升学渠道科普(重设计)：渠道卡 / 官方入口 / 时间线。来源 bjeea.cn / 北京市教委 / 首都之窗(T1)。
+const BJEEA_ZK = 'https://www.bjeea.cn/html/zkzh/'
 const XED_OFFICIAL = 'https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87193.html'
+const CHANNELS = [
+  { key: '统招', icon: '🎓', name: '统一招生（统招）', one: '最后批次，按总分从高到低、平行志愿录取',
+    threshold: '各校录取线（看你的分/位次）',
+    detail: ['分数优先、遵循志愿：想冲的放前面零成本，末位放保底', '2025 起总分 510；民办普高、中外合作、(2026)贯通都在这一批填'],
+    use: { label: '去「志愿草表 ③」填', tab: 'draft' }, link: BJEEA_ZK, linkName: '考试院·中招' },
+  { key: '校额', icon: '🎯', name: '校额到校', one: '名额定向到你初中，只和本校同学比',
+    threshold: '中考≥430/510 + 综合素质 B + 连续 3 年本校学籍',
+    detail: ['统招前录取、录取即锁定；别填"统招本来就能上的校"，否则锁低自己', '中低位次最大逆袭通道：校内排名靠前 + 初中有好校名额即可进好公办'],
+    use: { label: '去「草表 ②」', tab: 'draft' }, link: XED_OFFICIAL, linkName: '名额公示' },
+  { key: '统筹', icon: '🌆', name: '市级统筹', one: '跨区/全市名额，按分竞争，线通常更低',
+    threshold: '同校额到校（≥430/510 等）',
+    detail: ['与校额到校同属指标分配批、统招前录取', '多为外区/郊区远校，需配合住宿'],
+    use: { label: '去「草表 ②」', tab: 'draft' }, link: BJEEA_ZK, linkName: '考试院·中招' },
+  { key: '贯通', icon: '🏗️', name: '贯通培养', one: '中考≥380，7 年直接到本科',
+    threshold: '中考≥380（510 制）·仅限京籍',
+    detail: ['中职/高职段公办免学费、本科段按本科收；各阶段需转段考核', '2026 起并入统一招生批填报'],
+    use: { label: '查学校筛「贯通」', tab: 'explore', filter: '贯通' }, link: BJEEA_ZK, linkName: '考试院·中招' },
+  { key: '民办', icon: '🏫', name: '民办 / 国际', one: '民办普高或国际课程，门槛低、学费高',
+    threshold: '门槛低、多可入（学费约 6–33 万/年）',
+    detail: ['高考方向（留京高考）或留学方向（海外大学 offer）二选一', '多为面试/自主招生，无统一录取线'],
+    use: { label: '查学校筛「民办/国际」', tab: 'explore', filter: '民办' }, link: BJEEA_ZK, linkName: '考试院·中招' },
+  { key: '中职', icon: '🛠️', name: '中职 / 职教', one: '中专/职高/技校/五年制/综合高中班',
+    threshold: '门槛最低（各身份均可报）',
+    detail: ['综合高中班＝职普融通，办普高学籍、可参加高考', '五年制/3+2→大专；贯通转段→本科；单考单招升学'],
+    use: { label: '查学校筛「中职」', tab: 'explore', filter: '中职' }, link: BJEEA_ZK, linkName: '考试院·中招' },
+]
+const OFFICIAL = [
+  { name: '北京教育考试院·中招', desc: '政策 / 招生简章 / 计划查询（最权威）', url: BJEEA_ZK },
+  { name: '北京市教育委员会', desc: '中考中招政策文件', url: 'http://jw.beijing.gov.cn/' },
+  { name: '校额到校名额公示', desc: '各初中分到的优质高中名额（每年 7 月更新）', url: XED_OFFICIAL },
+  { name: '首都之窗', desc: '北京市政府门户·权威发布', url: 'https://www.beijing.gov.cn/' },
+]
+const TIMELINE = [
+  { t: '7 月初', d: '官方招生简章 / 招生计划发布' },
+  { t: '中考后', d: '网上填报志愿（一个平台填全部批次）' },
+  { t: '出分后', d: '公布成绩 + 一分一段表（位次↔分数）' },
+  { t: '随后', d: '① 提招 → ② 指标分配 → ③ 统招 顺序录取、录即锁定' },
+]
 // 校额到校：按初中查名额
 const showXedImg = ref(false)
 const xedQuery = ref(USER_DEFAULTS.chuzhong)
@@ -159,7 +155,15 @@ const layers = reactive({ gongban: true, coop: true, minban: false, intl: false,
 type TabKey = 'map' | 'draft' | 'explore' | 'channels'
 const tab = ref<TabKey>('map')
 function goTab(t: TabKey) { tab.value = t }
-const chSub = ref<'guide' | 'xed' | 'tc'>('guide')   // 渠道科普子页
+// 渠道科普(重设计):卡片展开 + 身份自查
+const openCh = ref<string | null>(null)
+const chId = ref<string>(USER_DEFAULTS.identity)   // 身份自查(默认随用户)
+function chEligible(c: any): boolean {
+  if (chId.value === 'jjyj') return true                          // 京籍应届:全可
+  if (chId.value === 'feijing') return c.key === '中职'           // 非京籍随迁:只中职
+  return c.key !== '校额' && c.key !== '统筹' && c.key !== '贯通' // 往届/回京:无指标分配/贯通
+}
+function chGo(c: any) { if (c.use?.filter) exType.value = c.use.filter; goTab(c.use.tab) }
 const loading = ref(false)
 const errMsg = ref('')
 const result = ref<Result | null>(null)
@@ -1646,104 +1650,69 @@ const tcOptions: string[] = []
         </div>
       </div>
       <!-- 渠道科普：科普总览 + 校额到校 + 市级统筹（数据工具内嵌） -->
-      <div class="chwrap" v-show="tab === 'channels'">
-        <div class="ch-subnav">
-          <button class="ch-sb" :class="{ on: chSub === 'guide' }" @click="chSub = 'guide'">📖 升学全景</button>
-          <button class="ch-sb" :class="{ on: chSub === 'xed' }" @click="chSub = 'xed'">🎯 校额到校</button>
-          <button class="ch-sb" :class="{ on: chSub === 'tc' }" @click="chSub = 'tc'">🌆 市级统筹</button>
-        </div>
-        <div class="listwrap ch-guide" v-show="chSub === 'guide'">
-          <div class="batch-flow">
-            <span class="bf-step">① 提前招生</span><span class="bf-lock">录取即锁定 ▸</span>
-            <span class="bf-step">② 指标分配</span><span class="bf-lock">录取即锁定 ▸</span>
-            <span class="bf-step bf-core">③ 统一招生</span>
+      <div class="chwrap chwrap2" v-show="tab === 'channels'">
+        <!-- ① 三批次流程 -->
+        <div class="ch-hero">
+          <div class="chh-flow">
+            <span class="chh-step">① 提前招生</span><span class="chh-lock">🔒</span>
+            <span class="chh-step">② 指标分配</span><span class="chh-lock">🔒</span>
+            <span class="chh-step on">③ 统一招生</span>
           </div>
-          <p class="bf-note">三批次<b>按顺序录取，被前一批次录取就锁定、不再参加后面批次</b>。<b>校额到校 / 市级统筹</b>都在 ② 指标分配（在统招之前）——填报顺序很关键，别把"统招本可达的校"排在前面把自己锁低。这是制度的<b>唯一权威说明处</b>；具体名额 / 研判见上方「🎯校额到校 / 🌆市级统筹」子页。</p>
-          <!-- 结构化规则与策略(基线:docs/design/ZHIYUAN-RULES-AND-STRATEGY.md) -->
-          <div class="rules-doc">
-            <div class="rd-card">
-              <h4>📊 三批次速查（2026 口径）</h4>
-              <table class="g-tbl"><thead><tr><th></th><th>① 提前招生</th><th>② 指标分配</th><th>③ 统一招生</th></tr></thead><tbody>
-                <tr><td>含什么</td><td>贯通(2026移走)·特长·中职自主·登记入学</td><td>校额到校+市级统筹</td><td>普高统招+中外合作+<b>(2026)贯通</b></td></tr>
-                <tr><td>志愿数</td><td>贯通8</td><td>8志愿×2专业</td><td>12志愿×2专业</td></tr>
-                <tr><td>谁能报</td><td>各异</td><td><b>仅京籍应届</b></td><td>京籍/符合条件;非京籍只能中职</td></tr>
-                <tr><td>录取规则</td><td>各异</td><td>校额=校内排名;统筹=按分</td><td><b>平行志愿(分数优先·遵循志愿)</b></td></tr>
-                <tr><td>锁定</td><td>录即锁</td><td>录即锁·后批作废</td><td>最后批次</td></tr>
-              </tbody></table>
-              <p class="rd-mini">总分 <b>510</b>（2024=670，2025改革降为510）。录取按批次先后，<b>被前批次录取即锁定</b>。</p>
-            </div>
-            <div class="rd-card">
-              <h4>🔑 五大关键机制</h4>
-              <ol class="rd-ol">
-                <li><b>锁定机制</b>：②在③之前录取，<b>别把"③统招本可达的好校"填进②</b>，否则锁死、③好机会作废。</li>
-                <li><b>校额到校（中低位次最大杠杆）</b>：名额定向到本初中、只与本校竞争+过普高线，校内靠前即可进好公办。</li>
-                <li><b>市级统筹</b>：跨区/全市、按分竞争，线通常更低，多为外区远校。</li>
-                <li><b>统招=平行志愿</b>：按总分从高到低、依你12志愿顺序投档。<b>冲在前零成本</b>，须从高到低排满、<b>末位必为铁保底</b>。</li>
-                <li><b>贯通2026并入统招</b>：380门槛不变，从提招移到统招批（与统招志愿混排待官方简章）。</li>
-              </ol>
-            </div>
-            <div class="rd-card">
-              <h4>🪪 身份资格</h4>
-              <table class="g-tbl"><thead><tr><th>身份</th><th>提招</th><th>校额/统筹</th><th>贯通</th><th>统招普高</th><th>中职</th></tr></thead><tbody>
-                <tr><td><b>京籍应届</b></td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td></tr>
-                <tr><td>往届/回京/回户籍</td><td>部分</td><td>❌</td><td>❌</td><td>✅</td><td>✅</td></tr>
-                <tr><td>非京籍随迁</td><td>❌</td><td>❌</td><td>❌</td><td>❌</td><td>✅(满五条件)</td></tr>
-              </tbody></table>
-            </div>
-            <div class="rd-card rd-strat">
-              <h4>🧭 整体填报策略</h4>
-              <p><b>三原则</b>：①批次顺序即优先级，前批次只填"上够"目标、不填保底；②统招冲-稳-保从高到低排满、末位铁保底；③<b>保底不失手 &gt; 冲高</b>。</p>
-              <p><b>按位次分层</b>：高位→②冲好校+③冲稳保；中位→②校额为主升级+③稳为主;低位(统招够不上)→②校额+贯通+中职综合高中班+民办(见"低位次方案"面板)。</p>
-            </div>
-            <div class="rd-card rd-2026">
-              <h4>📌 2026 两条硬变化</h4>
-              <p>① <b>贯通从提招移入统一招生批</b>(380门槛不变→志愿结构会变)；② 登记入学扩到平谷(朝阳无)。</p>
-              <p class="rd-mini">⏳ 2026 完整志愿数/结构、贯通混填规则、各校代码、时间表 → 以 bjeea 正式简章(约7月初)为准。</p>
-            </div>
-          </div>
-          <p class="list-note">下面是<b>逐条问答</b>(点开展开)：各渠道细则 / 贯通 vs 五年制 / 职教类型 / 京非京 等。</p>
-          <div v-for="(g, i) in GUIDE" :key="i" class="g-item" :class="{ open: openG === i }">
-            <button class="g-q" type="button" @click="openG = openG === i ? null : i"><span>{{ g.t }}</span><span class="g-chev">{{ openG === i ? '−' : '+' }}</span></button>
-            <div v-show="openG === i" class="g-a" v-html="g.h"></div>
-          </div>
-        </div>
-        <!-- 校额到校 -->
-        <div class="listwrap" v-show="chSub === 'xed'">
-          <p v-if="!canIndicator" class="board-note">⚠️ 校额到校属指标分配批次，<b>仅京籍应届可报</b>（往届 / 回户籍 / 外省回京 / 非京籍不可）；以下为一般性介绍。</p>
-          <div class="ch-anchor">
-            <h3>🎯 校额到校（指标分配批次）</h3>
-            <p>优质高中拿出一部分招生名额，<b>定向分配到每一所初中校</b>，在<b>本校内部竞争</b>录取——同一初中的考生之间按中考总分从高到低排队，<b>不和全区考生比</b>。这是促进教育均衡的设计，所以<b>普通初中的孩子反而可能用相对低的分数进入优质高中</b>。</p>
-          </div>
-          <div class="xed-rules">
-            <div class="xed-rule"><span class="xed-k">报考门槛(2025)</span>中考总分 ≥ <b>430/510</b> + 综合素质评价 ≥ <b>B</b> 等</div>
-            <div class="xed-rule"><span class="xed-k">学籍要求</span>具普高升学资格 + <b>同一初中连续三年学籍</b>的应届生</div>
-            <div class="xed-rule"><span class="xed-k">不能报</span>往届生 / 回户籍 / 外省回京 考生</div>
-            <div class="xed-rule"><span class="xed-k">录取方式</span>无官方"各初中录取线"——按<b>本初中校内排名 + 志愿顺序</b>事后形成，逐校逐年不同；430 只是统一资格门槛</div>
-            <div class="xed-rule"><span class="xed-k">批次顺序</span>在 ③统一招生 <b>之前</b>录取，<b>一旦被录即锁定、后续批次作废</b></div>
-          </div>
-          <p class="ch-tips">💡 <b>怎么用</b>：把"统招够不上、但够得着的好学校"放志愿前面；别把"统招本来就能上的校"填进来，否则等于把自己锁进更差的结果。<br>
-            📄 各初中分到哪些优质高中、各多少名额，逐年以官方原文为准（每年 7 月初更新）：<a :href="XED_OFFICIAL" target="_blank" rel="noopener">北京教育考试院《初中学校校额到校分配名额》</a>。<br>
-            📝 <b>填报</b>（按你初中的可选名额选校）在「<a class="lnk" @click="goTab('draft')">志愿草表 → ② 指标分配</a>」。</p>
+          <p class="chh-note">三批次<b>顺序录取，被前一批次录取即锁定、后批作废</b>。总分 <b>510</b>（2025 改革）。下面是各升学渠道与官方入口。</p>
         </div>
 
-      <!-- TAB：市级统筹（指标分配批次）-->
-        <div class="listwrap" v-show="chSub === 'tc'">
-          <p v-if="!canIndicator" class="board-note">⚠️ 市级统筹属指标分配批次，<b>仅京籍应届可报</b>（往届 / 回户籍 / 外省回京 / 非京籍不可）；以下为一般性介绍。</p>
-          <div class="ch-anchor">
-            <h3>🌆 市级统筹（指标分配批次）</h3>
-            <p>市级统筹＝优质高中拿出名额<b>跨区 / 面向全市</b>分配，和校额到校<b>同属指标分配批次</b>（在统招之前、录取即锁定）。它是优质资源<b>向郊区 · 新城均衡</b>的机制，<b>全市按分竞争</b>（不像校额到校是校内竞争，更看绝对分数 / 区位次）。</p>
-          </div>
-          <div class="xed-rules">
-            <div class="xed-rule"><span class="xed-k">统筹一</span>中心城区优质高中跨区招生（不在东西海招）——给其他区考生进城区名校的机会</div>
-            <div class="xed-rule"><span class="xed-k">统筹二</span>优质高中的郊区分校 / 新建校面向全市招生</div>
-            <div class="xed-rule"><span class="xed-k">统筹三</span>高校与普通高中联合培养实验班（<b>2025 已取消</b>）</div>
-            <div class="xed-rule"><span class="xed-k">报考门槛</span>与校额到校相同：总分 ≥ 430 + 综合素质 B + 同一初中连续三年学籍（往届 / 回京不可）</div>
-            <div class="xed-rule"><span class="xed-k">批次顺序</span>与校额到校同批次，在 ③统一招生 <b>之前</b>录取、<b>录取即锁定、后续作废</b></div>
-          </div>
-          <p class="ch-tips">💡 <b>对朝阳考生的现实意义</b>：用统筹能填的是<b>外区 / 郊区</b>的统筹校；<b>本区够得着的好学校走【统招 / 校额到校】，不用统筹</b>。去外区 / 郊区前先掂量是否真比本区统招更好，把握不大别盲填把自己锁低。<br>
-            📝 <b>填报</b>在「<a class="lnk" @click="goTab('draft')">志愿草表 → ② 指标分配</a>」；想看朝阳<b>具体能报哪些统筹校 + 研判</b>，到「<a class="lnk" @click="goTab('explore')">🔎 查学校</a>」筛"可走统筹"。</p>
+        <!-- 身份自查 -->
+        <div class="ch-id">
+          <span class="ci-t">按身份看可报</span>
+          <button v-for="x in IDENTITIES" :key="x.v" class="ci-b" :class="{ on: chId === x.v }" @click="chId = x.v">{{ x.label }}</button>
+          <span class="ci-hint">点身份 → 下方卡片高亮你能报的渠道</span>
         </div>
 
+        <!-- ② 六大渠道卡 -->
+        <div class="ch-cards">
+          <div v-for="c in CHANNELS" :key="c.key" class="cc" :class="{ dim: !chEligible(c), open: openCh === c.key }">
+            <button class="cc-h" type="button" @click="openCh = openCh === c.key ? null : c.key">
+              <span class="cc-ic">{{ c.icon }}</span>
+              <span class="cc-nm">{{ c.name }}</span>
+              <span v-if="!chEligible(c)" class="cc-no">该身份不可报</span>
+              <span class="cc-chev">{{ openCh === c.key ? '−' : '+' }}</span>
+            </button>
+            <div class="cc-one">{{ c.one }}</div>
+            <div class="cc-meta"><span class="cc-k">门槛</span>{{ c.threshold }}</div>
+            <div v-show="openCh === c.key" class="cc-body">
+              <ul><li v-for="(d, di) in c.detail" :key="di">{{ d }}</li></ul>
+            </div>
+            <div class="cc-acts">
+              <button class="cc-use" type="button" @click="chGo(c)">{{ c.use.label }} →</button>
+              <a class="cc-link" :href="c.link" target="_blank" rel="noopener">{{ c.linkName }} ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ④ 关键规则速记 -->
+        <div class="ch-rules">
+          <div class="cr"><b>平行志愿</b>：冲在前零成本，冲不上自动落到稳/保</div>
+          <div class="cr"><b>批次锁定</b>：② 别填"统招本可达"的校，会锁低</div>
+          <div class="cr"><b>必有保底</b>：志愿末位放一所一定能上的</div>
+          <div class="cr"><b>总分 510</b>：2025 改革口径（2024 是 670）</div>
+        </div>
+
+        <!-- ⑤ 官方权威入口 -->
+        <div class="ch-sec-t">🔗 官方权威发布<small>（点击前往官网核对最新原文）</small></div>
+        <div class="ch-official">
+          <a v-for="o in OFFICIAL" :key="o.url" class="of" :href="o.url" target="_blank" rel="noopener">
+            <span class="of-top"><span class="of-badge">官方</span><span class="of-nm">{{ o.name }}</span><span class="of-arr">↗</span></span>
+            <span class="of-desc">{{ o.desc }}</span>
+          </a>
+        </div>
+
+        <!-- ⑥ 时间线 -->
+        <div class="ch-sec-t">🗓 2026 关键节点<small>（具体以官方简章为准）</small></div>
+        <div class="ch-timeline">
+          <div v-for="(t, ti) in TIMELINE" :key="ti" class="tl"><span class="tl-t">{{ t.t }}</span><span class="tl-d">{{ t.d }}</span></div>
+        </div>
+
+        <p class="ch-foot">本页为政策科普；学校数据见「🔎 查学校」，志愿填报见「📝 志愿草表」。规则口径以 bjeea 当年正式简章为准。</p>
       </div><!-- /chwrap 渠道科普 -->
 
       <!-- TAB 8：志愿草表 v2（三批次 · 2026 口径）-->
@@ -1815,7 +1784,7 @@ const tcOptions: string[] = []
           </button>
           <template v-if="batchOpen.ind && canIndicator">
             <!-- 校额到校：缺省填报 + 逐志愿理由 -->
-            <h4 class="batch-sub">校额到校志愿<small style="font-weight:400;color:var(--gray-500)">（下拉按你初中名额列出；机制见「<a class="lnk" @click="chSub = 'xed'; goTab('channels')">校额到校</a>」页）</small></h4>
+            <h4 class="batch-sub">校额到校志愿<small style="font-weight:400;color:var(--gray-500)">（下拉按你初中名额列出；机制见「<a class="lnk" @click="goTab('channels')">渠道科普</a>」）</small></h4>
             <div v-if="xedEligible.length && xedSummary.filled" class="uni-summary">
               <div class="us-line"><b>已填校额到校 {{ xedSummary.filled }} 志愿</b>：
                 <span class="us-b band-冲">{{ xedSummary.cnt.worth }} 值得冲</span>
@@ -1856,7 +1825,7 @@ const tcOptions: string[] = []
             <p v-else class="xed-src">先在<b>首页填初中学校</b>，这里才能按名额选校额到校志愿。</p>
 
             <!-- 市级统筹：结构化选择 + 缺省填报 + 逐志愿理由 -->
-            <h4 class="batch-sub">市级统筹志愿<small style="font-weight:400;color:var(--gray-500)">（下拉=朝阳可报统筹校；机制见「<a class="lnk" @click="chSub = 'tc'; goTab('channels')">市级统筹</a>」页）</small></h4>
+            <h4 class="batch-sub">市级统筹志愿<small style="font-weight:400;color:var(--gray-500)">（下拉=朝阳可报统筹校；机制见「<a class="lnk" @click="goTab('channels')">渠道科普</a>」）</small></h4>
             <div v-if="tcEligible.length && tcSummary.filled" class="uni-summary">
               <div class="us-line"><b>已填市级统筹 {{ tcSummary.filled }} 志愿</b>（都是"够一够"的外区 upgrade）：
                 <span class="us-b band-刺">{{ tcSummary.cnt['冲刺'] }} 冲刺</span>
@@ -2156,14 +2125,61 @@ const tcOptions: string[] = []
 .ex-ty { font-size: 11.5px; color: var(--gray-500); }
 .ex-cbg { display: inline-block; min-width: 16px; text-align: center; font-size: 10.5px; font-weight: 700; padding: 1px 4px; margin-right: 2px; border-radius: 3px; background: var(--brand-50); color: var(--brand-dark); }
 .ex-keycol small { color: var(--gray-400); font-size: 10.5px; margin-right: 2px; }
-/* ── 渠道科普 ── */
-.chwrap { background: var(--surface); box-shadow: var(--shadow-sm); }
-.ch-subnav { display: flex; gap: 4px; padding: 8px 12px 0; border-bottom: 1px solid var(--gray-100); flex-wrap: wrap; }
-.ch-sb { font-size: 13px; font-weight: 600; padding: 8px 12px; border: 0; background: none; cursor: pointer; color: var(--gray-500); border-bottom: 2px solid transparent; }
-.ch-sb:hover { color: var(--gray-800); }
-.ch-sb.on { color: var(--brand-dark); border-bottom-color: var(--brand); }
-.chwrap .listwrap { box-shadow: none; }
-.ch-guide .g-item { border-bottom: 1px solid var(--gray-100); }
+/* ── 渠道科普(重设计) ── */
+.chwrap2 { background: transparent; box-shadow: none; }
+.ch-hero { background: linear-gradient(135deg, var(--brand-50), #fff); border: 1px solid var(--gray-100); border-radius: 14px; padding: 16px 18px; }
+.chh-flow { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+.chh-step { font-size: 14px; font-weight: 700; color: var(--brand-dark); background: #fff; border: 1px solid var(--brand); border-radius: var(--radius-full); padding: 6px 16px; }
+.chh-step.on { background: var(--brand); color: #fff; }
+.chh-lock { font-size: 13px; }
+.chh-note { font-size: 12.5px; color: var(--gray-600); margin: 10px 0 0; line-height: 1.6; }
+/* 身份自查 */
+.ch-id { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 14px 0 6px; }
+.ci-t { font-size: 13px; font-weight: 700; color: var(--gray-700); }
+.ci-b { font-size: 12.5px; padding: 5px 14px; border: 1px solid var(--gray-200); background: #fff; border-radius: var(--radius-full); cursor: pointer; color: var(--gray-700); }
+.ci-b.on { background: var(--brand); color: #fff; border-color: var(--brand); }
+.ci-hint { font-size: 11.5px; color: var(--gray-400); }
+/* 渠道卡 */
+.ch-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; margin: 8px 0 16px; }
+.cc { border: 1px solid var(--gray-200); border-radius: 12px; padding: 12px 14px; background: #fff; display: flex; flex-direction: column; transition: opacity .2s, box-shadow .15s; }
+.cc:hover { box-shadow: var(--shadow-sm); }
+.cc.dim { opacity: .42; }
+.cc-h { display: flex; align-items: center; gap: 8px; width: 100%; border: none; background: none; cursor: pointer; padding: 0; text-align: left; }
+.cc-ic { font-size: 18px; }
+.cc-nm { font-size: 14.5px; font-weight: 700; color: var(--gray-900); }
+.cc-no { font-size: 10.5px; color: #b45309; background: var(--warning-bg); border-radius: var(--radius-full); padding: 1px 7px; }
+.cc-chev { margin-left: auto; font-size: 16px; color: var(--gray-400); }
+.cc-one { font-size: 12.5px; color: var(--gray-700); margin: 7px 0 0; line-height: 1.55; }
+.cc-meta { font-size: 11.5px; color: var(--gray-600); margin: 6px 0 0; line-height: 1.5; }
+.cc-meta .cc-k { display: inline-block; font-weight: 600; color: var(--gray-400); margin-right: 5px; }
+.cc-body { margin: 8px 0 0; }
+.cc-body ul { margin: 0; padding-left: 16px; font-size: 12px; color: var(--gray-700); line-height: 1.65; }
+.cc-acts { display: flex; align-items: center; gap: 10px; margin-top: 10px; padding-top: 9px; border-top: 1px solid var(--gray-100); }
+.cc-use { font-size: 12px; font-weight: 600; color: #fff; background: var(--brand); border: none; border-radius: var(--radius-full); padding: 4px 11px; cursor: pointer; }
+.cc-link { margin-left: auto; font-size: 11.5px; color: var(--gray-500); text-decoration: none; }
+.cc-link:hover { color: var(--brand-dark); }
+/* 铁律速记 */
+.ch-rules { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px; margin: 0 0 16px; }
+.cr { font-size: 12px; color: var(--gray-700); background: var(--gray-50); border: 1px solid var(--gray-100); border-radius: 8px; padding: 8px 11px; line-height: 1.5; }
+.cr b { color: var(--brand-dark); }
+/* 区块标题 */
+.ch-sec-t { font-size: 14px; font-weight: 700; color: var(--gray-800); margin: 4px 0 8px; }
+.ch-sec-t small { font-weight: 400; color: var(--gray-400); font-size: 11.5px; }
+/* 官方入口 */
+.ch-official { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 10px; margin: 0 0 16px; }
+.of { display: flex; flex-direction: column; gap: 4px; border: 1px solid var(--gray-200); border-radius: 10px; padding: 11px 13px; text-decoration: none; background: #fff; transition: border-color .15s, box-shadow .15s; }
+.of:hover { border-color: var(--brand); box-shadow: var(--shadow-sm); }
+.of-top { display: flex; align-items: center; gap: 7px; }
+.of-badge { font-size: 10px; font-weight: 700; color: #fff; background: #16a34a; border-radius: var(--radius-full); padding: 1px 7px; }
+.of-nm { font-size: 13px; font-weight: 600; color: var(--brand-dark); }
+.of-arr { margin-left: auto; color: var(--gray-400); }
+.of-desc { font-size: 11.5px; color: var(--gray-500); line-height: 1.5; }
+/* 时间线 */
+.ch-timeline { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 14px; }
+.tl { display: flex; flex-direction: column; gap: 3px; flex: 1; min-width: 150px; border-left: 3px solid var(--brand); background: var(--gray-50); border-radius: 0 8px 8px 0; padding: 8px 11px; }
+.tl-t { font-size: 12.5px; font-weight: 700; color: var(--brand-dark); }
+.tl-d { font-size: 11.5px; color: var(--gray-600); line-height: 1.45; }
+.ch-foot { font-size: 11.5px; color: var(--gray-400); margin: 4px 0 0; line-height: 1.6; }
 
 /* ── 升学全景：批次流程条 + 子页锚定 ── */
 .batch-flow { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; margin: 2px 0 8px; }
