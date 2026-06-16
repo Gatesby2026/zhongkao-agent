@@ -1610,7 +1610,49 @@ const tcOptions: string[] = []
             <span class="bf-step bf-core">③ 统一招生</span>
           </div>
           <p class="bf-note">三批次<b>按顺序录取，被前一批次录取就锁定、不再参加后面批次</b>。<b>校额到校 / 市级统筹</b>都在 ② 指标分配（在统招之前）——填报顺序很关键，别把"统招本可达的校"排在前面把自己锁低。这是制度的<b>唯一权威说明处</b>；具体名额 / 研判见上方「🎯校额到校 / 🌆市级统筹」子页。</p>
-          <p class="list-note">点下列条目展开：批次顺序 / 各渠道是什么 / 门槛与户籍 / 贯通 vs 五年制 / 京籍 vs 非京籍 / 2026 变化。</p>
+          <!-- 结构化规则与策略(基线:docs/design/ZHIYUAN-RULES-AND-STRATEGY.md) -->
+          <div class="rules-doc">
+            <div class="rd-card">
+              <h4>📊 三批次速查（2026 口径）</h4>
+              <table class="g-tbl"><thead><tr><th></th><th>① 提前招生</th><th>② 指标分配</th><th>③ 统一招生</th></tr></thead><tbody>
+                <tr><td>含什么</td><td>贯通(2026移走)·特长·中职自主·登记入学</td><td>校额到校+市级统筹</td><td>普高统招+中外合作+<b>(2026)贯通</b></td></tr>
+                <tr><td>志愿数</td><td>贯通8</td><td>8志愿×2专业</td><td>12志愿×2专业</td></tr>
+                <tr><td>谁能报</td><td>各异</td><td><b>仅京籍应届</b></td><td>京籍/符合条件;非京籍只能中职</td></tr>
+                <tr><td>录取规则</td><td>各异</td><td>校额=校内排名;统筹=按分</td><td><b>平行志愿(分数优先·遵循志愿)</b></td></tr>
+                <tr><td>锁定</td><td>录即锁</td><td>录即锁·后批作废</td><td>最后批次</td></tr>
+              </tbody></table>
+              <p class="rd-mini">总分 <b>510</b>（2024=670，2025改革降为510）。录取按批次先后，<b>被前批次录取即锁定</b>。</p>
+            </div>
+            <div class="rd-card">
+              <h4>🔑 五大关键机制</h4>
+              <ol class="rd-ol">
+                <li><b>锁定机制</b>：②在③之前录取，<b>别把"③统招本可达的好校"填进②</b>，否则锁死、③好机会作废。</li>
+                <li><b>校额到校（中低位次最大杠杆）</b>：名额定向到本初中、只与本校竞争+过普高线，校内靠前即可进好公办。</li>
+                <li><b>市级统筹</b>：跨区/全市、按分竞争，线通常更低，多为外区远校。</li>
+                <li><b>统招=平行志愿</b>：按总分从高到低、依你12志愿顺序投档。<b>冲在前零成本</b>，须从高到低排满、<b>末位必为铁保底</b>。</li>
+                <li><b>贯通2026并入统招</b>：380门槛不变，从提招移到统招批（与统招志愿混排待官方简章）。</li>
+              </ol>
+            </div>
+            <div class="rd-card">
+              <h4>🪪 身份资格</h4>
+              <table class="g-tbl"><thead><tr><th>身份</th><th>提招</th><th>校额/统筹</th><th>贯通</th><th>统招普高</th><th>中职</th></tr></thead><tbody>
+                <tr><td><b>京籍应届</b></td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td></tr>
+                <tr><td>往届/回京/回户籍</td><td>部分</td><td>❌</td><td>❌</td><td>✅</td><td>✅</td></tr>
+                <tr><td>非京籍随迁</td><td>❌</td><td>❌</td><td>❌</td><td>❌</td><td>✅(满五条件)</td></tr>
+              </tbody></table>
+            </div>
+            <div class="rd-card rd-strat">
+              <h4>🧭 整体填报策略</h4>
+              <p><b>三原则</b>：①批次顺序即优先级，前批次只填"上够"目标、不填保底；②统招冲-稳-保从高到低排满、末位铁保底；③<b>保底不失手 &gt; 冲高</b>。</p>
+              <p><b>按位次分层</b>：高位→②冲好校+③冲稳保；中位→②校额为主升级+③稳为主;低位(统招够不上)→②校额+贯通+中职综合高中班+民办(见"低位次方案"面板)。</p>
+            </div>
+            <div class="rd-card rd-2026">
+              <h4>📌 2026 两条硬变化</h4>
+              <p>① <b>贯通从提招移入统一招生批</b>(380门槛不变→志愿结构会变)；② 登记入学扩到平谷(朝阳无)。</p>
+              <p class="rd-mini">⏳ 2026 完整志愿数/结构、贯通混填规则、各校代码、时间表 → 以 bjeea 正式简章(约7月初)为准。</p>
+            </div>
+          </div>
+          <p class="list-note">下面是<b>逐条问答</b>(点开展开)：各渠道细则 / 贯通 vs 五年制 / 职教类型 / 京非京 等。</p>
           <div v-for="(g, i) in GUIDE" :key="i" class="g-item" :class="{ open: openG === i }">
             <button class="g-q" type="button" @click="openG = openG === i ? null : i"><span>{{ g.t }}</span><span class="g-chev">{{ openG === i ? '−' : '+' }}</span></button>
             <div v-show="openG === i" class="g-a" v-html="g.h"></div>
@@ -2405,6 +2447,18 @@ const tcOptions: string[] = []
 .rules-strip .rs-t { font-weight: 700; color: var(--gray-700); }
 .rules-strip .rs-i { color: var(--gray-600); }
 .rules-strip .rs-i.bad { color: #dc2626; font-weight: 600; }
+/* 规则与策略结构化卡片 */
+.rules-doc { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0 14px; }
+.rd-card { border: 1px solid var(--gray-100); border-radius: 10px; padding: 12px 14px; background: #fff; }
+.rd-card h4 { margin: 0 0 8px; font-size: 13.5px; color: var(--brand-dark); }
+.rd-card .g-tbl { font-size: 11.5px; }
+.rd-card.rd-strat, .rd-card.rd-2026 { grid-column: 1 / -1; }
+.rd-ol { margin: 0; padding-left: 18px; font-size: 12.5px; color: var(--gray-800); line-height: 1.7; }
+.rd-ol li { margin: 4px 0; }
+.rd-card p { font-size: 12.5px; color: var(--gray-700); line-height: 1.7; margin: 6px 0 0; }
+.rd-mini { font-size: 11.5px !important; color: var(--gray-500) !important; }
+.rd-2026 { background: var(--warning-bg); border-color: #fde68a; }
+@media (max-width: 720px) { .rules-doc { grid-template-columns: 1fr; } }
 .uslot { border: 1px solid var(--gray-100); border-radius: var(--radius-sm); background: var(--gray-50); overflow: hidden; }
 .uslot.filled { background: var(--surface); border-color: var(--brand-50); }
 .uslot .urow { border: 0; background: none; }
