@@ -1009,6 +1009,8 @@ const formSummary = computed(() => {
   if (xedQuery.value) p.push(xedQuery.value.replace('北京市', ''))
   p.push(modeLabel.value + '≤' + (form.max_km || '?') + 'km')
   if (form.boarding) p.push('可住宿')
+  p.push(riskCfg.value.label)                              // 风险偏好(始终显示,直接影响草表)
+  if (form.orient === 'abroad') p.push('兼顾出国')          // 升学取向(仅出国时显示,体制内为默认)
   return p.join(' · ')
 })
 // 折叠态下改了条件 → 标记 dirty，提示重新生成
@@ -1017,7 +1019,6 @@ const canIndicator = computed(() => form.identity === 'jjyj')   // 指标分配=
 const canGuantong = computed(() => form.identity === 'jjyj')    // 贯通：京籍应届
 const canPuhao = computed(() => form.identity !== 'feijing')    // 普高统招：非京籍不可
 // 全渠道草表:统招批内除公办,还可纳入 民办普高/中职综合高中班/(2026)贯通 作为志愿+保底
-const inclAbroad = ref(false)   // 是否纳入"留学向"民办(默认只排高考向)
 const nonPubCands = computed<any[]>(() => {
   const res: any = result.value
   if (!res) return []
@@ -1032,7 +1033,7 @@ const nonPubCands = computed<any[]>(() => {
   }
   for (const p of (res.private_schools?.schools || [])) {   // 民办普高
     const ex = p.exit_type
-    const wantAbroad = inclAbroad.value || form.orient === 'abroad'
+    const wantAbroad = form.orient === 'abroad'   // 升学取向(输入条件区)唯一控制
     if (ex === '高考' || ex === '混合' || (wantAbroad && ex === '留学')) {
       out.push({ name: p.name, chan: '民办', band: '路线', school_code: p.code || '',
                  note: '民办·' + (ex === '留学' ? '留学向·' : '') + (p.tuition || '门槛低·多可入') })
@@ -1921,7 +1922,6 @@ const tcOptions: string[] = []
             <small>全渠道：公办+民办+中职综高+(2026)贯通；{{ ZHIYUAN_SLOTS }} 志愿，位次越低非公办占越多，预填 {{ filledSlots }}/{{ ZHIYUAN_SLOTS }}</small>
           </button>
           <template v-if="batchOpen.uni && canPuhao">
-            <label class="abroad-sw"><input type="checkbox" v-model="inclAbroad" @change="resetDraft" />纳入留学向民办（出国路线）</label>
             <div class="uni-summary">
               <div class="us-line">
                 <b>已为你预填 {{ uniSummary.filled }} 个统招志愿</b>（全渠道）：
@@ -2566,7 +2566,6 @@ const tcOptions: string[] = []
 .rd-card p { font-size: 12.5px; color: var(--gray-700); line-height: 1.7; margin: 6px 0 0; }
 .rd-mini { font-size: 11.5px !important; color: var(--gray-500) !important; }
 .rd-2026 { background: var(--warning-bg); border-color: #fde68a; }
-.abroad-sw { display: inline-flex; align-items: center; gap: 5px; font-size: 12px; color: var(--gray-600); margin: 4px 0 8px; cursor: pointer; }
 @media (max-width: 720px) { .rules-doc { grid-template-columns: 1fr; } }
 .uslot { border: 1px solid var(--gray-100); border-radius: var(--radius-sm); background: var(--gray-50); overflow: hidden; }
 .uslot.filled { background: var(--surface); border-color: var(--brand-50); }
