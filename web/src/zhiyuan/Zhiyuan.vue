@@ -527,13 +527,19 @@ function dedupeByCode(cards: Card[]): Card[] {
   }
   return order.map(code => best[code])
 }
-// 12 志愿缺省冲稳保配比（均衡）。每档内部按 2025 录取位次升序（够得着的最好校在前）
-// 风险偏好 → 草表打法:maxChong=公办冲刺占位上限;reach=额外纳入的"真冲刺"(够不上里最接近你的N所)
-// 注意:reach 只取"紧挨着冲刺档"的够不上校(按位次最接近),不会把远超能力的顶尖校(如低位次冲八十中)塞进来。
-const RISK_CFG: Record<string, { maxChong: number; reach: number; label: string }> = {
-  safe:       { maxChong: 1, reach: 0, label: '保底优先' },
-  balanced:   { maxChong: 3, reach: 0, label: '均衡' },
-  aggressive: { maxChong: 5, reach: 2, label: '冲高' },
+// 按"学校基名"去重(同校多校区合一):剥掉 (...) / （...校区）后缀作 key,保留先出现(更强/更近)的那个
+function baseSchoolName(n: string): string { return String(n || '').replace(/[（(].*$/, '').trim() }
+function dedupeByName(cards: Card[]): Card[] {
+  const seen = new Set<string>(); const out: Card[] = []
+  for (const c of cards) { const k = baseSchoolName(c.name); if (seen.has(k)) continue; seen.add(k); out.push(c) }
+  return out
+}
+// 风险偏好 → 草表"往上够几所"。reach=冲高目标数(够不上里最接近你的 N 所,绝不塞远超能力的顶尖校)。
+// reach 越多→保底占格越少→整体往上够;reach=0→保底优先(给紧张家长)。冲/稳一律全要,保底只留最强几所+1所深兜底。
+const RISK_CFG: Record<string, { reach: number; label: string }> = {
+  safe:       { reach: 0, label: '保底优先' },
+  balanced:   { reach: 2, label: '均衡' },
+  aggressive: { reach: 4, label: '冲高' },
 }
 const riskCfg = computed(() => RISK_CFG[form.risk] || RISK_CFG.balanced)
 // 通勤可达：≤通勤上限即可；超上限的学校，只有"你接受住宿 且 该校确实提供住宿"才算可达
@@ -564,18 +570,30 @@ function isReachableCard(c: Card): boolean {
   if (!c.nearest) return true
   return !c.nearest.over_max || !!c.boarding
 }
-// 全渠道草表:公办(冲限额+全部稳/保,按位次升序) → 非公办回填(贯通→民办→中职综高保底)。
-// 位次越低,公办稳/保越少,空位越多自动让给非公办;末位锁定一所"必进"(中职综高/民办)铁保底。
+// 全渠道草表(梯队式,非"灌满保底"):
+//   冲高目标(够不上里最接近的N所) → 冲(全) → 稳(全) → 保只留最强几所 + 末位锁1所深兜底。
+//   够位次的(如4500)12格全公办、梯队向上;低位次(如8500)公办填不满→空位让给非公办(贯通/民办/中职保底)。
 function buildUniPlan(): any[] {
   const cfg = riskCfg.value
-  const chong = bandPool('冲'), wen = bandPool('稳'), bao = bandPool('保')
-  // 冲高偏好:额外纳入"真冲刺"=够不上里最接近你的 N 所(按位次降序取最近的;不会塞远超能力的顶尖校)
+  const chong = dedupeByName(bandPool('冲')), wen = dedupeByName(bandPool('稳')), bao = dedupeByName(bandPool('保'))
+  // 冲高目标:够不上里最接近你的 N 所(按位次降序取最近的;绝不塞远超能力的顶尖校,如8500冲八十中)
   const reachTop = cfg.reach > 0
-    ? bandPool('够不上').slice().sort((a, b) => (Number(b.ref_rank) || 0) - (Number(a.ref_rank) || 0)).slice(0, cfg.reach)
+    ? dedupeByName(bandPool('够不上').slice().sort((a, b) => (Number(b.ref_rank) || 0) - (Number(a.ref_rank) || 0))).slice(0, cfg.reach)
     : []
-  // 公办:真冲刺 + 冲限额 + 全部稳/保,按录取位次升序(硬在前、保在后)
-  const pub = dedupeByCode([...reachTop, ...chong.slice(0, cfg.maxChong), ...wen, ...bao])
+  // 上半区:冲高目标 + 冲 + 稳(全要),按录取位次升序(硬在前)
+  let pub = dedupeByName(dedupeByCode([...reachTop, ...chong, ...wen]))
     .sort((a, b) => (Number(a.ref_rank) || 9e9) - (Number(b.ref_rank) || 9e9))
+    .slice(0, ZHIYUAN_SLOTS)
+  // 保底:不堆!按位次升序(强保在前),取最强的几所填到 11 格,末位永远锁"最深的那所保"作真兜底
+  const baoSorted = bao.slice().sort((a, b) => (Number(a.ref_rank) || 9e9) - (Number(b.ref_rank) || 9e9))
+  if (pub.length < ZHIYUAN_SLOTS && baoSorted.length) {
+    const floor = baoSorted[baoSorted.length - 1]   // 最深的保=真兜底,永远留末位
+    const room = ZHIYUAN_SLOTS - pub.length
+    const strong = baoSorted.slice(0, Math.max(0, room - 1))   // 留 1 格给深兜底
+    pub = pub.concat(strong)
+    if (pub.length < ZHIYUAN_SLOTS && !pub.some(c => baseSchoolName(c.name) === baseSchoolName(floor.name))) pub.push(floor)
+    pub = dedupeByName(pub)
+  }
   let plan: any[] = pub.slice(0, ZHIYUAN_SLOTS)
   if (plan.length < ZHIYUAN_SLOTS) {
     // 非公办回填:贯通+民办混(各限额,避免单一渠道刷屏) + 末位锁定中职综高铁保底
