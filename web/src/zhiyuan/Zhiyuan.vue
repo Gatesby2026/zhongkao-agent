@@ -1141,7 +1141,13 @@ function prefillTongchou() {
     .slice(0, 4)
     .sort((a, b) => (a.j.d as number) - (b.j.d as number))
   draftTongchou.value = Array.from({ length: 4 }, (_, i) =>
-    cand[i] ? { school: cand[i].key, majors: '' } : { school: null, majors: '' })
+    cand[i] ? { school: cand[i].key, majors: cand[i].s.tongchou_major?.major_code || '' } : { school: null, majors: '' })
+}
+// 选中统筹校 → 自动填该校官方专业(班)代码(统筹一=20/统筹二=30,普通班)
+function onTcSchool(i: number) {
+  const sl = draftTongchou.value[i]
+  const e = tcEligible.value.find(x => x.key === sl.school)
+  sl.majors = e?.s?.tongchou_major?.major_code || ''
 }
 function tcReason(key: string | null): { label: string; cls: string; headline: string; factors: string[]; caveat: string } | null {
   if (!key) return null
@@ -1149,6 +1155,7 @@ function tcReason(key: string | null): { label: string; cls: string; headline: s
   if (!e) return null
   const j = e.j, s = e.s
   const factors: string[] = []
+  if (s.school_code && s.tongchou_major) factors.push('🏷网报 学校码' + s.school_code + '·专业' + s.tongchou_major.major_code)
   if (s.dist) factors.push('🚌' + s.dist.km + 'km')
   if (s.boarding === true) factors.push('🛏可住宿')
   const lineTxt = j.line != null ? `统招线${j.line}·Δ${(j.d ?? 0) > 0 ? '+' : ''}${j.d}（你估≈${estScore.value}）` : '统招线待核'
@@ -1878,7 +1885,7 @@ const tcOptions: string[] = []
                 <span class="us-b band-冲">{{ tcSummary.cnt['搏'] }} 搏</span>
                 <span class="us-b band-稳">{{ tcSummary.cnt['冲'] }} 冲</span>
               </div>
-              <p class="us-tip">⚠️ 统筹在<b>统招之前录取、录取即锁定</b>：<b>只自动填"你估分≤其统招线、统招够不上的外区 upgrade"</b>（没中自动落到统招、无损失）；<b>你已高于其线的（稳/保）一律不填</b>——否则会锁进比朝阳统招更差的外区校。从高到低排（够不上→搏→冲）。<b>统筹多为外区/郊区远校，按通勤口径过滤(跟随住宿勾选)：≤上限 或 该校提供住宿；远校无住宿(没法住校又通勤不了)已排除——未勾住宿时统筹可能几乎为空。</b>完整名单（含被排除的）见「<a class="lnk" @click="goTab('explore')">🔎 查学校</a>」筛"可走统筹"，可手动添加。<b>专业(班)</b>：统筹每校通常<b>仅一个专业(班)码</b>，手填、以官方网报为准。<b>距离 / 住宿</b>已移到每条志愿下方的研判里（下拉只留校名+投朝阳名额，便于挑选）。</p>
+              <p class="us-tip">⚠️ 统筹在<b>统招之前录取、录取即锁定</b>：<b>只自动填"你估分≤其统招线、统招够不上的外区 upgrade"</b>（没中自动落到统招、无损失）；<b>你已高于其线的（稳/保）一律不填</b>——否则会锁进比朝阳统招更差的外区校。从高到低排（够不上→搏→冲）。<b>统筹多为外区/郊区远校，按通勤口径过滤(跟随住宿勾选)：≤上限 或 该校提供住宿；远校无住宿(没法住校又通勤不了)已排除——未勾住宿时统筹可能几乎为空。</b>完整名单（含被排除的）见「<a class="lnk" @click="goTab('explore')">🔎 查学校</a>」筛"可走统筹"，可手动添加。<b>专业(班)</b>：统筹每校<b>仅一个专业(班)码</b>（统筹一=20 / 统筹二=30，普通班），已按 2025 官方计划<b>自动预填</b>，仍以官方网报为准（2026 须刷新）。<b>距离 / 住宿</b>已移到每条志愿下方的研判里（下拉只留校名+投朝阳名额，便于挑选）。</p>
             </div>
             <div v-if="tcEligible.length" class="draft-actions" style="margin:6px 0">
               <button class="ghost" @click="prefillTongchou">↻ 按研判重填</button>
@@ -1888,11 +1895,11 @@ const tcOptions: string[] = []
               <div v-for="(s, i) in draftTongchou" :key="i" class="uslot" :class="{ filled: s.school }">
                 <div class="urow">
                   <span class="slot-no" :class="{ on: s.school }">{{ i + 1 }}</span>
-                  <select v-model="s.school" class="school-sel uni-sel">
+                  <select v-model="s.school" class="school-sel uni-sel" @change="onTcSchool(i)">
                     <option :value="null">＋ 选统筹校</option>
                     <option v-for="e in tcEligible" :key="e.key" :value="e.key">[{{ e.j.label }}] {{ e.tier }}·{{ cleanName(e.s.name) }}{{ e.s.campus ? '·' + e.s.campus : '' }}</option>
                   </select>
-                  <input v-if="s.school" v-model="s.majors" class="early-input" style="flex:1;min-width:0" placeholder="专业(班)代码·手填·以官方网报为准" />
+                  <input v-if="s.school" v-model="s.majors" class="early-input" style="flex:1;min-width:0" placeholder="专业(班)代码·已按2025计划预填·以官方网报为准" />
                   <span v-else class="uni-empty">未选</span>
                   <span class="urow-ops">
                     <button class="op" title="上移" :disabled="i === 0" @click="moveRow(draftTongchou, i, -1)">↑</button>
