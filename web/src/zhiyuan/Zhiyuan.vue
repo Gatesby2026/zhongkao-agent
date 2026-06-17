@@ -143,6 +143,8 @@ const form = reactive({
   max_km: USER_DEFAULTS.max_km,
   boarding: USER_DEFAULTS.boarding,
   identity: USER_DEFAULTS.identity,   // 京籍应届/非京籍/往届
+  risk: 'balanced',                   // 风险偏好:safe保底优先/balanced均衡/aggressive冲高
+  orient: 'gaokao',                   // 升学取向:gaokao体制内高考/abroad兼顾出国
 })
 const IDENTITIES = [
   { v: 'jjyj', label: '京籍应届' },
@@ -526,7 +528,14 @@ function dedupeByCode(cards: Card[]): Card[] {
   return order.map(code => best[code])
 }
 // 12 志愿缺省冲稳保配比（均衡）。每档内部按 2025 录取位次升序（够得着的最好校在前）
-const STRAT: Record<string, number> = { 冲: 3, 稳: 5, 保: 4 }
+// 风险偏好 → 草表打法:maxChong=公办冲刺占位上限;reach=额外纳入的"真冲刺"(够不上里最接近你的N所)
+// 注意:reach 只取"紧挨着冲刺档"的够不上校(按位次最接近),不会把远超能力的顶尖校(如低位次冲八十中)塞进来。
+const RISK_CFG: Record<string, { maxChong: number; reach: number; label: string }> = {
+  safe:       { maxChong: 1, reach: 0, label: '保底优先' },
+  balanced:   { maxChong: 3, reach: 0, label: '均衡' },
+  aggressive: { maxChong: 5, reach: 2, label: '冲高' },
+}
+const riskCfg = computed(() => RISK_CFG[form.risk] || RISK_CFG.balanced)
 // 通勤可达：≤通勤上限即可；超上限的学校，只有"你接受住宿 且 该校确实提供住宿"才算可达
 // （远校不提供住宿=没法住校=照样每天通勤，应排除）。用原始 km，不依赖住宿模式下被清零的 over_max。
 function reachByCommute(km: number | null | undefined, schoolBoarding: boolean): boolean {
@@ -557,11 +566,15 @@ function isReachableCard(c: Card): boolean {
 }
 // 全渠道草表:公办(冲限额+全部稳/保,按位次升序) → 非公办回填(贯通→民办→中职综高保底)。
 // 位次越低,公办稳/保越少,空位越多自动让给非公办;末位锁定一所"必进"(中职综高/民办)铁保底。
-const MAX_CHONG_PUB = 3   // 公办冲刺最多占 3 位(低位次别用 12 格全填够不上的公办)
 function buildUniPlan(): any[] {
+  const cfg = riskCfg.value
   const chong = bandPool('冲'), wen = bandPool('稳'), bao = bandPool('保')
-  // 公办:冲限额 + 全部稳/保,按录取位次升序(硬在前、保在后)
-  const pub = dedupeByCode([...chong.slice(0, MAX_CHONG_PUB), ...wen, ...bao])
+  // 冲高偏好:额外纳入"真冲刺"=够不上里最接近你的 N 所(按位次降序取最近的;不会塞远超能力的顶尖校)
+  const reachTop = cfg.reach > 0
+    ? bandPool('够不上').slice().sort((a, b) => (Number(b.ref_rank) || 0) - (Number(a.ref_rank) || 0)).slice(0, cfg.reach)
+    : []
+  // 公办:真冲刺 + 冲限额 + 全部稳/保,按录取位次升序(硬在前、保在后)
+  const pub = dedupeByCode([...reachTop, ...chong.slice(0, cfg.maxChong), ...wen, ...bao])
     .sort((a, b) => (Number(a.ref_rank) || 9e9) - (Number(b.ref_rank) || 9e9))
   let plan: any[] = pub.slice(0, ZHIYUAN_SLOTS)
   if (plan.length < ZHIYUAN_SLOTS) {
@@ -1001,7 +1014,8 @@ const nonPubCands = computed<any[]>(() => {
   }
   for (const p of (res.private_schools?.schools || [])) {   // 民办普高
     const ex = p.exit_type
-    if (ex === '高考' || ex === '混合' || (inclAbroad.value && ex === '留学')) {
+    const wantAbroad = inclAbroad.value || form.orient === 'abroad'
+    if (ex === '高考' || ex === '混合' || (wantAbroad && ex === '留学')) {
       out.push({ name: p.name, chan: '民办', band: '路线', school_code: p.code || '',
                  note: '民办·' + (ex === '留学' ? '留学向·' : '') + (p.tuition || '门槛低·多可入') })
     }
@@ -1298,6 +1312,19 @@ const tcOptions: string[] = []
             <span class="sw-txt">远校可住校（通勤上限仍生效）</span>
           </label>
         </div>
+        <label class="fld fld-risk">风险偏好 <small>冲稳保配比</small>
+          <select v-model="form.risk" @change="resetDraft">
+            <option value="safe">保底优先（稳妥）</option>
+            <option value="balanced">均衡（推荐）</option>
+            <option value="aggressive">冲高（多冲刺）</option>
+          </select>
+        </label>
+        <label class="fld fld-orient">升学取向 <small>影响民办</small>
+          <select v-model="form.orient" @change="resetDraft">
+            <option value="gaokao">体制内高考</option>
+            <option value="abroad">兼顾出国（纳入国际/留学向）</option>
+          </select>
+        </label>
         <div class="fld fld-go">
           <button class="go" :disabled="loading" @click="submit">
             <svg v-if="!loading" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20.5 20.5-4-4"/></svg>
