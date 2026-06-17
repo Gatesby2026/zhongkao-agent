@@ -1890,7 +1890,7 @@ const tcOptions: string[] = []
                   <span class="slot-no" :class="{ on: s.school }">{{ i + 1 }}</span>
                   <select v-model="s.school" class="school-sel uni-sel">
                     <option :value="null">＋ 选统筹校</option>
-                    <option v-for="e in tcEligible" :key="e.key" :value="e.key">[{{ e.j.label }}] {{ e.tier }}·{{ cleanName(e.s.name) }}{{ e.s.campus ? '·' + e.s.campus : '' }}（投朝阳{{ e.s.quota_chaoyang }}名）</option>
+                    <option v-for="e in tcEligible" :key="e.key" :value="e.key">[{{ e.j.label }}] {{ e.tier }}·{{ cleanName(e.s.name) }}{{ e.s.campus ? '·' + e.s.campus : '' }}</option>
                   </select>
                   <input v-if="s.school" v-model="s.majors" class="early-input" style="flex:1;min-width:0" placeholder="专业(班)代码·手填·以官方网报为准" />
                   <span v-else class="uni-empty">未选</span>
