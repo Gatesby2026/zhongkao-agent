@@ -1,0 +1,52 @@
+entity: 朝阳区中考升学逐年表(汇总·官方锚点+标注估算)
+note: >
+  把"逐年×渠道"表的每格补全:官方数直用,公开域确无的格用"官方锚点+占比/率法"估算,
+  全部标可信度。实际录取分项(区×渠道×年)官方不公开发布→以计划/比例估算(T4),
+  待 bjeea 各年计划册 OCR 后替换为计划口径官方值。只增不删。
+method:
+  公办普高录取估: 用 2025 实测公办录取率 76.7%(=8229/10729) × 当年参加中考人数
+  朝阳1+3估: 2025 实测朝阳1+3=545 占全市8795 的 6.2% → 按全市1+3逐年×6.2%
+  初中毕业估: 2025 实测13300 为锚,按普通中学招生趋势微调
+  职高: 2024 实测1838,他年按职高招生稳定≈1800
+table:
+  - year: 2022
+    junior_grad_est: 11800        # T4估(锚2025=13300,逆推)
+    exam_takers: 9027             # ✅官方一分一段
+    prebatch_1plus3_est: 0        # 2022前1+3规模极小/朝阳或无区级
+    puhigh_admit_est: 6920        # T4率法(9027×0.767)
+    vocational_zhigao_est: 1750   # T4
+    note: 2022参加9027显著低于后续年(疫情届/口径),跨年比较慎用
+  - year: 2023
+    junior_grad_est: 12500        # T4(官方普通中学合并毕业20206)
+    exam_takers: 11241            # ✅官方一分一段
+    prebatch_1plus3_cy_est: 195   # T4(全市3144×6.2%)
+    puhigh_admit_est: 8620        # T4率法
+    vocational_zhigao_est: 1800   # T4
+  - year: 2024
+    junior_grad_est: 13000        # T4(官方普通中学合并毕业20816)
+    exam_takers: 11790            # ✅官方一分一段
+    prebatch_1plus3_cy_est: 373   # T4(全市6014×6.2%)
+    puhigh_admit_est: 9040        # T4率法
+    vocational_zhigao: 1838       # ✅官方统计公报(职高)
+  - year: 2025
+    junior_grad: 13300            # ✅官方(初中-only,xschu引官方)
+    exam_takers: 10729            # ✅官方一分一段
+    prebatch_1plus3_cy: 545       # ✅官方(区级9校)
+    puhigh_admit_public: 8229     # ✅(网传/旁证;计划投朝阳7355+校额1133≈8488 交叉印证)
+    xed_quota: 1133               # ✅官方(校额到校名额)
+    vocational_zhigao_est: 1800   # T4
+  - year: 2026
+    note: 7月官方简章/出分后补;全市1+3>1万(扩)、贯通910(缩)
+records:
+  - id: ev-tbl-method
+    entity: 朝阳区
+    claim: enrollment_table_method
+    value: 见 method/table(官方锚点+率法/占比估算,逐格标可信度)
+    confidence: T4
+    status: unconfirmed
+    source_type: 派生(基于本目录官方证据)
+    source_url: evidence/chaoyang-scale-series + beijing-prebatch-series
+    method: 官方锚点+估算
+    collected_at: 2026-06-19
+    excerpt: "公办录取率76.7%法、1+3占比6.2%法;实际录取分项官方不公开,估算待计划册OCR替换。"
+    notes: ⚠️ 标 _est 的为模型估算(T4),非官方;参加中考人数/2025各官方锚点为实测。

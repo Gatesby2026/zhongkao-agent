@@ -123,6 +123,21 @@ records:
     excerpt: "计划册 major 行'朝阳'列求和=7355(含统招+市级统筹+中外合作投朝阳);其中≥50人/校的本区大额合计6508(≈朝阳本区统招公办)。"
     notes: 与网传"朝阳公办录取8229"口径不同(8229或含全部公办渠道实际录取);三个数并存、不强行对齐,建模时择口径。
 
+  - id: ev-pre-cy-1plus3-2025
+    entity: 朝阳区
+    claim: prebatch_1plus3_chaoyang
+    value: {区级实验校: 9, 区级招生: 545}
+    year: 2025
+    confidence: T2
+    status: confirmed
+    source_type: 本地宝/官方汇总
+    source_url: https://m.bj.bendibao.com/edu/363930.html
+    source_title: 2025北京1+3培养项目区级实验学校及培养计划(本地宝)
+    method: WebSearch
+    collected_at: 2026-06-19
+    excerpt: "朝阳区2025有9所区级1+3实验校、计划招生545人;新增八十中睿德分校、清华附广华学校。全市1+3=市级970(6校)+区级7825(113校)=8795。"
+    notes: 545 为区级口径;市级1+3投朝阳另计(少量)。1+3 是初二选拔、四年制,这些学生不参加中考→不在'参加中考人数'内。
+
   - id: ev-pre-cy-breakdown
     entity: 朝阳区
     claim: prebatch_breakdown_by_year
