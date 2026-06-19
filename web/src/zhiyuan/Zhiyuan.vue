@@ -2310,9 +2310,9 @@ const tcOptions: string[] = []
 .dp-empty { height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;
   gap: 8px; color: var(--gray-400); font-size: 13px; text-align: center; }
 .dp-empty-ic { font-size: 32px; opacity: .5; }
-.dp-head { display: flex; align-items: center; gap: 8px; }
-.dp-head h3 { font-size: 16px; font-weight: 700; color: var(--gray-900); margin: 0; line-height: 1.3; }
-.dp-type { flex-shrink: 0; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: var(--radius-full); background: var(--brand-50); color: var(--brand-dark); }
+.dp-head { } /* 上下两行:chip 在上,校名独占整行(不再横排挤窄) */
+.dp-head h3 { font-size: 16px; font-weight: 700; color: var(--gray-900); margin: 5px 0 0; line-height: 1.3; }
+.dp-type { display: inline-block; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: var(--radius-full); background: var(--brand-50); color: var(--brand-dark); }
 .dp-ch { display: flex; align-items: baseline; gap: 8px; padding: 4px 0; flex-wrap: wrap; }
 .dp-ch-name { font-size: 12.5px; font-weight: 700; color: var(--gray-700); min-width: 62px; }
 .dp-ch-detail { font-size: 12px; color: var(--gray-600); }
