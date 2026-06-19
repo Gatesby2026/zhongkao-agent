@@ -1462,7 +1462,6 @@ const tcOptions: string[] = []
                     <span class="dp-ch-detail">{{ v.detail }}</span>
                   </div>
                   <p v-for="(c, idx) in panelCaveats" :key="idx" class="dp-tip">⚠️ {{ c }}</p>
-                  <p class="dp-tip dp-muted">录取机制（校额按本初中校内排名 / 统招平行志愿·录取即锁定）见 <a class="lnk" @click="goTab('channels')">渠道科普</a>。</p>
                 </div>
 
                 <!-- 基本信息(前置) -->
@@ -1670,7 +1669,6 @@ const tcOptions: string[] = []
                     <span class="dp-ch-detail">{{ v.detail }}</span>
                   </div>
                   <p v-for="(c, idx) in panelCaveats" :key="idx" class="dp-tip">⚠️ {{ c }}</p>
-                  <p class="dp-tip dp-muted">录取机制（校额按本初中校内排名 / 统招平行志愿·录取即锁定）见 <a class="lnk" @click="goTab('channels')">渠道科普</a>。</p>
                 </div>
 
                 <!-- 基本信息(前置) -->
