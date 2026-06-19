@@ -38,6 +38,22 @@ table:
   - year: 2026
     note: 7月官方简章/出分后补;全市1+3>1万(扩)、贯通910(缩)
 records:
+  - id: ev-tbl-llm-crosscheck
+    entity: 朝阳区
+    claim: llm_crosscheck_failed
+    value: DeepSeek 与 Qwen-Max 给出的朝阳逐年中考数字均与官方一分一段矛盾,不采纳
+    confidence: T5
+    status: negative
+    source_type: 大模型(DeepSeek/Qwen)
+    source_url: api.deepseek.com / dashscope.aliyuncs.com
+    method: LLM直接问答(temperature=0)
+    collected_at: 2026-06-19
+    excerpt: >
+      DeepSeek:2025参加"约13800"、2024"约13200"(官方一分一段实测10729/11790,差≈3000);
+      校额2025"约1700"(官方1133)。Qwen-Max:2022参加"约1.8万"(官方9027,差一倍)、
+      统招公办"约10000"。两模型自标多为"网传/推算",核心数与官方冲突。
+    notes: ⚠️ 教训复现:大模型对'区×渠道×年'细分数会编造,不可作数据源;仅官方一分一段/统计公报可信。社交媒体(知乎/公众号)同样只有全市聚合,无朝阳分渠道。
+
   - id: ev-tbl-method
     entity: 朝阳区
     claim: enrollment_table_method
