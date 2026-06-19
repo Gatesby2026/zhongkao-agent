@@ -36,17 +36,17 @@ table:
     xed_quota: 1133               # ✅官方(校额到校名额)
     vocational_zhigao_est: 1800   # T4
   - year: 2026
-    junior_grad_est: 15000        # T4(朝阳13300×全市+13.2%)
-    exam_takers_est: 12000        # T4(全市生源峰上行;全市预计参加12.6万)
+    junior_grad: 18713            # ✅社交各区表(全口径;2025=16099)
+    exam_takers_est: 12800        # T3(gaokzx推算;较2025+19%)
     prebatch_1plus3_cy_est: 650   # T4(全市1+3>1万扩+朝阳新校参与;2025=545)
-    puhigh_admit_est: 9200        # T4(2025公办8229×普高+11.8%+4新校)
+    puhigh_admit_est: 8960        # T3(gaokzx推算,率~70%;2025口径7510/8229两说)
     vocational_zhigao_est: 1800   # T4
     city_official:                # ✅全市官方(政策)
       初三毕业: 130701
       预计参加: 126000
       普高招生: 95000
       贯通: 910
-    note: 全市为官方(教委2026中招意见);朝阳分项为T4估,7月计划/出分后替换
+    note: 朝阳初三18713=社交各区表(累加=全市130701);参加/公办=gaokzx推算T3;7月计划/出分后替换
 records:
   - id: ev-tbl-llm-crosscheck
     entity: 朝阳区
