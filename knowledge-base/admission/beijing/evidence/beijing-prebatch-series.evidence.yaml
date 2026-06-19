@@ -138,6 +138,24 @@ records:
     excerpt: "朝阳区2025有9所区级1+3实验校、计划招生545人;新增八十中睿德分校、清华附广华学校。全市1+3=市级970(6校)+区级7825(113校)=8795。"
     notes: 545 为区级口径;市级1+3投朝阳另计(少量)。1+3 是初二选拔、四年制,这些学生不参加中考→不在'参加中考人数'内。
 
+  - id: ev-pre-structure-ceiling
+    entity: 北京市
+    claim: prebatch_not_district_allocated
+    value: 提前招生计划表按"学校×招生人数×招生地区(文字)"组织,无分区列;"全市"行不可拆到朝阳
+    confidence: T1
+    status: confirmed
+    source_type: 官方计划册(视觉核验)
+    source_url: https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87199.html
+    source_title: 2025年普通高中学校提前招生计划(bjeea图表)
+    method: 下载34图+视觉读取
+    collected_at: 2026-06-19
+    excerpt: >
+      2025/2024 提招表列=学校代码|校名|专业代码|专业|学制|招生人数|招生地区(东城/全市/通州等文字)|特殊说明。
+      与统招/统筹不同——无东城01西城02朝阳05分区列;大量"全市"行无法归到朝阳。
+    notes: >
+      ⇒ 结论:提前批(特长/自主/直升/中外)本质非"区分配",朝阳提前批录取数除"区级1+3=545"外
+      公开域结构上不可得(仅区招办内部统计)。已用 OCR 计划册路线证实此天花板,非未尝试。
+
   - id: ev-pre-cy-breakdown
     entity: 朝阳区
     claim: prebatch_breakdown_by_year
