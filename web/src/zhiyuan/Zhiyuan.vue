@@ -834,7 +834,7 @@ function chDisp(ch: any): { name: string; band: string; cls: string; detail: str
   const k = ch.metric?.kind
   if (k === 'district_rank') return {
     name: '统招', band: ch.band || '—', cls: PUB_BAND_CLS[ch.band] || 'tj-unk',
-    detail: ch.metric.refRank != null ? `录取位次≈${ch.metric.refRank}` : '', caveat: ch.caveat }
+    detail: '', caveat: ch.caveat }  // 位次统一在"📍2026预估"块显示,此处只留档位,避免重复
   if (k === 'city_score') {
     const b = scoreBand(ch.metric.refLine ?? null)
     return { name: '市级统筹' + (ch.tier ? '·' + ch.tier : ''), band: b.label, cls: b.cls,
@@ -1435,17 +1435,21 @@ const tcOptions: string[] = []
             <template v-if="selectedPoint">
               <template v-if="selSchool">
                 <div class="dp-head">
-                  <span class="dp-type">{{ selSchool.type }}</span>
+                  <span class="dp-type">{{ selSchool.type }}{{ selSchool.level ? ' · ' + selSchool.level : '' }}</span>
                   <h3>{{ cleanName(selSchool.name) }}</h3>
                 </div>
-                <div class="dp-sub">
-                  {{ selSchool.level || '' }}
-                  <span v-if="selSchool.extra.coop" class="bdg b-coop">🌐中外合作班</span>
+                <div v-if="selSchool.extra.coop" class="dp-sub">
+                  <span class="bdg b-coop">🌐中外合作班</span>
+                </div>
+
+                <div v-if="selSchool.pred_2026" class="dp-block dp-pred">
+                  <div class="dp-title">📍 2026 录取位次预估（核心依据）</div>
+                  <div class="dp-line"><b class="dp-predv">≈{{ selSchool.pred_2026.rank }}</b> <span class="dp-muted">区间 {{ selSchool.pred_2026.lo }}–{{ selSchool.pred_2026.hi }} · 约前{{ selSchool.pred_2026.pct }}%</span></div>
+                  <div class="dp-line dp-muted">{{ selSchool.pred_2026.method === 'new_anchor' ? '新校锚定' : '百分位法' }} · 可信度 {{ selSchool.pred_2026.conf }} · 7月官方/出分后替换</div>
                 </div>
 
                 <div class="dp-block">
-                  <div class="dp-title">对你的研判<small class="dp-muted">（按位次）</small></div>
-                  <div v-if="selSchool.pred_2026" class="dp-line">📍 <b>2026预估位次≈{{ selSchool.pred_2026.rank }}</b><span class="dp-muted">（{{ selSchool.pred_2026.lo }}–{{ selSchool.pred_2026.hi }} · 约前{{ selSchool.pred_2026.pct }}% · {{ selSchool.pred_2026.conf }}·{{ selSchool.pred_2026.method === 'new_anchor' ? '新校锚定' : '百分位法' }}）</span></div>
+                  <div class="dp-title">对你的研判<small class="dp-muted">（按2026预估位次）</small></div>
                   <div v-for="(v, ci) in channelViews" :key="ci" class="dp-ch">
                     <span class="dp-ch-name">{{ v.name }}</span>
                     <span class="tj" :class="v.cls">{{ v.band }}</span>
@@ -1639,17 +1643,21 @@ const tcOptions: string[] = []
             <template v-if="selectedPoint">
               <template v-if="selSchool">
                 <div class="dp-head">
-                  <span class="dp-type">{{ selSchool.type }}</span>
+                  <span class="dp-type">{{ selSchool.type }}{{ selSchool.level ? ' · ' + selSchool.level : '' }}</span>
                   <h3>{{ cleanName(selSchool.name) }}</h3>
                 </div>
-                <div class="dp-sub">
-                  {{ selSchool.level || '' }}
-                  <span v-if="selSchool.extra.coop" class="bdg b-coop">🌐中外合作班</span>
+                <div v-if="selSchool.extra.coop" class="dp-sub">
+                  <span class="bdg b-coop">🌐中外合作班</span>
+                </div>
+
+                <div v-if="selSchool.pred_2026" class="dp-block dp-pred">
+                  <div class="dp-title">📍 2026 录取位次预估（核心依据）</div>
+                  <div class="dp-line"><b class="dp-predv">≈{{ selSchool.pred_2026.rank }}</b> <span class="dp-muted">区间 {{ selSchool.pred_2026.lo }}–{{ selSchool.pred_2026.hi }} · 约前{{ selSchool.pred_2026.pct }}%</span></div>
+                  <div class="dp-line dp-muted">{{ selSchool.pred_2026.method === 'new_anchor' ? '新校锚定' : '百分位法' }} · 可信度 {{ selSchool.pred_2026.conf }} · 7月官方/出分后替换</div>
                 </div>
 
                 <div class="dp-block">
-                  <div class="dp-title">对你的研判<small class="dp-muted">（按位次）</small></div>
-                  <div v-if="selSchool.pred_2026" class="dp-line">📍 <b>2026预估位次≈{{ selSchool.pred_2026.rank }}</b><span class="dp-muted">（{{ selSchool.pred_2026.lo }}–{{ selSchool.pred_2026.hi }} · 约前{{ selSchool.pred_2026.pct }}% · {{ selSchool.pred_2026.conf }}·{{ selSchool.pred_2026.method === 'new_anchor' ? '新校锚定' : '百分位法' }}）</span></div>
+                  <div class="dp-title">对你的研判<small class="dp-muted">（按2026预估位次）</small></div>
                   <div v-for="(v, ci) in channelViews" :key="ci" class="dp-ch">
                     <span class="dp-ch-name">{{ v.name }}</span>
                     <span class="tj" :class="v.cls">{{ v.band }}</span>
@@ -2325,6 +2333,9 @@ const tcOptions: string[] = []
 .dp-tc .dp-title { color: #a93226; }
 .dp-title { font-size: 12px; font-weight: 700; color: var(--brand-dark); margin-bottom: 6px;
   padding-left: 7px; border-left: 3px solid var(--brand); }
+.dp-pred { background: #fffaf0; border: 1px solid #fde8c8; border-radius: var(--radius); padding: 8px 10px; margin-top: 12px; }
+.dp-pred .dp-title { color: #b9770e; border-left-color: #e8a33d; }
+.dp-predv { font-size: 17px; color: #b9770e; }
 .dp-table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
 .dp-table th { text-align: left; color: var(--gray-400); font-weight: 500; font-size: 11px;
   padding: 3px 6px; border-bottom: 1px solid var(--gray-100); }
