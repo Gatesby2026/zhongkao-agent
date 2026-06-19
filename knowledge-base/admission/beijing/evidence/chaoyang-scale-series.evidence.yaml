@@ -94,6 +94,66 @@ records:
     excerpt: "2024-2025学年朝阳区普通中学在校生86970人,全市第二(次于海淀)。"
     notes: 是"中学在校生"非"初三毕业生";初三毕业≈在校/3 粗估,精确数待官方分年级表。全市2024-25中考人数较上年减9975。
 
+  - id: ev-scale-cy-chuzhong-grad-2025
+    entity: 朝阳区
+    claim: junior_graduates       # 初中毕业生(初中-only口径)
+    value: 13300
+    year: 2025
+    confidence: T3
+    status: unconfirmed
+    source_type: 机构(引官方统计)
+    source_url: https://www.xschu.com/zhengcezixun/77738.html
+    source_title: 2024-2025学年北京各区毕业人数汇总(北京小升初网)
+    method: WebFetch
+    collected_at: 2026-06-19
+    excerpt: "朝阳区初中毕业生数13300、高中毕业生数5273(2024-2025学年);海淀初中21898、西城12485。"
+    notes: 这是"初中毕业"口径(≈进入高中阶段的群体);13300 > 参加中考10729,差额=未在朝阳参加中考(流失/外地/出国)。
+
+  - id: ev-scale-cy-zhongxue-bulletin
+    entity: 朝阳区
+    claim: secondary_school_bulletin  # 官方统计公报:普通中学(初+高合并)招生/在校/毕业
+    value:
+      "2023": {学校: 97, 招生: 29527, 在校: 76908, 毕业: 20206}
+      "2024": {学校: 98, 招生: 33849, 在校: 87143, 毕业: 20816}
+    confidence: T2
+    status: confirmed
+    source_type: 官方统计公报
+    source_url: https://tjgb.hongheiku.com/xjtjgb/xj2020/59553.html
+    source_title: 北京市朝阳区2024年国民经济和社会发展统计公报(教育) + 2023朝阳教育数据(zgcounty 52961)
+    method: WebFetch
+    collected_at: 2026-06-19
+    excerpt: "2024:普通中学98所,招生33849,在校87143,毕业20816。2023:97所,招生29527,在校76908,毕业20206。"
+    notes: ⚠️"普通中学"=初中+高中合并口径,非初中-only;初中毕业另见 ev-...-chuzhong-grad。趋势:朝阳生源在扩(招生29527→33849)。
+
+  - id: ev-scale-cy-zhigao-2024
+    entity: 朝阳区
+    claim: vocational_highschool   # 职业高中(职高,非全部中职)
+    value: {招生: 1838, 在校: 4145, 毕业: 824}
+    year: 2024
+    confidence: T2
+    status: confirmed
+    source_type: 官方统计公报
+    source_url: https://tjgb.hongheiku.com/xjtjgb/xj2020/59553.html
+    source_title: 朝阳区2024统计公报(职业高中)
+    method: WebFetch
+    collected_at: 2026-06-19
+    excerpt: "职业高中:招生1838,在校4145,毕业824(2024朝阳)。"
+    notes: 仅"职高",不含中专/技校/五年制;朝阳3所职高(求实/电气/劲松)。全市中职计划2025约3.3万。
+
+  - id: ev-scale-cy-disamb-liaoning
+    entity: 朝阳区
+    claim: NOT_SAME_AS
+    value: jyj.chaoyang.gov.cn = 辽宁省朝阳市教育局(≠北京朝阳区);其"初中毕业30473/普高招20688/中职5099"是辽宁朝阳市数据,已弃用
+    status: negative
+    confidence: T2
+    source_type: 排雷
+    source_url: https://jyj.chaoyang.gov.cn/html/CYJYJ/202502/0173986579688638.html
+    source_title: (辽宁)朝阳市2024教育事业发展统计公报
+    method: WebFetch
+    collected_at: 2026-06-19
+    excerpt: "数字量级(初中毕业30473)远大于北京朝阳区(~1.3万),系同名'朝阳市'(辽宁)。北京朝阳区用 bjchy.gov.cn。"
+    notes: ⚠️ 防张冠李戴:搜'朝阳教育统计'易命中辽宁朝阳市,北京朝阳区数据务必认 bjchy.gov.cn / tjgb 朝阳区公报。
+
   - id: ev-scale-cy-outflow
     entity: 朝阳区
     claim: outflow_rate          # 初中→外区/外地 人口流失率
