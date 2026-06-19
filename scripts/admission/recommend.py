@@ -23,6 +23,13 @@ import yaml
 
 import distance as dist_mod
 
+# 学校实体解析(P1):脏名字/代码 → 稳定 school_id。注册表缺失时降级为 no-op,不拖垮主推荐。
+sys.path.insert(0, str(Path(__file__).resolve().parent / "registry"))
+try:
+    from resolve import resolve as _resolve_id
+except Exception:
+    _resolve_id = lambda name, district=None: None
+
 ADMISSION_DIR = Path(__file__).resolve().parents[2] / "knowledge-base" / "admission" / "beijing"
 
 # 官方学校代码 + 专业(班)列表（派生自 bjeea 计划册 OCR，经人工核对）。
@@ -768,13 +775,55 @@ def build_result(rank, home=None, mode="driving", max_km=None, interests=None,
         "_buckets": buckets, "_dist_campus": dist_campus,
         "_priv": priv, "_priv_dist": priv_dist, "_home_coord": home_coord,
     }
+    # P1：给每个学校对象装上稳定 school_id（resolve 脏名字/代码 → 注册表 id）。
+    # 增量、不改既有字段：name 等全保留;前端 P2 起改用 id 去重/匹配,告别字符串拼接。
+    _stamp_school_ids(result)
+
     # §12 统一模型：规范化适配层（增量，前端逐步迁移；school_额到校 channel 由前端按初中追加）
     try:
         import unified
         result["schools_unified"] = unified.build_unified(result)
+        # unified 由 result 装配 → 其条目同样补 id
+        for u in (result.get("schools_unified") or []):
+            if isinstance(u, dict) and not u.get("id"):
+                u["id"] = _resolve_id(u.get("name"))
     except Exception as e:  # 适配层不可因异常拖垮主推荐
         result["schools_unified"] = None
         result["_unified_err"] = str(e)
+    return result
+
+
+def _stamp_school_ids(result: dict) -> dict:
+    """给 result 里所有学校对象补 `id`(+`id_status`)。集中一处、幂等、不改其他字段。
+    覆盖:bands/public_list/private_schools/vocational/new_schools/tongchou(yi/er)。
+    贯通(城市级,未入注册表)→ id_status='unresolved',不报错(后续阶段再纳)。"""
+    stats = {"ok": 0, "unresolved": 0}
+
+    def stamp(obj):
+        if not isinstance(obj, dict):
+            return
+        nm = obj.get("name") or obj.get("school_name")
+        sid = _resolve_id(nm) if nm else None
+        obj["id"] = sid
+        obj["id_status"] = "ok" if sid else "unresolved"
+        stats["ok" if sid else "unresolved"] += 1
+
+    for band_cards in (result.get("bands") or {}).values():
+        for c in band_cards:
+            stamp(c)
+    for c in (result.get("public_list") or []):
+        stamp(c)
+    for key in ("private_schools", "vocational"):
+        for s in ((result.get(key) or {}).get("schools") or []):
+            stamp(s)
+    ns = result.get("new_schools")
+    for s in (ns.get("schools") if isinstance(ns, dict) else ns) or []:
+        stamp(s)
+    tc = result.get("tongchou") or {}
+    for k in ("tongchou_yi", "tongchou_er", "schools"):
+        for s in (tc.get(k) or []):
+            stamp(s)
+    result["_id_stamp"] = stats
     return result
 
 
