@@ -1445,6 +1445,7 @@ const tcOptions: string[] = []
 
                 <div class="dp-block">
                   <div class="dp-title">对你的研判<small class="dp-muted">（按位次）</small></div>
+                  <div v-if="selSchool.pred_2026" class="dp-line">📍 <b>2026预估位次≈{{ selSchool.pred_2026.rank }}</b><span class="dp-muted">（{{ selSchool.pred_2026.lo }}–{{ selSchool.pred_2026.hi }} · 约前{{ selSchool.pred_2026.pct }}% · {{ selSchool.pred_2026.conf }}·{{ selSchool.pred_2026.method === 'new_anchor' ? '新校锚定' : '百分位法' }}）</span></div>
                   <div v-for="(v, ci) in channelViews" :key="ci" class="dp-ch">
                     <span class="dp-ch-name">{{ v.name }}</span>
                     <span class="tj" :class="v.cls">{{ v.band }}</span>
@@ -1648,6 +1649,7 @@ const tcOptions: string[] = []
 
                 <div class="dp-block">
                   <div class="dp-title">对你的研判<small class="dp-muted">（按位次）</small></div>
+                  <div v-if="selSchool.pred_2026" class="dp-line">📍 <b>2026预估位次≈{{ selSchool.pred_2026.rank }}</b><span class="dp-muted">（{{ selSchool.pred_2026.lo }}–{{ selSchool.pred_2026.hi }} · 约前{{ selSchool.pred_2026.pct }}% · {{ selSchool.pred_2026.conf }}·{{ selSchool.pred_2026.method === 'new_anchor' ? '新校锚定' : '百分位法' }}）</span></div>
                   <div v-for="(v, ci) in channelViews" :key="ci" class="dp-ch">
                     <span class="dp-ch-name">{{ v.name }}</span>
                     <span class="tj" :class="v.cls">{{ v.band }}</span>

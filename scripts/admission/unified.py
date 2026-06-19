@@ -72,6 +72,20 @@ def _features_std() -> dict:
 
 
 _LINE_TREND = None
+_PRED2026 = None
+
+
+def _pred2026() -> dict:
+    """读 ts/pred_2026.json(键 'code:校名'或'NEW:校名')→ {校名: {rank,lo,hi,pct,conf,...}},缓存。"""
+    global _PRED2026
+    if _PRED2026 is None:
+        p = Path(__file__).resolve().parents[2] / "knowledge-base/admission/beijing/ts/pred_2026.json"
+        try:
+            raw = json.load(open(p, encoding="utf-8")).get("pred", {})
+            _PRED2026 = {(k.split(":", 1)[1] if ":" in k else k): v for k, v in raw.items()}
+        except Exception:
+            _PRED2026 = {}
+    return _PRED2026
 
 
 def _line_trends() -> dict:
@@ -245,6 +259,9 @@ def build_unified(result: dict) -> list:
         t = lt.get(s["uid"])
         if t:
             s["line_trend"] = t      # 录取位次趋势/2026区间(T3),按 uid 挂载
+        pp = _pred2026().get(s["name"])
+        if pp:
+            s["pred_2026"] = pp      # 2026预估录取位次(核心依据),按校名挂载
         v = va.get(s["uid"])
         if v:
             s["value_added"] = v     # 增值residual(T3),按 uid 挂载
