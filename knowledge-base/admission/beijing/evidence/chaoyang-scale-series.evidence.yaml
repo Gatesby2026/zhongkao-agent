@@ -183,6 +183,46 @@ records:
     collected_at: 2026-06-19
     excerpt: "2025北京中招总计划11.8万:普高约8.5万、中职约3.3万。"
 
+  - id: ev-scale-city-2026
+    entity: 北京市
+    claim: city_2026
+    value:
+      初三毕业: 130701
+      较2025增: 15212
+      增幅: "13.2%"
+      预计参加中考: 126000      # 按95%参考率
+      普高招生: 95000           # 较2025的8.5万+1万
+      中职招生: 33000
+      普职比: "2.88:1"          # 2025=2.58:1
+    year: 2026
+    confidence: T2
+    status: confirmed
+    source_type: 政策/官媒
+    source_url: https://www.bjnews.com.cn/detail/1774700943129765.html
+    source_title: 北京2026年中招政策发布(新京报) + 教委2026中招意见
+    method: WebSearch
+    collected_at: 2026-06-19
+    excerpt: "2026北京初三在校生(毕业生)130701,较2025+15212(+13.2%);按95%参考率预计参加约12.6万。普高招生约9.5万(+1万),中职约3.3万,普职比2.58→2.88。新增学位靠新建/改扩建/综合高中班。"
+    notes: 2026 是生源高峰(小升初峰传导)+普高扩招双因素→录取位次口径会变,百分位分母须用2026参加数。
+
+  - id: ev-scale-cy-2026-est
+    entity: 朝阳区
+    claim: chaoyang_2026_estimate
+    value:
+      初三毕业_est: 15000        # T4:朝阳2025=13300 × 全市+13.2%
+      参加中考_est: 12000        # T4:随全市生源峰上行(2025=10729)
+      公办普高录取_est: 9200     # T4:2025=8229 × 普高+11.8%扩招+4新校
+      校额到校_est: 1250         # T4:≥50%扩面(2025=1133)
+    year: 2026
+    confidence: T4
+    status: unconfirmed
+    source_type: 派生估算
+    source_url: 基于 ev-scale-city-2026(全市官方) + 朝阳历年
+    method: 按全市2026增幅×朝阳基数
+    collected_at: 2026-06-19
+    excerpt: "朝阳2026估:初三毕业~15000、参加中考~12000、公办普高~9200、校额~1250(均按全市+13%~+12%增幅×朝阳基数,T4)。"
+    notes: ⚠️全为估算;朝阳官方计划7月发布、参加数出分后定。2026新增4所公办普高(民大附朝阳/首师大实验/北大附朝阳未来/燕京新源)增供给。
+
   - id: ev-scale-city-2024-puhigh
     entity: 北京市
     claim: city_puhigh_plan
