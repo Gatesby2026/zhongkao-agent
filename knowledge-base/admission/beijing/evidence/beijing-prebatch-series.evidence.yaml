@@ -1,191 +1,235 @@
 entity: 北京提前批/指标分配规模序列
-note: >
-  2026录取位次预估模型的地基数据②:逐年"统招前录走人数"(1+3/贯通/校额到校/提招/中职自主)。
-  用途:统招池 = 全体 − 提前批锁定;提前批扩招→统招池高分段被抽走→统招位次后移。
-  全市 1+3 序列较清晰(T2);朝阳分项逐年人数缺(待补)。只增不删,以官方简章为准。
-  ⚠️ 仍缺:朝阳逐年 1+3/贯通/校额到校/提招/中职自主 各渠道录取人数。
+note: '2026录取位次预估模型的地基数据②:逐年"统招前录走人数"(1+3/贯通/校额到校/提招/中职自主)。 用途:统招池 = 全体 − 提前批锁定;提前批扩招→统招池高分段被抽走→统招位次后移。
+  全市 1+3 序列较清晰(T2);朝阳分项逐年人数缺(待补)。只增不删,以官方简章为准。 ⚠️ 仍缺:朝阳逐年 1+3/贯通/校额到校/提招/中职自主 各渠道录取人数。
+
+  '
 records:
-  - id: ev-pre-13-2023
-    entity: 北京市
-    claim: prebatch_1plus3
-    value: {人数: 3144, 学校: 41}
-    year: 2023
-    confidence: T2
-    status: confirmed
-    source_type: 官媒/机构
-    source_url: https://www.gaokzx.com/gk/zhongkao/152547.html
-    source_title: 2026北京1+3项目招生人数将扩大(北京高考在线)
-    method: WebSearch
-    collected_at: 2026-06-19
-    excerpt: "2023年1+3:41校、3144人。"
+- id: ev-pre-13-2023
+  entity: 北京市
+  claim: prebatch_1plus3
+  value:
+    人数: 3144
+    学校: 41
+  year: 2023
+  confidence: T2
+  status: confirmed
+  source_type: 官媒/机构
+  source_url: https://www.gaokzx.com/gk/zhongkao/152547.html
+  source_title: 2026北京1+3项目招生人数将扩大(北京高考在线)
+  method: WebSearch
+  collected_at: 2026-06-19
+  excerpt: 2023年1+3:41校、3144人。
+- id: ev-pre-13-2024
+  entity: 北京市
+  claim: prebatch_1plus3
+  value:
+    人数: 6014
+    学校: 82
+    区级实验校: 76
+  year: 2024
+  confidence: T2
+  status: confirmed
+  source_type: 官媒/机构
+  source_url: https://m.gmw.cn/2025-04/04/content_1304007669.htm
+  source_title: 北京中考中招六大调整(光明网)
+  method: WebSearch
+  collected_at: 2026-06-19
+  excerpt: 2024年1+3由2023的41校增至82校,区级实验校增至76,招生计划由3144增至6014(+2870)。
+- id: ev-pre-13-2025
+  entity: 北京市
+  claim: prebatch_1plus3
+  value:
+    人数: 8795
+    学校: 119
+  year: 2025
+  confidence: T2
+  status: confirmed
+  source_type: 机构(引官方)
+  source_url: https://www.zizzs.com/gk/zhongkao/216618.html
+  source_title: 2026北京1+3项目招生人数或达10000+(自主选拔在线)
+  method: WebFetch
+  collected_at: 2026-06-19
+  excerpt: 2025年1+3实验学校共119所,总培养计划8795人。
+- id: ev-pre-13-2026
+  entity: 北京市
+  claim: prebatch_1plus3
+  value:
+    人数_预计: 10000
+    趋势: 扩招
+  year: 2026
+  confidence: T3
+  status: unconfirmed
+  source_type: 机构(预测)
+  source_url: https://www.zizzs.com/gk/zhongkao/221714.html
+  source_title: 2026北京1+3项目迎来多个好消息(自主选拔在线)
+  method: WebSearch
+  collected_at: 2026-06-19
+  excerpt: 2026年1+3预计破万(或达10000+,较2025约+1200+);西城、朝阳均有新校首次参与;西城159中首年招60人。预计7月中旬启动。
+  expires: 2026-07
+  notes: ⚠️ 预测值,官方未发布;对统招位次后移有放大作用,P1 定量时须用官方数替换。
+- id: ev-pre-xed-2025
+  entity: 北京市
+  claim: prebatch_xed_policy
+  value: 优质普高≥50%名额分配到校,2025起扩展到所有初中(含优质初中)
+  year: 2025
+  confidence: T1
+  status: confirmed
+  source_type: 政策
+  source_url: https://www.beijing.gov.cn/fuwu/bmfw/sy/jrts/tzxx/202503/t20250318_4037400.html
+  source_title: 北京2025年中招政策发布(首都之窗)
+  method: WebSearch
+  collected_at: 2026-06-19
+  excerpt: 2025年将不低于50%的优质普通高中招生计划分配到初中校,不再限于一般公办初中,所有学校均有校额到校分配。
+  notes: 校额扩面→更多名额走指标分配批→统招池进一步缩小,影响统招位次。
+- id: ev-pre-guantong-2026
+  entity: 北京市
+  claim: prebatch_guantong
+  value:
+    2025: 1035
+    2026: 910
+    变化: -125
+  year: 2026
+  confidence: T3
+  status: unconfirmed
+  source_type: 机构
+  source_url: https://www.zhongkaobj.cn/zhaosheng/gtxm/2026061013719.html
+  source_title: 2026北京贯通培养计划缩减招生(北京中考信息网)
+  method: WebFetch
+  collected_at: 2026-06-19
+  excerpt: 2026贯通总招生910人,对比2025的1035人,缩减125人(约-12.1%);≥380分、京籍。
+  notes: ⚠️ 与 1+3 扩招方向相反——贯通缩、1+3 涨;净效应对统招池需合并测算。
+- id: ev-pre-cy-xed-2025
+  entity: 朝阳区
+  claim: prebatch_xed_quota
+  value:
+    学校: 69
+    名额合计: 1133
+  year: 2025
+  confidence: T2
+  status: confirmed
+  source_type: 官方(bjeea表)派生
+  source_url: 内部 chaoyang_xeddx.yaml (源 bjeea 校额到校分配名额表)
+  source_title: 2025朝阳校额到校分配名额(内部已结构化·69校核对)
+  method: 内部求和
+  collected_at: 2026-06-19
+  excerpt: 朝阳 2025 校额到校:69 所高中、名额合计 1133(逐校 by_school 求和)。
+  notes: 已 verified_count=69;是统招前"指标分配批"录走的盘子之一。
+- id: ev-pre-cy-tongzhao-2025
+  entity: 朝阳区
+  claim: admit_to_chaoyang_total
+  value:
+    投朝阳合计: 7355
+    本区大额统招约: 6508
+  year: 2025
+  confidence: T2
+  status: confirmed
+  source_type: 官方计划册派生
+  source_url: 内部 2025_tongzhao_plan.json (源 bjeea 招生计划册 OCR)
+  source_title: 2025计划册朝阳列求和(内部)
+  method: 内部求和
+  collected_at: 2026-06-19
+  excerpt: 计划册 major 行'朝阳'列求和=7355(含统招+市级统筹+中外合作投朝阳);其中≥50人/校的本区大额合计6508(≈朝阳本区统招公办)。
+  notes: 与网传"朝阳公办录取8229"口径不同(8229或含全部公办渠道实际录取);三个数并存、不强行对齐,建模时择口径。
+- id: ev-pre-cy-1plus3-2025
+  entity: 朝阳区
+  claim: prebatch_1plus3_chaoyang
+  value:
+    区级实验校: 9
+    区级招生: 545
+  year: 2025
+  confidence: T2
+  status: confirmed
+  source_type: 本地宝/官方汇总
+  source_url: https://m.bj.bendibao.com/edu/363930.html
+  source_title: 2025北京1+3培养项目区级实验学校及培养计划(本地宝)
+  method: WebSearch
+  collected_at: 2026-06-19
+  excerpt: 朝阳区2025有9所区级1+3实验校、计划招生545人;新增八十中睿德分校、清华附广华学校。全市1+3=市级970(6校)+区级7825(113校)=8795。
+  notes: 545 为区级口径;市级1+3投朝阳另计(少量)。1+3 是初二选拔、四年制,这些学生不参加中考→不在'参加中考人数'内。
+- id: ev-pre-cy-zhisheng-2026
+  entity: 朝阳区
+  claim: prebatch_zhisheng_0.5plus3
+  value:
+    朝阳总名额_2026: 1500
+    校级:
+      人大附朝阳: 177
+      清华附朝阳: 175
+      陈经纶: 160
+      朝阳外国语: 80
+      和平街一中: 66
+  year: 2026
+  confidence: T3
+  status: unconfirmed
+  source_type: 机构/自媒体
+  source_url: https://www.xschu.com/zhengcezixun/84670.html
+  source_title: 2026朝阳0.5+3集团校直升名额(北京小升初网)
+  method: WebFetch
+  collected_at: 2026-06-19
+  excerpt: 朝阳2026 0.5+3直升总名额约1500;人朝177/清华附朝阳175/陈经纶160/朝外80/和平街66。全市破1万、四城区约6500、海淀约2500。直升生仍参加中考但不得报其他高中。
+  notes: '⚠️ 重大修正:此前''提前批=650''只算1+3,漏了直升大头。朝阳2026提前批≈1+3(~650)+直升(~1500) +特长/登记入学(几百)≈2200+。朝外集团直升另一源(zhongkaobj)称235本校+70集团≈305(口径/批次不同)。
+    口径:直升生占用名校统招前名额→压低统招录取位次,对预估影响大。
 
-  - id: ev-pre-13-2024
-    entity: 北京市
-    claim: prebatch_1plus3
-    value: {人数: 6014, 学校: 82, 区级实验校: 76}
-    year: 2024
-    confidence: T2
-    status: confirmed
-    source_type: 官媒/机构
-    source_url: https://m.gmw.cn/2025-04/04/content_1304007669.htm
-    source_title: 北京中考中招六大调整(光明网)
-    method: WebSearch
-    collected_at: 2026-06-19
-    excerpt: "2024年1+3由2023的41校增至82校,区级实验校增至76,招生计划由3144增至6014(+2870)。"
+    '
+- id: ev-pre-structure-ceiling
+  entity: 北京市
+  claim: prebatch_not_district_allocated
+  value: 提前招生计划表按"学校×招生人数×招生地区(文字)"组织,无分区列;"全市"行不可拆到朝阳
+  confidence: T1
+  status: confirmed
+  source_type: 官方计划册(视觉核验)
+  source_url: https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87199.html
+  source_title: 2025年普通高中学校提前招生计划(bjeea图表)
+  method: 下载34图+视觉读取
+  collected_at: 2026-06-19
+  excerpt: '2025/2024 提招表列=学校代码|校名|专业代码|专业|学制|招生人数|招生地区(东城/全市/通州等文字)|特殊说明。 与统招/统筹不同——无东城01西城02朝阳05分区列;大量"全市"行无法归到朝阳。
 
-  - id: ev-pre-13-2025
-    entity: 北京市
-    claim: prebatch_1plus3
-    value: {人数: 8795, 学校: 119}
-    year: 2025
-    confidence: T2
-    status: confirmed
-    source_type: 机构(引官方)
-    source_url: https://www.zizzs.com/gk/zhongkao/216618.html
-    source_title: 2026北京1+3项目招生人数或达10000+(自主选拔在线)
-    method: WebFetch
-    collected_at: 2026-06-19
-    excerpt: "2025年1+3实验学校共119所,总培养计划8795人。"
+    '
+  notes: '⇒ 结论:提前批(特长/自主/直升/中外)本质非"区分配",朝阳提前批录取数除"区级1+3=545"外 公开域结构上不可得(仅区招办内部统计)。已用
+    OCR 计划册路线证实此天花板,非未尝试。
 
-  - id: ev-pre-13-2026
-    entity: 北京市
-    claim: prebatch_1plus3
-    value: {人数_预计: 10000, 趋势: 扩招}
-    year: 2026
-    confidence: T3
-    status: unconfirmed
-    source_type: 机构(预测)
-    source_url: https://www.zizzs.com/gk/zhongkao/221714.html
-    source_title: 2026北京1+3项目迎来多个好消息(自主选拔在线)
-    method: WebSearch
-    collected_at: 2026-06-19
-    excerpt: "2026年1+3预计破万(或达10000+,较2025约+1200+);西城、朝阳均有新校首次参与;西城159中首年招60人。预计7月中旬启动。"
-    expires: 2026-07
-    notes: ⚠️ 预测值,官方未发布;对统招位次后移有放大作用,P1 定量时须用官方数替换。
-
-  - id: ev-pre-xed-2025
-    entity: 北京市
-    claim: prebatch_xed_policy     # 校额到校政策
-    value: 优质普高≥50%名额分配到校,2025起扩展到所有初中(含优质初中)
-    year: 2025
-    confidence: T1
-    status: confirmed
-    source_type: 政策
-    source_url: https://www.beijing.gov.cn/fuwu/bmfw/sy/jrts/tzxx/202503/t20250318_4037400.html
-    source_title: 北京2025年中招政策发布(首都之窗)
-    method: WebSearch
-    collected_at: 2026-06-19
-    excerpt: "2025年将不低于50%的优质普通高中招生计划分配到初中校,不再限于一般公办初中,所有学校均有校额到校分配。"
-    notes: 校额扩面→更多名额走指标分配批→统招池进一步缩小,影响统招位次。
-
-  - id: ev-pre-guantong-2026
-    entity: 北京市
-    claim: prebatch_guantong       # 高端技术技能人才贯通培养
-    value: {2025: 1035, 2026: 910, 变化: -125}
-    year: 2026
-    confidence: T3
-    status: unconfirmed
-    source_type: 机构
-    source_url: https://www.zhongkaobj.cn/zhaosheng/gtxm/2026061013719.html
-    source_title: 2026北京贯通培养计划缩减招生(北京中考信息网)
-    method: WebFetch
-    collected_at: 2026-06-19
-    excerpt: "2026贯通总招生910人,对比2025的1035人,缩减125人(约-12.1%);≥380分、京籍。"
-    notes: ⚠️ 与 1+3 扩招方向相反——贯通缩、1+3 涨;净效应对统招池需合并测算。
-
-  - id: ev-pre-cy-xed-2025
-    entity: 朝阳区
-    claim: prebatch_xed_quota      # 校额到校朝阳名额
-    value: {学校: 69, 名额合计: 1133}
-    year: 2025
-    confidence: T2
-    status: confirmed
-    source_type: 官方(bjeea表)派生
-    source_url: 内部 chaoyang_xeddx.yaml (源 bjeea 校额到校分配名额表)
-    source_title: 2025朝阳校额到校分配名额(内部已结构化·69校核对)
-    method: 内部求和
-    collected_at: 2026-06-19
-    excerpt: "朝阳 2025 校额到校:69 所高中、名额合计 1133(逐校 by_school 求和)。"
-    notes: 已 verified_count=69;是统招前"指标分配批"录走的盘子之一。
-
-  - id: ev-pre-cy-tongzhao-2025
-    entity: 朝阳区
-    claim: admit_to_chaoyang_total # 计划册"投朝阳"招生合计
-    value: {投朝阳合计: 7355, 本区大额统招约: 6508}
-    year: 2025
-    confidence: T2
-    status: confirmed
-    source_type: 官方计划册派生
-    source_url: 内部 2025_tongzhao_plan.json (源 bjeea 招生计划册 OCR)
-    source_title: 2025计划册朝阳列求和(内部)
-    method: 内部求和
-    collected_at: 2026-06-19
-    excerpt: "计划册 major 行'朝阳'列求和=7355(含统招+市级统筹+中外合作投朝阳);其中≥50人/校的本区大额合计6508(≈朝阳本区统招公办)。"
-    notes: 与网传"朝阳公办录取8229"口径不同(8229或含全部公办渠道实际录取);三个数并存、不强行对齐,建模时择口径。
-
-  - id: ev-pre-cy-1plus3-2025
-    entity: 朝阳区
-    claim: prebatch_1plus3_chaoyang
-    value: {区级实验校: 9, 区级招生: 545}
-    year: 2025
-    confidence: T2
-    status: confirmed
-    source_type: 本地宝/官方汇总
-    source_url: https://m.bj.bendibao.com/edu/363930.html
-    source_title: 2025北京1+3培养项目区级实验学校及培养计划(本地宝)
-    method: WebSearch
-    collected_at: 2026-06-19
-    excerpt: "朝阳区2025有9所区级1+3实验校、计划招生545人;新增八十中睿德分校、清华附广华学校。全市1+3=市级970(6校)+区级7825(113校)=8795。"
-    notes: 545 为区级口径;市级1+3投朝阳另计(少量)。1+3 是初二选拔、四年制,这些学生不参加中考→不在'参加中考人数'内。
-
-  - id: ev-pre-cy-zhisheng-2026
-    entity: 朝阳区
-    claim: prebatch_zhisheng_0.5plus3   # 0.5+3 集团校直升
-    value:
-      朝阳总名额_2026: 1500
-      校级: {人大附朝阳: 177, 清华附朝阳: 175, 陈经纶: 160, 朝阳外国语: 80, 和平街一中: 66}
-    year: 2026
-    confidence: T3
-    status: unconfirmed
-    source_type: 机构/自媒体
-    source_url: https://www.xschu.com/zhengcezixun/84670.html
-    source_title: 2026朝阳0.5+3集团校直升名额(北京小升初网)
-    method: WebFetch
-    collected_at: 2026-06-19
-    excerpt: "朝阳2026 0.5+3直升总名额约1500;人朝177/清华附朝阳175/陈经纶160/朝外80/和平街66。全市破1万、四城区约6500、海淀约2500。直升生仍参加中考但不得报其他高中。"
-    notes: >
-      ⚠️ 重大修正:此前'提前批=650'只算1+3,漏了直升大头。朝阳2026提前批≈1+3(~650)+直升(~1500)
-      +特长/登记入学(几百)≈2200+。朝外集团直升另一源(zhongkaobj)称235本校+70集团≈305(口径/批次不同)。
-      口径:直升生占用名校统招前名额→压低统招录取位次,对预估影响大。
-
-  - id: ev-pre-structure-ceiling
-    entity: 北京市
-    claim: prebatch_not_district_allocated
-    value: 提前招生计划表按"学校×招生人数×招生地区(文字)"组织,无分区列;"全市"行不可拆到朝阳
-    confidence: T1
-    status: confirmed
-    source_type: 官方计划册(视觉核验)
-    source_url: https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87199.html
-    source_title: 2025年普通高中学校提前招生计划(bjeea图表)
-    method: 下载34图+视觉读取
-    collected_at: 2026-06-19
-    excerpt: >
-      2025/2024 提招表列=学校代码|校名|专业代码|专业|学制|招生人数|招生地区(东城/全市/通州等文字)|特殊说明。
-      与统招/统筹不同——无东城01西城02朝阳05分区列;大量"全市"行无法归到朝阳。
-    notes: >
-      ⇒ 结论:提前批(特长/自主/直升/中外)本质非"区分配",朝阳提前批录取数除"区级1+3=545"外
-      公开域结构上不可得(仅区招办内部统计)。已用 OCR 计划册路线证实此天花板,非未尝试。
-
-  - id: ev-pre-cy-breakdown
-    entity: 朝阳区
-    claim: prebatch_breakdown_by_year
-    value: unknown
-    confidence: null
-    status: unconfirmed
-    source_type: 搜索
-    source_url: ""
-    source_title: ""
-    method: WebSearch
-    collected_at: 2026-06-19
-    excerpt: "朝阳逐年 1+3/贯通/校额到校/提招/中职自主 各渠道录取人数未查到公开汇总。"
-    notes: 待补——可从 bjeea 各年朝阳提前招生计划 + 校额到校名额表 求和;校额名额表内部已有(scripts/admission)。
+    '
+- id: ev-pre-cy-breakdown
+  entity: 朝阳区
+  claim: prebatch_breakdown_by_year
+  value: unknown
+  confidence: null
+  status: unconfirmed
+  source_type: 搜索
+  source_url: ''
+  source_title: ''
+  method: WebSearch
+  collected_at: 2026-06-19
+  excerpt: 朝阳逐年 1+3/贯通/校额到校/提招/中职自主 各渠道录取人数未查到公开汇总。
+  notes: 待补——可从 bjeea 各年朝阳提前招生计划 + 校额到校名额表 求和;校额名额表内部已有(scripts/admission)。
+- id: ev-pre-cy-zhisheng-full-2026
+  entity: 朝阳区
+  claim: prebatch_zhisheng_full_2026
+  value:
+    总量约: 1500
+    已公布校(有数):
+      人大附中朝阳: 144
+      清华附中朝阳: 175(90本部+85其余)
+      陈经纶中学: 160
+      朝阳外国语: 55
+      和平街一中: 53
+    已公布合计: 587
+    提及但收集中(无数):
+    - 北师大实验朝分
+    - 中科院附属(中科附)
+    - 中国教科院朝阳实验学校
+    - 北京二中朝阳学校
+    - 贸大附中(对外经贸94中)
+    联盟(可共享直升计划):
+    - 朝外集团×和平街一中集团
+    - 人朝集团×贸大附中集团
+    - 清华附朝阳集团×二中朝阳集团
+    缺口约: 913
+  year: 2026
+  confidence: T3
+  status: unconfirmed
+  source_type: 机构/自媒体(xschu/sohu)
+  source_url: https://www.xschu.com/zhengcezixun/84670.html + sohu 978785500
+  method: WebFetch多源
+  collected_at: '2026-06-19'
+  excerpt: 朝阳2026 0.5+3直升约1500;核心5校已公布(人朝144/清华朝阳175/陈经纶160/朝外55/和平街53);其余集团校自媒体标"收集中";三组联盟可共享直升计划。
+  notes: ⚠️这是公开域全部直升数据:仅5校有具体数(合计587),其余~913分散在其余集团龙头校但自媒体未公布(收集中);数字随批次/来源有出入(人朝144~177/朝外55~80)。逐校全量需7月各校简章。
