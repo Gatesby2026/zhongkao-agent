@@ -1,0 +1,36 @@
+id: dc-002-hwzx
+canonical_name: 北京汇文中学
+short_name: 汇文中学
+type: 市级统筹
+level: 市级示范性高中
+note: 始建于1871年的百年老校，对外交流与国际教育起步早，设中美国际课程班；办学宽松开放、全面发展。
+aliases:
+- '101010'
+campuses:
+- slug: main
+  name: 本部
+  lat: 39.891717
+  lon: 116.433245
+  address: 东城区培新街6号
+  confidence: high
+  boarding: false
+admissions:
+- channel: 市级统筹
+  tier: 统筹一
+  code: '101010'
+  major:
+    major_code: '20'
+    major_name: 普通班
+    full: '10101020'
+  faces_chaoyang: true
+  quota_chaoyang: 4
+  boarding: false
+  lines:
+    '2025':
+      score: 476
+rollup:
+  tags:
+  - 老牌名校
+  - 综合均衡
+  - 国际方向
+home_district: 东城

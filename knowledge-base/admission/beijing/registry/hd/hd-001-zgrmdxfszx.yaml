@@ -1,0 +1,40 @@
+id: hd-001-zgrmdxfszx
+canonical_name: 中国人民大学附属中学
+short_name: 中国人民大学附属中学
+type: 市级统筹
+level: 市级示范性高中
+note: 海淀“六小强”之首，全国顶尖名校，竞赛与拔尖创新培养极强，国际奥赛及科创成绩突出。
+aliases:
+- '108001'
+campuses:
+- slug: main
+  name: 本部
+  lat: 39.974598
+  lon: 116.314475
+  address: 海淀区中关村大街37号
+  confidence: 待核
+  boarding: false
+admissions:
+- channel: 市级统筹
+  tier: 统筹一
+  code: '108001'
+  major:
+    major_code: '20'
+    major_name: 普通班
+    full: '10800120'
+  faces_chaoyang: true
+  quota_chaoyang: 5
+  boarding: false
+  lines:
+    '2025':
+      score: 491
+    '2024':
+      score: 650
+    '2023':
+      score: 644
+rollup:
+  tags:
+  - 顶尖名校
+  - 竞赛强
+  - 拔尖创新
+home_district: 海淀

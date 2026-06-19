@@ -1,0 +1,36 @@
+id: xc-002-dbzx
+canonical_name: 北京市第八中学
+short_name: 第八中学
+type: 市级统筹
+level: 市级示范性高中
+note: 西城名校，超常教育（少儿班）先行者，理科见长、竞赛与拔尖创新培养有传统。
+aliases:
+- '102002'
+campuses:
+- slug: main
+  name: 本部
+  lat: 39.910504
+  lon: 116.361704
+  address: 西城区学院小街2号
+  confidence: high
+  boarding: false
+admissions:
+- channel: 市级统筹
+  tier: 统筹一
+  code: '102002'
+  major:
+    major_code: '20'
+    major_name: 普通班
+    full: '10200220'
+  faces_chaoyang: true
+  quota_chaoyang: 4
+  boarding: false
+  lines:
+    '2025':
+      score: 481
+rollup:
+  tags:
+  - 老牌名校
+  - 理科强
+  - 超常教育
+home_district: 西城

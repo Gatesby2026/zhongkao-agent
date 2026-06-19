@@ -1,0 +1,78 @@
+id: cy-016-qhfzzyxx
+canonical_name: 清华大学附属中学朝阳学校
+short_name: 清华附中朝阳学校
+type: 公办普高
+level: 市级示范性高中
+note: 清华附中朝阳分校
+aliases:
+- 清华大学附属中学朝阳学校
+- 清华朝阳
+campuses:
+- slug: benbu
+  name: 高一与望京柳芳校区混编 / 主校区柳芳南里20号
+  lat: 39.952809
+  lon: 116.436423
+  address: 北京市朝阳区柳芳南里20号
+  confidence: high
+  boarding: false
+admissions:
+- channel: 统招
+  code: '205009'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '208'
+  plan_district: '208 住: 男50 女60'
+  lines:
+    '2025':
+      score: 476
+      rank: 1357
+      total: 510
+    '2024':
+      score: 638
+      rank: 1682
+      total: 670
+    '2023':
+      score: 636
+      rank: 1814
+      total: 660
+  line_scope: 校级代表线(普通班);源数据未分专业
+  pred_2026:
+    rank: 1660
+    lo: 1195
+    hi: 2125
+    pct: 13.8
+    method: percentile_trend
+    conf: T3
+    volatile: false
+- channel: 统招
+  code: '205009'
+  major: '02'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '8'
+  plan_district: ''
+  line_scope: 缺本专业线(源数据仅校级);待 P3 采集
+  pred_2026:
+    rank: 1660
+    lo: 1195
+    hi: 2125
+    pct: 13.8
+    method: percentile_trend
+    conf: T3
+    volatile: false
+- channel: 校额到校
+  code: null
+  major: null
+  metric: 校内排名
+  slots_2025_total: 49
+  note: 名额按本初中校内排名分配;逐初中明细见 chaoyang_xeddx.yaml(P3 迁 id)
+  source: 北京教育考试院《2025年初中学校校额到校分配名额》(官方原图)
+rollup:
+  features:
+    style: 传承清华附中美术与排球特色，重学科竞赛与艺体科技活动，朝阳"清华系"之一
+    tags:
+    - 艺术特长
+    - 体育特长
+    - 学科竞赛
+    source: 学校官网 / 北京中考信息网

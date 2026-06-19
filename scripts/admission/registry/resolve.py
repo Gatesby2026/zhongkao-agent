@@ -19,9 +19,11 @@ def _norm(s):
     return s
 
 @functools.lru_cache(maxsize=None)
-def _load(district="chaoyang"):
+def _load(district=None):
+    """district=None → 加载全部区(跨区 resolve,统筹外区校可命中);否则只该区。"""
     by_id, alias2id, norm2id = {}, {}, {}
-    for fp in glob.glob(os.path.join(REG, district, "*.yaml")):
+    pat = os.path.join(REG, district if district else "*", "*.yaml")
+    for fp in glob.glob(pat):
         if os.path.basename(fp).startswith("_"):
             continue
         with open(fp, encoding="utf-8") as f:
@@ -38,8 +40,8 @@ def _load(district="chaoyang"):
             norm2id.setdefault(_norm(k), sid)
     return by_id, alias2id, norm2id
 
-def resolve(name_or_code, district="chaoyang"):
-    """-> school_id 或 None。优先精确(别名/代码),再归一兜底。"""
+def resolve(name_or_code, district=None):
+    """-> school_id 或 None。优先精确(别名/代码),再归一兜底。默认跨全区。"""
     by_id, alias2id, norm2id = _load(district)
     k = str(name_or_code or "").strip()
     if k in by_id:
@@ -48,7 +50,7 @@ def resolve(name_or_code, district="chaoyang"):
         return alias2id[k]
     return norm2id.get(_norm(k))
 
-def get(school_id, district="chaoyang"):
+def get(school_id, district=None):
     return _load(district)[0].get(school_id)
 
 if __name__ == "__main__":

@@ -1,0 +1,36 @@
+id: xc-003-sfdxfszx
+canonical_name: 北京师范大学附属中学
+short_name: 师范大学附属中学
+type: 市级统筹
+level: 市级示范性高中
+note: 钱学森母校，设钱学森班等实验班，理科见长兼重人文，拔尖创新人才培养特色突出。
+aliases:
+- '102013'
+campuses:
+- slug: main
+  name: 本部
+  lat: 39.897673
+  lon: 116.384916
+  address: 西城区南新华街18号
+  confidence: high
+  boarding: true
+admissions:
+- channel: 市级统筹
+  tier: 统筹一
+  code: '102013'
+  major:
+    major_code: '20'
+    major_name: 普通班
+    full: '10201320'
+  faces_chaoyang: true
+  quota_chaoyang: 4
+  boarding: true
+  lines:
+    '2025':
+      score: 478
+rollup:
+  tags:
+  - 老牌名校
+  - 理科强
+  - 拔尖创新
+home_district: 西城

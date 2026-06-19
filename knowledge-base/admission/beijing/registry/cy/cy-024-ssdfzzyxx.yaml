@@ -1,0 +1,51 @@
+id: cy-024-ssdfzzyxx
+canonical_name: 首都师范大学附属中学朝阳学校
+short_name: 首师大附中朝阳学校
+type: 公办普高
+level: 区级
+aliases:
+- 首都师范大学附属中学朝阳学校
+campuses:
+- slug: benbu
+  name: 辛庄二街本部
+  lat: 39.936613
+  lon: 116.494064
+  address: 北京市朝阳区辛庄二街
+  confidence: low
+  boarding: false
+admissions:
+- channel: 统招
+  code: '205018'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '76'
+  plan_district: '76'
+  lines:
+    '2025':
+      score: 465
+      rank: 2966
+      total: 510
+    '2024':
+      score: 622
+      rank: 4071
+      total: 670
+    '2023':
+      score: 618
+      rank: 4647
+      total: 660
+  pred_2026:
+    rank: 3894
+    lo: 2336
+    hi: 5452
+    pct: 32.4
+    method: percentile_trend
+    conf: T3
+    volatile: true
+rollup:
+  features:
+    style: 2023年首师大附中与朝阳合作创办，棒垒球体育特长+美术培养特色，强基培训校本课程
+    tags:
+    - 体育特长
+    - 艺术特长
+    source: 北京小升初信息网 / 北京高考在线

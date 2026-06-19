@@ -1,0 +1,37 @@
+id: tz-001-dysyzx
+canonical_name: 北京第一实验中学
+short_name: 第一实验中学
+type: 市级统筹
+level: 市教委直属公办校（十一学校承办，新建优质校·层次待核）
+note: 市教委直属十五年一贯制公办校，2019年由北京十一学校承办，校址通州宋庄；沿用十一学校分层分类课程与选课走班模式；含1+3项目。
+aliases:
+- '212006'
+campuses:
+- slug: main
+  name: 通州/宋庄校区
+  lat: 39.928388
+  lon: 116.714789
+  address: 通州区宋庄镇汇才南街(邮编101100)
+  confidence: 待核
+  boarding: true
+admissions:
+- channel: 市级统筹
+  tier: 统筹二
+  code: '212006'
+  major:
+    major_code: '30'
+    major_name: 普通班
+    full: '21200630'
+  faces_chaoyang: true
+  quota_chaoyang: 4
+  boarding: true
+  lines:
+    '2025':
+      score: 465
+rollup:
+  tags:
+  - 新校
+  - 十一学校承办
+  - 走班制
+  - 副中心
+home_district: 通州

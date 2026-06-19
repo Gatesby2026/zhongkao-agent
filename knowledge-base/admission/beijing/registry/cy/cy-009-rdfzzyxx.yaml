@@ -1,0 +1,61 @@
+id: cy-009-rdfzzyxx
+canonical_name: 中国人民大学附属中学朝阳学校
+short_name: 人大附中朝阳学校
+type: 公办普高
+level: 市级示范性高中
+note: 人大附中朝阳分校
+aliases:
+- 中国人民大学附属中学朝阳学校
+- 人大附中朝阳
+- 人朝
+campuses:
+- slug: benbu
+  name: 凤凰城校区
+  lat: 39.962858
+  lon: 116.454053
+  address: 北京市朝阳区曙光里2号院1号楼(凤凰城)
+  confidence: verified-2026-06
+  boarding: false
+admissions:
+- channel: 统招
+  code: '205002'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '239'
+  plan_district: 239 住90
+  lines:
+    '2025':
+      score: 477
+      rank: 1221
+      total: 510
+    '2024':
+      score: 639
+      rank: 1553
+      total: 670
+    '2023':
+      score: 637
+      rank: 1629
+      total: 660
+  pred_2026:
+    rank: 1505
+    lo: 1084
+    hi: 1926
+    pct: 12.5
+    method: percentile_trend
+    conf: T3
+    volatile: false
+- channel: 校额到校
+  code: null
+  major: null
+  metric: 校内排名
+  slots_2025_total: 58
+  note: 名额按本初中校内排名分配;逐初中明细见 chaoyang_xeddx.yaml(P3 迁 id)
+  source: 北京教育考试院《2025年初中学校校额到校分配名额》(官方原图)
+rollup:
+  features:
+    style: 与人大附中本部同步教学、尖子生赴本部"留学"，分层分类课程体系，朝阳头部校
+    tags:
+    - 综合均衡
+    - 学科竞赛
+    source: 学校官网 rdfzcy.cn / 北京中考信息网

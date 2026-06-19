@@ -1,0 +1,34 @@
+id: pg-001-syxx
+canonical_name: 北京实验学校
+short_name: 实验学校
+type: 市级统筹
+level: 市级二级统筹学校（北京实验学校教育集团成员·郊区优质校）
+note: 2015年由平谷整合四校组建的十五年一贯制实验校，纳入北京实验学校教育集团（海淀本部·原立新学校），集团一个法人校长统筹、推行魅力教育。
+aliases:
+- '217001'
+campuses:
+- slug: main
+  name: 平谷校区
+  lat: 40.135735
+  lon: 117.117669
+  address: 平谷区建设街204号(邮编101200)
+  confidence: 待核
+  boarding: true
+admissions:
+- channel: 市级统筹
+  tier: 统筹二
+  code: '217001'
+  major:
+    major_code: '30'
+    major_name: 普通班
+    full: '21700130'
+  faces_chaoyang: false
+  quota_chaoyang: 0
+  boarding: 待核
+rollup:
+  tags:
+  - 名校分校
+  - 一体化管理
+  - 魅力教育
+  - 郊区新城
+home_district: 平谷

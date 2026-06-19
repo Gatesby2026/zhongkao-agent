@@ -1,0 +1,36 @@
+id: xc-001-dszx
+canonical_name: 北京市第四中学
+short_name: 第四中学
+type: 市级统筹
+level: 市级示范性高中
+note: 建于1907年的顶尖名校，学风严谨、师资雄厚，文科见长（高考语文长期居前），整体综合实力突出。
+aliases:
+- '102001'
+campuses:
+- slug: main
+  name: 本部
+  lat: 39.93126
+  lon: 116.37829
+  address: 西城区西黄城根北街甲2号
+  confidence: high
+  boarding: false
+admissions:
+- channel: 市级统筹
+  tier: 统筹一
+  code: '102001'
+  major:
+    major_code: '20'
+    major_name: 普通班
+    full: '10200120'
+  faces_chaoyang: true
+  quota_chaoyang: 3
+  boarding: false
+  lines:
+    '2025':
+      score: 487
+rollup:
+  tags:
+  - 顶尖名校
+  - 文科强
+  - 综合均衡
+home_district: 西城

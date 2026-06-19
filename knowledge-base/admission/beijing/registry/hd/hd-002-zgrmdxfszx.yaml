@@ -1,0 +1,37 @@
+id: hd-002-zgrmdxfszx
+canonical_name: 中国人民大学附属中学
+short_name: 中国人民大学附属中学
+type: 市级统筹
+level: 区属公办优质高中（人大附中承办通州三中）
+note: 2016年5月人大附中入驻通州三中组建，与人大附中统一课程设置与教学管理平台、共享资源；入学后学籍在通州校区。
+aliases:
+- '108001'
+campuses:
+- slug: main
+  name: 通州校区(学籍在通州校区)
+  lat: 39.91269
+  lon: 116.702171
+  address: 海淀区中关村大街37号(上课/招生主体);学籍在通州校区,通州区潞城镇
+  confidence: high
+  boarding: true
+admissions:
+- channel: 市级统筹
+  tier: 统筹二
+  code: '108001'
+  major:
+    major_code: '30'
+    major_name: 普通班
+    full: '10800130'
+  faces_chaoyang: true
+  quota_chaoyang: 11
+  boarding: true
+  lines:
+    '2025':
+      score: 465
+rollup:
+  tags:
+  - 名校分校
+  - 一体化管理
+  - 人大附中体系
+  - 副中心
+home_district: 海淀

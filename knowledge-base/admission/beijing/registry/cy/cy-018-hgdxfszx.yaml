@@ -1,0 +1,44 @@
+id: cy-018-hgdxfszx
+canonical_name: 北京化工大学附属中学
+short_name: 化工大学附属中学
+type: 公办普高
+level: 区级
+note: 简称化工附中
+aliases:
+- 北京化工大学附属中学
+campuses:
+- slug: benbu
+  name: 安苑北里校区
+  lat: 39.986913
+  lon: 116.40874
+  address: 北京市朝阳区安苑北里7号楼
+  confidence: medium
+  boarding: false
+admissions:
+- channel: 统招
+  code: '205011'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '180'
+  plan_district: '180'
+  lines:
+    '2025':
+      score: 434
+      rank: 7077
+      total: 510
+  pred_2026:
+    rank: 7915
+    lo: 6965
+    hi: 8865
+    pct: 66.0
+    method: percentile_trend
+    conf: T3
+    volatile: false
+rollup:
+  features:
+    style: 1983年建校十二年一贯制，"美的教育"办学思想，国家级足球特色校，与北化工合作办学
+    tags:
+    - 体育特长
+    - 综合均衡
+    source: 百度百科 / 北京中考信息网校情介绍

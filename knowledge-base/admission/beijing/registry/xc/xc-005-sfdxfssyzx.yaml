@@ -1,0 +1,36 @@
+id: xc-005-sfdxfssyzx
+canonical_name: 北京师范大学附属实验中学
+short_name: 师范大学附属实验中学
+type: 市级统筹
+level: 市级示范性高中
+note: 创建于1917年，西城顶尖名校，教育改革实验基地，竞赛与拔尖创新培养强，综合实力一流。
+aliases:
+- '102015'
+campuses:
+- slug: main
+  name: 本部
+  lat: 39.913275
+  lon: 116.366967
+  address: 西城区二龙路甲14号
+  confidence: high
+  boarding: true
+admissions:
+- channel: 市级统筹
+  tier: 统筹一
+  code: '102015'
+  major:
+    major_code: '20'
+    major_name: 普通班
+    full: '10201520'
+  faces_chaoyang: true
+  quota_chaoyang: 5
+  boarding: true
+  lines:
+    '2025':
+      score: 481
+rollup:
+  tags:
+  - 顶尖名校
+  - 竞赛强
+  - 综合均衡
+home_district: 西城

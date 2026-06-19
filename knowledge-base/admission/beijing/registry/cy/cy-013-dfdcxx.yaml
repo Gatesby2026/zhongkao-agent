@@ -1,0 +1,55 @@
+id: cy-013-dfdcxx
+canonical_name: 北京市东方德才学校
+short_name: 东方德才学校
+type: 公办普高
+level: 区级
+aliases:
+- 东方德才
+- 北京市东方德才学校
+campuses:
+- slug: benbu
+  name: 小庄校区高中部
+  lat: 39.918734
+  lon: 116.481752
+  address: 北京市朝阳区小庄东里38号
+  confidence: medium
+  boarding: false
+admissions:
+- channel: 统招
+  code: '205006'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '304'
+  plan_district: '304'
+  lines:
+    '2025':
+      score: 432
+      rank: 7272
+      total: 510
+    '2024':
+      score: 582
+      rank: 8175
+      total: 670
+  pred_2026:
+    rank: 8211
+    lo: 7226
+    hi: 9196
+    pct: 68.4
+    method: percentile_trend
+    conf: T3
+    volatile: false
+- channel: 校额到校
+  code: null
+  major: null
+  metric: 校内排名
+  slots_2025_total: 80
+  note: 名额按本初中校内排名分配;逐初中明细见 chaoyang_xeddx.yaml(P3 迁 id)
+  source: 北京教育考试院《2025年初中学校校额到校分配名额》(官方原图)
+rollup:
+  features:
+    style: 一校五址十二年制区级示范校，科技（无线电测向）/篮球/冰雪体育特色突出
+    tags:
+    - 科技创新
+    - 体育特长
+    source: 百度百科 / 北京中考信息网校情介绍

@@ -1,0 +1,33 @@
+id: pg-002-pgqmfsyzx
+canonical_name: 北京市平谷区马坊实验中学
+short_name: 平谷区马坊实验中学
+type: 市级统筹
+level: 区属公办高中（郊区一般公办校·层次待核）
+note: 平谷区公办中学，含高中部，面向全市招收统筹二，招收科技、体育特长生；郊区新城校，具体层次以官方为准。
+aliases:
+- '217002'
+campuses:
+- slug: main
+  name: 本部
+  lat: 40.063566
+  lon: 117.006565
+  address: 平谷区马坊镇金河北街101号院(邮编101204)
+  confidence: 待核
+  boarding: true
+admissions:
+- channel: 市级统筹
+  tier: 统筹二
+  code: '217002'
+  major:
+    major_code: '30'
+    major_name: 普通班
+    full: '21700230'
+  faces_chaoyang: true
+  quota_chaoyang: 1
+  boarding: 待核
+rollup:
+  tags:
+  - 郊区新城
+  - 公办高中
+  - 科技特长
+home_district: 平谷

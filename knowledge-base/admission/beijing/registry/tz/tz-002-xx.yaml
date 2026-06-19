@@ -1,0 +1,41 @@
+id: tz-002-xx
+canonical_name: 北京学校
+short_name: 学校
+type: 市级统筹
+level: 市教委直属优质公办校（十二年一贯制，新建名校·层次待核）
+note: 市教委直属十二年一贯制公办校，位于通州副中心潞城镇，规划小学48班/初中30班/高中30班；副中心重点配套优质校，原拟由人大附中通州学校筹建后定名北京学校。
+aliases:
+- '212008'
+campuses:
+- slug: main
+  name: 本部
+  lat: 39.893977
+  lon: 116.73716
+  address: 通州区潞阳大街35号(邮编101117)
+  confidence: 待核
+  boarding: true
+admissions:
+- channel: 市级统筹
+  tier: 统筹二
+  code: '212008'
+  major:
+    major_code: '30'
+    major_name: 普通班
+    full: '21200830'
+  faces_chaoyang: true
+  quota_chaoyang: 3
+  boarding: true
+  lines:
+    '2025':
+      score: 465
+    '2024':
+      score: 617
+    '2023':
+      score: 617
+rollup:
+  tags:
+  - 新校
+  - 市教委直属
+  - 一贯制
+  - 副中心
+home_district: 通州

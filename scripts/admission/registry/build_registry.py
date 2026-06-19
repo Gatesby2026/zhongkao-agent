@@ -245,58 +245,166 @@ for s in new2026:
         "_codes": [], "_estimate": True,
     })
 
-# ---------- 分配 ID + 去重拼音冲突 ----------
-schools.sort(key=lambda x: x["_sort"])
-dpy = "cy"
-seen_id = {}
-for i, s in enumerate(schools, 1):
-    ab = py_abbr(s["short_name"])
-    sid = f"{dpy}-{i:03d}-{ab}"
-    if ab in seen_id:
-        flag("REVIEW", sid, f"拼音简写 '{ab}' 与 {seen_id[ab]} 重复(编号已区分,可人工改简写)")
-    seen_id[ab] = s["short_name"]
-    s["id"] = sid
-    # 合并人工别名补充层(按 code)
+# 以上均朝阳本区
+for s in schools:
+    s.setdefault("_district", "cy")
+
+# ---------- 合并人工别名补充层(按 code),供后续本地解析 ----------
+for s in schools:
     extra = []
     for c in (s.get("_codes") or []):
         extra += alias_supp.get(str(c), [])
     if extra:
         s["aliases"] = sorted(set(s.get("aliases") or []) | set(extra) - {s["short_name"]})
 
-# ---------- 写出 ----------
-OUT = os.path.join(KB, "registry", "chaoyang")
-os.makedirs(OUT, exist_ok=True)
-index = []
+# ---------- 本地解析器(内存版,用于校额缩写→实体) ----------
+_local = {}
+def _idx(key, s):
+    if key: _local.setdefault(str(key), s)
 for s in schools:
-    sid = s["id"]
+    _idx(s.get("canonical_name"), s); _idx(s.get("short_name"), s)
+    for a in (s.get("aliases") or []): _idx(a, s)
+    for c in (s.get("_codes") or []): _idx(c, s)
+def local_resolve(name):
+    return _local.get(str(name))
+
+# ---------- 校额到校:聚合每所朝阳高中的总名额,挂一条 channel ----------
+try:
+    xed = load_yaml(os.path.join(KB, "chaoyang_xeddx.yaml"))
+    xed_total = defaultdict(int)      # school obj id(python) -> 名额合计
+    xed_unresolved = set()
+    for r in xed.get("rows", []):
+        for hs, q in (r.get("by_school") or {}).items():
+            tgt = local_resolve(hs)
+            if tgt is None:
+                xed_unresolved.add(hs); continue
+            try: xed_total[id(tgt)] += int(q)
+            except (TypeError, ValueError): pass
+    for s in schools:
+        tot = xed_total.get(id(s))
+        if tot:
+            s["admissions"].append(OrderedDict([
+                ("channel", "校额到校"), ("code", None), ("major", None),
+                ("metric", "校内排名"), ("slots_2025_total", tot),
+                ("note", "名额按本初中校内排名分配;逐初中明细见 chaoyang_xeddx.yaml(P3 迁 id)"),
+                ("source", xed.get("source_T1"))]))
+    for hs in sorted(xed_unresolved):
+        flag("REVIEW", "xeddx", f"校额缩写未解析: {hs}(补 _aliases_supplement.yaml)")
+except FileNotFoundError:
+    flag("WARN", "xeddx", "chaoyang_xeddx.yaml 缺失,校额 channel 未生成")
+
+# ---------- 市级统筹:外区校 → 按归属区生成实体 + 统筹 channel ----------
+DPY_BY_CN = {"东城": "dc", "西城": "xc", "海淀": "hd", "丰台": "ft", "石景山": "sjs",
+             "朝阳": "cy", "通州": "tz", "顺义": "sy", "昌平": "cp", "大兴": "dx",
+             "房山": "fs", "门头沟": "mtg", "平谷": "pg", "怀柔": "hr", "密云": "my",
+             "延庆": "yq"}
+try:
+    tc = load_json(os.path.join(KB, "2025_sjtongchou_chaoyang.json"))
+    for tier_key, tier_cn in (("tongchou_yi", "统筹一"), ("tongchou_er", "统筹二")):
+        for r in tc.get(tier_key, []):
+            home_cn = (r.get("district") or "").strip()
+            dpy_h = DPY_BY_CN.get(home_cn)
+            if not dpy_h:
+                flag("REVIEW", "tongchou", f"{r.get('name')} 归属区未知({home_cn!r}),未建实体")
+                continue
+            lines = {}
+            for L in (r.get("score_lines") or []):
+                if L.get("year") is not None:
+                    lines[str(L["year"])] = {"score": L.get("score") or L.get("line")}
+            if r.get("score_2025_tongzhao") is not None:
+                lines.setdefault("2025", {"score": r.get("score_2025_tongzhao")})
+            au = OrderedDict([
+                ("channel", "市级统筹"), ("tier", tier_cn),
+                ("code", r.get("school_code")), ("major", r.get("tongchou_major")),
+                ("faces_chaoyang", r.get("faces_chaoyang")),
+                ("quota_chaoyang", r.get("quota_chaoyang")),
+                ("boarding", r.get("boarding"))])
+            if lines: au["lines"] = lines
+            if r.get("lat") is None:
+                flag("WARN", "tongchou", f"{r.get('name')} 统筹校无坐标")
+            schools.append({
+                "_sort": (f"5tc{dpy_h}", r.get("school_code") or r.get("name")),
+                "_district": dpy_h,
+                "type": "市级统筹", "canonical_name": r.get("name"),
+                "short_name": short_of(r.get("name")),
+                "aliases": [x for x in [r.get("school_code")] if x],
+                "level": r.get("level"), "note": (r.get("style") or None),
+                "campuses": [{"slug": "main", "name": r.get("campus") or "本部",
+                              "lat": r.get("lat"), "lon": r.get("lon"),
+                              "address": r.get("address"),
+                              "confidence": r.get("score_conf"),
+                              "boarding": bool(r.get("boarding"))}],
+                "admissions": [au],
+                "rollup": {k: r.get(k) for k in ("gaokao", "tags") if r.get(k)},
+                "_codes": [r.get("school_code")] if r.get("school_code") else [],
+                "_home_cn": home_cn,
+            })
+except FileNotFoundError:
+    flag("WARN", "tongchou", "市级统筹文件缺失,统筹实体未生成")
+
+# ---------- 分配 ID(按区分别编号) + 拼音冲突检查 ----------
+schools.sort(key=lambda x: (x["_district"], x["_sort"]))
+seq_by_dist = defaultdict(int)
+seen_id = {}
+for s in schools:
+    dpy = s["_district"]
+    seq_by_dist[dpy] += 1
+    ab = py_abbr(s["short_name"])
+    sid = f"{dpy}-{seq_by_dist[dpy]:03d}-{ab}"
+    if ab in seen_id:
+        flag("REVIEW", sid, f"拼音简写 '{ab}' 与 {seen_id[ab]} 重复(编号已区分,可人工改简写)")
+    seen_id[ab] = s["short_name"]
+    s["id"] = sid
+
+# ---------- 写出(按区分目录) ----------
+REG = os.path.join(KB, "registry")
+dists = sorted({s["_district"] for s in schools})
+# 清理上次生成的学校 yaml(保留 _ 开头的人工/索引文件)
+import glob as _glob
+for d in dists:
+    for fp in _glob.glob(os.path.join(REG, d, "*.yaml")):
+        if not os.path.basename(fp).startswith("_"):
+            os.remove(fp)
+index_by_dist = defaultdict(list)
+for s in schools:
+    sid = s["id"]; dpy = s["_district"]
     out = OrderedDict()
-    for k in ("id", "canonical_name", "short_name", "type", "level", "note", "aliases",
-              "campuses", "admissions", "rollup"):
+    out_keys = ("id", "canonical_name", "short_name", "type", "level", "note", "aliases",
+                "campuses", "admissions", "rollup")
+    for k in out_keys:
         v = s.get(k)
         if v not in (None, {}, []):
             out[k] = v
+    if s["_district"] != "cy":
+        out["home_district"] = s.get("_home_cn")    # 外区(统筹)校标注归属区
     if s.get("_estimate"): out["estimate"] = True
-    with open(os.path.join(OUT, sid + ".yaml"), "w", encoding="utf-8") as f:
+    dd = os.path.join(REG, dpy); os.makedirs(dd, exist_ok=True)
+    with open(os.path.join(dd, sid + ".yaml"), "w", encoding="utf-8") as f:
         yaml.safe_dump(to_plain(out), f, allow_unicode=True, sort_keys=False, width=100)
-    index.append({"id": sid, "short_name": s["short_name"], "type": s["type"],
+    index_by_dist[dpy].append({"id": sid, "short_name": s["short_name"], "type": s["type"],
                   "codes": s.get("_codes"), "campuses": len(s["campuses"]),
-                  "admissions": len(s["admissions"])})
-with open(os.path.join(OUT, "_index.yaml"), "w", encoding="utf-8") as f:
-    yaml.safe_dump(to_plain({"district": "朝阳区", "generated_by": "build_registry.py",
-                    "count": len(schools), "schools": index}),
-                   f, allow_unicode=True, sort_keys=False, width=100)
+                  "admissions": [a.get("channel") for a in s["admissions"]]})
+for dpy, idx in index_by_dist.items():
+    with open(os.path.join(REG, dpy, "_index.yaml"), "w", encoding="utf-8") as f:
+        yaml.safe_dump(to_plain({"district": dpy, "generated_by": "build_registry.py",
+                        "count": len(idx), "schools": idx}),
+                       f, allow_unicode=True, sort_keys=False, width=100)
+OUT = os.path.join(REG, "chaoyang")
 
 # ---------- 覆盖率/冲突报告 ----------
 by_level = defaultdict(list)
 for lv, tag, msg in report: by_level[lv].append((tag, msg))
+def cnt(t): return sum(1 for s in schools if s["type"] == t)
+dist_breakdown = ", ".join(f"{d}:{sum(1 for s in schools if s['_district']==d)}"
+                           for d in sorted({s["_district"] for s in schools}))
 lines = ["# 注册表覆盖率/冲突报告（P0 自动生成，待人工核）", "",
-         f"- 学校实体数: **{len(schools)}**",
-         f"  - 公办 {sum(1 for s in schools if s['type']=='公办普高')} / "
-         f"民办 {sum(1 for s in schools if s['type']=='民办')} / "
-         f"中职 {sum(1 for s in schools if s['type']=='中职')} / "
-         f"新校 {sum(1 for s in schools if s['type']=='新校')}",
+         f"- 学校实体数: **{len(schools)}**（按区: {dist_breakdown}）",
+         f"  - 公办 {cnt('公办普高')} / 民办 {cnt('民办')} / 中职 {cnt('中职')} / "
+         f"新校 {cnt('新校')} / 市级统筹(外区) {cnt('市级统筹')}",
          f"- 多校区(>1 campus)学校: {sum(1 for s in schools if len(s['campuses'])>1)}",
          f"- 多录取单元(>1 admission)学校: {sum(1 for s in schools if len(s['admissions'])>1)}",
+         f"- 含「校额到校」channel: {sum(1 for s in schools if any(a.get('channel')=='校额到校' for a in s['admissions']))}",
+         f"- 含「市级统筹」channel: {sum(1 for s in schools if any(a.get('channel')=='市级统筹' for a in s['admissions']))}",
          f"- 问题项: REVIEW {len(by_level['REVIEW'])} / WARN {len(by_level['WARN'])}", ""]
 for lv in ("REVIEW", "WARN"):
     if by_level[lv]:
@@ -307,7 +415,7 @@ for lv in ("REVIEW", "WARN"):
 with open(os.path.join(OUT, "_coverage_report.md"), "w", encoding="utf-8") as f:
     f.write("\n".join(lines))
 
-print(f"✅ 生成 {len(schools)} 校 → {OUT}")
-print(f"   多校区 {sum(1 for s in schools if len(s['campuses'])>1)} 校, "
-      f"REVIEW {len(by_level['REVIEW'])} / WARN {len(by_level['WARN'])}")
-print(f"   报告: {os.path.join(OUT,'_coverage_report.md')}")
+print(f"✅ 生成 {len(schools)} 校(按区 {dist_breakdown}) → {REG}")
+print(f"   校额channel {sum(1 for s in schools if any(a.get('channel')=='校额到校' for a in s['admissions']))} 校 / "
+      f"统筹外区校 {cnt('市级统筹')} 所")
+print(f"   REVIEW {len(by_level['REVIEW'])} / WARN {len(by_level['WARN'])}  报告: {os.path.join(OUT,'_coverage_report.md')}")

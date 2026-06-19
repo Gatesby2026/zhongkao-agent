@@ -1,0 +1,35 @@
+id: cy-058-dbszx
+canonical_name: 北京市第八十中学
+short_name: 第八十中学
+type: 市级统筹
+level: 市级示范性高中
+note: 朝阳区龙头校，国际教育起步早（AP、中美/中英合作项目），综合均衡、国际方向突出。
+aliases:
+- '105001'
+campuses:
+- slug: main
+  name: 本部(望京)
+  lat: 40.009829
+  lon: 116.476564
+  address: 朝阳区望京北路甲16号
+  confidence: high
+  boarding: false
+admissions:
+- channel: 市级统筹
+  tier: 统筹一
+  code: '105001'
+  major:
+    major_code: '20'
+    major_name: 普通班
+    full: '10500120'
+  faces_chaoyang: true
+  quota_chaoyang: 5
+  boarding: false
+  lines:
+    '2025':
+      score: 482
+rollup:
+  tags:
+  - 朝阳龙头
+  - 国际方向
+  - 综合均衡
