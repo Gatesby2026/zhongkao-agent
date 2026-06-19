@@ -1,0 +1,108 @@
+entity: 朝阳区中考规模序列
+note: >
+  2026录取位次预估模型的地基数据①:逐年"全区参加中考人数 / 公办录取 / 全市中招计划"。
+  用途:位次↔百分位换算、跨年归一。多为机构/网传(T3),官方政策为 T1/T2。只增不删,以官方公报为准。
+  ⚠️ 仍缺:朝阳 2023 参加人数、朝阳逐年统招计划总量(可由 2025_tongzhao_plan 朝阳列求和近似)。
+records:
+  - id: ev-scale-cy-2025-exam
+    entity: 朝阳区
+    claim: exam_takers          # 参加中考人数(一分一段口径)
+    value: 10729
+    year: 2025
+    confidence: T3
+    status: unconfirmed
+    source_type: 机构/汇总
+    source_url: https://zhuanlan.zhihu.com/p/1940728415817823946
+    source_title: 2025北京中考各区高中录取分数汇总(知乎) + 本地宝一分一段(363071)
+    method: WebSearch
+    collected_at: 2026-06-19
+    excerpt: "朝阳区2025年中考人数为10729人,公办高中录取人数8229人,公办录取率约76%。"
+    notes: 与本地宝《2025各区一分一段表》口径一致(参加排名考生数);待 bjeea 官方核。
+
+  - id: ev-scale-cy-2025-public
+    entity: 朝阳区
+    claim: public_admit          # 公办高中录取人数
+    value: 8229
+    year: 2025
+    confidence: T3
+    status: unconfirmed
+    source_type: 机构/汇总
+    source_url: https://zhuanlan.zhihu.com/p/1940728415817823946
+    source_title: 2025北京中考各区高中录取分数汇总(知乎)
+    method: WebSearch
+    collected_at: 2026-06-19
+    excerpt: "公办高中录取人数8229人,朝阳区公办高中录取率在76%左右。"
+    notes: 8229 与统招草表保底末档"汇文垂杨柳 ref_rank 8229"吻合,旁证可信。
+
+  - id: ev-scale-cy-2024-exam
+    entity: 朝阳区
+    claim: exam_takers
+    value: 11790
+    year: 2024
+    confidence: T3
+    status: unconfirmed
+    source_type: 机构/网传
+    source_url: https://www.zizzs.com/gk/zhongkao/182476.html
+    source_title: 北京市中考朝阳区优质高中录取率盘点(自主选拔在线)
+    method: WebFetch
+    collected_at: 2026-06-19
+    excerpt: "2024年朝阳区中考人数:全区中考人数11,790人(2024录取线为网传版)。"
+    notes: 网传单源,待核。
+
+  - id: ev-scale-cy-2023-exam
+    entity: 朝阳区
+    claim: exam_takers
+    value: unknown
+    year: 2023
+    confidence: null
+    status: unconfirmed
+    source_type: 搜索
+    source_url: https://www.gaokzx.com/c/202307/76226.html
+    source_title: 2023年北京市中招朝阳区各分数段人数(北京高考在线)
+    method: WebSearch
+    collected_at: 2026-06-19
+    excerpt: "仅查到 2023 朝阳 637分及以上1248人;全区参加总人数未直接给出(可由该年分数段表求和补)。"
+    notes: 待补——可 OCR/求和 2023 朝阳一分一段表得总数。
+
+  - id: ev-scale-cy-outflow
+    entity: 朝阳区
+    claim: outflow_rate          # 初中→外区/外地 人口流失率
+    value: "40.08%"
+    year: 2024
+    confidence: T3
+    status: unconfirmed
+    source_type: 机构(引官方统计概况)
+    source_url: https://www.gaokzx.com/gk/zhongkao/137113.html
+    source_title: 2025北京各区在校学生数及变化(引《2024-2025学年度北京教育事业发展统计概况》)
+    method: WebFetch
+    collected_at: 2026-06-19
+    excerpt: "朝阳区中考人口流失率高达40.08%。"
+    notes: 解释"朝阳初三在籍远多于实际参加中考人数";影响百分位口径(用'参加'而非'在籍')。
+
+  - id: ev-scale-city-2025-plan
+    entity: 北京市
+    claim: city_admit_plan       # 全市中招计划
+    value: {总: 118000, 普高: 85000, 中职: 33000}
+    year: 2025
+    confidence: T2
+    status: confirmed
+    source_type: 政策/官媒
+    source_url: https://www.beijing.gov.cn/fuwu/bmfw/sy/jrts/tzxx/202503/t20250318_4037400.html
+    source_title: 北京2025年中招政策发布(首都之窗)
+    method: WebSearch
+    collected_at: 2026-06-19
+    excerpt: "2025北京中招总计划11.8万:普高约8.5万、中职约3.3万。"
+
+  - id: ev-scale-city-2024-puhigh
+    entity: 北京市
+    claim: city_puhigh_plan
+    value: 82000
+    year: 2024
+    confidence: T3
+    status: unconfirmed
+    source_type: 官媒/机构
+    source_url: https://c.m.163.com/news/a/J7DOC96O0536JW7T.html
+    source_title: 2024北京中考数据(网易/北京日报系)
+    method: WebSearch
+    collected_at: 2026-06-19
+    excerpt: "2024年北京普通高中招生规模8.2万人左右,比上年增加约2000人;全市中考约10.95万人。"
