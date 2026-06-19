@@ -1024,14 +1024,14 @@ const copyHint = ref('')
 const identityLabel = computed(() => (IDENTITIES.find(i => i.v === form.identity) || {}).label || '')
 const modeLabel = computed(() => (MODES.find(m => m.v === form.mode) || {}).label || '')
 const formSummary = computed(() => {
+  // 折叠态：无条件显示全部 8 项条件（不省略），便于一眼复核
   const p: string[] = [identityLabel.value, '区排名 ' + (form.rank || '—')]
-  if (xedQuery.value) p.push(xedQuery.value.replace('北京市', ''))
+  p.push(xedQuery.value ? xedQuery.value.replace('北京市', '') : '初中未填')
   p.push(modeLabel.value + '≤' + (form.max_km || '?') + 'km')
-  if (form.boarding) p.push('可住宿')
-  p.push(riskCfg.value.label)                              // 风险偏好(始终显示,直接影响草表)
-  if (form.orient === 'abroad') p.push('兼顾出国')          // 升学取向(仅出国时显示,体制内为默认)
-  if (form.nonpub === 'no') p.push('不考虑贯通中职')         // 贯通/中职(仅"不考虑"时显示,默认考虑)
-  if (estScore.value != null) p.push('估分≈' + estScore.value + '(参考)')  // 估分只在此显示一次,不再每校重复
+  p.push(form.boarding ? '可住宿' : '不住宿')
+  p.push(riskCfg.value.label)                                            // 风险偏好
+  p.push(form.orient === 'abroad' ? '兼顾出国' : '体制内')                // 升学取向(始终显示)
+  p.push(form.nonpub === 'no' ? '不考虑贯通中职' : '考虑贯通中职')         // 贯通/中职(始终显示)
   return p.join(' · ')
 })
 // 折叠态下改了条件 → 标记 dirty，提示重新生成
@@ -1330,6 +1330,7 @@ const tcOptions: string[] = []
       </button>
       <!-- 完整表单 -->
       <div v-show="!result || formOpen" class="fields">
+        <div class="fgrp-title">学生信息</div>
         <label class="fld fld-id">考生身份
           <select v-model="form.identity">
             <option v-for="x in IDENTITIES" :key="x.v" :value="x.v">{{ x.label }}</option>
@@ -1345,6 +1346,8 @@ const tcOptions: string[] = []
         <label class="fld fld-home">家庭住址 <small>留空只看全区分布</small>
           <input type="text" v-model="form.home" placeholder="如 朝阳区大屯金泉家园" />
         </label>
+
+        <div class="fgrp-title">通勤与住宿</div>
         <label class="fld fld-mode">通勤方式
           <select v-model="form.mode">
             <option v-for="m in MODES" :key="m.v" :value="m.v">{{ m.label }}</option>
@@ -1360,6 +1363,8 @@ const tcOptions: string[] = []
             <span class="sw-txt">远校可住校（通勤上限仍生效）</span>
           </label>
         </div>
+
+        <div class="fgrp-title">志愿偏好 <small>影响草表的冲稳保配比与渠道</small></div>
         <label class="fld fld-risk">风险偏好 <small>冲稳保配比</small>
           <select v-model="form.risk" @change="resetDraft">
             <option value="safe">保底优先（稳妥）</option>
@@ -1367,18 +1372,19 @@ const tcOptions: string[] = []
             <option value="aggressive">冲高（多冲刺）</option>
           </select>
         </label>
-        <label class="fld fld-orient">升学取向 <small>影响民办</small>
+        <label class="fld fld-orient">升学取向 <small>是否纳入民办/国际</small>
           <select v-model="form.orient" @change="resetDraft">
             <option value="gaokao">体制内高考</option>
-            <option value="abroad">兼顾出国（纳入国际/留学向）</option>
+            <option value="abroad">兼顾出国（含国际/留学向）</option>
           </select>
         </label>
         <label class="fld fld-nonpub">贯通/中职 <small>保底渠道</small>
           <select v-model="form.nonpub" @change="resetDraft">
-            <option value="yes">考虑（位次低自动纳入）</option>
+            <option value="yes">考虑（位次低时自动纳入）</option>
             <option value="no">不考虑（仅公办+民办）</option>
           </select>
         </label>
+
         <div class="fld fld-go">
           <button class="go" :disabled="loading" @click="submit">
             <svg v-if="!loading" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20.5 20.5-4-4"/></svg>
@@ -2097,21 +2103,31 @@ const tcOptions: string[] = []
 .form-bar { display: flex; align-items: center; gap: 10px; width: 100%; padding: 9px 14px;
   background: none; border: none; cursor: pointer; text-align: left; font: inherit; }
 .form-bar .fb-ic { width: 16px; height: 16px; color: var(--brand); flex-shrink: 0; }
-.fb-sum { font-size: 13px; font-weight: 600; color: var(--gray-800); white-space: nowrap;
-  overflow: hidden; text-overflow: ellipsis; }
+.fb-sum { flex: 1; min-width: 0; font-size: 13px; font-weight: 600; color: var(--gray-800);
+  white-space: normal; line-height: 1.55; }
 .fb-dirty { font-size: 11.5px; font-weight: 600; color: #b45309; background: var(--warning-bg);
   padding: 2px 8px; border-radius: var(--radius-full); white-space: nowrap; }
 .fb-edit { margin-left: auto; flex-shrink: 0; font-size: 12px; font-weight: 600; color: var(--brand);
   background: none; border: none; cursor: pointer; padding: 2px 4px; }
 .form-collapse { text-align: right; margin-top: 8px; }
+/* 分组标题：整行占满，分隔三个语义组 */
+.fgrp-title { grid-column: 1 / -1; font-size: 11.5px; font-weight: 700; color: var(--gray-500);
+  letter-spacing: .03em; margin: 4px 0 -2px; padding-bottom: 4px; border-bottom: 1px solid var(--gray-100);
+  display: flex; align-items: baseline; gap: 8px; }
+.fgrp-title small { font-weight: 400; color: var(--gray-400); letter-spacing: 0; }
+.fgrp-title:first-child { margin-top: 0; }
 .fld-id { grid-column: span 2; }
 .fld-rank { grid-column: span 2; }
 .fld-jr { grid-column: span 4; }
 .fld-home { grid-column: span 4; }
-.fld-mode { grid-column: span 2; }
+.fld-mode { grid-column: span 3; }
 .fld-km { grid-column: span 2; }
-.fld-board { grid-column: span 4; }
-.fld-go { grid-column: span 4; justify-content: flex-end; }
+.fld-board { grid-column: span 7; }
+.fld-risk { grid-column: span 4; }
+.fld-orient { grid-column: span 4; }
+.fld-nonpub { grid-column: span 4; }
+.fld-go { grid-column: 1 / -1; justify-content: flex-end; }
+.fld-go .go { width: auto; min-width: 240px; padding: 0 30px; }
 .form input:not([type=checkbox]), .form select { width: 100%; box-sizing: border-box; height: 34px; padding: 0 11px;
   border: 1px solid var(--gray-200); border-radius: 8px; font-size: 13px; color: var(--gray-900);
   background: var(--gray-50); transition: border-color .15s, box-shadow .15s, background .15s; -webkit-appearance: none; appearance: none; }
@@ -2142,8 +2158,11 @@ const tcOptions: string[] = []
 .go:disabled { opacity: .55; box-shadow: none; cursor: default; }
 @media (max-width: 760px) {
   .form .fields { grid-template-columns: repeat(2, 1fr); }
+  .fgrp-title { grid-column: 1 / -1; }
   .fld-id, .fld-rank, .fld-mode, .fld-km { grid-column: span 1; }
-  .fld-jr, .fld-home, .fld-board, .fld-go { grid-column: span 2; }
+  .fld-jr, .fld-home, .fld-board, .fld-go,
+  .fld-risk, .fld-orient, .fld-nonpub { grid-column: span 2; }
+  .fld-go .go { width: 100%; min-width: 0; }
 }
 .interests { margin-top: 14px; }
 .interests .il { font-size: 12px; font-weight: 600; color: var(--gray-700); display: block; margin-bottom: 6px; }
