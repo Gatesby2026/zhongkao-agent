@@ -41,14 +41,23 @@ records:
     value: unknown
     confidence: null
     status: unconfirmed
-    source_type: 搜索摘要
+    source_type: 多源穷尽
     source_url: ""
     source_title: ""
-    method: WebSearch
+    method: WebSearch+WebFetch+AMAP-POI+curl
     collected_at: 2026-06-19
-    excerpt: "多轮检索(校名/东坝/新源/区属公办)均未找到该校可靠地址、坐标、承办主体、招生计划。"
+    excerpt: >
+      地址/坐标经多源硬查仍无:① WebSearch 6 次变体(校名/东坝/新源/太阳宫/三元桥/教委成立)
+      只命中民办「燕京实验中学」(东坝)及无关「新源里小学/新源学校」;② 朝阳区中小学名录
+      (bjchy.gov.cn 2025/2024)curl 抓取未见「燕京新源」;③ 高德 POI place/text 4 变体
+      无精确匹配(最近为东坝燕京实验中学116.560,39.966、新源里小学等,均非本校);
+      ④ 首都之窗 2024-08「新校园启用」名单无「新源」;⑤ 天眼查/企查查无该事业单位条目。
+      结论:2026 全新校,校园地址/坐标尚未公开。
     expires: 2026-07
-    notes: 坐标缺失 → 暂无法上地图;草表可凭 est_rank 纳入(通勤未知按可达处理)。
+    notes: >
+      已穷尽公开源,不编造坐标(错坐标会误导通勤研判,比缺更糟)。lat/lon 保持 null。
+      草表仍凭 est_rank 纳入(通勤未知按可达处理),不漏报考机会;地图 pin 与精确通勤待址公开。
+      7 月官方简章/学校报到通知出后必补。
 
   - id: ev-2026-yanjing-xinyuan-disamb-001
     entity: 朝阳区燕京新源实验学校

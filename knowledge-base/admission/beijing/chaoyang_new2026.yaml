@@ -82,9 +82,9 @@ schools:
   est_basis: 无锚:区属一般新校档占位估计。⚠信息严重不足(T5),位次纯属占位,务必自行向学校/招办核实。
   evidence_refs: [ev-2026-yanjing-xinyuan-001, ev-2026-yanjing-xinyuan-002, ev-2026-yanjing-xinyuan-003, ev-2026-yanjing-xinyuan-disamb-001]
   system: 待核（校名含“朝阳区”疑区属；承办主体/集团归属未见权威披露）
-  address: 待核
+  address: 待核（多源硬查仍无，详见 evidence/2026-yanjing-xinyuan）
   confidence: low
-  lat: null
+  lat: null   # 多源穷尽(WebSearch/朝阳名录/高德POI/天眼查)均无,不编造;待官方简章
   lon: null
   level: 待核（疑公办，未确认）
   direction: 待核
@@ -95,6 +95,9 @@ schools:
   style: 待核
   source: [xscxx.com]
   note: >
-    几乎数据空白：除资格名单外查不到承办/地址/性质/方向。⚠️ 勿与东坝民办“朝阳区燕京实验中学”
-    （蔡晓东名誉校长）混淆，二者不同；另我方民办数据中已有同名“朝阳区燕京新源实验学校”，
-    是否为同一校待核。坐标暂缺，须官方/学校核实。
+    几乎数据空白：除资格名单(T1)外查不到承办/地址/性质/方向。地址坐标经多源硬查仍无
+    (WebSearch 6 变体 / 朝阳区中小学名录 / 高德 POI 4 变体 / 首都之窗新校园报道 / 天眼查),
+    2026 全新校 campus 未公开 → lat/lon 保持 null,不编造(错坐标误导通勤)。
+    ⚠️ 勿与东坝民办“朝阳区燕京实验中学”(蔡晓东·code 205049)混淆，二者不同。
+    草表仍凭 est_rank 纳入、不漏机会；地图与精确通勤待址公开。证据见
+    evidence/2026-yanjing-xinyuan.evidence.yaml。
