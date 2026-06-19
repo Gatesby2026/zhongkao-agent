@@ -655,6 +655,21 @@ function slotReason(name: string | null): { band: string; cls: string; headline:
   }
   const c = findCard(name)
   if (!c) return null
+  // 2026 新校:无往年线,走"预测位次"专属研判(醒目标注,绝不当硬线)
+  if ((c as any).is_estimate) {
+    const ce: any = c
+    const [lo, hi] = ce.est_range || []
+    const band = bandOf(name); const dispBand = band === '够不上' ? '冲刺' : band
+    const cls = ({ 冲: 'band-冲', 稳: 'band-稳', 保: 'band-保', 够不上: 'band-刺' } as Record<string, string>)[band] || 'band-稳'
+    const factors: string[] = ['🆕新校·预测位次≈' + ce.est_rank + (lo && hi ? '（' + lo + '–' + hi + '）' : '') + '·' + (ce.est_conf || '估')]
+    if (c.nearest) factors.push('🚌' + c.nearest.km + 'km' + (c.nearest.over_max ? '·超上限' : ''))
+    if (c.boarding) factors.push('🛏可住宿')
+    const headline = '🆕 2026 新增普高·无往年录取线 → 按预测位次纳入。' + (ce.est_basis || '')
+    const lowConf = ce.est_conf === 'T4' || ce.est_conf === 'T5'
+    const risk = '预测仅用于圈定区间、不漏机会,非录取承诺;新校首年波动大,务必参加招生说明会 + 以 6 月官方简章为准'
+      + (lowConf ? '。⚠️本校公开信息可靠度低,数据务必自行核实' : '')
+    return { band: dispBand, cls, headline, factors, risk }
+  }
   const band = bandOf(name)
   const rank = Number(form.rank) || 0
   const ref = typeof c.ref_rank === 'number' ? c.ref_rank : null
@@ -1961,7 +1976,7 @@ const tcOptions: string[] = []
                   <select v-model="s.name" @change="onSlotSchool(i)" class="school-sel uni-sel">
                     <option :value="null">＋ 选择学校（空）</option>
                     <option v-for="c in selectable" :key="c.name" :value="c.name">
-                      [{{ bandOf(c.name) }}] {{ cleanName(c.name) }}{{ c.chan ? '·' + c.chan : '（' + c.school_code + '）' }}
+                      {{ (c as any).is_estimate ? '🆕' : '' }}[{{ bandOf(c.name) }}] {{ cleanName(c.name) }}{{ (c as any).is_estimate ? '·新校预测' : (c.chan ? '·' + c.chan : '（' + c.school_code + '）') }}
                     </option>
                   </select>
                   <div v-if="s.name" class="uni-majors">

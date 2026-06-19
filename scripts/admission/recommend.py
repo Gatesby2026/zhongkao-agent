@@ -232,6 +232,50 @@ def build_new_schools(district, home, district_cn, mode, mode_label, max_km):
     return {"meta": meta, "schools": out}
 
 
+def new_school_band_cards(district, rank, home, district_cn, mode, mode_label, max_km, boarding):
+    """把"有预测位次(est_rank)"的 2026 新增普高，按 est_rank 归入冲/稳/保，做成卡片注入统招草表。
+    新校无 school_code（2026 计划未发布）→ 给合成码 NEW:<名> 让前端草表能纳入；卡片带
+    is_estimate + 预测区间 + 可信度，前端醒目标注。无坐标的(如燕京新源)距离按未知=可达处理。"""
+    data = load_new2026(district)
+    if not data:
+        return {}
+    schools = [s for s in data.get("schools", []) if s.get("est_rank")]
+    dist_map = {}
+    if home:
+        pseudo = [{"name": s["name"], "campuses": [{"name": "", "lat": s["lat"], "lon": s["lon"]}]}
+                  for s in schools if s.get("lat") and s.get("lon")]
+        if pseudo:
+            _, dist_map = dist_mod.compute_distances(pseudo, home, district_cn, mode)
+    cards = {"冲": [], "稳": [], "保": [], "够不上": []}
+    for s in schools:
+        er = int(s["est_rank"])
+        margin = (er - rank) / er
+        band = ("保" if margin >= SAFETY_MARGIN else "稳" if margin >= 0
+                else "冲" if margin >= REACH_MARGIN else "够不上")
+        rows = dist_map.get(s["name"], [])
+        rd = rows[0][2] if rows else None
+        km = round(rd[0] / 1000, 1) if rd else None
+        nearest = ({"campus": "", "km": km, "mins": round(rd[1] / 60),
+                    "over_max": bool(max_km is not None and km > max_km)} if km is not None else None)
+        bd = s.get("boarding") is True
+        cards[band].append({
+            "name": s["name"], "level": s.get("level", ""), "note": s.get("note", ""),
+            "school_code": "NEW:" + s["name"],        # 合成码：让前端草表能纳入（无官方码）
+            "ref_rank": er, "margin": round(margin, 3), "margin_pct": f"{margin:+.0%}",
+            "volatility": 0, "history": [], "score_lines": [], "majors": [],
+            "nearest": nearest, "boarding": bd,
+            "campus": "", "address": s.get("address", ""), "address_exact": False,
+            "address_confidence": s.get("est_conf", ""), "address_flag": "新校·预测",
+            "style": s.get("style", ""), "tags": (s.get("features") or {}).get("tags") or [],
+            "gaokao": "", "matched": [],
+            # —— 新校预测标记（前端据此醒目标注）——
+            "is_estimate": True, "est_rank": er,
+            "est_range": [s.get("est_rank_lo"), s.get("est_rank_hi")],
+            "est_conf": s.get("est_conf", ""), "est_basis": s.get("est_basis", ""),
+        })
+    return cards
+
+
 _GUANTONG_CACHE: list = [None, False]
 
 
@@ -638,6 +682,13 @@ def build_result(rank, home=None, mode="driving", max_km=None, interests=None,
     bands = {}
     for band, cards in raw_bands.items():
         bands[band] = [c for c in cards if _reachable(c)] if band in ("冲", "稳", "保") else cards
+
+    # 注入 2026 新增普高(有 est_rank 的)：按预测位次归入冲/稳/保，前端醒目标注；同口径过滤太远
+    new_cards = new_school_band_cards(district, rank, home, district_name, mode, mode_label, max_km, boarding)
+    for band in ("冲", "稳", "保"):
+        bands[band] = bands[band] + [c for c in new_cards.get(band, []) if _reachable(c)]
+        bands[band].sort(key=lambda c: (c.get("ref_rank") or 9_999_999))
+    bands["够不上"] = bands.get("够不上", []) + new_cards.get("够不上", [])
 
     # 普高（统招公办）全量清单：含所有档位，按录取位次升序；标注档位/是否可达
     public_list = []
