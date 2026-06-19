@@ -1,0 +1,67 @@
+entity: 朝阳区燕京新源实验学校
+entity_uid: 新校:朝阳区燕京新源实验学校
+note: >
+  2026 朝阳新增公办普高资格名单第 48 位。公开信息几乎空白:查无可靠地址/坐标/承办/计划。
+  最大风险是与民办「燕京实验中学」(蔡晓东·东坝)混淆,故专列排除证据。
+  本文件只增不删,以官方简章(约 2026-07)为准复核。
+records:
+  - id: ev-2026-yanjing-xinyuan-001
+    entity: 朝阳区燕京新源实验学校
+    claim: admission_qualification
+    value: 2026 普通高中招生资格·朝阳区名单第 48 位
+    confidence: T1
+    status: confirmed
+    source_type: 官媒
+    source_url: https://news.bjd.com.cn/2026/05/19/11752112.shtml
+    source_title: 北京市2026年具有招生资格的高级中等学校名单公示_京报网
+    method: WebSearch
+    collected_at: 2026-06-19
+    excerpt: "朝阳区在2026年新增了多所具有招生资格的高级中等学校……朝阳区燕京新源实验学校……排名第48位。"
+    expires: 2026-07
+    notes: 同名单亦见 gaokzx(155500)、腾讯新闻(20260519A089H700);官方 PDF 源 jw.beijing.gov.cn/tzgg/202605。
+
+  - id: ev-2026-yanjing-xinyuan-002
+    entity: 朝阳区燕京新源实验学校
+    claim: nature
+    value: 校名含"朝阳区"→ 疑为区属公办(未证实)
+    confidence: T5
+    status: unconfirmed
+    source_type: 搜索摘要
+    source_url: https://www.gaokzx.com/gk/zhongkao/155500.html
+    source_title: 2026年具有招生资格的高级中等学校名单公示_北京高考在线
+    method: WebSearch
+    collected_at: 2026-06-19
+    excerpt: "名单仅显示学校名称和所属地区分类,对于公办/民办性质、具体办学信息均未标明。"
+    expires: 2026-07
+    notes: 仅据命名习惯推断,无任何权威源确认公办/民办。
+
+  - id: ev-2026-yanjing-xinyuan-003
+    entity: 朝阳区燕京新源实验学校
+    claim: address
+    value: unknown
+    confidence: null
+    status: unconfirmed
+    source_type: 搜索摘要
+    source_url: ""
+    source_title: ""
+    method: WebSearch
+    collected_at: 2026-06-19
+    excerpt: "多轮检索(校名/东坝/新源/区属公办)均未找到该校可靠地址、坐标、承办主体、招生计划。"
+    expires: 2026-07
+    notes: 坐标缺失 → 暂无法上地图;草表可凭 est_rank 纳入(通勤未知按可达处理)。
+
+  - id: ev-2026-yanjing-xinyuan-disamb-001
+    entity: 朝阳区燕京新源实验学校
+    claim: NOT_SAME_AS
+    value: ≠ 民办「(北京市朝阳区)燕京实验中学」(名誉校长蔡晓东·东坝娘娘庙街·2024 年办·小初高·民办)
+    confidence: T3
+    status: negative
+    source_type: 机构
+    source_url: https://www.xscxx.com/chuzhong/cy/202411154469.html
+    source_title: 朝阳小升初新通路,燕京实验究竟怎么样?-北京小升初信息网
+    method: WebFetch
+    collected_at: 2026-06-19
+    excerpt: "这是民办校……名誉校长是之前西城牛校北师大实验的前任校长蔡晓东校长……本届初一总共有两个班……可提供寄宿。文中始终称'燕京实验中学',未出现'新源'字样。"
+    notes: >
+      防张冠李戴:搜索"燕京"高频命中的是这所东坝民办校,与本主体(资格名单#48、疑区属公办、
+      含"新源")不是同一所。另见 lifeqrcode/duolaoshi 的"燕京实验中学"招生简章亦指该民办校。

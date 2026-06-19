@@ -1,0 +1,50 @@
+entity: 北大附中朝阳未来学校
+entity_uid: 新校:北大附中朝阳未来学校
+note: >
+  2026 朝阳新增公办普高资格名单第 30 位。原为北京首批"1+3"项目校(初二选拔、四年制、学籍归海淀本部)。
+  关键未决:2026 是否开"中考统招"——名单给了普高资格,但可能仍只招 1+3。报前务必向招办确认。
+  以官方简章(约 2026-07)为准复核。
+records:
+  - id: ev-2026-beidafu-cy-001
+    entity: 北大附中朝阳未来学校
+    claim: admission_qualification
+    value: 2026 普通高中招生资格·朝阳区名单第 30 位
+    confidence: T1
+    status: confirmed
+    source_type: 官媒
+    source_url: https://news.bjd.com.cn/2026/05/19/11752112.shtml
+    source_title: 北京市2026年具有招生资格的高级中等学校名单公示_京报网
+    method: WebSearch
+    collected_at: 2026-06-19
+    excerpt: "北大附中朝阳未来学校排名第30位……列在2026年北京市具有招生资格的高级中等学校名单中。"
+    expires: 2026-07
+    notes: 同名单亦见 gaokzx(155500)、腾讯新闻;官方 PDF jw.beijing.gov.cn/tzgg/202605。
+
+  - id: ev-2026-beidafu-cy-002
+    entity: 北大附中朝阳未来学校
+    claim: admission_mode
+    value: 历史为"1+3"项目(初二选拔·四年制·约320人·学籍归海淀本部);2026 是否中考统招待核
+    confidence: T3
+    status: unconfirmed
+    source_type: 机构
+    source_url: https://www.zizzs.com/gk/zhongkao/203921.html
+    source_title: 北京大学附属中学朝阳未来学校2025年"1+3"招生简章_自主选拔在线
+    method: WebSearch
+    collected_at: 2026-06-19
+    excerpt: "北大附中朝阳未来学校2025年'1+3'培养实验计划招收320名学生……四年制高中教育,学生在朝阳就读,学籍归属海淀,毕业后获北大附中毕业文凭。搜索结果中没有找到2026年中考统招普高的具体招生计划。"
+    expires: 2026-07
+    notes: ⚠️ 若 2026 仍仅 1+3,则不在"中考统招志愿"范围,草表纳入须挂"统招资格待核"红标。
+
+  - id: ev-2026-beidafu-cy-003
+    entity: 北大附中朝阳未来学校
+    claim: system
+    value: 北大附中一体化体系·专设承办;北京首批"1+3"市级实验项目校(2016)
+    confidence: T3
+    status: confirmed
+    source_type: 机构
+    source_url: https://www.gaokzx.com/gk/zhongkao/137985.html
+    source_title: 北大附中朝阳未来学校1+3项目信息采集启动_北京高考在线
+    method: WebSearch
+    collected_at: 2026-06-19
+    excerpt: "北大附中朝阳未来学校……北大附中一体化体系；2016 北京首批'1+3'。"
+    notes: 地址 惠新东街8号、坐标已在 chaoyang_new2026.yaml(此前采集)。
