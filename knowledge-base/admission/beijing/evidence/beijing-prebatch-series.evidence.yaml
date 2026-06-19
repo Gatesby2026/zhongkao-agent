@@ -78,6 +78,51 @@ records:
     excerpt: "2025年将不低于50%的优质普通高中招生计划分配到初中校,不再限于一般公办初中,所有学校均有校额到校分配。"
     notes: 校额扩面→更多名额走指标分配批→统招池进一步缩小,影响统招位次。
 
+  - id: ev-pre-guantong-2026
+    entity: 北京市
+    claim: prebatch_guantong       # 高端技术技能人才贯通培养
+    value: {2025: 1035, 2026: 910, 变化: -125}
+    year: 2026
+    confidence: T3
+    status: unconfirmed
+    source_type: 机构
+    source_url: https://www.zhongkaobj.cn/zhaosheng/gtxm/2026061013719.html
+    source_title: 2026北京贯通培养计划缩减招生(北京中考信息网)
+    method: WebFetch
+    collected_at: 2026-06-19
+    excerpt: "2026贯通总招生910人,对比2025的1035人,缩减125人(约-12.1%);≥380分、京籍。"
+    notes: ⚠️ 与 1+3 扩招方向相反——贯通缩、1+3 涨;净效应对统招池需合并测算。
+
+  - id: ev-pre-cy-xed-2025
+    entity: 朝阳区
+    claim: prebatch_xed_quota      # 校额到校朝阳名额
+    value: {学校: 69, 名额合计: 1133}
+    year: 2025
+    confidence: T2
+    status: confirmed
+    source_type: 官方(bjeea表)派生
+    source_url: 内部 chaoyang_xeddx.yaml (源 bjeea 校额到校分配名额表)
+    source_title: 2025朝阳校额到校分配名额(内部已结构化·69校核对)
+    method: 内部求和
+    collected_at: 2026-06-19
+    excerpt: "朝阳 2025 校额到校:69 所高中、名额合计 1133(逐校 by_school 求和)。"
+    notes: 已 verified_count=69;是统招前"指标分配批"录走的盘子之一。
+
+  - id: ev-pre-cy-tongzhao-2025
+    entity: 朝阳区
+    claim: admit_to_chaoyang_total # 计划册"投朝阳"招生合计
+    value: {投朝阳合计: 7355, 本区大额统招约: 6508}
+    year: 2025
+    confidence: T2
+    status: confirmed
+    source_type: 官方计划册派生
+    source_url: 内部 2025_tongzhao_plan.json (源 bjeea 招生计划册 OCR)
+    source_title: 2025计划册朝阳列求和(内部)
+    method: 内部求和
+    collected_at: 2026-06-19
+    excerpt: "计划册 major 行'朝阳'列求和=7355(含统招+市级统筹+中外合作投朝阳);其中≥50人/校的本区大额合计6508(≈朝阳本区统招公办)。"
+    notes: 与网传"朝阳公办录取8229"口径不同(8229或含全部公办渠道实际录取);三个数并存、不强行对齐,建模时择口径。
+
   - id: ev-pre-cy-breakdown
     entity: 朝阳区
     claim: prebatch_breakdown_by_year

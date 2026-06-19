@@ -52,17 +52,47 @@ records:
   - id: ev-scale-cy-2023-exam
     entity: 朝阳区
     claim: exam_takers
-    value: unknown
+    value: 11241
     year: 2023
-    confidence: null
-    status: unconfirmed
-    source_type: 搜索
+    confidence: T3
+    status: confirmed
+    source_type: 机构(官方一分一段转录)
     source_url: https://www.gaokzx.com/c/202307/76226.html
     source_title: 2023年北京市中招朝阳区各分数段人数(北京高考在线)
+    method: WebFetch
+    collected_at: 2026-06-19
+    excerpt: "一分一段累计最大值(400分以下行)累计人数=11241,即2023朝阳参加中考总人数。"
+    notes: 由官方一分一段表累计末行得出;机构转录,待 bjeea 原表核。
+
+  - id: ev-scale-cy-2022-exam
+    entity: 朝阳区
+    claim: exam_takers
+    value: 9027
+    year: 2022
+    confidence: T3
+    status: confirmed
+    source_type: 机构(官方一分一段转录)
+    source_url: https://www.zizzs.com/c/202207/75300.html
+    source_title: 北京市朝阳区2022年中考各分数段人数(含加分)(自主选拔在线)
+    method: WebFetch
+    collected_at: 2026-06-19
+    excerpt: "一分一段累计最大值(400分以下行)=9027,即2022朝阳参加中考总人数。"
+    notes: 2022(9027)→2023(11241) 跳增,疑口径/疫情届差异,跨年比较慎用 2022。
+
+  - id: ev-scale-cy-zaixiao-2425
+    entity: 朝阳区
+    claim: secondary_enrollment   # 普通中学在校生(非毕业生)
+    value: 86970
+    year: 2024
+    confidence: T3
+    status: unconfirmed
+    source_type: 机构(引官方统计概况)
+    source_url: https://www.gaokzx.com/gk/zhongkao/137113.html
+    source_title: 2025北京各区中学在校学生数及变化
     method: WebSearch
     collected_at: 2026-06-19
-    excerpt: "仅查到 2023 朝阳 637分及以上1248人;全区参加总人数未直接给出(可由该年分数段表求和补)。"
-    notes: 待补——可 OCR/求和 2023 朝阳一分一段表得总数。
+    excerpt: "2024-2025学年朝阳区普通中学在校生86970人,全市第二(次于海淀)。"
+    notes: 是"中学在校生"非"初三毕业生";初三毕业≈在校/3 粗估,精确数待官方分年级表。全市2024-25中考人数较上年减9975。
 
   - id: ev-scale-cy-outflow
     entity: 朝阳区
