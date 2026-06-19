@@ -1,0 +1,71 @@
+id: cy-002-cjlzx
+canonical_name: 北京市陈经纶中学
+short_name: 陈经纶中学
+type: 公办普高
+level: 市级示范性高中
+note: 老牌名校，实验班与普通班分差较大
+aliases:
+- 北京市陈经纶中学
+- 陈经纶
+- 陈经纶中学本部
+campuses:
+- slug: benbu
+  name: 本部高中
+  lat: 39.92187
+  lon: 116.447771
+  address: 北京市朝阳区朝外大街38号
+  confidence: high
+  boarding: false
+admissions:
+- channel: 统招
+  code: '105002'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '205'
+  plan_district: '205 住: 男15 女15'
+  lines:
+    '2025':
+      score: 469
+      rank: 2376
+      total: 510
+    '2024':
+      score: 630
+      rank: 2902
+      total: 670
+    '2023':
+      score: 630
+      rank: 2886
+      total: 660
+  line_scope: 校级代表线(普通班);源数据未分专业
+  pred_2026:
+    rank: 2831
+    lo: 2293
+    hi: 3369
+    pct: 23.6
+    method: percentile_trend
+    conf: T3
+    volatile: false
+- channel: 统招
+  code: '105002'
+  major: '02'
+  major_name: 经纶科技人才班
+  campus: benbu
+  plan_total: '30'
+  plan_district: '30 住: 男10 女10'
+  line_scope: 缺本专业线(源数据仅校级);待 P3 采集
+  pred_2026:
+    rank: 2831
+    lo: 2293
+    hi: 3369
+    pct: 23.6
+    method: percentile_trend
+    conf: T3
+    volatile: false
+rollup:
+  features:
+    style: “阳光七彩”课程群、十二年贯通课程，骨干师资雄厚，朝阳老牌优质校
+    tags:
+    - 综合均衡
+    - 课程改革
+    source: 北京高考在线 / 维基百科 / 知乎

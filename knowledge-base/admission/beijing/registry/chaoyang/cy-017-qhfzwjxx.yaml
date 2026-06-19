@@ -1,0 +1,47 @@
+id: cy-017-qhfzwjxx
+canonical_name: 清华大学附属中学望京学校
+short_name: 清华附中望京学校
+type: 公办普高
+level: 区级示范性高中
+aliases:
+- 清华大学附属中学望京学校
+campuses:
+- slug: benbu
+  name: 高中部
+  lat: 39.952809
+  lon: 116.436423
+  address: 北京市朝阳区柳芳南里20号
+  confidence: verified-2026-06
+  boarding: false
+admissions:
+- channel: 统招
+  code: '205010'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '285'
+  plan_district: '285'
+  lines:
+    '2025':
+      score: 471
+      rank: 2070
+      total: 510
+    '2024':
+      score: 632
+      rank: 2569
+      total: 670
+  pred_2026:
+    rank: 2445
+    lo: 1932
+    hi: 2958
+    pct: 20.4
+    method: percentile_trend
+    conf: T3
+    volatile: false
+rollup:
+  features:
+    style: 清华附中"四小龙"之一，与清朝同址混编，2023设拔尖学生实验班、奥赛金牌教练任教
+    tags:
+    - 学科竞赛
+    - 综合均衡
+    source: 北京中考信息网校情介绍 / 知乎梯队整理

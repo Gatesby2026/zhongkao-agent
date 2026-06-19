@@ -1,0 +1,52 @@
+id: cy-026-bszrdfx
+canonical_name: 北京市第八十中学睿德分校
+short_name: 八十中睿德分校
+type: 公办普高
+level: 区级示范性高中
+note: 八十中体系，近年上升趋势明显
+aliases:
+- 北京市第八十中学睿德分校
+campuses:
+- slug: benbu
+  name: 高中部
+  lat: 39.841356
+  lon: 116.458356
+  address: 北京市朝阳区小红门路5号
+  confidence: low
+  boarding: false
+admissions:
+- channel: 统招
+  code: '205020'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '102'
+  plan_district: 102 住20
+  lines:
+    '2025':
+      score: 476
+      rank: 1357
+      total: 510
+    '2024':
+      score: 637
+      rank: 1836
+      total: 670
+    '2023':
+      score: 631
+      rank: 2691
+      total: 660
+  pred_2026:
+    rank: 1894
+    lo: 1136
+    hi: 2652
+    pct: 15.8
+    method: percentile_trend
+    conf: T3
+    volatile: true
+rollup:
+  features:
+    style: 与八十中望京/白家庄校区一体化办学，设创新实验班，依托八十中优质资源
+    tags:
+    - 综合均衡
+    - 科技创新
+    source: 北京中考信息网校情介绍 / 北京高考在线
