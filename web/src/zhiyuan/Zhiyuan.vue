@@ -145,6 +145,7 @@ const form = reactive({
   identity: USER_DEFAULTS.identity,   // 京籍应届/非京籍/往届
   risk: 'balanced',                   // 风险偏好:safe保底优先/balanced均衡/aggressive冲高
   orient: 'gaokao',                   // 升学取向:gaokao体制内高考/abroad兼顾出国
+  nonpub: 'yes',                      // 是否考虑贯通/中职:yes智能纳入(位次低才用)/no不考虑
 })
 const IDENTITIES = [
   { v: 'jjyj', label: '京籍应届' },
@@ -1011,6 +1012,7 @@ const formSummary = computed(() => {
   if (form.boarding) p.push('可住宿')
   p.push(riskCfg.value.label)                              // 风险偏好(始终显示,直接影响草表)
   if (form.orient === 'abroad') p.push('兼顾出国')          // 升学取向(仅出国时显示,体制内为默认)
+  if (form.nonpub === 'no') p.push('不考虑贯通中职')         // 贯通/中职(仅"不考虑"时显示,默认考虑)
   return p.join(' · ')
 })
 // 折叠态下改了条件 → 标记 dirty，提示重新生成
@@ -1023,7 +1025,8 @@ const nonPubCands = computed<any[]>(() => {
   const res: any = result.value
   if (!res) return []
   const out: any[] = []
-  if (canGuantong.value) {            // 贯通(京籍·≥380·2026并入统招)
+  const useGtVoc = form.nonpub !== 'no'   // 「贯通/中职」开关(输入条件区);no=不考虑
+  if (useGtVoc && canGuantong.value) {            // 贯通(京籍·≥380·2026并入统招)
     const seen = new Set<string>()
     for (const p of (res.guantong?.projects || [])) {
       if (seen.has(p.school)) continue; seen.add(p.school)
@@ -1039,7 +1042,7 @@ const nonPubCands = computed<any[]>(() => {
                  note: '民办·' + (ex === '留学' ? '留学向·' : '') + (p.tuition || '门槛低·多可入') })
     }
   }
-  for (const v of (res.vocational?.schools || [])) {        // 中职综合高中班(保底)
+  for (const v of (useGtVoc ? (res.vocational?.schools || []) : [])) {  // 中职综合高中班(保底)
     if (v.comp_high_2025) out.push({ name: v.name, chan: '中职', band: '保底', school_code: '',
                  note: '中职综合高中班·普高学籍可高考·门槛最低(' + (v.line_note ? '劲松线≈9485' : '稳进') + ')' })
   }
@@ -1349,6 +1352,12 @@ const tcOptions: string[] = []
           <select v-model="form.orient" @change="resetDraft">
             <option value="gaokao">体制内高考</option>
             <option value="abroad">兼顾出国（纳入国际/留学向）</option>
+          </select>
+        </label>
+        <label class="fld fld-nonpub">贯通/中职 <small>保底渠道</small>
+          <select v-model="form.nonpub" @change="resetDraft">
+            <option value="yes">考虑（位次低自动纳入）</option>
+            <option value="no">不考虑（仅公办+民办）</option>
           </select>
         </label>
         <div class="fld fld-go">

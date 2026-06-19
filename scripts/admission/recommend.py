@@ -674,8 +674,10 @@ def build_result(rank, home=None, mode="driving", max_km=None, interests=None,
         "tongchou": tongchou_with_dist(district, home, district_name, mode, mode_label, max_km),
         "new_schools": build_new_schools(district, home, district_name, mode, mode_label, max_km),
         "xeddx": load_xeddx(district),
-        "points": build_public_points(buckets, dist_campus, mode_label, effective_max_km,
-                                      interests, boarding_names),
+        # 地图"太远"判定与草表同口径:用真实 max_km;仅"用户接受住宿 且 该校真提供住宿"才豁免距离
+        # (此前用 effective_max_km=None 把整图距离判断关掉,导致远校无住宿也照画冲/保)
+        "points": build_public_points(buckets, dist_campus, mode_label, max_km,
+                                      interests, boarding_names if boarding else set()),
         "private": build_private_points(priv, priv_dist, mode_label, effective_max_km),
         "quota_allocation": data.get("quota_allocation"),
         "_buckets": buckets, "_dist_campus": dist_campus,
