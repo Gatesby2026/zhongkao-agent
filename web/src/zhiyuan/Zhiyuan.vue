@@ -2095,8 +2095,11 @@ const tcOptions: string[] = []
 .form.card { padding: 12px 14px; }
 .form.card.collapsed { padding: 0; }
 .form .fields { display: grid; grid-template-columns: repeat(12, 1fr); gap: 9px 12px; align-items: end; }
-.fld { display: flex; flex-direction: column; gap: 4px; font-size: 11.5px; font-weight: 600; color: var(--gray-600); }
+.fld { display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 5px; row-gap: 4px;
+  font-size: 11.5px; font-weight: 600; color: var(--gray-600); }
 .fld small { font-weight: 400; color: var(--gray-400); }
+/* 标注(<small>)与标签同行；输入控件强制换到下一行、占满整宽 */
+.fld > input, .fld > select, .fld > .switch { flex: 0 0 100%; }
 /* 折叠摘要条 */
 .form-bar { display: flex; align-items: center; gap: 10px; width: 100%; padding: 9px 14px;
   background: none; border: none; cursor: pointer; text-align: left; font: inherit; }
