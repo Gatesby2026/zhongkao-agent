@@ -145,7 +145,7 @@ const form = reactive({
   identity: USER_DEFAULTS.identity,   // 京籍应届/非京籍/往届
   risk: 'balanced',                   // 风险偏好:safe保底优先/balanced均衡/aggressive冲高
   orient: 'gaokao',                   // 升学取向:gaokao体制内高考/abroad兼顾出国
-  nonpub: 'yes',                      // 是否考虑贯通/中职:yes智能纳入(位次低才用)/no不考虑
+  nonpub: 'yes',                      // 贯通/中职:yes智能纳入 / no仅公办+民办 / pub_only仅公办
 })
 const IDENTITIES = [
   { v: 'jjyj', label: '京籍应届' },
@@ -1031,7 +1031,7 @@ const formSummary = computed(() => {
   p.push(form.boarding ? '可住宿' : '不住宿')
   p.push(riskCfg.value.label)                                            // 风险偏好
   p.push(form.orient === 'abroad' ? '兼顾出国' : '体制内')                // 升学取向(始终显示)
-  p.push(form.nonpub === 'no' ? '不考虑贯通中职' : '考虑贯通中职')         // 贯通/中职(始终显示)
+  p.push(form.nonpub === 'pub_only' ? '仅公办' : form.nonpub === 'no' ? '仅公办+民办' : '考虑贯通中职')  // 贯通/中职(始终显示)
   return p.join(' · ')
 })
 // 折叠态下改了条件 → 标记 dirty，提示重新生成
@@ -1044,7 +1044,8 @@ const nonPubCands = computed<any[]>(() => {
   const res: any = result.value
   if (!res) return []
   const out: any[] = []
-  const useGtVoc = form.nonpub !== 'no'   // 「贯通/中职」开关(输入条件区);no=不考虑
+  const useGtVoc = form.nonpub === 'yes'   // 「贯通/中职」开关;仅 yes 纳入(no/pub_only 均不纳)
+  const usePrivate = form.nonpub !== 'pub_only'   // 民办普高:pub_only=仅公办,不纳民办
   if (useGtVoc && canGuantong.value) {            // 贯通(京籍·≥380·2026并入统招)
     const seen = new Set<string>()
     for (const p of (res.guantong?.projects || [])) {
@@ -1053,7 +1054,7 @@ const nonPubCands = computed<any[]>(() => {
                  note: '贯通·中考≥380·7年到本科·' + (p.type || '') })
     }
   }
-  for (const p of (res.private_schools?.schools || [])) {   // 民办普高
+  for (const p of (usePrivate ? (res.private_schools?.schools || []) : [])) {   // 民办普高
     const ex = p.exit_type
     const wantAbroad = form.orient === 'abroad'   // 升学取向(输入条件区)唯一控制
     if (ex === '高考' || ex === '混合' || (wantAbroad && ex === '留学')) {
@@ -1382,6 +1383,7 @@ const tcOptions: string[] = []
           <select v-model="form.nonpub" @change="resetDraft">
             <option value="yes">考虑（位次低时自动纳入）</option>
             <option value="no">不考虑（仅公办+民办）</option>
+            <option value="pub_only">不考虑（仅公办）</option>
           </select>
         </label>
 
