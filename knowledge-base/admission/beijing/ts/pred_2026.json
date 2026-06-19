@@ -1,0 +1,279 @@
+{
+ "_meta": {
+  "desc": "2026录取位次预估·四步法(百分位×2026参加12000)+新校est_rank",
+  "warning": "T3网传位次+官方参加人数;辅助圈区间非精确线;7月官方/出分后替换",
+  "part_2026": 12000
+ },
+ "pred": {
+  "205001:北京中学": {
+   "rank": 603,
+   "lo": 362,
+   "hi": 844,
+   "pct": 5.0,
+   "method": "percentile_trend",
+   "conf": "T3",
+   "volatile": true
+  },
+  "105001:北京市第八十中学": {
+   "rank": 905,
+   "lo": 543,
+   "hi": 1267,
+   "pct": 7.5,
+   "method": "percentile_trend",
+   "conf": "T3",
+   "volatile": true
+  },
+  "205019:中国传媒大学附属中学": {
+   "rank": 1404,
+   "lo": 842,
+   "hi": 1966,
+   "pct": 11.7,
+   "method": "percentile_trend",
+   "conf": "T3",
+   "volatile": true
+  },
+  "205002:人大附中朝阳学校": {
+   "rank": 1505,
+   "lo": 1084,
+   "hi": 1926,
+   "pct": 12.5,
+   "method": "percentile_trend",
+   "conf": "T3",
+   "volatile": false
+  },
+  "205009:清华附中朝阳学校": {
+   "rank": 1660,
+   "lo": 1195,
+   "hi": 2125,
+   "pct": 13.8,
+   "method": "percentile_trend",
+   "conf": "T3",
+   "volatile": false
+  },
+  "205020:八十中睿德分校": {
+   "rank": 1894,
+   "lo": 1136,
+   "hi": 2652,
+   "pct": 15.8,
+   "method": "percentile_trend",
+   "conf": "T3",
+   "volatile": true
+  },
+  "205012:朝阳外国语学校": {
+   "rank": 2013,
+   "lo": 1469,
+   "hi": 2557,
+   "pct": 16.8,
+   "method": "percentile_trend",
+   "conf": "T3",
+   "volatile": false
+  },
+  "205010:清华附中望京学校": {
+   "rank": 2445,
+   "lo": 1932,
+   "hi": 2958,
+   "pct": 20.4,
+   "method": "percentile_trend",
+   "conf": "T3",
+   "volatile": false
+  },
+  "105002:陈经纶中学": {
+   "rank": 2831,
+   "lo": 2293,
+   "hi": 3369,
+   "pct": 23.6,
+   "method": "percentile_trend",
+   "conf": "T3",
+   "volatile": false
+  },
+  "205016:北京中学科技分校": {
+   "rank": 3106,
+   "lo": 2112,
+   "hi": 4100,
+   "pct": 25.9,
+   "method": "percentile_trend",
+   "conf": "T3",
+   "volatile": false
+  },
+  "205017:清华附中广华学校": {
+   "rank": 3587,
+   "lo": 2439,
+   "hi": 4735,
+   "pct": 29.9,
+   "method": "percentile_trend",
+   "conf": "T3",
+   "volatile": false
+  },
+  "205005:二中朝阳学校": {
+   "rank": 3722,
+   "lo": 3201,
+   "hi": 4243,
+   "pct": 31.0,
+   "method": "percentile_trend",
+   "conf": "T3",
+   "volatile": false
+  },
+  "205018:首师大附中朝阳学校": {
+   "rank": 3894,
+   "lo": 2336,
+   "hi": 5452,
+   "pct": 32.4,
+   "method": "percentile_trend",
+   "conf": "T3",
+   "volatile": true
+  },
+  "105007:北京工业大学附属中学": {
+   "rank": 4145,
+   "lo": 2736,
+   "hi": 5554,
+   "pct": 34.5,
+   "method": "percentile_trend",
+   "conf": "T3",
+   "volatile": false
+  },
+  "105003:日坛中学": {
+   "rank": 5210,
+   "lo": 4428,
+   "hi": 5991,
+   "pct": 43.4,
+   "method": "percentile_trend",
+   "conf": "T3",
+   "volatile": false
+  },
+  "105004:和平街一中": {
+   "rank": 5549,
+   "lo": 4384,
+   "hi": 6714,
+   "pct": 46.2,
+   "method": "percentile_trend",
+   "conf": "T3",
+   "volatile": false
+  },
+  "105005:对外经济贸易大学附属中学": {
+   "rank": 6006,
+   "lo": 4565,
+   "hi": 7447,
+   "pct": 50.0,
+   "method": "percentile_trend",
+   "conf": "T3",
+   "volatile": false
+  },
+  "205008:东北师大附中朝阳学校": {
+   "rank": 6062,
+   "lo": 4850,
+   "hi": 7274,
+   "pct": 50.5,
+   "method": "percentile_trend",
+   "conf": "T3",
+   "volatile": false
+  },
+  "205004:中科院附属实验学校": {
+   "rank": 6562,
+   "lo": 5053,
+   "hi": 8071,
+   "pct": 54.7,
+   "method": "percentile_trend",
+   "conf": "T3",
+   "volatile": false
+  },
+  "205007:三里屯一中": {
+   "rank": 7027,
+   "lo": 5762,
+   "hi": 8292,
+   "pct": 58.6,
+   "method": "percentile_trend",
+   "conf": "T3",
+   "volatile": false
+  },
+  "105006:北京十七中": {
+   "rank": 7650,
+   "lo": 6502,
+   "hi": 8798,
+   "pct": 63.8,
+   "method": "percentile_trend",
+   "conf": "T3",
+   "volatile": false
+  },
+  "205011:北京化工大学附属中学": {
+   "rank": 7915,
+   "lo": 6965,
+   "hi": 8865,
+   "pct": 66.0,
+   "method": "percentile_trend",
+   "conf": "T3",
+   "volatile": false
+  },
+  "205006:东方德才学校": {
+   "rank": 8211,
+   "lo": 7226,
+   "hi": 9196,
+   "pct": 68.4,
+   "method": "percentile_trend",
+   "conf": "T3",
+   "volatile": false
+  },
+  "205014:北京第二外国语学院附属中学": {
+   "rank": 8486,
+   "lo": 7383,
+   "hi": 9589,
+   "pct": 70.7,
+   "method": "percentile_trend",
+   "conf": "T3",
+   "volatile": false
+  },
+  "205015:陈经纶中学团结湖分校": {
+   "rank": 9050,
+   "lo": 7964,
+   "hi": 10136,
+   "pct": 75.4,
+   "method": "percentile_trend",
+   "conf": "T3",
+   "volatile": false
+  },
+  "205003:汇文中学垂杨柳分校": {
+   "rank": 9382,
+   "lo": 8256,
+   "hi": 10508,
+   "pct": 78.2,
+   "method": "percentile_trend",
+   "conf": "T3",
+   "volatile": false
+  },
+  "NEW:民大附中朝阳学校": {
+   "rank": 2800,
+   "lo": 2000,
+   "hi": 3500,
+   "pct": 23.3,
+   "method": "new_anchor",
+   "conf": "T3",
+   "volatile": false
+  },
+  "NEW:首都师范大学附属实验学校": {
+   "rank": 3400,
+   "lo": 3000,
+   "hi": 3900,
+   "pct": 28.3,
+   "method": "new_anchor",
+   "conf": "T3",
+   "volatile": false
+  },
+  "NEW:北大附中朝阳未来学校": {
+   "rank": 3000,
+   "lo": 2500,
+   "hi": 3800,
+   "pct": 25.0,
+   "method": "new_anchor",
+   "conf": "T4",
+   "volatile": false
+  },
+  "NEW:北京市朝阳区燕京新源实验学校": {
+   "rank": 6000,
+   "lo": 5000,
+   "hi": 7500,
+   "pct": 50.0,
+   "method": "new_anchor",
+   "conf": "T5",
+   "volatile": false
+  }
+ }
+}

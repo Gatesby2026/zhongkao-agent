@@ -695,7 +695,7 @@ function slotReason(name: string | null): { band: string; cls: string; headline:
   const cls = ({ 冲: 'band-冲', 稳: 'band-稳', 保: 'band-保', 够不上: 'band-刺' } as Record<string, string>)[band] || 'band-稳'
   let headline = ''
   if (band === '冲')
-    headline = `冲一冲——该校 2025 录取位次${refTxt}，你估区排≈${rank}`
+    headline = `冲一冲——该校 2026预估位次${refTxt}，你估区排≈${rank}`
       + (aheadPos != null ? `，落后约 ${Math.abs(aheadPos)} 位` : '')
       + (scoreDiff != null && scoreDiff < 0 ? `、约差 ${-scoreDiff} 分` : '') + '，够一够有机会'
   else if (band === '稳')
@@ -707,7 +707,7 @@ function slotReason(name: string | null): { band: string; cls: string; headline:
       + (aheadPos != null ? `（领先约 ${aheadPos} 位` : '（')
       + (scoreDiff != null && scoreDiff > 0 ? `、约高 ${scoreDiff} 分` : '') + '），基本稳妥'
   else
-    headline = `冲刺——该校 2025 录取位次${refTxt}，你估区排≈${rank}`
+    headline = `冲刺——该校 2026预估位次${refTxt}，你估区排≈${rank}`
       + (aheadPos != null ? `，落后约 ${Math.abs(aheadPos)} 位` : '')
       + (scoreDiff != null && scoreDiff < 0 ? `、约差 ${-scoreDiff} 分` : '')
       + '，线明显高于你，搏一搏（风险高）'

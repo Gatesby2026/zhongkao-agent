@@ -14,6 +14,7 @@
   python scripts/admission/recommend.py --district chaoyang --rank 2500 --all
 """
 import argparse
+import json
 import re
 import sys
 from pathlib import Path
@@ -323,16 +324,41 @@ def school_rank_history(school: dict) -> list[tuple[int, int]]:
     return out
 
 
-def classify(student_rank: int, school: dict):
-    """返回 (档位, margin, 参考位次C, 历史, 波动比) 或 None（数据缺失）。"""
+_PRED2026_CACHE: dict = {}
+
+
+def load_pred2026(district: str) -> dict:
+    """2026 录取位次预估(ts/pred_2026.json,键 'code:校名')→ {校名: {rank,lo,hi,pct,conf,...}}。
+    仅朝阳有;其它区返回空。冲稳保判档以此为核心依据。"""
+    if district in _PRED2026_CACHE:
+        return _PRED2026_CACHE[district]
+    out = {}
+    if district == "chaoyang":
+        path = ADMISSION_DIR / "ts" / "pred_2026.json"
+        if path.exists():
+            with open(path, encoding="utf-8") as f:
+                raw = json.load(f).get("pred", {})
+            for key, v in raw.items():
+                name = key.split(":", 1)[1] if ":" in key else key
+                out[name] = v
+    _PRED2026_CACHE[district] = out
+    return out
+
+
+def classify(student_rank: int, school: dict, pred_rank=None):
+    """返回 (档位, margin, 参考位次C, 历史, 波动比) 或 None（数据缺失）。
+    pred_rank 给定时，用 2026 预估位次做冲稳保判档（核心依据），历史仍保留供展示。"""
     history = school_rank_history(school)
-    if not history:
+    if pred_rank is None and not history:
         return None
-    # 参考位次：取最新一年（位次跨年可比，新口径更贴近当下竞争格局）
-    ref_year, ref_rank = history[-1]
+    # 参考位次：优先 2026 预估(pred_2026)；否则取最新一年历史
+    if pred_rank is not None:
+        ref_rank = int(pred_rank)
+    else:
+        ref_year, ref_rank = history[-1]
     margin = (ref_rank - student_rank) / ref_rank
 
-    ranks = [r for _, r in history]
+    ranks = [r for _, r in history] or [ref_rank]
     volatility = (max(ranks) - min(ranks)) / (sum(ranks) / len(ranks))
 
     if margin >= SAFETY_MARGIN:
@@ -654,9 +680,11 @@ def build_result(rank, home=None, mode="driving", max_km=None, interests=None,
         dist_campus = {n: [(cn, cc, None) for cn, cc in rows] for n, rows in coords.items()}
         priv_dist = {p["name"]: [("", (p["lat"], p["lon"]), None)] for p in priv}
 
+    pred2026 = load_pred2026(district)       # {校名: {rank,lo,hi,conf,...}} 2026预估,冲稳保核心依据
+    pred_rank_map = {n: v.get("rank") for n, v in pred2026.items()}
     buckets = {"冲": [], "稳": [], "保": [], "够不上": []}
     for s in schools:
-        res = classify(rank, s)
+        res = classify(rank, s, pred_rank=pred_rank_map.get(s["name"]))
         if res is None:
             continue
         band, margin, ref_rank, history, vol = res
@@ -670,6 +698,12 @@ def build_result(rank, home=None, mode="driving", max_km=None, interests=None,
     raw_bands = {band: [_school_card(*t, dist_campus, mode_label, effective_max_km, interests,
                                      admission_codes)
                         for t in buckets[band]] for band in buckets}
+    # 挂 2026 预估位次到卡片(前端"📍2026预估位次"用;冲稳保已按它判档)
+    for cards in raw_bands.values():
+        for c in cards:
+            p = pred2026.get(c["name"])
+            if p:
+                c["pred_2026"] = p
     # 可寄宿校名集合（供地图判定：远但可寄宿→正常 pin，不标"太远"）
     boarding_names = {c["name"] for cards in raw_bands.values()
                       for c in cards if c.get("boarding")}
