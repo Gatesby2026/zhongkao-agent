@@ -478,7 +478,7 @@ const selectable = computed<any[]>(() => {
     }
   }
   // 全渠道:公办之后追加 贯通/民办/中职综高(可手动选)
-  return [...dedupeByCode(out), ...nonPubCands.value]
+  return [...dedupeByKey(out), ...nonPubCands.value]
 })
 function bandOf(name: string | null): string {
   const res = result.value
@@ -517,46 +517,37 @@ const mergedMajorsByCode = computed<Record<string, Major[]>>(() => {
   }
   return m
 })
-// 按录取代码去重（保留本部：名称不含"校区/（"者优先）
-function dedupeByCode(cards: Card[]): Card[] {
-  const best: Record<string, Card> = {}
-  const order: string[] = []
-  for (const c of cards) {
-    const code = c.school_code || c.name
-    if (!best[code]) { best[code] = c; order.push(code) }
-    else if (/校区|（/.test(best[code].name) && !/校区|（/.test(c.name)) best[code] = c
-  }
-  return order.map(code => best[code])
+// 学校稳定标识(P2):优先后端注册表 id;无 id(贯通/民办暂未入注册表)用 chan+code|name 合成,
+// 仍唯一稳定。身份不再靠"剥括号取基名"的字符串拼接 → 杜绝校区/本部代表名不一致(和平街 105004 那类)。
+function keyOf(c: any): string {
+  if (!c) return ''
+  if (c.id) return String(c.id)
+  return 'np:' + (c.chan || 'pub') + ':' + (c.school_code || c.name || '')
 }
-// 按"学校基名"去重(同校多校区合一):剥掉 (...) / （...校区）后缀作 key,保留先出现(更强/更近)的那个
-function baseSchoolName(n: string): string { return String(n || '').replace(/[（(].*$/, '').trim() }
-function dedupeByName(cards: Card[]): Card[] {
+// 按稳定标识去重(同 id/多校区合一),代表卡优先"本部"(名称不含 校区/（)。取代 dedupeByCode/dedupeByName。
+function dedupeByKey(cards: Card[]): Card[] {
   const idx: Record<string, number> = {}; const out: Card[] = []
   for (const c of cards) {
-    const k = baseSchoolName(c.name)
+    const k = keyOf(c)
     if (!(k in idx)) { idx[k] = out.length; out.push(c) }
-    // 同基名已存:若新卡是本部(名称不含"校区/（")而旧卡是校区,替换为本部——与 dedupeByCode 口径一致,
-    // 避免计划层挑中校区卡、下拉层(dedupeByCode)挑中本部卡,两者代表名不一致致 <select> 空白
     else if (/校区|（/.test(out[idx[k]].name) && !/校区|（/.test(c.name)) out[idx[k]] = c
   }
   return out
 }
-// 草表项的 name 必须等于下拉(selectable)里某个 option,否则 <select v-model="s.name"> 严格匹配失败→空白。
-// selectable 是唯一可选名来源:把任意计划卡解析到 selectable 中的代表名(优先 完整名→同代码代表→同基名代表)。
+// selectable 是唯一可选名来源:把任意计划卡解析到下拉里"同标识"的代表名
+// (<select v-model="s.name"> 需精确匹配)。现按 keyOf(id) 解析,不再剥字符串。
 const selNameIndex = computed(() => {
-  const byName = new Set<string>(); const byCode: Record<string, string> = {}; const byBase: Record<string, string> = {}
+  const byName = new Set<string>(); const byKey: Record<string, string> = {}
   for (const c of selectable.value) {
     byName.add(c.name)
-    if (c.school_code && !(c.school_code in byCode)) byCode[c.school_code] = c.name
-    const b = baseSchoolName(c.name); if (!(b in byBase)) byBase[b] = c.name
+    const k = keyOf(c); if (!(k in byKey)) byKey[k] = c.name
   }
-  return { byName, byCode, byBase }
+  return { byName, byKey }
 })
 function toSelName(c: any): string {
   const ix = selNameIndex.value
   if (ix.byName.has(c.name)) return c.name
-  if (c.school_code && ix.byCode[c.school_code]) return ix.byCode[c.school_code]
-  const b = baseSchoolName(c.name); return ix.byBase[b] || c.name
+  return ix.byKey[keyOf(c)] || c.name
 }
 // 风险偏好 → 草表"往上够几所"。reach=冲高目标数(够不上里最接近你的 N 所,绝不塞远超能力的顶尖校)。
 // reach 越多→保底占格越少→整体往上够;reach=0→保底优先(给紧张家长)。冲/稳一律全要,保底只留最强几所+1所深兜底。
@@ -583,7 +574,7 @@ function bandPool(band: string): Card[] {
   const res = result.value
   if (!res) return []
   // 同档内:捡漏(高增值)优先,其次录取位次升序(更硬在前)
-  return dedupeByCode((res.bands[band] || []).filter(c => c.school_code && reachByCommute(c.nearest?.km, !!c.boarding)))
+  return dedupeByKey((res.bands[band] || []).filter(c => c.school_code && reachByCommute(c.nearest?.km, !!c.boarding)))
     .slice().sort((a, b) => {
       const va = vaRank(a) - vaRank(b)
       if (va !== 0) return va
@@ -599,13 +590,13 @@ function isReachableCard(c: Card): boolean {
 //   够位次的(如4500)12格全公办、梯队向上;低位次(如8500)公办填不满→空位让给非公办(贯通/民办/中职保底)。
 function buildUniPlan(): any[] {
   const cfg = riskCfg.value
-  const chong = dedupeByName(bandPool('冲')), wen = dedupeByName(bandPool('稳')), bao = dedupeByName(bandPool('保'))
+  const chong = dedupeByKey(bandPool('冲')), wen = dedupeByKey(bandPool('稳')), bao = dedupeByKey(bandPool('保'))
   // 冲高目标:够不上里最接近你的 N 所(按位次降序取最近的;绝不塞远超能力的顶尖校,如8500冲八十中)
   const reachTop = cfg.reach > 0
-    ? dedupeByName(bandPool('够不上').slice().sort((a, b) => (Number(b.ref_rank) || 0) - (Number(a.ref_rank) || 0))).slice(0, cfg.reach)
+    ? dedupeByKey(bandPool('够不上').slice().sort((a, b) => (Number(b.ref_rank) || 0) - (Number(a.ref_rank) || 0))).slice(0, cfg.reach)
     : []
   // 上半区:冲高目标 + 冲 + 稳(全要),按录取位次升序(硬在前)
-  let pub = dedupeByName(dedupeByCode([...reachTop, ...chong, ...wen]))
+  let pub = dedupeByKey([...reachTop, ...chong, ...wen])
     .sort((a, b) => (Number(a.ref_rank) || 9e9) - (Number(b.ref_rank) || 9e9))
     .slice(0, ZHIYUAN_SLOTS)
   // 保底:不堆!按位次升序(强保在前),取最强的几所填到 11 格,末位永远锁"最深的那所保"作真兜底
@@ -615,8 +606,8 @@ function buildUniPlan(): any[] {
     const room = ZHIYUAN_SLOTS - pub.length
     const strong = baoSorted.slice(0, Math.max(0, room - 1))   // 留 1 格给深兜底
     pub = pub.concat(strong)
-    if (pub.length < ZHIYUAN_SLOTS && !pub.some(c => baseSchoolName(c.name) === baseSchoolName(floor.name))) pub.push(floor)
-    pub = dedupeByName(pub)
+    if (pub.length < ZHIYUAN_SLOTS && !pub.some(c => keyOf(c) === keyOf(floor))) pub.push(floor)
+    pub = dedupeByKey(pub)
   }
   let plan: any[] = pub.slice(0, ZHIYUAN_SLOTS)
   if (plan.length < ZHIYUAN_SLOTS) {
@@ -1082,12 +1073,12 @@ const nonPubCands = computed<any[]>(() => {
     const ex = p.exit_type
     const wantAbroad = form.orient === 'abroad'   // 升学取向(输入条件区)唯一控制
     if (ex === '高考' || ex === '混合' || (wantAbroad && ex === '留学')) {
-      out.push({ name: p.name, chan: '民办', band: '路线', school_code: p.code || '',
+      out.push({ id: p.id, name: p.name, chan: '民办', band: '路线', school_code: p.code || '',
                  note: '民办·' + (ex === '留学' ? '留学向·' : '') + (p.tuition || '门槛低·多可入') })
     }
   }
   for (const v of (useGtVoc ? (res.vocational?.schools || []) : [])) {  // 中职综合高中班(保底)
-    if (v.comp_high_2025) out.push({ name: v.name, chan: '中职', band: '保底', school_code: '',
+    if (v.comp_high_2025) out.push({ id: v.id, name: v.name, chan: '中职', band: '保底', school_code: '',
                  note: '中职综合高中班·普高学籍可高考·门槛最低(' + (v.line_note ? '劲松线≈9485' : '稳进') + ')' })
   }
   return out
