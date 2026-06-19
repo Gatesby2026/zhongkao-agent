@@ -531,9 +531,32 @@ function dedupeByCode(cards: Card[]): Card[] {
 // 按"学校基名"去重(同校多校区合一):剥掉 (...) / （...校区）后缀作 key,保留先出现(更强/更近)的那个
 function baseSchoolName(n: string): string { return String(n || '').replace(/[（(].*$/, '').trim() }
 function dedupeByName(cards: Card[]): Card[] {
-  const seen = new Set<string>(); const out: Card[] = []
-  for (const c of cards) { const k = baseSchoolName(c.name); if (seen.has(k)) continue; seen.add(k); out.push(c) }
+  const idx: Record<string, number> = {}; const out: Card[] = []
+  for (const c of cards) {
+    const k = baseSchoolName(c.name)
+    if (!(k in idx)) { idx[k] = out.length; out.push(c) }
+    // 同基名已存:若新卡是本部(名称不含"校区/（")而旧卡是校区,替换为本部——与 dedupeByCode 口径一致,
+    // 避免计划层挑中校区卡、下拉层(dedupeByCode)挑中本部卡,两者代表名不一致致 <select> 空白
+    else if (/校区|（/.test(out[idx[k]].name) && !/校区|（/.test(c.name)) out[idx[k]] = c
+  }
   return out
+}
+// 草表项的 name 必须等于下拉(selectable)里某个 option,否则 <select v-model="s.name"> 严格匹配失败→空白。
+// selectable 是唯一可选名来源:把任意计划卡解析到 selectable 中的代表名(优先 完整名→同代码代表→同基名代表)。
+const selNameIndex = computed(() => {
+  const byName = new Set<string>(); const byCode: Record<string, string> = {}; const byBase: Record<string, string> = {}
+  for (const c of selectable.value) {
+    byName.add(c.name)
+    if (c.school_code && !(c.school_code in byCode)) byCode[c.school_code] = c.name
+    const b = baseSchoolName(c.name); if (!(b in byBase)) byBase[b] = c.name
+  }
+  return { byName, byCode, byBase }
+})
+function toSelName(c: any): string {
+  const ix = selNameIndex.value
+  if (ix.byName.has(c.name)) return c.name
+  if (c.school_code && ix.byCode[c.school_code]) return ix.byCode[c.school_code]
+  const b = baseSchoolName(c.name); return ix.byBase[b] || c.name
 }
 // 风险偏好 → 草表"往上够几所"。reach=冲高目标数(够不上里最接近你的 N 所,绝不塞远超能力的顶尖校)。
 // reach 越多→保底占格越少→整体往上够;reach=0→保底优先(给紧张家长)。冲/稳一律全要,保底只留最强几所+1所深兜底。
@@ -615,8 +638,9 @@ function resetDraft() {
   draft.value = Array.from({ length: ZHIYUAN_SLOTS }, (_, i) => {
     const c = plan[i]
     if (!c) return { name: null, picks: [] }
+    const name = toSelName(c)   // 必落到下拉里的代表名,杜绝 <select> 空白(校区/本部同代码 105004 不一致问题)
     const mj = c.school_code ? (mergedMajorsByCode.value[c.school_code] || c.majors || []) : []
-    return { name: c.name, picks: mj.slice(0, 2).map((m: any) => m.major_code) }
+    return { name, picks: mj.slice(0, 2).map((m: any) => m.major_code) }
   })
 }
 function onSlotSchool(i: number) {
