@@ -244,8 +244,18 @@ def build_unified(result: dict) -> list:
                     w.get("level"), w.get("style"), None, None, w.get("dist"))
         s["extra"] = {"system": w.get("system"), "analog": w.get("analog"),
                       "direction": w.get("direction")}
-        s["channels"].append(_ch("新校待定", "待核", "none",
-                                 caveat="新校无历史线,不做研判;看体系+可类比校+说明会"))
+        # 新校已按 est_rank(=2026预估)进了冲稳保 → 用该档位研判,而非"不做研判"
+        nb_band = None
+        for _b in ("冲", "稳", "保", "够不上"):
+            if any(c.get("name") == w["name"] for c in (result.get("bands", {}) or {}).get(_b, [])):
+                nb_band = _b
+                break
+        if nb_band:
+            s["channels"].append(_ch("统招", nb_band, "district_rank", refRank=w.get("est_rank"),
+                                     caveat="新校无历史线·按 2026 预估位次研判;以官方简章为准"))
+        else:
+            s["channels"].append(_ch("新校待定", "待核", "none",
+                                     caveat="新校无历史线;看体系+可类比校+说明会"))
         out.append(s)
 
     # 统一打 uid(有编码用编码,无则 type:name)；地图标记与详情面板均以此为键
@@ -259,7 +269,9 @@ def build_unified(result: dict) -> list:
         t = lt.get(s["uid"])
         if t:
             s["line_trend"] = t      # 录取位次趋势/2026区间(T3),按 uid 挂载
-        pp = _pred2026().get(s["name"])
+        import re as _re
+        _bn = _re.sub(r"[（(].*", "", s["name"]).strip()   # 去校区后缀的基名
+        pp = _pred2026().get(s["name"]) or _pred2026().get(_bn)  # 校区→主校 pred 兜底
         if pp:
             s["pred_2026"] = pp      # 2026预估录取位次(核心依据),按校名挂载
         v = va.get(s["uid"])
