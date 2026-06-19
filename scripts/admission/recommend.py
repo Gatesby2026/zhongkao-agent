@@ -26,9 +26,10 @@ import distance as dist_mod
 # 学校实体解析(P1):脏名字/代码 → 稳定 school_id。注册表缺失时降级为 no-op,不拖垮主推荐。
 sys.path.insert(0, str(Path(__file__).resolve().parent / "registry"))
 try:
-    from resolve import resolve as _resolve_id
+    from resolve import resolve as _resolve_id, get as _get_school
 except Exception:
     _resolve_id = lambda name, district=None: None
+    _get_school = lambda sid, district=None: None
 
 ADMISSION_DIR = Path(__file__).resolve().parents[2] / "knowledge-base" / "admission" / "beijing"
 
@@ -153,6 +154,22 @@ def load_xeddx(district: str):
     if path.exists():
         with open(path, encoding="utf-8") as f:
             data = yaml.safe_load(f)
+    if data:
+        # P3:把校额缩写(八十中/人朝…)解析到注册表 → 官方全名 + id,随块下发,前端不再硬编码简称表
+        resolved = {}
+        for r in (data.get("rows") or []):
+            for abbr in (r.get("by_school") or {}):
+                if abbr in resolved:
+                    continue
+                sid = _resolve_id(abbr)
+                sc = _get_school(sid) if sid else None
+                resolved[abbr] = {
+                    "id": sid,
+                    "name": (sc or {}).get("canonical_name") or abbr,   # 官方全名
+                    "short": (sc or {}).get("short_name") or abbr,
+                }
+        data = dict(data)
+        data["resolved"] = resolved
     _XEDDX_CACHE[district] = data
     return data
 

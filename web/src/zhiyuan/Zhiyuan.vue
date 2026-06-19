@@ -1105,6 +1105,12 @@ const xedEligible = computed<{ school: string; n: number }[]>(() => {
   if (!r || !r.by_school) return []
   return Object.entries(r.by_school).map(([school, n]) => ({ school, n: n as number }))
 })
+// 校额缩写 → 官方全名(后端按注册表解析,随 xeddx.resolved 下发);带校区括号的保留校区以区分本部/分校
+function xedName(abbr: string): string {
+  const base = (xedBlock.value as any)?.resolved?.[abbr]?.name || XED_FULLNAME[abbr] || abbr
+  const m = abbr.match(/[（(](.+?)[)）]/)
+  return m && !base.includes(m[1]) ? `${base}（${m[1]}）` : base
+}
 // 按孩子位次给校额到校推荐：高中统招位次 vs 孩子rank → 值得冲/相当/统招本可达
 const xedRecommend = computed(() => {
   const rank = Number(form.rank) || 0
@@ -1935,7 +1941,7 @@ const tcOptions: string[] = []
                   <span class="slot-no" :class="{ on: s.school }">{{ i + 1 }}</span>
                   <select v-model="s.school" class="school-sel uni-sel">
                     <option :value="null">＋ 选优质高中（校额到校）</option>
-                    <option v-for="e in xedEligible" :key="e.school" :value="e.school">{{ e.school }}（名额{{ e.n }}）</option>
+                    <option v-for="e in xedEligible" :key="e.school" :value="e.school">{{ xedName(e.school) }}</option>
                   </select>
                   <input v-if="s.school" v-model="s.majors" class="early-input" style="flex:1;min-width:0"
                     placeholder="专业(班)代码·手填·以官方网报为准" />
