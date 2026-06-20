@@ -167,7 +167,6 @@ function chEligible(c: any): boolean {
   if (chId.value === 'feijing') return c.key === '中职'           // 非京籍随迁:只中职
   return c.key !== '校额' && c.key !== '统筹' && c.key !== '贯通' // 往届/回京:无指标分配/贯通
 }
-function chGo(c: any) { if (c.use?.filter) exType.value = c.use.filter; goTab(c.use.tab) }
 const loading = ref(false)
 const errMsg = ref('')
 const result = ref<Result | null>(null)
@@ -1904,7 +1903,6 @@ const tcOptions: string[] = []
               <ul><li v-for="(d, di) in c.detail" :key="di">{{ d }}</li></ul>
             </div>
             <div class="cc-acts">
-              <button class="cc-use" type="button" @click="chGo(c)">{{ c.use.label }} →</button>
               <a class="cc-link" :href="c.link" target="_blank" rel="noopener">{{ c.linkName }} ↗</a>
             </div>
           </div>
@@ -2385,6 +2383,12 @@ const tcOptions: string[] = []
 .chh-step { font-size: 14px; font-weight: 700; color: var(--brand-dark); background: #fff; border: 1px solid var(--brand); border-radius: var(--radius-full); padding: 6px 16px; }
 .chh-step.on { background: var(--brand); color: #fff; }
 .chh-lock { font-size: 13px; }
+/* 手机:三批次流程压成一行不换行(收紧字号/内边距/间距) */
+@media (max-width: 560px) {
+  .chh-flow { flex-wrap: nowrap; gap: 3px; justify-content: space-between; }
+  .chh-step { font-size: 12px; padding: 5px 8px; white-space: nowrap; }
+  .chh-lock { font-size: 11px; flex-shrink: 0; }
+}
 .chh-note { font-size: 12.5px; color: var(--gray-600); margin: 10px 0 0; line-height: 1.6; }
 /* 身份自查 */
 .ch-id { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 14px 0 6px; }
@@ -2861,9 +2865,9 @@ const tcOptions: string[] = []
   .ex-table thead th:nth-child(5), .ex-table tbody td:nth-child(5),
   .ex-table thead th:nth-child(7), .ex-table tbody td:nth-child(7),
   .ex-table thead th:nth-child(8), .ex-table tbody td:nth-child(8) { display: none; }
-  /* 草表行:换行不挤,下拉占宽 */
+  /* 草表行:序号 + 学校下拉同一行(下拉自适应收缩),专业/操作换到下一行 */
   .urow { flex-wrap: wrap; }
-  .school-sel.uni-sel { flex: 1 1 100%; width: 100%; }
+  .school-sel.uni-sel { flex: 1 1 0; width: auto; min-width: 0; }
   .uni-majors { width: 100%; }
   /* 地图选中学校 → 底部弹层(不再上下来回滑);未选中则不占位,地图占满 */
   .map-detail { display: block; }
