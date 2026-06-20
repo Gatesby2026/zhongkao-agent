@@ -7,6 +7,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: 'index.html',
+        xueqing: 'xueqing.html',
         zhiyuan: 'zhiyuan.html',
       },
     },

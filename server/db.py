@@ -12,6 +12,7 @@ DB_PATH = ROOT / "server" / "data.sqlite3"
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS analyses (
   id            TEXT PRIMARY KEY,
+  user_id       INTEGER,             -- 归属用户(accounts.users.id);老数据为 NULL
   student_name  TEXT,
   exam_slug     TEXT,
   status        TEXT NOT NULL,      -- queued | running | done | failed
@@ -37,17 +38,21 @@ def init_db() -> None:
     DB_PATH.parent.mkdir(parents=True, exist_ok=True)
     with _conn() as c:
         c.executescript(SCHEMA)
+        # 旧库迁移:补 user_id 列(已存在则忽略)
+        cols = [r[1] for r in c.execute("PRAGMA table_info(analyses)")]
+        if "user_id" not in cols:
+            c.execute("ALTER TABLE analyses ADD COLUMN user_id INTEGER")
 
 
 def create_analysis(aid: str, student_name: str, exam_slug: str,
-                     student_dir: str) -> None:
+                     student_dir: str, user_id: int | None = None) -> None:
     now = time.time()
     with _conn() as c:
         c.execute(
-            "INSERT INTO analyses(id, student_name, exam_slug, status, "
+            "INSERT INTO analyses(id, user_id, student_name, exam_slug, status, "
             "stage, stage_name, student_dir, created_at, updated_at) "
-            "VALUES (?,?,?,?,?,?,?,?,?)",
-            (aid, student_name, exam_slug, "queued", 0, "排队中",
+            "VALUES (?,?,?,?,?,?,?,?,?,?)",
+            (aid, user_id, student_name, exam_slug, "queued", 0, "排队中",
              student_dir, now, now),
         )
 
@@ -106,10 +111,16 @@ def get_analysis(aid: str) -> dict | None:
         return dict(row) if row else None
 
 
-def list_analyses(limit: int = 50) -> list[dict]:
+def list_analyses(limit: int = 50, user_id: int | None = None) -> list[dict]:
     with _conn() as c:
-        rows = c.execute(
-            "SELECT * FROM analyses ORDER BY created_at DESC LIMIT ?",
-            (limit,),
-        ).fetchall()
+        if user_id is not None:
+            rows = c.execute(
+                "SELECT * FROM analyses WHERE user_id=? ORDER BY created_at DESC LIMIT ?",
+                (user_id, limit),
+            ).fetchall()
+        else:
+            rows = c.execute(
+                "SELECT * FROM analyses ORDER BY created_at DESC LIMIT ?",
+                (limit,),
+            ).fetchall()
         return [dict(r) for r in rows]

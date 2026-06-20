@@ -27,6 +27,8 @@ import tasks                    # noqa: E402
 import pipeline_adapter as pa   # noqa: E402
 import imgnorm                  # noqa: E402
 from auth import router as auth_router, store as auth_store   # noqa: E402
+from auth.deps import get_current_user                        # noqa: E402
+from fastapi import Depends                                   # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 # Phase 1 reference 数据
@@ -62,8 +64,17 @@ MAX_PHOTOS = 12         # 上传张数上限（P1.2 / C-选 2）
 MAX_PHOTO_BYTES = 15 * 1024 * 1024   # 单张原始字节上限 15MB
 
 
+def _owned(aid: str, user: dict) -> dict:
+    """取分析并校验归属当前用户;不存在或非本人 → 404(不泄露存在性)。"""
+    a = db.get_analysis(aid)
+    if not a or a.get("user_id") != user["id"]:
+        raise HTTPException(404, "分析不存在")
+    return a
+
+
 @app.post("/api/analyses")
-async def create_analysis(files: list[UploadFile] = File(default=[])):
+async def create_analysis(files: list[UploadFile] = File(default=[]),
+                          user: dict = Depends(get_current_user)):
     aid = uuid.uuid4().hex[:12]
 
     if files:
@@ -99,14 +110,14 @@ async def create_analysis(files: list[UploadFile] = File(default=[])):
             if oversize: reasons.append(f"{oversize} 张单张 >15MB")
             tail = ("（" + "；".join(reasons) + "）") if reasons else ""
             raise HTTPException(400, "未收到有效答题卡图片" + tail)
-        db.create_analysis(aid, "（识别中）", REF_EXAM_SLUG, str(sdir))
+        db.create_analysis(aid, "（识别中）", REF_EXAM_SLUG, str(sdir), user_id=user["id"])
         # 仅做检测（card_meta 读表头），不跑重流水线；前端轮询 /detect
         tasks.submit_detect(aid, sdir)
         return {"id": aid, "status": "detecting",
                 "uploaded": saved, "mode": "real-ocr"}
 
     # 无上传：纯 reference 演示
-    db.create_analysis(aid, "贾小淇", REF_EXAM_SLUG, str(REF_STUDENT_DIR))
+    db.create_analysis(aid, "贾小淇", REF_EXAM_SLUG, str(REF_STUDENT_DIR), user_id=user["id"])
     tasks.submit_reference(aid, REF_STUDENT_DIR)
     return {"id": aid, "status": "queued",
             "exam_slug": REF_EXAM_SLUG, "uploaded": 0, "mode": "reference"}
@@ -115,10 +126,8 @@ async def create_analysis(files: list[UploadFile] = File(default=[])):
 # ---------- 1b. 检测结果（答题卡页轮询）----------
 
 @app.get("/api/analyses/{aid}/detect")
-def get_detect(aid: str):
-    a = db.get_analysis(aid)
-    if not a:
-        raise HTTPException(404, "analysis not found")
+def get_detect(aid: str, user: dict = Depends(get_current_user)):
+    a = _owned(aid, user)
     det = {}
     if a["detected"]:
         try:
@@ -135,10 +144,9 @@ def get_detect(aid: str):
 # ---------- 1c. 确认无误，开始分析 ----------
 
 @app.post("/api/analyses/{aid}/start")
-def start_pipeline(aid: str, student_name: str = ""):
-    a = db.get_analysis(aid)
-    if not a:
-        raise HTTPException(404, "analysis not found")
+def start_pipeline(aid: str, student_name: str = "",
+                   user: dict = Depends(get_current_user)):
+    a = _owned(aid, user)
     if a["status"] != "ready_confirm":
         raise HTTPException(409, "考试未识别/未确认，无法开始分析")
 
@@ -164,11 +172,9 @@ def start_pipeline(aid: str, student_name: str = ""):
 # ---------- 1d. 选择题识别不可信 → 手工录入 ----------
 
 @app.get("/api/analyses/{aid}/manual-choices")
-def get_manual_choices(aid: str):
+def get_manual_choices(aid: str, user: dict = Depends(get_current_user)):
     """need_manual 时给前端：不可信原因 + 当前识别值（供家长在此基础上改）。"""
-    a = db.get_analysis(aid)
-    if not a:
-        raise HTTPException(404, "analysis not found")
+    a = _owned(aid, user)
     sdir = Path(a["student_dir"])
     try:
         ac = json.loads((sdir / "answer-card.json").read_text(encoding="utf-8"))
@@ -186,14 +192,13 @@ def get_manual_choices(aid: str):
 
 
 @app.post("/api/analyses/{aid}/manual-choices")
-def submit_manual_choices(aid: str, payload: dict = Body(...)):
+def submit_manual_choices(aid: str, payload: dict = Body(...),
+                          user: dict = Depends(get_current_user)):
     """家长手工录入/核对选择题答案 → 覆盖答题卡 → 跳过涂卡识别，直接评分出报告。
 
     payload: {"choices": {"Q1":"A","Q2":"C",...}}（单选单字母，多选可 "AC"）
     """
-    a = db.get_analysis(aid)
-    if not a:
-        raise HTTPException(404, "analysis not found")
+    a = _owned(aid, user)
     if a["status"] not in ("need_manual", "ready_confirm"):
         raise HTTPException(409, f"当前状态 {a['status']} 不可手工录入")
     choices = (payload or {}).get("choices") or {}
@@ -225,10 +230,9 @@ def submit_manual_choices(aid: str, payload: dict = Body(...)):
 # ---------- 2. 上传小分表（可选）----------
 
 @app.post("/api/analyses/{aid}/scores")
-async def upload_scores(aid: str, file: UploadFile = File(...)):
-    a = db.get_analysis(aid)
-    if not a:
-        raise HTTPException(404, "analysis not found")
+async def upload_scores(aid: str, file: UploadFile = File(...),
+                        user: dict = Depends(get_current_user)):
+    _owned(aid, user)
     updir = UPLOAD_ROOT / aid
     updir.mkdir(parents=True, exist_ok=True)
     ext = (Path(file.filename or "").suffix or ".xlsx").lower()
@@ -265,10 +269,8 @@ async def upload_scores(aid: str, file: UploadFile = File(...)):
 # ---------- 3. 状态轮询 ----------
 
 @app.get("/api/analyses/{aid}/status")
-def status(aid: str):
-    a = db.get_analysis(aid)
-    if not a:
-        raise HTTPException(404, "analysis not found")
+def status(aid: str, user: dict = Depends(get_current_user)):
+    a = _owned(aid, user)
     return {
         "id": a["id"], "status": a["status"],
         "stage": a["stage"], "stage_name": a["stage_name"],
@@ -279,10 +281,8 @@ def status(aid: str):
 # ---------- 4. 报告 JSON ----------
 
 @app.get("/api/analyses/{aid}/report")
-def report(aid: str):
-    a = db.get_analysis(aid)
-    if not a:
-        raise HTTPException(404, "analysis not found")
+def report(aid: str, user: dict = Depends(get_current_user)):
+    a = _owned(aid, user)
     if a["status"] != "done":
         raise HTTPException(409, f"分析未完成（{a['status']}）")
     try:
@@ -294,9 +294,9 @@ def report(aid: str):
 # ---------- 5. 报告 PDF ----------
 
 @app.get("/api/analyses/{aid}/report.pdf")
-def report_pdf(aid: str):
-    a = db.get_analysis(aid)
-    if not a or not a["report_pdf"]:
+def report_pdf(aid: str, user: dict = Depends(get_current_user)):
+    a = _owned(aid, user)
+    if not a["report_pdf"]:
         raise HTTPException(404, "报告 PDF 未就绪")
     p = Path(a["report_pdf"])
     if not p.exists():
@@ -402,10 +402,8 @@ def coverage():
 # ---------- 6. 试卷原卷 PDF ----------
 
 @app.get("/api/analyses/{aid}/paper.pdf")
-def paper_pdf(aid: str):
-    a = db.get_analysis(aid)
-    if not a:
-        raise HTTPException(404, "analysis not found")
+def paper_pdf(aid: str, user: dict = Depends(get_current_user)):
+    a = _owned(aid, user)
     try:
         p = pa.paper_pdf(a["exam_slug"], PAPER_OUT)
     except Exception as e:
@@ -416,17 +414,27 @@ def paper_pdf(aid: str):
 # ---------- 7. 历史报告列表 ----------
 
 @app.get("/api/analyses")
-def list_all():
-    return {"items": db.list_analyses()}
+def list_all(user: dict = Depends(get_current_user)):
+    """仅返回当前登录用户自己的历史分析。"""
+    return {"items": db.list_analyses(user_id=user["id"])}
 
 
 # 注：志愿填报功能已拆为独立服务 server/zhiyuan_app.py（B 档·同仓双服务）。
 # 本服务（学情分析）不再承载 /api/zhiyuan/recommend 与 /zhiyuan 页；nginx 按路径分流。
 
 
-# ---------- 静态前端（web 构建产物：学情 index.html）----------
+# ---------- 静态前端（web 构建产物）----------
 
 WEB_DIST = ROOT / "web" / "dist"
+
+
+@app.get("/xueqing")
+def xueqing_page():
+    """学情分析模块入口页（独立二级模块，仿 /zhiyuan）。"""
+    f = WEB_DIST / "xueqing.html"
+    if not f.exists():
+        raise HTTPException(404, "xueqing page not built")
+    return FileResponse(str(f))
 
 
 if WEB_DIST.exists():

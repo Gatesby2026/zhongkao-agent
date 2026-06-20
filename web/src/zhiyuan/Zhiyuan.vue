@@ -2,7 +2,7 @@
 import { ref, reactive, computed, nextTick, watch, onMounted } from 'vue'
 import { USER_DEFAULTS } from './user-defaults'
 import JudgeLegend from './JudgeLegend.vue'
-import { fetchMe, getProfile, putProfile, logout as authLogout } from './auth'
+import { fetchMe, getProfile, putProfile, logout as authLogout } from '../shared/auth/auth'
 
 declare const L: any
 

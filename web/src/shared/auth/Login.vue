@@ -2,6 +2,9 @@
 import { ref, computed, onUnmounted } from 'vue'
 import { sendSms, verifySms } from './auth'
 
+// 各模块自传简介(标题/一句话/能力点/脚注),登录组件本身通用。
+export interface Intro { title: string; tagline: string; feats: string[]; note?: string }
+defineProps<{ intro: Intro }>()
 const emit = defineEmits<{ (e: 'logged-in'): void }>()
 
 const phone = ref('')
@@ -70,15 +73,12 @@ async function onLogin() {
   <div class="login">
     <div class="card">
       <div class="intro">
-        <h1>北京中考志愿参考 · 朝阳</h1>
-        <p class="tag">按区排名做冲稳保匹配，给一份有依据、能落地的志愿草表。</p>
+        <h1>{{ intro.title }}</h1>
+        <p class="tag">{{ intro.tagline }}</p>
         <ul class="feats">
-          <li><b>冲稳保推荐</b>：用你的区排名对齐各校 2026 预估录取位次</li>
-          <li><b>通勤距离</b>：高德路网算到家的真实骑行/驾车里程</li>
-          <li><b>校额到校 · 市级统筹</b>：按朝阳口径研判值不值得用</li>
-          <li><b>查学校</b>：统招线、高考出口、班型特色一站浏览</li>
+          <li v-for="(f, i) in intro.feats" :key="i" v-html="f"></li>
         </ul>
-        <p class="note">仅辅助参考，最终以官方招生简章与老师建议为准。</p>
+        <p v-if="intro.note" class="note">{{ intro.note }}</p>
       </div>
 
       <div class="form">
@@ -107,7 +107,7 @@ async function onLogin() {
 
         <label class="agree">
           <input type="checkbox" v-model="agree" />
-          <span>我已阅读并同意：仅收集手机号、家庭住址、初中校等用于本工具的志愿匹配与距离计算，不作他用。</span>
+          <span>我已阅读并同意：仅收集手机号及本工具所需信息（如成绩/答题卡），用于志愿匹配或学情分析，不作他用。</span>
         </label>
       </div>
     </div>
