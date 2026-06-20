@@ -145,7 +145,7 @@ const form = reactive({
   identity: USER_DEFAULTS.identity,   // 京籍应届/非京籍/往届
   risk: 'balanced',                   // 风险偏好:safe保底优先/balanced均衡/aggressive冲高
   orient: 'gaokao',                   // 升学取向:gaokao体制内高考/abroad兼顾出国
-  nonpub: 'yes',                      // 贯通/中职:yes智能纳入 / no仅公办+民办 / pub_only仅公办
+  nonpub: 'pub_only',                 // 贯通/中职缺省:仅公办 / no仅公办+民办 / yes智能纳入
 })
 const IDENTITIES = [
   { v: 'jjyj', label: '京籍应届' },
