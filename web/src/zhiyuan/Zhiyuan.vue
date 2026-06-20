@@ -277,6 +277,12 @@ function closeDetail() {
   selectedPoint.value = null
   if (_selEl) { _selEl.classList.remove('mk-sel'); _selEl = null }
 }
+// 手机底部弹层打开时锁住背景滚动(iOS 仅靠 overscroll-behavior 仍可能穿透到地图页)
+watch(selectedPoint, (v) => {
+  if (window.matchMedia('(max-width: 560px)').matches) {
+    document.body.style.overflow = v ? 'hidden' : ''
+  }
+})
 // 由点位反查冲稳保卡片：多校区点名形如 "和平街一中·和平街校区(...)"，取 · 前主名匹配
 function cardOfPoint(p: Point | null): Card | null {
   if (!p) return null
@@ -1400,8 +1406,9 @@ const tcOptions: string[] = []
   <div class="page">
     <header class="hero">
       <div v-if="userPhone" class="acct">
+        <span class="acct-ic">{{ userPhone.slice(-4, -3) }}</span>
         <span class="acct-phone">{{ userPhone.replace(/(\d{3})\d{4}(\d{4})/, '$1****$2') }}</span>
-        <button class="acct-logout" @click="doLogout">退出</button>
+        <button type="button" class="acct-logout" @click="doLogout">退出登录</button>
       </div>
       <h1>北京中考志愿参考 · 朝阳</h1>
       <p class="sub">按区排名做冲稳保匹配，叠加通勤路网距离与学校特色，并镜像官方填报格式生成统招志愿草表。仅辅助参考，最终以官方招生简章与老师建议为准。</p>
@@ -2155,12 +2162,14 @@ const tcOptions: string[] = []
 
 <style scoped>
 .page { max-width: 1180px; margin: 0 auto; padding: 16px; background: var(--bg); min-height: 100%; }
-.hero { position: relative; }
 .hero h1 { font-size: 20px; color: var(--brand-deeper); }
 .hero .sub { color: var(--gray-600); font-size: 13px; margin-top: 4px; }
-.acct { position: absolute; top: 0; right: 0; display: flex; align-items: center; gap: 8px; }
-.acct-phone { font-size: 12px; color: var(--gray-600); }
-.acct-logout { font-size: 12px; padding: 3px 10px; border: 1px solid var(--gray-300, #d1d5db);
+/* 账号条:独立一行靠右,不再绝对定位压住标题 */
+.acct { display: flex; justify-content: flex-end; align-items: center; gap: 8px; margin-bottom: 6px; }
+.acct-ic { width: 22px; height: 22px; border-radius: 50%; background: var(--brand, #2563eb); color: #fff;
+  display: inline-flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; }
+.acct-phone { font-size: 12.5px; color: var(--gray-700); font-weight: 600; }
+.acct-logout { font-size: 12px; padding: 4px 12px; border: 1px solid var(--gray-300, #d1d5db);
   background: #fff; color: var(--gray-600); border-radius: 999px; cursor: pointer; }
 .acct-logout:hover { border-color: var(--brand, #2563eb); color: var(--brand, #2563eb); }
 .disclaimer { background: var(--warning-bg); border: 1px solid var(--accent);
@@ -2273,9 +2282,10 @@ const tcOptions: string[] = []
   .fld-risk, .fld-orient, .fld-nonpub { grid-column: span 2; }
   .fld-go .go { width: 100%; min-width: 0; }
 }
-/* iOS Safari 在输入框字号 <16px 时聚焦会自动放大页面 → 移动端所有文本输入强制 16px 阻止缩放 */
+/* iOS Safari 在输入框字号 <16px 时聚焦会自动放大页面 → 移动端所有文本输入强制 16px 阻止缩放。
+   用 :not 排除勾选框,以兼容无 type 属性的输入(如初中学校 datalist 框,默认 type=text 但无属性,[type=text] 选不中) */
 @media (max-width: 760px) {
-  input[type=text], input[type=number], input[type=tel], input[type=search],
+  input:not([type=checkbox]):not([type=radio]):not([type=range]),
   select, textarea { font-size: 16px !important; }
 }
 .interests { margin-top: 14px; }
@@ -2438,6 +2448,7 @@ const tcOptions: string[] = []
 @media (max-width: 720px) { .ex-main { flex-direction: column; } }
 
 .detail-panel { width: 320px; flex-shrink: 0; height: 460px; overflow-y: auto;
+  overscroll-behavior: contain;
   background: var(--surface); border: 1px solid var(--gray-100); border-radius: var(--radius-sm);
   box-shadow: var(--shadow-sm); padding: 14px; }
 .dp-empty { height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;
@@ -2849,11 +2860,14 @@ const tcOptions: string[] = []
   .detail-panel { display: none; }
   .detail-panel.dp-sheet {
     display: block; position: fixed; left: 0; right: 0; bottom: 0; width: auto; height: auto;
-    max-height: 82vh; overflow-y: auto; z-index: 1500; margin: 0;
+    max-height: 82vh; overflow-y: auto; -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain; z-index: 1500; margin: 0;
     border-radius: 16px 16px 0 0; box-shadow: 0 -6px 24px rgba(0,0,0,.22);
     padding: 16px 14px calc(16px + env(safe-area-inset-bottom)); background: #fff;
     animation: dpUp .18s ease-out; }
-  .dp-backdrop { display: block; position: fixed; inset: 0; background: rgba(0,0,0,.4); z-index: 1490; }
+  /* 弹层打开时遮罩吃掉手势,避免下滑穿透到底下的地图页 */
+  .dp-backdrop { display: block; position: fixed; inset: 0; background: rgba(0,0,0,.4);
+    z-index: 1490; touch-action: none; }
   .dp-close { display: flex; align-items: center; justify-content: center; position: sticky; top: -16px; float: right;
     width: 34px; height: 34px; margin: -6px -4px 0 0; border: none; background: var(--gray-100);
     border-radius: 50%; font-size: 16px; color: var(--gray-600); cursor: pointer; }
