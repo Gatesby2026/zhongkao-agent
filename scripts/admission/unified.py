@@ -170,8 +170,7 @@ def build_unified(result: dict) -> list:
                      entryRank=(entry or {}).get("rank"),    # 统筹门槛=录取位次(=pred_2026,与区内同义)
                      belowControl=t.get("below_control"),    # 档次<门槛(线<控制线460)→ 走统筹不值
                      discount=t.get("discount_pct"),
-                     estConf=t.get("pred_conf") or t.get("est_line_conf"),
-                     estBasis=t.get("pred_basis") or t.get("est_line_basis"),
+                     estConf=t.get("pred_conf"), estBasis=t.get("pred_basis"),
                      lines=t.get("score_lines"), quota=t.get("quota_chaoyang"),
                      caveat="档次=线分→朝阳一分一段(分数全市可比);门槛=档次×经验折让,不低于控制线460;以官方为准")
             ch["tier"] = tier

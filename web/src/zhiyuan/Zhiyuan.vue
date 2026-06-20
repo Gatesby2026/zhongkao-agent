@@ -232,9 +232,7 @@ async function submit() {
 /* ---------------- 地图 ---------------- */
 // 选中学校 → 右侧详情面板（替代地图气泡）
 const selectedPoint = ref<Point | null>(null)
-const selectedTc = ref<any>(null)   // 选中统筹校时的结构化数据（右侧详情用）
-const selectedNew = ref<any>(null)  // 选中 2026 新校时的结构化数据
-function selectPoint(p: Point) { selectedPoint.value = p; selectedTc.value = null; selectedNew.value = null }
+function selectPoint(p: Point) { selectedPoint.value = p }
 // 地图选中:高亮该 marker(去掉上一个高亮),并打开详情(手机为底部弹层)
 let _selEl: any = null
 function pick(p: Point, mk: any) {
@@ -246,7 +244,7 @@ function pick(p: Point, mk: any) {
   nextTick(() => document.querySelectorAll('.detail-panel').forEach((d) => { (d as HTMLElement).scrollTop = 0 }))
 }
 function closeDetail() {
-  selectedPoint.value = null; selectedTc.value = null; selectedNew.value = null
+  selectedPoint.value = null
   if (_selEl) { _selEl.classList.remove('mk-sel'); _selEl = null }
 }
 // 由点位反查冲稳保卡片：多校区点名形如 "和平街一中·和平街校区(...)"，取 · 前主名匹配
@@ -374,12 +372,8 @@ function renderMarkers(fit = false) {
       tipB(L.marker([lat, lon], { icon: pin('#8e44ad', '新', !!r.boarding) }).addTo(publicLayer).on('click', (e: any) => pick(pt, e.target)))
       if (layers.gongban) bounds.push([lat, lon])
     } else if (ty === '市级统筹') {
-      const ch = (r.channels || []).find((c: any) => c.metric?.kind === 'city_score')
-      const m = ch?.metric || {}
-      const entry = m.entryRank ?? null      // 朝阳口径统筹门槛(录取位次)
-      const my = Number(form.rank) || 0
-      const b = m.belowControl ? { label: '不值', cls: 'tj-no' }
-        : (entry && my ? rankBand(my, entry) : { label: '', cls: 'tj-unk' })
+      const m = (r.channels || []).find((c: any) => c.metric?.kind === 'city_score')?.metric || {}
+      const b = cityScoreBand(m.entryRank, !!m.belowControl, Number(form.rank) || 0, { label: '', cls: 'tj-unk' })
       const color = tcColor[b.cls] || '#2980b9'
       const big = b.cls === 'tj-wen' || b.cls === 'tj-chong' || b.cls === 'tj-bo'
       const mk = L.marker([lat, lon], { icon: big ? pin(color, b.label, !!r.boarding) : smallIcon(color, !!r.boarding) })
@@ -825,19 +819,24 @@ function rankBand(my: number, ref: number): { label: string; cls: string } {
   if (r >= -0.15) return { label: '搏', cls: 'tj-bo' }
   return { label: '够不上', cls: 'tj-no' }
 }
+// 市级统筹城市口径档位(面板/地图/草表/查学校共用):校档次低于门槛(线<控制线)→不值;
+// 无门槛/无区排→兜底(noLine);否则按门槛位次 vs 你区排判冲稳保。
+function cityScoreBand(entry: number | null | undefined, below: boolean, my: number,
+                       noLine: { label: string; cls: string } = { label: '待核', cls: 'tj-unk' }): { label: string; cls: string } {
+  if (below) return { label: '不值', cls: 'tj-no' }
+  if (!entry || !my) return noLine
+  return rankBand(my, entry)
+}
 function tcJudge(s: any): any {
-  // 朝阳口径(与面板/地图/查学校同源):门槛位次(录取位次) vs 你的区排 → 冲稳保;
-  // 档次=学校水平(线分→朝阳一分一段);校档次低于门槛(线<控制线)→ 不值。
+  // 朝阳口径(与面板/地图/查学校同源):门槛位次 vs 你的区排 → 冲稳保;档次<门槛(线<控制线)→不值。
   const R = Number(form.rank) || 0
   const entry = typeof s.tongchou_entry_cy?.rank === 'number' ? s.tongchou_entry_cy.rank : null
   const equiv = typeof s.cy_equiv === 'number' ? s.cy_equiv : null
   const below = !!s.below_control
-  if (entry == null || !R) return { label: '待核', cls: 'tj-unk', entry, equiv, below, worth: false, d: null }
-  if (below) return { label: '不值', cls: 'tj-no', entry, equiv, below: true, worth: false, d: entry - R }
-  const b = rankBand(R, entry)                          // 你区排 vs 门槛
-  const reachable = R <= entry * 1.15                   // 门槛内或可搏(非"够不上")
-  const worth = reachable && equiv != null && R > equiv // 你统招够不上该档(R>档次) 且 够得着门槛 = 真 upgrade
-  return { ...b, entry, equiv, below: false, worth, d: entry - R, conf: s.pred_conf, basis: s.pred_basis }
+  const b = cityScoreBand(entry, below, R)
+  // worth=真 upgrade:你统招够不上该档(R>档次) 且 够得着门槛(非"够不上")
+  const worth = !below && entry != null && R > 0 && R <= entry * 1.15 && equiv != null && R > equiv
+  return { ...b, entry, equiv, below, worth }
 }
 
 // ───── 统一详情面板（§12）：把 schools_unified 记录声明式渲染 ─────
@@ -881,7 +880,7 @@ function chDisp(ch: any): { name: string; band: string; cls: string; detail: str
     const quotaTxt = ch.quota ? ` · 投朝阳${ch.quota}名` : ''
     if (!entry) return { name: '市级统筹' + (ch.tier ? '·' + ch.tier : ''), band: '兜底', cls: 'tj-unk',
       detail: '控制线≈460兜底⚠️·务必电话核实' + quotaTxt, caveat: ch.metric.estBasis || ch.caveat }
-    const b = ch.metric.belowControl ? { label: '不值', cls: 'tj-no' } : rankBand(my, entry)
+    const b = cityScoreBand(entry, !!ch.metric.belowControl, my)
     const warn = ch.metric.belowControl ? '⚠校档次低于门槛·走统筹需≈460反不如统招' : ''
     return { name: '市级统筹' + (ch.tier ? '·' + ch.tier : ''), band: b.label, cls: b.cls,
       detail: `统筹门槛≈朝阳第${entry}位 · 学校档次≈朝阳第${equiv}位${quotaTxt}${warn ? ' · ' + warn : ''}`,
@@ -958,12 +957,8 @@ function exTypeMatch(rec: any, t: string): boolean {
 function exBandOf(rec: any): { label: string; cls: string } | null {
   for (const ch of (rec.channels || [])) {
     if (ch.metric?.kind === 'district_rank') return { label: ch.band || '—', cls: PUB_BAND_CLS[ch.band] || 'tj-unk' }
-    if (ch.metric?.kind === 'city_score') {
-      const m = ch.metric
-      if (m.belowControl) return { label: '不值', cls: 'tj-no' }
-      const e = m.entryRank; const my = Number(form.rank) || 0
-      return (e && my) ? rankBand(my, e) : { label: '待核', cls: 'tj-unk' }
-    }
+    if (ch.metric?.kind === 'city_score')
+      return cityScoreBand(ch.metric.entryRank, !!ch.metric.belowControl, Number(form.rank) || 0)
   }
   return null
 }

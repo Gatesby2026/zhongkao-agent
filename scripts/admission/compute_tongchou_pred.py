@@ -110,7 +110,7 @@ def main():
             rec["pred_basis"] = (f"{basis_pre}→×生源{SHENGYUAN:.3f}=档次{D};统筹门槛×(1+折让{disc})不低于控制线={E}"
                                  + ("。⚠校档次低于控制线460,朝阳走统筹需≈460反不如统招,通常不值" if below else ""))
             done.append((E, rec["name"] + (("·" + rec["campus"]) if rec.get("campus") and rec["campus"] != "本部" else ""),
-                         tier, ls, D, E, below, conf))
+                         tier, ls, D, below))
     json.dump(data, open(p, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     # ── 自检:防下次改算法静默回归 ──
     floor2026 = round(CONTROL_FLOOR * SHENGYUAN)
@@ -136,9 +136,9 @@ def main():
     done.sort()
     print(f"{'门槛':>5} {'档次':>5} {'线分':>5}  值?  学校")
     print("-" * 60)
-    for E, nm, t, ls, D, e2, below, conf in done:
+    for E, nm, t, ls, D, below in done:
         print(f"{E:>5} {D:>5} {str(ls):>5}  {'⚠不值' if below else '  ✓'}  统筹{t} {nm[:22]}")
-    print(f"\n已算 {len(done)} 校 / 控制线≈{CONTROL_FLOOR}(2025) / 不值(档次<门槛) {sum(1 for x in done if x[6])} 校")
+    print(f"\n已算 {len(done)} 校 / 控制线≈{CONTROL_FLOOR}(2025) / 不值(档次<门槛) {sum(1 for x in done if x[5])} 校")
 
 if __name__ == "__main__":
     main()
