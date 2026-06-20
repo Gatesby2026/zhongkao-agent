@@ -27,7 +27,6 @@ CREATE TABLE IF NOT EXISTS users (
   created_at    REAL NOT NULL,
   last_login_at REAL
 );
-CREATE UNIQUE INDEX IF NOT EXISTS idx_users_email ON users(email);
 CREATE TABLE IF NOT EXISTS login_codes (
   id          INTEGER PRIMARY KEY AUTOINCREMENT,
   phone       TEXT NOT NULL,
@@ -60,11 +59,12 @@ def init_db() -> None:
     DB_PATH.parent.mkdir(parents=True, exist_ok=True)
     with _conn() as c:
         c.executescript(SCHEMA)
-        # 旧库迁移:补 email 列(executescript 的 CREATE TABLE IF NOT EXISTS 不会改已存在表)
+        # 旧库迁移:补 email 列(CREATE TABLE IF NOT EXISTS 不会改已存在表)。
+        # 唯一索引必须在列存在后建,故放这里(不放 SCHEMA,否则旧库 executescript 先建索引会报错)。
         cols = [r[1] for r in c.execute("PRAGMA table_info(users)")]
         if "email" not in cols:
             c.execute("ALTER TABLE users ADD COLUMN email TEXT")
-            c.execute("CREATE UNIQUE INDEX IF NOT EXISTS idx_users_email ON users(email)")
+        c.execute("CREATE UNIQUE INDEX IF NOT EXISTS idx_users_email ON users(email)")
 
 
 # ---------- 验证码 ----------
