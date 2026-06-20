@@ -162,16 +162,22 @@ def build_unified(result: dict) -> list:
         for t in tc.get(tier_key, []):
             if not t.get("faces_chaoyang"):
                 continue
-            # 估统筹线(统招线−20 或 控制线兜底)由 recommend.tongchou_with_dist 预先算好
+            # 朝阳口径预估(compute_tongchou_pred 预算:外区位次→朝阳等效→2026预估→统筹门槛)
+            pcy = t.get("pred_2026_cy")            # {rank,lo,hi,pct} 朝阳口径学校档次位次
+            entry = t.get("tongchou_entry_cy")     # {rank,pct} 走统筹实际门槛(朝阳口径,更低)
             ch = _ch("市级统筹", None, "city_score",
-                     refLine=t.get("est_tongchou_line"),
-                     zhaoLine=(t.get("score_2025_tongzhao") if isinstance(t.get("score_2025_tongzhao"), (int, float)) else t.get("score_ref")),
-                     estBasis=t.get("est_line_basis"), estConf=t.get("est_line_conf"),
+                     equivRank=t.get("cy_equiv_2025"),       # 朝阳等效统招位次(2025,=学校档次)
+                     predRank=(pcy or {}).get("rank"),       # 2026 朝阳口径预估位次
+                     entryRank=(entry or {}).get("rank"),    # 统筹门槛(朝阳口径位次)
+                     discount=t.get("discount_pct"),
+                     refLine=t.get("est_tongchou_line"),     # 外区估线(兜底/参考)
+                     estConf=t.get("pred_conf") or t.get("est_line_conf"),
+                     estBasis=t.get("pred_basis") or t.get("est_line_basis"),
                      lines=t.get("score_lines"), quota=t.get("quota_chaoyang"),
-                     caveat="估统筹线=统招线−折让/控制线兜底,非官方实际线;band 按你估分研判")
+                     caveat="朝阳等效位次=外区位次跨区映射;统筹门槛=等效×经验折让;非官方实际线,以官方为准")
             ch["tier"] = tier
             host = by_name.get(_norm(t["name"]))
-            if host and t.get("district") == "朝阳":      # 本区校：并入公办记录
+            if host and t.get("district") == "朝阳":      # 本区校：并入公办记录(本区已有自身pred,不覆盖)
                 host["channels"].append(ch)
             else:                                          # 外区/郊区校：独立记录
                 # 同一校名多校区(如人大附本部+通州校区、清华附本部+将台路校区)须带校区区分，否则 name/id 撞键
@@ -180,7 +186,11 @@ def build_unified(result: dict) -> list:
                 s = _school(disp, "市级统筹", t.get("district"), t.get("lat"), t.get("lon"),
                             t.get("address"), None, t.get("boarding"), t.get("level"),
                             t.get("style"), t.get("tags"), t.get("gaokao"), t.get("dist"))
-                s["extra"] = {"campus": campus, "quota_chaoyang": t.get("quota_chaoyang")}
+                s["extra"] = {"campus": campus, "quota_chaoyang": t.get("quota_chaoyang"),
+                              "tongchou_entry": entry, "cy_equiv": t.get("cy_equiv_2025")}
+                # 与区内校同字段:统筹外区校也挂 pred_2026(朝阳口径),面板/草表同逻辑渲染
+                if pcy:
+                    s["pred_2026"] = {**pcy, "method": "tongchou_cy_equiv", "conf": t.get("pred_conf")}
                 s["channels"].append(ch)
                 out.append(s)
 

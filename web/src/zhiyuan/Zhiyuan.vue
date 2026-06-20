@@ -806,6 +806,15 @@ function scoreBand(line: number | null): { label: string; cls: string; d: number
   if (d >= -20) return { label: '搏', cls: 'tj-bo', d }
   return { label: '够不上', cls: 'tj-no', d }
 }
+// 位次档判定:你的区排 my vs 门槛位次 ref(越小越好)。统筹/朝阳口径共用。
+function rankBand(my: number, ref: number): { label: string; cls: string } {
+  if (!my || !ref) return { label: '待核', cls: 'tj-unk' }
+  const r = (ref - my) / ref          // >0 你领先门槛
+  if (r >= 0.15) return { label: '稳', cls: 'tj-wen' }
+  if (r >= 0) return { label: '冲', cls: 'tj-chong' }
+  if (r >= -0.15) return { label: '搏', cls: 'tj-bo' }
+  return { label: '够不上', cls: 'tj-no' }
+}
 function tcJudge(s: any): { label: string; cls: string; d: number | null; line: number | null; ref: boolean; conf?: string; basis?: string } {
   // 用后端预估的"统筹线"(统招线−折让 / 控制线兜底),而非统招线本身(否则系统性高估门槛、漏掉机会)
   const line = typeof s.est_tongchou_line === 'number' ? s.est_tongchou_line : null
@@ -849,13 +858,15 @@ function chDisp(ch: any): { name: string; band: string; cls: string; detail: str
     name: '统招', band: ch.band || '—', cls: PUB_BAND_CLS[ch.band] || 'tj-unk',
     detail: '', caveat: ch.caveat }  // 位次统一在"📍2026预估"块显示,此处只留档位,避免重复
   if (k === 'city_score') {
-    const est = ch.metric.estLine ?? ch.metric.refLine ?? null
-    const b = scoreBand(est)
-    const conf = ch.metric.estConf
-    const confTag = conf === 'official' ? '' : conf === '控制线兜底' ? '·控制线兜底⚠️' : conf === '网传单源' ? '·网传估' : ''
+    // 朝阳口径:门槛位次 vs 你的区排 → 冲稳保;无门槛(无线4-5校)→ 控制线兜底
+    const entry = ch.metric.entryRank ?? null
+    const my = Number(form.rank) || 0
+    const b = entry && my ? rankBand(my, entry) : { label: '待核', cls: 'tj-unk' }
+    const quotaTxt = ch.quota ? ` · 投朝阳${ch.quota}名` : ''
+    if (!entry) return { name: '市级统筹' + (ch.tier ? '·' + ch.tier : ''), band: '兜底', cls: 'tj-unk',
+      detail: '无外区线·控制线≈460兜底⚠️·务必电话核实' + quotaTxt, caveat: ch.metric.estBasis || ch.caveat }
     return { name: '市级统筹' + (ch.tier ? '·' + ch.tier : ''), band: b.label, cls: b.cls,
-      detail: (b.d != null ? `估统筹线≈${est}·Δ${b.d > 0 ? '+' : ''}${b.d}${confTag}` : '信息不足·建议电话核实')
-        + (ch.quota ? ` · 投朝阳${ch.quota}名` : ''),
+      detail: `统筹门槛≈朝阳第${entry}位 · 学校档次≈等效统招第${ch.metric.equivRank}位${quotaTxt}`,
       caveat: ch.metric.estBasis || ch.caveat }
   }
   if (k === 'in_school_rank') {
@@ -1476,7 +1487,8 @@ const tcOptions: string[] = []
                 <div v-if="selSchool.pred_2026" class="dp-block dp-pred">
                   <div class="dp-title">📍 2026 录取位次预估（核心依据）</div>
                   <div class="dp-line"><b class="dp-predv">≈{{ selSchool.pred_2026.rank }}</b> <span class="dp-muted">区间 {{ selSchool.pred_2026.lo }}–{{ selSchool.pred_2026.hi }} · 约前{{ selSchool.pred_2026.pct }}%</span></div>
-                  <div class="dp-line dp-muted">{{ selSchool.pred_2026.method === 'new_anchor' ? '新校锚定' : '百分位法' }} · 可信度 {{ selSchool.pred_2026.conf }} · 7月官方/出分后替换</div>
+                  <div class="dp-line dp-muted">{{ selSchool.pred_2026.method === 'new_anchor' ? '新校锚定' : selSchool.pred_2026.method === 'tongchou_cy_equiv' ? '跨区位次映射(外区线→朝阳口径)' : '百分位法' }} · 可信度 {{ selSchool.pred_2026.conf }} · 7月官方/出分后替换</div>
+                  <div v-if="selSchool.extra && selSchool.extra.tongchou_entry" class="dp-line dp-muted">走统筹门槛≈朝阳第 {{ selSchool.extra.tongchou_entry.rank }} 位（比档次线低·名额定向）</div>
                 </div>
 
                 <div class="dp-block">
@@ -1683,7 +1695,8 @@ const tcOptions: string[] = []
                 <div v-if="selSchool.pred_2026" class="dp-block dp-pred">
                   <div class="dp-title">📍 2026 录取位次预估（核心依据）</div>
                   <div class="dp-line"><b class="dp-predv">≈{{ selSchool.pred_2026.rank }}</b> <span class="dp-muted">区间 {{ selSchool.pred_2026.lo }}–{{ selSchool.pred_2026.hi }} · 约前{{ selSchool.pred_2026.pct }}%</span></div>
-                  <div class="dp-line dp-muted">{{ selSchool.pred_2026.method === 'new_anchor' ? '新校锚定' : '百分位法' }} · 可信度 {{ selSchool.pred_2026.conf }} · 7月官方/出分后替换</div>
+                  <div class="dp-line dp-muted">{{ selSchool.pred_2026.method === 'new_anchor' ? '新校锚定' : selSchool.pred_2026.method === 'tongchou_cy_equiv' ? '跨区位次映射(外区线→朝阳口径)' : '百分位法' }} · 可信度 {{ selSchool.pred_2026.conf }} · 7月官方/出分后替换</div>
+                  <div v-if="selSchool.extra && selSchool.extra.tongchou_entry" class="dp-line dp-muted">走统筹门槛≈朝阳第 {{ selSchool.extra.tongchou_entry.rank }} 位（比档次线低·名额定向）</div>
                 </div>
 
                 <div class="dp-block">
