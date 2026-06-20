@@ -1,5 +1,5 @@
 import { createApp } from 'vue'
-import Zhiyuan from './Zhiyuan.vue'
+import App from './App.vue'
 import '../styles/tokens.css'
 
-createApp(Zhiyuan).mount('#app')
+createApp(App).mount('#app')

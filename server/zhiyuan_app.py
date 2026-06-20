@@ -25,8 +25,10 @@ from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "server"))            # 项目级 auth 包
 sys.path.insert(0, str(ROOT / "scripts" / "admission"))
 import recommend as zhiyuan   # noqa: E402
+from auth import router as auth_router, store as auth_store   # noqa: E402
 
 WEB_DIST = ROOT / "web" / "dist"
 
@@ -34,6 +36,12 @@ app = FastAPI(title="中考志愿填报推荐 API", version="1.0")
 app.add_middleware(
     CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"],
 )
+app.include_router(auth_router.router)               # /api/auth/* 项目级统一鉴权
+
+
+@app.on_event("startup")
+def _startup():
+    auth_store.init_db()
 
 
 class ZhiyuanReq(BaseModel):

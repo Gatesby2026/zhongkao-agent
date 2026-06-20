@@ -26,6 +26,7 @@ import db                       # noqa: E402
 import tasks                    # noqa: E402
 import pipeline_adapter as pa   # noqa: E402
 import imgnorm                  # noqa: E402
+from auth import router as auth_router, store as auth_store   # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 # Phase 1 reference 数据
@@ -40,11 +41,13 @@ app.add_middleware(
     CORSMiddleware, allow_origins=["*"], allow_methods=["*"],
     allow_headers=["*"],
 )
+app.include_router(auth_router.router)   # /api/auth/* 项目级统一鉴权(学情暂不强制门槛)
 
 
 @app.on_event("startup")
 def _startup():
     db.init_db()
+    auth_store.init_db()
     UPLOAD_ROOT.mkdir(parents=True, exist_ok=True)
 
 

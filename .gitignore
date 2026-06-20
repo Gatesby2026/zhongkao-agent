@@ -73,3 +73,7 @@ knowledge-base/exams/_staging/**/src-unzip/
 test-data/jiaxiaoqi-*/
 test-data/小分-数据/
 test-data/小分*/
+
+# 项目级用户库(登录) — 不入库
+server/accounts.sqlite3
+server/.env.auth

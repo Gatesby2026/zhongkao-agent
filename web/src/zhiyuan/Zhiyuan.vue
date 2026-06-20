@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import { ref, reactive, computed, nextTick, watch } from 'vue'
+import { ref, reactive, computed, nextTick, watch, onMounted } from 'vue'
 import { USER_DEFAULTS } from './user-defaults'
 import JudgeLegend from './JudgeLegend.vue'
+import { fetchMe, getProfile, putProfile, logout as authLogout } from './auth'
 
 declare const L: any
 
@@ -197,7 +198,7 @@ function shortName(s: string): string {
 
 async function submit() {
   errMsg.value = ''
-  if (!form.rank || form.rank < 1) { errMsg.value = '请填写有效的区排名'; return }
+  if (!form.rank || Number(form.rank) < 1) { errMsg.value = '请填写有效的区排名'; return }
   loading.value = true
   try {
     const body: any = {
@@ -222,11 +223,40 @@ async function submit() {
     tab.value = 'map'        // 生成后回到地图页，保证地图在可见状态下初始化
     await nextTick()
     renderMap()
+    saveProfile()             // 生成成功后把当前填报资料落库(换设备/下次自动回填)
   } catch (e: any) {
     errMsg.value = '推荐失败：' + e.message
   } finally {
     loading.value = false
   }
+}
+
+/* ---------------- 账号 / 资料持久化 ---------------- */
+const userPhone = ref('')
+
+// 登录后回填该用户已存资料(没有则保持空白缺省)
+async function loadProfile() {
+  try {
+    const me = await fetchMe()
+    if (me?.user) userPhone.value = me.user.phone
+    const p = (me?.profile) ?? (await getProfile().then(r => r.profile).catch(() => null))
+    if (!p) return
+    for (const k of ['rank', 'home', 'mode', 'max_km', 'boarding', 'identity', 'risk', 'orient', 'nonpub'] as const) {
+      if (p[k] !== undefined && p[k] !== null) (form as any)[k] = p[k]
+    }
+    if (p.chuzhong != null) xedQuery.value = p.chuzhong
+    if (p.identity) chId.value = p.identity
+  } catch { /* 未登录或网络问题:用空白缺省,不打断 */ }
+}
+onMounted(loadProfile)
+
+function saveProfile() {
+  const data = { ...form, chuzhong: xedQuery.value }
+  putProfile(data).catch(() => { /* 存档失败不影响使用 */ })
+}
+
+async function doLogout() {
+  try { await authLogout() } finally { location.reload() }
 }
 
 /* ---------------- 地图 ---------------- */
@@ -1369,6 +1399,10 @@ const tcOptions: string[] = []
 <template>
   <div class="page">
     <header class="hero">
+      <div v-if="userPhone" class="acct">
+        <span class="acct-phone">{{ userPhone.replace(/(\d{3})\d{4}(\d{4})/, '$1****$2') }}</span>
+        <button class="acct-logout" @click="doLogout">退出</button>
+      </div>
       <h1>北京中考志愿参考 · 朝阳</h1>
       <p class="sub">按区排名做冲稳保匹配，叠加通勤路网距离与学校特色，并镜像官方填报格式生成统招志愿草表。仅辅助参考，最终以官方招生简章与老师建议为准。</p>
     </header>
@@ -2121,8 +2155,14 @@ const tcOptions: string[] = []
 
 <style scoped>
 .page { max-width: 1180px; margin: 0 auto; padding: 16px; background: var(--bg); min-height: 100%; }
+.hero { position: relative; }
 .hero h1 { font-size: 20px; color: var(--brand-deeper); }
 .hero .sub { color: var(--gray-600); font-size: 13px; margin-top: 4px; }
+.acct { position: absolute; top: 0; right: 0; display: flex; align-items: center; gap: 8px; }
+.acct-phone { font-size: 12px; color: var(--gray-600); }
+.acct-logout { font-size: 12px; padding: 3px 10px; border: 1px solid var(--gray-300, #d1d5db);
+  background: #fff; color: var(--gray-600); border-radius: 999px; cursor: pointer; }
+.acct-logout:hover { border-color: var(--brand, #2563eb); color: var(--brand, #2563eb); }
 .disclaimer { background: var(--warning-bg); border: 1px solid var(--accent);
   color: var(--gray-800); font-size: 12.5px; padding: 10px 12px;
   border-radius: var(--radius-sm); margin: 12px 0; }
