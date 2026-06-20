@@ -52,6 +52,15 @@ def waidi_rank_2025(rec):
             return sc["rank"], rec.get("district")
     return None, None
 
+# 无统招线校的锚定法(本校只招1+3/统筹二,无统招位次可映射 → 用名校本部朝阳等效×折让倍数)。
+# (匹配子串, 本部朝阳等效位次, 折让倍数, 依据)。倍数=直属/一体化校区生源弱于本部统招的经验放大。
+ANCHOR = [
+    ("将台路", 696, 3.5, "清华附中直属校区·共享本部师资,但统筹二/1+3生源弱于本部统招(本部等效696×3.5)"),
+    ("京西", 1265, 2.6, "北京八中一体化管理校区·门头沟·统筹二(本部等效1265×2.6)"),
+    ("未来科学城", 1681, 2.2, "师大二附承办校区·昌平·2024本科93%/一本40%中等实绩(本部等效1681×2.2)"),
+]
+CONTROL_FLOOR_CY = 3741   # 控制线460分→朝阳2025位次(工大附中460/3741锚);无线郊区保底校贴此
+
 def discount(rec):
     d = 0.08
     q = rec.get("quota_chaoyang") or 0
@@ -69,8 +78,27 @@ def main():
             wr, wd = waidi_rank_2025(rec)
             npl = DPOOL.get(wd) if wd else None
             if wr is None or not npl:
-                rec["pred_conf"] = "控制线兜底"
-                rec["pred_basis"] = "无外区位次(本校无统招线/未采)→ 仅控制线460兜底,不给朝阳等效"
+                # 无统招线 → 锚定法(名校本部×折让)或控制线兜底,绝不留空(大机会点必须可决策)
+                tag = (rec.get("name") or "") + (rec.get("campus") or "")
+                anc = next((a for a in ANCHOR if a[0] in tag), None)
+                if anc:
+                    equiv = round(anc[1] * anc[2])
+                    conf = "估·锚定(名校本部×折让·非线映射·务必核实)"
+                    basis_pre = anc[3]
+                else:
+                    equiv = CONTROL_FLOOR_CY                  # 郊区保底校:贴控制线
+                    conf = "估·控制线锚定占位(信息少·务必核实)"
+                    basis_pre = "无本部可锚·郊区保底校→贴控制线460(朝阳≈3741位)"
+                pred = round(equiv * SHENGYUAN)
+                disc = discount(rec)
+                entry = min(round(pred * (1 + disc)), round(CONTROL_FLOOR_CY * SHENGYUAN))  # 门槛不松于控制线
+                rec["cy_equiv_2025"] = equiv
+                rec["pred_2026_cy"] = {"rank": pred, "lo": round(pred * 0.75), "hi": round(pred * 1.25),
+                                       "pct": round(pred / N_CY_2026 * 100, 1)}
+                rec["tongchou_entry_cy"] = {"rank": entry, "pct": round(entry / N_CY_2026 * 100, 1)}
+                rec["discount_pct"] = disc
+                rec["pred_conf"] = conf
+                rec["pred_basis"] = f"{basis_pre}=等效{equiv}→×生源{SHENGYUAN:.3f}=预估{pred};门槛{entry}(不松于控制线)"
                 continue
             equiv = round(wr * N_CY_2025 / npl)              # 朝阳等效统招位次(2025)
             pred = round(equiv * SHENGYUAN)                  # 2026 朝阳口径位次
