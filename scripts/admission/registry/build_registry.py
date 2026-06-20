@@ -319,7 +319,10 @@ try:
             lines = {}
             for L in (r.get("score_lines") or []):
                 if L.get("year") is not None:
-                    lines[str(L["year"])] = {"score": L.get("score") or L.get("line")}
+                    ln = {"score": L.get("score") or L.get("line")}
+                    if L.get("rank") is not None:
+                        ln["rank"] = L["rank"]; ln["rank_scope"] = L.get("rank_scope")
+                    lines[str(L["year"])] = ln
             if r.get("score_2025_tongzhao") is not None:
                 lines.setdefault("2025", {"score": r.get("score_2025_tongzhao")})
             au = OrderedDict([

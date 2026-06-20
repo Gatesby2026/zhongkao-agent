@@ -1,1192 +1,1224 @@
 {
-  "year": "2025",
-  "plan": "shijitongchou",
-  "scope": "面向朝阳考生的市级统筹一/统筹二逐校投朝阳名额复核",
-  "source_authoritative": [
-    "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87197.html (统筹一, 图片表)",
-    "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87196.html (统筹二, 图片表)"
-  ],
-  "verification_method": "bjeea 官方图片表为唯一权威源（公开无第三方文字转录）。每个朝阳格做双读 + 整行各列求和必须等于该校合计，作为独立算术自检；逐校均已对账成功。",
-  "tongchou_yi": [
+ "year": "2025",
+ "plan": "shijitongchou",
+ "scope": "面向朝阳考生的市级统筹一/统筹二逐校投朝阳名额复核",
+ "source_authoritative": [
+  "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87197.html (统筹一, 图片表)",
+  "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87196.html (统筹二, 图片表)"
+ ],
+ "verification_method": "bjeea 官方图片表为唯一权威源（公开无第三方文字转录）。每个朝阳格做双读 + 整行各列求和必须等于该校合计，作为独立算术自检；逐校均已对账成功。",
+ "tongchou_yi": [
+  {
+   "name": "北京市第五中学",
+   "campus": "本部",
+   "district": "东城",
+   "address": "东城区细管胡同13号",
+   "quota_chaoyang": 4,
+   "boarding": true,
+   "approx_score": null,
+   "faces_chaoyang": true,
+   "confidence": "high(官方图+合计对账)",
+   "sources": [
+    "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87197.html"
+   ],
+   "disagreement": "",
+   "lat": 39.937846,
+   "lon": 116.414411,
+   "score_2025_tongzhao": 475,
+   "score_conf": "high",
+   "score_lines": [
     {
-      "name": "北京市第五中学",
-      "campus": "本部",
-      "district": "东城",
-      "address": "东城区细管胡同13号",
-      "quota_chaoyang": 4,
-      "boarding": true,
-      "approx_score": null,
-      "faces_chaoyang": true,
-      "confidence": "high(官方图+合计对账)",
-      "sources": [
-        "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87197.html"
-      ],
-      "disagreement": "",
-      "lat": 39.937846,
-      "lon": 116.414411,
-      "score_2025_tongzhao": 475,
-      "score_conf": "high",
-      "score_lines": [
-        {
-          "year": 2025,
-          "score": 475,
-          "scale": 510,
-          "conf": "双源确认"
-        }
-      ],
-      "level": "市级示范性高中",
-      "style": "东城老牌名校，校风严谨、文理均衡，区内第一梯队。",
-      "tags": [
-        "老牌名校",
-        "综合均衡",
-        "东城名校"
-      ],
-      "gaokao": null,
-      "school_code": "101002",
-      "tongchou_major": {
-        "major_code": "20",
-        "major_name": "普通班",
-        "full": "10100220"
-      }
-    },
-    {
-      "name": "北京汇文中学",
-      "campus": "本部",
-      "district": "东城",
-      "address": "东城区培新街6号",
-      "quota_chaoyang": 4,
-      "boarding": false,
-      "approx_score": null,
-      "faces_chaoyang": true,
-      "confidence": "high(官方图+合计对账)",
-      "sources": [
-        "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87197.html"
-      ],
-      "disagreement": "",
-      "lat": 39.891717,
-      "lon": 116.433245,
-      "score_2025_tongzhao": 476,
-      "score_conf": "high",
-      "score_lines": [
-        {
-          "year": 2025,
-          "score": 476,
-          "scale": 510,
-          "conf": "双源确认"
-        }
-      ],
-      "level": "市级示范性高中",
-      "style": "始建于1871年的百年老校，对外交流与国际教育起步早，设中美国际课程班；办学宽松开放、全面发展。",
-      "tags": [
-        "老牌名校",
-        "综合均衡",
-        "国际方向"
-      ],
-      "gaokao": null,
-      "school_code": "101010",
-      "tongchou_major": {
-        "major_code": "20",
-        "major_name": "普通班",
-        "full": "10101020"
-      }
-    },
-    {
-      "name": "北京市第四中学",
-      "campus": "本部",
-      "district": "西城",
-      "address": "西城区西黄城根北街甲2号",
-      "quota_chaoyang": 3,
-      "boarding": false,
-      "approx_score": null,
-      "faces_chaoyang": true,
-      "confidence": "high(官方图+合计对账)",
-      "sources": [
-        "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87197.html"
-      ],
-      "disagreement": "",
-      "lat": 39.93126,
-      "lon": 116.37829,
-      "score_2025_tongzhao": 487,
-      "score_conf": "high",
-      "score_lines": [
-        {
-          "year": 2025,
-          "score": 487,
-          "scale": 510,
-          "conf": "双源确认"
-        }
-      ],
-      "level": "市级示范性高中",
-      "style": "建于1907年的顶尖名校，学风严谨、师资雄厚，文科见长（高考语文长期居前），整体综合实力突出。",
-      "tags": [
-        "顶尖名校",
-        "文科强",
-        "综合均衡"
-      ],
-      "gaokao": null,
-      "school_code": "102001",
-      "tongchou_major": {
-        "major_code": "20",
-        "major_name": "普通班",
-        "full": "10200120"
-      }
-    },
-    {
-      "name": "北京市第八中学",
-      "campus": "本部",
-      "district": "西城",
-      "address": "西城区学院小街2号",
-      "quota_chaoyang": 4,
-      "boarding": false,
-      "approx_score": null,
-      "faces_chaoyang": true,
-      "confidence": "high(官方图+合计对账)",
-      "sources": [
-        "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87197.html"
-      ],
-      "disagreement": "",
-      "lat": 39.910504,
-      "lon": 116.361704,
-      "score_2025_tongzhao": 481,
-      "score_conf": "high",
-      "score_lines": [
-        {
-          "year": 2025,
-          "score": 481,
-          "scale": 510,
-          "conf": "双源确认"
-        }
-      ],
-      "level": "市级示范性高中",
-      "style": "西城名校，超常教育（少儿班）先行者，理科见长、竞赛与拔尖创新培养有传统。",
-      "tags": [
-        "老牌名校",
-        "理科强",
-        "超常教育"
-      ],
-      "gaokao": null,
-      "school_code": "102002",
-      "tongchou_major": {
-        "major_code": "20",
-        "major_name": "普通班",
-        "full": "10200220"
-      }
-    },
-    {
-      "name": "北京师范大学附属中学",
-      "campus": "本部",
-      "district": "西城",
-      "address": "西城区南新华街18号",
-      "quota_chaoyang": 4,
-      "boarding": true,
-      "approx_score": null,
-      "faces_chaoyang": true,
-      "confidence": "high(官方图+合计对账)",
-      "sources": [
-        "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87197.html"
-      ],
-      "disagreement": "住宿标注为'外区考生入学后可申请住宿'",
-      "lat": 39.897673,
-      "lon": 116.384916,
-      "score_2025_tongzhao": 478,
-      "score_conf": "high",
-      "score_lines": [
-        {
-          "year": 2025,
-          "score": 478,
-          "scale": 510,
-          "conf": "双源确认"
-        }
-      ],
-      "level": "市级示范性高中",
-      "style": "钱学森母校，设钱学森班等实验班，理科见长兼重人文，拔尖创新人才培养特色突出。",
-      "tags": [
-        "老牌名校",
-        "理科强",
-        "拔尖创新"
-      ],
-      "gaokao": null,
-      "school_code": "102013",
-      "tongchou_major": {
-        "major_code": "20",
-        "major_name": "普通班",
-        "full": "10201320"
-      }
-    },
-    {
-      "name": "北京师范大学第二附属中学",
-      "campus": "本部",
-      "district": "西城",
-      "address": "西城区新街口外大街12号",
-      "quota_chaoyang": 4,
-      "boarding": false,
-      "approx_score": null,
-      "faces_chaoyang": true,
-      "confidence": "high(官方图+合计对账)",
-      "sources": [
-        "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87197.html"
-      ],
-      "disagreement": "",
-      "lat": 39.960187,
-      "lon": 116.371239,
-      "score_2025_tongzhao": 478,
-      "score_conf": "high",
-      "score_lines": [
-        {
-          "year": 2025,
-          "score": 478,
-          "scale": 510,
-          "conf": "双源确认"
-        }
-      ],
-      "level": "市级示范性高中",
-      "style": "西城名校，文科实验班传统深厚，设项目式学习、文科、理科多类实验班，文科见长、综合均衡。",
-      "tags": [
-        "文科强",
-        "综合均衡",
-        "西城名校"
-      ],
-      "gaokao": null,
-      "school_code": "102014",
-      "tongchou_major": {
-        "major_code": "20",
-        "major_name": "普通班",
-        "full": "10201420"
-      }
-    },
-    {
-      "name": "北京师范大学附属实验中学",
-      "campus": "本部",
-      "district": "西城",
-      "address": "西城区二龙路甲14号",
-      "quota_chaoyang": 5,
-      "boarding": true,
-      "approx_score": null,
-      "faces_chaoyang": true,
-      "confidence": "high(官方图+合计对账)",
-      "sources": [
-        "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87197.html"
-      ],
-      "disagreement": "住宿标注为'外区考生入学后可申请住宿'",
-      "lat": 39.913275,
-      "lon": 116.366967,
-      "score_2025_tongzhao": 481,
-      "score_conf": "high",
-      "score_lines": [
-        {
-          "year": 2025,
-          "score": 481,
-          "scale": 510,
-          "conf": "双源确认"
-        }
-      ],
-      "level": "市级示范性高中",
-      "style": "创建于1917年，西城顶尖名校，教育改革实验基地，竞赛与拔尖创新培养强，综合实力一流。",
-      "tags": [
-        "顶尖名校",
-        "竞赛强",
-        "综合均衡"
-      ],
-      "gaokao": null,
-      "school_code": "102015",
-      "tongchou_major": {
-        "major_code": "20",
-        "major_name": "普通班",
-        "full": "10201520"
-      }
-    },
-    {
-      "name": "北京市第八十中学",
-      "campus": "本部(望京)",
-      "district": "朝阳",
-      "address": "朝阳区望京北路甲16号",
-      "quota_chaoyang": 5,
-      "boarding": false,
-      "approx_score": null,
-      "faces_chaoyang": true,
-      "confidence": "high(官方图+合计对账)",
-      "sources": [
-        "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87197.html"
-      ],
-      "disagreement": "朝阳本区校在统筹一仍投朝阳5个名额(推翻'本区不向本区投'假设)",
-      "lat": 40.009829,
-      "lon": 116.476564,
-      "score_2025_tongzhao": 482,
-      "score_conf": "high",
-      "score_lines": [
-        {
-          "year": 2025,
-          "score": 482,
-          "scale": 510,
-          "conf": "双源确认"
-        }
-      ],
-      "level": "市级示范性高中",
-      "style": "朝阳区龙头校，国际教育起步早（AP、中美/中英合作项目），综合均衡、国际方向突出。",
-      "tags": [
-        "朝阳龙头",
-        "国际方向",
-        "综合均衡"
-      ],
-      "gaokao": null,
-      "school_code": "105001",
-      "tongchou_major": {
-        "major_code": "20",
-        "major_name": "普通班",
-        "full": "10500120"
-      }
-    },
-    {
-      "name": "北京市陈经纶中学",
-      "campus": "本部",
-      "district": "朝阳",
-      "address": "朝阳区朝外大街38号",
-      "quota_chaoyang": 3,
-      "boarding": false,
-      "approx_score": null,
-      "faces_chaoyang": true,
-      "confidence": "high(官方图+合计对账)",
-      "sources": [
-        "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87197.html"
-      ],
-      "disagreement": "朝阳本区校在统筹一仍投朝阳3个名额(推翻'本区不向本区投'假设)",
-      "lat": 39.92187,
-      "lon": 116.447771,
-      "score_2025_tongzhao": 469,
-      "score_conf": "high",
-      "score_lines": [
-        {
-          "year": 2025,
-          "score": 469,
-          "scale": 510,
-          "conf": "双源确认"
-        }
-      ],
-      "level": "市级示范性高中",
-      "style": "朝阳区90年老校、规模最大的优质教育集团，科技（金鹏科技团）与艺术（金帆艺术团）特色鲜明，综合均衡。",
-      "tags": [
-        "朝阳名校",
-        "综合均衡",
-        "科技艺术特色"
-      ],
-      "gaokao": null,
-      "school_code": "105002",
-      "tongchou_major": {
-        "major_code": "20",
-        "major_name": "普通班",
-        "full": "10500220"
-      }
-    },
-    {
-      "name": "北京市第十二中学",
-      "campus": "本部",
-      "district": "丰台",
-      "address": "丰台区益泽路15号",
-      "quota_chaoyang": 3,
-      "boarding": false,
-      "approx_score": null,
-      "faces_chaoyang": true,
-      "confidence": "high(官方图+合计对账)",
-      "sources": [
-        "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87197.html"
-      ],
-      "disagreement": "",
-      "lat": 39.863136,
-      "lon": 116.307763,
-      "score_2025_tongzhao": null,
-      "score_conf": "待核",
-      "score_ref": 466,
-      "score_ref_note": "2025网传单源·历年627→466",
-      "score_lines": [
-        {
-          "year": 2025,
-          "score": 466,
-          "scale": 510,
-          "conf": "历年参考"
-        },
-        {
-          "year": 2024,
-          "score": 627,
-          "scale": 660,
-          "conf": "历年"
-        },
-        {
-          "year": 2023,
-          "score": 638,
-          "scale": 660,
-          "conf": "历年"
-        }
-      ],
-      "level": "市级示范性高中",
-      "style": "丰台龙头校，科技与人文双特色，设钱学森班（偏数理），科研引领课程建设。",
-      "tags": [
-        "丰台龙头",
-        "理科强",
-        "科技特色"
-      ],
-      "gaokao": null,
-      "school_code": "106001",
-      "tongchou_major": {
-        "major_code": "20",
-        "major_name": "普通班",
-        "full": "10600120"
-      }
-    },
-    {
-      "name": "中国人民大学附属中学",
-      "campus": "本部",
-      "district": "海淀",
-      "address": "海淀区中关村大街37号",
-      "quota_chaoyang": 5,
-      "boarding": false,
-      "approx_score": null,
-      "faces_chaoyang": true,
-      "confidence": "high(官方图+合计对账)",
-      "sources": [
-        "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87197.html"
-      ],
-      "disagreement": "",
-      "lat": 39.974598,
-      "lon": 116.314475,
-      "score_2025_tongzhao": null,
-      "score_conf": "待核",
-      "score_ref": 491,
-      "score_ref_note": "2025两源491(海淀本部)",
-      "score_lines": [
-        {
-          "year": 2025,
-          "score": 491,
-          "scale": 510,
-          "conf": "历年参考"
-        },
-        {
-          "year": 2024,
-          "score": 650,
-          "scale": 660,
-          "conf": "历年"
-        },
-        {
-          "year": 2023,
-          "score": 644,
-          "scale": 660,
-          "conf": "历年"
-        }
-      ],
-      "level": "市级示范性高中",
-      "style": "海淀“六小强”之首，全国顶尖名校，竞赛与拔尖创新培养极强，国际奥赛及科创成绩突出。",
-      "tags": [
-        "顶尖名校",
-        "竞赛强",
-        "拔尖创新"
-      ],
-      "gaokao": null,
-      "school_code": "108001",
-      "tongchou_major": {
-        "major_code": "20",
-        "major_name": "普通班",
-        "full": "10800120"
-      }
-    },
-    {
-      "name": "北京大学附属中学",
-      "campus": "本部",
-      "district": "海淀",
-      "address": "海淀区黄庄(中关村大街)",
-      "quota_chaoyang": 5,
-      "boarding": false,
-      "approx_score": null,
-      "faces_chaoyang": true,
-      "confidence": "high(官方图+合计对账)",
-      "sources": [
-        "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87197.html"
-      ],
-      "disagreement": "",
-      "lat": 39.977542,
-      "lon": 116.315578,
-      "score_2025_tongzhao": null,
-      "score_conf": "待核",
-      "score_ref": 484,
-      "score_ref_note": "2025两源(海淀本部)",
-      "score_lines": [
-        {
-          "year": 2025,
-          "score": 484,
-          "scale": 510,
-          "conf": "历年参考"
-        },
-        {
-          "year": 2024,
-          "score": 642,
-          "scale": 660,
-          "conf": "历年"
-        },
-        {
-          "year": 2023,
-          "score": 636,
-          "scale": 660,
-          "conf": "历年"
-        }
-      ],
-      "level": "市级示范性高中",
-      "style": "海淀名校，实行“单元制/书院制”，高一高二自由选课、课外活动丰富，强调自主探究与个性发展。",
-      "tags": [
-        "海淀名校",
-        "自主选课",
-        "个性发展"
-      ],
-      "gaokao": null,
-      "school_code": "108002",
-      "tongchou_major": {
-        "major_code": "20",
-        "major_name": "普通班",
-        "full": "10800220"
-      }
-    },
-    {
-      "name": "清华大学附属中学",
-      "campus": "本部",
-      "district": "海淀",
-      "address": "海淀区中关村北大街",
-      "quota_chaoyang": 5,
-      "boarding": false,
-      "approx_score": null,
-      "faces_chaoyang": true,
-      "confidence": "high(官方图+合计对账)",
-      "sources": [
-        "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87197.html"
-      ],
-      "disagreement": "",
-      "lat": 40.002386,
-      "lon": 116.315197,
-      "score_2025_tongzhao": 487,
-      "score_conf": "high",
-      "score_lines": [
-        {
-          "year": 2025,
-          "score": 487,
-          "scale": 510,
-          "conf": "双源确认"
-        }
-      ],
-      "level": "市级示范性高中",
-      "style": "海淀“六小强”之一，顶尖名校，国际奥赛金牌众多，竞赛与应试教研功底深厚。",
-      "tags": [
-        "顶尖名校",
-        "竞赛强",
-        "理科强"
-      ],
-      "gaokao": null,
-      "school_code": "108003",
-      "tongchou_major": {
-        "major_code": "20",
-        "major_name": "普通班",
-        "full": "10800320"
-      }
-    },
-    {
-      "name": "北京市第一〇一中学",
-      "campus": "本部",
-      "district": "海淀",
-      "address": "海淀区颐和园路11号",
-      "quota_chaoyang": 5,
-      "boarding": false,
-      "approx_score": null,
-      "faces_chaoyang": true,
-      "confidence": "high(官方图+合计对账)",
-      "sources": [
-        "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87197.html"
-      ],
-      "disagreement": "",
-      "lat": 39.997827,
-      "lon": 116.304351,
-      "score_2025_tongzhao": null,
-      "score_conf": "待核",
-      "score_ref": 487,
-      "score_ref_note": "2025两源(海淀本部)",
-      "score_lines": [
-        {
-          "year": 2025,
-          "score": 487,
-          "scale": 510,
-          "conf": "历年参考"
-        },
-        {
-          "year": 2024,
-          "score": 647,
-          "scale": 660,
-          "conf": "历年"
-        },
-        {
-          "year": 2023,
-          "score": 642,
-          "scale": 660,
-          "conf": "历年"
-        }
-      ],
-      "level": "市级示范性高中",
-      "style": "海淀“六小强”之一，老牌名校，理科与科技创新见长，综合实力位居海淀前列。",
-      "tags": [
-        "顶尖名校",
-        "理科强",
-        "综合均衡"
-      ],
-      "gaokao": null,
-      "school_code": "108005",
-      "tongchou_major": {
-        "major_code": "20",
-        "major_name": "普通班",
-        "full": "10800520"
-      }
-    },
-    {
-      "name": "北京市顺义牛栏山第一中学",
-      "campus": "本部",
-      "district": "顺义",
-      "address": "顺义区牛栏山镇育才大街1号",
-      "quota_chaoyang": 3,
-      "boarding": false,
-      "approx_score": null,
-      "faces_chaoyang": true,
-      "confidence": "high(官方图+合计对账)",
-      "sources": [
-        "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87197.html"
-      ],
-      "disagreement": "",
-      "lat": 40.225625,
-      "lon": 116.664533,
-      "score_2025_tongzhao": 461,
-      "score_conf": "high",
-      "score_lines": [
-        {
-          "year": 2025,
-          "score": 461,
-          "scale": 510,
-          "conf": "双源确认"
-        }
-      ],
-      "level": "市级示范性高中",
-      "style": "创建于1950年，顺义龙头校、远郊名校，首批市级示范高中，科技/美育/体育传统项目特色，综合均衡。",
-      "tags": [
-        "顺义龙头",
-        "远郊名校",
-        "综合均衡"
-      ],
-      "gaokao": null,
-      "school_code": "113001",
-      "tongchou_major": {
-        "major_code": "20",
-        "major_name": "普通班",
-        "full": "11300120"
-      }
+     "year": 2025,
+     "score": 475,
+     "scale": 510,
+     "conf": "双源确认"
     }
-  ],
-  "tongchou_er": [
-    {
-      "name": "中国人民大学附属中学丰台学校",
-      "campus": "丰台校区",
-      "district": "丰台",
-      "address": "丰台区王佐镇民族苑路9号",
-      "quota_chaoyang": 2,
-      "boarding": true,
-      "approx_score": null,
-      "faces_chaoyang": true,
-      "confidence": "high(官方图+合计对账)",
-      "sources": [
-        "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87196.html"
-      ],
-      "disagreement": "",
-      "lat": 39.815403,
-      "lon": 116.113772,
-      "score_2025_tongzhao": null,
-      "score_conf": "待核",
-      "score_ref": 423,
-      "score_ref_note": "人大附丰台2025网传单源·历年609→423",
-      "score_lines": [
-        {
-          "year": 2025,
-          "score": 423,
-          "scale": 510,
-          "conf": "历年参考"
-        },
-        {
-          "year": 2024,
-          "score": 599,
-          "scale": 660,
-          "conf": "历年"
-        },
-        {
-          "year": 2023,
-          "score": 609,
-          "scale": 660,
-          "conf": "历年"
-        }
-      ],
-      "level": "市级示范性高中（人大附中体系成员校）",
-      "style": "2016年成立的十二年一贯制公办校，人大附中联合总校成员，课程、师资、培训、资源与人大附中本部共享；设1+3直升项目。",
-      "tags": [
-        "名校分校",
-        "一体化管理",
-        "人大附中体系",
-        "1+3项目"
-      ],
-      "gaokao": null,
-      "new_school": false,
-      "school_code": "206020",
-      "tongchou_major": {
-        "major_code": "30",
-        "major_name": "普通班",
-        "full": "20602030"
-      }
-    },
-    {
-      "name": "人大附中石景山学校",
-      "campus": "石景山校区",
-      "district": "石景山",
-      "address": "石景山区五里坨地区隆恩寺路(邮编100042)",
-      "quota_chaoyang": 4,
-      "boarding": false,
-      "approx_score": null,
-      "faces_chaoyang": true,
-      "confidence": "high(官方图+合计对账)",
-      "sources": [
-        "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87196.html"
-      ],
-      "disagreement": "",
-      "lat": 39.964737,
-      "lon": 116.125715,
-      "score_2025_tongzhao": null,
-      "score_conf": "待核",
-      "score_ref": 410,
-      "score_ref_note": "2025网传单源",
-      "score_lines": [
-        {
-          "year": 2025,
-          "score": 410,
-          "scale": 510,
-          "conf": "历年参考"
-        }
-      ],
-      "level": "区属公办优质高中（人大附中冠名，西山学校承办）",
-      "style": "2019年7月成立的十二年制公办校，由人大附中冠名、人大附中西山学校具体承办；高中含中美课程合作项目，普高招生面向全市统筹二。",
-      "tags": [
-        "名校分校",
-        "一体化管理",
-        "人大附中体系",
-        "中外合作项目"
-      ],
-      "gaokao": null,
-      "new_school": false,
-      "school_code": "207005",
-      "tongchou_major": {
-        "major_code": "30",
-        "major_name": "普通班",
-        "full": "20700530"
-      }
-    },
-    {
-      "name": "中国人民大学附属中学",
-      "campus": "通州校区(学籍在通州校区)",
-      "district": "海淀",
-      "address": "海淀区中关村大街37号(上课/招生主体);学籍在通州校区,通州区潞城镇",
-      "quota_chaoyang": 11,
-      "boarding": true,
-      "approx_score": null,
-      "faces_chaoyang": true,
-      "confidence": "high(官方图+合计对账,160=各列和)",
-      "sources": [
-        "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87196.html"
-      ],
-      "disagreement": "特殊说明:考生入学后学籍在通州校区;可申请住宿",
-      "lat": 39.91269,
-      "lon": 116.702171,
-      "score_2025_tongzhao": 465,
-      "score_conf": "high",
-      "score_lines": [
-        {
-          "year": 2025,
-          "score": 465,
-          "scale": 510,
-          "conf": "双源确认"
-        }
-      ],
-      "level": "区属公办优质高中（人大附中承办通州三中）",
-      "style": "2016年5月人大附中入驻通州三中组建，与人大附中统一课程设置与教学管理平台、共享资源；入学后学籍在通州校区。",
-      "tags": [
-        "名校分校",
-        "一体化管理",
-        "人大附中体系",
-        "副中心"
-      ],
-      "gaokao": null,
-      "new_school": false,
-      "school_code": "108001",
-      "tongchou_major": {
-        "major_code": "30",
-        "major_name": "普通班",
-        "full": "10800130"
-      }
-    },
-    {
-      "name": "清华大学附属中学",
-      "campus": "将台路校区(学籍在将台路校区,朝阳)",
-      "district": "海淀",
-      "address": "海淀区中关村北大街(招生主体);学籍在将台路校区,朝阳区将台路",
-      "quota_chaoyang": 28,
-      "boarding": true,
-      "approx_score": null,
-      "faces_chaoyang": true,
-      "confidence": "high(官方图+合计对账,150=各列和)",
-      "sources": [
-        "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87196.html"
-      ],
-      "disagreement": "特殊说明:考生入学后学籍在将台路校区;朝阳投放28人为统筹二最大单校朝阳名额",
-      "lat": 39.973652,
-      "lon": 116.488017,
-      "score_2025_tongzhao": null,
-      "score_conf": "待核",
-      "level": "市级示范性高中（清华附中体系校区）",
-      "style": "清华附中下属校区，沿用清华附中办学体系；统招生高一在奥森校区、高二高三在将台路校区就读，学籍在朝阳。",
-      "tags": [
-        "名校校区",
-        "一体化管理",
-        "清华附中体系"
-      ],
-      "gaokao": null,
-      "new_school": false,
-      "school_code": "108003",
-      "tongchou_major": {
-        "major_code": "30",
-        "major_name": "普通班",
-        "full": "10800330"
-      }
-    },
-    {
-      "name": "中央民族大学附属中学",
-      "campus": "本部",
-      "district": "海淀",
-      "address": "海淀区法华寺路甲5号(邮编100081)",
-      "quota_chaoyang": 20,
-      "boarding": false,
-      "approx_score": null,
-      "faces_chaoyang": true,
-      "confidence": "high(官方图+合计对账,102=各列和)",
-      "sources": [
-        "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87196.html"
-      ],
-      "disagreement": "",
-      "lat": 39.950937,
-      "lon": 116.315824,
-      "score_2025_tongzhao": null,
-      "score_conf": "待核",
-      "score_ref": 459,
-      "score_ref_note": "2025网传单源(长期只走统筹/校额,线偏软,谨慎)",
-      "score_lines": [
-        {
-          "year": 2025,
-          "score": 459,
-          "scale": 510,
-          "conf": "历年参考"
-        },
-        {
-          "year": 2024,
-          "score": 617,
-          "scale": 660,
-          "conf": "历年"
-        }
-      ],
-      "level": "市级优质高中教育资源统筹学校（海淀新品牌学校）",
-      "style": "海淀法华寺校本部，以面向少数民族地区跨区域招生为特色；清华领军、北大博雅、同济苗圃人才共育基地；朝阳校区与本部一校两址同法人协同办学。",
-      "tags": [
-        "民族特色",
-        "市级统筹校",
-        "一校两址",
-        "海淀名校"
-      ],
-      "gaokao": null,
-      "new_school": false,
-      "school_code": "208037",
-      "tongchou_major": {
-        "major_code": "30",
-        "major_name": "普通班",
-        "full": "20803730"
-      }
-    },
-    {
-      "name": "北京市第八中学京西校区",
-      "campus": "京西校区",
-      "district": "门头沟",
-      "address": "门头沟区永定镇玉带西街15号(邮编102308)",
-      "quota_chaoyang": 6,
-      "boarding": true,
-      "approx_score": null,
-      "faces_chaoyang": true,
-      "confidence": "high(官方图+合计对账,100=各列和)",
-      "sources": [
-        "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87196.html"
-      ],
-      "disagreement": "早期粗读曾误为8,经整行求和(100)校正为6",
-      "lat": 39.897631,
-      "lon": 116.142453,
-      "score_2025_tongzhao": null,
-      "score_conf": "待核",
-      "level": "市级示范性高中（北京八中体系校区）",
-      "style": "2016年9月开学，位于门头沟永定镇，与北京八中同一法人，建设标准、课程设置、教学管理与八中本部一致，面向全市招收统筹二；含寄宿。",
-      "tags": [
-        "名校校区",
-        "一体化管理",
-        "北京八中体系",
-        "郊区新城",
-        "住宿便利"
-      ],
-      "gaokao": null,
-      "new_school": false,
-      "school_code": "209003",
-      "tongchou_major": {
-        "major_code": "30",
-        "major_name": "普通班",
-        "full": "20900330"
-      }
-    },
-    {
-      "name": "北京第一实验中学",
-      "campus": "通州/宋庄校区",
-      "district": "通州",
-      "address": "通州区宋庄镇汇才南街(邮编101100)",
-      "quota_chaoyang": 4,
-      "boarding": true,
-      "approx_score": null,
-      "faces_chaoyang": true,
-      "confidence": "high(官方图+合计对账,40=各列和)",
-      "sources": [
-        "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87196.html"
-      ],
-      "disagreement": "特殊说明:考生入学后可提供住宿",
-      "lat": 39.928388,
-      "lon": 116.714789,
-      "score_2025_tongzhao": null,
-      "score_conf": "待核",
-      "score_ref": 465,
-      "score_ref_note": "2025首招网传单源",
-      "score_lines": [
-        {
-          "year": 2025,
-          "score": 465,
-          "scale": 510,
-          "conf": "历年参考"
-        }
-      ],
-      "level": "市教委直属公办校（十一学校承办，新建优质校·层次待核）",
-      "style": "市教委直属十五年一贯制公办校，2019年由北京十一学校承办，校址通州宋庄；沿用十一学校分层分类课程与选课走班模式；含1+3项目。",
-      "tags": [
-        "新校",
-        "十一学校承办",
-        "走班制",
-        "副中心"
-      ],
-      "gaokao": null,
-      "new_school": true,
-      "school_code": "212006",
-      "tongchou_major": {
-        "major_code": "30",
-        "major_name": "普通班",
-        "full": "21200630"
-      }
-    },
-    {
-      "name": "北京学校",
-      "campus": "本部",
-      "district": "通州",
-      "address": "通州区潞阳大街35号(邮编101117)",
-      "quota_chaoyang": 3,
-      "boarding": true,
-      "approx_score": null,
-      "faces_chaoyang": true,
-      "confidence": "high(官方图+合计对账,20=各列和)",
-      "sources": [
-        "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87196.html"
-      ],
-      "disagreement": "",
-      "lat": 39.893977,
-      "lon": 116.73716,
-      "score_2025_tongzhao": null,
-      "score_conf": "待核",
-      "score_ref": 465,
-      "score_ref_note": "通州·2025网传单源·历史617",
-      "score_lines": [
-        {
-          "year": 2025,
-          "score": 465,
-          "scale": 510,
-          "conf": "历年参考"
-        },
-        {
-          "year": 2024,
-          "score": 617,
-          "scale": 660,
-          "conf": "历年"
-        },
-        {
-          "year": 2023,
-          "score": 617,
-          "scale": 660,
-          "conf": "历年"
-        }
-      ],
-      "level": "市教委直属优质公办校（十二年一贯制，新建名校·层次待核）",
-      "style": "市教委直属十二年一贯制公办校，位于通州副中心潞城镇，规划小学48班/初中30班/高中30班；副中心重点配套优质校，原拟由人大附中通州学校筹建后定名北京学校。",
-      "tags": [
-        "新校",
-        "市教委直属",
-        "一贯制",
-        "副中心"
-      ],
-      "gaokao": null,
-      "new_school": true,
-      "school_code": "212008",
-      "tongchou_major": {
-        "major_code": "30",
-        "major_name": "普通班",
-        "full": "21200830"
-      }
-    },
-    {
-      "name": "北京师范大学第二附属中学未来科学城学校",
-      "campus": "未来科学城校区",
-      "district": "昌平",
-      "address": "昌平区北七家镇未来科学城南区(C77地块)(邮编102209)",
-      "quota_chaoyang": 12,
-      "boarding": "待核",
-      "approx_score": null,
-      "faces_chaoyang": true,
-      "confidence": "high(官方图+合计对账,60=各列和)",
-      "sources": [
-        "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87196.html"
-      ],
-      "disagreement": "特殊说明为'与中央戏剧学院联合培养',无住宿标注故boarding待核",
-      "lat": 40.105847,
-      "lon": 116.458674,
-      "score_2025_tongzhao": null,
-      "score_conf": "待核",
-      "score_lines": [
-        {
-          "year": 2024,
-          "score": 609,
-          "scale": 660,
-          "conf": "历年"
-        },
-        {
-          "year": 2023,
-          "score": 614,
-          "scale": 660,
-          "conf": "历年"
-        }
-      ],
-      "level": "区属公办优质完全中学（北师大二附中与昌平区联办）",
-      "style": "北师大二附中与昌平区教委联合创办的公办完全中学，位于未来科学城核心区；高中设未来科学英才班，与央企、研究院联合开设STEM课程。",
-      "tags": [
-        "名校分校",
-        "新校",
-        "科技特色",
-        "未来科学城",
-        "住宿便利"
-      ],
-      "gaokao": null,
-      "new_school": true,
-      "school_code": "214012",
-      "tongchou_major": {
-        "major_code": "30",
-        "major_name": "普通班",
-        "full": "21401230"
-      }
-    },
-    {
-      "name": "北京实验学校",
-      "campus": "平谷校区",
-      "district": "平谷",
-      "address": "平谷区建设街204号(邮编101200)",
-      "quota_chaoyang": 0,
-      "boarding": "待核",
-      "approx_score": null,
-      "faces_chaoyang": false,
-      "confidence": "high(官方图+合计对账,50=各列和,朝阳列空白)",
-      "sources": [
-        "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87196.html"
-      ],
-      "disagreement": "朝阳列空白,不投朝阳",
-      "lat": 40.135735,
-      "lon": 117.117669,
-      "score_2025_tongzhao": null,
-      "score_conf": "待核",
-      "level": "市级二级统筹学校（北京实验学校教育集团成员·郊区优质校）",
-      "style": "2015年由平谷整合四校组建的十五年一贯制实验校，纳入北京实验学校教育集团（海淀本部·原立新学校），集团一个法人校长统筹、推行魅力教育。",
-      "tags": [
-        "名校分校",
-        "一体化管理",
-        "魅力教育",
-        "郊区新城"
-      ],
-      "gaokao": null,
-      "new_school": false,
-      "school_code": "217001",
-      "tongchou_major": {
-        "major_code": "30",
-        "major_name": "普通班",
-        "full": "21700130"
-      }
-    },
-    {
-      "name": "北京市平谷区马坊实验中学",
-      "campus": "本部",
-      "district": "平谷",
-      "address": "平谷区马坊镇金河北街101号院(邮编101204)",
-      "quota_chaoyang": 1,
-      "boarding": "待核",
-      "approx_score": null,
-      "faces_chaoyang": true,
-      "confidence": "high(官方图+合计对账,30=各列和)",
-      "sources": [
-        "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87196.html"
-      ],
-      "disagreement": "",
-      "lat": 40.063566,
-      "lon": 117.006565,
-      "score_2025_tongzhao": null,
-      "score_conf": "待核",
-      "level": "区属公办高中（郊区一般公办校·层次待核）",
-      "style": "平谷区公办中学，含高中部，面向全市招收统筹二，招收科技、体育特长生；郊区新城校，具体层次以官方为准。",
-      "tags": [
-        "郊区新城",
-        "公办高中",
-        "科技特长"
-      ],
-      "gaokao": null,
-      "new_school": false,
-      "school_code": "217002",
-      "tongchou_major": {
-        "major_code": "30",
-        "major_name": "普通班",
-        "full": "21700230"
-      }
-    }
-  ],
-  "totals": {
-    "tongchou_yi_schools": 15,
-    "tongchou_yi_chaoyang_schools": 15,
-    "tongchou_yi_chaoyang_quota_sum": 62,
-    "tongchou_er_schools": 11,
-    "tongchou_er_chaoyang_schools": 10,
-    "tongchou_er_chaoyang_quota_sum": 91
+   ],
+   "level": "市级示范性高中",
+   "style": "东城老牌名校，校风严谨、文理均衡，区内第一梯队。",
+   "tags": [
+    "老牌名校",
+    "综合均衡",
+    "东城名校"
+   ],
+   "gaokao": null,
+   "school_code": "101002",
+   "tongchou_major": {
+    "major_code": "20",
+    "major_name": "普通班",
+    "full": "10100220"
+   }
   },
-  "tongchou_san_2025": "取消",
-  "notes": "(1) 权威源仅有 bjeea 官方两张图片表;全网未找到含'朝阳列'的独立第三方文字转录,故无法做真正意义上的两源文字交叉;改用'官方图双读+整行各列数字之和必须等于该校合计'的算术对账作为独立自检,逐校均对账成功(统筹一各校合计相加=405,与官方公布的统筹一总数405一致;统筹二各校合计相加=912)。(2) 用户预设'本区不向本区投/朝阳本区校朝阳列=0'被官方表推翻:统筹一中八十中(朝阳)朝阳列=5、陈经纶(朝阳)朝阳列=3,均确有朝阳名额。(3) 第三方文章(zhongkaobj等)流传的'八十中25人/陈经纶23人面向朝阳'是把'合计'误当朝阳名额,系错误,已弃用。(4) approx_score(统招近似线/区排名)未找到可靠逐校数据,按'宁缺毋滥'留 null。(5) 住宿:统筹一仅五中(可申请)、师大附中/师大实验(外区生可申请)有标注;统筹二多校标注'可申请/可提供住宿',师大二附未来科学城/北京实验/马坊无住宿标注故记待核。(6) 学籍/上课校区注意:统筹二人大附中学籍在通州校区、清华附中学籍在将台路校区(实际在朝阳)。",
-  "global_confidence": "high — 所有朝阳名额数字均经官方图双读+整行合计算术对账通过;唯一弱点是缺乏独立第三方文字源(全网只转载同一官方图),故严格意义上的'两源文字交叉'不可得,以算术自检替代。",
-  "major_codes_source": {
-    "desc": "专业(班)代码补抽:统筹一=学校代码+20,统筹二=学校代码+30(普通班,全表统一)",
-    "images": [
-      "87197.html (统筹一,2图)",
-      "87196.html (统筹二,2图)"
-    ],
-    "method": "腾讯RecognizeTableAccurateOCR + 官方图视觉 + 原json三方核验 (2025-06)",
-    "note": "2026计划7月初发布后专业码全部作废重编,须刷新"
+  {
+   "name": "北京汇文中学",
+   "campus": "本部",
+   "district": "东城",
+   "address": "东城区培新街6号",
+   "quota_chaoyang": 4,
+   "boarding": false,
+   "approx_score": null,
+   "faces_chaoyang": true,
+   "confidence": "high(官方图+合计对账)",
+   "sources": [
+    "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87197.html"
+   ],
+   "disagreement": "",
+   "lat": 39.891717,
+   "lon": 116.433245,
+   "score_2025_tongzhao": 476,
+   "score_conf": "high",
+   "score_lines": [
+    {
+     "year": 2025,
+     "score": 476,
+     "scale": 510,
+     "conf": "双源确认"
+    }
+   ],
+   "level": "市级示范性高中",
+   "style": "始建于1871年的百年老校，对外交流与国际教育起步早，设中美国际课程班；办学宽松开放、全面发展。",
+   "tags": [
+    "老牌名校",
+    "综合均衡",
+    "国际方向"
+   ],
+   "gaokao": null,
+   "school_code": "101010",
+   "tongchou_major": {
+    "major_code": "20",
+    "major_name": "普通班",
+    "full": "10101020"
+   }
+  },
+  {
+   "name": "北京市第四中学",
+   "campus": "本部",
+   "district": "西城",
+   "address": "西城区西黄城根北街甲2号",
+   "quota_chaoyang": 3,
+   "boarding": false,
+   "approx_score": null,
+   "faces_chaoyang": true,
+   "confidence": "high(官方图+合计对账)",
+   "sources": [
+    "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87197.html"
+   ],
+   "disagreement": "",
+   "lat": 39.93126,
+   "lon": 116.37829,
+   "score_2025_tongzhao": 487,
+   "score_conf": "high",
+   "score_lines": [
+    {
+     "year": 2025,
+     "score": 487,
+     "scale": 510,
+     "conf": "双源确认"
+    }
+   ],
+   "level": "市级示范性高中",
+   "style": "建于1907年的顶尖名校，学风严谨、师资雄厚，文科见长（高考语文长期居前），整体综合实力突出。",
+   "tags": [
+    "顶尖名校",
+    "文科强",
+    "综合均衡"
+   ],
+   "gaokao": null,
+   "school_code": "102001",
+   "tongchou_major": {
+    "major_code": "20",
+    "major_name": "普通班",
+    "full": "10200120"
+   }
+  },
+  {
+   "name": "北京市第八中学",
+   "campus": "本部",
+   "district": "西城",
+   "address": "西城区学院小街2号",
+   "quota_chaoyang": 4,
+   "boarding": false,
+   "approx_score": null,
+   "faces_chaoyang": true,
+   "confidence": "high(官方图+合计对账)",
+   "sources": [
+    "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87197.html"
+   ],
+   "disagreement": "",
+   "lat": 39.910504,
+   "lon": 116.361704,
+   "score_2025_tongzhao": 481,
+   "score_conf": "high",
+   "score_lines": [
+    {
+     "year": 2025,
+     "score": 481,
+     "scale": 510,
+     "conf": "双源确认"
+    }
+   ],
+   "level": "市级示范性高中",
+   "style": "西城名校，超常教育（少儿班）先行者，理科见长、竞赛与拔尖创新培养有传统。",
+   "tags": [
+    "老牌名校",
+    "理科强",
+    "超常教育"
+   ],
+   "gaokao": null,
+   "school_code": "102002",
+   "tongchou_major": {
+    "major_code": "20",
+    "major_name": "普通班",
+    "full": "10200220"
+   }
+  },
+  {
+   "name": "北京师范大学附属中学",
+   "campus": "本部",
+   "district": "西城",
+   "address": "西城区南新华街18号",
+   "quota_chaoyang": 4,
+   "boarding": true,
+   "approx_score": null,
+   "faces_chaoyang": true,
+   "confidence": "high(官方图+合计对账)",
+   "sources": [
+    "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87197.html"
+   ],
+   "disagreement": "住宿标注为'外区考生入学后可申请住宿'",
+   "lat": 39.897673,
+   "lon": 116.384916,
+   "score_2025_tongzhao": 478,
+   "score_conf": "high",
+   "score_lines": [
+    {
+     "year": 2025,
+     "score": 478,
+     "scale": 510,
+     "conf": "双源确认"
+    }
+   ],
+   "level": "市级示范性高中",
+   "style": "钱学森母校，设钱学森班等实验班，理科见长兼重人文，拔尖创新人才培养特色突出。",
+   "tags": [
+    "老牌名校",
+    "理科强",
+    "拔尖创新"
+   ],
+   "gaokao": null,
+   "school_code": "102013",
+   "tongchou_major": {
+    "major_code": "20",
+    "major_name": "普通班",
+    "full": "10201320"
+   }
+  },
+  {
+   "name": "北京师范大学第二附属中学",
+   "campus": "本部",
+   "district": "西城",
+   "address": "西城区新街口外大街12号",
+   "quota_chaoyang": 4,
+   "boarding": false,
+   "approx_score": null,
+   "faces_chaoyang": true,
+   "confidence": "high(官方图+合计对账)",
+   "sources": [
+    "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87197.html"
+   ],
+   "disagreement": "",
+   "lat": 39.960187,
+   "lon": 116.371239,
+   "score_2025_tongzhao": 478,
+   "score_conf": "high",
+   "score_lines": [
+    {
+     "year": 2025,
+     "score": 478,
+     "scale": 510,
+     "conf": "双源确认"
+    }
+   ],
+   "level": "市级示范性高中",
+   "style": "西城名校，文科实验班传统深厚，设项目式学习、文科、理科多类实验班，文科见长、综合均衡。",
+   "tags": [
+    "文科强",
+    "综合均衡",
+    "西城名校"
+   ],
+   "gaokao": null,
+   "school_code": "102014",
+   "tongchou_major": {
+    "major_code": "20",
+    "major_name": "普通班",
+    "full": "10201420"
+   }
+  },
+  {
+   "name": "北京师范大学附属实验中学",
+   "campus": "本部",
+   "district": "西城",
+   "address": "西城区二龙路甲14号",
+   "quota_chaoyang": 5,
+   "boarding": true,
+   "approx_score": null,
+   "faces_chaoyang": true,
+   "confidence": "high(官方图+合计对账)",
+   "sources": [
+    "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87197.html"
+   ],
+   "disagreement": "住宿标注为'外区考生入学后可申请住宿'",
+   "lat": 39.913275,
+   "lon": 116.366967,
+   "score_2025_tongzhao": 481,
+   "score_conf": "high",
+   "score_lines": [
+    {
+     "year": 2025,
+     "score": 481,
+     "scale": 510,
+     "conf": "双源确认"
+    }
+   ],
+   "level": "市级示范性高中",
+   "style": "创建于1917年，西城顶尖名校，教育改革实验基地，竞赛与拔尖创新培养强，综合实力一流。",
+   "tags": [
+    "顶尖名校",
+    "竞赛强",
+    "综合均衡"
+   ],
+   "gaokao": null,
+   "school_code": "102015",
+   "tongchou_major": {
+    "major_code": "20",
+    "major_name": "普通班",
+    "full": "10201520"
+   }
+  },
+  {
+   "name": "北京市第八十中学",
+   "campus": "本部(望京)",
+   "district": "朝阳",
+   "address": "朝阳区望京北路甲16号",
+   "quota_chaoyang": 5,
+   "boarding": false,
+   "approx_score": null,
+   "faces_chaoyang": true,
+   "confidence": "high(官方图+合计对账)",
+   "sources": [
+    "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87197.html"
+   ],
+   "disagreement": "朝阳本区校在统筹一仍投朝阳5个名额(推翻'本区不向本区投'假设)",
+   "lat": 40.009829,
+   "lon": 116.476564,
+   "score_2025_tongzhao": 482,
+   "score_conf": "high",
+   "score_lines": [
+    {
+     "year": 2025,
+     "score": 482,
+     "scale": 510,
+     "conf": "双源确认"
+    }
+   ],
+   "level": "市级示范性高中",
+   "style": "朝阳区龙头校，国际教育起步早（AP、中美/中英合作项目），综合均衡、国际方向突出。",
+   "tags": [
+    "朝阳龙头",
+    "国际方向",
+    "综合均衡"
+   ],
+   "gaokao": null,
+   "school_code": "105001",
+   "tongchou_major": {
+    "major_code": "20",
+    "major_name": "普通班",
+    "full": "10500120"
+   }
+  },
+  {
+   "name": "北京市陈经纶中学",
+   "campus": "本部",
+   "district": "朝阳",
+   "address": "朝阳区朝外大街38号",
+   "quota_chaoyang": 3,
+   "boarding": false,
+   "approx_score": null,
+   "faces_chaoyang": true,
+   "confidence": "high(官方图+合计对账)",
+   "sources": [
+    "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87197.html"
+   ],
+   "disagreement": "朝阳本区校在统筹一仍投朝阳3个名额(推翻'本区不向本区投'假设)",
+   "lat": 39.92187,
+   "lon": 116.447771,
+   "score_2025_tongzhao": 469,
+   "score_conf": "high",
+   "score_lines": [
+    {
+     "year": 2025,
+     "score": 469,
+     "scale": 510,
+     "conf": "双源确认"
+    }
+   ],
+   "level": "市级示范性高中",
+   "style": "朝阳区90年老校、规模最大的优质教育集团，科技（金鹏科技团）与艺术（金帆艺术团）特色鲜明，综合均衡。",
+   "tags": [
+    "朝阳名校",
+    "综合均衡",
+    "科技艺术特色"
+   ],
+   "gaokao": null,
+   "school_code": "105002",
+   "tongchou_major": {
+    "major_code": "20",
+    "major_name": "普通班",
+    "full": "10500220"
+   }
+  },
+  {
+   "name": "北京市第十二中学",
+   "campus": "本部",
+   "district": "丰台",
+   "address": "丰台区益泽路15号",
+   "quota_chaoyang": 3,
+   "boarding": false,
+   "approx_score": null,
+   "faces_chaoyang": true,
+   "confidence": "high(官方图+合计对账)",
+   "sources": [
+    "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87197.html"
+   ],
+   "disagreement": "",
+   "lat": 39.863136,
+   "lon": 116.307763,
+   "score_2025_tongzhao": null,
+   "score_conf": "待核",
+   "score_ref": 466,
+   "score_ref_note": "2025网传单源·历年627→466",
+   "score_lines": [
+    {
+     "year": 2025,
+     "score": 466,
+     "scale": 510,
+     "conf": "历年参考",
+     "rank": 348,
+     "rank_scope": "丰台区",
+     "rank_src": "gaokzx 2025丰台一分一段",
+     "rank_note": "本区区排名(该校所在区),非朝阳/非统筹排名;由官方一分一段+录取线换算"
+    },
+    {
+     "year": 2024,
+     "score": 627,
+     "scale": 660,
+     "conf": "历年"
+    },
+    {
+     "year": 2023,
+     "score": 638,
+     "scale": 660,
+     "conf": "历年"
+    }
+   ],
+   "level": "市级示范性高中",
+   "style": "丰台龙头校，科技与人文双特色，设钱学森班（偏数理），科研引领课程建设。",
+   "tags": [
+    "丰台龙头",
+    "理科强",
+    "科技特色"
+   ],
+   "gaokao": null,
+   "school_code": "106001",
+   "tongchou_major": {
+    "major_code": "20",
+    "major_name": "普通班",
+    "full": "10600120"
+   }
+  },
+  {
+   "name": "中国人民大学附属中学",
+   "campus": "本部",
+   "district": "海淀",
+   "address": "海淀区中关村大街37号",
+   "quota_chaoyang": 5,
+   "boarding": false,
+   "approx_score": null,
+   "faces_chaoyang": true,
+   "confidence": "high(官方图+合计对账)",
+   "sources": [
+    "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87197.html"
+   ],
+   "disagreement": "",
+   "lat": 39.974598,
+   "lon": 116.314475,
+   "score_2025_tongzhao": null,
+   "score_conf": "待核",
+   "score_ref": 491,
+   "score_ref_note": "2025两源491(海淀本部)",
+   "score_lines": [
+    {
+     "year": 2025,
+     "score": 491,
+     "scale": 510,
+     "conf": "历年参考"
+    },
+    {
+     "year": 2024,
+     "score": 650,
+     "scale": 660,
+     "conf": "历年"
+    },
+    {
+     "year": 2023,
+     "score": 644,
+     "scale": 660,
+     "conf": "历年"
+    }
+   ],
+   "level": "市级示范性高中",
+   "style": "海淀“六小强”之首，全国顶尖名校，竞赛与拔尖创新培养极强，国际奥赛及科创成绩突出。",
+   "tags": [
+    "顶尖名校",
+    "竞赛强",
+    "拔尖创新"
+   ],
+   "gaokao": null,
+   "school_code": "108001",
+   "tongchou_major": {
+    "major_code": "20",
+    "major_name": "普通班",
+    "full": "10800120"
+   }
+  },
+  {
+   "name": "北京大学附属中学",
+   "campus": "本部",
+   "district": "海淀",
+   "address": "海淀区黄庄(中关村大街)",
+   "quota_chaoyang": 5,
+   "boarding": false,
+   "approx_score": null,
+   "faces_chaoyang": true,
+   "confidence": "high(官方图+合计对账)",
+   "sources": [
+    "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87197.html"
+   ],
+   "disagreement": "",
+   "lat": 39.977542,
+   "lon": 116.315578,
+   "score_2025_tongzhao": null,
+   "score_conf": "待核",
+   "score_ref": 484,
+   "score_ref_note": "2025两源(海淀本部)",
+   "score_lines": [
+    {
+     "year": 2025,
+     "score": 484,
+     "scale": 510,
+     "conf": "历年参考"
+    },
+    {
+     "year": 2024,
+     "score": 642,
+     "scale": 660,
+     "conf": "历年"
+    },
+    {
+     "year": 2023,
+     "score": 636,
+     "scale": 660,
+     "conf": "历年"
+    }
+   ],
+   "level": "市级示范性高中",
+   "style": "海淀名校，实行“单元制/书院制”，高一高二自由选课、课外活动丰富，强调自主探究与个性发展。",
+   "tags": [
+    "海淀名校",
+    "自主选课",
+    "个性发展"
+   ],
+   "gaokao": null,
+   "school_code": "108002",
+   "tongchou_major": {
+    "major_code": "20",
+    "major_name": "普通班",
+    "full": "10800220"
+   }
+  },
+  {
+   "name": "清华大学附属中学",
+   "campus": "本部",
+   "district": "海淀",
+   "address": "海淀区中关村北大街",
+   "quota_chaoyang": 5,
+   "boarding": false,
+   "approx_score": null,
+   "faces_chaoyang": true,
+   "confidence": "high(官方图+合计对账)",
+   "sources": [
+    "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87197.html"
+   ],
+   "disagreement": "",
+   "lat": 40.002386,
+   "lon": 116.315197,
+   "score_2025_tongzhao": 487,
+   "score_conf": "high",
+   "score_lines": [
+    {
+     "year": 2025,
+     "score": 487,
+     "scale": 510,
+     "conf": "双源确认"
+    }
+   ],
+   "level": "市级示范性高中",
+   "style": "海淀“六小强”之一，顶尖名校，国际奥赛金牌众多，竞赛与应试教研功底深厚。",
+   "tags": [
+    "顶尖名校",
+    "竞赛强",
+    "理科强"
+   ],
+   "gaokao": null,
+   "school_code": "108003",
+   "tongchou_major": {
+    "major_code": "20",
+    "major_name": "普通班",
+    "full": "10800320"
+   }
+  },
+  {
+   "name": "北京市第一〇一中学",
+   "campus": "本部",
+   "district": "海淀",
+   "address": "海淀区颐和园路11号",
+   "quota_chaoyang": 5,
+   "boarding": false,
+   "approx_score": null,
+   "faces_chaoyang": true,
+   "confidence": "high(官方图+合计对账)",
+   "sources": [
+    "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87197.html"
+   ],
+   "disagreement": "",
+   "lat": 39.997827,
+   "lon": 116.304351,
+   "score_2025_tongzhao": null,
+   "score_conf": "待核",
+   "score_ref": 487,
+   "score_ref_note": "2025两源(海淀本部)",
+   "score_lines": [
+    {
+     "year": 2025,
+     "score": 487,
+     "scale": 510,
+     "conf": "历年参考"
+    },
+    {
+     "year": 2024,
+     "score": 647,
+     "scale": 660,
+     "conf": "历年"
+    },
+    {
+     "year": 2023,
+     "score": 642,
+     "scale": 660,
+     "conf": "历年"
+    }
+   ],
+   "level": "市级示范性高中",
+   "style": "海淀“六小强”之一，老牌名校，理科与科技创新见长，综合实力位居海淀前列。",
+   "tags": [
+    "顶尖名校",
+    "理科强",
+    "综合均衡"
+   ],
+   "gaokao": null,
+   "school_code": "108005",
+   "tongchou_major": {
+    "major_code": "20",
+    "major_name": "普通班",
+    "full": "10800520"
+   }
+  },
+  {
+   "name": "北京市顺义牛栏山第一中学",
+   "campus": "本部",
+   "district": "顺义",
+   "address": "顺义区牛栏山镇育才大街1号",
+   "quota_chaoyang": 3,
+   "boarding": false,
+   "approx_score": null,
+   "faces_chaoyang": true,
+   "confidence": "high(官方图+合计对账)",
+   "sources": [
+    "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87197.html"
+   ],
+   "disagreement": "",
+   "lat": 40.225625,
+   "lon": 116.664533,
+   "score_2025_tongzhao": 461,
+   "score_conf": "high",
+   "score_lines": [
+    {
+     "year": 2025,
+     "score": 461,
+     "scale": 510,
+     "conf": "双源确认",
+     "rank": 608,
+     "rank_scope": "顺义区",
+     "rank_src": "gaokzx 2025顺义一分一段",
+     "rank_note": "本区区排名(该校所在区),非朝阳/非统筹排名;由官方一分一段+录取线换算"
+    }
+   ],
+   "level": "市级示范性高中",
+   "style": "创建于1950年，顺义龙头校、远郊名校，首批市级示范高中，科技/美育/体育传统项目特色，综合均衡。",
+   "tags": [
+    "顺义龙头",
+    "远郊名校",
+    "综合均衡"
+   ],
+   "gaokao": null,
+   "school_code": "113001",
+   "tongchou_major": {
+    "major_code": "20",
+    "major_name": "普通班",
+    "full": "11300120"
+   }
   }
+ ],
+ "tongchou_er": [
+  {
+   "name": "中国人民大学附属中学丰台学校",
+   "campus": "丰台校区",
+   "district": "丰台",
+   "address": "丰台区王佐镇民族苑路9号",
+   "quota_chaoyang": 2,
+   "boarding": true,
+   "approx_score": null,
+   "faces_chaoyang": true,
+   "confidence": "high(官方图+合计对账)",
+   "sources": [
+    "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87196.html"
+   ],
+   "disagreement": "",
+   "lat": 39.815403,
+   "lon": 116.113772,
+   "score_2025_tongzhao": null,
+   "score_conf": "待核",
+   "score_ref": 423,
+   "score_ref_note": "人大附丰台2025网传单源·历年609→423",
+   "score_lines": [
+    {
+     "year": 2025,
+     "score": 423,
+     "scale": 510,
+     "conf": "历年参考",
+     "rank": 2265,
+     "rank_scope": "丰台区",
+     "rank_src": "gaokzx 2025丰台一分一段",
+     "rank_note": "本区区排名(该校所在区),非朝阳/非统筹排名;由官方一分一段+录取线换算"
+    },
+    {
+     "year": 2024,
+     "score": 599,
+     "scale": 660,
+     "conf": "历年"
+    },
+    {
+     "year": 2023,
+     "score": 609,
+     "scale": 660,
+     "conf": "历年"
+    }
+   ],
+   "level": "市级示范性高中（人大附中体系成员校）",
+   "style": "2016年成立的十二年一贯制公办校，人大附中联合总校成员，课程、师资、培训、资源与人大附中本部共享；设1+3直升项目。",
+   "tags": [
+    "名校分校",
+    "一体化管理",
+    "人大附中体系",
+    "1+3项目"
+   ],
+   "gaokao": null,
+   "new_school": false,
+   "school_code": "206020",
+   "tongchou_major": {
+    "major_code": "30",
+    "major_name": "普通班",
+    "full": "20602030"
+   }
+  },
+  {
+   "name": "人大附中石景山学校",
+   "campus": "石景山校区",
+   "district": "石景山",
+   "address": "石景山区五里坨地区隆恩寺路(邮编100042)",
+   "quota_chaoyang": 4,
+   "boarding": false,
+   "approx_score": null,
+   "faces_chaoyang": true,
+   "confidence": "high(官方图+合计对账)",
+   "sources": [
+    "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87196.html"
+   ],
+   "disagreement": "",
+   "lat": 39.964737,
+   "lon": 116.125715,
+   "score_2025_tongzhao": null,
+   "score_conf": "待核",
+   "score_ref": 410,
+   "score_ref_note": "2025网传单源",
+   "score_lines": [
+    {
+     "year": 2025,
+     "score": 410,
+     "scale": 510,
+     "conf": "历年参考",
+     "rank": 1237,
+     "rank_scope": "石景山区",
+     "rank_src": "xschu 2025石景山一分一段",
+     "rank_note": "本区区排名(该校所在区),非朝阳/非统筹排名;由官方一分一段+录取线换算"
+    }
+   ],
+   "level": "区属公办优质高中（人大附中冠名，西山学校承办）",
+   "style": "2019年7月成立的十二年制公办校，由人大附中冠名、人大附中西山学校具体承办；高中含中美课程合作项目，普高招生面向全市统筹二。",
+   "tags": [
+    "名校分校",
+    "一体化管理",
+    "人大附中体系",
+    "中外合作项目"
+   ],
+   "gaokao": null,
+   "new_school": false,
+   "school_code": "207005",
+   "tongchou_major": {
+    "major_code": "30",
+    "major_name": "普通班",
+    "full": "20700530"
+   }
+  },
+  {
+   "name": "中国人民大学附属中学",
+   "campus": "通州校区(学籍在通州校区)",
+   "district": "海淀",
+   "address": "海淀区中关村大街37号(上课/招生主体);学籍在通州校区,通州区潞城镇",
+   "quota_chaoyang": 11,
+   "boarding": true,
+   "approx_score": null,
+   "faces_chaoyang": true,
+   "confidence": "high(官方图+合计对账,160=各列和)",
+   "sources": [
+    "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87196.html"
+   ],
+   "disagreement": "特殊说明:考生入学后学籍在通州校区;可申请住宿",
+   "lat": 39.91269,
+   "lon": 116.702171,
+   "score_2025_tongzhao": 465,
+   "score_conf": "high",
+   "score_lines": [
+    {
+     "year": 2025,
+     "score": 465,
+     "scale": 510,
+     "conf": "双源确认",
+     "rank": 792,
+     "rank_scope": "通州区",
+     "rank_src": "gaokzx 2025通州一分一段",
+     "rank_note": "本区区排名(该校所在区),非朝阳/非统筹排名;由官方一分一段+录取线换算"
+    }
+   ],
+   "level": "区属公办优质高中（人大附中承办通州三中）",
+   "style": "2016年5月人大附中入驻通州三中组建，与人大附中统一课程设置与教学管理平台、共享资源；入学后学籍在通州校区。",
+   "tags": [
+    "名校分校",
+    "一体化管理",
+    "人大附中体系",
+    "副中心"
+   ],
+   "gaokao": null,
+   "new_school": false,
+   "school_code": "108001",
+   "tongchou_major": {
+    "major_code": "30",
+    "major_name": "普通班",
+    "full": "10800130"
+   }
+  },
+  {
+   "name": "清华大学附属中学",
+   "campus": "将台路校区(学籍在将台路校区,朝阳)",
+   "district": "海淀",
+   "address": "海淀区中关村北大街(招生主体);学籍在将台路校区,朝阳区将台路",
+   "quota_chaoyang": 28,
+   "boarding": true,
+   "approx_score": null,
+   "faces_chaoyang": true,
+   "confidence": "high(官方图+合计对账,150=各列和)",
+   "sources": [
+    "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87196.html"
+   ],
+   "disagreement": "特殊说明:考生入学后学籍在将台路校区;朝阳投放28人为统筹二最大单校朝阳名额",
+   "lat": 39.973652,
+   "lon": 116.488017,
+   "score_2025_tongzhao": null,
+   "score_conf": "待核",
+   "level": "市级示范性高中（清华附中体系校区）",
+   "style": "清华附中下属校区，沿用清华附中办学体系；统招生高一在奥森校区、高二高三在将台路校区就读，学籍在朝阳。",
+   "tags": [
+    "名校校区",
+    "一体化管理",
+    "清华附中体系"
+   ],
+   "gaokao": null,
+   "new_school": false,
+   "school_code": "108003",
+   "tongchou_major": {
+    "major_code": "30",
+    "major_name": "普通班",
+    "full": "10800330"
+   }
+  },
+  {
+   "name": "中央民族大学附属中学",
+   "campus": "本部",
+   "district": "海淀",
+   "address": "海淀区法华寺路甲5号(邮编100081)",
+   "quota_chaoyang": 20,
+   "boarding": false,
+   "approx_score": null,
+   "faces_chaoyang": true,
+   "confidence": "high(官方图+合计对账,102=各列和)",
+   "sources": [
+    "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87196.html"
+   ],
+   "disagreement": "",
+   "lat": 39.950937,
+   "lon": 116.315824,
+   "score_2025_tongzhao": null,
+   "score_conf": "待核",
+   "score_ref": 459,
+   "score_ref_note": "2025网传单源(长期只走统筹/校额,线偏软,谨慎)",
+   "score_lines": [
+    {
+     "year": 2025,
+     "score": 459,
+     "scale": 510,
+     "conf": "历年参考",
+     "rank": 7383,
+     "rank_scope": "海淀区",
+     "rank_src": "gaokzx 2025海淀一分一段",
+     "rank_note": "本区区排名(该校所在区),非朝阳/非统筹排名;由官方一分一段+录取线换算"
+    },
+    {
+     "year": 2024,
+     "score": 617,
+     "scale": 660,
+     "conf": "历年"
+    }
+   ],
+   "level": "市级优质高中教育资源统筹学校（海淀新品牌学校）",
+   "style": "海淀法华寺校本部，以面向少数民族地区跨区域招生为特色；清华领军、北大博雅、同济苗圃人才共育基地；朝阳校区与本部一校两址同法人协同办学。",
+   "tags": [
+    "民族特色",
+    "市级统筹校",
+    "一校两址",
+    "海淀名校"
+   ],
+   "gaokao": null,
+   "new_school": false,
+   "school_code": "208037",
+   "tongchou_major": {
+    "major_code": "30",
+    "major_name": "普通班",
+    "full": "20803730"
+   }
+  },
+  {
+   "name": "北京市第八中学京西校区",
+   "campus": "京西校区",
+   "district": "门头沟",
+   "address": "门头沟区永定镇玉带西街15号(邮编102308)",
+   "quota_chaoyang": 6,
+   "boarding": true,
+   "approx_score": null,
+   "faces_chaoyang": true,
+   "confidence": "high(官方图+合计对账,100=各列和)",
+   "sources": [
+    "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87196.html"
+   ],
+   "disagreement": "早期粗读曾误为8,经整行求和(100)校正为6",
+   "lat": 39.897631,
+   "lon": 116.142453,
+   "score_2025_tongzhao": null,
+   "score_conf": "待核",
+   "level": "市级示范性高中（北京八中体系校区）",
+   "style": "2016年9月开学，位于门头沟永定镇，与北京八中同一法人，建设标准、课程设置、教学管理与八中本部一致，面向全市招收统筹二；含寄宿。",
+   "tags": [
+    "名校校区",
+    "一体化管理",
+    "北京八中体系",
+    "郊区新城",
+    "住宿便利"
+   ],
+   "gaokao": null,
+   "new_school": false,
+   "school_code": "209003",
+   "tongchou_major": {
+    "major_code": "30",
+    "major_name": "普通班",
+    "full": "20900330"
+   }
+  },
+  {
+   "name": "北京第一实验中学",
+   "campus": "通州/宋庄校区",
+   "district": "通州",
+   "address": "通州区宋庄镇汇才南街(邮编101100)",
+   "quota_chaoyang": 4,
+   "boarding": true,
+   "approx_score": null,
+   "faces_chaoyang": true,
+   "confidence": "high(官方图+合计对账,40=各列和)",
+   "sources": [
+    "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87196.html"
+   ],
+   "disagreement": "特殊说明:考生入学后可提供住宿",
+   "lat": 39.928388,
+   "lon": 116.714789,
+   "score_2025_tongzhao": null,
+   "score_conf": "待核",
+   "score_ref": 465,
+   "score_ref_note": "2025首招网传单源",
+   "score_lines": [
+    {
+     "year": 2025,
+     "score": 465,
+     "scale": 510,
+     "conf": "历年参考",
+     "rank": 792,
+     "rank_scope": "通州区",
+     "rank_src": "gaokzx 2025通州一分一段",
+     "rank_note": "本区区排名(该校所在区),非朝阳/非统筹排名;由官方一分一段+录取线换算"
+    }
+   ],
+   "level": "市教委直属公办校（十一学校承办，新建优质校·层次待核）",
+   "style": "市教委直属十五年一贯制公办校，2019年由北京十一学校承办，校址通州宋庄；沿用十一学校分层分类课程与选课走班模式；含1+3项目。",
+   "tags": [
+    "新校",
+    "十一学校承办",
+    "走班制",
+    "副中心"
+   ],
+   "gaokao": null,
+   "new_school": true,
+   "school_code": "212006",
+   "tongchou_major": {
+    "major_code": "30",
+    "major_name": "普通班",
+    "full": "21200630"
+   }
+  },
+  {
+   "name": "北京学校",
+   "campus": "本部",
+   "district": "通州",
+   "address": "通州区潞阳大街35号(邮编101117)",
+   "quota_chaoyang": 3,
+   "boarding": true,
+   "approx_score": null,
+   "faces_chaoyang": true,
+   "confidence": "high(官方图+合计对账,20=各列和)",
+   "sources": [
+    "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87196.html"
+   ],
+   "disagreement": "",
+   "lat": 39.893977,
+   "lon": 116.73716,
+   "score_2025_tongzhao": null,
+   "score_conf": "待核",
+   "score_ref": 465,
+   "score_ref_note": "通州·2025网传单源·历史617",
+   "score_lines": [
+    {
+     "year": 2025,
+     "score": 465,
+     "scale": 510,
+     "conf": "历年参考",
+     "rank": 792,
+     "rank_scope": "通州区",
+     "rank_src": "gaokzx 2025通州一分一段",
+     "rank_note": "本区区排名(该校所在区),非朝阳/非统筹排名;由官方一分一段+录取线换算"
+    },
+    {
+     "year": 2024,
+     "score": 617,
+     "scale": 660,
+     "conf": "历年"
+    },
+    {
+     "year": 2023,
+     "score": 617,
+     "scale": 660,
+     "conf": "历年"
+    }
+   ],
+   "level": "市教委直属优质公办校（十二年一贯制，新建名校·层次待核）",
+   "style": "市教委直属十二年一贯制公办校，位于通州副中心潞城镇，规划小学48班/初中30班/高中30班；副中心重点配套优质校，原拟由人大附中通州学校筹建后定名北京学校。",
+   "tags": [
+    "新校",
+    "市教委直属",
+    "一贯制",
+    "副中心"
+   ],
+   "gaokao": null,
+   "new_school": true,
+   "school_code": "212008",
+   "tongchou_major": {
+    "major_code": "30",
+    "major_name": "普通班",
+    "full": "21200830"
+   }
+  },
+  {
+   "name": "北京师范大学第二附属中学未来科学城学校",
+   "campus": "未来科学城校区",
+   "district": "昌平",
+   "address": "昌平区北七家镇未来科学城南区(C77地块)(邮编102209)",
+   "quota_chaoyang": 12,
+   "boarding": "待核",
+   "approx_score": null,
+   "faces_chaoyang": true,
+   "confidence": "high(官方图+合计对账,60=各列和)",
+   "sources": [
+    "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87196.html"
+   ],
+   "disagreement": "特殊说明为'与中央戏剧学院联合培养',无住宿标注故boarding待核",
+   "lat": 40.105847,
+   "lon": 116.458674,
+   "score_2025_tongzhao": null,
+   "score_conf": "待核",
+   "score_lines": [
+    {
+     "year": 2024,
+     "score": 609,
+     "scale": 660,
+     "conf": "历年"
+    },
+    {
+     "year": 2023,
+     "score": 614,
+     "scale": 660,
+     "conf": "历年"
+    }
+   ],
+   "level": "区属公办优质完全中学（北师大二附中与昌平区联办）",
+   "style": "北师大二附中与昌平区教委联合创办的公办完全中学，位于未来科学城核心区；高中设未来科学英才班，与央企、研究院联合开设STEM课程。",
+   "tags": [
+    "名校分校",
+    "新校",
+    "科技特色",
+    "未来科学城",
+    "住宿便利"
+   ],
+   "gaokao": null,
+   "new_school": true,
+   "school_code": "214012",
+   "tongchou_major": {
+    "major_code": "30",
+    "major_name": "普通班",
+    "full": "21401230"
+   }
+  },
+  {
+   "name": "北京实验学校",
+   "campus": "平谷校区",
+   "district": "平谷",
+   "address": "平谷区建设街204号(邮编101200)",
+   "quota_chaoyang": 0,
+   "boarding": "待核",
+   "approx_score": null,
+   "faces_chaoyang": false,
+   "confidence": "high(官方图+合计对账,50=各列和,朝阳列空白)",
+   "sources": [
+    "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87196.html"
+   ],
+   "disagreement": "朝阳列空白,不投朝阳",
+   "lat": 40.135735,
+   "lon": 117.117669,
+   "score_2025_tongzhao": null,
+   "score_conf": "待核",
+   "level": "市级二级统筹学校（北京实验学校教育集团成员·郊区优质校）",
+   "style": "2015年由平谷整合四校组建的十五年一贯制实验校，纳入北京实验学校教育集团（海淀本部·原立新学校），集团一个法人校长统筹、推行魅力教育。",
+   "tags": [
+    "名校分校",
+    "一体化管理",
+    "魅力教育",
+    "郊区新城"
+   ],
+   "gaokao": null,
+   "new_school": false,
+   "school_code": "217001",
+   "tongchou_major": {
+    "major_code": "30",
+    "major_name": "普通班",
+    "full": "21700130"
+   }
+  },
+  {
+   "name": "北京市平谷区马坊实验中学",
+   "campus": "本部",
+   "district": "平谷",
+   "address": "平谷区马坊镇金河北街101号院(邮编101204)",
+   "quota_chaoyang": 1,
+   "boarding": "待核",
+   "approx_score": null,
+   "faces_chaoyang": true,
+   "confidence": "high(官方图+合计对账,30=各列和)",
+   "sources": [
+    "https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87196.html"
+   ],
+   "disagreement": "",
+   "lat": 40.063566,
+   "lon": 117.006565,
+   "score_2025_tongzhao": null,
+   "score_conf": "待核",
+   "level": "区属公办高中（郊区一般公办校·层次待核）",
+   "style": "平谷区公办中学，含高中部，面向全市招收统筹二，招收科技、体育特长生；郊区新城校，具体层次以官方为准。",
+   "tags": [
+    "郊区新城",
+    "公办高中",
+    "科技特长"
+   ],
+   "gaokao": null,
+   "new_school": false,
+   "school_code": "217002",
+   "tongchou_major": {
+    "major_code": "30",
+    "major_name": "普通班",
+    "full": "21700230"
+   }
+  }
+ ],
+ "totals": {
+  "tongchou_yi_schools": 15,
+  "tongchou_yi_chaoyang_schools": 15,
+  "tongchou_yi_chaoyang_quota_sum": 62,
+  "tongchou_er_schools": 11,
+  "tongchou_er_chaoyang_schools": 10,
+  "tongchou_er_chaoyang_quota_sum": 91
+ },
+ "tongchou_san_2025": "取消",
+ "notes": "(1) 权威源仅有 bjeea 官方两张图片表;全网未找到含'朝阳列'的独立第三方文字转录,故无法做真正意义上的两源文字交叉;改用'官方图双读+整行各列数字之和必须等于该校合计'的算术对账作为独立自检,逐校均对账成功(统筹一各校合计相加=405,与官方公布的统筹一总数405一致;统筹二各校合计相加=912)。(2) 用户预设'本区不向本区投/朝阳本区校朝阳列=0'被官方表推翻:统筹一中八十中(朝阳)朝阳列=5、陈经纶(朝阳)朝阳列=3,均确有朝阳名额。(3) 第三方文章(zhongkaobj等)流传的'八十中25人/陈经纶23人面向朝阳'是把'合计'误当朝阳名额,系错误,已弃用。(4) approx_score(统招近似线/区排名)未找到可靠逐校数据,按'宁缺毋滥'留 null。(5) 住宿:统筹一仅五中(可申请)、师大附中/师大实验(外区生可申请)有标注;统筹二多校标注'可申请/可提供住宿',师大二附未来科学城/北京实验/马坊无住宿标注故记待核。(6) 学籍/上课校区注意:统筹二人大附中学籍在通州校区、清华附中学籍在将台路校区(实际在朝阳)。",
+ "global_confidence": "high — 所有朝阳名额数字均经官方图双读+整行合计算术对账通过;唯一弱点是缺乏独立第三方文字源(全网只转载同一官方图),故严格意义上的'两源文字交叉'不可得,以算术自检替代。",
+ "major_codes_source": {
+  "desc": "专业(班)代码补抽:统筹一=学校代码+20,统筹二=学校代码+30(普通班,全表统一)",
+  "images": [
+   "87197.html (统筹一,2图)",
+   "87196.html (统筹二,2图)"
+  ],
+  "method": "腾讯RecognizeTableAccurateOCR + 官方图视觉 + 原json三方核验 (2025-06)",
+  "note": "2026计划7月初发布后专业码全部作废重编,须刷新"
+ }
 }
