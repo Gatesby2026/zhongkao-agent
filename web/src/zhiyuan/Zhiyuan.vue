@@ -2742,4 +2742,30 @@ const tcOptions: string[] = []
   .f-rank, .f-home, .f-mode, .f-km { flex: 1 1 100%; width: auto; }
   .go { flex: 1 1 100%; width: 100%; }
 }
+/* ── 手机优化(≤560):查学校表瘦身、触控热区、头部压缩、安全区 ── */
+@media (max-width: 560px) {
+  .page { padding: 10px 10px calc(10px + env(safe-area-inset-bottom)); }
+  .hero h1 { font-size: 19px; }
+  .hero .sub { font-size: 12px; line-height: 1.55; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  #zmap { height: 56vh; min-height: 300px; }
+  /* 触控热区 ≥38px */
+  .tab { min-height: 40px; }
+  .ex-chip, .lchip, .chip { min-height: 34px; display: inline-flex; align-items: center; }
+  .op { min-width: 34px; min-height: 34px; }
+  .mchip { min-height: 32px; }
+  /* 查学校表:首列校名固定,隐藏次要列(层次/渠道/通勤/住),保留 校名/类型/档位/关键 */
+  .ex-table { font-size: 12px; table-layout: fixed; width: 100%; min-width: 0; }
+  .ex-table th, .ex-table td { padding: 6px 6px; white-space: normal; word-break: break-word; min-width: 0; max-width: none; overflow: hidden; }
+  .ex-table .t-name { width: 40%; }
+  .ex-table th:first-child, .ex-table td:first-child {
+    position: sticky; left: 0; background: #fff; z-index: 1; box-shadow: 1px 0 0 var(--gray-100); }
+  .ex-table thead th:nth-child(3), .ex-table tbody td:nth-child(3),
+  .ex-table thead th:nth-child(5), .ex-table tbody td:nth-child(5),
+  .ex-table thead th:nth-child(7), .ex-table tbody td:nth-child(7),
+  .ex-table thead th:nth-child(8), .ex-table tbody td:nth-child(8) { display: none; }
+  /* 草表行:换行不挤,下拉占宽 */
+  .urow { flex-wrap: wrap; }
+  .school-sel.uni-sel { flex: 1 1 100%; width: 100%; }
+  .uni-majors { width: 100%; }
+}
 </style>
