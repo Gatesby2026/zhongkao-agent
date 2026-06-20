@@ -806,15 +806,13 @@ function scoreBand(line: number | null): { label: string; cls: string; d: number
   if (d >= -20) return { label: '搏', cls: 'tj-bo', d }
   return { label: '够不上', cls: 'tj-no', d }
 }
-function tcJudge(s: any): { label: string; cls: string; d: number | null; line: number | null; ref: boolean } {
-  const conf = typeof s.score_2025_tongzhao === 'number' ? s.score_2025_tongzhao : null
-  const ref = typeof s.score_ref === 'number' ? s.score_ref : null
-  const line = conf ?? ref
-  const isRef = conf == null && ref != null
+function tcJudge(s: any): { label: string; cls: string; d: number | null; line: number | null; ref: boolean; conf?: string; basis?: string } {
+  // 用后端预估的"统筹线"(统招线−折让 / 控制线兜底),而非统招线本身(否则系统性高估门槛、漏掉机会)
+  const line = typeof s.est_tongchou_line === 'number' ? s.est_tongchou_line : null
+  const conf = s.est_line_conf as string | undefined
   if (line == null || estScore.value == null) return { label: '线待核', cls: 'tj-unk', d: null, line: null, ref: false }
   const band = scoreBand(line)
-  const d = band.d
-  return { ...band, d, line, ref: isRef }
+  return { ...band, d: band.d, line, ref: conf !== 'official', conf, basis: s.est_line_basis }
 }
 
 // ───── 统一详情面板（§12）：把 schools_unified 记录声明式渲染 ─────
@@ -851,10 +849,14 @@ function chDisp(ch: any): { name: string; band: string; cls: string; detail: str
     name: '统招', band: ch.band || '—', cls: PUB_BAND_CLS[ch.band] || 'tj-unk',
     detail: '', caveat: ch.caveat }  // 位次统一在"📍2026预估"块显示,此处只留档位,避免重复
   if (k === 'city_score') {
-    const b = scoreBand(ch.metric.refLine ?? null)
+    const est = ch.metric.estLine ?? ch.metric.refLine ?? null
+    const b = scoreBand(est)
+    const conf = ch.metric.estConf
+    const confTag = conf === 'official' ? '' : conf === '控制线兜底' ? '·控制线兜底⚠️' : conf === '网传单源' ? '·网传估' : ''
     return { name: '市级统筹' + (ch.tier ? '·' + ch.tier : ''), band: b.label, cls: b.cls,
-      detail: (b.d != null ? `统招线${ch.metric.refLine}·Δ${b.d > 0 ? '+' : ''}${b.d}` : '统招线待核')
-        + (ch.quota ? ` · 投朝阳${ch.quota}名` : ''), caveat: ch.caveat }
+      detail: (b.d != null ? `估统筹线≈${est}·Δ${b.d > 0 ? '+' : ''}${b.d}${confTag}` : '信息不足·建议电话核实')
+        + (ch.quota ? ` · 投朝阳${ch.quota}名` : ''),
+      caveat: ch.metric.estBasis || ch.caveat }
   }
   if (k === 'in_school_rank') {
     const tag = ch._xedtag || 'unknown'

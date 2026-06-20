@@ -162,10 +162,13 @@ def build_unified(result: dict) -> list:
         for t in tc.get(tier_key, []):
             if not t.get("faces_chaoyang"):
                 continue
-            line = t.get("score_2025_tongzhao") if isinstance(t.get("score_2025_tongzhao"), (int, float)) else t.get("score_ref")
-            ch = _ch("市级统筹", None, "city_score", refLine=line, lines=t.get("score_lines"),
-                     quota=t.get("quota_chaoyang"),
-                     caveat="比的是统招线(非统筹实际线,统筹线通常更低,偏保守);band 前端按估分研判")
+            # 估统筹线(统招线−20 或 控制线兜底)由 recommend.tongchou_with_dist 预先算好
+            ch = _ch("市级统筹", None, "city_score",
+                     refLine=t.get("est_tongchou_line"),
+                     zhaoLine=(t.get("score_2025_tongzhao") if isinstance(t.get("score_2025_tongzhao"), (int, float)) else t.get("score_ref")),
+                     estBasis=t.get("est_line_basis"), estConf=t.get("est_line_conf"),
+                     lines=t.get("score_lines"), quota=t.get("quota_chaoyang"),
+                     caveat="估统筹线=统招线−折让/控制线兜底,非官方实际线;band 按你估分研判")
             ch["tier"] = tier
             host = by_name.get(_norm(t["name"]))
             if host and t.get("district") == "朝阳":      # 本区校：并入公办记录
