@@ -8,12 +8,13 @@ import time
 
 from fastapi import APIRouter, Body, Depends, HTTPException, Request, Response
 
-from . import jwt_util, sms, store
+from . import email as mailer, jwt_util, sms, store
 from .deps import COOKIE_NAME, get_current_user
 
 router = APIRouter(prefix="/api/auth", tags=["auth"])
 
 PHONE_RE = re.compile(r"^1[3-9]\d{9}$")
+EMAIL_RE = re.compile(r"^[^@\s]+@[^@\s]+\.[^@\s]+$")
 COOKIE_TTL = 30 * 24 * 3600
 
 
@@ -25,14 +26,25 @@ def _norm_phone(raw: str) -> str:
     return s
 
 
+def _classify(account: str):
+    """识别账号类型 → ('phone'|'email'|None, 归一化 key)。"""
+    a = (account or "").strip()
+    if EMAIL_RE.match(a):
+        return "email", a.lower()
+    p = _norm_phone(a)
+    if PHONE_RE.match(p):
+        return "phone", p
+    return None, a
+
+
 def _client_ip(req: Request) -> str | None:
     return (req.headers.get("x-real-ip")
             or (req.headers.get("x-forwarded-for") or "").split(",")[0].strip()
             or (req.client.host if req.client else None))
 
 
-def _set_session_cookie(resp: Response, uid: int, phone: str) -> None:
-    token = jwt_util.issue({"uid": uid, "phone": phone}, ttl=COOKIE_TTL)
+def _set_session_cookie(resp: Response, uid: int) -> None:
+    token = jwt_util.issue({"uid": uid}, ttl=COOKIE_TTL)
     resp.set_cookie(
         COOKIE_NAME, token, max_age=COOKIE_TTL, httponly=True, samesite="lax",
         secure=os.environ.get("AUTH_COOKIE_SECURE", "1") == "1", path="/",
@@ -40,42 +52,69 @@ def _set_session_cookie(resp: Response, uid: int, phone: str) -> None:
 
 
 def _user_public(u: dict) -> dict:
-    return {"id": u["id"], "phone": u["phone"], "nickname": u.get("nickname")}
+    return {"id": u["id"], "phone": u.get("phone"),
+            "email": u.get("email"), "nickname": u.get("nickname")}
 
 
-@router.post("/sms/send")
-def sms_send(req: Request, phone: str = Body(..., embed=True)):
-    phone = _norm_phone(phone)
-    if not PHONE_RE.match(phone):
-        raise HTTPException(status_code=400, detail="手机号格式不正确")
+def _do_send(req: Request, account: str) -> dict:
+    kind, key = _classify(account)
+    if not kind:
+        raise HTTPException(status_code=400, detail="请输入正确的手机号或邮箱")
     now = time.time()
-    if now - store.last_code_ts(phone) < sms.RESEND_COOLDOWN_SEC:
+    if now - store.last_code_ts(key) < sms.RESEND_COOLDOWN_SEC:
         raise HTTPException(status_code=429, detail="发送过于频繁,请 60 秒后再试")
     ip = _client_ip(req)
-    n_phone, n_ip = store.count_codes_since(phone, ip, now - 86400)
-    if n_phone >= sms.MAX_PER_PHONE_PER_DAY:
-        raise HTTPException(status_code=429, detail="该号码今日验证码次数已达上限")
+    n_acc, n_ip = store.count_codes_since(key, ip, now - 86400)
+    if n_acc >= sms.MAX_PER_PHONE_PER_DAY:
+        raise HTTPException(status_code=429, detail="该账号今日验证码次数已达上限")
     if n_ip >= sms.MAX_PER_IP_PER_DAY:
         raise HTTPException(status_code=429, detail="操作过于频繁,请稍后再试")
     code = f"{random.randint(0, 999999):06d}"
-    store.save_code(phone, code, sms.CODE_TTL_SEC, ip)
-    ok, msg = sms.send_code(phone, code)
+    store.save_code(key, code, sms.CODE_TTL_SEC, ip)
+    if kind == "email":
+        ok, msg = mailer.send_code(key, code)
+        label = "邮件"
+    else:
+        ok, msg = sms.send_code(key, code)
+        label = "短信"
     if not ok:
-        raise HTTPException(status_code=502, detail=f"短信发送失败:{msg}")
-    return {"ok": True, "cooldown": sms.RESEND_COOLDOWN_SEC}
+        raise HTTPException(status_code=502, detail=f"{label}发送失败:{msg}")
+    return {"ok": True, "cooldown": sms.RESEND_COOLDOWN_SEC, "channel": kind}
+
+
+def _do_verify(resp: Response, account: str, code: str) -> dict:
+    kind, key = _classify(account)
+    code = (code or "").strip()
+    if not kind or not code.isdigit():
+        raise HTTPException(status_code=400, detail="参数不正确")
+    if not store.verify_code(key, code, sms.MAX_VERIFY_ATTEMPTS):
+        raise HTTPException(status_code=400, detail="验证码错误或已过期")
+    user = (store.upsert_user_by_email(key) if kind == "email"
+            else store.upsert_user_by_phone(key))
+    _set_session_cookie(resp, user["id"])
+    return {"ok": True, "user": _user_public(user)}
+
+
+# 统一端点:手机号 / 邮箱自动识别
+@router.post("/code/send")
+def code_send(req: Request, account: str = Body(..., embed=True)):
+    return _do_send(req, account)
+
+
+@router.post("/code/verify")
+def code_verify(resp: Response, account: str = Body(...), code: str = Body(...)):
+    return _do_verify(resp, account, code)
+
+
+# 兼容旧前端(只传 phone)
+@router.post("/sms/send")
+def sms_send(req: Request, phone: str = Body(..., embed=True)):
+    return _do_send(req, phone)
 
 
 @router.post("/sms/verify")
-def sms_verify(resp: Response,
-               phone: str = Body(...), code: str = Body(...)):
-    phone, code = _norm_phone(phone), (code or "").strip()
-    if not PHONE_RE.match(phone) or not code.isdigit():
-        raise HTTPException(status_code=400, detail="参数不正确")
-    if not store.verify_code(phone, code, sms.MAX_VERIFY_ATTEMPTS):
-        raise HTTPException(status_code=400, detail="验证码错误或已过期")
-    user = store.upsert_user_by_phone(phone)
-    _set_session_cookie(resp, user["id"], phone)
-    return {"ok": True, "user": _user_public(user)}
+def sms_verify(resp: Response, phone: str = Body(...), code: str = Body(...)):
+    return _do_verify(resp, phone, code)
 
 
 @router.get("/me")

@@ -268,7 +268,7 @@ async function doLogout() {
 
 onMounted(async () => {
   try { coverage.value = await api.coverage() } catch {}
-  try { const me = await fetchMe('xueqing'); if (me?.user) userPhone.value = me.user.phone } catch {}
+  try { const me = await fetchMe('xueqing'); if (me?.user) userPhone.value = me.user.phone || me.user.email || '' } catch {}
   loadHistory()
 })
 
@@ -361,7 +361,7 @@ const wrongByNum = computed(() => {
 <template>
 <div class="app-shell">
     <div v-if="userPhone" class="acct-bar">
-      <span class="acct-ic">{{ userPhone.slice(-4, -3) }}</span>
+      <span class="acct-ic">{{ (userPhone[0] || '·').toUpperCase() }}</span>
       <span class="acct-phone">{{ userPhone.replace(/(\d{3})\d{4}(\d{4})/, '$1****$2') }}</span>
       <button type="button" class="acct-logout" @click="doLogout">退出登录</button>
     </div>

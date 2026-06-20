@@ -238,7 +238,7 @@ const userPhone = ref('')
 async function loadProfile() {
   try {
     const me = await fetchMe()
-    if (me?.user) userPhone.value = me.user.phone
+    if (me?.user) userPhone.value = me.user.phone || me.user.email || ''
     const p = (me?.profile) ?? (await getProfile().then(r => r.profile).catch(() => null))
     if (!p) return
     for (const k of ['rank', 'home', 'mode', 'max_km', 'boarding', 'identity', 'risk', 'orient', 'nonpub'] as const) {
@@ -1406,7 +1406,7 @@ const tcOptions: string[] = []
   <div class="page">
     <header class="hero">
       <div v-if="userPhone" class="acct">
-        <span class="acct-ic">{{ userPhone.slice(-4, -3) }}</span>
+        <span class="acct-ic">{{ (userPhone[0] || '·').toUpperCase() }}</span>
         <span class="acct-phone">{{ userPhone.replace(/(\d{3})\d{4}(\d{4})/, '$1****$2') }}</span>
         <button type="button" class="acct-logout" @click="doLogout">退出登录</button>
       </div>

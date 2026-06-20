@@ -20,12 +20,14 @@ SCHEMA = """
 CREATE TABLE IF NOT EXISTS users (
   id            INTEGER PRIMARY KEY AUTOINCREMENT,
   phone         TEXT UNIQUE,
+  email         TEXT,
   wx_unionid    TEXT,
   wx_openid     TEXT,
   nickname      TEXT,
   created_at    REAL NOT NULL,
   last_login_at REAL
 );
+CREATE UNIQUE INDEX IF NOT EXISTS idx_users_email ON users(email);
 CREATE TABLE IF NOT EXISTS login_codes (
   id          INTEGER PRIMARY KEY AUTOINCREMENT,
   phone       TEXT NOT NULL,
@@ -58,6 +60,11 @@ def init_db() -> None:
     DB_PATH.parent.mkdir(parents=True, exist_ok=True)
     with _conn() as c:
         c.executescript(SCHEMA)
+        # 旧库迁移:补 email 列(executescript 的 CREATE TABLE IF NOT EXISTS 不会改已存在表)
+        cols = [r[1] for r in c.execute("PRAGMA table_info(users)")]
+        if "email" not in cols:
+            c.execute("ALTER TABLE users ADD COLUMN email TEXT")
+            c.execute("CREATE UNIQUE INDEX IF NOT EXISTS idx_users_email ON users(email)")
 
 
 # ---------- 验证码 ----------
@@ -142,6 +149,23 @@ def upsert_user_by_phone(phone: str) -> dict:
             (phone, now, now),
         )
         return {"id": cur.lastrowid, "phone": phone,
+                "created_at": now, "last_login_at": now}
+
+
+def upsert_user_by_email(email: str) -> dict:
+    now = time.time()
+    with _conn() as c:
+        row = c.execute("SELECT * FROM users WHERE email=?", (email,)).fetchone()
+        if row:
+            c.execute("UPDATE users SET last_login_at=? WHERE id=?", (now, row["id"]))
+            u = dict(row)
+            u["last_login_at"] = now
+            return u
+        cur = c.execute(
+            "INSERT INTO users(email, created_at, last_login_at) VALUES (?,?,?)",
+            (email, now, now),
+        )
+        return {"id": cur.lastrowid, "email": email,
                 "created_at": now, "last_login_at": now}
 
 

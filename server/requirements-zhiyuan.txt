@@ -3,5 +3,6 @@
 fastapi
 uvicorn[standard]
 pyyaml
-# 登录:阿里云短信(JWT 用 stdlib 自实现,不引 PyJWT)
+# 登录:阿里云短信 + 邮件推送(JWT 用 stdlib 自实现,不引 PyJWT)
 alibabacloud_dysmsapi20170525
+alibabacloud_dm20151123

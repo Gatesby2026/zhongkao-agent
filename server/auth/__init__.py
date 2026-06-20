@@ -16,4 +16,4 @@
     @app.get("/x")
     def x(user = Depends(get_current_user)): ...
 """
-from . import store, jwt_util, sms, deps, router  # noqa: F401
+from . import store, jwt_util, sms, email, deps, router  # noqa: F401
