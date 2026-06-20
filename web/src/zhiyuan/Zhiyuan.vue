@@ -242,6 +242,8 @@ function pick(p: Point, mk: any) {
   const el = mk && mk._icon
   if (_selEl && _selEl !== el) _selEl.classList.remove('mk-sel')
   if (el) { el.classList.add('mk-sel'); _selEl = el }
+  // 切换学校:详情面板/底部弹层滚回顶部(同一 DOM 复用,否则停在上一个的滚动位置)
+  nextTick(() => document.querySelectorAll('.detail-panel').forEach((d) => { (d as HTMLElement).scrollTop = 0 }))
 }
 function closeDetail() {
   selectedPoint.value = null; selectedTc.value = null; selectedNew.value = null
