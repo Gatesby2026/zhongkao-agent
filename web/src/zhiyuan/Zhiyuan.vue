@@ -361,7 +361,11 @@ function renderMarkers(fit = false) {
       if (layers.gongban) bounds.push([lat, lon])
     } else if (ty === '市级统筹') {
       const ch = (r.channels || []).find((c: any) => c.metric?.kind === 'city_score')
-      const b = scoreBand(ch?.metric?.refLine ?? null)
+      const m = ch?.metric || {}
+      const entry = m.entryRank ?? null      // 朝阳口径统筹门槛(录取位次)
+      const my = Number(form.rank) || 0
+      const b = m.belowControl ? { label: '不值', cls: 'tj-no' }
+        : (entry && my ? rankBand(my, entry) : { label: '', cls: 'tj-unk' })
       const color = tcColor[b.cls] || '#2980b9'
       const big = b.cls === 'tj-wen' || b.cls === 'tj-chong' || b.cls === 'tj-bo'
       const mk = L.marker([lat, lon], { icon: big ? pin(color, b.label, !!r.boarding) : smallIcon(color, !!r.boarding) })
