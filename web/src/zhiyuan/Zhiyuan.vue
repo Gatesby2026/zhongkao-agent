@@ -1432,7 +1432,7 @@ const tcOptions: string[] = []
         </label>
         <datalist id="xedSchoolListMain"><option v-for="r in (xedBlock ? xedBlock.rows : [])" :key="r.code" :value="r.name" /></datalist>
         <label class="fld fld-home">家庭住址 <small>留空只看全区分布</small>
-          <input type="text" v-model="form.home" placeholder="如 朝阳区大屯金泉家园" />
+          <input type="text" v-model="form.home" placeholder="如 朝阳区紫玉山庄" />
         </label>
 
         <div class="fgrp-title">通勤与住宿</div>
@@ -2849,10 +2849,12 @@ const tcOptions: string[] = []
   .ex-table thead th:nth-child(5), .ex-table tbody td:nth-child(5),
   .ex-table thead th:nth-child(7), .ex-table tbody td:nth-child(7),
   .ex-table thead th:nth-child(8), .ex-table tbody td:nth-child(8) { display: none; }
-  /* 草表行:序号 + 学校下拉同一行(下拉自适应收缩),专业/操作换到下一行 */
-  .urow { flex-wrap: wrap; }
+  /* 草表行:第一行=序号+学校下拉(下拉 basis 0+grow 填满本行剩余,保证可见);专业、操作图标各自换行 */
+  .urow { flex-wrap: wrap; align-items: center; }
   .school-sel.uni-sel { flex: 1 1 0; width: auto; min-width: 0; }
-  .uni-majors { width: 100%; }
+  .uni-majors { flex-basis: 100%; min-width: 0; }
+  .uni-empty { flex-basis: 100%; }
+  .urow-ops { flex: 0 0 100%; justify-content: flex-end; }
   /* 地图选中学校 → 底部弹层(不再上下来回滑);未选中则不占位,地图占满 */
   .map-detail { display: block; }
   .detail-panel { display: none; }
