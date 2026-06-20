@@ -827,16 +827,19 @@ function cityScoreBand(entry: number | null | undefined, below: boolean, my: num
   if (!entry || !my) return noLine
   return rankBand(my, entry)
 }
+// 远郊区:即便接受住宿,对朝阳家庭也是"需长期寄宿+周末难回"的重负 → 默认不自动填(可手动加)
+const FAR_DISTRICTS = new Set(['门头沟', '平谷', '昌平', '怀柔', '密云', '延庆', '顺义', '房山'])
 function tcJudge(s: any): any {
   // 朝阳口径(与面板/地图/查学校同源):门槛位次 vs 你的区排 → 冲稳保;档次<门槛(线<控制线)→不值。
   const R = Number(form.rank) || 0
   const entry = typeof s.tongchou_entry_cy?.rank === 'number' ? s.tongchou_entry_cy.rank : null
   const equiv = typeof s.cy_equiv === 'number' ? s.cy_equiv : null
   const below = !!s.below_control
+  const far = FAR_DISTRICTS.has(s.district)
   const b = cityScoreBand(entry, below, R)
-  // worth=真 upgrade:你统招够不上该档(R>档次) 且 够得着门槛(非"够不上")
-  const worth = !below && entry != null && R > 0 && R <= entry * 1.15 && equiv != null && R > equiv
-  return { ...b, entry, equiv, below, worth }
+  // worth=真 upgrade:够得着门槛(含搏) 且 档次"显著"优于你(≥8%,非平级微涨),非不值
+  const worth = !below && entry != null && R > 0 && R <= entry * 1.15 && equiv != null && equiv <= R * 0.92
+  return { ...b, entry, equiv, below, far, worth }
 }
 
 // ───── 统一详情面板（§12）：把 schools_unified 记录声明式渲染 ─────
@@ -1206,9 +1209,11 @@ function prefillTongchou() {
   // 排除稳/保（你高于其线=会被锁进比你弱的外区校=陷阱）与线待核。排序从高到低：够不上→搏→冲。
   // 入选优先级：搏(更值得拼)→冲→够不上(仅兜底回填空位)；展示按从高到低（够不上→搏→冲）
   // 通勤同口径(跟随住宿勾选)：≤上限 或 (接受住宿 且 该校提供住宿)；远校无住宿=没法住校又通勤不了→排除
-  // 只自动填"够一够的真 upgrade"(你统招够不上该档、统筹够得着、非不值、通勤可达),按档次最好的优先
+  // 只自动填"够一够的真 upgrade":档次显著优于你 + 够得着门槛 + 非不值 + 非远郊(需寄宿重负·默认不推)
+  // + 有朝阳名额 + 通勤可达。远郊/平级校仍在下拉里(可手动加),但不进默认草表,免得朝阳娃被默认锁去郊区。
   const cand = tcEligible.value
-    .filter(e => e.j.worth && e.j.label !== '够不上' && reachByCommute(e.s.dist?.km, !!e.s.boarding))
+    .filter(e => e.j.worth && !e.j.far && (e.s.quota_chaoyang || 0) > 0
+                 && e.j.label !== '够不上' && reachByCommute(e.s.dist?.km, !!e.s.boarding))
     .sort((a, b) => (a.s.cy_equiv ?? 9e9) - (b.s.cy_equiv ?? 9e9))
     .slice(0, 4)
   draftTongchou.value = Array.from({ length: 4 }, (_, i) =>
@@ -1240,7 +1245,8 @@ function tcReason(key: string | null): { label: string; cls: string; headline: s
     ? '⚠️校档次低于门槛(线<控制线460)：朝阳走统筹需≈460分反不如统招，通常不值。'
     : j.worth
       ? '够一够外区名校：你统招够不上该档、统筹够得着；没中自动落统招(无损失)；⚠️一旦录取即锁定、放弃统招——确认更想去再保留。'
-      : '⚠️你统招本可达该档(或够不上门槛)：走统筹通常不划算/不可达，慎填。'
+      : '⚠️你统招本可达该档(或档次未显著高于你/够不上门槛)：走统筹通常不划算/不可达，慎填。'
+  if (j.far) caveat = '⚠️远郊(' + s.district + ')·距朝阳远、需长期寄宿、周末难回：默认不自动填,手动选请确认你确实愿意送孩子去寄宿。' + caveat
   caveat += '朝阳口径门槛=外区线分映射+经验折让(估，非官方线)；朝外能否报 / 分到名额须查简章。'
   if (e.tier === '统筹一') caveat = '统筹一=名校本部、门槛高；' + caveat
   return { label, cls, headline, factors, caveat }
@@ -2009,8 +2015,11 @@ const tcOptions: string[] = []
             </div>
             <div v-if="tcEligible.length" class="draft-actions" style="margin:6px 0">
               <button class="ghost" @click="prefillTongchou">↻ 按研判重填</button>
-              <span class="xed-src" style="margin:0">已按 稳→冲→搏 自动填入（可改/清空；专业手填）</span>
+              <span class="xed-src" style="margin:0">仅自动填"档次显著高于你 + 够得着 + 非远郊"的统筹（可改/清空；专业手填）</span>
             </div>
+            <p v-if="tcEligible.length && !tcSummary.filled" class="us-tip" style="margin:6px 0">
+              ⚠️ 你这个位次<b>没有"既够得着又值得"的市级统筹</b>：够得着的多为远郊/平级校（走统筹反不如朝阳统招、且需寄宿锁定），值得的城区名校（人朝/四中/民大附等）门槛又够不上。<b>建议统筹这栏不填或谨慎填，把重心放在朝阳本区统招 + 校额到校。</b>下拉里仍可手动添加远郊/平级校（确认你确实愿意送孩子去寄宿再填）。
+            </p>
             <div v-if="tcEligible.length" class="uni-list">
               <div v-for="(s, i) in draftTongchou" :key="i" class="uslot" :class="{ filled: s.school }">
                 <div class="urow">
