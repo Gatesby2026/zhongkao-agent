@@ -810,13 +810,14 @@ const tcEr = computed<any[]>(() => (tongchou.value?.tongchou_er || [])
 const estScore = computed<number | null>(() => result.value ? (result.value as any).est_score : null)
 // 分数→档位（估分 vs 某条统招线）。统筹实际线通常比统招线低(约20-30)，故"可够"放宽到线下20。
 // 稳 Δ≥+10 / 冲 −10~+10 / 搏 −20~−10 / 够不上 <−20 / 线待核(无线)。统筹/校额共用。
-// 位次档判定:你的区排 my vs 门槛位次 ref(越小越好)。统筹/朝阳口径共用。
+// 位次档判定:你的区排 my vs 门槛位次 ref(越小越好)。**与统招 classify 同一套阈值/标签**
+// (SAFETY=0.15 / 0 / REACH=-0.25),统招·统筹·面板·地图·查学校全口径一致;不再有"搏"。
 function rankBand(my: number, ref: number): { label: string; cls: string } {
   if (!my || !ref) return { label: '待核', cls: 'tj-unk' }
-  const r = (ref - my) / ref          // >0 你领先门槛
-  if (r >= 0.15) return { label: '稳', cls: 'tj-wen' }
-  if (r >= 0) return { label: '冲', cls: 'tj-chong' }
-  if (r >= -0.15) return { label: '搏', cls: 'tj-bo' }
+  const margin = (ref - my) / ref                                      // >0 你领先门槛=更稳
+  if (margin >= 0.15) return { label: '保', cls: 'tj-wen' }
+  if (margin >= 0) return { label: '稳', cls: 'tj-wen' }
+  if (margin >= -0.25) return { label: '冲', cls: 'tj-chong' }
   return { label: '够不上', cls: 'tj-no' }
 }
 // 市级统筹城市口径档位(面板/地图/草表/查学校共用):校档次低于门槛(线<控制线)→不值;
@@ -837,8 +838,8 @@ function tcJudge(s: any): any {
   const below = !!s.below_control
   const far = FAR_DISTRICTS.has(s.district)
   const b = cityScoreBand(entry, below, R)
-  // worth=真 upgrade:够得着门槛(含搏) 且 档次"显著"优于你(≥8%,非平级微涨),非不值
-  const worth = !below && entry != null && R > 0 && R <= entry * 1.15 && equiv != null && equiv <= R * 0.92
+  // worth=真 upgrade:够得着门槛(非"够不上",同统招口径) 且 档次"显著"优于你(≥8%,非平级微涨),非不值
+  const worth = !below && b.label !== '够不上' && b.label !== '待核' && equiv != null && equiv <= R * 0.92
   return { ...b, entry, equiv, below, far, worth }
 }
 
@@ -929,7 +930,7 @@ const EX_TYPES = [
 ]
 const exType = ref('all')
 const exChannel = ref<'all' | 'tc' | 'xed'>('all')   // 渠道：全部 / 可走统筹 / 可走校额
-const exBand = ref<'all' | '稳' | '冲' | '搏'>('all')
+const exBand = ref<'all' | '保' | '稳' | '冲'>('all')
 const exBoarding = ref(false)
 const exCommute = ref(false)
 const exFee = ref<'all' | 'le10' | 'mid' | 'gt20'>('all')
@@ -1252,7 +1253,7 @@ function tcReason(key: string | null): { label: string; cls: string; headline: s
   return { label, cls, headline, factors, caveat }
 }
 const tcSummary = computed(() => {
-  const cnt: Record<string, number> = { 稳: 0, 冲: 0, 搏: 0 }
+  const cnt: Record<string, number> = { 保: 0, 稳: 0, 冲: 0 }
   for (const sl of draftTongchou.value) {
     if (!sl.school) continue
     const e = tcEligible.value.find(x => x.key === sl.school)
@@ -1278,7 +1279,7 @@ function copyAll() {
     if (r) L.push(`        理由：${r.label}　${r.headline}（${r.caveat}）`)
   })
   const ts = tcSummary.value
-  if (ts.filled) L.push(`  市级统筹（${ts.cnt['稳']}稳 / ${ts.cnt['冲']}冲 / ${ts.cnt['搏']}搏）：`)
+  if (ts.filled) L.push(`  市级统筹（${ts.cnt['保']}保 / ${ts.cnt['稳']}稳 / ${ts.cnt['冲']}冲）：`)
   draftTongchou.value.forEach((s, i) => {
     if (!s.school) return
     const r = tcReason(s.school)
@@ -1634,9 +1635,9 @@ const tcOptions: string[] = []
             <button class="ex-chip" :class="{ on: exChannel === 'xed' }" @click="exChannel = 'xed'">可走校额</button>
             <span class="ex-k ex-k2">档位</span>
             <button class="ex-chip" :class="{ on: exBand === 'all' }" @click="exBand = 'all'">全部</button>
+            <button class="ex-chip" :class="{ on: exBand === '保' }" @click="exBand = '保'">保</button>
             <button class="ex-chip" :class="{ on: exBand === '稳' }" @click="exBand = '稳'">稳</button>
             <button class="ex-chip" :class="{ on: exBand === '冲' }" @click="exBand = '冲'">冲</button>
-            <button class="ex-chip" :class="{ on: exBand === '搏' }" @click="exBand = '搏'">搏</button>
           </div>
           <div class="ex-row">
             <span class="ex-k">特色</span>
@@ -1659,7 +1660,7 @@ const tcOptions: string[] = []
             <span class="ex-n">命中 {{ exploreView.length }} 所</span>
             <button v-if="compareSel.length" class="ex-cmpbtn" @click="showCompare = true">对比 {{ compareSel.length }} 所 →</button>
           </div>
-          <JudgeLegend compact :rank="form.rank" :est="estScore" />
+          <JudgeLegend compact :rank="form.rank" />
         </div>
         <!-- 横向对比浮层 -->
         <div v-if="showCompare && compareSel.length" class="cmp-mask" @click.self="showCompare = false">
@@ -2007,9 +2008,9 @@ const tcOptions: string[] = []
             <h4 class="batch-sub">市级统筹志愿<small style="font-weight:400;color:var(--gray-500)">（下拉=朝阳可报统筹校；机制见「<a class="lnk" @click="goTab('channels')">渠道科普</a>」）</small></h4>
             <div v-if="tcEligible.length && tcSummary.filled" class="uni-summary">
               <div class="us-line"><b>已填市级统筹 {{ tcSummary.filled }} 志愿</b>（都是"够一够"的外区 upgrade）：
+                <span class="us-b band-保">{{ tcSummary.cnt['保'] }} 保</span>
                 <span class="us-b band-稳">{{ tcSummary.cnt['稳'] }} 稳</span>
                 <span class="us-b band-冲">{{ tcSummary.cnt['冲'] }} 冲</span>
-                <span class="us-b band-刺">{{ tcSummary.cnt['搏'] }} 搏</span>
               </div>
               <p class="us-tip">⚠️ 统筹在<b>统招之前录取、录取即锁定</b>：<b>只自动填"你统招够不上其档次、但统筹门槛够得着的外区 upgrade"</b>（朝阳口径位次判定；没中自动落到统招、无损失）；<b>你统招本可达的、或门槛够不上的、或档次低于控制线(不值)的一律不填</b>——否则会锁进比朝阳统招更差的外区校。<b>统筹多为外区/郊区远校，按通勤口径过滤(跟随住宿勾选)：≤上限 或 该校提供住宿；远校无住宿(没法住校又通勤不了)已排除——未勾住宿时统筹可能几乎为空。</b>完整名单（含被排除的）见「<a class="lnk" @click="goTab('explore')">🔎 查学校</a>」筛"可走统筹"，可手动添加。<b>专业(班)</b>：统筹每校<b>仅一个专业(班)码</b>（统筹一=20 / 统筹二=30，普通班），已按 2025 官方计划<b>自动预填</b>，仍以官方网报为准（2026 须刷新）。<b>距离 / 住宿</b>已移到每条志愿下方的研判里（下拉只留校名+投朝阳名额，便于挑选）。</p>
             </div>
@@ -2045,7 +2046,7 @@ const tcOptions: string[] = []
                 </div>
               </div>
             </div>
-            <JudgeLegend v-if="tcEligible.length" :rank="form.rank" :est="estScore" />
+            <JudgeLegend v-if="tcEligible.length" :rank="form.rank" />
             <p v-else class="xed-src">暂无可报统筹校结构化数据；可在「查学校」筛"可走统筹"查看。</p>
           </template>
           <p v-else-if="batchOpen.ind && !canIndicator" class="xed-note warn">当前「{{ (IDENTITIES.find(x => x.v === form.identity) || {}).label }}」身份不可报指标分配（校额到校 / 市级统筹）。</p>
