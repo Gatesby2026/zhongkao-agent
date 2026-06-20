@@ -1398,8 +1398,10 @@ const tcOptions: string[] = []
 <template>
   <div class="page">
     <header class="hero">
-      <div class="acct"><AccountMenu app-name="zhiyuan" /></div>
-      <h1>北京中考志愿参考 · 朝阳</h1>
+      <div class="hero-top">
+        <h1>北京中考志愿参考 · 朝阳</h1>
+        <AccountMenu app-name="zhiyuan" />
+      </div>
       <p class="sub">按区排名做冲稳保匹配，叠加通勤路网距离与学校特色，并镜像官方填报格式生成统招志愿草表。仅辅助参考，最终以官方招生简章与老师建议为准。</p>
     </header>
 
@@ -2152,8 +2154,8 @@ const tcOptions: string[] = []
 .page { max-width: 1180px; margin: 0 auto; padding: 16px; background: var(--bg); min-height: 100%; }
 .hero h1 { font-size: 20px; color: var(--brand-deeper); }
 .hero .sub { color: var(--gray-600); font-size: 13px; margin-top: 4px; }
-/* 账号头像菜单:独立一行靠右 */
-.acct { display: flex; justify-content: flex-end; margin-bottom: 6px; }
+/* 标题与账号头像同一行:标题靠左,头像靠右 */
+.hero-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
 .disclaimer { background: var(--warning-bg); border: 1px solid var(--accent);
   color: var(--gray-800); font-size: 12.5px; padding: 10px 12px;
   border-radius: var(--radius-sm); margin: 12px 0; }
