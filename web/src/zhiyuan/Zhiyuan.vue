@@ -235,6 +235,18 @@ const selectedPoint = ref<Point | null>(null)
 const selectedTc = ref<any>(null)   // 选中统筹校时的结构化数据（右侧详情用）
 const selectedNew = ref<any>(null)  // 选中 2026 新校时的结构化数据
 function selectPoint(p: Point) { selectedPoint.value = p; selectedTc.value = null; selectedNew.value = null }
+// 地图选中:高亮该 marker(去掉上一个高亮),并打开详情(手机为底部弹层)
+let _selEl: any = null
+function pick(p: Point, mk: any) {
+  selectPoint(p)
+  const el = mk && mk._icon
+  if (_selEl && _selEl !== el) _selEl.classList.remove('mk-sel')
+  if (el) { el.classList.add('mk-sel'); _selEl = el }
+}
+function closeDetail() {
+  selectedPoint.value = null; selectedTc.value = null; selectedNew.value = null
+  if (_selEl) { _selEl.classList.remove('mk-sel'); _selEl = null }
+}
 // 由点位反查冲稳保卡片：多校区点名形如 "和平街一中·和平街校区(...)"，取 · 前主名匹配
 function cardOfPoint(p: Point | null): Card | null {
   if (!p) return null
@@ -345,19 +357,19 @@ function renderMarkers(fit = false) {
       const m = r.map || {}
       const full = m.kind === 'full'
       const icon = full ? pin(m.color || '#7f8c8d', m.band || '', !!r.boarding) : smallIcon(m.color || '#7f8c8d', !!r.boarding)
-      const mk = L.marker([lat, lon], { icon }).addTo(publicLayer).on('click', () => selectPoint(pt))
+      const mk = L.marker([lat, lon], { icon }).addTo(publicLayer).on('click', (e: any) => pick(pt, e.target))
       full ? tipB(mk) : tipS(mk)
       if (layers.gongban) bounds.push([lat, lon])
       const q = xedQuotaByName.value[r.name]      // 校额到校图层：该公办校在选定初中的名额
       if (q) {
         const j = xedJudgeByName.value[r.name]
         L.marker([lat, lon], { icon: pin(j ? j.color : '#95a5a6', j ? XED_BAND[j.tag] : '校', !!r.boarding, String(q)) })
-          .addTo(xedLayer).on('click', () => selectPoint(pt))
+          .addTo(xedLayer).on('click', (e: any) => pick(pt, e.target))
           .bindTooltip(lbl, { permanent: true, direction: 'bottom', offset: [0, 2], className: 'map-lbl' })
         if (layers.xed) bounds.push([lat, lon])
       }
     } else if (ty === '2026新校') {
-      tipB(L.marker([lat, lon], { icon: pin('#8e44ad', '新', !!r.boarding) }).addTo(publicLayer).on('click', () => selectPoint(pt)))
+      tipB(L.marker([lat, lon], { icon: pin('#8e44ad', '新', !!r.boarding) }).addTo(publicLayer).on('click', (e: any) => pick(pt, e.target)))
       if (layers.gongban) bounds.push([lat, lon])
     } else if (ty === '市级统筹') {
       const ch = (r.channels || []).find((c: any) => c.metric?.kind === 'city_score')
@@ -369,20 +381,20 @@ function renderMarkers(fit = false) {
       const color = tcColor[b.cls] || '#2980b9'
       const big = b.cls === 'tj-wen' || b.cls === 'tj-chong' || b.cls === 'tj-bo'
       const mk = L.marker([lat, lon], { icon: big ? pin(color, b.label, !!r.boarding) : smallIcon(color, !!r.boarding) })
-        .addTo(tcLayer).on('click', () => selectPoint(pt))
+        .addTo(tcLayer).on('click', (e: any) => pick(pt, e.target))
       big ? tipB(mk) : tipS(mk)
       if (layers.tc) bounds.push([lat, lon])
     } else if (ty.includes('民办') || ty.includes('国际') || ty.includes('双语')) {
       const isIntl = !!r.extra?.in_intl || ty.includes('国际') || ty.includes('双语')
       const isMin = !!r.extra?.in_minban || ty.includes('民办')
-      if (isIntl) tipS(L.marker([lat, lon], { icon: smallIcon('#9b59b6') }).addTo(intlLayer).on('click', () => selectPoint(pt)))
-      if (isMin || (!isMin && !isIntl)) tipS(L.marker([lat, lon], { icon: smallIcon('#e67e22') }).addTo(minbanLayer).on('click', () => selectPoint(pt)))
+      if (isIntl) tipS(L.marker([lat, lon], { icon: smallIcon('#9b59b6') }).addTo(intlLayer).on('click', (e: any) => pick(pt, e.target)))
+      if (isMin || (!isMin && !isIntl)) tipS(L.marker([lat, lon], { icon: smallIcon('#e67e22') }).addTo(minbanLayer).on('click', (e: any) => pick(pt, e.target)))
       if (layers.minban || layers.intl) bounds.push([lat, lon])
     } else if (ty.includes('中职') || ty.includes('职教')) {
-      tipS(L.marker([lat, lon], { icon: smallIcon('#16a085') }).addTo(vocLayer).on('click', () => selectPoint(pt)))
+      tipS(L.marker([lat, lon], { icon: smallIcon('#16a085') }).addTo(vocLayer).on('click', (e: any) => pick(pt, e.target)))
       if (layers.voc) bounds.push([lat, lon])
     } else if (ty === '贯通') {
-      tipS(L.marker([lat, lon], { icon: smallIcon('#2980b9') }).addTo(gtLayer).on('click', () => selectPoint(pt)))
+      tipS(L.marker([lat, lon], { icon: smallIcon('#2980b9') }).addTo(gtLayer).on('click', (e: any) => pick(pt, e.target)))
       if (layers.gt) bounds.push([lat, lon])
     }
   }
@@ -393,7 +405,7 @@ function renderMarkers(fit = false) {
     if (uNames[p.name]) return
     const f = privFlags.value[p.name] || { minban: true, intl: false }
     const mk = (color: string) => L.marker([p.lat, p.lon], { icon: smallIcon(color) })
-      .on('click', () => selectPoint(p))
+      .on('click', (e: any) => pick(p, e.target))
       .bindTooltip(shortName(p.name), { direction: 'top', offset: [0, -6], className: 'map-lbl' })
     if (f.intl) mk('#9b59b6').addTo(intlLayer)
     if (f.minban || (!f.minban && !f.intl)) mk('#e67e22').addTo(minbanLayer)
@@ -946,7 +958,12 @@ function exTypeMatch(rec: any, t: string): boolean {
 function exBandOf(rec: any): { label: string; cls: string } | null {
   for (const ch of (rec.channels || [])) {
     if (ch.metric?.kind === 'district_rank') return { label: ch.band || '—', cls: PUB_BAND_CLS[ch.band] || 'tj-unk' }
-    if (ch.metric?.kind === 'city_score') { const b = scoreBand(ch.metric.refLine ?? null); return { label: b.label, cls: b.cls } }
+    if (ch.metric?.kind === 'city_score') {
+      const m = ch.metric
+      if (m.belowControl) return { label: '不值', cls: 'tj-no' }
+      const e = m.entryRank; const my = Number(form.rank) || 0
+      return (e && my) ? rankBand(my, e) : { label: '待核', cls: 'tj-unk' }
+    }
   }
   return null
 }
@@ -1479,7 +1496,9 @@ const tcOptions: string[] = []
           </div>
 
           <!-- 右侧：选中学校详情面板（替代地图气泡） -->
-          <aside class="detail-panel">
+          <div v-if="selectedPoint" class="dp-backdrop" @click="closeDetail"></div>
+          <aside class="detail-panel" :class="{ 'dp-sheet': selectedPoint }">
+            <button v-if="selectedPoint" class="dp-close" @click="closeDetail" aria-label="关闭">✕</button>
             <template v-if="selectedPoint">
               <template v-if="selSchool">
                 <div class="dp-head">
@@ -1687,7 +1706,9 @@ const tcOptions: string[] = []
             </div>
             <p class="list-tip">点任意行看右侧详情与逐渠道研判。<b>渠道标</b>：统=统招 / 筹=市级统筹 / 校=校额到校。<b>关键数</b>随类型变（公办=录取位次 · 统筹=投朝阳名额 · 民办/国际=学费 · 中职=专业 · 贯通=对接本科）。机制与门槛见「渠道科普」。</p>
           </div>
-          <aside class="detail-panel">
+          <div v-if="selectedPoint" class="dp-backdrop" @click="closeDetail"></div>
+          <aside class="detail-panel" :class="{ 'dp-sheet': selectedPoint }">
+            <button v-if="selectedPoint" class="dp-close" @click="closeDetail" aria-label="关闭">✕</button>
             <template v-if="selectedPoint">
               <template v-if="selSchool">
                 <div class="dp-head">
@@ -2742,6 +2763,14 @@ const tcOptions: string[] = []
   .f-rank, .f-home, .f-mode, .f-km { flex: 1 1 100%; width: auto; }
   .go { flex: 1 1 100%; width: 100%; }
 }
+/* 地图选中 marker 高亮:放大 + 蓝环 + 置顶,与未选中明显区别 */
+#zmap :deep(.leaflet-marker-icon.mk-sel) {
+  filter: drop-shadow(0 0 0 #2563eb) drop-shadow(0 0 6px rgba(37,99,235,.9));
+  transform-origin: bottom center; z-index: 1200 !important; }
+#zmap :deep(.leaflet-marker-icon.mk-sel) > * { outline: 3px solid #2563eb; outline-offset: 1px; border-radius: 50%; }
+/* 详情面板关闭按钮(桌面隐藏,手机弹层显示) */
+.dp-close { display: none; }
+.dp-backdrop { display: none; }
 /* ── 手机优化(≤560):查学校表瘦身、触控热区、头部压缩、安全区 ── */
 @media (max-width: 560px) {
   .page { padding: 10px 10px calc(10px + env(safe-area-inset-bottom)); }
@@ -2767,5 +2796,19 @@ const tcOptions: string[] = []
   .urow { flex-wrap: wrap; }
   .school-sel.uni-sel { flex: 1 1 100%; width: 100%; }
   .uni-majors { width: 100%; }
+  /* 地图选中学校 → 底部弹层(不再上下来回滑);未选中则不占位,地图占满 */
+  .map-detail { display: block; }
+  .detail-panel { display: none; }
+  .detail-panel.dp-sheet {
+    display: block; position: fixed; left: 0; right: 0; bottom: 0; width: auto; height: auto;
+    max-height: 82vh; overflow-y: auto; z-index: 1500; margin: 0;
+    border-radius: 16px 16px 0 0; box-shadow: 0 -6px 24px rgba(0,0,0,.22);
+    padding: 16px 14px calc(16px + env(safe-area-inset-bottom)); background: #fff;
+    animation: dpUp .18s ease-out; }
+  .dp-backdrop { display: block; position: fixed; inset: 0; background: rgba(0,0,0,.4); z-index: 1490; }
+  .dp-close { display: flex; align-items: center; justify-content: center; position: sticky; top: -16px; float: right;
+    width: 34px; height: 34px; margin: -6px -4px 0 0; border: none; background: var(--gray-100);
+    border-radius: 50%; font-size: 16px; color: var(--gray-600); cursor: pointer; }
 }
+@keyframes dpUp { from { transform: translateY(100%); } to { transform: translateY(0); } }
 </style>
