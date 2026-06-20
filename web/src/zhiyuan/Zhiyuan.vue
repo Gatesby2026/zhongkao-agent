@@ -2560,6 +2560,14 @@ const tcOptions: string[] = []
 /* 主入口(地图/草表)更突出 */
 .tab-main { font-size: 14.5px; }
 .tab-main .tab-ic { font-size: 16px; }
+/* 手机:4 个一级页签压成等宽一行,不再换行(省掉图标、收紧间距) */
+@media (max-width: 560px) {
+  .tabs { flex-wrap: nowrap; gap: 2px; padding: 0 2px; }
+  .tab, .tab-main { flex: 1 1 0; min-width: 0; justify-content: center;
+    font-size: 12.5px; padding: 8px 3px 9px; gap: 3px; }
+  .tab .tab-ic { display: none; }
+  .tab-cnt { font-size: 10px; padding: 1px 5px; }
+}
 /* 二级聚合入口 */
 .tab-more { color: var(--gray-500); margin-left: auto; }
 .tab-more.on { color: var(--brand-dark); }
