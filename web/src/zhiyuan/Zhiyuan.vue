@@ -816,14 +816,6 @@ const tcEr = computed<any[]>(() => (tongchou.value?.tongchou_er || [])
 const estScore = computed<number | null>(() => result.value ? (result.value as any).est_score : null)
 // 分数→档位（估分 vs 某条统招线）。统筹实际线通常比统招线低(约20-30)，故"可够"放宽到线下20。
 // 稳 Δ≥+10 / 冲 −10~+10 / 搏 −20~−10 / 够不上 <−20 / 线待核(无线)。统筹/校额共用。
-function scoreBand(line: number | null): { label: string; cls: string; d: number | null } {
-  if (line == null || estScore.value == null) return { label: '线待核', cls: 'tj-unk', d: null }
-  const d = Math.round(estScore.value - line)
-  if (d >= 10) return { label: '稳', cls: 'tj-wen', d }
-  if (d >= -10) return { label: '冲', cls: 'tj-chong', d }
-  if (d >= -20) return { label: '搏', cls: 'tj-bo', d }
-  return { label: '够不上', cls: 'tj-no', d }
-}
 // 位次档判定:你的区排 my vs 门槛位次 ref(越小越好)。统筹/朝阳口径共用。
 function rankBand(my: number, ref: number): { label: string; cls: string } {
   if (!my || !ref) return { label: '待核', cls: 'tj-unk' }
@@ -833,13 +825,19 @@ function rankBand(my: number, ref: number): { label: string; cls: string } {
   if (r >= -0.15) return { label: '搏', cls: 'tj-bo' }
   return { label: '够不上', cls: 'tj-no' }
 }
-function tcJudge(s: any): { label: string; cls: string; d: number | null; line: number | null; ref: boolean; conf?: string; basis?: string } {
-  // 用后端预估的"统筹线"(统招线−折让 / 控制线兜底),而非统招线本身(否则系统性高估门槛、漏掉机会)
-  const line = typeof s.est_tongchou_line === 'number' ? s.est_tongchou_line : null
-  const conf = s.est_line_conf as string | undefined
-  if (line == null || estScore.value == null) return { label: '线待核', cls: 'tj-unk', d: null, line: null, ref: false }
-  const band = scoreBand(line)
-  return { ...band, d: band.d, line, ref: conf !== 'official', conf, basis: s.est_line_basis }
+function tcJudge(s: any): any {
+  // 朝阳口径(与面板/地图/查学校同源):门槛位次(录取位次) vs 你的区排 → 冲稳保;
+  // 档次=学校水平(线分→朝阳一分一段);校档次低于门槛(线<控制线)→ 不值。
+  const R = Number(form.rank) || 0
+  const entry = typeof s.tongchou_entry_cy?.rank === 'number' ? s.tongchou_entry_cy.rank : null
+  const equiv = typeof s.cy_equiv === 'number' ? s.cy_equiv : null
+  const below = !!s.below_control
+  if (entry == null || !R) return { label: '待核', cls: 'tj-unk', entry, equiv, below, worth: false, d: null }
+  if (below) return { label: '不值', cls: 'tj-no', entry, equiv, below: true, worth: false, d: entry - R }
+  const b = rankBand(R, entry)                          // 你区排 vs 门槛
+  const reachable = R <= entry * 1.15                   // 门槛内或可搏(非"够不上")
+  const worth = reachable && equiv != null && R > equiv // 你统招够不上该档(R>档次) 且 够得着门槛 = 真 upgrade
+  return { ...b, entry, equiv, below: false, worth, d: entry - R, conf: s.pred_conf, basis: s.pred_basis }
 }
 
 // ───── 统一详情面板（§12）：把 schools_unified 记录声明式渲染 ─────
@@ -1213,15 +1211,11 @@ function prefillTongchou() {
   // 排除稳/保（你高于其线=会被锁进比你弱的外区校=陷阱）与线待核。排序从高到低：够不上→搏→冲。
   // 入选优先级：搏(更值得拼)→冲→够不上(仅兜底回填空位)；展示按从高到低（够不上→搏→冲）
   // 通勤同口径(跟随住宿勾选)：≤上限 或 (接受住宿 且 该校提供住宿)；远校无住宿=没法住校又通勤不了→排除
-  const tier = (d: number) => (d < -20 ? 2 : d < -10 ? 0 : 1)
+  // 只自动填"够一够的真 upgrade"(你统招够不上该档、统筹够得着、非不值、通勤可达),按档次最好的优先
   const cand = tcEligible.value
-    .filter(e => e.j.d != null && (e.j.d as number) <= 0 && reachByCommute(e.s.dist?.km, !!e.s.boarding))
-    .sort((a, b) => {
-      const ta = tier(a.j.d as number), tb = tier(b.j.d as number)
-      return ta !== tb ? ta - tb : (a.j.d as number) - (b.j.d as number)
-    })
+    .filter(e => e.j.worth && e.j.label !== '够不上' && reachByCommute(e.s.dist?.km, !!e.s.boarding))
+    .sort((a, b) => (a.s.cy_equiv ?? 9e9) - (b.s.cy_equiv ?? 9e9))
     .slice(0, 4)
-    .sort((a, b) => (a.j.d as number) - (b.j.d as number))
   draftTongchou.value = Array.from({ length: 4 }, (_, i) =>
     cand[i] ? { school: cand[i].key, majors: cand[i].s.tongchou_major?.major_code || '' } : { school: null, majors: '' })
 }
@@ -1240,26 +1234,28 @@ function tcReason(key: string | null): { label: string; cls: string; headline: s
   if (s.school_code && s.tongchou_major) factors.push('🏷网报 学校码' + s.school_code + '·专业' + s.tongchou_major.major_code)
   if (s.dist) factors.push('🚌' + s.dist.km + 'km')
   if (s.boarding === true) factors.push('🛏可住宿')
-  const lineTxt = j.line != null ? `统招线${j.line}·Δ${(j.d ?? 0) > 0 ? '+' : ''}${j.d}（你估≈${estScore.value}）` : '统招线待核'
+  const myR = Number(form.rank) || null
+  const lineTxt = j.entry != null
+    ? `统筹门槛≈朝阳第${j.entry}位 · 学校档次≈第${j.equiv}位（你区排≈${myR ?? '—'}）`
+    : '门槛待核'
   const headline = `${e.tier} · ${s.district} · 投朝阳 ${s.quota_chaoyang} 名 · ${lineTxt}`
-  const isReach = j.d != null && (j.d as number) <= 0
   const label = j.label === '够不上' ? '冲刺' : j.label
   const cls = j.label === '够不上' ? 'band-刺' : j.cls
-  let caveat = isReach
-    ? '够一够外区名校的尝试：没中不影响统招（自动落到统招）；⚠️一旦录取即锁定、放弃统招——确认你确实更想去这所外区校再保留。'
-    : '⚠️你估分已高于其线，几乎必被录取并锁定、放弃统招——通常不如直接走朝阳统招，慎填。'
-  caveat += '统筹全市按分竞争（比的是统招线、统筹实际线通常更低）；朝外能否报该校 / 分到名额须查简章。'
+  let caveat = j.below
+    ? '⚠️校档次低于门槛(线<控制线460)：朝阳走统筹需≈460分反不如统招，通常不值。'
+    : j.worth
+      ? '够一够外区名校：你统招够不上该档、统筹够得着；没中自动落统招(无损失)；⚠️一旦录取即锁定、放弃统招——确认更想去再保留。'
+      : '⚠️你统招本可达该档(或够不上门槛)：走统筹通常不划算/不可达，慎填。'
+  caveat += '朝阳口径门槛=外区线分映射+经验折让(估，非官方线)；朝外能否报 / 分到名额须查简章。'
   if (e.tier === '统筹一') caveat = '统筹一=名校本部、门槛高；' + caveat
   return { label, cls, headline, factors, caveat }
 }
 const tcSummary = computed(() => {
-  const cnt: Record<string, number> = { 冲刺: 0, 搏: 0, 冲: 0 }
+  const cnt: Record<string, number> = { 稳: 0, 冲: 0, 搏: 0 }
   for (const sl of draftTongchou.value) {
     if (!sl.school) continue
     const e = tcEligible.value.find(x => x.key === sl.school)
-    if (!e) continue
-    const lab = e.j.label === '够不上' ? '冲刺' : e.j.label
-    if (cnt[lab] != null) cnt[lab]++
+    if (e && cnt[e.j.label] != null) cnt[e.j.label]++
   }
   return { cnt, filled: draftTongchou.value.filter(sl => sl.school).length }
 })
@@ -2010,11 +2006,11 @@ const tcOptions: string[] = []
             <h4 class="batch-sub">市级统筹志愿<small style="font-weight:400;color:var(--gray-500)">（下拉=朝阳可报统筹校；机制见「<a class="lnk" @click="goTab('channels')">渠道科普</a>」）</small></h4>
             <div v-if="tcEligible.length && tcSummary.filled" class="uni-summary">
               <div class="us-line"><b>已填市级统筹 {{ tcSummary.filled }} 志愿</b>（都是"够一够"的外区 upgrade）：
-                <span class="us-b band-刺">{{ tcSummary.cnt['冲刺'] }} 冲刺</span>
-                <span class="us-b band-冲">{{ tcSummary.cnt['搏'] }} 搏</span>
-                <span class="us-b band-稳">{{ tcSummary.cnt['冲'] }} 冲</span>
+                <span class="us-b band-稳">{{ tcSummary.cnt['稳'] }} 稳</span>
+                <span class="us-b band-冲">{{ tcSummary.cnt['冲'] }} 冲</span>
+                <span class="us-b band-刺">{{ tcSummary.cnt['搏'] }} 搏</span>
               </div>
-              <p class="us-tip">⚠️ 统筹在<b>统招之前录取、录取即锁定</b>：<b>只自动填"你估分≤其统招线、统招够不上的外区 upgrade"</b>（没中自动落到统招、无损失）；<b>你已高于其线的（稳/保）一律不填</b>——否则会锁进比朝阳统招更差的外区校。从高到低排（够不上→搏→冲）。<b>统筹多为外区/郊区远校，按通勤口径过滤(跟随住宿勾选)：≤上限 或 该校提供住宿；远校无住宿(没法住校又通勤不了)已排除——未勾住宿时统筹可能几乎为空。</b>完整名单（含被排除的）见「<a class="lnk" @click="goTab('explore')">🔎 查学校</a>」筛"可走统筹"，可手动添加。<b>专业(班)</b>：统筹每校<b>仅一个专业(班)码</b>（统筹一=20 / 统筹二=30，普通班），已按 2025 官方计划<b>自动预填</b>，仍以官方网报为准（2026 须刷新）。<b>距离 / 住宿</b>已移到每条志愿下方的研判里（下拉只留校名+投朝阳名额，便于挑选）。</p>
+              <p class="us-tip">⚠️ 统筹在<b>统招之前录取、录取即锁定</b>：<b>只自动填"你统招够不上其档次、但统筹门槛够得着的外区 upgrade"</b>（朝阳口径位次判定；没中自动落到统招、无损失）；<b>你统招本可达的、或门槛够不上的、或档次低于控制线(不值)的一律不填</b>——否则会锁进比朝阳统招更差的外区校。<b>统筹多为外区/郊区远校，按通勤口径过滤(跟随住宿勾选)：≤上限 或 该校提供住宿；远校无住宿(没法住校又通勤不了)已排除——未勾住宿时统筹可能几乎为空。</b>完整名单（含被排除的）见「<a class="lnk" @click="goTab('explore')">🔎 查学校</a>」筛"可走统筹"，可手动添加。<b>专业(班)</b>：统筹每校<b>仅一个专业(班)码</b>（统筹一=20 / 统筹二=30，普通班），已按 2025 官方计划<b>自动预填</b>，仍以官方网报为准（2026 须刷新）。<b>距离 / 住宿</b>已移到每条志愿下方的研判里（下拉只留校名+投朝阳名额，便于挑选）。</p>
             </div>
             <div v-if="tcEligible.length" class="draft-actions" style="margin:6px 0">
               <button class="ghost" @click="prefillTongchou">↻ 按研判重填</button>

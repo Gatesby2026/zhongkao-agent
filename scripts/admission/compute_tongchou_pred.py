@@ -112,6 +112,27 @@ def main():
             done.append((E, rec["name"] + (("·" + rec["campus"]) if rec.get("campus") and rec["campus"] != "本部" else ""),
                          tier, ls, D, E, below, conf))
     json.dump(data, open(p, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    # ── 自检:防下次改算法静默回归 ──
+    floor2026 = round(CONTROL_FLOOR * SHENGYUAN)
+    errs = []
+    for tk in ("tongchou_yi", "tongchou_er"):
+        for r in data.get(tk, []):
+            if not r.get("faces_chaoyang", True):
+                continue
+            nm = r.get("name")
+            pc = r.get("pred_2026_cy"); en = r.get("tongchou_entry_cy"); eq = r.get("cy_equiv")
+            if not pc or not en or eq is None:
+                errs.append(f"{nm}: pred/entry/cy_equiv 缺失"); continue
+            if en["rank"] > floor2026 + 1:
+                errs.append(f"{nm}: 门槛{en['rank']} 超控制线 floor {floor2026}")
+            ls = r.get("score_2025_tongzhao") if isinstance(r.get("score_2025_tongzhao"), (int, float)) else r.get("score_ref")
+            if isinstance(ls, (int, float)):
+                exp = ls < CONTROL_LINE
+                if bool(r.get("below_control")) != exp:
+                    errs.append(f"{nm}: below_control={r.get('below_control')} 但线{ls} vs 控制线{CONTROL_LINE} 不符")
+    if errs:
+        print("❌ 自检失败:"); [print("  -", e) for e in errs]; raise SystemExit(1)
+    print(f"✅ 自检通过(门槛≤控制线floor {floor2026};below_control⟺线<{CONTROL_LINE})")
     done.sort()
     print(f"{'门槛':>5} {'档次':>5} {'线分':>5}  值?  学校")
     print("-" * 60)

@@ -201,30 +201,8 @@ def tongchou_with_dist(district, home, district_cn, mode, mode_label, max_km):
         return data
     data = copy.deepcopy(data)
     rows = [s for tier in ("tongchou_yi", "tongchou_er") for s in data.get(tier, [])]
-    # 估算统筹线:统筹实际录取线通常低于统招线 → 估统筹线 = 统招线 − 折让(用户定 20,保守;
-    # 7月真实统筹线出来后替换为逐校实测)。无任何统招线参考 → 用本区指标分配最低控制线兜底,
-    # 绝不留空白("线待核"会让家长漏掉本可够的统筹机会)。控制线来自各区白皮书(2025/510)。
-    TONGCHOU_DISCOUNT = 20
-    CONTROL_LINE_2025 = {"chaoyang": 460, "dongcheng": 458, "haidian": 465, "xicheng": 462}
-    ctrl = CONTROL_LINE_2025.get(district)
-    for s in rows:
-        official = isinstance(s.get("score_2025_tongzhao"), (int, float))
-        zhao = s.get("score_2025_tongzhao") if official else (
-            s.get("score_ref") if isinstance(s.get("score_ref"), (int, float)) else None)
-        if zhao is not None:
-            s["est_tongchou_line"] = zhao - TONGCHOU_DISCOUNT
-            s["est_line_conf"] = "official" if official else "网传单源"
-            s["est_line_basis"] = (f"{'官方' if official else '网传'}统招线{zhao}−{TONGCHOU_DISCOUNT}"
-                                   f"(统筹线通常更低,保守估)")
-        elif ctrl is not None:
-            s["est_tongchou_line"] = ctrl
-            s["est_line_conf"] = "控制线兜底"
-            s["est_line_basis"] = (f"无统招线参考·用{district_cn}指标分配最低控制线{ctrl}兜底"
-                                   f"(2025/510)·务必电话招办核实")
-        else:
-            s["est_tongchou_line"] = None
-            s["est_line_conf"] = "无"
-            s["est_line_basis"] = "信息严重不足·务必电话招办核实"
+    # 朝阳口径预估(pred_2026_cy / tongchou_entry_cy / cy_equiv / below_control)由
+    # compute_tongchou_pred.py 预先算好并写进 json,这里直接透传(旧"估统筹线−20"分数法已弃用)。
     if home:
         # 用唯一伪名避免同名（人大附本部/通州校区）距离串味
         pseudo = [{"name": f"__tc{i}", "campuses": [{"name": "", "lat": s["lat"], "lon": s["lon"]}]}
