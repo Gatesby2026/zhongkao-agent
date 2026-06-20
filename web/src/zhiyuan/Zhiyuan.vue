@@ -2560,13 +2560,15 @@ const tcOptions: string[] = []
 /* 主入口(地图/草表)更突出 */
 .tab-main { font-size: 14.5px; }
 .tab-main .tab-ic { font-size: 16px; }
-/* 手机:4 个一级页签压成等宽一行,不再换行(省掉图标、收紧间距) */
+/* 手机:4 个一级页签压成等宽一行,不再换行(图标保留缩小,计数改紧凑纯文字) */
 @media (max-width: 560px) {
   .tabs { flex-wrap: nowrap; gap: 2px; padding: 0 2px; }
   .tab, .tab-main { flex: 1 1 0; min-width: 0; justify-content: center;
-    font-size: 12.5px; padding: 8px 3px 9px; gap: 3px; }
-  .tab .tab-ic { display: none; }
-  .tab-cnt { font-size: 10px; padding: 1px 5px; }
+    font-size: 12px; padding: 7px 2px 9px; gap: 2px; }
+  .tab .tab-ic svg { width: 14px; height: 14px; }
+  /* 计数去掉药丸底色,压成贴在标签后的小字 */
+  .tab-cnt, .tab.on .tab-cnt { font-size: 9px; padding: 0; margin-left: 1px;
+    background: none; font-weight: 700; }
 }
 /* 二级聚合入口 */
 .tab-more { color: var(--gray-500); margin-left: auto; }
