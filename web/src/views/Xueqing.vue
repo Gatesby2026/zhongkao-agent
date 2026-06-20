@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, computed, nextTick, onMounted, onUnmounted, watch } from 'vue'
 import { api, type ReportResp, type ManualChoicesResp, type TraceQuestion } from '../api'
-import { fetchMe, logout as authLogout } from '../shared/auth/auth'
+import AccountMenu from '../shared/auth/AccountMenu.vue'
 
 const step = ref(0)                       // 0 首屏 1 上传 2 小分 3 分析 4 报告
 // step1 子阶段：pick 选图 / detecting 识别中 / confirm 确认 / failed 识别失败
@@ -241,7 +241,6 @@ async function submitManual() {
 }
 
 // ── 账号 + 我的历史报告 ──
-const userPhone = ref('')
 const history = ref<Array<{ id: string; student_name: string; exam_slug: string; status: string; created_at: number }>>([])
 
 async function loadHistory() {
@@ -262,13 +261,8 @@ async function openHistory(h: { id: string; status: string }) {
     errorMsg.value = '打开历史报告失败：' + (e?.message || e)
   }
 }
-async function doLogout() {
-  try { await authLogout() } finally { location.reload() }
-}
-
 onMounted(async () => {
   try { coverage.value = await api.coverage() } catch {}
-  try { const me = await fetchMe('xueqing'); if (me?.user) userPhone.value = me.user.phone || me.user.email || '' } catch {}
   loadHistory()
 })
 
@@ -360,11 +354,7 @@ const wrongByNum = computed(() => {
 
 <template>
 <div class="app-shell">
-    <div v-if="userPhone" class="acct-bar">
-      <span class="acct-ic">{{ (userPhone[0] || '·').toUpperCase() }}</span>
-      <span class="acct-phone">{{ userPhone.replace(/(\d{3})\d{4}(\d{4})/, '$1****$2') }}</span>
-      <button type="button" class="acct-logout" @click="doLogout">退出登录</button>
-    </div>
+    <div class="acct-bar"><AccountMenu app-name="xueqing" /></div>
     <!-- 顶部蓝条已删；返回 + stepper + 计数 合并一行（方案 B）-->
     <div class="stepper" v-show="step>=1">
       <div class="stepper-back" @click="prev" role="button" aria-label="返回">‹</div>
@@ -848,15 +838,8 @@ const wrongByNum = computed(() => {
 </template>
 
 <style>
-/* 账号条:顶部独立一行靠右(脱敏手机+退出) */
-.acct-bar { display:flex; align-items:center; justify-content:flex-end; gap:8px;
-  padding:8px 14px 0; }
-.acct-ic { width:22px; height:22px; border-radius:50%; background:var(--brand,#2563eb);
-  color:#fff; display:inline-flex; align-items:center; justify-content:center;
-  font-size:12px; font-weight:700; }
-.acct-phone { font-size:12.5px; color:var(--gray-700,#374151); font-weight:600; }
-.acct-logout { font-size:12px; padding:4px 12px; border:1px solid var(--gray-300,#d1d5db);
-  background:#fff; color:var(--gray-600,#4b5563); border-radius:999px; cursor:pointer; }
+/* 账号头像菜单:顶部独立一行靠右 */
+.acct-bar { display:flex; justify-content:flex-end; padding:8px 14px 0; }
 /* 我的历史报告 */
 .hist-item { display:flex; align-items:center; gap:10px; padding:10px 4px;
   border-top:1px solid var(--gray-100,#f3f4f6); }

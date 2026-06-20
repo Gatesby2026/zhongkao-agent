@@ -2,7 +2,8 @@
 import { ref, reactive, computed, nextTick, watch, onMounted } from 'vue'
 import { USER_DEFAULTS } from './user-defaults'
 import JudgeLegend from './JudgeLegend.vue'
-import { fetchMe, getProfile, putProfile, logout as authLogout } from '../shared/auth/auth'
+import { fetchMe, getProfile, putProfile } from '../shared/auth/auth'
+import AccountMenu from '../shared/auth/AccountMenu.vue'
 
 declare const L: any
 
@@ -230,14 +231,11 @@ async function submit() {
   }
 }
 
-/* ---------------- 账号 / 资料持久化 ---------------- */
-const userPhone = ref('')
-
+/* ---------------- 资料持久化(账号头像菜单见 AccountMenu) ---------------- */
 // 登录后回填该用户已存资料(没有则保持空白缺省)
 async function loadProfile() {
   try {
     const me = await fetchMe()
-    if (me?.user) userPhone.value = me.user.phone || me.user.email || ''
     const p = (me?.profile) ?? (await getProfile().then(r => r.profile).catch(() => null))
     if (!p) return
     for (const k of ['rank', 'home', 'mode', 'max_km', 'boarding', 'identity', 'risk', 'orient', 'nonpub'] as const) {
@@ -252,10 +250,6 @@ onMounted(loadProfile)
 function saveProfile() {
   const data = { ...form, chuzhong: xedQuery.value }
   putProfile(data).catch(() => { /* 存档失败不影响使用 */ })
-}
-
-async function doLogout() {
-  try { await authLogout() } finally { location.reload() }
 }
 
 /* ---------------- 地图 ---------------- */
@@ -1404,11 +1398,7 @@ const tcOptions: string[] = []
 <template>
   <div class="page">
     <header class="hero">
-      <div v-if="userPhone" class="acct">
-        <span class="acct-ic">{{ (userPhone[0] || '·').toUpperCase() }}</span>
-        <span class="acct-phone">{{ userPhone.replace(/(\d{3})\d{4}(\d{4})/, '$1****$2') }}</span>
-        <button type="button" class="acct-logout" @click="doLogout">退出登录</button>
-      </div>
+      <div class="acct"><AccountMenu app-name="zhiyuan" /></div>
       <h1>北京中考志愿参考 · 朝阳</h1>
       <p class="sub">按区排名做冲稳保匹配，叠加通勤路网距离与学校特色，并镜像官方填报格式生成统招志愿草表。仅辅助参考，最终以官方招生简章与老师建议为准。</p>
     </header>
@@ -2162,14 +2152,8 @@ const tcOptions: string[] = []
 .page { max-width: 1180px; margin: 0 auto; padding: 16px; background: var(--bg); min-height: 100%; }
 .hero h1 { font-size: 20px; color: var(--brand-deeper); }
 .hero .sub { color: var(--gray-600); font-size: 13px; margin-top: 4px; }
-/* 账号条:独立一行靠右,不再绝对定位压住标题 */
-.acct { display: flex; justify-content: flex-end; align-items: center; gap: 8px; margin-bottom: 6px; }
-.acct-ic { width: 22px; height: 22px; border-radius: 50%; background: var(--brand, #2563eb); color: #fff;
-  display: inline-flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; }
-.acct-phone { font-size: 12.5px; color: var(--gray-700); font-weight: 600; }
-.acct-logout { font-size: 12px; padding: 4px 12px; border: 1px solid var(--gray-300, #d1d5db);
-  background: #fff; color: var(--gray-600); border-radius: 999px; cursor: pointer; }
-.acct-logout:hover { border-color: var(--brand, #2563eb); color: var(--brand, #2563eb); }
+/* 账号头像菜单:独立一行靠右 */
+.acct { display: flex; justify-content: flex-end; margin-bottom: 6px; }
 .disclaimer { background: var(--warning-bg); border: 1px solid var(--accent);
   color: var(--gray-800); font-size: 12.5px; padding: 10px 12px;
   border-radius: var(--radius-sm); margin: 12px 0; }
