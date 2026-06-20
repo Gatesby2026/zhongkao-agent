@@ -149,9 +149,9 @@ def build_unified(result: dict) -> list:
                     {"km": n.get("km"), "mins": n.get("mins"), "over_max": c.get("over_max")} if n else None)
         s["school_code"] = c.get("school_code")
         s["map"] = {"color": pt.get("color"), "band": pt.get("band"), "kind": pt.get("kind")}
+        # 不再加"不在报名范围"caveat:band 已说明(够不上/冲/稳/保),该提示反致歧义(误读成校额没有)
         s["channels"].append(_ch("统招", c.get("band"), "district_rank",
-                                 refRank=c.get("ref_rank"), lines=c.get("score_lines"),
-                                 caveat=("不在报名范围" if not c.get("reportable") else None)))
+                                 refRank=c.get("ref_rank"), lines=c.get("score_lines")))
         if c.get("coop"):
             s["extra"]["coop"] = True
         out.append(s); by_name[_norm(c["name"])] = s
