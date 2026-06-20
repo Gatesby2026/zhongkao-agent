@@ -2273,6 +2273,11 @@ const tcOptions: string[] = []
   .fld-risk, .fld-orient, .fld-nonpub { grid-column: span 2; }
   .fld-go .go { width: 100%; min-width: 0; }
 }
+/* iOS Safari 在输入框字号 <16px 时聚焦会自动放大页面 → 移动端所有文本输入强制 16px 阻止缩放 */
+@media (max-width: 760px) {
+  input[type=text], input[type=number], input[type=tel], input[type=search],
+  select, textarea { font-size: 16px !important; }
+}
 .interests { margin-top: 14px; }
 .interests .il { font-size: 12px; font-weight: 600; color: var(--gray-700); display: block; margin-bottom: 6px; }
 .interests .il small { font-weight: 400; color: var(--gray-400); }

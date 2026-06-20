@@ -13,12 +13,20 @@ const err = ref('')
 const cooldown = ref(0)
 let timer: number | undefined
 
-const phoneOk = computed(() => /^1[3-9]\d{9}$/.test(phone.value.trim()))
+// 归一化：去空格/横线，去掉 +86 / 86 国家码 → 纯 11 位号码
+function normPhone(raw: string): string {
+  let s = (raw || '').replace(/\D/g, '')
+  if (s.length === 13 && s.startsWith('86')) s = s.slice(2)
+  return s
+}
+const cleanPhone = computed(() => normPhone(phone.value))
+const phoneOk = computed(() => /^1[3-9]\d{9}$/.test(cleanPhone.value))
 const canSend = computed(() => phoneOk.value && cooldown.value === 0 && !sending.value)
 const canLogin = computed(() => phoneOk.value && /^\d{4,6}$/.test(code.value.trim()) && agree.value && !submitting.value)
 
 function startCooldown(sec: number) {
   cooldown.value = sec
+  if (timer) clearInterval(timer)
   timer = window.setInterval(() => {
     if (--cooldown.value <= 0) { clearInterval(timer); cooldown.value = 0 }
   }, 1000)
@@ -27,12 +35,16 @@ onUnmounted(() => timer && clearInterval(timer))
 
 async function onSend() {
   err.value = ''
+  if (sending.value || cooldown.value > 0) return     // 防重复点击/冷却中
+  if (!phoneOk.value) { err.value = '请输入正确的手机号'; return }
   if (!agree.value) { err.value = '请先阅读并勾选下方隐私说明'; return }
   sending.value = true
+  startCooldown(60)                                    // 点击即进入冷却，成功与否都挡住 60s
   try {
-    const r = await sendSms(phone.value.trim())
-    startCooldown(r.cooldown || 60)
+    const r = await sendSms(cleanPhone.value)
+    if (r.cooldown) startCooldown(r.cooldown)
   } catch (e: any) {
+    cooldown.value = 0                                 // 发送失败放开，允许立即重试
     err.value = e.message || '发送失败'
   } finally {
     sending.value = false
@@ -41,9 +53,10 @@ async function onSend() {
 
 async function onLogin() {
   err.value = ''
+  if (submitting.value) return
   submitting.value = true
   try {
-    await verifySms(phone.value.trim(), code.value.trim())
+    await verifySms(cleanPhone.value, code.value.trim())
     emit('logged-in')
   } catch (e: any) {
     err.value = e.message || '登录失败'
@@ -72,15 +85,15 @@ async function onLogin() {
         <h2>手机号登录</h2>
         <label class="fld">
           <span>手机号</span>
-          <input v-model="phone" type="tel" maxlength="11" inputmode="numeric"
-                 placeholder="请输入手机号" autocomplete="tel" />
+          <input v-model="phone" type="tel" maxlength="18" inputmode="tel"
+                 placeholder="请输入手机号（支持 +86）" autocomplete="tel" />
         </label>
         <label class="fld">
           <span>验证码</span>
           <div class="code-row">
             <input v-model="code" type="text" maxlength="6" inputmode="numeric"
                    placeholder="短信验证码" autocomplete="one-time-code" />
-            <button class="send-btn" :disabled="!canSend" @click="onSend">
+            <button type="button" class="send-btn" :disabled="!canSend" @click="onSend">
               {{ cooldown > 0 ? cooldown + 's' : (sending ? '发送中…' : '获取验证码') }}
             </button>
           </div>
@@ -88,7 +101,7 @@ async function onLogin() {
 
         <p v-if="err" class="err">{{ err }}</p>
 
-        <button class="login-btn" :disabled="!canLogin" @click="onLogin">
+        <button type="button" class="login-btn" :disabled="!canLogin" @click="onLogin">
           {{ submitting ? '登录中…' : '登录 / 注册' }}
         </button>
 
@@ -120,7 +133,7 @@ async function onLogin() {
 .fld { display: block; margin-bottom: 14px; }
 .fld > span { display: block; font-size: 12px; color: #6b7280; margin-bottom: 6px; }
 .fld input { width: 100%; box-sizing: border-box; height: 42px; padding: 0 12px;
-  border: 1px solid #d1d5db; border-radius: 8px; font-size: 15px; outline: none; }
+  border: 1px solid #d1d5db; border-radius: 8px; font-size: 16px; outline: none; }
 .fld input:focus { border-color: #2563eb; }
 .code-row { display: flex; gap: 8px; }
 .code-row input { flex: 1; }

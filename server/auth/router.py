@@ -17,6 +17,14 @@ PHONE_RE = re.compile(r"^1[3-9]\d{9}$")
 COOKIE_TTL = 30 * 24 * 3600
 
 
+def _norm_phone(raw: str) -> str:
+    """去空格/横线、去掉 +86/86 国家码 → 纯 11 位。"""
+    s = re.sub(r"\D", "", raw or "")
+    if len(s) == 13 and s.startswith("86"):
+        s = s[2:]
+    return s
+
+
 def _client_ip(req: Request) -> str | None:
     return (req.headers.get("x-real-ip")
             or (req.headers.get("x-forwarded-for") or "").split(",")[0].strip()
@@ -37,7 +45,7 @@ def _user_public(u: dict) -> dict:
 
 @router.post("/sms/send")
 def sms_send(req: Request, phone: str = Body(..., embed=True)):
-    phone = (phone or "").strip()
+    phone = _norm_phone(phone)
     if not PHONE_RE.match(phone):
         raise HTTPException(status_code=400, detail="手机号格式不正确")
     now = time.time()
@@ -60,7 +68,7 @@ def sms_send(req: Request, phone: str = Body(..., embed=True)):
 @router.post("/sms/verify")
 def sms_verify(resp: Response,
                phone: str = Body(...), code: str = Body(...)):
-    phone, code = (phone or "").strip(), (code or "").strip()
+    phone, code = _norm_phone(phone), (code or "").strip()
     if not PHONE_RE.match(phone) or not code.isdigit():
         raise HTTPException(status_code=400, detail="参数不正确")
     if not store.verify_code(phone, code, sms.MAX_VERIFY_ATTEMPTS):
