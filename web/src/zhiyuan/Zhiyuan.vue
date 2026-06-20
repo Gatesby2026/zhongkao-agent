@@ -858,15 +858,17 @@ function chDisp(ch: any): { name: string; band: string; cls: string; detail: str
     name: '统招', band: ch.band || '—', cls: PUB_BAND_CLS[ch.band] || 'tj-unk',
     detail: '', caveat: ch.caveat }  // 位次统一在"📍2026预估"块显示,此处只留档位,避免重复
   if (k === 'city_score') {
-    // 朝阳口径:门槛位次 vs 你的区排 → 冲稳保;无门槛(无线4-5校)→ 控制线兜底
-    const entry = ch.metric.entryRank ?? null
+    // 朝阳口径:门槛位次(录取位次) vs 你的区排 → 冲稳保;档次=学校水平;门槛>档次=走统筹不值
+    const entry = ch.metric.entryRank ?? null      // 统筹门槛(录取位次)
+    const equiv = ch.metric.equivRank ?? null      // 学校档次(线分→朝阳)
     const my = Number(form.rank) || 0
-    const b = entry && my ? rankBand(my, entry) : { label: '待核', cls: 'tj-unk' }
     const quotaTxt = ch.quota ? ` · 投朝阳${ch.quota}名` : ''
     if (!entry) return { name: '市级统筹' + (ch.tier ? '·' + ch.tier : ''), band: '兜底', cls: 'tj-unk',
-      detail: '无外区线·控制线≈460兜底⚠️·务必电话核实' + quotaTxt, caveat: ch.metric.estBasis || ch.caveat }
+      detail: '控制线≈460兜底⚠️·务必电话核实' + quotaTxt, caveat: ch.metric.estBasis || ch.caveat }
+    const b = ch.metric.belowControl ? { label: '不值', cls: 'tj-no' } : rankBand(my, entry)
+    const warn = ch.metric.belowControl ? '⚠校档次低于门槛·走统筹需≈460反不如统招' : ''
     return { name: '市级统筹' + (ch.tier ? '·' + ch.tier : ''), band: b.label, cls: b.cls,
-      detail: `统筹门槛≈朝阳第${entry}位 · 学校档次≈等效统招第${ch.metric.equivRank}位${quotaTxt}`,
+      detail: `统筹门槛≈朝阳第${entry}位 · 学校档次≈朝阳第${equiv}位${quotaTxt}${warn ? ' · ' + warn : ''}`,
       caveat: ch.metric.estBasis || ch.caveat }
   }
   if (k === 'in_school_rank') {
@@ -1488,7 +1490,7 @@ const tcOptions: string[] = []
                   <div class="dp-title">📍 2026 录取位次预估（核心依据）</div>
                   <div class="dp-line"><b class="dp-predv">≈{{ selSchool.pred_2026.rank }}</b> <span class="dp-muted">区间 {{ selSchool.pred_2026.lo }}–{{ selSchool.pred_2026.hi }} · 约前{{ selSchool.pred_2026.pct }}%</span></div>
                   <div class="dp-line dp-muted">{{ selSchool.pred_2026.method === 'new_anchor' ? '新校锚定' : selSchool.pred_2026.method === 'tongchou_cy_equiv' ? '跨区位次映射(外区线→朝阳口径)' : '百分位法' }} · 可信度 {{ selSchool.pred_2026.conf }} · 7/9出分接你的精确位次→7/13填报即用（各校实线录取后才有，填报当下靠此预测）</div>
-                  <div v-if="selSchool.extra && selSchool.extra.tongchou_entry" class="dp-line dp-muted">走统筹门槛≈朝阳第 {{ selSchool.extra.tongchou_entry.rank }} 位（比档次线低·名额定向）</div>
+                  <div v-if="selSchool.extra && selSchool.extra.cy_equiv" class="dp-line dp-muted">↑此为<b>走统筹门槛</b>(录取位次) · 学校档次≈朝阳第 {{ selSchool.extra.cy_equiv }} 位(线分→朝阳一分一段,全市可比)<span v-if="selSchool.extra.below_control"> · ⚠档次低于门槛,走统筹需≈460反不如统招,常不值</span></div>
                 </div>
 
                 <div class="dp-block">
@@ -1696,7 +1698,7 @@ const tcOptions: string[] = []
                   <div class="dp-title">📍 2026 录取位次预估（核心依据）</div>
                   <div class="dp-line"><b class="dp-predv">≈{{ selSchool.pred_2026.rank }}</b> <span class="dp-muted">区间 {{ selSchool.pred_2026.lo }}–{{ selSchool.pred_2026.hi }} · 约前{{ selSchool.pred_2026.pct }}%</span></div>
                   <div class="dp-line dp-muted">{{ selSchool.pred_2026.method === 'new_anchor' ? '新校锚定' : selSchool.pred_2026.method === 'tongchou_cy_equiv' ? '跨区位次映射(外区线→朝阳口径)' : '百分位法' }} · 可信度 {{ selSchool.pred_2026.conf }} · 7/9出分接你的精确位次→7/13填报即用（各校实线录取后才有，填报当下靠此预测）</div>
-                  <div v-if="selSchool.extra && selSchool.extra.tongchou_entry" class="dp-line dp-muted">走统筹门槛≈朝阳第 {{ selSchool.extra.tongchou_entry.rank }} 位（比档次线低·名额定向）</div>
+                  <div v-if="selSchool.extra && selSchool.extra.cy_equiv" class="dp-line dp-muted">↑此为<b>走统筹门槛</b>(录取位次) · 学校档次≈朝阳第 {{ selSchool.extra.cy_equiv }} 位(线分→朝阳一分一段,全市可比)<span v-if="selSchool.extra.below_control"> · ⚠档次低于门槛,走统筹需≈460反不如统招,常不值</span></div>
                 </div>
 
                 <div class="dp-block">

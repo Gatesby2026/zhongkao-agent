@@ -166,15 +166,14 @@ def build_unified(result: dict) -> list:
             pcy = t.get("pred_2026_cy")            # {rank,lo,hi,pct} 朝阳口径学校档次位次
             entry = t.get("tongchou_entry_cy")     # {rank,pct} 走统筹实际门槛(朝阳口径,更低)
             ch = _ch("市级统筹", None, "city_score",
-                     equivRank=t.get("cy_equiv_2025"),       # 朝阳等效统招位次(2025,=学校档次)
-                     predRank=(pcy or {}).get("rank"),       # 2026 朝阳口径预估位次
-                     entryRank=(entry or {}).get("rank"),    # 统筹门槛(朝阳口径位次)
+                     equivRank=t.get("cy_equiv"),            # 学校档次(线分→朝阳一分一段→朝阳位次)
+                     entryRank=(entry or {}).get("rank"),    # 统筹门槛=录取位次(=pred_2026,与区内同义)
+                     belowControl=t.get("below_control"),    # 档次<门槛(线<控制线460)→ 走统筹不值
                      discount=t.get("discount_pct"),
-                     refLine=t.get("est_tongchou_line"),     # 外区估线(兜底/参考)
                      estConf=t.get("pred_conf") or t.get("est_line_conf"),
                      estBasis=t.get("pred_basis") or t.get("est_line_basis"),
                      lines=t.get("score_lines"), quota=t.get("quota_chaoyang"),
-                     caveat="朝阳等效位次=外区位次跨区映射;统筹门槛=等效×经验折让;非官方实际线,以官方为准")
+                     caveat="档次=线分→朝阳一分一段(分数全市可比);门槛=档次×经验折让,不低于控制线460;以官方为准")
             ch["tier"] = tier
             host = by_name.get(_norm(t["name"]))
             if host and t.get("district") == "朝阳":      # 本区校：并入公办记录(本区已有自身pred,不覆盖)
@@ -187,7 +186,8 @@ def build_unified(result: dict) -> list:
                             t.get("address"), None, t.get("boarding"), t.get("level"),
                             t.get("style"), t.get("tags"), t.get("gaokao"), t.get("dist"))
                 s["extra"] = {"campus": campus, "quota_chaoyang": t.get("quota_chaoyang"),
-                              "tongchou_entry": entry, "cy_equiv": t.get("cy_equiv_2025")}
+                              "tongchou_entry": entry, "cy_equiv": t.get("cy_equiv"),
+                              "below_control": t.get("below_control")}
                 # 与区内校同字段:统筹外区校也挂 pred_2026(朝阳口径),面板/草表同逻辑渲染
                 if pcy:
                     s["pred_2026"] = {**pcy, "method": "tongchou_cy_equiv", "conf": t.get("pred_conf")}
