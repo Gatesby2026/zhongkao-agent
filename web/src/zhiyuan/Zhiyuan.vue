@@ -148,7 +148,29 @@ const form = reactive({
   risk: 'balanced',                   // 风险偏好:safe保底优先/balanced均衡/aggressive冲高
   orient: 'gaokao',                   // 升学取向:gaokao体制内高考/abroad兼顾出国
   nonpub: 'pub_only',                 // 贯通/中职缺省:仅公办 / no仅公办+民办 / yes智能纳入
+  // —— 孩子画像(§5·AI 深度分析专用·全部可选·缺省不阻塞)——
+  wenli: '',                          // 文理倾向:偏文/偏理/均衡
+  strong: [] as string[],             // 强科(多选)
+  weak: [] as string[],               // 弱科(多选)
+  stability: '',                      // 发挥稳定性:稳定/偶有起伏/起伏较大
+  target: '',                         // 中考目标分或心仪目标校(自由填)
+  drive: '',                          // 学习自驱:自驱强/一般/需要盯
+  adapt: '',                          // 适应环境:能扛高竞争强校/偏好节奏平稳/不确定
+  talent: [] as string[],             // 特长方向(多选)
+  valued: [] as string[],             // 家庭最看重(选≤2)
+  budget: '',                         // 学费预算上限(民办/国际场景)
 })
+// 画像问卷选项(§5)
+const SUBJECTS = ['语', '数', '英', '物', '化', '道法', '历史']
+const TALENTS = ['体育', '艺术', '科技/学科竞赛']
+const VALUES = ['升学率', '校风管理', '通勤距离', '师资', '学费', '国际路线', '住宿条件']
+const profileOpen = ref(false)
+// 多选 chip 切换(可带上限,如家庭最看重≤2)
+function toggleArr(arr: string[], v: string, max = 0) {
+  const i = arr.indexOf(v)
+  if (i >= 0) arr.splice(i, 1)
+  else { if (max && arr.length >= max) return; arr.push(v) }
+}
 const IDENTITIES = [
   { v: 'jjyj', label: '京籍应届' },
   { v: 'feijing', label: '非京籍' },
@@ -238,7 +260,8 @@ async function loadProfile() {
     const me = await fetchMe()
     const p = (me?.profile) ?? (await getProfile().then(r => r.profile).catch(() => null))
     if (!p) return
-    for (const k of ['rank', 'home', 'mode', 'max_km', 'boarding', 'identity', 'risk', 'orient', 'nonpub'] as const) {
+    for (const k of ['rank', 'home', 'mode', 'max_km', 'boarding', 'identity', 'risk', 'orient', 'nonpub',
+      'wenli', 'strong', 'weak', 'stability', 'target', 'drive', 'adapt', 'talent', 'valued', 'budget'] as const) {
       if (p[k] !== undefined && p[k] !== null) (form as any)[k] = p[k]
     }
     if (p.chuzhong != null) xedQuery.value = p.chuzhong
@@ -261,9 +284,21 @@ async function genAiReport() {
   if (!form.rank || Number(form.rank) < 1) { aiErr.value = '请先填区排名'; return }
   aiLoading.value = true; aiErr.value = ''; aiReport.value = ''
   try {
+    // 画像:基础 form 字段 + §5 问卷(用中文 key 喂 LLM,空值不传,缺省不阻塞)
+    const pf: any = { chuzhong: xedQuery.value, risk: form.risk, orient: form.orient, nonpub: form.nonpub }
+    if (form.wenli) pf['文理倾向'] = form.wenli
+    if (form.strong.length) pf['强科'] = form.strong
+    if (form.weak.length) pf['弱科'] = form.weak
+    if (form.stability) pf['发挥稳定性'] = form.stability
+    if (form.target.trim()) pf['中考目标(分或心仪校)'] = form.target.trim()
+    if (form.drive) pf['学习自驱'] = form.drive
+    if (form.adapt) pf['适应环境'] = form.adapt
+    if (form.talent.length) pf['特长'] = form.talent
+    if (form.valued.length) pf['家庭最看重'] = form.valued
+    if (form.budget.trim()) pf['学费预算上限'] = form.budget.trim()
     const body: any = {
       rank: Number(form.rank), mode: form.mode, boarding: form.boarding, identity: form.identity,
-      profile: { chuzhong: xedQuery.value, risk: form.risk, orient: form.orient, nonpub: form.nonpub },
+      profile: pf,
     }
     if (form.home.trim()) body.home = form.home.trim()
     if (form.max_km !== '' && Number(form.max_km) > 0) body.max_km = Number(form.max_km)
@@ -274,6 +309,7 @@ async function genAiReport() {
     const d = await r.json().catch(() => ({}))
     if (!r.ok) throw new Error(d.detail || `HTTP ${r.status}`)
     aiReport.value = d.report || ''
+    saveProfile()   // 画像问卷落库,换设备/下次自动回填
   } catch (e: any) {
     aiErr.value = 'AI 分析失败:' + (e.message || e) + '(可继续用上方规则版草表)'
   } finally {
@@ -2004,6 +2040,56 @@ const tcOptions: string[] = []
           <p class="lp-foot">⚠️ 校额到校 / 市级统筹 / 贯通 需<b>京籍应届</b>；民办 / 中职无此限制。具体名额与门槛以当年官方简章为准。</p>
         </section>
 
+        <!-- 孩子画像问卷(§5)：让 AI 更懂你家,全部可选 -->
+        <section class="profile-q">
+          <button class="profile-q-h" type="button" @click="profileOpen = !profileOpen">
+            <span class="bc">{{ profileOpen ? '▾' : '▸' }}</span>🧒 完善孩子画像（让 AI 更懂你家·全部可选）
+          </button>
+          <div v-show="profileOpen" class="pq-body">
+            <div class="pq-row">
+              <label>文理倾向</label>
+              <select v-model="form.wenli"><option value="">不填</option><option>偏文</option><option>偏理</option><option>均衡</option></select>
+            </div>
+            <div class="pq-multi">
+              <label>强科 <small>(多选)</small></label>
+              <div class="chips"><button v-for="s in SUBJECTS" :key="'st'+s" type="button" class="pchip" :class="{ on: form.strong.includes(s) }" @click="toggleArr(form.strong, s)">{{ s }}</button></div>
+            </div>
+            <div class="pq-multi">
+              <label>弱科 <small>(多选)</small></label>
+              <div class="chips"><button v-for="s in SUBJECTS" :key="'wk'+s" type="button" class="pchip" :class="{ on: form.weak.includes(s) }" @click="toggleArr(form.weak, s)">{{ s }}</button></div>
+            </div>
+            <div class="pq-row">
+              <label>发挥稳定性</label>
+              <select v-model="form.stability"><option value="">不填</option><option>稳定</option><option>偶有起伏</option><option>起伏较大</option></select>
+            </div>
+            <div class="pq-row">
+              <label>学习自驱</label>
+              <select v-model="form.drive"><option value="">不填</option><option>自驱强</option><option>一般</option><option>需要盯</option></select>
+            </div>
+            <div class="pq-row">
+              <label>适应环境</label>
+              <select v-model="form.adapt"><option value="">不填</option><option>能扛高竞争强校</option><option>偏好节奏平稳</option><option>不确定</option></select>
+            </div>
+            <div class="pq-multi">
+              <label>特长 <small>(多选)</small></label>
+              <div class="chips"><button v-for="t in TALENTS" :key="'tl'+t" type="button" class="pchip" :class="{ on: form.talent.includes(t) }" @click="toggleArr(form.talent, t)">{{ t }}</button></div>
+            </div>
+            <div class="pq-multi">
+              <label>家庭最看重 <small>(选≤2)</small></label>
+              <div class="chips"><button v-for="v in VALUES" :key="'vl'+v" type="button" class="pchip" :class="{ on: form.valued.includes(v) }" @click="toggleArr(form.valued, v, 2)">{{ v }}</button></div>
+            </div>
+            <div class="pq-row">
+              <label>中考目标</label>
+              <input v-model="form.target" class="pq-input" placeholder="目标分或心仪校,如 510 或 八十中" />
+            </div>
+            <div class="pq-row">
+              <label>学费预算</label>
+              <input v-model="form.budget" class="pq-input" placeholder="民办/国际才需,如 ≤15 万/年" />
+            </div>
+            <p class="pq-foot">画像仅用于让 AI 报告更贴合你家情况,不影响上方免费规则草表。</p>
+          </div>
+        </section>
+
         <div class="draft-actions">
           <button class="ghost" @click="copyAll">📋 复制全部三批次</button>
           <button class="ai-btn" :disabled="aiLoading" @click="genAiReport">
@@ -2768,6 +2854,23 @@ const tcOptions: string[] = []
 .ai-report-body p { margin: 4px 0; }
 .ai-report-body .ai-li { margin: 3px 0 3px 6px; }
 .ai-report-body b { color: var(--gray-900); }
+/* 孩子画像问卷 */
+.profile-q { border: 1px solid #ede9fe; border-radius: var(--radius); margin: 10px 0; overflow: hidden; }
+.profile-q-h { width: 100%; text-align: left; background: #faf5ff; border: none; padding: 10px 14px;
+  font-size: 13px; font-weight: 600; color: #6d28d9; cursor: pointer; display: flex; align-items: center; gap: 6px; }
+.profile-q-h .bc { color: #a78bfa; }
+.pq-body { padding: 10px 14px 4px; display: flex; flex-direction: column; gap: 10px; }
+.pq-row { display: flex; align-items: center; gap: 10px; }
+.pq-row label { flex: 0 0 70px; font-size: 12.5px; color: var(--gray-600); }
+.pq-row select, .pq-input { flex: 1; padding: 7px 10px; font-size: 13px; border: 1px solid var(--gray-300);
+  border-radius: var(--radius-xs); background: #fff; color: var(--gray-800); min-width: 0; }
+.pq-multi label { font-size: 12.5px; color: var(--gray-600); display: block; margin-bottom: 5px; }
+.pq-multi label small { color: var(--gray-400); font-weight: 400; }
+.pq-multi .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.pchip { padding: 5px 11px; font-size: 12.5px; border: 1px solid var(--gray-300); border-radius: 999px;
+  background: #fff; color: var(--gray-600); cursor: pointer; }
+.pchip.on { background: #ede9fe; border-color: #c4b5fd; color: #6d28d9; font-weight: 600; }
+.pq-foot { font-size: 11.5px; color: var(--gray-400); margin: 2px 0 6px; }
 /* 三批次分区（可折叠）*/
 .batch { margin-top: 10px; }
 .batch-h { width: 100%; text-align: left; display: block; cursor: pointer;
