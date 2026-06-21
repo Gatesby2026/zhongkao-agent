@@ -361,10 +361,12 @@ except FileNotFoundError:
 LEDGER_PATH = os.path.join(KB, "registry", "_id_ledger.yaml")
 ledger = (load_yaml(LEDGER_PATH) or {}) if os.path.exists(LEDGER_PATH) else {}
 
+def _code_of(s):
+    return next((c for c in (s.get("_codes") or []) if c), None)
+
 def natural_key(s):
     """稳定自然键:公办/统筹/民办优先录取代码,无码用 类型+canonical_name。"""
-    code = next((c for c in (s.get("_codes") or []) if c), None)
-    return f"{s['type']}:{code or s['canonical_name']}"
+    return f"{s['type']}:{_code_of(s) or s['canonical_name']}"
 
 schools.sort(key=lambda x: (x["_district"], x["_sort"]))   # 仅决定"首建"时的初始编号顺序
 used = defaultdict(set)
@@ -376,8 +378,18 @@ seen_ab = {}
 for s in schools:
     dpy = s["_district"]
     nk = natural_key(s)
-    if nk in ledger:
-        s["id"] = ledger[nk]                 # 冻结:沿用台账 id(含原编号与拼音)
+    sid = ledger.get(nk)
+    # 无码校改名容错:自然键随校名变会换 id(违"名变 id 不变")。用别名(旧名)回查台账,
+    # 命中则沿用旧 id 并把新名补登到同 id(审计 P2-11)。有码校自然键稳定,不需此路。
+    if sid is None and not _code_of(s):
+        for alias in (s.get("aliases") or []):
+            ak = f"{s['type']}:{alias}"
+            if ak in ledger:
+                sid = ledger[ak]
+                break
+    if sid is not None:
+        s["id"] = sid
+        ledger[nk] = sid                      # 冻结/补登:别名命中时把新名也指向同 id
     else:
         n = 1
         while n in used[dpy]:
@@ -385,6 +397,10 @@ for s in schools:
         used[dpy].add(n)
         s["id"] = f"{dpy}-{n:03d}-{py_abbr(s['short_name'])}"
         ledger[nk] = s["id"]                  # 新校:登记并冻结
+        if not _code_of(s):                   # 无码新实体:改名会换 id,提示操作者用 aliases 保号
+            flag("WARN", s["id"],
+                 f"无录取代码新实体『{s['canonical_name']}』分配新 id;若实为已有校改名,"
+                 f"请把旧名加入其 aliases 以沿用原 id(否则下游引用旧 id 会断链)")
     ab = re.sub(r"^[a-z]+-\d+-", "", s["id"])
     if ab in seen_ab and seen_ab[ab] != s["short_name"]:
         flag("REVIEW", s["id"], f"拼音简写 '{ab}' 与 {seen_ab[ab]} 重复(编号已区分)")

@@ -66,6 +66,12 @@ _NAME_SUFFIX = ("实验学校", "外国语学校", "国际学校", "职业学校
                 "七中", "八中", "九中", "十中", "中")
 
 
+def _looks_like_school(raw: str) -> bool:
+    """名称单元格的内容是否像一所学校名(用于侦测 OCR 漏读 6 位代码的学校表头行)。"""
+    c = clean_school_name(raw)
+    return bool(c) and c.endswith(_NAME_SUFFIX)
+
+
 def clean_school_name(raw: str) -> str:
     """校名单元格常把「校名+地址电话」合并。策略：
     1) 去 OCR 内部空格；先用 电话/邮编/url/括号 做粗截。
@@ -187,8 +193,16 @@ def parse_page(grid, fill):
             fill["code"] = sc
             fill["name"] = clean_school_name(nm) or fill.get("name")
             fill["name_raw"] = re.sub(r"\s+", " ", nm).strip() or fill.get("name_raw")
+            fill["missed_code"] = False
         elif re.match(r"^.{0,4}区$", rowtext.strip()):
             continue  # 区标题行
+        elif _looks_like_school(nm) and clean_school_name(nm) != fill.get("name"):
+            # 出现一个新校名却没读到 6 位代码 → OCR 很可能漏读了该校代码行。
+            # 切换到这所新校(代码置空待核),**不再把它的专业静默挂到上一所学校**(审计 P2-12)。
+            fill["code"] = None
+            fill["name"] = clean_school_name(nm)
+            fill["name_raw"] = re.sub(r"\s+", " ", nm).strip()
+            fill["missed_code"] = True
         # 没有专业代码也没有代码/校名的行：可能是上一专业的续行，跳过
         if not (MAJOR_CODE_RE.match(mc) or sc or mn):
             continue
@@ -213,6 +227,9 @@ def parse_page(grid, fill):
         }
         if not rec["school_code"]:
             rec["flags"].append("no_school_code")
+            if fill.get("missed_code"):
+                # 有校名无代码 + 紧跟在别的学校后 → 疑似 OCR 漏读代码、专业易错挂,必须人工核
+                rec["flags"].append("missed_code_suspect")
         if rec["major_code"] is None and rec["major_name"] is None and not dist:
             continue  # 纯噪声行
         rows.append(rec)
