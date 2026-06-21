@@ -164,7 +164,7 @@ const form = reactive({
 const SUBJECTS = ['语', '数', '英', '物', '化', '道法', '历史']
 const TALENTS = ['体育', '艺术', '科技/学科竞赛']
 const VALUES = ['升学率', '校风管理', '通勤距离', '师资', '学费', '国际路线', '住宿条件']
-const profileOpen = ref(false)
+const aiStarted = ref(false)   // 点「启用 AI 深度分析」后才展开画像问卷 + 生成按钮
 // 多选 chip 切换(可带上限,如家庭最看重≤2)
 function toggleArr(arr: string[], v: string, max = 0) {
   const i = arr.indexOf(v)
@@ -1364,45 +1364,6 @@ const tcSummary = computed(() => {
   return { cnt, filled: draftTongchou.value.filter(sl => sl.school).length }
 })
 
-function copyAll() {
-  const res = result.value
-  if (!res) return
-  const L: string[] = [`中考志愿草表（${res.district} · 三批次 · 2026口径 · 仅参考，以官方网报为准）`,
-    `考生身份：${(IDENTITIES.find(i => i.v === form.identity) || {}).label}`, '']
-  L.push('【批次① 提前招生】特长生/中职自主/登记入学等——无官方结构化代码，需按目标校简章到各校自行报名（本系统不代填）')
-  L.push('', '【批次② 指标分配】校额到校 + 市级统筹')
-  const xs = xedSummary.value
-  if (xs.filled) L.push(`  校额到校（${xs.cnt.worth}值得冲 / ${xs.cnt.similar}相当）：`)
-  xedFilled.value.forEach((s, i) => {
-    const r = xedReason(s.school)
-    L.push(`  校额到校${i + 1}　${xedName(s.school!)}　专业(班):以官方网报为准`)
-    if (r) L.push(`        理由：${r.label}　${r.headline}（${r.caveat}）`)
-  })
-  const ts = tcSummary.value
-  if (ts.filled) L.push(`  市级统筹（${ts.cnt['保']}保 / ${ts.cnt['稳']}稳 / ${ts.cnt['冲']}冲）：`)
-  tcFilled.value.forEach((s, i) => {
-    const r = tcReason(s.school)
-    L.push(`  统筹${i + 1}　${tcName(s.school!)}　专业(班):${s.majors.trim() || '以官方网报为准'}`)
-    if (r) L.push(`        理由：${r.label}　${r.headline}（${r.caveat}）`)
-  })
-  L.push('', `【批次③ 统一招生】(2026含贯通) 共${ZHIYUAN_SLOTS}志愿×2专业`)
-  const su = uniSummary.value
-  L.push(`  （策略：${su.cnt['刺'] ? su.cnt['刺'] + '冲刺 / ' : ''}${su.cnt['冲']}冲 / ${su.cnt['稳']}稳 / ${su.cnt['保']}保${su.lastName ? '；末位保底=' + cleanName(su.lastName) : ''}）`)
-  draft.value.forEach((s, i) => {
-    if (!s.name) { L.push(`  志愿${i + 1}　（空）`); return }
-    const c = findCard(s.name)
-    const ms = majorsOf(s.name).filter(m => s.picks.includes(m.major_code))
-    const mtxt = ms.map(m => `${m.major_code} ${cleanName(m.major_name)}`).join('　')
-    const r = slotReason(s.name)
-    L.push(`  志愿${i + 1}　${cleanName(s.name)}(${c?.school_code || ''})　${mtxt}`)
-    if (r) L.push(`        理由：${r.headline}${r.factors.length ? '　' + r.factors.join(' ') : ''}${r.risk ? '　⚠️' + r.risk : ''}`)
-  })
-  navigator.clipboard?.writeText(L.join('\n')).then(
-    () => { copyHint.value = '已复制全部三批次到剪贴板'; setTimeout(() => copyHint.value = '', 2500) },
-    () => { copyHint.value = '复制失败，请手动选择' },
-  )
-}
-
 // 校额到校：按推荐(值得冲→相当，排除浪费，最好的在前)缺省填入志愿
 function prefillXed() {
   // ②指标分配在统招前·录取即锁定：只填"统招够不上"的 upgrade（✅值得冲），不填≈相当/统招本可达（避免锁进同级或更低校）
@@ -1996,69 +1957,6 @@ const tcOptions: string[] = []
           <p class="lp-foot">⚠️ 校额到校 / 市级统筹 / 贯通 需<b>京籍应届</b>；民办 / 中职无此限制。具体名额与门槛以当年官方简章为准。</p>
         </section>
 
-        <!-- 孩子画像问卷(§5)：让 AI 更懂你家,全部可选 -->
-        <section class="profile-q">
-          <button class="profile-q-h" type="button" @click="profileOpen = !profileOpen">
-            <span class="bc">{{ profileOpen ? '▾' : '▸' }}</span>🧒 完善孩子画像（让 AI 更懂你家·全部可选）
-          </button>
-          <div v-show="profileOpen" class="pq-body">
-            <div class="pq-row">
-              <label>文理倾向</label>
-              <select v-model="form.wenli"><option value="">不填</option><option>偏文</option><option>偏理</option><option>均衡</option></select>
-            </div>
-            <div class="pq-multi">
-              <label>强科 <small>(多选)</small></label>
-              <div class="chips"><button v-for="s in SUBJECTS" :key="'st'+s" type="button" class="pchip" :class="{ on: form.strong.includes(s) }" @click="toggleArr(form.strong, s)">{{ s }}</button></div>
-            </div>
-            <div class="pq-multi">
-              <label>弱科 <small>(多选)</small></label>
-              <div class="chips"><button v-for="s in SUBJECTS" :key="'wk'+s" type="button" class="pchip" :class="{ on: form.weak.includes(s) }" @click="toggleArr(form.weak, s)">{{ s }}</button></div>
-            </div>
-            <div class="pq-row">
-              <label>发挥稳定性</label>
-              <select v-model="form.stability"><option value="">不填</option><option>稳定</option><option>偶有起伏</option><option>起伏较大</option></select>
-            </div>
-            <div class="pq-row">
-              <label>学习自驱</label>
-              <select v-model="form.drive"><option value="">不填</option><option>自驱强</option><option>一般</option><option>需要盯</option></select>
-            </div>
-            <div class="pq-row">
-              <label>适应环境</label>
-              <select v-model="form.adapt"><option value="">不填</option><option>能扛高竞争强校</option><option>偏好节奏平稳</option><option>不确定</option></select>
-            </div>
-            <div class="pq-multi">
-              <label>特长 <small>(多选)</small></label>
-              <div class="chips"><button v-for="t in TALENTS" :key="'tl'+t" type="button" class="pchip" :class="{ on: form.talent.includes(t) }" @click="toggleArr(form.talent, t)">{{ t }}</button></div>
-            </div>
-            <div class="pq-multi">
-              <label>家庭最看重 <small>(选≤2)</small></label>
-              <div class="chips"><button v-for="v in VALUES" :key="'vl'+v" type="button" class="pchip" :class="{ on: form.valued.includes(v) }" @click="toggleArr(form.valued, v, 2)">{{ v }}</button></div>
-            </div>
-            <div class="pq-row">
-              <label>中考目标</label>
-              <input v-model="form.target" class="pq-input" placeholder="目标分或心仪校,如 510 或 八十中" />
-            </div>
-            <div class="pq-row">
-              <label>学费预算</label>
-              <input v-model="form.budget" class="pq-input" placeholder="民办/国际才需,如 ≤15 万/年" />
-            </div>
-            <p class="pq-foot">画像仅用于让 AI 报告更贴合你家情况,不影响上方免费规则草表。</p>
-          </div>
-        </section>
-
-        <div class="draft-actions">
-          <button class="ghost" @click="copyAll">📋 复制全部三批次</button>
-          <button class="ai-btn" :disabled="aiLoading" @click="genAiReport">
-            {{ aiLoading ? '🤖 AI 分析中…(约30秒)' : '🤖 生成 AI 深度分析（测试）' }}
-          </button>
-          <span v-if="copyHint" class="copyhint">{{ copyHint }}</span>
-        </div>
-        <p v-if="aiErr" class="err">{{ aiErr }}</p>
-        <div v-if="aiReportHtml" class="ai-report">
-          <div class="ai-report-head">🤖 AI 深度分析报告 <small>测试版·基于规则草表改良·仅参考,数据以官方简章为准</small></div>
-          <div class="ai-report-body" v-html="aiReportHtml"></div>
-        </div>
-
         <!-- 批次① 提前招生（说明，不代填） -->
         <section class="batch">
           <button class="batch-h" type="button" @click="batchOpen.early = !batchOpen.early">
@@ -2190,6 +2088,78 @@ const tcOptions: string[] = []
         </section>
 
         <p v-if="result.admission_source" class="src">数据来源：{{ result.admission_source }}（统招）。本页为<b>只读草表</b>，由规则引擎按你的位次/通勤/身份自动生成；三批次为 2026 口径推断，专业(班)代码与最终志愿一切以当年官方网报系统与简章为准。</p>
+
+        <!-- AI 深度分析（独立区块·看完免费草表后再按需启用） -->
+        <section class="ai-section">
+          <div class="ai-sec-head">
+            <h3>🤖 AI 深度分析 <small>测试版·暂免费</small></h3>
+            <p class="ai-sec-intro">上面是<b>免费规则推荐</b>的志愿草表。如果还想要一份<b>更懂你家</b>的深度方案——结合孩子画像逐条权衡（通勤 vs 层次、强弱科匹配、发挥稳定性）、情形预演（超常/失常怎么调）、跨批次配合，可启用 AI 深度分析。</p>
+          </div>
+
+          <!-- 第一步：入口（未启用） -->
+          <button v-if="!aiStarted && !aiReportHtml" class="ai-btn ai-cta" @click="aiStarted = true">
+            🤖 启用 AI 深度分析（测试·暂免费）
+          </button>
+
+          <!-- 第二步：启用后 → 完善画像（可选）+ 生成 -->
+          <template v-if="aiStarted || aiReportHtml">
+            <div class="pq-card">
+              <div class="pq-title">🧒 完善孩子画像 <small>可选·让 AI 更懂你家，留空也能生成</small></div>
+              <div class="pq-body">
+                <div class="pq-row">
+                  <label>文理倾向</label>
+                  <select v-model="form.wenli"><option value="">不填</option><option>偏文</option><option>偏理</option><option>均衡</option></select>
+                </div>
+                <div class="pq-multi">
+                  <label>强科 <small>(多选)</small></label>
+                  <div class="chips"><button v-for="s in SUBJECTS" :key="'st'+s" type="button" class="pchip" :class="{ on: form.strong.includes(s) }" @click="toggleArr(form.strong, s)">{{ s }}</button></div>
+                </div>
+                <div class="pq-multi">
+                  <label>弱科 <small>(多选)</small></label>
+                  <div class="chips"><button v-for="s in SUBJECTS" :key="'wk'+s" type="button" class="pchip" :class="{ on: form.weak.includes(s) }" @click="toggleArr(form.weak, s)">{{ s }}</button></div>
+                </div>
+                <div class="pq-row">
+                  <label>发挥稳定性</label>
+                  <select v-model="form.stability"><option value="">不填</option><option>稳定</option><option>偶有起伏</option><option>起伏较大</option></select>
+                </div>
+                <div class="pq-row">
+                  <label>学习自驱</label>
+                  <select v-model="form.drive"><option value="">不填</option><option>自驱强</option><option>一般</option><option>需要盯</option></select>
+                </div>
+                <div class="pq-row">
+                  <label>适应环境</label>
+                  <select v-model="form.adapt"><option value="">不填</option><option>能扛高竞争强校</option><option>偏好节奏平稳</option><option>不确定</option></select>
+                </div>
+                <div class="pq-multi">
+                  <label>特长 <small>(多选)</small></label>
+                  <div class="chips"><button v-for="t in TALENTS" :key="'tl'+t" type="button" class="pchip" :class="{ on: form.talent.includes(t) }" @click="toggleArr(form.talent, t)">{{ t }}</button></div>
+                </div>
+                <div class="pq-multi">
+                  <label>家庭最看重 <small>(选≤2)</small></label>
+                  <div class="chips"><button v-for="v in VALUES" :key="'vl'+v" type="button" class="pchip" :class="{ on: form.valued.includes(v) }" @click="toggleArr(form.valued, v, 2)">{{ v }}</button></div>
+                </div>
+                <div class="pq-row">
+                  <label>中考目标</label>
+                  <input v-model="form.target" class="pq-input" placeholder="目标分或心仪校,如 510 或 八十中" />
+                </div>
+                <div class="pq-row">
+                  <label>学费预算</label>
+                  <input v-model="form.budget" class="pq-input" placeholder="民办/国际才需,如 ≤15 万/年" />
+                </div>
+              </div>
+            </div>
+            <div class="ai-gen-row">
+              <button class="ai-btn" :disabled="aiLoading" @click="genAiReport">
+                {{ aiLoading ? '🤖 AI 分析中…(约30秒)' : (aiReportHtml ? '🔄 重新生成' : '🚀 生成 AI 深度分析报告') }}
+              </button>
+            </div>
+            <p v-if="aiErr" class="err">{{ aiErr }}</p>
+            <div v-if="aiReportHtml" class="ai-report">
+              <div class="ai-report-head">🤖 AI 深度分析报告 <small>测试版·基于规则草表改良·仅参考,数据以官方简章为准</small></div>
+              <div class="ai-report-body" v-html="aiReportHtml"></div>
+            </div>
+          </template>
+        </section>
       </div>
     </section>
   </div>
@@ -2780,6 +2750,19 @@ const tcOptions: string[] = []
   background: #fff; color: var(--gray-600); cursor: pointer; }
 .pchip.on { background: #ede9fe; border-color: #c4b5fd; color: #6d28d9; font-weight: 600; }
 .pq-foot { font-size: 11.5px; color: var(--gray-400); margin: 2px 0 6px; }
+/* AI 深度分析 独立区块（草表之后） */
+.ai-section { margin-top: 18px; border: 1px solid #ddd6fe; border-radius: var(--radius);
+  background: linear-gradient(180deg, #faf5ff 0%, var(--surface) 60%); padding: 16px; }
+.ai-sec-head h3 { font-size: 16px; font-weight: 700; color: #6d28d9; margin: 0 0 6px; }
+.ai-sec-head h3 small { font-size: 11.5px; font-weight: 500; color: var(--gray-500); }
+.ai-sec-intro { font-size: 12.5px; line-height: 1.7; color: var(--gray-700); margin: 0 0 12px; }
+.ai-cta { font-size: 14px; padding: 11px 20px; width: 100%; }
+.pq-card { border: 1px solid #ede9fe; border-radius: var(--radius-sm); background: var(--surface); margin: 4px 0 12px; }
+.pq-title { padding: 10px 14px; font-size: 13px; font-weight: 600; color: #6d28d9;
+  border-bottom: 1px solid #f1ebfe; }
+.pq-title small { font-weight: 400; color: var(--gray-400); font-size: 11px; }
+.ai-gen-row { display: flex; gap: 10px; margin: 4px 0 6px; }
+.ai-gen-row .ai-btn { font-size: 13.5px; padding: 9px 18px; }
 /* 三批次分区（可折叠）*/
 .batch { margin-top: 10px; }
 .batch-h { width: 100%; text-align: left; display: block; cursor: pointer;
