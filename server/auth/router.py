@@ -1,12 +1,15 @@
 """项目级鉴权路由 /api/auth/*。两服务各 include_router 一次即可。"""
 from __future__ import annotations
 
+import logging
 import os
 import random
 import re
 import time
 
 from fastapi import APIRouter, Body, Depends, HTTPException, Request, Response
+
+_log = logging.getLogger("auth")
 
 from . import email as mailer, jwt_util, sms, store
 from .deps import COOKIE_NAME, get_current_user
@@ -38,9 +41,14 @@ def _classify(account: str):
 
 
 def _client_ip(req: Request) -> str | None:
-    return (req.headers.get("x-real-ip")
-            or (req.headers.get("x-forwarded-for") or "").split(",")[0].strip()
-            or (req.client.host if req.client else None))
+    """仅信任前置 nginx 用 $remote_addr 覆盖写入的 X-Real-IP(客户端无法伪造)。
+    绝不读 X-Forwarded-For——其首段客户端可任意伪造,会被用来绕过 IP 频控批量刷码。
+    无 X-Real-IP(直连/未走 nginx)时退回 socket peer。nginx 侧须 set_real_ip_from
+    可信代理并对外部请求清掉客户端自带的 X-Real-IP/X-Forwarded-For。"""
+    xri = (req.headers.get("x-real-ip") or "").strip()
+    if xri:
+        return xri
+    return req.client.host if req.client else None
 
 
 def _set_session_cookie(resp: Response, uid: int) -> None:
@@ -78,14 +86,16 @@ def _do_send(req: Request, account: str) -> dict:
         ok, msg = sms.send_code(key, code)
         label = "短信"
     if not ok:
-        raise HTTPException(status_code=502, detail=f"{label}发送失败:{msg}")
+        # 不把 provider(阿里云 SDK/RequestId/AK 状态)原文回传客户端——此端点未鉴权,会被指纹识别。
+        _log.warning("send code failed via %s: %s", label, msg)
+        raise HTTPException(status_code=502, detail=f"{label}发送失败,请稍后重试")
     return {"ok": True, "cooldown": sms.RESEND_COOLDOWN_SEC, "channel": kind}
 
 
 def _do_verify(resp: Response, account: str, code: str) -> dict:
     kind, key = _classify(account)
     code = (code or "").strip()
-    if not kind or not code.isdigit():
+    if not kind or not code.isdigit() or len(code) != 6:
         raise HTTPException(status_code=400, detail="参数不正确")
     if not store.verify_code(key, code, sms.MAX_VERIFY_ATTEMPTS):
         raise HTTPException(status_code=400, detail="验证码错误或已过期")

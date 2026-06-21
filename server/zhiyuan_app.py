@@ -14,6 +14,7 @@
 """
 from __future__ import annotations
 
+import logging
 import sys
 from pathlib import Path
 from typing import List, Optional
@@ -34,6 +35,7 @@ from auth.deps import get_current_user                       # noqa: E402
 from fastapi import Depends                                  # noqa: E402
 
 WEB_DIST = ROOT / "web" / "dist"
+_log = logging.getLogger("zhiyuan")
 
 app = FastAPI(title="中考志愿填报推荐 API", version="1.0")
 app.add_middleware(
@@ -82,10 +84,11 @@ def zhiyuan_report(req: ReportReq, user: dict = Depends(get_current_user)):
             rank=req.rank, home=req.home, mode=req.mode, max_km=req.max_km,
             boarding=req.boarding, identity=req.identity,
             profile=req.profile or {}, provider=provider)
-    except ValueError as e:           # 住址无法定位等
+    except ValueError as e:           # 住址无法定位等(可读输入错)
         raise HTTPException(status_code=400, detail=str(e))
-    except Exception as e:            # LLM/网络失败 → 让前端回落规则版
-        raise HTTPException(status_code=502, detail=f"AI 报告生成失败,请稍后重试:{e}")
+    except Exception as e:            # LLM/网络失败 → 让前端回落规则版;异常原文只记日志不回传
+        _log.warning("zhiyuan report failed: %r", e)
+        raise HTTPException(status_code=502, detail="AI 报告生成失败,请稍后重试")
     import json as _json
     warns = llm_report.validate(out["report"], _json.dumps(out["context"], ensure_ascii=False))
     return {"report": out["report"], "provider": out["provider"], "warnings": warns}
@@ -93,6 +96,8 @@ def zhiyuan_report(req: ReportReq, user: dict = Depends(get_current_user)):
 
 @app.post("/api/zhiyuan/recommend")
 def zhiyuan_recommend(req: ZhiyuanReq):
+    if req.mode not in zhiyuan.dist_mod.MODES:   # 非法通勤方式 → 400(而非 KeyError 漏成 500)
+        raise HTTPException(status_code=400, detail="通勤方式不正确")
     try:
         result = zhiyuan.build_result(
             rank=req.rank, home=req.home, mode=req.mode,
@@ -101,6 +106,9 @@ def zhiyuan_recommend(req: ZhiyuanReq):
         )
     except ValueError as e:
         raise HTTPException(status_code=400, detail=str(e))
+    except Exception as e:              # 脏数据/外部失败 → 通用 500,原文只记日志
+        _log.warning("zhiyuan recommend failed: %r", e)
+        raise HTTPException(status_code=500, detail="推荐生成失败,请稍后重试")
     # 去掉给 CLI/地图复用的内部字段（下划线开头）
     return {k: v for k, v in result.items() if not k.startswith("_")}
 
