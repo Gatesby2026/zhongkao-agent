@@ -113,6 +113,54 @@ def zhiyuan_recommend(req: ZhiyuanReq):
     return {k: v for k, v in result.items() if not k.startswith("_")}
 
 
+import json as _json2
+
+_DISTRICTS_DIR = ROOT / "knowledge-base" / "admission" / "beijing" / "districts"
+# 区拼音→中文(朝阳=全功能,走既有 recommend;其余=校库:可查校/看专业/看位置,暂无录取线)
+_DLIST = [("chaoyang", "朝阳", True), ("haidian", "海淀", False), ("xicheng", "西城", False),
+          ("dongcheng", "东城", False), ("fengtai", "丰台", False), ("shijingshan", "石景山", False),
+          ("mentougou", "门头沟", False), ("fangshan", "房山", False), ("tongzhou", "通州", False),
+          ("shunyi", "顺义", False), ("changping", "昌平", False), ("daxing", "大兴", False),
+          ("huairou", "怀柔", False), ("pinggu", "平谷", False), ("miyun", "密云", False),
+          ("yanqing", "延庆", False)]
+_PY2CN = {py: cn for py, cn, _ in _DLIST}
+
+
+@app.get("/api/zhiyuan/districts")
+def zhiyuan_districts():
+    """区列表:朝阳=full(冲稳保+草表+全维),其余=browse(校库·暂无录取线)。"""
+    out = []
+    for py, cn, full in _DLIST:
+        n = None
+        if not full:
+            f = _DISTRICTS_DIR / f"{py}_admission_codes.json"
+            if f.exists():
+                n = len(_json2.loads(f.read_text(encoding="utf-8")).get("schools", {}))
+        out.append({"py": py, "cn": cn, "mode": "full" if full else "browse", "n_schools": n})
+    return {"districts": out}
+
+
+@app.get("/api/zhiyuan/district/{py}")
+def zhiyuan_district(py: str):
+    """某区校库:学校代码+专业(班)+坐标(GCJ-02)。无录取线 → 仅供查校/看专业/看位置。"""
+    cf = _DISTRICTS_DIR / f"{py}_admission_codes.json"
+    if not cf.exists():
+        raise HTTPException(status_code=404, detail="该区暂无校库数据")
+    d = _json2.loads(cf.read_text(encoding="utf-8"))
+    cof = _DISTRICTS_DIR / f"{py}_coords.json"
+    coords = (_json2.loads(cof.read_text(encoding="utf-8")).get("schools", {}) if cof.exists() else {})
+    schools = []
+    for code, s in d.get("schools", {}).items():
+        c = coords.get(s["name"]) or {}
+        schools.append({"name": s["name"], "school_code": code, "majors": s.get("majors", []),
+                        "lat": c.get("lat"), "lon": c.get("lon"), "coord_conf": c.get("conf")})
+    schools.sort(key=lambda x: x["school_code"])
+    return {"district": d.get("district", _PY2CN.get(py, py)), "mode": "browse",
+            "has_lines": False, "plan_year": d.get("plan_year"),
+            "note": "该区暂无录取线/位次,无法冲稳保;仅供查校、看专业(班)、看位置。",
+            "schools": schools}
+
+
 @app.get("/zhiyuan")
 def zhiyuan_page():
     f = WEB_DIST / "zhiyuan.html"
