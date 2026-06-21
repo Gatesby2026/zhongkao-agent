@@ -275,7 +275,12 @@ def new_school_band_cards(district, rank, home, district_cn, mode, mode_label, m
             _, dist_map = dist_mod.compute_distances(pseudo, home, district_cn, mode)
     cards = {"冲": [], "稳": [], "保": [], "够不上": []}
     for s in schools:
-        er = int(s["est_rank"])
+        try:
+            er = int(s["est_rank"])
+        except (TypeError, ValueError):
+            er = 0
+        if er <= 0:        # 估算位次缺失/为0(占位脏数据) → 跳过,不编造档位、不除零
+            continue
         margin = (er - rank) / er
         band = ("保" if margin >= SAFETY_MARGIN else "稳" if margin >= 0
                 else "冲" if margin >= REACH_MARGIN else "够不上")
@@ -382,10 +387,13 @@ def classify(student_rank: int, school: dict, pred_rank=None):
         ref_rank = int(pred_rank)
     else:
         ref_year, ref_rank = history[-1]
+    if not ref_rank or ref_rank <= 0:    # 位次缺失/脏数据(0/负) → 当数据缺失,不参与判档
+        return None
     margin = (ref_rank - student_rank) / ref_rank
 
-    ranks = [r for _, r in history] or [ref_rank]
-    volatility = (max(ranks) - min(ranks)) / (sum(ranks) / len(ranks))
+    ranks = [r for _, r in history if r] or [ref_rank]
+    mean = sum(ranks) / len(ranks)
+    volatility = (max(ranks) - min(ranks)) / mean if mean else 0.0
 
     if margin >= SAFETY_MARGIN:
         band = "保"

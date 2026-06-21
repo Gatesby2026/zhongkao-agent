@@ -47,11 +47,19 @@ for uid, d in tk.items():
 # 仅用非饱和区(一本率<SAT)拟合 log 线性 v = a + b*ln(rank),避免顶部饱和把线拉歪
 fit = [p for p in pts if p[2] < SAT]
 n = len(fit)
-xs = [math.log(p[1]) for p in fit]
-ys = [p[2] for p in fit]
-mx, my = sum(xs) / n, sum(ys) / n
-b = sum((xs[i] - mx) * (ys[i] - my) for i in range(n)) / sum((x - mx) ** 2 for x in xs)
-a = my - b * mx
+a = b = 0.0
+can_fit = n >= 2
+if can_fit:
+    xs = [math.log(p[1]) for p in fit]
+    ys = [p[2] for p in fit]
+    mx, my = sum(xs) / n, sum(ys) / n
+    denom = sum((x - mx) ** 2 for x in xs)   # 入口位次全相同 → 0,无法拟合
+    can_fit = denom > 0
+    if can_fit:
+        b = sum((xs[i] - mx) * (ys[i] - my) for i in range(n)) / denom
+        a = my - b * mx
+if not can_fit:
+    print(f"⚠️ 拟合样本不足(非饱和区 {n} 校)或入口位次无区分度 → 跳过 residual,仅标识饱和/数据不足")
 
 
 def expected(rank):
@@ -68,6 +76,13 @@ for uid, rank, v in pts:
             "residual": None, "label": "顶部饱和",
             "basis": f"一本率{v:.0%}已近满,一本率不再区分;高端增值看清北/高分段",
             "note": "T3·一本率饱和区·增值参考清北而非一本率",
+        }
+        continue
+    if not can_fit:        # 拟合失败:不编造 residual,只如实标"样本不足"
+        out[uid] = {
+            "entrance_rank": rank, "yiben_real": round(v, 3), "yiben_expected": None,
+            "residual": None, "label": "数据不足",
+            "basis": "增值样本不足/入口位次无区分度,本轮不评估", "note": "T3·样本不足·暂不计增值",
         }
         continue
     exp = expected(rank)
