@@ -1154,25 +1154,6 @@ function shortCampusName(name: string): string {
   return (name || '').replace(/^北京市朝阳区/, '').replace(/^北京市/, '')
 }
 
-function copyDraft() {
-  const res = result.value
-  if (!res) return
-  const lines = [`统一招生 志愿草表（${res.district} · ${ZHIYUAN_SLOTS}志愿×2专业）`]
-  draft.value.forEach((s, i) => {
-    if (!s.name) { lines.push(`志愿${i + 1}　（空）`); return }
-    const c = findCard(s.name)
-    const ms = majorsOf(s.name).filter(m => s.picks.includes(m.major_code))
-    const mtxt = ms.map(m => `${m.major_code} ${cleanName(m.major_name)}`).join('　')
-    lines.push(`志愿${i + 1}　${cleanName(s.name)}(${c?.school_code || ''})　${mtxt}`)
-  })
-  const txt = lines.join('\n')
-  navigator.clipboard?.writeText(txt).then(
-    () => { copyHint.value = '已复制到剪贴板'; setTimeout(() => copyHint.value = '', 2000) },
-    () => { copyHint.value = '复制失败，请手动选择' },
-  )
-}
-const copyHint = ref('')
-
 /* ---------------- 志愿草表 v2：三批次（2026 口径）---------------- */
 // 批次资格（按考生身份灰掉）
 const identityLabel = computed(() => (IDENTITIES.find(i => i.v === form.identity) || {}).label || '')
@@ -2602,11 +2583,6 @@ const tcOptions: string[] = []
   margin-top: 2px; padding: 10px 12px; box-shadow: 0 6px 18px rgba(0,0,0,.14); }
 .mm-group { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
 .mm-k { font-size: 12px; color: var(--gray-500); font-weight: 600; margin-right: 2px; }
-.mchip { font-size: 13px; padding: 5px 11px; border: 1px solid var(--gray-300); background: #fff;
-  border-radius: var(--radius-full); color: var(--gray-700); cursor: pointer; display: inline-flex; align-items: center; gap: 4px; }
-.mchip.on { background: var(--brand-50); color: var(--brand-dark); border-color: var(--brand); }
-.mchip i { font-style: normal; font-size: 11px; font-weight: 700; color: var(--gray-400); }
-.mchip.on i { color: var(--brand-dark); }
 .mm-tip { font-size: 11.5px; color: var(--gray-400); margin: 2px 0 0; }
 .lnk { color: var(--brand-dark); font-weight: 700; cursor: pointer; text-decoration: underline; }
 /* 内容卡片统一顶边，跟页签条衔接 */
@@ -2729,11 +2705,6 @@ const tcOptions: string[] = []
 /* 志愿草表 */
 .draftwrap { background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow-sm); padding: 16px; }
 .draft-note { font-size: 12.5px; color: var(--gray-600); margin-bottom: 10px; line-height: 1.6; }
-.draft-actions { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
-.ghost { font-size: 12.5px; padding: 6px 12px; border: 1px solid var(--gray-300); background: #fff;
-  border-radius: var(--radius-xs); color: var(--gray-700); cursor: pointer; }
-.copyhint { font-size: 12px; color: var(--success); }
-.draft-actions { flex-wrap: wrap; }
 .ai-btn { font-size: 12.5px; padding: 6px 14px; border: none; border-radius: var(--radius-xs);
   background: linear-gradient(135deg, #7c3aed, #2563eb); color: #fff; font-weight: 600; cursor: pointer; }
 .ai-btn:disabled { opacity: .6; cursor: not-allowed; }
@@ -2749,10 +2720,6 @@ const tcOptions: string[] = []
 .ai-report-body .ai-li { margin: 3px 0 3px 6px; }
 .ai-report-body b { color: var(--gray-900); }
 /* 孩子画像问卷 */
-.profile-q { border: 1px solid #ede9fe; border-radius: var(--radius); margin: 10px 0; overflow: hidden; }
-.profile-q-h { width: 100%; text-align: left; background: #faf5ff; border: none; padding: 10px 14px;
-  font-size: 13px; font-weight: 600; color: #6d28d9; cursor: pointer; display: flex; align-items: center; gap: 6px; }
-.profile-q-h .bc { color: #a78bfa; }
 .pq-body { padding: 10px 14px 4px; display: flex; flex-direction: column; gap: 10px; }
 .pq-row { display: flex; align-items: center; gap: 10px; }
 .pq-row label { flex: 0 0 70px; font-size: 12.5px; color: var(--gray-600); }
@@ -2789,10 +2756,6 @@ const tcOptions: string[] = []
 .batch-h small { font-weight: 400; font-size: 12px; color: var(--gray-500); margin-left: 6px; }
 .batch-sub { font-size: 13.5px; font-weight: 700; color: var(--gray-800); margin: 14px 0 8px; }
 .batch-sub small { font-weight: 400; font-size: 11.5px; color: var(--gray-400); margin-left: 6px; }
-.early-rows { display: flex; flex-direction: column; gap: 6px; }
-.early-row { display: flex; align-items: center; gap: 8px; }
-.early-input { flex: 1; min-width: 0; padding: 7px 9px; border: 1px solid var(--gray-300);
-  border-radius: var(--radius-xs); font-size: 12.5px; background: #fff; }
 .gt-ref { margin-top: 14px; }
 .gt-ref-list { display: flex; flex-wrap: wrap; gap: 6px; }
 /* 12 志愿用两列网格铺开，消除单列下拉右侧大段空白 */
@@ -2806,17 +2769,10 @@ const tcOptions: string[] = []
   display: flex; align-items: center; justify-content: center;
   background: var(--gray-200); color: var(--gray-500); }
 .slot-no.on { background: var(--brand); color: #fff; }
-.school-sel { flex: 1; min-width: 0; padding: 7px 9px; border: 1px solid var(--gray-300);
-  border-radius: var(--radius-xs); font-size: 13px; background: #fff; cursor: pointer; }
 .x { flex-shrink: 0; width: 26px; height: 30px; font-size: 12px; border: 1px solid var(--gray-200);
   background: #fff; border-radius: var(--radius-xs); color: var(--gray-400); cursor: pointer; }
 .x:hover { color: var(--error); border-color: var(--error); }
 .slot-majors { margin-top: 8px; padding-left: 30px; display: flex; flex-wrap: wrap; gap: 6px; }
-.mchip { font-size: 12px; padding: 4px 9px; border: 1px solid var(--gray-300); background: #fff;
-  border-radius: var(--radius-full); color: var(--gray-600); cursor: pointer; }
-.mchip.on { background: var(--brand); color: #fff; border-color: var(--brand); }
-.mchip.on b { color: #fff; }
-.mchip b { color: var(--brand-dark); }
 .nomajor { font-size: 12px; color: var(--gray-400); }
 .src { font-size: 11px; color: var(--gray-400); margin-top: 14px; }
 /* 统招：学校+专业同一行，去空白 */
@@ -2856,27 +2812,10 @@ const tcOptions: string[] = []
 .rd-2026 { background: var(--warning-bg); border-color: #fde68a; }
 @media (max-width: 720px) { .rules-doc { grid-template-columns: 1fr; } }
 .uslot { border: 1px solid var(--gray-100); border-radius: var(--radius-sm); background: var(--gray-50); overflow: hidden; }
-.uslot.filled { background: var(--surface); border-color: var(--brand-50); }
-.uslot .urow { border: 0; background: none; }
-.ureason { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; padding: 6px 10px 8px 40px; font-size: 12px; color: var(--gray-700); line-height: 1.5; }
-.ur-band { flex: 0 0 auto; font-size: 11px; font-weight: 700; padding: 1px 7px; border-radius: var(--radius-full); }
 .band-刺 { background: #ede7f6; color: #6a1b9a; }
 .ur-head { color: var(--gray-700); }
 .ur-f { font-size: 11px; color: var(--gray-600); background: var(--gray-100); border-radius: var(--radius-xs); padding: 1px 6px; }
 .ur-risk { font-size: 11px; color: #b45309; background: var(--warning-bg); border-radius: var(--radius-xs); padding: 1px 6px; }
-.urow { display: flex; align-items: center; gap: 8px; padding: 6px 10px; min-width: 0;
-  border: 1px solid var(--gray-100); border-radius: var(--radius-xs); background: var(--gray-50); }
-.urow.filled { background: var(--surface); border-color: var(--brand-50); }
-.uni-sel { flex: 0 0 300px; width: 300px; }
-.uni-majors { flex: 1; min-width: 0; display: flex; flex-wrap: wrap; gap: 6px; }
-.uni-empty { flex: 1; color: var(--gray-300); font-size: 12px; }
-.urow-ops { flex: 0 0 auto; display: flex; gap: 3px; }
-.op { height: 26px; min-width: 26px; padding: 0 6px; font-size: 12px; border: 1px solid var(--gray-200);
-  background: #fff; border-radius: var(--radius-xs); color: var(--gray-500); cursor: pointer; }
-.op:hover:not(:disabled) { border-color: var(--brand); color: var(--brand-dark); }
-.op:disabled { opacity: .35; cursor: default; }
-.op.x-op:hover { color: var(--error); border-color: var(--error); }
-@media (max-width: 640px) { .uni-sel { flex-basis: 130px; width: 130px; } }
 /* 只读草表行（②校额/②统筹/③统招 统一格式）：行1=序号+校名+meta+档位徽标；行2=专业(班)；行3=理由 */
 .uslot.ro { background: var(--surface); border: 1px solid var(--gray-100); border-radius: var(--radius-sm); padding: 8px 10px; }
 .ro-row1 { display: flex; align-items: center; gap: 8px; min-width: 0; }
@@ -2952,12 +2891,6 @@ const tcOptions: string[] = []
   .ex-table thead th:nth-child(5), .ex-table tbody td:nth-child(5),
   .ex-table thead th:nth-child(7), .ex-table tbody td:nth-child(7),
   .ex-table thead th:nth-child(8), .ex-table tbody td:nth-child(8) { display: none; }
-  /* 草表行:第一行=序号+学校下拉(下拉 basis 0+grow 填满本行剩余,保证可见);专业、操作图标各自换行 */
-  .urow { flex-wrap: wrap; align-items: center; }
-  .school-sel.uni-sel { flex: 1 1 0; width: auto; min-width: 0; }
-  .uni-majors { flex-basis: 100%; min-width: 0; }
-  .uni-empty { flex-basis: 100%; }
-  .urow-ops { flex: 0 0 100%; justify-content: flex-end; }
   /* 地图选中学校 → 底部弹层(不再上下来回滑);未选中则不占位,地图占满 */
   .map-detail { display: block; }
   .detail-panel { display: none; }
