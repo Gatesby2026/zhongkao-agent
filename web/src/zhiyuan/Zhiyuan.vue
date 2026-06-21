@@ -1623,7 +1623,7 @@ const tcOptions: string[] = []
                       </tr>
                     </tbody>
                   </table>
-                  <div v-if="selSchool.line_trend" class="dp-line">📈 录取位次(区)：{{ selSchool.line_trend.ranks['2023'] || '—' }} → {{ selSchool.line_trend.ranks['2024'] || '—' }} → <b>{{ selSchool.line_trend.ranks['2025'] || '—' }}</b><span class="dp-muted">（23/24/25）· 2026参考 {{ selSchool.line_trend.ref_2026 }}（{{ selSchool.line_trend.ref_2026_lo }}~{{ selSchool.line_trend.ref_2026_hi }}）</span><span v-if="selSchool.line_trend.volatile" class="addr-tag">波动大</span></div>
+                  <div v-if="selSchool.line_trend" class="dp-line">📈 录取位次(区)：{{ selSchool.line_trend.ranks['2023'] || '—' }} → {{ selSchool.line_trend.ranks['2024'] || '—' }} → <b>{{ selSchool.line_trend.ranks['2025'] || '—' }}</b><span class="dp-muted">（23/24/25 历史）</span><span v-if="selSchool.line_trend.volatile" class="addr-tag">波动大</span></div>
                   <div v-if="selSchool.extra.voc_line_note" class="dp-line dp-muted">📈 录取线：{{ selSchool.extra.voc_line_note }}</div>
                   <div v-if="selSchool.extra.line_note && (selSchool.extra.in_minban || selSchool.extra.in_intl)" class="dp-line dp-muted">📈 录取：{{ selSchool.extra.line_note }}</div>
                   <p v-if="schoolLines.length" class="dp-tip">分数跨年口径不同(2025起510制)；同年/区排名才可比。</p>
@@ -1733,7 +1733,7 @@ const tcOptions: string[] = []
                 <tr><td>层次</td><td v-for="c in compareSel" :key="c.uid">{{ c.level || '—' }}</td></tr>
                 <tr><td>档位(对你)</td><td v-for="c in compareSel" :key="c.uid"><span v-if="exBandOf(c)" class="t-band" :class="exBandOf(c)?.cls">{{ exBandOf(c)?.label }}</span><span v-else>—</span></td></tr>
                 <tr><td>录取位次(25)</td><td v-for="c in compareSel" :key="c.uid">{{ c.line_trend ? c.line_trend.latest : '—' }}</td></tr>
-                <tr><td>2026参考</td><td v-for="c in compareSel" :key="c.uid">{{ c.line_trend ? c.line_trend.ref_2026_lo + '~' + c.line_trend.ref_2026_hi : '—' }}<span v-if="c.line_trend && c.line_trend.volatile" class="addr-tag warn">波动</span></td></tr>
+                <tr><td>2026预估</td><td v-for="c in compareSel" :key="c.uid">{{ c.pred_2026 ? '≈' + c.pred_2026.rank : '—' }}<span v-if="c.line_trend && c.line_trend.volatile" class="addr-tag warn">波动</span></td></tr>
                 <tr><td>高考U分</td><td v-for="c in compareSel" :key="c.uid">{{ c.gaokao && c.gaokao.score != null ? c.gaokao.score + ' ' + c.gaokao.tier : (c.gaokao ? c.gaokao.tier : '—') }}</td></tr>
                 <tr><td>增值</td><td v-for="c in compareSel" :key="c.uid"><span v-if="c.value_added" :class="'va-' + c.value_added.label">{{ c.value_added.label }}</span><span v-else>—</span></td></tr>
                 <tr><td>升学出口</td><td v-for="c in compareSel" :key="c.uid">{{ (c.extra && (c.extra.study_abroad || c.extra.exit_domestic || c.extra.exit_paths)) || '—' }}</td></tr>
@@ -1833,7 +1833,7 @@ const tcOptions: string[] = []
                       </tr>
                     </tbody>
                   </table>
-                  <div v-if="selSchool.line_trend" class="dp-line">📈 录取位次(区)：{{ selSchool.line_trend.ranks['2023'] || '—' }} → {{ selSchool.line_trend.ranks['2024'] || '—' }} → <b>{{ selSchool.line_trend.ranks['2025'] || '—' }}</b><span class="dp-muted">（23/24/25）· 2026参考 {{ selSchool.line_trend.ref_2026 }}（{{ selSchool.line_trend.ref_2026_lo }}~{{ selSchool.line_trend.ref_2026_hi }}）</span><span v-if="selSchool.line_trend.volatile" class="addr-tag">波动大</span></div>
+                  <div v-if="selSchool.line_trend" class="dp-line">📈 录取位次(区)：{{ selSchool.line_trend.ranks['2023'] || '—' }} → {{ selSchool.line_trend.ranks['2024'] || '—' }} → <b>{{ selSchool.line_trend.ranks['2025'] || '—' }}</b><span class="dp-muted">（23/24/25 历史）</span><span v-if="selSchool.line_trend.volatile" class="addr-tag">波动大</span></div>
                   <div v-if="selSchool.extra.voc_line_note" class="dp-line dp-muted">📈 录取线：{{ selSchool.extra.voc_line_note }}</div>
                   <div v-if="selSchool.extra.line_note && (selSchool.extra.in_minban || selSchool.extra.in_intl)" class="dp-line dp-muted">📈 录取：{{ selSchool.extra.line_note }}</div>
                   <p v-if="schoolLines.length" class="dp-tip">分数跨年口径不同(2025起510制)；同年/区排名才可比。</p>

@@ -98,6 +98,22 @@ def main():
         for s in (yaml.safe_load(open(extra_path, encoding="utf-8")) or []):
             schools_master.append(s)
 
+    # 2026 新设普高(无录取码/历史线,仅估)→ 入主表,uid 与 unified type "2026新校" 一致,
+    # 让按 uid 回查主表(取名/坐标/区)的下游不再漏新校(审计 P1-10/P1-11)。
+    new_path = KB / "chaoyang_new2026.yaml"
+    if new_path.exists():
+        nd = yaml.safe_load(open(new_path, encoding="utf-8")) or {}
+        for s in (nd.get("schools") if isinstance(nd, dict) else nd) or []:
+            name = s.get("name")
+            if not name:
+                continue
+            schools_master.append({
+                "uid": f"2026新校:{name}", "name": name, "school_code": None,
+                "type": "2026新校", "district": "朝阳", "campus": None,
+                "lat": s.get("lat"), "lon": s.get("lon"),
+                "est_rank": s.get("est_rank"), "est_conf": s.get("est_conf"),
+            })
+
     # name→uid:正名 + 别名都登记
     name2uid = {}
     for s in schools_master:
