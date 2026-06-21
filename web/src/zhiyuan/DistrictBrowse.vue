@@ -10,6 +10,15 @@ const err = ref('')
 const q = ref('')
 let map: any = null, layer: any = null
 
+function schoolNotes(s: any): string[] {
+  const seen = new Set<string>()
+  for (const m of (s.majors || [])) {
+    const n = (m.note || "").trim()
+    if (n) seen.add(n)
+  }
+  return [...seen]
+}
+
 const filtered = computed(() => {
   const s = q.value.trim()
   if (!s) return schools.value
@@ -81,6 +90,7 @@ onMounted(load)
           <span v-for="m in s.majors" :key="m.major_code" class="db-mchip"><b>{{ m.major_code }}</b> {{ m.major_name }}<small v-if="m.plan_total"> ·{{ m.plan_total }}人</small></span>
           <span v-if="!(s.majors && s.majors.length)" class="db-nomaj">专业(班)以官方网报为准</span>
         </div>
+        <div v-for="(n, i) in schoolNotes(s)" :key="i" class="db-note">📋 {{ n }}</div>
       </div>
       <p v-if="!loading && !filtered.length" class="db-tip">无匹配学校。</p>
     </div>
@@ -107,6 +117,8 @@ onMounted(load)
 .db-mchip b { color: var(--brand-dark); }
 .db-mchip small { color: var(--gray-500); }
 .db-nomaj { font-size: 11.5px; color: var(--gray-400); }
+.db-note { font-size: 11px; color: var(--gray-500); line-height: 1.55; margin-top: 5px;
+  padding: 5px 8px; background: var(--gray-50); border-radius: var(--radius-xs); }
 .db-tip { font-size: 12.5px; color: var(--gray-500); margin: 6px 0; }
 .db-tip.err { color: var(--error); }
 .db-src { font-size: 11px; color: var(--gray-400); margin-top: 12px; }
