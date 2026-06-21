@@ -3,6 +3,7 @@ import { ref, reactive, computed, nextTick, watch, onMounted } from 'vue'
 import { USER_DEFAULTS } from './user-defaults'
 import JudgeLegend from './JudgeLegend.vue'
 import DraftRow from './DraftRow.vue'
+import DistrictBrowse from './DistrictBrowse.vue'
 import { fetchMe, getProfile, putProfile } from '../shared/auth/auth'
 import AccountMenu from '../shared/auth/AccountMenu.vue'
 
@@ -15,6 +16,15 @@ const MODES = [
   { v: 'walking', label: '步行' },
 ]
 const ZHIYUAN_SLOTS = 12   // 统一招生志愿数（每志愿 2 专业）
+// 区切换:朝阳=full(冲稳保全功能);其余 15 区=browse(校库·暂无录取线,见 DistrictBrowse)
+const DISTRICTS: [string, string][] = [
+  ['chaoyang', '朝阳'], ['haidian', '海淀'], ['xicheng', '西城'], ['dongcheng', '东城'],
+  ['fengtai', '丰台'], ['shijingshan', '石景山'], ['mentougou', '门头沟'], ['fangshan', '房山'],
+  ['tongzhou', '通州'], ['shunyi', '顺义'], ['changping', '昌平'], ['daxing', '大兴'],
+  ['huairou', '怀柔'], ['pinggu', '平谷'], ['miyun', '密云'], ['yanqing', '延庆'],
+]
+const curDistrict = ref('chaoyang')
+const districtCn = computed(() => (DISTRICTS.find(d => d[0] === curDistrict.value) || ['', '朝阳'])[1])
 
 // 升学渠道科普(重设计)：渠道卡 / 官方入口 / 时间线。来源 bjeea.cn / 北京市教委 / 首都之窗(T1)。
 const BJEEA_ZK = 'https://www.bjeea.cn/'   // 中考中招频道页(/html/zkzh/)已 403,改用考试院首页(稳定·顶部导航进中招)
@@ -1427,12 +1437,14 @@ const tcOptions: string[] = []
   <div class="page">
     <header class="hero">
       <div class="hero-top">
-        <h1>北京中考志愿参考 · 朝阳</h1>
+        <h1>北京中考志愿参考<select v-model="curDistrict" class="dist-sel"><option v-for="d in DISTRICTS" :key="d[0]" :value="d[0]">{{ d[1] }}{{ d[0] === 'chaoyang' ? '' : '·查校' }}</option></select></h1>
         <AccountMenu app-name="zhiyuan" />
       </div>
       <p class="sub">按区排名做冲稳保匹配，叠加通勤路网距离与学校特色，并镜像官方填报格式生成统招志愿草表。仅辅助参考，最终以官方招生简章与老师建议为准。</p>
     </header>
 
+    <!-- 朝阳=全功能(冲稳保+草表+全维);其余区=校库浏览(暂无录取线) -->
+    <template v-if="curDistrict === 'chaoyang'">
     <div class="disclaimer">
       ⚠️ 学校代码 / 专业(班)代码派生自 <b>bjeea 2025 官方招生计划册</b>（人工核对映射），<b>2026 计划 7 月初发布后须刷新</b>；高考成绩为<b>民间·非官方</b>数据，仅作补充参考，请勿据此直接决策。
     </div>
@@ -2155,12 +2167,18 @@ const tcOptions: string[] = []
         </section>
       </div>
     </section>
+    </template>
+
+    <!-- 其余 15 区:校库浏览(学校+专业+位置,暂无录取线) -->
+    <DistrictBrowse v-else :py="curDistrict" :cn="districtCn" />
   </div>
 </template>
 
 <style scoped>
 .page { max-width: 1180px; margin: 0 auto; padding: 16px; background: var(--bg); min-height: 100%; }
-.hero h1 { font-size: 20px; color: var(--brand-deeper); }
+.hero h1 { font-size: 20px; color: var(--brand-deeper); display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.dist-sel { font-size: 14px; font-weight: 600; color: var(--brand-dark); background: var(--brand-50);
+  border: 1px solid var(--brand-100, #dbe4ff); border-radius: var(--radius-xs); padding: 3px 8px; cursor: pointer; }
 .hero .sub { color: var(--gray-600); font-size: 13px; margin-top: 4px; }
 /* 标题与账号头像同一行:标题靠左,头像靠右 */
 .hero-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
