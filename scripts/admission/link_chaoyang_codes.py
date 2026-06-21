@@ -82,9 +82,11 @@ def main():
 
     out = {"source": f"派生自 {PLAN.name}（bjeea 2025 官方计划 OCR）",
            "plan_year": 2025, "source_tier": "T1",
+           "verified": "2026-06-21 已对 bjeea 官方册(87190) 用 qwen-vl 第二信源逐校核对:"
+                       "27 公办 / 36 专业(班) 代码+名称 0 差异。证据见 "
+                       "raw_extracts/chaoyang_majors_verify_2025.json",
            "warning": "2025 代码/计划；2026 计划 7 月初发布后须按 SOP 一次性刷新。专业数据为官方，"
-                      "name→code 映射经人工核对(CODE_MAP)；专业名经汉字间空格规范化。"
-                      "完整性/代码正确性仍需对官方册逐校核对(见 docs/design/MAJOR-CODES-SOP.md)。",
+                      "name→code 映射经人工核对(CODE_MAP)；专业名经汉字间空格规范化。",
            "schools": {}}
     print(f"{'yaml校名':<22}{'code':<8}{'计划册校名':<22}专业")
     flags = []

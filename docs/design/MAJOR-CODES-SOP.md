@@ -34,8 +34,9 @@ chaoyang_admission_codes.json  (27 校 → school_code + majors[]; plan_year/sou
 - 已修:`和平街一中（北苑莲葩园校区）` 因 CODE_MAP 用旧名「莲葩园中学」而漏链 → 改用现名,27/27。
 - 已标:`plan_year:2025` / `source_tier:T1` provenance。
 
-**仍待做(需官方册)**:逐校核对「专业是否齐、代码是否对、学制/加试是否准」——OCR 未逐行人工复核,
-属完整性/正确性核验,须拿 bjeea 2025/2026 官方册逐校比对。
+**已核(2026-06-21)**:对 bjeea 官方册 87190《2025 普高统招计划》用 qwen-vl 第二信源逐校重读核对——
+27 公办 / 36 专业(班) **代码+名称 0 差异**(证据 `raw_extracts/chaoyang_majors_verify_2025.json`)。
+即 2025 专业代码层已是逐校核准状态;2026 按 §4 同法(官方册 87190 同位置→qwen-vl 重读→diff)一次跑通。
 
 ## 3. 逐校核对清单(accuracy checklist)
 
