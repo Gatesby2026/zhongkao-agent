@@ -17,7 +17,7 @@ const MODES = [
 const ZHIYUAN_SLOTS = 12   // 统一招生志愿数（每志愿 2 专业）
 
 // 升学渠道科普(重设计)：渠道卡 / 官方入口 / 时间线。来源 bjeea.cn / 北京市教委 / 首都之窗(T1)。
-const BJEEA_ZK = 'https://www.bjeea.cn/html/zkzh/'
+const BJEEA_ZK = 'https://www.bjeea.cn/'   // 中考中招频道页(/html/zkzh/)已 403,改用考试院首页(稳定·顶部导航进中招)
 const XED_OFFICIAL = 'https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87193.html'
 const CHANNELS = [
   { key: '统招', icon: '🎓', name: '统一招生（统招）', one: '最后批次，按总分从高到低、平行志愿录取',
