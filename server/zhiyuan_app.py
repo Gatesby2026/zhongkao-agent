@@ -28,7 +28,10 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "server"))            # 项目级 auth 包
 sys.path.insert(0, str(ROOT / "scripts" / "admission"))
 import recommend as zhiyuan   # noqa: E402
+import llm_report             # noqa: E402  大模型志愿顾问(P1)
 from auth import router as auth_router, store as auth_store   # noqa: E402
+from auth.deps import get_current_user                       # noqa: E402
+from fastapi import Depends                                  # noqa: E402
 
 WEB_DIST = ROOT / "web" / "dist"
 
@@ -57,6 +60,35 @@ class ZhiyuanReq(BaseModel):
 @app.get("/api/health")
 def health():
     return {"ok": True, "svc": "zhiyuan"}
+
+
+class ReportReq(BaseModel):
+    rank: int
+    home: Optional[str] = None
+    mode: str = "bicycling"
+    max_km: Optional[float] = 8
+    boarding: bool = True
+    identity: str = "jjyj"
+    profile: dict = {}            # 孩子画像(P1 先复用 form 字段;P2 上问卷)
+
+
+@app.post("/api/zhiyuan/report")
+def zhiyuan_report(req: ReportReq, user: dict = Depends(get_current_user)):
+    """大模型志愿深度报告(P1·登录即可·暂不收费灰度)。provider 由 LLM_PROVIDER 配置。"""
+    import os
+    provider = os.environ.get("LLM_PROVIDER", "qwen")
+    try:
+        out = llm_report.generate_report(
+            rank=req.rank, home=req.home, mode=req.mode, max_km=req.max_km,
+            boarding=req.boarding, identity=req.identity,
+            profile=req.profile or {}, provider=provider)
+    except ValueError as e:           # 住址无法定位等
+        raise HTTPException(status_code=400, detail=str(e))
+    except Exception as e:            # LLM/网络失败 → 让前端回落规则版
+        raise HTTPException(status_code=502, detail=f"AI 报告生成失败,请稍后重试:{e}")
+    import json as _json
+    warns = llm_report.validate(out["report"], _json.dumps(out["context"], ensure_ascii=False))
+    return {"report": out["report"], "provider": out["provider"], "warnings": warns}
 
 
 @app.post("/api/zhiyuan/recommend")

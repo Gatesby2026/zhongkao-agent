@@ -252,6 +252,48 @@ function saveProfile() {
   putProfile(data).catch(() => { /* 存档失败不影响使用 */ })
 }
 
+/* ---------------- AI 深度分析(P1 灰度) ---------------- */
+const aiReport = ref('')
+const aiLoading = ref(false)
+const aiErr = ref('')
+async function genAiReport() {
+  if (aiLoading.value) return
+  if (!form.rank || Number(form.rank) < 1) { aiErr.value = '请先填区排名'; return }
+  aiLoading.value = true; aiErr.value = ''; aiReport.value = ''
+  try {
+    const body: any = {
+      rank: Number(form.rank), mode: form.mode, boarding: form.boarding, identity: form.identity,
+      profile: { chuzhong: xedQuery.value, risk: form.risk, orient: form.orient, nonpub: form.nonpub },
+    }
+    if (form.home.trim()) body.home = form.home.trim()
+    if (form.max_km !== '' && Number(form.max_km) > 0) body.max_km = Number(form.max_km)
+    const r = await fetch('/api/zhiyuan/report', {
+      method: 'POST', credentials: 'same-origin',
+      headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body),
+    })
+    const d = await r.json().catch(() => ({}))
+    if (!r.ok) throw new Error(d.detail || `HTTP ${r.status}`)
+    aiReport.value = d.report || ''
+  } catch (e: any) {
+    aiErr.value = 'AI 分析失败:' + (e.message || e) + '(可继续用上方规则版草表)'
+  } finally {
+    aiLoading.value = false
+  }
+}
+// 极简 markdown 渲染(内容来自我方 LLM):先转义,再 ## 标题/**粗**/列表
+function mdToHtml(md: string): string {
+  const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+  return esc(md).split('\n').map(line => {
+    if (/^##\s+/.test(line)) return '<h4>' + line.replace(/^##\s+/, '') + '</h4>'
+    if (/^###\s+/.test(line)) return '<h5>' + line.replace(/^###\s+/, '') + '</h5>'
+    let l = line.replace(/\*\*([^*]+)\*\*/g, '<b>$1</b>')
+    if (/^\s*[-*]\s+/.test(l)) return '<div class="ai-li">• ' + l.replace(/^\s*[-*]\s+/, '') + '</div>'
+    if (/^\s*\d+\.\s+/.test(l)) return '<div class="ai-li">' + l.trim() + '</div>'
+    return l.trim() ? '<p>' + l + '</p>' : ''
+  }).join('')
+}
+const aiReportHtml = computed(() => aiReport.value ? mdToHtml(aiReport.value) : '')
+
 /* ---------------- 地图 ---------------- */
 // 选中学校 → 右侧详情面板（替代地图气泡）
 const selectedPoint = ref<Point | null>(null)
@@ -1964,7 +2006,15 @@ const tcOptions: string[] = []
 
         <div class="draft-actions">
           <button class="ghost" @click="copyAll">📋 复制全部三批次</button>
+          <button class="ai-btn" :disabled="aiLoading" @click="genAiReport">
+            {{ aiLoading ? '🤖 AI 分析中…(约30秒)' : '🤖 生成 AI 深度分析（测试）' }}
+          </button>
           <span v-if="copyHint" class="copyhint">{{ copyHint }}</span>
+        </div>
+        <p v-if="aiErr" class="err">{{ aiErr }}</p>
+        <div v-if="aiReportHtml" class="ai-report">
+          <div class="ai-report-head">🤖 AI 深度分析报告 <small>测试版·基于规则草表改良·仅参考,数据以官方简章为准</small></div>
+          <div class="ai-report-body" v-html="aiReportHtml"></div>
         </div>
 
         <!-- 批次① 提前招生 -->
@@ -2703,6 +2753,21 @@ const tcOptions: string[] = []
 .ghost { font-size: 12.5px; padding: 6px 12px; border: 1px solid var(--gray-300); background: #fff;
   border-radius: var(--radius-xs); color: var(--gray-700); cursor: pointer; }
 .copyhint { font-size: 12px; color: var(--success); }
+.draft-actions { flex-wrap: wrap; }
+.ai-btn { font-size: 12.5px; padding: 6px 14px; border: none; border-radius: var(--radius-xs);
+  background: linear-gradient(135deg, #7c3aed, #2563eb); color: #fff; font-weight: 600; cursor: pointer; }
+.ai-btn:disabled { opacity: .6; cursor: not-allowed; }
+.ai-report { border: 1px solid #ddd6fe; background: #faf5ff; border-radius: var(--radius);
+  padding: 14px 16px; margin: 12px 0 14px; }
+.ai-report-head { font-size: 14px; font-weight: 700; color: #6d28d9; margin-bottom: 10px;
+  border-bottom: 1px solid #e9d5ff; padding-bottom: 8px; }
+.ai-report-head small { font-weight: 400; color: var(--gray-500); font-size: 11px; }
+.ai-report-body { font-size: 13.5px; line-height: 1.75; color: var(--gray-800); }
+.ai-report-body h4 { font-size: 14.5px; color: #5b21b6; margin: 14px 0 6px; }
+.ai-report-body h5 { font-size: 13.5px; color: var(--gray-700); margin: 10px 0 4px; }
+.ai-report-body p { margin: 4px 0; }
+.ai-report-body .ai-li { margin: 3px 0 3px 6px; }
+.ai-report-body b { color: var(--gray-900); }
 /* 三批次分区（可折叠）*/
 .batch { margin-top: 10px; }
 .batch-h { width: 100%; text-align: left; display: block; cursor: pointer;
