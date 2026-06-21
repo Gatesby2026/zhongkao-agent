@@ -2,6 +2,7 @@
 import { ref, reactive, computed, nextTick, watch, onMounted } from 'vue'
 import { USER_DEFAULTS } from './user-defaults'
 import JudgeLegend from './JudgeLegend.vue'
+import DraftRow from './DraftRow.vue'
 import { fetchMe, getProfile, putProfile } from '../shared/auth/auth'
 import AccountMenu from '../shared/auth/AccountMenu.vue'
 
@@ -594,7 +595,7 @@ const selectable = computed<any[]>(() => {
   const out: Card[] = []
   for (const band of ['冲', '稳', '保', '够不上']) {
     for (const c of (res.bands[band] || [])) {
-      if (c.school_code) out.push(c)
+      if (c.school_code || (c as any).is_estimate) out.push(c)   // 新校无官方码,靠 is_estimate 纳入
     }
   }
   // 全渠道:公办之后追加 贯通/民办/中职综高(可手动选)
@@ -694,7 +695,7 @@ function bandPool(band: string): Card[] {
   const res = result.value
   if (!res) return []
   // 同档内:捡漏(高增值)优先,其次录取位次升序(更硬在前)
-  return dedupeByKey((res.bands[band] || []).filter(c => c.school_code && reachByCommute(c.nearest?.km, !!c.boarding)))
+  return dedupeByKey((res.bands[band] || []).filter(c => (c.school_code || (c as any).is_estimate) && reachByCommute(c.nearest?.km, !!c.boarding)))
     .slice().sort((a, b) => {
       const va = vaRank(a) - vaRank(b)
       if (va !== 0) return va
@@ -763,6 +764,41 @@ const tcFilled = computed(() => draftTongchou.value.filter(s => s.school))
 function pickedMajors(s: { name: string | null; picks: string[] }): Major[] {
   return majorsOf(s.name).filter(m => s.picks.includes(m.major_code))
 }
+
+// 只读草表行 view-model（DraftRow 组件统一渲染）：三批次各自 adapter 把源数据归一成同一形状，
+// 每行的理由/徽标只算一次（避免模板里 xedReason/slotReason 等被反复调用）。
+interface DraftRowVM {
+  seq: number; name: string; meta?: string; band?: { label: string; cls: string }
+  majors?: { code: string; name?: string }[]; majorsNote?: string
+  headline?: string; factors?: string[]; risk?: string
+}
+const uniRows = computed<DraftRowVM[]>(() => uniFilled.value.map((s, i) => {
+  const c: any = findCard(s.name!); const r = slotReason(s.name)
+  return {
+    seq: i + 1, name: cleanName(s.name!),
+    meta: c?.is_estimate ? '新校预测' : (c?.school_code || undefined),
+    band: r ? { label: r.band, cls: r.cls } : undefined,
+    majors: pickedMajors(s).map(m => ({ code: m.major_code, name: cleanName(m.major_name) })),
+    headline: r?.headline, factors: r?.factors, risk: r?.risk || undefined,
+  }
+}))
+const xedRows = computed<DraftRowVM[]>(() => xedFilled.value.map((s, i) => {
+  const b = xedBadge(s.school); const r = xedReason(s.school)
+  return {
+    seq: i + 1, name: xedName(s.school!), band: b || undefined,
+    majors: [], majorsNote: '以官方网报为准',
+    headline: r?.headline, risk: r?.caveat,
+  }
+}))
+const tcRows = computed<DraftRowVM[]>(() => tcFilled.value.map((s, i) => {
+  const r = tcReason(s.school)
+  return {
+    seq: i + 1, name: tcName(s.school!), meta: tcTier(s.school!) || undefined,
+    band: r ? { label: r.label, cls: r.cls } : undefined,
+    majors: s.majors ? [{ code: s.majors }] : [], majorsNote: '以官方网报为准',
+    headline: r?.headline, factors: r?.factors, risk: r?.caveat,
+  }
+}))
 
 // 单个志愿的"理由"——全部来自真实字段，缺数据则省略，绝不编造
 function slotReason(name: string | null): { band: string; cls: string; headline: string; factors: string[]; risk: string } | null {
@@ -871,7 +907,7 @@ const uniSummary = computed(() => {
     const seen = new Set<string>()
     for (const band of ['冲', '稳', '保', '够不上']) {
       for (const c of (res.bands[band] || [])) {
-        if (c.school_code && reachByCommute(c.nearest?.km, !!c.boarding)) seen.add(c.school_code)
+        if ((c.school_code || (c as any).is_estimate) && reachByCommute(c.nearest?.km, !!c.boarding)) seen.add(c.school_code || c.name)
       }
     }
     reachPool = seen.size
@@ -1983,18 +2019,7 @@ const tcOptions: string[] = []
               <div v-show="noteOpen.xed" class="note-body">录取即锁定、后续作废：只自动选入<b>值得冲</b>（统招够不上的 upgrade）；相当 / 统招本可达不选入（避免锁进同级或更低校）。按本初中<b>校内排名 + 志愿顺序</b>录取，无官方各校线。专业(班)校额每校通常<b>仅一个</b>，以官方网报为准。机制见「<a class="lnk" @click="goTab('channels')">渠道科普</a>」。</div>
             </div>
             <div v-if="xedFilled.length" class="uni-list">
-              <div v-for="(s, i) in xedFilled" :key="i" class="uslot ro">
-                <div class="ro-row1">
-                  <span class="slot-no on">{{ i + 1 }}</span>
-                  <span class="ro-name">{{ xedName(s.school!) }}</span>
-                  <span v-if="xedBadge(s.school)" class="ro-band" :class="xedBadge(s.school)!.cls">{{ xedBadge(s.school)!.label }}</span>
-                </div>
-                <div class="ro-major-line"><span class="lbl">专业(班)</span><span class="nomajor">以官方网报为准</span></div>
-                <div v-if="xedReason(s.school)" class="ro-rsn">
-                  <span class="ur-head">{{ xedReason(s.school)!.headline }}</span>
-                  <span class="ur-risk">⚠️ {{ xedReason(s.school)!.caveat }}</span>
-                </div>
-              </div>
+              <DraftRow v-for="r in xedRows" :key="r.seq" v-bind="r" />
             </div>
             <p v-else-if="xedEligible.length" class="xed-src">本位次暂无"值得用校额冲"的优质高中（统招本可达的不建议占校额）。</p>
             <p v-else class="xed-src">先在<b>首页填初中学校</b>，这里才能按名额生成校额到校志愿。</p>
@@ -2014,20 +2039,7 @@ const tcOptions: string[] = []
               你这个位次<b>没有"既够得着又值得"的市级统筹</b>：够得着的多为远郊/平级校、值得的城区名校门槛又够不上。<b>建议这栏不填，重心放在朝阳统招 + 校额到校。</b>完整名单见「<a class="lnk" @click="goTab('explore')">🔎 查学校</a>」筛"可走统筹"。
             </p>
             <div v-if="tcFilled.length" class="uni-list">
-              <div v-for="(s, i) in tcFilled" :key="i" class="uslot ro">
-                <div class="ro-row1">
-                  <span class="slot-no on">{{ i + 1 }}</span>
-                  <span class="ro-name">{{ tcName(s.school!) }}</span>
-                  <span class="ro-meta">{{ tcTier(s.school!) }}</span>
-                  <span v-if="tcReason(s.school)" class="ro-band" :class="tcReason(s.school)!.cls">{{ tcReason(s.school)!.label }}</span>
-                </div>
-                <div class="ro-major-line"><span class="lbl">专业(班)</span><span v-if="s.majors" class="ro-mchip"><b>{{ s.majors }}</b></span><span v-else class="nomajor">以官方网报为准</span></div>
-                <div v-if="tcReason(s.school)" class="ro-rsn">
-                  <span class="ur-head">{{ tcReason(s.school)!.headline }}</span>
-                  <span v-for="(f, fi) in tcReason(s.school)!.factors" :key="fi" class="ur-f">{{ f }}</span>
-                  <span class="ur-risk">⚠️ {{ tcReason(s.school)!.caveat }}</span>
-                </div>
-              </div>
+              <DraftRow v-for="r in tcRows" :key="r.seq" v-bind="r" />
             </div>
             <JudgeLegend v-if="tcEligible.length" :rank="form.rank" />
             <p v-if="!tcEligible.length" class="xed-src">暂无可报统筹校结构化数据；可在「查学校」筛"可走统筹"查看。</p>
@@ -2059,25 +2071,7 @@ const tcOptions: string[] = []
               <div v-show="noteOpen.uni" class="note-body">候选受<b>通勤上限约束</b>：{{ form.max_km }}km 内可报公办约 <b>{{ uniSummary.reachPool }}</b> 所<template v-if="uniSummary.reachPool <= 12">，已全部纳入</template><template v-else>，按录取位次取 12 所填满</template>——改位次主要改变"冲/稳/保"判定，要换一批候选请调通勤上限。按总分从高到低、平行志愿录取，冲在前、保在后；每校已自动选 2 个推荐专业(班)，最终以官方网报为准。</div>
             </div>
             <div class="uni-list">
-              <div v-for="(s, i) in uniFilled" :key="i" class="uslot ro">
-                <div class="ro-row1">
-                  <span class="slot-no on">{{ i + 1 }}</span>
-                  <span class="ro-name">{{ cleanName(s.name!) }}</span>
-                  <span v-if="(findCard(s.name!) as any)?.is_estimate" class="ro-meta">新校预测</span>
-                  <span v-else-if="/^\d/.test(findCard(s.name!)?.school_code || '')" class="ro-meta">{{ findCard(s.name!)!.school_code }}</span>
-                  <span v-if="slotReason(s.name)" class="ro-band" :class="slotReason(s.name)!.cls">{{ slotReason(s.name)!.band }}</span>
-                </div>
-                <div class="ro-major-line">
-                  <span class="lbl">专业(班)</span>
-                  <span v-for="m in pickedMajors(s)" :key="m.major_code" class="ro-mchip"><b>{{ m.major_code }}</b> {{ cleanName(m.major_name) }}</span>
-                  <span v-if="!pickedMajors(s).length" class="nomajor">以官方网报为准</span>
-                </div>
-                <div v-if="slotReason(s.name)" class="ro-rsn">
-                  <span class="ur-head">{{ slotReason(s.name)!.headline }}</span>
-                  <span v-for="(f, fi) in slotReason(s.name)!.factors" :key="fi" class="ur-f">{{ f }}</span>
-                  <span v-if="slotReason(s.name)!.risk" class="ur-risk">⚠️ {{ slotReason(s.name)!.risk }}</span>
-                </div>
-              </div>
+              <DraftRow v-for="r in uniRows" :key="r.seq" v-bind="r" />
             </div>
           </template>
           <p v-else class="xed-note warn">非京籍随迁子女不能报普通高中统招（只能报中职类）；上方仅供了解。</p>
@@ -2811,26 +2805,8 @@ const tcOptions: string[] = []
 .rd-mini { font-size: 11.5px !important; color: var(--gray-500) !important; }
 .rd-2026 { background: var(--warning-bg); border-color: #fde68a; }
 @media (max-width: 720px) { .rules-doc { grid-template-columns: 1fr; } }
-.uslot { border: 1px solid var(--gray-100); border-radius: var(--radius-sm); background: var(--gray-50); overflow: hidden; }
 .band-刺 { background: #ede7f6; color: #6a1b9a; }
-.ur-head { color: var(--gray-700); }
-.ur-f { font-size: 11px; color: var(--gray-600); background: var(--gray-100); border-radius: var(--radius-xs); padding: 1px 6px; }
-.ur-risk { font-size: 11px; color: #b45309; background: var(--warning-bg); border-radius: var(--radius-xs); padding: 1px 6px; }
-/* 只读草表行（②校额/②统筹/③统招 统一格式）：行1=序号+校名+meta+档位徽标；行2=专业(班)；行3=理由 */
-.uslot.ro { background: var(--surface); border: 1px solid var(--gray-100); border-radius: var(--radius-sm); padding: 8px 10px; }
-.ro-row1 { display: flex; align-items: center; gap: 8px; min-width: 0; }
-.ro-row1 .slot-no { flex: 0 0 auto; }
-.ro-name { font-size: 13.5px; font-weight: 600; color: var(--gray-800); min-width: 0; }
-.ro-meta { font-size: 11px; color: var(--gray-400); flex: 0 0 auto; }
-.ro-band { margin-left: auto; flex: 0 0 auto; font-size: 11px; font-weight: 700; padding: 2px 9px; border-radius: var(--radius-full); }
-.ro-major-line { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; padding-left: 30px; margin-top: 6px; }
-.ro-major-line .lbl { font-size: 11px; color: var(--gray-400); }
-.ro-rsn { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; padding-left: 30px; margin-top: 5px;
-  font-size: 12px; color: var(--gray-600); line-height: 1.55; }
-.ro-mchip { font-size: 11.5px; padding: 2px 8px; border-radius: var(--radius-xs);
-  background: var(--brand-50); color: var(--brand-dark); }
-.ro-mchip b { color: var(--brand-dark); }
-.nomajor { font-size: 11.5px; color: var(--gray-400); }
+/* 只读志愿行样式已迁入 DraftRow.vue（②校额/②统筹/③统招 共用）*/
 /* 折叠「录取规则与口径」 */
 .note-toggle { background: none; border: none; padding: 6px 0 0; font-size: 11.5px; color: var(--brand-dark);
   cursor: pointer; font-weight: 600; }

@@ -261,8 +261,8 @@ def build_new_schools(district, home, district_cn, mode, mode_label, max_km):
 
 def new_school_band_cards(district, rank, home, district_cn, mode, mode_label, max_km, boarding):
     """把"有预测位次(est_rank)"的 2026 新增普高，按 est_rank 归入冲/稳/保，做成卡片注入统招草表。
-    新校无 school_code（2026 计划未发布）→ 给合成码 NEW:<名> 让前端草表能纳入；卡片带
-    is_estimate + 预测区间 + 可信度，前端醒目标注。无坐标的(如燕京新源)距离按未知=可达处理。"""
+    新校无 school_code（2026 计划未发布）→ school_code 置 None，靠 is_estimate 标记可纳入草表；
+    卡片带 is_estimate + 预测区间 + 可信度，前端醒目标注。无坐标的(如燕京新源)距离按未知=可达处理。"""
     data = load_new2026(district)
     if not data:
         return {}
@@ -287,7 +287,7 @@ def new_school_band_cards(district, rank, home, district_cn, mode, mode_label, m
         bd = s.get("boarding") is True
         cards[band].append({
             "name": s["name"], "level": s.get("level", ""), "note": s.get("note", ""),
-            "school_code": "NEW:" + s["name"],        # 合成码：让前端草表能纳入（无官方码）
+            "school_code": None,        # 无官方码（2026 计划未发布）；靠 is_estimate 纳入草表
             "ref_rank": er, "margin": round(margin, 3), "margin_pct": f"{margin:+.0%}",
             "volatility": 0, "history": [], "score_lines": [], "majors": [],
             "nearest": nearest, "boarding": bd,
