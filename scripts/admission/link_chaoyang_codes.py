@@ -16,9 +16,21 @@
 用法：python scripts/admission/link_chaoyang_codes.py
 """
 import json
+import re
 from pathlib import Path
 
 import yaml
+
+# OCR 常把 2 字词拆开("合作"→"合 作"、"实验"→"实 验")。规范化:去掉两个汉字之间的空白,
+# 不动 拉丁字母/数字 间的空格(如 "AP 课程")。是计划→专业名的固定清洗步骤,2026 重跑自动生效。
+_CJK = r"一-鿿"
+
+
+def _clean_major(name: str) -> str:
+    if not name:
+        return name
+    s = re.sub(rf"(?<=[{_CJK}])\s+(?=[{_CJK}])", "", name)
+    return re.sub(r"\s{2,}", " ", s).strip()
 
 KB = Path(__file__).resolve().parents[2] / "knowledge-base" / "admission" / "beijing"
 PLAN = KB / "2025_tongzhao_plan.json"
@@ -43,7 +55,7 @@ CODE_MAP = {
     "北京工业大学附属中学": "105007",
     "日坛中学": "105003",
     "和平街一中": "105004",
-    "莲葩园中学": "105004",   # 和平街一中北苑莲葩园校区（02专业）
+    "和平街一中（北苑莲葩园校区）": "105004",   # 同 105004，02专业=北苑莲葩园上课（chaoyang.yaml 现用名）
     "对外经济贸易大学附属中学": "105005",
     "东北师大附中朝阳学校": "205008",
     "中科院附属实验学校": "205004",
@@ -56,7 +68,7 @@ CODE_MAP = {
     "汇文中学垂杨柳分校": "205003",
 }
 # 同一 code 被多个 yaml 名引用时，标注各自对应的校区专业
-CAMPUS_MAJOR = {"莲葩园中学": "02", "和平街一中": "01"}
+CAMPUS_MAJOR = {"和平街一中（北苑莲葩园校区）": "02", "和平街一中": "01"}
 
 
 def main():
@@ -69,8 +81,10 @@ def main():
             by_code.setdefault(r["school_code"], []).append(r)
 
     out = {"source": f"派生自 {PLAN.name}（bjeea 2025 官方计划 OCR）",
-           "warning": "2025 代码/计划；2026 计划 7 月初发布后须刷新。专业数据为官方，"
-                      "name→code 映射经人工核对(CODE_MAP)。",
+           "plan_year": 2025, "source_tier": "T1",
+           "warning": "2025 代码/计划；2026 计划 7 月初发布后须按 SOP 一次性刷新。专业数据为官方，"
+                      "name→code 映射经人工核对(CODE_MAP)；专业名经汉字间空格规范化。"
+                      "完整性/代码正确性仍需对官方册逐校核对(见 docs/design/MAJOR-CODES-SOP.md)。",
            "schools": {}}
     print(f"{'yaml校名':<22}{'code':<8}{'计划册校名':<22}专业")
     flags = []
@@ -91,7 +105,7 @@ def main():
                 continue
             majors.append({
                 "major_code": r["major_code"],
-                "major_name": r["major_name"],
+                "major_name": _clean_major(r["major_name"]),
                 "xuezhi": r.get("xuezhi", ""),
                 "jiashi": r.get("jiashi", ""),
                 "plan_total": r.get("total", ""),
