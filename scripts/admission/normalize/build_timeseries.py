@@ -27,9 +27,11 @@ def load():
     return cy, codes, coords
 
 
-def uid_of(name, code):
-    # 与 unified.py._uid 对齐:有码用"码:名",无码用"统招:名"。否则两套uid对不上、产品join不到高考分。
-    return f"{code}:{name}" if code else f"统招:{name}"
+def uid_of(name, code, type_="公办普高"):
+    # 必须与 unified.py._uid(code, type_, name) **完全一致**:有码用"码:名",无码用"类型:名"。
+    # 旧实现无码硬编码"统招:名",而 unified 用"公办普高:名"/"民办普高:名"等 → 两套 uid 对不上、
+    # 无码私立(拔萃/世青)将来一旦有线/高考数据会 join 全 miss。type_ 须传该校在 unified 的 type。
+    return f"{code}:{name}" if code else f"{type_}:{name}"
 
 
 def first_coord(coords, name):
@@ -48,7 +50,7 @@ def main():
         if not name:
             continue
         code = (codes.get(name) or {}).get("school_code")
-        uid = uid_of(name, code)
+        uid = uid_of(name, code, "公办普高")
         lat, lon, campus = first_coord(coords, name)
         schools_master.append({
             "uid": uid, "name": name, "school_code": code,
@@ -84,9 +86,10 @@ def main():
                 types.append("民办普高")
             if p.get("in_intl_list"):
                 types.append("国际/双语")
+            ptype = "/".join(types) or "民办/国际"
             schools_master.append({
-                "uid": uid_of(name, code), "name": name, "school_code": code,
-                "type": "/".join(types) or "民办/国际", "district": "朝阳", "campus": None,
+                "uid": uid_of(name, code, ptype), "name": name, "school_code": code,
+                "type": ptype, "district": "朝阳", "campus": None,
                 "lat": loc.get("lat"), "lon": loc.get("lon"), "aliases": p.get("aliases") or [],
             })
     # 补漏:不在 chaoyang.yaml 27 校里的公办(如汇文垂杨柳分校)— 手工补于 raw_extracts/schools_extra.yaml
