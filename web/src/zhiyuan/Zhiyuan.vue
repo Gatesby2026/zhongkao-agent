@@ -790,11 +790,14 @@ const xedRows = computed<DraftRowVM[]>(() => xedFilled.value.map((s, i) => {
     headline: r?.headline, risk: r?.caveat,
   }
 }))
+// 统筹 tcReason.cls 是 tj-*（父级 scoped 样式），DraftRow 子组件只认 band-*；按 label 映射到统一 band-*
+// （也与本批次摘要 us-b 的 band-保/稳/冲 一致）
+const TC_BAND_CLS: Record<string, string> = { 保: 'band-保', 稳: 'band-稳', 冲: 'band-冲', 冲刺: 'band-刺' }
 const tcRows = computed<DraftRowVM[]>(() => tcFilled.value.map((s, i) => {
   const r = tcReason(s.school)
   return {
     seq: i + 1, name: tcName(s.school!), meta: tcTier(s.school!) || undefined,
-    band: r ? { label: r.label, cls: r.cls } : undefined,
+    band: r ? { label: r.label, cls: TC_BAND_CLS[r.label] || 'band-够不上' } : undefined,
     majors: s.majors ? [{ code: s.majors }] : [], majorsNote: '以官方网报为准',
     headline: r?.headline, factors: r?.factors, risk: r?.caveat,
   }
