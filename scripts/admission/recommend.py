@@ -32,6 +32,7 @@ except Exception:
     _resolve_id = lambda name, district=None: None
     _get_school = lambda sid, district=None: None
 
+_USE_REGISTRY = os.environ.get("REGISTRY_SOURCE", "1") != "0"  # 默认走registry;=0回滚旧扁平
 ADMISSION_DIR = Path(__file__).resolve().parents[2] / "knowledge-base" / "admission" / "beijing"
 
 # 官方学校代码 + 专业(班)列表（派生自 bjeea 计划册 OCR，经人工核对）。
@@ -98,7 +99,7 @@ def load_private_schools(district: str):
     if district in _PRIVATE_CACHE:
         return _PRIVATE_CACHE[district]
     data = None
-    if os.environ.get("REGISTRY_SOURCE") == "1":
+    if _USE_REGISTRY:
         data = _registry_channel(district, "民办", "private_record", "private")
     if data is None:
         path = ADMISSION_DIR / f"{district}_private.yaml"
@@ -144,7 +145,7 @@ def load_vocational(district: str):
     if district in _VOCATIONAL_CACHE:
         return _VOCATIONAL_CACHE[district]
     data = None
-    if os.environ.get("REGISTRY_SOURCE") == "1":
+    if _USE_REGISTRY:
         data = _registry_channel(district, "中职", "vocational_record", "vocational")
     if data is None:
         path = ADMISSION_DIR / f"{district}_vocational.yaml"
@@ -190,7 +191,7 @@ def load_xeddx(district: str):
     if district in _XEDDX_CACHE:
         return _XEDDX_CACHE[district]
     data = None
-    if os.environ.get("REGISTRY_SOURCE") == "1":
+    if _USE_REGISTRY:
         data = _registry_meta(district, "xeddx")
     if data is None:
         path = ADMISSION_DIR / f"{district}_xeddx.yaml"
@@ -227,7 +228,7 @@ def load_tongchou(district: str):
         return _TONGCHOU_CACHE[district]
     import json as _json
     data = None
-    if os.environ.get("REGISTRY_SOURCE") == "1":
+    if _USE_REGISTRY:
         data = _registry_meta(district, "tongchou")
     if data is None:
         path = ADMISSION_DIR / f"2025_sjtongchou_{district}.json"
@@ -272,7 +273,7 @@ def load_new2026(district: str):
     if district in _NEW2026_CACHE:
         return _NEW2026_CACHE[district]
     data = None
-    if os.environ.get("REGISTRY_SOURCE") == "1":
+    if _USE_REGISTRY:
         data = _registry_channel(district, "新校", "new2026_record", "new2026")
     if data is None:
         path = ADMISSION_DIR / f"{district}_new2026.yaml"
@@ -365,7 +366,7 @@ def load_guantong():
     if _GUANTONG_CACHE[1]:
         return _GUANTONG_CACHE[0]
     data = None
-    if os.environ.get("REGISTRY_SOURCE") == "1":
+    if _USE_REGISTRY:
         rp = ADMISSION_DIR / "registry" / "_guantong.yaml"
         if rp.exists():
             data = yaml.safe_load(rp.read_text(encoding="utf-8"))
@@ -448,7 +449,7 @@ def _district_from_registry(district: str) -> dict:
 
 
 def load_district(district: str) -> dict:
-    if os.environ.get("REGISTRY_SOURCE") == "1":     # B-P3 开关:走 registry(默认关,回归绿后再开)
+    if _USE_REGISTRY:     # B-P3 开关:走 registry(默认关,回归绿后再开)
         d = _district_from_registry(district)
         if d and d["schools"]:
             return d
