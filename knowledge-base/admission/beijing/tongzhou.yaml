@@ -1,0 +1,220 @@
+meta:
+  quality_status: assembled
+  source: 统招计划(codes)+高德坐标+历史录取线(官方/网传)+民间特色/高考
+  updated: '2026-06-22'
+  builder: build_full_district.py
+  note: 对标朝阳 schema 自动装配;录取线缺失或低置信处以 scores_meta 标注。
+district: 通州区
+region: 北京市
+schools:
+- name: 北京中加学校
+  school_code: '212010'
+  location:
+    campus: 北京市通州区北京中加学校(西门)
+    lat: 39.944972
+    lon: 116.692596
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京学校
+  school_code: '212008'
+  location:
+    campus: 北京市通州区北京学校
+    lat: 39.892845
+    lon: 116.749583
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 465
+      rank: 792
+    '2024':
+      total: 660
+      score: 617
+      rank: 1295
+  scores_meta:
+    source: 北京高考在线 gaokzx.com(https://www.gaokzx.com/gk/zhongkao/144865.html 2025; https://www.gaokzx.com/gk/zhongkao/131935.html
+      2024); 北京中考信息网 zhongkaobj.cn(https://www.zhongkaobj.cn/fenshuxian/qitaqu/202410222442.html 2024)
+    confidence: medium
+- name: 北京市通州区张家湾中学
+  school_code: '212005'
+  location:
+    campus: 北京市通州区北京市通州区张家湾中学(北门)
+    lat: 39.857824
+    lon: 116.717696
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 391
+      rank: 4661
+    '2024':
+      total: 660
+      score: 531
+      rank: 4882
+  scores_meta:
+    source: 北京高考在线 gaokzx.com(https://www.gaokzx.com/gk/zhongkao/144865.html 2025; https://www.gaokzx.com/gk/zhongkao/131935.html
+      2024); 北京中考信息网 zhongkaobj.cn(https://www.zhongkaobj.cn/fenshuxian/qitaqu/202410222442.html 2024)
+    confidence: medium
+- name: 北京市通州区永乐店中学
+  school_code: '112002'
+  location:
+    campus: 北京市通州区北京市通州区永乐店中学
+    lat: 39.717338
+    lon: 116.785059
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 优质高中（示范/特色）
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 402
+      rank: 4278
+    '2024':
+      total: 660
+      score: 545
+      rank: 4516
+  scores_meta:
+    source: 北京高考在线 gaokzx.com(https://www.gaokzx.com/gk/zhongkao/144865.html 2025; https://www.gaokzx.com/gk/zhongkao/131935.html
+      2024); 北京中考信息网 zhongkaobj.cn(https://www.zhongkaobj.cn/fenshuxian/qitaqu/202410222442.html 2024)
+    confidence: medium
+- name: 北京市通州区潞河中学
+  school_code: '112001'
+  location:
+    campus: 北京市通州区潞河中学
+    lat: 39.898579
+    lon: 116.653324
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 优质高中（示范/特色）
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 475
+      rank: 364
+    '2024':
+      total: 660
+      score: 633
+      rank: 551
+  scores_meta:
+    source: 北京高考在线 gaokzx.com(https://www.gaokzx.com/gk/zhongkao/144865.html 2025; https://www.gaokzx.com/gk/zhongkao/131935.html
+      2024); 北京中考信息网 zhongkaobj.cn(https://www.zhongkaobj.cn/fenshuxian/qitaqu/202410222442.html 2024); 知乎数据精算贴佐证 2025 潞河
+      475/区排364(https://zhuanlan.zhihu.com/p/1970174582414606595)
+    confidence: medium
+- name: 北京市通州区私立树人学校
+  school_code: '212021'
+  location:
+    campus: 北京市通州区北京市通州区私立树人学校
+    lat: 39.943809
+    lon: 116.71733
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京市通州区运河中学
+  school_code: '112003'
+  location:
+    campus: 北京市通州区北京市通州区运河中学
+    lat: 39.876305
+    lon: 116.626772
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 优质高中（示范/特色）
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 445
+      rank: 1961
+    '2024':
+      total: 660
+      score: 613
+      rank: 1507
+  scores_meta:
+    source: 北京高考在线 gaokzx.com(https://www.gaokzx.com/gk/zhongkao/144865.html 2025; https://www.gaokzx.com/gk/zhongkao/131935.html
+      2024); 北京中考信息网 zhongkaobj.cn(https://www.zhongkaobj.cn/fenshuxian/qitaqu/202410222442.html 2024)
+    confidence: medium
+- name: 北京德闳明德高中
+  school_code: '212022'
+  location:
+    campus: 北京市通州区北京
+    lat: 39.610485
+    lon: 116.788124
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京潞河国际教
+  school_code: '212015'
+  location:
+    campus: 北京市通州区潞河
+    lat: 39.902428
+    lon: 116.659038
+    confidence: mid
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京第一实验中学
+  school_code: '212006'
+  location:
+    campus: 北京市通州区北京第一实验中学(建设中)
+    lat: 39.938962
+    lon: 116.722879
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 465
+      rank: 792
+  scores_meta:
+    source: 北京高考在线 gaokzx.com(https://www.gaokzx.com/gk/zhongkao/144865.html 2025)
+    confidence: low
+- name: 北京通州华仁学
+  school_code: '212011'
+  location:
+    campus: 北京市通州区北京
+    lat: 39.610485
+    lon: 116.788124
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}

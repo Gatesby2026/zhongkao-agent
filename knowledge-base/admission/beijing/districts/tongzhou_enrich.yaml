@@ -1,0 +1,55 @@
+# 通州区 普通高中统招录取分数线 + 区排名(位次)
+# 2025 总分 510 / 2024 总分 660
+# 数据来源:多渠道网络汇总(非官方一分一段),仅供志愿参考
+# 铁律:校名逐字等于 tongzhou_admission_codes.json 正名;未搜到的校已省略
+# 说明:通州区大量高分校(人大附中通州/首师附中通州/北京二中通州/五中通州/景山通州/
+#      理工附中通州/北京十一/一零九/宏志/亦庄实验等)不在本区校库注册表内,故未收录。
+#      民办/国际/中外合作校(中加/华仁/潞河国际/树人/德闳明德)未搜到公开统招线,省略。
+
+schools:
+  北京市通州区潞河中学:
+    scores:
+      "2025": {total: 510, score: 475, rank: 364}
+      "2024": {total: 660, score: 633, rank: 551}
+    scores_source: "北京高考在线 gaokzx.com(https://www.gaokzx.com/gk/zhongkao/144865.html 2025; https://www.gaokzx.com/gk/zhongkao/131935.html 2024); 北京中考信息网 zhongkaobj.cn(https://www.zhongkaobj.cn/fenshuxian/qitaqu/202410222442.html 2024); 知乎数据精算贴佐证 2025 潞河 475/区排364(https://zhuanlan.zhihu.com/p/1970174582414606595)"
+    scores_conf: medium
+    # 注:本条仅指潞河本部;"潞河中学于家务校区"为独立校区(2025=420/2024=568),
+    #    不计入本部统招线。
+
+  北京市通州区运河中学:
+    scores:
+      "2025": {total: 510, score: 445, rank: 1961}
+      "2024": {total: 660, score: 613, rank: 1507}
+    scores_source: "北京高考在线 gaokzx.com(https://www.gaokzx.com/gk/zhongkao/144865.html 2025; https://www.gaokzx.com/gk/zhongkao/131935.html 2024); 北京中考信息网 zhongkaobj.cn(https://www.zhongkaobj.cn/fenshuxian/qitaqu/202410222442.html 2024)"
+    scores_conf: medium
+    # 注:2025 运河分东/西校区——西校区 458(区排1190)、东校区 445(区排1961)。
+    #    此处 score 取该校最低录取线(东校区 445)。2024 单一线 613。
+
+  北京市通州区永乐店中学:
+    scores:
+      "2025": {total: 510, score: 402, rank: 4278}
+      "2024": {total: 660, score: 545, rank: 4516}
+    scores_source: "北京高考在线 gaokzx.com(https://www.gaokzx.com/gk/zhongkao/144865.html 2025; https://www.gaokzx.com/gk/zhongkao/131935.html 2024); 北京中考信息网 zhongkaobj.cn(https://www.zhongkaobj.cn/fenshuxian/qitaqu/202410222442.html 2024)"
+    scores_conf: medium
+
+  北京市通州区张家湾中学:
+    scores:
+      "2025": {total: 510, score: 391, rank: 4661}
+      "2024": {total: 660, score: 531, rank: 4882}
+    scores_source: "北京高考在线 gaokzx.com(https://www.gaokzx.com/gk/zhongkao/144865.html 2025; https://www.gaokzx.com/gk/zhongkao/131935.html 2024); 北京中考信息网 zhongkaobj.cn(https://www.zhongkaobj.cn/fenshuxian/qitaqu/202410222442.html 2024)"
+    scores_conf: medium
+
+  北京学校:
+    scores:
+      "2025": {total: 510, score: 465, rank: 792}
+      "2024": {total: 660, score: 617, rank: 1295}
+    scores_source: "北京高考在线 gaokzx.com(https://www.gaokzx.com/gk/zhongkao/144865.html 2025; https://www.gaokzx.com/gk/zhongkao/131935.html 2024); 北京中考信息网 zhongkaobj.cn(https://www.zhongkaobj.cn/fenshuxian/qitaqu/202410222442.html 2024)"
+    scores_conf: medium
+    # 注:2024 分走读 617(区排1295)/住宿 618(区排1240);此处取走读线。
+
+  北京第一实验中学:
+    scores:
+      "2025": {total: 510, score: 465, rank: 792}
+    scores_source: "北京高考在线 gaokzx.com(https://www.gaokzx.com/gk/zhongkao/144865.html 2025)"
+    scores_conf: low
+    # 注:仅 1 源;2024 该校未在汇总表中以此正名出现,故 2024 缺。
