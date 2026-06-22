@@ -18,6 +18,7 @@ import json
 import os
 import re
 import sys
+from collections import OrderedDict
 from pathlib import Path
 
 import yaml
@@ -405,20 +406,13 @@ def _district_from_registry(district: str) -> dict:
     if not reg or not regdir.exists():
         return None
     schools = []
-    for fp in sorted(regdir.glob("*.yaml")):
-        if fp.name.startswith("_"):
-            continue
-        e = yaml.safe_load(fp.read_text(encoding="utf-8")) or {}
-        adms = e.get("admissions") or []
-        # 含统招渠道的即本区公办(含被统筹视角先建、后并入统招的实体);纯民办/中职/统筹由各自 loader 出
-        tongzhao = [a for a in adms if a.get("channel") == "统招"]
-        if not tongzhao:
-            continue
-        rep = next((a for a in tongzhao if a.get("lines")), tongzhao[0])
-        cam = (e.get("campuses") or [{}])[0]
+
+    def _flat_record(e, name, cam, rep, campus_adms, campuses_for_record):
+        """把一个(实体, 校区, 代表录取单元)装成扁平 school 记录。
+        campus_adms:归该记录的统招单元(出码/专业);campuses_for_record:该记录展示的校区坐标。"""
         roll = e.get("rollup") or {}
         s = {
-            "name": e["canonical_name"],
+            "name": name,
             "id": e.get("id"),
             "short_name": e.get("short_name"),
             "location": {"campus": cam.get("name"), "lat": cam.get("lat"), "lon": cam.get("lon"),
@@ -439,15 +433,49 @@ def _district_from_registry(district: str) -> dict:
         if district != "chaoyang" and cam.get("boarding") is not None:
             s["boarding"] = cam.get("boarding")
         # 嵌入统招专业(班)+码+计划区(含住信息),供 _school_card 直接用(免按名 join codes)
-        s["_reg_code"] = next((a.get("code") for a in tongzhao if a.get("code")), None)
+        s["_reg_code"] = next((a.get("code") for a in campus_adms if a.get("code")), None)
         s["_reg_majors"] = [{"major_code": a.get("major"), "major_name": a.get("major_name"),
                              "plan_total": a.get("plan_total"), "plan_chaoyang": a.get("plan_district"),
                              "note": a.get("note")}
-                            for a in tongzhao if a.get("major")]
+                            for a in campus_adms if a.get("major")]
         # 嵌入各校区坐标,供 distance 直接用(免按名 join coords)
         s["_campuses"] = [{"name": c.get("name"), "lat": c.get("lat"), "lon": c.get("lon")}
-                          for c in (e.get("campuses") or []) if c.get("lat") is not None]
-        schools.append(s)
+                          for c in campuses_for_record if c.get("lat") is not None]
+        return s
+
+    for fp in sorted(regdir.glob("*.yaml")):
+        if fp.name.startswith("_"):
+            continue
+        e = yaml.safe_load(fp.read_text(encoding="utf-8")) or {}
+        adms = e.get("admissions") or []
+        # 含统招渠道的即本区公办(含被统筹视角先建、后并入统招的实体);纯民办/中职/统筹由各自 loader 出
+        tongzhao = [a for a in adms if a.get("channel") == "统招"]
+        if not tongzhao:
+            continue
+        campuses = e.get("campuses") or []
+        cam_by_slug = {c.get("slug"): c for c in campuses}
+        # 按校区归并统招单元;"自带独立录取线"的校区集合决定是否拆卡
+        by_campus = OrderedDict()
+        for a in tongzhao:
+            by_campus.setdefault(a.get("campus"), []).append(a)
+        lined = [cslug for cslug, al in by_campus.items() if any(x.get("lines") for x in al)]
+        if len(lined) >= 2:
+            # 同校多校区各挂独立线(如和平街本部 vs 北苑莲葩园):拆成多张卡,各按本校区线判档。
+            # 首个(本部)沿用正名;其余以校区名加括号区分,避免按名 join 距离/坐标时撞键。
+            for i, cslug in enumerate(lined):
+                cam = cam_by_slug.get(cslug) or {}
+                cadms = by_campus[cslug]
+                rep = next((a for a in cadms if a.get("lines")), cadms[0])
+                name = e["canonical_name"] if i == 0 else f"{e['canonical_name']}（{cam.get('name')}）"
+                rec = _flat_record(e, name, cam, rep, cadms, [cam])
+                # 校级 2026 预估只代表本部;非本部校区按本校区自身录取线判档(其历史线才反映该校区真实门槛)
+                if i > 0:
+                    rec.pop("pred_2026", None)
+                schools.append(rec)
+        else:
+            rep = next((a for a in tongzhao if a.get("lines")), tongzhao[0])
+            cam = campuses[0] if campuses else {}
+            schools.append(_flat_record(e, e["canonical_name"], cam, rep, tongzhao, campuses))
     return {"district": f"{district}", "region": "北京市", "schools": schools}
 
 
