@@ -1,0 +1,48 @@
+id: sy-010-syqjcxx
+type: 公办普高
+canonical_name: 北京市顺义区君诚学校
+short_name: 顺义区君诚学校
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市顺义区君诚双语学校
+  lat: 40.095727
+  lon: 116.500093
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: true
+admissions:
+- channel: 统招
+  code: '213009'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '28'
+- channel: 统招
+  code: '213009'
+  major: '02'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '12'
+rollup:
+  features:
+    style: 温榆河畔民办非营利涉外国际学校(2000 年创办)。全人教育、小班教学;获美国 Cognia 认证、IBO 授权 IBDP、英国 BTEC 体育认证、AP(CEEB 694107);融合美国 Common Core + 英国剑桥
+      + 中国国家课程,重视中国传统文化;开设 IGCSE/AP/IB/A-Level/国际艺术。
+    tags:
+    - 国际方向
+    - 外语特色
+    source: 百度百科、国际学校网/ieduchina
+  campus_life:
+    class_system:
+      value: 幼儿园至高中民办非营利涉外学校; 高中提供IB(PYP/MYP/DP候选)、AP及剑桥国际课程。
+      source: 君诚学校官网 sibs.com.cn; 君诚百科
+    boarding_detail:
+      value: 寄宿兼走读学校, 提供寄宿项目(6年级及以上)。校园占地约5万㎡, 设学生宿舍、运动场、室内多功能体育馆、餐饮设施、图书馆。
+      source: 君诚学校官网; 君诚百科
+    activities:
+      value: 设机器人STEM教室、乐高室、茶道室、戏剧室、乒乓球室等特色教室。
+      source: 君诚学校官网/百科
+_codes:
+- '213009'

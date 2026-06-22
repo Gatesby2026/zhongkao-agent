@@ -1,0 +1,59 @@
+id: dc-020-dwsszx
+type: 公办普高
+canonical_name: 北京市第五十四中学
+short_name: 第五十四中学
+aliases: []
+level: 区级
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市东城区北京市第五十四中学
+  lat: 39.955555
+  lon: 116.423587
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '201008'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '196'
+  lines:
+    '2025':
+      score: 400
+      rank: 5896
+      total: 510
+    '2024':
+      score: 533
+      rank: 6445
+      total: 670
+  lines_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+  pred_2026:
+    rank: 5896
+    lo: 5188
+    hi: 6604
+    conf: high
+    method: hist
+    base_year: '2025'
+rollup:
+  features:
+    style: 和平里地区建校最早中学(1955年),以教育科研为特色(多年北京市教科研先进单位),精致教育办学思路,全国青少年校园足球特色学校
+    tags:
+    - 体育特长
+    - 课程改革
+    source: 百度百科/北京小升初信息网/北京中考信息网
+  campus_life:
+    class_system:
+      value: 完全中学, 约43个教学班(初中18/高中16), 2000多名学生。班数随届变动。
+      source: 百度百科 https://baike.baidu.com/item/北京市第五十四中学/10740361
+      confidence: 百科
+    activities:
+      value: 二十多个学生社团(科技俱乐部/陶艺/话剧社/电视台/DI头脑创新/红十字会/模拟联合国/数码摄影/音乐沙龙等); 有金帆舞蹈团、管乐团、女篮、乒乓球队; 开设五类校本选修、三年共146门校本课程。
+      source: 百度百科 https://baike.baidu.com/item/北京市第五十四中学/10740361 ; 本地宝 https://m.bj.bendibao.com/wangdian/dian/5651762.shtm
+      confidence: 百科
+_codes:
+- '201008'

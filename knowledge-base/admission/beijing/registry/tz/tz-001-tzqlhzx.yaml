@@ -1,0 +1,85 @@
+id: tz-001-tzqlhzx
+type: 公办普高
+canonical_name: 北京市通州区潞河中学
+short_name: 通州区潞河中学
+aliases: []
+level: 优质高中（示范/特色）
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市通州区潞河中学
+  lat: 39.898579
+  lon: 116.653324
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: true
+admissions:
+- channel: 统招
+  code: '112001'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '99'
+  lines:
+    '2025':
+      score: 475
+      rank: 364
+      total: 510
+    '2024':
+      score: 633
+      rank: 551
+      total: 670
+  lines_meta:
+    source: 北京高考在线 gaokzx.com(https://www.gaokzx.com/gk/zhongkao/144865.html 2025; https://www.gaokzx.com/gk/zhongkao/131935.html
+      2024); 北京中考信息网 zhongkaobj.cn(https://www.zhongkaobj.cn/fenshuxian/qitaqu/202410222442.html 2024); 知乎数据精算贴佐证 2025 潞河
+      475/区排364(https://zhuanlan.zhihu.com/p/1970174582414606595)
+    confidence: medium
+  pred_2026:
+    rank: 364
+    lo: 320
+    hi: 408
+    conf: medium
+    method: hist
+    base_year: '2025'
+- channel: 统招
+  code: '112001'
+  major: '02'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '135'
+rollup:
+  features:
+    style: 通州区龙头校,1867 年建校的百年名校,北京市首批国家级示范高中,综合实力区内第一。课程丰富(每学期 70-80 门选修),联合国教科文组织俱乐部成员校,国际交流广。
+    tags:
+    - 综合均衡
+    - 课程改革
+    - 国际方向
+    source: 百度百科/知乎数据精算贴/gaokzx 学校页 (https://baike.baidu.com/item/北京市通州区潞河中学/9804942)
+  gaokao:
+    note: 民间·非官方
+    summary: 网传 2024 年高考特控线(一本)上线率约 92%,600 分以上约 196 人(占年级近半),京内 211 院校录取超 200 人;最高分 709 分(网传全市第 29 名)。数据来自媒体/自媒体,非官方发布。
+    source: 51zixun 学校页 / 知乎数据精算贴 (https://www.51zixun.com/zhongkao/beijing/gaozhong/1729818375.html)
+  campus_life:
+    boarding_detail:
+      value: 寄宿制高中,不支持走读。宿舍分普通宿舍/公寓/两人公寓多种;有信源称普通宿舍六人间(位于清真食堂楼上), 公寓四人间(国际部高层),两人公寓在国际部;另一信源称宿舍每间8人、2个独立卫生间、1个洗漱池、 独立内隔间阳台、2台风扇+1台空调、上下铺。床位按学号分配,一床一插座、可挂蚊帐,配独立储物柜。
+        男女宿舍分楼,各楼配专职宿管,外人需登记入内。 (两信源宿舍人数说法不一,均保留待核)
+      source:
+      - https://zhuanlan.zhihu.com/p/674627039 (知乎·北京中考住宿盘点)
+      - https://www.scxye.com/news/120262.html (选校招生网·潞河2023宿舍条件,民间整理·待核)
+    schedule:
+      value: 热水供应时间:中午11:45-12:30、下午17:15-18:30、晚上22:00-22:35。 作息制度严格,不准晚归和随意外出。(完整起床/熄灯作息表未查到)
+      source: https://www.scxye.com/news/120262.html (选校招生网,民间整理·待核)
+    management:
+      value: 宿舍楼配专职宿舍管理员,实行严格作息制度,禁止晚归和随意外出,外人入楼需登记。
+      source: https://www.scxye.com/news/120262.html (民间整理·待核)
+    dining:
+      value: 校内有五个食堂:一食堂在学校中央;四食堂离初中部近、座位较多;三食堂为清真食堂(主要服务内地新疆班/内高班学生); 国际部食堂种类多样。
+      source: https://zhuanlan.zhihu.com/p/674627039 (知乎,民间整理·待核)
+    class_system:
+      value: 2024级高一共16个班:1-4班创新实验班;5-8班普通平行班;9、10班分层教学实验班; 11、12班文科实验班;13、14班理科实验班;15、16班为「1+3」人才培养试验项目班。 (年度可能调整,以当年分班为准)
+      source: 搜索聚合(知乎/中考信息站),民间整理·待核
+    activities:
+      value: 社团丰富:配指导老师的专业社团(广播站、潞园文学社、潞河之星电视台等),学生自创高质量社团 (思辩社、模拟联合国等)及各类小众社团。规模最大的为天文社团——2014年被评为北京市学生 金鹏科技团(天文分团)。
+      source: https://zhuanlan.zhihu.com/p/674627039 + 学校百科,民间整理·待核
+_codes:
+- '112001'

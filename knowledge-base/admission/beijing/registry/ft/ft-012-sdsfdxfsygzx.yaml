@@ -1,0 +1,63 @@
+id: ft-012-sdsfdxfsygzx
+type: 公办普高
+canonical_name: 首都师范大学附属云岗中学
+short_name: 首都师范大学附属云岗中学
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市丰台区首都师范大学附属云岗中学
+  lat: 39.810817
+  lon: 116.165554
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '206008'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '74'
+  lines:
+    '2025':
+      score: 401
+      rank: 3028
+      total: 510
+  lines_meta:
+    source: 北京中考信息网 zhongkaobj.cn(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html); 北京高考在线 gaokzx.com(https://www.gaokzx.com/gk/zhongkao/144859.html)
+    confidence: medium
+  pred_2026:
+    rank: 3028
+    lo: 2665
+    hi: 3391
+    conf: medium
+    method: hist
+    base_year: '2025'
+rollup:
+  features:
+    style: 「「云文化·云课程」四维一体（云志德育/云知学科/云创科技/云和国际）。北京市科技示范校，航天、军事、农业科技「三维一体」科技教育（军事科技为市级优秀校本课程）；走班教学；体育特色（花式篮球基地校等）。」
+    tags:
+    - 科技创新
+    - 课程改革
+    - 体育特长
+    - 国际方向
+    source: 「百度百科 https://baike.baidu.com/item/首都师范大学附属云岗中学/24372849 ；学校官网 http://www.ygzx.ftedu.cn/cms/sdygzx/index/index.jhtml
+      ；学区房划片 https://m.xqfhp.com/aid/11213/」
+  campus_life:
+    school_code: '206008'
+    class_system:
+      value: 采用小组合作、师友互助课堂模式，针对学情差异实施走班教学。
+      source: 学区房划片 xqfhp.com/aid/5825 + 百度百科（民间整理·待核）
+    dining:
+      value: 学生反馈食堂菜品每周更新。
+      source: 学区房划片 xqfhp.com/aid/5825（民间整理·待核，主观评价）
+    activities:
+      value: 有机器人、航模、3D 打印、足球、篮球、排球、武术、管乐、合唱、京剧、书法、美术、舞蹈等 30 多个社团；「校园好声音」歌手大赛、艺术节才艺比拼等活动。
+      source: 学区房划片 xqfhp.com/aid/5825 + 百度百科（民间整理·待核）
+    voices:
+      value: 学生反馈：老师责任心强、课外活动丰富、食堂菜品每周更新。
+      source: 学区房划片 xqfhp.com/aid/5825（民间整理·待核）
+_codes:
+- '206008'

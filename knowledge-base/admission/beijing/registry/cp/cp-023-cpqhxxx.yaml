@@ -1,0 +1,47 @@
+id: cp-023-cpqhxxx
+type: 公办普高
+canonical_name: 北京市昌平区汇贤学校
+short_name: 昌平区汇贤学校
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市昌平区北京市昌平区汇贤学校
+  lat: 40.134178
+  lon: 116.278437
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '214033'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '108'
+- channel: 统招
+  code: '214033'
+  major: '02'
+  major_name: 普通班
+  campus: benbu
+  plan_total: 72 (住)
+rollup:
+  features:
+    style: 创办于 2017 年，民办校，涵盖小初高。以「尊道贵德、博文约礼、文武兼修、接轨国际」为宗旨，国学教育为特色（国学经典 + 书法/国画/古琴/茶艺/花道等国艺课程 + 修身课程），小班制教学。
+    tags:
+    - 文科人文
+    - 外语特色
+    source: 学校官网 bjhxschool.com / 国际学校网 / 远播国际教育
+  campus_life:
+    class_system:
+      value: 创办于 2017 年，含小学/初中/高中；高中除普高方向外设国际双选班，开设中加双学籍班、中美课程融合班、中日融合课程
+      source: http://www.bjhxschool.com/course.php?id=490
+    management:
+      value: 寄宿、走读双轨制；配专职宿管老师、德育老师和校医，严格管理电子用品
+      source: https://zhuanlan.zhihu.com/p/29767082749
+    activities:
+      value: 以经典学习和国艺熏陶为特色，开设吟诵、书法、国画、围棋、茶艺、音乐教育等
+      source: https://baike.baidu.com/item/北京市昌平区汇贤学校/24288259
+_codes:
+- '214033'

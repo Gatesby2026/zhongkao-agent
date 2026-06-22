@@ -1,0 +1,53 @@
+id: fs-013-bwxx
+type: 公办普高
+canonical_name: 北京市博文学校
+short_name: 博文学校
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市房山区北京市博文学校
+  lat: 39.632805
+  lon: 116.052938
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: true
+admissions:
+- channel: 统招
+  code: '211018'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '312'
+- channel: 统招
+  code: '211018'
+  major: '02'
+  major_name: 普通班
+  campus: benbu
+  plan_total: 208 (住)
+rollup:
+  features:
+    style: 1993 年创办, 房山窦店镇, 北京首批民办全日制寄宿学校, 十二年一贯制; 「人生中心教育」理念, 「博学多能、崇德自强」校训; 以艺术、体育教育为两翼, 强化多语种教学(英语/日语/俄语), 设非遗传承、AI 通识等校本课程;
+      提供寄宿兼走读
+    tags:
+    - 寄宿制
+    - 艺术特长
+    - 体育特长
+    - 外语特色
+    source: 北京市博文学校官网 (bjbws.cn); 百度百科; 远播国际教育
+  campus_life:
+    management:
+      value: 民办全日制寄宿学校(创办于 1993 年,北京首批民办全日制寄宿学校之一,窦店镇),实施小学至高中十二年一贯制;核心理念「人生中心教育」,校训「博学多能、崇德自强」。
+      source: 北京市博文学校官网 https://www.bjbws.cn/ ；百度百科「北京市博文学校」 https://baike.baidu.com/item/北京市博文学校/435412
+      confidence: medium
+    boarding_detail:
+      value: 全寄宿制;校园占地近 400 亩,建筑面积 8 万多 ㎡,绿地 250 亩。bjeea 计划中 02 专业明确为住宿计划(208 名)。
+      source: 北京市博文学校官网 https://www.bjbws.cn/ ；住宿计划见 fangshan_admission_codes.json(bjeea 官方计划)
+      confidence: medium
+    activities:
+      value: 配标准体育场、篮球场、足球训练场,设舞蹈排练厅、演出厅、书画室、农耕园、药植园、生存拓展训练场、科技实训场、一站式劳动教育实践基地等;高中课程为「基础+特色+创新」三维架构。
+      source: 北京市博文学校官网 https://www.bjbws.cn/
+      confidence: medium
+_codes:
+- '211018'

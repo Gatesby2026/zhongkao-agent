@@ -1,0 +1,57 @@
+id: dx-013-dxjhxx
+type: 公办普高
+canonical_name: 北京大兴精华学校
+short_name: 大兴精华学校
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市大兴区北京大兴精华学校(南门)
+  lat: 39.754253
+  lon: 116.440799
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: true
+admissions:
+- channel: 统招
+  code: '215016'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: 144 (住)
+- channel: 统招
+  code: '215016'
+  major: '02'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '216'
+rollup:
+  features:
+    style: 精华教育（始于 1978 年高考教育）举办的民办高中（2021 年起招生）。师资中正高级、特级教师占比较高，实行学科+心理双班主任制；自建多维数据分析系统对弱科弱项精准定位；课程含基础必修、拓展课及人工智能等前瞻性选修，分层分类教学，自高一落实『高三意识』。
+    tags:
+    - 课程改革
+    - 综合均衡
+    source: 百度百科『北京大兴精华学校』、jinghua.com 官网办学特色页、gaokzx
+  campus_life:
+    _note: 精华教育旗下全日制高中;2024获『创新型人才培养标杆学校』、大兴区基础教育课程建设先进单位
+    class_system:
+      value: 采用分层分类教学体系;课程含基础性必修课、拓展性课程及人工智能等前瞻性选修课
+      source: https://m.jinghua.com/dxSchool/rise.jsp ; https://www.sohu.com/a/889937883_121956424（探访稿·民间整理·待核）
+    schedule:
+      value: 学生每日划分约41个时间段(学习/休息/课后辅导/社会活动等),安排紧凑(具体到校/放学/晚自习钟点未公开)
+      source: https://m.163.com/dy/article/IVTG9TD70514R9KQ.html（媒体稿·民间整理·待核）
+    management:
+      value: 实行学科教师与心理教师『双班主任制』;精细化管理,定期反馈与评估
+      source: https://school.jinghua.com/ ; https://m.jinghua.com/information/model/article_wap_10519.shtml
+    boarding_detail:
+      value: 提供住宿(可走读可住宿);宿舍配独立卫浴、空调、书桌、储物柜,照明用『护眼灯』
+      source: https://school.jinghua.com/ ; https://m.jinghua.com/article/16489.html（官网）
+    dining:
+      value: 食堂供一日三餐;推广『低脂低碳餐』,从热量/碳水/脂肪/蛋白质筛选食材,菜谱3周不重样
+      source: https://school.jinghua.com/（官网自述·待核）
+    voices:
+      value: 教师团队正高级占比约17%-25%、特级教师约27%-30%(学校自述/媒体稿·待核)
+      source: https://baike.baidu.com/item/北京大兴精华学校/61993263 ; https://m.163.com/dy/article/IVTG9TD70514R9KQ.html（民间整理·待核）
+_codes:
+- '215016'

@@ -1,0 +1,58 @@
+id: cp-022-cpqdfhxx
+type: 公办普高
+canonical_name: 北京市昌平区东方红学校
+short_name: 昌平区东方红学校
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市昌平区
+  lat: 40.220952
+  lon: 116.231034
+  confidence: mid
+  source: 高德 geocode（待电话核实）
+  boarding: true
+admissions:
+- channel: 统招
+  code: '214032'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '204'
+- channel: 统招
+  code: '214032'
+  major: '02'
+  major_name: 普通班
+  campus: benbu
+  plan_total: 136 (住)
+rollup:
+  features:
+    style: 始建于 2005 年，十二年一贯制民办校。办学理念「一人一特长，一人一方案」，培养具家国情怀与国际视野的创新人才。设戏剧/演讲/辩论/机器人等特色课、中加班/AP/A-Level 双语课及小语种课，配击剑馆、游泳馆、高尔夫场等。
+    tags:
+    - 国际方向
+    - 艺术特长
+    - 外语特色
+    - 科技创新
+    source: 国际学校网 / 远播国际教育 / 北京幼升小网
+  campus_life:
+    class_system:
+      value: 12 年一贯制；高中开设双轨日语班（「2+1」或「2.5+1」模式，直申日本大学）；HAAS 哈斯学院开设美国 AP、加拿大、英国 A-Level、多语种、艺术特色课程
+      source: https://www.guojixuexiao.org/bjdfh/
+    management:
+      value: 实行小班化、导师制；封闭式管理，食宿专人负责，24 小时安全保障
+      source: https://m.guoji.114study.com/school/dongfanghong/aboutus/
+    boarding_detail:
+      value: 寄宿制，宿舍（学校自述）四星级酒店标准、一室六人、单独卫浴
+      source: https://m.guoji.114study.com/school/dongfanghong/aboutus/
+    dining:
+      value: 食宿专人负责（学校自述）
+      source: https://m.guoji.114study.com/school/dongfanghong/aboutus/
+    activities:
+      value: 设音乐、美术、舞蹈、传媒、书法五大板块艺术中心；校内有游泳馆、台球室、乒乓球馆等
+      source: https://www.guojixuexiao.org/bjdfh/
+    voices:
+      value: 有家长反映宿舍无暖气、靠中央空调供暖，招生人数多、管理服务有待改进；另有反映下课较晚（约 21:00–21:30）、十点熄灯，时间偏紧（民间整理·待核）
+      source: https://zhuanlan.zhihu.com/p/651871954
+_codes:
+- '214032'

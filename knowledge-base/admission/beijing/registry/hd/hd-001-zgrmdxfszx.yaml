@@ -6,6 +6,7 @@ level: 市级示范性高中
 note: 海淀“六小强”之首，全国顶尖名校，竞赛与拔尖创新培养极强，国际奥赛及科创成绩突出。
 aliases:
 - '108001'
+- 人大附中
 campuses:
 - slug: main
   name: 本部
@@ -47,9 +48,88 @@ admissions:
       score: 465
       rank: 792
       rank_scope: 通州区
+- channel: 统招
+  code: '108001'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '215'
+  lines:
+    '2025':
+      score: 491
+      rank: 569
+      total: 510
+    '2024':
+      score: 650
+      rank: 930
+      total: 670
+    '2023':
+      score: 644
+      rank: 948
+      total: 660
+  lines_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+  pred_2026:
+    rank: 569
+    lo: 501
+    hi: 637
+    conf: high
+    method: hist
+    base_year: '2025'
+- channel: 统招
+  code: '108001'
+  major: '02'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '50'
+- channel: 统招
+  code: '108001'
+  major: '03'
+  major_name: 中英项目合作班
+  campus: benbu
+  plan_total: '80'
+- channel: 统招
+  code: '108001'
+  major: '04'
+  major_name: 中美项目合作班
+  campus: benbu
+  plan_total: '160'
+- channel: 统招
+  code: '108001'
+  major: '05'
+  major_name: 国际文凭课程班
+  campus: benbu
+  plan_total: '60'
+- channel: 统招
+  code: '108001'
+  major: '06'
+  major_name: 中美项目合作班
+  campus: benbu
+  plan_total: '120'
 rollup:
   tags:
   - 顶尖名校
   - 竞赛强
   - 拔尖创新
+  features:
+    style: 学生培养目标「全面发展+突出特长+创新精神+高尚品德」；早培班、基础科学实验班、人文科学实验班分类培养，校本/大学先修/研修课程200余门
+    tags:
+    - 学科竞赛
+    - 科技创新
+    - 综合均衡
+    source: 百度百科;自主选拔在线 zizzs.com
+  gaokao:
+    note: 民间·非官方
+    '2024': 清北录取超150人（网传·全市第一）；北京市前20名占7人，700分以上27人
+    source: https://www.zizzs.com/gk/gaokao/174800.html
+  campus_life:
+    class_system: 民间整理·待核：高中部每年级约14~18个班，1班为人文实验班、2-7班普通班、8-15班实验班、16-18班早培班，每班约45人；早培班为拔尖创新人才早期培养项目（全市选拔）。
+    schedule: 民间整理·待核：住宿生晚6:30-9:30晚自习（中间休息10分钟，老师记考勤），晚10:30熄灯。
+    boarding_detail: 民间整理·待核：可住宿，6人一间上下铺，有独立洗澡间，中央空调，有阳台晾衣；住宿费约440元。
+    dining: 民间整理·待核：有食堂（网传内部设施好）。
+    activities: 民间整理·待核：社团约145个，涵盖竞赛/文艺/研学/志愿等。
+    voices: 民间整理·待核：学生反馈『包容多元、舞台足够大』，竞赛/社团/学霸路线都能找到方向（人大附中ICC校园生活栏目 + 知乎）。
+    source: 人大附中ICC校园生活 https://icc.rdfz.cn/CHN_RDFZ_XYSH/ ; 北京高考在线(内部设施) https://www.gaokzx.com/c/202012/48370.html ; 知乎
+      https://zhuanlan.zhihu.com/p/406392120
 home_district: 海淀

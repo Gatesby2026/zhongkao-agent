@@ -30,6 +30,27 @@ admissions:
       score: 609
     '2023':
       score: 614
+- channel: 统招
+  code: '214012'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '65'
+  lines:
+    '2024':
+      score: 609
+      rank: 1302
+      total: 670
+  lines_meta:
+    source: 自主选拔在线 2025 中考参考(含 2024 昌平录取线区排名); 北京中考信息网 近三年各高中录取线及区排名变化
+    confidence: medium
+  pred_2026:
+    rank: 1302
+    lo: 1146
+    hi: 1458
+    conf: medium
+    method: hist
+    base_year: '2024'
 rollup:
   tags:
   - 名校分校
@@ -37,4 +58,21 @@ rollup:
   - 科技特色
   - 未来科学城
   - 住宿便利
+  features:
+    style: 北师大与昌平区联办、北师大二附中教育集团一体化管理的公办完全中学，位于未来科学城南区。传承「人文教育、自主发展」理念；与未来科学城央企/科研院所合作开设人工智能、生物科技、STEM 等特色课程。2020 年入选北京市文明校园。
+    tags:
+    - 科技创新
+    - 文科人文
+    - 课程改革
+    source: 百度百科 / 北师大基础教育发展管理部 / 北京日报
+  campus_life:
+    class_system:
+      value: 公办完全中学，高中部设「未来科学英才班」等班型（英才班 30 人、学费 800 元/学期、住宿费 600 元/学期来自第三方页，非官方简章，民间整理·待核）
+      source: https://www.lileliao.com/show/718602.html
+    boarding_detail:
+      value: 高中可住宿——统招计划中投放了一部分住宿名额，需住宿者可选择，可同时填报住宿与走读
+      source: https://www.shsbnu.net/html/1/news/202305/n3208.html
+    management:
+      value: 与北师大二附中本部在文化理念、管理团队、教师队伍和教育教学等方面实行一体化管理；坚持「人文素质教育」和「自主性发展」育人特色
+      source: https://news.qq.com/rain/a/20250403A06F5400
 home_district: 昌平

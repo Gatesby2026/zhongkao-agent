@@ -6,6 +6,7 @@ level: 市级示范性高中
 note: 钱学森母校，设钱学森班等实验班，理科见长兼重人文，拔尖创新人才培养特色突出。
 aliases:
 - '102013'
+- 北师大附中
 campuses:
 - slug: main
   name: 本部
@@ -28,9 +29,73 @@ admissions:
   lines:
     '2025':
       score: 478
+- channel: 统招
+  code: '102013'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '72'
+  lines:
+    '2025':
+      score: 478
+      rank: 1802
+      total: 510
+    '2024':
+      score: 637
+      rank: 1974
+      total: 670
+    '2023':
+      score: null
+      rank: null
+      total: 660
+  lines_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+  pred_2026:
+    rank: 1802
+    lo: 1586
+    hi: 2018
+    conf: high
+    method: hist
+    base_year: '2025'
+- channel: 统招
+  code: '102013'
+  major: '02'
+  major_name: 钱学森班
+  campus: benbu
+  plan_total: '20'
+- channel: 统招
+  code: '102013'
+  major: '03'
+  major_name: 中美项目合作班
+  campus: benbu
+  plan_total: '80'
 rollup:
   tags:
   - 老牌名校
   - 理科强
   - 拔尖创新
+  features:
+    style: 百年名校，钱学森班实行因材施教、拔尖创新培养，理科见长兼重人文；另有科技实验班、文科特色。
+    tags:
+    - 理科见长
+    - 科技创新
+    - 学科竞赛
+    - 文科人文
+    source: 北京师大附中官网/百度百科/北京小升初信息网（北京师范大学附属中学）
+  gaokao:
+    note: 民间·非官方：本科率近100%、一本率高、985上线率高；钱学森班平均分突出（民间称近年平均分660+量级）。具体以学校官方为准。
+    year: 2024
+    source: 家长社区/中考资讯汇总，非学校官方喜报
+  campus_life:
+    class_system: 民间整理·待核：2024年新高一设三类特色班——钱学森班（2个班、每班约20人，理科为主兼人文）、科技实验班（有进高校科研院所/机器人社/科技竞赛优先机会）、人文实验班（人文社科专长）；小班制每班约30人。
+    schedule: 民间整理·待核：7:20左右到校，7:30早自习，上午5节夹课间操；午休12:15-13:30（可自由活动/学习/答疑），放学约16:05-17:00。
+    management: 民间整理·待核：管理『严格而有序』，有学生提到老师会定期查监控/晚自习查监控；校风总体被在校生形容为『自由开放』。
+    boarding_detail: 民间整理·待核：分东西两区——东区供初二至高二学生生活，西区单独属当届高三；宿舍干净，游泳池、地下篮球馆等设施多在东区。
+    dining: 民间整理·待核：食堂『相对可以』，学生反映比小学好；也有在校生称『盛饭阿姨亲切』满意度高（两条评价略有差异）。
+    activities: 民间整理·待核：校刊、合唱团、金帆舞蹈团、模联、机器人社、环境科学社、微电影社、足球社、美式橄榄球社、桥牌社、摄影社等；兴趣课含男篮/女排/乒乓球/希腊神话/定向越野等。
+    voices: 民间整理·待核：在校生形容校风『自由开放』；小班拉近同学关系『老师像朋友』；师资强且不向实验班倾斜，普通班老师也多为高学历/年级组长/特级教师。
+    source: 官网(钱学森班) https://www.bjsdfz.com/list-221-1.html ; 官网(科技实验班) https://www.bjsdfz.com/list-223-1.html ; 官网(人文实验班)
+      https://www.bjsdfz.com/list-222-1.html ; 官网(社团) https://www.bjsdfz.com/list-85-1.html ; 知乎 https://www.zhihu.com/question/34885301
+      ; 知乎 https://www.zhihu.com/question/67789182
 home_district: 西城

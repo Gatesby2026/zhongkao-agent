@@ -1,0 +1,41 @@
+id: hr-006-hrqqmxx
+type: 公办普高
+canonical_name: 北京市怀柔区青苗学校
+short_name: 怀柔区青苗学校
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市怀柔区
+  lat: 40.317003
+  lon: 116.631974
+  confidence: mid
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '216006'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '132'
+- channel: 统招
+  code: '216006'
+  major: '02'
+  major_name: 普通班
+  campus: benbu
+  plan_total: 88 (住)
+rollup:
+  features:
+    style: 青苗国际双语学校怀柔校区（2021 年建成），"中西合璧"办学理念；中国国家课程为根基，融合 IB/AP/A-Level 国际课程；获 IB 全学段认证、WASC 认证、托福/SAT 校内考场；小班双语沉浸式教学。
+    tags:
+    - 国际方向
+    - 外语特色
+    - 课程改革
+    source:
+    - 青苗学校招生简章 http://qingmiao.ctiku.com/jianzhang/1499.html
+    - 海淀区政府转载校介 https://hsc.beijing.gov.cn/hsc/kxc/cspt/jy/743744331/index.shtml
+    - 中国教育在线 https://www.eol.cn/liuxue/guoji/20250527700945.html
+_codes:
+- '216006'

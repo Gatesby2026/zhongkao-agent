@@ -1,0 +1,52 @@
+id: hd-033-ylyzsyfx
+type: 公办普高
+canonical_name: 北京一零一中石油分校
+short_name: 一零一中石油分校
+aliases:
+- 101石油分校
+level: 区级（101体系）
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市海淀区
+  lat: 39.959893
+  lon: 116.2977
+  confidence: mid
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '208029'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '207'
+  lines:
+    '2025':
+      score: 454
+      rank: 8445
+      total: 510
+    '2024':
+      score: 606
+      rank: 10375
+      total: 670
+  lines_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+  pred_2026:
+    rank: 8445
+    lo: 7432
+    hi: 9458
+    conf: high
+    method: hist
+    base_year: '2025'
+rollup:
+  features:
+    style: 北京一零一中教育集团成员校（前身1960年石油附中，2019年101承办更名）；传承「铁人精神」，以韩/日/德/法/俄/西/葡七种小语种为特色（145门校本课程），管乐团（科技+艺术）与天文社著名
+    tags:
+    - 外语特色
+    - 综合均衡
+    - 艺术特长
+    source: 学校官网 101syfx.bjhdedu.cn/xxgk;百度百科;北京中考信息网 zhongkaobj.cn
+_codes:
+- '208029'

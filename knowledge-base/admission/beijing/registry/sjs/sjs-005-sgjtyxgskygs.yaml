@@ -1,0 +1,30 @@
+id: sjs-005-sgjtyxgskygs
+type: 公办普高
+canonical_name: 首钢集团有限公司矿业公司职工子弟学校河北省迁安市滨河村首钢集团有限公司矿业公司职工子弟学校
+short_name: 首钢集团有限公司矿业公司职工子弟学校河北省迁安市滨河村首钢集团有限公司矿业公司职工子弟学校
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市石景山区首钢集团
+  lat: 39.908157
+  lon: 116.170796
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '207002'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '140'
+rollup:
+  campus_life:
+    management:
+      value: 企办十二年一贯制学校, 校址河北省迁安市首钢滨河村, 行政隶属首钢矿业公司、业务由北京市石景山区教委指导; 使用北京教材与教学大纲, 高考用北京卷。仅招首钢矿山职工子女。
+      source: 'https://baike.baidu.com/item/首钢矿业公司职工子弟学校/1142225; shijingshan_admission_codes.json(207002 note: 只招首钢矿山职工子女)'
+      confidence: folk
+_codes:
+- '207002'

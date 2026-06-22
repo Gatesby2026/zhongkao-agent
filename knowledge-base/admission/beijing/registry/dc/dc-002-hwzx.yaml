@@ -28,9 +28,71 @@ admissions:
   lines:
     '2025':
       score: 476
+- channel: 统招
+  code: '101010'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '186'
+  lines:
+    '2025':
+      score: 476
+      rank: 1114
+      total: 510
+    '2024':
+      score: 624
+      rank: 1943
+      total: 670
+    '2023':
+      score: 635
+      rank: 1485
+      total: 660
+  lines_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+  pred_2026:
+    rank: 1114
+    lo: 980
+    hi: 1248
+    conf: high
+    method: hist
+    base_year: '2025'
+- channel: 统招
+  code: '101010'
+  major: '02'
+  major_name: 中美高中课程班
+  campus: benbu
+  plan_total: '90'
 rollup:
   tags:
   - 老牌名校
   - 综合均衡
   - 国际方向
+  features:
+    style: 百年名校,办学宽松开放、全面发展学有特长;开设衔接/强基/竞赛课程,物理学科竞赛省一数量居东城区前列
+    tags:
+    - 综合均衡
+    - 学科竞赛
+    - 理科见长
+    source: 北京高考在线 gaokzx.com、阳光高考、百度百科
+  gaokao:
+    note: 民间·非官方
+    detail: 2024年最高分696分,600分以上约140人,学堂班均分640+;近年每年10名以上学生考入清北
+  campus_life:
+    class_system:
+      value: 高中2024级约9个班(3个学堂班/4个实验班), 实验班与普通班师资共享; 实验班通过开学前分班考试或本校初中直升选拔。班数随届变动。
+      source: 知乎 https://zhuanlan.zhihu.com/p/539978441 ; 中考信息网 https://www.zhongkaobj.cn/zhongkao/zxdt/2025041110377.html
+      confidence: 民间整理·待核
+    boarding_detail:
+      value: 有宿舍, 初高中均可住宿, 高中住校较多, 家远学生可申请; 据描述六人间一般住4人, 中央空调+独立卫浴。
+      source: 知乎 https://zhuanlan.zhihu.com/p/539978441 ; 中考信息网 https://www.zhongkaobj.cn/zhongkao/zkzn/202502099142.html
+      confidence: 民间整理·待核
+    dining:
+      value: 自办食堂供三餐, 早饭花样多、饭费便宜(早餐约2元/午餐约8元), 晚餐仅住宿生可吃。
+      source: 知乎 https://zhuanlan.zhihu.com/p/539978441
+      confidence: 民间整理·待核
+    activities:
+      value: 社团众多(健身/羽毛球/篮球/动漫/模型等); 优秀社团有合唱团、机器人社、动漫社、环保社、辩论社, 可参加市/全国比赛; 举办运动会、球赛、合唱比赛、研学。
+      source: 知乎 https://zhuanlan.zhihu.com/p/539978441 ; 中考信息网 https://www.zhongkaobj.cn/zhongkao/zxdt/2025041110377.html
+      confidence: 民间整理·待核
 home_district: 东城

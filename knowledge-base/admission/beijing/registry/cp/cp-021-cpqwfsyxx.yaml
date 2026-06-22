@@ -1,0 +1,54 @@
+id: cp-021-cpqwfsyxx
+type: 公办普高
+canonical_name: 北京市昌平区王府实验学校
+short_name: 昌平区王府实验学校
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市昌平区王府街道
+  lat: 40.10585
+  lon: 116.401655
+  confidence: mid
+  source: 高德 geocode（待电话核实）
+  boarding: true
+admissions:
+- channel: 统招
+  code: '214030'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '42'
+- channel: 统招
+  code: '214030'
+  major: '02'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '28'
+rollup:
+  features:
+    style: 王府教育品牌成员校，与北京王府幼儿园/北京王府学校构成幼小初高十五年一体化国际教育体系。在品格培养、外国语教育、艺术、体育、兴趣课程、家校合作等方面形成特色。
+    tags:
+    - 国际方向
+    - 外语特色
+    - 艺术特长
+    source: 百度百科 / 北京法政集团 / 王府学校官网
+  campus_life:
+    class_system:
+      value: 与北京王府学校同一办学主体；开设 IB、A Level、AP、OSSD、艺术留学特色课程；师资结构约 40% 外教 / 40% 海归 / 20% 中教双语
+      source: https://www.brs.edu.cn/wangfu
+    boarding_detail:
+      value: 低年级可走读或寄宿，高年级原则上建议住校；寄宿生一般周五下午离校、周日下午返校，可申请周末寄宿
+      source: https://www.brs.edu.cn/admissions-faq
+    activities:
+      value: 40 余个学生社团，覆盖学术/艺术/科技/人文社科/社会实践/运动六大门类；含英文辩论、国学、飞盘、戏剧、编程、视频剪辑、空竹、器乐、舞蹈、乐队等
+      source: https://www.brs.edu.cn/wangfu
+    management:
+      value: 设学生会、学生代表大会、社团联合会、学生团委四大学生组织，实行学生自治；设施含室内游泳馆、健身房、跆拳道馆、钢琴房等
+      source: https://www.brs.edu.cn/wangfu
+    voices:
+      value: 知乎在校生评价「老师比较负责，师资环境挺棒」「学校是个小社会」；也有提到「化妆抽烟喝酒的学生有，但不是多数，学校还是会管的」；普遍反映体验好坏很大程度取决于学生自身努力（民间整理·待核）
+      source: https://www.zhihu.com/question/42217063
+_codes:
+- '214030'

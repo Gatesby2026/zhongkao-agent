@@ -1,0 +1,71 @@
+id: hd-007-jtdxfszx
+type: 公办普高
+canonical_name: 北京交通大学附属中学
+short_name: 交通大学附属中学
+aliases:
+- 交大附中
+level: 市级示范性高中
+note: 茅以升实验班录取线高于普通班
+campuses:
+- slug: benbu
+  name: 北京市海淀区北京交通大学附属中学(南校区)
+  lat: 39.954898
+  lon: 116.344284
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '108007'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '229'
+  lines:
+    '2025':
+      score: 474
+      rank: 3799
+      total: 510
+    '2024':
+      score: 627
+      rank: 6163
+      total: 670
+  lines_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+  pred_2026:
+    rank: 3799
+    lo: 3343
+    hi: 4255
+    conf: high
+    method: hist
+    base_year: '2025'
+- channel: 统招
+  code: '108007'
+  major: '02'
+  major_name: 中加高中课程 (AP课程)班
+  campus: benbu
+  plan_total: '60'
+rollup:
+  features:
+    style: 教育集团，以「幸福教育」为办学理念；设茅以升班（高端理科实验班），科技与艺术屡获国际奖项，棒球/垒球/田径强项
+    tags:
+    - 综合均衡
+    - 科技创新
+    - 体育特长
+    source: 北京中考信息网 zhongkaobj.cn;茅以升科技教育基金会 mysf.org.cn
+  gaokao:
+    note: 民间·非官方
+    '2024': 茅以升班148人一本率100%、平均636.6分，其中11人录取清华北大；全校一本率近98%-99%（网传）
+    source: https://www.mysf.org.cn/Detail/index.html?id=674&aid=1692
+  campus_life:
+    class_system: 民间整理·待核：高二设工程班、理茅班、文茅班、理科实验班及普通班（理/文分科）；初中随机平行分班。
+    schedule: 民间整理·待核：早7:30到校、下午17:30放学；高一无晚自习，高二有自愿晚自习（不占课，到晚8点多）。
+    boarding_detail: 民间整理·待核：寄宿生有学生公寓（可申请不住宿）；南校区住宿楼男女分层，8人一间，每人一柜，公共浴室刷卡。
+    dining: 民间整理·待核：午餐五个窗口（约14元套餐/拉面粉/西餐/盖饭/饺子）。
+    activities: 民间整理·待核：社团活动活跃，各领域比赛成绩较好。
+    voices: 民间整理·待核：茅班老师负责（数学/生物口碑好），整体偏『放养』，需主动找老师答疑；被评为增值能力较强的学校（知乎）。
+    source: 知乎(交大附中怎么样) https://www.zhihu.com/question/483850079 ; 知乎(学校介绍) https://zhuanlan.zhihu.com/p/693328856 ; 知乎(增值能力)
+      https://zhuanlan.zhihu.com/p/491115199
+_codes:
+- '108007'

@@ -1,0 +1,37 @@
+id: xc-029-xczyxx
+type: 公办普高
+canonical_name: 北京市西城职业学校
+short_name: 西城职业学校
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市西城区北京市西城职业学校(甘家口校区)
+  lat: 39.925208
+  lon: 116.335206
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '202031'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '220'
+- channel: 统招
+  code: '202031'
+  major: '02'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '160'
+- channel: 统招
+  code: '202031'
+  major: '03'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '160'
+rollup: {}
+_codes:
+- '202031'

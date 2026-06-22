@@ -1,0 +1,60 @@
+id: dx-002-dxqxhzx
+type: 公办普高
+canonical_name: 北京市大兴区兴华中学
+short_name: 大兴区兴华中学
+aliases: []
+level: 优质高中（示范/特色）
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市大兴区北京市大兴区兴华中学
+  lat: 39.755198
+  lon: 116.333765
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: true
+admissions:
+- channel: 统招
+  code: '115002'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '92'
+  lines:
+    '2025':
+      score: 452
+      rank: 1353
+      total: 510
+    '2024':
+      score: 591
+      rank: 1466
+      total: 670
+  lines_meta:
+    source: 北京高考在线 gaokzx — 2025年北京各区高中校预估分数及排名(预估口径,单源 low); 北京中考信息网 zhongkaobj — 2024大兴区高中录取分数线&区排名汇总; 北京小升初网 xschu — 2024年大兴区各高中中考录取分数线
+    confidence: low
+  pred_2026:
+    rank: 1353
+    lo: 1191
+    hi: 1515
+    conf: low
+    method: hist
+    base_year: '2025'
+rollup:
+  features:
+    style: 北京市示范性普通高中、首批『北京 2008 奥林匹克教育示范学校』。形成『以德育德，以爱育人，走进学生心里』的办学特色；获『北京市科技示范校』『北京市依法治校示范校』等荣誉。小、初、高十二年一贯制学校。
+    tags:
+    - 综合均衡
+    - 科技创新
+    source: 百度百科『北京市大兴区兴华中学』、fx361.com、维基百科
+  campus_life:
+    class_system:
+      value: 共14个班,每班40-45人,分实验班和普通班
+      source: https://www.gaokzx.com/gk/zhongkao/137101.html
+    boarding_detail:
+      value: 半封闭式『走读+寄宿』制公办普通高中(既有寄宿生也有走读生);具体几人间/宿舍配置未查到
+      source: https://zh.wikipedia.org/zh-hans/北京市大兴区兴华中学（百科·民间整理·待核）
+    voices:
+      value: 北京市示范性普通高中、首批『北京2008奥林匹克教育示范学校』、获『首都文明单位』等荣誉(官方/百科表述,非家长口碑)
+      source: https://zh.wikipedia.org/zh-hans/北京市大兴区兴华中学（百科·民间整理·待核）
+_codes:
+- '115002'

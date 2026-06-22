@@ -1,0 +1,35 @@
+id: my-003-sfdxmysyzx
+type: 公办普高
+canonical_name: 北京师范大学密云实验中学
+short_name: 师范大学密云实验中学
+aliases: []
+level: 优质高中（示范/特色）
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市密云区北京师范大学密云实验中学
+  lat: 40.365506
+  lon: 116.855867
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '128003'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '276'
+rollup:
+  features:
+    style: '与北京师范大学合作办学,以"真教育"思想为核心,形成"规范+自主"教学特色, 培养"自觉、自主、自立"的学生。打造体育、科技、艺术三位一体特色教育: 体育以健康第一、1+N 专项教学;科技以 STEM 与创客教育培养创新;
+      艺术开设合唱、声乐、绘画等课程。 获评"北京市教育信息技术融合应用示范基地""北京市中小学人工智能教育与应用实验校"。'
+    tags:
+    - 课程改革
+    - 科技创新
+    - 艺术特长
+    source:
+    - https://baike.baidu.com/item/北京师范大学密云实验中学/7541769
+    - https://www.bjmy.gov.cn/zwgk/jy/gz/202301/t20230103_181146.html
+_codes:
+- '128003'

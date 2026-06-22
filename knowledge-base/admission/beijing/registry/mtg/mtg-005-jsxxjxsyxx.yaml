@@ -1,0 +1,49 @@
+id: mtg-005-jsxxjxsyxx
+type: 公办普高
+canonical_name: 北京景山学校京西实验学校
+short_name: 景山学校京西实验学校
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市门头沟区门头沟北京景山学校京西实验学校
+  lat: 39.950749
+  lon: 116.091131
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '209004'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '75'
+  lines:
+    '2024':
+      score: 550
+      rank: 724
+      total: 670
+  lines_meta:
+    source: 北京高考在线 - 北京新增8所公办普高首次招生
+    confidence: low
+  pred_2026:
+    rank: 724
+    lo: 637
+    hi: 811
+    conf: low
+    method: hist
+    base_year: '2024'
+rollup:
+  features:
+    style: 引进北京景山学校优质资源与管理模式创办的十二年制公办学校，采用“五·四·三”分段学制（小学五年、初中四年、高中三年）；93% 教师具硕士及以上学历，小班制（每班 30–38 人）。
+    tags:
+    - 课程改革
+    - 综合均衡
+    detail: 秉承景山“明理、勤奋、严谨、创新”校训与“全面发展打基础，发展个性育人才”理念，走“低负担、高质量”素质教育之路；立足十二年贯通培养，初高中有贯通培养实验经验。
+    source:
+    - https://baike.baidu.com/item/北京景山学校京西实验学校/61968424
+    - https://www.sltzgs.cn/edu/jingshan.html
+_codes:
+- '209004'

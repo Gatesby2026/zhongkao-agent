@@ -1,0 +1,75 @@
+id: cp-002-cpqdezx
+type: 公办普高
+canonical_name: 北京市昌平区第二中学
+short_name: 昌平区第二中学
+aliases: []
+level: 优质高中（示范/特色）
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市昌平区北京市昌平区第二中学
+  lat: 40.222393
+  lon: 116.237204
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: true
+admissions:
+- channel: 统招
+  code: '114002'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '68'
+  lines:
+    '2025':
+      score: 473
+      rank: 263
+      total: 510
+    '2024':
+      score: 637
+      rank: 290
+      total: 670
+  lines_meta:
+    source: 北京中考信息网 2025 昌平等多区统招线及区排名汇总; 北京高考在线 2025 各区高中校分数及排名; 自主选拔在线 2025 中考参考(含 2024 昌平录取线区排名); 北京中考信息网 近三年各高中录取线及区排名变化
+    confidence: medium
+  pred_2026:
+    rank: 263
+    lo: 231
+    hi: 295
+    conf: medium
+    method: hist
+    base_year: '2025'
+rollup:
+  features:
+    style: 始建于 1929 年，北京市示范性高中，政府街、回龙观两校区。长期办艺术/科技特长班，拥有金鹏科技团、金帆艺术团、金奥运动队；承担 1+3、2+4 初高中一体化改革，多项国家级科技/艺术/体育荣誉。
+    tags:
+    - 艺术特长
+    - 科技创新
+    - 体育特长
+    - 课程改革
+    source: 百度百科 / 央广网 / 学校官网 bjcpez.com
+  gaokao:
+    note: 民间·非官方
+    summary: 据公开介绍，2017 年成为清华生源校，近 5 年有 30 多名学生考入清华、北大，一本率约 80% 左右（学校自述口径）。
+    source: 央广网 / 百度百科（学校自述，非官方发布）
+  campus_life:
+    class_system:
+      value: 普通班、「1+3」实验班（偏文/偏理）、「2+4」鲲鹏科技实验班、卓越人才培养实验班；无分班考，以中考成绩分班
+      source: https://www.gaokzx.com/gk/zhongkao/150410.html
+    schedule:
+      value: 晚自习 18:30–21:40；高三周日全天补课（学生反馈作业较多、每月月考，民间整理·待核）
+      source: https://www.gaokzx.com/gk/zhongkao/150410.html
+    management:
+      value: 学习管理比较严格；不允许走读生携带手机，上课期间手机交老师统一管理
+      source: https://www.gaokzx.com/gk/zhongkao/150410.html
+    boarding_detail:
+      value: 回龙观校区可住宿，高一高二 6 人间、高三 4 人间（多为上下铺），宿舍装空调，每层有洗浴室
+      source: https://www.gaokzx.com/gk/zhongkao/150410.html
+    dining:
+      value: 饭菜营养均衡，正常每顿约 15 元，有各类特色盖浇饭
+      source: https://www.gaokzx.com/gk/zhongkao/150410.html
+    activities:
+      value: 民族管弦乐团、合唱团、舞蹈队、铜管乐团、春晖剧社、机器人社、生物社团、篮球社等；端午/清明主题活动、暑假运动队集训，赴园博园/徽州/敦煌等研学
+      source: https://www.gaokzx.com/gk/zhongkao/150410.html
+_codes:
+- '114002'

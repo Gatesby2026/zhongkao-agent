@@ -1,0 +1,47 @@
+id: dc-019-dwszxfx
+type: 公办普高
+canonical_name: 北京市第五十中学分校
+short_name: 第五十中学分校
+aliases:
+- 五十分校
+level: 区级
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市东城区北京市第五十中学
+  lat: 39.887052
+  lon: 116.439361
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '201007'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '105'
+  lines:
+    '2025':
+      score: 389
+      rank: 6118
+      total: 510
+  lines_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+  pred_2026:
+    rank: 6118
+    lo: 5384
+    hi: 6852
+    conf: high
+    method: hist
+    base_year: '2025'
+rollup:
+  features:
+    style: 永定门外地区唯一完全中学,人人皆可教理念,开设京剧、内画、面塑、篆刻等数十门传统文化与创客社团课程
+    tags:
+    - 艺术特长
+    - 综合均衡
+    source: 百度百科/北京中考信息网(东城区高中校情介绍)
+_codes:
+- '201007'

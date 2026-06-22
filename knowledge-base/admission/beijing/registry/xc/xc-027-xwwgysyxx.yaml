@@ -1,0 +1,51 @@
+id: xc-027-xwwgysyxx
+type: 公办普高
+canonical_name: 北京市宣武外国语实验学校
+short_name: 宣武外国语实验学校
+aliases: []
+level: 区级
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市西城区北京市宣武外国语实验学校
+  lat: 39.891669
+  lon: 116.328515
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '202026'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '100'
+  lines:
+    '2025':
+      score: 409
+      rank: 9742
+      total: 510
+    '2024':
+      score: 555
+      rank: 9720
+      total: 670
+  lines_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+  pred_2026:
+    rank: 9742
+    lo: 8573
+    hi: 10911
+    conf: high
+    method: hist
+    base_year: '2025'
+rollup:
+  features:
+    style: 2002年成立的外语特色公办完全中学，办学理念「悦纳、静心」，目标「外语优势、文理兼重、多元文化、优质发展」；开发校本课程《了解世界》（一班一国家），增设《综合英语》《新概念》并小班授课，聘外教、开听说写及日德法等多语种选修，以英语广播、英语角、外语短剧、国外友谊校营造语言环境。
+    tags:
+    - 外语特色
+    - 国际方向
+    - 课程改革
+    source: 百度百科/新华网2023校长专访/中国广播网（北京市宣武外国语实验学校）
+_codes:
+- '202026'

@@ -1,0 +1,63 @@
+id: ft-014-dcxx
+type: 公办普高
+canonical_name: 北京市大成学校
+short_name: 大成学校
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市丰台区北京市大成学校
+  lat: 39.894259
+  lon: 116.257366
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: true
+admissions:
+- channel: 统招
+  code: '206010'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '129'
+  lines:
+    '2025':
+      score: 394
+      rank: 3222
+      total: 510
+  lines_meta:
+    source: 北京中考信息网 zhongkaobj.cn(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html) [仅 1 源含此行,gaokzx 表止于云岗]
+    confidence: low
+  pred_2026:
+    rank: 3222
+    lo: 2835
+    hi: 3609
+    conf: low
+    method: hist
+    base_year: '2025'
+rollup:
+  features:
+    style: 「12年一贯制，北京市艺术教育特色校、体育传统校。三大特色：美术教育（美术类高考升学率长年100%）、棒球教育（市级冠军49次、全国冠军23次、亚洲冠军2次，培养30余位国家队队员）、国际理解教育。」
+    tags:
+    - 艺术特长
+    - 体育特长
+    - 国际方向
+    source: 「新浪新闻《大成学校特色教育丰富学生成长》 https://k.sina.cn/article_2371397007_8d58a58f00100fk7g.html ；校长网 http://www.xiaozhang.com.cn/school/bjdc/about.html
+      ；百度百科 https://baike.baidu.com/item/北京市大成学校/12771408」
+  gaokao:
+    note: 「民间·非官方」
+    detail: 「学校宣传：美术类高考升学率长年 100%、本科率约 84%（艺术特色班口径）。非官方权威发布，仅供艺术方向考生参考。」
+    source: 「新浪新闻 https://k.sina.cn/article_2371397007_8d58a58f00100fk7g.html」
+  campus_life:
+    school_code: '206010'
+    class_system:
+      value: 十二年一贯制公办校（小学/初中/高中）；北京市首批「1+3」人才培养试验区级项目校，开设「1+3」美术试验班（2016）、「1+3」棒球试验班（2017）。
+      source: 百度百科 + 北京小升初网 xschu.com（民间整理·待核）
+    boarding_detail:
+      value: 校内有可容纳近 300 人的学生公寓；2023 年普通高中住宿费 320 元/生·学期。
+      source: 学区房划片 xqfhp.com/aid/11210 + 丰台区政府预算公开（住宿费来自政府公开文件，相对可信）
+    activities:
+      value: 有 400 米标准跑道、人工草皮足球场、棒球场、羽毛球馆等；小初高均开设美术教育、棒球教育、国际理解教育等特色课程。
+      source: 百度百科 + 新浪新闻 k.sina.cn（民间整理·待核）
+_codes:
+- '206010'

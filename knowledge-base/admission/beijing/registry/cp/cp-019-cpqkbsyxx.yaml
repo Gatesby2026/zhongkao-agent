@@ -1,0 +1,48 @@
+id: cp-019-cpqkbsyxx
+type: 公办普高
+canonical_name: 北京市昌平区凯博实验学校
+short_name: 昌平区凯博实验学校
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市昌平区
+  lat: 40.220952
+  lon: 116.231034
+  confidence: mid
+  source: 高德 geocode（待电话核实）
+  boarding: true
+admissions:
+- channel: 统招
+  code: '214026'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '102'
+- channel: 统招
+  code: '214026'
+  major: '02'
+  major_name: 普通班
+  campus: benbu
+  plan_total: 68 (住)
+rollup:
+  features:
+    style: 创办于 2008 年，十二年一贯制寄宿制民办校，含国内高中、香港 DSE 及国际高中。以「生命·爱·创造」为核心，科创教育特色，依托 STREAM 教育系统与极客空间，探究式/启发式教学。
+    tags:
+    - 国际方向
+    - 科技创新
+    - 寄宿制
+    source: 百度百科 / 中国教育之窗 / 远播国际教育
+  campus_life:
+    class_system:
+      value: 12 年一贯制寄宿制；初三起设国际班，提供 USAP 学术全能等国际课程
+      source: https://www.ieduonline.cn/about/camfordschool
+    boarding_detail:
+      value: 全日制寄宿，周一至周四住校，周末可回家或留校；小学阶段可由家长选择住宿或走读
+      source: https://www.ieduonline.cn/problem/camfordschool
+    activities:
+      value: 社团课程含人工智能、科技创新、数学建模、网球、三雅道、土木金工、国乐、陶艺；学生社团有科技航模社、物理建模社、English club、舞蹈社、动漫社、文学社、足球社、甜品社、咖啡社等数十个
+      source: https://www.ieduonline.cn/about/camfordschool
+_codes:
+- '214026'

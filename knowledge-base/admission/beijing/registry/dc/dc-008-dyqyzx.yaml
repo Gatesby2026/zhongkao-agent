@@ -1,0 +1,88 @@
+id: dc-008-dyqyzx
+type: 公办普高
+canonical_name: 北京市第一七一中学
+short_name: 第一七一中学
+aliases: []
+level: 市级示范性高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市东城区北京市第一七一中学
+  lat: 39.958708
+  lon: 116.428644
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '101008'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '185'
+  lines:
+    '2025':
+      score: 480
+      rank: 748
+      total: 510
+    '2024':
+      score: 634
+      rank: 1033
+      total: 670
+    '2023':
+      score: 637
+      rank: 1248
+      total: 660
+  lines_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+  pred_2026:
+    rank: 748
+    lo: 658
+    hi: 838
+    conf: high
+    method: hist
+    base_year: '2025'
+rollup:
+  features:
+    style: 东城区重点、北京市示范高中,以「五步自主高效课堂」课改和「有层次无淘汰·三优」培养著称,金帆合唱团与金鹏科技团「双金」校,科技、艺术、体育校本课程丰富
+    tags:
+    - 课程改革
+    - 综合均衡
+    - 科技创新
+    - 艺术特长
+    source: 北京中考信息网(zhongkaobj.cn)、百度百科、北京高考在线(gaokzx.com)、教育部官网(moe.gov.cn 报道171课改)
+  gaokao:
+    note: 民间·非官方
+    detail: 近五年六十多人考入北大清华;2024年700分以上3人、650分以上66人、600分以上195人;一本率近年稳定约90%(2023年达97%);2024、2025连续位列东城区第二
+  campus_life:
+    class_system:
+      value: 高中含精英班(初三选拔)、SY班(教研组长与年级主任任教); 蛇形平行分班; 另有X班/理科重点班/文科重点班/学森班等特殊班。班数随届变动。
+      source: 搜狐《校园揭秘 东城热门校171中学》 https://www.sohu.com/a/1001997263_414577 ; 班型盘点文 https://www.gaokzx.com/gk/zhongkao/136567.html
+      confidence: 民间整理·待核
+    schedule:
+      value: 8:00到校; 上午4节至11:50; 13:00上课、下午3节至15:30; 周一课后为海量阅读课、530课程及社团活动; 晚自习初三才有。
+      source: 搜狐 https://www.sohu.com/a/1001997263_414577
+      confidence: 民间整理·待核
+    management:
+      value: 管理较严格——午休期间不能随便出入; 仪容要求严(女生不留长刘海/长发梳起, 男生不留特殊发型)。
+      source: 搜狐 https://www.sohu.com/a/1001997263_414577
+      confidence: 民间整理·待核
+    boarding_detail:
+      value: 无住宿。
+      source: 搜狐探校文/搜索摘要
+      confidence: 民间整理·待核
+    dining:
+      value: 仅提供午餐, 品种多样; 本部有教师、初一、初二、高中四个食堂可同时就餐。
+      source: 搜狐 https://www.sohu.com/a/1001997263_414577
+      confidence: 民间整理·待核
+    activities:
+      value: 40多个学生社团(屡获国家级一等奖的"金帆合唱团"、JA社团、科技民乐、羽毛球、击剑等); 开设近30门艺术、10多门体育、20门科技、50多门校本综合选修课。
+      source: 搜狐 https://www.sohu.com/a/1001997263_414577
+      confidence: 民间整理·待核
+    voices:
+      value: 老师负责、各科老师基本及时答复; 教学进度偏快, 能因材施教。
+      source: 搜狐 https://www.sohu.com/a/1001997263_414577
+      confidence: 民间整理·待核
+_codes:
+- '101008'

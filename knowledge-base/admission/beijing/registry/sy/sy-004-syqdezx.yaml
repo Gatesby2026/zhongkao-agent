@@ -1,0 +1,51 @@
+id: sy-004-syqdezx
+type: 公办普高
+canonical_name: 北京市顺义区第二中学
+short_name: 顺义区第二中学
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市顺义区北京市顺义区第二中学
+  lat: 40.134716
+  lon: 116.630335
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '213001'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '308'
+  lines:
+    '2024':
+      score: 553
+      rank: 2717
+      total: 670
+  lines_meta:
+    source: 顺义2024高中录取分数线一览-北京小升初信息网(xscxx)
+    confidence: low
+  pred_2026:
+    rank: 2717
+    lo: 2391
+    hi: 3043
+    conf: low
+    method: hist
+    base_year: '2024'
+rollup:
+  features:
+    style: 「学生有特长、教师有特点、学校有特色」为目标。以「立德树人,智圆行方」为校训,北京市体育项目传统校、健康促进校、教育科研先进校;理化生/计算机/通用技术/音美舞蹈专用教室齐备,体育设施完善。
+    tags:
+    - 体育特长
+    - 综合均衡
+    source: 学校简介(gx211)、学校官网(dayinmao)
+  campus_life:
+    voices:
+      value: '区教委直属普通完全中学(原城关二中, 2007年迁前进花园西侧新址), 约54个教学班、学生2400余人。坊间口碑: 在顺义公办中处于重点校之后的层级, 生源以中等及以下为主; 适合分数够不上前三校的学生。【民间整理·待核,
+        口碑性主观评价请审慎】'
+      source: 顺义二中百度百科(规模事实) + 喜马拉雅问答『顺义二中怎么样』(口碑, 民间低置信)
+_codes:
+- '213001'

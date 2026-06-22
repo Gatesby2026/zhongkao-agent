@@ -1,0 +1,47 @@
+id: hd-035-qhzx
+type: 公办普高
+canonical_name: 北京市清河中学
+short_name: 清河中学
+aliases: []
+level: 区级
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市海淀区北京市清河中学
+  lat: 40.031765
+  lon: 116.345942
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '208031'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '70'
+  lines:
+    '2025':
+      score: 422
+      rank: 13089
+      total: 510
+  lines_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+  pred_2026:
+    rank: 13089
+    lo: 11518
+    hi: 14660
+    conf: high
+    method: hist
+    base_year: '2025'
+rollup:
+  features:
+    style: 二十中教育集团成员校（前身1951年建校，2023年11月加入二十中教育集团，资源共享师资交流）；秉「全面育人 关注差异 发展特长」理念，构建国家课程校本化体系，机器人/武术社团多次获国家级奖；国家级国防教育特色学校、海淀区劳动教育研究实验学校
+    tags:
+    - 综合均衡
+    - 体育特长
+    - 课程改革
+    source: 首都文明网 bj.wenming.cn/hd/yw/202311/t20231110_6696453.shtml;百度百科;北京中考信息网 zhongkaobj.cn/zhongkao/zxdt/202412267220.html
+_codes:
+- '208031'

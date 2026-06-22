@@ -1,0 +1,31 @@
+id: hd-069-zkqyxxbjszgc
+type: 公办普高
+canonical_name: 北京市中科启元学校北京市中关村南一条
+short_name: 中科启元学校北京市中关村南一条
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市海淀区北京中科启元学校中关村南(公交站)
+  lat: 39.983522
+  lon: 116.31645
+  confidence: mid
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '208071'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '50'
+- channel: 统招
+  code: '208071'
+  major: '02'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '20'
+rollup: {}
+_codes:
+- '208071'

@@ -1,0 +1,45 @@
+id: hr-005-hrslnzx
+type: 公办普高
+canonical_name: 北京怀柔索兰诺中学
+short_name: 怀柔索兰诺中学
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市怀柔区北京怀柔索兰诺中学
+  lat: 40.284369
+  lon: 116.684268
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '216005'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '288'
+- channel: 统招
+  code: '216005'
+  major: '02'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '192 住: 男96 女96'
+rollup:
+  features:
+    style: 市教委批准的全日制双语寄宿制民办高中，定位科技特色国际学校；双语双轨制、小班分层走班，"一人一方案"；设国际班、双轨班，升学方向多元（国内高考 + 海外名校）。
+    tags:
+    - 国际方向
+    - 科技创新
+    - 寄宿制
+    source:
+    - 学校官网 http://www.solanoschool.cn/overview/
+    - 怀柔区政府网站 https://www.bjhr.gov.cn/ywdt/zxdt/202406/t20240628_3732248.html
+  gaokao:
+    note: 民间·非官方
+    summary: 2024 年高考 600 分以上 12 名（来源称"成绩再创新高"，未公布上线率明细）。
+    source:
+    - 怀柔区政府网站 https://www.bjhr.gov.cn/ywdt/zxdt/202406/t20240628_3732248.html
+_codes:
+- '216005'

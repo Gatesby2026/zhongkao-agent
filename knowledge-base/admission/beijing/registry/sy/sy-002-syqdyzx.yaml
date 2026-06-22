@@ -1,0 +1,51 @@
+id: sy-002-syqdyzx
+type: 公办普高
+canonical_name: 北京市顺义区第一中学
+short_name: 顺义区第一中学
+aliases: []
+level: 优质高中（示范/特色）
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市顺义区北京市顺义区第一中学
+  lat: 40.097322
+  lon: 116.666906
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '113002'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '163'
+  lines:
+    '2024':
+      score: 603
+      rank: 1226
+      total: 670
+  lines_meta:
+    source: 顺义2024高中录取分数线一览-北京小升初信息网(xscxx)
+    confidence: low
+  pred_2026:
+    rank: 1226
+    lo: 1079
+    hi: 1373
+    conf: low
+    method: hist
+    base_year: '2024'
+rollup:
+  features:
+    style: 顺义老牌优质校。以科技教育为办学特色,获全国科学教育实验校、「央馆人工智能课程」试点校、北京市中小学科技教育示范校、艺术教育特色校;构建「四自五育」课程体系与「五环节」自主课堂;「1+3」项目以「人文底蕴、科技特色」为定位。
+    tags:
+    - 科技创新
+    - 课程改革
+    - 综合均衡
+    source: 学校简介(gx211)、百度百科、gaokzx(1+3 简章)
+  gaokao:
+    note: 民间·非官方
+    detail: 民间统计称本科率长期在 90%以上、重点大学录取率约 60%-70%;历史上累计为清北输送学生较多。具体逐年分数段无公开权威口径,仅供参考。
+    source: 学校简介(gx211)、zhihu/xschu 等家长平台讨论(口径不一)
+_codes:
+- '113002'

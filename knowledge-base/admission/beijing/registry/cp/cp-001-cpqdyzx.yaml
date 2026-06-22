@@ -1,0 +1,71 @@
+id: cp-001-cpqdyzx
+type: 公办普高
+canonical_name: 北京市昌平区第一中学
+short_name: 昌平区第一中学
+aliases: []
+level: 优质高中（示范/特色）
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市昌平区北京市昌平区第一中学
+  lat: 40.22547
+  lon: 116.24126
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: true
+admissions:
+- channel: 统招
+  code: '114001'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '67'
+  lines:
+    '2024':
+      score: 630
+      rank: 512
+      total: 670
+  lines_meta:
+    source: 自主选拔在线 2025 中考参考(含 2024 昌平录取线区排名); 北京中考信息网 近三年各高中录取线及区排名变化
+    confidence: medium
+  pred_2026:
+    rank: 512
+    lo: 451
+    hi: 573
+    conf: medium
+    method: hist
+    base_year: '2024'
+rollup:
+  features:
+    style: 区属老牌示范高中，以「科研领先、注重实践」为传统，开设 100 余门选修课、10 余个学生社团及多个社会实践基地；北京市篮球、足球传统校。
+    tags:
+    - 课程改革
+    - 科技创新
+    - 体育特长
+    - 综合均衡
+    source: 百度百科 / 阳光高考 / 学校官网 cpyz.org.cn
+  gaokao:
+    note: 民间·非官方
+    summary: 据公开介绍，本科率长期 99% 以上，一本率约 65% 左右，历年有数十名学生考入清华、北大，逾千人考入 985/211 高校（口径与年份以学校口径为准）。
+    source: 百度百科 / 阳光高考（学校自述，非官方发布）
+  campus_life:
+    class_system:
+      value: 行政班+走班双管理模式；特色班型有英才班（配特级教师）、人文班、科技班、强基班，以及「1+3」项目直升班
+      source: https://www.gaokzx.com/gk/zhongkao/150411.html
+    schedule:
+      value: 晚自习 18:30–21:40，学生自愿参加
+      source: https://www.gaokzx.com/gk/zhongkao/150411.html
+    management:
+      value: 管理严格细致；禁止携带手机、智能手表、MP4 等电子产品，建议留家或班级统一管理
+      source: https://www.gaokzx.com/gk/zhongkao/150411.html
+    boarding_detail:
+      value: 可容纳约 600 人住宿，考入后申请；4–6 人一间（小标间 4 人、大标间 6 人），宿舍有空调，每层一个洗漱间/大卫生间/大洗澡间，每天可洗澡；6 公里以内居住不允许住宿
+      source: https://www.gaokzx.com/gk/zhongkao/150411.html
+    dining:
+      value: 「学苑餐厅」分一楼二楼，可容纳 1300 人同时就餐，菜品丰富、荤素搭配
+      source: https://www.gaokzx.com/gk/zhongkao/150411.html
+    activities:
+      value: 飞行社、戏剧社、舞团、羽毛球队、数学思维工坊、手工社、生命科学社、书社、篮球队、辩论社；定期办科技节/文化节/体育节及研学
+      source: https://www.gaokzx.com/gk/zhongkao/150411.html
+_codes:
+- '114001'

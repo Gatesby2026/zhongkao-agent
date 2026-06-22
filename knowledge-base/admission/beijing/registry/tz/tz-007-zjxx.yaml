@@ -1,0 +1,74 @@
+id: tz-007-zjxx
+type: 公办普高
+canonical_name: 北京中加学校
+short_name: 中加学校
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市通州区北京中加学校(西门)
+  lat: 39.944972
+  lon: 116.692596
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: true
+admissions:
+- channel: 统招
+  code: '212010'
+  major: '01'
+  major_name: 中外合作办学项目班
+  campus: benbu
+  plan_total: '36'
+- channel: 统招
+  code: '212010'
+  major: '02'
+  major_name: 中外合作办学项目班
+  campus: benbu
+  plan_total: 24 (住)
+- channel: 统招
+  code: '212010'
+  major: '03'
+  major_name: 中外合作办学项目班
+  campus: benbu
+  plan_total: '54'
+- channel: 统招
+  code: '212010'
+  major: '04'
+  major_name: 中外合作办学项目班
+  campus: benbu
+  plan_total: 36 (住)
+rollup:
+  features:
+    style: 1997 年成立,北京市第一所中外合作普通高中(中方北师大附属实验中学,外方加拿大纽宾士域省教育部)。双语教学,开设 AP/IB/加拿大美国交流/SAT/雅思托福等课程,国内首批引进 AP 的高中。统招专业为"中外合作办学项目班"。
+    tags:
+    - 国际方向
+    - 外语特色
+    source: 百度百科 / 学校官网 ccsc.com.cn / 维基百科 (https://baike.baidu.com/item/北京中加学校/2238895)
+  gaokao:
+    note: 民间·非官方
+    summary: 网传升读国内外大学升学率约 98%,获国外大学奖学金率约 83%(系出国留学方向出口,非普通高考口径)。数据来自学校宣传/百科,非官方。
+    source: 百度百科 / 学校官网 (https://baike.baidu.com/item/北京中加学校/2238895)
+  campus_life:
+    class_system:
+      value: 中外合作普通高中,高中(高一至高三)分AP班、实验班、普通班,设约30个高中教学班、1000余人。
+      source:
+      - https://baike.baidu.com/item/北京中加学校/2238895 (百度百科)
+      - http://www.ccsc.com.cn/index.php/Index/listcontent/1/1/c (学校官网·学校简介)
+    boarding_detail:
+      value: 全寄宿制。学生宿舍四人一间,充分供应热水;生活指导教师全程关心学生,校医按计划防治保健, 保安昼夜值勤。
+      source:
+      - http://www.ccsc.com.cn/index.php/Index/listcontent/1/2/c (学校官网·校园设施)
+      - https://baike.baidu.com/item/北京中加学校/2238895 (百度百科)
+    schedule:
+      value: 全寄宿作息(含小初):06:35起床;06:35-07:10洗漱晨练;07:10-07:40早餐; 07:40-07:55升旗/晨读;08:00-11:25上午四节课+课间操+眼保健操;11:35-12:15午餐; 12:15-13:30午休;13:40-16:55下午四节课+眼保健操;17:05-17:45小晚自习;
+        17:55-18:30晚餐;18:50-19:30大晚自习;之后宿舍休息、洗漱就寝(小学约21:10熄灯)。 (高中段就寝时间可能略晚,以学校通知为准)
+      source: https://www.ysxiao.cn/beijing-youeryuan/207053.html (北京幼升小网·中加全天作息表,民间整理·待核)
+    dining:
+      value: 食堂实行自助餐制,讲究营养配餐;2004年12月被原北京市卫生局授予「市卫生A级」标牌。
+      source: http://www.ccsc.com.cn/index.php/Index/listcontent/1/1/c (学校官网) + 百度百科
+    activities:
+      value: 开设20多个社团,含足球、篮球、棒球、羽毛球、曲棍球、击剑、马术、戏剧、舞蹈、模联、 电影摄影、演讲辩论等;另设足、篮、网、排球场及400米标准跑道。
+      source: http://www.ccsc.com.cn/index.php/Index/listcontent/3/26/c (学校官网·校园生活) + 百度百科
+_codes:
+- '212010'

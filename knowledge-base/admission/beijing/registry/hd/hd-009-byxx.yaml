@@ -1,0 +1,61 @@
+id: hd-009-byxx
+type: 公办普高
+canonical_name: 北京市八一学校
+short_name: 八一学校
+aliases: []
+level: 市级示范性高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市海淀区北京市八一学校
+  lat: 39.977762
+  lon: 116.304184
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '108009'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '260'
+  lines:
+    '2025':
+      score: 462
+      rank: 6705
+      total: 510
+    '2024':
+      score: 623
+      rank: 7050
+      total: 670
+  lines_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+  pred_2026:
+    rank: 6705
+    lo: 5900
+    hi: 7510
+    conf: high
+    method: hist
+    base_year: '2025'
+- channel: 统招
+  code: '108009'
+  major: '02'
+  major_name: 中美高中课程教育项目班
+  campus: benbu
+  plan_total: '80'
+rollup:
+  features:
+    style: 示范性高中，人文与科技双特色；设英才班（北航/北理工合作）、创新班、特色班，17个科技社团+约110门选修课（航模/无线电/OM）
+    tags:
+    - 科技创新
+    - 综合均衡
+    - 课程改革
+    source: 北京高考在线 gaokzx.com
+  gaokao:
+    note: 民间·非官方
+    '2024': 680分以上3人，650分以上30多人，600分以上190多人，5人入围清北强基；统招生一本率98%（2023口径，网传）
+    source: https://www.gaokzx.com/gk/zhongkao/148103.html
+_codes:
+- '108009'

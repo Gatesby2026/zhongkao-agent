@@ -1,0 +1,47 @@
+id: sy-014-syqqmxx
+type: 公办普高
+canonical_name: 北京市顺义区青苗学校
+short_name: 顺义区青苗学校
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市顺义区
+  lat: 40.149891
+  lon: 116.661474
+  confidence: mid
+  source: 高德 geocode（待电话核实）
+  boarding: true
+admissions:
+- channel: 统招
+  code: '213013'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '42'
+- channel: 统招
+  code: '213013'
+  major: '02'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '28'
+rollup:
+  features:
+    style: 国内较早的中西合璧双语教育品牌(始创 1998)。国家大纲核心课程 + IB 探究/项目式教学;高中开设 IB-DP、IGCSE、A-Level、国际艺术课程;30 余种课外活动,培养双母语、多文化视角的学生。
+    tags:
+    - 国际方向
+    - 外语特色
+    source: 学校官网(shunyi.bibs.com.cn)、国际学校网
+  campus_life:
+    boarding_detail:
+      value: 顺义校区(天竺镇丽苑街15号)为青苗在京最早校区, 覆盖幼儿园至高中, 全年级段获IB认证。提供住宿设施(具体寄宿政策建议向校核实)。
+      source: 青苗顺义校区官网 shunyi.bibs.com.cn; 青苗百科
+    management:
+      value: 晚饭后学生参加晚自习, 安排教师督导与学业答疑; 学生在校期间电子设备由学校统一保管。
+      source: 青苗学校介绍页
+    voices:
+      value: 国内第一家由中国人创办的国际双语教育品牌(始创1998), 获IB、美国WASC认证。【民间整理·待核】
+      source: jingkids 择校指南/百度百科(民间)
+_codes:
+- '213013'

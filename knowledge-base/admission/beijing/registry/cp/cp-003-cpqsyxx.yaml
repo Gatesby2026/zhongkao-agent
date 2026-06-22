@@ -1,0 +1,29 @@
+id: cp-003-cpqsyxx
+type: 公办普高
+canonical_name: 北京市昌平区实验学校
+short_name: 昌平区实验学校
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市昌平区北京市昌平区实验学校(振兴路校区)
+  lat: 40.208754
+  lon: 116.231817
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '214001'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '101'
+rollup:
+  features:
+    style: 昌平区公办普通高中之一。（公开信源中可核实的独立办学特色信息有限，避免与「昌平实验中学」「昌平实验小学」混淆，此处不展开特色描述。）
+    tags: []
+    source: 北京本地宝 昌平区公办高中名单 / 北京市教委具备招生资格普通高中名单
+_codes:
+- '214001'

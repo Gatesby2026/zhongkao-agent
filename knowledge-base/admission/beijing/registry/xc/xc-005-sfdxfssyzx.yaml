@@ -6,6 +6,7 @@ level: 市级示范性高中
 note: 创建于1917年，西城顶尖名校，教育改革实验基地，竞赛与拔尖创新培养强，综合实力一流。
 aliases:
 - '102015'
+- 北师大实验中学
 campuses:
 - slug: main
   name: 本部
@@ -28,9 +29,78 @@ admissions:
   lines:
     '2025':
       score: 481
+- channel: 统招
+  code: '102015'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '80'
+  lines:
+    '2025':
+      score: 481
+      rank: 1356
+      total: 510
+    '2024':
+      score: 642
+      rank: 1277
+      total: 670
+    '2023':
+      score: null
+      rank: null
+      total: 660
+  lines_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+  pred_2026:
+    rank: 1356
+    lo: 1193
+    hi: 1519
+    conf: high
+    method: hist
+    base_year: '2025'
+- channel: 统招
+  code: '102015'
+  major: '02'
+  major_name: 理科实验班
+  campus: benbu
+  plan_total: '40'
+- channel: 统招
+  code: '102015'
+  major: '03'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '84'
+- channel: 统招
+  code: '102015'
+  major: '04'
+  major_name: 中美合作项目班
+  campus: benbu
+  plan_total: '120'
 rollup:
   tags:
   - 顶尖名校
   - 竞赛强
   - 综合均衡
+  features:
+    style: 西城第一梯队，理科与竞赛极强；设数理、科技、人文、综合等特色班型，拔尖创新人才培养体系成熟。
+    tags:
+    - 理科见长
+    - 学科竞赛
+    - 科技创新
+    - 国际方向
+    - 综合均衡
+    source: gaokzx/百度百科/维基百科（北京师范大学附属实验中学）
+  gaokao:
+    note: 民间·非官方：985上线率高，清北达线/录取常年位居西城前列（民间汇总称清北量级约数十人）。具体以学校官方为准。
+    year: 2021-2023
+    source: gaokzx 及家长社区汇总，非学校官方喜报
+  campus_life:
+    class_system: 民间整理·待核：高中本部约13个班（每班约40人）——4个数理特色班 + 3个科技特色班 + 1个人文特色班 + 5个综合(普通)班。
+    schedule: 民间整理·待核：早7:20前到校，下午4:10放学；有社团或课后服务最晚到18:00。
+    management: 民间整理·待核：管理较严格，任何时候出校门都要出门条；但对发型等较人性化（女生可留长发束起即可）。
+    boarding_detail: 民间整理·待核：本部只解决远郊区学生住宿，入校后申请；四人间或六人间，有独立卫生间，配床/衣柜/写字台/椅子，室内空调暖气，楼层设公用浴室（每天开放）。
+    dining: 民间整理·待核：早中晚三餐均可在校解决，早餐6:00-7:20供应；有10元和15元两种套餐，反馈好吃可续碗，饮料牛奶自费。
+    voices: 民间整理·待核：学生反馈饭菜普遍好吃、可续碗；管理上『出门要出门条』但发型等规定较人性化。
+    source: 知乎(就读体验) https://zhuanlan.zhihu.com/p/674627039 ; 住宿政策 https://www.zhongkaobj.cn/zhongkao/zxdt/202503159983.html
+      ; 班型 https://www.gaokzx.com/gk/zhongkao/127183.html
 home_district: 西城

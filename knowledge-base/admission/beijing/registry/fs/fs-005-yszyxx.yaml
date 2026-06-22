@@ -1,0 +1,30 @@
+id: fs-005-yszyxx
+type: 公办普高
+canonical_name: 北京市燕山职业学校
+short_name: 燕山职业学校
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市房山区北京市燕山职业学校
+  lat: 39.763364
+  lon: 115.969526
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '210001'
+  major: '01'
+  major_name: 综合高中班
+  campus: benbu
+  plan_total: '25'
+rollup:
+  features:
+    style: 中等职业学校, 走「职普融通」之路; 综合高中班对接职教高考, 以「3+2」五年一贯制 + 「文化素质+职业技能」考试为高职专科/应用型本科输送人才
+    tags:
+    - 综合均衡
+    source: 北京市燕山职业学校教育质量年度报告(2022) (jw.beijing.gov.cn); 学来帮教育网
+_codes:
+- '210001'

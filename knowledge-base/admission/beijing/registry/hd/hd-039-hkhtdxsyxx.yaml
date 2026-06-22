@@ -1,0 +1,64 @@
+id: hd-039-hkhtdxsyxx
+type: 公办普高
+canonical_name: 北京航空航天大学实验学校
+short_name: 航空航天大学实验学校
+aliases: []
+level: 区级示范性高中
+note: 原北航附中
+campuses:
+- slug: benbu
+  name: 北京市海淀区北京实验学校(东门)
+  lat: 39.926501
+  lon: 116.328319
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '208035'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '92'
+  lines:
+    '2025':
+      score: 468
+      rank: 5282
+      total: 510
+    '2024':
+      score: 621
+      rank: 7460
+      total: 670
+    '2023':
+      score: 633
+      rank: 3953
+      total: 660
+  lines_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+  pred_2026:
+    rank: 5282
+    lo: 4648
+    hi: 5916
+    conf: high
+    method: hist
+    base_year: '2025'
+- channel: 统招
+  code: '208035'
+  major: '02'
+  major_name: 通用航空科技教育实验班
+  campus: benbu
+  plan_total: '30'
+rollup:
+  features:
+    style: 全国航空航天特色校、全国首批STEM领航学校；依托北航资源，以航空航天科技为龙头、航模与机器人为亮点，设「通航实验班」（精英班，大学老师授课，须选物理化学）
+    tags:
+    - 科技创新
+    - 理科见长
+    source: 北京中考信息网 zhongkaobj.cn;北航实验学校官网 bhfz.buaa.edu.cn
+  gaokao:
+    note: 民间·非官方
+    '2024': 北大拟录取1人、650分以上7人、600分以上占比30%，一本率超80%；通航班平均分超特招线约100分（网传）
+    source: https://www.zhongkaobj.cn/cjpm/gaokaochengji/202412216857.html
+_codes:
+- '208035'

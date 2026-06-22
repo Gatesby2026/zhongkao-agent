@@ -28,9 +28,70 @@ admissions:
   lines:
     '2025':
       score: 487
+- channel: 统招
+  code: '102001'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '171'
+  lines:
+    '2025':
+      score: 487
+      rank: 575
+      total: 510
+    '2024':
+      score: 646
+      rank: 759
+      total: 670
+    '2023':
+      score: 643
+      rank: 571
+      total: 660
+  lines_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+  pred_2026:
+    rank: 575
+    lo: 506
+    hi: 644
+    conf: high
+    method: hist
+    base_year: '2025'
+- channel: 统招
+  code: '102001'
+  major: '02'
+  major_name: 道元实验班
+  campus: benbu
+  plan_total: '60'
+- channel: 统招
+  code: '102001'
+  major: '03'
+  major_name: 中美高中课程 (AP课程)项目班
+  campus: benbu
+  plan_total: '100'
 rollup:
   tags:
   - 顶尖名校
   - 文科强
   - 综合均衡
+  features:
+    style: 西城顶尖名校，学术底蕴深厚；道元实验班自主选拔重思维，语文等学科常年领先，竞赛与科技创新突出。
+    tags:
+    - 综合均衡
+    - 学科竞赛
+    - 科技创新
+    - 国际方向
+    source: 百度百科/知乎等家长社区汇总（北京市第四中学）
+  gaokao:
+    note: 民间·非官方：一本/重本上线率长期约95%以上；每年数十人考入清华北大（如近年报道清北录取数十人量级）。具体年份数字以学校官方为准。
+    year: 2021-2023
+    source: 知乎/家长社区汇总，非学校官方喜报
+  campus_life:
+    class_system: 民间整理·待核：高中约13个班（每班40-45人）——4个特殊班（道元特色班/科技特色班/理科实验班/人文特色班）+ 9个普通班。
+    schedule: 民间整理·待核：早7:20前到校（早自习），下午4:10放学，有体育活动则稍晚。
+    management: 民间整理·待核：较严格，中午一般不许外出、中途出校门须班主任签字；空调温控有规定（夏季不低于22℃、冬季不高于26℃）。
+    boarding_detail: 民间整理·待核：提供住宿，男生四人间、女生六人间（另有四/六人间两种说法）；宿舍配空调、独立卫浴、储物空间，另设自习室。
+    dining: 民间整理·待核：刷饭卡（可充值）；早餐种类多（油条/面包/煮鸡蛋/馄饨/粥/烧麦等），午餐套餐，晚餐各式小菜。
+    voices: 民间整理·待核：约97%学生达重点大学录取线，学科奥赛累计获奖牌，多人获『北京青少年科技创新市长奖』，被称『优秀学生的摇篮』。
+    source: 知乎(就读体验) https://www.zhihu.com/question/289112361 ; 知乎(住宿) https://zhuanlan.zhihu.com/p/674627039 ; 班型 https://www.gaokzx.com/gk/zhongkao/127183.html
 home_district: 西城

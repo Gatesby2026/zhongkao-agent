@@ -1,0 +1,49 @@
+id: sjs-010-sjsqzsxx
+type: 公办普高
+canonical_name: 北京市石景山区中杉学校
+short_name: 石景山区中杉学校
+aliases: []
+level: 普通高中
+note: 民办校（约 119800 元/学年）。
+campuses:
+- slug: benbu
+  name: 北京市石景山区中杉学校
+  lat: 39.933674
+  lon: 116.157585
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: true
+admissions:
+- channel: 统招
+  code: '207011'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '120'
+rollup:
+  features:
+    style: 2014 年成立的十二年一贯制全寄宿民办学校；「育林教育」理念；国学诵读+英语口语+书法每日训练、人人参加乐团掌握一门乐器、下午科技/艺术/体育/英语自主选课、每周社会实践。
+    tags:
+    - 寄宿制
+    - 艺术特长
+    - 文科人文
+    source: 中杉学校官网 bjzsis.com、百度百科「北京中杉学校」、北京幼升小网 ysxiao.cn
+  campus_life:
+    boarding_detail:
+      value: 高品质十二年一贯制全寄宿民办学校; 宿舍四人一间, 每天可洗澡, 配新风系统与空调。
+      source: https://baike.baidu.com/item/北京市石景山区中杉学校/24296405; https://www.xscxx.com/chuzhong/sjs/202410252832.html
+      confidence: folk
+    dining:
+      value: 每日三餐三点, 每餐自助餐保证 6 菜 2 汤 2 主食; 每周一次西餐及西餐礼仪体验。中学部设自助餐厅。
+      source: https://baike.baidu.com/item/北京市石景山区中杉学校/24296405; https://www.xscxx.com/chuzhong/sjs/202410252832.html
+      confidence: folk
+    management:
+      value: 2014 年经石景山区教委批准成立的民办校, 实行董事会领导下的校长负责制。
+      source: https://baike.baidu.com/item/北京市石景山区中杉学校/24296405
+      confidence: folk
+    activities:
+      value: 校内设科技制作工作室、艺术设计工坊、创新教室、多媒体中心、青春剧场、十余间学科实验室等。
+      source: https://baike.baidu.com/item/北京市石景山区中杉学校/24296405
+      confidence: folk
+_codes:
+- '207011'

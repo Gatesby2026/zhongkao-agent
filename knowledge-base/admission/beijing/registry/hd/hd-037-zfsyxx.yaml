@@ -1,0 +1,47 @@
+id: hd-037-zfsyxx
+type: 公办普高
+canonical_name: 北京中法实验学校
+short_name: 中法实验学校
+aliases: []
+level: 区级
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市海淀区北京中法实验学校
+  lat: 40.038713
+  lon: 116.208851
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '208033'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '117'
+  lines:
+    '2025':
+      score: 423
+      rank: 12989
+      total: 510
+  lines_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+  pred_2026:
+    rank: 12989
+    lo: 11430
+    hi: 14548
+    conf: high
+    method: hist
+    base_year: '2025'
+rollup:
+  features:
+    style: 海淀区中法合作十二年一贯制公办校（前身温泉第二中学），以法语为第一外语的法语+英语双外语特色校，部分学科法语授课、引中法融合课程；倡「博雅教育」，2019年法语教学获法国教育认证，海淀区艺术教育示范校
+    tags:
+    - 外语特色
+    - 国际方向
+    - 课程改革
+    source: 学校官网 zfsyxx.bjhdedu.cn;百度百科;北京小升初网 xschu.com/xiaoshengchu/24/31184.html
+_codes:
+- '208033'

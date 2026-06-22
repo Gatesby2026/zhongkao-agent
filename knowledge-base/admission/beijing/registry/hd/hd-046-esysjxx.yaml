@@ -1,0 +1,42 @@
+id: hd-046-esysjxx
+type: 公办普高
+canonical_name: 北京市二十一世纪学校
+short_name: 二十一世纪学校
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市海淀区北京市二十一世纪学校
+  lat: 39.930209
+  lon: 116.28371
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '208042'
+  major: '01'
+  major_name: 中美高中课程合作项目班
+  campus: benbu
+  plan_total: '82'
+- channel: 统招
+  code: '208042'
+  major: '02'
+  major_name: 中美高中课程合作项目班
+  campus: benbu
+  plan_total: 18 (住)
+rollup:
+  features:
+    style: 创办于1993年，国际化特色的全寄宿制新型学校；「中国灵魂、国际视野与跨文化交流能力」培养目标，携手美国费尔蒙特学校开设中美高中课程合作项目，十二年一贯制、高中国际课程本土化（注：百科词条名为「二十一世纪国际学校」，同一校）
+    tags:
+    - 国际方向
+    - 寄宿制
+    - 外语特色
+    source: 二十一世纪学校官网 bj21cs.com;百度百科
+  gaokao:
+    note: 民间·非官方（国际课程出口，非高考统招口径）
+    '2024': AP国际课程出口：获世界/美国排名前50、英国前10名校录取占比约93.5%（网传）
+    source: https://baike.baidu.com/item/北京市二十一世纪国际学校/7428475
+_codes:
+- '208042'

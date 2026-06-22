@@ -1,0 +1,59 @@
+id: hd-015-yytzx
+type: 公办普高
+canonical_name: 北京市玉渊潭中学
+short_name: 玉渊潭中学
+aliases: []
+level: 区级
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市海淀区北京市玉渊潭中学
+  lat: 39.904292
+  lon: 116.322606
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '208006'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '102'
+  lines:
+    '2025':
+      score: 454
+      rank: 8445
+      total: 510
+    '2024':
+      score: 603
+      rank: 10867
+      total: 670
+  lines_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+  pred_2026:
+    rank: 8445
+    lo: 7432
+    hi: 9458
+    conf: high
+    method: hist
+    base_year: '2025'
+rollup:
+  features:
+    style: 「敦品为翠玉，砺学成渊潭」办学理念，全国硬笔书法教学实验基地，书法+国学+篆刻特色；海淀区艺术教育示范校（8个艺术社团），重体育与跨学科课程
+    tags:
+    - 艺术特长
+    - 体育特长
+    - 课程改革
+    source: 百度百科;北京中考信息网 zhongkaobj.cn
+  campus_life:
+    class_system: 民间整理·待核：通过入学测试分班，设5个A层班（每班约40人）+ 普通班；A班管理更严、要求更高、作业难度有区分。
+    schedule: 民间整理·待核：正常速度学生约21:00完成作业，期中后作业量增加、效率慢者可能到22:00后。
+    dining: 民间整理·待核：食堂两层，提供早餐午餐（高三晚自习有晚餐），菜品丰富、价格适中。
+    activities: 民间整理·待核：8个艺术社团+15个科技社团+7个体育社团，办科技节/艺术节/合唱节/体育节/越野赛等；特色『学生公司』课程受追捧。
+    voices: 民间整理·待核：学生对『学生公司』评价积极（产品贴近生活、团队协作）（北京中考信息网/知乎）。
+    source: 北京中考信息网(校情) https://www.zhongkaobj.cn/zhongkao/zhongxue/202412246986.html ; 玉渊潭中学官网 https://yytzx.bjhdedu.cn/
+      ; 知乎(办学情况) https://zhuanlan.zhihu.com/p/370723301
+_codes:
+- '208006'

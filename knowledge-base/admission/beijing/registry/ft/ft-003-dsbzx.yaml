@@ -1,0 +1,74 @@
+id: ft-003-dsbzx
+type: 公办普高
+canonical_name: 北京市第十八中学
+short_name: 第十八中学
+aliases: []
+level: 优质高中（示范/特色）
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市丰台区北京市第十八中学(方庄校区)
+  lat: 39.862823
+  lon: 116.436802
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: true
+admissions:
+- channel: 统招
+  code: '106003'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '30'
+  lines:
+    '2025':
+      score: 442
+      rank: 1370
+      total: 510
+    '2024':
+      score: 604
+      rank: 1800
+      total: 670
+  lines_meta:
+    source: '2025: 北京高考在线(https://www.gaokzx.com/gk/zhongkao/144859.html)[源间标注有分歧,zhongkaobj同位列447/1123疑错配]; 2024: 北京高考在线(https://www.gaokzx.com/gk/zhongkao/126166.html)
+      + 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/202410212412.html)'
+    confidence: low
+  pred_2026:
+    rank: 1370
+    lo: 1206
+    hi: 1534
+    conf: low
+    method: hist
+    base_year: '2025'
+rollup:
+  features:
+    style: 「始建于1933年，12年一贯制市级示范高中，方庄教育集群龙头校、大型教育集团（多校区）。「三化三育」特色：集团集群化、数字化、国际化 + 科技/体育/艺术育人；数字化校园、国际友好校交流广。」
+    tags:
+    - 综合均衡
+    - 国际方向
+    - 科技创新
+    - 课程改革
+    source: 「学校官网校史 http://www.bj18.net/cms/bjsdsbzx/xxls.jhtml ；北京小升初信息网十八中集团全攻略 https://www.xscxx.com/xiaoshengchu/ftqxsc/2025101712501.html
+      ；百度百科 https://baike.baidu.com/item/北京市第十八中学/8938745」
+  campus_life:
+    school_code: '106003'
+    schedule:
+      value: 上午 7:30 开始早读；上午 4 节课含课间操，下午 4 节课含自习；下午约 17:05 放学；高中晚自习 20:30 或 21:30 放学。
+      source: 知乎「在北京十八中就读是怎样一番体验」zhihu.com/question/40274139（民间整理·待核，时间可能过时）
+    management:
+      value: 可向学校信箱提意见，学生加校长微信后校长会通过并交流；校风气氛宽松，师生关系良好。
+      source: 知乎 zhihu.com/question/40274139（民间整理·待核）
+    boarding_detail:
+      value: 女生宿舍 4-6 人间、上床下桌；男生 6-8 人间、上下铺；住宿费不贵，有大浴室和水房。
+      source: 知乎 zhihu.com/question/40274139（民间整理·待核，条件可能已变）
+    dining:
+      value: 每周一更新本周午餐菜单，有三档可选；晚餐可自由选购，有盖饭、面条、酸菜鱼、麻辣香锅等。
+      source: 知乎 zhihu.com/question/40274139（民间整理·待核）
+    activities:
+      value: 校内有田径场（标准 400 米跑道）、健身房、乒乓球馆、羽毛球馆、篮球馆、击剑馆、天文馆、3D 数字化实验室等设施。
+      source: 知乎 zhihu.com/question/40274139（民间整理·待核）
+    voices:
+      value: 学生反馈：校园环境漂亮、气氛宽松、师生关系良好、老师水平普遍较高。
+      source: 知乎 zhihu.com/question/40274139（民间整理·待核）
+_codes:
+- '106003'

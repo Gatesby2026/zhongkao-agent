@@ -1,0 +1,62 @@
+id: ft-009-sdjjmydxfszx
+type: 公办普高
+canonical_name: 首都经济贸易大学附属中学
+short_name: 首都经济贸易大学附属中学
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市丰台区首都经济贸易大学附属中学
+  lat: 39.843957
+  lon: 116.294863
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '206005'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '100'
+  lines:
+    '2025':
+      score: 405
+      rank: 2901
+      total: 510
+    '2024':
+      score: 563
+      rank: 3499
+      total: 670
+  lines_meta:
+    source: '2025: 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html) + 北京高考在线(https://www.gaokzx.com/gk/zhongkao/144859.html);
+      2024: 北京高考在线(https://www.gaokzx.com/gk/zhongkao/126166.html) + 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/202410212412.html)
+      [源用''首经贸附中'']'
+    confidence: medium
+  pred_2026:
+    rank: 2901
+    lo: 2553
+    hi: 3249
+    conf: medium
+    method: hist
+    base_year: '2025'
+rollup:
+  features:
+    style: 「北京市第一所财经类特色中学。依托首经贸大学资源，打造「基础-拓展-探究」三元财经课程体系，每周财经课、首经贸师资授课，《身边的经济学》等30余门校本课程，暑期地方经济考察。」
+    tags:
+    - 文科人文
+    - 课程改革
+    - 综合均衡
+    source: 「优途升学网《首都第一所财经类特色中学》 https://news.ytowin.com/2018/13/9/4aaf425801233c.html ；学校官网 https://sjmfz.ftedu.cn/ ；百度百科
+      https://baike.baidu.com/item/首都经济贸易大学附属中学/16026123」
+  campus_life:
+    school_code: '206005'
+    class_system:
+      value: 格局为「大初中小高中」，高中实现小班化教学。
+      source: 学区房划片 xqfhp.com/aid/5822（民间整理·待核）
+    dining:
+      value: 有学生（2021 年知乎）反馈食堂较差、收费贵（约 18 元/餐）、强制就餐、规模偏小需轮班排队。
+      source: 知乎 zhihu.com/question/477298670（民间整理·待核，为 2021 年主观评价，可能已变）
+_codes:
+- '206005'

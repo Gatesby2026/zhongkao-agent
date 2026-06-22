@@ -1,0 +1,47 @@
+id: yq-001-yqqdyzx
+type: 公办普高
+canonical_name: 北京市延庆区第一中学
+short_name: 延庆区第一中学
+aliases: []
+level: 优质高中（示范/特色）
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市延庆区北京市延庆区第一中学
+  lat: 40.467644
+  lon: 115.976076
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '129001'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '20'
+  lines:
+    '2024':
+      score: 568
+      rank: 633
+      total: 670
+  lines_meta:
+    source: 北京中考信息网-2024年北京延庆区高中录取分数线&区排名汇总; 北京中考信息网-2025考生参考!2024年延庆区和经开区中考录取分数线; 北京小升初网-北京各区高中中考录取分数线汇总(2025参考)
+    confidence: low
+  pred_2026:
+    rank: 633
+    lo: 557
+    hi: 709
+    conf: low
+    method: hist
+    base_year: '2024'
+rollup:
+  features:
+    style: 延庆区龙头校,1956 年建校,2004 年获评北京市示范性普通高中。立足全国生态示范县区域特色, 开展生态环保、科技、艺术教育;校训"让自觉成为生命的品质",重视自觉教育。 延庆区首批北京市普通高中多样化特色发展实验学校,持续承办"1+3"培养实验(面向数理科学有兴趣特长的学生)。
+    tags:
+    - 综合均衡
+    - 科技创新
+    - 课程改革
+    source: 百度百科"北京市延庆区第一中学";中国教育在线走进中学; 北京本地宝/北京幼升小网 2024-2025 延庆一中"1+3"培养实验公告; 2020 北京市中小学科技教育示范学校名单(搜索快照,2026-06-22 采)
+_codes:
+- '129001'

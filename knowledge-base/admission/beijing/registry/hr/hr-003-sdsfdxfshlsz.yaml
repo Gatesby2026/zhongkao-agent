@@ -1,0 +1,35 @@
+id: hr-003-sdsfdxfshlsz
+type: 公办普高
+canonical_name: 首都师范大学附属红螺寺中学
+short_name: 首都师范大学附属红螺寺中学
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市怀柔区首都师范大学附属红螺寺中学
+  lat: 40.336382
+  lon: 116.640879
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '216002'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '135'
+rollup:
+  features:
+    style: 怀柔第一所公办寄宿制中学（建于 1949 年），首师大合作共同体附属校；以艺术教育、民族教育为特色；2020 年被教育部认定为全国青少年校园篮球特色学校。
+    tags:
+    - 艺术特长
+    - 体育特长
+    - 寄宿制
+    source:
+    - 怀柔区政府网站 https://www.bjhr.gov.cn/zjhr/bxsh/jykj/jyzx/201910/t20191010_414340.html
+    - 百度百科 https://baike.baidu.com/item/首都师范大学附属红螺寺中学/24372846
+    - 维基百科 https://zh.wikipedia.org/zh-hans/红螺寺中学
+_codes:
+- '216002'

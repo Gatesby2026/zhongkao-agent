@@ -1,0 +1,47 @@
+id: dx-006-jzdxfszxbjjz
+type: 公办普高
+canonical_name: 北京建筑大学附属中学北京建筑大学附属中学北校区
+short_name: 建筑大学附属中学北京建筑大学附属中学北校区
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市大兴区北京建筑大学附属中学
+  lat: 39.724185
+  lon: 116.333683
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '215004'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '180'
+rollup:
+  features:
+    style: 始建于 1985 年（前身大兴五中），2017 年与北京建筑大学合作更为现名。以美术、篮球、足球见长，获评全国青少年校园篮球特色学校（2017）、国防教育特色学校（2020）；与高校合作设立『北建大奖学金』、共享大学资源。校训『崇德
+      尚学 明志 笃行』。
+    tags:
+    - 体育特长
+    - 艺术特长
+    source: 百度百科『北京建筑大学附属中学』、xqfhp 校情页
+    name_note: 正名表中校名重复疑为源数据 OCR 冗余，特色信息对应『北京建筑大学附属中学（北校区）』实体。
+  campus_life:
+    _note: 实为『北京建筑大学附属中学』(源 codes 校名为重复字符串 artifact);以下信息按『北京建筑大学附属中学』采集
+    class_system:
+      value: 涵盖初中、高中两个学段;美术教育采用『文化+专业』课程体系,与北京印刷学院设计艺术学院共建
+      source: https://baike.baidu.com/item/北京建筑大学附属中学/50064310（百科403,经搜索摘要确认·民间整理·待核）
+    dining:
+      value: 校内设食堂1个
+      source: https://baike.baidu.com/item/北京建筑大学附属中学/50064310（百科·民间整理·待核）
+    activities:
+      value: 体育以篮球为特色(2017全国篮球特色示范学校);2020入选国防教育特色学校;设书法、管乐、舞蹈、合唱、科技等特色专用教室12个;与北建大资源融合,有『名师大讲堂』及共享高校实验室
+      source: https://baike.baidu.com/item/北京建筑大学附属中学/50064310（百科·民间整理·待核）
+    voices:
+      value: 北京市科技教育示范校、艺术教育特色校(民间整理性描述)
+      source: 搜索聚合·民间整理·待核
+_codes:
+- '215004'

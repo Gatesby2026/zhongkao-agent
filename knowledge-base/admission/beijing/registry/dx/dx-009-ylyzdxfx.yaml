@@ -1,0 +1,71 @@
+id: dx-009-ylyzdxfx
+type: 公办普高
+canonical_name: 北京一零一中大兴分校
+short_name: 一零一中大兴分校
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市大兴区北京一零一中大兴分校
+  lat: 39.516674
+  lon: 116.315228
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: true
+admissions:
+- channel: 统招
+  code: '215009'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '40'
+  lines:
+    '2025':
+      score: 463
+      rank: 809
+      total: 510
+    '2024':
+      score: 607
+      rank: 987
+      total: 670
+  lines_meta:
+    source: 北京高考在线 gaokzx — 2025北京大兴区中考录取分数线及区排名(实际线463/809;另一文档预估460/938口径不同,故单源 low); 北京中考信息网 zhongkaobj — 2024大兴区高中录取分数线&区排名汇总;
+      北京小升初网 xschu — 2024年大兴区各高中中考录取分数线
+    confidence: low
+  pred_2026:
+    rank: 809
+    lo: 712
+    hi: 906
+    conf: low
+    method: hist
+    base_year: '2025'
+rollup:
+  features:
+    style: 北京一零一中教育集团成员校，秉承『守正创新、立德树人』，依托集团优质资源打造现代化、科技化、国际化校园；建有六大发展中心推进资源一体化共享；注重科技、艺术、体育多元课程与社团，规划小初高十二年贯通培养。
+    tags:
+    - 综合均衡
+    - 科技创新
+    - 国际方向
+    source: 百度百科『北京一零一中大兴分校』、bjeea.cn 集团化办学报道
+  campus_life:
+    class_system:
+      value: 2021小升初招40名住宿生,2022起招高中生(初一现有8个班)
+      source: https://www.xschu.com/xiaoshengchu/17/42196.html ; https://www.xscxx.com/chuzhong/qitaqu/202412186492.html（小升初媒体·民间整理·待核）
+    management:
+      value: 与本部『六个一体化』管理模式(管理机制/资源配置/课程教学/教师培训/质量评价/学生培养一体化);宿舍『封团式精细化管理』
+      source: https://www.xscxx.com/chuzhong/qitaqu/202412186492.html（民间整理·待核）
+    boarding_detail:
+      value: 提供住宿,宿舍楼约2200㎡、可容纳400人;4人一间,配衣柜、鞋柜、空调、太阳能热水,床下设书桌;配晾衣间、卫生间、洗漱间、浴室
+      source: https://www.xscxx.com/chuzhong/qitaqu/202412186492.html（民间整理·待核）
+    dining:
+      value: 食堂近2000㎡,可同时容纳1000人就餐
+      source: https://www.xscxx.com/chuzhong/qitaqu/202412186492.html（民间整理·待核）
+    activities:
+      value: 20余个体育/科技/艺术社团(垒球、棒球、排球、足球、篮球、踢毽、跳绳、冰雪、田径、象棋、航模、书法、陶艺、剪纸、民族舞、街舞、合唱等);生态校园,饲养小鹿、羊驼、孔雀、丝羽乌骨鸡、珍珠鸡等
+      source: https://www.xscxx.com/chuzhong/qitaqu/202412186492.html（民间整理·待核）
+    voices:
+      value: 作业适中,需1-2小时完成;设月考、期中、期末考试
+      source: https://www.xscxx.com/chuzhong/qitaqu/202412186492.html（民间整理·待核）
+_codes:
+- '215009'

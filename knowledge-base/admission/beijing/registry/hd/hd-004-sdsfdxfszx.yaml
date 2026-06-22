@@ -1,0 +1,86 @@
+id: hd-004-sdsfdxfszx
+type: 公办普高
+canonical_name: 首都师范大学附属中学
+short_name: 首都师范大学附属中学
+aliases:
+- 首师大附中
+level: 市级示范性高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市海淀区首都师范大学附属中学
+  lat: 39.930089
+  lon: 116.30039
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: true
+admissions:
+- channel: 统招
+  code: '108004'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '151'
+  lines:
+    '2025':
+      score: 487
+      rank: 1107
+      total: 510
+    '2024':
+      score: 644
+      rank: 2067
+      total: 670
+    '2023':
+      score: 640
+      rank: 1896
+      total: 660
+  lines_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+  pred_2026:
+    rank: 1107
+    lo: 974
+    hi: 1240
+    conf: high
+    method: hist
+    base_year: '2025'
+- channel: 统招
+  code: '108004'
+  major: '02'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '58'
+- channel: 统招
+  code: '108004'
+  major: '03'
+  major_name: 创新教育实验班
+  campus: benbu
+  plan_total: '30'
+- channel: 统招
+  code: '108004'
+  major: '04'
+  major_name: 中美高中实验项目班
+  campus: benbu
+  plan_total: '100'
+rollup:
+  features:
+    style: 「基础通修+兴趣选修+专业精修+自主研修」四修课程体系；海淀唯一开设创新教育实验班，另设理工实验班、人文实验班，创客与艺体特色
+    tags:
+    - 科技创新
+    - 课程改革
+    - 综合均衡
+    source: 百度百科;教育部官网 moe.gov.cn
+  gaokao:
+    note: 民间·非官方
+    '2015': 650分以上120人；600分以上300人，占统招人数97.43%（较早数据，近年未查到可靠值）
+    source: https://baike.baidu.com/item/首都师范大学附属中学/455207
+  campus_life:
+    class_system: 民间整理·待核：分层走班，设创新/理工/人文/国际四个学部、各分AB两层；实验班与普通班半年到一年有流动。
+    schedule: 民间整理·待核：7:30早自习（周一升旗7:20到校），上午5节、午休1小时、下午3节，晚自习16:00-17:30可答疑，17:30放学。
+    boarding_detail: 民间整理·待核：以走读为主，入学后可按规定申请住宿，约6人一间上下铺，有晚自习与专门教师管理。
+    dining: 民间整理·待核：食堂干净整洁、菜品丰富，除盖饭外有麻辣烫/拉面/炒饭/肉夹馍及汉堡/披萨等。
+    activities: 民间整理·待核：社团百余个（数学/信息/乐团/科技/农耕/创客/体育/生物/物理/辩论等），多数零基础可入。
+    voices: 民间整理·待核：师生/同学关系融洽，任课老师（含非班主任）都可答疑，备考期老师也会到校答疑（知乎/搜狐）。
+    source: 首师大附中官网 https://ssfz.bjhdedu.cn/ ; 知乎(就读体验) https://www.zhihu.com/question/26965225 ; 搜狐(就读体验) https://www.sohu.com/a/442455929_372471
+_codes:
+- '108004'

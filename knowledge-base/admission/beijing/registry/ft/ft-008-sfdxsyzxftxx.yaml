@@ -1,0 +1,54 @@
+id: ft-008-sfdxsyzxftxx
+type: 公办普高
+canonical_name: 北京师范大学实验中学丰台学校
+short_name: 师范大学实验中学丰台学校
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市丰台区北京师范大学实验中学丰台学校
+  lat: 39.867645
+  lon: 116.370639
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '206004'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '26'
+  lines:
+    '2025':
+      score: 433
+      rank: 1793
+      total: 510
+    '2024':
+      score: 602
+      rank: 1895
+      total: 670
+  lines_meta:
+    source: '2025: 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html) + 北京高考在线(https://www.gaokzx.com/gk/zhongkao/144859.html);
+      2024: 北京高考在线(https://www.gaokzx.com/gk/zhongkao/126166.html) + 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/202410212412.html)'
+    confidence: medium
+  pred_2026:
+    rank: 1793
+    lo: 1578
+    hi: 2008
+    conf: medium
+    method: hist
+    base_year: '2025'
+rollup:
+  features:
+    style: 「依托北师大实验中学资源，「实·丰」课程体系。设拔尖创新人才培养课程（理科创新潜质学生，本部教师授课，数理信化竞赛培训）+ 体艺贯通（篮球、舞蹈）。」
+    tags:
+    - 理科见长
+    - 学科竞赛
+    - 体育特长
+    - 艺术特长
+    source: 「学校官网简介 http://bsdsf.zone.ftedu.cn/cms/bsdsfz/xxjj.jhtml ；知乎学校专栏 https://zhuanlan.zhihu.com/p/543254673 ；百度百科
+      https://baike.baidu.com/item/北京师范大学实验中学丰台学校/62927783」
+_codes:
+- '206004'

@@ -1,0 +1,55 @@
+id: cp-020-cpqjlxx
+type: 公办普高
+canonical_name: 北京市昌平区佳莲学校
+short_name: 昌平区佳莲学校
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市昌平区北京市昌平区佳莲学校
+  lat: 40.235149
+  lon: 116.130756
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: true
+admissions:
+- channel: 统招
+  code: '214029'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '42'
+- channel: 统招
+  code: '214029'
+  major: '02'
+  major_name: 普通班
+  campus: benbu
+  plan_total: 28 (住)
+rollup:
+  features:
+    style: 2015 年为承接北京四中国际课程项目外迁设立的民办完全中学（北京四中国际课程佳莲校区）。开设北京四中 AP 课程、剑桥 A-Level/IGCSE 及人工智能校本课程，小班教学（≤20 人）、1:3 师生比、双语教学、OMO
+      学科教室。
+    tags:
+    - 国际方向
+    - 外语特色
+    - 课程改革
+    source: 百度百科 / 51国际教育 / 远播国际教育
+  campus_life:
+    class_system:
+      value: 与北京四中合作开设国际课程（初中、高中两阶段）；与中国教育科学研究院合办人工智能特色「高一创智班」；小班教学（15–20 人以内），师生比约 1:3
+      source: https://bjjlsch.com/lists/1.html
+    management:
+      value: 全体师生住宿封闭式管理；每班配专职班主任和生活老师
+      source: http://www.yuloo.com/slschool/bjjlsch/
+    boarding_detail:
+      value: 设寄宿项目，住宿费约 38,000 元/年（民间整理·待核）
+      source: https://guoji.114study.com/school/szjl/
+    dining:
+      value: 自助餐，餐费约 60 元/天（民间整理·待核）
+      source: https://guoji.114study.com/school/szjl/
+    voices:
+      value: 知乎有家长提出顾虑——佳莲校区毕业不使用四中毕业证，担心影响美本申请时与四中的关联度（民间整理·待核）
+      source: https://www.zhihu.com/question/286039079
+_codes:
+- '214029'

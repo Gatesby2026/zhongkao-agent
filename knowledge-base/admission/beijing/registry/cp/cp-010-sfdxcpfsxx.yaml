@@ -1,0 +1,58 @@
+id: cp-010-sfdxcpfsxx
+type: 公办普高
+canonical_name: 北京师范大学昌平附属学校
+short_name: 师范大学昌平附属学校
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市昌平区北京师范大学昌平附属学校
+  lat: 40.169032
+  lon: 116.267699
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: true
+admissions:
+- channel: 统招
+  code: '214013'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '40'
+  lines:
+    '2024':
+      score: 604
+      rank: 1491
+      total: 670
+  lines_meta:
+    source: 自主选拔在线 2025 中考参考(含 2024 昌平录取线区排名)
+    confidence: low
+  pred_2026:
+    rank: 1491
+    lo: 1312
+    hi: 1670
+    conf: low
+    method: hist
+    base_year: '2024'
+rollup:
+  features:
+    style: 北师大与昌平区联办、北师大二附中承办的十二年制区属公立校（2014 年开学）。传承北师大二附中「人文 自主」文化，「三兼优一发展」培养目标；以校园足球为突破口（2018 年教育部全国青少年校园足球特色学校），师资 85%
+      以上具硕士学位。
+    tags:
+    - 体育特长
+    - 文科人文
+    - 课程改革
+    source: 百度百科 / 北京师范大学新闻网 / 新华网
+  campus_life:
+    class_system:
+      value: 高中「教学小班制，学生指导导师制」，建设分层、分类课程及多样态选修课程
+      source: https://www.bsdcpfx.cn/html/1/news/20230710/n2196.html
+    boarding_detail:
+      value: 高中招生为「非住宿」（昌平，非住宿，招生 90 人）
+      source: https://www.bsdcpfx.cn/html/1/news/20230710/n2196.html
+    management:
+      value: 与北京师范大学第二附属中学实行一体化管理；基于智慧校园云平台及电子学生证实现校园安全、智慧家校、智慧校务、智慧教学和智慧生活五大场景
+      source: https://www.bsdcpfx.cn/html/1/news/20230710/n2196.html
+_codes:
+- '214013'

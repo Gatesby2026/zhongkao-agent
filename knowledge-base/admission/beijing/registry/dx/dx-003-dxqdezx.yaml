@@ -1,0 +1,65 @@
+id: dx-003-dxqdezx
+type: 公办普高
+canonical_name: 北京市大兴区第二中学
+short_name: 大兴区第二中学
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市大兴区北京市大兴区第二中学
+  lat: 39.75032
+  lon: 116.342626
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: true
+admissions:
+- channel: 统招
+  code: '215001'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '32'
+  lines:
+    '2025':
+      score: 448
+      rank: 1576
+      total: 510
+    '2024':
+      score: 582
+      rank: null
+      total: 670
+  lines_meta:
+    source: 北京高考在线 gaokzx — 2025年北京各区高中校预估分数及排名(预估口径,单源 low); 育路私立学校招生网 yuloo — 2024年北京大兴区中考录取分数线一览(单源,经检索快照转述;区排名缺失)
+    confidence: low
+  pred_2026:
+    rank: 1576
+    lo: 1387
+    hi: 1765
+    conf: low
+    method: hist
+    base_year: '2025'
+rollup:
+  features:
+    style: 1972 年建校（原黄村二中），现为北师大附属实验中学教育集团成员校。北京市田径传统校（曾连续多年获大兴高中田径团体总分第一）、奥林匹克教育示范校；大兴区唯一『北京青少年科技后备人才早期培养计划基地学校』，建有多间科技教室开设机器人、模型、天文等科技校本课程；英语教研组为校内特色教研组。
+    tags:
+    - 体育特长
+    - 科技创新
+    - 外语特色
+    source: 百度百科『北京市大兴区第二中学』(item 63110522)
+  campus_life:
+    _note: 1972建校,原名黄村二中,2006-2022曾名『北师大大兴附中』,2022.9更名回大兴二中;设施信息部分来自北师大附中时期百科,同一校区但可能不完全反映现状
+    class_system:
+      value: 招体育特长生、科技特长生(2025招生简章),设特色培养方向;普通班/实验班具体设置未查到明确来源
+      source: https://www.gaokzx.com/gk/zhongkao/139911.html ; https://www.gaokzx.com/gk/zhongkao/139912.html
+    boarding_detail:
+      value: 校内有两栋宿舍楼;(北师大附中时期数据)全校54班2700人、住宿生约1600人。几人间未查到
+      source: https://zhongxue.cmypsc.com/detail-2397.html（聚合站·民间整理·待核）
+    dining:
+      value: 校内有一栋食堂兼礼堂楼
+      source: https://zhongxue.cmypsc.com/detail-2397.html（聚合站·民间整理·待核）
+    activities:
+      value: 以『金鹏科技团』为龙头,两个维度四大类60多门校本课程体系;设校团委志愿服务队
+      source: https://zhongxue.cmypsc.com/detail-2397.html ; https://www.bv2008.cn/app/org/view.php?id=szazvwgdvmY9%3D（民间整理·待核）
+_codes:
+- '215001'

@@ -1,0 +1,43 @@
+id: dx-004-sdsfdxdxfszx
+type: 公办普高
+canonical_name: 首都师范大学大兴附属中学
+short_name: 首都师范大学大兴附属中学
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市大兴区首都师范大学大兴附属中学
+  lat: 39.719641
+  lon: 116.356545
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: true
+admissions:
+- channel: 统招
+  code: '215002'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '270'
+rollup:
+  features:
+    style: 2008 年成立（前身兴达中学，2004 获评『大兴区中学示范校』）。开设『基础+拓展+实践』三级课程，含科技创新、艺术体育等特色选修；配备语音室、电子阅览室、天文台、天象厅、美术教室、科学实验室等专用教室。
+    tags:
+    - 科技创新
+    - 艺术特长
+    - 课程改革
+    source: 百度百科『首都师范大学大兴附属中学』、xqfhp 校情页
+  campus_life:
+    _note: 2008.3.27成立,前身兴达中学/原黄村三中,占地102亩。与『首师大附中大兴南/北校区』为不同学校;搜索中『北校区食堂2000㎡/宿舍400人』等数据属北校区,已剔除未采用
+    boarding_detail:
+      value: 校园设生活住宿区,含两个学生公寓,提供住宿。具体几人间/宿舍条件未查到
+      source: https://baike.baidu.com/item/首都师范大学大兴附属中学/2508873（百科·民间整理·待核）
+    dining:
+      value: 生活住宿区含两个学生餐厅
+      source: https://baike.baidu.com/item/首都师范大学大兴附属中学/2508873（百科·民间整理·待核）
+    activities:
+      value: 教学活动区含科技楼、农耕文化园;体育区含400米标准运动场、篮球场、排球场、乒乓球场等。具体社团清单未查到确属本校来源,未列
+      source: https://baike.baidu.com/item/首都师范大学大兴附属中学/2508873（百科·民间整理·待核）
+_codes:
+- '215002'

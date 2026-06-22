@@ -1,0 +1,65 @@
+id: sy-006-dszxsyfx
+type: 公办普高
+canonical_name: 北京市第四中学顺义分校
+short_name: 第四中学顺义分校
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市顺义区北京市第四中学顺义分校
+  lat: 40.115619
+  lon: 116.546053
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: true
+admissions:
+- channel: 统招
+  code: '213003'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '126'
+  lines:
+    '2025':
+      score: 427
+      rank: 1926
+      total: 510
+    '2024':
+      score: 571
+      rank: 2281
+      total: 670
+  lines_meta:
+    source: 2025北京顺义区中考录取分数线及区排名_北京高考在线(gaokzx); 2025北京中考昌平顺义等多区高中统招录取分数线及区排名汇总-北京中考信息网(zhongkaobj); 2025年北京中考统招录取结果及录取分数线出炉(Sohu,
+      仅佐证分数); 顺义2024高中录取分数线一览-北京小升初信息网(xscxx)
+    confidence: low
+  pred_2026:
+    rank: 1926
+    lo: 1695
+    hi: 2157
+    conf: low
+    method: hist
+    base_year: '2025'
+rollup:
+  features:
+    style: 北京四中输出管理与品牌。特色方向「和润育人」,北京市教委「高中校特色建设」项目样本校;开设国家/地方/校本三级课程、数十门校本课(话剧《茶馆》、扎染服装设计等);「1+3」培养方向「数理应用创新」,培养「科学素养突出、人文底蕴深厚」的人才。
+    tags:
+    - 课程改革
+    - 理科见长
+    - 综合均衡
+    source: 百度百科/本地宝(招生简章)、人民网报道、zgkao(2022 高中招生简章)
+  campus_life:
+    boarding_detail:
+      value: 公办完全中学(顺义后沙峪镇), 北京市优质高中校; 寄宿生宿舍每间配独立卫生间、淋浴间、24小时热水、独立空调, 宿舍面积约26㎡。
+      source: 北京小升初网 寄宿生招生简章 xschu.com; 九年级 学校简介
+    management:
+      value: 寄宿学生可在图书馆、阅览室或教室上晚自习, 有教师答疑辅导。
+      source: 北京小升初网 寄宿生招生简章
+    activities:
+      value: 提供科技、人文、艺术、体育等选修课程; 成绩优秀学生高中阶段可到北京四中本部游学3年, 并可参加北京四中部分课程或活动。
+      source: 北京四中顺义分校简介/招生简章
+    voices:
+      value: 办学理念『尊重差异 和谐发展』, 培养目标『让每一个学生成长为最好的自己』。【民间整理·待核】
+      source: 北京四中顺义分校简介(校方表述)
+_codes:
+- '213003'

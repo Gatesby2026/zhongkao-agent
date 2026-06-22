@@ -6,6 +6,7 @@ level: 市级示范性高中
 note: 西城名校，文科实验班传统深厚，设项目式学习、文科、理科多类实验班，文科见长、综合均衡。
 aliases:
 - '102014'
+- 北师大二附中
 campuses:
 - slug: main
   name: 本部
@@ -28,9 +29,79 @@ admissions:
   lines:
     '2025':
       score: 478
+- channel: 统招
+  code: '102014'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '100'
+  lines:
+    '2025':
+      score: 478
+      rank: 1802
+      total: 510
+    '2024':
+      score: 637
+      rank: 1974
+      total: 670
+    '2023':
+      score: null
+      rank: null
+      total: 660
+  lines_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+  pred_2026:
+    rank: 1802
+    lo: 1586
+    hi: 2018
+    conf: high
+    method: hist
+    base_year: '2025'
+- channel: 统招
+  code: '102014'
+  major: '02'
+  major_name: 项目式学习实验班
+  campus: benbu
+  plan_total: '26'
+- channel: 统招
+  code: '102014'
+  major: '03'
+  major_name: 文科实验班
+  campus: benbu
+  plan_total: '26'
+- channel: 统招
+  code: '102014'
+  major: '04'
+  major_name: 中美高中课程项目班
+  campus: benbu
+  plan_total: '120'
 rollup:
   tags:
   - 文科强
   - 综合均衡
   - 西城名校
+  features:
+    style: 以「人文教育」「自主发展」为育人特色，文科实验班知名；另有项目式学习实验班、PGA 国际课程班。
+    tags:
+    - 文科人文
+    - 课程改革
+    - 国际方向
+    - 综合均衡
+    source: 北京师大二附中官网/维基百科/知乎（北京师范大学第二附属中学）
+  gaokao:
+    note: 民间·非官方：文科实验班毕业生重点率高，升入北大清华比例较高（民间汇总称占比较高）。具体以学校官方为准。
+    year: null
+    source: 北京师大二附中官网及家长社区汇总，非学校官方逐年喜报
+  campus_life:
+    class_system: 民间整理·待核：高中约15个班，文/理分方向，8月入学测试定班；班型含文科实验班/人文实验班（全国唯一教育部批准文科实验班）、理科实验班、项目式学习实验班、数字化学习特色班、普通班，另有国际部PGA高中课程班。
+    schedule: 民间整理·待核：周五16:00-17:00社团活动；高一至高三均提供晚自习、学生自愿、有教师管理；住宿生22:30熄灯统一自习。
+    management: 民间整理·待核：定位『人文管理』『尊重学生自主』，学生评价『自由』『开明』；要求40学时课外志愿服务；校额到校生与统招生混编、一视同仁；手机管理由松到紧演变（后期返校直接交手机）。
+    boarding_detail: 民间整理·待核：提供住宿、开学后申请、名额有限（外区可申请、本区少量）；370元/学期，8-12人/间，配空调、公共卫生间。
+    dining: 民间整理·待核：约1540㎡分三层（套餐/风味餐/自由选择区），特色麻辣烫/刀削面/酸辣粉等；2024年9月官方满意度调查（354份）综合满意度86.51%。
+    activities: 民间整理·待核：社团参与率超50%，分教师指导类与学生自发类（HP凤凰社、动漫社、推理社等）；语文/人文特色课程含《经典戏剧鉴赏与实践》《中英文跨学科文学鉴赏》《经典古文鉴赏》《武侠小说写作课》。
+    voices: 民间整理·待核：文科实验班实力突出、项目班生源高分、普通班均分约600；体验『自由』『开明』有归属感，西城『四金刚』之一、文科声誉强。
+    source: 官网(国际部/社团) https://www.shsbnu.net/zszx/index.html ; 官网(食堂满意度) https://www.shsbnu.net/html/1/news/20240929/n4076.html
+      ; 北京小升初网 https://www.xscxx.com/chuzhong/xc/2025071711524.html ; 北京高考在线 https://www.gaokzx.com/c/202102/49345.html ;
+      知乎 https://www.zhihu.com/question/38697033
 home_district: 西城

@@ -1,0 +1,64 @@
+id: dc-015-desezx
+type: 公办普高
+canonical_name: 北京市第二十二中学
+short_name: 第二十二中学
+aliases: []
+level: 区级
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市东城区北京市第二十二中学
+  lat: 39.941562
+  lon: 116.414186
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '201003'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '119'
+  lines:
+    '2025':
+      score: 444
+      rank: 3926
+      total: 510
+    '2024':
+      score: 590
+      rank: 4356
+      total: 670
+  lines_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+  pred_2026:
+    rank: 3926
+    lo: 3455
+    hi: 4397
+    conf: high
+    method: hist
+    base_year: '2025'
+rollup:
+  features:
+    style: 百年完全中学(1924年创办,首任校长蔡元培),数学名师孙维刚执教于此,延续孙维刚数学实验班传统,北京市艺术教育特色校(金帆交响乐团)
+    tags:
+    - 学科竞赛
+    - 综合均衡
+    - 艺术特长
+    source: 百度百科/维基百科(孙维刚)/北京中考信息网
+  campus_life:
+    class_system:
+      value: 有数学实验班(孙维刚数学实验班教学模式); 实行分层授课(基于学科考试数据、学习心理测试、生涯规划分层)。
+      source: 百度百科 https://baike.baidu.com/item/北京市第二十二中学/7552740 ; 教育头条 http://www.edutoutiao.com/hot_recommended/7295.html
+      confidence: 百科+民间整理·待核
+    management:
+      value: 推行翻转教学("先学后教、以学定教"); 理念"共性中求个性, 让每一位学生全面发展"。
+      source: 教育头条 http://www.edutoutiao.com/hot_recommended/7295.html
+      confidence: 民间整理·待核
+    activities:
+      value: 模联社、动漫社、乒乓社、校刊、校报等社团; 开展科技节、合唱节、定向越野、志愿者服务; 定向越野、舞蹈队、合唱队多次市赛获奖。
+      source: 百度百科 https://baike.baidu.com/item/北京市第二十二中学/7552740
+      confidence: 百科
+_codes:
+- '201003'

@@ -1,0 +1,36 @@
+id: cp-014-zgrmdxfszxcp
+type: 公办普高
+canonical_name: 中国人民大学附属中学昌平学校
+short_name: 中国人民大学附属中学昌平学校
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市昌平区中国人民大学附属中学昌平学校
+  lat: 40.075036
+  lon: 116.371428
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '214017'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '31'
+rollup:
+  features:
+    style: 人大附中联合学校总校成员校，秉承「尊重个性、发掘潜力」，构建「创+」课程体系并融合足球特色教育。高中部 2025 年首次开设并招生（12 个班、面向昌平全区）。
+    tags:
+    - 课程改革
+    - 体育特长
+    - 科技创新
+    source: 百度百科 / 搜狐（人大附中昌平学校高中部招生） / 北京幼升小网
+  campus_life:
+    class_system:
+      value: 十二年一贯制公立校；构建「创+」课程体系，并以足球为特色教育。高中部 2025 年首次招生（规划 12 班高中 + 24 班初中）。勿与人大附中本部混淆
+      source: https://www.shangnaxue.net/school/1413046044406644737.html
+_codes:
+- '214017'

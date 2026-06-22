@@ -1,0 +1,64 @@
+id: xc-023-dywlzx
+type: 公办普高
+canonical_name: 北京市第一五六中学
+short_name: 第一五六中学
+aliases: []
+level: 区级
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市西城区北京市第一五六中学
+  lat: 39.931108
+  lon: 116.374374
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '202013'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '340'
+  lines:
+    '2025':
+      score: 455
+      rank: 5508
+      total: 510
+    '2024':
+      score: 610
+      rank: 5721
+      total: 670
+  lines_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+  pred_2026:
+    rank: 5508
+    lo: 4847
+    hi: 6169
+    conf: high
+    method: hist
+    base_year: '2025'
+rollup:
+  features:
+    style: 始建于1932年，前身辅仁大学附属女子中学，1952年改北京市第六女子中学，1968年起男女兼收并启用现名；现为北京四中教育集团成员校。北京市学生金帆书画院书法分院（人人上书法课），科技重点推进机器人项目（曾评北京市科技教育示范校），2015年起组建「人文素养班」并以故宫研学等提升人文素养，北京市语言文字示范校。
+    tags:
+    - 艺术特长
+    - 科技创新
+    - 文科人文
+    - 课程改革
+    source: 百度百科/北京中考信息网zhongkaobj西城校情介绍（北京市第一五六中学）
+  gaokao:
+    note: 民间·非官方：2022年最高分659、600分以上28人（约30%）、本科率100%；人文班均分552.7、网络班均分580.36。具体以学校官方为准。
+    year: 2022
+    source: 北京中考信息网zhongkaobj《西城区高中校情介绍——北京市第一五六中学》，非学校官方喜报
+  campus_life:
+    class_system: 民间整理·待核：往年一般1个人文(素养)班、2个网络班、5个平行班；人文素养班和网络教学班学生自愿选报；分班考往年在8月15日考语数外+文综/理综，高二开始选科走班。
+    schedule: 民间整理·待核：高一、高二无晚自习，高三有晚自习、晚上20:50结束（高三晚自习有晚餐）；作业量适中，偶尔有四中网课；平时少月考，只考期中、期末。
+    management: 民间整理·待核：带进校园的手机需上交；注重日常生活好习惯培养；家长参与管理（管晚自习、监考）；是北京市学生金帆书画院书法分院，每个学生都上书法课。
+    boarding_detail: 民间整理·待核：该校无住宿。
+    dining: 民间整理·待核：食堂不提供早餐，全校分两次在校用午餐、统一价格，每餐20元左右。
+    activities: 民间整理·待核：『城宫计划』、校本课程、社团活动；每年科技节、科普讲座、科技庙会；重点推进机器人科技项目；运动会、话剧展演。
+    source: 北京中考信息网(校情) https://www.zhongkaobj.cn/lqfsx/xichengqu/202412206666.html
+_codes:
+- '202013'

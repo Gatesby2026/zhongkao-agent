@@ -1,0 +1,51 @@
+id: dc-022-djslzx
+type: 公办普高
+canonical_name: 北京市第九十六中学
+short_name: 第九十六中学
+aliases: []
+level: 区级
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市东城区北京市第九十六中学(北2门)
+  lat: 39.900127
+  lon: 116.415906
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '201010'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '215'
+  lines:
+    '2025':
+      score: 431
+      rank: 4747
+      total: 510
+    '2024':
+      score: 568
+      rank: 5361
+      total: 670
+  lines_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+  pred_2026:
+    rank: 4747
+    lo: 4177
+    hi: 5317
+    conf: high
+    method: hist
+    base_year: '2025'
+rollup:
+  features:
+    style: 人文生态融合教育,广渠门中学教育集团成员校,拥有北京市唯一中学生纯打击乐团,棒垒球特色项目,设剑桥思辨表达及STEM整合课程
+    tags:
+    - 艺术特长
+    - 体育特长
+    - 科技创新
+    source: 北京中考信息网/百度百科/北京小升初信息网
+_codes:
+- '201010'

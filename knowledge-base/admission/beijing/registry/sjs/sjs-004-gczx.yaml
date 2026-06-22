@@ -1,0 +1,67 @@
+id: sjs-004-gczx
+type: 公办普高
+canonical_name: 北京市古城中学
+short_name: 古城中学
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市石景山区北京市古城中学
+  lat: 39.9098
+  lon: 116.191755
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '207001'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '78'
+  lines:
+    '2025':
+      score: 411
+      rank: 1217
+      total: 510
+    '2024':
+      score: 560
+      rank: 1429
+      total: 670
+  lines_meta:
+    source: '北京高考在线 gaokzx.com(2025: https://www.gaokzx.com/gk/zhongkao/144973.html; 2024: https://www.gaokzx.com/gk/zhongkao/126167.html);
+      北京中考信息网 zhongkaobj.cn(2024: https://www.zhongkaobj.cn/lqfsx/qitaqu/202410212432.html)'
+    confidence: low
+  pred_2026:
+    rank: 1217
+    lo: 1071
+    hi: 1363
+    conf: low
+    method: hist
+    base_year: '2025'
+- channel: 统招
+  code: '207001'
+  major: '02'
+  major_name: 西班牙语实验班
+  campus: benbu
+  plan_total: '20'
+rollup:
+  features:
+    style: 1959 年建校历史老校；北京市唯一以西班牙语作为第一外语的西语实验班（2012 年起），与首师大西班牙语系合作、大使馆与塞万提斯学院课程；西语国家文化交流活动丰富。
+    tags:
+    - 外语特色
+    - 课程改革
+    source: 百度百科「北京市古城中学」、北京日报 bjd.com.cn、教育头条 edutoutiao.com
+  campus_life:
+    class_system:
+      value: 设西班牙语实验班(统招专业 02), 全部小班授课, 采用导师研修式教学。
+      source: https://www.bjeea.cn/html/ksb/zhongyaoxinwen/2023/1106/84498.html (北京教育考试院)
+      confidence: official
+    activities:
+      value: 西语实验班课程含基础课程/选修课程(大学先修、留学先修、就业先修、文化选修等)/研究性学习(西语国家历史地理文化)/综合实践; 学生用大学教材《现代西班牙语》, 有赴西班牙企业志愿服务机会; 塞万提斯学院文学讲座、西语电影、拉美文化交流对学生开放,
+        西语国家大使/文化参赞定期来校授课; 校内外活动含西语朗诵比赛、西语小报评比、西语课本剧、西语歌曲比赛、北京塞万提斯学院西语日等。
+      source: https://www.163.com/dy/article/I2KD175G0536S287.html; https://www.bjeea.cn/html/ksb/zhongyaoxinwen/2023/1106/84498.html
+      confidence: folk
+_codes:
+- '207001'

@@ -1,0 +1,48 @@
+id: sy-012-hjxx
+type: 公办普高
+canonical_name: 北京市海嘉学校
+short_name: 海嘉学校
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市顺义区北京市海嘉学校
+  lat: 40.101364
+  lon: 116.53014
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: true
+admissions:
+- channel: 统招
+  code: '213011'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '14'
+- channel: 统招
+  code: '213011'
+  major: '02'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '6'
+rollup:
+  features:
+    style: 后沙峪 12 年一贯制双语学校(BIBA,2006 年创办)。中美教育标准为基础,突出中华文化;英文比例幼/小/中递增(50%/70%/80%);高中 IGCSE + IB DP;IBDP 认证校、美国 WASC 认证校,ACAMIS
+      会员。
+    tags:
+    - 国际方向
+    - 外语特色
+    source: 学校官网(bibachina.org)、百度百科、jingkids/国际学校网
+  campus_life:
+    class_system:
+      value: 幼儿园至12年级一贯制双语; 高中9-12年级开设IGCSE、中文课程及IB DP。实行每学年班级重组分班, 综合中英文语言能力、性别、性格、国籍等因素分班。
+      source: 海嘉学校官网 bibachina.org; 海嘉百科; jingkids 择校指南
+    boarding_detail:
+      value: '寄宿项目向6-12年级提供。住宿费含三餐三点: 11-12年级2人间约9万/年, 6-10年级4人间约7.5万/年。设1栋宿舍楼。'
+      source: 海嘉学校招生信息 guojixuexiao.net; 知乎专栏
+    activities:
+      value: 校内设7个户外运动场、1个大型室内体育馆、3个图书馆、多间音乐教室/排练室、多功能剧场、ICT实验室、舞蹈/美术/书法教室、科学实验室。课余活动140余种, 含网球、足球、合唱、乐队、空手道、烹饪等。
+      source: 海嘉学校官网/招生信息
+_codes:
+- '213011'

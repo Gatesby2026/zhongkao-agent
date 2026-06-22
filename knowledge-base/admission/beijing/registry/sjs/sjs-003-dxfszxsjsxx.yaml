@@ -1,0 +1,64 @@
+id: sjs-003-dxfszxsjsxx
+type: 公办普高
+canonical_name: 北京大学附属中学石景山学校
+short_name: 大学附属中学石景山学校
+aliases: []
+level: 优质高中（示范/特色）
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市石景山区北京大学附属中学(石景山学校)
+  lat: 39.949161
+  lon: 116.190582
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '107003'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '62'
+  lines:
+    '2025':
+      score: 454
+      rank: 412
+      total: 510
+    '2024':
+      score: 607
+      rank: 639
+      total: 670
+  lines_meta:
+    source: '北京高考在线 gaokzx.com(2025: https://www.gaokzx.com/gk/zhongkao/144973.html; 2024: https://www.gaokzx.com/gk/zhongkao/126167.html);
+      北京中考信息网 zhongkaobj.cn(2024: https://www.zhongkaobj.cn/lqfsx/qitaqu/202410212432.html)'
+    confidence: low
+  pred_2026:
+    rank: 412
+    lo: 363
+    hi: 461
+    conf: low
+    method: hist
+    base_year: '2025'
+rollup:
+  features:
+    style: 石景山区教委与北大附中「国有联办、整体委托、自主办学」合作举办（2015 年揭牌）；北京市首批「1+3」培养模式改革试验校，初高一贯课程体系；借力北大附中管理与名师资源；曾入选「全国青少年人工智能活动特色单位」。
+    tags:
+    - 课程改革
+    - 科技创新
+    source: 百度百科「北京大学附属中学石景山学校」、央广网 cnr.cn、北京小升初网 xschu.com
+  campus_life:
+    boarding_detail:
+      value: 无住宿(不提供寄宿)。
+      source: https://www.zhongkaobj.cn/zhongkao/zxdt/202503159983.html
+      confidence: folk
+    class_system:
+      value: 开展「1+3」培养模式改革实验, 面向石景山区初中招收 1+3 实验学生(2024 年招 80 名)。
+      source: https://www.xschu.com/zhonggaokaozixun/72727.html (2024 北京1+3招生简章)
+      confidence: folk
+    management:
+      value: 秉承北大附中办学理念, 倡导学生自主学习与自我管理; 课程分基础学科类/学校特色类/综合实践类/学生成长类四大类。
+      source: https://baike.baidu.com/item/北京大学附属中学石景山学校/50824911
+      confidence: folk
+_codes:
+- '107003'

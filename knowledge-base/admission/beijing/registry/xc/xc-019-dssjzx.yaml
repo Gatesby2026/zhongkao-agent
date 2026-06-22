@@ -1,0 +1,51 @@
+id: xc-019-dssjzx
+type: 公办普高
+canonical_name: 北京市第三十九中学
+short_name: 第三十九中学
+aliases: []
+level: 区级
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市西城区北京市第三十九中学
+  lat: 39.926654
+  lon: 116.378097
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '202004'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '260'
+  lines:
+    '2025':
+      score: 435
+      rank: 7943
+      total: 510
+    '2024':
+      score: 580
+      rank: 8445
+      total: 670
+  lines_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+  pred_2026:
+    rank: 7943
+    lo: 6990
+    hi: 8896
+    conf: high
+    method: hist
+    base_year: '2025'
+rollup:
+  features:
+    style: 西城百年学校，高中部坐落金融街；生物组培中心、理化生实验室、艺术专用教室、400米标准田径场及3000余平米体育综合馆等设施齐全。以国际交流为突出特色，设国际部与外籍学生公寓、招收世界各地留学生，西城区国际交流示范校、汉语国际推广基地校、联合国教科文组织可持续发展实验校，亦为西城区心理教育特色校。
+    tags:
+    - 国际方向
+    - 外语特色
+    - 综合均衡
+    source: 维基百科/百度百科/zhongkao.com学校页（北京市第三十九中学）
+_codes:
+- '202004'

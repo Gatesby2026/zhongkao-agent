@@ -1,0 +1,68 @@
+id: dc-003-dsyzx
+type: 公办普高
+canonical_name: 北京市第十一中学
+short_name: 第十一中学
+aliases: []
+level: 区级
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市东城区北京市第十一中学(东校区)
+  lat: 39.891069
+  lon: 116.415906
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '101003'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '159'
+  lines:
+    '2025':
+      score: 459
+      rank: 2699
+      total: 510
+    '2024':
+      score: 606
+      rank: 3340
+      total: 670
+    '2023':
+      score: 617
+      rank: 3286
+      total: 660
+  lines_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+  pred_2026:
+    rank: 2699
+    lo: 2375
+    hi: 3023
+    conf: high
+    method: hist
+    base_year: '2025'
+rollup:
+  features:
+    style: 东城区市级示范高中,全市率先实施「学习型学校」办学模式,科技(金鹏机器人)与篮球见长,成长课程体系完善
+    tags:
+    - 科技创新
+    - 体育特长
+    - 课程改革
+    source: 百度百科·北京市第十一中学; 中国教育新闻网 jyb.cn; 自主选拔在线 zizzs.com
+  campus_life:
+    class_system:
+      value: 2024年高一约8个班(徐特立实验班3个/领域实验班3个/普通班2个)。班数随届变动。
+      source: 北京高考在线《2025东城高中班型设置盘点》 https://www.gaokzx.com/gk/zhongkao/136567.html
+      confidence: 民间整理·待核
+    activities:
+      value: 民乐队、舞蹈队、合唱团、戏剧社、机器人等社团; 建有学生活动中心、北京市重点开放实验室、室内乒乓球馆、篮球馆、冰场及音乐/美术/舞蹈专用教室。
+      source: 百度百科 https://baike.baidu.com/item/北京市第十一中学/191042
+      confidence: 百科
+    voices:
+      value: 学生反映老师不忙时会认真答疑; 一本率普通班50%以上、实验班近100%。
+      source: 知乎 https://www.zhihu.com/question/49088663
+      confidence: 民间整理·待核
+_codes:
+- '101003'

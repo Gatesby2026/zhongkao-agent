@@ -1,0 +1,47 @@
+id: tz-011-dhmdgz
+type: 公办普高
+canonical_name: 北京德闳明德高中
+short_name: 德闳明德高中
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市通州区北京
+  lat: 39.610485
+  lon: 116.788124
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: true
+admissions:
+- channel: 统招
+  code: '212022'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '44'
+- channel: 统招
+  code: '212022'
+  major: '02'
+  major_name: 普通班
+  campus: benbu
+  plan_total: 28 (住)
+rollup:
+  features:
+    style: 德威国际教育集团旗下德闳学校(2019 年创办)体系,一贯制高标准国际化双语学校。校训"明德致知、志闳天下"。高中 10 年级 IBDP/A-Level 衔接,11-12 年级 IBDP 与 A-Level 课程;含中国国家课程
+      + 英文媒介探究课程 + 志闳特色课程(学术/艺术/体育/人文全人发展)。
+    tags:
+    - 国际方向
+    - 外语特色
+    source: ieduchina 国际学校百科 / 学校官网 beijing.dehong.cn / 中国教育在线 (https://schoollist.ieduchina.com/info/897.html)
+  campus_life:
+    class_system:
+      value: 15年一贯制国际化双语寄宿学校的高中段。10年级为 pre-IB「开拓之旅」过渡课程 (核心课程+六大实践模块),11-12年级开设 IBDP 国际文凭大学预科课程。
+      source:
+      - https://m.guoji.114study.com/school/dehong/news/21272/ (高中部招生简章)
+      - https://beijing.dehong.cn/ (学校官网)
+    boarding_detail:
+      value: 寄宿学校,全校可容纳约1800名学生在校学习、可满足约400名学生寄宿。 校园毗邻湖水,临近自然森林,环境幽静。
+      source: https://beijing.dehong.cn/our-school/about-us (学校官网) + 国际教育在线
+_codes:
+- '212022'

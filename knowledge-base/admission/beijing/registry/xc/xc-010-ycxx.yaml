@@ -1,0 +1,61 @@
+id: xc-010-ycxx
+type: 公办普高
+canonical_name: 北京市育才学校
+short_name: 育才学校
+aliases: []
+level: 区级
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市西城区北京育才学校(北纬路校区)
+  lat: 39.883043
+  lon: 116.390872
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '102010'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '270'
+  lines:
+    '2025':
+      score: 440
+      rank: 7435
+      total: 510
+    '2024':
+      score: 590
+      rank: 7670
+      total: 670
+  lines_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+  pred_2026:
+    rank: 7435
+    lo: 6543
+    hi: 8327
+    conf: high
+    method: hist
+    base_year: '2025'
+rollup:
+  features:
+    style: 1937年创办的十五年一贯制市级高中示范校，与北京电影学院合作课余活动；管乐团为北京市金帆艺术团，棒球/篮球为市级传统项目。
+    tags:
+    - 艺术特长
+    - 体育特长
+    - 综合均衡
+    source: zhongkaobj 西城校情介绍（北京市育才学校）
+  campus_life:
+    class_system: 民间整理·待核：依成绩/特长分实验班与普通班、快慢班、英语实验班与数学实验班等；开学测试分班（有自愿/强制两种），2023级高一9个班、每班40-45人；十二年一贯制。
+    schedule: 民间整理·待核：没有晚自习。
+    management: 民间整理·待核：军训时管理较严，对发型着装有要求。
+    boarding_detail: 民间整理·待核：高中部无住宿。
+    dining: 民间整理·待核：有食堂，干净卫生，可选菜品较多。
+    activities: 民间整理·待核：五大金牌社团——金帆管乐团、金帆话剧团、金帆书画院、金鹏科技团、金奥运动队；体育传统项目含棒球、垒球、篮球、手球、足球、定向越野（足球特色校）。
+    voices: 民间整理·待核（呈两极）：正面『育才有宏大胸怀，不会因成绩不好遭冷眼』；负面有学生反映『高中部校风一般、认真学习的少』。
+    source: 北京中考信息网(校情) https://www.zhongkaobj.cn/lqfsx/xcq/202412206657.html ; 知乎 https://www.zhihu.com/question/278980359
+      ; 知乎 https://www.zhihu.com/question/277712249
+_codes:
+- '102010'

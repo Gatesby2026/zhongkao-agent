@@ -1,0 +1,55 @@
+id: tz-009-lhgjj
+type: 公办普高
+canonical_name: 北京潞河国际教
+short_name: 潞河国际教
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市通州区潞河
+  lat: 39.902428
+  lon: 116.659038
+  confidence: mid
+  source: 高德 geocode（待电话核实）
+  boarding: true
+admissions:
+- channel: 统招
+  code: '212015'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '36'
+- channel: 统招
+  code: '212015'
+  major: '02'
+  major_name: 普通班
+  campus: benbu
+  plan_total: 24 (住)
+rollup:
+  features:
+    style: 潞河中学 2005 年成立的国际教育机构(民办),开设英国 A-Level、美国 AP、香港 DSE 及新加坡课程,与英国柴郡姆中学合作双学籍。小班化,中外教比例约 3:2,2006 年获剑桥大学国际考评部认证。
+    tags:
+    - 国际方向
+    - 外语特色
+    source: 百度百科 / 维基百科 / 国际学校网招生简章 (https://baike.baidu.com/item/北京潞河国际教育学园/2489396)
+  campus_life:
+    class_system:
+      value: 国际高中,同时开设 A-Level、AP 及香港高考 HKDSE 课程,学分制,学生按兴趣专长自主选课。
+      source:
+      - http://m.guojixuexiao.net/ischool/bjlhxy/news/17153.html (招生简章)
+      - http://www.guojixuexiao.org/school/lhgjjyxy/ (国际学校网)
+    boarding_detail:
+      value: 提供住宿,酒店式后勤管理,二人间/四人间。住宿费按规格:四人间约4800元/学年、 双人间约9600元/学年。
+      source: http://m.guojixuexiao.net/ischool/bjlhxy/news/17153.html (招生简章) + 国际学校网
+    dining:
+      value: 五个各具特色的食堂,提供中、西、韩餐。
+      source: http://www.guojixuexiao.org/school/lhgjjyxy/ (国际学校网)
+    management:
+      value: 实行导师制,导师对学生学习生活、选课、留学及生涯规划全程指导。
+      source: http://www.guojixuexiao.org/school/lhgjjyxy/ (国际学校网)
+    activities:
+      value: 课外活动丰富:学生会、社团联合会、学生志愿者协会、电视台等学生组织; 合唱团、健美操队、模拟联合国、戏剧社、炫舞社、篮球社、动漫社、油画&雕塑社、 手工艺社、摄影社、攀岩&远足社、乒乓球社、健身社等。
+      source: http://www.guojixuexiao.org/school/lhgjjyxy/ (国际学校网)
+_codes:
+- '212015'

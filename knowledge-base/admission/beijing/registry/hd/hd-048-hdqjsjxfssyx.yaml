@@ -1,0 +1,53 @@
+id: hd-048-hdqjsjxfssyx
+type: 公办普高
+canonical_name: 北京市海淀区教师进修附属实验香山分校
+short_name: 海淀区教师进修附属实验香山分校
+aliases:
+- 海淀教进香山分校
+- 海淀进修香山分校
+level: 区级
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市海淀区北京市海淀区教师进修附属实验香山分校
+  lat: 39.991337
+  lon: 116.208173
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '208044'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '222'
+  lines:
+    '2025':
+      score: 440
+      rank: 10855
+      total: 510
+    '2024':
+      score: 589
+      rank: 12908
+      total: 670
+  lines_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+  pred_2026:
+    rank: 10855
+    lo: 9552
+    hi: 12158
+    conf: high
+    method: hist
+    base_year: '2025'
+rollup:
+  features:
+    style: 海淀区教师进修学校附属实验学校承办的公办完全中学（前身1959年建校，2018年承办，集团化一体化管理），师资由进修学校骨干及名校毕业生组成；开设科技创新/国学经典/国际理解校本课程，参与集团五校联办「双英班」英才班，初中部享校额到校
+    tags:
+    - 综合均衡
+    - 课程改革
+    - 学科竞赛
+    source: 百度百科;北京中考信息网 zhongkaobj.cn/zhongkao/zhongxue/202412246990.html
+_codes:
+- '208044'

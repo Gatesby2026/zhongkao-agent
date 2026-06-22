@@ -1,0 +1,50 @@
+id: ft-025-syxxztsyxx
+type: 公办普高
+canonical_name: 北京十一学校中堂实验学校
+short_name: 十一学校中堂实验学校
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市丰台区北京十一学校中堂实验学校
+  lat: 39.879946
+  lon: 116.282784
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '206029'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '24'
+  lines:
+    '2025':
+      score: 462
+      rank: 487
+      total: 510
+  lines_meta:
+    source: 北京中考信息网 zhongkaobj.cn(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html); 北京高考在线 gaokzx.com(https://www.gaokzx.com/gk/zhongkao/144859.html)
+    confidence: medium
+  pred_2026:
+    rank: 487
+    lo: 429
+    hi: 545
+    conf: medium
+    method: hist
+    base_year: '2025'
+rollup:
+  features:
+    style: '北京十一学校在丰台区合作开办的公立分校(完全中学), 隶属丰台区教委, 与十一学校总部通过集体教研培训、共同课程研发「同频共振」。延续十一学校「创造适合每一位学生发展的教育」与走班/不分班传统: 六大「学习社区」(语言文学与表达/道德人文与社会/数学/科学技术与工程/体育健康与生活技能/综合实践),
+      课程分基础性、研究性、拓展性三类, 语数英开设高端荣誉课程与俱乐部课程; 配大型开放式图书馆、技术工坊、艺术馆、100 余间专业学科教室; 「一位老师负责约 10 名学生」的学习社区反馈/分层走班机制。'
+    tags:
+    - 课程改革
+    - 科技创新
+    - 综合均衡
+    source: 北京中考信息网·丰台校情介绍《北京十一学校中堂实验学校》 https://www.zhongkaobj.cn/zhongkao/zhongxue/202501077901.html ; 腾讯新闻《十一中堂学校在新校址正式开学》
+      https://news.qq.com/rain/a/20230831A09IHO00 ; 北京日报客户端《搬新家,120名新生入读六大「学习社区」》 https://xinwen.bjd.com.cn/content/s64f03d07e4b00547e3de0f43.html
+      ; 百度百科·北京十一学校中堂实验学校
+_codes:
+- '206029'

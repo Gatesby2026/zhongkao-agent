@@ -1,0 +1,59 @@
+id: xc-007-dlslzx
+type: 公办普高
+canonical_name: 北京市第六十六中学
+short_name: 第六十六中学
+aliases: []
+level: 区级
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市西城区北京市第六十六中学(高中部)
+  lat: 39.884036
+  lon: 116.355633
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '102007'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '384'
+  lines:
+    '2025':
+      score: 428
+      rank: 8576
+      total: 510
+    '2024':
+      score: 578
+      rank: 8566
+      total: 670
+  lines_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+  pred_2026:
+    rank: 8576
+    lo: 7547
+    hi: 9605
+    conf: high
+    method: hist
+    base_year: '2025'
+rollup:
+  features:
+    style: 市普通高中示范校；乒乓球队多年市赛夺冠，「金帆管乐团」曾赴德演出，体育与艺术传统项目突出。
+    tags:
+    - 体育特长
+    - 艺术特长
+    source: 百度百科/维基百科（北京市第六十六中学）
+  campus_life:
+    class_system: 民间整理·待核：2024级高一8个班、每班40人左右；无实验班、教学不分层（平行分班）；学校分南北两校区——初一初二在南址，初三和高中在北址。
+    schedule: 民间整理·待核：高一无晚自习；高三作业较多、有晚自习、会补课。
+    management: 民间整理·待核：管理较严格，违反校园管理制度有处罚/通报，需穿校服；非常重视体育锻炼、每天跑操。
+    boarding_detail: 民间整理·待核：暂时不提供住宿。
+    dining: 民间整理·待核：食堂只有午餐、无早晚餐，上晚自习会有晚餐；民间评价南址食堂比北址好吃。
+    activities: 民间整理·待核：乒乓球队是学校特色和强项（市级乒乓传统校）；有金帆管乐团常参加比赛；举办秋季运动会、科技节、艺术节、专场音乐会等。
+    voices: 民间整理·待核：教学质量在市区示范校中保持优势、社会声誉良好；也有评价称『历史悠久、成绩属实一般』，优势是有校额到校。
+    source: 北京中考信息网(校情) https://www.zhongkaobj.cn/lqfsx/xcq/202412206659.html ; 知乎(食堂/校区) https://www.zhihu.com/question/354481447
+_codes:
+- '102007'

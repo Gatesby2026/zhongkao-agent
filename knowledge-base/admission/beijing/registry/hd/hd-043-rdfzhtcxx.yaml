@@ -1,0 +1,51 @@
+id: hd-043-rdfzhtcxx
+type: 公办普高
+canonical_name: 人大附中航天城学校
+short_name: 人大附中航天城学校
+aliases: []
+level: 区级
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市海淀区人大附中航天城学校
+  lat: 40.069945
+  lon: 116.271058
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '208039'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '105'
+  lines:
+    '2025':
+      score: 474
+      rank: 3799
+      total: 510
+    '2024':
+      score: 638
+      rank: 3494
+      total: 670
+  lines_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+  pred_2026:
+    rank: 3799
+    lo: 3343
+    hi: 4255
+    conf: high
+    method: hist
+    base_year: '2025'
+rollup:
+  features:
+    style: 海淀区属公办十二年一贯制校，人大附中联合学校总校、人大附中承办；构建「三三三」（启航/领航/自航）小初高一体化课程，打造航天科技特色，科技社团涵盖机器人/天文/信息学/智造/地球演化/生命科学，建星球教室、冰球馆、游泳馆
+    tags:
+    - 科技创新
+    - 综合均衡
+    - 课程改革
+    source: 教育部官网 moe.gov.cn/fbh/live/2023/55484/dfdxal/202309/t20230920_1081673.html;百度百科
+_codes:
+- '208039'

@@ -1,0 +1,25 @@
+id: xc-018-dsszx
+type: 公办普高
+canonical_name: 北京市第三十中学
+short_name: 第三十中学
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市西城区
+  lat: 39.9126
+  lon: 116.36585
+  confidence: mid
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '202003'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '260'
+rollup: {}
+_codes:
+- '202003'

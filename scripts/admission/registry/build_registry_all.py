@@ -153,15 +153,19 @@ def build_district(py):
     # 保留原 id;把本区"统招"等渠道并入其 admissions;union aliases;补 rollup。
     odir = os.path.join(REG, "registry", reg)
     os.makedirs(odir, exist_ok=True)
+    def cnorm(s):  # 归一 canonical 做合并匹配:〇/O/零统一、去北京市前缀/空格/括号
+        s = re.sub(r"[〇零]", "O", str(s or ""))
+        s = re.sub(r"[（(].*?[)）]", "", s)
+        return re.sub(r"^北京市?|\s", "", s)
     existing = {}
     for fp in glob_yaml(odir):
         e = load(fp)
         if e and e.get("canonical_name"):
-            existing[e["canonical_name"]] = (fp, e)
+            existing[cnorm(e["canonical_name"])] = (fp, e)
     import glob as _g
     for s in out:
-        if s["canonical_name"] in existing:
-            fp, e = existing[s["canonical_name"]]
+        if cnorm(s["canonical_name"]) in existing:
+            fp, e = existing[cnorm(s["canonical_name"])]
             def akey(a):
                 return (a.get("channel"), str(a.get("code")), str(a.get("major")))
             have = {akey(a) for a in (e.get("admissions") or [])}

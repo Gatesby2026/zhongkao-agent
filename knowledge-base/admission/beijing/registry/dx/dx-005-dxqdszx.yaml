@@ -1,0 +1,65 @@
+id: dx-005-dxqdszx
+type: 公办普高
+canonical_name: 北京市大兴区第三中学
+short_name: 大兴区第三中学
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市大兴区北京市大兴区第三中学(初中部)
+  lat: 39.733953
+  lon: 116.337565
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: true
+admissions:
+- channel: 统招
+  code: '215003'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '140'
+  lines:
+    '2025':
+      score: 437
+      rank: 2163
+      total: 510
+    '2024':
+      score: 565
+      rank: null
+      total: 670
+  lines_meta:
+    source: 北京高考在线 gaokzx — 2025年北京各区高中校预估分数及排名(预估口径,单源 low); 育路私立学校招生网 yuloo — 2024年北京大兴区中考录取分数线一览(单源,经检索快照转述;区排名缺失)
+    confidence: low
+  pred_2026:
+    rank: 2163
+    lo: 1903
+    hi: 2423
+    conf: low
+    method: hist
+    base_year: '2025'
+rollup:
+  features:
+    style: 始建于 1975 年，2004 年设高中部。形成以英语、科技、体育、美育为特色的办学风格，提出『打造英语品牌、创办特色名校』；深耕科技、艺术、体育三大育人板块，打造人工智能、金鹏创新、木梁承重等科创特色品牌；获『北京市科技示范校』等荣誉。
+    tags:
+    - 外语特色
+    - 科技创新
+    - 体育特长
+    - 艺术特长
+    source: 百度百科『大兴区第三中学』、xqfhp 校情页
+  campus_life:
+    class_system:
+      value: 一校两址,设初中部与高中部(高中部2004年成立,2008年迁入黄村镇清源路新址)
+      source: https://baike.baidu.com/item/大兴区第三中学/6910425（百科403,经搜索摘要确认·民间整理·待核）
+    boarding_detail:
+      value: 设有学生公寓(描述『整洁舒适』),提供住宿。几人间未查到
+      source: https://m.xqfhp.com/aid/5667（学区房划片站·民间整理·待核）
+    dining:
+      value: 设有学生食堂(描述『安全卫生』)
+      source: https://m.xqfhp.com/aid/5667（学区房划片站·民间整理·待核）
+    activities:
+      value: 集科技、艺术、体育等特色教育于一体的区直属示范中学,设科技艺术楼等专用场馆
+      source: https://m.xqfhp.com/aid/5667（民间整理·待核）
+_codes:
+- '215003'

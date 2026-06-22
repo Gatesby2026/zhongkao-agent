@@ -1,0 +1,78 @@
+id: dc-007-dyllzx
+type: 公办普高
+canonical_name: 北京市第一六六中学
+short_name: 第一六六中学
+aliases: []
+level: 区级示范性高中
+note: 生命科学实验班录取线高于普通班
+campuses:
+- slug: benbu
+  name: 北京市东城区北京市第一六六中学
+  lat: 39.920508
+  lon: 116.415367
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: true
+admissions:
+- channel: 统招
+  code: '101007'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '115'
+  lines:
+    '2025':
+      score: null
+      rank: null
+      total: 510
+    '2024':
+      score: 613
+      rank: 2858
+      total: 670
+    '2023':
+      score: 623
+      rank: 2780
+      total: 660
+  lines_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+  pred_2026:
+    rank: 2858
+    lo: 2515
+    hi: 3201
+    conf: high
+    method: hist
+    base_year: '2024'
+- channel: 统招
+  code: '101007'
+  major: '02'
+  major_name: 生命科学实验班
+  campus: benbu
+  plan_total: '30'
+rollup:
+  features:
+    style: 贝满女中改制的东城百年名校,以「博雅教育」为品牌(博学、雅行课程),市级示范性高中,设金鹏科技团与金帆管乐团
+    tags:
+    - 综合均衡
+    - 科技创新
+    - 艺术特长
+    source: 百度百科/维基百科 北京市第一六六中学; 北京日报《北京第166中学史话》
+  campus_life:
+    class_system:
+      value: 高中约7个班, 每班40-45人; 特殊班为生命科学实验班(面向全市约30人)、冰心文学实验班。班数随届变动。
+      source: 北京高考在线《2025东城高中班型设置盘点》 https://www.gaokzx.com/gk/zhongkao/136567.html ; 百度百科
+      confidence: 民间整理·待核
+    boarding_detail:
+      value: 提供住宿; 高一住宿费444元/生/学期, 高二263.44元/生/学期。具体房型未查到。
+      source: 收费公示类摘要 https://www.xqfhp.com/aid/5731/
+      confidence: 民间整理·待核
+    activities:
+      value: 金帆管乐团、话剧团、舞蹈团、合唱团、书法、美术、动画社; 硬件含机器人工作室、智慧温室、分子生物学/显微数码互动/心理健康等实验室。
+      source: 百度百科 https://baike.baidu.com/item/北京市第一六六中学/8709155
+      confidence: 百科
+    voices:
+      value: 两校区——本部灯市口同福夹道3号(非毕业年级), 毕业年级部东四六条甲44号。
+      source: 维基百科
+      confidence: 百科
+_codes:
+- '101007'

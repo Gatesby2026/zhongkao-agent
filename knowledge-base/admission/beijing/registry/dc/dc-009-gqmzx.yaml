@@ -1,0 +1,84 @@
+id: dc-009-gqmzx
+type: 公办普高
+canonical_name: 北京市广渠门中学
+short_name: 广渠门中学
+aliases: []
+level: 市级示范性高中
+note: 宏志班有特殊招生
+campuses:
+- slug: benbu
+  name: 北京市东城区北京市广渠门中学
+  lat: 39.896364
+  lon: 116.438434
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: true
+admissions:
+- channel: 统招
+  code: '101009'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '145'
+  lines:
+    '2025':
+      score: 473
+      rank: 1391
+      total: 510
+    '2024':
+      score: 626
+      rank: 1770
+      total: 670
+    '2023':
+      score: 633
+      rank: 1725
+      total: 660
+  lines_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+  pred_2026:
+    rank: 1391
+    lo: 1224
+    hi: 1558
+    conf: high
+    method: hist
+    base_year: '2025'
+- channel: 统招
+  code: '101009'
+  major: '02'
+  major_name: 宏志班
+  campus: benbu
+  plan_total: '30'
+rollup:
+  features:
+    style: 北京市示范高中,「华夏第一班·宏志班」发源地,以宏志教育和均衡扎实培养著称;设宏志班、徐特立班(北理工承办)、实验班等特色班型
+    tags:
+    - 综合均衡
+    - 课程改革
+    source: gaokzx.com 2026中考热门高中校、自主选拔在线、北京中考在线
+  gaokao:
+    note: 民间·非官方
+    detail: 2024年600分以上占线上录取学生78%,一本率近100%;2023年700分以上3人、实验班均分656
+  campus_life:
+    class_system:
+      value: 设"宏志班"——1995年开设全国首个宏志班, 招收家庭贫困而品学兼优的应届初中毕业生。
+      source: 维基百科 https://zh.wikipedia.org/zh-cn/北京市广渠门中学
+      confidence: 百科
+    schedule:
+      value: 要求7:40到校; 中午午休约1小时; 周一约17:30放学, 周二16:30放学, 周三/四/五有社团活动时间约17:30放学。
+      source: 北京中考在线《2023广渠门校园开放日回顾》 https://www.zgkao.com/zk/202305/61507.html
+      confidence: 民间整理·待核
+    boarding_detail:
+      value: 宏志生与郊区学生一般提供住宿, 宏志生4人一寝室; 另据描述高一高二10人一间(有柜子有阳台), 高三另一校区7人一间(独立卫浴)。来源间有差异。
+      source: 北京中考在线 https://www.zgkao.com/zk/202305/61507.html ; 中考信息网 https://www.zhongkaobj.cn/zhongkao/zkzn/202502099142.html
+      confidence: 民间整理·待核
+    dining:
+      value: 自办食堂, 自助式午餐, app预定后刷卡/刷脸取餐; 可选营养餐套餐或小灶; 餐费每月约300元; 早餐仅对住宿生开放。
+      source: 北京中考在线 https://www.zgkao.com/zk/202305/61507.html
+      confidence: 民间整理·待核
+    activities:
+      value: 学生自主管理20多个社团; 校队有篮球/足球/排球/网球/乒乓球/冰上速滑等; 金帆管乐团、金帆合唱团、星光戏曲团、戏剧社团、翰博书画院活跃。
+      source: 北京音协柯达伊 https://bj-kodaly.com/Index/show/catid/14/id/189.html ; 北京中考在线 https://www.zgkao.com/zk/202305/61507.html
+      confidence: 民间整理·待核
+_codes:
+- '101009'

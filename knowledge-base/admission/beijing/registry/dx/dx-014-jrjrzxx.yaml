@@ -1,0 +1,59 @@
+id: dx-014-jrjrzxx
+type: 公办普高
+canonical_name: 北京金融街润泽学校
+short_name: 金融街润泽学校
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市大兴区北京金融街润泽学校(西北门)
+  lat: 39.790067
+  lon: 116.359443
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: true
+admissions:
+- channel: 统招
+  code: '215017'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: 56 (住)
+- channel: 统招
+  code: '215017'
+  major: '02'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '84'
+rollup:
+  features:
+    style: 金融街集团与北京市供销合作总社联合创办的高端国际化民办学校（幼小初高一体），位于西红门。秉承『全人教育（OPST）』理念，建立中西融合课程体系，国内课程与国际课程平行开设，强化外语与综合能力，兼顾国内升学与出国留学路径；开设艺术陶冶、科技创新、研学考察等特色拓展课。
+    tags:
+    - 国际方向
+    - 外语特色
+    - 课程改革
+    - 科技创新
+    source: 百度百科『北京金融街润泽学校』、bjrzschool.com 官网
+  campus_life:
+    _note: 由金融街集团、北京市供销合作总社两大国企合办;领航人含原北京四中校长刘长铭、原汇文中学校长陈维嘉;90%以上教师硕士及以上(学校自述·待核)
+    class_system:
+      value: 小班化教学,每班原则上不超过24人
+      source: https://jingkids.com/scg-bj/beijing-financial-street-runze-school/ ; https://www.125school.com/xuexiao172/wenti/（待核）
+    schedule:
+      value: 中学作息8:00-17:40(含国家课程及自主选修),周五8:00-17:30(此为中学段通用作息,高中具体晚自习时间未单列)
+      source: https://jingkids.com/scg-bj/beijing-financial-street-runze-school/（待核）
+    management:
+      value: 封闭式管理,学生不得随意出入,特殊需要须经学部/值班领导开放行条;专职保安24小时巡视
+      source: https://www.125school.com/xuexiao172/wenti/（民间整理·待核）
+    boarding_detail:
+      value: 设独立宿舍楼,每层配公共洗衣房、浴室;宿舍为四人位上下床、每人一组整理柜;家具为超E0级环保材料、钢木结构
+      source: https://jingkids.com/scg-bj/beijing-financial-street-runze-school/ ; https://baike.baidu.com/item/北京金融街润泽学校/23731690（待核）
+    dining:
+      value: 食堂提供中西餐,平均约30元/人次
+      source: https://jingkids.com/scg-bj/beijing-financial-street-runze-school/（待核）
+    activities:
+      value: 开设艺术陶冶、科技创新、健美塑形、思维拓展、研学考察、生活技能等特色拓展课程
+      source: https://jingkids.com/scg-bj/beijing-financial-street-runze-school/（待核）
+_codes:
+- '215017'

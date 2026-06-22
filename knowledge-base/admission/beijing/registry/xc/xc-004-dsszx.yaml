@@ -1,0 +1,58 @@
+id: xc-004-dsszx
+type: 公办普高
+canonical_name: 北京市第十四中学
+short_name: 第十四中学
+aliases: []
+level: 市级示范性高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市西城区北京市第十四中学(小学部)
+  lat: 39.893883
+  lon: 116.36997
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '102004'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '164'
+  lines:
+    '2025':
+      score: 459
+      rank: 4860
+      total: 510
+    '2024':
+      score: 614
+      rank: 5242
+      total: 670
+  lines_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+  pred_2026:
+    rank: 4860
+    lo: 4277
+    hi: 5443
+    conf: high
+    method: hist
+    base_year: '2025'
+rollup:
+  features:
+    style: 示范性高中，前身畿辅学堂；骨干教师与博士师资较多，数学/物理学科力量较强，「翱翔计划」基地校，对接高校引入师资。
+    tags:
+    - 理科见长
+    - 综合均衡
+    - 课程改革
+    source: zhongkaobj 西城校情介绍（北京市第十四中学）
+  campus_life:
+    class_system: 民间整理·待核：2024级高一11个班，含3个实验班——创新素养班、人文素养班、智能科技班（项目班）；入学后参考分班考成绩分班、三年不流动；高一三年都在达官营校区。
+    management: 民间整理·待核：不允许带手机进教室（需申请且教室内由老师保管、放学后交还）；管理较严格。
+    boarding_detail: 民间整理·待核：校情介绍页明确『该校无住宿』；但另有源（百度百科/住宿盘点）称设有学生公寓并招住宿生——两说矛盾，待核，建议向学校核实当年招生政策。
+    dining: 民间整理·待核：有学生食堂可供1500名学生用餐、结合24节气配餐；提供早中餐，高三可在校用晚餐。
+    activities: 民间整理·待核：科技节、体育节、英语学科节、心理文化周、跳蚤市场；有追梦影社、模联社、汉服社、绘画社等26个社团。
+    source: 北京中考信息网(校情) https://www.zhongkaobj.cn/lqfsx/xichengqu/202412206653.html ; 班型 https://www.gaokzx.com/gk/zhongkao/131629.html
+_codes:
+- '102004'

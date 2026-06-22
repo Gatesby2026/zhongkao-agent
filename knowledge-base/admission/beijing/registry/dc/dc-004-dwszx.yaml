@@ -1,0 +1,77 @@
+id: dc-004-dwszx
+type: 公办普高
+canonical_name: 北京市第五十中学
+short_name: 第五十中学
+aliases:
+- 五十中
+level: 区级
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市东城区北京市第五十中学
+  lat: 39.887052
+  lon: 116.439361
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '101004'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '167'
+  lines:
+    '2025':
+      score: 454
+      rank: 3106
+      total: 510
+    '2024':
+      score: 598
+      rank: 3877
+      total: 670
+    '2023':
+      score: 614
+      rank: 3519
+      total: 660
+  lines_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+  pred_2026:
+    rank: 3106
+    lo: 2733
+    hi: 3479
+    conf: high
+    method: hist
+    base_year: '2025'
+rollup:
+  features:
+    style: 1953年建校,北京市示范性普通高中,北京市首批人文特色校;推行「1+5」活力课程体系,拥有金帆舞蹈团
+    tags:
+    - 文科人文
+    - 艺术特长
+    - 课程改革
+    source: 百度百科·北京市第五十中学
+  campus_life:
+    class_system:
+      value: 高中约8个班(1/2班思齐班, 3/4班住宿班, 5/6班实验班, 7/8班普通班)。班数随届变动。
+      source: 北京高考在线《2025东城高中班型设置盘点》 https://www.gaokzx.com/gk/zhongkao/136567.html
+      confidence: 民间整理·待核
+    schedule:
+      value: 晚自习为学校与学生双向选择, 高一即可上(每年安排不一); 高三晚自习20:30下课。
+      source: 知乎东城对比/相关摘要
+      confidence: 民间整理·待核
+    boarding_detail:
+      value: 设有学生公寓, 有住宿班(班型中3/4班为住宿班)。具体几人间未查到。注:另有"不提供住宿"说法并存, 待核。
+      source: 学区房划片 https://m.xqfhp.com/beijing/show/id/5729 ; 班型盘点文
+      confidence: 民间整理·待核
+    activities:
+      value: 创客、三维设计、京剧、曲艺、内画、面塑、书法、篆刻、韵律操等数十门特色社团课; 举办艺术节、体育节、心理节、科技节。
+      source: 北京高考在线《2026热门高中校：第五十中学》 https://www.gaokzx.com/gk/zhongkao/148725.html
+      confidence: 民间整理·待核
+    voices:
+      value: 学生反馈硬件宣传好但存在问题, 校风与师资力量两极分化。
+      source: 知乎 https://www.zhihu.com/question/470639778
+      confidence: 民间整理·待核
+_codes:
+- '101004'

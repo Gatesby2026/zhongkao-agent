@@ -1,0 +1,51 @@
+id: sy-011-xfxwgyxx
+type: 公办普高
+canonical_name: 北京市新府学外国语学校
+short_name: 新府学外国语学校
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市顺义区北京市新府学外国语学校
+  lat: 40.164277
+  lon: 116.628366
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: true
+admissions:
+- channel: 统招
+  code: '213010'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '144'
+- channel: 统招
+  code: '213010'
+  major: '02'
+  major_name: 普通班
+  campus: benbu
+  plan_total: 96 (住)
+rollup:
+  features:
+    style: 顺天府学教育集团创办,12 年一贯制寄宿/走读双语国际化学校。中国基础教育优势 + 西方教育精粹;延续「数学+」与「大语文」特色;高中开设 AP、IB-DP、A-Level、加拿大 OSSD;开设武术、民族舞等中华文化课程。
+    tags:
+    - 国际方向
+    - 外语特色
+    - 寄宿制
+    source: 百度百科、jingkids、国际学校网
+  campus_life:
+    class_system:
+      value: 顺天府学教育集团创办, 小学至高中12年一贯制, 小班制。高中(10-12年级)提供国家核心课程、AP、IB-DP、A-level、加拿大OSSD等多项目, 学费按项目7.8万~22.9万/学年不等。
+      source: 新府学百度百科; 125国际教育 招生简章
+    boarding_detail:
+      value: 寄宿兼走读。宿舍有专人管理, 每间住2-3人, 配独立阳台、独立卫生间、独立洗浴, 设专用洗衣房; 全部装冷暖空调并增设新风系统。住宿服务费含住宿费约2.2万/学年。
+      source: 新府学官网 2025招生年级及住宿条件页 guojixuexiao.net
+    dining:
+      value: 餐厅经卫生主管部门批准; 日常配餐在营养师指导下完成, 形式多样、按年龄段配置。餐费(三餐两点)约1.6万/年。
+      source: 新府学官网 住宿条件页
+    management:
+      value: 提供充足体育活动时间; 设专门心理辅导老师并开设心理课程; 每年组织师生健康体检。
+      source: 新府学官网 住宿条件页
+_codes:
+- '213010'

@@ -1,0 +1,60 @@
+id: cp-007-dswzxnkxx
+type: 公办普高
+canonical_name: 北京市第十五中学南口学校
+short_name: 第十五中学南口学校
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市昌平区北京市第十五中学南口学校(东3门)
+  lat: 40.237374
+  lon: 116.164282
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: true
+admissions:
+- channel: 统招
+  code: '214009'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '74'
+  lines:
+    '2025':
+      score: 420
+      rank: 2234
+      total: 510
+    '2024':
+      score: 567
+      rank: 2694
+      total: 670
+  lines_meta:
+    source: 北京中考信息网 2025 昌平等多区统招线及区排名汇总; 北京中考信息网 近三年各高中录取线及区排名变化
+    confidence: low
+  pred_2026:
+    rank: 2234
+    lo: 1966
+    hi: 2502
+    conf: low
+    method: hist
+    base_year: '2025'
+rollup:
+  features:
+    style: 2014 年由原南口学校中学部与北京市第十五中学合作办学组建。集团化办学共享十五中课程/师资/教研，小班化教学，开设科技创新、国学、艺术体育等选修课。
+    tags:
+    - 课程改革
+    - 科技创新
+    source: 百度百科 / 北京小升初网
+  campus_life:
+    boarding_detail:
+      value: 学生宿舍、食堂可同时容纳约 900 名学生住宿和用餐，全部房间装有中央空调（具备住宿条件）
+      source: https://m.bj.bendibao.com/wangdian/161880.html
+    dining:
+      value: 设有可容纳约 900 人就餐的食堂
+      source: https://m.bj.bendibao.com/wangdian/161880.html
+    activities:
+      value: 设有音乐、美术、形体、书法等专用教室 36 个，含室内体育馆、400 米标准运动场（艺体设施）
+      source: https://m.bj.bendibao.com/wangdian/161880.html
+_codes:
+- '214009'

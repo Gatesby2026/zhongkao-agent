@@ -1,0 +1,58 @@
+id: cp-018-wfxx
+type: 公办普高
+canonical_name: 北京王府学校
+short_name: 王府学校
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市昌平区北京王府学校
+  lat: 40.104517
+  lon: 116.394106
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: true
+admissions:
+- channel: 统招
+  code: '214025'
+  major: '01'
+  major_name: 中外合作办学项目班
+  campus: benbu
+  plan_total: '42'
+- channel: 统招
+  code: '214025'
+  major: '02'
+  major_name: 中外合作办学项目班
+  campus: benbu
+  plan_total: 28 (住)
+rollup:
+  features:
+    style: 创建于 1996 年，北京市首家中外合作制学校，K-12 国际教育。2003/2006 年率先引进 A-Level、AP 课程，AP 教学示范校、剑桥国际教育考试中心；2018 年获 IB 世界学校授权；并引进加拿大安省课程。师资结构
+      40% 外教/40% 海归/20% 中教双语。
+    tags:
+    - 国际方向
+    - 外语特色
+    - 课程改革
+    source: 百度百科 / 学校官网 brs.edu.cn
+  campus_life:
+    class_system:
+      value: 分层教学、走班上课；初中部以 IB-MYP 框架；高中部开设 AP、A-Level、IB、OSSD、艺术留学五类班；AP 课程 34 门、A-Level 课程 19 门
+      source: https://www.brs.edu.cn/admissions-faq
+    schedule:
+      value: 寄宿学生周五下午离校，周日下午返校，也可申请周末寄宿
+      source: https://www.brs.edu.cn/admissions-faq
+    management:
+      value: 强调个体差异和学生自治，分层走班，倡导国际教育理念
+      source: https://www.brs.edu.cn/admissions-faq
+    boarding_detail:
+      value: 低年级部可走读、如需可寄宿；高年级部原则上建议住校。具体几人间/空调官网未明示
+      source: https://www.brs.edu.cn/admissions-faq
+    dining:
+      value: 设两个餐厅，开设中餐、西餐、韩餐、主食、小吃、清真、教师自助等 7 个特色窗口；配 3 名营养师，每日近 50 道菜品；引入「炒菜机器人」，A 级卫生等级
+      source: https://www.brs.edu.cn/admissions-faq
+    activities:
+      value: 开设 40 余个学生社团，覆盖学术、艺术、科技、人文社科、社会实践、运动 6 大门类；另有学生会等四大学生组织
+      source: https://www.brs.edu.cn/admissions-faq
+_codes:
+- '214025'

@@ -1,0 +1,44 @@
+id: pg-007-dxgz
+type: 公办普高
+canonical_name: 北京德馨高中
+short_name: 德馨高中
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市平谷区北京德馨高中
+  lat: 40.159131
+  lon: 117.139957
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '217008'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '96'
+- channel: 统招
+  code: '217008'
+  major: '02'
+  major_name: 普通班
+  campus: benbu
+  plan_total: 男32 女32 (住)
+rollup:
+  features:
+    style: 经平谷区教委批准设立的全日制民办寄宿制高中，"做让学生站得高走得远的教育"，国标必修+国学深化+国际留学+国民健康+个性发展课程体系；面向国内国际两个方向招生与升学，含艺术类、体育类及小语种/国际课程，四人间宿舍。
+    tags:
+    - 寄宿制
+    - 国际方向
+    - 艺术特长
+    source:
+    - '好学校 北京德馨高中学校简介: https://m.91goodschool.com/school/resume/13779.html'
+    - '中国学历教育网 北京德馨全日制高中介绍: https://www.zgxledu.com/edu/bjdxgz-jianjie.html'
+  gaokao:
+    summary: 建校以来宣称高考本科上线90%以上、一本上线30%以上(校方招生宣传口径，未经官方核实)。
+    label: 民间·非官方
+    source: https://www.zgxledu.com/edu/bjdxgz-jianjie.html
+_codes:
+- '217008'

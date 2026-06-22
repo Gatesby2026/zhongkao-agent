@@ -1,0 +1,31 @@
+id: hd-058-hdqrbgjzx
+type: 公办普高
+canonical_name: 北京市海淀区仁北高级中学
+short_name: 海淀区仁北高级中学
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市海淀区
+  lat: 39.959893
+  lon: 116.2977
+  confidence: mid
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '208058'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '90'
+- channel: 统招
+  code: '208058'
+  major: '02'
+  major_name: 普通班
+  campus: benbu
+  plan_total: 10 (住)
+rollup: {}
+_codes:
+- '208058'

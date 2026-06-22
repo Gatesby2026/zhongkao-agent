@@ -1,0 +1,50 @@
+id: dc-014-desyzx
+type: 公办普高
+canonical_name: 北京市第二十一中学
+short_name: 第二十一中学
+aliases: []
+level: 区级
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市东城区北京市第二十一中学
+  lat: 39.943736
+  lon: 116.412853
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '201002'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '98'
+  lines:
+    '2025':
+      score: 390
+      rank: 6101
+      total: 510
+    '2024':
+      score: 528
+      rank: 6541
+      total: 670
+  lines_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+  pred_2026:
+    rank: 6101
+    lo: 5369
+    hi: 6833
+    conf: high
+    method: hist
+    base_year: '2025'
+rollup:
+  features:
+    style: 外语特色办学,2015年起为中法教育部首批法文课程班试点校之一,高中设法语班(每周4节法语课、外教授课)
+    tags:
+    - 外语特色
+    - 课程改革
+    source: 百度百科/北京中考信息网 zhongkaobj.cn(东城区公办高中校情介绍)
+_codes:
+- '201002'

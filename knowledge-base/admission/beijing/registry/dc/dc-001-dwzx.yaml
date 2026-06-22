@@ -28,9 +28,76 @@ admissions:
   lines:
     '2025':
       score: 475
+- channel: 统招
+  code: '101002'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '180'
+  lines:
+    '2025':
+      score: 475
+      rank: 1216
+      total: 510
+    '2024':
+      score: 632
+      rank: 1210
+      total: 670
+    '2023':
+      score: 636
+      rank: 1372
+      total: 660
+  lines_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+  pred_2026:
+    rank: 1216
+    lo: 1070
+    hi: 1362
+    conf: high
+    method: hist
+    base_year: '2025'
+- channel: 统招
+  code: '101002'
+  major: '02'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '198'
 rollup:
   tags:
   - 老牌名校
   - 综合均衡
   - 东城名校
+  features:
+    style: 东城区老牌市级示范高中,数理见长(数学、物理三十余年沉淀、五大学科竞赛培训),与北师大共建合成生物学iGEM项目(东城唯一参与iGEM并获银奖),北大博雅人才共育基地
+    tags:
+    - 综合均衡
+    - 理科见长
+    - 科技创新
+    - 学科竞赛
+    source: 北京中考信息网(zhongkaobj.cn)校情介绍 + 北师大生命科学学院官网(cls.bnu.edu.cn)大中贯通合成生物学项目
+  gaokao:
+    note: 民间·非官方
+    detail: 2024年最高分705分,700分以上2人,650分以上43人,一本率约95%;2023年600分以上100余人
+  campus_life:
+    class_system:
+      value: 设实验班(成绩最优异学生进入), 普通班学生成绩极优异方可进入实验班。
+      source: 知乎《在北京五中就读是一种怎样的体验》 https://www.zhihu.com/question/46603074
+      confidence: 民间整理·待核
+    management:
+      value: 学生反映管理相对同级别学校偏严, 高三晚自习时间较长; 对离家远住宿生配有经验丰富的住宿班主任管理生活。
+      source: 知乎 https://www.zhihu.com/question/46603074
+      confidence: 民间整理·待核
+    boarding_detail:
+      value: 为市统筹一录取、离家远的学生设住宿; 六人间, 有独立洗手间和盥洗室、专门吹头房间、宿舍自习室; 配住宿班主任。
+      source: 中考信息网 https://www.zhongkaobj.cn/zhongkao/zkzn/202502099142.html
+      confidence: 民间整理·待核
+    activities:
+      value: 社团较丰富; 有戏剧节、"好声音"等活动; 教委要求的博物馆/游学活动均参加。
+      source: 知乎 https://www.zhihu.com/question/46603074
+      confidence: 民间整理·待核
+    voices:
+      value: '"大多数老师人品和教学质量不错"; 校园偏小、操场约200米; 配新电子黑板; 校风中等偏好。'
+      source: 知乎 https://www.zhihu.com/question/46603074
+      confidence: 民间整理·待核
 home_district: 东城

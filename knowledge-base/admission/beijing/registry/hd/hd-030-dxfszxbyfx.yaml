@@ -1,0 +1,51 @@
+id: hd-030-dxfszxbyfx
+type: 公办普高
+canonical_name: 北京大学附属中学北医分校
+short_name: 大学附属中学北医分校
+aliases:
+- 北大附中北医附中
+level: 区级（北大附中体系）
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市海淀区北京大学附属中学(南门)
+  lat: 39.977352
+  lon: 116.320185
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '208026'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '137'
+  lines:
+    '2025':
+      score: 449
+      rank: 9377
+      total: 510
+    '2024':
+      score: 597
+      rank: 11782
+      total: 670
+  lines_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+  pred_2026:
+    rank: 9377
+    lo: 8252
+    hi: 10502
+    conf: high
+    method: hist
+    base_year: '2025'
+rollup:
+  features:
+    style: 北大附中承办的北医附中分校，继承北大「以奉献社会为己任」担当与北大医学部严谨敬业精神，办学思想「关注人/培养人/成就人/发展人」，课程目标「重核心素养，育博学雅行的人」；20余门社团及园艺、雕版印刷、风筝制作等劳动实践课程
+    tags:
+    - 综合均衡
+    - 课程改革
+    source: 北京日报 xinwen.bjd.com.cn/content/s66d270aed5de123e3f115511.html;北京大学教职工之家 gh.pku.edu.cn/info/1018/1450.htm
+_codes:
+- '208026'

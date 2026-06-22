@@ -1,0 +1,31 @@
+id: xc-030-rzgjzx
+type: 公办普高
+canonical_name: 北京市仁泽高级中学
+short_name: 仁泽高级中学
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市西城区
+  lat: 39.9126
+  lon: 116.36585
+  confidence: mid
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '202033'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '100'
+- channel: 统招
+  code: '202033'
+  major: '02'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '35'
+rollup: {}
+_codes:
+- '202033'

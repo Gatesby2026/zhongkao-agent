@@ -1,0 +1,73 @@
+id: fs-014-szfsfx
+type: 公办普高
+canonical_name: 北京四中房山分校
+short_name: 四中房山分校
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市房山区北京四中(房山校区)
+  lat: 39.759959
+  lon: 116.209932
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: true
+admissions:
+- channel: 统招
+  code: '211019'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '34'
+  lines:
+    '2025':
+      score: 454
+      rank: 715
+      total: 510
+  lines_meta:
+    source: 北京高考在线 gaokzx《2025北京房山区中考录取分数线及区排名》(四中房山分校); 北京中考信息网 zhongkaobj《2025北京中考各分段择校指南》(450-459 区间含四中房山分校)
+    confidence: medium
+  pred_2026:
+    rank: 715
+    lo: 629
+    hi: 801
+    conf: medium
+    method: hist
+    base_year: '2025'
+rollup:
+  features:
+    style: '北京四中教育集团成员校(2015 年成立、由北京四中直接管理的完全中学), 以「勤奋、严谨、民主、开拓」为校训, 以「培养杰出的中国人」为目标。承袭四中本部传统: 不加课、不补课; 高度重视体育(每天 1 节体育课/1
+      小时户外锻炼); 开设近五十门校本/选修课程(涵盖人文、科学、艺术, 含钢琴、羽毛球、茶艺、烘焙、机器人、编程、戏剧、合唱等)。师资中高级职称及硕士以上学历占比较高。'
+    tags:
+    - 综合均衡
+    - 体育特长
+    - 课程改革
+    source: 人民网教育《北京四中房山分校 引进优质教育资源》 https://edu.people.com.cn/n/2015/0427/c395685-26911671.html ; 新浪教育《北京四中房山分校:培养杰出的中国人》
+      https://edu.sina.cn/2015-04-23/detail-iavxeafs6096204.d.html ; 北京中考在线《北京四中房山分校怎么样》 https://www.zgkao.com/zhongkao/73223.html
+  gaokao:
+    note: 民间·非官方
+    summary: 据北京中考在线等公开介绍, 高中段一本率和本科率均保持在较高水平, 有多名学生在国家级/市级/区级学科竞赛中获奖; 初中段每年直升北京四中本部的学生均达标。具体数字未见官方权威发布, 仅供方向性参考。
+    source: 北京中考在线《北京四中房山分校怎么样》 https://www.zgkao.com/zhongkao/73223.html
+  campus_life:
+    boarding_detail:
+      value: 可住宿(学生可全部住宿)。具体宿舍配置房山分校未见官方公开,本部为 6 人间、有阳台/电扇/储物柜/桌椅、每层公共卫生间(仅供参考,非房山分校确证)。
+      source: 知乎「在北京四中房山校区上学体验」等讨论(民间整理·待核) https://www.zhihu.com/question/27332958
+      confidence: low
+      note: 民间整理·待核(本部宿舍配置不可外推为房山分校实际)
+    schedule:
+      value: 传承四中本部体育课程模式——每天 1 节体育课、1 次课间操、2 次眼保健操。
+      source: 知乎相关讨论(民间整理·待核) https://www.zhihu.com/question/27332958
+      confidence: low
+      note: 民间整理·待核
+    activities:
+      value: 设文学社、吉他社、美食社、服装设计等多个社团;校园内有「冲浪小岛」、工作室、竹林书院等学习休闲场所,教室与走廊宽敞(校园由 OPEN 建筑事务所设计)。
+      source: 知乎讨论 + 谷德设计网建筑介绍 https://www.gooood.cn/beijing-no-4-middle-school-fangshan-campus.htm
+      confidence: medium
+    voices:
+      value: 学生反映食堂菜量定量、曾有食品卫生方面意见;校园环境与建筑评价较好。
+      source: 知乎「在北京四中房山校区上学体验」(民间整理·待核) https://www.zhihu.com/question/27332958
+      confidence: low
+      note: 民间整理·待核
+_codes:
+- '211019'

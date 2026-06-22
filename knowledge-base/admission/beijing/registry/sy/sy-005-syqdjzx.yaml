@@ -1,0 +1,55 @@
+id: sy-005-syqdjzx
+type: 公办普高
+canonical_name: 北京市顺义区第九中学
+short_name: 顺义区第九中学
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市顺义区北京市顺义区第九中学
+  lat: 40.107398
+  lon: 116.69015
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: true
+admissions:
+- channel: 统招
+  code: '213002'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '299'
+  lines:
+    '2024':
+      score: 537
+      rank: 3089
+      total: 670
+  lines_meta:
+    source: 顺义2024高中录取分数线一览-北京小升初信息网(xscxx)
+    confidence: low
+  pred_2026:
+    rank: 3089
+    lo: 2718
+    hi: 3460
+    conf: low
+    method: hist
+    base_year: '2024'
+rollup:
+  features:
+    style: 「以美育德、以美益智、多元发展」。艺体教育是核心办学特色,为艺术、体育特长生搭建发展平台,多名学生考入清华美院、中央戏剧学院、上海戏剧学院、中国传媒大学等;北京市课改样本校、国家级教育体制改革特色发展试验项目校,2021
+      年度全国青少年校园足球特色学校。
+    tags:
+    - 艺术特长
+    - 体育特长
+    - 课程改革
+    source: 百度百科、阳光高考(chsi)、学校简介(gx211)
+  campus_life:
+    boarding_detail:
+      value: 校园占地约100亩; 设普通宿舍楼与学生公寓, 生活设施可容约1700名学生入住, 按较高标准建成。
+      source: 顺义九中百度百科; 阳光高考校库
+    activities:
+      value: 设高规格体育看台、400米塑胶跑道+人造草坪操场; 形成教学区/运动区/生活区布局; 教室配多媒体设备, 设计算机房、理化生实验室、校园网。
+      source: 顺义九中百度百科
+_codes:
+- '213002'

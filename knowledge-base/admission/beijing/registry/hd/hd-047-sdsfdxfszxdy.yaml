@@ -1,0 +1,52 @@
+id: hd-047-sdsfdxfszxdy
+type: 公办普高
+canonical_name: 首都师范大学附属中学第一分校
+short_name: 首都师范大学附属中学第一分校
+aliases:
+- 首师附一分校
+level: 区级
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市海淀区首都师范大学附属中学
+  lat: 39.930089
+  lon: 116.30039
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '208043'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '68'
+  lines:
+    '2025':
+      score: 467
+      rank: 5512
+      total: 510
+    '2024':
+      score: 620
+      rank: 7660
+      total: 670
+  lines_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+  pred_2026:
+    rank: 5512
+    lo: 4851
+    hi: 6173
+    conf: high
+    method: hist
+    base_year: '2025'
+rollup:
+  features:
+    style: 首师大附中教育集团核心成员校（2010年首师大附中在海淀承办的第一所分校），秉「成达教育」理念，沿用并发展附中「基础通修+兴趣选修+专业精修+自主研修」四修课程体系；推书院制分层教学（成达班/实验班），管乐/合唱/民乐团市区领先，科技创新大赛成绩突出
+    tags:
+    - 课程改革
+    - 艺术特长
+    - 科技创新
+    source: 百度百科;海淀教育网 bjhdedu.cn/zt/2024hdxx/202405/t20240521_70535.html;首都师范大学附属中学官网 cnuhs.cn
+_codes:
+- '208043'

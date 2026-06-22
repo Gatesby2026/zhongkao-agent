@@ -1,0 +1,63 @@
+id: tz-002-tzqyldzx
+type: 公办普高
+canonical_name: 北京市通州区永乐店中学
+short_name: 通州区永乐店中学
+aliases: []
+level: 优质高中（示范/特色）
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市通州区北京市通州区永乐店中学
+  lat: 39.717338
+  lon: 116.785059
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: true
+admissions:
+- channel: 统招
+  code: '112002'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '293'
+  lines:
+    '2025':
+      score: 402
+      rank: 4278
+      total: 510
+    '2024':
+      score: 545
+      rank: 4516
+      total: 670
+  lines_meta:
+    source: 北京高考在线 gaokzx.com(https://www.gaokzx.com/gk/zhongkao/144865.html 2025; https://www.gaokzx.com/gk/zhongkao/131935.html
+      2024); 北京中考信息网 zhongkaobj.cn(https://www.zhongkaobj.cn/fenshuxian/qitaqu/202410222442.html 2024)
+    confidence: medium
+  pred_2026:
+    rank: 4278
+    lo: 3765
+    hi: 4791
+    conf: medium
+    method: hist
+    base_year: '2025'
+rollup:
+  features:
+    style: 通州区规模最大的农村完全中学,北京市示范性普通高中。寄宿规模大(住宿生约 1600 人),配套完善(游泳馆、体育馆、报告厅等)。"管理规范、和谐发展"。
+    tags:
+    - 寄宿制
+    - 综合均衡
+    source: 百度百科 / 维基百科 (https://baike.baidu.com/item/北京市通州区永乐店中学/8445612)
+  campus_life:
+    boarding_detail:
+      value: 通州区规模最大的完全中学,提供住宿,住宿生规模大(有信源称住宿生近1600名)。 建有学生宿舍楼、学生公寓,宿舍配中央空调。
+      source:
+      - https://baike.baidu.com/item/北京市通州区永乐店中学/8445612 (百度百科)
+      - https://www.gx211.cn/school/school6247.shtml (中国高校之窗)
+    dining:
+      value: 校内食堂可容纳约3000人就餐。
+      source: https://baike.baidu.com/item/北京市通州区永乐店中学/8445612 (百度百科)
+    activities:
+      value: 校园设施支持丰富活动:大型操场、室内八道标准游泳馆、大型体育馆、可容纳1200人多功能报告厅、 专业电视台演播室、多功能高清自动录播室、心理咨询室、安全体验教室等。 (设施信息;具体社团清单未查到)
+      source: https://baike.baidu.com/item/北京市通州区永乐店中学/8445612 (百度百科)
+_codes:
+- '112002'

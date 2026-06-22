@@ -1,0 +1,39 @@
+id: my-001-myqdezx
+type: 公办普高
+canonical_name: 北京市密云区第二中学
+short_name: 密云区第二中学
+aliases: []
+level: 优质高中（示范/特色）
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市密云区北京市密云区第二中学
+  lat: 40.379589
+  lon: 116.847378
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '128001'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '56'
+rollup:
+  features:
+    style: 1978 年北京市首批重点中学,2004 年进入北京市示范性普通高中。 国家级体育传统项目(篮球、田径)学校,男篮多次夺市级以上冠军; 并设创客、武术、服装设计、科技作品等多元育人成果, 2021 年入选"全国青少年人工智能活动特色单位"。
+    tags:
+    - 体育特长
+    - 科技创新
+    - 综合均衡
+    source:
+    - https://baike.baidu.com/item/北京市密云区第二中学/22870380
+    - https://www.beijing.gov.cn/ywdt/gqrd/202406/t20240625_3727404.html
+  gaokao:
+    note: 民间·非官方
+    summary: 坊间称近三年高考本科上线率近 99%、重点(特殊类型)上线率约 75%, 有学生考入清华、北大等名校。数据来源为非官方网传,仅供参考。
+    source:
+    - https://www.gx211.cn/school/schoolcontent6254.shtml
+_codes:
+- '128001'

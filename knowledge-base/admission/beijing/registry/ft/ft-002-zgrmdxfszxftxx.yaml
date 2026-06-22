@@ -34,10 +34,58 @@ admissions:
       score: 599
     '2023':
       score: 609
+- channel: 统招
+  code: '206020'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '51'
+  lines:
+    '2025':
+      score: 423
+      rank: 2265
+      total: 510
+    '2024':
+      score: 599
+      rank: 2034
+      total: 670
+  lines_meta:
+    source: '2025: 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html) + 北京高考在线(https://www.gaokzx.com/gk/zhongkao/144859.html);
+      2024: 北京高考在线(https://www.gaokzx.com/gk/zhongkao/126166.html) + 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/202410212412.html)'
+    confidence: medium
+  pred_2026:
+    rank: 2265
+    lo: 1993
+    hi: 2537
+    conf: medium
+    method: hist
+    base_year: '2025'
 rollup:
   tags:
   - 名校分校
   - 一体化管理
   - 人大附中体系
   - 1+3项目
+  features:
+    style: 「人大附中系，校训「敦品励学 至善至美」。12年一贯制，突出小初高一体化贯通的「励学」课程体系；育人目标「具有人文底蕴的科技型创新人才」，科创赛事成绩突出（金鹏论坛、北京青少年科技创新大赛一等奖等）；师资 90%+ 硕士及以上。」
+    tags:
+    - 科技创新
+    - 理科见长
+    - 课程改革
+    - 综合均衡
+    source: 「教育头条《用王牌之师助推教育均衡》 http://www.edutoutiao.com/zxx/12794.html ；学校官网 http://www.rdfzftxx.cn/ ；百度百科 https://baike.baidu.com/item/中国人民大学附属中学丰台学校/53593140」
+  campus_life:
+    school_code: '206020'
+    schedule:
+      value: 7:25 到教室；17:40 放学；住校生 6:30 起床、21:30 下晚自习、22:30 宿舍熄灯。
+      source: 北京小升初信息网 xscxx.com（民间整理·待核，含初高混合信息）
+    boarding_detail:
+      value: 可申请住校，对家校距离有要求、优先家远学生；住校生周五离校、周日下午返校。
+      source: 北京小升初信息网 xscxx.com（民间整理·待核）
+    dining:
+      value: 四层食堂，学生在 1-3 层就餐，提供一日三餐；走读生中午一律在食堂吃，早晚饭可选。
+      source: 北京小升初信息网 xscxx.com（民间整理·待核）
+    voices:
+      value: 家长反馈：主科老师基本只带一个班、定期与人本集体备课；校风较好、纪律管得严、多以鼓励为主、班级氛围好。
+      source: 北京小升初信息网 xscxx.com（民间整理·待核，主要为初中部反馈）
 home_district: 丰台

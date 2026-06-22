@@ -1,0 +1,76 @@
+id: dx-001-dxqdyzx
+type: 公办普高
+canonical_name: 北京市大兴区第一中学
+short_name: 大兴区第一中学
+aliases: []
+level: 优质高中（示范/特色）
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市大兴区北京市大兴区第一中学(西门)
+  lat: 39.724884
+  lon: 116.342229
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: true
+admissions:
+- channel: 统招
+  code: '115001'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '79'
+  lines:
+    '2025':
+      score: 467
+      rank: 632
+      total: 510
+    '2024':
+      score: 617
+      rank: 664
+      total: 670
+  lines_meta:
+    source: 北京高考在线 gaokzx — 2025北京大兴区中考录取分数线及区排名; 北京高考在线 gaokzx — 2025年北京各区高中校预估分数及排名(预估468/584,与实际467/632同梯次互证); 北京中考信息网
+      zhongkaobj — 2024大兴区高中录取分数线&区排名汇总; 北京小升初网 xschu — 2024年大兴区各高中中考录取分数线
+    confidence: medium
+  pred_2026:
+    rank: 632
+    lo: 556
+    hi: 708
+    conf: medium
+    method: hist
+    base_year: '2025'
+rollup:
+  features:
+    style: 大兴区唯一市级重点中学、北京市首批示范性普通高中（2002）。办学目标『管理高效、教育优质、特色鲜明』，育人目标『知行合一、阳光大气』，获评北京市高中学校特色建设项目学校、北京市德育先进学校。建有可承办比赛的体育馆、藏书十余万册图书馆及艺术楼，自
+      2004 年起与韩国、冰岛、荷兰等校开展国际交流。
+    tags:
+    - 综合均衡
+    - 艺术特长
+    - 外语特色
+    source: 百度百科『北京市大兴区第一中学』、bjd.com.cn 新闻、gaokzx 校情页
+  gaokao:
+    note: 民间·非官方
+    summary: 民间信息称该校一本上线率约 70%+、本科升学率约 95%+，每届有学生考入清北及全国重点大学。具体数据以学校官方为准。
+    source: 百度百科『北京市大兴区第一中学』（民间汇编，非学校官方发布）
+  campus_life:
+    class_system:
+      value: 高中分层教学,设实验班和普通班;共17个班,每班40-45人(含2个『1+3』4年制贯通实验班、15个普通班)
+      source: https://www.gaokzx.com/gk/zhongkao/137101.html ; http://www.bangboer.com/zhongkao/s45923.html
+    schedule:
+      value: 每天7:30到班,早读7:30开始、8:00正式上课;高一高二17:30放学,高三18:00放学;晚自习19:00-21:30(非毕业年级仅住宿生,毕业年级可申请);住宿生22:00统一熄灯
+      source: http://www.bangboer.com/zhongkao/s45923.html ; https://m.xqfhp.com/aid/2565
+    management:
+      value: 手机有限进校园,严禁带入课堂;带入需家长学生签字申请;走读生每天早交班主任、放学取回,住宿生周一上交、周五取回
+      source: https://m.xqfhp.com/aid/2565
+    boarding_detail:
+      value: 男女生宿舍楼共498间,可容纳约2500人住宿;6人一间,每人一桌一柜;所有宿舍朝阳,卫生间/淋浴间齐全、热水充足;住宿与走读结合,高中生均可申请(需提前申请)
+      source: http://www.bangboer.com/zhongkao/s45923.html
+    dining:
+      value: 新校区共4个食堂(教工食堂、清真食堂、2个学生食堂),共2814个餐位,学生食堂可同时容纳2400余人就餐
+      source: http://www.bangboer.com/zhongkao/s45923.html
+    activities:
+      value: 社团丰富:足球队、篮球队、乒乓球队、游泳队、合唱团、绘画、科技观鸟、模拟法庭、机器人、辩论社等
+      source: https://m.xqfhp.com/aid/2565
+_codes:
+- '115001'

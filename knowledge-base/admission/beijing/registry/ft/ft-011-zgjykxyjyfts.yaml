@@ -1,0 +1,53 @@
+id: ft-011-zgjykxyjyfts
+type: 公办普高
+canonical_name: 中国教育科学研究院丰台实验学校
+short_name: 中国教育科学研究院丰台实验学校
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市丰台区中国教育科学研究院丰台实验学校(东南1门)
+  lat: 39.857694
+  lon: 116.265833
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '206007'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '55'
+  lines:
+    '2025':
+      score: 411
+      rank: 2708
+      total: 510
+    '2024':
+      score: 572
+      rank: 3179
+      total: 670
+  lines_meta:
+    source: '2025: 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html) + 北京高考在线(https://www.gaokzx.com/gk/zhongkao/144859.html);
+      2024: 北京高考在线(https://www.gaokzx.com/gk/zhongkao/126166.html) + 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/202410212412.html)
+      [源用''中国教育研究院丰台实验学校''指代,对应官方正名]'
+    confidence: medium
+  pred_2026:
+    rank: 2708
+    lo: 2383
+    hi: 3033
+    conf: medium
+    method: hist
+    base_year: '2025'
+rollup:
+  features:
+    style: 「「立人教育」理念，校训「自立立人，日新日上」。体育特色突出（全国篮球、足球、冰雪特色校，全国学校体育工作示范校）；丰台区示范性高中、艺术特色校、科研先进校。」
+    tags:
+    - 体育特长
+    - 综合均衡
+    - 艺术特长
+    source: 「百度百科 https://baike.baidu.com/item/中国教育科学研究院丰台实验学校/24068572 ；学区房划片 https://m.xqfhp.com/aid/5623 ；学校官网 https://niesfes.ftedu.cn/」
+_codes:
+- '206007'

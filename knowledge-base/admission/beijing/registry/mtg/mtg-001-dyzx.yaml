@@ -1,0 +1,42 @@
+id: mtg-001-dyzx
+type: 公办普高
+canonical_name: 北京市大峪中学
+short_name: 大峪中学
+aliases: []
+level: 优质高中（示范/特色）
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市门头沟区门头沟北京市大峪中学
+  lat: 39.926901
+  lon: 116.12097
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '109001'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '6'
+- channel: 统招
+  code: '109001'
+  major: '02'
+  major_name: 宏志班
+  campus: benbu
+  plan_total: '2'
+rollup:
+  features:
+    style: 北京市普通高中示范校、老牌区重点；治学严谨（作业必收必看必批必改必评，抓最后一名学生、抓最弱学科），重视特长生培养。
+    tags:
+    - 综合均衡
+    - 学科竞赛
+    - 体育特长
+    - 艺术特长
+    detail: 建有生物、物理、英语、化学等奥林匹克竞赛班；以兴趣小组为突破口培养不同特长学生。1978 年首批北京市重点中学，2004 年进入北京市普通高中示范校行列。
+    source:
+    - https://baike.baidu.com/item/北京市大峪中学/3497042
+    - http://bj.aoshu.com/e/20090626/4b8bcbc9a0727.shtml
+_codes:
+- '109001'

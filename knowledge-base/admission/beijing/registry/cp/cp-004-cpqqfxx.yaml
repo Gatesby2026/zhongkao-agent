@@ -1,0 +1,45 @@
+id: cp-004-cpqqfxx
+type: 公办普高
+canonical_name: 北京市昌平区前锋学校
+short_name: 昌平区前锋学校
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市昌平区前锋学校
+  lat: 40.226076
+  lon: 116.263349
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: true
+admissions:
+- channel: 统招
+  code: '214003'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '149'
+rollup:
+  features:
+    style: 创建于 1962 年，十二年一贯制公办校，2014 年与中国政法大学合作挂牌「中国政法大学附属学校」。以「全人育人、行前致锋」为办学思想；北京市中小学艺术教育特色校、艺术/书画重点校、体育传统项目校（金奥跆拳道队、金帆书画院）、北京市科技教育示范校。
+    tags:
+    - 艺术特长
+    - 体育特长
+    - 科技创新
+    source: 百度百科 / 中国政法大学官网 / Hi学校
+  campus_life:
+    class_system:
+      value: 高中分层走班——高一数理化分层走班，高二分层辅导，高三按文化/艺术/体育分类走班辅导
+      source: https://gnhzc.cupl.edu.cn/info/1013/1152.htm
+    management:
+      value: 法治教育特色——2014 年与中国政法大学合作挂牌「中国政法大学附属学校」，将法治教育纳入课程体系
+      source: https://gnhzc.cupl.edu.cn/info/1013/1152.htm
+    boarding_detail:
+      value: 校内有可容纳约 1500 名学生住宿的宿舍楼 2 座
+      source: https://baike.baidu.com/item/北京市昌平区前锋学校/1339489
+    activities:
+      value: 校本/选修课含英语课本剧、初级机器人、绘声绘影、航海模型、建筑模型、DV 制作、益智魔方、陶艺、合唱、管乐、跆拳道、武术、风筝、轮滑等
+      source: https://gnhzc.cupl.edu.cn/info/1013/1152.htm
+_codes:
+- '214003'

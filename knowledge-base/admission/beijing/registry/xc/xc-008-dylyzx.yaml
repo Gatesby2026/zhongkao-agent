@@ -1,0 +1,77 @@
+id: xc-008-dylyzx
+type: 公办普高
+canonical_name: 北京市第一六一中学
+short_name: 第一六一中学
+aliases: []
+level: 市级示范性高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市西城区北京市第一六一中学
+  lat: 39.881774
+  lon: 116.367138
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '102008'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '71'
+  lines:
+    '2025':
+      score: 470
+      rank: 3149
+      total: 510
+    '2024':
+      score: 632
+      rank: 2754
+      total: 670
+    '2023':
+      score: null
+      rank: null
+      total: 660
+  lines_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+  pred_2026:
+    rank: 3149
+    lo: 2771
+    hi: 3527
+    conf: high
+    method: hist
+    base_year: '2025'
+- channel: 统招
+  code: '102008'
+  major: '02'
+  major_name: 理科学科思想方法培养特色班
+  campus: benbu
+  plan_total: '30'
+- channel: 统招
+  code: '102008'
+  major: '03'
+  major_name: 文科学科思想方法培养特色班
+  campus: benbu
+  plan_total: '30'
+rollup:
+  features:
+    style: 百年女中底蕴，国家级语言文字示范校、足球篮球特色校，北京金鹏科技团、艺术教育特色校。
+    tags:
+    - 科技创新
+    - 体育特长
+    - 艺术特长
+    - 综合均衡
+    source: 北京一六一中学官网/维基百科/首都之窗（北京市第一六一中学）
+  campus_life:
+    class_system: 民间整理·待核：高中约8个班（每班40-45人，特殊班约30人）——2个特色班（理科学科思想方法培养特色班、文科学科思想方法培养特色班）+ 6个普通班；招管乐特长生、科技特长生。
+    management: 民间整理·待核：校训『诚真、开拓』，以『三严』著称（严明校纪/严肃学风/严格训练）；校风勤奋朴实团结进取。
+    boarding_detail: 民间整理·待核：本部高中无宿舍，学生全部走读。
+    dining: 民间整理·待核：有自有食堂，校内无小卖部、中午都在食堂，学生反映食堂『还不错』。
+    activities: 民间整理·待核：『四个一』活动（健身技能/兴趣爱好/大型国内外活动/研究性课题）；模联、学生电视台、艺术节；成长仪式含十四岁生日、成人仪式（中山公园看升旗）；金鹏科技团/科技教育示范校，20-40余门校本选修，与美法英澳学校师生互访。
+    voices: 民间整理·待核：『学习氛围比较好』；学生自嘲『遇到升旗就赶上一帮人集体迟到』（侧面反映氛围偏松）。
+    source: 搜狐(校情) https://www.sohu.com/a/191515089_110387 ; 班型 https://www.gaokzx.com/gk/zhongkao/127183.html ; 高校信息 https://www.gx211.cn/school/school624.shtml
+      ; 阳光高考 https://gaokao.chsi.com.cn/zx/sch/zxgkinfo.action?id=178347574
+_codes:
+- '102008'

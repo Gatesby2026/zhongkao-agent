@@ -1,0 +1,66 @@
+id: xc-009-tldezx
+type: 公办普高
+canonical_name: 北京市铁路第二中学
+short_name: 铁路第二中学
+aliases:
+- 铁路二中
+level: 区级示范性高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市西城区北京市铁路第二中学
+  lat: 39.915726
+  lon: 116.347943
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: true
+admissions:
+- channel: 统招
+  code: '102009'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '85'
+  lines:
+    '2025':
+      score: 463
+      rank: 4280
+      total: 510
+    '2024':
+      score: 619
+      rank: 4644
+      total: 670
+  lines_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+  pred_2026:
+    rank: 4280
+    lo: 3766
+    hi: 4794
+    conf: high
+    method: hist
+    base_year: '2025'
+- channel: 统招
+  code: '102009'
+  major: '02'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '1'
+rollup:
+  features:
+    style: 原全国铁路系统重点中学、市示范性高中；坚持五育并举，注重科技教育与女排传统项目优势。
+    tags:
+    - 体育特长
+    - 科技创新
+    - 综合均衡
+    source: 铁二中官网/zhongkaobj/维基百科（北京市铁路第二中学）
+  campus_life:
+    class_system: 民间整理·待核：2023级高一共10个班、分普通班和住宿班、每班40人左右；有分班考但仅为摸底，分班仍参考中考成绩，高一下开始选科走班；另有源称每年开设1个实验班、进度比普通班快（待核）。
+    schedule: 民间整理·待核：上课节奏较快、作业量较多（有学生反馈要写3小时左右）；放学后可申请到自习室自习（老师组织管理）；高三周末补课，有月考/期中/期末/周测。
+    management: 民间整理·待核：管理比较严格；带手机须写申请说明理由，上课期间上交、放学归还。
+    boarding_detail: 民间整理·待核：高一年级起设有住宿部（2022年成立），3人一间，配床/桌椅/衣柜/空调/暖气，公共区有洗浴间/卫生间、各区域相互独立。
+    dining: 民间整理·待核：餐厅布局合理、可容纳800人用餐，采用自助餐就餐形式。
+    activities: 民间整理·待核：合唱比赛、篮球/排球/足球等运动比赛；校外实践如参观科技馆、食品工厂等（北京市排球传统校）。
+    source: 北京中考信息网(校情) https://www.zhongkaobj.cn/lqfsx/xichengqu/202412206652.html ; 班型 https://www.gaokzx.com/gk/zhongkao/131629.html
+_codes:
+- '102009'

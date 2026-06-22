@@ -1,0 +1,52 @@
+id: hd-020-sdsfdxdefszx
+type: 公办普高
+canonical_name: 首都师范大学第二附属中学
+short_name: 首都师范大学第二附属中学
+aliases:
+- 首师大二附中
+level: 区级
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市海淀区首都师范大学
+  lat: 39.930146
+  lon: 116.305766
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '208012'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '184'
+  lines:
+    '2025':
+      score: 458
+      rank: 7605
+      total: 510
+    '2024':
+      score: 610
+      rank: 9599
+      total: 670
+  lines_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+  pred_2026:
+    rank: 7605
+    lo: 6692
+    hi: 8518
+    conf: high
+    method: hist
+    base_year: '2025'
+rollup:
+  features:
+    style: 「立仁·弘美」核心价值的「弘美教育」理念，弘美课程体系（立仁/志学/游艺课程）；北京市艺术、科技、语言文字示范校，学生金帆书画院（书法），40余社团，开设人工智能、C++、航模等选修
+    tags:
+    - 艺术特长
+    - 科技创新
+    - 课程改革
+    source: 百度百科;北京中考信息网 zhongkaobj.cn
+_codes:
+- '208012'

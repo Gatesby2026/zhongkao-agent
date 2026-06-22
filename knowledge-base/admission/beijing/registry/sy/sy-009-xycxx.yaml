@@ -1,0 +1,55 @@
+id: sy-009-xycxx
+type: 公办普高
+canonical_name: 北京市新英才学校
+short_name: 新英才学校
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市顺义区北京市新英才学校
+  lat: 40.084394
+  lon: 116.518495
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: true
+admissions:
+- channel: 统招
+  code: '213008'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '192'
+- channel: 统招
+  code: '213008'
+  major: '02'
+  major_name: 普通班
+  campus: benbu
+  plan_total: 128 (住)
+rollup:
+  features:
+    style: 中央别墅区 15 年一贯制寄宿国际化学校。多元高中:剑桥 A-Level/IGCSE(2005/2006 起)、美国 AP(18 门)、香港 DSE(2023 起)、德国留学项目;艺体教育(15 年一贯制)与人工智能信息科技课程突出,设少年科学院与四支科创校队。
+    tags:
+    - 国际方向
+    - 寄宿制
+    - 科技创新
+    - 艺术特长
+    source: 学校官网(bjnewtalent.com)、百度百科、国际学校网
+  campus_life:
+    class_system:
+      value: 高中开设国内班与国际班两种班型, 国内班可参加国内高考, 国际班申请海外高校。
+      source: 知乎专栏 新英才国内班高中部介绍; 新英才官网
+    boarding_detail:
+      value: 十五年一贯制寄宿制学校, 位于顺义中央别墅区。设学生宿舍、餐厅; 住宿费1-3年级约1万/年, 4年级及以上约1.2万/年。
+      source: 新英才招生网/yuloo 招生页
+    dining:
+      value: 校内设餐厅; 基础设施含物理/化学/生物实验室、计算机房、图书馆、游泳馆、健身房、钢琴房。
+      source: 新英才招生网
+    activities:
+      value: 提供130多种社团活动与特色课程, 含戏剧、管风琴、形体、舞蹈、武术、游泳、足球、书法、高尔夫、击剑、合唱、陶艺等。
+      source: 新英才官网/招生网
+    voices:
+      value: 核心价值观『爱与创造』, 注重个性化发展; 多数家长对师资满意, 评价教师有爱心与责任心。【民间整理·待核】
+      source: yuloo 家长评价页(民间)
+_codes:
+- '213008'

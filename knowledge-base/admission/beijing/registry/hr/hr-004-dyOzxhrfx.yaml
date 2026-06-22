@@ -1,0 +1,57 @@
+id: hr-004-dyOzxhrfx
+type: 公办普高
+canonical_name: 北京市第一O中学怀柔分校
+short_name: 第一O中学怀柔分校
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市怀柔区
+  lat: 40.317003
+  lon: 116.631974
+  confidence: mid
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '216003'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '82'
+  lines:
+    '2024':
+      score: 616
+      rank: 273
+      total: 670
+  lines_meta:
+    source: '北京中考信息网(zhongkaobj) — 2025北京中考分数揭秘(内含2024各区逐校统招线表): 怀柔区 一零一中学怀柔分校 616 / 区排273 / 区考生1549 / 录取率17.62%; 北京高考在线(gaokzx)检索结果:
+      一零一中怀柔分校2024年高中部统招录取分数线616分; 怀柔区2024一分一段表(bendibao/gaokzx)交叉核验: 616分累计人数=273, 印证rank=273'
+    confidence: medium
+  pred_2026:
+    rank: 273
+    lo: 240
+    hi: 306
+    conf: medium
+    method: hist
+    base_year: '2024'
+- channel: 统招
+  code: '216003'
+  major: '02'
+  major_name: 中外合作办学项目班
+  campus: benbu
+  plan_total: '60'
+rollup:
+  features:
+    style: 一零一中教育集团成员校，以科技教育为特色，探索初高中贯通培养；设"1+3"培养试验班、"0.5+3"集团直升、市三好校内直升等多元入口；与英国 St Bees School 合作承办 A-Level 项目。
+    tags:
+    - 科技创新
+    - 国际方向
+    - 课程改革
+    source:
+    - 怀柔区政府网站 https://www.bjhr.gov.cn/zjhr/bxsh/jykj/jyzx/201910/t20191010_414342.html
+    - 北京高考在线 https://www.gaokzx.com/gk/zhongkao/150465.html
+    - 北京小升初网 https://www.xschu.com/gongbanzhongxue/70621.html
+_codes:
+- '216003'

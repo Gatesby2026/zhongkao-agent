@@ -1,0 +1,46 @@
+id: sy-013-dsxx
+type: 公办普高
+canonical_name: 北京市鼎石学校
+short_name: 鼎石学校
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市顺义区北京市鼎石学校
+  lat: 40.113845
+  lon: 116.552852
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: true
+admissions:
+- channel: 统招
+  code: '213012'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '20'
+rollup:
+  features:
+    style: 顺义后沙峪 12 年一贯制寄宿国际名校(2014 年创办)。典型 IB 双语校(小学 IPC、初中 IBMYP、高中 IBDP);独创「文化双主线」——强化中国传统文化同时塑造跨文化沟通力;寄宿制社区培养,配 STEAM
+      实验室、艺术创作中心。
+    tags:
+    - 国际方向
+    - 寄宿制
+    - 外语特色
+    source: 百度百科、翰林/125 国际教育、学校公开介绍
+  campus_life:
+    boarding_detail:
+      value: 9-12年级(高中)全员寄宿; 7-8年级可选寄宿, 6年级及以下走读。宿舍楼现代化, 每间学生房配共用浴室; 每条宿舍走廊设学生联谊室(含厨房设施、微波炉), 供社交/看电影/分组学习。
+      source: 鼎石学校官网 寄宿生活页 keystoneacademy.cn/our-program/residential-life
+    management:
+      value: 每栋宿舍楼有4位老师与学生同住(住每层私人公寓), 称『宿舍家长』(dorm parents), 负责监督、支持、指导寄宿学生; 组织宿舍活动、学习时间后备零食、主持宿舍会议、调解冲突。高中段师生比约1:5。
+      source: 鼎石学校官网 寄宿生活页; 鼎石百科
+    dining:
+      value: 全校2个师生共用餐厅; 午餐含营养均衡餐、西餐、素食; 每周一次家庭式晚餐聚会, 学生与老师同桌如家人交流。住宿生餐费含在学费内。
+      source: 鼎石学校官网 寄宿生活页 / 招生说明
+    voices:
+      value: 定位『世界学校』, 外籍教师占比高(约60%); 中西融通、寄宿社区文化为家长择校主要认可点。【民间整理·待核】
+      source: jingkids 择校指南/知乎专栏(民间)
+_codes:
+- '213012'

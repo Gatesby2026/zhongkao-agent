@@ -30,10 +30,38 @@ admissions:
       score: 465
       rank: 792
       rank_scope: 通州区
+- channel: 统招
+  code: '212006'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '16'
+  lines:
+    '2025':
+      score: 465
+      rank: 792
+      total: 510
+  lines_meta:
+    source: 北京高考在线 gaokzx.com(https://www.gaokzx.com/gk/zhongkao/144865.html 2025)
+    confidence: low
+  pred_2026:
+    rank: 792
+    lo: 697
+    hi: 887
+    conf: low
+    method: hist
+    base_year: '2025'
 rollup:
   tags:
   - 新校
   - 十一学校承办
   - 走班制
   - 副中心
+  features:
+    style: 北京十一学校联盟总校校长李希贵筹办,城市副中心新建校,15 年一贯制。强调分层分类课程、选课走班,设数理学科竞赛、多语种、人文社科等多元人才培养路径。
+    tags:
+    - 课程改革
+    - 学科竞赛
+    - 外语特色
+    source: 北京十一学校官网 / 澎湃新闻李希贵专访 / 北京幼升小网 (https://www.bnds.cn/2025/notice_0721/682.html)
 home_district: 通州

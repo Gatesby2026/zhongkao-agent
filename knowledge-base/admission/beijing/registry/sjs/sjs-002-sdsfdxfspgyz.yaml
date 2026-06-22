@@ -1,0 +1,52 @@
+id: sjs-002-sdsfdxfspgyz
+type: 公办普高
+canonical_name: 首都师范大学附属苹果园中学
+short_name: 首都师范大学附属苹果园中学
+aliases: []
+level: 优质高中（示范/特色）
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市石景山区首都师范大学附属苹果园中学(西南门)
+  lat: 39.930216
+  lon: 116.192117
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '107002'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '61'
+  lines:
+    '2025':
+      score: 421
+      rank: 1055
+      total: 510
+    '2024':
+      score: 564
+      rank: 1361
+      total: 670
+  lines_meta:
+    source: '北京高考在线 gaokzx.com(2025: https://www.gaokzx.com/gk/zhongkao/144973.html; 2024: https://www.gaokzx.com/gk/zhongkao/126167.html);
+      北京中考信息网 zhongkaobj.cn(2024: https://www.zhongkaobj.cn/lqfsx/qitaqu/202410212432.html)'
+    confidence: low
+  pred_2026:
+    rank: 1055
+    lo: 928
+    hi: 1182
+    conf: low
+    method: hist
+    base_year: '2025'
+rollup:
+  features:
+    style: 「让生命因教育而美好」办学理念；生涯教育、科技教育、艺术教育、体育与心理健康教育为特色品牌；依托高校与科研院所构建拔尖创新人才培养体系，小初衔接课程丰富。
+    tags:
+    - 科技创新
+    - 艺术特长
+    - 课程改革
+    source: 百度百科「首都师范大学附属苹果园中学」、教育头条 edutoutiao.com、北京日报 bjd.com.cn
+_codes:
+- '107002'

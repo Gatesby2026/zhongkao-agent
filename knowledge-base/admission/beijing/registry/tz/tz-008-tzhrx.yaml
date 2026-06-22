@@ -1,0 +1,39 @@
+id: tz-008-tzhrx
+type: 公办普高
+canonical_name: 北京通州华仁学
+short_name: 通州华仁学
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市通州区北京
+  lat: 39.610485
+  lon: 116.788124
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '212011'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '120'
+- channel: 统招
+  code: '212011'
+  major: '02'
+  major_name: 普通班
+  campus: benbu
+  plan_total: 80 (住)
+rollup:
+  features:
+    style: 2013 年成立,12 年一贯制民办双语国际化学校(中加学校体系),寄宿兼走读,小班(每班≤30)。高中开设 OSSD/AP/GAC/A-Level/DSE/普高/小语种等多方向;国内高考方向引进衡水教育模式;依托宋庄艺术区资源发展美术、音乐特长。双导师制。
+    tags:
+    - 国际方向
+    - 外语特色
+    - 艺术特长
+    - 寄宿制
+    source: 百度百科 / 学校官网 ccsc.com.cn/hrccsc / 北京小升初网 (https://baike.baidu.com/item/北京通州华仁学校/24296422)
+_codes:
+- '212011'

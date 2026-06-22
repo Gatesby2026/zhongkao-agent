@@ -1,0 +1,53 @@
+id: ft-006-dszxxyyfx
+type: 公办普高
+canonical_name: 北京市第十中学晓月苑分校
+short_name: 第十中学晓月苑分校
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市丰台区北京市第十中学晓月苑分校
+  lat: 39.834468
+  lon: 116.244829
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '206002'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '64'
+  lines:
+    '2025':
+      score: 416
+      rank: 2532
+      total: 510
+    '2024':
+      score: 580
+      rank: 2851
+      total: 670
+  lines_meta:
+    source: '2025: 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html) + 北京高考在线(https://www.gaokzx.com/gk/zhongkao/144859.html);
+      2024: 北京高考在线(https://www.gaokzx.com/gk/zhongkao/126166.html) + 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/202410212412.html)'
+    confidence: medium
+  pred_2026:
+    rank: 2532
+    lo: 2228
+    hi: 2836
+    conf: medium
+    method: hist
+    base_year: '2025'
+rollup:
+  features:
+    style: 北京市第十中学教育集团成员校, 2023 年创办、具独立法人资质的完全中学, 位于永定河东岸宛平街道晓月苑(2.1 万㎡、24 班规模)。以「人文特色」为核心定位, 旨在培养兼具人文特质与创新实践能力的复合型人才; 依托语文学科(丰台区学科建设示范基地)开展贯通培养的语文教学策略研究,
+      设区级「1+3」培养实验项目(面向丰台区招 30 人, 面试以小组讨论形式考察)。
+    tags:
+    - 文科人文
+    - 课程改革
+    source: 北京幼升小网《丰台区北京市第十中学晓月苑分校2025年「1+3」培养实验公告》 https://www.ysxiao.cn/nenglipeiyang/214910.html ; 北京市发改委《今年9月北京城南4所学校投用》
+      https://fgw.beijing.gov.cn/gzdt/fgzs/mtbdx/bzwlxw/202408/t20240828_3784185.htm
+_codes:
+- '206002'

@@ -1,0 +1,59 @@
+id: sy-007-sfdxfssyzxsy
+type: 公办普高
+canonical_name: 北京师范大学附属实验中学顺义学校
+short_name: 师范大学附属实验中学顺义学校
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市顺义区北京师范大学附属实验中学顺义学校
+  lat: 40.093179
+  lon: 116.509545
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: true
+admissions:
+- channel: 统招
+  code: '213005'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '75'
+  lines:
+    '2025':
+      score: 447
+      rank: 1126
+      total: 510
+    '2024':
+      score: 612
+      rank: 922
+      total: 670
+  lines_meta:
+    source: 2025北京顺义区中考录取分数线及区排名_北京高考在线(gaokzx); 2025北京中考昌平顺义等多区高中统招录取分数线及区排名汇总-北京中考信息网(zhongkaobj); 2025年北京中考统招录取结果及录取分数线出炉(Sohu,
+      仅佐证分数); 顺义2024高中录取分数线一览-北京小升初信息网(xscxx); 2025参考 北京市近三年各高中录取分数线和区排名变化情况汇总-北京中考信息网(zhongkaobj)
+    confidence: medium
+  pred_2026:
+    rank: 1126
+    lo: 991
+    hi: 1261
+    conf: medium
+    method: hist
+    base_year: '2025'
+rollup:
+  features:
+    style: 北师大实验中学输出资源。传承「学为人师,行为世范」校训与「求真务实」文化,依托国际空港区位探索智慧教育与跨学科融合教学;分基础/拓展/特色三层课程,配 STEAM 课程综合楼、游泳馆;「1+3」以科学教育创新与科学人才贯通培养为定位。
+    tags:
+    - 科技创新
+    - 课程改革
+    - 综合均衡
+    source: 学校官网(bsdsysy.com.cn)、百度百科
+  campus_life:
+    class_system:
+      value: 北师大实验中学与顺义区教委合作的市建区办公办完中(含国际部), 属北师大实验中学教育集团; 管理团队与骨干教师来自实验中学本部。初中招4个班、高中招4个班, 小班教学。
+      source: 学校官网 bsdsysy.com.cn 学校概况; 北京小升初网
+    boarding_detail:
+      value: 建有宿舍楼; 需寄宿学生可向学校申请, 享受寄宿生相关安排。(校区位于后沙峪, 规划72个班/3600学位)
+      source: 学校官网 学校概况; 北京本地宝
+_codes:
+- '213005'

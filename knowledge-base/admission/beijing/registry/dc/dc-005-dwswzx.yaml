@@ -1,0 +1,74 @@
+id: dc-005-dwswzx
+type: 公办普高
+canonical_name: 北京市第五十五中学
+short_name: 第五十五中学
+aliases: []
+level: 区级
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市东城区北京市第五十五中学
+  lat: 39.937664
+  lon: 116.440161
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: true
+admissions:
+- channel: 统招
+  code: '101005'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '118'
+  lines:
+    '2025':
+      score: 453
+      rank: 3195
+      total: 510
+    '2024':
+      score: 597
+      rank: 3929
+      total: 670
+  lines_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+  pred_2026:
+    rank: 3195
+    lo: 2812
+    hi: 3578
+    conf: high
+    method: hist
+    base_year: '2025'
+- channel: 统招
+  code: '101005'
+  major: '02'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '40'
+rollup:
+  features:
+    style: 北京市示范性高中,1994年成为中国大陆第一所IB国际文凭学校,国际教育(IB MYP/DP)为标志性特色,中外融合培养
+    tags:
+    - 国际方向
+    - 外语特色
+    - 综合均衡
+    source: 百度百科; 中国高校之窗 gx211.cn; 国际部官网
+  campus_life:
+    class_system:
+      value: 高中约7个班(5个普通班/2个实验班), 每班约45人; 另设国际部(IB课程, 大陆第一所IB国际文凭学校)。班数随届变动。
+      source: 北京高考在线《2025东城高中班型设置盘点》 https://www.gaokzx.com/gk/zhongkao/136567.html ; 百度百科
+      confidence: 民间整理·待核
+    boarding_detail:
+      value: 普通宿舍6人间(清真食堂楼上); 国际部公寓4人间(高层); 另有二人公寓; 男女生均有独立卫生间和浴室。(多来自国际部住宿生视角, 普通高中部可能不同)
+      source: 知乎 https://www.zhihu.com/question/404656571
+      confidence: 民间整理·待核
+    dining:
+      value: 三餐校内供应, 评价"好吃不贵"; 设自然采光地下餐厅。
+      source: 知乎 https://www.zhihu.com/question/404656571
+      confidence: 民间整理·待核
+    activities:
+      value: 社团/体育课(15:20-16:30):足球/篮球/跆拳道/滑板/瑜伽/京剧/空竹/街舞/音乐剧/词曲创作/机器人/乐队/手绘/漫画/版画/书法/国画/太极扇/国际象棋/油画等; 中国文化特色选修(书法/武术/京剧/舞龙/西班牙语等)。
+      source: 知乎 https://www.zhihu.com/question/404656571 ; jingkids https://jingkids.com/scg-bj/beijing-no-55-high-school-international-students-section/
+      confidence: 民间整理·待核
+_codes:
+- '101005'

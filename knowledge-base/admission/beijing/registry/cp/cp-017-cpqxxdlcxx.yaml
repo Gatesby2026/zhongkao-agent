@@ -1,0 +1,54 @@
+id: cp-017-cpqxxdlcxx
+type: 公办普高
+canonical_name: 北京市昌平区新学道临川学校
+short_name: 昌平区新学道临川学校
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市昌平区北京市昌平区新学道临川学校
+  lat: 40.142825
+  lon: 116.28884
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: true
+admissions:
+- channel: 统招
+  code: '214024'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '150'
+- channel: 统招
+  code: '214024'
+  major: '02'
+  major_name: 普通班
+  campus: benbu
+  plan_total: 100 (住)
+rollup:
+  features:
+    style: 2012 年创办的十二年一贯制民办校，整合江西临川教育资源，「博文、博雅、自律、自强」校训。设养成教育部、艺体部、小语种高考冲刺班；携手美国 IAA/雪城大学等开设国际项目；配 VR/3D 等功能教室。
+    tags:
+    - 外语特色
+    - 国际方向
+    - 艺术特长
+    source: 百度百科 / 教育宝 / 国际学校网
+  campus_life:
+    class_system:
+      value: 设国内部、国际部、小语种部、艺术部；国际部开设 A-Level/IB/AP；小语种部开设日语、西班牙语；小班化教学，每班不超 25–30 人；小学、初中双班主任制，高中实行全员导师制
+      source: https://www.guojixuexiao.org/school/bjxxdlc/about.html
+    boarding_detail:
+      value: 宿舍提供四人间和六人间两种；内设淋浴间和卫生间，24 小时供应热水；可住宿可走读（住宿费等细节民间整理·待核）
+      source: http://www.bjlcschool.com/
+    dining:
+      value: 国内部初高中餐厅采用自主刷卡制，小学和国际部采用包餐制；荤素搭配、多种主食
+      source: http://www.bjlcschool.com/
+    activities:
+      value: 美术、书法、舞蹈、器乐、体育、茶艺、漫研、天文、形体训练、武术、播音主持、影视表演等特长培养；定期举办志愿者活动、少年商学院、ACT 辩论队
+      source: http://www.bjlcschool.com/
+    management:
+      value: 按军事化标准实行寄宿制全封闭式管理（民间整理·待核）
+      source: https://www.jiaoyubao.cn/school/s238685.html
+_codes:
+- '214024'

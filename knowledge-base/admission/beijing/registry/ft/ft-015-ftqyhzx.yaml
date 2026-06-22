@@ -1,0 +1,55 @@
+id: ft-015-ftqyhzx
+type: 公办普高
+canonical_name: 北京市丰台区怡海中学
+short_name: 丰台区怡海中学
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市丰台区北京市丰台区怡海中学
+  lat: 39.834377
+  lon: 116.30367
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: true
+admissions:
+- channel: 统招
+  code: '206016'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '210'
+- channel: 统招
+  code: '206016'
+  major: '02'
+  major_name: 普通班
+  campus: benbu
+  plan_total: 140 住42
+rollup:
+  features:
+    style: 「1998年创建的民办可寄宿完全中学（原北京八中怡海分校，2022改现名）。高端外语特色 + 科技教育（人工智能/3D打印/创客/机器人/编程）+ 国际化（美/日/加 OSSD 课程、双语）+ 艺体教育。」
+    tags:
+    - 外语特色
+    - 国际方向
+    - 科技创新
+    - 寄宿制
+    - 艺术特长
+    source: 「百度百科 https://baike.baidu.com/item/北京市丰台区怡海中学/62287066 ；怡海教育集团官网 http://www.yihaiedu.cn/ ；学校招生简章 http://www.yh8z.com/index.php?m=content&c=index&a=show&catid=100&id=532」
+  gaokao:
+    note: 「民间·非官方」
+    detail: 「学校宣传办学多年高考升学率连年达 100%、重本率连续 85% 以上。系学校自述/招生口径，非官方权威发布，仅供参考。」
+    source: 「怡海教育集团 http://www.yihaiedu.cn/ ；学校招生简章 http://www.yh8z.com/」
+  campus_life:
+    school_code: '206016'
+    boarding_detail:
+      value: 民办寄宿校。注意：可查到的「3 人间、独立卫浴、阿姨打扫」描述主要见于国际部介绍，普高部住宿规格请向学校二次核实。
+      source: jingkids.com（北京国际学校指南，描述对应怡海国际部）+ 学校官网 yh8z.com（民间整理·待核，普高部规格未确认）
+    dining:
+      value: 餐厅饭菜品种多样、自由选择、按班就餐；刷卡用餐、每周一更新食谱，提供中餐/西餐/甜点/水果等。
+      source: 学校官网/公众号转载 yh8z.com（民间整理·待核）
+    management:
+      value: 要求学生在守时、守纪、平等、尊重的基础上学习生活。
+      source: 学校官网 yh8z.com（民间整理·待核）
+_codes:
+- '206016'

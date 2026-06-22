@@ -1,0 +1,68 @@
+id: fs-010-sdsfdxfsfsxx
+type: 公办普高
+canonical_name: 首都师范大学附属房山学校
+short_name: 首都师范大学附属房山学校
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市房山区首都师范大学附属房山学校
+  lat: 39.737284
+  lon: 116.147067
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: true
+admissions:
+- channel: 统招
+  code: '211011'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '314'
+  lines:
+    '2025':
+      score: 387
+      rank: 3269
+      total: 510
+    '2024':
+      score: 539
+      rank: 3188
+      total: 670
+  lines_meta:
+    source: 北京高考在线 gaokzx《2025北京房山区中考录取分数线及区排名》(首师附房山学校); 北京中考信息网 zhongkaobj《近三年各高中录取分数线和区排名变化情况汇总》(首师大附房山学校)
+    confidence: low
+  pred_2026:
+    rank: 3269
+    lo: 2877
+    hi: 3661
+    conf: low
+    method: hist
+    base_year: '2025'
+rollup:
+  features:
+    style: 首师大附属、办学 40 余年, 高考历年区内名列前茅; 以「求是」核心价值观、「活力教育」为中心, 培养「会学习、会生活、有旺盛生命力的人」; 重视科技文体, 被评为北京市科技教育示范校/北京市中小学科普示范校
+    tags:
+    - 科技创新
+    - 综合均衡
+    source: 百度百科(首都师范大学附属房山中学); 房山区政府网 (bjfsh.gov.cn); 上哪学 (shangnaxue.net)
+  gaokao:
+    note: 民间·非官方
+    summary: 据公开介绍, 高考历年在房山区名列前茅, 有学生考入清华、北大等重点院校, 历年大专以上升学率 90% 以上。数据未经官方核实, 仅供参考。
+    source: 百度百科(首都师范大学附属房山中学)
+  campus_life:
+    management:
+      value: 「一校两址」的九年一贯、十二年一体学校(2019 年 9 月竹园街校区启用);以「活力教育」为办学特色,培养「品行好、身体棒、基础实、能力强、特长显、视野阔」的活力少年。
+      source: 房山区教委公开页 https://www.bjfsh.gov.cn/zwgk/qjw/ghjh_412/ysjs_442/second/2024ys/202402/t20240226_40073071.shtml ；百度百科「首都师范大学附属房山中学」
+        https://baike.baidu.com/item/首都师范大学附属房山中学/9218136
+      confidence: medium
+    boarding_detail:
+      value: 住宿生近 800 人(2019 年前后规模)。
+      source: 百度百科「首都师范大学附属房山中学」(经搜索摘要) https://baike.baidu.com/item/首都师范大学附属房山中学/9218136
+      confidence: medium
+    activities:
+      value: 开设全科阅读、科技综合、艺术特长、运动拓展、情商培育、主题游学六大类主题课程,并设每日全员课后服务课程(阅读、艺术、体育、科技、学科素养提升)。
+      source: 百度百科「首都师范大学附属房山中学」(经搜索摘要) https://baike.baidu.com/item/首都师范大学附属房山中学/9218136
+      confidence: medium
+_codes:
+- '211011'

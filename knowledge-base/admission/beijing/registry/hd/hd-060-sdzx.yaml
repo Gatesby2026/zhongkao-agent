@@ -1,0 +1,52 @@
+id: hd-060-sdzx
+type: 公办普高
+canonical_name: 北京市师达中学
+short_name: 师达中学
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市海淀区北京市师达中学
+  lat: 39.969505
+  lon: 116.228246
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: true
+admissions:
+- channel: 统招
+  code: '208060'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: 180 120
+- channel: 统招
+  code: '208060'
+  major: '02'
+  major_name: 普通班
+  campus: benbu
+  plan_total: 15 (住)
+rollup:
+  features:
+    style: 创办于2001年的全寄宿制民办完全中学，半军事化封闭管理；秉持「一个不放弃」理念、教师承担晚自习答疑；以轮滑为体育特色，每天90分钟锻炼，16个学生社团
+    tags:
+    - 寄宿制
+    - 体育特长
+    - 综合均衡
+    source: 百度百科;中国教育在线 eol.cn
+  gaokao:
+    note: 民间·非官方
+    '2024': 本科录取率多年稳定在90%左右；2019届文科本科上线率100%，2020届本科上线率95.58%（网传）
+    source: https://baike.baidu.com/item/北京市师达中学/1565743
+  campus_life:
+    class_system: 民间整理·待核：寄宿制民办完全中学（全寄宿）。
+    schedule: 民间整理·待核：作息规律——约6:00起床、6:00-6:30洗漱与宿舍值日、6:40-7:00跑操、7:00-7:30早饭、7:40-8:05早读；每周回家一次。
+    management: 民间整理·待核：以军事化/严格管理著称，禁带零食饮料/手机/电子设备，发型服饰须合规；吸烟/饮酒/上网吧/异性过密交往/旷课/私自离校为『行为高压线』。
+    boarding_detail: 民间整理·待核：男女生各一栋独立5层宿舍楼、紧邻食堂，阳面8人间、阴面6人间均带阳台，中央空调。
+    dining: 民间整理·待核：半自助式，每餐四菜、每日不同，食堂获市学生营养餐先进单位、卫生A级单位。
+    activities: 民间整理·待核：16个学生社团，办风筝节/科技节/艺术节/体育节/读书节/民族运动会等。
+    voices: 民间整理·待核：管理规范严格、校风纯正（百度百科/家长社区）；适合需要外部约束作息的学生。
+    source: 百度百科 https://baike.baidu.com/item/北京市师达中学/1565743 ; 北京小升初网(住宿环境) https://www.xschu.com/xiaoshengchu/27/25511.html
+      ; 北京奥数网(军事化管理) https://m.aoshu.com/bj/e/20180111/5a56cd12ea81a_2.shtml
+_codes:
+- '208060'

@@ -1,0 +1,53 @@
+id: ft-021-jyxyfsftsyxx
+type: 公办普高
+canonical_name: 北京教育学院附属丰台实验学校
+short_name: 教育学院附属丰台实验学校
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市丰台区北京教育学院附属丰台实验学校
+  lat: 39.886584
+  lon: 116.26123
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '206024'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '62'
+  lines:
+    '2025':
+      score: 422
+      rank: 2311
+      total: 510
+    '2024':
+      score: 584
+      rank: 2687
+      total: 670
+  lines_meta:
+    source: '2025: 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html) + 北京高考在线(https://www.gaokzx.com/gk/zhongkao/144859.html);
+      2024: 北京高考在线(https://www.gaokzx.com/gk/zhongkao/126166.html) + 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/202410212412.html)'
+    confidence: medium
+  pred_2026:
+    rank: 2311
+    lo: 2034
+    hi: 2588
+    conf: medium
+    method: hist
+    base_year: '2025'
+rollup:
+  features:
+    style: 「「三元全息」课程体系（个人与健康/社会与人文/自然与科学）。科技教育特色：八大科技实验室、「知法行创」科技教学范式、丰台区中小学科技教育示范校；北京教育学院34位教授学术委员会高端引领教师发展。」
+    tags:
+    - 科技创新
+    - 课程改革
+    - 综合均衡
+    source: 「央广网名校风采 https://edu.cnr.cn/eduzt/2023qgjxsxtyr/mxfc/20231211/t20231211_526515467.shtml ；学校简介 https://cms.ftedu.cn/eportal/ui?pageId=714759
+      ；中国青年网 https://edu.youth.cn/jyzx/jyxw/201812/t20181226_11826344.htm」
+_codes:
+- '206024'

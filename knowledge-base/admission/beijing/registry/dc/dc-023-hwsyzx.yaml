@@ -1,0 +1,56 @@
+id: dc-023-hwsyzx
+type: 公办普高
+canonical_name: 北京汇文实验中学
+short_name: 汇文实验中学
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市东城区北京汇文实验中学
+  lat: 39.902315
+  lon: 116.420466
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '201011'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '210'
+rollup:
+  features:
+    style: 2016年加入北京汇文中学教育集团并增名,与汇文中学一体化管理,小班精品办学,开设国学、领导力等20余门选修课
+    tags:
+    - 综合均衡
+    - 课程改革
+    source: 百度百科/维基百科/北京中考信息网
+  campus_life:
+    class_system:
+      value: 2024级高一约5个班、每班40人左右; 没有分班考试。班数随届变动。
+      source: 中考信息网(明确标"汇文实验中学") https://www.zhongkaobj.cn/zhongkao/zxdt/2025041110377.html
+      confidence: 民间整理·待核
+    schedule:
+      value: 高一无晚自习, 一般17:00左右放学; 每周有科目小测(主要在早自习)。
+      source: 中考信息网 https://www.zhongkaobj.cn/zhongkao/zxdt/2025041110377.html
+      confidence: 民间整理·待核
+    management:
+      value: 2023年起由汇文中学全面统一管理(教学文化/师资/管理制度/教学资源统一, 仅上课地址不同)。
+      source: 中考信息网 https://www.zhongkaobj.cn/zhongkao/zxdt/2025041110377.html
+      confidence: 民间整理·待核
+    boarding_detail:
+      value: 据中考信息网专文"该校有住宿"。注:另有民间/百科结果称"无住宿", 疑为汇文中学(本部)信息混入, 待核。
+      source: 中考信息网 https://www.zhongkaobj.cn/zhongkao/zxdt/2025041110377.html
+      confidence: 民间整理·待核
+    dining:
+      value: 有"平安云厨"线上订饭系统, 菜品丰富。注:另有民间结果称"食堂只有三个窗口/只提供午餐", 疑混入本部信息, 待核。
+      source: 中考信息网 https://www.zhongkaobj.cn/zhongkao/zxdt/2025041110377.html
+      confidence: 民间整理·待核
+    activities:
+      value: 健身社、羽毛球社、篮球社、动漫社、模型社等; 举办运动会、篮球赛、合唱比赛, 组织研学。
+      source: 中考信息网 https://www.zhongkaobj.cn/zhongkao/zxdt/2025041110377.html ; 知乎 https://zhuanlan.zhihu.com/p/539978441
+      confidence: 民间整理·待核
+_codes:
+- '201011'

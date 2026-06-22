@@ -1,0 +1,69 @@
+id: fs-012-sdsfdxfszxsy
+type: 公办普高
+canonical_name: 首都师范大学附属中学实验学校
+short_name: 首都师范大学附属中学实验学校
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市房山区首都师范大学附属中学实验学校
+  lat: 39.77423
+  lon: 116.191135
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: true
+admissions:
+- channel: 统招
+  code: '211013'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '20'
+  lines:
+    '2025':
+      score: 440
+      rank: 1323
+      total: 510
+    '2024':
+      score: 591
+      rank: 1645
+      total: 670
+  lines_meta:
+    source: 北京高考在线 gaokzx《2025北京房山区中考录取分数线及区排名》(首师附实验学校); 北京中考信息网 zhongkaobj《2025北京中考各分段择校指南》(440-449 区间含首师附实验); 北京中考信息网 zhongkaobj《近三年各高中录取分数线和区排名变化情况汇总》(首师附房山实验学校)
+    confidence: low
+  pred_2026:
+    rank: 1323
+    lo: 1164
+    hi: 1482
+    conf: low
+    method: hist
+    base_year: '2025'
+rollup:
+  features:
+    style: 房山区教委与首师大附中联合创办的公办校(含高中国际部), 与首师大附中「一个法人、一体化管理」; 聚焦「贯通+实验」特色, 建「一核三维」成达课程体系, 设五大类 26 门选修; 北京 2022 冬奥/冬残奥奥林匹克教育示范校,
+      全国青少年校园篮球/足球特色学校
+    tags:
+    - 国际方向
+    - 体育特长
+    - 课程改革
+    source: 百度百科; 房山区政府网 (bjfsh.gov.cn)
+  campus_life:
+    management:
+      value: 房山区教委与首师大附中联合创办的小学—初中—高中十二年一贯制学校(长阳镇),2018 年建成一期、2022 年开设高中部;传承「正志笃行、成德达才」教育思想,校训「自觉、勤奋、求实、创新」。
+      source: 百度百科「首都师范大学附属中学实验学校」 https://baike.baidu.com/item/首都师范大学附属中学实验学校/24272157 ；房山区教委公开页 https://www.bjfsh.gov.cn/zwgk/qjw/ghjh_412/ysjs_442/second/2022nys/202206/t20220617_40047026.shtml
+      confidence: medium
+    class_system:
+      value: 设「四修课程」体系——基础通修、兴趣选修、专业精修、自主研修;开设语言、体育、艺术、科技、传统文化五大类 26 门选修课程。
+      source: 百度百科「首都师范大学附属中学实验学校」 https://baike.baidu.com/item/首都师范大学附属中学实验学校/24272157
+      confidence: medium
+    activities:
+      value: 设足球队、篮球队、田径队、合唱队、舞蹈队等学生社团。
+      source: 百度百科「首都师范大学附属中学实验学校」 https://baike.baidu.com/item/首都师范大学附属中学实验学校/24272157
+      confidence: medium
+    boarding_detail:
+      value: 普通班招生计划注明「考生入学后可申请住宿」。
+      source: fangshan_admission_codes.json note(bjeea 2025 官方统招计划)
+      confidence: medium
+_codes:
+- '211013'

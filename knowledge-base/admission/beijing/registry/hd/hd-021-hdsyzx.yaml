@@ -1,0 +1,59 @@
+id: hd-021-hdsyzx
+type: 公办普高
+canonical_name: 北京市海淀实验中学
+short_name: 海淀实验中学
+aliases: []
+level: 区级
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市海淀区北京市海淀实验中学(东北门)
+  lat: 39.946068
+  lon: 116.298309
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '208013'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '162'
+  lines:
+    '2025':
+      score: 452
+      rank: 8851
+      total: 510
+    '2024':
+      score: 603
+      rank: 10867
+      total: 670
+  lines_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+  pred_2026:
+    rank: 8851
+    lo: 7789
+    hi: 9913
+    conf: high
+    method: hist
+    base_year: '2025'
+rollup:
+  features:
+    style: 由阜成路中学与122中学合并的大型完全中学，海淀区优质高中；设钱学森班（科技/人文）、国学实验班、统筹班及「1+3」项目，钱学森班含学科竞赛/艺术素养/实验创新/航天游学，办「三节一活动」与走进钱馆纪念活动
+    tags:
+    - 科技创新
+    - 文科人文
+    - 课程改革
+    source: 百度百科 baike.baidu.com/item/北京市海淀实验中学;学校官网 hdsyzx.bjhdedu.cn/xxgk/xxjj;北京中考信息网 zhongkaobj.cn
+  campus_life:
+    class_system: 民间整理·待核：高一不分班考、按中考成绩分班，优秀者入『钱学森班』；高二按高一成绩正式分班；设理科重点班『钱学森班』。
+    boarding_detail: 民间整理·待核：宿舍4-6人间上下铺；本区学生基本无住宿，钱学森班与统筹三学生可申请住宿。
+    dining: 民间整理·待核：餐厅提供三餐，家委会代表进校品尝，家长反馈味道好、营养搭配合理。
+    activities: 民间整理·待核：社团较丰富（弦乐社/戏剧社/舞蹈团/民乐团/合唱团/管乐团/篮球队/游泳队/单片机科技社等），每年办科技节/艺术节及研学（如高一西安研学）。
+    voices: 民间整理·待核：社团种类多、活动有特色，老师认真负责、班主任不过度管束，学习氛围不错（知乎/北京中考信息网）。
+    source: 知乎(就读体验) https://www.zhihu.com/question/29065820 ; 北京中考信息网(校情) https://www.zhongkaobj.cn/cjpm/gaokaochengji/202412267181.html
+      ; 海淀实验中学官网 https://hdsyzx.bjhdedu.cn/
+_codes:
+- '208013'

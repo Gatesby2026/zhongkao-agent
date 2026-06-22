@@ -1,0 +1,60 @@
+id: sy-003-syqyzdyzx
+type: 公办普高
+canonical_name: 北京市顺义区杨镇第一中学
+short_name: 顺义区杨镇第一中学
+aliases: []
+level: 优质高中（示范/特色）
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市顺义区北京市顺义区杨镇第一中学(南门)
+  lat: 40.152438
+  lon: 116.817007
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: true
+admissions:
+- channel: 统招
+  code: '113003'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '148'
+  lines:
+    '2024':
+      score: 596
+      rank: 1472
+      total: 670
+  lines_meta:
+    source: 顺义2024高中录取分数线一览-北京小升初信息网(xscxx)
+    confidence: low
+  pred_2026:
+    rank: 1472
+    lo: 1295
+    hi: 1649
+    conf: low
+    method: hist
+    base_year: '2024'
+rollup:
+  features:
+    style: 积淀「和、实、搏、爱」校风。竞技体育是办学亮点(1978 年北京市田径传统校,篮球/乒乓/田径强项);民族团结进步教育为特色,是内地新疆高中班规模最大的学校之一;开设智能机器人、航空科技等百余门选修课,科技教育示范校。
+    tags:
+    - 体育特长
+    - 科技创新
+    - 综合均衡
+    source: 百度百科、阳光高考(chsi)、学校简介(gx211)
+  campus_life:
+    boarding_detail:
+      value: '大型寄宿制学校(顺义杨镇, 距市中心约50公里), 95%以上学生寄宿; 占地约53万㎡。因寄宿、校园大, 学生多步行通行。(注: 该校现挂牌『北京市十一学校顺义学校』)'
+      source: 杨镇一中维基百科; 知乎『在杨镇一中就读体验』问题; 北京小升初网
+    management:
+      value: 加强制度建设同时注重情感管理、人文管理; 发挥共青团、学生会等组织作用, 对寄宿生实行自主管理。
+      source: 高校之窗 杨镇一中学校简介 gx211.cn
+    dining:
+      value: 号称师生约4000人, 设两个双层食堂; 午餐高峰时段较紧张。
+      source: 知乎『在杨镇一中就读体验』问题(民间)
+    voices:
+      value: 校园环境优美, 秋季银杏景观、初三楼爬山虎『绿色瀑布』为学生印象点。【民间整理·待核】
+      source: 知乎『在杨镇一中就读体验』问题(民间)
+_codes:
+- '113003'

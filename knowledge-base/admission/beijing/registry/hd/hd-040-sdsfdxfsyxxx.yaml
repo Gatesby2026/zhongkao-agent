@@ -1,0 +1,56 @@
+id: hd-040-sdsfdxfsyxxx
+type: 公办普高
+canonical_name: 首都师范大学附属育新学校
+short_name: 首都师范大学附属育新学校
+aliases:
+- 首师附育新学校
+level: 区级（首师大附中体系）
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市海淀区首都师范大学
+  lat: 39.930146
+  lon: 116.305766
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '208036'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '144'
+  lines:
+    '2025':
+      score: 453
+      rank: 8654
+      total: 510
+    '2024':
+      score: 601
+      rank: 11195
+      total: 670
+  lines_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+  pred_2026:
+    rank: 8654
+    lo: 7616
+    hi: 9692
+    conf: high
+    method: hist
+    base_year: '2025'
+rollup:
+  features:
+    style: 由北京市教委、首都师范大学党委、海淀区教委共管的十二年制公办校（72个教学班、3000余生），校训「勤奋好学和谐致美」、育人宗旨「先成人后成才」；深化「551」思维课堂、跨学科与项目式学习，建「三层六域贯通」课程体系，以网球为特色（贯通12年课程，育世界中学生运动会冠军）
+    tags:
+    - 体育特长
+    - 课程改革
+    - 综合均衡
+    source: 百度百科 baike.baidu.com/item/首都师范大学附属育新学校;北京中考信息网 zhongkaobj.cn/zhiyuan/gaokaochengji/202412267187.html
+  gaokao:
+    note: 民间·非官方
+    概况: 中考成绩曾连续两年位列海淀区总平均分第一；高考文科多次进入海淀区前七名，理科本科上线率约98%（网传·年份不详）
+    source: https://www.zhongkaobj.cn/zhiyuan/gaokaochengji/202412267187.html
+_codes:
+- '208036'

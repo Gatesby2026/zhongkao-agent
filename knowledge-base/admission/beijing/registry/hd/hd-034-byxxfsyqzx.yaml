@@ -1,0 +1,52 @@
+id: hd-034-byxxfsyqzx
+type: 公办普高
+canonical_name: 北京市八一学校附属玉泉中学
+short_name: 八一学校附属玉泉中学
+aliases:
+- 八一玉泉中学
+level: 区级（八一体系）
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市海淀区北京市八一学校附属玉泉中学
+  lat: 40.00473
+  lon: 116.262558
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '208030'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '190'
+  lines:
+    '2025':
+      score: 425
+      rank: 12764
+      total: 510
+    '2024':
+      score: 567
+      rank: 15297
+      total: 670
+  lines_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+  pred_2026:
+    rank: 12764
+    lo: 11232
+    hi: 14296
+    conf: high
+    method: hist
+    base_year: '2025'
+rollup:
+  features:
+    style: 北京市八一学校教育集团成员校（前身青龙桥中学/六十七中，2015年八一学校管辖更名），以「上善文化」为定位、提八大文化基因；探索航天科技特色育人，设航空国防实验班（飞机仪表驾驶/无人机/飞行模拟/「逐梦深蓝」国防科技活动）
+    tags:
+    - 科技创新
+    - 综合均衡
+    - 课程改革
+    source: 维基百科;北京中考信息网 zhongkaobj.cn/zhongkao/zxdt/202412257133.html;北京高考在线 gaokzx.com/gk/zhiyuan/125958.html
+_codes:
+- '208030'

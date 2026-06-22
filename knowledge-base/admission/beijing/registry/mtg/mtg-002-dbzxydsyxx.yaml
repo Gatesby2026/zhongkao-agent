@@ -1,0 +1,35 @@
+id: mtg-002-dbzxydsyxx
+type: 公办普高
+canonical_name: 北京市第八中学永定实验学校
+short_name: 第八中学永定实验学校
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市门头沟区门头沟北京市第八中学(京西校区)永定
+  lat: 39.904381
+  lon: 116.120407
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '209001'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '89'
+rollup:
+  features:
+    style: 门头沟区教委与北京市第八中学合作举办的国有公办创新实验学校，十二年一贯制；秉持“生命教育”理念，“初中品牌化、高中特色化、整体优质化”办学模式，执行与北京八中相同培养方案。
+    tags:
+    - 体育特长
+    - 艺术特长
+    - 综合均衡
+    detail: 全国篮球特色学校、全国足球特色学校、全国国防教育示范学校、北京市体育传统项目学校、北京市艺术教育特色学校；“分层教学、分类培养、个性教育”小班化精细教学。
+    source:
+    - http://www.mtg.bjedu.cn/bzydsyxx/xxgk.htm
+    - https://www.sohu.com/a/897082772_121956425
+_codes:
+- '209001'

@@ -1,0 +1,56 @@
+id: hd-036-zgnydxfszx
+type: 公办普高
+canonical_name: 中国农业大学附属中学
+short_name: 中国农业大学附属中学
+aliases:
+- 农大附中
+level: 区级
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市海淀区中国农业大学附属中学
+  lat: 40.02275
+  lon: 116.275108
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '208032'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '152'
+  lines:
+    '2025':
+      score: 432
+      rank: 11989
+      total: 510
+    '2024':
+      score: 573
+      rank: 14765
+      total: 670
+  lines_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+  pred_2026:
+    rank: 11989
+    lo: 10550
+    hi: 13428
+    conf: high
+    method: hist
+    base_year: '2025'
+rollup:
+  features:
+    style: 海淀区教委所属完全中学（创建于1960年）；构建「四维八系」课程体系，形成民族团结教育、科技创新教育、体育艺术教育、国际理解教育四大特色；北京市科技示范校、民族团结教育示范学校、体育传统项目学校
+    tags:
+    - 综合均衡
+    - 科技创新
+    - 体育特长
+    source: 北京中考信息网 zhongkaobj.cn;百度百科
+  gaokao:
+    note: 民间·非官方
+    '2024': 本科率约90%、一本率约40%（网传）
+    source: https://www.zhongkaobj.cn/zhongkao/zxdt/202412257096.html
+_codes:
+- '208032'

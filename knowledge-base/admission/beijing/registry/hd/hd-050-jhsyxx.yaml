@@ -1,0 +1,54 @@
+id: hd-050-jhsyxx
+type: 公办普高
+canonical_name: 北京市建华实验学校
+short_name: 建华实验学校
+aliases: []
+level: 民办
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市海淀区北京市建华实验学校
+  lat: 40.067318
+  lon: 116.240564
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '208048'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '72'
+  lines:
+    '2025':
+      score: 474
+      rank: 3799
+      total: 510
+    '2024':
+      score: 626
+      rank: 6409
+      total: 670
+  lines_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+  pred_2026:
+    rank: 3799
+    lo: 3343
+    hi: 4255
+    conf: high
+    method: hist
+    base_year: '2025'
+rollup:
+  features:
+    style: 创办于1993年，原十二年一贯制民办校、2022年转为海淀区属公办、十一学校集团盟校；李金初校长倡「人生中心教育」，构建「四位一体」全空间课程体系，全国百强特色示范学校
+    tags:
+    - 课程改革
+    - 综合均衡
+    source: 北京中考信息网 zhongkaobj.cn;百度百科
+  gaokao:
+    note: 民间·非官方
+    '2024': 中招宣传称100%达特招线、平均分634分（超重点线111分）、600分以上占84.4%（网传）
+    source: https://www.zhongkaobj.cn/lqfsx/hdq/202412267222.html
+_codes:
+- '208048'

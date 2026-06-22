@@ -1,0 +1,44 @@
+id: cp-015-cpqxdfgjzx
+type: 公办普高
+canonical_name: 北京市昌平区新东方高级中学
+short_name: 昌平区新东方高级中学
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市昌平区
+  lat: 40.220952
+  lon: 116.231034
+  confidence: mid
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '214021'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '42'
+- channel: 统招
+  code: '214021'
+  major: '02'
+  major_name: 普通班
+  campus: benbu
+  plan_total: 28 (住)
+rollup:
+  features:
+    style: 新东方教育科技集团旗下民办高中，融合国内高考体系与国际课程（A-Level、AP 等），提供多元升学路径。
+    tags:
+    - 国际方向
+    - 外语特色
+    source: 学校公开介绍 / 北京本地宝 / 北京日报招生地图
+  campus_life:
+    class_system:
+      value: 小班化教学，每班 30 人以内；融合国内高考体系与国际课程（A-Level、AP 等），开设科创、艺术、体育等特色课程（招生通知整理，民间整理·待核）
+      source: https://www.lileliao.com/show/718678.html
+    management:
+      value: 实行封闭式管理，校风严谨，配备心理导师与生涯规划师（民间整理·待核）
+      source: https://www.lileliao.com/show/718678.html
+_codes:
+- '214021'

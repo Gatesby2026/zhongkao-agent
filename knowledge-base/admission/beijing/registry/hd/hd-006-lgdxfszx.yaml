@@ -1,0 +1,82 @@
+id: hd-006-lgdxfszx
+type: 公办普高
+canonical_name: 北京理工大学附属中学
+short_name: 理工大学附属中学
+aliases:
+- 理工附中
+level: 市级示范性高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市海淀区北京理工大学附属中学(东校区)
+  lat: 39.944235
+  lon: 116.310999
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '108006'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '179'
+  lines:
+    '2025':
+      score: 473
+      rank: 4033
+      total: 510
+    '2024':
+      score: 630
+      rank: 5423
+      total: 670
+  lines_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+  pred_2026:
+    rank: 4033
+    lo: 3549
+    hi: 4517
+    conf: high
+    method: hist
+    base_year: '2025'
+- channel: 统招
+  code: '108006'
+  major: '02'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '81'
+- channel: 统招
+  code: '108006'
+  major: '03'
+  major_name: 武术特长班
+  campus: benbu
+  plan_total: '46'
+- channel: 统招
+  code: '108006'
+  major: '04'
+  major_name: 理工实验班
+  campus: benbu
+  plan_total: '30'
+rollup:
+  features:
+    style: 示范性高中、K-12教育集团；文理并重、工程见长，设工程实验班（大学先修课/小班/双师英语）与国科大科学实验班，与北大/北理工/国科大2+4协同培养
+    tags:
+    - 理科见长
+    - 科技创新
+    - 课程改革
+    source: 北京中考信息网 zhongkaobj.cn;百度百科
+  gaokao:
+    note: 民间·非官方
+    '2024': 北大5人，清华1人（网传）
+    source: https://www.zhongkaobj.cn/cjpm/gaokaochengji/202412216851.html
+  campus_life:
+    class_system: 民间整理·待核：本校区高中约12个班每班约40人，1-5班普通班、6-10班实验班、11-12班重点班（编号越大越好）。
+    schedule: 民间整理·待核：约7:30到校，8:00-17:30在校。
+    boarding_detail: 民间整理·待核：南校区有住宿（以高中住宿生为主，名额紧、不太提倡）；本校区无宿舍。
+    dining: 民间整理·待核：可吃三餐，分时段，自选，一顿约18-20元。
+    activities: 民间整理·待核：社团较丰富，含『机器人』『跆拳道』等五星级社团，部分需基础，多在放学后；学校科技/艺术/体育突出（棒球、排球多次夺冠）。
+    source: 北京小升初网(南校区校情) https://www.xschu.com/zhengcezixun/73276.html ; 搜狐(名校巡礼) https://www.sohu.com/a/127611704_546078
+      ; 百度百科 https://baike.baidu.com/item/北京理工大学附属中学/455522
+_codes:
+- '108006'

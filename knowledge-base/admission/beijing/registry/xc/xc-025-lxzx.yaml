@@ -1,0 +1,55 @@
+id: xc-025-lxzx
+type: 公办普高
+canonical_name: 北京市鲁迅中学
+short_name: 鲁迅中学
+aliases: []
+level: 区级
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市西城区北京市鲁迅中学
+  lat: 39.904675
+  lon: 116.370909
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '202021'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '240'
+  lines:
+    '2025':
+      score: 425
+      rank: 8833
+      total: 510
+    '2024':
+      score: 573
+      rank: 8853
+      total: 670
+  lines_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+  pred_2026:
+    rank: 8833
+    lo: 7773
+    hi: 9893
+    conf: high
+    method: hist
+    base_year: '2025'
+rollup:
+  features:
+    style: 以「健康向上，做最好的自己」为核心；偏文科类高中，美术专业特色鲜明，试点北京市「1+3」培养模式。
+    tags:
+    - 文科人文
+    - 艺术特长
+    source: 北京小升初网/百度百科（北京市鲁迅中学）
+  campus_life:
+    class_system: 民间整理·待核：24级共设7个平行班、每班44-45人，实行平行分班；数学、英语分层教学，分为2个A班和4个B班（数学/英语成绩80分左右可进A班）；入学前会收集学生小学四、五、六年级成绩。
+    schedule: 民间整理·待核：早自习有数学每日一练；作业基本可在学校完成，即使带回家一般也不超过21:00；组织月考、期中期末，平时常有随堂单科测试。
+    activities: 民间整理·待核：话剧社、辩论社、机器人、戏剧社等特色社团，多次市级比赛获奖；开设『鲁迅文化研习』『科技创新实验』等校本课程，与北大、北师大等合作研学。
+    source: 北京小升初网 https://www.xscxx.com/chuzhong/xc/2025081211804.html ; 北京小升初(校情) https://www.xschu.com/xiaoshengchu/15/23238.html
+_codes:
+- '202021'

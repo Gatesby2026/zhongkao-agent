@@ -1,0 +1,64 @@
+id: hd-010-zgczx
+type: 公办普高
+canonical_name: 北京市中关村中学
+short_name: 中关村中学
+aliases: []
+level: 区级示范性高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市海淀区北京市中关村中学
+  lat: 39.978547
+  lon: 116.326849
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: true
+admissions:
+- channel: 统招
+  code: '108010'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '206'
+  lines:
+    '2025':
+      score: 462
+      rank: 6705
+      total: 510
+    '2024':
+      score: 618
+      rank: 8086
+      total: 670
+  lines_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+  pred_2026:
+    rank: 6705
+    lo: 5900
+    hi: 7510
+    conf: high
+    method: hist
+    base_year: '2025'
+rollup:
+  features:
+    style: 示范性高中，地处中关村科技园，科技教育见长（金鹏科技团/全国青少年科普教育基地）；设国科大实验班（与中科院国科大双导师制）
+    tags:
+    - 科技创新
+    - 课程改革
+    - 综合均衡
+    source: 百度百科;北京中考信息网 zhongkaobj.cn
+  gaokao:
+    note: 民间·非官方
+    '2024': 660分以上7人，650分以上12人，600分以上120多人，统招特招线上线率97%（网传）
+    source: https://www.zhongkaobj.cn/cjpm/gaokaochengji/202412216854.html
+  campus_life:
+    class_system: 民间整理·待核：高一第一学期行政班教学，学期末选科；设国学特色班，注重传统文化。
+    schedule: 民间整理·待核：早7:20到校，下午17:10放学（周三/周五大课间17:30放学）；手机上交老师保管。
+    boarding_detail: 民间整理·待核：可申请住宿，公寓化管理，住宿费约450元/学期。
+    dining: 民间整理·待核：食堂两层，盖饭/套餐/小炒/面点/麻辣烫/焗饭/卷饼等，并提供营养套餐。
+    activities: 民间整理·待核：60余个学生社团（含校园电视台、模联等），每年办科技节/艺术节/国际文化周。
+    voices: 民间整理·待核：管理中规中矩、师生关系融洽，学生普遍认为老师教学水平高；校园面积不大（北京中考信息网/知乎）。
+    source: 北京中考信息网(校情) https://www.zhongkaobj.cn/cjpm/gaokaochengji/202412216854.html ; 中关村中学官网 https://zgczx.bjhdedu.cn/
+      ; 知乎(就读体验) https://www.zhihu.com/question/59155384/answer/237945872
+_codes:
+- '108010'

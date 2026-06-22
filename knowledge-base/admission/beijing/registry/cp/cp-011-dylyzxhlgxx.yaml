@@ -1,0 +1,59 @@
+id: cp-011-dylyzxhlgxx
+type: 公办普高
+canonical_name: 北京市第一六一中学回龙观学校
+short_name: 第一六一中学回龙观学校
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市昌平区北京市第一六一中学回龙观学校(龙域校区)
+  lat: 40.063956
+  lon: 116.306462
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: true
+admissions:
+- channel: 统招
+  code: '214014'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '78'
+  lines:
+    '2024':
+      score: 591
+      rank: 2024
+      total: 670
+  lines_meta:
+    source: 自主选拔在线 2025 中考参考(含 2024 昌平录取线区排名); 北京中考信息网 近三年各高中录取线及区排名变化
+    confidence: medium
+  pred_2026:
+    rank: 2024
+    lo: 1781
+    hi: 2267
+    conf: medium
+    method: hist
+    base_year: '2024'
+rollup:
+  features:
+    style: 西城区与昌平区共建，西城名校一六一中学（前身北京女一中）承办，北京市示范性普通高中分校；昌平区单体建筑最大的公办校。以「人文与科技」为办学特色，传统/现代/自然相结合，育人目标「培养具有慎独品质的弘毅之士」。
+    tags:
+    - 文科人文
+    - 科技创新
+    source: 百度百科 / 学区房划片 / 北京小升初网
+  campus_life:
+    boarding_detail:
+      value: 高中部提供住宿（初中部原则上走读，特殊情况可申请）
+      source: https://www.lileliao.com/show/718646.html
+    dining:
+      value: 设有可供约 800 名学生就餐的餐厅
+      source: https://baike.baidu.com/item/北京市第一六一中学回龙观学校/50266340
+    activities:
+      value: 设有科技、艺术、体育等社团，开设丰富的选修课和社团活动（传承 161 中学「全人教育」理念）；校内有音乐排练厅、舞蹈排练厅、6 条泳道的标准 50 米泳池游泳馆、10 万册藏书图书馆
+      source: https://baike.baidu.com/item/北京市第一六一中学回龙观学校/50266340
+    management:
+      value: 实行小班化教学，关注每个学生个性发展
+      source: https://m.xqfhp.com/aid/5693
+_codes:
+- '214014'

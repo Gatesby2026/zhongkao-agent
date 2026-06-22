@@ -1,0 +1,51 @@
+id: fs-008-sdsfdxwlsyxx
+type: 公办普高
+canonical_name: 首都师范大学未来实验学校
+short_name: 首都师范大学未来实验学校
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市房山区首都师范大学未来实验学校
+  lat: 39.648912
+  lon: 116.120475
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '211005'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '102'
+  lines:
+    '2025':
+      score: 397
+      rank: 2995
+      total: 510
+  lines_meta:
+    source: 北京高考在线 gaokzx《2025北京房山区中考录取分数线及区排名》(首师大未来实验学校)
+    confidence: low
+  pred_2026:
+    rank: 2995
+    lo: 2636
+    hi: 3354
+    conf: low
+    method: hist
+    base_year: '2025'
+rollup:
+  features:
+    style: 首都师范大学直办的十二年一贯制学校, 以「思维为本的全息课堂」为教学特色, 以「引领未来教育的实践范式」为办学目标; 首师大选派执行管理团队及多名特级教师; 以未来素养构建课程体系
+    tags:
+    - 课程改革
+    source: '百度百科外公开报道: 教育头条 (edutoutiao.com); 房山区政府网 (bjfsh.gov.cn); 人民日报/中国城市报报道'
+  campus_life:
+    management:
+      value: 市建共管、首都师范大学直办的小学—初中—高中十二年一贯制学校,北京市确定的 17 所优质学校之一;高中部约 385 人;下设德育部、教学部、保障部、研究中心;推进「五位一体」全息育人体系。
+      source: 房山区教委「首都师范大学未来实验学校」2025 公开页 https://www.bjfsh.gov.cn/zwgk/qjw/ghjh_412/ysjs_442/second/2025ys/202503/t20250305_40086475.shtml
+        ；办学特色介绍 http://www.edutoutiao.com/zxx/12192.html
+      confidence: medium
+_codes:
+- '211005'

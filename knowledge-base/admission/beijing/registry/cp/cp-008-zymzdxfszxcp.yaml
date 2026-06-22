@@ -1,0 +1,36 @@
+id: cp-008-zymzdxfszxcp
+type: 公办普高
+canonical_name: 中央民族大学附属中学昌平学校
+short_name: 中央民族大学附属中学昌平学校
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市昌平区清华大学附属小学昌平学校
+  lat: 40.068336
+  lon: 116.426498
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '214010'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '30'
+rollup:
+  features:
+    style: 依托中央民族大学附中资源，秉承「各美其美，美美与共」，以「民族情怀、国际视野、创新精神」为培养目标，开设特色民族课程与国际素养课程；配智慧教室、民族艺术中心等。
+    tags:
+    - 文科人文
+    - 国际方向
+    - 科技创新
+    source: 百度百科 / 中央民族大学附中官网
+  campus_life:
+    management:
+      value: 民大附中实行「全寄宿、全封闭式管理」（该表述来自学校集团/总校层面，昌平学校为民大附中教育集团北京分校之一，分校具体执行细节未单独核实，集团整理·待核）
+      source: https://mdfz.muc.edu.cn/xxjj/fzgk.htm
+_codes:
+- '214010'

@@ -1,0 +1,71 @@
+id: dx-011-sljyzx
+type: 公办普高
+canonical_name: 北京市私立君谊中学
+short_name: 私立君谊中学
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市大兴区君谊中学(南门)
+  lat: 39.773243
+  lon: 116.323555
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: true
+admissions:
+- channel: 统招
+  code: '215011'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: 60 (住)
+- channel: 统招
+  code: '215011'
+  major: '02'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '70'
+- channel: 统招
+  code: '215011'
+  major: '03'
+  major_name: 普通班
+  campus: benbu
+  plan_total: 48 (住)
+- channel: 统招
+  code: '215011'
+  major: '04'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '92'
+rollup:
+  features:
+    style: 1993 年创办的全寄宿制民办完全中学，位于西红门。君谊·星星教育集团成员，融合中西教育理念，开设美术、篮球、小语种等特色课程；1995 年设国际部，与美国斯特恩斯学校、加拿大新斯科舍省教育局合作，提供出国留学路径（高一可获加方中学学籍）。
+    tags:
+    - 寄宿制
+    - 国际方向
+    - 艺术特长
+    - 体育特长
+    source: 百度百科『北京市私立君谊中学』、junyiedu.com 官网、唯寻国际教育
+  campus_life:
+    _note: 1993成立的民办高级中学(北京最早民办高中之一);位于南五环兴业大街与香园路交接处
+    class_system:
+      value: 开设普通高中班、美术班、篮球班及小语种班;提供高考美术、高考传媒、高考篮球等个性化方向
+      source: http://www.junyi.org/ ; https://baike.baidu.com/item/北京市私立君谊中学/435510
+    schedule:
+      value: 学生从起床到熄灯就寝均有专职教师负责管理(具体到校/放学钟点未查到)
+      source: https://baike.baidu.com/item/北京市私立君谊中学/435510（百科·待核）
+    management:
+      value: 寄宿制准军事化管理,培养自主能力;配专职班主任、专职生活管理教师,对学生全时控制管理
+      source: https://baike.baidu.com/item/北京市私立君谊中学/435510（百科·待核）
+    boarding_detail:
+      value: 全部学生寄宿制(特殊情况可申请走读);宿舍敞亮、居住舒适安全。具体几人间未查到
+      source: https://baike.baidu.com/item/北京市私立君谊中学/435510（百科·待核）
+    dining:
+      value: 食堂清洁,营养配餐种类丰富
+      source: https://baike.baidu.com/item/北京市私立君谊中学/435510（百科·待核）
+    activities:
+      value: 标准足球场、室内篮球馆等体育设施;篮球为特色培养方向
+      source: http://www.junyi.org/ ; https://baike.baidu.com/item/北京市私立君谊中学/435510
+_codes:
+- '215011'

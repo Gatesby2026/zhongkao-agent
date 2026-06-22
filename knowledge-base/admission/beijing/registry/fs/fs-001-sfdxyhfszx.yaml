@@ -1,0 +1,46 @@
+id: fs-001-sfdxyhfszx
+type: 公办普高
+canonical_name: 北京师范大学燕化附属中学
+short_name: 师范大学燕化附属中学
+aliases: []
+level: 优质高中（示范/特色）
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市房山区北京师范大学燕化附属中学
+  lat: 39.721142
+  lon: 115.967796
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '110001'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '6'
+- channel: 统招
+  code: '110001'
+  major: '02'
+  major_name: 石化科技班
+  campus: benbu
+  plan_total: '30'
+rollup:
+  features:
+    style: 依托燕山石化资源, 以「希望教育」为理念, 建设石化科技专题课程群, 培养石化科技特色创新人才; 设石化科技实验班
+    tags:
+    - 科技创新
+    - 课程改革
+    source: 百度百科; 北京师范大学教育学部参访报道 (fe.bnu.edu.cn); 教育与可持续发展智库 (easdt.com)
+  campus_life:
+    class_system:
+      value: 设普通班与石化科技班(石化科技班依托燕山石化资源开展创新人才培养,构建科技专题课程群);设西藏内高班(民族团结教育示范校)。
+      source: 百度百科「北京师范大学燕化附属中学」 https://baike.baidu.com/item/北京师范大学燕化附属中学/3728151
+      confidence: medium
+    activities:
+      value: 依托燕山石化资源开展科技创新人才培养,建有科技专题课程群。
+      source: 百度百科「北京师范大学燕化附属中学」 https://baike.baidu.com/item/北京师范大学燕化附属中学/3728151
+      confidence: medium
+_codes:
+- '110001'

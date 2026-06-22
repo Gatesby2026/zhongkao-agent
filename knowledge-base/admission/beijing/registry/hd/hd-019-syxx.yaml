@@ -1,0 +1,51 @@
+id: hd-019-syxx
+type: 公办普高
+canonical_name: 北京实验学校
+short_name: 实验学校
+aliases: []
+level: 区级
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市海淀区北京实验学校(东门)
+  lat: 39.926501
+  lon: 116.328319
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '208011'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '184'
+  lines:
+    '2025':
+      score: 447
+      rank: 9745
+      total: 510
+    '2024':
+      score: 597
+      rank: 11782
+      total: 670
+  lines_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+  pred_2026:
+    rank: 9745
+    lo: 8576
+    hi: 10914
+    conf: high
+    method: hist
+    base_year: '2025'
+rollup:
+  features:
+    style: 百年老校（前身1920年熊希龄创办的香山慈幼院），幼小初高十五年一体化综合改革实验校，倡「魅力教育」，全员导师制；金帆管乐团、银帆京剧团著名，北京市游泳传统校；2025年加盟十一学校教育集团
+    tags:
+    - 课程改革
+    - 艺术特长
+    - 体育特长
+    source: 百度百科（北京实验学校·海淀）;魅力君亮 meilijunliang.com
+_codes:
+- '208011'

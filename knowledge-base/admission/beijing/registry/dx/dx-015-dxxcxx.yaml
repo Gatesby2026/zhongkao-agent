@@ -1,0 +1,59 @@
+id: dx-015-dxxcxx
+type: 公办普高
+canonical_name: 北京大兴熙诚学校
+short_name: 大兴熙诚学校
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市大兴区北京大兴熙诚学校
+  lat: 39.652582
+  lon: 116.640549
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: true
+admissions:
+- channel: 统招
+  code: '215018'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '84'
+- channel: 统招
+  code: '215018'
+  major: '02'
+  major_name: 普通班
+  campus: benbu
+  plan_total: 56 (住)
+rollup:
+  features:
+    style: 北京金融街资本运营集团投资的『政府支持、企业运作、教育家办学』在地国际化特色高中（通过 Cognia 认证）。以『科学+』创新人才培养模式，依托新技术、新材料、人工智能、航天等前沿产业资源，每周组织学生进入生物医药、航天航空、芯片制造等高科技企业；以
+      5G+智慧教育构建未来课堂，关注学生个性发展。
+    tags:
+    - 科技创新
+    - 国际方向
+    - 课程改革
+    source: 百度百科/国际教育在线『北京大兴熙诚学校』、cri.cn 校长专访、xichengacademy.cn 官网
+  campus_life:
+    _note: 西城区国资委旗下北京金融街资本运营集团投资,创校校长为原北京三十五中校长朱建民,2022.9开学,地址大兴采育镇福源路;学费各源不一致(15万/19万均出现,未采用)
+    class_system:
+      value: 国际化方向,三大课程群『核心学术课程/精神品格成长课程/专业方向探索课程』;含标化课程(托福雅思、AP/A-Level、SAT/ACT)与国际化特色课程
+      source: https://www.xichengacademy.cn/ ; https://m.ieduglobe.com/xuexiao/xichengacademy/（聚合站·民间整理·待核）
+    management:
+      value: 全寄宿制,实行双导师制(师生比约1:2),双导师跟踪学业、心理、生涯与升学;家庭式陪伴+导师监护渗透寄宿环节
+      source: https://www.ieduonline.cn/about/xichengacademy ; https://m.ieduonline.cn/school/detail?id=19&tab=third（聚合站/部分自述·待核）
+    boarding_detail:
+      value: 全寄宿制,建筑面积近2万㎡,可满足约460名学生寄宿。宿舍几人间未查到
+      source: https://baike.baidu.com/item/北京大兴熙诚学校/61720150 ; https://m.ieduonline.cn/school/detail?id=19&tab=third（百科/聚合站·待核）
+    dining:
+      value: 设独立食堂,早中晚三餐,自助餐形式(另有聚合站称『餐费120元/天』,单一来源·待核)
+      source: https://m.ieduglobe.com/xuexiao/xichengacademy/ ; https://m.ieduonline.cn/school/detail?id=19&tab=third（民间整理·待核）
+    activities:
+      value: 开设阅读活动/读书会、演讲课程、跨学科STEAM课程、模拟联合国等社团、专项运动队训练(参与国内外竞赛)、健康教育/体能测试/户外拓展;强调艺术与创新课堂、体育与户外拓展课程
+      source: https://www.xichengacademy.cn/6 ; https://www.xichengacademy.cn/（官网）
+    voices:
+      value: 知乎讨论称『拓展课程多、艺术与体育活动多、对申请大学有帮助』『外教比例高、平时上课老师一多半是外教』(原页403未直读,引自搜索摘要)
+      source: https://www.zhihu.com/question/595289476（知乎·民间整理·待核）
+_codes:
+- '215018'

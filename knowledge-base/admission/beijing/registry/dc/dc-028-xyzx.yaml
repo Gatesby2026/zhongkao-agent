@@ -1,0 +1,55 @@
+id: dc-028-xyzx
+type: 公办普高
+canonical_name: 北京市翔宇中学
+short_name: 翔宇中学
+aliases: []
+level: 民办
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市东城区北京市翔宇中学
+  lat: 39.866989
+  lon: 116.393169
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '201019'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '150'
+  lines:
+    '2025':
+      score: 338
+      rank: 6525
+      total: 510
+    '2024':
+      score: 490
+      rank: 6994
+      total: 670
+  lines_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+  pred_2026:
+    rank: 6525
+    lo: 5742
+    hi: 7308
+    conf: high
+    method: hist
+    base_year: '2025'
+- channel: 统招
+  code: '201019'
+  major: '02'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '80'
+rollup:
+  features:
+    style: 东城区唯一民办普通高中,成才先成人理念,以离退休老教师为基础的师资,与新加坡莎顿商学院合作开设剑桥O水准课程
+    tags:
+    - 国际方向
+    source: 百度百科/北京中考信息网/学校官网 xiangyu.com
+_codes:
+- '201019'

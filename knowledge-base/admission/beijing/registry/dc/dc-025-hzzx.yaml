@@ -1,0 +1,49 @@
+id: dc-025-hzzx
+type: 公办普高
+canonical_name: 北京宏志中学
+short_name: 宏志中学
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市东城区北京宏志中学
+  lat: 39.957684
+  lon: 116.410794
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: true
+admissions:
+- channel: 统招
+  code: '201013'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '30'
+rollup:
+  features:
+    style: 全国首所公益性完全中学,以救助品学兼优贫困生的「宏志班」闻名(四免一补·设寄宿),开设中医药「杏林实验班」与人工智能教育特色
+    tags:
+    - 综合均衡
+    - 寄宿制
+    - 科技创新
+    source: 百度百科·北京市宏志中学; 人民网·民生周刊; 北京东城区政府网站; 科大讯飞智慧教育
+  campus_life:
+    class_system:
+      value: 设杏林实验班、周恩来实验班及人工智能教育基地; 高中"宏志生"为专门招收家庭经济困难、品学兼优学生的公益班。
+      source: 百度百科 https://baike.baidu.com/item/北京市宏志中学/49940207 ; 首都之窗 https://www.beijing.gov.cn/zhengce/zcjd/202205/t20220513_2708959.html
+      confidence: 百科+官方
+    management:
+      value: 宿舍在校内, 实施封闭化/军事化管理。
+      source: 知乎《北京中考哪些高中能住宿》 https://zhuanlan.zhihu.com/p/674627039
+      confidence: 民间整理·待核
+    boarding_detail:
+      value: 宿舍在校内; 据描述高一高二10人/间(有柜子、阳台, 厕所有蹲坑/水龙头/淋浴), 高三在另一校区7人/间; 宏志生享"四免一补"(免学杂费/书本费/校服费/住宿费+伙食补贴)。
+      source: 宿舍条件为民间整理(知乎); "四免一补"来源首都之窗 https://www.beijing.gov.cn/zhengce/zcjd/202205/t20220513_2708959.html
+      confidence: 住宿条件民间整理·待核; 四免一补官方
+    activities:
+      value: 合唱团、篮球队、话剧社、微电影、民乐团、舞蹈团、茶社; 部分社团需考试, 学生自愿报名。
+      source: 知乎 https://zhuanlan.zhihu.com/p/673766070
+      confidence: 民间整理·待核
+_codes:
+- '201013'

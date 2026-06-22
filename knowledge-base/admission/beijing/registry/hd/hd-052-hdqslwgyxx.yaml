@@ -1,0 +1,31 @@
+id: hd-052-hdqslwgyxx
+type: 公办普高
+canonical_name: 北京市海淀区尚丽外国语学校
+short_name: 海淀区尚丽外国语学校
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市海淀区北京市海淀区尚丽外国语学校
+  lat: 39.968532
+  lon: 116.214335
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '208050'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '265'
+- channel: 统招
+  code: '208050'
+  major: '02'
+  major_name: 普通班
+  campus: benbu
+  plan_total: 25 (住)
+rollup: {}
+_codes:
+- '208050'

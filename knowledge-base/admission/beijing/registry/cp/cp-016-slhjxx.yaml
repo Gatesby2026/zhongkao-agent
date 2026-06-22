@@ -1,0 +1,58 @@
+id: cp-016-slhjxx
+type: 公办普高
+canonical_name: 北京市私立汇佳学校
+short_name: 私立汇佳学校
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市昌平区北京市私立汇佳学校
+  lat: 40.193971
+  lon: 116.244498
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: true
+admissions:
+- channel: 统招
+  code: '214022'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '42'
+- channel: 统招
+  code: '214022'
+  major: '02'
+  major_name: 普通班
+  campus: benbu
+  plan_total: 28 (住)
+rollup:
+  features:
+    style: 创建于 1993 年，中国大陆最早的 IB 国际文凭组织成员校之一，拥有完整 IB 体系（PYP/MYP/DP），十二年制、寄宿兼走读，探究式教学、双语双文化、外籍教师占比较高。
+    tags:
+    - 国际方向
+    - 外语特色
+    - 寄宿制
+    - 课程改革
+    source: 百度百科 / 新浪教育 / 学校官网 huijiaedu.org
+  campus_life:
+    class_system:
+      value: 完整 IB 体系（小学 PYP / 中学 MYP / 高中 DP），十二年一贯制；平均班级人数 IB 课程 16–25 人、融合课程 25–28 人；初高中按成绩分班
+      source: https://jingkids.com/scg-bj/beijing-huijia-private-school/
+    schedule:
+      value: PYP 8:10–16:30；MYP&DP 8:10–17:00；融合部 1–6 年级 8:10–16:30；融合部 7–9 年级 8:10–17:15
+      source: https://jingkids.com/scg-bj/beijing-huijia-private-school/
+    boarding_detail:
+      value: 小学寄宿兼走读，家庭式住宿（低年级 3 人/间，高年级 3–4 人/间）；中学全寄宿，社区式住宿 3 或 4 人/间（住宿人数细节为民间整理·待核）
+      source: https://jingkids.com/scg-bj/beijing-huijia-private-school/
+    dining:
+      value: 小学、中学自助餐；高中自主选餐；另有体育餐厅（民间整理·待核）；配备食品检测系统
+      source: https://jingkids.com/scg-bj/beijing-huijia-private-school/
+    activities:
+      value: 近百项艺术及体育活动；俱乐部含马术、冰球、高尔夫、跆拳道、击剑、机器人、珠宝设计、模拟联合国；IB 电视台、记者站、爱心社、TED 等学生社团
+      source: https://jingkids.com/scg-bj/beijing-huijia-private-school/
+    voices:
+      value: 「初高中要根据成绩分班，如果不能进入比较好的班级也不能保证自己不受周围同学影响」；普遍反映校园环境幽雅、管理规范（民间整理·待核）
+      source: https://www.zhihu.com/question/36133555
+_codes:
+- '214022'

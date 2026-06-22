@@ -1,0 +1,64 @@
+id: xc-011-hmxx
+type: 公办普高
+canonical_name: 北京市回民学校
+short_name: 回民学校
+aliases: []
+level: 区级
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市西城区北京市回民学校
+  lat: 39.890751
+  lon: 116.365986
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: true
+admissions:
+- channel: 统招
+  code: '102011'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '319'
+  lines:
+    '2025':
+      score: 420
+      rank: 9158
+      total: 510
+    '2024':
+      score: 566
+      rank: 9236
+      total: 670
+  lines_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+  pred_2026:
+    rank: 9158
+    lo: 8059
+    hi: 10257
+    conf: high
+    method: hist
+    base_year: '2025'
+- channel: 统招
+  code: '102011'
+  major: '02'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '1'
+rollup:
+  features:
+    style: 位于牛街的民族特色完中，以「融·和」文化为引领，多民族师生共学，国家级高中特色发展试验项目校，含住宿。
+    tags:
+    - 综合均衡
+    - 寄宿制
+    source: 北京市回民学校官网/百度百科/zhongkaobj（北京市回民学校）
+  campus_life:
+    class_system: 民间整理·待核：2024级高一共10个班、每班40人左右，无实验班；2023年有组织高一分班考，往年高二开始走班。
+    schedule: 民间整理·待核：高一、高二上晚自习需向学校申请，高三晚自习21:00下课；学生反馈作业量挺多。
+    management: 民间整理·待核：带手机入学需写申请。
+    boarding_detail: 民间整理·待核：可住宿，有住宿班，通常6人一间、上床下桌、有独立卫浴；知乎学生补充男宿六人间、每间单独配卫生间和浴室、书桌底下有充电位、归宿后有1小时自习。
+    dining: 民间整理·待核：清真餐，以牛羊肉为主、偶尔有鸡肉和鱼肉；各年级分时段分窗口有序就餐，餐厅可供800余人同时就餐。
+    activities: 民间整理·待核：金帆民乐团、舞蹈社团、书画社、魔术社、健美操社；足球比赛、歌唱比赛、诗词朗诵大会；首钢工业园社会实践、园博园定向越野、房山世界地质公园研学（市级足球体育传统校、男女足后备人才基地校）。
+    source: 北京中考信息网(校情) https://www.zhongkaobj.cn/lqfsx/xcq/202412206662.html ; 知乎(宿舍) https://www.zhihu.com/question/29767864
+_codes:
+- '102011'

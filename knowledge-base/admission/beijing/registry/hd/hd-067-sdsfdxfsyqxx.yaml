@@ -1,0 +1,52 @@
+id: hd-067-sdsfdxfsyqxx
+type: 公办普高
+canonical_name: 首都师范大学附属玉泉学校
+short_name: 首都师范大学附属玉泉学校
+aliases:
+- 首师大附玉泉学校
+level: 区级
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市海淀区首都师范大学附属玉泉学校
+  lat: 39.964408
+  lon: 116.24694
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '208069'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '36'
+  lines:
+    '2025':
+      score: 471
+      rank: 4535
+      total: 510
+    '2024':
+      score: 630
+      rank: 5423
+      total: 670
+  lines_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+  pred_2026:
+    rank: 4535
+    lo: 3991
+    hi: 5079
+    conf: high
+    method: hist
+    base_year: '2025'
+rollup:
+  features:
+    style: 十二年制公办校（2015年由首师大附小玉泉校区上延而成，2023年加入人大附中分校教育集团形成小初高），以「童心教育」为理念（率真/关爱/求索核心价值观）；建「志达课程体系」，全国足球特色校、球类运动突出，打造「三公里科技教育」学习圈（思政/科技/劳动）
+    tags:
+    - 体育特长
+    - 课程改革
+    - 综合均衡
+    source: 百度百科;海淀教育网 bjhdedu.cn/zt/2024hdxx/202405/t20240523_70657.html;北京中考信息网 zhongkaobj.cn/zhongkao/zxdt/202412257120.html
+_codes:
+- '208069'

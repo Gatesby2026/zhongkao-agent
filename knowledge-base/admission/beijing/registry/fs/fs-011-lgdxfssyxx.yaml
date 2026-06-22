@@ -1,0 +1,66 @@
+id: fs-011-lgdxfssyxx
+type: 公办普高
+canonical_name: 北京理工大学附属实验学校
+short_name: 理工大学附属实验学校
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市房山区北京理工大学附属实验学校
+  lat: 39.726684
+  lon: 116.181386
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: true
+admissions:
+- channel: 统招
+  code: '211012'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '54'
+  lines:
+    '2025':
+      score: 457
+      rank: 599
+      total: 510
+  lines_meta:
+    source: 北京高考在线 gaokzx《2025北京房山区中考录取分数线及区排名》(理工附实验学校); 北京中考信息网 zhongkaobj《2025北京中考各分段择校指南》(450-459 区间含理工附实验)
+    confidence: medium
+  pred_2026:
+    rank: 599
+    lo: 527
+    hi: 671
+    conf: medium
+    method: hist
+    base_year: '2025'
+- channel: 统招
+  code: '211012'
+  major: '02'
+  major_name: 中美高中国际课程项目班
+  campus: benbu
+  plan_total: '50'
+rollup:
+  features:
+    style: 房山区第一所拥有公立国际部的学校; 中美高中国际课程项目(与美国 Hoosac 学校合作, 中美双学籍/双毕业证, 北理工教师参与授课); 构建「高中+高校」协同育人, 开设 AP、美高特色课、大学先修及航天科技等校本课程;
+      与北理工尖端实验室共建特色科技课程
+    tags:
+    - 国际方向
+    - 科技创新
+    - 外语特色
+    source: 新浪 (k.sina.cn) 房山首所公立高中国际部报道; 北理工附校官网 (lgsy.bit.edu.cn); 北京小升初网; 国际学校网
+  campus_life:
+    class_system:
+      value: 涵盖小学、初中、高中、国际部的十二年制公立学校(北理工与房山区政府 2018 年共建);高中部设计规模 36 个班,2024 年 9 月高中部新校区启用,新增约 1620 个学位。国际部为房山区第一所公立学校国际部,中美高中国际课程项目与美国湖沙克学校(Hoosac)合作,提供中美双学籍、双毕业证(2023
+        年首招 2 个班共 50 人;02 专业学费 100000 元/学年)。
+      source: 北理工附属实验学校官网 https://lgsy.bit.edu.cn/xxgs/xxjj/index.htm ；「房山区第一所公立高中国际部」 https://k.sina.cn/article_3080457541_b79c0d4501901dxlx.html
+        ；国际部学费见 fangshan_admission_codes.json note(bjeea 官方计划)
+      confidence: medium
+    boarding_detail:
+      value: 校内建有师生宿舍楼(校园占地 51100 余 ㎡,建筑面积 38466 ㎡含小学楼、初中楼、综合楼、师生宿舍楼);国际课程项目班考生入学后可按学校规定申请住宿。
+      source: 北理工附属实验学校官网/百科(师生宿舍楼) https://lgsy.bit.edu.cn/xxgs/xxjj/index.htm ；招生住宿说明见 fangshan_admission_codes.json note(bjeea
+        官方计划)
+      confidence: medium
+_codes:
+- '211012'

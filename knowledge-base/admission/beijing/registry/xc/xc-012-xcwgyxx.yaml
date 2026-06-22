@@ -1,0 +1,61 @@
+id: xc-012-xcwgyxx
+type: 公办普高
+canonical_name: 北京市西城外国语学校
+short_name: 西城外国语学校
+aliases: []
+level: 区级
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市西城区北京市西城外国语学校
+  lat: 39.929271
+  lon: 116.342069
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: true
+admissions:
+- channel: 统招
+  code: '102012'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '256'
+  lines:
+    '2025':
+      score: 445
+      rank: 6842
+      total: 510
+    '2024':
+      score: 598
+      rank: 6970
+      total: 670
+  lines_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+  pred_2026:
+    rank: 6842
+    lo: 6021
+    hi: 7663
+    conf: high
+    method: hist
+    base_year: '2025'
+rollup:
+  features:
+    style: 鲜明外语特色市级重点完中，引进国外教材、互动英语环境，开设多语种（主修+辅修）课程，与十余国姐妹校交流。
+    tags:
+    - 外语特色
+    - 国际方向
+    - 课程改革
+    source: 西城外国语学校官网/百度百科（北京市西城外国语学校）
+  campus_life:
+    class_system: 民间整理·待核：高中部约24个教学班、每年级8班；设法语班、西班牙语班、俄语德语班（小语种为分班核心特色，小语种班英语课时少但要求更高、优先英语基础好的学生）；实行分层教育，A层管理更严。
+    schedule: 民间整理·待核：早7:20到校；作业适中，平时21:00-22:00完成、考前约23:00-24:00。
+    management: 民间整理·待核：校风严谨注重细节、分层管理；家长反馈『该松的松该紧的紧』『学习抓得很紧』。
+    boarding_detail: 民间整理·待核：设寄宿部（2012年回迁北礼士路甲62号），宿舍配空调、公共浴室，晚有任课老师看自习（住宿细节年份偏早，建议复核）。
+    dining: 民间整理·待核：2个食堂、师生分开；午餐口碑好花样多（餐价年份偏早，建议复核）。
+    activities: 民间整理·待核：外语节/国际文化节、科技节、艺术节、体育节、读书节；学生组织含『零点通讯社』『中国校园文学』记者站、学生电视台、外国语学校国际电台等；育人定位『中国情怀、国际视野』。
+    voices: 民间整理·待核：『学风校风非常好、老师负责有爱、作业适中、十分满意』；『以前很辉煌、经常出状元』。
+    source: 北京小升初网 https://www.xscxx.com/chuzhong/xc/2025081411848.html ; 知乎 https://zhuanlan.zhihu.com/p/659600578 ; 高校信息
+      https://www.gx211.cn/school/schoolcontent634.shtml
+_codes:
+- '102012'

@@ -1,0 +1,65 @@
+id: dx-007-dbzxdxfx
+type: 公办普高
+canonical_name: 北京市第八中学大兴分校
+short_name: 第八中学大兴分校
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市大兴区北京市第八中学大兴分校(北门)
+  lat: 39.756601
+  lon: 116.319335
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: true
+admissions:
+- channel: 统招
+  code: '215005'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '8'
+  lines:
+    '2025':
+      score: 442
+      rank: 1874
+      total: 510
+    '2024':
+      score: 574
+      rank: null
+      total: 670
+  lines_meta:
+    source: 北京高考在线 gaokzx — 2025年北京各区高中校预估分数及排名(预估口径,单源 low); 育路私立学校招生网 yuloo — 2024年北京大兴区中考录取分数线一览(单源,经检索快照转述;区排名缺失)
+    confidence: low
+  pred_2026:
+    rank: 1874
+    lo: 1649
+    hi: 2099
+    conf: low
+    method: hist
+    base_year: '2025'
+rollup:
+  features:
+    style: 区直属公办完全中学，区级中学示范校、优质高中校及拔尖创新人才培养基地校。融合北京八中办学理念，以『科技启智、读书润心、艺术塑美、体育强体』开展四节两赛；设有北京市『1+3』贯通培养实验班，侧重『数理科学+工程技术』方向（选科以物理+化学为主）。
+    tags:
+    - 理科见长
+    - 科技创新
+    - 课程改革
+    source: 北京八中大兴分校官网 no8ms.bj.cn、xschu『1+3』招生简章、gaokzx
+  campus_life:
+    class_system:
+      value: 初、高中各12个教学班
+      source: https://www.no8ms.bj.cn/cms/hzbx/fxjj/000004.html（学校官网）
+    boarding_detail:
+      value: 提供寄宿,住宿生约200余名;另有可供约900名学生食宿的综合楼
+      source: https://www.no8ms.bj.cn/cms/hzbx/fxjj/000004.html ; https://www.xschu.com/xiaoshengchu/13/40009.html（官网/小升初网）
+    dining:
+      value: 设食堂(综合楼具备食宿功能)
+      source: https://www.no8ms.bj.cn/cms/hzbx/fxjj/000004.html（学校官网）
+    activities:
+      value: 设基础/拓展/专项三大类共45门课程,及『读书养志、躬行践履、发现自我、回归生活、生涯规划』五大系列课程;举办体育节、科技节、艺术节、读书节;获中国少年科学院科普教育示范基地、北京市科技教育示范校、大兴区艺术教育先进校等荣誉
+      source: https://www.no8ms.bj.cn/cms/hzbx/fxjj/000004.html（学校官网）
+    _excluded: 网传『6:40开门/早餐5元/午餐13元/6-8人间/积分制』经核查实为八中京西校区初中寄宿部,非大兴分校,已剔除避免张冠李戴
+_codes:
+- '215005'

@@ -1,0 +1,40 @@
+id: pg-006-pgqjywlxx
+type: 公办普高
+canonical_name: 北京市平谷区精英未来学校
+short_name: 平谷区精英未来学校
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市平谷区北京市平谷区精英未来学校
+  lat: 40.163792
+  lon: 117.125277
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '217006'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '114'
+- channel: 统招
+  code: '217006'
+  major: '02'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '76'
+rollup:
+  features:
+    style: 十二年一贯制民办学校(含高中部)，"根植中华、面向世界、赢得未来"，"532"办学模式——五化(小班化/数字化/多元化/个性化/国际化)、必修+选修+活动三类课程、"一对一数字化学习"与项目式学习两种教学模式；每班约30人，每学期开设30余门选修课并组织游学研修。
+    tags:
+    - 课程改革
+    - 国际方向
+    source:
+    - '精英未来学校官网 学校简介(532模式/五化/选修): http://www.jyfuture.com.cn/about.jsp'
+    - '上哪学 平谷区精英未来学校高中部: https://www.shangnaxue.net/school/1414407348207783938.html'
+    - '百度百科 北京市平谷区精英未来学校: https://baike.baidu.com/item/%E5%8C%97%E4%BA%AC%E5%B8%82%E5%B9%B3%E8%B0%B7%E5%8C%BA%E7%B2%BE%E8%8B%B1%E6%9C%AA%E6%9D%A5%E5%AD%A6%E6%A0%A1/24315689'
+_codes:
+- '217006'

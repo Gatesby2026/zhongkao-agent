@@ -1,0 +1,86 @@
+id: dc-012-jsxx
+type: 公办普高
+canonical_name: 北京景山学校
+short_name: 景山学校
+aliases: []
+level: 市级示范性高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市东城区北京景山学校(正门)
+  lat: 39.919024
+  lon: 116.415001
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '101012'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '68'
+  lines:
+    '2025':
+      score: 470
+      rank: 1664
+      total: 510
+    '2024':
+      score: 616
+      rank: 2626
+      total: 670
+  lines_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+  pred_2026:
+    rank: 1664
+    lo: 1464
+    hi: 1864
+    conf: high
+    method: hist
+    base_year: '2025'
+- channel: 统招
+  code: '101012'
+  major: '02'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '40'
+- channel: 统招
+  code: '101012'
+  major: '03'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '135'
+rollup:
+  features:
+    style: 1960年创办的教改实验学校,独创小学5年、初中4年、高中3年的「五四三」学制,长年探索从小学到高中贯通的素质教育新路;校训「明理勤奋严谨创新」
+    tags:
+    - 课程改革
+    - 综合均衡
+    source: 百度百科/维基百科「北京景山学校」、阳光高考中学版
+  gaokao:
+    note: 民间·非官方
+    detail: 据民间汇总,2025年清北录取约6人、双一流录取率60%以上、特殊类型招生上线接近100%,高分段有699/694/687分等;一本率长年约90%以上(未经学校官方确认)
+  campus_life:
+    class_system:
+      value: 高中约4个班(3个理科班含1个小五班直升+1个文科班), 全年级约100余人。班数随届变动。
+      source: 知乎《在景山学校就读是怎样的体验》 https://www.zhihu.com/question/28125398/answer/3563930988
+      confidence: 民间整理·待核
+    schedule:
+      value: 高一/高二无晚自习、基本每天15:05放学; 高三周一至周五晚自习18:30-20:40。
+      source: 知乎 https://www.zhihu.com/question/28125398/answer/3563930988
+      confidence: 民间整理·待核
+    management:
+      value: 管理严格、学风浓、老师负责; 可带手机入校但须交老师统一保管, 上课不许用、放学后领取。
+      source: 知乎 https://www.zhihu.com/question/28125398/answer/3563930988 ; 上哪学 https://www.shangnaxue.net/a/1374620603572563970
+      confidence: 民间整理·待核
+    dining:
+      value: 有食堂, 提前一周订食材由专业基地运输到校; 每份荤菜定量, 半荤/全素不限量。
+      source: 上哪学 https://www.shangnaxue.net/a/1374620603572563970
+      confidence: 民间整理·待核
+    activities:
+      value: 社团丰富按兴趣自选(学生会/管乐团/民乐团/合唱团/舞蹈团/定向越野社/天文社/辩论社/篮球/足球/排球/健美操等); 举办校园歌手大赛、秋季运动会、"致青春"诗会、校园科技节。
+      source: 上哪学 https://www.shangnaxue.net/a/1374620603572563970
+      confidence: 民间整理·待核
+_codes:
+- '101012'

@@ -30,9 +30,57 @@ admissions:
       score: 461
       rank: 608
       rank_scope: 顺义区
+- channel: 统招
+  code: '113001'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '221'
+  lines:
+    '2025':
+      score: 461
+      rank: 608
+      total: 510
+    '2024':
+      score: 625
+      rank: 518
+      total: 670
+  lines_meta:
+    source: 2025北京顺义区中考录取分数线及区排名_北京高考在线(gaokzx); 2025北京中考昌平顺义等多区高中统招录取分数线及区排名汇总-北京中考信息网(zhongkaobj); 2025年北京中考统招录取结果及录取分数线出炉(Sohu,
+      仅佐证分数); 顺义2024高中录取分数线一览-北京小升初信息网(xscxx); 2025参考 北京市近三年各高中录取分数线和区排名变化情况汇总-北京中考信息网(zhongkaobj)
+    confidence: medium
+  pred_2026:
+    rank: 608
+    lo: 535
+    hi: 681
+    conf: medium
+    method: hist
+    base_year: '2025'
 rollup:
   tags:
   - 顺义龙头
   - 远郊名校
   - 综合均衡
+  features:
+    style: 顺义龙头校。北京市示范性普通高中,与中科院合作开展「科技拔尖创新人才培养」实验,每年百名科学家进校授课,数十名学生进入国家重点实验室做课题;推进「1+X」高效课堂改革,国际交流活跃。
+    tags:
+    - 科技创新
+    - 理科见长
+    - 课程改革
+    - 学科竞赛
+    source: 学校官网(nlsyz.com.cn)、百度百科、阳光高考(chsi)
+  gaokao:
+    note: 民间·非官方
+    detail: 2025 年高考最高分约 693,650 分以上约 36 人,600 分以上约 202 人;顺义区 680 分以上高分段几乎集中于本校。历年清北录取居顺义区首位。
+    source: zhongkaobj.cn(2025 北京各区高考喜报)、gaokzx.com、xschu.com
+  campus_life:
+    boarding_detail:
+      value: 公办寄宿制名校(顺义牛栏山镇), 占地约282亩。学生公寓配空调和太阳能洗浴设备。设教学/运动/生活/文物保护四大功能区。
+      source: 牛栏山一中维基百科; 百度百科; 阳光高考校库
+    dining:
+      value: 学生综合服务中心(食堂)宽敞明亮, 可容纳2500余人同时就餐。
+      source: 牛栏山一中维基百科/百度百科
+    voices:
+      value: 顺义公办高中第一梯队(『三个重点校』之一)。校园含连廊博物馆、艺术楼、名师堂、标准塑胶田径场、体育馆等; 现约49个教学班、学生2500余人。【民间整理·待核】
+      source: 牛栏山一中维基百科; 知乎『在牛栏山一中就读体验』问题(民间, 正文未取到)
 home_district: 顺义

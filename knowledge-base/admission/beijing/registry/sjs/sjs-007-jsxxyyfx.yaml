@@ -1,0 +1,72 @@
+id: sjs-007-jsxxyyfx
+type: 公办普高
+canonical_name: 北京景山学校远洋分校
+short_name: 景山学校远洋分校
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市石景山区北京景山学校远洋分校(西校区)
+  lat: 39.898183
+  lon: 116.233128
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '207004'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '69'
+  lines:
+    '2025':
+      score: 456
+      rank: 369
+      total: 510
+    '2024':
+      score: 608
+      rank: 618
+      total: 670
+  lines_meta:
+    source: '北京高考在线 gaokzx.com(2025: https://www.gaokzx.com/gk/zhongkao/144973.html; 2024: https://www.gaokzx.com/gk/zhongkao/126167.html);
+      北京中考信息网 zhongkaobj.cn(2024: https://www.zhongkaobj.cn/lqfsx/qitaqu/202410212432.html)'
+    confidence: low
+  pred_2026:
+    rank: 369
+    lo: 325
+    hi: 413
+    conf: low
+    method: hist
+    base_year: '2025'
+rollup:
+  features:
+    style: 继承北京景山学校「三个面向」教育思想与传统，三方联合办学、「学校-社区-家庭三位一体」管理；文理渗透、传统与现代结合，打通学段一体化培养，新高考课程改革探索见长。
+    tags:
+    - 课程改革
+    - 综合均衡
+    source: 百度百科「北京景山学校远洋分校」、中国广播网 cnr.cn、北京高考在线 gaokzx.com
+  gaokao:
+    note: 民间·非官方
+    summary: 2024 年 120 名考生，1 人 700 分以上、3 人 690 分以上，包揽石景山区前三名（700/696/691）；2023 年最高 675 分，约 30 人 600 分以上；2022 年 2 人北大强基录取。
+    source: 百度百科（学校宣传口径，非官方公布）
+  campus_life:
+    boarding_detail:
+      value: 无住宿(不提供寄宿)。
+      source: https://www.zhongkaobj.cn/zhongkao/zxdt/202503159983.html
+      confidence: folk
+    class_system:
+      value: 九年一贯+高中三年公立校, 分东西校区, 高中部在西校区。2024 级高一共 6 个班, 每班约 30 人, 含 1 个直升班、1 个优质班; 新高一按中考成绩分班(无分班考), 高二下学期按语数英期末综合成绩再次分班。
+      source: https://www.gaokzx.com/gk/zhongkao/150357.html; https://www.zhihu.com/question/359908052 (知乎)
+      confidence: folk
+    schedule:
+      value: 高一、高二目前无晚自习; 高三周一至周五均有晚自习, 通常 18:30–20:40。
+      source: https://www.zhihu.com/question/359908052 (知乎)
+      confidence: folk
+    voices:
+      value: '知乎学生评价: 高中部成立时间短, 西校区仅一栋教学楼加一个篮球场(无标准操场); 师资在石景山尚可、师德师风尚好但水平参差; 整体成绩逐年进步, 已出过区前几名。主观评价, 待核。'
+      source: https://www.zhihu.com/question/359908052 (知乎)
+      confidence: folk
+_codes:
+- '207004'

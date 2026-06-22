@@ -1,0 +1,69 @@
+id: hd-011-deszx
+type: 公办普高
+canonical_name: 北京市第二十中学
+short_name: 第二十中学
+aliases: []
+level: 区级示范性高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市海淀区北京市第二十中学(新都校区)
+  lat: 40.0623
+  lon: 116.36811
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: true
+admissions:
+- channel: 统招
+  code: '108011'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '180'
+  lines:
+    '2025':
+      score: 461
+      rank: 6934
+      total: 510
+    '2024':
+      score: 617
+      rank: 8292
+      total: 670
+  lines_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+  pred_2026:
+    rank: 6934
+    lo: 6102
+    hi: 7766
+    conf: high
+    method: hist
+    base_year: '2025'
+- channel: 统招
+  code: '108011'
+  major: '02'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '59'
+rollup:
+  features:
+    style: 示范性高中，三校区（小营/新都/永泰）；设脊梁/英才/博学三类实验班，高二分人文/理工/科技学院；科技教育示范校+艺术教育特色校
+    tags:
+    - 综合均衡
+    - 科技创新
+    - 艺术特长
+    source: 北京高考在线 gaokzx.com
+  gaokao:
+    note: 民间·非官方
+    '2024': 600分以上125人，最高分691分（北京市279名）；近三年一本率超75%，本科率约90%（网传）
+    source: https://www.gaokzx.com/gk/zhongkao/148305.html
+  campus_life:
+    class_system: 民间整理·待核：不组织分班考试，按中考成绩分班；高一选科后再分班，高二有不同班型，高三基本不再分班。
+    schedule: 民间整理·待核：高一可申请晚自习，21:30下课且检查仪容仪表；有月考、成绩排名可在校网查看。
+    boarding_detail: 民间整理·待核：4人间上下铺、独立卫生间、公共浴室，男女宿舍管理严格，名额有限需申请。
+    activities: 民间整理·待核：体育有田径队等；艺术中心『三团两社』；科技课程丰富，与科技企业及科研院所合作。
+    voices: 民间整理·待核：作业量较多，年级前100名周六下午会被邀请补课；重视校风建设（北京中考信息网/知乎）。
+    source: 北京中考信息网(校情) https://www.zhongkaobj.cn/cjpm/gaokaochengji/202412216863.html ; 二十中官网 https://www.bj20hs.cn/ ; 知乎(如何评价)
+      https://www.zhihu.com/question/64520354
+_codes:
+- '108011'

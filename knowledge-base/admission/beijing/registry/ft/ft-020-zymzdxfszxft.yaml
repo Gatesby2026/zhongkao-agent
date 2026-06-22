@@ -1,0 +1,56 @@
+id: ft-020-zymzdxfszxft
+type: 公办普高
+canonical_name: 中央民族大学附属中学丰台实验学校
+short_name: 中央民族大学附属中学丰台实验学校
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市丰台区中央民族大学附属中学丰台实验学校(北门)
+  lat: 39.808101
+  lon: 116.139143
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '206023'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '64'
+  lines:
+    '2025':
+      score: 412
+      rank: 2680
+      total: 510
+  lines_meta:
+    source: 北京中考信息网 zhongkaobj.cn(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html); 北京高考在线 gaokzx.com(https://www.gaokzx.com/gk/zhongkao/144859.html)
+    confidence: medium
+  pred_2026:
+    rank: 2680
+    lo: 2358
+    hi: 3002
+    conf: medium
+    method: hist
+    base_year: '2025'
+rollup:
+  features:
+    style: 「依托中央民族大学附中资源，民族文化传承特色：挖掘王佐地区非遗，太平鼓/中国功夫/空竹/腰鼓/高跷进课堂；阳光体育、学农实践（九年学种九种作物）、阅读教育；精品社团丰富（葫芦丝/民族舞/书法等）。」
+    tags:
+    - 文科人文
+    - 艺术特长
+    - 体育特长
+    source: 「北京小升初信息网校情介绍 https://www.xscxx.com/xiaoshengchu/ftqxsc/2025052810939.html ；学校官网概况 https://mdfzftsyxx.ftedu.cn/zymzdxfszx/610956/xxgk45/index.html
+      ；新浪新闻 https://k.sina.com.cn/article_2371397007_8d58a58f0270156m4.html」
+  campus_life:
+    school_code: '206023'
+    activities:
+      value: 在艺术、体育、科技方面组建管乐、太平鼓、韵律操、足球等 70 多个特色社团。
+      source: 百度百科 + 北京小升初信息网 xscxx.com（民间整理·待核）
+    voices:
+      value: 家长反馈：老师教龄普遍较长、经验丰富。
+      source: 一帆高考网 yifan211.com（民间整理·待核，主观评价）
+_codes:
+- '206023'

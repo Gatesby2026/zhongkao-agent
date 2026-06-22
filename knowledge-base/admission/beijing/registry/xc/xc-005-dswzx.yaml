@@ -1,0 +1,66 @@
+id: xc-005-dswzx
+type: 公办普高
+canonical_name: 北京市第十五中学
+short_name: 第十五中学
+aliases:
+- 十五中
+level: 市级示范性高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市西城区北京市第十五中学
+  lat: 39.877067
+  lon: 116.375902
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: true
+admissions:
+- channel: 统招
+  code: '102005'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '130'
+  lines:
+    '2025':
+      score: 464
+      rank: 4102
+      total: 510
+    '2024':
+      score: 622
+      rank: 4232
+      total: 670
+  lines_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+  pred_2026:
+    rank: 4102
+    lo: 3610
+    hi: 4594
+    conf: high
+    method: hist
+    base_year: '2025'
+- channel: 统招
+  code: '102005'
+  major: '02'
+  major_name: 筑真人文实验班
+  campus: benbu
+  plan_total: '30'
+rollup:
+  features:
+    style: 首批市级重点与示范高中，桃然校区为高中部；2012年起设「筑真」人文实验班，注重人文素养与多元发展。
+    tags:
+    - 文科人文
+    - 综合均衡
+    source: 维基百科/中国高校之窗（北京市第十五中学）
+  campus_life:
+    class_system: 民间整理·待核：设筑真人文实验班（2012年市教委批准，约80人，学测+中考成绩选拔，含游学支教）、王绶琯院士科学创新班（2024年成立，单一来源·待核），实验班外为普通班；另有四大类七十余门特色校本课程（机器人竞赛/数学建模/击剑/板球等）。
+    management: 民间整理·待核：理念『以人为本』『减负增效』、营造宽松自由学习环境；但部分学生认为管理层偏严。
+    boarding_detail: 民间整理·待核：高中部提供住宿；民间评价宿舍两人间、配空调暖气独立卫浴。
+    dining: 民间整理·待核：校内设多元文化学生餐厅，民间评价食堂饭菜质量很好。
+    activities: 民间整理·待核：文化品牌含午间音乐会、午间剧场、诗歌节、英语文化周、艺术节、科技文化节、心理文化周、周口店野外考察、『相约星期二』讲座、春秋运动会；社团有田径/篮球/编程/京剧/民乐/舞蹈等；德育特色为雷锋班活动30余年、清明祭扫高君宇烈士墓。
+    voices: 民间整理·待核：知乎《就读体验》——食宿可圈可点、管理偏严、高考成绩西城中等（平均约500出头）。
+    source: 北京小升初(集校100) https://m.jixiao100.com/151093.html ; 班型 https://www.gaokzx.com/gk/zhongkao/138456.html ; 微信百科 https://baike.weixin.qq.com/v626158.htm
+      ; 知乎 https://www.zhihu.com/question/28153669
+_codes:
+- '102005'

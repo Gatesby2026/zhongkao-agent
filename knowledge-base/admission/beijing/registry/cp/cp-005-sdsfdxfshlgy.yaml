@@ -1,0 +1,70 @@
+id: cp-005-sdsfdxfshlgy
+type: 公办普高
+canonical_name: 首都师范大学附属回龙观育新学校
+short_name: 首都师范大学附属回龙观育新学校
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市昌平区首都师范大学附属回龙观育新学校
+  lat: 40.08563
+  lon: 116.350825
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: true
+admissions:
+- channel: 统招
+  code: '214007'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '69'
+  lines:
+    '2024':
+      score: 619
+      rank: 914
+      total: 670
+  lines_meta:
+    source: 自主选拔在线 2025 中考参考(含 2024 昌平录取线区排名); 北京中考信息网 近三年各高中录取线及区排名变化
+    confidence: medium
+  pred_2026:
+    rank: 914
+    lo: 804
+    hi: 1024
+    conf: medium
+    method: hist
+    base_year: '2024'
+- channel: 统招
+  code: '214007'
+  major: '02'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '36'
+rollup:
+  features:
+    style: 十二年制公办校，与首师大附属育新学校一个法人、一套管理体系（统一课程/计划/进修/进度/考核），骨干教师互通。体育健康、艺术审美、科技创新等特色协同发展，推进国际化。2019 年牵头组建首师大附属回龙观育新教育集团。
+    tags:
+    - 科技创新
+    - 艺术特长
+    - 课程改革
+    source: 百度百科 / 学校官网 hlgyx.com.cn
+  gaokao:
+    note: 民间·非官方
+    summary: 据较早年份公开数据（2015–2016 年），文科本科上线率曾居昌平区前列（2016 文科本科上线率 100%、理科约 90%）。数据年代较早，仅供历史参考。
+    source: 百度百科（学校自述，年份较早，非官方发布）
+  campus_life:
+    management:
+      value: 与首师大附属育新学校「一个法人校长、一套管理体系」，教学上「五统一」（统一课程/计划/进修/进度/考核）
+      source: https://www.xqfhp.com/aid/5521/
+    boarding_detail:
+      value: 学校住宿部可同时满足约 600 人住宿
+      source: https://www.xqfhp.com/aid/5521/
+    activities:
+      value: 全国排球特色学校、全国篮球特色学校、全国航空教育特色学校、全国国防教育特色学校、全国体育工作示范学校；开展体育健康、艺术审美、科技创新等特色教育
+      source: https://www.xqfhp.com/aid/5521/
+    voices:
+      value: 知乎「育新学校怎么样」问答中家长/学生评价主要涉及食堂管理与收费方面意见（民间整理·待核）
+      source: https://www.zhihu.com/question/419628126
+_codes:
+- '214007'

@@ -1,0 +1,57 @@
+id: tz-010-tzqslsrxx
+type: 公办普高
+canonical_name: 北京市通州区私立树人学校
+short_name: 通州区私立树人学校
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市通州区北京市通州区私立树人学校
+  lat: 39.943809
+  lon: 116.71733
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: true
+admissions:
+- channel: 统招
+  code: '212021'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '112'
+- channel: 统招
+  code: '212021'
+  major: '02'
+  major_name: 普通班
+  campus: benbu
+  plan_total: 80 (住)
+rollup:
+  features:
+    style: 1993 年成立,北京最早 K-12 民办校之一,"个性化教育、全球化发展"。艺体教融合特色,集运动馆/艺术馆/图书馆/博物馆于一体。高中设双语高中(冲国内高考)、艺术高中(STEAM)、国际高中(加拿大 OSSD)三方向。
+    tags:
+    - 国际方向
+    - 艺术特长
+    - 外语特色
+    source: 百度百科 / 学校官网 shuren.org / 维基百科 (https://baike.baidu.com/item/北京市私立树人·瑞贝学校/9472397)
+  gaokao:
+    note: 民间·非官方
+    summary: 网传截至 2019 年 6 月约 96% 毕业生被世界前 100 名大学录取,人均录取通知书约 5.4 份(系国际/留学方向出口,非普通高考口径)。数据来自学校宣传,非官方。
+    source: 学校官网招生简章 / 百度百科 (https://www.shuren.org/article/1346)
+  campus_life:
+    class_system:
+      value: K-12 全日制寄宿制学校(位于通州宋庄),招收中外籍学生。高中部(10-12年级)设 双语高中、艺术高中、国际高中三种班型:双语高中限京籍、每班约30人;艺术高中 (以艺术专业为发展方向)京籍/非京籍、每班约30人;国际高中不限户籍国籍、每班约20人。
+      source:
+      - https://www.shuren.org/article/1346 (学校官网·高中部招生简章)
+      - https://baike.baidu.com/item/北京市私立树人·瑞贝学校/9472397 (百度百科)
+    boarding_detail:
+      value: 可走读或住宿。校内共5间学生宿舍,住宿生(小学一年级至高中)有专属住宿区, 周一至周五由专业生活老师负责生活管理;走读生(幼儿园至高中)有专属午休床位, 保证每日1小时以上午休。
+      source: https://www.shuren.org/ + https://www.shuren.org/article/1346 (学校官网)
+    dining:
+      value: 独立高级餐饮团队(厨师长为前五星级饭店行政总厨、国家一级烹饪大师)。 校内3间食堂分别服务幼儿园/小学/初高中,每日三餐两点,住宿生额外提供夜宵。
+      source: https://www.shuren.org/ (学校官网)
+    management:
+      value: 封闭式管理,设校医室、24小时警卫及全方位监控。
+      source: https://www.shuren.org/ (学校官网) + 百度百科
+_codes:
+- '212021'

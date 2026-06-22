@@ -1,0 +1,66 @@
+id: fs-004-sfdxlxfszx
+type: 公办普高
+canonical_name: 北京师范大学良乡附属中学
+short_name: 师范大学良乡附属中学
+aliases: []
+level: 优质高中（示范/特色）
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市房山区北京师范大学良乡附属中学
+  lat: 39.726665
+  lon: 116.129906
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: true
+admissions:
+- channel: 统招
+  code: '111003'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '26'
+  lines:
+    '2025':
+      score: 464
+      rank: 394
+      total: 510
+  lines_meta:
+    source: 北京高考在线 gaokzx《2025北京房山区中考录取分数线及区排名》(北师大良乡附属中学); 北京中考信息网 zhongkaobj《2025北京中考各分段择校指南》(460-469 区间含北师大良乡附中)
+    confidence: medium
+  pred_2026:
+    rank: 394
+    lo: 347
+    hi: 441
+    conf: medium
+    method: hist
+    base_year: '2025'
+rollup:
+  features:
+    style: 在全面发展基础上突出数理科技特色, 以「全面发展、数理见长」为目标, 「数理为基、科学为翼、全科融合」课程; 承担全区高中「翱翔计划」创新人才培养, 设机器人/科技活动开放实验室; 有「1+3」贯通培养项目
+    tags:
+    - 理科见长
+    - 科技创新
+    - 课程改革
+    source: 百度百科; 房山区政府网 (bjfsh.gov.cn); 人民网教育频道; 北京小升初网 (1+3 招生简章)
+  campus_life:
+    management:
+      value: 区教委主管的全寄宿制公办独立高中,北京市示范性普通高中(房山区唯一市级示范高中)。
+      source: 百度百科「北京师范大学良乡附属中学」(经搜索摘要) https://baike.baidu.com/item/北京师范大学良乡附属中学/259757
+      confidence: medium
+    boarding_detail:
+      value: 全寄宿制;校园北侧有两座学生宿舍楼;校园占地 72036 ㎡,食堂面积 2518.02 ㎡,浴室面积 435.2 ㎡。高三与高一高二同住(不分开),高三晚自习下课比高一高二晚约 40 分钟。
+      source: 百度百科「北京师范大学良乡附属中学」(经搜索摘要,全寄宿/宿舍楼/食堂浴室面积) https://baike.baidu.com/item/北京师范大学良乡附属中学/259757
+      confidence: medium
+    schedule:
+      value: 高三晚自习下课时间比高一高二晚约 40 分钟,高三放学时高一高二已熄灯;早读会安排做题。
+      source: 知乎相关讨论(民间整理·待核) https://www.zhihu.com/question/47021981
+      confidence: low
+      note: 民间整理·待核
+    voices:
+      value: 在校生反映全寄宿、返校较难,高三假期与补课较多;高三楼教室宽敞、老师评价较好。
+      source: 知乎「北京四中房山分校和北师大良乡附中比哪个好?」等讨论(民间整理·待核) https://www.zhihu.com/question/47021981
+      confidence: low
+      note: 民间整理·待核
+_codes:
+- '111003'

@@ -1,0 +1,52 @@
+id: hd-061-wgydxfswgyxx
+type: 公办普高
+canonical_name: 北京外国语大学附属外国语学校
+short_name: 外国语大学附属外国语学校
+aliases:
+- 北外附校（外国语）
+level: 区级
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市海淀区北京外国语大学附属外国语学校(南门)
+  lat: 40.056819
+  lon: 116.320711
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '208061'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '124'
+  lines:
+    '2025':
+      score: 440
+      rank: 10855
+      total: 510
+    '2024':
+      score: 589
+      rank: 12908
+      total: 670
+  lines_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+  pred_2026:
+    rank: 10855
+    lo: 9552
+    hi: 12158
+    conf: high
+    method: hist
+    base_year: '2025'
+rollup:
+  features:
+    style: 1959年周恩来、陈毅提议创建的全国第一所基础教育外国语学校，国家级高中特色发展试验项目学校；「英语+第二外语」复语教学，涵盖英/德/西/日/法/俄/韩7语种，面向国外名校的留学预备教育体系，培养「双复型」复合国际化预备英才
+    tags:
+    - 外语特色
+    - 国际方向
+    - 科技创新
+    source: 学校官网 bwfx.com.cn/index/bxts.htm;百度百科;北外国际 beiwaiguoji.com
+_codes:
+- '208061'

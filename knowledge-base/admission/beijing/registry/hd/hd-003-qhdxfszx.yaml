@@ -6,6 +6,7 @@ level: 市级示范性高中
 note: 海淀“六小强”之一，顶尖名校，国际奥赛金牌众多，竞赛与应试教研功底深厚。
 aliases:
 - '108003'
+- 清华附中
 campuses:
 - slug: main
   name: 本部
@@ -38,9 +39,71 @@ admissions:
   faces_chaoyang: true
   quota_chaoyang: 28
   boarding: true
+- channel: 统招
+  code: '108003'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '165'
+  lines:
+    '2025':
+      score: 487
+      rank: 1107
+      total: 510
+    '2024':
+      score: 647
+      rank: 1452
+      total: 670
+    '2023':
+      score: 640
+      rank: 1896
+      total: 660
+  lines_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+  pred_2026:
+    rank: 1107
+    lo: 974
+    hi: 1240
+    conf: high
+    method: hist
+    base_year: '2025'
+- channel: 统招
+  code: '108003'
+  major: '02'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '10'
+- channel: 统招
+  code: '108003'
+  major: '03'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '15'
 rollup:
   tags:
   - 顶尖名校
   - 竞赛强
   - 理科强
+  features:
+    style: 基础+拓展+研究三级核心课程；设大学先修班、高中科学实验班、马约翰体育班、综合实验班、美术特长班，因材施教
+    tags:
+    - 理科见长
+    - 体育特长
+    - 学科竞赛
+    source: 清华附中官网 qhfz.edu.cn;百度百科
+  gaokao:
+    note: 民间·非官方
+    '2024': 清北录取约100人（网传·全市第二，首次破百）
+    source: https://www.zizzs.com/gk/gaokao/174800.html
+  campus_life:
+    class_system: 民间整理·待核：1班体育特长班（马约翰『马班』）、2班美术特长班、3-11班普通班、12-15班实验班、16-18班为清华附实验学校，每班约35-40人。
+    schedule: 民间整理·待核：早7:30到校，下午17:30放学。
+    management: 民间整理·待核：手机不可带进教室，原则上关机（各年级要求不同）；对住宿生管理较严格。
+    boarding_detail: 民间整理·待核：自愿申请，8人间上下铺，有柜子写字桌、空调（限时使用、电费自充），朝阳宿舍有阳台，每层2个卫生间/2个浴室；住宿费约1900元/学期。
+    dining: 民间整理·待核：食堂A级资质，两层十几个窗口、菜品多，可吃三餐，中晚餐约18-20元；不少学生爱去清华大学食堂。
+    activities: 民间整理·待核：社团多（体育/兴趣/公益等），如心理、音乐、吉他、摇滚、漫画、模型、环保、无线电、科技俱乐部等；高一强制选社团、高二后自由。
+    voices: 民间整理·待核：部分住宿生初期不适应，多数能利用在校时间学习（北京高考在线/知乎）。
+    source: 清华附中将台路校区问答(官网) https://qhfz.edu.cn/info/1052/14222.htm ; 北京高考在线(内部揭秘) https://www.gaokzx.com/c/202011/47356.html
+      ; 知乎(宿舍实景) https://zhuanlan.zhihu.com/p/534315311
 home_district: 海淀

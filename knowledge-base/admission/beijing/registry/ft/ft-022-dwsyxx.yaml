@@ -1,0 +1,48 @@
+id: ft-022-dwsyxx
+type: 公办普高
+canonical_name: 北京第五实验学校
+short_name: 第五实验学校
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市丰台区北京第五实验学校(丰台科技园校区)
+  lat: 39.823419
+  lon: 116.307138
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '206025'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '36'
+  lines:
+    '2025':
+      score: 440
+      rank: 1462
+      total: 510
+  lines_meta:
+    source: 北京中考信息网 zhongkaobj.cn(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html); 北京高考在线 gaokzx.com(https://www.gaokzx.com/gk/zhongkao/144859.html)
+    confidence: medium
+  pred_2026:
+    rank: 1462
+    lo: 1287
+    hi: 1637
+    conf: medium
+    method: hist
+    base_year: '2025'
+rollup:
+  features:
+    style: 「丰台区唯一北京市教委直属、市区共管的小初高一体化公立校（「高起点/高品质/国际化/可持续」）。位于丽泽金融商务区/中关村丰台园，骨干教师来自十二中联合总校及区重点校；面向未来培养创新型人才，多元课程平台。」
+    tags:
+    - 综合均衡
+    - 国际方向
+    - 科技创新
+    source: 「教育头条 http://www.edutoutiao.com/zxx/14853.html ；民生周刊 https://www.msweekly.com/show.html?id=156329 ；新京报 https://m.bjnews.com.cn/detail/1721053622168456.html
+      ；百度百科 https://baike.baidu.com/item/北京市第五实验学校/59663327」
+_codes:
+- '206025'

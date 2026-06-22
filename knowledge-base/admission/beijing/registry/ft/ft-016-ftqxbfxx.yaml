@@ -1,0 +1,39 @@
+id: ft-016-ftqxbfxx
+type: 公办普高
+canonical_name: 北京市丰台区新北赋学校
+short_name: 丰台区新北赋学校
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市丰台区北京市丰台区新北赋学校
+  lat: 39.788441
+  lon: 116.298585
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '206017'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '240'
+- channel: 统招
+  code: '206017'
+  major: '02'
+  major_name: 普通班
+  campus: benbu
+  plan_total: 160 (住)
+rollup:
+  features:
+    style: 「原北大附属实验学校（2001年创建），集学前-小学-初中-高中的现代化全日制寄宿民办学校。校训「博学审问慎思明辨笃行」，特色为大语文、大英语、国学、书法、美术、音乐、舞蹈、武术等；「自主学习四环节」课堂模式。」
+    tags:
+    - 文科人文
+    - 艺术特长
+    - 寄宿制
+    source: 「百度百科 https://baike.baidu.com/item/北京市丰台区新北赋学校/62288031 ；招生简章 http://m.guojixuexiao.net/ischool/bjdxsy/new/14000.html
+      ；青鸟同文 http://www.pkutw.com/article/school_item-12.html」
+_codes:
+- '206017'

@@ -1,0 +1,46 @@
+id: sy-008-synlsdyzxbqx
+type: 公办普高
+canonical_name: 北京市顺义牛栏山第一中学板桥学校
+short_name: 顺义牛栏山第一中学板桥学校
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市顺义区北京市顺义牛栏山第一中学
+  lat: 40.222775
+  lon: 116.664317
+  confidence: high
+  source: 高德 geocode（待电话核实）
+  boarding: false
+admissions:
+- channel: 统招
+  code: '213006'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '90'
+  lines:
+    '2024':
+      score: 577
+      rank: 1824
+      total: 670
+  lines_meta:
+    source: 2025参考 北京市近三年各高中录取分数线和区排名变化情况汇总-北京中考信息网(zhongkaobj)
+    confidence: low
+  pred_2026:
+    rank: 1824
+    lo: 1605
+    hi: 2043
+    conf: low
+    method: hist
+    base_year: '2024'
+rollup:
+  features:
+    style: 共享牛栏山一中优质资源。秉承牛中「厚德、博学、求实、创新」理念,小班化、个性化培养,配 AI 自习室等现代设施;开设科技创新、艺术体育、社会实践等特色课程;全国中小学影视教育试点实验校。
+    tags:
+    - 科技创新
+    - 综合均衡
+    source: 百度百科、bangboer 等(校情/招聘公告)
+_codes:
+- '213006'

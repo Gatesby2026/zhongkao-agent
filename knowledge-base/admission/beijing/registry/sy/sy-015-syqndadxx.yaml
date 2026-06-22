@@ -1,0 +1,53 @@
+id: sy-015-syqndadxx
+type: 公办普高
+canonical_name: 北京市顺义区诺德安达学校
+short_name: 顺义区诺德安达学校
+aliases: []
+level: 普通高中
+note: ''
+campuses:
+- slug: benbu
+  name: 北京市顺义区
+  lat: 40.149891
+  lon: 116.661474
+  confidence: mid
+  source: 高德 geocode（待电话核实）
+  boarding: true
+admissions:
+- channel: 统招
+  code: '213014'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '29'
+- channel: 统招
+  code: '213014'
+  major: '02'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '19'
+rollup:
+  features:
+    style: 诺德安达全球教育集团成员。执行国家义务教育课标 + 国际教学法,高中 IGCSE 衔接 A-Level/IBDP;与茱莉亚学院(艺术)、麻省理工(STEAM)合作,「大师通识课」邀普林斯顿/剑桥/哥大等教授主讲。
+    tags:
+    - 国际方向
+    - 外语特色
+    source: 学校官网(nasbeijing.cn)、jingkids/国际学校网
+  campus_life:
+    class_system:
+      value: 提供五天制与七天制两种寄宿; 七天制周末可参加艺体及文化活动。五天制寄宿费约5万/年, 七天制约7万/年。十二年一贯制双语学校。
+      source: 诺德安达官网 寄宿生活页 nasbeijing.cn/campus/boarding; 入学费用页
+    boarding_detail:
+      value: 校区位于顺义高丽营, 可满足约484名学生寄宿(全校可容约1440人)。男女生分楼层、按年龄段再划分; 原则上按年级、班级安排宿舍。24小时校内医疗救助。
+      source: 诺德安达官网 寄宿生活页/校园环境页
+    management:
+      value: 配专业寄宿管理团队, 制定规律作息, 设计寄宿课程及活动。
+      source: 诺德安达官网 寄宿生活页
+    dining:
+      value: 倡导平衡、健康的寄宿膳食搭配, 营养餐配置。
+      source: 诺德安达官网 寄宿生活页
+    activities:
+      value: '创新寄宿项目涵盖6大核心主题: 学习技巧、领导与指导能力、身心健康、语言与读写、艺术与创造力、体育与娱乐。'
+      source: 诺德安达官网 寄宿生活页
+_codes:
+- '213014'
