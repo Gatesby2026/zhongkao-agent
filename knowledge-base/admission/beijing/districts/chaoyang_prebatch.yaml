@@ -1,0 +1,242 @@
+# ============================================================
+# 朝阳区高中「提前录取招生名额」(报名季/春季已公开的计划人数)
+# ============================================================
+# 这里收的是【招生计划/名额人数】,不是录取分数线。
+# 两类:
+#   zhisheng_05  = 教育集团 0.5+3 直升计划人数(各龙头高中)
+#   one_plus_three = 1+3 项目(初二选拔·四年制·不参加中考)
+# 铁律:绝不编造;每数带真实来源;冲突并列/取区间;标 confidence;
+#       校名逐字等于 chaoyang.yaml 正名,不在表内的校不写。
+#
+# confidence: T2=官媒/官方派生 | T3=机构/自媒体
+# 注意:0.5+3 逐校数全部 T3(机构自媒体"网传"),官方简章 7 月才发;
+#       源间对人朝/朝外存在口径差(集团合计 vs 本部),已并列标注。
+# ============================================================
+
+meta:
+  district: 朝阳区
+  region: 北京市
+  collected_at: 2026-06-22
+  updated: 2026-06-22
+  caveat: |
+    0.5+3 逐校名额为机构/自媒体"网传"数据(T3),官方各校简章通常 7 月才发布。
+    多源对"人朝/朝外"存在【集团合计】与【本部】两种口径,已分别标注 plan_main(本部)
+    与 plan_group(集团含分校合计),不强行对齐。1+3 为 2025 官方/机构汇总(较稳)。
+    严格只写 chaoyang.yaml schools 正名内的校。
+
+# ============================================================
+# 一、0.5+3 集团直升计划人数(2026)
+#    口径说明:plan_main=龙头高中本部直升;plan_group=该集团直升合计(含分校/联盟)
+#    两源(xschu 北京小升初网 / xscxx 北京小升初信息网)数字一致,互为佐证。
+# ============================================================
+schools:
+
+  人大附中朝阳学校:
+    zhisheng_05:
+      plan_main: 144            # 人朝本部
+      plan_group: 180           # 集团合计:本部144+太阳宫15+东坝15+樱花园3+94中3
+      year: 2026
+      breakdown: "本部144 + 人朝分校(太阳宫)15 + 人朝分东坝15 + 樱花园学校3 + 94中3"
+      alliance: "人朝集团 ↔ 贸大附中(94中)集团 跨集团直升"
+      source: "xschu(https://www.xschu.com/zhengcezixun/84670.html); xscxx(https://www.xscxx.com/xiaoshengchu/cyqxsc/2026011313055.html)"
+      confidence: T3
+      note: "本部144两源一致;evidence旧记'177'系另一批次/口径,本次未复现,以144(本部)/180(集团)为准并列"
+
+  清华附中朝阳学校:
+    zhisheng_05:
+      plan_main: 90             # 清朝本部
+      plan_group: 175           # 基础直升合计:本部90 + 其余集团校85
+      year: 2026
+      breakdown: "基础直升175(本部90 + 其余校85);另清望校区有1+3项目40(见 one_plus_three),集团口径合计215"
+      alliance: "清华附朝阳集团 ↔ 二中朝阳集团 跨集团直升"
+      source: "xschu(https://www.xschu.com/zhengcezixun/84670.html); xscxx(https://www.xscxx.com/xiaoshengchu/cyqxsc/2026011313055.html)"
+      confidence: T3
+      note: "175(0.5+3直升)与evidence一致;215=175直升+40(清望1+3),后者属1+3不混入直升"
+
+  陈经纶中学:
+    zhisheng_05:
+      plan_main: 160            # 直升计划
+      plan_group: 280           # 陈经纶教育集团合计:贯通培养120 + 直升160
+      year: 2026
+      breakdown: "0.5+3直升160;集团另有贯通培养120,合计280(贯通非直升,口径分列)"
+      source: "xschu(https://www.xschu.com/zhengcezixun/84670.html); xscxx(https://www.xscxx.com/xiaoshengchu/cyqxsc/2026011313055.html)"
+      confidence: T3
+      note: "直升160三源一致(含evidence);280含贯通120,贯通另算不等同直升"
+
+  朝阳外国语学校:
+    zhisheng_05:
+      plan_main: 55             # 本部(xschu口径)
+      plan_group: 250           # 三批次合计(xscxx口径):八下30 + 九上末70 + 九下新增150
+      year: 2026
+      breakdown: "xschu本部口径55;xscxx三批次口径250(30+70+150)。源间口径差异大,并列不取单值"
+      alliance: "朝外集团 ↔ 和平街一中集团 跨集团直升"
+      source: "xschu(https://www.xschu.com/zhengcezixun/84670.html); xscxx(https://www.xscxx.com/xiaoshengchu/cyqxsc/2026011313055.html)"
+      confidence: T3
+      note: "⚠️冲突:55(本部) vs 250(三批含九下新增大头) vs evidence旧记zhongkaobj 305。差异源自批次/集团口径,7月简章前不可作准"
+
+  和平街一中:
+    zhisheng_05:
+      plan_main: 53            # 本校(含高水平社团8人)
+      plan_group: 78          # 0.5+3合计:本校53+中科院实验3+朝外10+朝外北苑分校1+师大实验朝分2+中科附1+直升特长8
+      year: 2026
+      breakdown: "本校53(含高水平社团8) + 联盟跨集团名额(中科院实验3/朝外10/朝外北苑1/师大实验朝分2/中科附1) + 直升特长生8 = 78"
+      alliance: "和平街一中集团 ↔ 朝外集团 跨集团直升"
+      source: "xschu(https://www.xschu.com/zhengcezixun/84670.html); xscxx(https://www.xscxx.com/xiaoshengchu/cyqxsc/2026011313055.html)"
+      confidence: T3
+      note: "本校53两源一致(evidence旧记53/66);78为集团含联盟合计"
+
+  二中朝阳学校:
+    zhisheng_05:
+      plan_main: null
+      plan_group: null
+      year: 2026
+      runs: true
+      alliance: "二中朝阳集团 ↔ 清华附朝阳集团 跨集团直升"
+      source: "xscxx(https://www.xscxx.com/xiaoshengchu/cyqxsc/2026011313055.html); xschu(https://www.xschu.com/zhengcezixun/84670.html)"
+      confidence: T3
+      note: "确认参与0.5+3联盟(与清朝跨集团),但逐校具体名额自媒体标'收集中',未查到数,不编"
+
+  对外经济贸易大学附属中学:
+    zhisheng_05:
+      plan_main: null
+      plan_group: null
+      year: 2026
+      runs: true
+      alliance: "贸大附中(94中)集团 ↔ 人朝集团 跨集团直升(向人朝输送3人见人朝breakdown)"
+      source: "xscxx(https://www.xscxx.com/xiaoshengchu/cyqxsc/2026011313055.html)"
+      confidence: T3
+      note: "确认参与跨集团直升,本校独立直升名额'收集中'未公布,不编"
+
+  北京中学:
+    zhisheng_05:
+      plan_main: 90            # 高中本部签约名额
+      plan_group: 200          # 本部90 + 传媒分校&科技分校合计110
+      year: 2025               # 注:此源为2025签约季口径
+      breakdown: "高中本部90签约 + 传媒分校&科技分校共110 = 200(2025签约季)"
+      source: "zhongkaobj(https://www.zhongkaobj.cn/zhaosheng/qianyuezhisheng/202412317439.html)"
+      confidence: T3
+      note: "⚠️年份=2025(该签约季报道);2026数自媒体标'收集中'未见。签约名额≠最终直升录取,口径偏松"
+
+# ============================================================
+# 二、1+3 项目(2025 官方/机构汇总)
+#    朝阳=市级1校 + 区级9校。1+3 为初二选拔·四年制,这些学生不参加中考。
+#    朝阳区级合计 545 人(9校),与全市口径一致(本地宝/新京报/xschu)。
+# ============================================================
+
+# --- 市级实验校(朝阳) ---
+# 北大附中朝阳未来学校(市级,2025计划320人)不在 chaoyang.yaml schools 正名表内,
+# 按铁律【不在表内的校不写】故省略其条目;但其存在已记入下方 program_summary 备注。
+
+# --- 区级实验校(9所,均在 chaoyang.yaml 或可对应正名;不在表内者省略) ---
+  中国传媒大学附属中学:
+    one_plus_three:
+      plan: 120
+      runs: true
+      year: 2025
+      level: 区级实验校
+      source: "xschu(https://www.xschu.com/zhonggaokaozixun/80933.html)"
+      confidence: T3
+      note: "以'北京中学传媒分校'名义参与"
+
+  中科院附属实验学校:
+    one_plus_three:
+      plan: 65
+      runs: true
+      year: 2025
+      level: 区级实验校
+      source: "xschu(https://www.xschu.com/zhonggaokaozixun/80933.html)"
+      confidence: T3
+      note: "源校名=中国科学院附属实验学校,对应 chaoyang.yaml 正名'中科院附属实验学校'"
+
+  北京第二外国语学院附属中学:
+    one_plus_three:
+      plan: 80
+      runs: true
+      year: 2025
+      level: 区级实验校
+      source: "xschu(https://www.xschu.com/zhonggaokaozixun/80933.html)"
+      confidence: T3
+      note: "以'北京中学外语分校'名义参与;含中法合作1+3项目"
+
+  清华附中望京学校:
+    one_plus_three:
+      plan: 40
+      runs: true
+      year: 2025
+      level: 区级实验校(2025新增前已参与)
+      source: "xschu(https://www.xschu.com/zhonggaokaozixun/80933.html)"
+      confidence: T3
+
+  二中朝阳学校:
+    one_plus_three:
+      plan: 40
+      runs: true
+      year: 2025
+      level: 区级实验校
+      source: "xschu(https://www.xschu.com/zhonggaokaozixun/80933.html)"
+      confidence: T3
+      note: "源校名=北京市第二中学朝阳学校,对应 chaoyang.yaml 正名'二中朝阳学校'"
+
+  北京中学科技分校:
+    one_plus_three:
+      plan: 60
+      runs: true
+      year: 2025
+      level: 区级实验校
+      source: "xschu(https://www.xschu.com/zhonggaokaozixun/80933.html)"
+      confidence: T3
+
+  八十中睿德分校:
+    one_plus_three:
+      plan: 40
+      runs: true
+      year: 2025
+      level: 区级实验校(2025新增)
+      source: "xschu(https://www.xschu.com/zhonggaokaozixun/80933.html); 新京报(https://m.bjnews.com.cn/detail/1753131987168820.html)"
+      confidence: T2
+      note: "源校名=北京市第八十中学睿德分校;2025首次加入"
+
+  清华附中广华学校:
+    one_plus_three:
+      plan: 40
+      runs: true
+      year: 2025
+      level: 区级实验校(2025新增)
+      source: "xschu(https://www.xschu.com/zhonggaokaozixun/80933.html); 新京报(https://m.bjnews.com.cn/detail/1753131987168820.html)"
+      confidence: T2
+      note: "源校名=清华大学附属中学广华学校;2025首次加入"
+
+# ============================================================
+# 三、项目级汇总与背景(非逐校,供家长理解口径)
+# ============================================================
+program_summary:
+  one_plus_three_2025:
+    朝阳区级实验校数: 9
+    朝阳区级招生合计: 545
+    朝阳市级实验校: "北大附中朝阳未来学校(市级,计划320人;不在 chaoyang.yaml 校表内故不单列条目)"
+    第9所区级校: "中央美术学院附属实验学校(60人,不在 chaoyang.yaml 校表内,未单列)"
+    全市口径: "全市1+3=市级970(6校)+区级7825(113校)=8795人(2025)"
+    source: "xschu(https://www.xschu.com/zhonggaokaozixun/80933.html); 新京报(https://www.bjnews.com.cn/detail/1752413536168468.html); 本地宝"
+    confidence: T2
+    note: "区级9校求和=120+65+60(央美)+80+40+40+60+40+40=545,自洽。其中2校(央美/北大附朝)不在本区高中校表,条目省略但计入合计。"
+  zhisheng_05_2026:
+    朝阳总名额约: 1500
+    三大跨集团联盟:
+      - "朝外集团 ↔ 和平街一中集团"
+      - "人朝集团 ↔ 贸大附中(94中)集团"
+      - "清华附朝阳集团 ↔ 二中朝阳集团"
+    source: "xschu(https://www.xschu.com/zhengcezixun/84670.html)"
+    confidence: T3
+    note: "2026朝阳探索集团联盟共享直升计划,允许跨集团直升。逐校数为'网传',7月各校官方简章为准。"
+
+# ============================================================
+# 四、未采到 / 收集中(明确标注,不编造)
+# ============================================================
+not_collected:
+  zhisheng_05_无逐校数:
+    schools: [二中朝阳学校, 对外经济贸易大学附属中学]
+    note: "上述校确认参与集团联盟,具体名额自媒体收集中。其余区级普通校(工大附中/日坛/首师大附中朝阳/三里屯一中/十七中/化工附中/东方德才/陈经纶团结湖分校/汇文垂杨柳分校/东师朝/北京中学科技分校)多非集团龙头,通常不设0.5+3直升,无可靠数,不写。"
+  source_conflicts:
+    人朝直升: "本部144(xschu/xscxx一致) vs evidence旧记177 — 取144(本部)/180(集团)并列,177未复现"
+    朝外直升: "本部55(xschu) vs 三批次250(xscxx) vs evidence旧记zhongkaobj 305 — 三值并列,口径(本部/集团三批/签约)不同,差达5倍,不可单取"
+  one_plus_three_2026: "2026朝阳1+3官方实验校名单及各校人数官方未发布(通常7月);现仅有2025数据。zizzs预测全市破万、朝阳有新校首次参与,但无逐校数,不写。"

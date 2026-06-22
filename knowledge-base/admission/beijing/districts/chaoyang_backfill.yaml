@@ -1,0 +1,145 @@
+# ============================================================
+# 朝阳区 — 缺失数据回填（任务A 2023录取线 + 任务B 高考出口）
+# ============================================================
+# 校名逐字对齐 knowledge-base/admission/beijing/chaoyang.yaml 正名
+# 采集日期: 2026-06-22
+# 铁律: 只写真采到的；查不到不写；每数据点带来源；年份/总分制核对
+#
+# 任务A — 2023统招最低分(总分660)+区排名
+#   主源: 北京中考信息网 zhongkaobj.cn 2篇汇总互证(202410212400 / 202410252785)
+#   口径: "网传供参考"(页面自标) → confidence: medium
+#   注: 分数取「走读」线(对齐 chaoyang.yaml 现有2024/2025走读口径)；住宿线另注
+#   ⚠️ 已逐校与文件内现有2024区排名做邻年一致性核对(rank均吻合±数百位)
+#
+# 任务B — 高考出口(民间·非官方)
+#   新校若首届未毕业, 如实写"暂无毕业生"
+# ============================================================
+
+meta:
+  collected: 2026-06-22
+  collector: claude-agent (web research)
+  purpose: backfill missing scores_2023 + gaokao for chaoyang.yaml
+  note: 待人工复核后合并入 chaoyang.yaml 对应学校的 scores.2023 / gaokao 字段
+
+schools:
+
+  # ========== 任务A：2023 录取线（5校）==========
+
+  朝阳外国语学校:
+    scores_2023:
+      total: 660
+      score: 634
+      rank: 2163
+      source: "北京中考信息网 zhongkaobj.cn 2023朝阳录取线&区排名汇总 (202410212400.html) + 近三年变化汇总 (202410252785.html) 互证"
+      url: "https://www.zhongkaobj.cn/lqfsx/chaoyangqu/202410212400.html"
+      confidence: medium
+      note: 走读线；两篇 zhongkaobj 汇总数值完全一致；与文件内2024 rank 2108 邻年吻合
+
+  北京工业大学附属中学:
+    scores_2023:
+      total: 660
+      score: 620
+      rank: 4390
+      lodging_score: 625   # 住宿线(源标注"住625")
+      source: "北京中考信息网 zhongkaobj.cn 2023朝阳录取线汇总 (202410212400.html) + 近三年变化汇总 (202410252785.html) 互证"
+      url: "https://www.zhongkaobj.cn/lqfsx/chaoyangqu/202410212400.html"
+      confidence: medium
+      note: 620=走读线，625=住宿线(源"住")；与文件内2024 rank 4487 邻年吻合
+
+  北京十七中:
+    scores_2023:
+      total: 660
+      score: 589
+      rank: 7494
+      source: "北京中考信息网 zhongkaobj.cn 2023朝阳录取线汇总 (202410212400.html) + 近三年变化汇总 (202410252785.html) 互证"
+      url: "https://www.zhongkaobj.cn/lqfsx/chaoyangqu/202410212400.html"
+      confidence: medium
+      note: 源表名"北京第十七中学"；与文件内2024 rank 7695 邻年吻合
+
+  对外经济贸易大学附属中学:
+    scores_2023:
+      total: 660
+      score: 604
+      rank: 6243
+      lodging_score: 610   # 住宿线(源标注"住610")
+      source: "北京中考信息网 zhongkaobj.cn 2023朝阳录取线汇总 (202410212400.html) + 近三年变化汇总 (202410252785.html) 互证"
+      url: "https://www.zhongkaobj.cn/lqfsx/chaoyangqu/202410212400.html"
+      confidence: medium
+      note: 604=走读线，610=住宿线(源"住")；源表名"对外经贸附中"；与文件内2024 rank 6304 邻年吻合。⚠️源给的 rank 6243 恰与文件内东北师大附中朝阳2023 rank 同值，疑两校在源表相邻行排名巧合或串行——人工复核时建议电话/官方表二次核 rank
+
+  # 注: 北京第二外国语学院附属中学 同时含任务A(2023线)与任务B(高考)，合并在下方任务B区块的单一条目下
+
+  # ========== 任务B：高考出口（7校，民间·非官方）==========
+
+  北京中学:
+    gaokao:
+      note: "民间·非官方（网传喜报/自主选拔在线整理）"
+      "2025": "约200人参考；屏蔽生(盲盒)1人；698分以上10人(全市仅113人)；686分以上20多人；650分以上约200人占约50%；700分以上约7-8人(两源7/8略有出入)"
+      source: "自主选拔在线 zizzs.com 北京中学2025高考喜报(202939.html) + 北京高考在线 gaokzx.com 2024各校汇总(124369.html 2024:北京市前20名占1人)"
+      url: "https://www.zizzs.com/gk/gaokao/202939.html"
+      confidence: medium
+      data_note: 700分以上人数两源(7人/8人)不一致，故标"约7-8人"；其余口径两源一致
+
+  中国传媒大学附属中学:
+    gaokao:
+      note: "民间·非官方"
+      status: "暂无独立高考数据"
+      detail: "2023年秋首设高中部，高一在北京中学上课、与本部混合编班(学籍在传媒分校)，三年后(预计2026)才有独立出口成绩。截至2026-06 无独立可采高考数据。"
+      source: "北京中考信息网 zhongkaobj.cn 校情介绍(202412267150.html)"
+      url: "https://www.zhongkaobj.cn/zhongkao/zhongxue/202412267150.html"
+      confidence: high   # "暂无独立数据"这一事实可信度高(官方校情介绍明示)
+
+  北京中学科技分校:
+    gaokao:
+      note: "民间·非官方"
+      status: "暂无毕业生"
+      detail: "2024年9月新办完全中学，2024首届高一招生80人(4平行班)。三年制首届高考预计2027年，截至2026-06 尚无毕业生、无高考出口数据。"
+      source: "北京小升初信息网 xscxx.com / 北京高考在线 gaokzx.com 2024新增8所公办普高(132685.html) / 北京市政府门户网"
+      url: "https://www.gaokzx.com/gk/zhongkao/132685.html"
+      confidence: high
+
+  清华附中广华学校:
+    gaokao:
+      note: "民间·非官方"
+      status: "暂无毕业生"
+      detail: "高中部2023年9月招收首批高一，三年后体现出口成绩，首届高考预计2026年。截至采集时(2026-06)校情介绍明示尚无高考毕业生、无任何高考成绩数据。"
+      source: "北京中考信息网 zhongkaobj.cn 校情介绍(202412257113.html)"
+      url: "https://www.zhongkaobj.cn/zhongkao/zhongxue/202412257113.html"
+      confidence: high
+
+  和平街一中（北苑莲葩园校区）:
+    gaokao:
+      note: "民间·非官方"
+      status: "无独立高考出口（非独立学校）"
+      detail: "系北京市和平街第一中学(105004)的02专业·北苑莲葩园高中校区，非独立法人学校；高考出口归口和平街一中本部，无单列校区高考数据。本部高考喜报见 chaoyang.yaml「和平街一中」行(2024:600分以上较2023增78.6% 等，gaokzx 136038)。"
+      source: "bjeea 2025统招计划册 / 北京高考在线 gaokzx.com 和平街一中喜报(136038.html，归本部)"
+      url: "https://www.gaokzx.com/gk/gaokao/136038.html"
+      confidence: high
+
+  东北师大附中朝阳学校:
+    gaokao:
+      note: "民间·非官方（网传喜报）"
+      "2024": "一本率100%；600分以上约20多人；直升班最高680分、均分约610、一本率100%、985占约20%、211占70%多；实验班一本率100%、211占50%多；普通班(4个班)最高650多分、一本率50%、每班均有211"
+      source: "北京高考在线 gaokzx.com 2024东师附中朝阳学校高考喜报(136649.html) + 学校官网 msannu.cn"
+      url: "https://www.gaokzx.com/gk/gaokao/136649.html"
+      confidence: medium
+      data_note: 本科率/参考总人数/各分数段细分 源未给
+
+  北京第二外国语学院附属中学:
+    scores_2023:
+      total: 660
+      score: 581
+      rank: 8014
+      source: "北京中考信息网 zhongkaobj.cn 2023朝阳录取线汇总 (202410212400.html) + 近三年变化汇总 (202410252785.html) 互证"
+      url: "https://www.zhongkaobj.cn/lqfsx/chaoyangqu/202410212400.html"
+      confidence: medium
+      note: 走读线；与文件内2024 rank 8491 邻年吻合
+    gaokao:
+      note: "民间·非官方（描述性，非逐分数段精确数）"
+      "2024": "高考本科录取率超99%，一本率超50%"
+      "历史·2015": "本科上线率98.1%，一本上线率约30%（年代久仅作趋势参考）"
+      "近年": "一本率、本科率连年攀升，位列同类校前列"
+      source: "北京中考信息网 zhongkaobj.cn / 北京高考在线 gaokzx.com(2023喜报77350、2015喜报14198)"
+      url: "https://www.gaokzx.com/c/202307/77350.html"
+      confidence: low
+      data_note: 2024为描述性口径(超99%/超50%)非精确分项；二外附中"2024年开始招生"指1+3项目，非高中新设，学校有历届毕业生
