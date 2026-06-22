@@ -717,6 +717,7 @@ def build_result(rank, home=None, mode="driving", max_km=None, interests=None,
     pred2026 = load_pred2026(district)       # {校名: {rank,lo,hi,conf,...}} 2026预估,冲稳保核心依据
     # 非朝阳:无模型预测,用 yaml 里按最近年份位次合成的 pred_2026 兜底(method='hist')
     yaml_pred = {s["name"]: s["pred_2026"] for s in schools if s.get("pred_2026")}
+    yaml_camp = {s["name"]: s["campus_life"] for s in schools if s.get("campus_life")}
     pred_rank_map = {n: v.get("rank") for n, v in pred2026.items()}
     buckets = {"冲": [], "稳": [], "保": [], "够不上": []}
     for s in schools:
@@ -740,6 +741,9 @@ def build_result(rank, home=None, mode="driving", max_km=None, interests=None,
             p = pred2026.get(c["name"]) or yaml_pred.get(c["name"])
             if p:
                 c["pred_2026"] = p
+            cl = yaml_camp.get(c["name"])
+            if cl:
+                c["campus_life"] = cl
     # 可寄宿校名集合（供地图判定：远但可寄宿→正常 pin，不标"太远"）
     boarding_names = {c["name"] for cards in raw_bands.values()
                       for c in cards if c.get("boarding")}

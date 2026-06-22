@@ -200,8 +200,12 @@ def build(py):
 
     # ---- enrich(录取线,正名键)----
     enrich = _safe_load_schools(DIST / f"{py}_enrich.yaml")
-    # ---- features(特色/高考,正名键;独立文件,不与录取线 enrich 互相覆盖)----
-    feats = _safe_load_schools(DIST / f"{py}_features.yaml")
+    # ---- features(特色/高考,正名键)----合并 <py>_features*.yaml(主+补采,后者优先)----
+    feats = {}
+    for fp in sorted(DIST.glob(f"{py}_features*.yaml")):
+        feats.update(_safe_load_schools(fp))
+    # ---- campus_life(校园生活,正名键)----写进 yaml,供 unified 渲染----
+    camp = _safe_load_schools(DIST / f"{py}_campus.yaml")
 
     # ---- 组装 schools(以 codes 正名为准)----
     schools = []
@@ -235,6 +239,8 @@ def build(py):
             "gaokao": {str(k): v for k, v in (ft.get("gaokao") or en.get("gaokao") or {}).items()},
             "scores": scores,
         }
+        if camp.get(zn):
+            rec["campus_life"] = camp[zn]
         if not sc_official and sc_src:
             rec["scores_meta"] = {"source": sc_src, "confidence": sc_conf or "low"}
         elif sc_official and scores:

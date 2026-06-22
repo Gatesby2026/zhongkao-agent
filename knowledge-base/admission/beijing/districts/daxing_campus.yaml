@@ -1,0 +1,265 @@
+# 大兴区高中「校园生活」采集
+# 字段: class_system / schedule / management / boarding_detail / dining / activities / voices
+# 铁律: 每字段有出处; 查不到的字段省略; 整校查不到不写; 民间源标「民间整理·待核」
+# 校名逐字等于 daxing_admission_codes.json schools 正名
+# 采集日期: 2026-06-22  方法: WebSearch/WebFetch(官网/公众号/百科/家长帮/知乎)
+
+district: 大兴
+collected_at: "2026-06-22"
+note: >-
+  仅收录可查到真实出处的字段; 查不到即省略, 整校无可信信息则不列。
+  官方源(官网/政府网)优先; 百科/聚合站/论坛标「民间整理·待核」。
+  未对任何字段编造或张冠李戴。
+
+schools:
+  北京市大兴区第一中学:
+    class_system:
+      value: "高中分层教学,设实验班和普通班;共17个班,每班40-45人(含2个『1+3』4年制贯通实验班、15个普通班)"
+      source: "https://www.gaokzx.com/gk/zhongkao/137101.html ; http://www.bangboer.com/zhongkao/s45923.html"
+    schedule:
+      value: "每天7:30到班,早读7:30开始、8:00正式上课;高一高二17:30放学,高三18:00放学;晚自习19:00-21:30(非毕业年级仅住宿生,毕业年级可申请);住宿生22:00统一熄灯"
+      source: "http://www.bangboer.com/zhongkao/s45923.html ; https://m.xqfhp.com/aid/2565"
+    management:
+      value: "手机有限进校园,严禁带入课堂;带入需家长学生签字申请;走读生每天早交班主任、放学取回,住宿生周一上交、周五取回"
+      source: "https://m.xqfhp.com/aid/2565"
+    boarding_detail:
+      value: "男女生宿舍楼共498间,可容纳约2500人住宿;6人一间,每人一桌一柜;所有宿舍朝阳,卫生间/淋浴间齐全、热水充足;住宿与走读结合,高中生均可申请(需提前申请)"
+      source: "http://www.bangboer.com/zhongkao/s45923.html"
+    dining:
+      value: "新校区共4个食堂(教工食堂、清真食堂、2个学生食堂),共2814个餐位,学生食堂可同时容纳2400余人就餐"
+      source: "http://www.bangboer.com/zhongkao/s45923.html"
+    activities:
+      value: "社团丰富:足球队、篮球队、乒乓球队、游泳队、合唱团、绘画、科技观鸟、模拟法庭、机器人、辩论社等"
+      source: "https://m.xqfhp.com/aid/2565"
+
+  北京市大兴区兴华中学:
+    class_system:
+      value: "共14个班,每班40-45人,分实验班和普通班"
+      source: "https://www.gaokzx.com/gk/zhongkao/137101.html"
+    boarding_detail:
+      value: "半封闭式『走读+寄宿』制公办普通高中(既有寄宿生也有走读生);具体几人间/宿舍配置未查到"
+      source: "https://zh.wikipedia.org/zh-hans/北京市大兴区兴华中学（百科·民间整理·待核）"
+    voices:
+      value: "北京市示范性普通高中、首批『北京2008奥林匹克教育示范学校』、获『首都文明单位』等荣誉(官方/百科表述,非家长口碑)"
+      source: "https://zh.wikipedia.org/zh-hans/北京市大兴区兴华中学（百科·民间整理·待核）"
+
+  北京市大兴区第二中学:
+    _note: "1972建校,原名黄村二中,2006-2022曾名『北师大大兴附中』,2022.9更名回大兴二中;设施信息部分来自北师大附中时期百科,同一校区但可能不完全反映现状"
+    class_system:
+      value: "招体育特长生、科技特长生(2025招生简章),设特色培养方向;普通班/实验班具体设置未查到明确来源"
+      source: "https://www.gaokzx.com/gk/zhongkao/139911.html ; https://www.gaokzx.com/gk/zhongkao/139912.html"
+    boarding_detail:
+      value: "校内有两栋宿舍楼;(北师大附中时期数据)全校54班2700人、住宿生约1600人。几人间未查到"
+      source: "https://zhongxue.cmypsc.com/detail-2397.html（聚合站·民间整理·待核）"
+    dining:
+      value: "校内有一栋食堂兼礼堂楼"
+      source: "https://zhongxue.cmypsc.com/detail-2397.html（聚合站·民间整理·待核）"
+    activities:
+      value: "以『金鹏科技团』为龙头,两个维度四大类60多门校本课程体系;设校团委志愿服务队"
+      source: "https://zhongxue.cmypsc.com/detail-2397.html ; https://www.bv2008.cn/app/org/view.php?id=szazvwgdvmY9%3D（民间整理·待核）"
+
+  首都师范大学大兴附属中学:
+    _note: "2008.3.27成立,前身兴达中学/原黄村三中,占地102亩。与『首师大附中大兴南/北校区』为不同学校;搜索中『北校区食堂2000㎡/宿舍400人』等数据属北校区,已剔除未采用"
+    boarding_detail:
+      value: "校园设生活住宿区,含两个学生公寓,提供住宿。具体几人间/宿舍条件未查到"
+      source: "https://baike.baidu.com/item/首都师范大学大兴附属中学/2508873（百科·民间整理·待核）"
+    dining:
+      value: "生活住宿区含两个学生餐厅"
+      source: "https://baike.baidu.com/item/首都师范大学大兴附属中学/2508873（百科·民间整理·待核）"
+    activities:
+      value: "教学活动区含科技楼、农耕文化园;体育区含400米标准运动场、篮球场、排球场、乒乓球场等。具体社团清单未查到确属本校来源,未列"
+      source: "https://baike.baidu.com/item/首都师范大学大兴附属中学/2508873（百科·民间整理·待核）"
+
+  北京市大兴区第三中学:
+    class_system:
+      value: "一校两址,设初中部与高中部(高中部2004年成立,2008年迁入黄村镇清源路新址)"
+      source: "https://baike.baidu.com/item/大兴区第三中学/6910425（百科403,经搜索摘要确认·民间整理·待核）"
+    boarding_detail:
+      value: "设有学生公寓(描述『整洁舒适』),提供住宿。几人间未查到"
+      source: "https://m.xqfhp.com/aid/5667（学区房划片站·民间整理·待核）"
+    dining:
+      value: "设有学生食堂(描述『安全卫生』)"
+      source: "https://m.xqfhp.com/aid/5667（学区房划片站·民间整理·待核）"
+    activities:
+      value: "集科技、艺术、体育等特色教育于一体的区直属示范中学,设科技艺术楼等专用场馆"
+      source: "https://m.xqfhp.com/aid/5667（民间整理·待核）"
+
+  # 注: codes 中名称为「北京建筑大学附属中学北京建筑大学附属中学北校区」,实为北京建筑大学附属中学(源数据校名重复 artifact)
+  北京建筑大学附属中学北京建筑大学附属中学北校区:
+    _note: "实为『北京建筑大学附属中学』(源 codes 校名为重复字符串 artifact);以下信息按『北京建筑大学附属中学』采集"
+    class_system:
+      value: "涵盖初中、高中两个学段;美术教育采用『文化+专业』课程体系,与北京印刷学院设计艺术学院共建"
+      source: "https://baike.baidu.com/item/北京建筑大学附属中学/50064310（百科403,经搜索摘要确认·民间整理·待核）"
+    dining:
+      value: "校内设食堂1个"
+      source: "https://baike.baidu.com/item/北京建筑大学附属中学/50064310（百科·民间整理·待核）"
+    activities:
+      value: "体育以篮球为特色(2017全国篮球特色示范学校);2020入选国防教育特色学校;设书法、管乐、舞蹈、合唱、科技等特色专用教室12个;与北建大资源融合,有『名师大讲堂』及共享高校实验室"
+      source: "https://baike.baidu.com/item/北京建筑大学附属中学/50064310（百科·民间整理·待核）"
+    voices:
+      value: "北京市科技教育示范校、艺术教育特色校(民间整理性描述)"
+      source: "搜索聚合·民间整理·待核"
+
+  北京市第八中学大兴分校:
+    class_system:
+      value: "初、高中各12个教学班"
+      source: "https://www.no8ms.bj.cn/cms/hzbx/fxjj/000004.html（学校官网）"
+    boarding_detail:
+      value: "提供寄宿,住宿生约200余名;另有可供约900名学生食宿的综合楼"
+      source: "https://www.no8ms.bj.cn/cms/hzbx/fxjj/000004.html ; https://www.xschu.com/xiaoshengchu/13/40009.html（官网/小升初网）"
+    dining:
+      value: "设食堂(综合楼具备食宿功能)"
+      source: "https://www.no8ms.bj.cn/cms/hzbx/fxjj/000004.html（学校官网）"
+    activities:
+      value: "设基础/拓展/专项三大类共45门课程,及『读书养志、躬行践履、发现自我、回归生活、生涯规划』五大系列课程;举办体育节、科技节、艺术节、读书节;获中国少年科学院科普教育示范基地、北京市科技教育示范校、大兴区艺术教育先进校等荣誉"
+      source: "https://www.no8ms.bj.cn/cms/hzbx/fxjj/000004.html（学校官网）"
+    _excluded: "网传『6:40开门/早餐5元/午餐13元/6-8人间/积分制』经核查实为八中京西校区初中寄宿部,非大兴分校,已剔除避免张冠李戴"
+
+  北京市大兴区旧宫中学:
+    class_system:
+      value: "完全中学,现有24个教学班"
+      source: "https://www.shangnaxue.net/school/1262278774783635457.html（上哪学）"
+    management:
+      value: "办学宗旨『严谨治学、严格管理、育人为本、质量第一』,德育目标『成就学养,成功人生』(管理导向偏严格)"
+      source: "https://www.shangnaxue.net/school/1262278774783635457.html（上哪学）"
+    boarding_detail:
+      value: "可寄宿(公办完全中学);民间整理称有约500床位学生公寓楼、每单间设壁橱/卫生间/洗漱间/电扇/热水器"
+      source: "可寄宿属性 https://www.shangnaxue.net/school/1262278774783635457.html ; 宿舍细节为百科/学区房聚合·民间整理·待核"
+    dining:
+      value: "民间整理称生活区有约2200㎡『健食楼』,一层为礼堂饭厅"
+      source: "搜索聚合(百科)·民间整理·待核"
+
+  北京一零一中大兴分校:
+    class_system:
+      value: "2021小升初招40名住宿生,2022起招高中生(初一现有8个班)"
+      source: "https://www.xschu.com/xiaoshengchu/17/42196.html ; https://www.xscxx.com/chuzhong/qitaqu/202412186492.html（小升初媒体·民间整理·待核）"
+    management:
+      value: "与本部『六个一体化』管理模式(管理机制/资源配置/课程教学/教师培训/质量评价/学生培养一体化);宿舍『封团式精细化管理』"
+      source: "https://www.xscxx.com/chuzhong/qitaqu/202412186492.html（民间整理·待核）"
+    boarding_detail:
+      value: "提供住宿,宿舍楼约2200㎡、可容纳400人;4人一间,配衣柜、鞋柜、空调、太阳能热水,床下设书桌;配晾衣间、卫生间、洗漱间、浴室"
+      source: "https://www.xscxx.com/chuzhong/qitaqu/202412186492.html（民间整理·待核）"
+    dining:
+      value: "食堂近2000㎡,可同时容纳1000人就餐"
+      source: "https://www.xscxx.com/chuzhong/qitaqu/202412186492.html（民间整理·待核）"
+    activities:
+      value: "20余个体育/科技/艺术社团(垒球、棒球、排球、足球、篮球、踢毽、跳绳、冰雪、田径、象棋、航模、书法、陶艺、剪纸、民族舞、街舞、合唱等);生态校园,饲养小鹿、羊驼、孔雀、丝羽乌骨鸡、珍珠鸡等"
+      source: "https://www.xscxx.com/chuzhong/qitaqu/202412186492.html（民间整理·待核）"
+    voices:
+      value: "作业适中,需1-2小时完成;设月考、期中、期末考试"
+      source: "https://www.xscxx.com/chuzhong/qitaqu/202412186492.html（民间整理·待核）"
+
+  北京师范大学附属实验中学大兴分校:
+    _note: "位于大兴区庞各庄镇"
+    class_system:
+      value: "含初中部和高中住宿部;高中部国家课程设置/实施/评价与实验中学本校保持一致"
+      source: "https://baike.baidu.com/item/北京师范大学附属实验中学大兴分校/64664757 ; https://www.sdszdx.com.cn/（官网+百科·待核）"
+    management:
+      value: "与本校『一体化办学』,坚持『五统一』(师资、课程、教学、活动、招考统一);高中住宿部师资全部由实验中学统筹本校教师任教"
+      source: "https://baike.baidu.com/item/北京师范大学附属实验中学大兴分校/64664757 ; https://www.sdszdx.com.cn/"
+    boarding_detail:
+      value: "设高中住宿部,建有学生公寓(校园占地120亩、建筑面积约3.2万㎡,含学生公寓、师生餐厅、标准体育场、室内体育馆等)。具体几人间/宿舍条件未查到"
+      source: "https://baike.baidu.com/item/北京师范大学附属实验中学大兴分校/64664757（百科·待核）"
+    dining:
+      value: "设师生餐厅(具体口碑/价格未查到)"
+      source: "https://baike.baidu.com/item/北京师范大学附属实验中学大兴分校/64664757（百科·待核）"
+    activities:
+      value: "『四礼五节』等德育活动与本校一致;基于住宿特色文化、空间资源充裕,安排内容多元的学生活动"
+      source: "https://baike.baidu.com/item/北京师范大学附属实验中学大兴分校/64664757（百科·待核）"
+
+  北京市私立君谊中学:
+    _note: "1993成立的民办高级中学(北京最早民办高中之一);位于南五环兴业大街与香园路交接处"
+    class_system:
+      value: "开设普通高中班、美术班、篮球班及小语种班;提供高考美术、高考传媒、高考篮球等个性化方向"
+      source: "http://www.junyi.org/ ; https://baike.baidu.com/item/北京市私立君谊中学/435510"
+    schedule:
+      value: "学生从起床到熄灯就寝均有专职教师负责管理(具体到校/放学钟点未查到)"
+      source: "https://baike.baidu.com/item/北京市私立君谊中学/435510（百科·待核）"
+    management:
+      value: "寄宿制准军事化管理,培养自主能力;配专职班主任、专职生活管理教师,对学生全时控制管理"
+      source: "https://baike.baidu.com/item/北京市私立君谊中学/435510（百科·待核）"
+    boarding_detail:
+      value: "全部学生寄宿制(特殊情况可申请走读);宿舍敞亮、居住舒适安全。具体几人间未查到"
+      source: "https://baike.baidu.com/item/北京市私立君谊中学/435510（百科·待核）"
+    dining:
+      value: "食堂清洁,营养配餐种类丰富"
+      source: "https://baike.baidu.com/item/北京市私立君谊中学/435510（百科·待核）"
+    activities:
+      value: "标准足球场、室内篮球馆等体育设施;篮球为特色培养方向"
+      source: "http://www.junyi.org/ ; https://baike.baidu.com/item/北京市私立君谊中学/435510"
+
+  清华附中大兴学校:
+    _note: "公办十二年制,大兴区天宫院地区,占地9.37万㎡,大兴区教委隶属,2022.8开办高中部;由清华附中统一管理;师资80%硕士、4%博士,含全国特级教师3人、北京市正高级教师5人"
+    class_system:
+      value: "公办十二年制,由清华附中统一管理;实施小班化分层教学;采用『1+3』贯通培养,设人文、科学、艺术三大书院;构建『基础素养+综合素质+自主发展』三级课程体系"
+      source: "https://baike.baidu.com/item/清华附中大兴学校/64280696 ; https://www.bjdx.gov.cn/bjsdxqrmzf/zhyw/bmdt66/2151353/index.html（百科+政府网）"
+    management:
+      value: "小班化分层教学+双导师制管理;新入职教师须在清华附中本部完成至少1学期跟岗培训"
+      source: "https://baike.baidu.com/item/清华附中大兴学校/64280696（百科·待核）"
+    voices:
+      value: "2024中考平均分位列大兴区前列;学生获中国机器人大赛冠军;2025首届高三毕业生23%通过强基计划进入清华、北大等(办学成绩,非家长口碑)"
+      source: "https://baike.baidu.com/item/清华附中大兴学校/64280696（百科·待核）"
+    _excluded: "网传『宿舍容纳400人/食堂2000㎡容纳1000人/20余社团/养羊驼孔雀』经核查实为一零一中大兴分校,已剔除避免张冠李戴;本校 boarding/dining/activities 未查到可靠独立来源,故省略"
+
+  北京大兴精华学校:
+    _note: "精华教育旗下全日制高中;2024获『创新型人才培养标杆学校』、大兴区基础教育课程建设先进单位"
+    class_system:
+      value: "采用分层分类教学体系;课程含基础性必修课、拓展性课程及人工智能等前瞻性选修课"
+      source: "https://m.jinghua.com/dxSchool/rise.jsp ; https://www.sohu.com/a/889937883_121956424（探访稿·民间整理·待核）"
+    schedule:
+      value: "学生每日划分约41个时间段(学习/休息/课后辅导/社会活动等),安排紧凑(具体到校/放学/晚自习钟点未公开)"
+      source: "https://m.163.com/dy/article/IVTG9TD70514R9KQ.html（媒体稿·民间整理·待核）"
+    management:
+      value: "实行学科教师与心理教师『双班主任制』;精细化管理,定期反馈与评估"
+      source: "https://school.jinghua.com/ ; https://m.jinghua.com/information/model/article_wap_10519.shtml"
+    boarding_detail:
+      value: "提供住宿(可走读可住宿);宿舍配独立卫浴、空调、书桌、储物柜,照明用『护眼灯』"
+      source: "https://school.jinghua.com/ ; https://m.jinghua.com/article/16489.html（官网）"
+    dining:
+      value: "食堂供一日三餐;推广『低脂低碳餐』,从热量/碳水/脂肪/蛋白质筛选食材,菜谱3周不重样"
+      source: "https://school.jinghua.com/（官网自述·待核）"
+    voices:
+      value: "教师团队正高级占比约17%-25%、特级教师约27%-30%(学校自述/媒体稿·待核)"
+      source: "https://baike.baidu.com/item/北京大兴精华学校/61993263 ; https://m.163.com/dy/article/IVTG9TD70514R9KQ.html（民间整理·待核）"
+
+  北京金融街润泽学校:
+    _note: "由金融街集团、北京市供销合作总社两大国企合办;领航人含原北京四中校长刘长铭、原汇文中学校长陈维嘉;90%以上教师硕士及以上(学校自述·待核)"
+    class_system:
+      value: "小班化教学,每班原则上不超过24人"
+      source: "https://jingkids.com/scg-bj/beijing-financial-street-runze-school/ ; https://www.125school.com/xuexiao172/wenti/（待核）"
+    schedule:
+      value: "中学作息8:00-17:40(含国家课程及自主选修),周五8:00-17:30(此为中学段通用作息,高中具体晚自习时间未单列)"
+      source: "https://jingkids.com/scg-bj/beijing-financial-street-runze-school/（待核）"
+    management:
+      value: "封闭式管理,学生不得随意出入,特殊需要须经学部/值班领导开放行条;专职保安24小时巡视"
+      source: "https://www.125school.com/xuexiao172/wenti/（民间整理·待核）"
+    boarding_detail:
+      value: "设独立宿舍楼,每层配公共洗衣房、浴室;宿舍为四人位上下床、每人一组整理柜;家具为超E0级环保材料、钢木结构"
+      source: "https://jingkids.com/scg-bj/beijing-financial-street-runze-school/ ; https://baike.baidu.com/item/北京金融街润泽学校/23731690（待核）"
+    dining:
+      value: "食堂提供中西餐,平均约30元/人次"
+      source: "https://jingkids.com/scg-bj/beijing-financial-street-runze-school/（待核）"
+    activities:
+      value: "开设艺术陶冶、科技创新、健美塑形、思维拓展、研学考察、生活技能等特色拓展课程"
+      source: "https://jingkids.com/scg-bj/beijing-financial-street-runze-school/（待核）"
+
+  北京大兴熙诚学校:
+    _note: "西城区国资委旗下北京金融街资本运营集团投资,创校校长为原北京三十五中校长朱建民,2022.9开学,地址大兴采育镇福源路;学费各源不一致(15万/19万均出现,未采用)"
+    class_system:
+      value: "国际化方向,三大课程群『核心学术课程/精神品格成长课程/专业方向探索课程』;含标化课程(托福雅思、AP/A-Level、SAT/ACT)与国际化特色课程"
+      source: "https://www.xichengacademy.cn/ ; https://m.ieduglobe.com/xuexiao/xichengacademy/（聚合站·民间整理·待核）"
+    management:
+      value: "全寄宿制,实行双导师制(师生比约1:2),双导师跟踪学业、心理、生涯与升学;家庭式陪伴+导师监护渗透寄宿环节"
+      source: "https://www.ieduonline.cn/about/xichengacademy ; https://m.ieduonline.cn/school/detail?id=19&tab=third（聚合站/部分自述·待核）"
+    boarding_detail:
+      value: "全寄宿制,建筑面积近2万㎡,可满足约460名学生寄宿。宿舍几人间未查到"
+      source: "https://baike.baidu.com/item/北京大兴熙诚学校/61720150 ; https://m.ieduonline.cn/school/detail?id=19&tab=third（百科/聚合站·待核）"
+    dining:
+      value: "设独立食堂,早中晚三餐,自助餐形式(另有聚合站称『餐费120元/天』,单一来源·待核)"
+      source: "https://m.ieduglobe.com/xuexiao/xichengacademy/ ; https://m.ieduonline.cn/school/detail?id=19&tab=third（民间整理·待核）"
+    activities:
+      value: "开设阅读活动/读书会、演讲课程、跨学科STEAM课程、模拟联合国等社团、专项运动队训练(参与国内外竞赛)、健康教育/体能测试/户外拓展;强调艺术与创新课堂、体育与户外拓展课程"
+      source: "https://www.xichengacademy.cn/6 ; https://www.xichengacademy.cn/（官网）"
+    voices:
+      value: "知乎讨论称『拓展课程多、艺术与体育活动多、对申请大学有帮助』『外教比例高、平时上课老师一多半是外教』(原页403未直读,引自搜索摘要)"
+      source: "https://www.zhihu.com/question/595289476（知乎·民间整理·待核）"

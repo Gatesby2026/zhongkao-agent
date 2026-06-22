@@ -1,0 +1,194 @@
+district: 房山
+topic: 校园生活
+note: |
+  字段口径——class_system(班型) / schedule(作息) / management(管理) / boarding_detail(住宿) /
+  dining(食堂) / activities(活动) / voices(学生评价)。
+  铁律:绝不编造、绝不张冠李戴;每字段附 source;查不到的字段省略;整校查不到则不收录。
+  信源分级参考 ADDRESS-VERIFICATION SOP:官方(学校官网/公众号/区教委 bjfsh.gov.cn)> 百科 > 民间(家长帮/知乎/中考信息网,标「民间整理·待核」)。
+  校名逐字等于 fangshan_admission_codes.json 正名。
+  采集日期:2026-06-22。仅写真查到的;多源未交叉核实者标 confidence:low。
+
+schools:
+  北京师范大学燕化附属中学:
+    class_system:
+      value: 设普通班与石化科技班(石化科技班依托燕山石化资源开展创新人才培养,构建科技专题课程群);设西藏内高班(民族团结教育示范校)。
+      source: 百度百科「北京师范大学燕化附属中学」 https://baike.baidu.com/item/北京师范大学燕化附属中学/3728151
+      confidence: medium
+    activities:
+      value: 依托燕山石化资源开展科技创新人才培养,建有科技专题课程群。
+      source: 百度百科「北京师范大学燕化附属中学」 https://baike.baidu.com/item/北京师范大学燕化附属中学/3728151
+      confidence: medium
+    # 住宿/食堂/作息/管理未查到可靠来源,省略
+
+  北京市房山区房山中学:
+    class_system:
+      value: 设普通班与宏志班。宏志班面向全区招生(2025 计划 10 人),招收家庭贫困(具四证之一)、品学兼优、身心健康的房山区应届初中毕业生;宏志生在校三年享「四免一补」(免学费、住宿费、书本费、校服费,并享一定生活补贴)。
+      source: 「2025年房山中学宏志班招生通道开启」 https://www.funhillrm.com/news/local/2025-05-20/56597.html ；网易转载 https://c.m.163.com/news/a/JVUUBE9K0552UKTX.html
+      confidence: medium
+    boarding_detail:
+      value: 可住宿,宿舍有空调;宏志生免住宿费。
+      source: 「2025年房山中学宏志班招生通道开启」(免住宿费) https://www.funhillrm.com/news/local/2025-05-20/56597.html
+      confidence: low
+      note: 民间整理·待核(宿舍空调一项为民间来源,未见官方确认)
+    dining:
+      value: 设多功能教室兼学生食堂;校内有实验室、图书资料室、计算机房、300米标准化操场及灯光篮球场。
+      source: 百度百科「北京市房山区房山中学」 https://baike.baidu.com/item/北京市房山区房山中学/7131529
+      confidence: medium
+
+  北京市房山区良乡中学:
+    boarding_detail:
+      value: 建有 12000 平方米学生公寓楼,可满足 1600 名学生住宿。
+      source: 百度百科「北京市房山区良乡中学」(经搜索摘要) https://baike.baidu.com/item/北京市房山区良乡中学/3729670 ；2026 中考校介 https://www.gaokzx.com/gk/zhongkao/150466.html
+      confidence: medium
+    dining:
+      value: 学生食堂可满足 1200 人同时就餐。
+      source: 百度百科「北京市房山区良乡中学」(经搜索摘要) https://baike.baidu.com/item/北京市房山区良乡中学/3729670
+      confidence: medium
+    activities:
+      value: 校内设 46 部多媒体教室、15 部理化生实验室、400 米标准塑胶运动场;现代化图书馆藏书 8 万余册,可同时容纳 400 多名学生借阅与自主修习。
+      source: 百度百科「北京市房山区良乡中学」(经搜索摘要) https://baike.baidu.com/item/北京市房山区良乡中学/3729670
+      confidence: medium
+
+  北京师范大学良乡附属中学:
+    management:
+      value: 区教委主管的全寄宿制公办独立高中,北京市示范性普通高中(房山区唯一市级示范高中)。
+      source: 百度百科「北京师范大学良乡附属中学」(经搜索摘要) https://baike.baidu.com/item/北京师范大学良乡附属中学/259757
+      confidence: medium
+    boarding_detail:
+      value: 全寄宿制;校园北侧有两座学生宿舍楼;校园占地 72036 ㎡,食堂面积 2518.02 ㎡,浴室面积 435.2 ㎡。高三与高一高二同住(不分开),高三晚自习下课比高一高二晚约 40 分钟。
+      source: 百度百科「北京师范大学良乡附属中学」(经搜索摘要,全寄宿/宿舍楼/食堂浴室面积) https://baike.baidu.com/item/北京师范大学良乡附属中学/259757
+      confidence: medium
+    schedule:
+      value: 高三晚自习下课时间比高一高二晚约 40 分钟,高三放学时高一高二已熄灯;早读会安排做题。
+      source: 知乎相关讨论(民间整理·待核) https://www.zhihu.com/question/47021981
+      confidence: low
+      note: 民间整理·待核
+    voices:
+      value: 在校生反映全寄宿、返校较难,高三假期与补课较多;高三楼教室宽敞、老师评价较好。
+      source: 知乎「北京四中房山分校和北师大良乡附中比哪个好?」等讨论(民间整理·待核) https://www.zhihu.com/question/47021981
+      confidence: low
+      note: 民间整理·待核
+
+  北京市房山区实验中学:
+    management:
+      value: 公立全日制三年制普通高级中学(2000 年由房山区师范学校转制);办学思想为「和谐教育」,促进学生全面而有个性的和谐发展。
+      source: 百度百科「北京市房山区实验中学」(经搜索摘要) https://baike.baidu.com/item/北京市房山区实验中学/3730658
+      confidence: medium
+    boarding_detail:
+      value: 有学生宿舍楼 3 栋,建筑面积 7004 ㎡;另有浴室 1 部,建筑面积 174 ㎡。
+      source: 百度百科「北京市房山区实验中学」(经搜索摘要) https://baike.baidu.com/item/北京市房山区实验中学/3730658
+      confidence: medium
+    dining:
+      value: 有食堂 1 部,建筑面积 1524 ㎡。
+      source: 百度百科「北京市房山区实验中学」(经搜索摘要) https://baike.baidu.com/item/北京市房山区实验中学/3730658
+      confidence: medium
+
+  北京市房山区周口店中学:
+    dining:
+      value: 有食堂(建筑面积约 1416 ㎡)、浴室(约 70 ㎡)及生活用房(约 7721 ㎡)等生活设施。
+      source: 中考升学聚合站「北京市房山区周口店中学」(民间整理·待核) https://www.hxx.net/xuexiao/21690.html
+      confidence: low
+      note: 民间整理·待核(房山区教委 2025 预算公开页不含该类细节,数据来自第三方聚合站,未获官方交叉核实)
+    boarding_detail:
+      value: 学校支持寄宿,设有学生宿舍楼。
+      source: 中考升学聚合站「北京市房山区周口店中学」(民间整理·待核) https://www.hxx.net/xuexiao/21690.html
+      confidence: low
+      note: 民间整理·待核
+
+  首都师范大学未来实验学校:
+    management:
+      value: 市建共管、首都师范大学直办的小学—初中—高中十二年一贯制学校,北京市确定的 17 所优质学校之一;高中部约 385 人;下设德育部、教学部、保障部、研究中心;推进「五位一体」全息育人体系。
+      source: 房山区教委「首都师范大学未来实验学校」2025 公开页 https://www.bjfsh.gov.cn/zwgk/qjw/ghjh_412/ysjs_442/second/2025ys/202503/t20250305_40086475.shtml ；办学特色介绍 http://www.edutoutiao.com/zxx/12192.html
+      confidence: medium
+    # 高中部住宿/食堂/作息未见可靠专属来源,省略(避免与朝阳「首师大附属实验学校」混淆)
+
+  首都师范大学附属房山学校:
+    management:
+      value: 「一校两址」的九年一贯、十二年一体学校(2019 年 9 月竹园街校区启用);以「活力教育」为办学特色,培养「品行好、身体棒、基础实、能力强、特长显、视野阔」的活力少年。
+      source: 房山区教委公开页 https://www.bjfsh.gov.cn/zwgk/qjw/ghjh_412/ysjs_442/second/2024ys/202402/t20240226_40073071.shtml ；百度百科「首都师范大学附属房山中学」 https://baike.baidu.com/item/首都师范大学附属房山中学/9218136
+      confidence: medium
+    boarding_detail:
+      value: 住宿生近 800 人(2019 年前后规模)。
+      source: 百度百科「首都师范大学附属房山中学」(经搜索摘要) https://baike.baidu.com/item/首都师范大学附属房山中学/9218136
+      confidence: medium
+    activities:
+      value: 开设全科阅读、科技综合、艺术特长、运动拓展、情商培育、主题游学六大类主题课程,并设每日全员课后服务课程(阅读、艺术、体育、科技、学科素养提升)。
+      source: 百度百科「首都师范大学附属房山中学」(经搜索摘要) https://baike.baidu.com/item/首都师范大学附属房山中学/9218136
+      confidence: medium
+
+  北京市房山区坨里中学:
+    management:
+      value: 完全中学(含初中、高中),位于青龙湖镇坨里村;高中年级使用近 4000 ㎡新教学楼,21 个教室班班配多媒体。
+      source: 百度百科/聚合站「北京市房山区坨里中学」(经搜索摘要,新教学楼/多媒体) https://www.hixuexiao.net/front/school/5316/detail
+      confidence: low
+      note: 民间整理·待核
+    boarding_detail:
+      value: 支持寄宿,建有可供近 500 人同时住宿的学生宿舍楼(已投用),学生就餐条件有改善。
+      source: 聚合站「北京市房山区坨里中学」(民间整理·待核) https://www.hixuexiao.net/front/school/5316/detail
+      confidence: low
+      note: 民间整理·待核
+
+  北京理工大学附属实验学校:
+    class_system:
+      value: 涵盖小学、初中、高中、国际部的十二年制公立学校(北理工与房山区政府 2018 年共建);高中部设计规模 36 个班,2024 年 9 月高中部新校区启用,新增约 1620 个学位。国际部为房山区第一所公立学校国际部,中美高中国际课程项目与美国湖沙克学校(Hoosac)合作,提供中美双学籍、双毕业证(2023 年首招 2 个班共 50 人;02 专业学费 100000 元/学年)。
+      source: 北理工附属实验学校官网 https://lgsy.bit.edu.cn/xxgs/xxjj/index.htm ；「房山区第一所公立高中国际部」 https://k.sina.cn/article_3080457541_b79c0d4501901dxlx.html ；国际部学费见 fangshan_admission_codes.json note(bjeea 官方计划)
+      confidence: medium
+    boarding_detail:
+      value: 校内建有师生宿舍楼(校园占地 51100 余 ㎡,建筑面积 38466 ㎡含小学楼、初中楼、综合楼、师生宿舍楼);国际课程项目班考生入学后可按学校规定申请住宿。
+      source: 北理工附属实验学校官网/百科(师生宿舍楼) https://lgsy.bit.edu.cn/xxgs/xxjj/index.htm ；招生住宿说明见 fangshan_admission_codes.json note(bjeea 官方计划)
+      confidence: medium
+
+  首都师范大学附属中学实验学校:
+    management:
+      value: 房山区教委与首师大附中联合创办的小学—初中—高中十二年一贯制学校(长阳镇),2018 年建成一期、2022 年开设高中部;传承「正志笃行、成德达才」教育思想,校训「自觉、勤奋、求实、创新」。
+      source: 百度百科「首都师范大学附属中学实验学校」 https://baike.baidu.com/item/首都师范大学附属中学实验学校/24272157 ；房山区教委公开页 https://www.bjfsh.gov.cn/zwgk/qjw/ghjh_412/ysjs_442/second/2022nys/202206/t20220617_40047026.shtml
+      confidence: medium
+    class_system:
+      value: 设「四修课程」体系——基础通修、兴趣选修、专业精修、自主研修;开设语言、体育、艺术、科技、传统文化五大类 26 门选修课程。
+      source: 百度百科「首都师范大学附属中学实验学校」 https://baike.baidu.com/item/首都师范大学附属中学实验学校/24272157
+      confidence: medium
+    activities:
+      value: 设足球队、篮球队、田径队、合唱队、舞蹈队等学生社团。
+      source: 百度百科「首都师范大学附属中学实验学校」 https://baike.baidu.com/item/首都师范大学附属中学实验学校/24272157
+      confidence: medium
+    boarding_detail:
+      value: 普通班招生计划注明「考生入学后可申请住宿」。
+      source: fangshan_admission_codes.json note(bjeea 2025 官方统招计划)
+      confidence: medium
+
+  北京市博文学校:
+    management:
+      value: 民办全日制寄宿学校(创办于 1993 年,北京首批民办全日制寄宿学校之一,窦店镇),实施小学至高中十二年一贯制;核心理念「人生中心教育」,校训「博学多能、崇德自强」。
+      source: 北京市博文学校官网 https://www.bjbws.cn/ ；百度百科「北京市博文学校」 https://baike.baidu.com/item/北京市博文学校/435412
+      confidence: medium
+    boarding_detail:
+      value: 全寄宿制;校园占地近 400 亩,建筑面积 8 万多 ㎡,绿地 250 亩。bjeea 计划中 02 专业明确为住宿计划(208 名)。
+      source: 北京市博文学校官网 https://www.bjbws.cn/ ；住宿计划见 fangshan_admission_codes.json(bjeea 官方计划)
+      confidence: medium
+    activities:
+      value: 配标准体育场、篮球场、足球训练场,设舞蹈排练厅、演出厅、书画室、农耕园、药植园、生存拓展训练场、科技实训场、一站式劳动教育实践基地等;高中课程为「基础+特色+创新」三维架构。
+      source: 北京市博文学校官网 https://www.bjbws.cn/
+      confidence: medium
+
+  北京四中房山分校:
+    boarding_detail:
+      value: 可住宿(学生可全部住宿)。具体宿舍配置房山分校未见官方公开,本部为 6 人间、有阳台/电扇/储物柜/桌椅、每层公共卫生间(仅供参考,非房山分校确证)。
+      source: 知乎「在北京四中房山校区上学体验」等讨论(民间整理·待核) https://www.zhihu.com/question/27332958
+      confidence: low
+      note: 民间整理·待核(本部宿舍配置不可外推为房山分校实际)
+    schedule:
+      value: 传承四中本部体育课程模式——每天 1 节体育课、1 次课间操、2 次眼保健操。
+      source: 知乎相关讨论(民间整理·待核) https://www.zhihu.com/question/27332958
+      confidence: low
+      note: 民间整理·待核
+    activities:
+      value: 设文学社、吉他社、美食社、服装设计等多个社团;校园内有「冲浪小岛」、工作室、竹林书院等学习休闲场所,教室与走廊宽敞(校园由 OPEN 建筑事务所设计)。
+      source: 知乎讨论 + 谷德设计网建筑介绍 https://www.gooood.cn/beijing-no-4-middle-school-fangshan-campus.htm
+      confidence: medium
+    voices:
+      value: 学生反映食堂菜量定量、曾有食品卫生方面意见;校园环境与建筑评价较好。
+      source: 知乎「在北京四中房山校区上学体验」(民间整理·待核) https://www.zhihu.com/question/27332958
+      confidence: low
+      note: 民间整理·待核
+
+  # 北京市燕山职业学校:整校未查到校园生活(班型/作息/住宿/食堂/活动/评价)的可靠专属来源,按铁律不收录。

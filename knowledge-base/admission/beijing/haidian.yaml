@@ -41,6 +41,15 @@ schools:
       total: 660
       score: 644
       rank: 948
+  campus_life:
+    class_system: 民间整理·待核：高中部每年级约14~18个班，1班为人文实验班、2-7班普通班、8-15班实验班、16-18班早培班，每班约45人；早培班为拔尖创新人才早期培养项目（全市选拔）。
+    schedule: 民间整理·待核：住宿生晚6:30-9:30晚自习（中间休息10分钟，老师记考勤），晚10:30熄灯。
+    boarding_detail: 民间整理·待核：可住宿，6人一间上下铺，有独立洗澡间，中央空调，有阳台晾衣；住宿费约440元。
+    dining: 民间整理·待核：有食堂（网传内部设施好）。
+    activities: 民间整理·待核：社团约145个，涵盖竞赛/文艺/研学/志愿等。
+    voices: 民间整理·待核：学生反馈『包容多元、舞台足够大』，竞赛/社团/学霸路线都能找到方向（人大附中ICC校园生活栏目 + 知乎）。
+    source: 人大附中ICC校园生活 https://icc.rdfz.cn/CHN_RDFZ_XYSH/ ; 北京高考在线(内部设施) https://www.gaokzx.com/c/202012/48370.html ; 知乎
+      https://zhuanlan.zhihu.com/p/406392120
   scores_meta:
     source: 官方录取分数线（历史 3 年）
     confidence: high
@@ -61,7 +70,13 @@ schools:
     source: 高德 geocode（统招报到校区，待电话核实）
   level: 民办
   note: ''
-  features: {}
+  features:
+    style: 人大附中联合总校成员校（2003年加入，2022年转海淀区属公办），引进人大附中教育思想与管理模式；学生培养目标「全面发展+突出特长+创新精神+高尚品德」，在大中小思政一体化、戏剧实践课程、STEM 课程上有特色
+    tags:
+    - 综合均衡
+    - 课程改革
+    - 科技创新
+    source: 百度百科;北京中考信息网 zhongkaobj.cn/zhongkao/zxdt/202412236934.html
   gaokao: {}
   scores:
     '2025':
@@ -96,7 +111,12 @@ schools:
     source: 高德 geocode（统招报到校区，待电话核实）
   level: 区级（人大附中体系）
   note: ''
-  features: {}
+  features:
+    style: 海淀区属十二年一贯制公办校（前身1964年蓝靛厂中学，2009年由人大附中托管），秉「爱与尊重」与「潜能教育」理念；打造人文/艺术/体育/科学/综合实践/国际理解特色课程群，开设学科融合及建筑教育特色课程
+    tags:
+    - 综合均衡
+    - 课程改革
+    source: 百度百科;北京日报 peking.bjd.com.cn/content/s66dfa745e4b0c25b287b35ff.html
   gaokao: {}
   scores:
     '2025':
@@ -215,6 +235,14 @@ schools:
     '2015': 620人参考，一本率91.9%，上本科线99.2%，约50人录取清华北大（较旧数据，近年未查到可靠值）
     source: https://zh.wikipedia.org/zh-hans/中央民族大学附属中学
   scores: {}
+  campus_life:
+    class_system: 民间整理·待核：按选科情况进行分班。
+    management: 民间整理·待核：相对宽松，封闭式寄宿制管理，住校生周一至周五在校，每晚3节晚自习，教师陪伴式教育；师资要求硕士学位。
+    boarding_detail: 民间整理·待核：高二高三住校，男生部分住食堂上方（独立卫浴）或民大留学生公寓（两宿舍共用独卫），女生宿舍每层多个洗漱间厕所、洗澡需出楼。
+    dining: 民间整理·待核：早餐较丰富，午餐以盖饭/面/米线/汤为主，晚餐种类略少；海淀校区食堂地下两层、品类丰富。
+    activities: 民间整理·待核：社团整体不算活跃，较活跃的有乐队、戏剧社、动漫社、学生会（部分社团一年仅招新与改选）。
+    voices: 民间整理·待核：老师讲课各有风格、基本都用PPT；学校相对宽松（知乎/官网）。
+    source: 民大附中官网概况 https://mdfz.muc.edu.cn/xxjj/fzgk.htm ; 知乎(就读体验) https://www.zhihu.com/question/28151262 ; 知乎(好不好) https://www.zhihu.com/question/382438528/answer/1494547743
 - name: 人大附中航天城学校
   school_code: '208039'
   location:
@@ -225,7 +253,13 @@ schools:
     source: 高德 geocode（统招报到校区，待电话核实）
   level: 区级
   note: ''
-  features: {}
+  features:
+    style: 海淀区属公办十二年一贯制校，人大附中联合学校总校、人大附中承办；构建「三三三」（启航/领航/自航）小初高一体化课程，打造航天科技特色，科技社团涵盖机器人/天文/信息学/智造/地球演化/生命科学，建星球教室、冰球馆、游泳馆
+    tags:
+    - 科技创新
+    - 综合均衡
+    - 课程改革
+    source: 教育部官网 moe.gov.cn/fbh/live/2023/55484/dfdxal/202309/t20230920_1081673.html;百度百科
   gaokao: {}
   scores:
     '2025':
@@ -293,7 +327,13 @@ schools:
     source: 高德 geocode（统招报到校区，待电话核实）
   level: 区级（101体系）
   note: ''
-  features: {}
+  features:
+    style: 北京一零一中教育集团成员校（前身1960年石油附中，2019年101承办更名）；传承「铁人精神」，以韩/日/德/法/俄/西/葡七种小语种为特色（145门校本课程），管乐团（科技+艺术）与天文社著名
+    tags:
+    - 外语特色
+    - 综合均衡
+    - 艺术特长
+    source: 学校官网 101syfx.bjhdedu.cn/xxgk;百度百科;北京中考信息网 zhongkaobj.cn
   gaokao: {}
   scores:
     '2025':
@@ -324,7 +364,13 @@ schools:
     source: 高德 geocode（统招报到校区，待电话核实）
   level: 区级（101体系）
   note: ''
-  features: {}
+  features:
+    style: 北京一零一中教育集团成员校（2019年矿大附中并入集团），海淀区属公办完全中学；北京市科技后备人才早期培养项目基地校，地学/STEM/航天/校园气象/信息技术科创见长，在集团「三层八域」体系上建「旷·爱」校本课程
+    tags:
+    - 科技创新
+    - 学科竞赛
+    - 综合均衡
+    source: 学校官网 bjsdschool.cn;搜狐 sohu.com/a/899491787_100187912;百度百科（北京一零一中教育集团）
   gaokao: {}
   scores:
     '2025':
@@ -355,7 +401,13 @@ schools:
     source: 高德 geocode（统招报到校区，待电话核实）
   level: 区级
   note: ''
-  features: {}
+  features:
+    style: 海淀区中法合作十二年一贯制公办校（前身温泉第二中学），以法语为第一外语的法语+英语双外语特色校，部分学科法语授课、引中法融合课程；倡「博雅教育」，2019年法语教学获法国教育认证，海淀区艺术教育示范校
+    tags:
+    - 外语特色
+    - 国际方向
+    - 课程改革
+    source: 学校官网 zfsyxx.bjhdedu.cn;百度百科;北京小升初网 xschu.com/xiaoshengchu/24/31184.html
   gaokao: {}
   scores:
     '2025':
@@ -402,6 +454,15 @@ schools:
       total: 670
       score: 627
       rank: 6163
+  campus_life:
+    class_system: 民间整理·待核：高二设工程班、理茅班、文茅班、理科实验班及普通班（理/文分科）；初中随机平行分班。
+    schedule: 民间整理·待核：早7:30到校、下午17:30放学；高一无晚自习，高二有自愿晚自习（不占课，到晚8点多）。
+    boarding_detail: 民间整理·待核：寄宿生有学生公寓（可申请不住宿）；南校区住宿楼男女分层，8人一间，每人一柜，公共浴室刷卡。
+    dining: 民间整理·待核：午餐五个窗口（约14元套餐/拉面粉/西餐/盖饭/饺子）。
+    activities: 民间整理·待核：社团活动活跃，各领域比赛成绩较好。
+    voices: 民间整理·待核：茅班老师负责（数学/生物口碑好），整体偏『放养』，需主动找老师答疑；被评为增值能力较强的学校（知乎）。
+    source: 知乎(交大附中怎么样) https://www.zhihu.com/question/483850079 ; 知乎(学校介绍) https://zhuanlan.zhihu.com/p/693328856 ; 知乎(增值能力)
+      https://zhuanlan.zhihu.com/p/491115199
   scores_meta:
     source: 官方录取分数线（历史 3 年）
     confidence: high
@@ -422,7 +483,12 @@ schools:
     source: 高德 geocode（统招报到校区，待电话核实）
   level: 区级
   note: ''
-  features: {}
+  features:
+    style: 北京交通大学附属中学教育集团校区，与交大附中本部共享「幸福教育」办学理念与集团资源（本部设茅以升班高端理科实验班，科技与艺术屡获国际奖项，棒/垒/田径见长）
+    tags:
+    - 综合均衡
+    - 科技创新
+    source: 北京交通大学附属中学教育集团 edutoutiao.com/teshexiao/7676.html;北京中考信息网 zhongkaobj.cn
   gaokao: {}
   scores:
     '2025':
@@ -449,7 +515,13 @@ schools:
     source: 高德 geocode（统招报到校区，待电话核实）
   level: 区级
   note: ''
-  features: {}
+  features:
+    style: 北京交大附中承办的分校（前身明光中学，2014年集团化更名），以「雅文化」（温雅教师/文雅学生/精雅校园）为核心，构建德心智美「幸福课程」体系，推「三有课堂」差异教学，开「人文+语言」特色课程；北京市校园文化建设示范校
+    tags:
+    - 文科人文
+    - 课程改革
+    - 综合均衡
+    source: 百度百科;知乎 zhuanlan.zhihu.com/p/672025143;教育头条 edutoutiao.com/teshexiao/7676.html
   gaokao: {}
   scores:
     '2025':
@@ -480,7 +552,13 @@ schools:
     source: 高德 geocode（统招报到校区，待电话核实）
   level: 区级
   note: ''
-  features: {}
+  features:
+    style: 北京交大附中教育集团成员校（2015年加入），构建「和合」人文生态课程体系（人与自然/社会/自我三主题，基础-拓展-研究三层级），含绿色低碳/人生美学/健康发展三大课程群；教育部国防教育特色学校
+    tags:
+    - 课程改革
+    - 综合均衡
+    - 文科人文
+    source: 搜狐 sohu.com/a/838391232_121956424;百度百科
   gaokao: {}
   scores:
     '2025':
@@ -511,7 +589,12 @@ schools:
     source: 高德 geocode（统招报到校区，待电话核实）
   level: 区级（十一体系）
   note: ''
-  features: {}
+  features:
+    style: 北京市十一学校承办的完全中学（前身1964年太平路中学，2016年起承办），与十一学校共同开展综合教育改革；设分层/分类/综合/特需课程体系、选课走班（111门学科课程+28门综合实践），导师制
+    tags:
+    - 课程改革
+    - 综合均衡
+    source: 知乎 zhuanlan.zhihu.com/p/690995296;百度百科;北京小升初网 xschu.com/xiaoshengchu/30/44922.html
   gaokao: {}
   scores:
     '2025':
@@ -579,7 +662,13 @@ schools:
     source: 高德 geocode（统招报到校区，待电话核实）
   level: 区级
   note: ''
-  features: {}
+  features:
+    style: 1959年周恩来、陈毅提议创建的全国第一所基础教育外国语学校，国家级高中特色发展试验项目学校；「英语+第二外语」复语教学，涵盖英/德/西/日/法/俄/韩7语种，面向国外名校的留学预备教育体系，培养「双复型」复合国际化预备英才
+    tags:
+    - 外语特色
+    - 国际方向
+    - 科技创新
+    source: 学校官网 bwfx.com.cn/index/bxts.htm;百度百科;北外国际 beiwaiguoji.com
   gaokao: {}
   scores:
     '2025':
@@ -633,6 +722,13 @@ schools:
       total: 660
       score: 636
       rank: 3047
+  campus_life:
+    class_system: 民间整理·待核：实行选课走班、无传统固定行政班；设六大学院、九大书院（格物/致知/诚意/正心/明德/至善/新民/熙敬/弘毅），每书院高一高二各约100人，下设小班约35-40人。
+    management: 民间整理·待核：每位高一生配书院导师（高中部教师担任），关注身心健康与目标管理、家校沟通；校园内可用手机，但进教学楼不允许、统一保管。
+    boarding_detail: 民间整理·待核：宿舍6人间、独立浴室，床位有限需按当年条件申请；住宿费约444元/人/学期。
+    activities: 民间整理·待核：需完成劳动学分、社区服务、研究性学习与实践课程，可参与/组建兴趣社团。
+    voices: 民间整理·待核：评价两极——管理较『放养』，自制力强的学生更出色、自制力弱的易松懈；适应『没人管』后上大学衔接较快（知乎/澎湃）。
+    source: 北大附中新生指南 https://intro.subit.org.cn/01/ ; 澎湃(书院制) https://www.thepaper.cn/newsDetail_forward_12798043 ; 知乎 https://www.zhihu.com/question/22731183
   scores_meta:
     source: 官方录取分数线（历史 3 年）
     confidence: high
@@ -653,7 +749,12 @@ schools:
     source: 高德 geocode（统招报到校区，待电话核实）
   level: 区级（北大附中体系）
   note: ''
-  features: {}
+  features:
+    style: 北大附中承办的北医附中分校，继承北大「以奉献社会为己任」担当与北大医学部严谨敬业精神，办学思想「关注人/培养人/成就人/发展人」，课程目标「重核心素养，育博学雅行的人」；20余门社团及园艺、雕版印刷、风筝制作等劳动实践课程
+    tags:
+    - 综合均衡
+    - 课程改革
+    source: 北京日报 xinwen.bjd.com.cn/content/s66d270aed5de123e3f115511.html;北京大学教职工之家 gh.pku.edu.cn/info/1018/1450.htm
   gaokao: {}
   scores:
     '2025':
@@ -741,6 +842,15 @@ schools:
       total: 670
       score: 618
       rank: 8086
+  campus_life:
+    class_system: 民间整理·待核：高一第一学期行政班教学，学期末选科；设国学特色班，注重传统文化。
+    schedule: 民间整理·待核：早7:20到校，下午17:10放学（周三/周五大课间17:30放学）；手机上交老师保管。
+    boarding_detail: 民间整理·待核：可申请住宿，公寓化管理，住宿费约450元/学期。
+    dining: 民间整理·待核：食堂两层，盖饭/套餐/小炒/面点/麻辣烫/焗饭/卷饼等，并提供营养套餐。
+    activities: 民间整理·待核：60余个学生社团（含校园电视台、模联等），每年办科技节/艺术节/国际文化周。
+    voices: 民间整理·待核：管理中规中矩、师生关系融洽，学生普遍认为老师教学水平高；校园面积不大（北京中考信息网/知乎）。
+    source: 北京中考信息网(校情) https://www.zhongkaobj.cn/cjpm/gaokaochengji/202412216854.html ; 中关村中学官网 https://zgczx.bjhdedu.cn/
+      ; 知乎(就读体验) https://www.zhihu.com/question/59155384/answer/237945872
   scores_meta:
     source: 官方录取分数线（历史 3 年）
     confidence: high
@@ -761,7 +871,13 @@ schools:
     source: 高德 geocode（统招报到校区，待电话核实）
   level: 区级
   note: ''
-  features: {}
+  features:
+    style: 北京市中关村中学承办的完全中学（前身知春里中学，2017年承办更名）；依托中科院智库与科研资源突出科学特色，机器人/模拟飞行/创客科技社团见长，足球（市级特色校）、垒球（市冠军）体育突出
+    tags:
+    - 科技创新
+    - 体育特长
+    - 综合均衡
+    source: 维基百科;百度百科;北京中考信息网 zhongkaobj.cn/zhongkao/zhongxue/202412246994.html
   gaokao: {}
   scores:
     '2025':
@@ -876,7 +992,13 @@ schools:
     source: 高德 geocode（统招报到校区，待电话核实）
   level: 区级（八一体系）
   note: ''
-  features: {}
+  features:
+    style: 北京市八一学校教育集团成员校（前身青龙桥中学/六十七中，2015年八一学校管辖更名），以「上善文化」为定位、提八大文化基因；探索航天科技特色育人，设航空国防实验班（飞机仪表驾驶/无人机/飞行模拟/「逐梦深蓝」国防科技活动）
+    tags:
+    - 科技创新
+    - 综合均衡
+    - 课程改革
+    source: 维基百科;北京中考信息网 zhongkaobj.cn/zhongkao/zxdt/202412257133.html;北京高考在线 gaokzx.com/gk/zhiyuan/125958.html
   gaokao: {}
   scores:
     '2025':
@@ -963,6 +1085,16 @@ schools:
     '2024': 本科录取率多年稳定在90%左右；2019届文科本科上线率100%，2020届本科上线率95.58%（网传）
     source: https://baike.baidu.com/item/北京市师达中学/1565743
   scores: {}
+  campus_life:
+    class_system: 民间整理·待核：寄宿制民办完全中学（全寄宿）。
+    schedule: 民间整理·待核：作息规律——约6:00起床、6:00-6:30洗漱与宿舍值日、6:40-7:00跑操、7:00-7:30早饭、7:40-8:05早读；每周回家一次。
+    management: 民间整理·待核：以军事化/严格管理著称，禁带零食饮料/手机/电子设备，发型服饰须合规；吸烟/饮酒/上网吧/异性过密交往/旷课/私自离校为『行为高压线』。
+    boarding_detail: 民间整理·待核：男女生各一栋独立5层宿舍楼、紧邻食堂，阳面8人间、阴面6人间均带阳台，中央空调。
+    dining: 民间整理·待核：半自助式，每餐四菜、每日不同，食堂获市学生营养餐先进单位、卫生A级单位。
+    activities: 民间整理·待核：16个学生社团，办风筝节/科技节/艺术节/体育节/读书节/民族运动会等。
+    voices: 民间整理·待核：管理规范严格、校风纯正（百度百科/家长社区）；适合需要外部约束作息的学生。
+    source: 百度百科 https://baike.baidu.com/item/北京市师达中学/1565743 ; 北京小升初网(住宿环境) https://www.xschu.com/xiaoshengchu/27/25511.html
+      ; 北京奥数网(军事化管理) https://m.aoshu.com/bj/e/20180111/5a56cd12ea81a_2.shtml
 - name: 北京市建华实验学校
   school_code: '208048'
   location:
@@ -1084,6 +1216,15 @@ schools:
       total: 670
       score: 626
       rank: 6409
+  campus_life:
+    class_system: 民间整理·待核：高中设昆玉书院（原昆玉实验班，专属课程）与笃行学院（普通班），往年约4-5个实验班、每班约40人。
+    schedule: 民间整理·待核：高一高二可自主选择是否上晚自习，高三必须上晚自习。
+    management: 民间整理·待核：规矩较多（如楼道单行靠右、着装要求），多数有道理；老师认真负责、关心学生。
+    boarding_detail: 民间整理·待核：住宿名额少，住宿在南校区（距北校约4公里，有定制通学公交），名额优先给实验班学生。
+    activities: 民间整理·待核：社团活动丰富且受支持，金帆话剧团等活跃，有管乐团、未来讲坛、升旗演讲等。
+    voices: 民间整理·待核：规矩比其他学校多但合理，能感到老师真心关心学生（知乎/北京中考信息网）。
+    source: 知乎(就读体验) https://www.zhihu.com/question/278485175 ; 北京中考信息网(校情) https://www.zhongkaobj.cn/cjpm/gaokaochengji/202412216860.html
+      ; 北京小升初网(校情) https://www.xschu.com/zhengcezixun/73154.html
   scores_meta:
     source: 官方录取分数线（历史 3 年）
     confidence: high
@@ -1104,7 +1245,13 @@ schools:
     source: 高德 geocode（统招报到校区，待电话核实）
   level: 区级
   note: ''
-  features: {}
+  features:
+    style: 海淀区教师进修学校附属实验学校承办的公办完全中学（前身1959年建校，2018年承办，集团化一体化管理），师资由进修学校骨干及名校毕业生组成；开设科技创新/国学经典/国际理解校本课程，参与集团五校联办「双英班」英才班，初中部享校额到校
+    tags:
+    - 综合均衡
+    - 课程改革
+    - 学科竞赛
+    source: 百度百科;北京中考信息网 zhongkaobj.cn/zhongkao/zhongxue/202412246990.html
   gaokao: {}
   scores:
     '2025':
@@ -1164,6 +1311,14 @@ schools:
   features: {}
   gaokao: {}
   scores: {}
+  campus_life:
+    class_system: 民间整理·待核：开设6种班型及百余种选修课，含综合素质班、综合素质多语种班、综合素质文体班、中英文课程班、双优运动班等（中学全部寄宿）。
+    schedule: 民间整理·待核：每周五放学回家、周日晚返校；平时6:40起床，先跑步再统一到食堂用餐。
+    management: 民间整理·待核：全寄宿制公寓式统一管理，导育教师/校医/保安/司机24小时值班；管理较严（如内务要求、禁带零食）。
+    boarding_detail: 民间整理·待核：全寄宿，宿舍配独立卫浴及公共卫浴，早中晚供热水，中央空调。
+    activities: 民间整理·待核：开展德育与学科实践活动（消防安全、心肺复苏演练、原创诗朗诵、英语新年音乐歌会、学科竞赛与实验等）。
+    voices: 民间整理·待核：有学生反馈规制严格（内务/禁零食），也有人认为有助于维护校风（知乎）。占地350亩、设施完善。
+    source: 知乎(学校简介) https://zhuanlan.zhihu.com/p/624882201 ; 知乎(就读体验) https://www.zhihu.com/question/33634904 ; 百度百科 https://baike.baidu.com/item/北京海淀外国语实验学校/10976158
 - name: 北京市海淀外国语藤飞学校河北省怀来县北辛堡镇
   school_code: '208067'
   location:
@@ -1187,7 +1342,13 @@ schools:
     source: 高德 geocode（统招报到校区，待电话核实）
   level: 区级
   note: ''
-  features: {}
+  features:
+    style: 由阜成路中学与122中学合并的大型完全中学，海淀区优质高中；设钱学森班（科技/人文）、国学实验班、统筹班及「1+3」项目，钱学森班含学科竞赛/艺术素养/实验创新/航天游学，办「三节一活动」与走进钱馆纪念活动
+    tags:
+    - 科技创新
+    - 文科人文
+    - 课程改革
+    source: 百度百科 baike.baidu.com/item/北京市海淀实验中学;学校官网 hdsyzx.bjhdedu.cn/xxgk/xxjj;北京中考信息网 zhongkaobj.cn
   gaokao: {}
   scores:
     '2025':
@@ -1198,6 +1359,14 @@ schools:
       total: 670
       score: 603
       rank: 10867
+  campus_life:
+    class_system: 民间整理·待核：高一不分班考、按中考成绩分班，优秀者入『钱学森班』；高二按高一成绩正式分班；设理科重点班『钱学森班』。
+    boarding_detail: 民间整理·待核：宿舍4-6人间上下铺；本区学生基本无住宿，钱学森班与统筹三学生可申请住宿。
+    dining: 民间整理·待核：餐厅提供三餐，家委会代表进校品尝，家长反馈味道好、营养搭配合理。
+    activities: 民间整理·待核：社团较丰富（弦乐社/戏剧社/舞蹈团/民乐团/合唱团/管乐团/篮球队/游泳队/单片机科技社等），每年办科技节/艺术节及研学（如高一西安研学）。
+    voices: 民间整理·待核：社团种类多、活动有特色，老师认真负责、班主任不过度管束，学习氛围不错（知乎/北京中考信息网）。
+    source: 知乎(就读体验) https://www.zhihu.com/question/29065820 ; 北京中考信息网(校情) https://www.zhongkaobj.cn/cjpm/gaokaochengji/202412267181.html
+      ; 海淀实验中学官网 https://hdsyzx.bjhdedu.cn/
   scores_meta:
     source: 官方录取分数线（历史 3 年）
     confidence: high
@@ -1231,7 +1400,13 @@ schools:
     source: 高德 geocode（统招报到校区，待电话核实）
   level: 区级
   note: ''
-  features: {}
+  features:
+    style: 二十中教育集团成员校（前身1951年建校，2023年11月加入二十中教育集团，资源共享师资交流）；秉「全面育人 关注差异 发展特长」理念，构建国家课程校本化体系，机器人/武术社团多次获国家级奖；国家级国防教育特色学校、海淀区劳动教育研究实验学校
+    tags:
+    - 综合均衡
+    - 体育特长
+    - 课程改革
+    source: 首都文明网 bj.wenming.cn/hd/yw/202311/t20231110_6696453.shtml;百度百科;北京中考信息网 zhongkaobj.cn/zhongkao/zxdt/202412267220.html
   gaokao: {}
   scores:
     '2025':
@@ -1275,6 +1450,14 @@ schools:
       total: 670
       score: 603
       rank: 10867
+  campus_life:
+    class_system: 民间整理·待核：通过入学测试分班，设5个A层班（每班约40人）+ 普通班；A班管理更严、要求更高、作业难度有区分。
+    schedule: 民间整理·待核：正常速度学生约21:00完成作业，期中后作业量增加、效率慢者可能到22:00后。
+    dining: 民间整理·待核：食堂两层，提供早餐午餐（高三晚自习有晚餐），菜品丰富、价格适中。
+    activities: 民间整理·待核：8个艺术社团+15个科技社团+7个体育社团，办科技节/艺术节/合唱节/体育节/越野赛等；特色『学生公司』课程受追捧。
+    voices: 民间整理·待核：学生对『学生公司』评价积极（产品贴近生活、团队协作）（北京中考信息网/知乎）。
+    source: 北京中考信息网(校情) https://www.zhongkaobj.cn/zhongkao/zhongxue/202412246986.html ; 玉渊潭中学官网 https://yytzx.bjhdedu.cn/
+      ; 知乎(办学情况) https://zhuanlan.zhihu.com/p/370723301
   scores_meta:
     source: 官方录取分数线（历史 3 年）
     confidence: high
@@ -1320,6 +1503,14 @@ schools:
       total: 660
       score: 642
       rank: 1364
+  campus_life:
+    class_system: 民间整理·待核：设六大特色班，含钱学森科学实验班、人文实验班、领军实验班、北理工强基班，及清华大学创新实验项目班。
+    boarding_detail: 民间整理·待核：可住宿，4人间、独立卫生间、热水沐浴、多功能组合床；封闭管理，有红外报警与视频监控。
+    dining: 民间整理·待核：统一安排一日三餐，禁外卖，小程序点餐，食堂大、多餐口，一餐约15-18元。
+    activities: 民间整理·待核：社团多（管乐/民乐/合唱/舞蹈/健美操/动漫/国乐等）；特色为花样滑冰（校内有冰场，普通学生体育课也会滑冰）。
+    voices: 民间整理·待核：班级学风正，学生间会比学习、欣赏能力强者（北京小升初网）。校园位于圆明园遗址内，环境优美、有人工湖。
+    source: 北京小升初网(校情) https://www.xschu.com/zhengcezixun/83471.html ; 中国教育在线(学食住行) https://chuzhong.eol.cn/beijing/bjcz/201409/t20140903_1171336.shtml
+      ; 知乎(本部介绍) https://zhuanlan.zhihu.com/p/690876438
   scores_meta:
     source: 官方录取分数线（历史 3 年）
     confidence: high
@@ -1360,6 +1551,14 @@ schools:
       total: 670
       score: 617
       rank: 8292
+  campus_life:
+    class_system: 民间整理·待核：不组织分班考试，按中考成绩分班；高一选科后再分班，高二有不同班型，高三基本不再分班。
+    schedule: 民间整理·待核：高一可申请晚自习，21:30下课且检查仪容仪表；有月考、成绩排名可在校网查看。
+    boarding_detail: 民间整理·待核：4人间上下铺、独立卫生间、公共浴室，男女宿舍管理严格，名额有限需申请。
+    activities: 民间整理·待核：体育有田径队等；艺术中心『三团两社』；科技课程丰富，与科技企业及科研院所合作。
+    voices: 民间整理·待核：作业量较多，年级前100名周六下午会被邀请补课；重视校风建设（北京中考信息网/知乎）。
+    source: 北京中考信息网(校情) https://www.zhongkaobj.cn/cjpm/gaokaochengji/202412216863.html ; 二十中官网 https://www.bj20hs.cn/ ; 知乎(如何评价)
+      https://www.zhihu.com/question/64520354
   scores_meta:
     source: 官方录取分数线（历史 3 年）
     confidence: high
@@ -1424,7 +1623,13 @@ schools:
     source: 高德 geocode（统招报到校区，待电话核实）
   level: 区级
   note: ''
-  features: {}
+  features:
+    style: 北京市第五十七中学集团化办学成员校（前身上庄中学，2019年57中承办更名），十二年一贯制公办校（设住宿部）；纳入57中集团资源统筹/课程共享，秉「笃学日新 守正致远」与「友善用脑」课堂改革；「体教结合」特色校，开体育特长班，拳击/跆拳道等市赛获多项冠军
+    tags:
+    - 体育特长
+    - 寄宿制
+    - 综合均衡
+    source: 维基百科（北京市第五十七中学）;北京中考信息网 zhongkaobj.cn/cjpm/gaokaochengji/202412267193.html;海淀教育网 bjhdedu.cn/zt/2024hdxx/.../t20240523_70656.html
   gaokao: {}
   scores:
     '2025':
@@ -1472,6 +1677,14 @@ schools:
       total: 670
       score: 606
       rank: 10375
+  campus_life:
+    class_system: 民间整理·待核：高中约13个班每班约40人，含4个实验班+1个强基实验班等：仰之班（文史）、国栋班（数理）、强基计划培养班（小班、文理兼修）、法大实验班（与中国政法大学合作）。
+    schedule: 民间整理·待核：早7:30到校，约17:30放学（含延学课程），周二选修时段上社团，初三有晚自习。
+    boarding_detail: 民间整理·待核：以走读为主，未见明确住宿信息（待核）。
+    dining: 民间整理·待核：食堂两层提供三餐，每层四五个窗口，一餐约18元，免费提供酸奶和汤。
+    activities: 民间整理·待核：社团多（民乐团/美术/定向越野/跆拳道/手球/无线电测向等），初一有京剧必修，校有银帆京昆团。
+    source: 北京中考信息网(校情) https://www.zhongkaobj.cn/cjpm/gaokaochengji/202412216866.html ; 北京小升初信息网(校情) https://www.xscxx.com/chuzhong/haidian/202412116112.html
+      ; 百度百科 https://baike.baidu.com/item/北京市第十九中学/10431645
   scores_meta:
     source: 官方录取分数线（历史 3 年）
     confidence: high
@@ -1569,6 +1782,14 @@ schools:
       total: 660
       score: 634
       rank: 3659
+  campus_life:
+    class_system: 民间整理·待核：设3个静嘉班、2个经济实验班、1个普通班，按中考成绩或现场咨询确定，学科分层走班，无单独学科实验班。
+    schedule: 民间整理·待核：高一高二晚自习到20:30，高三到21:30。
+    boarding_detail: 民间整理·待核：宿舍较宽松（入学申请即可），木质上床下桌、空调、独卫、24小时热水、4人间，有住宿老师组织晚自习与答疑，统一手机管理。
+    activities: 民间整理·待核：社团200多个（科技/政治/经济/文化艺术/志愿服务/动手创意等），有民乐团、舞蹈团、合唱团、机器人，及境内外研学。
+    voices: 民间整理·待核：学生反馈乐团最有归属感；也有学生提到因生源来自不同地区存在小圈子、融合需时间（知乎）。低进高出、排名连年上升口碑。
+    source: 知乎(就读体验) https://www.zhihu.com/question/28126283 ; 知乎(深度解析) https://zhuanlan.zhihu.com/p/497412099 ; 知乎(学校介绍)
+      https://zhuanlan.zhihu.com/p/662301947
   scores_meta:
     source: 官方录取分数线（历史 3 年）
     confidence: high
@@ -1659,6 +1880,14 @@ schools:
       total: 670
       score: 630
       rank: 5423
+  campus_life:
+    class_system: 民间整理·待核：本校区高中约12个班每班约40人，1-5班普通班、6-10班实验班、11-12班重点班（编号越大越好）。
+    schedule: 民间整理·待核：约7:30到校，8:00-17:30在校。
+    boarding_detail: 民间整理·待核：南校区有住宿（以高中住宿生为主，名额紧、不太提倡）；本校区无宿舍。
+    dining: 民间整理·待核：可吃三餐，分时段，自选，一顿约18-20元。
+    activities: 民间整理·待核：社团较丰富，含『机器人』『跆拳道』等五星级社团，部分需基础，多在放学后；学校科技/艺术/体育突出（棒球、排球多次夺冠）。
+    source: 北京小升初网(南校区校情) https://www.xschu.com/zhengcezixun/73276.html ; 搜狐(名校巡礼) https://www.sohu.com/a/127611704_546078
+      ; 百度百科 https://baike.baidu.com/item/北京理工大学附属中学/455522
   scores_meta:
     source: 官方录取分数线（历史 3 年）
     confidence: high
@@ -1759,6 +1988,16 @@ schools:
       total: 660
       score: 640
       rank: 1896
+  campus_life:
+    class_system: 民间整理·待核：1班体育特长班（马约翰『马班』）、2班美术特长班、3-11班普通班、12-15班实验班、16-18班为清华附实验学校，每班约35-40人。
+    schedule: 民间整理·待核：早7:30到校，下午17:30放学。
+    management: 民间整理·待核：手机不可带进教室，原则上关机（各年级要求不同）；对住宿生管理较严格。
+    boarding_detail: 民间整理·待核：自愿申请，8人间上下铺，有柜子写字桌、空调（限时使用、电费自充），朝阳宿舍有阳台，每层2个卫生间/2个浴室；住宿费约1900元/学期。
+    dining: 民间整理·待核：食堂A级资质，两层十几个窗口、菜品多，可吃三餐，中晚餐约18-20元；不少学生爱去清华大学食堂。
+    activities: 民间整理·待核：社团多（体育/兴趣/公益等），如心理、音乐、吉他、摇滚、漫画、模型、环保、无线电、科技俱乐部等；高一强制选社团、高二后自由。
+    voices: 民间整理·待核：部分住宿生初期不适应，多数能利用在校时间学习（北京高考在线/知乎）。
+    source: 清华附中将台路校区问答(官网) https://qhfz.edu.cn/info/1052/14222.htm ; 北京高考在线(内部揭秘) https://www.gaokzx.com/c/202011/47356.html
+      ; 知乎(宿舍实景) https://zhuanlan.zhihu.com/p/534315311
   scores_meta:
     source: 官方录取分数线（历史 3 年）
     confidence: high
@@ -1779,7 +2018,13 @@ schools:
     source: 高德 geocode（统招报到校区，待电话核实）
   level: 区级（清华附中体系）
   note: ''
-  features: {}
+  features:
+    style: 清华附中承办的公办校（前身2006年上地中学，2012年清华附中承办冠名）；办学特色「坚持全面发展，注重个性培养，展现学生特长」，以体育（每天一节体育课+两次大锻炼）与心理教育（每周一节心理课）见长，开「走进圆明园」人文系列课程；全国/北京市足球特色学校
+    tags:
+    - 体育特长
+    - 综合均衡
+    - 课程改革
+    source: 清华附中官网 qhfz.edu.cn/qhfzhzxx/qhfzsdxx.htm;百度百科;海淀教育网 bjhdedu.cn
   gaokao: {}
   scores:
     '2025':
@@ -1810,7 +2055,13 @@ schools:
     source: 高德 geocode（统招报到校区，待电话核实）
   level: 区级（清华附中体系）
   note: ''
-  features: {}
+  features:
+    style: 清华大学与清华附中全程规划、体现清华理念的九年/十二年制公办校，校训「自强不息 厚德载物」、校风「德先于智 行胜于言」；构建以核心课程为中心、含中国大学先修课程的体系，地处中关村永丰高新基地，以科技课程与社团（「育人为本、科技兴校」）见长
+    tags:
+    - 科技创新
+    - 综合均衡
+    - 课程改革
+    source: 学校官网 qhfzyf.cn;百度百科;清华附中官网 qhfz.edu.cn/qhfzhzxx/qhfzyfxx.htm
   gaokao: {}
   scores:
     '2025':
@@ -1881,7 +2132,13 @@ schools:
     source: 高德 geocode（统招报到校区，待电话核实）
   level: 区级（清华附中体系）
   note: ''
-  features: {}
+  features:
+    style: 清华附中教育集团成员校（原中国地质大学附属中学，2024年4月清华附中承办），北京市「大学办附中」项目校、海淀区首批新优质学校；校训「自强不息 厚德载物」，建「三纵五维」课程体系，设清华班/学院班，体育特色突出（「无体育不地附」）
+    tags:
+    - 体育特长
+    - 综合均衡
+    - 课程改革
+    source: 百度百科 baike.baidu.com/item/清华附中学院路学校;清华附中官网 qhfz.edu.cn/info/1061/19951.htm;网易 c.m.163.com/news/a/J3585UR90536JW7T.html
   gaokao: {}
   scores:
     '2025':
@@ -1908,7 +2165,13 @@ schools:
     source: 高德 geocode（统招报到校区，待电话核实）
   level: 区级（清华附中体系）
   note: ''
-  features: {}
+  features:
+    style: 清华附中教育集团成员校（前身1960年建校，2020年新品牌学校，2024年4月加入清华附中教育集团），依托本部整合集团顶尖师资；秉校训「自强不息 厚德载物」，建三级五类课程，以「科学技术课程」为轴心、其余四类为扇叶的「风车课程体系」，北京市科技教育示范校
+    tags:
+    - 科技创新
+    - 综合均衡
+    - 课程改革
+    source: 学校官网 qhfzzx.bjhdedu.cn/xxgk;教育头条 edutoutiao.com/zxx/16410.html;中国日报网 cn.chinadaily.com.cn/a/202505/27/WS683581aba310205377035452.html
   gaokao: {}
   scores:
     '2025':
@@ -2000,6 +2263,14 @@ schools:
       total: 660
       score: 640
       rank: 1896
+  campus_life:
+    class_system: 民间整理·待核：分层走班，设创新/理工/人文/国际四个学部、各分AB两层；实验班与普通班半年到一年有流动。
+    schedule: 民间整理·待核：7:30早自习（周一升旗7:20到校），上午5节、午休1小时、下午3节，晚自习16:00-17:30可答疑，17:30放学。
+    boarding_detail: 民间整理·待核：以走读为主，入学后可按规定申请住宿，约6人一间上下铺，有晚自习与专门教师管理。
+    dining: 民间整理·待核：食堂干净整洁、菜品丰富，除盖饭外有麻辣烫/拉面/炒饭/肉夹馍及汉堡/披萨等。
+    activities: 民间整理·待核：社团百余个（数学/信息/乐团/科技/农耕/创客/体育/生物/物理/辩论等），多数零基础可入。
+    voices: 民间整理·待核：师生/同学关系融洽，任课老师（含非班主任）都可答疑，备考期老师也会到校答疑（知乎/搜狐）。
+    source: 首师大附中官网 https://ssfz.bjhdedu.cn/ ; 知乎(就读体验) https://www.zhihu.com/question/26965225 ; 搜狐(就读体验) https://www.sohu.com/a/442455929_372471
   scores_meta:
     source: 官方录取分数线（历史 3 年）
     confidence: high
@@ -2020,7 +2291,13 @@ schools:
     source: 高德 geocode（统招报到校区，待电话核实）
   level: 区级
   note: ''
-  features: {}
+  features:
+    style: 首师大附中教育集团核心成员校（2010年首师大附中在海淀承办的第一所分校），秉「成达教育」理念，沿用并发展附中「基础通修+兴趣选修+专业精修+自主研修」四修课程体系；推书院制分层教学（成达班/实验班），管乐/合唱/民乐团市区领先，科技创新大赛成绩突出
+    tags:
+    - 课程改革
+    - 艺术特长
+    - 科技创新
+    source: 百度百科;海淀教育网 bjhdedu.cn/zt/2024hdxx/202405/t20240521_70535.html;首都师范大学附属中学官网 cnuhs.cn
   gaokao: {}
   scores:
     '2025':
@@ -2051,7 +2328,13 @@ schools:
     source: 高德 geocode（统招报到校区，待电话核实）
   level: 区级
   note: ''
-  features: {}
+  features:
+    style: 十二年制公办校（2015年由首师大附小玉泉校区上延而成，2023年加入人大附中分校教育集团形成小初高），以「童心教育」为理念（率真/关爱/求索核心价值观）；建「志达课程体系」，全国足球特色校、球类运动突出，打造「三公里科技教育」学习圈（思政/科技/劳动）
+    tags:
+    - 体育特长
+    - 课程改革
+    - 综合均衡
+    source: 百度百科;海淀教育网 bjhdedu.cn/zt/2024hdxx/202405/t20240523_70657.html;北京中考信息网 zhongkaobj.cn/zhongkao/zxdt/202412257120.html
   gaokao: {}
   scores:
     '2025':
@@ -2082,8 +2365,17 @@ schools:
     source: 高德 geocode（统招报到校区，待电话核实）
   level: 区级（首师大附中体系）
   note: ''
-  features: {}
-  gaokao: {}
+  features:
+    style: 由北京市教委、首都师范大学党委、海淀区教委共管的十二年制公办校（72个教学班、3000余生），校训「勤奋好学和谐致美」、育人宗旨「先成人后成才」；深化「551」思维课堂、跨学科与项目式学习，建「三层六域贯通」课程体系，以网球为特色（贯通12年课程，育世界中学生运动会冠军）
+    tags:
+    - 体育特长
+    - 课程改革
+    - 综合均衡
+    source: 百度百科 baike.baidu.com/item/首都师范大学附属育新学校;北京中考信息网 zhongkaobj.cn/zhiyuan/gaokaochengji/202412267187.html
+  gaokao:
+    note: 民间·非官方
+    概况: 中考成绩曾连续两年位列海淀区总平均分第一；高考文科多次进入海淀区前七名，理科本科上线率约98%（网传·年份不详）
+    source: https://www.zhongkaobj.cn/zhiyuan/gaokaochengji/202412267187.html
   scores:
     '2025':
       total: 510

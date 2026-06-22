@@ -1,0 +1,376 @@
+# 东城区高中·校园生活采集
+# 字段: class_system 班型 / schedule 作息 / management 管理 / boarding_detail 住宿 / dining 食堂 / activities 社团活动 / voices 评价
+# 铁律: 每字段有出处; 查不到的字段省略; 整校查不到则不写。民间来源(知乎/家长帮/中考信息网/百科等)标注「民间整理·待核」
+# 校名逐字等于 dongcheng_admission_codes.json schools 正名
+district: 东城
+collected_at: "2026-06-22"
+note: 校园生活字段绝大多数来自民间整理来源(知乎就读体验/中考信息网/搜狐探校/百科等), 落库展示前建议用学校官网/公众号交叉核对。班型/年级班数可能随届变动。
+
+schools:
+  北京市第二中学:
+    class_system:
+      value: "高一约12个班(2个航班/6个实验班/4个普通班); 分班主要参考中考文化课成绩。班数随届变动。"
+      source: "知乎《就读于北京二中是一种怎样的体验》 https://zhuanlan.zhihu.com/p/406389989"
+      confidence: "民间整理·待核"
+    schedule:
+      value: "放学时间各天不同——周一/三/四 17:00, 周二 15:00, 周五 16:00。"
+      source: "知乎 https://zhuanlan.zhihu.com/p/406389989"
+      confidence: "民间整理·待核"
+    management:
+      value: "走读制; 学生反映管理严格有序、活动节奏紧、学习抓得紧。"
+      source: "知乎 https://zhuanlan.zhihu.com/p/406389989"
+      confidence: "民间整理·待核"
+    boarding_detail:
+      value: "地处市中心, 无宿舍, 不接受住宿(走读)。"
+      source: "知乎 https://zhuanlan.zhihu.com/p/406389989"
+      confidence: "民间整理·待核"
+    dining:
+      value: "地下食堂较大, 自取后刷卡结账; 米饭馒头不收费、管饱; 可充值, 早中晚均可在校就餐。"
+      source: "知乎 https://zhuanlan.zhihu.com/p/406389989"
+      confidence: "民间整理·待核"
+    activities:
+      value: "20多个社团(科技俱乐部/陶艺/话剧社/电视台/DI头脑创新/红十字会/模拟联合国/数码摄影/音乐沙龙等); 专业团队有金帆舞蹈团、金帆管乐团、金鹏科技团、女篮、乒乓球队。"
+      source: "百度百科 https://baike.baidu.com/item/北京市第二中学/455779 ; 知乎 https://zhuanlan.zhihu.com/p/406389989"
+      confidence: "百科+民间整理·待核"
+
+  北京市第五中学:
+    class_system:
+      value: "设实验班(成绩最优异学生进入), 普通班学生成绩极优异方可进入实验班。"
+      source: "知乎《在北京五中就读是一种怎样的体验》 https://www.zhihu.com/question/46603074"
+      confidence: "民间整理·待核"
+    management:
+      value: "学生反映管理相对同级别学校偏严, 高三晚自习时间较长; 对离家远住宿生配有经验丰富的住宿班主任管理生活。"
+      source: "知乎 https://www.zhihu.com/question/46603074"
+      confidence: "民间整理·待核"
+    boarding_detail:
+      value: "为市统筹一录取、离家远的学生设住宿; 六人间, 有独立洗手间和盥洗室、专门吹头房间、宿舍自习室; 配住宿班主任。"
+      source: "中考信息网 https://www.zhongkaobj.cn/zhongkao/zkzn/202502099142.html"
+      confidence: "民间整理·待核"
+    activities:
+      value: "社团较丰富; 有戏剧节、\"好声音\"等活动; 教委要求的博物馆/游学活动均参加。"
+      source: "知乎 https://www.zhihu.com/question/46603074"
+      confidence: "民间整理·待核"
+    voices:
+      value: "\"大多数老师人品和教学质量不错\"; 校园偏小、操场约200米; 配新电子黑板; 校风中等偏好。"
+      source: "知乎 https://www.zhihu.com/question/46603074"
+      confidence: "民间整理·待核"
+
+  北京汇文中学:
+    class_system:
+      value: "高中2024级约9个班(3个学堂班/4个实验班), 实验班与普通班师资共享; 实验班通过开学前分班考试或本校初中直升选拔。班数随届变动。"
+      source: "知乎 https://zhuanlan.zhihu.com/p/539978441 ; 中考信息网 https://www.zhongkaobj.cn/zhongkao/zxdt/2025041110377.html"
+      confidence: "民间整理·待核"
+    boarding_detail:
+      value: "有宿舍, 初高中均可住宿, 高中住校较多, 家远学生可申请; 据描述六人间一般住4人, 中央空调+独立卫浴。"
+      source: "知乎 https://zhuanlan.zhihu.com/p/539978441 ; 中考信息网 https://www.zhongkaobj.cn/zhongkao/zkzn/202502099142.html"
+      confidence: "民间整理·待核"
+    dining:
+      value: "自办食堂供三餐, 早饭花样多、饭费便宜(早餐约2元/午餐约8元), 晚餐仅住宿生可吃。"
+      source: "知乎 https://zhuanlan.zhihu.com/p/539978441"
+      confidence: "民间整理·待核"
+    activities:
+      value: "社团众多(健身/羽毛球/篮球/动漫/模型等); 优秀社团有合唱团、机器人社、动漫社、环保社、辩论社, 可参加市/全国比赛; 举办运动会、球赛、合唱比赛、研学。"
+      source: "知乎 https://zhuanlan.zhihu.com/p/539978441 ; 中考信息网 https://www.zhongkaobj.cn/zhongkao/zxdt/2025041110377.html"
+      confidence: "民间整理·待核"
+
+  北京市广渠门中学:
+    class_system:
+      value: "设\"宏志班\"——1995年开设全国首个宏志班, 招收家庭贫困而品学兼优的应届初中毕业生。"
+      source: "维基百科 https://zh.wikipedia.org/zh-cn/北京市广渠门中学"
+      confidence: "百科"
+    schedule:
+      value: "要求7:40到校; 中午午休约1小时; 周一约17:30放学, 周二16:30放学, 周三/四/五有社团活动时间约17:30放学。"
+      source: "北京中考在线《2023广渠门校园开放日回顾》 https://www.zgkao.com/zk/202305/61507.html"
+      confidence: "民间整理·待核"
+    boarding_detail:
+      value: "宏志生与郊区学生一般提供住宿, 宏志生4人一寝室; 另据描述高一高二10人一间(有柜子有阳台), 高三另一校区7人一间(独立卫浴)。来源间有差异。"
+      source: "北京中考在线 https://www.zgkao.com/zk/202305/61507.html ; 中考信息网 https://www.zhongkaobj.cn/zhongkao/zkzn/202502099142.html"
+      confidence: "民间整理·待核"
+    dining:
+      value: "自办食堂, 自助式午餐, app预定后刷卡/刷脸取餐; 可选营养餐套餐或小灶; 餐费每月约300元; 早餐仅对住宿生开放。"
+      source: "北京中考在线 https://www.zgkao.com/zk/202305/61507.html"
+      confidence: "民间整理·待核"
+    activities:
+      value: "学生自主管理20多个社团; 校队有篮球/足球/排球/网球/乒乓球/冰上速滑等; 金帆管乐团、金帆合唱团、星光戏曲团、戏剧社团、翰博书画院活跃。"
+      source: "北京音协柯达伊 https://bj-kodaly.com/Index/show/catid/14/id/189.html ; 北京中考在线 https://www.zgkao.com/zk/202305/61507.html"
+      confidence: "民间整理·待核"
+
+  北京市东直门中学:
+    class_system:
+      value: "设\"叶企孙班\"实验班(2025年实验班平均分约630-656); 数学、英语实行分层考试与分层教学。"
+      source: "知乎 https://zhuanlan.zhihu.com/p/674996857 ; 北京小升初信息网 https://www.xscxx.com/xiaoshengchu/dcqxsc/2025081311830.html"
+      confidence: "民间整理·待核"
+    schedule:
+      value: "8:00到校; 上午四节课至11:50; 下午13:00上课、三节课至15:30左右; 放学较早, 作业量适中。"
+      source: "知乎 https://zhuanlan.zhihu.com/p/674996857 ; 北京小升初信息网 https://www.xscxx.com/xiaoshengchu/dcqxsc/2025081311830.html"
+      confidence: "民间整理·待核"
+    management:
+      value: "管理较关注校服等细节; 不支持学生校外就餐。"
+      source: "北京小升初信息网 https://www.xscxx.com/xiaoshengchu/dcqxsc/2025081311830.html"
+      confidence: "民间整理·待核"
+    boarding_detail:
+      value: "无宿舍, 走读制; 配有20多座校车, 多条线路。"
+      source: "北京爱智康 https://www.jiajiaoban.com/e/20140226/530da068aa3b6.shtml"
+      confidence: "民间整理·待核"
+    dining:
+      value: "自办食堂, 中午统一排队就餐, 饭费约170元/月。"
+      source: "北京爱智康 https://www.jiajiaoban.com/e/20140226/530da068aa3b6.shtml"
+      confidence: "民间整理·待核"
+    activities:
+      value: "社团多、各科各类齐全(金帆管乐/金帆合唱/球类/表演/辩论/数独/机器人/历史/实验等); 部分社团需面试选拔, 也有大量零基础社团开学自选。"
+      source: "知乎 https://www.zhihu.com/question/41932555 ; 知乎 https://zhuanlan.zhihu.com/p/674996857"
+      confidence: "民间整理·待核"
+
+  北京景山学校:
+    class_system:
+      value: "高中约4个班(3个理科班含1个小五班直升+1个文科班), 全年级约100余人。班数随届变动。"
+      source: "知乎《在景山学校就读是怎样的体验》 https://www.zhihu.com/question/28125398/answer/3563930988"
+      confidence: "民间整理·待核"
+    schedule:
+      value: "高一/高二无晚自习、基本每天15:05放学; 高三周一至周五晚自习18:30-20:40。"
+      source: "知乎 https://www.zhihu.com/question/28125398/answer/3563930988"
+      confidence: "民间整理·待核"
+    management:
+      value: "管理严格、学风浓、老师负责; 可带手机入校但须交老师统一保管, 上课不许用、放学后领取。"
+      source: "知乎 https://www.zhihu.com/question/28125398/answer/3563930988 ; 上哪学 https://www.shangnaxue.net/a/1374620603572563970"
+      confidence: "民间整理·待核"
+    dining:
+      value: "有食堂, 提前一周订食材由专业基地运输到校; 每份荤菜定量, 半荤/全素不限量。"
+      source: "上哪学 https://www.shangnaxue.net/a/1374620603572563970"
+      confidence: "民间整理·待核"
+    activities:
+      value: "社团丰富按兴趣自选(学生会/管乐团/民乐团/合唱团/舞蹈团/定向越野社/天文社/辩论社/篮球/足球/排球/健美操等); 举办校园歌手大赛、秋季运动会、\"致青春\"诗会、校园科技节。"
+      source: "上哪学 https://www.shangnaxue.net/a/1374620603572563970"
+      confidence: "民间整理·待核"
+
+  北京市第十一中学:
+    class_system:
+      value: "2024年高一约8个班(徐特立实验班3个/领域实验班3个/普通班2个)。班数随届变动。"
+      source: "北京高考在线《2025东城高中班型设置盘点》 https://www.gaokzx.com/gk/zhongkao/136567.html"
+      confidence: "民间整理·待核"
+    activities:
+      value: "民乐队、舞蹈队、合唱团、戏剧社、机器人等社团; 建有学生活动中心、北京市重点开放实验室、室内乒乓球馆、篮球馆、冰场及音乐/美术/舞蹈专用教室。"
+      source: "百度百科 https://baike.baidu.com/item/北京市第十一中学/191042"
+      confidence: "百科"
+    voices:
+      value: "学生反映老师不忙时会认真答疑; 一本率普通班50%以上、实验班近100%。"
+      source: "知乎 https://www.zhihu.com/question/49088663"
+      confidence: "民间整理·待核"
+
+  北京市第五十中学:
+    class_system:
+      value: "高中约8个班(1/2班思齐班, 3/4班住宿班, 5/6班实验班, 7/8班普通班)。班数随届变动。"
+      source: "北京高考在线《2025东城高中班型设置盘点》 https://www.gaokzx.com/gk/zhongkao/136567.html"
+      confidence: "民间整理·待核"
+    schedule:
+      value: "晚自习为学校与学生双向选择, 高一即可上(每年安排不一); 高三晚自习20:30下课。"
+      source: "知乎东城对比/相关摘要"
+      confidence: "民间整理·待核"
+    boarding_detail:
+      value: "设有学生公寓, 有住宿班(班型中3/4班为住宿班)。具体几人间未查到。注:另有\"不提供住宿\"说法并存, 待核。"
+      source: "学区房划片 https://m.xqfhp.com/beijing/show/id/5729 ; 班型盘点文"
+      confidence: "民间整理·待核"
+    activities:
+      value: "创客、三维设计、京剧、曲艺、内画、面塑、书法、篆刻、韵律操等数十门特色社团课; 举办艺术节、体育节、心理节、科技节。"
+      source: "北京高考在线《2026热门高中校：第五十中学》 https://www.gaokzx.com/gk/zhongkao/148725.html"
+      confidence: "民间整理·待核"
+    voices:
+      value: "学生反馈硬件宣传好但存在问题, 校风与师资力量两极分化。"
+      source: "知乎 https://www.zhihu.com/question/470639778"
+      confidence: "民间整理·待核"
+
+  北京市第五十五中学:
+    class_system:
+      value: "高中约7个班(5个普通班/2个实验班), 每班约45人; 另设国际部(IB课程, 大陆第一所IB国际文凭学校)。班数随届变动。"
+      source: "北京高考在线《2025东城高中班型设置盘点》 https://www.gaokzx.com/gk/zhongkao/136567.html ; 百度百科"
+      confidence: "民间整理·待核"
+    boarding_detail:
+      value: "普通宿舍6人间(清真食堂楼上); 国际部公寓4人间(高层); 另有二人公寓; 男女生均有独立卫生间和浴室。(多来自国际部住宿生视角, 普通高中部可能不同)"
+      source: "知乎 https://www.zhihu.com/question/404656571"
+      confidence: "民间整理·待核"
+    dining:
+      value: "三餐校内供应, 评价\"好吃不贵\"; 设自然采光地下餐厅。"
+      source: "知乎 https://www.zhihu.com/question/404656571"
+      confidence: "民间整理·待核"
+    activities:
+      value: "社团/体育课(15:20-16:30):足球/篮球/跆拳道/滑板/瑜伽/京剧/空竹/街舞/音乐剧/词曲创作/机器人/乐队/手绘/漫画/版画/书法/国画/太极扇/国际象棋/油画等; 中国文化特色选修(书法/武术/京剧/舞龙/西班牙语等)。"
+      source: "知乎 https://www.zhihu.com/question/404656571 ; jingkids https://jingkids.com/scg-bj/beijing-no-55-high-school-international-students-section/"
+      confidence: "民间整理·待核"
+
+  北京市第一零九中学:
+    class_system:
+      value: "高中约8个班, 普通班每班30-40人; 特殊班为小语种实验班(西班牙语)和美术班; \"小语种人才培养模式试验\"获国家立项, 2012年起高一开设小语种课程。班数随届变动。"
+      source: "北京高考在线《2025东城高中班型设置盘点》 https://www.gaokzx.com/gk/zhongkao/136567.html ; 维基百科"
+      confidence: "民间整理·待核"
+
+  北京市第一六六中学:
+    class_system:
+      value: "高中约7个班, 每班40-45人; 特殊班为生命科学实验班(面向全市约30人)、冰心文学实验班。班数随届变动。"
+      source: "北京高考在线《2025东城高中班型设置盘点》 https://www.gaokzx.com/gk/zhongkao/136567.html ; 百度百科"
+      confidence: "民间整理·待核"
+    boarding_detail:
+      value: "提供住宿; 高一住宿费444元/生/学期, 高二263.44元/生/学期。具体房型未查到。"
+      source: "收费公示类摘要 https://www.xqfhp.com/aid/5731/"
+      confidence: "民间整理·待核"
+    activities:
+      value: "金帆管乐团、话剧团、舞蹈团、合唱团、书法、美术、动画社; 硬件含机器人工作室、智慧温室、分子生物学/显微数码互动/心理健康等实验室。"
+      source: "百度百科 https://baike.baidu.com/item/北京市第一六六中学/8709155"
+      confidence: "百科"
+    voices:
+      value: "两校区——本部灯市口同福夹道3号(非毕业年级), 毕业年级部东四六条甲44号。"
+      source: "维基百科"
+      confidence: "百科"
+
+  北京市第一七一中学:
+    class_system:
+      value: "高中含精英班(初三选拔)、SY班(教研组长与年级主任任教); 蛇形平行分班; 另有X班/理科重点班/文科重点班/学森班等特殊班。班数随届变动。"
+      source: "搜狐《校园揭秘 东城热门校171中学》 https://www.sohu.com/a/1001997263_414577 ; 班型盘点文 https://www.gaokzx.com/gk/zhongkao/136567.html"
+      confidence: "民间整理·待核"
+    schedule:
+      value: "8:00到校; 上午4节至11:50; 13:00上课、下午3节至15:30; 周一课后为海量阅读课、530课程及社团活动; 晚自习初三才有。"
+      source: "搜狐 https://www.sohu.com/a/1001997263_414577"
+      confidence: "民间整理·待核"
+    management:
+      value: "管理较严格——午休期间不能随便出入; 仪容要求严(女生不留长刘海/长发梳起, 男生不留特殊发型)。"
+      source: "搜狐 https://www.sohu.com/a/1001997263_414577"
+      confidence: "民间整理·待核"
+    boarding_detail:
+      value: "无住宿。"
+      source: "搜狐探校文/搜索摘要"
+      confidence: "民间整理·待核"
+    dining:
+      value: "仅提供午餐, 品种多样; 本部有教师、初一、初二、高中四个食堂可同时就餐。"
+      source: "搜狐 https://www.sohu.com/a/1001997263_414577"
+      confidence: "民间整理·待核"
+    activities:
+      value: "40多个学生社团(屡获国家级一等奖的\"金帆合唱团\"、JA社团、科技民乐、羽毛球、击剑等); 开设近30门艺术、10多门体育、20门科技、50多门校本综合选修课。"
+      source: "搜狐 https://www.sohu.com/a/1001997263_414577"
+      confidence: "民间整理·待核"
+    voices:
+      value: "老师负责、各科老师基本及时答复; 教学进度偏快, 能因材施教。"
+      source: "搜狐 https://www.sohu.com/a/1001997263_414577"
+      confidence: "民间整理·待核"
+
+  北京市第一中学:
+    class_system:
+      value: "1988年被区政府定为实验学校, 实施12年一贯制中小学整体实验; 北京市体育(田径)传统校、艺术传统校。"
+      source: "百度百科 https://baike.baidu.com/item/北京市第一中学/4733612"
+      confidence: "百科"
+    schedule:
+      value: "高一年级开设晚自习, 晚自习放学20:30, 学校提供晚餐并有专门辅导教师。"
+      source: "百度百科 https://baike.baidu.com/item/北京市第一中学/4733612"
+      confidence: "百科"
+    boarding_detail:
+      value: "高中面向全市招生, 可招收部分寄宿生; 报考一中且在本校上课、中考成绩630分以上、确因家庭困难者可申请住宿(名额有限、有门槛)。"
+      source: "百度百科 https://baike.baidu.com/item/北京市第一中学/4733612 ; 小升初网 https://www.xschu.com/zhengcezixun/72146.html"
+      confidence: "百科+民间整理·待核"
+    dining:
+      value: "校内有食堂一栋(另有400米塑胶跑道、图书馆礼堂各一)。"
+      source: "百度百科 https://baike.baidu.com/item/北京市第一中学/4733612"
+      confidence: "百科"
+    activities:
+      value: "有丹青排舞队、艺舍美术工作室、星光戏剧社、剑鸣创客工作室等社团; 设数字书法教室、木质地板形体房等。"
+      source: "百度百科 https://baike.baidu.com/item/北京市第一中学/4733612"
+      confidence: "百科"
+
+  北京市第二十二中学:
+    class_system:
+      value: "有数学实验班(孙维刚数学实验班教学模式); 实行分层授课(基于学科考试数据、学习心理测试、生涯规划分层)。"
+      source: "百度百科 https://baike.baidu.com/item/北京市第二十二中学/7552740 ; 教育头条 http://www.edutoutiao.com/hot_recommended/7295.html"
+      confidence: "百科+民间整理·待核"
+    management:
+      value: "推行翻转教学(\"先学后教、以学定教\"); 理念\"共性中求个性, 让每一位学生全面发展\"。"
+      source: "教育头条 http://www.edutoutiao.com/hot_recommended/7295.html"
+      confidence: "民间整理·待核"
+    activities:
+      value: "模联社、动漫社、乒乓社、校刊、校报等社团; 开展科技节、合唱节、定向越野、志愿者服务; 定向越野、舞蹈队、合唱队多次市赛获奖。"
+      source: "百度百科 https://baike.baidu.com/item/北京市第二十二中学/7552740"
+      confidence: "百科"
+
+  北京市第二十五中学:
+    class_system:
+      value: "公立完全中学, 设高中部、初中部、国际部三个序列; 国际部为中加英文高中项目(选修制/学分制/走班制/小班制)。"
+      source: "百度百科 https://baike.baidu.com/item/北京市第二十五中学/2074696 ; 125国际教育 https://www.125school.com/xuexiao176/"
+      confidence: "百科+民间整理·待核"
+    management:
+      value: "2003年成为全国首家获ISO9001/ISO14001双标管理体系认证的学校; 倡立体德育(全员/全科/实践/文化/环境育人)。"
+      source: "百度百科 https://baike.baidu.com/item/北京市第二十五中学/2074696 ; 首都文明网 https://www.bjwmb.gov.cn/wmcj/wmxy/2021/09/14/861155.html"
+      confidence: "百科"
+    activities:
+      value: "国际部有篮球社、文学社、器乐社、飞盘社等; 组织学雷锋志愿服务、非遗/曲艺进校园等活动。"
+      source: "125国际教育 https://www.125school.com/xuexiao176/ ; 首都文明网 https://www.bjwmb.gov.cn/wmcj/wmxy/2021/09/14/861155.html"
+      confidence: "百科+民间整理·待核"
+
+  北京市第六十五中学:
+    class_system:
+      value: "现有约40个教学班(含国际班/中外学生), 学生1300余名。班数随届变动。"
+      source: "百度百科 https://baike.baidu.com/item/北京市第六十五中学/10284896"
+      confidence: "百科"
+    activities:
+      value: "拥有金帆舞蹈团、金鹏科技团(市最高级别学生团队), 多次获全国/市区一等奖; 校园设音乐/美术/舞蹈/管乐/书法等专业教室及数字实验室、生态博物馆; 校训\"明志、尚德、笃学、创新\"。"
+      source: "百度百科 https://baike.baidu.com/item/北京市第六十五中学/10284896 ; 东城金帆报道 https://www.bjwmb.gov.cn/wmdt/dcq/10113680.html"
+      confidence: "百科"
+
+  北京市第五十四中学:
+    class_system:
+      value: "完全中学, 约43个教学班(初中18/高中16), 2000多名学生。班数随届变动。"
+      source: "百度百科 https://baike.baidu.com/item/北京市第五十四中学/10740361"
+      confidence: "百科"
+    activities:
+      value: "二十多个学生社团(科技俱乐部/陶艺/话剧社/电视台/DI头脑创新/红十字会/模拟联合国/数码摄影/音乐沙龙等); 有金帆舞蹈团、管乐团、女篮、乒乓球队; 开设五类校本选修、三年共146门校本课程。"
+      source: "百度百科 https://baike.baidu.com/item/北京市第五十四中学/10740361 ; 本地宝 https://m.bj.bendibao.com/wangdian/dian/5651762.shtm"
+      confidence: "百科"
+
+  北京汇文实验中学:
+    class_system:
+      value: "2024级高一约5个班、每班40人左右; 没有分班考试。班数随届变动。"
+      source: "中考信息网(明确标\"汇文实验中学\") https://www.zhongkaobj.cn/zhongkao/zxdt/2025041110377.html"
+      confidence: "民间整理·待核"
+    schedule:
+      value: "高一无晚自习, 一般17:00左右放学; 每周有科目小测(主要在早自习)。"
+      source: "中考信息网 https://www.zhongkaobj.cn/zhongkao/zxdt/2025041110377.html"
+      confidence: "民间整理·待核"
+    management:
+      value: "2023年起由汇文中学全面统一管理(教学文化/师资/管理制度/教学资源统一, 仅上课地址不同)。"
+      source: "中考信息网 https://www.zhongkaobj.cn/zhongkao/zxdt/2025041110377.html"
+      confidence: "民间整理·待核"
+    boarding_detail:
+      value: "据中考信息网专文\"该校有住宿\"。注:另有民间/百科结果称\"无住宿\", 疑为汇文中学(本部)信息混入, 待核。"
+      source: "中考信息网 https://www.zhongkaobj.cn/zhongkao/zxdt/2025041110377.html"
+      confidence: "民间整理·待核"
+    dining:
+      value: "有\"平安云厨\"线上订饭系统, 菜品丰富。注:另有民间结果称\"食堂只有三个窗口/只提供午餐\", 疑混入本部信息, 待核。"
+      source: "中考信息网 https://www.zhongkaobj.cn/zhongkao/zxdt/2025041110377.html"
+      confidence: "民间整理·待核"
+    activities:
+      value: "健身社、羽毛球社、篮球社、动漫社、模型社等; 举办运动会、篮球赛、合唱比赛, 组织研学。"
+      source: "中考信息网 https://www.zhongkaobj.cn/zhongkao/zxdt/2025041110377.html ; 知乎 https://zhuanlan.zhihu.com/p/539978441"
+      confidence: "民间整理·待核"
+
+  北京宏志中学:
+    class_system:
+      value: "设杏林实验班、周恩来实验班及人工智能教育基地; 高中\"宏志生\"为专门招收家庭经济困难、品学兼优学生的公益班。"
+      source: "百度百科 https://baike.baidu.com/item/北京市宏志中学/49940207 ; 首都之窗 https://www.beijing.gov.cn/zhengce/zcjd/202205/t20220513_2708959.html"
+      confidence: "百科+官方"
+    management:
+      value: "宿舍在校内, 实施封闭化/军事化管理。"
+      source: "知乎《北京中考哪些高中能住宿》 https://zhuanlan.zhihu.com/p/674627039"
+      confidence: "民间整理·待核"
+    boarding_detail:
+      value: "宿舍在校内; 据描述高一高二10人/间(有柜子、阳台, 厕所有蹲坑/水龙头/淋浴), 高三在另一校区7人/间; 宏志生享\"四免一补\"(免学杂费/书本费/校服费/住宿费+伙食补贴)。"
+      source: "宿舍条件为民间整理(知乎); \"四免一补\"来源首都之窗 https://www.beijing.gov.cn/zhengce/zcjd/202205/t20220513_2708959.html"
+      confidence: "住宿条件民间整理·待核; 四免一补官方"
+    activities:
+      value: "合唱团、篮球队、话剧社、微电影、民乐团、舞蹈团、茶社; 部分社团需考试, 学生自愿报名。"
+      source: "知乎 https://zhuanlan.zhihu.com/p/673766070"
+      confidence: "民间整理·待核"
+
+  北京市第一六五中学:
+    management:
+      value: "倡\"关注全体、尊重差异、以人为本、全面发展\"办学理念。"
+      source: "百度百科 https://baike.baidu.com/item/北京市第一六五中学/8655282"
+      confidence: "百科"
+    activities:
+      value: "前身崇慈女中/北京十一女中; 获\"全国现代教育技术实验学校\"\"国家级体育传统项目先进学校\"\"北京市科技活动示范校\"\"北京市金鹏科技团成员校\"等荣誉(科技、体育为特色方向)。"
+      source: "百度百科 https://baike.baidu.com/item/北京市第一六五中学/8655282"
+      confidence: "百科"

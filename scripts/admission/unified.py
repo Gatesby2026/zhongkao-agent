@@ -138,6 +138,9 @@ def build_unified(result: dict) -> list:
     band_pred = {c["name"]: c["pred_2026"]
                  for cards in (result.get("bands") or {}).values()
                  for c in cards if c.get("pred_2026")}
+    band_camp = {c["name"]: c["campus_life"]
+                 for cards in (result.get("bands") or {}).values()
+                 for c in cards if c.get("campus_life")}
     # 公办坐标/地图显示属性(颜色/档位/full|small)在 result.points 里，按名取出补进 unified，
     # 使 schools_unified 成为地图的唯一数据源。
     pts = {p.get("name"): p for p in (result.get("points") or [])}
@@ -300,9 +303,9 @@ def build_unified(result: dict) -> list:
                            "yiben": g.get("yiben"), "yiben_est": g.get("yiben_est"),
                            "qingbei": g.get("qingbei"),
                            "basis": g.get("basis"), "confidence": g.get("confidence")}
-        life = cl.get(s["name"]) or cl.get(_norm(s["name"]))
+        life = cl.get(s["name"]) or cl.get(_norm(s["name"])) or band_camp.get(s["name"])
         if life:
-            s["campus_life"] = life      # 校园生活/班型(白皮书 T3),按校名挂载
+            s["campus_life"] = life      # 校园生活/班型(朝阳白皮书 / 非朝阳民间),按校名挂载
         fs = fstd.get(s["name"]) or fstd.get(_norm(s["name"]))
         if fs:
             s["features_std"] = fs       # 标准特色标签+亮点(白皮书 T3),按校名挂载

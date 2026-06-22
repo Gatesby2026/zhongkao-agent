@@ -33,6 +33,19 @@ schools:
       score: 410
       total: 510
       rank: 1237
+  campus_life:
+    boarding_detail:
+      value: 可以住宿, 符合住宿要求的均会通过, 入学后统一发布相关信息。校园分主体区/运动区/住宿区/餐厅, 运动区含运动场、体育馆、游泳馆。
+      source: https://www.zhongkaobj.cn/zhongkao/zxdt/202503159983.html; https://baike.baidu.com/item/人大附中石景山学校/53740790
+      confidence: folk
+    management:
+      value: 石景山区教委所属公办校, 十二年一贯制(小初高), 由人大附中冠名、人大附中西山学校承办。
+      source: https://baike.baidu.com/item/人大附中石景山学校/53740790
+      confidence: folk
+    voices:
+      value: '知乎有一名初中到高中均就读该校的学生评价: 设施在石景山乃至北京市一流, 但「基本没有学生能用到」, 并称此处「更像人大附西山老师的练级场」。属个人主观负面评价, 待核。'
+      source: https://www.zhihu.com/question/359856131 (知乎)
+      confidence: folk
   scores_meta:
     source: '北京高考在线 gaokzx.com(2025: https://www.gaokzx.com/gk/zhongkao/144973.html)'
     confidence: low
@@ -69,6 +82,19 @@ schools:
       score: 607
       total: 670
       rank: 639
+  campus_life:
+    boarding_detail:
+      value: 无住宿(不提供寄宿)。
+      source: https://www.zhongkaobj.cn/zhongkao/zxdt/202503159983.html
+      confidence: folk
+    class_system:
+      value: 开展「1+3」培养模式改革实验, 面向石景山区初中招收 1+3 实验学生(2024 年招 80 名)。
+      source: https://www.xschu.com/zhonggaokaozixun/72727.html (2024 北京1+3招生简章)
+      confidence: folk
+    management:
+      value: 秉承北大附中办学理念, 倡导学生自主学习与自我管理; 课程分基础学科类/学校特色类/综合实践类/学生成长类四大类。
+      source: https://baike.baidu.com/item/北京大学附属中学石景山学校/50824911
+      confidence: folk
   scores_meta:
     source: '北京高考在线 gaokzx.com(2025: https://www.gaokzx.com/gk/zhongkao/144973.html; 2024: https://www.gaokzx.com/gk/zhongkao/126167.html);
       北京中考信息网 zhongkaobj.cn(2024: https://www.zhongkaobj.cn/lqfsx/qitaqu/202410212432.html)'
@@ -110,6 +136,15 @@ schools:
       score: 614
       total: 670
       rank: 502
+  campus_life:
+    class_system:
+      value: 十二年一贯制学校(校址石景山京原路10号); 有独立高中楼。
+      source: https://baike.baidu.com/item/北京市京源学校/54113034
+      confidence: folk
+    voices:
+      value: '知乎有学生评价: 高考成绩好主要得益于招生时从顶尖初中生中精选生源; 并称学校管理与工作重心偏向对外宣传。属个人主观负面评价, 待核。'
+      source: https://www.zhihu.com/question/61175499 (知乎)
+      confidence: folk
   scores_meta:
     source: '北京高考在线 gaokzx.com(2025: https://www.gaokzx.com/gk/zhongkao/144973.html; 2024: https://www.gaokzx.com/gk/zhongkao/126167.html);
       北京中考信息网 zhongkaobj.cn(2024: https://www.zhongkaobj.cn/lqfsx/qitaqu/202410212432.html)'
@@ -147,6 +182,16 @@ schools:
       score: 560
       total: 670
       rank: 1429
+  campus_life:
+    class_system:
+      value: 设西班牙语实验班(统招专业 02), 全部小班授课, 采用导师研修式教学。
+      source: https://www.bjeea.cn/html/ksb/zhongyaoxinwen/2023/1106/84498.html (北京教育考试院)
+      confidence: official
+    activities:
+      value: 西语实验班课程含基础课程/选修课程(大学先修、留学先修、就业先修、文化选修等)/研究性学习(西语国家历史地理文化)/综合实践; 学生用大学教材《现代西班牙语》, 有赴西班牙企业志愿服务机会; 塞万提斯学院文学讲座、西语电影、拉美文化交流对学生开放,
+        西语国家大使/文化参赞定期来校授课; 校内外活动含西语朗诵比赛、西语小报评比、西语课本剧、西语歌曲比赛、北京塞万提斯学院西语日等。
+      source: https://www.163.com/dy/article/I2KD175G0536S287.html; https://www.bjeea.cn/html/ksb/zhongyaoxinwen/2023/1106/84498.html
+      confidence: folk
   scores_meta:
     source: '北京高考在线 gaokzx.com(2025: https://www.gaokzx.com/gk/zhongkao/144973.html; 2024: https://www.gaokzx.com/gk/zhongkao/126167.html);
       北京中考信息网 zhongkaobj.cn(2024: https://www.zhongkaobj.cn/lqfsx/qitaqu/202410212432.html)'
@@ -177,6 +222,23 @@ schools:
     source: 中杉学校官网 bjzsis.com、百度百科「北京中杉学校」、北京幼升小网 ysxiao.cn
   gaokao: {}
   scores: {}
+  campus_life:
+    boarding_detail:
+      value: 高品质十二年一贯制全寄宿民办学校; 宿舍四人一间, 每天可洗澡, 配新风系统与空调。
+      source: https://baike.baidu.com/item/北京市石景山区中杉学校/24296405; https://www.xscxx.com/chuzhong/sjs/202410252832.html
+      confidence: folk
+    dining:
+      value: 每日三餐三点, 每餐自助餐保证 6 菜 2 汤 2 主食; 每周一次西餐及西餐礼仪体验。中学部设自助餐厅。
+      source: https://baike.baidu.com/item/北京市石景山区中杉学校/24296405; https://www.xscxx.com/chuzhong/sjs/202410252832.html
+      confidence: folk
+    management:
+      value: 2014 年经石景山区教委批准成立的民办校, 实行董事会领导下的校长负责制。
+      source: https://baike.baidu.com/item/北京市石景山区中杉学校/24296405
+      confidence: folk
+    activities:
+      value: 校内设科技制作工作室、艺术设计工坊、创新教室、多媒体中心、青春剧场、十余间学科实验室等。
+      source: https://baike.baidu.com/item/北京市石景山区中杉学校/24296405
+      confidence: folk
 - name: 北京市第九中学
   school_code: '107001'
   location:
@@ -208,6 +270,19 @@ schools:
       score: 589
       total: 670
       rank: 987
+  campus_life:
+    boarding_detail:
+      value: 家远的学生可申请住宿(非全员住宿)。
+      source: https://www.zhongkaobj.cn/zhongkao/zxdt/202503159983.html (北京中考信息网·各区住宿汇总)
+      confidence: folk
+    class_system:
+      value: 高中部约 34 个教学班, 在校生 1500 余人。
+      source: https://baike.baidu.com/item/北京市第九中学/168249
+      confidence: folk
+    activities:
+      value: 必修外开设 50 余门选修课/活动课, 20 多个学生社团; 金帆舞蹈团多次获全国/北京市一等奖, 艺术体操队长期蝉联北京市冠军。
+      source: https://baike.baidu.com/item/北京市第九中学/168249
+      confidence: folk
   scores_meta:
     source: '北京高考在线 gaokzx.com(2025: https://www.gaokzx.com/gk/zhongkao/144973.html; 2024: https://www.gaokzx.com/gk/zhongkao/126167.html);
       北京中考信息网 zhongkaobj.cn(2024: https://www.zhongkaobj.cn/lqfsx/qitaqu/202410212432.html)'
@@ -240,6 +315,19 @@ schools:
       score: 386
       total: 510
       rank: 1484
+  campus_life:
+    boarding_detail:
+      value: 远郊区学生可申请住宿; 学生寝室宽敞并配备空调; 校内有食堂、洗衣房。
+      source: https://www.zhongkaobj.cn/zhongkao/zxdt/202503159983.html; https://baike.baidu.com/item/北京市黄庄职业高中/7484505
+      confidence: folk
+    class_system:
+      value: 国家公办中等职业学校(始建于1981年), 设技术/艺术/服务/教育四大学部, 开设综合高中班(统招专业 01)。
+      source: https://baike.baidu.com/item/北京市黄庄职业高中/7484505
+      confidence: folk
+    activities:
+      value: 自 2018 年起建设覆盖艺术、体育、科技、文化等领域的 100 余门选修课程。
+      source: https://baike.baidu.com/item/北京市黄庄职业高中/7484505
+      confidence: folk
   scores_meta:
     source: '北京高考在线 gaokzx.com(2025: https://www.gaokzx.com/gk/zhongkao/144973.html,源标''黄庄职高(综合高中班)'')'
     confidence: low
@@ -279,6 +367,23 @@ schools:
       score: 608
       total: 670
       rank: 618
+  campus_life:
+    boarding_detail:
+      value: 无住宿(不提供寄宿)。
+      source: https://www.zhongkaobj.cn/zhongkao/zxdt/202503159983.html
+      confidence: folk
+    class_system:
+      value: 九年一贯+高中三年公立校, 分东西校区, 高中部在西校区。2024 级高一共 6 个班, 每班约 30 人, 含 1 个直升班、1 个优质班; 新高一按中考成绩分班(无分班考), 高二下学期按语数英期末综合成绩再次分班。
+      source: https://www.gaokzx.com/gk/zhongkao/150357.html; https://www.zhihu.com/question/359908052 (知乎)
+      confidence: folk
+    schedule:
+      value: 高一、高二目前无晚自习; 高三周一至周五均有晚自习, 通常 18:30–20:40。
+      source: https://www.zhihu.com/question/359908052 (知乎)
+      confidence: folk
+    voices:
+      value: '知乎学生评价: 高中部成立时间短, 西校区仅一栋教学楼加一个篮球场(无标准操场); 师资在石景山尚可、师德师风尚好但水平参差; 整体成绩逐年进步, 已出过区前几名。主观评价, 待核。'
+      source: https://www.zhihu.com/question/359908052 (知乎)
+      confidence: folk
   scores_meta:
     source: '北京高考在线 gaokzx.com(2025: https://www.gaokzx.com/gk/zhongkao/144973.html; 2024: https://www.gaokzx.com/gk/zhongkao/126167.html);
       北京中考信息网 zhongkaobj.cn(2024: https://www.zhongkaobj.cn/lqfsx/qitaqu/202410212432.html)'
@@ -341,3 +446,8 @@ schools:
   features: {}
   gaokao: {}
   scores: {}
+  campus_life:
+    management:
+      value: 企办十二年一贯制学校, 校址河北省迁安市首钢滨河村, 行政隶属首钢矿业公司、业务由北京市石景山区教委指导; 使用北京教材与教学大纲, 高考用北京卷。仅招首钢矿山职工子女。
+      source: 'https://baike.baidu.com/item/首钢矿业公司职工子弟学校/1142225; shijingshan_admission_codes.json(207002 note: 只招首钢矿山职工子女)'
+      confidence: folk

@@ -1,0 +1,240 @@
+# 通州区高中「校园生活」数据
+# 字段: class_system(班型) / schedule(作息) / management(管理) / boarding_detail(住宿)
+#       dining(食堂) / activities(活动·社团) / voices(学生/家长评价)
+# 铁律: 绝不编造;每字段有出处(source);查不到的字段省略;整校查不到不写。
+# 标注: 网传/家长整理类标 "民间整理·待核"。
+# 采集日期: 2026-06-22
+# 校名逐字对齐 tongzhou_admission_codes.json schools 正名。
+
+district: 通州
+collected_at: "2026-06-22"
+note: >-
+  仅收录可在公开网络(学校官网/公众号、百科、家长帮、知乎、中考/小升初信息站)查到的字段。
+  查不到的学校或字段一律省略。部分字段为往年信息(住宿/食堂条件相对稳定,作息/班型可能逐年微调),
+  以学校最新通知为准。
+
+schools:
+  北京市通州区潞河中学:
+    boarding_detail:
+      value: >-
+        寄宿制高中,不支持走读。宿舍分普通宿舍/公寓/两人公寓多种;有信源称普通宿舍六人间(位于清真食堂楼上),
+        公寓四人间(国际部高层),两人公寓在国际部;另一信源称宿舍每间8人、2个独立卫生间、1个洗漱池、
+        独立内隔间阳台、2台风扇+1台空调、上下铺。床位按学号分配,一床一插座、可挂蚊帐,配独立储物柜。
+        男女宿舍分楼,各楼配专职宿管,外人需登记入内。
+        (两信源宿舍人数说法不一,均保留待核)
+      source:
+        - "https://zhuanlan.zhihu.com/p/674627039 (知乎·北京中考住宿盘点)"
+        - "https://www.scxye.com/news/120262.html (选校招生网·潞河2023宿舍条件,民间整理·待核)"
+    schedule:
+      value: >-
+        热水供应时间:中午11:45-12:30、下午17:15-18:30、晚上22:00-22:35。
+        作息制度严格,不准晚归和随意外出。(完整起床/熄灯作息表未查到)
+      source: "https://www.scxye.com/news/120262.html (选校招生网,民间整理·待核)"
+    management:
+      value: >-
+        宿舍楼配专职宿舍管理员,实行严格作息制度,禁止晚归和随意外出,外人入楼需登记。
+      source: "https://www.scxye.com/news/120262.html (民间整理·待核)"
+    dining:
+      value: >-
+        校内有五个食堂:一食堂在学校中央;四食堂离初中部近、座位较多;三食堂为清真食堂(主要服务内地新疆班/内高班学生);
+        国际部食堂种类多样。
+      source: "https://zhuanlan.zhihu.com/p/674627039 (知乎,民间整理·待核)"
+    class_system:
+      value: >-
+        2024级高一共16个班:1-4班创新实验班;5-8班普通平行班;9、10班分层教学实验班;
+        11、12班文科实验班;13、14班理科实验班;15、16班为「1+3」人才培养试验项目班。
+        (年度可能调整,以当年分班为准)
+      source: "搜索聚合(知乎/中考信息站),民间整理·待核"
+    activities:
+      value: >-
+        社团丰富:配指导老师的专业社团(广播站、潞园文学社、潞河之星电视台等),学生自创高质量社团
+        (思辩社、模拟联合国等)及各类小众社团。规模最大的为天文社团——2014年被评为北京市学生
+        金鹏科技团(天文分团)。
+      source: "https://zhuanlan.zhihu.com/p/674627039 + 学校百科,民间整理·待核"
+
+  北京市通州区永乐店中学:
+    boarding_detail:
+      value: >-
+        通州区规模最大的完全中学,提供住宿,住宿生规模大(有信源称住宿生近1600名)。
+        建有学生宿舍楼、学生公寓,宿舍配中央空调。
+      source:
+        - "https://baike.baidu.com/item/北京市通州区永乐店中学/8445612 (百度百科)"
+        - "https://www.gx211.cn/school/school6247.shtml (中国高校之窗)"
+    dining:
+      value: "校内食堂可容纳约3000人就餐。"
+      source: "https://baike.baidu.com/item/北京市通州区永乐店中学/8445612 (百度百科)"
+    activities:
+      value: >-
+        校园设施支持丰富活动:大型操场、室内八道标准游泳馆、大型体育馆、可容纳1200人多功能报告厅、
+        专业电视台演播室、多功能高清自动录播室、心理咨询室、安全体验教室等。
+        (设施信息;具体社团清单未查到)
+      source: "https://baike.baidu.com/item/北京市通州区永乐店中学/8445612 (百度百科)"
+
+  北京市通州区运河中学:
+    boarding_detail:
+      value: >-
+        建有学生宿舍楼、学生公寓,提供住宿。据学生反馈,宿舍为上下铺六人间,每人一张桌椅靠墙摆放。
+      source:
+        - "https://baike.baidu.com/item/北京市通州区运河中学/9473723 (百度百科)"
+        - "https://www.zhihu.com/question/413739268/answer/1403735170 (知乎·学生反馈,民间整理·待核)"
+    schedule:
+      value: >-
+        晚放学时间随季节调整:春秋季约17:30、夏季约18:20、冬季约17:00。
+        (为学生反馈的放学时段,非完整作息表;民间整理·待核)
+      source: "https://www.zhihu.com/question/413739268/answer/1403735170 (知乎,民间整理·待核)"
+    class_system:
+      value: >-
+        高中设有「黄纬禄班」(2023年起遴选优秀新生组建),分科创1班(侧重理科思维)与
+        科创2班(侧重人文社会学科)。
+      source: "https://baike.baidu.com/item/北京市通州区运河中学高中部/54112563 (百度百科)"
+    activities:
+      value: >-
+        三十余个学生社团,含汇学轩(篆刻)、非白阁(粉笔画)、摄影社、YH-DANCE、机器人社团、
+        航天社团、烘焙创作与体验社团、春雨文社、模拟政协社团、造物坊,以及篮球、足球、田径等。
+      source: "https://www.xscxx.com/chuzhong/tongzhou/202410232620.html + 学校百科,民间整理·待核"
+
+  北京市通州区张家湾中学:
+    boarding_detail:
+      value: >-
+        完全中学,提供住宿(收普通高中学费、住宿费),建有教师和学生宿舍楼。
+        据一名学生反馈,洗澡的地方不在宿舍楼内,洗澡后可能赶不上吃饭。
+        招生计划注明「考生入学后可申请走读」。
+      source:
+        - "https://baike.baidu.com/item/北京市通州区张家湾中学/54113002 (百度百科)"
+        - "https://www.zhihu.com/question/283917122 (知乎·学生反馈,民间整理·待核)"
+        - "tongzhou_admission_codes.json (官方统招计划 note:可申请走读)"
+    dining:
+      value: >-
+        设有师生食堂(2025年公开招标「师生食堂委托经营服务及物业服务」)。
+      source: "http://zhengfu.bjtzh.gov.cn/bjtz/xxfb/202302/1638668.shtml (通州区政府采购公示)"
+    management:
+      value: "校风良好,管理严格,以德育为首。"
+      source: "https://www.xschu.com/xiaoshengchu/11/40454.html (学校介绍,民间整理·待核)"
+
+  北京学校:
+    class_system:
+      value: >-
+        北京市教委直属、小初高一体化全日制公立学校,高中规划30个教学班。
+        (高中具体班型设置未查到公开信息)
+      source: "https://baike.baidu.com/item/北京学校/9354937 (百度百科)"
+    activities:
+      value: >-
+        校园占地约300亩、建筑面积约20万平方米,班级建制108个(小学48、初中30、高中30),
+        配套设施完善。(具体社团/活动清单未查到)
+      source: "https://baike.baidu.com/item/北京学校/9354937 (百度百科)"
+
+  北京中加学校:
+    class_system:
+      value: >-
+        中外合作普通高中,高中(高一至高三)分AP班、实验班、普通班,设约30个高中教学班、1000余人。
+      source:
+        - "https://baike.baidu.com/item/北京中加学校/2238895 (百度百科)"
+        - "http://www.ccsc.com.cn/index.php/Index/listcontent/1/1/c (学校官网·学校简介)"
+    boarding_detail:
+      value: >-
+        全寄宿制。学生宿舍四人一间,充分供应热水;生活指导教师全程关心学生,校医按计划防治保健,
+        保安昼夜值勤。
+      source:
+        - "http://www.ccsc.com.cn/index.php/Index/listcontent/1/2/c (学校官网·校园设施)"
+        - "https://baike.baidu.com/item/北京中加学校/2238895 (百度百科)"
+    schedule:
+      value: >-
+        全寄宿作息(含小初):06:35起床;06:35-07:10洗漱晨练;07:10-07:40早餐;
+        07:40-07:55升旗/晨读;08:00-11:25上午四节课+课间操+眼保健操;11:35-12:15午餐;
+        12:15-13:30午休;13:40-16:55下午四节课+眼保健操;17:05-17:45小晚自习;
+        17:55-18:30晚餐;18:50-19:30大晚自习;之后宿舍休息、洗漱就寝(小学约21:10熄灯)。
+        (高中段就寝时间可能略晚,以学校通知为准)
+      source: "https://www.ysxiao.cn/beijing-youeryuan/207053.html (北京幼升小网·中加全天作息表,民间整理·待核)"
+    dining:
+      value: >-
+        食堂实行自助餐制,讲究营养配餐;2004年12月被原北京市卫生局授予「市卫生A级」标牌。
+      source: "http://www.ccsc.com.cn/index.php/Index/listcontent/1/1/c (学校官网) + 百度百科"
+    activities:
+      value: >-
+        开设20多个社团,含足球、篮球、棒球、羽毛球、曲棍球、击剑、马术、戏剧、舞蹈、模联、
+        电影摄影、演讲辩论等;另设足、篮、网、排球场及400米标准跑道。
+      source: "http://www.ccsc.com.cn/index.php/Index/listcontent/3/26/c (学校官网·校园生活) + 百度百科"
+
+  北京通州华仁学校:
+    class_system:
+      value: >-
+        十二年一贯制民办学校,小班制教学,融合中国课程与加拿大课程体系,
+        开设双语实验班、中加特色班等多元化班级。
+      source: "https://www.ccsc.com.cn/hrccsc/gzjs/ (学校官网·高中部介绍) + 百度百科"
+    boarding_detail:
+      value: >-
+        寄宿兼走读管理。低年级可走读、有需要可寄宿;高年级原则上建议住校。
+        寄宿生一般周五下午离校、周日下午返校,可申请周末寄宿。宿舍配空气净化器设备。
+        住宿费12000元/学年,伙食费按实际用餐计算。
+      source:
+        - "https://www.ccsc.com.cn/hrccsc/zsqa/ (学校官网·招生问答)"
+        - "https://www.ccsc.com.cn/index.php/Index/hrcontent/4239/c (学校官网·收费标准)"
+    activities:
+      value: >-
+        开设数十个学生社团,覆盖学术、艺术、科技、人文社科、社会实践、运动6大门类。
+        校内设室内篮球馆、健身房、乒羽中心、400米国际标准跑道及足球场、篮球场、钢琴中心、
+        艺术画室、茶艺室、陶艺室、形体教室等。
+      source: "https://www.ccsc.com.cn/hrccsc/ + https://www.ccsc.com.cn/hrccsc/hrjs/ (学校官网)"
+
+  北京潞河国际教:  # 注:JSON 正名截断,实际为「北京潞河国际教育学园」
+    class_system:
+      value: >-
+        国际高中,同时开设 A-Level、AP 及香港高考 HKDSE 课程,学分制,学生按兴趣专长自主选课。
+      source:
+        - "http://m.guojixuexiao.net/ischool/bjlhxy/news/17153.html (招生简章)"
+        - "http://www.guojixuexiao.org/school/lhgjjyxy/ (国际学校网)"
+    boarding_detail:
+      value: >-
+        提供住宿,酒店式后勤管理,二人间/四人间。住宿费按规格:四人间约4800元/学年、
+        双人间约9600元/学年。
+      source: "http://m.guojixuexiao.net/ischool/bjlhxy/news/17153.html (招生简章) + 国际学校网"
+    dining:
+      value: "五个各具特色的食堂,提供中、西、韩餐。"
+      source: "http://www.guojixuexiao.org/school/lhgjjyxy/ (国际学校网)"
+    management:
+      value: "实行导师制,导师对学生学习生活、选课、留学及生涯规划全程指导。"
+      source: "http://www.guojixuexiao.org/school/lhgjjyxy/ (国际学校网)"
+    activities:
+      value: >-
+        课外活动丰富:学生会、社团联合会、学生志愿者协会、电视台等学生组织;
+        合唱团、健美操队、模拟联合国、戏剧社、炫舞社、篮球社、动漫社、油画&雕塑社、
+        手工艺社、摄影社、攀岩&远足社、乒乓球社、健身社等。
+      source: "http://www.guojixuexiao.org/school/lhgjjyxy/ (国际学校网)"
+
+  北京市通州区私立树人学校:  # 现名「北京市私立树人·瑞贝学校」
+    class_system:
+      value: >-
+        K-12 全日制寄宿制学校(位于通州宋庄),招收中外籍学生。高中部(10-12年级)设
+        双语高中、艺术高中、国际高中三种班型:双语高中限京籍、每班约30人;艺术高中
+        (以艺术专业为发展方向)京籍/非京籍、每班约30人;国际高中不限户籍国籍、每班约20人。
+      source:
+        - "https://www.shuren.org/article/1346 (学校官网·高中部招生简章)"
+        - "https://baike.baidu.com/item/北京市私立树人·瑞贝学校/9472397 (百度百科)"
+    boarding_detail:
+      value: >-
+        可走读或住宿。校内共5间学生宿舍,住宿生(小学一年级至高中)有专属住宿区,
+        周一至周五由专业生活老师负责生活管理;走读生(幼儿园至高中)有专属午休床位,
+        保证每日1小时以上午休。
+      source: "https://www.shuren.org/ + https://www.shuren.org/article/1346 (学校官网)"
+    dining:
+      value: >-
+        独立高级餐饮团队(厨师长为前五星级饭店行政总厨、国家一级烹饪大师)。
+        校内3间食堂分别服务幼儿园/小学/初高中,每日三餐两点,住宿生额外提供夜宵。
+      source: "https://www.shuren.org/ (学校官网)"
+    management:
+      value: "封闭式管理,设校医室、24小时警卫及全方位监控。"
+      source: "https://www.shuren.org/ (学校官网) + 百度百科"
+
+  北京德闳明德高中:  # 隶属北京德闳学校(通州格拉斯小镇)
+    class_system:
+      value: >-
+        15年一贯制国际化双语寄宿学校的高中段。10年级为 pre-IB「开拓之旅」过渡课程
+        (核心课程+六大实践模块),11-12年级开设 IBDP 国际文凭大学预科课程。
+      source:
+        - "https://m.guoji.114study.com/school/dehong/news/21272/ (高中部招生简章)"
+        - "https://beijing.dehong.cn/ (学校官网)"
+    boarding_detail:
+      value: >-
+        寄宿学校,全校可容纳约1800名学生在校学习、可满足约400名学生寄宿。
+        校园毗邻湖水,临近自然森林,环境幽静。
+      source: "https://beijing.dehong.cn/our-school/about-us (学校官网) + 国际教育在线"
