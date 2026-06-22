@@ -362,6 +362,8 @@ def _district_from_registry(district: str) -> dict:
         roll = e.get("rollup") or {}
         s = {
             "name": e["canonical_name"],
+            "id": e.get("id"),
+            "short_name": e.get("short_name"),
             "location": {"campus": cam.get("name"), "lat": cam.get("lat"), "lon": cam.get("lon"),
                          "confidence": cam.get("confidence"), "address": cam.get("address")},
             "level": e.get("level"),
@@ -376,8 +378,13 @@ def _district_from_registry(district: str) -> dict:
             s["pred_2026"] = rep["pred_2026"]
         if rep and rep.get("lines_meta"):
             s["scores_meta"] = rep["lines_meta"]
-        if cam.get("boarding") is True:
-            s["boarding"] = True
+        if cam.get("boarding") is not None:
+            s["boarding"] = cam.get("boarding")
+        # 嵌入统招专业(班)+学校码,供 _school_card 直接用(免按名 join codes)
+        s["_reg_code"] = next((a.get("code") for a in tongzhao if a.get("code")), None)
+        s["_reg_majors"] = [{"major_code": a.get("major"), "major_name": a.get("major_name"),
+                             "plan_total": a.get("plan_total")}
+                            for a in tongzhao if a.get("major")]
         schools.append(s)
     return {"district": f"{district}", "region": "北京市", "schools": schools}
 
@@ -685,6 +692,8 @@ def _school_card(s, margin, ref_rank, history, vol, dist_campus, mode_label, max
         "matched": match_interests(s, interests or []),
     }
     adm = (admission_codes or {}).get(s["name"])
+    if not adm and s.get("_reg_majors") is not None:   # registry 源:用学校自带专业/码
+        adm = {"school_code": s.get("_reg_code"), "majors": s["_reg_majors"]}
     if adm:
         majors = adm.get("majors") or []
         card["school_code"] = adm.get("school_code")
@@ -775,7 +784,9 @@ def build_result(rank, home=None, mode="driving", max_km=None, interests=None,
     pred_rank_map = {n: v.get("rank") for n, v in pred2026.items()}
     buckets = {"冲": [], "稳": [], "保": [], "够不上": []}
     for s in schools:
-        res = classify(rank, s, pred_rank=pred_rank_map.get(s["name"]))
+        # 预估位次优先用学校自带(registry/yaml 已挂),否则回退按名取 ts 模型(朝阳旧口径)
+        pr = (s.get("pred_2026") or {}).get("rank") or pred_rank_map.get(s["name"])
+        res = classify(rank, s, pred_rank=pr)
         if res is None:
             continue
         band, margin, ref_rank, history, vol = res
