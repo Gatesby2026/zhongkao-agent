@@ -178,6 +178,9 @@ def build_district(py):
                 e.setdefault("rollup", {}).setdefault(k, v)
             if not e.get("campuses") or e["campuses"][0].get("lat") is None:
                 e["campuses"] = s["campuses"]
+            # 住宿:任一来源标可住宿即可住宿(修统筹视角 campus boarding=False 盖过 yaml=True)
+            if s["campuses"] and s["campuses"][0].get("boarding") and e.get("campuses"):
+                e["campuses"][0]["boarding"] = True
             e.setdefault("level", s.get("level")); e["note"] = e.get("note") or s.get("note")
             path = fp
             data = e

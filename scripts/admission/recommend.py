@@ -384,7 +384,8 @@ def _district_from_registry(district: str) -> dict:
         # 嵌入统招专业(班)+码+计划区(含住信息),供 _school_card 直接用(免按名 join codes)
         s["_reg_code"] = next((a.get("code") for a in tongzhao if a.get("code")), None)
         s["_reg_majors"] = [{"major_code": a.get("major"), "major_name": a.get("major_name"),
-                             "plan_total": a.get("plan_total"), "plan_chaoyang": a.get("plan_district")}
+                             "plan_total": a.get("plan_total"), "plan_chaoyang": a.get("plan_district"),
+                             "note": a.get("note")}
                             for a in tongzhao if a.get("major")]
         # 嵌入各校区坐标,供 distance 直接用(免按名 join coords)
         s["_campuses"] = [{"name": c.get("name"), "lat": c.get("lat"), "lon": c.get("lon")}
