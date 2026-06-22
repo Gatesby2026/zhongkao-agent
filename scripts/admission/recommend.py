@@ -132,11 +132,14 @@ _VOCATIONAL_CACHE: dict = {}
 def load_vocational(district: str):
     if district in _VOCATIONAL_CACHE:
         return _VOCATIONAL_CACHE[district]
-    path = ADMISSION_DIR / f"{district}_vocational.yaml"
     data = None
-    if path.exists():
-        with open(path, encoding="utf-8") as f:
-            data = yaml.safe_load(f)
+    if os.environ.get("REGISTRY_SOURCE") == "1":
+        data = _registry_channel(district, "中职", "vocational_record", "vocational")
+    if data is None:
+        path = ADMISSION_DIR / f"{district}_vocational.yaml"
+        if path.exists():
+            with open(path, encoding="utf-8") as f:
+                data = yaml.safe_load(f)
     _VOCATIONAL_CACHE[district] = data
     return data
 
@@ -251,11 +254,14 @@ def load_new2026(district: str):
     """2026 新增公办普高（无历史线）。文件 <district>_new2026.yaml；无则 None。"""
     if district in _NEW2026_CACHE:
         return _NEW2026_CACHE[district]
-    path = ADMISSION_DIR / f"{district}_new2026.yaml"
     data = None
-    if path.exists():
-        with open(path, encoding="utf-8") as f:
-            data = yaml.safe_load(f)
+    if os.environ.get("REGISTRY_SOURCE") == "1":
+        data = _registry_channel(district, "新校", "new2026_record", "new2026")
+    if data is None:
+        path = ADMISSION_DIR / f"{district}_new2026.yaml"
+        if path.exists():
+            with open(path, encoding="utf-8") as f:
+                data = yaml.safe_load(f)
     _NEW2026_CACHE[district] = data
     return data
 
