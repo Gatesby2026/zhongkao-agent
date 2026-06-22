@@ -36,6 +36,15 @@ def card_sig(c):
     }
 
 
+def _chan(lst, fields):
+    """渠道清单归一:按名排序 + 取关键字段,做确定性快照。"""
+    out = []
+    for s in (lst or []):
+        if isinstance(s, dict):
+            out.append({f: s.get(f) for f in fields})
+    return sorted(out, key=lambda x: str(x.get("name") or x.get("school") or ""))
+
+
 def snap_one(district, rank):
     r = recommend.build_result(rank=rank, district=district)   # home=None → 不测距,确定性
     bands = {b: [card_sig(c) for c in r["bands"].get(b, [])] for b in r.get("bands", {})}
@@ -47,7 +56,15 @@ def snap_one(district, rank):
           "pred": (s.get("pred_2026") or {}).get("rank")}
          for s in (r.get("schools_unified") or [])),
         key=lambda x: (x["type"] or "", x["name"] or ""))
-    return {"bands": bands, "unified": uni, "est_score": r.get("est_score")}
+    priv = _chan((r.get("private_schools") or {}).get("schools"),
+                 ["name", "direction", "tuition", "boarding", "score_2025"])
+    voc = _chan(r.get("vocational"), ["name", "comp_high_2025", "five_year"])
+    new = _chan(r.get("new_schools"), ["name", "level"])
+    tc = _chan(r.get("tongchou"), ["name", "school", "tier"])
+    gt = _chan(r.get("guantong"), ["school", "type", "major", "plan"])
+    return {"bands": bands, "unified": uni, "est_score": r.get("est_score"),
+            "private": priv, "vocational": voc, "new_schools": new,
+            "tongchou": tc, "guantong": gt}
 
 
 def snapshot():
