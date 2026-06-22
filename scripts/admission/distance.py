@@ -254,6 +254,8 @@ def get_campuses(school: dict, district_cn: str, coords_idx: dict, geo_cache: di
     1) KB <district>_coords.json（核实地址 geocode，含多校区）—— 首选，杜绝裸校名错源
     2) 调用方显式传入的 campuses（如民办校 {name,lat,lon}）
     3) 旧坐标库 + 裸校名 geocode 兜底（仅 KB 未覆盖时）"""
+    if school.get("_campuses"):    # registry 源:学校自带校区坐标(按 id 取数,免裸校名匹配)
+        return [(c.get("name", ""), (c["lat"], c["lon"])) for c in school["_campuses"]]
     if kb_coords and school["name"] in kb_coords:
         return kb_coords[school["name"]]
     if school.get("campuses"):

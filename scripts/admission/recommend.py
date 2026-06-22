@@ -378,13 +378,17 @@ def _district_from_registry(district: str) -> dict:
             s["pred_2026"] = rep["pred_2026"]
         if rep and rep.get("lines_meta"):
             s["scores_meta"] = rep["lines_meta"]
-        if cam.get("boarding") is not None:
+        # 住宿:朝阳由 plan_district 文案("住N")驱动(同 flat 口径,blob 检测);非朝阳用 campus 确认值
+        if district != "chaoyang" and cam.get("boarding") is not None:
             s["boarding"] = cam.get("boarding")
-        # 嵌入统招专业(班)+学校码,供 _school_card 直接用(免按名 join codes)
+        # 嵌入统招专业(班)+码+计划区(含住信息),供 _school_card 直接用(免按名 join codes)
         s["_reg_code"] = next((a.get("code") for a in tongzhao if a.get("code")), None)
         s["_reg_majors"] = [{"major_code": a.get("major"), "major_name": a.get("major_name"),
-                             "plan_total": a.get("plan_total")}
+                             "plan_total": a.get("plan_total"), "plan_chaoyang": a.get("plan_district")}
                             for a in tongzhao if a.get("major")]
+        # 嵌入各校区坐标,供 distance 直接用(免按名 join coords)
+        s["_campuses"] = [{"name": c.get("name"), "lat": c.get("lat"), "lon": c.get("lon")}
+                          for c in (e.get("campuses") or []) if c.get("lat") is not None]
         schools.append(s)
     return {"district": f"{district}", "region": "北京市", "schools": schools}
 
