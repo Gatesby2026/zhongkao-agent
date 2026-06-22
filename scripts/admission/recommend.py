@@ -82,6 +82,17 @@ def _registry_channel(district, etype, record_key, meta_key):
     return {"schools": recs, **cm}
 
 
+def _registry_meta(district, key):
+    """区级渠道数据(统筹/校额)存在 registry/<reg>/_channel_meta.yaml[key];registry 为唯一源。"""
+    reg = _PY2REG.get(district)
+    if not reg:
+        return None
+    mp = ADMISSION_DIR / "registry" / reg / "_channel_meta.yaml"
+    if not mp.exists():
+        return None
+    return (yaml.safe_load(mp.read_text(encoding="utf-8")) or {}).get(key)
+
+
 def load_private_schools(district: str):
     """民办/国际校结构化数据。REGISTRY_SOURCE=1 走 registry(唯一源),否则 <district>_private.yaml。"""
     if district in _PRIVATE_CACHE:
@@ -178,11 +189,14 @@ def load_xeddx(district: str):
     """校额到校 初中→优质高中 名额分配表（<district>_xeddx.yaml；无则 None）。"""
     if district in _XEDDX_CACHE:
         return _XEDDX_CACHE[district]
-    path = ADMISSION_DIR / f"{district}_xeddx.yaml"
     data = None
-    if path.exists():
-        with open(path, encoding="utf-8") as f:
-            data = yaml.safe_load(f)
+    if os.environ.get("REGISTRY_SOURCE") == "1":
+        data = _registry_meta(district, "xeddx")
+    if data is None:
+        path = ADMISSION_DIR / f"{district}_xeddx.yaml"
+        if path.exists():
+            with open(path, encoding="utf-8") as f:
+                data = yaml.safe_load(f)
     if data:
         # P3:把校额缩写(八十中/人朝…)解析到注册表 → 官方全名 + id,随块下发,前端不再硬编码简称表
         resolved = {}
@@ -212,11 +226,14 @@ def load_tongchou(district: str):
     if district in _TONGCHOU_CACHE:
         return _TONGCHOU_CACHE[district]
     import json as _json
-    path = ADMISSION_DIR / f"2025_sjtongchou_{district}.json"
     data = None
-    if path.exists():
-        with open(path, encoding="utf-8") as f:
-            data = _json.load(f)
+    if os.environ.get("REGISTRY_SOURCE") == "1":
+        data = _registry_meta(district, "tongchou")
+    if data is None:
+        path = ADMISSION_DIR / f"2025_sjtongchou_{district}.json"
+        if path.exists():
+            with open(path, encoding="utf-8") as f:
+                data = _json.load(f)
     _TONGCHOU_CACHE[district] = data
     return data
 
@@ -347,11 +364,16 @@ def load_guantong():
     """贯通培养项目（全市，非分区）。文件 beijing_guantong.yaml。"""
     if _GUANTONG_CACHE[1]:
         return _GUANTONG_CACHE[0]
-    path = ADMISSION_DIR / "beijing_guantong.yaml"
     data = None
-    if path.exists():
-        with open(path, encoding="utf-8") as f:
-            data = yaml.safe_load(f)
+    if os.environ.get("REGISTRY_SOURCE") == "1":
+        rp = ADMISSION_DIR / "registry" / "_guantong.yaml"
+        if rp.exists():
+            data = yaml.safe_load(rp.read_text(encoding="utf-8"))
+    if data is None:
+        path = ADMISSION_DIR / "beijing_guantong.yaml"
+        if path.exists():
+            with open(path, encoding="utf-8") as f:
+                data = yaml.safe_load(f)
     _GUANTONG_CACHE[0] = data
     _GUANTONG_CACHE[1] = True
     return data
