@@ -45,6 +45,9 @@ def load_admission_codes(district: str) -> dict:
     文件：<district>_admission_codes.json（无则空）。"""
     if district in _ADMISSION_CODES_CACHE:
         return _ADMISSION_CODES_CACHE[district]
+    if _USE_REGISTRY:        # registry 源:专业(班)/码已随 schools 内嵌(_reg_majors),不读扁平codes
+        _ADMISSION_CODES_CACHE[district] = {}
+        return {}
     import json as _json
     path = ADMISSION_DIR / f"{district}_admission_codes.json"
     schools = {}
