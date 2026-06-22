@@ -15,6 +15,7 @@
 """
 import argparse
 import json
+import os
 import re
 import sys
 from pathlib import Path
@@ -333,7 +334,57 @@ REACH_MARGIN = -0.25   # 比录取线落后 25% 以内 → 可冲（放宽自 -0
 VOLATILITY_THRESHOLD = 0.40
 
 
+_PY2REG = {"chaoyang": "cy", "haidian": "hd", "xicheng": "xc", "dongcheng": "dc",
+           "fengtai": "ft", "shijingshan": "sjs", "mentougou": "mtg", "fangshan": "fs",
+           "tongzhou": "tz", "shunyi": "sy", "changping": "cp", "daxing": "dx",
+           "huairou": "hr", "pinggu": "pg", "miyun": "my", "yanqing": "yq"}
+
+
+def _district_from_registry(district: str) -> dict:
+    """B-P3:从 registry 实体重建扁平 schools[](与 <district>.yaml 同形,供 build_result 消费)。
+    registry 是唯一权威;扁平 yaml 退役为可选缓存。"""
+    reg = _PY2REG.get(district)
+    regdir = ADMISSION_DIR / "registry" / (reg or "")
+    if not reg or not regdir.exists():
+        return None
+    schools = []
+    for fp in sorted(regdir.glob("*.yaml")):
+        if fp.name.startswith("_"):
+            continue
+        e = yaml.safe_load(fp.read_text(encoding="utf-8")) or {}
+        if e.get("type") != "公办普高":
+            continue
+        adms = e.get("admissions") or []
+        rep = next((a for a in adms if a.get("channel") == "统招" and a.get("lines")), None)
+        cam = (e.get("campuses") or [{}])[0]
+        roll = e.get("rollup") or {}
+        s = {
+            "name": e["canonical_name"],
+            "location": {"campus": cam.get("name"), "lat": cam.get("lat"), "lon": cam.get("lon"),
+                         "confidence": cam.get("confidence"), "address": cam.get("address")},
+            "level": e.get("level"),
+            "note": e.get("note") or "",
+            "features": roll.get("features") or {},
+            "gaokao": roll.get("gaokao") or {},
+            "scores": dict((rep or {}).get("lines") or {}),
+        }
+        if roll.get("campus_life"):
+            s["campus_life"] = roll["campus_life"]
+        if rep and rep.get("pred_2026"):
+            s["pred_2026"] = rep["pred_2026"]
+        if rep and rep.get("lines_meta"):
+            s["scores_meta"] = rep["lines_meta"]
+        if cam.get("boarding") is True:
+            s["boarding"] = True
+        schools.append(s)
+    return {"district": f"{district}", "region": "北京市", "schools": schools}
+
+
 def load_district(district: str) -> dict:
+    if os.environ.get("REGISTRY_SOURCE") == "1":     # B-P3 开关:走 registry(默认关,回归绿后再开)
+        d = _district_from_registry(district)
+        if d and d["schools"]:
+            return d
     path = ADMISSION_DIR / f"{district}.yaml"
     if not path.exists():
         avail = sorted(
