@@ -352,10 +352,12 @@ def _district_from_registry(district: str) -> dict:
         if fp.name.startswith("_"):
             continue
         e = yaml.safe_load(fp.read_text(encoding="utf-8")) or {}
-        if e.get("type") != "公办普高":
-            continue
         adms = e.get("admissions") or []
-        rep = next((a for a in adms if a.get("channel") == "统招" and a.get("lines")), None)
+        # 含统招渠道的即本区公办(含被统筹视角先建、后并入统招的实体);纯民办/中职/统筹由各自 loader 出
+        tongzhao = [a for a in adms if a.get("channel") == "统招"]
+        if not tongzhao:
+            continue
+        rep = next((a for a in tongzhao if a.get("lines")), tongzhao[0])
         cam = (e.get("campuses") or [{}])[0]
         roll = e.get("rollup") or {}
         s = {
