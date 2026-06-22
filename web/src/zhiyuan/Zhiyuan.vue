@@ -16,7 +16,8 @@ const MODES = [
   { v: 'walking', label: '步行' },
 ]
 const ZHIYUAN_SLOTS = 12   // 统一招生志愿数（每志愿 2 专业）
-// 区切换:朝阳=full(冲稳保全功能);其余 15 区=browse(校库·暂无录取线,见 DistrictBrowse)
+// 区切换:full 区=冲稳保全功能(数据已对标朝阳);其余=browse(校库,见 DistrictBrowse)。
+// full/browse 由后端按 <区>.yaml 是否有录取线动态判定(见 districtModes)。
 const DISTRICTS: [string, string][] = [
   ['chaoyang', '朝阳'], ['haidian', '海淀'], ['xicheng', '西城'], ['dongcheng', '东城'],
   ['fengtai', '丰台'], ['shijingshan', '石景山'], ['mentougou', '门头沟'], ['fangshan', '房山'],
@@ -25,6 +26,19 @@ const DISTRICTS: [string, string][] = [
 ]
 const curDistrict = ref('chaoyang')
 const districtCn = computed(() => (DISTRICTS.find(d => d[0] === curDistrict.value) || ['', '朝阳'])[1])
+// 各区模式(full=冲稳保全功能 / browse=校库)由后端 /api/zhiyuan/districts 决定,随数据补齐自动升级。
+// 朝阳兜底 full,避免接口未回时首屏空白。
+const districtModes = ref<Record<string, string>>({ chaoyang: 'full' })
+const curMode = computed(() => districtModes.value[curDistrict.value] || 'browse')
+async function loadDistrictModes() {
+  try {
+    const r = await fetch('/api/zhiyuan/districts')
+    const d = await r.json()
+    const m: Record<string, string> = {}
+    for (const x of (d.districts || [])) m[x.py] = x.mode
+    districtModes.value = m
+  } catch { /* 保持兜底 */ }
+}
 
 // 升学渠道科普(重设计)：渠道卡 / 官方入口 / 时间线。来源 bjeea.cn / 北京市教委 / 首都之窗(T1)。
 const BJEEA_ZK = 'https://www.bjeea.cn/'   // 中考中招频道页(/html/zkzh/)已 403,改用考试院首页(稳定·顶部导航进中招)
@@ -240,6 +254,7 @@ async function submit() {
       mode: form.mode,
       boarding: form.boarding,
       identity: form.identity,
+      district: curDistrict.value,
     }
     if (form.home.trim()) body.home = form.home.trim()
     if (form.max_km !== '' && Number(form.max_km) > 0) body.max_km = Number(form.max_km)
@@ -281,6 +296,7 @@ async function loadProfile() {
   } catch { /* 未登录或网络问题:用空白缺省,不打断 */ }
 }
 onMounted(loadProfile)
+onMounted(loadDistrictModes)
 
 function saveProfile() {
   const data = { ...form, chuzhong: xedQuery.value }
@@ -1220,6 +1236,13 @@ const formSummary = computed(() => {
 })
 // 折叠态下改了条件 → 标记 dirty，提示重新生成
 watch([form, xedQuery], () => { if (result.value && !formOpen.value) formDirty.value = true }, { deep: true })
+// 切区:清掉上一区的结果与草表,展开表单,提示重新生成(不同区录取线/学校完全不同)
+watch(curDistrict, () => {
+  result.value = null
+  formOpen.value = true
+  formDirty.value = false
+  tab.value = 'map'
+})
 const canIndicator = computed(() => form.identity === 'jjyj')   // 指标分配=校额到校/统筹：京籍应届
 const canGuantong = computed(() => form.identity === 'jjyj')    // 贯通：京籍应届
 const canPuhao = computed(() => form.identity !== 'feijing')    // 普高统招：非京籍不可
@@ -1437,14 +1460,14 @@ const tcOptions: string[] = []
   <div class="page">
     <header class="hero">
       <div class="hero-top">
-        <h1>北京中考志愿参考<select v-model="curDistrict" class="dist-sel"><option v-for="d in DISTRICTS" :key="d[0]" :value="d[0]">{{ d[1] }}{{ d[0] === 'chaoyang' ? '' : '·查校' }}</option></select></h1>
+        <h1>北京中考志愿参考<select v-model="curDistrict" class="dist-sel"><option v-for="d in DISTRICTS" :key="d[0]" :value="d[0]">{{ d[1] }}{{ (districtModes[d[0]] || 'browse') === 'full' ? '' : '·查校' }}</option></select></h1>
         <AccountMenu app-name="zhiyuan" />
       </div>
       <p class="sub">按区排名做冲稳保匹配，叠加通勤路网距离与学校特色，并镜像官方填报格式生成统招志愿草表。仅辅助参考，最终以官方招生简章与老师建议为准。</p>
     </header>
 
-    <!-- 朝阳=全功能(冲稳保+草表+全维);其余区=校库浏览(暂无录取线) -->
-    <template v-if="curDistrict === 'chaoyang'">
+    <!-- full=全功能(冲稳保+草表+全维,数据已对标朝阳);browse=校库浏览(暂无录取线) -->
+    <template v-if="curMode === 'full'">
     <div class="disclaimer">
       ⚠️ 学校代码 / 专业(班)代码派生自 <b>bjeea 2025 官方招生计划册</b>（人工核对映射），<b>2026 计划 7 月初发布后须刷新</b>；高考成绩为<b>民间·非官方</b>数据，仅作补充参考，请勿据此直接决策。
     </div>

@@ -57,6 +57,7 @@ class ZhiyuanReq(BaseModel):
     interests: Optional[List[str]] = None
     boarding: bool = False
     identity: str = "jjyj"   # 京籍应届 jjyj / 非京籍 feijing / 往届回京 wangjie
+    district: str = "chaoyang"
 
 
 @app.get("/api/health")
@@ -98,10 +99,13 @@ def zhiyuan_report(req: ReportReq, user: dict = Depends(get_current_user)):
 def zhiyuan_recommend(req: ZhiyuanReq):
     if req.mode not in zhiyuan.dist_mod.MODES:   # 非法通勤方式 → 400(而非 KeyError 漏成 500)
         raise HTTPException(status_code=400, detail="通勤方式不正确")
+    district = req.district or "chaoyang"
+    if district not in _full_set():              # 该区无完整录取数据 → 不做冲稳保
+        raise HTTPException(status_code=400, detail="该区暂无完整录取数据，无法做冲稳保")
     try:
         result = zhiyuan.build_result(
             rank=req.rank, home=req.home, mode=req.mode,
-            max_km=req.max_km, interests=req.interests, district="chaoyang",
+            max_km=req.max_km, interests=req.interests, district=district,
             boarding=req.boarding, identity=req.identity,
         )
     except ValueError as e:
@@ -115,28 +119,55 @@ def zhiyuan_recommend(req: ZhiyuanReq):
 
 import json as _json2
 
-_DISTRICTS_DIR = ROOT / "knowledge-base" / "admission" / "beijing" / "districts"
-# 区拼音→中文(朝阳=全功能,走既有 recommend;其余=校库:可查校/看专业/看位置,暂无录取线)
-_DLIST = [("chaoyang", "朝阳", True), ("haidian", "海淀", False), ("xicheng", "西城", False),
-          ("dongcheng", "东城", False), ("fengtai", "丰台", False), ("shijingshan", "石景山", False),
-          ("mentougou", "门头沟", False), ("fangshan", "房山", False), ("tongzhou", "通州", False),
-          ("shunyi", "顺义", False), ("changping", "昌平", False), ("daxing", "大兴", False),
-          ("huairou", "怀柔", False), ("pinggu", "平谷", False), ("miyun", "密云", False),
-          ("yanqing", "延庆", False)]
-_PY2CN = {py: cn for py, cn, _ in _DLIST}
+_BJ_DIR = ROOT / "knowledge-base" / "admission" / "beijing"
+_DISTRICTS_DIR = _BJ_DIR / "districts"
+# 区拼音→中文。mode 不再写死:有完整 <py>.yaml(≥3 校有录取线)→ full(冲稳保+草表+全维),
+# 否则 browse(校库:可查校/看专业/看位置)。随数据补齐自动从 browse 升级 full。
+_DLIST = [("chaoyang", "朝阳"), ("haidian", "海淀"), ("xicheng", "西城"),
+          ("dongcheng", "东城"), ("fengtai", "丰台"), ("shijingshan", "石景山"),
+          ("mentougou", "门头沟"), ("fangshan", "房山"), ("tongzhou", "通州"),
+          ("shunyi", "顺义"), ("changping", "昌平"), ("daxing", "大兴"),
+          ("huairou", "怀柔"), ("pinggu", "平谷"), ("miyun", "密云"),
+          ("yanqing", "延庆")]
+_PY2CN = {py: cn for py, cn in _DLIST}
+
+_FULL_CACHE = None
+
+
+def _full_set():
+    """有完整录取数据(可做冲稳保)的区集合。朝阳恒 full;其余看 <py>.yaml 是否有 ≥3 校带 scores。
+    模块级缓存:数据离线装配、部署重启即刷新。"""
+    global _FULL_CACHE
+    if _FULL_CACHE is None:
+        s = {"chaoyang"}
+        for py, _ in _DLIST:
+            if py == "chaoyang":
+                continue
+            p = _BJ_DIR / f"{py}.yaml"
+            if not p.exists():
+                continue
+            try:
+                d = zhiyuan.yaml.safe_load(p.read_text(encoding="utf-8")) or {}
+                if sum(1 for x in d.get("schools", []) if x.get("scores")) >= 3:
+                    s.add(py)
+            except Exception:
+                pass
+        _FULL_CACHE = s
+    return _FULL_CACHE
 
 
 @app.get("/api/zhiyuan/districts")
 def zhiyuan_districts():
-    """区列表:朝阳=full(冲稳保+草表+全维),其余=browse(校库·暂无录取线)。"""
+    """区列表:full(冲稳保+草表+全维) / browse(校库·暂无录取线)。"""
+    full = _full_set()
     out = []
-    for py, cn, full in _DLIST:
+    for py, cn in _DLIST:
         n = None
-        if not full:
-            f = _DISTRICTS_DIR / f"{py}_admission_codes.json"
-            if f.exists():
-                n = len(_json2.loads(f.read_text(encoding="utf-8")).get("schools", {}))
-        out.append({"py": py, "cn": cn, "mode": "full" if full else "browse", "n_schools": n})
+        f = _DISTRICTS_DIR / f"{py}_admission_codes.json"
+        if f.exists():
+            n = len(_json2.loads(f.read_text(encoding="utf-8")).get("schools", {}))
+        out.append({"py": py, "cn": cn,
+                    "mode": "full" if py in full else "browse", "n_schools": n})
     return {"districts": out}
 
 

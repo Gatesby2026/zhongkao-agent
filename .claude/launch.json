@@ -18,6 +18,12 @@
       "runtimeExecutable": "python3",
       "runtimeArgs": ["-m", "uvicorn", "--app-dir", "server", "main:app", "--host", "127.0.0.1", "--port", "8200"],
       "port": 8200
+    },
+    {
+      "name": "zhiyuan-app",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "uvicorn", "--app-dir", "server", "zhiyuan_app:app", "--host", "127.0.0.1", "--port", "8201"],
+      "port": 8201
     }
   ]
 }

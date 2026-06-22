@@ -1,264 +1,685 @@
-# ============================================================
-# 东城区高中录取分数线（2023-2025）
-# ============================================================
-# 数据来源：北京中考信息网 (zhongkaobj.cn) 转载自北京教育考试院
-# 最后更新：2026-04-13
-# 注意：2023总分660，2024总分670，2025总分510（改革后不可直比）
-
 meta:
-  quality_status: curated   # llm_draft|curated|teacher_reviewed|verified
-  source: "北京中考信息网 (zhongkaobj.cn) 转载自北京教育考试院"
-  updated: 2026-04-13
-  reviewed_by: null
-
+  quality_status: assembled
+  source: 统招计划(codes)+高德坐标+历史录取线(官方/网传)+民间特色/高考
+  updated: '2026-06-22'
+  builder: build_full_district.py
+  note: 对标朝阳 schema 自动装配;录取线缺失或低置信处以 scores_meta 标注。
 district: 东城区
 region: 北京市
-
-# ================================================================
-#  学校分层（基于2025年区排名）
-# ================================================================
-tiers:
-  tier1:
-    name: 第一梯队（区排名前1500）
-    schools: [北京二中, 171中学, 北京五中, 汇文中学, 广渠门中学]
-    note: 东城五强
-  tier2:
-    name: 第二梯队（区排名1500-3000）
-    schools: [景山学校, 东直门中学, 龙潭中学, 166中学, 十一中学]
-  tier3:
-    name: 第三梯队（区排名3000-5000）
-    schools: [五十中, 五十五中学, 一六五中学, 二十二中学, 二十四中学, 一零九中学, 九十六中]
-  tier4:
-    name: 第四梯队（区排名5000+）
-    schools: [一中, 六十五中, 一四二中学, 二十七中, 二十五中学, 五十四中, 二十一中, 五十分校, 翔宇中学]
-
-# ================================================================
-#  逐校逐年录取分数线
-# ================================================================
 schools:
-
-  - name: 北京二中
-    level: 市级示范性高中
-    note: 东城区头牌，全市排名靠前
-    scores:
-      2025: { total: 510, score: 485, rank: 389 }
-      2024: { total: 670, score: 641, rank: 494 }
-      2023: { total: 660, score: 644, rank: 502 }
-
-  - name: 171中学
-    level: 市级示范性高中
-    scores:
-      2025: { total: 510, score: 480, rank: 748 }
-      2024: { total: 670, score: 634, rank: 1033 }
-      2023: { total: 660, score: 637, rank: 1248 }
-
-  - name: 汇文中学
-    level: 市级示范性高中
-    scores:
-      2025: { total: 510, score: 476, rank: 1114 }
-      2024: { total: 670, score: 624, rank: 1943 }
-      2023: { total: 660, score: 635, rank: 1485 }
-
-  - name: 北京五中
-    level: 市级示范性高中
-    scores:
-      2025: { total: 510, score: 475, rank: 1216 }
-      2024: { total: 670, score: 632, rank: 1210 }
-      2023: { total: 660, score: 636, rank: 1372 }
-
-  - name: 广渠门中学
-    level: 市级示范性高中
-    note: 宏志班有特殊招生
-    scores:
-      2025: { total: 510, score: 473, rank: 1391 }
-      2024: { total: 670, score: 626, rank: 1770 }
-      2023: { total: 660, score: 633, rank: 1725 }
-
-  - name: 景山学校
-    level: 市级示范性高中
-    scores:
-      2025: { total: 510, score: 470, rank: 1664 }
-      2024: { total: 670, score: 616, rank: 2626 }
-
-  - name: 东直门中学
-    level: 市级示范性高中
-    note: 叶企孙实验班录取线高于普通班
-    scores:
-      2025: { total: 510, score: 469, rank: 1752 }
-      2024: { total: 670, score: 623, rank: 2030 }
-      2023: { total: 660, score: 629, rank: 2164 }
-
-  - name: 龙潭中学
-    level: 区级
-    scores:
-      2025: { total: 510, score: 469, rank: 1752 }
-      2024: { total: 670, score: 619, rank: 2385 }
-
-  - name: 166中学
-    level: 区级示范性高中
-    note: 生命科学实验班录取线高于普通班
-    scores:
-      2025: { total: 510, score_lab: 468, rank_lab: 1851, score_normal: 464, rank_normal: 2219 }
-      2024: { total: 670, score: 613, rank: 2858 }
-      2023: { total: 660, score: 623, rank: 2780 }
-
-  - name: 十一中学
-    level: 区级
-    scores:
-      2025: { total: 510, score: 459, rank: 2699 }
-      2024: { total: 670, score: 606, rank: 3340 }
-      2023: { total: 660, score: 617, rank: 3286 }
-
-  - name: 五十中
-    level: 区级
-    scores:
-      2025: { total: 510, score: 454, rank: 3106 }
-      2024: { total: 670, score: 598, rank: 3877 }
-      2023: { total: 660, score: 614, rank: 3519 }
-
-  - name: 五十五中学
-    level: 区级
-    scores:
-      2025: { total: 510, score: 453, rank: 3195 }
-      2024: { total: 670, score: 597, rank: 3929 }
-
-  - name: 一六五中学
-    level: 区级
-    scores:
-      2025: { total: 510, score: 447, rank: 3680 }
-      2024: { total: 670, score: 534, rank: 6422 }
-
-  - name: 二十二中学
-    level: 区级
-    scores:
-      2025: { total: 510, score: 444, rank: 3926 }
-      2024: { total: 670, score: 590, rank: 4356 }
-
-  - name: 二十四中学
-    level: 区级
-    scores:
-      2025: { total: 510, score: 439, rank: 4244 }
-      2024: { total: 670, score: 579, rank: 4909 }
-
-  - name: 一零九中学
-    level: 区级
-    scores:
-      2025: { total: 510, score: 438, rank: 4308 }
-      2024: { total: 670, score: 581, rank: 4818 }
-
-  - name: 九十六中
-    level: 区级
-    scores:
-      2025: { total: 510, score: 431, rank: 4747 }
-      2024: { total: 670, score: 568, rank: 5361 }
-
-  - name: 一中
-    level: 区级
-    scores:
-      2025: { total: 510, score: 427, rank: 4950 }
-
-  - name: 六十五中
-    level: 区级
-    scores:
-      2025: { total: 510, score: 426, rank: 5004 }
-      2024: { total: 670, score: 561, rank: 5619 }
-
-  - name: 一四二中学
-    level: 区级
-    scores:
-      2025: { total: 510, score: 421, rank: 5242 }
-
-  - name: 二十七中
-    level: 区级
-    scores:
-      2025: { total: 510, score: 409, rank: 5657 }
-      2024: { total: 670, score: 547, rank: 6074 }
-
-  - name: 二十五中学
-    level: 区级
-    scores:
-      2025: { total: 510, score: 402, rank: 5837 }
-      2024: { total: 670, score: 537, rank: 6356 }
-
-  - name: 五十四中
-    level: 区级
-    scores:
-      2025: { total: 510, score: 400, rank: 5896 }
-      2024: { total: 670, score: 533, rank: 6445 }
-
-  - name: 二十一中
-    level: 区级
-    scores:
-      2025: { total: 510, score: 390, rank: 6101 }
-      2024: { total: 670, score: 528, rank: 6541 }
-
-  - name: 五十分校
-    level: 区级
-    scores:
-      2025: { total: 510, score: 389, rank: 6118 }
-
-  - name: 翔宇中学
-    level: 民办
-    scores:
-      2025: { total: 510, score: 338, rank: 6525 }
-      2024: { total: 670, score: 490, rank: 6994 }
-
-# ================================================================
-#  目标分数速查（2026年参考，基于2025年510分制）
-# ================================================================
-target_guide_2026:
-  - target: 北京二中
-    reference_score: 485
-    math_target: 92+
-  - target: 171中学/五中
-    reference_score: 475-480
-    math_target: 88+
-  - target: 汇文/广渠门/东直门
-    reference_score: 469-476
-    math_target: 82+
-  - target: 景山/166中学
-    reference_score: 464-470
-    math_target: 75+
-  - target: 十一中学/五十中
-    reference_score: 454-459
-    math_target: 70+
-  - target: 普通高中保底
-    reference_score: 400-440
-    math_target: 60+
-
-# ================================================================
-#  校额到校录取参考（2025年数据）
-# ================================================================
-quota_allocation:
-  policy_summary: |
-    东城区校额到校覆盖面广，二中、五中等均有名额分配到各初中。
-    2025年东城区校额到校最低录取控制线约为458分（510分制）。
-    东城初中数量相对少，校额到校竞争相对温和。
-
-  typical_discount:
-    tier1_schools: "统招线下降12-20分（二中）"
-    tier2_schools: "统招线下降18-28分（171/五中等）"
-    tier3_schools: "统招线下降22-35分（汇文/广渠门等）"
-
-  examples_2025:
-    - high_school: 北京二中
-      统招线: 485
-      校额到校典型线: 468-477
-      降分幅度: 8-17分
-    - high_school: 171中学
-      统招线: 480
-      校额到校典型线: 458-470
-      降分幅度: 10-22分
-    - high_school: 五中
-      统招线: 475
-      校额到校典型线: 452-465
-      降分幅度: 10-23分
-    - high_school: 汇文中学
-      统招线: 469
-      校额到校典型线: 442-458
-      降分幅度: 11-27分
-
-  advice_for_students: |
-    东城区校额到校整体降分幅度适中，普通初中学生有较好的机会。
-    二中的校额到校名额分布较广，很多初中都能分到。
-    建议：数学稳定在80+，总分460+就有机会通过校额到校进入优质高中。
+- name: 北京宏志中学
+  school_code: '201013'
+  location:
+    campus: 北京市东城区北京宏志中学
+    lat: 39.957684
+    lon: 116.410794
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京市东直门中学
+  school_code: '101011'
+  location:
+    campus: 北京市东城区北京市东直门中学
+    lat: 39.945214
+    lon: 116.431293
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 市级示范性高中
+  note: 叶企孙实验班录取线高于普通班
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 469
+      rank: 1752
+    '2024':
+      total: 670
+      score: 623
+      rank: 2030
+    '2023':
+      total: 660
+      score: 629
+      rank: 2164
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京市广渠门中学
+  school_code: '101009'
+  location:
+    campus: 北京市东城区北京市广渠门中学
+    lat: 39.896364
+    lon: 116.438434
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 市级示范性高中
+  note: 宏志班有特殊招生
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 473
+      rank: 1391
+    '2024':
+      total: 670
+      score: 626
+      rank: 1770
+    '2023':
+      total: 660
+      score: 633
+      rank: 1725
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京市第一七一中学
+  school_code: '101008'
+  location:
+    campus: 北京市东城区北京市第一七一中学
+    lat: 39.958708
+    lon: 116.428644
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 市级示范性高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 480
+      rank: 748
+    '2024':
+      total: 670
+      score: 634
+      rank: 1033
+    '2023':
+      total: 660
+      score: 637
+      rank: 1248
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京市第一中学
+  school_code: '201001'
+  location:
+    campus: 北京市东城区北京市第一中学
+    lat: 39.947276
+    lon: 116.400128
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 区级
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 427
+      rank: 4950
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京市第一六五中学
+  school_code: '201014'
+  location:
+    campus: 北京市东城区北京市第一六五中学
+    lat: 39.929329
+    lon: 116.411533
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 区级
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 447
+      rank: 3680
+    '2024':
+      total: 670
+      score: 534
+      rank: 6422
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京市第一六六中学
+  school_code: '101007'
+  location:
+    campus: 北京市东城区北京市第一六六中学
+    lat: 39.920508
+    lon: 116.415367
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 区级示范性高中
+  note: 生命科学实验班录取线高于普通班
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score_lab: 468
+      rank_lab: 1851
+      score_normal: 464
+      rank_normal: 2219
+    '2024':
+      total: 670
+      score: 613
+      rank: 2858
+    '2023':
+      total: 660
+      score: 623
+      rank: 2780
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京市第一四二中学
+  school_code: '201012'
+  location:
+    campus: 北京市东城区北京宏志中学
+    lat: 39.957684
+    lon: 116.410794
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 区级
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 421
+      rank: 5242
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京市第一零九中学
+  school_code: '101006'
+  location:
+    campus: 北京市东城区北京市第一零九中学
+    lat: 39.887856
+    lon: 116.429534
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 区级
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 438
+      rank: 4308
+    '2024':
+      total: 670
+      score: 581
+      rank: 4818
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京市第九十六中学
+  school_code: '201010'
+  location:
+    campus: 北京市东城区北京市第九十六中学(北2门)
+    lat: 39.900127
+    lon: 116.415906
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 区级
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 431
+      rank: 4747
+    '2024':
+      total: 670
+      score: 568
+      rank: 5361
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京市第二中学
+  school_code: '101001'
+  location:
+    campus: 北京市东城区北京市第二中学
+    lat: 39.919672
+    lon: 116.42372
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 市级示范性高中
+  note: 东城区头牌，全市排名靠前
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 485
+      rank: 389
+    '2024':
+      total: 670
+      score: 641
+      rank: 494
+    '2023':
+      total: 660
+      score: 644
+      rank: 502
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京市第二十一中学
+  school_code: '201002'
+  location:
+    campus: 北京市东城区北京市第二十一中学
+    lat: 39.943736
+    lon: 116.412853
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 区级
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 390
+      rank: 6101
+    '2024':
+      total: 670
+      score: 528
+      rank: 6541
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京市第二十七中学
+  school_code: '201006'
+  location:
+    campus: 北京市东城区北京市第二十七中学
+    lat: 39.916348
+    lon: 116.405003
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 区级
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 409
+      rank: 5657
+    '2024':
+      total: 670
+      score: 547
+      rank: 6074
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京市第二十二中学
+  school_code: '201003'
+  location:
+    campus: 北京市东城区北京市第二十二中学
+    lat: 39.941562
+    lon: 116.414186
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 区级
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 444
+      rank: 3926
+    '2024':
+      total: 670
+      score: 590
+      rank: 4356
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京市第二十五中学
+  school_code: '201005'
+  location:
+    campus: 北京市东城区北京市第二十五中学
+    lat: 39.919578
+    lon: 116.413016
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 区级
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 402
+      rank: 5837
+    '2024':
+      total: 670
+      score: 537
+      rank: 6356
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京市第二十四中学
+  school_code: '201004'
+  location:
+    campus: 北京市东城区北京市第二十四中学
+    lat: 39.913463
+    lon: 116.423468
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 区级
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 439
+      rank: 4244
+    '2024':
+      total: 670
+      score: 579
+      rank: 4909
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京市第五中学
+  school_code: '101002'
+  location:
+    campus: 北京市东城区北京市第五中学
+    lat: 39.937846
+    lon: 116.414411
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 市级示范性高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 475
+      rank: 1216
+    '2024':
+      total: 670
+      score: 632
+      rank: 1210
+    '2023':
+      total: 660
+      score: 636
+      rank: 1372
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京市第五十中学
+  school_code: '101004'
+  location:
+    campus: 北京市东城区北京市第五十中学
+    lat: 39.887052
+    lon: 116.439361
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 区级
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 454
+      rank: 3106
+    '2024':
+      total: 670
+      score: 598
+      rank: 3877
+    '2023':
+      total: 660
+      score: 614
+      rank: 3519
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京市第五十中学分校
+  school_code: '201007'
+  location:
+    campus: 北京市东城区北京市第五十中学
+    lat: 39.887052
+    lon: 116.439361
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 区级
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 389
+      rank: 6118
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京市第五十五中学
+  school_code: '101005'
+  location:
+    campus: 北京市东城区北京市第五十五中学
+    lat: 39.937664
+    lon: 116.440161
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 区级
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 453
+      rank: 3195
+    '2024':
+      total: 670
+      score: 597
+      rank: 3929
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京市第五十四中学
+  school_code: '201008'
+  location:
+    campus: 北京市东城区北京市第五十四中学
+    lat: 39.955555
+    lon: 116.423587
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 区级
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 400
+      rank: 5896
+    '2024':
+      total: 670
+      score: 533
+      rank: 6445
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京市第六十五中学
+  school_code: '201009'
+  location:
+    campus: 北京市东城区北京市第六十五中学
+    lat: 39.920892
+    lon: 116.405491
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 区级
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 426
+      rank: 5004
+    '2024':
+      total: 670
+      score: 561
+      rank: 5619
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京市第十一中学
+  school_code: '101003'
+  location:
+    campus: 北京市东城区北京市第十一中学(东校区)
+    lat: 39.891069
+    lon: 116.415906
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 区级
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 459
+      rank: 2699
+    '2024':
+      total: 670
+      score: 606
+      rank: 3340
+    '2023':
+      total: 660
+      score: 617
+      rank: 3286
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京市翔宇中学
+  school_code: '201019'
+  location:
+    campus: 北京市东城区北京市翔宇中学
+    lat: 39.866989
+    lon: 116.393169
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 民办
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 338
+      rank: 6525
+    '2024':
+      total: 670
+      score: 490
+      rank: 6994
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京市龙潭中学
+  school_code: '201017'
+  location:
+    campus: 北京市东城区
+    lat: 39.928359
+    lon: 116.416334
+    confidence: mid
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 区级
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 469
+      rank: 1752
+    '2024':
+      total: 670
+      score: 619
+      rank: 2385
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京景山学校
+  school_code: '101012'
+  location:
+    campus: 北京市东城区北京景山学校(正门)
+    lat: 39.919024
+    lon: 116.415001
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 市级示范性高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 470
+      rank: 1664
+    '2024':
+      total: 670
+      score: 616
+      rank: 2626
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京汇文中学
+  school_code: '101010'
+  location:
+    campus: 北京市东城区北京汇文中学(北校区)
+    lat: 39.905314
+    lon: 116.433284
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 市级示范性高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 476
+      rank: 1114
+    '2024':
+      total: 670
+      score: 624
+      rank: 1943
+    '2023':
+      total: 660
+      score: 635
+      rank: 1485
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京汇文实验中学
+  school_code: '201011'
+  location:
+    campus: 北京市东城区北京汇文实验中学
+    lat: 39.902315
+    lon: 116.420466
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}

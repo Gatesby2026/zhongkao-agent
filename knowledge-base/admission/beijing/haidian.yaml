@@ -1,444 +1,1498 @@
-# ============================================================
-# 海淀区高中录取分数线（2023-2025）
-# ============================================================
-# 数据来源：北京中考信息网 (zhongkaobj.cn) 转载自北京教育考试院
-# 最后更新：2026-04-13
-# 注意：2023总分660，2024总分670，2025总分510（改革后不可直比）
-
 meta:
-  quality_status: curated   # llm_draft|curated|teacher_reviewed|verified
-  source: "北京中考信息网 (zhongkaobj.cn) 转载自北京教育考试院"
-  updated: 2026-04-13
-  reviewed_by: null
-
+  quality_status: assembled
+  source: 统招计划(codes)+高德坐标+历史录取线(官方/网传)+民间特色/高考
+  updated: '2026-06-22'
+  builder: build_full_district.py
+  note: 对标朝阳 schema 自动装配;录取线缺失或低置信处以 scores_meta 标注。
 district: 海淀区
 region: 北京市
-
-# ================================================================
-#  学校分层（基于2025年区排名）
-# ================================================================
-tiers:
-  tier1:
-    name: 第一梯队·六小强（区排名前1600）
-    schools: [人大附中, 十一学校, 清华附中, 101中学, 首师大附中, 北大附中]
-    note: 海淀六小强，北京乃至全国顶尖
-  tier2:
-    name: 第二梯队（区排名1600-4000）
-    schools: [清华实验学校, 育英学校, 五十七中, 建华实验学校, 交大附中, 人大附中航天城学校, 人大附中分校, 理工附中]
-  tier3:
-    name: 第三梯队（区排名4000-7000）
-    schools: [五十七中上庄, 首师大附玉泉学校, 101温泉, 海淀进修实验学校, 北航实验学校, 首师附一分校, 清华附中上地学校, 十一实验, 八一学校, 中关村中学, 人大附中翠微学校, 二十中, 人大附西山学校]
-  tier4:
-    name: 第四梯队（区排名7000-10000）
-    schools: [育英中学, 首师大二附, 101石油, 玉渊潭中学, 十九中, 首师附育新学校, 海淀实验中学, 清华附中志新学校, 北大附中北医, 北京实验学校, 北外附校]
-  tier5:
-    name: 第五梯队（区排名10000+）
-    schools: [北师大三附中, 海淀教进香山, 北外附校(外国语), 中关村知春分校, 人大附中二分校, 101矿大, 交大附中二分校, 清华附中学院路, 清华附中永丰, 农大附中, 交大附中东校区, 交大附中分校, 八一玉泉, 中法实验, 清河中学]
-
-# ================================================================
-#  逐校逐年录取分数线
-# ================================================================
 schools:
-
-  # ---- 六小强 ----
-
-  - name: 人大附中
-    level: 市级示范性高中
-    note: 全国顶尖名校，早培/实验班通过提前招生，统招仅普通班
-    scores:
-      2025: { total: 510, score: 491, rank: 569 }
-      2024: { total: 670, score: 650, rank: 930 }
-      2023: { total: 660, score: 644, rank: 948 }
-
-  - name: 十一学校
-    level: 市级示范性高中
-    note: 海淀顶尖，科学实验班为全市最高录取线之一
-    scores:
-      2025: { total: 510, score: 491, rank: 569 }
-      2024: { total: 670, score: 649, rank: 1096 }
-      2023: { total: 660, score: 644, rank: 948 }
-
-  - name: 清华附中
-    level: 市级示范性高中
-    scores:
-      2025: { total: 510, score: 487, rank: 1107 }
-      2024: { total: 670, score: 647, rank: 1452 }
-      2023: { total: 660, score: 640, rank: 1896 }
-
-  - name: 101中学
-    level: 市级示范性高中
-    note: 人文实验班录取线仅次于十一科实班
-    scores:
-      2025: { total: 510, score: 487, rank: 1107 }
-      2024: { total: 670, score: 647, rank: 1452 }
-      2023: { total: 660, score: 642, rank: 1364 }
-
-  - name: 首师大附中
-    level: 市级示范性高中
-    scores:
-      2025: { total: 510, score: 487, rank: 1107 }
-      2024: { total: 670, score: 644, rank: 2067 }
-      2023: { total: 660, score: 640, rank: 1896 }
-
-  - name: 北大附中
-    level: 市级示范性高中
-    scores:
-      2025: { total: 510, score: 484, rank: 1601 }
-      2024: { total: 670, score: 642, rank: 2523 }
-      2023: { total: 660, score: 636, rank: 3047 }
-
-  # ---- 第二梯队 ----
-
-  - name: 清华实验学校
-    level: 民办（清华附中体系）
-    scores:
-      2025: { total: 510, score: 481, rank: 2234 }
-      2024: { total: 670, score: 643, rank: 2284 }
-
-  - name: 育英学校
-    level: 市级示范性高中
-    scores:
-      2025: { total: 510, score: 478, rank: 2861 }
-      2024: { total: 670, score: 629, rank: 5664 }
-      2023: { total: 660, score: 634, rank: 3659 }
-
-  - name: 五十七中
-    level: 市级示范性高中
-    scores:
-      2025: { total: 510, score: 476, rank: 3328 }
-      2024: { total: 670, score: 633, rank: 4720 }
-      2023: { total: 660, score: 629, rank: 5140 }
-
-  - name: 建华实验学校
-    level: 民办
-    scores:
-      2025: { total: 510, score: 474, rank: 3799 }
-      2024: { total: 670, score: 626, rank: 6409 }
-
-  - name: 交大附中
-    level: 市级示范性高中
-    note: 茅以升实验班录取线高于普通班
-    scores:
-      2025: { total: 510, score: 474, rank: 3799 }
-      2024: { total: 670, score: 627, rank: 6163 }
-
-  - name: 人大附中航天城学校
-    level: 区级
-    scores:
-      2025: { total: 510, score: 474, rank: 3799 }
-      2024: { total: 670, score: 638, rank: 3494 }
-
-  - name: 理工附中
-    level: 市级示范性高中
-    scores:
-      2025: { total: 510, score: 473, rank: 4033 }
-      2024: { total: 670, score: 630, rank: 5423 }
-
-  - name: 人大附中分校
-    level: 民办
-    scores:
-      2025: { total: 510, score: 473, rank: 4033 }
-      2024: { total: 670, score: 630, rank: 5423 }
-      2023: { total: 660, score: 630, rank: 4867 }
-
-  # ---- 第三梯队 ----
-
-  - name: 五十七中上庄分校
-    level: 区级
-    scores:
-      2025: { total: 510, score: 472, rank: 4299 }
-      2024: { total: 670, score: 626, rank: 6409 }
-
-  - name: 首师大附玉泉学校
-    level: 区级
-    scores:
-      2025: { total: 510, score: 471, rank: 4535 }
-      2024: { total: 670, score: 630, rank: 5423 }
-
-  - name: 101温泉校区
-    level: 区级（101体系）
-    scores:
-      2025: { total: 510, score: 470, rank: 4790 }
-      2024: { total: 670, score: 626, rank: 6409 }
-
-  - name: 海淀进修实验学校
-    level: 区级
-    scores:
-      2025: { total: 510, score: 469, rank: 5043 }
-      2024: { total: 670, score: 626, rank: 6409 }
-
-  - name: 北航实验学校
-    level: 区级示范性高中
-    note: 原北航附中
-    scores:
-      2025: { total: 510, score: 468, rank: 5282 }
-      2024: { total: 670, score: 621, rank: 7460 }
-      2023: { total: 660, score: 633, rank: 3953 }
-
-  - name: 首师附一分校
-    level: 区级
-    scores:
-      2025: { total: 510, score: 467, rank: 5512 }
-      2024: { total: 670, score: 620, rank: 7660 }
-
-  - name: 清华附中上地学校
-    level: 区级（清华附中体系）
-    scores:
-      2025: { total: 510, score: 467, rank: 5512 }
-      2024: { total: 670, score: 616, rank: 8480 }
-
-  - name: 十一实验中学
-    level: 区级（十一体系）
-    scores:
-      2025: { total: 510, score: 464, rank: 6237 }
-      2024: { total: 670, score: 617, rank: 8292 }
-
-  - name: 八一学校
-    level: 市级示范性高中
-    scores:
-      2025: { total: 510, score: 462, rank: 6705 }
-      2024: { total: 670, score: 623, rank: 7050 }
-
-  - name: 中关村中学
-    level: 区级示范性高中
-    scores:
-      2025: { total: 510, score: 462, rank: 6705 }
-      2024: { total: 670, score: 618, rank: 8086 }
-
-  - name: 人大附中翠微学校
-    level: 区级（人大附中体系）
-    scores:
-      2025: { total: 510, score: 462, rank: 6705 }
-      2024: { total: 670, score: 614, rank: 8848 }
-
-  - name: 二十中
-    level: 区级示范性高中
-    scores:
-      2025: { total: 510, score: 461, rank: 6934 }
-      2024: { total: 670, score: 617, rank: 8292 }
-
-  - name: 人大附西山学校
-    level: 区级（人大附中体系）
-    scores:
-      2025: { total: 510, score: 461, rank: 6934 }
-      2024: { total: 670, score: 614, rank: 8848 }
-
-  # ---- 第四梯队 ----
-
-  - name: 育英中学
-    level: 区级
-    scores:
-      2025: { total: 510, score: 459, rank: 7383 }
-      2024: { total: 670, score: 612, rank: 9216 }
-
-  - name: 首师大二附中
-    level: 区级
-    scores:
-      2025: { total: 510, score: 458, rank: 7605 }
-      2024: { total: 670, score: 610, rank: 9599 }
-
-  - name: 101石油分校
-    level: 区级（101体系）
-    scores:
-      2025: { total: 510, score: 454, rank: 8445 }
-      2024: { total: 670, score: 606, rank: 10375 }
-
-  - name: 玉渊潭中学
-    level: 区级
-    scores:
-      2025: { total: 510, score: 454, rank: 8445 }
-      2024: { total: 670, score: 603, rank: 10867 }
-
-  - name: 十九中
-    level: 区级示范性高中
-    scores:
-      2025: { total: 510, score: 453, rank: 8654 }
-      2024: { total: 670, score: 606, rank: 10375 }
-
-  - name: 首师附育新学校
-    level: 区级（首师大附中体系）
-    scores:
-      2025: { total: 510, score: 453, rank: 8654 }
-      2024: { total: 670, score: 601, rank: 11195 }
-
-  - name: 海淀实验中学
-    level: 区级
-    scores:
-      2025: { total: 510, score: 452, rank: 8851 }
-      2024: { total: 670, score: 603, rank: 10867 }
-
-  - name: 清华附中志新学校
-    level: 区级（清华附中体系）
-    scores:
-      2025: { total: 510, score: 450, rank: 9211 }
-      2024: { total: 670, score: 602, rank: 11016 }
-
-  - name: 北大附中北医附中
-    level: 区级（北大附中体系）
-    scores:
-      2025: { total: 510, score: 449, rank: 9377 }
-      2024: { total: 670, score: 597, rank: 11782 }
-
-  - name: 北京实验学校
-    level: 区级
-    scores:
-      2025: { total: 510, score: 447, rank: 9745 }
-      2024: { total: 670, score: 597, rank: 11782 }
-
-  - name: 北外附校
-    level: 区级
-    scores:
-      2025: { total: 510, score: 445, rank: 10050 }
-      2024: { total: 670, score: 596, rank: 11928 }
-
-  # ---- 第五梯队 ----
-
-  - name: 北师大三附中
-    level: 区级
-    scores:
-      2025: { total: 510, score: 444, rank: 10207 }
-      2024: { total: 670, score: 589, rank: 12908 }
-
-  - name: 海淀教进香山分校
-    level: 区级
-    scores:
-      2025: { total: 510, score: 440, rank: 10855 }
-      2024: { total: 670, score: 589, rank: 12908 }
-
-  - name: 北外附校（外国语）
-    level: 区级
-    scores:
-      2025: { total: 510, score: 440, rank: 10855 }
-      2024: { total: 670, score: 589, rank: 12908 }
-
-  - name: 中关村中学知春分校
-    level: 区级
-    scores:
-      2025: { total: 510, score: 439, rank: 10993 }
-
-  - name: 人大附中二分校
-    level: 区级（人大附中体系）
-    scores:
-      2025: { total: 510, score: 438, rank: 11136 }
-      2024: { total: 670, score: 586, rank: 13300 }
-
-  - name: 101矿大分校
-    level: 区级（101体系）
-    scores:
-      2025: { total: 510, score: 436, rank: 11433 }
-      2024: { total: 670, score: 578, rank: 14262 }
-
-  - name: 交大附中二分校
-    level: 区级
-    scores:
-      2025: { total: 510, score: 433, rank: 11849 }
-      2024: { total: 670, score: 570, rank: 14150 }
-
-  - name: 清华附中学院路学校
-    level: 区级（清华附中体系）
-    scores:
-      2025: { total: 510, score: 433, rank: 11849 }
-
-  - name: 清华附中永丰学校
-    level: 区级（清华附中体系）
-    scores:
-      2025: { total: 510, score: 433, rank: 11849 }
-      2024: { total: 670, score: 576, rank: 14465 }
-
-  - name: 农大附中
-    level: 区级
-    scores:
-      2025: { total: 510, score: 432, rank: 11989 }
-      2024: { total: 670, score: 573, rank: 14765 }
-
-  - name: 交大附中东校区
-    level: 区级
-    scores:
-      2025: { total: 510, score: 428, rank: 12462 }
-
-  - name: 交大附中分校
-    level: 区级
-    scores:
-      2025: { total: 510, score: 427, rank: 12562 }
-      2024: { total: 670, score: 569, rank: 15125 }
-
-  - name: 八一玉泉中学
-    level: 区级（八一体系）
-    scores:
-      2025: { total: 510, score: 425, rank: 12764 }
-      2024: { total: 670, score: 567, rank: 15297 }
-
-  - name: 中法实验学校
-    level: 区级
-    scores:
-      2025: { total: 510, score: 423, rank: 12989 }
-
-  - name: 清河中学
-    level: 区级
-    scores:
-      2025: { total: 510, score: 422, rank: 13089 }
-
-# ================================================================
-#  目标分数速查（2026年参考，基于2025年510分制）
-# ================================================================
-target_guide_2026:
-  - target: 六小强（人大附/十一）
-    reference_score: 491
-    math_target: 95+
-  - target: 六小强（清华附/101/首师附）
-    reference_score: 487
-    math_target: 92+
-  - target: 北大附中
-    reference_score: 484
-    math_target: 90+
-  - target: 第二梯队（清华实验/育英/五十七中等）
-    reference_score: 473-481
-    math_target: 85+
-  - target: 第三梯队（八一/中关村/二十中等）
-    reference_score: 461-472
-    math_target: 78+
-  - target: 第四梯队（十九中/海淀实验等）
-    reference_score: 447-459
-    math_target: 70+
-  - target: 普通高中保底
-    reference_score: 422-444
-    math_target: 60+
-
-# ================================================================
-#  校额到校录取参考（2025年数据）
-# ================================================================
-quota_allocation:
-  policy_summary: |
-    海淀区校额到校竞争最为激烈。六小强的校额到校名额极少，
-    2025年海淀区校额到校最低录取控制线约为465分（510分制）。
-    海淀优质初中（如中关村系、海淀实验系）校内竞争激烈，
-    普通初中反而可能因为竞争者少而有机会。
-
-  typical_discount:
-    tier1_schools: "统招线下降10-20分（六小强，名额极少）"
-    tier2_schools: "统招线下降15-25分（理工附/交大附等）"
-    tier3_schools: "统招线下降20-35分（五十七中/育英等）"
-
-  examples_2025:
-    - high_school: 人大附中
-      统招线: 491
-      校额到校典型线: 478-488
-      降分幅度: 3-13分
-      note: 名额极少（每初中0-1个），实际降幅小
-    - high_school: 北大附中
-      统招线: 484
-      校额到校典型线: 465-478
-      降分幅度: 6-19分
-    - high_school: 理工附中
-      统招线: 473
-      校额到校典型线: 455-468
-      降分幅度: 5-18分
-    - high_school: 五十七中
-      统招线: 476
-      校额到校典型线: 450-465
-      降分幅度: 11-26分
-
-  advice_for_students: |
-    海淀竞争激烈，校额到校是普通初中学生进入六小强的几乎唯一机会。
-    关键策略：校内排名 > 全区排名。在普通初中排前几名比在重点初中排中游有用。
-    注意：六小强的校额到校名额分到每所初中通常只有0-2个。
+- name: 中国人民大学附属中学
+  school_code: '108001'
+  location:
+    campus: 北京市海淀区中国人民大学附属中学
+    lat: 39.974551
+    lon: 116.314427
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 市级示范性高中
+  note: 全国顶尖名校，早培/实验班通过提前招生，统招仅普通班
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 491
+      rank: 569
+    '2024':
+      total: 670
+      score: 650
+      rank: 930
+    '2023':
+      total: 660
+      score: 644
+      rank: 948
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 中国人民大学附属中学分校
+  school_code: '208059'
+  location:
+    campus: 北京市海淀区中国人民大学附属中学分校
+    lat: 39.966125
+    lon: 116.327874
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 民办
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 473
+      rank: 4033
+    '2024':
+      total: 670
+      score: 630
+      rank: 5423
+    '2023':
+      total: 660
+      score: 630
+      rank: 4867
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 中国人民大学附属中学第二分校
+  school_code: '208034'
+  location:
+    campus: 北京市海淀区中国人民大学附属中学第二分校
+    lat: 39.96737
+    lon: 116.278071
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 区级（人大附中体系）
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 438
+      rank: 11136
+    '2024':
+      total: 670
+      score: 586
+      rank: 13300
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 中国人民大学附属中学翠微学校
+  school_code: '208008'
+  location:
+    campus: 北京市海淀区中国人民大学附属中学翠微学校(小学部)
+    lat: 39.914831
+    lon: 116.299988
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 区级（人大附中体系）
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 462
+      rank: 6705
+    '2024':
+      total: 670
+      score: 614
+      rank: 8848
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 中国农业大学附属中学
+  school_code: '208032'
+  location:
+    campus: 北京市海淀区中国农业大学附属中学
+    lat: 40.02275
+    lon: 116.275108
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 区级
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 432
+      rank: 11989
+    '2024':
+      total: 670
+      score: 573
+      rank: 14765
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 中央民族大学附属中学
+  school_code: '208037'
+  location:
+    campus: 北京市海淀区中央民族大学
+    lat: 39.950579
+    lon: 116.320491
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 人大附中航天城学校
+  school_code: '208039'
+  location:
+    campus: 北京市海淀区人大附中航天城学校
+    lat: 40.069945
+    lon: 116.271058
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 区级
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 474
+      rank: 3799
+    '2024':
+      total: 670
+      score: 638
+      rank: 3494
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 人大附中西山学校
+  school_code: '208063'
+  location:
+    campus: 北京市海淀区人大附中西山学校(南门)
+    lat: 40.031162
+    lon: 116.284528
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 区级（人大附中体系）
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 461
+      rank: 6934
+    '2024':
+      total: 670
+      score: 614
+      rank: 8848
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京一零一中石油分校
+  school_code: '208029'
+  location:
+    campus: 北京市海淀区
+    lat: 39.959893
+    lon: 116.2977
+    confidence: mid
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 区级（101体系）
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 454
+      rank: 8445
+    '2024':
+      total: 670
+      score: 606
+      rank: 10375
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京一零一中矿大分校
+  school_code: '208028'
+  location:
+    campus: 北京市海淀区北京一零一中矿大分校(东南门)
+    lat: 39.998222
+    lon: 116.347903
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 区级（101体系）
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 436
+      rank: 11433
+    '2024':
+      total: 670
+      score: 578
+      rank: 14262
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京中法实验学校
+  school_code: '208033'
+  location:
+    campus: 北京市海淀区北京中法实验学校
+    lat: 40.038713
+    lon: 116.208851
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 区级
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 423
+      rank: 12989
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京交通大学附属中学
+  school_code: '108007'
+  location:
+    campus: 北京市海淀区北京交通大学附属中学(南校区)
+    lat: 39.954898
+    lon: 116.344284
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 市级示范性高中
+  note: 茅以升实验班录取线高于普通班
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 474
+      rank: 3799
+    '2024':
+      total: 670
+      score: 627
+      rank: 6163
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京交通大学附属中学东校区
+  school_code: '208024'
+  location:
+    campus: 北京市海淀区北京交通大学附属中学东校区(东门)
+    lat: 39.96958
+    lon: 116.375716
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 区级
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 428
+      rank: 12462
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京交通大学附属中学分校
+  school_code: '208019'
+  location:
+    campus: 北京市海淀区北京交通大学附属中学分校(东南门)
+    lat: 39.958298
+    lon: 116.36031
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 区级
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 427
+      rank: 12562
+    '2024':
+      total: 670
+      score: 569
+      rank: 15125
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京交通大学附属中学第二分校
+  school_code: '208016'
+  location:
+    campus: 北京市海淀区北京交通大学附属中学第二分校(东北门)
+    lat: 39.951616
+    lon: 116.335939
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 区级
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 433
+      rank: 11849
+    '2024':
+      total: 670
+      score: 570
+      rank: 14150
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京十一实验中学
+  school_code: '208004'
+  location:
+    campus: 北京市海淀区北京十一实验中学
+    lat: 39.899385
+    lon: 116.280313
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 区级（十一体系）
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 464
+      rank: 6237
+    '2024':
+      total: 670
+      score: 617
+      rank: 8292
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京外国语大学附属中学
+  school_code: '208015'
+  location:
+    campus: 北京市海淀区北京外国语大学附属中学
+    lat: 39.952226
+    lon: 116.312733
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 区级
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 445
+      rank: 10050
+    '2024':
+      total: 670
+      score: 596
+      rank: 11928
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京外国语大学附属外国语学校
+  school_code: '208061'
+  location:
+    campus: 北京市海淀区北京外国语大学附属外国语学校(南门)
+    lat: 40.056819
+    lon: 116.320711
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 区级
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 440
+      rank: 10855
+    '2024':
+      total: 670
+      score: 589
+      rank: 12908
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京大学附属中学
+  school_code: '108002'
+  location:
+    campus: 北京市海淀区北京大学附属中学(南门)
+    lat: 39.977352
+    lon: 116.320185
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 市级示范性高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 484
+      rank: 1601
+    '2024':
+      total: 670
+      score: 642
+      rank: 2523
+    '2023':
+      total: 660
+      score: 636
+      rank: 3047
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京大学附属中学北医分校
+  school_code: '208026'
+  location:
+    campus: 北京市海淀区北京大学附属中学(南门)
+    lat: 39.977352
+    lon: 116.320185
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 区级（北大附中体系）
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 449
+      rank: 9377
+    '2024':
+      total: 670
+      score: 597
+      rank: 11782
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京实验学校
+  school_code: '208011'
+  location:
+    campus: 北京市海淀区北京实验学校(东门)
+    lat: 39.926501
+    lon: 116.328319
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 区级
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 447
+      rank: 9745
+    '2024':
+      total: 670
+      score: 597
+      rank: 11782
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京市中关村中学
+  school_code: '108010'
+  location:
+    campus: 北京市海淀区北京市中关村中学
+    lat: 39.978547
+    lon: 116.326849
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 区级示范性高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 462
+      rank: 6705
+    '2024':
+      total: 670
+      score: 618
+      rank: 8086
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京市中关村中学知春分校
+  school_code: '208022'
+  location:
+    campus: 北京市海淀区北京市中关村中学知春分校(西门)
+    lat: 39.973887
+    lon: 116.327304
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 区级
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 439
+      rank: 10993
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京市中关村外国语学校
+  school_code: '208051'
+  location:
+    campus: 北京市海淀区中关村
+    lat: 39.980047
+    lon: 116.31862
+    confidence: mid
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京市中科启元学校北京市中关村南一条
+  school_code: '208071'
+  location:
+    campus: 北京市海淀区北京中科启元学校中关村南(公交站)
+    lat: 39.983522
+    lon: 116.31645
+    confidence: mid
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京市二十一世纪学校
+  school_code: '208042'
+  location:
+    campus: 北京市海淀区北京市二十一世纪学校
+    lat: 39.930209
+    lon: 116.28371
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京市八一学校
+  school_code: '108009'
+  location:
+    campus: 北京市海淀区北京市八一学校
+    lat: 39.977762
+    lon: 116.304184
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 市级示范性高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 462
+      rank: 6705
+    '2024':
+      total: 670
+      score: 623
+      rank: 7050
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京市八一学校附属玉泉中学
+  school_code: '208030'
+  location:
+    campus: 北京市海淀区北京市八一学校附属玉泉中学
+    lat: 40.00473
+    lon: 116.262558
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 区级（八一体系）
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 425
+      rank: 12764
+    '2024':
+      total: 670
+      score: 567
+      rank: 15297
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京市十一学校
+  school_code: '108008'
+  location:
+    campus: 北京市海淀区北京市十一学校(龙樾实验中学)
+    lat: 40.044964
+    lon: 116.349413
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 市级示范性高中
+  note: 海淀顶尖，科学实验班为全市最高录取线之一
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 491
+      rank: 569
+    '2024':
+      total: 670
+      score: 649
+      rank: 1096
+    '2023':
+      total: 660
+      score: 644
+      rank: 948
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京市师达中学
+  school_code: '208060'
+  location:
+    campus: 北京市海淀区北京市师达中学
+    lat: 39.969505
+    lon: 116.228246
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京市建华实验学校
+  school_code: '208048'
+  location:
+    campus: 北京市海淀区北京市建华实验学校
+    lat: 40.067318
+    lon: 116.240564
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 民办
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 474
+      rank: 3799
+    '2024':
+      total: 670
+      score: 626
+      rank: 6409
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京市志清中学
+  school_code: '208047'
+  location:
+    campus: 北京市海淀区北京市志清中学
+    lat: 40.018724
+    lon: 116.324805
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京市海淀区仁北高级中学
+  school_code: '208058'
+  location:
+    campus: 北京市海淀区
+    lat: 39.959893
+    lon: 116.2977
+    confidence: mid
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京市海淀区启慧未来学校
+  school_code: '208056'
+  location:
+    campus: 北京市海淀区海淀区启慧未来学校
+    lat: 39.981136
+    lon: 116.366113
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京市海淀区尚丽外国语学校
+  school_code: '208050'
+  location:
+    campus: 北京市海淀区北京市海淀区尚丽外国语学校
+    lat: 39.968532
+    lon: 116.214335
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京市海淀区教师进修学校附属实验学校
+  school_code: '208009'
+  location:
+    campus: 北京市海淀区北京市海淀区教师进修学校附属实验学校(北校区)
+    lat: 39.955561
+    lon: 116.277674
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 区级
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 469
+      rank: 5043
+    '2024':
+      total: 670
+      score: 626
+      rank: 6409
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京市海淀区教师进修附属实验香山分校
+  school_code: '208044'
+  location:
+    campus: 北京市海淀区北京市海淀区教师进修附属实验香山分校
+    lat: 39.991337
+    lon: 116.208173
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 区级
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 440
+      rank: 10855
+    '2024':
+      total: 670
+      score: 589
+      rank: 12908
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京市海淀区稻香湖学校
+  school_code: '208049'
+  location:
+    campus: 北京市海淀区北京市海淀区稻香湖学校
+    lat: 40.074245
+    lon: 116.169349
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京市海淀区青苗学校
+  school_code: '208068'
+  location:
+    campus: 北京市海淀区北京市海淀区青苗学校
+    lat: 39.948002
+    lon: 116.226204
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京市海淀外国语实验学校
+  school_code: '208052'
+  location:
+    campus: 北京市海淀区北京市海淀外国语实验学校
+    lat: 39.943862
+    lon: 116.256443
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京市海淀外国语藤飞学校河北省怀来县北辛堡镇
+  school_code: '208067'
+  location:
+    campus: 北京市海淀区北京市海淀外国语藤飞学校
+    lat: 39.942408
+    lon: 116.252993
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京市海淀实验中学
+  school_code: '208013'
+  location:
+    campus: 北京市海淀区北京市海淀实验中学(东北门)
+    lat: 39.946068
+    lon: 116.298309
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 区级
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 452
+      rank: 8851
+    '2024':
+      total: 670
+      score: 603
+      rank: 10867
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京市海淀未来学校
+  school_code: '208070'
+  location:
+    campus: 北京市海淀区北京市海淀未来学校
+    lat: 40.04253
+    lon: 116.357902
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京市清河中学
+  school_code: '208031'
+  location:
+    campus: 北京市海淀区北京市清河中学
+    lat: 40.031765
+    lon: 116.345942
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 区级
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 422
+      rank: 13089
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京市玉渊潭中学
+  school_code: '208006'
+  location:
+    campus: 北京市海淀区北京市玉渊潭中学
+    lat: 39.904292
+    lon: 116.322606
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 区级
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 454
+      rank: 8445
+    '2024':
+      total: 670
+      score: 603
+      rank: 10867
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京市第一O一中学
+  school_code: '108005'
+  location:
+    campus: 北京市海淀区
+    lat: 39.959893
+    lon: 116.2977
+    confidence: mid
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 市级示范性高中
+  note: 人文实验班录取线仅次于十一科实班
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 487
+      rank: 1107
+    '2024':
+      total: 670
+      score: 647
+      rank: 1452
+    '2023':
+      total: 660
+      score: 642
+      rank: 1364
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京市第二十中学
+  school_code: '108011'
+  location:
+    campus: 北京市海淀区北京市第二十中学(新都校区)
+    lat: 40.0623
+    lon: 116.36811
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 区级示范性高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 461
+      rank: 6934
+    '2024':
+      total: 670
+      score: 617
+      rank: 8292
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京市第五十七中学
+  school_code: '208007'
+  location:
+    campus: 北京市海淀区北京市第五十七中学
+    lat: 39.899834
+    lon: 116.329913
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 市级示范性高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 476
+      rank: 3328
+    '2024':
+      total: 670
+      score: 633
+      rank: 4720
+    '2023':
+      total: 660
+      score: 629
+      rank: 5140
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京市第五十七中学上庄分校
+  school_code: '208038'
+  location:
+    campus: 北京市海淀区北京市第五十七中学(上庄分校)上庄分校
+    lat: 40.100726
+    lon: 116.217345
+    confidence: mid
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 区级
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 472
+      rank: 4299
+    '2024':
+      total: 670
+      score: 626
+      rank: 6409
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京市第十九中学
+  school_code: '208023'
+  location:
+    campus: 北京市海淀区北京市第十九中学
+    lat: 39.969362
+    lon: 116.305142
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 区级示范性高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 453
+      rank: 8654
+    '2024':
+      total: 670
+      score: 606
+      rank: 10375
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京市第十九中学闵庄校区
+  school_code: '208040'
+  location:
+    campus: 北京市海淀区北京市第十九中学(闵庄路校区)闵庄
+    lat: 39.970168
+    lon: 116.251226
+    confidence: mid
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京市育英中学
+  school_code: '208002'
+  location:
+    campus: 北京市海淀区北京市育英中学
+    lat: 39.909378
+    lon: 116.286858
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 区级
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 459
+      rank: 7383
+    '2024':
+      total: 670
+      score: 612
+      rank: 9216
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京市育英学校
+  school_code: '208001'
+  location:
+    campus: 北京市海淀区北京育英学校(航天校区)
+    lat: 39.91824
+    lon: 116.265608
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 市级示范性高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 478
+      rank: 2861
+    '2024':
+      total: 670
+      score: 629
+      rank: 5664
+    '2023':
+      total: 660
+      score: 634
+      rank: 3659
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京师范大学第三附属中学
+  school_code: '208018'
+  location:
+    campus: 北京市海淀区北京师范大学第三附属中学(南校区)
+    lat: 39.9537
+    lon: 116.362164
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 区级
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 444
+      rank: 10207
+    '2024':
+      total: 670
+      score: 589
+      rank: 12908
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京海淀凯文学校
+  school_code: '208054'
+  location:
+    campus: 北京市海淀区北京海淀凯文学校(西门)
+    lat: 39.953782
+    lon: 116.238897
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京理工大学附属中学
+  school_code: '108006'
+  location:
+    campus: 北京市海淀区北京理工大学附属中学(东校区)
+    lat: 39.944235
+    lon: 116.310999
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 市级示范性高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 473
+      rank: 4033
+    '2024':
+      total: 670
+      score: 630
+      rank: 5423
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京理工大学附属中学分校
+  school_code: '208057'
+  location:
+    campus: 北京市海淀区北京理工大学附属中学分校(东门)
+    lat: 39.935198
+    lon: 116.319606
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京航空航天大学实验学校
+  school_code: '208035'
+  location:
+    campus: 北京市海淀区北京实验学校(东门)
+    lat: 39.926501
+    lon: 116.328319
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 区级示范性高中
+  note: 原北航附中
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 468
+      rank: 5282
+    '2024':
+      total: 670
+      score: 621
+      rank: 7460
+    '2023':
+      total: 660
+      score: 633
+      rank: 3953
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 清华大学附属中学
+  school_code: '108003'
+  location:
+    campus: 北京市海淀区清华大学附属中学
+    lat: 40.009392
+    lon: 116.320713
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 市级示范性高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 487
+      rank: 1107
+    '2024':
+      total: 670
+      score: 647
+      rank: 1452
+    '2023':
+      total: 660
+      score: 640
+      rank: 1896
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 清华大学附属中学上地学校
+  school_code: '208041'
+  location:
+    campus: 北京市海淀区清华大学附属中学上地学校
+    lat: 40.017681
+    lon: 116.318598
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 区级（清华附中体系）
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 467
+      rank: 5512
+    '2024':
+      total: 670
+      score: 616
+      rank: 8480
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 清华大学附属中学永丰学校
+  school_code: '208064'
+  location:
+    campus: 北京市海淀区清华大学附属中学永丰学校
+    lat: 40.083725
+    lon: 116.252166
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 区级（清华附中体系）
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 433
+      rank: 11849
+    '2024':
+      total: 670
+      score: 576
+      rank: 14465
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 清华大学附属实验学校
+  school_code: '208062'
+  location:
+    campus: 北京市海淀区清华大学附属实验学校
+    lat: 40.007523
+    lon: 116.320025
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 民办（清华附中体系）
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 481
+      rank: 2234
+    '2024':
+      total: 670
+      score: 643
+      rank: 2284
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 清华附中学院路学校
+  school_code: '208025'
+  location:
+    campus: 北京市海淀区清华附中学院路学校
+    lat: 39.988224
+    lon: 116.34507
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 区级（清华附中体系）
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 433
+      rank: 11849
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 清华附中志新学校
+  school_code: '208027'
+  location:
+    campus: 北京市海淀区清华附中志新学校
+    lat: 39.99299
+    lon: 116.363322
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 区级（清华附中体系）
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 450
+      rank: 9211
+    '2024':
+      total: 670
+      score: 602
+      rank: 11016
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 首都师范大学第二附属中学
+  school_code: '208012'
+  location:
+    campus: 北京市海淀区首都师范大学
+    lat: 39.930146
+    lon: 116.305766
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 区级
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 458
+      rank: 7605
+    '2024':
+      total: 670
+      score: 610
+      rank: 9599
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 首都师范大学附属中学
+  school_code: '108004'
+  location:
+    campus: 北京市海淀区首都师范大学附属中学
+    lat: 39.930089
+    lon: 116.30039
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 市级示范性高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 487
+      rank: 1107
+    '2024':
+      total: 670
+      score: 644
+      rank: 2067
+    '2023':
+      total: 660
+      score: 640
+      rank: 1896
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 首都师范大学附属中学第一分校
+  school_code: '208043'
+  location:
+    campus: 北京市海淀区首都师范大学附属中学
+    lat: 39.930089
+    lon: 116.30039
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 区级
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 467
+      rank: 5512
+    '2024':
+      total: 670
+      score: 620
+      rank: 7660
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 首都师范大学附属玉泉学校
+  school_code: '208069'
+  location:
+    campus: 北京市海淀区首都师范大学附属玉泉学校
+    lat: 39.964408
+    lon: 116.24694
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 区级
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 471
+      rank: 4535
+    '2024':
+      total: 670
+      score: 630
+      rank: 5423
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 首都师范大学附属育新学校
+  school_code: '208036'
+  location:
+    campus: 北京市海淀区首都师范大学
+    lat: 39.930146
+    lon: 116.305766
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 区级（首师大附中体系）
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      total: 510
+      score: 453
+      rank: 8654
+    '2024':
+      total: 670
+      score: 601
+      rank: 11195
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
