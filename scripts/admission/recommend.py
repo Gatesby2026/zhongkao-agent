@@ -60,15 +60,40 @@ def load_admission_codes(district: str) -> dict:
 _PRIVATE_CACHE: dict = {}
 
 
+def _registry_channel(district, etype, record_key, meta_key):
+    """从 registry 取某渠道的完整记录(rollup[record_key])+ 区级 meta。registry 为唯一源。"""
+    reg = _PY2REG.get(district)
+    regdir = ADMISSION_DIR / "registry" / (reg or "")
+    if not reg or not regdir.exists():
+        return None
+    recs = []
+    for fp in sorted(regdir.glob("*.yaml")):
+        if fp.name.startswith("_"):
+            continue
+        e = yaml.safe_load(fp.read_text(encoding="utf-8")) or {}
+        if e.get("type") == etype and (e.get("rollup") or {}).get(record_key):
+            recs.append(e["rollup"][record_key])
+    if not recs:
+        return None
+    cm = {}
+    mp = regdir / "_channel_meta.yaml"
+    if mp.exists():
+        cm = (yaml.safe_load(mp.read_text(encoding="utf-8")) or {}).get(meta_key) or {}
+    return {"schools": recs, **cm}
+
+
 def load_private_schools(district: str):
-    """民办/国际校结构化数据（<district>_private.yaml；无则 None）。"""
+    """民办/国际校结构化数据。REGISTRY_SOURCE=1 走 registry(唯一源),否则 <district>_private.yaml。"""
     if district in _PRIVATE_CACHE:
         return _PRIVATE_CACHE[district]
-    path = ADMISSION_DIR / f"{district}_private.yaml"
     data = None
-    if path.exists():
-        with open(path, encoding="utf-8") as f:
-            data = yaml.safe_load(f)
+    if os.environ.get("REGISTRY_SOURCE") == "1":
+        data = _registry_channel(district, "民办", "private_record", "private")
+    if data is None:
+        path = ADMISSION_DIR / f"{district}_private.yaml"
+        if path.exists():
+            with open(path, encoding="utf-8") as f:
+                data = yaml.safe_load(f)
     _PRIVATE_CACHE[district] = data
     return data
 
