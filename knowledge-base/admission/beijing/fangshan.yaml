@@ -25,8 +25,8 @@ schools:
       total: 510
       rank: 715
   scores_meta:
-    source: 官方录取分数线（历史 3 年）
-    confidence: high
+    source: 北京高考在线 gaokzx《2025北京房山区中考录取分数线及区排名》(四中房山分校); 北京中考信息网 zhongkaobj《2025北京中考各分段择校指南》(450-459 区间含四中房山分校)
+    confidence: medium
 - name: 北京市博文学校
   school_code: '211018'
   location:
@@ -37,7 +37,15 @@ schools:
     source: 高德 geocode（统招报到校区，待电话核实）
   level: 普通高中
   note: ''
-  features: {}
+  features:
+    style: 1993 年创办, 房山窦店镇, 北京首批民办全日制寄宿学校, 十二年一贯制; 「人生中心教育」理念, 「博学多能、崇德自强」校训; 以艺术、体育教育为两翼, 强化多语种教学(英语/日语/俄语), 设非遗传承、AI 通识等校本课程;
+      提供寄宿兼走读
+    tags:
+    - 寄宿制
+    - 艺术特长
+    - 体育特长
+    - 外语特色
+    source: 北京市博文学校官网 (bjbws.cn); 百度百科; 远播国际教育
   gaokao: {}
   scores: {}
 - name: 北京市房山区周口店中学
@@ -50,7 +58,12 @@ schools:
     source: 高德 geocode（统招报到校区，待电话核实）
   level: 普通高中
   note: ''
-  features: {}
+  features:
+    style: 「尚和务实、守正创新」办学理念, 「天天精彩、人人绽放」办学特色; 小班化教学; 2001 年起与首师大美术学院合作创办高中美术班; 体育特长生培养有传统(国际田联检测合格塑胶运动场)
+    tags:
+    - 艺术特长
+    - 体育特长
+    source: 百度百科; 房山区政府网 (bjfsh.gov.cn); 好学校招生网 (hxx.net)
   gaokao: {}
   scores:
     '2025':
@@ -58,8 +71,8 @@ schools:
       total: 510
       rank: 2556
   scores_meta:
-    source: 官方录取分数线（历史 3 年）
-    confidence: high
+    source: 北京高考在线 gaokzx《2025北京房山区中考录取分数线及区排名》(周口店中学); 北京中考信息网 zhongkaobj《2025北京中考各分段择校指南》(410-419 区间含周口店中学)
+    confidence: medium
 - name: 北京市房山区坨里中学
   school_code: '211006'
   location:
@@ -70,7 +83,13 @@ schools:
     source: 高德 geocode（统招报到校区，待电话核实）
   level: 普通高中
   note: ''
-  features: {}
+  features:
+    style: 1956 年建校老校, 「文明、严谨、和谐、奋进」校风; 开设科技创新、艺术、体育等特色课程, 与高校合作建实践基地; 小班化教学, 注重个性化辅导
+    tags:
+    - 科技创新
+    - 艺术特长
+    - 体育特长
+    source: Hi学校 (hixuexiao.net); 好学校招生网 (hxx.net); 房山区政府网 (bjfsh.gov.cn)
   gaokao: {}
   scores:
     '2025':
@@ -78,8 +97,8 @@ schools:
       total: 510
       rank: 2815
   scores_meta:
-    source: 官方录取分数线（历史 3 年）
-    confidence: high
+    source: 北京高考在线 gaokzx《2025北京房山区中考录取分数线及区排名》(房山坨里中学)
+    confidence: low
 - name: 北京市房山区实验中学
   school_code: '211002'
   location:
@@ -90,7 +109,11 @@ schools:
     source: 高德 geocode（统招报到校区，待电话核实）
   level: 普通高中
   note: ''
-  features: {}
+  features:
+    style: 由房山区师范学校转制的公办普通高中, 秉持「和谐教育」思想, 育人目标「六会一爱」(会做人/会求知/会健体/会审美/会合作/会创新/爱劳动), 促进学生全面而有个性的和谐发展
+    tags:
+    - 综合均衡
+    source: 百度百科; 房山区政府网 (bjfsh.gov.cn)
   gaokao: {}
   scores:
     '2025':
@@ -98,8 +121,8 @@ schools:
       total: 510
       rank: 2358
   scores_meta:
-    source: 官方录取分数线（历史 3 年）
-    confidence: high
+    source: 北京高考在线 gaokzx《2025北京房山区中考录取分数线及区排名》(房山实验中学); 北京中考信息网 zhongkaobj《2025北京中考各分段择校指南》(410-419 区间含房山实验中学)
+    confidence: medium
 - name: 北京市房山区房山中学
   school_code: '111001'
   location:
@@ -110,7 +133,13 @@ schools:
     source: 高德 geocode（统招报到校区，待电话核实）
   level: 优质高中（示范/特色）
   note: ''
-  features: {}
+  features:
+    style: 以人文教育见长, 与清华大学人文学院共建「房山区人文教育创新实践基地」, 设人文班; 2023 年被评为北京市基础教育课程建设先进单位, 五门课程通过北京市普通高中特色课程认定; 设宏志班(面向区内品学兼优家庭困难学生,
+      四免一补)
+    tags:
+    - 文科人文
+    - 课程改革
+    source: 百度百科; 房山中学宏志班招生公开报道 (网易/搜狐); 北京中考在线 (zgkao.com)
   gaokao: {}
   scores:
     '2025':
@@ -118,8 +147,8 @@ schools:
       total: 510
       rank: 1929
   scores_meta:
-    source: 官方录取分数线（历史 3 年）
-    confidence: high
+    source: 北京高考在线 gaokzx《2025北京房山区中考录取分数线及区排名》(房山中学); 北京中考信息网 zhongkaobj《2025北京中考各分段择校指南》(420-429 区间含房山中学)
+    confidence: medium
 - name: 北京市房山区良乡中学
   school_code: '111002'
   location:
@@ -130,8 +159,15 @@ schools:
     source: 高德 geocode（统招报到校区，待电话核实）
   level: 优质高中（示范/特色）
   note: ''
-  features: {}
-  gaokao: {}
+  features:
+    style: 区属老牌完中, 秉承「爱众众爱, 以人育人」理念, 文化立校、质量立校; 连续多年获区高考质量评价一等奖
+    tags:
+    - 综合均衡
+    source: 百度百科; 中国高校之窗 (gx211.cn); gaokzx 2026 中考热门高中校
+  gaokao:
+    note: 民间·非官方
+    summary: 据公开报道, 本科上线率长期接近/超过 95%; 2020 年 526 分以上 101 人, 本科总上线率(含艺术类)约 95.91%; 2022 年重点大学录取约 150 人。具体数据未经官方核实, 仅供参考。
+    source: 中国高校之窗 (gx211.cn); 51zixun.com 等民间汇总
   scores:
     '2025':
       score: 444
@@ -142,8 +178,8 @@ schools:
       total: 670
       rank: 898
   scores_meta:
-    source: 官方录取分数线（历史 3 年）
-    confidence: high
+    source: 北京高考在线 gaokzx《2025北京房山区中考录取分数线及区排名》; 北京中考信息网 zhongkaobj《2025北京中考各分段择校指南》(440-449 区间含良乡); 北京中考信息网 zhongkaobj《近三年各高中录取分数线和区排名变化情况汇总》
+    confidence: low
 - name: 北京市燕山职业学校
   school_code: '210001'
   location:
@@ -154,7 +190,11 @@ schools:
     source: 高德 geocode（统招报到校区，待电话核实）
   level: 普通高中
   note: ''
-  features: {}
+  features:
+    style: 中等职业学校, 走「职普融通」之路; 综合高中班对接职教高考, 以「3+2」五年一贯制 + 「文化素质+职业技能」考试为高职专科/应用型本科输送人才
+    tags:
+    - 综合均衡
+    source: 北京市燕山职业学校教育质量年度报告(2022) (jw.beijing.gov.cn); 学来帮教育网
   gaokao: {}
   scores: {}
 - name: 北京师范大学燕化附属中学
@@ -167,7 +207,12 @@ schools:
     source: 高德 geocode（统招报到校区，待电话核实）
   level: 优质高中（示范/特色）
   note: ''
-  features: {}
+  features:
+    style: 依托燕山石化资源, 以「希望教育」为理念, 建设石化科技专题课程群, 培养石化科技特色创新人才; 设石化科技实验班
+    tags:
+    - 科技创新
+    - 课程改革
+    source: 百度百科; 北京师范大学教育学部参访报道 (fe.bnu.edu.cn); 教育与可持续发展智库 (easdt.com)
   gaokao: {}
   scores: {}
 - name: 北京师范大学良乡附属中学
@@ -180,7 +225,13 @@ schools:
     source: 高德 geocode（统招报到校区，待电话核实）
   level: 优质高中（示范/特色）
   note: ''
-  features: {}
+  features:
+    style: 在全面发展基础上突出数理科技特色, 以「全面发展、数理见长」为目标, 「数理为基、科学为翼、全科融合」课程; 承担全区高中「翱翔计划」创新人才培养, 设机器人/科技活动开放实验室; 有「1+3」贯通培养项目
+    tags:
+    - 理科见长
+    - 科技创新
+    - 课程改革
+    source: 百度百科; 房山区政府网 (bjfsh.gov.cn); 人民网教育频道; 北京小升初网 (1+3 招生简章)
   gaokao: {}
   scores:
     '2025':
@@ -188,8 +239,8 @@ schools:
       total: 510
       rank: 394
   scores_meta:
-    source: 官方录取分数线（历史 3 年）
-    confidence: high
+    source: 北京高考在线 gaokzx《2025北京房山区中考录取分数线及区排名》(北师大良乡附属中学); 北京中考信息网 zhongkaobj《2025北京中考各分段择校指南》(460-469 区间含北师大良乡附中)
+    confidence: medium
 - name: 北京理工大学附属实验学校
   school_code: '211012'
   location:
@@ -200,7 +251,14 @@ schools:
     source: 高德 geocode（统招报到校区，待电话核实）
   level: 普通高中
   note: ''
-  features: {}
+  features:
+    style: 房山区第一所拥有公立国际部的学校; 中美高中国际课程项目(与美国 Hoosac 学校合作, 中美双学籍/双毕业证, 北理工教师参与授课); 构建「高中+高校」协同育人, 开设 AP、美高特色课、大学先修及航天科技等校本课程;
+      与北理工尖端实验室共建特色科技课程
+    tags:
+    - 国际方向
+    - 科技创新
+    - 外语特色
+    source: 新浪 (k.sina.cn) 房山首所公立高中国际部报道; 北理工附校官网 (lgsy.bit.edu.cn); 北京小升初网; 国际学校网
   gaokao: {}
   scores:
     '2025':
@@ -208,8 +266,8 @@ schools:
       total: 510
       rank: 599
   scores_meta:
-    source: 官方录取分数线（历史 3 年）
-    confidence: high
+    source: 北京高考在线 gaokzx《2025北京房山区中考录取分数线及区排名》(理工附实验学校); 北京中考信息网 zhongkaobj《2025北京中考各分段择校指南》(450-459 区间含理工附实验)
+    confidence: medium
 - name: 首都师范大学未来实验学校
   school_code: '211005'
   location:
@@ -220,7 +278,11 @@ schools:
     source: 高德 geocode（统招报到校区，待电话核实）
   level: 普通高中
   note: ''
-  features: {}
+  features:
+    style: 首都师范大学直办的十二年一贯制学校, 以「思维为本的全息课堂」为教学特色, 以「引领未来教育的实践范式」为办学目标; 首师大选派执行管理团队及多名特级教师; 以未来素养构建课程体系
+    tags:
+    - 课程改革
+    source: '百度百科外公开报道: 教育头条 (edutoutiao.com); 房山区政府网 (bjfsh.gov.cn); 人民日报/中国城市报报道'
   gaokao: {}
   scores:
     '2025':
@@ -228,8 +290,8 @@ schools:
       total: 510
       rank: 2995
   scores_meta:
-    source: 官方录取分数线（历史 3 年）
-    confidence: high
+    source: 北京高考在线 gaokzx《2025北京房山区中考录取分数线及区排名》(首师大未来实验学校)
+    confidence: low
 - name: 首都师范大学附属中学实验学校
   school_code: '211013'
   location:
@@ -240,7 +302,14 @@ schools:
     source: 高德 geocode（统招报到校区，待电话核实）
   level: 普通高中
   note: ''
-  features: {}
+  features:
+    style: 房山区教委与首师大附中联合创办的公办校(含高中国际部), 与首师大附中「一个法人、一体化管理」; 聚焦「贯通+实验」特色, 建「一核三维」成达课程体系, 设五大类 26 门选修; 北京 2022 冬奥/冬残奥奥林匹克教育示范校,
+      全国青少年校园篮球/足球特色学校
+    tags:
+    - 国际方向
+    - 体育特长
+    - 课程改革
+    source: 百度百科; 房山区政府网 (bjfsh.gov.cn)
   gaokao: {}
   scores:
     '2025':
@@ -252,8 +321,8 @@ schools:
       total: 670
       rank: 1645
   scores_meta:
-    source: 官方录取分数线（历史 3 年）
-    confidence: high
+    source: 北京高考在线 gaokzx《2025北京房山区中考录取分数线及区排名》(首师附实验学校); 北京中考信息网 zhongkaobj《2025北京中考各分段择校指南》(440-449 区间含首师附实验); 北京中考信息网 zhongkaobj《近三年各高中录取分数线和区排名变化情况汇总》(首师附房山实验学校)
+    confidence: low
 - name: 首都师范大学附属房山学校
   school_code: '211011'
   location:
@@ -264,8 +333,16 @@ schools:
     source: 高德 geocode（统招报到校区，待电话核实）
   level: 普通高中
   note: ''
-  features: {}
-  gaokao: {}
+  features:
+    style: 首师大附属、办学 40 余年, 高考历年区内名列前茅; 以「求是」核心价值观、「活力教育」为中心, 培养「会学习、会生活、有旺盛生命力的人」; 重视科技文体, 被评为北京市科技教育示范校/北京市中小学科普示范校
+    tags:
+    - 科技创新
+    - 综合均衡
+    source: 百度百科(首都师范大学附属房山中学); 房山区政府网 (bjfsh.gov.cn); 上哪学 (shangnaxue.net)
+  gaokao:
+    note: 民间·非官方
+    summary: 据公开介绍, 高考历年在房山区名列前茅, 有学生考入清华、北大等重点院校, 历年大专以上升学率 90% 以上。数据未经官方核实, 仅供参考。
+    source: 百度百科(首都师范大学附属房山中学)
   scores:
     '2025':
       score: 387
@@ -276,5 +353,5 @@ schools:
       total: 670
       rank: 3188
   scores_meta:
-    source: 官方录取分数线（历史 3 年）
-    confidence: high
+    source: 北京高考在线 gaokzx《2025北京房山区中考录取分数线及区排名》(首师附房山学校); 北京中考信息网 zhongkaobj《近三年各高中录取分数线和区排名变化情况汇总》(首师大附房山学校)
+    confidence: low

@@ -17,8 +17,16 @@ schools:
     source: 高德 geocode（统招报到校区，待电话核实）
   level: 普通高中
   note: ''
-  features: {}
-  gaokao: {}
+  features:
+    style: 1997 年成立,北京市第一所中外合作普通高中(中方北师大附属实验中学,外方加拿大纽宾士域省教育部)。双语教学,开设 AP/IB/加拿大美国交流/SAT/雅思托福等课程,国内首批引进 AP 的高中。统招专业为"中外合作办学项目班"。
+    tags:
+    - 国际方向
+    - 外语特色
+    source: 百度百科 / 学校官网 ccsc.com.cn / 维基百科 (https://baike.baidu.com/item/北京中加学校/2238895)
+  gaokao:
+    note: 民间·非官方
+    summary: 网传升读国内外大学升学率约 98%,获国外大学奖学金率约 83%(系出国留学方向出口,非普通高考口径)。数据来自学校宣传/百科,非官方。
+    source: 百度百科 / 学校官网 (https://baike.baidu.com/item/北京中加学校/2238895)
   scores: {}
 - name: 北京学校
   school_code: '212008'
@@ -30,7 +38,12 @@ schools:
     source: 高德 geocode（统招报到校区，待电话核实）
   level: 普通高中
   note: ''
-  features: {}
+  features:
+    style: 城市副中心重点新建校,12 年一贯制,学制学段课程一体化。配图书馆、体育馆、文化交流中心、艺术中心等共享设施(节假日对外开放)。
+    tags:
+    - 综合均衡
+    - 课程改革
+    source: 百度百科 / 北京市发改委业务信息 / 北京日报报道 (https://baike.baidu.com/item/北京学校/9354937)
   gaokao: {}
   scores:
     '2025':
@@ -55,7 +68,12 @@ schools:
     source: 高德 geocode（统招报到校区，待电话核实）
   level: 普通高中
   note: ''
-  features: {}
+  features:
+    style: 1956 年建校公立完全中学,2012 年起创美术特色办学,2017 年与中央工艺美院附中合作,形成"素描+色彩"美术课程体系。高三以"艺术+生涯"为导向,设大师工作坊等分层教学。设 1+3 美术特长项目。
+    tags:
+    - 艺术特长
+    - 课程改革
+    source: 百度百科 / gaokzx 1+3 招生简章 (https://baike.baidu.com/item/北京市通州区张家湾中学/54113002)
   gaokao: {}
   scores:
     '2025':
@@ -80,7 +98,12 @@ schools:
     source: 高德 geocode（统招报到校区，待电话核实）
   level: 优质高中（示范/特色）
   note: ''
-  features: {}
+  features:
+    style: 通州区规模最大的农村完全中学,北京市示范性普通高中。寄宿规模大(住宿生约 1600 人),配套完善(游泳馆、体育馆、报告厅等)。"管理规范、和谐发展"。
+    tags:
+    - 寄宿制
+    - 综合均衡
+    source: 百度百科 / 维基百科 (https://baike.baidu.com/item/北京市通州区永乐店中学/8445612)
   gaokao: {}
   scores:
     '2025':
@@ -105,8 +128,17 @@ schools:
     source: 高德 geocode（统招报到校区，待电话核实）
   level: 优质高中（示范/特色）
   note: ''
-  features: {}
-  gaokao: {}
+  features:
+    style: 通州区龙头校,1867 年建校的百年名校,北京市首批国家级示范高中,综合实力区内第一。课程丰富(每学期 70-80 门选修),联合国教科文组织俱乐部成员校,国际交流广。
+    tags:
+    - 综合均衡
+    - 课程改革
+    - 国际方向
+    source: 百度百科/知乎数据精算贴/gaokzx 学校页 (https://baike.baidu.com/item/北京市通州区潞河中学/9804942)
+  gaokao:
+    note: 民间·非官方
+    summary: 网传 2024 年高考特控线(一本)上线率约 92%,600 分以上约 196 人(占年级近半),京内 211 院校录取超 200 人;最高分 709 分(网传全市第 29 名)。数据来自媒体/自媒体,非官方发布。
+    source: 51zixun 学校页 / 知乎数据精算贴 (https://www.51zixun.com/zhongkao/beijing/gaozhong/1729818375.html)
   scores:
     '2025':
       score: 475
@@ -131,8 +163,17 @@ schools:
     source: 高德 geocode（统招报到校区，待电话核实）
   level: 普通高中
   note: ''
-  features: {}
-  gaokao: {}
+  features:
+    style: 1993 年成立,北京最早 K-12 民办校之一,"个性化教育、全球化发展"。艺体教融合特色,集运动馆/艺术馆/图书馆/博物馆于一体。高中设双语高中(冲国内高考)、艺术高中(STEAM)、国际高中(加拿大 OSSD)三方向。
+    tags:
+    - 国际方向
+    - 艺术特长
+    - 外语特色
+    source: 百度百科 / 学校官网 shuren.org / 维基百科 (https://baike.baidu.com/item/北京市私立树人·瑞贝学校/9472397)
+  gaokao:
+    note: 民间·非官方
+    summary: 网传截至 2019 年 6 月约 96% 毕业生被世界前 100 名大学录取,人均录取通知书约 5.4 份(系国际/留学方向出口,非普通高考口径)。数据来自学校宣传,非官方。
+    source: 学校官网招生简章 / 百度百科 (https://www.shuren.org/article/1346)
   scores: {}
 - name: 北京市通州区运河中学
   school_code: '112003'
@@ -144,7 +185,13 @@ schools:
     source: 高德 geocode（统招报到校区，待电话核实）
   level: 优质高中（示范/特色）
   note: ''
-  features: {}
+  features:
+    style: 通州区重点中学,"和谐发展教育"办学特色。以"运河文化"为主题开发校本课程体系(科技/体育/艺术类),设田径等体育特长培养。
+    tags:
+    - 综合均衡
+    - 课程改革
+    - 体育特长
+    source: 百度百科 / 北京日报报道 / gx211 学校简介 (https://baike.baidu.com/item/北京市通州区运河中学/9473723)
   gaokao: {}
   scores:
     '2025':
@@ -169,7 +216,13 @@ schools:
     source: 高德 geocode（统招报到校区，待电话核实）
   level: 普通高中
   note: ''
-  features: {}
+  features:
+    style: 德威国际教育集团旗下德闳学校(2019 年创办)体系,一贯制高标准国际化双语学校。校训"明德致知、志闳天下"。高中 10 年级 IBDP/A-Level 衔接,11-12 年级 IBDP 与 A-Level 课程;含中国国家课程
+      + 英文媒介探究课程 + 志闳特色课程(学术/艺术/体育/人文全人发展)。
+    tags:
+    - 国际方向
+    - 外语特色
+    source: ieduchina 国际学校百科 / 学校官网 beijing.dehong.cn / 中国教育在线 (https://schoollist.ieduchina.com/info/897.html)
   gaokao: {}
   scores: {}
 - name: 北京潞河国际教
@@ -182,7 +235,12 @@ schools:
     source: 高德 geocode（统招报到校区，待电话核实）
   level: 普通高中
   note: ''
-  features: {}
+  features:
+    style: 潞河中学 2005 年成立的国际教育机构(民办),开设英国 A-Level、美国 AP、香港 DSE 及新加坡课程,与英国柴郡姆中学合作双学籍。小班化,中外教比例约 3:2,2006 年获剑桥大学国际考评部认证。
+    tags:
+    - 国际方向
+    - 外语特色
+    source: 百度百科 / 维基百科 / 国际学校网招生简章 (https://baike.baidu.com/item/北京潞河国际教育学园/2489396)
   gaokao: {}
   scores: {}
 - name: 北京第一实验中学
@@ -195,7 +253,13 @@ schools:
     source: 高德 geocode（统招报到校区，待电话核实）
   level: 普通高中
   note: ''
-  features: {}
+  features:
+    style: 北京十一学校联盟总校校长李希贵筹办,城市副中心新建校,15 年一贯制。强调分层分类课程、选课走班,设数理学科竞赛、多语种、人文社科等多元人才培养路径。
+    tags:
+    - 课程改革
+    - 学科竞赛
+    - 外语特色
+    source: 北京十一学校官网 / 澎湃新闻李希贵专访 / 北京幼升小网 (https://www.bnds.cn/2025/notice_0721/682.html)
   gaokao: {}
   scores:
     '2025':
@@ -215,6 +279,13 @@ schools:
     source: 高德 geocode（统招报到校区，待电话核实）
   level: 普通高中
   note: ''
-  features: {}
+  features:
+    style: 2013 年成立,12 年一贯制民办双语国际化学校(中加学校体系),寄宿兼走读,小班(每班≤30)。高中开设 OSSD/AP/GAC/A-Level/DSE/普高/小语种等多方向;国内高考方向引进衡水教育模式;依托宋庄艺术区资源发展美术、音乐特长。双导师制。
+    tags:
+    - 国际方向
+    - 外语特色
+    - 艺术特长
+    - 寄宿制
+    source: 百度百科 / 学校官网 ccsc.com.cn/hrccsc / 北京小升初网 (https://baike.baidu.com/item/北京通州华仁学校/24296422)
   gaokao: {}
   scores: {}

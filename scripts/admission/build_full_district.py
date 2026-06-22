@@ -54,6 +54,17 @@ def _level_from_code(code):
     return "优质高中（示范/特色）" if str(code).startswith("1") else "普通高中"
 
 
+def _safe_load_schools(path):
+    """读 enrich/features 文件的 schools 段;YAML 损坏则告警跳过(不拖垮整体装配)。"""
+    if not path.exists():
+        return {}
+    try:
+        return (yaml.safe_load(open(path, encoding="utf-8")) or {}).get("schools", {}) or {}
+    except Exception as e:
+        print(f"  ⚠️ {path.name} YAML 损坏,已跳过: {e}")
+        return {}
+
+
 _CONF_ORD = {"low": 0, "medium": 1, "high": 2}
 # 北京中考各年满分(与朝阳口径一致):2023=660 / 2024=670 / 2025=510
 YEAR_TOTAL = {"2022": 580, "2023": 660, "2024": 670, "2025": 510}
@@ -99,6 +110,19 @@ def _one_rec(it):
     if it.get("rank") is not None:
         rec["rank"] = it["rank"]
     return rec
+
+
+def _norm_features(ft):
+    """features 可能嵌在 ft['features'],也可能 style/tags 直接平铺在 ft 顶层(agent 格式漂移)。
+    统一成 {style,tags,source} 或 {}。"""
+    if not ft:
+        return {}
+    f = ft.get("features")
+    if isinstance(f, dict) and (f.get("style") or f.get("tags")):
+        return f
+    if ft.get("style") or ft.get("tags"):
+        return {k: ft[k] for k in ("style", "tags", "source") if k in ft}
+    return {}
 
 
 def _norm_scores(en):
@@ -174,11 +198,10 @@ def build(py):
                (len(cand["scores"]) == len(cur["scores"]) and len(cand["_orig"]) < len(cur["_orig"])):
                 hist[zn] = cand
 
-    # ---- enrich(正名键)----
-    enrich = {}
-    ep = DIST / f"{py}_enrich.yaml"
-    if ep.exists():
-        enrich = (yaml.safe_load(open(ep, encoding="utf-8")) or {}).get("schools", {}) or {}
+    # ---- enrich(录取线,正名键)----
+    enrich = _safe_load_schools(DIST / f"{py}_enrich.yaml")
+    # ---- features(特色/高考,正名键;独立文件,不与录取线 enrich 互相覆盖)----
+    feats = _safe_load_schools(DIST / f"{py}_features.yaml")
 
     # ---- 组装 schools(以 codes 正名为准)----
     schools = []
@@ -186,6 +209,7 @@ def build(py):
         zn = s["name"]
         co = coords.get(zn) or {}
         en = enrich.get(zn) or {}
+        ft = feats.get(zn) or {}
         h = hist.get(zn) or {}
         # enrich 优先(网传 T3),否则历史官方线;年份键统一成字符串
         en_scores, en_src, en_conf = _norm_scores(en)
@@ -204,16 +228,16 @@ def build(py):
             "name": zn,
             "school_code": s.get("school_code"),
             "location": loc,
-            "level": en.get("level") or h.get("level") or _level_from_code(s.get("school_code")),
-            "note": en.get("note") or h.get("note") or "",
-            "features": en.get("features") or {},
-            "gaokao": {str(k): v for k, v in (en.get("gaokao") or {}).items()},
+            "level": ft.get("level") or en.get("level") or h.get("level")
+            or _level_from_code(s.get("school_code")),
+            "note": ft.get("note") or en.get("note") or h.get("note") or "",
+            "features": _norm_features(ft) or _norm_features(en) or {},
+            "gaokao": {str(k): v for k, v in (ft.get("gaokao") or en.get("gaokao") or {}).items()},
             "scores": scores,
         }
-        if en.get("scores_source"):
-            rec["scores_meta"] = {"source": en["scores_source"],
-                                  "confidence": en.get("scores_conf", "low")}
-        elif h.get("scores"):
+        if not sc_official and sc_src:
+            rec["scores_meta"] = {"source": sc_src, "confidence": sc_conf or "low"}
+        elif sc_official and scores:
             rec["scores_meta"] = {"source": "官方录取分数线（历史 3 年）", "confidence": "high"}
         schools.append(rec)
 

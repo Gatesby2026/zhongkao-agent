@@ -17,7 +17,16 @@ schools:
     source: 高德 geocode（统招报到校区，待电话核实）
   level: 优质高中（示范/特色）
   note: ''
-  features: {}
+  features:
+    style: 远郊示范高中，以科技教育为特色兴校战略，构建"基础+特色"课程体系；2025 年 9 月加入北京十一学校教育联盟。
+    tags:
+    - 科技创新
+    - 课程改革
+    - 综合均衡
+    source:
+    - 百度百科 https://baike.baidu.com/item/北京市怀柔区第一中学/6043212
+    - 中国高校之窗 https://www.gx211.cn/school/schoolcontent562.shtml
+    - 怀柔区政府网站 https://www.bjhr.gov.cn/zjhr/bxsh/jykj/jyzx/201911/t20191121_517308.html
   gaokao: {}
   scores: {}
 - name: 北京市怀柔区第二中学
@@ -30,7 +39,16 @@ schools:
     source: 高德 geocode（统招报到校区，待电话核实）
   level: 普通高中
   note: ''
-  features: {}
+  features:
+    style: 完全中学，"质量为核心，科技、艺术、体育、外国语为特色"五育并举；2021 年挂牌北京市怀柔区外国语学校，打造外语特色；为北京市科技示范校、艺术示范校、体育传统校。
+    tags:
+    - 外语特色
+    - 科技创新
+    - 艺术特长
+    - 体育特长
+    source:
+    - 怀柔区政府网站 https://www.bjhr.gov.cn/zt/jzfw/dejd/ywjyfw/zxxx/201911/t20191114_511724.html
+    - 百度百科 https://baike.baidu.com/item/北京市怀柔区第二中学/3529888
   gaokao: {}
   scores: {}
 - name: 北京市怀柔区青苗学校
@@ -43,7 +61,16 @@ schools:
     source: 高德 geocode（统招报到校区，待电话核实）
   level: 普通高中
   note: ''
-  features: {}
+  features:
+    style: 青苗国际双语学校怀柔校区（2021 年建成），"中西合璧"办学理念；中国国家课程为根基，融合 IB/AP/A-Level 国际课程；获 IB 全学段认证、WASC 认证、托福/SAT 校内考场；小班双语沉浸式教学。
+    tags:
+    - 国际方向
+    - 外语特色
+    - 课程改革
+    source:
+    - 青苗学校招生简章 http://qingmiao.ctiku.com/jianzhang/1499.html
+    - 海淀区政府转载校介 https://hsc.beijing.gov.cn/hsc/kxc/cspt/jy/743744331/index.shtml
+    - 中国教育在线 https://www.eol.cn/liuxue/guoji/20250527700945.html
   gaokao: {}
   scores: {}
 - name: 北京市第一O中学怀柔分校
@@ -56,7 +83,16 @@ schools:
     source: 高德 geocode（统招报到校区，待电话核实）
   level: 普通高中
   note: ''
-  features: {}
+  features:
+    style: 一零一中教育集团成员校，以科技教育为特色，探索初高中贯通培养；设"1+3"培养试验班、"0.5+3"集团直升、市三好校内直升等多元入口；与英国 St Bees School 合作承办 A-Level 项目。
+    tags:
+    - 科技创新
+    - 国际方向
+    - 课程改革
+    source:
+    - 怀柔区政府网站 https://www.bjhr.gov.cn/zjhr/bxsh/jykj/jyzx/201910/t20191010_414342.html
+    - 北京高考在线 https://www.gaokzx.com/gk/zhongkao/150465.html
+    - 北京小升初网 https://www.xschu.com/gongbanzhongxue/70621.html
   gaokao: {}
   scores:
     '2024':
@@ -64,8 +100,9 @@ schools:
       total: 670
       rank: 273
   scores_meta:
-    source: 官方录取分数线（历史 3 年）
-    confidence: high
+    source: '北京中考信息网(zhongkaobj) — 2025北京中考分数揭秘(内含2024各区逐校统招线表): 怀柔区 一零一中学怀柔分校 616 / 区排273 / 区考生1549 / 录取率17.62%; 北京高考在线(gaokzx)检索结果:
+      一零一中怀柔分校2024年高中部统招录取分数线616分; 怀柔区2024一分一段表(bendibao/gaokzx)交叉核验: 616分累计人数=273, 印证rank=273'
+    confidence: medium
 - name: 北京怀柔索兰诺中学
   school_code: '216005'
   location:
@@ -76,8 +113,20 @@ schools:
     source: 高德 geocode（统招报到校区，待电话核实）
   level: 普通高中
   note: ''
-  features: {}
-  gaokao: {}
+  features:
+    style: 市教委批准的全日制双语寄宿制民办高中，定位科技特色国际学校；双语双轨制、小班分层走班，"一人一方案"；设国际班、双轨班，升学方向多元（国内高考 + 海外名校）。
+    tags:
+    - 国际方向
+    - 科技创新
+    - 寄宿制
+    source:
+    - 学校官网 http://www.solanoschool.cn/overview/
+    - 怀柔区政府网站 https://www.bjhr.gov.cn/ywdt/zxdt/202406/t20240628_3732248.html
+  gaokao:
+    note: 民间·非官方
+    summary: 2024 年高考 600 分以上 12 名（来源称"成绩再创新高"，未公布上线率明细）。
+    source:
+    - 怀柔区政府网站 https://www.bjhr.gov.cn/ywdt/zxdt/202406/t20240628_3732248.html
   scores: {}
 - name: 首都师范大学附属红螺寺中学
   school_code: '216002'
@@ -89,6 +138,15 @@ schools:
     source: 高德 geocode（统招报到校区，待电话核实）
   level: 普通高中
   note: ''
-  features: {}
+  features:
+    style: 怀柔第一所公办寄宿制中学（建于 1949 年），首师大合作共同体附属校；以艺术教育、民族教育为特色；2020 年被教育部认定为全国青少年校园篮球特色学校。
+    tags:
+    - 艺术特长
+    - 体育特长
+    - 寄宿制
+    source:
+    - 怀柔区政府网站 https://www.bjhr.gov.cn/zjhr/bxsh/jykj/jyzx/201910/t20191010_414340.html
+    - 百度百科 https://baike.baidu.com/item/首都师范大学附属红螺寺中学/24372846
+    - 维基百科 https://zh.wikipedia.org/zh-hans/红螺寺中学
   gaokao: {}
   scores: {}
