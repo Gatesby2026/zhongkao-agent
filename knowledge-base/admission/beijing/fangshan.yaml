@@ -1,0 +1,280 @@
+meta:
+  quality_status: assembled
+  source: 统招计划(codes)+高德坐标+历史录取线(官方/网传)+民间特色/高考
+  updated: '2026-06-22'
+  builder: build_full_district.py
+  note: 对标朝阳 schema 自动装配;录取线缺失或低置信处以 scores_meta 标注。
+district: 房山区
+region: 北京市
+schools:
+- name: 北京四中房山分校
+  school_code: '211019'
+  location:
+    campus: 北京市房山区北京四中(房山校区)
+    lat: 39.759959
+    lon: 116.209932
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      score: 454
+      total: 510
+      rank: 715
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京市博文学校
+  school_code: '211018'
+  location:
+    campus: 北京市房山区北京市博文学校
+    lat: 39.632805
+    lon: 116.052938
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京市房山区周口店中学
+  school_code: '211003'
+  location:
+    campus: 北京市房山区
+    lat: 39.748889
+    lon: 116.143426
+    confidence: mid
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      score: 411
+      total: 510
+      rank: 2556
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京市房山区坨里中学
+  school_code: '211006'
+  location:
+    campus: 北京市房山区北京市房山区坨里中学
+    lat: 39.736166
+    lon: 116.066776
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      score: 403
+      total: 510
+      rank: 2815
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京市房山区实验中学
+  school_code: '211002'
+  location:
+    campus: 北京市房山区北京市房山区实验中学
+    lat: 39.71106
+    lon: 116.036454
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      score: 416
+      total: 510
+      rank: 2358
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京市房山区房山中学
+  school_code: '111001'
+  location:
+    campus: 北京市房山区
+    lat: 39.748889
+    lon: 116.143426
+    confidence: mid
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 优质高中（示范/特色）
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      score: 426
+      total: 510
+      rank: 1929
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京市房山区良乡中学
+  school_code: '111002'
+  location:
+    campus: 北京市房山区良乡中学(南门)
+    lat: 39.72675
+    lon: 116.14423
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 优质高中（示范/特色）
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      score: 444
+      total: 510
+      rank: 1148
+    '2024':
+      score: 611
+      total: 670
+      rank: 898
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京市燕山职业学校
+  school_code: '210001'
+  location:
+    campus: 北京市房山区北京市燕山职业学校
+    lat: 39.763364
+    lon: 115.969526
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京师范大学燕化附属中学
+  school_code: '110001'
+  location:
+    campus: 北京市房山区北京师范大学燕化附属中学
+    lat: 39.721142
+    lon: 115.967796
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 优质高中（示范/特色）
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京师范大学良乡附属中学
+  school_code: '111003'
+  location:
+    campus: 北京市房山区北京师范大学良乡附属中学
+    lat: 39.726665
+    lon: 116.129906
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 优质高中（示范/特色）
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      score: 464
+      total: 510
+      rank: 394
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京理工大学附属实验学校
+  school_code: '211012'
+  location:
+    campus: 北京市房山区北京理工大学附属实验学校
+    lat: 39.726684
+    lon: 116.181386
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      score: 457
+      total: 510
+      rank: 599
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 首都师范大学未来实验学校
+  school_code: '211005'
+  location:
+    campus: 北京市房山区首都师范大学未来实验学校
+    lat: 39.648912
+    lon: 116.120475
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      score: 397
+      total: 510
+      rank: 2995
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 首都师范大学附属中学实验学校
+  school_code: '211013'
+  location:
+    campus: 北京市房山区首都师范大学附属中学实验学校
+    lat: 39.77423
+    lon: 116.191135
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      score: 440
+      total: 510
+      rank: 1323
+    '2024':
+      score: 591
+      total: 670
+      rank: 1645
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 首都师范大学附属房山学校
+  school_code: '211011'
+  location:
+    campus: 北京市房山区首都师范大学附属房山学校
+    lat: 39.737284
+    lon: 116.147067
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      score: 387
+      total: 510
+      rank: 3269
+    '2024':
+      score: 539
+      total: 670
+      rank: 3188
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high

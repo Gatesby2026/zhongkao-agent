@@ -1,0 +1,186 @@
+# 房山区 普通高中统招录取最低分 + 区排名（位次）补充数据
+# 配合 fangshan_admission_codes.json 使用，school name 逐字等于该文件 schools[].name 正名
+#
+# 关键口径：
+#   - 2025 总分 510（科目改革后新总分）
+#   - 2024 总分 660（旧总分，不可与 2025 直接比分）
+#   - rank = 区排名/位次（含加分一分一段表口径），无则 null（保留 score）
+#   - conf: medium = ≥2 源互证；low = 单源
+#   - 燕山地区学校（北师大燕化附中、燕山职业学校）未搜到统招录取线，省略
+#   - 网络数据多为家长/考生分享，非考试院官方逐校公告，仅供志愿参考
+#
+# 全部数据均来自网络第三方汇总，非北京教育考试院官方逐校录取线公告。
+# 务必以官方发布为准。
+
+district: 房山
+note: >-
+  2025(510)线主要来自 gaokzx 逐校最低分汇总，并经 zhongkaobj 10 分段择校表区间互证；
+  2024(660)线仅 zhongkaobj 近三年变化表单源，覆盖 3 校，conf=low。
+  其余学校 2024 未搜到可靠逐校数据，按铁律省略。
+
+schools:
+
+  # ── 2025(510) + 2024(660) 双年有数据的学校 ──
+
+  北京市房山区良乡中学:
+    scores:
+      - year: 2025
+        total: 510
+        min_score: 444
+        rank: 1148
+        conf: medium
+        source:
+          - name: 北京高考在线 gaokzx《2025北京房山区中考录取分数线及区排名》
+            url: https://www.gaokzx.com/gk/zhongkao/144972.html
+          - name: 北京中考信息网 zhongkaobj《2025北京中考各分段择校指南》(440-449 区间含良乡)
+            url: https://www.zhongkaobj.cn/cjpm/zhongkaochengji/2025092512325.html
+      - year: 2024
+        total: 660
+        min_score: 611
+        rank: 898
+        conf: low
+        source:
+          - name: 北京中考信息网 zhongkaobj《近三年各高中录取分数线和区排名变化情况汇总》
+            url: https://www.zhongkaobj.cn/lqfsx/dongchengqu/202410252784.html
+
+  首都师范大学附属中学实验学校:
+    scores:
+      - year: 2025
+        total: 510
+        min_score: 440
+        rank: 1323
+        conf: medium
+        source:
+          - name: 北京高考在线 gaokzx《2025北京房山区中考录取分数线及区排名》(首师附实验学校)
+            url: https://www.gaokzx.com/gk/zhongkao/144972.html
+          - name: 北京中考信息网 zhongkaobj《2025北京中考各分段择校指南》(440-449 区间含首师附实验)
+            url: https://www.zhongkaobj.cn/cjpm/zhongkaochengji/2025092512325.html
+      - year: 2024
+        total: 660
+        min_score: 591
+        rank: 1645
+        conf: low
+        source:
+          - name: 北京中考信息网 zhongkaobj《近三年各高中录取分数线和区排名变化情况汇总》(首师附房山实验学校)
+            url: https://www.zhongkaobj.cn/lqfsx/dongchengqu/202410252784.html
+
+  首都师范大学附属房山学校:
+    scores:
+      - year: 2025
+        total: 510
+        min_score: 387
+        rank: 3269
+        conf: low
+        source:
+          - name: 北京高考在线 gaokzx《2025北京房山区中考录取分数线及区排名》(首师附房山学校)
+            url: https://www.gaokzx.com/gk/zhongkao/144972.html
+      - year: 2024
+        total: 660
+        min_score: 539
+        rank: 3188
+        conf: low
+        source:
+          - name: 北京中考信息网 zhongkaobj《近三年各高中录取分数线和区排名变化情况汇总》(首师大附房山学校)
+            url: https://www.zhongkaobj.cn/lqfsx/dongchengqu/202410252784.html
+
+  # ── 仅 2025(510) 有数据的学校 ──
+
+  北京师范大学良乡附属中学:
+    scores:
+      - year: 2025
+        total: 510
+        min_score: 464
+        rank: 394
+        conf: medium
+        source:
+          - name: 北京高考在线 gaokzx《2025北京房山区中考录取分数线及区排名》(北师大良乡附属中学)
+            url: https://www.gaokzx.com/gk/zhongkao/144972.html
+          - name: 北京中考信息网 zhongkaobj《2025北京中考各分段择校指南》(460-469 区间含北师大良乡附中)
+            url: https://www.zhongkaobj.cn/cjpm/zhongkaochengji/2025092512325.html
+
+  北京理工大学附属实验学校:
+    scores:
+      - year: 2025
+        total: 510
+        min_score: 457
+        rank: 599
+        conf: medium
+        source:
+          - name: 北京高考在线 gaokzx《2025北京房山区中考录取分数线及区排名》(理工附实验学校)
+            url: https://www.gaokzx.com/gk/zhongkao/144972.html
+          - name: 北京中考信息网 zhongkaobj《2025北京中考各分段择校指南》(450-459 区间含理工附实验)
+            url: https://www.zhongkaobj.cn/cjpm/zhongkaochengji/2025092512325.html
+
+  北京四中房山分校:
+    scores:
+      - year: 2025
+        total: 510
+        min_score: 454
+        rank: 715
+        conf: medium
+        source:
+          - name: 北京高考在线 gaokzx《2025北京房山区中考录取分数线及区排名》(四中房山分校)
+            url: https://www.gaokzx.com/gk/zhongkao/144972.html
+          - name: 北京中考信息网 zhongkaobj《2025北京中考各分段择校指南》(450-459 区间含四中房山分校)
+            url: https://www.zhongkaobj.cn/cjpm/zhongkaochengji/2025092512325.html
+
+  北京市房山区房山中学:
+    scores:
+      - year: 2025
+        total: 510
+        min_score: 426
+        rank: 1929
+        conf: medium
+        source:
+          - name: 北京高考在线 gaokzx《2025北京房山区中考录取分数线及区排名》(房山中学)
+            url: https://www.gaokzx.com/gk/zhongkao/144972.html
+          - name: 北京中考信息网 zhongkaobj《2025北京中考各分段择校指南》(420-429 区间含房山中学)
+            url: https://www.zhongkaobj.cn/cjpm/zhongkaochengji/2025092512325.html
+
+  北京市房山区实验中学:
+    scores:
+      - year: 2025
+        total: 510
+        min_score: 416
+        rank: 2358
+        conf: medium
+        source:
+          - name: 北京高考在线 gaokzx《2025北京房山区中考录取分数线及区排名》(房山实验中学)
+            url: https://www.gaokzx.com/gk/zhongkao/144972.html
+          - name: 北京中考信息网 zhongkaobj《2025北京中考各分段择校指南》(410-419 区间含房山实验中学)
+            url: https://www.zhongkaobj.cn/cjpm/zhongkaochengji/2025092512325.html
+
+  北京市房山区周口店中学:
+    scores:
+      - year: 2025
+        total: 510
+        min_score: 411
+        rank: 2556
+        conf: medium
+        source:
+          - name: 北京高考在线 gaokzx《2025北京房山区中考录取分数线及区排名》(周口店中学)
+            url: https://www.gaokzx.com/gk/zhongkao/144972.html
+          - name: 北京中考信息网 zhongkaobj《2025北京中考各分段择校指南》(410-419 区间含周口店中学)
+            url: https://www.zhongkaobj.cn/cjpm/zhongkaochengji/2025092512325.html
+
+  北京市房山区坨里中学:
+    scores:
+      - year: 2025
+        total: 510
+        min_score: 403
+        rank: 2815
+        conf: low
+        source:
+          - name: 北京高考在线 gaokzx《2025北京房山区中考录取分数线及区排名》(房山坨里中学)
+            url: https://www.gaokzx.com/gk/zhongkao/144972.html
+
+  首都师范大学未来实验学校:
+    scores:
+      - year: 2025
+        total: 510
+        min_score: 397
+        rank: 2995
+        conf: low
+        source:
+          - name: 北京高考在线 gaokzx《2025北京房山区中考录取分数线及区排名》(首师大未来实验学校)
+            url: https://www.gaokzx.com/gk/zhongkao/144972.html

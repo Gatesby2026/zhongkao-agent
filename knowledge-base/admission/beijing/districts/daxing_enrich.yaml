@@ -1,0 +1,209 @@
+# 大兴区 普通高中统招录取最低分 + 区排名(位次) enrich
+# 仅收录官方正名表(daxing_admission_codes.json schools[].name)中的学校。
+# 校名逐字等于正名。绝不编造,没搜到→省略。
+# 2025 总分=510;2024 总分=670(注:任务表述 660,实际北京 2024 总分为 670,分数按公布原值记录)。
+# rank = 区排名(位次);无→null,保留 score。
+# conf: medium=≥2独立源互证;low=仅1源。
+district: 大兴
+plan_year_ref: 2025
+note: >
+  2025 actual 录取数据主源 gaokzx 144863(实际录取线),与多次检索快照互证。
+  gaokzx 143580 为「预估」文档(排名口径不同,如实验大兴预估346 vs 实际151),
+  仅在无实际数据时参考,未与 actual 混用。
+  2024 总分官方为 670(非 660);2024 数据 5 校(627/617/612/607/591)由
+  zhongkaobj + xschu(+ 实验大兴另有 zgkao) 三源互证, medium。
+  2024 下游 4 校(二中/八中大兴/三中/旧宫)仅 yuloo 单源(且经检索快照转述),
+  low, 区排名缺失记 null。
+  首师大大兴附中: 仅见预估线(429),无实际录取线 → 省略。
+  人大附中经开学校/亦庄实验中学/新源学校等不在正名表 → 省略。
+
+schools:
+  北京师范大学附属实验中学大兴分校:
+    school_code: "215010"
+    scores:
+      2025:
+        score: 475
+        rank: 151
+        total: 510
+        conf: medium
+        sources:
+          - name: 北京高考在线 gaokzx — 2025北京大兴区中考录取分数线及区排名
+            url: https://www.gaokzx.com/gk/zhongkao/144863.html
+          - name: 北京高考在线 gaokzx — 2025年北京各区高中校预估分数及排名(实际线475互证;排名为预估口径346,以实际线为准)
+            url: https://www.gaokzx.com/gk/zhongkao/143580.html
+      2024:
+        score: 627
+        rank: 367
+        total: 670
+        conf: medium
+        sources:
+          - name: 北京中考信息网 zhongkaobj — 2024大兴区高中录取分数线&区排名汇总
+            url: https://www.zhongkaobj.cn/lqfsx/qitaqu/202410222463.html
+          - name: 北京小升初网 xschu — 2024年大兴区各高中中考录取分数线
+            url: https://www.xschu.com/zhonggaokaozixun/72791.html
+          - name: 北京中考在线 zgkao — 2024北师大实验中学大兴分校录取分数线出炉
+            url: https://www.zgkao.com/zhongkao/74044.html
+
+  北京市大兴区第一中学:
+    school_code: "115001"
+    scores:
+      2025:
+        score: 467
+        rank: 632
+        total: 510
+        conf: medium
+        sources:
+          - name: 北京高考在线 gaokzx — 2025北京大兴区中考录取分数线及区排名
+            url: https://www.gaokzx.com/gk/zhongkao/144863.html
+          - name: 北京高考在线 gaokzx — 2025年北京各区高中校预估分数及排名(预估468/584,与实际467/632同梯次互证)
+            url: https://www.gaokzx.com/gk/zhongkao/143580.html
+      2024:
+        score: 617
+        rank: 664
+        total: 670
+        conf: medium
+        sources:
+          - name: 北京中考信息网 zhongkaobj — 2024大兴区高中录取分数线&区排名汇总
+            url: https://www.zhongkaobj.cn/lqfsx/qitaqu/202410222463.html
+          - name: 北京小升初网 xschu — 2024年大兴区各高中中考录取分数线
+            url: https://www.xschu.com/zhonggaokaozixun/72791.html
+
+  清华附中大兴学校:
+    school_code: "215015"
+    scores:
+      2025:
+        score: 464
+        rank: 757
+        total: 510
+        conf: medium
+        sources:
+          - name: 北京高考在线 gaokzx — 2025北京大兴区中考录取分数线及区排名
+            url: https://www.gaokzx.com/gk/zhongkao/144863.html
+          - name: 北京高考在线 gaokzx — 2025年北京各区高中校预估分数及排名(预估464/757与实际一致)
+            url: https://www.gaokzx.com/gk/zhongkao/143580.html
+      2024:
+        score: 612
+        rank: 836
+        total: 670
+        conf: medium
+        sources:
+          - name: 北京中考信息网 zhongkaobj — 2024大兴区高中录取分数线&区排名汇总
+            url: https://www.zhongkaobj.cn/lqfsx/qitaqu/202410222463.html
+          - name: 北京小升初网 xschu — 2024年大兴区各高中中考录取分数线
+            url: https://www.xschu.com/zhonggaokaozixun/72791.html
+
+  北京一零一中大兴分校:
+    school_code: "215009"
+    scores:
+      2025:
+        score: 463
+        rank: 809
+        total: 510
+        conf: low
+        sources:
+          - name: 北京高考在线 gaokzx — 2025北京大兴区中考录取分数线及区排名(实际线463/809;另一文档预估460/938口径不同,故单源 low)
+            url: https://www.gaokzx.com/gk/zhongkao/144863.html
+      2024:
+        score: 607
+        rank: 987
+        total: 670
+        conf: medium
+        sources:
+          - name: 北京中考信息网 zhongkaobj — 2024大兴区高中录取分数线&区排名汇总
+            url: https://www.zhongkaobj.cn/lqfsx/qitaqu/202410222463.html
+          - name: 北京小升初网 xschu — 2024年大兴区各高中中考录取分数线
+            url: https://www.xschu.com/zhonggaokaozixun/72791.html
+
+  北京市大兴区兴华中学:
+    school_code: "115002"
+    scores:
+      2025:
+        score: 452
+        rank: 1353
+        total: 510
+        conf: low
+        sources:
+          - name: 北京高考在线 gaokzx — 2025年北京各区高中校预估分数及排名(预估口径,单源 low)
+            url: https://www.gaokzx.com/gk/zhongkao/143580.html
+      2024:
+        score: 591
+        rank: 1466
+        total: 670
+        conf: medium
+        sources:
+          - name: 北京中考信息网 zhongkaobj — 2024大兴区高中录取分数线&区排名汇总
+            url: https://www.zhongkaobj.cn/lqfsx/qitaqu/202410222463.html
+          - name: 北京小升初网 xschu — 2024年大兴区各高中中考录取分数线
+            url: https://www.xschu.com/zhonggaokaozixun/72791.html
+
+  北京市大兴区第二中学:
+    school_code: "215001"
+    scores:
+      2025:
+        score: 448
+        rank: 1576
+        total: 510
+        conf: low
+        sources:
+          - name: 北京高考在线 gaokzx — 2025年北京各区高中校预估分数及排名(预估口径,单源 low)
+            url: https://www.gaokzx.com/gk/zhongkao/143580.html
+      2024:
+        score: 582
+        rank: null
+        total: 670
+        conf: low
+        sources:
+          - name: 育路私立学校招生网 yuloo — 2024年北京大兴区中考录取分数线一览(单源,经检索快照转述;区排名缺失)
+            url: http://www.yuloo.com/zx/slgz/zxzn/1903108.shtml
+
+  北京市第八中学大兴分校:
+    school_code: "215005"
+    scores:
+      2025:
+        score: 442
+        rank: 1874
+        total: 510
+        conf: low
+        sources:
+          - name: 北京高考在线 gaokzx — 2025年北京各区高中校预估分数及排名(预估口径,单源 low)
+            url: https://www.gaokzx.com/gk/zhongkao/143580.html
+      2024:
+        score: 574
+        rank: null
+        total: 670
+        conf: low
+        sources:
+          - name: 育路私立学校招生网 yuloo — 2024年北京大兴区中考录取分数线一览(单源,经检索快照转述;区排名缺失)
+            url: http://www.yuloo.com/zx/slgz/zxzn/1903108.shtml
+
+  北京市大兴区第三中学:
+    school_code: "215003"
+    scores:
+      2025:
+        score: 437
+        rank: 2163
+        total: 510
+        conf: low
+        sources:
+          - name: 北京高考在线 gaokzx — 2025年北京各区高中校预估分数及排名(预估口径,单源 low)
+            url: https://www.gaokzx.com/gk/zhongkao/143580.html
+      2024:
+        score: 565
+        rank: null
+        total: 670
+        conf: low
+        sources:
+          - name: 育路私立学校招生网 yuloo — 2024年北京大兴区中考录取分数线一览(单源,经检索快照转述;区排名缺失)
+            url: http://www.yuloo.com/zx/slgz/zxzn/1903108.shtml
+
+  北京市大兴区旧宫中学:
+    school_code: "215006"
+    scores:
+      2024:
+        score: 542
+        rank: null
+        total: 670
+        conf: low
+        sources:
+          - name: 育路私立学校招生网 yuloo — 2024年北京大兴区中考录取分数线一览(单源,经检索快照转述;区排名缺失)
+            url: http://www.yuloo.com/zx/slgz/zxzn/1903108.shtml

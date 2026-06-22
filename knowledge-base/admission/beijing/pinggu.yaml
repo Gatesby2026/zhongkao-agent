@@ -1,0 +1,100 @@
+meta:
+  quality_status: assembled
+  source: 统招计划(codes)+高德坐标+历史录取线(官方/网传)+民间特色/高考
+  updated: '2026-06-22'
+  builder: build_full_district.py
+  note: 对标朝阳 schema 自动装配;录取线缺失或低置信处以 scores_meta 标注。
+district: 平谷区
+region: 北京市
+schools:
+- name: 北京实验学校
+  school_code: '217001'
+  location:
+    campus: 北京市平谷区北京实验学校
+    lat: 40.134886
+    lon: 117.117932
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京市平谷中学
+  school_code: '117001'
+  location:
+    campus: 北京市平谷区北京市平谷中学
+    lat: 40.138875
+    lon: 117.120644
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 优质高中（示范/特色）
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京市平谷区第五中学
+  school_code: '117002'
+  location:
+    campus: 北京市平谷区北京市平谷区第五中学
+    lat: 40.152175
+    lon: 117.105784
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 优质高中（示范/特色）
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京市平谷区精英未来学校
+  school_code: '217006'
+  location:
+    campus: 北京市平谷区北京市平谷区精英未来学校
+    lat: 40.163792
+    lon: 117.125277
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京市平谷区马坊实验中学
+  school_code: '217002'
+  location:
+    campus: 北京市平谷区北京市平谷区马坊实验中学
+    lat: 40.063566
+    lon: 117.006565
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京德馨高中
+  school_code: '217008'
+  location:
+    campus: 北京市平谷区北京德馨高中
+    lat: 40.159131
+    lon: 117.139957
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京青年政治学院平谷学校
+  school_code: '217003'
+  location:
+    campus: 北京市平谷区北京青年政治学院平谷学校
+    lat: 40.127351
+    lon: 117.193073
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}

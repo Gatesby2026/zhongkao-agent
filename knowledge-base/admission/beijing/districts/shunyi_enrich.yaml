@@ -1,0 +1,148 @@
+# 顺义区 普通高中 统招录取最低分 + 区排名(位次) 采集
+# 校名逐字等于 shunyi_admission_codes.json 中的官方正名
+# 2025 总分=510, 2024 总分=660
+# conf: medium=≥2源互证; low=1源
+# rank=null 表示该源未给位次
+#
+# 重要说明:
+# - 2025 数据多为"网传版/统招录取结果"(7月底放榜后社媒/资讯站整理), 非区招考官方一分一段表(T1)。
+#   故信源等级实质 T3。三所在正名表内的校(牛一/北师大实验/四中分校)分数被 gaokzx + zhongkaobj + Sohu
+#   三处互证, 区排名被 gaokzx + zhongkaobj 两处一致, 故标 medium。
+# - "北京市十一学校顺义学校"(435/1613) 出现在 2025 数据中, Sohu 将其等同于"杨镇一中",
+#   但正名表里"北京市顺义区杨镇第一中学"独立存在且 2024 另有数据。归属冲突+不在正名表→省略。
+# - 2024 数据为各资讯站整理的"参考版", 除牛一/北师大实验为双源, 其余单源, 标 low。
+
+meta:
+  district: 顺义
+  collected_at: "2026-06-22"
+  source_tier_actual: T3
+  note: "2025 为放榜后网传/资讯站整理版, 非区招考官方一分一段; 2024 为参考版。家长参考用, 非官方权威。"
+
+schools:
+  北京市顺义牛栏山第一中学:
+    scores:
+      - year: 2025
+        total: 510
+        score: 461
+        rank: 608
+        conf: medium
+        source:
+          - name: "2025北京顺义区中考录取分数线及区排名_北京高考在线(gaokzx)"
+            url: "https://www.gaokzx.com/gk/zhongkao/144861.html"
+          - name: "2025北京中考昌平顺义等多区高中统招录取分数线及区排名汇总-北京中考信息网(zhongkaobj)"
+            url: "https://www.zhongkaobj.cn/lqfsx/qitaqu/2025080111678.html"
+          - name: "2025年北京中考统招录取结果及录取分数线出炉(Sohu, 仅佐证分数)"
+            url: "https://www.sohu.com/a/919014931_122457979"
+      - year: 2024
+        total: 660
+        score: 625
+        rank: 518
+        conf: medium
+        source:
+          - name: "顺义2024高中录取分数线一览-北京小升初信息网(xscxx)"
+            url: "https://www.xscxx.com/chuzhong/qitaqu/202410282968.html"
+          - name: "2025参考 北京市近三年各高中录取分数线和区排名变化情况汇总-北京中考信息网(zhongkaobj)"
+            url: "https://www.zhongkaobj.cn/lqfsx/chaoyangqu/202410252785.html"
+
+  北京师范大学附属实验中学顺义学校:
+    scores:
+      - year: 2025
+        total: 510
+        score: 447
+        rank: 1126
+        conf: medium
+        source:
+          - name: "2025北京顺义区中考录取分数线及区排名_北京高考在线(gaokzx)"
+            url: "https://www.gaokzx.com/gk/zhongkao/144861.html"
+          - name: "2025北京中考昌平顺义等多区高中统招录取分数线及区排名汇总-北京中考信息网(zhongkaobj)"
+            url: "https://www.zhongkaobj.cn/lqfsx/qitaqu/2025080111678.html"
+          - name: "2025年北京中考统招录取结果及录取分数线出炉(Sohu, 仅佐证分数)"
+            url: "https://www.sohu.com/a/919014931_122457979"
+      - year: 2024
+        total: 660
+        score: 612
+        rank: 922
+        conf: medium
+        source:
+          - name: "顺义2024高中录取分数线一览-北京小升初信息网(xscxx)"
+            url: "https://www.xscxx.com/chuzhong/qitaqu/202410282968.html"
+          - name: "2025参考 北京市近三年各高中录取分数线和区排名变化情况汇总-北京中考信息网(zhongkaobj)"
+            url: "https://www.zhongkaobj.cn/lqfsx/chaoyangqu/202410252785.html"
+
+  北京市第四中学顺义分校:
+    scores:
+      - year: 2025
+        total: 510
+        score: 427
+        rank: 1926
+        conf: medium
+        source:
+          - name: "2025北京顺义区中考录取分数线及区排名_北京高考在线(gaokzx)"
+            url: "https://www.gaokzx.com/gk/zhongkao/144861.html"
+          - name: "2025北京中考昌平顺义等多区高中统招录取分数线及区排名汇总-北京中考信息网(zhongkaobj)"
+            url: "https://www.zhongkaobj.cn/lqfsx/qitaqu/2025080111678.html"
+          - name: "2025年北京中考统招录取结果及录取分数线出炉(Sohu, 仅佐证分数)"
+            url: "https://www.sohu.com/a/919014931_122457979"
+      - year: 2024
+        total: 660
+        score: 571
+        rank: 2281
+        conf: low
+        source:
+          - name: "顺义2024高中录取分数线一览-北京小升初信息网(xscxx)"
+            url: "https://www.xscxx.com/chuzhong/qitaqu/202410282968.html"
+
+  北京市顺义牛栏山第一中学板桥学校:
+    scores:
+      - year: 2024
+        total: 660
+        score: 577
+        rank: 1824
+        conf: low
+        source:
+          - name: "2025参考 北京市近三年各高中录取分数线和区排名变化情况汇总-北京中考信息网(zhongkaobj)"
+            url: "https://www.zhongkaobj.cn/lqfsx/chaoyangqu/202410252785.html"
+
+  北京市顺义区第一中学:
+    scores:
+      - year: 2024
+        total: 660
+        score: 603
+        rank: 1226
+        conf: low
+        source:
+          - name: "顺义2024高中录取分数线一览-北京小升初信息网(xscxx)"
+            url: "https://www.xscxx.com/chuzhong/qitaqu/202410282968.html"
+
+  北京市顺义区杨镇第一中学:
+    scores:
+      - year: 2024
+        total: 660
+        score: 596
+        rank: 1472
+        conf: low
+        source:
+          - name: "顺义2024高中录取分数线一览-北京小升初信息网(xscxx)"
+            url: "https://www.xscxx.com/chuzhong/qitaqu/202410282968.html"
+
+  北京市顺义区第二中学:
+    scores:
+      - year: 2024
+        total: 660
+        score: 553
+        rank: 2717
+        conf: low
+        source:
+          - name: "顺义2024高中录取分数线一览-北京小升初信息网(xscxx)"
+            url: "https://www.xscxx.com/chuzhong/qitaqu/202410282968.html"
+
+  北京市顺义区第九中学:
+    scores:
+      - year: 2024
+        total: 660
+        score: 537
+        rank: 3089
+        conf: low
+        source:
+          - name: "顺义2024高中录取分数线一览-北京小升初信息网(xscxx)"
+            url: "https://www.xscxx.com/chuzhong/qitaqu/202410282968.html"

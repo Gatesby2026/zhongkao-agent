@@ -1,0 +1,94 @@
+meta:
+  quality_status: assembled
+  source: 统招计划(codes)+高德坐标+历史录取线(官方/网传)+民间特色/高考
+  updated: '2026-06-22'
+  builder: build_full_district.py
+  note: 对标朝阳 schema 自动装配;录取线缺失或低置信处以 scores_meta 标注。
+district: 门头沟区
+region: 北京市
+schools:
+- name: 北京市大峪中学
+  school_code: '109001'
+  location:
+    campus: 北京市门头沟区门头沟北京市大峪中学
+    lat: 39.926901
+    lon: 116.12097
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 优质高中（示范/特色）
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京市第八中学京西校区
+  school_code: '209003'
+  location:
+    campus: 北京市门头沟区北京市第八中学(京西校区)京西校区
+    lat: 39.90059
+    lon: 116.143978
+    confidence: mid
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京市第八中学永定实验学校
+  school_code: '209001'
+  location:
+    campus: 北京市门头沟区门头沟北京市第八中学(京西校区)永定
+    lat: 39.904381
+    lon: 116.120407
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京市门头沟区中等职业学校
+  school_code: '209010'
+  location:
+    campus: 北京市门头沟北京市门头沟区中等职业学校
+    lat: 39.953712
+    lon: 116.09953
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京景山学校京西实验学校
+  school_code: '209004'
+  location:
+    campus: 北京市门头沟区门头沟北京景山学校京西实验学校
+    lat: 39.950749
+    lon: 116.091131
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2024':
+      score: 550
+      total: 670
+      rank: 724
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 首都师范大学附属中学永定分校
+  school_code: '209002'
+  location:
+    campus: 北京市门头沟区门头沟首都师范大学附属中学(永定分校)
+    lat: 39.914994
+    lon: 116.114798
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}

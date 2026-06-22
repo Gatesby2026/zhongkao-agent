@@ -1,0 +1,79 @@
+# 石景山区 普通高中统招录取分数线 + 区排名(位次)
+# 2025 总分 510 / 2024 总分 660
+# 数据来源:多渠道网络汇总(非官方一分一段),仅供志愿参考
+# 铁律:校名逐字等于 shijingshan_admission_codes.json 正名;未搜到的校已省略
+#
+# 置信度说明:
+#  - 2024(660):gaokzx + zhongkaobj 两独立源逐校完全一致 → medium
+#  - 2025(510):实际录取结果(7月30日录取查询)仅 gaokzx 144973 单一强源;
+#    其余 2025 页面(gaokzx 143580 预估 / zhongkaobj 预估)是考前"预估"且数值
+#    与实际不符,不能作为实际值的互证源,故 2025 统一标 low。
+#
+# 未收录:
+#  - 首钢矿业职工子弟学校(207002):限招首钢矿山职工子女,无公开统招线。
+#  - 中杉学校(207011):民办,无公开统招线。
+#  - 人大附中石景山学校(207005):仅 2025 单源,见下条 low。
+
+schools:
+  北京市京源学校:
+    scores:
+      "2025": {total: 510, score: 458, rank: 386}
+      "2024": {total: 660, score: 614, rank: 502}
+    scores_source: "北京高考在线 gaokzx.com(2025: https://www.gaokzx.com/gk/zhongkao/144973.html; 2024: https://www.gaokzx.com/gk/zhongkao/126167.html); 北京中考信息网 zhongkaobj.cn(2024: https://www.zhongkaobj.cn/lqfsx/qitaqu/202410212432.html)"
+    scores_conf: low
+    # 注:2024 两源一致(614/502) medium;2025 仅 gaokzx 单源(458/386) low → 整体取 low。
+
+  北京景山学校远洋分校:
+    scores:
+      "2025": {total: 510, score: 456, rank: 369}
+      "2024": {total: 660, score: 608, rank: 618}
+    scores_source: "北京高考在线 gaokzx.com(2025: https://www.gaokzx.com/gk/zhongkao/144973.html; 2024: https://www.gaokzx.com/gk/zhongkao/126167.html); 北京中考信息网 zhongkaobj.cn(2024: https://www.zhongkaobj.cn/lqfsx/qitaqu/202410212432.html)"
+    scores_conf: low
+    # 注:源称"景山学校远洋分校/景山远洋分校",对应正名 北京景山学校远洋分校。
+    #    2024 两源一致(608/618);2025 单源(456/369)。
+
+  北京大学附属中学石景山学校:
+    scores:
+      "2025": {total: 510, score: 454, rank: 412}
+      "2024": {total: 660, score: 607, rank: 639}
+    scores_source: "北京高考在线 gaokzx.com(2025: https://www.gaokzx.com/gk/zhongkao/144973.html; 2024: https://www.gaokzx.com/gk/zhongkao/126167.html); 北京中考信息网 zhongkaobj.cn(2024: https://www.zhongkaobj.cn/lqfsx/qitaqu/202410212432.html)"
+    scores_conf: low
+    # 注:源称"北大附中石景山学校/北大附石景山"。2024 两源一致(607/639);2025 单源(454/412)。
+
+  北京市第九中学:
+    scores:
+      "2025": {total: 510, score: 434, rank: 823}
+      "2024": {total: 660, score: 589, rank: 987}
+    scores_source: "北京高考在线 gaokzx.com(2025: https://www.gaokzx.com/gk/zhongkao/144973.html; 2024: https://www.gaokzx.com/gk/zhongkao/126167.html); 北京中考信息网 zhongkaobj.cn(2024: https://www.zhongkaobj.cn/lqfsx/qitaqu/202410212432.html)"
+    scores_conf: low
+    # 注:源称"北京九中/九中"。2024 两源一致(589/987);2025 单源(434/823)。
+
+  首都师范大学附属苹果园中学:
+    scores:
+      "2025": {total: 510, score: 421, rank: 1055}
+      "2024": {total: 660, score: 564, rank: 1361}
+    scores_source: "北京高考在线 gaokzx.com(2025: https://www.gaokzx.com/gk/zhongkao/144973.html; 2024: https://www.gaokzx.com/gk/zhongkao/126167.html); 北京中考信息网 zhongkaobj.cn(2024: https://www.zhongkaobj.cn/lqfsx/qitaqu/202410212432.html)"
+    scores_conf: low
+    # 注:源称"苹果园中学/首师大附苹果园中学"。2024 两源一致(564/1361);2025 单源(421/1055)。
+
+  北京市古城中学:
+    scores:
+      "2025": {total: 510, score: 411, rank: 1217}
+      "2024": {total: 660, score: 560, rank: 1429}
+    scores_source: "北京高考在线 gaokzx.com(2025: https://www.gaokzx.com/gk/zhongkao/144973.html; 2024: https://www.gaokzx.com/gk/zhongkao/126167.html); 北京中考信息网 zhongkaobj.cn(2024: https://www.zhongkaobj.cn/lqfsx/qitaqu/202410212432.html)"
+    scores_conf: low
+    # 注:2024 两源一致(560/1429);2025 单源(411/1217)。
+
+  人大附中石景山学校:
+    scores:
+      "2025": {total: 510, score: 410, rank: 1237}
+    scores_source: "北京高考在线 gaokzx.com(2025: https://www.gaokzx.com/gk/zhongkao/144973.html)"
+    scores_conf: low
+    # 注:仅 2025 单源(410/1237,普通班统招线);2024 未在汇总表中出现,故缺。
+
+  北京市黄庄职业高中石景山鲁谷东街:
+    scores:
+      "2025": {total: 510, score: 386, rank: 1484}
+    scores_source: "北京高考在线 gaokzx.com(2025: https://www.gaokzx.com/gk/zhongkao/144973.html,源标'黄庄职高(综合高中班)')"
+    scores_conf: low
+    # 注:对应注册表 207006 综合高中班;仅 2025 单源(386/1484);2024 缺。

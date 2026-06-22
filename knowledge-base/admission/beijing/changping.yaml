@@ -1,0 +1,386 @@
+meta:
+  quality_status: assembled
+  source: 统招计划(codes)+高德坐标+历史录取线(官方/网传)+民间特色/高考
+  updated: '2026-06-22'
+  builder: build_full_district.py
+  note: 对标朝阳 schema 自动装配;录取线缺失或低置信处以 scores_meta 标注。
+district: 昌平区
+region: 北京市
+schools:
+- name: 中国人民大学附属中学昌平学校
+  school_code: '214017'
+  location:
+    campus: 北京市昌平区中国人民大学附属中学昌平学校
+    lat: 40.075036
+    lon: 116.371428
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 中央民族大学附属中学昌平学校
+  school_code: '214010'
+  location:
+    campus: 北京市昌平区清华大学附属小学昌平学校
+    lat: 40.068336
+    lon: 116.426498
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京市昌平区东方红学校
+  school_code: '214032'
+  location:
+    campus: 北京市昌平区
+    lat: 40.220952
+    lon: 116.231034
+    confidence: mid
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京市昌平区佳莲学校
+  school_code: '214029'
+  location:
+    campus: 北京市昌平区北京市昌平区佳莲学校
+    lat: 40.235149
+    lon: 116.130756
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京市昌平区凯博实验学校
+  school_code: '214026'
+  location:
+    campus: 北京市昌平区
+    lat: 40.220952
+    lon: 116.231034
+    confidence: mid
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京市昌平区前锋学校
+  school_code: '214003'
+  location:
+    campus: 北京市昌平区前锋学校
+    lat: 40.226076
+    lon: 116.263349
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京市昌平区实验学校
+  school_code: '214001'
+  location:
+    campus: 北京市昌平区北京市昌平区实验学校(振兴路校区)
+    lat: 40.208754
+    lon: 116.231817
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京市昌平区新东方高级中学
+  school_code: '214021'
+  location:
+    campus: 北京市昌平区
+    lat: 40.220952
+    lon: 116.231034
+    confidence: mid
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京市昌平区新学道临川学校
+  school_code: '214024'
+  location:
+    campus: 北京市昌平区北京市昌平区新学道临川学校
+    lat: 40.142825
+    lon: 116.28884
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京市昌平区汇贤学校
+  school_code: '214033'
+  location:
+    campus: 北京市昌平区北京市昌平区汇贤学校
+    lat: 40.134178
+    lon: 116.278437
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京市昌平区王府实验学校
+  school_code: '214030'
+  location:
+    campus: 北京市昌平区王府街道
+    lat: 40.10585
+    lon: 116.401655
+    confidence: mid
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京市昌平区第一中学
+  school_code: '114001'
+  location:
+    campus: 北京市昌平区北京市昌平区第一中学
+    lat: 40.22547
+    lon: 116.24126
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 优质高中（示范/特色）
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2024':
+      score: 630
+      total: 670
+      rank: 512
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京市昌平区第二中学
+  school_code: '114002'
+  location:
+    campus: 北京市昌平区北京市昌平区第二中学
+    lat: 40.222393
+    lon: 116.237204
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 优质高中（示范/特色）
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      score: 473
+      total: 510
+      rank: 263
+    '2024':
+      score: 637
+      total: 670
+      rank: 290
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京市私立汇佳学校
+  school_code: '214022'
+  location:
+    campus: 北京市昌平区北京市私立汇佳学校
+    lat: 40.193971
+    lon: 116.244498
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京市第一O中学未来科学城学校
+  school_code: '214016'
+  location:
+    campus: 北京市昌平区未来科学城(建设中)
+    lat: 40.119713
+    lon: 116.474708
+    confidence: mid
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2024':
+      score: 572
+      total: 670
+      rank: 2550
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京市第一六一中学回龙观学校
+  school_code: '214014'
+  location:
+    campus: 北京市昌平区北京市第一六一中学回龙观学校(龙域校区)
+    lat: 40.063956
+    lon: 116.306462
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2024':
+      score: 591
+      total: 670
+      rank: 2024
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京市第十五中学南口学校
+  school_code: '214009'
+  location:
+    campus: 北京市昌平区北京市第十五中学南口学校(东3门)
+    lat: 40.237374
+    lon: 116.164282
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      score: 420
+      total: 510
+      rank: 2234
+    '2024':
+      score: 567
+      total: 670
+      rank: 2694
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京师范大学昌平附属学校
+  school_code: '214013'
+  location:
+    campus: 北京市昌平区北京师范大学昌平附属学校
+    lat: 40.169032
+    lon: 116.267699
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2024':
+      score: 604
+      total: 670
+      rank: 1491
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京师范大学第二附属中学未来科学城学校
+  school_code: '214012'
+  location:
+    campus: 北京市昌平区未来科学城(建设中)
+    lat: 40.119713
+    lon: 116.474708
+    confidence: mid
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2024':
+      score: 609
+      total: 670
+      rank: 1302
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京王府学校
+  school_code: '214025'
+  location:
+    campus: 北京市昌平区北京王府学校
+    lat: 40.104517
+    lon: 116.394106
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 清华大学附属中学昌平学校昌平新城东区双营西路
+  school_code: '214015'
+  location:
+    campus: 北京市昌平区清华大学附属中学昌平学校
+    lat: 40.229582
+    lon: 116.29177
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2024':
+      score: 595
+      total: 670
+      rank: 1862
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 首都师范大学附属中学昌平学校
+  school_code: '214008'
+  location:
+    campus: 北京市昌平区首都师范大学附属中学(昌平学校)
+    lat: 40.120357
+    lon: 116.431453
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2024':
+      score: 574
+      total: 670
+      rank: 2602
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 首都师范大学附属回龙观育新学校
+  school_code: '214007'
+  location:
+    campus: 北京市昌平区首都师范大学附属回龙观育新学校
+    lat: 40.08563
+    lon: 116.350825
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2024':
+      score: 619
+      total: 670
+      rank: 914
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high

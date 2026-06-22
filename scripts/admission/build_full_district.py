@@ -54,6 +54,93 @@ def _level_from_code(code):
     return "优质高中（示范/特色）" if str(code).startswith("1") else "普通高中"
 
 
+_CONF_ORD = {"low": 0, "medium": 1, "high": 2}
+# 北京中考各年满分(与朝阳口径一致):2023=660 / 2024=670 / 2025=510
+YEAR_TOTAL = {"2022": 580, "2023": 660, "2024": 670, "2025": 510}
+
+
+def _src_names(src):
+    """source 可能是 str / [{name,url}] / [str]，统一成一行文本。"""
+    if not src:
+        return ""
+    if isinstance(src, str):
+        return src
+    out = []
+    for x in src:
+        if isinstance(x, dict):
+            out.append(x.get("name") or x.get("url") or "")
+        else:
+            out.append(str(x))
+    return "; ".join(p for p in out if p)
+
+
+# agent 产出字段名不统一,做别名归一(分数线尤其多变体)
+_SCORE_KEYS = ("score", "admit_min", "min_score", "admission_min", "admit_min_score",
+               "admission_score", "cutoff", "lowest", "min", "min_admit")
+_TOTAL_KEYS = ("total", "total_score", "full", "full_score")
+
+
+def _pick(it, keys):
+    for k in keys:
+        if it.get(k) is not None:
+            return it[k]
+    return None
+
+
+def _one_rec(it):
+    """从一个 score 条目里抽 {total,score,rank}(容字段别名);至少要有 score。"""
+    sc = _pick(it, _SCORE_KEYS)
+    if sc is None:
+        return None
+    rec = {"score": sc}
+    tot = _pick(it, _TOTAL_KEYS)
+    if tot is not None:
+        rec["total"] = tot
+    if it.get("rank") is not None:
+        rec["rank"] = it["rank"]
+    return rec
+
+
+def _norm_scores(en):
+    """把 enrich 的 scores 归一成 ({年str:{total,score,rank}}, source_str, conf)。
+    兼容 dict(年→{..}) 或 list([{year,..}]) 两种结构 + 多种分数/来源字段别名。
+    返回 (scores, source, conf);无则 (None,None,None)。"""
+    raw = en.get("scores")
+    if not raw:
+        return None, None, None
+    scores, srcs, confs = {}, [], []
+    if isinstance(raw, list):
+        for it in raw:
+            if not isinstance(it, dict) or it.get("year") is None:
+                continue
+            rec = _one_rec(it)
+            if rec:
+                scores[str(it["year"])] = rec
+            if it.get("conf"):
+                confs.append(it["conf"])
+            srcs.append(_src_names(it.get("source") or it.get("sources")))
+    elif isinstance(raw, dict):
+        for y, v in raw.items():
+            if isinstance(v, dict):
+                rec = _one_rec(v)
+                if rec:
+                    scores[str(y)] = rec
+                if v.get("conf"):
+                    confs.append(v["conf"])
+                if v.get("source") or v.get("sources"):
+                    srcs.append(_src_names(v.get("source") or v.get("sources")))
+    if not scores:
+        return None, None, None
+    for y, rec in scores.items():        # 满分按朝阳口径强制(纠正 agent 的 660/670 口径)
+        if y in YEAR_TOTAL:
+            rec["total"] = YEAR_TOTAL[y]
+    src = en.get("scores_source") or "; ".join(s for s in dict.fromkeys(srcs) if s)
+    conf = en.get("scores_conf")
+    if not conf and confs:
+        conf = min(confs, key=lambda c: _CONF_ORD.get(c, 0))   # 取最保守
+    return scores, src or None, conf or "low"
+
+
 def build(py):
     cn = CN[py]
     codes_p = DIST / f"{py}_admission_codes.json"
@@ -100,8 +187,13 @@ def build(py):
         co = coords.get(zn) or {}
         en = enrich.get(zn) or {}
         h = hist.get(zn) or {}
-        # 年份键统一成字符串(老 yaml 是 int,朝阳是 str)
-        scores = {str(k): v for k, v in (en.get("scores") or h.get("scores") or {}).items()}
+        # enrich 优先(网传 T3),否则历史官方线;年份键统一成字符串
+        en_scores, en_src, en_conf = _norm_scores(en)
+        if en_scores:
+            scores, sc_src, sc_conf, sc_official = en_scores, en_src, en_conf, False
+        else:
+            scores = {str(k): v for k, v in (h.get("scores") or {}).items()}
+            sc_src, sc_conf, sc_official = None, None, True
         loc = None
         if co:
             loc = {"campus": co.get("formatted") or zn,

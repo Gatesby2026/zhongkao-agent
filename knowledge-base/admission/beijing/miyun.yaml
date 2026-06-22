@@ -1,0 +1,61 @@
+meta:
+  quality_status: assembled
+  source: 统招计划(codes)+高德坐标+历史录取线(官方/网传)+民间特色/高考
+  updated: '2026-06-22'
+  builder: build_full_district.py
+  note: 对标朝阳 schema 自动装配;录取线缺失或低置信处以 scores_meta 标注。
+district: 密云区
+region: 北京市
+schools:
+- name: 北京市密云区新农村中学
+  school_code: '228003'
+  location:
+    campus: 北京市密云区北京市第一六一中学(密云分校)
+    lat: 40.390061
+    lon: 116.887838
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京市密云区第二中学
+  school_code: '128001'
+  location:
+    campus: 北京市密云区北京市密云区第二中学
+    lat: 40.379589
+    lon: 116.847378
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 优质高中（示范/特色）
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京师范大学密云实验中学
+  school_code: '128003'
+  location:
+    campus: 北京市密云区北京师范大学密云实验中学
+    lat: 40.365506
+    lon: 116.855867
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 优质高中（示范/特色）
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 首都师范大学附属密云中学
+  school_code: '128002'
+  location:
+    campus: 北京市密云区首都师范大学附属密云中学
+    lat: 40.37243
+    lon: 116.819831
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 优质高中（示范/特色）
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}

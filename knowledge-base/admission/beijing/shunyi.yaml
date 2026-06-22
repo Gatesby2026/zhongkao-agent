@@ -1,0 +1,272 @@
+meta:
+  quality_status: assembled
+  source: 统招计划(codes)+高德坐标+历史录取线(官方/网传)+民间特色/高考
+  updated: '2026-06-22'
+  builder: build_full_district.py
+  note: 对标朝阳 schema 自动装配;录取线缺失或低置信处以 scores_meta 标注。
+district: 顺义区
+region: 北京市
+schools:
+- name: 北京市新府学外国语学校
+  school_code: '213010'
+  location:
+    campus: 北京市顺义区北京市新府学外国语学校
+    lat: 40.164277
+    lon: 116.628366
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京市新英才学校
+  school_code: '213008'
+  location:
+    campus: 北京市顺义区北京市新英才学校
+    lat: 40.084394
+    lon: 116.518495
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京市海嘉学校
+  school_code: '213011'
+  location:
+    campus: 北京市顺义区北京市海嘉学校
+    lat: 40.101364
+    lon: 116.53014
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京市第四中学顺义分校
+  school_code: '213003'
+  location:
+    campus: 北京市顺义区北京市第四中学顺义分校
+    lat: 40.115619
+    lon: 116.546053
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      score: 427
+      total: 510
+      rank: 1926
+    '2024':
+      score: 571
+      total: 670
+      rank: 2281
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京市顺义区君诚学校
+  school_code: '213009'
+  location:
+    campus: 北京市顺义区君诚双语学校
+    lat: 40.095727
+    lon: 116.500093
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京市顺义区杨镇第一中学
+  school_code: '113003'
+  location:
+    campus: 北京市顺义区北京市顺义区杨镇第一中学(南门)
+    lat: 40.152438
+    lon: 116.817007
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 优质高中（示范/特色）
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2024':
+      score: 596
+      total: 670
+      rank: 1472
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京市顺义区第一中学
+  school_code: '113002'
+  location:
+    campus: 北京市顺义区北京市顺义区第一中学
+    lat: 40.097322
+    lon: 116.666906
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 优质高中（示范/特色）
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2024':
+      score: 603
+      total: 670
+      rank: 1226
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京市顺义区第九中学
+  school_code: '213002'
+  location:
+    campus: 北京市顺义区北京市顺义区第九中学
+    lat: 40.107398
+    lon: 116.69015
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2024':
+      score: 537
+      total: 670
+      rank: 3089
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京市顺义区第二中学
+  school_code: '213001'
+  location:
+    campus: 北京市顺义区北京市顺义区第二中学
+    lat: 40.134716
+    lon: 116.630335
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2024':
+      score: 553
+      total: 670
+      rank: 2717
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京市顺义区诺德安达学校
+  school_code: '213014'
+  location:
+    campus: 北京市顺义区
+    lat: 40.149891
+    lon: 116.661474
+    confidence: mid
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京市顺义区青苗学校
+  school_code: '213013'
+  location:
+    campus: 北京市顺义区
+    lat: 40.149891
+    lon: 116.661474
+    confidence: mid
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京市顺义牛栏山第一中学
+  school_code: '113001'
+  location:
+    campus: 北京市顺义区北京市顺义牛栏山第一中学
+    lat: 40.222775
+    lon: 116.664317
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 优质高中（示范/特色）
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      score: 461
+      total: 510
+      rank: 608
+    '2024':
+      score: 625
+      total: 670
+      rank: 518
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京市顺义牛栏山第一中学板桥学校
+  school_code: '213006'
+  location:
+    campus: 北京市顺义区北京市顺义牛栏山第一中学
+    lat: 40.222775
+    lon: 116.664317
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2024':
+      score: 577
+      total: 670
+      rank: 1824
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京市鼎石学校
+  school_code: '213012'
+  location:
+    campus: 北京市顺义区北京市鼎石学校
+    lat: 40.113845
+    lon: 116.552852
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京师范大学附属实验中学顺义学校
+  school_code: '213005'
+  location:
+    campus: 北京市顺义区北京师范大学附属实验中学顺义学校
+    lat: 40.093179
+    lon: 116.509545
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      score: 447
+      total: 510
+      rank: 1126
+    '2024':
+      score: 612
+      total: 670
+      rank: 922
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high

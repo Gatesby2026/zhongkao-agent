@@ -1,0 +1,548 @@
+meta:
+  quality_status: assembled
+  source: 统招计划(codes)+高德坐标+历史录取线(官方/网传)+民间特色/高考
+  updated: '2026-06-22'
+  builder: build_full_district.py
+  note: 对标朝阳 schema 自动装配;录取线缺失或低置信处以 scores_meta 标注。
+district: 丰台区
+region: 北京市
+schools:
+- name: 中国人民大学附属中学丰台学校
+  school_code: '206020'
+  location:
+    campus: 北京市丰台区中国人民大学附属中学丰台学校
+    lat: 39.815188
+    lon: 116.111652
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      score: 423
+      total: 510
+      rank: 2265
+    '2024':
+      score: 599
+      total: 670
+      rank: 2034
+  scores_meta:
+    source: '2025: 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html) + 北京高考在线(https://www.gaokzx.com/gk/zhongkao/144859.html);
+      2024: 北京高考在线(https://www.gaokzx.com/gk/zhongkao/126166.html) + 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/202410212412.html)'
+    confidence: medium
+- name: 中国教育科学研究院丰台实验学校
+  school_code: '206007'
+  location:
+    campus: 北京市丰台区中国教育科学研究院丰台实验学校(东南1门)
+    lat: 39.857694
+    lon: 116.265833
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      score: 411
+      total: 510
+      rank: 2708
+    '2024':
+      score: 572
+      total: 670
+      rank: 3179
+  scores_meta:
+    source: '2025: 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html) + 北京高考在线(https://www.gaokzx.com/gk/zhongkao/144859.html);
+      2024: 北京高考在线(https://www.gaokzx.com/gk/zhongkao/126166.html) + 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/202410212412.html)
+      [源用''中国教育研究院丰台实验学校''指代,对应官方正名]'
+    confidence: medium
+- name: 中央民族大学附属中学丰台实验学校
+  school_code: '206023'
+  location:
+    campus: 北京市丰台区中央民族大学附属中学丰台实验学校(北门)
+    lat: 39.808101
+    lon: 116.139143
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      score: 412
+      total: 510
+      rank: 2680
+  scores_meta:
+    source: 北京中考信息网 zhongkaobj.cn(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html); 北京高考在线 gaokzx.com(https://www.gaokzx.com/gk/zhongkao/144859.html)
+    confidence: medium
+- name: 北京丽泽国际学校
+  school_code: '206021'
+  location:
+    campus: 北京市丰台区北京丽泽国际学校
+    lat: 39.874906
+    lon: 116.339326
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京十一学校中堂实验学校
+  school_code: '206029'
+  location:
+    campus: 北京市丰台区北京十一学校中堂实验学校
+    lat: 39.879946
+    lon: 116.282784
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      score: 462
+      total: 510
+      rank: 487
+  scores_meta:
+    source: 北京中考信息网 zhongkaobj.cn(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html); 北京高考在线 gaokzx.com(https://www.gaokzx.com/gk/zhongkao/144859.html)
+    confidence: medium
+- name: 北京市丰台区外国语学校
+  school_code: '206022'
+  location:
+    campus: 北京市丰台区北京市丰台区外国语学校
+    lat: 39.849749
+    lon: 116.395665
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      score: 415
+      total: 510
+      rank: 2569
+  scores_meta:
+    source: 北京中考信息网 zhongkaobj.cn(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html); 北京高考在线 gaokzx.com(https://www.gaokzx.com/gk/zhongkao/144859.html)
+    confidence: medium
+- name: 北京市丰台区太平桥学校
+  school_code: '206027'
+  location:
+    campus: 北京市丰台区北京市丰台区太平桥学校
+    lat: 39.885228
+    lon: 116.320227
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      score: 407
+      total: 510
+      rank: 2846
+    '2024':
+      score: 566
+      total: 670
+      rank: 3396
+  scores_meta:
+    source: '2025: 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html) + 北京高考在线(https://www.gaokzx.com/gk/zhongkao/144859.html);
+      2024: 北京高考在线(https://www.gaokzx.com/gk/zhongkao/126166.html) + 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/202410212412.html)'
+    confidence: medium
+- name: 北京市丰台区怡海中学
+  school_code: '206016'
+  location:
+    campus: 北京市丰台区北京市丰台区怡海中学
+    lat: 39.834377
+    lon: 116.30367
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京市丰台区新北赋学校
+  school_code: '206017'
+  location:
+    campus: 北京市丰台区北京市丰台区新北赋学校
+    lat: 39.788441
+    lon: 116.298585
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京市丰台区第二中学
+  school_code: '106004'
+  location:
+    campus: 北京市丰台区北京市丰台区第二中学(初中部)
+    lat: 39.877427
+    lon: 116.247395
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 优质高中（示范/特色）
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      score: 447
+      total: 510
+      rank: 1123
+  scores_meta:
+    source: 北京高考在线 gaokzx.com(https://www.gaokzx.com/gk/zhongkao/144859.html); 北京中考信息网 zhongkaobj.cn(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html)
+    confidence: low
+- name: 北京市丰台区第八中学
+  school_code: '206026'
+  location:
+    campus: 北京市丰台区
+    lat: 39.858538
+    lon: 116.286726
+    confidence: mid
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      score: 427
+      total: 510
+      rank: 2095
+    '2024':
+      score: 588
+      total: 670
+      rank: 2505
+  scores_meta:
+    source: '2025: 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html) + 北京高考在线(https://www.gaokzx.com/gk/zhongkao/144859.html);
+      2024: 北京高考在线(https://www.gaokzx.com/gk/zhongkao/126166.html) + 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/202410212412.html)'
+    confidence: medium
+- name: 北京市大成学校
+  school_code: '206010'
+  location:
+    campus: 北京市丰台区北京市大成学校
+    lat: 39.894259
+    lon: 116.257366
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      score: 394
+      total: 510
+      rank: 3222
+  scores_meta:
+    source: 北京中考信息网 zhongkaobj.cn(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html) [仅 1 源含此行,gaokzx 表止于云岗]
+    confidence: low
+- name: 北京市第十中学
+  school_code: '106002'
+  location:
+    campus: 北京市丰台区北京市第十中学(东南门)
+    lat: 39.88242
+    lon: 116.289573
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 优质高中（示范/特色）
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      score: 421
+      total: 510
+      rank: 2355
+    '2024':
+      score: 598
+      total: 670
+      rank: 2078
+  scores_meta:
+    source: '2025: 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html) + 北京高考在线(https://www.gaokzx.com/gk/zhongkao/144859.html);
+      2024: 北京高考在线(https://www.gaokzx.com/gk/zhongkao/126166.html) + 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/202410212412.html)'
+    confidence: medium
+- name: 北京市第十中学晓月苑分校
+  school_code: '206002'
+  location:
+    campus: 北京市丰台区北京市第十中学晓月苑分校
+    lat: 39.834468
+    lon: 116.244829
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      score: 416
+      total: 510
+      rank: 2532
+    '2024':
+      score: 580
+      total: 670
+      rank: 2851
+  scores_meta:
+    source: '2025: 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html) + 北京高考在线(https://www.gaokzx.com/gk/zhongkao/144859.html);
+      2024: 北京高考在线(https://www.gaokzx.com/gk/zhongkao/126166.html) + 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/202410212412.html)'
+    confidence: medium
+- name: 北京市第十二中学
+  school_code: '106001'
+  location:
+    campus: 北京市丰台区北京市第十二中学
+    lat: 39.862055
+    lon: 116.307847
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 优质高中（示范/特色）
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      score: 466
+      total: 510
+      rank: 348
+  scores_meta:
+    source: 北京中考信息网 zhongkaobj.cn(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html); 北京高考在线 gaokzx.com(https://www.gaokzx.com/gk/zhongkao/144859.html)
+    confidence: medium
+- name: 北京市第十八中学
+  school_code: '106003'
+  location:
+    campus: 北京市丰台区北京市第十八中学(方庄校区)
+    lat: 39.862823
+    lon: 116.436802
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 优质高中（示范/特色）
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      score: 442
+      total: 510
+      rank: 1370
+    '2024':
+      score: 604
+      total: 670
+      rank: 1800
+  scores_meta:
+    source: '2025: 北京高考在线(https://www.gaokzx.com/gk/zhongkao/144859.html)[源间标注有分歧,zhongkaobj同位列447/1123疑错配]; 2024: 北京高考在线(https://www.gaokzx.com/gk/zhongkao/126166.html)
+      + 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/202410212412.html)'
+    confidence: low
+- name: 北京市第十八中学蒲芳学校
+  school_code: '206003'
+  location:
+    campus: 北京市丰台区北京市第十八中学蒲芳学校(刘家窑校区)
+    lat: 39.861371
+    lon: 116.419241
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京市赵登禹学校
+  school_code: '206009'
+  location:
+    campus: 北京市丰台区北京市赵登禹学校
+    lat: 39.851524
+    lon: 116.36696
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      score: 426
+      total: 510
+      rank: 2140
+    '2024':
+      score: 587
+      total: 670
+      rank: 2552
+  scores_meta:
+    source: '2025: 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html) + 北京高考在线(https://www.gaokzx.com/gk/zhongkao/144859.html);
+      2024: 北京高考在线(https://www.gaokzx.com/gk/zhongkao/126166.html) + 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/202410212412.html)'
+    confidence: medium
+- name: 北京市首都师范大学附属丽泽中学
+  school_code: '206006'
+  location:
+    campus: 北京市丰台区首都师范大学附属丽泽中学
+    lat: 39.860822
+    lon: 116.284534
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      score: 428
+      total: 510
+      rank: 2038
+    '2024':
+      score: 595
+      total: 670
+      rank: 2237
+  scores_meta:
+    source: '2025: 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html) + 北京高考在线(https://www.gaokzx.com/gk/zhongkao/144859.html);
+      2024: 北京高考在线(https://www.gaokzx.com/gk/zhongkao/126166.html) + 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/202410212412.html)'
+    confidence: medium
+- name: 北京师范大学实验中学丰台学校
+  school_code: '206004'
+  location:
+    campus: 北京市丰台区北京师范大学实验中学丰台学校
+    lat: 39.867645
+    lon: 116.370639
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      score: 433
+      total: 510
+      rank: 1793
+    '2024':
+      score: 602
+      total: 670
+      rank: 1895
+  scores_meta:
+    source: '2025: 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html) + 北京高考在线(https://www.gaokzx.com/gk/zhongkao/144859.html);
+      2024: 北京高考在线(https://www.gaokzx.com/gk/zhongkao/126166.html) + 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/202410212412.html)'
+    confidence: medium
+- name: 北京教育学院附属丰台实验学校
+  school_code: '206024'
+  location:
+    campus: 北京市丰台区北京教育学院附属丰台实验学校
+    lat: 39.886584
+    lon: 116.26123
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      score: 422
+      total: 510
+      rank: 2311
+    '2024':
+      score: 584
+      total: 670
+      rank: 2687
+  scores_meta:
+    source: '2025: 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html) + 北京高考在线(https://www.gaokzx.com/gk/zhongkao/144859.html);
+      2024: 北京高考在线(https://www.gaokzx.com/gk/zhongkao/126166.html) + 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/202410212412.html)'
+    confidence: medium
+- name: 北京第五实验学校
+  school_code: '206025'
+  location:
+    campus: 北京市丰台区北京第五实验学校(丰台科技园校区)
+    lat: 39.823419
+    lon: 116.307138
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      score: 440
+      total: 510
+      rank: 1462
+  scores_meta:
+    source: 北京中考信息网 zhongkaobj.cn(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html); 北京高考在线 gaokzx.com(https://www.gaokzx.com/gk/zhongkao/144859.html)
+    confidence: medium
+- name: 北京钱学森中学
+  school_code: '206001'
+  location:
+    campus: 北京市丰台区北京钱学森中学
+    lat: 39.795033
+    lon: 116.428297
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      score: 460
+      total: 510
+      rank: 563
+    '2024':
+      score: 618
+      total: 670
+      rank: 1123
+  scores_meta:
+    source: '2025: 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html) + 北京高考在线(https://www.gaokzx.com/gk/zhongkao/144859.html);
+      2024: 北京高考在线(https://www.gaokzx.com/gk/zhongkao/126166.html) + 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/202410212412.html)'
+    confidence: medium
+- name: 首都师范大学附属云岗中学
+  school_code: '206008'
+  location:
+    campus: 北京市丰台区首都师范大学附属云岗中学
+    lat: 39.810817
+    lon: 116.165554
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      score: 401
+      total: 510
+      rank: 3028
+  scores_meta:
+    source: 北京中考信息网 zhongkaobj.cn(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html); 北京高考在线 gaokzx.com(https://www.gaokzx.com/gk/zhongkao/144859.html)
+    confidence: medium
+- name: 首都经济贸易大学附属中学
+  school_code: '206005'
+  location:
+    campus: 北京市丰台区首都经济贸易大学附属中学
+    lat: 39.843957
+    lon: 116.294863
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      score: 405
+      total: 510
+      rank: 2901
+    '2024':
+      score: 563
+      total: 670
+      rank: 3499
+  scores_meta:
+    source: '2025: 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html) + 北京高考在线(https://www.gaokzx.com/gk/zhongkao/144859.html);
+      2024: 北京高考在线(https://www.gaokzx.com/gk/zhongkao/126166.html) + 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/202410212412.html)
+      [源用''首经贸附中'']'
+    confidence: medium

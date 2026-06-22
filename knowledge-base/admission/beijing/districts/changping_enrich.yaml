@@ -1,0 +1,156 @@
+# 昌平区 普通高中统招录取最低分 + 区排名(位次) enrich 数据
+# 校名严格对齐 changping_admission_codes.json 官方正名(逐字相等)
+# 2025 总分=510, 2024 总分=660
+# conf: high(官方T1) / medium(≥2民间源互证) / low(1源)
+# 数据采集于 2026-06-22, 网络多源(非官方bjeea校线, bjeea 不公布分校线)
+# 铁律: 未搜到→省略; 无rank→null; 不在正名表→不写
+
+district: 昌平
+collected_at: "2026-06-22"
+note: >
+  2025 实际统招录取最低分仅在民间汇总(zhongkaobj/gaokzx)查到 2 所(昌平二中/十五中南口),
+  其余多数学校 2025 实际线未公开(gaokzx 143580 页为"预估"非实录, 故不采)。
+  2024(660 总分) 数据较完整, 经 zizzs + zhongkaobj 近三年页两源互证。
+
+schools:
+  北京市昌平区第二中学:
+    scores:
+      - year: 2025
+        total: 510
+        admit_min: 473
+        rank: 263
+        source:
+          - name: "北京中考信息网 2025 昌平等多区统招线及区排名汇总"
+            url: "https://www.zhongkaobj.cn/lqfsx/qitaqu/2025080111678.html"
+          - name: "北京高考在线 2025 各区高中校分数及排名"
+            url: "https://www.gaokzx.com/gk/zhongkao/143580.html"
+        conf: medium
+      - year: 2024
+        total: 660
+        admit_min: 637
+        rank: 290
+        source:
+          - name: "自主选拔在线 2025 中考参考(含 2024 昌平录取线区排名)"
+            url: "http://www.zizzs.com/gk/zhongkao/187627.html"
+          - name: "北京中考信息网 近三年各高中录取线及区排名变化"
+            url: "https://www.zhongkaobj.cn/lqfsx/chaoyangqu/202410252785.html"
+        conf: medium
+
+  北京市昌平区第一中学:
+    scores:
+      - year: 2024
+        total: 660
+        admit_min: 630
+        rank: 512
+        source:
+          - name: "自主选拔在线 2025 中考参考(含 2024 昌平录取线区排名)"
+            url: "http://www.zizzs.com/gk/zhongkao/187627.html"
+          - name: "北京中考信息网 近三年各高中录取线及区排名变化"
+            url: "https://www.zhongkaobj.cn/lqfsx/chaoyangqu/202410252785.html"
+        conf: medium
+
+  首都师范大学附属回龙观育新学校:
+    scores:
+      - year: 2024
+        total: 660
+        admit_min: 619
+        rank: 914
+        source:
+          - name: "自主选拔在线 2025 中考参考(含 2024 昌平录取线区排名)"
+            url: "http://www.zizzs.com/gk/zhongkao/187627.html"
+          - name: "北京中考信息网 近三年各高中录取线及区排名变化"
+            url: "https://www.zhongkaobj.cn/lqfsx/chaoyangqu/202410252785.html"
+        conf: medium
+
+  北京师范大学第二附属中学未来科学城学校:
+    scores:
+      - year: 2024
+        total: 660
+        admit_min: 609
+        rank: 1302
+        source:
+          - name: "自主选拔在线 2025 中考参考(含 2024 昌平录取线区排名)"
+            url: "http://www.zizzs.com/gk/zhongkao/187627.html"
+          - name: "北京中考信息网 近三年各高中录取线及区排名变化"
+            url: "https://www.zhongkaobj.cn/lqfsx/chaoyangqu/202410252785.html"
+        conf: medium
+
+  北京师范大学昌平附属学校:
+    scores:
+      - year: 2024
+        total: 660
+        admit_min: 604
+        rank: 1491
+        source:
+          - name: "自主选拔在线 2025 中考参考(含 2024 昌平录取线区排名)"
+            url: "http://www.zizzs.com/gk/zhongkao/187627.html"
+        conf: low
+
+  清华大学附属中学昌平学校昌平新城东区双营西路:
+    scores:
+      - year: 2024
+        total: 660
+        admit_min: 595
+        rank: 1862
+        source:
+          - name: "自主选拔在线 2025 中考参考(含 2024 昌平录取线区排名)"
+            url: "http://www.zizzs.com/gk/zhongkao/187627.html"
+          - name: "北京中考信息网 近三年各高中录取线及区排名变化"
+            url: "https://www.zhongkaobj.cn/lqfsx/chaoyangqu/202410252785.html"
+        conf: medium
+
+  北京市第一六一中学回龙观学校:
+    scores:
+      - year: 2024
+        total: 660
+        admit_min: 591
+        rank: 2024
+        source:
+          - name: "自主选拔在线 2025 中考参考(含 2024 昌平录取线区排名)"
+            url: "http://www.zizzs.com/gk/zhongkao/187627.html"
+          - name: "北京中考信息网 近三年各高中录取线及区排名变化"
+            url: "https://www.zhongkaobj.cn/lqfsx/chaoyangqu/202410252785.html"
+        conf: medium
+
+  首都师范大学附属中学昌平学校:
+    scores:
+      - year: 2024
+        total: 660
+        admit_min: 574
+        rank: 2602
+        source:
+          - name: "自主选拔在线 2025 中考参考(含 2024 昌平录取线区排名)"
+            url: "http://www.zizzs.com/gk/zhongkao/187627.html"
+          - name: "北京中考信息网 近三年各高中录取线及区排名变化"
+            url: "https://www.zhongkaobj.cn/lqfsx/chaoyangqu/202410252785.html"
+        conf: medium
+
+  北京市第一O中学未来科学城学校:
+    scores:
+      - year: 2024
+        total: 660
+        admit_min: 572
+        rank: 2550
+        source:
+          - name: "北京中考信息网 近三年各高中录取线及区排名变化"
+            url: "https://www.zhongkaobj.cn/lqfsx/chaoyangqu/202410252785.html"
+        conf: low
+
+  北京市第十五中学南口学校:
+    scores:
+      - year: 2025
+        total: 510
+        admit_min: 420
+        rank: 2234
+        source:
+          - name: "北京中考信息网 2025 昌平等多区统招线及区排名汇总"
+            url: "https://www.zhongkaobj.cn/lqfsx/qitaqu/2025080111678.html"
+        conf: low
+      - year: 2024
+        total: 660
+        admit_min: 567
+        rank: 2694
+        source:
+          - name: "北京中考信息网 近三年各高中录取线及区排名变化"
+            url: "https://www.zhongkaobj.cn/lqfsx/chaoyangqu/202410252785.html"
+        conf: low

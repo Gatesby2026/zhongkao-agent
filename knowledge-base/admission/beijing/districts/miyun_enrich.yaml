@@ -1,0 +1,27 @@
+# 密云区 普通高中统招录取最低分 + 区排名(位次) 采集结果
+# 口径: 2025 总分 510 / 2024 总分 660
+# 正名来源: miyun_admission_codes.json (2025 bjeea 官方统招校名)
+#
+# 结论: 经多渠道(gaokzx / zhongkaobj / zgkao / 本地宝 / bjeea / 阳光高考)检索,
+#   未找到密云区任何普通高中 2024 或 2025 的「统招录取最低分」可靠来源。
+#   密云属远郊小区,各校分校线/位次未在公开渠道发布(只有全区一分一段表,不含校线)。
+#   唯一出现的具体数字是「密云二中 2023=604分」,但①是 2023(非 2024/2025),
+#   ②仅单一 T4 来源(百度知道转述),不符合本次口径与置信门槛,故不写入。
+#   按铁律: 没搜到 -> 省略,绝不编造,绝不挂错校。
+#
+# 检索过的来源(均无密云校线):
+#   - https://www.gaokzx.com/gk/zhongkao/135364.html (近三年密云线 — 数据为图片,且实为一分一段表)
+#   - https://www.gaokzx.com/gk/zhiyuan/125022.html (2024密云各中学"预估"线 — 图片且为预估,非实录)
+#   - https://www.gaokzx.com/gk/zhongkao/144703.html (2025各区线汇总 — 密云条目为空)
+#   - https://www.gaokzx.com/gk/zhongkao/144808.html (2025 70校网传版 — 不含密云)
+#   - https://www.zgkao.com/fenshuxian/73381.html (2024密云线 — 明示"尚未公布")
+#   - https://www.zgkao.com/zhongkao/73038.html (密云二中 — 仅 2023=604,百度知道转述,T4)
+#   - http://bj.bendibao.com/edu/202479/363090.shtm (2024密云一分一段 — 无校线)
+#   - https://gaokao.chsi.com.cn/zx/sch/main.action?id=178470035 (首师大附密云 — 无分数)
+#   - https://www.bjeea.cn/.../2025/0708/87209.html (全市分数段 — 无校线)
+
+district: 密云
+total_score_2025: 510
+total_score_2024: 660
+
+schools: {}

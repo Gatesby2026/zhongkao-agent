@@ -1,0 +1,94 @@
+meta:
+  quality_status: assembled
+  source: 统招计划(codes)+高德坐标+历史录取线(官方/网传)+民间特色/高考
+  updated: '2026-06-22'
+  builder: build_full_district.py
+  note: 对标朝阳 schema 自动装配;录取线缺失或低置信处以 scores_meta 标注。
+district: 怀柔区
+region: 北京市
+schools:
+- name: 北京市怀柔区第一中学
+  school_code: '116001'
+  location:
+    campus: 北京市怀柔区北京市怀柔区第一中学
+    lat: 40.316805
+    lon: 116.628664
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 优质高中（示范/特色）
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京市怀柔区第二中学
+  school_code: '216001'
+  location:
+    campus: 北京市怀柔区北京市怀柔区第二中学
+    lat: 40.323692
+    lon: 116.628926
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京市怀柔区青苗学校
+  school_code: '216006'
+  location:
+    campus: 北京市怀柔区
+    lat: 40.317003
+    lon: 116.631974
+    confidence: mid
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京市第一O中学怀柔分校
+  school_code: '216003'
+  location:
+    campus: 北京市怀柔区
+    lat: 40.317003
+    lon: 116.631974
+    confidence: mid
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2024':
+      score: 616
+      total: 670
+      rank: 273
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京怀柔索兰诺中学
+  school_code: '216005'
+  location:
+    campus: 北京市怀柔区北京怀柔索兰诺中学
+    lat: 40.284369
+    lon: 116.684268
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 首都师范大学附属红螺寺中学
+  school_code: '216002'
+  location:
+    campus: 北京市怀柔区首都师范大学附属红螺寺中学
+    lat: 40.336382
+    lon: 116.640879
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}

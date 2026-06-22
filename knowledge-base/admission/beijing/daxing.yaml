@@ -1,0 +1,295 @@
+meta:
+  quality_status: assembled
+  source: 统招计划(codes)+高德坐标+历史录取线(官方/网传)+民间特色/高考
+  updated: '2026-06-22'
+  builder: build_full_district.py
+  note: 对标朝阳 schema 自动装配;录取线缺失或低置信处以 scores_meta 标注。
+district: 大兴区
+region: 北京市
+schools:
+- name: 北京一零一中大兴分校
+  school_code: '215009'
+  location:
+    campus: 北京市大兴区北京一零一中大兴分校
+    lat: 39.516674
+    lon: 116.315228
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      score: 463
+      total: 510
+      rank: 809
+    '2024':
+      score: 607
+      total: 670
+      rank: 987
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京大兴熙诚学校
+  school_code: '215018'
+  location:
+    campus: 北京市大兴区北京大兴熙诚学校
+    lat: 39.652582
+    lon: 116.640549
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京大兴精华学校
+  school_code: '215016'
+  location:
+    campus: 北京市大兴区北京大兴精华学校(南门)
+    lat: 39.754253
+    lon: 116.440799
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京市大兴区兴华中学
+  school_code: '115002'
+  location:
+    campus: 北京市大兴区北京市大兴区兴华中学
+    lat: 39.755198
+    lon: 116.333765
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 优质高中（示范/特色）
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      score: 452
+      total: 510
+      rank: 1353
+    '2024':
+      score: 591
+      total: 670
+      rank: 1466
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京市大兴区旧宫中学
+  school_code: '215006'
+  location:
+    campus: 北京市大兴区旧宫中学
+    lat: 39.807035
+    lon: 116.447854
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2024':
+      score: 542
+      total: 670
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京市大兴区第一中学
+  school_code: '115001'
+  location:
+    campus: 北京市大兴区北京市大兴区第一中学(西门)
+    lat: 39.724884
+    lon: 116.342229
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 优质高中（示范/特色）
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      score: 467
+      total: 510
+      rank: 632
+    '2024':
+      score: 617
+      total: 670
+      rank: 664
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京市大兴区第三中学
+  school_code: '215003'
+  location:
+    campus: 北京市大兴区北京市大兴区第三中学(初中部)
+    lat: 39.733953
+    lon: 116.337565
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      score: 437
+      total: 510
+      rank: 2163
+    '2024':
+      score: 565
+      total: 670
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京市大兴区第二中学
+  school_code: '215001'
+  location:
+    campus: 北京市大兴区北京市大兴区第二中学
+    lat: 39.75032
+    lon: 116.342626
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      score: 448
+      total: 510
+      rank: 1576
+    '2024':
+      score: 582
+      total: 670
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京市私立君谊中学
+  school_code: '215011'
+  location:
+    campus: 北京市大兴区君谊中学(南门)
+    lat: 39.773243
+    lon: 116.323555
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京市第八中学大兴分校
+  school_code: '215005'
+  location:
+    campus: 北京市大兴区北京市第八中学大兴分校(北门)
+    lat: 39.756601
+    lon: 116.319335
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      score: 442
+      total: 510
+      rank: 1874
+    '2024':
+      score: 574
+      total: 670
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京师范大学附属实验中学大兴分校
+  school_code: '215010'
+  location:
+    campus: 北京市大兴区北京师范大学附属实验中学大兴分校
+    lat: 39.614463
+    lon: 116.336649
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      score: 475
+      total: 510
+      rank: 151
+    '2024':
+      score: 627
+      total: 670
+      rank: 367
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 北京建筑大学附属中学北京建筑大学附属中学北校区
+  school_code: '215004'
+  location:
+    campus: 北京市大兴区北京建筑大学附属中学
+    lat: 39.724185
+    lon: 116.333683
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京金融街润泽学校
+  school_code: '215017'
+  location:
+    campus: 北京市大兴区北京金融街润泽学校(西北门)
+    lat: 39.790067
+    lon: 116.359443
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 清华附中大兴学校
+  school_code: '215015'
+  location:
+    campus: 北京市大兴区
+    lat: 39.726917
+    lon: 116.341483
+    confidence: mid
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      score: 464
+      total: 510
+      rank: 757
+    '2024':
+      score: 612
+      total: 670
+      rank: 836
+  scores_meta:
+    source: 官方录取分数线（历史 3 年）
+    confidence: high
+- name: 首都师范大学大兴附属中学
+  school_code: '215002'
+  location:
+    campus: 北京市大兴区首都师范大学大兴附属中学
+    lat: 39.719641
+    lon: 116.356545
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}

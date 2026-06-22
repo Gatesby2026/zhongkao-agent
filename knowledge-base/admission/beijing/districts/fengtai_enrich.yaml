@@ -1,0 +1,148 @@
+# 丰台区 2024/2025 普通高中统招录取最低分 + 区排名（位次）
+# 数据为网传/家长分享口径（bjeea 官方不直接公布逐校统招线），非 T1。
+# 2025 总分=510；2024 总分=660。
+# scores_conf: medium = ≥2 独立源互证；low = 仅 1 源或源间标注有分歧。
+# 校名逐字对齐 fengtai_admission_codes.json 官方正名。
+
+schools:
+  北京市第十二中学:
+    scores:
+      "2025": {total: 510, score: 466, rank: 348}
+      # 注：gaokzx 另列一行 469/254（疑为不同专业/批次）；两源均含 466/348，取此为统招本部最低。
+    scores_source: "北京中考信息网 zhongkaobj.cn(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html); 北京高考在线 gaokzx.com(https://www.gaokzx.com/gk/zhongkao/144859.html)"
+    scores_conf: medium
+
+  北京十一学校中堂实验学校:
+    scores:
+      "2025": {total: 510, score: 462, rank: 487}
+    scores_source: "北京中考信息网 zhongkaobj.cn(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html); 北京高考在线 gaokzx.com(https://www.gaokzx.com/gk/zhongkao/144859.html)"
+    scores_conf: medium
+
+  北京钱学森中学:
+    scores:
+      "2025": {total: 510, score: 460, rank: 563}
+      "2024": {total: 660, score: 618, rank: 1123}
+    scores_source: "2025: 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html) + 北京高考在线(https://www.gaokzx.com/gk/zhongkao/144859.html); 2024: 北京高考在线(https://www.gaokzx.com/gk/zhongkao/126166.html) + 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/202410212412.html)"
+    scores_conf: medium
+
+  北京市丰台区第二中学:
+    scores:
+      "2025": {total: 510, score: 447, rank: 1123}
+      # 注：gaokzx 区分"丰台二中实验班"450/994 与"丰台二中"447/1123；取本部普通班(较低)447/1123。
+      #     zhongkaobj 仅列"丰台二中"450/994（疑混入实验班）。本部最低取 447。
+    scores_source: "北京高考在线 gaokzx.com(https://www.gaokzx.com/gk/zhongkao/144859.html); 北京中考信息网 zhongkaobj.cn(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html)"
+    scores_conf: low
+
+  北京市第十八中学:
+    scores:
+      "2025": {total: 510, score: 442, rank: 1370}
+      "2024": {total: 660, score: 604, rank: 1800}
+    scores_source: "2025: 北京高考在线(https://www.gaokzx.com/gk/zhongkao/144859.html)[源间标注有分歧,zhongkaobj同位列447/1123疑错配]; 2024: 北京高考在线(https://www.gaokzx.com/gk/zhongkao/126166.html) + 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/202410212412.html)"
+    scores_conf: low
+
+  北京第五实验学校:
+    scores:
+      "2025": {total: 510, score: 440, rank: 1462}
+    scores_source: "北京中考信息网 zhongkaobj.cn(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html); 北京高考在线 gaokzx.com(https://www.gaokzx.com/gk/zhongkao/144859.html)"
+    scores_conf: medium
+
+  北京师范大学实验中学丰台学校:
+    scores:
+      "2025": {total: 510, score: 433, rank: 1793}
+      "2024": {total: 660, score: 602, rank: 1895}
+    scores_source: "2025: 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html) + 北京高考在线(https://www.gaokzx.com/gk/zhongkao/144859.html); 2024: 北京高考在线(https://www.gaokzx.com/gk/zhongkao/126166.html) + 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/202410212412.html)"
+    scores_conf: medium
+
+  北京市首都师范大学附属丽泽中学:
+    scores:
+      "2025": {total: 510, score: 428, rank: 2038}
+      "2024": {total: 660, score: 595, rank: 2237}
+    scores_source: "2025: 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html) + 北京高考在线(https://www.gaokzx.com/gk/zhongkao/144859.html); 2024: 北京高考在线(https://www.gaokzx.com/gk/zhongkao/126166.html) + 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/202410212412.html)"
+    scores_conf: medium
+
+  北京市丰台区第八中学:
+    scores:
+      "2025": {total: 510, score: 427, rank: 2095}
+      "2024": {total: 660, score: 588, rank: 2505}
+    scores_source: "2025: 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html) + 北京高考在线(https://www.gaokzx.com/gk/zhongkao/144859.html); 2024: 北京高考在线(https://www.gaokzx.com/gk/zhongkao/126166.html) + 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/202410212412.html)"
+    scores_conf: medium
+
+  北京市赵登禹学校:
+    scores:
+      "2025": {total: 510, score: 426, rank: 2140}
+      "2024": {total: 660, score: 587, rank: 2552}
+    scores_source: "2025: 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html) + 北京高考在线(https://www.gaokzx.com/gk/zhongkao/144859.html); 2024: 北京高考在线(https://www.gaokzx.com/gk/zhongkao/126166.html) + 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/202410212412.html)"
+    scores_conf: medium
+
+  中国人民大学附属中学丰台学校:
+    scores:
+      "2025": {total: 510, score: 423, rank: 2265}
+      "2024": {total: 660, score: 599, rank: 2034}
+    scores_source: "2025: 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html) + 北京高考在线(https://www.gaokzx.com/gk/zhongkao/144859.html); 2024: 北京高考在线(https://www.gaokzx.com/gk/zhongkao/126166.html) + 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/202410212412.html)"
+    scores_conf: medium
+
+  北京教育学院附属丰台实验学校:
+    scores:
+      "2025": {total: 510, score: 422, rank: 2311}
+      "2024": {total: 660, score: 584, rank: 2687}
+    scores_source: "2025: 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html) + 北京高考在线(https://www.gaokzx.com/gk/zhongkao/144859.html); 2024: 北京高考在线(https://www.gaokzx.com/gk/zhongkao/126166.html) + 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/202410212412.html)"
+    scores_conf: medium
+
+  北京市第十中学:
+    scores:
+      "2025": {total: 510, score: 421, rank: 2355}
+      "2024": {total: 660, score: 598, rank: 2078}
+    scores_source: "2025: 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html) + 北京高考在线(https://www.gaokzx.com/gk/zhongkao/144859.html); 2024: 北京高考在线(https://www.gaokzx.com/gk/zhongkao/126166.html) + 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/202410212412.html)"
+    scores_conf: medium
+
+  北京市第十中学晓月苑分校:
+    scores:
+      "2025": {total: 510, score: 416, rank: 2532}
+      "2024": {total: 660, score: 580, rank: 2851}
+    scores_source: "2025: 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html) + 北京高考在线(https://www.gaokzx.com/gk/zhongkao/144859.html); 2024: 北京高考在线(https://www.gaokzx.com/gk/zhongkao/126166.html) + 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/202410212412.html)"
+    scores_conf: medium
+
+  北京市丰台区外国语学校:
+    scores:
+      "2025": {total: 510, score: 415, rank: 2569}
+    scores_source: "北京中考信息网 zhongkaobj.cn(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html); 北京高考在线 gaokzx.com(https://www.gaokzx.com/gk/zhongkao/144859.html)"
+    scores_conf: medium
+
+  中央民族大学附属中学丰台实验学校:
+    scores:
+      "2025": {total: 510, score: 412, rank: 2680}
+    scores_source: "北京中考信息网 zhongkaobj.cn(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html); 北京高考在线 gaokzx.com(https://www.gaokzx.com/gk/zhongkao/144859.html)"
+    scores_conf: medium
+
+  中国教育科学研究院丰台实验学校:
+    scores:
+      "2025": {total: 510, score: 411, rank: 2708}
+      "2024": {total: 660, score: 572, rank: 3179}
+    scores_source: "2025: 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html) + 北京高考在线(https://www.gaokzx.com/gk/zhongkao/144859.html); 2024: 北京高考在线(https://www.gaokzx.com/gk/zhongkao/126166.html) + 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/202410212412.html) [源用'中国教育研究院丰台实验学校'指代,对应官方正名]"
+    scores_conf: medium
+
+  北京市丰台区太平桥学校:
+    scores:
+      "2025": {total: 510, score: 407, rank: 2846}
+      "2024": {total: 660, score: 566, rank: 3396}
+    scores_source: "2025: 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html) + 北京高考在线(https://www.gaokzx.com/gk/zhongkao/144859.html); 2024: 北京高考在线(https://www.gaokzx.com/gk/zhongkao/126166.html) + 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/202410212412.html)"
+    scores_conf: medium
+
+  首都经济贸易大学附属中学:
+    scores:
+      "2025": {total: 510, score: 405, rank: 2901}
+      "2024": {total: 660, score: 563, rank: 3499}
+    scores_source: "2025: 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html) + 北京高考在线(https://www.gaokzx.com/gk/zhongkao/144859.html); 2024: 北京高考在线(https://www.gaokzx.com/gk/zhongkao/126166.html) + 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/202410212412.html) [源用'首经贸附中']"
+    scores_conf: medium
+
+  首都师范大学附属云岗中学:
+    scores:
+      "2025": {total: 510, score: 401, rank: 3028}
+    scores_source: "北京中考信息网 zhongkaobj.cn(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html); 北京高考在线 gaokzx.com(https://www.gaokzx.com/gk/zhongkao/144859.html)"
+    scores_conf: medium
+
+  北京市大成学校:
+    scores:
+      "2025": {total: 510, score: 394, rank: 3222}
+    scores_source: "北京中考信息网 zhongkaobj.cn(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html) [仅 1 源含此行,gaokzx 表止于云岗]"
+    scores_conf: low

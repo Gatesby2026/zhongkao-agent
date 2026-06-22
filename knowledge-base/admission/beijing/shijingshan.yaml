@@ -1,0 +1,225 @@
+meta:
+  quality_status: assembled
+  source: 统招计划(codes)+高德坐标+历史录取线(官方/网传)+民间特色/高考
+  updated: '2026-06-22'
+  builder: build_full_district.py
+  note: 对标朝阳 schema 自动装配;录取线缺失或低置信处以 scores_meta 标注。
+district: 石景山区
+region: 北京市
+schools:
+- name: 人大附中石景山学校
+  school_code: '207005'
+  location:
+    campus: 北京市石景山区人大附中石景山学校
+    lat: 39.964498
+    lon: 116.130934
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      score: 410
+      total: 510
+      rank: 1237
+  scores_meta:
+    source: '北京高考在线 gaokzx.com(2025: https://www.gaokzx.com/gk/zhongkao/144973.html)'
+    confidence: low
+- name: 北京大学附属中学石景山学校
+  school_code: '107003'
+  location:
+    campus: 北京市石景山区北京大学附属中学(石景山学校)
+    lat: 39.949161
+    lon: 116.190582
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 优质高中（示范/特色）
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      score: 454
+      total: 510
+      rank: 412
+    '2024':
+      score: 607
+      total: 670
+      rank: 639
+  scores_meta:
+    source: '北京高考在线 gaokzx.com(2025: https://www.gaokzx.com/gk/zhongkao/144973.html; 2024: https://www.gaokzx.com/gk/zhongkao/126167.html);
+      北京中考信息网 zhongkaobj.cn(2024: https://www.zhongkaobj.cn/lqfsx/qitaqu/202410212432.html)'
+    confidence: low
+- name: 北京市京源学校
+  school_code: '207003'
+  location:
+    campus: 北京市石景山区北京市京源学校
+    lat: 39.897808
+    lon: 116.212548
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      score: 458
+      total: 510
+      rank: 386
+    '2024':
+      score: 614
+      total: 670
+      rank: 502
+  scores_meta:
+    source: '北京高考在线 gaokzx.com(2025: https://www.gaokzx.com/gk/zhongkao/144973.html; 2024: https://www.gaokzx.com/gk/zhongkao/126167.html);
+      北京中考信息网 zhongkaobj.cn(2024: https://www.zhongkaobj.cn/lqfsx/qitaqu/202410212432.html)'
+    confidence: low
+- name: 北京市古城中学
+  school_code: '207001'
+  location:
+    campus: 北京市石景山区北京市古城中学
+    lat: 39.9098
+    lon: 116.191755
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      score: 411
+      total: 510
+      rank: 1217
+    '2024':
+      score: 560
+      total: 670
+      rank: 1429
+  scores_meta:
+    source: '北京高考在线 gaokzx.com(2025: https://www.gaokzx.com/gk/zhongkao/144973.html; 2024: https://www.gaokzx.com/gk/zhongkao/126167.html);
+      北京中考信息网 zhongkaobj.cn(2024: https://www.zhongkaobj.cn/lqfsx/qitaqu/202410212432.html)'
+    confidence: low
+- name: 北京市石景山区中杉学校
+  school_code: '207011'
+  location:
+    campus: 北京市石景山区中杉学校
+    lat: 39.933674
+    lon: 116.157585
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
+- name: 北京市第九中学
+  school_code: '107001'
+  location:
+    campus: 北京市石景山区北京市第九中学
+    lat: 39.934455
+    lon: 116.164991
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 优质高中（示范/特色）
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      score: 434
+      total: 510
+      rank: 823
+    '2024':
+      score: 589
+      total: 670
+      rank: 987
+  scores_meta:
+    source: '北京高考在线 gaokzx.com(2025: https://www.gaokzx.com/gk/zhongkao/144973.html; 2024: https://www.gaokzx.com/gk/zhongkao/126167.html);
+      北京中考信息网 zhongkaobj.cn(2024: https://www.zhongkaobj.cn/lqfsx/qitaqu/202410212432.html)'
+    confidence: low
+- name: 北京市黄庄职业高中石景山鲁谷东街
+  school_code: '207006'
+  location:
+    campus: 北京市石景山区北京市黄庄职业高中
+    lat: 39.89421
+    lon: 116.234426
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      score: 386
+      total: 510
+      rank: 1484
+  scores_meta:
+    source: '北京高考在线 gaokzx.com(2025: https://www.gaokzx.com/gk/zhongkao/144973.html,源标''黄庄职高(综合高中班)'')'
+    confidence: low
+- name: 北京景山学校远洋分校
+  school_code: '207004'
+  location:
+    campus: 北京市石景山区北京景山学校远洋分校(西校区)
+    lat: 39.898183
+    lon: 116.233128
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      score: 456
+      total: 510
+      rank: 369
+    '2024':
+      score: 608
+      total: 670
+      rank: 618
+  scores_meta:
+    source: '北京高考在线 gaokzx.com(2025: https://www.gaokzx.com/gk/zhongkao/144973.html; 2024: https://www.gaokzx.com/gk/zhongkao/126167.html);
+      北京中考信息网 zhongkaobj.cn(2024: https://www.zhongkaobj.cn/lqfsx/qitaqu/202410212432.html)'
+    confidence: low
+- name: 首都师范大学附属苹果园中学
+  school_code: '107002'
+  location:
+    campus: 北京市石景山区首都师范大学附属苹果园中学(西南门)
+    lat: 39.930216
+    lon: 116.192117
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 优质高中（示范/特色）
+  note: ''
+  features: {}
+  gaokao: {}
+  scores:
+    '2025':
+      score: 421
+      total: 510
+      rank: 1055
+    '2024':
+      score: 564
+      total: 670
+      rank: 1361
+  scores_meta:
+    source: '北京高考在线 gaokzx.com(2025: https://www.gaokzx.com/gk/zhongkao/144973.html; 2024: https://www.gaokzx.com/gk/zhongkao/126167.html);
+      北京中考信息网 zhongkaobj.cn(2024: https://www.zhongkaobj.cn/lqfsx/qitaqu/202410212432.html)'
+    confidence: low
+- name: 首钢集团有限公司矿业公司职工子弟学校河北省迁安市滨河村首钢集团有限公司矿业公司职工子弟学校
+  school_code: '207002'
+  location:
+    campus: 北京市石景山区首钢集团
+    lat: 39.908157
+    lon: 116.170796
+    confidence: high
+    source: 高德 geocode（统招报到校区，待电话核实）
+  level: 普通高中
+  note: ''
+  features: {}
+  gaokao: {}
+  scores: {}
