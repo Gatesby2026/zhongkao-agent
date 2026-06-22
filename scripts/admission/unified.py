@@ -134,6 +134,10 @@ def _uid(code, type_, name) -> str:
 def build_unified(result: dict) -> list:
     """从 build_result 的结果片段拼出 schools_unified[]。"""
     out, by_name = [], {}
+    # 冲稳保卡片上已挂的 pred_2026(非朝阳为按最近年份位次合成)→ 名字映射,补到 unified
+    band_pred = {c["name"]: c["pred_2026"]
+                 for cards in (result.get("bands") or {}).values()
+                 for c in cards if c.get("pred_2026")}
     # 公办坐标/地图显示属性(颜色/档位/full|small)在 result.points 里，按名取出补进 unified，
     # 使 schools_unified 成为地图的唯一数据源。
     pts = {p.get("name"): p for p in (result.get("points") or [])}
@@ -283,7 +287,8 @@ def build_unified(result: dict) -> list:
             s["line_trend"] = t      # 录取位次趋势/2026区间(T3),按 uid 挂载
         import re as _re
         _bn = _re.sub(r"[（(].*", "", s["name"]).strip()   # 去校区后缀的基名
-        pp = _pred2026().get(s["name"]) or _pred2026().get(_bn)  # 校区→主校 pred 兜底
+        pp = _pred2026().get(s["name"]) or _pred2026().get(_bn) \
+            or band_pred.get(s["name"])    # 非朝阳:用卡片合成的历史位次 pred 兜底
         if pp:
             s["pred_2026"] = pp      # 2026预估录取位次(核心依据),按校名挂载
         v = va.get(s["uid"])

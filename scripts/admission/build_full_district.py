@@ -239,6 +239,19 @@ def build(py):
             rec["scores_meta"] = {"source": sc_src, "confidence": sc_conf or "low"}
         elif sc_official and scores:
             rec["scores_meta"] = {"source": "官方录取分数线（历史 3 年）", "confidence": "high"}
+        # 2026 预估位次:非朝阳无模型预测,用最近一年录取位次作代理(2026≈最近年),honest 标注。
+        # 朝阳走 ts/pred_2026.json 模型,这里不覆盖。
+        pred = None
+        for y in sorted(scores, reverse=True):
+            rk = scores[y].get("rank")
+            if rk:
+                rk = int(rk)
+                pred = {"rank": rk, "lo": round(rk * 0.88), "hi": round(rk * 1.12),
+                        "conf": (sc_conf or ("high" if sc_official else "low")),
+                        "method": "hist", "base_year": y}
+                break
+        if pred:
+            rec["pred_2026"] = pred
         schools.append(rec)
 
     n_score = sum(1 for s in schools if s["scores"])

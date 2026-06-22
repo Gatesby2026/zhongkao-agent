@@ -103,6 +103,13 @@ schools:
     source: '北京中考信息网(zhongkaobj) — 2025北京中考分数揭秘(内含2024各区逐校统招线表): 怀柔区 一零一中学怀柔分校 616 / 区排273 / 区考生1549 / 录取率17.62%; 北京高考在线(gaokzx)检索结果:
       一零一中怀柔分校2024年高中部统招录取分数线616分; 怀柔区2024一分一段表(bendibao/gaokzx)交叉核验: 616分累计人数=273, 印证rank=273'
     confidence: medium
+  pred_2026:
+    rank: 273
+    lo: 240
+    hi: 306
+    conf: medium
+    method: hist
+    base_year: '2024'
 - name: 北京怀柔索兰诺中学
   school_code: '216005'
   location:

@@ -243,6 +243,13 @@ schools:
   scores_meta:
     source: 自主选拔在线 2025 中考参考(含 2024 昌平录取线区排名); 北京中考信息网 近三年各高中录取线及区排名变化
     confidence: medium
+  pred_2026:
+    rank: 512
+    lo: 451
+    hi: 573
+    conf: medium
+    method: hist
+    base_year: '2024'
 - name: 北京市昌平区第二中学
   school_code: '114002'
   location:
@@ -277,6 +284,13 @@ schools:
   scores_meta:
     source: 北京中考信息网 2025 昌平等多区统招线及区排名汇总; 北京高考在线 2025 各区高中校分数及排名; 自主选拔在线 2025 中考参考(含 2024 昌平录取线区排名); 北京中考信息网 近三年各高中录取线及区排名变化
     confidence: medium
+  pred_2026:
+    rank: 263
+    lo: 231
+    hi: 295
+    conf: medium
+    method: hist
+    base_year: '2025'
 - name: 北京市私立汇佳学校
   school_code: '214022'
   location:
@@ -323,6 +337,13 @@ schools:
   scores_meta:
     source: 北京中考信息网 近三年各高中录取线及区排名变化
     confidence: low
+  pred_2026:
+    rank: 2550
+    lo: 2244
+    hi: 2856
+    conf: low
+    method: hist
+    base_year: '2024'
 - name: 北京市第一六一中学回龙观学校
   school_code: '214014'
   location:
@@ -348,6 +369,13 @@ schools:
   scores_meta:
     source: 自主选拔在线 2025 中考参考(含 2024 昌平录取线区排名); 北京中考信息网 近三年各高中录取线及区排名变化
     confidence: medium
+  pred_2026:
+    rank: 2024
+    lo: 1781
+    hi: 2267
+    conf: medium
+    method: hist
+    base_year: '2024'
 - name: 北京市第十五中学南口学校
   school_code: '214009'
   location:
@@ -377,6 +405,13 @@ schools:
   scores_meta:
     source: 北京中考信息网 2025 昌平等多区统招线及区排名汇总; 北京中考信息网 近三年各高中录取线及区排名变化
     confidence: low
+  pred_2026:
+    rank: 2234
+    lo: 1966
+    hi: 2502
+    conf: low
+    method: hist
+    base_year: '2025'
 - name: 北京师范大学昌平附属学校
   school_code: '214013'
   location:
@@ -404,6 +439,13 @@ schools:
   scores_meta:
     source: 自主选拔在线 2025 中考参考(含 2024 昌平录取线区排名)
     confidence: low
+  pred_2026:
+    rank: 1491
+    lo: 1312
+    hi: 1670
+    conf: low
+    method: hist
+    base_year: '2024'
 - name: 北京师范大学第二附属中学未来科学城学校
   school_code: '214012'
   location:
@@ -430,6 +472,13 @@ schools:
   scores_meta:
     source: 自主选拔在线 2025 中考参考(含 2024 昌平录取线区排名); 北京中考信息网 近三年各高中录取线及区排名变化
     confidence: medium
+  pred_2026:
+    rank: 1302
+    lo: 1146
+    hi: 1458
+    conf: medium
+    method: hist
+    base_year: '2024'
 - name: 北京王府学校
   school_code: '214025'
   location:
@@ -476,6 +525,13 @@ schools:
   scores_meta:
     source: 自主选拔在线 2025 中考参考(含 2024 昌平录取线区排名); 北京中考信息网 近三年各高中录取线及区排名变化
     confidence: medium
+  pred_2026:
+    rank: 1862
+    lo: 1639
+    hi: 2085
+    conf: medium
+    method: hist
+    base_year: '2024'
 - name: 首都师范大学附属中学昌平学校
   school_code: '214008'
   location:
@@ -501,6 +557,13 @@ schools:
   scores_meta:
     source: 自主选拔在线 2025 中考参考(含 2024 昌平录取线区排名); 北京中考信息网 近三年各高中录取线及区排名变化
     confidence: medium
+  pred_2026:
+    rank: 2602
+    lo: 2290
+    hi: 2914
+    conf: medium
+    method: hist
+    base_year: '2024'
 - name: 首都师范大学附属回龙观育新学校
   school_code: '214007'
   location:
@@ -530,3 +593,10 @@ schools:
   scores_meta:
     source: 自主选拔在线 2025 中考参考(含 2024 昌平录取线区排名); 北京中考信息网 近三年各高中录取线及区排名变化
     confidence: medium
+  pred_2026:
+    rank: 914
+    lo: 804
+    hi: 1024
+    conf: medium
+    method: hist
+    base_year: '2024'

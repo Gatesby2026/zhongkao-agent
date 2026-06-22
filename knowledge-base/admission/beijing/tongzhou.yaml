@@ -58,6 +58,13 @@ schools:
     source: 北京高考在线 gaokzx.com(https://www.gaokzx.com/gk/zhongkao/144865.html 2025; https://www.gaokzx.com/gk/zhongkao/131935.html
       2024); 北京中考信息网 zhongkaobj.cn(https://www.zhongkaobj.cn/fenshuxian/qitaqu/202410222442.html 2024)
     confidence: medium
+  pred_2026:
+    rank: 792
+    lo: 697
+    hi: 887
+    conf: medium
+    method: hist
+    base_year: '2025'
 - name: 北京市通州区张家湾中学
   school_code: '212005'
   location:
@@ -88,6 +95,13 @@ schools:
     source: 北京高考在线 gaokzx.com(https://www.gaokzx.com/gk/zhongkao/144865.html 2025; https://www.gaokzx.com/gk/zhongkao/131935.html
       2024); 北京中考信息网 zhongkaobj.cn(https://www.zhongkaobj.cn/fenshuxian/qitaqu/202410222442.html 2024)
     confidence: medium
+  pred_2026:
+    rank: 4661
+    lo: 4102
+    hi: 5220
+    conf: medium
+    method: hist
+    base_year: '2025'
 - name: 北京市通州区永乐店中学
   school_code: '112002'
   location:
@@ -118,6 +132,13 @@ schools:
     source: 北京高考在线 gaokzx.com(https://www.gaokzx.com/gk/zhongkao/144865.html 2025; https://www.gaokzx.com/gk/zhongkao/131935.html
       2024); 北京中考信息网 zhongkaobj.cn(https://www.zhongkaobj.cn/fenshuxian/qitaqu/202410222442.html 2024)
     confidence: medium
+  pred_2026:
+    rank: 4278
+    lo: 3765
+    hi: 4791
+    conf: medium
+    method: hist
+    base_year: '2025'
 - name: 北京市通州区潞河中学
   school_code: '112001'
   location:
@@ -153,6 +174,13 @@ schools:
       2024); 北京中考信息网 zhongkaobj.cn(https://www.zhongkaobj.cn/fenshuxian/qitaqu/202410222442.html 2024); 知乎数据精算贴佐证 2025 潞河
       475/区排364(https://zhuanlan.zhihu.com/p/1970174582414606595)
     confidence: medium
+  pred_2026:
+    rank: 364
+    lo: 320
+    hi: 408
+    conf: medium
+    method: hist
+    base_year: '2025'
 - name: 北京市通州区私立树人学校
   school_code: '212021'
   location:
@@ -206,6 +234,13 @@ schools:
     source: 北京高考在线 gaokzx.com(https://www.gaokzx.com/gk/zhongkao/144865.html 2025; https://www.gaokzx.com/gk/zhongkao/131935.html
       2024); 北京中考信息网 zhongkaobj.cn(https://www.zhongkaobj.cn/fenshuxian/qitaqu/202410222442.html 2024)
     confidence: medium
+  pred_2026:
+    rank: 1961
+    lo: 1726
+    hi: 2196
+    conf: medium
+    method: hist
+    base_year: '2025'
 - name: 北京德闳明德高中
   school_code: '212022'
   location:
@@ -269,6 +304,13 @@ schools:
   scores_meta:
     source: 北京高考在线 gaokzx.com(https://www.gaokzx.com/gk/zhongkao/144865.html 2025)
     confidence: low
+  pred_2026:
+    rank: 792
+    lo: 697
+    hi: 887
+    conf: low
+    method: hist
+    base_year: '2025'
 - name: 北京通州华仁学
   school_code: '212011'
   location:

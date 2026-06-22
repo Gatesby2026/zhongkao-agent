@@ -27,6 +27,13 @@ schools:
   scores_meta:
     source: 北京高考在线 gaokzx《2025北京房山区中考录取分数线及区排名》(四中房山分校); 北京中考信息网 zhongkaobj《2025北京中考各分段择校指南》(450-459 区间含四中房山分校)
     confidence: medium
+  pred_2026:
+    rank: 715
+    lo: 629
+    hi: 801
+    conf: medium
+    method: hist
+    base_year: '2025'
 - name: 北京市博文学校
   school_code: '211018'
   location:
@@ -73,6 +80,13 @@ schools:
   scores_meta:
     source: 北京高考在线 gaokzx《2025北京房山区中考录取分数线及区排名》(周口店中学); 北京中考信息网 zhongkaobj《2025北京中考各分段择校指南》(410-419 区间含周口店中学)
     confidence: medium
+  pred_2026:
+    rank: 2556
+    lo: 2249
+    hi: 2863
+    conf: medium
+    method: hist
+    base_year: '2025'
 - name: 北京市房山区坨里中学
   school_code: '211006'
   location:
@@ -99,6 +113,13 @@ schools:
   scores_meta:
     source: 北京高考在线 gaokzx《2025北京房山区中考录取分数线及区排名》(房山坨里中学)
     confidence: low
+  pred_2026:
+    rank: 2815
+    lo: 2477
+    hi: 3153
+    conf: low
+    method: hist
+    base_year: '2025'
 - name: 北京市房山区实验中学
   school_code: '211002'
   location:
@@ -123,6 +144,13 @@ schools:
   scores_meta:
     source: 北京高考在线 gaokzx《2025北京房山区中考录取分数线及区排名》(房山实验中学); 北京中考信息网 zhongkaobj《2025北京中考各分段择校指南》(410-419 区间含房山实验中学)
     confidence: medium
+  pred_2026:
+    rank: 2358
+    lo: 2075
+    hi: 2641
+    conf: medium
+    method: hist
+    base_year: '2025'
 - name: 北京市房山区房山中学
   school_code: '111001'
   location:
@@ -149,6 +177,13 @@ schools:
   scores_meta:
     source: 北京高考在线 gaokzx《2025北京房山区中考录取分数线及区排名》(房山中学); 北京中考信息网 zhongkaobj《2025北京中考各分段择校指南》(420-429 区间含房山中学)
     confidence: medium
+  pred_2026:
+    rank: 1929
+    lo: 1698
+    hi: 2160
+    conf: medium
+    method: hist
+    base_year: '2025'
 - name: 北京市房山区良乡中学
   school_code: '111002'
   location:
@@ -180,6 +215,13 @@ schools:
   scores_meta:
     source: 北京高考在线 gaokzx《2025北京房山区中考录取分数线及区排名》; 北京中考信息网 zhongkaobj《2025北京中考各分段择校指南》(440-449 区间含良乡); 北京中考信息网 zhongkaobj《近三年各高中录取分数线和区排名变化情况汇总》
     confidence: low
+  pred_2026:
+    rank: 1148
+    lo: 1010
+    hi: 1286
+    conf: low
+    method: hist
+    base_year: '2025'
 - name: 北京市燕山职业学校
   school_code: '210001'
   location:
@@ -241,6 +283,13 @@ schools:
   scores_meta:
     source: 北京高考在线 gaokzx《2025北京房山区中考录取分数线及区排名》(北师大良乡附属中学); 北京中考信息网 zhongkaobj《2025北京中考各分段择校指南》(460-469 区间含北师大良乡附中)
     confidence: medium
+  pred_2026:
+    rank: 394
+    lo: 347
+    hi: 441
+    conf: medium
+    method: hist
+    base_year: '2025'
 - name: 北京理工大学附属实验学校
   school_code: '211012'
   location:
@@ -268,6 +317,13 @@ schools:
   scores_meta:
     source: 北京高考在线 gaokzx《2025北京房山区中考录取分数线及区排名》(理工附实验学校); 北京中考信息网 zhongkaobj《2025北京中考各分段择校指南》(450-459 区间含理工附实验)
     confidence: medium
+  pred_2026:
+    rank: 599
+    lo: 527
+    hi: 671
+    conf: medium
+    method: hist
+    base_year: '2025'
 - name: 首都师范大学未来实验学校
   school_code: '211005'
   location:
@@ -292,6 +348,13 @@ schools:
   scores_meta:
     source: 北京高考在线 gaokzx《2025北京房山区中考录取分数线及区排名》(首师大未来实验学校)
     confidence: low
+  pred_2026:
+    rank: 2995
+    lo: 2636
+    hi: 3354
+    conf: low
+    method: hist
+    base_year: '2025'
 - name: 首都师范大学附属中学实验学校
   school_code: '211013'
   location:
@@ -323,6 +386,13 @@ schools:
   scores_meta:
     source: 北京高考在线 gaokzx《2025北京房山区中考录取分数线及区排名》(首师附实验学校); 北京中考信息网 zhongkaobj《2025北京中考各分段择校指南》(440-449 区间含首师附实验); 北京中考信息网 zhongkaobj《近三年各高中录取分数线和区排名变化情况汇总》(首师附房山实验学校)
     confidence: low
+  pred_2026:
+    rank: 1323
+    lo: 1164
+    hi: 1482
+    conf: low
+    method: hist
+    base_year: '2025'
 - name: 首都师范大学附属房山学校
   school_code: '211011'
   location:
@@ -355,3 +425,10 @@ schools:
   scores_meta:
     source: 北京高考在线 gaokzx《2025北京房山区中考录取分数线及区排名》(首师附房山学校); 北京中考信息网 zhongkaobj《近三年各高中录取分数线和区排名变化情况汇总》(首师大附房山学校)
     confidence: low
+  pred_2026:
+    rank: 3269
+    lo: 2877
+    hi: 3661
+    conf: low
+    method: hist
+    base_year: '2025'

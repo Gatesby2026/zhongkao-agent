@@ -39,6 +39,13 @@ schools:
     source: '2025: 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html) + 北京高考在线(https://www.gaokzx.com/gk/zhongkao/144859.html);
       2024: 北京高考在线(https://www.gaokzx.com/gk/zhongkao/126166.html) + 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/202410212412.html)'
     confidence: medium
+  pred_2026:
+    rank: 2265
+    lo: 1993
+    hi: 2537
+    conf: medium
+    method: hist
+    base_year: '2025'
 - name: 中国教育科学研究院丰台实验学校
   school_code: '206007'
   location:
@@ -71,6 +78,13 @@ schools:
       2024: 北京高考在线(https://www.gaokzx.com/gk/zhongkao/126166.html) + 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/202410212412.html)
       [源用''中国教育研究院丰台实验学校''指代,对应官方正名]'
     confidence: medium
+  pred_2026:
+    rank: 2708
+    lo: 2383
+    hi: 3033
+    conf: medium
+    method: hist
+    base_year: '2025'
 - name: 中央民族大学附属中学丰台实验学校
   school_code: '206023'
   location:
@@ -98,6 +112,13 @@ schools:
   scores_meta:
     source: 北京中考信息网 zhongkaobj.cn(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html); 北京高考在线 gaokzx.com(https://www.gaokzx.com/gk/zhongkao/144859.html)
     confidence: medium
+  pred_2026:
+    rank: 2680
+    lo: 2358
+    hi: 3002
+    conf: medium
+    method: hist
+    base_year: '2025'
 - name: 北京丽泽国际学校
   school_code: '206021'
   location:
@@ -140,6 +161,13 @@ schools:
   scores_meta:
     source: 北京中考信息网 zhongkaobj.cn(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html); 北京高考在线 gaokzx.com(https://www.gaokzx.com/gk/zhongkao/144859.html)
     confidence: medium
+  pred_2026:
+    rank: 487
+    lo: 429
+    hi: 545
+    conf: medium
+    method: hist
+    base_year: '2025'
 - name: 北京市丰台区外国语学校
   school_code: '206022'
   location:
@@ -166,6 +194,13 @@ schools:
   scores_meta:
     source: 北京中考信息网 zhongkaobj.cn(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html); 北京高考在线 gaokzx.com(https://www.gaokzx.com/gk/zhongkao/144859.html)
     confidence: medium
+  pred_2026:
+    rank: 2569
+    lo: 2261
+    hi: 2877
+    conf: medium
+    method: hist
+    base_year: '2025'
 - name: 北京市丰台区太平桥学校
   school_code: '206027'
   location:
@@ -197,6 +232,13 @@ schools:
     source: '2025: 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html) + 北京高考在线(https://www.gaokzx.com/gk/zhongkao/144859.html);
       2024: 北京高考在线(https://www.gaokzx.com/gk/zhongkao/126166.html) + 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/202410212412.html)'
     confidence: medium
+  pred_2026:
+    rank: 2846
+    lo: 2504
+    hi: 3188
+    conf: medium
+    method: hist
+    base_year: '2025'
 - name: 北京市丰台区怡海中学
   school_code: '206016'
   location:
@@ -267,6 +309,13 @@ schools:
   scores_meta:
     source: 北京高考在线 gaokzx.com(https://www.gaokzx.com/gk/zhongkao/144859.html); 北京中考信息网 zhongkaobj.cn(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html)
     confidence: low
+  pred_2026:
+    rank: 1123
+    lo: 988
+    hi: 1258
+    conf: low
+    method: hist
+    base_year: '2025'
 - name: 北京市丰台区第八中学
   school_code: '206026'
   location:
@@ -299,6 +348,13 @@ schools:
     source: '2025: 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html) + 北京高考在线(https://www.gaokzx.com/gk/zhongkao/144859.html);
       2024: 北京高考在线(https://www.gaokzx.com/gk/zhongkao/126166.html) + 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/202410212412.html)'
     confidence: medium
+  pred_2026:
+    rank: 2095
+    lo: 1844
+    hi: 2346
+    conf: medium
+    method: hist
+    base_year: '2025'
 - name: 北京市大成学校
   school_code: '206010'
   location:
@@ -329,6 +385,13 @@ schools:
   scores_meta:
     source: 北京中考信息网 zhongkaobj.cn(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html) [仅 1 源含此行,gaokzx 表止于云岗]
     confidence: low
+  pred_2026:
+    rank: 3222
+    lo: 2835
+    hi: 3609
+    conf: low
+    method: hist
+    base_year: '2025'
 - name: 北京市第十中学
   school_code: '106002'
   location:
@@ -363,6 +426,13 @@ schools:
     source: '2025: 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html) + 北京高考在线(https://www.gaokzx.com/gk/zhongkao/144859.html);
       2024: 北京高考在线(https://www.gaokzx.com/gk/zhongkao/126166.html) + 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/202410212412.html)'
     confidence: medium
+  pred_2026:
+    rank: 2355
+    lo: 2072
+    hi: 2638
+    conf: medium
+    method: hist
+    base_year: '2025'
 - name: 北京市第十中学晓月苑分校
   school_code: '206002'
   location:
@@ -388,6 +458,13 @@ schools:
     source: '2025: 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html) + 北京高考在线(https://www.gaokzx.com/gk/zhongkao/144859.html);
       2024: 北京高考在线(https://www.gaokzx.com/gk/zhongkao/126166.html) + 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/202410212412.html)'
     confidence: medium
+  pred_2026:
+    rank: 2532
+    lo: 2228
+    hi: 2836
+    conf: medium
+    method: hist
+    base_year: '2025'
 - name: 北京市第十二中学
   school_code: '106001'
   location:
@@ -419,6 +496,13 @@ schools:
   scores_meta:
     source: 北京中考信息网 zhongkaobj.cn(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html); 北京高考在线 gaokzx.com(https://www.gaokzx.com/gk/zhongkao/144859.html)
     confidence: medium
+  pred_2026:
+    rank: 348
+    lo: 306
+    hi: 390
+    conf: medium
+    method: hist
+    base_year: '2025'
 - name: 北京市第十八中学
   school_code: '106003'
   location:
@@ -452,6 +536,13 @@ schools:
     source: '2025: 北京高考在线(https://www.gaokzx.com/gk/zhongkao/144859.html)[源间标注有分歧,zhongkaobj同位列447/1123疑错配]; 2024: 北京高考在线(https://www.gaokzx.com/gk/zhongkao/126166.html)
       + 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/202410212412.html)'
     confidence: low
+  pred_2026:
+    rank: 1370
+    lo: 1206
+    hi: 1534
+    conf: low
+    method: hist
+    base_year: '2025'
 - name: 北京市第十八中学蒲芳学校
   school_code: '206003'
   location:
@@ -502,6 +593,13 @@ schools:
     source: '2025: 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html) + 北京高考在线(https://www.gaokzx.com/gk/zhongkao/144859.html);
       2024: 北京高考在线(https://www.gaokzx.com/gk/zhongkao/126166.html) + 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/202410212412.html)'
     confidence: medium
+  pred_2026:
+    rank: 2140
+    lo: 1883
+    hi: 2397
+    conf: medium
+    method: hist
+    base_year: '2025'
 - name: 北京市首都师范大学附属丽泽中学
   school_code: '206006'
   location:
@@ -537,6 +635,13 @@ schools:
     source: '2025: 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html) + 北京高考在线(https://www.gaokzx.com/gk/zhongkao/144859.html);
       2024: 北京高考在线(https://www.gaokzx.com/gk/zhongkao/126166.html) + 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/202410212412.html)'
     confidence: medium
+  pred_2026:
+    rank: 2038
+    lo: 1793
+    hi: 2283
+    conf: medium
+    method: hist
+    base_year: '2025'
 - name: 北京师范大学实验中学丰台学校
   school_code: '206004'
   location:
@@ -570,6 +675,13 @@ schools:
     source: '2025: 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html) + 北京高考在线(https://www.gaokzx.com/gk/zhongkao/144859.html);
       2024: 北京高考在线(https://www.gaokzx.com/gk/zhongkao/126166.html) + 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/202410212412.html)'
     confidence: medium
+  pred_2026:
+    rank: 1793
+    lo: 1578
+    hi: 2008
+    conf: medium
+    method: hist
+    base_year: '2025'
 - name: 北京教育学院附属丰台实验学校
   school_code: '206024'
   location:
@@ -602,6 +714,13 @@ schools:
     source: '2025: 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html) + 北京高考在线(https://www.gaokzx.com/gk/zhongkao/144859.html);
       2024: 北京高考在线(https://www.gaokzx.com/gk/zhongkao/126166.html) + 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/202410212412.html)'
     confidence: medium
+  pred_2026:
+    rank: 2311
+    lo: 2034
+    hi: 2588
+    conf: medium
+    method: hist
+    base_year: '2025'
 - name: 北京第五实验学校
   school_code: '206025'
   location:
@@ -629,6 +748,13 @@ schools:
   scores_meta:
     source: 北京中考信息网 zhongkaobj.cn(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html); 北京高考在线 gaokzx.com(https://www.gaokzx.com/gk/zhongkao/144859.html)
     confidence: medium
+  pred_2026:
+    rank: 1462
+    lo: 1287
+    hi: 1637
+    conf: medium
+    method: hist
+    base_year: '2025'
 - name: 北京钱学森中学
   school_code: '206001'
   location:
@@ -661,6 +787,13 @@ schools:
     source: '2025: 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html) + 北京高考在线(https://www.gaokzx.com/gk/zhongkao/144859.html);
       2024: 北京高考在线(https://www.gaokzx.com/gk/zhongkao/126166.html) + 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/202410212412.html)'
     confidence: medium
+  pred_2026:
+    rank: 563
+    lo: 495
+    hi: 631
+    conf: medium
+    method: hist
+    base_year: '2025'
 - name: 首都师范大学附属云岗中学
   school_code: '206008'
   location:
@@ -689,6 +822,13 @@ schools:
   scores_meta:
     source: 北京中考信息网 zhongkaobj.cn(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html); 北京高考在线 gaokzx.com(https://www.gaokzx.com/gk/zhongkao/144859.html)
     confidence: medium
+  pred_2026:
+    rank: 3028
+    lo: 2665
+    hi: 3391
+    conf: medium
+    method: hist
+    base_year: '2025'
 - name: 首都经济贸易大学附属中学
   school_code: '206005'
   location:
@@ -722,3 +862,10 @@ schools:
       2024: 北京高考在线(https://www.gaokzx.com/gk/zhongkao/126166.html) + 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/202410212412.html)
       [源用''首经贸附中'']'
     confidence: medium
+  pred_2026:
+    rank: 2901
+    lo: 2553
+    hi: 3249
+    conf: medium
+    method: hist
+    base_year: '2025'

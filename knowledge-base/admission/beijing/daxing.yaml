@@ -38,6 +38,13 @@ schools:
     source: 北京高考在线 gaokzx — 2025北京大兴区中考录取分数线及区排名(实际线463/809;另一文档预估460/938口径不同,故单源 low); 北京中考信息网 zhongkaobj — 2024大兴区高中录取分数线&区排名汇总;
       北京小升初网 xschu — 2024年大兴区各高中中考录取分数线
     confidence: low
+  pred_2026:
+    rank: 809
+    lo: 712
+    hi: 906
+    conf: low
+    method: hist
+    base_year: '2025'
 - name: 北京大兴熙诚学校
   school_code: '215018'
   location:
@@ -105,6 +112,13 @@ schools:
   scores_meta:
     source: 北京高考在线 gaokzx — 2025年北京各区高中校预估分数及排名(预估口径,单源 low); 北京中考信息网 zhongkaobj — 2024大兴区高中录取分数线&区排名汇总; 北京小升初网 xschu — 2024年大兴区各高中中考录取分数线
     confidence: low
+  pred_2026:
+    rank: 1353
+    lo: 1191
+    hi: 1515
+    conf: low
+    method: hist
+    base_year: '2025'
 - name: 北京市大兴区旧宫中学
   school_code: '215006'
   location:
@@ -163,6 +177,13 @@ schools:
     source: 北京高考在线 gaokzx — 2025北京大兴区中考录取分数线及区排名; 北京高考在线 gaokzx — 2025年北京各区高中校预估分数及排名(预估468/584,与实际467/632同梯次互证); 北京中考信息网
       zhongkaobj — 2024大兴区高中录取分数线&区排名汇总; 北京小升初网 xschu — 2024年大兴区各高中中考录取分数线
     confidence: medium
+  pred_2026:
+    rank: 632
+    lo: 556
+    hi: 708
+    conf: medium
+    method: hist
+    base_year: '2025'
 - name: 北京市大兴区第三中学
   school_code: '215003'
   location:
@@ -193,6 +214,13 @@ schools:
   scores_meta:
     source: 北京高考在线 gaokzx — 2025年北京各区高中校预估分数及排名(预估口径,单源 low); 育路私立学校招生网 yuloo — 2024年北京大兴区中考录取分数线一览(单源,经检索快照转述;区排名缺失)
     confidence: low
+  pred_2026:
+    rank: 2163
+    lo: 1903
+    hi: 2423
+    conf: low
+    method: hist
+    base_year: '2025'
 - name: 北京市大兴区第二中学
   school_code: '215001'
   location:
@@ -222,6 +250,13 @@ schools:
   scores_meta:
     source: 北京高考在线 gaokzx — 2025年北京各区高中校预估分数及排名(预估口径,单源 low); 育路私立学校招生网 yuloo — 2024年北京大兴区中考录取分数线一览(单源,经检索快照转述;区排名缺失)
     confidence: low
+  pred_2026:
+    rank: 1576
+    lo: 1387
+    hi: 1765
+    conf: low
+    method: hist
+    base_year: '2025'
 - name: 北京市私立君谊中学
   school_code: '215011'
   location:
@@ -271,6 +306,13 @@ schools:
   scores_meta:
     source: 北京高考在线 gaokzx — 2025年北京各区高中校预估分数及排名(预估口径,单源 low); 育路私立学校招生网 yuloo — 2024年北京大兴区中考录取分数线一览(单源,经检索快照转述;区排名缺失)
     confidence: low
+  pred_2026:
+    rank: 1874
+    lo: 1649
+    hi: 2099
+    conf: low
+    method: hist
+    base_year: '2025'
 - name: 北京师范大学附属实验中学大兴分校
   school_code: '215010'
   location:
@@ -303,6 +345,13 @@ schools:
     source: 北京高考在线 gaokzx — 2025北京大兴区中考录取分数线及区排名; 北京高考在线 gaokzx — 2025年北京各区高中校预估分数及排名(实际线475互证;排名为预估口径346,以实际线为准); 北京中考信息网
       zhongkaobj — 2024大兴区高中录取分数线&区排名汇总; 北京小升初网 xschu — 2024年大兴区各高中中考录取分数线; 北京中考在线 zgkao — 2024北师大实验中学大兴分校录取分数线出炉
     confidence: medium
+  pred_2026:
+    rank: 151
+    lo: 133
+    hi: 169
+    conf: medium
+    method: hist
+    base_year: '2025'
 - name: 北京建筑大学附属中学北京建筑大学附属中学北校区
   school_code: '215004'
   location:
@@ -377,6 +426,13 @@ schools:
     source: 北京高考在线 gaokzx — 2025北京大兴区中考录取分数线及区排名; 北京高考在线 gaokzx — 2025年北京各区高中校预估分数及排名(预估464/757与实际一致); 北京中考信息网 zhongkaobj
       — 2024大兴区高中录取分数线&区排名汇总; 北京小升初网 xschu — 2024年大兴区各高中中考录取分数线
     confidence: medium
+  pred_2026:
+    rank: 757
+    lo: 666
+    hi: 848
+    conf: medium
+    method: hist
+    base_year: '2025'
 - name: 首都师范大学大兴附属中学
   school_code: '215002'
   location:

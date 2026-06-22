@@ -1606,8 +1606,8 @@ const tcOptions: string[] = []
 
                 <div v-if="selSchool.pred_2026" class="dp-block dp-pred">
                   <div class="dp-title">📍 2026 录取位次预估（核心依据）</div>
-                  <div class="dp-line"><b class="dp-predv">≈{{ selSchool.pred_2026.rank }}</b> <span class="dp-muted">区间 {{ selSchool.pred_2026.lo }}–{{ selSchool.pred_2026.hi }} · 约前{{ selSchool.pred_2026.pct }}%</span></div>
-                  <div class="dp-line dp-muted">{{ selSchool.pred_2026.method === 'new_anchor' ? '新校锚定' : selSchool.pred_2026.method === 'tongchou_cy_equiv' ? '跨区位次映射(外区线→朝阳口径)' : '百分位法' }} · 可信度 {{ selSchool.pred_2026.conf }} · 7/9出分接你的精确位次→7/13填报即用（各校实线录取后才有，填报当下靠此预测）</div>
+                  <div class="dp-line"><b class="dp-predv">≈{{ selSchool.pred_2026.rank }}</b> <span class="dp-muted">区间 {{ selSchool.pred_2026.lo }}–{{ selSchool.pred_2026.hi }}<template v-if="selSchool.pred_2026.pct"> · 约前{{ selSchool.pred_2026.pct }}%</template></span></div>
+                  <div class="dp-line dp-muted">{{ selSchool.pred_2026.method === 'new_anchor' ? '新校锚定' : selSchool.pred_2026.method === 'tongchou_cy_equiv' ? '跨区位次映射(外区线→朝阳口径)' : selSchool.pred_2026.method === 'hist' ? ('以' + (selSchool.pred_2026.base_year || '最近年') + '录取位次为参考（非模型预测·网传/历史线）') : '百分位法' }} · 可信度 {{ selSchool.pred_2026.conf }} · 7/9出分接你的精确位次→7/13填报即用（各校实线录取后才有，填报当下靠此预测）</div>
                   <div v-if="selSchool.extra && selSchool.extra.cy_equiv" class="dp-line dp-muted">↑此为<b>走统筹门槛</b>(录取位次) · 学校档次≈朝阳第 {{ selSchool.extra.cy_equiv }} 位(线分→朝阳一分一段,全市可比)<span v-if="selSchool.extra.below_control"> · ⚠档次低于门槛,走统筹需≈460反不如统招,常不值</span></div>
                 </div>
 
@@ -1681,9 +1681,10 @@ const tcOptions: string[] = []
                 </div>
 
                 <!-- 学校特色 -->
-                <div v-if="selSchool.features_std || selSchool.features.style" class="dp-block">
+                <div v-if="selSchool.features_std || selSchool.features.style || (selSchool.features.tags && selSchool.features.tags.length)" class="dp-block">
                   <div class="dp-title">学校特色</div>
                   <div v-if="selSchool.features_std" class="dp-line">⭐ <span v-for="(tg, ti) in selSchool.features_std.tags" :key="ti" class="feat-chip">{{ tg }}</span><span v-if="selSchool.features_std.highlight" class="dp-muted"> · {{ selSchool.features_std.highlight }}</span></div>
+                  <div v-else-if="selSchool.features.tags && selSchool.features.tags.length" class="dp-line">⭐ <span v-for="(tg, ti) in selSchool.features.tags" :key="ti" class="feat-chip">{{ tg }}</span></div>
                   <div v-if="selSchool.features.style" class="dp-line">🏫 {{ selSchool.features.style }}</div>
                 </div>
 
@@ -1816,8 +1817,8 @@ const tcOptions: string[] = []
 
                 <div v-if="selSchool.pred_2026" class="dp-block dp-pred">
                   <div class="dp-title">📍 2026 录取位次预估（核心依据）</div>
-                  <div class="dp-line"><b class="dp-predv">≈{{ selSchool.pred_2026.rank }}</b> <span class="dp-muted">区间 {{ selSchool.pred_2026.lo }}–{{ selSchool.pred_2026.hi }} · 约前{{ selSchool.pred_2026.pct }}%</span></div>
-                  <div class="dp-line dp-muted">{{ selSchool.pred_2026.method === 'new_anchor' ? '新校锚定' : selSchool.pred_2026.method === 'tongchou_cy_equiv' ? '跨区位次映射(外区线→朝阳口径)' : '百分位法' }} · 可信度 {{ selSchool.pred_2026.conf }} · 7/9出分接你的精确位次→7/13填报即用（各校实线录取后才有，填报当下靠此预测）</div>
+                  <div class="dp-line"><b class="dp-predv">≈{{ selSchool.pred_2026.rank }}</b> <span class="dp-muted">区间 {{ selSchool.pred_2026.lo }}–{{ selSchool.pred_2026.hi }}<template v-if="selSchool.pred_2026.pct"> · 约前{{ selSchool.pred_2026.pct }}%</template></span></div>
+                  <div class="dp-line dp-muted">{{ selSchool.pred_2026.method === 'new_anchor' ? '新校锚定' : selSchool.pred_2026.method === 'tongchou_cy_equiv' ? '跨区位次映射(外区线→朝阳口径)' : selSchool.pred_2026.method === 'hist' ? ('以' + (selSchool.pred_2026.base_year || '最近年') + '录取位次为参考（非模型预测·网传/历史线）') : '百分位法' }} · 可信度 {{ selSchool.pred_2026.conf }} · 7/9出分接你的精确位次→7/13填报即用（各校实线录取后才有，填报当下靠此预测）</div>
                   <div v-if="selSchool.extra && selSchool.extra.cy_equiv" class="dp-line dp-muted">↑此为<b>走统筹门槛</b>(录取位次) · 学校档次≈朝阳第 {{ selSchool.extra.cy_equiv }} 位(线分→朝阳一分一段,全市可比)<span v-if="selSchool.extra.below_control"> · ⚠档次低于门槛,走统筹需≈460反不如统招,常不值</span></div>
                 </div>
 
@@ -1891,9 +1892,10 @@ const tcOptions: string[] = []
                 </div>
 
                 <!-- 学校特色 -->
-                <div v-if="selSchool.features_std || selSchool.features.style" class="dp-block">
+                <div v-if="selSchool.features_std || selSchool.features.style || (selSchool.features.tags && selSchool.features.tags.length)" class="dp-block">
                   <div class="dp-title">学校特色</div>
                   <div v-if="selSchool.features_std" class="dp-line">⭐ <span v-for="(tg, ti) in selSchool.features_std.tags" :key="ti" class="feat-chip">{{ tg }}</span><span v-if="selSchool.features_std.highlight" class="dp-muted"> · {{ selSchool.features_std.highlight }}</span></div>
+                  <div v-else-if="selSchool.features.tags && selSchool.features.tags.length" class="dp-line">⭐ <span v-for="(tg, ti) in selSchool.features.tags" :key="ti" class="feat-chip">{{ tg }}</span></div>
                   <div v-if="selSchool.features.style" class="dp-line">🏫 {{ selSchool.features.style }}</div>
                 </div>
 

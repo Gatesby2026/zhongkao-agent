@@ -50,6 +50,13 @@ schools:
   scores_meta:
     source: 北京中考信息网-2024年北京延庆区高中录取分数线&区排名汇总; 北京中考信息网-2025考生参考!2024年延庆区和经开区中考录取分数线; 北京小升初网-北京各区高中中考录取分数线汇总(2025参考)
     confidence: low
+  pred_2026:
+    rank: 633
+    lo: 557
+    hi: 709
+    conf: low
+    method: hist
+    base_year: '2024'
 - name: 北京市延庆区第二中学
   school_code: '229001'
   location:
