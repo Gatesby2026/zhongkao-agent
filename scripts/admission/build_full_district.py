@@ -66,6 +66,10 @@ def _safe_load_schools(path):
 
 
 _CONF_ORD = {"low": 0, "medium": 1, "high": 2}
+# 住宿正/负向判定(用于从 campus_life.boarding_detail 安全推断 boarding=True)
+import re as _re
+_BOARDING_POS = _re.compile(r"住宿|寄宿|宿舍|住校|可住|人间|床位|公寓|走读.*住|住宿费|住宿部")
+_BOARDING_NEG = _re.compile(r"不住宿|无住宿|没有住宿|不提供住宿|不能住宿|没有宿舍|无宿舍|仅走读|只走读|纯走读|不寄宿|无寄宿")
 # 北京中考各年满分(与朝阳口径一致):2023=660 / 2024=670 / 2025=510
 YEAR_TOTAL = {"2022": 580, "2023": 660, "2024": 670, "2025": 510}
 
@@ -241,6 +245,12 @@ def build(py):
         }
         if camp.get(zn):
             rec["campus_life"] = camp[zn]
+            # 从 campus_life.boarding_detail 推断住宿(仅在明确"有宿舍"时判 True;
+            # 绝不据此判 False——查不到仍留待核)。消解非朝阳大面积"住宿待核"。
+            bd = camp[zn].get("boarding_detail")
+            bd_txt = bd.get("value") if isinstance(bd, dict) else (bd or "")
+            if bd_txt and not _BOARDING_NEG.search(bd_txt) and _BOARDING_POS.search(bd_txt):
+                rec["boarding"] = True
         if not sc_official and sc_src:
             rec["scores_meta"] = {"source": sc_src, "confidence": sc_conf or "low"}
         elif sc_official and scores:
