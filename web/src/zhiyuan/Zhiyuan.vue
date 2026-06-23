@@ -477,6 +477,8 @@ function renderMarkers(fit = false) {
   const bounds: any[] = []
   if (res.home_coord) bounds.push(res.home_coord)
   const tcColor: Record<string, string> = { 'tj-wen': '#2ecc71', 'tj-chong': '#e74c3c', 'tj-bo': '#e67e22', 'tj-no': '#95a5a6', 'tj-unk': '#2980b9' }
+  // 地图标签统一显示在标记下方；permanent 决定是常驻还是 hover 显示
+  const tipOpts = (permanent = false) => ({ permanent, direction: 'bottom' as const, offset: [0, 2] as [number, number], className: 'map-lbl' })
 
   // 地图唯一数据源 = schools_unified（每条带 uid；点击按 uid 解析详情，不再做名字匹配）
   for (const r of uList.value) {
@@ -485,8 +487,8 @@ function renderMarkers(fit = false) {
     const pt: any = { name: r.name, uid: r.uid, lat, lon }
     const ty = r.type as string
     const lbl = r.short_name || shortName(r.name)   // 地图标签优先用注册表精选短名
-    const tipB = (mk: any) => mk.bindTooltip(lbl, { permanent: true, direction: 'bottom', offset: [0, 2], className: 'map-lbl' })
-    const tipS = (mk: any) => mk.bindTooltip(lbl, { direction: 'top', offset: [0, -6], className: 'map-lbl' })
+    const tipB = (mk: any) => mk.bindTooltip(lbl, tipOpts(true))
+    const tipS = (mk: any) => mk.bindTooltip(lbl, tipOpts())
 
     if (ty === '公办普高') {
       const m = r.map || {}
@@ -500,7 +502,7 @@ function renderMarkers(fit = false) {
         const j = xedJudgeByName.value[r.name]
         L.marker([lat, lon], { icon: pin(j ? j.color : '#95a5a6', j ? XED_BAND[j.tag] : '校', !!r.boarding, String(q)) })
           .addTo(xedLayer).on('click', (e: any) => pick(pt, e.target))
-          .bindTooltip(lbl, { permanent: true, direction: 'bottom', offset: [0, 2], className: 'map-lbl' })
+          .bindTooltip(lbl, tipOpts(true))
         if (layers.xed) bounds.push([lat, lon])
       }
     } else if (ty === '2026新校') {
@@ -537,7 +539,7 @@ function renderMarkers(fit = false) {
     const f = privFlags.value[p.name] || { minban: true, intl: false }
     const mk = (color: string) => L.marker([p.lat, p.lon], { icon: smallIcon(color) })
       .on('click', (e: any) => pick(p, e.target))
-      .bindTooltip((p as any).short_name || shortName(p.name), { direction: 'top', offset: [0, -6], className: 'map-lbl' })
+      .bindTooltip((p as any).short_name || shortName(p.name), tipOpts())
     if (f.intl) mk('#9b59b6').addTo(intlLayer)
     if (f.minban || (!f.minban && !f.intl)) mk('#e67e22').addTo(minbanLayer)
     if (layers.minban || layers.intl) bounds.push([p.lat, p.lon])
@@ -1076,6 +1078,14 @@ const schoolLines = computed<any[]>(() => {
   for (const ch of (selSchool.value?.channels || [])) if (ch.lines && ch.lines.length) return ch.lines
   return []
 })
+// 统招招生计划(专业/班 + 区内/全市名额)——复用 majorsOf(取自冲稳保卡片的官方计划册派生)
+const selMajors = computed<Major[]>(() =>
+  selSchool.value?.type === '公办普高' ? majorsOf(selSchool.value?.name) : [])
+// 纯数字名额补"人"单位;含住宿/文字说明(如"30 住15")则原样展示
+function planNum(v: any): string {
+  const s = String(v ?? '').trim()
+  return !s ? '—' : /^\d+$/.test(s) ? s + '人' : s
+}
 const caveats = computed<string[]>(() => {
   const set = new Set<string>()
   channelViews.value.forEach((v: any) => { if (v.caveat) set.add(v.caveat) })
@@ -1664,6 +1674,13 @@ const tcOptions: string[] = []
                   <p v-if="schoolLines.length" class="dp-tip">分数跨年口径不同(2025起510制)；同年/区排名才可比。</p>
                 </div>
 
+                <!-- 招生计划(统招专业/班 名额) -->
+                <div v-if="selMajors.length" class="dp-block">
+                  <div class="dp-title">招生计划 <small class="dp-muted">· 朝阳·2025官方计划册</small></div>
+                  <div v-for="(m, mi) in selMajors" :key="mi" class="dp-mj">{{ cleanName(m.major_name) }}<em> · 本区 {{ planNum(m.plan_chaoyang) }}<template v-if="m.plan_total != null && String(m.plan_total) !== String(m.plan_chaoyang)"> · 全市 {{ planNum(m.plan_total) }}</template></em></div>
+                  <p class="dp-tip">2025 计划数（派生自 bjeea 官方计划册）；2026 计划 7 月初发布后刷新。</p>
+                </div>
+
                 <!-- 出口质量 -->
                 <div v-if="selSchool.gaokao || selSchool.value_added || selSchool.extra.study_abroad || selSchool.extra.exit_domestic || selSchool.extra.exit_type || selSchool.extra.comp_high_note || selSchool.extra.exit_paths || selSchool.features.gaokao" class="dp-block">
                   <div class="dp-title">出口质量</div>
@@ -1873,6 +1890,13 @@ const tcOptions: string[] = []
                   <div v-if="selSchool.extra.voc_line_note" class="dp-line dp-muted">📈 录取线：{{ selSchool.extra.voc_line_note }}</div>
                   <div v-if="selSchool.extra.line_note && (selSchool.extra.in_minban || selSchool.extra.in_intl)" class="dp-line dp-muted">📈 录取：{{ selSchool.extra.line_note }}</div>
                   <p v-if="schoolLines.length" class="dp-tip">分数跨年口径不同(2025起510制)；同年/区排名才可比。</p>
+                </div>
+
+                <!-- 招生计划(统招专业/班 名额) -->
+                <div v-if="selMajors.length" class="dp-block">
+                  <div class="dp-title">招生计划 <small class="dp-muted">· 朝阳·2025官方计划册</small></div>
+                  <div v-for="(m, mi) in selMajors" :key="mi" class="dp-mj">{{ cleanName(m.major_name) }}<em> · 本区 {{ planNum(m.plan_chaoyang) }}<template v-if="m.plan_total != null && String(m.plan_total) !== String(m.plan_chaoyang)"> · 全市 {{ planNum(m.plan_total) }}</template></em></div>
+                  <p class="dp-tip">2025 计划数（派生自 bjeea 官方计划册）；2026 计划 7 月初发布后刷新。</p>
                 </div>
 
                 <!-- 出口质量 -->
