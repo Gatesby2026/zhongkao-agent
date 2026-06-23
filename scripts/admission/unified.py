@@ -156,6 +156,7 @@ def build_unified(result: dict) -> list:
                     {"km": n.get("km"), "mins": n.get("mins"), "over_max": c.get("over_max")} if n else None,
                     short=c.get("short_name"))
         s["school_code"] = c.get("school_code")
+        s["majors"] = c.get("majors") or []   # 统招专业(班)+本区/全市名额,随 uid 实体下发(详情面板直读,不按名 join)
         s["map"] = {"color": pt.get("color"), "band": pt.get("band"), "kind": pt.get("kind")}
         # 不再加"不在报名范围"caveat:band 已说明(够不上/冲/稳/保),该提示反致歧义(误读成校额没有)
         s["channels"].append(_ch("统招", c.get("band"), "district_rank",

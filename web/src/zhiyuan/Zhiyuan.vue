@@ -1078,9 +1078,9 @@ const schoolLines = computed<any[]>(() => {
   for (const ch of (selSchool.value?.channels || [])) if (ch.lines && ch.lines.length) return ch.lines
   return []
 })
-// 统招招生计划(专业/班 + 区内/全市名额)——复用 majorsOf(取自冲稳保卡片的官方计划册派生)
+// 统招招生计划(专业/班 + 区内/全市名额)——直读 uid 解析出的 selSchool.majors(注册表实体下发,不按名 join)
 const selMajors = computed<Major[]>(() =>
-  selSchool.value?.type === '公办普高' ? majorsOf(selSchool.value?.name) : [])
+  selSchool.value?.type === '公办普高' ? (selSchool.value?.majors || []) : [])
 // 纯数字名额补"人"单位;含住宿/文字说明(如"30 住15")则原样展示
 function planNum(v: any): string {
   const s = String(v ?? '').trim()
