@@ -471,6 +471,8 @@ def _district_from_registry(district: str) -> dict:
                 # 校级 2026 预估只代表本部;非本部校区按本校区自身录取线判档(其历史线才反映该校区真实门槛)
                 if i > 0:
                     rec.pop("pred_2026", None)
+                    # 短名也加校区后缀,否则地图上两校区都显示同一短名无法区分
+                    rec["short_name"] = f"{e.get('short_name')}·{(cam.get('name') or '').replace('校区', '')}"
                 schools.append(rec)
         else:
             rep = next((a for a in tongzhao if a.get("lines")), tongzhao[0])
@@ -709,9 +711,11 @@ def build_public_points(buckets, dist_campus, mode_label, max_km, interests=None
                 else:
                     kind, color, reason = "full", BAND_COLOR[band], ""
                 disp = f"{s['name']}·{cname}" if (multi and cname) else s["name"]
+                sn = s.get("short_name") or s["name"]
+                disp_short = f"{sn}·{cname}" if (multi and cname) else sn
                 feat = s.get("features") or {}
                 points.append({
-                    "name": disp, "lat": ccoord[0], "lon": ccoord[1],
+                    "name": disp, "short_name": disp_short, "lat": ccoord[0], "lon": ccoord[1],
                     "kind": kind, "color": color, "band": band,
                     "level": s.get("level", ""), "rank": ref_rank,
                     "margin": f"{margin:+.0%}", "dist": _dist_txt(rd, mode_label),
@@ -735,7 +739,8 @@ def build_private_points(priv, priv_dist, mode_label, max_km):
         if max_km is not None and km is not None and km > max_km:
             reason += f"；且超通勤上限（>{max_km}km）"
         out.append({
-            "name": p["name"], "lat": p["lat"], "lon": p["lon"],
+            "name": p["name"], "short_name": p.get("short_name") or p["name"],
+            "lat": p["lat"], "lon": p["lon"],
             "kind": "small", "color": SMALL_COLOR["民办"], "band": "民办",
             "level": "民办/国际", "rank": "—", "margin": "—",
             "dist": _dist_txt(rd, mode_label), "hist": "", "note": "",
@@ -767,7 +772,8 @@ def _school_card(s, margin, ref_rank, history, vol, dist_campus, mode_label, max
     # 地址（含核验提示）：address 优先，缺则用 address_rough；附 confidence/flag 让前端如实标注
     loc = s.get("location") or {}
     card = {
-        "name": s["name"], "level": s.get("level", ""), "note": s.get("note", ""),
+        "name": s["name"], "short_name": s.get("short_name") or s["name"],
+        "level": s.get("level", ""), "note": s.get("note", ""),
         "ref_rank": ref_rank, "margin": round(margin, 3), "margin_pct": f"{margin:+.0%}",
         "volatility": round(vol, 2), "history": [[y, r] for y, r in history],
         "score_lines": score_lines,

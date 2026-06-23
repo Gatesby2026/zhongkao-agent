@@ -85,6 +85,9 @@ _supp_path = os.path.join(KB, "registry", "cy", "_aliases_supplement.yaml")
 alias_supp = {}
 if os.path.exists(_supp_path):
     alias_supp = {str(k): v for k, v in (load_yaml(_supp_path) or {}).items()} or {}
+# 人工精选短名层(地图标签用,按 canonical_name),覆盖自动 short_of()
+_short_path = os.path.join(KB, "registry", "cy", "_short_names.yaml")
+short_supp = {str(k): str(v) for k, v in (load_yaml(_short_path) or {}).items()} if os.path.exists(_short_path) else {}
 # pred 按代码索引(key 形如 '105004:北京市…' 或 'NEW:…')
 pred_by_code = {}
 pred_by_name = {}
@@ -105,8 +108,10 @@ for code, name_entries in groups.items():
     base = next((n for n in name_entries if not re.search(r"[（(]", n)), name_entries[0])
     rec0 = adm[base]
     canonical = rec0.get("plan_school_name") or base
-    short = short_of(base)
+    short = short_supp.get(canonical) or short_of(base)
     aliases = set()
+    if short_supp.get(canonical):
+        aliases.add(short_of(base))   # 自动短名退为别名,保解析不丢
     campuses, admissions = [], []
     for ne in name_entries:
         rec = adm[ne]
@@ -136,12 +141,22 @@ for code, name_entries in groups.items():
         scores = cyrec.get("scores") or {}
         majors = rec.get("majors") or []
         hint = major_hint_from_campus(loc_text)
-        # chaoyang.yaml 只记"校级一条线"。单 major 时即该 major 线;多 major 时只能归到
-        # 普通班(代表线),其余专业(创新/中英/中美…)真实线源数据没有 → 不复制(避免伪精确),flag 待采。
-        rep_major = next((m.get("major_code") for m in majors
-                          if "普通" in (m.get("major_name") or "")), None) \
-                    or (majors[0].get("major_code") if majors else None)
-        for mj in majors:
+        # 同码多 name_entry(同校多校区,如和平街本部01/北苑莲葩园02)且 location 文案带 "0N 专业"时:
+        # 本 name_entry 只代表该校区的那个专业,绑本校区 + 把本条 scores 当作该校区独立录取线。
+        # 否则会把两校区的线都挤进代表专业(普通班),丢掉低门槛那条(莲葩园 4762)。
+        # 注:gate 在"多 name_entry"上 → 单实体多专业校(创新/中英…)不受影响,维持校级代表线老口径。
+        campus_split = len(name_entries) > 1 and hint is not None
+        if campus_split:
+            sel_majors = [m for m in majors if m.get("major_code") == hint] or majors
+            rep_major = sel_majors[0].get("major_code") if sel_majors else None
+        else:
+            # chaoyang.yaml 只记"校级一条线"。单 major 时即该 major 线;多 major 时只能归到
+            # 普通班(代表线),其余专业真实线源数据没有 → 不复制(避免伪精确),flag 待采。
+            sel_majors = majors
+            rep_major = next((m.get("major_code") for m in majors
+                              if "普通" in (m.get("major_name") or "")), None) \
+                        or (majors[0].get("major_code") if majors else None)
+        for mj in sel_majors:
             mcode = mj.get("major_code")
             if hint and mcode and hint != mcode:
                 flag("REVIEW", code, f"{ne}: location 文案提示专业 {hint} 与代码表 {mcode} 不一致")
@@ -158,7 +173,7 @@ for code, name_entries in groups.items():
                 au["lines"] = {str(y): {"score": d.get("score"), "rank": d.get("rank"),
                                         "total": d.get("total")}
                                for y, d in sorted(scores.items(), reverse=True)}
-                if len(majors) > 1:
+                if not campus_split and len(sel_majors) > 1:
                     au["line_scope"] = "校级代表线(普通班);源数据未分专业"
             elif not scores:
                 flag("WARN", code, f"{ne} 缺历史录取线(scores)")

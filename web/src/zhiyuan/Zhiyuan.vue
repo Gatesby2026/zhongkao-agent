@@ -484,7 +484,7 @@ function renderMarkers(fit = false) {
     if (lat == null || lon == null) continue
     const pt: any = { name: r.name, uid: r.uid, lat, lon }
     const ty = r.type as string
-    const lbl = shortName(r.name)
+    const lbl = r.short_name || shortName(r.name)   // 地图标签优先用注册表精选短名
     const tipB = (mk: any) => mk.bindTooltip(lbl, { permanent: true, direction: 'bottom', offset: [0, 2], className: 'map-lbl' })
     const tipS = (mk: any) => mk.bindTooltip(lbl, { direction: 'top', offset: [0, -6], className: 'map-lbl' })
 
@@ -537,7 +537,7 @@ function renderMarkers(fit = false) {
     const f = privFlags.value[p.name] || { minban: true, intl: false }
     const mk = (color: string) => L.marker([p.lat, p.lon], { icon: smallIcon(color) })
       .on('click', (e: any) => pick(p, e.target))
-      .bindTooltip(shortName(p.name), { direction: 'top', offset: [0, -6], className: 'map-lbl' })
+      .bindTooltip((p as any).short_name || shortName(p.name), { direction: 'top', offset: [0, -6], className: 'map-lbl' })
     if (f.intl) mk('#9b59b6').addTo(intlLayer)
     if (f.minban || (!f.minban && !f.intl)) mk('#e67e22').addTo(minbanLayer)
     if (layers.minban || layers.intl) bounds.push([p.lat, p.lon])

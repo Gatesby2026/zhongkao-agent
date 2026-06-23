@@ -101,10 +101,10 @@ def _line_trends() -> dict:
 
 
 def _school(name, type_, district, lat, lon, address, conf, boarding,
-            level=None, style=None, tags=None, gaokao=None, dist=None):
+            level=None, style=None, tags=None, gaokao=None, dist=None, short=None):
     return {
         "id": f"{type_}:{name}",
-        "name": name, "type": type_, "district": district,
+        "name": name, "short_name": short or name, "type": type_, "district": district,
         "geo": {"lat": lat, "lon": lon, "address": address, "confidence": conf},
         "boarding": boarding,
         "level": level,
@@ -153,7 +153,8 @@ def build_unified(result: dict) -> list:
                     pt.get("lat"), pt.get("lon"), c.get("address"), c.get("address_confidence"),
                     c.get("boarding"), c.get("level"), c.get("style"),
                     c.get("tags"), c.get("gaokao"),
-                    {"km": n.get("km"), "mins": n.get("mins"), "over_max": c.get("over_max")} if n else None)
+                    {"km": n.get("km"), "mins": n.get("mins"), "over_max": c.get("over_max")} if n else None,
+                    short=c.get("short_name"))
         s["school_code"] = c.get("school_code")
         s["map"] = {"color": pt.get("color"), "band": pt.get("band"), "kind": pt.get("kind")}
         # 不再加"不在报名范围"caveat:band 已说明(够不上/冲/稳/保),该提示反致歧义(误读成校额没有)
