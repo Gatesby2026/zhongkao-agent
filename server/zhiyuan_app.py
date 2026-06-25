@@ -19,7 +19,7 @@ import sys
 from pathlib import Path
 from typing import List, Optional
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
@@ -96,7 +96,7 @@ def zhiyuan_report(req: ReportReq, user: dict = Depends(get_current_user)):
 
 
 @app.post("/api/zhiyuan/recommend")
-def zhiyuan_recommend(req: ZhiyuanReq):
+def zhiyuan_recommend(req: ZhiyuanReq, request: Request):
     if req.mode not in zhiyuan.dist_mod.MODES:   # 非法通勤方式 → 400(而非 KeyError 漏成 500)
         raise HTTPException(status_code=400, detail="通勤方式不正确")
     district = req.district or "chaoyang"
@@ -113,6 +113,11 @@ def zhiyuan_recommend(req: ZhiyuanReq):
     except Exception as e:              # 脏数据/外部失败 → 通用 500,原文只记日志
         _log.warning("zhiyuan recommend failed: %r", e)
         raise HTTPException(status_code=500, detail="推荐生成失败,请稍后重试")
+    # 埋点:真实使用一次冲稳保(IP 取 nginx 透传的 X-Real-IP)。失败已被 store 内部吞掉。
+    auth_store.log_event("recommend",
+                         ip=request.headers.get("x-real-ip") or
+                            (request.client.host if request.client else None),
+                         meta={"district": district, "rank": req.rank})
     # 去掉给 CLI/地图复用的内部字段（下划线开头）
     return {k: v for k, v in result.items() if not k.startswith("_")}
 

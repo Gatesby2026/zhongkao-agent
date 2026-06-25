@@ -101,6 +101,7 @@ def _do_verify(resp: Response, account: str, code: str) -> dict:
         raise HTTPException(status_code=400, detail="验证码错误或已过期")
     user = (store.upsert_user_by_email(key) if kind == "email"
             else store.upsert_user_by_phone(key))
+    store.log_event("login", user_id=user["id"], meta={"via": kind})
     _set_session_cookie(resp, user["id"])
     return {"ok": True, "user": _user_public(user)}
 

@@ -46,6 +46,16 @@ CREATE TABLE IF NOT EXISTS app_profiles (
   updated_at  REAL NOT NULL,
   PRIMARY KEY (user_id, app)
 );
+CREATE TABLE IF NOT EXISTS events (
+  id       INTEGER PRIMARY KEY AUTOINCREMENT,
+  ts       REAL NOT NULL,
+  kind     TEXT NOT NULL,        -- 'login' / 'recommend' / ...
+  user_id  INTEGER,
+  ip       TEXT,
+  meta     TEXT                  -- JSON,如 {"district":"chaoyang","rank":5000}
+);
+CREATE INDEX IF NOT EXISTS idx_events_ts ON events(ts);
+CREATE INDEX IF NOT EXISTS idx_events_kind ON events(kind, ts);
 """
 
 
@@ -195,3 +205,56 @@ def put_profile(uid: int, app: str, data: dict) -> None:
             "updated_at=excluded.updated_at",
             (uid, app, blob, now),
         )
+
+
+# ---------- 轻量埋点(事件日志) ----------
+
+def log_event(kind: str, *, user_id: int | None = None,
+              ip: str | None = None, meta: dict | None = None) -> None:
+    """落一条事件埋点。绝不让埋点失败影响主请求(吞掉所有异常)。"""
+    try:
+        with _conn() as c:
+            c.execute(
+                "INSERT INTO events(ts, kind, user_id, ip, meta) VALUES (?,?,?,?,?)",
+                (time.time(), kind, user_id, ip,
+                 json.dumps(meta, ensure_ascii=False) if meta else None),
+            )
+    except Exception:
+        pass
+
+
+def daily_stats(days: int = 7) -> list[dict]:
+    """近 days 天逐日汇总:新注册数 / 登录次数 / recommend 次数 + 独立 IP。
+    new_users 取自 users.created_at(历史可回溯);logins/recommends 取自 events
+    (埋点上线后才有数据)。日期按服务器本地时区切分。"""
+    import datetime
+    since = time.time() - days * 86400
+
+    def _day(ts):
+        return datetime.datetime.fromtimestamp(float(ts)).strftime("%Y-%m-%d")
+
+    agg: dict[str, dict] = {}
+
+    def slot(d):
+        return agg.setdefault(d, {"date": d, "new_users": 0, "logins": 0,
+                                  "recommends": 0, "_rec_ips": set()})
+
+    with _conn() as c:
+        for (ts,) in c.execute(
+                "SELECT created_at FROM users WHERE created_at>=?", (since,)):
+            slot(_day(ts))["new_users"] += 1
+        for ts, kind, ip in c.execute(
+                "SELECT ts, kind, ip FROM events WHERE ts>=?", (since,)):
+            s = slot(_day(ts))
+            if kind == "login":
+                s["logins"] += 1
+            elif kind == "recommend":
+                s["recommends"] += 1
+                if ip:
+                    s["_rec_ips"].add(ip)
+    out = []
+    for d in sorted(agg):
+        s = agg[d]
+        s["rec_unique_ips"] = len(s.pop("_rec_ips"))
+        out.append(s)
+    return out
