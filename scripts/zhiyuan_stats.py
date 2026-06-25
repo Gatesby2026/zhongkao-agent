@@ -10,6 +10,7 @@ new_users 取自 users.created_at(历史可回溯);logins/recommends 取自 even
 from __future__ import annotations
 
 import importlib.util
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
