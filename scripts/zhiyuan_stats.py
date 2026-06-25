@@ -9,12 +9,16 @@ new_users 取自 users.created_at(历史可回溯);logins/recommends 取自 even
 """
 from __future__ import annotations
 
-import sys
+import importlib.util
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT / "server"))
-from auth import store  # noqa: E402
+# 直接按文件加载 store.py(纯 stdlib),绕开 auth 包 __init__ 对 fastapi 的依赖,
+# 这样不在服务 venv 里也能跑(系统 python3 即可)。
+_spec = importlib.util.spec_from_file_location(
+    "zk_store", ROOT / "server" / "auth" / "store.py")
+store = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(store)
 
 
 def main() -> None:
