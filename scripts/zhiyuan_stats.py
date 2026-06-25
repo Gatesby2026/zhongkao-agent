@@ -24,6 +24,7 @@ _spec.loader.exec_module(store)
 
 def main() -> None:
     days = int(sys.argv[1]) if len(sys.argv) > 1 else 7
+    store.init_db()        # 幂等:确保 events 等表存在(对全新/旧库也能跑)
     rows = store.daily_stats(days)
     print(f"=== 近 {days} 天每日使用 ===")
     print("日期 | 新注册 | 登录 | 冲稳保 | 独立IP")
