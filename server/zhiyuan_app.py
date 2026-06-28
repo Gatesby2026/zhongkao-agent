@@ -92,7 +92,10 @@ def zhiyuan_report(req: ReportReq, user: dict = Depends(get_current_user)):
         raise HTTPException(status_code=502, detail="AI 报告生成失败,请稍后重试")
     import json as _json
     warns = llm_report.validate(out["report"], _json.dumps(out["context"], ensure_ascii=False))
-    return {"report": out["report"], "provider": out["provider"], "warnings": warns}
+    return {"report": out["report"], "provider": out["provider"],
+            "warnings": warns,                              # 幻觉:疑似编造校名
+            "pitfall_warnings": out.get("pitfall_warnings", [])}  # 避坑:填报硬规则违规
+
 
 
 @app.post("/api/zhiyuan/recommend")

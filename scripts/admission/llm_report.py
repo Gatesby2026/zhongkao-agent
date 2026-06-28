@@ -75,6 +75,11 @@ def _card_brief(c: dict) -> dict:
     }
 
 
+# 规则版草表在上下文里的键名(校验器按此键取回结构化志愿,避免字符串漂移)
+RULE_DRAFT_KEY = "规则版统招草表(已选好的12志愿·你在此基础上改良)"
+SLOTS_MAX = 12   # 统招志愿上限
+
+
 def build_context(result: dict, profile: dict) -> dict:
     """从 build_result + 画像装配 LLM 上下文(精简、只留判断需要的事实)。"""
     bands = result.get("bands", {})
@@ -142,7 +147,7 @@ def build_context(result: dict, profile: dict) -> dict:
 
     return {
         "统招志愿上限": SLOTS,
-        "规则版统招草表(已选好的12志愿·你在此基础上改良)": rule_draft,
+        RULE_DRAFT_KEY: rule_draft,
         "学生": {
             "区": result.get("district"),
             "中考区排名": result.get("rank"),
@@ -214,7 +219,11 @@ def generate_report(rank, home=None, mode="bicycling", max_km=8, boarding=True,
                 "请据此产出六段分析报告。\n\n```json\n"
                 + json.dumps(ctx, ensure_ascii=False) + "\n```")
     report = call_llm(provider, SYSTEM_PROMPT, user_msg)
-    return {"report": report, "context": ctx, "provider": provider}
+    # 避坑硬规则校验:现阶段先校验规则版草表(结构化·我们自有数据);LLM 结构化输出就绪后改喂模型志愿。
+    pitfalls = validate_pitfalls(ctx.get(RULE_DRAFT_KEY) or [],
+                                 result.get("rank"), result.get("eligibility"))
+    return {"report": report, "context": ctx, "provider": provider,
+            "pitfall_warnings": pitfalls}
 
 
 def validate(report: str, context_blob: str) -> list:
@@ -231,6 +240,52 @@ def validate(report: str, context_blob: str) -> list:
         if base and base not in context_blob and tok not in context_blob:
             warns.append(tok)
     return sorted(set(warns))
+
+
+def _pick_rank(p: dict):
+    """从结构化志愿项取预估录取位次(越小越难);对齐 _card_brief 的中文键。"""
+    v = p.get("2026预估录取位次") or p.get("近年录取位次")
+    return v if isinstance(v, (int, float)) else None
+
+
+def validate_pitfalls(picks: list, student_rank=None, eligibility: dict = None) -> list:
+    """避坑硬规则校验(确定性·不阻断):对结构化统招志愿列表跑「填报避坑」不变量,
+    返回违规/警示文案。picks 有序,每项含 档位/2026预估录取位次/校名(对齐 _card_brief)。
+    student_rank=学生区排名(越小越靠前)。eligibility=result['eligibility']。
+    现阶段喂规则版草表;待 LLM 结构化输出就绪后改喂模型志愿(同函数)。设计见
+    docs/design/AI-DEEP-ANALYSIS-DESIGN.md §4。"""
+    warns, elig = [], (eligibility or {})
+
+    # 1. 数量上限
+    if len(picks) > SLOTS_MAX:
+        warns.append(f"统招志愿 {len(picks)} 个,超过上限 {SLOTS_MAX}")
+
+    # 2. "够不上"档不该占统招志愿位
+    for p in picks:
+        if p.get("档位") == "够不上":
+            warns.append(f"志愿含「够不上」档：{p.get('校名')}(统招大概率无效,别占志愿位)")
+
+    # 3. 资格一致:非京籍随迁不能报普高统招
+    if picks and elig.get("puhao_tongzhao") is False:
+        warns.append("该身份不可报普高统招,却给出了统招志愿(资格冲突)")
+
+    # 4. 必有保底:列表里应有"明显够得上"的校(预估位次 ≥ 学生位次,留余量)
+    if student_rank and picks:
+        ranked = [r for r in (_pick_rank(p) for p in picks) if r is not None]
+        if ranked:
+            safest = max(ranked)                 # 位次数最大=最容易进
+            if safest < student_rank:
+                warns.append("无有效保底:所有志愿的预估位次都比你的位次更靠前(更难),有滑档风险,末位应放一所明显够得上的校")
+            elif safest < student_rank * 1.10:
+                warns.append("保底偏薄:最稳志愿余量不足 10%,建议末位再加一所更稳的校")
+
+    # 5. 平行志愿顺序:预估位次应大体从难(小)到易(大)递增;明显逆序=易校排到难校前
+    seq = [(_pick_rank(p), p.get("校名")) for p in picks if _pick_rank(p) is not None]
+    for (r1, n1), (r2, n2) in zip(seq, seq[1:]):
+        if r2 + 200 < r1:                        # 后一所明显更难却排在后面(容差200位)
+            warns.append(f"志愿顺序疑问:「{n2}」(更难·位次≈{r2}) 排在「{n1}」(位次≈{r1}) 之后;平行志愿应把更想冲的放前面")
+            break                                 # 只报第一处,避免刷屏
+    return warns
 
 
 def main():
