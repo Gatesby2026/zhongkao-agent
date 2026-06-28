@@ -81,6 +81,14 @@ const TIMELINE = [
   { t: '出分后', d: '公布成绩 + 一分一段表（位次↔分数）' },
   { t: '随后', d: '① 提招 → ② 指标分配 → ③ 统招 顺序录取、录即锁定' },
 ]
+// 填报避坑：家长高频误区(来源:官方规则 + 家长社区高频踩坑)。bad=误区, good=正解。
+const PITFALLS = [
+  { bad: '把最想去的校"求稳"放后面', good: '平行志愿冲在最前零成本，志愿顺序=优先级，从高到低排，冲不上自动落到稳/保' },
+  { bad: '校额到校填"统招本来就能上"的校', good: '校额在统招前录取且锁定，会把你锁在低校；要填统招够不着、但够得着名额的更好公办' },
+  { bad: '怕"普高+贯通一起填会被贯通提前录走"', good: '2026 贯通已并入统一招生批，与普高同批按志愿顺序走，放在后面不会被提前录取' },
+  { bad: '志愿不填满 / 不放保底', good: '末位必放一所一定能上的校，否则滑档无学可上' },
+  { bad: '只看分数、对着去年线填', good: '跨年难度/口径会变（今年数学偏难），按位次比按分数稳' },
+]
 // 校额到校：按初中查名额
 const showXedImg = ref(false)
 const xedQuery = ref(USER_DEFAULTS.chuzhong)
@@ -1636,7 +1644,9 @@ const tcOptions: string[] = []
                   <div class="dp-title">基本信息</div>
                   <div v-if="selSchool.geo.address" class="dp-line dp-muted">📍 {{ selSchool.geo.address }}<span v-if="selSchool.geo.confidence === 'low' || !selSchool.geo.lat" class="addr-tag">待核</span></div>
                   <div v-if="selSchool.commute" class="dp-line">🚌 到家 {{ selSchool.commute.km }}km · {{ selSchool.commute.mins }}分钟<span v-if="selSchool.commute.over_max" class="dp-vol">⚠️超上限</span></div>
-                  <div class="dp-line">🛏 住宿：<span v-if="selSchool.boarding === true" class="t-yes">可住宿</span><span v-else-if="selSchool.boarding === false">不提供</span><span v-else class="dp-muted">待核</span></div>
+                  <div class="dp-line">🛏 住宿：<span v-if="selSchool.boarding === true" class="t-yes">可住宿</span><span v-else-if="selSchool.boarding === false">不提供</span><span v-else class="dp-muted">待核</span><template v-if="selSchool.boarding === true && selSchool.campus_life && selSchool.campus_life.boarding_detail"> · <span class="dp-muted">{{ selSchool.campus_life.boarding_detail }}</span></template></div>
+                  <div v-if="selSchool.commute && selSchool.commute.over_max && selSchool.boarding === false" class="dp-line dp-vol">⚠️ 家远且不住宿，通勤超上限，慎报</div>
+                  <div v-if="selSchool.campus_life && selSchool.campus_life.dining" class="dp-line">🍚 食堂：{{ selSchool.campus_life.dining }}</div>
                   <div v-if="selSchool.extra.tuition" class="dp-line">💰 学费：{{ selSchool.extra.tuition }}</div>
                   <div v-if="selSchool.extra.curriculum && selSchool.extra.curriculum.length" class="dp-line">📚 课程：{{ selSchool.extra.curriculum.join('·') }}<template v-if="selSchool.extra.direction"> · {{ selSchool.extra.direction }}</template></div>
                   <div v-if="selSchool.extra.direction && !(selSchool.extra.curriculum && selSchool.extra.curriculum.length)" class="dp-line dp-muted">方向：{{ selSchool.extra.direction }}</div>
@@ -1711,8 +1721,6 @@ const tcOptions: string[] = []
                   <div v-if="selSchool.campus_life.class_system" class="dp-line dp-muted">🎒 班型：{{ selSchool.campus_life.class_system }}</div>
                   <div v-if="selSchool.campus_life.schedule" class="dp-line dp-muted">⏰ 作息：{{ selSchool.campus_life.schedule }}</div>
                   <div v-if="selSchool.campus_life.management" class="dp-line dp-muted">🧭 管理：{{ selSchool.campus_life.management }}</div>
-                  <div v-if="selSchool.campus_life.boarding_detail" class="dp-line dp-muted">🛏 住宿：{{ selSchool.campus_life.boarding_detail }}</div>
-                  <div v-if="selSchool.campus_life.dining" class="dp-line dp-muted">🍚 餐饮：{{ selSchool.campus_life.dining }}</div>
                   <div v-if="selSchool.campus_life.activities" class="dp-line dp-muted">🎨 活动：{{ selSchool.campus_life.activities }}</div>
                   <div v-if="selSchool.campus_life.voices" class="dp-line dp-muted">💬 学生说：{{ selSchool.campus_life.voices }}</div>
                 </div>
@@ -1854,7 +1862,9 @@ const tcOptions: string[] = []
                   <div class="dp-title">基本信息</div>
                   <div v-if="selSchool.geo.address" class="dp-line dp-muted">📍 {{ selSchool.geo.address }}<span v-if="selSchool.geo.confidence === 'low' || !selSchool.geo.lat" class="addr-tag">待核</span></div>
                   <div v-if="selSchool.commute" class="dp-line">🚌 到家 {{ selSchool.commute.km }}km · {{ selSchool.commute.mins }}分钟<span v-if="selSchool.commute.over_max" class="dp-vol">⚠️超上限</span></div>
-                  <div class="dp-line">🛏 住宿：<span v-if="selSchool.boarding === true" class="t-yes">可住宿</span><span v-else-if="selSchool.boarding === false">不提供</span><span v-else class="dp-muted">待核</span></div>
+                  <div class="dp-line">🛏 住宿：<span v-if="selSchool.boarding === true" class="t-yes">可住宿</span><span v-else-if="selSchool.boarding === false">不提供</span><span v-else class="dp-muted">待核</span><template v-if="selSchool.boarding === true && selSchool.campus_life && selSchool.campus_life.boarding_detail"> · <span class="dp-muted">{{ selSchool.campus_life.boarding_detail }}</span></template></div>
+                  <div v-if="selSchool.commute && selSchool.commute.over_max && selSchool.boarding === false" class="dp-line dp-vol">⚠️ 家远且不住宿，通勤超上限，慎报</div>
+                  <div v-if="selSchool.campus_life && selSchool.campus_life.dining" class="dp-line">🍚 食堂：{{ selSchool.campus_life.dining }}</div>
                   <div v-if="selSchool.extra.tuition" class="dp-line">💰 学费：{{ selSchool.extra.tuition }}</div>
                   <div v-if="selSchool.extra.curriculum && selSchool.extra.curriculum.length" class="dp-line">📚 课程：{{ selSchool.extra.curriculum.join('·') }}<template v-if="selSchool.extra.direction"> · {{ selSchool.extra.direction }}</template></div>
                   <div v-if="selSchool.extra.direction && !(selSchool.extra.curriculum && selSchool.extra.curriculum.length)" class="dp-line dp-muted">方向：{{ selSchool.extra.direction }}</div>
@@ -1929,8 +1939,6 @@ const tcOptions: string[] = []
                   <div v-if="selSchool.campus_life.class_system" class="dp-line dp-muted">🎒 班型：{{ selSchool.campus_life.class_system }}</div>
                   <div v-if="selSchool.campus_life.schedule" class="dp-line dp-muted">⏰ 作息：{{ selSchool.campus_life.schedule }}</div>
                   <div v-if="selSchool.campus_life.management" class="dp-line dp-muted">🧭 管理：{{ selSchool.campus_life.management }}</div>
-                  <div v-if="selSchool.campus_life.boarding_detail" class="dp-line dp-muted">🛏 住宿：{{ selSchool.campus_life.boarding_detail }}</div>
-                  <div v-if="selSchool.campus_life.dining" class="dp-line dp-muted">🍚 餐饮：{{ selSchool.campus_life.dining }}</div>
                   <div v-if="selSchool.campus_life.activities" class="dp-line dp-muted">🎨 活动：{{ selSchool.campus_life.activities }}</div>
                   <div v-if="selSchool.campus_life.voices" class="dp-line dp-muted">💬 学生说：{{ selSchool.campus_life.voices }}</div>
                 </div>
@@ -1995,6 +2003,15 @@ const tcOptions: string[] = []
           <div class="cr"><b>批次锁定</b>：② 别填"统招本可达"的校，会锁低</div>
           <div class="cr"><b>必有保底</b>：志愿末位放一所一定能上的</div>
           <div class="cr"><b>总分 510</b>：2025 改革口径（2024 是 670）</div>
+        </div>
+
+        <!-- ④' 填报避坑 -->
+        <div class="ch-sec-t">⚠️ 填报避坑<small>（家长高频踩坑 → 正解）</small></div>
+        <div class="ch-pitfalls">
+          <div v-for="(p, pi) in PITFALLS" :key="pi" class="pf">
+            <div class="pf-bad"><span class="pf-x">❌</span>{{ p.bad }}</div>
+            <div class="pf-good"><span class="pf-ok">✅</span>{{ p.good }}</div>
+          </div>
         </div>
 
         <!-- ⑤ 官方权威入口 -->
@@ -2480,6 +2497,12 @@ const tcOptions: string[] = []
 .ch-rules { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px; margin: 0 0 16px; }
 .cr { font-size: 12px; color: var(--gray-700); background: var(--gray-50); border: 1px solid var(--gray-100); border-radius: 8px; padding: 8px 11px; line-height: 1.5; }
 .cr b { color: var(--brand-dark); }
+.ch-pitfalls { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 8px; margin: 0 0 16px; }
+.pf { background: var(--gray-50); border: 1px solid var(--gray-100); border-radius: 8px; padding: 9px 11px; }
+.pf-bad { font-size: 12.5px; color: var(--gray-500); line-height: 1.5; text-decoration: line-through; text-decoration-color: var(--gray-300); }
+.pf-good { font-size: 12.5px; color: var(--gray-800); line-height: 1.55; margin-top: 4px; }
+.pf-x, .pf-ok { margin-right: 5px; text-decoration: none; display: inline-block; }
+.pf-bad .pf-x { text-decoration: none; }
 /* 区块标题 */
 .ch-sec-t { font-size: 14px; font-weight: 700; color: var(--gray-800); margin: 4px 0 8px; }
 .ch-sec-t small { font-weight: 400; color: var(--gray-400); font-size: 11.5px; }
