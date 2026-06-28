@@ -93,7 +93,8 @@ def zhiyuan_report(req: ReportReq, user: dict = Depends(get_current_user)):
     import json as _json
     warns = llm_report.validate(out["report"], _json.dumps(out["context"], ensure_ascii=False))
     return {"report": out["report"], "provider": out["provider"],
-            "warnings": warns,                              # 幻觉:疑似编造校名
+            "warnings": warns,                                    # 幻觉:散文里疑似编造校名
+            "code_warnings": out.get("code_warnings", []),        # 幻觉:结构化志愿里编造的 school_code
             "pitfall_warnings": out.get("pitfall_warnings", [])}  # 避坑:填报硬规则违规
 
 
