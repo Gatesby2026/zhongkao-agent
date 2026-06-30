@@ -19,8 +19,8 @@ admissions:
   major: '01'
   major_name: 普通班
   campus: benbu
-  plan_total: '304'
-  plan_district: '304'
+  plan_total: '341'
+  plan_district: '341'
   lines:
     '2025':
       score: 432
@@ -42,9 +42,10 @@ admissions:
   code: null
   major: null
   metric: 校内排名
-  slots_2025_total: 80
-  note: 名额按本初中校内排名分配;逐初中明细见 chaoyang_xeddx.yaml(P3 迁 id)
-  source: 北京教育考试院《2025年初中学校校额到校分配名额》(官方原图)
+  note: 名额按本初中校内排名分配;逐初中明细见 _channel_meta.yaml[xeddx].rows
+  source: 《2026北京中招大报纸》(招生简章) p61-62 初中学校校额到校分配名额·朝阳区(官方)
+  slots_total: 82
+  plan_year: 2026
 rollup:
   features:
     style: 一校五址十二年制区级示范校，科技（无线电测向）/篮球/冰雪体育特色突出

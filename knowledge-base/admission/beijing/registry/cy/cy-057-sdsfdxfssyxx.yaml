@@ -14,8 +14,8 @@ campuses:
   boarding: true
 admissions:
 - channel: 统招
-  code: null
-  major: null
+  code: '205021'
+  major: '01'
   est_rank: 3400
   est_range:
   - 3000
@@ -36,6 +36,8 @@ admissions:
     method: new_anchor
     conf: T3
     volatile: false
+  plan_total: '77'
+  plan_district: '77'
 rollup:
   system: 首都师范大学 × 朝阳区教委合作承办（首师大附中体系）；望京九年一贯制名校，2009 后停办高中，2026 恢复/新设高中
   evidence_refs: null
@@ -73,4 +75,5 @@ rollup:
       基: 网传约2个班≈80;首年统招为主
 estimate: true
 aliases:
+- '205021'
 - 首师大附属实验学校

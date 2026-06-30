@@ -21,8 +21,8 @@ admissions:
   major: '01'
   major_name: 普通班
   campus: benbu
-  plan_total: '274'
-  plan_district: 274 住50
+  plan_total: '201'
+  plan_district: 201 住50
   lines:
     '2025':
       score: 438
@@ -61,9 +61,10 @@ admissions:
   code: null
   major: null
   metric: 校内排名
-  slots_2025_total: 146
-  note: 名额按本初中校内排名分配;逐初中明细见 chaoyang_xeddx.yaml(P3 迁 id)
-  source: 北京教育考试院《2025年初中学校校额到校分配名额》(官方原图)
+  note: 名额按本初中校内排名分配;逐初中明细见 _channel_meta.yaml[xeddx].rows
+  source: 《2026北京中招大报纸》(招生简章) p61-62 初中学校校额到校分配名额·朝阳区(官方)
+  slots_total: 147
+  plan_year: 2026
 rollup:
   features:
     style: 1946年建校的市级示范校，陶行知教育思想实验校、传媒特色实验校，设传媒特色班

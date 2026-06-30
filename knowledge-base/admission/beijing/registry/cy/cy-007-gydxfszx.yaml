@@ -21,8 +21,8 @@ admissions:
   major: '01'
   major_name: 普通班
   campus: benbu
-  plan_total: '332'
-  plan_district: 324 住50
+  plan_total: '271'
+  plan_district: 263 住50
   lines:
     '2025':
       score: 460
@@ -45,9 +45,10 @@ admissions:
   code: null
   major: null
   metric: 校内排名
-  slots_2025_total: 122
-  note: 名额按本初中校内排名分配;逐初中明细见 chaoyang_xeddx.yaml(P3 迁 id)
-  source: 北京教育考试院《2025年初中学校校额到校分配名额》(官方原图)
+  note: 名额按本初中校内排名分配;逐初中明细见 _channel_meta.yaml[xeddx].rows
+  source: 《2026北京中招大报纸》(招生简章) p61-62 初中学校校额到校分配名额·朝阳区(官方)
+  slots_total: 121
+  plan_year: 2026
 rollup:
   features:
     style: “人文奠基、科技领航”课程体系，与北工大合作办学，数学/科技两大特色，重创新人才培养；设内地西藏班(藏族班，散插各班)；高一约12个班、含1个第一实验班+4-5个第二实验班(实验班仅高一，高二走班分层)〔班型/西藏班据2026白皮书·机构口径〕
