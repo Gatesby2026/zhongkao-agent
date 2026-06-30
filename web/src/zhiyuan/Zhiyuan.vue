@@ -1487,7 +1487,7 @@ const tcOptions: string[] = []
     <!-- full=全功能(冲稳保+草表+全维,数据已对标朝阳);browse=校库浏览(暂无录取线) -->
     <template v-if="curMode === 'full'">
     <div class="disclaimer">
-      ⚠️ 学校代码 / 专业(班)代码派生自 <b>bjeea 2025 官方招生计划册</b>（人工核对映射），<b>2026 计划 7 月初发布后须刷新</b>；高考成绩为<b>民间·非官方</b>数据，仅作补充参考，请勿据此直接决策。
+      ⚠️ 学校代码 / 专业(班)代码及计划数派生自 <b>《2026 北京中招大报纸》官方招生简章</b>（逐校精读核对）；高考成绩为<b>民间·非官方</b>数据，仅作补充参考，请勿据此直接决策。
     </div>
 
     <!-- 输入区：生成前完整表单；生成后折叠成一行摘要(很少再改) -->
@@ -1686,9 +1686,9 @@ const tcOptions: string[] = []
 
                 <!-- 招生计划(统招专业/班 名额) -->
                 <div v-if="selMajors.length" class="dp-block">
-                  <div class="dp-title">招生计划 <small class="dp-muted">· 朝阳·2025官方计划册</small></div>
+                  <div class="dp-title">招生计划 <small class="dp-muted">· 朝阳·2026官方简章</small></div>
                   <div v-for="(m, mi) in selMajors" :key="mi" class="dp-mj">{{ cleanName(m.major_name) }}<em> · 本区 {{ planNum(m.plan_chaoyang) }}<template v-if="m.plan_total != null && String(m.plan_total) !== String(m.plan_chaoyang)"> · 全市 {{ planNum(m.plan_total) }}</template></em></div>
-                  <p class="dp-tip">2025 计划数（派生自 bjeea 官方计划册）；2026 计划 7 月初发布后刷新。</p>
+                  <p class="dp-tip">2026 计划数（派生自《2026 北京中招大报纸》官方招生简章，逐校精读）。</p>
                 </div>
 
                 <!-- 出口质量 -->
@@ -1904,9 +1904,9 @@ const tcOptions: string[] = []
 
                 <!-- 招生计划(统招专业/班 名额) -->
                 <div v-if="selMajors.length" class="dp-block">
-                  <div class="dp-title">招生计划 <small class="dp-muted">· 朝阳·2025官方计划册</small></div>
+                  <div class="dp-title">招生计划 <small class="dp-muted">· 朝阳·2026官方简章</small></div>
                   <div v-for="(m, mi) in selMajors" :key="mi" class="dp-mj">{{ cleanName(m.major_name) }}<em> · 本区 {{ planNum(m.plan_chaoyang) }}<template v-if="m.plan_total != null && String(m.plan_total) !== String(m.plan_chaoyang)"> · 全市 {{ planNum(m.plan_total) }}</template></em></div>
-                  <p class="dp-tip">2025 计划数（派生自 bjeea 官方计划册）；2026 计划 7 月初发布后刷新。</p>
+                  <p class="dp-tip">2026 计划数（派生自《2026 北京中招大报纸》官方招生简章，逐校精读）。</p>
                 </div>
 
                 <!-- 出口质量 -->

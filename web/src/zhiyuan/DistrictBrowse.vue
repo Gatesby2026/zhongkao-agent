@@ -94,7 +94,7 @@ onMounted(load)
       </div>
       <p v-if="!loading && !filtered.length" class="db-tip">无匹配学校。</p>
     </div>
-    <p class="db-src">数据：bjeea 2025 官方统招计划（学校代码/专业/计划数·T1）+ 高德坐标。一切以当年官方网报与简章为准。</p>
+    <p class="db-src">数据：计划数派生自《2026 北京中招大报纸》官方招生简章（学校代码/专业·T1）+ 高德坐标。一切以当年官方网报与简章为准。</p>
   </div>
 </template>
 
