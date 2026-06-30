@@ -32,7 +32,8 @@ admissions:
       rank: 1466
       total: 670
   lines_meta:
-    source: 北京高考在线 gaokzx — 2025年北京各区高中校预估分数及排名(预估口径,单源 low); 北京中考信息网 zhongkaobj — 2024大兴区高中录取分数线&区排名汇总; 北京小升初网 xschu — 2024年大兴区各高中中考录取分数线
+    source: 北京高考在线 gaokzx — 2025年北京各区高中校预估分数及排名(预估口径,单源 low); 北京中考信息网 zhongkaobj — 2024大兴区高中录取分数线&区排名汇总;
+      北京小升初网 xschu — 2024年大兴区各高中中考录取分数线
     confidence: low
   pred_2026:
     rank: 1353
@@ -58,5 +59,9 @@ rollup:
     voices:
       value: 北京市示范性普通高中、首批『北京2008奥林匹克教育示范学校』、获『首都文明单位』等荣誉(官方/百科表述,非家长口碑)
       source: https://zh.wikipedia.org/zh-hans/北京市大兴区兴华中学（百科·民间整理·待核）
+  gaokao:
+    note: 网传喜报·非官方
+    '2026': 600分以上8人、一本175人、本科503人、本科率约95%
+    source: 网传·非官方汇编 zhongkaobj.cn / 163.com / sohu.com 2026 各区高考喜报(2026-06)
 _codes:
 - '115002'
