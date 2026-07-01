@@ -2114,7 +2114,7 @@ const tcOptions: string[] = []
                 <span class="us-b band-冲">{{ tcSummary.cnt['冲'] }} 冲</span>
               </div>
               <button class="note-toggle" type="button" @click="noteOpen.tc = !noteOpen.tc">{{ noteOpen.tc ? '▾' : '▸' }} 录取规则与口径</button>
-              <div v-show="noteOpen.tc" class="note-body">统招前录取、录取即锁定：只自动填"统招够不上其档次、但统筹门槛够得着的外区 upgrade"（没中自动落到统招、无损失）；统招本可达 / 门槛够不上 / 档次过低的不填。统筹多为外区远校，按通勤口径过滤（≤上限或该校可住宿）。专业(班)每校仅一个（统筹一=20 / 统筹二=30 普通班），已按 2025 计划预填，以官方网报为准。完整名单见「<a class="lnk" @click="goTab('explore')">🔎 查学校</a>」筛"可走统筹"。</div>
+              <div v-show="noteOpen.tc" class="note-body">统招前录取、录取即锁定：只自动填"统招够不上其档次、但统筹门槛够得着的外区 upgrade"（没中自动落到统招、无损失）；统招本可达 / 门槛够不上 / 档次过低的不填。统筹多为外区远校，按通勤口径过滤（≤上限或该校可住宿）。专业(班)每校仅一个（统筹一=20 / 统筹二=30 普通班），已按 2026 计划预填（大报纸 p34-37 逐校核对，配额与 2025 一致），以官方网报为准。完整名单见「<a class="lnk" @click="goTab('explore')">🔎 查学校</a>」筛"可走统筹"。</div>
             </div>
             <p v-if="tcEligible.length && !tcFilled.length" class="us-tip" style="margin:6px 0">
               你这个位次<b>没有"既够得着又值得"的市级统筹</b>：够得着的多为远郊/平级校、值得的城区名校门槛又够不上。<b>建议这栏不填，重心放在朝阳统招 + 校额到校。</b>完整名单见「<a class="lnk" @click="goTab('explore')">🔎 查学校</a>」筛"可走统筹"。
