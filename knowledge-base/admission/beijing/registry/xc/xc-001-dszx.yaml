@@ -17,25 +17,13 @@ campuses:
   confidence: high
   boarding: true
 admissions:
-- channel: 市级统筹
-  tier: 统筹一
-  code: '102001'
-  major:
-    major_code: '20'
-    major_name: 普通班
-    full: '10200120'
-  faces_chaoyang: true
-  quota_chaoyang: 3
-  boarding: false
-  lines:
-    '2025':
-      score: 487
 - channel: 统招
   code: '102001'
   major: '01'
   major_name: 普通班
   campus: benbu
   plan_total: '194'
+  plan_district: null
   lines:
     '2025':
       score: 487
@@ -49,9 +37,6 @@ admissions:
       score: 643
       rank: 571
       total: 660
-  lines_meta:
-    source: 官方录取分数线（历史 3 年）
-    confidence: high
   pred_2026:
     rank: 575
     lo: 506
@@ -65,12 +50,34 @@ admissions:
   major_name: 道元实验班
   campus: benbu
   plan_total: '60'
+  plan_district: null
 - channel: 统招
   code: '102001'
   major: '03'
-  major_name: 中美高中课程 (AP课程)项目班
+  major_name: 普通班
   campus: benbu
   plan_total: '60'
+  plan_district: null
+- channel: 统招
+  code: '102001'
+  major: '04'
+  major_name: 中美高中课程(AP课程)项目班
+  campus: benbu
+  plan_total: '100'
+  plan_district: null
+- channel: 市级统筹
+  tier: 统筹一
+  code: '102001'
+  major:
+    major_code: '20'
+    major_name: 普通班
+    full: '10200120'
+  faces_chaoyang: true
+  quota_chaoyang: 3
+  boarding: false
+  lines:
+    '2025':
+      score: 487
 rollup:
   tags:
   - 顶尖名校

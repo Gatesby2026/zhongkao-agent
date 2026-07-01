@@ -15,6 +15,25 @@ campuses:
   confidence: 待核
   boarding: true
 admissions:
+- channel: 统招
+  code: '207005'
+  major: '01'
+  major_name: 普通班
+  campus: benbu
+  plan_total: '59'
+  plan_district: null
+  lines:
+    '2025':
+      score: 410
+      rank: 1237
+      total: 510
+  pred_2026:
+    rank: 1237
+    lo: 1089
+    hi: 1385
+    conf: low
+    method: hist
+    base_year: '2025'
 - channel: 市级统筹
   tier: 统筹二
   code: '207005'
@@ -30,33 +49,6 @@ admissions:
       score: 410
       rank: 1237
       rank_scope: 石景山区
-- channel: 统招
-  code: '207005'
-  major: '01'
-  major_name: 普通班
-  campus: benbu
-  plan_total: '59'
-  lines:
-    '2025':
-      score: 410
-      rank: 1237
-      total: 510
-  lines_meta:
-    source: '北京高考在线 gaokzx.com(2025: https://www.gaokzx.com/gk/zhongkao/144973.html)'
-    confidence: low
-  pred_2026:
-    rank: 1237
-    lo: 1089
-    hi: 1385
-    conf: low
-    method: hist
-    base_year: '2025'
-- channel: 统招
-  code: '207005'
-  major: '02'
-  major_name: 中美高中课程合作项目班
-  campus: benbu
-  plan_total: '90'
 rollup:
   tags:
   - 名校分校

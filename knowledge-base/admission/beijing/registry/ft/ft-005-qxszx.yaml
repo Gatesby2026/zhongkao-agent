@@ -21,6 +21,7 @@ admissions:
   major_name: 普通班
   campus: benbu
   plan_total: '70'
+  plan_district: null
   lines:
     '2025':
       score: 460
@@ -30,10 +31,6 @@ admissions:
       score: 618
       rank: 1123
       total: 670
-  lines_meta:
-    source: '2025: 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/2025080111680.html) + 北京高考在线(https://www.gaokzx.com/gk/zhongkao/144859.html);
-      2024: 北京高考在线(https://www.gaokzx.com/gk/zhongkao/126166.html) + 北京中考信息网(https://www.zhongkaobj.cn/lqfsx/ftq/202410212412.html)'
-    confidence: medium
   pred_2026:
     rank: 563
     lo: 495
@@ -46,7 +43,8 @@ admissions:
   major: '02'
   major_name: 普通班
   campus: benbu
-  plan_total: '144'
+  plan_total: '112'
+  plan_district: null
 rollup:
   features:
     style: 「全国唯一以「钱学森」冠名的完全中学，位于东高地航天城。以钱学森大成智慧思想设计课程，科技航天特色鲜明（3E航天俱乐部、院士1+X领航室、前沿科创课程），人文素养并重。」
