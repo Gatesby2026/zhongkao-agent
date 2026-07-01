@@ -1461,6 +1461,39 @@ watch(() => (xedSel.value ? xedSel.value.code : ''), () => {
   if (xedSel.value && xedSel.value.by_school) prefillXed()
 }, { immediate: true })
 
+// ── 指标分配批合并：校额到校 + 市级统筹 共用 8 个志愿，按"最好且够得着"从前到后排一列（同档校额优先）──
+// 官方2026(bjeea 88027)：两类合用「指标分配批」共 8 志愿、按填报顺序从高分到低分录取、录取即锁定。
+const IND_CAP = 8
+const indicatorRows = computed<DraftRowVM[]>(() => {
+  type It = { chan: '校额' | '统筹'; sort: number; vm: DraftRowVM }
+  const items: It[] = []
+  xedFilled.value.forEach(s => {
+    const b = xedBadge(s.school); const r = xedReason(s.school)
+    const e = xedRecommend.value.find(x => x.school === s.school)
+    items.push({ chan: '校额', sort: Number(e?.ref ?? 9e9), vm: {
+      seq: 0, name: xedName(s.school!), meta: '校额到校', band: b || undefined,
+      majors: [], majorsNote: '以官方网报为准', headline: r?.headline, risk: r?.caveat,
+    } })
+  })
+  tcFilled.value.forEach(s => {
+    const r = tcReason(s.school); const e = tcEligible.value.find(x => x.key === s.school)
+    items.push({ chan: '统筹', sort: Number(e?.s?.cy_equiv ?? 9e9), vm: {
+      seq: 0, name: tcName(s.school!), meta: '统筹·' + (tcTier(s.school!) || ''),
+      band: r ? { label: r.label, cls: TC_BAND_CLS[r.label] || 'band-够不上' } : undefined,
+      majors: s.majors ? [{ code: s.majors }] : [], majorsNote: '以官方网报为准',
+      headline: r?.headline, factors: r?.factors, risk: r?.caveat,
+    } })
+  })
+  // 高中位次靠前(更好/更该冲)在前；同位次校额优先于统筹
+  items.sort((a, b) => a.sort - b.sort || (a.chan === '校额' ? 0 : 1) - (b.chan === '校额' ? 0 : 1))
+  return items.slice(0, IND_CAP).map((it, i) => ({ ...it.vm, seq: i + 1 }))
+})
+const indicatorSummary = computed(() => {
+  const xed = xedFilled.value.length, tc = tcFilled.value.length
+  const filled = xed + tc
+  return { xed, tc, filled, shown: Math.min(filled, IND_CAP), over: filled > IND_CAP }
+})
+
 // 市级统筹（统筹一/二/三）方向说明。
 // ⚠️ 重要订正：曾用《朝阳指标分配计划·高中侧》里本区校（人朝/对外经贸/东师朝/清华附中朝阳·望京）的统筹名额数反推“朝阳可报统筹校”——这是把“高中对外供给的名额”误当成“朝阳考生可报”。
 // 那些名额按全市各初中校分配、多流向外区；它们是朝阳本区优质高中，朝阳考生应走【统招/校额到校】去够，而非市级统筹。
@@ -2085,45 +2118,27 @@ const tcOptions: string[] = []
         <section class="batch">
           <button class="batch-h" type="button" @click="batchOpen.ind = !batchOpen.ind">
             <span class="bc">{{ batchOpen.ind ? '▾' : '▸' }}</span>② 指标分配（校额到校 + 市级统筹）
-            <small>门槛 总分≥430 + 综合素质B + 同一初中连续三年学籍</small>
+            <small>校额+统筹共用 8 志愿 · 门槛 总分≥430 + 综合素质B + 同一初中连续三年学籍</small>
           </button>
           <template v-if="batchOpen.ind && canIndicator">
-            <!-- 校额到校 -->
-            <h4 class="batch-sub">校额到校<small>按你初中名额自动生成</small></h4>
-            <div v-if="xedEligible.length && xedSummary.filled" class="uni-summary">
-              <div class="us-line"><b>{{ xedSummary.filled }} 志愿</b>
-                <span class="us-b band-冲">{{ xedSummary.cnt.worth }} 值得冲</span>
-                <span class="us-b band-稳">{{ xedSummary.cnt.similar }} 相当</span>
+            <!-- 校额到校 + 市级统筹 合并：指标分配批共 8 志愿，按顺序录取、录取即锁定 -->
+            <div v-if="indicatorRows.length" class="uni-summary">
+              <div class="us-line"><b>{{ indicatorSummary.shown }}/8 志愿</b>
+                <span class="us-b band-冲">校额 {{ indicatorSummary.xed }}</span>
+                <span class="us-b band-稳">统筹 {{ indicatorSummary.tc }}</span>
               </div>
-              <p v-if="xedSummary.cnt.waste > 0" class="us-warn">🔒 <b>锁低风险</b>：有 <b>{{ xedSummary.cnt.waste }}</b> 所"统招本来就能上"——校额录取即锁定，会主动锁进同级/更低校，建议移除。</p>
-              <button class="note-toggle" type="button" @click="noteOpen.xed = !noteOpen.xed">{{ noteOpen.xed ? '▾' : '▸' }} 录取规则与口径</button>
-              <div v-show="noteOpen.xed" class="note-body">录取即锁定、后续作废：只自动选入<b>值得冲</b>（统招够不上的 upgrade）；相当 / 统招本可达不选入（避免锁进同级或更低校）。按本初中<b>校内排名 + 志愿顺序</b>录取，无官方各校线。专业(班)校额每校通常<b>仅一个</b>，以官方网报为准。机制见「<a class="lnk" @click="goTab('channels')">渠道科普</a>」。</div>
-            </div>
-            <div v-if="xedFilled.length" class="uni-list">
-              <DraftRow v-for="r in xedRows" :key="r.seq" v-bind="r" />
-            </div>
-            <p v-else-if="xedEligible.length" class="xed-src">本位次暂无"值得用校额冲"的优质高中（统招本可达的不建议占校额）。</p>
-            <p v-else class="xed-src">先在<b>首页填初中学校</b>，这里才能按名额生成校额到校志愿。</p>
-
-            <!-- 市级统筹 -->
-            <h4 class="batch-sub">市级统筹<small>朝阳可报统筹校自动研判</small></h4>
-            <div v-if="tcEligible.length && tcSummary.filled" class="uni-summary">
-              <div class="us-line"><b>{{ tcSummary.filled }} 志愿</b>
-                <span class="us-b band-保">{{ tcSummary.cnt['保'] }} 保</span>
-                <span class="us-b band-稳">{{ tcSummary.cnt['稳'] }} 稳</span>
-                <span class="us-b band-冲">{{ tcSummary.cnt['冲'] }} 冲</span>
-              </div>
+              <p v-if="indicatorSummary.over" class="us-warn">⚠️ 校额 + 统筹<b>共用 8 个志愿</b>：你的"值得"候选超过 8，已<b>按"同档校额优先"取前 8</b>（其余可在「查学校」手动权衡）。</p>
               <button class="note-toggle" type="button" @click="noteOpen.tc = !noteOpen.tc">{{ noteOpen.tc ? '▾' : '▸' }} 录取规则与口径</button>
-              <div v-show="noteOpen.tc" class="note-body">统招前录取、录取即锁定：只自动填"统招够不上其档次、但统筹门槛够得着的外区 upgrade"（没中自动落到统招、无损失）；统招本可达 / 门槛够不上 / 档次过低的不填。统筹多为外区远校，按通勤口径过滤（≤上限或该校可住宿）。专业(班)每校仅一个（统筹一=20 / 统筹二=30 普通班），已按 2026 计划预填（大报纸 p34-37 逐校核对，配额与 2025 一致），以官方网报为准。完整名单见「<a class="lnk" @click="goTab('explore')">🔎 查学校</a>」筛"可走统筹"。</div>
+              <div v-show="noteOpen.tc" class="note-body">官方2026：<b>校额到校 + 市级统筹合用「指标分配批」，共 8 个志愿</b>，提招后、统招前，<b>按你填的志愿顺序</b>从高分到低分录取、<b>录取即锁定</b>（锁定后不再进统招）。本表已把两类<b>混排成一列</b>：只选<b>值得</b>（统招够不上的 upgrade）、<b>同档校额优先于统筹</b>（校额比校内排名、本区近校、无住宿；统筹外区远校＋住宿＋名额少）；"统招本可达/相当"不选入（避免锁进同级或更低校）。校额按<b>本初中校内排名</b>录取、无官方各校线；统筹配额 2026 与 2025 一致。均以官方网报为准。机制见「<a class="lnk" @click="goTab('channels')">渠道科普</a>」。</div>
             </div>
-            <p v-if="tcEligible.length && !tcFilled.length" class="us-tip" style="margin:6px 0">
-              你这个位次<b>没有"既够得着又值得"的市级统筹</b>：够得着的多为远郊/平级校、值得的城区名校门槛又够不上。<b>建议这栏不填，重心放在朝阳统招 + 校额到校。</b>完整名单见「<a class="lnk" @click="goTab('explore')">🔎 查学校</a>」筛"可走统筹"。
+            <div v-if="indicatorRows.length" class="uni-list">
+              <DraftRow v-for="r in indicatorRows" :key="r.seq" v-bind="r" />
+            </div>
+            <p v-else-if="xedEligible.length || tcEligible.length" class="us-tip" style="margin:6px 0">
+              你这个位次<b>暂无"既够得着又值得"的指标分配志愿</b>：校额/统筹里够得着的多为平级/远郊校、值得的门槛又够不上。<b>建议指标分配批不填，重心放在朝阳统招。</b>完整名单见「<a class="lnk" @click="goTab('explore')">🔎 查学校</a>」。
             </p>
-            <div v-if="tcFilled.length" class="uni-list">
-              <DraftRow v-for="r in tcRows" :key="r.seq" v-bind="r" />
-            </div>
+            <p v-else class="xed-src">先在<b>首页填初中学校</b>，这里才能按名额生成指标分配志愿。</p>
             <JudgeLegend v-if="tcEligible.length" :rank="form.rank" />
-            <p v-if="!tcEligible.length" class="xed-src">暂无可报统筹校结构化数据；可在「查学校」筛"可走统筹"查看。</p>
           </template>
           <p v-else-if="batchOpen.ind && !canIndicator" class="xed-note warn">当前「{{ (IDENTITIES.find(x => x.v === form.identity) || {}).label }}」身份不可报指标分配（校额到校 / 市级统筹）。</p>
         </section>
