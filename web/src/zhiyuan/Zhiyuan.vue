@@ -439,6 +439,12 @@ const XED_FULLNAME: Record<string, string> = {
   '对外经贸94中': '对外经济贸易大学附属中学', '十七中': '北京十七中', '工大附中': '北京工业大学附属中学',
   '人朝': '人大附中朝阳学校', '东方德才': '东方德才学校', '东师朝': '东北师大附中朝阳学校', '清华朝阳': '清华附中朝阳学校',
 }
+// 缩写→官方全名:优先服务端 resolved(registry 正名,与 public_list 卡名一致);硬编码表仅兜底。
+// ⚠️ 曾因直接用 XED_FULLNAME(简称)匹配 public_list(全名),10/12 校匹配失败→人朝/清华朝阳/陈经纶等
+// worth 校被静默丢出校额推荐(P0)。任何"缩写→卡"的匹配必须走本函数。
+function xedFull(abbr: string): string | null {
+  return (xedBlock.value as any)?.resolved?.[abbr]?.name || XED_FULLNAME[abbr] || null
+}
 // 选定初中(xedQuery，缺省朝外)分到各优质高中的校额到校名额：全名→名额。
 // 供地图 pin 徽标 + 学校详情卡展示（校额到校目标校全在朝阳，已是图上已有 pin）。
 const xedQuotaByName = computed<Record<string, number>>(() => {
@@ -446,7 +452,7 @@ const xedQuotaByName = computed<Record<string, number>>(() => {
   if (!r || !r.by_school) return {}
   const out: Record<string, number> = {}
   for (const [abbr, n] of Object.entries(r.by_school)) {
-    const full = XED_FULLNAME[abbr]
+    const full = xedFull(abbr)
     if (full) out[full] = (out[full] || 0) + (n as number)
   }
   return out
@@ -463,7 +469,7 @@ const xedJudgeByName = computed<Record<string, { tag: string; color: string; ref
   const byName: Record<string, any> = {}
   ;(result.value?.public_list || []).forEach((p: any) => { byName[p.name] = p })
   for (const abbr of Object.keys(r.by_school)) {
-    const full = XED_FULLNAME[abbr]
+    const full = xedFull(abbr)
     if (!full) continue
     const card = byName[full]
     const ref = card && typeof card.ref_rank === 'number' ? card.ref_rank : null
@@ -1329,7 +1335,7 @@ const xedRecommend = computed(() => {
   const byName: Record<string, PubSchool> = {}
   pl.forEach(p => { byName[p.name] = p })
   return xedEligible.value.map(e => {
-    const full = XED_FULLNAME[e.school]
+    const full = xedFull(e.school)
     const card = full ? byName[full] : null
     const ref = card && typeof card.ref_rank === 'number' ? card.ref_rank as number : null
     let tag = 'unknown'
@@ -1467,7 +1473,13 @@ const tcSummary = computed(() => {
 function prefillXed() {
   // ②指标分配在统招前·录取即锁定：只填"统招够不上"的 upgrade（✅值得冲），不填≈相当/统招本可达（避免锁进同级或更低校）
   // 通勤同口径：超上限的只有"接受住宿且该校提供住宿"才进自动填（下拉仍可手动选）
-  const rec = xedRecommend.value.filter(e => e.tag === 'worth' && reachByCommute(e.km, e.boarding))
+  const seen = new Set<string>()   // 同校多缩写(和平街本部/莲葩园→同码105004)只占一格,网报一志愿可带2专业
+  const rec = xedRecommend.value.filter(e => {
+    if (e.tag !== 'worth' || !reachByCommute(e.km, e.boarding)) return false
+    const k = e.full || e.school
+    if (seen.has(k)) return false
+    seen.add(k); return true
+  })
   draftXed.value = Array.from({ length: 8 }, (_, i) =>
     rec[i] ? { school: rec[i].school, majors: '' } : { school: null, majors: '' })
 }
