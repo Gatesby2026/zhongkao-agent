@@ -277,6 +277,7 @@ async function submit() {
     result.value = await r.json()
     resetDraft()
     prefillTongchou()
+    prefillXed()   // 位次/结果变了,校额推荐(worth 判定依赖 rank)须随之重排——否则旧位次选校残留
     formOpen.value = false   // 生成后折叠表单，把空间让给结果
     formDirty.value = false
     tab.value = 'map'        // 生成后回到地图页，保证地图在可见状态下初始化
