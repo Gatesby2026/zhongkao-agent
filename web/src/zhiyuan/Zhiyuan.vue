@@ -1530,9 +1530,12 @@ const indicatorRows = computed<DraftRowVM[]>(() => {
   return items.slice(0, IND_CAP).map((it, i) => ({ ...it.vm, seq: i + 1 }))
 })
 const indicatorSummary = computed(() => {
-  const xed = xedFilled.value.length, tc = tcFilled.value.length
-  const filled = xed + tc
-  return { xed, tc, filled, shown: Math.min(filled, IND_CAP), over: filled > IND_CAP }
+  // 以合并清单实际行数计(含 B3 同校保险补入行),而非 draft 原始数
+  const rows = indicatorRows.value
+  const xed = rows.filter(r => r.meta === '校额到校').length
+  const tc = rows.length - xed
+  const raw = xedFilled.value.length + tcFilled.value.length   // 原始候选(不含保险,cap 前)
+  return { xed, tc, filled: rows.length, shown: rows.length, over: raw > IND_CAP }
 })
 
 // B6:一键复制志愿草表(指标批+统招,对齐网报顺序),便于保存/打印/发给家人核对
