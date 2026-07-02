@@ -179,6 +179,8 @@ const form = reactive({
   max_km: USER_DEFAULTS.max_km,
   boarding: USER_DEFAULTS.boarding,
   identity: USER_DEFAULTS.identity,   // 京籍应届/非京籍/往届
+  schoolRank: '' as number | string,  // 校内排名(选填,B1):有则校额中签研判从"未知彩票"精化为"名额n vs 校内排名"
+  farBoarding: false,                 // 接受远郊寄宿统筹(B5):开启则 j.far 的统筹校纳入自动填
   risk: 'balanced',                   // 风险偏好:safe保底优先/balanced均衡/aggressive冲高
   orient: 'gaokao',                   // 升学取向:gaokao体制内高考/abroad兼顾出国
   nonpub: 'pub_only',                 // 贯通/中职缺省:仅公办 / no仅公办+民办 / yes智能纳入
@@ -295,7 +297,7 @@ async function loadProfile() {
     const me = await fetchMe()
     const p = (me?.profile) ?? (await getProfile().then(r => r.profile).catch(() => null))
     if (!p) return
-    for (const k of ['rank', 'home', 'mode', 'max_km', 'boarding', 'identity', 'risk', 'orient', 'nonpub',
+    for (const k of ['rank', 'home', 'mode', 'max_km', 'boarding', 'identity', 'schoolRank', 'farBoarding', 'risk', 'orient', 'nonpub',
       'wenli', 'strong', 'weak', 'stability', 'target', 'drive', 'adapt', 'talent', 'valued', 'budget'] as const) {
       if (p[k] !== undefined && p[k] !== null) (form as any)[k] = p[k]
     }
@@ -1303,7 +1305,7 @@ const identityNote = computed(() => {
 })
 // ② 指标分配-市级统筹：自由填写
 interface TcSlot { school: string | null; majors: string }
-const draftTongchou = ref<TcSlot[]>(Array.from({ length: 4 }, () => ({ school: null, majors: '' })))
+const draftTongchou = ref<TcSlot[]>(Array.from({ length: 8 }, () => ({ school: null, majors: '' })))
 // ② 指标分配-校额到校：选优质高中(来自孩子初中的名额) + 专业手填
 interface XedSlot { school: string | null; majors: string }
 const draftXed = ref<XedSlot[]>(Array.from({ length: 8 }, () => ({ school: null, majors: '' })))
@@ -1353,6 +1355,14 @@ function xedBadge(school: string | null): { label: string; cls: string } | null 
   const e = xedRecommend.value.find(x => x.school === school)
   return { label: XED_TAG_SHORT[e?.tag || 'unknown'] || '—', cls: r.cls }
 }
+// B1:校内排名 vs 该校名额 n → 中签研判(竞争仅在"本校也报了这所校的人"里,故为倾向非承诺)
+function xedWinTier(n: number): { chip: string; note: string } | null {
+  const sr = Number(form.schoolRank) || 0
+  if (!sr || !n) return null
+  if (sr <= n) return { chip: `📈排名${sr}≤名额${n}·大概率中`, note: `你校内排名 ${sr} 已进名额数(${n})内——只要排你前面的同学不都报它,基本能中` }
+  if (sr <= n * 3) return { chip: `📊排名${sr}/名额${n}·有戏`, note: `校内排名 ${sr} 在名额(${n})的3倍内——是否中取决于排你前面的同学报不报这所校` }
+  return { chip: `🎫排名${sr}/名额${n}·彩票`, note: `校内排名 ${sr} 距名额(${n})较远——除非排你前面的报名者少于名额数,属免费彩票(不中无损失)` }
+}
 // 校额到校：单行理由（基于 xedRecommend 的 tag/ref/名额）
 function xedReason(school: string | null): { label: string; cls: string; headline: string; caveat: string } | null {
   if (!school) return null
@@ -1365,8 +1375,9 @@ function xedReason(school: string | null): { label: string; cls: string; headlin
   else if (e.tag === 'similar') headline = `统招位次${refTxt}与你相当 → 校额可作多一条进名校通道`
   else if (e.tag === 'waste') headline = `统招位次${refTxt}比你靠后 → 统招本可达，占校额名额意义小`
   else headline = '该校统招位次未知，按本校名额参考'
+  const wt = xedWinTier(e.n)
   return { label: (XED_TAG[e.tag] || XED_TAG.unknown).label, cls: XED_TAG_BAND[e.tag] || 'band-稳',
-    headline, caveat: `本校名额 ${e.n}；按本初中校内排名 + 志愿顺序录取、无官方各校线；录取即锁定` }
+    headline, caveat: (wt ? wt.note + '。' : '') + `本校名额 ${e.n}；按本初中校内排名 + 志愿顺序录取、无官方各校线；录取即锁定` }
 }
 const xedSummary = computed(() => {
   const cnt: Record<string, number> = { worth: 0, similar: 0, waste: 0, unknown: 0 }
@@ -1393,14 +1404,17 @@ function prefillTongchou() {
   // 通勤同口径(跟随住宿勾选)：≤上限 或 (接受住宿 且 该校提供住宿)；远校无住宿=没法住校又通勤不了→排除
   // 只自动填"够一够的真 upgrade":档次显著优于你 + 够得着门槛 + 非不值 + 非远郊(需寄宿重负·默认不推)
   // + 有朝阳名额 + 通勤可达。远郊/平级校仍在下拉里(可手动加),但不进默认草表,免得朝阳娃被默认锁去郊区。
+  // B5:远郊(j.far)默认不自动填;表单勾选"接受远郊寄宿统筹"后纳入(caveat 仍带远郊警示)
   const cand = tcEligible.value
-    .filter(e => e.j.worth && !e.j.far && (e.s.quota_chaoyang || 0) > 0
+    .filter(e => e.j.worth && (form.farBoarding || !e.j.far) && (e.s.quota_chaoyang || 0) > 0
                  && e.j.label !== '够不上' && reachByCommute(e.s.dist?.km, !!e.s.boarding))
     .sort((a, b) => (a.s.cy_equiv ?? 9e9) - (b.s.cy_equiv ?? 9e9))
-    .slice(0, 4)
-  draftTongchou.value = Array.from({ length: 4 }, (_, i) =>
+    .slice(0, 8)
+  draftTongchou.value = Array.from({ length: 8 }, (_, i) =>
     cand[i] ? { school: cand[i].key, majors: cand[i].s.tongchou_major?.major_code || '' } : { school: null, majors: '' })
 }
+// 远郊开关切换 → 重排统筹自动填(有结果时)
+watch(() => form.farBoarding, () => { if (result.value) prefillTongchou() })
 // 统筹 key → 纯校名(+校区);档次进右侧徽标、统筹几进 meta(与校额/统招行格式统一)
 function tcName(key: string | null): string {
   if (!key) return ''
@@ -1470,11 +1484,37 @@ const indicatorRows = computed<DraftRowVM[]>(() => {
   xedFilled.value.forEach(s => {
     const b = xedBadge(s.school); const r = xedReason(s.school)
     const e = xedRecommend.value.find(x => x.school === s.school)
+    const wt = e ? xedWinTier(e.n) : null
     items.push({ chan: '校额', sort: Number(e?.ref ?? 9e9), vm: {
       seq: 0, name: xedName(s.school!), meta: '校额到校', band: b || undefined,
-      majors: [], majorsNote: '以官方网报为准', headline: r?.headline, risk: r?.caveat,
+      majors: [], majorsNote: '以官方网报为准', headline: r?.headline,
+      factors: e ? [`🎯本校名额${e.n}`, ...(wt ? [wt.chip] : [])] : undefined,   // B2 名额上卡 + B1 中签研判
+      risk: r?.caveat,
     } })
   })
+  // B3 同校保险:统招草表里分数边缘的目标校(统招位次与你差<5%),本初中有其校额名额且未入清单 → 补入
+  {
+    const rank = Number(form.rank) || 0
+    if (rank) {
+      const inXed = new Set(xedFilled.value.map(s => s.school))
+      for (const u of uniFilled.value) {
+        const c: any = findCard(u.name!)
+        const ref = c && typeof c.ref_rank === 'number' ? (c.ref_rank as number) : null
+        if (ref == null || !(ref > rank * 0.95 && ref < rank * 1.05)) continue
+        const e = xedRecommend.value.find(x => x.full === u.name && (x.n || 0) > 0)
+        if (!e || inXed.has(e.school)) continue
+        inXed.add(e.school)
+        const wt = xedWinTier(e.n)
+        items.push({ chan: '校额', sort: ref, vm: {
+          seq: 0, name: xedName(e.school), meta: '校额到校', band: { label: '同校保险', cls: 'band-稳' },
+          majors: [], majorsNote: '以官方网报为准',
+          headline: `统招目标校、分数在边缘(统招位次≈${ref} vs 你≈${rank}) → 校额是同一目标的更稳路径`,
+          factors: [`🎯本校名额${e.n}`, ...(wt ? [wt.chip] : [])],
+          risk: '锁定=锁进你统招本来想去的校,无损失;按本初中校内排名录取',
+        } })
+      }
+    }
+  }
   tcFilled.value.forEach(s => {
     const r = tcReason(s.school); const e = tcEligible.value.find(x => x.key === s.school)
     items.push({ chan: '统筹', sort: Number(e?.s?.cy_equiv ?? 9e9), vm: {
@@ -1493,6 +1533,21 @@ const indicatorSummary = computed(() => {
   const filled = xed + tc
   return { xed, tc, filled, shown: Math.min(filled, IND_CAP), over: filled > IND_CAP }
 })
+
+// B6:一键复制志愿草表(指标批+统招,对齐网报顺序),便于保存/打印/发给家人核对
+const copyOk = ref(false)
+function copyDraft() {
+  const L: string[] = ['【② 指标分配批 · 校额到校＋市级统筹 · 共8志愿·按顺序录取·录取即锁定】']
+  if (indicatorRows.value.length)
+    indicatorRows.value.forEach(r => L.push(`${r.seq}. ${r.name}（${r.meta || ''}${r.band ? '·' + r.band.label : ''}）`))
+  else L.push('（不填——本位次无值得锁定的 upgrade,直接进统招）')
+  L.push('', '【③ 统一招生 · 共8志愿】')
+  uniRows.value.forEach(r => L.push(`${r.seq}. ${r.name}${r.majors && r.majors.length ? '  专业:' + r.majors.map(m => m.code + (m.name ? ' ' + m.name : '')).join(' / ') : ''}`))
+  L.push('', '⚠️ 参考草表,以官方网报系统为准 · 生成于 zhongkao.gatesby.xyz/zhiyuan')
+  navigator.clipboard.writeText(L.join('\n'))
+    .then(() => { copyOk.value = true; setTimeout(() => (copyOk.value = false), 2000) })
+    .catch(() => {})
+}
 
 // 市级统筹（统筹一/二/三）方向说明。
 // ⚠️ 重要订正：曾用《朝阳指标分配计划·高中侧》里本区校（人朝/对外经贸/东师朝/清华附中朝阳·望京）的统筹名额数反推“朝阳可报统筹校”——这是把“高中对外供给的名额”误当成“朝阳考生可报”。
@@ -1547,6 +1602,15 @@ const tcOptions: string[] = []
           <input list="xedSchoolListMain" v-model="xedQuery" placeholder="如 朝阳外国语学校" />
         </label>
         <datalist id="xedSchoolListMain"><option v-for="r in (xedBlock ? xedBlock.rows : [])" :key="r.code" :value="r.name" /></datalist>
+        <label class="fld fld-xrank">校内排名 <small>选填·精判校额</small>
+          <input type="number" v-model.number="form.schoolRank" min="1" placeholder="如 15（年级名次）" />
+        </label>
+        <label class="fld fld-farb">远郊寄宿统筹 <small>统筹校多为远郊</small>
+          <select v-model="form.farBoarding">
+            <option :value="false">不考虑（默认，不自动填）</option>
+            <option :value="true">接受（远郊统筹纳入自动填）</option>
+          </select>
+        </label>
         <label class="fld fld-home">家庭住址 <small>留空只看全区分布</small>
           <input type="text" v-model="form.home" placeholder="如 朝阳区紫玉山庄" />
         </label>
@@ -2079,6 +2143,7 @@ const tcOptions: string[] = []
           <span class="rs-i" :class="{ bad: xedSummary.cnt.waste > 0 }">① ②指标分配不锁低{{ xedSummary.cnt.waste > 0 ? '（有'+xedSummary.cnt.waste+'所统招本可达，建议移除）' : '✓' }}</span>
           <span class="rs-i">② 冲在前·零成本（平行志愿）</span>
           <span class="rs-i" :class="{ bad: uniSummary.noSafety }">③ 统招末位必有铁保底{{ uniSummary.noSafety ? '（当前无保底！）' : '✓' }}</span>
+          <button class="rs-copy" type="button" @click="copyDraft">{{ copyOk ? '✅ 已复制' : '📋 复制草表' }}</button>
         </div>
 
         <!-- 低位次专属方案:统招进不了公办时,把非统招路径按优先级摆出来 -->
@@ -2328,6 +2393,8 @@ const tcOptions: string[] = []
 .fld-id { grid-column: span 2; }
 .fld-rank { grid-column: span 2; }
 .fld-jr { grid-column: span 4; }
+.fld-xrank { grid-column: span 2; }
+.fld-farb { grid-column: span 2; }
 .fld-home { grid-column: span 4; }
 .fld-mode { grid-column: span 3; }
 .fld-km { grid-column: span 2; }
@@ -2368,8 +2435,8 @@ const tcOptions: string[] = []
 @media (max-width: 760px) {
   .form .fields { grid-template-columns: repeat(2, 1fr); }
   .fgrp-title { grid-column: 1 / -1; }
-  .fld-id, .fld-rank, .fld-mode, .fld-km { grid-column: span 1; }
-  .fld-jr, .fld-home, .fld-board, .fld-go,
+  .fld-id, .fld-rank, .fld-xrank, .fld-mode, .fld-km { grid-column: span 1; }
+  .fld-jr, .fld-home, .fld-board, .fld-go, .fld-farb,
   .fld-risk, .fld-orient, .fld-nonpub { grid-column: span 2; }
   .fld-go .go { width: 100%; min-width: 0; }
 }
@@ -2901,6 +2968,9 @@ const tcOptions: string[] = []
 .rules-strip .rs-t { font-weight: 700; color: var(--gray-700); }
 .rules-strip .rs-i { color: var(--gray-600); }
 .rules-strip .rs-i.bad { color: #dc2626; font-weight: 600; }
+.rules-strip .rs-copy { margin-left: auto; flex: 0 0 auto; font-size: 12px; padding: 3px 10px; border-radius: var(--radius-full);
+  border: 1px solid var(--brand); background: #fff; color: var(--brand-dark); cursor: pointer; }
+.rules-strip .rs-copy:hover { background: var(--brand-50); }
 /* 规则与策略结构化卡片 */
 .rules-doc { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0 14px; }
 .rd-card { border: 1px solid var(--gray-100); border-radius: 10px; padding: 12px 14px; background: #fff; }
