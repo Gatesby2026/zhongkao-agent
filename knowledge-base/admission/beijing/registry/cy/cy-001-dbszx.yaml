@@ -39,13 +39,12 @@ admissions:
       total: 660
   line_scope: 校级代表线(普通班);源数据未分专业
   pred_2026:
-    rank: 905
-    lo: 543
-    hi: 1267
-    pct: 7.5
-    method: percentile_trend
+    rank: 717
+    lo: 660
+    hi: 774
+    method: supply_stack
     conf: T3
-    volatile: true
+    volatile: false
 - channel: 统招
   code: '105001'
   major: '02'
@@ -55,13 +54,12 @@ admissions:
   plan_district: 30 住15
   line_scope: 缺本专业线(源数据仅校级);待 P3 采集
   pred_2026:
-    rank: 905
-    lo: 543
-    hi: 1267
-    pct: 7.5
-    method: percentile_trend
+    rank: 717
+    lo: 660
+    hi: 774
+    method: supply_stack
     conf: T3
-    volatile: true
+    volatile: false
 - channel: 统招
   code: '105001'
   major: '03'
@@ -71,13 +69,12 @@ admissions:
   plan_district: '37'
   line_scope: 缺本专业线(源数据仅校级);待 P3 采集
   pred_2026:
-    rank: 905
-    lo: 543
-    hi: 1267
-    pct: 7.5
-    method: percentile_trend
+    rank: 717
+    lo: 660
+    hi: 774
+    method: supply_stack
     conf: T3
-    volatile: true
+    volatile: false
   note: '03、04专业:100000元/学年: 加试时间:7月10日。'
 - channel: 统招
   code: '105001'
@@ -88,13 +85,12 @@ admissions:
   plan_district: '54'
   line_scope: 缺本专业线(源数据仅校级);待 P3 采集
   pred_2026:
-    rank: 905
-    lo: 543
-    hi: 1267
-    pct: 7.5
-    method: percentile_trend
+    rank: 717
+    lo: 660
+    hi: 774
+    method: supply_stack
     conf: T3
-    volatile: true
+    volatile: false
 - channel: 校额到校
   code: null
   major: null

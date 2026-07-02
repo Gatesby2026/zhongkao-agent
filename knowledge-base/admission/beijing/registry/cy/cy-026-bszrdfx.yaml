@@ -36,13 +36,12 @@ admissions:
       rank: 2691
       total: 660
   pred_2026:
-    rank: 1894
-    lo: 1136
-    hi: 2652
-    pct: 15.8
-    method: percentile_trend
+    rank: 1356
+    lo: 1248
+    hi: 1464
+    method: supply_stack
     conf: T3
-    volatile: true
+    volatile: false
   note: 因本校高中办学的硬件建设 尚未完成,高一年级在北京 市第八十中学借址上课。
 rollup:
   features:

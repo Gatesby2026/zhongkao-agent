@@ -1,0 +1,36 @@
+entity: 北京市朝阳外国语学校
+entity_uid: cy-019-zywgyxx
+note: >
+  朝外校内直升(初中部→本校高中)的机制与规模。核心事实由在读家长一手确认(T2),
+  规模为网传(T4)。本渠道不在中招计划内,与提前批"集团直升"(朝外无)是不同物种。
+records:
+  - id: ev-2026-zywgy-zhisheng-001
+    entity: 北京市朝阳外国语学校
+    claim: zhisheng_mechanism
+    value: 直升名单初三下学期确定;直升生参加中考(含一模二模,占区排名位),但不再填报中招志愿(不占统招名额、不参与校额/统筹竞争)
+    confidence: T2
+    status: confirmed
+    source_type: 在读家长一手
+    method: 用户口述(其子女2026届朝外初三在读)
+    collected_at: 2026-07-02
+    notes: 推翻网传"初二末进高中部不读初三"的说法(xschu等,该说法与2+4模式混淆)。
+  - id: ev-2026-zywgy-zhisheng-002
+    entity: 北京市朝阳外国语学校
+    claim: zhisheng_scale
+    value: 约190人/届,占初中部40-50%(数学成绩一票否决)
+    confidence: T4
+    status: unconfirmed
+    source_type: 网传/家长圈
+    source_url: https://www.xschu.com/zhonggaokaozixun/84121.html
+    collected_at: 2026-07-02
+    notes: 与 zhongkaobj(202411234979)"朝外集团直升10人"口径严重冲突(19倍);后者疑指其他渠道或错误,列为排除证据。
+  - id: ev-2026-zywgy-zhisheng-excl-001
+    entity: 北京市朝阳外国语学校
+    claim: zhisheng_scale
+    value: "集团校直升10人(本校、朝外北苑分校、北师大朝阳附属学校)"
+    confidence: T4
+    status: excluded
+    source_type: 聚合媒体
+    source_url: https://www.zhongkaobj.cn/zhaosheng/qianyuezhisheng/202411234979.html
+    collected_at: 2026-07-02
+    notes: 排除理由:与家长一手观察(~190/届)和"占初中部近半"的普遍认知严重不符;该文口径混杂(将多校非官方签约与官方渠道混列)。保留备查。

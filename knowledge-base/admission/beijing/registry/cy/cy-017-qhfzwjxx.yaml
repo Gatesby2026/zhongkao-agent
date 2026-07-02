@@ -31,11 +31,10 @@ admissions:
       rank: 2569
       total: 670
   pred_2026:
-    rank: 2445
-    lo: 1932
-    hi: 2958
-    pct: 20.4
-    method: percentile_trend
+    rank: 2066
+    lo: 1901
+    hi: 2231
+    method: supply_stack
     conf: T3
     volatile: false
 rollup:

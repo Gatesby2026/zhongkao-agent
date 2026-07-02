@@ -28,13 +28,12 @@ admissions:
       rank: 2533
       total: 510
   pred_2026:
-    rank: 3106
-    lo: 2112
-    hi: 4100
-    pct: 25.9
-    method: percentile_trend
+    rank: 2448
+    lo: 2081
+    hi: 2815
+    method: supply_stack
     conf: T3
-    volatile: false
+    volatile: true
 rollup:
   features:
     style: 2024年9月开学新校，朝阳+5所高校共建，以工程为核心的跨学科/AI+课程，培养科技创新人才

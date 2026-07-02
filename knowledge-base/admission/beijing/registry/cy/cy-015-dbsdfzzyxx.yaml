@@ -37,11 +37,10 @@ admissions:
       rank: 6243
       total: 660
   pred_2026:
-    rank: 6062
-    lo: 4850
-    hi: 7274
-    pct: 50.5
-    method: percentile_trend
+    rank: 4905
+    lo: 4513
+    hi: 5297
+    method: supply_stack
     conf: T3
     volatile: false
 - channel: 校额到校
