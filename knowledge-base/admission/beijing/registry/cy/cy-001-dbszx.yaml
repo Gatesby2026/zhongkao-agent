@@ -40,11 +40,11 @@ admissions:
   line_scope: 校级代表线(普通班);源数据未分专业
   pred_2026:
     rank: 717
-    lo: 660
-    hi: 774
+    lo: 588
+    hi: 846
     method: supply_stack
     conf: T3
-    volatile: false
+    volatile: true
 - channel: 统招
   code: '105001'
   major: '02'
@@ -55,11 +55,11 @@ admissions:
   line_scope: 缺本专业线(源数据仅校级);待 P3 采集
   pred_2026:
     rank: 717
-    lo: 660
-    hi: 774
+    lo: 588
+    hi: 846
     method: supply_stack
     conf: T3
-    volatile: false
+    volatile: true
 - channel: 统招
   code: '105001'
   major: '03'
@@ -70,11 +70,11 @@ admissions:
   line_scope: 缺本专业线(源数据仅校级);待 P3 采集
   pred_2026:
     rank: 717
-    lo: 660
-    hi: 774
+    lo: 588
+    hi: 846
     method: supply_stack
     conf: T3
-    volatile: false
+    volatile: true
   note: '03、04专业:100000元/学年: 加试时间:7月10日。'
 - channel: 统招
   code: '105001'
@@ -86,11 +86,11 @@ admissions:
   line_scope: 缺本专业线(源数据仅校级);待 P3 采集
   pred_2026:
     rank: 717
-    lo: 660
-    hi: 774
+    lo: 588
+    hi: 846
     method: supply_stack
     conf: T3
-    volatile: false
+    volatile: true
 - channel: 校额到校
   code: null
   major: null

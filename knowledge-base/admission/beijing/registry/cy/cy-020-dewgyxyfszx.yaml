@@ -35,12 +35,12 @@ admissions:
       total: 670
   line_scope: 校级代表线(普通班);源数据未分专业
   pred_2026:
-    rank: 7840
-    lo: 7213
-    hi: 8467
+    rank: 8057
+    lo: 7090
+    hi: 9024
     method: supply_stack
     conf: T3
-    volatile: false
+    volatile: true
 - channel: 统招
   code: '205014'
   major: '02'
@@ -50,12 +50,12 @@ admissions:
   plan_district: '30'
   line_scope: 缺本专业线(源数据仅校级);待 P3 采集
   pred_2026:
-    rank: 7840
-    lo: 7213
-    hi: 8467
+    rank: 8057
+    lo: 7090
+    hi: 9024
     method: supply_stack
     conf: T3
-    volatile: false
+    volatile: true
 rollup:
   features:
     style: 1956年建校，外语特色（13门外语课、中法合作1+3项目）+AI STEAM 十二年一贯课程
