@@ -244,6 +244,17 @@ direct_05:
       - {value: 579, source_url: "https://www.zhongkaobj.cn/zhongkao/zixun/2026062513766.html"}
       - {value: 779, source_url: "https://www.zhongkaobj.cn/zhaosheng/qyzs/2025101412456.html"}
     decision: "同一机构对同一年度朝阳特长生人数给出579和779两个值，均不采纳；以官方名单/计划为准。"
+  stale_2025_table_republished_as_2026:
+    mislabeled_source_url: https://www.zizzs.com/gk/zhongkao/215197.html
+    crosscheck_urls:
+      - https://www.gaokzx.com/gk/zhongkao/135629.html
+      - https://www.zhongkaobj.cn/zhaosheng/qyzs/2025082712013.html
+    exact_matches:
+      北京中学: "90 + 110"
+      八十中: "8 + 2 + 140 + 20"
+      清华附朝阳: 25
+    status: rejected_for_2026
+    model_rule: "页面标题或发布日期不能替代数据年份核验；逐项复用旧表的数据不得进入2026锁定人数。"
   selection_claims:
     - school: 北京中学
       claim: "九上期末区排名1500以内可报名，结合面试与调研考试"

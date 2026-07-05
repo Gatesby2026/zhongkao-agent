@@ -46,24 +46,12 @@ schools:
     zhisheng_05:
       plan_main: 90             # 清朝本部
       plan_group: 175           # 基础直升合计:本部90 + 其余集团校85
-      conflicting_plan_main: 25
       year: 2026
       breakdown: "基础直升175(本部90 + 其余校85);另清望校区有1+3项目40(见 one_plus_three),集团口径合计215"
       alliance: "清华附朝阳集团 ↔ 二中朝阳集团 跨集团直升"
       source: "xschu(https://www.xschu.com/zhengcezixun/84670.html); xscxx(https://www.xscxx.com/xiaoshengchu/cyqxsc/2026011313055.html); zizzs(https://www.zizzs.com/gk/zhongkao/215197.html)"
       confidence: T3
-      note: "⚠️冲突:xschu/xscxx写本部90、其余85；zizzs写本部25且未给集团总数。175与215均不可作确定值；215还混入清望1+3计划40，严禁作为集团直升数。"
-
-  北京市第八十中学:
-    zhisheng_05:
-      plan_main: 8
-      plan_group: 170
-      year: 2026
-      breakdown: "八十中本部8 + 教科院附中2 + 八十中南北东校区140 + 陈经纶分校望京实验学校20"
-      source: "zizzs(https://www.zizzs.com/gk/zhongkao/215197.html)"
-      confidence: T3
-      status: single_secondary_source
-      note: "仅自主选拔在线一份网传汇总，尚无独立来源或官方材料复核；可作区间构成线索，不可作为确定锁定人数。"
+      note: "xschu/xscxx写本部90、其余85。zizzs页面虽标2026但其本部25及整张北中/八十中表与2025旧表逐项相同，判为旧表复用，不构成2026冲突。215还混入清望1+3计划40，严禁作为集团直升数。"
 
   陈经纶中学:
     zhisheng_05:
@@ -123,11 +111,11 @@ schools:
     zhisheng_05:
       plan_main: 90            # 高中本部签约名额
       plan_group: 200          # 本部90 + 传媒分校&科技分校合计110
-      year: 2026
-      breakdown: "高中本部90 + 传媒分校&科技分校共110 = 200"
-      source: "zizzs(https://www.zizzs.com/gk/zhongkao/215197.html); 2025旧口径zhongkaobj(https://www.zhongkaobj.cn/zhaosheng/qianyuezhisheng/202412317439.html)"
+      year: 2025
+      breakdown: "高中本部90 + 传媒分校&科技分校共110 = 200(2025签约季)"
+      source: "gaokzx(https://www.gaokzx.com/gk/zhongkao/135629.html); zhongkaobj(https://www.zhongkaobj.cn/zhaosheng/qyzs/2025082712013.html)"
       confidence: T3
-      note: "2026网传表与2025签约季数字完全相同，可能是沿用旧表而非独立确认；签约/计划名额不等于最终备案录取人数。"
+      note: "两个2025页面一致。zizzs在2026页面逐项复用了这张旧表，不升级为2026数据；签约/计划名额不等于最终备案录取人数。"
 
 # ============================================================
 # 二、1+3 项目(2025 官方/机构汇总)
@@ -240,6 +228,17 @@ program_summary:
     source: "xschu(https://www.xschu.com/zhengcezixun/84670.html)"
     confidence: T3
     note: "2026朝阳探索集团联盟共享直升计划,允许跨集团直升。逐校数为'网传',7月各校官方简章为准。"
+  stale_table_detection:
+    mislabeled_page: https://www.zizzs.com/gk/zhongkao/215197.html
+    page_label: "2026朝阳区部分学校0.5+3直升名额"
+    matched_2025_sources:
+      - https://www.gaokzx.com/gk/zhongkao/135629.html
+      - https://www.zhongkaobj.cn/zhaosheng/qyzs/2025082712013.html
+    exact_reused_values:
+      北京中学: "本部90 + 传媒/科技110"
+      八十中: "本部8 + 教科院附中2 + 南北东校区140 + 陈分20"
+      清华附朝阳: "本部25"
+    decision: "整表与2025旧数据逐项一致，不能作为2026证据。八十中条目还混合0.5+3与2+4口径，170不得作为单一渠道直升数。"
 
 # ============================================================
 # 四、未采到 / 收集中(明确标注,不编造)
@@ -251,6 +250,6 @@ not_collected:
   source_conflicts:
     人朝直升: "本部144(xschu/xscxx一致) vs evidence旧记177 — 取144(本部)/180(集团)并列,177未复现"
     朝外直升: "本部55(xschu) vs 三批次250(xscxx) vs evidence旧记zhongkaobj 305 — 三值并列,口径(本部/集团三批/签约)不同,差达5倍,不可单取"
-    清华附朝阳直升: "本部90、集团175(xschu/xscxx) vs 本部25(zizzs)；来源均声明网传，且前两站可能共用同一底表，不按多数表决"
-    北京中学直升: "2026表为本部90、集团200，但与2025报道数字完全相同，存在沿用旧数风险"
+    清华附朝阳直升: "本部90、集团175(xschu/xscxx)为2026网传；本部25已确认来自2025旧表复用，不再列作2026冲突"
+    北京中学直升: "仅确认2025本部90、集团200；暂未取得2026值，禁止沿用旧数"
   one_plus_three_2026: "2026朝阳1+3官方实验校名单及各校人数官方未发布(通常7月);现仅有2025数据。zizzs预测全市破万、朝阳有新校首次参与,但无逐校数,不写。"
