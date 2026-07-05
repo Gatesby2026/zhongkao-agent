@@ -25,6 +25,11 @@ social_sources:
     published_at: 2026-06-30
     confidence: T3
     provenance: "多版汇总；可作为第二来源，不能视为独立原始证据"
+  - id: chaoyang-whitepaper-2026
+    source_url: "2026高中指南白皮书·朝阳区（本地原件）"
+    local_extract: ../raw_extracts/whitepaper_ocr_raw.json
+    confidence: T3
+    provenance: "逐校章节明确标注网传版；可能吸收上述网页或同一社交底表，不算独立原始证据"
 
 confirmed_mappings:
   method: "只确认分数→官方累计位次映射，不确认该分数必然是学校真实最低线"
@@ -63,34 +68,47 @@ conflicts:
       xschu-2025-lines: {score: 474, rank: 1623}
       zhongkaobj-2024-2025-comparison: {score: 471, rank: 2070}
       zhongkaobj-2025-lines: {score: 470, rank: 2226}
+      chaoyang-whitepaper-2026: {score: 471, rank: 2070}
     status: unresolved
+    preferred_anchor: {score: 471, rank: 2070, reason: "两份汇编采用471，但可能共享底表"}
     action: "等待学校录取通知截图或官方录取结果；不得标T1"
   - school: 日坛中学
     source_values:
       xschu-2025-lines: {score: 456, rank: 4335}
       zhongkaobj-2024-2025-comparison: {score: 455, rank: 4487}
       zhongkaobj-2025-lines: {score: 456, rank: 4335}
-    status: majority_456_but_unofficial
+      chaoyang-whitepaper-2026: {score: 455, rank: 4487}
+    status: unresolved_tie_455_456
+    action: "两组候选各有两份转载，保留455-456"
   - school: 和平街一中
     source_values:
       xschu-2025-lines: {score: 455, rank: 4487}
       zhongkaobj-2024-2025-comparison: {score: 454, rank: 4635}
       zhongkaobj-2025-lines: {score: 453, rank: 4762}
-    status: unresolved
-    note: "需区分本部普通班与莲葩园校区"
+      chaoyang-whitepaper-2026:
+        和平街本部: {score: 454, rank: 4635}
+        莲葩园校区: {score: 453, rank: 4762}
+    status: campus_semantics_recovered_but_main_conflict_remains
+    decision: "莲葩园使用453/4762；本部以454/4635为锚并保留455候选"
+    note: "白皮书首次明确把454分配给本部、453分配给莲葩园；455来源仍无法排除"
   - school: 对外经济贸易大学附属中学
     source_values:
       zhongkaobj-2024-2025-comparison: {score: 452, rank: 4914}
       zhongkaobj-2025-lines: {score: 448, rank: 5438}
-    status: unresolved
+      chaoyang-whitepaper-2026: {score: 452, rank: 4914}
+    status: preferred_452_but_unofficial
+    preferred_anchor: {score: 452, rank: 4914, reason: "两份汇编采用452，但可能共享底表"}
   - school: 汇文中学垂杨柳分校
     source_values:
       xschu-2025-lines: {score: 419, rank: 8287}
       zhongkaobj-2024-2025-comparison: {score: 420, rank: 8229}
       zhongkaobj-2025-lines: {score: 420, rank: 8229}
-    status: majority_420_but_unofficial
+      chaoyang-whitepaper-2026: {score: 420, rank: 8229}
+    status: preferred_420_but_unofficial
+    preferred_anchor: {score: 420, rank: 8229}
 
 model_findings:
   - "官方排名表已排除多类提前锁定考生，旧供给栈若再次扣除会双重扣除。"
   - "官方一分一段只能认证分数与位次映射，不能认证网传学校最低分。"
   - "同站点的不同文章也会冲突；所谓多源若共享家长群图片，不算真正独立来源。"
+  - "白皮书虽逐校列值，但明确写网传版；只用于恢复校区语义和候选权重，不提升T3等级。"
