@@ -3,6 +3,7 @@ meta:
   as_of: 2026-07-05
   target: school_major_campus_channel
   rule: "官方未发布写 waiting_official；估算值不得填充官方字段"
+  supply_summary: prediction_v3_supply_2026.yaml
 datasets:
   historical_cutoff_2023_2025:
     required: true

@@ -168,6 +168,19 @@ special_talent_district_qualification:
     - "最终还要经过公示、市考试院审核、学校择优录取和中考成绩条件。"
   model_rule: "596只可作为全区特长生潜在分流人数上界；实际录取结果发布前不得作为确定扣减量"
 
+special_talent_policy:
+  year: 2026
+  status: confirmed
+  confidence: T1
+  source_url: https://www.beijing.gov.cn/zhengce/zcjd/202605/t20260507_4639069.html
+  rules:
+    体育: "不超过学校当年招生计划总数的4%"
+    艺术: "不超过学校当年招生计划总数的4%"
+    科技: "不超过学校当年招生计划总数的2%"
+    categories_interchangeable: false
+    outer_district_share: "城六区内具有全市招生资格的学校，面向全市特长生计划的15%分配给城六区以外"
+  model_rule: "特长生是学校年度招生总计划内受比例约束的计划，不得在统招总计划之外再次加座位"
+
 supplementary_unconfirmed:
   - school: 对外经济贸易大学附属中学
     claim: {田径_朝阳: {minimum: 0, maximum: 10}}

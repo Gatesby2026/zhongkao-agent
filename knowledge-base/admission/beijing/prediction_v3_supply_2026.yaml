@@ -1,0 +1,74 @@
+meta:
+  district: 朝阳区
+  year: 2026
+  collected_at: 2026-07-05
+  purpose: "V3招生流的官方供给汇总；不同scope不可直接相加"
+
+channels:
+  unified_local_established:
+    value: 5737
+    unit: seats
+    scope: "27所既有朝阳公办高中，各专业面向朝阳统一招生计划"
+    source_tier: T1
+    source_path: chaoyang_admission_codes.json
+    source_url: https://www.bjeea.cn/html/zkzh/jhcx/2026/0630/88248.html
+    calculation: "38个专业plan_chaoyang字段首个整数求和"
+  unified_local_new_schools:
+    value: 190
+    unit: seats
+    scope: "3所2026新增/恢复高中面向朝阳统一招生"
+    breakdown:
+      民大附中朝阳学校: 108
+      首都师范大学附属实验学校: 77
+      北大附中朝阳未来学校: 5
+    source_tier: T1
+    source_path: chaoyang_new2026.yaml
+    source_url: https://www.bjeea.cn/html/zkzh/jhcx/2026/0630/88248.html
+  unified_local_total:
+    value: 5927
+    unit: seats
+    formula: "5737 + 190"
+    warning: "含普通班、特色/合作项目等统招专业；不能当作单一普通班供给"
+  xeddx:
+    value: 1133
+    unit: seats
+    scope: "69所初中获配的12个优质高中校额到校名额"
+    destination_breakdown:
+      八十中: 117
+      陈经纶: 95
+      日坛: 103
+      和平街本部: 68
+      和平街莲葩园: 66
+      对外经贸94中: 137
+      十七中: 147
+      工大附中: 121
+      人朝: 58
+      东方德才: 82
+      东师朝: 92
+      清华附朝阳: 47
+    source_tier: T1
+    source_path: chaoyang_xeddx.yaml
+    source_url: https://www.bjeea.cn/html/zkzh/jhcx/2026/0630/88248.html
+    warning: "校内竞争，不生成一个全区通用最低位次"
+  municipal_coordination_for_chaoyang:
+    value: 145
+    unit: seats
+    scope: "面向朝阳考生的市级统筹机会，含统筹一51、统筹二94"
+    breakdown: {统筹一: 51, 统筹二: 94}
+    source_tier: T1
+    source_path: 2026_sjtongchou_chaoyang.yaml
+    source_url: https://www.bjeea.cn/html/zkzh/jhcx/2026/0630/88248.html
+    warning: "多数为外区/特定项目去向，是朝阳考生机会而非朝阳本地高中新增座位"
+  talent_qualification_pool:
+    value: 596
+    unit: candidates
+    scope: "朝阳区体育艺术科技区级统测合格考生"
+    source_tier: T1
+    source_url: https://www.cyks.org.cn/shtml/1/news/202605/741.shtml
+    warning: "资格人数，不是计划数或最终录取数；存在一人多张合格证"
+
+non_additivity_rules:
+  - "特长生计划受学校年度总计划4%/4%/2%比例约束，不得在统招总量之外重复加座位。"
+  - "校额到校、市级统筹、统一招生是不同录取阶段和竞争范围，不得混成一个累计供给栈。"
+  - "596名特长资格考生不是596个实际锁定名额。"
+  - "市级统筹145是朝阳考生跨校机会，不等于朝阳本地学校供给增加145。"
