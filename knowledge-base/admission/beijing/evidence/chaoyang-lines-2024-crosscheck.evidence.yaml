@@ -1,0 +1,55 @@
+entity: 朝阳区2024统招最低线多源交叉
+collected_at: 2026-07-05
+purpose: "交叉核对2024网传校线，补出专业/校区/住宿单元并显式记录冲突"
+
+sources:
+  - id: gaokzx_2024
+    confidence: T3
+    source_url: https://www.gaokzx.com/gk/zhongkao/130544.html
+    published_at: 2024-11-07
+    coverage: "24校，含八十创新班、陈经纶实验班、和平街莲葩园、北工大附中住宿/走读"
+    provenance: "页面声明内容来源于网络，非官方学校线"
+  - id: zhongkaobj_2024
+    confidence: T3
+    source_url: https://www.zhongkaobj.cn/lqfsx/chaoyangqu/202410252785.html
+    local_extract: ../raw_extracts/chaoyang_lines_2022-2024_zhongkaobj.json
+    coverage: "20校近三年学校线"
+  - id: zhongkaobj_refresh_2024
+    confidence: T3
+    source_url: https://www.zhongkaobj.cn/fenshuxian/chaoyangqu/202410212397.html
+    coverage: "2024校线刷新页；清华附朝阳写637左右"
+  - id: official_rank_table
+    confidence: T1
+    source_url: https://www.bjeea.cn/html/zkzz/hidden/2024/0708/85512.html
+    role: "验证分数到累计位次，不验证学校最低线"
+
+agreement_summary:
+  modeled_units: 27
+  exact_point_units: 24
+  conflict_or_approx_units: 3
+  conflicts:
+    - school: 清华大学附属中学朝阳学校
+      values: [637, 638]
+      decision: "两份较早表为638，新刷新页写637左右；保留637-638"
+    - school: 清华大学附属中学广华学校
+      values: [623, 624]
+      decision: "两表差1分；保留623-624"
+    - school: 北京市第十七中学
+      values: [587, 588]
+      decision: "两表差1分且学校有普通/传媒两个专业；同时保留分数与专业歧义"
+  source_independence_warning: "两个机构可能使用相同家长群底表；数值一致只算转载交叉，不升级为T2"
+
+newly_recovered_units:
+  - {school: 北京市第八十中学, unit: 科学创新实验班, score: 654, rank: 148}
+  - {school: 北京市陈经纶中学, unit: 科技人才班, score: 637, rank: 1836}
+  - {school: 北京中学科技分校, unit: 普通班, score: 626, rank: 3498}
+  - {school: 北京工业大学附属中学, unit: 住宿, score: 623, rank: 3941}
+  - {school: 北京市和平街第一中学, unit: 莲葩园校区, score: 602, rank: 6420}
+  - {school: 北京市东方德才学校, unit: 普通班, score: 582, rank: 8175}
+  - {school: 北京第二外国语学院附属中学, unit: 学校最低线, score: 577, rank: 8491}
+
+model_rules:
+  - "所有学校最低线仍为T3；官方一分一段只认证score→rank。"
+  - "冲突单元使用score_range/rank_range，不输出伪精确点值。"
+  - "同一专业的住宿/走读门槛可分场景记录，但不得伪造不同专业代码。"
+  - "机构转载的一致性不能提升为官方线。"

@@ -7,70 +7,58 @@ sources:
     confidence: T1
     source_url: https://www.bjeea.cn/html/zkzh/jhcx/2024/0702/85453.html
     pages: [10, 11, 12, 13, 14]
-    verification: "考试院统一招生计划原图逐页复取并经Apple Vision OCR核对；朝阳公办校代码、专业代码及专业名以原图为准"
-  line_table:
+    verification: "考试院统一招生计划原图逐页复取并经视觉核对；朝阳公办校代码、专业代码及专业名以原图为准"
+  line_crosscheck:
     confidence: T3
-    source_url: https://www.zhongkaobj.cn/lqfsx/chaoyangqu/202410252785.html
-    local_extract: ../raw_extracts/chaoyang_lines_2022-2024_zhongkaobj.json
-    warning: "机构整理表，未取得考试院学校录取线原表；只给学校名，未给专业代码"
+    path: chaoyang-lines-2024-crosscheck.evidence.yaml
+    warning: "机构均声明来源于网络；可能共享同一底表"
   official_rank_table:
     confidence: T1
     source_url: https://www.bjeea.cn/html/zkzz/hidden/2024/0708/85512.html
     role: "只验证分数到朝阳累计位次映射，不验证学校最低线"
 
 mapping_summary:
-  schools_with_line: 20
-  line_records: 20
-  exact_major_code_records: 15
-  ambiguous_multi_major_records: 5
-  unresolved_line_conflict_units: 0
-  note: "未发现冲突不等于已多源确认；当前学校线仍只有一套T3整理表"
+  schools_with_line: 24
+  line_records: 27
+  exact_major_code_records: 24
+  ambiguous_multi_major_records: 3
+  unresolved_line_conflict_units: 3
 
 records:
+  - {school_code: "105001", school: 北京市第八十中学, major_code: "01", major_name: 普通班, score: 646, rank: 678, status: provisional_t3}
+  - {school_code: "105001", school: 北京市第八十中学, major_code: "02", major_name: 科学创新实验班, score: 654, rank: 148, status: single_source_t3}
   - {school_code: "205001", school: 北京中学, major_code: "01", major_name: 普通班, score: 644, rank: 902, status: provisional_t3}
-  - school_code: "105001"
-    school: 北京市第八十中学
-    major_codes: ["01", "02"]
-    major_names: [普通班, 科学创新实验班]
-    score: 646
-    rank: 678
-    status: ambiguous_multi_majors
-    note: "机构表只给学校最低线，不能判定对应普通班或科学创新实验班"
   - {school_code: "205002", school: 中国人民大学附属中学朝阳学校, major_code: "01", major_name: 普通班, score: 639, rank: 1553, status: provisional_t3}
   - school_code: "205009"
     school: 清华大学附属中学朝阳学校
     major_codes: ["01", "02"]
-    major_names: [普通班, 普通班]
-    score: 638
-    rank: 1682
-    status: ambiguous_same_name_majors
-    note: "官方01、02均名为普通班；机构学校线无法拆分"
+    major_name: 普通班
+    score_range: [637, 638]
+    rank_range: [1682, 1836]
+    status: ambiguous_same_name_majors_and_unresolved
+    note: "两专业同名；两源给638，刷新页写637左右"
+  - {school_code: "205020", school: 北京市第八十中学睿德分校, major_code: "01", major_name: 普通班, score: 637, rank: 1836, status: provisional_t3}
+  - {school_code: "205019", school: 中国传媒大学附属中学, major_code: "01", major_name: 普通班, score: 637, rank: 1836, status: provisional_t3}
+  - {school_code: "105002", school: 北京市陈经纶中学, major_code: "02", major_name: 经纶科技人才班, score: 637, rank: 1836, status: single_source_t3}
+  - {school_code: "105002", school: 北京市陈经纶中学, major_code: "01", major_name: 普通班, score: 630, rank: 2902, status: provisional_t3}
   - {school_code: "205012", school: 北京市朝阳外国语学校, major_code: "01", major_name: 普通班, score: 635, rank: 2108, status: provisional_t3}
   - {school_code: "205010", school: 清华大学附属中学望京学校, major_code: "01", major_name: 普通班, score: 632, rank: 2569, status: provisional_t3}
-  - {school_code: "205020", school: 北京市第八十中学睿德分校, major_code: "01", major_name: 普通班, score: 637, rank: 1836, status: provisional_t3}
-  - school_code: "105002"
-    school: 北京市陈经纶中学
-    major_codes: ["01", "02"]
-    major_names: [普通班, 经纶科技人才班]
-    score: 630
-    rank: 2902
-    status: ambiguous_multi_majors
-    note: "机构学校线未携带专业代码"
-  - {school_code: "205019", school: 中国传媒大学附属中学, major_code: "01", major_name: 普通班, score: 637, rank: 1836, status: provisional_t3}
+  - {school_code: "205016", school: 北京中学科技分校, major_code: "01", major_name: 普通班, score: 626, rank: 3498, status: single_source_t3}
   - {school_code: "205005", school: 北京市第二中学朝阳学校, major_code: "01", major_name: 普通班, score: 624, rank: 3797, status: provisional_t3}
-  - {school_code: "205017", school: 清华大学附属中学广华学校, major_code: "01", major_name: 普通班, score: 624, rank: 3797, status: provisional_t3}
-  - {school_code: "105007", school: 北京工业大学附属中学, major_code: "01", major_name: 普通班, score: 619, rank: 4487, status: provisional_t3}
+  - {school_code: "205017", school: 清华大学附属中学广华学校, major_code: "01", major_name: 普通班, score_range: [623, 624], rank_range: [3797, 3941], status: unresolved}
   - {school_code: "205018", school: 首都师范大学附属中学朝阳学校, major_code: "01", major_name: 普通班, score: 622, rank: 4071, status: provisional_t3}
+  - school_code: "105007"
+    school: 北京工业大学附属中学
+    major_code: "01"
+    major_name: 普通班
+    scenarios:
+      走读: {score: 619, rank: 4487}
+      住宿: {score: 623, rank: 3941}
+    status: scenario_split_t3
+    note: "官方只有01专业代码；住宿/走读是同专业场景，不伪造专业代码"
   - {school_code: "105003", school: 北京市日坛中学, major_code: "01", major_name: 普通班, score: 613, rank: 5233, status: provisional_t3}
-  - school_code: "105004"
-    school: 北京市和平街第一中学
-    major_codes: ["01", "02"]
-    major_names: [普通班, 普通班]
-    campuses: [和平街校区, 北苑莲葩园校区]
-    score: 608
-    rank: 5766
-    status: ambiguous_campus_majors
-    note: "机构学校线未标校区，不能把最低线擅自分配给01或02"
+  - {school_code: "105004", school: 北京市和平街第一中学, major_code: "01", major_name: 普通班, campus: 和平街校区, score: 608, rank: 5766, status: provisional_t3}
+  - {school_code: "105004", school: 北京市和平街第一中学, major_code: "02", major_name: 普通班, campus: 北苑莲葩园校区, score: 602, rank: 6420, status: single_source_t3}
   - {school_code: "205008", school: 东北师范大学附属中学朝阳学校, major_code: "01", major_name: 普通班, score: 604, rank: 6218, status: provisional_t3}
   - {school_code: "105005", school: 对外经济贸易大学附属中学, major_code: "01", major_name: 普通班, score: 603, rank: 6304, status: provisional_t3}
   - {school_code: "205004", school: 中国科学院附属实验学校, major_code: "01", major_name: 普通班, score: 599, rank: 6696, status: provisional_t3}
@@ -79,13 +67,21 @@ records:
     school: 北京市第十七中学
     major_codes: ["01", "02"]
     major_names: [普通班, 传媒特色班]
-    score: 588
-    rank: 7695
+    score_range: [587, 588]
+    rank_range: [7695, 7755]
+    status: ambiguous_multi_majors_and_unresolved
+  - {school_code: "205006", school: 北京市东方德才学校, major_code: "01", major_name: 普通班, score: 582, rank: 8175, status: single_source_t3}
+  - school_code: "205014"
+    school: 北京第二外国语学院附属中学
+    major_codes: ["01", "02"]
+    major_names: [普通班, 外语特色课程实验班]
+    score: 577
+    rank: 8491
     status: ambiguous_multi_majors
-    note: "机构学校线未携带专业代码"
+    note: "机构表只给学校最低线，不能确定对应专业"
 
 model_rules:
   - "major_code来自2024官方计划，只认证招生单元存在；score/rank仍是T3。"
-  - "机构表只给学校线；存在多个非国际课程专业时必须保留歧义。"
-  - "不得把2025专业代码或专业结构反推为2024。"
-  - "单一T3表尚未完成多源交叉确认，只能作为弱监督历史锚。"
+  - "status含unresolved时使用score_range/rank_range，不输出伪精确点值。"
+  - "同名或多专业无法从学校最低线反推专业线时必须保留歧义。"
+  - "住宿/走读可作为同专业场景，不得伪造不同专业代码。"
