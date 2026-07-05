@@ -86,6 +86,98 @@ special_talent:
     confidence: T2
     source_url: https://www.gaokzx.com/gk/zhongkao/155162.html
     model_rule: "朝阳上限43；需按校区分别计入供给，实际录取前不扣满额"
+  - school: 中科院附属实验学校
+    year: 2026
+    projects:
+      科技_朝阳: {minimum: 0, maximum: 3}
+      音乐_朝阳: {minimum: 0, maximum: 5}
+    status: plan_cap_only
+    confidence: T2
+    source_url: https://www.gaokzx.com/gk/zhongkao/155100.html
+  - school: 首师大附中朝阳学校
+    year: 2026
+    projects:
+      棒球_朝阳: {minimum: 0, maximum: 4}
+    status: plan_cap_only
+    confidence: T2
+    source_url: https://www.gaokzx.com/gk/zhongkao/155149.html
+  - school: 东北师大附中朝阳学校
+    year: 2026
+    projects:
+      男子篮球_朝阳: {minimum: 0, maximum: 5}
+      田径_朝阳: {minimum: 0, maximum: 7}
+    status: plan_cap_only
+    confidence: T2
+    source_url: https://www.gaokzx.com/gk/zhongkao/155158.html
+  - school: 日坛中学
+    year: 2026
+    projects:
+      科技_朝阳: {minimum: 1, maximum: 10}
+      民乐_朝阳: {minimum: 1, maximum: 6}
+      管乐_朝阳: {minimum: 1, maximum: 3}
+      美术_朝阳: {minimum: 1, maximum: 7}
+    status: plan_range_only
+    confidence: T2
+    source_url: https://www.gaokzx.com/gk/zhongkao/155160.html
+    original_site: http://rtzx.bjchyedu.cn/
+    note: "简章明确写1-N而非0-N；仍需以最终资格/录取名单确认实际人数"
+  - school: 北京市第八十中学
+    year: 2026
+    projects:
+      舞蹈_朝阳: {minimum: 0, maximum: 4}
+      科技_朝阳: {minimum: 0, maximum: 14}
+      女篮_全市: {minimum: 0, maximum: 9}
+      民乐_全市: {minimum: 0, maximum: 4}
+      绘画_全市: {minimum: 0, maximum: 4}
+      管弦乐_全市: {minimum: null, maximum: null}
+      田径_范围待核: {minimum: null, maximum: null}
+    status: partial_plan_caps
+    confidence: T2
+    source_urls:
+      - https://www.gaokzx.com/gk/zhongkao/155168.html
+      - https://www.gaokzx.com/gk/zhongkao/155183.html
+      - https://www.gaokzx.com/gk/zhongkao/155188.html
+    model_rule: "仅舞蹈和科技为朝阳专属；全市项目不能全部计入朝阳，管弦乐与田径人数仍缺"
+  - school: 北京十七中
+    year: 2026
+    projects:
+      射箭_朝阳: {minimum: 0, maximum: 19}
+    status: plan_cap_only
+    confidence: T2
+    source_url: https://www.gaokzx.com/gk/zhongkao/155193.html
+  - school: 对外经济贸易大学附属中学
+    year: 2026
+    projects: {}
+    status: source_corrupted
+    confidence: T5
+    source_url: https://www.gaokzx.com/gk/zhongkao/155192.html
+    note: "页面标题为贸大附中，但正文错误复制八十中科技简章；该页作废，不采任何人数"
+
+special_talent_district_qualification:
+  year: 2026
+  status: confirmed
+  confidence: T1
+  source_url: https://www.cyks.org.cn/shtml/1/news/202605/741.shtml
+  publisher: 北京市朝阳区招生考试中心
+  published_at: 2026-05-27
+  qualified_candidates: 596
+  verification: "官方公示共19张名单图片，首张序号1，末张序号592-596"
+  caveats:
+    - "这是区级统一专业测试合格考生人数，不是最终录取人数。"
+    - "名单备注存在“2张合格证”，同一考生可能对应多个学校/项目资格，不能按资格证数量扣竞争池。"
+    - "最终还要经过公示、市考试院审核、学校择优录取和中考成绩条件。"
+  model_rule: "596只可作为全区特长生潜在分流人数上界；实际录取结果发布前不得作为确定扣减量"
+
+supplementary_unconfirmed:
+  - school: 对外经济贸易大学附属中学
+    claim: {田径_朝阳: {minimum: 0, maximum: 10}}
+    confidence: T3
+    source_url: https://www.xschu.com/zhengcezixun/86101.html
+    note: "补充来源给出田径0-10；待学校原始简章或官方计划复核后升级"
+  - school: 陈经纶中学团结湖分校
+    claim: "确认存在武术项目，但未检得人数"
+    confidence: T3
+    status: missing_count
 
 published_school_set:
   count: 14
