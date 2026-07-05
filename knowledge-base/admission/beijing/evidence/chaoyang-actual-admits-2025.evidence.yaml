@@ -1,0 +1,47 @@
+entity: 朝阳区高中2025实际录取分渠道公开样本
+collected_at: 2026-07-05
+purpose: "收集学校负责人公开确认的实际录取人数，用于校验计划、直升锁定量和统招有效供给"
+
+sources:
+  - school_code: "105002"
+    school: 北京市陈经纶中学
+    year: 2025
+    confidence: T2
+    source_url: https://bjksb.bjeea.cn/html/ksb/zhongzhaozhuanban/2026/0421/88046.html
+    publisher: 北京考试报
+    interviewee: 徐琳（北京市陈经纶中学本部高中校长）
+    published_at: 2026-04-21
+    actual_admits:
+      total: 540
+      early_total: 164
+      group_direct: 156
+      early_talent: 8
+      allocation_total: 107
+      city_coordination: 12
+      school_quota: 95
+      unified_total: 269
+      unified_science_talent: 30
+      unified_regular_inferred: 239
+    arithmetic_checks:
+      - "164 + 107 + 269 = 540"
+      - "156 + 8 = 164"
+      - "12 + 95 = 107"
+      - "269 - 30 = 239"
+    cutoff_rank_anchors:
+      regular_class_approx_rank: 2300
+      science_talent_approx_rank: 1200
+      wording: "普通班最低录取名次在区排名2300名左右，科技人才班最低录取名次在1200名左右"
+    crosschecks:
+      - "T3校线表普通班469分/2376名与校长口径“2300名左右”一致"
+      - "2025实际集团直升156，与2026网传计划160接近但不是同一年，禁止直接替代"
+
+coverage:
+  schools_with_actual_channel_breakdown: 1
+  known_school: 北京市陈经纶中学
+  remaining_gap: "未发现考试院公开的全区逐校实际录取汇总；其余学校仍需学校负责人、校务公开或官媒访谈确认"
+
+model_rules:
+  - "actual_admits优先于招生计划，用于历史回测。"
+  - "学校负责人在北京考试报公开的实际录取分项定T2，不升级为考试院录取数据库T1。"
+  - "“左右”位次只能作为区间锚，不得改写成精确最低位次。"
+  - "不同年份的集团直升人数不得互相替代。"

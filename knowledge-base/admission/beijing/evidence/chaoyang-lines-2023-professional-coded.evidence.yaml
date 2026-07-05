@@ -17,9 +17,11 @@ sources:
     local_extract: ../raw_extracts/chaoyang_lines_2022-2024_zhongkaobj.json
     warning: "机构整理表，只给学校名，未给专业代码"
   rank_table:
-    confidence: T3
-    source_url: https://www.zhongkaobj.cn/zhongkao/zkzn/202411134282.html
-    warning: "2023官方一分一段原页尚未恢复；现阶段位次沿用机构整理值"
+    confidence: T2
+    source_url: https://www.zizzs.com/c/202307/112415.html
+    original_source_url: https://www.bjeea.cn/html/zkzz/tzgg/2023/0708/84079.html
+    verification: "同期全文转录覆盖650分及以上至400分以下，20个学校线分数对应累计位次全部逐项吻合"
+    warning: "考试院原页现为404，完整转录只能定T2"
 
 mapping_summary:
   schools_with_line: 20

@@ -13,13 +13,14 @@ datasets:
     coded_2024_path: evidence/chaoyang-lines-2024-professional-coded.evidence.yaml
     coded_2025_path: evidence/chaoyang-lines-2025-professional-coded.evidence.yaml
     available: "2023已形成20条学校线映射：13条连接唯一T2官方原图镜像专业代码、7条保留多专业/校区歧义；2024为20条（15条唯一T1代码）；2025为28条（27条唯一T1代码）"
-    gap: "学校最低线仍全部为机构转载/网传T3；2023官方计划原页已404且一分一段原页待恢复，2024只有单一T3整理表，2025有5个冲突单元"
+    gap: "学校最低线仍全部为机构转载/网传T3；2023官方原页已404但计划图和完整一分一段已恢复为T2存档，2024只有单一T3校线整理表，2025有5个冲突单元"
   historical_actual_admits:
     required: true
     status: partial
     path: evidence/chaoyang-unfilled-2023-2025.evidence.yaml
-    available: "已形成2023-2025进入征集民办校的全市计划/剩余可比序列；2024、2025缺额为考试院T1，2025计划为官方计划册OCR；另有2025朝阳专业级分母"
-    gap: "仍缺征集后的最终缺额、逐校实际录取数和报到数；2024计划分母尚缺考试院原表升级；2023明细缺考试院原页复核"
+    actual_sample_path: evidence/chaoyang-actual-admits-2025.evidence.yaml
+    available: "已形成2023-2025进入征集民办校的全市计划/剩余可比序列；另取得陈经纶中学2025实际录取540人的完整分渠道T2样本（集团直升156、特长8、统筹12、校额95、统招269）"
+    gap: "仍缺征集后的最终缺额、其余学校逐校实际录取数和报到数；官方只提供考生个人结果查询，未发现公开全区逐校最终汇总"
   plan_2026_unified:
     required: true
     status: available
@@ -54,7 +55,7 @@ datasets:
   locked_before_unified_2026:
     required: true
     status: partial
-    available: "2025集团直升计划二手复核为915，可作历史量级锚；2026网传全区约1500；已识别并剔除把2025北中/八十中/清朝旧表标成2026的转载"
+    available: "2025集团直升逐校17校/915人已结构化，其中7校461人为考试院T1、其余10校454人为T3大本转录；陈经纶实际156另有校长确认；2026网传全区约1500"
     gap: "特长生区测合格考生官方上界596但非最终录取；2026集团直升仍缺官方备案总数和逐校最终录取，网传值不得确定扣减"
     learned_from_2025: "官方一分一段已排除1+3、集团直升、普高登记入学及中职自主招生已录取者；2026须以当年官方备注为准，禁止重复扣除"
   preference_and_demand:

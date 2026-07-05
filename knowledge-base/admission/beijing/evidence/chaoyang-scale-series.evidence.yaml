@@ -2,7 +2,7 @@ entity: 朝阳区中考规模序列
 note: >
   2026录取位次预估模型的地基数据①:逐年"全区参加中考人数 / 公办录取 / 全市中招计划"。
   用途:位次↔百分位换算、跨年归一。多为机构/网传(T3),官方政策为 T1/T2。只增不删,以官方公报为准。
-  ⚠️ 仍缺:朝阳 2023 参加人数、朝阳逐年统招计划总量(可由 2025_tongzhao_plan 朝阳列求和近似)。
+  ⚠️ 仍缺:朝阳逐年统招计划总量；2023参加人数已由同期官方表全文转录恢复为T2。
 records:
   - id: ev-scale-cy-2025-exam
     entity: 朝阳区
@@ -54,15 +54,16 @@ records:
     claim: exam_takers
     value: 11241
     year: 2023
-    confidence: T3
+    confidence: T2
     status: confirmed
-    source_type: 机构(官方一分一段转录)
-    source_url: https://www.gaokzx.com/c/202307/76226.html
-    source_title: 2023年北京市中招朝阳区各分数段人数(北京高考在线)
-    method: WebFetch
-    collected_at: 2026-06-19
-    excerpt: "一分一段累计最大值(400分以下行)累计人数=11241,即2023朝阳参加中考总人数。"
-    notes: 由官方一分一段表累计末行得出;机构转录,待 bjeea 原表核。
+    source_type: 同期官方一分一段全文转录
+    source_url: https://www.zizzs.com/c/202307/112415.html
+    original_source_url: https://www.bjeea.cn/html/zkzz/tzgg/2023/0708/84079.html
+    source_title: 2023年北京市朝阳区一分一段表
+    method: FullTableCrosscheck
+    collected_at: 2026-07-05
+    excerpt: "650分及以上80人；642累计796；400分以下623人、累计11241。完整逐分表与现有学校线锚点全部吻合。"
+    notes: "考试院原页现为404；转录页发布于2023-07-10并声明来源为北京教育考试院，故最高定T2，不标T1。"
 
   - id: ev-scale-cy-2022-exam
     entity: 朝阳区

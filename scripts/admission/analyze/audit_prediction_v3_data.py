@@ -50,6 +50,27 @@ def main():
             f" {coded[year]['exact']} 条可连接唯一{code_tier}专业代码；"
             "校线仍为 T3。"
         )
+    actual_text = (
+        BASE / "evidence/chaoyang-actual-admits-2025.evidence.yaml"
+    ).read_text()
+    actual_samples = len(re.findall(r"^\s+- school_code:", actual_text, re.M))
+    direct_text = (
+        BASE / "evidence/chaoyang-group-direct-2025.evidence.yaml"
+    ).read_text()
+    direct_total = int(
+        re.search(r"^\s*group_direct_total:\s*(\d+)", direct_text, re.M).group(1)
+    )
+    direct_t1 = int(
+        re.search(r"^\s*official_t1_subtotal:\s*(\d+)", direct_text, re.M).group(1)
+    )
+    print(
+        f"- 历史实际录取分渠道样本：{actual_samples} 校；"
+        "目前仅陈经纶中学2025完整分项达到T2。"
+    )
+    print(
+        f"- 2025集团直升逐校基准共{direct_total}人，其中{direct_t1}人有考试院T1原表；"
+        f"其余{direct_total - direct_t1}人仍为T3转录。"
+    )
     print("- 2026 一分一段和竞争池发布前，只能运行 V3-alpha 宽区间。")
     print("- `ts/pred_2026.json` 是旧模型结果，不视为 V3。")
     return 1 if blocked else 0

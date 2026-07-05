@@ -228,14 +228,25 @@ direct_05:
     caveat: "页面使用预计/约，且声明来源于家长分享、网络"
   historical_benchmark_2025:
     group_direct_plan: 915
-    status: secondary_corroborated
-    confidence: T3
+    status: partially_official
+    confidence: mixed_T1_T3
+    detail_path: chaoyang-group-direct-2025.evidence.yaml
+    official_subtotal:
+      schools: 7
+      group_direct_plan: 461
+      confidence: T1
+      source_url: https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87199.html
+      official_image_pages: [4, 5]
+    secondary_subtotal:
+      schools: 10
+      group_direct_plan: 454
+      confidence: T3
     source_urls:
       - https://www.zhongkaobj.cn/zhongkao/zixun/2025080411712.html
       - https://news.sohu.com/a/910139199_121956425
     claimed_primary_source: "2025中招大本"
     caveats:
-      - "尚未取得可逐页核验的2025中招大本原件，两个网页可能转载同一统计表，不算两份独立原始证据。"
+      - "考试院提前招生原图已核实7校461人；其余10校454人仍只来自二手大本转录，多个网页可能转载同一统计表。"
       - "915是集团直升计划/提前批统计，不应与2025朝阳一分一段10729人相加；官方分数段备注已排除集团直升录取者。"
     model_rule: "仅作为2026约1500人传闻的历史量级锚；2026正式备案总数发布前，不按1500确定扣减。"
   source_quality_warning:

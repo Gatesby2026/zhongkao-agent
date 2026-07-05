@@ -1,0 +1,57 @@
+entity: 朝阳区2025集团直升逐校基准
+collected_at: 2026-07-05
+purpose: "为2026直升分流提供上一年逐校基准，并区分考试院原表与二手大本转录"
+
+sources:
+  official_early_plan:
+    confidence: T1
+    source_url: https://www.bjeea.cn/html/zkzh/jhcx/2025/0701/87199.html
+    publisher: 北京教育考试院
+    official_image_pages: [4, 5]
+    coverage: "考试院提前招生计划中明确列出的7所朝阳校01集团直升专业"
+  secondary_full_table:
+    confidence: T3
+    source_url: https://www.xscxx.com/rdgz/rmtj/2025110712666.html
+    corroborating_urls:
+      - https://www.zhongkaobj.cn/zhongkao/zixun/2025080411712.html
+      - https://news.sohu.com/a/910139199_121956425
+    claimed_primary_source: 2025中招大本
+    warning: "多个网页可能转载同一张表；不视为独立多源"
+  school_actual_crosscheck:
+    confidence: T2
+    source_url: https://bjksb.bjeea.cn/html/ksb/zhongzhaozhuanban/2026/0421/88046.html
+    claim: "陈经纶中学校长确认2025实际集团直升156人，与考试院计划一致"
+
+records:
+  - {school_code: "105001", school: 北京市第八十中学, group_direct: 151, confidence: T1, official_page: 4}
+  - {school_code: "105002", school: 北京市陈经纶中学, group_direct: 156, confidence: T1, official_page: 4, actual_crosscheck: T2}
+  - {school_code: "105003", school: 北京市日坛中学, group_direct: 42, confidence: T1, official_page: 4}
+  - {school_code: "105004", school: 北京市和平街第一中学, group_direct: 29, confidence: T1, official_page: 4}
+  - {school_code: "105005", school: 对外经济贸易大学附属中学, group_direct: 25, confidence: T1, official_page: 4}
+  - {school_code: "105006", school: 北京市第十七中学, group_direct: 15, confidence: T1, official_page: 4}
+  - {school_code: "105007", school: 北京工业大学附属中学, group_direct: 43, confidence: T1, official_page: 5}
+  - {school_code: "205001", school: 北京中学, group_direct: 166, confidence: T3}
+  - {school_code: "205002", school: 中国人民大学附属中学朝阳学校, group_direct: 90, confidence: T3}
+  - {school_code: "205005", school: 北京市第二中学朝阳学校, group_direct: 20, confidence: T3}
+  - {school_code: "205006", school: 北京市东方德才学校, group_direct: 19, confidence: T3}
+  - {school_code: "205008", school: 东北师范大学附属中学朝阳学校, group_direct: 21, confidence: T3}
+  - {school_code: "205009", school: 清华大学附属中学朝阳学校, group_direct: 45, confidence: T3}
+  - {school_code: "205012", school: 北京市朝阳外国语学校, group_direct: 18, confidence: T3}
+  - {school_code: "205017", school: 清华大学附属中学广华学校, group_direct: 17, confidence: T3}
+  - {school_code: "205018", school: 首都师范大学附属中学朝阳学校, group_direct: 40, confidence: T3}
+  - {school_code: "205020", school: 北京市第八十中学睿德分校, group_direct: 18, confidence: T3}
+
+summary:
+  schools: 17
+  group_direct_total: 915
+  official_t1_schools: 7
+  official_t1_subtotal: 461
+  secondary_t3_schools: 10
+  secondary_t3_subtotal: 454
+  arithmetic_check: "461 + 454 = 915"
+
+model_rules:
+  - "7所T1记录可用于逐校历史回测；其余10所保持T3，不因总和自洽而升级。"
+  - "招生计划不自动等于实际录取；陈经纶156是目前唯一同时取得实际录取确认的学校。"
+  - "2025逐校值不得直接填入2026；只能作为变化率和量级先验。"
+  - "2025一分一段已排除集团直升录取者，建模时不得重复扣除。"
