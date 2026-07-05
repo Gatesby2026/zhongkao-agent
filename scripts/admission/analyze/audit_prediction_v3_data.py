@@ -63,6 +63,17 @@ def main():
     direct_t1 = int(
         re.search(r"^\s*official_t1_subtotal:\s*(\d+)", direct_text, re.M).group(1)
     )
+    direct_2026_text = (
+        BASE / "evidence/chaoyang-group-direct-2026.evidence.yaml"
+    ).read_text()
+    direct_2026_total = int(
+        re.search(
+            r"^total_group_direct_plan:\s*(\d+)", direct_2026_text, re.M
+        ).group(1)
+    )
+    direct_2026_schools = int(
+        re.search(r"^school_count:\s*(\d+)", direct_2026_text, re.M).group(1)
+    )
     print(
         f"- 历史实际录取分渠道样本：{actual_samples} 校；"
         "目前仅陈经纶中学2025完整分项达到T2。"
@@ -70,6 +81,10 @@ def main():
     print(
         f"- 2025集团直升逐校基准共{direct_total}人，其中{direct_t1}人有考试院T1原表；"
         f"其余{direct_total - direct_t1}人仍为T3转录。"
+    )
+    print(
+        f"- 2026集团直升官方计划：{direct_2026_schools}校/{direct_2026_total}人，"
+        "已达T1；这是计划上界，不等于最终实际录取数。"
     )
     print("- 2026 一分一段和竞争池发布前，只能运行 V3-alpha 宽区间。")
     print("- `ts/pred_2026.json` 是旧模型结果，不视为 V3。")

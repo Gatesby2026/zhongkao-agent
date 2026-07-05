@@ -19,10 +19,20 @@ meta:
   collected_at: 2026-06-22
   updated: 2026-07-05
   caveat: |
-    0.5+3 逐校名额为机构/自媒体"网传"数据(T3),官方各校简章通常 7 月才发布。
-    多源对"人朝/朝外"存在【集团合计】与【本部】两种口径,已分别标注 plan_main(本部)
-    与 plan_group(集团含分校合计),不强行对齐。1+3 为 2025 官方/机构汇总(较稳)。
+    【2026-07-05官方计划订正】北京教育考试院已发布2026普通高中提前招生计划，
+    朝阳21校“集团直升”专业合计1807人，逐校见
+    evidence/chaoyang-group-direct-2026.evidence.yaml。下方早期T3网传记录保留作来源审计，
+    不再作为2026模型输入；计划数不是最终实际录取数。1+3仍为2025汇总，待2026官方发布。
     严格只写 chaoyang.yaml schools 正名内的校。
+
+official_group_direct_2026:
+  status: confirmed_plan
+  confidence: T1
+  school_count: 21
+  total: 1807
+  evidence_path: evidence/chaoyang-group-direct-2026.evidence.yaml
+  source_url: https://www.bjeea.cn/uploads/soft/260630/普通高中学校提前招生计划.pdf
+  warning: 官方计划上限，不等于最终备案录取或报到人数；结合2026一分一段排除口径使用
 
 # ============================================================
 # 一、0.5+3 集团直升计划人数(2026)
@@ -231,7 +241,8 @@ program_summary:
       - "清华附朝阳集团 ↔ 二中朝阳集团"
     source: "xschu(https://www.xschu.com/zhengcezixun/84670.html)"
     confidence: T3
-    note: "2026朝阳探索集团联盟共享直升计划,允许跨集团直升。逐校数为'网传',7月各校官方简章为准。"
+    status: superseded_by_official_plan
+    note: "历史网传记录；已被考试院2026提前招生计划的21校/1807人T1表取代，不再进入模型。"
   stale_table_detection:
     mislabeled_page: https://www.zizzs.com/gk/zhongkao/215197.html
     page_label: "2026朝阳区部分学校0.5+3直升名额"
@@ -257,3 +268,4 @@ not_collected:
     清华附朝阳直升: "本部90、集团175(xschu/xscxx)为2026网传；本部25已确认来自2025旧表复用，不再列作2026冲突"
     北京中学直升: "仅确认2025本部90、集团200；暂未取得2026值，禁止沿用旧数"
   one_plus_three_2026: "2026朝阳1+3官方实验校名单及各校人数官方未发布(通常7月);现仅有2025数据。zizzs预测全市破万、朝阳有新校首次参与,但无逐校数,不写。"
+  group_direct_2026_actual: "官方计划21校/1807人已齐；最终实际备案录取数和报到数尚未公开。"

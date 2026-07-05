@@ -40,9 +40,11 @@ datasets:
     path: 2026_sjtongchou_chaoyang.yaml
   plan_2026_early_and_direct:
     required: true
-    status: partial
+    status: available
     path: districts/chaoyang_prebatch.yaml
-    gap: "官方规则已确认备案直升进入提前批且不再参加其他录取；逐校实际锁定人数主要仍为T3且冲突"
+    evidence_path: evidence/chaoyang-group-direct-2026.evidence.yaml
+    available: "考试院2026提前招生计划确认朝阳21校集团直升计划1807人，逐校/专业均为T1"
+    gap: "计划数不是最终实际备案录取/报到数；1+3的2026逐校计划仍待官方发布"
   rank_table_2026:
     required: true
     status: waiting_official
@@ -55,8 +57,8 @@ datasets:
   locked_before_unified_2026:
     required: true
     status: partial
-    available: "2025集团直升逐校17校/915人已结构化，其中7校461人为考试院T1、其余10校454人为T3大本转录；陈经纶实际156另有校长确认；2026网传全区约1500"
-    gap: "特长生区测合格考生官方上界596但非最终录取；2026集团直升仍缺官方备案总数和逐校最终录取，网传值不得确定扣减"
+    available: "2026集团直升官方计划21校/1807人已结构化为T1；2025基准17校/915人，其中7校461人为T1；陈经纶2025实际156另有校长确认"
+    gap: "特长生区测合格上界596及集团直升1807均为计划/合格上界，不是最终录取；2026最终备案数和1+3逐校数仍缺"
     learned_from_2025: "官方一分一段已排除1+3、集团直升、普高登记入学及中职自主招生已录取者；2026须以当年官方备注为准，禁止重复扣除"
   preference_and_demand:
     required: false
@@ -67,5 +69,5 @@ datasets:
     status: partial
     path: chaoyang_new2026.yaml
     evidence_path: evidence/chaoyang-new-school-proxies-2026.evidence.yaml
-    available: "三校统招计划均为T1；民大附中朝阳已确认2016投用且有2026届高三，北大朝阳未来已确认九年1+3培养史，均非零历史新建校"
-    gap: "三校都无本招生口径历史录取位次；首师大附属实验高中管理/课程/出口仍缺官方细节，必须使用宽区间"
+    available: "三校统招计划均为T1；民大附中朝阳已确认2016投用且有2026届高三，北大朝阳未来已确认九年1+3培养史；首师实验已确认首届高中招生及首师附中系+八十中资源协作"
+    gap: "三校都无本招生口径历史录取位次与出口；合作集团层级不能直接平移，必须使用宽区间"

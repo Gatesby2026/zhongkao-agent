@@ -222,10 +222,18 @@ direct_05:
     model_effect: "这是录取流程约束，不提供实际人数；2026一分一段发布后还须核对其统计备注，避免重复扣除"
   district_total_claim:
     value: 1500
-    status: unconfirmed
+    status: superseded
     confidence: T3
     source_url: https://www.xschu.com/zhengcezixun/84424.html
-    caveat: "页面使用预计/约，且声明来源于家长分享、网络"
+    caveat: "历史网传已被考试院官方计划21校/1807人取代"
+  official_plan_2026:
+    value: 1807
+    schools: 21
+    status: confirmed_plan
+    confidence: T1
+    detail_path: chaoyang-group-direct-2026.evidence.yaml
+    source_url: https://www.bjeea.cn/uploads/soft/260630/普通高中学校提前招生计划.pdf
+    caveat: "计划数不是最终实际录取/报到数；不得与已排除直升生的一分一段人数重复扣减"
   historical_benchmark_2025:
     group_direct_plan: 915
     status: partially_official
@@ -248,7 +256,7 @@ direct_05:
     caveats:
       - "考试院提前招生原图已核实7校461人；其余10校454人仍只来自二手大本转录，多个网页可能转载同一统计表。"
       - "915是集团直升计划/提前批统计，不应与2025朝阳一分一段10729人相加；官方分数段备注已排除集团直升录取者。"
-    model_rule: "仅作为2026约1500人传闻的历史量级锚；2026正式备案总数发布前，不按1500确定扣减。"
+    model_rule: "仅作为历史量级锚；2026计划已由官方1807取代，但最终实际备案数发布前仍不得按计划满额确定扣减。"
   source_quality_warning:
     publisher: 北京中考信息网
     conflicting_2025_talent_counts:
@@ -282,9 +290,9 @@ direct_05:
   crosscheck:
     source_url: https://www.xschu.com/zhengcezixun/84424.html
     result: "另一机构也称朝阳约1500，但两站均未给原始名单/文件，可能共享家长群信息，不构成独立确认"
-    model_rule: "不得以1500作为确定实际直升数；逐校实际锁定人数继续待核"
+    model_rule: "1500传闻已失效；逐校官方计划已齐，最终实际锁定人数继续待核"
 
 negative_findings:
-  - "截至采集日未检得朝阳区教育主管部门发布的0.5+3逐校最终名单或人数表。"
+  - "已取得考试院2026逐校集团直升计划，但仍未检得逐校最终备案录取或报到人数表。"
   - "机构文中的死签/活签、候选名单公示日期等说法无官方原文，不进入模型参数。"
   - "学校公众号链接可证明简章发布，但微信公众号页面在当前采集环境不可直接抓取；人数先由全文转载交叉核验，保留T2/T3。"

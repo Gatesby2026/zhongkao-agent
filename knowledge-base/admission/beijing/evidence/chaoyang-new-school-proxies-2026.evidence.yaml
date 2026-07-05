@@ -61,12 +61,51 @@ records:
   - id: ev-newproxy-2026-005
     entity: 首都师范大学附属实验学校
     claim: institutional_profile
-    value: 既有学校恢复或新设高中学段；官方统一招生77人已确认，但高中管理、课程和出口暂无可核官方材料
-    confidence: T2
-    status: partial
-    source_type: 区属学校官网+考试院官方计划
-    source_url: https://sssy.bjchyedu.cn/
-    source_parent_url: https://www.bjeea.cn/html/zkzh/jhcx/2026/0630/88248.html
-    source_title: 首都师范大学附属实验学校官网；北京教育考试院2026招生计划
+    value: 2026开启当前办学阶段首届高中招生；依托首师大附中、首师大附中朝阳学校教育集团，并与八十中战略合作
+    confidence: T1
+    status: confirmed
+    source_type: 朝阳区官方
+    source_url: https://xinwen.bjd.com.cn/content/s6a1d494ce4b03fa51a7f25d3.html
+    source_title: 北京朝阳《@新同学，朝阳区三所高中招生上新》
     collected_at: 2026-07-05
-    notes: 学校官网当前访问不稳定；不得把“首师大附中体系”直接等同于本部录取层级。
+    excerpt: "2026年学校开启首届高中招生工作……在学生培育、师资互通、课程共建、教研培训、质量考评、管理提质等领域全面联动融合。"
+    notes: 官方确认资源合作关系，但不得把合作校录取层级直接平移为该校首届统招线。
+
+  - id: ev-newproxy-2026-006
+    entity: 首都师范大学附属实验学校
+    claim: high_school_contact
+    value:
+      admissions_phone: 64702846
+      general_phone: 64745843
+    confidence: T1
+    status: confirmed
+    source_type: 朝阳区官方+学校官网
+    source_url: https://xinwen.bjd.com.cn/content/s6a1d494ce4b03fa51a7f25d3.html
+    source_title: 北京朝阳《@新同学，朝阳区三所高中招生上新》
+    collected_at: 2026-07-05
+    excerpt: "咨询方式 联系电话：64702846。"
+    notes: 64702846为2026高中招生咨询电话；64745843为学校官网传达室电话。
+
+  - id: ev-newproxy-2026-007
+    entity: 北大附中朝阳未来学校
+    claim: 2026_management_and_admission_change
+    value: 2026划归朝阳区属地常态化管理、承办朝阳区数理教育中心，并开始面向全市招收高一年级新生
+    confidence: T1
+    status: confirmed
+    source_type: 朝阳区官方
+    source_url: https://xinwen.bjd.com.cn/content/s6a1d494ce4b03fa51a7f25d3.html
+    source_title: 北京朝阳《@新同学，朝阳区三所高中招生上新》
+    collected_at: 2026-07-05
+    excerpt: "2026年，划归朝阳区属地常态化管理……自2026年开始，学校面向全市招收高一年级新生。"
+
+  - id: ev-newproxy-2026-008
+    entity: 民大附中朝阳学校
+    claim: 2026_admission_change
+    value: 延续市级统筹二招生，并于2026首次新增朝阳区统一招生通道
+    confidence: T1
+    status: confirmed
+    source_type: 朝阳区官方
+    source_url: https://xinwen.bjd.com.cn/content/s6a1d494ce4b03fa51a7f25d3.html
+    source_title: 北京朝阳《@新同学，朝阳区三所高中招生上新》
+    collected_at: 2026-07-05
+    excerpt: "在延续北京市‘市级统筹二’招生计划的基础上，首次新增朝阳区统招通道。"

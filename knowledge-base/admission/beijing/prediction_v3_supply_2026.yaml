@@ -59,6 +59,15 @@ channels:
     source_path: 2026_sjtongchou_chaoyang.yaml
     source_url: https://www.bjeea.cn/html/zkzh/jhcx/2026/0630/88248.html
     warning: "多数为外区/特定项目去向，是朝阳考生机会而非朝阳本地高中新增座位"
+  group_direct_plan:
+    value: 1807
+    unit: seats
+    scope: "朝阳21所高中提前招生计划中明确标注“集团直升”的专业计划"
+    school_count: 21
+    source_tier: T1
+    source_path: evidence/chaoyang-group-direct-2026.evidence.yaml
+    source_url: https://www.bjeea.cn/html/zkzh/jhcx/2026/0630/88248.html
+    warning: "官方计划上界，不是最终实际录取/报到数；一分一段若已排除直升生，不得再次扣减"
   talent_qualification_pool:
     value: 596
     unit: candidates
@@ -71,4 +80,5 @@ non_additivity_rules:
   - "特长生计划受学校年度总计划4%/4%/2%比例约束，不得在统招总量之外重复加座位。"
   - "校额到校、市级统筹、统一招生是不同录取阶段和竞争范围，不得混成一个累计供给栈。"
   - "596名特长资格考生不是596个实际锁定名额。"
+  - "1807个集团直升计划不是1807个最终实际锁定考生。"
   - "市级统筹145是朝阳考生跨校机会，不等于朝阳本地学校供给增加145。"
