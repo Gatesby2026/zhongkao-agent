@@ -78,7 +78,83 @@ def main():
                 print(f"  - {m}")
             print()
     print(f"合计未命中: {total_unres}")
-    return 1 if total_unres else 0
+
+    # 当前年度硬门禁：运行时 registry 不得混用旧计划、重复实体或错误合计。
+    errors = []
+    regdir = os.path.join(KB, "registry", "cy")
+    entities = []
+    for fn in sorted(os.listdir(regdir)):
+        if fn.startswith("_") or not fn.endswith(".yaml"):
+            continue
+        entities.append(Y(os.path.join("registry", "cy", fn)))
+    ids = [e.get("id") for e in entities]
+    names = [e.get("canonical_name") for e in entities]
+    if len(ids) != len(set(ids)):
+        errors.append("registry/cy 存在重复 id")
+    if len(names) != len(set(names)):
+        errors.append("registry/cy 存在重复 canonical_name")
+
+    code_owners = defaultdict(set)
+    for e in entities:
+        for a in e.get("admissions") or []:
+            if a.get("code"):
+                code_owners[str(a["code"])].add(e.get("id"))
+    dup_codes = {c: sorted(v) for c, v in code_owners.items() if len(v) > 1}
+    if dup_codes:
+        errors.append(f"招生代码跨实体重复: {dup_codes}")
+
+    overlay = Y("2026_sjtongchou_chaoyang.yaml")
+    tc = overlay
+    xed = Y("chaoyang_xeddx.yaml")
+    if int(tc.get("year") or 0) != 2026:
+        errors.append(f"市级统筹运行时年份不是2026: {tc.get('year')}")
+    if int(xed.get("year") or 0) != 2026:
+        errors.append(f"校额到校运行时年份不是2026: {xed.get('year')}")
+    expected = {"tongchou_yi": 51, "tongchou_er": 94}
+    expected_codes = {
+        "tongchou_yi": {
+            "101002", "101010", "102001", "102002", "102013", "102014", "102015",
+            "105001", "105002", "106001", "108001", "108002", "108003", "108005", "113001",
+        },
+        "tongchou_er": {
+            "205022", "205023", "206020", "207005", "108001", "108003",
+            "209003", "212006", "212008", "214012", "216007",
+        },
+    }
+    for key, want in expected.items():
+        got = sum(int(r.get("quota_chaoyang") or 0) for r in tc.get(key, []))
+        if got != want:
+            errors.append(f"{key} 朝阳名额合计={got}, 应为{want}")
+        got_codes = {str(r.get("school_code")) for r in tc.get(key, [])}
+        if got_codes != expected_codes[key]:
+            errors.append(
+                f"{key} 学校代码集合不符: 缺{sorted(expected_codes[key] - got_codes)},"
+                f" 多{sorted(got_codes - expected_codes[key])}")
+    for r in xed.get("rows") or []:
+        got = sum(int(v or 0) for v in (r.get("by_school") or {}).values())
+        if got != int(r.get("total") or 0):
+            errors.append(f"校额行合计不符: {r.get('code')} {r.get('name')} {got}!={r.get('total')}")
+
+    promoted = {"205021", "205022", "205023"}
+    found = {}
+    for e in entities:
+        codes = {str(a.get("code")) for a in e.get("admissions") or [] if a.get("code")}
+        for code in promoted & codes:
+            found[code] = e
+    for code in sorted(promoted):
+        e = found.get(code)
+        if not e:
+            errors.append(f"2026首年招生学校未进入registry: {code}")
+        elif e.get("type") != "公办普高":
+            errors.append(f"{code} 尚未转正为公办普高: {e.get('type')}")
+
+    print("\n# 当前年度硬门禁")
+    if errors:
+        for e in errors:
+            print(f"  - FAIL: {e}")
+    else:
+        print("  PASS: 2026年份、统筹合计、校额checksum、实体唯一性、新校转正")
+    return 1 if total_unres or errors else 0
 
 if __name__ == "__main__":
     sys.exit(main())

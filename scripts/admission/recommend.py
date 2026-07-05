@@ -225,20 +225,57 @@ def load_xeddx(district: str):
 _TONGCHOU_CACHE: dict = {}
 
 
+def _current_tongchou(base: dict) -> dict:
+    """将独立的 2026 T1 覆盖层叠加到历史档案，保留画像/坐标/历史线而不覆盖 2025 快照。"""
+    path = ADMISSION_DIR / "2026_sjtongchou_chaoyang.yaml"
+    if not path.exists():
+        return base
+    overlay = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    if int(overlay.get("year") or 0) <= int(base.get("year") or 0):
+        return base
+    out = {k: v for k, v in base.items()
+           if k not in ("year", "source_authoritative", "verification_method",
+                        "tongchou_yi", "tongchou_er", "totals", "verified_2026")}
+    out.update({
+        "year": overlay["year"], "plan": overlay["plan"], "scope": overlay["scope"],
+        "source_authoritative": [overlay["source_url"]],
+        "verification_method": overlay["verified"], "totals": overlay["totals"],
+        "global_confidence": "T1·2026北京教育考试院官方计划逐页视觉核对",
+    })
+    for key in ("tongchou_yi", "tongchou_er"):
+        old = {str(r.get("school_code")): r for r in base.get(key, [])}
+        rows = []
+        for patch in overlay.get(key, []):
+            code = str(patch["school_code"])
+            rec = dict(old.get(code) or {})
+            rec.update(patch)
+            rec["faces_chaoyang"] = int(rec.get("quota_chaoyang") or 0) > 0
+            rec["confidence"] = "T1·2026官方计划"
+            rec["sources"] = [overlay["source_url"]]
+            rec["tongchou_major"] = {
+                "major_code": str(patch["major_code"]), "major_name": "普通班",
+                "full": code + str(patch["major_code"]),
+            }
+            rows.append(rec)
+        out[key] = rows
+    return out
+
+
 def load_tongchou(district: str):
-    """市级统筹（统筹一/二）面向本区招生清单。文件 2025_sjtongchou_<district>.json。
-    含校名/校区/区/地址/朝阳名额/住宿/是否面向朝阳（据 bjeea 2025 官方简章逐格核 + 合计对账）。"""
+    """市级统筹（统筹一/二）面向本区招生清单；registry 为当前年度唯一运行时源。"""
     if district in _TONGCHOU_CACHE:
         return _TONGCHOU_CACHE[district]
     import json as _json
     data = None
     if _USE_REGISTRY:
         data = _registry_meta(district, "tongchou")
-    if data is None:
+    if data is None and not _USE_REGISTRY:
         path = ADMISSION_DIR / f"2025_sjtongchou_{district}.json"
         if path.exists():
             with open(path, encoding="utf-8") as f:
                 data = _json.load(f)
+    if data and district == "chaoyang":
+        data = _current_tongchou(data)
     _TONGCHOU_CACHE[district] = data
     return data
 
@@ -279,6 +316,10 @@ def load_new2026(district: str):
     data = None
     if _USE_REGISTRY:
         data = _registry_channel(district, "新校", "new2026_record", "new2026")
+        # 已取得官方统招代码的首年招生学校会转正为公办实体；不得再从旧扁平暂存表重复注入。
+        if data is None:
+            _NEW2026_CACHE[district] = None
+            return None
     if data is None:
         path = ADMISSION_DIR / f"{district}_new2026.yaml"
         if path.exists():
@@ -950,8 +991,9 @@ def build_result(rank, home=None, mode="driving", max_km=None, interests=None,
         "est_score": rank_to_score(district, rank),
         "interests": interests,
         "admission_source": (
-            "学校代码/专业(班)派生自 bjeea 2025 官方计划册（人工核对映射）；"
-            "2026 计划 7 月初发布后须刷新" if admission_codes else None),
+            "学校代码、专业(班)及计划人数来自北京教育考试院 2026 官方招生计划；"
+            "首年招生学校的录取位次仍为估算" if district == "chaoyang" else
+            "学校代码、专业(班)及计划人数来自北京教育考试院 2026 官方招生计划"),
         "bands": bands,
         "public_list": public_list,
         "private_schools": build_private_list(district, district_name, home, mode,

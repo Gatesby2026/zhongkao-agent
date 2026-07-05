@@ -1,6 +1,6 @@
 district: cy
 generated_by: build_registry.py
-count: 59
+count: 57
 schools:
 - id: cy-001-dbszx
   short_name: 第八十中学
@@ -441,41 +441,28 @@ schools:
   - 中职
 - id: cy-055-bdfzzywlxx
   short_name: 北大附中朝阳未来学校
-  type: 新校
-  codes: []
+  type: 公办普高
+  codes:
+  - '205022'
   campuses: 1
   admissions:
   - 统招
 - id: cy-056-mdfzzyxx
   short_name: 民大附中朝阳学校
-  type: 新校
-  codes: []
+  type: 公办普高
+  codes:
+  - '205023'
   campuses: 1
   admissions:
   - 统招
 - id: cy-057-sdsfdxfssyxx
   short_name: 首都师范大学附属实验学校
-  type: 新校
-  codes: []
+  type: 公办普高
+  codes:
+  - '205021'
   campuses: 1
   admissions:
   - 统招
-- id: cy-058-dbszx
-  short_name: 第八十中学
-  type: 市级统筹
-  codes:
-  - '105001'
-  campuses: 1
-  admissions:
-  - 市级统筹
-- id: cy-059-cjlzx
-  short_name: 陈经纶中学
-  type: 市级统筹
-  codes:
-  - '105002'
-  campuses: 1
-  admissions:
-  - 市级统筹
 - id: cy-060-qhfzjtlxq
   short_name: 清华附将台路
   type: 1+3项目校
