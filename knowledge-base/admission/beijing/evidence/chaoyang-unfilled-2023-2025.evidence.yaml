@@ -177,17 +177,38 @@ underfill_calibration_2025:
     minimum_filled: "计划数减征集前剩余数；表示常规阶段已占用名额的下界/按表推算值"
     minimum_fill_rate_pct: "minimum_filled / local_plan；不是征集后的最终录取率，更不是报到率"
 
-underfill_calibration_2024_partial:
-  scope: "学校全部统一招生计划（全市）对比该校进入征集的全部剩余计划；仅纳入已找到计划总数的5校"
+underfill_calibration_2024:
+  scope: "8所进入征集的朝阳民办校全部统一招生计划（全市），对比该校进入征集的全部剩余计划"
   remaining_source:
     confidence: T1
     source_url: https://www.bjeea.cn/html/zkzz/tzgg/2024/0729/85647.html
     publisher: 北京教育考试院
-  plan_source_rule: "学校公众号转载为T2，机构校情页为T3；未取得2024官方计划册原表前不升级"
+  common_plan_table:
+    confidence: T3
+    source_url: https://www.zhongkaobj.cn/zhongkao/zxdt/202409281511.html
+    source_note: "逐专业列出2024民办高中招生计划；与学校公众号/校情页可核值一致，但未取得考试院计划册原表，不升级"
+  plan_source_rule: "学校公众号转载为T2，机构计划表/校情页为T3；未取得2024官方计划册原表前不升级"
   rows:
+    - school_code: "205032"
+      school: 北京市朝阳区爱迪外国语学校
+      total_plan: 90
+      plan_breakdown: {major_01: 63, major_02: 27}
+      plan_confidence: T3
+      plan_source_url: https://www.zhongkaobj.cn/zhongkao/zxdt/202409281511.html
+      remaining_all_districts: 47
+      remaining_breakdown: {major_01_chaoyang: 47}
+      minimum_filled: 43
+      minimum_fill_rate_pct: 47.8
+      focus_major:
+        major_code: "01"
+        plan: 63
+        remaining: 47
+        minimum_filled: 16
+        minimum_fill_rate_pct: 25.4
     - school_code: "205033"
       school: 北京爱迪学校
       total_plan: 50
+      plan_breakdown: {major_01: 35, major_02: 15}
       plan_confidence: T3
       plan_source_url: https://www.zhongkaobj.cn/zhongkao/zxdt/202412317457.html
       remaining_all_districts: 28
@@ -197,15 +218,49 @@ underfill_calibration_2024_partial:
     - school_code: "205034"
       school: 北京市朝阳区力迈学校
       total_plan: 30
+      plan_breakdown: {major_01: 12, major_02: 5, major_03: 9, major_04: 4}
       plan_confidence: T3
       plan_source_url: https://www.zhongkaobj.cn/zhongkao/zxdt/202412317461.html
       remaining_all_districts: 7
       remaining_breakdown: {major_03_chaoyang: 6, major_04_other_districts: 1}
       minimum_filled: 23
       minimum_fill_rate_pct: 76.7
+    - school_code: "205041"
+      school: 北京市朝阳区青苗学校
+      total_plan: 100
+      plan_breakdown: {major_01: 70, major_02: 30}
+      plan_confidence: T3
+      plan_source_url: https://www.zhongkaobj.cn/zhongkao/zxdt/202409281511.html
+      remaining_all_districts: 43
+      remaining_breakdown: {major_01_chaoyang: 43}
+      minimum_filled: 57
+      minimum_fill_rate_pct: 57.0
+      focus_major:
+        major_code: "01"
+        plan: 70
+        remaining: 43
+        minimum_filled: 27
+        minimum_fill_rate_pct: 38.6
+    - school_code: "205042"
+      school: 北京市朝阳区凯文学校
+      total_plan: 120
+      plan_breakdown: {major_01: 70, major_02: 30, major_03: 14, major_04: 6}
+      plan_confidence: T3
+      plan_source_url: https://www.zhongkaobj.cn/zhongkao/zxdt/202409281511.html
+      remaining_all_districts: 12
+      remaining_breakdown: {major_02_other_districts: 2, major_03_chaoyang: 10}
+      minimum_filled: 108
+      minimum_fill_rate_pct: 90.0
+      focus_major:
+        major_code: "03"
+        plan: 14
+        remaining: 10
+        minimum_filled: 4
+        minimum_fill_rate_pct: 28.6
     - school_code: "205043"
       school: 北京市朝阳区明诚外国语学校
       total_plan: 60
+      plan_breakdown: {major_01: 42, major_02: 18}
       plan_confidence: T3
       plan_source_url: https://www.zhongkaobj.cn/zhongkao/zhongxue/202412317471.html
       remaining_all_districts: 46
@@ -215,6 +270,7 @@ underfill_calibration_2024_partial:
     - school_code: "205045"
       school: 北京市朝阳区致知学校
       total_plan: 60
+      plan_breakdown: {major_01: 42, major_02: 18}
       plan_confidence: T2
       plan_source_url: https://guoji.114study.com/news/22374/
       plan_source_note: "页面注明内容来自学校公众号，并明确朝阳42、其他区18"
@@ -225,6 +281,7 @@ underfill_calibration_2024_partial:
     - school_code: "205049"
       school: 北京市朝阳区燕京实验中学
       total_plan: 50
+      plan_breakdown: {major_01: 35, major_02: 15}
       plan_confidence: T3
       plan_source_url: https://www.zhongkaobj.cn/zhongkao/zxdt/202412317485.html
       remaining_all_districts: 31
@@ -232,19 +289,16 @@ underfill_calibration_2024_partial:
       minimum_filled: 19
       minimum_fill_rate_pct: 38.0
   aggregate:
-    schools: 5
-    total_plan: 250
-    remaining_before_supplement: 135
-    minimum_filled: 115
-    minimum_fill_rate_pct: 46.0
-  missing_plan_denominators:
-    - 北京市朝阳区爱迪外国语学校
-    - 北京市朝阳区青苗学校
-    - 北京市朝阳区凯文学校
+    schools: 8
+    total_plan: 560
+    remaining_before_supplement: 237
+    minimum_filled: 323
+    minimum_fill_rate_pct: 57.7
   caveats:
-    - "2024计划分母尚非考试院原表，整体只能作为T2/T3校准样本。"
+    - "2024计划分母尚非考试院原表，整体只能作为T2/T3校准样本；缺额是考试院T1。"
     - "这里使用学校全市计划与全市剩余计划；不能与上面的朝阳本区口径直接逐项相减。"
     - "minimum_filled仍是征集前已占用名额，不代表征集后最终录取或开学报到人数。"
+    - "学校整体填充率可能掩盖专业分化；如凯文全校90.0%，但朝阳03专业仅28.6%。"
 
 model_rules:
   - "公办普通班未出现在征集表，只能证明官方名单中没有该类缺额，不能反推出逐校最低分或实际录取人数。"
