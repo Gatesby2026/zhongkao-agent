@@ -9,7 +9,9 @@ datasets:
     required: true
     status: partial
     path: ts/lines.jsonl
-    gap: "现有学校最低线全部为机构转载/网传T3；考试院一分一段只能认证分数到位次映射，不能认证学校最低线；专业代码覆盖0"
+    coded_2025_path: evidence/chaoyang-lines-2025-professional-coded.evidence.yaml
+    available: "2025已形成28条专业线记录：27条可映射到唯一T1官方专业代码（含和平街01/02拆分），清华附朝阳1条保留01/02同名歧义"
+    gap: "学校最低线仍全部为机构转载/网传T3；5个单元有冲突区间；2023/2024尚未完成专业代码映射；考试院一分一段只能认证分数到位次映射"
   historical_actual_admits:
     required: true
     status: partial
