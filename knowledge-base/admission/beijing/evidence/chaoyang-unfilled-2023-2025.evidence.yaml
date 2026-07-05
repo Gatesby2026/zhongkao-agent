@@ -177,6 +177,33 @@ underfill_calibration_2025:
     minimum_filled: "计划数减征集前剩余数；表示常规阶段已占用名额的下界/按表推算值"
     minimum_fill_rate_pct: "minimum_filled / local_plan；不是征集后的最终录取率，更不是报到率"
 
+underfill_calibration_2025_all_districts:
+  scope: "9所进入征集的朝阳民办校全部统一招生计划（全市），对比考试院公布的全部征集剩余计划"
+  plan_source:
+    path: ../2025_tongzhao_plan.json
+    provenance: "北京教育考试院2025招生计划册图片，经腾讯云表格OCR结构化"
+    confidence: T1_ocr
+  remaining_source:
+    confidence: T1
+    source_url: https://www.bjeea.cn/html/zkzz/tzgg/2025/0730/87262.html
+  rows:
+    - {school_code: "205025", school: 北京市实验外国语学校, total_plan: 60, remaining_all_districts: 20, minimum_filled: 40, minimum_fill_rate_pct: 66.7}
+    - {school_code: "205032", school: 北京市朝阳区爱迪外国语学校, total_plan: 90, remaining_all_districts: 63, minimum_filled: 27, minimum_fill_rate_pct: 30.0}
+    - {school_code: "205034", school: 北京市朝阳区力迈学校, total_plan: 60, remaining_all_districts: 38, minimum_filled: 22, minimum_fill_rate_pct: 36.7}
+    - {school_code: "205041", school: 北京市朝阳区青苗学校, total_plan: 160, remaining_all_districts: 136, minimum_filled: 24, minimum_fill_rate_pct: 15.0}
+    - {school_code: "205042", school: 北京市朝阳区凯文学校, total_plan: 180, remaining_all_districts: 60, minimum_filled: 120, minimum_fill_rate_pct: 66.7}
+    - {school_code: "205044", school: 北京市朝阳区博雅学校, total_plan: 90, remaining_all_districts: 62, minimum_filled: 28, minimum_fill_rate_pct: 31.1}
+    - {school_code: "205045", school: 北京市朝阳区致知学校, total_plan: 90, remaining_all_districts: 55, minimum_filled: 35, minimum_fill_rate_pct: 38.9}
+    - {school_code: "205046", school: 北京市朝阳区赫德学校, total_plan: 25, remaining_all_districts: 16, minimum_filled: 9, minimum_fill_rate_pct: 36.0}
+    - {school_code: "205049", school: 北京市朝阳区燕京实验中学, total_plan: 50, remaining_all_districts: 2, minimum_filled: 48, minimum_fill_rate_pct: 96.0}
+  aggregate:
+    schools: 9
+    total_plan: 805
+    remaining_before_supplement: 452
+    minimum_filled: 353
+    minimum_fill_rate_pct: 43.9
+  caveat: "北京市实验外国语学校所在OCR页存在后续校码串列，但该校首个总计划60及01/02专业36+24自洽；其余学校逐校总数自洽。"
+
 underfill_calibration_2024:
   scope: "8所进入征集的朝阳民办校全部统一招生计划（全市），对比该校进入征集的全部剩余计划"
   remaining_source:
@@ -299,6 +326,44 @@ underfill_calibration_2024:
     - "这里使用学校全市计划与全市剩余计划；不能与上面的朝阳本区口径直接逐项相减。"
     - "minimum_filled仍是征集前已占用名额，不代表征集后最终录取或开学报到人数。"
     - "学校整体填充率可能掩盖专业分化；如凯文全校90.0%，但朝阳03专业仅28.6%。"
+
+underfill_calibration_2023:
+  scope: "8所进入征集的朝阳民办校全部统一招生计划（全市），对比转载征集表中的全部剩余计划"
+  plan_source:
+    confidence: T3
+    source_url: https://www.zhongkaobj.cn/zhaosheng/tyzs/202410182295.html
+    source_note: "页面称数据来自北京教育考试院，列出2023/2024全校统一招生计划；尚缺考试院原表"
+  remaining_source:
+    confidence: T3
+    source_url: https://www.zhongkaobj.cn/zhongkao/zkzn/202411134282.html
+    official_publication_crosscheck_url: https://edu.cnr.cn/dj/20230731/t20230731_526355234.shtml
+  rows:
+    - {school: 北京市朝阳区爱迪外国语学校, total_plan: 60, remaining_all_districts: 16, minimum_filled: 44, minimum_fill_rate_pct: 73.3}
+    - {school: 北京爱迪学校, total_plan: 33, remaining_all_districts: 18, minimum_filled: 15, minimum_fill_rate_pct: 45.5}
+    - {school: 北京市朝阳区力迈学校, total_plan: 30, remaining_all_districts: 10, minimum_filled: 20, minimum_fill_rate_pct: 66.7}
+    - {school: 北京市朝阳区青苗学校, total_plan: 200, remaining_all_districts: 152, minimum_filled: 48, minimum_fill_rate_pct: 24.0}
+    - {school: 北京市朝阳区凯文学校, total_plan: 120, remaining_all_districts: 45, minimum_filled: 75, minimum_fill_rate_pct: 62.5}
+    - {school: 北京市朝阳区明诚外国语学校, total_plan: 60, remaining_all_districts: 29, minimum_filled: 31, minimum_fill_rate_pct: 51.7}
+    - {school: 北京市朝阳区致知学校, total_plan: 30, remaining_all_districts: 22, minimum_filled: 8, minimum_fill_rate_pct: 26.7}
+    - {school: 北京市朝阳区赫德学校, total_plan: 30, remaining_all_districts: 22, minimum_filled: 8, minimum_fill_rate_pct: 26.7}
+  aggregate:
+    schools: 8
+    total_plan: 563
+    remaining_before_supplement: 314
+    minimum_filled: 249
+    minimum_fill_rate_pct: 44.2
+  caveat: "计划与征集明细均为机构转录，央广只能确认考试院当年确实发布征集名单；本年仅作T3历史量级校准。"
+
+comparable_all_district_series:
+  definition: "每年进入征集的朝阳民办校：全市统招总计划、征集前全市剩余计划及常规阶段最低填充率"
+  values:
+    - {year: 2023, schools: 8, total_plan: 563, remaining: 314, minimum_filled: 249, minimum_fill_rate_pct: 44.2, confidence: T3}
+    - {year: 2024, schools: 8, total_plan: 560, remaining: 237, minimum_filled: 323, minimum_fill_rate_pct: 57.7, confidence: T2_T3_plan_plus_T1_remaining}
+    - {year: 2025, schools: 9, total_plan: 805, remaining: 452, minimum_filled: 353, minimum_fill_rate_pct: 43.9, confidence: T1_ocr_plan_plus_T1_remaining}
+  interpretation:
+    - "2024填充率明显高于2023和2025，民办需求存在年度波动，不得只用最近一年外推。"
+    - "样本集合随当年进入征集的学校变化，序列用于层级先验而非严格同校面板。"
+    - "2025计划扩至805但常规阶段最低填充仅353，扩招没有等比例转化为有效录取需求。"
 
 model_rules:
   - "公办普通班未出现在征集表，只能证明官方名单中没有该类缺额，不能反推出逐校最低分或实际录取人数。"
