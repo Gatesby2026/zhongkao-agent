@@ -5,7 +5,7 @@
   schools.yaml   学校主表(uid 主键)
   lines.jsonl    录取线时序(一行=学校×年×批次×来源)  ← 分析主表
 
-数据源(本脚本): chaoyang.yaml 的 scores(2023-2025 统招线+区位次,原始 bjeea 录取线,项目已核)。
+数据源(本脚本): chaoyang.yaml 的 scores(2023-2025 统招线+区位次,机构转载/网传汇总)。
 后续: 网采的录取线/高考喜报 normalize 后 append 到同表(带各自 source/tier/confidence)。
 幂等:每次重新生成 lines.jsonl 中 source=chaoyang.yaml 的部分 + schools.yaml。
 """
@@ -67,9 +67,9 @@ def main():
                 "rank": rec.get("rank"), "rank_scope": "区",
                 "plan": None,
                 "source_url": "knowledge-base/admission/beijing/chaoyang.yaml",
-                "source_tier": "T1", "collected": "2026-06",
-                "confidence": "high" if rec.get("rank") is not None else "low",
-                "note": "原始 bjeea 录取线，项目已结构化",
+                "source_tier": "T3", "collected": "2026-06",
+                "confidence": "low",
+                "note": "机构转载/网传学校线；区位次映射可由考试院一分一段复核，但学校最低分本身非官方",
             })
 
     # 民办/国际并入主表(来自 chaoyang_private.yaml),uid=招生编码 → 其高考/录取数据可映射

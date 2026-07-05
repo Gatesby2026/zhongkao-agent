@@ -1,0 +1,46 @@
+entity: 朝阳区2026提前分流与特长生渠道核对
+collected_at: 2026-07-05
+rule: "计划上限不等于实际录取；转载学校简章不等于学校原始页面；相关转载不算独立双源"
+
+special_talent:
+  - school: 人大附中朝阳学校
+    year: 2026
+    projects:
+      美术: {minimum: 0, maximum: 3}
+      声乐_女生: {minimum: 0, maximum: 8}
+      科技_信息学: {minimum: 0, maximum: 5}
+    scope: 朝阳区初三应届毕业生
+    status: plan_cap_only
+    confidence: T2
+    source_url: https://www.gaokzx.com/gk/zhongkao/155146.html
+    source_note: "北京高考在线全文转录学校简章，并称原报名链接由学校官网/公众号发布；尚缺学校原始URL"
+    model_rule: "最多16人仅是计划上限；拿到实际录取名单/人数前，不得从竞争池扣16"
+
+direct_05:
+  district_total_claim:
+    value: 1500
+    status: unconfirmed
+    confidence: T3
+    source_url: https://www.xschu.com/zhengcezixun/84424.html
+    caveat: "页面使用预计/约，且声明来源于家长分享、网络"
+  selection_claims:
+    - school: 北京中学
+      claim: "九上期末区排名1500以内可报名，结合面试与调研考试"
+    - school: 北京市第八十中学
+      claim: "参考九上期中/期末五科、七八年级期末，数理权重较高"
+    - school: 和平街一中
+      claim: "按综合成绩择优"
+    - school: 朝阳外国语学校
+      claim: "九上期中/期末五科结合综合素质"
+  selection_source:
+    source_url: https://www.zizzs.com/gk/zhongkao/216157.html
+    confidence: T3
+    provenance: "自主选拔在线明确声明信息来源于网络"
+  crosscheck:
+    source_url: https://www.xschu.com/zhengcezixun/84424.html
+    result: "另一机构也称朝阳约1500，但两站均未给原始名单/文件，可能共享家长群信息，不构成独立确认"
+    model_rule: "不得以1500作为确定实际直升数；逐校实际锁定人数继续待核"
+
+negative_findings:
+  - "截至采集日未检得朝阳区教育主管部门发布的0.5+3逐校最终名单或人数表。"
+  - "机构文中的死签/活签、候选名单公示日期等说法无官方原文，不进入模型参数。"
