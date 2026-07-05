@@ -45,6 +45,7 @@
 |------|------|------|
 | [KNOWLEDGE-TRACKING-DESIGN.md](./design/KNOWLEDGE-TRACKING-DESIGN.md) | design | 学生知识掌握动态追踪体系设计 |
 | [TEACHING-MATERIALS-STRATEGY.md](./design/TEACHING-MATERIALS-STRATEGY.md) | design | 教辅材料数据获取策略 |
+| [RANK-PREDICTION-2026-V3.md](./design/RANK-PREDICTION-2026-V3.md) | canonical design | 朝阳区 2026 录取位次预测基线 |
 
 ## 🗄 [archive/](./archive/) — 一次性/历史
 

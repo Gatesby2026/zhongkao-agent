@@ -1,0 +1,59 @@
+meta:
+  model: chaoyang_rank_prediction_v3
+  as_of: 2026-07-05
+  target: school_major_campus_channel
+  rule: "官方未发布写 waiting_official；估算值不得填充官方字段"
+datasets:
+  historical_cutoff_2023_2025:
+    required: true
+    status: partial
+    path: ts/lines.jsonl
+    gap: "T1学校/校区覆盖13/23/27；专业代码覆盖0；需逐条回源"
+  historical_actual_admits:
+    required: true
+    status: missing
+    gap: "缺实际录取数、未录满和补录结果"
+  plan_2026_unified:
+    required: true
+    status: available
+    source_tier: T1
+    published_at: 2026-06-30
+    path: registry/cy/
+    source_url: "https://query.bjeea.cn/queryService/rest/plan/114"
+  plan_2026_xeddx:
+    required: true
+    status: available
+    source_tier: T1
+    path: chaoyang_xeddx.yaml
+  plan_2026_tongchou:
+    required: true
+    status: available
+    source_tier: T1
+    path: 2026_sjtongchou_chaoyang.yaml
+  plan_2026_early_and_direct:
+    required: true
+    status: partial
+    path: districts/chaoyang_prebatch.yaml
+    gap: "0.5+3逐校数主要为T3且存在冲突；等待官方简章"
+  rank_table_2026:
+    required: true
+    status: waiting_official
+    expected_at: 2026-07-09
+  cohort_2026:
+    required: true
+    status: waiting_official
+    expected_at: 2026-07-09
+    gap: "实际考试人数、资格人数和统招有效竞争池无官方口径"
+  locked_before_unified_2026:
+    required: true
+    status: partial
+    gap: "缺实际锁定人数及其是否包含在排名表中的口径"
+  preference_and_demand:
+    required: false
+    status: partial
+    gap: "真实志愿样本不足；开放日热度只能作弱信号"
+  new_school_proxies:
+    required: true
+    status: partial
+    path: chaoyang_new2026.yaml
+    gap: "已有计划与学校事实；无历史结果，必须使用宽区间"
