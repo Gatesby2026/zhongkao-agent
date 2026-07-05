@@ -1,0 +1,96 @@
+entity: 朝阳区2025统招录取线多源核对
+collected_at: 2026-07-05
+purpose: "社交/机构数据不得单源升级为官方；用官方一分一段验证分数到位次映射，并保留校线冲突"
+
+official_rank_table:
+  source_url: https://www.bjeea.cn/html/zkzz/hidden/2025/0708/87212.html
+  source_type: 北京教育考试院
+  confidence: T1
+  scope_note: "不含1+3、集团直升、普高登记入学和中职自主招生已录取考生"
+  total: 10729
+
+social_sources:
+  - id: xschu-2025-lines
+    source_url: https://www.xschu.com/zhonggaokaozixun/81217.html
+    published_at: 2025-07-31
+    confidence: T3
+    provenance: "页面明确称网传，来源为家长分享/网络"
+  - id: zhongkaobj-2025-lines
+    source_url: https://www.zhongkaobj.cn/lqfsx/cyq/2025080111676.html
+    published_at: 2026-06-30
+    confidence: T3
+    provenance: "页面明确称网传、内容来自网络"
+  - id: zhongkaobj-2024-2025-comparison
+    source_url: https://www.zhongkaobj.cn/lqfsx/cyq/2025081311826.html
+    published_at: 2026-06-30
+    confidence: T3
+    provenance: "多版汇总；可作为第二来源，不能视为独立原始证据"
+
+confirmed_mappings:
+  method: "只确认分数→官方累计位次映射，不确认该分数必然是学校真实最低线"
+  values:
+    488: 282
+    484: 541
+    482: 685
+    477: 1221
+    476: 1357
+    474: 1623
+    471: 2070
+    469: 2376
+    468: 2533
+    466: 2830
+    465: 2966
+    463: 3301
+    460: 3741
+    456: 4335
+    455: 4487
+    454: 4635
+    453: 4762
+    452: 4914
+    451: 5061
+    448: 5438
+    444: 5964
+    438: 6617
+    434: 7077
+    432: 7272
+    430: 7479
+    424: 7951
+    420: 8229
+
+conflicts:
+  - school: 清华附中望京学校
+    source_values:
+      xschu-2025-lines: {score: 474, rank: 1623}
+      zhongkaobj-2024-2025-comparison: {score: 471, rank: 2070}
+      zhongkaobj-2025-lines: {score: 470, rank: 2226}
+    status: unresolved
+    action: "等待学校录取通知截图或官方录取结果；不得标T1"
+  - school: 日坛中学
+    source_values:
+      xschu-2025-lines: {score: 456, rank: 4335}
+      zhongkaobj-2024-2025-comparison: {score: 455, rank: 4487}
+      zhongkaobj-2025-lines: {score: 456, rank: 4335}
+    status: majority_456_but_unofficial
+  - school: 和平街一中
+    source_values:
+      xschu-2025-lines: {score: 455, rank: 4487}
+      zhongkaobj-2024-2025-comparison: {score: 454, rank: 4635}
+      zhongkaobj-2025-lines: {score: 453, rank: 4762}
+    status: unresolved
+    note: "需区分本部普通班与莲葩园校区"
+  - school: 对外经济贸易大学附属中学
+    source_values:
+      zhongkaobj-2024-2025-comparison: {score: 452, rank: 4914}
+      zhongkaobj-2025-lines: {score: 448, rank: 5438}
+    status: unresolved
+  - school: 汇文中学垂杨柳分校
+    source_values:
+      xschu-2025-lines: {score: 419, rank: 8287}
+      zhongkaobj-2024-2025-comparison: {score: 420, rank: 8229}
+      zhongkaobj-2025-lines: {score: 420, rank: 8229}
+    status: majority_420_but_unofficial
+
+model_findings:
+  - "官方排名表已排除多类提前锁定考生，旧供给栈若再次扣除会双重扣除。"
+  - "官方一分一段只能认证分数与位次映射，不能认证网传学校最低分。"
+  - "同站点的不同文章也会冲突；所谓多源若共享家长群图片，不算真正独立来源。"

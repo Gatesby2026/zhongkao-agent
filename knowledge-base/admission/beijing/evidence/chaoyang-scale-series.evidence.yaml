@@ -9,15 +9,15 @@ records:
     claim: exam_takers          # 参加中考人数(一分一段口径)
     value: 10729
     year: 2025
-    confidence: T3
-    status: unconfirmed
-    source_type: 机构/汇总
-    source_url: https://zhuanlan.zhihu.com/p/1940728415817823946
-    source_title: 2025北京中考各区高中录取分数汇总(知乎) + 本地宝一分一段(363071)
-    method: WebSearch
-    collected_at: 2026-06-19
-    excerpt: "朝阳区2025年中考人数为10729人,公办高中录取人数8229人,公办录取率约76%。"
-    notes: 与本地宝《2025各区一分一段表》口径一致(参加排名考生数);待 bjeea 官方核。
+    confidence: T1
+    status: confirmed
+    source_type: 北京教育考试院官方一分一段
+    source_url: https://www.bjeea.cn/html/zkzz/hidden/2025/0708/87212.html
+    source_title: 2025年北京市中招朝阳区各分数段人数（含加分）
+    method: OfficialPage
+    collected_at: 2026-07-05
+    excerpt: "300分以下累计10729人。统计不含1+3、集团直升、普高登记入学和中职自主招生已录取考生。"
+    notes: 10729是排名表竞争池口径，不是全部初三毕业生；模型不得再次扣除备注列出的已录取群体。
 
   - id: ev-scale-cy-2025-public
     entity: 朝阳区
@@ -39,15 +39,15 @@ records:
     claim: exam_takers
     value: 11790
     year: 2024
-    confidence: T3
-    status: unconfirmed
-    source_type: 机构/网传
-    source_url: https://www.zizzs.com/gk/zhongkao/182476.html
-    source_title: 北京市中考朝阳区优质高中录取率盘点(自主选拔在线)
-    method: WebFetch
-    collected_at: 2026-06-19
-    excerpt: "2024年朝阳区中考人数:全区中考人数11,790人(2024录取线为网传版)。"
-    notes: 网传单源,待核。
+    confidence: T1
+    status: confirmed
+    source_type: 北京教育考试院官方一分一段
+    source_url: https://www.bjeea.cn/html/zkzz/hidden/2024/0708/85512.html
+    source_title: 2024年北京市中招朝阳区各分数段人数（含加分）
+    method: OfficialPage
+    collected_at: 2026-07-05
+    excerpt: "400分以下累计11790人。"
+    notes: 已从机构转录升级为考试院原始页面；跨年建模必须沿用官方排名表口径。
 
   - id: ev-scale-cy-2023-exam
     entity: 朝阳区

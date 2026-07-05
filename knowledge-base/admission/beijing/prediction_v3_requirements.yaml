@@ -48,6 +48,7 @@ datasets:
     required: true
     status: partial
     gap: "缺实际锁定人数及其是否包含在排名表中的口径"
+    learned_from_2025: "官方一分一段已排除1+3、集团直升、普高登记入学及中职自主招生已录取者；2026须以当年官方备注为准，禁止重复扣除"
   preference_and_demand:
     required: false
     status: partial
