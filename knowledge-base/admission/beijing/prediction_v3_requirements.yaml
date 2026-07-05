@@ -9,9 +9,10 @@ datasets:
     required: true
     status: partial
     path: ts/lines.jsonl
+    coded_2024_path: evidence/chaoyang-lines-2024-professional-coded.evidence.yaml
     coded_2025_path: evidence/chaoyang-lines-2025-professional-coded.evidence.yaml
-    available: "2025已形成28条专业线记录：27条可映射到唯一T1官方专业代码（含和平街01/02拆分），清华附朝阳1条保留01/02同名歧义"
-    gap: "学校最低线仍全部为机构转载/网传T3；5个单元有冲突区间；2023/2024尚未完成专业代码映射；考试院一分一段只能认证分数到位次映射"
+    available: "2024已形成20条学校线映射：15条连接唯一T1官方专业代码、5条保留多专业/校区歧义；2025已形成28条专业线记录：27条可映射到唯一T1官方专业代码（含和平街01/02拆分），清华附朝阳1条保留01/02同名歧义"
+    gap: "学校最低线仍全部为机构转载/网传T3；2024只有单一T3整理表，2025有5个冲突单元；2023尚未完成专业代码映射；考试院一分一段只能认证分数到位次映射"
   historical_actual_admits:
     required: true
     status: partial
