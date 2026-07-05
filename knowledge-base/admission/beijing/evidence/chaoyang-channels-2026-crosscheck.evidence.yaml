@@ -15,8 +15,106 @@ special_talent:
     source_url: https://www.gaokzx.com/gk/zhongkao/155146.html
     source_note: "北京高考在线全文转录学校简章，并称原报名链接由学校官网/公众号发布；尚缺学校原始URL"
     model_rule: "最多16人仅是计划上限；拿到实际录取名单/人数前，不得从竞争池扣16"
+  - school: 陈经纶中学
+    year: 2026
+    projects:
+      田径_朝阳: {minimum: 0, maximum: 5}
+      男篮_朝阳: {minimum: 0, maximum: 4}
+      冰雪_朝阳: {minimum: 0, maximum: 1}
+      游泳_朝阳: {minimum: 0, maximum: 3}
+      排球_朝阳: {minimum: 0, maximum: 6}
+      女子手球_朝阳: {minimum: 0, maximum: 4}
+      绘画_六城区: {minimum: 0, maximum: 4}
+      声乐_六城区: {minimum: 0, maximum: 3}
+      科技_六城区: {minimum: 0, maximum: 8}
+    status: plan_cap_only
+    confidence: T2
+    source_url: https://www.gaokzx.com/gk/zhongkao/155161.html
+    source_note: "北京高考在线称内容来自学校官网并全文转录；尚缺学校原始URL"
+    model_rule: "体育朝阳上限23；艺术科技为六城区共享上限15，不能全部计入朝阳，更不能视作实际录取"
+  - school: 北京中学
+    year: 2026
+    projects:
+      男足_朝阳: {minimum: 0, maximum: 8}
+      女篮女排合计_朝阳: {minimum: 0, maximum: 12}
+      美术_朝阳: {minimum: 0, maximum: 12}
+      舞蹈_朝阳: {minimum: 0, maximum: 5}
+      声乐_朝阳: {minimum: 0, maximum: 3}
+      人工智能信息学合计_朝阳: {minimum: 0, maximum: 10}
+    status: plan_cap_only
+    confidence: T2
+    source_url: https://www.gaokzx.com/gk/zhongkao/155092.html
+    model_rule: "朝阳计划上限50，不等于实际资格或录取人数"
+  - school: 清华附中朝阳学校
+    year: 2026
+    projects:
+      美术_朝阳: {minimum: 0, maximum: 15}
+      男子排球_朝阳: {minimum: 0, maximum: 8}
+      科技_朝阳: {minimum: 0, maximum: 7}
+    status: plan_cap_only
+    confidence: T2
+    source_url: https://www.gaokzx.com/gk/zhongkao/155147.html
+    original_url: https://qhfzcyxx.bjchyedu.cn/shtml/2/news/202605/6891.shtml
+    note: "学校原始页链接已定位但采集时超时；转载明确写以市教委最终批复为准"
+  - school: 北京工业大学附属中学
+    year: 2026
+    projects:
+      田径_朝阳: {minimum: 0, maximum: 3}
+      女篮_朝阳: {minimum: 0, maximum: 5}
+      男篮_朝阳: {minimum: 0, maximum: 2}
+      钢琴_朝阳: {minimum: 0, maximum: 1}
+      声乐_朝阳: {minimum: 0, maximum: 5}
+      管乐_朝阳: {minimum: 0, maximum: 6}
+      女排_六城区: {minimum: 0, maximum: 8}
+      科技_六城区: {minimum: 0, maximum: 8}
+    status: plan_cap_only
+    confidence: T2
+    source_url: https://www.gaokzx.com/gk/zhongkao/155156.html
+    model_rule: "朝阳专属上限22；城六区共享项目不能全部分配给朝阳"
+  - school: 和平街一中
+    year: 2026
+    projects:
+      冰雪_朝阳: {minimum: 0, maximum: 18}
+      音乐_朝阳: {minimum: 0, maximum: 9}
+      美术_朝阳: {minimum: 0, maximum: 9}
+      科技_朝阳: {minimum: 0, maximum: 7}
+      科技_郊区: {minimum: 0, maximum: 2}
+    campus_split:
+      和平街高中校区: "全部艺术、科技及冰雪0-9"
+      莲葩园校区: "冰雪0-9"
+    status: plan_cap_only
+    confidence: T2
+    source_url: https://www.gaokzx.com/gk/zhongkao/155162.html
+    model_rule: "朝阳上限43；需按校区分别计入供给，实际录取前不扣满额"
+
+published_school_set:
+  count: 14
+  confidence: T2
+  source_url: https://www.zhongkaobj.cn/zhaosheng/tcszs/2026051113615.html
+  source_note: "汇总页逐项链接到13个学校公众号和1个学校官网；项目存在可确认，人数须逐简章采集"
+  schools:
+    - {school: 北京中学, categories: [体育, 科技, 美术]}
+    - {school: 北京市第八十中学, categories: [体育, 科技, 艺术]}
+    - {school: 人大附中朝阳学校, categories: [艺术, 科技]}
+    - {school: 清华附中朝阳学校, categories: [艺术, 体育, 科技]}
+    - {school: 陈经纶中学, categories: [体育, 艺术, 科技]}
+    - {school: 首师大附中朝阳学校, categories: [体育]}
+    - {school: 北京工业大学附属中学, categories: [艺术, 体育, 科技]}
+    - {school: 日坛中学, categories: [科技, 美术, 音乐]}
+    - {school: 和平街一中, categories: [艺术, 科技, 体育]}
+    - {school: 中科院附属实验学校, categories: [艺术, 科技]}
+    - {school: 对外经济贸易大学附属中学, categories: [体育, 艺术, 科技]}
+    - {school: 东北师大附中朝阳学校, categories: [体育]}
+    - {school: 北京十七中, categories: [射箭]}
+    - {school: 陈经纶中学团结湖分校, categories: [武术]}
 
 direct_05:
+  official_rule:
+    status: confirmed
+    confidence: T1
+    source_url: https://www.beijing.gov.cn/fuwu/bmfw/sy/jrts/202604/t20260411_4579992.html
+    claim: "已在区教委备案的集团直升拟录取考生，在提前招生批次录取，不再参加中招志愿填报和其他招生录取"
+    model_effect: "这是录取流程约束，不提供实际人数；2026一分一段发布后还须核对其统计备注，避免重复扣除"
   district_total_claim:
     value: 1500
     status: unconfirmed
@@ -44,3 +142,4 @@ direct_05:
 negative_findings:
   - "截至采集日未检得朝阳区教育主管部门发布的0.5+3逐校最终名单或人数表。"
   - "机构文中的死签/活签、候选名单公示日期等说法无官方原文，不进入模型参数。"
+  - "学校公众号链接可证明简章发布，但微信公众号页面在当前采集环境不可直接抓取；人数先由全文转载交叉核验，保留T2/T3。"
