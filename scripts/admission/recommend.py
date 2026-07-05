@@ -462,6 +462,7 @@ def _district_from_registry(district: str) -> dict:
             "note": e.get("note") or "",
             "features": roll.get("features") or {},
             "gaokao": roll.get("gaokao") or {},
+            "phone": roll.get("phone") or (roll.get("new2026_record") or {}).get("phone"),
             "scores": dict((rep or {}).get("lines") or {}),
         }
         if roll.get("campus_life"):
@@ -824,6 +825,7 @@ def _school_card(s, margin, ref_rank, history, vol, dist_campus, mode_label, max
         "address_exact": bool(loc.get("address")),
         "address_confidence": loc.get("confidence") or "",
         "address_flag": loc.get("flag") or "",
+        "phone": s.get("phone"),
         "style": feat.get("style", ""), "tags": feat.get("tags") or [],
         "gaokao": _gaokao_years_str(s),
         "matched": match_interests(s, interests or []),

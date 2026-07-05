@@ -11,10 +11,37 @@ guantong/tongchou/new_schools）规范化成同一个 School 记录：
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 
 _GK_SCORE = None
 _CAMPUS_LIFE = None
+_SCHOOL_CONTACTS = None
+
+
+def _school_contacts() -> dict:
+    """从北京教育考试院计划册派生档案提取学校电话；按学校代码缓存。"""
+    global _SCHOOL_CONTACTS
+    if _SCHOOL_CONTACTS is not None:
+        return _SCHOOL_CONTACTS
+    p = Path(__file__).resolve().parents[2] / "knowledge-base/admission/beijing/2025_tongzhao_plan.json"
+    out = {}
+    try:
+        rows = json.load(open(p, encoding="utf-8")).get("rows", [])
+        for r in rows:
+            code = str(r.get("school_code") or "")
+            raw = r.get("name_raw") or ""
+            if not code or code in out or "电话" not in raw:
+                continue
+            chunk = re.split(r"邮编|www\.|https?://", re.split(r"电话[:：]?", raw, maxsplit=1)[1])[0]
+            compact = re.sub(r"\s+", "", chunk)
+            phones = re.findall(r"(?<!\d)\d{7,12}(?:-\d{1,6})?(?!\d)", compact)
+            if phones:
+                out[code] = " / ".join(dict.fromkeys(phones))
+    except Exception:
+        out = {}
+    _SCHOOL_CONTACTS = out
+    return out
 
 
 def _gaokao_scores() -> dict:
@@ -109,6 +136,7 @@ def _school(name, type_, district, lat, lon, address, conf, boarding,
         "boarding": boarding,
         "level": level,
         "features": {"style": style, "tags": tags or [], "gaokao": gaokao},
+        "contact": {},
         "commute": dist,                 # {km,mins,over_max,label} 或 None
         "channels": [],
         "extra": {},
@@ -156,6 +184,9 @@ def build_unified(result: dict) -> list:
                     {"km": n.get("km"), "mins": n.get("mins"), "over_max": c.get("over_max")} if n else None,
                     short=c.get("short_name"))
         s["school_code"] = c.get("school_code")
+        phone = c.get("phone") or _school_contacts().get(str(c.get("school_code") or ""))
+        if phone:
+            s["contact"]["phone"] = str(phone)
         s["majors"] = c.get("majors") or []   # 统招专业(班)+本区/全市名额,随 uid 实体下发(详情面板直读,不按名 join)
         s["map"] = {"color": pt.get("color"), "band": pt.get("band"), "kind": pt.get("kind")}
         # 不再加"不在报名范围"caveat:band 已说明(够不上/冲/稳/保),该提示反致歧义(误读成校额没有)
@@ -193,6 +224,9 @@ def build_unified(result: dict) -> list:
                 s = _school(disp, "市级统筹", t.get("district"), t.get("lat"), t.get("lon"),
                             t.get("address"), None, t.get("boarding"), t.get("level"),
                             t.get("style"), t.get("tags"), t.get("gaokao"), t.get("dist"))
+                phone = t.get("phone") or _school_contacts().get(str(t.get("school_code") or ""))
+                if phone:
+                    s["contact"]["phone"] = str(phone)
                 s["extra"] = {"campus": campus, "quota_chaoyang": t.get("quota_chaoyang"),
                               "tongchou_entry": entry, "cy_equiv": t.get("cy_equiv"),
                               "below_control": t.get("below_control")}
@@ -214,6 +248,10 @@ def build_unified(result: dict) -> list:
                     loc.get("lat"), loc.get("lon"), loc.get("address"), loc.get("confidence"),
                     p.get("boarding"), p.get("nature"), None, None, None, p.get("dist"))
         s["school_code"] = p.get("code")
+        if p.get("phone"):
+            s["contact"]["phone"] = str(p["phone"])
+        if p.get("website"):
+            s["contact"]["website"] = p["website"]
         s["extra"] = {"tuition": p.get("tuition"), "curriculum": p.get("curriculum"),
                       "direction": p.get("direction"), "in_minban": p.get("in_minban_list"),
                       "in_intl": p.get("in_intl_list"),
@@ -231,6 +269,10 @@ def build_unified(result: dict) -> list:
         s = _school(v["name"], "中职/职教", result.get("district"), v.get("lat"), v.get("lon"),
                     v.get("address"), v.get("addr_conf"), v.get("boarding"), v.get("type"),
                     None, None, None, v.get("dist"))
+        if v.get("phone"):
+            s["contact"]["phone"] = str(v["phone"])
+        if v.get("website"):
+            s["contact"]["website"] = v["website"]
         s["extra"] = {"specialties": v.get("specialties"), "five_year": v.get("five_year"),
                       # 白皮书补充：综合高中班(职普融通)+录取线+升学路径+校区
                       "comp_high_2025": v.get("comp_high_2025"), "comp_high_note": v.get("comp_high_note"),

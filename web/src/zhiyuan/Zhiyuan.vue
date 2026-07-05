@@ -1103,6 +1103,9 @@ function planNum(v: any): string {
   const s = String(v ?? '').trim()
   return !s ? '—' : /^\d+$/.test(s) ? s + '人' : s
 }
+function phoneHref(v: any): string {
+  return 'tel:' + String(v || '').split('/')[0].replace(/[^\d+]/g, '')
+}
 const caveats = computed<string[]>(() => {
   const set = new Set<string>()
   channelViews.value.forEach((v: any) => { if (v.caveat) set.add(v.caveat) })
@@ -1753,9 +1756,10 @@ const tcOptions: string[] = []
                 </div>
 
                 <!-- 基本信息(前置) -->
-                <div class="dp-block" v-if="selSchool.geo.address || selSchool.commute || selSchool.boarding != null || selSchool.extra.tuition || (selSchool.extra.curriculum && selSchool.extra.curriculum.length) || (selSchool.extra.specialties && selSchool.extra.specialties.length) || selSchool.extra.system || (selSchool.extra.analog && selSchool.extra.analog.length) || (selSchool.extra.campuses && selSchool.extra.campuses.length) || selSchool.extra.class_info">
+                <div class="dp-block" v-if="selSchool.geo.address || selSchool.contact?.phone || selSchool.commute || selSchool.boarding != null || selSchool.extra.tuition || (selSchool.extra.curriculum && selSchool.extra.curriculum.length) || (selSchool.extra.specialties && selSchool.extra.specialties.length) || selSchool.extra.system || (selSchool.extra.analog && selSchool.extra.analog.length) || (selSchool.extra.campuses && selSchool.extra.campuses.length) || selSchool.extra.class_info">
                   <div class="dp-title">基本信息</div>
                   <div v-if="selSchool.geo.address" class="dp-line dp-muted">📍 {{ selSchool.geo.address }}<span v-if="selSchool.geo.confidence === 'low' || !selSchool.geo.lat" class="addr-tag">待核</span></div>
+                  <div v-if="selSchool.contact?.phone" class="dp-line">☎️ 招生咨询：<a class="dp-phone" :href="phoneHref(selSchool.contact.phone)">{{ selSchool.contact.phone }}</a></div>
                   <div v-if="selSchool.commute" class="dp-line">🚌 到家 {{ selSchool.commute.km }}km · {{ selSchool.commute.mins }}分钟<span v-if="selSchool.commute.over_max" class="dp-vol">⚠️超上限</span></div>
                   <div class="dp-line">🛏 住宿：<span v-if="selSchool.boarding === true" class="t-yes">可住宿</span><span v-else-if="selSchool.boarding === false">不提供</span><span v-else class="dp-muted">待核</span><template v-if="selSchool.boarding === true && selSchool.campus_life && selSchool.campus_life.boarding_detail"> · <span class="dp-muted">{{ selSchool.campus_life.boarding_detail }}</span></template></div>
                   <div v-if="selSchool.commute && selSchool.commute.over_max && selSchool.boarding === false" class="dp-line dp-vol">⚠️ 家远且不住宿，通勤超上限，慎报</div>
@@ -2676,6 +2680,8 @@ const tcOptions: string[] = []
 .dp-mj b { color: var(--brand-dark); }
 .dp-mj em { color: var(--gray-400); font-style: normal; font-size: 11px; }
 .dp-line { font-size: 12.5px; color: var(--gray-700); margin-top: 10px; line-height: 1.5; }
+.dp-phone { color: var(--primary); font-weight: 650; text-decoration: none; }
+.dp-phone:hover { text-decoration: underline; }
 .dp-muted { color: var(--gray-500); }
 .dp-warn { font-size: 12.5px; color: #c0392b; background: #fef2f2; border-radius: var(--radius-xs);
   padding: 7px 9px; margin-top: 12px; line-height: 1.5; }
