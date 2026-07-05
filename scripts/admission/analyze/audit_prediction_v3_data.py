@@ -11,7 +11,7 @@ BASE = ROOT / "knowledge-base/admission/beijing"
 def main():
     rows = [json.loads(x) for x in (BASE / "ts/lines.jsonl").read_text().splitlines()]
     coded = {}
-    for year in (2024, 2025):
+    for year in (2023, 2024, 2025):
         coded_text = (
             BASE / f"evidence/chaoyang-lines-{year}-professional-coded.evidence.yaml"
         ).read_text()
@@ -43,11 +43,12 @@ def main():
     print("\n## 门禁结论")
     if blocked:
         print("- **BLOCKED**：历史 T1 学校最低线不存在，禁止专业级精确点预测。")
-    for year in (2024, 2025):
+    for year in (2023, 2024, 2025):
+        code_tier = "T2官方原图镜像" if year == 2023 else "T1官方目录"
         print(
             f"- {year} 已有 {coded[year]['records']} 条 T3 专业映射记录，其中"
-            f" {coded[year]['exact']} 条可连接唯一官方专业代码；"
-            "代码为 T1，但校线仍为 T3。"
+            f" {coded[year]['exact']} 条可连接唯一{code_tier}专业代码；"
+            "校线仍为 T3。"
         )
     print("- 2026 一分一段和竞争池发布前，只能运行 V3-alpha 宽区间。")
     print("- `ts/pred_2026.json` 是旧模型结果，不视为 V3。")
