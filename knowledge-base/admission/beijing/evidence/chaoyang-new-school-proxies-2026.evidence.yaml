@@ -1,0 +1,72 @@
+entity: 2026朝阳新增统一招生主体代理证据
+year: 2026
+district: 朝阳区
+note: >
+  三校均由北京教育考试院官方计划确认参加2026统一招生，但“新增统一招生主体”不等于
+  “新建学校”。预测时必须利用既有办学、高中培养和集团管理历史；首届统招仍无历史录取位次，
+  因而只支持宽区间代理，不支持伪造精确线。
+records:
+  - id: ev-newproxy-2026-001
+    entity: 民大附中朝阳学校
+    claim: institutional_history
+    value: 2016年朝阳校区投入使用；原为市级统筹二校区，由民大附中直接管理并沿用其课程体系
+    confidence: T1
+    status: confirmed
+    source_type: 学校官网
+    source_url: https://mdfz.muc.edu.cn/cyxq/cyxqjj.htm
+    source_title: 中央民族大学附属中学·朝阳校区简介
+    collected_at: 2026-07-05
+    excerpt: "2016年民大附中教育集团成立，朝阳校区投入使用……由民大附中直接管理……沿用民大附中完善的课程体系。"
+
+  - id: ev-newproxy-2026-002
+    entity: 民大附中朝阳学校
+    claim: existing_high_school_cohort
+    value: 已有2026届高三在校备考，不属于从零新建高中
+    confidence: T1
+    status: confirmed
+    source_type: 学校官网
+    source_url: https://mdfz.muc.edu.cn/info/1991/32631.htm
+    source_title: 民大附中朝阳学校2026届高考冲刺活动
+    collected_at: 2026-07-05
+    excerpt: "民大附中朝阳学校组织2026届高三年级全体师生……开展高考冲刺誓师徒步拓展活动。"
+
+  - id: ev-newproxy-2026-003
+    entity: 民大附中朝阳学校
+    claim: facilities_and_contact
+    value:
+      boarding: true
+      address: 北京市朝阳区金台路甜水园甲1号
+      admissions_phone: 65021687
+    confidence: T1
+    status: confirmed
+    source_type: 学校官网
+    source_url: https://mdfz.muc.edu.cn/cyxq/cyxqjj.htm
+    source_title: 中央民族大学附属中学·朝阳校区简介
+    collected_at: 2026-07-05
+    excerpt: "学校实行封闭式寄宿制管理……招生咨询：电话：(010) 65021687。"
+    notes: 取代旧库中来源不明的53681395。
+
+  - id: ev-newproxy-2026-004
+    entity: 北大附中朝阳未来学校
+    claim: institutional_history
+    value: 2016年起连续九年开展1+3四年贯通培养，并非新建或无高中培养经验学校
+    confidence: T1
+    status: confirmed
+    source_type: 学校官网
+    source_url: https://futurepkuschool.pku.edu.cn/gywm.htm
+    source_title: 北大附中朝阳未来学校·关于我们
+    collected_at: 2026-07-05
+    excerpt: "自2016年起……参与北京市市级“1+3”培养实验的九年间。"
+
+  - id: ev-newproxy-2026-005
+    entity: 首都师范大学附属实验学校
+    claim: institutional_profile
+    value: 既有学校恢复或新设高中学段；官方统一招生77人已确认，但高中管理、课程和出口暂无可核官方材料
+    confidence: T2
+    status: partial
+    source_type: 区属学校官网+考试院官方计划
+    source_url: https://sssy.bjchyedu.cn/
+    source_parent_url: https://www.bjeea.cn/html/zkzh/jhcx/2026/0630/88248.html
+    source_title: 首都师范大学附属实验学校官网；北京教育考试院2026招生计划
+    collected_at: 2026-07-05
+    notes: 学校官网当前访问不稳定；不得把“首师大附中体系”直接等同于本部录取层级。

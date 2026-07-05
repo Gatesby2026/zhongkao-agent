@@ -66,4 +66,6 @@ datasets:
     required: true
     status: partial
     path: chaoyang_new2026.yaml
-    gap: "已有计划与学校事实；无历史结果，必须使用宽区间"
+    evidence_path: evidence/chaoyang-new-school-proxies-2026.evidence.yaml
+    available: "三校统招计划均为T1；民大附中朝阳已确认2016投用且有2026届高三，北大朝阳未来已确认九年1+3培养史，均非零历史新建校"
+    gap: "三校都无本招生口径历史录取位次；首师大附属实验高中管理/课程/出口仍缺官方细节，必须使用宽区间"
