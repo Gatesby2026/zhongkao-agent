@@ -226,6 +226,24 @@ direct_05:
     confidence: T3
     source_url: https://www.xschu.com/zhengcezixun/84424.html
     caveat: "页面使用预计/约，且声明来源于家长分享、网络"
+  historical_benchmark_2025:
+    group_direct_plan: 915
+    status: secondary_corroborated
+    confidence: T3
+    source_urls:
+      - https://www.zhongkaobj.cn/zhongkao/zixun/2025080411712.html
+      - https://news.sohu.com/a/910139199_121956425
+    claimed_primary_source: "2025中招大本"
+    caveats:
+      - "尚未取得可逐页核验的2025中招大本原件，两个网页可能转载同一统计表，不算两份独立原始证据。"
+      - "915是集团直升计划/提前批统计，不应与2025朝阳一分一段10729人相加；官方分数段备注已排除集团直升录取者。"
+    model_rule: "仅作为2026约1500人传闻的历史量级锚；2026正式备案总数发布前，不按1500确定扣减。"
+  source_quality_warning:
+    publisher: 北京中考信息网
+    conflicting_2025_talent_counts:
+      - {value: 579, source_url: "https://www.zhongkaobj.cn/zhongkao/zixun/2026062513766.html"}
+      - {value: 779, source_url: "https://www.zhongkaobj.cn/zhaosheng/qyzs/2025101412456.html"}
+    decision: "同一机构对同一年度朝阳特长生人数给出579和779两个值，均不采纳；以官方名单/计划为准。"
   selection_claims:
     - school: 北京中学
       claim: "九上期末区排名1500以内可报名，结合面试与调研考试"
