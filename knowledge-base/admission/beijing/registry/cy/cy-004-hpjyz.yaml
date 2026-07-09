@@ -47,11 +47,11 @@ admissions:
       rank: 5604
       total: 660
   pred_2026:
-    rank: 4939
-    lo: 4544
-    hi: 5334
-    method: supply_stack
-    conf: T3
+    rank: 5710
+    lo: 5253
+    hi: 6167
+    method: supply_stack_x_fenduan
+    conf: T2
     volatile: false
 - channel: 统招
   code: '105004'
@@ -70,11 +70,11 @@ admissions:
       rank: 6420
       total: 670
   pred_2026:
-    rank: 4939
-    lo: 4544
-    hi: 5334
-    method: supply_stack
-    conf: T3
+    rank: 5710
+    lo: 5253
+    hi: 6167
+    method: supply_stack_x_fenduan
+    conf: T2
     volatile: false
 - channel: 校额到校
   code: null
