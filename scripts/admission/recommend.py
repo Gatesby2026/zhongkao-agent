@@ -995,7 +995,9 @@ def build_result(rank, home=None, mode="driving", max_km=None, interests=None,
     # 挂 2026 预估位次到卡片(前端"📍2026预估位次"用;冲稳保已按它判档)
     for cards in raw_bands.values():
         for c in cards:
-            p = pred2026.get(c["name"]) or yaml_pred.get(c["name"])
+            # registry/yaml 是当前运行时权威源；ts/pred_2026.json 只作旧模型兜底。
+            # 否则会出现判档用 registry 新口径、详情面板却显示 ts 旧口径的问题。
+            p = yaml_pred.get(c["name"]) or pred2026.get(c["name"])
             if p:
                 c["pred_2026"] = _enrich_pred_scores(district, p)
             cl = yaml_camp.get(c["name"])

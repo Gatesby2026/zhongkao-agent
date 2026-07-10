@@ -37,10 +37,10 @@ admissions:
       rank: 1629
       total: 660
   pred_2026:
-    rank: 1652
-    lo: 1520
-    hi: 1784
-    method: supply_stack_x_fenduan
+    rank: 1372
+    lo: 1072
+    hi: 1672
+    method: conservative_fill
     conf: T2
     volatile: false
 - channel: 校额到校

@@ -35,10 +35,10 @@ admissions:
       rank: 4647
       total: 660
   pred_2026:
-    rank: 3857
-    lo: 3278
-    hi: 4436
-    method: supply_stack_x_fenduan
+    rank: 3278
+    lo: 2628
+    hi: 3928
+    method: conservative_fill
     conf: T2
     volatile: true
   note: 考生入学后可申请住宿。

@@ -28,10 +28,10 @@ admissions:
       rank: 2533
       total: 510
   pred_2026:
-    rank: 3295
-    lo: 2702
-    hi: 3888
-    method: supply_stack_x_fenduan
+    rank: 2800
+    lo: 2495
+    hi: 3105
+    method: conservative_fill
     conf: T2
     volatile: true
 rollup:

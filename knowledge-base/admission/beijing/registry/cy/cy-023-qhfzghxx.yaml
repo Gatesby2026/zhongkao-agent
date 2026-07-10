@@ -32,10 +32,10 @@ admissions:
       total: 670
   line_scope: 校级代表线(普通班);源数据未分专业
   pred_2026:
-    rank: 3687
-    lo: 3392
-    hi: 3982
-    method: supply_stack_x_fenduan
+    rank: 3130
+    lo: 2545
+    hi: 3715
+    method: conservative_fill
     conf: T2
     volatile: false
 - channel: 统招
