@@ -39,6 +39,7 @@ ADMISSION_DIR = Path(__file__).resolve().parents[2] / "knowledge-base" / "admiss
 # 官方学校代码 + 专业(班)列表（派生自 bjeea 计划册 OCR，经人工核对）。
 # 按区缓存；缺失则返回空 dict（学校卡片不带 admission 字段，前端按无码处理）。
 _ADMISSION_CODES_CACHE: dict = {}
+_SCORE_BANDS_CACHE: dict = {}
 
 
 def load_admission_codes(district: str) -> dict:
@@ -601,15 +602,20 @@ def classify(student_rank: int, school: dict, pred_rank=None):
 
 
 def rank_to_score(district: str, rank):
-    """用本区各校最近一年的 (区排名, 中考分) 锚点，线性插值把"区排名→估中考分"。
-    中考分全市可比，可用于和外区(市级统筹)学校的统招分数线对比。
-    数据不足或 rank 非法时返回 None。"""
+    """把"区排名/位次→分数"。
+
+    朝阳 2026 已有考试院官方分数段表时，优先用官方累计人数精确折算；
+    其它区/缺官方表时，退回到最近一年学校线锚点的线性插值。
+    """
     try:
         rank = int(rank)
     except (TypeError, ValueError):
         return None
     if rank <= 0:
         return None
+    official = _rank_to_official_score(district, rank)
+    if official is not None:
+        return official
     data = load_district(district)
     anchors = []
     for s in data.get("schools", []):
@@ -635,6 +641,55 @@ def rank_to_score(district: str, rank):
             t = (rank - r0) / (r1 - r0) if r1 != r0 else 0
             return round(s0 + (s1 - s0) * t, 1)
     return None
+
+
+def _load_score_bands(district: str) -> list[dict]:
+    """读取官方一分一段/分数段累计表。返回按 score 降序排列的 rows。"""
+    if district in _SCORE_BANDS_CACHE:
+        return _SCORE_BANDS_CACHE[district]
+    path = ADMISSION_DIR / "score_bands" / f"{district}_2026.yaml"
+    rows = []
+    if path.exists():
+        try:
+            data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+            rows = data.get("rows") or []
+            rows = sorted(
+                [r for r in rows if r.get("score") is not None and r.get("cumulative") is not None],
+                key=lambda r: int(r["score"]),
+                reverse=True,
+            )
+        except Exception:
+            rows = []
+    _SCORE_BANDS_CACHE[district] = rows
+    return rows
+
+
+def _rank_to_official_score(district: str, rank):
+    """用官方累计人数表把 rank 折算为最低对应分数。"""
+    rows = _load_score_bands(district)
+    if not rows:
+        return None
+    for r in rows:
+        if int(r["cumulative"]) >= rank:
+            return int(r["score"])
+    return int(rows[-1]["score"])
+
+
+def _enrich_pred_scores(district: str, pred: dict) -> dict:
+    """给 pred_2026 追加 score / score_lo / score_hi，保持原对象不被原地污染。"""
+    if not isinstance(pred, dict):
+        return pred
+    out = dict(pred)
+    if out.get("rank") is not None:
+        out["score"] = rank_to_score(district, out.get("rank"))
+    # lo=更靠前位次，对应更高分；hi=更靠后位次，对应更低分
+    if out.get("lo") is not None:
+        out["score_hi"] = rank_to_score(district, out.get("lo"))
+    if out.get("hi") is not None:
+        out["score_lo"] = rank_to_score(district, out.get("hi"))
+    if out.get("score") is not None:
+        out["score_source"] = "2026官方分数段累计表"
+    return out
 
 
 def nearest_campus(rows):
@@ -944,7 +999,7 @@ def build_result(rank, home=None, mode="driving", max_km=None, interests=None,
         for c in cards:
             p = pred2026.get(c["name"]) or yaml_pred.get(c["name"])
             if p:
-                c["pred_2026"] = p
+                c["pred_2026"] = _enrich_pred_scores(district, p)
             cl = yaml_camp.get(c["name"])
             if cl:
                 c["campus_life"] = cl
@@ -994,6 +1049,7 @@ def build_result(rank, home=None, mode="driving", max_km=None, interests=None,
         "interests": interests,
         "admission_source": (
             "学校代码、专业(班)及计划人数来自北京教育考试院 2026 官方招生计划；"
+            "预测分数按北京教育考试院 2026 朝阳区官方分数段表折算；"
             "首年招生学校的录取位次仍为估算" if district == "chaoyang" else
             "学校代码、专业(班)及计划人数来自北京教育考试院 2026 官方招生计划"),
         "bands": bands,

@@ -86,7 +86,11 @@ def main():
         f"- 2026集团直升官方计划：{direct_2026_schools}校/{direct_2026_total}人，"
         "已达T1；这是计划上界，不等于最终实际录取数。"
     )
-    print("- 2026 一分一段和竞争池发布前，只能运行 V3-alpha 宽区间。")
+    score_band = BASE / "score_bands/chaoyang_2026.yaml"
+    if score_band.exists():
+        print("- 2026朝阳官方分数段已入库，可把预测位次折算为2026参考分数。")
+    else:
+        print("- 2026 一分一段和竞争池发布前，只能运行 V3-alpha 宽区间。")
     print("- `ts/pred_2026.json` 是旧模型结果，不视为 V3。")
     return 1 if blocked else 0
 
