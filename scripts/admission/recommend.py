@@ -511,9 +511,7 @@ def _district_from_registry(district: str) -> dict:
                 rep = next((a for a in cadms if a.get("lines")), cadms[0])
                 name = e["canonical_name"] if i == 0 else f"{e['canonical_name']}（{cam.get('name')}）"
                 rec = _flat_record(e, name, cam, rep, cadms, [cam])
-                # 校级 2026 预估只代表本部;非本部校区按本校区自身录取线判档(其历史线才反映该校区真实门槛)
                 if i > 0:
-                    rec.pop("pred_2026", None)
                     # 短名也加校区后缀,否则地图上两校区都显示同一短名无法区分
                     rec["short_name"] = f"{e.get('short_name')}·{(cam.get('name') or '').replace('校区', '')}"
                 schools.append(rec)
