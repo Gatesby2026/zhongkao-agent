@@ -37,10 +37,10 @@ admissions:
       rank: 6243
       total: 660
   pred_2026:
-    rank: 5447
-    lo: 4797
-    hi: 6097
-    method: conservative_fill
+    rank: 5300
+    lo: 4650
+    hi: 5950
+    method: weighted_supply
     conf: T2
     volatile: false
 - channel: 校额到校

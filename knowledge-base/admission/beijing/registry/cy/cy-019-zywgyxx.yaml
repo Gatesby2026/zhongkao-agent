@@ -33,10 +33,10 @@ admissions:
       rank: 2108
       total: 670
   pred_2026:
-    rank: 1813
-    lo: 1475
-    hi: 2151
-    method: conservative_fill
+    rank: 1708
+    lo: 1408
+    hi: 2008
+    method: weighted_supply
     conf: T2
     volatile: true
 rollup:

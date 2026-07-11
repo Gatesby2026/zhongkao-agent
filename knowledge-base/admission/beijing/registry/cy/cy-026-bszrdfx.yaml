@@ -36,10 +36,10 @@ admissions:
       rank: 2691
       total: 660
   pred_2026:
-    rank: 1520
-    lo: 1000
-    hi: 2040
-    method: conservative_fill
+    rank: 1430
+    lo: 930
+    hi: 1930
+    method: weighted_supply
     conf: T2
     volatile: true
   note: 因本校高中办学的硬件建设 尚未完成,高一年级在北京 市第八十中学借址上课。

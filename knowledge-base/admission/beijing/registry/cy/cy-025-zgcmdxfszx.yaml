@@ -34,10 +34,10 @@ admissions:
       rank: 2535
       total: 660
   pred_2026:
-    rank: 592
-    lo: 35
-    hi: 1149
-    method: conservative_fill
+    rank: 564
+    lo: 1
+    hi: 1128
+    method: weighted_supply
     conf: T2
     volatile: true
   note: 因本校高中办学的硬件建设 尚未完成,高一年级在北京 中学借址上课。

@@ -35,10 +35,10 @@ admissions:
       rank: 4647
       total: 660
   pred_2026:
-    rank: 3278
-    lo: 2628
-    hi: 3928
-    method: conservative_fill
+    rank: 3138
+    lo: 2500
+    hi: 3776
+    method: weighted_supply
     conf: T2
     volatile: true
   note: 考生入学后可申请住宿。
