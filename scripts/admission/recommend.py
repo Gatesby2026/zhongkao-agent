@@ -569,7 +569,7 @@ def load_pred2026(district: str) -> dict:
     return out
 
 
-def classify(student_rank: int, school: dict, pred_rank=None):
+def classify(student_rank: int, school: dict, pred_rank=None, district=None):
     """返回 (档位, margin, 参考位次C, 历史, 波动比) 或 None（数据缺失）。
     pred_rank 给定时，用 2026 预估位次做冲稳保判档（核心依据），历史仍保留供展示。"""
     history = school_rank_history(school)
@@ -588,9 +588,18 @@ def classify(student_rank: int, school: dict, pred_rank=None):
     mean = sum(ranks) / len(ranks)
     volatility = (max(ranks) - min(ranks)) / mean if mean else 0.0
 
+    same_score_band = False
+    if district and pred_rank is not None and margin < 0:
+        # 出分后同一分数段内的位次差主要取决于同分排序。若学生估算分与预测线折算分相同，
+        # 且差距不超过约4%，不要机械判成普通“冲”，更贴近“压线稳/同分竞争”。
+        try:
+            same_score_band = rank_to_score(district, student_rank) == rank_to_score(district, ref_rank)
+        except Exception:
+            same_score_band = False
+
     if margin >= SAFETY_MARGIN:
         band = "保"
-    elif margin >= 0:
+    elif margin >= 0 or (same_score_band and margin >= -0.04):
         band = "稳"
     elif margin >= REACH_MARGIN:
         band = "冲"
@@ -978,7 +987,7 @@ def build_result(rank, home=None, mode="driving", max_km=None, interests=None,
     for s in schools:
         # 预估位次优先用学校自带(registry/yaml 已挂),否则回退按名取 ts 模型(朝阳旧口径)
         pr = (s.get("pred_2026") or {}).get("rank") or pred_rank_map.get(s["name"])
-        res = classify(rank, s, pred_rank=pr)
+        res = classify(rank, s, pred_rank=pr, district=district)
         if res is None:
             continue
         band, margin, ref_rank, history, vol = res
