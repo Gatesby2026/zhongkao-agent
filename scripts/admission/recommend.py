@@ -472,8 +472,9 @@ def _district_from_registry(district: str) -> dict:
             s["pred_2026"] = rep["pred_2026"]
         if rep and rep.get("lines_meta"):
             s["scores_meta"] = rep["lines_meta"]
-        # 住宿:朝阳由 plan_district 文案("住N")驱动(同 flat 口径,blob 检测);非朝阳用 campus 确认值
-        if district != "chaoyang" and cam.get("boarding") is not None:
+        # 住宿:招生计划文案("住N")可提供名额级线索；但 registry/campus 已核实
+        # boarding=True 时也必须保留，避免朝阳新校/寄宿校因 plan 未写"住"被误判为不提供住宿。
+        if cam.get("boarding") is True or (district != "chaoyang" and cam.get("boarding") is not None):
             s["boarding"] = cam.get("boarding")
         # 嵌入统招专业(班)+码+计划区(含住信息),供 _school_card 直接用(免按名 join codes)
         s["_reg_code"] = next((a.get("code") for a in campus_adms if a.get("code")), None)
@@ -904,7 +905,7 @@ def _school_card(s, margin, ref_rank, history, vol, dist_campus, mode_label, max
         # 官方计划派生标签：是否有住宿名额 / 是否含中外合作(国际)班
         blob = " ".join((m.get("plan_chaoyang", "") or "") + (m.get("note", "") or "")
                         for m in majors)
-        card["boarding"] = "住" in blob
+        card["boarding"] = ("住" in blob) or (s.get("boarding") is True)
         # 去 OCR 空格伪影后匹配中外合作/国际班关键词（"中美高中课程合 作项目班" 等）
         names = re.sub(r"\s+", "", " ".join(m.get("major_name", "") or "" for m in majors))
         card["coop"] = any(k in names for k in ("中外", "中美", "中英", "国际", "合作", "AP"))
