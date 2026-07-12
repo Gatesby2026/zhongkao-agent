@@ -12,7 +12,7 @@
   AUTH_E2E_IMAP_PORT      IMAP SSL 端口，默认 993
   AUTH_E2E_IMAP_USER      IMAP 用户名，默认同 AUTH_E2E_ACCOUNT
   AUTH_E2E_IMAP_PASSWORD  IMAP 密码/应用专用密码
-  AUTH_E2E_IMAP_MAILBOX   邮箱目录，默认 INBOX
+  AUTH_E2E_IMAP_MAILBOX   邮箱目录；可用逗号分隔。默认自动查 INBOX / Spam / All Mail
 
 示例：
   AUTH_E2E_ACCOUNT=xxx@gmail.com \
@@ -115,6 +115,33 @@ def _extract_code(msg: Message) -> str | None:
     return found.group(1) if found else None
 
 
+def _parse_mailbox_name(list_line: bytes) -> str:
+    text = list_line.decode(errors="replace")
+    match = re.search(r'"([^"]+)"$', text)
+    return match.group(1) if match else text.split()[-1]
+
+
+def _target_mailboxes(conn: imaplib.IMAP4_SSL) -> list[str]:
+    configured = os.environ.get("AUTH_E2E_IMAP_MAILBOX")
+    if configured:
+        return [x.strip() for x in configured.split(",") if x.strip()]
+
+    preferred = ["INBOX", "[Gmail]/Spam", "[Gmail]/All Mail"]
+    typ, boxes = conn.list()
+    if typ != "OK" or not boxes:
+        return ["INBOX"]
+
+    available = {_parse_mailbox_name(b) for b in boxes}
+    out = [box for box in preferred if box in available]
+    # 兼容中文/本地化 mailbox 名称。
+    for box in available:
+        low = box.lower()
+        if any(k in low for k in ("spam", "junk", "all mail")) or any(k in box for k in ("垃圾", "所有")):
+            if box not in out:
+                out.append(box)
+    return out or ["INBOX"]
+
+
 def poll_imap_for_code(account: str, since_ts: float, timeout_sec: int) -> str:
     host = os.environ.get("AUTH_E2E_IMAP_HOST")
     password = os.environ.get("AUTH_E2E_IMAP_PASSWORD")
@@ -123,31 +150,31 @@ def poll_imap_for_code(account: str, since_ts: float, timeout_sec: int) -> str:
 
     port = int(os.environ.get("AUTH_E2E_IMAP_PORT", "993"))
     user = os.environ.get("AUTH_E2E_IMAP_USER") or account
-    mailbox = os.environ.get("AUTH_E2E_IMAP_MAILBOX", "INBOX")
     deadline = time.time() + timeout_sec
     context = ssl.create_default_context()
 
     while time.time() < deadline:
         with imaplib.IMAP4_SSL(host, port, ssl_context=context) as conn:
             conn.login(user, password)
-            typ, _ = conn.select(mailbox, readonly=True)
-            if typ != "OK":
-                raise RuntimeError(f"无法打开邮箱目录：{mailbox}")
-            # 只按发件人缩小范围，避免 IMAP 服务器对中文 subject 搜索支持不一致。
-            typ, data = conn.search(None, "FROM", f'"{SENDER}"')
-            if typ != "OK":
-                raise RuntimeError("IMAP 搜索失败")
-            ids = data[0].split()[-20:]
-            for mid in reversed(ids):
-                typ, msg_data = conn.fetch(mid, "(RFC822)")
-                if typ != "OK" or not msg_data or not isinstance(msg_data[0], tuple):
+            for mailbox in _target_mailboxes(conn):
+                typ, _ = conn.select(mailbox, readonly=True)
+                if typ != "OK":
                     continue
-                msg = email.message_from_bytes(msg_data[0][1])
-                if _message_ts(msg) + 30 < since_ts:
+                # 只按发件人缩小范围，避免 IMAP 服务器对中文 subject 搜索支持不一致。
+                typ, data = conn.search(None, "FROM", f'"{SENDER}"')
+                if typ != "OK":
                     continue
-                code = _extract_code(msg)
-                if code:
-                    return code
+                ids = data[0].split()[-20:]
+                for mid in reversed(ids):
+                    typ, msg_data = conn.fetch(mid, "(RFC822)")
+                    if typ != "OK" or not msg_data or not isinstance(msg_data[0], tuple):
+                        continue
+                    msg = email.message_from_bytes(msg_data[0][1])
+                    if _message_ts(msg) + 30 < since_ts:
+                        continue
+                    code = _extract_code(msg)
+                    if code:
+                        return code
         time.sleep(5)
 
     raise TimeoutError(f"{timeout_sec} 秒内未在真实收件箱中收到验证码邮件")
