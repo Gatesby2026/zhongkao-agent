@@ -13,6 +13,7 @@ const agree = ref(false)
 const sending = ref(false)
 const submitting = ref(false)
 const err = ref('')
+const notice = ref('')
 const cooldown = ref(0)
 let timer: number | undefined
 
@@ -40,6 +41,7 @@ onUnmounted(() => timer && clearInterval(timer))
 
 async function onSend() {
   err.value = ''
+  notice.value = ''
   if (sending.value || cooldown.value > 0) return     // 防重复点击/冷却中
   if (!accountOk.value) { err.value = '请输入正确的手机号或邮箱'; return }
   if (!agree.value) { err.value = '请先阅读并勾选下方隐私说明'; return }
@@ -48,6 +50,9 @@ async function onSend() {
   try {
     const r = await sendCode(submitAccount.value)
     if (r.cooldown) startCooldown(r.cooldown)
+    notice.value = r.channel === 'email'
+      ? '验证码邮件已发送。如 1 分钟内未收到，请检查垃圾邮件/广告邮件，或改用手机号登录。'
+      : '验证码短信已发送，请注意查收。'
   } catch (e: any) {
     cooldown.value = 0                                 // 发送失败放开，允许立即重试
     err.value = e.message || '发送失败'
@@ -58,6 +63,7 @@ async function onSend() {
 
 async function onLogin() {
   err.value = ''
+  notice.value = ''
   if (submitting.value) return
   submitting.value = true
   try {
@@ -102,6 +108,7 @@ async function onLogin() {
         </label>
 
         <p v-if="err" class="err">{{ err }}</p>
+        <p v-if="notice" class="notice">{{ notice }}</p>
 
         <button type="button" class="login-btn" :disabled="!canLogin" @click="onLogin">
           {{ submitting ? '登录中…' : '登录 / 注册' }}
@@ -147,6 +154,7 @@ async function onLogin() {
   background: #2563eb; color: #fff; font-size: 15px; font-weight: 600; cursor: pointer; }
 .login-btn:disabled { background: #93b4f0; cursor: not-allowed; }
 .err { color: #dc2626; font-size: 12.5px; margin: 0 0 10px; }
+.notice { color: #2563eb; font-size: 12.5px; line-height: 1.55; margin: 0 0 10px; }
 .agree { display: flex; gap: 8px; align-items: flex-start; margin-top: 16px;
   font-size: 11.5px; color: #6b7280; line-height: 1.5; cursor: pointer; }
 .agree input { margin-top: 2px; flex: 0 0 auto; }

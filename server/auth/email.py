@@ -11,6 +11,8 @@ env(复用短信那套):
 from __future__ import annotations
 
 import os
+import re
+from html import unescape
 
 FROM_ADDR = os.environ.get("ALI_MAIL_FROM", "no-reply@gatesby.xyz")
 FROM_ALIAS = os.environ.get("ALI_MAIL_FROM_ALIAS", "中考助手")
@@ -18,7 +20,19 @@ CODE_TTL_MIN = 5
 
 
 def _dev_mode() -> bool:
-    return os.environ.get("SMS_DEV_MODE") == "1" or not os.environ.get("ALI_SMS_AK_ID")
+    return (
+        os.environ.get("SMS_DEV_MODE") == "1"
+        or not os.environ.get("ALI_SMS_AK_ID")
+        or not os.environ.get("ALI_SMS_AK_SECRET")
+    )
+
+
+def _html_to_text(html_body: str) -> str:
+    """给验证码邮件补纯文本正文，提升部分邮箱的可读性/投递友好度。"""
+    text = re.sub(r"(?i)<br\s*/?>", "\n", html_body or "")
+    text = re.sub(r"(?i)</p\s*>", "\n", text)
+    text = re.sub(r"<[^>]+>", "", text)
+    return unescape(text).strip()
 
 
 def send_mail(to_email: str, subject: str, html_body: str) -> tuple[bool, str]:
@@ -42,7 +56,7 @@ def send_mail(to_email: str, subject: str, html_body: str) -> tuple[bool, str]:
         resp = Client(cfg).single_send_mail(m.SingleSendMailRequest(
             account_name=FROM_ADDR, address_type=1, reply_to_address=False,
             to_address=to_email, from_alias=FROM_ALIAS,
-            subject=subject, html_body=html_body,
+            subject=subject, html_body=html_body, text_body=_html_to_text(html_body),
         ))
         # 成功返回含 EnvId/RequestId;无异常即视为已提交
         return True, getattr(resp.body, "request_id", "OK")
